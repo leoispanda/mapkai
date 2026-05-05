@@ -21,6 +21,7 @@ MapKai uses email codes for passwordless login. Configure these environment vari
 ```bash
 RESEND_API_KEY=your_resend_api_key
 EMAIL_FROM="MapKai <your_verified_sender@mapkai.com>"
+AUTH_SECRET=generate_a_long_random_secret
 ```
 
 ## Deployment
@@ -30,4 +31,3 @@ Recommended stack:
 - GitHub for source code
 - Vercel for hosting and API routes/server
 - Resend for email codes
-
