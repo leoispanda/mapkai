@@ -1,0 +1,12 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MapKai mark</title>
+  <desc id="desc">A green route-map icon forming the letter K.</desc>
+  <rect width="180" height="180" rx="36" fill="#1F7A5C"/>
+  <path d="M55 126V54" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M62 90L126 50" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M64 92L133 132" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="55" cy="54" r="15" fill="#C9952F" stroke="#FFF7E8" stroke-width="7"/>
+  <circle cx="126" cy="50" r="15" fill="#D95D43" stroke="#FFF7E8" stroke-width="7"/>
+  <circle cx="133" cy="132" r="15" fill="#406F9F" stroke="#FFF7E8" stroke-width="7"/>
+  <circle cx="55" cy="126" r="15" fill="#F6F2E8" stroke="#FFF7E8" stroke-width="7"/>
+</svg>
