@@ -411,6 +411,53 @@ h3 {
   width: 100%;
 }
 
+.course-sources {
+  display: grid;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.course-sources > span {
+  color: var(--green-dark);
+  font-size: 0.78rem;
+  font-weight: 840;
+}
+
+.course-sources ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-sources li {
+  display: grid;
+  gap: 2px;
+  padding: 9px;
+  border: 1px solid rgba(217, 207, 189, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.72);
+}
+
+.course-sources li span {
+  color: var(--coral);
+  font-size: 0.7rem;
+  font-weight: 860;
+  text-transform: uppercase;
+}
+
+.course-sources li strong {
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.course-sources li em {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: normal;
+}
+
 .modules-page,
 .profile-page,
 .auth-section {
