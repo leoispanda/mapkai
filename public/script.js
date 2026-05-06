@@ -260,205 +260,205 @@ const levelLabels = ["Ocean", "Snow mountain", "Land", "Green land"];
 const domainQuizzes = {
   "computing-ai": [
     {
-      prompt: "What does AI usually mean in computing?",
-      choices: ["Artificial Intelligence", "Automatic Internet", "Applied Illustration"],
+      prompt: "Your phone unlocks by recognizing your face. Which idea is doing the hard work?",
+      choices: ["AI pattern recognition", "A tiny mirror inside the screen", "The battery remembering you"],
       answer: 0,
     },
     {
-      prompt: "Which concept helps an algorithm learn from examples?",
-      choices: ["Training data", "Screen brightness", "Keyboard layout"],
+      prompt: "A recipe app gets better after you rate meals. What is it learning from?",
+      choices: ["Your examples and feedback", "The oven temperature only", "The app icon color"],
       answer: 0,
     },
     {
-      prompt: "What is the main idea behind human-computer interaction?",
-      choices: ["Designing useful relationships between people and systems", "Making computers heavier", "Removing all interfaces"],
+      prompt: "In machine learning, why do we keep test data separate from training data?",
+      choices: ["To check whether the model generalizes beyond memorized examples", "To make the file names shorter", "To prevent computers from using numbers"],
       answer: 0,
     },
   ],
   "math-data": [
     {
-      prompt: "Which branch of math studies patterns of change?",
-      choices: ["Calculus", "Typography", "Mythology"],
+      prompt: "If a shop says 'average wait time is 5 minutes', what is it trying to describe?",
+      choices: ["A typical wait", "The loudest customer", "The color of the queue"],
       answer: 0,
     },
     {
-      prompt: "What does a statistical average summarize?",
-      choices: ["A typical value in data", "The color of a chart", "A university building"],
+      prompt: "You split a pizza fairly among four friends. Which math idea just appeared?",
+      choices: ["Fractions", "Volcanology", "Typography"],
       answer: 0,
     },
     {
-      prompt: "Why is linear algebra important in data science?",
-      choices: ["It represents data as vectors, matrices, and transformations", "It names planets", "It replaces experiments"],
+      prompt: "Why are vectors useful in data science?",
+      choices: ["They let many features be represented as positions and directions in a space", "They turn every number into a word", "They remove the need for measurement"],
       answer: 0,
     },
   ],
   "engineering-systems": [
     {
-      prompt: "What do engineers usually build or improve?",
-      choices: ["Systems that solve practical problems", "Only poems", "Only historical timelines"],
+      prompt: "A bridge must be strong, affordable, and not too heavy. What are engineers balancing?",
+      choices: ["Trade-offs", "Riddles", "Musical notes"],
       answer: 0,
     },
     {
-      prompt: "What does feedback help control systems do?",
-      choices: ["Adjust behavior using output information", "Forget measurements", "Avoid all sensors"],
+      prompt: "A thermostat turns heat on and off after reading the room temperature. What is it using?",
+      choices: ["Feedback", "A dictionary", "A telescope"],
       answer: 0,
     },
     {
-      prompt: "Why are trade-offs central to engineering design?",
-      choices: ["Because cost, safety, performance, and constraints compete", "Because all designs are identical", "Because testing is never useful"],
+      prompt: "Why do engineers test prototypes before mass production?",
+      choices: ["To find failure modes under real constraints before scaling", "To avoid learning anything", "To make every design identical"],
       answer: 0,
     },
   ],
   "materials-manufacturing": [
     {
-      prompt: "Steel, polymer, ceramic, and glass are examples of what?",
-      choices: ["Materials", "Calendars", "Languages"],
+      prompt: "A raincoat feels different from a frying pan. What explains the difference best?",
+      choices: ["They are made from different materials", "They have different birthdays", "They use different alphabets"],
       answer: 0,
     },
     {
-      prompt: "What does manufacturing turn a design into?",
-      choices: ["A physical product or component", "A weather forecast", "A legal code"],
+      prompt: "Why does a chef choose a metal pan instead of a wooden one for high heat?",
+      choices: ["Metal conducts heat well and resists burning", "Wood is always transparent", "Metal is quieter"],
       answer: 0,
     },
     {
-      prompt: "Why does microstructure matter in materials science?",
-      choices: ["It strongly affects strength, toughness, conductivity, and failure", "It determines the school logo", "It makes all materials behave the same"],
+      prompt: "Why can heat treatment change the strength of steel?",
+      choices: ["It changes microstructure and phase distribution inside the material", "It changes the brand name", "It makes atoms disappear"],
       answer: 0,
     },
   ],
   "built-environment": [
     {
-      prompt: "Which field designs buildings and spatial experiences?",
-      choices: ["Architecture", "Astronomy", "Accounting"],
+      prompt: "A city adds a bike lane so people can move safely. Which field is most involved?",
+      choices: ["Urban planning", "Deep-sea cooking", "Classical violin tuning"],
       answer: 0,
     },
     {
-      prompt: "What does urban planning organize?",
-      choices: ["Land use, mobility, housing, public space, and services", "Only keyboard shortcuts", "Only ocean tides"],
+      prompt: "Why do buildings need both beauty and structure?",
+      choices: ["People must use them safely and enjoy living or working in them", "Walls only exist for decoration", "Roofs are optional in rain"],
       answer: 0,
     },
     {
-      prompt: "Why is geospatial engineering useful for cities?",
-      choices: ["It maps locations, infrastructure, terrain, and spatial relationships", "It hides every road", "It removes measurements"],
+      prompt: "What does geospatial analysis add to city planning?",
+      choices: ["Location-based evidence about movement, land, risk, and infrastructure", "A way to ignore maps", "A rule that all streets must be straight"],
       answer: 0,
     },
   ],
   "life-health": [
     {
-      prompt: "What is the basic unit of life?",
-      choices: ["Cell", "Pixel", "Invoice"],
+      prompt: "You wash your hands before eating. Which life-health idea are you using?",
+      choices: ["Reducing germs and infection risk", "Increasing screen brightness", "Changing gravity"],
       answer: 0,
     },
     {
-      prompt: "What does public health study?",
-      choices: ["Health patterns and interventions across populations", "Only private diaries", "Only computer cables"],
+      prompt: "Why does sleep help learning and health?",
+      choices: ["The body repairs, regulates, and consolidates memory", "The brain turns off forever", "It replaces drinking water"],
       answer: 0,
     },
     {
-      prompt: "Why is neuroscience interdisciplinary?",
-      choices: ["It connects biology, psychology, computation, chemistry, and medicine", "It studies only ancient coins", "It avoids all experiments"],
+      prompt: "Why are controlled studies important in medicine?",
+      choices: ["They help separate treatment effects from chance, bias, and confounding factors", "They guarantee every person reacts the same", "They remove the need for biology"],
       answer: 0,
     },
   ],
   "earth-climate-space": [
     {
-      prompt: "Which planet is our home?",
-      choices: ["Earth", "Jupiter", "Mercury"],
+      prompt: "Clouds gather, wind changes, and rain begins. Which system are you watching?",
+      choices: ["Weather", "Accounting", "Keyboard design"],
       answer: 0,
     },
     {
-      prompt: "What does climate science study?",
-      choices: ["Long-term patterns in atmosphere, oceans, land, and energy", "Only tomorrow's lunch", "Only spelling rules"],
+      prompt: "Why do coastal cities care about sea level?",
+      choices: ["It affects flooding, land use, infrastructure, and safety", "It decides phone passwords", "It changes the alphabet"],
       answer: 0,
     },
     {
-      prompt: "Why do Earth systems courses connect many sciences?",
-      choices: ["Because air, water, rock, life, and human activity interact", "Because disciplines never overlap", "Because maps cannot show change"],
+      prompt: "Why do climate models combine atmosphere, oceans, ice, land, and human activity?",
+      choices: ["Those systems exchange energy, matter, and feedback over time", "Because one variable explains everything", "Because maps cannot show oceans"],
       answer: 0,
     },
   ],
   "business-economics": [
     {
-      prompt: "What does economics study?",
-      choices: ["Choices under scarcity", "The shape of clouds only", "Ancient grammar only"],
+      prompt: "You have 10 euros and two things you want. What are you facing?",
+      choices: ["Scarcity and choice", "A chemistry reaction", "A lunar eclipse"],
       answer: 0,
     },
     {
-      prompt: "What is a balance sheet used to show?",
-      choices: ["Assets, liabilities, and equity", "A poem's rhyme scheme", "A planet's orbit"],
+      prompt: "A cafe notices croissants sell out every morning. What might it adjust?",
+      choices: ["Supply, pricing, or production planning", "The moon's orbit", "The spelling of coffee"],
       answer: 0,
     },
     {
-      prompt: "Why do organizations need incentives?",
-      choices: ["They shape decisions, effort, coordination, and behavior", "They make information disappear", "They replace all strategy"],
+      prompt: "Why can incentives change organization behavior?",
+      choices: ["They alter costs, rewards, priorities, and coordination across people", "They make strategy unnecessary", "They prevent measurement"],
       answer: 0,
     },
   ],
   "law-policy-society": [
     {
-      prompt: "What is a law?",
-      choices: ["A rule recognized by a legal system", "A type of mountain", "A computer battery"],
+      prompt: "A crosswalk tells drivers to stop for pedestrians. What kind of social tool is it?",
+      choices: ["A rule that organizes behavior", "A recipe", "A mountain range"],
       answer: 0,
     },
     {
-      prompt: "What does public policy try to influence?",
-      choices: ["Collective problems through institutions and decisions", "Only font size", "Only private passwords"],
+      prompt: "Why do societies create public policies?",
+      choices: ["To handle shared problems people cannot solve alone", "To name every cloud", "To avoid all decisions"],
       answer: 0,
     },
     {
       prompt: "Why is governance broader than government?",
-      choices: ["It includes rules, institutions, networks, norms, and accountability", "It means no rules exist", "It is only a map color"],
+      choices: ["It includes laws, institutions, norms, incentives, networks, and accountability", "It means rules do not matter", "It is only election day"],
       answer: 0,
     },
   ],
   "humanities-culture": [
     {
-      prompt: "What do historians study?",
-      choices: ["Evidence about the past", "Only future stock prices", "Only chemical bonds"],
+      prompt: "An old family photo helps someone tell a story about the past. Which skill is being used?",
+      choices: ["Historical interpretation", "Rocket steering", "Circuit soldering"],
       answer: 0,
     },
     {
-      prompt: "What does interpretation help us understand in literature and culture?",
-      choices: ["Meaning, context, symbols, and perspective", "Only page numbers", "Only lab temperature"],
+      prompt: "Why can the same story feel different in another language?",
+      choices: ["Words carry culture, context, rhythm, and hidden meanings", "Translation removes all meaning", "Stories do not use language"],
       answer: 0,
     },
     {
-      prompt: "Why are languages central to culture?",
-      choices: ["They carry memory, identity, categories, and ways of thinking", "They erase communication", "They are unrelated to history"],
+      prompt: "Why do humanities scholars examine sources instead of accepting one version of events?",
+      choices: ["Sources reveal perspective, bias, context, and contested meaning", "Because evidence is irrelevant", "Because dates never matter"],
       answer: 0,
     },
   ],
   "design-media-arts": [
     {
-      prompt: "What does design usually improve?",
-      choices: ["How something works, feels, or communicates", "The weight of time", "The number of planets"],
+      prompt: "A door handle is confusing, so people push when they should pull. What failed?",
+      choices: ["Design communication", "Ocean chemistry", "Tax policy"],
       answer: 0,
     },
     {
-      prompt: "What does media studies often examine?",
-      choices: ["How messages, platforms, audiences, and power interact", "Only metal hardness", "Only plant roots"],
+      prompt: "Why do movie posters use color, faces, and big titles carefully?",
+      choices: ["To guide attention and signal mood quickly", "To hide the film's existence", "To test bridge strength"],
       answer: 0,
     },
     {
-      prompt: "Why is critique important in creative work?",
-      choices: ["It tests intention, craft, audience, context, and effect", "It removes all creativity", "It prevents revision"],
+      prompt: "In design critique, why ask what audience a work is for?",
+      choices: ["Because effectiveness depends on context, intention, user needs, and interpretation", "Because all audiences are identical", "Because craft cannot be discussed"],
       answer: 0,
     },
   ],
   "learning-education": [
     {
-      prompt: "What is learning?",
-      choices: ["A change in knowledge, skill, or understanding", "Only opening a website", "Only drawing a circle"],
+      prompt: "You forget less when you quiz yourself instead of only rereading. What are you using?",
+      choices: ["Active recall", "Color theory only", "Weather prediction"],
       answer: 0,
     },
     {
-      prompt: "Why does retrieval practice help memory?",
-      choices: ["It strengthens recall by actively bringing knowledge back", "It avoids thinking", "It deletes examples"],
+      prompt: "Why does teaching a friend help you learn?",
+      choices: ["It exposes gaps and forces clear explanation", "It deletes memory", "It makes examples illegal"],
       answer: 0,
     },
     {
-      prompt: "What makes knowledge mapping useful?",
-      choices: ["It shows concepts, gaps, dependencies, and pathways", "It hides relationships", "It makes every learner identical"],
+      prompt: "Why can a knowledge map improve learning plans?",
+      choices: ["It shows prerequisites, gaps, relationships, and routes through a subject", "It makes every learner the same", "It removes the need for practice"],
       answer: 0,
     },
   ],
@@ -474,6 +474,7 @@ let currentUser = {
 let savedDiscussions = [];
 let domainProgress = Object.fromEntries(knowledgeDomains.map((domain) => [domain.id, 0]));
 let quizLocks = {};
+let lastQuizFeedback = {};
 let canvasMetrics = { size: 0, cx: 0, cy: 0, radius: 0 };
 
 const profileLabels = {
@@ -598,7 +599,6 @@ function drawGlobe() {
   ctx.fillRect(cx - radius, cy - radius, radius * 2, radius * 2);
   drawCartoonWaves(cx, cy, radius);
   drawOceanGrid(cx, cy, radius);
-  drawKnowledgeLinks(cx, cy, radius);
   knowledgeDomains.forEach((domain) => drawDomain(domain, cx, cy, radius));
   ctx.restore();
 
@@ -634,10 +634,10 @@ function drawCartoonWaves(cx, cy, radius) {
 }
 
 function drawOceanGrid(cx, cy, radius) {
-  ctx.strokeStyle = "rgba(245, 241, 232, 0.16)";
+  ctx.strokeStyle = "rgba(245, 241, 232, 0.12)";
   ctx.lineWidth = 1;
 
-  for (let i = -2; i <= 2; i += 1) {
+  for (let i = -1; i <= 1; i += 1) {
     const y = cy + (i * radius) / 3;
     const width = Math.sqrt(Math.max(radius * radius - (y - cy) * (y - cy), 0));
     ctx.beginPath();
@@ -645,7 +645,7 @@ function drawOceanGrid(cx, cy, radius) {
     ctx.stroke();
   }
 
-  for (let i = -2; i <= 2; i += 1) {
+  for (let i = -1; i <= 1; i += 1) {
     ctx.beginPath();
     ctx.ellipse(cx, cy, radius * (0.28 + Math.abs(i) * 0.14), radius, i * 0.18, 0, Math.PI * 2);
     ctx.stroke();
@@ -654,7 +654,7 @@ function drawOceanGrid(cx, cy, radius) {
 
 function drawKnowledgeLinks(cx, cy, radius) {
   const points = knowledgeDomains.map((domain) => projectDomain(domain, cx, cy, radius));
-  ctx.lineWidth = 1.2;
+  ctx.lineWidth = 1;
 
   for (let i = 0; i < points.length; i += 1) {
     for (let j = i + 1; j < points.length; j += 1) {
@@ -663,7 +663,7 @@ function drawKnowledgeLinks(cx, cy, radius) {
       const mastered = getDomainLevel(knowledgeDomains[i].id) > 0 && getDomainLevel(knowledgeDomains[j].id) > 0;
       const distance = Math.hypot(a.x - b.x, a.y - b.y);
       if (distance > radius * 0.82) continue;
-      ctx.strokeStyle = mastered ? "rgba(255, 250, 240, 0.28)" : "rgba(255, 250, 240, 0.1)";
+      ctx.strokeStyle = mastered ? "rgba(255, 250, 240, 0.18)" : "rgba(255, 250, 240, 0.05)";
       ctx.beginPath();
       ctx.moveTo(a.x, a.y);
       ctx.lineTo(b.x, b.y);
@@ -676,93 +676,104 @@ function drawDomain(domain, cx, cy, radius) {
   const point = projectDomain(domain, cx, cy, radius);
   const level = getDomainLevel(domain.id);
   const selected = selectedDomainId === domain.id;
+  const islandSize = radius * (0.07 + seededRandom(domain.id, 3) * 0.025);
 
   if (level === 1) {
-    drawSnowMountain(point.x, point.y, radius * 0.15, domain.color);
+    drawSnowIsland(point.x, point.y, islandSize, domain);
   } else if (level === 2) {
-    drawLandMass(point.x, point.y, radius * 0.14, "#b98945", domain.id, false);
+    drawIsland(point.x, point.y, islandSize, "#c99b58", domain.id, { trees: 0, hills: true });
   } else if (level >= 3) {
-    drawLandMass(point.x, point.y, radius * 0.15, "#42a66b", domain.id, true);
+    drawIsland(point.x, point.y, islandSize * 1.04, "#42a66b", domain.id, { trees: 3, hills: true });
   } else {
-    ctx.beginPath();
-    ctx.arc(point.x, point.y, radius * 0.062, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 250, 240, 0.92)";
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(point.x, point.y, radius * 0.043, 0, Math.PI * 2);
-    ctx.fillStyle = "#1d5f82";
-    ctx.fill();
-    ctx.strokeStyle = "rgba(255, 250, 240, 0.7)";
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    drawUnknownReef(point.x, point.y, islandSize * 0.72, domain.id);
   }
 
   if (selected) {
     ctx.beginPath();
-    ctx.arc(point.x, point.y, radius * 0.088, 0, Math.PI * 2);
+    ctx.arc(point.x, point.y, islandSize * 1.45, 0, Math.PI * 2);
     ctx.strokeStyle = "#fffaf0";
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 2.5;
     ctx.stroke();
   }
 
-  ctx.fillStyle = level > 0 ? "#fffaf0" : "rgba(255, 250, 240, 0.9)";
-  ctx.font = `900 ${Math.max(9, radius * 0.034)}px Inter, system-ui, sans-serif`;
+  ctx.fillStyle = level > 0 ? "#fffaf0" : "rgba(255, 250, 240, 0.92)";
+  ctx.font = `900 ${Math.max(8, islandSize * 0.42)}px Inter, system-ui, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText(domain.icon, point.x, point.y + radius * 0.003);
+  ctx.fillText(domain.icon, point.x, point.y + islandSize * 0.03);
 }
 
-function drawLandMass(x, y, size, color, seed, withTrees) {
-  const hash = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+function drawUnknownReef(x, y, size, seed) {
+  drawIslandShape(x, y, size, "#1d5f82", seed);
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.74)";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  ctx.fillStyle = "rgba(255, 250, 240, 0.2)";
   ctx.beginPath();
-  for (let i = 0; i < 12; i += 1) {
-    const angle = (Math.PI * 2 * i) / 12;
-    const wobble = 0.78 + (((hash + i * 17) % 28) / 100);
+  ctx.ellipse(x - size * 0.1, y - size * 0.14, size * 0.5, size * 0.24, -0.25, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawSnowIsland(x, y, size, domain) {
+  drawIslandShape(x, y, size, "#8fb4bd", domain.id);
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.74)";
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+  drawMountain(x - size * 0.22, y + size * 0.1, size * 0.78, "#d9f2f0", "#7b9aa3");
+  drawMountain(x + size * 0.25, y + size * 0.18, size * 0.62, "#f4fbf8", domain.color);
+}
+
+function drawIsland(x, y, size, color, seed, options = {}) {
+  drawIslandShape(x, y, size, color, seed);
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.74)";
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  if (options.hills) {
+    ctx.fillStyle = "rgba(255, 250, 240, 0.25)";
+    ctx.beginPath();
+    ctx.ellipse(x - size * 0.18, y - size * 0.12, size * 0.42, size * 0.22, -0.25, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  for (let i = 0; i < (options.trees || 0); i += 1) {
+    const dx = -0.36 + i * 0.34 + seededRandom(seed, i + 7) * 0.08;
+    const dy = -0.02 + seededRandom(seed, i + 12) * 0.28;
+    drawTree(x + dx * size, y + dy * size, size * 0.2);
+  }
+}
+
+function drawIslandShape(x, y, size, color, seed) {
+  ctx.beginPath();
+  for (let i = 0; i < 14; i += 1) {
+    const angle = (Math.PI * 2 * i) / 14;
+    const wobble = 0.72 + seededRandom(seed, i) * 0.38;
     const px = x + Math.cos(angle) * size * wobble;
-    const py = y + Math.sin(angle) * size * (0.72 + wobble * 0.18);
+    const py = y + Math.sin(angle) * size * (0.64 + wobble * 0.22);
     if (i === 0) ctx.moveTo(px, py);
     else ctx.lineTo(px, py);
   }
   ctx.closePath();
   ctx.fillStyle = color;
   ctx.fill();
-  ctx.strokeStyle = "rgba(255, 250, 240, 0.58)";
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
-
-  if (!withTrees) return;
-  [[-0.32, 0.1], [0.22, -0.18], [0.35, 0.22]].forEach(([dx, dy]) => {
-    drawTree(x + dx * size, y + dy * size, size * 0.18);
-  });
 }
 
-function drawSnowMountain(x, y, size, color) {
-  ctx.fillStyle = "#8fb4bd";
+function drawMountain(x, y, size, snowColor, rockColor) {
+  ctx.fillStyle = rockColor;
   ctx.beginPath();
-  ctx.moveTo(x - size * 0.92, y + size * 0.55);
-  ctx.lineTo(x - size * 0.22, y - size * 0.68);
-  ctx.lineTo(x + size * 0.44, y + size * 0.55);
+  ctx.moveTo(x - size * 0.52, y + size * 0.42);
+  ctx.lineTo(x, y - size * 0.5);
+  ctx.lineTo(x + size * 0.55, y + size * 0.42);
   ctx.closePath();
   ctx.fill();
-  ctx.fillStyle = "#d9f2f0";
+  ctx.fillStyle = snowColor;
   ctx.beginPath();
-  ctx.moveTo(x - size * 0.22, y - size * 0.68);
-  ctx.lineTo(x - size * 0.44, y - size * 0.16);
-  ctx.lineTo(x - size * 0.08, y - size * 0.26);
-  ctx.lineTo(x + size * 0.06, y + size * 0.02);
-  ctx.lineTo(x + size * 0.16, y - size * 0.06);
+  ctx.moveTo(x, y - size * 0.5);
+  ctx.lineTo(x - size * 0.18, y - size * 0.06);
+  ctx.lineTo(x + size * 0.04, y - size * 0.15);
+  ctx.lineTo(x + size * 0.18, y + size * 0.03);
   ctx.closePath();
   ctx.fill();
-  ctx.fillStyle = color;
-  ctx.beginPath();
-  ctx.moveTo(x - size * 0.28, y + size * 0.55);
-  ctx.lineTo(x + size * 0.34, y - size * 0.28);
-  ctx.lineTo(x + size * 0.94, y + size * 0.55);
-  ctx.closePath();
-  ctx.fill();
-  ctx.strokeStyle = "rgba(255, 250, 240, 0.74)";
-  ctx.lineWidth = 1.5;
-  ctx.stroke();
 }
 
 function drawTree(x, y, size) {
@@ -779,6 +790,14 @@ function projectDomain(domain, cx, cy, radius) {
     x: cx + domain.x * radius * 1.24,
     y: cy + domain.y * radius * 1.24,
   };
+}
+
+function seededRandom(seed, offset = 0) {
+  let value = 0;
+  for (let i = 0; i < seed.length; i += 1) {
+    value = (value * 31 + seed.charCodeAt(i) + offset * 17) % 9973;
+  }
+  return (Math.sin(value + offset * 101.3) + 1) / 2;
 }
 
 function renderDomains() {
@@ -820,26 +839,14 @@ function renderSelectedDomain() {
   const nextQuestionIndex = Math.min(level, 2);
   const nextQuestion = domainQuizzes[domain.id]?.[nextQuestionIndex];
   const quizMarkup = renderQuizMarkup(domain, level, locked, nextQuestion, nextQuestionIndex);
-  const courses = (domain.courses || [])
-    .map(
-      ([university, course, level]) => `
-        <li>
-          <span>${escapeHtml(level)}</span>
-          <strong>${escapeHtml(course)}</strong>
-          <em>${escapeHtml(university)}</em>
-        </li>
-      `,
-    )
-    .join("");
+  const feedback = lastQuizFeedback[domain.id];
   selectedCard.innerHTML = `
     <p class="eyebrow">${escapeHtml(levelLabels[level])}</p>
     <strong>${escapeHtml(domain.label)}</strong>
     <p>${escapeHtml(domain.summary)}</p>
+    ${renderLevelTrack(level)}
+    ${feedback ? `<div class="quiz-feedback ${feedback.kind}">${escapeHtml(feedback.message)}</div>` : ""}
     ${quizMarkup}
-    <div class="course-sources">
-      <span>${domain.courses?.length || 0} university course signals</span>
-      <ul>${courses}</ul>
-    </div>
   `;
   selectedCard.querySelectorAll("[data-answer-index]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -848,6 +855,23 @@ function renderSelectedDomain() {
   });
   const retryButton = document.getElementById("retryQuizButton");
   if (retryButton) retryButton.addEventListener("click", () => resetQuiz(domain.id));
+}
+
+function renderLevelTrack(level) {
+  return `
+    <div class="level-track" aria-label="Knowledge level progress">
+      ${levelLabels
+        .map(
+          (label, index) => `
+            <span class="${index === level ? "is-current" : ""}${index < level ? " is-cleared" : ""}">
+              <i>${index}</i>
+              ${escapeHtml(label)}
+            </span>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderQuizMarkup(domain, level, locked, question, questionIndex) {
@@ -893,9 +917,18 @@ function answerQuiz(id, answerIndex) {
   if (!question || quizLocks[id]) return;
 
   if (answerIndex === question.answer) {
-    domainProgress[id] = Math.min(3, level + 1);
+    const nextLevel = Math.min(3, level + 1);
+    domainProgress[id] = nextLevel;
+    lastQuizFeedback[id] = {
+      kind: "is-correct",
+      message: getCorrectFeedback(nextLevel),
+    };
   } else {
     quizLocks[id] = true;
+    lastQuizFeedback[id] = {
+      kind: "is-wrong",
+      message: "Not yet. This island drifts back into the mist. Try again when you're ready.",
+    };
   }
 
   selectedDomainId = id;
@@ -908,11 +941,18 @@ function answerQuiz(id, answerIndex) {
 function resetQuiz(id) {
   domainProgress[id] = 0;
   delete quizLocks[id];
+  delete lastQuizFeedback[id];
   selectedDomainId = id;
   renderDomains();
   renderSelectedDomain();
   drawGlobe();
   saveState();
+}
+
+function getCorrectFeedback(level) {
+  if (level === 1) return "Correct. A snow peak rises from the ocean.";
+  if (level === 2) return "Correct. The island grows into solid land.";
+  return "Correct. Green life spreads across this knowledge island.";
 }
 
 function suggestNextDomain() {
@@ -1188,6 +1228,7 @@ function saveState() {
       selectedDomainId,
       domainProgress,
       quizLocks,
+      lastQuizFeedback,
     }),
   );
 }
@@ -1204,6 +1245,7 @@ function restoreState() {
     selectedDomainId = state.selectedDomainId || selectedDomainId;
     domainProgress = { ...domainProgress, ...(state.domainProgress || {}) };
     quizLocks = state.quizLocks || {};
+    lastQuizFeedback = state.lastQuizFeedback || {};
 
     if (state.profile) {
       Object.entries(state.profile).forEach(([name, value]) => {
