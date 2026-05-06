@@ -1,6 +1,6 @@
-# MapKai
+# MapKAI
 
-MapKai maps knowledge with AI into simple learning cards.
+MapKAI maps knowledge with AI into a living knowledge atlas.
 
 ## Local Development
 
@@ -18,7 +18,7 @@ When `RESEND_API_KEY` is not set locally, the server returns a temporary dev cod
 
 ## Cloudflare Deployment
 
-MapKai is set up for Cloudflare Pages:
+MapKAI is set up for Cloudflare Pages:
 
 - Static site output: `public`
 - Pages Functions: `functions/api/auth/start.js` and `functions/api/auth/verify.js`
@@ -28,7 +28,7 @@ Set these Cloudflare Pages environment variables:
 
 ```bash
 RESEND_API_KEY=your_resend_api_key
-EMAIL_FROM="MapKai <your_verified_sender@mapkai.com>"
+EMAIL_FROM="MapKAI <your_verified_sender@mapkai.com>"
 AUTH_SECRET=generate_a_long_random_secret
 ```
 

@@ -13,6 +13,7 @@ const userName = document.getElementById("userName");
 const emailForm = document.getElementById("emailForm");
 const codeForm = document.getElementById("codeForm");
 const profileForm = document.getElementById("profileForm");
+const authProfileForm = document.getElementById("authProfileForm");
 const emailStep = document.getElementById("emailStep");
 const codeStep = document.getElementById("codeStep");
 const profileStep = document.getElementById("profileStep");
@@ -20,12 +21,108 @@ const codeHint = document.getElementById("codeHint");
 const discussionForm = document.getElementById("discussionForm");
 const discussionInput = document.getElementById("discussionInput");
 const discussionList = document.getElementById("discussionList");
+const domainList = document.getElementById("domainList");
+const selectedCard = document.getElementById("selectedCard");
+const masteredCount = document.getElementById("masteredCount");
+const atlasProgress = document.getElementById("atlasProgress");
+const suggestNextButton = document.getElementById("suggestNextButton");
 const apiBase = window.location.protocol === "file:" ? "http://127.0.0.1:3000" : "";
-const storageKey = "mapkai-state-v1";
+const storageKey = "mapkai-state-v2";
 
-const palette = ["#1f7a5c", "#d95d43", "#c9952f", "#406f9f"];
-let points = [];
+const knowledgeDomains = [
+  {
+    id: "ai",
+    label: "AI Systems",
+    icon: "AI",
+    type: "Technology",
+    x: 0.15,
+    y: -0.42,
+    color: "#2f8a62",
+    summary: "Models, prompts, automation, agents, evaluation, and AI-assisted workflows.",
+    unlocked: true,
+  },
+  {
+    id: "business",
+    label: "Organizations",
+    icon: "ORG",
+    type: "Industry",
+    x: -0.28,
+    y: -0.18,
+    color: "#d2a247",
+    summary: "Company structures, departments, incentives, operations, strategy, and management.",
+    unlocked: true,
+  },
+  {
+    id: "science",
+    label: "Science",
+    icon: "SCI",
+    type: "Discipline",
+    x: 0.36,
+    y: -0.08,
+    color: "#55a06f",
+    summary: "Physics, biology, chemistry, research methods, systems thinking, and evidence.",
+    unlocked: false,
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    icon: "FIN",
+    type: "Industry",
+    x: -0.1,
+    y: 0.16,
+    color: "#c95f46",
+    summary: "Markets, accounting, investing, risk, capital flows, and financial decision-making.",
+    unlocked: false,
+  },
+  {
+    id: "health",
+    label: "Health",
+    icon: "HLT",
+    type: "Industry",
+    x: 0.44,
+    y: 0.26,
+    color: "#79a86f",
+    summary: "Medicine, nutrition, physiology, public health, care systems, and wellbeing.",
+    unlocked: false,
+  },
+  {
+    id: "design",
+    label: "Design",
+    icon: "DES",
+    type: "Practice",
+    x: -0.48,
+    y: 0.18,
+    color: "#e0b85a",
+    summary: "Product thinking, visual systems, interaction design, brand, and user experience.",
+    unlocked: false,
+  },
+  {
+    id: "law",
+    label: "Law & Policy",
+    icon: "LAW",
+    type: "System",
+    x: 0.03,
+    y: 0.45,
+    color: "#4e8e76",
+    summary: "Legal structures, regulation, governance, contracts, rights, and institutions.",
+    unlocked: false,
+  },
+  {
+    id: "culture",
+    label: "Culture",
+    icon: "CUL",
+    type: "Humanities",
+    x: -0.36,
+    y: 0.42,
+    color: "#b98945",
+    summary: "Language, history, media, art, social patterns, and how meaning travels.",
+    unlocked: false,
+  },
+];
+
 let animationFrame;
+let globeRotation = 0;
+let selectedDomainId = "ai";
 let isLoggedIn = false;
 let currentUser = {
   email: "",
@@ -33,67 +130,8 @@ let currentUser = {
   avatar: "auto",
 };
 let savedDiscussions = [];
-
-function resizeCanvas() {
-  const ratio = window.devicePixelRatio || 1;
-  const rect = canvas.getBoundingClientRect();
-  canvas.width = Math.floor(rect.width * ratio);
-  canvas.height = Math.floor(rect.height * ratio);
-  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-  points = createPoints(rect.width, rect.height);
-}
-
-function createPoints(width, height) {
-  const count = width < 760 ? 22 : 38;
-  return Array.from({ length: count }, (_, index) => ({
-    x: width * (0.28 + Math.random() * 0.68),
-    y: height * (0.08 + Math.random() * 0.82),
-    r: 3 + Math.random() * 5,
-    color: palette[index % palette.length],
-    speed: 0.18 + Math.random() * 0.28,
-    phase: Math.random() * Math.PI * 2,
-  }));
-}
-
-function drawNetwork(time = 0) {
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
-  ctx.clearRect(0, 0, width, height);
-
-  ctx.lineWidth = 1;
-  points.forEach((point, index) => {
-    const x = point.x + Math.sin(time * 0.0005 + point.phase) * 12;
-    const y = point.y + Math.cos(time * 0.0004 + point.phase) * 10;
-
-    for (let next = index + 1; next < points.length; next += 1) {
-      const other = points[next];
-      const ox = other.x + Math.sin(time * 0.0005 + other.phase) * 12;
-      const oy = other.y + Math.cos(time * 0.0004 + other.phase) * 10;
-      const distance = Math.hypot(x - ox, y - oy);
-
-      if (distance < 172) {
-        ctx.strokeStyle = `rgba(31, 122, 92, ${0.18 - distance / 1300})`;
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-        ctx.lineTo(ox, oy);
-        ctx.stroke();
-      }
-    }
-
-    ctx.fillStyle = point.color;
-    ctx.beginPath();
-    ctx.arc(x, y, point.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  animationFrame = requestAnimationFrame(drawNetwork);
-}
-
-const paceDurations = {
-  quick: ["30 min", "45 min", "2 days", "1 week", "20 min"],
-  steady: ["1 day", "2 days", "1 week", "2 weeks", "45 min"],
-  deep: ["2 days", "1 week", "2 weeks", "4 weeks", "1 hour"],
-};
+let masteredDomains = new Set(knowledgeDomains.filter((domain) => domain.unlocked).map((domain) => domain.id));
+let canvasMetrics = { size: 0, cx: 0, cy: 0, radius: 0 };
 
 const profileLabels = {
   aiLevel: {
@@ -117,13 +155,6 @@ const profileLabels = {
     weekends: "weekend blocks",
     "full-focus": "full-focus study time",
   },
-  urgency: {
-    explore: "exploring without deadline",
-    month: "targeting progress this month",
-    "two-weeks": "needs results within two weeks",
-    "this-week": "needs movement this week",
-    urgent: "has an urgent deadline",
-  },
   outputStyle: {
     concepts: "wants concepts first",
     examples: "learns from examples",
@@ -131,31 +162,6 @@ const profileLabels = {
     project: "wants a project-based route",
     coach: "wants coaching and feedback",
   },
-};
-
-// Internal planning method: ADDIE stays behind the scenes.
-const addieTemplates = {
-  quick: [
-    ["Analyze", "Turn the current state into a short gap diagnosis.", "Name the missing skills and blockers."],
-    ["Design", "Pick the shortest sequence that can move the goal forward.", "Define one measurable checkpoint."],
-    ["Develop", "Create the first practice asset or template.", "Build something rough enough to test."],
-    ["Implement", "Run a focused sprint with daily output.", "Complete one visible deliverable."],
-    ["Evaluate", "Compare the result with the goal and update the route.", "Keep, change, or remove the next step."],
-  ],
-  steady: [
-    ["Analyze", "Diagnose the gap between the current state and the target outcome.", "List strengths, weak spots, constraints, and success criteria."],
-    ["Design", "Turn the gap into a staged learning route.", "Set milestones, practice rhythm, and review points."],
-    ["Develop", "Prepare the materials and exercises for each stage.", "Make a checklist, examples, and one guided project."],
-    ["Implement", "Follow the route through short build-review cycles.", "Practice, produce, collect feedback, and revise."],
-    ["Evaluate", "Measure whether the plan changed the learner's ability.", "Score the output and generate the next version of the map."],
-  ],
-  deep: [
-    ["Analyze", "Build a full learner profile from the initial state.", "Identify prior knowledge, misconceptions, motivation, time, and evidence."],
-    ["Design", "Create a rigorous path from foundation to independent performance.", "Define outcomes, assessments, sequencing, and support."],
-    ["Develop", "Assemble lessons, drills, projects, rubrics, and reflection prompts.", "Prepare everything needed before execution starts."],
-    ["Implement", "Run the plan in phases with feedback after each milestone.", "Use real tasks instead of passive study."],
-    ["Evaluate", "Use formative and final review to improve the route.", "Adjust the next cycle based on demonstrated performance."],
-  ],
 };
 
 const moduleCards = [
@@ -166,11 +172,7 @@ const moduleCards = [
     bestFor: ["no-ai", "basic-ai"],
     goal: "Understand what AI can and cannot do.",
     output: "A personal AI starter checklist.",
-    exercises: [
-      "Ask AI to explain itself in 5 sentences.",
-      "Write 3 things AI can help you learn.",
-      "Save 1 rule for using AI safely.",
-    ],
+    exercises: ["Ask AI to explain itself in 5 sentences.", "Write 3 things AI can help you learn.", "Save 1 rule for using AI safely."],
   },
   {
     title: "Prompt Basics",
@@ -179,11 +181,7 @@ const moduleCards = [
     bestFor: ["no-ai", "basic-ai", "uses-ai"],
     goal: "Learn how to ask AI for clear, useful answers.",
     output: "10 reusable prompts for daily learning.",
-    exercises: [
-      "Rewrite one vague question into a clear prompt.",
-      "Ask AI for an example, then a simpler example.",
-      "Save your best prompt for tomorrow.",
-    ],
+    exercises: ["Rewrite one vague question into a clear prompt.", "Ask AI for an example, then a simpler example.", "Save your best prompt for tomorrow."],
   },
   {
     title: "Study Workflow",
@@ -192,11 +190,7 @@ const moduleCards = [
     bestFor: ["basic-ai", "uses-ai"],
     goal: "Turn AI into a repeatable learn-practice-review loop.",
     output: "A weekly learning workflow.",
-    exercises: [
-      "Choose one topic for today.",
-      "Ask AI for a 10-minute practice task.",
-      "Write what changed after practice.",
-    ],
+    exercises: ["Choose one topic for today.", "Ask AI for a 10-minute practice task.", "Write what changed after practice."],
   },
   {
     title: "Project Builder",
@@ -205,11 +199,7 @@ const moduleCards = [
     bestFor: ["uses-ai", "builds-ai"],
     goal: "Use AI to make one visible project from start to finish.",
     output: "A completed project with review notes.",
-    exercises: [
-      "Pick one tiny project idea.",
-      "Ask AI to split it into 3 steps.",
-      "Finish step 1 and ask for feedback.",
-    ],
+    exercises: ["Pick one tiny project idea.", "Ask AI to split it into 3 steps.", "Finish step 1 and ask for feedback."],
   },
   {
     title: "AI Feedback Coach",
@@ -218,11 +208,7 @@ const moduleCards = [
     bestFor: ["uses-ai", "builds-ai", "master-ai"],
     goal: "Use AI to critique work, find gaps, and improve faster.",
     output: "A feedback rubric and revision system.",
-    exercises: [
-      "Paste one piece of work into AI.",
-      "Ask for 2 strengths and 2 fixes.",
-      "Revise one part immediately.",
-    ],
+    exercises: ["Paste one piece of work into AI.", "Ask for 2 strengths and 2 fixes.", "Revise one part immediately."],
   },
   {
     title: "Automation Path",
@@ -231,13 +217,244 @@ const moduleCards = [
     bestFor: ["builds-ai", "master-ai"],
     goal: "Move from using AI manually to building AI-assisted systems.",
     output: "A small automated AI workflow.",
-    exercises: [
-      "Find one repeated task in your study.",
-      "Ask AI to design a simple workflow.",
-      "Test the workflow once and note friction.",
-    ],
+    exercises: ["Find one repeated task in your study.", "Ask AI to design a simple workflow.", "Test the workflow once and note friction."],
   },
 ];
+
+function resizeCanvas() {
+  const ratio = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  const size = Math.max(280, Math.min(rect.width, rect.height || rect.width));
+  canvas.width = Math.floor(size * ratio);
+  canvas.height = Math.floor(size * ratio);
+  canvas.style.height = `${size}px`;
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  canvasMetrics = {
+    size,
+    cx: size / 2,
+    cy: size / 2,
+    radius: size * 0.43,
+  };
+  drawGlobe();
+}
+
+function drawGlobe(time = 0) {
+  globeRotation = time * 0.00012;
+  const { size, cx, cy, radius } = canvasMetrics;
+  ctx.clearRect(0, 0, size, size);
+
+  const ocean = ctx.createRadialGradient(cx - radius * 0.36, cy - radius * 0.42, radius * 0.1, cx, cy, radius);
+  ocean.addColorStop(0, "#4c8eb0");
+  ocean.addColorStop(0.44, "#1d668a");
+  ocean.addColorStop(1, "#12384f");
+
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+  ctx.clip();
+  ctx.fillStyle = ocean;
+  ctx.fillRect(cx - radius, cy - radius, radius * 2, radius * 2);
+  drawOceanGrid(cx, cy, radius);
+  drawKnowledgeLinks(cx, cy, radius);
+  knowledgeDomains.forEach((domain) => drawDomain(domain, cx, cy, radius));
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.88)";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  const glow = ctx.createRadialGradient(cx, cy, radius * 0.76, cx, cy, radius * 1.35);
+  glow.addColorStop(0, "rgba(255, 250, 240, 0)");
+  glow.addColorStop(1, "rgba(15, 107, 87, 0.22)");
+  ctx.fillStyle = glow;
+  ctx.beginPath();
+  ctx.arc(cx, cy, radius * 1.28, 0, Math.PI * 2);
+  ctx.fill();
+
+  animationFrame = requestAnimationFrame(drawGlobe);
+}
+
+function drawOceanGrid(cx, cy, radius) {
+  ctx.strokeStyle = "rgba(245, 241, 232, 0.16)";
+  ctx.lineWidth = 1;
+
+  for (let i = -2; i <= 2; i += 1) {
+    const y = cy + (i * radius) / 3;
+    const width = Math.sqrt(Math.max(radius * radius - (y - cy) * (y - cy), 0));
+    ctx.beginPath();
+    ctx.ellipse(cx, y, width, radius * 0.05, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  for (let i = -2; i <= 2; i += 1) {
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, radius * (0.28 + Math.abs(i) * 0.14), radius, i * 0.18, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+}
+
+function drawKnowledgeLinks(cx, cy, radius) {
+  const points = knowledgeDomains.map((domain) => projectDomain(domain, cx, cy, radius));
+  ctx.lineWidth = 1.2;
+
+  for (let i = 0; i < points.length; i += 1) {
+    for (let j = i + 1; j < points.length; j += 1) {
+      const a = points[i];
+      const b = points[j];
+      const mastered = masteredDomains.has(knowledgeDomains[i].id) && masteredDomains.has(knowledgeDomains[j].id);
+      const distance = Math.hypot(a.x - b.x, a.y - b.y);
+      if (distance > radius * 0.82) continue;
+      ctx.strokeStyle = mastered ? "rgba(255, 250, 240, 0.28)" : "rgba(255, 250, 240, 0.1)";
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+    }
+  }
+}
+
+function drawDomain(domain, cx, cy, radius) {
+  const point = projectDomain(domain, cx, cy, radius);
+  const mastered = masteredDomains.has(domain.id);
+  const selected = selectedDomainId === domain.id;
+
+  if (mastered) {
+    drawLandMass(point.x, point.y, radius * 0.14, domain.color, domain.id);
+  } else {
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, radius * 0.047, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255, 250, 240, 0.88)";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, radius * 0.031, 0, Math.PI * 2);
+    ctx.fillStyle = "#1d5f82";
+    ctx.fill();
+  }
+
+  if (selected) {
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, radius * 0.088, 0, Math.PI * 2);
+    ctx.strokeStyle = "#fffaf0";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+  }
+
+  ctx.fillStyle = mastered ? "#fffaf0" : "rgba(255, 250, 240, 0.86)";
+  ctx.font = `800 ${Math.max(10, radius * 0.045)}px Inter, system-ui, sans-serif`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(domain.icon, point.x, point.y + radius * 0.002);
+}
+
+function drawLandMass(x, y, size, color, seed) {
+  const hash = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  ctx.beginPath();
+  for (let i = 0; i < 12; i += 1) {
+    const angle = (Math.PI * 2 * i) / 12;
+    const wobble = 0.78 + (((hash + i * 17) % 28) / 100);
+    const px = x + Math.cos(angle) * size * wobble;
+    const py = y + Math.sin(angle) * size * (0.72 + wobble * 0.18);
+    if (i === 0) ctx.moveTo(px, py);
+    else ctx.lineTo(px, py);
+  }
+  ctx.closePath();
+  ctx.fillStyle = color;
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.58)";
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+}
+
+function projectDomain(domain, cx, cy, radius) {
+  const rotatedX = domain.x * Math.cos(globeRotation) - domain.y * 0.16 * Math.sin(globeRotation);
+  const rotatedY = domain.y + Math.sin(globeRotation + domain.x) * 0.035;
+  return {
+    x: cx + rotatedX * radius * 1.24,
+    y: cy + rotatedY * radius * 1.24,
+  };
+}
+
+function renderDomains() {
+  domainList.replaceChildren();
+  knowledgeDomains.forEach((domain) => {
+    const mastered = masteredDomains.has(domain.id);
+    const button = document.createElement("button");
+    button.className = `domain-button${mastered ? " is-mastered" : ""}${selectedDomainId === domain.id ? " is-selected" : ""}`;
+    button.type = "button";
+    button.innerHTML = `
+      <span class="domain-icon">${escapeHtml(domain.icon)}</span>
+      <span class="domain-copy">
+        <strong>${escapeHtml(domain.label)}</strong>
+        <span>${escapeHtml(domain.type)}</span>
+      </span>
+      <span class="domain-status">${mastered ? "Land" : "Ocean"}</span>
+    `;
+    button.addEventListener("click", () => {
+      selectedDomainId = domain.id;
+      renderDomains();
+      renderSelectedDomain();
+      drawGlobe();
+      saveState();
+    });
+    domainList.appendChild(button);
+  });
+
+  const mastered = masteredDomains.size;
+  const progress = Math.round((mastered / knowledgeDomains.length) * 100);
+  masteredCount.textContent = `${mastered} mastered`;
+  atlasProgress.textContent = `${progress}%`;
+}
+
+function renderSelectedDomain() {
+  const domain = knowledgeDomains.find((item) => item.id === selectedDomainId) || knowledgeDomains[0];
+  const mastered = masteredDomains.has(domain.id);
+  selectedCard.innerHTML = `
+    <p class="eyebrow">${mastered ? "Land discovered" : "Unexplored ocean"}</p>
+    <strong>${escapeHtml(domain.label)}</strong>
+    <p>${escapeHtml(domain.summary)}</p>
+    <button class="button ${mastered ? "secondary" : "primary"}" type="button" id="toggleDomainButton">
+      ${mastered ? "Mark as ocean" : "Light into land"}
+    </button>
+  `;
+  document.getElementById("toggleDomainButton").addEventListener("click", () => {
+    toggleDomain(domain.id);
+  });
+}
+
+function toggleDomain(id) {
+  if (masteredDomains.has(id)) {
+    masteredDomains.delete(id);
+  } else {
+    masteredDomains.add(id);
+  }
+  selectedDomainId = id;
+  renderDomains();
+  renderSelectedDomain();
+  drawGlobe();
+  saveState();
+}
+
+function suggestNextDomain() {
+  const next = knowledgeDomains.find((domain) => !masteredDomains.has(domain.id)) || knowledgeDomains[0];
+  selectedDomainId = next.id;
+  renderDomains();
+  renderSelectedDomain();
+  drawGlobe();
+}
+
+function handleCanvasClick(event) {
+  const rect = canvas.getBoundingClientRect();
+  const scale = canvasMetrics.size / rect.width;
+  const x = (event.clientX - rect.left) * scale;
+  const y = (event.clientY - rect.top) * scale;
+  const hit = knowledgeDomains.find((domain) => {
+    const point = projectDomain(domain, canvasMetrics.cx, canvasMetrics.cy, canvasMetrics.radius);
+    return Math.hypot(point.x - x, point.y - y) < canvasMetrics.radius * 0.12;
+  });
+  if (hit) toggleDomain(hit.id);
+}
 
 function getPlanInput() {
   const data = new FormData(form);
@@ -248,13 +465,12 @@ function getPlanInput() {
     aiLevel: data.get("aiLevel") || "basic-ai",
     learningAbility: data.get("learningAbility") || "steady",
     timeAvailable: data.get("timeAvailable") || "thirty-min",
-    urgency: data.get("urgency") || "month",
     outputStyle: data.get("outputStyle") || "practice",
   };
 }
 
 function renderMap(profile) {
-  const { goal, pace } = profile;
+  const { goal } = profile;
   mapGoal.textContent = goal;
   stateSummary.replaceChildren();
   moduleGrid.replaceChildren();
@@ -263,7 +479,7 @@ function renderMap(profile) {
   const summary = document.createElement("p");
   summary.innerHTML = `<strong>Starting point:</strong> ${buildStartingPoint(profile)}.`;
   const logic = document.createElement("p");
-  logic.innerHTML = `<strong>Learning map:</strong> ${escapeHtml(profile.goal)} starts small, practices once, reviews once, then continues.`;
+  logic.innerHTML = `<strong>Module role:</strong> these cards support the selected atlas region without taking over the homepage.`;
   stateSummary.append(summary, logic);
   renderModules(profile);
 
@@ -291,10 +507,10 @@ function getSimplePlan(profile) {
         : "30 min";
 
   return [
-    ["Today", `Learn one basic idea for ${profile.goal} and write it in your own words.`, "Ask AI for a simple explanation, then save three key points.", time],
-    ["Practice", "Do one small exercise instead of reading more.", "Ask AI to give you one task at your level and complete it.", "1 session"],
-    ["Review", "Check what felt easy, confusing, or useful.", "Ask AI to review your answer and suggest one improvement.", "10 min"],
-    ["Next step", "Move to a slightly harder task only after the review.", "Ask AI to create tomorrow's task based on today's result.", "Tomorrow"],
+    ["Select region", `Connect ${profile.goal} to one visible knowledge region on the atlas.`, "Choose the closest industry or discipline.", time],
+    ["Proof of knowledge", "Write one explanation or complete one small task that proves the region is understood.", "Use examples, not passive reading.", "1 session"],
+    ["Light the land", "Mark the region as mastered once the proof is good enough.", "Turn ocean into land on the globe.", "Today"],
+    ["Expand edge", "Pick the next adjacent ocean region and repeat.", "Grow the atlas from demonstrated knowledge.", "Tomorrow"],
   ];
 }
 
@@ -308,15 +524,15 @@ function renderModules(profile) {
     card.className = "module-card";
     card.innerHTML = `
       <div class="module-card-top">
-        <span>${module.level}</span>
-        <span>${module.time}</span>
+        <span>${escapeHtml(module.level)}</span>
+        <span>${escapeHtml(module.time)}</span>
       </div>
-      <h3>${module.title}</h3>
-      <p>${module.goal}</p>
+      <h3>${escapeHtml(module.title)}</h3>
+      <p>${escapeHtml(module.goal)}</p>
       <ul class="exercise-list">
-        ${module.exercises.map((exercise) => `<li>${exercise}</li>`).join("")}
+        ${module.exercises.map((exercise) => `<li>${escapeHtml(exercise)}</li>`).join("")}
       </ul>
-      <strong>${module.output}</strong>
+      <strong>${escapeHtml(module.output)}</strong>
     `;
     moduleGrid.appendChild(card);
   });
@@ -327,17 +543,27 @@ function buildStartingPoint(profile) {
     profileLabels.aiLevel[profile.aiLevel],
     profileLabels.learningAbility[profile.learningAbility],
     profileLabels.timeAvailable[profile.timeAvailable],
-    profileLabels.urgency[profile.urgency],
     profileLabels.outputStyle[profile.outputStyle],
   ];
 
   return parts.join(", ");
 }
 
+function updateProfileFromForm(sourceForm) {
+  const data = new FormData(sourceForm);
+  currentUser.name = String(data.get("name") || "").trim() || "Kai Learner";
+  currentUser.avatar = data.get("avatar") || "auto";
+  isLoggedIn = true;
+  syncProfileForms();
+  renderUser();
+  saveState();
+  showPage("atlas");
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   renderMap(getPlanInput());
-  showPage("plan");
+  saveState();
 });
 
 form.addEventListener("change", () => {
@@ -357,9 +583,7 @@ emailForm.addEventListener("submit", async (event) => {
 
   try {
     const result = await apiPost("/api/auth/start", { email: currentUser.email });
-    codeHint.textContent = result.devCode
-      ? `Local dev code: ${result.devCode}`
-      : `We sent a login code to ${currentUser.email}.`;
+    codeHint.textContent = result.devCode ? `Local dev code: ${result.devCode}` : `We sent a login code to ${currentUser.email}.`;
     emailStep.hidden = true;
     codeStep.hidden = false;
   } catch (error) {
@@ -384,15 +608,14 @@ codeForm.addEventListener("submit", async (event) => {
   }
 });
 
+authProfileForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  updateProfileFromForm(authProfileForm);
+});
+
 profileForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const data = new FormData(profileForm);
-  currentUser.name = data.get("name").trim() || "Kai Learner";
-  currentUser.avatar = data.get("avatar") || "auto";
-  isLoggedIn = true;
-  renderUser();
-  saveState();
-  showPage("intro");
+  updateProfileFromForm(profileForm);
 });
 
 discussionForm.addEventListener("submit", (event) => {
@@ -444,11 +667,19 @@ function getAvatarLabel(user) {
   return initials || "ME";
 }
 
+function syncProfileForms() {
+  [profileForm, authProfileForm].forEach((targetForm) => {
+    targetForm.elements.name.value = currentUser.name;
+    const avatar = Array.from(targetForm.elements.avatar).find((input) => input.value === currentUser.avatar);
+    if (avatar) avatar.checked = true;
+  });
+}
+
 function addDiscussionMessage(name, avatar, message) {
   const item = document.createElement("article");
   item.className = "discussion-message";
   item.innerHTML = `
-    <span>${avatar}</span>
+    <span>${escapeHtml(avatar)}</span>
     <div>
       <strong>${escapeHtml(name)}</strong>
       <p>${escapeHtml(message)}</p>
@@ -465,6 +696,8 @@ function saveState() {
       currentUser,
       savedDiscussions,
       profile: getPlanInput(),
+      selectedDomainId,
+      masteredDomains: Array.from(masteredDomains),
     }),
   );
 }
@@ -478,6 +711,8 @@ function restoreState() {
     isLoggedIn = Boolean(state.isLoggedIn);
     currentUser = { ...currentUser, ...(state.currentUser || {}) };
     savedDiscussions = Array.isArray(state.savedDiscussions) ? state.savedDiscussions : [];
+    selectedDomainId = state.selectedDomainId || selectedDomainId;
+    masteredDomains = new Set(Array.isArray(state.masteredDomains) ? state.masteredDomains : Array.from(masteredDomains));
 
     if (state.profile) {
       Object.entries(state.profile).forEach(([name, value]) => {
@@ -500,7 +735,7 @@ function restoreState() {
 }
 
 function escapeHtml(value) {
-  return value
+  return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -513,7 +748,9 @@ function showPage(pageId) {
     const isActive = page.id === pageId;
     page.classList.toggle("is-active", isActive);
     page.setAttribute("aria-hidden", String(!isActive));
+    if (isActive) page.scrollTo({ top: 0, left: 0 });
   });
+  window.scrollTo({ top: 0, left: 0 });
 }
 
 pageLinks.forEach((link) => {
@@ -524,18 +761,22 @@ pageLinks.forEach((link) => {
 });
 
 window.addEventListener("resize", resizeCanvas);
+canvas.addEventListener("click", handleCanvasClick);
+suggestNextButton.addEventListener("click", suggestNextDomain);
 
-resizeCanvas();
-drawNetwork();
 const restored = restoreState();
+syncProfileForms();
 renderMap(getPlanInput());
+renderDomains();
+renderSelectedDomain();
+resizeCanvas();
 if (savedDiscussions.length) {
   savedDiscussions.forEach((entry) => addDiscussionMessage(entry.name, entry.avatar, entry.message));
 } else {
-  addDiscussionMessage("MapKai", "K", "Welcome. Post one small learning win after you finish today's card.");
+  addDiscussionMessage("MapKAI", "K", "Welcome. Light one knowledge region when you can prove it.");
 }
 if (restored) renderUser();
-showPage("intro");
+showPage("atlas");
 
 window.addEventListener("beforeunload", () => {
   cancelAnimationFrame(animationFrame);

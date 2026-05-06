@@ -1,12 +1,16 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">MapKai mark</title>
-  <desc id="desc">A green route-map icon forming the letter K.</desc>
-  <rect width="180" height="180" rx="36" fill="#1F7A5C"/>
-  <path d="M55 126V54" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
-  <path d="M62 90L126 50" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
-  <path d="M64 92L133 132" stroke="#FFF7E8" stroke-width="16" stroke-linecap="round"/>
-  <circle cx="55" cy="54" r="15" fill="#C9952F" stroke="#FFF7E8" stroke-width="7"/>
-  <circle cx="126" cy="50" r="15" fill="#D95D43" stroke="#FFF7E8" stroke-width="7"/>
-  <circle cx="133" cy="132" r="15" fill="#406F9F" stroke="#FFF7E8" stroke-width="7"/>
-  <circle cx="55" cy="126" r="15" fill="#F6F2E8" stroke="#FFF7E8" stroke-width="7"/>
+  <title id="title">MapKAI mark</title>
+  <desc id="desc">A premium green globe and route mark forming a hidden K for MapKAI.</desc>
+  <rect width="180" height="180" rx="36" fill="#0E5F4C"/>
+  <circle cx="90" cy="90" r="53" fill="#F7F1E4"/>
+  <path d="M43 86C55 76 69 72 86 77C103 82 116 80 137 68" stroke="#0E5F4C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M48 109C63 102 78 102 93 109C107 116 119 116 134 107" stroke="#0E5F4C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M71 124V56" stroke="#0E5F4C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M76 91L117 60" stroke="#0E5F4C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M77 92L120 123" stroke="#0E5F4C" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="71" cy="56" r="9" fill="#D6A84F" stroke="#F7F1E4" stroke-width="5"/>
+  <circle cx="117" cy="60" r="9" fill="#2F8A62" stroke="#F7F1E4" stroke-width="5"/>
+  <circle cx="120" cy="123" r="9" fill="#1D5F82" stroke="#F7F1E4" stroke-width="5"/>
+  <path d="M90 37C103 51 110 69 110 90C110 111 103 129 90 143" stroke="#0E5F4C" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+  <path d="M90 37C77 51 70 69 70 90C70 111 77 129 90 143" stroke="#0E5F4C" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
 </svg>

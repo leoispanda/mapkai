@@ -7,7 +7,7 @@ const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
 const host = process.env.HOST || "127.0.0.1";
 const resendApiKey = process.env.RESEND_API_KEY || "";
-const emailFrom = process.env.EMAIL_FROM || "MapKai <onboarding@resend.dev>";
+const emailFrom = process.env.EMAIL_FROM || "MapKAI <onboarding@resend.dev>";
 const appOrigin = process.env.APP_ORIGIN || `http://${host}:${port}`;
 
 const codes = new Map();
@@ -63,7 +63,7 @@ async function startAuth(request, response) {
   });
 
   if (!resendApiKey) {
-    console.log(`Local MapKai login code for ${cleanEmail}: ${code}`);
+    console.log(`Local MapKAI login code for ${cleanEmail}: ${code}`);
     sendJson(response, 200, { ok: true, devCode: code });
     return;
   }
@@ -113,9 +113,9 @@ async function sendLoginEmail(email, code) {
     body: JSON.stringify({
       from: emailFrom,
       to: email,
-      subject: "Your MapKai login code",
-      text: `Your MapKai login code is ${code}. It expires in 10 minutes.`,
-      html: `<p>Your MapKai login code is:</p><h1>${code}</h1><p>It expires in 10 minutes.</p>`,
+      subject: "Your MapKAI login code",
+      text: `Your MapKAI login code is ${code}. It expires in 10 minutes.`,
+      html: `<p>Your MapKAI login code is:</p><h1>${code}</h1><p>It expires in 10 minutes.</p>`,
     }),
   });
 
@@ -177,5 +177,5 @@ function sendJson(response, status, data) {
 }
 
 server.listen(port, host, () => {
-  console.log(`MapKai running at http://${host}:${port}`);
+  console.log(`MapKAI running at http://${host}:${port}`);
 });

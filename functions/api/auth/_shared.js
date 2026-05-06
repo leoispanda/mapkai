@@ -32,11 +32,11 @@ export async function sendLoginEmail(env, email, code) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: env.EMAIL_FROM || "MapKai <onboarding@resend.dev>",
+      from: env.EMAIL_FROM || "MapKAI <onboarding@resend.dev>",
       to: email,
-      subject: "Your MapKai login code",
-      text: `Your MapKai login code is ${code}. It expires in 10 minutes.`,
-      html: `<p>Your MapKai login code is:</p><h1>${code}</h1><p>It expires in 10 minutes.</p>`,
+      subject: "Your MapKAI login code",
+      text: `Your MapKAI login code is ${code}. It expires in 10 minutes.`,
+      html: `<p>Your MapKAI login code is:</p><h1>${code}</h1><p>It expires in 10 minutes.</p>`,
     }),
   });
 
