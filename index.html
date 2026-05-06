@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MapKai - Knowledge AI</title>
+    <meta
+      name="description"
+      content="MapKai turns any learning goal into a clear, structured learning map."
+    />
+    <link rel="icon" href="./assets/mapkai-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="MapKai home">
+        <img class="brand-mark" src="./assets/mapkai-mark.svg" alt="" />
+        <span>MapKai</span>
+      </a>
+      <nav class="nav-links" aria-label="Site">
+        <a href="#map" data-page-target="map">Start</a>
+      </nav>
+      <a class="nav-action" href="#map" data-page-target="map">Start</a>
+      <div class="user-pill" id="userPill" hidden>
+        <span id="userAvatar">K</span>
+        <strong id="userName">Learner</strong>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="auth-section page is-active" id="auth" aria-labelledby="auth-title">
+        <div class="auth-card" id="emailStep">
+          <img class="auth-logo" src="./assets/mapkai-mark.svg" alt="" />
+          <h1 id="auth-title">Start with your email.</h1>
+          <p>No password. MapKai sends a simple login code.</p>
+          <form id="emailForm" class="auth-form">
+            <label for="emailInput">Email</label>
+            <input id="emailInput" name="email" type="email" placeholder="you@example.com" required />
+            <button class="button primary" type="submit">Send code</button>
+          </form>
+        </div>
+
+        <div class="auth-card" id="codeStep" hidden>
+          <img class="auth-logo" src="./assets/mapkai-mark.svg" alt="" />
+          <h1>Check your email.</h1>
+          <p id="codeHint">Enter the code MapKai sent you.</p>
+          <form id="codeForm" class="auth-form">
+            <label for="codeInput">Login code</label>
+            <input id="codeInput" name="code" inputmode="numeric" autocomplete="one-time-code" required />
+            <button class="button primary" type="submit">Verify</button>
+          </form>
+        </div>
+
+        <div class="auth-card" id="profileStep" hidden>
+          <img class="auth-logo" src="./assets/mapkai-mark.svg" alt="" />
+          <h1>Create your profile.</h1>
+          <p>Choose a name and one avatar for your learning map.</p>
+          <form id="profileForm" class="auth-form">
+            <label for="nameInput">Username</label>
+            <input id="nameInput" name="name" type="text" value="Kai Learner" maxlength="28" required />
+            <fieldset class="avatar-group">
+              <legend>Avatar</legend>
+              <label><input type="radio" name="avatar" value="auto" checked /><span>ME</span></label>
+              <label><input type="radio" name="avatar" value="K" /><span>K</span></label>
+              <label><input type="radio" name="avatar" value="AI" /><span>AI</span></label>
+              <label><input type="radio" name="avatar" value="M" /><span>M</span></label>
+              <label><input type="radio" name="avatar" value="01" /><span>01</span></label>
+              <label><input type="radio" name="avatar" value="A" /><span>A</span></label>
+              <label><input type="radio" name="avatar" value="L" /><span>L</span></label>
+              <label><input type="radio" name="avatar" value="N" /><span>N</span></label>
+              <label><input type="radio" name="avatar" value="PX" /><span>PX</span></label>
+              <label><input type="radio" name="avatar" value="88" /><span>88</span></label>
+            </fieldset>
+            <button class="button primary" type="submit">Enter MapKai</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="hero page" id="intro" aria-labelledby="hero-title" aria-hidden="true">
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <h1 id="hero-title">Your knowledge, mapped by AI into a learning path.</h1>
+          <p class="hero-copy">
+            Tell MapKai what you want to learn, choose your current state, and
+            get simple learning cards built around your starting point.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary page-jump" href="#map" data-page-target="map">Next: build my map</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="builder-section page" id="map" aria-labelledby="map-title" aria-hidden="true">
+        <div class="section-heading">
+          <h2 id="map-title">Choose your status.</h2>
+        </div>
+
+        <div class="status-panel">
+          <form class="builder-form" id="mapForm">
+            <label class="goal-field" for="goalInput">
+              <span>Learning goal</span>
+              <input
+                id="goalInput"
+                name="goal"
+                type="text"
+                value="Build useful AI habits"
+                maxlength="72"
+                required
+              />
+            </label>
+            <div class="diagnosis" aria-label="Current state diagnosis">
+              <fieldset class="choice-group">
+                <legend>AI experience</legend>
+                <div class="choice-row">
+                  <label><input type="radio" name="aiLevel" value="no-ai" /><span>None</span></label>
+                  <label><input type="radio" name="aiLevel" value="basic-ai" checked /><span>Basic</span></label>
+                  <label><input type="radio" name="aiLevel" value="uses-ai" /><span>Uses AI</span></label>
+                  <label><input type="radio" name="aiLevel" value="builds-ai" /><span>Builder</span></label>
+                  <label><input type="radio" name="aiLevel" value="master-ai" /><span>Master</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-group">
+                <legend>Learning style</legend>
+                <div class="choice-row">
+                  <label><input type="radio" name="learningAbility" value="struggles" /><span>Struggles</span></label>
+                  <label><input type="radio" name="learningAbility" value="slow" /><span>Slow</span></label>
+                  <label><input type="radio" name="learningAbility" value="steady" checked /><span>Steady</span></label>
+                  <label><input type="radio" name="learningAbility" value="fast" /><span>Fast</span></label>
+                  <label><input type="radio" name="learningAbility" value="elite" /><span>Elite</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-group">
+                <legend>Study time</legend>
+                <div class="choice-row">
+                  <label><input type="radio" name="timeAvailable" value="ten-min" /><span>10m/day</span></label>
+                  <label><input type="radio" name="timeAvailable" value="thirty-min" checked /><span>30m/day</span></label>
+                  <label><input type="radio" name="timeAvailable" value="one-hour" /><span>1h/day</span></label>
+                  <label><input type="radio" name="timeAvailable" value="weekends" /><span>Weekends</span></label>
+                  <label><input type="radio" name="timeAvailable" value="full-focus" /><span>Full focus</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-group">
+                <legend>Goal urgency</legend>
+                <div class="choice-row">
+                  <label><input type="radio" name="urgency" value="explore" /><span>Explore</span></label>
+                  <label><input type="radio" name="urgency" value="month" checked /><span>This month</span></label>
+                  <label><input type="radio" name="urgency" value="two-weeks" /><span>2 weeks</span></label>
+                  <label><input type="radio" name="urgency" value="this-week" /><span>This week</span></label>
+                  <label><input type="radio" name="urgency" value="urgent" /><span>Urgent</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-group">
+                <legend>Preferred output</legend>
+                <div class="choice-row">
+                  <label><input type="radio" name="outputStyle" value="concepts" /><span>Concepts</span></label>
+                  <label><input type="radio" name="outputStyle" value="examples" /><span>Examples</span></label>
+                  <label><input type="radio" name="outputStyle" value="practice" checked /><span>Practice</span></label>
+                  <label><input type="radio" name="outputStyle" value="project" /><span>Project</span></label>
+                  <label><input type="radio" name="outputStyle" value="coach" /><span>Coach</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="pace-control">
+              <legend>Depth</legend>
+              <label>
+                <input type="radio" name="pace" value="quick" />
+                Sprint
+              </label>
+              <label>
+                <input type="radio" name="pace" value="steady" checked />
+                Steady
+              </label>
+              <label>
+                <input type="radio" name="pace" value="deep" />
+                Deep
+              </label>
+            </fieldset>
+            <div class="step-actions">
+              <button class="button secondary step-button" type="button" data-page-target="intro">Back</button>
+              <button class="button primary step-button" type="submit">Next</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="plan-section page" id="plan" aria-labelledby="plan-title" aria-hidden="true">
+        <div class="section-heading">
+          <h2 id="plan-title">Your path is ready.</h2>
+        </div>
+        <div class="builder">
+          <div class="map-board" aria-live="polite">
+            <div class="map-header">
+              <p>Your learning map</p>
+              <strong id="mapGoal">Simple AI learning path</strong>
+            </div>
+            <div class="state-summary" id="stateSummary"></div>
+            <div class="module-area">
+              <p class="module-label">Start here</p>
+              <div class="module-grid" id="moduleGrid"></div>
+            </div>
+            <ol class="map-list" id="mapList"></ol>
+            <section class="discussion" aria-labelledby="discussion-title">
+              <div class="discussion-head">
+                <h3 id="discussion-title">Discussion group</h3>
+                <span>Share one thing you learned.</span>
+              </div>
+              <div class="discussion-list" id="discussionList"></div>
+              <form class="discussion-form" id="discussionForm">
+                <input id="discussionInput" type="text" placeholder="Write a short update..." autocomplete="off" />
+                <button class="button primary" type="submit">Post</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
