@@ -345,8 +345,16 @@ h3 {
   box-shadow: inset 0 0 0 1px rgba(15, 107, 87, 0.18);
 }
 
-.domain-button.is-mastered {
-  background: rgba(232, 239, 229, 0.92);
+.domain-button.is-level-1 {
+  background: rgba(231, 241, 240, 0.94);
+}
+
+.domain-button.is-level-2 {
+  background: rgba(241, 230, 209, 0.94);
+}
+
+.domain-button.is-level-3 {
+  background: rgba(226, 240, 222, 0.94);
 }
 
 .domain-icon {
@@ -361,7 +369,15 @@ h3 {
   font-weight: 860;
 }
 
-.domain-button.is-mastered .domain-icon {
+.domain-button.is-level-1 .domain-icon {
+  background: #8fb4bd;
+}
+
+.domain-button.is-level-2 .domain-icon {
+  background: #b98945;
+}
+
+.domain-button.is-level-3 .domain-icon {
   background: var(--land);
 }
 
@@ -409,6 +425,59 @@ h3 {
 
 .selected-card .button {
   width: 100%;
+}
+
+.quiz-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(15, 107, 87, 0.22);
+  border-radius: 8px;
+  background: rgba(232, 240, 231, 0.72);
+}
+
+.quiz-card > span {
+  color: var(--coral);
+  font-size: 0.72rem;
+  font-weight: 880;
+  text-transform: uppercase;
+}
+
+.quiz-card > strong {
+  font-size: 0.96rem;
+  line-height: 1.28;
+}
+
+.quiz-card.is-complete {
+  border-color: rgba(47, 138, 98, 0.38);
+  background: rgba(226, 240, 222, 0.96);
+}
+
+.quiz-card.is-locked {
+  border-color: rgba(201, 95, 70, 0.32);
+  background: rgba(255, 238, 231, 0.82);
+}
+
+.answer-grid {
+  display: grid;
+  gap: 7px;
+}
+
+.answer-grid button {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid rgba(217, 207, 189, 0.95);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.92);
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 760;
+  text-align: left;
+}
+
+.answer-grid button:hover {
+  border-color: rgba(15, 107, 87, 0.48);
+  background: white;
 }
 
 .course-sources {

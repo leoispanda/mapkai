@@ -27,7 +27,7 @@ const masteredCount = document.getElementById("masteredCount");
 const atlasProgress = document.getElementById("atlasProgress");
 const suggestNextButton = document.getElementById("suggestNextButton");
 const apiBase = window.location.protocol === "file:" ? "http://127.0.0.1:3000" : "";
-const storageKey = "mapkai-state-v2";
+const storageKey = "mapkai-state-v3";
 
 const knowledgeDomains = [
   {
@@ -255,8 +255,215 @@ const knowledgeDomains = [
   },
 ];
 
-let animationFrame;
-let globeRotation = 0;
+const quizLevels = ["simple", "intermediate", "advanced"];
+const levelLabels = ["Ocean", "Snow mountain", "Land", "Green land"];
+const domainQuizzes = {
+  "computing-ai": [
+    {
+      prompt: "What does AI usually mean in computing?",
+      choices: ["Artificial Intelligence", "Automatic Internet", "Applied Illustration"],
+      answer: 0,
+    },
+    {
+      prompt: "Which concept helps an algorithm learn from examples?",
+      choices: ["Training data", "Screen brightness", "Keyboard layout"],
+      answer: 0,
+    },
+    {
+      prompt: "What is the main idea behind human-computer interaction?",
+      choices: ["Designing useful relationships between people and systems", "Making computers heavier", "Removing all interfaces"],
+      answer: 0,
+    },
+  ],
+  "math-data": [
+    {
+      prompt: "Which branch of math studies patterns of change?",
+      choices: ["Calculus", "Typography", "Mythology"],
+      answer: 0,
+    },
+    {
+      prompt: "What does a statistical average summarize?",
+      choices: ["A typical value in data", "The color of a chart", "A university building"],
+      answer: 0,
+    },
+    {
+      prompt: "Why is linear algebra important in data science?",
+      choices: ["It represents data as vectors, matrices, and transformations", "It names planets", "It replaces experiments"],
+      answer: 0,
+    },
+  ],
+  "engineering-systems": [
+    {
+      prompt: "What do engineers usually build or improve?",
+      choices: ["Systems that solve practical problems", "Only poems", "Only historical timelines"],
+      answer: 0,
+    },
+    {
+      prompt: "What does feedback help control systems do?",
+      choices: ["Adjust behavior using output information", "Forget measurements", "Avoid all sensors"],
+      answer: 0,
+    },
+    {
+      prompt: "Why are trade-offs central to engineering design?",
+      choices: ["Because cost, safety, performance, and constraints compete", "Because all designs are identical", "Because testing is never useful"],
+      answer: 0,
+    },
+  ],
+  "materials-manufacturing": [
+    {
+      prompt: "Steel, polymer, ceramic, and glass are examples of what?",
+      choices: ["Materials", "Calendars", "Languages"],
+      answer: 0,
+    },
+    {
+      prompt: "What does manufacturing turn a design into?",
+      choices: ["A physical product or component", "A weather forecast", "A legal code"],
+      answer: 0,
+    },
+    {
+      prompt: "Why does microstructure matter in materials science?",
+      choices: ["It strongly affects strength, toughness, conductivity, and failure", "It determines the school logo", "It makes all materials behave the same"],
+      answer: 0,
+    },
+  ],
+  "built-environment": [
+    {
+      prompt: "Which field designs buildings and spatial experiences?",
+      choices: ["Architecture", "Astronomy", "Accounting"],
+      answer: 0,
+    },
+    {
+      prompt: "What does urban planning organize?",
+      choices: ["Land use, mobility, housing, public space, and services", "Only keyboard shortcuts", "Only ocean tides"],
+      answer: 0,
+    },
+    {
+      prompt: "Why is geospatial engineering useful for cities?",
+      choices: ["It maps locations, infrastructure, terrain, and spatial relationships", "It hides every road", "It removes measurements"],
+      answer: 0,
+    },
+  ],
+  "life-health": [
+    {
+      prompt: "What is the basic unit of life?",
+      choices: ["Cell", "Pixel", "Invoice"],
+      answer: 0,
+    },
+    {
+      prompt: "What does public health study?",
+      choices: ["Health patterns and interventions across populations", "Only private diaries", "Only computer cables"],
+      answer: 0,
+    },
+    {
+      prompt: "Why is neuroscience interdisciplinary?",
+      choices: ["It connects biology, psychology, computation, chemistry, and medicine", "It studies only ancient coins", "It avoids all experiments"],
+      answer: 0,
+    },
+  ],
+  "earth-climate-space": [
+    {
+      prompt: "Which planet is our home?",
+      choices: ["Earth", "Jupiter", "Mercury"],
+      answer: 0,
+    },
+    {
+      prompt: "What does climate science study?",
+      choices: ["Long-term patterns in atmosphere, oceans, land, and energy", "Only tomorrow's lunch", "Only spelling rules"],
+      answer: 0,
+    },
+    {
+      prompt: "Why do Earth systems courses connect many sciences?",
+      choices: ["Because air, water, rock, life, and human activity interact", "Because disciplines never overlap", "Because maps cannot show change"],
+      answer: 0,
+    },
+  ],
+  "business-economics": [
+    {
+      prompt: "What does economics study?",
+      choices: ["Choices under scarcity", "The shape of clouds only", "Ancient grammar only"],
+      answer: 0,
+    },
+    {
+      prompt: "What is a balance sheet used to show?",
+      choices: ["Assets, liabilities, and equity", "A poem's rhyme scheme", "A planet's orbit"],
+      answer: 0,
+    },
+    {
+      prompt: "Why do organizations need incentives?",
+      choices: ["They shape decisions, effort, coordination, and behavior", "They make information disappear", "They replace all strategy"],
+      answer: 0,
+    },
+  ],
+  "law-policy-society": [
+    {
+      prompt: "What is a law?",
+      choices: ["A rule recognized by a legal system", "A type of mountain", "A computer battery"],
+      answer: 0,
+    },
+    {
+      prompt: "What does public policy try to influence?",
+      choices: ["Collective problems through institutions and decisions", "Only font size", "Only private passwords"],
+      answer: 0,
+    },
+    {
+      prompt: "Why is governance broader than government?",
+      choices: ["It includes rules, institutions, networks, norms, and accountability", "It means no rules exist", "It is only a map color"],
+      answer: 0,
+    },
+  ],
+  "humanities-culture": [
+    {
+      prompt: "What do historians study?",
+      choices: ["Evidence about the past", "Only future stock prices", "Only chemical bonds"],
+      answer: 0,
+    },
+    {
+      prompt: "What does interpretation help us understand in literature and culture?",
+      choices: ["Meaning, context, symbols, and perspective", "Only page numbers", "Only lab temperature"],
+      answer: 0,
+    },
+    {
+      prompt: "Why are languages central to culture?",
+      choices: ["They carry memory, identity, categories, and ways of thinking", "They erase communication", "They are unrelated to history"],
+      answer: 0,
+    },
+  ],
+  "design-media-arts": [
+    {
+      prompt: "What does design usually improve?",
+      choices: ["How something works, feels, or communicates", "The weight of time", "The number of planets"],
+      answer: 0,
+    },
+    {
+      prompt: "What does media studies often examine?",
+      choices: ["How messages, platforms, audiences, and power interact", "Only metal hardness", "Only plant roots"],
+      answer: 0,
+    },
+    {
+      prompt: "Why is critique important in creative work?",
+      choices: ["It tests intention, craft, audience, context, and effect", "It removes all creativity", "It prevents revision"],
+      answer: 0,
+    },
+  ],
+  "learning-education": [
+    {
+      prompt: "What is learning?",
+      choices: ["A change in knowledge, skill, or understanding", "Only opening a website", "Only drawing a circle"],
+      answer: 0,
+    },
+    {
+      prompt: "Why does retrieval practice help memory?",
+      choices: ["It strengthens recall by actively bringing knowledge back", "It avoids thinking", "It deletes examples"],
+      answer: 0,
+    },
+    {
+      prompt: "What makes knowledge mapping useful?",
+      choices: ["It shows concepts, gaps, dependencies, and pathways", "It hides relationships", "It makes every learner identical"],
+      answer: 0,
+    },
+  ],
+};
+
 let selectedDomainId = "computing-ai";
 let isLoggedIn = false;
 let currentUser = {
@@ -265,7 +472,8 @@ let currentUser = {
   avatar: "auto",
 };
 let savedDiscussions = [];
-let masteredDomains = new Set(knowledgeDomains.filter((domain) => domain.unlocked).map((domain) => domain.id));
+let domainProgress = Object.fromEntries(knowledgeDomains.map((domain) => [domain.id, 0]));
+let quizLocks = {};
 let canvasMetrics = { size: 0, cx: 0, cy: 0, radius: 0 };
 
 const profileLabels = {
@@ -373,15 +581,14 @@ function resizeCanvas() {
   drawGlobe();
 }
 
-function drawGlobe(time = 0) {
-  globeRotation = time * 0.00012;
+function drawGlobe() {
   const { size, cx, cy, radius } = canvasMetrics;
   ctx.clearRect(0, 0, size, size);
 
   const ocean = ctx.createRadialGradient(cx - radius * 0.36, cy - radius * 0.42, radius * 0.1, cx, cy, radius);
-  ocean.addColorStop(0, "#4c8eb0");
-  ocean.addColorStop(0.44, "#1d668a");
-  ocean.addColorStop(1, "#12384f");
+  ocean.addColorStop(0, "#7fc1d8");
+  ocean.addColorStop(0.5, "#2b82a8");
+  ocean.addColorStop(1, "#155777");
 
   ctx.save();
   ctx.beginPath();
@@ -389,6 +596,7 @@ function drawGlobe(time = 0) {
   ctx.clip();
   ctx.fillStyle = ocean;
   ctx.fillRect(cx - radius, cy - radius, radius * 2, radius * 2);
+  drawCartoonWaves(cx, cy, radius);
   drawOceanGrid(cx, cy, radius);
   drawKnowledgeLinks(cx, cy, radius);
   knowledgeDomains.forEach((domain) => drawDomain(domain, cx, cy, radius));
@@ -407,8 +615,22 @@ function drawGlobe(time = 0) {
   ctx.beginPath();
   ctx.arc(cx, cy, radius * 1.28, 0, Math.PI * 2);
   ctx.fill();
+}
 
-  animationFrame = requestAnimationFrame(drawGlobe);
+function drawCartoonWaves(cx, cy, radius) {
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.2)";
+  ctx.lineWidth = 2;
+  ctx.lineCap = "round";
+  for (let row = -3; row <= 3; row += 1) {
+    for (let col = -3; col <= 3; col += 1) {
+      const x = cx + col * radius * 0.28 + (row % 2) * radius * 0.08;
+      const y = cy + row * radius * 0.22;
+      if (Math.hypot(x - cx, y - cy) > radius * 0.82) continue;
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.045, Math.PI * 0.08, Math.PI * 0.92);
+      ctx.stroke();
+    }
+  }
 }
 
 function drawOceanGrid(cx, cy, radius) {
@@ -438,7 +660,7 @@ function drawKnowledgeLinks(cx, cy, radius) {
     for (let j = i + 1; j < points.length; j += 1) {
       const a = points[i];
       const b = points[j];
-      const mastered = masteredDomains.has(knowledgeDomains[i].id) && masteredDomains.has(knowledgeDomains[j].id);
+      const mastered = getDomainLevel(knowledgeDomains[i].id) > 0 && getDomainLevel(knowledgeDomains[j].id) > 0;
       const distance = Math.hypot(a.x - b.x, a.y - b.y);
       if (distance > radius * 0.82) continue;
       ctx.strokeStyle = mastered ? "rgba(255, 250, 240, 0.28)" : "rgba(255, 250, 240, 0.1)";
@@ -452,20 +674,27 @@ function drawKnowledgeLinks(cx, cy, radius) {
 
 function drawDomain(domain, cx, cy, radius) {
   const point = projectDomain(domain, cx, cy, radius);
-  const mastered = masteredDomains.has(domain.id);
+  const level = getDomainLevel(domain.id);
   const selected = selectedDomainId === domain.id;
 
-  if (mastered) {
-    drawLandMass(point.x, point.y, radius * 0.14, domain.color, domain.id);
+  if (level === 1) {
+    drawSnowMountain(point.x, point.y, radius * 0.15, domain.color);
+  } else if (level === 2) {
+    drawLandMass(point.x, point.y, radius * 0.14, "#b98945", domain.id, false);
+  } else if (level >= 3) {
+    drawLandMass(point.x, point.y, radius * 0.15, "#42a66b", domain.id, true);
   } else {
     ctx.beginPath();
-    ctx.arc(point.x, point.y, radius * 0.047, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 250, 240, 0.88)";
+    ctx.arc(point.x, point.y, radius * 0.062, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255, 250, 240, 0.92)";
     ctx.fill();
     ctx.beginPath();
-    ctx.arc(point.x, point.y, radius * 0.031, 0, Math.PI * 2);
+    ctx.arc(point.x, point.y, radius * 0.043, 0, Math.PI * 2);
     ctx.fillStyle = "#1d5f82";
     ctx.fill();
+    ctx.strokeStyle = "rgba(255, 250, 240, 0.7)";
+    ctx.lineWidth = 2;
+    ctx.stroke();
   }
 
   if (selected) {
@@ -476,14 +705,14 @@ function drawDomain(domain, cx, cy, radius) {
     ctx.stroke();
   }
 
-  ctx.fillStyle = mastered ? "#fffaf0" : "rgba(255, 250, 240, 0.86)";
-  ctx.font = `800 ${Math.max(10, radius * 0.045)}px Inter, system-ui, sans-serif`;
+  ctx.fillStyle = level > 0 ? "#fffaf0" : "rgba(255, 250, 240, 0.9)";
+  ctx.font = `900 ${Math.max(9, radius * 0.034)}px Inter, system-ui, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText(domain.icon, point.x, point.y + radius * 0.002);
+  ctx.fillText(domain.icon, point.x, point.y + radius * 0.003);
 }
 
-function drawLandMass(x, y, size, color, seed) {
+function drawLandMass(x, y, size, color, seed, withTrees) {
   const hash = [...seed].reduce((sum, char) => sum + char.charCodeAt(0), 0);
   ctx.beginPath();
   for (let i = 0; i < 12; i += 1) {
@@ -500,23 +729,64 @@ function drawLandMass(x, y, size, color, seed) {
   ctx.strokeStyle = "rgba(255, 250, 240, 0.58)";
   ctx.lineWidth = 1.5;
   ctx.stroke();
+
+  if (!withTrees) return;
+  [[-0.32, 0.1], [0.22, -0.18], [0.35, 0.22]].forEach(([dx, dy]) => {
+    drawTree(x + dx * size, y + dy * size, size * 0.18);
+  });
+}
+
+function drawSnowMountain(x, y, size, color) {
+  ctx.fillStyle = "#8fb4bd";
+  ctx.beginPath();
+  ctx.moveTo(x - size * 0.92, y + size * 0.55);
+  ctx.lineTo(x - size * 0.22, y - size * 0.68);
+  ctx.lineTo(x + size * 0.44, y + size * 0.55);
+  ctx.closePath();
+  ctx.fill();
+  ctx.fillStyle = "#d9f2f0";
+  ctx.beginPath();
+  ctx.moveTo(x - size * 0.22, y - size * 0.68);
+  ctx.lineTo(x - size * 0.44, y - size * 0.16);
+  ctx.lineTo(x - size * 0.08, y - size * 0.26);
+  ctx.lineTo(x + size * 0.06, y + size * 0.02);
+  ctx.lineTo(x + size * 0.16, y - size * 0.06);
+  ctx.closePath();
+  ctx.fill();
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(x - size * 0.28, y + size * 0.55);
+  ctx.lineTo(x + size * 0.34, y - size * 0.28);
+  ctx.lineTo(x + size * 0.94, y + size * 0.55);
+  ctx.closePath();
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255, 250, 240, 0.74)";
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+}
+
+function drawTree(x, y, size) {
+  ctx.fillStyle = "#7a5a35";
+  ctx.fillRect(x - size * 0.12, y, size * 0.24, size * 0.52);
+  ctx.fillStyle = "#1f7a5c";
+  ctx.beginPath();
+  ctx.arc(x, y - size * 0.14, size * 0.34, 0, Math.PI * 2);
+  ctx.fill();
 }
 
 function projectDomain(domain, cx, cy, radius) {
-  const rotatedX = domain.x * Math.cos(globeRotation) - domain.y * 0.16 * Math.sin(globeRotation);
-  const rotatedY = domain.y + Math.sin(globeRotation + domain.x) * 0.035;
   return {
-    x: cx + rotatedX * radius * 1.24,
-    y: cy + rotatedY * radius * 1.24,
+    x: cx + domain.x * radius * 1.24,
+    y: cy + domain.y * radius * 1.24,
   };
 }
 
 function renderDomains() {
   domainList.replaceChildren();
   knowledgeDomains.forEach((domain) => {
-    const mastered = masteredDomains.has(domain.id);
+    const level = getDomainLevel(domain.id);
     const button = document.createElement("button");
-    button.className = `domain-button${mastered ? " is-mastered" : ""}${selectedDomainId === domain.id ? " is-selected" : ""}`;
+    button.className = `domain-button is-level-${level}${selectedDomainId === domain.id ? " is-selected" : ""}`;
     button.type = "button";
     button.innerHTML = `
       <span class="domain-icon">${escapeHtml(domain.icon)}</span>
@@ -524,7 +794,7 @@ function renderDomains() {
         <strong>${escapeHtml(domain.label)}</strong>
         <span>${escapeHtml(domain.type)}</span>
       </span>
-      <span class="domain-status">${mastered ? "Land" : "Ocean"}</span>
+      <span class="domain-status">${levelLabels[level]}</span>
     `;
     button.addEventListener("click", () => {
       selectedDomainId = domain.id;
@@ -536,15 +806,20 @@ function renderDomains() {
     domainList.appendChild(button);
   });
 
-  const mastered = masteredDomains.size;
-  const progress = Math.round((mastered / knowledgeDomains.length) * 100);
-  masteredCount.textContent = `${mastered} mastered`;
+  const lit = knowledgeDomains.filter((domain) => getDomainLevel(domain.id) > 0).length;
+  const progressPoints = knowledgeDomains.reduce((sum, domain) => sum + getDomainLevel(domain.id), 0);
+  const progress = Math.round((progressPoints / (knowledgeDomains.length * 3)) * 100);
+  masteredCount.textContent = `${lit} lit`;
   atlasProgress.textContent = `${progress}%`;
 }
 
 function renderSelectedDomain() {
   const domain = knowledgeDomains.find((item) => item.id === selectedDomainId) || knowledgeDomains[0];
-  const mastered = masteredDomains.has(domain.id);
+  const level = getDomainLevel(domain.id);
+  const locked = Boolean(quizLocks[domain.id]);
+  const nextQuestionIndex = Math.min(level, 2);
+  const nextQuestion = domainQuizzes[domain.id]?.[nextQuestionIndex];
+  const quizMarkup = renderQuizMarkup(domain, level, locked, nextQuestion, nextQuestionIndex);
   const courses = (domain.courses || [])
     .map(
       ([university, course, level]) => `
@@ -557,28 +832,82 @@ function renderSelectedDomain() {
     )
     .join("");
   selectedCard.innerHTML = `
-    <p class="eyebrow">${mastered ? "Land discovered" : "Unexplored ocean"}</p>
+    <p class="eyebrow">${escapeHtml(levelLabels[level])}</p>
     <strong>${escapeHtml(domain.label)}</strong>
     <p>${escapeHtml(domain.summary)}</p>
+    ${quizMarkup}
     <div class="course-sources">
       <span>${domain.courses?.length || 0} university course signals</span>
       <ul>${courses}</ul>
     </div>
-    <button class="button ${mastered ? "secondary" : "primary"}" type="button" id="toggleDomainButton">
-      ${mastered ? "Mark as ocean" : "Light into land"}
-    </button>
   `;
-  document.getElementById("toggleDomainButton").addEventListener("click", () => {
-    toggleDomain(domain.id);
+  selectedCard.querySelectorAll("[data-answer-index]").forEach((button) => {
+    button.addEventListener("click", () => {
+      answerQuiz(domain.id, Number(button.dataset.answerIndex));
+    });
   });
+  const retryButton = document.getElementById("retryQuizButton");
+  if (retryButton) retryButton.addEventListener("click", () => resetQuiz(domain.id));
 }
 
-function toggleDomain(id) {
-  if (masteredDomains.has(id)) {
-    masteredDomains.delete(id);
-  } else {
-    masteredDomains.add(id);
+function renderQuizMarkup(domain, level, locked, question, questionIndex) {
+  if (level >= 3) {
+    return `
+      <div class="quiz-card is-complete">
+        <span>Encyclopedia challenge complete</span>
+        <strong>Advanced answered. This region is green land.</strong>
+      </div>
+    `;
   }
+
+  if (locked) {
+    return `
+      <div class="quiz-card is-locked">
+        <span>Challenge ended</span>
+        <strong>One wrong answer stops this round.</strong>
+        <button class="button secondary" type="button" id="retryQuizButton">Try this subject again</button>
+      </div>
+    `;
+  }
+
+  if (!question) return "";
+
+  const levelName = quizLevels[questionIndex];
+  const reward = levelLabels[questionIndex + 1];
+  return `
+    <div class="quiz-card">
+      <span>${escapeHtml(levelName)} question -> ${escapeHtml(reward)}</span>
+      <strong>${escapeHtml(question.prompt)}</strong>
+      <div class="answer-grid">
+        ${question.choices
+          .map((choice, index) => `<button type="button" data-answer-index="${index}">${escapeHtml(choice)}</button>`)
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function answerQuiz(id, answerIndex) {
+  const level = getDomainLevel(id);
+  const question = domainQuizzes[id]?.[level];
+  if (!question || quizLocks[id]) return;
+
+  if (answerIndex === question.answer) {
+    domainProgress[id] = Math.min(3, level + 1);
+  } else {
+    quizLocks[id] = true;
+  }
+
+  selectedDomainId = id;
+  renderDomains();
+  renderSelectedDomain();
+  drawGlobe();
+  saveState();
+}
+
+function resetQuiz(id) {
+  domainProgress[id] = 0;
+  delete quizLocks[id];
   selectedDomainId = id;
   renderDomains();
   renderSelectedDomain();
@@ -587,7 +916,7 @@ function toggleDomain(id) {
 }
 
 function suggestNextDomain() {
-  const next = knowledgeDomains.find((domain) => !masteredDomains.has(domain.id)) || knowledgeDomains[0];
+  const next = knowledgeDomains.find((domain) => getDomainLevel(domain.id) < 3 && !quizLocks[domain.id]) || knowledgeDomains[0];
   selectedDomainId = next.id;
   renderDomains();
   renderSelectedDomain();
@@ -603,7 +932,17 @@ function handleCanvasClick(event) {
     const point = projectDomain(domain, canvasMetrics.cx, canvasMetrics.cy, canvasMetrics.radius);
     return Math.hypot(point.x - x, point.y - y) < canvasMetrics.radius * 0.12;
   });
-  if (hit) toggleDomain(hit.id);
+  if (hit) {
+    selectedDomainId = hit.id;
+    renderDomains();
+    renderSelectedDomain();
+    drawGlobe();
+    saveState();
+  }
+}
+
+function getDomainLevel(id) {
+  return Math.max(0, Math.min(3, Number(domainProgress[id] || 0)));
 }
 
 function getPlanInput() {
@@ -659,7 +998,7 @@ function getSimplePlan(profile) {
   return [
     ["Select region", `Connect ${profile.goal} to one visible knowledge region on the atlas.`, "Choose the closest industry or discipline.", time],
     ["Proof of knowledge", "Write one explanation or complete one small task that proves the region is understood.", "Use examples, not passive reading.", "1 session"],
-    ["Light the land", "Mark the region as mastered once the proof is good enough.", "Turn ocean into land on the globe.", "Today"],
+    ["Answer quiz", "Clear simple, intermediate, and advanced questions to change the region.", "Snow mountain, land, and green land mark your progress.", "Today"],
     ["Expand edge", "Pick the next adjacent ocean region and repeat.", "Grow the atlas from demonstrated knowledge.", "Tomorrow"],
   ];
 }
@@ -847,7 +1186,8 @@ function saveState() {
       savedDiscussions,
       profile: getPlanInput(),
       selectedDomainId,
-      masteredDomains: Array.from(masteredDomains),
+      domainProgress,
+      quizLocks,
     }),
   );
 }
@@ -862,7 +1202,8 @@ function restoreState() {
     currentUser = { ...currentUser, ...(state.currentUser || {}) };
     savedDiscussions = Array.isArray(state.savedDiscussions) ? state.savedDiscussions : [];
     selectedDomainId = state.selectedDomainId || selectedDomainId;
-    masteredDomains = new Set(Array.isArray(state.masteredDomains) ? state.masteredDomains : Array.from(masteredDomains));
+    domainProgress = { ...domainProgress, ...(state.domainProgress || {}) };
+    quizLocks = state.quizLocks || {};
 
     if (state.profile) {
       Object.entries(state.profile).forEach(([name, value]) => {
@@ -923,11 +1264,7 @@ resizeCanvas();
 if (savedDiscussions.length) {
   savedDiscussions.forEach((entry) => addDiscussionMessage(entry.name, entry.avatar, entry.message));
 } else {
-  addDiscussionMessage("MapKAI", "K", "Welcome. Light one knowledge region when you can prove it.");
+  addDiscussionMessage("MapKAI", "K", "Welcome. Answer a subject quiz to light your first knowledge region.");
 }
 if (restored) renderUser();
 showPage("atlas");
-
-window.addEventListener("beforeunload", () => {
-  cancelAnimationFrame(animationFrame);
-});
