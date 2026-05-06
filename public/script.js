@@ -519,10 +519,6 @@ function showPage(pageId) {
 pageLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    if (!isLoggedIn) {
-      showPage("auth");
-      return;
-    }
     showPage(link.dataset.pageTarget);
   });
 });
@@ -539,7 +535,7 @@ if (savedDiscussions.length) {
   addDiscussionMessage("MapKai", "K", "Welcome. Post one small learning win after you finish today's card.");
 }
 if (restored) renderUser();
-showPage(restored ? "intro" : "auth");
+showPage("intro");
 
 window.addEventListener("beforeunload", () => {
   cancelAnimationFrame(animationFrame);
