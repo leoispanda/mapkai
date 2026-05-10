@@ -264,6 +264,35 @@ p {
   font-weight: 820;
 }
 
+.scope-count {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  margin-top: 14px;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: rgba(214, 169, 71, 0.18);
+  color: #80601f;
+  font-size: 0.82rem;
+  font-weight: 820;
+}
+
+.scope-preview {
+  display: grid;
+  gap: 6px;
+  min-height: 136px;
+  margin: 14px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.scope-preview strong {
+  color: var(--green-dark);
+}
+
 .category-card.is-pilot {
   background: linear-gradient(180deg, rgba(237, 244, 233, 0.96), rgba(255, 250, 240, 0.9));
   border-color: rgba(15, 107, 87, 0.28);
