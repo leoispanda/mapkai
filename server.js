@@ -142,6 +142,13 @@ async function serveStatic(pathname, response) {
     });
     response.end(content);
   } catch {
+    if (!extname(filePath)) {
+      const content = await readFile(join(root, "index.html"));
+      response.writeHead(200, { "Content-Type": mimeTypes[".html"] });
+      response.end(content);
+      return;
+    }
+
     response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Not found");
   }
