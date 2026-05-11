@@ -8,14 +8,13 @@
       name="description"
       content="MapKAI is a modular knowledge map and learning path system for exploring categories, fields, and guided learning routes."
     />
-    <link rel="icon" href="./assets/mapkai-mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=20260510-modules" />
+    <link rel="icon" href="/assets/mapkai-brand.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css?v=20260510-home-clarity" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
       <a class="brand" href="/" data-route="/">
-        <img class="brand-mark" src="./assets/mapkai-mark.svg" alt="" />
-        <span>MapKAI</span>
+        <img class="brand-mark" src="/assets/mapkai-brand.png" alt="MapKAI" />
       </a>
       <nav class="nav-links" aria-label="Site">
         <a href="/map" data-route="/map">Map</a>
@@ -27,41 +26,91 @@
     <main id="app">
       <section class="page home-page is-active" id="home" data-page="/">
         <div class="hero">
-          <p class="eyebrow">Modular knowledge atlas</p>
+          <p class="eyebrow">MAP knowledge with AI</p>
           <h1>Map knowledge into paths you can actually follow.</h1>
           <p class="hero-copy">
-            MapKAI helps learners understand knowledge categories, explore fields, and move from
-            curiosity into guided learning paths. Each update is one module, one clean change.
+            MapKAI helps learners turn broad knowledge fields into clear maps, structured
+            categories, and guided learning paths with the help of AI.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="/map" data-route="/map">Explore the map</a>
-            <a class="button secondary" href="/categories/04/0412" data-route="/categories/04/0412">View finance field</a>
+            <a class="button primary" href="/map" data-route="/map">Explore the Map</a>
+            <a class="button secondary" href="/learning/business-foundation" data-route="/learning/business-foundation">Start Business Path</a>
+            <a class="button secondary" href="/categories" data-route="/categories">Browse Categories</a>
           </div>
         </div>
 
         <section class="module-strip" aria-labelledby="core-modules-title">
           <div class="section-heading">
             <p class="eyebrow">Three core modules</p>
-            <h2 id="core-modules-title">A smaller system that can grow cleanly.</h2>
+            <h2 id="core-modules-title">A simple structure for exploring knowledge.</h2>
           </div>
           <div class="card-grid three">
             <article class="module-card">
               <span>01</span>
-              <h3>Map</h3>
-              <p>See the whole knowledge landscape, current pilot area, and recommended entry points.</p>
+              <h3>Map — See the knowledge landscape</h3>
+              <p>Understand the big picture before choosing what to learn.</p>
               <a href="/map" data-route="/map">Open map</a>
             </article>
             <article class="module-card">
               <span>02</span>
-              <h3>Categories</h3>
-              <p>Use a stable classification backbone with codes, groups, fields, and readiness status.</p>
+              <h3>Categories — Understand each field</h3>
+              <p>Explore structured fields, codes, readiness, and relationships.</p>
               <a href="/categories" data-route="/categories">Browse categories</a>
             </article>
             <article class="module-card">
               <span>03</span>
-              <h3>Learning</h3>
-              <p>Turn selected fields into a practical learning order with clear goals and next actions.</p>
+              <h3>Learning — Follow a guided path</h3>
+              <p>Turn selected fields into practical learning steps.</p>
               <a href="/learning" data-route="/learning">View paths</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="how-title">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2 id="how-title">How MapKAI works</h2>
+          </div>
+          <div class="card-grid three">
+            <article class="module-card">
+              <span>1</span>
+              <h3>See the landscape</h3>
+              <p>Explore the full knowledge map and understand the big picture.</p>
+            </article>
+            <article class="module-card">
+              <span>2</span>
+              <h3>Choose a field</h3>
+              <p>Dive into structured categories and see how each field connects.</p>
+            </article>
+            <article class="module-card">
+              <span>3</span>
+              <h3>Follow a path</h3>
+              <p>Move from curiosity to guided learning with practical next steps.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="audience-title">
+          <div class="section-heading">
+            <p class="eyebrow">For learners</p>
+            <h2 id="audience-title">Who MapKAI is for</h2>
+          </div>
+          <div class="card-grid four">
+            <article class="module-card compact-card">
+              <h3>Students</h3>
+              <p>Explore broad knowledge fields before choosing a direction.</p>
+            </article>
+            <article class="module-card compact-card">
+              <h3>Career switchers</h3>
+              <p>Build structured understanding when entering a new field.</p>
+            </article>
+            <article class="module-card compact-card">
+              <h3>Business beginners</h3>
+              <p>Understand how organizations, markets, money, and rules connect.</p>
+            </article>
+            <article class="module-card compact-card">
+              <h3>Lifelong learners</h3>
+              <p>Turn scattered curiosity into a clear learning journey.</p>
             </article>
           </div>
         </section>
@@ -69,13 +118,60 @@
         <section class="preview-band">
           <div>
             <p class="eyebrow">Pilot area</p>
-            <h2>04 Business, Administration and Law</h2>
+            <h2>Start with Business, Administration and Law</h2>
             <p>
-              The first complete test module is business. It lets MapKAI prove the category template,
-              detailed field page, and learning path before expanding to the other ten areas.
+              This pilot area helps learners understand how organizations, money, markets,
+              accounting, and rules connect before choosing a deeper direction.
+            </p>
+            <p>
+              It is the first complete learning area in MapKAI and will guide the structure for
+              future knowledge categories.
             </p>
           </div>
-          <a class="button primary" href="/categories/04" data-route="/categories/04">Open 04 pilot</a>
+          <a class="button primary" href="/learning/business-foundation" data-route="/learning/business-foundation">Start Business Path</a>
+        </section>
+
+        <section class="home-section example-section" aria-labelledby="example-title">
+          <div class="section-heading">
+            <p class="eyebrow">Example</p>
+            <h2 id="example-title">I want to understand business from zero</h2>
+          </div>
+          <ol class="example-list">
+            <li>Start with organizations and management</li>
+            <li>Learn demand, markets, and customers</li>
+            <li>Understand finance and accounting basics</li>
+            <li>Explore law, regulation, and risk</li>
+            <li>Choose a deeper path: marketing, finance, management, entrepreneurship, or law</li>
+          </ol>
+        </section>
+
+        <section class="home-section why-section" aria-labelledby="why-title">
+          <div class="section-heading">
+            <p class="eyebrow">Why MapKAI?</p>
+            <h2 id="why-title">Why MapKAI?</h2>
+          </div>
+          <div class="why-copy">
+            <p>MapKAI stands for Map Knowledge with AI.</p>
+            <p>
+              In today’s world, knowledge is everywhere, but it is often scattered,
+              overwhelming, and hard to navigate.
+            </p>
+            <p>
+              MapKAI was created to explore a simple idea: What if AI could help us turn
+              broad knowledge into clear maps, meaningful categories, and learning paths we
+              can actually follow?
+            </p>
+            <div class="idea-grid">
+              <article><strong>Map</strong><span>because learning needs direction.</span></article>
+              <article><strong>K</strong><span>for knowledge.</span></article>
+              <article><strong>AI</strong><span>as a tool to organize, connect, and expand what we learn.</span></article>
+            </div>
+            <p>
+              MapKAI is not just about collecting information. It is about transforming
+              scattered knowledge into a structured learning journey, from unknown ocean to
+              explored land.
+            </p>
+          </div>
         </section>
       </section>
 
@@ -85,8 +181,9 @@
             <p class="eyebrow">General Knowledge Map</p>
             <h1>The ocean is unknown. The land is what you can explain.</h1>
             <p>
-              This map is the orientation layer. It shows the eleven knowledge categories, highlights
-              the current pilot module, and points users toward categories or learning paths.
+              In MapKAI, the ocean represents what you have not explored yet. The land represents
+              what you understand well enough to explain. Learning paths help you move from ocean
+              to land.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="/categories" data-route="/categories">Go to categories</a>
@@ -110,24 +207,21 @@
           <p class="eyebrow">Knowledge Classification System</p>
           <h1>Eleven categories, one maintainable backbone.</h1>
           <p>
-            Each category uses the same module passport: code, title, status, readiness, related paths,
-            next action, and do-not-touch boundaries.
+            Explore the official knowledge structure behind MapKAI. Each category shows its
+            fields, relationships, and learning readiness.
           </p>
         </div>
         <div class="category-grid" id="categoryGrid"></div>
       </section>
 
-      <section class="page category-page" id="category04" data-page="/categories/04">
+      <section class="page category-page" id="categoryDetail" data-page="/categories/detail">
         <div class="section-heading compact">
-          <p class="eyebrow">Pilot category</p>
-          <h1>04 Business, Administration and Law</h1>
-          <p>
-            This is the first complete pilot category. Once this structure works, the same pattern can
-            be copied to the other ten categories without rebuilding the whole website.
-          </p>
+          <p class="eyebrow" id="categoryDetailEyebrow">Category scope</p>
+          <h1 id="categoryDetailTitle">Knowledge category</h1>
+          <p id="categoryDetailCopy"></p>
         </div>
         <div class="passport-panel" id="categoryPassport"></div>
-        <div class="tree-panel" id="businessTree"></div>
+        <div class="tree-panel" id="categoryTree"></div>
       </section>
 
       <section class="page field-page" id="field0412" data-page="/categories/04/0412">
@@ -153,8 +247,8 @@
           <p class="eyebrow">Customized Learning Path</p>
           <h1>Learning paths connect fields into a usable order.</h1>
           <p>
-            MVP learning paths stay semi-manual: goal first, then category, detailed fields, topic
-            order, future question bank tags, and weakness repair later.
+            Start with a learning goal, choose a knowledge area, and follow a practical path
+            through connected fields.
           </p>
         </div>
         <div class="path-type-grid" id="pathTypeGrid"></div>
@@ -182,6 +276,6 @@
       </section>
     </main>
 
-    <script src="./script.js?v=20260510-modules"></script>
+    <script src="/script.js?v=20260510-home-clarity"></script>
   </body>
 </html>

@@ -55,15 +55,14 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-  font-size: 1.08rem;
-  font-weight: 860;
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
+  width: clamp(138px, 18vw, 190px);
+  height: 54px;
   border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
   box-shadow: 0 14px 32px rgba(15, 107, 87, 0.22);
 }
 
@@ -200,6 +199,7 @@ p {
 }
 
 .module-strip,
+.home-section,
 .preview-band {
   margin-top: 28px;
 }
@@ -219,6 +219,10 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.card-grid.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .module-card,
 .category-card,
 .passport-panel,
@@ -234,8 +238,17 @@ p {
 
 .module-card,
 .category-card {
+  display: block;
   min-height: 190px;
   padding: 20px;
+}
+
+.compact-card {
+  min-height: 150px;
+}
+
+.compact-card h3 {
+  margin-top: 0;
 }
 
 .module-card span,
@@ -251,17 +264,41 @@ p {
   font-weight: 860;
 }
 
-.module-card h3,
-.category-card h3 {
+.module-card h3 {
   margin-top: 18px;
 }
 
+.category-card h3 {
+  margin-top: 0;
+}
+
 .module-card a,
-.category-card a {
+.card-link {
   display: inline-flex;
   margin-top: 12px;
   color: var(--green-dark);
   font-weight: 820;
+}
+
+.category-card {
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.category-card:hover {
+  border-color: rgba(15, 107, 87, 0.38);
+  box-shadow: 0 26px 76px rgba(23, 32, 27, 0.17);
+  transform: translateY(-2px);
+}
+
+.map-category-card {
+  min-height: 146px;
+}
+
+.map-category-card .card-link {
+  margin-top: 8px;
 }
 
 .scope-count {
@@ -331,6 +368,154 @@ p {
   justify-content: space-between;
   gap: 24px;
   padding: 26px;
+}
+
+.preview-band p + p {
+  margin-top: 10px;
+}
+
+.example-section,
+.why-section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.78);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.example-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.example-list li {
+  min-height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: rgba(246, 240, 228, 0.62);
+  color: var(--green-dark);
+  font-weight: 760;
+}
+
+.why-copy {
+  max-width: 920px;
+}
+
+.why-copy p {
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+}
+
+.idea-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.idea-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(237, 244, 233, 0.72);
+}
+
+.idea-grid strong,
+.idea-grid span {
+  display: block;
+}
+
+.idea-grid strong {
+  color: var(--green-dark);
+  font-size: 1.2rem;
+}
+
+.idea-grid span {
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+  gap: 22px;
+  width: min(1180px, 100%);
+  margin: 34px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.82);
+  box-shadow: var(--shadow);
+  padding: 26px;
+}
+
+.contact-section h2 {
+  max-width: 620px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.contact-methods a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: rgba(237, 244, 233, 0.74);
+  color: var(--green-dark);
+  font-weight: 820;
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--green-dark);
+  font-weight: 780;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(246, 240, 228, 0.76);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form input {
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  padding: 12px;
+}
+
+.contact-status {
+  min-height: 24px;
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.contact-status a {
+  color: var(--green-dark);
+  font-weight: 820;
 }
 
 .split-layout {
@@ -546,6 +731,8 @@ canvas {
 @media (max-width: 980px) {
   .card-grid,
   .category-grid,
+  .card-grid.four,
+  .idea-grid,
   .path-type-grid,
   .category-preview,
   .split-layout,
@@ -554,8 +741,10 @@ canvas {
   }
 
   .field-hero,
+  .contact-section,
   .preview-band {
     align-items: stretch;
+    grid-template-columns: 1fr;
     flex-direction: column;
   }
 }

@@ -2,6 +2,7 @@ const pages = Array.from(document.querySelectorAll("[data-page]"));
 const routeLinks = Array.from(document.querySelectorAll("[data-route]"));
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
+const contactEmail = "hello@mapkai.com";
 
 const readiness = {
   mapOnly: "Map only",
@@ -423,8 +424,6 @@ const modulePassports = {
   },
 };
 
-const businessTree = categories.find((category) => category.code === "04").groups;
-
 const field0412 = {
   code: "0412",
   title: "Finance, banking and insurance",
@@ -475,6 +474,53 @@ const reviewLog = {
   nextModule: "Validate 0412, then add a small finance question set.",
 };
 
+function contactSectionTemplate() {
+  return `
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Need help or want to leave a message?</h2>
+        <p>If you need to contact MapKAI, please leave a message here.</p>
+        <div class="contact-methods">
+          <a href="mailto:${contactEmail}">${contactEmail}</a>
+        </div>
+      </div>
+      <form class="contact-form" data-contact-form>
+        <label>
+          <span>Your email</span>
+          <input name="email" type="text" inputmode="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Tell us what you want to ask, suggest, or build with MapKAI." required></textarea>
+        </label>
+        <button class="button primary" type="submit">Prepare message</button>
+        <p class="contact-status" aria-live="polite"></p>
+      </form>
+    </section>`;
+}
+
+function renderContactSections() {
+  pages.forEach((page) => {
+    if (page.querySelector(".contact-section")) return;
+    page.insertAdjacentHTML("beforeend", contactSectionTemplate());
+  });
+}
+
+function handleContactSubmit(event) {
+  const form = event.target.closest("[data-contact-form]");
+  if (!form) return;
+  event.preventDefault();
+
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+  const subject = encodeURIComponent("MapKAI message");
+  const body = encodeURIComponent(`From: ${email}\n\n${message}`);
+  const status = form.querySelector(".contact-status");
+  status.innerHTML = `Thanks. Your message is ready. <a href="mailto:${contactEmail}?subject=${subject}&body=${body}">Send it by email</a>.`;
+  form.reset();
+}
+
 function normalizeRoute(path) {
   if (window.location.protocol === "file:") {
     return window.location.hash.replace("#", "") || "/";
@@ -484,12 +530,23 @@ function normalizeRoute(path) {
 
 function goToRoute(route, replace = false) {
   const target = route || "/";
+  const categoryMatch = target.match(/^\/categories\/(\d{2})$/);
+  if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
+  const activePage = categoryMatch ? "/categories/detail" : target;
+
   pages.forEach((page) => {
-    const active = page.dataset.page === target;
+    const active = page.dataset.page === activePage;
     page.classList.toggle("is-active", active);
     page.setAttribute("aria-hidden", String(!active));
   });
-  routeLinks.forEach((link) => link.classList.toggle("is-current", link.dataset.route === target));
+  routeLinks.forEach((link) => {
+    const linkRoute = link.dataset.route;
+    const isCurrent =
+      linkRoute === target ||
+      (linkRoute === "/categories" && target.startsWith("/categories")) ||
+      (linkRoute === "/learning" && target.startsWith("/learning"));
+    link.classList.toggle("is-current", isCurrent);
+  });
 
   if (replace) return;
   if (window.location.protocol === "file:") {
@@ -506,9 +563,9 @@ function makeStatus(status, ready) {
 function renderCategories() {
   const grid = document.getElementById("categoryGrid");
   const preview = document.getElementById("mapCategoryPreview");
-  const cards = categories
+  const detailCards = categories
     .map((category) => {
-      const href = category.code === "04" ? "/categories/04" : "/categories";
+      const href = `/categories/${category.code}`;
       const fieldCount = category.groups.reduce((total, group) => total + group.fields.length, 0);
       const scopePreview = category.groups
         .flatMap((group) => group.fields)
@@ -516,19 +573,29 @@ function renderCategories() {
         .map(([code, title]) => `<li><strong>${code}</strong> ${title}</li>`)
         .join("");
       return `
-        <article class="category-card ${category.code === "04" ? "is-pilot" : ""}">
-          <div class="code">${category.code}</div>
+        <a class="category-card ${category.code === "04" ? "is-pilot" : ""}" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
           <h3>${category.title}</h3>
           <p>${category.chineseTitle}</p>
           ${makeStatus(category.status, category.readiness)}
           <div class="scope-count">${category.groups.length} groups · ${fieldCount} detailed fields</div>
           <ul class="scope-preview">${scopePreview}</ul>
-          <a href="${href}" data-route="${href}">${category.code === "04" ? "Open pilot" : "View in system"}</a>
-        </article>`;
+          <span class="card-link">Open category</span>
+        </a>`;
     })
     .join("");
-  if (grid) grid.innerHTML = cards;
-  if (preview) preview.innerHTML = cards;
+  const mapCards = categories
+    .map((category) => {
+      const href = `/categories/${category.code}`;
+      return `
+        <a class="category-card map-category-card ${category.code === "04" ? "is-pilot" : ""}" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
+          <h3>${category.title}</h3>
+          <p>${category.chineseTitle}</p>
+          <span class="card-link">View details</span>
+        </a>`;
+    })
+    .join("");
+  if (grid) grid.innerHTML = detailCards;
+  if (preview) preview.innerHTML = mapCards;
 }
 
 function renderPassport(targetId, passport) {
@@ -536,31 +603,56 @@ function renderPassport(targetId, passport) {
   if (!target) return;
   target.innerHTML = `
     <div>
-      <p class="eyebrow">Module Passport</p>
+      <p class="eyebrow">Overview</p>
       <h2>${passport.name}</h2>
       <dl>
         <dt>Route</dt><dd>${passport.route}</dd>
         <dt>Purpose</dt><dd>${passport.purpose}</dd>
         <dt>User value</dt><dd>${passport.userValue}</dd>
-        <dt>Founder value</dt><dd>${passport.founderValue}</dd>
         <dt>Status</dt><dd>${passport.status}</dd>
         <dt>Related modules</dt><dd>${passport.relatedModules}</dd>
         <dt>Next action</dt><dd>${passport.nextAction}</dd>
-        <dt>Do not touch</dt><dd>${passport.doNotTouch}</dd>
       </dl>
     </div>`;
 }
 
-function renderBusinessTree() {
-  const target = document.getElementById("businessTree");
+function renderCategoryDetail(code) {
+  const category = categories.find((item) => item.code === code) || categories[0];
+  const eyebrow = document.getElementById("categoryDetailEyebrow");
+  const title = document.getElementById("categoryDetailTitle");
+  const copy = document.getElementById("categoryDetailCopy");
+  const fieldCount = category.groups.reduce((total, group) => total + group.fields.length, 0);
+  if (eyebrow) eyebrow.textContent = `${category.code} category scope`;
+  if (title) title.textContent = category.title;
+  if (copy) {
+    copy.textContent = `${category.chineseTitle}. This page shows all ${category.groups.length} groups and ${fieldCount} detailed fields in this category.`;
+  }
+
+  renderPassport("categoryPassport", {
+    name: `${category.code} ${category.title}`,
+    route: `/categories/${category.code}`,
+    purpose: "Show the official scope for this knowledge category.",
+    userValue: "Understand what belongs inside this category before choosing a field.",
+    founderValue: "Keeps category updates isolated to one module.",
+    status: category.status,
+    relatedModules: category.code === "04" ? "0412 field, Business Foundation Path" : "Map, Categories",
+    nextAction: category.code === "04" ? "Validate 0412 before adding the next detailed field page." : "Decide whether this category should become the next pilot.",
+    doNotTouch: "Do not change unrelated categories during this module update.",
+  });
+
+  renderCategoryTree(category);
+}
+
+function renderCategoryTree(category) {
+  const target = document.getElementById("categoryTree");
   if (!target) return;
-  target.innerHTML = businessTree
+  target.innerHTML = category.groups
     .map((group) => `
       <section class="tree-group">
         <h2>${group.code} ${group.title}</h2>
         <div class="field-list">
           ${group.fields.map(([code, title]) => {
-            const href = code === "0412" ? "/categories/04/0412" : "/categories/04";
+            const href = code === "0412" ? "/categories/04/0412" : `/categories/${category.code}`;
             return `<a class="field-chip ${code === "0412" ? "is-active" : ""}" href="${href}" data-route="${href}"><strong>${code}</strong>${title}</a>`;
           }).join("")}
         </div>
@@ -677,20 +769,20 @@ function roundRect(context, x, y, width, height, radius) {
   context.closePath();
 }
 
-routeLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    goToRoute(link.dataset.route);
-  });
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("[data-route]");
+  if (!link) return;
+  event.preventDefault();
+  goToRoute(link.dataset.route);
 });
+document.addEventListener("submit", handleContactSubmit);
 
 window.addEventListener("popstate", () => goToRoute(normalizeRoute(window.location.pathname), true));
 window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.location.pathname), true));
 
 renderCategories();
-renderPassport("categoryPassport", modulePassports.category04);
+renderContactSections();
 renderPassport("pathPassport", modulePassports.path);
-renderBusinessTree();
 renderField();
 renderLearning();
 drawKnowledgeMap();
