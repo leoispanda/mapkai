@@ -1,5 +1,6 @@
 const pages = Array.from(document.querySelectorAll("[data-page]"));
 const routeLinks = Array.from(document.querySelectorAll("[data-route]"));
+const founderToggle = document.getElementById("founderToggle");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
@@ -561,7 +562,7 @@ const questionBank = {
   },
 };
 
-const challengeSubjects = ["00", "01", "05", "06"];
+const challengeSubjects = categories.map((category) => category.code);
 let activeChallengeSubject = challengeSubjects[0];
 let activeChallengeLevel = "easy";
 const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
@@ -675,9 +676,16 @@ function makeStatus(status, ready) {
   return `<div class="status-line"><span>${status}</span><strong>${ready}</strong></div>`;
 }
 
+function getCategory(code) {
+  return categories.find((category) => category.code === code);
+}
+
+function getSubjectTitle(code) {
+  return questionBank[code]?.subject || getCategory(code)?.title || "Knowledge subject";
+}
+
 function renderCategories() {
   const grid = document.getElementById("categoryGrid");
-  const preview = document.getElementById("mapCategoryPreview");
   const detailCards = categories
     .map((category) => {
       const href = `/categories/${category.code}`;
@@ -685,10 +693,11 @@ function renderCategories() {
       const scopePreview = category.groups
         .flatMap((group) => group.fields)
         .slice(0, 5)
-        .map(([code, title]) => `<li><strong>${code}</strong> ${title}</li>`)
+        .map(([code, title]) => `<li><span class="internal-code">${code}</span>${title}</li>`)
         .join("");
       return `
         <a class="category-card" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
+          <span class="internal-code category-code">${category.code}</span>
           <h3>${category.title}</h3>
           ${makeStatus(category.status, category.readiness)}
           <div class="scope-count">${category.groups.length} groups · ${fieldCount} detailed fields</div>
@@ -697,17 +706,7 @@ function renderCategories() {
         </a>`;
     })
     .join("");
-  const mapCards = categories
-    .map((category) => {
-      const href = `/categories/${category.code}`;
-      return `
-        <a class="category-card map-category-card" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
-          <h3>${category.title}</h3>
-        </a>`;
-    })
-    .join("");
   if (grid) grid.innerHTML = detailCards;
-  if (preview) preview.innerHTML = mapCards;
 }
 
 function getNextChallengeLevel(subjectCode) {
@@ -725,13 +724,13 @@ function renderChallenge() {
 
   subjectsTarget.innerHTML = challengeSubjects
     .map((code) => {
-      const subject = questionBank[code];
+      const subjectTitle = getSubjectTitle(code);
       const progress = masteryLevels[masteryProgress[code]];
       const active = code === activeChallengeSubject ? "is-active" : "";
       return `
         <button class="subject-button ${active}" type="button" data-subject="${code}">
-          <strong>${code}</strong>
-          <span>${subject.subject}</span>
+          <strong class="internal-code">${code}</strong>
+          <span>${subjectTitle}</span>
           <em>${progress.label}</em>
         </button>`;
     })
@@ -740,11 +739,22 @@ function renderChallenge() {
   activeChallengeLevel = getNextChallengeLevel(activeChallengeSubject);
   const subject = questionBank[activeChallengeSubject];
   const progress = masteryLevels[masteryProgress[activeChallengeSubject]];
+  const subjectTitle = getSubjectTitle(activeChallengeSubject);
+
+  if (!subject) {
+    cardTarget.innerHTML = `
+      <p class="eyebrow">Question set coming soon</p>
+      <h2>${subjectTitle}</h2>
+      <p>This subject already has a place in the question database architecture. Future updates can add easy, medium, and hard questions only inside this subject code.</p>
+      <div class="challenge-status">Current: ${progress.label}</div>
+      <div class="founder-note internal-code">Question bank key: ${activeChallengeSubject}</div>`;
+    return;
+  }
 
   if (activeChallengeLevel === "complete") {
     cardTarget.innerHTML = `
       <p class="eyebrow">Challenge complete</p>
-      <h2>${subject.subject}</h2>
+      <h2>${subjectTitle}</h2>
       <p>This subject is green land for now. Future updates can add more questions inside this subject database.</p>
       <div class="challenge-status is-green">${progress.label}</div>`;
     return;
@@ -753,7 +763,7 @@ function renderChallenge() {
   const question = subject.levels[activeChallengeLevel];
   cardTarget.innerHTML = `
     <p class="eyebrow">${activeChallengeLevel} question -> ${masteryLevels[question.unlocks].label}</p>
-    <h2>${subject.subject}</h2>
+    <h2>${subjectTitle}</h2>
     <p>${question.prompt}</p>
     <div class="answer-grid">
       ${question.options.map((option) => `<button type="button" data-answer="${option}">${option}</button>`).join("")}
@@ -845,7 +855,7 @@ function renderCategoryTree(category) {
         <div class="field-list">
           ${group.fields.map(([code, title]) => {
             const href = `/categories/${category.code}`;
-            return `<a class="field-chip" href="${href}" data-route="${href}"><strong>${code}</strong>${title}</a>`;
+            return `<a class="field-chip" href="${href}" data-route="${href}"><strong class="internal-code">${code}</strong>${title}</a>`;
           }).join("")}
         </div>
       </section>`)
@@ -980,6 +990,12 @@ document.addEventListener("click", (event) => {
   goToRoute(link.dataset.route);
 });
 document.addEventListener("submit", handleContactSubmit);
+if (founderToggle) {
+  founderToggle.addEventListener("click", () => {
+    const enabled = !document.body.classList.contains("founder-mode");
+    setFounderMode(enabled);
+  });
+}
 
 window.addEventListener("popstate", () => goToRoute(normalizeRoute(window.location.pathname), true));
 window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.location.pathname), true));
@@ -993,3 +1009,13 @@ renderLearning();
 renderChallenge();
 drawKnowledgeMap();
 goToRoute(normalizeRoute(window.location.pathname), true);
+setFounderMode(localStorage.getItem("mapkaiFounderMode") === "true");
+
+function setFounderMode(enabled) {
+  document.body.classList.toggle("founder-mode", enabled);
+  if (founderToggle) {
+    founderToggle.textContent = enabled ? "Founder mode on" : "Founder mode";
+    founderToggle.setAttribute("aria-pressed", String(enabled));
+  }
+  localStorage.setItem("mapkaiFounderMode", String(enabled));
+}

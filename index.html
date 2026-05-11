@@ -9,7 +9,7 @@
       content="MapKAI is a modular knowledge map and learning path system for exploring categories, fields, and guided learning routes."
     />
     <link rel="icon" href="/assets/mapkai-brand.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css?v=20260511-equal-categories" />
+    <link rel="stylesheet" href="/styles.css?v=20260511-founder-mode" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -21,6 +21,7 @@
         <a href="/categories" data-route="/categories">Categories</a>
         <a href="/learning" data-route="/learning">Learning</a>
       </nav>
+      <button class="founder-toggle" type="button" id="founderToggle" aria-pressed="false">Founder mode</button>
     </header>
 
     <main id="app">
@@ -196,7 +197,6 @@
             <section class="challenge-card" id="challengeCard" aria-live="polite"></section>
           </div>
         </section>
-        <div class="category-preview" id="mapCategoryPreview"></div>
       </section>
 
       <section class="page categories-page" id="categories" data-page="/categories">
@@ -273,6 +273,6 @@
       </section>
     </main>
 
-    <script src="/script.js?v=20260511-equal-categories"></script>
+    <script src="/script.js?v=20260511-founder-mode"></script>
   </body>
 </html>

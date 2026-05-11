@@ -83,6 +83,46 @@ a {
   color: var(--green-dark);
 }
 
+.founder-toggle {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: rgba(255, 250, 240, 0.72);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 780;
+  cursor: pointer;
+}
+
+.founder-toggle[aria-pressed="true"] {
+  border-color: rgba(15, 107, 87, 0.36);
+  background: var(--surface-soft);
+  color: var(--green-dark);
+}
+
+.internal-code {
+  display: none;
+}
+
+.founder-mode .internal-code {
+  display: inline-flex;
+  margin-right: 8px;
+  color: var(--green-dark);
+  font-weight: 860;
+}
+
+.founder-mode .category-code {
+  min-width: 42px;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--green);
+  color: white;
+}
+
 main {
   min-height: calc(100svh - 74px);
 }
@@ -102,7 +142,6 @@ main {
 .split-layout,
 .field-hero,
 .field-layout,
-.category-preview,
 .module-strip,
 .preview-band,
 .passport-panel,
@@ -206,16 +245,14 @@ p {
 
 .card-grid,
 .category-grid,
-.path-type-grid,
-.category-preview {
+.path-type-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: 22px;
 }
 
-.category-grid,
-.category-preview {
+.category-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -297,14 +334,6 @@ p {
   transform: translateY(-2px);
 }
 
-.map-category-card {
-  min-height: 146px;
-}
-
-.map-category-card .card-link {
-  margin-top: 8px;
-}
-
 .scope-count {
   display: inline-flex;
   min-height: 28px;
@@ -328,10 +357,6 @@ p {
   font-size: 0.88rem;
   line-height: 1.35;
   list-style: none;
-}
-
-.scope-preview strong {
-  color: var(--green-dark);
 }
 
 .status-line {
@@ -639,6 +664,11 @@ canvas {
   color: var(--green-dark);
 }
 
+.founder-mode .subject-button strong {
+  display: block;
+  margin-right: 0;
+}
+
 .subject-button span {
   color: var(--ink);
   font-weight: 760;
@@ -695,6 +725,19 @@ canvas {
 .challenge-feedback.is-wrong {
   background: rgba(201, 95, 70, 0.13);
   color: #9c4938;
+}
+
+.founder-note {
+  margin-top: 12px;
+  border: 1px dashed rgba(15, 107, 87, 0.28);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(237, 244, 233, 0.58);
+  font-size: 0.88rem;
+}
+
+.founder-mode .founder-note {
+  display: block;
 }
 
 .section-heading.compact h1,
