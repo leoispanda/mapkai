@@ -12,6 +12,13 @@ const readiness = {
   validated: "Validated",
 };
 
+const masteryLevels = {
+  ocean: { label: "Ocean", mapLabel: "Unknown ocean", color: "#2f86b5" },
+  snow: { label: "Snow mountain", mapLabel: "Snow mountain", color: "#e8f6f7" },
+  land: { label: "Land", mapLabel: "Land", color: "#d6a947" },
+  green: { label: "Green land", mapLabel: "Green land", color: "#7fc76f" },
+};
+
 const categories = [
   {
     code: "00",
@@ -133,8 +140,8 @@ const categories = [
     code: "04",
     title: "Business, Administration and Law",
     chineseTitle: "商业、管理与法律",
-    status: "Pilot",
-    readiness: readiness.pathReady,
+    status: "Draft",
+    readiness: readiness.classified,
     groups: [
       { code: "040", title: "Business, administration and law not further defined", fields: [["0400", "Business, administration and law not further defined"]] },
       {
@@ -395,31 +402,20 @@ const modulePassports = {
     purpose: "Global entrance for MapKAI.",
     userValue: "Know what MapKAI is, what to do now, and why to return.",
     founderValue: "Keeps the front door simple while modules expand separately.",
-    status: "Pilot",
+    status: "Draft",
     relatedModules: "Map, Categories, Learning",
     nextAction: "Measure whether visitors click into Map, Categories, or Learning.",
     doNotTouch: "Do not add account, dashboard, community, or public PDC here.",
   },
-  category04: {
-    name: "04 Business, Administration and Law",
-    route: "/categories/04",
-    purpose: "Pilot the classification structure before expanding all categories.",
-    userValue: "Understand the business knowledge backbone and where finance fits.",
-    founderValue: "Provides a reusable template for the other ten categories.",
-    status: "Pilot",
-    relatedModules: "0412 field, Business Foundation Path",
-    nextAction: "Review whether 0412 is clear enough before adding more detailed field pages.",
-    doNotTouch: "Do not complete all categories during this module update.",
-  },
   path: {
-    name: "Business Foundation Path",
-    route: "/learning/business-foundation",
-    purpose: "Connect business fields into a beginner-friendly learning order.",
-    userValue: "Understand why each field comes next.",
-    founderValue: "Tests a semi-manual learning path without building an algorithm.",
-    status: "Pilot",
-    relatedModules: "04, 0411, 0412, 0413, 0414, 0421",
-    nextAction: "Add five basic questions only after the path order is validated.",
+    name: "Foundation Learning Path",
+    route: "/learning/foundation",
+    purpose: "Connect a chosen field into a beginner-friendly learning order.",
+    userValue: "Understand how to move from broad category to practical next steps.",
+    founderValue: "Tests a simple learning path pattern without building an algorithm.",
+    status: "Draft",
+    relatedModules: "Map, Categories, Learning",
+    nextAction: "Choose which category should receive the next detailed learning path.",
     doNotTouch: "Do not build a full question bank or recommendation engine here.",
   },
 };
@@ -428,7 +424,7 @@ const field0412 = {
   code: "0412",
   title: "Finance, banking and insurance",
   chineseTitle: "金融、银行与保险",
-  status: "Pilot",
+  status: "Draft",
   readiness: readiness.pathReady,
   userLayer: [
     ["What is it?", "Finance is the study of money, risk, time, and trust. It explains saving, borrowing, investing, banking, insurance, and financial decisions."],
@@ -436,7 +432,7 @@ const field0412 = {
     ["Core topics", "Personal finance, corporate finance, banking, investment, insurance, risk, interest, credit, markets, and financial regulation."],
     ["Common real-life examples", "Choosing a savings account, understanding a mortgage, comparing insurance, judging a company budget, or asking whether an investment return is worth the risk."],
     ["What you can learn", "Read basic financial choices, explain risk and return, understand banking products, and connect finance to accounting, management, marketing, and law."],
-    ["Related learning path", "Business Foundation Path uses finance after management and marketing, before accounting and law."],
+    ["Related learning path", "Finance can connect to learning paths when a user chooses a business-related direction."],
   ],
   founderLayer: {
     officialDefinition: "Programmes and qualifications dealing with financial activities, banking, insurance, investment, and risk-related services.",
@@ -458,20 +454,124 @@ const pathTypes = [
   ["Founder-Curated Path", "For opinionated routes designed by MapKAI."],
 ];
 
-const businessPath = [
-  ["0413", "Management and administration", "First understand how organizations coordinate people, goals, and decisions."],
-  ["0414", "Marketing and advertising", "Then understand how demand is created, described, and communicated."],
-  ["0412", "Finance, banking and insurance", "Next learn how money flows, risk is priced, and resources are allocated."],
-  ["0411", "Accounting and taxation", "Then learn how financial activity is recorded, reported, and taxed."],
-  ["0421", "Law", "Finally understand the rules that constrain and protect business activity."],
+const foundationPath = [
+  ["1", "See the landscape", "Start by understanding the whole knowledge map before choosing one direction."],
+  ["2", "Choose a category", "Pick the category that best matches the question, goal, or field you want to explore."],
+  ["3", "Open detailed fields", "Look at the groups and detailed fields to understand what belongs inside the category."],
+  ["4", "Follow a path", "Use a learning path to turn selected fields into a practical order."],
+  ["5", "Review and expand", "Return to the map, mark what you understand, and choose the next field to explore."],
 ];
+
+const questionBank = {
+  "00": {
+    subject: "Generic programmes and qualifications",
+    status: "sample",
+    levels: {
+      easy: {
+        unlocks: "snow",
+        prompt: "Which skill helps almost every subject because it lets you understand written instructions and basic numbers?",
+        options: ["Literacy and numeracy", "Deep-sea navigation", "Film editing"],
+        answer: "Literacy and numeracy",
+      },
+      medium: {
+        unlocks: "land",
+        prompt: "Why do broad basic programmes belong near the start of a knowledge map?",
+        options: ["They build transferable foundations", "They replace all specialist fields", "They only matter for children"],
+        answer: "They build transferable foundations",
+      },
+      hard: {
+        unlocks: "green",
+        prompt: "When a programme develops broad personal capabilities rather than a profession-specific skill, where should it usually begin?",
+        options: ["Generic programmes and qualifications", "Engineering only", "Health only"],
+        answer: "Generic programmes and qualifications",
+      },
+    },
+  },
+  "01": {
+    subject: "Education",
+    status: "sample",
+    levels: {
+      easy: {
+        unlocks: "snow",
+        prompt: "What is the main goal of education as a field?",
+        options: ["Helping people learn and teach", "Selling products", "Building roads"],
+        answer: "Helping people learn and teach",
+      },
+      medium: {
+        unlocks: "land",
+        prompt: "A course about how people learn, remember, and understand ideas is closest to which field?",
+        options: ["Education science", "Banking", "Transport services"],
+        answer: "Education science",
+      },
+      hard: {
+        unlocks: "green",
+        prompt: "Why is teacher training separated into different detailed fields?",
+        options: ["Teaching context and subject focus change the required knowledge", "All teaching is identical", "It only depends on classroom size"],
+        answer: "Teaching context and subject focus change the required knowledge",
+      },
+    },
+  },
+  "05": {
+    subject: "Natural Sciences, Mathematics and Statistics",
+    status: "sample",
+    levels: {
+      easy: {
+        unlocks: "snow",
+        prompt: "Which field studies patterns, quantities, and logical relationships?",
+        options: ["Mathematics", "Retail sales", "Secretarial work"],
+        answer: "Mathematics",
+      },
+      medium: {
+        unlocks: "land",
+        prompt: "Why are statistics useful in daily life?",
+        options: ["They help interpret data and uncertainty", "They make facts unnecessary", "They only apply to weather"],
+        answer: "They help interpret data and uncertainty",
+      },
+      hard: {
+        unlocks: "green",
+        prompt: "What connects science and statistics in research?",
+        options: ["Evidence, measurement, and uncertainty", "Decoration and branding", "Office scheduling"],
+        answer: "Evidence, measurement, and uncertainty",
+      },
+    },
+  },
+  "06": {
+    subject: "Information and Communication Technologies",
+    status: "sample",
+    levels: {
+      easy: {
+        unlocks: "snow",
+        prompt: "What does ICT mainly help people work with?",
+        options: ["Digital information and communication systems", "Only paper books", "Only cooking tools"],
+        answer: "Digital information and communication systems",
+      },
+      medium: {
+        unlocks: "land",
+        prompt: "Why does coding belong inside ICT?",
+        options: ["It gives instructions to digital systems", "It manages bank interest rates", "It studies ancient pottery"],
+        answer: "It gives instructions to digital systems",
+      },
+      hard: {
+        unlocks: "green",
+        prompt: "Which idea is central to both software and data systems?",
+        options: ["Structured representation of information", "Random decoration", "Physical exercise"],
+        answer: "Structured representation of information",
+      },
+    },
+  },
+};
+
+const challengeSubjects = ["00", "01", "05", "06"];
+let activeChallengeSubject = challengeSubjects[0];
+let activeChallengeLevel = "easy";
+const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
-  whatChanged: "Home, Map, Categories, 04, 0412, Learning, and Business Foundation Path were shaped as separate modules.",
+  whatChanged: "Home, Map, Categories, Learning, and contact sections were shaped as separate modules.",
   whyChanged: "To support one module update, one clear commit, and lower long-term maintenance cost.",
-  whatToTest: "Can a visitor move from Home to 0412 and understand the learning path?",
-  nextModule: "Validate 0412, then add a small finance question set.",
+  whatToTest: "Can a visitor move from Home to Map, Categories, or Learning without confusion?",
+  nextModule: "Choose one category module when a specific learning path is ready.",
 };
 
 function contactSectionTemplate() {
@@ -504,6 +604,21 @@ function renderContactSections() {
   pages.forEach((page) => {
     if (page.querySelector(".contact-section")) return;
     page.insertAdjacentHTML("beforeend", contactSectionTemplate());
+  });
+}
+
+function siteFooterTemplate() {
+  return `
+    <footer class="site-footer" aria-label="Copyright">
+      <p>© 2026 MapKAI. All rights reserved.</p>
+      <p>Unauthorized copying, reproduction, redistribution, adaptation, or commercial use of MapKAI content, structure, design, or visual materials is not permitted without prior written permission.</p>
+    </footer>`;
+}
+
+function renderSiteFooters() {
+  pages.forEach((page) => {
+    if (page.querySelector(".site-footer")) return;
+    page.insertAdjacentHTML("beforeend", siteFooterTemplate());
   });
 }
 
@@ -573,9 +688,8 @@ function renderCategories() {
         .map(([code, title]) => `<li><strong>${code}</strong> ${title}</li>`)
         .join("");
       return `
-        <a class="category-card ${category.code === "04" ? "is-pilot" : ""}" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
+        <a class="category-card" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
           <h3>${category.title}</h3>
-          <p>${category.chineseTitle}</p>
           ${makeStatus(category.status, category.readiness)}
           <div class="scope-count">${category.groups.length} groups · ${fieldCount} detailed fields</div>
           <ul class="scope-preview">${scopePreview}</ul>
@@ -587,15 +701,93 @@ function renderCategories() {
     .map((category) => {
       const href = `/categories/${category.code}`;
       return `
-        <a class="category-card map-category-card ${category.code === "04" ? "is-pilot" : ""}" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
+        <a class="category-card map-category-card" href="${href}" data-route="${href}" aria-label="Open ${category.title}">
           <h3>${category.title}</h3>
-          <p>${category.chineseTitle}</p>
-          <span class="card-link">View details</span>
         </a>`;
     })
     .join("");
   if (grid) grid.innerHTML = detailCards;
   if (preview) preview.innerHTML = mapCards;
+}
+
+function getNextChallengeLevel(subjectCode) {
+  const progress = masteryProgress[subjectCode];
+  if (progress === "ocean") return "easy";
+  if (progress === "snow") return "medium";
+  if (progress === "land") return "hard";
+  return "complete";
+}
+
+function renderChallenge() {
+  const subjectsTarget = document.getElementById("challengeSubjects");
+  const cardTarget = document.getElementById("challengeCard");
+  if (!subjectsTarget || !cardTarget) return;
+
+  subjectsTarget.innerHTML = challengeSubjects
+    .map((code) => {
+      const subject = questionBank[code];
+      const progress = masteryLevels[masteryProgress[code]];
+      const active = code === activeChallengeSubject ? "is-active" : "";
+      return `
+        <button class="subject-button ${active}" type="button" data-subject="${code}">
+          <strong>${code}</strong>
+          <span>${subject.subject}</span>
+          <em>${progress.label}</em>
+        </button>`;
+    })
+    .join("");
+
+  activeChallengeLevel = getNextChallengeLevel(activeChallengeSubject);
+  const subject = questionBank[activeChallengeSubject];
+  const progress = masteryLevels[masteryProgress[activeChallengeSubject]];
+
+  if (activeChallengeLevel === "complete") {
+    cardTarget.innerHTML = `
+      <p class="eyebrow">Challenge complete</p>
+      <h2>${subject.subject}</h2>
+      <p>This subject is green land for now. Future updates can add more questions inside this subject database.</p>
+      <div class="challenge-status is-green">${progress.label}</div>`;
+    return;
+  }
+
+  const question = subject.levels[activeChallengeLevel];
+  cardTarget.innerHTML = `
+    <p class="eyebrow">${activeChallengeLevel} question -> ${masteryLevels[question.unlocks].label}</p>
+    <h2>${subject.subject}</h2>
+    <p>${question.prompt}</p>
+    <div class="answer-grid">
+      ${question.options.map((option) => `<button type="button" data-answer="${option}">${option}</button>`).join("")}
+    </div>
+    <div class="challenge-status">Current: ${progress.label}</div>`;
+}
+
+function handleChallengeClick(event) {
+  const subjectButton = event.target.closest("[data-subject]");
+  if (subjectButton) {
+    activeChallengeSubject = subjectButton.dataset.subject;
+    renderChallenge();
+    return;
+  }
+
+  const answerButton = event.target.closest("[data-answer]");
+  if (!answerButton) return;
+  const question = questionBank[activeChallengeSubject].levels[activeChallengeLevel];
+  const cardTarget = document.getElementById("challengeCard");
+  const correct = answerButton.dataset.answer === question.answer;
+
+  if (!correct) {
+    if (cardTarget) {
+      cardTarget.insertAdjacentHTML("beforeend", `<p class="challenge-feedback is-wrong">Not yet. This round ends here. Try the subject again when you are ready.</p>`);
+    }
+    return;
+  }
+
+  masteryProgress[activeChallengeSubject] = question.unlocks;
+  drawKnowledgeMap();
+  renderChallenge();
+  if (cardTarget) {
+    cardTarget.insertAdjacentHTML("beforeend", `<p class="challenge-feedback is-correct">Correct. This subject is now ${masteryLevels[question.unlocks].label}.</p>`);
+  }
 }
 
 function renderPassport(targetId, passport) {
@@ -625,7 +817,7 @@ function renderCategoryDetail(code) {
   if (eyebrow) eyebrow.textContent = `${category.code} category scope`;
   if (title) title.textContent = category.title;
   if (copy) {
-    copy.textContent = `${category.chineseTitle}. This page shows all ${category.groups.length} groups and ${fieldCount} detailed fields in this category.`;
+    copy.textContent = `This page shows all ${category.groups.length} groups and ${fieldCount} detailed fields in this category.`;
   }
 
   renderPassport("categoryPassport", {
@@ -635,8 +827,8 @@ function renderCategoryDetail(code) {
     userValue: "Understand what belongs inside this category before choosing a field.",
     founderValue: "Keeps category updates isolated to one module.",
     status: category.status,
-    relatedModules: category.code === "04" ? "0412 field, Business Foundation Path" : "Map, Categories",
-    nextAction: category.code === "04" ? "Validate 0412 before adding the next detailed field page." : "Decide whether this category should become the next pilot.",
+    relatedModules: "Map, Categories, Learning",
+    nextAction: "Decide whether this category should receive the next detailed field or learning path.",
     doNotTouch: "Do not change unrelated categories during this module update.",
   });
 
@@ -652,8 +844,8 @@ function renderCategoryTree(category) {
         <h2>${group.code} ${group.title}</h2>
         <div class="field-list">
           ${group.fields.map(([code, title]) => {
-            const href = code === "0412" ? "/categories/04/0412" : `/categories/${category.code}`;
-            return `<a class="field-chip ${code === "0412" ? "is-active" : ""}" href="${href}" data-route="${href}"><strong>${code}</strong>${title}</a>`;
+            const href = `/categories/${category.code}`;
+            return `<a class="field-chip" href="${href}" data-route="${href}"><strong>${code}</strong>${title}</a>`;
           }).join("")}
         </div>
       </section>`)
@@ -685,17 +877,17 @@ function renderField() {
 
 function renderLearning() {
   const pathGrid = document.getElementById("pathTypeGrid");
-  const timeline = document.getElementById("businessTimeline");
+  const timeline = document.getElementById("foundationTimeline");
   if (pathGrid) {
     pathGrid.innerHTML = pathTypes.map(([title, text]) => `<article class="module-card"><h3>${title}</h3><p>${text}</p></article>`).join("");
   }
   if (timeline) {
-    timeline.innerHTML = businessPath
+    timeline.innerHTML = foundationPath
       .map(([code, title, reason], index) => `
         <li>
           <span>${index + 1}</span>
           <div>
-            <h2>${code} ${title}</h2>
+            <h2>${title}</h2>
             <p>${reason}</p>
           </div>
         </li>`)
@@ -717,13 +909,15 @@ function drawKnowledgeMap() {
   ctx.fill();
 
   const islands = [
-    [240, 170, 110, 74, "#e4d36d", "06 ICT"],
-    [470, 180, 130, 86, "#8bc96f", "04 Pilot"],
-    [650, 285, 100, 68, "#f0b85d", "07 Eng"],
-    [280, 365, 118, 76, "#9ed177", "05 Science"],
-    [545, 425, 130, 74, "#7fc76f", "Learning"],
+    { x: 180, y: 160, w: 110, h: 74, code: "00", label: "00" },
+    { x: 360, y: 180, w: 130, h: 86, code: "01", label: "01" },
+    { x: 610, y: 210, w: 100, h: 68, code: "06", label: "06 ICT" },
+    { x: 300, y: 370, w: 118, h: 76, code: "05", label: "05 Science" },
+    { x: 545, y: 425, w: 130, h: 74, code: null, label: "Learning" },
   ];
-  islands.forEach(([x, y, w, h, color, label], index) => {
+  islands.forEach(({ x, y, w, h, code, label }, index) => {
+    const level = code ? masteryProgress[code] || "ocean" : "green";
+    const color = code ? masteryLevels[level].color : "#7fc76f";
     ctx.save();
     ctx.translate(x, y);
     ctx.rotate((index - 2) * 0.08);
@@ -733,10 +927,16 @@ function drawKnowledgeMap() {
     ctx.fillStyle = color;
     ellipseBlob(w, h);
     ctx.fill();
-    ctx.fillStyle = "#fff6dd";
+    ctx.fillStyle = level === "snow" ? "#ffffff" : "#fff6dd";
     ctx.beginPath();
     ctx.arc(-w * 0.2, -h * 0.18, Math.min(w, h) * 0.2, 0, Math.PI * 2);
     ctx.fill();
+    if (level === "green") {
+      ctx.fillStyle = "rgba(255,255,255,0.42)";
+      ctx.beginPath();
+      ctx.arc(w * 0.18, h * 0.05, Math.min(w, h) * 0.14, 0, Math.PI * 2);
+      ctx.fill();
+    }
     ctx.fillStyle = "#173026";
     ctx.font = "700 22px Inter, sans-serif";
     ctx.textAlign = "center";
@@ -770,6 +970,10 @@ function roundRect(context, x, y, width, height, radius) {
 }
 
 document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-subject], [data-answer]")) {
+    handleChallengeClick(event);
+    return;
+  }
   const link = event.target.closest("[data-route]");
   if (!link) return;
   event.preventDefault();
@@ -782,8 +986,10 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 
 renderCategories();
 renderContactSections();
+renderSiteFooters();
 renderPassport("pathPassport", modulePassports.path);
 renderField();
 renderLearning();
+renderChallenge();
 drawKnowledgeMap();
 goToRoute(normalizeRoute(window.location.pathname), true);

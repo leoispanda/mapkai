@@ -9,7 +9,7 @@
       content="MapKAI is a modular knowledge map and learning path system for exploring categories, fields, and guided learning routes."
     />
     <link rel="icon" href="/assets/mapkai-brand.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css?v=20260510-home-clarity" />
+    <link rel="stylesheet" href="/styles.css?v=20260511-equal-categories" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -34,7 +34,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="/map" data-route="/map">Explore the Map</a>
-            <a class="button secondary" href="/learning/business-foundation" data-route="/learning/business-foundation">Start Business Path</a>
+            <a class="button secondary" href="/learning" data-route="/learning">View Learning Paths</a>
             <a class="button secondary" href="/categories" data-route="/categories">Browse Categories</a>
           </div>
         </div>
@@ -46,19 +46,16 @@
           </div>
           <div class="card-grid three">
             <article class="module-card">
-              <span>01</span>
               <h3>Map — See the knowledge landscape</h3>
               <p>Understand the big picture before choosing what to learn.</p>
               <a href="/map" data-route="/map">Open map</a>
             </article>
             <article class="module-card">
-              <span>02</span>
               <h3>Categories — Understand each field</h3>
               <p>Explore structured fields, codes, readiness, and relationships.</p>
               <a href="/categories" data-route="/categories">Browse categories</a>
             </article>
             <article class="module-card">
-              <span>03</span>
               <h3>Learning — Follow a guided path</h3>
               <p>Turn selected fields into practical learning steps.</p>
               <a href="/learning" data-route="/learning">View paths</a>
@@ -105,8 +102,8 @@
               <p>Build structured understanding when entering a new field.</p>
             </article>
             <article class="module-card compact-card">
-              <h3>Business beginners</h3>
-              <p>Understand how organizations, markets, money, and rules connect.</p>
+              <h3>New field explorers</h3>
+              <p>Build a clear starting map before going deeper into any subject.</p>
             </article>
             <article class="module-card compact-card">
               <h3>Lifelong learners</h3>
@@ -117,32 +114,18 @@
 
         <section class="preview-band">
           <div>
-            <p class="eyebrow">Pilot area</p>
-            <h2>Start with Business, Administration and Law</h2>
+            <p class="eyebrow">Knowledge categories</p>
+            <h2>Explore every field with the same structure</h2>
             <p>
-              This pilot area helps learners understand how organizations, money, markets,
-              accounting, and rules connect before choosing a deeper direction.
+              MapKAI organizes all eleven knowledge categories with the same basic passport:
+              title, scope, groups, detailed fields, readiness, and related paths.
             </p>
             <p>
-              It is the first complete learning area in MapKAI and will guide the structure for
-              future knowledge categories.
+              This keeps every field comparable, so users can move from the big picture into
+              a specific area without one category dominating the homepage.
             </p>
           </div>
-          <a class="button primary" href="/learning/business-foundation" data-route="/learning/business-foundation">Start Business Path</a>
-        </section>
-
-        <section class="home-section example-section" aria-labelledby="example-title">
-          <div class="section-heading">
-            <p class="eyebrow">Example</p>
-            <h2 id="example-title">I want to understand business from zero</h2>
-          </div>
-          <ol class="example-list">
-            <li>Start with organizations and management</li>
-            <li>Learn demand, markets, and customers</li>
-            <li>Understand finance and accounting basics</li>
-            <li>Explore law, regulation, and risk</li>
-            <li>Choose a deeper path: marketing, finance, management, entrepreneurship, or law</li>
-          </ol>
+          <a class="button primary" href="/categories" data-route="/categories">Browse Categories</a>
         </section>
 
         <section class="home-section why-section" aria-labelledby="why-title">
@@ -194,11 +177,25 @@
             <canvas id="knowledgeCanvas" width="920" height="640"></canvas>
             <div class="map-legend">
               <span><i class="ocean"></i> Unknown ocean</span>
-              <span><i class="pilot"></i> Pilot land</span>
+              <span><i class="pilot"></i> Mapped land</span>
               <span><i class="ready"></i> Path ready</span>
             </div>
           </section>
         </div>
+        <section class="map-challenge" aria-labelledby="challenge-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Knowledge challenge</p>
+            <h1 id="challenge-title">Answer questions to light up the map.</h1>
+            <p>
+              Pick a subject, answer from easy to hard, and turn knowledge from ocean into
+              snow mountain, land, and green land.
+            </p>
+          </div>
+          <div class="challenge-panel">
+            <aside class="challenge-subjects" id="challengeSubjects" aria-label="Question subjects"></aside>
+            <section class="challenge-card" id="challengeCard" aria-live="polite"></section>
+          </div>
+        </section>
         <div class="category-preview" id="mapCategoryPreview"></div>
       </section>
 
@@ -227,14 +224,14 @@
       <section class="page field-page" id="field0412" data-page="/categories/04/0412">
         <div class="field-hero">
           <div>
-            <p class="eyebrow">Detailed field example</p>
+            <p class="eyebrow">Detailed field</p>
             <h1>0412 Finance, banking and insurance</h1>
             <p>
               Finance explains how money moves, how risk is priced, and how people and organizations
               make decisions under uncertainty.
             </p>
           </div>
-          <a class="button secondary" href="/learning/business-foundation" data-route="/learning/business-foundation">Use in learning path</a>
+          <a class="button secondary" href="/learning" data-route="/learning">View learning paths</a>
         </div>
         <div class="field-layout">
           <section class="field-main" id="fieldUserLayer"></section>
@@ -254,28 +251,28 @@
         <div class="path-type-grid" id="pathTypeGrid"></div>
         <section class="preview-band">
           <div>
-            <p class="eyebrow">Active path</p>
-            <h2>Business Foundation Path</h2>
-            <p>Start with how organizations work, then learn demand, money, accounting, and rules.</p>
+            <p class="eyebrow">Learning paths</p>
+            <h2>Choose a path after choosing a field</h2>
+            <p>MapKAI connects categories, fields, and practical next steps as each area becomes ready.</p>
           </div>
-          <a class="button primary" href="/learning/business-foundation" data-route="/learning/business-foundation">Open path</a>
+          <a class="button primary" href="/categories" data-route="/categories">Browse Categories</a>
         </section>
       </section>
 
-      <section class="page path-page" id="businessPath" data-page="/learning/business-foundation">
+      <section class="page path-page" id="foundationPath" data-page="/learning/foundation">
         <div class="section-heading compact">
           <p class="eyebrow">Founder-curated path</p>
-          <h1>Business Foundation Path</h1>
+          <h1>Foundation Learning Path</h1>
           <p>
-            A practical route for beginners who want to understand how a business operates before
-            choosing deeper finance, marketing, accounting, management, or law modules.
+            A practical route for beginners who want to understand a new field before choosing
+            a deeper direction.
           </p>
         </div>
         <div class="passport-panel" id="pathPassport"></div>
-        <ol class="learning-timeline" id="businessTimeline"></ol>
+        <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
 
-    <script src="/script.js?v=20260510-home-clarity"></script>
+    <script src="/script.js?v=20260511-equal-categories"></script>
   </body>
 </html>
