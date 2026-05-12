@@ -9,7 +9,7 @@
       content="MapKAI is a modular knowledge map and learning path system for exploring categories, fields, and guided learning routes."
     />
     <link rel="icon" href="/assets/mapkai-brand.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css?v=20260511-founder-mode" />
+    <link rel="stylesheet" href="/styles.css?v=20260512-question-map" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -178,8 +178,8 @@
             <canvas id="knowledgeCanvas" width="920" height="640"></canvas>
             <div class="map-legend">
               <span><i class="ocean"></i> Unknown ocean</span>
-              <span><i class="pilot"></i> Mapped land</span>
-              <span><i class="ready"></i> Path ready</span>
+              <span><i class="pilot"></i> Land</span>
+              <span><i class="ready"></i> Green land</span>
             </div>
           </section>
         </div>
@@ -188,12 +188,11 @@
             <p class="eyebrow">Knowledge challenge</p>
             <h1 id="challenge-title">Answer questions to light up the map.</h1>
             <p>
-              Pick a subject, answer from easy to hard, and turn knowledge from ocean into
-              snow mountain, land, and green land.
+              Answer one question at a time. The map will light up as your knowledge grows
+              from ocean into snow mountain, land, and green land.
             </p>
           </div>
           <div class="challenge-panel">
-            <aside class="challenge-subjects" id="challengeSubjects" aria-label="Question subjects"></aside>
             <section class="challenge-card" id="challengeCard" aria-live="polite"></section>
           </div>
         </section>
@@ -273,6 +272,6 @@
       </section>
     </main>
 
-    <script src="/script.js?v=20260511-founder-mode"></script>
+    <script src="/script.js?v=20260512-question-map"></script>
   </body>
 </html>

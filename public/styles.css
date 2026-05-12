@@ -622,13 +622,10 @@ canvas {
 }
 
 .challenge-panel {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
-  gap: 16px;
+  display: block;
   margin-top: 18px;
 }
 
-.challenge-subjects,
 .challenge-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -637,12 +634,6 @@ canvas {
   padding: 18px;
 }
 
-.challenge-subjects {
-  display: grid;
-  gap: 10px;
-}
-
-.subject-button,
 .answer-grid button {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -651,38 +642,6 @@ canvas {
   font: inherit;
   text-align: left;
   cursor: pointer;
-}
-
-.subject-button {
-  display: grid;
-  gap: 4px;
-  min-height: 74px;
-  padding: 12px;
-}
-
-.subject-button strong {
-  color: var(--green-dark);
-}
-
-.founder-mode .subject-button strong {
-  display: block;
-  margin-right: 0;
-}
-
-.subject-button span {
-  color: var(--ink);
-  font-weight: 760;
-}
-
-.subject-button em {
-  color: var(--muted);
-  font-style: normal;
-  font-size: 0.86rem;
-}
-
-.subject-button.is-active {
-  border-color: rgba(15, 107, 87, 0.42);
-  background: var(--surface-soft);
 }
 
 .challenge-card h2 {
@@ -706,6 +665,22 @@ canvas {
   background: rgba(237, 244, 233, 0.9);
 }
 
+.answer-grid button:disabled {
+  cursor: default;
+}
+
+.answer-grid button.is-correct {
+  border-color: rgba(15, 107, 87, 0.5);
+  background: rgba(127, 199, 111, 0.2);
+  color: var(--green-dark);
+}
+
+.answer-grid button.is-wrong {
+  border-color: rgba(201, 95, 70, 0.42);
+  background: rgba(201, 95, 70, 0.12);
+  color: #9c4938;
+}
+
 .challenge-status,
 .challenge-feedback {
   margin-top: 16px;
@@ -714,6 +689,22 @@ canvas {
   background: rgba(214, 169, 71, 0.16);
   color: #80601f;
   font-weight: 780;
+}
+
+.answer-explanation {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(237, 244, 233, 0.7);
+}
+
+.answer-explanation h3 {
+  color: var(--green-dark);
+}
+
+.next-question-button {
+  margin-top: 14px;
 }
 
 .challenge-status.is-green,

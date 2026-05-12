@@ -463,109 +463,152 @@ const foundationPath = [
   ["5", "Review and expand", "Return to the map, mark what you understand, and choose the next field to explore."],
 ];
 
-const questionBank = {
-  "00": {
-    subject: "Generic programmes and qualifications",
-    status: "sample",
-    levels: {
-      easy: {
-        unlocks: "snow",
-        prompt: "Which skill helps almost every subject because it lets you understand written instructions and basic numbers?",
-        options: ["Literacy and numeracy", "Deep-sea navigation", "Film editing"],
-        answer: "Literacy and numeracy",
-      },
-      medium: {
-        unlocks: "land",
-        prompt: "Why do broad basic programmes belong near the start of a knowledge map?",
-        options: ["They build transferable foundations", "They replace all specialist fields", "They only matter for children"],
-        answer: "They build transferable foundations",
-      },
-      hard: {
-        unlocks: "green",
-        prompt: "When a programme develops broad personal capabilities rather than a profession-specific skill, where should it usually begin?",
-        options: ["Generic programmes and qualifications", "Engineering only", "Health only"],
-        answer: "Generic programmes and qualifications",
-      },
-    },
-  },
-  "01": {
-    subject: "Education",
-    status: "sample",
-    levels: {
-      easy: {
-        unlocks: "snow",
-        prompt: "What is the main goal of education as a field?",
-        options: ["Helping people learn and teach", "Selling products", "Building roads"],
-        answer: "Helping people learn and teach",
-      },
-      medium: {
-        unlocks: "land",
-        prompt: "A course about how people learn, remember, and understand ideas is closest to which field?",
-        options: ["Education science", "Banking", "Transport services"],
-        answer: "Education science",
-      },
-      hard: {
-        unlocks: "green",
-        prompt: "Why is teacher training separated into different detailed fields?",
-        options: ["Teaching context and subject focus change the required knowledge", "All teaching is identical", "It only depends on classroom size"],
-        answer: "Teaching context and subject focus change the required knowledge",
-      },
-    },
-  },
-  "05": {
-    subject: "Natural Sciences, Mathematics and Statistics",
-    status: "sample",
-    levels: {
-      easy: {
-        unlocks: "snow",
-        prompt: "Which field studies patterns, quantities, and logical relationships?",
-        options: ["Mathematics", "Retail sales", "Secretarial work"],
-        answer: "Mathematics",
-      },
-      medium: {
-        unlocks: "land",
-        prompt: "Why are statistics useful in daily life?",
-        options: ["They help interpret data and uncertainty", "They make facts unnecessary", "They only apply to weather"],
-        answer: "They help interpret data and uncertainty",
-      },
-      hard: {
-        unlocks: "green",
-        prompt: "What connects science and statistics in research?",
-        options: ["Evidence, measurement, and uncertainty", "Decoration and branding", "Office scheduling"],
-        answer: "Evidence, measurement, and uncertainty",
-      },
-    },
-  },
-  "06": {
-    subject: "Information and Communication Technologies",
-    status: "sample",
-    levels: {
-      easy: {
-        unlocks: "snow",
-        prompt: "What does ICT mainly help people work with?",
-        options: ["Digital information and communication systems", "Only paper books", "Only cooking tools"],
-        answer: "Digital information and communication systems",
-      },
-      medium: {
-        unlocks: "land",
-        prompt: "Why does coding belong inside ICT?",
-        options: ["It gives instructions to digital systems", "It manages bank interest rates", "It studies ancient pottery"],
-        answer: "It gives instructions to digital systems",
-      },
-      hard: {
-        unlocks: "green",
-        prompt: "Which idea is central to both software and data systems?",
-        options: ["Structured representation of information", "Random decoration", "Physical exercise"],
-        answer: "Structured representation of information",
-      },
-    },
-  },
+const subjectQuestionSeeds = {
+  "00": { subject: "Generic programmes and qualifications", theme: "basic life skills", prompts: ["At the supermarket, Emma compares cereal by price per kilo. What everyday superpower is she using?", "A friend learns apps, recipes, and cheaper bills but says he is not a learner. What is the hidden lesson?", "Jin writes a clear refund email for a broken washing machine. Why did writing matter?", "A calculator can split a bill, but why is understanding percentages still useful?", "Why can learning new tools fast be more valuable than knowing one tool today?", "Why are classes in forms, letters, and budgets still real education?"] },
+  "01": { subject: "Education", theme: "learning and teaching", prompts: ["You forget someone's name seconds after hearing it. What trick helps most?", "A parent holds a bike seat, then lets go for longer and longer moments. What is happening?", "Sara rereads notes; Tom explains aloud from memory. Who finds weak spots faster?", "A language app reviews words right before forgetting. What is the learning trick?", "Why do weekly phishing simulations beat one long warning lecture?", "Why do examples and structure help beginners facing a blank page?"] },
+  "02": { subject: "Arts and Humanities", theme: "meaning and interpretation", prompts: ["A movie villain enters with cold lighting and low music. Why do you feel nervous?", "A cafe changes its menu font and cakes feel homemade. What changed?", "A tiny blue patch in an old painting used a once-costly pigment. What does that reveal?", "Two readers find different evidence-based meanings in one story. What is the best takeaway?", "A simple chair becomes interesting when linked to postwar housing. Why?", "A documentary uses real interviews but very different music and lighting. What should viewers notice?"] },
+  "03": { subject: "Social Sciences, Journalism and Information", theme: "people, groups, and information", prompts: ["A free-coffee rumor spreads before anyone checks the cafe page. What should happen first?", "One person yawns and others soon yawn too. What does this show?", "A clickbait headline works even though the story is ordinary. Why?", "A sign says most people take stairs and stair use rises. Why might that work?", "Two polls ask about parks with different wording and get different results. What is happening?", "An algorithm shows more angry posts because they get comments. What risk appears?"] },
+  "04": { subject: "Business, Administration and Law", theme: "markets, rules, and organizations", prompts: ["A bakery bundle makes customers buy two croissants instead of one. What is happening?", "A shop sells a lot but costs eat the money. What was confused?", "A gym makes joining easy but cancellation hard. What concern appears?", "A great restaurant is empty because nobody knows it exists. What is the mistake?", "A vague delivery promise causes an argument. What would reduce risk?", "A call center rewards only short calls and problems return. What went wrong?"] },
+  "05": { subject: "Natural Sciences, Mathematics and Statistics", theme: "evidence, measurement, and patterns", prompts: ["A metal bench feels colder than a wooden one on the same morning. Why?", "A 70% rain forecast does not rain on your street. What is the better interpretation?", "A smoothie seems to cause energy, but the person also slept nine hours. What should a careful thinker say?", "A shop has a 5-star average from only two reviews. What is the red flag?", "Factory output rises after a new machine, but someone asks about the old machine too. Why?", "A city uses one road-side sensor to judge all pollution. What is wrong?"] },
+  "06": { subject: "Information and Communication Technologies", theme: "digital systems and data", prompts: ["Why are software updates not just annoying pop-ups?", "A friend uses one password everywhere. What is the risk?", "Sorting one spreadsheet column makes addresses mismatch names. What happened?", "A coffee machine pours only if it detects a cup. What coding idea is this?", "A delivery app has duplicate customer IDs and shows wrong orders. Why is this serious?", "Invoice automation copies old bad rules and approves strange invoices. What is the lesson?"] },
+  "07": { subject: "Engineering, Manufacturing and Construction", theme: "building and design trade-offs", prompts: ["A cardboard tube holds weight upright but crushes sideways. What does this show?", "Why do bridges often use triangles?", "A hard phone case resists scratches but cracks when dropped. What trade-off appears?", "A chair factory divides work into repeated steps. Why might it be faster?", "A glass apartment looks beautiful but overheats in summer. What lesson appears?", "A machine part uses the strongest metal but becomes heavy and costly. What went wrong?"] },
+  "08": { subject: "Agriculture, Forestry, Fisheries and Veterinary", theme: "living resources and sustainability", prompts: ["A tomato plant grows leaves but few tomatoes after lots of nitrogen. Why?", "Why wait before driving a tractor onto wet soil?", "Why can changing crops help when pests rise?", "Fishing boats catch more before others do and fish decline. What problem is this?", "Cows produce less milk during a heatwave despite feed. What hidden factor matters?", "Why might a forest manager remove some small trees?"] },
+  "09": { subject: "Health and Welfare", theme: "prevention, care, and wellbeing", prompts: ["A friend brushes teeth hard and gums bleed. What is the better habit?", "Someone drinks coffee at midnight and wakes tired. What might be happening?", "A new runner goes hard daily, hurts knees, and quits. What would have been wiser?", "One mildly sick worker comes in and half the office coughs later. What idea appears?", "A patient feels better after antibiotics and wants to stop early. What is the concern?", "An elderly man misses appointments because the bus route changed. What does this reveal?"] },
+  "10": { subject: "Services", theme: "experience, safety, and coordination", prompts: ["A tired hotel guest gets water, calm check-in, and clear directions. Why does it matter?", "Why put a warning sign on a wet but clean floor?", "A restaurant serves dessert before soup and guests eat at different times. What is the problem?", "Airport security slows because instructions appear only at the tray. What helps?", "A theme park sells too many fast-track passes and all lines slow. What went wrong?", "Drivers measured only by speed damage parcels and miss instructions. What is the mistake?"] }
 };
 
+const questionOptions = {
+  "00": [
+    ["Basic numeracy for smarter daily choices", "Professional accounting knowledge", "Brand loyalty"],
+    ["Everyday life already contains learning", "People learn only in classrooms", "Learning stops after school"],
+    ["Clear communication can turn frustration into action", "Longer messages always get better results", "Emotional anger is the best strategy"],
+    ["Understanding helps you know what to calculate", "Calculators replace understanding", "Percentages are only useful for bankers"],
+    ["Because adaptability often outlasts one specific tool", "Because software skills are worthless", "Because interviews reward vague answers"],
+    ["Foundational skills can increase independence and participation", "Only university courses count as learning", "Adults cannot benefit from basic courses"]
+  ],
+  "01": [
+    ["Repeat and use the name soon after hearing it", "Pretend you heard it clearly", "Wait until tomorrow to think about it"],
+    ["Giving temporary support until independence grows", "Testing the child without any help", "Making the bike harder to ride"],
+    ["Tom, because recall exposes weak spots", "Sara, because highlighting always proves mastery", "Neither, because studying cannot be checked"],
+    ["Spaced repetition strengthens memory over time", "Forgetting means learning has failed completely", "Cramming once is always more efficient"],
+    ["It turns abstract warnings into repeated real decisions", "It proves employees do not need rules", "It makes cybersecurity purely entertaining"],
+    ["The task became supported enough to reduce mental overload", "Creativity disappeared because examples were shown", "Beginners became experts instantly"]
+  ],
+  "02": [
+    ["The scene uses artistic signals to shape emotion", "The actor has explained the plot", "The camera is broken"],
+    ["The visual style changed the meaning people felt", "The cake recipe changed automatically", "Fonts cannot influence perception"],
+    ["Materials can carry social and historical meaning", "Old painters chose colors randomly", "Blue was invisible in the past"],
+    ["Good stories can hold multiple evidence-based meanings", "Only one reader is allowed to be right", "Interpretation means guessing without evidence"],
+    ["Its design connects to history, society, and human needs", "A chair can never be cultural", "The label makes the object more expensive"],
+    ["Real material can still be framed through storytelling choices", "Documentaries are automatically neutral", "Music has no effect on judgment"]
+  ],
+  "03": [
+    ["Check the original source before believing it", "Share it quickly before the offer ends", "Believe it if many people repeat it"],
+    ["Social behavior can spread through groups", "People are never influenced by others", "Yawning is a political opinion"],
+    ["It used curiosity to attract attention", "It gave a complete balanced summary", "It removed emotion from the story"],
+    ["People often respond to social norms", "People dislike short messages", "Signs physically force people to act"],
+    ["Question wording can shape public opinion data", "People have no opinions about parks", "Polls always measure reality perfectly"],
+    ["The platform may amplify outrage because it drives engagement", "The platform will automatically improve public debate", "Angry posts will disappear because people ignore them"]
+  ],
+  "04": [
+    ["A bundle changes the perceived deal", "The croissants became legally different", "Customers forgot how hunger works"],
+    ["Revenue is not the same as profit", "Profit appears before costs", "Sales make expenses disappear"],
+    ["The company may be using friction to keep customers", "The company is improving customer freedom", "The contract becomes invisible"],
+    ["Quality alone does not create awareness", "Good products should be kept secret", "Marketing only matters for bad products"],
+    ["A clear written agreement on delivery terms", "More emojis in the phone call", "Avoiding any record of the deal"],
+    ["The incentive encouraged the wrong behavior", "Employees became less human overnight", "Customers dislike fast answers in every case"]
+  ],
+  "05": [
+    ["Metal pulls heat from your body faster", "Metal is always at a lower temperature", "Wood secretly produces warmth"],
+    ["Probability describes uncertainty, not a personal guarantee", "The app promised rain on every person", "A 70% chance means rain must last 70% of the day"],
+    ["One experience does not prove cause and effect", "The smoothie must be magic", "Sleep can never affect energy"],
+    ["The sample size is too small to trust much", "Five stars is mathematically impossible", "Averages never describe ratings"],
+    ["A comparison group helps separate the machine effect from other changes", "Scientists dislike useful machines", "Output numbers are always fake"],
+    ["One location may not represent the whole city", "Sensors cannot measure air", "Busy roads always represent parks"]
+  ],
+  "06": [
+    ["They can fix security holes and software problems", "They only change the wallpaper", "They make hackers more comfortable"],
+    ["One stolen password can unlock many accounts", "Passwords become heavier when reused", "Websites refuse all repeated letters"],
+    ["Only one column was sorted instead of the whole table", "The spreadsheet became sentient", "Alphabetical order destroys all data"],
+    ["A condition-based instruction", "A random painting technique", "A broken database"],
+    ["Bad data structure can break the system’s logic", "Databases are only decoration", "Duplicate IDs make delivery faster"],
+    ["Automation can scale both good rules and bad rules", "Automation removes the need for human judgment forever", "Old processes become perfect once digitized"]
+  ],
+  "07": [
+    ["Shape and direction affect strength", "Cardboard secretly turns into steel", "Heavy books become lighter when vertical"],
+    ["Triangles help keep structures stable under force", "Triangles are legally required on bridges", "Rectangles cannot be drawn by engineers"],
+    ["Hardness and toughness are not the same thing", "Soft materials always fail", "Scratches are more dangerous than drops"],
+    ["Specialized steps can reduce switching and improve flow", "More workers automatically fix all problems", "Dividing work makes quality irrelevant"],
+    ["Design must consider heat, light, and real operating conditions", "Beautiful buildings cannot follow physics", "Glass always makes buildings cooler"],
+    ["The design optimized one feature while ignoring system trade-offs", "Strong materials are never useful", "Repairability has no business value"]
+  ],
+  "08": [
+    ["Too much leaf growth can come at the cost of fruit", "Nitrogen makes plants forget summer", "Tomatoes grow only in tiny pots"],
+    ["Wet soil can be compacted and damage roots later", "Tractors dissolve in wet weather", "Rain makes seeds allergic to sunlight"],
+    ["Crop rotation can interrupt pests and support soil balance", "Plants become bored by familiar fields", "Different crops cancel the seasons"],
+    ["Shared resources can be overused when everyone acts alone", "Fish dislike teamwork meetings", "More boats always create more fish"],
+    ["Heat stress can reduce animal productivity and welfare", "Cows stop needing water in summer", "Milk production depends only on feed quantity"],
+    ["Thinning can reduce competition and improve forest health", "Forests grow best when every tree is crowded", "Small trees are never useful to ecosystems"]
+  ],
+  "09": [
+    ["Brush gently and regularly with proper technique", "Brush harder until the gums become stronger", "Skip brushing when gums bleed"],
+    ["Caffeine may reduce sleep quality even if you fall asleep", "Coffee becomes water after midnight", "Feeling tired proves sleep was perfect"],
+    ["Build up gradually and allow recovery", "Start with the hardest routine possible", "Ignore pain because motivation fixes injuries"],
+    ["Individual choices can create group-level health effects", "Illness only matters when symptoms are dramatic", "Offices protect people from viruses automatically"],
+    ["Stopping early can leave bacteria behind and contribute to resistance", "Feeling better means every bacterium is gone", "Antibiotics work better when taken randomly"],
+    ["Health is shaped by social and practical conditions", "Medical care depends only on willpower", "Appointments are unrelated to transport"]
+  ],
+  "10": [
+    ["Service experience is shaped by small moments of care", "Only the room size matters in hospitality", "Guests never remember how they are treated"],
+    ["A clean floor can still be a safety risk when wet", "Signs are only for decoration", "Wet floors become safer when ignored"],
+    ["Coordination and timing are part of service quality", "Good taste cancels every service issue", "Customers prefer chaos when food is expensive"],
+    ["Give clear preparation instructions before the bottleneck", "Make the trays smaller", "Hide the rules until the last second"],
+    ["The service added priority access without managing total capacity", "Fast-track passes create unlimited ride capacity", "Lines disappear when prices increase"],
+    ["The metric rewards speed while ignoring service quality and safety", "Customers dislike receiving parcels quickly", "Drivers cannot follow any measurement system"]
+  ]
+};
+
+function shuffleOptions(options, code, index) {
+  if (index % 3 === 0) return options;
+  if (index % 3 === 1) return [options[1], options[0], options[2]];
+  return [options[2], options[1], options[0]];
+}
+
+function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
+  const optionSet = questionOptions[code][index];
+  const answer = optionSet[0];
+  return {
+    id: code + "-q" + (index + 1),
+    difficulty,
+    unlocksToward,
+    prompt,
+    options: shuffleOptions(optionSet, code, index),
+    answer,
+    explanation: answer + ". This answer turns the everyday scene into a practical knowledge pattern. MapKAI uses these examples to make broad subjects feel less abstract: first notice the real-life situation, then identify the hidden rule, trade-off, or habit behind it. When you can explain the pattern in your own words, that part of the ocean becomes land."
+  };
+}
+
+const questionBank = Object.fromEntries(Object.entries(subjectQuestionSeeds).map(([code, seed]) => {
+  const difficulties = ["easy", "easy", "medium", "medium", "hard", "hard"];
+  const unlocks = ["snow", "snow", "land", "land", "green", "green"];
+  return [code, {
+    subject: seed.subject,
+    status: "draft",
+    unlockRule: { snow: 2, land: 4, green: 6 },
+    theme: seed.theme,
+    questions: seed.prompts.map((prompt, index) => makeQuestion(code, prompt, difficulties[index], unlocks[index], index))
+  }];
+}));
+
 const challengeSubjects = categories.map((category) => category.code);
-let activeChallengeSubject = challengeSubjects[0];
-let activeChallengeLevel = "easy";
+const challengeState = Object.fromEntries(challengeSubjects.map((code) => [code, {
+  correct: 0,
+  answered: [],
+}]));
 const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
+let activeChallengeSubject = challengeSubjects[0];
+let currentAnsweredQuestion = null;
+activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -709,95 +752,125 @@ function renderCategories() {
   if (grid) grid.innerHTML = detailCards;
 }
 
-function getNextChallengeLevel(subjectCode) {
-  const progress = masteryProgress[subjectCode];
-  if (progress === "ocean") return "easy";
-  if (progress === "snow") return "medium";
-  if (progress === "land") return "hard";
-  return "complete";
+function getMasteryFromCorrect(subjectCode) {
+  const subject = questionBank[subjectCode];
+  const state = challengeState[subjectCode];
+  const correct = state?.correct || 0;
+  const rule = subject?.unlockRule || { snow: 2, land: 4, green: 6 };
+  if (correct >= rule.green) return "green";
+  if (correct >= rule.land) return "land";
+  if (correct >= rule.snow) return "snow";
+  return "ocean";
+}
+
+function getCurrentQuestion(subjectCode) {
+  const subject = questionBank[subjectCode];
+  const state = challengeState[subjectCode];
+  if (!subject || !state) return null;
+  return subject.questions.find((question) => !state.answered.includes(question.id)) || null;
+}
+
+function isSubjectComplete(subjectCode) {
+  return Boolean(questionBank[subjectCode]) && !getCurrentQuestion(subjectCode);
+}
+
+function getNextAvailableChallengeSubject() {
+  return challengeSubjects.find((code) => questionBank[code] && !isSubjectComplete(code)) || null;
+}
+
+function getTotalCorrectAnswers() {
+  return Object.values(challengeState).reduce((total, state) => total + state.correct, 0);
+}
+
+function syncMasteryProgress(subjectCode) {
+  if (subjectCode) {
+    masteryProgress[subjectCode] = getMasteryFromCorrect(subjectCode);
+    return;
+  }
+  challengeSubjects.forEach((code) => {
+    masteryProgress[code] = getMasteryFromCorrect(code);
+  });
 }
 
 function renderChallenge() {
-  const subjectsTarget = document.getElementById("challengeSubjects");
   const cardTarget = document.getElementById("challengeCard");
-  if (!subjectsTarget || !cardTarget) return;
+  if (!cardTarget) return;
 
-  subjectsTarget.innerHTML = challengeSubjects
-    .map((code) => {
-      const subjectTitle = getSubjectTitle(code);
-      const progress = masteryLevels[masteryProgress[code]];
-      const active = code === activeChallengeSubject ? "is-active" : "";
-      return `
-        <button class="subject-button ${active}" type="button" data-subject="${code}">
-          <strong class="internal-code">${code}</strong>
-          <span>${subjectTitle}</span>
-          <em>${progress.label}</em>
-        </button>`;
-    })
-    .join("");
+  if (!getCurrentQuestion(activeChallengeSubject)) {
+    activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
+    currentAnsweredQuestion = null;
+  }
 
-  activeChallengeLevel = getNextChallengeLevel(activeChallengeSubject);
   const subject = questionBank[activeChallengeSubject];
-  const progress = masteryLevels[masteryProgress[activeChallengeSubject]];
+  const state = challengeState[activeChallengeSubject];
+  const pendingAnsweredQuestion = currentAnsweredQuestion?.subjectCode === activeChallengeSubject ? currentAnsweredQuestion.question : null;
+  const question = pendingAnsweredQuestion || getCurrentQuestion(activeChallengeSubject);
+  const progress = masteryLevels[getMasteryFromCorrect(activeChallengeSubject)];
   const subjectTitle = getSubjectTitle(activeChallengeSubject);
 
-  if (!subject) {
-    cardTarget.innerHTML = `
-      <p class="eyebrow">Question set coming soon</p>
-      <h2>${subjectTitle}</h2>
-      <p>This subject already has a place in the question database architecture. Future updates can add easy, medium, and hard questions only inside this subject code.</p>
-      <div class="challenge-status">Current: ${progress.label}</div>
-      <div class="founder-note internal-code">Question bank key: ${activeChallengeSubject}</div>`;
-    return;
-  }
-
-  if (activeChallengeLevel === "complete") {
+  if (!subject || !state || !question) {
     cardTarget.innerHTML = `
       <p class="eyebrow">Challenge complete</p>
-      <h2>${subjectTitle}</h2>
-      <p>This subject is green land for now. Future updates can add more questions inside this subject database.</p>
-      <div class="challenge-status is-green">${progress.label}</div>`;
+      <h2>The current map is fully lit.</h2>
+      <p>You answered the available questions. Future updates can add more questions inside each subject database without changing this quiz flow.</p>
+      <div class="challenge-status is-green">Total correct answers: ${getTotalCorrectAnswers()}</div>`;
     return;
   }
 
-  const question = subject.levels[activeChallengeLevel];
+  const isAnswered = currentAnsweredQuestion?.question.id === question.id;
+  const feedback = isAnswered ? `
+    <p class="challenge-feedback ${currentAnsweredQuestion.correct ? "is-correct" : "is-wrong"}">
+      ${currentAnsweredQuestion.correct ? "Correct." : "Not yet."} ${currentAnsweredQuestion.correct ? "This answer helps light up the map." : "This question is still counted, and the explanation shows the better pattern."}
+    </p>
+    <article class="answer-explanation">
+      <h3>Why this matters</h3>
+      <p>${question.explanation}</p>
+    </article>
+    <button class="button primary next-question-button" type="button" data-next-question>Next question</button>` : "";
+
   cardTarget.innerHTML = `
-    <p class="eyebrow">${activeChallengeLevel} question -> ${masteryLevels[question.unlocks].label}</p>
-    <h2>${subjectTitle}</h2>
+    <p class="eyebrow">${question.difficulty} question -> ${masteryLevels[question.unlocksToward].label}</p>
+    <h2>Knowledge challenge</h2>
     <p>${question.prompt}</p>
     <div class="answer-grid">
-      ${question.options.map((option) => `<button type="button" data-answer="${option}">${option}</button>`).join("")}
+      ${question.options.map((option) => {
+        const selected = isAnswered && option === currentAnsweredQuestion.selected;
+        const correct = isAnswered && option === question.answer;
+        const stateClass = correct ? " is-correct" : selected ? " is-wrong" : "";
+        return `<button type="button" data-answer="${option}" class="${stateClass.trim()}" ${isAnswered ? "disabled" : ""}>${option}</button>`;
+      }).join("")}
     </div>
-    <div class="challenge-status">Current: ${progress.label}</div>`;
+    <div class="challenge-status">Correct answers in this hidden subject: ${state.correct} / ${subject.questions.length} · Current map state: ${progress.label}</div>
+    <div class="founder-note internal-code">Source: ${activeChallengeSubject} · ${subjectTitle}</div>
+    ${feedback}`;
 }
 
 function handleChallengeClick(event) {
-  const subjectButton = event.target.closest("[data-subject]");
-  if (subjectButton) {
-    activeChallengeSubject = subjectButton.dataset.subject;
+  const nextButton = event.target.closest("[data-next-question]");
+  if (nextButton) {
+    currentAnsweredQuestion = null;
+    if (!getCurrentQuestion(activeChallengeSubject)) {
+      activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
+    }
     renderChallenge();
+    drawKnowledgeMap();
     return;
   }
 
   const answerButton = event.target.closest("[data-answer]");
-  if (!answerButton) return;
-  const question = questionBank[activeChallengeSubject].levels[activeChallengeLevel];
-  const cardTarget = document.getElementById("challengeCard");
-  const correct = answerButton.dataset.answer === question.answer;
+  if (!answerButton || currentAnsweredQuestion) return;
+  const question = getCurrentQuestion(activeChallengeSubject);
+  const state = challengeState[activeChallengeSubject];
+  if (!question || !state) return;
 
-  if (!correct) {
-    if (cardTarget) {
-      cardTarget.insertAdjacentHTML("beforeend", `<p class="challenge-feedback is-wrong">Not yet. This round ends here. Try the subject again when you are ready.</p>`);
-    }
-    return;
-  }
-
-  masteryProgress[activeChallengeSubject] = question.unlocks;
+  const selected = answerButton.dataset.answer;
+  const correct = selected === question.answer;
+  state.answered.push(question.id);
+  if (correct) state.correct += 1;
+  syncMasteryProgress(activeChallengeSubject);
+  currentAnsweredQuestion = { subjectCode: activeChallengeSubject, question, selected, correct };
   drawKnowledgeMap();
   renderChallenge();
-  if (cardTarget) {
-    cardTarget.insertAdjacentHTML("beforeend", `<p class="challenge-feedback is-correct">Correct. This subject is now ${masteryLevels[question.unlocks].label}.</p>`);
-  }
 }
 
 function renderPassport(targetId, passport) {
@@ -851,7 +924,7 @@ function renderCategoryTree(category) {
   target.innerHTML = category.groups
     .map((group) => `
       <section class="tree-group">
-        <h2>${group.code} ${group.title}</h2>
+        <h2><span class="internal-code">${group.code}</span>${group.title}</h2>
         <div class="field-list">
           ${group.fields.map(([code, title]) => {
             const href = `/categories/${category.code}`;
@@ -907,6 +980,7 @@ function renderLearning() {
 
 function drawKnowledgeMap() {
   if (!ctx || !canvas) return;
+  syncMasteryProgress();
   const width = canvas.width;
   const height = canvas.height;
   ctx.clearRect(0, 0, width, height);
@@ -918,28 +992,30 @@ function drawKnowledgeMap() {
   roundRect(ctx, 0, 0, width, height, 34);
   ctx.fill();
 
-  const islands = [
-    { x: 180, y: 160, w: 110, h: 74, code: "00", label: "00" },
-    { x: 360, y: 180, w: 130, h: 86, code: "01", label: "01" },
-    { x: 610, y: 210, w: 100, h: 68, code: "06", label: "06 ICT" },
-    { x: 300, y: 370, w: 118, h: 76, code: "05", label: "05 Science" },
-    { x: 545, y: 425, w: 130, h: 74, code: null, label: "Learning" },
+  const founderMode = document.body.classList.contains("founder-mode");
+  const islandSlots = [
+    [165, 145, 108, 68], [355, 130, 116, 74], [545, 160, 110, 70], [730, 135, 112, 72],
+    [230, 315, 126, 82], [445, 300, 118, 76], [660, 325, 126, 78],
+    [150, 505, 112, 70], [355, 485, 126, 78], [575, 510, 114, 72], [770, 485, 112, 70],
   ];
-  islands.forEach(({ x, y, w, h, code, label }, index) => {
-    const level = code ? masteryProgress[code] || "ocean" : "green";
-    const color = code ? masteryLevels[level].color : "#7fc76f";
+
+  categories.forEach((category, index) => {
+    const [x, y, w, h] = islandSlots[index];
+    const level = masteryProgress[category.code] || "ocean";
+    const color = masteryLevels[level].color;
+    const isActive = category.code === activeChallengeSubject;
     ctx.save();
     ctx.translate(x, y);
-    ctx.rotate((index - 2) * 0.08);
-    ctx.fillStyle = "rgba(255,255,255,0.35)";
-    ellipseBlob(w + 32, h + 22);
+    ctx.rotate((index % 2 === 0 ? -1 : 1) * 0.06);
+    ctx.fillStyle = isActive ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.32)";
+    ellipseBlob(w + 34, h + 24);
     ctx.fill();
     ctx.fillStyle = color;
     ellipseBlob(w, h);
     ctx.fill();
     ctx.fillStyle = level === "snow" ? "#ffffff" : "#fff6dd";
     ctx.beginPath();
-    ctx.arc(-w * 0.2, -h * 0.18, Math.min(w, h) * 0.2, 0, Math.PI * 2);
+    ctx.arc(-w * 0.2, -h * 0.18, Math.min(w, h) * 0.18, 0, Math.PI * 2);
     ctx.fill();
     if (level === "green") {
       ctx.fillStyle = "rgba(255,255,255,0.42)";
@@ -947,15 +1023,17 @@ function drawKnowledgeMap() {
       ctx.arc(w * 0.18, h * 0.05, Math.min(w, h) * 0.14, 0, Math.PI * 2);
       ctx.fill();
     }
-    ctx.fillStyle = "#173026";
-    ctx.font = "700 22px Inter, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText(label, 0, 7);
+    if (founderMode) {
+      ctx.fillStyle = "#173026";
+      ctx.font = "800 22px Inter, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(category.code, 0, 7);
+    }
     ctx.restore();
   });
 
   ctx.fillStyle = "rgba(255,255,255,0.75)";
-  for (let i = 0; i < 60; i += 1) {
+  for (let i = 0; i < 70; i += 1) {
     const x = (i * 137) % width;
     const y = (i * 73) % height;
     ctx.beginPath();
@@ -980,7 +1058,7 @@ function roundRect(context, x, y, width, height, radius) {
 }
 
 document.addEventListener("click", (event) => {
-  if (event.target.closest("[data-subject], [data-answer]")) {
+  if (event.target.closest("[data-answer], [data-next-question]")) {
     handleChallengeClick(event);
     return;
   }
@@ -1018,4 +1096,6 @@ function setFounderMode(enabled) {
     founderToggle.setAttribute("aria-pressed", String(enabled));
   }
   localStorage.setItem("mapkaiFounderMode", String(enabled));
+  drawKnowledgeMap();
+  renderChallenge();
 }
