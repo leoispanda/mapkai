@@ -406,6 +406,32 @@ Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
 
+### 2026-05-13 - Split views and unique visitors
+
+Status: Prepared for push
+
+Changed:
+
+- Changed the public footer counter from unique visitor wording to cumulative page views.
+- Public mode now shows: `MapKAI has been viewed #X times.`
+- Founder mode additionally shows the real unique visitor count.
+- Updated `/api/visit` to store cumulative views in `site_stats` while keeping unique visitors in `visitors`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/visit.js`
+- `git diff --check`
+
+Commit:
+
+- This entry is part of the view counter update commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
 Notes:
 
 - Real visitor counting requires a Cloudflare D1 database bound as `MAPKAI_DB`.

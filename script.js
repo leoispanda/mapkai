@@ -691,7 +691,8 @@ function renderContactSections() {
 function siteFooterTemplate() {
   return `
     <footer class="site-footer" aria-label="Copyright">
-      <p class="visitor-count" data-visitor-count>Thanks for visiting.</p>
+      <p class="visitor-count" data-visitor-count>MapKAI has been viewed many times.</p>
+      <p class="visitor-count founder-only" data-founder-visitor-count></p>
       <p>© 2026 MapKAI. All rights reserved.</p>
       <p>Unauthorized copying, reproduction, redistribution, adaptation, or commercial use of MapKAI content, structure, design, or visual materials is not permitted without prior written permission.</p>
     </footer>`;
@@ -1270,8 +1271,9 @@ function getVisitorId() {
 }
 
 async function registerVisit() {
-  const targets = Array.from(document.querySelectorAll("[data-visitor-count]"));
-  if (!targets.length) return;
+  const viewTargets = Array.from(document.querySelectorAll("[data-visitor-count]"));
+  const visitorTargets = Array.from(document.querySelectorAll("[data-founder-visitor-count]"));
+  if (!viewTargets.length) return;
   try {
     const response = await fetch("/api/visit", {
       method: "POST",
@@ -1280,13 +1282,19 @@ async function registerVisit() {
     });
     if (!response.ok) throw new Error("Visit counter unavailable");
     const data = await response.json();
-    if (!data.totalVisitors) return;
-    targets.forEach((target) => {
-      target.textContent = `Thanks for visiting. You are visitor #${data.totalVisitors}.`;
+    if (!data.totalViews) return;
+    viewTargets.forEach((target) => {
+      target.textContent = `MapKAI has been viewed #${data.totalViews} times.`;
+    });
+    visitorTargets.forEach((target) => {
+      target.textContent = data.totalVisitors ? `Unique visitors: #${data.totalVisitors}.` : "";
     });
   } catch {
-    targets.forEach((target) => {
+    viewTargets.forEach((target) => {
       target.textContent = "Thanks for visiting MapKAI.";
+    });
+    visitorTargets.forEach((target) => {
+      target.textContent = "";
     });
   }
 }
