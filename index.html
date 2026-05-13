@@ -9,7 +9,7 @@
       content="MapKAI is a modular knowledge map and learning path system for exploring categories, fields, and guided learning routes."
     />
     <link rel="icon" href="/assets/mapkai-brand.png" type="image/png" />
-    <link rel="stylesheet" href="/styles.css?v=20260513-view-counter" />
+    <link rel="stylesheet" href="/styles.css?v=20260513-bilingual-home" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -21,7 +21,11 @@
         <a href="/categories" data-route="/categories">Categories</a>
         <a href="/learning" data-route="/learning">Learning</a>
       </nav>
-      <button class="founder-toggle" type="button" id="founderToggle" aria-pressed="false">Founder mode</button>
+      <div class="language-switch" aria-label="Language">
+        <button type="button" data-language="en" aria-pressed="true">English</button>
+        <span>|</span>
+        <button type="button" data-language="zh" aria-pressed="false">中文</button>
+      </div>
     </header>
 
     <main id="app">
@@ -30,8 +34,8 @@
           <p class="eyebrow">MAP knowledge with AI</p>
           <h1>Map knowledge into paths you can actually follow.</h1>
           <p class="hero-copy">
-            MapKAI helps learners turn broad knowledge fields into clear maps, structured
-            categories, and guided learning paths with the help of AI.
+            MapKAI helps you turn scattered knowledge into clear maps, structured categories,
+            and guided learning paths.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="/map" data-route="/map">Explore the Map</a>
@@ -53,12 +57,12 @@
             </article>
             <article class="module-card">
               <h3>Categories — Understand each field</h3>
-              <p>Explore structured fields, codes, readiness, and relationships.</p>
+              <p>Explore structured fields and see how knowledge areas connect.</p>
               <a href="/categories" data-route="/categories">Browse categories</a>
             </article>
             <article class="module-card">
               <h3>Learning — Follow a guided path</h3>
-              <p>Turn selected fields into practical learning steps.</p>
+              <p>Follow guided learning paths that help you move from first understanding to clearer explanation and stronger mastery.</p>
               <a href="/learning" data-route="/learning">View paths</a>
             </article>
           </div>
@@ -118,12 +122,9 @@
             <p class="eyebrow">Knowledge categories</p>
             <h2>Explore every field with the same structure</h2>
             <p>
-              MapKAI organizes all eleven knowledge categories with the same basic passport:
-              title, scope, groups, detailed fields, readiness, and related paths.
-            </p>
-            <p>
-              This keeps every field comparable, so users can move from the big picture into
-              a specific area without one category dominating the homepage.
+              MapKAI organizes eleven broad knowledge areas with a consistent structure, so
+              learners can move from the big picture into specific fields without one area
+              dominating the homepage.
             </p>
           </div>
           <a class="button primary" href="/categories" data-route="/categories">Browse Categories</a>
@@ -204,8 +205,8 @@
           <p class="eyebrow">Knowledge Classification System</p>
           <h1>Eleven categories, one maintainable backbone.</h1>
           <p>
-            Explore the official knowledge structure behind MapKAI. Each category shows its
-            fields, relationships, and learning readiness.
+            Explore the knowledge structure behind MapKAI. Each category shows what the field
+            covers and how it connects to other areas of knowledge.
           </p>
         </div>
         <div class="category-grid" id="categoryGrid"></div>
@@ -217,7 +218,7 @@
           <h1 id="categoryDetailTitle">Knowledge category</h1>
           <p id="categoryDetailCopy"></p>
         </div>
-        <div class="passport-panel" id="categoryPassport"></div>
+        <div class="passport-panel founder-only" id="categoryPassport"></div>
         <div class="tree-panel" id="categoryTree"></div>
       </section>
 
@@ -225,10 +226,10 @@
         <div class="field-hero">
           <div>
             <p class="eyebrow">Detailed field</p>
-            <h1>0412 Finance, banking and insurance</h1>
+            <h1>Detailed field map</h1>
             <p>
-              Finance explains how money moves, how risk is priced, and how people and organizations
-              make decisions under uncertainty.
+              Detailed field pages help turn one knowledge area into practical explanations,
+              everyday examples, and learning steps.
             </p>
           </div>
           <a class="button secondary" href="/learning" data-route="/learning">View learning paths</a>
@@ -268,11 +269,11 @@
             a deeper direction.
           </p>
         </div>
-        <div class="passport-panel" id="pathPassport"></div>
+        <div class="passport-panel founder-only" id="pathPassport"></div>
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
 
-    <script src="/script.js?v=20260513-view-counter"></script>
+    <script src="/script.js?v=20260513-bilingual-home"></script>
   </body>
 </html>

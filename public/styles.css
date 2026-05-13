@@ -83,6 +83,28 @@ a {
   color: var(--green-dark);
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 780;
+}
+
+.language-switch button {
+  border: 0;
+  padding: 6px 2px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: var(--green-dark);
+}
+
 .founder-toggle {
   min-height: 34px;
   border: 1px solid var(--line);
@@ -163,6 +185,17 @@ main {
 
 .hero {
   padding: clamp(54px, 10vw, 118px) 0 44px;
+}
+
+.home-page .hero h1 {
+  font-size: clamp(2.65rem, 6vw, 6.1rem);
+  line-height: 0.96;
+}
+
+.home-page .section-heading h2,
+.home-page .preview-band h2 {
+  font-size: clamp(1.55rem, 2.55vw, 2.35rem);
+  line-height: 1.06;
 }
 
 .eyebrow {

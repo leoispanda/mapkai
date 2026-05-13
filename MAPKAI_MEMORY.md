@@ -480,3 +480,37 @@ Commit:
 Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
+### 2026-05-13 - Hide founder entry and add bilingual support
+
+Status: Prepared for push
+
+Changed:
+
+- Hidden public Founder mode entry while preserving Founder mode functionality.
+- Added `/leoyangandxinli` as a private Founder mode route.
+- Cleaned Home public copy and removed internal/development wording from public Home.
+- Removed specific `04` / `0412` / Business / Finance homepage emphasis.
+- Added English / Chinese language switch with localStorage persistence.
+- Added Chinese public UI text across Home, Map, Categories, Category detail, Learning, Contact, and footer basics.
+- Converted quiz data to bilingual `en` / `zh` blocks while keeping one shared question ID, subject, and difficulty per question.
+- Added Chinese versions for all 66 existing quiz questions.
+- Preserved existing quiz logic, Founder mode visibility rules, visitor counter, and Contact/localStorage logic.
+- Reduced oversized Home typography slightly.
+- Synchronized root and public files.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Bilingual quiz data validation for 66 questions.
+- Root/public file sync checks.
+- `git diff --check`
+
+Commit:
+
+- This entry is part of the bilingual Founder mode update commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.
