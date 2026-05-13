@@ -161,6 +161,11 @@ const uiText = {
     invalidEmail: "Please enter a valid email address.",
     founderMessageBoard: "Founder message board",
     noMessages: "No messages yet.",
+    couldNotLoadMessages: "Could not load messages.",
+    contactApiStatus: (status) => `Contact API status: ${status}`,
+    loadedMessages: (count) => `Loaded messages: ${count}`,
+    contactApiConnected: "connected",
+    contactApiFailed: "failed",
     footerRights: "© 2026 MapKAI. All rights reserved.",
     footerNotice: "Unauthorized copying, reproduction, redistribution, adaptation, or commercial use of MapKAI content, structure, design, or visual materials is not permitted without prior written permission.",
     viewedMany: "MapKAI has been viewed many times.",
@@ -286,6 +291,11 @@ const uiText = {
     invalidEmail: "请输入有效的邮箱地址。",
     founderMessageBoard: "Founder 留言板",
     noMessages: "暂时还没有留言。",
+    couldNotLoadMessages: "无法加载留言。",
+    contactApiStatus: (status) => `Contact API 状态：${status}`,
+    loadedMessages: (count) => `已加载留言：${count}`,
+    contactApiConnected: "connected",
+    contactApiFailed: "failed",
     footerRights: "© 2026 MapKAI。保留所有权利。",
     footerNotice: "未经事先书面许可，不得复制、转载、改编或商业使用 MapKAI 的内容、结构、设计或视觉材料。",
     viewedMany: "MapKAI 已被浏览很多次。",
@@ -1110,6 +1120,8 @@ let challengePoolIndex = 0;
 let lastTitleModalAt = 0;
 let activeTitleModalStats = null;
 let challengeRoundComplete = false;
+let founderMessages = [];
+let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -1203,14 +1215,18 @@ async function handleContactSubmit(event) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    if (!response.ok) throw new Error("Message submit failed");
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.ok !== true) {
+      throw new Error(data.error || `Message submit failed with HTTP ${response.status}`);
+    }
     status.textContent = t("messageSaved");
     localStorage.removeItem(messageBoardKey);
     form.reset();
     if (document.body.classList.contains("founder-mode")) {
       loadFounderMessages();
     }
-  } catch {
+  } catch (error) {
+    console.error("POST /api/contact-message failed:", error);
     status.textContent = t("messageError");
   }
 }
@@ -1229,45 +1245,47 @@ function getMessageBoardEntries() {
 }
 
 function renderMessageBoards() {
-  const boards = Array.from(document.querySelectorAll("[data-message-board]"));
-  if (!boards.length) return;
-  const entries = getMessageBoardEntries();
-  boards.forEach((board) => {
-    board.innerHTML = `
-      <h3>${t("founderMessageBoard")}</h3>
-      ${entries.length ? `
-        <ul>
-          ${entries.map((entry) => `
-            <li>
-              <time>${formatBoardTime(entry.createdAt)}</time>
-              <p>${escapeHtml(entry.message)}</p>
-            </li>`).join("")}
-        </ul>` : `<p>${t("noMessages")}</p>`}`;
-  });
+  renderFounderMessages(founderMessages, founderMessageStatus);
 }
 
 async function loadFounderMessages() {
   if (!document.body.classList.contains("founder-mode")) return;
   const boards = Array.from(document.querySelectorAll("[data-message-board]"));
   if (!boards.length) return;
+  founderMessageStatus = { state: "loading", loaded: 0, detail: "" };
+  renderFounderMessages(founderMessages, founderMessageStatus);
   try {
     const response = await fetch("/api/contact-messages", {
       headers: { "X-MapKAI-Founder": "true" },
     });
-    if (!response.ok) throw new Error("Message board unavailable");
-    const data = await response.json();
-    renderFounderMessages(Array.isArray(data.messages) ? data.messages : []);
-  } catch {
-    renderFounderMessages(getMessageBoardEntries());
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.ok !== true) {
+      throw new Error(data.error || `HTTP ${response.status}`);
+    }
+    founderMessages = Array.isArray(data.messages) ? data.messages : [];
+    founderMessageStatus = { state: "connected", loaded: founderMessages.length, detail: "" };
+    renderFounderMessages(founderMessages, founderMessageStatus);
+  } catch (error) {
+    founderMessages = [];
+    founderMessageStatus = { state: "failed", loaded: 0, detail: error.message || "Unknown error" };
+    console.error("GET /api/contact-messages failed:", error);
+    renderFounderMessages(founderMessages, founderMessageStatus);
   }
 }
 
-function renderFounderMessages(entries) {
+function renderFounderMessages(entries, status = founderMessageStatus) {
   const boards = Array.from(document.querySelectorAll("[data-message-board]"));
   boards.forEach((board) => {
+    const isFailed = status.state === "failed";
+    const statusLabel = status.state === "connected" ? t("contactApiConnected") : status.state === "failed" ? t("contactApiFailed") : status.state;
     board.innerHTML = `
       <h3>${t("founderMessageBoard")}</h3>
-      ${entries.length ? `
+      <div class="founder-contact-debug">
+        <p>${t("contactApiStatus", statusLabel)}</p>
+        <p>${t("loadedMessages", status.loaded || entries.length || 0)}</p>
+        ${status.detail ? `<p>${escapeHtml(status.detail)}</p>` : ""}
+      </div>
+      ${isFailed ? `<p>${t("couldNotLoadMessages")}</p>` : entries.length ? `
         <ul>
           ${entries.map((entry) => `
             <li>

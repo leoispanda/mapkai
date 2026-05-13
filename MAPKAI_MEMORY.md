@@ -556,3 +556,36 @@ Commit:
 Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
+### 2026-05-13 - Fix D1 contact messages in Founder mode
+
+Status: Prepared for push
+
+Changed:
+
+- Fixed D1-backed contact message submission and Founder mode retrieval.
+- Confirmed `POST /api/contact-message` writes to D1 through the `MAPKAI_DB` binding.
+- Confirmed `GET /api/contact-messages` reads latest messages from D1.
+- Ensured Founder mode no longer depends only on localStorage for messages.
+- Added Founder-only debug/status for contact message loading.
+- Changed message submit success to appear only after API returns `{ ok: true }`.
+- Preserved quiz, title, Grand Slam, language switch, and visitor counter logic.
+- Synchronized root and public files where needed.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/contact-message.js`
+- `node --check functions/api/contact-messages.js`
+- Contact API validation confirmed D1 insert/select paths, empty message rejection, invalid email handling, missing DB error, and Founder-only GET protection.
+- Root/public script and style sync checks.
+- `git diff --check`
+
+Commit:
+
+- This entry is part of the D1 contact messages Founder mode fix commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.

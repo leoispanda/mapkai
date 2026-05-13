@@ -27,9 +27,13 @@ async function ensureContactMessagesTable(database) {
   ).run();
 }
 
-export async function onRequestPost({ request, env }) {
+export async function onRequest({ request, env }) {
+  if (request.method !== "POST") {
+    return json({ ok: false, error: "Method not allowed." }, 405);
+  }
+
   if (!env.MAPKAI_DB) {
-    return json({ error: "Message database is not configured." }, 500);
+    return json({ ok: false, error: "Message database is not configured." }, 500);
   }
 
   const body = await request.json().catch(() => ({}));
@@ -39,8 +43,8 @@ export async function onRequestPost({ request, env }) {
   const pagePath = cleanText(body.page_path, 240);
   const language = cleanText(body.language, 24);
 
-  if (!message) return json({ error: "Message is required." }, 400);
-  if (!isValidEmail(email)) return json({ error: "Invalid email." }, 400);
+  if (!message) return json({ ok: false, error: "Message is required." }, 400);
+  if (!isValidEmail(email)) return json({ ok: false, error: "Invalid email." }, 400);
 
   await ensureContactMessagesTable(env.MAPKAI_DB);
   await env.MAPKAI_DB.prepare(
@@ -49,8 +53,4 @@ export async function onRequestPost({ request, env }) {
   ).bind(name, email, message, pagePath, language, new Date().toISOString()).run();
 
   return json({ ok: true });
-}
-
-export function onRequest() {
-  return json({ error: "Method not allowed." }, 405);
 }

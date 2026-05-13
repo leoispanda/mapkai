@@ -19,13 +19,17 @@ async function ensureContactMessagesTable(database) {
   ).run();
 }
 
-export async function onRequestGet({ request, env }) {
+export async function onRequest({ request, env }) {
+  if (request.method !== "GET") {
+    return json({ ok: false, error: "Method not allowed." }, 405);
+  }
+
   if (!env.MAPKAI_DB) {
-    return json({ error: "Message database is not configured." }, 500);
+    return json({ ok: false, error: "Message database is not configured." }, 500);
   }
 
   if (request.headers.get("X-MapKAI-Founder") !== "true") {
-    return json({ error: "Founder mode required." }, 403);
+    return json({ ok: false, error: "Founder mode required." }, 403);
   }
 
   await ensureContactMessagesTable(env.MAPKAI_DB);
@@ -37,8 +41,4 @@ export async function onRequestGet({ request, env }) {
   ).all();
 
   return json({ ok: true, messages: result.results || [] });
-}
-
-export function onRequest() {
-  return json({ error: "Method not allowed." }, 405);
 }
