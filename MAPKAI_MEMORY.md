@@ -410,3 +410,24 @@ Notes:
 
 - Real visitor counting requires a Cloudflare D1 database bound as `MAPKAI_DB`.
 - Until D1 is configured in Cloudflare, the footer falls back to `Thanks for visiting MapKAI.`
+
+### 2026-05-13 - Bind Cloudflare D1 visitor database
+
+Status: Prepared for push
+
+Changed:
+
+- Bound the Cloudflare D1 database `mapkai` to the Pages project as `MAPKAI_DB`.
+- Updated `wrangler.toml` with the D1 `database_id` so `/api/visit` can store real visitor IDs.
+
+Verified:
+
+- `git diff --check`
+
+Commit:
+
+- This entry is part of the D1 binding commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.
