@@ -584,7 +584,7 @@ function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
     prompt,
     options: shuffleOptions(optionSet, code, index),
     answer,
-    explanation: answer + ". This answer turns the everyday scene into a practical knowledge pattern. MapKAI uses these examples to make broad subjects feel less abstract: first notice the real-life situation, then identify the hidden rule, trade-off, or habit behind it. When you can explain the pattern in your own words, that part of the ocean becomes land."
+    explanation: answer + ". This answer turns the everyday scene into a practical knowledge pattern. Powered by MapKAI - map your knowledge with AI."
   };
 }
 
@@ -607,8 +607,8 @@ const challengeState = Object.fromEntries(challengeSubjects.map((code) => [code,
 }]));
 const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
 let activeChallengeSubject = challengeSubjects[0];
+let activeChallengeQuestion = null;
 let currentAnsweredQuestion = null;
-activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -778,6 +778,31 @@ function getNextAvailableChallengeSubject() {
   return challengeSubjects.find((code) => questionBank[code] && !isSubjectComplete(code)) || null;
 }
 
+function getAvailableChallengeQuestions(excludedSubjectCode) {
+  const allQuestions = challengeSubjects.flatMap((subjectCode) => {
+    const subject = questionBank[subjectCode];
+    const state = challengeState[subjectCode];
+    if (!subject || !state) return [];
+    return subject.questions
+      .filter((question) => !state.answered.includes(question.id))
+      .map((question) => ({ subjectCode, question }));
+  });
+  const rotatedQuestions = allQuestions.filter((item) => item.subjectCode !== excludedSubjectCode);
+  return rotatedQuestions.length ? rotatedQuestions : allQuestions;
+}
+
+function setRandomChallengeQuestion(excludedSubjectCode) {
+  const availableQuestions = getAvailableChallengeQuestions(excludedSubjectCode);
+  if (!availableQuestions.length) {
+    activeChallengeQuestion = null;
+    return null;
+  }
+  const nextItem = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+  activeChallengeSubject = nextItem.subjectCode;
+  activeChallengeQuestion = nextItem.question;
+  return nextItem;
+}
+
 function getTotalCorrectAnswers() {
   return Object.values(challengeState).reduce((total, state) => total + state.correct, 0);
 }
@@ -796,15 +821,17 @@ function renderChallenge() {
   const cardTarget = document.getElementById("challengeCard");
   if (!cardTarget) return;
 
-  if (!getCurrentQuestion(activeChallengeSubject)) {
-    activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
+  if (currentAnsweredQuestion) {
+    activeChallengeSubject = currentAnsweredQuestion.subjectCode;
+    activeChallengeQuestion = currentAnsweredQuestion.question;
+  } else if (!activeChallengeQuestion || challengeState[activeChallengeSubject]?.answered.includes(activeChallengeQuestion.id)) {
+    setRandomChallengeQuestion(activeChallengeSubject);
     currentAnsweredQuestion = null;
   }
 
   const subject = questionBank[activeChallengeSubject];
   const state = challengeState[activeChallengeSubject];
-  const pendingAnsweredQuestion = currentAnsweredQuestion?.subjectCode === activeChallengeSubject ? currentAnsweredQuestion.question : null;
-  const question = pendingAnsweredQuestion || getCurrentQuestion(activeChallengeSubject);
+  const question = activeChallengeQuestion;
   const progress = masteryLevels[getMasteryFromCorrect(activeChallengeSubject)];
   const subjectTitle = getSubjectTitle(activeChallengeSubject);
 
@@ -848,10 +875,9 @@ function renderChallenge() {
 function handleChallengeClick(event) {
   const nextButton = event.target.closest("[data-next-question]");
   if (nextButton) {
+    const previousSubject = activeChallengeSubject;
     currentAnsweredQuestion = null;
-    if (!getCurrentQuestion(activeChallengeSubject)) {
-      activeChallengeSubject = getNextAvailableChallengeSubject() || activeChallengeSubject;
-    }
+    setRandomChallengeQuestion(previousSubject);
     renderChallenge();
     drawKnowledgeMap();
     return;
@@ -859,7 +885,7 @@ function handleChallengeClick(event) {
 
   const answerButton = event.target.closest("[data-answer]");
   if (!answerButton || currentAnsweredQuestion) return;
-  const question = getCurrentQuestion(activeChallengeSubject);
+  const question = activeChallengeQuestion;
   const state = challengeState[activeChallengeSubject];
   if (!question || !state) return;
 
