@@ -406,6 +406,29 @@ Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
 
+### 2026-05-13 - Refresh view counter cache key
+
+Status: Prepared for push
+
+Changed:
+
+- Updated the `styles.css` and `script.js` cache version in `index.html`.
+- Synced the same cache version change to `public/index.html`.
+- This forces Cloudflare/browser caches to load the new view counter wording instead of the older visitor wording.
+
+Verified:
+
+- `git diff --check`
+- Root/public `index.html` synced.
+
+Commit:
+
+- This entry is part of the cache refresh commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
 ### 2026-05-13 - Split views and unique visitors
 
 Status: Prepared for push
