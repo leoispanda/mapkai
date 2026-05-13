@@ -514,3 +514,45 @@ Commit:
 Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
+### 2026-05-13 - Add quiz milestones, Grand Slam, and D1 contact messages
+
+Status: Prepared for push
+
+Changed:
+
+- Added dynamic end-of-round completion state after all current questions are answered.
+- Added Knowledge Grand Slam / 知识大满贯 achievement.
+- Added exploration milestone titles based on answered question count.
+- Preserved accuracy-based titles.
+- Added bilingual milestone and Grand Slam modal copy.
+- Avoided hard-coded question count to support future quiz expansion.
+- Stopped automatic question cycling after full pool completion.
+- Added manual new-round restart.
+- Replaced local-only contact messages with Cloudflare D1-backed storage.
+- Added public POST contact message API.
+- Added Founder-only GET contact messages API.
+- Added Founder mode message list.
+- Preserved visitor counter logic.
+- Preserved quiz random shuffle, language switch, and Founder mode route.
+- Synchronized root and public files.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/contact-message.js`
+- `node --check functions/api/contact-messages.js`
+- `git diff --check`
+- Root/public script and style sync checks.
+- Local `/map` returned HTTP 200.
+- Dynamic quiz validation confirmed full-pool no-repeat draw, completion stop, manual new-round restart, milestone thresholds, and Grand Slam modal.
+- Contact API validation confirmed public POST success, empty message rejection, invalid email rejection, Founder-only GET protection, and Founder message retrieval.
+
+Commit:
+
+- This entry is part of the quiz milestones and D1 contact messages update commit.
+
+Push status:
+
+- Push requested by founder; final pushed commit hash is reported in the Codex final response.

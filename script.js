@@ -114,6 +114,21 @@ const uiText = {
     whyMatters: "Why this matters",
     previous: "Previous",
     next: "Next",
+    titleUnlockHint: "Answer at least 20 questions to unlock your knowledge titles.",
+    accuracyTitle: (title) => `Accuracy title: ${title}`,
+    explorerTitleStatus: (title) => `Explorer title: ${title}`,
+    titleAccuracy: (answered, accuracy) => `${answered} answered · ${accuracy}% accuracy`,
+    titleModalTitle: "New knowledge milestone unlocked!",
+    titleModalBody: (answered, accuracy) => `You have answered ${answered} questions with ${accuracy}% accuracy.`,
+    accuracyTitleLine: (title) => `Accuracy title: ${title}`,
+    explorerTitleLine: (title) => `Explorer title: ${title}`,
+    titleModalButton: "Keep exploring",
+    grandSlamTitle: "You completed the full knowledge map!",
+    grandSlamBody: (total) => `You have answered all ${total} questions in this round.`,
+    grandSlamAchievement: "Special achievement: Knowledge Grand Slam",
+    grandSlamButton: "Finish",
+    roundCompleteStatus: "You have completed this full question round.",
+    startNewRound: "Start a new round",
     correctInSubject: "Correct answers in this hidden subject",
     currentMapState: "Current map state",
     categoriesEyebrow: "Knowledge Classification System",
@@ -135,9 +150,15 @@ const uiText = {
     contactTitle: "Need help or want to leave a message?",
     contactCopy: "If you need to contact MapKAI, please leave a message here.",
     messageBoard: "Message board",
+    nameLabel: "Name",
+    namePlaceholder: "Your name",
+    emailLabel: "Email",
+    emailPlaceholder: "you@example.com",
     messagePlaceholder: "Tell us what you want to ask, suggest, or build with MapKAI.",
-    leaveMessage: "Leave message",
-    messageSaved: "Thanks. Your message is saved on this board.",
+    leaveMessage: "Send message",
+    messageSaved: "Thank you. Your message has been received.",
+    messageError: "Sorry, your message could not be sent. Please try again.",
+    invalidEmail: "Please enter a valid email address.",
     founderMessageBoard: "Founder message board",
     noMessages: "No messages yet.",
     footerRights: "© 2026 MapKAI. All rights reserved.",
@@ -218,6 +239,21 @@ const uiText = {
     whyMatters: "为什么重要",
     previous: "Previous",
     next: "Next",
+    titleUnlockHint: "答满 20 题后，解锁你的知识称号。",
+    accuracyTitle: (title) => `正确率称号：${title}`,
+    explorerTitleStatus: (title) => `探索称号：${title}`,
+    titleAccuracy: (answered, accuracy) => `已完成 ${answered} 题 · 正确率 ${accuracy}%`,
+    titleModalTitle: "新的知识里程碑已解锁！",
+    titleModalBody: (answered, accuracy) => `你已完成 ${answered} 题，正确率 ${accuracy}%。`,
+    accuracyTitleLine: (title) => `正确率称号：${title}`,
+    explorerTitleLine: (title) => `探索称号：${title}`,
+    titleModalButton: "继续探索",
+    grandSlamTitle: "你完成了整张知识地图！",
+    grandSlamBody: (total) => `你已经完成了本轮全部 ${total} 道题。`,
+    grandSlamAchievement: "特殊成就：知识大满贯",
+    grandSlamButton: "完成",
+    roundCompleteStatus: "你已经完成了本轮全部题目。",
+    startNewRound: "开启新一轮",
     correctInSubject: "当前隐藏领域答对数",
     currentMapState: "当前地图状态",
     categoriesEyebrow: "知识分类系统",
@@ -239,9 +275,15 @@ const uiText = {
     contactTitle: "需要帮助，或想留下想法？",
     contactCopy: "如果你想联系 MapKAI，可以在这里留言。",
     messageBoard: "留言板",
+    nameLabel: "姓名",
+    namePlaceholder: "你的名字",
+    emailLabel: "邮箱",
+    emailPlaceholder: "you@example.com",
     messagePlaceholder: "告诉我们你想询问、建议或一起构建什么。",
-    leaveMessage: "留言",
-    messageSaved: "谢谢，你的留言已保存在留言板。",
+    leaveMessage: "发送留言",
+    messageSaved: "谢谢，你的留言已收到。",
+    messageError: "抱歉，留言发送失败，请稍后再试。",
+    invalidEmail: "请输入有效的邮箱地址。",
     founderMessageBoard: "Founder 留言板",
     noMessages: "暂时还没有留言。",
     footerRights: "© 2026 MapKAI。保留所有权利。",
@@ -1014,12 +1056,60 @@ const challengeState = Object.fromEntries(challengeSubjects.map((code) => [code,
   correct: 0,
   answered: [],
 }]));
+const knowledgeTitleRules = {
+  en: [
+    { min: 90, title: "Legendary Mind" },
+    { min: 80, title: "All-Round Explorer" },
+    { min: 70, title: "Wide-Ranging Thinker" },
+    { min: 60, title: "Steady Learner" },
+    { min: 50, title: "Knowledge in Progress" },
+    { min: 0, title: "Mist Explorer" },
+  ],
+  zh: [
+    { min: 90, title: "绝世天才" },
+    { min: 80, title: "全才探索家" },
+    { min: 70, title: "博古通今" },
+    { min: 60, title: "稳健学习者" },
+    { min: 50, title: "知识修炼中" },
+    { min: 0, title: "迷雾探索者" },
+  ],
+};
+const explorerTitleRules = {
+  en: [
+    { min: 1000, title: "Atlas Master" },
+    { min: 500, title: "Grand Knowledge Navigator" },
+    { min: 200, title: "Full-Spectrum Explorer" },
+    { min: 100, title: "Knowledge Voyager" },
+    { min: 60, title: "Map Pathfinder" },
+    { min: 50, title: "Wide-Angle Thinker" },
+    { min: 40, title: "Deep Explorer" },
+    { min: 30, title: "Knowledge Walker" },
+    { min: 20, title: "Map Starter" },
+  ],
+  zh: [
+    { min: 1000, title: "图谱大师" },
+    { min: 500, title: "知识领航者" },
+    { min: 200, title: "全域探索者" },
+    { min: 100, title: "知识航海家" },
+    { min: 60, title: "地图开拓者" },
+    { min: 50, title: "广角思考者" },
+    { min: 40, title: "深度探索者" },
+    { min: 30, title: "知识行者" },
+    { min: 20, title: "知识启航者" },
+  ],
+};
+const milestoneModalThresholds = [20, 30, 40, 50, 60, 100, 200, 500, 1000];
 const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
 let activeChallengeSubject = challengeSubjects[0];
 let activeChallengeQuestion = null;
 let currentAnsweredQuestion = null;
 let challengeHistory = [];
 let challengeReviewIndex = null;
+let challengeQuestionPool = [];
+let challengePoolIndex = 0;
+let lastTitleModalAt = 0;
+let activeTitleModalStats = null;
+let challengeRoundComplete = false;
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -1042,8 +1132,16 @@ function contactSectionTemplate() {
       </div>
       <form class="contact-form" data-contact-form>
         <label>
+          <span>${t("nameLabel")}</span>
+          <input name="name" type="text" maxlength="120" placeholder="${t("namePlaceholder")}" />
+        </label>
+        <label>
+          <span>${t("emailLabel")}</span>
+          <input name="email" type="email" maxlength="180" placeholder="${t("emailPlaceholder")}" />
+        </label>
+        <label>
           <span>${t("messageBoard")}</span>
-          <textarea name="message" rows="4" placeholder="${t("messagePlaceholder")}" required></textarea>
+          <textarea name="message" rows="4" maxlength="2000" placeholder="${t("messagePlaceholder")}" required></textarea>
         </label>
         <button class="button primary" type="submit">${t("leaveMessage")}</button>
         <p class="contact-status" aria-live="polite"></p>
@@ -1077,24 +1175,48 @@ function renderSiteFooters() {
   });
 }
 
-function handleContactSubmit(event) {
+async function handleContactSubmit(event) {
   const form = event.target.closest("[data-contact-form]");
   if (!form) return;
   event.preventDefault();
 
+  const name = form.elements.name?.value.trim() || "";
+  const email = form.elements.email?.value.trim() || "";
   const message = form.elements.message.value.trim();
   const status = form.querySelector(".contact-status");
   if (!message) return;
-  const entries = getMessageBoardEntries();
-  entries.unshift({
-    id: Date.now().toString(36),
+  if (email && !isValidContactEmail(email)) {
+    status.textContent = t("invalidEmail");
+    return;
+  }
+  const payload = {
+    name,
+    email,
     message,
-    createdAt: new Date().toISOString(),
-  });
-  localStorage.setItem(messageBoardKey, JSON.stringify(entries.slice(0, 30)));
-  status.textContent = t("messageSaved");
-  form.reset();
-  renderMessageBoards();
+    page_path: window.location.pathname,
+    language: currentLanguage,
+  };
+
+  try {
+    const response = await fetch("/api/contact-message", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) throw new Error("Message submit failed");
+    status.textContent = t("messageSaved");
+    localStorage.removeItem(messageBoardKey);
+    form.reset();
+    if (document.body.classList.contains("founder-mode")) {
+      loadFounderMessages();
+    }
+  } catch {
+    status.textContent = t("messageError");
+  }
+}
+
+function isValidContactEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
 function getMessageBoardEntries() {
@@ -1119,6 +1241,44 @@ function renderMessageBoards() {
             <li>
               <time>${formatBoardTime(entry.createdAt)}</time>
               <p>${escapeHtml(entry.message)}</p>
+            </li>`).join("")}
+        </ul>` : `<p>${t("noMessages")}</p>`}`;
+  });
+}
+
+async function loadFounderMessages() {
+  if (!document.body.classList.contains("founder-mode")) return;
+  const boards = Array.from(document.querySelectorAll("[data-message-board]"));
+  if (!boards.length) return;
+  try {
+    const response = await fetch("/api/contact-messages", {
+      headers: { "X-MapKAI-Founder": "true" },
+    });
+    if (!response.ok) throw new Error("Message board unavailable");
+    const data = await response.json();
+    renderFounderMessages(Array.isArray(data.messages) ? data.messages : []);
+  } catch {
+    renderFounderMessages(getMessageBoardEntries());
+  }
+}
+
+function renderFounderMessages(entries) {
+  const boards = Array.from(document.querySelectorAll("[data-message-board]"));
+  boards.forEach((board) => {
+    board.innerHTML = `
+      <h3>${t("founderMessageBoard")}</h3>
+      ${entries.length ? `
+        <ul>
+          ${entries.map((entry) => `
+            <li>
+              <time>${formatBoardTime(entry.created_at || entry.createdAt)}</time>
+              <p>${escapeHtml(entry.message)}</p>
+              <dl>
+                <dt>Name</dt><dd>${escapeHtml(entry.name || "-")}</dd>
+                <dt>Email</dt><dd>${escapeHtml(entry.email || "-")}</dd>
+                <dt>Page</dt><dd>${escapeHtml(entry.page_path || "-")}</dd>
+                <dt>Language</dt><dd>${escapeHtml(entry.language || "-")}</dd>
+              </dl>
             </li>`).join("")}
         </ul>` : `<p>${t("noMessages")}</p>`}`;
   });
@@ -1235,7 +1395,14 @@ function applyLanguage() {
     section.querySelector(".eyebrow").textContent = t("contactEyebrow");
     section.querySelector("h2").textContent = t("contactTitle");
     section.querySelector("div > p:not(.eyebrow)").textContent = t("contactCopy");
-    section.querySelector("label span").textContent = t("messageBoard");
+    const labels = section.querySelectorAll("label span");
+    if (labels[0]) labels[0].textContent = t("nameLabel");
+    if (labels[1]) labels[1].textContent = t("emailLabel");
+    if (labels[2]) labels[2].textContent = t("messageBoard");
+    const nameInput = section.querySelector('input[name="name"]');
+    const emailInput = section.querySelector('input[name="email"]');
+    if (nameInput) nameInput.placeholder = t("namePlaceholder");
+    if (emailInput) emailInput.placeholder = t("emailPlaceholder");
     section.querySelector("textarea").placeholder = t("messagePlaceholder");
     section.querySelector("button").textContent = t("leaveMessage");
   });
@@ -1253,8 +1420,10 @@ function applyLanguage() {
   }
   renderLearning();
   renderMessageBoards();
+  if (document.body.classList.contains("founder-mode")) loadFounderMessages();
   renderVisitStats();
   renderChallenge();
+  renderKnowledgeTitleModal();
 }
 
 function normalizeRoute(path) {
@@ -1366,44 +1535,200 @@ function isSubjectComplete(subjectCode) {
   return Boolean(questionBank[subjectCode]) && !getCurrentQuestion(subjectCode);
 }
 
-function getNextAvailableChallengeSubject() {
-  return challengeSubjects.find((code) => questionBank[code] && !isSubjectComplete(code)) || null;
-}
-
-function getAvailableChallengeQuestions(excludedSubjectCode) {
-  const allQuestions = challengeSubjects.flatMap((subjectCode) => {
+function getAllChallengeQuestions() {
+  return challengeSubjects.flatMap((subjectCode) => {
     const subject = questionBank[subjectCode];
-    const state = challengeState[subjectCode];
-    if (!subject || !state) return [];
-    return subject.questions
-      .filter((question) => !state.answered.includes(question.id))
-      .map((question) => ({ subjectCode, question }));
+    if (!subject) return [];
+    return subject.questions.map((question) => ({ subjectCode, question }));
   });
-  const rotatedQuestions = allQuestions.filter((item) => item.subjectCode !== excludedSubjectCode);
-  return rotatedQuestions.length ? rotatedQuestions : allQuestions;
 }
 
-function setRandomChallengeQuestion(excludedSubjectCode) {
-  const availableQuestions = getAvailableChallengeQuestions(excludedSubjectCode);
-  if (!availableQuestions.length) {
+function getTotalQuestionCount() {
+  return getAllChallengeQuestions().length;
+}
+
+function shuffleQuestions(items) {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+function refillChallengeQuestionPool(previousQuestionId) {
+  challengeQuestionPool = shuffleQuestions(getAllChallengeQuestions());
+  challengePoolIndex = 0;
+  if (previousQuestionId && challengeQuestionPool.length > 1 && challengeQuestionPool[0].question.id === previousQuestionId) {
+    [challengeQuestionPool[0], challengeQuestionPool[1]] = [challengeQuestionPool[1], challengeQuestionPool[0]];
+  }
+}
+
+function setRandomChallengeQuestion(previousQuestionId) {
+  if (challengeRoundComplete) {
     activeChallengeQuestion = null;
     return null;
   }
-  const nextItem = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+  if (!challengeQuestionPool.length) {
+    refillChallengeQuestionPool(previousQuestionId);
+  }
+  if (challengePoolIndex >= challengeQuestionPool.length) {
+    completeChallengeRound();
+    return null;
+  }
+  const nextItem = challengeQuestionPool[challengePoolIndex];
+  if (!nextItem) {
+    activeChallengeQuestion = null;
+    return null;
+  }
+  challengePoolIndex += 1;
   activeChallengeSubject = nextItem.subjectCode;
   activeChallengeQuestion = nextItem.question;
   return nextItem;
 }
 
 function moveToNextChallengeQuestion() {
-  const previousSubject = activeChallengeSubject;
+  const previousQuestionId = activeChallengeQuestion?.id;
   currentAnsweredQuestion = null;
   challengeReviewIndex = null;
-  setRandomChallengeQuestion(previousSubject);
+  setRandomChallengeQuestion(previousQuestionId);
 }
 
 function getTotalCorrectAnswers() {
   return Object.values(challengeState).reduce((total, state) => total + state.correct, 0);
+}
+
+function getTotalAnsweredQuestions() {
+  return challengeHistory.length;
+}
+
+function getKnowledgeAccuracy() {
+  const answered = getTotalAnsweredQuestions();
+  if (!answered) return 0;
+  return Math.round((getTotalCorrectAnswers() / answered) * 100);
+}
+
+function getKnowledgeTitleForAccuracy(accuracy) {
+  const rules = knowledgeTitleRules[currentLanguage] || knowledgeTitleRules.en;
+  return rules.find((rule) => accuracy >= rule.min)?.title || rules[rules.length - 1].title;
+}
+
+function getExplorerTitleForAnswered(answered) {
+  const rules = explorerTitleRules[currentLanguage] || explorerTitleRules.en;
+  return rules.find((rule) => answered >= rule.min)?.title || "";
+}
+
+function getKnowledgeTitleStats() {
+  const answered = getTotalAnsweredQuestions();
+  const accuracy = getKnowledgeAccuracy();
+  return {
+    answered,
+    accuracy,
+    accuracyTitle: getKnowledgeTitleForAccuracy(accuracy),
+    explorerTitle: getExplorerTitleForAnswered(answered),
+  };
+}
+
+function shouldShowKnowledgeTitleModal(answered) {
+  return milestoneModalThresholds.includes(answered) && lastTitleModalAt !== answered;
+}
+
+function maybeShowKnowledgeTitleModal() {
+  const stats = getKnowledgeTitleStats();
+  if (!shouldShowKnowledgeTitleModal(stats.answered)) return;
+  lastTitleModalAt = stats.answered;
+  activeTitleModalStats = stats;
+  renderKnowledgeTitleModal();
+}
+
+function renderKnowledgeTitleStatus() {
+  const stats = getKnowledgeTitleStats();
+  if (stats.answered < 20) {
+    return `<div class="knowledge-title-status">${t("titleUnlockHint")}</div>`;
+  }
+  return `<div class="knowledge-title-status is-unlocked">
+    <strong>${t("accuracyTitle", stats.accuracyTitle)}</strong>
+    <strong>${t("explorerTitleStatus", stats.explorerTitle)}</strong>
+    <span>${t("titleAccuracy", stats.answered, stats.accuracy)}</span>
+  </div>`;
+}
+
+function completeChallengeRound() {
+  if (challengeRoundComplete) return;
+  challengeRoundComplete = true;
+  activeChallengeQuestion = null;
+  currentAnsweredQuestion = null;
+  challengeReviewIndex = null;
+  activeTitleModalStats = {
+    ...getKnowledgeTitleStats(),
+    kind: "grandSlam",
+    totalQuestions: getTotalQuestionCount(),
+  };
+  renderKnowledgeTitleModal();
+}
+
+function startNewChallengeRound() {
+  challengeSubjects.forEach((code) => {
+    challengeState[code].correct = 0;
+    challengeState[code].answered = [];
+    masteryProgress[code] = "ocean";
+  });
+  activeChallengeSubject = challengeSubjects[0];
+  activeChallengeQuestion = null;
+  currentAnsweredQuestion = null;
+  challengeHistory = [];
+  challengeReviewIndex = null;
+  challengeQuestionPool = [];
+  challengePoolIndex = 0;
+  lastTitleModalAt = 0;
+  challengeRoundComplete = false;
+  activeTitleModalStats = null;
+  setRandomChallengeQuestion();
+  renderKnowledgeTitleModal();
+  renderChallenge();
+  drawKnowledgeMap();
+}
+
+function closeKnowledgeTitleModal() {
+  activeTitleModalStats = null;
+  renderKnowledgeTitleModal();
+}
+
+function renderKnowledgeTitleModal() {
+  let modal = document.getElementById("knowledgeTitleModal");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "knowledgeTitleModal";
+    modal.className = "title-modal";
+    document.body.appendChild(modal);
+  }
+
+  if (!activeTitleModalStats) {
+    modal.setAttribute("hidden", "");
+    modal.innerHTML = "";
+    return;
+  }
+
+  const stats = {
+    ...activeTitleModalStats,
+    accuracyTitle: getKnowledgeTitleForAccuracy(activeTitleModalStats.accuracy),
+    explorerTitle: getExplorerTitleForAnswered(activeTitleModalStats.answered),
+  };
+  const isGrandSlam = stats.kind === "grandSlam";
+  modal.removeAttribute("hidden");
+  modal.innerHTML = `
+    <div class="title-modal-backdrop" data-title-modal-close></div>
+    <section class="title-modal-card" role="dialog" aria-modal="true" aria-labelledby="knowledgeTitleModalTitle">
+      <p class="eyebrow">${isGrandSlam ? t("grandSlamTitle") : t("titleModalTitle")}</p>
+      <h2 id="knowledgeTitleModalTitle">${isGrandSlam ? t("grandSlamAchievement") : t("explorerTitleLine", stats.explorerTitle)}</h2>
+      <p>${isGrandSlam ? t("grandSlamBody", stats.totalQuestions) : t("titleModalBody", stats.answered, stats.accuracy)}</p>
+      <div class="title-modal-lines">
+        <p>${t("accuracyTitleLine", stats.accuracyTitle)}</p>
+        <p>${t("explorerTitleLine", stats.explorerTitle)}</p>
+        ${isGrandSlam ? `<p>${t("grandSlamAchievement")}</p>` : ""}
+      </div>
+      <button class="button primary" type="button" data-title-modal-close>${isGrandSlam ? t("grandSlamButton") : t("titleModalButton")}</button>
+    </section>`;
 }
 
 function syncMasteryProgress(subjectCode) {
@@ -1420,6 +1745,17 @@ function renderChallenge() {
   const cardTarget = document.getElementById("challengeCard");
   if (!cardTarget) return;
 
+  if (challengeRoundComplete) {
+    cardTarget.innerHTML = `
+      <p class="eyebrow">${t("grandSlamAchievement")}</p>
+      <h2>${t("grandSlamTitle")}</h2>
+      <p>${t("roundCompleteStatus")}</p>
+      <div class="challenge-status is-green">${t("grandSlamBody", getTotalQuestionCount())}</div>
+      ${renderKnowledgeTitleStatus()}
+      <button class="button primary" type="button" data-start-new-round>${t("startNewRound")}</button>`;
+    return;
+  }
+
   if (challengeReviewIndex !== null) {
     currentAnsweredQuestion = challengeHistory[challengeReviewIndex] || null;
   }
@@ -1427,8 +1763,8 @@ function renderChallenge() {
   if (currentAnsweredQuestion) {
     activeChallengeSubject = currentAnsweredQuestion.subjectCode;
     activeChallengeQuestion = currentAnsweredQuestion.question;
-  } else if (!activeChallengeQuestion || challengeState[activeChallengeSubject]?.answered.includes(activeChallengeQuestion.id)) {
-    setRandomChallengeQuestion(activeChallengeSubject);
+  } else if (!activeChallengeQuestion) {
+    setRandomChallengeQuestion();
     currentAnsweredQuestion = null;
   }
 
@@ -1480,11 +1816,18 @@ function renderChallenge() {
       }).join("")}
     </div>
     <div class="challenge-status">${t("correctInSubject")}: ${state.correct} / ${subject.questions.length} · ${t("currentMapState")}: ${getMasteryLabel(getMasteryFromCorrect(activeChallengeSubject))}</div>
+    ${renderKnowledgeTitleStatus()}
     <div class="founder-note internal-code">Source: ${activeChallengeSubject} · ${subjectTitle}</div>
     ${feedback}`;
 }
 
 function handleChallengeClick(event) {
+  const newRoundButton = event.target.closest("[data-start-new-round]");
+  if (newRoundButton) {
+    startNewChallengeRound();
+    return;
+  }
+
   const reviewButton = event.target.closest("[data-review-direction]");
   if (reviewButton) {
     const direction = reviewButton.dataset.reviewDirection;
@@ -1514,13 +1857,16 @@ function handleChallengeClick(event) {
   const answeredQuestion = { subjectCode: activeChallengeSubject, question, selectedKey, correct };
   challengeHistory.push(answeredQuestion);
   drawKnowledgeMap();
-  if (correct) {
+  if (getTotalAnsweredQuestions() >= getTotalQuestionCount()) {
+    completeChallengeRound();
+  } else if (correct) {
     moveToNextChallengeQuestion();
   } else {
     challengeReviewIndex = challengeHistory.length - 1;
     currentAnsweredQuestion = answeredQuestion;
   }
   renderChallenge();
+  if (!challengeRoundComplete) maybeShowKnowledgeTitleModal();
 }
 
 function renderPassport(targetId, passport) {
@@ -1726,7 +2072,11 @@ function roundRect(context, x, y, width, height, radius) {
 }
 
 document.addEventListener("click", (event) => {
-  if (event.target.closest("[data-answer-key], [data-review-direction]")) {
+  if (event.target.closest("[data-title-modal-close]")) {
+    closeKnowledgeTitleModal();
+    return;
+  }
+  if (event.target.closest("[data-answer-key], [data-review-direction], [data-start-new-round]")) {
     handleChallengeClick(event);
     return;
   }
@@ -1734,6 +2084,12 @@ document.addEventListener("click", (event) => {
   if (!link) return;
   event.preventDefault();
   goToRoute(link.dataset.route);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && activeTitleModalStats) {
+    closeKnowledgeTitleModal();
+  }
 });
 document.addEventListener("submit", handleContactSubmit);
 if (founderToggle) {
@@ -1772,6 +2128,7 @@ function setFounderMode(enabled) {
   }
   localStorage.setItem("mapkaiFounderMode", String(enabled));
   renderMessageBoards();
+  if (enabled) loadFounderMessages();
   drawKnowledgeMap();
   renderChallenge();
 }
