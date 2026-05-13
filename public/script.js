@@ -4,6 +4,8 @@ const founderToggle = document.getElementById("founderToggle");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
+const messageBoardKey = "mapkaiMessageBoard";
+const visitorIdKey = "mapkaiVisitorId";
 
 const readiness = {
   mapOnly: "Map only",
@@ -19,6 +21,41 @@ const masteryLevels = {
   land: { label: "Land", mapLabel: "Land", color: "#d6a947" },
   green: { label: "Green land", mapLabel: "Green land", color: "#7fc76f" },
 };
+
+const mapAssetPath = "/assets/map/";
+const mapStateLayerNames = {
+  ocean: "unknown_ocean",
+  snow: "partial_pale_snow",
+  land: "golden_land",
+  green: "full_green",
+};
+const mapIslandLayers = {
+  "00": "01_island_forest",
+  "01": "02_island_snow",
+  "02": "03_island_desert",
+  "03": "04_island_tropical",
+  "04": "05_island_grass_path",
+  "05": "06_island_farming",
+  "06": "07_island_rocky",
+  "07": "08_island_lighthouse",
+  "08": "09_island_green_hill",
+  "09": "10_island_reserved_empty_01",
+  "10": "11_island_reserved_empty_02",
+};
+const mapFounderLabelPositions = {
+  "00": [216, 154],
+  "01": [548, 143],
+  "02": [878, 158],
+  "03": [212, 343],
+  "04": [550, 325],
+  "05": [882, 341],
+  "06": [238, 507],
+  "07": [548, 500],
+  "08": [880, 493],
+  "09": [1006, 244],
+  "10": [1014, 405],
+};
+const mapAssetCache = {};
 
 const categories = [
   {
@@ -609,6 +646,8 @@ const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code
 let activeChallengeSubject = challengeSubjects[0];
 let activeChallengeQuestion = null;
 let currentAnsweredQuestion = null;
+let challengeHistory = [];
+let challengeReviewIndex = null;
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -631,16 +670,13 @@ function contactSectionTemplate() {
       </div>
       <form class="contact-form" data-contact-form>
         <label>
-          <span>Your email</span>
-          <input name="email" type="text" inputmode="email" placeholder="you@example.com" required />
-        </label>
-        <label>
-          <span>Message</span>
+          <span>Message board</span>
           <textarea name="message" rows="4" placeholder="Tell us what you want to ask, suggest, or build with MapKAI." required></textarea>
         </label>
-        <button class="button primary" type="submit">Prepare message</button>
+        <button class="button primary" type="submit">Leave message</button>
         <p class="contact-status" aria-live="polite"></p>
       </form>
+      <div class="message-board founder-only" data-message-board></div>
     </section>`;
 }
 
@@ -649,11 +685,13 @@ function renderContactSections() {
     if (page.querySelector(".contact-section")) return;
     page.insertAdjacentHTML("beforeend", contactSectionTemplate());
   });
+  renderMessageBoards();
 }
 
 function siteFooterTemplate() {
   return `
     <footer class="site-footer" aria-label="Copyright">
+      <p class="visitor-count" data-visitor-count>Thanks for visiting.</p>
       <p>© 2026 MapKAI. All rights reserved.</p>
       <p>Unauthorized copying, reproduction, redistribution, adaptation, or commercial use of MapKAI content, structure, design, or visual materials is not permitted without prior written permission.</p>
     </footer>`;
@@ -671,13 +709,61 @@ function handleContactSubmit(event) {
   if (!form) return;
   event.preventDefault();
 
-  const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();
-  const subject = encodeURIComponent("MapKAI message");
-  const body = encodeURIComponent(`From: ${email}\n\n${message}`);
   const status = form.querySelector(".contact-status");
-  status.innerHTML = `Thanks. Your message is ready. <a href="mailto:${contactEmail}?subject=${subject}&body=${body}">Send it by email</a>.`;
+  if (!message) return;
+  const entries = getMessageBoardEntries();
+  entries.unshift({
+    id: Date.now().toString(36),
+    message,
+    createdAt: new Date().toISOString(),
+  });
+  localStorage.setItem(messageBoardKey, JSON.stringify(entries.slice(0, 30)));
+  status.textContent = "Thanks. Your message is saved on this board.";
   form.reset();
+  renderMessageBoards();
+}
+
+function getMessageBoardEntries() {
+  try {
+    const entries = JSON.parse(localStorage.getItem(messageBoardKey) || "[]");
+    return Array.isArray(entries) ? entries.filter((entry) => entry?.message) : [];
+  } catch {
+    return [];
+  }
+}
+
+function renderMessageBoards() {
+  const boards = Array.from(document.querySelectorAll("[data-message-board]"));
+  if (!boards.length) return;
+  const entries = getMessageBoardEntries();
+  boards.forEach((board) => {
+    board.innerHTML = `
+      <h3>Founder message board</h3>
+      ${entries.length ? `
+        <ul>
+          ${entries.map((entry) => `
+            <li>
+              <time>${formatBoardTime(entry.createdAt)}</time>
+              <p>${escapeHtml(entry.message)}</p>
+            </li>`).join("")}
+        </ul>` : "<p>No messages yet.</p>"}`;
+  });
+}
+
+function formatBoardTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Saved message";
+  return date.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function normalizeRoute(path) {
@@ -803,6 +889,13 @@ function setRandomChallengeQuestion(excludedSubjectCode) {
   return nextItem;
 }
 
+function moveToNextChallengeQuestion() {
+  const previousSubject = activeChallengeSubject;
+  currentAnsweredQuestion = null;
+  challengeReviewIndex = null;
+  setRandomChallengeQuestion(previousSubject);
+}
+
 function getTotalCorrectAnswers() {
   return Object.values(challengeState).reduce((total, state) => total + state.correct, 0);
 }
@@ -820,6 +913,10 @@ function syncMasteryProgress(subjectCode) {
 function renderChallenge() {
   const cardTarget = document.getElementById("challengeCard");
   if (!cardTarget) return;
+
+  if (challengeReviewIndex !== null) {
+    currentAnsweredQuestion = challengeHistory[challengeReviewIndex] || null;
+  }
 
   if (currentAnsweredQuestion) {
     activeChallengeSubject = currentAnsweredQuestion.subjectCode;
@@ -845,15 +942,22 @@ function renderChallenge() {
   }
 
   const isAnswered = currentAnsweredQuestion?.question.id === question.id;
+  const hasPreviousReview = challengeReviewIndex !== null && challengeReviewIndex > 0;
+  const hasNextReview = challengeReviewIndex !== null && challengeReviewIndex < challengeHistory.length - 1;
+  const reviewControls = isAnswered ? `
+    <div class="challenge-nav">
+      <button class="button secondary" type="button" data-review-direction="previous" ${hasPreviousReview ? "" : "disabled"}>Previous</button>
+      <button class="button primary" type="button" data-review-direction="next">${hasNextReview ? "Next" : "Next"}</button>
+    </div>` : "";
   const feedback = isAnswered ? `
     <p class="challenge-feedback ${currentAnsweredQuestion.correct ? "is-correct" : "is-wrong"}">
-      ${currentAnsweredQuestion.correct ? "Correct." : "Not yet."} ${currentAnsweredQuestion.correct ? "This answer helps light up the map." : "This question is still counted, and the explanation shows the better pattern."}
+      ${currentAnsweredQuestion.correct ? "Correct." : "Not yet."} ${currentAnsweredQuestion.correct ? "This answer helped light up the map." : "This question is still counted, and the explanation shows the better pattern."}
     </p>
-    <article class="answer-explanation">
+    ${currentAnsweredQuestion.correct ? "" : `<article class="answer-explanation">
       <h3>Why this matters</h3>
       <p>${question.explanation}</p>
-    </article>
-    <button class="button primary next-question-button" type="button" data-next-question>Next question</button>` : "";
+    </article>`}
+    ${reviewControls}` : "";
 
   cardTarget.innerHTML = `
     <p class="eyebrow">${question.difficulty} question -> ${masteryLevels[question.unlocksToward].label}</p>
@@ -873,11 +977,16 @@ function renderChallenge() {
 }
 
 function handleChallengeClick(event) {
-  const nextButton = event.target.closest("[data-next-question]");
-  if (nextButton) {
-    const previousSubject = activeChallengeSubject;
-    currentAnsweredQuestion = null;
-    setRandomChallengeQuestion(previousSubject);
+  const reviewButton = event.target.closest("[data-review-direction]");
+  if (reviewButton) {
+    const direction = reviewButton.dataset.reviewDirection;
+    if (direction === "previous" && challengeReviewIndex !== null && challengeReviewIndex > 0) {
+      challengeReviewIndex -= 1;
+    } else if (direction === "next" && challengeReviewIndex !== null && challengeReviewIndex < challengeHistory.length - 1) {
+      challengeReviewIndex += 1;
+    } else if (direction === "next") {
+      moveToNextChallengeQuestion();
+    }
     renderChallenge();
     drawKnowledgeMap();
     return;
@@ -894,8 +1003,15 @@ function handleChallengeClick(event) {
   state.answered.push(question.id);
   if (correct) state.correct += 1;
   syncMasteryProgress(activeChallengeSubject);
-  currentAnsweredQuestion = { subjectCode: activeChallengeSubject, question, selected, correct };
+  const answeredQuestion = { subjectCode: activeChallengeSubject, question, selected, correct };
+  challengeHistory.push(answeredQuestion);
   drawKnowledgeMap();
+  if (correct) {
+    moveToNextChallengeQuestion();
+  } else {
+    challengeReviewIndex = challengeHistory.length - 1;
+    currentAnsweredQuestion = answeredQuestion;
+  }
   renderChallenge();
 }
 
@@ -1010,67 +1126,83 @@ function drawKnowledgeMap() {
   const width = canvas.width;
   const height = canvas.height;
   ctx.clearRect(0, 0, width, height);
-  const ocean = ctx.createLinearGradient(0, 0, width, height);
-  ocean.addColorStop(0, "#78c7e8");
-  ocean.addColorStop(0.55, "#2f86b5");
-  ocean.addColorStop(1, "#1c567a");
-  ctx.fillStyle = ocean;
-  roundRect(ctx, 0, 0, width, height, 34);
-  ctx.fill();
+  drawMapFallback(width, height);
+  drawMapLayer("00_base_ocean_background.png", width, height);
 
   const founderMode = document.body.classList.contains("founder-mode");
-  const islandSlots = [
-    [165, 145, 108, 68], [355, 130, 116, 74], [545, 160, 110, 70], [730, 135, 112, 72],
-    [230, 315, 126, 82], [445, 300, 118, 76], [660, 325, 126, 78],
-    [150, 505, 112, 70], [355, 485, 126, 78], [575, 510, 114, 72], [770, 485, 112, 70],
-  ];
 
-  categories.forEach((category, index) => {
-    const [x, y, w, h] = islandSlots[index];
+  categories.forEach((category) => {
     const level = masteryProgress[category.code] || "ocean";
-    const color = masteryLevels[level].color;
-    const isActive = category.code === activeChallengeSubject;
-    ctx.save();
-    ctx.translate(x, y);
-    ctx.rotate((index % 2 === 0 ? -1 : 1) * 0.06);
-    ctx.fillStyle = isActive ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.32)";
-    ellipseBlob(w + 34, h + 24);
-    ctx.fill();
-    ctx.fillStyle = color;
-    ellipseBlob(w, h);
-    ctx.fill();
-    ctx.fillStyle = level === "snow" ? "#ffffff" : "#fff6dd";
-    ctx.beginPath();
-    ctx.arc(-w * 0.2, -h * 0.18, Math.min(w, h) * 0.18, 0, Math.PI * 2);
-    ctx.fill();
-    if (level === "green") {
-      ctx.fillStyle = "rgba(255,255,255,0.42)";
-      ctx.beginPath();
-      ctx.arc(w * 0.18, h * 0.05, Math.min(w, h) * 0.14, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    if (founderMode) {
-      ctx.fillStyle = "#173026";
-      ctx.font = "800 22px Inter, sans-serif";
-      ctx.textAlign = "center";
-      ctx.fillText(category.code, 0, 7);
-    }
-    ctx.restore();
+    const layer = mapIslandLayers[category.code];
+    const stateName = mapStateLayerNames[level];
+    if (layer && stateName) drawMapLayer(`${layer}__${stateName}.png`, width, height);
   });
 
-  ctx.fillStyle = "rgba(255,255,255,0.75)";
-  for (let i = 0; i < 70; i += 1) {
-    const x = (i * 137) % width;
-    const y = (i * 73) % height;
-    ctx.beginPath();
-    ctx.arc(x, y, (i % 3) + 1, 0, Math.PI * 2);
-    ctx.fill();
-  }
+  drawMapLayer("40_routes_overlay_transparent.png", width, height);
+  if (getTotalCorrectAnswers() > 0) drawMapLayer("41_glow_progress_markers_overlay_transparent.png", width, height);
+  drawActiveMapMarker(width, height);
+  if (founderMode) drawFounderMapLabels(width, height);
 }
 
-function ellipseBlob(w, h) {
+function loadMapAsset(fileName) {
+  if (!mapAssetCache[fileName]) {
+    const image = new Image();
+    image.addEventListener("load", drawKnowledgeMap);
+    image.src = mapAssetPath + fileName;
+    mapAssetCache[fileName] = image;
+  }
+  return mapAssetCache[fileName];
+}
+
+function drawMapLayer(fileName, width, height) {
+  const image = loadMapAsset(fileName);
+  if (!image.complete || !image.naturalWidth) return false;
+  ctx.drawImage(image, 0, 0, width, height);
+  return true;
+}
+
+function drawMapFallback(width, height) {
+  const ocean = ctx.createLinearGradient(0, 0, width, height);
+  ocean.addColorStop(0, "#d9f2f2");
+  ocean.addColorStop(0.55, "#acd8df");
+  ocean.addColorStop(1, "#f9edcf");
+  ctx.fillStyle = ocean;
+  roundRect(ctx, 0, 0, width, height, 28);
+  ctx.fill();
+}
+
+function drawActiveMapMarker(width, height) {
+  const position = mapFounderLabelPositions[activeChallengeSubject];
+  if (!position) return;
+  const [sourceX, sourceY] = position;
+  const x = sourceX * (width / 1100);
+  const y = sourceY * (height / 619);
+  const glow = ctx.createRadialGradient(x, y, 8, x, y, 42);
+  glow.addColorStop(0, "rgba(255, 245, 166, 0.72)");
+  glow.addColorStop(1, "rgba(255, 245, 166, 0)");
+  ctx.fillStyle = glow;
   ctx.beginPath();
-  ctx.ellipse(0, 0, w / 2, h / 2, 0, 0, Math.PI * 2);
+  ctx.arc(x, y, 42, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawFounderMapLabels(width, height) {
+  ctx.save();
+  ctx.font = "800 16px Inter, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  categories.forEach((category) => {
+    const position = mapFounderLabelPositions[category.code];
+    if (!position) return;
+    const x = position[0] * (width / 1100);
+    const y = position[1] * (height / 619);
+    ctx.fillStyle = "rgba(255, 250, 240, 0.84)";
+    roundRect(ctx, x - 18, y - 13, 36, 26, 8);
+    ctx.fill();
+    ctx.fillStyle = "#173026";
+    ctx.fillText(category.code, x, y + 1);
+  });
+  ctx.restore();
 }
 
 function roundRect(context, x, y, width, height, radius) {
@@ -1084,7 +1216,7 @@ function roundRect(context, x, y, width, height, radius) {
 }
 
 document.addEventListener("click", (event) => {
-  if (event.target.closest("[data-answer], [data-next-question]")) {
+  if (event.target.closest("[data-answer], [data-review-direction]")) {
     handleChallengeClick(event);
     return;
   }
@@ -1107,6 +1239,7 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 renderCategories();
 renderContactSections();
 renderSiteFooters();
+registerVisit();
 renderPassport("pathPassport", modulePassports.path);
 renderField();
 renderLearning();
@@ -1122,6 +1255,38 @@ function setFounderMode(enabled) {
     founderToggle.setAttribute("aria-pressed", String(enabled));
   }
   localStorage.setItem("mapkaiFounderMode", String(enabled));
+  renderMessageBoards();
   drawKnowledgeMap();
   renderChallenge();
+}
+
+function getVisitorId() {
+  let visitorId = localStorage.getItem(visitorIdKey);
+  if (!visitorId) {
+    visitorId = crypto.randomUUID ? crypto.randomUUID() : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+    localStorage.setItem(visitorIdKey, visitorId);
+  }
+  return visitorId;
+}
+
+async function registerVisit() {
+  const targets = Array.from(document.querySelectorAll("[data-visitor-count]"));
+  if (!targets.length) return;
+  try {
+    const response = await fetch("/api/visit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visitorId: getVisitorId() }),
+    });
+    if (!response.ok) throw new Error("Visit counter unavailable");
+    const data = await response.json();
+    if (!data.totalVisitors) return;
+    targets.forEach((target) => {
+      target.textContent = `Thanks for visiting. You are visitor #${data.totalVisitors}.`;
+    });
+  } catch {
+    targets.forEach((target) => {
+      target.textContent = "Thanks for visiting MapKAI.";
+    });
+  }
 }
