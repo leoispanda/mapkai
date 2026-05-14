@@ -621,26 +621,34 @@ Push status:
 
 - Not pushed.
 
-### 2026-05-14 - Update link preview and SEO metadata
+### 2026-05-14 - Add OG cover image metadata for social sharing
 
 Status: Ready to commit
 
 Changed:
 
+- Added the OG cover image asset at `assets/og-cover.png`.
+- Added the synced OG cover image asset at `public/assets/og-cover.png`.
 - Updated only link preview / SEO metadata text in the document head.
 - Changed `<title>` to `MapKAI - Map your knowledge with AI`.
-- Changed meta description to `Navigate your knowledge before navigating AI.`
-- Added matching Open Graph title and description metadata.
-- Added matching Twitter title and description metadata.
+- Changed meta description, Open Graph description, and Twitter description to `As AI generates more answers, understanding yourself may quietly become more important.`
+- Added Open Graph image, type, and canonical URL metadata.
+- Added Twitter `summary_large_image` card metadata and image URL.
 - Kept homepage Hero body copy, About body copy, structure, styling, CTA, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
 - Synchronized root and public `index.html`.
 
 Verified:
 
 - Root/public `index.html` sync check passed.
+- Root/public `og-cover.png` asset hash check passed.
 - `git diff --check` passed.
-- Source verification confirmed `<title>`, meta description, Open Graph title/description, and Twitter title/description use the new preview copy in root/public HTML.
-- Full workspace search confirmed the old preview title sentence and old preview description sentence are no longer present in current tracked working files.
+- Source verification confirmed `og:image` appears in root/public HTML.
+- Source verification confirmed `twitter:card` is `summary_large_image`.
+- Source verification confirmed each OG/Twitter metadata tag appears exactly once in root/public HTML.
+- Source verification confirmed the old preview description no longer remains in root/public HTML.
+- File verification confirmed both `assets/og-cover.png` and `public/assets/og-cover.png` exist.
+- Local HTTP verification confirmed `/assets/og-cover.png` resolves with `200 OK` from the dev server.
+- Browser verification confirmed the homepage still renders with the existing Hero and `Start Exploring` CTA.
 
 Commit:
 
