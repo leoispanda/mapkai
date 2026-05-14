@@ -621,6 +621,53 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Tighten reflection into briefing card
+
+Status: Ready to commit
+
+Changed:
+
+- Tightened Workers AI reflection schema to five compact fields only:
+  - `summary`
+  - `primaryPattern`
+  - `blindSpot`
+  - `nextDirection`
+  - `uncomfortableTruth`
+- Removed Workers AI generation of expanded/full long reflection content.
+- Reduced Workers AI generation budget from 460 to 260 max tokens and lowered temperature to `0.38`.
+- Updated the reflection card into a concise briefing layout:
+  - `MapKAI Reflection`
+  - `Summary`
+  - `Primary Pattern`
+  - `Blind Spot`
+  - `Next Direction`
+  - `Uncomfortable Truth`
+  - Personal AI continuation section
+- Kept long-form personal analysis only inside the copyable Deep Reflection Prompt for the user's own AI.
+- Preserved compact metadata compression, manual generation, 15-question unlock, local fallback, and Founder isolation.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/reflection.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- Mocked `functions/api/reflection.js` with a fake `env.AI.run(...)` response and confirmed the tightened five-field JSON shape.
+- Browser verification confirmed the reflection card shows MapKAI Reflection, Summary, Primary Pattern, Blind Spot, Next Direction, and Uncomfortable Truth.
+- Browser verification confirmed the old `Expand Full Reflection` UI is gone.
+- Browser verification confirmed the Personal AI continuation remains available.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Refocus reflection around Personal AI loop
 
 Status: Ready to commit

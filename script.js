@@ -148,16 +148,10 @@ const uiText = {
     reflectionUnlockedCopy: "You have explored enough to generate a knowledge reflection. It only runs when you choose it.",
     generateReflection: "Generate My Knowledge Reflection",
     reflectionSummaryLabel: "Summary",
-    currentKnowledgeStatus: "Current Knowledge Status",
-    expandFullReflection: "Expand Full Reflection",
-    objectivePattern: "Objective knowledge pattern",
-    recentDrift: "Recent drift",
-    lessExploredAreas: "Less explored areas",
-    uncomfortableTruth: "Uncomfortable truth",
-    reflectionStrengths: "Knowledge strengths",
-    reflectionBlindSpots: "Possible blind spots",
-    reflectionStyle: "Thinking style",
-    reflectionDirection: "Recommended exploration direction",
+    primaryPattern: "Primary Pattern",
+    blindSpot: "Blind Spot",
+    nextDirection: "Next Direction",
+    uncomfortableTruth: "Uncomfortable Truth",
     personalAiTitle: "Continue This Reflection In Your Personal AI",
     personalAiCopy: "As people grow older and become more socially adapted, they often receive fewer truly honest observations about themselves. You can copy this reflection into your own GPT, Claude, Gemini, or other AI. Your personal AI may combine it with your past conversations, recent concerns, and long-term patterns to generate a more personalized reflection.",
     copyDeepPrompt: "Copy Deep Reflection Prompt",
@@ -309,16 +303,10 @@ const uiText = {
     reflectionUnlockedCopy: "你已经完成足够探索，可以生成知识画像。它只会在你手动点击时生成。",
     generateReflection: "生成我的知识画像",
     reflectionSummaryLabel: "摘要",
-    currentKnowledgeStatus: "当前知识状态",
-    expandFullReflection: "展开完整反思",
-    objectivePattern: "客观知识模式",
-    recentDrift: "近期漂移",
-    lessExploredAreas: "较少探索区域",
-    uncomfortableTruth: "一个不太舒服但有用的提醒",
-    reflectionStrengths: "知识优势",
-    reflectionBlindSpots: "可能的盲区",
-    reflectionStyle: "思考风格",
-    reflectionDirection: "建议探索方向",
+    primaryPattern: "主要模式",
+    blindSpot: "盲点",
+    nextDirection: "下一步方向",
+    uncomfortableTruth: "不舒服的事实",
     personalAiTitle: "带到你的个人 AI 继续思考",
     personalAiCopy: "随着人越来越成熟、越来越适应社会，我们反而很少收到真正客观而坦诚的观察。你可以复制下面的内容，放进你自己的 GPT、Claude、Gemini 或其他 AI。你的个人 AI 可以结合你过去的对话、最近关注的问题以及长期行为模式，生成更贴近你的深度观察。",
     copyDeepPrompt: "复制深度成长 Prompt",
@@ -3747,23 +3735,10 @@ function buildFallbackReflection(payload = getReflectionPayload()) {
     const nextDirection = `继续探索 ${topDomain}，并穿插 ${weakTag} 相关问题，让地图保持开放。`;
     return {
       summary: statusSummary,
-      strengths: accuracy >= 0.7
-        ? `你已经能在不同场景中稳定识别知识模式，尤其是在 ${topDomain} 的探索中表现清晰。`
-        : `你已经开始建立跨领域的知识触感，能从日常场景中捕捉问题背后的结构。`,
-      blindSpots: weakTag
-        ? `你可以继续留意 ${weakTag} 这类问题：它们往往需要把初步判断推进到更完整的解释链条。`
-        : "可能的盲区在于把初步判断推进到更完整的解释链条。先不用急着追求正确率，重点是看见模式如何形成。",
-      style: `你的思考风格接近「${summary.thinkingStyle}」：先观察结构，再慢慢形成更稳定的判断。`,
-      direction: nextDirection,
+      primaryPattern: `你倾向于从 ${topDomain} 中寻找结构，而不是停留在表面答案。`,
+      blindSpot: `盲点可能在 ${weakTag}：它要求你更接近不完整的现实。`,
       nextDirection,
-      fullReflection: {
-        objectivePattern: `你的探索更偏向从 ${topDomain} 中寻找结构。`,
-        blindSpots: `可能的盲区集中在 ${weakTag}，这里需要更多耐心和现实感。`,
-        recentDrift: "近期探索显示，你正在从答题本身转向识别问题背后的模式。",
-        lessExploredAreas: "较少探索的区域会随着更多跨领域问题逐步显现。",
-        nextDirection,
-        uncomfortableTruth: "最有用的进步可能来自进入不够整齐的问题，而不是继续优化已经熟悉的框架。",
-      },
+      uncomfortableTruth: "最有用的进步可能来自进入不够整齐的问题，而不是继续优化熟悉框架。",
       source: "local-fallback",
     };
   }
@@ -3773,23 +3748,10 @@ function buildFallbackReflection(payload = getReflectionPayload()) {
     : `You are currently in a wide-angle exploration state: turning scattered questions into visible knowledge patterns. Your strength is willingness to cross contexts, but the blind spot may be an unfinished chain of judgment, especially around ${weakTag}. Continue with ${topDomain}, but deliberately include questions that feel less tidy. Those edges are where MapKAI can show a more honest growth direction.`;
   return {
     summary: statusSummary,
-    strengths: accuracy >= 0.7
-      ? `You are starting to recognize patterns steadily across changing situations, especially around ${topDomain}.`
-      : "You are building a useful exploratory base: noticing structure inside everyday situations before forcing a conclusion.",
-    blindSpots: weakTag
-      ? `A possible blind spot sits around ${weakTag}: these questions often need a fuller chain of explanation beyond the first useful instinct.`
-      : "A possible blind spot is moving from a first good instinct into a fuller chain of explanation. For now, pattern visibility matters more than a score feeling.",
-    style: `Your thinking style looks like ${summary.thinkingStyle}: you read the structure of a situation before turning it into judgment.`,
-    direction: nextDirection,
+    primaryPattern: `You tend to search for structure through ${topDomain}, rather than stay with surface answers.`,
+    blindSpot: `The blind spot sits near ${weakTag}: it asks you to stay closer to unfinished reality.`,
     nextDirection,
-    fullReflection: {
-      objectivePattern: `Your exploration leans toward finding structure through ${topDomain}.`,
-      blindSpots: `A possible blind spot sits around ${weakTag}, where a fuller chain of explanation matters more than a quick answer.`,
-      recentDrift: "Your recent pattern is moving from answering questions toward noticing the structure beneath them.",
-      lessExploredAreas: "Less explored areas will become clearer as you keep mixing domains instead of narrowing too early.",
-      nextDirection,
-      uncomfortableTruth: "The most useful growth may come from entering imperfect reality sooner, not refining familiar frameworks longer.",
-    },
+    uncomfortableTruth: "The useful growth may come from entering imperfect reality sooner, not refining familiar frameworks longer.",
     source: "local-fallback",
   };
 }
@@ -3812,8 +3774,6 @@ async function generateKnowledgeReflection() {
     if (!response.ok || !data.reflection) throw new Error(data.error || "Reflection API unavailable");
     reflectionOutput = {
       ...data.reflection,
-      fullReflection: data.reflection.fullReflection || {},
-      direction: data.reflection.nextDirection || data.reflection.direction || "",
       source: "workers-ai",
       model: data.model || "",
     };
@@ -3831,7 +3791,7 @@ function getReflectionTextForPrompt(output = reflectionOutput) {
   if (!output) return "";
   const currentStatus = output.summary || "";
   return [
-    `${t("currentKnowledgeStatus")}:`,
+    "Current Knowledge Status:",
     currentStatus,
   ].join("\n");
 }
@@ -3875,8 +3835,6 @@ function renderReflectionPanel() {
   const remaining = Math.max(0, getReflectionUnlockTarget() - answered);
   const unlocked = isReflectionUnlocked();
   const output = reflectionOutput;
-  const fullReflection = output?.fullReflection || {};
-  const nextDirection = fullReflection.nextDirection || output?.nextDirection || output?.direction || "";
   const deepPrompt = output ? buildDeepReflectionPrompt(output) : "";
   target.classList.toggle("is-locked", !unlocked);
   target.classList.toggle("is-unlocked", unlocked);
@@ -3890,27 +3848,22 @@ function renderReflectionPanel() {
     </div>
     ${output ? `<div class="reflection-output">
       <article class="reflection-summary-card">
+        <h3>MapKAI Reflection</h3>
         <p class="eyebrow">${t("reflectionSummaryLabel")}</p>
-        <h3>${t("currentKnowledgeStatus")}</h3>
         <p>${escapeHtml(output.summary || "")}</p>
       </article>
+      <div class="reflection-briefing-grid">
+        <article><h3>${t("primaryPattern")}</h3><p>${escapeHtml(output.primaryPattern || "")}</p></article>
+        <article><h3>${t("blindSpot")}</h3><p>${escapeHtml(output.blindSpot || "")}</p></article>
+        <article><h3>${t("nextDirection")}</h3><p>${escapeHtml(output.nextDirection || "")}</p></article>
+        <article><h3>${t("uncomfortableTruth")}</h3><p>${escapeHtml(output.uncomfortableTruth || "")}</p></article>
+      </div>
       <section class="deep-prompt-panel">
         <h3>${t("personalAiTitle")}</h3>
         <p>${t("personalAiCopy")}</p>
         <button class="button secondary" type="button" data-copy-deep-prompt>${deepPromptCopied ? t("copiedDeepPrompt") : t("copyDeepPrompt")}</button>
         <textarea readonly rows="9">${escapeHtml(deepPrompt)}</textarea>
       </section>
-      <details class="full-reflection">
-        <summary>${t("expandFullReflection")}</summary>
-        <div class="full-reflection-grid">
-          <article><h3>${t("objectivePattern")}</h3><p>${escapeHtml(fullReflection.objectivePattern || output.strengths || "")}</p></article>
-          <article><h3>${t("reflectionBlindSpots")}</h3><p>${escapeHtml(fullReflection.blindSpots || output.blindSpots || "")}</p></article>
-          <article><h3>${t("recentDrift")}</h3><p>${escapeHtml(fullReflection.recentDrift || "")}</p></article>
-          <article><h3>${t("lessExploredAreas")}</h3><p>${escapeHtml(fullReflection.lessExploredAreas || "")}</p></article>
-          <article><h3>${t("reflectionDirection")}</h3><p>${escapeHtml(nextDirection)}</p></article>
-          <article><h3>${t("uncomfortableTruth")}</h3><p>${escapeHtml(fullReflection.uncomfortableTruth || "")}</p></article>
-        </div>
-      </details>
       <p class="reflection-disclaimer">${t("reflectionDisclaimer")}</p>
     </div>` : ""}
     <details class="founder-only reflection-debug">

@@ -50,18 +50,15 @@ Keep the tone premium, reflective, atlas-like, sharp, emotionally restrained, an
 Return valid JSON only, with exactly these keys:
 {
   "summary": "...",
-  "fullReflection": {
-    "objectivePattern": "...",
-    "blindSpots": "...",
-    "recentDrift": "...",
-    "lessExploredAreas": "...",
-    "nextDirection": "...",
-    "uncomfortableTruth": "..."
-  }
+  "primaryPattern": "...",
+  "blindSpot": "...",
+  "nextDirection": "...",
+  "uncomfortableTruth": "..."
 }
 
-The summary is the most important output. Keep it around 120-200 words maximum.
-Each fullReflection value must be one concise sentence.
+Each field must be one or two short sentences.
+Total reflection length must stay within 120-180 English words or 200-300 Chinese characters.
+Create aftertaste, not information overload.
 ${languageInstruction}
 
 Compressed summary:
@@ -77,15 +74,11 @@ function extractJsonObject(value) {
 
 function cleanReflection(value) {
   return {
-    summary: cleanText(value.summary, 1400),
-    fullReflection: {
-      objectivePattern: cleanText(value.fullReflection?.objectivePattern, 700),
-      blindSpots: cleanText(value.fullReflection?.blindSpots, 700),
-      recentDrift: cleanText(value.fullReflection?.recentDrift, 700),
-      lessExploredAreas: cleanText(value.fullReflection?.lessExploredAreas, 700),
-      nextDirection: cleanText(value.fullReflection?.nextDirection, 700),
-      uncomfortableTruth: cleanText(value.fullReflection?.uncomfortableTruth, 700),
-    },
+    summary: cleanText(value.summary, 700),
+    primaryPattern: cleanText(value.primaryPattern, 360),
+    blindSpot: cleanText(value.blindSpot, 360),
+    nextDirection: cleanText(value.nextDirection, 360),
+    uncomfortableTruth: cleanText(value.uncomfortableTruth, 360),
   };
 }
 
@@ -104,15 +97,15 @@ export async function onRequestPost({ request, env }) {
   try {
     const aiResult = await env.AI.run(MODEL, {
       prompt: buildPrompt(summary),
-      max_tokens: 460,
-      temperature: 0.45,
+      max_tokens: 260,
+      temperature: 0.38,
     });
     const reflection = cleanReflection(extractJsonObject(aiResult));
     if (
       !reflection.summary ||
-      !reflection.fullReflection.objectivePattern ||
-      !reflection.fullReflection.blindSpots ||
-      !reflection.fullReflection.nextDirection
+      !reflection.primaryPattern ||
+      !reflection.blindSpot ||
+      !reflection.nextDirection
     ) {
       throw new Error("Workers AI returned an incomplete reflection.");
     }
