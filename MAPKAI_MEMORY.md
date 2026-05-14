@@ -621,6 +621,47 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Strengthen Deep Reflection Prompt template
+
+Status: Ready to commit
+
+Changed:
+
+- Updated only the fixed copyable Deep Reflection Prompt template inside MapKAI Reflection.
+- Kept the Cloudflare-generated Current Knowledge Status short and unchanged.
+- Kept MapKAI from generating the long personal critique itself.
+- New prompt asks the user's personal AI to start with a sharp, personalized observation under 200 words before structured analysis.
+- Added explicit output order:
+  - Objective Knowledge Pattern
+  - Recent Attention Pattern
+  - Repeated Neglected Areas
+  - Core Personal Blind Spots
+  - Gap Between Self-Image And Reality
+  - Long-Term Risk
+  - Improvement Directions
+  - top 3 weaknesses / stop doing / start practicing / uncomfortable truth
+  - emotionally distant closing observation
+- Preserved normal-user privacy protections, Founder isolation, compact Workers AI requests, and subject-code hiding.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed the new Deep Reflection Prompt appears in `script.js`, `index.html`, `public/script.js`, and `public/index.html`.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Smooth Explore answering flow
 
 Status: Ready to commit

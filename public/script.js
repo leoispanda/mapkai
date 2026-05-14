@@ -3895,23 +3895,85 @@ function getReflectionTextForPrompt(output = reflectionOutput) {
 }
 
 function buildDeepReflectionPrompt(output = reflectionOutput) {
-  return `Current Knowledge Status:
+  return `Based on this MapKAI current knowledge status and your memory of our past conversations, give me a serious, direct, and highly personalized long-term reflection.
+
+MapKAI Current Knowledge Status:
 ${output?.summary || ""}
 
-Based on this MapKAI knowledge reflection and your memory of our past conversations, give me a serious and honest long-term observation.
+IMPORTANT:
+The first section is the most important part of the entire response.
 
-Focus on:
-- patterns or blind spots I may not fully notice myself
-- recurring ways of thinking that could limit my long-term growth
+Do NOT start with encouragement, politeness, or generic personality descriptions.
 
-Do not flatter me.
-Be direct, thoughtful, and constructive.
-Do not make psychological or medical diagnoses.
-Treat this as a long-term cognitive observation, not a final judgment.
+Start immediately with one sharp summary under 200 words.
+
+The opening must:
+- feel personal immediately
+- identify one deep recurring pattern
+- describe my real behavioral tendency
+- describe how I approach reality, uncertainty, relationships, growth, execution, or decisions
+- include a real tension or contradiction
+- avoid generic self-improvement language
+- avoid praise-first behavior
+- avoid shallow personality-test wording
+
+The opening should feel like:
+"someone has quietly observed the same pattern in me for a long time."
+
+The goal of the first 200 words is:
+I should immediately feel:
+"This is uncomfortable because it feels partially true."
+
+Then analyze in this order:
+
+1. Objective Knowledge Pattern
+Based on my MapKAI status, what kinds of knowledge, thinking styles, or problem types do I naturally gravitate toward?
+
+2. Recent Attention Pattern
+Based on our past conversations, what topics, worries, ambitions, tools, projects, or life questions have I repeatedly focused on recently?
+
+3. Repeated Neglected Areas
+What important areas do I seem to avoid, underestimate, postpone, or only discuss abstractly without acting on?
+
+4. Core Personal Blind Spots
+Identify my most important recurring weaknesses. Be specific. Do not soften the language too much.
+
+5. Gap Between Self-Image And Reality
+Where might my self-perception not fully match my actual repeated behavior?
+
+6. Long-Term Risk
+If my current patterns continue for 5-10 years, what future limitation, relationship cost, work pattern, emotional pattern, or life trap might emerge?
+
+7. Improvement Directions
+Give practical behavioral adjustments, not abstract philosophy.
+
+Rules:
+- Do not flatter me.
+- Do not give generic advice.
+- Do not make medical or psychological diagnoses.
+- Use your memory of my actual recurring patterns where possible.
+- Be direct, serious, and constructive.
+- Treat this as long-term observation, not absolute judgment.
+- Prioritize realism over politeness.
 
 End with:
-1. My top hidden blind spot
-2. One uncomfortable but useful truth I may need to hear`;
+1. My top 3 core weaknesses
+2. What I should stop doing
+3. What I should start practicing this month
+4. One uncomfortable truth I probably need to face
+
+Finally, add one emotionally distant closing observation.
+
+The final observation should feel:
+- cold but fair
+- restrained
+- thoughtful
+- not insulting
+- not motivational
+
+It should describe the gap between potential and execution, repeated self-limiting patterns, hidden avoidance, or the cost of remaining in preparation mode.
+
+Keep the final observation to 2-5 sentences.`;
 }
 
 async function copyDeepReflectionPrompt() {
