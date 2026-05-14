@@ -621,6 +621,39 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Switch production script asset to app.js
+
+Status: Ready to commit
+
+Changed:
+
+- Added `app.js` as the production front-end script asset.
+- Updated root and public `index.html` to load `/app.js?v=20260514-founder-route`.
+- Kept `script.js` and `public/script.js` synchronized for the existing development workflow.
+- Preserved Founder mode route-scoping, quiz logic, contact logic, visitor counter, and categories.
+- Added this fix because Cloudflare production returned `500` for `/script.js` while serving HTML and CSS normally.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check app.js`
+- `node --check public/app.js`
+- Root/public `script.js` sync check.
+- Root/public `app.js` sync check.
+- Root/public `index.html` sync check.
+- `git diff --check`
+- Local `/app.js` returns `200 OK`.
+- Local homepage now references `/app.js?v=20260514-founder-route`.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Make Founder mode route-scoped
 
 Status: Ready to commit
