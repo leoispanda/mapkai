@@ -621,6 +621,46 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Add q7-q12 for subjects 01-10 and pure shuffle pool
+
+Status: Ready to commit
+
+Changed:
+
+- Added 60 bilingual quiz questions from `01-q7` through `10-q12`.
+- Brought subjects `01` through `10` to 12 questions each.
+- Kept subject `00` at 12 questions, bringing the current quiz bank to 132 questions.
+- Cleaned small mixed-language Chinese phrases before import.
+- Preserved answer matching, three-option structure, subject assignments, and automatic internal difficulty/unlock cycling.
+- Tightened `/map` randomization to use a pure Fisher-Yates full-pool shuffle without first-question adjustment.
+- Preserved no-repeat behavior before the full current pool is exhausted.
+- Refreshed `MAPKAI_QUESTION_BANK_FOR_GPT.txt` with the latest 132-question bank for future prompt generation.
+- Synchronized root/public `script.js`, `app.js`, and inline scripts in root/public `index.html`.
+- Preserved Contact, D1 visitor counter, Founder mode route, categories, and page styling.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check app.js`
+- `node --check public/app.js`
+- Root/public `script.js`, `app.js`, and `index.html` sync checks.
+- Question-bank validation confirmed 132 total questions and 12 questions in every subject `00` through `10`.
+- Validation confirmed every generated English and Chinese answer exactly matches one of its three options.
+- Validation confirmed no duplicate question IDs.
+- Random-pool validation confirmed the shuffled pool contains 132 unique question IDs before exhaustion.
+- Validation confirmed no `.slice(0, 20)` front-limit and no `previousQuestionId` first-question adjustment remain.
+- Browser verification confirmed `/map` renders with a 3-option challenge card after the import.
+- `git diff --check`
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Tighten heading scale and bust CSS cache
 
 Status: Ready to commit
