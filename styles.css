@@ -795,6 +795,12 @@ canvas {
   margin-top: 12px;
 }
 
+.reflection-status {
+  margin: 12px 0 0;
+  color: var(--green-dark);
+  font-weight: 780;
+}
+
 .reflection-output {
   display: grid;
   gap: 12px;
@@ -813,6 +819,25 @@ canvas {
 
 .reflection-output p {
   margin: 0;
+}
+
+.deep-prompt-panel {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.deep-prompt-panel textarea {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid rgba(15, 107, 87, 0.22);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(246, 240, 228, 0.72);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
 }
 
 .reflection-debug {

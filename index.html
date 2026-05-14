@@ -454,6 +454,12 @@ const uiText = {
     reflectionBlindSpots: "Possible blind spots",
     reflectionStyle: "Thinking style",
     reflectionDirection: "Recommended exploration direction",
+    deepPromptTitle: "Deep Reflection Prompt",
+    deepPromptCopy: "Copy this fixed prompt into your personal AI to continue the reflection with your own memory and context.",
+    copyDeepPrompt: "Copy Deep Reflection Prompt",
+    copiedDeepPrompt: "Copied.",
+    reflectionGenerating: "Reading your exploration pattern...",
+    reflectionAiStatus: "Workers AI status",
     reflectionDebug: "Founder reflection debug",
     categoriesEyebrow: "Knowledge Classification System",
     categoriesTitle: "Eleven categories, one clear structure.",
@@ -601,6 +607,12 @@ const uiText = {
     reflectionBlindSpots: "可能的盲区",
     reflectionStyle: "思考风格",
     reflectionDirection: "建议探索方向",
+    deepPromptTitle: "深度成长 Prompt",
+    deepPromptCopy: "复制这个固定 Prompt 到你自己的 AI，让它结合你的长期记忆和上下文继续分析。",
+    copyDeepPrompt: "复制深度成长 Prompt",
+    copiedDeepPrompt: "已复制。",
+    reflectionGenerating: "正在读取你的探索模式...",
+    reflectionAiStatus: "Workers AI 状态",
     reflectionDebug: "Founder 反思调试",
     categoriesEyebrow: "知识分类系统",
     categoriesTitle: "十一个知识领域，一套清晰结构。",
@@ -3316,6 +3328,9 @@ let activeTitleModalStats = null;
 let challengeRoundComplete = false;
 let reflectionOutput = null;
 let reflectionStatus = "idle";
+let reflectionApiStatus = "not-generated";
+let lastReflectionInput = null;
+let deepPromptCopied = false;
 let founderMessages = [];
 let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
 
@@ -3874,6 +3889,53 @@ function isReflectionUnlocked() {
   return getTotalAnsweredQuestions() >= getReflectionUnlockTarget();
 }
 
+const reflectionTagLabels = {
+  "00": ["learning direction", "knowledge mapping", "pattern recognition"],
+  "01": ["learning design", "feedback loops", "human development"],
+  "02": ["arts interpretation", "cultural signals", "meaning making"],
+  "03": ["human ambiguity", "social systems", "context reading"],
+  "04": ["service tradeoffs", "business systems", "resource judgment"],
+  "05": ["social infrastructure", "coordination patterns", "public systems"],
+  "06": ["science reasoning", "evidence patterns", "natural systems"],
+  "07": ["systems thinking", "technical tradeoffs", "tool impact"],
+  "08": ["practical constraints", "environmental signals", "field observation"],
+  "09": ["human wellbeing", "risk awareness", "care systems"],
+  "10": ["implementation logic", "applied judgment", "real-world constraints"],
+};
+const reflectionTagLabelsZh = {
+  "00": ["学习方向", "知识地图", "模式识别"],
+  "01": ["学习设计", "反馈循环", "人的发展"],
+  "02": ["艺术理解", "文化信号", "意义建构"],
+  "03": ["人类模糊性", "社会系统", "语境判断"],
+  "04": ["服务取舍", "商业系统", "资源判断"],
+  "05": ["社会基础设施", "协作模式", "公共系统"],
+  "06": ["科学推理", "证据模式", "自然系统"],
+  "07": ["系统思维", "技术取舍", "工具影响"],
+  "08": ["现实约束", "环境信号", "现场观察"],
+  "09": ["人的健康", "风险意识", "照护系统"],
+  "10": ["执行逻辑", "应用判断", "真实世界约束"],
+};
+
+function getReflectionTags(subjectCode) {
+  const labels = currentLanguage === "zh" ? reflectionTagLabelsZh : reflectionTagLabels;
+  return labels[subjectCode] || (currentLanguage === "zh" ? ["知识模式"] : ["knowledge pattern"]);
+}
+
+function addTagCounts(target, tags, amount = 1) {
+  tags.forEach((tag) => {
+    target[tag] = (target[tag] || 0) + amount;
+  });
+}
+
+function getTopTags(tagCounts, fallback, limit = 3) {
+  const tags = Object.entries(tagCounts || {})
+    .sort((left, right) => right[1] - left[1])
+    .map(([tag]) => tag)
+    .filter(Boolean)
+    .slice(0, limit);
+  return tags.length ? tags : fallback;
+}
+
 function getAnswerDistributions() {
   const emptySummary = {
     difficulty: {},
@@ -3896,13 +3958,62 @@ function getAnswerDistributions() {
 }
 
 function getReflectionPayload() {
-  const stats = getKnowledgeTitleStats();
+  const summary = getCompressedReflectionSummary();
   return {
-    answered: stats.answered,
-    accuracy: stats.accuracy,
+    ...summary,
+    answered: summary.totalAnswered,
     distributions: getAnswerDistributions(),
-    language: currentLanguage,
   };
+}
+
+function getCompressedReflectionSummary() {
+  const stats = getKnowledgeTitleStats();
+  const strongTagCounts = {};
+  const weakTagCounts = {};
+  const domainCounts = {};
+  challengeHistory.forEach((entry) => {
+    const tags = getReflectionTags(entry.subjectCode);
+    addTagCounts(entry.correct ? strongTagCounts : weakTagCounts, tags);
+    domainCounts[entry.subjectCode] = (domainCounts[entry.subjectCode] || 0) + 1;
+  });
+  const answered = stats.answered;
+  const domainCoverage = Object.keys(domainCounts).length;
+  const accuracyRatio = answered ? Number((stats.accuracy / 100).toFixed(2)) : 0;
+  const strongFallback = currentLanguage === "zh" ? ["模式识别", "结构化探索"] : ["pattern recognition", "structured exploration"];
+  const weakFallback = currentLanguage === "zh" ? ["复杂取舍", "模糊情境"] : ["complex tradeoffs", "ambiguous contexts"];
+  return {
+    language: currentLanguage,
+    totalAnswered: answered,
+    accuracy: accuracyRatio,
+    strongTags: getTopTags(strongTagCounts, strongFallback),
+    weakTags: getTopTags(weakTagCounts, weakFallback),
+    thinkingStyle: getThinkingStyleLabel(accuracyRatio, domainCoverage),
+    explorationTendency: getExplorationTendencyLabel(domainCoverage, answered),
+  };
+}
+
+function getThinkingStyleLabel(accuracy, domainCoverage) {
+  if (currentLanguage === "zh") {
+    if (accuracy >= 0.75 && domainCoverage >= 6) return "结构优先的跨领域探索";
+    if (accuracy >= 0.75) return "稳定的模式识别";
+    if (domainCoverage >= 6) return "广角扫描式探索";
+    return "从直觉走向结构的探索";
+  }
+  if (accuracy >= 0.75 && domainCoverage >= 6) return "structure-first cross-domain exploration";
+  if (accuracy >= 0.75) return "steady pattern recognition";
+  if (domainCoverage >= 6) return "wide-angle exploratory scanning";
+  return "intuition-to-structure exploration";
+}
+
+function getExplorationTendencyLabel(domainCoverage, answered) {
+  if (currentLanguage === "zh") {
+    if (domainCoverage >= 8) return "广域探索者";
+    if (answered >= 30) return "持续推进型探索者";
+    return "起步中的知识探索者";
+  }
+  if (domainCoverage >= 8) return "broad explorer";
+  if (answered >= 30) return "persistent explorer";
+  return "early-stage knowledge explorer";
 }
 
 function getTopDistributionKey(distribution, fallback) {
@@ -3912,35 +4023,35 @@ function getTopDistributionKey(distribution, fallback) {
 }
 
 function buildFallbackReflection(payload = getReflectionPayload()) {
-  const topDomain = getTopDistributionKey(payload.distributions.domains, currentLanguage === "zh" ? "多个知识领域" : "several knowledge domains");
-  const topMapState = getTopDistributionKey(payload.distributions.mapState, "snow");
-  const accuracy = payload.accuracy || 0;
+  const summary = payload.totalAnswered ? payload : getCompressedReflectionSummary();
+  const topDomain = summary.strongTags?.[0] || getTopDistributionKey(payload.distributions?.domains, currentLanguage === "zh" ? "多个知识领域" : "several knowledge domains");
+  const weakTag = summary.weakTags?.[0] || getTopDistributionKey(payload.distributions?.mapState, currentLanguage === "zh" ? "复杂取舍" : "complex tradeoffs");
+  const accuracy = summary.accuracy > 1 ? summary.accuracy / 100 : summary.accuracy || 0;
   if (currentLanguage === "zh") {
     return {
-      strengths: accuracy >= 70
+      strengths: accuracy >= 0.7
         ? `你已经能在不同场景中稳定识别知识模式，尤其是在 ${topDomain} 的探索中表现清晰。`
         : `你已经开始建立跨领域的知识触感，能从日常场景中捕捉问题背后的结构。`,
-      blindSpots: topMapState === "green"
-        ? "你可以继续留意那些看起来熟悉、但需要更深解释的复杂问题。"
+      blindSpots: weakTag
+        ? `你可以继续留意 ${weakTag} 这类问题：它们往往需要把初步判断推进到更完整的解释链条。`
         : "可能的盲区在于把初步判断推进到更完整的解释链条。先不用急着追求正确率，重点是看见模式如何形成。",
-      style: accuracy >= 70
-        ? "你的思考风格偏向稳健的模式识别，适合继续增加跨领域题目来测试迁移能力。"
-        : "你的思考风格更像探索型扫描：先接触广阔场景，再逐渐整理出稳定判断。",
+      style: `你的思考风格接近「${summary.thinkingStyle}」：先观察结构，再慢慢形成更稳定的判断。`,
       direction: `下一步建议继续探索 ${topDomain}，同时穿插其他领域的问题，让知识地图保持开放而不偏窄。`,
+      nextDirection: `下一步建议继续探索 ${topDomain}，同时穿插其他领域的问题，让知识地图保持开放而不偏窄。`,
       source: "local-fallback",
     };
   }
+  const nextDirection = `Continue with ${topDomain}, while mixing in adjacent domains so the atlas stays broad rather than narrow.`;
   return {
-    strengths: accuracy >= 70
+    strengths: accuracy >= 0.7
       ? `You are starting to recognize patterns steadily across changing situations, especially around ${topDomain}.`
       : "You are building a useful exploratory base: noticing structure inside everyday situations before forcing a conclusion.",
-    blindSpots: topMapState === "green"
-      ? "Your next blind spot may be familiar-looking questions that still require deeper explanation."
+    blindSpots: weakTag
+      ? `A possible blind spot sits around ${weakTag}: these questions often need a fuller chain of explanation beyond the first useful instinct.`
       : "A possible blind spot is moving from a first good instinct into a fuller chain of explanation. For now, pattern visibility matters more than a score feeling.",
-    style: accuracy >= 70
-      ? "Your thinking style looks like steady pattern recognition. You may benefit from more cross-domain questions that test transfer."
-      : "Your thinking style looks exploratory and scanning-oriented: you gather signals broadly, then gradually organize them into clearer judgment.",
-    direction: `Continue with ${topDomain}, but keep mixing in other domains so the atlas stays broad rather than narrow.`,
+    style: `Your thinking style looks like ${summary.thinkingStyle}: you read the structure of a situation before turning it into judgment.`,
+    direction: nextDirection,
+    nextDirection,
     source: "local-fallback",
   };
 }
@@ -3948,8 +4059,11 @@ function buildFallbackReflection(payload = getReflectionPayload()) {
 async function generateKnowledgeReflection() {
   if (!isReflectionUnlocked() || reflectionStatus === "loading") return;
   reflectionStatus = "loading";
+  reflectionApiStatus = "loading";
+  deepPromptCopied = false;
   renderReflectionPanel();
-  const payload = getReflectionPayload();
+  const payload = getCompressedReflectionSummary();
+  lastReflectionInput = payload;
   try {
     const response = await fetch("/api/reflection", {
       method: "POST",
@@ -3958,13 +4072,63 @@ async function generateKnowledgeReflection() {
     });
     const data = await response.json().catch(() => ({}));
     if (!response.ok || !data.reflection) throw new Error(data.error || "Reflection API unavailable");
-    reflectionOutput = { ...data.reflection, source: "backend" };
+    reflectionOutput = {
+      ...data.reflection,
+      direction: data.reflection.nextDirection || data.reflection.direction || "",
+      source: "workers-ai",
+      model: data.model || "",
+    };
+    reflectionApiStatus = "workers-ai";
   } catch (error) {
     console.info("Reflection API unavailable; using local fallback.", error);
     reflectionOutput = buildFallbackReflection(payload);
+    reflectionApiStatus = "local-fallback";
   }
   reflectionStatus = "ready";
   renderReflectionPanel();
+}
+
+function getReflectionTextForPrompt(output = reflectionOutput) {
+  if (!output) return "";
+  const nextDirection = output.nextDirection || output.direction || "";
+  return [
+    `${t("reflectionStrengths")}: ${output.strengths || ""}`,
+    `${t("reflectionBlindSpots")}: ${output.blindSpots || ""}`,
+    `${t("reflectionStyle")}: ${output.thinkingStyle || output.style || ""}`,
+    `${t("reflectionDirection")}: ${nextDirection}`,
+  ].join("\n");
+}
+
+function buildDeepReflectionPrompt(output = reflectionOutput) {
+  return `Based on this MapKAI knowledge reflection and your memory of our past conversations, give me a serious and honest long-term observation.
+
+MapKAI Reflection:
+${getReflectionTextForPrompt(output)}
+
+Focus on:
+- patterns or blind spots I may not fully notice myself
+- recurring ways of thinking that could limit my long-term growth
+
+Do not flatter me.
+Be direct, thoughtful, and constructive.
+Do not make psychological or medical diagnoses.
+Treat this as a long-term cognitive observation, not a final judgment.
+
+End with:
+1. My top hidden blind spot
+2. One uncomfortable but useful truth I may need to hear`;
+}
+
+async function copyDeepReflectionPrompt() {
+  if (!reflectionOutput) return;
+  const prompt = buildDeepReflectionPrompt();
+  try {
+    await navigator.clipboard.writeText(prompt);
+    deepPromptCopied = true;
+    renderReflectionPanel();
+  } catch (error) {
+    console.info("Could not copy deep reflection prompt.", error);
+  }
 }
 
 function renderReflectionPanel() {
@@ -3974,6 +4138,8 @@ function renderReflectionPanel() {
   const remaining = Math.max(0, getReflectionUnlockTarget() - answered);
   const unlocked = isReflectionUnlocked();
   const output = reflectionOutput;
+  const nextDirection = output?.nextDirection || output?.direction || "";
+  const deepPrompt = output ? buildDeepReflectionPrompt(output) : "";
   target.classList.toggle("is-locked", !unlocked);
   target.classList.toggle("is-unlocked", unlocked);
   target.innerHTML = `
@@ -3982,18 +4148,28 @@ function renderReflectionPanel() {
       <h2>${t("reflectionTitle")}</h2>
       <p>${unlocked ? t("reflectionUnlockedCopy") : t("reflectionLockedCopy", answered, remaining)}</p>
       ${unlocked ? `<button class="button primary" type="button" data-generate-reflection ${reflectionStatus === "loading" ? "disabled" : ""}>${t("generateReflection")}</button>` : ""}
+      ${reflectionStatus === "loading" ? `<p class="reflection-status">${t("reflectionGenerating")}</p>` : ""}
     </div>
     ${output ? `<div class="reflection-output">
       <article><h3>${t("reflectionStrengths")}</h3><p>${escapeHtml(output.strengths || "")}</p></article>
       <article><h3>${t("reflectionBlindSpots")}</h3><p>${escapeHtml(output.blindSpots || "")}</p></article>
-      <article><h3>${t("reflectionStyle")}</h3><p>${escapeHtml(output.style || "")}</p></article>
-      <article><h3>${t("reflectionDirection")}</h3><p>${escapeHtml(output.direction || "")}</p></article>
+      <article><h3>${t("reflectionStyle")}</h3><p>${escapeHtml(output.thinkingStyle || output.style || "")}</p></article>
+      <article><h3>${t("reflectionDirection")}</h3><p>${escapeHtml(nextDirection)}</p></article>
+      <section class="deep-prompt-panel">
+        <h3>${t("deepPromptTitle")}</h3>
+        <p>${t("deepPromptCopy")}</p>
+        <button class="button secondary" type="button" data-copy-deep-prompt>${deepPromptCopied ? t("copiedDeepPrompt") : t("copyDeepPrompt")}</button>
+        <textarea readonly rows="9">${escapeHtml(deepPrompt)}</textarea>
+      </section>
     </div>` : ""}
     <details class="founder-only reflection-debug">
       <summary>${t("reflectionDebug")}</summary>
       <pre>${escapeHtml(JSON.stringify({
+        aiStatus: reflectionApiStatus,
         source: output?.source || "not-generated",
-        payload: getReflectionPayload(),
+        model: output?.model || "",
+        compressedReflectionInput: lastReflectionInput || getCompressedReflectionSummary(),
+        metadataDistributions: getAnswerDistributions(),
         questionIds: challengeHistory.map((entry) => entry.question.id),
         subjectSources: challengeHistory.map((entry) => entry.subjectCode),
       }, null, 2))}</pre>
@@ -4032,6 +4208,9 @@ function startNewChallengeRound() {
   activeTitleModalStats = null;
   reflectionOutput = null;
   reflectionStatus = "idle";
+  reflectionApiStatus = "not-generated";
+  lastReflectionInput = null;
+  deepPromptCopied = false;
   setRandomChallengeQuestion();
   renderKnowledgeTitleModal();
   renderChallenge();
@@ -4429,6 +4608,10 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-generate-reflection]")) {
     generateKnowledgeReflection();
+    return;
+  }
+  if (event.target.closest("[data-copy-deep-prompt]")) {
+    copyDeepReflectionPrompt();
     return;
   }
   if (event.target.closest("[data-answer-key], [data-review-direction], [data-start-new-round]")) {

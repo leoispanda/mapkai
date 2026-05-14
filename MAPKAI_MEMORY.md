@@ -621,6 +621,51 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Add Workers AI reflection backend and deep prompt
+
+Status: Ready to commit
+
+Changed:
+
+- Added `POST /api/reflection` as a Cloudflare Pages Function.
+- Added Workers AI usage through `context.env.AI.run(...)` with model `@cf/meta/llama-3.1-8b-instruct`.
+- Added the `AI` binding to `wrangler.toml`.
+- Changed frontend reflection input from broader local distributions to a compact summary:
+  - language
+  - total answered
+  - accuracy ratio
+  - strong tags
+  - weak tags
+  - thinking style
+  - exploration tendency
+- Continued to avoid sending the full question bank, question text, full answer history, internal subject source, or maintenance data to the backend.
+- Preserved manual-only reflection generation after the 15-answer unlock.
+- Added fixed Deep Reflection Prompt generation after Knowledge Reflection is available.
+- Added `Copy Deep Reflection Prompt` / `复制深度成长 Prompt`.
+- Kept Founder-only debug for compressed reflection input, Workers AI/fallback status, metadata distributions, question ids, and subject sources.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/reflection.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- `git diff --check`
+- Mocked `functions/api/reflection.js` with a fake `env.AI.run(...)` response and confirmed JSON output shape.
+- Browser verification confirmed local fallback still generates a Knowledge Reflection when `/api/reflection` is unavailable in the local `server.js` runtime.
+- Browser verification confirmed Deep Reflection Prompt appears after generation and includes the fixed template.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Restructure around Explore loop
 
 Status: Ready to commit

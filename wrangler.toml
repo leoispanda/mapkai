@@ -6,3 +6,6 @@ pages_build_output_dir = "./public"
 binding = "MAPKAI_DB"
 database_name = "mapkai"
 database_id = "842bbe82-191d-47a7-b6b6-59f5d0c98756"
+
+[ai]
+binding = "AI"
