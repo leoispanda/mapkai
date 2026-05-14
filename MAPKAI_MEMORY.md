@@ -621,6 +621,42 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Simplify homepage Hero copy
+
+Status: Ready to commit
+
+Changed:
+
+- Updated only the homepage Hero copy.
+- Hero text now resolves to:
+  - `MapKAI`
+  - `Map your knowledge with AI.`
+  - `Navigate your knowledge before navigating AI.`
+- Removed the old Hero support copy about thinking patterns, blind spots, and continuing reflection in personal AI.
+- Cleared the duplicate Hero eyebrow text so `MapKAI` appears as the main Hero title only.
+- Kept the existing Hero structure, styling, CTA button, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed the new Hero lines are present in root/public HTML and scripts.
+- Source verification confirmed the old Hero lines are no longer present in root/public HTML or scripts.
+- Browser verification on `http://127.0.0.1:3000/` confirmed the homepage Hero shows the new headline/supporting copy, keeps the `Start Exploring` CTA, and does not show the old blind-spots copy.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Tune Reflection tone toward quiet observation
 
 Status: Ready to commit
