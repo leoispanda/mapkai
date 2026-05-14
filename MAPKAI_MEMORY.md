@@ -621,6 +621,37 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Inline front-end script for production routing recovery
+
+Status: Ready to commit
+
+Changed:
+
+- Inlined the front-end application script into root and public `index.html`.
+- Removed the production runtime dependency on external `/app.js` loading from the HTML entry.
+- Kept `app.js`, `script.js`, and public script copies in the repository for development and future recovery.
+- Added this recovery because Cloudflare served HTML/CSS/images normally but returned `500` for external `.js` assets, which broke mobile navigation and SPA routing.
+- Preserved Founder mode route-scoping, quiz logic, contact logic, visitor counter, and categories.
+- Synchronized root and public `index.html`.
+
+Verified:
+
+- `node --check app.js`
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `index.html` sync check.
+- `git diff --check`
+- Confirmed root/public HTML no longer reference external `/app.js` or `/script.js`.
+- Browser verification confirmed local navigation from `/` to `/categories` works with the inlined script.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Switch production script asset to app.js
 
 Status: Ready to commit
