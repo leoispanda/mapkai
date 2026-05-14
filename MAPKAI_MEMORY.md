@@ -621,6 +621,35 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Update link preview and SEO metadata
+
+Status: Ready to commit
+
+Changed:
+
+- Updated only link preview / SEO metadata text in the document head.
+- Changed `<title>` to `MapKAI - Map your knowledge with AI`.
+- Changed meta description to `Navigate your knowledge before navigating AI.`
+- Added matching Open Graph title and description metadata.
+- Added matching Twitter title and description metadata.
+- Kept homepage Hero body copy, About body copy, structure, styling, CTA, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
+- Synchronized root and public `index.html`.
+
+Verified:
+
+- Root/public `index.html` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed `<title>`, meta description, Open Graph title/description, and Twitter title/description use the new preview copy in root/public HTML.
+- Full workspace search confirmed the old preview title sentence and old preview description sentence are no longer present in current tracked working files.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Update About opening heading
 
 Status: Ready to commit
@@ -628,7 +657,7 @@ Status: Ready to commit
 Changed:
 
 - Updated only the About page opening `h1`.
-- Replaced `Most people are not lacking information. They are lacking structure.` with `Map your knowledge with AI.`
+- Replaced the previous About opening structure-focused line with `Map your knowledge with AI.`
 - Replaced the Chinese About opening translation with the same requested line for consistency.
 - Kept About page structure, styling, CTA, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
 - Synchronized root and public `index.html`, `script.js`, and `styles.css`.
