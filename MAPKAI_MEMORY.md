@@ -621,6 +621,37 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Make Founder mode route-scoped
+
+Status: Ready to commit
+
+Changed:
+
+- Stopped persisting Founder mode through `localStorage`.
+- Made Founder mode active only on `/leoyangandxinli` or when `?founder=1` is present.
+- Made normal public routes automatically exit Founder mode.
+- Cleared the old `mapkaiFounderMode` localStorage key whenever route state is applied.
+- Preserved Founder-only message board, visitor count, quiz logic, question bank, and categories.
+- Synchronized root and public script files.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `script.js` sync check.
+- `git diff --check`
+- Browser verification confirmed `/` does not have `founder-mode`.
+- Browser verification confirmed `/leoyangandxinli` enables `founder-mode`.
+- Browser verification confirmed returning to `/` exits `founder-mode`.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Simplify public message board form
 
 Status: Ready to commit

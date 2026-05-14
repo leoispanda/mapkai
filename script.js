@@ -1513,8 +1513,9 @@ function normalizeRoute(path) {
 function goToRoute(route, replace = false) {
   const target = route || "/";
   const founderRoute = target === "/leoyangandxinli";
+  const founderQuery = new URLSearchParams(window.location.search).get("founder") === "1";
   const visibleTarget = founderRoute ? "/" : target;
-  if (founderRoute) setFounderMode(true);
+  setFounderMode(founderRoute || founderQuery);
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   const activePage = categoryMatch ? "/categories/detail" : visibleTarget;
@@ -2194,8 +2195,6 @@ drawKnowledgeMap();
 applyLanguage();
 const initialRoute = normalizeRoute(window.location.pathname);
 goToRoute(initialRoute, true);
-const founderQuery = new URLSearchParams(window.location.search).get("founder") === "1";
-setFounderMode(founderQuery || initialRoute === "/leoyangandxinli" || localStorage.getItem("mapkaiFounderMode") === "true");
 
 function setFounderMode(enabled) {
   document.body.classList.toggle("founder-mode", enabled);
@@ -2203,7 +2202,7 @@ function setFounderMode(enabled) {
     founderToggle.textContent = enabled ? "Founder mode on" : "Founder mode";
     founderToggle.setAttribute("aria-pressed", String(enabled));
   }
-  localStorage.setItem("mapkaiFounderMode", String(enabled));
+  localStorage.removeItem("mapkaiFounderMode");
   renderMessageBoards();
   if (enabled) loadFounderMessages();
   drawKnowledgeMap();
