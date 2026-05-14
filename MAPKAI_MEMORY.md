@@ -621,6 +621,50 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Refocus reflection around Personal AI loop
+
+Status: Ready to commit
+
+Changed:
+
+- Refocused Reflection UX around `Explore -> Knowledge Reflection -> Personal AI Deep Reflection -> return to Explore`.
+- Changed Workers AI reflection output to a summary-first structure:
+  - `summary`
+  - collapsed `fullReflection.objectivePattern`
+  - collapsed `fullReflection.blindSpots`
+  - collapsed `fullReflection.recentDrift`
+  - collapsed `fullReflection.lessExploredAreas`
+  - collapsed `fullReflection.nextDirection`
+  - collapsed `fullReflection.uncomfortableTruth`
+- Made the short Current Knowledge Status the primary visible reflection output.
+- Moved detailed reflection into an `Expand Full Reflection` section collapsed by default.
+- Reframed the copyable prompt as `Current Knowledge Status` plus the fixed MapKAI deep reflection template.
+- Added the product boundary disclaimer that reflections are exploratory observations, not psychological, medical, or professional evaluations.
+- Preserved the compact Workers AI payload: no full question bank, question text, full answer history, subject source, maintenance data, or conversation history.
+- Preserved Explore route, Map route, quiz shuffle, milestones, Grand Slam, language switching, and Founder-only debug isolation.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/reflection.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- Mocked `functions/api/reflection.js` with a fake `env.AI.run(...)` response and confirmed the new `summary` + `fullReflection` JSON shape.
+- Browser verification confirmed Reflection renders Current Knowledge Status first.
+- Browser verification confirmed `Expand Full Reflection` is present.
+- Browser verification confirmed Personal AI continuation copy, Deep Reflection Prompt copy action, and disclaimer are present.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Add Workers AI reflection backend and deep prompt
 
 Status: Ready to commit

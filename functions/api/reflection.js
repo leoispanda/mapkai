@@ -46,16 +46,22 @@ function buildPrompt(summary) {
 Create a short knowledge reflection from this compressed exploration summary only.
 Do not infer identity, intelligence, mental health, personality type, or fixed ability.
 Do not flatter, rank, diagnose, or sound like therapy.
-Keep the tone premium, reflective, atlas-like, thoughtful, and exploratory.
+Keep the tone premium, reflective, atlas-like, sharp, emotionally restrained, and exploratory.
 Return valid JSON only, with exactly these keys:
 {
-  "strengths": "...",
-  "blindSpots": "...",
-  "thinkingStyle": "...",
-  "nextDirection": "..."
+  "summary": "...",
+  "fullReflection": {
+    "objectivePattern": "...",
+    "blindSpots": "...",
+    "recentDrift": "...",
+    "lessExploredAreas": "...",
+    "nextDirection": "...",
+    "uncomfortableTruth": "..."
+  }
 }
 
-Each value should be concise. Total output should be around 150-250 words maximum.
+The summary is the most important output. Keep it around 120-200 words maximum.
+Each fullReflection value must be one concise sentence.
 ${languageInstruction}
 
 Compressed summary:
@@ -71,10 +77,15 @@ function extractJsonObject(value) {
 
 function cleanReflection(value) {
   return {
-    strengths: cleanText(value.strengths, 900),
-    blindSpots: cleanText(value.blindSpots, 900),
-    thinkingStyle: cleanText(value.thinkingStyle, 900),
-    nextDirection: cleanText(value.nextDirection, 900),
+    summary: cleanText(value.summary, 1400),
+    fullReflection: {
+      objectivePattern: cleanText(value.fullReflection?.objectivePattern, 700),
+      blindSpots: cleanText(value.fullReflection?.blindSpots, 700),
+      recentDrift: cleanText(value.fullReflection?.recentDrift, 700),
+      lessExploredAreas: cleanText(value.fullReflection?.lessExploredAreas, 700),
+      nextDirection: cleanText(value.fullReflection?.nextDirection, 700),
+      uncomfortableTruth: cleanText(value.fullReflection?.uncomfortableTruth, 700),
+    },
   };
 }
 
@@ -93,11 +104,16 @@ export async function onRequestPost({ request, env }) {
   try {
     const aiResult = await env.AI.run(MODEL, {
       prompt: buildPrompt(summary),
-      max_tokens: 420,
+      max_tokens: 460,
       temperature: 0.45,
     });
     const reflection = cleanReflection(extractJsonObject(aiResult));
-    if (!reflection.strengths || !reflection.blindSpots || !reflection.thinkingStyle || !reflection.nextDirection) {
+    if (
+      !reflection.summary ||
+      !reflection.fullReflection.objectivePattern ||
+      !reflection.fullReflection.blindSpots ||
+      !reflection.fullReflection.nextDirection
+    ) {
       throw new Error("Workers AI returned an incomplete reflection.");
     }
     return json({

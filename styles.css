@@ -803,7 +803,7 @@ canvas {
 
 .reflection-output {
   display: grid;
-  gap: 12px;
+  gap: 16px;
 }
 
 .reflection-output article {
@@ -821,10 +821,24 @@ canvas {
   margin: 0;
 }
 
+.reflection-summary-card {
+  border: 1px solid rgba(15, 107, 87, 0.2);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 250, 240, 0.78);
+}
+
+.reflection-summary-card p:last-child {
+  color: var(--ink);
+  font-size: clamp(1.02rem, 1.35vw, 1.16rem);
+  line-height: 1.72;
+}
+
 .deep-prompt-panel {
-  margin-top: 4px;
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
+  border: 1px solid rgba(214, 169, 71, 0.34);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(214, 169, 71, 0.1);
 }
 
 .deep-prompt-panel textarea {
@@ -838,6 +852,37 @@ canvas {
   font: inherit;
   line-height: 1.5;
   resize: vertical;
+}
+
+.full-reflection {
+  border-top: 1px solid var(--line);
+  padding-top: 6px;
+}
+
+.full-reflection summary {
+  cursor: pointer;
+  color: var(--green-dark);
+  font-weight: 860;
+}
+
+.full-reflection-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.reflection-disclaimer {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  font-size: 0.86rem;
+}
+
+.reflection-output .eyebrow {
+  margin-bottom: 8px;
+}
+
+.reflection-output h3 {
+  line-height: 1.2;
 }
 
 .reflection-debug {
