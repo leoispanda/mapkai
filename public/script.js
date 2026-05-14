@@ -3828,28 +3828,28 @@ function buildFallbackReflection(payload = getReflectionPayload()) {
   const accuracy = summary.accuracy > 1 ? summary.accuracy / 100 : summary.accuracy || 0;
   if (currentLanguage === "zh") {
     const statusSummary = accuracy >= 0.7
-      ? `你目前更容易通过结构、模式和取舍来理解问题。你的优势不是单纯记住答案，而是在变化情境中找到可解释的线索。当前需要留意的是 ${weakTag}：这类问题可能要求你暂时放下过早的判断，进入更不完整、更有摩擦的现实。下一步最有价值的探索，不是追求更高分，而是让知识地图从熟悉区域走向更难被框住的边界。`
-      : `你目前处在一种广角探索状态：正在把零散问题转化成可观察的知识模式。你的优势是愿意接触不同场景，但当前盲区可能是判断链条还不够稳定，尤其在 ${weakTag} 这类问题上容易停留在第一反应。下一步可以继续探索 ${topDomain}，同时让自己进入一些不够确定的题目，因为那里更容易显现真正的成长方向。`;
-    const nextDirection = `继续探索 ${topDomain}，并穿插 ${weakTag} 相关问题，让地图保持开放。`;
+      ? `你很少在混乱里停留太久。你会把问题推向结构、模式和取舍，让它变得可读。${weakTag} 可能是需要慢一点的地方：先进入现实，再整理现实。下一步不是追求更完整的解释，而是让自己靠近不够整齐的问题。`
+      : `你正在把零散问题慢慢变成可观察的模式。你愿意跨场景，但判断有时还停在第一反应，尤其靠近 ${weakTag} 时更明显。继续探索 ${topDomain}。也保留一些不确定的题目，让地图显示你还没真正进入的地方。`;
+    const nextDirection = `继续探索 ${topDomain}。同时进入一些 ${weakTag} 相关问题，不急着把它们整理干净。`;
     return {
       summary: statusSummary,
-      primaryPattern: `你倾向于从 ${topDomain} 中寻找结构，而不是停留在表面答案。`,
-      blindSpot: `盲点可能在 ${weakTag}：它要求你更接近不完整的现实。`,
+      primaryPattern: `你会从 ${topDomain} 里寻找秩序。混乱出现时，你很快开始重组它。`,
+      blindSpot: `${weakTag} 可能暴露一个盲点：你还没完全进入，就已经开始解释。`,
       nextDirection,
-      uncomfortableTruth: "最有用的进步可能来自进入不够整齐的问题，而不是继续优化熟悉框架。",
+      uncomfortableTruth: "最有用的进步，可能不是更好的框架。是更早进入不够理想的现实。",
       source: "local-fallback",
     };
   }
-  const nextDirection = `Continue with ${topDomain}, while mixing in adjacent domains so the atlas stays broad rather than narrow.`;
+  const nextDirection = `Continue with ${topDomain}, but include some ${weakTag} questions before they feel ready to organize.`;
   const statusSummary = accuracy >= 0.7
-    ? `You currently approach knowledge through structure, patterns, and tradeoffs. Your strongest signal is not memorizing answers, but turning changing situations into something legible. The area to watch is ${weakTag}: these questions may ask you to stay closer to uncertainty before organizing it too quickly. Your next useful move is not simply a higher score, but entering less polished territory where your knowledge map has to stretch.`
-    : `You are currently in a wide-angle exploration state: turning scattered questions into visible knowledge patterns. Your strength is willingness to cross contexts, but the blind spot may be an unfinished chain of judgment, especially around ${weakTag}. Continue with ${topDomain}, but deliberately include questions that feel less tidy. Those edges are where MapKAI can show a more honest growth direction.`;
+    ? `You rarely stay inside confusion for long. You move upward, toward structure, patterns, and tradeoffs, until the situation becomes legible. ${weakTag} may be where you need to slow down. Enter the problem first. Organize it later.`
+    : `You are still turning scattered situations into a visible pattern. You cross contexts easily, but judgment sometimes stays close to the first reaction, especially around ${weakTag}. Continue with ${topDomain}. Leave some untidy questions unfinished for a while.`;
   return {
     summary: statusSummary,
-    primaryPattern: `You tend to search for structure through ${topDomain}, rather than stay with surface answers.`,
-    blindSpot: `The blind spot sits near ${weakTag}: it asks you to stay closer to unfinished reality.`,
+    primaryPattern: `You look for order through ${topDomain}. When things get messy, you begin redesigning the mess.`,
+    blindSpot: `${weakTag} may expose the gap: you can start explaining before you have fully entered the situation.`,
     nextDirection,
-    uncomfortableTruth: "The useful growth may come from entering imperfect reality sooner, not refining familiar frameworks longer.",
+    uncomfortableTruth: "The useful growth may not be a better framework. It may be entering imperfect reality sooner.",
     source: "local-fallback",
   };
 }
@@ -3900,40 +3900,73 @@ function buildDeepReflectionPrompt(output = reflectionOutput) {
 MapKAI Current Knowledge Status:
 ${output?.summary || ""}
 
-IMPORTANT:
-The first section is the most important part of the entire response.
+The first section is the most important part.
 
-Do NOT start with encouragement, politeness, or generic personality descriptions.
+Do not warm up.
+Do not encourage me.
+Do not start with a personality description.
+Do not explain the framework.
 
-Start immediately with one sharp summary under 200 words.
+Start immediately with one sharp opening under 200 words.
 
 The opening must:
 - feel personal immediately
-- identify one deep recurring pattern
-- describe my real behavioral tendency
-- describe how I approach reality, uncertainty, relationships, growth, execution, or decisions
-- include a real tension or contradiction
-- avoid generic self-improvement language
-- avoid praise-first behavior
-- avoid shallow personality-test wording
+- name one recurring pattern that has likely been present for a long time
+- describe what I repeatedly do in real situations
+- include one tension or contradiction
+- create uncomfortable recognition without becoming dramatic
+- leave some space instead of explaining everything
 
-The opening should feel like:
-"someone has quietly observed the same pattern in me for a long time."
+Write the opening like someone has quietly observed the same behavioral pattern for a long time.
 
-The goal of the first 200 words is:
-I should immediately feel:
-"This is uncomfortable because it feels partially true."
+Prefer this kind of rhythm:
+"You repeatedly try to reduce uncertainty through deeper understanding.
+
+Over time,
+understanding the problem
+can start replacing entering the problem."
+
+Or:
+"You rarely remain inside confusion for long.
+
+You move upward,
+toward structure,
+explanation,
+and redesign."
+
+Avoid:
+- "you are thoughtful and analytical"
+- "you possess deep intelligence"
+- "you are standing at the edge of"
+- personality-test wording
+- therapy language
+- motivational language
+- fake wisdom
+- cinematic or mystical phrasing
+- over-polished AI prose
+
+Use behavioral evidence where possible:
+- repeated redesigning
+- repeated optimization
+- repeated reflection loops
+- repeated hesitation before execution
+- repeated abstraction
+- repeated distancing through analysis
+- using structure as emotional stabilization
+
+The goal of the first 200 words:
+I should think, "This is uncomfortable because it feels partially true."
 
 Then analyze in this order:
 
 1. Objective Knowledge Pattern
-Based on my MapKAI status, what kinds of knowledge, thinking styles, or problem types do I naturally gravitate toward?
+Based on my MapKAI status, what kinds of knowledge, thinking styles, or problem types do I repeatedly move toward?
 
 2. Recent Attention Pattern
 Based on our past conversations, what topics, worries, ambitions, tools, projects, or life questions have I repeatedly focused on recently?
 
 3. Repeated Neglected Areas
-What important areas do I seem to avoid, underestimate, postpone, or only discuss abstractly without acting on?
+What important areas do I avoid, underestimate, postpone, redesign, or only discuss abstractly without entering?
 
 4. Core Personal Blind Spots
 Identify my most important recurring weaknesses. Be specific. Do not soften the language too much.
@@ -3945,7 +3978,7 @@ Where might my self-perception not fully match my actual repeated behavior?
 If my current patterns continue for 5-10 years, what future limitation, relationship cost, work pattern, emotional pattern, or life trap might emerge?
 
 7. Improvement Directions
-Give practical behavioral adjustments, not abstract philosophy.
+Give practical behavioral adjustments. Not abstract philosophy.
 
 Rules:
 - Do not flatter me.
@@ -3955,6 +3988,11 @@ Rules:
 - Be direct, serious, and constructive.
 - Treat this as long-term observation, not absolute judgment.
 - Prioritize realism over politeness.
+- Prefer short sentences.
+- Do not explain every observation completely.
+- Let some lines feel slightly unfinished.
+- Avoid sounding like a report, essay, productivity thread, or therapy session.
+- Quiet realism is better than artificial depth.
 
 End with:
 1. My top 3 core weaknesses

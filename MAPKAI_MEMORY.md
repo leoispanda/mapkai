@@ -621,6 +621,49 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Tune Reflection tone toward quiet observation
+
+Status: Ready to commit
+
+Changed:
+
+- Tuned the Cloudflare Workers AI reflection prompt without changing the schema, model, unlock rules, or compact payload.
+- Shifted Workers AI wording toward quiet cognitive observation:
+  - behavioral realism over abstract interpretation
+  - short sentences and cleaner rhythm
+  - less overexplaining
+  - no dramatic, mystical, motivational, poetic, self-help, therapy, ranking, or diagnosis tone
+- Tuned the fixed copyable Deep Reflection Prompt to emphasize:
+  - a sharp opening under 200 words
+  - repeated real-world patterns
+  - contradiction and subtle discomfort
+  - restrained, slightly unfinished lines
+  - less report-like structure and less AI-polished prose
+- Tightened local fallback reflection copy so backend failures still feel concise and observational.
+- Preserved the current Reflection card fields, short Current Knowledge Status, Continue In Personal AI flow, privacy boundary, Founder isolation, and subject-code hiding.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `node --check functions/api/reflection.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed quiet-observation tone constraints appear in Workers AI prompt, root/public scripts, and inline root/public HTML.
+- Mocked `functions/api/reflection.js` with fake `env.AI.run(...)` and confirmed the five-field reflection JSON still returns successfully with the tuned prompt.
+- Browser verification on `http://127.0.0.1:3000/explore` confirmed the mobile-width Explore page still renders and normal-user DOM does not expose Founder reflection debug, subject source, or metadata debug text.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Strengthen Deep Reflection Prompt template
 
 Status: Ready to commit
