@@ -621,6 +621,33 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Reduce large page heading scale
+
+Status: Ready to commit
+
+Changed:
+
+- Reduced oversized Home hero heading scale.
+- Reduced global page `h1` scale for Map, Categories, Learning, and detail pages.
+- Reduced mobile `h1` scale so page titles feel less overwhelming on phones.
+- Preserved layout, navigation, quiz logic, contact logic, visitor counter, Founder mode, and categories.
+- Synchronized root and public style files.
+
+Verified:
+
+- Root/public `styles.css` sync check.
+- `git diff --check`
+- Browser verification confirmed local Home still renders.
+- Browser verification confirmed navigation from `/` to `/categories` still works.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Inline front-end script for production routing recovery
 
 Status: Ready to commit
