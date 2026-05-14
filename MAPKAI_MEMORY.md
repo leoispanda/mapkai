@@ -621,6 +621,48 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Refine homepage reflection flow and product positioning
+
+Status: Ready to commit
+
+Changed:
+
+- Simplified the homepage Hero to a calmer entry point:
+  - `Map your knowledge with AI.`
+  - `As AI generates more answers, understanding yourself may quietly become more important.`
+  - `Start Exploring`
+- Added a minimalist homepage `Quiet observations from exploration` section with short reflection snippets.
+- Reduced navigation emphasis on Categories and Learning while preserving those routes.
+- Refined Explore opening copy toward exploration:
+  - `Answer one situation at a time.`
+  - `Your map and reflection become clearer as exploration accumulates.`
+- Changed Reflection output so the short summary remains visible first and detailed fields move behind `Expand Full Reflection`.
+- Tuned About page wording away from platform/startup language toward calm exploration and self-understanding.
+- Preserved Founder mode, Workers AI reflection generation, question flow, routes, D1 APIs, visitor counter, contact system, multilingual support, and existing public assets.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed homepage Hero, reflection snippets, Explore opening, About wording, and `Expand Full Reflection` appear in root/public files.
+- Browser verification confirmed homepage Hero, reflective subline, `Start Exploring` CTA, and snippets render at `http://127.0.0.1:3000/`.
+- Browser verification confirmed `/explore`, `/map`, `/about`, `/categories`, and `/learning` routes load.
+- Browser verification confirmed Explore opening copy renders and no normal-user Founder reflection debug or subject source text appears.
+- Source verification confirmed Reflection details are rendered behind a `<details class="reflection-details">` expand/collapse control.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Add OG cover image metadata for social sharing
 
 Status: Ready to commit
