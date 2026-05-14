@@ -621,6 +621,53 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Refocus site around Explore and Personal AI loop
+
+Status: Ready to commit
+
+Changed:
+
+- Refocused product positioning around `Explore -> Knowledge Reflection -> Continue In Personal AI -> Better Self-Awareness -> Return To Explore`.
+- Simplified the homepage above the fold to:
+  - MapKAI
+  - `Navigate your knowledge before navigating AI.`
+  - one supporting sentence
+  - `Start Exploring`
+- Added `/about` as a calm manifesto / atlas preface page.
+- Added `About` to navigation and kept `Explore` visually highlighted as the primary action.
+- Moved long-form product explanation out of Home and into About.
+- Repositioned Categories as cognitive domains that explain how each field tends to think.
+- Repositioned Learning as cognitive expansion directions instead of courses.
+- Reworded Explore challenge labels away from quiz/exam language:
+  - `Current Exploration`
+  - `Knowledge Exploration`
+  - `Explored patterns`
+- Preserved Explore route, Map route, shuffle logic, milestones, Grand Slam, Founder isolation, Workers AI compact reflection, and language switching.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- `node --check functions/api/reflection.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- Mocked `functions/api/reflection.js` with fake `env.AI.run(...)` and confirmed tightened reflection JSON shape.
+- Browser verification confirmed Home is minimal and routes into Explore.
+- Browser verification confirmed `/about` renders the manifesto/preface content.
+- Browser verification confirmed `/explore` keeps the question flow and generates the concise Reflection card.
+- Browser verification confirmed normal public routes do not show Founder-only debug/source content.
+- Mobile viewport verification at `390x844` confirmed Home, About, and Explore render primary content and navigation.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Tighten reflection into briefing card
 
 Status: Ready to commit
