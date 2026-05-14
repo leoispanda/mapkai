@@ -621,6 +621,44 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Restructure around Explore loop
+
+Status: Ready to commit
+
+Changed:
+
+- Added `/explore` as the primary product behavior route.
+- Moved the live question-answering mount into Explore while preserving the existing quiz engine functions, shuffled full-pool question flow, milestones, Grand Slam, language switching, metadata, and map progress state.
+- Preserved `/map` as a separate knowledge territory visualization page connected to the same progress state.
+- Updated Home, Map, Categories, category detail, field, and Learning CTAs to funnel users toward Explore.
+- Added unlockable Reflection inside Explore after 15 answered questions.
+- Reflection generation is manual only through `Generate My Knowledge Reflection` / `生成我的知识画像`.
+- Reflection sends only answer summary/distribution data to a future `/api/reflection` backend endpoint and falls back to local rule-based generation if unavailable.
+- Kept question ids, subject source, payload debug, and subject distributions visible only in Founder mode.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- `git diff --check`
+- Browser verification confirmed `/explore` renders the active question flow and Reflection panel.
+- Browser verification confirmed answering questions still works through the existing challenge buttons.
+- Browser verification confirmed `/map` keeps the canvas visualization and no longer owns the quiz card.
+- Browser verification confirmed `/map` and `/categories` funnel users into Explore.
+- Browser verification confirmed Reflection unlocks after 15 answered questions and generates only after the manual CTA click, using local fallback when `/api/reflection` is unavailable.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Add q7-q12 for subjects 01-10 and pure shuffle pool
 
 Status: Ready to commit

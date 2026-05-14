@@ -301,6 +301,14 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.route-cta {
+  display: flex;
+  width: min(1180px, 100%);
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px auto 0;
+}
+
 .module-card,
 .category-card,
 .passport-panel,
@@ -743,6 +751,10 @@ canvas {
   margin: 28px auto 0;
 }
 
+.explore-page .map-challenge {
+  margin-top: 34px;
+}
+
 .challenge-panel {
   display: block;
   margin-top: 18px;
@@ -754,6 +766,66 @@ canvas {
   background: rgba(255, 250, 240, 0.82);
   box-shadow: var(--shadow);
   padding: 18px;
+}
+
+.reflection-panel {
+  display: grid;
+  width: min(1180px, 100%);
+  grid-template-columns: minmax(260px, 0.75fr) minmax(320px, 1.25fr);
+  gap: 18px;
+  margin: 22px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(255, 250, 240, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.reflection-panel.is-locked {
+  background: rgba(255, 250, 240, 0.52);
+  color: var(--muted);
+}
+
+.reflection-panel.is-unlocked {
+  border-color: rgba(15, 107, 87, 0.32);
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.9), rgba(237, 244, 233, 0.78));
+}
+
+.reflection-panel .button {
+  margin-top: 12px;
+}
+
+.reflection-output {
+  display: grid;
+  gap: 12px;
+}
+
+.reflection-output article {
+  border-left: 3px solid rgba(15, 107, 87, 0.36);
+  padding-left: 14px;
+}
+
+.reflection-output h3 {
+  margin: 0 0 4px;
+  color: var(--green-dark);
+  font-size: 1rem;
+}
+
+.reflection-output p {
+  margin: 0;
+}
+
+.reflection-debug {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
+
+.reflection-debug pre {
+  overflow: auto;
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(23, 32, 27, 0.08);
+  white-space: pre-wrap;
 }
 
 .answer-grid button {
@@ -1101,6 +1173,7 @@ canvas {
   .path-type-grid,
   .category-preview,
   .split-layout,
+  .reflection-panel,
   .challenge-panel,
   .field-layout {
     grid-template-columns: 1fr;

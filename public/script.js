@@ -44,34 +44,38 @@ const masteryLabels = {
 
 const uiText = {
   en: {
+    navExplore: "Explore",
     navMap: "Map",
     navCategories: "Categories",
     navLearning: "Learning",
     homeEyebrow: "MAP knowledge with AI",
-    homeTitle: "Map knowledge into paths you can actually follow.",
-    homeCopy: "MapKAI helps you turn scattered knowledge into clear maps, structured categories, and guided learning paths.",
-    homePrimary: "Explore the Map",
-    homeLearning: "View Learning Paths",
-    homeCategories: "Browse Categories",
-    coreEyebrow: "Three core modules",
-    coreTitle: "A simple structure for exploring knowledge.",
-    mapCardTitle: "Map - See the knowledge landscape",
-    mapCardCopy: "Understand the big picture before choosing what to learn.",
+    homeTitle: "Explore knowledge until patterns become visible.",
+    homeCopy: "MapKAI helps you answer real-world questions, reveal knowledge patterns, and unlock thoughtful reflection.",
+    homePrimary: "Start Exploring",
+    homeLearning: "View Knowledge Map",
+    homeCategories: "Browse Domains",
+    coreEyebrow: "Core exploration loop",
+    coreTitle: "Explore, answer, reveal, reflect.",
+    exploreCardTitle: "Explore - Answer questions",
+    exploreCardCopy: "Begin the active exploration loop with pattern-recognition questions.",
+    exploreCardLink: "Start exploring",
+    mapCardTitle: "Map - See revealed territory",
+    mapCardCopy: "Watch your knowledge world light up as exploration progresses.",
     mapCardLink: "Open map",
-    categoriesCardTitle: "Categories - Understand each field",
-    categoriesCardCopy: "Explore structured fields and see how knowledge areas connect.",
+    categoriesCardTitle: "Categories - Choose domains",
+    categoriesCardCopy: "Scan exploration domains, then continue into the question flow.",
     categoriesCardLink: "Browse categories",
     learningCardTitle: "Learning - Follow a guided path",
-    learningCardCopy: "Follow guided learning paths that help you move from first understanding to clearer explanation and stronger mastery.",
+    learningCardCopy: "Turn revealed patterns into next steps for learning.",
     learningCardLink: "View paths",
     howEyebrow: "How it works",
     howTitle: "How MapKAI works",
-    howOneTitle: "See the landscape",
-    howOneCopy: "Explore the full knowledge map and understand the big picture.",
-    howTwoTitle: "Choose a field",
-    howTwoCopy: "Dive into structured categories and see how each field connects.",
-    howThreeTitle: "Follow a path",
-    howThreeCopy: "Move from curiosity to guided learning with practical next steps.",
+    howOneTitle: "Answer questions",
+    howOneCopy: "Start with real-world situations, tradeoffs, and knowledge patterns.",
+    howTwoTitle: "Reveal patterns",
+    howTwoCopy: "Your answers light up regions of the knowledge map over time.",
+    howThreeTitle: "Unlock reflection",
+    howThreeCopy: "After enough exploration, generate a calm knowledge reflection.",
     audienceEyebrow: "For learners",
     audienceTitle: "Who MapKAI is for",
     studentTitle: "Students",
@@ -97,8 +101,8 @@ const uiText = {
     mapEyebrow: "General Knowledge Map",
     mapTitle: "The ocean is unknown. The land is what you can explain.",
     mapCopy: "In MapKAI, the ocean represents what you have not explored yet. The land represents what you understand well enough to explain. Learning paths help you move from ocean to land.",
-    goCategories: "Go to categories",
-    goLearning: "Go to learning",
+    goCategories: "Continue Exploring",
+    goLearning: "Browse Domains",
     challengeEyebrow: "Knowledge challenge",
     challengeTitle: "Answer questions to light up the map.",
     challengeCopy: "Answer one question at a time. The map will light up as your knowledge grows from ocean into snow mountain, land, and green land.",
@@ -131,6 +135,23 @@ const uiText = {
     startNewRound: "Start a new round",
     correctInSubject: "Correct answers in this hidden subject",
     currentMapState: "Current map state",
+    exploreEyebrow: "Explore",
+    exploreTitle: "Answer questions to reveal your knowledge patterns.",
+    exploreCopy: "Explore is the active MapKAI loop: answer one question at a time, reveal progress across the atlas, and unlock reflection after enough exploration.",
+    startExploring: "Start Exploring",
+    viewKnowledgeMap: "View Knowledge Map",
+    exploreThisDomain: "Explore This Domain",
+    reflectionLockedEyebrow: "Reflection locked",
+    reflectionUnlockedEyebrow: "Reflection unlocked",
+    reflectionTitle: "Knowledge Reflection",
+    reflectionLockedCopy: (answered, remaining) => `${answered} answered. Answer ${remaining} more questions to unlock reflection.`,
+    reflectionUnlockedCopy: "You have explored enough to generate a knowledge reflection. It only runs when you choose it.",
+    generateReflection: "Generate My Knowledge Reflection",
+    reflectionStrengths: "Knowledge strengths",
+    reflectionBlindSpots: "Possible blind spots",
+    reflectionStyle: "Thinking style",
+    reflectionDirection: "Recommended exploration direction",
+    reflectionDebug: "Founder reflection debug",
     categoriesEyebrow: "Knowledge Classification System",
     categoriesTitle: "Eleven categories, one clear structure.",
     categoriesCopy: "Explore the knowledge structure behind MapKAI. Each category shows what the field covers and how it connects to other areas of knowledge.",
@@ -170,34 +191,38 @@ const uiText = {
     thanks: "Thanks for visiting MapKAI.",
   },
   zh: {
+    navExplore: "探索",
     navMap: "地图",
     navCategories: "分类",
     navLearning: "学习路径",
     homeEyebrow: "用 AI 绘制知识地图",
-    homeTitle: "把知识整理成可以跟随的路径。",
-    homeCopy: "MapKAI 帮助你把零散的知识，整理成清晰的地图、分类系统和可以跟随的学习路径。",
-    homePrimary: "探索地图",
-    homeLearning: "查看学习路径",
-    homeCategories: "浏览分类",
-    coreEyebrow: "三个核心模块",
-    coreTitle: "用简单结构开始探索知识。",
-    mapCardTitle: "地图 - 看见知识全景",
-    mapCardCopy: "先理解整体，再决定从哪里开始学习。",
+    homeTitle: "持续探索，直到知识模式变得可见。",
+    homeCopy: "MapKAI 帮助你回答真实世界的问题、看见知识模式，并解锁有温度的知识画像。",
+    homePrimary: "开始探索",
+    homeLearning: "查看知识地图",
+    homeCategories: "浏览领域",
+    coreEyebrow: "核心探索循环",
+    coreTitle: "探索、回答、显现、反思。",
+    exploreCardTitle: "探索 - 回答问题",
+    exploreCardCopy: "从模式识别问题开始，进入主动探索循环。",
+    exploreCardLink: "开始探索",
+    mapCardTitle: "地图 - 看见已显现的领域",
+    mapCardCopy: "随着探索推进，看见你的知识世界逐步点亮。",
     mapCardLink: "打开地图",
-    categoriesCardTitle: "分类 - 理解每个领域",
-    categoriesCardCopy: "查看结构化领域，并理解知识之间如何连接。",
+    categoriesCardTitle: "分类 - 选择探索领域",
+    categoriesCardCopy: "浏览知识领域，然后继续进入答题探索。",
     categoriesCardLink: "浏览分类",
     learningCardTitle: "学习 - 跟随一条路径",
-    learningCardCopy: "沿着学习路径，从初步理解走向清楚解释和更熟练掌握。",
+    learningCardCopy: "把已经显现的知识模式，转化为下一步学习方向。",
     learningCardLink: "查看路径",
     howEyebrow: "如何使用",
     howTitle: "MapKAI 如何工作",
-    howOneTitle: "看见全景",
-    howOneCopy: "先浏览完整的知识地图，理解大方向。",
-    howTwoTitle: "选择领域",
-    howTwoCopy: "进入结构化分类，看看每个领域如何连接。",
-    howThreeTitle: "跟随路径",
-    howThreeCopy: "把好奇心变成有步骤的学习行动。",
+    howOneTitle: "回答问题",
+    howOneCopy: "从真实场景、取舍和知识模式开始。",
+    howTwoTitle: "显现模式",
+    howTwoCopy: "你的回答会逐步点亮知识地图中的区域。",
+    howThreeTitle: "解锁反思",
+    howThreeCopy: "完成足够探索后，手动生成一份平静的知识画像。",
     audienceEyebrow: "适合谁",
     audienceTitle: "谁适合使用 MapKAI",
     studentTitle: "学生",
@@ -223,8 +248,8 @@ const uiText = {
     mapEyebrow: "通用知识地图",
     mapTitle: "海洋是未知，陆地是你能解释的知识。",
     mapCopy: "在 MapKAI 里，海洋代表你还没有探索的知识；陆地代表你已经能解释的理解。学习路径会帮助你一步步从海洋走向陆地。",
-    goCategories: "去分类",
-    goLearning: "去学习路径",
+    goCategories: "继续探索",
+    goLearning: "浏览领域",
     challengeEyebrow: "知识挑战",
     challengeTitle: "回答问题，点亮地图。",
     challengeCopy: "一次回答一道题。随着理解加深，地图会从未探索的知识海洋，逐渐点亮为雪山、陆地和绿地。",
@@ -257,6 +282,23 @@ const uiText = {
     startNewRound: "开启新一轮",
     correctInSubject: "当前隐藏领域答对数",
     currentMapState: "当前地图状态",
+    exploreEyebrow: "探索",
+    exploreTitle: "通过回答问题，看见你的知识模式。",
+    exploreCopy: "Explore 是 MapKAI 的主动循环：一次回答一道题，在地图上显现进度，并在足够探索后解锁反思。",
+    startExploring: "开始探索",
+    viewKnowledgeMap: "查看知识地图",
+    exploreThisDomain: "探索这个领域",
+    reflectionLockedEyebrow: "反思未解锁",
+    reflectionUnlockedEyebrow: "反思已解锁",
+    reflectionTitle: "知识画像",
+    reflectionLockedCopy: (answered, remaining) => `已完成 ${answered} 题。再回答 ${remaining} 题即可解锁知识画像。`,
+    reflectionUnlockedCopy: "你已经完成足够探索，可以生成知识画像。它只会在你手动点击时生成。",
+    generateReflection: "生成我的知识画像",
+    reflectionStrengths: "知识优势",
+    reflectionBlindSpots: "可能的盲区",
+    reflectionStyle: "思考风格",
+    reflectionDirection: "建议探索方向",
+    reflectionDebug: "Founder 反思调试",
     categoriesEyebrow: "知识分类系统",
     categoriesTitle: "十一个知识领域，一套清晰结构。",
     categoriesCopy: "探索 MapKAI 背后的知识结构。每个分类都会说明它覆盖什么，以及它如何连接到其他知识领域。",
@@ -2969,6 +3011,8 @@ let challengePoolIndex = 0;
 let lastTitleModalAt = 0;
 let activeTitleModalStats = null;
 let challengeRoundComplete = false;
+let reflectionOutput = null;
+let reflectionStatus = "idle";
 let founderMessages = [];
 let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
 
@@ -3185,6 +3229,7 @@ function setLanguage(language) {
 
 function applyLanguage() {
   updateLanguageButtons();
+  setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText('.nav-links a[data-route="/learning"]', t("navLearning"));
@@ -3196,9 +3241,9 @@ function applyLanguage() {
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
   setText("#core-modules-title", t("coreTitle"));
-  setAllText(".module-strip .module-card h3", [t("mapCardTitle"), t("categoriesCardTitle"), t("learningCardTitle")]);
-  setAllText(".module-strip .module-card p", [t("mapCardCopy"), t("categoriesCardCopy"), t("learningCardCopy")]);
-  setAllText(".module-strip .module-card a", [t("mapCardLink"), t("categoriesCardLink"), t("learningCardLink")]);
+  setAllText(".module-strip .module-card h3", [t("exploreCardTitle"), t("mapCardTitle"), t("categoriesCardTitle"), t("learningCardTitle")]);
+  setAllText(".module-strip .module-card p", [t("exploreCardCopy"), t("mapCardCopy"), t("categoriesCardCopy"), t("learningCardCopy")]);
+  setAllText(".module-strip .module-card a", [t("exploreCardLink"), t("mapCardLink"), t("categoriesCardLink"), t("learningCardLink")]);
 
   setText("#how-title", t("howTitle"));
   setText('[aria-labelledby="how-title"] .eyebrow', t("howEyebrow"));
@@ -3213,12 +3258,16 @@ function applyLanguage() {
   setText(".home-page > .preview-band .eyebrow", t("categoryBandEyebrow"));
   setText(".home-page > .preview-band h2", t("categoryBandTitle"));
   setText(".home-page > .preview-band p:not(.eyebrow)", t("categoryBandCopy"));
-  setText(".home-page > .preview-band .button", t("browseCategories"));
+  setText(".home-page > .preview-band .button", t("startExploring"));
 
   setText("#why-title", t("whyTitle"));
   setText('[aria-labelledby="why-title"] .eyebrow', t("whyEyebrow"));
   setAllText(".why-copy > p", [t("whyP1"), t("whyP2"), t("whyP3"), t("whyP4")]);
   setAllText(".idea-grid span", [t("whyMap"), t("whyK"), t("whyAI")]);
+
+  setText(".explore-page > .section-heading .eyebrow", t("exploreEyebrow"));
+  setText(".explore-page > .section-heading h1", t("exploreTitle"));
+  setText(".explore-page > .section-heading p:not(.eyebrow)", t("exploreCopy"));
 
   setText(".map-page .intro-copy .eyebrow", t("mapEyebrow"));
   setText(".map-page .intro-copy h1", t("mapTitle"));
@@ -3248,7 +3297,16 @@ function applyLanguage() {
   setText(".learning-page .preview-band .eyebrow", t("learningBandEyebrow"));
   setText(".learning-page .preview-band h2", t("learningBandTitle"));
   setText(".learning-page .preview-band p:not(.eyebrow)", t("learningBandCopy"));
-  setText(".learning-page .preview-band .button", t("browseCategories"));
+  setText(".learning-page .preview-band .button", t("startExploring"));
+
+  document.querySelectorAll('.route-cta .button.primary[href="/explore"]').forEach((target) => {
+    target.textContent = t("startExploring");
+  });
+  document.querySelectorAll('.route-cta .button.secondary[href="/map"]').forEach((target) => {
+    target.textContent = t("viewKnowledgeMap");
+  });
+  const categoryDetailExplore = document.querySelector('.category-page .route-cta .button.primary[href="/explore"]');
+  if (categoryDetailExplore) categoryDetailExplore.textContent = t("exploreThisDomain");
 
   document.querySelectorAll(".contact-section").forEach((section) => {
     section.querySelector(".eyebrow").textContent = t("contactEyebrow");
@@ -3276,6 +3334,7 @@ function applyLanguage() {
   if (document.body.classList.contains("founder-mode")) loadFounderMessages();
   renderVisitStats();
   renderChallenge();
+  renderReflectionPanel();
   renderKnowledgeTitleModal();
 }
 
@@ -3305,6 +3364,7 @@ function goToRoute(route, replace = false) {
     const linkRoute = link.dataset.route;
     const isCurrent =
       linkRoute === visibleTarget ||
+      (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning"));
     link.classList.toggle("is-current", isCurrent);
@@ -3503,6 +3563,140 @@ function renderKnowledgeTitleStatus() {
   </div>`;
 }
 
+function getReflectionUnlockTarget() {
+  return 15;
+}
+
+function isReflectionUnlocked() {
+  return getTotalAnsweredQuestions() >= getReflectionUnlockTarget();
+}
+
+function getAnswerDistributions() {
+  const emptySummary = {
+    difficulty: {},
+    mapState: {},
+    domains: {},
+    correct: 0,
+    missed: 0,
+  };
+  return challengeHistory.reduce((summary, entry) => {
+    const difficulty = entry.question?.difficulty || "unknown";
+    const mapState = entry.question?.unlocksToward || "unknown";
+    const domainTitle = getCategoryTitle(getCategory(entry.subjectCode) || {}) || "Knowledge domain";
+    summary.difficulty[difficulty] = (summary.difficulty[difficulty] || 0) + 1;
+    summary.mapState[mapState] = (summary.mapState[mapState] || 0) + 1;
+    summary.domains[domainTitle] = (summary.domains[domainTitle] || 0) + 1;
+    if (entry.correct) summary.correct += 1;
+    else summary.missed += 1;
+    return summary;
+  }, emptySummary);
+}
+
+function getReflectionPayload() {
+  const stats = getKnowledgeTitleStats();
+  return {
+    answered: stats.answered,
+    accuracy: stats.accuracy,
+    distributions: getAnswerDistributions(),
+    language: currentLanguage,
+  };
+}
+
+function getTopDistributionKey(distribution, fallback) {
+  const entries = Object.entries(distribution || {});
+  if (!entries.length) return fallback;
+  return entries.sort((a, b) => b[1] - a[1])[0][0];
+}
+
+function buildFallbackReflection(payload = getReflectionPayload()) {
+  const topDomain = getTopDistributionKey(payload.distributions.domains, currentLanguage === "zh" ? "多个知识领域" : "several knowledge domains");
+  const topMapState = getTopDistributionKey(payload.distributions.mapState, "snow");
+  const accuracy = payload.accuracy || 0;
+  if (currentLanguage === "zh") {
+    return {
+      strengths: accuracy >= 70
+        ? `你已经能在不同场景中稳定识别知识模式，尤其是在 ${topDomain} 的探索中表现清晰。`
+        : `你已经开始建立跨领域的知识触感，能从日常场景中捕捉问题背后的结构。`,
+      blindSpots: topMapState === "green"
+        ? "你可以继续留意那些看起来熟悉、但需要更深解释的复杂问题。"
+        : "可能的盲区在于把初步判断推进到更完整的解释链条。先不用急着追求正确率，重点是看见模式如何形成。",
+      style: accuracy >= 70
+        ? "你的思考风格偏向稳健的模式识别，适合继续增加跨领域题目来测试迁移能力。"
+        : "你的思考风格更像探索型扫描：先接触广阔场景，再逐渐整理出稳定判断。",
+      direction: `下一步建议继续探索 ${topDomain}，同时穿插其他领域的问题，让知识地图保持开放而不偏窄。`,
+      source: "local-fallback",
+    };
+  }
+  return {
+    strengths: accuracy >= 70
+      ? `You are starting to recognize patterns steadily across changing situations, especially around ${topDomain}.`
+      : "You are building a useful exploratory base: noticing structure inside everyday situations before forcing a conclusion.",
+    blindSpots: topMapState === "green"
+      ? "Your next blind spot may be familiar-looking questions that still require deeper explanation."
+      : "A possible blind spot is moving from a first good instinct into a fuller chain of explanation. For now, pattern visibility matters more than a score feeling.",
+    style: accuracy >= 70
+      ? "Your thinking style looks like steady pattern recognition. You may benefit from more cross-domain questions that test transfer."
+      : "Your thinking style looks exploratory and scanning-oriented: you gather signals broadly, then gradually organize them into clearer judgment.",
+    direction: `Continue with ${topDomain}, but keep mixing in other domains so the atlas stays broad rather than narrow.`,
+    source: "local-fallback",
+  };
+}
+
+async function generateKnowledgeReflection() {
+  if (!isReflectionUnlocked() || reflectionStatus === "loading") return;
+  reflectionStatus = "loading";
+  renderReflectionPanel();
+  const payload = getReflectionPayload();
+  try {
+    const response = await fetch("/api/reflection", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || !data.reflection) throw new Error(data.error || "Reflection API unavailable");
+    reflectionOutput = { ...data.reflection, source: "backend" };
+  } catch (error) {
+    console.info("Reflection API unavailable; using local fallback.", error);
+    reflectionOutput = buildFallbackReflection(payload);
+  }
+  reflectionStatus = "ready";
+  renderReflectionPanel();
+}
+
+function renderReflectionPanel() {
+  const target = document.getElementById("reflectionPanel");
+  if (!target) return;
+  const answered = getTotalAnsweredQuestions();
+  const remaining = Math.max(0, getReflectionUnlockTarget() - answered);
+  const unlocked = isReflectionUnlocked();
+  const output = reflectionOutput;
+  target.classList.toggle("is-locked", !unlocked);
+  target.classList.toggle("is-unlocked", unlocked);
+  target.innerHTML = `
+    <div>
+      <p class="eyebrow">${unlocked ? t("reflectionUnlockedEyebrow") : t("reflectionLockedEyebrow")}</p>
+      <h2>${t("reflectionTitle")}</h2>
+      <p>${unlocked ? t("reflectionUnlockedCopy") : t("reflectionLockedCopy", answered, remaining)}</p>
+      ${unlocked ? `<button class="button primary" type="button" data-generate-reflection ${reflectionStatus === "loading" ? "disabled" : ""}>${t("generateReflection")}</button>` : ""}
+    </div>
+    ${output ? `<div class="reflection-output">
+      <article><h3>${t("reflectionStrengths")}</h3><p>${escapeHtml(output.strengths || "")}</p></article>
+      <article><h3>${t("reflectionBlindSpots")}</h3><p>${escapeHtml(output.blindSpots || "")}</p></article>
+      <article><h3>${t("reflectionStyle")}</h3><p>${escapeHtml(output.style || "")}</p></article>
+      <article><h3>${t("reflectionDirection")}</h3><p>${escapeHtml(output.direction || "")}</p></article>
+    </div>` : ""}
+    <details class="founder-only reflection-debug">
+      <summary>${t("reflectionDebug")}</summary>
+      <pre>${escapeHtml(JSON.stringify({
+        source: output?.source || "not-generated",
+        payload: getReflectionPayload(),
+        questionIds: challengeHistory.map((entry) => entry.question.id),
+        subjectSources: challengeHistory.map((entry) => entry.subjectCode),
+      }, null, 2))}</pre>
+    </details>`;
+}
+
 function completeChallengeRound() {
   if (challengeRoundComplete) return;
   challengeRoundComplete = true;
@@ -3533,9 +3727,12 @@ function startNewChallengeRound() {
   lastTitleModalAt = 0;
   challengeRoundComplete = false;
   activeTitleModalStats = null;
+  reflectionOutput = null;
+  reflectionStatus = "idle";
   setRandomChallengeQuestion();
   renderKnowledgeTitleModal();
   renderChallenge();
+  renderReflectionPanel();
   drawKnowledgeMap();
 }
 
@@ -3716,6 +3913,7 @@ function handleChallengeClick(event) {
     currentAnsweredQuestion = answeredQuestion;
   }
   renderChallenge();
+  renderReflectionPanel();
   if (!challengeRoundComplete) maybeShowKnowledgeTitleModal();
 }
 
@@ -3926,6 +4124,10 @@ document.addEventListener("click", (event) => {
     closeKnowledgeTitleModal();
     return;
   }
+  if (event.target.closest("[data-generate-reflection]")) {
+    generateKnowledgeReflection();
+    return;
+  }
   if (event.target.closest("[data-answer-key], [data-review-direction], [data-start-new-round]")) {
     handleChallengeClick(event);
     return;
@@ -3963,6 +4165,7 @@ renderPassport("pathPassport", modulePassports.path);
 renderField();
 renderLearning();
 renderChallenge();
+renderReflectionPanel();
 drawKnowledgeMap();
 applyLanguage();
 const initialRoute = normalizeRoute(window.location.pathname);
