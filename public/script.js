@@ -150,12 +150,8 @@ const uiText = {
     contactTitle: "Need help or want to leave a message?",
     contactCopy: "If you need to contact MapKAI, please leave a message here.",
     messageBoard: "Message board",
-    nameLabel: "Name",
-    namePlaceholder: "Your name",
-    emailLabel: "Email",
-    emailPlaceholder: "you@example.com",
     messagePlaceholder: "Tell us what you want to ask, suggest, or build with MapKAI.",
-    leaveMessage: "Send message",
+    leaveMessage: "Submit",
     messageSaved: "Thank you. Your message has been received.",
     messageError: "Sorry, your message could not be sent. Please try again.",
     invalidEmail: "Please enter a valid email address.",
@@ -280,12 +276,8 @@ const uiText = {
     contactTitle: "需要帮助，或想留下想法？",
     contactCopy: "如果你想联系 MapKAI，可以在这里留言。",
     messageBoard: "留言板",
-    nameLabel: "姓名",
-    namePlaceholder: "你的名字",
-    emailLabel: "邮箱",
-    emailPlaceholder: "you@example.com",
     messagePlaceholder: "告诉我们你想询问、建议或一起构建什么。",
-    leaveMessage: "发送留言",
+    leaveMessage: "提交",
     messageSaved: "谢谢，你的留言已收到。",
     messageError: "抱歉，留言发送失败，请稍后再试。",
     invalidEmail: "请输入有效的邮箱地址。",
@@ -806,7 +798,38 @@ const foundationPathZh = [
 ];
 
 const subjectQuestionSeeds = {
-  "00": { subject: "Generic programmes and qualifications", theme: "basic life skills", prompts: ["At the supermarket, Emma compares cereal by price per kilo. What everyday superpower is she using?", "A friend learns apps, recipes, and cheaper bills but says he is not a learner. What is the hidden lesson?", "Jin writes a clear refund email for a broken washing machine. Why did writing matter?", "A calculator can split a bill, but why is understanding percentages still useful?", "Why can learning new tools fast be more valuable than knowing one tool today?", "Why are classes in forms, letters, and budgets still real education?"] },
+  "00": {
+    subject: "Generic programmes and qualifications",
+    theme: "basic life skills",
+    prompts: [
+      "At the supermarket, Emma compares cereal by price per kilo. What everyday superpower is she using?",
+      "A friend learns apps, recipes, and cheaper bills but says he is not a learner. What is the hidden lesson?",
+      "Jin writes a clear refund email for a broken washing machine. Why did writing matter?",
+      "A calculator can split a bill, but why is understanding percentages still useful?",
+      "Why can learning new tools fast be more valuable than knowing one tool today?",
+      "Why are classes in forms, letters, and budgets still real education?",
+      "You save articles, podcasts, and videos about many topics, but when someone asks what you learned, everything feels disconnected. What is the most useful next step?",
+      "A friend says they want to become better at everything: money, health, communication, and technology. They start ten habits at once and quit after one week. What was probably missing?",
+      "Someone watches a documentary about climate, reads a book about economics, and follows news about AI. They feel these topics are unrelated. What question would help them think more deeply?",
+      "You keep switching between learning languages, coding, design, and finance. Each topic feels interesting, but none of them becomes usable. What is the likely issue?",
+      "A parent wants their child to learn music, math, sports, and public speaking. The child becomes tired and loses curiosity. What is the better way to think about learning?",
+      "A team creates a shared knowledge folder, but after a few months nobody can find anything. Files are saved by random names and old versions are mixed with new ones. What is the deeper problem?"
+    ],
+    explanations: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "When knowledge is scattered, the problem is often not lack of information but lack of structure. Grouping ideas helps you see patterns, gaps, and useful connections.",
+      "Trying to improve everything at once creates overload. A good learning path helps people choose what comes first, what depends on what, and where progress is actually possible.",
+      "Broad knowledge becomes more powerful when people look for shared systems, such as resources, incentives, technology, behavior, and long-term consequences.",
+      "Exploring many topics can be valuable, but knowledge becomes usable only when some ideas are practiced, connected, and deepened enough to apply.",
+      "Learning is not only about adding more subjects. People need enough energy, feedback, and time to turn exposure into real understanding and confidence.",
+      "A storage tool does not create knowledge organization by itself. Teams need shared naming, grouping, version habits, and a clear idea of how information should be retrieved."
+    ]
+  },
   "01": { subject: "Education", theme: "learning and teaching", prompts: ["You forget someone's name seconds after hearing it. What trick helps most?", "A parent holds a bike seat, then lets go for longer and longer moments. What is happening?", "Sara rereads notes; Tom explains aloud from memory. Who finds weak spots faster?", "A language app reviews words right before forgetting. What is the learning trick?", "Why do weekly phishing simulations beat one long warning lecture?", "Why do examples and structure help beginners facing a blank page?"] },
   "02": { subject: "Arts and Humanities", theme: "meaning and interpretation", prompts: ["A movie villain enters with cold lighting and low music. Why do you feel nervous?", "A cafe changes its menu font and cakes feel homemade. What changed?", "A tiny blue patch in an old painting used a once-costly pigment. What does that reveal?", "Two readers find different evidence-based meanings in one story. What is the best takeaway?", "A simple chair becomes interesting when linked to postwar housing. Why?", "A documentary uses real interviews but very different music and lighting. What should viewers notice?"] },
   "03": { subject: "Social Sciences, Journalism and Information", theme: "people, groups, and information", prompts: ["A free-coffee rumor spreads before anyone checks the cafe page. What should happen first?", "One person yawns and others soon yawn too. What does this show?", "A clickbait headline works even though the story is ordinary. Why?", "A sign says most people take stairs and stair use rises. Why might that work?", "Two polls ask about parks with different wording and get different results. What is happening?", "An algorithm shows more angry posts because they get comments. What risk appears?"] },
@@ -826,7 +849,13 @@ const questionOptions = {
     ["Clear communication can turn frustration into action", "Longer messages always get better results", "Emotional anger is the best strategy"],
     ["Understanding helps you know what to calculate", "Calculators replace understanding", "Percentages are only useful for bankers"],
     ["Because adaptability often outlasts one specific tool", "Because software skills are worthless", "Because interviews reward vague answers"],
-    ["Foundational skills can increase independence and participation", "Only university courses count as learning", "Adults cannot benefit from basic courses"]
+    ["Foundational skills can increase independence and participation", "Only university courses count as learning", "Adults cannot benefit from basic courses"],
+    ["Group the ideas into a simple knowledge map", "Collect even more materials before thinking", "Delete everything and start from zero"],
+    ["A learning path with priorities", "A stronger motivational quote", "More apps to track progress"],
+    ["What hidden systems connect these topics?", "Which topic is the most fashionable?", "Which one can be ignored first?"],
+    ["You are sampling knowledge without building depth", "You chose topics that are too practical", "You need to learn only one topic forever"],
+    ["Balance exposure, energy, and meaningful progress", "Add more classes before motivation drops", "Focus only on activities that look impressive"],
+    ["There is no shared classification habit", "The folder needs a more colorful icon", "People should stop saving documents"]
   ],
   "01": [
     ["Repeat and use the name soon after hearing it", "Pretend you heard it clearly", "Wait until tomorrow to think about it"],
@@ -911,7 +940,36 @@ const questionOptions = {
 };
 
 const zhSubjectQuestionSeeds = {
-  "00": { prompts: ["在超市里，Emma 按每公斤价格比较麦片。她用到的日常能力是什么？", "朋友学会了用 App、看菜谱、省账单，却说自己没有在学习。这里藏着什么？", "Jin 给坏掉的洗衣机写了一封清楚的退款邮件。为什么写清楚很重要？", "计算器可以帮你分账，为什么理解百分比仍然有用？", "为什么快速学会新工具，有时比只会一个工具更重要？", "为什么表格、信件和预算这类基础课，也是真正的教育？"] },
+  "00": {
+    prompts: [
+      "在超市里，Emma 按每公斤价格比较麦片。她用到的日常能力是什么？",
+      "朋友学会了用 App、看菜谱、省账单，却说自己没有在学习。这里藏着什么？",
+      "Jin 给坏掉的洗衣机写了一封清楚的退款邮件。为什么写清楚很重要？",
+      "计算器可以帮你分账，为什么理解百分比仍然有用？",
+      "为什么快速学会新工具，有时比只会一个工具更重要？",
+      "为什么表格、信件和预算这类基础课，也是真正的教育？",
+      "你收藏了很多文章、播客和视频，主题也很多，但别人问你学到了什么时，你觉得内容都很零散。最有用的下一步是什么？",
+      "一个朋友说自己想全面提升：理财、健康、沟通、技术都想学。他同时开始十个习惯，一周后全放弃了。最可能缺少的是什么？",
+      "一个人看了气候纪录片、读了经济学书，又关注 AI 新闻。他觉得这些主题彼此无关。哪个问题能帮助他想得更深入？",
+      "你不断在语言、编程、设计和理财之间切换。每个主题都很有趣，但最后都没有真正用起来。最可能的问题是什么？",
+      "一位家长希望孩子同时学音乐、数学、运动和演讲。孩子越来越累，也慢慢失去好奇心。更好的学习思路是什么？",
+      "一个团队建了共享知识文件夹，但几个月后谁也找不到东西。文件名很随意，新旧版本混在一起。更深层的问题是什么？"
+    ],
+    explanations: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "知识零散时，问题常常不是信息不够，而是缺少结构。把想法分组，能帮助你看见规律、空白和有用的连接。",
+      "同时改进所有事情，很容易造成负担。好的学习路径会帮助人判断什么先学、什么依赖什么，以及哪里最容易产生真实进步。",
+      "广泛知识真正有价值时，往往不是因为内容多，而是能看到背后的共同系统，比如资源、激励、技术、行为和长期影响。",
+      "探索多个主题本身有价值，但知识要变得可用，需要有一些内容被练习、连接，并深入到可以实际应用的程度。",
+      "学习不是简单地增加科目。人需要精力、反馈和时间，才能把接触过的内容变成真正的理解和信心。",
+      "存储工具本身不会自动形成知识组织。团队需要共同的命名、分组、版本管理习惯，以及清楚的信息检索方式。"
+    ]
+  },
   "01": { prompts: ["刚听完别人的名字几秒就忘了。什么方法最有帮助？", "家长先扶着自行车座，再慢慢放手更久。这是在做什么？", "Sara 反复看笔记；Tom 合上笔记讲给自己听。谁更快发现薄弱点？", "语言 App 会在你快忘之前复习单词。它用了什么学习方法？", "为什么每周一次钓鱼邮件模拟，比一场很长的安全讲座更有效？", "新手面对空白页面时，为什么例子和结构会帮上忙？"] },
   "02": { prompts: ["电影反派出场时，冷色灯光和低沉音乐让你紧张。为什么？", "咖啡馆换了菜单字体，蛋糕忽然显得更像手作。改变了什么？", "一幅古画里一小块蓝色用了当年很贵的颜料。这说明什么？", "两位读者从同一个故事里读出不同但有证据的意思。最好怎么看？", "一把普通椅子和战后住房联系起来后，为什么变得有意思？", "纪录片用了真实采访，却配了不同音乐和灯光。观众应该注意什么？"] },
   "03": { prompts: ["免费咖啡的传言还没人核实就传开了。第一步应该做什么？", "一个人打哈欠，旁边的人也跟着打哈欠。这说明什么？", "一个标题很吸引人，但内容很普通。它为什么有效？", "告示说多数人会走楼梯，后来走楼梯的人变多了。为什么可能有效？", "两个关于公园的调查，只是问法不同，结果就不同。发生了什么？", "平台因为愤怒内容评论多，就推更多愤怒帖子。风险是什么？"] },
@@ -931,7 +989,13 @@ const zhQuestionOptions = {
     ["清楚表达能把不满变成行动", "信息越长效果越好", "愤怒才是最佳策略"],
     ["理解能帮你知道该算什么", "计算器可以取代理解", "百分比只对银行家有用"],
     ["适应能力常常比某个工具更持久", "软件技能没有价值", "面试喜欢模糊回答"],
-    ["基础能力能提升独立性和参与感", "只有大学课程才算学习", "成年人学基础课没用"]
+    ["基础能力能提升独立性和参与感", "只有大学课程才算学习", "成年人学基础课没用"],
+    ["把这些想法整理成一个简单的知识地图", "先继续收集更多材料再说", "全部删掉，从零开始"],
+    ["一个有优先级的学习路径", "一句更有力量的励志名言", "更多记录进度的 App"],
+    ["这些主题背后有什么共同系统？", "哪个主题现在最流行？", "哪个主题可以先忽略？"],
+    ["你在浅尝知识，但没有形成深度", "你选的主题太实用了", "你以后只能学一个主题"],
+    ["平衡接触面、精力和真正的进步", "趁动力下降前再多加几门课", "只选看起来最有面子的活动"],
+    ["团队没有共同的分类习惯", "文件夹图标不够醒目", "大家以后不应该保存文件"]
   ],
   "01": [
     ["听到后尽快重复并使用这个名字", "假装自己听清了", "等到明天再想"],
@@ -1027,6 +1091,8 @@ function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
   const zhPrompt = zhSubjectQuestionSeeds[code].prompts[index];
   const answer = optionSet[0];
   const zhAnswer = zhOptionSet[0];
+  const explanation = subjectQuestionSeeds[code].explanations?.[index] || answer + ". This answer turns the everyday scene into a practical knowledge pattern.";
+  const zhExplanation = zhSubjectQuestionSeeds[code].explanations?.[index] || zhAnswer + "。这个答案把日常场景变成了一个可以理解的知识模式。";
   const optionOrder = getOptionOrder(index);
   return {
     id: code + "-q" + (index + 1),
@@ -1038,26 +1104,33 @@ function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
       question: prompt,
       options: optionOrder.map((optionIndex) => optionSet[optionIndex]),
       answer,
-      explanation: answer + ". This answer turns the everyday scene into a practical knowledge pattern. Powered by MapKAI - map your knowledge with AI.",
+      explanation: explanation + " Powered by MapKAI - map your knowledge with AI.",
     },
     zh: {
       question: zhPrompt,
       options: optionOrder.map((optionIndex) => zhOptionSet[optionIndex]),
       answer: zhAnswer,
-      explanation: zhAnswer + "。这个答案把日常场景变成了一个可以理解的知识模式。Powered by MapKAI - map your knowledge with AI.",
+      explanation: zhExplanation + " Powered by MapKAI - map your knowledge with AI.",
     },
   };
 }
 
+const questionDifficultyPattern = ["easy", "easy", "medium", "medium", "hard", "hard"];
+const questionUnlockPattern = ["snow", "snow", "land", "land", "green", "green"];
+
 const questionBank = Object.fromEntries(Object.entries(subjectQuestionSeeds).map(([code, seed]) => {
-  const difficulties = ["easy", "easy", "medium", "medium", "hard", "hard"];
-  const unlocks = ["snow", "snow", "land", "land", "green", "green"];
   return [code, {
     subject: seed.subject,
     status: "draft",
     unlockRule: { snow: 2, land: 4, green: 6 },
     theme: seed.theme,
-    questions: seed.prompts.map((prompt, index) => makeQuestion(code, prompt, difficulties[index], unlocks[index], index))
+    questions: seed.prompts.map((prompt, index) => makeQuestion(
+      code,
+      prompt,
+      questionDifficultyPattern[index % questionDifficultyPattern.length],
+      questionUnlockPattern[index % questionUnlockPattern.length],
+      index
+    ))
   }];
 }));
 
@@ -1143,14 +1216,6 @@ function contactSectionTemplate() {
         </div>
       </div>
       <form class="contact-form" data-contact-form>
-        <label>
-          <span>${t("nameLabel")}</span>
-          <input name="name" type="text" maxlength="120" placeholder="${t("namePlaceholder")}" />
-        </label>
-        <label>
-          <span>${t("emailLabel")}</span>
-          <input name="email" type="email" maxlength="180" placeholder="${t("emailPlaceholder")}" />
-        </label>
         <label>
           <span>${t("messageBoard")}</span>
           <textarea name="message" rows="4" maxlength="2000" placeholder="${t("messagePlaceholder")}" required></textarea>
@@ -1414,13 +1479,7 @@ function applyLanguage() {
     section.querySelector("h2").textContent = t("contactTitle");
     section.querySelector("div > p:not(.eyebrow)").textContent = t("contactCopy");
     const labels = section.querySelectorAll("label span");
-    if (labels[0]) labels[0].textContent = t("nameLabel");
-    if (labels[1]) labels[1].textContent = t("emailLabel");
-    if (labels[2]) labels[2].textContent = t("messageBoard");
-    const nameInput = section.querySelector('input[name="name"]');
-    const emailInput = section.querySelector('input[name="email"]');
-    if (nameInput) nameInput.placeholder = t("namePlaceholder");
-    if (emailInput) emailInput.placeholder = t("emailPlaceholder");
+    if (labels[0]) labels[0].textContent = t("messageBoard");
     section.querySelector("textarea").placeholder = t("messagePlaceholder");
     section.querySelector("button").textContent = t("leaveMessage");
   });

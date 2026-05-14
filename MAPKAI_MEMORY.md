@@ -589,3 +589,65 @@ Commit:
 Push status:
 
 - Push requested by founder; final pushed commit hash is reported in the Codex final response.
+
+### 2026-05-13 - Add subject 00 question batch q7-q12
+
+Status: Ready to commit
+
+Changed:
+
+- Added six new `subject 00` bilingual quiz questions, `00-q7` through `00-q12`.
+- Added optional per-question explanations so new question batches can provide richer explanations without repeating the MapKAI brand line.
+- Kept automatic difficulty/unlock assignment internal, so future uploaded question batches do not need to include difficulty.
+- Preserved quiz flow, random shuffle, title system, Grand Slam, Founder mode, Contact, D1, and visitor counter logic.
+- Synchronized root and public files.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `script.js` sync check.
+- `git diff --check`
+- Question bank validation confirmed 11 subjects, 72 total questions, and 12 questions in `subject 00`.
+- Every English and Chinese answer matches one of its three options.
+- New `00-q7` through `00-q12` IDs are generated in order.
+- New custom explanations keep the unified MapKAI brand suffix.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
+### 2026-05-14 - Simplify public message board form
+
+Status: Ready to commit
+
+Changed:
+
+- Removed public Name and Email inputs from the Contact message board form.
+- Kept the public Contact form as a single message box with a Submit button.
+- Kept D1-backed message submission through `POST /api/contact-message`.
+- Continued sending empty optional `name` and `email` fields so the existing D1 table/API remain compatible.
+- Preserved Founder mode message display, visitor counter, quiz logic, question bank, and categories.
+- Synchronized root and public script files.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `script.js` sync check.
+- `git diff --check`
+- Public Contact form no longer renders Name or Email inputs.
+- Public Contact button now reads `Submit` / `提交`.
+- Contact submission still posts to `POST /api/contact-message` with message, page path, and language.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
