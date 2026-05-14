@@ -621,6 +621,38 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Update About opening heading
+
+Status: Ready to commit
+
+Changed:
+
+- Updated only the About page opening `h1`.
+- Replaced `Most people are not lacking information. They are lacking structure.` with `Map your knowledge with AI.`
+- Replaced the Chinese About opening translation with the same requested line for consistency.
+- Kept About page structure, styling, CTA, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed the About opening `h1` is `Map your knowledge with AI.` in root/public HTML and scripts.
+- Source verification confirmed the old About opening line is no longer present in root/public HTML or scripts.
+- Browser verification on `http://127.0.0.1:3000/about` confirmed the selected About heading now shows `Map your knowledge with AI.` and no longer shows the old line.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Update About positioning lines
 
 Status: Ready to commit
