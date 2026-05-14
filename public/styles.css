@@ -188,8 +188,8 @@ main {
 }
 
 .home-page .hero h1 {
-  font-size: clamp(2.35rem, 5.2vw, 5.35rem);
-  line-height: 1;
+  font-size: clamp(2.15rem, 4.5vw, 4.65rem);
+  line-height: 1.04;
 }
 
 .home-page .section-heading h2,
@@ -222,8 +222,8 @@ h3 {
 
 h1 {
   max-width: 930px;
-  font-size: clamp(2.55rem, 5.8vw, 6.1rem);
-  line-height: 0.98;
+  font-size: clamp(2.25rem, 4.6vw, 4.85rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -1133,7 +1133,7 @@ canvas {
   }
 
   h1 {
-    font-size: clamp(2.2rem, 11vw, 3.65rem);
+    font-size: clamp(1.95rem, 9.5vw, 3.05rem);
   }
 
   .field-list,

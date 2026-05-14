@@ -621,6 +621,36 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Tighten heading scale and bust CSS cache
+
+Status: Ready to commit
+
+Changed:
+
+- Reduced large page headings another small step after review.
+- Updated the stylesheet URL from `styles.css?v=20260513-bilingual-home` to `styles.css?v=20260514-heading-scale` so Cloudflare and browsers fetch the newest CSS.
+- Preserved layout, navigation, quiz logic, contact logic, visitor counter, Founder mode, and categories.
+- Synchronized root and public `index.html`.
+- Synchronized root and public style files.
+
+Verified:
+
+- Root/public `styles.css` sync check.
+- Root/public `index.html` sync check.
+- Confirmed CSS URL uses `styles.css?v=20260514-heading-scale`.
+- Confirmed old `styles.css?v=20260513-bilingual-home` reference is gone from root/public HTML.
+- `git diff --check`
+- Browser verification confirmed local `/map` renders.
+- Browser verification confirmed navigation from `/map` to `/categories` still works.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Reduce large page heading scale
 
 Status: Ready to commit
