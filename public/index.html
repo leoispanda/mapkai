@@ -83,14 +83,6 @@
       </section>
 
       <section class="page explore-page" id="explore" data-page="/explore">
-        <div class="section-heading">
-          <p class="eyebrow">Explore</p>
-          <h1>Answer questions to reveal your knowledge patterns.</h1>
-          <p>
-            Explore is the active MapKAI loop: answer one question at a time, reveal progress
-            across the atlas, and unlock reflection after enough exploration.
-          </p>
-        </div>
         <section class="map-challenge" aria-labelledby="challenge-title">
           <div class="section-heading compact">
             <p class="eyebrow">Knowledge challenge</p>
@@ -3546,10 +3538,6 @@ function applyLanguage() {
   setAllText(".why-copy > p", [t("whyP1"), t("whyP2"), t("whyP3"), t("whyP4")]);
   setAllText(".idea-grid span", [t("whyMap"), t("whyK"), t("whyAI")]);
 
-  setText(".explore-page > .section-heading .eyebrow", t("exploreEyebrow"));
-  setText(".explore-page > .section-heading h1", t("exploreTitle"));
-  setText(".explore-page > .section-heading p:not(.eyebrow)", t("exploreCopy"));
-
   setText(".about-page .about-opening .eyebrow", t("aboutEyebrow"));
   setText(".about-page .about-opening h1", t("aboutOpening"));
   setAllText(".about-page .about-block h2", [
@@ -4310,23 +4298,16 @@ function renderChallenge() {
     return;
   }
 
-  if (challengeReviewIndex !== null) {
-    currentAnsweredQuestion = challengeHistory[challengeReviewIndex] || null;
-  }
-
-  if (currentAnsweredQuestion) {
-    activeChallengeSubject = currentAnsweredQuestion.subjectCode;
-    activeChallengeQuestion = currentAnsweredQuestion.question;
-  } else if (!activeChallengeQuestion) {
+  currentAnsweredQuestion = null;
+  challengeReviewIndex = null;
+  if (!activeChallengeQuestion) {
     setRandomChallengeQuestion();
-    currentAnsweredQuestion = null;
   }
 
   const subject = questionBank[activeChallengeSubject];
   const state = challengeState[activeChallengeSubject];
   const question = activeChallengeQuestion;
   const questionContent = getQuestionContent(question);
-  const progress = masteryLevels[getMasteryFromCorrect(activeChallengeSubject)];
   const subjectTitle = getSubjectTitle(activeChallengeSubject);
 
   if (!subject || !state || !question) {
@@ -4338,24 +4319,6 @@ function renderChallenge() {
     return;
   }
 
-  const isAnswered = currentAnsweredQuestion?.question.id === question.id;
-  const hasPreviousReview = challengeReviewIndex !== null && challengeReviewIndex > 0;
-  const hasNextReview = challengeReviewIndex !== null && challengeReviewIndex < challengeHistory.length - 1;
-  const reviewControls = isAnswered ? `
-    <div class="challenge-nav">
-      <button class="button secondary" type="button" data-review-direction="previous" ${hasPreviousReview ? "" : "disabled"}>${t("previous")}</button>
-      <button class="button primary" type="button" data-review-direction="next">${t("next")}</button>
-    </div>` : "";
-  const feedback = isAnswered ? `
-    <p class="challenge-feedback ${currentAnsweredQuestion.correct ? "is-correct" : "is-wrong"}">
-      ${currentAnsweredQuestion.correct ? t("correct") : t("notYet")} ${currentAnsweredQuestion.correct ? t("correctFeedback") : t("wrongFeedback")}
-    </p>
-    ${currentAnsweredQuestion.correct ? "" : `<article class="answer-explanation">
-      <h3>${t("whyMatters")}</h3>
-      <p>${questionContent.explanation}</p>
-    </article>`}
-    ${reviewControls}` : "";
-
   cardTarget.innerHTML = `
     <p class="eyebrow">${t("currentExploration")} -> ${getMasteryLabel(question.unlocksToward)}</p>
     <h2>${t("challengeHeading")}</h2>
@@ -4363,16 +4326,12 @@ function renderChallenge() {
     <div class="answer-grid">
       ${questionContent.options.map((option, displayIndex) => {
         const optionKey = String(question.optionOrder[displayIndex]);
-        const selected = isAnswered && optionKey === currentAnsweredQuestion.selectedKey;
-        const correct = isAnswered && optionKey === "0";
-        const stateClass = correct ? " is-correct" : selected ? " is-wrong" : "";
-        return `<button type="button" data-answer-key="${optionKey}" class="${stateClass.trim()}" ${isAnswered ? "disabled" : ""}>${option}</button>`;
+        return `<button type="button" data-answer-key="${optionKey}">${option}</button>`;
       }).join("")}
     </div>
     <div class="challenge-status">${t("exploredPatterns")}: ${getTotalAnsweredQuestions()} · ${t("currentMapState")}: ${getMasteryLabel(getMasteryFromCorrect(activeChallengeSubject))}</div>
     ${renderKnowledgeTitleStatus()}
-    <div class="founder-note internal-code">Source: ${activeChallengeSubject} · ${subjectTitle}</div>
-    ${feedback}`;
+    <div class="founder-note internal-code">Source: ${activeChallengeSubject} · ${subjectTitle}</div>`;
 }
 
 function handleChallengeClick(event) {
@@ -4382,23 +4341,8 @@ function handleChallengeClick(event) {
     return;
   }
 
-  const reviewButton = event.target.closest("[data-review-direction]");
-  if (reviewButton) {
-    const direction = reviewButton.dataset.reviewDirection;
-    if (direction === "previous" && challengeReviewIndex !== null && challengeReviewIndex > 0) {
-      challengeReviewIndex -= 1;
-    } else if (direction === "next" && challengeReviewIndex !== null && challengeReviewIndex < challengeHistory.length - 1) {
-      challengeReviewIndex += 1;
-    } else if (direction === "next") {
-      moveToNextChallengeQuestion();
-    }
-    renderChallenge();
-    drawKnowledgeMap();
-    return;
-  }
-
   const answerButton = event.target.closest("[data-answer-key]");
-  if (!answerButton || currentAnsweredQuestion) return;
+  if (!answerButton) return;
   const question = activeChallengeQuestion;
   const state = challengeState[activeChallengeSubject];
   if (!question || !state) return;
@@ -4413,11 +4357,8 @@ function handleChallengeClick(event) {
   drawKnowledgeMap();
   if (getTotalAnsweredQuestions() >= getTotalQuestionCount()) {
     completeChallengeRound();
-  } else if (correct) {
-    moveToNextChallengeQuestion();
   } else {
-    challengeReviewIndex = challengeHistory.length - 1;
-    currentAnsweredQuestion = answeredQuestion;
+    moveToNextChallengeQuestion();
   }
   renderChallenge();
   renderReflectionPanel();
@@ -4639,7 +4580,7 @@ document.addEventListener("click", (event) => {
     copyDeepReflectionPrompt();
     return;
   }
-  if (event.target.closest("[data-answer-key], [data-review-direction], [data-start-new-round]")) {
+  if (event.target.closest("[data-answer-key], [data-start-new-round]")) {
     handleChallengeClick(event);
     return;
   }

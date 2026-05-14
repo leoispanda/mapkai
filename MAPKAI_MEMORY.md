@@ -621,6 +621,43 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Smooth Explore answering flow
+
+Status: Ready to commit
+
+Changed:
+
+- Removed the duplicated top Explore intro block so the page starts closer to the active exploration card.
+- Kept the compact `Current Exploration` section as the primary Explore header.
+- Changed the answer flow so correct and incorrect answers both record progress and immediately advance to the next question.
+- Removed the interrupted review behavior from the active Explore card:
+  - no answer explanation pause
+  - no `Previous` / `Next` review controls in the main flow
+  - no disabled answered-state buttons after selection
+- Preserved answer history internally for milestones, reflection summaries, map progress, and future Founder/debug uses.
+- Preserved shuffle logic, full-pool non-repeat, milestones, Grand Slam, Reflection unlock, map progress, language switching, and Founder isolation.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js`
+- `node --check public/script.js`
+- Root/public `index.html` sync check.
+- Root/public `script.js` sync check.
+- Root/public `styles.css` sync check.
+- `git diff --check`
+- Browser verification confirmed the duplicated Explore intro block is removed.
+- Browser verification confirmed clicking an answer immediately advances to a different question.
+- Browser verification confirmed the main Explore card no longer shows review buttons, explanation pause, or disabled answered-state answer buttons.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Refocus site around Explore and Personal AI loop
 
 Status: Ready to commit
