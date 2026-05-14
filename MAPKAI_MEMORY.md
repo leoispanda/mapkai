@@ -621,6 +621,38 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-14 - Update About positioning lines
+
+Status: Ready to commit
+
+Changed:
+
+- Updated only the About page positioning copy.
+- Replaced `MapKAI = Map Knowledge with AI.` with `Map your knowledge with AI.`
+- Replaced `MapKAI helps people navigate themselves before navigating AI.` with `Navigate your knowledge before navigating AI.`
+- Kept About page structure, styling, CTA, routing, Explore, Map, question bank, Founder mode, stats, contact, and all other functionality unchanged.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Source verification confirmed the new About positioning lines are present in root/public HTML and scripts.
+- Source verification confirmed the old About positioning lines are no longer present in root/public HTML or scripts.
+- Browser verification on `http://127.0.0.1:3000/about` confirmed the About page shows the new lines and no longer shows the old MapKAI definition or navigate-self line.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Simplify homepage Hero copy
 
 Status: Ready to commit
