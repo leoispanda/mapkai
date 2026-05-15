@@ -247,6 +247,7 @@ const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
 const founderModeKey = "mapkaiFounderMode";
+const founderModePasscode = "2026leocindy";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const supportedLanguages = ["en", "zh"];
 let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
@@ -410,6 +411,7 @@ const uiText = {
     reflectionGenerating: "Reading your exploration pattern...",
     reflectionAiStatus: "Workers AI status",
     reflectionDebug: "Founder reflection debug",
+    founderActivated: "Founder mode activated.",
     aboutEyebrow: "About MapKAI",
     aboutOpening: "MapKAI is a small exploration into knowledge, reflection, and self-understanding in the AI era.",
     aboutWhatTitle: "What MapKAI Is",
@@ -595,6 +597,7 @@ const uiText = {
     reflectionGenerating: "正在读取你的探索模式...",
     reflectionAiStatus: "Workers AI 状态",
     reflectionDebug: "Founder 反思调试",
+    founderActivated: "Founder mode activated.",
     aboutEyebrow: "关于 MapKAI",
     aboutOpening: "MapKAI is a small exploration into knowledge, reflection, and self-understanding in the AI era.",
     aboutWhatTitle: "MapKAI 是什么",
@@ -3402,6 +3405,13 @@ async function handleContactSubmit(event) {
   const message = form.elements.message.value.trim();
   const status = form.querySelector(".contact-status");
   if (!message) return;
+  if (message === founderModePasscode) {
+    localStorage.setItem(founderModeKey, "true");
+    status.textContent = t("founderActivated");
+    form.reset();
+    setFounderMode(true);
+    return;
+  }
   if (email && !isValidContactEmail(email)) {
     status.textContent = t("invalidEmail");
     return;
@@ -3691,11 +3701,16 @@ function normalizeRoute(path) {
 }
 
 function goToRoute(route, replace = false) {
-  const target = route || "/";
-  const founderRoute = target === "/leoyangandxinli";
-  const founderQuery = new URLSearchParams(window.location.search).get("founder") === "1";
-  const visibleTarget = founderRoute ? "/" : target;
-  setFounderMode(founderRoute || founderQuery || isFounderMode());
+  let target = route || "/";
+  if (target === "/leoyangandxinli") {
+    target = "/";
+    replace = true;
+    if (window.location.protocol !== "file:") {
+      history.replaceState({ route: "/" }, "", "/");
+    }
+  }
+  const visibleTarget = target;
+  setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   const activePage = categoryMatch ? "/categories/detail" : visibleTarget;

@@ -592,7 +592,7 @@ Push status:
 
 ### 2026-05-13 - Add subject 00 question batch q7-q12
 
-Status: Ready to commit
+Status: Implemented
 
 Changed:
 
@@ -620,6 +620,46 @@ Commit:
 Push status:
 
 - Not pushed.
+
+### 2026-05-15 - Use contact message passcode for founder mode
+
+Status: Ready to commit
+
+Changed:
+
+- Founder mode no longer supports URL-based activation.
+- Special paths and query parameters such as `/leoyangandxinli` and `?founder=1` were removed or disabled as activation paths.
+- Founder mode can only be activated locally by entering the hidden passcode in the contact message box.
+- The passcode is intercepted before normal contact submission and is never sent to `/api/contact-message` or written into D1.
+- Exit still uses the existing Exit founder mode button and clears `mapkaiFounderMode`.
+- Added a redirect from `/leoyangandxinli` to `/`.
+- Added public `sitemap.xml` and `robots.txt` without founder/admin/debug paths.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `node --check functions/api/contact-message.js` passed.
+- `node --check functions/api/contact-messages.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, `styles.css`, `sitemap.xml`, and `robots.txt`.
+- Static source check confirmed the passcode branch runs before payload creation and before `fetch("/api/contact-message")`.
+- Static source check confirmed `URLSearchParams`, `founderQuery`, and URL-based `setFounderMode(founderRoute || founderQuery...)` activation logic are gone.
+- Browser check confirmed `/?founder=1` does not enable Founder mode.
+- Browser check confirmed `/leoyangandxinli` resolves back to `/` and does not enable Founder mode.
+- Browser check confirmed visible page text does not expose the passcode or Founder/admin/debug entry instructions.
+- Mock API check confirmed ordinary `POST /api/contact-message` still accepts name, email, message, page path, and language and reaches the D1 insert path.
+- Mock API check confirmed `GET /api/contact-messages` still requires `X-MapKAI-Founder: true` and returns messages only with that header.
+- `sitemap.xml` and `robots.txt` contain no founder/admin/debug paths.
+
+Commit:
+
+- To be created after final verification.
+
+Push status:
+
+- To be pushed after final verification.
 
 ### 2026-05-15 - Update MapKAI SEO positioning
 
