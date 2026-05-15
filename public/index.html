@@ -59,10 +59,10 @@
         <section class="reflection-snippets" aria-labelledby="reflection-snippets-title">
           <h2 id="reflection-snippets-title">Quiet observations from exploration</h2>
           <div class="snippet-list">
-            <p>你很少真正停留在混乱里。</p>
-            <p>观察本身，<br />有时也会变成一种延迟行动的方法。</p>
-            <p>很多 redesign，<br />并不是因为方向错了。</p>
-            <p>理解问题，<br />开始替代进入问题。</p>
+            <p>You rarely stay inside confusion for long.</p>
+            <p>Observation itself<br />can become a way to delay action.</p>
+            <p>Many redesigns<br />are not proof that the direction was wrong.</p>
+            <p>Understanding the problem<br />can start replacing entering the problem.</p>
           </div>
         </section>
       </section>
@@ -86,6 +86,11 @@
           <section class="about-block">
             <h2>Why Explore Matters</h2>
             <p>Explore is not an intelligence test. It is pattern observation, cognitive exploration, and knowledge mapping.</p>
+          </section>
+          <section class="about-block">
+            <h2>How MapKAI Questions Are Designed</h2>
+            <p>Inspired by UNESCO ISCED-F knowledge classification, MapKAI questions are built around real-world situations, systems, trade-offs, incentives, and everyday reasoning.</p>
+            <p>They are not designed for memorization. Many questions hold more than one reasonable explanation, so the goal is to notice patterns and build clearer mental maps.</p>
           </section>
           <section class="about-block">
             <h2>Reflection Philosophy</h2>
@@ -290,10 +295,10 @@ const uiText = {
     homeCategories: "Browse Domains",
     reflectionSnippetsTitle: "Quiet observations from exploration",
     reflectionSnippets: [
-      "你很少真正停留在混乱里。",
-      "观察本身，\n有时也会变成一种延迟行动的方法。",
-      "很多 redesign，\n并不是因为方向错了。",
-      "理解问题，\n开始替代进入问题。",
+      "You rarely stay inside confusion for long.",
+      "Observation itself\ncan become a way to delay action.",
+      "Many redesigns\nare not proof that the direction was wrong.",
+      "Understanding the problem\ncan start replacing entering the problem.",
     ],
     coreEyebrow: "Core exploration loop",
     coreTitle: "Explore, answer, reveal, reflect.",
@@ -413,6 +418,9 @@ const uiText = {
     aboutAiP2: "Navigate your knowledge before navigating AI.",
     aboutExploreTitle: "Why Explore Matters",
     aboutExploreP1: "Explore is not an intelligence test. It is pattern observation, cognitive exploration, and knowledge mapping.",
+    aboutQuestionDesignTitle: "How MapKAI Questions Are Designed",
+    aboutQuestionDesignP1: "Inspired by UNESCO ISCED-F knowledge classification, MapKAI questions are built around real-world situations, systems, trade-offs, incentives, and everyday reasoning.",
+    aboutQuestionDesignP2: "They are not designed for memorization. Many questions hold more than one reasonable explanation, so the goal is to notice patterns and build clearer mental maps.",
     aboutReflectionTitle: "Reflection Philosophy",
     aboutReflectionP1: "As people grow older and become more socially adapted, they often receive fewer truly honest observations about themselves.",
     aboutReflectionP2: "MapKAI reflections are not judgments. They are structured observations.",
@@ -470,11 +478,11 @@ const uiText = {
     homePrimary: "开始探索",
     homeLearning: "查看知识地图",
     homeCategories: "浏览领域",
-    reflectionSnippetsTitle: "Quiet observations from exploration",
+    reflectionSnippetsTitle: "探索中的安静观察",
     reflectionSnippets: [
       "你很少真正停留在混乱里。",
       "观察本身，\n有时也会变成一种延迟行动的方法。",
-      "很多 redesign，\n并不是因为方向错了。",
+      "很多重新设计，\n并不是因为方向错了。",
       "理解问题，\n开始替代进入问题。",
     ],
     coreEyebrow: "核心探索循环",
@@ -595,6 +603,9 @@ const uiText = {
     aboutAiP2: "Navigate your knowledge before navigating AI.",
     aboutExploreTitle: "为什么 Explore 重要",
     aboutExploreP1: "Explore 不是智力测试。它是模式观察、认知探索和知识地图。",
+    aboutQuestionDesignTitle: "MapKAI 的题目如何设计",
+    aboutQuestionDesignP1: "MapKAI 的题目灵感来自 UNESCO ISCED-F 知识分类，但并不围绕死记硬背展开。它更关注真实情境中的模式、系统、取舍、激励与日常推理。",
+    aboutQuestionDesignP2: "很多问题没有一眼可见的唯一答案。目标不是把人分类，而是帮助你看见隐藏结构，并慢慢建立更清晰的 mental map。",
     aboutReflectionTitle: "反思哲学",
     aboutReflectionP1: "随着人越来越成熟、越来越适应社会，我们反而很少收到真正客观而坦诚的观察。",
     aboutReflectionP2: "MapKAI 的反思不是判断，而是结构化观察。",
@@ -3581,6 +3592,7 @@ function applyLanguage() {
     t("aboutWhatTitle"),
     t("aboutAiTitle"),
     t("aboutExploreTitle"),
+    t("aboutQuestionDesignTitle"),
     t("aboutReflectionTitle"),
     t("aboutBoundaryTitle"),
   ]);
@@ -3590,6 +3602,8 @@ function applyLanguage() {
     t("aboutAiP1"),
     t("aboutAiP2"),
     t("aboutExploreP1"),
+    t("aboutQuestionDesignP1"),
+    t("aboutQuestionDesignP2"),
     t("aboutReflectionP1"),
     t("aboutReflectionP2"),
     t("aboutBoundaryP1"),

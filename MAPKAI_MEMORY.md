@@ -621,6 +621,66 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Add About question design note
+
+Status: Ready to commit
+
+Changed:
+
+- Added a compact About section explaining how MapKAI questions are designed.
+- Positioned the new section after `Why Explore Matters` and before `Reflection Philosophy`.
+- Clarified that questions are inspired by UNESCO ISCED-F knowledge classification and focus on real-world situations, systems, trade-offs, incentives, and pattern recognition.
+- Added English and Chinese localized copy.
+- Preserved existing About content, homepage structure, Explore flow, Reflection generation, Founder mode, routes, and backend integrations.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Source search confirmed the new About section and localized copy exist in root and public files.
+- Browser check confirmed `/about` renders the new question design section before `Reflection Philosophy`.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Pending.
+
+### 2026-05-15 - Align homepage reflection snippets language
+
+Status: Ready to commit
+
+Changed:
+
+- Fixed homepage `Quiet observations from exploration` language mismatch.
+- English mode now shows English observation snippets.
+- Chinese mode now shows Chinese title and Chinese snippets.
+- Replaced mixed `redesign` wording in the Chinese snippet with `重新设计`.
+- Preserved homepage structure, Founder Mode, navigation, Explore flow, Reflection generation, and all backend integrations.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Source search confirmed English mode uses English snippet copy and Chinese mode uses Chinese title/snippet copy.
+- Browser check confirmed the English homepage snippet section shows English-only copy.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-15 - Refine founder mode and focus public experience
 
 Status: Ready to commit
