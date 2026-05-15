@@ -143,7 +143,7 @@ Preferred visual direction:
 - Calm
 - Product-like
 - Slightly playful, but not childish
-- Atlas / knowledge map feeling
+- Knowledge map feeling
 - Educational, but not school-like
 - Clear first-time visitor understanding
 
@@ -621,6 +621,36 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Update MapKAI SEO positioning
+
+Status: Ready to commit
+
+Changed:
+
+- Updated SEO title to `MapKAI - Map Your Knowledge with AI`.
+- Updated meta, Open Graph, and Twitter descriptions to `MapKAI helps you turn scattered knowledge into clear maps, reflection, and learning paths.`
+- Updated the homepage hero title to `Map your knowledge with AI`.
+- Replaced previous map metaphor copy with `clear knowledge maps` / knowledge map language.
+- Renamed the highest exploration title to `Knowledge Map Master`.
+- Synchronized root and public `index.html` and `script.js`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Source search confirmed the old map-metaphor wording is removed from source files and project memory.
+- Browser check confirmed homepage title, meta description, Open Graph, Twitter metadata, and hero H1 match the new positioning.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Pending.
+
 ### 2026-05-15 - Add MapKAI logo assets to website
 
 Status: Ready to commit
@@ -859,7 +889,7 @@ Changed:
 - Added the OG cover image asset at `assets/og-cover.png`.
 - Added the synced OG cover image asset at `public/assets/og-cover.png`.
 - Updated only link preview / SEO metadata text in the document head.
-- Changed `<title>` to `MapKAI - Map your knowledge with AI`.
+- Changed `<title>` to `MapKAI - Map Your Knowledge with AI`.
 - Changed meta description, Open Graph description, and Twitter description to `As AI generates more answers, understanding yourself may quietly become more important.`
 - Added Open Graph image, type, and canonical URL metadata.
 - Added Twitter `summary_large_image` card metadata and image URL.
@@ -1120,7 +1150,7 @@ Changed:
   - `Navigate your knowledge before navigating AI.`
   - one supporting sentence
   - `Start Exploring`
-- Added `/about` as a calm manifesto / atlas preface page.
+- Added `/about` as a calm manifesto / knowledge map preface page.
 - Added `About` to navigation and kept `Explore` visually highlighted as the primary action.
 - Moved long-form product explanation out of Home and into About.
 - Repositioned Categories as cognitive domains that explain how each field tends to think.

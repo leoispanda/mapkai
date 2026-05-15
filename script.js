@@ -51,7 +51,7 @@ const uiText = {
     navLearning: "Learning",
     navAbout: "About",
     homeEyebrow: "",
-    homeTitle: "Map your knowledge with AI.",
+    homeTitle: "Map your knowledge with AI",
     homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
     homePrimary: "Start Exploring",
     homeLearning: "View Knowledge Map",
@@ -147,7 +147,7 @@ const uiText = {
     currentMapState: "Current map state",
     exploreEyebrow: "Explore",
     exploreTitle: "Answer questions to reveal your knowledge patterns.",
-    exploreCopy: "Explore is the active MapKAI loop: answer one question at a time, reveal progress across the atlas, and unlock reflection after enough exploration.",
+    exploreCopy: "Explore is the active MapKAI loop: answer one question at a time, reveal progress across clear knowledge maps, and unlock reflection after enough exploration.",
     startExploring: "Start Exploring",
     viewKnowledgeMap: "View Knowledge Map",
     exploreThisDomain: "Explore This Domain",
@@ -236,7 +236,7 @@ const uiText = {
     navLearning: "学习路径",
     navAbout: "关于",
     homeEyebrow: "",
-    homeTitle: "Map your knowledge with AI.",
+    homeTitle: "Map your knowledge with AI",
     homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
     homePrimary: "开始探索",
     homeLearning: "查看知识地图",
@@ -2999,13 +2999,13 @@ function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
       question: prompt,
       options: optionOrder.map((optionIndex) => optionSet[optionIndex]),
       answer,
-      explanation: explanation + " Powered by MapKAI - map your knowledge with AI.",
+      explanation: explanation + " Powered by MapKAI - Map Your Knowledge with AI.",
     },
     zh: {
       question: zhPrompt,
       options: optionOrder.map((optionIndex) => zhOptionSet[optionIndex]),
       answer: zhAnswer,
-      explanation: zhExplanation + " Powered by MapKAI - map your knowledge with AI.",
+      explanation: zhExplanation + " Powered by MapKAI - Map Your Knowledge with AI.",
     },
   };
 }
@@ -3054,7 +3054,7 @@ const knowledgeTitleRules = {
 };
 const explorerTitleRules = {
   en: [
-    { min: 1000, title: "Atlas Master" },
+    { min: 1000, title: "Knowledge Map Master" },
     { min: 500, title: "Grand Knowledge Navigator" },
     { min: 200, title: "Full-Spectrum Explorer" },
     { min: 100, title: "Knowledge Voyager" },
