@@ -621,6 +621,37 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Add local Knowledge Lens exploration results
+
+Status: Implemented
+
+Changed:
+
+- Added the 20-question `mapkaiKnowledgeLensQuestionsV1` ordinary-user exploration set.
+- Ordinary Explore now uses a once-only local Daily Dilemma + Task Preference flow.
+- Old generated subject quiz bank remains in source for internal/founder continuity, but ordinary users are routed through the new 20-question flow.
+- Removed public correct/wrong behavior from the ordinary flow; choices now map to Knowledge Lens profiles.
+- Added local result generation after 20 answered situations without calling Cloudflare Functions, Workers AI, or D1.
+- Added a Knowledge Lens result page with Most Activated, Occasionally Activated, and Underused Perspectives bar/list sections.
+- Added bilingual local summary text and a copy-to-personal-AI prompt.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Local browser check completed 20 situations, generated the Knowledge Lens Map, and confirmed the copy-to-AI prompt appears.
+
+Commit:
+
+- To be created after final verification.
+
+Push status:
+
+- To be pushed after final verification.
+
 ### 2026-05-15 - Use contact message passcode for founder mode
 
 Status: Ready to commit

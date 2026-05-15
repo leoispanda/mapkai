@@ -356,10 +356,10 @@ const uiText = {
     challengeTitle: "Answer one situation at a time.",
     challengeCopy: "Your map and reflection become clearer as exploration accumulates.",
     challengeHeading: "Knowledge Exploration",
-    challengeCompleteEyebrow: "Challenge complete",
-    challengeCompleteTitle: "The current map is fully lit.",
-    challengeCompleteCopy: "You answered the available questions. Future updates can add more questions inside each subject database without changing this quiz flow.",
-    totalCorrect: "Total correct answers",
+    challengeCompleteEyebrow: "Exploration complete",
+    challengeCompleteTitle: "Your 20 situations are complete.",
+    challengeCompleteCopy: "Generate your local Knowledge Lens Map. MapKAI does not save your result.",
+    totalCorrect: "Total selections",
     correct: "Correct.",
     notYet: "Not yet.",
     correctFeedback: "This answer helped light up the map.",
@@ -385,6 +385,19 @@ const uiText = {
     currentExploration: "Current exploration",
     exploredPatterns: "Explored patterns",
     currentMapState: "Current map state",
+    questionProgress: (answered, total) => `${answered}/${total} situations explored`,
+    generateLensMap: "Generate Knowledge Lens Map",
+    lensResultTitle: "Your Knowledge Lens Map",
+    mostActivatedLenses: "Most Activated Lenses",
+    occasionallyActivatedLenses: "Occasionally Activated",
+    underusedPerspectives: "Underused Perspectives",
+    resultSummaryTitle: "Summary",
+    continueWithOwnAi: "Continue with your own AI",
+    copyPrompt: "Copy Prompt",
+    copiedPrompt: "Copied",
+    resultPrivacyNote: "MapKAI does not save your result. Copy your prompt before leaving.",
+    knowledgeLensSummaryLabel: "Knowledge Lens Summary",
+    actionEnergySummaryLabel: "Action Energy Summary",
     exploreEyebrow: "Explore",
     exploreTitle: "Answer questions to reveal your knowledge patterns.",
     exploreCopy: "Explore is the active MapKAI loop: answer one question at a time, reveal progress across clear knowledge maps, and unlock reflection after enough exploration.",
@@ -542,10 +555,10 @@ const uiText = {
     challengeTitle: "一次进入一个情境。",
     challengeCopy: "随着探索积累，你的地图和反思会逐渐清晰。",
     challengeHeading: "知识探索",
-    challengeCompleteEyebrow: "挑战完成",
-    challengeCompleteTitle: "当前地图已经全部点亮。",
-    challengeCompleteCopy: "你已经回答完现有题目。以后可以继续在对应领域补充题目，而不改变这套答题流程。",
-    totalCorrect: "答对总数",
+    challengeCompleteEyebrow: "探索完成",
+    challengeCompleteTitle: "你已经完成 20 个情境。",
+    challengeCompleteCopy: "生成你的知识视角地图。MapKAI 不保存你的结果。",
+    totalCorrect: "选择总数",
     correct: "答对了。",
     notYet: "还不对。",
     correctFeedback: "这个答案帮助地图继续点亮。",
@@ -571,6 +584,19 @@ const uiText = {
     currentExploration: "当前探索",
     exploredPatterns: "已探索模式",
     currentMapState: "当前地图状态",
+    questionProgress: (answered, total) => `已探索 ${answered}/${total} 个情境`,
+    generateLensMap: "生成知识视角地图",
+    lensResultTitle: "你的知识视角地图",
+    mostActivatedLenses: "最常激活的知识视角",
+    occasionallyActivatedLenses: "偶尔激活的知识视角",
+    underusedPerspectives: "较少调用的视角 / 潜在知识盲区",
+    resultSummaryTitle: "简要总结",
+    continueWithOwnAi: "复制到你的 AI 继续探索",
+    copyPrompt: "一键复制 Prompt",
+    copiedPrompt: "已复制",
+    resultPrivacyNote: "MapKAI 不保存你的结果。离开页面前，请复制你的 Prompt。",
+    knowledgeLensSummaryLabel: "知识视角总结",
+    actionEnergySummaryLabel: "行动能量总结",
     exploreEyebrow: "探索",
     exploreTitle: "通过回答问题，看见你的知识模式。",
     exploreCopy: "Explore 是 MapKAI 的主动循环：一次回答一道题，在地图上显现进度，并在足够探索后解锁反思。",
@@ -3271,7 +3297,307 @@ const questionBank = Object.fromEntries(Object.entries(subjectQuestionSeeds).map
   }];
 }));
 
+function lensProfile(subject, lens, reflectionZh, reflectionEn) {
+  return { subject, lens, reflectionZh, reflectionEn };
+}
+
+const mapkaiKnowledgeLensQuestionsV1 = [
+  {
+    id: "lens-001",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "digital_life",
+    zh: { question: "为什么很多人知道要少刷手机，却还是停不下来？", options: { A: "信息流不断降低继续看的阻力。", B: "短内容不断制造即时反馈。", C: "疲惫时更容易选择低成本刺激。", D: "缺少更好的替代休息方式。" } },
+    en: { question: "Why do many people keep scrolling even when they know they should stop?", options: { A: "Feeds keep reducing the friction to continue.", B: "Short content creates instant feedback loops.", C: "Tired brains prefer low-effort stimulation.", D: "There are not enough better ways to rest." } },
+    optionProfiles: {
+      A: lensProfile("06_digital_systems_ai", "feed_friction_design", "倾向于从信息流、平台机制和数字环境理解行为。", "Tends to understand behavior through feeds, platform mechanisms, and digital environments."),
+      B: lensProfile("05_evidence_patterns", "feedback_loop", "倾向于从反馈循环、行为规律和刺激机制理解问题。", "Tends to understand issues through feedback loops, behavior patterns, and stimulus mechanisms."),
+      C: lensProfile("09_health_recovery", "fatigue_low_effort_stimulation", "倾向于从疲惫、注意力和恢复状态理解行为。", "Tends to understand behavior through fatigue, attention, and recovery state."),
+      D: lensProfile("10_services_experience", "alternative_rest_experience", "倾向于从替代体验、休息方式和用户需求理解问题。", "Tends to understand issues through alternative experiences, rest options, and user needs."),
+    },
+  },
+  {
+    id: "lens-002",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "health_energy",
+    zh: { question: "为什么有人睡够 8 小时，白天还是累？", options: { A: "睡眠质量和生物节律可能不好。", B: "白天小决策和切换太多。", C: "工作和休息边界不清。", D: "环境没有帮助身体恢复。" } },
+    en: { question: "Why can someone sleep 8 hours and still feel tired?", options: { A: "Sleep quality and body rhythm may be poor.", B: "Too many small decisions and switches happen daily.", C: "Work and rest boundaries are unclear.", D: "The environment does not support recovery." } },
+    optionProfiles: {
+      A: lensProfile("09_health_recovery", "sleep_quality_body_rhythm", "倾向于从睡眠质量、生物节律和身体恢复理解问题。", "Tends to understand issues through sleep quality, body rhythm, and physical recovery."),
+      B: lensProfile("05_evidence_patterns", "cognitive_load_hidden_variables", "倾向于从隐藏变量、认知负荷和消耗机制理解问题。", "Tends to understand issues through hidden variables, cognitive load, and energy-drain mechanisms."),
+      C: lensProfile("04_business_management", "boundary_resource_management", "倾向于从边界、资源分配和时间管理理解问题。", "Tends to understand issues through boundaries, resource allocation, and time management."),
+      D: lensProfile("07_engineering_systems", "environment_recovery_design", "倾向于从环境设计、流程和系统条件理解恢复。", "Tends to understand recovery through environmental design, routines, and system conditions."),
+    },
+  },
+  {
+    id: "lens-003",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "ai_work",
+    zh: { question: "为什么团队用了 AI，产出更多了，决策却没变好？", options: { A: "问题定义没有变清楚。", B: "证据标准没有提高。", C: "输出没有进入评审流程。", D: "团队没有沉淀共同方法。" } },
+    en: { question: "Why can AI increase output but not improve decisions?", options: { A: "Problem framing did not become clearer.", B: "Evidence standards did not improve.", C: "Outputs were not built into review processes.", D: "The team did not capture shared methods." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "problem_framing_decision_quality", "倾向于从问题定义、决策质量和价值判断理解 AI 使用。", "Tends to understand AI usage through problem framing, decision quality, and value judgment."),
+      B: lensProfile("05_evidence_patterns", "evidence_standard", "倾向于从证据标准、信息噪音和判断可靠性理解问题。", "Tends to understand issues through evidence standards, information noise, and judgment reliability."),
+      C: lensProfile("07_engineering_systems", "review_workflow", "倾向于从评审流程、责任结构和系统嵌入理解工具价值。", "Tends to understand tool value through review workflows, responsibility structures, and system integration."),
+      D: lensProfile("01_learning_growth", "shared_learning_methods", "倾向于从共同学习、经验沉淀和方法复用理解团队成长。", "Tends to understand team growth through shared learning, experience capture, and reusable methods."),
+    },
+  },
+  {
+    id: "lens-004",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "learning",
+    zh: { question: "为什么很多人学了很多，却判断力没明显提升？", options: { A: "知识没有形成结构。", B: "观点没有经过真实验证。", C: "只记结论，没看证据。", D: "没有变成自己的表达语言。" } },
+    en: { question: "Why do many people learn a lot but not improve their judgment?", options: { A: "Knowledge has not formed a structure.", B: "Ideas have not been tested in reality.", C: "They remember conclusions, not evidence.", D: "They have not turned it into their own language." } },
+    optionProfiles: {
+      A: lensProfile("01_learning_growth", "knowledge_structure", "倾向于从知识结构、概念连接和学习迁移理解成长。", "Tends to understand growth through knowledge structure, concept connection, and learning transfer."),
+      B: lensProfile("07_engineering_systems", "real_world_testing_loop", "倾向于从真实应用、反馈闭环和实践转化理解知识价值。", "Tends to understand knowledge value through real-world application, feedback loops, and practice transfer."),
+      C: lensProfile("05_evidence_patterns", "evidence_reasoning_quality", "倾向于从证据、假设和论证质量理解知识。", "Tends to understand knowledge through evidence, assumptions, and reasoning quality."),
+      D: lensProfile("02_meaning_expression", "language_expression", "倾向于从语言、表达和意义组织理解知识内化。", "Tends to understand knowledge internalization through language, expression, and meaning organization."),
+    },
+  },
+  {
+    id: "lens-005",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "restaurant_service",
+    zh: { question: "为什么餐厅好吃，却让人不想再去？", options: { A: "复购场景不清楚。", B: "服务触点不连贯。", C: "缺少可传播的记忆点。", D: "没有进入社交生活场景。" } },
+    en: { question: "Why can a good restaurant still fail to make people return?", options: { A: "The repeat-use scenario is unclear.", B: "Service touchpoints feel disconnected.", C: "There is no memorable story to share.", D: "It does not fit social life contexts." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "repeat_use_scenario", "倾向于从定位、复购场景和商业匹配理解问题。", "Tends to understand issues through positioning, repeat-use scenarios, and business fit."),
+      B: lensProfile("10_services_experience", "service_touchpoints", "倾向于从服务触点、用户旅程和体验完整性理解问题。", "Tends to understand issues through service touchpoints, user journeys, and experience completeness."),
+      C: lensProfile("02_meaning_expression", "memory_symbol_expression", "倾向于从记忆点、表达符号和叙事理解体验价值。", "Tends to understand experiential value through memory points, expressive symbols, and narrative."),
+      D: lensProfile("03_society_relationships", "social_context_fit", "倾向于从社交场景、关系需求和群体行为理解消费体验。", "Tends to understand consumption experiences through social context, relational needs, and group behavior."),
+    },
+  },
+  {
+    id: "lens-006",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "choice",
+    zh: { question: "为什么选择越多，有时反而越难满意？", options: { A: "比较变量太多。", B: "机会成本变高。", C: "真实需求不清楚。", D: "期待被外界放大。" } },
+    en: { question: "Why can more choices make people less satisfied?", options: { A: "There are too many variables to compare.", B: "Opportunity cost becomes more visible.", C: "Real needs are not clear.", D: "Expectations are amplified by the outside world." } },
+    optionProfiles: {
+      A: lensProfile("05_evidence_patterns", "variable_comparison", "倾向于从变量、比较和判断复杂度理解选择困难。", "Tends to understand choice difficulty through variables, comparison, and judgment complexity."),
+      B: lensProfile("04_business_management", "opportunity_cost", "倾向于从机会成本、资源取舍和价值判断理解选择。", "Tends to understand choices through opportunity cost, trade-offs, and value judgment."),
+      C: lensProfile("00_general_thinking", "real_need_clarity", "倾向于从真实需求、整体判断和情境匹配理解问题。", "Tends to understand issues through real needs, overall judgment, and context fit."),
+      D: lensProfile("03_society_relationships", "social_expectation", "倾向于从社会期待、比较压力和群体影响理解满意感。", "Tends to understand satisfaction through social expectations, comparison pressure, and group influence."),
+    },
+  },
+  {
+    id: "lens-007",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "consumption",
+    zh: { question: "为什么有些贵东西，长期看反而更省钱？", options: { A: "单次使用成本更低。", B: "更容易进入日常使用。", C: "长期看不容易厌倦。", D: "减少重复购买和浪费。" } },
+    en: { question: "Why can expensive things cost less over time?", options: { A: "Lower cost per use.", B: "Fits daily routines better.", C: "Stays satisfying for longer.", D: "Reduces repeat buying and waste." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "cost_per_use", "倾向于从长期成本、使用频率和资源分配理解选择。", "Tends to understand choices through long-term cost, usage frequency, and resource allocation."),
+      B: lensProfile("07_engineering_systems", "routine_fit", "倾向于从使用场景、流程适配和系统稳定性理解价值。", "Tends to understand value through use-case fit, routine integration, and system stability."),
+      C: lensProfile("02_meaning_expression", "lasting_taste", "倾向于从审美、身份和长期生活状态理解价值。", "Tends to understand value through taste, identity, and long-term life state."),
+      D: lensProfile("08_natural_systems_sustainability", "waste_reduction", "倾向于从资源节约、重复消费和长期可持续理解选择。", "Tends to understand choices through resource saving, repeat consumption, and sustainability."),
+    },
+  },
+  {
+    id: "lens-008",
+    subject: "00",
+    questionMode: "knowledge_lens_probe",
+    scenarioType: "work",
+    zh: { question: "为什么一个人很忙，却让人觉得不可靠？", options: { A: "响应很多，交付不清。", B: "工作闭环不稳定。", C: "优先级判断不清。", D: "团队期待没有对齐。" } },
+    en: { question: "Why can a busy person still feel unreliable to others?", options: { A: "They respond often, but deliver unclearly.", B: "Their work loop is unstable.", C: "Their priority judgment is unclear.", D: "Team expectations are not aligned." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "delivery_clarity", "倾向于从交付、责任和结果可见性理解可靠性。", "Tends to understand reliability through delivery, ownership, and visible outcomes."),
+      B: lensProfile("07_engineering_systems", "work_loop_stability", "倾向于从流程闭环、节奏和系统稳定性理解问题。", "Tends to understand issues through workflow loops, rhythm, and system stability."),
+      C: lensProfile("05_evidence_patterns", "priority_signal", "倾向于从信息信号、优先级和判断依据理解问题。", "Tends to understand issues through signals, priorities, and judgment basis."),
+      D: lensProfile("03_society_relationships", "team_expectation_alignment", "倾向于从团队期待、关系结构和协作规范理解问题。", "Tends to understand issues through team expectations, relationship structures, and collaboration norms."),
+    },
+  },
+  {
+    id: "task-001",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "travel",
+    zh: { question: "你和朋友策划周末短途旅行。你最想负责哪件事？", options: { A: "控制预算，判断哪些钱花得最值。", B: "设计路线，让时间和交通更顺。", C: "找到真正有记忆点的地方和体验。", D: "照顾大家的节奏、体力和舒适度。" } },
+    en: { question: "You and your friends plan a weekend trip. What would you like to handle?", options: { A: "Manage the budget and judge what is worth it.", B: "Design the route and make transport smoother.", C: "Find memorable places and experiences.", D: "Care for everyone’s pace, energy, and comfort." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "budget_value_judgment", "更愿意负责预算、价值判断和资源分配。", "More willing to handle budget, value judgment, and resource allocation."),
+      B: lensProfile("07_engineering_systems", "route_process_optimization", "更愿意负责路线、流程和系统优化。", "More willing to handle routes, processes, and system optimization."),
+      C: lensProfile("02_meaning_expression", "memory_experience_design", "更愿意负责体验、记忆点和意义感设计。", "More willing to design experiences, memory points, and meaning."),
+      D: lensProfile("09_health_recovery", "energy_comfort_care", "更愿意负责节奏、体力、舒适度和恢复感。", "More willing to care for pace, energy, comfort, and recovery."),
+    },
+  },
+  {
+    id: "task-002",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "restaurant",
+    zh: { question: "朋友聚餐要选餐厅。你最想负责哪件事？", options: { A: "比较价格、人均和菜品是否值得。", B: "确认订位、交通、时间是否顺畅。", C: "挑一家有氛围、适合聊天的店。", D: "照顾大家口味、限制和舒适度。" } },
+    en: { question: "Your friends are choosing a restaurant. What would you like to handle?", options: { A: "Compare price, cost per person, and value.", B: "Check booking, transport, and timing.", C: "Find a place with atmosphere and conversation.", D: "Care for everyone’s tastes, limits, and comfort." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "price_value_fit", "更愿意从价格、价值和匹配度判断选择。", "More willing to judge choices through price, value, and fit."),
+      B: lensProfile("07_engineering_systems", "logistics_flow", "更愿意负责安排流程、时间和执行细节。", "More willing to manage flow, timing, and execution details."),
+      C: lensProfile("02_meaning_expression", "atmosphere_memory", "更愿意负责氛围、表达和记忆感。", "More willing to handle atmosphere, expression, and memory."),
+      D: lensProfile("10_services_experience", "guest_experience", "更愿意关注每个人的体验、需求和舒适度。", "More willing to care about people’s experience, needs, and comfort."),
+    },
+  },
+  {
+    id: "task-003",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "work",
+    zh: { question: "团队要准备重要汇报。你最想负责哪部分？", options: { A: "明确目标，让内容服务决策。", B: "搭建结构，让逻辑更顺。", C: "打磨表达，让听众记住。", D: "检查数据和结论是否可靠。" } },
+    en: { question: "Your team is preparing an important presentation. What would you handle?", options: { A: "Clarify the goal and support decisions.", B: "Build the structure and improve logic.", C: "Polish the message for memory.", D: "Check data and conclusion reliability." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "goal_decision_value", "更愿意负责目标、决策价值和业务重点。", "More willing to handle goals, decision value, and business priorities."),
+      B: lensProfile("07_engineering_systems", "structure_logic", "更愿意负责结构、逻辑和系统组织。", "More willing to handle structure, logic, and system organization."),
+      C: lensProfile("02_meaning_expression", "message_expression", "更愿意负责表达、叙事和记忆点。", "More willing to handle expression, narrative, and memory points."),
+      D: lensProfile("05_evidence_patterns", "evidence_validation", "更愿意负责证据、数据和结论验证。", "More willing to handle evidence, data, and conclusion validation."),
+    },
+  },
+  {
+    id: "task-004",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "learning",
+    zh: { question: "你和朋友一起学新技能。你最想负责哪件事？", options: { A: "制定目标和阶段成果。", B: "设计练习和反馈节奏。", C: "整理资料，形成知识结构。", D: "找到真实场景，把技能用起来。" } },
+    en: { question: "You and a friend learn a new skill. What would you handle?", options: { A: "Set goals and milestone outcomes.", B: "Design practice and feedback rhythm.", C: "Organize materials into knowledge structure.", D: "Find real situations to use the skill." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "goal_milestone", "更愿意负责目标、里程碑和结果管理。", "More willing to handle goals, milestones, and outcome management."),
+      B: lensProfile("01_learning_growth", "practice_feedback", "更愿意负责练习、反馈和能力成长。", "More willing to handle practice, feedback, and skill growth."),
+      C: lensProfile("01_learning_growth", "knowledge_structure", "更愿意负责资料整理、结构化和理解框架。", "More willing to organize materials, structure, and understanding frameworks."),
+      D: lensProfile("10_services_experience", "real_use_context", "更愿意负责真实使用场景和实践体验。", "More willing to create real-use situations and practical experiences."),
+    },
+  },
+  {
+    id: "task-005",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "digital_life",
+    zh: { question: "你想减少无意识刷手机。你最想先做什么？", options: { A: "分析哪些 App 最消耗时间。", B: "重新设计手机界面和使用流程。", C: "找到更舒服的替代休息方式。", D: "理解自己什么时候最容易刷。" } },
+    en: { question: "You want to reduce mindless phone scrolling. What would you start with?", options: { A: "Analyze which apps consume most time.", B: "Redesign the phone interface and flow.", C: "Find better alternative ways to rest.", D: "Understand when scrolling is most likely." } },
+    optionProfiles: {
+      A: lensProfile("05_evidence_patterns", "usage_data_pattern", "更愿意从数据、规律和使用模式入手。", "More willing to start from data, patterns, and usage behavior."),
+      B: lensProfile("06_digital_systems_ai", "interface_information_flow", "更愿意从界面、信息流和数字系统入手。", "More willing to start from interface, information flow, and digital systems."),
+      C: lensProfile("09_health_recovery", "rest_replacement", "更愿意从休息、恢复和替代行为入手。", "More willing to start from rest, recovery, and replacement behavior."),
+      D: lensProfile("03_society_relationships", "behavior_context", "更愿意从行为情境、压力触发和生活关系入手。", "More willing to start from behavior context, stress triggers, and life relationships."),
+    },
+  },
+  {
+    id: "task-006",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "home",
+    zh: { question: "你想让家里住起来更舒服。你最想先改哪里？", options: { A: "调整光线、声音和休息区域。", B: "重新规划收纳和动线。", C: "换掉不符合当下状态的物品。", D: "减少每天重复的小麻烦。" } },
+    en: { question: "You want your home to feel more comfortable. What would you improve first?", options: { A: "Adjust light, sound, and rest areas.", B: "Redesign storage and movement flow.", C: "Remove items that no longer fit.", D: "Reduce repeated daily frictions." } },
+    optionProfiles: {
+      A: lensProfile("09_health_recovery", "restorative_environment", "更愿意从恢复、身体感受和休息环境入手。", "More willing to start from recovery, body feeling, and rest environment."),
+      B: lensProfile("07_engineering_systems", "space_flow", "更愿意从空间结构、动线和系统整理入手。", "More willing to start from spatial structure, flow, and system organization."),
+      C: lensProfile("02_meaning_expression", "identity_space", "更愿意从身份感、审美和生活阶段入手。", "More willing to start from identity, taste, and life stage."),
+      D: lensProfile("10_services_experience", "daily_friction", "更愿意从日常触点、体验摩擦和生活便利入手。", "More willing to start from daily touchpoints, experience friction, and convenience."),
+    },
+  },
+  {
+    id: "task-007",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "career",
+    zh: { question: "你要帮朋友梳理职业方向。你最想先做什么？", options: { A: "分析技能、机会和市场需求。", B: "梳理经历，找到成长主线。", C: "帮他表达清楚优势故事。", D: "了解压力、节奏和生活限制。" } },
+    en: { question: "You help a friend think through career direction. What would you do first?", options: { A: "Analyze skills, opportunities, and market demand.", B: "Organize experience and find a growth path.", C: "Help express a clear strengths story.", D: "Understand stress, rhythm, and life limits." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "market_opportunity_fit", "更愿意从能力、机会和市场匹配入手。", "More willing to start from skills, opportunities, and market fit."),
+      B: lensProfile("01_learning_growth", "growth_path", "更愿意从成长路径、经验沉淀和发展阶段入手。", "More willing to start from growth path, experience capture, and development stage."),
+      C: lensProfile("02_meaning_expression", "personal_narrative", "更愿意从表达、叙事和个人品牌入手。", "More willing to start from expression, narrative, and personal branding."),
+      D: lensProfile("09_health_recovery", "life_sustainability", "更愿意从压力、节奏和长期可持续状态入手。", "More willing to start from stress, rhythm, and long-term sustainability."),
+    },
+  },
+  {
+    id: "task-008",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "shopping",
+    zh: { question: "家里要买一件耐用大件。你最想负责哪部分？", options: { A: "比较价格、保修和长期成本。", B: "研究材料、结构和可靠性。", C: "确认是否适合真实使用习惯。", D: "考虑资源浪费和长期可持续。" } },
+    en: { question: "Your family needs a durable household item. What would you handle?", options: { A: "Compare price, warranty, and long-term cost.", B: "Research materials, structure, and reliability.", C: "Check fit with real usage habits.", D: "Consider waste and long-term sustainability." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "total_cost", "更愿意负责价格、保修和长期成本判断。", "More willing to handle price, warranty, and long-term cost judgment."),
+      B: lensProfile("07_engineering_systems", "material_reliability", "更愿意负责材料、结构和可靠性判断。", "More willing to handle material, structure, and reliability judgment."),
+      C: lensProfile("10_services_experience", "usage_fit", "更愿意负责真实使用习惯和体验适配。", "More willing to handle real usage habits and experience fit."),
+      D: lensProfile("08_natural_systems_sustainability", "resource_sustainability", "更愿意负责资源、浪费和长期可持续性。", "More willing to handle resources, waste, and long-term sustainability."),
+    },
+  },
+  {
+    id: "task-009",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "event",
+    zh: { question: "你们要办一个小型分享活动。你最想负责哪件事？", options: { A: "明确主题和目标人群。", B: "安排流程、时间和现场动线。", C: "设计海报、文案和氛围。", D: "照顾参与者体验和互动。" } },
+    en: { question: "You are organizing a small sharing event. What would you handle?", options: { A: "Clarify theme and target audience.", B: "Plan agenda, timing, and movement flow.", C: "Design posters, copy, and atmosphere.", D: "Care for participant experience and interaction." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "audience_goal_positioning", "更愿意负责目标、人群定位和价值判断。", "More willing to handle goals, audience positioning, and value judgment."),
+      B: lensProfile("07_engineering_systems", "event_flow_design", "更愿意负责流程、时间和现场系统安排。", "More willing to handle flow, timing, and on-site system arrangement."),
+      C: lensProfile("02_meaning_expression", "visual_message_atmosphere", "更愿意负责视觉、文案和氛围表达。", "More willing to handle visuals, copy, and atmosphere."),
+      D: lensProfile("10_services_experience", "participant_experience", "更愿意负责参与者体验、互动和服务细节。", "More willing to handle participant experience, interaction, and service details."),
+    },
+  },
+  {
+    id: "task-010",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "personal_project",
+    zh: { question: "你要启动一个个人项目。你最想先做哪件事？", options: { A: "确认它解决什么真实问题。", B: "搭出最小可行结构。", C: "想清楚它的名字和表达。", D: "找到第一批真实反馈。" } },
+    en: { question: "You are starting a personal project. What would you do first?", options: { A: "Clarify what real problem it solves.", B: "Build the smallest workable structure.", C: "Clarify its name and expression.", D: "Find the first real feedback." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "problem_value_fit", "更愿意从真实问题、价值和方向判断入手。", "More willing to start from real problems, value, and direction judgment."),
+      B: lensProfile("07_engineering_systems", "minimum_viable_structure", "更愿意从最小结构、系统搭建和落地路径入手。", "More willing to start from minimum structure, system building, and implementation path."),
+      C: lensProfile("02_meaning_expression", "naming_expression_identity", "更愿意从命名、表达和身份感入手。", "More willing to start from naming, expression, and identity."),
+      D: lensProfile("03_society_relationships", "real_feedback_people", "更愿意从真实反馈、人群反应和关系连接入手。", "More willing to start from real feedback, people’s reactions, and relationship connection."),
+    },
+  },
+  {
+    id: "task-011",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "health",
+    zh: { question: "你想建立稳定运动习惯。你最想先处理哪件事？", options: { A: "设定清楚目标和进度。", B: "设计低门槛训练流程。", C: "跟踪身体反馈和恢复。", D: "找到能一起坚持的人。" } },
+    en: { question: "You want to build a stable exercise habit. What would you handle first?", options: { A: "Set clear goals and progress.", B: "Design a low-friction training routine.", C: "Track body feedback and recovery.", D: "Find people to stay consistent with." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "goal_progress_management", "更愿意从目标、进度和结果管理入手。", "More willing to start from goals, progress, and outcome management."),
+      B: lensProfile("07_engineering_systems", "low_friction_routine", "更愿意从低阻力流程和习惯系统入手。", "More willing to start from low-friction routines and habit systems."),
+      C: lensProfile("09_health_recovery", "body_feedback_recovery", "更愿意从身体反馈、恢复和长期状态入手。", "More willing to start from body feedback, recovery, and long-term condition."),
+      D: lensProfile("03_society_relationships", "social_support_consistency", "更愿意从社交支持、陪伴和群体影响入手。", "More willing to start from social support, companionship, and group influence."),
+    },
+  },
+  {
+    id: "task-012",
+    subject: "00",
+    questionMode: "task_preference_probe",
+    scenarioType: "community",
+    zh: { question: "你要帮助一个小社群变得更活跃。你最想负责哪部分？", options: { A: "明确社群定位和成员价值。", B: "设计固定活动和参与机制。", C: "观察成员关系和互动习惯。", D: "打磨社群语言和共同记忆。" } },
+    en: { question: "You want to make a small community more active. What would you handle?", options: { A: "Clarify positioning and member value.", B: "Design regular activities and participation mechanisms.", C: "Observe relationships and interaction habits.", D: "Shape community language and shared memory." } },
+    optionProfiles: {
+      A: lensProfile("04_business_management", "community_value_positioning", "更愿意负责定位、成员价值和资源判断。", "More willing to handle positioning, member value, and resource judgment."),
+      B: lensProfile("07_engineering_systems", "participation_mechanism", "更愿意负责机制、流程和持续参与设计。", "More willing to handle mechanisms, processes, and sustained participation design."),
+      C: lensProfile("03_society_relationships", "relationship_interaction_pattern", "更愿意负责关系结构、互动习惯和群体行为观察。", "More willing to handle relationship structures, interaction habits, and group behavior."),
+      D: lensProfile("02_meaning_expression", "shared_language_memory", "更愿意负责共同语言、故事和记忆感。", "More willing to handle shared language, stories, and memory."),
+    },
+  },
+];
+
 const challengeSubjects = categories.map((category) => category.code);
+const knowledgeLensLabels = {
+  "00": { en: "General Thinking", zh: "综合判断" },
+  "01": { en: "Learning & Growth", zh: "学习与成长" },
+  "02": { en: "Meaning & Expression", zh: "人文与表达" },
+  "03": { en: "Society & Relationships", zh: "社会与关系" },
+  "04": { en: "Business & Management", zh: "商务与管理" },
+  "05": { en: "Evidence & Patterns", zh: "证据与规律" },
+  "06": { en: "Digital Systems & AI", zh: "数字系统与 AI" },
+  "07": { en: "Engineering & Systems", zh: "工程与系统" },
+  "08": { en: "Natural Systems & Sustainability", zh: "自然系统与可持续" },
+  "09": { en: "Health & Recovery", zh: "健康与恢复" },
+  "10": { en: "Services & Experience", zh: "服务与体验" },
+};
 const challengeState = Object.fromEntries(challengeSubjects.map((code) => [code, {
   correct: 0,
   answered: [],
@@ -3335,6 +3661,8 @@ let reflectionStatus = "idle";
 let reflectionApiStatus = "not-generated";
 let lastReflectionInput = null;
 let deepPromptCopied = false;
+let lensResultGenerated = false;
+let lensPromptCopied = false;
 let founderMessages = [];
 let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
 
@@ -3759,6 +4087,17 @@ function getQuestionContent(question) {
   return question?.[currentLanguage] || question?.en || {};
 }
 
+function getLensSubjectCode(profileOrSubject) {
+  const rawSubject = typeof profileOrSubject === "string" ? profileOrSubject : profileOrSubject?.subject;
+  const match = String(rawSubject || "00").match(/^\d{2}/);
+  return match ? match[0] : "00";
+}
+
+function getKnowledgeLensName(code) {
+  const labels = knowledgeLensLabels[code] || knowledgeLensLabels["00"];
+  return currentLanguage === "zh" ? labels.zh : labels.en;
+}
+
 function getMasteryLabel(level) {
   return masteryLabels[currentLanguage]?.[level] || masteryLabels.en[level] || level;
 }
@@ -3846,11 +4185,7 @@ function isSubjectComplete(subjectCode) {
 }
 
 function getAllChallengeQuestions() {
-  return challengeSubjects.flatMap((subjectCode) => {
-    const subject = questionBank[subjectCode];
-    if (!subject) return [];
-    return subject.questions.map((question) => ({ subjectCode, question }));
-  });
+  return mapkaiKnowledgeLensQuestionsV1.map((question) => ({ subjectCode: question.subject || "00", question }));
 }
 
 function getTotalQuestionCount() {
@@ -3940,23 +4275,13 @@ function shouldShowKnowledgeTitleModal(answered) {
 }
 
 function maybeShowKnowledgeTitleModal() {
-  const stats = getKnowledgeTitleStats();
-  if (!shouldShowKnowledgeTitleModal(stats.answered)) return;
-  lastTitleModalAt = stats.answered;
-  activeTitleModalStats = stats;
-  renderKnowledgeTitleModal();
+  return;
 }
 
 function renderKnowledgeTitleStatus() {
-  const stats = getKnowledgeTitleStats();
-  if (stats.answered < 20) {
-    return `<div class="knowledge-title-status">${t("titleUnlockHint")}</div>`;
-  }
-  return `<div class="knowledge-title-status is-unlocked">
-    <strong>${t("accuracyTitle", stats.accuracyTitle)}</strong>
-    <strong>${t("explorerTitleStatus", stats.explorerTitle)}</strong>
-    <span>${t("titleAccuracy", stats.answered, stats.accuracy)}</span>
-  </div>`;
+  const answered = getTotalAnsweredQuestions();
+  const total = getTotalQuestionCount();
+  return `<div class="knowledge-title-status ${answered >= total ? "is-unlocked" : ""}">${t("questionProgress", answered, total)}</div>`;
 }
 
 function getReflectionUnlockTarget() {
@@ -4305,57 +4630,247 @@ async function copyDeepReflectionPrompt() {
   }
 }
 
+function generateKnowledgeLensResult() {
+  if (getTotalAnsweredQuestions() < getTotalQuestionCount()) return;
+  lensResultGenerated = true;
+  lensPromptCopied = false;
+  renderReflectionPanel();
+}
+
+function getKnowledgeLensResult() {
+  const counts = Object.fromEntries(challengeSubjects.map((code) => [code, 0]));
+  const modeCounts = {
+    knowledge_lens_probe: Object.fromEntries(challengeSubjects.map((code) => [code, 0])),
+    task_preference_probe: Object.fromEntries(challengeSubjects.map((code) => [code, 0])),
+  };
+  challengeHistory.forEach((entry) => {
+    const subjectCode = getLensSubjectCode(entry.profile);
+    counts[subjectCode] = (counts[subjectCode] || 0) + 1;
+    if (modeCounts[entry.question.questionMode]) {
+      modeCounts[entry.question.questionMode][subjectCode] = (modeCounts[entry.question.questionMode][subjectCode] || 0) + 1;
+    }
+  });
+  const ranked = challengeSubjects
+    .map((code) => ({ code, count: counts[code] || 0, label: getKnowledgeLensName(code) }))
+    .sort((left, right) => right.count - left.count || left.code.localeCompare(right.code));
+  const topCount = ranked[0]?.count || 0;
+  const mostActivated = ranked.filter((item) => item.count > 0 && item.count >= Math.max(1, topCount - 1)).slice(0, 3);
+  const occasionallyActivated = ranked.filter((item) => item.count > 0 && !mostActivated.some((top) => top.code === item.code)).slice(0, 5);
+  const underused = ranked.filter((item) => item.count <= 1).sort((left, right) => left.count - right.count || left.code.localeCompare(right.code)).slice(0, 4);
+  const knowledgeLensTop = rankMode(modeCounts.knowledge_lens_probe).slice(0, 3);
+  const actionEnergyTop = rankMode(modeCounts.task_preference_probe).slice(0, 3);
+  return {
+    counts,
+    ranked,
+    mostActivated,
+    occasionallyActivated,
+    underused,
+    knowledgeLensTop,
+    actionEnergyTop,
+    knowledgeLensSummary: buildModeSummary(knowledgeLensTop, "knowledge"),
+    actionEnergySummary: buildModeSummary(actionEnergyTop, "action"),
+  };
+}
+
+function rankMode(counts) {
+  return challengeSubjects
+    .map((code) => ({ code, count: counts[code] || 0, label: getKnowledgeLensName(code) }))
+    .filter((item) => item.count > 0)
+    .sort((left, right) => right.count - left.count || left.code.localeCompare(right.code));
+}
+
+function formatLensList(items) {
+  return items.length
+    ? items.map((item) => `- ${item.label}: ${item.count}`).join("\n")
+    : (currentLanguage === "zh" ? "- 暂无明显集中项" : "- No clear concentration yet");
+}
+
+function joinLensNames(items) {
+  return items.map((item) => item.label).join(currentLanguage === "zh" ? "、" : ", ");
+}
+
+function buildModeSummary(items, type) {
+  const names = joinLensNames(items.slice(0, 3));
+  if (currentLanguage === "zh") {
+    if (!items.length) return "这部分暂时没有明显集中视角。";
+    return type === "action"
+      ? `你的行动能量更偏向 ${names}。你更愿意负责组织、判断、优化、照顾体验或推动落地的任务。`
+      : `你的知识视角更常从 ${names} 进入问题。你会先寻找结构、证据、意义、系统或情境中的关键线索。`;
+  }
+  if (!items.length) return "This part does not show a strong concentration yet.";
+  return type === "action"
+    ? `Your action energy leans toward ${names}. You seem more willing to take responsibility for organizing, judging, optimizing, caring for experience, or moving work forward.`
+    : `Your knowledge lens often enters problems through ${names}. You tend to look first for structure, evidence, meaning, systems, or contextual signals.`;
+}
+
+function buildLensResultSummary(result = getKnowledgeLensResult()) {
+  const topNames = joinLensNames(result.mostActivated);
+  const underusedNames = joinLensNames(result.underused);
+  if (currentLanguage === "zh") {
+    return [
+      `你的知识视角更偏向 ${topNames || "多个不同视角"}。你常常从目标、流程、结构、工具、体验或现实约束角度理解问题，也更愿意负责组织、优化、判断和推进类任务。`,
+      `较少被激活的视角包括 ${underusedNames || "暂时不明显"}。这不代表弱项，而是提示这些可能是未来值得探索的潜在知识盲区。`,
+    ].join("\n\n");
+  }
+  return [
+    `Your knowledge map leans toward ${topNames || "several different lenses"}. You often understand situations through goals, processes, structure, tools, experience, or real-world constraints, and you may prefer tasks involving organization, optimization, judgment, and forward movement.`,
+    `Underused perspectives include ${underusedNames || "no clear single area yet"}. This does not mean weakness. It simply marks perspectives that may be worth exploring next.`,
+  ].join("\n\n");
+}
+
+function buildKnowledgeLensPrompt(result = getKnowledgeLensResult()) {
+  if (currentLanguage === "zh") {
+    return `我刚完成了一次 MapKAI 知识视角探索。
+
+MapKAI 不测试对错。它观察的是：
+1. 我自然使用哪些知识视角理解问题
+2. 我更愿意负责哪类任务
+3. 哪些视角在我的当前知识地图中可能较少被调用
+
+这是我的结果：
+
+最常激活的知识视角：
+${formatLensList(result.mostActivated)}
+
+偶尔激活的知识视角：
+${formatLensList(result.occasionallyActivated)}
+
+较少调用的视角 / 潜在知识盲区：
+${formatLensList(result.underused)}
+
+知识视角总结：
+${result.knowledgeLensSummary}
+
+行动能量总结：
+${result.actionEnergySummary}
+
+请帮我反思：
+1. 这可能说明我的哪些知识优势？
+2. 我可能有哪些潜在知识盲区？
+3. 这种模式可能如何影响我的工作、关系、学习、旅行、消费和日常决策？
+4. 我的思考方式可能更接近哪些职业领域或工作方式？
+5. 我接下来可以有意识探索哪些知识视角？
+6. 我可以采取哪些小行动来扩展较少调用的视角？
+
+重要：
+不要把这当成性格测试或预测。
+请把它当成基于选择结果的知识结构与行动偏好反思。
+请保持客观、细腻、实用，不要绝对化。
+不要说这些结果定义了我是谁。`;
+  }
+  return `I completed a MapKAI Knowledge Lens exploration.
+
+MapKAI does not test right or wrong answers. It observes:
+1. which knowledge lenses I naturally use to understand problems
+2. which types of tasks I prefer to take responsibility for
+3. which perspectives may be underused in my current knowledge map
+
+Here is my result:
+
+Most Activated Knowledge Lenses:
+${formatLensList(result.mostActivated)}
+
+Occasionally Activated Lenses:
+${formatLensList(result.occasionallyActivated)}
+
+Underused Perspectives / Potential Knowledge Blind Spots:
+${formatLensList(result.underused)}
+
+Knowledge Lens Summary:
+${result.knowledgeLensSummary}
+
+Action Energy Summary:
+${result.actionEnergySummary}
+
+Please help me reflect on:
+1. What this may suggest about my knowledge strengths.
+2. What potential knowledge blind spots I may have.
+3. How this pattern may influence my work, relationships, learning, travel, consumption, and daily decisions.
+4. Which professional fields or work styles this thinking pattern may align with.
+5. Which knowledge lenses I should intentionally explore next.
+6. What small actions I can take to expand my underused perspectives.
+
+Important:
+Do not treat this as a personality test or prediction.
+Treat it as a knowledge-structure and action-preference reflection based on my choices.
+Be objective, nuanced, practical, and non-deterministic.
+Avoid exaggerated claims.
+Do not say this defines who I am.`;
+}
+
+async function copyKnowledgeLensPrompt() {
+  if (!lensResultGenerated) return;
+  const prompt = buildKnowledgeLensPrompt();
+  try {
+    await navigator.clipboard.writeText(prompt);
+    lensPromptCopied = true;
+    renderReflectionPanel();
+  } catch (error) {
+    console.info("Could not copy knowledge lens prompt.", error);
+  }
+}
+
+function renderLensBucket(title, items, maxCount) {
+  return `
+    <section class="lens-result-group">
+      <h3>${title}</h3>
+      ${items.length ? items.map((item) => {
+        const width = maxCount ? Math.max(6, Math.round((item.count / maxCount) * 100)) : 0;
+        return `<div class="lens-bar-row">
+          <span>${escapeHtml(item.label)}</span>
+          <div class="lens-bar-track"><i style="width: ${width}%"></i></div>
+          <strong>${item.count}</strong>
+        </div>`;
+      }).join("") : `<p>${currentLanguage === "zh" ? "暂无明显项目。" : "No clear items yet."}</p>`}
+    </section>`;
+}
+
 function renderReflectionPanel() {
   const target = document.getElementById("reflectionPanel");
   if (!target) return;
   const answered = getTotalAnsweredQuestions();
-  const remaining = Math.max(0, getReflectionUnlockTarget() - answered);
-  const unlocked = isReflectionUnlocked();
-  const output = reflectionOutput;
-  const deepPrompt = output ? buildDeepReflectionPrompt(output) : "";
+  const total = getTotalQuestionCount();
+  const unlocked = answered >= total;
+  const result = lensResultGenerated ? getKnowledgeLensResult() : null;
+  const prompt = result ? buildKnowledgeLensPrompt(result) : "";
+  const maxCount = result?.ranked?.[0]?.count || 0;
   target.classList.toggle("is-locked", !unlocked);
   target.classList.toggle("is-unlocked", unlocked);
   target.innerHTML = `
     <div>
       <p class="eyebrow">${unlocked ? t("reflectionUnlockedEyebrow") : t("reflectionLockedEyebrow")}</p>
-      <h2>${t("reflectionTitle")}</h2>
-      <p>${unlocked ? t("reflectionUnlockedCopy") : t("reflectionLockedCopy", answered, remaining)}</p>
-      ${unlocked ? `<button class="button primary" type="button" data-generate-reflection ${reflectionStatus === "loading" ? "disabled" : ""}>${t("generateReflection")}</button>` : ""}
-      ${reflectionStatus === "loading" ? `<p class="reflection-status">${t("reflectionGenerating")}</p>` : ""}
+      <h2>${t("lensResultTitle")}</h2>
+      <p>${unlocked ? t("challengeCompleteCopy") : t("reflectionLockedCopy", answered, Math.max(0, total - answered))}</p>
+      ${unlocked && !result ? `<button class="button primary" type="button" data-generate-lens-result>${t("generateLensMap")}</button>` : ""}
     </div>
-    ${output ? `<div class="reflection-output">
+    ${result ? `<div class="reflection-output lens-result-output">
+      <div class="lens-chart">
+        ${renderLensBucket(t("mostActivatedLenses"), result.mostActivated, maxCount)}
+        ${renderLensBucket(t("occasionallyActivatedLenses"), result.occasionallyActivated, maxCount)}
+        ${renderLensBucket(t("underusedPerspectives"), result.underused, maxCount)}
+      </div>
       <article class="reflection-summary-card">
-        <h3>MapKAI Reflection</h3>
-        <p class="eyebrow">${t("reflectionSummaryLabel")}</p>
-        <p>${escapeHtml(output.summary || "")}</p>
+        <h3>${t("resultSummaryTitle")}</h3>
+        <p>${escapeHtml(buildLensResultSummary(result))}</p>
       </article>
-      <details class="reflection-details">
-        <summary>${t("expandFullReflection")}</summary>
-        <div class="reflection-briefing-grid">
-          <article><h3>${t("primaryPattern")}</h3><p>${escapeHtml(output.primaryPattern || "")}</p></article>
-          <article><h3>${t("blindSpot")}</h3><p>${escapeHtml(output.blindSpot || "")}</p></article>
-          <article><h3>${t("nextDirection")}</h3><p>${escapeHtml(output.nextDirection || "")}</p></article>
-          <article><h3>${t("uncomfortableTruth")}</h3><p>${escapeHtml(output.uncomfortableTruth || "")}</p></article>
-        </div>
-      </details>
       <section class="deep-prompt-panel">
-        <h3>${t("personalAiTitle")}</h3>
-        <p>${t("personalAiCopy")}</p>
-        <button class="button secondary" type="button" data-copy-deep-prompt>${deepPromptCopied ? t("copiedDeepPrompt") : t("copyDeepPrompt")}</button>
-        <textarea readonly rows="9">${escapeHtml(deepPrompt)}</textarea>
+        <h3>${t("continueWithOwnAi")}</h3>
+        <p>${t("resultPrivacyNote")}</p>
+        <button class="button secondary" type="button" data-copy-lens-prompt>${lensPromptCopied ? t("copiedPrompt") : t("copyPrompt")}</button>
+        <textarea readonly rows="12">${escapeHtml(prompt)}</textarea>
       </section>
       <p class="reflection-disclaimer">${t("reflectionDisclaimer")}</p>
     </div>` : ""}
     <details class="founder-only reflection-debug">
       <summary>${t("reflectionDebug")}</summary>
       <pre>${escapeHtml(JSON.stringify({
-        aiStatus: reflectionApiStatus,
-        source: output?.source || "not-generated",
-        model: output?.model || "",
-        compressedReflectionInput: lastReflectionInput || getCompressedReflectionSummary(),
-        metadataDistributions: getAnswerDistributions(),
+        mode: "local-knowledge-lens-v1",
+        savedToD1: false,
+        callsReflectionApi: false,
+        resultGenerated: lensResultGenerated,
+        distributions: result || getKnowledgeLensResult(),
         questionIds: challengeHistory.map((entry) => entry.question.id),
-        subjectSources: challengeHistory.map((entry) => entry.subjectCode),
+        selectedProfiles: challengeHistory.map((entry) => entry.profile),
       }, null, 2))}</pre>
     </details>`;
 }
@@ -4366,12 +4881,8 @@ function completeChallengeRound() {
   activeChallengeQuestion = null;
   currentAnsweredQuestion = null;
   challengeReviewIndex = null;
-  activeTitleModalStats = {
-    ...getKnowledgeTitleStats(),
-    kind: "grandSlam",
-    totalQuestions: getTotalQuestionCount(),
-  };
-  renderKnowledgeTitleModal();
+  activeTitleModalStats = null;
+  renderReflectionPanel();
 }
 
 function startNewChallengeRound() {
@@ -4395,6 +4906,8 @@ function startNewChallengeRound() {
   reflectionApiStatus = "not-generated";
   lastReflectionInput = null;
   deepPromptCopied = false;
+  lensResultGenerated = false;
+  lensPromptCopied = false;
   setRandomChallengeQuestion();
   renderKnowledgeTitleModal();
   renderChallenge();
@@ -4460,12 +4973,13 @@ function renderChallenge() {
 
   if (challengeRoundComplete) {
     cardTarget.innerHTML = `
-      <p class="eyebrow">${t("grandSlamAchievement")}</p>
-      <h2>${t("grandSlamTitle")}</h2>
+      <p class="eyebrow">${t("challengeCompleteEyebrow")}</p>
+      <h2>${t("challengeCompleteTitle")}</h2>
       <p>${t("roundCompleteStatus")}</p>
-      <div class="challenge-status is-green">${t("grandSlamBody", getTotalQuestionCount())}</div>
+      <div class="challenge-status is-green">${t("questionProgress", getTotalAnsweredQuestions(), getTotalQuestionCount())}</div>
       ${renderKnowledgeTitleStatus()}
-      <button class="button primary" type="button" data-start-new-round>${t("startNewRound")}</button>`;
+      <button class="button primary" type="button" data-generate-lens-result>${t("generateLensMap")}</button>
+      <button class="button secondary" type="button" data-start-new-round>${t("startNewRound")}</button>`;
     return;
   }
 
@@ -4475,34 +4989,32 @@ function renderChallenge() {
     setRandomChallengeQuestion();
   }
 
-  const subject = questionBank[activeChallengeSubject];
   const state = challengeState[activeChallengeSubject];
   const question = activeChallengeQuestion;
   const questionContent = getQuestionContent(question);
-  const subjectTitle = getSubjectTitle(activeChallengeSubject);
 
-  if (!subject || !state || !question) {
+  if (!state || !question) {
     cardTarget.innerHTML = `
       <p class="eyebrow">${t("challengeCompleteEyebrow")}</p>
       <h2>${t("challengeCompleteTitle")}</h2>
       <p>${t("challengeCompleteCopy")}</p>
-      <div class="challenge-status is-green">${t("totalCorrect")}: ${getTotalCorrectAnswers()}</div>`;
+      <div class="challenge-status is-green">${t("questionProgress", getTotalAnsweredQuestions(), getTotalQuestionCount())}</div>`;
     return;
   }
 
+  const optionEntries = Object.entries(questionContent.options || {});
   cardTarget.innerHTML = `
-    <p class="eyebrow">${t("currentExploration")} -> ${getMasteryLabel(question.unlocksToward)}</p>
+    <p class="eyebrow">${t("currentExploration")}</p>
     <h2>${t("challengeHeading")}</h2>
     <p>${questionContent.question}</p>
     <div class="answer-grid">
-      ${questionContent.options.map((option, displayIndex) => {
-        const optionKey = String(question.optionOrder[displayIndex]);
+      ${optionEntries.map(([optionKey, option]) => {
         return `<button type="button" data-answer-key="${optionKey}">${option}</button>`;
       }).join("")}
     </div>
-    <div class="challenge-status">${t("exploredPatterns")}: ${getTotalAnsweredQuestions()} · ${t("currentMapState")}: ${getMasteryLabel(getMasteryFromCorrect(activeChallengeSubject))}</div>
+    <div class="challenge-status">${t("questionProgress", getTotalAnsweredQuestions(), getTotalQuestionCount())}</div>
     ${renderKnowledgeTitleStatus()}
-    <div class="founder-note internal-code">Source: ${activeChallengeSubject} · ${subjectTitle}</div>`;
+    <div class="founder-note internal-code">Question: ${question.id} · Mode: ${question.questionMode}</div>`;
 }
 
 function handleChallengeClick(event) {
@@ -4515,15 +5027,18 @@ function handleChallengeClick(event) {
   const answerButton = event.target.closest("[data-answer-key]");
   if (!answerButton) return;
   const question = activeChallengeQuestion;
-  const state = challengeState[activeChallengeSubject];
-  if (!question || !state) return;
+  if (!question) return;
 
   const selectedKey = answerButton.dataset.answerKey;
-  const correct = selectedKey === "0";
+  const profile = question.optionProfiles?.[selectedKey];
+  const selectedSubjectCode = getLensSubjectCode(profile);
+  const state = challengeState[selectedSubjectCode];
+  if (!profile || !state) return;
   state.answered.push(question.id);
-  if (correct) state.correct += 1;
-  syncMasteryProgress(activeChallengeSubject);
-  const answeredQuestion = { subjectCode: activeChallengeSubject, question, selectedKey, correct };
+  state.correct += 1;
+  syncMasteryProgress(selectedSubjectCode);
+  activeChallengeSubject = selectedSubjectCode;
+  const answeredQuestion = { subjectCode: selectedSubjectCode, question, selectedKey, correct: true, profile };
   challengeHistory.push(answeredQuestion);
   drawKnowledgeMap();
   if (getTotalAnsweredQuestions() >= getTotalQuestionCount()) {
@@ -4743,12 +5258,16 @@ document.addEventListener("click", (event) => {
     closeKnowledgeTitleModal();
     return;
   }
-  if (event.target.closest("[data-generate-reflection]")) {
-    generateKnowledgeReflection();
+  if (event.target.closest("[data-generate-lens-result]")) {
+    generateKnowledgeLensResult();
     return;
   }
   if (event.target.closest("[data-copy-deep-prompt]")) {
     copyDeepReflectionPrompt();
+    return;
+  }
+  if (event.target.closest("[data-copy-lens-prompt]")) {
+    copyKnowledgeLensPrompt();
     return;
   }
   if (event.target.closest("[data-answer-key], [data-start-new-round]")) {
