@@ -7,6 +7,7 @@ const contactEmail = "hello@mapkai.com";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
+const founderModeKey = "mapkaiFounderMode";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const supportedLanguages = ["en", "zh"];
 let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
@@ -44,7 +45,7 @@ const masteryLabels = {
 
 const uiText = {
   en: {
-    navExplore: "Explore",
+    navExplore: "Start Exploring",
     navMap: "Map",
     navCategories: "Categories",
     navLearning: "Learning",
@@ -226,7 +227,7 @@ const uiText = {
     thanks: "Thanks for visiting MapKAI.",
   },
   zh: {
-    navExplore: "探索",
+    navExplore: "开始探索",
     navMap: "地图",
     navCategories: "分类",
     navLearning: "学习路径",
@@ -3446,7 +3447,7 @@ function goToRoute(route, replace = false) {
   const founderRoute = target === "/leoyangandxinli";
   const founderQuery = new URLSearchParams(window.location.search).get("founder") === "1";
   const visibleTarget = founderRoute ? "/" : target;
-  setFounderMode(founderRoute || founderQuery);
+  setFounderMode(founderRoute || founderQuery || isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   const activePage = categoryMatch ? "/categories/detail" : visibleTarget;
@@ -4491,6 +4492,12 @@ document.addEventListener("click", (event) => {
     handleChallengeClick(event);
     return;
   }
+  const founderExit = event.target.closest("[data-founder-exit]");
+  if (founderExit) {
+    event.preventDefault();
+    exitFounderMode();
+    return;
+  }
   const link = event.target.closest("[data-route]");
   if (!link) return;
   event.preventDefault();
@@ -4536,11 +4543,24 @@ function setFounderMode(enabled) {
     founderToggle.textContent = enabled ? "Founder mode on" : "Founder mode";
     founderToggle.setAttribute("aria-pressed", String(enabled));
   }
-  localStorage.removeItem("mapkaiFounderMode");
+  if (enabled) {
+    localStorage.setItem(founderModeKey, "true");
+  } else {
+    localStorage.removeItem(founderModeKey);
+  }
   renderMessageBoards();
   if (enabled) loadFounderMessages();
   drawKnowledgeMap();
   renderChallenge();
+}
+
+function isFounderMode() {
+  return localStorage.getItem(founderModeKey) === "true";
+}
+
+function exitFounderMode() {
+  setFounderMode(false);
+  window.location.href = "/";
 }
 
 function getVisitorId() {

@@ -621,6 +621,44 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Refine founder mode and focus public experience
+
+Status: Ready to commit
+
+Changed:
+
+- Added persistent Founder Mode via `localStorage` key `mapkaiFounderMode`.
+- Founder Mode now activates through `/leoyangandxinli` or `?founder=1` and persists across navigation, refresh, and route changes.
+- Added a subtle fixed Founder Mode indicator with an `Exit` button.
+- `Exit` clears the Founder Mode flag and redirects to `/`.
+- Simplified public navigation toward `Start Exploring`, `Map`, and `About`.
+- Hid public navigation/entry points for Categories and Learning while preserving the routes for direct/Founder access.
+- Preserved homepage Hero, reflection snippets, Explore wording, Reflection generation, Workers AI, D1 APIs, contact system, visitor counter, multilingual support, question flow, and Founder-only APIs.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- Root/public `index.html` sync check passed.
+- Root/public `script.js` sync check passed.
+- Root/public `styles.css` sync check passed.
+- `git diff --check` passed.
+- Browser verification confirmed public navigation shows Start Exploring, Map, and About while hiding Categories and Learning.
+- Browser verification confirmed `/leoyangandxinli` enables Founder Mode, shows the persistent Founder Mode indicator, and restores Categories/Learning entries.
+- Browser verification confirmed Founder Mode persists after navigating to `/map` and after refresh.
+- Browser verification confirmed `?founder=1` enables Founder Mode.
+- Browser verification confirmed the `Exit` button clears Founder Mode and redirects to `/`.
+- Browser verification at mobile viewport confirmed the homepage Hero and CTA render while Categories/Learning remain hidden from public navigation.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-14 - Refine homepage reflection flow and product positioning
 
 Status: Ready to commit
