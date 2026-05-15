@@ -388,14 +388,16 @@ const uiText = {
     questionProgress: (answered, total) => `${answered}/${total} situations explored`,
     generateLensMap: "Generate Knowledge Lens Map",
     lensResultTitle: "Your Knowledge Lens Map",
-    mostActivatedLenses: "Most Activated Lenses",
-    occasionallyActivatedLenses: "Occasionally Activated",
-    underusedPerspectives: "Underused Perspectives",
+    strongestLenses: "Strongest lenses",
+    supportingLenses: "Supporting lenses",
+    quietAreas: "Quiet areas",
+    quietAreasCopy: "These lenses did not appear in your choices this round. They are not weaknesses, but possible areas to explore next.",
     resultSummaryTitle: "Summary",
-    continueWithOwnAi: "Continue with your own AI",
-    copyPrompt: "Copy Prompt",
+    continueWithOwnAi: "Get a deeper diagnosis from your own AI",
+    copyPrompt: "Copy Diagnosis Prompt",
     copiedPrompt: "Copied",
     resultPrivacyNote: "MapKAI does not save your result. Copy your prompt before leaving.",
+    promptConversationNote: "This prompt is designed for a short 2-3 round conversation with your own AI, not a one-time report.",
     knowledgeLensSummaryLabel: "Knowledge Lens Summary",
     actionEnergySummaryLabel: "Action Energy Summary",
     exploreEyebrow: "Explore",
@@ -587,14 +589,16 @@ const uiText = {
     questionProgress: (answered, total) => `已探索 ${answered}/${total} 个情境`,
     generateLensMap: "生成知识视角地图",
     lensResultTitle: "你的知识视角地图",
-    mostActivatedLenses: "最常激活的知识视角",
-    occasionallyActivatedLenses: "偶尔激活的知识视角",
-    underusedPerspectives: "较少调用的视角 / 潜在知识盲区",
+    strongestLenses: "你的主要知识视角",
+    supportingLenses: "也被激活的视角",
+    quietAreas: "安静区域",
+    quietAreasCopy: "这些视角在本轮选择中没有被激活。它们不是弱项，只是下一步可以探索的方向。",
     resultSummaryTitle: "简要总结",
-    continueWithOwnAi: "复制到你的 AI 继续探索",
-    copyPrompt: "一键复制 Prompt",
+    continueWithOwnAi: "复制给你的 AI，获得更深入的问题诊断",
+    copyPrompt: "复制诊断 Prompt",
     copiedPrompt: "已复制",
     resultPrivacyNote: "MapKAI 不保存你的结果。离开页面前，请复制你的 Prompt。",
+    promptConversationNote: "这段 Prompt 适合和你自己的 AI 进行 2–3 轮深入对话，而不是生成一次性报告。",
     knowledgeLensSummaryLabel: "知识视角总结",
     actionEnergySummaryLabel: "行动能量总结",
     exploreEyebrow: "探索",
@@ -4653,18 +4657,20 @@ function getKnowledgeLensResult() {
   const ranked = challengeSubjects
     .map((code) => ({ code, count: counts[code] || 0, label: getKnowledgeLensName(code) }))
     .sort((left, right) => right.count - left.count || left.code.localeCompare(right.code));
-  const topCount = ranked[0]?.count || 0;
-  const mostActivated = ranked.filter((item) => item.count > 0 && item.count >= Math.max(1, topCount - 1)).slice(0, 3);
-  const occasionallyActivated = ranked.filter((item) => item.count > 0 && !mostActivated.some((top) => top.code === item.code)).slice(0, 5);
-  const underused = ranked.filter((item) => item.count <= 1).sort((left, right) => left.count - right.count || left.code.localeCompare(right.code)).slice(0, 4);
+  const strongest = ranked.filter((item) => item.count > 0).slice(0, 3);
+  const supporting = ranked.filter((item) => item.count > 0 && !strongest.some((top) => top.code === item.code));
+  const quiet = ranked.filter((item) => item.count === 0).sort((left, right) => left.code.localeCompare(right.code));
   const knowledgeLensTop = rankMode(modeCounts.knowledge_lens_probe).slice(0, 3);
   const actionEnergyTop = rankMode(modeCounts.task_preference_probe).slice(0, 3);
   return {
     counts,
     ranked,
-    mostActivated,
-    occasionallyActivated,
-    underused,
+    strongest,
+    supporting,
+    quiet,
+    mostActivated: strongest,
+    occasionallyActivated: supporting,
+    underused: quiet,
     knowledgeLensTop,
     actionEnergyTop,
     knowledgeLensSummary: buildModeSummary(knowledgeLensTop, "knowledge"),
@@ -4704,18 +4710,60 @@ function buildModeSummary(items, type) {
 }
 
 function buildLensResultSummary(result = getKnowledgeLensResult()) {
-  const topNames = joinLensNames(result.mostActivated);
-  const underusedNames = joinLensNames(result.underused);
+  const strongest = result.strongest || result.mostActivated || [];
+  const quiet = result.quiet || result.underused || [];
+  const summaryFocus = buildLensFocusSentence(strongest);
+  const quietNames = joinLensNames(quiet.slice(0, 3));
   if (currentLanguage === "zh") {
     return [
-      `你的知识视角更偏向 ${topNames || "多个不同视角"}。你常常从目标、流程、结构、工具、体验或现实约束角度理解问题，也更愿意负责组织、优化、判断和推进类任务。`,
-      `较少被激活的视角包括 ${underusedNames || "暂时不明显"}。这不代表弱项，而是提示这些可能是未来值得探索的潜在知识盲区。`,
+      summaryFocus,
+      quietNames ? `本轮没有被激活的方向包括 ${quietNames}。这不代表弱项，只是提示下一步可以有意识让这些视角进入问题。` : "本轮没有明显完全安静的方向。下一步可以继续观察哪些视角只是偶尔出现。",
     ].join("\n\n");
   }
   return [
-    `Your knowledge map leans toward ${topNames || "several different lenses"}. You often understand situations through goals, processes, structure, tools, experience, or real-world constraints, and you may prefer tasks involving organization, optimization, judgment, and forward movement.`,
-    `Underused perspectives include ${underusedNames || "no clear single area yet"}. This does not mean weakness. It simply marks perspectives that may be worth exploring next.`,
+    summaryFocus,
+    quietNames ? `Quiet areas this round include ${quietNames}. They are not weaknesses; they simply mark directions you may want to invite into future problems.` : "There are no fully quiet areas this round. The next useful signal may be which lenses only appeared once.",
   ].join("\n\n");
+}
+
+const lensSummaryConcepts = {
+  en: {
+    "00": "overall judgment",
+    "01": "learning loops",
+    "02": "meaning and expression",
+    "03": "social context",
+    "04": "goals and trade-offs",
+    "05": "evidence and patterns",
+    "06": "digital systems",
+    "07": "system structure",
+    "08": "long-term sustainability",
+    "09": "sustainable energy",
+    "10": "service experience",
+  },
+  zh: {
+    "00": "综合判断",
+    "01": "学习循环",
+    "02": "意义表达",
+    "03": "社会情境",
+    "04": "目标与取舍",
+    "05": "证据与规律",
+    "06": "数字系统",
+    "07": "系统结构",
+    "08": "长期可持续",
+    "09": "可持续精力",
+    "10": "服务体验",
+  },
+};
+
+function buildLensFocusSentence(items) {
+  const codes = items.map((item) => item.code);
+  const labels = codes.map((code) => (currentLanguage === "zh" ? lensSummaryConcepts.zh[code] : lensSummaryConcepts.en[code])).filter(Boolean);
+  if (currentLanguage === "zh") {
+    if (!labels.length) return "你的知识地图暂时没有明显集中方向。继续完成更多选择后，模式会更清楚。";
+    return `你的知识地图偏向${labels.join("、")}。你常常会关注什么最值得优先处理，事情如何被组织起来，以及哪些现实条件会影响长期推进。`;
+  }
+  if (!labels.length) return "Your knowledge map does not show a strong center yet. The pattern will become clearer after more choices.";
+  return `Your map leans toward ${labels.join(", ")}. You often look for what should be prioritized, how things can be structured, and which real-world conditions affect whether something can keep going.`;
 }
 
 function buildKnowledgeLensPrompt(result = getKnowledgeLensResult()) {
@@ -4727,16 +4775,16 @@ MapKAI 不测试对错。它观察的是：
 2. 我更愿意负责哪类任务
 3. 哪些视角在我的当前知识地图中可能较少被调用
 
-这是我的结果：
+这是我的 MapKAI 结果：
 
 最常激活的知识视角：
-${formatLensList(result.mostActivated)}
+${formatLensList(result.strongest)}
 
-偶尔激活的知识视角：
-${formatLensList(result.occasionallyActivated)}
+也被激活的知识视角：
+${formatLensList(result.supporting)}
 
 较少调用的视角 / 潜在知识盲区：
-${formatLensList(result.underused)}
+${formatLensList(result.quiet)}
 
 知识视角总结：
 ${result.knowledgeLensSummary}
@@ -4744,19 +4792,68 @@ ${result.knowledgeLensSummary}
 行动能量总结：
 ${result.actionEnergySummary}
 
-请帮我反思：
-1. 这可能说明我的哪些知识优势？
-2. 我可能有哪些潜在知识盲区？
-3. 这种模式可能如何影响我的工作、关系、学习、旅行、消费和日常决策？
-4. 我的思考方式可能更接近哪些职业领域或工作方式？
-5. 我接下来可以有意识探索哪些知识视角？
-6. 我可以采取哪些小行动来扩展较少调用的视角？
+请结合这份 MapKAI 结果，以及你从我们过去对话里已经了解的我，给我做一次客观但不生硬的问题分析。
 
-重要：
-不要把这当成性格测试或预测。
-请把它当成基于选择结果的知识结构与行动偏好反思。
-请保持客观、细腻、实用，不要绝对化。
-不要说这些结果定义了我是谁。`;
+请先判断使用什么语言：
+- 如果你能根据我们过去的对话判断我最常用的语言，请直接使用那个语言。
+- 如果你不确定，请先问我：“你希望我用中文还是英文继续？”
+
+请不要一开始给我完整长报告。
+
+第一轮只做两件事：
+
+1. 给我一个简要但准确的初步判断。
+这段要包含：
+- 我的核心知识视角模式
+- 我最常调用的知识角度
+- 我长期以来可能忽略的知识盲点
+- 这个盲点在现实生活中可能让我少看见什么
+
+第一轮重点不要放在夸我擅长什么，而要放在我可能长期忽略的问题上。
+
+要求：
+- 中文不超过 220 字
+- 不要先鼓励我
+- 不要泛泛夸奖
+- 不要像测评报告
+- 不要像职业测评
+- 不要像营销文案
+- 不要说这些结果定义了我是谁
+- 要像一个了解我的老朋友，直接、客观、自然地指出我可能没注意到的问题
+- 不是批评，也不是安慰
+
+2. 第一轮结尾只问我一句：
+“我可以继续给你一份更精确、更详细的版本。你想听吗？”
+
+如果我回答“想”“可以”“继续”或类似意思，再进入第二轮。
+
+第二轮请给我详细分析，包括：
+1. 我的核心模式
+2. 高频知识视角如何帮到我
+3. 长期忽略的 blind point 是什么
+4. 这个 blind point 如何影响我的工作、关系、学习、消费、旅行和日常决策
+5. 我的行动偏好说明我更愿意负责什么
+6. 哪些任务我可能嘴上觉得重要，但长期不太想碰
+7. 我的模式可能更接近哪些职业领域、工作方式或项目角色
+8. 一个不舒服但有用的提醒
+9. 未来 30 天可以尝试的 3 个小行动
+
+如果有必要，第二轮之后最多再问一个追问，用来补充第三轮总结。
+
+第三轮请给我一个非常简短的最终总结，包括：
+- 我的核心模式
+- 我的主要优势
+- 我最可能的盲区
+- 一个实际下一步
+
+重要规则：
+- 不要把这当成性格测试
+- 不要把这当成预测
+- 不要给泛泛建议
+- 不要过度夸奖
+- 不要下确定结论
+- 不要说这个结果定义了我是谁
+- 如果你没有足够的过去对话记录，请明确说明，并主要基于这份 MapKAI 结果分析`;
   }
   return `I completed a MapKAI Knowledge Lens exploration.
 
@@ -4768,13 +4865,13 @@ MapKAI does not test right or wrong answers. It observes:
 Here is my result:
 
 Most Activated Knowledge Lenses:
-${formatLensList(result.mostActivated)}
+${formatLensList(result.strongest)}
 
-Occasionally Activated Lenses:
-${formatLensList(result.occasionallyActivated)}
+Supporting Lenses:
+${formatLensList(result.supporting)}
 
 Underused Perspectives / Potential Knowledge Blind Spots:
-${formatLensList(result.underused)}
+${formatLensList(result.quiet)}
 
 Knowledge Lens Summary:
 ${result.knowledgeLensSummary}
@@ -4782,20 +4879,68 @@ ${result.knowledgeLensSummary}
 Action Energy Summary:
 ${result.actionEnergySummary}
 
-Please help me reflect on:
-1. What this may suggest about my knowledge strengths.
-2. What potential knowledge blind spots I may have.
-3. How this pattern may influence my work, relationships, learning, travel, consumption, and daily decisions.
-4. Which professional fields or work styles this thinking pattern may align with.
-5. Which knowledge lenses I should intentionally explore next.
-6. What small actions I can take to expand my underused perspectives.
+Please read this together with what you already know about me from our past conversations, and give me an objective but human analysis of my current pattern.
 
-Important:
-Do not treat this as a personality test or prediction.
-Treat it as a knowledge-structure and action-preference reflection based on my choices.
-Be objective, nuanced, practical, and non-deterministic.
-Avoid exaggerated claims.
-Do not say this defines who I am.`;
+First, decide which language to use:
+- If you know my usual language from our past conversations, use that language directly.
+- If you are not sure, ask me: “Would you like to continue in English or Chinese?”
+
+Do not give me a long final report immediately.
+
+In the first round, do only two things:
+
+1. Give me a brief but accurate initial diagnosis.
+This should include:
+- my core knowledge-lens pattern
+- the knowledge angles I use most often
+- the knowledge blind point I may have been overlooking for a long time
+- what this blind point may cause me to miss in real life
+
+The first round should focus less on what I am good at and more on what I may have been overlooking.
+
+Requirements:
+- under 160 words
+- do not begin with encouragement
+- do not give generic praise
+- do not sound like a personality-test report
+- do not sound like a career-assessment report
+- do not sound like marketing copy
+- do not say this result defines who I am
+- sound like someone who has known me for a while: direct, objective, natural, and specific
+- not critical, not comforting, just honest
+
+2. End the first round with only this question:
+“I can continue with a more precise and detailed version. Would you like to hear it?”
+
+If I answer “yes”, “continue”, or something similar, then move to the second round.
+
+In the second round, give me a detailed analysis including:
+1. my core pattern
+2. how my strongest knowledge lenses may help me
+3. what long-term blind point may be present
+4. how this blind point may affect my work, relationships, learning, consumption, travel, and daily decisions
+5. what my action preference says about what I like to take responsibility for
+6. what tasks I may say are important but quietly avoid over time
+7. which professional fields, work styles, or project roles this pattern may align with
+8. one uncomfortable but useful reminder
+9. three small actions I can try in the next 30 days
+
+After the second round, if necessary, ask at most one follow-up question to support a third-round summary.
+
+In the third round, give me a very concise final summary including:
+- my core pattern
+- my main strength
+- my most likely blind spot
+- one practical next step
+
+Important rules:
+- do not treat this as a personality test
+- do not treat this as a prediction
+- do not give generic advice
+- do not overpraise me
+- do not make deterministic claims
+- do not say this result defines who I am
+- if you do not have enough past conversation history about me, say that clearly and base your response mainly on the MapKAI result`;
 }
 
 async function copyKnowledgeLensPrompt() {
@@ -4810,16 +4955,21 @@ async function copyKnowledgeLensPrompt() {
   }
 }
 
-function renderLensBucket(title, items, maxCount) {
+function renderLensBucket(title, items, maxCount, variant = "supporting") {
   return `
-    <section class="lens-result-group">
+    <section class="lens-result-group is-${variant}">
       <h3>${title}</h3>
-      ${items.length ? items.map((item) => {
+      ${variant === "quiet" ? `
+        <div class="quiet-lens-list">
+          ${items.length ? items.map((item) => `<span>${escapeHtml(item.label)}</span>`).join("") : `<p>${currentLanguage === "zh" ? "本轮没有完全安静的视角。" : "No fully quiet areas this round."}</p>`}
+        </div>
+        <p class="lens-group-note">${t("quietAreasCopy")}</p>
+      ` : items.length ? items.map((item) => {
         const width = maxCount ? Math.max(6, Math.round((item.count / maxCount) * 100)) : 0;
         return `<div class="lens-bar-row">
           <span>${escapeHtml(item.label)}</span>
           <div class="lens-bar-track"><i style="width: ${width}%"></i></div>
-          <strong>${item.count}</strong>
+          <strong>${item.count}/${getTotalQuestionCount()}</strong>
         </div>`;
       }).join("") : `<p>${currentLanguage === "zh" ? "暂无明显项目。" : "No clear items yet."}</p>`}
     </section>`;
@@ -4845,9 +4995,9 @@ function renderReflectionPanel() {
     </div>
     ${result ? `<div class="reflection-output lens-result-output">
       <div class="lens-chart">
-        ${renderLensBucket(t("mostActivatedLenses"), result.mostActivated, maxCount)}
-        ${renderLensBucket(t("occasionallyActivatedLenses"), result.occasionallyActivated, maxCount)}
-        ${renderLensBucket(t("underusedPerspectives"), result.underused, maxCount)}
+        ${renderLensBucket(t("strongestLenses"), result.strongest, maxCount, "strongest")}
+        ${renderLensBucket(t("supportingLenses"), result.supporting, maxCount, "supporting")}
+        ${renderLensBucket(t("quietAreas"), result.quiet, maxCount, "quiet")}
       </div>
       <article class="reflection-summary-card">
         <h3>${t("resultSummaryTitle")}</h3>
@@ -4855,6 +5005,7 @@ function renderReflectionPanel() {
       </article>
       <section class="deep-prompt-panel">
         <h3>${t("continueWithOwnAi")}</h3>
+        <p>${t("promptConversationNote")}</p>
         <p>${t("resultPrivacyNote")}</p>
         <button class="button secondary" type="button" data-copy-lens-prompt>${lensPromptCopied ? t("copiedPrompt") : t("copyPrompt")}</button>
         <textarea readonly rows="12">${escapeHtml(prompt)}</textarea>
@@ -4977,7 +5128,6 @@ function renderChallenge() {
       <h2>${t("challengeCompleteTitle")}</h2>
       <p>${t("roundCompleteStatus")}</p>
       <div class="challenge-status is-green">${t("questionProgress", getTotalAnsweredQuestions(), getTotalQuestionCount())}</div>
-      ${renderKnowledgeTitleStatus()}
       <button class="button primary" type="button" data-generate-lens-result>${t("generateLensMap")}</button>
       <button class="button secondary" type="button" data-start-new-round>${t("startNewRound")}</button>`;
     return;
@@ -5013,7 +5163,6 @@ function renderChallenge() {
       }).join("")}
     </div>
     <div class="challenge-status">${t("questionProgress", getTotalAnsweredQuestions(), getTotalQuestionCount())}</div>
-    ${renderKnowledgeTitleStatus()}
     <div class="founder-note internal-code">Question: ${question.id} · Mode: ${question.questionMode}</div>`;
 }
 

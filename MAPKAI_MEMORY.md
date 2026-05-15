@@ -621,6 +621,39 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Polish Knowledge Lens result page and diagnosis prompt
+
+Status: Implemented
+
+Changed:
+
+- Fixed duplicate Explore progress display; the question card now shows one progress line in both English and Chinese.
+- Updated Knowledge Lens result groups from Most/Occasional/Underused into Strongest lenses, Supporting lenses, and Quiet areas.
+- Quiet areas now include only lenses with `count = 0`; `count = 1` stays in Supporting lenses.
+- Restyled result groups to feel more product-like, with stronger cards for main lenses and softer pills for quiet areas.
+- Rewrote the result summary to use the strongest lens concepts instead of generic broad copy.
+- Updated the copy-to-AI section title, button, explanatory note, and privacy note.
+- Rewrote the bilingual prompt template to guide a short 2-3 round conversation with the user's own AI, starting with a concise diagnosis rather than a long report.
+- Preserved once-only local exploration: no AI call, no Cloudflare Function call, no D1 write, no persistent answer storage.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Browser check confirmed English and Chinese progress display appears once.
+- Browser check completed 20 situations, generated the result page, and confirmed Strongest/Supporting/Quiet groups and the new diagnosis prompt appear.
+
+Commit:
+
+- To be created after final verification.
+
+Push status:
+
+- To be pushed after final verification.
+
 ### 2026-05-15 - Add local Knowledge Lens exploration results
 
 Status: Implemented
