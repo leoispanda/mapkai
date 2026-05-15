@@ -654,6 +654,32 @@ Push status:
 
 - Pending.
 
+### 2026-05-15 - Fix logo style cache and fit
+
+Status: Ready to commit
+
+Changed:
+
+- Bumped the stylesheet cache key to `/styles.css?v=20260515-logo-fit` so deployed browsers stop using the old cropped logo-card styles.
+- Hardened the header logo CSS with non-shrinking brand/logo rules.
+- Kept `/mapkai-logo-transparent.png` unchanged.
+- Synchronized root and public `index.html` and `styles.css`.
+
+Verified:
+
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html` and `styles.css`.
+- Source search confirmed the new stylesheet cache key and non-shrinking logo CSS exist in root and public files.
+- Browser check confirmed the page now loads `/styles.css?v=20260515-logo-fit`, the logo uses `object-fit: contain`, `max-width: none`, and `flex-shrink: 0`.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Pending.
+
 ### 2026-05-15 - Clarify homepage exploration snippets
 
 Status: Ready to commit

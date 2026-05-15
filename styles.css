@@ -55,11 +55,15 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .brand-mark {
+  display: block;
   width: auto;
   height: clamp(28px, 4vw, 36px);
+  max-width: none;
+  flex: 0 0 auto;
   border-radius: 0;
   object-fit: contain;
   object-position: center;
