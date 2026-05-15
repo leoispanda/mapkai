@@ -621,6 +621,39 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Add MapKAI logo assets to website
+
+Status: Ready to commit
+
+Changed:
+
+- Connected the high-quality MapKAI logo package from `assets/mapkai_logo_high_quality/`.
+- Updated the header brand image to use `/mapkai-logo-transparent.png`.
+- Added `/favicon.ico` as the browser favicon.
+- Added `/mapkai-icon-square-180.png` as the Apple touch icon.
+- Added `manifest.json` with `/mapkai-icon-square-192.png` and `/mapkai-icon-square-512.png` app icons.
+- Copied static logo/icon files to both root and `public/` paths.
+- Kept the existing website structure, navigation, Explore flow, Reflection system, Founder mode, and backend integrations unchanged.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `manifest.json` and `public/manifest.json` parsed as valid JSON.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html` and `styles.css`.
+- Source search confirmed favicon, Apple touch icon, manifest, header logo, and PWA icon references.
+- File checks confirmed root and `public/` logo/icon assets exist.
+- Browser check confirmed the header logo loads from `/mapkai-logo-transparent.png` at 153 x 36 on desktop with no crop and metadata icon links present.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Pending.
+
 ### 2026-05-15 - Clarify homepage exploration snippets
 
 Status: Ready to commit

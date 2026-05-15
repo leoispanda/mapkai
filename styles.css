@@ -58,12 +58,12 @@ a {
 }
 
 .brand-mark {
-  width: clamp(138px, 18vw, 190px);
-  height: 54px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: auto;
+  height: clamp(28px, 4vw, 36px);
+  border-radius: 0;
+  object-fit: contain;
   object-position: center;
-  box-shadow: 0 14px 32px rgba(15, 107, 87, 0.22);
+  box-shadow: none;
 }
 
 .nav-links {
