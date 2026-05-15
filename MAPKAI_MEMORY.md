@@ -621,6 +621,36 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-15 - Clarify homepage exploration snippets
+
+Status: Ready to commit
+
+Changed:
+
+- Rewrote the homepage reflection snippets section to feel clearer and less cryptic.
+- Changed the English title to `What exploration begins to reveal`.
+- Changed the Chinese title to `探索会慢慢显现什么`.
+- Replaced abstract observation lines with more direct product-facing lines about question clarity, problem framing, avoided domains, and the map as a quieter mirror of thinking.
+- Preserved homepage structure, navigation, Explore flow, Reflection generation, Founder mode, About content, routes, and backend integrations.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Source search confirmed the old `Quiet observations from exploration` title was replaced.
+- Browser check confirmed the homepage renders the new clearer snippet section.
+
+Commit:
+
+- Pending.
+
+Push status:
+
+- Not pushed.
+
 ### 2026-05-15 - Add About question design note
 
 Status: Ready to commit
