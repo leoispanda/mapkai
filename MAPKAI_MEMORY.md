@@ -621,6 +621,49 @@ Push status:
 
 - Not pushed.
 
+### 2026-05-17 - Add Quick Mirror 30-second entry
+
+Status: Implemented
+
+Changed:
+
+- Added Quick Mirror / 30秒思维镜像 as a low-friction entry layer for first-time visitors.
+- Purpose: reduce the gap where users understand the concept but do not know why to click into Explore.
+- Added homepage microcopy: 3 questions / no login / 30 seconds.
+- Added an Explore-top Quick Mirror card with intro, 3 local everyday situation questions, result card, and CTA back to the full exploration flow.
+- Implemented local frontend-only rules: A = Evidence / Value, B = Structure / Systems, C = Meaning / Possibility, D = People / Comfort.
+- Result card emphasizes an early thinking signal, not a personality label.
+- Quick Mirror does not call AI, D1, auth, analytics, or any new backend.
+- Quick Mirror is an entry door, not a replacement for the full 20-question exploration.
+- Visual direction: clean, warm, premium, calm, with one deep green accent.
+- Added cold-start private invite copy constants for later testing.
+- Synchronized root and public `index.html`, `script.js`, and `styles.css`.
+
+Verified:
+
+- `node --check script.js` passed.
+- `node --check public/script.js` passed.
+- `git diff --check` passed.
+- Root/public sync checks passed for `index.html`, `script.js`, and `styles.css`.
+- Browser check confirmed homepage hint appears.
+- Browser check confirmed Quick Mirror card appears on Explore.
+- Browser check completed the 3-question flow and showed result card with early-signal boundary and deeper-map CTA.
+- Browser check confirmed a tie is capped to a two-lens combination.
+- Browser check confirmed Chinese labels and boundary copy render.
+- Browser check confirmed Continue CTA leaves the full exploration question card available.
+
+Next:
+
+- Run a 20-person internal test to validate clicks, completion, result resonance, continuation intent, and how users explain MapKAI after Quick Mirror.
+
+Commit:
+
+- To be created after final verification.
+
+Push status:
+
+- To be pushed if requested.
+
 ### 2026-05-15 - Polish Knowledge Lens result page and diagnosis prompt
 
 Status: Implemented

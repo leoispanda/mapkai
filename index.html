@@ -57,6 +57,7 @@
           <div class="hero-actions">
             <a class="button primary" href="/explore" data-route="/explore">Start Exploring</a>
           </div>
+          <p class="hero-microcopy">3 questions · No login · 30 seconds</p>
         </div>
         <section class="reflection-snippets" aria-labelledby="reflection-snippets-title">
           <h2 id="reflection-snippets-title">What exploration begins to reveal</h2>
@@ -112,6 +113,7 @@
       </section>
 
       <section class="page explore-page" id="explore" data-page="/explore">
+        <section class="quick-mirror" id="quickMirror" aria-live="polite"></section>
         <section class="map-challenge" aria-labelledby="challenge-title">
           <div class="section-heading compact">
             <p class="eyebrow">Current Exploration</p>
@@ -294,6 +296,8 @@ const uiText = {
     homeTitle: "Map your knowledge with AI",
     homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
     homePrimary: "Start Exploring",
+    homeQuickMirrorHint: "3 questions · No login · 30 seconds",
+    homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
     homeLearning: "View Knowledge Map",
     homeCategories: "Browse Domains",
     reflectionSnippetsTitle: "What exploration begins to reveal",
@@ -352,6 +356,19 @@ const uiText = {
     mapCopy: "In MapKAI, the ocean represents what you have not explored yet. The land represents what you understand well enough to explain. Learning paths help you move from ocean to land.",
     goCategories: "Continue Exploring",
     goLearning: "Browse Domains",
+    quickMirrorTitle: "Quick Mirror",
+    quickMirrorSubtitle: "Answer 3 everyday situations and see your first thinking signal.",
+    quickMirrorMeta: "3 questions · No login · 30 seconds",
+    tryQuickMirror: "Try Quick Mirror",
+    skipQuickMirror: "Skip and start full exploration",
+    quickMirrorQuestionProgress: (current, total) => `${current}/${total}`,
+    quickMirrorFirstSignal: "Your first signal",
+    quickMirrorBoundary: "This is an early signal, not a personality label.",
+    quickMirrorDeeperMap: "A deeper map needs more signals.",
+    quickMirrorContinue: "Continue to reveal your deeper map",
+    quickMirrorRestart: "Try again",
+    quickMirrorInviteZh: "我最近在做 MapKAI，想邀请你做第一批体验者。\n\n它不是心理测试，也不用注册。\n我现在想先测试一个 30 秒思维镜像：3 个日常问题，看它能不能捕捉一个人的第一选择模式。\n\n你愿意帮我试一下吗？\n试完只要告诉我三件事：\n1. 第一眼看懂了吗？\n2. 结果有没有一点像你？\n3. 你会不会想继续探索？",
+    quickMirrorInviteEn: "I’m testing a small early experience for MapKAI.\n\nIt is not a personality test and does not require login.\nIt is a 30-second thinking mirror with 3 everyday questions, designed to see whether it can capture a person’s first choice pattern.\n\nWould you be open to trying it and sharing quick feedback?\n\nI’m mainly looking for:\n1. Whether the idea is clear at first glance\n2. Whether the result feels somewhat relevant\n3. Whether you would continue exploring after it",
     challengeEyebrow: "Current Exploration",
     challengeTitle: "Answer one situation at a time.",
     challengeCopy: "Your map and reflection become clearer as exploration accumulates.",
@@ -495,6 +512,8 @@ const uiText = {
     homeTitle: "Map your knowledge with AI",
     homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
     homePrimary: "开始探索",
+    homeQuickMirrorHint: "3个问题 · 不用注册 · 30秒看结果",
+    homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
     homeLearning: "查看知识地图",
     homeCategories: "浏览领域",
     reflectionSnippetsTitle: "探索会慢慢显现什么",
@@ -553,6 +572,19 @@ const uiText = {
     mapCopy: "在 MapKAI 里，海洋代表你还没有探索的知识；陆地代表你已经能解释的理解。学习路径会帮助你一步步从海洋走向陆地。",
     goCategories: "继续探索",
     goLearning: "浏览领域",
+    quickMirrorTitle: "30秒思维镜像",
+    quickMirrorSubtitle: "回答3个日常情境，看看你的第一个思维信号。",
+    quickMirrorMeta: "3个问题 · 不用注册 · 30秒看结果",
+    tryQuickMirror: "开始30秒思维镜像",
+    skipQuickMirror: "跳过，直接开始完整探索",
+    quickMirrorQuestionProgress: (current, total) => `${current}/${total}`,
+    quickMirrorFirstSignal: "你的第一个信号",
+    quickMirrorBoundary: "这只是早期信号，不是人格标签。",
+    quickMirrorDeeperMap: "更完整的地图需要更多信号。",
+    quickMirrorContinue: "继续探索，生成更完整的自己",
+    quickMirrorRestart: "重新体验",
+    quickMirrorInviteZh: "我最近在做 MapKAI，想邀请你做第一批体验者。\n\n它不是心理测试，也不用注册。\n我现在想先测试一个 30 秒思维镜像：3 个日常问题，看它能不能捕捉一个人的第一选择模式。\n\n你愿意帮我试一下吗？\n试完只要告诉我三件事：\n1. 第一眼看懂了吗？\n2. 结果有没有一点像你？\n3. 你会不会想继续探索？",
+    quickMirrorInviteEn: "I’m testing a small early experience for MapKAI.\n\nIt is not a personality test and does not require login.\nIt is a 30-second thinking mirror with 3 everyday questions, designed to see whether it can capture a person’s first choice pattern.\n\nWould you be open to trying it and sharing quick feedback?\n\nI’m mainly looking for:\n1. Whether the idea is clear at first glance\n2. Whether the result feels somewhat relevant\n3. Whether you would continue exploring after it",
     challengeEyebrow: "当前探索",
     challengeTitle: "一次进入一个情境。",
     challengeCopy: "随着探索积累，你的地图和反思会逐渐清晰。",
@@ -692,6 +724,113 @@ function t(key, ...args) {
   const value = uiText[currentLanguage]?.[key] ?? uiText.en[key] ?? key;
   return typeof value === "function" ? value(...args) : value;
 }
+
+const quickMirrorQuestions = [
+  {
+    id: "quick-001",
+    en: {
+      question: "You and your friends are planning a short weekend trip. What would you naturally want to take care of?",
+      options: {
+        A: "Managing the budget and deciding what is truly worth spending on",
+        B: "Designing the route so time and transport feel smoother",
+        C: "Finding places and experiences that feel memorable",
+        D: "Taking care of everyone’s rhythm, energy, and comfort",
+      },
+    },
+    zh: {
+      question: "你和朋友要策划一次周末短途旅行。你最想负责哪件事？",
+      options: {
+        A: "控制预算，判断哪些钱花得最值",
+        B: "设计路线，让时间和交通更顺",
+        C: "找到真正有记忆点的地方和体验",
+        D: "照顾大家的节奏、体力和舒适度",
+      },
+    },
+  },
+  {
+    id: "quick-002",
+    en: {
+      question: "A small project suddenly becomes messy. Everyone is busy, but the direction is unclear. What would you want to do first?",
+      options: {
+        A: "Identify the key problem and decide what is most worth focusing on",
+        B: "Organize tasks, roles, and next steps so the situation has structure again",
+        C: "Suggest a new angle so the team can see different possibilities",
+        D: "Align people’s pressure and rhythm first, so the team does not burn out",
+      },
+    },
+    zh: {
+      question: "一个小项目突然变得混乱，大家都在忙，但方向不太清楚。你最想先做什么？",
+      options: {
+        A: "找出最关键的问题，判断哪些事情最值得投入",
+        B: "整理任务、角色和下一步，让局面重新有结构",
+        C: "提出一个新的切入点，让大家看到不同可能性",
+        D: "先和大家对齐压力和节奏，避免团队继续消耗",
+      },
+    },
+  },
+  {
+    id: "quick-003",
+    en: {
+      question: "You want to explore a new direction, but you are not sure whether it fits you. What would you usually do first?",
+      options: {
+        A: "Look up information and examples to judge whether it is truly worth investing in",
+        B: "Build a simple plan and clarify the path and steps first",
+        C: "Try a small project or small experience to see whether it feels right",
+        D: "Talk with people, hear different experiences, and then check your own state",
+      },
+    },
+    zh: {
+      question: "你想开始探索一个新方向，但还不确定它是否适合你。你通常会先怎么做？",
+      options: {
+        A: "查资料和案例，判断它是否真的值得投入",
+        B: "搭一个简单计划，先把路径和步骤理出来",
+        C: "先尝试一个小作品或小体验，看看有没有感觉",
+        D: "找人聊聊，听听不同经验，再判断自己的状态",
+      },
+    },
+  },
+];
+
+const quickMirrorResults = {
+  A: {
+    signalEn: "Evidence / Value",
+    signalZh: "价值判断",
+    nameEn: "Evidence-Seeking Explorer",
+    nameZh: "价值判断型探索者",
+    mirrorEn: "Before you invest your energy, you may first look for what is truly worth it.",
+    mirrorZh: "在投入精力之前，你可能会先判断什么才真正值得。",
+  },
+  B: {
+    signalEn: "Structure / Systems",
+    signalZh: "结构路径",
+    nameEn: "Structure-Seeking Explorer",
+    nameZh: "结构路径型探索者",
+    mirrorEn: "Before you fully trust a path, you may first look for structure, roles, and next steps.",
+    mirrorZh: "在真正相信一条路之前，你可能会先寻找结构、角色和下一步。",
+  },
+  C: {
+    signalEn: "Meaning / Possibility",
+    signalZh: "可能性创造",
+    nameEn: "Possibility-Seeking Explorer",
+    nameZh: "可能性创造型探索者",
+    mirrorEn: "Before you settle into one direction, you may first look for what feels meaningful, fresh, or worth trying.",
+    mirrorZh: "在确定一个方向之前，你可能会先寻找什么是有意义、新鲜、值得尝试的。",
+  },
+  D: {
+    signalEn: "People / Comfort",
+    signalZh: "关系节奏",
+    nameEn: "People-Aware Explorer",
+    nameZh: "关系节奏型探索者",
+    mirrorEn: "Before moving forward, you may first notice people’s rhythm, comfort, and shared readiness.",
+    mirrorZh: "在继续推进之前，你可能会先注意大家的节奏、舒适度和共同准备状态。",
+  },
+};
+
+let quickMirrorState = {
+  mode: "intro",
+  index: 0,
+  answers: [],
+};
 
 const mapAssetPath = "/assets/map/";
 const mapStateLayerNames = {
@@ -3901,6 +4040,7 @@ function applyLanguage() {
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
   setAllText(".home-page .hero-actions .button", [t("homePrimary")]);
+  setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
   setText("#reflection-snippets-title", t("reflectionSnippetsTitle"));
   setAllText(".reflection-snippets .snippet-list p", t("reflectionSnippets"));
 
@@ -4020,6 +4160,7 @@ function applyLanguage() {
   renderMessageBoards();
   if (document.body.classList.contains("founder-mode")) loadFounderMessages();
   renderVisitStats();
+  renderQuickMirror();
   renderChallenge();
   renderReflectionPanel();
   renderKnowledgeTitleModal();
@@ -5071,6 +5212,125 @@ function closeKnowledgeTitleModal() {
   renderKnowledgeTitleModal();
 }
 
+function renderQuickMirror() {
+  const target = document.getElementById("quickMirror");
+  if (!target) return;
+  if (quickMirrorState.mode === "question") {
+    renderQuickMirrorQuestion(target);
+    return;
+  }
+  if (quickMirrorState.mode === "result") {
+    renderQuickMirrorResult(target);
+    return;
+  }
+  target.innerHTML = `
+    <div class="quick-mirror-card">
+      <div>
+        <p class="eyebrow">${t("quickMirrorMeta")}</p>
+        <h2>${t("quickMirrorTitle")}</h2>
+        <p>${t("quickMirrorSubtitle")}</p>
+      </div>
+      <div class="quick-mirror-actions">
+        <button class="button primary" type="button" data-quick-mirror-start>${t("tryQuickMirror")}</button>
+        <button class="button secondary" type="button" data-quick-mirror-skip>${t("skipQuickMirror")}</button>
+      </div>
+    </div>`;
+}
+
+function startQuickMirror() {
+  quickMirrorState = { mode: "question", index: 0, answers: [] };
+  renderQuickMirror();
+}
+
+function resetQuickMirror() {
+  quickMirrorState = { mode: "intro", index: 0, answers: [] };
+  renderQuickMirror();
+}
+
+function renderQuickMirrorQuestion(target) {
+  const question = quickMirrorQuestions[quickMirrorState.index];
+  const content = question?.[currentLanguage] || question?.en;
+  if (!question || !content) {
+    quickMirrorState.mode = "result";
+    renderQuickMirror();
+    return;
+  }
+  target.innerHTML = `
+    <div class="quick-mirror-card is-question">
+      <div>
+        <p class="eyebrow">${t("quickMirrorTitle")} · ${t("quickMirrorQuestionProgress", quickMirrorState.index + 1, quickMirrorQuestions.length)}</p>
+        <h2>${content.question}</h2>
+      </div>
+      <div class="quick-mirror-options">
+        ${Object.entries(content.options).map(([key, option]) => `
+          <button type="button" data-quick-mirror-option="${key}">
+            <span>${key}</span>
+            ${escapeHtml(option)}
+          </button>`).join("")}
+      </div>
+    </div>`;
+}
+
+function selectQuickMirrorOption(optionKey) {
+  if (quickMirrorState.mode !== "question") return;
+  quickMirrorState.answers.push(optionKey);
+  if (quickMirrorState.answers.length >= quickMirrorQuestions.length) {
+    quickMirrorState.mode = "result";
+  } else {
+    quickMirrorState.index += 1;
+  }
+  renderQuickMirror();
+}
+
+function getQuickMirrorResult() {
+  const counts = { A: 0, B: 0, C: 0, D: 0 };
+  quickMirrorState.answers.forEach((answer) => {
+    if (counts[answer] !== undefined) counts[answer] += 1;
+  });
+  const max = Math.max(...Object.values(counts));
+  const topKeys = Object.entries(counts)
+    .filter(([, count]) => count === max)
+    .map(([key]) => key);
+  const activeKeys = (topKeys.length ? topKeys : ["A"]).slice(0, 2);
+  const activeResults = activeKeys.map((key) => quickMirrorResults[key]).filter(Boolean);
+  if (activeResults.length === 1) {
+    const result = activeResults[0];
+    return {
+      name: currentLanguage === "zh" ? result.nameZh : result.nameEn,
+      mirror: currentLanguage === "zh" ? result.mirrorZh : result.mirrorEn,
+    };
+  }
+  const signal = activeResults
+    .map((result) => currentLanguage === "zh" ? result.signalZh : result.signalEn.split(" / ")[0])
+    .join(" + ");
+  return {
+    name: signal,
+    mirror: currentLanguage === "zh"
+      ? `你的前三个选择在 ${signal} 之间摆动。这个信号还很早，但它显示你可能会同时关注判断依据和现实推进方式。`
+      : `Your first choices move between ${signal}. This signal is still early, but it suggests you may notice more than one route into a situation.`,
+  };
+}
+
+function renderQuickMirrorResult(target) {
+  const result = getQuickMirrorResult();
+  target.innerHTML = `
+    <div class="quick-mirror-card is-result">
+      <p class="eyebrow">${t("quickMirrorFirstSignal")}</p>
+      <h2>${escapeHtml(result.name)}</h2>
+      <p class="quick-mirror-sentence">${escapeHtml(result.mirror)}</p>
+      <p class="quick-mirror-boundary">${t("quickMirrorBoundary")}</p>
+      <p class="quick-mirror-deeper">${t("quickMirrorDeeperMap")}</p>
+      <div class="quick-mirror-actions">
+        <button class="button primary" type="button" data-quick-mirror-continue>${t("quickMirrorContinue")}</button>
+        <button class="button secondary" type="button" data-quick-mirror-reset>${t("quickMirrorRestart")}</button>
+      </div>
+    </div>`;
+}
+
+function scrollToFullExploration() {
+  document.getElementById("challengeCard")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function renderKnowledgeTitleModal() {
   let modal = document.getElementById("knowledgeTitleModal");
   if (!modal) {
@@ -5405,6 +5665,27 @@ function roundRect(context, x, y, width, height, radius) {
 document.addEventListener("click", (event) => {
   if (event.target.closest("[data-title-modal-close]")) {
     closeKnowledgeTitleModal();
+    return;
+  }
+  if (event.target.closest("[data-quick-mirror-start]")) {
+    startQuickMirror();
+    return;
+  }
+  if (event.target.closest("[data-quick-mirror-skip]")) {
+    scrollToFullExploration();
+    return;
+  }
+  const quickMirrorOption = event.target.closest("[data-quick-mirror-option]");
+  if (quickMirrorOption) {
+    selectQuickMirrorOption(quickMirrorOption.dataset.quickMirrorOption);
+    return;
+  }
+  if (event.target.closest("[data-quick-mirror-continue]")) {
+    scrollToFullExploration();
+    return;
+  }
+  if (event.target.closest("[data-quick-mirror-reset]")) {
+    resetQuickMirror();
     return;
   }
   if (event.target.closest("[data-generate-lens-result]")) {

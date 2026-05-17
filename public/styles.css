@@ -337,6 +337,12 @@ p {
   margin-top: 38px;
 }
 
+.hero-microcopy {
+  margin-top: 12px;
+  color: var(--green-dark);
+  font-weight: 760;
+}
+
 .reflection-snippets {
   width: min(980px, 100%);
   margin: 0 auto clamp(44px, 8vw, 90px);
@@ -903,6 +909,104 @@ canvas {
 
 .explore-page .map-challenge {
   margin-top: 34px;
+}
+
+.quick-mirror {
+  width: min(1180px, 100%);
+  margin: 0 auto 26px;
+}
+
+.quick-mirror-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(15, 107, 87, 0.18);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 28px);
+  background: linear-gradient(135deg, rgba(255, 250, 240, 0.92), rgba(237, 244, 233, 0.68));
+  box-shadow: var(--shadow);
+}
+
+.quick-mirror-card h2 {
+  margin-bottom: 8px;
+  color: var(--green-dark);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+}
+
+.quick-mirror-card p {
+  margin: 0;
+}
+
+.quick-mirror-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.quick-mirror-card.is-question,
+.quick-mirror-card.is-result {
+  align-items: stretch;
+  grid-template-columns: 1fr;
+}
+
+.quick-mirror-options {
+  display: grid;
+  gap: 10px;
+}
+
+.quick-mirror-options button {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: rgba(255, 250, 240, 0.72);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 720;
+  text-align: left;
+  cursor: pointer;
+}
+
+.quick-mirror-options button:hover {
+  border-color: rgba(15, 107, 87, 0.34);
+  background: rgba(237, 244, 233, 0.78);
+}
+
+.quick-mirror-options span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(15, 107, 87, 0.1);
+  color: var(--green-dark);
+  font-weight: 860;
+}
+
+.quick-mirror-sentence {
+  max-width: 760px;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.45vw, 1.24rem);
+  line-height: 1.6;
+}
+
+.quick-mirror-boundary,
+.quick-mirror-deeper {
+  color: var(--muted);
+}
+
+.quick-mirror-boundary {
+  margin-top: 12px;
+  font-weight: 780;
+}
+
+.quick-mirror-deeper {
+  margin-top: 4px;
 }
 
 .challenge-panel {
@@ -1522,12 +1626,17 @@ canvas {
 
   .field-hero,
   .contact-section,
+  .quick-mirror-card,
   .lens-bar-row,
   .reflection-briefing-grid article,
   .preview-band {
     align-items: stretch;
     grid-template-columns: 1fr;
     flex-direction: column;
+  }
+
+  .quick-mirror-actions {
+    justify-content: flex-start;
   }
 }
 
