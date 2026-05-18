@@ -433,6 +433,54 @@ p {
   padding-bottom: 20px;
 }
 
+.about-mission-vision {
+  display: grid;
+  gap: 16px;
+}
+
+.mission-belief {
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
+.mission-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 820px;
+}
+
+.mission-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.72);
+  padding: clamp(16px, 2.4vw, 22px);
+}
+
+.mission-card h3 {
+  margin: 0 0 8px;
+  color: var(--rust);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mission-card p,
+.about-mission-vision .mission-trust {
+  margin: 0;
+}
+
+.about-mission-vision .mission-trust {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 720px) {
+  .mission-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card-grid,
 .category-grid,
 .path-type-grid {

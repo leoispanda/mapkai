@@ -81,6 +81,21 @@
             <p>Map your knowledge with AI.</p>
             <p>It helps scattered learning become visible enough to explore, question, and reflect on.</p>
           </section>
+          <section class="about-block about-mission-vision">
+            <h2>Mission & Vision</h2>
+            <p class="mission-belief">When answers become abundant, direction becomes the real advantage.</p>
+            <div class="mission-card-grid">
+              <article class="mission-card">
+                <h3>Mission</h3>
+                <p>MapKAI helps people discover their active knowledge areas, notice quiet areas, and choose what to explore next in the AI era.</p>
+              </article>
+              <article class="mission-card">
+                <h3>Vision</h3>
+                <p>MapKAI aims to become a personal knowledge compass for the AI era, helping people move beyond narrow professional boundaries, build a broader picture of knowledge, and gradually turn self-awareness into personalized learning paths.</p>
+              </article>
+            </div>
+            <p class="mission-trust">Quiet areas are not weaknesses. They are places worth exploring.</p>
+          </section>
           <section class="about-block">
             <h2>The AI Era Problem</h2>
             <p>AI can generate infinite answers. But many people still do not clearly understand how they think, what they repeatedly ignore, or where their blind spots are.</p>
@@ -449,6 +464,13 @@ const uiText = {
     aboutWhatTitle: "What MapKAI Is",
     aboutWhatP1: "Map your knowledge with AI.",
     aboutWhatP2: "It helps scattered learning become visible enough to explore, question, and reflect on.",
+    aboutMissionTitle: "Mission & Vision",
+    aboutMissionBelief: "When answers become abundant, direction becomes the real advantage.",
+    aboutMissionLabel: "Mission",
+    aboutMissionText: "MapKAI helps people discover their active knowledge areas, notice quiet areas, and choose what to explore next in the AI era.",
+    aboutVisionLabel: "Vision",
+    aboutVisionText: "MapKAI aims to become a personal knowledge compass for the AI era, helping people move beyond narrow professional boundaries, build a broader picture of knowledge, and gradually turn self-awareness into personalized learning paths.",
+    aboutMissionTrust: "Quiet areas are not weaknesses. They are places worth exploring.",
     aboutAiTitle: "The AI Era Problem",
     aboutAiP1: "AI can generate infinite answers. But many people still do not clearly understand how they think, what they repeatedly ignore, or where their blind spots are.",
     aboutAiP2: "Navigate your knowledge before navigating AI.",
@@ -665,6 +687,13 @@ const uiText = {
     aboutWhatTitle: "MapKAI 是什么",
     aboutWhatP1: "Map your knowledge with AI.",
     aboutWhatP2: "它让零散学习变得可见，从而更容易被探索、追问和反思。",
+    aboutMissionTitle: "Mission & Vision",
+    aboutMissionBelief: "当答案变得充足，方向才成为真正的优势。",
+    aboutMissionLabel: "Mission",
+    aboutMissionText: "MapKAI 帮助人们在 AI 时代发现自己的知识活跃区域，留意安静区域，并选择下一步值得探索的方向。",
+    aboutVisionLabel: "Vision",
+    aboutVisionText: "MapKAI 的愿景，是成为 AI 时代的个人知识指南针，帮助人们突破单一专业边界，建立更完整的知识图景，并逐步把自我认知转化为个性化学习路径。",
+    aboutMissionTrust: "安静区域不是弱点，而是值得探索的地方。",
     aboutAiTitle: "AI 时代的问题",
     aboutAiP1: "AI 可以生成无限答案。但很多人仍然不清楚自己如何思考、反复忽略什么、盲点在哪里。",
     aboutAiP2: "Navigate your knowledge before navigating AI.",
@@ -4072,7 +4101,18 @@ function applyLanguage() {
 
   setText(".about-page .about-opening .eyebrow", t("aboutEyebrow"));
   setText(".about-page .about-opening h1", t("aboutOpening"));
-  setAllText(".about-page .about-block h2", [
+  setText(".about-page .about-mission-vision h2", t("aboutMissionTitle"));
+  setText(".about-page .about-mission-vision .mission-belief", t("aboutMissionBelief"));
+  setAllText(".about-page .about-mission-vision .mission-card h3", [
+    t("aboutMissionLabel"),
+    t("aboutVisionLabel"),
+  ]);
+  setAllText(".about-page .about-mission-vision .mission-card p", [
+    t("aboutMissionText"),
+    t("aboutVisionText"),
+  ]);
+  setText(".about-page .about-mission-vision .mission-trust", t("aboutMissionTrust"));
+  setAllText(".about-page .about-block:not(.about-mission-vision) h2", [
     t("aboutWhatTitle"),
     t("aboutAiTitle"),
     t("aboutExploreTitle"),
@@ -4080,7 +4120,7 @@ function applyLanguage() {
     t("aboutReflectionTitle"),
     t("aboutBoundaryTitle"),
   ]);
-  setAllText(".about-page .about-block p", [
+  setAllText(".about-page .about-block:not(.about-mission-vision) p", [
     t("aboutWhatP1"),
     t("aboutWhatP2"),
     t("aboutAiP1"),

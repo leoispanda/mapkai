@@ -1728,3 +1728,9 @@ Commit:
 Push status:
 
 - Not pushed.
+
+## 2026-05-18 - Add concise Mission & Vision section
+- Added a lightweight Mission & Vision section to the About page between What MapKAI Is and The AI Era Problem.
+- Added bilingual core belief, Mission, Vision, and trust boundary copy.
+- Used two small cards for Mission and Vision, with a calm trust line that quiet areas are not weaknesses.
+- Synced root and public index/script/styles files.
