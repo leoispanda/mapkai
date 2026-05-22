@@ -1,254 +1,198 @@
 export const pdcPersonaLibrary = [
   {
-    id: "shen-zhiheng",
+    id: "blue-whale",
+    name: "蓝鲸",
+    englishName: "Blue Whale",
+    family: "shared_facilitator",
+    role: "PDC facilitator / round summarizer / meeting memory keeper",
+    responsibility: "Host the PDC flow, summarize conflicts and stance changes, maintain meeting memory, identify next-round focus, and produce final decision memos.",
+    placeholderSummary: "Blue Whale has identified the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later turn these perspectives into a deeper structured council debate and final decision memo.",
+    isCoreMember: true,
+    isTemporaryAdvisor: false,
+    isDefault: true,
+    status: "active",
+    isPlayer: false,
+    isFacilitator: true,
+    canVote: false,
+    canBeEliminated: false,
+    canAttack: false,
+    version: 1,
+    createdAt: "2026-05-22",
+    updatedAt: "2026-05-22",
+    notes: "Shared PDC facilitator. Always shown on the front screen, never as a participant card.",
+  },
+  {
+    id: "ethan-shen",
+    englishName: "Ethan Shen",
     name: "沈知衡",
-    englishName: "Shen Zhiheng",
     family: "personal_committee",
-    role: "Calm structural analyst",
-    responsibility: "Clarifies the frame, assumptions, and long-term consequences.",
-    personality: "Steady, precise, patient",
-    decisionStyle: "Principle-first, trade-off aware",
-    caresAbout: ["clarity", "long-term integrity", "avoidable risk"],
-    hates: ["false urgency", "vague framing"],
-    blindSpot: "May underweight emotional timing.",
-    speakingStyle: "Quiet, direct, structured",
-    attackStyle: "Questions hidden assumptions.",
-    valueWhenUseful: "Turns a messy decision into a stable frame.",
-    visualIdentity: "deep green, fine lines",
+    role: "Facts & Evidence",
+    responsibility: "Clarify missing information, evidence, assumptions, and factual uncertainty.",
+    placeholderStatement: "First, I would clarify what information is missing before making this decision.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "lin-wenxin",
+    id: "clara-lin",
+    englishName: "Clara Lin",
     name: "林问心",
-    englishName: "Lin Wenxin",
     family: "personal_committee",
-    role: "Inner motive reader",
-    responsibility: "Checks desire, fear, identity, and emotional honesty.",
-    personality: "Warm, probing, humane",
-    decisionStyle: "Meaning-first",
-    caresAbout: ["self-honesty", "energy", "relationships"],
-    hates: ["performative certainty", "self-abandonment"],
-    blindSpot: "May slow decisions that need fast execution.",
-    speakingStyle: "Gentle but difficult to evade",
-    attackStyle: "Asks what the user is not saying.",
-    valueWhenUseful: "Keeps the decision connected to the person living with it.",
-    visualIdentity: "soft rose, paper texture",
+    role: "Emotion & Inner Desire",
+    responsibility: "Examine feelings, real desire, emotional truth, and hidden motivation.",
+    placeholderStatement: "I would ask whether this decision reflects what you actually want, not only what sounds reasonable.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "lu-shouheng",
+    id: "marcus-lu",
+    englishName: "Marcus Lu",
     name: "陆守衡",
-    englishName: "Lu Shouheng",
     family: "personal_committee",
-    role: "Boundary and risk keeper",
-    responsibility: "Protects time, health, commitments, and red lines.",
-    personality: "Sober, protective, firm",
-    decisionStyle: "Risk-balanced",
-    caresAbout: ["safety", "capacity", "non-negotiables"],
-    hates: ["overextension", "romanticized sacrifice"],
-    blindSpot: "May sound more cautious than the moment requires.",
-    speakingStyle: "Plain, protective, exact",
-    attackStyle: "Names costs others avoid.",
-    valueWhenUseful: "Prevents attractive plans from quietly becoming harmful.",
-    visualIdentity: "stone gray, guarded shape",
+    role: "Risk & Downside",
+    responsibility: "Test downside, financial cost, opportunity cost, and worst-case outcome.",
+    placeholderStatement: "I would test the downside, cost, and what happens if this decision goes wrong.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "xu-wangyuan",
+    id: "adrian-xu",
+    englishName: "Adrian Xu",
     name: "许望远",
-    englishName: "Xu Wangyuan",
     family: "personal_committee",
-    role: "Future horizon scout",
-    responsibility: "Looks for optionality, direction, and future regret.",
-    personality: "Expansive, optimistic, strategic",
-    decisionStyle: "Possibility-aware",
-    caresAbout: ["future options", "growth", "direction"],
-    hates: ["tiny thinking", "fear disguised as realism"],
-    blindSpot: "May overestimate future energy.",
-    speakingStyle: "Wide-angle and encouraging",
-    attackStyle: "Challenges cramped plans.",
-    valueWhenUseful: "Keeps the decision from shrinking around present anxiety.",
-    visualIdentity: "sky blue, distant horizon",
+    role: "Opportunity & Long View",
+    responsibility: "Assess long-term upside, identity direction, external opportunity, and timing window.",
+    placeholderStatement: "I would look at whether this opens a meaningful long-term path.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "jiang-shizhou",
+    id: "felix-jiang",
+    englishName: "Felix Jiang",
     name: "江试舟",
-    englishName: "Jiang Shizhou",
     family: "personal_committee",
-    role: "Experiment designer",
-    responsibility: "Turns decisions into small tests and learning loops.",
-    personality: "Practical, curious, trial-oriented",
-    decisionStyle: "Prototype-first",
-    caresAbout: ["evidence", "small bets", "iteration"],
-    hates: ["all-or-nothing choices", "untested certainty"],
-    blindSpot: "May underweight symbolic commitments.",
-    speakingStyle: "Concrete, testable, brisk",
-    attackStyle: "Asks how the claim can be tested.",
-    valueWhenUseful: "Finds the next small move when the whole decision feels too large.",
-    visualIdentity: "river teal, small boat",
+    role: "Creativity & Third Path",
+    responsibility: "Create alternative routes, experiments, reframing, and non-binary options.",
+    placeholderStatement: "I would explore whether there is a third option beyond yes or no.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "song-zhaowei",
+    id: "iris-song",
+    englishName: "Iris Song",
     name: "宋照微",
-    englishName: "Song Zhaowei",
     family: "personal_committee",
-    role: "Subtle signal observer",
-    responsibility: "Notices small discomforts, overlooked details, and emotional residue.",
-    personality: "Sensitive, observant, precise",
-    decisionStyle: "Signal-sensitive",
-    caresAbout: ["quiet signals", "texture", "emotional aftertaste"],
-    hates: ["numbing", "overriding signals"],
-    blindSpot: "May give too much weight to faint signals.",
-    speakingStyle: "Soft but sharp",
-    attackStyle: "Points to the detail everyone skipped.",
-    valueWhenUseful: "Catches weak signals before they become loud problems.",
-    visualIdentity: "warm ivory, small light",
+    role: "Blind Spots & Self-Deception",
+    responsibility: "Question vanity, avoidance, fear, pride, and self-deception.",
+    placeholderStatement: "I would question whether pride, fear, or avoidance is shaping the decision.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "cheng-heming",
+    id: "julian-cheng",
+    englishName: "Julian Cheng",
     name: "程和鸣",
-    englishName: "Cheng Heming",
     family: "personal_committee",
-    role: "Harmony and relationship balancer",
-    responsibility: "Examines impact on relationships, communication, and shared rhythm.",
-    personality: "Diplomatic, humane, stabilizing",
-    decisionStyle: "Relational systems",
-    caresAbout: ["trust", "pace", "mutual understanding"],
-    hates: ["avoidable rupture", "silent resentment"],
-    blindSpot: "May soften necessary conflict.",
-    speakingStyle: "Balanced, relational, grounded",
-    attackStyle: "Challenges plans that ignore people.",
-    valueWhenUseful: "Keeps decisions from winning technically while losing relationally.",
-    visualIdentity: "sage green, woven lines",
+    role: "Relationships & Social Impact",
+    responsibility: "Evaluate impact on family, colleagues, mentors, network, and relationship trust.",
+    placeholderStatement: "I would consider how this affects family, colleagues, and important relationships.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
-    id: "gu-anshi",
+    id: "caleb-gu",
+    englishName: "Caleb Gu",
     name: "顾安时",
-    englishName: "Gu Anshi",
     family: "personal_committee",
-    role: "Timing and life rhythm keeper",
-    responsibility: "Checks whether the timing, sequence, and life capacity are right.",
-    personality: "Measured, patient, realistic",
-    decisionStyle: "Timing-aware",
-    caresAbout: ["sequence", "seasonality", "sustainable pace"],
-    hates: ["premature forcing", "late recognition"],
-    blindSpot: "May wait too long for cleaner timing.",
-    speakingStyle: "Slow, grounded, temporal",
-    attackStyle: "Questions whether now is really the moment.",
-    valueWhenUseful: "Finds the right order and pace.",
-    visualIdentity: "muted gold, clock shadow",
+    role: "Time, Energy & Sustainability",
+    responsibility: "Evaluate time, attention, energy, health, and sustainability.",
+    placeholderStatement: "I would check whether your current energy and schedule can support this.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member.",
   },
   {
     id: "orion-zhuge",
-    name: "诸葛观辰 / Orion Zhuge",
     englishName: "Orion Zhuge",
-    family: "personal_committee",
-    role: "Strategic pattern and symbolic timing advisor",
-    responsibility: "Reads the wider pattern, timing, leverage, and narrative signal.",
-    personality: "Strategic, symbolic, incisive",
-    decisionStyle: "Pattern-and-leverage",
-    caresAbout: ["timing", "positioning", "second-order effects"],
-    hates: ["flat thinking", "missing the larger game"],
-    blindSpot: "May sound too abstract without Jiang Shizhou's tests.",
-    speakingStyle: "Elegant, compressed, strategic",
-    attackStyle: "Reframes the board.",
-    valueWhenUseful: "Connects practical choices to larger strategic timing.",
-    visualIdentity: "midnight green, star line",
+    name: "诸葛观辰",
+    family: "shared_symbolic_timing",
+    role: "Timing & Momentum",
+    responsibility: "Offer symbolic timing and momentum reminders; metaphorical only, not factual prediction or fortune-telling.",
+    placeholderStatementPersonal: "I would look at the timing, momentum, and whether the situation is ready.",
+    placeholderStatementCompany: "I would ask whether this is the right moment to open a small controlled door.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Default Personal PDC member and temporary company roster member.",
+    notes: "Shared persona. Referenced by Personal PDC and Company PDC, stored only once.",
   },
-  // Temporary placeholder company roster. Leo's full company PDC role library will be added later.
+  // Temporary placeholder company partner roster. Replace or expand with Leo's full Company Partner Council persona library later.
   {
     id: "rex-velocity",
     name: "Rex Velocity",
     englishName: "Rex Velocity",
     family: "company_partner_council",
     role: "Product Growth",
-    responsibility: "Checks demand, adoption, distribution, and pilot learning.",
-    personality: "Direct, energetic, market-aware",
-    decisionStyle: "Growth hypothesis",
-    caresAbout: ["usage", "activation", "clear value"],
-    hates: ["invisible products", "vanity work"],
-    blindSpot: "May push before trust is ready.",
-    speakingStyle: "Fast and commercial, but grounded",
-    attackStyle: "Asks who will use it and why now.",
-    valueWhenUseful: "Turns product ideas into testable adoption questions.",
-    visualIdentity: "coral, arrow",
+    responsibility: "User traction, adoption, activation, growth loops, and user demand.",
+    placeholderStatement: "I would ask whether this can create real user traction or only internal excitement.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "vera-flow",
@@ -256,24 +200,16 @@ export const pdcPersonaLibrary = [
     englishName: "Vera Flow",
     family: "company_partner_council",
     role: "UX / Experience",
-    responsibility: "Checks interface clarity, trust, friction, and emotional pacing.",
-    personality: "Calm, user-sensitive, exacting",
-    decisionStyle: "Experience-first",
-    caresAbout: ["clarity", "flow", "trust"],
-    hates: ["confusing UI", "overbuilt onboarding"],
-    blindSpot: "May underweight technical cost.",
-    speakingStyle: "Plain, experiential, specific",
-    attackStyle: "Names the moment users get lost.",
-    valueWhenUseful: "Protects the pilot from feeling confusing or heavy.",
-    visualIdentity: "soft teal, path line",
+    responsibility: "First-time user clarity, flow, friction, completion, and usability.",
+    placeholderStatement: "I would check whether a first-time user can understand and complete the experience smoothly.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "max-stack",
@@ -281,24 +217,16 @@ export const pdcPersonaLibrary = [
     englishName: "Max Stack",
     family: "company_partner_council",
     role: "Technical / System",
-    responsibility: "Checks architecture, reliability, data boundaries, and implementation cost.",
-    personality: "Pragmatic, skeptical, systems-minded",
-    decisionStyle: "Operational feasibility",
-    caresAbout: ["maintainability", "security", "clear interfaces"],
-    hates: ["secret complexity", "fragile flows"],
-    blindSpot: "May discount softer brand value.",
-    speakingStyle: "Concrete and technical",
-    attackStyle: "Finds brittle assumptions.",
-    valueWhenUseful: "Keeps the product shippable and stable.",
-    visualIdentity: "graphite, grid",
+    responsibility: "Architecture, API cost, reliability, limits, security, and failure behavior.",
+    placeholderStatement: "I would verify the system limits, cost control, and failure behavior before scaling.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "nina-story",
@@ -306,49 +234,33 @@ export const pdcPersonaLibrary = [
     englishName: "Nina Story",
     family: "company_partner_council",
     role: "Brand Narrative",
-    responsibility: "Checks naming, story, positioning, and emotional memory.",
-    personality: "Narrative, elegant, audience-aware",
-    decisionStyle: "Meaning and memory",
-    caresAbout: ["positioning", "message", "trust"],
-    hates: ["generic claims", "overpromising"],
-    blindSpot: "May polish before proof.",
-    speakingStyle: "Memorable, concise, tonal",
-    attackStyle: "Cuts unclear story.",
-    valueWhenUseful: "Makes the product easier to understand and remember.",
-    visualIdentity: "ink, ribbon",
+    responsibility: "Positioning, trust language, story, product framing, and user perception.",
+    placeholderStatement: "I would make sure the product is positioned as reflection support, not decision authority.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "wang-zhibai",
-    name: "Wang Zhibai / 王之白",
+    name: "王之白",
     englishName: "Wang Zhibai",
     family: "company_partner_council",
     role: "Visual Design",
-    responsibility: "Checks visual hierarchy, identity, beauty, and restraint.",
-    personality: "Refined, visual, disciplined",
-    decisionStyle: "Aesthetic clarity",
-    caresAbout: ["visual trust", "restraint", "recognition"],
-    hates: ["visual noise", "decorative clutter"],
-    blindSpot: "May underweight copy clarity.",
-    speakingStyle: "Minimal, precise, design-led",
-    attackStyle: "Points to visual incoherence.",
-    valueWhenUseful: "Keeps MapKAI feeling premium and quiet.",
-    visualIdentity: "white, ink, fine border",
+    responsibility: "Visual clarity, calm premium feeling, council-like experience, and aesthetic coherence.",
+    placeholderStatement: "I would protect the calm, premium, council-like feeling of the experience.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "owen-deep",
@@ -356,24 +268,16 @@ export const pdcPersonaLibrary = [
     englishName: "Owen Deep",
     family: "company_partner_council",
     role: "User Insight",
-    responsibility: "Checks real user anxiety, motivation, comprehension, and feedback loops.",
-    personality: "Patient, observant, research-minded",
-    decisionStyle: "User evidence",
-    caresAbout: ["feedback", "behavior", "pilot learning"],
-    hates: ["assuming users think like builders"],
-    blindSpot: "May request more evidence than the first pilot needs.",
-    speakingStyle: "Grounded, observational",
-    attackStyle: "Asks what users actually did.",
-    valueWhenUseful: "Connects product choices to real user signals.",
-    visualIdentity: "deep blue-green, lens",
+    responsibility: "User learning, feedback, needs, behavior, and pilot signal quality.",
+    placeholderStatement: "I would ask what we can learn from this pilot and how feedback will be captured.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "adrian-north",
@@ -381,24 +285,16 @@ export const pdcPersonaLibrary = [
     englishName: "Adrian North",
     family: "company_partner_council",
     role: "Strategy",
-    responsibility: "Checks sequencing, defensibility, focus, and strategic fit.",
-    personality: "Strategic, cool, prioritizing",
-    decisionStyle: "Focus and leverage",
-    caresAbout: ["position", "sequence", "resource focus"],
-    hates: ["scattered bets", "unclear advantage"],
-    blindSpot: "May sound too detached from user emotion.",
-    speakingStyle: "Crisp, executive, directional",
-    attackStyle: "Challenges unfocused plans.",
-    valueWhenUseful: "Keeps the pilot connected to a coherent company direction.",
-    visualIdentity: "north star, dark green",
+    responsibility: "Strategic fit, long-term direction, product boundaries, and positioning risks.",
+    placeholderStatement: "I would check whether this supports MapKAI's long-term direction instead of distracting from it.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
   {
     id: "mira-sprint",
@@ -406,24 +302,16 @@ export const pdcPersonaLibrary = [
     englishName: "Mira Sprint",
     family: "company_partner_council",
     role: "Execution / Operations",
-    responsibility: "Checks what can be shipped, measured, maintained, and repeated.",
-    personality: "Practical, energetic, implementation-minded",
-    decisionStyle: "Execution loop",
-    caresAbout: ["next action", "owner clarity", "operational rhythm"],
-    hates: ["beautiful plans with no operating path"],
-    blindSpot: "May compress reflection too quickly.",
-    speakingStyle: "Actionable and brisk",
-    attackStyle: "Asks who does what by when.",
-    valueWhenUseful: "Turns the recommendation into a working pilot plan.",
-    visualIdentity: "sunlit yellow, checklist",
+    responsibility: "MVP scope, implementation sequence, operational simplicity, and first working loop.",
+    placeholderStatement: "I would reduce the first version to the smallest testable working loop.",
     isCoreMember: false,
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
+    isPlayer: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
-    notes: "Temporary placeholder company partner roster.",
   },
 ];
 
@@ -432,15 +320,16 @@ export const pdcModes = {
     id: "personal",
     label: "Personal PDC",
     description: "For career, life direction, learning, family, time/energy, and personal identity decisions.",
+    facilitatorId: "blue-whale",
     defaultPersonaIds: [
-      "shen-zhiheng",
-      "lin-wenxin",
-      "lu-shouheng",
-      "xu-wangyuan",
-      "jiang-shizhou",
-      "song-zhaowei",
-      "cheng-heming",
-      "gu-anshi",
+      "ethan-shen",
+      "clara-lin",
+      "marcus-lu",
+      "adrian-xu",
+      "felix-jiang",
+      "iris-song",
+      "julian-cheng",
+      "caleb-gu",
       "orion-zhuge",
     ],
   },
@@ -448,6 +337,7 @@ export const pdcModes = {
     id: "company",
     label: "Company Partner Council",
     description: "For MapKAI, product, website, company, strategy, UX, technical, brand, privacy/legal, business model, and execution decisions.",
+    facilitatorId: "blue-whale",
     defaultPersonaIds: [
       "rex-velocity",
       "vera-flow",
@@ -464,22 +354,24 @@ export const pdcModes = {
     id: "thesis",
     label: "Thesis / Research PDC",
     description: "For interview analysis, Gioia coding, thematic analysis, qualitative research, and academic writing decisions.",
+    facilitatorId: "blue-whale",
     defaultPersonaIds: [],
   },
   custom: {
     id: "custom",
     label: "Custom PDC",
     description: "For future Leo-selected session rosters.",
+    facilitatorId: "blue-whale",
     defaultPersonaIds: [],
   },
 };
 
-export const werewolfPdcRhythm = {
-  round1A: ["opening_positions_only", "no_attacks", "no_voting", "no_elimination"],
-  round1B: ["challenge_assumptions", "defense", "upvotes", "elimination_vote", "pk_if_tied"],
-  laterRounds: ["updated_stance", "meeting_memory_response", "cross_critique", "defense", "upvotes", "elimination_vote", "pk_if_tied"],
-  memory: ["stance", "contribution", "influence", "cumulative_upvotes", "survival_status"],
-  finalRound: ["highest_upvotes_final_power", "double_elimination_vote", "resurrection_final_statement", "star_contributor"],
+export const pdcRhythmFoundation = {
+  opening: ["opening_positions", "meeting_memory_seed", "first_tension_scan"],
+  challenge: ["cross_perspective_challenge", "response", "support_with_reason", "narrowing_signal"],
+  laterRounds: ["updated_stance", "meeting_memory_response", "stance_change", "next_focus"],
+  memory: ["stance", "contribution", "influence", "support_received", "active_status"],
+  finalRound: ["leading_contributor", "final_facilitator_summary", "decision_memo"],
   recapOnly: ["decision_frame", "core_tension", "council_highlights", "debate_snapshot", "condensed_review", "final_recommendation", "next_actions", "what_not_to_do", "reflection_note"],
 };
 
@@ -490,40 +382,48 @@ export const werewolfPdcRhythm = {
 // - Add support for temporary external advisors.
 // - Add mode-specific default templates.
 // - Add access-pass-level roster targeting.
-// - Keep Werewolf PDC rhythm independent from roster content.
+// - Keep PDC rhythm independent from roster content.
 // - Replace or expand placeholder company roster with Leo's full Company Partner Council persona library.
 // - Support larger rosters without changing the PDC rhythm.
 
 export function resolveSessionRoster({ modeId, sessionRoster }) {
   if (Array.isArray(sessionRoster) && sessionRoster.length) {
-    return sessionRoster.filter((persona) => persona && persona.status !== "disabled" && persona.status !== "archived");
+    return sessionRoster.filter((persona) => persona && persona.isPlayer !== false && persona.status !== "disabled" && persona.status !== "archived");
   }
   const mode = pdcModes[modeId] || pdcModes.personal;
-  const defaultIds = new Set(mode.defaultPersonaIds);
-  return pdcPersonaLibrary.filter((persona) => defaultIds.has(persona.id) && persona.status === "active");
+  return mode.defaultPersonaIds
+    .map((personaId) => pdcPersonaLibrary.find((persona) => persona.id === personaId))
+    .filter((persona) => persona && persona.isPlayer !== false && persona.status === "active");
+}
+
+export function resolveFacilitator(modeId) {
+  const mode = pdcModes[modeId] || pdcModes.personal;
+  return pdcPersonaLibrary.find((persona) => persona.id === mode.facilitatorId && persona.isFacilitator) || pdcPersonaLibrary.find((persona) => persona.id === "blue-whale");
 }
 
 export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder }) {
   const mode = pdcModes[modeId] || pdcModes.personal;
   const roster = resolveSessionRoster({ modeId: mode.id, sessionRoster });
+  const facilitator = resolveFacilitator(mode.id);
 
   if (isPlaceholder) {
-    return createPlaceholderCouncilRecap({ mode, roster, userQuestion });
+    return createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion });
   }
 
   // Future live mode:
   // - Require OPENAI_API_KEY from server-side environment.
   // - Use OPENAI_MODEL or a safe default.
-  // - Build a one-shot PDC prompt around werewolfPdcRhythm, pdcModes, and sessionRoster.
+  // - Build a one-shot PDC prompt around pdcRhythmFoundation, pdcModes, facilitator, and sessionRoster.
   // - Return only the curated Council Recap, never the hidden deliberation transcript.
   throw new Error("Live PDC API mode is not connected yet.");
 }
 
-function createPlaceholderCouncilRecap({ mode, roster, userQuestion }) {
+function createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion }) {
   const isCompany = mode.id === "company";
   const trimmedQuestion = String(userQuestion || "").replace(/\s+/g, " ").trim();
-  const safeQuestion = trimmedQuestion.length > 220 ? `${trimmedQuestion.slice(0, 220)}...` : trimmedQuestion;
-  const rosterNames = roster.slice(0, 5).map((persona) => persona.name || persona.englishName).join(", ");
+  const safeQuestion = trimmedQuestion.length > 520 ? `${trimmedQuestion.slice(0, 520)}...` : trimmedQuestion;
+  const personas = roster.map((persona) => toCouncilRoomPersona(persona, mode.id));
+  const facilitatorSummary = facilitator?.placeholderSummary || "Blue Whale has identified the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later turn these perspectives into a deeper structured council debate and final decision memo.";
 
   return {
     title: "Council Recap",
@@ -531,57 +431,79 @@ function createPlaceholderCouncilRecap({ mode, roster, userQuestion }) {
     modeLabel: mode.label,
     isPlaceholder: true,
     placeholderNotice: "Development placeholder output — live PDC API is not connected yet.",
-    rosterSummary: rosterNames ? `Placeholder roster sample: ${rosterNames}.` : "Placeholder roster sample will be configured later.",
-    sections: {
-      decisionFrame: isCompany
-        ? `You are exploring a product or company decision: "${safeQuestion}". This placeholder frames it as a question of user value, execution cost, privacy boundaries, and strategic timing.`
-        : `You are exploring a personal decision: "${safeQuestion}". This placeholder frames it as a question of desire, risk, time and energy, and the next honest step.`,
-      coreTension: isCompany
-        ? "The likely tension is between creating visible value, keeping cost and complexity under control, protecting trust and privacy, and choosing an execution path that can actually be maintained."
-        : "The likely tension is between what feels attractive, what feels risky, how much energy the choice requires, and which next step would create real evidence instead of pressure.",
-      councilHighlights: isCompany
-        ? [
-            "Product view: test whether the decision creates a clear user benefit before expanding the surface area.",
-            "UX view: keep the first version calm, bounded, and easy to understand.",
-            "Technical view: protect server-side secrets, low-data storage, and failure recovery.",
-            "Strategy view: use the pilot to learn, not to over-publicize before the product rhythm is proven.",
-          ]
-        : [
-            "Clarity view: name what decision is really being made, not only the surface choice.",
-            "Energy view: check whether the next step fits your actual capacity.",
-            "Risk view: avoid irreversible moves before gathering a little more evidence.",
-            "Experiment view: turn the decision into one small test that can teach you something.",
-          ],
-      debateSnapshot: isCompany
-        ? "One side argues for shipping a narrow pilot quickly; another pushes back that trust, privacy, and support boundaries must be visible before inviting more users. The useful middle path is a controlled test with clear limits."
-        : "One side argues for following the strongest desire; another pushes back that desire without timing and capacity can create avoidable strain. The useful middle path is a small, reversible test.",
-      condensedReview: "A full live council review will be connected later. This development placeholder keeps the same Council Recap structure so the private pilot flow, pass lifecycle, and feedback loop can be tested safely.",
-      finalRecommendation: isCompany
-        ? "Treat this as a structured test output, not a final strategic answer. Use it to clarify the next smallest pilot decision and what evidence would change your mind."
-        : "Treat this as a reflection draft, not a final answer. Use it to reduce pressure, clarify the real question, and choose one small next step.",
-      nextActions: isCompany
-        ? [
-            "Write the smallest version of the product decision in one sentence.",
-            "Define one user signal, one trust risk, and one operational cost to watch.",
-            "Run a bounded test before expanding the feature or audience.",
-          ]
-        : [
-            "Restate the decision as a specific question you can act on this week.",
-            "Choose one small reversible test that gives you evidence.",
-            "Name one boundary that protects your time, energy, or relationships.",
-          ],
-      whatNotToDo: isCompany
-        ? [
-            "Do not present the placeholder as live AI output.",
-            "Do not collect unnecessary personal identity data for this pilot.",
-            "Do not expand the pilot before the controlled flow works reliably.",
-          ]
-        : [
-            "Do not treat this placeholder as a command or professional advice.",
-            "Do not share sensitive personal, medical, legal, financial, or confidential information.",
-            "Do not make a high-stakes irreversible decision from one draft reflection.",
-          ],
-      reflectionNote: "MapKAI PDC is designed for reflection and critical thinking. It can help examine a decision from multiple perspectives, but the final judgment remains yours.",
+    councilRoom: {
+      title: "PDC Council Room",
+      subtitle: "Your decision is placed on the table. The council reviews it from multiple perspectives.",
+      decisionOnTable: safeQuestion,
+      personas,
+      facilitator: facilitator
+        ? {
+            id: facilitator.id,
+            name: facilitator.name,
+            englishName: facilitator.englishName,
+            role: facilitator.role,
+            summary: facilitatorSummary,
+          }
+        : null,
     },
+    recap: buildPlaceholderSections({ isCompany, safeQuestion, personas }),
+  };
+}
+
+function toCouncilRoomPersona(persona, modeId) {
+  return {
+    id: persona.id,
+    name: persona.name,
+    englishName: persona.englishName,
+    role: persona.role,
+    responsibility: persona.responsibility,
+    statement: persona.id === "orion-zhuge"
+      ? modeId === "company"
+        ? persona.placeholderStatementCompany
+        : persona.placeholderStatementPersonal
+      : persona.placeholderStatement,
+  };
+}
+
+function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {
+  const roleHighlights = personas.map((persona) => `${persona.role}: ${persona.statement}`);
+  return {
+    decisionFrame: isCompany
+      ? `You are exploring a product or company decision: "${safeQuestion}". This placeholder frames it as a question of user value, execution cost, privacy boundaries, visual trust, and strategic timing.`
+      : `You are exploring a personal decision: "${safeQuestion}". This placeholder frames it as a question of evidence, desire, downside, opportunity, relationships, energy, and timing.`,
+    coreTension: isCompany
+      ? "The core tension is between proving real user value, keeping the experience calm and trustworthy, controlling technical and operational cost, and choosing the right moment to widen access."
+      : "The core tension is between what you want, what the evidence supports, what could go wrong, what the long-term opportunity might be, and whether your current time and energy can carry the choice.",
+    councilHighlights: roleHighlights,
+    debateSnapshot: isCompany
+      ? "Rex Velocity asks whether the idea creates real traction; Vera Flow pushes back that first-time clarity must come before expansion; Max Stack adds that cost limits and failure behavior need to be visible before scaling."
+      : "Ethan Shen asks what facts are still missing; Clara Lin pushes back that the choice also needs emotional honesty; Marcus Lu adds that the downside should be named before the decision becomes too attractive.",
+    condensedReview: "This is a Council Preview in placeholder mode. A full live council review will later deepen the discussion, track stance changes, and produce a more complete decision memo.",
+    finalRecommendation: isCompany
+      ? "Treat this as a structured test output. Keep the first version narrow, measure whether users understand it, and expand only after trust, cost, and feedback signals are clear."
+      : "Treat this as a reflection preview. Clarify the real question, name the strongest risk, and choose a small reversible step that creates evidence without forcing a final answer too early.",
+    nextActions: isCompany
+      ? [
+          "Write the smallest product decision in one sentence.",
+          "Define one user signal, one trust risk, and one operational limit to monitor.",
+          "Run a controlled pilot before widening the audience.",
+        ]
+      : [
+          "List the facts you still need before deciding.",
+          "Name the emotional reason this decision matters.",
+          "Choose one small test that protects your time and energy.",
+        ],
+    whatNotToDo: isCompany
+      ? [
+          "Do not present placeholder output as live PDC generation.",
+          "Do not collect identity data that the pilot does not need.",
+          "Do not expand the pilot before the controlled loop works reliably.",
+        ]
+      : [
+          "Do not treat this placeholder as a command or professional advice.",
+          "Do not share sensitive personal, medical, legal, financial, or confidential information.",
+          "Do not make a high-stakes irreversible decision from one preview.",
+        ],
+    reflectionNote: "This is a placeholder reflection preview. The final judgment remains yours.",
   };
 }

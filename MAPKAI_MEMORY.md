@@ -236,6 +236,22 @@ PDC implementation notes:
 - Personal mode defaults to Leo's fixed Personal Committee members.
 - Company mode uses a temporary placeholder company partner roster and must be replaced or expanded with Leo's full Company Partner Council later.
 
+Latest PDC follow-up:
+
+- PDC placeholder output now includes a `councilRoom` object plus the structured `recap` object.
+- Successful placeholder sessions render a full PDC Council Room before the Council Recap:
+  - front TV / screen with Blue Whale Summary
+  - central meeting table with "Decision on the table"
+  - 9 participant cards arranged around/near the table on desktop
+  - stacked TV/table/participants/recap layout on mobile
+- Blue Whale / 蓝鲸 is stored once as `blue-whale`, marked as shared facilitator, and appears on the front screen only. Blue Whale is not a participant card, does not vote, and is not part of narrowing/elimination logic.
+- Orion Zhuge / 诸葛观辰 is stored once as `orion-zhuge` and reused by both Personal PDC and Company PDC.
+- Personal PDC names were finalized:
+  Ethan Shen / 沈知衡; Clara Lin / 林问心; Marcus Lu / 陆守衡; Adrian Xu / 许望远; Felix Jiang / 江试舟; Iris Song / 宋照微; Julian Cheng / 程和鸣; Caleb Gu / 顾安时; Orion Zhuge / 诸葛观辰.
+- Company PDC remains placeholder/default-v1:
+  Rex Velocity; Vera Flow; Max Stack; Nina Story; Wang Zhibai / 王之白; Owen Deep; Adrian North; Mira Sprint; Orion Zhuge / 诸葛观辰.
+- Existing PDC pass lifecycle, D1 tables, feedback API, founder summary API, and founder-only PDC Access Panel were preserved.
+
 Verified:
 
 - `node --check script.js`
