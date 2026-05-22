@@ -214,6 +214,28 @@ Recent pushed commit:
 6cc19e4 Add blind map question bank flow
 ```
 
+Latest local update:
+
+```text
+MapKAI PDC Private Pilot placeholder mode was added as a hidden controlled feature inside the existing MapKAI site.
+```
+
+PDC implementation notes:
+
+- Hidden user route: `/pdc-pilot?pass=PASS_CODE`.
+- No homepage or navigation entry was added.
+- Founder Mode still uses the existing password/input/dialog mechanism through the contact message form and `mapkaiFounderMode`; `/leoyangandxinli` is not required as the founder entry.
+- The PDC Access Panel is attached to the current founder-only contact/message board area and is visible only under `.founder-mode`.
+- New Cloudflare Pages Functions live under `functions/api/pdc/`.
+- New D1 migration: `migrations/0002_pdc_private_pilot.sql`.
+- New D1 tables: `pdc_access_passes` and `pdc_feedback`.
+- Low-data rule: no user account, name, or email; do not store the full user question, full PDC output, or hidden/internal transcript by default.
+- Placeholder mode is intentionally supported when `OPENAI_API_KEY` is absent. It returns a clearly marked development Council Recap and marks the pass used only after successful generation.
+- Future live PDC integration should remain server-side only and use `OPENAI_API_KEY` / `OPENAI_MODEL` environment secrets.
+- PDC service foundation includes a unified mutable persona library, personal/company mode templates, session roster resolution, and Werewolf PDC rhythm notes. No persona management UI was added.
+- Personal mode defaults to Leo's fixed Personal Committee members.
+- Company mode uses a temporary placeholder company partner roster and must be replaced or expanded with Leo's full Company Partner Council later.
+
 Verified:
 
 - `node --check script.js`
