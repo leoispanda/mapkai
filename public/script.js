@@ -57,6 +57,10 @@ const uiText = {
     homePrimary: "Start Exploring",
     homeQuickMirrorHint: "3 questions · No login · 30 seconds",
     homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
+    homeTrust: "MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.",
+    mapStartTrust: "Explore freely. No account, name, or email required. Your quiz progress is not linked to a personal profile.",
+    contactTrust: "Contact is optional. Please avoid sharing highly sensitive personal information. If you send us a message, we use it only to respond to you.",
+    reflectionSupportNote: "Use this as reflection and learning support, not as professional advice.",
     homeLearning: "View Knowledge Map",
     homeCategories: "Browse Domains",
     reflectionSnippetsTitle: "What exploration begins to reveal",
@@ -261,6 +265,61 @@ const uiText = {
     loadedMessages: (count) => `Loaded messages: ${count}`,
     contactApiConnected: "connected",
     contactApiFailed: "failed",
+    footerPrivacy: "Privacy",
+    footerResponsibleUse: "Responsible Use",
+    footerCookies: "Cookies",
+    footerTerms: "Terms",
+    privacyEyebrow: "Privacy",
+    privacyTitle: "Privacy at MapKAI",
+    privacyLead: "MapKAI is low-data by design. For the current experience, you do not need to create an account or provide your name or email. Quiz progress is not linked to a personal profile, and contact is optional.",
+    privacyLowTitle: "Low-data by design",
+    privacyLowP1: "For the current experience, no account is required. You do not need to provide your name or email to explore MapKAI.",
+    privacyLowP2: "MapKAI does not require or build a customer profile for the current exploration flow.",
+    privacyLowP3: "We do not use advertising tracking for the current MapKAI experience.",
+    privacyQuizTitle: "Quiz and reflection data",
+    privacyQuizP1: "Quiz progress is not linked to a personal profile. The current exploration result is generated in your browser and can disappear when you leave or refresh.",
+    privacyQuizP2: "Raw quiz records are not stored by default. If temporary quality checks are introduced later, records should be anonymized, aggregated, or deleted regularly, preferably within 30 days.",
+    privacyQuizP3: "Aggregated statistics may be used to improve questions and site experience if they are not linked to personal profiles.",
+    privacyContactTitle: "Contact is optional",
+    privacyContactP1: "If you send a contact message, MapKAI uses it only to respond to you. Contact messages are separate from quiz progress and should be reviewed or deleted periodically.",
+    privacyContactP2: "Please avoid sharing highly sensitive personal information in the message box.",
+    privacyTechTitle: "Technical processing",
+    privacyTechP1: "Basic technical logs may exist through hosting and security providers such as Cloudflare.",
+    privacyTechP2: "MapKAI uses browser storage for small product states such as language preference, Founder mode state, and visitor-count continuity. See the Cookies page for more detail.",
+    privacyFutureTitle: "Future changes",
+    privacyFutureP1: "If MapKAI introduces new features, accounts, or data practices in the future, this page should be updated clearly.",
+    responsibleEyebrow: "Responsible Use",
+    responsibleTitle: "Responsible use",
+    responsibleLead: "MapKAI helps map thinking, not people. Human judgment remains central.",
+    responsibleSupportTitle: "What MapKAI supports",
+    responsibleSupportP1: "MapKAI supports reflection, learning, knowledge mapping, and option exploration.",
+    responsibleSupportP2: "Use it as reflection and learning support, not as professional advice.",
+    responsibleLimitsTitle: "What MapKAI does not replace",
+    responsibleLimitsP1: "MapKAI does not replace human judgment.",
+    responsibleLimitsP2: "MapKAI does not provide legal, medical, financial, psychological, or other qualified professional advice.",
+    responsibleLimitsP3: "Important decisions remain your responsibility.",
+    responsibleCareTitle: "Careful use",
+    responsibleCareP1: "Please avoid submitting highly sensitive personal information.",
+    responsibleCareP2: "Treat MapKAI outputs as prompts for thought, conversation, and learning direction.",
+    cookiesEyebrow: "Cookies",
+    cookiesTitle: "Cookies and browser storage",
+    cookiesLead: "We do not use advertising or tracking cookies for the current MapKAI experience. If this changes, we will update this page clearly and request consent where required.",
+    cookiesCurrentTitle: "Current approach",
+    cookiesCurrentP1: "The current code audit did not find advertising scripts, tracking pixels, or third-party analytics tags.",
+    cookiesCurrentP2: "MapKAI uses localStorage for language preference, Founder mode state, a local visitor id used by the visitor counter, and temporary interface state. The audit did not find sessionStorage usage. The repository also includes email-auth endpoints that can set a short-lived login challenge cookie if those endpoints are configured and used; this is not required for the current public exploration flow.",
+    cookiesCurrentP3: "Hosting and security providers may still process basic technical logs when pages or API routes are requested.",
+    cookiesManageTitle: "Managing storage",
+    cookiesManageP1: "You can clear cookies and browser storage through your browser settings. Clearing localStorage may reset language preference, visitor-count continuity, and local interface state.",
+    termsEyebrow: "Terms",
+    termsTitle: "Terms of use",
+    termsLead: "MapKAI is currently a free knowledge initiative. It provides educational and reflection support.",
+    termsUseTitle: "Using MapKAI",
+    termsUseP1: "MapKAI helps you explore knowledge patterns, quiet areas, and possible learning directions.",
+    termsUseP2: "MapKAI does not provide professional advice, and you remain responsible for final decisions.",
+    termsAcceptableTitle: "Acceptable use",
+    termsAcceptableP1: "Please do not misuse MapKAI, interfere with the site, attempt to access non-public systems, submit harmful content, or copy MapKAI content and design for unauthorized commercial use.",
+    termsEvolveTitle: "MapKAI may evolve",
+    termsEvolveP1: "MapKAI may change over time. If new features, accounts, or data practices are introduced in the future, relevant pages should be updated clearly.",
     footerRights: "© 2026 MapKAI. All rights reserved.",
     footerNotice: "Unauthorized copying, reproduction, redistribution, adaptation, or commercial use of MapKAI content, structure, design, or visual materials is not permitted without prior written permission.",
     viewedMany: "MapKAI has been viewed many times.",
@@ -280,6 +339,10 @@ const uiText = {
     homePrimary: "开始探索",
     homeQuickMirrorHint: "3个问题 · 不用注册 · 30秒看结果",
     homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
+    homeTrust: "MapKAI 目前是一个免费的知识倡议。你无需创建账户，也无需提供姓名或邮箱，就可以开始探索。",
+    mapStartTrust: "自由探索。无需账户、姓名或邮箱。你的答题进度不会绑定到个人档案。",
+    contactTrust: "联系是可选的。请避免提交高度敏感的个人信息。如果你发送留言，我们只会用它来回复你。",
+    reflectionSupportNote: "请把它作为反思与学习支持，而不是专业建议。",
     homeLearning: "查看知识地图",
     homeCategories: "浏览领域",
     reflectionSnippetsTitle: "探索会慢慢显现什么",
@@ -484,6 +547,61 @@ const uiText = {
     loadedMessages: (count) => `已加载留言：${count}`,
     contactApiConnected: "connected",
     contactApiFailed: "failed",
+    footerPrivacy: "隐私",
+    footerResponsibleUse: "负责任使用",
+    footerCookies: "Cookies",
+    footerTerms: "使用条款",
+    privacyEyebrow: "隐私",
+    privacyTitle: "MapKAI 隐私说明",
+    privacyLead: "MapKAI 以低数据为设计原则。在当前体验中，你不需要创建账户，也不需要提供姓名或邮箱。答题进度不会绑定到个人档案，联系也是可选的。",
+    privacyLowTitle: "低数据设计",
+    privacyLowP1: "在当前体验中，探索 MapKAI 不需要账户，也不需要提供姓名或邮箱。",
+    privacyLowP2: "当前探索流程不需要，也不会建立客户档案。",
+    privacyLowP3: "当前 MapKAI 体验不使用广告追踪。",
+    privacyQuizTitle: "答题与反思数据",
+    privacyQuizP1: "答题进度不会绑定到个人档案。当前探索结果在你的浏览器中生成，离开或刷新后可以消失。",
+    privacyQuizP2: "默认不保存原始答题记录。如果未来为了质量改进临时收集，应进行匿名化、聚合，或定期删除，最好在 30 天内处理。",
+    privacyQuizP3: "如果统计结果不绑定个人档案，MapKAI 可能使用聚合统计来改进题目和网站体验。",
+    privacyContactTitle: "联系是可选的",
+    privacyContactP1: "如果你发送联系留言，MapKAI 只会用它来回复你。联系留言与答题进度分开，并应定期查看或删除。",
+    privacyContactP2: "请避免在留言框中提交高度敏感的个人信息。",
+    privacyTechTitle: "技术处理",
+    privacyTechP1: "托管和安全服务提供方，例如 Cloudflare，可能产生基础技术日志。",
+    privacyTechP2: "MapKAI 使用浏览器存储保存少量产品状态，例如语言偏好、Founder mode 状态、访客计数连续性。更多细节见 Cookies 页面。",
+    privacyFutureTitle: "未来变化",
+    privacyFutureP1: "如果 MapKAI 未来引入新功能、账户或新的数据实践，本页面应清楚更新。",
+    responsibleEyebrow: "负责任使用",
+    responsibleTitle: "负责任使用",
+    responsibleLead: "MapKAI 帮助映射思考，而不是定义人。人的判断始终是中心。",
+    responsibleSupportTitle: "MapKAI 支持什么",
+    responsibleSupportP1: "MapKAI 支持反思、学习、知识地图和选项探索。",
+    responsibleSupportP2: "请把它作为反思与学习支持，而不是专业建议。",
+    responsibleLimitsTitle: "MapKAI 不替代什么",
+    responsibleLimitsP1: "MapKAI 不替代人的判断。",
+    responsibleLimitsP2: "MapKAI 不提供法律、医疗、财务、心理或其他需要专业资质的建议。",
+    responsibleLimitsP3: "重要决定仍由你自己负责。",
+    responsibleCareTitle: "谨慎使用",
+    responsibleCareP1: "请避免提交高度敏感的个人信息。",
+    responsibleCareP2: "请把 MapKAI 输出当作思考、对话和学习方向的起点。",
+    cookiesEyebrow: "Cookies",
+    cookiesTitle: "Cookies 与浏览器存储",
+    cookiesLead: "当前 MapKAI 体验不使用广告或追踪 cookies。如果未来发生变化，我们会清楚更新本页面，并在需要时请求同意。",
+    cookiesCurrentTitle: "当前方式",
+    cookiesCurrentP1: "当前代码审计没有发现广告脚本、追踪像素或第三方 analytics 标签。",
+    cookiesCurrentP2: "MapKAI 使用 localStorage 保存语言偏好、Founder mode 状态、访客计数所需的本地 visitor id，以及临时界面状态。审计未发现 sessionStorage 使用。仓库中也包含邮箱验证端点；如果这些端点被配置并使用，可能设置一个短期 login challenge cookie，但当前公开探索流程不需要它。",
+    cookiesCurrentP3: "当页面或 API 路由被请求时，托管和安全服务提供方仍可能处理基础技术日志。",
+    cookiesManageTitle: "管理存储",
+    cookiesManageP1: "你可以在浏览器设置中清除 cookies 和浏览器存储。清除 localStorage 可能会重置语言偏好、访客计数连续性和本地界面状态。",
+    termsEyebrow: "使用条款",
+    termsTitle: "使用条款",
+    termsLead: "MapKAI 目前是一个免费的知识倡议，提供教育与反思支持。",
+    termsUseTitle: "使用 MapKAI",
+    termsUseP1: "MapKAI 帮助你探索知识模式、安静区域和可能的学习方向。",
+    termsUseP2: "MapKAI 不提供专业建议，最终决定仍由你自己负责。",
+    termsAcceptableTitle: "可接受使用",
+    termsAcceptableP1: "请不要滥用 MapKAI、干扰网站、尝试访问非公开系统、提交有害内容，或未经授权复制 MapKAI 内容与设计作商业用途。",
+    termsEvolveTitle: "MapKAI 会继续变化",
+    termsEvolveP1: "MapKAI 可能随时间变化。如果未来引入新功能、账户或新的数据实践，相关页面应清楚更新。",
     footerRights: "© 2026 MapKAI。保留所有权利。",
     footerNotice: "未经事先书面许可，不得复制、转载、改编或商业使用 MapKAI 的内容、结构、设计或视觉材料。",
     viewedMany: "MapKAI 已被浏览很多次。",
@@ -3597,6 +3715,7 @@ function contactSectionTemplate() {
         <p class="eyebrow">${t("contactEyebrow")}</p>
         <h2 id="contact-title">${t("contactTitle")}</h2>
         <p>${t("contactCopy")}</p>
+        <p class="trust-note contact-trust-note" data-i18n="contactTrust">${t("contactTrust")}</p>
         <div class="contact-methods">
           <a href="mailto:${contactEmail}">${contactEmail}</a>
         </div>
@@ -3629,6 +3748,12 @@ function siteFooterTemplate() {
       <p class="visitor-count founder-only" data-founder-visitor-count></p>
       <p data-footer-rights>${t("footerRights")}</p>
       <p data-footer-notice>${t("footerNotice")}</p>
+      <nav class="footer-links" aria-label="Trust and legal">
+        <a href="/privacy" data-route="/privacy" data-i18n="footerPrivacy">${t("footerPrivacy")}</a>
+        <a href="/responsible-use" data-route="/responsible-use" data-i18n="footerResponsibleUse">${t("footerResponsibleUse")}</a>
+        <a href="/cookies" data-route="/cookies" data-i18n="footerCookies">${t("footerCookies")}</a>
+        <a href="/terms" data-route="/terms" data-i18n="footerTerms">${t("footerTerms")}</a>
+      </nav>
     </footer>`;
 }
 
@@ -3803,6 +3928,10 @@ function setLanguage(language) {
 
 function applyLanguage() {
   updateLanguageButtons();
+  document.querySelectorAll("[data-i18n]").forEach((target) => {
+    const key = target.dataset.i18n;
+    if (key) target.textContent = t(key);
+  });
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
@@ -3984,7 +4113,11 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
-      (linkRoute === "/about" && visibleTarget === "/about");
+      (linkRoute === "/about" && visibleTarget === "/about") ||
+      (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
+      (linkRoute === "/responsible-use" && visibleTarget === "/responsible-use") ||
+      (linkRoute === "/cookies" && visibleTarget === "/cookies") ||
+      (linkRoute === "/terms" && visibleTarget === "/terms");
     link.classList.toggle("is-current", isCurrent);
   });
 
@@ -4935,6 +5068,7 @@ function renderReflectionPanel() {
         <button class="button secondary" type="button" data-copy-lens-prompt>${lensPromptCopied ? t("copiedPrompt") : t("copyPrompt")}</button>
         <textarea readonly rows="12">${escapeHtml(prompt)}</textarea>
       </section>
+      <p class="reflection-disclaimer">${t("reflectionSupportNote")}</p>
       <p class="reflection-disclaimer">${t("reflectionDisclaimer")}</p>
     </div>` : ""}
     <details class="founder-only reflection-debug">

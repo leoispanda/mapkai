@@ -1734,3 +1734,11 @@ Push status:
 - Added bilingual core belief, Mission, Vision, and trust boundary copy.
 - Used two small cards for Mission and Vision, with a calm trust line that quiet areas are not weaknesses.
 - Synced root and public index/script/styles files.
+
+## 2026-05-22 - Add low-data trust layer
+- Added public trust pages for /privacy, /responsible-use, /cookies, and /terms using the existing SPA structure.
+- Added public trust copy to Home, Explore quiz start, Contact, footer links, and the result/reflection support area.
+- Created DATA_MAP.md with current audit findings covering localStorage, visitor counter, contact messages, Cloudflare Functions/D1, hosting logs, cookies/storage, analytics, and optional AI input.
+- Audit findings: no advertising/tracking analytics tags were found; no advertising/tracking cookies were found; localStorage is used for language, Founder mode, visitor id, and temporary UI state; sessionStorage was not found; auth endpoints can set a short-lived login challenge cookie if configured and used; /api/visit writes visitor counters to D1; /api/contact-message writes optional contact messages to D1; /api/reflection sends compressed reflection input to Workers AI when used.
+- Retention principle recorded: raw quiz records are not stored by default; temporary quality records should be anonymized, aggregated, or deleted regularly, preferably within 30 days; contact messages remain optional, separate from quiz data, and should be reviewed/deleted periodically.
+- Unresolved question: Cloudflare provider-level logs, retention, and security-cookie behavior should be confirmed in Cloudflare account settings if MapKAI needs a stricter public notice later.
