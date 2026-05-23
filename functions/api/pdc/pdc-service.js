@@ -377,6 +377,92 @@ export const pdcRhythmFoundation = {
 
 const allowedDialogueProviders = new Set(["placeholder", "cloudflare", "openai"]);
 const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
+const defaultOpenAiModel = "gpt-5-mini";
+const openAiResponsesEndpoint = "https://api.openai.com/v1/responses";
+const pdcDialogueSchema = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    dialogue: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          speakerId: { type: "string" },
+          text: { type: "string" },
+          targetSpeakerId: { type: "string" },
+          stanceType: { type: "string" },
+        },
+        required: ["speakerId", "text", "targetSpeakerId", "stanceType"],
+      },
+    },
+    blueWhaleSummary: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        text: { type: "string" },
+        convergenceLevel: { type: "string" },
+        shouldConsiderStopping: { type: "boolean" },
+        nextFocus: { type: "string" },
+      },
+      required: ["text", "convergenceLevel", "shouldConsiderStopping", "nextFocus"],
+    },
+    votes: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          speakerId: { type: "string" },
+          contributionTargetId: { type: "string" },
+          concernTargetId: { type: "string" },
+          contributionReason: { type: "string" },
+          concernReason: { type: "string" },
+        },
+        required: ["speakerId", "contributionTargetId", "concernTargetId", "contributionReason", "concernReason"],
+      },
+    },
+  },
+  required: ["dialogue", "blueWhaleSummary", "votes"],
+};
+const pdcFinalRecapSchema = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    finalReintroducedPerspective: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        speakerId: { type: "string" },
+        speakerName: { type: "string" },
+        speakerChineseName: { type: "string" },
+        role: { type: "string" },
+        reasonForReintroduction: { type: "string" },
+        finalReflection: { type: "string" },
+      },
+      required: ["speakerId", "speakerName", "speakerChineseName", "role", "reasonForReintroduction", "finalReflection"],
+    },
+    recap: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        decisionFrame: { type: "string" },
+        coreTension: { type: "string" },
+        councilHighlights: { type: "array", items: { type: "string" } },
+        debateSnapshot: { type: "string" },
+        condensedReview: { type: "string" },
+        finalRecommendation: { type: "string" },
+        nextActions: { type: "array", items: { type: "string" } },
+        whatNotToDo: { type: "array", items: { type: "string" } },
+        reflectionNote: { type: "string" },
+      },
+      required: ["decisionFrame", "coreTension", "councilHighlights", "debateSnapshot", "condensedReview", "finalRecommendation", "nextActions", "whatNotToDo", "reflectionNote"],
+    },
+    blueWhaleFinalNote: { type: "string" },
+  },
+  required: ["finalReintroducedPerspective", "recap", "blueWhaleFinalNote"],
+};
 
 // TODO:
 // - Add full unified persona library.
@@ -480,6 +566,19 @@ function resolveDialogueProvider(env = {}) {
 export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
 
+  if (provider === "openai") {
+    if (!env?.OPENAI_API_KEY) {
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+    }
+    try {
+      return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
+    } catch (error) {
+      console.error("PDC OpenAI dialogue provider failed:", error);
+      const message = String(error.message || "OpenAI call failed");
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getOpenAiFallbackReason(message), providerErrorShort: message.slice(0, 180), params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+    }
+  }
+
   if (provider === "cloudflare") {
     if (!env?.AI) {
       return {
@@ -511,12 +610,52 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, us
     }
   }
 
-  if (provider === "openai") {
-    // TODO: Add server-side OpenAI dialogue provider later.
-    return { ...fallback, requestedProvider: "openai", actualProvider: "placeholder", fallbackUsed: true, fallbackReason: "OpenAI provider is not implemented yet.", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
-  }
-
   return { ...fallback, requestedProvider: "placeholder", actualProvider: "placeholder", fallbackUsed: false, fallbackReason: "", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
+}
+
+async function fallbackDialogueResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, params }) {
+  const fallbackProvider = resolveFallbackProvider(params.env, failedProvider);
+  if (fallbackProvider === "cloudflare" && params.env?.AI) {
+    try {
+      const cloudflareResult = await generateCloudflareDialogue(params);
+      return {
+        ...cloudflareResult,
+        requestedProvider,
+        actualProvider: "cloudflare",
+        fallbackUsed: true,
+        fallbackReason: `${failedProvider} unavailable: ${reason}. Used Cloudflare fallback.`,
+        providerErrorShort,
+      };
+    } catch (error) {
+      const cloudflareMessage = String(error.message || "Cloudflare fallback failed");
+      return {
+        ...fallback,
+        requestedProvider,
+        actualProvider: "placeholder",
+        fallbackUsed: true,
+        fallbackReason: `${failedProvider} unavailable: ${reason}. Cloudflare fallback failed: ${getProviderFallbackReason(cloudflareMessage)}.`,
+        providerErrorShort: cloudflareMessage.slice(0, 180),
+        jsonParseFailed: /json/i.test(cloudflareMessage),
+        modelName: String(params.env?.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel),
+      };
+    }
+  }
+  return {
+    ...fallback,
+    requestedProvider,
+    actualProvider: "placeholder",
+    fallbackUsed: true,
+    fallbackReason: fallbackProvider === "cloudflare" ? `${failedProvider} unavailable: ${reason}. Cloudflare fallback missing AI binding.` : `${failedProvider} unavailable: ${reason}. Used placeholder fallback.`,
+    providerErrorShort,
+    jsonParseFailed: /json/i.test(providerErrorShort || reason),
+    modelName: failedProvider === "openai" ? getOpenAiModel(params.env) : "",
+  };
+}
+
+function resolveFallbackProvider(env = {}, failedProvider = "") {
+  const fallback = String(env.PDC_DIALOGUE_FALLBACK_PROVIDER || "").trim().toLowerCase();
+  if (allowedDialogueProviders.has(fallback) && fallback !== failedProvider) return fallback;
+  return failedProvider === "openai" ? "cloudflare" : "placeholder";
 }
 
 function getProviderFallbackReason(message) {
@@ -526,8 +665,28 @@ function getProviderFallbackReason(message) {
   return "Cloudflare call failed";
 }
 
+function getOpenAiFallbackReason(message) {
+  if (/json/i.test(message)) return "invalid JSON";
+  if (/401|403|auth|api key/i.test(message)) return "OpenAI authentication failed";
+  if (/429|rate/i.test(message)) return "OpenAI rate limit";
+  if (/missing OPENAI_API_KEY/i.test(message)) return "missing OPENAI_API_KEY";
+  return "OpenAI call failed";
+}
+
 export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, activeRoster = [], observerRoster = [], latestPhase = null, meetingMemory = null, voteSummary = null, userInterventions = [], provider, env }) {
   const fallback = createPlaceholderFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  if (provider === "openai") {
+    if (!env?.OPENAI_API_KEY) {
+      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env } });
+    }
+    try {
+      return await generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env });
+    } catch (error) {
+      console.error("PDC OpenAI final recap failed:", error);
+      const message = String(error.message || "OpenAI final recap failed");
+      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getFinalRecapFallbackReason(message), providerErrorShort: message.slice(0, 160), params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env } });
+    }
+  }
   if (provider === "cloudflare" && env?.AI) {
     try {
       return await generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env });
@@ -541,6 +700,45 @@ export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, a
     return { ...fallback, requestedProvider: "cloudflare", fallbackReason: "missing AI binding", providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.", jsonParseFailed: false, modelName: "" };
   }
   return { ...fallback, requestedProvider: provider || "placeholder" };
+}
+
+async function fallbackFinalRecapResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, params }) {
+  const fallbackProvider = resolveFallbackProvider(params.env, failedProvider);
+  if (fallbackProvider === "cloudflare" && params.env?.AI) {
+    try {
+      const cloudflareResult = await generateCloudflareFinalRecap(params);
+      return {
+        ...cloudflareResult,
+        requestedProvider,
+        actualProvider: "cloudflare",
+        fallbackUsed: true,
+        fallbackReason: `${failedProvider} unavailable: ${reason}. Used Cloudflare fallback.`,
+        providerErrorShort,
+      };
+    } catch (error) {
+      const cloudflareMessage = String(error.message || "Cloudflare final recap fallback failed");
+      return {
+        ...fallback,
+        requestedProvider,
+        actualProvider: "placeholder",
+        fallbackUsed: true,
+        fallbackReason: `${failedProvider} unavailable: ${reason}. Cloudflare fallback failed: ${getFinalRecapFallbackReason(cloudflareMessage)}.`,
+        providerErrorShort: cloudflareMessage.slice(0, 160),
+        jsonParseFailed: /json/i.test(cloudflareMessage),
+        modelName: String(params.env?.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel),
+      };
+    }
+  }
+  return {
+    ...fallback,
+    requestedProvider,
+    actualProvider: "placeholder",
+    fallbackUsed: true,
+    fallbackReason: fallbackProvider === "cloudflare" ? `${failedProvider} unavailable: ${reason}. Cloudflare fallback missing AI binding.` : `${failedProvider} unavailable: ${reason}. Used placeholder fallback.`,
+    providerErrorShort,
+    jsonParseFailed: /json/i.test(providerErrorShort || reason),
+    modelName: failedProvider === "openai" ? getOpenAiModel(params.env) : "",
+  };
 }
 
 function getFinalRecapFallbackReason(message) {
@@ -928,6 +1126,23 @@ function getPlaceholderStanceType(persona) {
   return "challenge";
 }
 
+async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+  const model = getOpenAiModel(env);
+  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
+  const parsed = await callOpenAiJson({
+    env,
+    model,
+    instructions: "You write concise structured PDC decision reflection dialogue. Return JSON only. Do not include markdown, hidden reasoning, or professional advice claims.",
+    prompt,
+    schemaName: "pdc_phase_dialogue",
+    schema: pdcDialogueSchema,
+    maxOutputTokens: 1000,
+  });
+  const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
+}
+
 async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
@@ -951,6 +1166,21 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   const parsed = parseJsonObject(rawText);
   const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
   return { ...normalized, modelName: model };
+}
+
+function markProviderResult(result, { requestedProvider, actualProvider, modelName }) {
+  return {
+    ...result,
+    provider: actualProvider,
+    requestedProvider,
+    actualProvider,
+    fallbackUsed: false,
+    fallbackReason: "",
+    providerErrorShort: "",
+    jsonParseFailed: false,
+    modelName,
+    rounds: Array.isArray(result.rounds) ? result.rounds.map((round) => ({ ...round, provider: actualProvider })) : result.rounds,
+  };
 }
 
 function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention }) {
@@ -1057,15 +1287,75 @@ function extractCloudflareText(result) {
   return JSON.stringify(result);
 }
 
+function getOpenAiModel(env = {}) {
+  return String(env.OPENAI_MODEL || defaultOpenAiModel).trim() || defaultOpenAiModel;
+}
+
+async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens }) {
+  const apiKey = String(env?.OPENAI_API_KEY || "").trim();
+  if (!apiKey) throw new Error("missing OPENAI_API_KEY");
+  const response = await fetch(openAiResponsesEndpoint, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      instructions,
+      input: prompt,
+      store: false,
+      max_output_tokens: maxOutputTokens,
+      text: {
+        format: {
+          type: "json_schema",
+          name: schemaName,
+          strict: false,
+          schema,
+        },
+      },
+    }),
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const message = normalizeShortText(payload?.error?.message || `OpenAI HTTP ${response.status}`, 220);
+    throw new Error(message || `OpenAI HTTP ${response.status}`);
+  }
+  const text = extractOpenAiText(payload);
+  return parseJsonObject(text);
+}
+
+function extractOpenAiText(payload) {
+  if (!payload) return "";
+  if (typeof payload.output_text === "string") return payload.output_text;
+  const output = Array.isArray(payload.output) ? payload.output : [];
+  const parts = [];
+  output.forEach((item) => {
+    const content = Array.isArray(item?.content) ? item.content : [];
+    content.forEach((part) => {
+      if (typeof part?.text === "string") parts.push(part.text);
+      if (typeof part?.output_text === "string") parts.push(part.output_text);
+    });
+  });
+  return parts.join("\n") || JSON.stringify(payload);
+}
+
 function parseJsonObject(value) {
   const text = String(value || "").trim();
   if (!text) throw new Error("Empty dialogue response");
   try {
     return JSON.parse(text);
   } catch {
-    const match = text.match(/\{[\s\S]*\}/);
+    const cleaned = text.replace(/^```(?:json)?/i, "").replace(/```$/i, "").trim();
+    try {
+      return JSON.parse(cleaned);
+    } catch {
+      // continue to extracting the largest JSON-looking object
+    }
+    const match = cleaned.match(/\{[\s\S]*\}/) || text.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("Dialogue response did not contain JSON");
-    return JSON.parse(match[0]);
+    const candidate = match[0].replace(/,\s*([}\]])/g, "$1");
+    return JSON.parse(candidate);
   }
 }
 
