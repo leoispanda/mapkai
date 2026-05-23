@@ -438,6 +438,13 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
     modeLabel: mode.label,
     isPlaceholder: true,
     dialogueProvider: dialogueResult.provider,
+    requestedProvider: dialogueResult.requestedProvider || resolveDialogueProvider(env),
+    actualProvider: dialogueResult.actualProvider || dialogueResult.provider,
+    fallbackUsed: dialogueResult.fallbackUsed === true,
+    fallbackReason: dialogueResult.fallbackReason || "",
+    providerErrorShort: dialogueResult.providerErrorShort || "",
+    jsonParseFailed: dialogueResult.jsonParseFailed === true,
+    modelName: dialogueResult.modelName || "",
     placeholderNotice: isPlaceholder
       ? "Development placeholder output — live PDC API is not connected yet."
       : "Council Recap placeholder output — live final memo generation is not connected yet.",
@@ -474,21 +481,49 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, us
   const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
 
   if (provider === "cloudflare") {
-    if (!env?.AI) return fallback;
+    if (!env?.AI) {
+      return {
+        ...fallback,
+        requestedProvider: "cloudflare",
+        actualProvider: "placeholder",
+        fallbackUsed: true,
+        fallbackReason: "missing AI binding",
+        providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.",
+        jsonParseFailed: false,
+        modelName: "",
+      };
+    }
     try {
       return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
       console.error("PDC Cloudflare dialogue provider failed:", error);
-      return fallback;
+      const message = String(error.message || "Cloudflare call failed");
+      return {
+        ...fallback,
+        requestedProvider: "cloudflare",
+        actualProvider: "placeholder",
+        fallbackUsed: true,
+        fallbackReason: getProviderFallbackReason(message),
+        providerErrorShort: message.slice(0, 180),
+        jsonParseFailed: /json/i.test(message),
+        modelName: String(env?.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel),
+      };
     }
   }
 
   if (provider === "openai") {
     // TODO: Add server-side OpenAI dialogue provider later.
-    return fallback;
+    return { ...fallback, requestedProvider: "openai", actualProvider: "placeholder", fallbackUsed: true, fallbackReason: "OpenAI provider is not implemented yet.", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
   }
 
-  return fallback;
+  return { ...fallback, requestedProvider: "placeholder", actualProvider: "placeholder", fallbackUsed: false, fallbackReason: "", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
+}
+
+function getProviderFallbackReason(message) {
+  if (/json/i.test(message)) return "invalid JSON";
+  if (/no usable lines|missing required/i.test(message)) return "missing required fields";
+  if (/vote/i.test(message)) return "vote normalization failed";
+  return "Cloudflare call failed";
 }
 
 export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, activeRoster = [], observerRoster = [], latestPhase = null, meetingMemory = null, voteSummary = null, userInterventions = [], provider, env }) {
@@ -498,10 +533,19 @@ export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, a
       return await generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env });
     } catch (error) {
       console.error("PDC Cloudflare final recap failed:", error);
-      return { ...fallback, fallbackUsed: true, fallbackReason: "Cloudflare final recap unavailable.", providerErrorShort: String(error.message || "Unknown error").slice(0, 160) };
+      const message = String(error.message || "Unknown error");
+      return { ...fallback, requestedProvider: "cloudflare", fallbackUsed: true, fallbackReason: getFinalRecapFallbackReason(message), providerErrorShort: message.slice(0, 160), jsonParseFailed: /json/i.test(message), modelName: String(env?.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel) };
     }
   }
-  return fallback;
+  if (provider === "cloudflare" && !env?.AI) {
+    return { ...fallback, requestedProvider: "cloudflare", fallbackReason: "missing AI binding", providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.", jsonParseFailed: false, modelName: "" };
+  }
+  return { ...fallback, requestedProvider: provider || "placeholder" };
+}
+
+function getFinalRecapFallbackReason(message) {
+  if (/json/i.test(message)) return "final recap JSON parse failed";
+  return "Cloudflare final recap unavailable.";
 }
 
 export function toCouncilRoomPersona(persona, modeId) {
@@ -782,15 +826,18 @@ function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseTyp
   const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
   const label = `Round ${roundNumber}${normalizedPhaseType} — ${normalizedPhaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   const guidance = userIntervention ? ` User guidance: ${userIntervention}` : "";
-  const entries = personas.map((persona) => [
-    persona.id,
-    normalizedPhaseType === "A"
-      ? `${persona.englishName || persona.name}: Building on the last summary, I would update my ${persona.role} stance and state what changed.${guidance}`
-      : `${persona.englishName || persona.name}: I would challenge ${getTargetPersona(persona, personas).englishName || getTargetPersona(persona, personas).name}'s view through ${persona.role} and make the trade-off sharper.${guidance}`,
-    normalizedPhaseType === "A" ? "update" : "challenge",
-    normalizedPhaseType === "A" ? "" : getTargetPersona(persona, personas).id,
-    normalizedPhaseType === "A" ? `${persona.role} stance updated from memory.` : `${persona.role} challenges ${getTargetPersona(persona, personas).role}.`,
-  ]);
+  const entries = personas.map((persona) => {
+    const target = getTargetPersona(persona, personas);
+    return [
+      persona.id,
+      normalizedPhaseType === "A"
+        ? getPlaceholderPositionText({ persona, modeId, guidance })
+        : getPlaceholderChallengeText({ persona, target, modeId, guidance }),
+      normalizedPhaseType === "A" ? "update" : getPlaceholderStanceType(persona),
+      normalizedPhaseType === "A" ? "" : target.id,
+      normalizedPhaseType === "A" ? `${persona.role} stance updated from memory.` : `${persona.role} responds to ${target.role}.`,
+    ];
+  });
   const summary = normalizedPhaseType === "A"
     ? `Blue Whale Summary: This phase continued from the prior memory and refreshed the council's positions around the current decision tension.${guidance}`
     : `Blue Whale Summary: This phase continued the meeting by challenging prior views and narrowing what the next phase should examine.${guidance}`;
@@ -822,6 +869,65 @@ function getTargetPersona(persona, personas) {
   return personas[(index + personas.length - 1) % personas.length] || personas[0] || persona;
 }
 
+function getPlaceholderPositionText({ persona, modeId, guidance }) {
+  const personal = {
+    "ethan-shen": "I would first separate known facts from assumptions before the council moves further.",
+    "clara-lin": "I would keep the emotional signal visible, because ignored desire often returns as hesitation.",
+    "marcus-lu": "I would define the downside clearly enough to know whether it is survivable.",
+    "adrian-xu": "I would test whether this still matters when viewed from a longer horizon.",
+    "felix-jiang": "I would look for a smaller third path before forcing a full yes-or-no choice.",
+    "iris-song": "I would ask whether fear, pride, or avoidance is quietly steering the decision.",
+    "julian-cheng": "I would map who needs to be informed, protected, or invited into the decision.",
+    "caleb-gu": "I would check whether the decision fits the user's real time and energy.",
+    "orion-zhuge": "I would read the timing carefully and ask whether the moment is opening or closing.",
+  };
+  const company = {
+    "rex-velocity": "I would test whether this creates real user traction, not only internal excitement.",
+    "vera-flow": "I would make the first minute clear enough that users can reach the deeper value.",
+    "max-stack": "I would keep cost limits, failure behavior, and reliability visible before scaling.",
+    "nina-story": "I would protect the trust language so the product stays reflection support.",
+    "wang-zhibai": "I would keep the experience calm and premium so the decision feels respected.",
+    "owen-deep": "I would make sure the pilot teaches us what users actually value.",
+    "adrian-north": "I would check whether this strengthens MapKAI's direction instead of widening the scope too early.",
+    "mira-sprint": "I would reduce the next step to the smallest useful test.",
+    "orion-zhuge": "I would open a controlled door rather than widen access all at once.",
+  };
+  return `${(modeId === "company" ? company : personal)[persona.id] || persona.statement || `I would update the ${persona.role} position based on the latest summary.`}${guidance}`;
+}
+
+function getPlaceholderChallengeText({ persona, target, modeId, guidance }) {
+  const targetName = target?.englishName || target?.name || "that view";
+  const personal = {
+    "ethan-shen": `I would ask ${targetName} what evidence would actually change their mind.`,
+    "clara-lin": `I agree facts matter, but I challenge the council not to flatten a real emotional signal.`,
+    "marcus-lu": `I challenge Adrian's optimism: if the downside is not survivable, opportunity should wait.`,
+    "adrian-xu": `Marcus is right about downside, but risk should not erase a meaningful long-term opening.`,
+    "felix-jiang": `Marcus is right about risk, but this does not need a full yes-or-no decision; test a smaller path first.`,
+    "iris-song": `I challenge Clara's emotional certainty: desire can be real, but it can also hide avoidance.`,
+    "julian-cheng": `I would press Felix to include the people affected by any smaller experiment.`,
+    "caleb-gu": `I challenge the most ambitious plan if it cannot survive the user's actual weekly energy.`,
+    "orion-zhuge": `I would challenge the council to notice whether the timing supports action or patience.`,
+  };
+  const company = {
+    "rex-velocity": `I challenge Adrian's strategic caution if it prevents testing real demand.`,
+    "vera-flow": `Max is right about limits, but if users are confused in the first minute, scale will not matter.`,
+    "max-stack": `I challenge Rex's growth-first view: traction is dangerous if cost limits are unclear.`,
+    "nina-story": `I challenge any expansion that makes users think MapKAI is deciding for them.`,
+    "wang-zhibai": `I would press the council not to treat visual trust as decoration; it shapes whether users believe the room.`,
+    "owen-deep": `I challenge vague success signals; the pilot needs feedback we can actually learn from.`,
+    "adrian-north": `I challenge Rex's urgency if it pulls MapKAI away from its long-term position.`,
+    "mira-sprint": `I would challenge every extra feature until the first working loop is proven.`,
+    "orion-zhuge": `I would challenge the council to keep this first gate small enough to close.`,
+  };
+  return `${(modeId === "company" ? company : personal)[persona.id] || `I would challenge ${targetName}'s assumption and make the next trade-off clearer.`}${guidance}`;
+}
+
+function getPlaceholderStanceType(persona) {
+  if (["felix-jiang", "vera-flow", "adrian-xu"].includes(persona.id)) return "build";
+  if (["ethan-shen", "owen-deep"].includes(persona.id)) return "clarify";
+  return "challenge";
+}
+
 async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
@@ -843,7 +949,8 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   });
   const rawText = extractCloudflareText(result);
   const parsed = parseJsonObject(rawText);
-  return normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  return { ...normalized, modelName: model };
 }
 
 function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention }) {
@@ -886,81 +993,31 @@ ${userIntervention || "No extra user guidance."}
 Council members:
 ${personaLines}
 
-Return JSON only with this shape:
+Return JSON only with this simple shape:
 {
-  "roundNumber": ${roundNumber},
-  "phaseType": "${phaseType}",
-  "phaseLabel": "${phaseLabel}",
   "dialogue": [
     {
       "speakerId": "persona-id",
-      "stanceType": "support",
-      "targetSpeakerId": "optional-persona-id",
-      "targetSpeakerName": "optional speaker name",
       "text": "one short sentence",
-      "stanceSummary": "short stance memory",
-      "contributionVote": {
-        "targetSpeakerId": "required in B phase only",
-        "targetSpeakerName": "required in B phase only",
-        "reason": "short reason"
-      },
-      "concernVote": {
-        "targetSpeakerId": "required in B phase only",
-        "targetSpeakerName": "required in B phase only",
-        "reason": "short reason"
-      }
+      "targetSpeakerId": "optional-persona-id",
+      "stanceType": "position/challenge/build/clarify"
     }
   ],
   "blueWhaleSummary": {
     "text": "max two short sentences",
-    "strongestDisagreement": "who disagreed and why",
-    "influenceShift": "which view gained influence",
-    "unresolvedQuestion": "what remains unresolved",
     "convergenceLevel": "low",
     "shouldConsiderStopping": false,
-    "suggestedReasonToStop": "",
-    "nextFocus": "short next focus",
-    "compactMemory": {
-      "mainTension": "short item",
-      "strongestDisagreement": "short item",
-      "whatChangedThisPhase": "short item",
-      "whatNextPhaseShouldExamine": "short item"
+    "nextFocus": "short next focus"
+  },
+  "votes": [
+    {
+      "speakerId": "speaker-persona-id",
+      "contributionTargetId": "most-useful-persona-id",
+      "concernTargetId": "most-pressured-persona-id",
+      "contributionReason": "short reason",
+      "concernReason": "short reason"
     }
-  },
-  "voteSummary": {
-    "contributionVotes": [],
-    "concernVotes": [],
-    "leadingContributor": null,
-    "mostPressuredPerspective": null,
-    "suggestedArchivedPerspective": null,
-    "shouldArchivePerspective": false
-  },
-  "rosterUpdate": {
-    "shouldArchivePerspective": false,
-    "archivedSpeakerId": "",
-    "archivedSpeakerName": "",
-    "reason": "No clear narrowing consensus yet."
-  },
-  "meetingMemory": {
-    "phaseHistorySummary": "one short summary",
-    "compactSummary": "one short summary",
-    "mainTension": "short main tension",
-    "activeDisagreements": ["short item"],
-    "convergenceLevel": "low",
-    "memberStates": {
-      "persona-id": {
-        "stance": "short stance",
-        "supports": ["persona-id"],
-        "challenges": ["persona-id"],
-        "lastContribution": "short contribution",
-        "changedMind": false
-      }
-    },
-    "activeTensions": ["short item"],
-    "strongestViews": ["short item"],
-    "openQuestions": ["short item"],
-    "convergenceSignals": ["short item"]
-  }
+  ]
 }
 
 Rules:
@@ -976,12 +1033,10 @@ Rules:
 - Each member should support, challenge, clarify, build on, or update a previous view.
 - For Phase A, each member should state or update their position, mention who they agree or disagree with when useful, and note whether their stance changed.
 - For Phase B, each member must challenge or respond to a named perspective; at least 5 of the 9 members must explicitly mention another member by name.
-- Phase A must not include contributionVote or concernVote.
-- Phase B must include contributionVote and concernVote for every dialogue item if possible.
-- contributionVote selects the most useful contribution in this phase.
-- concernVote selects the perspective that needs most pressure or temporary observer status for decision clarity.
-- If concern votes have a clear highest target, rosterUpdate should suggest observer status for that perspective.
-- If concern votes are tied, rosterUpdate.shouldArchivePerspective must be false.
+- Phase A must return an empty votes array.
+- Phase B should include one vote row per speaker if possible.
+- contributionTargetId selects the most useful contribution in this phase.
+- concernTargetId selects the perspective that needs most pressure or temporary observer status for decision clarity.
 - Do not let everyone answer the original question independently; the phase should feel like they heard each other.
 - Blue Whale summary must be at most two short sentences.
 - Blue Whale must summarize meeting dynamics: strongest disagreement, who challenged whom, influence shift, unresolved question, convergence, and next focus.
@@ -1017,11 +1072,13 @@ function parseJsonObject(value) {
 function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "" }) {
   const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
   const rawLines = Array.isArray(parsed?.dialogue) ? parsed.dialogue : [];
+  const simpleVotesBySpeaker = buildSimpleVotesBySpeaker(parsed?.votes, byId);
   const normalizedLines = rawLines
     .map((line) => {
       const persona = byId.get(String(line?.speakerId || "").trim());
       const text = normalizeShortText(line?.text, 180);
       if (!persona || !text) return null;
+      const simpleVote = simpleVotesBySpeaker.get(persona.id) || {};
       return {
         speakerId: persona.id,
         speakerName: persona.englishName || persona.name,
@@ -1033,8 +1090,8 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
         targetSpeakerName: normalizeShortText(line?.targetSpeakerName, 80),
         text,
         stanceSummary: normalizeShortText(line?.stanceSummary, 160) || text,
-        contributionVote: normalizeVote(line?.contributionVote, byId),
-        concernVote: normalizeVote(line?.concernVote, byId),
+        contributionVote: normalizeVote(line?.contributionVote, byId) || simpleVote.contributionVote || null,
+        concernVote: normalizeVote(line?.concernVote, byId) || simpleVote.concernVote || null,
       };
     })
     .filter(Boolean);
@@ -1070,18 +1127,18 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
   const blueWhaleSummary = {
     title: "Blue Whale Summary",
     text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
-    strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.strongestDisagreement, 180),
+    strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.strongestDisagreement, 180) || normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 180),
     influenceShift: normalizeShortText(parsed?.blueWhaleSummary?.influenceShift, 180),
-    unresolvedQuestion: normalizeShortText(parsed?.blueWhaleSummary?.unresolvedQuestion, 180),
+    unresolvedQuestion: normalizeShortText(parsed?.blueWhaleSummary?.unresolvedQuestion, 180) || normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 180),
     convergenceLevel,
     shouldConsiderStopping: parsed?.blueWhaleSummary?.shouldConsiderStopping === true,
     suggestedReasonToStop: normalizeShortText(parsed?.blueWhaleSummary?.suggestedReasonToStop, 160),
     nextFocus: normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 180),
     compactMemory: {
-      mainTension: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.mainTension, 160),
-      strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.strongestDisagreement, 160),
-      whatChangedThisPhase: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatChangedThisPhase, 160),
-      whatNextPhaseShouldExamine: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatNextPhaseShouldExamine, 160),
+      mainTension: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.mainTension, 160) || normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 160),
+      strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.strongestDisagreement, 160) || normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 160),
+      whatChangedThisPhase: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatChangedThisPhase, 160) || "The council added short role-specific statements.",
+      whatNextPhaseShouldExamine: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatNextPhaseShouldExamine, 160) || normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 160),
     },
   };
   const meetingMemory = {
@@ -1099,6 +1156,13 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
 
   return {
     provider: "cloudflare",
+    requestedProvider: "cloudflare",
+    actualProvider: "cloudflare",
+    fallbackUsed: false,
+    fallbackReason: "",
+    providerErrorShort: "",
+    jsonParseFailed: false,
+    modelName: "",
     modeId,
     roundNumber: normalizedRoundNumber,
     phaseType: normalizedPhaseType,
@@ -1134,7 +1198,7 @@ function normalizeShortText(value, maxLength) {
 
 function normalizeStanceType(value) {
   const stanceType = String(value || "").trim().toLowerCase();
-  return ["support", "challenge", "clarify", "build", "update"].includes(stanceType) ? stanceType : "update";
+  return ["support", "challenge", "clarify", "build", "update", "position", "response", "defend"].includes(stanceType) ? stanceType : "update";
 }
 
 function normalizeVote(value, byId) {
@@ -1147,6 +1211,32 @@ function normalizeVote(value, byId) {
     targetSpeakerName: normalizeShortText(value.targetSpeakerName, 80) || persona.englishName || persona.name,
     reason: normalizeShortText(value.reason, 160),
   };
+}
+
+function buildSimpleVotesBySpeaker(value, byId) {
+  const rows = Array.isArray(value) ? value : [];
+  const votes = new Map();
+  rows.forEach((row) => {
+    const speakerId = normalizeShortText(row?.speakerId, 80);
+    if (!byId.has(speakerId)) return;
+    const contributionTargetId = normalizeShortText(row?.contributionTargetId, 80);
+    const concernTargetId = normalizeShortText(row?.concernTargetId, 80);
+    const contributionTarget = byId.get(contributionTargetId);
+    const concernTarget = byId.get(concernTargetId);
+    votes.set(speakerId, {
+      contributionVote: contributionTarget ? {
+        targetSpeakerId: contributionTarget.id,
+        targetSpeakerName: contributionTarget.englishName || contributionTarget.name,
+        reason: normalizeShortText(row?.contributionReason, 160) || "This contribution was useful to the phase.",
+      } : null,
+      concernVote: concernTarget ? {
+        targetSpeakerId: concernTarget.id,
+        targetSpeakerName: concernTarget.englishName || concernTarget.name,
+        reason: normalizeShortText(row?.concernReason, 160) || "This perspective needs more pressure before the next phase.",
+      } : null,
+    });
+  });
+  return votes;
 }
 
 function fillMissingVotes({ dialogue, sessionRoster }) {

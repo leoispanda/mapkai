@@ -145,7 +145,18 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
     });
     const phase = Array.isArray(result.rounds) && result.rounds.length ? result.rounds[0] : null;
     if (!phase) throw new Error("No PDC phase returned");
-    return json({ ok: true, phase, provider: result.provider });
+    return json({
+      ok: true,
+      phase,
+      provider: result.provider,
+      requestedProvider: result.requestedProvider,
+      actualProvider: result.actualProvider || result.provider,
+      fallbackUsed: result.fallbackUsed === true,
+      fallbackReason: result.fallbackReason || "",
+      providerErrorShort: result.providerErrorShort || "",
+      jsonParseFailed: result.jsonParseFailed === true,
+      modelName: result.modelName || "",
+    });
   } catch (error) {
     console.error("PDC continue phase failed:", error);
     return json({ ok: false, message: "The next PDC phase could not be generated. Please try again." }, 500);

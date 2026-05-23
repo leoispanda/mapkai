@@ -1873,3 +1873,12 @@ Push status:
 - Added Reintroduced Perspective block before final recap when an archived perspective exists.
 - Added Founder-only provider diagnostics for final recap provider/fallback/model.
 - Preserved low-data behavior: no full transcript is saved by default, and D1 schema/pass lifecycle were not changed.
+
+## 2026-05-23 - Fix PDC roster rendering and provider fallback diagnostics
+- Fixed the empty Active Council Members panel by normalizing roster state from full councilRoom personas before filtering active/observer ids.
+- Added defensive frontend roster fallback from room personas, session roster, and unique dialogue speakers so dialogue cannot render with an empty roster.
+- Preserved Observer rendering after perspective narrowing and kept Blue Whale excluded from active participants.
+- Simplified the Cloudflare dialogue JSON contract to dialogue, Blue Whale Summary, and simple votes; backend now enriches names, roles, votes, vote summary, roster update, and meeting memory.
+- Added clearer Founder-only provider diagnostics for requested provider, actual provider, fallback reason, provider error, JSON parse status, and model.
+- Improved placeholder B-phase wording with role-specific challenge lines instead of generic template sentences.
+- Root/public script and inline index scripts were synced; no D1 schema, navigation, pass lifecycle, persona name, OpenAI, or public PDC entry changes.

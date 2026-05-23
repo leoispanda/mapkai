@@ -4030,16 +4030,15 @@ function renderPdcCouncilRoom(recap) {
   const room = recap.councilRoom;
   if (!room) return "";
   const facilitator = room.facilitator || {};
-  const allPersonas = Array.isArray(room.personas) ? room.personas : [];
-  const personas = allPersonas.filter((persona) => pdcState.activeRosterIds.includes(persona.id));
-  ensurePdcRosterState(personas);
-  const activePersonas = personas.filter((persona) => pdcState.activeRosterIds.includes(persona.id));
-  const observerPersonas = personas.filter((persona) => pdcState.observerRosterIds.includes(persona.id));
   const rounds = getPdcPhases(room);
+  const allPersonas = getPdcRosterPersonas(room, rounds);
+  ensurePdcRosterState(allPersonas);
+  const activePersonas = allPersonas.filter((persona) => pdcState.activeRosterIds.includes(persona.id));
+  const observerPersonas = allPersonas.filter((persona) => pdcState.observerRosterIds.includes(persona.id));
   const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
   const currentRound = rounds[roundIndex] || rounds[0] || { label: "Round 1A — Position Update", dialogue: [] };
   const dialogue = Array.isArray(currentRound.dialogue) ? currentRound.dialogue : [];
-  const selectedPersona = personas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
+  const selectedPersona = allPersonas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
       <div class="pdc-room-heading">
@@ -4110,10 +4109,43 @@ function getPdcPhases(room) {
 }
 
 function ensurePdcRosterState(personas) {
+  const uniqueIds = dedupePdcIds(personas.map((persona) => persona.id).filter((id) => id && id !== "blue-whale"));
+  if (!uniqueIds.length) return;
   if (!pdcState.activeRosterIds.length && !pdcState.observerRosterIds.length) {
-    pdcState.activeRosterIds = personas.map((persona) => persona.id);
+    pdcState.activeRosterIds = uniqueIds;
     pdcState.observerRosterIds = [];
+    return;
   }
+  pdcState.observerRosterIds = dedupePdcIds(pdcState.observerRosterIds).filter((id) => uniqueIds.includes(id));
+  pdcState.activeRosterIds = dedupePdcIds(pdcState.activeRosterIds).filter((id) => uniqueIds.includes(id) && !pdcState.observerRosterIds.includes(id));
+  if (!pdcState.activeRosterIds.length) {
+    pdcState.activeRosterIds = uniqueIds.filter((id) => !pdcState.observerRosterIds.includes(id));
+  }
+}
+
+function getPdcRosterPersonas(room, rounds = []) {
+  const byId = new Map();
+  const addPersona = (persona) => {
+    if (!persona || !persona.id || persona.id === "blue-whale") return;
+    if (!byId.has(persona.id)) byId.set(persona.id, persona);
+  };
+  (Array.isArray(room.personas) ? room.personas : []).forEach(addPersona);
+  (Array.isArray(room.sessionRoster) ? room.sessionRoster : []).forEach(addPersona);
+  rounds.forEach((phase) => {
+    (Array.isArray(phase.dialogue) ? phase.dialogue : []).forEach((line) => addPersona({
+      id: line.speakerId,
+      englishName: line.speakerName,
+      name: line.speakerChineseName || line.speakerLocalName || line.speakerName,
+      role: line.role,
+      responsibility: line.role,
+      statement: line.stanceSummary || line.text,
+    }));
+  });
+  return Array.from(byId.values());
+}
+
+function dedupePdcIds(ids) {
+  return Array.from(new Set((ids || []).filter(Boolean)));
 }
 
 function normalizePdcPhase(phase, index, room) {
@@ -4141,6 +4173,8 @@ function normalizePdcPhase(phase, index, room) {
       suggestedReasonToStop: summary.suggestedReasonToStop || "",
     },
     meetingMemory: phase.meetingMemory || createPdcMeetingMemory({ phaseType, summaryText: summary.text || "" }),
+    voteSummary: phase.voteSummary || null,
+    rosterUpdate: phase.rosterUpdate || null,
     canContinue: phase.canContinue !== false,
     canStopAndSummarize: phase.canStopAndSummarize !== false,
   }][0];
@@ -4343,6 +4377,15 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.ok !== true || !data.phase) throw new Error(data.message || "Could not continue PDC phase.");
   pdcState.recap.dialogueProvider = data.provider || pdcState.recap.dialogueProvider;
+  pdcState.providerDiagnostics = {
+    requestedProvider: data.requestedProvider,
+    actualProvider: data.actualProvider || data.provider,
+    fallbackUsed: data.fallbackUsed,
+    fallbackReason: data.fallbackReason,
+    providerErrorShort: data.providerErrorShort,
+    jsonParseFailed: data.jsonParseFailed,
+    modelName: data.modelName,
+  };
   const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention }, pdcState.pdcPhases.length, room);
   applyPdcRosterUpdate(phase);
   return phase;
@@ -4417,11 +4460,13 @@ async function requestPdcFinalRecap() {
 function createNextPdcPlaceholderPhase({ previousPhase, room, userIntervention = "" }) {
   const { roundNumber, phaseType } = getNextPdcPhaseSpec(previousPhase);
   const previousSummary = previousPhase?.blueWhaleSummary?.text || "";
-  const personas = Array.isArray(room.personas) ? room.personas : [];
+  const personas = getPdcRosterPersonas(room, getPdcPhases(room)).filter((persona) => pdcState.activeRosterIds.includes(persona.id));
   const dialogue = personas.map((persona) => createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, userIntervention }));
   const summaryText = buildPdcPlaceholderSummary({ modeId: pdcState.recap?.modeId, roundNumber, phaseType, userIntervention });
   const convergenceLevel = roundNumber >= 3 && phaseType === "B" ? "high" : roundNumber >= 2 ? "medium" : "low";
   const shouldConsiderStopping = convergenceLevel === "high";
+  const voteSummary = phaseType === "B" ? createClientPdcVoteSummary(dialogue, personas) : null;
+  const rosterUpdate = phaseType === "B" ? createClientPdcRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
   return {
     id: `round-${roundNumber}${phaseType.toLowerCase()}`,
     label: getPdcPhaseLabel(roundNumber, phaseType),
@@ -4431,6 +4476,8 @@ function createNextPdcPlaceholderPhase({ previousPhase, room, userIntervention =
     previousSummary,
     userIntervention,
     dialogue,
+    voteSummary,
+    rosterUpdate,
     blueWhaleSummary: {
       title: "Blue Whale Summary",
       text: summaryText,
@@ -4448,16 +4495,89 @@ function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, 
   const speakerName = persona.englishName || persona.name || "Council Member";
   const role = persona.role || "Council Member";
   const guidance = userIntervention ? `, especially the user's guidance about ${userIntervention}` : "";
+  const target = getClientPdcTargetPersona(persona);
   const text = phaseType === "A"
-    ? `${speakerName}: Building on the last Blue Whale Summary${guidance}, I would update my position through ${role} and keep the next move specific.`
-    : `${speakerName}: Building on the last Blue Whale Summary${guidance}, I would challenge the council to test the ${role} trade-off before moving further.`;
+    ? `Building on the last Blue Whale Summary${guidance}, I would update the ${role} position and keep the next move specific.`
+    : getClientPdcChallengeText({ persona, target, guidance });
   return {
     speakerId: persona.id,
     speakerName,
     speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
     speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
     role,
+    stanceType: phaseType === "A" ? "update" : "challenge",
+    targetSpeakerId: phaseType === "A" ? "" : target?.id || "",
+    targetSpeakerName: phaseType === "A" ? "" : target?.englishName || target?.name || "",
     text: previousSummary ? text : text,
+    stanceSummary: text,
+  };
+}
+
+function getClientPdcTargetPersona(persona) {
+  const room = pdcState.recap?.councilRoom || {};
+  const personas = getPdcRosterPersonas(room, getPdcPhases(room)).filter((item) => pdcState.activeRosterIds.includes(item.id));
+  const index = Math.max(0, personas.findIndex((item) => item.id === persona.id));
+  return personas[(index + personas.length - 1) % personas.length] || personas[0] || null;
+}
+
+function getClientPdcChallengeText({ persona, target, guidance }) {
+  const targetName = target?.englishName || target?.name || "that view";
+  const map = {
+    "marcus-lu": "I challenge Adrian's optimism: if the downside is not survivable, opportunity should wait.",
+    "felix-jiang": "Marcus is right about risk, but this does not need a full yes-or-no decision; test a smaller path first.",
+    "iris-song": "I challenge Clara's emotional certainty: desire can be real, but it can also hide avoidance.",
+    "max-stack": "I challenge Rex's growth-first view: traction is dangerous if cost limits are unclear.",
+    "vera-flow": "Max is right about limits, but if users are confused in the first minute, scale will not matter.",
+  };
+  return `${map[persona.id] || `I would challenge ${targetName}'s assumption and make the next trade-off clearer.`}${guidance}`;
+}
+
+function createClientPdcVoteSummary(dialogue, personas) {
+  const rows = dialogue.map((line, index) => {
+    const contributionTarget = personas[(index + 1) % personas.length] || personas[0];
+    const concernTarget = line.targetSpeakerId ? personas.find((persona) => persona.id === line.targetSpeakerId) : personas[(index + 2) % personas.length] || contributionTarget;
+    line.contributionVote = {
+      targetSpeakerId: contributionTarget?.id || "",
+      targetSpeakerName: contributionTarget?.englishName || contributionTarget?.name || "",
+      reason: "This contribution sharpened the discussion.",
+    };
+    line.concernVote = {
+      targetSpeakerId: concernTarget?.id || "",
+      targetSpeakerName: concernTarget?.englishName || concernTarget?.name || "",
+      reason: "This perspective needs more pressure before the next phase.",
+    };
+    return line;
+  });
+  const tally = (key) => Object.values(rows.reduce((acc, line) => {
+    const vote = line[key] || {};
+    if (!vote.targetSpeakerId) return acc;
+    acc[vote.targetSpeakerId] ||= { targetSpeakerId: vote.targetSpeakerId, targetSpeakerName: vote.targetSpeakerName, count: 0, reasons: [] };
+    acc[vote.targetSpeakerId].count += 1;
+    acc[vote.targetSpeakerId].reasons.push(vote.reason);
+    return acc;
+  }, {})).sort((a, b) => b.count - a.count);
+  const contributionVotes = tally("contributionVote");
+  const concernVotes = tally("concernVote");
+  const leading = contributionVotes[0];
+  const pressured = concernVotes[0];
+  const tiedConcern = concernVotes[1] && pressured && concernVotes[1].count === pressured.count;
+  return {
+    contributionVotes,
+    concernVotes,
+    leadingContributor: leading ? { speakerId: leading.targetSpeakerId, speakerName: leading.targetSpeakerName, count: leading.count, reasonSummary: leading.reasons[0] || "" } : null,
+    mostPressuredPerspective: pressured ? { speakerId: pressured.targetSpeakerId, speakerName: pressured.targetSpeakerName, count: pressured.count, reasonSummary: pressured.reasons[0] || "" } : null,
+    suggestedArchivedPerspective: pressured && !tiedConcern ? { speakerId: pressured.targetSpeakerId, speakerName: pressured.targetSpeakerName, reason: pressured.reasons[0] || "" } : null,
+    shouldArchivePerspective: Boolean(pressured && !tiedConcern),
+  };
+}
+
+function createClientPdcRosterUpdate(voteSummary) {
+  if (!voteSummary?.shouldArchivePerspective || !voteSummary.suggestedArchivedPerspective?.speakerId) return { shouldArchivePerspective: false, reason: "No clear narrowing consensus yet." };
+  return {
+    shouldArchivePerspective: true,
+    archivedSpeakerId: voteSummary.suggestedArchivedPerspective.speakerId,
+    archivedSpeakerName: voteSummary.suggestedArchivedPerspective.speakerName,
+    reason: voteSummary.suggestedArchivedPerspective.reason,
   };
 }
 
@@ -4576,7 +4696,8 @@ function renderPdcProviderDiagnostics() {
       Provider requested: ${escapeHtml(info.requestedProvider || "-")} ·
       Provider used: ${escapeHtml(info.actualProvider || info.provider || "-")} ·
       Model: ${escapeHtml(info.modelName || "-")} ·
-      Fallback: ${info.fallbackUsed ? "yes" : "no"}${info.fallbackReason ? ` · ${escapeHtml(info.fallbackReason)}` : ""}
+      Fallback: ${info.fallbackUsed ? "yes" : "no"}${info.fallbackReason ? ` · ${escapeHtml(info.fallbackReason)}` : ""} ·
+      JSON parse failed: ${info.jsonParseFailed ? "yes" : "no"}${info.providerErrorShort ? ` · Error: ${escapeHtml(info.providerErrorShort)}` : ""}
     </section>`;
 }
 
@@ -4654,7 +4775,15 @@ async function startPdcExperience() {
     pdcState.observerRosterIds = [];
     pdcState.finalReintroducedPerspective = null;
     pdcState.finalRecapLoading = false;
-    pdcState.providerDiagnostics = null;
+    pdcState.providerDiagnostics = data.recap ? {
+      requestedProvider: data.recap.requestedProvider,
+      actualProvider: data.recap.actualProvider || data.recap.dialogueProvider,
+      fallbackUsed: data.recap.fallbackUsed,
+      fallbackReason: data.recap.fallbackReason,
+      providerErrorShort: data.recap.providerErrorShort,
+      jsonParseFailed: data.recap.jsonParseFailed,
+      modelName: data.recap.modelName,
+    } : null;
     pdcState.userInterventions = [];
     pdcState.discussionStopped = false;
     renderPdcPilot();
