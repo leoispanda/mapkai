@@ -1808,3 +1808,14 @@ Push status:
 - Audit findings: no advertising/tracking analytics tags were found; no advertising/tracking cookies were found; localStorage is used for language, Founder mode, visitor id, and temporary UI state; sessionStorage was not found; auth endpoints can set a short-lived login challenge cookie if configured and used; /api/visit writes visitor counters to D1; /api/contact-message writes optional contact messages to D1; /api/reflection sends compressed reflection input to Workers AI when used.
 - Retention principle recorded: raw quiz records are not stored by default; temporary quality records should be anonymized, aggregated, or deleted regularly, preferably within 30 days; contact messages remain optional, separate from quiz data, and should be reviewed/deleted periodically.
 - Unresolved question: Cloudflare provider-level logs, retention, and security-cookie behavior should be confirmed in Cloudflare account settings if MapKAI needs a stricter public notice later.
+
+## 2026-05-23 - Compact PDC Council Room live dialogue layout
+- Replaced the bulky PDC meeting-table/card preview with a compact two-column PDC Council Room layout.
+- Left panel now shows Blue Whale as facilitator plus compact council member roster rows; Blue Whale is not mixed into the participant list.
+- Right panel now shows Decision on the table, the current round label, and a Live Council Dialogue stream.
+- Added click-to-inspect Council Member Profile behavior for roster rows.
+- Added active speaker highlighting and manual speaker-by-speaker progression.
+- Added two placeholder rounds for Personal PDC and Company Partner Council: Round 1 Opening Views and Round 2 Challenge & Clarification.
+- Blue Whale summary appears after each completed round.
+- Preserved PDC access pass lifecycle, Founder direct access, Founder PDC Access Panel, PDC APIs, D1 schema, feedback flow, and Council Recap sections.
+- Synced root/public frontend files after updating script and styles.

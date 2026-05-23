@@ -4084,7 +4084,9 @@ let pdcState = {
   question: "",
   recap: null,
   founderPreview: false,
-  activePersonaId: "",
+  selectedPersonaId: "",
+  activeRoundIndex: 0,
+  activeSpeakerIndex: 0,
   feedbackSubmitted: false,
 };
 let pdcFounderSummary = null;
@@ -4277,7 +4279,9 @@ async function initPdcPilotPage() {
     question: "",
     recap: null,
     founderPreview,
-    activePersonaId: "",
+    selectedPersonaId: "",
+    activeRoundIndex: 0,
+    activeSpeakerIndex: 0,
     feedbackSubmitted: false,
   };
   renderPdcPilot();
@@ -4382,72 +4386,141 @@ function renderPdcCouncilRoom(recap) {
   if (!room) return "";
   const facilitator = room.facilitator || {};
   const personas = Array.isArray(room.personas) ? room.personas : [];
-  const activePersona = personas.find((persona) => persona.id === pdcState.activePersonaId) || null;
+  const rounds = getPdcRounds(room);
+  const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
+  const currentRound = rounds[roundIndex] || rounds[0] || { label: "Round 1 — Opening Views", dialogue: [] };
+  const dialogue = Array.isArray(currentRound.dialogue) ? currentRound.dialogue : [];
+  const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogue.length);
+  const roundComplete = dialogue.length > 0 && speakerIndex >= dialogue.length - 1;
+  const activeLine = dialogue[speakerIndex] || null;
+  const selectedPersona = personas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
       <div class="pdc-room-heading">
         <p class="eyebrow">Council Preview</p>
         <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
-        <p>${escapeHtml(room.subtitle || "Your decision is placed on the table. The council reviews it from multiple perspectives.")}</p>
+        <p>The council reviews your decision in structured rounds.</p>
       </div>
-      <section class="pdc-blue-whale-screen" aria-label="Blue Whale Summary">
-        <div class="pdc-screen-glow"></div>
-        <div class="pdc-screen-content">
-          <p class="pdc-screen-label">Blue Whale Summary</p>
-          <h2>${escapeHtml(facilitator.englishName || "Blue Whale")}</h2>
-          ${facilitator.name ? `<p class="pdc-facilitator-name">${escapeHtml(facilitator.name)}</p>` : ""}
-          <p>${escapeHtml(facilitator.summary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.")}</p>
-        </div>
-      </section>
-      <div class="pdc-meeting-layout">
-        <div class="pdc-seat-grid" aria-label="Council participants">
-          ${personas.map((persona, index) => renderPdcPersonaSeat(persona, index)).join("")}
-        </div>
-        <section class="pdc-meeting-table" aria-label="Decision on the table">
-          <div class="pdc-table-surface">
-            <div class="pdc-table-topic">
-              <span>Decision on the table</span>
-              <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Decision question")}</p>
+      <div class="pdc-live-room">
+        <aside class="pdc-roster-panel" aria-label="Council Members">
+          <div class="pdc-facilitator-row">
+            <span class="pdc-avatar" aria-hidden="true">${escapeHtml(getPersonaInitials(facilitator))}</span>
+            <div>
+              <small>Facilitator</small>
+              <strong>${escapeHtml(facilitator.englishName || "Blue Whale")}${facilitator.name ? ` / ${escapeHtml(facilitator.name)}` : ""}</strong>
             </div>
-            ${renderPdcDialogue(room.dialogue || [])}
           </div>
+          <h2>Council Members</h2>
+          <div class="pdc-roster-list">
+            ${personas.map((persona) => renderPdcRosterRow(persona, activeLine?.speakerId)).join("")}
+          </div>
+          ${renderPdcPersonaProfile(selectedPersona)}
+        </aside>
+        <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
+          <div class="pdc-dialogue-panel-head">
+            <div>
+              <p class="eyebrow">Current Round</p>
+              <h2>Live Council Dialogue</h2>
+            </div>
+            ${recap.dialogueProvider && pdcState.founderPreview ? `<span class="pdc-provider-label">${escapeHtml(recap.dialogueProvider)}</span>` : ""}
+          </div>
+          <div class="pdc-table-topic">
+            <span>Decision on the table</span>
+            <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Decision question")}</p>
+          </div>
+          <div class="pdc-round-status">
+            <strong>${escapeHtml(currentRound.label || "Round 1 — Opening Views")}</strong>
+            <span>${dialogue.length ? `${Math.min(speakerIndex + 1, dialogue.length)} of ${dialogue.length} speakers` : "No dialogue lines available"}</span>
+          </div>
+          ${renderPdcDialogue(dialogue.slice(0, Math.min(speakerIndex + 1, dialogue.length)), activeLine?.speakerId)}
+          ${roundComplete ? renderPdcRoundSummary(currentRound, facilitator) : ""}
+          ${renderPdcRoundControls({ roundComplete, hasNextRound: roundIndex < rounds.length - 1, hasDialogue: dialogue.length > 0 })}
         </section>
       </div>
-      ${renderPdcPersonaProfile(activePersona)}
     </section>`;
 }
 
-function renderPdcPersonaSeat(persona, index) {
+function getPdcRounds(room) {
+  if (Array.isArray(room.rounds) && room.rounds.length) return room.rounds;
+  return [{
+    id: "round-1",
+    label: room.currentRoundLabel || "Round 1 — Opening Views",
+    dialogue: Array.isArray(room.dialogue) ? room.dialogue : [],
+    blueWhaleSummary: room.facilitator ? { title: "Blue Whale Summary", text: room.facilitator.summary } : null,
+  }];
+}
+
+function clampPdcIndex(value, length) {
+  const index = Number.isFinite(Number(value)) ? Number(value) : 0;
+  if (length <= 0) return 0;
+  return Math.max(0, Math.min(index, length - 1));
+}
+
+function renderPdcRosterRow(persona, activeSpeakerId) {
   const initials = getPersonaInitials(persona);
-  const isActive = pdcState.activePersonaId === persona.id;
+  const isSelected = pdcState.selectedPersonaId === persona.id;
+  const isSpeaking = activeSpeakerId === persona.id;
   return `
-    <button class="pdc-persona-seat pdc-seat-${index + 1} ${isActive ? "is-active" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isActive}">
+    <button class="pdc-roster-row ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
       <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
-      <span class="pdc-seat-copy">
+      <span class="pdc-roster-copy">
         <strong>${escapeHtml(persona.englishName || persona.name || "Council member")}</strong>
-        ${persona.name && persona.name !== persona.englishName ? `<small>${escapeHtml(persona.name)}</small>` : ""}
+        ${persona.name && persona.name !== persona.englishName ? `<small>/ ${escapeHtml(persona.name)}</small>` : ""}
         <em>${escapeHtml(persona.role || "Council Member")}</em>
       </span>
     </button>`;
 }
 
-function renderPdcDialogue(dialogue) {
+function renderPdcDialogue(dialogue, activeSpeakerId = "") {
   const lines = Array.isArray(dialogue) ? dialogue : [];
   return `
     <div class="pdc-dialogue-board" aria-label="Live Council Dialogue">
-      <div class="pdc-dialogue-heading">
-        <strong>Live Council Dialogue</strong>
-        <span>Current discussion</span>
-      </div>
       <ol>
         ${lines.map((line) => `
-          <li>
-            <span>${escapeHtml(line.speakerName || "Council Member")}${line.speakerLocalName ? ` <small>${escapeHtml(line.speakerLocalName)}</small>` : ""}</span>
+          <li class="${line.speakerId === activeSpeakerId ? "is-current" : ""}">
+            <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(line.role)}</small>` : ""}</span>
             <p>${escapeHtml(line.text || "")}</p>
           </li>`).join("")}
       </ol>
-      <p class="pdc-dialogue-note">Placeholder dialogue preview — live PDC generation is not connected yet.</p>
+      <p class="pdc-dialogue-note">Council dialogue preview for this private pilot.</p>
     </div>`;
+}
+
+function renderPdcRoundSummary(round, facilitator) {
+  const summary = round.blueWhaleSummary?.text || facilitator.summary || "";
+  if (!summary) return "";
+  return `
+    <aside class="pdc-round-summary">
+      <strong>Blue Whale Summary</strong>
+      <p>${escapeHtml(summary)}</p>
+    </aside>`;
+}
+
+function renderPdcRoundControls({ roundComplete, hasNextRound, hasDialogue }) {
+  if (!hasDialogue) return "";
+  const label = roundComplete ? (hasNextRound ? "Continue to next round" : "Round complete") : "Next speaker";
+  return `
+    <div class="pdc-round-controls">
+      <button class="button secondary" type="button" data-pdc-next-speaker ${roundComplete && !hasNextRound ? "disabled" : ""}>${label}</button>
+    </div>`;
+}
+
+function advancePdcDialogue() {
+  const room = pdcState.recap?.councilRoom;
+  if (!room) return;
+  const rounds = getPdcRounds(room);
+  const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
+  const currentRound = rounds[roundIndex] || null;
+  const dialogueLength = Array.isArray(currentRound?.dialogue) ? currentRound.dialogue.length : 0;
+  if (!dialogueLength) return;
+  const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogueLength);
+  if (speakerIndex < dialogueLength - 1) {
+    pdcState.activeSpeakerIndex = speakerIndex + 1;
+  } else if (roundIndex < rounds.length - 1) {
+    pdcState.activeRoundIndex = roundIndex + 1;
+    pdcState.activeSpeakerIndex = 0;
+  }
+  renderPdcPilot();
 }
 
 function renderPdcPersonaProfile(persona) {
@@ -4574,6 +4647,9 @@ async function startPdcExperience() {
     if (!response.ok || data.ok !== true) throw new Error(data.message || "The PDC experience could not be generated. Please try again later.");
     pdcState.recap = data.recap;
     pdcState.status = "complete";
+    pdcState.selectedPersonaId = "";
+    pdcState.activeRoundIndex = 0;
+    pdcState.activeSpeakerIndex = 0;
     renderPdcPilot();
   } catch (error) {
     pdcState.status = "ready";
@@ -6509,8 +6585,12 @@ document.addEventListener("click", (event) => {
   const pdcPersona = event.target.closest("[data-pdc-persona]");
   if (pdcPersona) {
     const personaId = pdcPersona.dataset.pdcPersona;
-    pdcState.activePersonaId = pdcState.activePersonaId === personaId ? "" : personaId;
+    pdcState.selectedPersonaId = pdcState.selectedPersonaId === personaId ? "" : personaId;
     renderPdcPilot();
+    return;
+  }
+  if (event.target.closest("[data-pdc-next-speaker]")) {
+    advancePdcDialogue();
     return;
   }
   const pdcMode = event.target.closest("[data-pdc-mode]");
@@ -6528,7 +6608,9 @@ document.addEventListener("click", (event) => {
     pdcState.message = "";
     pdcState.question = "";
     pdcState.recap = null;
-    pdcState.activePersonaId = "";
+    pdcState.selectedPersonaId = "";
+    pdcState.activeRoundIndex = 0;
+    pdcState.activeSpeakerIndex = 0;
     pdcState.feedbackSubmitted = false;
     renderPdcPilot();
     return;

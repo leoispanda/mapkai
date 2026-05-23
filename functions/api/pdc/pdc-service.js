@@ -444,6 +444,7 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
       dialogueProvider: dialogueResult.provider,
       currentRoundLabel: dialogueResult.currentRoundLabel,
       dialogue: dialogueResult.dialogue,
+      rounds: dialogueResult.rounds,
       facilitator: facilitator
         ? {
             id: facilitator.id,
@@ -500,47 +501,110 @@ function toCouncilRoomPersona(persona, modeId) {
   };
 }
 
-function buildPlaceholderDialogue({ modeId, personas }) {
-  const dialogueByMode = modeId === "company"
+function buildDialogueLine({ speakerId, text, personas }) {
+  const speaker = personas.find((persona) => persona.id === speakerId);
+  if (!speaker) return null;
+  return {
+    speakerId,
+    speakerName: speaker.englishName || speaker.name,
+    speakerChineseName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
+    speakerLocalName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
+    role: speaker.role,
+    text,
+  };
+}
+
+function buildPlaceholderRound({ id, label, entries, summary, personas }) {
+  return {
+    id,
+    label,
+    dialogue: entries.map(([speakerId, text]) => buildDialogueLine({ speakerId, text, personas })).filter(Boolean),
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: summary,
+    },
+  };
+}
+
+function buildPlaceholderRounds({ modeId, personas }) {
+  const isCompany = modeId === "company";
+  const roundOne = isCompany
     ? [
         ["rex-velocity", "First, I would test whether this creates real traction or only internal excitement."],
-        ["vera-flow", "The first-time experience must be clear before we widen access."],
+        ["vera-flow", "The first-time experience must be clear before expansion."],
         ["max-stack", "We need cost limits and failure behavior before scaling."],
         ["nina-story", "The product must remain reflection support, not decision authority."],
+        ["wang-zhibai", "The experience should feel calm, premium, and council-like."],
+        ["owen-deep", "The pilot should teach us what users actually value."],
+        ["adrian-north", "This should support MapKAI's long-term direction, not distract from it."],
         ["mira-sprint", "Keep the first version to a small, testable loop."],
+        ["orion-zhuge", "This is a moment to open a controlled door, not the whole city gate."],
       ]
     : [
-        ["ethan-shen", "First, I would clarify what information is missing."],
+        ["ethan-shen", "First, I would clarify what information is missing before making this decision."],
         ["clara-lin", "I would ask whether this reflects what you actually want."],
         ["marcus-lu", "We need to test the downside before committing."],
+        ["adrian-xu", "I would look at whether this opens a meaningful long-term path."],
         ["felix-jiang", "There may be a third path beyond yes or no."],
+        ["iris-song", "I would question whether pride, fear, or avoidance is shaping the decision."],
+        ["julian-cheng", "I would consider how this affects important relationships."],
         ["caleb-gu", "The decision must fit your real time and energy."],
+        ["orion-zhuge", "I would look at the timing, momentum, and whether the situation is ready."],
+      ];
+  const roundTwo = isCompany
+    ? [
+        ["rex-velocity", "If users do not feel value quickly, the system will not spread."],
+        ["vera-flow", "If the first minute is confusing, the deeper logic will not matter."],
+        ["max-stack", "If limits are not clear, cost and failure risk will grow quietly."],
+        ["nina-story", "If the language suggests authority, trust becomes fragile."],
+        ["wang-zhibai", "If the room looks cheap, users will not feel the decision was respected."],
+        ["owen-deep", "If feedback is too vague, the pilot will not teach us enough."],
+        ["adrian-north", "If this becomes the whole brand too early, MapKAI may lose focus."],
+        ["mira-sprint", "If we add too much now, the pilot will stop being testable."],
+        ["orion-zhuge", "The first gate should be small enough to close and real enough to learn from."],
+      ]
+    : [
+        ["ethan-shen", "Before choosing, define what evidence would change your mind."],
+        ["clara-lin", "Do not ignore the emotional signal just because it is hard to measure."],
+        ["marcus-lu", "Name the worst-case cost and decide whether it is survivable."],
+        ["adrian-xu", "Check whether the opportunity still matters one year from now."],
+        ["felix-jiang", "Try a small experiment before forcing a full yes or no."],
+        ["iris-song", "Ask whether you are avoiding a harder but more honest answer."],
+        ["julian-cheng", "Consider who needs to be informed, involved, or protected."],
+        ["caleb-gu", "Do not choose a path your current energy cannot sustain."],
+        ["orion-zhuge", "The right move may depend on whether the moment is opening or closing."],
       ];
 
-  return dialogueByMode
-    .map(([speakerId, text]) => {
-      const speaker = personas.find((persona) => persona.id === speakerId);
-      if (!speaker) return null;
-      return {
-        speakerId,
-        speakerName: speaker.englishName || speaker.name,
-        speakerLocalName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
-        text,
-      };
-    })
-    .filter(Boolean);
+  return [
+    buildPlaceholderRound({
+      id: "round-1",
+      label: "Round 1 — Opening Views",
+      entries: roundOne,
+      personas,
+      summary: isCompany
+        ? "Blue Whale Summary: The opening round surfaced the first layer of growth potential, user experience, technical limits, brand trust, visual quality, user feedback, strategy, execution, and timing."
+        : "Blue Whale Summary: The opening round surfaced the first layer of facts, desire, risks, opportunities, alternatives, blind spots, relationships, time-energy fit, and timing.",
+    }),
+    buildPlaceholderRound({
+      id: "round-2",
+      label: "Round 2 — Challenge & Clarification",
+      entries: roundTwo,
+      personas,
+      summary: "Blue Whale Summary: The council has started to clarify trade-offs and narrow the next question. A live model will later make this discussion deeper and more adaptive.",
+    }),
+  ];
 }
 
 function createPlaceholderDialogueResult({ modeId, sessionRoster }) {
+  const rounds = buildPlaceholderRounds({ modeId, personas: sessionRoster });
+  const firstRound = rounds[0] || { label: "Round 1 — Opening Views", dialogue: [] };
   return {
     provider: "placeholder",
     modeId,
-    currentRoundLabel: "Opening Round",
-    dialogue: buildPlaceholderDialogue({ modeId, personas: sessionRoster }),
-    blueWhaleSummary: {
-      title: "Blue Whale Summary",
-      text: "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.",
-    },
+    currentRoundLabel: firstRound.label,
+    dialogue: firstRound.dialogue,
+    rounds,
+    blueWhaleSummary: firstRound.blueWhaleSummary,
   };
 }
 
@@ -656,16 +720,19 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed }) {
 
   const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
   if (!dialogue.length) throw new Error("Dialogue response had no usable lines");
+  const currentRoundLabel = normalizeShortText(parsed?.currentRoundLabel, 80) || "Round 1 — Opening Views";
+  const blueWhaleSummary = {
+    title: "Blue Whale Summary",
+    text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
+  };
 
   return {
     provider: "cloudflare",
     modeId,
-    currentRoundLabel: normalizeShortText(parsed?.currentRoundLabel, 80) || "Opening Round",
+    currentRoundLabel,
     dialogue,
-    blueWhaleSummary: {
-      title: "Blue Whale Summary",
-      text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
-    },
+    rounds: [{ id: "round-1", label: currentRoundLabel, dialogue, blueWhaleSummary }],
+    blueWhaleSummary,
   };
 }
 
