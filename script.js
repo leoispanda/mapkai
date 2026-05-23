@@ -3707,6 +3707,7 @@ let pdcState = {
   selectedMode: "personal",
   question: "",
   recap: null,
+  founderPreview: false,
   activePersonaId: "",
   feedbackSubmitted: false,
 };
@@ -3877,10 +3878,17 @@ function getCurrentPdcPass() {
   return new URLSearchParams(window.location.search).get("pass") || "";
 }
 
+function isPdcFounderPreviewAllowed(pass) {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get("founderPreview") === "1" || !pass;
+  return requested && document.body.classList.contains("founder-mode");
+}
+
 async function initPdcPilotPage() {
   if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") return;
   const pass = getCurrentPdcPass();
-  if (pdcState.pass === pass && pdcState.status !== "idle") {
+  const founderPreview = isPdcFounderPreviewAllowed(pass);
+  if (pdcState.pass === pass && pdcState.founderPreview === founderPreview && pdcState.status !== "idle") {
     renderPdcPilot();
     return;
   }
@@ -3892,13 +3900,21 @@ async function initPdcPilotPage() {
     selectedMode: "personal",
     question: "",
     recap: null,
+    founderPreview,
     activePersonaId: "",
     feedbackSubmitted: false,
   };
   renderPdcPilot();
+  if (founderPreview) {
+    pdcState.valid = true;
+    pdcState.status = "ready";
+    pdcState.message = "";
+    renderPdcPilot();
+    return;
+  }
   if (!pass) {
     pdcState.status = "invalid";
-    pdcState.message = "This PDC access link is no longer available. It may have already been used or expired.";
+    pdcState.message = "A valid PDC access link is required.";
     renderPdcPilot();
     return;
   }
@@ -3935,6 +3951,7 @@ function renderPdcPilot() {
     root.innerHTML = `
       ${renderPdcCouncilRoom(pdcState.recap)}
       ${renderPdcRecap(pdcState.recap)}
+      ${renderPdcFounderPreviewActions()}
       ${renderPdcFeedbackForm()}
     `;
     return;
@@ -3964,6 +3981,7 @@ function pdcShellTemplate(innerHtml) {
     <section class="pdc-card" aria-live="polite">
       <p class="eyebrow">Private Pilot</p>
       <h1>MapKAI PDC Private Pilot</h1>
+      ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Founder Mode Preview</p>` : ""}
       <p class="pdc-subtitle">A one-time guided decision reflection experience.</p>
       <div class="pdc-boundary-copy">
         <p>MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
@@ -3971,6 +3989,15 @@ function pdcShellTemplate(innerHtml) {
         <p>MapKAI PDC is designed for reflection and critical thinking. It helps you examine a decision from multiple perspectives, but the final judgment remains yours. Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
       </div>
       ${innerHtml}
+    </section>`;
+}
+
+function renderPdcFounderPreviewActions() {
+  if (!pdcState.founderPreview) return "";
+  return `
+    <section class="pdc-founder-preview-tools">
+      <p>Founder Mode Preview</p>
+      <button class="button secondary" type="button" data-pdc-founder-reset>Start another Founder Preview</button>
     </section>`;
 }
 
@@ -4105,6 +4132,13 @@ function renderPdcRecap(recap) {
 }
 
 function renderPdcFeedbackForm() {
+  if (pdcState.founderPreview) {
+    return `
+      <section class="pdc-feedback">
+        <h2>Founder preview feedback</h2>
+        <p>Founder preview feedback is optional and is not saved to invited-user feedback summary.</p>
+      </section>`;
+  }
   if (pdcState.feedbackSubmitted) {
     return `<section class="pdc-feedback"><h2>Thank you.</h2><p>Your anonymous feedback has been received.</p></section>`;
   }
@@ -4148,13 +4182,16 @@ async function startPdcExperience() {
   pdcState.message = "";
   renderPdcPilot();
   try {
+    const headers = { "Content-Type": "application/json" };
+    if (pdcState.founderPreview) headers["X-MapKAI-Founder"] = "true";
     const response = await fetch("/api/pdc/start", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify({
         pass: pdcState.pass,
         mode_id: pdcState.selectedMode,
         user_question: pdcState.question,
+        founder_preview: pdcState.founderPreview,
       }),
     });
     const data = await response.json().catch(() => ({}));
@@ -4230,6 +4267,7 @@ function renderPdcFounderPanel() {
       <h3>PDC Access Panel</h3>
       <div class="pdc-founder-actions">
         <button class="button primary" type="button" data-pdc-generate>Generate 20 PDC Access Links</button>
+        <a class="button secondary" href="/pdc-pilot?founderPreview=1">Open PDC as Founder</a>
         <button class="button secondary" type="button" data-pdc-copy-unused ${unusedLinks.length ? "" : "disabled"}>Copy all unused links</button>
         <button class="button secondary" type="button" data-pdc-copy-all ${allLinks.length ? "" : "disabled"}>Copy all links</button>
       </div>
@@ -6107,6 +6145,16 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-pdc-start]")) {
     startPdcExperience();
+    return;
+  }
+  if (event.target.closest("[data-pdc-founder-reset]")) {
+    pdcState.status = "ready";
+    pdcState.message = "";
+    pdcState.question = "";
+    pdcState.recap = null;
+    pdcState.activePersonaId = "";
+    pdcState.feedbackSubmitted = false;
+    renderPdcPilot();
     return;
   }
   if (event.target.closest("[data-pdc-generate]")) {

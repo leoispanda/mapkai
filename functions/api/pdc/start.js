@@ -1,20 +1,34 @@
-import { cleanText, ensurePdcTables, getIsoNow, getPass, INVALID_PDC_LINK_MESSAGE, isPassUsable, json } from "./_shared.js";
+import { cleanText, ensurePdcTables, getIsoNow, getPass, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
 import { generatePdcCouncilRecap, pdcModes, resolveSessionRoster } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
-  if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
 
-  await ensurePdcTables(env.MAPKAI_DB);
   const body = await request.json().catch(() => ({}));
   const passCode = cleanText(body.pass, 80);
   const modeId = ["personal", "company"].includes(body.mode_id) ? body.mode_id : "";
   const userQuestion = cleanText(body.user_question, 1200);
+  const isFounderPreview = body.founder_preview === true && isFounderRequest(request);
 
-  if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
   if (!modeId || !pdcModes[modeId]) return json({ ok: false, message: "Choose a PDC type before starting." }, 400);
   if (userQuestion.length < 8) return json({ ok: false, message: "Please enter a decision question before starting." }, 400);
   if (userQuestion.length > 1200) return json({ ok: false, message: "Please keep the decision question under 1200 characters." }, 400);
+
+  if (isFounderPreview) {
+    try {
+      const isPlaceholder = !env.OPENAI_API_KEY;
+      const sessionRoster = resolveSessionRoster({ modeId, sessionRoster: null });
+      const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder });
+      return json({ ok: true, founder_preview: true, recap });
+    } catch {
+      return json({ ok: false, message: "The PDC experience could not be generated. Please try again later." }, 500);
+    }
+  }
+
+  if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
+  if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
+
+  await ensurePdcTables(env.MAPKAI_DB);
 
   const pass = await getPass(env.MAPKAI_DB, passCode);
   if (!isPassUsable(pass)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);

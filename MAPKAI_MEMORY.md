@@ -261,6 +261,15 @@ Latest PDC room UI follow-up:
 - Blue Whale remains on the front TV/screen only and is not rendered as a participant seat.
 - Council Recap and anonymous feedback remain below the Council Room.
 
+Latest Founder Preview follow-up:
+
+- Founder Mode can now open the same `/pdc-pilot` page directly without a one-time pass.
+- Founder-only PDC Access Panel includes an "Open PDC as Founder" button linking to `/pdc-pilot?founderPreview=1`.
+- Founder Preview uses the same Personal/Company selection, Council Room UI, Council Recap, and placeholder service.
+- Founder Preview calls `/api/pdc/start` with `founder_preview: true` and `X-MapKAI-Founder: true`, skips D1 pass claim/update, and does not affect weekly link usage.
+- Ordinary users without Founder Mode still need a valid unused pass; adding `founderPreview=1` alone does not unlock the page.
+- Founder preview feedback is not saved into invited-user feedback summary.
+
 Verified:
 
 - `node --check script.js`

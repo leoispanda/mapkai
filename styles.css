@@ -331,9 +331,23 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-status,
 .pdc-invalid,
 .pdc-placeholder-notice,
-.pdc-roster-note {
+.pdc-roster-note,
+.pdc-founder-preview-label {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.pdc-founder-preview-label {
+  display: inline-flex;
+  width: fit-content;
+  margin: 14px 0 0;
+  border: 1px solid rgba(15, 107, 87, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(237, 244, 233, 0.68);
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 860;
 }
 
 .pdc-invalid,
@@ -735,6 +749,25 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-feedback {
   margin-top: 18px;
   padding: clamp(20px, 4vw, 32px);
+}
+
+.pdc-founder-preview-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  border: 1px solid rgba(15, 107, 87, 0.14);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(237, 244, 233, 0.58);
+}
+
+.pdc-founder-preview-tools p {
+  margin: 0;
+  color: var(--green-dark);
+  font-weight: 860;
 }
 
 .pdc-feedback h2 {
