@@ -1945,4 +1945,4 @@ Push status:
 - Added Founder-only PDC playback diagnostics for playback mode, playback status, visible statement count, total statement count, and active speaker id.
 - Kept progressive playback behavior on the frontend: phase statements reveal from the backend JSON one by one, current speaker highlight stays active, and Blue Whale Summary plus Continue/Stop controls wait until playback completes.
 - Updated the round count copy to use active council statements and retained the completed-phase note: This phase is complete.
-- Synced root/public frontend scripts; provider logic, schema, model, D1 schema, pass lifecycle, navigation, and persona names were not changed.
+- Synced root/public frontend scripts and inline index scripts; provider logic, schema, model, D1 schema, pass lifecycle, navigation, and persona names were not changed.
