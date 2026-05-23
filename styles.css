@@ -633,6 +633,28 @@ body:not(.founder-mode) .founder-public-entry {
   background: rgba(237, 244, 233, 0.72);
 }
 
+.pdc-dialogue-board li.is-thinking {
+  border-style: dashed;
+}
+
+.pdc-playback-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(15, 107, 87, 0.14);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(237, 244, 233, 0.62);
+}
+
+.pdc-playback-status p {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 820;
+}
+
 .pdc-dialogue-board li span {
   color: var(--green-dark);
   font-size: 0.84rem;

@@ -258,6 +258,12 @@ Latest deployed JSON fallback follow-up:
 Founder Preview then showed OpenAI/Cloudflare invalid JSON fallback with parse failure around position 2434, consistent with structured JSON truncation. OpenAI phase/final recap max_output_tokens were increased and JSON retry now uses a larger retry token budget.
 ```
 
+Latest PDC meeting UX update:
+
+```text
+PDC frontend now plays completed phase JSON progressively as a live council meeting: each speaker briefly shows as thinking, then their statement appears, the active roster member is highlighted, Blue Whale summary and phase controls wait until playback completes, and Founder Preview can use Show all now. This is frontend playback only, not true token streaming.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.
