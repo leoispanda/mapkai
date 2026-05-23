@@ -3710,7 +3710,6 @@ let pdcState = {
   founderPreview: false,
   selectedPersonaId: "",
   activeRoundIndex: 0,
-  activeSpeakerIndex: 0,
   pdcPhases: [],
   discussionStopped: false,
   feedbackSubmitted: false,
@@ -3907,7 +3906,6 @@ async function initPdcPilotPage() {
     founderPreview,
     selectedPersonaId: "",
     activeRoundIndex: 0,
-    activeSpeakerIndex: 0,
     pdcPhases: [],
     discussionStopped: false,
     feedbackSubmitted: false,
@@ -4018,9 +4016,6 @@ function renderPdcCouncilRoom(recap) {
   const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
   const currentRound = rounds[roundIndex] || rounds[0] || { label: "Round 1A — Position Update", dialogue: [] };
   const dialogue = Array.isArray(currentRound.dialogue) ? currentRound.dialogue : [];
-  const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogue.length);
-  const roundComplete = dialogue.length > 0 && speakerIndex >= dialogue.length - 1;
-  const activeLine = dialogue[speakerIndex] || null;
   const selectedPersona = personas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
@@ -4040,7 +4035,7 @@ function renderPdcCouncilRoom(recap) {
           </div>
           <h2>Council Members</h2>
           <div class="pdc-roster-list">
-            ${personas.map((persona) => renderPdcRosterRow(persona, activeLine?.speakerId)).join("")}
+            ${personas.map((persona) => renderPdcRosterRow(persona, "")).join("")}
           </div>
           ${renderPdcPersonaProfile(selectedPersona)}
         </aside>
@@ -4058,11 +4053,11 @@ function renderPdcCouncilRoom(recap) {
           </div>
           <div class="pdc-round-status">
             <strong>${escapeHtml(currentRound.label || "Round 1 — Opening Views")}</strong>
-            <span>${dialogue.length ? `${Math.min(speakerIndex + 1, dialogue.length)} of ${dialogue.length} speakers` : "No dialogue lines available"}</span>
+            <span>${dialogue.length ? `${dialogue.length} council statements` : "No dialogue lines available"}</span>
           </div>
-          ${renderPdcDialogue(dialogue.slice(0, Math.min(speakerIndex + 1, dialogue.length)), activeLine?.speakerId)}
-          ${roundComplete ? renderPdcRoundSummary(currentRound, facilitator) : ""}
-          ${renderPdcRoundControls({ roundComplete, hasDialogue: dialogue.length > 0 })}
+          ${renderPdcDialogue(dialogue, "")}
+          ${renderPdcRoundSummary(currentRound, facilitator)}
+          ${renderPdcRoundControls({ hasDialogue: dialogue.length > 0 })}
         </section>
       </div>
     </section>`;
@@ -4167,37 +4162,16 @@ function renderPdcRoundSummary(round, facilitator) {
     </aside>`;
 }
 
-function renderPdcRoundControls({ roundComplete, hasDialogue }) {
+function renderPdcRoundControls({ hasDialogue }) {
   if (!hasDialogue) return "";
   if (pdcState.discussionStopped) {
     return `<div class="pdc-round-controls"><span class="pdc-stopped-label">Discussion stopped. Council Recap is ready.</span></div>`;
   }
-  if (roundComplete) {
-    return `
-      <div class="pdc-round-controls">
-        <button class="button secondary" type="button" data-pdc-continue-phase>Continue to next phase</button>
-        <button class="button primary" type="button" data-pdc-stop-summarize>Stop &amp; Summarize</button>
-      </div>`;
-  }
   return `
     <div class="pdc-round-controls">
-      <button class="button secondary" type="button" data-pdc-next-speaker>Next speaker</button>
+      <button class="button secondary" type="button" data-pdc-continue-phase>Continue to next phase</button>
+      <button class="button primary" type="button" data-pdc-stop-summarize>Stop &amp; Summarize</button>
     </div>`;
-}
-
-function advancePdcDialogue() {
-  const room = pdcState.recap?.councilRoom;
-  if (!room || pdcState.discussionStopped) return;
-  const rounds = getPdcPhases(room);
-  const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
-  const currentRound = rounds[roundIndex] || null;
-  const dialogueLength = Array.isArray(currentRound?.dialogue) ? currentRound.dialogue.length : 0;
-  if (!dialogueLength) return;
-  const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogueLength);
-  if (speakerIndex < dialogueLength - 1) {
-    pdcState.activeSpeakerIndex = speakerIndex + 1;
-  }
-  renderPdcPilot();
 }
 
 function continuePdcPhase() {
@@ -4207,11 +4181,10 @@ function continuePdcPhase() {
   const phaseIndex = clampPdcIndex(pdcState.activeRoundIndex, phases.length);
   const currentPhase = phases[phaseIndex];
   const dialogueLength = Array.isArray(currentPhase?.dialogue) ? currentPhase.dialogue.length : 0;
-  if (!dialogueLength || pdcState.activeSpeakerIndex < dialogueLength - 1) return;
+  if (!dialogueLength) return;
   const nextIndex = phaseIndex + 1;
   if (!phases[nextIndex]) phases.push(createNextPdcPlaceholderPhase({ previousPhase: currentPhase, room }));
   pdcState.activeRoundIndex = nextIndex;
-  pdcState.activeSpeakerIndex = 0;
   renderPdcPilot();
 }
 
@@ -4431,7 +4404,6 @@ async function startPdcExperience() {
     pdcState.status = "complete";
     pdcState.selectedPersonaId = "";
     pdcState.activeRoundIndex = 0;
-    pdcState.activeSpeakerIndex = 0;
     pdcState.pdcPhases = [];
     pdcState.discussionStopped = false;
     renderPdcPilot();
@@ -6373,10 +6345,6 @@ document.addEventListener("click", (event) => {
     renderPdcPilot();
     return;
   }
-  if (event.target.closest("[data-pdc-next-speaker]")) {
-    advancePdcDialogue();
-    return;
-  }
   if (event.target.closest("[data-pdc-continue-phase]")) {
     continuePdcPhase();
     return;
@@ -6402,7 +6370,6 @@ document.addEventListener("click", (event) => {
     pdcState.recap = null;
     pdcState.selectedPersonaId = "";
     pdcState.activeRoundIndex = 0;
-    pdcState.activeSpeakerIndex = 0;
     pdcState.pdcPhases = [];
     pdcState.discussionStopped = false;
     pdcState.feedbackSubmitted = false;

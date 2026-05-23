@@ -1837,3 +1837,10 @@ Push status:
 - Blue Whale summaries now include convergence level and can suggest stopping without forcing the user to stop.
 - Cloudflare dialogue prompt structure now accepts round number, phase type, previous summary, and compact meeting memory for future live phase generation.
 - Preserved pass lifecycle, Founder direct access, Founder Panel, existing PDC APIs, D1 schema, and low-data behavior.
+
+## 2026-05-23 - Remove per-speaker PDC clicking
+- Removed the normal PDC flow's per-speaker Next speaker interaction.
+- Each phase now displays all council member statements at once, followed by Blue Whale Summary.
+- Phase controls now show only Continue to next phase and Stop & Summarize.
+- Continue still creates the next A/B phase indefinitely until the user stops.
+- Preserved access pass logic, Founder Panel, PDC APIs, D1 schema, public navigation, Council Recap, and feedback behavior.
