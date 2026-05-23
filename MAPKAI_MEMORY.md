@@ -1940,3 +1940,9 @@ Push status:
 - Fixed the final recap notice so successful Cloudflare recaps show `Generated Council Recap` instead of the development placeholder wording.
 - Founder diagnostics now separate phase dialogue provider from final recap provider, including separate fallback reasons.
 - Root/public script and inline index scripts were synced; no D1 schema, navigation, pass lifecycle, persona roster, or Cloudflare binding changes.
+
+## 2026-05-23 - Add PDC playback diagnostics
+- Added Founder-only PDC playback diagnostics for playback mode, playback status, visible statement count, total statement count, and active speaker id.
+- Kept progressive playback behavior on the frontend: phase statements reveal from the backend JSON one by one, current speaker highlight stays active, and Blue Whale Summary plus Continue/Stop controls wait until playback completes.
+- Updated the round count copy to use active council statements and retained the completed-phase note: This phase is complete.
+- Synced root/public frontend scripts; provider logic, schema, model, D1 schema, pass lifecycle, navigation, and persona names were not changed.

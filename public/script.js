@@ -4123,7 +4123,7 @@ function renderPdcCouncilRoom(recap) {
           </div>
           <div class="pdc-round-status">
             <strong>${escapeHtml(currentRound.label || "Round 1 — Opening Views")}</strong>
-            <span>${fullDialogue.length ? `${fullDialogue.length} ${observerPersonas.length ? "active council statements" : "council statements"}` : "No dialogue lines available"}</span>
+            <span>${fullDialogue.length ? `${fullDialogue.length} active council statements` : "No dialogue lines available"}</span>
           </div>
           ${renderPdcPlaybackStatus(currentRound, playback, thinkingLine)}
           ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback)}
@@ -4375,11 +4375,13 @@ function renderPdcFounderPhaseDebug(currentRound) {
   if (!pdcState.founderPreview) return "";
   const previousSummary = currentRound.previousSummary || "";
   const diagnostics = currentRound.contentDiagnostics || pdcState.providerDiagnostics?.contentDiagnostics || null;
+  const playbackDebug = getPdcPlaybackDebug(currentRound);
   return `
     <p class="pdc-founder-phase-debug">
       Provider: ${escapeHtml(pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder")} ·
       Previous summary: ${previousSummary ? "available" : "missing"} ·
       User intervention: ${currentRound.userIntervention ? "included" : "empty"}
+      · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}
       ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
       ${diagnostics ? ` · Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"} · Timing: ${Number(diagnostics.totalPhaseDurationMs || 0)}ms` : ""}
     </p>`;
@@ -4388,6 +4390,28 @@ function renderPdcFounderPhaseDebug(currentRound) {
 function getPdcPlaybackForRound(round) {
   if (!round || !pdcState.playback || pdcState.playback.phaseId !== round.id) return null;
   return pdcState.playback;
+}
+
+function getPdcPlaybackDebug(round) {
+  const dialogue = Array.isArray(round?.dialogue) ? round.dialogue : [];
+  const playback = getPdcPlaybackForRound(round);
+  const totalStatementCount = dialogue.length;
+  const visibleStatementCount = playback ? Math.min(Number(playback.visibleCount || 0), totalStatementCount) : totalStatementCount;
+  let playbackStatus = "idle";
+  if (pdcState.phaseLoading || pdcState.status === "generating") {
+    playbackStatus = "preparing";
+  } else if (playback?.isPlaying) {
+    playbackStatus = "playing";
+  } else if (playback?.complete) {
+    playbackStatus = "completed";
+  }
+  return {
+    playbackMode: playback ? "progressive" : "instant",
+    playbackStatus,
+    visibleStatementCount,
+    totalStatementCount,
+    activeSpeakerId: playback?.activeSpeakerId || playback?.thinkingSpeakerId || "",
+  };
 }
 
 function clearPdcPlaybackTimer() {
