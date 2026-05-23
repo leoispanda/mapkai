@@ -252,6 +252,12 @@ Latest deployed verification follow-up:
 Founder Preview showed actualProvider=openai but modelStatementCount=0 and all dialogue lines injected from persona defaults. The fix now rejects OpenAI phase results that still lack required dialogue statements after retry, treats missing output_text in a Responses API envelope as retryable, and exposes schemaName/strict in Founder diagnostics.
 ```
 
+Latest deployed JSON fallback follow-up:
+
+```text
+Founder Preview then showed OpenAI/Cloudflare invalid JSON fallback with parse failure around position 2434, consistent with structured JSON truncation. OpenAI phase/final recap max_output_tokens were increased and JSON retry now uses a larger retry token budget.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.

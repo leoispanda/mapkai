@@ -1176,7 +1176,8 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
     prompt,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
-    maxOutputTokens: 1500,
+    maxOutputTokens: 3200,
+    retryMaxOutputTokens: 4200,
     retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
   });
 }
@@ -1380,7 +1381,7 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
   return parseJsonObject(text);
 }
 
-async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryInstructions }) {
+async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions }) {
   try {
     return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens });
   } catch (error) {
@@ -1397,7 +1398,7 @@ ${retryInstructions || "Return only one complete valid JSON object for the schem
         prompt: retryPrompt,
         schemaName,
         schema,
-        maxOutputTokens,
+        maxOutputTokens: retryMaxOutputTokens || maxOutputTokens,
       });
     } catch (retryError) {
       if (isJsonParseError(retryError)) {
@@ -1825,7 +1826,8 @@ async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activ
     prompt,
     schemaName: "pdc_final_recap",
     schema: pdcFinalRecapSchema,
-    maxOutputTokens: 1800,
+    maxOutputTokens: 3200,
+    retryMaxOutputTokens: 4200,
     retryInstructions: "The previous final recap response was invalid JSON. Return only one complete valid JSON object matching the final recap schema, with strings and arrays only where requested. No markdown or extra text.",
   });
   return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "openai", actualProvider: "openai", modelName: model });
