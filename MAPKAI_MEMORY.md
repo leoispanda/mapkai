@@ -1853,3 +1853,12 @@ Push status:
 - Blue Whale Summary contract now includes next focus and compact memory fields for carrying the discussion forward.
 - Founder preview shows a small continuation debug line for provider, previous summary availability, and user intervention status.
 - Placeholder fallback still works and carries prior summary/guidance in compact form without saving a full transcript.
+
+## 2026-05-23 - Strengthen PDC council member independence
+- Updated Cloudflare PDC prompt to simulate a structured council meeting rather than one unified answer split across names.
+- Dialogue schema now supports stance type, target speaker, stance summary, and compact per-member state memory.
+- Phase B prompt now requires named challenges/responses and asks at least five members to reference another member by name.
+- Blue Whale Summary schema now includes strongest disagreement, influence shift, unresolved question, next focus, and compact memory.
+- Placeholder fallback now includes role-specific support/challenge/build relations so it feels more like members heard each other.
+- UI now shows subtle relation labels such as Challenges, Builds on, Clarifies, and Supports.
+- Kept single-call Cloudflare provider design for cost control; no OpenAI integration or pass lifecycle changes.

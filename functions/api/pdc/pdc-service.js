@@ -388,6 +388,7 @@ const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
 // - Keep PDC rhythm independent from roster content.
 // - Replace or expand placeholder company roster with Leo's full Company Partner Council persona library.
 // - Support larger rosters without changing the PDC rhythm.
+// - Future premium mode may use true multi-call council members: one call per persona plus one Blue Whale synthesis call for stronger independence at higher cost.
 
 export function resolveSessionRoster({ modeId, sessionRoster }) {
   if (Array.isArray(sessionRoster) && sessionRoster.length) {
@@ -505,8 +506,9 @@ export function toCouncilRoomPersona(persona, modeId) {
   };
 }
 
-function buildDialogueLine({ speakerId, text, personas }) {
+function buildDialogueLine({ speakerId, text, personas, stanceType = "update", targetSpeakerId = "", stanceSummary = "" }) {
   const speaker = personas.find((persona) => persona.id === speakerId);
+  const target = targetSpeakerId ? personas.find((persona) => persona.id === targetSpeakerId) : null;
   if (!speaker) return null;
   return {
     speakerId,
@@ -514,7 +516,11 @@ function buildDialogueLine({ speakerId, text, personas }) {
     speakerChineseName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
     speakerLocalName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
     role: speaker.role,
+    stanceType,
+    targetSpeakerId: target?.id || "",
+    targetSpeakerName: target ? target.englishName || target.name : "",
     text,
+    stanceSummary: stanceSummary || text,
   };
 }
 
@@ -530,10 +536,13 @@ function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, sum
     phaseType,
     canContinue: true,
     canStopAndSummarize: true,
-    dialogue: entries.map(([speakerId, text]) => buildDialogueLine({ speakerId, text, personas })).filter(Boolean),
+    dialogue: entries.map((entry) => buildDialogueLine({ ...normalizePlaceholderEntry(entry), personas })).filter(Boolean),
     blueWhaleSummary: {
       title: "Blue Whale Summary",
       text: summary,
+      strongestDisagreement: phaseType === "B" ? "Risk-first members challenged optimism-first members on timing and downside." : "The council is still mapping the main tension.",
+      influenceShift: phaseType === "B" ? "Risk and execution views gained influence." : "Evidence and desire views established the opening frame.",
+      unresolvedQuestion: phaseType === "B" ? "Which trade-off should govern the next move?" : "Which position deserves the strongest test?",
       convergenceLevel,
       shouldConsiderStopping,
       suggestedReasonToStop,
@@ -541,6 +550,11 @@ function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, sum
     meetingMemory: {
       compactSummary: summary,
       activeTensions,
+      phaseHistorySummary: summary,
+      mainTension: activeTensions[0] || "",
+      activeDisagreements: phaseType === "B" ? ["optimism versus risk", "clarity versus speed"] : [],
+      convergenceLevel,
+      memberStates: buildMemberStates({ personas, entries, phaseType }),
       strongestViews: personas.slice(0, 3).map((persona) => persona.role),
       openQuestions: phaseType === "A" ? ["Which position has the strongest reason?"] : ["Which trade-off needs the next clarification?"],
       convergenceSignals: shouldConsiderStopping ? ["Several perspectives are pointing toward a narrower decision frame."] : [],
@@ -548,53 +562,75 @@ function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, sum
   };
 }
 
+function normalizePlaceholderEntry(entry) {
+  if (Array.isArray(entry)) {
+    const [speakerId, text, stanceType = "update", targetSpeakerId = "", stanceSummary = ""] = entry;
+    return { speakerId, text, stanceType, targetSpeakerId, stanceSummary };
+  }
+  return entry || {};
+}
+
+function buildMemberStates({ personas, entries, phaseType }) {
+  const normalizedEntries = entries.map(normalizePlaceholderEntry);
+  return Object.fromEntries(personas.map((persona) => {
+    const entry = normalizedEntries.find((item) => item.speakerId === persona.id) || {};
+    return [persona.id, {
+      stance: entry.stanceSummary || entry.text || persona.statement || "",
+      supports: entry.stanceType === "support" || entry.stanceType === "build" ? [entry.targetSpeakerId].filter(Boolean) : [],
+      challenges: entry.stanceType === "challenge" ? [entry.targetSpeakerId].filter(Boolean) : [],
+      lastContribution: entry.text || "",
+      changedMind: phaseType === "A" && Boolean(entry.targetSpeakerId),
+    }];
+  }));
+}
+
 function buildPlaceholderRounds({ modeId, personas }) {
   const isCompany = modeId === "company";
   const roundOne = isCompany
     ? [
-        ["rex-velocity", "First, I would test whether this creates real traction or only internal excitement."],
-        ["vera-flow", "The first-time experience must be clear before expansion."],
-        ["max-stack", "We need cost limits and failure behavior before scaling."],
-        ["nina-story", "The product must remain reflection support, not decision authority."],
-        ["wang-zhibai", "The experience should feel calm, premium, and council-like."],
-        ["owen-deep", "The pilot should teach us what users actually value."],
-        ["adrian-north", "This should support MapKAI's long-term direction, not distract from it."],
-        ["mira-sprint", "Keep the first version to a small, testable loop."],
-        ["orion-zhuge", "This is a moment to open a controlled door, not the whole city gate."],
+        ["rex-velocity", "I start from demand: if this does not create visible user pull, the rest is internal polish.", "update", "", "Growth needs proof of user pull."],
+        ["vera-flow", "I agree with Rex on value, but the first minute must be clear before any growth signal is trustworthy.", "build", "rex-velocity", "UX clarity qualifies growth signals."],
+        ["max-stack", "I support Vera's caution: unclear limits will turn a promising pilot into avoidable cost and failure risk.", "support", "vera-flow", "System limits must be visible."],
+        ["nina-story", "I want to separate trust from ambition; users must feel supported, not directed by MapKAI.", "clarify", "", "Trust language is the boundary."],
+        ["wang-zhibai", "Nina's trust point needs a visual counterpart: the room must look calm enough for serious decisions.", "build", "nina-story", "Visual calm supports trust."],
+        ["owen-deep", "I would watch what users actually repeat in feedback, not only what they praise once.", "clarify", "", "Learning signal matters more than applause."],
+        ["adrian-north", "I agree with Owen that learning matters, but the pilot should still serve MapKAI's long-term positioning.", "build", "owen-deep", "Learning must fit strategy."],
+        ["mira-sprint", "I challenge Adrian's long view slightly: strategy only helps if the first loop stays small enough to run.", "challenge", "adrian-north", "Execution scope must stay small."],
+        ["orion-zhuge", "I would treat Mira's small loop as the right timing signal: open a controlled door, not the whole city gate.", "build", "mira-sprint", "Timing favors controlled opening."],
       ]
     : [
-        ["ethan-shen", "First, I would clarify what information is missing before making this decision."],
-        ["clara-lin", "I would ask whether this reflects what you actually want."],
-        ["marcus-lu", "We need to test the downside before committing."],
-        ["adrian-xu", "I would look at whether this opens a meaningful long-term path."],
-        ["felix-jiang", "There may be a third path beyond yes or no."],
-        ["iris-song", "I would question whether pride, fear, or avoidance is shaping the decision."],
-        ["julian-cheng", "I would consider how this affects important relationships."],
-        ["caleb-gu", "The decision must fit your real time and energy."],
-        ["orion-zhuge", "I would look at the timing, momentum, and whether the situation is ready."],
+        ["ethan-shen", "I start with evidence: decide what information is missing before the choice becomes emotional momentum.", "update", "", "Evidence comes first."],
+        ["clara-lin", "Ethan is right about facts, but I would also ask whether this reflects what you actually want.", "build", "ethan-shen", "Desire must be examined too."],
+        ["marcus-lu", "I challenge Clara's desire-first pull: if the downside is not survivable, wanting it is not enough.", "challenge", "clara-lin", "Downside can override desire."],
+        ["adrian-xu", "Marcus is right about downside, but I still want to test whether this opens a meaningful long-term path.", "build", "marcus-lu", "Opportunity deserves a test."],
+        ["felix-jiang", "I would not accept Adrian versus Marcus as a binary; a small third path may reveal the truth.", "clarify", "adrian-xu", "Third path can test tension."],
+        ["iris-song", "I want to challenge Clara and Felix: desire and creativity can both hide avoidance if the harder answer is being delayed.", "challenge", "clara-lin", "Self-deception may hide in attractive options."],
+        ["julian-cheng", "I build on Iris: the honest answer should include who is affected and whose trust is at stake.", "build", "iris-song", "Relationships reveal hidden cost."],
+        ["caleb-gu", "Julian's relationship point matters, but the choice also has to fit your actual time and energy.", "clarify", "julian-cheng", "Sustainability limits the choice."],
+        ["orion-zhuge", "I would connect Caleb and Adrian: even a good path needs the right moment and enough momentum.", "build", "caleb-gu", "Timing connects opportunity and energy."],
       ];
   const roundTwo = isCompany
     ? [
-        ["rex-velocity", "If users do not feel value quickly, the system will not spread."],
-        ["vera-flow", "If the first minute is confusing, the deeper logic will not matter."],
-        ["max-stack", "If limits are not clear, cost and failure risk will grow quietly."],
-        ["nina-story", "If the language suggests authority, trust becomes fragile."],
-        ["wang-zhibai", "If the room looks cheap, users will not feel the decision was respected."],
-        ["owen-deep", "If feedback is too vague, the pilot will not teach us enough."],
-        ["adrian-north", "If this becomes the whole brand too early, MapKAI may lose focus."],
-        ["mira-sprint", "If we add too much now, the pilot will stop being testable."],
-        ["orion-zhuge", "The first gate should be small enough to close and real enough to learn from."],
+        ["rex-velocity", "I challenge Max: cost limits matter, but if users do not feel value quickly, there is nothing worth scaling.", "challenge", "max-stack", "Traction must precede scaling concerns."],
+        ["vera-flow", "Rex is right about fast value, but his signal is invalid if the first minute is confusing.", "challenge", "rex-velocity", "UX clarity validates traction."],
+        ["max-stack", "I challenge Rex's growth-first view: traction is dangerous if cost limits and failure behavior are unclear.", "challenge", "rex-velocity", "Growth without limits is fragile."],
+        ["nina-story", "I want to challenge Adrian: strategic ambition will backfire if users think MapKAI is making decisions for them.", "challenge", "adrian-north", "Brand trust constrains strategy."],
+        ["wang-zhibai", "Nina is right, and the visual room must make that boundary feel calm rather than defensive.", "support", "nina-story", "Design expresses trust."],
+        ["owen-deep", "I challenge Mira: a small loop is useful only if feedback is specific enough to teach us something.", "challenge", "mira-sprint", "Feedback quality defines the pilot."],
+        ["adrian-north", "Owen is right about learning, but the learning must connect back to MapKAI's long-term boundary.", "build", "owen-deep", "Learning needs strategic frame."],
+        ["mira-sprint", "I accept Owen's challenge and would make the first loop smaller, with one clear feedback question.", "update", "owen-deep", "Execution changes toward sharper feedback."],
+        ["orion-zhuge", "Mira's adjustment is the timing answer: make the first gate small enough to close and real enough to learn from.", "build", "mira-sprint", "Timing favors reversible launch."],
       ]
     : [
-        ["ethan-shen", "Before choosing, define what evidence would change your mind."],
-        ["clara-lin", "Do not ignore the emotional signal just because it is hard to measure."],
-        ["marcus-lu", "Name the worst-case cost and decide whether it is survivable."],
-        ["adrian-xu", "Check whether the opportunity still matters one year from now."],
-        ["felix-jiang", "Try a small experiment before forcing a full yes or no."],
-        ["iris-song", "Ask whether you are avoiding a harder but more honest answer."],
-        ["julian-cheng", "Consider who needs to be informed, involved, or protected."],
-        ["caleb-gu", "Do not choose a path your current energy cannot sustain."],
-        ["orion-zhuge", "The right move may depend on whether the moment is opening or closing."],
+        ["ethan-shen", "I challenge Clara: before trusting the emotional signal, define what evidence would change your mind.", "challenge", "clara-lin", "Emotion needs evidence test."],
+        ["clara-lin", "Ethan is right about evidence, but do not dismiss desire just because it is hard to measure.", "build", "ethan-shen", "Desire remains valid evidence."],
+        ["marcus-lu", "I challenge Adrian's optimism: if the downside is not survivable, long-term opportunity does not matter yet.", "challenge", "adrian-xu", "Survivable downside comes first."],
+        ["adrian-xu", "Marcus is right about survivability, but the opportunity still deserves a one-year relevance test.", "build", "marcus-lu", "Opportunity should be time-tested."],
+        ["felix-jiang", "Marcus and Adrian are both too binary; test a small third path before forcing a full yes or no.", "clarify", "marcus-lu", "Experiment resolves binary tension."],
+        ["iris-song", "I want to challenge Clara: desire can be real, but it can also hide avoidance.", "challenge", "clara-lin", "Desire may mask avoidance."],
+        ["julian-cheng", "I build on Iris: the honest version of this decision includes who must be informed or protected.", "build", "iris-song", "Relationships test honesty."],
+        ["caleb-gu", "Julian is right, but do not choose a path your current energy cannot sustain.", "support", "julian-cheng", "Energy limits implementation."],
+        ["orion-zhuge", "I would synthesize Caleb and Adrian: the right move depends on whether the moment is opening or closing.", "build", "caleb-gu", "Timing decides pace."],
       ];
 
   return [
@@ -645,8 +681,11 @@ function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseTyp
   const entries = personas.map((persona) => [
     persona.id,
     normalizedPhaseType === "A"
-      ? `${persona.englishName || persona.name}: I would update my position through ${persona.role} using the last summary.${guidance}`
-      : `${persona.englishName || persona.name}: I would respond to the current tension through ${persona.role} and make the trade-off sharper.${guidance}`,
+      ? `${persona.englishName || persona.name}: Building on the last summary, I would update my ${persona.role} stance and state what changed.${guidance}`
+      : `${persona.englishName || persona.name}: I would challenge ${getTargetPersona(persona, personas).englishName || getTargetPersona(persona, personas).name}'s view through ${persona.role} and make the trade-off sharper.${guidance}`,
+    normalizedPhaseType === "A" ? "update" : "challenge",
+    normalizedPhaseType === "A" ? "" : getTargetPersona(persona, personas).id,
+    normalizedPhaseType === "A" ? `${persona.role} stance updated from memory.` : `${persona.role} challenges ${getTargetPersona(persona, personas).role}.`,
   ]);
   const summary = normalizedPhaseType === "A"
     ? `Blue Whale Summary: This phase continued from the prior memory and refreshed the council's positions around the current decision tension.${guidance}`
@@ -664,8 +703,19 @@ function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseTyp
     suggestedReasonToStop: Number(roundNumber) >= 3 && normalizedPhaseType === "B" ? "The main tension is now clearer and may be ready for a final recap." : "",
   });
   phase.previousSummary = previousSummary || "";
-  phase.meetingMemory = meetingMemory || phase.meetingMemory;
+  phase.meetingMemory = {
+    ...phase.meetingMemory,
+    ...(meetingMemory || {}),
+    memberStates: phase.meetingMemory.memberStates,
+    activeDisagreements: phase.meetingMemory.activeDisagreements,
+    convergenceLevel: phase.meetingMemory.convergenceLevel,
+  };
   return phase;
+}
+
+function getTargetPersona(persona, personas) {
+  const index = Math.max(0, personas.findIndex((item) => item.id === persona.id));
+  return personas[(index + personas.length - 1) % personas.length] || personas[0] || persona;
 }
 
 async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
@@ -738,10 +788,20 @@ Return JSON only with this shape:
   "phaseType": "${phaseType}",
   "phaseLabel": "${phaseLabel}",
   "dialogue": [
-    { "speakerId": "persona-id", "text": "one short sentence" }
+    {
+      "speakerId": "persona-id",
+      "stanceType": "support",
+      "targetSpeakerId": "optional-persona-id",
+      "targetSpeakerName": "optional speaker name",
+      "text": "one short sentence",
+      "stanceSummary": "short stance memory"
+    }
   ],
   "blueWhaleSummary": {
     "text": "max two short sentences",
+    "strongestDisagreement": "who disagreed and why",
+    "influenceShift": "which view gained influence",
+    "unresolvedQuestion": "what remains unresolved",
     "convergenceLevel": "low",
     "shouldConsiderStopping": false,
     "suggestedReasonToStop": "",
@@ -754,7 +814,20 @@ Return JSON only with this shape:
     }
   },
   "meetingMemory": {
+    "phaseHistorySummary": "one short summary",
     "compactSummary": "one short summary",
+    "mainTension": "short main tension",
+    "activeDisagreements": ["short item"],
+    "convergenceLevel": "low",
+    "memberStates": {
+      "persona-id": {
+        "stance": "short stance",
+        "supports": ["persona-id"],
+        "challenges": ["persona-id"],
+        "lastContribution": "short contribution",
+        "changedMind": false
+      }
+    },
     "activeTensions": ["short item"],
     "strongestViews": ["short item"],
     "openQuestions": ["short item"],
@@ -768,7 +841,16 @@ Rules:
 - Follow the phase rule exactly.
 - If user intervention is provided, prioritize it.
 - Statements must continue from previous summary and compact meeting memory.
+- You are simulating a structured council meeting.
+- Do not write one unified answer split across names.
+- Each council member must speak as an independent participant with their own priority, bias, and role responsibility.
+- Each member must make a distinct point and avoid repeating another member.
+- Each member should support, challenge, clarify, build on, or update a previous view.
+- For Phase A, each member should state or update their position, mention who they agree or disagree with when useful, and note whether their stance changed.
+- For Phase B, each member must challenge or respond to a named perspective; at least 5 of the 9 members must explicitly mention another member by name.
+- Do not let everyone answer the original question independently; the phase should feel like they heard each other.
 - Blue Whale summary must be at most two short sentences.
+- Blue Whale must summarize meeting dynamics: strongest disagreement, who challenged whom, influence shift, unresolved question, convergence, and next focus.
 - convergenceLevel must be low, medium, or high.
 - Blue Whale may suggest stopping but must not force stopping.
 - Keep the tone calm, professional, and exploratory.
@@ -812,7 +894,11 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
         speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
         speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
         role: persona.role,
+        stanceType: normalizeStanceType(line?.stanceType),
+        targetSpeakerId: byId.has(String(line?.targetSpeakerId || "").trim()) ? String(line.targetSpeakerId).trim() : "",
+        targetSpeakerName: normalizeShortText(line?.targetSpeakerName, 80),
         text,
+        stanceSummary: normalizeShortText(line?.stanceSummary, 160) || text,
       };
     })
     .filter(Boolean);
@@ -826,7 +912,11 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
       speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
       role: persona.role,
+      stanceType: "update",
+      targetSpeakerId: "",
+      targetSpeakerName: "",
       text: normalizeShortText(persona.statement, 180),
+      stanceSummary: normalizeShortText(persona.statement, 160),
     }));
 
   const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
@@ -840,6 +930,9 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
   const blueWhaleSummary = {
     title: "Blue Whale Summary",
     text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
+    strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.strongestDisagreement, 180),
+    influenceShift: normalizeShortText(parsed?.blueWhaleSummary?.influenceShift, 180),
+    unresolvedQuestion: normalizeShortText(parsed?.blueWhaleSummary?.unresolvedQuestion, 180),
     convergenceLevel,
     shouldConsiderStopping: parsed?.blueWhaleSummary?.shouldConsiderStopping === true,
     suggestedReasonToStop: normalizeShortText(parsed?.blueWhaleSummary?.suggestedReasonToStop, 160),
@@ -852,7 +945,12 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
     },
   };
   const meetingMemory = {
+    phaseHistorySummary: normalizeShortText(parsed?.meetingMemory?.phaseHistorySummary, 300),
     compactSummary: normalizeShortText(parsed?.meetingMemory?.compactSummary, 280) || blueWhaleSummary.text || previousSummary,
+    mainTension: normalizeShortText(parsed?.meetingMemory?.mainTension, 180) || blueWhaleSummary.compactMemory.mainTension,
+    activeDisagreements: normalizeShortList(parsed?.meetingMemory?.activeDisagreements, 6),
+    convergenceLevel,
+    memberStates: normalizeMemberStates(parsed?.meetingMemory?.memberStates, sessionRoster),
     activeTensions: normalizeShortList(parsed?.meetingMemory?.activeTensions, 5),
     strongestViews: normalizeShortList(parsed?.meetingMemory?.strongestViews, 5),
     openQuestions: normalizeShortList(parsed?.meetingMemory?.openQuestions, 5),
@@ -892,10 +990,29 @@ function normalizeShortText(value, maxLength) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
+function normalizeStanceType(value) {
+  const stanceType = String(value || "").trim().toLowerCase();
+  return ["support", "challenge", "clarify", "build", "update"].includes(stanceType) ? stanceType : "update";
+}
+
 function normalizeShortList(value, maxItems) {
   return Array.isArray(value)
     ? value.map((item) => normalizeShortText(item, 120)).filter(Boolean).slice(0, maxItems)
     : [];
+}
+
+function normalizeMemberStates(value, sessionRoster) {
+  const source = value && typeof value === "object" ? value : {};
+  return Object.fromEntries(sessionRoster.map((persona) => {
+    const state = source[persona.id] && typeof source[persona.id] === "object" ? source[persona.id] : {};
+    return [persona.id, {
+      stance: normalizeShortText(state.stance, 160),
+      supports: normalizeShortList(state.supports, 4),
+      challenges: normalizeShortList(state.challenges, 4),
+      lastContribution: normalizeShortText(state.lastContribution, 180),
+      changedMind: state.changedMind === true,
+    }];
+  }));
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {

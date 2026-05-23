@@ -4522,11 +4522,25 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "") {
         ${lines.map((line) => `
           <li class="${line.speakerId === activeSpeakerId ? "is-current" : ""}">
             <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(line.role)}</small>` : ""}</span>
+            ${renderPdcRelationLabel(line)}
             <p>${escapeHtml(line.text || "")}</p>
           </li>`).join("")}
       </ol>
       <p class="pdc-dialogue-note">Council dialogue preview for this private pilot.</p>
     </div>`;
+}
+
+function renderPdcRelationLabel(line) {
+  const stanceType = String(line.stanceType || "").toLowerCase();
+  const targetName = line.targetSpeakerName || "";
+  if (!targetName || !["support", "challenge", "clarify", "build"].includes(stanceType)) return "";
+  const labelByType = {
+    support: "Supports",
+    challenge: "Challenges",
+    clarify: "Clarifies",
+    build: "Builds on",
+  };
+  return `<em class="pdc-relation-label">${labelByType[stanceType]} ${escapeHtml(targetName)}</em>`;
 }
 
 function renderPdcRoundSummary(round, facilitator) {

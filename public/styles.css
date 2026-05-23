@@ -631,6 +631,20 @@ body:not(.founder-mode) .founder-public-entry {
   font-weight: 760;
 }
 
+.pdc-relation-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 5px;
+  border: 1px solid rgba(15, 107, 87, 0.16);
+  border-radius: 999px;
+  padding: 3px 8px;
+  background: rgba(237, 244, 233, 0.62);
+  color: var(--green-dark);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 820;
+}
+
 .pdc-dialogue-board li p {
   margin: 3px 0 0;
   color: var(--ink);
