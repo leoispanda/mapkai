@@ -4088,6 +4088,8 @@ let pdcState = {
   activeRoundIndex: 0,
   pdcPhases: [],
   discussionStopped: false,
+  phaseLoading: false,
+  phaseMessage: "",
   feedbackSubmitted: false,
 };
 let pdcFounderSummary = null;
@@ -4284,6 +4286,8 @@ async function initPdcPilotPage() {
     activeRoundIndex: 0,
     pdcPhases: [],
     discussionStopped: false,
+    phaseLoading: false,
+    phaseMessage: "",
     feedbackSubmitted: false,
   };
   renderPdcPilot();
@@ -4433,6 +4437,8 @@ function renderPdcCouncilRoom(recap) {
           </div>
           ${renderPdcDialogue(dialogue, "")}
           ${renderPdcRoundSummary(currentRound, facilitator)}
+          ${renderPdcPhaseGuidance(currentRound)}
+          ${renderPdcFounderPhaseDebug(currentRound)}
           ${renderPdcRoundControls({ hasDialogue: dialogue.length > 0 })}
         </section>
       </div>
@@ -4467,6 +4473,8 @@ function normalizePdcPhase(phase, index, room) {
     roundNumber,
     phaseType,
     previousSummary: phase.previousSummary || "",
+    provider: phase.provider || "",
+    userIntervention: phase.userIntervention || "",
     dialogue: Array.isArray(phase.dialogue) ? phase.dialogue : [],
     blueWhaleSummary: {
       title: "Blue Whale Summary",
@@ -4545,23 +4553,104 @@ function renderPdcRoundControls({ hasDialogue }) {
   }
   return `
     <div class="pdc-round-controls">
-      <button class="button secondary" type="button" data-pdc-continue-phase>Continue to next phase</button>
+      <button class="button secondary" type="button" data-pdc-continue-phase ${pdcState.phaseLoading ? "disabled" : ""}>${pdcState.phaseLoading ? "Continuing discussion..." : "Continue to next phase"}</button>
       <button class="button primary" type="button" data-pdc-stop-summarize>Stop &amp; Summarize</button>
     </div>`;
 }
 
-function continuePdcPhase() {
+function renderPdcPhaseGuidance(currentRound) {
+  if (pdcState.discussionStopped) return "";
+  return `
+    <div class="pdc-phase-guidance">
+      <label>
+        <span>Guide the next phase</span>
+        <textarea data-pdc-phase-guidance maxlength="500" rows="3" placeholder="Optional: tell the council what to focus on next."></textarea>
+      </label>
+      <p>The next phase will use Blue Whale's summary, compact meeting memory, and your optional guidance.</p>
+      <ul>
+        <li>Focus more on physical-world impact.</li>
+        <li>Challenge the optimistic view.</li>
+        <li>Be more concrete.</li>
+        <li>Discuss what happens to ordinary workers.</li>
+      </ul>
+      ${pdcState.phaseMessage ? `<p class="pdc-status">${escapeHtml(pdcState.phaseMessage)}</p>` : ""}
+    </div>`;
+}
+
+function renderPdcFounderPhaseDebug(currentRound) {
+  if (!pdcState.founderPreview) return "";
+  const previousSummary = currentRound.previousSummary || "";
+  return `
+    <p class="pdc-founder-phase-debug">
+      Provider: ${escapeHtml(pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder")} ·
+      Previous summary: ${previousSummary ? "available" : "missing"} ·
+      User intervention: ${currentRound.userIntervention ? "included" : "empty"}
+    </p>`;
+}
+
+async function continuePdcPhase() {
   const room = pdcState.recap?.councilRoom;
-  if (!room || pdcState.discussionStopped) return;
+  if (!room || pdcState.discussionStopped || pdcState.phaseLoading) return;
   const phases = getPdcPhases(room);
   const phaseIndex = clampPdcIndex(pdcState.activeRoundIndex, phases.length);
   const currentPhase = phases[phaseIndex];
   const dialogueLength = Array.isArray(currentPhase?.dialogue) ? currentPhase.dialogue.length : 0;
   if (!dialogueLength) return;
   const nextIndex = phaseIndex + 1;
-  if (!phases[nextIndex]) phases.push(createNextPdcPlaceholderPhase({ previousPhase: currentPhase, room }));
-  pdcState.activeRoundIndex = nextIndex;
+  const userIntervention = (document.querySelector("[data-pdc-phase-guidance]")?.value || "").trim().slice(0, 500);
+  pdcState.phaseLoading = true;
+  pdcState.phaseMessage = "";
   renderPdcPilot();
+  try {
+    if (!phases[nextIndex]) {
+      phases.push(await requestNextPdcPhase({ previousPhase: currentPhase, room, userIntervention }));
+    }
+    pdcState.activeRoundIndex = nextIndex;
+    pdcState.phaseMessage = "";
+  } catch (error) {
+    phases.push(createNextPdcPlaceholderPhase({ previousPhase: currentPhase, room, userIntervention }));
+    pdcState.activeRoundIndex = phases.length - 1;
+    pdcState.phaseMessage = "Cloudflare continuation was unavailable, so MapKAI used a placeholder continuation.";
+  } finally {
+    pdcState.phaseLoading = false;
+    renderPdcPilot();
+  }
+}
+
+async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
+  const nextSpec = getNextPdcPhaseSpec(previousPhase);
+  const headers = { "Content-Type": "application/json" };
+  if (pdcState.founderPreview) headers["X-MapKAI-Founder"] = "true";
+  const response = await fetch("/api/pdc/start", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      continue_phase: true,
+      pass: pdcState.pass,
+      mode_id: pdcState.selectedMode,
+      user_question: pdcState.question || room.decisionOnTable || "",
+      founder_preview: pdcState.founderPreview,
+      round_number: nextSpec.roundNumber,
+      phase_type: nextSpec.phaseType,
+      phase_label: nextSpec.phaseLabel,
+      previous_summary: previousPhase?.blueWhaleSummary?.text || "",
+      meeting_memory: previousPhase?.meetingMemory || null,
+      user_intervention: userIntervention,
+    }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || data.ok !== true || !data.phase) throw new Error(data.message || "Could not continue PDC phase.");
+  pdcState.recap.dialogueProvider = data.provider || pdcState.recap.dialogueProvider;
+  return normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention }, pdcState.pdcPhases.length, room);
+}
+
+function getNextPdcPhaseSpec(previousPhase) {
+  const previousRoundNumber = Number(previousPhase?.roundNumber) || 1;
+  const previousPhaseType = String(previousPhase?.phaseType || "A").toUpperCase() === "B" ? "B" : "A";
+  const phaseType = previousPhaseType === "A" ? "B" : "A";
+  const roundNumber = previousPhaseType === "A" ? previousRoundNumber : previousRoundNumber + 1;
+  const phaseLabel = getPdcPhaseLabel(roundNumber, phaseType);
+  return { roundNumber, phaseType, phaseLabel };
 }
 
 function stopAndSummarizePdc() {
@@ -4571,15 +4660,12 @@ function stopAndSummarizePdc() {
   renderPdcPilot();
 }
 
-function createNextPdcPlaceholderPhase({ previousPhase, room }) {
-  const previousRoundNumber = Number(previousPhase?.roundNumber) || 1;
-  const previousPhaseType = String(previousPhase?.phaseType || "A").toUpperCase() === "B" ? "B" : "A";
-  const phaseType = previousPhaseType === "A" ? "B" : "A";
-  const roundNumber = previousPhaseType === "A" ? previousRoundNumber : previousRoundNumber + 1;
+function createNextPdcPlaceholderPhase({ previousPhase, room, userIntervention = "" }) {
+  const { roundNumber, phaseType } = getNextPdcPhaseSpec(previousPhase);
   const previousSummary = previousPhase?.blueWhaleSummary?.text || "";
   const personas = Array.isArray(room.personas) ? room.personas : [];
-  const dialogue = personas.map((persona) => createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary }));
-  const summaryText = buildPdcPlaceholderSummary({ modeId: pdcState.recap?.modeId, roundNumber, phaseType });
+  const dialogue = personas.map((persona) => createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, userIntervention }));
+  const summaryText = buildPdcPlaceholderSummary({ modeId: pdcState.recap?.modeId, roundNumber, phaseType, userIntervention });
   const convergenceLevel = roundNumber >= 3 && phaseType === "B" ? "high" : roundNumber >= 2 ? "medium" : "low";
   const shouldConsiderStopping = convergenceLevel === "high";
   return {
@@ -4589,6 +4675,7 @@ function createNextPdcPlaceholderPhase({ previousPhase, room }) {
     roundNumber,
     phaseType,
     previousSummary,
+    userIntervention,
     dialogue,
     blueWhaleSummary: {
       title: "Blue Whale Summary",
@@ -4597,18 +4684,19 @@ function createNextPdcPlaceholderPhase({ previousPhase, room }) {
       shouldConsiderStopping,
       suggestedReasonToStop: shouldConsiderStopping ? "Blue Whale suggests the discussion is converging. You may stop and summarize now, or continue for another round." : "",
     },
-    meetingMemory: createPdcMeetingMemory({ phaseType, summaryText }),
+    meetingMemory: createPdcMeetingMemory({ phaseType, summaryText, userIntervention }),
     canContinue: true,
     canStopAndSummarize: true,
   };
 }
 
-function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary }) {
+function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, userIntervention }) {
   const speakerName = persona.englishName || persona.name || "Council Member";
   const role = persona.role || "Council Member";
+  const guidance = userIntervention ? `, especially the user's guidance about ${userIntervention}` : "";
   const text = phaseType === "A"
-    ? `${speakerName}: In Round ${roundNumber}${phaseType}, I would update my position through ${role} and keep the next move specific.`
-    : `${speakerName}: I would challenge the council to test the ${role} trade-off before moving further.`;
+    ? `${speakerName}: Building on the last Blue Whale Summary${guidance}, I would update my position through ${role} and keep the next move specific.`
+    : `${speakerName}: Building on the last Blue Whale Summary${guidance}, I would challenge the council to test the ${role} trade-off before moving further.`;
   return {
     speakerId: persona.id,
     speakerName,
@@ -4619,21 +4707,22 @@ function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary }
   };
 }
 
-function buildPdcPlaceholderSummary({ modeId, roundNumber, phaseType }) {
+function buildPdcPlaceholderSummary({ modeId, roundNumber, phaseType, userIntervention = "" }) {
+  const guidance = userIntervention ? ` The next phase also reflected the user's guidance: ${userIntervention}.` : "";
   if (phaseType === "A") {
     return modeId === "company"
-      ? `Blue Whale Summary: Round ${roundNumber}A refreshed the council's positions around user value, trust, execution limits, and timing.`
-      : `Blue Whale Summary: Round ${roundNumber}A refreshed the council's positions around evidence, desire, risk, energy, relationships, and timing.`;
+      ? `Blue Whale Summary: Round ${roundNumber}A continued from the prior meeting memory and refreshed the council's positions around user value, trust, execution limits, and timing.${guidance}`
+      : `Blue Whale Summary: Round ${roundNumber}A continued from the prior meeting memory and refreshed the council's positions around evidence, desire, risk, energy, relationships, and timing.${guidance}`;
   }
-  return "Blue Whale Summary: The council clarified trade-offs and narrowed the next question. You can continue if more contrast is useful, or stop and summarize when the decision frame feels clear.";
+  return `Blue Whale Summary: The council continued from the prior meeting memory, clarified trade-offs, and narrowed the next question.${guidance} You can continue if more contrast is useful, or stop and summarize when the decision frame feels clear.`;
 }
 
-function createPdcMeetingMemory({ phaseType, summaryText }) {
+function createPdcMeetingMemory({ phaseType, summaryText, userIntervention = "" }) {
   return {
     compactSummary: summaryText,
     activeTensions: phaseType === "A" ? ["current position", "decision criteria"] : ["trade-offs", "blind spots"],
     strongestViews: [],
-    openQuestions: phaseType === "A" ? ["Which position should be tested next?"] : ["Which trade-off matters most now?"],
+    openQuestions: userIntervention ? [userIntervention] : phaseType === "A" ? ["Which position should be tested next?"] : ["Which trade-off matters most now?"],
     convergenceSignals: [],
   };
 }

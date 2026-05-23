@@ -1844,3 +1844,12 @@ Push status:
 - Phase controls now show only Continue to next phase and Stop & Summarize.
 - Continue still creates the next A/B phase indefinitely until the user stops.
 - Preserved access pass logic, Founder Panel, PDC APIs, D1 schema, public navigation, Council Recap, and feedback behavior.
+
+## 2026-05-23 - Add guided PDC phase continuation
+- Added an optional Guide the next phase input after each Blue Whale Summary.
+- Continue to next phase now sends original question, round/phase info, previous Blue Whale Summary, compact meeting memory, and optional user guidance to the backend.
+- `/api/pdc/start` now supports continuation requests without changing access pass lifecycle or D1 schema.
+- Cloudflare Workers AI prompt now explicitly continues the existing PDC meeting, prioritizes user guidance when provided, and avoids restarting from opening views.
+- Blue Whale Summary contract now includes next focus and compact memory fields for carrying the discussion forward.
+- Founder preview shows a small continuation debug line for provider, previous summary availability, and user intervention status.
+- Placeholder fallback still works and carries prior summary/guidance in compact form without saving a full transcript.

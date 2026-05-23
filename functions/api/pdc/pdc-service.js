@@ -469,13 +469,13 @@ function resolveDialogueProvider(env = {}) {
   return allowedDialogueProviders.has(requested) ? requested : "placeholder";
 }
 
-export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, env }) {
-  const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary });
+export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+  const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
 
   if (provider === "cloudflare") {
     if (!env?.AI) return fallback;
     try {
-      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, env });
+      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
       console.error("PDC Cloudflare dialogue provider failed:", error);
       return fallback;
@@ -490,7 +490,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, us
   return fallback;
 }
 
-function toCouncilRoomPersona(persona, modeId) {
+export function toCouncilRoomPersona(persona, modeId) {
   return {
     id: persona.id,
     name: persona.name,
@@ -622,25 +622,58 @@ function buildPlaceholderRounds({ modeId, personas }) {
   ];
 }
 
-function createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber = 1, phaseType = "A" }) {
+function createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "" }) {
   const rounds = buildPlaceholderRounds({ modeId, personas: sessionRoster });
-  const firstRound = rounds[0] || { label: "Round 1 — Opening Views", dialogue: [] };
+  const requestedPhase = roundNumber === 1 && phaseType === "A"
+    ? rounds[0]
+    : createGenericPlaceholderPhase({ modeId, personas: sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
+  const firstRound = requestedPhase || rounds[0] || { label: "Round 1A — Position Update", dialogue: [] };
   return {
     provider: "placeholder",
     modeId,
     currentRoundLabel: firstRound.label,
     dialogue: firstRound.dialogue,
-    rounds,
+    rounds: [firstRound],
     blueWhaleSummary: firstRound.blueWhaleSummary,
   };
 }
 
-async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, env }) {
+function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention }) {
+  const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
+  const label = `Round ${roundNumber}${normalizedPhaseType} — ${normalizedPhaseType === "A" ? "Position Update" : "Challenge & Response"}`;
+  const guidance = userIntervention ? ` User guidance: ${userIntervention}` : "";
+  const entries = personas.map((persona) => [
+    persona.id,
+    normalizedPhaseType === "A"
+      ? `${persona.englishName || persona.name}: I would update my position through ${persona.role} using the last summary.${guidance}`
+      : `${persona.englishName || persona.name}: I would respond to the current tension through ${persona.role} and make the trade-off sharper.${guidance}`,
+  ]);
+  const summary = normalizedPhaseType === "A"
+    ? `Blue Whale Summary: This phase continued from the prior memory and refreshed the council's positions around the current decision tension.${guidance}`
+    : `Blue Whale Summary: This phase continued the meeting by challenging prior views and narrowing what the next phase should examine.${guidance}`;
+  const phase = buildPlaceholderRound({
+    id: `round-${roundNumber}${normalizedPhaseType.toLowerCase()}`,
+    label,
+    roundNumber,
+    phaseType: normalizedPhaseType,
+    entries,
+    summary,
+    personas,
+    convergenceLevel: Number(roundNumber) >= 3 && normalizedPhaseType === "B" ? "high" : Number(roundNumber) >= 2 ? "medium" : "low",
+    shouldConsiderStopping: Number(roundNumber) >= 3 && normalizedPhaseType === "B",
+    suggestedReasonToStop: Number(roundNumber) >= 3 && normalizedPhaseType === "B" ? "The main tension is now clearer and may be ready for a final recap." : "",
+  });
+  phase.previousSummary = previousSummary || "";
+  phase.meetingMemory = meetingMemory || phase.meetingMemory;
+  return phase;
+}
+
+async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge & Response"}`;
-  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory });
+  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   const result = await env.AI.run(model, {
     messages: [
       {
@@ -659,13 +692,21 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   return normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
 }
 
-function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory }) {
+function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention }) {
   const personaLines = sessionRoster
     .map((persona) => `- ${persona.id}: ${persona.englishName || persona.name}${persona.name && persona.name !== persona.englishName ? ` / ${persona.name}` : ""} — ${persona.role}`)
     .join("\n");
   const compactMemory = meetingMemory ? JSON.stringify(meetingMemory).slice(0, 900) : "{}";
 
-  return `Generate short visible PDC Council Room dialogue for the table.
+  return `You are continuing an existing PDC council discussion.
+Do not restart from zero.
+Use the previous Blue Whale Summary and meeting memory.
+If user intervention is provided, prioritize it.
+Each council member must either update their position, respond to a previous tension, challenge a prior view, or move the discussion closer to a decision.
+Match the output language to the user question or user intervention. If either is Chinese, output Chinese. If both are English, output English.
+Avoid generic standalone answers. Avoid repeating the same opening views. Make each statement specific to the user's question and the current phase.
+
+Generate short visible PDC Council Room dialogue for the table.
 
 Decision question:
 ${userQuestion}
@@ -685,6 +726,9 @@ ${previousSummary || "No previous summary yet."}
 Compact meeting memory:
 ${compactMemory}
 
+User intervention:
+${userIntervention || "No extra user guidance."}
+
 Council members:
 ${personaLines}
 
@@ -700,7 +744,14 @@ Return JSON only with this shape:
     "text": "max two short sentences",
     "convergenceLevel": "low",
     "shouldConsiderStopping": false,
-    "suggestedReasonToStop": ""
+    "suggestedReasonToStop": "",
+    "nextFocus": "short next focus",
+    "compactMemory": {
+      "mainTension": "short item",
+      "strongestDisagreement": "short item",
+      "whatChangedThisPhase": "short item",
+      "whatNextPhaseShouldExamine": "short item"
+    }
   },
   "meetingMemory": {
     "compactSummary": "one short summary",
@@ -715,6 +766,8 @@ Rules:
 - Include one line for each listed council member if possible.
 - Each dialogue text must be one short sentence.
 - Follow the phase rule exactly.
+- If user intervention is provided, prioritize it.
+- Statements must continue from previous summary and compact meeting memory.
 - Blue Whale summary must be at most two short sentences.
 - convergenceLevel must be low, medium, or high.
 - Blue Whale may suggest stopping but must not force stopping.
@@ -790,6 +843,13 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
     convergenceLevel,
     shouldConsiderStopping: parsed?.blueWhaleSummary?.shouldConsiderStopping === true,
     suggestedReasonToStop: normalizeShortText(parsed?.blueWhaleSummary?.suggestedReasonToStop, 160),
+    nextFocus: normalizeShortText(parsed?.blueWhaleSummary?.nextFocus, 180),
+    compactMemory: {
+      mainTension: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.mainTension, 160),
+      strongestDisagreement: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.strongestDisagreement, 160),
+      whatChangedThisPhase: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatChangedThisPhase, 160),
+      whatNextPhaseShouldExamine: normalizeShortText(parsed?.blueWhaleSummary?.compactMemory?.whatNextPhaseShouldExamine, 160),
+    },
   };
   const meetingMemory = {
     compactSummary: normalizeShortText(parsed?.meetingMemory?.compactSummary, 280) || blueWhaleSummary.text || previousSummary,
