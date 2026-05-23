@@ -252,6 +252,15 @@ Latest PDC follow-up:
   Rex Velocity; Vera Flow; Max Stack; Nina Story; Wang Zhibai / 王之白; Owen Deep; Adrian North; Mira Sprint; Orion Zhuge / 诸葛观辰.
 - Existing PDC pass lifecycle, D1 tables, feedback API, founder summary API, and founder-only PDC Access Panel were preserved.
 
+Latest PDC room UI follow-up:
+
+- Council Room participant display was upgraded from large persona speech cards to compact avatar/name seats around the meeting table.
+- Participant seats show monogram initials, English name, Chinese name when available, and a short role label.
+- Clicking/tapping a participant toggles a compact Council Member Profile panel with English name, Chinese name, role, responsibility, and placeholder statement.
+- The meeting table now contains the decision topic plus a "Live Council Dialogue" placeholder stream.
+- Blue Whale remains on the front TV/screen only and is not rendered as a participant seat.
+- Council Recap and anonymous feedback remain below the Council Room.
+
 Verified:
 
 - `node --check script.js`

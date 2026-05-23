@@ -6,12 +6,12 @@ export const pdcPersonaLibrary = [
     family: "shared_facilitator",
     role: "PDC facilitator / round summarizer / meeting memory keeper",
     responsibility: "Host the PDC flow, summarize conflicts and stance changes, maintain meeting memory, identify next-round focus, and produce final decision memos.",
-    placeholderSummary: "Blue Whale has identified the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later turn these perspectives into a deeper structured council debate and final decision memo.",
+    placeholderSummary: "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.",
     isCoreMember: true,
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: false,
+    isParticipant: false,
     isFacilitator: true,
     canVote: false,
     canBeEliminated: false,
@@ -33,7 +33,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -50,7 +50,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -67,7 +67,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -84,7 +84,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -101,7 +101,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -118,7 +118,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -135,7 +135,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -152,7 +152,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -170,7 +170,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: false,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -189,7 +189,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -206,7 +206,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -223,7 +223,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -240,7 +240,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -257,7 +257,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -274,7 +274,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -291,7 +291,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -308,7 +308,7 @@ export const pdcPersonaLibrary = [
     isTemporaryAdvisor: true,
     isDefault: true,
     status: "active",
-    isPlayer: true,
+    isParticipant: true,
     version: 1,
     createdAt: "2026-05-22",
     updatedAt: "2026-05-22",
@@ -388,12 +388,12 @@ export const pdcRhythmFoundation = {
 
 export function resolveSessionRoster({ modeId, sessionRoster }) {
   if (Array.isArray(sessionRoster) && sessionRoster.length) {
-    return sessionRoster.filter((persona) => persona && persona.isPlayer !== false && persona.status !== "disabled" && persona.status !== "archived");
+    return sessionRoster.filter((persona) => persona && persona.isParticipant !== false && persona.status !== "disabled" && persona.status !== "archived");
   }
   const mode = pdcModes[modeId] || pdcModes.personal;
   return mode.defaultPersonaIds
     .map((personaId) => pdcPersonaLibrary.find((persona) => persona.id === personaId))
-    .filter((persona) => persona && persona.isPlayer !== false && persona.status === "active");
+    .filter((persona) => persona && persona.isParticipant !== false && persona.status === "active");
 }
 
 export function resolveFacilitator(modeId) {
@@ -423,7 +423,8 @@ function createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion
   const trimmedQuestion = String(userQuestion || "").replace(/\s+/g, " ").trim();
   const safeQuestion = trimmedQuestion.length > 520 ? `${trimmedQuestion.slice(0, 520)}...` : trimmedQuestion;
   const personas = roster.map((persona) => toCouncilRoomPersona(persona, mode.id));
-  const facilitatorSummary = facilitator?.placeholderSummary || "Blue Whale has identified the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later turn these perspectives into a deeper structured council debate and final decision memo.";
+  const facilitatorSummary = facilitator?.placeholderSummary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.";
+  const dialogue = buildPlaceholderDialogue({ modeId: mode.id, personas });
 
   return {
     title: "Council Recap",
@@ -436,6 +437,7 @@ function createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion
       subtitle: "Your decision is placed on the table. The council reviews it from multiple perspectives.",
       decisionOnTable: safeQuestion,
       personas,
+      dialogue,
       facilitator: facilitator
         ? {
             id: facilitator.id,
@@ -463,6 +465,37 @@ function toCouncilRoomPersona(persona, modeId) {
         : persona.placeholderStatementPersonal
       : persona.placeholderStatement,
   };
+}
+
+function buildPlaceholderDialogue({ modeId, personas }) {
+  const dialogueByMode = modeId === "company"
+    ? [
+        ["rex-velocity", "First, I would test whether this creates real traction or only internal excitement."],
+        ["vera-flow", "The first-time experience must be clear before we widen access."],
+        ["max-stack", "We need cost limits and failure behavior before scaling."],
+        ["nina-story", "The product must remain reflection support, not decision authority."],
+        ["mira-sprint", "Keep the first version to a small, testable loop."],
+      ]
+    : [
+        ["ethan-shen", "First, I would clarify what information is missing."],
+        ["clara-lin", "I would ask whether this reflects what you actually want."],
+        ["marcus-lu", "We need to test the downside before committing."],
+        ["felix-jiang", "There may be a third path beyond yes or no."],
+        ["caleb-gu", "The decision must fit your real time and energy."],
+      ];
+
+  return dialogueByMode
+    .map(([speakerId, text]) => {
+      const speaker = personas.find((persona) => persona.id === speakerId);
+      if (!speaker) return null;
+      return {
+        speakerId,
+        speakerName: speaker.englishName || speaker.name,
+        speakerLocalName: speaker.name && speaker.name !== speaker.englishName ? speaker.name : "",
+        text,
+      };
+    })
+    .filter(Boolean);
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {
