@@ -379,6 +379,8 @@ const allowedDialogueProviders = new Set(["placeholder", "cloudflare", "openai"]
 const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
 const defaultOpenAiModel = "gpt-5-mini";
 const openAiResponsesEndpoint = "https://api.openai.com/v1/responses";
+const openAiPhaseMaxOutputTokens = 2000;
+const openAiPhaseRetryMaxOutputTokens = 3600;
 const pdcDialogueSchema = {
   type: "object",
   additionalProperties: false,
@@ -564,7 +566,7 @@ function resolveDialogueProvider(env = {}) {
   return allowedDialogueProviders.has(requested) ? requested : "placeholder";
 }
 
-export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
 
   if (provider === "openai") {
@@ -572,7 +574,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, us
       return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
     }
     try {
-      return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
+      return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
       console.error("PDC OpenAI dialogue provider failed:", error);
       const message = String(error.message || "OpenAI call failed");
@@ -1130,16 +1132,19 @@ function getPlaceholderStanceType(persona) {
   return "challenge";
 }
 
-async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const model = getOpenAiModel(env);
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   let retryUsed = false;
   const startedAt = Date.now();
-  let parsed = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
+  let response = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
+  let parsed = response.parsed;
   let normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai" });
   if (normalized.contentDiagnostics) {
-    normalized.contentDiagnostics.openAiDurationMs = Date.now() - startedAt;
+    Object.assign(normalized.contentDiagnostics, response.contentDiagnostics);
+    normalized.contentDiagnostics.openAiDurationMs = response.contentDiagnostics.openAiDurationMs || Date.now() - startedAt;
     normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
+    applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
   }
   const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
     || normalized.contentDiagnostics?.templateContentDetected === true
@@ -1147,11 +1152,12 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
   if (shouldRetry) {
     retryUsed = true;
     const retryStartedAt = Date.now();
-    parsed = await requestOpenAiDialogueJson({
+    response = await requestOpenAiDialogueJson({
       env,
       model,
       modeLabel,
       sessionRoster,
+      observerRoster,
       userQuestion,
       roundNumber,
       phaseType,
@@ -1165,12 +1171,19 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
           ? `Previous output contained generic template phrases: ${normalized.contentDiagnostics.templateMatchedPhrases.join(", ")}.`
         : "Previous output missed one or more council member statements.",
     });
+    parsed = response.parsed;
     normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai", retryUsed: true });
     if (normalized.contentDiagnostics) {
-      normalized.contentDiagnostics.openAiDurationMs = normalized.contentDiagnostics.openAiDurationMs || retryStartedAt - startedAt;
+      Object.assign(normalized.contentDiagnostics, response.contentDiagnostics, {
+        promptCharLength: normalized.contentDiagnostics.promptCharLength || response.contentDiagnostics.promptCharLength,
+        approximateInputTokenEstimate: normalized.contentDiagnostics.approximateInputTokenEstimate || response.contentDiagnostics.approximateInputTokenEstimate,
+        outputCharLength: response.contentDiagnostics.outputCharLength,
+      });
+      normalized.contentDiagnostics.openAiDurationMs = retryStartedAt - startedAt;
       normalized.contentDiagnostics.retryDurationMs = Date.now() - retryStartedAt;
       normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
       normalized.contentDiagnostics.contentQualityRetryUsed = true;
+      applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
     }
   }
   if (normalized.contentDiagnostics?.defaultTemplateMatched) {
@@ -1183,22 +1196,26 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
     throw new Error("OpenAI response missing required dialogue statements");
   }
   if (retryUsed && normalized.contentDiagnostics) normalized.contentDiagnostics.retryUsed = true;
+  if (normalized.contentDiagnostics) applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
   return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
 }
 
-async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
-  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, provider: "openai", retryReason });
-  return callOpenAiJsonWithRetry({
+async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
+  const prompt = buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason });
+  const contentDiagnostics = createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory });
+  const parsed = await callOpenAiJsonWithRetry({
     env,
     model,
     instructions: "You write concise structured PDC decision reflection dialogue for the user's exact decision question. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
     prompt,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
-    maxOutputTokens: 3000,
-    retryMaxOutputTokens: 5600,
+    maxOutputTokens: openAiPhaseMaxOutputTokens,
+    retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
     retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
+    diagnostics: contentDiagnostics,
   });
+  return { parsed, contentDiagnostics };
 }
 
 async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
@@ -1355,6 +1372,128 @@ Rules:
 - Do not use markdown.`;
 }
 
+function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
+  const activeRoster = sessionRoster.map((persona) => ({
+    speakerId: persona.id,
+    name: persona.englishName || persona.name || "",
+    chineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+    role: persona.role || "",
+    responsibility: normalizeShortText(persona.responsibility || persona.statement || persona.role, 90),
+  }));
+  const observers = observerRoster.map((persona) => ({
+    speakerId: persona.id,
+    name: persona.englishName || persona.name || "",
+    role: persona.role || "",
+    archivedReason: normalizeShortText(persona.archivedReason || persona.reason || "", 90),
+    lastContribution: normalizeShortText(persona.lastContribution || persona.statement || "", 80),
+  }));
+  const compactMemoryItems = buildCompactMeetingMemoryItems(meetingMemory, 5);
+  const summaryLimit = containsCjk(previousSummary) ? 300 : 500;
+  const concisePreviousSummary = normalizeShortText(previousSummary, summaryLimit);
+  const languageRule = containsCjk(`${userQuestion} ${userIntervention}`) ? "Output Chinese." : "Output English.";
+  const phaseRule = String(phaseType).toUpperCase() === "B"
+    ? "B phase: each statement is a short challenge/response/build on another named member. Include targetSpeakerId when clear. Do not generate votes, voteSummary, rosterUpdate, final decision, or meetingMemory."
+    : "A phase: each statement updates a concrete position on the user's decision. No votes, no generic role line, no final decision.";
+  return `PDC live council phase. Use only the compact context below.
+${languageRule}
+
+Decision question:
+${normalizeShortText(userQuestion, 700)}
+
+Mode:
+${modeLabel}
+
+Current phase:
+${phaseLabel || `Round ${roundNumber}${phaseType}`}
+
+Active roster:
+${JSON.stringify(activeRoster)}
+
+Observers:
+${observers.length ? JSON.stringify(observers) : "[]"}
+
+Previous Blue Whale summary:
+${concisePreviousSummary || "None."}
+
+Compact meeting memory, max 5 items:
+${compactMemoryItems.length ? compactMemoryItems.map((item) => `- ${item}`).join("\n") : "None."}
+
+User guidance:
+${normalizeShortText(userIntervention, 300) || "None."}
+
+Instructions:
+- This is a real PDC council phase for the exact user question.
+- Every statement must directly mention the user's topic or a concrete derived issue.
+- Each statement should be 35-55 Chinese characters when Chinese, or one short English sentence.
+- One concrete judgment, challenge, or update per speaker.
+- Avoid generic role descriptions and template lines.
+- Avoid repetitive phrases such as 我的立场是, 立场未变, 立场调整, 从模糊变为 unless truly needed.
+- ${phaseRule}
+- Blue Whale Summary should be 70-100 Chinese characters when Chinese, focused only on conflict, convergence, and next focus.
+${retryReason ? `- Retry correction: ${retryReason}` : ""}
+
+Return JSON only:
+{
+  "dialogue": [
+    { "speakerId": "active-speaker-id", "text": "short concrete statement", "targetSpeakerId": "", "stanceType": "position/challenge/build/clarify" }
+  ],
+  "blueWhaleSummary": { "text": "short summary", "convergenceLevel": "low|medium|high", "shouldConsiderStopping": false, "nextFocus": "short focus" },
+  "votes": []
+}`;
+}
+
+function buildCompactMeetingMemoryItems(meetingMemory, maxItems = 5) {
+  if (!meetingMemory || typeof meetingMemory !== "object") return [];
+  const items = [];
+  const push = (value) => {
+    const text = normalizeShortText(value, 120);
+    if (text && !items.includes(text)) items.push(text);
+  };
+  push(meetingMemory.compactSummary);
+  push(meetingMemory.mainTension);
+  if (meetingMemory.compactMemory && typeof meetingMemory.compactMemory === "object") {
+    push(meetingMemory.compactMemory.mainTension);
+    push(meetingMemory.compactMemory.strongestDisagreement);
+    push(meetingMemory.compactMemory.whatChangedThisPhase);
+    push(meetingMemory.compactMemory.whatNextPhaseShouldExamine);
+  }
+  ["activeTensions", "strongestViews", "openQuestions", "convergenceSignals", "activeDisagreements"].forEach((key) => {
+    if (Array.isArray(meetingMemory[key])) meetingMemory[key].forEach(push);
+  });
+  return items.slice(0, maxItems);
+}
+
+function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory }) {
+  return {
+    promptCharLength: prompt.length,
+    approximateInputTokenEstimate: estimateTokenCount(prompt),
+    outputCharLength: 0,
+    activeRosterCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
+    observerCount: Array.isArray(observerRoster) ? observerRoster.length : 0,
+    meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
+    phaseMaxOutputTokens: openAiPhaseMaxOutputTokens,
+    retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
+    openAiDurationMs: 0,
+    retryDurationMs: 0,
+    totalPhaseDurationMs: 0,
+  };
+}
+
+function applyPhaseDiagnosticAliases(diagnostics) {
+  diagnostics.phaseOpenAiDurationMs = diagnostics.openAiDurationMs || 0;
+  diagnostics.phaseRetryDurationMs = diagnostics.retryDurationMs || 0;
+  diagnostics.phaseTotalDurationMs = diagnostics.totalPhaseDurationMs || 0;
+  return diagnostics;
+}
+
+function estimateTokenCount(value) {
+  return Math.ceil(String(value || "").length / 4);
+}
+
+function containsCjk(value) {
+  return /[\u3400-\u9fff]/.test(String(value || ""));
+}
+
 function extractCloudflareText(result) {
   if (!result) return "";
   if (typeof result === "string") return result;
@@ -1368,9 +1507,17 @@ function getOpenAiModel(env = {}) {
   return String(env.OPENAI_MODEL || defaultOpenAiModel).trim() || defaultOpenAiModel;
 }
 
-async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens }) {
+async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics = null, durationKey = "openAiDurationMs" }) {
   const apiKey = String(env?.OPENAI_API_KEY || "").trim();
   if (!apiKey) throw new Error("missing OPENAI_API_KEY");
+  const startedAt = Date.now();
+  if (diagnostics) {
+    diagnostics.promptCharLength = diagnostics.promptCharLength || prompt.length;
+    diagnostics.approximateInputTokenEstimate = diagnostics.approximateInputTokenEstimate || estimateTokenCount(`${instructions}\n${prompt}`);
+    diagnostics.schemaName = schemaName;
+    diagnostics.strict = true;
+    diagnostics.maxOutputTokens = maxOutputTokens;
+  }
   const response = await fetch(openAiResponsesEndpoint, {
     method: "POST",
     headers: {
@@ -1399,12 +1546,16 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
     throw new Error(message || `OpenAI HTTP ${response.status}`);
   }
   const text = extractOpenAiText(payload);
+  if (diagnostics) {
+    diagnostics[durationKey] = Date.now() - startedAt;
+    diagnostics.outputCharLength = text.length;
+  }
   return parseJsonObject(text);
 }
 
-async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions }) {
+async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions, diagnostics = null }) {
   try {
-    return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens });
+    return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics });
   } catch (error) {
     if (!isJsonParseError(error)) throw error;
     const retryPrompt = `${prompt}
@@ -1412,6 +1563,7 @@ async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schem
 JSON repair retry:
 ${retryInstructions || "Return only one complete valid JSON object for the schema. No markdown or extra text."}`;
     try {
+      if (diagnostics) diagnostics.jsonRepairRetryUsed = true;
       return await callOpenAiJson({
         env,
         model,
@@ -1420,6 +1572,8 @@ ${retryInstructions || "Return only one complete valid JSON object for the schem
         schemaName,
         schema,
         maxOutputTokens: retryMaxOutputTokens || maxOutputTokens,
+        diagnostics,
+        durationKey: "jsonRepairRetryDurationMs",
       });
     } catch (retryError) {
       if (isJsonParseError(retryError)) {
@@ -1859,6 +2013,16 @@ function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSu
 async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
   const model = getOpenAiModel(env);
   const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  const contentDiagnostics = {
+    finalRecapProvider: "openai",
+    finalRecapPromptCharLength: prompt.length,
+    finalRecapOutputCharLength: 0,
+    finalRecapSchemaName: "pdc_final_recap",
+    finalRecapStrict: true,
+    finalRecapOpenAiDurationMs: 0,
+    finalRecapTotalDurationMs: 0,
+  };
+  const startedAt = Date.now();
   const parsed = await callOpenAiJsonWithRetry({
     env,
     model,
@@ -1869,8 +2033,12 @@ async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activ
     maxOutputTokens: 3200,
     retryMaxOutputTokens: 4200,
     retryInstructions: "The previous final recap response was invalid JSON. Return only one complete valid JSON object matching the final recap schema, with strings and arrays only where requested. No markdown or extra text.",
+    diagnostics: contentDiagnostics,
   });
-  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "openai", actualProvider: "openai", modelName: model });
+  contentDiagnostics.finalRecapOpenAiDurationMs = contentDiagnostics.openAiDurationMs || contentDiagnostics.jsonRepairRetryDurationMs || 0;
+  contentDiagnostics.finalRecapTotalDurationMs = Date.now() - startedAt;
+  contentDiagnostics.finalRecapOutputCharLength = contentDiagnostics.outputCharLength || 0;
+  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "openai", actualProvider: "openai", modelName: model, contentDiagnostics });
 }
 
 async function generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
@@ -1956,6 +2124,8 @@ function normalizeFinalRecapResult(parsed, context) {
     modelName: context.modelName,
     schemaName: actualProvider === "openai" ? "pdc_final_recap" : "",
     strict: actualProvider === "openai",
+    jsonParseFailed: false,
+    contentDiagnostics: context.contentDiagnostics || null,
     finalReintroducedPerspective: normalizeReintroduced(parsed?.finalReintroducedPerspective, context.observerRoster) || fallback.finalReintroducedPerspective,
     recap: {
       decisionFrame: normalizeRecapText(recap.decisionFrame, 900),

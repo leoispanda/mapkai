@@ -1946,3 +1946,11 @@ Push status:
 - Kept progressive playback behavior on the frontend: phase statements reveal from the backend JSON one by one, current speaker highlight stays active, and Blue Whale Summary plus Continue/Stop controls wait until playback completes.
 - Updated the round count copy to use active council statements and retained the completed-phase note: This phase is complete.
 - Synced root/public frontend scripts and inline index scripts; provider logic, schema, model, D1 schema, pass lifecycle, navigation, and persona names were not changed.
+
+## 2026-05-23 - PDC Speed Pass 1 diagnostics and compact phase prompt
+- Added Founder-only phase speed diagnostics for OpenAI duration, retry duration, total phase duration, prompt char length, approximate input token estimate, output char length, roster counts, compact memory item count, and phase/retry output token budgets.
+- Added separate Founder-only final recap diagnostics for provider, OpenAI duration, total duration, prompt/output char length, schema name, and strict mode.
+- Switched OpenAI phase generation to a compact phase-specific prompt that sends only the decision question, current phase, compact active roster, compact observers, previous Blue Whale summary, up to five memory items, and short phase instructions.
+- Continue requests now pass compact observer archive reason and last contribution context for the OpenAI phase prompt without changing D1 or provider schemas.
+- Reduced OpenAI phase max output tokens to 2000 for the first call and 3600 for retry; final recap token budget remains unchanged.
+- Kept OpenAI model, structured output strict mode, provider order, schemas, D1 schema, pass lifecycle, public navigation, persona names, progressive playback, content relevance guard, observer flow, and final recap behavior unchanged.

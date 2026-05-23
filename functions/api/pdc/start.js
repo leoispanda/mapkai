@@ -94,7 +94,7 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
     if (!pass || !["used", "in_progress"].includes(pass.status)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);
   }
   const activeRoster = resolveRosterByIds(modeId, body.active_roster_ids);
-  const observerRoster = resolveRosterByIds(modeId, body.observer_roster_ids);
+  const observerRoster = resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false });
   const mode = pdcModes[modeId];
   const result = await generatePdcFinalRecap({
     modeId,
@@ -130,10 +130,15 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
   try {
     const mode = pdcModes[modeId];
     const roster = resolveRosterByIds(modeId, body.active_roster_ids);
+    const observerRoster = mergeObserverRosterContext(
+      resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false }),
+      body.observer_roster_context,
+    );
     const result = await generatePdcDialogue({
       modeId,
       modeLabel: mode.label,
       sessionRoster: roster,
+      observerRoster,
       userQuestion,
       provider: String(env.PDC_DIALOGUE_PROVIDER || "placeholder").trim().toLowerCase(),
       roundNumber,
@@ -166,11 +171,30 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
   }
 }
 
-function resolveRosterByIds(modeId, ids) {
+function resolveRosterByIds(modeId, ids, { defaultAll = true } = {}) {
   const all = resolveSessionRoster({ modeId, sessionRoster: null }).map((persona) => toCouncilRoomPersona(persona, modeId));
-  if (!Array.isArray(ids) || !ids.length) return all;
+  if (!Array.isArray(ids) || !ids.length) return defaultAll ? all : [];
   const allowed = new Set(ids.map((id) => cleanText(id, 80)));
   return all.filter((persona) => allowed.has(persona.id));
+}
+
+function mergeObserverRosterContext(observerRoster, rawContext) {
+  if (!Array.isArray(observerRoster) || !observerRoster.length) return observerRoster;
+  const contextById = new Map(
+    (Array.isArray(rawContext) ? rawContext : [])
+      .map((item) => [
+        cleanText(item?.speakerId, 80),
+        {
+          archivedReason: cleanText(item?.archivedReason, 160),
+          lastContribution: cleanText(item?.lastContribution, 160),
+        },
+      ])
+      .filter(([speakerId]) => speakerId),
+  );
+  return observerRoster.map((persona) => ({
+    ...persona,
+    ...(contextById.get(persona.id) || {}),
+  }));
 }
 
 function sanitizeObject(value, maxLength) {
