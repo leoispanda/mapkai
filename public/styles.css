@@ -667,9 +667,40 @@ body:not(.founder-mode) .founder-public-entry {
   line-height: 1.55;
 }
 
+.pdc-convergence-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pdc-convergence-line span,
+.pdc-stopped-label {
+  border: 1px solid rgba(255, 250, 240, 0.28);
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: rgba(255, 250, 240, 0.88);
+  font-size: 0.78rem;
+  font-weight: 820;
+}
+
+.pdc-stop-suggestion {
+  border-top: 1px solid rgba(255, 250, 240, 0.2);
+  padding-top: 10px;
+  font-weight: 760;
+}
+
 .pdc-round-controls {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: flex-end;
+}
+
+.pdc-stopped-label {
+  border-color: rgba(15, 107, 87, 0.18);
+  background: rgba(237, 244, 233, 0.72);
+  color: var(--green-dark);
 }
 
 .pdc-profile-panel {

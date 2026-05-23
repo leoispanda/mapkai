@@ -423,6 +423,10 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
     sessionRoster: personas,
     userQuestion: safeQuestion,
     provider: resolveDialogueProvider(env),
+    roundNumber: 1,
+    phaseType: "A",
+    previousSummary: "",
+    meetingMemory: null,
     env,
   });
   const facilitatorSummary = dialogueResult.blueWhaleSummary?.text || facilitator?.placeholderSummary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.";
@@ -465,13 +469,13 @@ function resolveDialogueProvider(env = {}) {
   return allowedDialogueProviders.has(requested) ? requested : "placeholder";
 }
 
-export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, env }) {
-  const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster });
+export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, env }) {
+  const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary });
 
   if (provider === "cloudflare") {
     if (!env?.AI) return fallback;
     try {
-      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, env });
+      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, env });
     } catch (error) {
       console.error("PDC Cloudflare dialogue provider failed:", error);
       return fallback;
@@ -514,14 +518,32 @@ function buildDialogueLine({ speakerId, text, personas }) {
   };
 }
 
-function buildPlaceholderRound({ id, label, entries, summary, personas }) {
+function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, summary, personas, convergenceLevel = "low", shouldConsiderStopping = false, suggestedReasonToStop = "" }) {
+  const activeTensions = phaseType === "A"
+    ? ["current position", "strongest reason", "what matters now"]
+    : ["trade-offs", "blind spots", "next clarification"];
   return {
     id,
     label,
+    phaseLabel: label,
+    roundNumber,
+    phaseType,
+    canContinue: true,
+    canStopAndSummarize: true,
     dialogue: entries.map(([speakerId, text]) => buildDialogueLine({ speakerId, text, personas })).filter(Boolean),
     blueWhaleSummary: {
       title: "Blue Whale Summary",
       text: summary,
+      convergenceLevel,
+      shouldConsiderStopping,
+      suggestedReasonToStop,
+    },
+    meetingMemory: {
+      compactSummary: summary,
+      activeTensions,
+      strongestViews: personas.slice(0, 3).map((persona) => persona.role),
+      openQuestions: phaseType === "A" ? ["Which position has the strongest reason?"] : ["Which trade-off needs the next clarification?"],
+      convergenceSignals: shouldConsiderStopping ? ["Several perspectives are pointing toward a narrower decision frame."] : [],
     },
   };
 }
@@ -577,8 +599,10 @@ function buildPlaceholderRounds({ modeId, personas }) {
 
   return [
     buildPlaceholderRound({
-      id: "round-1",
-      label: "Round 1 — Opening Views",
+      id: "round-1a",
+      label: "Round 1A — Position Update",
+      roundNumber: 1,
+      phaseType: "A",
       entries: roundOne,
       personas,
       summary: isCompany
@@ -586,16 +610,19 @@ function buildPlaceholderRounds({ modeId, personas }) {
         : "Blue Whale Summary: The opening round surfaced the first layer of facts, desire, risks, opportunities, alternatives, blind spots, relationships, time-energy fit, and timing.",
     }),
     buildPlaceholderRound({
-      id: "round-2",
-      label: "Round 2 — Challenge & Clarification",
+      id: "round-1b",
+      label: "Round 1B — Challenge & Response",
+      roundNumber: 1,
+      phaseType: "B",
       entries: roundTwo,
       personas,
       summary: "Blue Whale Summary: The council has started to clarify trade-offs and narrow the next question. A live model will later make this discussion deeper and more adaptive.",
+      convergenceLevel: "medium",
     }),
   ];
 }
 
-function createPlaceholderDialogueResult({ modeId, sessionRoster }) {
+function createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber = 1, phaseType = "A" }) {
   const rounds = buildPlaceholderRounds({ modeId, personas: sessionRoster });
   const firstRound = rounds[0] || { label: "Round 1 — Opening Views", dialogue: [] };
   return {
@@ -608,11 +635,12 @@ function createPlaceholderDialogueResult({ modeId, sessionRoster }) {
   };
 }
 
-async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, env }) {
+async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, env }) {
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
-  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion });
+  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge & Response"}`;
+  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory });
   const result = await env.AI.run(model, {
     messages: [
       {
@@ -628,13 +656,14 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   });
   const rawText = extractCloudflareText(result);
   const parsed = parseJsonObject(rawText);
-  return normalizeCloudflareDialogue({ modeId, sessionRoster, parsed });
+  return normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
 }
 
-function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion }) {
+function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory }) {
   const personaLines = sessionRoster
     .map((persona) => `- ${persona.id}: ${persona.englishName || persona.name}${persona.name && persona.name !== persona.englishName ? ` / ${persona.name}` : ""} — ${persona.role}`)
     .join("\n");
+  const compactMemory = meetingMemory ? JSON.stringify(meetingMemory).slice(0, 900) : "{}";
 
   return `Generate short visible PDC Council Room dialogue for the table.
 
@@ -644,22 +673,51 @@ ${userQuestion}
 Mode:
 ${modeLabel}
 
+Phase:
+${phaseLabel}
+
+Phase rule:
+${phaseType === "A" ? "A = position update. Each council member states or updates their position using the previous Blue Whale Summary and compact meeting memory." : "B = challenge and response. Each council member challenges, clarifies, or responds to another perspective."}
+
+Previous Blue Whale Summary:
+${previousSummary || "No previous summary yet."}
+
+Compact meeting memory:
+${compactMemory}
+
 Council members:
 ${personaLines}
 
 Return JSON only with this shape:
 {
-  "currentRoundLabel": "Opening Round",
+  "roundNumber": ${roundNumber},
+  "phaseType": "${phaseType}",
+  "phaseLabel": "${phaseLabel}",
   "dialogue": [
     { "speakerId": "persona-id", "text": "one short sentence" }
   ],
-  "blueWhaleSummary": { "text": "max two short sentences" }
+  "blueWhaleSummary": {
+    "text": "max two short sentences",
+    "convergenceLevel": "low",
+    "shouldConsiderStopping": false,
+    "suggestedReasonToStop": ""
+  },
+  "meetingMemory": {
+    "compactSummary": "one short summary",
+    "activeTensions": ["short item"],
+    "strongestViews": ["short item"],
+    "openQuestions": ["short item"],
+    "convergenceSignals": ["short item"]
+  }
 }
 
 Rules:
 - Include one line for each listed council member if possible.
 - Each dialogue text must be one short sentence.
+- Follow the phase rule exactly.
 - Blue Whale summary must be at most two short sentences.
+- convergenceLevel must be low, medium, or high.
+- Blue Whale may suggest stopping but must not force stopping.
 - Keep the tone calm, professional, and exploratory.
 - Do not produce a final memo.
 - Do not expose hidden reasoning.
@@ -687,7 +745,7 @@ function parseJsonObject(value) {
   }
 }
 
-function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed }) {
+function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "" }) {
   const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
   const rawLines = Array.isArray(parsed?.dialogue) ? parsed.dialogue : [];
   const normalizedLines = rawLines
@@ -720,24 +778,64 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed }) {
 
   const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
   if (!dialogue.length) throw new Error("Dialogue response had no usable lines");
-  const currentRoundLabel = normalizeShortText(parsed?.currentRoundLabel, 80) || "Round 1 — Opening Views";
+  const normalizedPhaseType = String(parsed?.phaseType || phaseType).toUpperCase() === "B" ? "B" : "A";
+  const normalizedRoundNumber = Number(parsed?.roundNumber) > 0 ? Number(parsed.roundNumber) : roundNumber;
+  const currentRoundLabel = normalizeShortText(parsed?.phaseLabel || parsed?.currentRoundLabel, 80) || phaseLabel;
+  const convergenceLevel = ["low", "medium", "high"].includes(String(parsed?.blueWhaleSummary?.convergenceLevel || "").toLowerCase())
+    ? String(parsed.blueWhaleSummary.convergenceLevel).toLowerCase()
+    : "low";
   const blueWhaleSummary = {
     title: "Blue Whale Summary",
     text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
+    convergenceLevel,
+    shouldConsiderStopping: parsed?.blueWhaleSummary?.shouldConsiderStopping === true,
+    suggestedReasonToStop: normalizeShortText(parsed?.blueWhaleSummary?.suggestedReasonToStop, 160),
+  };
+  const meetingMemory = {
+    compactSummary: normalizeShortText(parsed?.meetingMemory?.compactSummary, 280) || blueWhaleSummary.text || previousSummary,
+    activeTensions: normalizeShortList(parsed?.meetingMemory?.activeTensions, 5),
+    strongestViews: normalizeShortList(parsed?.meetingMemory?.strongestViews, 5),
+    openQuestions: normalizeShortList(parsed?.meetingMemory?.openQuestions, 5),
+    convergenceSignals: normalizeShortList(parsed?.meetingMemory?.convergenceSignals, 5),
   };
 
   return {
     provider: "cloudflare",
     modeId,
+    roundNumber: normalizedRoundNumber,
+    phaseType: normalizedPhaseType,
+    phaseLabel: currentRoundLabel,
+    previousSummary,
     currentRoundLabel,
     dialogue,
-    rounds: [{ id: "round-1", label: currentRoundLabel, dialogue, blueWhaleSummary }],
+    rounds: [{
+      id: `round-${normalizedRoundNumber}${normalizedPhaseType.toLowerCase()}`,
+      label: currentRoundLabel,
+      phaseLabel: currentRoundLabel,
+      roundNumber: normalizedRoundNumber,
+      phaseType: normalizedPhaseType,
+      previousSummary,
+      dialogue,
+      blueWhaleSummary,
+      meetingMemory,
+      canContinue: true,
+      canStopAndSummarize: true,
+    }],
     blueWhaleSummary,
+    meetingMemory,
+    canContinue: true,
+    canStopAndSummarize: true,
   };
 }
 
 function normalizeShortText(value, maxLength) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
+}
+
+function normalizeShortList(value, maxItems) {
+  return Array.isArray(value)
+    ? value.map((item) => normalizeShortText(item, 120)).filter(Boolean).slice(0, maxItems)
+    : [];
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {

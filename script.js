@@ -3711,6 +3711,8 @@ let pdcState = {
   selectedPersonaId: "",
   activeRoundIndex: 0,
   activeSpeakerIndex: 0,
+  pdcPhases: [],
+  discussionStopped: false,
   feedbackSubmitted: false,
 };
 let pdcFounderSummary = null;
@@ -3906,6 +3908,8 @@ async function initPdcPilotPage() {
     selectedPersonaId: "",
     activeRoundIndex: 0,
     activeSpeakerIndex: 0,
+    pdcPhases: [],
+    discussionStopped: false,
     feedbackSubmitted: false,
   };
   renderPdcPilot();
@@ -3954,9 +3958,9 @@ function renderPdcPilot() {
   if (pdcState.recap) {
     root.innerHTML = `
       ${renderPdcCouncilRoom(pdcState.recap)}
-      ${renderPdcRecap(pdcState.recap)}
+      ${pdcState.discussionStopped ? renderPdcRecap(pdcState.recap) : ""}
       ${renderPdcFounderPreviewActions()}
-      ${renderPdcFeedbackForm()}
+      ${pdcState.discussionStopped ? renderPdcFeedbackForm() : ""}
     `;
     return;
   }
@@ -4010,9 +4014,9 @@ function renderPdcCouncilRoom(recap) {
   if (!room) return "";
   const facilitator = room.facilitator || {};
   const personas = Array.isArray(room.personas) ? room.personas : [];
-  const rounds = getPdcRounds(room);
+  const rounds = getPdcPhases(room);
   const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
-  const currentRound = rounds[roundIndex] || rounds[0] || { label: "Round 1 — Opening Views", dialogue: [] };
+  const currentRound = rounds[roundIndex] || rounds[0] || { label: "Round 1A — Position Update", dialogue: [] };
   const dialogue = Array.isArray(currentRound.dialogue) ? currentRound.dialogue : [];
   const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogue.length);
   const roundComplete = dialogue.length > 0 && speakerIndex >= dialogue.length - 1;
@@ -4058,20 +4062,56 @@ function renderPdcCouncilRoom(recap) {
           </div>
           ${renderPdcDialogue(dialogue.slice(0, Math.min(speakerIndex + 1, dialogue.length)), activeLine?.speakerId)}
           ${roundComplete ? renderPdcRoundSummary(currentRound, facilitator) : ""}
-          ${renderPdcRoundControls({ roundComplete, hasNextRound: roundIndex < rounds.length - 1, hasDialogue: dialogue.length > 0 })}
+          ${renderPdcRoundControls({ roundComplete, hasDialogue: dialogue.length > 0 })}
         </section>
       </div>
     </section>`;
 }
 
-function getPdcRounds(room) {
-  if (Array.isArray(room.rounds) && room.rounds.length) return room.rounds;
-  return [{
-    id: "round-1",
-    label: room.currentRoundLabel || "Round 1 — Opening Views",
+function getPdcPhases(room) {
+  if (Array.isArray(pdcState.pdcPhases) && pdcState.pdcPhases.length) return pdcState.pdcPhases;
+  const sourcePhases = Array.isArray(room.rounds) && room.rounds.length ? room.rounds : [{
+    id: "round-1a",
+    label: room.currentRoundLabel || "Round 1A — Position Update",
+    roundNumber: 1,
+    phaseType: "A",
     dialogue: Array.isArray(room.dialogue) ? room.dialogue : [],
     blueWhaleSummary: room.facilitator ? { title: "Blue Whale Summary", text: room.facilitator.summary } : null,
   }];
+  pdcState.pdcPhases = sourcePhases.map((phase, index) => normalizePdcPhase(phase, index, room));
+  return pdcState.pdcPhases;
+}
+
+function normalizePdcPhase(phase, index, room) {
+  const fallbackRoundNumber = Math.floor(index / 2) + 1;
+  const fallbackPhaseType = index % 2 === 0 ? "A" : "B";
+  const roundNumber = Number(phase.roundNumber) > 0 ? Number(phase.roundNumber) : fallbackRoundNumber;
+  const phaseType = String(phase.phaseType || fallbackPhaseType).toUpperCase() === "B" ? "B" : "A";
+  const label = phase.phaseLabel || phase.label || getPdcPhaseLabel(roundNumber, phaseType);
+  const summary = phase.blueWhaleSummary || {};
+  return [{
+    id: phase.id || `round-${roundNumber}${phaseType.toLowerCase()}`,
+    label,
+    phaseLabel: label,
+    roundNumber,
+    phaseType,
+    previousSummary: phase.previousSummary || "",
+    dialogue: Array.isArray(phase.dialogue) ? phase.dialogue : [],
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: summary.text || room.facilitator?.summary || "",
+      convergenceLevel: summary.convergenceLevel || "low",
+      shouldConsiderStopping: summary.shouldConsiderStopping === true,
+      suggestedReasonToStop: summary.suggestedReasonToStop || "",
+    },
+    meetingMemory: phase.meetingMemory || createPdcMeetingMemory({ phaseType, summaryText: summary.text || "" }),
+    canContinue: phase.canContinue !== false,
+    canStopAndSummarize: phase.canStopAndSummarize !== false,
+  }][0];
+}
+
+function getPdcPhaseLabel(roundNumber, phaseType) {
+  return `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge & Response"}`;
 }
 
 function clampPdcIndex(value, length) {
@@ -4113,26 +4153,42 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "") {
 function renderPdcRoundSummary(round, facilitator) {
   const summary = round.blueWhaleSummary?.text || facilitator.summary || "";
   if (!summary) return "";
+  const convergenceLevel = round.blueWhaleSummary?.convergenceLevel || "low";
+  const shouldSuggestStop = round.blueWhaleSummary?.shouldConsiderStopping === true || convergenceLevel === "high";
+  const stopReason = round.blueWhaleSummary?.suggestedReasonToStop || "Blue Whale suggests the discussion is converging. You may stop and summarize now, or continue for another round.";
   return `
     <aside class="pdc-round-summary">
       <strong>Blue Whale Summary</strong>
       <p>${escapeHtml(summary)}</p>
+      <div class="pdc-convergence-line">
+        <span>Convergence: ${escapeHtml(convergenceLevel)}</span>
+      </div>
+      ${shouldSuggestStop ? `<p class="pdc-stop-suggestion">${escapeHtml(stopReason)}</p>` : ""}
     </aside>`;
 }
 
-function renderPdcRoundControls({ roundComplete, hasNextRound, hasDialogue }) {
+function renderPdcRoundControls({ roundComplete, hasDialogue }) {
   if (!hasDialogue) return "";
-  const label = roundComplete ? (hasNextRound ? "Continue to next round" : "Round complete") : "Next speaker";
+  if (pdcState.discussionStopped) {
+    return `<div class="pdc-round-controls"><span class="pdc-stopped-label">Discussion stopped. Council Recap is ready.</span></div>`;
+  }
+  if (roundComplete) {
+    return `
+      <div class="pdc-round-controls">
+        <button class="button secondary" type="button" data-pdc-continue-phase>Continue to next phase</button>
+        <button class="button primary" type="button" data-pdc-stop-summarize>Stop &amp; Summarize</button>
+      </div>`;
+  }
   return `
     <div class="pdc-round-controls">
-      <button class="button secondary" type="button" data-pdc-next-speaker ${roundComplete && !hasNextRound ? "disabled" : ""}>${label}</button>
+      <button class="button secondary" type="button" data-pdc-next-speaker>Next speaker</button>
     </div>`;
 }
 
 function advancePdcDialogue() {
   const room = pdcState.recap?.councilRoom;
-  if (!room) return;
-  const rounds = getPdcRounds(room);
+  if (!room || pdcState.discussionStopped) return;
+  const rounds = getPdcPhases(room);
   const roundIndex = clampPdcIndex(pdcState.activeRoundIndex, rounds.length);
   const currentRound = rounds[roundIndex] || null;
   const dialogueLength = Array.isArray(currentRound?.dialogue) ? currentRound.dialogue.length : 0;
@@ -4140,11 +4196,114 @@ function advancePdcDialogue() {
   const speakerIndex = clampPdcIndex(pdcState.activeSpeakerIndex, dialogueLength);
   if (speakerIndex < dialogueLength - 1) {
     pdcState.activeSpeakerIndex = speakerIndex + 1;
-  } else if (roundIndex < rounds.length - 1) {
-    pdcState.activeRoundIndex = roundIndex + 1;
-    pdcState.activeSpeakerIndex = 0;
   }
   renderPdcPilot();
+}
+
+function continuePdcPhase() {
+  const room = pdcState.recap?.councilRoom;
+  if (!room || pdcState.discussionStopped) return;
+  const phases = getPdcPhases(room);
+  const phaseIndex = clampPdcIndex(pdcState.activeRoundIndex, phases.length);
+  const currentPhase = phases[phaseIndex];
+  const dialogueLength = Array.isArray(currentPhase?.dialogue) ? currentPhase.dialogue.length : 0;
+  if (!dialogueLength || pdcState.activeSpeakerIndex < dialogueLength - 1) return;
+  const nextIndex = phaseIndex + 1;
+  if (!phases[nextIndex]) phases.push(createNextPdcPlaceholderPhase({ previousPhase: currentPhase, room }));
+  pdcState.activeRoundIndex = nextIndex;
+  pdcState.activeSpeakerIndex = 0;
+  renderPdcPilot();
+}
+
+function stopAndSummarizePdc() {
+  if (!pdcState.recap) return;
+  pdcState.discussionStopped = true;
+  pdcState.recap = applyPdcFinalMemoryToRecap(pdcState.recap);
+  renderPdcPilot();
+}
+
+function createNextPdcPlaceholderPhase({ previousPhase, room }) {
+  const previousRoundNumber = Number(previousPhase?.roundNumber) || 1;
+  const previousPhaseType = String(previousPhase?.phaseType || "A").toUpperCase() === "B" ? "B" : "A";
+  const phaseType = previousPhaseType === "A" ? "B" : "A";
+  const roundNumber = previousPhaseType === "A" ? previousRoundNumber : previousRoundNumber + 1;
+  const previousSummary = previousPhase?.blueWhaleSummary?.text || "";
+  const personas = Array.isArray(room.personas) ? room.personas : [];
+  const dialogue = personas.map((persona) => createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary }));
+  const summaryText = buildPdcPlaceholderSummary({ modeId: pdcState.recap?.modeId, roundNumber, phaseType });
+  const convergenceLevel = roundNumber >= 3 && phaseType === "B" ? "high" : roundNumber >= 2 ? "medium" : "low";
+  const shouldConsiderStopping = convergenceLevel === "high";
+  return {
+    id: `round-${roundNumber}${phaseType.toLowerCase()}`,
+    label: getPdcPhaseLabel(roundNumber, phaseType),
+    phaseLabel: getPdcPhaseLabel(roundNumber, phaseType),
+    roundNumber,
+    phaseType,
+    previousSummary,
+    dialogue,
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: summaryText,
+      convergenceLevel,
+      shouldConsiderStopping,
+      suggestedReasonToStop: shouldConsiderStopping ? "Blue Whale suggests the discussion is converging. You may stop and summarize now, or continue for another round." : "",
+    },
+    meetingMemory: createPdcMeetingMemory({ phaseType, summaryText }),
+    canContinue: true,
+    canStopAndSummarize: true,
+  };
+}
+
+function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary }) {
+  const speakerName = persona.englishName || persona.name || "Council Member";
+  const role = persona.role || "Council Member";
+  const text = phaseType === "A"
+    ? `${speakerName}: In Round ${roundNumber}${phaseType}, I would update my position through ${role} and keep the next move specific.`
+    : `${speakerName}: I would challenge the council to test the ${role} trade-off before moving further.`;
+  return {
+    speakerId: persona.id,
+    speakerName,
+    speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+    speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+    role,
+    text: previousSummary ? text : text,
+  };
+}
+
+function buildPdcPlaceholderSummary({ modeId, roundNumber, phaseType }) {
+  if (phaseType === "A") {
+    return modeId === "company"
+      ? `Blue Whale Summary: Round ${roundNumber}A refreshed the council's positions around user value, trust, execution limits, and timing.`
+      : `Blue Whale Summary: Round ${roundNumber}A refreshed the council's positions around evidence, desire, risk, energy, relationships, and timing.`;
+  }
+  return "Blue Whale Summary: The council clarified trade-offs and narrowed the next question. You can continue if more contrast is useful, or stop and summarize when the decision frame feels clear.";
+}
+
+function createPdcMeetingMemory({ phaseType, summaryText }) {
+  return {
+    compactSummary: summaryText,
+    activeTensions: phaseType === "A" ? ["current position", "decision criteria"] : ["trade-offs", "blind spots"],
+    strongestViews: [],
+    openQuestions: phaseType === "A" ? ["Which position should be tested next?"] : ["Which trade-off matters most now?"],
+    convergenceSignals: [],
+  };
+}
+
+function applyPdcFinalMemoryToRecap(recap) {
+  const phases = Array.isArray(pdcState.pdcPhases) ? pdcState.pdcPhases : [];
+  const latestPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || phases[phases.length - 1];
+  const latestSummary = latestPhase?.blueWhaleSummary?.text || "";
+  const recapSections = recap.recap || {};
+  return {
+    ...recap,
+    recap: {
+      ...recapSections,
+      condensedReview: latestSummary
+        ? `Stopped by the user after ${latestPhase.label}. ${latestSummary} This remains a placeholder recap, not live final analysis.`
+        : recapSections.condensedReview,
+      reflectionNote: "This is a placeholder reflection preview based on the discussion phases you chose to run. The final judgment remains yours.",
+    },
+  };
 }
 
 function renderPdcPersonaProfile(persona) {
@@ -4273,6 +4432,8 @@ async function startPdcExperience() {
     pdcState.selectedPersonaId = "";
     pdcState.activeRoundIndex = 0;
     pdcState.activeSpeakerIndex = 0;
+    pdcState.pdcPhases = [];
+    pdcState.discussionStopped = false;
     renderPdcPilot();
   } catch (error) {
     pdcState.status = "ready";
@@ -6216,6 +6377,14 @@ document.addEventListener("click", (event) => {
     advancePdcDialogue();
     return;
   }
+  if (event.target.closest("[data-pdc-continue-phase]")) {
+    continuePdcPhase();
+    return;
+  }
+  if (event.target.closest("[data-pdc-stop-summarize]")) {
+    stopAndSummarizePdc();
+    return;
+  }
   const pdcMode = event.target.closest("[data-pdc-mode]");
   if (pdcMode) {
     pdcState.selectedMode = pdcMode.dataset.pdcMode;
@@ -6234,6 +6403,8 @@ document.addEventListener("click", (event) => {
     pdcState.selectedPersonaId = "";
     pdcState.activeRoundIndex = 0;
     pdcState.activeSpeakerIndex = 0;
+    pdcState.pdcPhases = [];
+    pdcState.discussionStopped = false;
     pdcState.feedbackSubmitted = false;
     renderPdcPilot();
     return;

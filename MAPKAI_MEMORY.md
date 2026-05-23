@@ -1827,3 +1827,13 @@ Push status:
 - Kept the dialogue panel as the main visual area with decision, current round, dialogue rows, controls, and round summary.
 - On mobile, the layout stacks with dialogue first and roster/profile after it.
 - Preserved PDC access pass flow, Founder direct access, Founder Panel, APIs, D1 schema, feedback, and Council Recap behavior.
+
+## 2026-05-23 - Add user-controlled PDC A/B phase rhythm
+- Changed the PDC live discussion from a fixed two-phase preview into a user-controlled repeating A/B rhythm.
+- Phase labels now use Round 1A Position Update, Round 1B Challenge & Response, Round 2A, Round 2B, and so on.
+- After each phase completes, the UI shows Continue to next phase and Stop & Summarize.
+- Continue dynamically creates the next placeholder phase without saving a full dialogue transcript.
+- Stop & Summarize freezes the live discussion and then shows the final Council Recap and feedback.
+- Blue Whale summaries now include convergence level and can suggest stopping without forcing the user to stop.
+- Cloudflare dialogue prompt structure now accepts round number, phase type, previous summary, and compact meeting memory for future live phase generation.
+- Preserved pass lifecycle, Founder direct access, Founder Panel, existing PDC APIs, D1 schema, and low-data behavior.
