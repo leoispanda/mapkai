@@ -1954,3 +1954,9 @@ Push status:
 - Continue requests now pass compact observer archive reason and last contribution context for the OpenAI phase prompt without changing D1 or provider schemas.
 - Reduced OpenAI phase max output tokens to 2000 for the first call and 3600 for retry; final recap token budget remains unchanged.
 - Kept OpenAI model, structured output strict mode, provider order, schemas, D1 schema, pass lifecycle, public navigation, persona names, progressive playback, content relevance guard, observer flow, and final recap behavior unchanged.
+
+## 2026-05-23 - Add PDC provider latency comparison script
+- Added `tools/pdc-provider-latency.mjs`, a local diagnostic script that compares OpenAI, Cloudflare, and placeholder phase latency for the same PDC question without changing the default provider.
+- The script records provider, duration, prompt/output char counts where available, statement count, JSON success/failure, fallback/skipped state, model name, sample statements, Blue Whale summary, and content quality notes.
+- Cloudflare comparison runs locally only when `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` are supplied; otherwise it is marked skipped.
+- Added Cloudflare phase timing/prompt/output diagnostics to existing `contentDiagnostics`; ordinary users still do not see these diagnostics.

@@ -1224,6 +1224,7 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
+  const startedAt = Date.now();
   const result = await env.AI.run(model, {
     messages: [
       {
@@ -1240,6 +1241,17 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   const rawText = extractCloudflareText(result);
   const parsed = parseJsonObject(rawText);
   const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  if (normalized.contentDiagnostics) {
+    Object.assign(normalized.contentDiagnostics, {
+      promptCharLength: prompt.length,
+      approximateInputTokenEstimate: estimateTokenCount(prompt),
+      outputCharLength: rawText.length,
+      activeRosterCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
+      observerCount: 0,
+      meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
+      totalPhaseDurationMs: Date.now() - startedAt,
+    });
+  }
   return { ...normalized, modelName: model };
 }
 
