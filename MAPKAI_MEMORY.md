@@ -264,6 +264,12 @@ Latest PDC meeting UX update:
 PDC frontend now plays completed phase JSON progressively as a live council meeting: each speaker briefly shows as thinking, then their statement appears, the active roster member is highlighted, Blue Whale summary and phase controls wait until playback completes, and Founder Preview can use Show all now. This is frontend playback only, not true token streaming.
 ```
 
+Latest PDC content quality guard:
+
+```text
+OpenAI phase output is now rejected if it contains generic template phrases such as "Building on the last Blue Whale Summary", "I would update the [role] position", or "keep the next move specific". The OpenAI path retries once with stronger instructions; if template content persists, fallbackUsed=true and Founder diagnostics show templateContentDetected, templateMatchedPhrases, contentQualityRetryUsed, and timing values.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.

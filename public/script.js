@@ -4381,6 +4381,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
       Previous summary: ${previousSummary ? "available" : "missing"} ·
       User intervention: ${currentRound.userIntervention ? "included" : "empty"}
       ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
+      ${diagnostics ? ` · Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"} · Timing: ${Number(diagnostics.totalPhaseDurationMs || 0)}ms` : ""}
     </p>`;
 }
 
@@ -4607,8 +4608,8 @@ async function requestPdcFinalRecap() {
       latest_phase: latestPhase,
       meeting_memory: latestPhase?.meetingMemory || null,
       vote_summary: latestPhase?.voteSummary || null,
-      active_roster_ids: pdcState.activeRosterIds,
-      observer_roster_ids: pdcState.observerRosterIds,
+      active_roster_ids: pdcState.activeRosterIds.length ? pdcState.activeRosterIds : getPdcRosterPersonas(room, phases).map((persona) => persona.id),
+      observer_roster_ids: pdcState.observerRosterIds || [],
       user_interventions: pdcState.userInterventions,
     }),
   });
@@ -4657,7 +4658,7 @@ function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, 
   const guidance = userIntervention ? `, especially the user's guidance about ${userIntervention}` : "";
   const target = getClientPdcTargetPersona(persona);
   const text = phaseType === "A"
-    ? `Building on the last Blue Whale Summary${guidance}, I would update the ${role} position and keep the next move specific.`
+    ? `From the ${role} view${guidance}, I would name one concrete test for the user's current question before the next phase.`
     : getClientPdcChallengeText({ persona, target, guidance });
   return {
     speakerId: persona.id,
@@ -4859,10 +4860,10 @@ function renderPdcRecap(recap) {
 function renderPdcRecapNotice(recap) {
   const provider = recap.finalRecapProvider || "";
   const notice = recap.placeholderNotice || "";
-  if (provider === "cloudflare" && !recap.finalRecapFallbackUsed) {
+  if ((provider === "cloudflare" || provider === "openai") && !recap.finalRecapFallbackUsed) {
     return `<p class="pdc-placeholder-notice">Generated Council Recap</p>`;
   }
-  if (notice) return `<p class="pdc-placeholder-notice">${escapeHtml(notice)}</p>`;
+  if (recap.finalRecapFallbackUsed && notice) return `<p class="pdc-placeholder-notice">${escapeHtml(notice)}</p>`;
   if (recap.isPlaceholder) return `<p class="pdc-placeholder-notice">Development placeholder output — live PDC API is not connected yet.</p>`;
   return "";
 }
@@ -4985,7 +4986,7 @@ function renderPdcProviderDiagnostics() {
       ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
       <p>Model: ${escapeHtml(final?.modelName || phase?.modelName || "-")} · JSON parse failed: ${(final?.jsonParseFailed || phase?.jsonParseFailed) ? "yes" : "no"} · Schema: ${escapeHtml(final?.schemaName || phase?.schemaName || phase?.contentDiagnostics?.schemaName || "-")} · Strict: ${(final?.strict || phase?.strict || phase?.contentDiagnostics?.strict) ? "true" : "false"}${(final?.providerErrorShort || phase?.providerErrorShort) ? ` · Error: ${escapeHtml(final?.providerErrorShort || phase?.providerErrorShort)}` : ""}</p>
-      ${phase?.contentDiagnostics ? `<p>OpenAI returned statement count: ${Number(phase.contentDiagnostics.modelStatementCount || 0)} · Normalized statement count: ${Number(phase.contentDiagnostics.normalizedStatementCount || 0)} · Default statements injected: ${phase.contentDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phase.contentDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phase.contentDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phase.contentDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${phase.contentDiagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
+      ${phase?.contentDiagnostics ? `<p>OpenAI returned statement count: ${Number(phase.contentDiagnostics.modelStatementCount || 0)} · Normalized statement count: ${Number(phase.contentDiagnostics.normalizedStatementCount || 0)} · Default statements injected: ${phase.contentDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phase.contentDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phase.contentDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phase.contentDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${phase.contentDiagnostics.retryUsed ? " · Retry: yes" : ""} · Template content detected: ${phase.contentDiagnostics.templateContentDetected ? "true" : "false"}${phase.contentDiagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(phase.contentDiagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${phase.contentDiagnostics.contentQualityRetryUsed ? "true" : "false"} · OpenAI duration: ${Number(phase.contentDiagnostics.openAiDurationMs || 0)}ms · Retry duration: ${Number(phase.contentDiagnostics.retryDurationMs || 0)}ms · Total phase: ${Number(phase.contentDiagnostics.totalPhaseDurationMs || 0)}ms</p>` : ""}
     </section>`;
 }
 

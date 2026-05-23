@@ -668,6 +668,7 @@ function getProviderFallbackReason(message) {
 
 function getOpenAiFallbackReason(message) {
   if (/default template/i.test(message)) return "OpenAI output matched default template";
+  if (/template content|template phrase/i.test(message)) return "OpenAI output contained template content";
   if (/json/i.test(message)) return "invalid JSON";
   if (/missing.*dialogue|missing required/i.test(message)) return "OpenAI response missing required dialogue statements";
   if (/401|403|auth|api key/i.test(message)) return "OpenAI authentication failed";
@@ -1133,12 +1134,19 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
   const model = getOpenAiModel(env);
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   let retryUsed = false;
+  const startedAt = Date.now();
   let parsed = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   let normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai" });
+  if (normalized.contentDiagnostics) {
+    normalized.contentDiagnostics.openAiDurationMs = Date.now() - startedAt;
+    normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
+  }
   const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
+    || normalized.contentDiagnostics?.templateContentDetected === true
     || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9);
   if (shouldRetry) {
     retryUsed = true;
+    const retryStartedAt = Date.now();
     parsed = await requestOpenAiDialogueJson({
       env,
       model,
@@ -1153,12 +1161,23 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
       userIntervention,
       retryReason: normalized.contentDiagnostics?.defaultTemplateMatched
         ? "Previous output matched persona default templates."
+        : normalized.contentDiagnostics?.templateContentDetected
+          ? `Previous output contained generic template phrases: ${normalized.contentDiagnostics.templateMatchedPhrases.join(", ")}.`
         : "Previous output missed one or more council member statements.",
     });
     normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai", retryUsed: true });
+    if (normalized.contentDiagnostics) {
+      normalized.contentDiagnostics.openAiDurationMs = normalized.contentDiagnostics.openAiDurationMs || retryStartedAt - startedAt;
+      normalized.contentDiagnostics.retryDurationMs = Date.now() - retryStartedAt;
+      normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
+      normalized.contentDiagnostics.contentQualityRetryUsed = true;
+    }
   }
   if (normalized.contentDiagnostics?.defaultTemplateMatched) {
     throw new Error("OpenAI output matched default template");
+  }
+  if (normalized.contentDiagnostics?.templateContentDetected) {
+    throw new Error(`OpenAI output contained template content: ${normalized.contentDiagnostics.templateMatchedPhrases.join(", ")}`);
   }
   if (normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9)) {
     throw new Error("OpenAI response missing required dialogue statements");
@@ -1176,8 +1195,8 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
     prompt,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
-    maxOutputTokens: 3200,
-    retryMaxOutputTokens: 4200,
+    maxOutputTokens: 3000,
+    retryMaxOutputTokens: 5600,
     retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
   });
 }
@@ -1236,9 +1255,11 @@ OpenAI content requirements:
 - Do not output template statements.
 - Do not say what the role "would generally do".
 - Every statement must directly address the actual user question.
+- Every statement must mention the concrete topic, numbers, object, or trade-off from the user's question.
 - If the user question is Chinese, all dialogue must be Chinese.
 - If the user question is English, all dialogue must be English.
 - Reuse the exact decision topic and concrete nouns from the user's question where natural.
+- For example, if the user asks "我月入3000买一个30000的车还是100000的车", every statement must discuss monthly income 3000, a 30000 vs 100000 car, affordability, debt risk, opportunity cost, emotional desire, social pressure, timing, or sustainability.
 - If retry reason is present, correct it explicitly by making every member's line question-specific.
 ${retryReason ? `Retry reason: ${retryReason}` : ""}
 ` : "";
@@ -1454,12 +1475,14 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
   const rawLines = Array.isArray(parsed?.dialogue) ? parsed.dialogue : [];
   const simpleVotesBySpeaker = buildSimpleVotesBySpeaker(parsed?.votes, byId);
   const defaultStatementIds = [];
+  const templateMatchedPhrases = [];
   const normalizedLines = rawLines
     .map((line) => {
       const persona = byId.get(String(line?.speakerId || "").trim());
       const text = normalizeShortText(line?.text, 180);
       if (!persona || !text) return null;
       if (isKnownDefaultStatement(text, persona)) defaultStatementIds.push(persona.id);
+      templateMatchedPhrases.push(...findTemplateContentPhrases(text));
       const simpleVote = simpleVotesBySpeaker.get(persona.id) || {};
       return {
         speakerId: persona.id,
@@ -1585,6 +1608,12 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       defaultStatementSpeakerIds: missingLines.map((line) => line.speakerId),
       defaultTemplateMatched: defaultStatementIds.length > 0,
       defaultTemplateMatchedSpeakerIds: Array.from(new Set(defaultStatementIds)),
+      templateContentDetected: templateMatchedPhrases.length > 0,
+      templateMatchedPhrases: Array.from(new Set(templateMatchedPhrases)),
+      contentQualityRetryUsed: retryUsed,
+      openAiDurationMs: 0,
+      retryDurationMs: 0,
+      totalPhaseDurationMs: 0,
       retryUsed,
     },
   };
@@ -1617,6 +1646,17 @@ function normalizeTemplateText(value) {
     .replace(/[‘’]/g, "'")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function findTemplateContentPhrases(text) {
+  const checks = [
+    ["Building on the last Blue Whale Summary", /building on the last blue whale summary/i],
+    ["I would update the [role] position", /i would update the .* position/i],
+    ["keep the next move specific", /keep the next move specific/i],
+    ["Council dialogue preview for this private pilot", /council dialogue preview for this private pilot/i],
+    ["placeholder continuation", /placeholder continuation/i],
+  ];
+  return checks.filter(([, pattern]) => pattern.test(String(text || ""))).map(([label]) => label);
 }
 
 function normalizeStanceType(value) {
