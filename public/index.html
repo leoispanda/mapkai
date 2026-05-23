@@ -4791,10 +4791,15 @@ async function stopAndSummarizePdc() {
   renderPdcPilot();
   try {
     const result = await requestPdcFinalRecap();
-    pdcState.recap.recap = result.recap || pdcState.recap.recap;
-    pdcState.recap.placeholderNotice = result.fallbackUsed ? "Placeholder fallback recap — live final recap was unavailable." : "";
-    pdcState.finalReintroducedPerspective = result.finalReintroducedPerspective || null;
-    pdcState.providerDiagnostics = result;
+    pdcState.recap.recap = normalizePdcRecapSectionsForDisplay(result.recap || pdcState.recap.recap);
+    pdcState.recap.finalRecapProvider = result.actualProvider || result.provider || "";
+    pdcState.recap.finalRecapFallbackUsed = result.fallbackUsed === true;
+    pdcState.recap.placeholderNotice = result.fallbackUsed ? "Placeholder fallback recap — live final recap was unavailable." : "Generated Council Recap";
+    pdcState.finalReintroducedPerspective = normalizePdcReintroducedForDisplay(result.finalReintroducedPerspective) || null;
+    pdcState.providerDiagnostics = {
+      phase: pdcState.providerDiagnostics,
+      final: result,
+    };
   } catch (error) {
     pdcState.recap = applyPdcFinalMemoryToRecap(pdcState.recap);
     pdcState.providerDiagnostics = { fallbackUsed: true, fallbackReason: error.message || "Final recap request failed." };
@@ -5022,7 +5027,7 @@ function getPersonaInitials(persona) {
 }
 
 function renderPdcRecap(recap) {
-  const recapSections = recap.recap || recap.sections || {};
+  const recapSections = normalizePdcRecapSectionsForDisplay(recap.recap || recap.sections || {});
   const sections = [
     ["Decision Frame", recapSections.decisionFrame],
     ["Core Tension", recapSections.coreTension],
@@ -5038,20 +5043,69 @@ function renderPdcRecap(recap) {
     <section class="pdc-result">
       <p class="eyebrow">${escapeHtml(recap.modeLabel || "PDC")}</p>
       <h1>Council Recap</h1>
-      ${recap.isPlaceholder ? `<p class="pdc-placeholder-notice">${escapeHtml(recap.placeholderNotice || "Development placeholder output — live PDC API is not connected yet.")}</p>` : ""}
+      ${renderPdcRecapNotice(recap)}
       ${recap.rosterSummary ? `<p class="pdc-roster-note">${escapeHtml(recap.rosterSummary)}</p>` : ""}
       <div class="pdc-recap-sections">
         ${sections.map(([title, value]) => `
           <article class="pdc-recap-section">
             <h2>${title}</h2>
-            ${Array.isArray(value) ? `<ul>${value.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : `<p>${escapeHtml(value || "")}</p>`}
+            ${Array.isArray(value) ? `<ul>${value.map((item) => `<li>${escapeHtml(normalizePdcDisplayText(item))}</li>`).join("")}</ul>` : `<p>${escapeHtml(normalizePdcDisplayText(value))}</p>`}
           </article>`).join("")}
       </div>
     </section>`;
 }
 
+function renderPdcRecapNotice(recap) {
+  const provider = recap.finalRecapProvider || "";
+  const notice = recap.placeholderNotice || "";
+  if (provider === "cloudflare" && !recap.finalRecapFallbackUsed) {
+    return `<p class="pdc-placeholder-notice">Generated Council Recap</p>`;
+  }
+  if (notice) return `<p class="pdc-placeholder-notice">${escapeHtml(notice)}</p>`;
+  if (recap.isPlaceholder) return `<p class="pdc-placeholder-notice">Development placeholder output — live PDC API is not connected yet.</p>`;
+  return "";
+}
+
+function normalizePdcRecapSectionsForDisplay(sections) {
+  const source = sections && typeof sections === "object" ? sections : {};
+  return {
+    decisionFrame: normalizePdcDisplayText(source.decisionFrame),
+    coreTension: normalizePdcDisplayText(source.coreTension),
+    councilHighlights: normalizePdcDisplayList(source.councilHighlights),
+    debateSnapshot: normalizePdcDisplayText(source.debateSnapshot),
+    condensedReview: normalizePdcDisplayText(source.condensedReview),
+    finalRecommendation: normalizePdcDisplayText(source.finalRecommendation),
+    nextActions: normalizePdcDisplayList(source.nextActions),
+    whatNotToDo: normalizePdcDisplayList(source.whatNotToDo),
+    reflectionNote: normalizePdcDisplayText(source.reflectionNote),
+  };
+}
+
+function normalizePdcDisplayList(value) {
+  if (Array.isArray(value)) return value.map((item) => normalizePdcDisplayText(item)).filter(Boolean);
+  const text = normalizePdcDisplayText(value);
+  return text ? [text] : [];
+}
+
+function normalizePdcDisplayText(value) {
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") return String(value).replace(/\s+/g, " ").trim();
+  if (Array.isArray(value)) return value.map((item) => normalizePdcDisplayText(item)).filter(Boolean).join(" ");
+  if (value && typeof value === "object") {
+    const keys = ["speaker", "speakerName", "name", "title", "role", "action", "warning", "summary", "text", "reason", "why", "detail", "details", "recommendation", "note"];
+    const parts = keys.map((key) => normalizePdcDisplayText(value[key])).filter(Boolean);
+    if (parts.length >= 2) return `${parts[0]}: ${parts.slice(1).join(" — ")}`;
+    if (parts.length === 1) return parts[0];
+    try {
+      return JSON.stringify(value);
+    } catch {
+      return "";
+    }
+  }
+  return "";
+}
+
 function renderPdcReintroducedPerspective() {
-  const item = pdcState.finalReintroducedPerspective;
+  const item = normalizePdcReintroducedForDisplay(pdcState.finalReintroducedPerspective);
   if (!item) return "";
   return `
     <section class="pdc-reintroduced">
@@ -5064,16 +5118,43 @@ function renderPdcReintroducedPerspective() {
     </section>`;
 }
 
+function normalizePdcReintroducedForDisplay(item) {
+  if (!item || typeof item !== "object") return null;
+  const persona = findPdcPersonaById(item.speakerId) || findPdcPersonaByName(item.speakerName);
+  return {
+    speakerId: persona?.id || normalizePdcDisplayText(item.speakerId),
+    speakerName: persona?.englishName || normalizePdcDisplayText(item.speakerName) || "Archived perspective",
+    speakerChineseName: persona?.name && persona.name !== persona.englishName ? persona.name : normalizePdcDisplayText(item.speakerChineseName),
+    role: persona?.role || normalizePdcDisplayText(item.role),
+    reasonForReintroduction: normalizePdcDisplayText(item.reasonForReintroduction),
+    finalReflection: normalizePdcDisplayText(item.finalReflection),
+  };
+}
+
+function findPdcPersonaById(personaId) {
+  const id = normalizePdcDisplayText(personaId);
+  if (!id) return null;
+  const room = pdcState.recap?.councilRoom || {};
+  return getPdcRosterPersonas(room, getPdcPhases(room)).find((persona) => persona.id === id) || null;
+}
+
+function findPdcPersonaByName(name) {
+  const normalizedName = normalizePdcDisplayText(name).toLowerCase();
+  if (!normalizedName) return null;
+  const room = pdcState.recap?.councilRoom || {};
+  return getPdcRosterPersonas(room, getPdcPhases(room)).find((persona) => [persona.englishName, persona.name].filter(Boolean).some((value) => value.toLowerCase() === normalizedName)) || null;
+}
+
 function renderPdcProviderDiagnostics() {
   if (!pdcState.founderPreview || !pdcState.providerDiagnostics) return "";
   const info = pdcState.providerDiagnostics;
+  const phase = info.phase || (!info.final ? info : null);
+  const final = info.final || (info.finalReintroducedPerspective || info.recap ? info : null);
   return `
     <section class="pdc-founder-phase-debug">
-      Provider requested: ${escapeHtml(info.requestedProvider || "-")} ·
-      Provider used: ${escapeHtml(info.actualProvider || info.provider || "-")} ·
-      Model: ${escapeHtml(info.modelName || "-")} ·
-      Fallback: ${info.fallbackUsed ? "yes" : "no"}${info.fallbackReason ? ` · ${escapeHtml(info.fallbackReason)}` : ""} ·
-      JSON parse failed: ${info.jsonParseFailed ? "yes" : "no"}${info.providerErrorShort ? ` · Error: ${escapeHtml(info.providerErrorShort)}` : ""}
+      ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
+      ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
+      <p>Model: ${escapeHtml(final?.modelName || phase?.modelName || "-")} · JSON parse failed: ${(final?.jsonParseFailed || phase?.jsonParseFailed) ? "yes" : "no"}${(final?.providerErrorShort || phase?.providerErrorShort) ? ` · Error: ${escapeHtml(final?.providerErrorShort || phase?.providerErrorShort)}` : ""}</p>
     </section>`;
 }
 

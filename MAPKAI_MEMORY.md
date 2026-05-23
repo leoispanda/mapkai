@@ -1882,3 +1882,11 @@ Push status:
 - Added clearer Founder-only provider diagnostics for requested provider, actual provider, fallback reason, provider error, JSON parse status, and model.
 - Improved placeholder B-phase wording with role-specific challenge lines instead of generic template sentences.
 - Root/public script and inline index scripts were synced; no D1 schema, navigation, pass lifecycle, persona name, OpenAI, or public PDC entry changes.
+
+## 2026-05-23 - Fix PDC final recap normalization and provider labels
+- Normalized Cloudflare final recap fields so strings, arrays, arrays of objects, and simple objects all become display-safe text or string lists.
+- Added frontend display normalization as a second guard so raw objects cannot render as `[object Object]` in Council Highlights, Next Actions, or What Not To Do.
+- Reintroduced Perspective now canonicalizes known personas by `speakerId` or name against the PDC persona library; model-generated names are not trusted for known members.
+- Fixed the final recap notice so successful Cloudflare recaps show `Generated Council Recap` instead of the development placeholder wording.
+- Founder diagnostics now separate phase dialogue provider from final recap provider, including separate fallback reasons.
+- Root/public script and inline index scripts were synced; no D1 schema, navigation, pass lifecycle, persona roster, or Cloudflare binding changes.

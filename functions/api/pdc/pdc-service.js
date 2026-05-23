@@ -1458,15 +1458,15 @@ function normalizeFinalRecapResult(parsed, context) {
     modelName: context.modelName,
     finalReintroducedPerspective: normalizeReintroduced(parsed?.finalReintroducedPerspective, context.observerRoster) || fallback.finalReintroducedPerspective,
     recap: {
-      decisionFrame: normalizeShortText(recap.decisionFrame, 900),
-      coreTension: normalizeShortText(recap.coreTension, 900),
-      councilHighlights: normalizeShortList(recap.councilHighlights, 8),
-      debateSnapshot: normalizeShortText(recap.debateSnapshot, 900),
-      condensedReview: normalizeShortText(recap.condensedReview, 900),
-      finalRecommendation: normalizeShortText(recap.finalRecommendation, 900),
-      nextActions: normalizeShortList(recap.nextActions, 6),
-      whatNotToDo: normalizeShortList(recap.whatNotToDo, 6),
-      reflectionNote: normalizeShortText(recap.reflectionNote, 500) || "The final judgment remains yours.",
+      decisionFrame: normalizeRecapText(recap.decisionFrame, 900),
+      coreTension: normalizeRecapText(recap.coreTension, 900),
+      councilHighlights: normalizeRecapList(recap.councilHighlights, 8),
+      debateSnapshot: normalizeRecapText(recap.debateSnapshot, 900),
+      condensedReview: normalizeRecapText(recap.condensedReview, 900),
+      finalRecommendation: normalizeRecapText(recap.finalRecommendation, 900),
+      nextActions: normalizeRecapList(recap.nextActions, 6),
+      whatNotToDo: normalizeRecapList(recap.whatNotToDo, 6),
+      reflectionNote: normalizeRecapText(recap.reflectionNote, 500) || "The final judgment remains yours.",
     },
     blueWhaleFinalNote: normalizeShortText(parsed?.blueWhaleFinalNote, 500),
   };
@@ -1474,15 +1474,57 @@ function normalizeFinalRecapResult(parsed, context) {
 
 function normalizeReintroduced(value, observerRoster) {
   if (!value || typeof value !== "object") return buildFinalReintroducedPerspective({ observerRoster });
-  if (!normalizeShortText(value.speakerId, 80) && (!observerRoster || !observerRoster.length)) return null;
+  const speakerId = normalizeShortText(value.speakerId, 80);
+  if (!speakerId && (!observerRoster || !observerRoster.length)) return null;
+  const canonical = findCanonicalPersona(speakerId) || findCanonicalPersonaByName(value.speakerName);
   return {
-    speakerId: normalizeShortText(value.speakerId, 80),
-    speakerName: normalizeShortText(value.speakerName, 100),
-    speakerChineseName: normalizeShortText(value.speakerChineseName, 100),
-    role: normalizeShortText(value.role, 120),
-    reasonForReintroduction: normalizeShortText(value.reasonForReintroduction, 300),
-    finalReflection: normalizeShortText(value.finalReflection, 600),
+    speakerId: canonical?.id || speakerId,
+    speakerName: canonical?.englishName || normalizeRecapText(value.speakerName, 100),
+    speakerChineseName: canonical?.name && canonical.name !== canonical.englishName ? canonical.name : normalizeRecapText(value.speakerChineseName, 100),
+    role: canonical?.role || normalizeRecapText(value.role, 120),
+    reasonForReintroduction: normalizeRecapText(value.reasonForReintroduction, 300),
+    finalReflection: normalizeRecapText(value.finalReflection, 600),
   };
+}
+
+function findCanonicalPersona(personaId) {
+  const id = normalizeShortText(personaId, 80);
+  return id ? pdcPersonaLibrary.find((persona) => persona.id === id) : null;
+}
+
+function findCanonicalPersonaByName(name) {
+  const normalizedName = normalizeShortText(name, 120).toLowerCase();
+  if (!normalizedName) return null;
+  return pdcPersonaLibrary.find((persona) => [persona.englishName, persona.name].filter(Boolean).some((value) => value.toLowerCase() === normalizedName)) || null;
+}
+
+function normalizeRecapList(value, maxItems) {
+  if (Array.isArray(value)) {
+    return value.map((item) => normalizeRecapText(item, 500)).filter(Boolean).slice(0, maxItems);
+  }
+  const text = normalizeRecapText(value, 900);
+  return text ? [text] : [];
+}
+
+function normalizeRecapText(value, maxLength = 900) {
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    return normalizeShortText(value, maxLength);
+  }
+  if (Array.isArray(value)) {
+    return value.map((item) => normalizeRecapText(item, Math.floor(maxLength / Math.max(1, value.length)) || maxLength)).filter(Boolean).join(" ");
+  }
+  if (value && typeof value === "object") {
+    const keys = ["speaker", "speakerName", "name", "title", "role", "action", "warning", "summary", "text", "reason", "why", "detail", "details", "recommendation", "note"];
+    const parts = keys.map((key) => normalizeRecapText(value[key], 220)).filter(Boolean);
+    if (parts.length >= 2) return normalizeShortText(`${parts[0]}: ${parts.slice(1).join(" — ")}`, maxLength);
+    if (parts.length === 1) return normalizeShortText(parts[0], maxLength);
+    try {
+      return normalizeShortText(JSON.stringify(value), maxLength);
+    } catch {
+      return "";
+    }
+  }
+  return "";
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {
