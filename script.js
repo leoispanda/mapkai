@@ -4175,6 +4175,7 @@ function normalizePdcPhase(phase, index, room) {
     meetingMemory: phase.meetingMemory || createPdcMeetingMemory({ phaseType, summaryText: summary.text || "" }),
     voteSummary: phase.voteSummary || null,
     rosterUpdate: phase.rosterUpdate || null,
+    contentDiagnostics: phase.contentDiagnostics || null,
     canContinue: phase.canContinue !== false,
     canStopAndSummarize: phase.canStopAndSummarize !== false,
   }][0];
@@ -4311,11 +4312,13 @@ function renderPdcPhaseGuidance(currentRound) {
 function renderPdcFounderPhaseDebug(currentRound) {
   if (!pdcState.founderPreview) return "";
   const previousSummary = currentRound.previousSummary || "";
+  const diagnostics = currentRound.contentDiagnostics || pdcState.providerDiagnostics?.contentDiagnostics || null;
   return `
     <p class="pdc-founder-phase-debug">
       Provider: ${escapeHtml(pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder")} ·
       Previous summary: ${previousSummary ? "available" : "missing"} ·
       User intervention: ${currentRound.userIntervention ? "included" : "empty"}
+      ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
     </p>`;
 }
 
@@ -4385,8 +4388,9 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     providerErrorShort: data.providerErrorShort,
     jsonParseFailed: data.jsonParseFailed,
     modelName: data.modelName,
+    contentDiagnostics: data.contentDiagnostics || null,
   };
-  const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention }, pdcState.pdcPhases.length, room);
+  const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention, contentDiagnostics: data.contentDiagnostics || null }, pdcState.pdcPhases.length, room);
   applyPdcRosterUpdate(phase);
   return phase;
 }
@@ -4779,6 +4783,7 @@ function renderPdcProviderDiagnostics() {
       ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
       <p>Model: ${escapeHtml(final?.modelName || phase?.modelName || "-")} · JSON parse failed: ${(final?.jsonParseFailed || phase?.jsonParseFailed) ? "yes" : "no"}${(final?.providerErrorShort || phase?.providerErrorShort) ? ` · Error: ${escapeHtml(final?.providerErrorShort || phase?.providerErrorShort)}` : ""}</p>
+      ${phase?.contentDiagnostics ? `<p>OpenAI returned statement count: ${Number(phase.contentDiagnostics.modelStatementCount || 0)} · Normalized statement count: ${Number(phase.contentDiagnostics.normalizedStatementCount || 0)} · Default statements injected: ${phase.contentDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phase.contentDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phase.contentDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phase.contentDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${phase.contentDiagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
     </section>`;
 }
 
@@ -4864,6 +4869,7 @@ async function startPdcExperience() {
       providerErrorShort: data.recap.providerErrorShort,
       jsonParseFailed: data.recap.jsonParseFailed,
       modelName: data.recap.modelName,
+      contentDiagnostics: data.recap.contentDiagnostics || null,
     } : null;
     pdcState.userInterventions = [];
     pdcState.discussionStopped = false;

@@ -491,15 +491,15 @@ export function resolveFacilitator(modeId) {
   return pdcPersonaLibrary.find((persona) => persona.id === mode.facilitatorId && persona.isFacilitator) || pdcPersonaLibrary.find((persona) => persona.id === "blue-whale");
 }
 
-export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, env }) {
+export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics = false, env }) {
   const mode = pdcModes[modeId] || pdcModes.personal;
   const roster = resolveSessionRoster({ modeId: mode.id, sessionRoster });
   const facilitator = resolveFacilitator(mode.id);
 
-  return createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, env });
+  return createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env });
 }
 
-async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, env }) {
+async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env }) {
   const isCompany = mode.id === "company";
   const trimmedQuestion = String(userQuestion || "").replace(/\s+/g, " ").trim();
   const safeQuestion = trimmedQuestion.length > 520 ? `${trimmedQuestion.slice(0, 520)}...` : trimmedQuestion;
@@ -531,6 +531,7 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
     providerErrorShort: dialogueResult.providerErrorShort || "",
     jsonParseFailed: dialogueResult.jsonParseFailed === true,
     modelName: dialogueResult.modelName || "",
+    ...(includeContentDiagnostics ? { contentDiagnostics: dialogueResult.contentDiagnostics || null } : {}),
     placeholderNotice: isPlaceholder
       ? "Development placeholder output — live PDC API is not connected yet."
       : "Council Recap placeholder output — live final memo generation is not connected yet.",
@@ -666,6 +667,7 @@ function getProviderFallbackReason(message) {
 }
 
 function getOpenAiFallbackReason(message) {
+  if (/default template/i.test(message)) return "OpenAI output matched default template";
   if (/json/i.test(message)) return "invalid JSON";
   if (/401|403|auth|api key/i.test(message)) return "OpenAI authentication failed";
   if (/429|rate/i.test(message)) return "OpenAI rate limit";
@@ -1129,18 +1131,46 @@ function getPlaceholderStanceType(persona) {
 async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const model = getOpenAiModel(env);
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
-  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
-  const parsed = await callOpenAiJson({
+  let parsed = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
+  let normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai" });
+  const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
+    || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9);
+  if (shouldRetry) {
+    parsed = await requestOpenAiDialogueJson({
+      env,
+      model,
+      modeLabel,
+      sessionRoster,
+      userQuestion,
+      roundNumber,
+      phaseType,
+      phaseLabel,
+      previousSummary,
+      meetingMemory,
+      userIntervention,
+      retryReason: normalized.contentDiagnostics?.defaultTemplateMatched
+        ? "Previous output matched persona default templates."
+        : "Previous output missed one or more council member statements.",
+    });
+    normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai", retryUsed: true });
+  }
+  if (normalized.contentDiagnostics?.defaultTemplateMatched) {
+    throw new Error("OpenAI output matched default template");
+  }
+  return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
+}
+
+async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
+  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, provider: "openai", retryReason });
+  return callOpenAiJson({
     env,
     model,
-    instructions: "You write concise structured PDC decision reflection dialogue. Return JSON only. Do not include markdown, hidden reasoning, or professional advice claims.",
+    instructions: "You write concise structured PDC decision reflection dialogue for the user's exact decision question. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
     prompt,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
-    maxOutputTokens: 1000,
+    maxOutputTokens: 1500,
   });
-  const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
-  return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
 }
 
 async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
@@ -1179,15 +1209,30 @@ function markProviderResult(result, { requestedProvider, actualProvider, modelNa
     providerErrorShort: "",
     jsonParseFailed: false,
     modelName,
+    contentDiagnostics: result.contentDiagnostics || null,
     rounds: Array.isArray(result.rounds) ? result.rounds.map((round) => ({ ...round, provider: actualProvider })) : result.rounds,
   };
 }
 
-function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention }) {
+function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, provider = "cloudflare", retryReason = "" }) {
   const personaLines = sessionRoster
     .map((persona) => `- ${persona.id}: ${persona.englishName || persona.name}${persona.name && persona.name !== persona.englishName ? ` / ${persona.name}` : ""} — ${persona.role}`)
     .join("\n");
   const compactMemory = meetingMemory ? JSON.stringify(meetingMemory).slice(0, 900) : "{}";
+
+  const openAiSpecificRules = provider === "openai" ? `
+OpenAI content requirements:
+- This is a real PDC council phase for the user's specific question, not a persona demo.
+- Do not output generic role descriptions.
+- Do not output template statements.
+- Do not say what the role "would generally do".
+- Every statement must directly address the actual user question.
+- If the user question is Chinese, all dialogue must be Chinese.
+- If the user question is English, all dialogue must be English.
+- Reuse the exact decision topic and concrete nouns from the user's question where natural.
+- If retry reason is present, correct it explicitly by making every member's line question-specific.
+${retryReason ? `Retry reason: ${retryReason}` : ""}
+` : "";
 
   return `You are continuing an existing PDC council discussion.
 Do not restart from zero.
@@ -1196,6 +1241,7 @@ If user intervention is provided, prioritize it.
 Each council member must either update their position, respond to a previous tension, challenge a prior view, or move the discussion closer to a decision.
 Match the output language to the user question or user intervention. If either is Chinese, output Chinese. If both are English, output English.
 Avoid generic standalone answers. Avoid repeating the same opening views. Make each statement specific to the user's question and the current phase.
+${openAiSpecificRules}
 
 Generate short visible PDC Council Room dialogue for the table.
 
@@ -1209,7 +1255,7 @@ Phase:
 ${phaseLabel}
 
 Phase rule:
-${phaseType === "A" ? "A = position update. Each council member states or updates their position using the previous Blue Whale Summary and compact meeting memory." : "B = challenge and response. Each council member challenges, clarifies, or responds to another perspective."}
+${phaseType === "A" ? "A = position update. Every statement must state or update a concrete position about this exact question. Do not include votes. Do not write a generic role line." : "B = challenge and response. Every statement must challenge, respond to, or build on another named member. At least 5 of 9 statements should mention another member by name. Include targetSpeakerId when possible. Do not write generic independent answers."}
 
 Previous Blue Whale Summary:
 ${previousSummary || "No previous summary yet."}
@@ -1263,8 +1309,9 @@ Rules:
 - Each member should support, challenge, clarify, build on, or update a previous view.
 - For Phase A, each member should state or update their position, mention who they agree or disagree with when useful, and note whether their stance changed.
 - For Phase B, each member must challenge or respond to a named perspective; at least 5 of the 9 members must explicitly mention another member by name.
+- For Phase B, every line should use targetSpeakerId when the response clearly addresses another member.
 - Phase A must return an empty votes array.
-- Phase B should include one vote row per speaker if possible.
+- Phase B should include one vote row per speaker if possible, using all listed speakers as voters when possible.
 - contributionTargetId selects the most useful contribution in this phase.
 - concernTargetId selects the perspective that needs most pressure or temporary observer status for decision clarity.
 - Do not let everyone answer the original question independently; the phase should feel like they heard each other.
@@ -1359,15 +1406,17 @@ function parseJsonObject(value) {
   }
 }
 
-function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "" }) {
+function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", sourceProvider = "cloudflare", retryUsed = false }) {
   const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
   const rawLines = Array.isArray(parsed?.dialogue) ? parsed.dialogue : [];
   const simpleVotesBySpeaker = buildSimpleVotesBySpeaker(parsed?.votes, byId);
+  const defaultStatementIds = [];
   const normalizedLines = rawLines
     .map((line) => {
       const persona = byId.get(String(line?.speakerId || "").trim());
       const text = normalizeShortText(line?.text, 180);
       if (!persona || !text) return null;
+      if (isKnownDefaultStatement(text, persona)) defaultStatementIds.push(persona.id);
       const simpleVote = simpleVotesBySpeaker.get(persona.id) || {};
       return {
         speakerId: persona.id,
@@ -1380,14 +1429,17 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
         targetSpeakerName: normalizeShortText(line?.targetSpeakerName, 80),
         text,
         stanceSummary: normalizeShortText(line?.stanceSummary, 160) || text,
+        contentSource: "model",
         contributionVote: normalizeVote(line?.contributionVote, byId) || simpleVote.contributionVote || null,
         concernVote: normalizeVote(line?.concernVote, byId) || simpleVote.concernVote || null,
       };
     })
     .filter(Boolean);
 
-  const missingLines = sessionRoster
+  const missingPersonas = sessionRoster
     .filter((persona) => !normalizedLines.some((line) => line.speakerId === persona.id))
+    .slice(0, Math.max(0, 9 - normalizedLines.length));
+  const missingLines = missingPersonas
     .slice(0, Math.max(0, 9 - normalizedLines.length))
     .map((persona) => ({
       speakerId: persona.id,
@@ -1400,6 +1452,7 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       targetSpeakerName: "",
       text: normalizeShortText(persona.statement, 180),
       stanceSummary: normalizeShortText(persona.statement, 160),
+      contentSource: "default",
     }));
 
   const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
@@ -1479,11 +1532,46 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
     meetingMemory,
     canContinue: true,
     canStopAndSummarize: true,
+    contentDiagnostics: {
+      provider: sourceProvider,
+      modelStatementCount: normalizedLines.length,
+      normalizedStatementCount: dialogueWithVotes.length,
+      defaultStatementsInjected: missingLines.length > 0,
+      defaultStatementSpeakerIds: missingLines.map((line) => line.speakerId),
+      defaultTemplateMatched: defaultStatementIds.length > 0,
+      defaultTemplateMatchedSpeakerIds: Array.from(new Set(defaultStatementIds)),
+      retryUsed,
+    },
   };
 }
 
 function normalizeShortText(value, maxLength) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
+}
+
+function isKnownDefaultStatement(text, persona) {
+  const normalized = normalizeTemplateText(text);
+  if (!normalized) return false;
+  const candidates = [
+    persona?.statement,
+    persona?.placeholderStatement,
+    persona?.placeholderStatementPersonal,
+    persona?.placeholderStatementCompany,
+  ];
+  const canonical = findCanonicalPersona(persona?.id);
+  if (canonical) {
+    candidates.push(canonical.placeholderStatement, canonical.placeholderStatementPersonal, canonical.placeholderStatementCompany);
+  }
+  return candidates.filter(Boolean).some((value) => normalizeTemplateText(value) === normalized);
+}
+
+function normalizeTemplateText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[“”]/g, "\"")
+    .replace(/[‘’]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function normalizeStanceType(value) {
@@ -1530,12 +1618,15 @@ function buildSimpleVotesBySpeaker(value, byId) {
 }
 
 function fillMissingVotes({ dialogue, sessionRoster }) {
+  const rankedTargets = rankDialogueTargets({ dialogue, sessionRoster });
   return dialogue.map((line, index) => {
     const speakerIndex = Math.max(0, sessionRoster.findIndex((persona) => persona.id === line.speakerId));
-    const contributionTarget = sessionRoster[(speakerIndex + 1) % sessionRoster.length] || sessionRoster[0];
-    const concernTarget = line.targetSpeakerId
-      ? sessionRoster.find((persona) => persona.id === line.targetSpeakerId)
-      : sessionRoster[(speakerIndex + 2) % sessionRoster.length] || contributionTarget;
+    const directTarget = line.targetSpeakerId ? sessionRoster.find((persona) => persona.id === line.targetSpeakerId) : null;
+    const stanceType = String(line.stanceType || "").toLowerCase();
+    const rankedContributionTarget = rankedTargets.find((persona) => persona.id !== line.speakerId) || sessionRoster[(speakerIndex + 1) % sessionRoster.length] || sessionRoster[0];
+    const rankedConcernTarget = rankedTargets.find((persona) => persona.id !== line.speakerId && persona.id !== rankedContributionTarget?.id) || directTarget || sessionRoster[(speakerIndex + 2) % sessionRoster.length] || rankedContributionTarget;
+    const contributionTarget = directTarget && ["support", "build"].includes(stanceType) ? directTarget : rankedContributionTarget;
+    const concernTarget = directTarget && ["challenge", "clarify", "response", "defend"].includes(stanceType) ? directTarget : rankedConcernTarget;
     return {
       ...line,
       contributionVote: line.contributionVote || {
@@ -1550,6 +1641,20 @@ function fillMissingVotes({ dialogue, sessionRoster }) {
       },
     };
   });
+}
+
+function rankDialogueTargets({ dialogue, sessionRoster }) {
+  const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
+  const counts = new Map();
+  dialogue.forEach((line) => {
+    const targetId = normalizeShortText(line?.targetSpeakerId, 80);
+    if (!byId.has(targetId)) return;
+    counts.set(targetId, (counts.get(targetId) || 0) + 1);
+  });
+  return Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([id]) => byId.get(id))
+    .filter(Boolean);
 }
 
 function normalizeVoteSummary(value, dialogue, sessionRoster) {

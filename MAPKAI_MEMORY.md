@@ -220,6 +220,20 @@ Latest local update:
 MapKAI PDC Private Pilot placeholder mode was added as a hidden controlled feature inside the existing MapKAI site.
 ```
 
+## 6. Current PDC Provider Notes
+
+Latest PDC provider update:
+
+```text
+OpenAI phase dialogue now preserves model-generated statement text, retries once when output is missing roster lines or exactly matches persona default templates, and exposes Founder-only content diagnostics for returned statement count, normalized statement count, default statement injection, and template matches.
+```
+
+Important behavior:
+
+```text
+When PDC_DIALOGUE_PROVIDER=openai and fallbackUsed=false, visible dialogue should come from OpenAI-normalized text, not persona placeholder statements. Persona defaults are only injected for missing/empty speaker text and are reported in Founder diagnostics. If OpenAI returns known default template text after retry, the OpenAI call is treated as unusable and falls back instead of silently displaying placeholder-looking text as successful OpenAI output.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.

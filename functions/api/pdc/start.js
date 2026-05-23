@@ -27,7 +27,7 @@ export async function onRequest({ request, env }) {
     try {
       const isPlaceholder = !env.OPENAI_API_KEY;
       const sessionRoster = resolveSessionRoster({ modeId, sessionRoster: null });
-      const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, env });
+      const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env });
       return json({ ok: true, founder_preview: true, recap });
     } catch {
       return json({ ok: false, message: "The PDC experience could not be generated. Please try again later." }, 500);
@@ -67,7 +67,7 @@ export async function onRequest({ request, env }) {
   try {
     const isPlaceholder = !env.OPENAI_API_KEY;
     const sessionRoster = resolveSessionRoster({ modeId, sessionRoster: null });
-    const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, env });
+    const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env });
     const usedAt = getIsoNow();
     await env.MAPKAI_DB.prepare(
       `UPDATE pdc_access_passes
@@ -156,6 +156,7 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
       providerErrorShort: result.providerErrorShort || "",
       jsonParseFailed: result.jsonParseFailed === true,
       modelName: result.modelName || "",
+      ...(isFounderPreview ? { contentDiagnostics: result.contentDiagnostics || null } : {}),
     });
   } catch (error) {
     console.error("PDC continue phase failed:", error);
