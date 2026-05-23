@@ -1862,3 +1862,14 @@ Push status:
 - Placeholder fallback now includes role-specific support/challenge/build relations so it feels more like members heard each other.
 - UI now shows subtle relation labels such as Challenges, Builds on, Clarifies, and Supports.
 - Kept single-call Cloudflare provider design for cost control; no OpenAI integration or pass lifecycle changes.
+
+## 2026-05-23 - Add PDC voting, observers, and final recap generation
+- Added A/B Council Rhythm mechanics: A phases are position updates only; B phases include named challenge/response plus contribution and concern votes.
+- Added vote aggregation into Council Voting Snapshot with Most Supported Contribution and Most Pressured Perspective.
+- Added professional perspective narrowing: clear concern vote leaders move from active roster into Observer status while remaining visible and clickable.
+- Left roster now separates Active Council Members and Observers.
+- Continue sends active roster and observer roster so observers no longer speak or vote in normal phases.
+- Stop & Summarize now requests a provider-generated final Council Recap from compact memory, votes, active roster, observers, and user guidance.
+- Added Reintroduced Perspective block before final recap when an archived perspective exists.
+- Added Founder-only provider diagnostics for final recap provider/fallback/model.
+- Preserved low-data behavior: no full transcript is saved by default, and D1 schema/pass lifecycle were not changed.

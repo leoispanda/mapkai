@@ -1,5 +1,5 @@
 import { cleanText, ensurePdcTables, getIsoNow, getPass, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
-import { generatePdcCouncilRecap, generatePdcDialogue, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
+import { generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
@@ -10,6 +10,7 @@ export async function onRequest({ request, env }) {
   const userQuestion = cleanText(body.user_question, 1200);
   const isFounderPreview = body.founder_preview === true && isFounderRequest(request);
   const isContinuePhase = body.continue_phase === true;
+  const isFinalRecap = body.final_recap === true;
 
   if (!modeId || !pdcModes[modeId]) return json({ ok: false, message: "Choose a PDC type before starting." }, 400);
   if (userQuestion.length < 8) return json({ ok: false, message: "Please enter a decision question before starting." }, 400);
@@ -17,6 +18,9 @@ export async function onRequest({ request, env }) {
 
   if (isContinuePhase) {
     return handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview });
+  }
+  if (isFinalRecap) {
+    return handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview });
   }
 
   if (isFounderPreview) {
@@ -81,6 +85,33 @@ export async function onRequest({ request, env }) {
   }
 }
 
+async function handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview }) {
+  if (!isFounderPreview) {
+    if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
+    if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
+    await ensurePdcTables(env.MAPKAI_DB);
+    const pass = await getPass(env.MAPKAI_DB, passCode);
+    if (!pass || !["used", "in_progress"].includes(pass.status)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);
+  }
+  const activeRoster = resolveRosterByIds(modeId, body.active_roster_ids);
+  const observerRoster = resolveRosterByIds(modeId, body.observer_roster_ids);
+  const mode = pdcModes[modeId];
+  const result = await generatePdcFinalRecap({
+    modeId,
+    modeLabel: mode.label,
+    userQuestion,
+    activeRoster,
+    observerRoster,
+    latestPhase: sanitizeObject(body.latest_phase, 5000),
+    meetingMemory: sanitizeMeetingMemory(body.meeting_memory),
+    voteSummary: sanitizeObject(body.vote_summary, 2500),
+    userInterventions: Array.isArray(body.user_interventions) ? body.user_interventions.map((item) => cleanText(item, 300)).filter(Boolean).slice(-8) : [],
+    provider: String(env.PDC_DIALOGUE_PROVIDER || "placeholder").trim().toLowerCase(),
+    env,
+  });
+  return json({ ok: true, ...result });
+}
+
 async function handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview }) {
   const roundNumber = Number(body.round_number) > 0 ? Math.min(Number(body.round_number), 99) : 1;
   const phaseType = String(body.phase_type || "A").toUpperCase() === "B" ? "B" : "A";
@@ -98,7 +129,7 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
 
   try {
     const mode = pdcModes[modeId];
-    const roster = resolveSessionRoster({ modeId, sessionRoster: null }).map((persona) => toCouncilRoomPersona(persona, modeId));
+    const roster = resolveRosterByIds(modeId, body.active_roster_ids);
     const result = await generatePdcDialogue({
       modeId,
       modeLabel: mode.label,
@@ -118,6 +149,22 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
   } catch (error) {
     console.error("PDC continue phase failed:", error);
     return json({ ok: false, message: "The next PDC phase could not be generated. Please try again." }, 500);
+  }
+}
+
+function resolveRosterByIds(modeId, ids) {
+  const all = resolveSessionRoster({ modeId, sessionRoster: null }).map((persona) => toCouncilRoomPersona(persona, modeId));
+  if (!Array.isArray(ids) || !ids.length) return all;
+  const allowed = new Set(ids.map((id) => cleanText(id, 80)));
+  return all.filter((persona) => allowed.has(persona.id));
+}
+
+function sanitizeObject(value, maxLength) {
+  if (!value || typeof value !== "object") return null;
+  try {
+    return JSON.parse(JSON.stringify(value).slice(0, maxLength));
+  } catch {
+    return null;
   }
 }
 

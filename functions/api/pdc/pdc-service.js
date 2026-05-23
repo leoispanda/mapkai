@@ -491,6 +491,19 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, us
   return fallback;
 }
 
+export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, activeRoster = [], observerRoster = [], latestPhase = null, meetingMemory = null, voteSummary = null, userInterventions = [], provider, env }) {
+  const fallback = createPlaceholderFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  if (provider === "cloudflare" && env?.AI) {
+    try {
+      return await generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env });
+    } catch (error) {
+      console.error("PDC Cloudflare final recap failed:", error);
+      return { ...fallback, fallbackUsed: true, fallbackReason: "Cloudflare final recap unavailable.", providerErrorShort: String(error.message || "Unknown error").slice(0, 160) };
+    }
+  }
+  return fallback;
+}
+
 export function toCouncilRoomPersona(persona, modeId) {
   return {
     id: persona.id,
@@ -506,7 +519,7 @@ export function toCouncilRoomPersona(persona, modeId) {
   };
 }
 
-function buildDialogueLine({ speakerId, text, personas, stanceType = "update", targetSpeakerId = "", stanceSummary = "" }) {
+function buildDialogueLine({ speakerId, text, personas, stanceType = "update", targetSpeakerId = "", stanceSummary = "", contributionVote = null, concernVote = null }) {
   const speaker = personas.find((persona) => persona.id === speakerId);
   const target = targetSpeakerId ? personas.find((persona) => persona.id === targetSpeakerId) : null;
   if (!speaker) return null;
@@ -521,10 +534,19 @@ function buildDialogueLine({ speakerId, text, personas, stanceType = "update", t
     targetSpeakerName: target ? target.englishName || target.name : "",
     text,
     stanceSummary: stanceSummary || text,
+    contributionVote,
+    concernVote,
   };
 }
 
 function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, summary, personas, convergenceLevel = "low", shouldConsiderStopping = false, suggestedReasonToStop = "" }) {
+  const normalizedEntries = entries.map(normalizePlaceholderEntry);
+  const dialogue = normalizedEntries.map((entry, index) => {
+    const withVotes = phaseType === "B" ? addPlaceholderVotes({ entry, index, entries: normalizedEntries, personas }) : entry;
+    return buildDialogueLine({ ...withVotes, personas });
+  }).filter(Boolean);
+  const voteSummary = phaseType === "B" ? aggregateVoteSummary({ dialogue, personas }) : null;
+  const rosterUpdate = phaseType === "B" ? buildRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
   const activeTensions = phaseType === "A"
     ? ["current position", "strongest reason", "what matters now"]
     : ["trade-offs", "blind spots", "next clarification"];
@@ -536,7 +558,9 @@ function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, sum
     phaseType,
     canContinue: true,
     canStopAndSummarize: true,
-    dialogue: entries.map((entry) => buildDialogueLine({ ...normalizePlaceholderEntry(entry), personas })).filter(Boolean),
+    dialogue,
+    voteSummary,
+    rosterUpdate,
     blueWhaleSummary: {
       title: "Blue Whale Summary",
       text: summary,
@@ -552,12 +576,33 @@ function buildPlaceholderRound({ id, label, roundNumber, phaseType, entries, sum
       activeTensions,
       phaseHistorySummary: summary,
       mainTension: activeTensions[0] || "",
-      activeDisagreements: phaseType === "B" ? ["optimism versus risk", "clarity versus speed"] : [],
+      activeDisagreements: phaseType === "B" ? [voteSummary?.mostPressuredPerspective?.reasonSummary || "Perspectives are being narrowed for decision clarity."] : [],
       convergenceLevel,
-      memberStates: buildMemberStates({ personas, entries, phaseType }),
+      memberStates: buildMemberStates({ personas, entries: normalizedEntries, phaseType }),
       strongestViews: personas.slice(0, 3).map((persona) => persona.role),
       openQuestions: phaseType === "A" ? ["Which position has the strongest reason?"] : ["Which trade-off needs the next clarification?"],
       convergenceSignals: shouldConsiderStopping ? ["Several perspectives are pointing toward a narrower decision frame."] : [],
+    },
+  };
+}
+
+function addPlaceholderVotes({ entry, index, entries, personas }) {
+  const speakerIndex = personas.findIndex((persona) => persona.id === entry.speakerId);
+  const contributionTarget = personas[(speakerIndex + 1) % personas.length] || personas[0];
+  const concernTarget = entry.targetSpeakerId
+    ? personas.find((persona) => persona.id === entry.targetSpeakerId)
+    : personas[(speakerIndex + 2) % personas.length] || contributionTarget;
+  return {
+    ...entry,
+    contributionVote: {
+      targetSpeakerId: contributionTarget?.id || "",
+      targetSpeakerName: contributionTarget?.englishName || contributionTarget?.name || "",
+      reason: `Their ${contributionTarget?.role || "perspective"} contribution sharpened this phase.`,
+    },
+    concernVote: {
+      targetSpeakerId: concernTarget?.id || "",
+      targetSpeakerName: concernTarget?.englishName || concernTarget?.name || "",
+      reason: `This ${concernTarget?.role || "perspective"} needs the most pressure before the next phase.`,
     },
   };
 }
@@ -582,6 +627,65 @@ function buildMemberStates({ personas, entries, phaseType }) {
       changedMind: phaseType === "A" && Boolean(entry.targetSpeakerId),
     }];
   }));
+}
+
+function aggregateVoteSummary({ dialogue, personas }) {
+  const contributionVotes = collectVotes({ dialogue, key: "contributionVote" });
+  const concernVotes = collectVotes({ dialogue, key: "concernVote" });
+  const leadingContributor = summarizeTopVote(contributionVotes);
+  const mostPressuredPerspective = summarizeTopVote(concernVotes);
+  const topConcern = concernVotes[0] || null;
+  const tiedConcern = concernVotes.length > 1 && topConcern && concernVotes[1].count === topConcern.count;
+  return {
+    contributionVotes,
+    concernVotes,
+    leadingContributor: leadingContributor
+      ? { speakerId: leadingContributor.targetSpeakerId, speakerName: leadingContributor.targetSpeakerName, count: leadingContributor.count, reasonSummary: leadingContributor.reasons[0] || "" }
+      : null,
+    mostPressuredPerspective: mostPressuredPerspective
+      ? { speakerId: mostPressuredPerspective.targetSpeakerId, speakerName: mostPressuredPerspective.targetSpeakerName, count: mostPressuredPerspective.count, reasonSummary: mostPressuredPerspective.reasons[0] || "" }
+      : null,
+    suggestedArchivedPerspective: topConcern && !tiedConcern
+      ? { speakerId: topConcern.targetSpeakerId, speakerName: topConcern.targetSpeakerName, reason: topConcern.reasons[0] || "This perspective needs observer status for now." }
+      : null,
+    shouldArchivePerspective: Boolean(topConcern && !tiedConcern),
+  };
+}
+
+function collectVotes({ dialogue, key }) {
+  const tally = new Map();
+  dialogue.forEach((line) => {
+    const vote = line?.[key] || {};
+    if (!vote.targetSpeakerId) return;
+    if (!tally.has(vote.targetSpeakerId)) {
+      tally.set(vote.targetSpeakerId, {
+        targetSpeakerId: vote.targetSpeakerId,
+        targetSpeakerName: vote.targetSpeakerName || vote.targetSpeakerId,
+        count: 0,
+        reasons: [],
+      });
+    }
+    const row = tally.get(vote.targetSpeakerId);
+    row.count += 1;
+    if (vote.reason) row.reasons.push(vote.reason);
+  });
+  return Array.from(tally.values()).sort((a, b) => b.count - a.count || a.targetSpeakerName.localeCompare(b.targetSpeakerName));
+}
+
+function summarizeTopVote(rows) {
+  return Array.isArray(rows) && rows.length ? rows[0] : null;
+}
+
+function buildRosterUpdate(voteSummary) {
+  if (!voteSummary?.shouldArchivePerspective || !voteSummary.suggestedArchivedPerspective?.speakerId) {
+    return { shouldArchivePerspective: false, reason: "No clear narrowing consensus yet." };
+  }
+  return {
+    shouldArchivePerspective: true,
+    archivedSpeakerId: voteSummary.suggestedArchivedPerspective.speakerId,
+    archivedSpeakerName: voteSummary.suggestedArchivedPerspective.speakerName,
+    reason: voteSummary.suggestedArchivedPerspective.reason,
+  };
 }
 
 function buildPlaceholderRounds({ modeId, personas }) {
@@ -647,7 +751,7 @@ function buildPlaceholderRounds({ modeId, personas }) {
     }),
     buildPlaceholderRound({
       id: "round-1b",
-      label: "Round 1B — Challenge & Response",
+      label: "Round 1B — Challenge, Response & Voting",
       roundNumber: 1,
       phaseType: "B",
       entries: roundTwo,
@@ -676,7 +780,7 @@ function createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber = 
 
 function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention }) {
   const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
-  const label = `Round ${roundNumber}${normalizedPhaseType} — ${normalizedPhaseType === "A" ? "Position Update" : "Challenge & Response"}`;
+  const label = `Round ${roundNumber}${normalizedPhaseType} — ${normalizedPhaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   const guidance = userIntervention ? ` User guidance: ${userIntervention}` : "";
   const entries = personas.map((persona) => [
     persona.id,
@@ -722,7 +826,7 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
-  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge & Response"}`;
+  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   const result = await env.AI.run(model, {
     messages: [
@@ -794,7 +898,17 @@ Return JSON only with this shape:
       "targetSpeakerId": "optional-persona-id",
       "targetSpeakerName": "optional speaker name",
       "text": "one short sentence",
-      "stanceSummary": "short stance memory"
+      "stanceSummary": "short stance memory",
+      "contributionVote": {
+        "targetSpeakerId": "required in B phase only",
+        "targetSpeakerName": "required in B phase only",
+        "reason": "short reason"
+      },
+      "concernVote": {
+        "targetSpeakerId": "required in B phase only",
+        "targetSpeakerName": "required in B phase only",
+        "reason": "short reason"
+      }
     }
   ],
   "blueWhaleSummary": {
@@ -812,6 +926,20 @@ Return JSON only with this shape:
       "whatChangedThisPhase": "short item",
       "whatNextPhaseShouldExamine": "short item"
     }
+  },
+  "voteSummary": {
+    "contributionVotes": [],
+    "concernVotes": [],
+    "leadingContributor": null,
+    "mostPressuredPerspective": null,
+    "suggestedArchivedPerspective": null,
+    "shouldArchivePerspective": false
+  },
+  "rosterUpdate": {
+    "shouldArchivePerspective": false,
+    "archivedSpeakerId": "",
+    "archivedSpeakerName": "",
+    "reason": "No clear narrowing consensus yet."
   },
   "meetingMemory": {
     "phaseHistorySummary": "one short summary",
@@ -848,6 +976,12 @@ Rules:
 - Each member should support, challenge, clarify, build on, or update a previous view.
 - For Phase A, each member should state or update their position, mention who they agree or disagree with when useful, and note whether their stance changed.
 - For Phase B, each member must challenge or respond to a named perspective; at least 5 of the 9 members must explicitly mention another member by name.
+- Phase A must not include contributionVote or concernVote.
+- Phase B must include contributionVote and concernVote for every dialogue item if possible.
+- contributionVote selects the most useful contribution in this phase.
+- concernVote selects the perspective that needs most pressure or temporary observer status for decision clarity.
+- If concern votes have a clear highest target, rosterUpdate should suggest observer status for that perspective.
+- If concern votes are tied, rosterUpdate.shouldArchivePerspective must be false.
 - Do not let everyone answer the original question independently; the phase should feel like they heard each other.
 - Blue Whale summary must be at most two short sentences.
 - Blue Whale must summarize meeting dynamics: strongest disagreement, who challenged whom, influence shift, unresolved question, convergence, and next focus.
@@ -899,6 +1033,8 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
         targetSpeakerName: normalizeShortText(line?.targetSpeakerName, 80),
         text,
         stanceSummary: normalizeShortText(line?.stanceSummary, 160) || text,
+        contributionVote: normalizeVote(line?.contributionVote, byId),
+        concernVote: normalizeVote(line?.concernVote, byId),
       };
     })
     .filter(Boolean);
@@ -921,6 +1057,10 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
 
   const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
   if (!dialogue.length) throw new Error("Dialogue response had no usable lines");
+  const isBPhase = String(parsed?.phaseType || phaseType).toUpperCase() === "B";
+  const dialogueWithVotes = isBPhase ? fillMissingVotes({ dialogue, sessionRoster }) : dialogue.map((line) => ({ ...line, contributionVote: null, concernVote: null }));
+  const normalizedVoteSummary = isBPhase ? normalizeVoteSummary(parsed?.voteSummary, dialogueWithVotes, sessionRoster) : null;
+  const normalizedRosterUpdate = isBPhase ? normalizeRosterUpdate(parsed?.rosterUpdate, normalizedVoteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
   const normalizedPhaseType = String(parsed?.phaseType || phaseType).toUpperCase() === "B" ? "B" : "A";
   const normalizedRoundNumber = Number(parsed?.roundNumber) > 0 ? Number(parsed.roundNumber) : roundNumber;
   const currentRoundLabel = normalizeShortText(parsed?.phaseLabel || parsed?.currentRoundLabel, 80) || phaseLabel;
@@ -965,7 +1105,7 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
     phaseLabel: currentRoundLabel,
     previousSummary,
     currentRoundLabel,
-    dialogue,
+    dialogue: dialogueWithVotes,
     rounds: [{
       id: `round-${normalizedRoundNumber}${normalizedPhaseType.toLowerCase()}`,
       label: currentRoundLabel,
@@ -973,7 +1113,9 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       roundNumber: normalizedRoundNumber,
       phaseType: normalizedPhaseType,
       previousSummary,
-      dialogue,
+      dialogue: dialogueWithVotes,
+      voteSummary: normalizedVoteSummary,
+      rosterUpdate: normalizedRosterUpdate,
       blueWhaleSummary,
       meetingMemory,
       canContinue: true,
@@ -995,6 +1137,91 @@ function normalizeStanceType(value) {
   return ["support", "challenge", "clarify", "build", "update"].includes(stanceType) ? stanceType : "update";
 }
 
+function normalizeVote(value, byId) {
+  if (!value || typeof value !== "object") return null;
+  const targetSpeakerId = String(value.targetSpeakerId || "").trim();
+  if (!byId.has(targetSpeakerId)) return null;
+  const persona = byId.get(targetSpeakerId);
+  return {
+    targetSpeakerId,
+    targetSpeakerName: normalizeShortText(value.targetSpeakerName, 80) || persona.englishName || persona.name,
+    reason: normalizeShortText(value.reason, 160),
+  };
+}
+
+function fillMissingVotes({ dialogue, sessionRoster }) {
+  return dialogue.map((line, index) => {
+    const speakerIndex = Math.max(0, sessionRoster.findIndex((persona) => persona.id === line.speakerId));
+    const contributionTarget = sessionRoster[(speakerIndex + 1) % sessionRoster.length] || sessionRoster[0];
+    const concernTarget = line.targetSpeakerId
+      ? sessionRoster.find((persona) => persona.id === line.targetSpeakerId)
+      : sessionRoster[(speakerIndex + 2) % sessionRoster.length] || contributionTarget;
+    return {
+      ...line,
+      contributionVote: line.contributionVote || {
+        targetSpeakerId: contributionTarget.id,
+        targetSpeakerName: contributionTarget.englishName || contributionTarget.name,
+        reason: "This contribution sharpened the council discussion.",
+      },
+      concernVote: line.concernVote || {
+        targetSpeakerId: concernTarget.id,
+        targetSpeakerName: concernTarget.englishName || concernTarget.name,
+        reason: "This perspective needs the most pressure before the next phase.",
+      },
+    };
+  });
+}
+
+function normalizeVoteSummary(value, dialogue, sessionRoster) {
+  const fallback = aggregateVoteSummary({ dialogue, personas: sessionRoster });
+  if (!value || typeof value !== "object") return fallback;
+  const contributionVotes = normalizeVoteRows(value.contributionVotes, fallback.contributionVotes);
+  const concernVotes = normalizeVoteRows(value.concernVotes, fallback.concernVotes);
+  const summary = aggregateVoteSummary({ dialogue, personas: sessionRoster });
+  summary.contributionVotes = contributionVotes.length ? contributionVotes : summary.contributionVotes;
+  summary.concernVotes = concernVotes.length ? concernVotes : summary.concernVotes;
+  summary.leadingContributor = normalizeTopVote(value.leadingContributor) || summary.leadingContributor;
+  summary.mostPressuredPerspective = normalizeTopVote(value.mostPressuredPerspective) || summary.mostPressuredPerspective;
+  summary.suggestedArchivedPerspective = normalizeTopVote(value.suggestedArchivedPerspective) || summary.suggestedArchivedPerspective;
+  summary.shouldArchivePerspective = value.shouldArchivePerspective === true ? summary.shouldArchivePerspective : summary.shouldArchivePerspective;
+  return summary;
+}
+
+function normalizeVoteRows(value, fallback) {
+  return Array.isArray(value) ? value.map((row) => ({
+    targetSpeakerId: normalizeShortText(row?.targetSpeakerId, 80),
+    targetSpeakerName: normalizeShortText(row?.targetSpeakerName, 80),
+    count: Number(row?.count) || 0,
+    reasons: normalizeShortList(row?.reasons, 5),
+  })).filter((row) => row.targetSpeakerId && row.count > 0) : fallback || [];
+}
+
+function normalizeTopVote(value) {
+  if (!value || typeof value !== "object") return null;
+  const speakerId = normalizeShortText(value.speakerId || value.targetSpeakerId, 80);
+  if (!speakerId) return null;
+  return {
+    speakerId,
+    speakerName: normalizeShortText(value.speakerName || value.targetSpeakerName, 80),
+    count: Number(value.count) || 0,
+    reasonSummary: normalizeShortText(value.reasonSummary || value.reason, 180),
+  };
+}
+
+function normalizeRosterUpdate(value, voteSummary) {
+  const fallback = buildRosterUpdate(voteSummary);
+  if (!value || typeof value !== "object") return fallback;
+  if (value.shouldArchivePerspective !== true) return { shouldArchivePerspective: false, reason: normalizeShortText(value.reason, 200) || fallback.reason };
+  const archivedSpeakerId = normalizeShortText(value.archivedSpeakerId, 80) || fallback.archivedSpeakerId;
+  if (!archivedSpeakerId) return fallback;
+  return {
+    shouldArchivePerspective: fallback.shouldArchivePerspective,
+    archivedSpeakerId,
+    archivedSpeakerName: normalizeShortText(value.archivedSpeakerName, 80) || fallback.archivedSpeakerName,
+    reason: normalizeShortText(value.reason, 220) || fallback.reason,
+  };
+}
+
 function normalizeShortList(value, maxItems) {
   return Array.isArray(value)
     ? value.map((item) => normalizeShortText(item, 120)).filter(Boolean).slice(0, maxItems)
@@ -1013,6 +1240,159 @@ function normalizeMemberStates(value, sessionRoster) {
       changedMind: state.changedMind === true,
     }];
   }));
+}
+
+function createPlaceholderFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions }) {
+  const reintroduced = buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSummary });
+  const latestSummary = latestPhase?.blueWhaleSummary?.text || meetingMemory?.compactSummary || "";
+  const supported = voteSummary?.leadingContributor?.speakerName || activeRoster[0]?.englishName || activeRoster[0]?.name || "the leading contribution";
+  const pressured = voteSummary?.mostPressuredPerspective?.speakerName || observerRoster[0]?.englishName || observerRoster[0]?.name || "the most pressured perspective";
+  return {
+    provider: "placeholder",
+    actualProvider: "placeholder",
+    requestedProvider: "placeholder",
+    fallbackUsed: true,
+    fallbackReason: "Placeholder final recap used.",
+    finalReintroducedPerspective: reintroduced,
+    recap: {
+      decisionFrame: `The council reviewed: "${userQuestion}". The final recap uses compact meeting memory, voting signals, and observer status rather than a full transcript.`,
+      coreTension: latestPhase?.blueWhaleSummary?.strongestDisagreement || meetingMemory?.mainTension || "The core tension is between supported opportunity, practical risk, and what should be tested next.",
+      councilHighlights: [
+        `${supported} gained support as a useful contribution.`,
+        `${pressured} received the most concern pressure and remains useful as a caution.`,
+        reintroduced ? `${reintroduced.speakerName} was reintroduced because ${reintroduced.reasonForReintroduction}` : "No archived perspective needed reintroduction.",
+      ],
+      debateSnapshot: latestPhase?.blueWhaleSummary?.strongestDisagreement || "The council challenged optimistic and cautious perspectives until the next practical test became clearer.",
+      condensedReview: latestSummary || "The discussion narrowed toward a practical next step while preserving cautions from archived perspectives.",
+      finalRecommendation: "Treat the strongest supported view as a working direction, protect against the main caution, and test with a small reversible step.",
+      nextActions: ["Write the next test in one sentence.", "Name the risk that would stop the plan.", "Review the result before widening the commitment."],
+      whatNotToDo: ["Do not treat the recap as a command.", "Do not ignore the archived perspective.", "Do not expand before the smallest test produces a signal."],
+      reflectionNote: "This is a structured decision reflection. The final judgment remains yours.",
+    },
+    blueWhaleFinalNote: "Blue Whale used compact meeting memory, voting signals, and observer status to produce this recap.",
+  };
+}
+
+function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSummary }) {
+  const observer = Array.isArray(observerRoster) && observerRoster.length ? observerRoster[0] : null;
+  if (!observer) return null;
+  return {
+    speakerId: observer.id,
+    speakerName: observer.englishName || observer.name,
+    speakerChineseName: observer.name && observer.name !== observer.englishName ? observer.name : "",
+    role: observer.role,
+    reasonForReintroduction: voteSummary?.mostPressuredPerspective?.reasonSummary || "this archived perspective still speaks to the final tension",
+    finalReflection: `${observer.englishName || observer.name}: My archived perspective should still be checked before the final decision because ${observer.role} may reveal a missed constraint.`,
+  };
+}
+
+async function generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
+  const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
+  const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  const result = await env.AI.run(model, {
+    messages: [
+      { role: "system", content: "You are Blue Whale, the PDC facilitator. Return JSON only. Do not include markdown or hidden reasoning." },
+      { role: "user", content: prompt },
+    ],
+    max_tokens: 1200,
+  });
+  const parsed = parseJsonObject(extractCloudflareText(result));
+  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "cloudflare", modelName: model });
+}
+
+function buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions }) {
+  return `You are Blue Whale, the PDC facilitator.
+Generate the final Council Recap from compact PDC meeting memory.
+Do not restart from zero. Do not write a generic answer.
+Reflect actual tensions, challenges, votes, observer status, and any reintroduced perspective.
+If the user question or user guidance is Chinese, output Chinese. If both are English, output English.
+
+Decision question:
+${userQuestion}
+
+Mode:
+${modeLabel}
+
+Latest phase:
+${JSON.stringify(latestPhase || {}).slice(0, 1800)}
+
+Meeting memory:
+${JSON.stringify(meetingMemory || {}).slice(0, 1200)}
+
+Vote summary:
+${JSON.stringify(voteSummary || {}).slice(0, 1200)}
+
+Active roster:
+${activeRoster.map((p) => `${p.id}: ${p.englishName || p.name} — ${p.role}`).join("\n")}
+
+Archived perspectives:
+${observerRoster.map((p) => `${p.id}: ${p.englishName || p.name} — ${p.role}`).join("\n") || "None"}
+
+User guidance history:
+${(userInterventions || []).filter(Boolean).slice(-5).join("\n") || "None"}
+
+Return JSON only:
+{
+  "finalReintroducedPerspective": {
+    "speakerId": "",
+    "speakerName": "",
+    "speakerChineseName": "",
+    "role": "",
+    "reasonForReintroduction": "",
+    "finalReflection": ""
+  },
+  "recap": {
+    "decisionFrame": "",
+    "coreTension": "",
+    "councilHighlights": [],
+    "debateSnapshot": "",
+    "condensedReview": "",
+    "finalRecommendation": "",
+    "nextActions": [],
+    "whatNotToDo": [],
+    "reflectionNote": ""
+  },
+  "blueWhaleFinalNote": ""
+}`;
+}
+
+function normalizeFinalRecapResult(parsed, context) {
+  const fallback = createPlaceholderFinalRecap({ ...context, userQuestion: "", modeLabel: "", meetingMemory: null, userInterventions: [] });
+  const recap = parsed?.recap && typeof parsed.recap === "object" ? parsed.recap : {};
+  return {
+    provider: "cloudflare",
+    actualProvider: "cloudflare",
+    requestedProvider: context.requestedProvider,
+    fallbackUsed: false,
+    fallbackReason: "",
+    modelName: context.modelName,
+    finalReintroducedPerspective: normalizeReintroduced(parsed?.finalReintroducedPerspective, context.observerRoster) || fallback.finalReintroducedPerspective,
+    recap: {
+      decisionFrame: normalizeShortText(recap.decisionFrame, 900),
+      coreTension: normalizeShortText(recap.coreTension, 900),
+      councilHighlights: normalizeShortList(recap.councilHighlights, 8),
+      debateSnapshot: normalizeShortText(recap.debateSnapshot, 900),
+      condensedReview: normalizeShortText(recap.condensedReview, 900),
+      finalRecommendation: normalizeShortText(recap.finalRecommendation, 900),
+      nextActions: normalizeShortList(recap.nextActions, 6),
+      whatNotToDo: normalizeShortList(recap.whatNotToDo, 6),
+      reflectionNote: normalizeShortText(recap.reflectionNote, 500) || "The final judgment remains yours.",
+    },
+    blueWhaleFinalNote: normalizeShortText(parsed?.blueWhaleFinalNote, 500),
+  };
+}
+
+function normalizeReintroduced(value, observerRoster) {
+  if (!value || typeof value !== "object") return buildFinalReintroducedPerspective({ observerRoster });
+  if (!normalizeShortText(value.speakerId, 80) && (!observerRoster || !observerRoster.length)) return null;
+  return {
+    speakerId: normalizeShortText(value.speakerId, 80),
+    speakerName: normalizeShortText(value.speakerName, 100),
+    speakerChineseName: normalizeShortText(value.speakerChineseName, 100),
+    role: normalizeShortText(value.role, 120),
+    reasonForReintroduction: normalizeShortText(value.reasonForReintroduction, 300),
+    finalReflection: normalizeShortText(value.finalReflection, 600),
+  };
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {

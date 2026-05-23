@@ -460,6 +460,14 @@ body:not(.founder-mode) .founder-public-entry {
   font-size: 1.08rem;
 }
 
+.pdc-roster-panel h3 {
+  margin: 12px 0 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 880;
+  text-transform: uppercase;
+}
+
 .pdc-roster-list {
   display: grid;
   gap: 8px;
@@ -491,6 +499,11 @@ body:not(.founder-mode) .founder-public-entry {
   border-color: rgba(211, 111, 77, 0.48);
   background: rgba(255, 246, 229, 0.92);
   box-shadow: inset 3px 0 0 var(--coral);
+}
+
+.pdc-roster-row.is-observer {
+  opacity: 0.72;
+  background: rgba(246, 240, 228, 0.54);
 }
 
 .pdc-table-topic {
@@ -686,6 +699,55 @@ body:not(.founder-mode) .founder-public-entry {
   border-radius: 8px;
   padding: 12px;
   background: rgba(255, 250, 240, 0.72);
+}
+
+.pdc-vote-snapshot,
+.pdc-reintroduced {
+  border: 1px solid rgba(15, 107, 87, 0.14);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(255, 250, 240, 0.78);
+}
+
+.pdc-vote-snapshot h3,
+.pdc-reintroduced h2 {
+  margin: 0 0 10px;
+  color: var(--green-dark);
+  font-size: 1rem;
+}
+
+.pdc-vote-snapshot {
+  display: grid;
+  gap: 10px;
+}
+
+.pdc-vote-snapshot strong {
+  color: var(--green-dark);
+  font-size: 0.86rem;
+}
+
+.pdc-vote-snapshot p,
+.pdc-vote-snapshot small,
+.pdc-reintroduced p,
+.pdc-reintroduced blockquote {
+  margin: 4px 0 0;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.pdc-vote-snapshot small,
+.pdc-role-line {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.pdc-reintroduced {
+  margin-top: 18px;
+}
+
+.pdc-reintroduced blockquote {
+  border-left: 3px solid rgba(15, 107, 87, 0.34);
+  padding-left: 12px;
 }
 
 .pdc-phase-guidance label {
