@@ -1771,6 +1771,21 @@ function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSu
   };
 }
 
+async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
+  const model = getOpenAiModel(env);
+  const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  const parsed = await callOpenAiJson({
+    env,
+    model,
+    instructions: "You are Blue Whale, the PDC facilitator. Generate a concise final Council Recap from the actual phase memory, votes, and observer status. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
+    prompt,
+    schemaName: "pdc_final_recap",
+    schema: pdcFinalRecapSchema,
+    maxOutputTokens: 1800,
+  });
+  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "openai", actualProvider: "openai", modelName: model });
+}
+
 async function generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
   const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
@@ -1782,7 +1797,7 @@ async function generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, a
     max_tokens: 1200,
   });
   const parsed = parseJsonObject(extractCloudflareText(result));
-  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "cloudflare", modelName: model });
+  return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "cloudflare", actualProvider: "cloudflare", modelName: model });
 }
 
 function buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions }) {
@@ -1844,9 +1859,10 @@ Return JSON only:
 function normalizeFinalRecapResult(parsed, context) {
   const fallback = createPlaceholderFinalRecap({ ...context, userQuestion: "", modeLabel: "", meetingMemory: null, userInterventions: [] });
   const recap = parsed?.recap && typeof parsed.recap === "object" ? parsed.recap : {};
+  const actualProvider = context.actualProvider || context.requestedProvider || "cloudflare";
   return {
-    provider: "cloudflare",
-    actualProvider: "cloudflare",
+    provider: actualProvider,
+    actualProvider,
     requestedProvider: context.requestedProvider,
     fallbackUsed: false,
     fallbackReason: "",

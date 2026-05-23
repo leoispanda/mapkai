@@ -234,6 +234,12 @@ Important behavior:
 When PDC_DIALOGUE_PROVIDER=openai and fallbackUsed=false, visible dialogue should come from OpenAI-normalized text, not persona placeholder statements. Persona defaults are only injected for missing/empty speaker text and are reported in Founder diagnostics. If OpenAI returns known default template text after retry, the OpenAI call is treated as unusable and falls back instead of silently displaying placeholder-looking text as successful OpenAI output.
 ```
 
+Latest final recap fix:
+
+```text
+OpenAI Stop & Summarize now has a real generateOpenAiFinalRecap implementation. When PDC_DIALOGUE_PROVIDER=openai and OPENAI_API_KEY exists, final recap uses the OpenAI Responses API and normalizes with actualProvider/provider=openai. Cloudflare remains the fallback path only if OpenAI is missing or fails.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.
