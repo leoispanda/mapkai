@@ -4151,19 +4151,18 @@ function renderPdcPersonaProfile(persona) {
   if (!persona) {
     return `
       <aside class="pdc-profile-panel" aria-live="polite">
-        <h2>Council Member Profile</h2>
-        <p>Select a participant to inspect their role in this discussion.</p>
+        <h2>Member Profile</h2>
+        <p>Select a council member to view their role.</p>
       </aside>`;
   }
   return `
     <aside class="pdc-profile-panel is-open" aria-live="polite">
-      <h2>Council Member Profile</h2>
+      <h2>Member Profile</h2>
       <dl>
-        <dt>English name</dt><dd>${escapeHtml(persona.englishName || "-")}</dd>
-        ${persona.name && persona.name !== persona.englishName ? `<dt>Chinese name</dt><dd>${escapeHtml(persona.name)}</dd>` : ""}
+        <dt>Name</dt><dd>${escapeHtml(persona.englishName || persona.name || "-")}${persona.name && persona.name !== persona.englishName ? ` / ${escapeHtml(persona.name)}` : ""}</dd>
         <dt>Role</dt><dd>${escapeHtml(persona.role || "-")}</dd>
         <dt>Responsibility</dt><dd>${escapeHtml(persona.responsibility || "-")}</dd>
-        <dt>Placeholder statement</dt><dd>${escapeHtml(persona.statement || "-")}</dd>
+        <dt>Statement</dt><dd>${escapeHtml(persona.statement || "-")}</dd>
       </dl>
     </aside>`;
 }

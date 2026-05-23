@@ -1819,3 +1819,11 @@ Push status:
 - Blue Whale summary appears after each completed round.
 - Preserved PDC access pass lifecycle, Founder direct access, Founder PDC Access Panel, PDC APIs, D1 schema, feedback flow, and Council Recap sections.
 - Synced root/public frontend files after updating script and styles.
+
+## 2026-05-23 - Tighten PDC split-view layout
+- Fixed the PDC Council Room split view so desktop and tablet widths keep a left roster panel plus right dialogue panel instead of stacking the roster above dialogue too early.
+- Reduced oversized PDC Council Room, Live Council Dialogue, and profile headings.
+- Made the selected member profile a compact left-panel card titled Member Profile.
+- Kept the dialogue panel as the main visual area with decision, current round, dialogue rows, controls, and round summary.
+- On mobile, the layout stacks with dialogue first and roster/profile after it.
+- Preserved PDC access pass flow, Founder direct access, Founder Panel, APIs, D1 schema, feedback, and Council Recap behavior.

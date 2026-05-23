@@ -223,7 +223,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-shell {
-  width: min(1120px, 100%);
+  width: min(1240px, 100%);
   margin: 0 auto;
 }
 
@@ -241,8 +241,7 @@ body:not(.founder-mode) .founder-public-entry {
   padding: clamp(26px, 5vw, 48px);
 }
 
-.pdc-card h1,
-.pdc-result h1 {
+.pdc-card h1 {
   margin: 0;
   color: var(--green-dark);
   font-size: clamp(2.1rem, 4vw, 3.7rem);
@@ -361,13 +360,20 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-result {
-  padding: clamp(24px, 5vw, 44px);
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.pdc-result h1 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  line-height: 1.12;
 }
 
 .pdc-council-room {
   border: 1px solid rgba(218, 207, 185, 0.92);
   border-radius: 8px;
-  padding: clamp(22px, 4vw, 40px);
+  padding: clamp(18px, 3vw, 28px);
   background:
     linear-gradient(180deg, rgba(255, 250, 240, 0.95), rgba(237, 244, 233, 0.82)),
     var(--surface);
@@ -375,27 +381,27 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-room-heading {
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .pdc-room-heading h1 {
   margin: 0;
   color: var(--green-dark);
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.08;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  line-height: 1.12;
 }
 
 .pdc-room-heading p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 1.04rem;
-  line-height: 1.6;
+  font-size: 0.96rem;
+  line-height: 1.5;
 }
 
 .pdc-live-room {
   display: grid;
-  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  grid-template-columns: minmax(280px, 330px) minmax(0, 1fr);
   gap: 18px;
-  margin-top: 26px;
+  margin-top: 20px;
   align-items: start;
 }
 
@@ -409,12 +415,15 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-roster-panel {
   padding: 14px;
+  position: sticky;
+  top: 18px;
 }
 
 .pdc-dialogue-panel {
   display: grid;
   gap: 14px;
   padding: clamp(16px, 3vw, 24px);
+  min-width: 0;
 }
 
 .pdc-facilitator-row {
@@ -458,13 +467,13 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-roster-row {
   display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 10px;
+  grid-template-columns: 34px 1fr;
+  gap: 9px;
   align-items: center;
-  min-height: 62px;
+  min-height: 54px;
   border: 1px solid rgba(15, 107, 87, 0.12);
   border-radius: 8px;
-  padding: 8px;
+  padding: 7px 8px;
   background: rgba(255, 255, 255, 0.46);
   color: var(--ink);
   font: inherit;
@@ -512,8 +521,8 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-avatar {
   display: grid;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   place-items: center;
   border-radius: 999px;
   background: var(--green);
@@ -524,8 +533,8 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-roster-copy {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0 4px;
+  grid-template-columns: 1fr;
+  gap: 1px;
   min-width: 0;
 }
 
@@ -539,20 +548,19 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-roster-copy strong {
   color: var(--green-dark);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   line-height: 1.2;
 }
 
 .pdc-roster-copy small {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 760;
 }
 
 .pdc-roster-copy em {
-  grid-column: 1 / -1;
   color: var(--coral);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-style: normal;
   font-weight: 850;
 }
@@ -568,7 +576,7 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-dialogue-panel-head h2 {
   margin: 2px 0 0;
   color: var(--green-dark);
-  font-size: 1.45rem;
+  font-size: 1.18rem;
 }
 
 .pdc-provider-label {
@@ -589,7 +597,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-dialogue-board {
-  min-height: 280px;
+  min-height: 250px;
 }
 
 .pdc-dialogue-board ol {
@@ -665,41 +673,45 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-profile-panel {
-  margin-top: 16px;
+  margin-top: 12px;
   border: 1px solid rgba(15, 107, 87, 0.16);
   border-radius: 8px;
-  padding: 16px;
+  padding: 12px;
   background: rgba(255, 250, 240, 0.86);
 }
 
 .pdc-profile-panel h2 {
   margin: 0 0 8px;
   color: var(--green-dark);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .pdc-profile-panel p {
   margin: 0;
   color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .pdc-profile-panel dl {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 8px 14px;
+  grid-template-columns: 1fr;
+  gap: 4px;
   margin: 0;
 }
 
 .pdc-profile-panel dt {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 820;
+  text-transform: uppercase;
 }
 
 .pdc-profile-panel dd {
-  margin: 0;
+  margin: 0 0 6px;
   color: var(--ink);
-  line-height: 1.45;
+  font-size: 0.86rem;
+  line-height: 1.42;
 }
 
 .pdc-recap-sections {
@@ -2420,17 +2432,17 @@ canvas {
   }
 
   .pdc-mode-grid,
-  .pdc-usage-grid,
+  .pdc-usage-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pdc-live-room {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(260px, 310px) minmax(0, 1fr);
+    gap: 14px;
   }
 
-  .pdc-roster-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .pdc-profile-panel dl {
-    grid-template-columns: 1fr;
+  .pdc-roster-panel {
+    position: static;
   }
 
   .field-hero,
@@ -2474,6 +2486,19 @@ canvas {
   .field-list,
   .passport-panel dl {
     grid-template-columns: 1fr;
+  }
+
+  .pdc-live-room {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pdc-dialogue-panel {
+    order: 1;
+  }
+
+  .pdc-roster-panel {
+    order: 2;
   }
 
   .pdc-roster-list,
