@@ -1131,11 +1131,13 @@ function getPlaceholderStanceType(persona) {
 async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const model = getOpenAiModel(env);
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  let retryUsed = false;
   let parsed = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   let normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai" });
   const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
     || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9);
   if (shouldRetry) {
+    retryUsed = true;
     parsed = await requestOpenAiDialogueJson({
       env,
       model,
@@ -1157,12 +1159,13 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
   if (normalized.contentDiagnostics?.defaultTemplateMatched) {
     throw new Error("OpenAI output matched default template");
   }
+  if (retryUsed && normalized.contentDiagnostics) normalized.contentDiagnostics.retryUsed = true;
   return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
 }
 
 async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
   const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, provider: "openai", retryReason });
-  return callOpenAiJson({
+  return callOpenAiJsonWithRetry({
     env,
     model,
     instructions: "You write concise structured PDC decision reflection dialogue for the user's exact decision question. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
@@ -1170,6 +1173,7 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
     maxOutputTokens: 1500,
+    retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
   });
 }
 
@@ -1357,7 +1361,7 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
         format: {
           type: "json_schema",
           name: schemaName,
-          strict: false,
+          strict: true,
           schema,
         },
       },
@@ -1370,6 +1374,38 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
   }
   const text = extractOpenAiText(payload);
   return parseJsonObject(text);
+}
+
+async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryInstructions }) {
+  try {
+    return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens });
+  } catch (error) {
+    if (!isJsonParseError(error)) throw error;
+    const retryPrompt = `${prompt}
+
+JSON repair retry:
+${retryInstructions || "Return only one complete valid JSON object for the schema. No markdown or extra text."}`;
+    try {
+      return await callOpenAiJson({
+        env,
+        model,
+        instructions: `${instructions} ${retryInstructions || "Return only valid JSON."}`,
+        prompt: retryPrompt,
+        schemaName,
+        schema,
+        maxOutputTokens,
+      });
+    } catch (retryError) {
+      if (isJsonParseError(retryError)) {
+        retryError.message = `OpenAI JSON retry failed: ${retryError.message}`;
+      }
+      throw retryError;
+    }
+  }
+}
+
+function isJsonParseError(error) {
+  return /json|expected|unexpected|unterminated|parse|position/i.test(String(error?.message || ""));
 }
 
 function extractOpenAiText(payload) {
@@ -1774,7 +1810,7 @@ function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSu
 async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
   const model = getOpenAiModel(env);
   const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
-  const parsed = await callOpenAiJson({
+  const parsed = await callOpenAiJsonWithRetry({
     env,
     model,
     instructions: "You are Blue Whale, the PDC facilitator. Generate a concise final Council Recap from the actual phase memory, votes, and observer status. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
@@ -1782,6 +1818,7 @@ async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activ
     schemaName: "pdc_final_recap",
     schema: pdcFinalRecapSchema,
     maxOutputTokens: 1800,
+    retryInstructions: "The previous final recap response was invalid JSON. Return only one complete valid JSON object matching the final recap schema, with strings and arrays only where requested. No markdown or extra text.",
   });
   return normalizeFinalRecapResult(parsed, { activeRoster, observerRoster, latestPhase, voteSummary, requestedProvider: "openai", actualProvider: "openai", modelName: model });
 }

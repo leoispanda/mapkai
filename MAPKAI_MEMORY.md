@@ -240,6 +240,12 @@ Latest final recap fix:
 OpenAI Stop & Summarize now has a real generateOpenAiFinalRecap implementation. When PDC_DIALOGUE_PROVIDER=openai and OPENAI_API_KEY exists, final recap uses the OpenAI Responses API and normalizes with actualProvider/provider=openai. Cloudflare remains the fallback path only if OpenAI is missing or fails.
 ```
 
+Latest OpenAI JSON stability fix:
+
+```text
+OpenAI phase dialogue and final recap now use strict structured-output schema calls and retry once inside the OpenAI path when the first response cannot be parsed as JSON. This prevents a single malformed model JSON response from immediately falling through to Cloudflare/placeholder.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.
