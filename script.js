@@ -4388,6 +4388,8 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     providerErrorShort: data.providerErrorShort,
     jsonParseFailed: data.jsonParseFailed,
     modelName: data.modelName,
+    schemaName: data.schemaName || data.contentDiagnostics?.schemaName || "",
+    strict: data.strict === true || data.contentDiagnostics?.strict === true,
     contentDiagnostics: data.contentDiagnostics || null,
   };
   const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention, contentDiagnostics: data.contentDiagnostics || null }, pdcState.pdcPhases.length, room);
@@ -4782,7 +4784,7 @@ function renderPdcProviderDiagnostics() {
     <section class="pdc-founder-phase-debug">
       ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
-      <p>Model: ${escapeHtml(final?.modelName || phase?.modelName || "-")} · JSON parse failed: ${(final?.jsonParseFailed || phase?.jsonParseFailed) ? "yes" : "no"}${(final?.providerErrorShort || phase?.providerErrorShort) ? ` · Error: ${escapeHtml(final?.providerErrorShort || phase?.providerErrorShort)}` : ""}</p>
+      <p>Model: ${escapeHtml(final?.modelName || phase?.modelName || "-")} · JSON parse failed: ${(final?.jsonParseFailed || phase?.jsonParseFailed) ? "yes" : "no"} · Schema: ${escapeHtml(final?.schemaName || phase?.schemaName || phase?.contentDiagnostics?.schemaName || "-")} · Strict: ${(final?.strict || phase?.strict || phase?.contentDiagnostics?.strict) ? "true" : "false"}${(final?.providerErrorShort || phase?.providerErrorShort) ? ` · Error: ${escapeHtml(final?.providerErrorShort || phase?.providerErrorShort)}` : ""}</p>
       ${phase?.contentDiagnostics ? `<p>OpenAI returned statement count: ${Number(phase.contentDiagnostics.modelStatementCount || 0)} · Normalized statement count: ${Number(phase.contentDiagnostics.normalizedStatementCount || 0)} · Default statements injected: ${phase.contentDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phase.contentDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phase.contentDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phase.contentDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${phase.contentDiagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
     </section>`;
 }
@@ -4869,6 +4871,8 @@ async function startPdcExperience() {
       providerErrorShort: data.recap.providerErrorShort,
       jsonParseFailed: data.recap.jsonParseFailed,
       modelName: data.recap.modelName,
+      schemaName: data.recap.schemaName || data.recap.contentDiagnostics?.schemaName || "",
+      strict: data.recap.strict === true || data.recap.contentDiagnostics?.strict === true,
       contentDiagnostics: data.recap.contentDiagnostics || null,
     } : null;
     pdcState.userInterventions = [];

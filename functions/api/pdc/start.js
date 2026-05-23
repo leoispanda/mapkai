@@ -156,6 +156,8 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
       providerErrorShort: result.providerErrorShort || "",
       jsonParseFailed: result.jsonParseFailed === true,
       modelName: result.modelName || "",
+      schemaName: result.schemaName || "",
+      strict: result.strict === true,
       ...(isFounderPreview ? { contentDiagnostics: result.contentDiagnostics || null } : {}),
     });
   } catch (error) {

@@ -246,6 +246,12 @@ Latest OpenAI JSON stability fix:
 OpenAI phase dialogue and final recap now use strict structured-output schema calls and retry once inside the OpenAI path when the first response cannot be parsed as JSON. This prevents a single malformed model JSON response from immediately falling through to Cloudflare/placeholder.
 ```
 
+Latest deployed verification follow-up:
+
+```text
+Founder Preview showed actualProvider=openai but modelStatementCount=0 and all dialogue lines injected from persona defaults. The fix now rejects OpenAI phase results that still lack required dialogue statements after retry, treats missing output_text in a Responses API envelope as retryable, and exposes schemaName/strict in Founder diagnostics.
+```
+
 PDC implementation notes:
 
 - Hidden user route: `/pdc-pilot?pass=PASS_CODE`.

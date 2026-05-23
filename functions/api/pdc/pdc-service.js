@@ -661,7 +661,7 @@ function resolveFallbackProvider(env = {}, failedProvider = "") {
 
 function getProviderFallbackReason(message) {
   if (/json/i.test(message)) return "invalid JSON";
-  if (/no usable lines|missing required/i.test(message)) return "missing required fields";
+  if (/no usable lines|missing required|missing.*dialogue/i.test(message)) return "missing required fields";
   if (/vote/i.test(message)) return "vote normalization failed";
   return "Cloudflare call failed";
 }
@@ -669,6 +669,7 @@ function getProviderFallbackReason(message) {
 function getOpenAiFallbackReason(message) {
   if (/default template/i.test(message)) return "OpenAI output matched default template";
   if (/json/i.test(message)) return "invalid JSON";
+  if (/missing.*dialogue|missing required/i.test(message)) return "OpenAI response missing required dialogue statements";
   if (/401|403|auth|api key/i.test(message)) return "OpenAI authentication failed";
   if (/429|rate/i.test(message)) return "OpenAI rate limit";
   if (/missing OPENAI_API_KEY/i.test(message)) return "missing OPENAI_API_KEY";
@@ -1159,6 +1160,9 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, userQu
   if (normalized.contentDiagnostics?.defaultTemplateMatched) {
     throw new Error("OpenAI output matched default template");
   }
+  if (normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9)) {
+    throw new Error("OpenAI response missing required dialogue statements");
+  }
   if (retryUsed && normalized.contentDiagnostics) normalized.contentDiagnostics.retryUsed = true;
   return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
 }
@@ -1405,7 +1409,7 @@ ${retryInstructions || "Return only one complete valid JSON object for the schem
 }
 
 function isJsonParseError(error) {
-  return /json|expected|unexpected|unterminated|parse|position/i.test(String(error?.message || ""));
+  return /json|expected|unexpected|unterminated|parse|position|missing output_text/i.test(String(error?.message || ""));
 }
 
 function extractOpenAiText(payload) {
@@ -1420,7 +1424,9 @@ function extractOpenAiText(payload) {
       if (typeof part?.output_text === "string") parts.push(part.output_text);
     });
   });
-  return parts.join("\n") || JSON.stringify(payload);
+  const text = parts.join("\n").trim();
+  if (text) return text;
+  throw new Error("OpenAI response missing output_text");
 }
 
 function parseJsonObject(value) {
@@ -1570,6 +1576,8 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
     canStopAndSummarize: true,
     contentDiagnostics: {
       provider: sourceProvider,
+      schemaName: sourceProvider === "openai" ? "pdc_phase_dialogue" : "",
+      strict: sourceProvider === "openai",
       modelStatementCount: normalizedLines.length,
       normalizedStatementCount: dialogueWithVotes.length,
       defaultStatementsInjected: missingLines.length > 0,
@@ -1904,6 +1912,8 @@ function normalizeFinalRecapResult(parsed, context) {
     fallbackUsed: false,
     fallbackReason: "",
     modelName: context.modelName,
+    schemaName: actualProvider === "openai" ? "pdc_final_recap" : "",
+    strict: actualProvider === "openai",
     finalReintroducedPerspective: normalizeReintroduced(parsed?.finalReintroducedPerspective, context.observerRoster) || fallback.finalReintroducedPerspective,
     recap: {
       decisionFrame: normalizeRecapText(recap.decisionFrame, 900),
