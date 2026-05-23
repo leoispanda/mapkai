@@ -270,6 +270,16 @@ Latest Founder Preview follow-up:
 - Ordinary users without Founder Mode still need a valid unused pass; adding `founderPreview=1` alone does not unlock the page.
 - Founder preview feedback is not saved into invited-user feedback summary.
 
+Latest PDC dialogue provider follow-up:
+
+- PDC dialogue generation now has a provider layer in `functions/api/pdc/pdc-service.js`.
+- `PDC_DIALOGUE_PROVIDER` supports `placeholder`, `cloudflare`, and `openai`; only placeholder and Cloudflare Workers AI are implemented. OpenAI remains a TODO.
+- Default provider is placeholder.
+- To enable Cloudflare Workers AI, configure a Pages Functions binding named `AI` and set `PDC_DIALOGUE_PROVIDER=cloudflare`.
+- Optional model override: `PDC_CLOUDFLARE_MODEL`; default is `@cf/meta/llama-3.1-8b-instruct`.
+- If Cloudflare Workers AI is missing, returns invalid JSON, or fails, PDC falls back to placeholder dialogue and still returns a usable Council Room result.
+- Workers AI is used only for short table dialogue lines and Blue Whale Summary text; Council Recap remains the existing structured placeholder for now.
+
 Verified:
 
 - `node --check script.js`

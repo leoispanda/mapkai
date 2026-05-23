@@ -375,6 +375,9 @@ export const pdcRhythmFoundation = {
   recapOnly: ["decision_frame", "core_tension", "council_highlights", "debate_snapshot", "condensed_review", "final_recommendation", "next_actions", "what_not_to_do", "reflection_note"],
 };
 
+const allowedDialogueProviders = new Set(["placeholder", "cloudflare", "openai"]);
+const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
+
 // TODO:
 // - Add full unified persona library.
 // - Add Leo-controlled persona creation/update flow.
@@ -401,43 +404,46 @@ export function resolveFacilitator(modeId) {
   return pdcPersonaLibrary.find((persona) => persona.id === mode.facilitatorId && persona.isFacilitator) || pdcPersonaLibrary.find((persona) => persona.id === "blue-whale");
 }
 
-export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder }) {
+export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, env }) {
   const mode = pdcModes[modeId] || pdcModes.personal;
   const roster = resolveSessionRoster({ modeId: mode.id, sessionRoster });
   const facilitator = resolveFacilitator(mode.id);
 
-  if (isPlaceholder) {
-    return createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion });
-  }
-
-  // Future live mode:
-  // - Require OPENAI_API_KEY from server-side environment.
-  // - Use OPENAI_MODEL or a safe default.
-  // - Build a one-shot PDC prompt around pdcRhythmFoundation, pdcModes, facilitator, and sessionRoster.
-  // - Return only the curated Council Recap, never the hidden deliberation transcript.
-  throw new Error("Live PDC API mode is not connected yet.");
+  return createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, env });
 }
 
-function createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion }) {
+async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, env }) {
   const isCompany = mode.id === "company";
   const trimmedQuestion = String(userQuestion || "").replace(/\s+/g, " ").trim();
   const safeQuestion = trimmedQuestion.length > 520 ? `${trimmedQuestion.slice(0, 520)}...` : trimmedQuestion;
   const personas = roster.map((persona) => toCouncilRoomPersona(persona, mode.id));
-  const facilitatorSummary = facilitator?.placeholderSummary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.";
-  const dialogue = buildPlaceholderDialogue({ modeId: mode.id, personas });
+  const dialogueResult = await generatePdcDialogue({
+    modeId: mode.id,
+    modeLabel: mode.label,
+    sessionRoster: personas,
+    userQuestion: safeQuestion,
+    provider: resolveDialogueProvider(env),
+    env,
+  });
+  const facilitatorSummary = dialogueResult.blueWhaleSummary?.text || facilitator?.placeholderSummary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.";
 
   return {
     title: "Council Recap",
     modeId: mode.id,
     modeLabel: mode.label,
     isPlaceholder: true,
-    placeholderNotice: "Development placeholder output — live PDC API is not connected yet.",
+    dialogueProvider: dialogueResult.provider,
+    placeholderNotice: isPlaceholder
+      ? "Development placeholder output — live PDC API is not connected yet."
+      : "Council Recap placeholder output — live final memo generation is not connected yet.",
     councilRoom: {
       title: "PDC Council Room",
       subtitle: "Your decision is placed on the table. The council reviews it from multiple perspectives.",
       decisionOnTable: safeQuestion,
       personas,
-      dialogue,
+      dialogueProvider: dialogueResult.provider,
+      currentRoundLabel: dialogueResult.currentRoundLabel,
+      dialogue: dialogueResult.dialogue,
       facilitator: facilitator
         ? {
             id: facilitator.id,
@@ -445,11 +451,38 @@ function createPlaceholderCouncilRecap({ mode, roster, facilitator, userQuestion
             englishName: facilitator.englishName,
             role: facilitator.role,
             summary: facilitatorSummary,
+            summaryTitle: dialogueResult.blueWhaleSummary?.title || "Blue Whale Summary",
           }
         : null,
     },
     recap: buildPlaceholderSections({ isCompany, safeQuestion, personas }),
   };
+}
+
+function resolveDialogueProvider(env = {}) {
+  const requested = String(env.PDC_DIALOGUE_PROVIDER || "placeholder").trim().toLowerCase();
+  return allowedDialogueProviders.has(requested) ? requested : "placeholder";
+}
+
+export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, userQuestion, provider, env }) {
+  const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster });
+
+  if (provider === "cloudflare") {
+    if (!env?.AI) return fallback;
+    try {
+      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, env });
+    } catch (error) {
+      console.error("PDC Cloudflare dialogue provider failed:", error);
+      return fallback;
+    }
+  }
+
+  if (provider === "openai") {
+    // TODO: Add server-side OpenAI dialogue provider later.
+    return fallback;
+  }
+
+  return fallback;
 }
 
 function toCouncilRoomPersona(persona, modeId) {
@@ -496,6 +529,148 @@ function buildPlaceholderDialogue({ modeId, personas }) {
       };
     })
     .filter(Boolean);
+}
+
+function createPlaceholderDialogueResult({ modeId, sessionRoster }) {
+  return {
+    provider: "placeholder",
+    modeId,
+    currentRoundLabel: "Opening Round",
+    dialogue: buildPlaceholderDialogue({ modeId, personas: sessionRoster }),
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.",
+    },
+  };
+}
+
+async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, env }) {
+  // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
+  // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
+  const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
+  const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion });
+  const result = await env.AI.run(model, {
+    messages: [
+      {
+        role: "system",
+        content: "You write concise structured decision reflection dialogue. Return JSON only. Do not include markdown, hidden reasoning, or professional advice claims.",
+      },
+      {
+        role: "user",
+        content: prompt,
+      },
+    ],
+    max_tokens: 900,
+  });
+  const rawText = extractCloudflareText(result);
+  const parsed = parseJsonObject(rawText);
+  return normalizeCloudflareDialogue({ modeId, sessionRoster, parsed });
+}
+
+function buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion }) {
+  const personaLines = sessionRoster
+    .map((persona) => `- ${persona.id}: ${persona.englishName || persona.name}${persona.name && persona.name !== persona.englishName ? ` / ${persona.name}` : ""} — ${persona.role}`)
+    .join("\n");
+
+  return `Generate short visible PDC Council Room dialogue for the table.
+
+Decision question:
+${userQuestion}
+
+Mode:
+${modeLabel}
+
+Council members:
+${personaLines}
+
+Return JSON only with this shape:
+{
+  "currentRoundLabel": "Opening Round",
+  "dialogue": [
+    { "speakerId": "persona-id", "text": "one short sentence" }
+  ],
+  "blueWhaleSummary": { "text": "max two short sentences" }
+}
+
+Rules:
+- Include one line for each listed council member if possible.
+- Each dialogue text must be one short sentence.
+- Blue Whale summary must be at most two short sentences.
+- Keep the tone calm, professional, and exploratory.
+- Do not produce a final memo.
+- Do not expose hidden reasoning.
+- Do not use markdown.`;
+}
+
+function extractCloudflareText(result) {
+  if (!result) return "";
+  if (typeof result === "string") return result;
+  if (typeof result.response === "string") return result.response;
+  if (typeof result.result === "string") return result.result;
+  if (Array.isArray(result.response)) return result.response.join("\n");
+  return JSON.stringify(result);
+}
+
+function parseJsonObject(value) {
+  const text = String(value || "").trim();
+  if (!text) throw new Error("Empty dialogue response");
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error("Dialogue response did not contain JSON");
+    return JSON.parse(match[0]);
+  }
+}
+
+function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed }) {
+  const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
+  const rawLines = Array.isArray(parsed?.dialogue) ? parsed.dialogue : [];
+  const normalizedLines = rawLines
+    .map((line) => {
+      const persona = byId.get(String(line?.speakerId || "").trim());
+      const text = normalizeShortText(line?.text, 180);
+      if (!persona || !text) return null;
+      return {
+        speakerId: persona.id,
+        speakerName: persona.englishName || persona.name,
+        speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+        speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+        role: persona.role,
+        text,
+      };
+    })
+    .filter(Boolean);
+
+  const missingLines = sessionRoster
+    .filter((persona) => !normalizedLines.some((line) => line.speakerId === persona.id))
+    .slice(0, Math.max(0, 9 - normalizedLines.length))
+    .map((persona) => ({
+      speakerId: persona.id,
+      speakerName: persona.englishName || persona.name,
+      speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      role: persona.role,
+      text: normalizeShortText(persona.statement, 180),
+    }));
+
+  const dialogue = [...normalizedLines, ...missingLines].slice(0, 9);
+  if (!dialogue.length) throw new Error("Dialogue response had no usable lines");
+
+  return {
+    provider: "cloudflare",
+    modeId,
+    currentRoundLabel: normalizeShortText(parsed?.currentRoundLabel, 80) || "Opening Round",
+    dialogue,
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: normalizeShortText(parsed?.blueWhaleSummary?.text, 260) || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions.",
+    },
+  };
+}
+
+function normalizeShortText(value, maxLength) {
+  return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
 function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {
