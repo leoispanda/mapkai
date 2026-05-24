@@ -2044,3 +2044,8 @@ Push status:
 - The selected member profile now renders directly below the selected active member or observer card on desktop and mobile.
 - The expanded inline profile spans the full Council Members column, with slightly larger padding/type for readability and no duplicate bottom or side-panel render path.
 - Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, OpenAI provider, strict schema, model, D1/pass lifecycle, observer transition, voting, prompts, final recap, or Perspective Trail data logic changed.
+
+## 2026-05-24 - Force selected PDC profile below selected card
+- Added a scoped CSS override for `.pdc-roster-item.has-profile` so the selected member wrapper is always a vertical flex stack, never a desktop two-column grid/flex row.
+- Forced both the selected roster card and `.pdc-profile-inline` to span 100% of the Council Members column with `grid-column: 1 / -1`, preventing old desktop grid rules from placing the profile beside the card.
+- Synced `styles.css` and `public/styles.css`; no render path, PDC logic, provider, schema, model, D1/pass lifecycle, observer behavior, voting, prompts, final recap, or Perspective Trail data logic changed.
