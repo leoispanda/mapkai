@@ -4235,7 +4235,6 @@ function renderPdcCouncilRoom(recap) {
                   ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true, false, selectedPersona)).join("")}
                 </div>` : ""}
             </div>
-            ${selectedPersona ? `<div class="pdc-roster-profile-slot">${renderPdcPersonaProfile(selectedPersona, "desktop")}</div>` : ""}
           </div>
         </aside>
         <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
@@ -4379,7 +4378,7 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
           <em>${escapeHtml(persona.role || "Council Member")}</em>
         </span>
       </button>
-      ${isSelected && selectedPersona ? renderPdcPersonaProfile(selectedPersona, "inline") : ""}
+      ${isSelected && selectedPersona ? renderPdcPersonaProfile(selectedPersona) : ""}
     </div>`;
 }
 
@@ -5183,14 +5182,13 @@ function applyPdcFinalMemoryToRecap(recap) {
   };
 }
 
-function renderPdcPersonaProfile(persona, placement = "inline") {
+function renderPdcPersonaProfile(persona) {
   if (!persona) return "";
   const observerInfo = pdcState.observerRosterIds.includes(persona.id) ? getPdcObserverArchiveInfo(persona.id) : null;
   const history = getPdcMemberHistory(persona.id);
   const currentStance = getPdcCurrentMemberStance(persona.id, history);
-  const placementClass = placement === "inline" ? "pdc-profile-inline" : "pdc-profile-desktop";
   return `
-    <aside class="pdc-profile-panel ${placementClass} is-open" aria-live="polite">
+    <aside class="pdc-profile-panel pdc-profile-inline is-open" aria-live="polite">
       <h2>Member Profile</h2>
       <dl>
         <dt>Name</dt><dd>${escapeHtml(persona.englishName || persona.name || "-")}${persona.name && persona.name !== persona.englishName ? ` / ${escapeHtml(persona.name)}` : ""}</dd>

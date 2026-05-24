@@ -406,7 +406,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-live-room.has-selected-profile {
-  grid-template-columns: minmax(680px, 0.95fr) minmax(0, 1fr);
+  grid-template-columns: minmax(360px, 440px) minmax(0, 1fr);
 }
 
 .pdc-roster-panel,
@@ -428,23 +428,8 @@ body:not(.founder-mode) .founder-public-entry {
   gap: 12px;
 }
 
-.pdc-roster-panel.has-selected-profile .pdc-roster-layout {
-  grid-template-columns: minmax(260px, 0.9fr) minmax(360px, 1.1fr);
-  align-items: start;
-}
-
 .pdc-roster-main {
   min-width: 0;
-}
-
-.pdc-roster-profile-slot {
-  min-width: 0;
-}
-
-.pdc-roster-profile-slot .pdc-profile-panel {
-  margin-top: 0;
-  position: sticky;
-  top: 18px;
 }
 
 .pdc-dialogue-panel {
@@ -937,19 +922,17 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-profile-inline {
-  margin-top: 0;
-}
-
-@media (min-width: 661px) {
-  .pdc-roster-panel.has-selected-profile .pdc-profile-inline {
-    display: none;
-  }
+  width: 100%;
+  margin-top: 4px;
+  padding: 14px;
+  background: rgba(255, 250, 240, 0.94);
+  box-shadow: inset 3px 0 0 rgba(15, 107, 87, 0.22);
 }
 
 .pdc-profile-panel h2 {
   margin: 0 0 8px;
   color: var(--green-dark);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 
 .pdc-profile-panel p {
@@ -976,7 +959,7 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-profile-panel dd {
   margin: 0 0 6px;
   color: var(--ink);
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   line-height: 1.42;
 }
 
@@ -2757,11 +2740,7 @@ canvas {
   }
 
   .pdc-live-room.has-selected-profile {
-    grid-template-columns: minmax(560px, 0.95fr) minmax(0, 1fr);
-  }
-
-  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
-    grid-template-columns: minmax(220px, 0.9fr) minmax(300px, 1.1fr);
+    grid-template-columns: minmax(320px, 380px) minmax(0, 1fr);
   }
 
   .pdc-roster-panel {
@@ -2830,14 +2809,6 @@ canvas {
 
   .pdc-roster-item.has-profile {
     grid-template-columns: 1fr;
-  }
-
-  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .pdc-roster-profile-slot {
-    display: none;
   }
 
   .pdc-roster-list,

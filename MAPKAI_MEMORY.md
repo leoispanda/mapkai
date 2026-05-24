@@ -2038,3 +2038,9 @@ Push status:
 - Wide desktop/tablet roster layout now uses two columns: active members and observers continue vertically in the left column, while Member Profile / Perspective Trail stays aligned in the right column.
 - Mobile behavior remains unchanged: the selected profile renders below the tapped member card, with no two-column layout.
 - Synced `script.js`, `public/script.js`, `index.html`, `public/index.html`, `styles.css`, and `public/styles.css`; no PDC provider logic, strict schema transport, D1/pass lifecycle, observer behavior, final recap, voting, or prompts were changed.
+
+## 2026-05-24 - Fix selected PDC member profile expansion path
+- Removed the desktop right-side selected profile slot so there is exactly one Member Profile / Perspective Trail panel at a time.
+- The selected member profile now renders directly below the selected active member or observer card on desktop and mobile.
+- The expanded inline profile spans the full Council Members column, with slightly larger padding/type for readability and no duplicate bottom or side-panel render path.
+- Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, OpenAI provider, strict schema, model, D1/pass lifecycle, observer transition, voting, prompts, final recap, or Perspective Trail data logic changed.
