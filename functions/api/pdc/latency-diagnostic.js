@@ -30,6 +30,9 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
   if (provider === "cloudflare" && !env?.AI) {
     return {
       provider,
+      requestedProvider: provider,
+      actualProvider: "",
+      providerSuccess: false,
       durationMs: null,
       promptCharLength: null,
       outputCharLength: null,
@@ -51,6 +54,9 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
   } catch (error) {
     return {
       provider,
+      requestedProvider: provider,
+      actualProvider: "",
+      providerSuccess: false,
       durationMs: Date.now() - startedAt,
       promptCharLength: null,
       outputCharLength: null,
@@ -87,27 +93,34 @@ async function generateProviderPhase({ provider, mode, sessionRoster, env, start
   const diagnostics = result.contentDiagnostics || {};
   const dialogue = Array.isArray(result.dialogue) ? result.dialogue : [];
   const fallbackReason = String(result.fallbackReason || "");
+  const fallbackUsed = result.fallbackUsed === true;
+  const jsonSuccess = result.jsonParseFailed !== true;
+  const actualProvider = result.actualProvider || result.provider || provider;
+  const errorType = fallbackReason ? classifyFallbackReason(fallbackReason, result.providerErrorShort) : "";
 
   return {
     provider,
+    requestedProvider: provider,
+    actualProvider,
+    providerSuccess: fallbackUsed !== true && jsonSuccess === true && !errorType,
     durationMs: Date.now() - startedAt,
     promptCharLength: positiveNumberOrNull(diagnostics.promptCharLength),
     outputCharLength: positiveNumberOrNull(diagnostics.outputCharLength) ?? estimateOutputCharLength(result),
     statementCount: dialogue.length,
-    jsonSuccess: result.jsonParseFailed !== true,
-    fallbackUsed: result.fallbackUsed === true,
-    errorType: fallbackReason ? classifyFallbackReason(fallbackReason, result.providerErrorShort) : "",
+    jsonSuccess,
+    fallbackUsed,
+    fallbackReason,
+    errorType,
     contentQualityNote: buildContentQualityNote({ result, dialogue, diagnostics, sessionRoster }),
   };
 }
 
 function withTimeout(promise, timeoutMs, provider) {
-  return Promise.race([
-    promise,
-    new Promise((_, reject) => {
-      setTimeout(() => reject(new Error(`${provider} diagnostic timed out after ${timeoutMs}ms`)), timeoutMs);
-    }),
-  ]);
+  let timeoutId;
+  const timeoutPromise = new Promise((_, reject) => {
+    timeoutId = setTimeout(() => reject(new Error(`${provider} diagnostic timed out after ${timeoutMs}ms`)), timeoutMs);
+  });
+  return Promise.race([promise, timeoutPromise]).finally(() => clearTimeout(timeoutId));
 }
 
 function buildContentQualityNote({ result, dialogue, diagnostics, sessionRoster }) {

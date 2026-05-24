@@ -1966,3 +1966,8 @@ Push status:
 - The endpoint manually compares one OpenAI structured phase, Cloudflare phase when an `AI` binding exists, and placeholder/local for the fixed short diagnostic question `欧洲白领为什么收入比美国白领低那么多`.
 - Each provider row is limited by a 90-second diagnostic timeout and returns only metrics: provider, duration, prompt/output char lengths, statement count, JSON success, fallback state, error/skipped reason, and content quality note.
 - The diagnostic does not store the test question or outputs in D1, does not expose secrets, does not log API keys, does not change the default PDC provider, does not change the OpenAI model, and does not run automatically.
+
+## 2026-05-24 - Clarify requested vs actual provider in PDC latency diagnostics
+- Updated `/api/pdc/latency-diagnostic` rows to include `requestedProvider`, `actualProvider`, `providerSuccess`, `fallbackReason`, and the existing fallback/JSON/error metrics.
+- `providerSuccess` is true only when the requested provider returned without fallback, JSON parse failure, skip, or error; OpenAI or Cloudflare falling back to placeholder is now clearly reported as fallback, not provider success.
+- Preserved default PDC provider behavior, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC start/continue flow.
