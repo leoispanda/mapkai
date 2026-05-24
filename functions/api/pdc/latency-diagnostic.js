@@ -90,7 +90,7 @@ async function generateProviderPhase({ provider, mode, sessionRoster, env, start
       PDC_CLOUDFLARE_MODEL: env?.PDC_CLOUDFLARE_MODEL || "",
       PDC_DIALOGUE_FALLBACK_PROVIDER: "placeholder",
       PDC_LATENCY_DIAGNOSTIC: "true",
-      PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS: "3000",
+      PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS: "6000",
       AI: provider === "cloudflare" ? env?.AI : undefined,
     },
   });

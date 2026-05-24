@@ -1483,7 +1483,7 @@ function buildCompactMeetingMemoryItems(meetingMemory, maxItems = 5) {
 function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
   const diagnosticTokens = Number(env?.PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS);
   if (env?.PDC_LATENCY_DIAGNOSTIC === "true" && Number.isFinite(diagnosticTokens) && diagnosticTokens > openAiPhaseMaxOutputTokens) {
-    return Math.min(Math.floor(diagnosticTokens), openAiPhaseRetryMaxOutputTokens);
+    return Math.min(Math.floor(diagnosticTokens), 8000);
   }
   return openAiPhaseMaxOutputTokens;
 }
