@@ -1994,3 +1994,9 @@ Push status:
 - Warm-up rows use muted dashed styling, show `Provider: pending` only in Founder debug, do not display active statement counts, and keep real `visibleStatementCount` / `totalStatementCount` at zero until provider output arrives.
 - Founder debug now includes `warmupStatus`, `warmupStage`, `warmupStartedAt`, `warmupDurationMs`, playback mode/status, and the real OpenAI phase timing after replacement.
 - Warm-up text remains frontend-only: it is not sent to the backend, not stored in D1, not added to meeting memory, and not used in final recap logic.
+
+## 2026-05-24 - Omit observer profiles from normal PDC phase prompts
+- Changed normal OpenAI PDC phase prompt construction so only the active roster is included in the speaker list; observer/archived members are not included as speakers, challenge targets, contribution votes, concern votes, or generated statement candidates.
+- Kept archived perspective context out of normal phase prompts for token/cost optimization; Stop & Summarize final recap now uses only short archived summaries from observer context instead of repeated full observer profiles.
+- Added Founder debug diagnostics for `activeRosterPromptCount`, `observerRosterPromptCount`, `observerProfilesOmittedFromPrompt`, `archivedSummaryIncluded`, `estimatedPromptTokenReduction`, `costOptimizationApplied`, `allowedSpeakerIdsForPhase`, and `generatedSpeakerIds`.
+- Preserved model, provider, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, final recap logic shape, meeting memory logic, and normal PDC state flow.

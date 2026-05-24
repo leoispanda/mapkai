@@ -571,14 +571,14 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
 
   if (provider === "openai") {
     if (!env?.OPENAI_API_KEY) {
-      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
     }
     try {
       return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
       const message = String(error.message || "OpenAI call failed");
       console.error("PDC OpenAI dialogue provider failed:", message);
-      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getOpenAiFallbackReason(message), providerErrorShort: message.slice(0, 180), providerDiagnostics: error.pdcDiagnostics || null, params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getOpenAiFallbackReason(message), providerErrorShort: message.slice(0, 180), providerDiagnostics: error.pdcDiagnostics || null, params: { modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
     }
   }
 
@@ -596,7 +596,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
       };
     }
     try {
-      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
+      return await generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
       console.error("PDC Cloudflare dialogue provider failed:", error);
       const message = String(error.message || "Cloudflare call failed");
@@ -1223,7 +1223,7 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
   return { parsed, contentDiagnostics };
 }
 
-async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
@@ -1246,13 +1246,22 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, us
   const rawText = extractCloudflareText(result);
   const parsed = parseJsonObject(rawText);
   const normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  const observerRosterCount = Array.isArray(observerRoster) ? observerRoster.length : 0;
   if (normalized.contentDiagnostics) {
     Object.assign(normalized.contentDiagnostics, {
       promptCharLength: prompt.length,
       approximateInputTokenEstimate: estimateTokenCount(prompt),
       outputCharLength: rawText.length,
       activeRosterCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
-      observerCount: 0,
+      observerCount: observerRosterCount,
+      activeRosterPromptCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
+      observerRosterPromptCount: 0,
+      observerProfilesOmittedFromPrompt: observerRosterCount > 0,
+      archivedSummaryIncluded: false,
+      estimatedPromptTokenReduction: estimateObserverPromptTokenReduction(observerRoster),
+      costOptimizationApplied: observerRosterCount > 0,
+      allowedSpeakerIdsForPhase: Array.isArray(sessionRoster) ? sessionRoster.map((persona) => persona.id).filter(Boolean) : [],
+      generatedSpeakerIds: normalized.dialogue.map((line) => line.speakerId),
       meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
       totalPhaseDurationMs: Date.now() - startedAt,
     });
@@ -1397,13 +1406,6 @@ function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = 
     role: persona.role || "",
     responsibility: normalizeShortText(persona.responsibility || persona.statement || persona.role, 90),
   }));
-  const observers = observerRoster.map((persona) => ({
-    speakerId: persona.id,
-    name: persona.englishName || persona.name || "",
-    role: persona.role || "",
-    archivedReason: normalizeShortText(persona.archivedReason || persona.reason || "", 90),
-    lastContribution: normalizeShortText(persona.lastContribution || persona.statement || "", 80),
-  }));
   const compactMemoryItems = buildCompactMeetingMemoryItems(meetingMemory, 5);
   const summaryLimit = containsCjk(previousSummary) ? 300 : 500;
   const concisePreviousSummary = normalizeShortText(previousSummary, summaryLimit);
@@ -1426,9 +1428,6 @@ ${phaseLabel || `Round ${roundNumber}${phaseType}`}
 Active roster:
 ${JSON.stringify(activeRoster)}
 
-Observers:
-${observers.length ? JSON.stringify(observers) : "[]"}
-
 Previous Blue Whale summary:
 ${concisePreviousSummary || "None."}
 
@@ -1446,6 +1445,9 @@ Instructions:
 - Avoid generic role descriptions and template lines.
 - Avoid repetitive phrases such as 我的立场是, 立场未变, 立场调整, 从模糊变为 unless truly needed.
 - ${phaseRule}
+- speakerId must be one of the active roster speakerId values only.
+- targetSpeakerId, when used, must be one of the active roster speakerId values only.
+- Do not generate statements, challenges, votes, or hidden reasoning for observer/archived members.
 - Blue Whale Summary should be 70-100 Chinese characters when Chinese, focused only on conflict, convergence, and next focus.
 ${retryReason ? `- Retry correction: ${retryReason}` : ""}
 
@@ -1489,19 +1491,44 @@ function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
 }
 
 function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory, maxOutputTokens = openAiPhaseMaxOutputTokens }) {
+  const activeRosterPromptCount = Array.isArray(sessionRoster) ? sessionRoster.length : 0;
+  const observerRosterCount = Array.isArray(observerRoster) ? observerRoster.length : 0;
+  const estimatedPromptTokenReduction = estimateObserverPromptTokenReduction(observerRoster);
   return {
     promptCharLength: prompt.length,
     approximateInputTokenEstimate: estimateTokenCount(prompt),
     outputCharLength: 0,
-    activeRosterCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
-    observerCount: Array.isArray(observerRoster) ? observerRoster.length : 0,
+    activeRosterCount: activeRosterPromptCount,
+    observerCount: observerRosterCount,
+    activeRosterPromptCount,
+    observerRosterPromptCount: 0,
+    observerProfilesOmittedFromPrompt: observerRosterCount > 0,
+    archivedSummaryIncluded: false,
+    estimatedPromptTokenReduction,
+    costOptimizationApplied: observerRosterCount > 0,
     meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
     phaseMaxOutputTokens: maxOutputTokens,
     retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
+    allowedSpeakerIdsForPhase: Array.isArray(sessionRoster) ? sessionRoster.map((persona) => persona.id).filter(Boolean) : [],
     openAiDurationMs: 0,
     retryDurationMs: 0,
     totalPhaseDurationMs: 0,
   };
+}
+
+function estimateObserverPromptTokenReduction(observerRoster) {
+  if (!Array.isArray(observerRoster) || !observerRoster.length) return 0;
+  const omittedProfileText = JSON.stringify(observerRoster.map((persona) => ({
+    speakerId: persona.id,
+    name: persona.englishName || persona.name || "",
+    chineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+    role: persona.role || "",
+    responsibility: persona.responsibility || "",
+    statement: persona.statement || "",
+    archivedReason: persona.archivedReason || persona.reason || "",
+    lastContribution: persona.lastContribution || "",
+  })));
+  return estimateTokenCount(omittedProfileText);
 }
 
 function applyPhaseDiagnosticAliases(diagnostics) {
@@ -1825,6 +1852,8 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       strict: sourceProvider === "openai",
       modelStatementCount: normalizedLines.length,
       normalizedStatementCount: dialogueWithVotes.length,
+      allowedSpeakerIdsForPhase: sessionRoster.map((persona) => persona.id).filter(Boolean),
+      generatedSpeakerIds: dialogueWithVotes.map((line) => line.speakerId),
       defaultStatementsInjected: missingLines.length > 0,
       defaultStatementSpeakerIds: missingLines.map((line) => line.speakerId),
       defaultTemplateMatched: defaultStatementIds.length > 0,
@@ -2080,12 +2109,18 @@ function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSu
 async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
   const model = getOpenAiModel(env);
   const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
+  const archivedSummaryCount = buildArchivedObserverSummaries(observerRoster).length;
   const contentDiagnostics = {
     finalRecapProvider: "openai",
     finalRecapPromptCharLength: prompt.length,
     finalRecapOutputCharLength: 0,
     finalRecapSchemaName: "pdc_final_recap",
     finalRecapStrict: true,
+    finalRecapActiveRosterPromptCount: Array.isArray(activeRoster) ? activeRoster.length : 0,
+    finalRecapObserverSummaryPromptCount: archivedSummaryCount,
+    archivedSummaryIncluded: archivedSummaryCount > 0,
+    observerProfilesOmittedFromPrompt: archivedSummaryCount > 0,
+    costOptimizationApplied: archivedSummaryCount > 0,
     finalRecapOpenAiDurationMs: 0,
     finalRecapTotalDurationMs: 0,
   };
@@ -2123,6 +2158,7 @@ async function generateCloudflareFinalRecap({ modeId, modeLabel, userQuestion, a
 }
 
 function buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions }) {
+  const archivedSummaries = buildArchivedObserverSummaries(observerRoster);
   return `You are Blue Whale, the PDC facilitator.
 Generate the final Council Recap from compact PDC meeting memory.
 Do not restart from zero. Do not write a generic answer.
@@ -2147,8 +2183,8 @@ ${JSON.stringify(voteSummary || {}).slice(0, 1200)}
 Active roster:
 ${activeRoster.map((p) => `${p.id}: ${p.englishName || p.name} — ${p.role}`).join("\n")}
 
-Archived perspectives:
-${observerRoster.map((p) => `${p.id}: ${p.englishName || p.name} — ${p.role}`).join("\n") || "None"}
+Archived perspective summaries:
+${archivedSummaries.map((p) => `${p.speakerId}: ${p.name} — ${p.role}. Archived because: ${p.reasonArchived || "not specified"}. Archived view: ${p.archivedView || "not specified"}.`).join("\n") || "None"}
 
 User guidance history:
 ${(userInterventions || []).filter(Boolean).slice(-5).join("\n") || "None"}
@@ -2176,6 +2212,17 @@ Return JSON only:
   },
   "blueWhaleFinalNote": ""
 }`;
+}
+
+function buildArchivedObserverSummaries(observerRoster) {
+  if (!Array.isArray(observerRoster) || !observerRoster.length) return [];
+  return observerRoster.map((persona) => ({
+    speakerId: persona.id,
+    name: persona.englishName || persona.name || "",
+    role: normalizeShortText(persona.role || "", 80),
+    reasonArchived: normalizeShortText(persona.archivedReason || persona.reason || "", 120),
+    archivedView: normalizeShortText(persona.lastContribution || persona.archivedView || "", 160),
+  })).filter((item) => item.speakerId);
 }
 
 function normalizeFinalRecapResult(parsed, context) {

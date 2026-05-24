@@ -94,7 +94,10 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
     if (!pass || !["used", "in_progress"].includes(pass.status)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);
   }
   const activeRoster = resolveRosterByIds(modeId, body.active_roster_ids);
-  const observerRoster = resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false });
+  const observerRoster = mergeObserverRosterContext(
+    resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false }),
+    body.observer_roster_context,
+  );
   const mode = pdcModes[modeId];
   const result = await generatePdcFinalRecap({
     modeId,
