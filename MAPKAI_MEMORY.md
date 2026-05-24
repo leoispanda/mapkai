@@ -2022,3 +2022,7 @@ Push status:
 - Removed the second selected-member profile render from the roster sidebar; the only member detail panel now renders inside the selected roster item, placed beside the member on desktop and directly below it on mobile.
 - Changed `memberHistory` from render-time rebuilding to append-only session state keyed by `phaseId:speakerId`, so accepted real OpenAI phases add one visible statement per member without duplicating entries across re-renders.
 - History appending requires provider `openai`, excludes warm-up and placeholder/default lines, and stores phase id, labels, speaker metadata, statement type, visible text, target info, sequence index, and timestamp.
+
+## 2026-05-24 - Remove mirrored stance text in PDC Perspective Trail
+- Kept the top-level Current stance in the selected member profile, but the per-entry trail renderer now hides `Stance` when it is empty, identical to the visible statement, or near-identical after punctuation/spacing normalization.
+- Per-entry `Stance` still appears if it adds distinct information, while statement type, visible text, target info, shift, note, and vote metadata remain unchanged.

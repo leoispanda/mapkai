@@ -5569,6 +5569,7 @@ function renderPdcPerspectiveTrail(history) {
 }
 
 function renderPdcPerspectiveTrailEntry(entry) {
+  const shouldShowStance = shouldShowPdcTrailField(entry.stance, entry.text);
   const meta = [
     entry.statementType ? formatPdcStatementType(entry.statementType) : "",
     entry.targetSpeakerName ? `Targets ${entry.targetSpeakerName}` : "",
@@ -5581,14 +5582,53 @@ function renderPdcPerspectiveTrailEntry(entry) {
     <article class="pdc-trail-entry">
       ${meta ? `<p class="pdc-trail-meta">${escapeHtml(meta)}</p>` : ""}
       <p>${escapeHtml(entry.text || "")}</p>
-      ${entry.stance || entry.stanceShift || entry.historyNote ? `
+      ${shouldShowStance || entry.stanceShift || entry.historyNote ? `
         <dl>
-          ${entry.stance ? `<dt>Stance</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
+          ${shouldShowStance ? `<dt>Stance</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
           ${entry.stanceShift ? `<dt>Shift</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
           ${entry.historyNote ? `<dt>Note</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
         </dl>` : ""}
       ${voteBits.length ? `<p class="pdc-trail-votes">${escapeHtml(voteBits.join(" · "))}</p>` : ""}
     </article>`;
+}
+
+function shouldShowPdcTrailField(value, statementText) {
+  const field = normalizePdcComparableText(value);
+  if (!field) return false;
+  const statement = normalizePdcComparableText(statementText);
+  if (!statement) return true;
+  if (field === statement) return false;
+  if (field.includes(statement) || statement.includes(field)) return false;
+  const shorter = Math.min(field.length, statement.length);
+  const longer = Math.max(field.length, statement.length);
+  if (shorter >= 24 && shorter / longer > 0.82) {
+    const sharedLength = longestSharedSubstringLength(field, statement);
+    if (sharedLength / shorter > 0.82) return false;
+  }
+  return true;
+}
+
+function normalizePdcComparableText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[.,!?;:'"()[\]{}，。！？；：“”‘’（）【】《》、\s]/g, "")
+    .trim();
+}
+
+function longestSharedSubstringLength(a, b) {
+  if (!a || !b) return 0;
+  const previous = new Array(b.length + 1).fill(0);
+  let best = 0;
+  for (let i = 1; i <= a.length; i += 1) {
+    let diagonal = 0;
+    for (let j = 1; j <= b.length; j += 1) {
+      const saved = previous[j];
+      previous[j] = a[i - 1] === b[j - 1] ? diagonal + 1 : 0;
+      if (previous[j] > best) best = previous[j];
+      diagonal = saved;
+    }
+  }
+  return best;
 }
 
 function formatPdcStatementType(value) {
