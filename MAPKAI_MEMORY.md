@@ -2070,3 +2070,10 @@ Push status:
 - New PDC sessions now clear prior round index, phases, meeting memory path, previous summary path, active/observer rosters, archived observer snapshots, member history, derived cumulative votes, final round preview/reintroduced perspective state, final recap state, and playback/warmup state before the first `/api/pdc/start` request.
 - Founder diagnostics now expose `sessionResetApplied`, `pdcSessionId`, `initialRoundNumber`, `initialMeetingMemoryItemCount`, and `previousSessionCleared` so a fresh Round 1A can be verified as memory-free.
 - No OpenAI provider logic, strict structured output transport, model, D1/pass lifecycle, observer transition rule, final recap schema, or selected member profile layout was changed.
+
+## 2026-05-24 - Repair duplicate OpenAI PDC phase speakers before fallback
+- OpenAI phase normalization now reports roster validation diagnostics for missing, invalid, duplicate, and invalid target speaker ids instead of immediately hiding the cause behind placeholder fallback.
+- When strict structured output has duplicate `speakerId` values or other exact-roster mismatches, the OpenAI provider retries once with a focused repair instruction listing the expected active speaker ids and requiring exactly one statement per active speaker.
+- If repair still has only duplicate speakers while all active speakers are present and no invalid speakers/targets remain, the phase recovers by keeping the first valid statement per duplicate speaker instead of falling back to placeholder.
+- Founder diagnostics now expose `duplicateSpeakerIds`, `structuredOutputRepairAttempted`, `structuredOutputRepairSucceeded`, `duplicateSpeakerRecoveryUsed`, and fallback reason for phase quality checks.
+- Strict schema transport, model, D1/pass lifecycle, observer exclusion, final recap schema, and UI layout were not changed.

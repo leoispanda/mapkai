@@ -1214,20 +1214,85 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
   const model = getOpenAiModel(env);
   const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
   let retryUsed = false;
+  let structuredOutputRepairAttempted = false;
+  let structuredOutputRepairSucceeded = false;
+  let duplicateSpeakerRecoveryUsed = false;
+  let structuredOutputValidationDiagnostics = null;
+  let repairDiagnosticsMerged = false;
   const startedAt = Date.now();
   let response = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   let parsed = response.parsed;
-  let normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
-  if (normalized.contentDiagnostics) {
+  let normalized;
+  try {
+    normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
+  } catch (error) {
+    if (!isOpenAiStructuredPhaseValidationError(error)) throw error;
+    structuredOutputValidationDiagnostics = error.pdcDiagnostics || null;
+    structuredOutputRepairAttempted = true;
+    retryUsed = true;
+    const repairStartedAt = Date.now();
+    response = await requestOpenAiDialogueJson({
+      env,
+      model,
+      modeLabel,
+      sessionRoster,
+      observerRoster,
+      userQuestion,
+      roundNumber,
+      phaseType,
+      phaseLabel,
+      previousSummary,
+      meetingMemory,
+      userIntervention,
+      retryReason: buildOpenAiStructuredOutputRepairReason(structuredOutputValidationDiagnostics, sessionRoster),
+    });
+    parsed = response.parsed;
+    try {
+      normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, retryUsed: true });
+      structuredOutputRepairSucceeded = true;
+    } catch (repairError) {
+      if (!isOpenAiStructuredPhaseValidationError(repairError) || !canRecoverDuplicateSpeakerOutput(repairError.pdcDiagnostics)) throw repairError;
+      structuredOutputValidationDiagnostics = repairError.pdcDiagnostics || structuredOutputValidationDiagnostics;
+      normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, retryUsed: true, allowDuplicateSpeakerRecovery: true });
+      structuredOutputRepairSucceeded = true;
+      duplicateSpeakerRecoveryUsed = true;
+    }
+    duplicateSpeakerRecoveryUsed = duplicateSpeakerRecoveryUsed || (structuredOutputValidationDiagnostics?.duplicateSpeakerIds || []).length > 0;
+    if (normalized.contentDiagnostics) {
+      Object.assign(normalized.contentDiagnostics, response.contentDiagnostics, {
+        promptCharLength: structuredOutputValidationDiagnostics?.promptCharLength || response.contentDiagnostics.promptCharLength,
+        approximateInputTokenEstimate: structuredOutputValidationDiagnostics?.approximateInputTokenEstimate || response.contentDiagnostics.approximateInputTokenEstimate,
+        outputCharLength: response.contentDiagnostics.outputCharLength,
+      });
+      normalized.contentDiagnostics.openAiDurationMs = repairStartedAt - startedAt;
+      normalized.contentDiagnostics.retryDurationMs = Date.now() - repairStartedAt;
+      normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
+      applyOpenAiStructuredRepairDiagnostics(normalized.contentDiagnostics, {
+        structuredOutputValidationDiagnostics,
+        structuredOutputRepairAttempted,
+        structuredOutputRepairSucceeded,
+        duplicateSpeakerRecoveryUsed,
+      });
+      applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
+      repairDiagnosticsMerged = true;
+    }
+  }
+  if (normalized.contentDiagnostics && !repairDiagnosticsMerged) {
     Object.assign(normalized.contentDiagnostics, response.contentDiagnostics);
     normalized.contentDiagnostics.openAiDurationMs = response.contentDiagnostics.openAiDurationMs || Date.now() - startedAt;
     normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
+    applyOpenAiStructuredRepairDiagnostics(normalized.contentDiagnostics, {
+      structuredOutputValidationDiagnostics,
+      structuredOutputRepairAttempted,
+      structuredOutputRepairSucceeded,
+      duplicateSpeakerRecoveryUsed,
+    });
     applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
   }
-  const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
+  const shouldRetry = !structuredOutputRepairAttempted && (normalized.contentDiagnostics?.defaultTemplateMatched === true
     || normalized.contentDiagnostics?.templateContentDetected === true
     || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9)
-    || normalized.contentDiagnostics?.crossMemberTargetCountBelowMinimum === true;
+    || normalized.contentDiagnostics?.crossMemberTargetCountBelowMinimum === true);
   if (shouldRetry) {
     retryUsed = true;
     const retryStartedAt = Date.now();
@@ -1264,6 +1329,12 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
       normalized.contentDiagnostics.retryDurationMs = Date.now() - retryStartedAt;
       normalized.contentDiagnostics.totalPhaseDurationMs = Date.now() - startedAt;
       normalized.contentDiagnostics.contentQualityRetryUsed = true;
+      applyOpenAiStructuredRepairDiagnostics(normalized.contentDiagnostics, {
+        structuredOutputValidationDiagnostics,
+        structuredOutputRepairAttempted,
+        structuredOutputRepairSucceeded,
+        duplicateSpeakerRecoveryUsed,
+      });
       applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
     }
   }
@@ -1280,8 +1351,66 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
     throw new Error("OpenAI response missing required cross-member debate targets");
   }
   if (retryUsed && normalized.contentDiagnostics) normalized.contentDiagnostics.retryUsed = true;
-  if (normalized.contentDiagnostics) applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
+  if (normalized.contentDiagnostics) {
+    applyOpenAiStructuredRepairDiagnostics(normalized.contentDiagnostics, {
+      structuredOutputValidationDiagnostics,
+      structuredOutputRepairAttempted,
+      structuredOutputRepairSucceeded,
+      duplicateSpeakerRecoveryUsed,
+    });
+    applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
+  }
   return markProviderResult(normalized, { requestedProvider: "openai", actualProvider: "openai", modelName: model });
+}
+
+function isOpenAiStructuredPhaseValidationError(error) {
+  return error?.pdcValidationType === "openai_phase_roster";
+}
+
+function canRecoverDuplicateSpeakerOutput(diagnostics = {}) {
+  return (diagnostics.duplicateSpeakerIds || []).length > 0
+    && !(diagnostics.missingSpeakerIds || []).length
+    && !(diagnostics.invalidSpeakerIds || []).length
+    && !(diagnostics.invalidTargetIds || []).length
+    && diagnostics.allActiveSpeakersPresent === true;
+}
+
+function buildOpenAiStructuredOutputRepairReason(diagnostics = {}, sessionRoster = []) {
+  const expectedSpeakerIds = sessionRoster.map((persona) => persona.id).filter(Boolean);
+  const parts = [
+    `Your previous structured output did not contain exactly one visible statement for each active speakerId.`,
+    `Expected active speakerIds, exactly once each: ${expectedSpeakerIds.join(", ")}.`,
+  ];
+  if ((diagnostics.duplicateSpeakerIds || []).length) parts.push(`Duplicate speakerIds found: ${diagnostics.duplicateSpeakerIds.join(", ")}. Keep exactly one statement for each duplicate speakerId.`);
+  if ((diagnostics.missingSpeakerIds || []).length) parts.push(`Missing speakerIds found: ${diagnostics.missingSpeakerIds.join(", ")}. Add exactly one statement for each missing active speakerId.`);
+  if ((diagnostics.invalidSpeakerIds || []).length) parts.push(`Invalid speakerIds found: ${diagnostics.invalidSpeakerIds.join(", ")}. Remove them; observers and archived members must not speak.`);
+  if ((diagnostics.invalidTargetIds || []).length) parts.push(`Invalid targetSpeakerIds found: ${diagnostics.invalidTargetIds.join(", ")}. targetSpeakerId must be null or one of the expected active speakerIds only.`);
+  parts.push("Return the full JSON object again, not a patch. Preserve the same phase context and strict schema.");
+  return parts.join(" ");
+}
+
+function applyOpenAiStructuredRepairDiagnostics(diagnostics, { structuredOutputValidationDiagnostics = null, structuredOutputRepairAttempted = false, structuredOutputRepairSucceeded = false, duplicateSpeakerRecoveryUsed = false } = {}) {
+  if (!diagnostics) return diagnostics;
+  diagnostics.duplicateSpeakerIds = Array.from(new Set([
+    ...((structuredOutputValidationDiagnostics?.duplicateSpeakerIds || []).filter(Boolean)),
+    ...((diagnostics.duplicateSpeakerIds || []).filter(Boolean)),
+  ]));
+  diagnostics.missingSpeakerIds = Array.from(new Set([
+    ...((structuredOutputValidationDiagnostics?.missingSpeakerIds || []).filter(Boolean)),
+    ...((diagnostics.missingSpeakerIds || []).filter(Boolean)),
+  ]));
+  diagnostics.invalidSpeakerIds = Array.from(new Set([
+    ...((structuredOutputValidationDiagnostics?.invalidSpeakerIds || []).filter(Boolean)),
+    ...((diagnostics.invalidSpeakerIds || []).filter(Boolean)),
+  ]));
+  diagnostics.invalidTargetIds = Array.from(new Set([
+    ...((structuredOutputValidationDiagnostics?.invalidTargetIds || []).filter(Boolean)),
+    ...((diagnostics.invalidTargetIds || []).filter(Boolean)),
+  ]));
+  diagnostics.structuredOutputRepairAttempted = structuredOutputRepairAttempted === true;
+  diagnostics.structuredOutputRepairSucceeded = structuredOutputRepairSucceeded === true;
+  diagnostics.duplicateSpeakerRecoveryUsed = duplicateSpeakerRecoveryUsed === true;
+  return diagnostics;
 }
 
 async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
@@ -1863,7 +1992,7 @@ function parseStrictStructuredJson(value) {
   return JSON.parse(text);
 }
 
-function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", retryUsed = false }) {
+function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", retryUsed = false, allowDuplicateSpeakerRecovery = false }) {
   const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
   const rawStatements = Array.isArray(parsed?.visibleStatements) ? parsed.visibleStatements : [];
   const statementsBySpeaker = new Map();
@@ -1908,8 +2037,24 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
   });
 
   const missingSpeakerIds = sessionRoster.map((persona) => persona.id).filter((speakerId) => !statementsBySpeaker.has(speakerId));
-  if (invalidSpeakerIds.length || duplicateSpeakerIds.length || invalidTargetIds.length || missingSpeakerIds.length || statementsBySpeaker.size !== sessionRoster.length) {
-    throw new Error(`OpenAI structured phase response missing exact active roster statements: missing=${missingSpeakerIds.join(",") || "none"} invalid=${invalidSpeakerIds.join(",") || "none"} duplicate=${duplicateSpeakerIds.join(",") || "none"} invalidTargets=${invalidTargetIds.join(",") || "none"}`);
+  const uniqueDuplicateSpeakerIds = Array.from(new Set(duplicateSpeakerIds));
+  const validationDiagnostics = {
+    missingSpeakerIds,
+    invalidSpeakerIds: Array.from(new Set(invalidSpeakerIds)),
+    duplicateSpeakerIds: uniqueDuplicateSpeakerIds,
+    invalidTargetIds: Array.from(new Set(invalidTargetIds)),
+    allActiveSpeakersPresent: missingSpeakerIds.length === 0 && statementsBySpeaker.size === sessionRoster.length,
+  };
+  const duplicateOnlyRecoverable = allowDuplicateSpeakerRecovery
+    && validationDiagnostics.allActiveSpeakersPresent
+    && uniqueDuplicateSpeakerIds.length > 0
+    && validationDiagnostics.invalidSpeakerIds.length === 0
+    && validationDiagnostics.invalidTargetIds.length === 0;
+  if (!duplicateOnlyRecoverable && (validationDiagnostics.invalidSpeakerIds.length || uniqueDuplicateSpeakerIds.length || validationDiagnostics.invalidTargetIds.length || missingSpeakerIds.length || statementsBySpeaker.size !== sessionRoster.length)) {
+    const error = new Error(`OpenAI structured phase response missing exact active roster statements: missing=${missingSpeakerIds.join(",") || "none"} invalid=${validationDiagnostics.invalidSpeakerIds.join(",") || "none"} duplicate=${uniqueDuplicateSpeakerIds.join(",") || "none"} invalidTargets=${validationDiagnostics.invalidTargetIds.join(",") || "none"}`);
+    error.pdcValidationType = "openai_phase_roster";
+    error.pdcDiagnostics = validationDiagnostics;
+    throw error;
   }
 
   const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
@@ -2001,6 +2146,13 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
       normalizedStatementCount: dialogueWithVotes.length,
       visibleStatementCount: dialogueWithVotes.length,
       totalStatementCount: dialogueWithVotes.length,
+      duplicateSpeakerIds: uniqueDuplicateSpeakerIds,
+      missingSpeakerIds,
+      invalidSpeakerIds: validationDiagnostics.invalidSpeakerIds,
+      invalidTargetIds: validationDiagnostics.invalidTargetIds,
+      structuredOutputRepairAttempted: false,
+      structuredOutputRepairSucceeded: false,
+      duplicateSpeakerRecoveryUsed: duplicateOnlyRecoverable,
       validTargetSpeakerCount,
       minimumTargetSpeakerCount,
       crossMemberTargetCountBelowMinimum,
