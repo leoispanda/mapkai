@@ -740,6 +740,32 @@ body:not(.founder-mode) .founder-public-entry {
   line-height: 1.45;
 }
 
+.pdc-voting-line {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pdc-voting-line dl {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.38fr) 1fr;
+  gap: 6px 10px;
+  margin: 0;
+}
+
+.pdc-voting-line dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 820;
+}
+
+.pdc-voting-line dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
 .pdc-dialogue-note {
   margin: 12px 0 0;
   color: var(--muted);

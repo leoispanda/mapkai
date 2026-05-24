@@ -4114,6 +4114,7 @@ function createPdcBaseState(overrides = {}) {
     warmupDiagnostics: null,
     memberHistory: {},
     feedbackSubmitted: false,
+    finalReenabledObserverMeta: null,
     pdcSessionId: "",
     sessionResetApplied: false,
     initialRoundNumber: 0,
@@ -4169,6 +4170,7 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     finalRoundPreviewShown: false,
     finalRoundPreviewAccepted: false,
     finalRoundPreviewSelection: "",
+    finalReenabledObserverMeta: null,
     finalReenableSkippedReason: "",
     finalRecapLoading: false,
     providerDiagnostics: null,
@@ -4691,7 +4693,7 @@ function renderPdcCouncilRoom(recap) {
             <span>${isWarmupPhase ? "Council is thinking · Local warm-up" : fullDialogue.length ? `${fullDialogue.length} active council statements` : "No dialogue lines available"}</span>
           </div>
           ${renderPdcPlaybackStatus(currentRound, playback, thinkingLine)}
-          ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback, isWarmupPhase)}
+          ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback, isWarmupPhase, currentRound)}
           ${showPhaseAfterPlayback ? renderPdcRoundSummary(currentRound, facilitator) : ""}
           ${showPhaseAfterPlayback ? renderPdcVotingSnapshot(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcPhaseGuidance(currentRound) : ""}
@@ -4793,8 +4795,8 @@ function normalizePdcPhase(phase, index, room) {
 }
 
 function getPdcPhaseLabel(roundNumber, phaseType) {
-  const prefix = Number(roundNumber) >= pdcMaxNormalRound ? `Final Round ${roundNumber}${phaseType}` : `Round ${roundNumber}${phaseType}`;
-  return `${prefix} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  const prefix = Number(roundNumber) >= pdcMaxNormalRound ? "Final Round" : `Round ${roundNumber}${phaseType}`;
+  return `${prefix} — ${phaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
 }
 
 function clampPdcIndex(value, length) {
@@ -4838,8 +4840,9 @@ function renderPdcPlaybackStatus(round, playback, thinkingLine) {
     </div>`;
 }
 
-function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, phaseComplete = true, isWarmupPhase = false) {
+function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, phaseComplete = true, isWarmupPhase = false, round = null) {
   const lines = Array.isArray(dialogue) ? dialogue : [];
+  const isBPhase = !isWarmupPhase && String(round?.phaseType || "").toUpperCase() === "B";
   return `
     <div class="pdc-dialogue-board" aria-label="Live Council Dialogue">
       <ol>
@@ -4847,7 +4850,7 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, 
           <li class="${isWarmupPhase ? "is-warmup" : ""} ${line.speakerId === activeSpeakerId ? "is-current" : ""}">
             <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(line.role)}</small>` : ""}</span>
             ${renderPdcRelationLabel(line)}
-            <p>${escapeHtml(line.text || "")}</p>
+            ${isBPhase ? renderPdcVotingLine(line) : `<p>${escapeHtml(line.text || "")}</p>`}
           </li>`).join("")}
         ${thinkingLine ? `
           <li class="is-current is-thinking">
@@ -4857,6 +4860,19 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, 
           </li>` : ""}
       </ol>
       <p class="pdc-dialogue-note">${isWarmupPhase ? "Warm-up lines are local preparation cues, not final council statements." : phaseComplete ? "This phase is complete." : "Council members are speaking one at a time."}</p>
+    </div>`;
+}
+
+function renderPdcVotingLine(line) {
+  return `
+    <div class="pdc-voting-line">
+      <p>${escapeHtml(line.text || "Voting rationale recorded.")}</p>
+      <dl>
+        <dt>Contribution vote</dt><dd>${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "-")}</dd>
+        <dt>Contribution vote reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "-")}</dd>
+        <dt>Concern vote</dt><dd>${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "-")}</dd>
+        <dt>Concern vote reason</dt><dd>${escapeHtml(line.concernVote?.reason || "-")}</dd>
+      </dl>
     </div>`;
 }
 
@@ -4970,9 +4986,11 @@ function renderPdcFinalRoundPreview(currentRound) {
   if (!shouldShowPdcFinalRoundPreview(currentRound)) return "";
   const rewarded = getPdcMostRewardedContributor();
   const observers = getPdcFrozenObserverSummaries();
+  const reenabled = selectPdcFinalReenabledObserver(rewarded, observers, currentRound);
   pdcState.finalRoundPreviewShown = true;
-  pdcState.finalReenableSkippedReason = observers.length ? (rewarded.tie ? "contribution_vote_tie" : "") : "no_archived_perspective";
-  if (observers.length && !pdcState.finalRoundPreviewSelection && !rewarded.tie) pdcState.finalRoundPreviewSelection = observers[0].speakerId;
+  pdcState.finalReenableSkippedReason = reenabled.skippedReason || "";
+  pdcState.finalRoundPreviewSelection = reenabled.speakerId || "";
+  pdcState.finalReenabledObserverMeta = reenabled.speakerId ? reenabled : null;
   return `
     <section class="pdc-final-preview" aria-label="Final Round Preview">
       <p class="eyebrow">Final Round Preview</p>
@@ -4982,16 +5000,14 @@ function renderPdcFinalRoundPreview(currentRound) {
         <div>
           <strong>Most Rewarded Contributor</strong>
           <p>${escapeHtml(rewarded.name || "No clear leader yet")}${rewarded.count ? ` (${Number(rewarded.count)} contribution votes)` : ""}</p>
-          ${rewarded.tie ? `<small>Contribution vote tie detected. You may choose an archived perspective manually.</small>` : ""}
+          ${rewarded.tie ? `<small>Tie resolved by ${escapeHtml(rewarded.tieResolution || "latest B-phase contribution votes")}.</small>` : ""}
         </div>
         <div>
-          <strong>Available Archived Perspectives</strong>
-          ${observers.length ? observers.map((observer) => `
-            <label class="pdc-final-observer-option">
-              <input type="radio" name="pdc-final-observer" value="${escapeHtml(observer.speakerId)}" ${pdcState.finalRoundPreviewSelection === observer.speakerId ? "checked" : ""}>
-              <span>${escapeHtml(observer.name || observer.speakerId)} · ${escapeHtml(observer.role || "Archived Perspective")}</span>
-            </label>
-          `).join("") : `<p>No archived perspective is available.</p>`}
+          <strong>Re-enabled Archived Perspective</strong>
+          ${reenabled.speakerId ? `
+            <p>${escapeHtml(reenabled.name || reenabled.speakerId)} · ${escapeHtml(reenabled.role || "Archived Perspective")}</p>
+            <small>Selected by ${escapeHtml(reenabled.selectedByName || rewarded.name || "Most Rewarded Contributor")}: ${escapeHtml(reenabled.selectionReason || "This archived perspective can improve the final decision.")}</small>
+          ` : `<p>${escapeHtml(reenabled.skippedReason || "No archived perspective is available.")}</p>`}
         </div>
       </div>
     </section>`;
@@ -5012,6 +5028,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
       · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}
       ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
       ${diagnostics ? ` · duplicateSpeakerIds: ${escapeHtml((diagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted: ${diagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded: ${diagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed: ${diagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason: ${escapeHtml(pdcState.providerDiagnostics?.fallbackReason || "-")}` : ""}
+      ${diagnostics ? ` · bPhaseVotingOnlyMode: ${diagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength: ${Number(diagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage: ${Number(diagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount: ${Number(diagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount: ${Number(diagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected: ${diagnostics.aPhaseVoteLeakDetected ? "true" : "false"}` : ""}
       ${diagnostics ? ` · phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}` : ""}
       ${diagnostics ? ` · activeRosterPromptCount: ${Number(diagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount: ${Number(diagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt: ${diagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded: ${diagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction: ${Number(diagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied: ${diagnostics.costOptimizationApplied ? "true" : "false"}` : ""}
       ${diagnostics ? ` · Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"}` : ""}
@@ -5561,7 +5578,7 @@ function createNextPdcPlaceholderPhase({ previousPhase, room, userIntervention =
   const convergenceLevel = roundNumber >= 3 && phaseType === "B" ? "high" : roundNumber >= 2 ? "medium" : "low";
   const shouldConsiderStopping = convergenceLevel === "high";
   const voteSummary = phaseType === "B" ? createClientPdcVoteSummary(dialogue, personas) : null;
-  const rosterUpdate = phaseType === "B" ? createClientPdcRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
+  const rosterUpdate = phaseType === "B" && roundNumber < pdcMaxNormalRound ? createClientPdcRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: phaseType === "B" ? "Final voting phase closes without another observer transition." : "Position update phase only." };
   return {
     id: `round-${roundNumber}${phaseType.toLowerCase()}`,
     label: getPdcPhaseLabel(roundNumber, phaseType),
@@ -5593,16 +5610,16 @@ function createPdcPhaseLine({ persona, roundNumber, phaseType, previousSummary, 
   const target = getClientPdcTargetPersona(persona);
   const text = phaseType === "A"
     ? `From the ${role} view${guidance}, I would name one concrete test for the user's current question before the next phase.`
-    : getClientPdcChallengeText({ persona, target, guidance });
+    : `My contribution vote and concern vote identify what should carry forward and what needs pressure next${guidance}.`;
   return {
     speakerId: persona.id,
     speakerName,
     speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
     speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
     role,
-    stanceType: phaseType === "A" ? "update" : "challenge",
-    targetSpeakerId: phaseType === "A" ? "" : target?.id || "",
-    targetSpeakerName: phaseType === "A" ? "" : target?.englishName || target?.name || "",
+    stanceType: phaseType === "A" ? "update" : "voting_record",
+    targetSpeakerId: "",
+    targetSpeakerName: "",
     text: previousSummary ? text : text,
     stanceSummary: text,
   };
@@ -5861,7 +5878,8 @@ function appendPdcMemberHistoryFromPhase(phase, phaseIndex = 0) {
   if (!shouldUsePdcPhaseForHistory(phase)) return;
   (Array.isArray(phase.dialogue) ? phase.dialogue : []).forEach((line, lineIndex) => {
     if (!shouldUsePdcLineForHistory(line)) return;
-    if (pdcState.observerRosterIds.includes(line.speakerId) && phase.rosterUpdate?.archivedSpeakerId !== line.speakerId && line.contentSource !== "final-reintroduced") return;
+    if (line.contentSource === "final-reintroduced") return;
+    if (pdcState.observerRosterIds.includes(line.speakerId) && phase.rosterUpdate?.archivedSpeakerId !== line.speakerId) return;
     const item = createPdcHistoryItem({ phase, line, phaseIndex, lineIndex });
     if (!item?.speakerId || !item.historyKey) return;
     pdcState.memberHistory ||= {};
@@ -5882,7 +5900,7 @@ function shouldUsePdcPhaseForHistory(phase) {
 
 function shouldUsePdcLineForHistory(line) {
   if (!line?.speakerId || !line?.text) return false;
-  if (line.contentSource === "final-reintroduced") return true;
+  if (line.contentSource === "final-reintroduced") return false;
   if (line.contentSource && line.contentSource !== "model") return false;
   return !isPdcPlaceholderLine(line);
 }
@@ -5895,6 +5913,9 @@ function isPdcPlaceholderLine(line) {
 function createPdcHistoryItem({ phase, line, phaseIndex, lineIndex }) {
   const targetName = line.targetSpeakerName || findPdcPersonaById(line.targetSpeakerId)?.englishName || findPdcPersonaById(line.targetSpeakerId)?.name || "";
   const phaseId = phase.id || `${phase.roundNumber || phaseIndex + 1}-${phase.phaseType || ""}-${normalizePdcDisplayText(phase.phaseLabel || phase.label || "")}`;
+  const isBPhase = String(phase.phaseType || "").toUpperCase() === "B";
+  const contributionVoteGiven = line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "";
+  const concernVoteGiven = line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "";
   return {
     phaseId,
     historyKey: `${phaseId}:${line.speakerId}`,
@@ -5903,15 +5924,15 @@ function createPdcHistoryItem({ phase, line, phaseIndex, lineIndex }) {
     role: line.role || "",
     roundLabel: phase.label || phase.phaseLabel || "",
     phaseLabel: phase.phaseLabel || phase.label || "",
-    statementType: line.statementType || line.stanceType || "",
+    statementType: isBPhase ? "voting_record" : line.statementType || line.stanceType || "",
     text: line.text || line.stanceSummary || "",
     targetSpeakerId: line.targetSpeakerId || "",
     targetSpeakerName: targetName,
-    stance: line.stance || line.stanceSummary || "",
-    stanceShift: line.stanceShift || "",
-    historyNote: line.historyNote || "",
-    contributionVoteGiven: line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "",
-    concernVoteGiven: line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "",
+    stance: isBPhase ? "" : line.stance || line.stanceSummary || "",
+    stanceShift: isBPhase ? line.contributionVote?.reason || "" : line.stanceShift || "",
+    historyNote: isBPhase ? line.concernVote?.reason || "" : line.historyNote || "",
+    contributionVoteGiven,
+    concernVoteGiven,
     sequenceIndex: phaseIndex * 100 + lineIndex,
     timestamp: Date.now(),
   };
@@ -5966,26 +5987,65 @@ function getPdcFrozenObserverSummaries() {
 
 function getPdcMostRewardedContributor() {
   const counts = new Map();
-  getPdcPhases(pdcState.recap?.councilRoom || {}).forEach((phase) => {
+  const latestCounts = new Map();
+  getPdcPhases(pdcState.recap?.councilRoom || {}).filter((phase) => String(phase.phaseType).toUpperCase() === "B").forEach((phase) => {
+    latestCounts.clear();
     (phase.voteSummary?.contributionVotes || []).forEach((vote) => {
-      if (!vote?.speakerId) return;
-      counts.set(vote.speakerId, (counts.get(vote.speakerId) || 0) + Number(vote.count || 0));
+      const speakerId = vote?.speakerId || vote?.targetSpeakerId;
+      if (!speakerId) return;
+      counts.set(speakerId, (counts.get(speakerId) || 0) + Number(vote.count || 0));
+      latestCounts.set(speakerId, Number(vote.count || 0));
     });
   });
   const rows = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
   if (!rows.length) return { speakerId: "", name: "", count: 0, tie: false };
-  const [speakerId, count] = rows[0];
-  const tie = rows[1] && rows[1][1] === count;
+  const topCount = rows[0][1];
+  const tiedRows = rows.filter((row) => row[1] === topCount);
+  let [speakerId, count] = rows[0];
+  let tieResolution = "";
+  if (tiedRows.length > 1) {
+    const latestSorted = tiedRows.sort((a, b) => (latestCounts.get(b[0]) || 0) - (latestCounts.get(a[0]) || 0));
+    speakerId = latestSorted[0][0];
+    count = latestSorted[0][1];
+    tieResolution = latestSorted[1] && (latestCounts.get(latestSorted[0][0]) || 0) === (latestCounts.get(latestSorted[1][0]) || 0)
+      ? "Blue Whale unresolved core tension relevance"
+      : "latest B-phase contribution votes";
+  }
+  const tie = tiedRows.length > 1;
   const persona = findPdcPersonaById(speakerId) || {};
-  return { speakerId, name: persona.englishName || persona.name || speakerId, count, tie };
+  return { speakerId, name: persona.englishName || persona.name || speakerId, count, tie, tieResolution, cumulativeCounts: Object.fromEntries(counts), latestBPhaseCounts: Object.fromEntries(latestCounts) };
+}
+
+function selectPdcFinalReenabledObserver(rewarded, observers, currentRound) {
+  if (!Array.isArray(observers) || !observers.length) return { skippedReason: "no_archived_perspective" };
+  const validObservers = observers.filter((observer) => observer?.speakerId && pdcState.observerRosterIds.includes(observer.speakerId));
+  if (!validObservers.length) return { skippedReason: "no_valid_archived_perspective" };
+  const coreTension = normalizePdcDisplayText(currentRound?.blueWhaleSummary?.strongestDisagreement || currentRound?.blueWhaleSummary?.text || "");
+  const rewardedRole = normalizePdcDisplayText(findPdcPersonaById(rewarded?.speakerId)?.role || "");
+  const selected = validObservers
+    .map((observer) => {
+      const haystack = normalizePdcDisplayText(`${observer.role || ""} ${observer.archivedStance || ""} ${observer.reasonArchived || ""} ${observer.lastContribution || ""}`).toLowerCase();
+      const score = ["risk", "evidence", "emotion", "blind", "opportunity", "execution", "user", "trust", "cost", "tension"]
+        .reduce((sum, token) => sum + (haystack.includes(token) || coreTension.toLowerCase().includes(token) ? 1 : 0), 0);
+      return { observer, score };
+    })
+    .sort((a, b) => b.score - a.score || a.observer.name.localeCompare(b.observer.name))[0]?.observer;
+  if (!selected) return { skippedReason: "no_valid_archived_perspective" };
+  return {
+    ...selected,
+    selectedById: rewarded?.speakerId || "",
+    selectedByName: rewarded?.name || "Most Rewarded Contributor",
+    selectionReason: `${rewarded?.name || "The most rewarded contributor"} re-enables this archived perspective to pressure the final decision on ${coreTension || rewardedRole || "the unresolved core tension"}.`,
+  };
 }
 
 function maybeAddPdcFinalReintroducedPerspective(phase) {
-  if (!phase || Number(phase.roundNumber) !== pdcMaxNormalRound || pdcState.finalReintroducedPerspective?.added) return;
+  if (!phase || Number(phase.roundNumber) !== pdcMaxNormalRound || String(phase.phaseType).toUpperCase() !== "A" || pdcState.finalReintroducedPerspective?.added) return;
   const selectedId = pdcState.finalRoundPreviewSelection;
   if (!selectedId || !pdcState.observerRosterIds.includes(selectedId)) return;
   const info = getPdcObserverArchiveInfo(selectedId) || {};
   const persona = findPdcPersonaById(selectedId) || {};
+  const meta = pdcState.finalReenabledObserverMeta || {};
   const name = persona.englishName || persona.name || selectedId;
   const line = {
     speakerId: selectedId,
@@ -6002,11 +6062,13 @@ function maybeAddPdcFinalReintroducedPerspective(phase) {
     contributionVote: null,
     concernVote: null,
   };
-  phase.dialogue = [...(Array.isArray(phase.dialogue) ? phase.dialogue : []), line];
+  phase.dialogue = [line, ...(Array.isArray(phase.dialogue) ? phase.dialogue : [])];
   pdcState.finalReintroducedPerspective = {
     speakerId: selectedId,
     speakerName: name,
-    reasonForReintroduction: "Selected in Final Round Preview",
+    selectedById: meta.selectedById || "",
+    selectedByName: meta.selectedByName || "",
+    reasonForReintroduction: meta.selectionReason || "Selected automatically in Final Round Preview",
     finalReflection: line.text,
     added: true,
   };
@@ -6185,7 +6247,8 @@ function renderPdcProviderDiagnostics() {
       ${phaseDiagnostics ? `<p>Session reset: sessionResetApplied=${phaseDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(phaseDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(phaseDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(phaseDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${phaseDiagnostics.previousSessionCleared ? "true" : "false"}</p>` : ""}
       ${phaseDiagnostics ? `<p>Phase cost optimization: activeRosterPromptCount=${Number(phaseDiagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount=${Number(phaseDiagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt=${phaseDiagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded=${phaseDiagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction=${Number(phaseDiagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied=${phaseDiagnostics.costOptimizationApplied ? "true" : "false"} · allowedSpeakerIdsForPhase=${escapeHtml((phaseDiagnostics.allowedSpeakerIdsForPhase || []).join(", ") || "-")} · generatedSpeakerIds=${escapeHtml((phaseDiagnostics.generatedSpeakerIds || []).join(", ") || "-")}</p>` : ""}
       ${phaseDiagnostics ? `<p>Phase quality: OpenAI returned statement count=${Number(phaseDiagnostics.modelStatementCount || 0)} · Normalized statement count=${Number(phaseDiagnostics.normalizedStatementCount || 0)} · visibleStatementCount=${Number(phaseDiagnostics.visibleStatementCount || 0)} · totalStatementCount=${Number(phaseDiagnostics.totalStatementCount || 0)} · retryUsed=${phaseDiagnostics.retryUsed ? "true" : "false"} · duplicateSpeakerIds=${escapeHtml((phaseDiagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted=${phaseDiagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded=${phaseDiagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed=${phaseDiagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason=${escapeHtml(phase?.fallbackReason || pdcState.providerDiagnostics?.fallbackReason || "-")} · Default statements injected=${phaseDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phaseDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phaseDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phaseDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""} · templateContentDetected=${phaseDiagnostics.templateContentDetected ? "true" : "false"}${phaseDiagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(phaseDiagnostics.templateMatchedPhrases.join(", "))})` : ""} · contentQualityRetryUsed=${phaseDiagnostics.contentQualityRetryUsed ? "true" : "false"}</p>` : ""}
-      <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
+      ${phaseDiagnostics ? `<p>Phase rhythm: bPhaseVotingOnlyMode=${phaseDiagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength=${Number(phaseDiagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage=${Number(phaseDiagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount=${Number(phaseDiagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount=${Number(phaseDiagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected=${phaseDiagnostics.aPhaseVoteLeakDetected ? "true" : "false"}</p>` : ""}
+      <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · cumulativeContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.cumulativeContributionVoteCounts || {}))} · latestBPhaseContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.latestBPhaseContributionVoteCounts || {}))} · mostRewardedTieDetected=${lifecycleDiagnostics.mostRewardedTieDetected ? "true" : "false"} · mostRewardedTieResolution=${escapeHtml(lifecycleDiagnostics.mostRewardedTieResolution || "-")} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · autoReenableApplied=${lifecycleDiagnostics.autoReenableApplied ? "true" : "false"} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · reEnabledObserverSelectedBy=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectedBy || "-")} · reEnabledObserverSelectionReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionReason || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
       ${final ? `<p>Final recap debug: finalRecapProvider=${escapeHtml(final.actualProvider || final.provider || "-")} · finalRecapOpenAiDurationMs=${Number(finalDiagnostics?.finalRecapOpenAiDurationMs || 0)} · finalRecapTotalDurationMs=${Number(finalDiagnostics?.finalRecapTotalDurationMs || 0)} · finalRecapPromptCharLength=${Number(finalDiagnostics?.finalRecapPromptCharLength || 0)} · finalRecapOutputCharLength=${Number(finalDiagnostics?.finalRecapOutputCharLength || 0)} · finalRecapSchemaName=${escapeHtml(finalDiagnostics?.finalRecapSchemaName || final.schemaName || "-")} · finalRecapStrict=${(finalDiagnostics?.finalRecapStrict || final.strict) ? "true" : "false"} · finalRecapActiveRosterPromptCount=${Number(finalDiagnostics?.finalRecapActiveRosterPromptCount || 0)} · finalRecapObserverSummaryPromptCount=${Number(finalDiagnostics?.finalRecapObserverSummaryPromptCount || 0)} · archivedSummaryIncluded=${finalDiagnostics?.archivedSummaryIncluded ? "true" : "false"}</p>` : ""}
     </section>`;
 }
@@ -6196,7 +6259,7 @@ function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
   const currentPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || null;
   const rewarded = getPdcMostRewardedContributor();
   const frozenSummaries = getPdcFrozenObserverSummaries();
-  const reenabled = pdcState.finalReintroducedPerspective || {};
+  const reenabled = pdcState.finalReintroducedPerspective || pdcState.finalReenabledObserverMeta || {};
   return {
     frozenObserverCount: Object.keys(pdcState.archivedObservers || {}).length,
     observerHistoryUpdateBlockedCount: phaseDiagnostics?.observerHistoryUpdateBlockedCount || 0,
@@ -6214,11 +6277,18 @@ function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
     previousSessionCleared: pdcState.previousSessionCleared === true,
     isFinalRound: Number(currentPhase?.roundNumber || 0) >= pdcMaxNormalRound,
     finalRoundPreviewShown: pdcState.finalRoundPreviewShown,
+    cumulativeContributionVoteCounts: rewarded.cumulativeCounts || {},
+    latestBPhaseContributionVoteCounts: rewarded.latestBPhaseCounts || {},
+    mostRewardedTieDetected: rewarded.tie === true,
+    mostRewardedTieResolution: rewarded.tieResolution || "",
     mostRewardedContributorId: rewarded.speakerId || "",
     mostRewardedContributorName: rewarded.name || "",
     mostRewardedContributionVoteCount: rewarded.count || 0,
+    autoReenableApplied: Boolean(reenabled.speakerId),
     reEnabledObserverId: reenabled.speakerId || "",
-    reEnabledObserverName: reenabled.speakerName || "",
+    reEnabledObserverName: reenabled.speakerName || reenabled.name || "",
+    reEnabledObserverSelectedBy: reenabled.selectedByName || "",
+    reEnabledObserverSelectionReason: reenabled.reasonForReintroduction || reenabled.selectionReason || "",
     finalReenableSkippedReason: pdcState.finalReenableSkippedReason || "",
     continueBeyondFinalAllowed: pdcState.founderPreview === true,
   };

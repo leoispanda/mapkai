@@ -2077,3 +2077,11 @@ Push status:
 - If repair still has only duplicate speakers while all active speakers are present and no invalid speakers/targets remain, the phase recovers by keeping the first valid statement per duplicate speaker instead of falling back to placeholder.
 - Founder diagnostics now expose `duplicateSpeakerIds`, `structuredOutputRepairAttempted`, `structuredOutputRepairSucceeded`, `duplicateSpeakerRecoveryUsed`, and fallback reason for phase quality checks.
 - Strict schema transport, model, D1/pass lifecycle, observer exclusion, final recap schema, and UI layout were not changed.
+
+## 2026-05-24 - Simplify PDC voting rhythm and final re-enable flow
+- PDC rhythm now treats A phases as full `Position Update` rounds and B phases as compact `Voting & Pressure Check` rounds rather than another long challenge/discussion round.
+- OpenAI/Cloudflare phase prompts now tell B phases not to restate full positions, to cast one contribution vote and one concern vote with short reasons, and to keep B text to one short voting-rationale sentence.
+- B phase diagnostics now expose voting-only mode, average text length, vote reason coverage, long statement count, missing vote count, and A-phase vote leakage.
+- Final Round Preview no longer renders manual archived-perspective radio choices; it automatically shows the Most Rewarded Contributor and the Re-enabled Archived Perspective selected for the final round.
+- The final reintroduced archived perspective is inserted once at the start of Final Round 5A, does not become active, does not vote, and no longer resumes normal Perspective Trail updates.
+- Round labels now use public wording `Position Update`, `Voting & Pressure Check`, `Final Round Preview`, `Most Rewarded Contributor`, `Re-enabled Archived Perspective`, and `Final Reintroduced Perspective`.

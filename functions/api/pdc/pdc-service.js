@@ -368,7 +368,7 @@ export const pdcModes = {
 
 export const pdcRhythmFoundation = {
   opening: ["opening_positions", "meeting_memory_seed", "first_tension_scan"],
-  challenge: ["cross_perspective_challenge", "response", "support_with_reason", "narrowing_signal"],
+  challenge: ["voting_pressure_check", "contribution_vote", "concern_vote", "narrowing_signal"],
   laterRounds: ["updated_stance", "meeting_memory_response", "stance_change", "next_focus"],
   memory: ["stance", "contribution", "influence", "support_received", "active_status"],
   finalRound: ["leading_contributor", "final_facilitator_summary", "decision_memo"],
@@ -380,6 +380,7 @@ const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
 const defaultOpenAiModel = "gpt-5-mini";
 const openAiResponsesEndpoint = "https://api.openai.com/v1/responses";
 const openAiPhaseMaxOutputTokens = 5000;
+const openAiBPhaseMaxOutputTokens = 2800;
 const openAiPhaseRetryMaxOutputTokens = 8000;
 const nullableStringSchema = { type: ["string", "null"] };
 const stringArraySchema = { type: "array", items: { type: "string" } };
@@ -1077,7 +1078,7 @@ function buildPlaceholderRounds({ modeId, personas }) {
     }),
     buildPlaceholderRound({
       id: "round-1b",
-      label: "Round 1B — Challenge, Response & Voting",
+      label: "Round 1B — Voting & Pressure Check",
       roundNumber: 1,
       phaseType: "B",
       entries: roundTwo,
@@ -1106,7 +1107,8 @@ function createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber = 
 
 function createGenericPlaceholderPhase({ modeId, personas, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention }) {
   const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
-  const label = `Round ${roundNumber}${normalizedPhaseType} — ${normalizedPhaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  const labelPrefix = Number(roundNumber) >= 5 ? "Final Round" : `Round ${roundNumber}${normalizedPhaseType}`;
+  const label = `${labelPrefix} — ${normalizedPhaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
   const guidance = userIntervention ? ` User guidance: ${userIntervention}` : "";
   const entries = personas.map((persona) => {
     const target = getTargetPersona(persona, personas);
@@ -1212,7 +1214,8 @@ function getPlaceholderStanceType(persona) {
 
 async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const model = getOpenAiModel(env);
-  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  const phaseLabelPrefix = Number(roundNumber) >= 5 ? "Final Round" : `Round ${roundNumber}${phaseType}`;
+  const phaseLabel = `${phaseLabelPrefix} — ${phaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
   let retryUsed = false;
   let structuredOutputRepairAttempted = false;
   let structuredOutputRepairSucceeded = false;
@@ -1415,7 +1418,7 @@ function applyOpenAiStructuredRepairDiagnostics(diagnostics, { structuredOutputV
 
 async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
   const prompt = buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason });
-  const maxOutputTokens = resolveOpenAiPhaseMaxOutputTokens(env);
+  const maxOutputTokens = resolveOpenAiPhaseMaxOutputTokens(env, phaseType);
   const contentDiagnostics = createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory, maxOutputTokens });
   const parsed = await callOpenAiJsonWithRetry({
     env,
@@ -1437,7 +1440,8 @@ async function generateCloudflareDialogue({ modeId, modeLabel, sessionRoster, ob
   // To enable Cloudflare Workers AI, configure a Workers AI binding named AI in the Cloudflare Pages project settings.
   // If the AI binding is absent or fails, PDC falls back to placeholder dialogue.
   const model = String(env.PDC_CLOUDFLARE_MODEL || defaultCloudflareModel).trim();
-  const phaseLabel = `Round ${roundNumber}${phaseType} — ${phaseType === "A" ? "Position Update" : "Challenge, Response & Voting"}`;
+  const phaseLabelPrefix = Number(roundNumber) >= 5 ? "Final Round" : `Round ${roundNumber}${phaseType}`;
+  const phaseLabel = `${phaseLabelPrefix} — ${phaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
   const prompt = buildCloudflareDialoguePrompt({ modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   const startedAt = Date.now();
   const result = await env.AI.run(model, {
@@ -1538,7 +1542,7 @@ Phase:
 ${phaseLabel}
 
 Phase rule:
-${phaseType === "A" ? "A = position update. Every statement must state or update a concrete position about this exact question. Do not include votes. Do not write a generic role line." : "B = challenge and response. Every statement must challenge, respond to, or build on another named member. At least 5 of 9 statements should mention another member by name. Include targetSpeakerId when possible. Do not write generic independent answers."}
+${phaseType === "A" ? "A = Position Update. Every statement must state or update a concrete position about this exact question. Do not include votes. Do not write a generic role line." : "B = Voting & Pressure Check. This is not a discussion round. Do not restate full positions. Cast one contribution vote and one concern vote with short reasons; dialogue text should be one short voting rationale sentence."}
 
 Previous Blue Whale Summary:
 ${previousSummary || "No previous summary yet."}
@@ -1622,8 +1626,9 @@ function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = 
   const concisePreviousSummary = normalizeShortText(previousSummary, summaryLimit);
   const languageRule = containsCjk(`${userQuestion} ${userIntervention}`) ? "Output Chinese." : "Output English.";
   const isOpeningPhase = Number(roundNumber) === 1 && String(phaseType).toUpperCase() === "A";
-  const phaseRule = String(phaseType).toUpperCase() === "B"
-    ? "B phase: each statement is a challenge, defense, rebuttal, pressure test, risk, opportunity, or reflection on another named active member when useful. At least 70% of statements should target a valid active member. Do not generate a final decision."
+  const isBPhase = String(phaseType).toUpperCase() === "B";
+  const phaseRule = isBPhase
+    ? "B phase: Voting & Pressure Check only. This is not a discussion round. Do not restate full positions. Each active member casts one contribution vote and one concern vote with short reasons; text must be one short sentence summarizing only the voting rationale."
     : "A phase: each statement is a concrete position update on the user's decision. Do not vote. Do not archive. targetSpeakerId should usually be null unless a concise agreement/disagreement is essential.";
   return `PDC live council phase. Use only the compact context below.
 ${languageRule}
@@ -1669,9 +1674,12 @@ Instructions:
 - ${phaseRule}
 - ${isOpeningPhase ? "Round 1A may introduce mostly independent initial positions." : "This is not Round 1A: each member must answer what they are adding or changing compared with the previous phase."}
 - ${isOpeningPhase ? "Do not force cross-member collision yet." : "Each member must consider their compact previous stance, at least one other active member's previous view, and the current Blue Whale summary."}
-- ${String(phaseType).toUpperCase() === "B" ? "At least 70% of visibleStatements must include a valid targetSpeakerId from the active roster." : "A phase targetSpeakerId should usually be null; this phase is for current stance, changed view, and evidence or condition needed next."}
+- ${isBPhase ? "This is not a discussion round. Do not restate your full position. Do not produce long statements. Only cast one contribution vote and one concern vote with short reasons." : "A phase targetSpeakerId should usually be null; this phase is for current stance, changed view, and evidence or condition needed next."}
+- ${isBPhase ? "The purpose is to identify the most valuable contribution and the perspective needing pressure/archive." : "A phase should include current stance, what changed since the previous round, and one condition, evidence, boundary, or next requirement."}
+- ${isBPhase ? "visibleStatements.text must be one sentence max and should read like a compact voting rationale, not a viewpoint paragraph." : "Do not include contributionVoteGiven or concernVoteGiven in memberHistoryPatch for A phases; use null."}
+- ${isBPhase ? "Use memberHistoryPatch.contributionVoteGiven and memberHistoryPatch.concernVoteGiven for the two vote targets. Use stanceShift as the short contribution vote reason and historyNote as the short concern vote reason." : "A phase should update member current stance and Perspective Trail."}
 - ${isOpeningPhase ? "Statements can establish roles and first judgments." : "Members should challenge, respond, build, clarify, revise, narrow, or add a concrete metric, threshold, experiment, decision rule, or unresolved tension."}
-- ${isOpeningPhase ? "stanceShift/historyNote may be short setup notes." : "memberHistoryPatch.stanceShift or historyNote should briefly state what changed from that member's previous view, without duplicating the statement text."}
+- ${isBPhase ? "For B phase, stance may repeat the previous stance briefly or be empty, and stanceShift/historyNote should be vote reasons only." : isOpeningPhase ? "stanceShift/historyNote may be short setup notes." : "memberHistoryPatch.stanceShift or historyNote should briefly state what changed from that member's previous view, without duplicating the statement text."}
 - Later phases must not repeat the same advice in different words. Use compact member summaries to avoid repeating each member's own previous warning, condition, or recommendation.
 - If targetSpeakerId is present, the statement text must name or clearly reference that target's idea.
 - Observer/archived members are context only for final recap; do not target them in normal phases.
@@ -1741,11 +1749,12 @@ function buildCompactMemberStateSummaries(meetingMemory, sessionRoster) {
     .slice(0, Math.max(0, allowedIds.size));
 }
 
-function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
+function resolveOpenAiPhaseMaxOutputTokens(env = {}, phaseType = "A") {
   const diagnosticTokens = Number(env?.PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS);
   if (env?.PDC_LATENCY_DIAGNOSTIC === "true" && Number.isFinite(diagnosticTokens) && diagnosticTokens > openAiPhaseMaxOutputTokens) {
     return Math.min(Math.floor(diagnosticTokens), 8000);
   }
+  if (String(phaseType).toUpperCase() === "B") return openAiBPhaseMaxOutputTokens;
   return openAiPhaseMaxOutputTokens;
 }
 
@@ -1994,6 +2003,7 @@ function parseStrictStructuredJson(value) {
 
 function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", retryUsed = false, allowDuplicateSpeakerRecovery = false }) {
   const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
+  const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
   const rawStatements = Array.isArray(parsed?.visibleStatements) ? parsed.visibleStatements : [];
   const statementsBySpeaker = new Map();
   const invalidSpeakerIds = [];
@@ -2004,7 +2014,7 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
 
   rawStatements.forEach((line) => {
     const speakerId = normalizeShortText(line?.speakerId, 80);
-    const text = normalizeShortText(line?.text, 260);
+    const text = normalizeShortText(line?.text, normalizedPhaseType === "B" ? 180 : 260);
     if (!byId.has(speakerId) || !text) {
       if (speakerId) invalidSpeakerIds.push(speakerId);
       return;
@@ -2057,14 +2067,13 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
     throw error;
   }
 
-  const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
   const dialogue = sessionRoster.map((persona) => statementsBySpeaker.get(persona.id)).filter(Boolean);
   const dialogueWithHistoryVotes = applyMemberHistoryVotes(dialogue, parsed?.memberHistoryPatch, byId);
   const dialogueWithVotes = normalizedPhaseType === "B"
     ? fillMissingVotes({ dialogue: dialogueWithHistoryVotes, sessionRoster })
     : dialogueWithHistoryVotes.map((line) => ({ ...line, contributionVote: null, concernVote: null }));
   const voteSummary = normalizedPhaseType === "B" ? aggregateVoteSummary({ dialogue: dialogueWithVotes, personas: sessionRoster }) : null;
-  const rosterUpdate = normalizedPhaseType === "B" ? buildRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
+  const rosterUpdate = normalizedPhaseType === "B" && Number(roundNumber) < 5 ? buildRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: normalizedPhaseType === "B" ? "Final voting phase closes without another observer transition." : "Position update phase only." };
   const summary = parsed?.blueWhaleSummary && typeof parsed.blueWhaleSummary === "object" ? parsed.blueWhaleSummary : {};
   const memoryPatch = parsed?.meetingMemoryPatch && typeof parsed.meetingMemoryPatch === "object" ? parsed.meetingMemoryPatch : {};
   const currentRoundLabel = phaseLabel || `Round ${roundNumber}${normalizedPhaseType}`;
@@ -2102,6 +2111,14 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
     ? Math.ceil(sessionRoster.length * 0.7)
     : 0;
   const crossMemberTargetCountBelowMinimum = minimumTargetSpeakerCount > 0 && validTargetSpeakerCount < minimumTargetSpeakerCount;
+  const bPhaseStats = normalizedPhaseType === "B" ? buildBPhaseDiagnostics(dialogueWithVotes) : {
+    bPhaseVotingOnlyMode: false,
+    bPhaseAverageTextLength: 0,
+    bPhaseVoteReasonCoverage: 0,
+    bPhaseLongStatementFilteredCount: 0,
+    bPhaseMissingVoteCount: 0,
+    aPhaseVoteLeakDetected: dialogueWithVotes.some((line) => line.contributionVote || line.concernVote),
+  };
 
   return {
     provider: "openai",
@@ -2150,6 +2167,7 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
       missingSpeakerIds,
       invalidSpeakerIds: validationDiagnostics.invalidSpeakerIds,
       invalidTargetIds: validationDiagnostics.invalidTargetIds,
+      ...bPhaseStats,
       structuredOutputRepairAttempted: false,
       structuredOutputRepairSucceeded: false,
       duplicateSpeakerRecoveryUsed: duplicateOnlyRecoverable,
@@ -2185,6 +2203,26 @@ function normalizeOpenAiStatementType(value) {
   return "position";
 }
 
+function buildBPhaseDiagnostics(dialogue, isBPhase = true) {
+  const rows = Array.isArray(dialogue) ? dialogue : [];
+  const totalTextLength = rows.reduce((sum, line) => sum + String(line?.text || "").length, 0);
+  const voteReasonSlots = rows.length * 2;
+  const voteReasonFilled = rows.reduce((sum, line) => sum
+    + (line?.contributionVote?.reason ? 1 : 0)
+    + (line?.concernVote?.reason ? 1 : 0), 0);
+  const missingVoteCount = rows.reduce((sum, line) => sum
+    + (line?.contributionVote?.targetSpeakerId ? 0 : 1)
+    + (line?.concernVote?.targetSpeakerId ? 0 : 1), 0);
+  return {
+    bPhaseVotingOnlyMode: isBPhase === true,
+    bPhaseAverageTextLength: rows.length ? Math.round(totalTextLength / rows.length) : 0,
+    bPhaseVoteReasonCoverage: voteReasonSlots ? Number((voteReasonFilled / voteReasonSlots).toFixed(2)) : 0,
+    bPhaseLongStatementFilteredCount: rows.filter((line) => String(line?.text || "").length > 180).length,
+    bPhaseMissingVoteCount: missingVoteCount,
+    aPhaseVoteLeakDetected: false,
+  };
+}
+
 function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
   const historyBySpeaker = new Map((Array.isArray(memberHistoryPatch) ? memberHistoryPatch : []).map((row) => [normalizeShortText(row?.speakerId, 80), row]));
   return dialogue.map((line) => {
@@ -2204,19 +2242,19 @@ function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
       contributionVote: contributionTarget ? {
         targetSpeakerId: contributionTarget.id,
         targetSpeakerName: contributionTarget.englishName || contributionTarget.name,
-        reason: "OpenAI marked this member as the useful contribution to carry forward.",
+        reason: normalizeShortText(history.stanceShift, 160) || "OpenAI marked this member as the useful contribution to carry forward.",
       } : null,
       concernVote: concernTarget ? {
         targetSpeakerId: concernTarget.id,
         targetSpeakerName: concernTarget.englishName || concernTarget.name,
-        reason: "OpenAI marked this member as needing more pressure in the next round.",
+        reason: normalizeShortText(history.historyNote, 160) || "OpenAI marked this member as needing more pressure in the next round.",
       } : null,
     };
   });
 }
 
 function shouldRequireCrossMemberTargets(roundNumber, phaseType) {
-  return String(phaseType).toUpperCase() === "B";
+  return false;
 }
 
 function normalizeStructuredMemberHistory(memberHistoryPatch, sessionRoster) {
@@ -2288,7 +2326,7 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
   const isBPhase = String(parsed?.phaseType || phaseType).toUpperCase() === "B";
   const dialogueWithVotes = isBPhase ? fillMissingVotes({ dialogue, sessionRoster }) : dialogue.map((line) => ({ ...line, contributionVote: null, concernVote: null }));
   const normalizedVoteSummary = isBPhase ? normalizeVoteSummary(parsed?.voteSummary, dialogueWithVotes, sessionRoster) : null;
-  const normalizedRosterUpdate = isBPhase ? normalizeRosterUpdate(parsed?.rosterUpdate, normalizedVoteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
+  const normalizedRosterUpdate = isBPhase && Number(roundNumber) < 5 ? normalizeRosterUpdate(parsed?.rosterUpdate, normalizedVoteSummary) : { shouldArchivePerspective: false, reason: isBPhase ? "Final voting phase closes without another observer transition." : "Position update phase only." };
   const normalizedPhaseType = String(parsed?.phaseType || phaseType).toUpperCase() === "B" ? "B" : "A";
   const normalizedRoundNumber = Number(parsed?.roundNumber) > 0 ? Number(parsed.roundNumber) : roundNumber;
   const currentRoundLabel = normalizeShortText(parsed?.phaseLabel || parsed?.currentRoundLabel, 80) || phaseLabel;
@@ -2366,6 +2404,10 @@ function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumbe
       strict: sourceProvider === "openai",
       modelStatementCount: normalizedLines.length,
       normalizedStatementCount: dialogueWithVotes.length,
+      visibleStatementCount: dialogueWithVotes.length,
+      totalStatementCount: dialogueWithVotes.length,
+      ...buildBPhaseDiagnostics(isBPhase ? dialogueWithVotes : [], isBPhase),
+      aPhaseVoteLeakDetected: !isBPhase && dialogueWithVotes.some((line) => line.contributionVote || line.concernVote),
       allowedSpeakerIdsForPhase: sessionRoster.map((persona) => persona.id).filter(Boolean),
       generatedSpeakerIds: dialogueWithVotes.map((line) => line.speakerId),
       defaultStatementsInjected: missingLines.length > 0,
