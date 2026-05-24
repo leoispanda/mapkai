@@ -4581,7 +4581,7 @@ function renderPdcCouncilRoom(recap) {
   const thinkingLine = playback?.thinkingSpeakerId ? fullDialogue.find((line) => line.speakerId === playback.thinkingSpeakerId) : null;
   const showPhaseAfterPlayback = !isWarmupPhase && (!playback || playback.summaryVisible || playback.complete);
   const selectedPersona = allPersonas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
-  rebuildPdcMemberHistory(rounds);
+  appendPdcMemberHistoryFromPhases(rounds);
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
       <div class="pdc-room-heading">
@@ -4611,7 +4611,6 @@ function renderPdcCouncilRoom(recap) {
                   ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true, false, selectedPersona)).join("")}
                 </div>` : ""}
             </div>
-            ${selectedPersona ? renderPdcPersonaProfile(selectedPersona, "desktop") : ""}
           </div>
         </aside>
         <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
@@ -4746,7 +4745,7 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
   const isSelected = pdcState.selectedPersonaId === persona.id;
   const isSpeaking = activeSpeakerId === persona.id || isWarmupThinking;
   return `
-    <div class="pdc-roster-item">
+    <div class="pdc-roster-item ${isSelected && selectedPersona ? "has-profile" : ""}">
       <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isWarmupThinking ? "is-thinking" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
         <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
         <span class="pdc-roster-copy">
@@ -5266,6 +5265,7 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     contentDiagnostics: data.contentDiagnostics || null,
   };
   const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention, contentDiagnostics: data.contentDiagnostics || null }, pdcState.pdcPhases.length, room);
+  appendPdcMemberHistoryFromPhase(phase, pdcState.pdcPhases.length);
   applyPdcRosterUpdate(phase);
   return phase;
 }
@@ -5511,7 +5511,7 @@ function applyPdcFinalMemoryToRecap(recap) {
   };
 }
 
-function renderPdcPersonaProfile(persona, placement = "desktop") {
+function renderPdcPersonaProfile(persona, placement = "inline") {
   if (!persona) return "";
   const observerInfo = pdcState.observerRosterIds.includes(persona.id) ? getPdcObserverArchiveInfo(persona.id) : null;
   const history = getPdcMemberHistory(persona.id);
@@ -5602,28 +5602,31 @@ function getPdcCurrentMemberStance(personaId, history = null) {
   return latest?.stance || latest?.text || "";
 }
 
-function rebuildPdcMemberHistory(phases = []) {
-  const historyBySpeaker = {};
-  (Array.isArray(phases) ? phases : []).forEach((phase, phaseIndex) => {
-    if (!shouldUsePdcPhaseForHistory(phase)) return;
-    (Array.isArray(phase.dialogue) ? phase.dialogue : []).forEach((line, lineIndex) => {
-      if (!shouldUsePdcLineForHistory(line)) return;
-      const item = createPdcHistoryItem({ phase, line, phaseIndex, lineIndex });
-      if (!item?.speakerId) return;
-      historyBySpeaker[item.speakerId] ||= [];
-      if (!historyBySpeaker[item.speakerId].some((existing) => existing.historyKey === item.historyKey)) {
-        historyBySpeaker[item.speakerId].push(item);
-      }
-    });
+function appendPdcMemberHistoryFromPhases(phases = []) {
+  (Array.isArray(phases) ? phases : []).forEach((phase, phaseIndex) => appendPdcMemberHistoryFromPhase(phase, phaseIndex));
+  return pdcState.memberHistory;
+}
+
+function appendPdcMemberHistoryFromPhase(phase, phaseIndex = 0) {
+  if (!shouldUsePdcPhaseForHistory(phase)) return;
+  (Array.isArray(phase.dialogue) ? phase.dialogue : []).forEach((line, lineIndex) => {
+    if (!shouldUsePdcLineForHistory(line)) return;
+    const item = createPdcHistoryItem({ phase, line, phaseIndex, lineIndex });
+    if (!item?.speakerId || !item.historyKey) return;
+    pdcState.memberHistory ||= {};
+    pdcState.memberHistory[item.speakerId] ||= [];
+    if (pdcState.memberHistory[item.speakerId].some((existing) => existing.historyKey === item.historyKey)) return;
+    pdcState.memberHistory[item.speakerId].push(item);
   });
-  pdcState.memberHistory = historyBySpeaker;
-  return historyBySpeaker;
 }
 
 function shouldUsePdcPhaseForHistory(phase) {
   if (!phase || phase.isWarmup) return false;
   const provider = String(phase.provider || phase.contentDiagnostics?.provider || "").toLowerCase();
-  return provider && provider !== "placeholder";
+  if (provider !== "openai") return false;
+  const visibleCount = Number(phase.contentDiagnostics?.visibleStatementCount || phase.contentDiagnostics?.modelStatementCount || 0);
+  const dialogue = Array.isArray(phase.dialogue) ? phase.dialogue : [];
+  return visibleCount > 0 || dialogue.some((line) => line?.contentSource === "model");
 }
 
 function shouldUsePdcLineForHistory(line) {
@@ -5639,9 +5642,13 @@ function isPdcPlaceholderLine(line) {
 
 function createPdcHistoryItem({ phase, line, phaseIndex, lineIndex }) {
   const targetName = line.targetSpeakerName || findPdcPersonaById(line.targetSpeakerId)?.englishName || findPdcPersonaById(line.targetSpeakerId)?.name || "";
+  const phaseId = phase.id || `${phase.roundNumber || phaseIndex + 1}-${phase.phaseType || ""}-${normalizePdcDisplayText(phase.phaseLabel || phase.label || "")}`;
   return {
-    historyKey: `${phase.id || phase.phaseLabel || phaseIndex}:${line.speakerId}:${lineIndex}:${normalizePdcDisplayText(line.text).slice(0, 80)}`,
+    phaseId,
+    historyKey: `${phaseId}:${line.speakerId}`,
     speakerId: line.speakerId,
+    speakerName: line.speakerName || "",
+    role: line.role || "",
     roundLabel: phase.label || phase.phaseLabel || "",
     phaseLabel: phase.phaseLabel || phase.label || "",
     statementType: line.statementType || line.stanceType || "",
@@ -5653,6 +5660,8 @@ function createPdcHistoryItem({ phase, line, phaseIndex, lineIndex }) {
     historyNote: line.historyNote || "",
     contributionVoteGiven: line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "",
     concernVoteGiven: line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "",
+    sequenceIndex: phaseIndex * 100 + lineIndex,
+    timestamp: Date.now(),
   };
 }
 

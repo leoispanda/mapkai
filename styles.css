@@ -428,11 +428,6 @@ body:not(.founder-mode) .founder-public-entry {
   gap: 12px;
 }
 
-.pdc-roster-panel.has-selected-profile .pdc-roster-layout {
-  grid-template-columns: minmax(230px, 290px) minmax(260px, 1fr);
-  align-items: start;
-}
-
 .pdc-roster-main {
   min-width: 0;
 }
@@ -495,6 +490,11 @@ body:not(.founder-mode) .founder-public-entry {
   display: grid;
   gap: 8px;
   min-width: 0;
+}
+
+.pdc-roster-item.has-profile {
+  grid-template-columns: minmax(220px, 280px) minmax(260px, 1fr);
+  align-items: start;
 }
 
 .pdc-roster-row {
@@ -922,12 +922,7 @@ body:not(.founder-mode) .founder-public-entry {
   background: rgba(255, 250, 240, 0.86);
 }
 
-.pdc-profile-desktop {
-  display: block;
-}
-
 .pdc-profile-inline {
-  display: none;
   margin-top: 0;
 }
 
@@ -2749,11 +2744,6 @@ canvas {
     position: static;
   }
 
-  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
-    grid-template-columns: minmax(220px, 280px) minmax(240px, 1fr);
-    align-items: start;
-  }
-
   .field-hero,
   .contact-section,
   .quick-mirror-card,
@@ -2814,16 +2804,8 @@ canvas {
     order: 2;
   }
 
-  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+  .pdc-roster-item.has-profile {
     grid-template-columns: 1fr;
-  }
-
-  .pdc-profile-desktop {
-    display: none;
-  }
-
-  .pdc-profile-inline {
-    display: block;
   }
 
   .pdc-roster-list,

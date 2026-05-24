@@ -2017,3 +2017,8 @@ Push status:
 - Root/public `script.js` already contained the Perspective Trail implementation, but `index.html` and `public/index.html` still had an older inline frontend script with the static Member Profile panel.
 - Replaced the inline script blocks in both production HTML copies with the current `script.js` code so the deployed page path includes `memberHistory`, contextual profile placement, and `Perspective Trail / 观点轨迹`.
 - Confirmed the production HTML still loads external `styles.css`, while JavaScript is served inline, so future frontend script changes must be synced into both HTML files before deploy.
+
+## 2026-05-24 - Fix PDC Perspective Trail duplication and append history
+- Removed the second selected-member profile render from the roster sidebar; the only member detail panel now renders inside the selected roster item, placed beside the member on desktop and directly below it on mobile.
+- Changed `memberHistory` from render-time rebuilding to append-only session state keyed by `phaseId:speakerId`, so accepted real OpenAI phases add one visible statement per member without duplicating entries across re-renders.
+- History appending requires provider `openai`, excludes warm-up and placeholder/default lines, and stores phase id, labels, speaker metadata, statement type, visible text, target info, sequence index, and timestamp.
