@@ -4104,6 +4104,9 @@ function createPdcBaseState(overrides = {}) {
     finalRoundPreviewSelection: "",
     finalReenableSkippedReason: "",
     finalRecapLoading: false,
+    advancedAuditLoading: false,
+    advancedAudit: null,
+    advancedAuditError: "",
     providerDiagnostics: null,
     userInterventions: [],
     discussionStopped: false,
@@ -4173,6 +4176,9 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     finalReenabledObserverMeta: null,
     finalReenableSkippedReason: "",
     finalRecapLoading: false,
+    advancedAuditLoading: false,
+    advancedAudit: null,
+    advancedAuditError: "",
     providerDiagnostics: null,
     userInterventions: [],
     discussionStopped: false,
@@ -4537,6 +4543,7 @@ function renderPdcPilot() {
       ${pdcState.finalRecapLoading && !pdcState.warmup ? `<section class="pdc-result"><p class="trust-note">Generating Council Recap...</p></section>` : ""}
       ${renderPdcReintroducedPerspective()}
       ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcRecap(pdcState.recap) : ""}
+      ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcAdvancedFinalAudit() : ""}
       ${renderPdcProviderDiagnostics()}
       ${renderPdcFounderPreviewActions()}
       ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcFeedbackForm() : ""}
@@ -5514,9 +5521,12 @@ async function stopAndSummarizePdc() {
     pdcState.recap.finalRecapFallbackUsed = result.fallbackUsed === true;
     pdcState.recap.placeholderNotice = result.fallbackUsed ? "Placeholder fallback recap — live final recap was unavailable." : "Generated Council Recap";
     pdcState.finalReintroducedPerspective = normalizePdcReintroducedForDisplay(result.finalReintroducedPerspective) || null;
+    pdcState.advancedAudit = null;
+    pdcState.advancedAuditError = "";
     pdcState.providerDiagnostics = {
       phase: pdcState.providerDiagnostics,
       final: result,
+      advancedAudit: null,
     };
   } catch (error) {
     pdcState.recap = applyPdcFinalMemoryToRecap(pdcState.recap);
@@ -5566,6 +5576,89 @@ async function requestPdcFinalRecap() {
   });
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.ok !== true) throw new Error(data.message || "Final recap could not be generated.");
+  return data;
+}
+
+async function runPdcAdvancedFinalAudit() {
+  if (!pdcState.founderPreview || !pdcState.recap || pdcState.advancedAuditLoading) return;
+  pdcState.advancedAuditLoading = true;
+  pdcState.advancedAuditError = "";
+  renderPdcPilot();
+  try {
+    const result = await requestPdcAdvancedFinalAudit();
+    pdcState.advancedAudit = result;
+    pdcState.providerDiagnostics = {
+      ...(pdcState.providerDiagnostics || {}),
+      advancedAudit: result,
+    };
+  } catch (error) {
+    pdcState.advancedAuditError = error.message || "Advanced Final Audit could not run.";
+    pdcState.providerDiagnostics = {
+      ...(pdcState.providerDiagnostics || {}),
+      advancedAudit: {
+        fallbackUsed: true,
+        fallbackReason: pdcState.advancedAuditError,
+        contentDiagnostics: error.contentDiagnostics || null,
+      },
+    };
+  } finally {
+    pdcState.advancedAuditLoading = false;
+    renderPdcPilot();
+  }
+}
+
+async function requestPdcAdvancedFinalAudit() {
+  const room = pdcState.recap?.councilRoom || {};
+  const phases = getPdcPhases(room);
+  const latestPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || phases[phases.length - 1] || null;
+  const finalDiagnostics = pdcState.providerDiagnostics?.final || null;
+  const phaseDiagnostics = pdcState.providerDiagnostics?.phase || null;
+  const headers = { "Content-Type": "application/json", "X-MapKAI-Founder": "true" };
+  const response = await fetch("/api/pdc/start", {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      advanced_final_audit: true,
+      pass: pdcState.pass,
+      mode_id: pdcState.selectedMode,
+      user_question: pdcState.question || room.decisionOnTable || "",
+      founder_preview: true,
+      final_recap_payload: pdcState.recap?.recap || null,
+      phases: phases.map((phase) => ({
+        label: phase.label || phase.phaseLabel || "",
+        roundNumber: phase.roundNumber,
+        phaseType: phase.phaseType,
+        blueWhaleSummary: phase.blueWhaleSummary || null,
+        voteSummary: phase.voteSummary || null,
+        rosterUpdate: phase.rosterUpdate || null,
+      })),
+      latest_phase: latestPhase,
+      meeting_memory: latestPhase?.meetingMemory || null,
+      vote_summary: latestPhase?.voteSummary || null,
+      active_roster_ids: pdcState.activeRosterIds.length ? pdcState.activeRosterIds : getPdcRosterPersonas(room, phases).map((persona) => persona.id),
+      observer_roster_ids: pdcState.observerRosterIds || [],
+      observer_roster_context: (pdcState.observerRosterIds || []).map((speakerId) => {
+        const info = getPdcObserverArchiveInfo(speakerId) || {};
+        return {
+          speakerId,
+          archivedStance: info.archivedStance || info.archivedPerspective || "",
+          archivedReason: info?.reason || "",
+          lastContribution: info?.lastContribution || "",
+          archivedAtPhaseLabel: info.archivedAtPhaseLabel || "",
+          archivedAtRoundNumber: info.archivedAtRoundNumber || 0,
+        };
+      }),
+      final_reintroduced_perspective: pdcState.finalReintroducedPerspective,
+      phase_diagnostics: phaseDiagnostics,
+      final_diagnostics: finalDiagnostics,
+    }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || data.ok !== true) {
+    const error = new Error(data.message || data.fallbackReason || "Advanced Final Audit could not run.");
+    error.contentDiagnostics = data.contentDiagnostics || null;
+    throw error;
+  }
   return data;
 }
 
@@ -6121,6 +6214,69 @@ function renderPdcRecapNotice(recap) {
   return "";
 }
 
+function renderPdcAdvancedFinalAudit() {
+  if (!pdcState.founderPreview) return "";
+  const audit = pdcState.advancedAudit?.audit || null;
+  return `
+    <section class="pdc-advanced-audit">
+      <p class="eyebrow">Advanced Final Audit</p>
+      <h2>Advanced Final Audit</h2>
+      <p>A higher-level review of stage fit, bias, and decision quality.</p>
+      ${audit ? renderPdcAdvancedAuditResult(audit) : `
+        <button class="button secondary" type="button" data-pdc-run-advanced-audit ${pdcState.advancedAuditLoading ? "disabled" : ""}>${pdcState.advancedAuditLoading ? "Running Advanced Final Audit..." : "Run Advanced Final Audit"}</button>
+      `}
+      ${pdcState.advancedAuditError ? `<p class="pdc-status">${escapeHtml(pdcState.advancedAuditError)}</p>` : ""}
+    </section>`;
+}
+
+function renderPdcAdvancedAuditResult(audit) {
+  const bias = audit.biasAudit || {};
+  const judgment = audit.improvedFinalJudgment || {};
+  const version = audit.recommendedVersion || {};
+  const display = audit.finalDisplay || {};
+  return `
+    <div class="pdc-advanced-audit-grid">
+      <article>
+        <h3>Main Bias</h3>
+        <p>${escapeHtml(bias.mainBias || "-")}</p>
+      </article>
+      <article>
+        <h3>Stage Fit</h3>
+        <p>${escapeHtml(bias.stageMismatch || display.summary || "-")}</p>
+      </article>
+      <article>
+        <h3>Overcomplicated Parts</h3>
+        ${renderPdcAuditList(bias.overcomplicatedParts)}
+      </article>
+      <article>
+        <h3>Improved Final Judgment</h3>
+        <p>${escapeHtml(judgment.oneSentenceConclusion || display.objectiveConclusion || "-")}</p>
+        ${judgment.why ? `<p>${escapeHtml(judgment.why)}</p>` : ""}
+      </article>
+      <article>
+        <h3>Lightweight Now</h3>
+        ${renderPdcAuditList(version.lightweightNow)}
+      </article>
+      <article>
+        <h3>Add Later If Traction</h3>
+        ${renderPdcAuditList(version.addLaterIfTraction)}
+      </article>
+      <article>
+        <h3>Only For External Partnership</h3>
+        ${renderPdcAuditList(version.onlyForExternalPartnership)}
+      </article>
+      <article>
+        <h3>Recommended Next Step</h3>
+        <p>${escapeHtml(display.recommendedNextStep || judgment.bestFirstStep || "-")}</p>
+      </article>
+    </div>`;
+}
+
+function renderPdcAuditList(items) {
+  const rows = Array.isArray(items) ? items.filter(Boolean) : [];
+  return rows.length ? `<ul>${rows.map((item) => `<li>${escapeHtml(normalizePdcDisplayText(item))}</li>`).join("")}</ul>` : `<p>-</p>`;
+}
+
 function normalizePdcRecapSectionsForDisplay(sections) {
   const source = sections && typeof sections === "object" ? sections : {};
   const clean = (value) => cleanPdcFinalRecapText(normalizePdcDisplayText(value));
@@ -6234,8 +6390,10 @@ function renderPdcProviderDiagnostics() {
   const info = pdcState.providerDiagnostics;
   const phase = info.phase || (!info.final ? info : null);
   const final = info.final || (info.finalReintroducedPerspective || info.recap ? info : null);
+  const advancedAudit = info.advancedAudit || null;
   const phaseDiagnostics = phase?.contentDiagnostics || null;
   const finalDiagnostics = final?.contentDiagnostics || null;
+  const auditDiagnostics = advancedAudit?.contentDiagnostics || null;
   const lifecycleDiagnostics = getPdcLifecycleDiagnostics(phaseDiagnostics);
   return `
     <section class="pdc-founder-phase-debug">
@@ -6250,6 +6408,7 @@ function renderPdcProviderDiagnostics() {
       ${phaseDiagnostics ? `<p>Phase rhythm: bPhaseVotingOnlyMode=${phaseDiagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength=${Number(phaseDiagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage=${Number(phaseDiagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount=${Number(phaseDiagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount=${Number(phaseDiagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected=${phaseDiagnostics.aPhaseVoteLeakDetected ? "true" : "false"}</p>` : ""}
       <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · cumulativeContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.cumulativeContributionVoteCounts || {}))} · latestBPhaseContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.latestBPhaseContributionVoteCounts || {}))} · mostRewardedTieDetected=${lifecycleDiagnostics.mostRewardedTieDetected ? "true" : "false"} · mostRewardedTieResolution=${escapeHtml(lifecycleDiagnostics.mostRewardedTieResolution || "-")} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · autoReenableApplied=${lifecycleDiagnostics.autoReenableApplied ? "true" : "false"} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · reEnabledObserverSelectedBy=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectedBy || "-")} · reEnabledObserverSelectionReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionReason || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
       ${final ? `<p>Final recap debug: finalRecapProvider=${escapeHtml(final.actualProvider || final.provider || "-")} · finalRecapOpenAiDurationMs=${Number(finalDiagnostics?.finalRecapOpenAiDurationMs || 0)} · finalRecapTotalDurationMs=${Number(finalDiagnostics?.finalRecapTotalDurationMs || 0)} · finalRecapPromptCharLength=${Number(finalDiagnostics?.finalRecapPromptCharLength || 0)} · finalRecapOutputCharLength=${Number(finalDiagnostics?.finalRecapOutputCharLength || 0)} · finalRecapSchemaName=${escapeHtml(finalDiagnostics?.finalRecapSchemaName || final.schemaName || "-")} · finalRecapStrict=${(finalDiagnostics?.finalRecapStrict || final.strict) ? "true" : "false"} · finalRecapActiveRosterPromptCount=${Number(finalDiagnostics?.finalRecapActiveRosterPromptCount || 0)} · finalRecapObserverSummaryPromptCount=${Number(finalDiagnostics?.finalRecapObserverSummaryPromptCount || 0)} · archivedSummaryIncluded=${finalDiagnostics?.archivedSummaryIncluded ? "true" : "false"}</p>` : ""}
+      ${advancedAudit ? `<p>Advanced audit debug: advancedAuditEnabled=${auditDiagnostics?.advancedAuditEnabled ? "true" : "false"} · advancedAuditFounderOnly=${auditDiagnostics?.advancedAuditFounderOnly ? "true" : "false"} · advancedAuditProvider=${escapeHtml(auditDiagnostics?.advancedAuditProvider || advancedAudit.actualProvider || advancedAudit.provider || "-")} · advancedAuditRequestedModel=${escapeHtml(auditDiagnostics?.advancedAuditRequestedModel || advancedAudit.requestedModel || advancedAudit.modelName || "-")} · advancedAuditActualModel=${escapeHtml(auditDiagnostics?.advancedAuditActualModel || advancedAudit.actualModel || advancedAudit.modelName || "-")} · advancedAuditFallbackUsed=${(auditDiagnostics?.advancedAuditFallbackUsed || advancedAudit.fallbackUsed) ? "true" : "false"} · advancedAuditFallbackReason=${escapeHtml(auditDiagnostics?.advancedAuditFallbackReason || advancedAudit.fallbackReason || "-")} · advancedAuditJsonParseFailed=${(auditDiagnostics?.advancedAuditJsonParseFailed || advancedAudit.jsonParseFailed) ? "true" : "false"} · advancedAuditSchemaName=${escapeHtml(auditDiagnostics?.advancedAuditSchemaName || advancedAudit.schemaName || "-")} · advancedAuditStrict=${(auditDiagnostics?.advancedAuditStrict || advancedAudit.strict) ? "true" : "false"} · advancedAuditDurationMs=${Number(auditDiagnostics?.advancedAuditDurationMs || 0)} · advancedAuditPromptCharLength=${Number(auditDiagnostics?.advancedAuditPromptCharLength || 0)} · advancedAuditOutputCharLength=${Number(auditDiagnostics?.advancedAuditOutputCharLength || 0)} · advancedAuditCostOptimizationApplied=${auditDiagnostics?.advancedAuditCostOptimizationApplied ? "true" : "false"}</p>` : ""}
     </section>`;
 }
 
@@ -8344,6 +8503,10 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-pdc-stop-summarize]")) {
     stopAndSummarizePdc();
+    return;
+  }
+  if (event.target.closest("[data-pdc-run-advanced-audit]")) {
+    runPdcAdvancedFinalAudit();
     return;
   }
   const pdcMode = event.target.closest("[data-pdc-mode]");

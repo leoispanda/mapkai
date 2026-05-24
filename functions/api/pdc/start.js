@@ -1,5 +1,5 @@
 import { cleanText, ensurePdcTables, getIsoNow, getPass, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
-import { generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
+import { generatePdcAdvancedFinalAudit, generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
@@ -11,11 +11,15 @@ export async function onRequest({ request, env }) {
   const isFounderPreview = body.founder_preview === true && isFounderRequest(request);
   const isContinuePhase = body.continue_phase === true;
   const isFinalRecap = body.final_recap === true;
+  const isAdvancedFinalAudit = body.advanced_final_audit === true;
 
   if (!modeId || !pdcModes[modeId]) return json({ ok: false, message: "Choose a PDC type before starting." }, 400);
   if (userQuestion.length < 8) return json({ ok: false, message: "Please enter a decision question before starting." }, 400);
   if (userQuestion.length > 1200) return json({ ok: false, message: "Please keep the decision question under 1200 characters." }, 400);
 
+  if (isAdvancedFinalAudit) {
+    return handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview });
+  }
   if (isContinuePhase) {
     return handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview });
   }
@@ -115,6 +119,71 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
   return json({ ok: true, ...result });
 }
 
+async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview }) {
+  const advancedAuditEnabled = parseEnvBoolean(env.PDC_ADVANCED_AUDIT_ENABLED, false);
+  const advancedAuditFounderOnly = parseEnvBoolean(env.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true);
+  if (!advancedAuditEnabled) {
+    return json({ ok: false, message: "Advanced Final Audit is not enabled.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "disabled") }, 403);
+  }
+  if (advancedAuditFounderOnly && !isFounderPreview) {
+    return json({ ok: false, message: "Advanced Final Audit is Founder-only.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "founder_only") }, 403);
+  }
+  if (!isFounderRequest(request)) {
+    return json({ ok: false, message: "Advanced Final Audit requires Founder Mode.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_founder_header") }, 403);
+  }
+  if (!env.OPENAI_API_KEY) {
+    return json({ ok: false, message: "Advanced Final Audit could not run.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_OPENAI_API_KEY") }, 500);
+  }
+  try {
+    const mode = pdcModes[modeId];
+    const activeRoster = resolveRosterByIds(modeId, body.active_roster_ids);
+    const observerRoster = mergeObserverRosterContext(
+      resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false }),
+      body.observer_roster_context,
+    );
+    const result = await generatePdcAdvancedFinalAudit({
+      userQuestion,
+      modeId,
+      modeLabel: mode.label,
+      finalRecap: sanitizeObject(body.final_recap_payload, 6000),
+      phases: sanitizeArray(body.phases, 10000),
+      latestPhase: sanitizeObject(body.latest_phase, 4000),
+      meetingMemory: sanitizeMeetingMemory(body.meeting_memory),
+      voteSummary: sanitizeObject(body.vote_summary, 2500),
+      activeRoster,
+      observerRoster,
+      finalReintroducedPerspective: sanitizeObject(body.final_reintroduced_perspective, 1500),
+      phaseDiagnostics: sanitizeObject(body.phase_diagnostics, 1600),
+      finalDiagnostics: sanitizeObject(body.final_diagnostics, 1600),
+      env,
+    });
+    return json({ ok: true, ...result });
+  } catch (error) {
+    const message = String(error.message || "Advanced Final Audit failed");
+    console.error("PDC advanced final audit failed:", message);
+    const diagnostics = error.pdcDiagnostics || buildAdvancedAuditDisabledDiagnostics(env, message.slice(0, 180), /json|parse|schema/i.test(message));
+    return json({
+      ok: false,
+      message: "Advanced Final Audit could not run.",
+      provider: "openai",
+      requestedProvider: "openai",
+      actualProvider: "openai",
+      modelName: String(env.PDC_ADVANCED_AUDIT_MODEL || "gpt-5.5").trim() || "gpt-5.5",
+      fallbackUsed: true,
+      fallbackReason: message.slice(0, 180),
+      jsonParseFailed: /json|parse|schema/i.test(message),
+      schemaName: "pdc_advanced_final_audit",
+      strict: true,
+      contentDiagnostics: {
+        ...diagnostics,
+        advancedAuditFallbackUsed: true,
+        advancedAuditFallbackReason: message.slice(0, 180),
+        advancedAuditJsonParseFailed: /json|parse|schema/i.test(message),
+      },
+    }, 500);
+  }
+}
+
 async function handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview }) {
   const roundNumber = Number(body.round_number) > 0 ? Math.min(Number(body.round_number), 99) : 1;
   const phaseType = String(body.phase_type || "A").toUpperCase() === "B" ? "B" : "A";
@@ -206,10 +275,57 @@ function mergeObserverRosterContext(observerRoster, rawContext) {
 function sanitizeObject(value, maxLength) {
   if (!value || typeof value !== "object") return null;
   try {
-    return JSON.parse(JSON.stringify(value).slice(0, maxLength));
+    const text = JSON.stringify(value);
+    if (text.length <= maxLength) return JSON.parse(text);
+    return { compactJson: text.slice(0, maxLength) };
   } catch {
     return null;
   }
+}
+
+function sanitizeArray(value, maxLength) {
+  if (!Array.isArray(value)) return [];
+  try {
+    const text = JSON.stringify(value);
+    if (text.length <= maxLength) return JSON.parse(text);
+  } catch {
+    return [];
+  }
+  const compact = [];
+  let usedLength = 2;
+  for (const item of value.slice(-12)) {
+    const safeItem = sanitizeObject(item, 900);
+    const itemLength = JSON.stringify(safeItem || {}).length + 1;
+    if (usedLength + itemLength > maxLength) break;
+    compact.push(safeItem);
+    usedLength += itemLength;
+  }
+  return compact.filter(Boolean);
+}
+
+function parseEnvBoolean(value, defaultValue = false) {
+  if (value === undefined || value === null || value === "") return defaultValue;
+  return ["1", "true", "yes", "on"].includes(String(value).trim().toLowerCase());
+}
+
+function buildAdvancedAuditDisabledDiagnostics(env, reason, jsonParseFailed = false) {
+  const model = String(env?.PDC_ADVANCED_AUDIT_MODEL || "gpt-5.5").trim() || "gpt-5.5";
+  return {
+    advancedAuditEnabled: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_ENABLED, false),
+    advancedAuditFounderOnly: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true),
+    advancedAuditProvider: "openai",
+    advancedAuditRequestedModel: model,
+    advancedAuditActualModel: model,
+    advancedAuditFallbackUsed: true,
+    advancedAuditFallbackReason: String(reason || "").slice(0, 180),
+    advancedAuditJsonParseFailed: jsonParseFailed === true,
+    advancedAuditSchemaName: "pdc_advanced_final_audit",
+    advancedAuditStrict: true,
+    advancedAuditDurationMs: 0,
+    advancedAuditPromptCharLength: 0,
+    advancedAuditOutputCharLength: 0,
+    advancedAuditCostOptimizationApplied: true,
+  };
 }
 
 function sanitizeMeetingMemory(value) {

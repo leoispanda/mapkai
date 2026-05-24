@@ -2085,3 +2085,10 @@ Push status:
 - Final Round Preview no longer renders manual archived-perspective radio choices; it automatically shows the Most Rewarded Contributor and the Re-enabled Archived Perspective selected for the final round.
 - The final reintroduced archived perspective is inserted once at the start of Final Round 5A, does not become active, does not vote, and no longer resumes normal Perspective Trail updates.
 - Round labels now use public wording `Position Update`, `Voting & Pressure Check`, `Final Round Preview`, `Most Rewarded Contributor`, `Re-enabled Archived Perspective`, and `Final Reintroduced Perspective`.
+
+## 2026-05-24 - Add Founder-only Advanced Final Audit
+- Added a Founder-only Advanced Final Audit flow after the normal PDC Council Recap; it is triggered manually with `Run Advanced Final Audit` and does not run for invited public users.
+- The new backend branch reads `PDC_ADVANCED_AUDIT_ENABLED`, `PDC_ADVANCED_AUDIT_FOUNDER_ONLY`, and `PDC_ADVANCED_AUDIT_MODEL`, defaulting the audit model to `gpt-5.5` without changing `OPENAI_MODEL`, normal phase routing, or final recap routing.
+- Advanced audit uses OpenAI Responses API structured outputs with strict schema `pdc_advanced_final_audit`, sending a compressed audit package instead of the full transcript.
+- The Founder UI displays Main Bias, Stage Fit, Overcomplicated Parts, Improved Final Judgment, Lightweight Now, Add Later If Traction, Only For External Partnership, and Recommended Next Step.
+- Founder debug now includes advanced audit enabled/founder-only flags, provider/model, fallback/error state, JSON parse state, schema strictness, timing, prompt/output sizes, and cost optimization.

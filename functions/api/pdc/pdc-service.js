@@ -537,6 +537,61 @@ const pdcFinalRecapSchema = {
   },
   required: ["finalReintroducedPerspective", "recap", "blueWhaleFinalNote"],
 };
+const pdcAdvancedFinalAuditSchema = {
+  type: "object",
+  additionalProperties: false,
+  required: ["biasAudit", "improvedFinalJudgment", "recommendedVersion", "finalDisplay"],
+  properties: {
+    biasAudit: {
+      type: "object",
+      additionalProperties: false,
+      required: ["mainBias", "secondaryBiases", "overcomplicatedParts", "missingSimplerPath", "stageMismatch", "falsePrecisionRisks"],
+      properties: {
+        mainBias: { type: "string" },
+        secondaryBiases: { type: "array", items: { type: "string" } },
+        overcomplicatedParts: { type: "array", items: { type: "string" } },
+        missingSimplerPath: { type: "string" },
+        stageMismatch: { type: "string" },
+        falsePrecisionRisks: { type: "array", items: { type: "string" } },
+      },
+    },
+    improvedFinalJudgment: {
+      type: "object",
+      additionalProperties: false,
+      required: ["decision", "oneSentenceConclusion", "why", "bestFirstStep", "successSignals", "stopSignals", "whatNotToDo"],
+      properties: {
+        decision: { type: "string", enum: ["do", "do_not_do", "test_first", "pause", "conditional"] },
+        oneSentenceConclusion: { type: "string" },
+        why: { type: "string" },
+        bestFirstStep: { type: "string" },
+        successSignals: { type: "array", items: { type: "string" } },
+        stopSignals: { type: "array", items: { type: "string" } },
+        whatNotToDo: { type: "array", items: { type: "string" } },
+      },
+    },
+    recommendedVersion: {
+      type: "object",
+      additionalProperties: false,
+      required: ["lightweightNow", "addLaterIfTraction", "onlyForExternalPartnership"],
+      properties: {
+        lightweightNow: { type: "array", items: { type: "string" } },
+        addLaterIfTraction: { type: "array", items: { type: "string" } },
+        onlyForExternalPartnership: { type: "array", items: { type: "string" } },
+      },
+    },
+    finalDisplay: {
+      type: "object",
+      additionalProperties: false,
+      required: ["title", "summary", "objectiveConclusion", "recommendedNextStep"],
+      properties: {
+        title: { type: "string" },
+        summary: { type: "string" },
+        objectiveConclusion: { type: "string" },
+        recommendedNextStep: { type: "string" },
+      },
+    },
+  },
+};
 
 // TODO:
 // - Add full unified persona library.
@@ -829,6 +884,190 @@ async function fallbackFinalRecapResult({ fallback, requestedProvider, failedPro
 function getFinalRecapFallbackReason(message) {
   if (/json/i.test(message)) return "final recap JSON parse failed";
   return "Cloudflare final recap unavailable.";
+}
+
+export async function generatePdcAdvancedFinalAudit({ userQuestion, modeId, modeLabel, finalRecap = null, phases = [], latestPhase = null, meetingMemory = null, voteSummary = null, activeRoster = [], observerRoster = [], finalReintroducedPerspective = null, phaseDiagnostics = null, finalDiagnostics = null, env }) {
+  const model = getAdvancedAuditModel(env);
+  const auditPackage = buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics });
+  const prompt = buildAdvancedAuditPrompt(auditPackage);
+  const contentDiagnostics = {
+    advancedAuditEnabled: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_ENABLED, true),
+    advancedAuditFounderOnly: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true),
+    advancedAuditProvider: "openai",
+    advancedAuditRequestedModel: model,
+    advancedAuditActualModel: model,
+    advancedAuditFallbackUsed: false,
+    advancedAuditFallbackReason: "",
+    advancedAuditJsonParseFailed: false,
+    advancedAuditSchemaName: "pdc_advanced_final_audit",
+    advancedAuditStrict: true,
+    advancedAuditDurationMs: 0,
+    advancedAuditPromptCharLength: prompt.length,
+    advancedAuditOutputCharLength: 0,
+    advancedAuditCostOptimizationApplied: true,
+  };
+  const startedAt = Date.now();
+  const parsed = await callOpenAiJsonWithRetry({
+    env,
+    model,
+    instructions: "You are an objective PDC Advanced Final Audit reviewer. Review the existing final recap for decision quality, stage fit, bias, over-complexity, false precision, and missing simpler paths. Return structured JSON only. Do not replay the council, invent votes, invent members, overwrite meeting memory, or use forbidden game-like terminology.",
+    prompt,
+    schemaName: "pdc_advanced_final_audit",
+    schema: pdcAdvancedFinalAuditSchema,
+    maxOutputTokens: 2600,
+    retryMaxOutputTokens: 3600,
+    retryInstructions: "Return exactly one complete JSON object matching the advanced final audit schema. No markdown, no extra text.",
+    diagnostics: contentDiagnostics,
+    structuredOnly: true,
+  });
+  contentDiagnostics.advancedAuditDurationMs = Date.now() - startedAt;
+  contentDiagnostics.advancedAuditOutputCharLength = contentDiagnostics.outputCharLength || 0;
+  return normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics });
+}
+
+function parseEnvBoolean(value, defaultValue = false) {
+  if (value === undefined || value === null || value === "") return defaultValue;
+  return ["1", "true", "yes", "on"].includes(String(value).trim().toLowerCase());
+}
+
+function buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics }) {
+  const safePhases = (Array.isArray(phases) ? phases : []).slice(-10).map((phase) => ({
+    label: normalizeShortText(phase?.label || phase?.phaseLabel, 100),
+    roundNumber: Number(phase?.roundNumber) || 0,
+    phaseType: normalizeShortText(phase?.phaseType, 8),
+    summary: normalizeShortText(phase?.blueWhaleSummary?.text, 260),
+    voteSummary: phase?.voteSummary ? {
+      leadingContributor: phase.voteSummary.leadingContributor || null,
+      mostPressuredPerspective: phase.voteSummary.mostPressuredPerspective || null,
+    } : null,
+    archivedSpeakerId: normalizeShortText(phase?.rosterUpdate?.archivedSpeakerId, 80),
+  }));
+  return {
+    originalDecisionQuestion: normalizeShortText(userQuestion, 1200),
+    modeId: normalizeShortText(modeId, 40),
+    modeLabel: normalizeShortText(modeLabel, 80),
+    inferredProductStage: inferAdvancedAuditStage(userQuestion, finalRecap),
+    miniFinalRecap: compactAdvancedAuditRecap(finalRecap),
+    meetingMemory: compactAdvancedAuditObject(meetingMemory, 1200),
+    roundSummaries: safePhases,
+    latestPhaseSummary: compactAdvancedAuditObject(latestPhase, 1200),
+    voteSummary: compactAdvancedAuditObject(voteSummary, 1000),
+    activeRoster: summarizeAdvancedAuditRoster(activeRoster),
+    observerRoster: buildArchivedObserverSummaries(observerRoster),
+    reintroducedPerspective: compactAdvancedAuditObject(finalReintroducedPerspective, 800),
+    debugMetadata: {
+      phaseModel: normalizeShortText(phaseDiagnostics?.modelName || phaseDiagnostics?.actualModel || "", 80),
+      finalRecapModel: normalizeShortText(finalDiagnostics?.modelName || finalDiagnostics?.actualModel || "", 80),
+      numberOfRounds: safePhases.length,
+      activeRosterCount: Array.isArray(activeRoster) ? activeRoster.length : 0,
+      observerRosterCount: Array.isArray(observerRoster) ? observerRoster.length : 0,
+    },
+  };
+}
+
+function buildAdvancedAuditPrompt(auditPackage) {
+  return `Review this existing PDC final recap as an advanced final audit.
+Do not replace the normal recap. Provide a higher-level objective review.
+Directly answer the original decision question.
+Detect whether the final recap is too heavy, too light, too abstract, or stage-mismatched.
+Detect over-governance, over-complexity, and false precision such as CAC/LTV/ARPU when the project is too early.
+Separate what to do now from what to add later.
+Move MOU, CAC, LTV, formal complaint thresholds, and arbitration into later or external partnership unless current context truly requires external partnership.
+Do not replay the council. Do not invent votes, members, or factual meeting memory.
+Do not output forbidden game-like words.
+
+Compressed audit package:
+${JSON.stringify(auditPackage).slice(0, 9000)}`;
+}
+
+function inferAdvancedAuditStage(userQuestion, finalRecap) {
+  const text = `${userQuestion || ""} ${JSON.stringify(finalRecap || {})}`.toLowerCase();
+  if (/没人关注|new website|新网站|引流|推广|traction|early|mvp|prototype|没人/.test(text)) return "early_attention_or_traction_test";
+  if (/partnership|external|mou|合作|合同/.test(text)) return "partnership_or_external_validation";
+  return "unspecified";
+}
+
+function compactAdvancedAuditRecap(finalRecap) {
+  const recap = finalRecap?.recap || finalRecap || {};
+  return {
+    decisionFrame: normalizeRecapText(recap.decisionFrame, 500),
+    coreTension: normalizeRecapText(recap.coreTension, 500),
+    condensedReview: normalizeRecapText(recap.condensedReview, 600),
+    finalRecommendation: normalizeRecapText(recap.finalRecommendation, 600),
+    nextActions: normalizeRecapList(recap.nextActions, 5),
+    whatNotToDo: normalizeRecapList(recap.whatNotToDo, 5),
+  };
+}
+
+function compactAdvancedAuditObject(value, maxLength) {
+  if (!value) return null;
+  try {
+    const text = JSON.stringify(value);
+    if (text.length <= maxLength) return JSON.parse(text);
+    return { compactJson: text.slice(0, maxLength) };
+  } catch {
+    return normalizeShortText(value, maxLength);
+  }
+}
+
+function summarizeAdvancedAuditRoster(roster) {
+  return (Array.isArray(roster) ? roster : []).map((persona) => ({
+    speakerId: persona.id,
+    name: persona.englishName || persona.name || "",
+    role: normalizeShortText(persona.role, 80),
+  })).filter((item) => item.speakerId);
+}
+
+function normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics }) {
+  const biasAudit = parsed?.biasAudit || {};
+  const judgment = parsed?.improvedFinalJudgment || {};
+  const version = parsed?.recommendedVersion || {};
+  const display = parsed?.finalDisplay || {};
+  return {
+    ok: true,
+    provider: "openai",
+    actualProvider: "openai",
+    requestedProvider: "openai",
+    modelName: model,
+    actualModel: model,
+    requestedModel: model,
+    fallbackUsed: false,
+    fallbackReason: "",
+    jsonParseFailed: false,
+    schemaName: "pdc_advanced_final_audit",
+    strict: true,
+    contentDiagnostics,
+    audit: {
+      biasAudit: {
+        mainBias: normalizeRecapText(biasAudit.mainBias, 500),
+        secondaryBiases: normalizeRecapList(biasAudit.secondaryBiases, 6),
+        overcomplicatedParts: normalizeRecapList(biasAudit.overcomplicatedParts, 6),
+        missingSimplerPath: normalizeRecapText(biasAudit.missingSimplerPath, 500),
+        stageMismatch: normalizeRecapText(biasAudit.stageMismatch, 500),
+        falsePrecisionRisks: normalizeRecapList(biasAudit.falsePrecisionRisks, 6),
+      },
+      improvedFinalJudgment: {
+        decision: ["do", "do_not_do", "test_first", "pause", "conditional"].includes(judgment.decision) ? judgment.decision : "conditional",
+        oneSentenceConclusion: normalizeRecapText(judgment.oneSentenceConclusion, 500),
+        why: normalizeRecapText(judgment.why, 700),
+        bestFirstStep: normalizeRecapText(judgment.bestFirstStep, 500),
+        successSignals: normalizeRecapList(judgment.successSignals, 6),
+        stopSignals: normalizeRecapList(judgment.stopSignals, 6),
+        whatNotToDo: normalizeRecapList(judgment.whatNotToDo, 6),
+      },
+      recommendedVersion: {
+        lightweightNow: normalizeRecapList(version.lightweightNow, 8),
+        addLaterIfTraction: normalizeRecapList(version.addLaterIfTraction, 8),
+        onlyForExternalPartnership: normalizeRecapList(version.onlyForExternalPartnership, 8),
+      },
+      finalDisplay: {
+        title: normalizeRecapText(display.title, 160),
+        summary: normalizeRecapText(display.summary, 700),
+        objectiveConclusion: normalizeRecapText(display.objectiveConclusion, 700),
+        recommendedNextStep: normalizeRecapText(display.recommendedNextStep, 500),
+      },
+    },
+  };
 }
 
 export function toCouncilRoomPersona(persona, modeId) {
@@ -1833,6 +2072,10 @@ function extractCloudflareText(result) {
 
 function getOpenAiModel(env = {}) {
   return String(env.OPENAI_MODEL || defaultOpenAiModel).trim() || defaultOpenAiModel;
+}
+
+function getAdvancedAuditModel(env = {}) {
+  return String(env?.PDC_ADVANCED_AUDIT_MODEL || "gpt-5.5").trim() || "gpt-5.5";
 }
 
 async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics = null, durationKey = "openAiDurationMs", structuredOnly = false }) {

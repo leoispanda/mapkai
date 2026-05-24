@@ -1100,6 +1100,42 @@ body:not(.founder-mode) .founder-public-entry {
   line-height: 1.65;
 }
 
+.pdc-advanced-audit {
+  margin-top: 18px;
+  border: 1px solid rgba(15, 107, 87, 0.14);
+  border-radius: 8px;
+  padding: clamp(18px, 3vw, 26px);
+  background: rgba(237, 244, 233, 0.58);
+}
+
+.pdc-advanced-audit h2 {
+  margin: 0 0 8px;
+  color: var(--green-dark);
+}
+
+.pdc-advanced-audit-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.pdc-advanced-audit-grid article {
+  border-top: 1px solid rgba(15, 107, 87, 0.14);
+  padding-top: 12px;
+}
+
+.pdc-advanced-audit-grid h3 {
+  margin: 0 0 6px;
+  color: var(--green-dark);
+  font-size: 0.98rem;
+}
+
+.pdc-advanced-audit-grid p,
+.pdc-advanced-audit-grid li {
+  color: var(--ink);
+  line-height: 1.55;
+}
+
 .pdc-feedback {
   margin-top: 18px;
   padding: clamp(20px, 4vw, 32px);
