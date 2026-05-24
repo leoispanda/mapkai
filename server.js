@@ -2,6 +2,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { createHash, randomInt, randomUUID, timingSafeEqual } from "node:crypto";
+import { pathToFileURL } from "node:url";
 
 const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
@@ -12,6 +13,15 @@ const appOrigin = process.env.APP_ORIGIN || `http://${host}:${port}`;
 
 const codes = new Map();
 const sessions = new Map();
+
+const localFunctionRoutes = {
+  "/api/pdc/start": "functions/api/pdc/start.js",
+  "/api/pdc/validate-pass": "functions/api/pdc/validate-pass.js",
+  "/api/pdc/feedback": "functions/api/pdc/feedback.js",
+  "/api/pdc/founder-summary": "functions/api/pdc/founder-summary.js",
+  "/api/pdc/generate-passes": "functions/api/pdc/generate-passes.js",
+  "/api/pdc/latency-diagnostic": "functions/api/pdc/latency-diagnostic.js",
+};
 
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
@@ -40,11 +50,49 @@ const server = createServer(async (request, response) => {
       return;
     }
 
+    if (localFunctionRoutes[url.pathname]) {
+      await handleLocalFunctionRoute(request, response, url);
+      return;
+    }
+
     await serveStatic(url.pathname, response);
   } catch (error) {
     sendJson(response, 500, { error: "Internal server error" });
   }
 });
+
+async function handleLocalFunctionRoute(request, response, url) {
+  const routePath = localFunctionRoutes[url.pathname];
+  const modulePath = pathToFileURL(join(root, routePath)).href;
+  const routeModule = await import(modulePath);
+  const headers = new Headers();
+
+  Object.entries(request.headers).forEach(([name, value]) => {
+    if (Array.isArray(value)) headers.set(name, value.join(", "));
+    else if (value !== undefined) headers.set(name, value);
+  });
+
+  const requestInit = {
+    method: request.method,
+    headers,
+  };
+
+  if (!["GET", "HEAD"].includes(request.method)) {
+    requestInit.body = await readRawBody(request);
+  }
+
+  const functionResponse = await routeModule.onRequest({
+    request: new Request(url.href, requestInit),
+    env: process.env,
+  });
+  const body = Buffer.from(await functionResponse.arrayBuffer());
+  const responseHeaders = {};
+  functionResponse.headers.forEach((value, name) => {
+    responseHeaders[name] = value;
+  });
+  response.writeHead(functionResponse.status, responseHeaders);
+  response.end(body);
+}
 
 async function startAuth(request, response) {
   const { email } = await readJson(request);
@@ -172,10 +220,15 @@ function normalizeEmail(email) {
 }
 
 async function readJson(request) {
+  const body = await readRawBody(request);
+  if (!body.length) return {};
+  return JSON.parse(body.toString("utf8"));
+}
+
+async function readRawBody(request) {
   const chunks = [];
   for await (const chunk of request) chunks.push(chunk);
-  if (!chunks.length) return {};
-  return JSON.parse(Buffer.concat(chunks).toString("utf8"));
+  return chunks.length ? Buffer.concat(chunks) : Buffer.alloc(0);
 }
 
 function sendJson(response, status, data) {

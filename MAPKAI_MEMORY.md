@@ -2092,3 +2092,10 @@ Push status:
 - Advanced audit uses OpenAI Responses API structured outputs with strict schema `pdc_advanced_final_audit`, sending a compressed audit package instead of the full transcript.
 - The Founder UI displays Main Bias, Stage Fit, Overcomplicated Parts, Improved Final Judgment, Lightweight Now, Add Later If Traction, Only For External Partnership, and Recommended Next Step.
 - Founder debug now includes advanced audit enabled/founder-only flags, provider/model, fallback/error state, JSON parse state, schema strictness, timing, prompt/output sizes, and cost optimization.
+
+## 2026-05-24 - Add local PDC Pages Function routing
+- Fixed local `node server.js` PDC testing by routing selected `/api/pdc/*` requests through the same Cloudflare Pages Function modules instead of falling back to `index.html`.
+- Local Founder Preview now reaches `/api/pdc/start` and returns JSON placeholder PDC output when `OPENAI_API_KEY` is absent, matching the existing placeholder development rule.
+- Browser verification confirmed `/pdc-pilot?founderPreview=1` can start the PDC experience, show the Council Room, reveal all speaker lines, Stop & Summarize, render Council Recap, and show the Founder-only Advanced Final Audit panel.
+- With `PDC_ADVANCED_AUDIT_ENABLED` unset locally, clicking `Run Advanced Final Audit` correctly returns `Advanced Final Audit is not enabled.`
+- No deployed Pages Function logic, PDC provider logic, strict schemas, D1/pass lifecycle, frontend render paths, or public navigation were changed.
