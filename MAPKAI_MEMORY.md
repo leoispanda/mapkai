@@ -2006,3 +2006,9 @@ Push status:
 - The OpenAI phase schema now returns `visibleStatements`, `blueWhaleSummary`, `meetingMemoryPatch`, and `memberHistoryPatch`; backend normalization requires exactly one visible statement per active council member and rejects missing, duplicate, observer, or invalid target speakers.
 - Normal phase Cloudflare fallback is no longer used after OpenAI failure; failed OpenAI normal phases fall back directly to placeholder diagnostics instead of making Cloudflare the formal phase provider.
 - Founder debug now exposes strict schema status plus visible/total statement counts and explicit retry state, while preserving observer profile omission and final recap archived observer summaries.
+
+## 2026-05-24 - Add PDC member Perspective Trail panel
+- The PDC frontend now rebuilds compact per-member `memberHistory` from real non-placeholder normal phase dialogue in the current session, preserving each member's statement text, phase label, statement type, challenge target, stance fields, note fields, and available vote targets.
+- Clicking a council member now opens a contextual Member Profile with static profile details, current stance, and a Perspective Trail / 观点轨迹 grouped by round/phase; clicking the same member closes it and clicking another member switches the panel.
+- Desktop layout places the selected detail beside the roster list when space allows; mobile renders the same detail directly below the tapped member row instead of at the bottom of the PDC page.
+- OpenAI provider logic, strict schema, model, D1/access pass lifecycle, observer prompt behavior, and final recap behavior were left unchanged.

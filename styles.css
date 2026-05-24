@@ -405,6 +405,10 @@ body:not(.founder-mode) .founder-public-entry {
   align-items: start;
 }
 
+.pdc-live-room.has-selected-profile {
+  grid-template-columns: minmax(540px, 660px) minmax(0, 1fr);
+}
+
 .pdc-roster-panel,
 .pdc-dialogue-panel {
   border: 1px solid rgba(15, 107, 87, 0.14);
@@ -417,6 +421,20 @@ body:not(.founder-mode) .founder-public-entry {
   padding: 14px;
   position: sticky;
   top: 18px;
+}
+
+.pdc-roster-layout {
+  display: grid;
+  gap: 12px;
+}
+
+.pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+  grid-template-columns: minmax(230px, 290px) minmax(260px, 1fr);
+  align-items: start;
+}
+
+.pdc-roster-main {
+  min-width: 0;
 }
 
 .pdc-dialogue-panel {
@@ -471,6 +489,12 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-roster-list {
   display: grid;
   gap: 8px;
+}
+
+.pdc-roster-item {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
 }
 
 .pdc-roster-row {
@@ -898,6 +922,15 @@ body:not(.founder-mode) .founder-public-entry {
   background: rgba(255, 250, 240, 0.86);
 }
 
+.pdc-profile-desktop {
+  display: block;
+}
+
+.pdc-profile-inline {
+  display: none;
+  margin-top: 0;
+}
+
 .pdc-profile-panel h2 {
   margin: 0 0 8px;
   color: var(--green-dark);
@@ -930,6 +963,55 @@ body:not(.founder-mode) .founder-public-entry {
   color: var(--ink);
   font-size: 0.86rem;
   line-height: 1.42;
+}
+
+.pdc-perspective-trail {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(15, 107, 87, 0.14);
+}
+
+.pdc-perspective-trail h3 {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 880;
+  text-transform: none;
+}
+
+.pdc-trail-list,
+.pdc-trail-group {
+  display: grid;
+  gap: 8px;
+}
+
+.pdc-trail-group h4 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 840;
+}
+
+.pdc-trail-entry {
+  border-left: 3px solid rgba(15, 107, 87, 0.18);
+  padding-left: 9px;
+}
+
+.pdc-trail-entry p {
+  margin: 0;
+}
+
+.pdc-trail-meta,
+.pdc-trail-votes {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 760;
+}
+
+.pdc-trail-entry dl {
+  margin-top: 6px;
 }
 
 .pdc-recap-sections {
@@ -2659,8 +2741,17 @@ canvas {
     gap: 14px;
   }
 
+  .pdc-live-room.has-selected-profile {
+    grid-template-columns: minmax(500px, 620px) minmax(0, 1fr);
+  }
+
   .pdc-roster-panel {
     position: static;
+  }
+
+  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+    grid-template-columns: minmax(220px, 280px) minmax(240px, 1fr);
+    align-items: start;
   }
 
   .field-hero,
@@ -2711,12 +2802,28 @@ canvas {
     flex-direction: column;
   }
 
+  .pdc-live-room.has-selected-profile {
+    display: flex;
+  }
+
   .pdc-dialogue-panel {
     order: 1;
   }
 
   .pdc-roster-panel {
     order: 2;
+  }
+
+  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pdc-profile-desktop {
+    display: none;
+  }
+
+  .pdc-profile-inline {
+    display: block;
   }
 
   .pdc-roster-list,

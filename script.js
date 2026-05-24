@@ -3723,6 +3723,7 @@ let pdcState = {
   playback: null,
   warmup: null,
   warmupDiagnostics: null,
+  memberHistory: {},
   feedbackSubmitted: false,
 };
 let pdcPlaybackTimer = null;
@@ -4044,6 +4045,7 @@ async function initPdcPilotPage() {
     playback: null,
     warmup: null,
     warmupDiagnostics: null,
+    memberHistory: {},
     feedbackSubmitted: false,
   };
   renderPdcPilot();
@@ -4203,6 +4205,7 @@ function renderPdcCouncilRoom(recap) {
   const thinkingLine = playback?.thinkingSpeakerId ? fullDialogue.find((line) => line.speakerId === playback.thinkingSpeakerId) : null;
   const showPhaseAfterPlayback = !isWarmupPhase && (!playback || playback.summaryVisible || playback.complete);
   const selectedPersona = allPersonas.find((persona) => persona.id === pdcState.selectedPersonaId) || null;
+  rebuildPdcMemberHistory(rounds);
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
       <div class="pdc-room-heading">
@@ -4210,8 +4213,8 @@ function renderPdcCouncilRoom(recap) {
         <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
         <p>The council reviews your decision in structured rounds.</p>
       </div>
-      <div class="pdc-live-room">
-        <aside class="pdc-roster-panel" aria-label="Council Members">
+      <div class="pdc-live-room ${selectedPersona ? "has-selected-profile" : ""}">
+        <aside class="pdc-roster-panel ${selectedPersona ? "has-selected-profile" : ""}" aria-label="Council Members">
           <div class="pdc-facilitator-row">
             <span class="pdc-avatar" aria-hidden="true">${escapeHtml(getPersonaInitials(facilitator))}</span>
             <div>
@@ -4219,17 +4222,21 @@ function renderPdcCouncilRoom(recap) {
               <strong>${escapeHtml(facilitator.englishName || "Blue Whale")}${facilitator.name ? ` / ${escapeHtml(facilitator.name)}` : ""}</strong>
             </div>
           </div>
-          <h2>Council Members</h2>
-          <h3>Active Council Members</h3>
-          <div class="pdc-roster-list">
-            ${activePersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, false, isWarmupPhase)).join("")}
+          <div class="pdc-roster-layout">
+            <div class="pdc-roster-main">
+              <h2>Council Members</h2>
+              <h3>Active Council Members</h3>
+              <div class="pdc-roster-list">
+                ${activePersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, false, isWarmupPhase, selectedPersona)).join("")}
+              </div>
+              ${observerPersonas.length ? `
+                <h3>Observers</h3>
+                <div class="pdc-roster-list pdc-observer-list">
+                  ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true, false, selectedPersona)).join("")}
+                </div>` : ""}
+            </div>
+            ${selectedPersona ? renderPdcPersonaProfile(selectedPersona, "desktop") : ""}
           </div>
-          ${observerPersonas.length ? `
-            <h3>Observers</h3>
-            <div class="pdc-roster-list pdc-observer-list">
-              ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true)).join("")}
-            </div>` : ""}
-          ${renderPdcPersonaProfile(selectedPersona)}
         </aside>
         <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
           <div class="pdc-dialogue-panel-head">
@@ -4358,19 +4365,22 @@ function clampPdcIndex(value, length) {
   return Math.max(0, Math.min(index, length - 1));
 }
 
-function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarmupThinking = false) {
+function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarmupThinking = false, selectedPersona = null) {
   const initials = getPersonaInitials(persona);
   const isSelected = pdcState.selectedPersonaId === persona.id;
   const isSpeaking = activeSpeakerId === persona.id || isWarmupThinking;
   return `
-    <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isWarmupThinking ? "is-thinking" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
-      <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
-      <span class="pdc-roster-copy">
-        <strong>${escapeHtml(persona.englishName || persona.name || "Council member")}</strong>
-        ${persona.name && persona.name !== persona.englishName ? `<small>/ ${escapeHtml(persona.name)}</small>` : ""}
-        <em>${escapeHtml(persona.role || "Council Member")}</em>
-      </span>
-    </button>`;
+    <div class="pdc-roster-item">
+      <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isWarmupThinking ? "is-thinking" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
+        <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
+        <span class="pdc-roster-copy">
+          <strong>${escapeHtml(persona.englishName || persona.name || "Council member")}</strong>
+          ${persona.name && persona.name !== persona.englishName ? `<small>/ ${escapeHtml(persona.name)}</small>` : ""}
+          <em>${escapeHtml(persona.role || "Council Member")}</em>
+        </span>
+      </button>
+      ${isSelected && selectedPersona ? renderPdcPersonaProfile(selectedPersona, "inline") : ""}
+    </div>`;
 }
 
 function renderPdcPlaybackStatus(round, playback, thinkingLine) {
@@ -5125,31 +5135,153 @@ function applyPdcFinalMemoryToRecap(recap) {
   };
 }
 
-function renderPdcPersonaProfile(persona) {
-  if (!persona) {
-    return `
-      <aside class="pdc-profile-panel" aria-live="polite">
-        <h2>Member Profile</h2>
-        <p>Select a council member to view their role.</p>
-      </aside>`;
-  }
+function renderPdcPersonaProfile(persona, placement = "desktop") {
+  if (!persona) return "";
   const observerInfo = pdcState.observerRosterIds.includes(persona.id) ? getPdcObserverArchiveInfo(persona.id) : null;
+  const history = getPdcMemberHistory(persona.id);
+  const currentStance = getPdcCurrentMemberStance(persona.id, history);
+  const placementClass = placement === "inline" ? "pdc-profile-inline" : "pdc-profile-desktop";
   return `
-    <aside class="pdc-profile-panel is-open" aria-live="polite">
+    <aside class="pdc-profile-panel ${placementClass} is-open" aria-live="polite">
       <h2>Member Profile</h2>
       <dl>
         <dt>Name</dt><dd>${escapeHtml(persona.englishName || persona.name || "-")}${persona.name && persona.name !== persona.englishName ? ` / ${escapeHtml(persona.name)}` : ""}</dd>
         <dt>Role</dt><dd>${escapeHtml(persona.role || "-")}</dd>
+        <dt>Responsibility</dt><dd>${escapeHtml(persona.responsibility || "-")}</dd>
+        ${currentStance ? `<dt>Current stance</dt><dd>${escapeHtml(currentStance)}</dd>` : ""}
         ${observerInfo ? `
           <dt>Archived Perspective</dt><dd>${escapeHtml(observerInfo.archivedPerspective || persona.role || "-")}</dd>
           <dt>Reason moved to Observer</dt><dd>${escapeHtml(observerInfo.reason || persona.responsibility || "-")}</dd>
           <dt>Last contribution</dt><dd>${escapeHtml(observerInfo.lastContribution || persona.responsibility || "-")}</dd>
-        ` : `
-          <dt>Responsibility</dt><dd>${escapeHtml(persona.responsibility || "-")}</dd>
-          <dt>Statement</dt><dd>${escapeHtml(persona.statement || "-")}</dd>
-        `}
+        ` : ""}
       </dl>
+      ${renderPdcPerspectiveTrail(history)}
     </aside>`;
+}
+
+function renderPdcPerspectiveTrail(history) {
+  const entries = Array.isArray(history) ? history : [];
+  if (!entries.length) {
+    return `
+      <div class="pdc-perspective-trail">
+        <h3>Perspective Trail / 观点轨迹</h3>
+        <p>This member's perspective trail will appear after the council starts.</p>
+      </div>`;
+  }
+  const groups = [];
+  entries.forEach((entry) => {
+    const key = `${entry.roundLabel || ""}|${entry.phaseLabel || ""}`;
+    let group = groups.find((item) => item.key === key);
+    if (!group) {
+      group = { key, roundLabel: entry.roundLabel, phaseLabel: entry.phaseLabel, entries: [] };
+      groups.push(group);
+    }
+    group.entries.push(entry);
+  });
+  return `
+    <div class="pdc-perspective-trail">
+      <h3>Perspective Trail / 观点轨迹</h3>
+      <div class="pdc-trail-list">
+        ${groups.map((group) => `
+          <section class="pdc-trail-group">
+            <h4>${escapeHtml(group.phaseLabel || group.roundLabel || "Council phase")}</h4>
+            ${group.entries.map(renderPdcPerspectiveTrailEntry).join("")}
+          </section>
+        `).join("")}
+      </div>
+    </div>`;
+}
+
+function renderPdcPerspectiveTrailEntry(entry) {
+  const meta = [
+    entry.statementType ? formatPdcStatementType(entry.statementType) : "",
+    entry.targetSpeakerName ? `Targets ${entry.targetSpeakerName}` : "",
+  ].filter(Boolean).join(" · ");
+  const voteBits = [
+    entry.contributionVoteGiven ? `Contribution vote: ${entry.contributionVoteGiven}` : "",
+    entry.concernVoteGiven ? `Concern vote: ${entry.concernVoteGiven}` : "",
+  ].filter(Boolean);
+  return `
+    <article class="pdc-trail-entry">
+      ${meta ? `<p class="pdc-trail-meta">${escapeHtml(meta)}</p>` : ""}
+      <p>${escapeHtml(entry.text || "")}</p>
+      ${entry.stance || entry.stanceShift || entry.historyNote ? `
+        <dl>
+          ${entry.stance ? `<dt>Stance</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
+          ${entry.stanceShift ? `<dt>Shift</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
+          ${entry.historyNote ? `<dt>Note</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
+        </dl>` : ""}
+      ${voteBits.length ? `<p class="pdc-trail-votes">${escapeHtml(voteBits.join(" · "))}</p>` : ""}
+    </article>`;
+}
+
+function formatPdcStatementType(value) {
+  const text = String(value || "").replace(/[_-]+/g, " ").trim();
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : "";
+}
+
+function getPdcCurrentMemberStance(personaId, history = null) {
+  const entries = Array.isArray(history) ? history : getPdcMemberHistory(personaId);
+  const latest = entries[entries.length - 1];
+  return latest?.stance || latest?.text || "";
+}
+
+function rebuildPdcMemberHistory(phases = []) {
+  const historyBySpeaker = {};
+  (Array.isArray(phases) ? phases : []).forEach((phase, phaseIndex) => {
+    if (!shouldUsePdcPhaseForHistory(phase)) return;
+    (Array.isArray(phase.dialogue) ? phase.dialogue : []).forEach((line, lineIndex) => {
+      if (!shouldUsePdcLineForHistory(line)) return;
+      const item = createPdcHistoryItem({ phase, line, phaseIndex, lineIndex });
+      if (!item?.speakerId) return;
+      historyBySpeaker[item.speakerId] ||= [];
+      if (!historyBySpeaker[item.speakerId].some((existing) => existing.historyKey === item.historyKey)) {
+        historyBySpeaker[item.speakerId].push(item);
+      }
+    });
+  });
+  pdcState.memberHistory = historyBySpeaker;
+  return historyBySpeaker;
+}
+
+function shouldUsePdcPhaseForHistory(phase) {
+  if (!phase || phase.isWarmup) return false;
+  const provider = String(phase.provider || phase.contentDiagnostics?.provider || "").toLowerCase();
+  return provider && provider !== "placeholder";
+}
+
+function shouldUsePdcLineForHistory(line) {
+  if (!line?.speakerId || !line?.text) return false;
+  if (line.contentSource && line.contentSource !== "model") return false;
+  return !isPdcPlaceholderLine(line);
+}
+
+function isPdcPlaceholderLine(line) {
+  const text = String(line?.text || line?.stanceSummary || "").trim();
+  return /placeholder|live PDC generation|Development placeholder/i.test(text);
+}
+
+function createPdcHistoryItem({ phase, line, phaseIndex, lineIndex }) {
+  const targetName = line.targetSpeakerName || findPdcPersonaById(line.targetSpeakerId)?.englishName || findPdcPersonaById(line.targetSpeakerId)?.name || "";
+  return {
+    historyKey: `${phase.id || phase.phaseLabel || phaseIndex}:${line.speakerId}:${lineIndex}:${normalizePdcDisplayText(line.text).slice(0, 80)}`,
+    speakerId: line.speakerId,
+    roundLabel: phase.label || phase.phaseLabel || "",
+    phaseLabel: phase.phaseLabel || phase.label || "",
+    statementType: line.statementType || line.stanceType || "",
+    text: line.text || line.stanceSummary || "",
+    targetSpeakerId: line.targetSpeakerId || "",
+    targetSpeakerName: targetName,
+    stance: line.stance || line.stanceSummary || "",
+    stanceShift: line.stanceShift || "",
+    historyNote: line.historyNote || "",
+    contributionVoteGiven: line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "",
+    concernVoteGiven: line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "",
+  };
+}
+
+function getPdcMemberHistory(personaId) {
+  return Array.isArray(pdcState.memberHistory?.[personaId]) ? pdcState.memberHistory[personaId] : [];
 }
 
 function getPdcObserverArchiveInfo(personaId) {
@@ -5417,6 +5549,7 @@ async function startPdcExperience() {
     pdcState.pdcPhases = [];
     pdcState.activeRosterIds = [];
     pdcState.observerRosterIds = [];
+    pdcState.memberHistory = {};
     pdcState.finalReintroducedPerspective = null;
     pdcState.finalRecapLoading = false;
     pdcState.providerDiagnostics = data.recap ? {
@@ -7419,6 +7552,7 @@ document.addEventListener("click", (event) => {
     pdcState.playback = null;
     pdcState.warmup = null;
     pdcState.warmupDiagnostics = null;
+    pdcState.memberHistory = {};
     pdcState.feedbackSubmitted = false;
     renderPdcPilot();
     return;
