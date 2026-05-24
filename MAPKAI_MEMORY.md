@@ -2012,3 +2012,8 @@ Push status:
 - Clicking a council member now opens a contextual Member Profile with static profile details, current stance, and a Perspective Trail / 观点轨迹 grouped by round/phase; clicking the same member closes it and clicking another member switches the panel.
 - Desktop layout places the selected detail beside the roster list when space allows; mobile renders the same detail directly below the tapped member row instead of at the bottom of the PDC page.
 - OpenAI provider logic, strict schema, model, D1/access pass lifecycle, observer prompt behavior, and final recap behavior were left unchanged.
+
+## 2026-05-24 - Sync PDC Perspective Trail into inline production HTML
+- Root/public `script.js` already contained the Perspective Trail implementation, but `index.html` and `public/index.html` still had an older inline frontend script with the static Member Profile panel.
+- Replaced the inline script blocks in both production HTML copies with the current `script.js` code so the deployed page path includes `memberHistory`, contextual profile placement, and `Perspective Trail / 观点轨迹`.
+- Confirmed the production HTML still loads external `styles.css`, while JavaScript is served inline, so future frontend script changes must be synced into both HTML files before deploy.
