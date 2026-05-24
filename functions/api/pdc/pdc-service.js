@@ -379,8 +379,79 @@ const allowedDialogueProviders = new Set(["placeholder", "cloudflare", "openai"]
 const defaultCloudflareModel = "@cf/meta/llama-3.1-8b-instruct";
 const defaultOpenAiModel = "gpt-5-mini";
 const openAiResponsesEndpoint = "https://api.openai.com/v1/responses";
-const openAiPhaseMaxOutputTokens = 2000;
-const openAiPhaseRetryMaxOutputTokens = 3600;
+const openAiPhaseMaxOutputTokens = 5000;
+const openAiPhaseRetryMaxOutputTokens = 8000;
+const nullableStringSchema = { type: ["string", "null"] };
+const stringArraySchema = { type: "array", items: { type: "string" } };
+const pdcOpenAiPhaseSchema = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    visibleStatements: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          speakerId: { type: "string" },
+          statementType: { type: "string", enum: ["position", "challenge", "response", "risk", "opportunity", "reflection"] },
+          targetSpeakerId: nullableStringSchema,
+          text: { type: "string" },
+        },
+        required: ["speakerId", "statementType", "targetSpeakerId", "text"],
+      },
+    },
+    blueWhaleSummary: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        text: { type: "string" },
+        whatChanged: { type: "string" },
+        coreTension: { type: "string" },
+        strongestSignal: { type: "string" },
+        nextRoundFocus: { type: "string" },
+      },
+      required: ["text", "whatChanged", "coreTension", "strongestSignal", "nextRoundFocus"],
+    },
+    meetingMemoryPatch: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        decisionFrame: nullableStringSchema,
+        coreTension: nullableStringSchema,
+        strongestArguments: stringArraySchema,
+        risksToWatch: stringArraySchema,
+        opportunitiesToKeep: stringArraySchema,
+        emotionalSignals: stringArraySchema,
+        openQuestions: stringArraySchema,
+        nextRoundFocus: nullableStringSchema,
+      },
+      required: ["decisionFrame", "coreTension", "strongestArguments", "risksToWatch", "opportunitiesToKeep", "emotionalSignals", "openQuestions", "nextRoundFocus"],
+    },
+    memberHistoryPatch: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          speakerId: { type: "string" },
+          roundLabel: { type: "string" },
+          phaseLabel: { type: "string" },
+          stance: { type: "string" },
+          stanceShift: { type: "string" },
+          historyNote: { type: "string" },
+          visibleStatementId: nullableStringSchema,
+          challengedSpeakerId: nullableStringSchema,
+          challengedBySpeakerIds: stringArraySchema,
+          contributionVoteGiven: nullableStringSchema,
+          concernVoteGiven: nullableStringSchema,
+        },
+        required: ["speakerId", "roundLabel", "phaseLabel", "stance", "stanceShift", "historyNote", "visibleStatementId", "challengedSpeakerId", "challengedBySpeakerIds", "contributionVoteGiven", "concernVoteGiven"],
+      },
+    },
+  },
+  required: ["visibleStatements", "blueWhaleSummary", "meetingMemoryPatch", "memberHistoryPatch"],
+};
 const pdcDialogueSchema = {
   type: "object",
   additionalProperties: false,
@@ -563,11 +634,13 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
 
 function resolveDialogueProvider(env = {}) {
   const requested = String(env.PDC_DIALOGUE_PROVIDER || "placeholder").trim().toLowerCase();
+  if (requested === "cloudflare") return env?.OPENAI_API_KEY ? "openai" : "placeholder";
   return allowedDialogueProviders.has(requested) ? requested : "placeholder";
 }
 
 export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
   const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
+  provider = provider === "cloudflare" ? (env?.OPENAI_API_KEY ? "openai" : "placeholder") : provider;
 
   if (provider === "openai") {
     if (!env?.OPENAI_API_KEY) {
@@ -643,7 +716,7 @@ async function fallbackDialogueResult({ fallback, requestedProvider, failedProvi
       };
     }
   }
-  const diagnosticContent = params.env?.PDC_LATENCY_DIAGNOSTIC === "true" && providerDiagnostics && typeof providerDiagnostics === "object"
+  const diagnosticContent = providerDiagnostics && typeof providerDiagnostics === "object"
     ? { ...(fallback.contentDiagnostics || {}), ...providerDiagnostics }
     : fallback.contentDiagnostics;
   return {
@@ -661,6 +734,7 @@ async function fallbackDialogueResult({ fallback, requestedProvider, failedProvi
 
 function resolveFallbackProvider(env = {}, failedProvider = "") {
   const fallback = String(env.PDC_DIALOGUE_FALLBACK_PROVIDER || "").trim().toLowerCase();
+  if (failedProvider === "openai") return "placeholder";
   if (allowedDialogueProviders.has(fallback) && fallback !== failedProvider) return fallback;
   return failedProvider === "openai" ? "cloudflare" : "placeholder";
 }
@@ -1143,7 +1217,7 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
   const startedAt = Date.now();
   let response = await requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention });
   let parsed = response.parsed;
-  let normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai" });
+  let normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary });
   if (normalized.contentDiagnostics) {
     Object.assign(normalized.contentDiagnostics, response.contentDiagnostics);
     normalized.contentDiagnostics.openAiDurationMs = response.contentDiagnostics.openAiDurationMs || Date.now() - startedAt;
@@ -1176,7 +1250,7 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
         : "Previous output missed one or more council member statements.",
     });
     parsed = response.parsed;
-    normalized = normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, sourceProvider: "openai", retryUsed: true });
+    normalized = normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber, phaseType, phaseLabel, previousSummary, retryUsed: true });
     if (normalized.contentDiagnostics) {
       Object.assign(normalized.contentDiagnostics, response.contentDiagnostics, {
         promptCharLength: normalized.contentDiagnostics.promptCharLength || response.contentDiagnostics.promptCharLength,
@@ -1214,11 +1288,12 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
     instructions: "You write concise structured PDC decision reflection dialogue for the user's exact decision question. Return JSON only. Do not include markdown, hidden reasoning, generic templates, role descriptions, or professional advice claims.",
     prompt,
     schemaName: "pdc_phase_dialogue",
-    schema: pdcDialogueSchema,
+    schema: pdcOpenAiPhaseSchema,
     maxOutputTokens,
     retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
     retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
     diagnostics: contentDiagnostics,
+    structuredOnly: true,
   });
   return { parsed, contentDiagnostics };
 }
@@ -1411,8 +1486,8 @@ function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = 
   const concisePreviousSummary = normalizeShortText(previousSummary, summaryLimit);
   const languageRule = containsCjk(`${userQuestion} ${userIntervention}`) ? "Output Chinese." : "Output English.";
   const phaseRule = String(phaseType).toUpperCase() === "B"
-    ? "B phase: each statement is a short challenge/response/build on another named member. Include targetSpeakerId when clear. Do not generate votes, voteSummary, rosterUpdate, final decision, or meetingMemory."
-    : "A phase: each statement updates a concrete position on the user's decision. No votes, no generic role line, no final decision.";
+    ? "B phase: each statement is a challenge, response, risk, opportunity, or reflection on another named active member when useful. Include targetSpeakerId only when the statement directly addresses that active member. Do not generate a final decision."
+    : "A phase: each statement is a concrete position, risk, opportunity, or reflection on the user's decision. No generic role line and no final decision.";
   return `PDC live council phase. Use only the compact context below.
 ${languageRule}
 
@@ -1440,24 +1515,44 @@ ${normalizeShortText(userIntervention, 300) || "None."}
 Instructions:
 - This is a real PDC council phase for the exact user question.
 - Every statement must directly mention the user's topic or a concrete derived issue.
-- Each statement should be 35-55 Chinese characters when Chinese, or one short English sentence.
-- One concrete judgment, challenge, or update per speaker.
+- Every active council member must speak exactly once.
+- Chinese statements should be around 60-90 Chinese characters per member.
+- English statements should be around 35-55 words per member.
+- Use at most 2-3 short sentences per member.
+- Include a core judgment, brief reason or implication, and optionally one condition, warning, or next step.
+- Do not make statements slogan-like or paragraph-length.
+- No decorative role-play language.
+- No generic motivational advice.
 - Avoid generic role descriptions and template lines.
 - Avoid repetitive phrases such as 我的立场是, 立场未变, 立场调整, 从模糊变为 unless truly needed.
 - ${phaseRule}
+- visibleStatements must contain exactly one item for every active roster speakerId, no more and no fewer.
 - speakerId must be one of the active roster speakerId values only.
-- targetSpeakerId, when used, must be one of the active roster speakerId values only.
+- targetSpeakerId must be null unless it is one of the active roster speakerId values.
 - Do not generate statements, challenges, votes, or hidden reasoning for observer/archived members.
-- Blue Whale Summary should be 70-100 Chinese characters when Chinese, focused only on conflict, convergence, and next focus.
+- Blue Whale Summary must explain what changed, core tension, strongest signal, and next focus without generic template language.
+- memberHistoryPatch must contain one item for every active roster speakerId.
 ${retryReason ? `- Retry correction: ${retryReason}` : ""}
 
-Return JSON only:
+Return structured JSON only:
 {
-  "dialogue": [
-    { "speakerId": "active-speaker-id", "text": "short concrete statement", "targetSpeakerId": "", "stanceType": "position/challenge/build/clarify" }
+  "visibleStatements": [
+    { "speakerId": "active-speaker-id", "statementType": "position/challenge/response/risk/opportunity/reflection", "targetSpeakerId": null, "text": "direct decision statement" }
   ],
-  "blueWhaleSummary": { "text": "short summary", "convergenceLevel": "low|medium|high", "shouldConsiderStopping": false, "nextFocus": "short focus" },
-  "votes": []
+  "blueWhaleSummary": { "text": "", "whatChanged": "", "coreTension": "", "strongestSignal": "", "nextRoundFocus": "" },
+  "meetingMemoryPatch": {
+    "decisionFrame": null,
+    "coreTension": null,
+    "strongestArguments": [],
+    "risksToWatch": [],
+    "opportunitiesToKeep": [],
+    "emotionalSignals": [],
+    "openQuestions": [],
+    "nextRoundFocus": null
+  },
+  "memberHistoryPatch": [
+    { "speakerId": "active-speaker-id", "roundLabel": "${phaseLabel || `Round ${roundNumber}${phaseType}`}", "phaseLabel": "${phaseLabel || `Round ${roundNumber}${phaseType}`}", "stance": "", "stanceShift": "", "historyNote": "", "visibleStatementId": null, "challengedSpeakerId": null, "challengedBySpeakerIds": [], "contributionVoteGiven": null, "concernVoteGiven": null }
+  ]
 }`;
 }
 
@@ -1559,7 +1654,7 @@ function getOpenAiModel(env = {}) {
   return String(env.OPENAI_MODEL || defaultOpenAiModel).trim() || defaultOpenAiModel;
 }
 
-async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics = null, durationKey = "openAiDurationMs" }) {
+async function callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics = null, durationKey = "openAiDurationMs", structuredOnly = false }) {
   const apiKey = String(env?.OPENAI_API_KEY || "").trim();
   if (!apiKey) throw new Error("missing OPENAI_API_KEY");
   const startedAt = Date.now();
@@ -1618,15 +1713,15 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
     }
   }
   try {
-    return parseJsonObject(text);
+    return structuredOnly ? parseStrictStructuredJson(text) : parseJsonObject(text);
   } catch (error) {
     throw attachPdcDiagnostics(error, diagnostics);
   }
 }
 
-async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions, diagnostics = null }) {
+async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions, diagnostics = null, structuredOnly = false }) {
   try {
-    return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics });
+    return await callOpenAiJson({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, diagnostics, structuredOnly });
   } catch (error) {
     if (!isJsonParseError(error)) throw error;
     const retryPrompt = `${prompt}
@@ -1645,6 +1740,7 @@ ${retryInstructions || "Return only one complete valid JSON object for the schem
         maxOutputTokens: retryMaxOutputTokens || maxOutputTokens,
         diagnostics,
         durationKey: "jsonRepairRetryDurationMs",
+        structuredOnly,
       });
     } catch (retryError) {
       if (isJsonParseError(retryError)) {
@@ -1716,6 +1812,206 @@ function parseJsonObject(value) {
     const candidate = match[0].replace(/,\s*([}\]])/g, "$1");
     return JSON.parse(candidate);
   }
+}
+
+function parseStrictStructuredJson(value) {
+  const text = String(value || "").trim();
+  if (!text) throw new Error("Empty structured OpenAI response");
+  return JSON.parse(text);
+}
+
+function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", retryUsed = false }) {
+  const byId = new Map(sessionRoster.map((persona) => [persona.id, persona]));
+  const rawStatements = Array.isArray(parsed?.visibleStatements) ? parsed.visibleStatements : [];
+  const statementsBySpeaker = new Map();
+  const invalidSpeakerIds = [];
+  const duplicateSpeakerIds = [];
+  const invalidTargetIds = [];
+  const defaultStatementIds = [];
+  const templateMatchedPhrases = [];
+
+  rawStatements.forEach((line) => {
+    const speakerId = normalizeShortText(line?.speakerId, 80);
+    const text = normalizeShortText(line?.text, 260);
+    if (!byId.has(speakerId) || !text) {
+      if (speakerId) invalidSpeakerIds.push(speakerId);
+      return;
+    }
+    if (statementsBySpeaker.has(speakerId)) {
+      duplicateSpeakerIds.push(speakerId);
+      return;
+    }
+    const targetId = normalizeShortText(line?.targetSpeakerId, 80);
+    if (targetId && !byId.has(targetId)) invalidTargetIds.push(targetId);
+    const persona = byId.get(speakerId);
+    if (isKnownDefaultStatement(text, persona)) defaultStatementIds.push(speakerId);
+    templateMatchedPhrases.push(...findTemplateContentPhrases(text));
+    statementsBySpeaker.set(speakerId, {
+      speakerId,
+      speakerName: persona.englishName || persona.name,
+      speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      role: persona.role,
+      stanceType: normalizeOpenAiStatementType(line?.statementType),
+      targetSpeakerId: byId.has(targetId) ? targetId : "",
+      targetSpeakerName: byId.has(targetId) ? (byId.get(targetId).englishName || byId.get(targetId).name) : "",
+      text,
+      stanceSummary: text,
+      contentSource: "model",
+      contributionVote: null,
+      concernVote: null,
+    });
+  });
+
+  const missingSpeakerIds = sessionRoster.map((persona) => persona.id).filter((speakerId) => !statementsBySpeaker.has(speakerId));
+  if (invalidSpeakerIds.length || duplicateSpeakerIds.length || invalidTargetIds.length || missingSpeakerIds.length || statementsBySpeaker.size !== sessionRoster.length) {
+    throw new Error(`OpenAI structured phase response missing exact active roster statements: missing=${missingSpeakerIds.join(",") || "none"} invalid=${invalidSpeakerIds.join(",") || "none"} duplicate=${duplicateSpeakerIds.join(",") || "none"} invalidTargets=${invalidTargetIds.join(",") || "none"}`);
+  }
+
+  const normalizedPhaseType = String(phaseType).toUpperCase() === "B" ? "B" : "A";
+  const dialogue = sessionRoster.map((persona) => statementsBySpeaker.get(persona.id)).filter(Boolean);
+  const dialogueWithHistoryVotes = applyMemberHistoryVotes(dialogue, parsed?.memberHistoryPatch, byId);
+  const dialogueWithVotes = normalizedPhaseType === "B"
+    ? fillMissingVotes({ dialogue: dialogueWithHistoryVotes, sessionRoster })
+    : dialogueWithHistoryVotes.map((line) => ({ ...line, contributionVote: null, concernVote: null }));
+  const voteSummary = normalizedPhaseType === "B" ? aggregateVoteSummary({ dialogue: dialogueWithVotes, personas: sessionRoster }) : null;
+  const rosterUpdate = normalizedPhaseType === "B" ? buildRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: "Position update phase only." };
+  const summary = parsed?.blueWhaleSummary && typeof parsed.blueWhaleSummary === "object" ? parsed.blueWhaleSummary : {};
+  const memoryPatch = parsed?.meetingMemoryPatch && typeof parsed.meetingMemoryPatch === "object" ? parsed.meetingMemoryPatch : {};
+  const currentRoundLabel = phaseLabel || `Round ${roundNumber}${normalizedPhaseType}`;
+  const blueWhaleSummary = {
+    title: "Blue Whale Summary",
+    text: normalizeShortText(summary.text, 320),
+    strongestDisagreement: normalizeShortText(summary.coreTension, 200),
+    influenceShift: normalizeShortText(summary.whatChanged, 200),
+    unresolvedQuestion: normalizeShortText(summary.nextRoundFocus, 200),
+    convergenceLevel: "medium",
+    shouldConsiderStopping: false,
+    suggestedReasonToStop: "",
+    nextFocus: normalizeShortText(summary.nextRoundFocus, 200),
+    compactMemory: {
+      mainTension: normalizeShortText(summary.coreTension || memoryPatch.coreTension, 180),
+      strongestDisagreement: normalizeShortText(summary.strongestSignal, 180),
+      whatChangedThisPhase: normalizeShortText(summary.whatChanged, 180),
+      whatNextPhaseShouldExamine: normalizeShortText(summary.nextRoundFocus || memoryPatch.nextRoundFocus, 180),
+    },
+  };
+  const meetingMemory = {
+    phaseHistorySummary: normalizeShortText(summary.text, 300),
+    compactSummary: normalizeShortText(`${summary.whatChanged || ""} ${summary.coreTension || ""} ${summary.nextRoundFocus || ""}`, 300),
+    mainTension: normalizeShortText(memoryPatch.coreTension || summary.coreTension, 180),
+    activeDisagreements: normalizeShortList(memoryPatch.risksToWatch, 6),
+    convergenceLevel: "medium",
+    memberStates: normalizeStructuredMemberHistory(parsed?.memberHistoryPatch, sessionRoster),
+    activeTensions: normalizeShortList([memoryPatch.coreTension, summary.coreTension], 5),
+    strongestViews: normalizeShortList(memoryPatch.strongestArguments, 6),
+    openQuestions: normalizeShortList(memoryPatch.openQuestions, 6),
+    convergenceSignals: normalizeShortList([summary.strongestSignal, ...(Array.isArray(memoryPatch.opportunitiesToKeep) ? memoryPatch.opportunitiesToKeep : [])], 6),
+  };
+
+  return {
+    provider: "openai",
+    requestedProvider: "openai",
+    actualProvider: "openai",
+    fallbackUsed: false,
+    fallbackReason: "",
+    providerErrorShort: "",
+    jsonParseFailed: false,
+    modelName: "",
+    modeId,
+    roundNumber,
+    phaseType: normalizedPhaseType,
+    phaseLabel: currentRoundLabel,
+    previousSummary,
+    currentRoundLabel,
+    dialogue: dialogueWithVotes,
+    rounds: [{
+      id: `round-${roundNumber}${normalizedPhaseType.toLowerCase()}`,
+      label: currentRoundLabel,
+      phaseLabel: currentRoundLabel,
+      roundNumber,
+      phaseType: normalizedPhaseType,
+      previousSummary,
+      dialogue: dialogueWithVotes,
+      voteSummary,
+      rosterUpdate,
+      blueWhaleSummary,
+      meetingMemory,
+      canContinue: true,
+      canStopAndSummarize: true,
+    }],
+    blueWhaleSummary,
+    meetingMemory,
+    canContinue: true,
+    canStopAndSummarize: true,
+    contentDiagnostics: {
+      provider: "openai",
+      schemaName: "pdc_phase_dialogue",
+      strict: true,
+      modelStatementCount: rawStatements.length,
+      normalizedStatementCount: dialogueWithVotes.length,
+      visibleStatementCount: dialogueWithVotes.length,
+      totalStatementCount: dialogueWithVotes.length,
+      allowedSpeakerIdsForPhase: sessionRoster.map((persona) => persona.id).filter(Boolean),
+      generatedSpeakerIds: dialogueWithVotes.map((line) => line.speakerId),
+      defaultStatementsInjected: false,
+      defaultStatementSpeakerIds: [],
+      defaultTemplateMatched: defaultStatementIds.length > 0,
+      defaultTemplateMatchedSpeakerIds: Array.from(new Set(defaultStatementIds)),
+      templateContentDetected: templateMatchedPhrases.length > 0,
+      templateMatchedPhrases: Array.from(new Set(templateMatchedPhrases)),
+      contentQualityRetryUsed: retryUsed,
+      openAiDurationMs: 0,
+      retryDurationMs: 0,
+      totalPhaseDurationMs: 0,
+      retryUsed,
+    },
+  };
+}
+
+function normalizeOpenAiStatementType(value) {
+  const statementType = String(value || "").toLowerCase();
+  if (statementType === "challenge") return "challenge";
+  if (statementType === "response") return "response";
+  if (statementType === "risk") return "clarify";
+  if (statementType === "opportunity") return "build";
+  if (statementType === "reflection") return "update";
+  return "position";
+}
+
+function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
+  const historyBySpeaker = new Map((Array.isArray(memberHistoryPatch) ? memberHistoryPatch : []).map((row) => [normalizeShortText(row?.speakerId, 80), row]));
+  return dialogue.map((line) => {
+    const history = historyBySpeaker.get(line.speakerId) || {};
+    const contributionTarget = byId.get(normalizeShortText(history.contributionVoteGiven, 80));
+    const concernTarget = byId.get(normalizeShortText(history.concernVoteGiven, 80));
+    return {
+      ...line,
+      contributionVote: contributionTarget ? {
+        targetSpeakerId: contributionTarget.id,
+        targetSpeakerName: contributionTarget.englishName || contributionTarget.name,
+        reason: "OpenAI marked this member as the useful contribution to carry forward.",
+      } : null,
+      concernVote: concernTarget ? {
+        targetSpeakerId: concernTarget.id,
+        targetSpeakerName: concernTarget.englishName || concernTarget.name,
+        reason: "OpenAI marked this member as needing more pressure in the next round.",
+      } : null,
+    };
+  });
+}
+
+function normalizeStructuredMemberHistory(memberHistoryPatch, sessionRoster) {
+  const historyBySpeaker = new Map((Array.isArray(memberHistoryPatch) ? memberHistoryPatch : []).map((row) => [normalizeShortText(row?.speakerId, 80), row]));
+  return Object.fromEntries(sessionRoster.map((persona) => {
+    const row = historyBySpeaker.get(persona.id) || {};
+    return [persona.id, {
+      stance: normalizeShortText(row.stance, 160),
+      influence: normalizeShortText(row.stanceShift, 120),
+      supportReceived: [],
+      challenges: normalizeShortList(row.challengedBySpeakerIds, 4),
+    }];
+  }));
 }
 
 function normalizeCloudflareDialogue({ modeId, sessionRoster, parsed, roundNumber = 1, phaseType = "A", phaseLabel = "Round 1A — Position Update", previousSummary = "", sourceProvider = "cloudflare", retryUsed = false }) {

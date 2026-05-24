@@ -2000,3 +2000,9 @@ Push status:
 - Kept archived perspective context out of normal phase prompts for token/cost optimization; Stop & Summarize final recap now uses only short archived summaries from observer context instead of repeated full observer profiles.
 - Added Founder debug diagnostics for `activeRosterPromptCount`, `observerRosterPromptCount`, `observerProfilesOmittedFromPrompt`, `archivedSummaryIncluded`, `estimatedPromptTokenReduction`, `costOptimizationApplied`, `allowedSpeakerIdsForPhase`, and `generatedSpeakerIds`.
 - Preserved model, provider, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, final recap logic shape, meeting memory logic, and normal PDC state flow.
+
+## 2026-05-24 - Fix OpenAI PDC phase structured output
+- Replaced the normal OpenAI phase dialogue contract with strict Responses API structured output using `text.format.type=json_schema`, schema `pdc_phase_dialogue`, and `strict=true`.
+- The OpenAI phase schema now returns `visibleStatements`, `blueWhaleSummary`, `meetingMemoryPatch`, and `memberHistoryPatch`; backend normalization requires exactly one visible statement per active council member and rejects missing, duplicate, observer, or invalid target speakers.
+- Normal phase Cloudflare fallback is no longer used after OpenAI failure; failed OpenAI normal phases fall back directly to placeholder diagnostics instead of making Cloudflare the formal phase provider.
+- Founder debug now exposes strict schema status plus visible/total statement counts and explicit retry state, while preserving observer profile omission and final recap archived observer summaries.
