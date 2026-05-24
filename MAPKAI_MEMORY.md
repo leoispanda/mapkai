@@ -1982,3 +1982,9 @@ Push status:
 - Added diagnostic-only OpenAI failure metadata for founder latency rows: response status, incomplete reason, output text length, safe first 200 output characters, schema name, strict flag, prompt char length, and phase max output tokens.
 - Raised only the latency diagnostic OpenAI first phase token budget via an opt-in diagnostic env flag, first to 3000 and then to 6000 after deployed diagnostics showed `incomplete` / `max_output_tokens`; normal PDC phase, retry budget, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and start/continue UI behavior were not changed.
 - Cloudflare latency rows may still fall back to placeholder when Workers AI returns invalid JSON; the diagnostic keeps that clearly labeled instead of treating it as provider success.
+
+## 2026-05-24 - Add local PDC warm-up UX
+- Added local-only warm-up playback for PDC start and continue: the Council Room opens immediately and shows deterministic preparation lines for Blue Whale, Ethan Shen, Clara Lin, Marcus Lu, and Adrian Xu while waiting for the real OpenAI structured phase.
+- Warm-up lines are marked as local preparation cues, are not final council statements, are not stored, and do not call Cloudflare or any extra provider.
+- When the OpenAI phase returns, the warm-up room is replaced by the real progressive playback; Founder debug now shows `warmupMode`, `warmupStartedAt`, `warmupDurationMs`, and existing OpenAI phase timing.
+- Preserved model, provider, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC API behavior.
