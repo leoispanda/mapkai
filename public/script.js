@@ -4869,7 +4869,7 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
       phase_type: nextSpec.phaseType,
       phase_label: nextSpec.phaseLabel,
       previous_summary: previousPhase?.blueWhaleSummary?.text || "",
-      meeting_memory: previousPhase?.meetingMemory || null,
+      meeting_memory: buildPdcCompactPhaseMemory(previousPhase),
       user_intervention: userIntervention,
     }),
   });
@@ -4892,6 +4892,53 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
   appendPdcMemberHistoryFromPhase(phase, pdcState.pdcPhases.length);
   applyPdcRosterUpdate(phase);
   return phase;
+}
+
+function buildPdcCompactPhaseMemory(previousPhase) {
+  const base = previousPhase?.meetingMemory && typeof previousPhase.meetingMemory === "object" ? previousPhase.meetingMemory : {};
+  const summary = previousPhase?.blueWhaleSummary || {};
+  return {
+    compactSummary: normalizePdcDisplayText(base.compactSummary || summary.text || "").slice(0, 500),
+    activeTensions: normalizePdcMemoryList(base.activeTensions),
+    strongestViews: normalizePdcMemoryList(base.strongestViews),
+    openQuestions: normalizePdcMemoryList(base.openQuestions),
+    convergenceSignals: normalizePdcMemoryList(base.convergenceSignals),
+    compactMemory: {
+      mainTension: normalizePdcDisplayText(base.compactMemory?.mainTension || base.mainTension || summary.strongestDisagreement || "").slice(0, 200),
+      strongestDisagreement: normalizePdcDisplayText(base.compactMemory?.strongestDisagreement || summary.strongestDisagreement || "").slice(0, 200),
+      whatChangedThisPhase: normalizePdcDisplayText(base.compactMemory?.whatChangedThisPhase || summary.influenceShift || "").slice(0, 200),
+      whatNextPhaseShouldExamine: normalizePdcDisplayText(base.compactMemory?.whatNextPhaseShouldExamine || summary.nextFocus || "").slice(0, 200),
+    },
+    memberStateSummaries: buildPdcMemberStateSummaries(),
+  };
+}
+
+function normalizePdcMemoryList(value) {
+  return Array.isArray(value) ? value.map((item) => normalizePdcDisplayText(item).slice(0, 160)).filter(Boolean).slice(0, 6) : [];
+}
+
+function buildPdcMemberStateSummaries() {
+  const activeIds = new Set((pdcState.activeRosterIds || []).filter(Boolean));
+  return Array.from(activeIds).map((speakerId) => {
+    const history = getPdcMemberHistory(speakerId);
+    const latest = history[history.length - 1] || {};
+    const previous = history.length > 1 ? history[history.length - 2] : null;
+    return {
+      speakerId,
+      currentStance: normalizePdcDisplayText(latest.stance || latest.text || "").slice(0, 120),
+      latestStatementSummary: summarizePdcHistoryText(latest.text || latest.stance || ""),
+      latestTargetSummary: latest.targetSpeakerId
+        ? normalizePdcDisplayText(`${latest.statementType || "targeted"} ${latest.targetSpeakerName || latest.targetSpeakerId}`).slice(0, 120)
+        : "",
+      unresolvedTension: summarizePdcHistoryText(latest.stanceShift || latest.historyNote || previous?.text || ""),
+    };
+  }).filter((item) => item.currentStance || item.latestStatementSummary || item.latestTargetSummary || item.unresolvedTension);
+}
+
+function summarizePdcHistoryText(value) {
+  const text = normalizePdcDisplayText(value);
+  if (!text) return "";
+  return text.length > 140 ? `${text.slice(0, 137)}...` : text;
 }
 
 function applyPdcRosterUpdate(phase) {
@@ -5194,6 +5241,8 @@ function renderPdcPerspectiveTrail(history) {
 
 function renderPdcPerspectiveTrailEntry(entry) {
   const shouldShowStance = shouldShowPdcTrailField(entry.stance, entry.text);
+  const shouldShowShift = shouldShowPdcTrailField(entry.stanceShift, entry.text) && !isGenericPdcTrailNote(entry.stanceShift);
+  const shouldShowNote = shouldShowPdcTrailField(entry.historyNote, entry.text) && !isGenericPdcTrailNote(entry.historyNote);
   const meta = [
     entry.statementType ? formatPdcStatementType(entry.statementType) : "",
     entry.targetSpeakerName ? `Targets ${entry.targetSpeakerName}` : "",
@@ -5206,11 +5255,11 @@ function renderPdcPerspectiveTrailEntry(entry) {
     <article class="pdc-trail-entry">
       ${meta ? `<p class="pdc-trail-meta">${escapeHtml(meta)}</p>` : ""}
       <p>${escapeHtml(entry.text || "")}</p>
-      ${shouldShowStance || entry.stanceShift || entry.historyNote ? `
+      ${shouldShowStance || shouldShowShift || shouldShowNote ? `
         <dl>
           ${shouldShowStance ? `<dt>Stance</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
-          ${entry.stanceShift ? `<dt>Shift</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
-          ${entry.historyNote ? `<dt>Note</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
+          ${shouldShowShift ? `<dt>Shift / 推进</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
+          ${shouldShowNote ? `<dt>Note</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
         </dl>` : ""}
       ${voteBits.length ? `<p class="pdc-trail-votes">${escapeHtml(voteBits.join(" · "))}</p>` : ""}
     </article>`;
@@ -5230,6 +5279,12 @@ function shouldShowPdcTrailField(value, statementText) {
     if (sharedLength / shorter > 0.82) return false;
   }
   return true;
+}
+
+function isGenericPdcTrailNote(value) {
+  const text = normalizePdcComparableText(value);
+  if (!text) return true;
+  return /^(无变化|没有变化|暂无变化|保持原观点|保持原立场|继续关注|none|nochange|unchanged|sameposition|sameview|continued)$/.test(text);
 }
 
 function normalizePdcComparableText(value) {

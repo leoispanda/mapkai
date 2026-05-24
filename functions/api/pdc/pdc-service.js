@@ -394,7 +394,7 @@ const pdcOpenAiPhaseSchema = {
         additionalProperties: false,
         properties: {
           speakerId: { type: "string" },
-          statementType: { type: "string", enum: ["position", "challenge", "response", "risk", "opportunity", "reflection"] },
+          statementType: { type: "string", enum: ["position", "challenge", "response", "build", "clarify", "risk", "opportunity", "reflection"] },
           targetSpeakerId: nullableStringSchema,
           text: { type: "string" },
         },
@@ -1226,7 +1226,8 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
   }
   const shouldRetry = normalized.contentDiagnostics?.defaultTemplateMatched === true
     || normalized.contentDiagnostics?.templateContentDetected === true
-    || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9);
+    || normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9)
+    || normalized.contentDiagnostics?.crossMemberTargetCountBelowMinimum === true;
   if (shouldRetry) {
     retryUsed = true;
     const retryStartedAt = Date.now();
@@ -1247,6 +1248,8 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
         ? "Previous output matched persona default templates."
         : normalized.contentDiagnostics?.templateContentDetected
           ? `Previous output contained generic template phrases: ${normalized.contentDiagnostics.templateMatchedPhrases.join(", ")}.`
+        : normalized.contentDiagnostics?.crossMemberTargetCountBelowMinimum
+          ? `Previous output had only ${normalized.contentDiagnostics.validTargetSpeakerCount || 0} valid targeted statements. Later phases need at least ${normalized.contentDiagnostics.minimumTargetSpeakerCount || 0} statements with targetSpeakerId pointing to an active member.`
         : "Previous output missed one or more council member statements.",
     });
     parsed = response.parsed;
@@ -1272,6 +1275,9 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
   }
   if (normalized.contentDiagnostics?.modelStatementCount < Math.min(sessionRoster.length, 9)) {
     throw new Error("OpenAI response missing required dialogue statements");
+  }
+  if (normalized.contentDiagnostics?.crossMemberTargetCountBelowMinimum) {
+    throw new Error("OpenAI response missing required cross-member debate targets");
   }
   if (retryUsed && normalized.contentDiagnostics) normalized.contentDiagnostics.retryUsed = true;
   if (normalized.contentDiagnostics) applyPhaseDiagnosticAliases(normalized.contentDiagnostics);
@@ -1482,9 +1488,11 @@ function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = 
     responsibility: normalizeShortText(persona.responsibility || persona.statement || persona.role, 90),
   }));
   const compactMemoryItems = buildCompactMeetingMemoryItems(meetingMemory, 5);
+  const memberStateSummaries = buildCompactMemberStateSummaries(meetingMemory, sessionRoster);
   const summaryLimit = containsCjk(previousSummary) ? 300 : 500;
   const concisePreviousSummary = normalizeShortText(previousSummary, summaryLimit);
   const languageRule = containsCjk(`${userQuestion} ${userIntervention}`) ? "Output Chinese." : "Output English.";
+  const isOpeningPhase = Number(roundNumber) === 1 && String(phaseType).toUpperCase() === "A";
   const phaseRule = String(phaseType).toUpperCase() === "B"
     ? "B phase: each statement is a challenge, response, risk, opportunity, or reflection on another named active member when useful. Include targetSpeakerId only when the statement directly addresses that active member. Do not generate a final decision."
     : "A phase: each statement is a concrete position, risk, opportunity, or reflection on the user's decision. No generic role line and no final decision.";
@@ -1509,6 +1517,9 @@ ${concisePreviousSummary || "None."}
 Compact meeting memory, max 5 items:
 ${compactMemoryItems.length ? compactMemoryItems.map((item) => `- ${item}`).join("\n") : "None."}
 
+Compact member state summaries:
+${memberStateSummaries.length ? JSON.stringify(memberStateSummaries) : "None yet; this may be the opening phase."}
+
 User guidance:
 ${normalizeShortText(userIntervention, 300) || "None."}
 
@@ -1516,8 +1527,9 @@ Instructions:
 - This is a real PDC council phase for the exact user question.
 - Every statement must directly mention the user's topic or a concrete derived issue.
 - Every active council member must speak exactly once.
-- Chinese statements should be around 60-90 Chinese characters per member.
-- English statements should be around 35-55 words per member.
+- Chinese statements should usually be around 80-140 Chinese characters per member.
+- English statements should usually be around 45-80 words per member.
+- Later phases may be longer when needed, but hard maximums are 180 Chinese characters or 100 English words per member.
 - Use at most 2-3 short sentences per member.
 - Include a core judgment, brief reason or implication, and optionally one condition, warning, or next step.
 - Do not make statements slogan-like or paragraph-length.
@@ -1526,11 +1538,19 @@ Instructions:
 - Avoid generic role descriptions and template lines.
 - Avoid repetitive phrases such as 我的立场是, 立场未变, 立场调整, 从模糊变为 unless truly needed.
 - ${phaseRule}
+- ${isOpeningPhase ? "Round 1A may introduce mostly independent initial positions." : "This is not Round 1A: each member must answer what they are adding or changing compared with the previous phase."}
+- ${isOpeningPhase ? "Do not force cross-member collision yet." : "Each member must consider their compact previous stance, at least one other active member's previous view, and the current Blue Whale summary."}
+- ${isOpeningPhase ? "targetSpeakerId may be null for opening positions." : "At least half of visibleStatements must include a valid targetSpeakerId from the active roster."}
+- ${isOpeningPhase ? "Statements can establish roles and first judgments." : "Members should challenge, respond, build, clarify, revise, narrow, or add a concrete metric, threshold, experiment, decision rule, or unresolved tension."}
+- ${isOpeningPhase ? "stanceShift/historyNote may be short setup notes." : "memberHistoryPatch.stanceShift or historyNote should briefly state what changed from that member's previous view, without duplicating the statement text."}
+- Later phases must not repeat the same advice in different words. Use compact member summaries to avoid repeating each member's own previous warning, condition, or recommendation.
+- If targetSpeakerId is present, the statement text must name or clearly reference that target's idea.
+- Observer/archived members are context only for final recap; do not target them in normal phases.
 - visibleStatements must contain exactly one item for every active roster speakerId, no more and no fewer.
 - speakerId must be one of the active roster speakerId values only.
 - targetSpeakerId must be null unless it is one of the active roster speakerId values.
 - Do not generate statements, challenges, votes, or hidden reasoning for observer/archived members.
-- Blue Whale Summary must explain what changed, core tension, strongest signal, and next focus without generic template language.
+- Blue Whale Summary must mention strongest disagreement, whose view influenced whom, what became more concrete this round, and the next unresolved tension.
 - memberHistoryPatch must contain one item for every active roster speakerId.
 ${retryReason ? `- Retry correction: ${retryReason}` : ""}
 
@@ -1575,6 +1595,21 @@ function buildCompactMeetingMemoryItems(meetingMemory, maxItems = 5) {
     if (Array.isArray(meetingMemory[key])) meetingMemory[key].forEach(push);
   });
   return items.slice(0, maxItems);
+}
+
+function buildCompactMemberStateSummaries(meetingMemory, sessionRoster) {
+  const allowedIds = new Set((Array.isArray(sessionRoster) ? sessionRoster : []).map((persona) => persona.id).filter(Boolean));
+  const rows = Array.isArray(meetingMemory?.memberStateSummaries) ? meetingMemory.memberStateSummaries : [];
+  return rows
+    .map((row) => ({
+      speakerId: normalizeShortText(row?.speakerId, 80),
+      currentStance: normalizeShortText(row?.currentStance, 120),
+      latestStatementSummary: normalizeShortText(row?.latestStatementSummary, 140),
+      latestTargetSummary: normalizeShortText(row?.latestTargetSummary, 120),
+      unresolvedTension: normalizeShortText(row?.unresolvedTension, 120),
+    }))
+    .filter((row) => allowedIds.has(row.speakerId))
+    .slice(0, Math.max(0, allowedIds.size));
 }
 
 function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
@@ -1852,6 +1887,7 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
       speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
       speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
       role: persona.role,
+      statementType: normalizeOpenAiStatementType(line?.statementType),
       stanceType: normalizeOpenAiStatementType(line?.statementType),
       targetSpeakerId: byId.has(targetId) ? targetId : "",
       targetSpeakerName: byId.has(targetId) ? (byId.get(targetId).englishName || byId.get(targetId).name) : "",
@@ -1908,6 +1944,11 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
     openQuestions: normalizeShortList(memoryPatch.openQuestions, 6),
     convergenceSignals: normalizeShortList([summary.strongestSignal, ...(Array.isArray(memoryPatch.opportunitiesToKeep) ? memoryPatch.opportunitiesToKeep : [])], 6),
   };
+  const validTargetSpeakerCount = dialogueWithVotes.filter((line) => line.targetSpeakerId && byId.has(line.targetSpeakerId)).length;
+  const minimumTargetSpeakerCount = shouldRequireCrossMemberTargets(roundNumber, normalizedPhaseType)
+    ? Math.ceil(sessionRoster.length / 2)
+    : 0;
+  const crossMemberTargetCountBelowMinimum = minimumTargetSpeakerCount > 0 && validTargetSpeakerCount < minimumTargetSpeakerCount;
 
   return {
     provider: "openai",
@@ -1952,6 +1993,9 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
       normalizedStatementCount: dialogueWithVotes.length,
       visibleStatementCount: dialogueWithVotes.length,
       totalStatementCount: dialogueWithVotes.length,
+      validTargetSpeakerCount,
+      minimumTargetSpeakerCount,
+      crossMemberTargetCountBelowMinimum,
       allowedSpeakerIdsForPhase: sessionRoster.map((persona) => persona.id).filter(Boolean),
       generatedSpeakerIds: dialogueWithVotes.map((line) => line.speakerId),
       defaultStatementsInjected: false,
@@ -1971,6 +2015,8 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
 
 function normalizeOpenAiStatementType(value) {
   const statementType = String(value || "").toLowerCase();
+  if (statementType === "build") return "build";
+  if (statementType === "clarify") return "clarify";
   if (statementType === "challenge") return "challenge";
   if (statementType === "response") return "response";
   if (statementType === "risk") return "clarify";
@@ -1983,10 +2029,18 @@ function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
   const historyBySpeaker = new Map((Array.isArray(memberHistoryPatch) ? memberHistoryPatch : []).map((row) => [normalizeShortText(row?.speakerId, 80), row]));
   return dialogue.map((line) => {
     const history = historyBySpeaker.get(line.speakerId) || {};
+    const challengedTarget = byId.get(normalizeShortText(history.challengedSpeakerId, 80));
     const contributionTarget = byId.get(normalizeShortText(history.contributionVoteGiven, 80));
     const concernTarget = byId.get(normalizeShortText(history.concernVoteGiven, 80));
     return {
       ...line,
+      targetSpeakerId: line.targetSpeakerId || challengedTarget?.id || "",
+      targetSpeakerName: line.targetSpeakerName || (challengedTarget ? (challengedTarget.englishName || challengedTarget.name) : ""),
+      stance: normalizeShortText(history.stance, 160),
+      stanceShift: normalizeShortText(history.stanceShift, 180),
+      historyNote: normalizeShortText(history.historyNote, 180),
+      challengedSpeakerId: challengedTarget?.id || "",
+      challengedBySpeakerIds: normalizeShortList(history.challengedBySpeakerIds, 4).filter((id) => byId.has(id)),
       contributionVote: contributionTarget ? {
         targetSpeakerId: contributionTarget.id,
         targetSpeakerName: contributionTarget.englishName || contributionTarget.name,
@@ -1999,6 +2053,10 @@ function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
       } : null,
     };
   });
+}
+
+function shouldRequireCrossMemberTargets(roundNumber, phaseType) {
+  return !(Number(roundNumber) === 1 && String(phaseType).toUpperCase() === "A");
 }
 
 function normalizeStructuredMemberHistory(memberHistoryPatch, sessionRoster) {

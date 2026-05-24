@@ -225,6 +225,15 @@ function sanitizeMeetingMemory(value) {
           whatNextPhaseShouldExamine: cleanText(value.compactMemory.whatNextPhaseShouldExamine, 200),
         }
       : null,
+    memberStateSummaries: Array.isArray(value.memberStateSummaries)
+      ? value.memberStateSummaries.map((item) => ({
+          speakerId: cleanText(item?.speakerId, 80),
+          currentStance: cleanText(item?.currentStance, 140),
+          latestStatementSummary: cleanText(item?.latestStatementSummary, 160),
+          latestTargetSummary: cleanText(item?.latestTargetSummary, 140),
+          unresolvedTension: cleanText(item?.unresolvedTension, 140),
+        })).filter((item) => item.speakerId).slice(0, 12)
+      : [],
   };
 }
 

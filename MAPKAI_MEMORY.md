@@ -2026,3 +2026,9 @@ Push status:
 ## 2026-05-24 - Remove mirrored stance text in PDC Perspective Trail
 - Kept the top-level Current stance in the selected member profile, but the per-entry trail renderer now hides `Stance` when it is empty, identical to the visible statement, or near-identical after punctuation/spacing normalization.
 - Per-entry `Stance` still appears if it adds distinct information, while statement type, visible text, target info, shift, note, and vote metadata remain unchanged.
+
+## 2026-05-24 - Add compact PDC member state for debate collision
+- Later OpenAI PDC phases now receive compact `memberStateSummaries` only: speaker id, current stance, latest statement summary, latest target summary, and one unresolved tension/repeated-risk note. Full Perspective Trail/history is not sent.
+- The normal phase prompt now tells later rounds to add or change something from the previous phase, engage another active member's previous view, and make at least half of visible statements target active members when not in Round 1A.
+- The strict phase schema was minimally extended to allow `build` and `clarify` statement types; `stanceShift` and `historyNote` continue through existing `memberHistoryPatch` and display as `Shift / 推进` only when non-generic and non-duplicative.
+- Backend diagnostics now record valid target counts and retry later-phase OpenAI output when cross-member targeting is below the required half-roster threshold.
