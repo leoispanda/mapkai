@@ -31,7 +31,7 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
     return {
       provider,
       requestedProvider: provider,
-      actualProvider: "",
+      actualProvider: "skipped",
       providerSuccess: false,
       durationMs: null,
       promptCharLength: null,
@@ -55,7 +55,7 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
     return {
       provider,
       requestedProvider: provider,
-      actualProvider: "",
+      actualProvider: "error",
       providerSuccess: false,
       durationMs: Date.now() - startedAt,
       promptCharLength: null,
@@ -102,7 +102,7 @@ async function generateProviderPhase({ provider, mode, sessionRoster, env, start
     provider,
     requestedProvider: provider,
     actualProvider,
-    providerSuccess: fallbackUsed !== true && jsonSuccess === true && !errorType,
+    providerSuccess: actualProvider === provider && fallbackUsed !== true && jsonSuccess === true && !errorType,
     durationMs: Date.now() - startedAt,
     promptCharLength: positiveNumberOrNull(diagnostics.promptCharLength),
     outputCharLength: positiveNumberOrNull(diagnostics.outputCharLength) ?? estimateOutputCharLength(result),

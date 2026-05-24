@@ -1971,3 +1971,8 @@ Push status:
 - Updated `/api/pdc/latency-diagnostic` rows to include `requestedProvider`, `actualProvider`, `providerSuccess`, `fallbackReason`, and the existing fallback/JSON/error metrics.
 - `providerSuccess` is true only when the requested provider returned without fallback, JSON parse failure, skip, or error; OpenAI or Cloudflare falling back to placeholder is now clearly reported as fallback, not provider success.
 - Preserved default PDC provider behavior, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC start/continue flow.
+
+## 2026-05-24 - Finalize PDC latency diagnostic row semantics
+- Set skipped Cloudflare rows to `actualProvider: "skipped"` and catch/error rows to `actualProvider: "error"` while keeping `provider` equal to `requestedProvider` for backward compatibility.
+- Tightened `providerSuccess` so it requires `actualProvider === requestedProvider`, no fallback, JSON success, and no error type.
+- Preserved default PDC behavior, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC start/continue flow.
