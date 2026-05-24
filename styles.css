@@ -406,7 +406,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-live-room.has-selected-profile {
-  grid-template-columns: minmax(540px, 660px) minmax(0, 1fr);
+  grid-template-columns: minmax(680px, 0.95fr) minmax(0, 1fr);
 }
 
 .pdc-roster-panel,
@@ -428,8 +428,23 @@ body:not(.founder-mode) .founder-public-entry {
   gap: 12px;
 }
 
+.pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+  grid-template-columns: minmax(260px, 0.9fr) minmax(360px, 1.1fr);
+  align-items: start;
+}
+
 .pdc-roster-main {
   min-width: 0;
+}
+
+.pdc-roster-profile-slot {
+  min-width: 0;
+}
+
+.pdc-roster-profile-slot .pdc-profile-panel {
+  margin-top: 0;
+  position: sticky;
+  top: 18px;
 }
 
 .pdc-dialogue-panel {
@@ -493,8 +508,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-roster-item.has-profile {
-  grid-template-columns: minmax(220px, 280px) minmax(260px, 1fr);
-  align-items: start;
+  grid-template-columns: 1fr;
 }
 
 .pdc-roster-row {
@@ -924,6 +938,12 @@ body:not(.founder-mode) .founder-public-entry {
 
 .pdc-profile-inline {
   margin-top: 0;
+}
+
+@media (min-width: 661px) {
+  .pdc-roster-panel.has-selected-profile .pdc-profile-inline {
+    display: none;
+  }
 }
 
 .pdc-profile-panel h2 {
@@ -2737,7 +2757,11 @@ canvas {
   }
 
   .pdc-live-room.has-selected-profile {
-    grid-template-columns: minmax(500px, 620px) minmax(0, 1fr);
+    grid-template-columns: minmax(560px, 0.95fr) minmax(0, 1fr);
+  }
+
+  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+    grid-template-columns: minmax(220px, 0.9fr) minmax(300px, 1.1fr);
   }
 
   .pdc-roster-panel {
@@ -2806,6 +2830,14 @@ canvas {
 
   .pdc-roster-item.has-profile {
     grid-template-columns: 1fr;
+  }
+
+  .pdc-roster-panel.has-selected-profile .pdc-roster-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pdc-roster-profile-slot {
+    display: none;
   }
 
   .pdc-roster-list,

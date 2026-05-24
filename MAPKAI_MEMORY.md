@@ -2032,3 +2032,9 @@ Push status:
 - The normal phase prompt now tells later rounds to add or change something from the previous phase, engage another active member's previous view, and make at least half of visible statements target active members when not in Round 1A.
 - The strict phase schema was minimally extended to allow `build` and `clarify` statement types; `stanceShift` and `historyNote` continue through existing `memberHistoryPatch` and display as `Shift / 推进` only when non-generic and non-duplicative.
 - Backend diagnostics now record valid target counts and retry later-phase OpenAI output when cross-member targeting is below the required half-roster threshold.
+
+## 2026-05-24 - Refine desktop PDC Council Members layout
+- Changed the selected member profile from occupying space inside the selected roster row on wide screens to a dedicated right-side profile slot inside the Council Members panel.
+- Wide desktop/tablet roster layout now uses two columns: active members and observers continue vertically in the left column, while Member Profile / Perspective Trail stays aligned in the right column.
+- Mobile behavior remains unchanged: the selected profile renders below the tapped member card, with no two-column layout.
+- Synced `script.js`, `public/script.js`, `index.html`, `public/index.html`, `styles.css`, and `public/styles.css`; no PDC provider logic, strict schema transport, D1/pass lifecycle, observer behavior, final recap, voting, or prompts were changed.

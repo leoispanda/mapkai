@@ -4611,6 +4611,7 @@ function renderPdcCouncilRoom(recap) {
                   ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true, false, selectedPersona)).join("")}
                 </div>` : ""}
             </div>
+            ${selectedPersona ? `<div class="pdc-roster-profile-slot">${renderPdcPersonaProfile(selectedPersona, "desktop")}</div>` : ""}
           </div>
         </aside>
         <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
