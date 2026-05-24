@@ -1988,3 +1988,9 @@ Push status:
 - Warm-up lines are marked as local preparation cues, are not final council statements, are not stored, and do not call Cloudflare or any extra provider.
 - When the OpenAI phase returns, the warm-up room is replaced by the real progressive playback; Founder debug now shows `warmupMode`, `warmupStartedAt`, `warmupDurationMs`, and existing OpenAI phase timing.
 - Preserved model, provider, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC API behavior.
+
+## 2026-05-24 - Expand PDC warm-up to full rotating council
+- Upgraded the local-only PDC warm-up to show Blue Whale plus the full active council roster, with 8 deterministic thinking stages rotating every 5 seconds and stages 6-8 looping if OpenAI takes longer than roughly 40 seconds.
+- Warm-up rows use muted dashed styling, show `Provider: pending` only in Founder debug, do not display active statement counts, and keep real `visibleStatementCount` / `totalStatementCount` at zero until provider output arrives.
+- Founder debug now includes `warmupStatus`, `warmupStage`, `warmupStartedAt`, `warmupDurationMs`, playback mode/status, and the real OpenAI phase timing after replacement.
+- Warm-up text remains frontend-only: it is not sent to the backend, not stored in D1, not added to meeting memory, and not used in final recap logic.

@@ -4102,6 +4102,7 @@ let pdcState = {
   feedbackSubmitted: false,
 };
 let pdcPlaybackTimer = null;
+let pdcWarmupTimer = null;
 let pdcFounderSummary = null;
 let pdcFounderStatus = { state: "idle", detail: "" };
 const pdcWarmupPersonas = [
@@ -4109,14 +4110,111 @@ const pdcWarmupPersonas = [
   { id: "clara-lin", englishName: "Clara Lin", name: "林问心", role: "Emotion & Inner Desire", responsibility: "Check emotional pressure and desire." },
   { id: "marcus-lu", englishName: "Marcus Lu", name: "陆守衡", role: "Risk & Downside", responsibility: "Stress-test downside and cost." },
   { id: "adrian-xu", englishName: "Adrian Xu", name: "许望远", role: "Opportunity & Long View", responsibility: "Check long-term opportunity." },
+  { id: "felix-jiang", englishName: "Felix Jiang", name: "江试舟", role: "Creativity & Third Path", responsibility: "Look for a third path." },
+  { id: "iris-song", englishName: "Iris Song", name: "宋照微", role: "Blind Spots & Self-Deception", responsibility: "Check blind spots." },
+  { id: "julian-cheng", englishName: "Julian Cheng", name: "程和鸣", role: "Relationships & Social Impact", responsibility: "Check relationship impact." },
+  { id: "caleb-gu", englishName: "Caleb Gu", name: "顾安时", role: "Time, Energy & Sustainability", responsibility: "Check time and energy." },
+  { id: "orion-zhuge", englishName: "Orion Zhuge", name: "诸葛观辰", role: "Timing & Momentum", responsibility: "Check timing and momentum." },
 ];
-const pdcWarmupMessages = [
-  { speakerId: "blue-whale", speakerName: "Blue Whale", speakerChineseName: "蓝鲸", role: "Facilitator", text: "Blue Whale is preparing the council..." },
-  { speakerId: "ethan-shen", speakerName: "Ethan Shen", speakerChineseName: "沈知衡", role: "Facts & Evidence", text: "Ethan Shen is reviewing evidence..." },
-  { speakerId: "clara-lin", speakerName: "Clara Lin", speakerChineseName: "林问心", role: "Emotion & Inner Desire", text: "Clara Lin is checking emotional pressure..." },
-  { speakerId: "marcus-lu", speakerName: "Marcus Lu", speakerChineseName: "陆守衡", role: "Risk & Downside", text: "Marcus Lu is stress-testing downside..." },
-  { speakerId: "adrian-xu", speakerName: "Adrian Xu", speakerChineseName: "许望远", role: "Opportunity & Long View", text: "Adrian Xu is checking long-term opportunity..." },
+const pdcWarmupStages = [
+  {
+    "blue-whale": "Blue Whale is preparing the council...",
+    "ethan-shen": "Ethan Shen is reviewing evidence...",
+    "clara-lin": "Clara Lin is checking emotional pressure...",
+    "marcus-lu": "Marcus Lu is stress-testing downside...",
+    "adrian-xu": "Adrian Xu is checking long-term opportunity...",
+    "felix-jiang": "Felix Jiang is looking for a third path...",
+    "iris-song": "Iris Song is checking blind spots...",
+    "julian-cheng": "Julian Cheng is checking relationship impact...",
+    "caleb-gu": "Caleb Gu is checking time and energy...",
+    "orion-zhuge": "Orion Zhuge is checking timing and momentum...",
+  },
+  {
+    "blue-whale": "Blue Whale is aligning the council rhythm...",
+    "ethan-shen": "Ethan Shen has found the facts that need checking...",
+    "clara-lin": "Clara Lin has sensed the emotional pressure point...",
+    "marcus-lu": "Marcus Lu has found the main downside to test...",
+    "adrian-xu": "Adrian Xu has spotted the long-term opening...",
+    "felix-jiang": "Felix Jiang has found a possible alternative route...",
+    "iris-song": "Iris Song has detected a possible self-deception risk...",
+    "julian-cheng": "Julian Cheng has mapped who may be affected...",
+    "caleb-gu": "Caleb Gu has noticed the energy cost...",
+    "orion-zhuge": "Orion Zhuge has read the timing signal...",
+  },
+  {
+    "blue-whale": "Blue Whale is organizing the first round...",
+    "ethan-shen": "Ethan Shen is building the evidence frame...",
+    "clara-lin": "Clara Lin is shaping the inner-desire question...",
+    "marcus-lu": "Marcus Lu is arranging the risk warning...",
+    "adrian-xu": "Adrian Xu is ranking the long-term upside...",
+    "felix-jiang": "Felix Jiang is turning alternatives into options...",
+    "iris-song": "Iris Song is sharpening the mirror question...",
+    "julian-cheng": "Julian Cheng is weighing relationship consequences...",
+    "caleb-gu": "Caleb Gu is balancing time and sustainability...",
+    "orion-zhuge": "Orion Zhuge is setting the momentum frame...",
+  },
+  {
+    "blue-whale": "Blue Whale is connecting the council to your decision...",
+    "ethan-shen": "Ethan Shen is tying evidence back to the question...",
+    "clara-lin": "Clara Lin is checking what the choice may emotionally cost...",
+    "marcus-lu": "Marcus Lu is checking what could go wrong first...",
+    "adrian-xu": "Adrian Xu is checking what future this decision may open...",
+    "felix-jiang": "Felix Jiang is checking whether there is a third path...",
+    "iris-song": "Iris Song is checking what assumption may be hidden...",
+    "julian-cheng": "Julian Cheng is checking who else may be affected...",
+    "caleb-gu": "Caleb Gu is checking whether the choice can be sustained...",
+    "orion-zhuge": "Orion Zhuge is checking whether the timing supports action...",
+  },
+  {
+    "blue-whale": "Blue Whale is identifying the main disagreement...",
+    "ethan-shen": "Ethan Shen is preparing a factual challenge...",
+    "clara-lin": "Clara Lin is preparing an emotional counterpoint...",
+    "marcus-lu": "Marcus Lu is preparing the downside case...",
+    "adrian-xu": "Adrian Xu is preparing the opportunity case...",
+    "felix-jiang": "Felix Jiang is preparing an alternative option...",
+    "iris-song": "Iris Song is preparing a blind-spot challenge...",
+    "julian-cheng": "Julian Cheng is preparing a relationship check...",
+    "caleb-gu": "Caleb Gu is preparing an energy constraint...",
+    "orion-zhuge": "Orion Zhuge is preparing a timing challenge...",
+  },
+  {
+    "blue-whale": "Blue Whale is narrowing the first conflict...",
+    "ethan-shen": "Ethan Shen is selecting the most useful evidence...",
+    "clara-lin": "Clara Lin is separating desire from pressure...",
+    "marcus-lu": "Marcus Lu is separating risk from fear...",
+    "adrian-xu": "Adrian Xu is separating opportunity from fantasy...",
+    "felix-jiang": "Felix Jiang is separating real options from distractions...",
+    "iris-song": "Iris Song is separating insight from self-protection...",
+    "julian-cheng": "Julian Cheng is separating support from social pressure...",
+    "caleb-gu": "Caleb Gu is separating ambition from capacity...",
+    "orion-zhuge": "Orion Zhuge is separating timing from impatience...",
+  },
+  {
+    "blue-whale": "Blue Whale is preparing the speaking order...",
+    "ethan-shen": "Ethan Shen is readying an evidence-based view...",
+    "clara-lin": "Clara Lin is readying the emotional signal...",
+    "marcus-lu": "Marcus Lu is readying the risk test...",
+    "adrian-xu": "Adrian Xu is readying the long-view argument...",
+    "felix-jiang": "Felix Jiang is readying the third-path proposal...",
+    "iris-song": "Iris Song is readying the mirror question...",
+    "julian-cheng": "Julian Cheng is readying the social-impact view...",
+    "caleb-gu": "Caleb Gu is readying the sustainability check...",
+    "orion-zhuge": "Orion Zhuge is readying the timing frame...",
+  },
+  {
+    "blue-whale": "Blue Whale is waiting for the final council synthesis...",
+    "ethan-shen": "Ethan Shen is holding the evidence frame...",
+    "clara-lin": "Clara Lin is holding the emotional signal...",
+    "marcus-lu": "Marcus Lu is holding the downside test...",
+    "adrian-xu": "Adrian Xu is holding the opportunity frame...",
+    "felix-jiang": "Felix Jiang is holding the alternative path...",
+    "iris-song": "Iris Song is holding the blind-spot mirror...",
+    "julian-cheng": "Julian Cheng is holding the relationship map...",
+    "caleb-gu": "Caleb Gu is holding the energy boundary...",
+    "orion-zhuge": "Orion Zhuge is holding the timing signal...",
+  },
 ];
+const pdcWarmupStageDurationMs = 5000;
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -4291,6 +4389,7 @@ function isPdcFounderPreviewAllowed(pass) {
 async function initPdcPilotPage() {
   if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") return;
   clearPdcPlaybackTimer();
+  clearPdcWarmupTimer();
   const pass = getCurrentPdcPass();
   const founderPreview = isPdcFounderPreviewAllowed(pass);
   if (pdcState.pass === pass && pdcState.founderPreview === founderPreview && pdcState.status !== "idle") {
@@ -4499,7 +4598,7 @@ function renderPdcCouncilRoom(recap) {
           <h2>Council Members</h2>
           <h3>Active Council Members</h3>
           <div class="pdc-roster-list">
-            ${activePersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId)).join("")}
+            ${activePersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, false, isWarmupPhase)).join("")}
           </div>
           ${observerPersonas.length ? `
             <h3>Observers</h3>
@@ -4514,15 +4613,15 @@ function renderPdcCouncilRoom(recap) {
               <p class="eyebrow">Current Round</p>
               <h2>Live Council Dialogue</h2>
             </div>
-            ${recap.dialogueProvider && pdcState.founderPreview ? `<span class="pdc-provider-label">${escapeHtml(recap.dialogueProvider)}</span>` : ""}
+            ${recap.dialogueProvider && pdcState.founderPreview && !isWarmupPhase ? `<span class="pdc-provider-label">${escapeHtml(recap.dialogueProvider)}</span>` : ""}
           </div>
           <div class="pdc-table-topic">
             <span>Decision on the table</span>
             <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Decision question")}</p>
           </div>
           <div class="pdc-round-status">
-            <strong>${escapeHtml(currentRound.label || "Round 1 — Opening Views")}</strong>
-            <span>${fullDialogue.length ? `${fullDialogue.length} active council statements` : "No dialogue lines available"}</span>
+            <strong>${escapeHtml(isWarmupPhase ? "Preparing the council" : currentRound.label || "Round 1 — Opening Views")}</strong>
+            <span>${isWarmupPhase ? "Council is thinking · Local warm-up" : fullDialogue.length ? `${fullDialogue.length} active council statements` : "No dialogue lines available"}</span>
           </div>
           ${renderPdcPlaybackStatus(currentRound, playback, thinkingLine)}
           ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback, isWarmupPhase)}
@@ -4635,12 +4734,12 @@ function clampPdcIndex(value, length) {
   return Math.max(0, Math.min(index, length - 1));
 }
 
-function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false) {
+function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarmupThinking = false) {
   const initials = getPersonaInitials(persona);
   const isSelected = pdcState.selectedPersonaId === persona.id;
-  const isSpeaking = activeSpeakerId === persona.id;
+  const isSpeaking = activeSpeakerId === persona.id || isWarmupThinking;
   return `
-    <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
+    <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isWarmupThinking ? "is-thinking" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
       <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
       <span class="pdc-roster-copy">
         <strong>${escapeHtml(persona.englishName || persona.name || "Council member")}</strong>
@@ -4651,6 +4750,13 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false) {
 }
 
 function renderPdcPlaybackStatus(round, playback, thinkingLine) {
+  if (round?.isWarmup) {
+    const debug = getPdcWarmupDebug();
+    return `
+      <div class="pdc-playback-status is-warmup">
+        <p>Local warm-up · Stage ${Number(debug.warmupStage || 1)} of 8</p>
+      </div>`;
+  }
   if (!playback?.isPlaying) return "";
   const speakerName = thinkingLine?.speakerName || "Council member";
   return `
@@ -4666,7 +4772,7 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, 
     <div class="pdc-dialogue-board" aria-label="Live Council Dialogue">
       <ol>
         ${lines.map((line) => `
-          <li class="${line.speakerId === activeSpeakerId ? "is-current" : ""}">
+          <li class="${isWarmupPhase ? "is-warmup" : ""} ${line.speakerId === activeSpeakerId ? "is-current" : ""}">
             <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(line.role)}</small>` : ""}</span>
             ${renderPdcRelationLabel(line)}
             <p>${escapeHtml(line.text || "")}</p>
@@ -4783,7 +4889,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
       Previous summary: ${previousSummary ? "available" : "missing"} ·
       User intervention: ${currentRound.userIntervention ? "included" : "empty"}
       · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}
-      · warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)}
+      · warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)}
       ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
       ${diagnostics ? ` · phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}` : ""}
       ${diagnostics ? ` · Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"}` : ""}
@@ -4798,8 +4904,8 @@ function getPdcPlaybackForRound(round) {
 function getPdcPlaybackDebug(round) {
   const dialogue = Array.isArray(round?.dialogue) ? round.dialogue : [];
   const playback = getPdcPlaybackForRound(round);
-  const totalStatementCount = dialogue.length;
-  const visibleStatementCount = playback ? Math.min(Number(playback.visibleCount || 0), totalStatementCount) : totalStatementCount;
+  const totalStatementCount = round?.isWarmup ? 0 : dialogue.length;
+  const visibleStatementCount = round?.isWarmup ? 0 : playback ? Math.min(Number(playback.visibleCount || 0), totalStatementCount) : totalStatementCount;
   let playbackStatus = "idle";
   if (pdcState.phaseLoading || pdcState.status === "generating") {
     playbackStatus = "preparing";
@@ -4809,7 +4915,7 @@ function getPdcPlaybackDebug(round) {
     playbackStatus = "completed";
   }
   return {
-    playbackMode: playback ? "progressive" : "instant",
+    playbackMode: round?.isWarmup ? "warmup" : playback ? "progressive" : "instant",
     playbackStatus,
     visibleStatementCount,
     totalStatementCount,
@@ -4825,33 +4931,43 @@ function clearPdcPlaybackTimer() {
   }
 }
 
-function beginPdcWarmup({ phaseLabel = "Round 1A — Position Update", roundNumber = 1, phaseType = "A" } = {}) {
+function clearPdcWarmupTimer() {
+  if (pdcWarmupTimer) {
+    clearTimeout(pdcWarmupTimer);
+    pdcWarmupTimer = null;
+  }
+}
+
+function beginPdcWarmup({ phaseLabel = "Round 1A — Position Update", roundNumber = 1, phaseType = "A", activePersonas = null } = {}) {
   clearPdcPlaybackTimer();
+  clearPdcWarmupTimer();
   const startedAt = Date.now();
-  const phase = createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt });
+  const personas = normalizePdcWarmupPersonas(activePersonas);
+  const phase = createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt, personas, stage: 1 });
   pdcState.warmup = {
     mode: "local",
+    status: "running",
     startedAt,
+    stage: 1,
+    phaseLabel,
+    roundNumber,
+    phaseType,
+    personas,
     phaseId: phase.id,
-    recap: createPdcWarmupRecap(phase),
+    recap: createPdcWarmupRecap(phase, personas),
   };
-  pdcState.playback = {
-    phaseId: phase.id,
-    visibleCount: 0,
-    activeSpeakerId: "",
-    thinkingSpeakerId: "",
-    summaryVisible: false,
-    complete: false,
-    isPlaying: true,
-  };
+  pdcState.playback = null;
   renderPdcPilot();
-  schedulePdcPlaybackStep();
+  schedulePdcWarmupStage();
 }
 
 function finishPdcWarmup() {
   if (!pdcState.warmup) return pdcState.warmupDiagnostics || null;
+  clearPdcWarmupTimer();
   pdcState.warmupDiagnostics = {
     warmupMode: "local",
+    warmupStatus: "replaced",
+    warmupStage: pdcState.warmup.stage || 1,
     warmupStartedAt: new Date(pdcState.warmup.startedAt).toISOString(),
     warmupDurationMs: Date.now() - pdcState.warmup.startedAt,
   };
@@ -4860,6 +4976,16 @@ function finishPdcWarmup() {
 }
 
 function cancelPdcWarmup() {
+  clearPdcWarmupTimer();
+  if (pdcState.warmup) {
+    pdcState.warmupDiagnostics = {
+      warmupMode: "local",
+      warmupStatus: "completed",
+      warmupStage: pdcState.warmup.stage || 1,
+      warmupStartedAt: new Date(pdcState.warmup.startedAt).toISOString(),
+      warmupDurationMs: Date.now() - pdcState.warmup.startedAt,
+    };
+  }
   pdcState.warmup = null;
 }
 
@@ -4867,29 +4993,75 @@ function getPdcWarmupDebug() {
   if (pdcState.warmup) {
     return {
       warmupMode: "local",
+      warmupStatus: pdcState.warmup.status || "running",
+      warmupStage: pdcState.warmup.stage || 1,
       warmupStartedAt: new Date(pdcState.warmup.startedAt).toISOString(),
       warmupDurationMs: Date.now() - pdcState.warmup.startedAt,
     };
   }
-  return pdcState.warmupDiagnostics || { warmupMode: "", warmupStartedAt: "", warmupDurationMs: 0 };
+  return pdcState.warmupDiagnostics || { warmupMode: "", warmupStatus: "", warmupStage: 0, warmupStartedAt: "", warmupDurationMs: 0 };
 }
 
-function createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt }) {
+function schedulePdcWarmupStage() {
+  clearPdcWarmupTimer();
+  if (!pdcState.warmup) return;
+  pdcWarmupTimer = setTimeout(() => {
+    if (!pdcState.warmup) return;
+    pdcState.warmup.stage = getNextPdcWarmupStage(pdcState.warmup.stage || 1);
+    const phase = createPdcWarmupPhase({
+      phaseLabel: pdcState.warmup.phaseLabel,
+      roundNumber: pdcState.warmup.roundNumber,
+      phaseType: pdcState.warmup.phaseType,
+      startedAt: pdcState.warmup.startedAt,
+      personas: pdcState.warmup.personas,
+      stage: pdcState.warmup.stage,
+    });
+    pdcState.warmup.phaseId = phase.id;
+    pdcState.warmup.recap = createPdcWarmupRecap(phase, pdcState.warmup.personas);
+    renderPdcPilot();
+    schedulePdcWarmupStage();
+  }, pdcWarmupStageDurationMs);
+}
+
+function getNextPdcWarmupStage(stage) {
+  const current = Number(stage) || 1;
+  if (current < 8) return current + 1;
+  return 6;
+}
+
+function normalizePdcWarmupPersonas(activePersonas) {
+  const source = Array.isArray(activePersonas) && activePersonas.length ? activePersonas : pdcWarmupPersonas;
+  const fallbackById = new Map(pdcWarmupPersonas.map((persona) => [persona.id, persona]));
+  return source
+    .filter((persona) => persona?.id && persona.id !== "blue-whale")
+    .map((persona) => ({ ...(fallbackById.get(persona.id) || {}), ...persona }));
+}
+
+function createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt, personas, stage = 1 }) {
+  const stageMessages = pdcWarmupStages[Math.max(0, Math.min(Number(stage) || 1, 8) - 1)] || pdcWarmupStages[0];
+  const dialoguePersonas = [
+    { id: "blue-whale", englishName: "Blue Whale", name: "蓝鲸", role: "Facilitator" },
+    ...normalizePdcWarmupPersonas(personas),
+  ];
   return {
     id: `warmup-${startedAt}`,
     label: phaseLabel,
     phaseLabel,
     roundNumber,
     phaseType,
-    provider: "local",
+    provider: "pending",
     isWarmup: true,
-    dialogue: pdcWarmupMessages.map((line) => ({
-      ...line,
-      speakerLocalName: line.speakerChineseName || line.speakerName,
+    dialogue: dialoguePersonas.map((persona) => ({
+      speakerId: persona.id,
+      speakerName: persona.englishName || persona.name || "Council member",
+      speakerChineseName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      speakerLocalName: persona.name && persona.name !== persona.englishName ? persona.name : "",
+      role: persona.role || "Council Member",
+      text: stageMessages[persona.id] || `${persona.englishName || persona.name || "Council member"} is preparing a local thinking state...`,
       stanceType: "warmup",
       targetSpeakerId: "",
       targetSpeakerName: "",
-      stanceSummary: line.text,
+      stanceSummary: stageMessages[persona.id] || "",
       contentSource: "local-warmup",
     })),
     blueWhaleSummary: { title: "Blue Whale Summary", text: "", convergenceLevel: "low", shouldConsiderStopping: false },
@@ -4901,19 +5073,20 @@ function createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt })
   };
 }
 
-function createPdcWarmupRecap(phase) {
+function createPdcWarmupRecap(phase, personas) {
+  const roster = normalizePdcWarmupPersonas(personas);
   return {
     modeId: pdcState.selectedMode,
     modeLabel: pdcState.selectedMode === "company" ? "Company PDC" : "Personal PDC",
-    dialogueProvider: "local",
+    dialogueProvider: "pending",
     councilRoom: {
       isWarmupRoom: true,
       title: "PDC Council Room",
       decisionOnTable: pdcState.question || "Decision question",
       currentRoundLabel: phase.phaseLabel,
       facilitator: { id: "blue-whale", englishName: "Blue Whale", name: "蓝鲸", role: "Facilitator", summary: "" },
-      personas: pdcWarmupPersonas,
-      sessionRoster: pdcWarmupPersonas,
+      personas: roster,
+      sessionRoster: roster,
       rounds: [phase],
     },
   };
@@ -5010,7 +5183,8 @@ async function continuePdcPhase() {
   pdcState.phaseLoading = true;
   pdcState.phaseMessage = "Preparing this phase...";
   const nextSpec = getNextPdcPhaseSpec(currentPhase);
-  beginPdcWarmup(nextSpec);
+  const activeWarmupPersonas = getPdcRosterPersonas(room, phases).filter((persona) => pdcState.activeRosterIds.includes(persona.id));
+  beginPdcWarmup({ ...nextSpec, activePersonas: activeWarmupPersonas });
   try {
     if (!phases[nextIndex]) {
       phases.push(await requestNextPdcPhase({ previousPhase: currentPhase, room, userIntervention }));
@@ -5019,8 +5193,6 @@ async function continuePdcPhase() {
     pdcState.activeRoundIndex = nextIndex;
     pdcState.phaseMessage = "";
     if (warmupDiagnostics) {
-      const phase = phases[nextIndex];
-      phase.contentDiagnostics = { ...(phase.contentDiagnostics || {}), ...warmupDiagnostics };
       if (pdcState.providerDiagnostics?.contentDiagnostics) {
         pdcState.providerDiagnostics.contentDiagnostics = { ...pdcState.providerDiagnostics.contentDiagnostics, ...warmupDiagnostics };
       }
@@ -5625,9 +5797,6 @@ async function startPdcExperience() {
       strict: data.recap.strict === true || data.recap.contentDiagnostics?.strict === true,
       contentDiagnostics: { ...(data.recap.contentDiagnostics || {}), ...(warmupDiagnostics || {}) },
     } : null;
-    if (warmupDiagnostics && data.recap) data.recap.contentDiagnostics = { ...(data.recap.contentDiagnostics || {}), ...warmupDiagnostics };
-    const firstRound = data.recap?.councilRoom?.rounds?.[0];
-    if (warmupDiagnostics && firstRound) firstRound.contentDiagnostics = { ...(firstRound.contentDiagnostics || {}), ...warmupDiagnostics };
     pdcState.userInterventions = [];
     pdcState.discussionStopped = false;
     beginPdcPhasePlayback(0);
@@ -7596,6 +7765,7 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-pdc-founder-reset]")) {
     clearPdcPlaybackTimer();
+    clearPdcWarmupTimer();
     pdcState.status = "ready";
     pdcState.message = "";
     pdcState.question = "";
