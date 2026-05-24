@@ -2064,3 +2064,9 @@ Push status:
 - Round 5 labels now read Final Round; after Final Round 5B the main action is Generate Council Recap, with continue-beyond-final reserved for Founder Preview.
 - Updated Founder diagnostics for frozen observer counts, blocked observer updates, archived summary size, active member summary count, final round state, rewarded contributor, reenabled observer, skipped reason, and continue-beyond-final status.
 - Synced root/public scripts, root/public styles, and inline production HTML; provider/model/D1/pass lifecycle/final recap schema were not changed.
+
+## 2026-05-24 - Reset PDC session state before new Founder Preview
+- Added a centralized PDC session reset used by both `Start PDC Experience` and `Start another Founder Preview`.
+- New PDC sessions now clear prior round index, phases, meeting memory path, previous summary path, active/observer rosters, archived observer snapshots, member history, derived cumulative votes, final round preview/reintroduced perspective state, final recap state, and playback/warmup state before the first `/api/pdc/start` request.
+- Founder diagnostics now expose `sessionResetApplied`, `pdcSessionId`, `initialRoundNumber`, `initialMeetingMemoryItemCount`, and `previousSessionCleared` so a fresh Round 1A can be verified as memory-free.
+- No OpenAI provider logic, strict structured output transport, model, D1/pass lifecycle, observer transition rule, final recap schema, or selected member profile layout was changed.

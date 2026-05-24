@@ -3699,43 +3699,120 @@ let lensResultGenerated = false;
 let lensPromptCopied = false;
 let founderMessages = [];
 let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
-let pdcState = {
-  pass: "",
-  valid: false,
-  status: "idle",
-  message: "",
-  selectedMode: "personal",
-  question: "",
-  recap: null,
-  founderPreview: false,
-  selectedPersonaId: "",
-  activeRoundIndex: 0,
-  pdcPhases: [],
-  activeRosterIds: [],
-  observerRosterIds: [],
-  archivedObservers: {},
-  finalReintroducedPerspective: null,
-  finalRoundPreviewShown: false,
-  finalRoundPreviewAccepted: false,
-  finalRoundPreviewSelection: "",
-  finalReenableSkippedReason: "",
-  finalRecapLoading: false,
-  providerDiagnostics: null,
-  userInterventions: [],
-  discussionStopped: false,
-  phaseLoading: false,
-  phaseMessage: "",
-  playback: null,
-  warmup: null,
-  warmupDiagnostics: null,
-  memberHistory: {},
-  feedbackSubmitted: false,
-};
+let pdcState = createPdcBaseState();
 const pdcMaxNormalRound = 5;
 let pdcPlaybackTimer = null;
 let pdcWarmupTimer = null;
 let pdcFounderSummary = null;
 let pdcFounderStatus = { state: "idle", detail: "" };
+
+function createPdcBaseState(overrides = {}) {
+  return {
+    pass: "",
+    valid: false,
+    status: "idle",
+    message: "",
+    selectedMode: "personal",
+    question: "",
+    recap: null,
+    founderPreview: false,
+    selectedPersonaId: "",
+    activeRoundIndex: 0,
+    pdcPhases: [],
+    activeRosterIds: [],
+    observerRosterIds: [],
+    archivedObservers: {},
+    finalReintroducedPerspective: null,
+    finalRoundPreviewShown: false,
+    finalRoundPreviewAccepted: false,
+    finalRoundPreviewSelection: "",
+    finalReenableSkippedReason: "",
+    finalRecapLoading: false,
+    providerDiagnostics: null,
+    userInterventions: [],
+    discussionStopped: false,
+    phaseLoading: false,
+    phaseMessage: "",
+    playback: null,
+    warmup: null,
+    warmupDiagnostics: null,
+    memberHistory: {},
+    feedbackSubmitted: false,
+    pdcSessionId: "",
+    sessionResetApplied: false,
+    initialRoundNumber: 0,
+    initialMeetingMemoryItemCount: 0,
+    previousSessionCleared: false,
+    ...overrides,
+  };
+}
+
+function createPdcSessionId() {
+  return `pdc-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function hasPdcSessionStateToClear() {
+  return Boolean(
+    pdcState.recap
+    || pdcState.warmup
+    || pdcState.playback
+    || pdcState.providerDiagnostics
+    || pdcState.finalReintroducedPerspective
+    || pdcState.discussionStopped
+    || pdcState.phaseLoading
+    || pdcState.finalRecapLoading
+    || pdcState.finalRoundPreviewShown
+    || pdcState.finalRoundPreviewAccepted
+    || pdcState.finalRoundPreviewSelection
+    || pdcState.finalReenableSkippedReason
+    || (Array.isArray(pdcState.pdcPhases) && pdcState.pdcPhases.length > 0)
+    || (Array.isArray(pdcState.activeRosterIds) && pdcState.activeRosterIds.length > 0)
+    || (Array.isArray(pdcState.observerRosterIds) && pdcState.observerRosterIds.length > 0)
+    || (Array.isArray(pdcState.userInterventions) && pdcState.userInterventions.length > 0)
+    || Object.keys(pdcState.archivedObservers || {}).length > 0
+    || Object.keys(pdcState.memberHistory || {}).length > 0
+  );
+}
+
+function resetPdcSessionState({ question = "", status = "ready", message = "" } = {}) {
+  clearPdcPlaybackTimer();
+  clearPdcWarmupTimer();
+  const previousSessionCleared = hasPdcSessionStateToClear() || pdcState.sessionResetApplied === true;
+  Object.assign(pdcState, {
+    status,
+    message,
+    question,
+    recap: null,
+    selectedPersonaId: "",
+    activeRoundIndex: 0,
+    pdcPhases: [],
+    activeRosterIds: [],
+    observerRosterIds: [],
+    archivedObservers: {},
+    finalReintroducedPerspective: null,
+    finalRoundPreviewShown: false,
+    finalRoundPreviewAccepted: false,
+    finalRoundPreviewSelection: "",
+    finalReenableSkippedReason: "",
+    finalRecapLoading: false,
+    providerDiagnostics: null,
+    userInterventions: [],
+    discussionStopped: false,
+    phaseLoading: false,
+    phaseMessage: "",
+    playback: null,
+    warmup: null,
+    warmupDiagnostics: null,
+    memberHistory: {},
+    feedbackSubmitted: false,
+    pdcSessionId: createPdcSessionId(),
+    sessionResetApplied: true,
+    initialRoundNumber: 1,
+    initialMeetingMemoryItemCount: 0,
+    previousSessionCleared,
+  });
+}
+
 const pdcWarmupPersonas = [
   { id: "ethan-shen", englishName: "Ethan Shen", name: "沈知衡", role: "Facts & Evidence", responsibility: "Review evidence and missing information." },
   { id: "clara-lin", englishName: "Clara Lin", name: "林问心", role: "Emotion & Inner Desire", responsibility: "Check emotional pressure and desire." },
@@ -4027,38 +4104,11 @@ async function initPdcPilotPage() {
     renderPdcPilot();
     return;
   }
-  pdcState = {
+  pdcState = createPdcBaseState({
     pass,
-    valid: false,
     status: "validating",
-    message: "",
-    selectedMode: "personal",
-    question: "",
-    recap: null,
     founderPreview,
-    selectedPersonaId: "",
-    activeRoundIndex: 0,
-    pdcPhases: [],
-    activeRosterIds: [],
-    observerRosterIds: [],
-    archivedObservers: {},
-    finalReintroducedPerspective: null,
-    finalRoundPreviewShown: false,
-    finalRoundPreviewAccepted: false,
-    finalRoundPreviewSelection: "",
-    finalReenableSkippedReason: "",
-    finalRecapLoading: false,
-    providerDiagnostics: null,
-    userInterventions: [],
-    discussionStopped: false,
-    phaseLoading: false,
-    phaseMessage: "",
-    playback: null,
-    warmup: null,
-    warmupDiagnostics: null,
-    memberHistory: {},
-    feedbackSubmitted: false,
-  };
+  });
   renderPdcPilot();
   if (founderPreview) {
     pdcState.valid = true;
@@ -4583,6 +4633,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
       User intervention: ${currentRound.userIntervention ? "included" : "empty"}
       · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}
       · warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)}
+      · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}
       ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
       ${diagnostics ? ` · phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}` : ""}
       ${diagnostics ? ` · activeRosterPromptCount: ${Number(diagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount: ${Number(diagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt: ${diagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded: ${diagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction: ${Number(diagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied: ${diagnostics.costOptimizationApplied ? "true" : "false"}` : ""}
@@ -4951,7 +5002,14 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     modelName: data.modelName,
     schemaName: data.schemaName || data.contentDiagnostics?.schemaName || "",
     strict: data.strict === true || data.contentDiagnostics?.strict === true,
-    contentDiagnostics: data.contentDiagnostics || null,
+    contentDiagnostics: data.contentDiagnostics ? {
+      ...data.contentDiagnostics,
+      sessionResetApplied: pdcState.sessionResetApplied === true,
+      pdcSessionId: pdcState.pdcSessionId,
+      initialRoundNumber: pdcState.initialRoundNumber,
+      initialMeetingMemoryItemCount: pdcState.initialMeetingMemoryItemCount,
+      previousSessionCleared: pdcState.previousSessionCleared === true,
+    } : null,
   };
   const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention, contentDiagnostics: data.contentDiagnostics || null }, pdcState.pdcPhases.length, room);
   maybeAddPdcFinalReintroducedPerspective(phase);
@@ -5747,9 +5805,10 @@ function renderPdcProviderDiagnostics() {
       ${phase ? `<p>Phase model: ${escapeHtml(phase.modelName || "-")} · Phase JSON parse failed: ${phase.jsonParseFailed ? "yes" : "no"} · Phase schema: ${escapeHtml(phase.schemaName || phaseDiagnostics?.schemaName || "-")} · Phase strict: ${(phase.strict || phaseDiagnostics?.strict) ? "true" : "false"}${phase.providerErrorShort ? ` · Phase error: ${escapeHtml(phase.providerErrorShort)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap model: ${escapeHtml(final.modelName || "-")} · Final recap JSON parse failed: ${final.jsonParseFailed ? "yes" : "no"} · Final recap schema: ${escapeHtml(final.schemaName || finalDiagnostics?.finalRecapSchemaName || "-")} · Final recap strict: ${(final.strict || finalDiagnostics?.finalRecapStrict) ? "true" : "false"}${final.providerErrorShort ? ` · Final recap error: ${escapeHtml(final.providerErrorShort)}` : ""}</p>` : ""}
       ${phaseDiagnostics ? `<p>Phase speed: phaseOpenAiDurationMs=${Number(phaseDiagnostics.phaseOpenAiDurationMs || phaseDiagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs=${Number(phaseDiagnostics.phaseRetryDurationMs || phaseDiagnostics.retryDurationMs || 0)} · phaseTotalDurationMs=${Number(phaseDiagnostics.phaseTotalDurationMs || phaseDiagnostics.totalPhaseDurationMs || 0)} · promptCharLength=${Number(phaseDiagnostics.promptCharLength || 0)} · approximateInputTokenEstimate=${Number(phaseDiagnostics.approximateInputTokenEstimate || 0)} · outputCharLength=${Number(phaseDiagnostics.outputCharLength || 0)} · activeRosterCount=${Number(phaseDiagnostics.activeRosterCount || 0)} · observerCount=${Number(phaseDiagnostics.observerCount || 0)} · meetingMemoryItemCount=${Number(phaseDiagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens=${Number(phaseDiagnostics.phaseMaxOutputTokens || phaseDiagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens=${Number(phaseDiagnostics.retryMaxOutputTokens || 0)}</p>` : ""}
+      ${phaseDiagnostics ? `<p>Session reset: sessionResetApplied=${phaseDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(phaseDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(phaseDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(phaseDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${phaseDiagnostics.previousSessionCleared ? "true" : "false"}</p>` : ""}
       ${phaseDiagnostics ? `<p>Phase cost optimization: activeRosterPromptCount=${Number(phaseDiagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount=${Number(phaseDiagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt=${phaseDiagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded=${phaseDiagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction=${Number(phaseDiagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied=${phaseDiagnostics.costOptimizationApplied ? "true" : "false"} · allowedSpeakerIdsForPhase=${escapeHtml((phaseDiagnostics.allowedSpeakerIdsForPhase || []).join(", ") || "-")} · generatedSpeakerIds=${escapeHtml((phaseDiagnostics.generatedSpeakerIds || []).join(", ") || "-")}</p>` : ""}
       ${phaseDiagnostics ? `<p>Phase quality: OpenAI returned statement count=${Number(phaseDiagnostics.modelStatementCount || 0)} · Normalized statement count=${Number(phaseDiagnostics.normalizedStatementCount || 0)} · visibleStatementCount=${Number(phaseDiagnostics.visibleStatementCount || 0)} · totalStatementCount=${Number(phaseDiagnostics.totalStatementCount || 0)} · retryUsed=${phaseDiagnostics.retryUsed ? "true" : "false"} · Default statements injected=${phaseDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phaseDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phaseDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phaseDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""} · templateContentDetected=${phaseDiagnostics.templateContentDetected ? "true" : "false"}${phaseDiagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(phaseDiagnostics.templateMatchedPhrases.join(", "))})` : ""} · contentQualityRetryUsed=${phaseDiagnostics.contentQualityRetryUsed ? "true" : "false"}</p>` : ""}
-      <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
+      <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
       ${final ? `<p>Final recap debug: finalRecapProvider=${escapeHtml(final.actualProvider || final.provider || "-")} · finalRecapOpenAiDurationMs=${Number(finalDiagnostics?.finalRecapOpenAiDurationMs || 0)} · finalRecapTotalDurationMs=${Number(finalDiagnostics?.finalRecapTotalDurationMs || 0)} · finalRecapPromptCharLength=${Number(finalDiagnostics?.finalRecapPromptCharLength || 0)} · finalRecapOutputCharLength=${Number(finalDiagnostics?.finalRecapOutputCharLength || 0)} · finalRecapSchemaName=${escapeHtml(finalDiagnostics?.finalRecapSchemaName || final.schemaName || "-")} · finalRecapStrict=${(finalDiagnostics?.finalRecapStrict || final.strict) ? "true" : "false"} · finalRecapActiveRosterPromptCount=${Number(finalDiagnostics?.finalRecapActiveRosterPromptCount || 0)} · finalRecapObserverSummaryPromptCount=${Number(finalDiagnostics?.finalRecapObserverSummaryPromptCount || 0)} · archivedSummaryIncluded=${finalDiagnostics?.archivedSummaryIncluded ? "true" : "false"}</p>` : ""}
     </section>`;
 }
@@ -5771,6 +5830,11 @@ function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
     maxNormalRound: pdcMaxNormalRound,
     currentRoundNumber: Number(currentPhase?.roundNumber || 0),
     currentPhaseType: currentPhase?.phaseType || "",
+    sessionResetApplied: pdcState.sessionResetApplied === true,
+    pdcSessionId: pdcState.pdcSessionId || "",
+    initialRoundNumber: pdcState.initialRoundNumber || 0,
+    initialMeetingMemoryItemCount: pdcState.initialMeetingMemoryItemCount || 0,
+    previousSessionCleared: pdcState.previousSessionCleared === true,
     isFinalRound: Number(currentPhase?.roundNumber || 0) >= pdcMaxNormalRound,
     finalRoundPreviewShown: pdcState.finalRoundPreviewShown,
     mostRewardedContributorId: rewarded.speakerId || "",
@@ -5823,17 +5887,14 @@ function renderPdcRadioGroup(label, name, options) {
 
 async function startPdcExperience() {
   if (!pdcState.valid || pdcState.status === "generating" || pdcState.phaseLoading || pdcState.finalRecapLoading || isPdcPlaybackActive()) return;
-  clearPdcPlaybackTimer();
   const question = document.querySelector("[data-pdc-question]")?.value.trim() || "";
-  pdcState.question = question.slice(0, 1200);
-  if (pdcState.question.length < 8) {
+  const nextQuestion = question.slice(0, 1200);
+  if (nextQuestion.length < 8) {
     pdcState.message = "Please enter a decision question before starting.";
     renderPdcPilot();
     return;
   }
-  pdcState.status = "generating";
-  pdcState.message = "";
-  pdcState.warmupDiagnostics = null;
+  resetPdcSessionState({ question: nextQuestion, status: "generating", message: "" });
   beginPdcWarmup({ phaseLabel: "Round 1A — Position Update", roundNumber: 1, phaseType: "A" });
   try {
     const headers = { "Content-Type": "application/json" };
@@ -5871,7 +5932,15 @@ async function startPdcExperience() {
       modelName: data.recap.modelName,
       schemaName: data.recap.schemaName || data.recap.contentDiagnostics?.schemaName || "",
       strict: data.recap.strict === true || data.recap.contentDiagnostics?.strict === true,
-      contentDiagnostics: { ...(data.recap.contentDiagnostics || {}), ...(warmupDiagnostics || {}) },
+      contentDiagnostics: {
+        ...(data.recap.contentDiagnostics || {}),
+        ...(warmupDiagnostics || {}),
+        sessionResetApplied: pdcState.sessionResetApplied === true,
+        pdcSessionId: pdcState.pdcSessionId,
+        initialRoundNumber: pdcState.initialRoundNumber,
+        initialMeetingMemoryItemCount: pdcState.initialMeetingMemoryItemCount,
+        previousSessionCleared: pdcState.previousSessionCleared === true,
+      },
     } : null;
     pdcState.userInterventions = [];
     pdcState.discussionStopped = false;
@@ -7845,34 +7914,7 @@ document.addEventListener("click", (event) => {
     return;
   }
   if (event.target.closest("[data-pdc-founder-reset]")) {
-    clearPdcPlaybackTimer();
-    clearPdcWarmupTimer();
-    pdcState.status = "ready";
-    pdcState.message = "";
-    pdcState.question = "";
-    pdcState.recap = null;
-    pdcState.selectedPersonaId = "";
-    pdcState.activeRoundIndex = 0;
-    pdcState.pdcPhases = [];
-    pdcState.activeRosterIds = [];
-    pdcState.observerRosterIds = [];
-    pdcState.archivedObservers = {};
-    pdcState.finalReintroducedPerspective = null;
-    pdcState.finalRoundPreviewShown = false;
-    pdcState.finalRoundPreviewAccepted = false;
-    pdcState.finalRoundPreviewSelection = "";
-    pdcState.finalReenableSkippedReason = "";
-    pdcState.finalRecapLoading = false;
-    pdcState.providerDiagnostics = null;
-    pdcState.userInterventions = [];
-    pdcState.discussionStopped = false;
-    pdcState.phaseLoading = false;
-    pdcState.phaseMessage = "";
-    pdcState.playback = null;
-    pdcState.warmup = null;
-    pdcState.warmupDiagnostics = null;
-    pdcState.memberHistory = {};
-    pdcState.feedbackSubmitted = false;
+    resetPdcSessionState({ question: "", status: "ready", message: "" });
     renderPdcPilot();
     return;
   }
