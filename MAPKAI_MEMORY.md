@@ -1960,3 +1960,9 @@ Push status:
 - The script records provider, duration, prompt/output char counts where available, statement count, JSON success/failure, fallback/skipped state, model name, sample statements, Blue Whale summary, and content quality notes.
 - Cloudflare comparison runs locally only when `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` are supplied; otherwise it is marked skipped.
 - Added Cloudflare phase timing/prompt/output diagnostics to existing `contentDiagnostics`; ordinary users still do not see these diagnostics.
+
+## 2026-05-24 - Add Founder-only deployed PDC latency diagnostic endpoint
+- Added `GET`/`POST /api/pdc/latency-diagnostic` as a Founder-only Cloudflare Pages Function guarded by `X-MapKAI-Founder: true`; ordinary users receive `403`.
+- The endpoint manually compares one OpenAI structured phase, Cloudflare phase when an `AI` binding exists, and placeholder/local for the fixed short diagnostic question `欧洲白领为什么收入比美国白领低那么多`.
+- Each provider row is limited by a 90-second diagnostic timeout and returns only metrics: provider, duration, prompt/output char lengths, statement count, JSON success, fallback state, error/skipped reason, and content quality note.
+- The diagnostic does not store the test question or outputs in D1, does not expose secrets, does not log API keys, does not change the default PDC provider, does not change the OpenAI model, and does not run automatically.
