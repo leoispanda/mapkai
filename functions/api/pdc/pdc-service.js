@@ -576,9 +576,9 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
     try {
       return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
     } catch (error) {
-      console.error("PDC OpenAI dialogue provider failed:", error);
       const message = String(error.message || "OpenAI call failed");
-      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getOpenAiFallbackReason(message), providerErrorShort: message.slice(0, 180), params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+      console.error("PDC OpenAI dialogue provider failed:", message);
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getOpenAiFallbackReason(message), providerErrorShort: message.slice(0, 180), providerDiagnostics: error.pdcDiagnostics || null, params: { modeId, modeLabel, sessionRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
     }
   }
 
@@ -616,7 +616,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
   return { ...fallback, requestedProvider: "placeholder", actualProvider: "placeholder", fallbackUsed: false, fallbackReason: "", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
 }
 
-async function fallbackDialogueResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, params }) {
+async function fallbackDialogueResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, providerDiagnostics = null, params }) {
   const fallbackProvider = resolveFallbackProvider(params.env, failedProvider);
   if (fallbackProvider === "cloudflare" && params.env?.AI) {
     try {
@@ -643,6 +643,9 @@ async function fallbackDialogueResult({ fallback, requestedProvider, failedProvi
       };
     }
   }
+  const diagnosticContent = params.env?.PDC_LATENCY_DIAGNOSTIC === "true" && providerDiagnostics && typeof providerDiagnostics === "object"
+    ? { ...(fallback.contentDiagnostics || {}), ...providerDiagnostics }
+    : fallback.contentDiagnostics;
   return {
     ...fallback,
     requestedProvider,
@@ -652,6 +655,7 @@ async function fallbackDialogueResult({ fallback, requestedProvider, failedProvi
     providerErrorShort,
     jsonParseFailed: /json/i.test(providerErrorShort || reason),
     modelName: failedProvider === "openai" ? getOpenAiModel(params.env) : "",
+    contentDiagnostics: diagnosticContent,
   };
 }
 
@@ -1202,7 +1206,8 @@ async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observ
 
 async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason = "" }) {
   const prompt = buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, phaseLabel, previousSummary, meetingMemory, userIntervention, retryReason });
-  const contentDiagnostics = createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory });
+  const maxOutputTokens = resolveOpenAiPhaseMaxOutputTokens(env);
+  const contentDiagnostics = createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory, maxOutputTokens });
   const parsed = await callOpenAiJsonWithRetry({
     env,
     model,
@@ -1210,7 +1215,7 @@ async function requestOpenAiDialogueJson({ env, model, modeLabel, sessionRoster,
     prompt,
     schemaName: "pdc_phase_dialogue",
     schema: pdcDialogueSchema,
-    maxOutputTokens: openAiPhaseMaxOutputTokens,
+    maxOutputTokens,
     retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
     retryInstructions: "The previous response could not be parsed as valid JSON for the required schema. Return only one complete valid JSON object that matches the schema exactly. No markdown, comments, or trailing text.",
     diagnostics: contentDiagnostics,
@@ -1475,7 +1480,15 @@ function buildCompactMeetingMemoryItems(meetingMemory, maxItems = 5) {
   return items.slice(0, maxItems);
 }
 
-function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory }) {
+function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
+  const diagnosticTokens = Number(env?.PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS);
+  if (env?.PDC_LATENCY_DIAGNOSTIC === "true" && Number.isFinite(diagnosticTokens) && diagnosticTokens > openAiPhaseMaxOutputTokens) {
+    return Math.min(Math.floor(diagnosticTokens), openAiPhaseRetryMaxOutputTokens);
+  }
+  return openAiPhaseMaxOutputTokens;
+}
+
+function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory, maxOutputTokens = openAiPhaseMaxOutputTokens }) {
   return {
     promptCharLength: prompt.length,
     approximateInputTokenEstimate: estimateTokenCount(prompt),
@@ -1483,7 +1496,7 @@ function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRos
     activeRosterCount: Array.isArray(sessionRoster) ? sessionRoster.length : 0,
     observerCount: Array.isArray(observerRoster) ? observerRoster.length : 0,
     meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
-    phaseMaxOutputTokens: openAiPhaseMaxOutputTokens,
+    phaseMaxOutputTokens: maxOutputTokens,
     retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
     openAiDurationMs: 0,
     retryDurationMs: 0,
@@ -1523,6 +1536,7 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
   const apiKey = String(env?.OPENAI_API_KEY || "").trim();
   if (!apiKey) throw new Error("missing OPENAI_API_KEY");
   const startedAt = Date.now();
+  const includeSafeResponseDiagnostics = env?.PDC_LATENCY_DIAGNOSTIC === "true";
   if (diagnostics) {
     diagnostics.promptCharLength = diagnostics.promptCharLength || prompt.length;
     diagnostics.approximateInputTokenEstimate = diagnostics.approximateInputTokenEstimate || estimateTokenCount(`${instructions}\n${prompt}`);
@@ -1553,16 +1567,34 @@ async function callOpenAiJson({ env, model, instructions, prompt, schemaName, sc
     }),
   });
   const payload = await response.json().catch(() => ({}));
+  if (diagnostics && includeSafeResponseDiagnostics) {
+    diagnostics.openAiHttpStatus = response.status;
+    diagnostics.openAiResponseStatus = normalizeShortText(payload?.status || `http_${response.status}`, 80);
+    diagnostics.openAiIncompleteReason = normalizeShortText(getOpenAiIncompleteReason(payload), 120);
+  }
   if (!response.ok) {
     const message = normalizeShortText(payload?.error?.message || `OpenAI HTTP ${response.status}`, 220);
-    throw new Error(message || `OpenAI HTTP ${response.status}`);
+    throw attachPdcDiagnostics(new Error(message || `OpenAI HTTP ${response.status}`), diagnostics);
   }
-  const text = extractOpenAiText(payload);
+  let text = "";
+  try {
+    text = extractOpenAiText(payload);
+  } catch (error) {
+    throw attachPdcDiagnostics(error, diagnostics);
+  }
   if (diagnostics) {
     diagnostics[durationKey] = Date.now() - startedAt;
     diagnostics.outputCharLength = text.length;
+    if (includeSafeResponseDiagnostics) {
+      diagnostics.openAiOutputTextLength = text.length;
+      diagnostics.openAiRawTextFirst200 = sanitizeDiagnosticSnippet(text);
+    }
   }
-  return parseJsonObject(text);
+  try {
+    return parseJsonObject(text);
+  } catch (error) {
+    throw attachPdcDiagnostics(error, diagnostics);
+  }
 }
 
 async function callOpenAiJsonWithRetry({ env, model, instructions, prompt, schemaName, schema, maxOutputTokens, retryMaxOutputTokens, retryInstructions, diagnostics = null }) {
@@ -1615,6 +1647,29 @@ function extractOpenAiText(payload) {
   const text = parts.join("\n").trim();
   if (text) return text;
   throw new Error("OpenAI response missing output_text");
+}
+
+function getOpenAiIncompleteReason(payload) {
+  if (!payload || typeof payload !== "object") return "";
+  const direct = payload.incomplete_details?.reason || payload.error?.code || payload.error?.type || "";
+  if (direct) return direct;
+  const output = Array.isArray(payload.output) ? payload.output : [];
+  for (const item of output) {
+    const reason = item?.incomplete_details?.reason || item?.status_details?.reason || "";
+    if (reason) return reason;
+  }
+  return "";
+}
+
+function sanitizeDiagnosticSnippet(value) {
+  return normalizeShortText(String(value || "").replace(/Bearer\s+[A-Za-z0-9._~-]+/g, "Bearer [redacted]"), 200);
+}
+
+function attachPdcDiagnostics(error, diagnostics) {
+  if (diagnostics && typeof diagnostics === "object") {
+    error.pdcDiagnostics = { ...diagnostics };
+  }
+  return error;
 }
 
 function parseJsonObject(value) {

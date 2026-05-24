@@ -39,6 +39,7 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
       statementCount: null,
       jsonSuccess: false,
       fallbackUsed: false,
+      fallbackReason: "",
       skippedReason: "Cloudflare AI binding is not configured.",
       contentQualityNote: "Skipped because this deployed environment has no AI binding.",
     };
@@ -63,6 +64,7 @@ async function runProviderDiagnostic({ provider, mode, sessionRoster, env }) {
       statementCount: null,
       jsonSuccess: false,
       fallbackUsed: false,
+      fallbackReason: "",
       errorType: classifyError(error),
       contentQualityNote: "Provider did not return a normalized diagnostic phase.",
     };
@@ -87,6 +89,8 @@ async function generateProviderPhase({ provider, mode, sessionRoster, env, start
       OPENAI_MODEL: env?.OPENAI_MODEL || "",
       PDC_CLOUDFLARE_MODEL: env?.PDC_CLOUDFLARE_MODEL || "",
       PDC_DIALOGUE_FALLBACK_PROVIDER: "placeholder",
+      PDC_LATENCY_DIAGNOSTIC: "true",
+      PDC_DIAGNOSTIC_PHASE_MAX_OUTPUT_TOKENS: "3000",
       AI: provider === "cloudflare" ? env?.AI : undefined,
     },
   });
@@ -111,6 +115,13 @@ async function generateProviderPhase({ provider, mode, sessionRoster, env, start
     fallbackUsed,
     fallbackReason,
     errorType,
+    openAiResponseStatus: diagnostics.openAiResponseStatus || "",
+    openAiIncompleteReason: diagnostics.openAiIncompleteReason || "",
+    openAiOutputTextLength: positiveNumberOrNull(diagnostics.openAiOutputTextLength),
+    openAiRawTextFirst200: diagnostics.openAiRawTextFirst200 || "",
+    schemaName: diagnostics.schemaName || result.schemaName || "",
+    strict: diagnostics.strict === true || result.strict === true,
+    phaseMaxOutputTokens: positiveNumberOrNull(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens),
     contentQualityNote: buildContentQualityNote({ result, dialogue, diagnostics, sessionRoster }),
   };
 }

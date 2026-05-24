@@ -1976,3 +1976,9 @@ Push status:
 - Set skipped Cloudflare rows to `actualProvider: "skipped"` and catch/error rows to `actualProvider: "error"` while keeping `provider` equal to `requestedProvider` for backward compatibility.
 - Tightened `providerSuccess` so it requires `actualProvider === requestedProvider`, no fallback, JSON success, and no error type.
 - Preserved default PDC behavior, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC start/continue flow.
+
+## 2026-05-24 - Debug OpenAI PDC latency diagnostic failures
+- Kept `/api/pdc/latency-diagnostic` on the same OpenAI Responses API strict `text.format` JSON schema path as normal PDC phase generation: schema `pdc_phase_dialogue`, `strict: true`, `store: false`, and the existing model resolver.
+- Added diagnostic-only OpenAI failure metadata for founder latency rows: response status, incomplete reason, output text length, safe first 200 output characters, schema name, strict flag, prompt char length, and phase max output tokens.
+- Raised only the latency diagnostic OpenAI first phase token budget to 3000 via an opt-in diagnostic env flag; normal PDC phase, retry budget, model, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and start/continue UI behavior were not changed.
+- Cloudflare latency rows may still fall back to placeholder when Workers AI returns invalid JSON; the diagnostic keeps that clearly labeled instead of treating it as provider success.
