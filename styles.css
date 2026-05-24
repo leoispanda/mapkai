@@ -492,19 +492,15 @@ body:not(.founder-mode) .founder-public-entry {
   min-width: 0;
 }
 
-.pdc-roster-item.has-profile {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-}
-
-.pdc-roster-item.has-profile > .pdc-roster-row,
-.pdc-roster-item.has-profile > .pdc-profile-inline {
+.pdc-roster-profile-row {
+  display: block;
   width: 100%;
   min-width: 0;
   grid-column: 1 / -1;
+}
+
+.pdc-roster-profile-row .pdc-profile-panel {
+  margin-top: 0;
 }
 
 .pdc-roster-row {
@@ -2818,10 +2814,6 @@ canvas {
 
   .pdc-roster-panel {
     order: 2;
-  }
-
-  .pdc-roster-item.has-profile {
-    grid-template-columns: 1fr;
   }
 
   .pdc-roster-list,

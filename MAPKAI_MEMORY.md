@@ -2049,3 +2049,9 @@ Push status:
 - Added a scoped CSS override for `.pdc-roster-item.has-profile` so the selected member wrapper is always a vertical flex stack, never a desktop two-column grid/flex row.
 - Forced both the selected roster card and `.pdc-profile-inline` to span 100% of the Council Members column with `grid-column: 1 / -1`, preventing old desktop grid rules from placing the profile beside the card.
 - Synced `styles.css` and `public/styles.css`; no render path, PDC logic, provider, schema, model, D1/pass lifecycle, observer behavior, voting, prompts, final recap, or Perspective Trail data logic changed.
+
+## 2026-05-24 - Move selected PDC profile into separate roster row
+- Changed the selected member profile DOM so it is no longer a child of the selected member card wrapper.
+- `renderPdcRosterRow` now returns the normal full-width card item first, followed by a separate `.pdc-roster-profile-row` only when that member is selected.
+- Removed the obsolete `.has-profile` CSS path and added full-width styling for `.pdc-roster-profile-row`, preventing any desktop rule from placing the profile beside the selected card.
+- Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, provider, schema, model, D1/pass lifecycle, observer behavior, voting, prompts, final recap, or Perspective Trail data logic changed.

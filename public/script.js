@@ -4369,7 +4369,7 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
   const isSelected = pdcState.selectedPersonaId === persona.id;
   const isSpeaking = activeSpeakerId === persona.id || isWarmupThinking;
   return `
-    <div class="pdc-roster-item ${isSelected && selectedPersona ? "has-profile" : ""}">
+    <div class="pdc-roster-item">
       <button class="pdc-roster-row ${isObserver ? "is-observer" : ""} ${isWarmupThinking ? "is-thinking" : ""} ${isSpeaking ? "is-speaking" : ""} ${isSelected ? "is-selected" : ""}" type="button" data-pdc-persona="${escapeHtml(persona.id)}" aria-pressed="${isSelected}">
         <span class="pdc-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
         <span class="pdc-roster-copy">
@@ -4378,8 +4378,8 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
           <em>${escapeHtml(persona.role || "Council Member")}</em>
         </span>
       </button>
-      ${isSelected && selectedPersona ? renderPdcPersonaProfile(selectedPersona) : ""}
-    </div>`;
+    </div>
+    ${isSelected && selectedPersona ? `<div class="pdc-roster-profile-row">${renderPdcPersonaProfile(selectedPersona)}</div>` : ""}`;
 }
 
 function renderPdcPlaybackStatus(round, playback, thinkingLine) {
