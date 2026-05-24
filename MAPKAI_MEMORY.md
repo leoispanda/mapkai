@@ -2099,3 +2099,12 @@ Push status:
 - Browser verification confirmed `/pdc-pilot?founderPreview=1` can start the PDC experience, show the Council Room, reveal all speaker lines, Stop & Summarize, render Council Recap, and show the Founder-only Advanced Final Audit panel.
 - With `PDC_ADVANCED_AUDIT_ENABLED` unset locally, clicking `Run Advanced Final Audit` correctly returns `Advanced Final Audit is not enabled.`
 - No deployed Pages Function logic, PDC provider logic, strict schemas, D1/pass lifecycle, frontend render paths, or public navigation were changed.
+
+## 2026-05-24 - Upgrade Advanced Final Audit to adaptive final decision layer
+- Replaced the Advanced Final Audit schema's fixed decision enum/recommended-version shape with open text `adaptiveDiagnosis`, `biasAudit`, `improvedFinalJudgment`, `adaptiveFinalPackage.sections[]`, and `finalDisplay`.
+- Updated the runtime prompt to choose the right final answer shape for each decision and convert the compressed council context into the most useful decision package, without long examples, acceptance scenarios, full transcripts, full profiles, or full Perspective Trails.
+- Added context compression diagnostics (`advancedAuditContextCompressed`) and adaptive diagnostics for decision context, decision nature, recommended output shape, recap weakness, and adaptive package inclusion.
+- Enforced cost-control guardrails: `PDC_ADVANCED_AUDIT_AUTO_RUN` defaults false, the API requires a manual Founder trigger, the UI disables in-flight requests, and one successful audit result is reused per `pdcSessionId` instead of calling again.
+- Updated Founder UI to display Decision Context, Decision Nature, User Real Need, Main Weakness of Council Recap, Recommended Output Shape, Why This Shape Fits, Bias & Stage Fit, Improved Final Judgment, Adaptive Final Package sections, and Recommended Next Step.
+- Fixed the final reintroduced perspective guard so a re-enabled perspective must come from observer/archived roster and must not still be active; debug now reports selection source, active-member blocking, invalid candidate reason, and skipped reason.
+- Synced root/public scripts, root/public styles, and inline production HTML; no normal OpenAI provider routing, strict Responses transport, global `OPENAI_MODEL`, D1/pass lifecycle, public navigation, member names, or normal Council Recap behavior was intentionally changed.

@@ -1124,10 +1124,33 @@ body:not(.founder-mode) .founder-public-entry {
   padding-top: 12px;
 }
 
+.pdc-advanced-audit-grid .pdc-advanced-package {
+  grid-column: 1 / -1;
+}
+
 .pdc-advanced-audit-grid h3 {
   margin: 0 0 6px;
   color: var(--green-dark);
   font-size: 0.98rem;
+}
+
+.pdc-adaptive-package-sections {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.pdc-adaptive-package-sections section {
+  border: 1px solid rgba(15, 107, 87, 0.12);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.pdc-adaptive-package-sections h4 {
+  margin: 0 0 6px;
+  color: var(--green-dark);
+  font-size: 0.95rem;
 }
 
 .pdc-advanced-audit-grid p,

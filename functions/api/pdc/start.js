@@ -122,17 +122,23 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
 async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview }) {
   const advancedAuditEnabled = parseEnvBoolean(env.PDC_ADVANCED_AUDIT_ENABLED, false);
   const advancedAuditFounderOnly = parseEnvBoolean(env.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true);
+  const advancedAuditAutoRun = parseEnvBoolean(env.PDC_ADVANCED_AUDIT_AUTO_RUN, false);
+  const advancedAuditManualTrigger = body.advanced_audit_manual_trigger === true;
+  const advancedAuditSessionId = cleanText(body.pdc_session_id, 120);
   if (!advancedAuditEnabled) {
-    return json({ ok: false, message: "Advanced Final Audit is not enabled.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "disabled") }, 403);
+    return json({ ok: false, message: "Advanced Final Audit is not enabled.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "disabled", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 403);
+  }
+  if (!advancedAuditAutoRun && !advancedAuditManualTrigger) {
+    return json({ ok: false, message: "Advanced Final Audit requires a manual Founder trigger.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "manual_trigger_required", false, { manualTrigger: false, sessionId: advancedAuditSessionId }) }, 403);
   }
   if (advancedAuditFounderOnly && !isFounderPreview) {
-    return json({ ok: false, message: "Advanced Final Audit is Founder-only.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "founder_only") }, 403);
+    return json({ ok: false, message: "Advanced Final Audit is Founder-only.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "founder_only", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 403);
   }
   if (!isFounderRequest(request)) {
-    return json({ ok: false, message: "Advanced Final Audit requires Founder Mode.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_founder_header") }, 403);
+    return json({ ok: false, message: "Advanced Final Audit requires Founder Mode.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_founder_header", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 403);
   }
   if (!env.OPENAI_API_KEY) {
-    return json({ ok: false, message: "Advanced Final Audit could not run.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_OPENAI_API_KEY") }, 500);
+    return json({ ok: false, message: "Advanced Final Audit could not run.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_OPENAI_API_KEY", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 500);
   }
   try {
     const mode = pdcModes[modeId];
@@ -155,6 +161,8 @@ async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuesti
       finalReintroducedPerspective: sanitizeObject(body.final_reintroduced_perspective, 1500),
       phaseDiagnostics: sanitizeObject(body.phase_diagnostics, 1600),
       finalDiagnostics: sanitizeObject(body.final_diagnostics, 1600),
+      pdcSessionId: advancedAuditSessionId,
+      manualTrigger: advancedAuditManualTrigger,
       env,
     });
     return json({ ok: true, ...result });
@@ -308,11 +316,17 @@ function parseEnvBoolean(value, defaultValue = false) {
   return ["1", "true", "yes", "on"].includes(String(value).trim().toLowerCase());
 }
 
-function buildAdvancedAuditDisabledDiagnostics(env, reason, jsonParseFailed = false) {
+function buildAdvancedAuditDisabledDiagnostics(env, reason, jsonParseFailed = false, options = {}) {
   const model = String(env?.PDC_ADVANCED_AUDIT_MODEL || "gpt-5.5").trim() || "gpt-5.5";
   return {
     advancedAuditEnabled: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_ENABLED, false),
     advancedAuditFounderOnly: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true),
+    advancedAuditAutoRun: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_AUTO_RUN, false),
+    advancedAuditManualTrigger: options.manualTrigger === true,
+    advancedAuditAlreadyExists: false,
+    advancedAuditDuplicateCallBlocked: false,
+    advancedAuditSessionId: cleanText(options.sessionId, 120),
+    advancedAuditInFlight: false,
     advancedAuditProvider: "openai",
     advancedAuditRequestedModel: model,
     advancedAuditActualModel: model,
@@ -325,6 +339,8 @@ function buildAdvancedAuditDisabledDiagnostics(env, reason, jsonParseFailed = fa
     advancedAuditPromptCharLength: 0,
     advancedAuditOutputCharLength: 0,
     advancedAuditCostOptimizationApplied: true,
+    advancedAuditContextCompressed: false,
+    advancedAuditAdaptivePackageIncluded: false,
   };
 }
 

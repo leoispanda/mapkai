@@ -540,8 +540,22 @@ const pdcFinalRecapSchema = {
 const pdcAdvancedFinalAuditSchema = {
   type: "object",
   additionalProperties: false,
-  required: ["biasAudit", "improvedFinalJudgment", "recommendedVersion", "finalDisplay"],
+  required: ["adaptiveDiagnosis", "biasAudit", "improvedFinalJudgment", "adaptiveFinalPackage", "finalDisplay"],
   properties: {
+    adaptiveDiagnosis: {
+      type: "object",
+      additionalProperties: false,
+      required: ["decisionContext", "decisionNature", "userRealNeed", "recapMainWeakness", "recapSecondaryWeaknesses", "recommendedOutputShape", "whyThisShapeFits"],
+      properties: {
+        decisionContext: { type: "string" },
+        decisionNature: { type: "string" },
+        userRealNeed: { type: "string" },
+        recapMainWeakness: { type: "string" },
+        recapSecondaryWeaknesses: { type: "array", items: { type: "string" } },
+        recommendedOutputShape: { type: "string" },
+        whyThisShapeFits: { type: "string" },
+      },
+    },
     biasAudit: {
       type: "object",
       additionalProperties: false,
@@ -558,9 +572,8 @@ const pdcAdvancedFinalAuditSchema = {
     improvedFinalJudgment: {
       type: "object",
       additionalProperties: false,
-      required: ["decision", "oneSentenceConclusion", "why", "bestFirstStep", "successSignals", "stopSignals", "whatNotToDo"],
+      required: ["oneSentenceConclusion", "why", "bestFirstStep", "successSignals", "stopSignals", "whatNotToDo"],
       properties: {
-        decision: { type: "string", enum: ["do", "do_not_do", "test_first", "pause", "conditional"] },
         oneSentenceConclusion: { type: "string" },
         why: { type: "string" },
         bestFirstStep: { type: "string" },
@@ -569,14 +582,25 @@ const pdcAdvancedFinalAuditSchema = {
         whatNotToDo: { type: "array", items: { type: "string" } },
       },
     },
-    recommendedVersion: {
+    adaptiveFinalPackage: {
       type: "object",
       additionalProperties: false,
-      required: ["lightweightNow", "addLaterIfTraction", "onlyForExternalPartnership"],
+      required: ["title", "sections"],
       properties: {
-        lightweightNow: { type: "array", items: { type: "string" } },
-        addLaterIfTraction: { type: "array", items: { type: "string" } },
-        onlyForExternalPartnership: { type: "array", items: { type: "string" } },
+        title: { type: "string" },
+        sections: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: ["heading", "content", "bullets"],
+            properties: {
+              heading: { type: "string" },
+              content: { type: "string" },
+              bullets: { type: "array", items: { type: "string" } },
+            },
+          },
+        },
       },
     },
     finalDisplay: {
@@ -886,13 +910,19 @@ function getFinalRecapFallbackReason(message) {
   return "Cloudflare final recap unavailable.";
 }
 
-export async function generatePdcAdvancedFinalAudit({ userQuestion, modeId, modeLabel, finalRecap = null, phases = [], latestPhase = null, meetingMemory = null, voteSummary = null, activeRoster = [], observerRoster = [], finalReintroducedPerspective = null, phaseDiagnostics = null, finalDiagnostics = null, env }) {
+export async function generatePdcAdvancedFinalAudit({ userQuestion, modeId, modeLabel, finalRecap = null, phases = [], latestPhase = null, meetingMemory = null, voteSummary = null, activeRoster = [], observerRoster = [], finalReintroducedPerspective = null, phaseDiagnostics = null, finalDiagnostics = null, pdcSessionId = "", manualTrigger = true, env }) {
   const model = getAdvancedAuditModel(env);
-  const auditPackage = buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics });
-  const prompt = buildAdvancedAuditPrompt(auditPackage);
+  const auditContext = buildAdvancedAuditPromptContext({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics });
+  const prompt = buildAdvancedAuditPrompt(auditContext.auditPackage);
   const contentDiagnostics = {
     advancedAuditEnabled: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_ENABLED, true),
     advancedAuditFounderOnly: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_FOUNDER_ONLY, true),
+    advancedAuditAutoRun: parseEnvBoolean(env?.PDC_ADVANCED_AUDIT_AUTO_RUN, false),
+    advancedAuditManualTrigger: manualTrigger === true,
+    advancedAuditAlreadyExists: false,
+    advancedAuditDuplicateCallBlocked: false,
+    advancedAuditSessionId: normalizeShortText(pdcSessionId, 120),
+    advancedAuditInFlight: true,
     advancedAuditProvider: "openai",
     advancedAuditRequestedModel: model,
     advancedAuditActualModel: model,
@@ -905,12 +935,13 @@ export async function generatePdcAdvancedFinalAudit({ userQuestion, modeId, mode
     advancedAuditPromptCharLength: prompt.length,
     advancedAuditOutputCharLength: 0,
     advancedAuditCostOptimizationApplied: true,
+    advancedAuditContextCompressed: auditContext.contextCompressed,
   };
   const startedAt = Date.now();
   const parsed = await callOpenAiJsonWithRetry({
     env,
     model,
-    instructions: "You are an objective PDC Advanced Final Audit reviewer. Review the existing final recap for decision quality, stage fit, bias, over-complexity, false precision, and missing simpler paths. Return structured JSON only. Do not replay the council, invent votes, invent members, overwrite meeting memory, or use forbidden game-like terminology.",
+    instructions: "You are an adaptive final decision layer for MapKAI PDC. Choose the right final answer shape for this specific decision, then convert the council context into the most useful decision package. Return structured JSON only. Do not invent votes, members, or meeting history.",
     prompt,
     schemaName: "pdc_advanced_final_audit",
     schema: pdcAdvancedFinalAuditSchema,
@@ -922,6 +953,7 @@ export async function generatePdcAdvancedFinalAudit({ userQuestion, modeId, mode
   });
   contentDiagnostics.advancedAuditDurationMs = Date.now() - startedAt;
   contentDiagnostics.advancedAuditOutputCharLength = contentDiagnostics.outputCharLength || 0;
+  contentDiagnostics.advancedAuditInFlight = false;
   return normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics });
 }
 
@@ -930,31 +962,56 @@ function parseEnvBoolean(value, defaultValue = false) {
   return ["1", "true", "yes", "on"].includes(String(value).trim().toLowerCase());
 }
 
-function buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics }) {
+function buildAdvancedAuditPromptContext(params) {
+  let auditPackage = buildAdvancedAuditPackage(params, {
+    phaseLimit: 10,
+    phaseSummaryLength: 260,
+    meetingMemoryLength: 1200,
+    latestPhaseLength: 1200,
+    voteSummaryLength: 1000,
+    reintroducedLength: 800,
+  });
+  let contextCompressed = false;
+  if (JSON.stringify(auditPackage).length > 12000) {
+    contextCompressed = true;
+    auditPackage = buildAdvancedAuditPackage(params, {
+      phaseLimit: 6,
+      phaseSummaryLength: 180,
+      meetingMemoryLength: 600,
+      latestPhaseLength: 700,
+      voteSummaryLength: 700,
+      reintroducedLength: 500,
+    });
+  }
+  return { auditPackage, contextCompressed };
+}
+
+function buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap, phases, latestPhase, meetingMemory, voteSummary, activeRoster, observerRoster, finalReintroducedPerspective, phaseDiagnostics, finalDiagnostics }, limits = {}) {
+  const phaseLimit = limits.phaseLimit || 10;
+  const phaseSummaryLength = limits.phaseSummaryLength || 260;
   const safePhases = (Array.isArray(phases) ? phases : []).slice(-10).map((phase) => ({
     label: normalizeShortText(phase?.label || phase?.phaseLabel, 100),
     roundNumber: Number(phase?.roundNumber) || 0,
     phaseType: normalizeShortText(phase?.phaseType, 8),
-    summary: normalizeShortText(phase?.blueWhaleSummary?.text, 260),
+    summary: normalizeShortText(phase?.blueWhaleSummary?.text, phaseSummaryLength),
     voteSummary: phase?.voteSummary ? {
       leadingContributor: phase.voteSummary.leadingContributor || null,
       mostPressuredPerspective: phase.voteSummary.mostPressuredPerspective || null,
     } : null,
     archivedSpeakerId: normalizeShortText(phase?.rosterUpdate?.archivedSpeakerId, 80),
-  }));
+  })).slice(-phaseLimit);
   return {
     originalDecisionQuestion: normalizeShortText(userQuestion, 1200),
     modeId: normalizeShortText(modeId, 40),
     modeLabel: normalizeShortText(modeLabel, 80),
-    inferredProductStage: inferAdvancedAuditStage(userQuestion, finalRecap),
-    miniFinalRecap: compactAdvancedAuditRecap(finalRecap),
-    meetingMemory: compactAdvancedAuditObject(meetingMemory, 1200),
+    normalFinalRecap: compactAdvancedAuditRecap(finalRecap),
+    meetingMemory: compactAdvancedAuditObject(meetingMemory, limits.meetingMemoryLength || 1200),
     roundSummaries: safePhases,
-    latestPhaseSummary: compactAdvancedAuditObject(latestPhase, 1200),
-    voteSummary: compactAdvancedAuditObject(voteSummary, 1000),
+    latestPhaseSummary: compactAdvancedAuditObject(latestPhase, limits.latestPhaseLength || 1200),
+    voteSummary: compactAdvancedAuditObject(voteSummary, limits.voteSummaryLength || 1000),
     activeRoster: summarizeAdvancedAuditRoster(activeRoster),
     observerRoster: buildArchivedObserverSummaries(observerRoster),
-    reintroducedPerspective: compactAdvancedAuditObject(finalReintroducedPerspective, 800),
+    reintroducedPerspective: compactAdvancedAuditObject(finalReintroducedPerspective, limits.reintroducedLength || 800),
     debugMetadata: {
       phaseModel: normalizeShortText(phaseDiagnostics?.modelName || phaseDiagnostics?.actualModel || "", 80),
       finalRecapModel: normalizeShortText(finalDiagnostics?.modelName || finalDiagnostics?.actualModel || "", 80),
@@ -966,25 +1023,17 @@ function buildAdvancedAuditPackage({ userQuestion, modeId, modeLabel, finalRecap
 }
 
 function buildAdvancedAuditPrompt(auditPackage) {
-  return `Review this existing PDC final recap as an advanced final audit.
-Do not replace the normal recap. Provide a higher-level objective review.
-Directly answer the original decision question.
-Detect whether the final recap is too heavy, too light, too abstract, or stage-mismatched.
-Detect over-governance, over-complexity, and false precision such as CAC/LTV/ARPU when the project is too early.
-Separate what to do now from what to add later.
-Move MOU, CAC, LTV, formal complaint thresholds, and arbitration into later or external partnership unless current context truly requires external partnership.
-Do not replay the council. Do not invent votes, members, or factual meeting memory.
-Do not output forbidden game-like words.
+  return `Advanced Final Audit task:
+Your job is not to make the recap longer. Your job is to choose the right final answer shape for this decision and convert the council discussion into the most useful decision package for the user.
+
+Openly understand the decision context, the nature of the decision, what the user really needs, and the main weakness of the normal Council Recap.
+Then choose the most useful final answer shape for this specific decision. Do not force CEO, enterprise governance, product experiment, personal coaching, research, or communication framing unless the context actually needs it.
+If the recap is over-governed, simplify it. If it is too soft, add execution discipline. If it is abstract, add concrete first steps. If it misses human impact, add stakeholder consequences. If it lacks signals, add light stage-appropriate success and stop signals. If it contains false precision, remove or downgrade those metrics. If communication matters, add a communication layer.
+
+Do not merely repeat or critique the recap. Do not invent votes, members, facts, or meeting history. Do not send back forbidden game-like wording.
 
 Compressed audit package:
-${JSON.stringify(auditPackage).slice(0, 9000)}`;
-}
-
-function inferAdvancedAuditStage(userQuestion, finalRecap) {
-  const text = `${userQuestion || ""} ${JSON.stringify(finalRecap || {})}`.toLowerCase();
-  if (/没人关注|new website|新网站|引流|推广|traction|early|mvp|prototype|没人/.test(text)) return "early_attention_or_traction_test";
-  if (/partnership|external|mou|合作|合同/.test(text)) return "partnership_or_external_validation";
-  return "unspecified";
+${JSON.stringify(auditPackage).slice(0, 12500)}`;
 }
 
 function compactAdvancedAuditRecap(finalRecap) {
@@ -1019,10 +1068,26 @@ function summarizeAdvancedAuditRoster(roster) {
 }
 
 function normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics }) {
+  const diagnosis = parsed?.adaptiveDiagnosis || {};
   const biasAudit = parsed?.biasAudit || {};
   const judgment = parsed?.improvedFinalJudgment || {};
-  const version = parsed?.recommendedVersion || {};
+  const adaptivePackage = parsed?.adaptiveFinalPackage || {};
   const display = parsed?.finalDisplay || {};
+  const packageSections = Array.isArray(adaptivePackage.sections) ? adaptivePackage.sections : [];
+  const normalizedDiagnosis = {
+    decisionContext: normalizeRecapText(diagnosis.decisionContext, 700),
+    decisionNature: normalizeRecapText(diagnosis.decisionNature, 500),
+    userRealNeed: normalizeRecapText(diagnosis.userRealNeed, 700),
+    recapMainWeakness: normalizeRecapText(diagnosis.recapMainWeakness, 700),
+    recapSecondaryWeaknesses: normalizeRecapList(diagnosis.recapSecondaryWeaknesses, 6),
+    recommendedOutputShape: normalizeRecapText(diagnosis.recommendedOutputShape, 500),
+    whyThisShapeFits: normalizeRecapText(diagnosis.whyThisShapeFits, 700),
+  };
+  contentDiagnostics.advancedAuditDecisionContext = normalizedDiagnosis.decisionContext;
+  contentDiagnostics.advancedAuditDecisionNature = normalizedDiagnosis.decisionNature;
+  contentDiagnostics.advancedAuditRecommendedOutputShape = normalizedDiagnosis.recommendedOutputShape;
+  contentDiagnostics.advancedAuditRecapMainWeakness = normalizedDiagnosis.recapMainWeakness;
+  contentDiagnostics.advancedAuditAdaptivePackageIncluded = packageSections.length > 0;
   return {
     ok: true,
     provider: "openai",
@@ -1038,6 +1103,7 @@ function normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics }
     strict: true,
     contentDiagnostics,
     audit: {
+      adaptiveDiagnosis: normalizedDiagnosis,
       biasAudit: {
         mainBias: normalizeRecapText(biasAudit.mainBias, 500),
         secondaryBiases: normalizeRecapList(biasAudit.secondaryBiases, 6),
@@ -1047,7 +1113,6 @@ function normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics }
         falsePrecisionRisks: normalizeRecapList(biasAudit.falsePrecisionRisks, 6),
       },
       improvedFinalJudgment: {
-        decision: ["do", "do_not_do", "test_first", "pause", "conditional"].includes(judgment.decision) ? judgment.decision : "conditional",
         oneSentenceConclusion: normalizeRecapText(judgment.oneSentenceConclusion, 500),
         why: normalizeRecapText(judgment.why, 700),
         bestFirstStep: normalizeRecapText(judgment.bestFirstStep, 500),
@@ -1055,10 +1120,13 @@ function normalizeAdvancedFinalAuditResult(parsed, { model, contentDiagnostics }
         stopSignals: normalizeRecapList(judgment.stopSignals, 6),
         whatNotToDo: normalizeRecapList(judgment.whatNotToDo, 6),
       },
-      recommendedVersion: {
-        lightweightNow: normalizeRecapList(version.lightweightNow, 8),
-        addLaterIfTraction: normalizeRecapList(version.addLaterIfTraction, 8),
-        onlyForExternalPartnership: normalizeRecapList(version.onlyForExternalPartnership, 8),
+      adaptiveFinalPackage: {
+        title: normalizeRecapText(adaptivePackage.title, 180),
+        sections: packageSections.slice(0, 8).map((section) => ({
+          heading: normalizeRecapText(section?.heading, 140),
+          content: normalizeRecapText(section?.content, 900),
+          bullets: normalizeRecapList(section?.bullets, 8),
+        })).filter((section) => section.heading || section.content || section.bullets.length),
       },
       finalDisplay: {
         title: normalizeRecapText(display.title, 160),
