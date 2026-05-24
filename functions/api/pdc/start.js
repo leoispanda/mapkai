@@ -189,7 +189,10 @@ function mergeObserverRosterContext(observerRoster, rawContext) {
         cleanText(item?.speakerId, 80),
         {
           archivedReason: cleanText(item?.archivedReason, 160),
+          archivedStance: cleanText(item?.archivedStance, 180),
           lastContribution: cleanText(item?.lastContribution, 160),
+          archivedAtPhaseLabel: cleanText(item?.archivedAtPhaseLabel, 120),
+          archivedAtRoundNumber: Number(item?.archivedAtRoundNumber) || 0,
         },
       ])
       .filter(([speakerId]) => speakerId),
@@ -232,6 +235,18 @@ function sanitizeMeetingMemory(value) {
           latestStatementSummary: cleanText(item?.latestStatementSummary, 160),
           latestTargetSummary: cleanText(item?.latestTargetSummary, 140),
           unresolvedTension: cleanText(item?.unresolvedTension, 140),
+        })).filter((item) => item.speakerId).slice(0, 12)
+      : [],
+    archivedObserverSummaries: Array.isArray(value.archivedObserverSummaries)
+      ? value.archivedObserverSummaries.map((item) => ({
+          speakerId: cleanText(item?.speakerId, 80),
+          name: cleanText(item?.name, 100),
+          role: cleanText(item?.role, 100),
+          archivedStance: cleanText(item?.archivedStance, 180),
+          lastContribution: cleanText(item?.lastContribution, 180),
+          reasonArchived: cleanText(item?.reasonArchived, 160),
+          archivedAtPhaseLabel: cleanText(item?.archivedAtPhaseLabel, 120),
+          archivedAtRoundNumber: Number(item?.archivedAtRoundNumber) || 0,
         })).filter((item) => item.speakerId).slice(0, 12)
       : [],
   };

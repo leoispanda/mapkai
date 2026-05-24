@@ -1494,8 +1494,8 @@ function buildOpenAiDialoguePrompt({ modeLabel, sessionRoster, observerRoster = 
   const languageRule = containsCjk(`${userQuestion} ${userIntervention}`) ? "Output Chinese." : "Output English.";
   const isOpeningPhase = Number(roundNumber) === 1 && String(phaseType).toUpperCase() === "A";
   const phaseRule = String(phaseType).toUpperCase() === "B"
-    ? "B phase: each statement is a challenge, response, risk, opportunity, or reflection on another named active member when useful. Include targetSpeakerId only when the statement directly addresses that active member. Do not generate a final decision."
-    : "A phase: each statement is a concrete position, risk, opportunity, or reflection on the user's decision. No generic role line and no final decision.";
+    ? "B phase: each statement is a challenge, defense, rebuttal, pressure test, risk, opportunity, or reflection on another named active member when useful. At least 70% of statements should target a valid active member. Do not generate a final decision."
+    : "A phase: each statement is a concrete position update on the user's decision. Do not vote. Do not archive. targetSpeakerId should usually be null unless a concise agreement/disagreement is essential.";
   return `PDC live council phase. Use only the compact context below.
 ${languageRule}
 
@@ -1540,7 +1540,7 @@ Instructions:
 - ${phaseRule}
 - ${isOpeningPhase ? "Round 1A may introduce mostly independent initial positions." : "This is not Round 1A: each member must answer what they are adding or changing compared with the previous phase."}
 - ${isOpeningPhase ? "Do not force cross-member collision yet." : "Each member must consider their compact previous stance, at least one other active member's previous view, and the current Blue Whale summary."}
-- ${isOpeningPhase ? "targetSpeakerId may be null for opening positions." : "At least half of visibleStatements must include a valid targetSpeakerId from the active roster."}
+- ${String(phaseType).toUpperCase() === "B" ? "At least 70% of visibleStatements must include a valid targetSpeakerId from the active roster." : "A phase targetSpeakerId should usually be null; this phase is for current stance, changed view, and evidence or condition needed next."}
 - ${isOpeningPhase ? "Statements can establish roles and first judgments." : "Members should challenge, respond, build, clarify, revise, narrow, or add a concrete metric, threshold, experiment, decision rule, or unresolved tension."}
 - ${isOpeningPhase ? "stanceShift/historyNote may be short setup notes." : "memberHistoryPatch.stanceShift or historyNote should briefly state what changed from that member's previous view, without duplicating the statement text."}
 - Later phases must not repeat the same advice in different words. Use compact member summaries to avoid repeating each member's own previous warning, condition, or recommendation.
@@ -1623,6 +1623,7 @@ function resolveOpenAiPhaseMaxOutputTokens(env = {}) {
 function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRoster, meetingMemory, maxOutputTokens = openAiPhaseMaxOutputTokens }) {
   const activeRosterPromptCount = Array.isArray(sessionRoster) ? sessionRoster.length : 0;
   const observerRosterCount = Array.isArray(observerRoster) ? observerRoster.length : 0;
+  const archivedSummaries = buildArchivedObserverSummaries(observerRoster);
   const estimatedPromptTokenReduction = estimateObserverPromptTokenReduction(observerRoster);
   return {
     promptCharLength: prompt.length,
@@ -1633,13 +1634,20 @@ function createOpenAiPhasePromptDiagnostics({ prompt, sessionRoster, observerRos
     activeRosterPromptCount,
     observerRosterPromptCount: 0,
     observerProfilesOmittedFromPrompt: observerRosterCount > 0,
-    archivedSummaryIncluded: false,
+    archivedSummaryIncluded: archivedSummaries.length > 0,
+    frozenObserverCount: archivedSummaries.length,
+    observerHistoryUpdateBlockedCount: observerRosterCount,
+    observerCurrentStanceUpdateBlockedCount: observerRosterCount,
+    archivedObserverSummaryCharLength: JSON.stringify(archivedSummaries).length,
+    activeMemberSummaryCount: buildCompactMemberStateSummaries(meetingMemory, sessionRoster).length,
+    observerFullTrailIncludedInPrompt: false,
     estimatedPromptTokenReduction,
     costOptimizationApplied: observerRosterCount > 0,
     meetingMemoryItemCount: buildCompactMeetingMemoryItems(meetingMemory, 5).length,
     phaseMaxOutputTokens: maxOutputTokens,
     retryMaxOutputTokens: openAiPhaseRetryMaxOutputTokens,
     allowedSpeakerIdsForPhase: Array.isArray(sessionRoster) ? sessionRoster.map((persona) => persona.id).filter(Boolean) : [],
+    maxNormalRound: 5,
     openAiDurationMs: 0,
     retryDurationMs: 0,
     totalPhaseDurationMs: 0,
@@ -1946,7 +1954,7 @@ function normalizeOpenAiStructuredPhaseDialogue({ modeId, sessionRoster, parsed,
   };
   const validTargetSpeakerCount = dialogueWithVotes.filter((line) => line.targetSpeakerId && byId.has(line.targetSpeakerId)).length;
   const minimumTargetSpeakerCount = shouldRequireCrossMemberTargets(roundNumber, normalizedPhaseType)
-    ? Math.ceil(sessionRoster.length / 2)
+    ? Math.ceil(sessionRoster.length * 0.7)
     : 0;
   const crossMemberTargetCountBelowMinimum = minimumTargetSpeakerCount > 0 && validTargetSpeakerCount < minimumTargetSpeakerCount;
 
@@ -2056,7 +2064,7 @@ function applyMemberHistoryVotes(dialogue, memberHistoryPatch, byId) {
 }
 
 function shouldRequireCrossMemberTargets(roundNumber, phaseType) {
-  return !(Number(roundNumber) === 1 && String(phaseType).toUpperCase() === "A");
+  return String(phaseType).toUpperCase() === "B";
 }
 
 function normalizeStructuredMemberHistory(memberHistoryPatch, sessionRoster) {
@@ -2538,7 +2546,7 @@ Active roster:
 ${activeRoster.map((p) => `${p.id}: ${p.englishName || p.name} — ${p.role}`).join("\n")}
 
 Archived perspective summaries:
-${archivedSummaries.map((p) => `${p.speakerId}: ${p.name} — ${p.role}. Archived because: ${p.reasonArchived || "not specified"}. Archived view: ${p.archivedView || "not specified"}.`).join("\n") || "None"}
+${archivedSummaries.map((p) => `${p.speakerId}: ${p.name} — ${p.role}. Archived phase: ${p.archivedPhase || "not specified"}. Archived because: ${p.reasonArchived || "not specified"}. Archived stance: ${p.archivedView || "not specified"}. Last contribution: ${p.lastContribution || "not specified"}.`).join("\n") || "None"}
 
 User guidance history:
 ${(userInterventions || []).filter(Boolean).slice(-5).join("\n") || "None"}
@@ -2575,7 +2583,9 @@ function buildArchivedObserverSummaries(observerRoster) {
     name: persona.englishName || persona.name || "",
     role: normalizeShortText(persona.role || "", 80),
     reasonArchived: normalizeShortText(persona.archivedReason || persona.reason || "", 120),
-    archivedView: normalizeShortText(persona.lastContribution || persona.archivedView || "", 160),
+    archivedView: normalizeShortText(persona.archivedStance || persona.lastContribution || persona.archivedView || "", 160),
+    lastContribution: normalizeShortText(persona.lastContribution || "", 160),
+    archivedPhase: normalizeShortText(persona.archivedAtPhaseLabel || "", 120),
   })).filter((item) => item.speakerId);
 }
 

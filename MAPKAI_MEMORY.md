@@ -2055,3 +2055,12 @@ Push status:
 - `renderPdcRosterRow` now returns the normal full-width card item first, followed by a separate `.pdc-roster-profile-row` only when that member is selected.
 - Removed the obsolete `.has-profile` CSS path and added full-width styling for `.pdc-roster-profile-row`, preventing any desktop rule from placing the profile beside the selected card.
 - Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, provider, schema, model, D1/pass lifecycle, observer behavior, voting, prompts, final recap, or Perspective Trail data logic changed.
+
+## 2026-05-24 - Freeze archived observers and add final round preview
+- Added frozen archived observer state (`archivedAtPhaseLabel`, `archivedAtRoundNumber`, `archivedStance`, `archivedLastContribution`, `archivedReason`) when a B-phase roster update moves a member into Observer status.
+- Normal phase member state summaries remain active-roster only; observer context sent to backend is compact frozen summary only, never the full Perspective Trail.
+- Blocked later normal phase history/current-stance updates for archived observers while preserving their historical trail through the archival phase.
+- Added Final Round Preview after Round 4B with Most Rewarded Contributor, archived perspective options, and one optional final reintroduced archived perspective for Round 5.
+- Round 5 labels now read Final Round; after Final Round 5B the main action is Generate Council Recap, with continue-beyond-final reserved for Founder Preview.
+- Updated Founder diagnostics for frozen observer counts, blocked observer updates, archived summary size, active member summary count, final round state, rewarded contributor, reenabled observer, skipped reason, and continue-beyond-final status.
+- Synced root/public scripts, root/public styles, and inline production HTML; provider/model/D1/pass lifecycle/final recap schema were not changed.
