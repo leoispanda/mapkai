@@ -310,6 +310,8 @@ Latest PDC access-tier follow-up:
 - Founder Full Function is founder-only and uses 5.5 for all rounds.
 - Company PDC is hidden from current UI but data is preserved.
 - Default visible PDC roster uses Rex Velocity, Vera Flow, Max Build, Nina Ember, Wang Zhibai, Owen Insight, Adrian North, Mira Ethos, and Orion Zhuge / 诸葛观辰.
+- `/pdc-pilot` now opens to a chooser first. Ordinary users see Demo Mode and Standard Council cards only; the decision question form appears only after choosing Standard Council or opening a pass link, and Founder Full Function appears only in Founder Mode.
+- The frontend asset cache key was refreshed to avoid serving the older direct-question-form entry.
 
 Latest PDC room UI follow-up:
 

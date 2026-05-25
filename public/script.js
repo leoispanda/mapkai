@@ -3750,6 +3750,7 @@ function createPdcBaseState(overrides = {}) {
     valid: false,
     status: "idle",
     message: "",
+    entryView: "landing",
     selectedMode: "personal",
     question: "",
     recap: null,
@@ -3838,6 +3839,7 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     status,
     message,
     question,
+    entryView: "standard",
     recap: null,
     demoMode: false,
     demoFinalVisible: false,
@@ -4453,6 +4455,10 @@ async function initPdcPilotPage() {
   const founderPreviewRequested = params.get("founderPreview") === "1" && !pass;
   const founderPreviewAllowed = isPdcFounderPreviewAllowed(pass);
   if (pdcState.pass === pass && pdcState.founderPreview === founderPreviewAllowed && pdcState.status !== "idle") {
+    if (!pass && !founderPreviewAllowed && pdcState.status === "ready") {
+      pdcState.status = "public";
+      pdcState.entryView = "landing";
+    }
     renderPdcPilot();
     return;
   }
@@ -4465,6 +4471,7 @@ async function initPdcPilotPage() {
   if (founderPreviewAllowed) {
     pdcState.valid = true;
     pdcState.status = "ready";
+    pdcState.entryView = "standard";
     pdcState.message = "";
     renderPdcPilot();
     return;
@@ -4472,6 +4479,7 @@ async function initPdcPilotPage() {
   if (!pass && !founderPreviewRequested) {
     pdcState.valid = true;
     pdcState.status = "public";
+    pdcState.entryView = "landing";
     pdcState.message = "";
     renderPdcPilot();
     return;
@@ -4486,6 +4494,7 @@ async function initPdcPilotPage() {
       pdcState.founderPreview = true;
       pdcState.valid = true;
       pdcState.status = "ready";
+      pdcState.entryView = "standard";
       pdcState.message = "";
       renderPdcPilot();
       return;
@@ -4512,6 +4521,7 @@ async function initPdcPilotPage() {
     }
     pdcState.valid = true;
     pdcState.status = "ready";
+    pdcState.entryView = "standard";
     pdcState.message = "";
     renderPdcPilot();
   } catch (error) {
@@ -4533,7 +4543,7 @@ function renderPdcPilot() {
     root.innerHTML = pdcShellTemplate(`<p class="pdc-invalid">${escapeHtml(pdcState.message)}</p>`);
     return;
   }
-  if (pdcState.status === "public") {
+  if (pdcState.status === "public" && pdcState.entryView === "landing") {
     root.innerHTML = pdcShellTemplate(renderPdcPublicEntry());
     return;
   }
@@ -4559,20 +4569,28 @@ function renderPdcPilot() {
   }
 
   const remaining = 1200 - pdcState.question.length;
+  const isFullFunction = pdcState.founderPreview && pdcState.councilTier === "full_function";
   root.innerHTML = pdcShellTemplate(`
-    ${pdcState.founderPreview && pdcState.councilTier === "full_function" ? `
+    ${isFullFunction ? `
       <section class="pdc-entry-option">
         <p class="eyebrow">Founder Full Function / Founder 完整高质量版本</p>
         <h2>Founder Full Function</h2>
         <p>Run the full high-quality council with 5.5 for all rounds.</p>
         <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
+        <p class="trust-note">phaseModel = gpt-5.5 · finalModel = gpt-5.5</p>
       </section>` : ""}
+    ${!pdcState.pass && !pdcState.founderPreview ? `
+      <label class="pdc-question-label">
+        <span>PDC access code</span>
+        <input data-pdc-start-pass type="text" autocomplete="off" maxlength="80" placeholder="Enter access code">
+      </label>` : ""}
     <label class="pdc-question-label">
       <span>Decision question</span>
       <textarea data-pdc-question maxlength="1200" rows="7" placeholder="Write one decision question you want to examine.">${escapeHtml(pdcState.question)}</textarea>
     </label>
     <p class="pdc-count">${remaining} characters left</p>
-    <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : "Start Standard Council"}</button>
+    <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : isFullFunction ? "Start Founder Full Function" : "Start Standard Council"}</button>
+    <button class="button secondary" type="button" data-pdc-back-landing>Back to PDC options</button>
     ${pdcState.message ? `<p class="pdc-status">${escapeHtml(pdcState.message)}</p>` : ""}
   `);
 }
@@ -4582,25 +4600,18 @@ function renderPdcPublicEntry() {
   return `
     <div class="pdc-entry-grid">
       <section class="pdc-entry-option">
-        <p class="eyebrow">Public Demo / 公开演示版</p>
-        <h2>Public Demo</h2>
-        <p>Curious how PDC works? Watch a no-AI demo first.</p>
-        <p>想先看看 PDC 如何运作？可以先观看一个不消耗 AI 的示例演示。</p>
-        <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看公开演示</button>
+        <p class="eyebrow">Public Demo / Demo 模式</p>
+        <h2>Demo Mode</h2>
+        <p>Watch a predefined PDC sample. No access code, no AI, no data saved.</p>
+        <p>观看一个预设 PDC 样例。不需要体验码，不消耗 AI，不保存数据。</p>
+        <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
       </section>
       <section class="pdc-entry-option">
         <p class="eyebrow">Standard Council / 标准体验版</p>
         <h2>Standard Council</h2>
-        <p>Use Access Pass</p>
-        <p>使用体验码进入</p>
-        <form data-pdc-access-form>
-          <label>
-            <span>PDC access code</span>
-            <input name="pdc_access_code" type="text" autocomplete="off" placeholder="Enter access code" required>
-          </label>
-          <button class="button primary" type="submit">Use Access Pass / 使用体验码进入</button>
-          <p class="pdc-access-status" aria-live="polite"></p>
-        </form>
+        <p>Use an access code to run a real PDC session. Mini rounds, 5.5 final recap.</p>
+        <p>使用体验码进入真实 PDC。过程使用 mini，最终总结使用 5.5。</p>
+        <button class="button primary" type="button" data-pdc-standard-entry>Use Access Code / 使用体验码进入</button>
       </section>
       ${founder ? `
         <section class="pdc-entry-option founder-only">
@@ -4608,7 +4619,7 @@ function renderPdcPublicEntry() {
           <h2>Founder Full Function</h2>
           <p>Run the full high-quality council with 5.5 for all rounds.</p>
           <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
-          <button class="button primary" type="button" data-pdc-founder-full>Open Full Function Council / 打开完整高质量版本</button>
+          <button class="button primary" type="button" data-pdc-founder-full>Open Full Function / 打开完整版本</button>
         </section>` : ""}
     </div>`;
 }
@@ -6786,13 +6797,20 @@ function renderPdcRadioGroup(label, name, options) {
 
 async function startPdcExperience() {
   if (!pdcState.valid || pdcState.status === "generating" || pdcState.phaseLoading || pdcState.finalRecapLoading || isPdcPlaybackActive()) return;
+  const inlinePass = (document.querySelector("[data-pdc-start-pass]")?.value || "").trim().replace(/\s+/g, "");
   const question = document.querySelector("[data-pdc-question]")?.value.trim() || "";
   const nextQuestion = question.slice(0, 1200);
+  if (!pdcState.founderPreview && !pdcState.pass && !inlinePass) {
+    pdcState.message = "Please enter your PDC access code.";
+    renderPdcPilot();
+    return;
+  }
   if (nextQuestion.length < 8) {
     pdcState.message = "Please enter a decision question before starting.";
     renderPdcPilot();
     return;
   }
+  if (inlinePass) pdcState.pass = inlinePass;
   resetPdcSessionState({ question: nextQuestion, status: "generating", message: "" });
   beginPdcWarmup({ phaseLabel: "Round 1A — Position Update", roundNumber: 1, phaseType: "A" });
   try {
@@ -8824,16 +8842,43 @@ document.addEventListener("click", (event) => {
     startPdcDemoMode();
     return;
   }
+  if (event.target.closest("[data-pdc-standard-entry]")) {
+    Object.assign(pdcState, {
+      valid: true,
+      status: "public",
+      entryView: "standard",
+      founderPreview: false,
+      councilTier: "standard",
+      requestedTier: "standard",
+      effectiveTier: "standard",
+      founderOnlyFullFunction: false,
+      message: "",
+    });
+    renderPdcPilot();
+    return;
+  }
   if (event.target.closest("[data-pdc-founder-full]")) {
     pdcState = createPdcBaseState({
       valid: true,
-      status: "ready",
+      status: "public",
+      entryView: "full",
       founderPreview: true,
       selectedMode: "personal",
       councilTier: "full_function",
       requestedTier: "full_function",
       effectiveTier: "full_function",
       founderOnlyFullFunction: true,
+    });
+    renderPdcPilot();
+    return;
+  }
+  if (event.target.closest("[data-pdc-back-landing]")) {
+    clearPdcPlaybackTimer();
+    clearPdcWarmupTimer();
+    pdcState = createPdcBaseState({
+      valid: true,
+      status: "public",
+      entryView: "landing",
     });
     renderPdcPilot();
     return;

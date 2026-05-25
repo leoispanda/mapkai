@@ -626,6 +626,16 @@ body:not(.founder-mode) .founder-public-entry {
   line-height: 1.5;
 }
 
+.pdc-question-label input {
+  width: 100%;
+  border: 1px solid rgba(15, 107, 87, 0.2);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font: inherit;
+}
+
 .pdc-count,
 .pdc-status,
 .pdc-invalid,
