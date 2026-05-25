@@ -3743,6 +3743,7 @@ let pdcPlaybackTimer = null;
 let pdcWarmupTimer = null;
 let pdcFounderSummary = null;
 let pdcFounderStatus = { state: "idle", detail: "" };
+const pdcFounderAccessSessionKey = "mapkaiPdcFounderAccessValidated";
 
 function createPdcBaseState(overrides = {}) {
   return {
@@ -4402,9 +4403,12 @@ async function validatePdcAccessForm(form) {
       throw new Error(data.message || "This PDC access code is no longer available.");
     }
     if (data.founder_preview === true) {
+      sessionStorage.setItem(pdcFounderAccessSessionKey, "true");
+      localStorage.setItem(founderModeKey, "true");
       window.location.href = "/pdc-pilot?founderPreview=1";
       return;
     }
+    sessionStorage.removeItem(pdcFounderAccessSessionKey);
     window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
   } catch (error) {
     if (status) status.textContent = error.message || "This PDC access code is no longer available.";
@@ -4443,7 +4447,7 @@ function getCurrentPdcPass() {
 function isPdcFounderPreviewAllowed(pass) {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("founderPreview") === "1" && !pass;
-  return requested && document.body.classList.contains("founder-mode");
+  return requested && sessionStorage.getItem(pdcFounderAccessSessionKey) === "true";
 }
 
 async function initPdcPilotPage() {
@@ -4471,7 +4475,12 @@ async function initPdcPilotPage() {
   if (founderPreviewAllowed) {
     pdcState.valid = true;
     pdcState.status = "ready";
-    pdcState.entryView = "standard";
+    pdcState.entryView = "full";
+    pdcState.founderPreview = true;
+    pdcState.councilTier = "full_function";
+    pdcState.requestedTier = "full_function";
+    pdcState.effectiveTier = "full_function";
+    pdcState.founderOnlyFullFunction = true;
     pdcState.message = "";
     renderPdcPilot();
     return;
@@ -4485,27 +4494,13 @@ async function initPdcPilotPage() {
     return;
   }
   if (founderPreviewRequested) {
-    try {
-      const response = await fetch("/api/pdc/validate-pass?founderPreview=1");
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok || data.valid !== true || data.founder_preview !== true) {
-        throw new Error(data.message || "This PDC access link is no longer available. It may have already been used or expired.");
-      }
-      pdcState.founderPreview = true;
-      pdcState.valid = true;
-      pdcState.status = "ready";
-      pdcState.entryView = "standard";
-      pdcState.message = "";
-      renderPdcPilot();
-      return;
-    } catch (error) {
-      pdcState.valid = false;
-      pdcState.founderPreview = false;
-      pdcState.status = "invalid";
-      pdcState.message = error.message || "This PDC access link is no longer available. It may have already been used or expired.";
-      renderPdcPilot();
-      return;
-    }
+    pdcState.valid = true;
+    pdcState.founderPreview = false;
+    pdcState.status = "public";
+    pdcState.entryView = "landing";
+    pdcState.message = "Enter the Founder access code to open Full Function mode.";
+    renderPdcPilot();
+    return;
   }
   if (!pass) {
     pdcState.status = "invalid";
@@ -4596,7 +4591,6 @@ function renderPdcPilot() {
 }
 
 function renderPdcPublicEntry() {
-  const founder = document.body.classList.contains("founder-mode");
   return `
     <div class="pdc-entry-grid">
       <section class="pdc-entry-option">
@@ -4607,20 +4601,20 @@ function renderPdcPublicEntry() {
         <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
       </section>
       <section class="pdc-entry-option">
-        <p class="eyebrow">Standard Council / 标准体验版</p>
-        <h2>Standard Council</h2>
-        <p>Use an access code to run a real PDC session. Mini rounds, 5.5 final recap.</p>
-        <p>使用体验码进入真实 PDC。过程使用 mini，最终总结使用 5.5。</p>
-        <button class="button primary" type="button" data-pdc-standard-entry>Use Access Code / 使用体验码进入</button>
+        <p class="eyebrow">Access Code / 访问码</p>
+        <h2>Enter PDC</h2>
+        <p>Normal access codes open Standard Council: mini rounds with a 5.5 final recap.</p>
+        <p>Founder access opens Full Function: 5.5 for every round.</p>
+        <form class="pdc-access-form" data-pdc-access-form>
+          <label>
+            <span>Access code</span>
+            <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
+          </label>
+          <button class="button primary" type="submit">Enter PDC / 进入 PDC</button>
+          <p class="pdc-access-status" aria-live="polite"></p>
+        </form>
       </section>
-      ${founder ? `
-        <section class="pdc-entry-option founder-only">
-          <p class="eyebrow">Founder 完整高质量版本</p>
-          <h2>Founder Full Function</h2>
-          <p>Run the full high-quality council with 5.5 for all rounds.</p>
-          <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
-          <button class="button primary" type="button" data-pdc-founder-full>Open Full Function / 打开完整版本</button>
-        </section>` : ""}
+      ${pdcState.message ? `<p class="pdc-status pdc-entry-status">${escapeHtml(pdcState.message)}</p>` : ""}
     </div>`;
 }
 
@@ -6946,7 +6940,7 @@ function renderPdcFounderPanel() {
       <h3>PDC Access Panel</h3>
       <div class="pdc-founder-actions">
         <button class="button primary" type="button" data-pdc-generate>Generate 20 PDC Access Links</button>
-        <a class="button secondary" href="/pdc-pilot?founderPreview=1">Open PDC as Founder</a>
+        <a class="button secondary" href="/pdc-pilot">Open PDC Entry</a>
         <button class="button secondary" type="button" data-pdc-copy-unused ${unusedLinks.length ? "" : "disabled"}>Copy all unused links</button>
         <button class="button secondary" type="button" data-pdc-copy-all ${allLinks.length ? "" : "disabled"}>Copy all links</button>
       </div>

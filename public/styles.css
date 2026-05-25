@@ -604,6 +604,11 @@ body:not(.founder-mode) .founder-public-entry {
   font: inherit;
 }
 
+.pdc-entry-status {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
 .pdc-question-label {
   display: grid;
   gap: 9px;
