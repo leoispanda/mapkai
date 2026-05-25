@@ -2141,3 +2141,11 @@ Push status:
 - Browser computed verification confirmed: About hero and PDC hero titles compute to `rgb(15, 23, 42)`, PDC body text to `rgb(100, 116, 139)`, selected Personal PDC card border to `rgba(37, 99, 235, 0.38)`, primary button to a `#2563eb -> #6366f1` gradient, and header background to `rgba(255, 255, 255, 0.78)`.
 - Desktop and 390px mobile browser spot checks covered `/`, `/map`, `/categories`, `/learning`, `/about`, `/pdc`, and `/pdc-pilot?founderPreview=1`; no horizontal overflow was detected.
 - Synced `styles.css`/`public/styles.css`, `script.js`/`public/script.js`, and `index.html`/`public/index.html`; no API logic, PDC generation logic, provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, access/pass behavior, or PDC member names changed.
+
+## 2026-05-25 - Add automatic asset cache busting
+- Added `scripts/inject-asset-version.js` to version `/styles.css` and `/script.js` with `CF_PAGES_COMMIT_SHA.slice(0, 7)` during Cloudflare Pages builds, falling back to `git rev-parse --short HEAD` locally.
+- Added `npm run version-assets`, a Cloudflare-friendly `npm run build`, and updated local `npm run deploy` so asset URLs are refreshed before static deployment.
+- The injector rewrites `index.html` and `public/index.html` from the root HTML source, replaces any existing `?v=...` cleanly, avoids duplicate query strings when run repeatedly, and keeps root/public HTML synced.
+- Converted the previously inline production script copy in `index.html` to `<script src="/script.js?v=<version>"></script>` so normal browser refreshes fetch the latest deployed JavaScript asset along with the latest CSS.
+- Initial local injection used git version `de4250a`, producing `/styles.css?v=de4250a` and `/script.js?v=de4250a`.
+- No business logic, PDC logic, OpenAI provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, public navigation, or UI design behavior changed beyond asset URL versioning.

@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "version-assets": "node scripts/inject-asset-version.js",
+    "build": "npm run version-assets",
     "dev:cloudflare": "wrangler pages dev public",
-    "deploy": "wrangler pages deploy public"
+    "deploy": "npm run version-assets && wrangler pages deploy public"
   },
   "engines": {
     "node": ">=18"
