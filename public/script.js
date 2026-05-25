@@ -235,6 +235,24 @@ const uiText = {
     aboutBoundaryP1: "MapKAI does not try to become your final AI. It gives you a quieter starting point for the AI tools you already use.",
     aboutBoundaryP2: "MapKAI creates the map. Your personal AI helps you explore it more deeply.",
     aboutClosing: "Not everything meaningful can be fully measured. But some things become clearer once they are finally visible.",
+    pdcEntryEyebrow: "PDC Experience",
+    pdcEntryTitle: "Partner Decision Council",
+    pdcEntrySubtitle: "Think through a decision before you act.",
+    pdcEntryDescription: "MapKAI PDC helps you examine one real question through multiple thinking partners, then turn the discussion into a clear decision memo.",
+    pdcHowEyebrow: "How it works",
+    pdcHowTitle: "How it works",
+    pdcStepOneTitle: "Bring one decision",
+    pdcStepOneCopy: "Start with one concrete question you want to examine from several angles.",
+    pdcStepTwoTitle: "Meet your thinking partners",
+    pdcStepTwoCopy: "PDC brings together perspectives such as evidence, risk, desire, timing, and social impact.",
+    pdcStepThreeTitle: "Leave with a decision memo",
+    pdcStepThreeCopy: "The final output is designed to be easier to scan and act on than a raw chat transcript.",
+    pdcAccessEyebrow: "Private Access",
+    pdcAccessTitle: "Enter your one-time PDC access code",
+    pdcAccessDescription: "Use the one-time code shared with you to enter the private PDC experience.",
+    pdcAccessLabel: "Access code",
+    pdcAccessPlaceholder: "Paste your one-time access code",
+    pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Cognitive Domains",
     categoriesTitle: "Each field tends to think differently.",
     categoriesCopy: "Categories are not a directory. They are lenses for noticing how different fields structure reality.",
@@ -518,6 +536,24 @@ const uiText = {
     aboutBoundaryP1: "MapKAI 不试图成为你的最终 AI。它只是为你已经使用的 AI 工具提供一个更安静的起点。",
     aboutBoundaryP2: "MapKAI 创建地图。你的个人 AI 帮你更深入地探索它。",
     aboutClosing: "不是所有有意义的东西都能被完全测量。但有些东西一旦变得可见，就会更清楚。",
+    pdcEntryEyebrow: "PDC 体验",
+    pdcEntryTitle: "Partner Decision Council",
+    pdcEntrySubtitle: "在行动之前，先把一个决定想清楚。",
+    pdcEntryDescription: "MapKAI PDC 会帮你从多个思考伙伴的视角审视一个真实问题，并把讨论整理成清晰的决策备忘录。",
+    pdcHowEyebrow: "它如何运作",
+    pdcHowTitle: "它如何运作",
+    pdcStepOneTitle: "带来一个决定",
+    pdcStepOneCopy: "从一个你想认真审视的具体问题开始。",
+    pdcStepTwoTitle: "遇见你的思考伙伴",
+    pdcStepTwoCopy: "PDC 会汇集证据、风险、真实意愿、时机和关系影响等不同视角。",
+    pdcStepThreeTitle: "带走一份决策备忘录",
+    pdcStepThreeCopy: "最终输出会比原始聊天记录更容易浏览、比较和行动。",
+    pdcAccessEyebrow: "私人访问",
+    pdcAccessTitle: "输入你的一次性 PDC 访问码",
+    pdcAccessDescription: "使用与你分享的一次性访问码，进入私人 PDC 体验。",
+    pdcAccessLabel: "访问码",
+    pdcAccessPlaceholder: "粘贴你的一次性访问码",
+    pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
     categoriesCopy: "分类不是目录，而是观察不同领域如何组织现实的认知镜头。",
@@ -6706,6 +6742,8 @@ function applyLanguage() {
   ]);
   setText(".about-page .about-closing p", t("aboutClosing"));
   setText(".about-page .about-closing .button", t("startExploring"));
+  const pdcAccessInput = document.querySelector(".pdc-access-form input");
+  if (pdcAccessInput) pdcAccessInput.placeholder = t("pdcAccessPlaceholder");
 
   setText(".map-page .intro-copy .eyebrow", t("mapEyebrow"));
   setText(".map-page .intro-copy h1", t("mapTitle"));

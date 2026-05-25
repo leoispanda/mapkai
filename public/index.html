@@ -20,7 +20,7 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/mapkai-icon-square-180.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=7312f76" />
+    <link rel="stylesheet" href="/styles.css?v=c565923" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -237,41 +237,46 @@
       <section class="page pdc-entry-page" id="pdcEntry" data-page="/pdc">
         <div class="pdc-entry-shell">
           <section class="pdc-entry-hero">
-            <p class="eyebrow">PDC Experience</p>
-            <h1>Think through a decision before you act.</h1>
-            <p>
-              MapKAI PDC is a guided decision reflection experience. It helps you examine one question through multiple thinking lenses, then turn the discussion into a clearer decision memo.
+            <p class="eyebrow" data-i18n="pdcEntryEyebrow">PDC Experience</p>
+            <h1 data-i18n="pdcEntryTitle">Partner Decision Council</h1>
+            <p class="pdc-entry-subtitle" data-i18n="pdcEntrySubtitle">Think through a decision before you act.</p>
+            <p class="pdc-entry-description" data-i18n="pdcEntryDescription">
+              MapKAI PDC helps you examine one real question through multiple thinking partners, then turn the discussion into a clear decision memo.
             </p>
           </section>
-          <section class="pdc-entry-demo" aria-label="PDC introduction">
+          <section class="pdc-entry-demo" aria-labelledby="pdc-how-title">
+            <div class="pdc-entry-section-head">
+              <p class="eyebrow" data-i18n="pdcHowEyebrow">How it works</p>
+              <h2 id="pdc-how-title" data-i18n="pdcHowTitle">How it works</h2>
+            </div>
             <article>
               <span>01</span>
-              <h2>Bring one decision</h2>
-              <p>Start with a concrete question you want to examine from several angles.</p>
+              <h3 data-i18n="pdcStepOneTitle">Bring one decision</h3>
+              <p data-i18n="pdcStepOneCopy">Start with one concrete question you want to examine from several angles.</p>
             </article>
             <article>
               <span>02</span>
-              <h2>Review the council view</h2>
-              <p>PDC organizes perspectives such as evidence, risk, desire, timing, and social impact.</p>
+              <h3 data-i18n="pdcStepTwoTitle">Meet your thinking partners</h3>
+              <p data-i18n="pdcStepTwoCopy">PDC brings together perspectives such as evidence, risk, desire, timing, and social impact.</p>
             </article>
             <article>
               <span>03</span>
-              <h2>Leave with a memo</h2>
-              <p>The final output is designed to be easier to scan than a raw chat transcript.</p>
+              <h3 data-i18n="pdcStepThreeTitle">Leave with a decision memo</h3>
+              <p data-i18n="pdcStepThreeCopy">The final output is designed to be easier to scan and act on than a raw chat transcript.</p>
             </article>
           </section>
           <section class="pdc-access-card" aria-labelledby="pdc-access-title">
             <div>
-              <p class="eyebrow">Private Access</p>
-              <h2 id="pdc-access-title">Enter your PDC access code</h2>
-              <p>Access codes are used during the private pilot to control usage and keep the experience stable.</p>
+              <p class="eyebrow" data-i18n="pdcAccessEyebrow">Private Access</p>
+              <h2 id="pdc-access-title" data-i18n="pdcAccessTitle">Enter your one-time PDC access code</h2>
+              <p data-i18n="pdcAccessDescription">Use the one-time code shared with you to enter the private PDC experience.</p>
             </div>
             <form class="pdc-access-form" data-pdc-access-form>
               <label>
-                <span>Access code</span>
-                <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
+                <span data-i18n="pdcAccessLabel">Access code</span>
+                <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your one-time access code" required />
               </label>
-              <button class="button primary" type="submit">Continue to PDC</button>
+              <button class="button primary" type="submit" data-i18n="pdcAccessButton">Enter PDC Experience</button>
               <p class="pdc-access-status" aria-live="polite"></p>
             </form>
           </section>
@@ -415,6 +420,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=7312f76"></script>
+    <script src="/script.js?v=c565923"></script>
   </body>
 </html>

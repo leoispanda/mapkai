@@ -2149,3 +2149,10 @@ Push status:
 - Converted the previously inline production script copy in `index.html` to `<script src="/script.js?v=<version>"></script>` so normal browser refreshes fetch the latest deployed JavaScript asset along with the latest CSS.
 - Initial local injection used git version `de4250a`, producing `/styles.css?v=de4250a` and `/script.js?v=de4250a`.
 - No business logic, PDC logic, OpenAI provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, public navigation, or UI design behavior changed beyond asset URL versioning.
+
+## 2026-05-25 - Polish public PDC entry hierarchy and copy
+- Updated `/pdc` from a flat access-code form into a clearer premium Partner Decision Council entry page: concept hero, three-step How it works section, and final Private Access action area.
+- Added English and Chinese copy for PDC Experience, Partner Decision Council, thinking partners, decision memo, one-time access code label/placeholder/button, and natural Chinese wording.
+- Kept `/pdc` as a manual access-code entry page only; it does not auto-trigger PDC API/GPT generation and ordinary users do not see Founder debug.
+- Refined `/pdc` card hierarchy and spacing in the existing Apple/Revolut graphite-blue visual system; no dark-green styling was introduced.
+- Synced root/public HTML, CSS, and JS; no PDC logic, API, access-code validation, provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, Founder Preview behavior, or public navigation logic changed.
