@@ -3897,8 +3897,8 @@ const pdcWarmupPersonas = [
 ];
 const PDC_DEMO_SCRIPT = {
   topic: {
-    en: "A new website has a big long-term vision, but currently has almost no attention. Should it release a small practical tool to attract early users?",
-    zh: "一个新网站有长期愿景，但现在几乎没人关注。是否应该先发布一个小工具来吸引第一批用户？",
+    en: "A small team is deciding whether to publish a simple checklist before building a full product. Should they launch the checklist now or wait until the full product is ready?",
+    zh: "一个小团队正在决定是否先发布一个简单清单，再开发完整产品。应该现在发布清单，还是等完整产品准备好？",
   },
   rounds: [
     {
@@ -3910,15 +3910,15 @@ const PDC_DEMO_SCRIPT = {
         zh: "第 1 轮 A — 初始立场",
       },
       statements: [
-        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "The first gap is evidence: attention is low, so a small practical tool can create real behavior data before the larger vision asks for trust."],
-        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "The team should check whether the tool is a genuine bridge to the vision, not just a panic response to quiet early traffic."],
-        ["marcus-lu", "Max Build", "Risk & Downside", "A narrow tool lowers launch risk, but only if scope is tightly capped and maintenance cost is visible from day one."],
-        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "The tool can become the first doorway into the long-term idea if it teaches users one valuable habit."],
-        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "The best move may be a tool that also tells the story of the larger vision through its workflow."],
-        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "The hidden trap is building something useful but unrelated, then mistaking activity for strategic progress."],
-        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "A practical tool gives early supporters something concrete to share, which can make the project easier to explain."],
-        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "This is worth doing only if the first version can be built and supported without draining the core team."],
-        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The timing favors a small opening: the vision is too broad for a cold audience, but a useful first door can create momentum."],
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "The checklist can test whether people actually have the problem before the team spends months building a product."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "The team should notice whether the checklist feels useful and honest, not like a placeholder pretending to be a product."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "Launching a checklist is low risk, but only if the team keeps it narrow and does not quietly turn it into another product."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "A checklist can become a small doorway into the full product if it teaches one repeatable habit."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "They could publish the checklist as both a helpful resource and a simple way to learn what users ask for next."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "The hidden trap is treating downloads or compliments as proof that a full product is needed."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "A checklist is easy for supporters to share and easier for potential users to understand than an unfinished product promise."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "This is worth doing only if the checklist can be maintained without distracting from the full-product decision."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The timing favors a small public test because waiting for a full product may hide weak assumptions for too long."],
       ],
     },
     {
@@ -3930,22 +3930,22 @@ const PDC_DEMO_SCRIPT = {
         zh: "第 1 轮 B — 挑战与投票",
       },
       statements: [
-        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Owen Insight: the concern is real, but no attention means we need a measured experiment before judging strategic purity.", "challenge", "iris-song", "Owen Insight", "adrian-xu", "Nina Ember", "The long-view frame connects the tool to the future product.", "felix-jiang", "Wang Zhibai", "The third-path idea may be too broad for a first build."],
-        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: data is useful, but if the tool is emotionally disconnected from the mission, the team may resent maintaining it.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The blind-spot warning protects the team from chasing shallow activity.", "ethan-shen", "Rex Velocity", "Evidence can become a shield for avoiding a harder positioning choice."],
-        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Wang Zhibai: combining tool and story sounds elegant, but it may increase scope before the team proves basic demand.", "challenge", "felix-jiang", "Wang Zhibai", "caleb-gu", "Mira Ethos", "The energy constraint is the most operationally honest filter.", "felix-jiang", "Wang Zhibai", "The concept needs a sharper boundary before implementation."],
-        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I challenge Max Build: scope control matters, but being too defensive could produce a tool too small to teach the market anything.", "challenge", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The evidence-first approach gives the next move measurable value.", "clara-lin", "Vera Flow", "Emotional alignment matters, but it should not prevent a small learning move."],
-        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I build on Nina Ember: the tool should be tiny, but its interaction should quietly reveal the larger MapKAI promise.", "build", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The long-view bridge gives the tool strategic direction.", "marcus-lu", "Max Build", "Risk control could shrink the idea until it becomes forgettable."],
-        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: shareability is useful, but social spread should not become the substitute for solving a real user pain.", "challenge", "julian-cheng", "Adrian North", "caleb-gu", "Mira Ethos", "The energy boundary keeps the team from overbuilding for approval.", "julian-cheng", "Adrian North", "Social clarity is secondary until the practical value is proven."],
-        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I challenge Mira Ethos: if the build is too private and minimal, supporters may still have nothing concrete to recommend.", "challenge", "caleb-gu", "Mira Ethos", "felix-jiang", "Wang Zhibai", "A tool that carries the story can make sharing natural.", "iris-song", "Owen Insight", "The warning is valid but may underuse the social value of a useful artifact."],
-        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge Nina Ember: long-term opportunity is not enough unless the first tool has a strict support ceiling.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The risk frame gives the launch a sustainable boundary.", "adrian-xu", "Nina Ember", "The opportunity case needs a smaller first commitment."],
-        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify Rex Velocity: the right timing is not a grand release; it is a small signal that shows whether the audience leans in.", "clarify", "ethan-shen", "Rex Velocity", "ethan-shen", "Rex Velocity", "The evidence frame best fits the current quiet stage.", "felix-jiang", "Wang Zhibai", "The bridge idea should wait until the first signal is clearer."],
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Owen Insight: the concern is real, but the checklist is exactly how we avoid guessing about demand.", "challenge", "iris-song", "Owen Insight", "marcus-lu", "Max Build", "The risk boundary keeps the experiment honest.", "felix-jiang", "Wang Zhibai", "The learning plan may become too broad for a simple checklist."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: evidence matters, but the team should define what kind of user response would actually feel meaningful.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The blind-spot warning prevents false confidence.", "ethan-shen", "Rex Velocity", "Numbers alone may not explain whether the checklist helps."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Wang Zhibai: learning from users is good, but adding too many questions can make the checklist feel heavier than it needs to be.", "challenge", "felix-jiang", "Wang Zhibai", "caleb-gu", "Mira Ethos", "The maintenance limit protects the team's attention.", "felix-jiang", "Wang Zhibai", "The idea needs a stricter boundary."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I challenge Max Build: if the checklist is too cautious, it may not teach whether a full product has room to grow.", "challenge", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The evidence test gives the team a real next signal.", "clara-lin", "Vera Flow", "Emotional fit matters, but it should not block a small test."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I build on Nina Ember: keep the checklist simple, but add one optional question that reveals what users want next.", "build", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The long-view bridge keeps the checklist connected to the product.", "marcus-lu", "Max Build", "Risk control could make the checklist too forgettable."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: sharing is useful, but shares should not be mistaken for proof that people need the full product.", "challenge", "julian-cheng", "Adrian North", "caleb-gu", "Mira Ethos", "The energy boundary blocks approval-chasing.", "julian-cheng", "Adrian North", "Social clarity is secondary to actual usefulness."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I challenge Mira Ethos: if the checklist is too hidden or plain, supporters may not know how to explain it to others.", "challenge", "caleb-gu", "Mira Ethos", "felix-jiang", "Wang Zhibai", "The optional user question can make sharing more informative.", "iris-song", "Owen Insight", "The warning is valid but may underuse the value of easy sharing."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge Nina Ember: long-term opportunity is not enough unless the checklist has a clear maintenance limit.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The risk frame gives the launch a sustainable boundary.", "adrian-xu", "Nina Ember", "The opportunity case needs a smaller first commitment."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify Rex Velocity: the right timing is not a full launch; it is a small public signal that reveals whether the problem is real.", "clarify", "ethan-shen", "Rex Velocity", "ethan-shen", "Rex Velocity", "The evidence frame best fits the current uncertainty.", "felix-jiang", "Wang Zhibai", "The learning layer should wait until the first signal is clearer."],
       ],
       voteSummary: {
-        leadingContributor: { speakerId: "ethan-shen", speakerName: "Rex Velocity", count: 3, reasonSummary: "The council values an evidence-producing practical tool as the first move." },
-        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 3, reasonSummary: "The creative bridge is attractive but currently carries the clearest scope risk." },
+        leadingContributor: { speakerId: "ethan-shen", speakerName: "Rex Velocity", count: 3, reasonSummary: "The council values the checklist as a simple evidence test." },
+        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 3, reasonSummary: "The optional learning layer is useful but risks expanding scope too early." },
       },
       blueWhaleSummary: {
-        text: "The council is not asking whether the long-term vision is valid; it is asking what small public proof can earn attention without distorting the mission. The strongest tension is between a useful narrow tool and a tool that also carries the larger story.",
+        text: "The council is not deciding the full product yet. It is deciding whether a checklist can create a small public evidence test. The strongest tension is between learning enough from users and keeping the checklist simple.",
         convergenceLevel: "medium",
       },
     },
@@ -3958,15 +3958,15 @@ const PDC_DEMO_SCRIPT = {
         zh: "第 2 轮 A — 更新立场",
       },
       statements: [
-        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I am more supportive now, but only if the tool defines one measurable behavior: first use, repeat use, or sharing."],
-        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I can support the tool if the team names the emotional promise first, so the experiment does not feel like a detour."],
-        ["marcus-lu", "Max Build", "Risk & Downside", "My position tightens: build it only with a fixed scope, fixed support window, and clear stop condition."],
-        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I still support releasing it, but the tool must teach users the first habit the larger website will later deepen."],
-        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept the scope pressure and would reduce the idea to one practical action with one subtle story cue."],
-        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "My concern becomes sharper: the team should write what signal would prove the tool is not just busy work."],
-        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I still see sharing value, but it should come after usefulness, not before it."],
-        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I can support a first release if the team can maintain it calmly for four weeks without blocking the deeper product."],
-        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The moment favors a small controlled release, not a large reveal."],
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I am more supportive now, but only if the team defines one measurable response: saves, replies, or repeat visits."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I can support the checklist if it feels genuinely helpful, not like a thin advertisement for something unfinished."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "My position tightens: launch it only with fixed scope, a short review window, and a clear stop condition."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I still support launching it, but the checklist should teach the one habit the full product may later deepen."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept the scope pressure and would reduce my idea to one optional feedback question at the end."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "My concern becomes sharper: the team should write what signal would disprove the need for a full product."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I still see sharing value, but it should come after the checklist is genuinely useful."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I can support a first release if the team can maintain it calmly for three weeks without delaying the main decision."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The moment favors a small controlled release, not waiting for a polished full product."],
       ],
     },
     {
@@ -3978,36 +3978,36 @@ const PDC_DEMO_SCRIPT = {
         zh: "第 2 轮 B — 挑战、贡献票与顾虑票",
       },
       statements: [
-        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Vera Flow: emotional promise matters, but the first release should be judged by behavior evidence, not internal resonance alone.", "challenge", "clara-lin", "Vera Flow", "marcus-lu", "Max Build", "The stop condition makes the experiment responsible.", "clara-lin", "Vera Flow", "The emotional filter could slow the experiment too much."],
-        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: evidence without a clear promise can produce numbers that do not answer the real product question.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The signal definition protects meaning, not just metrics.", "ethan-shen", "Rex Velocity", "Evidence needs a more explicit interpretation frame."],
-        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Nina Ember: teaching a future habit is good, but it must fit inside the fixed support window.", "challenge", "adrian-xu", "Nina Ember", "caleb-gu", "Mira Ethos", "The four-week maintenance limit is the strongest practical guardrail.", "adrian-xu", "Nina Ember", "The long-view habit could invite extra features."],
-        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I build on Max Build: the fixed scope should define the smallest habit that still points toward the larger MapKAI vision.", "build", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The measurement frame helps the team learn fast.", "felix-jiang", "Wang Zhibai", "The creative bridge remains less essential than proof of need."],
-        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept observer status if the council needs to narrow; my remaining note is to keep one small story cue so the tool does not feel generic.", "clarify", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The habit bridge keeps the small release connected to the bigger promise.", "felix-jiang", "Wang Zhibai", "The creative layer is still the easiest part to overextend."],
-        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: shareability should be treated as a secondary signal after actual usefulness.", "challenge", "julian-cheng", "Adrian North", "marcus-lu", "Max Build", "The stop condition prevents identity-driven overwork.", "julian-cheng", "Adrian North", "Social spread could tempt the team into optimizing the wrong thing."],
-        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I build on Owen Insight: sharing should be allowed but not designed as the main success metric yet.", "build", "iris-song", "Owen Insight", "caleb-gu", "Mira Ethos", "The sustainability frame protects long-term trust.", "felix-jiang", "Wang Zhibai", "The story cue should stay minimal."],
-        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge everyone: if the first version cannot be maintained calmly, the decision should pause until the scope is smaller.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The fixed boundary turns the tool from ambition into an experiment.", "felix-jiang", "Wang Zhibai", "The creative layer remains the clearest maintenance risk."],
-        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify the group: the right move is a controlled opening with a review point, not an open-ended product commitment.", "clarify", "caleb-gu", "Mira Ethos", "caleb-gu", "Mira Ethos", "The timing signal is strongest when paired with a sustainability limit.", "felix-jiang", "Wang Zhibai", "The story layer should move into observer status until the core signal is proven."],
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Vera Flow: usefulness matters, but the first release still needs behavior evidence, not just a good feeling.", "challenge", "clara-lin", "Vera Flow", "marcus-lu", "Max Build", "The stop condition makes the experiment responsible.", "clara-lin", "Vera Flow", "The emotional filter could slow the test too much."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: evidence without a clear interpretation can produce numbers that do not answer the product question.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The disproof signal protects the team from self-deception.", "ethan-shen", "Rex Velocity", "Evidence needs a clearer meaning frame."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Nina Ember: teaching a future habit is good, but it must fit inside a short review window.", "challenge", "adrian-xu", "Nina Ember", "caleb-gu", "Mira Ethos", "The three-week maintenance limit is the strongest practical guardrail.", "adrian-xu", "Nina Ember", "The long-view habit could invite extra features."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I build on Max Build: the fixed scope should define the smallest habit that still teaches whether a product is worth building.", "build", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The measurement frame helps the team learn fast.", "felix-jiang", "Wang Zhibai", "The optional feedback layer remains less essential than proof of need."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept observer status if the council needs to narrow; my remaining note is to keep one optional feedback question.", "clarify", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The habit bridge keeps the checklist connected to the future product.", "felix-jiang", "Wang Zhibai", "The feedback layer is still easiest to overextend."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: sharing should be treated as a secondary signal after actual usefulness.", "challenge", "julian-cheng", "Adrian North", "marcus-lu", "Max Build", "The stop condition prevents identity-driven overwork.", "julian-cheng", "Adrian North", "Social spread could tempt the team into optimizing the wrong thing."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I build on Owen Insight: sharing should be allowed but not designed as the main success metric yet.", "build", "iris-song", "Owen Insight", "caleb-gu", "Mira Ethos", "The sustainability frame protects long-term trust.", "felix-jiang", "Wang Zhibai", "The feedback cue should stay minimal."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge everyone: if the checklist cannot be maintained calmly, the decision should pause until the scope is smaller.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The fixed boundary turns the checklist from ambition into an experiment.", "felix-jiang", "Wang Zhibai", "The feedback layer remains the clearest maintenance risk."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify the group: the right move is a controlled checklist release with a review point, not an open-ended product commitment.", "clarify", "caleb-gu", "Mira Ethos", "caleb-gu", "Mira Ethos", "The timing signal is strongest when paired with a sustainability limit.", "felix-jiang", "Wang Zhibai", "The feedback layer should move into observer status until the core signal is proven."],
       ],
       voteSummary: {
-        leadingContributor: { speakerId: "marcus-lu", speakerName: "Max Build", count: 3, reasonSummary: "The fixed scope and stop condition turn the release into a bounded experiment." },
-        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 4, reasonSummary: "The creative bridge is useful later, but it is the most likely source of scope expansion now." },
+        leadingContributor: { speakerId: "marcus-lu", speakerName: "Max Build", count: 3, reasonSummary: "The fixed scope and stop condition turn the checklist into a bounded experiment." },
+        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 4, reasonSummary: "The optional feedback layer is useful later, but it is the most likely source of scope expansion now." },
       },
       rosterUpdate: {
         shouldArchivePerspective: true,
         archivedSpeakerId: "felix-jiang",
         archivedSpeakerName: "Wang Zhibai",
-        reason: "the council wants the first public tool to prove practical demand before adding a stronger story layer",
+        reason: "the council wants the first checklist to prove practical demand before adding a broader feedback layer",
       },
       blueWhaleSummary: {
-        text: "The council has compressed the decision into a conditional yes: release a small practical tool only if it measures one behavior, stays within a fixed support window, and has a clear stop condition. Wang Zhibai's creative bridge moves to observer status for now, so the first release does not overextend before usefulness is proven.",
+        text: "The council has compressed the decision into a conditional yes: release the checklist only if it measures one behavior, stays within a short review window, and has a clear stop condition. Wang Zhibai's feedback layer moves to observer status for now, so the first release does not overextend before usefulness is proven.",
         convergenceLevel: "high",
         shouldConsiderStopping: true,
       },
     },
   ],
   finalRecap: {
-    en: "Demo script — no AI used. The council does not simply support or reject the tool. It narrows the question into a bounded next step: release one small practical tool if it creates measurable early behavior, can be maintained calmly for four weeks, and includes a stop condition before scope expands. The larger vision stays intact, while the first move becomes a test of real user value.",
-    zh: "示例演示 — 未使用 AI。这个委员会没有简单支持或反对小工具，而是把问题压缩成一个有边界的下一步：如果它能带来可衡量的早期行为、四周内可以平稳维护，并且有明确停止条件，就发布一个小工具。长期愿景保留，但第一步先验证真实用户价值。",
+    en: "Demo script — no AI used. The council does not simply support or reject the checklist. It narrows the decision into a bounded next step: publish the checklist if it measures one concrete user response, can be maintained calmly for three weeks, and includes a stop condition before the team commits to a full product.",
+    zh: "示例演示 — 未使用 AI。这个委员会没有简单支持或反对清单，而是把问题压缩成一个有边界的下一步：如果清单能衡量一个具体用户反应、三周内可以平稳维护，并且在团队投入完整产品前有明确停止条件，就可以发布。",
   },
 };
 const pdcWarmupStages = [
@@ -4196,24 +4196,24 @@ function createPdcDemoRecap() {
     },
     recap: {
       decisionFrame: PDC_DEMO_SCRIPT.topic.en,
-      coreTension: "Whether a small practical tool can create real early-user evidence without pulling the website away from its long-term vision.",
+      coreTension: "Whether a simple checklist can create useful evidence before the team commits to building a full product.",
       councilHighlights: [
-        "The council separates attention-building from mission drift.",
-        "Contribution votes favor evidence, scope control, and sustainability.",
-        "The creative story layer is preserved as an observer perspective rather than forced into the first release.",
+        "The council separates a small evidence test from a full product commitment.",
+        "Contribution votes favor clear measurement, scope control, and sustainability.",
+        "The optional feedback layer is preserved as an observer perspective rather than forced into the first checklist release.",
       ],
-      debateSnapshot: "Rex Velocity pushes for measurable evidence; Max Build and Mira Ethos add boundaries; Wang Zhibai's story layer is archived as a perspective to revisit after usefulness is proven.",
+      debateSnapshot: "Rex Velocity pushes for measurable evidence; Max Build and Mira Ethos add boundaries; Wang Zhibai's feedback layer is archived as a perspective to revisit after usefulness is proven.",
       condensedReview: PDC_DEMO_SCRIPT.finalRecap.en,
-      finalRecommendation: "Release one small practical tool only as a bounded experiment with one behavior metric, a four-week support limit, and a clear stop condition.",
+      finalRecommendation: "Publish the checklist only as a bounded experiment with one response metric, a three-week review window, and a clear stop condition.",
       nextActions: [
-        "Define the one behavior the tool must measure.",
-        "Set the first version scope and four-week support window.",
-        "Review whether the tool created real early-user evidence before expanding.",
+        "Define the one user response the checklist must measure.",
+        "Set the checklist scope and three-week review window.",
+        "Review whether the checklist created real evidence before committing to the full product.",
       ],
       whatNotToDo: [
-        "Do not turn the demo tool into the full product.",
-        "Do not optimize for sharing before usefulness is proven.",
-        "Do not keep adding story layers before the first signal is clear.",
+        "Do not turn the checklist into the full product.",
+        "Do not treat sharing or compliments as proof of need.",
+        "Do not keep adding feedback layers before the first signal is clear.",
       ],
       reflectionNote: PDC_DEMO_SCRIPT.finalRecap.zh,
     },
@@ -6192,6 +6192,7 @@ function appendPdcMemberHistoryFromPhase(phase, phaseIndex = 0) {
 function shouldUsePdcPhaseForHistory(phase) {
   if (!phase || phase.isWarmup) return false;
   const provider = String(phase.provider || phase.contentDiagnostics?.provider || "").toLowerCase();
+  if (provider === "demo") return true;
   if (provider !== "openai") return false;
   const visibleCount = Number(phase.contentDiagnostics?.visibleStatementCount || phase.contentDiagnostics?.modelStatementCount || 0);
   const dialogue = Array.isArray(phase.dialogue) ? phase.dialogue : [];
@@ -6201,6 +6202,7 @@ function shouldUsePdcPhaseForHistory(phase) {
 function shouldUsePdcLineForHistory(line) {
   if (!line?.speakerId || !line?.text) return false;
   if (line.contentSource === "final-reintroduced") return false;
+  if (line.contentSource === "demo-script") return true;
   if (line.contentSource && line.contentSource !== "model") return false;
   return !isPdcPlaceholderLine(line);
 }
