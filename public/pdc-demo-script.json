@@ -1,0 +1,710 @@
+{
+  "topic": {
+    "en": "Should a team move fast with small experiments to learn quickly, or slow down and plan more carefully to avoid costly mistakes?"
+  },
+  "rounds": [
+    {
+      "id": "demo-round-1a",
+      "roundNumber": 1,
+      "phaseType": "A",
+      "label": "Round 1A - Position Update",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "The key question is not fast or slow, but the cost of being wrong. Move fast when a decision is reversible, small, and measurable. Slow down when the decision involves legal exposure, customer trust, major cost, or irreversible architecture."
+        },
+        {
+          "speakerId": "clara-lin",
+          "speakerName": "Vera Flow",
+          "role": "Emotion & Inner Desire",
+          "text": "Teams can hide fear behind planning, but they can also hide anxiety behind speed. Before choosing the pace, the team should ask whether it is driven by curiosity, fear, impatience, or avoidance."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "text": "Fast experiments are acceptable only when the blast radius is controlled. A small test can still damage trust, create rework, or confuse customers if the boundary is unclear."
+        },
+        {
+          "speakerId": "adrian-xu",
+          "speakerName": "Nina Ember",
+          "role": "Opportunity & Long View",
+          "text": "In uncertain markets, the team that learns faster usually gains an advantage. But the goal is not speed itself. The goal is learning velocity: improving the next decision before the opportunity window closes."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "text": "This is a false binary. The team should plan carefully at the level of principles, then experiment quickly at the level of execution. A good experiment is a small version of the bigger decision."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "Experiments only work if the team is honest about interpretation. Before acting, define what result would make you continue, change direction, or stop."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "A team does not move in isolation. Fast experiments can create momentum, but they can also surprise stakeholders. Move fast internally, communicate carefully externally."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "The best pace is the one the team can sustain without lowering judgment quality. Fast experiments can create churn, while careful planning can create drag."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "Every decision has a season. When the opportunity is real, raise a small sail. Do not build the whole ship on land before testing the wind."
+        }
+      ],
+      "blueWhaleSummary": {
+        "text": "The council does not see this as speed versus planning. The emerging distinction is reversible learning versus irreversible commitment.",
+        "convergenceLevel": "low"
+      }
+    },
+    {
+      "id": "demo-round-1b",
+      "roundNumber": 1,
+      "phaseType": "B",
+      "label": "Round 1B - Challenge & Voting",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "targetSpeakerId": "clara-lin",
+          "targetSpeakerName": "Vera Flow",
+          "text": "Emotional truth matters, but the team needs decision criteria, not only emotional diagnosis. I propose three types: reversible and cheap, partly reversible and medium cost, and irreversible or trust-sensitive."
+        },
+        {
+          "speakerId": "clara-lin",
+          "speakerName": "Vera Flow",
+          "role": "Emotion & Inner Desire",
+          "targetSpeakerId": "ethan-shen",
+          "targetSpeakerName": "Rex Velocity",
+          "text": "Rex assumes teams classify honestly. Many teams call something reversible because they emotionally want permission to act. The emotional driver must be named before the category is trusted."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "targetSpeakerId": "adrian-xu",
+          "targetSpeakerName": "Nina Ember",
+          "text": "Opportunity language can underprice downside. Before moving fast, the team needs a budget limit, time limit, exposure limit, rollback plan, and stop criteria."
+        },
+        {
+          "speakerId": "adrian-xu",
+          "speakerName": "Nina Ember",
+          "role": "Opportunity & Long View",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "Risk control is necessary, but it can become a brake system with no engine. The team should ask: what is the smallest serious action that teaches us something competitors do not yet know?"
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "Risk should be converted into information, and opportunity should be converted into a testable shape. A good experiment tests the riskiest assumption first, not the easiest assumption."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "Everyone likes balanced language, but 'fast with guardrails' is meaningless unless the team defines the guardrails and the learning threshold before acting."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "targetSpeakerId": "felix-jiang",
+          "targetSpeakerName": "Wang Zhibai",
+          "text": "A limited pilot can still affect trust, workload, reputation, and expectations. The team must frame the experiment clearly as a learning pilot, not a promise."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "targetSpeakerId": "adrian-xu",
+          "targetSpeakerName": "Nina Ember",
+          "text": "Fast experiments exhaust through churn, while heavy planning exhausts through drag. The missing concept is cadence: plan, test, review, decide, and recover."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "Too much guarding can miss the season. But too much chasing can mistake noise for wind. If there is real opportunity and uncertainty, launch a small sail."
+        }
+      ],
+      "voteSummary": {
+        "contributionVotes": {
+          "felix-jiang": 3,
+          "iris-song": 3,
+          "ethan-shen": 2,
+          "marcus-lu": 1
+        },
+        "concernVotes": {
+          "clara-lin": 4,
+          "adrian-xu": 3
+        },
+        "observerMoved": {
+          "speakerId": "clara-lin",
+          "speakerName": "Vera Flow",
+          "preservedInsight": "Before choosing speed or planning, check whether the team is driven by curiosity, fear, impatience, or avoidance."
+        }
+      },
+      "blueWhaleSummary": {
+        "text": "Vera Flow moves to Observer after a close review. Her emotional checkpoint is preserved, but the council chooses to make decision criteria the main operating system.",
+        "convergenceLevel": "medium"
+      }
+    },
+    {
+      "id": "demo-round-2a",
+      "roundNumber": 2,
+      "phaseType": "A",
+      "label": "Round 2A - Position Update",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "The team needs a three-gate test before choosing pace: reversibility, exposure, and evidence value. If the experiment will not improve a real decision, speed is not useful."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "text": "Small is not defined by effort. Small is defined by consequence. Every experiment needs a maximum spend, maximum time, affected user boundary, rollback plan, and stop rule."
+        },
+        {
+          "speakerId": "adrian-xu",
+          "speakerName": "Nina Ember",
+          "role": "Opportunity & Long View",
+          "text": "Planning should define the question, not delay the answer. Speed matters when uncertainty is high and the cost of learning is low."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "text": "The experiment should test the biggest unknown, not the easiest task. The question is: what is the smallest real-world action that tests the biggest assumption?"
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "The most important element is truth discipline. Before the experiment begins, the team must define what evidence would make it continue, change direction, or stop."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "Reversibility is not only technical. Some decisions are technically reversible but socially hard to reverse if stakeholders feel surprised or bypassed."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "The answer is a rhythm: short planning, focused test, structured review, clear decision. Without rhythm, speed becomes chaos and planning becomes stagnation."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "The team should map the first move, not the whole ocean. Act soon, but not blindly."
+        }
+      ],
+      "blueWhaleSummary": {
+        "text": "The council is moving toward a lightweight planning frame that enables a small, reversible, falsifiable experiment.",
+        "convergenceLevel": "medium"
+      }
+    },
+    {
+      "id": "demo-round-2b",
+      "roundNumber": 2,
+      "phaseType": "B",
+      "label": "Round 2B - Challenge & Voting",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "targetSpeakerId": "adrian-xu",
+          "targetSpeakerName": "Nina Ember",
+          "text": "Learning velocity needs measurement. A team can feel like it is learning because it is busy. The metric should be decision improvement per cycle."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "targetSpeakerId": "felix-jiang",
+          "targetSpeakerName": "Wang Zhibai",
+          "text": "Real-world action means real-world consequence. The experiment must define the worst plausible consequence and whether the team is willing to pay it."
+        },
+        {
+          "speakerId": "adrian-xu",
+          "speakerName": "Nina Ember",
+          "role": "Opportunity & Long View",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "Risk language can suppress initiative if it dominates the room. The experiment should answer whether we are more confident, found a wrong assumption, or changed the next decision."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "targetSpeakerId": "julian-cheng",
+          "targetSpeakerName": "Adrian North",
+          "text": "Trust matters, but if every stakeholder feeling becomes part of the design, the team may never test anything surprising. The key is a visible boundary."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "The team must pre-commit to interpretation before results arrive. Otherwise people will negotiate the meaning afterward."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "targetSpeakerId": "felix-jiang",
+          "targetSpeakerName": "Wang Zhibai",
+          "text": "Surprising people can create insight, but surprise is not always harmless. In organizations, people remember how change felt."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "targetSpeakerId": "ethan-shen",
+          "targetSpeakerName": "Rex Velocity",
+          "text": "The brief and learning contract must stay light enough for real work. A practical cycle could be 30 minutes to define, 1-2 weeks to test, 60 minutes to review, then decide."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "The council is building a map, but maps can become another way to delay sailing. If the experiment can be designed in one meeting and reversed in one week, move."
+        }
+      ],
+      "voteSummary": {
+        "contributionVotes": {
+          "ethan-shen": 3,
+          "iris-song": 2,
+          "felix-jiang": 2,
+          "marcus-lu": 1
+        },
+        "concernVotes": {
+          "adrian-xu": 4,
+          "marcus-lu": 2,
+          "julian-cheng": 2,
+          "felix-jiang": 1
+        },
+        "observerMoved": {
+          "speakerId": "adrian-xu",
+          "speakerName": "Nina Ember",
+          "preservedInsight": "The goal is learning velocity: improving the quality of the next decision before the opportunity window closes."
+        }
+      },
+      "blueWhaleSummary": {
+        "text": "Nina Ember moves to Observer. Her urgency remains preserved, but the active council becomes more operational and risk-aware.",
+        "convergenceLevel": "medium"
+      }
+    },
+    {
+      "id": "demo-round-3a",
+      "roundNumber": 3,
+      "phaseType": "A",
+      "label": "Round 3A - Position Update",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "The framework must fit real team behavior. I propose a 15-minute experiment filter: decision, assumption, result that would change our mind, maximum downside, and decision date."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "text": "The team should separate decisions into Fast Lane and Careful Lane. The problem is not speed; the problem is putting a Careful Lane decision into the Fast Lane."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "text": "A good experiment should feel like a sketch with consequences: small enough to erase, real enough to reveal the truth."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "Someone must play the challenger role before launch and ask: how could this experiment mislead us?"
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "Before experimenting, ask who could feel surprised, used, bypassed, or confused if this goes wrong."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "A team should limit active experiments. One team, one main learning question at a time."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "Use time-boxed planning as the bridge. One short meeting to classify the lane, one short cycle to test, and one clear moment to decide."
+        }
+      ],
+      "blueWhaleSummary": {
+        "text": "The council shifts from broad principles to implementation. The strongest model is Fast Lane versus Careful Lane, supported by a 15-minute filter.",
+        "convergenceLevel": "medium"
+      }
+    },
+    {
+      "id": "demo-round-3b",
+      "roundNumber": 3,
+      "phaseType": "B",
+      "label": "Round 3B - Challenge & Voting",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "Fast Lane versus Careful Lane is useful, but who decides the lane? If there is disagreement, default to Careful Lane or reduce exposure until the team agrees."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "targetSpeakerId": "ethan-shen",
+          "targetSpeakerName": "Rex Velocity",
+          "text": "Reducing exposure needs a hard rule. A Fast Lane experiment must have a cost cap, exposure cap, and time cap. If any cap is exceeded, it becomes Careful Lane."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "targetSpeakerId": "marcus-lu",
+          "targetSpeakerName": "Max Build",
+          "text": "A dead-safe test can produce dead evidence. The team needs both boundary clarity and signal strength."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "A team can set caps and still choose a weak metric that confirms what it wants. The signal must connect to the real decision."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "targetSpeakerId": "iris-song",
+          "targetSpeakerName": "Owen Insight",
+          "text": "Truth discovered by damaging trust is expensive truth. Adoption is part of whether the experiment worked."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "The method must fit on one page. For Fast Lane: one decision, one assumption, one signal, one cap, one decision date."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "targetSpeakerId": "caleb-gu",
+          "targetSpeakerName": "Mira Ethos",
+          "text": "Simplicity is wise, but the method must still make the team feel the gravity of the choice."
+        }
+      ],
+      "voteSummary": {
+        "contributionVotes": {
+          "ethan-shen": 4,
+          "caleb-gu": 3
+        },
+        "concernVotes": {
+          "marcus-lu": 3,
+          "julian-cheng": 2,
+          "felix-jiang": 1,
+          "iris-song": 1
+        },
+        "observerMoved": {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "preservedInsight": "Fast experiments must have cost, exposure, and time caps. If any cap is exceeded, move to Careful Lane."
+        }
+      },
+      "blueWhaleSummary": {
+        "text": "Max Build moves to Observer. The council chooses simplicity over heavy control, but preserves his cap rule as a required condition.",
+        "convergenceLevel": "high"
+      }
+    },
+    {
+      "id": "demo-round-4a",
+      "roundNumber": 4,
+      "phaseType": "A",
+      "label": "Round 4A - Position Update",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "Move fast only if five Fast Lane conditions are true: reversible, capped, limited in exposure, tied to a real decision, and time-boxed. If any condition is false, slow down."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "text": "The team should not ask only what can be done quickly. It should ask what small action would reveal the most truth."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "Before starting, the team must answer what result would make it stop, change direction, or continue. Without that, the action is not an experiment."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "Every Fast Lane experiment needs a minimum communication line: this is a limited learning test, not a final decision."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "The operating rhythm should be Classify, Design, Test, Review, Decide. No endless planning, no endless experimenting."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "If the decision is Fast Lane, act in the next short cycle. If it is Careful Lane, plan properly and do not fake speed."
+        }
+      ],
+      "blueWhaleSummary": {
+        "text": "The council now has a clear two-lane model. The main challenge is making it simple enough for real teams while strong enough to prevent careless action.",
+        "convergenceLevel": "high"
+      }
+    },
+    {
+      "id": "demo-round-4b",
+      "roundNumber": 4,
+      "phaseType": "B",
+      "label": "Round 4B - Challenge & Voting",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "targetSpeakerId": "felix-jiang",
+          "targetSpeakerName": "Wang Zhibai",
+          "text": "A small action that reveals truth still needs reliability. Some teams will choose a dramatic experiment because it feels insightful, not because it produces evidence."
+        },
+        {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "role": "Creativity & Third Path",
+          "targetSpeakerId": "ethan-shen",
+          "targetSpeakerName": "Rex Velocity",
+          "text": "Your rule is clear, but if it dominates, teams may behave like auditors instead of explorers. First ask what would reveal the truth fastest, then pass it through the gate."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "targetSpeakerId": "ethan-shen",
+          "targetSpeakerName": "Rex Velocity",
+          "text": "Discipline first and discovery first can both mislead. The hard rule is that the result must change or confirm a specific decision."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "targetSpeakerId": "iris-song",
+          "targetSpeakerName": "Owen Insight",
+          "text": "Truth travels through relationships. If people feel bypassed, they may reject valid evidence."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "The final answer must not become a Christmas tree of good ideas. The flow is simple: classify, design, test, review, decide."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "targetSpeakerId": "all",
+          "targetSpeakerName": "Council",
+          "text": "A perfect framework can still fail if nobody moves. Once a decision qualifies as Fast Lane, launch in the next short cycle."
+        }
+      ],
+      "voteSummary": {
+        "contributionVotes": {
+          "caleb-gu": 4,
+          "ethan-shen": 2
+        },
+        "concernVotes": {
+          "felix-jiang": 4,
+          "ethan-shen": 1,
+          "iris-song": 1,
+          "julian-cheng": 1
+        },
+        "observerMoved": {
+          "speakerId": "felix-jiang",
+          "speakerName": "Wang Zhibai",
+          "preservedInsight": "The experiment must be small enough to reverse, but real enough to reveal truth. Do not run perfectly safe tests that teach nothing."
+        }
+      },
+      "blueWhaleSummary": {
+        "text": "Wang Zhibai moves to Observer. The council chooses operating discipline, while preserving his warning that over-safe experiments can fail to teach anything meaningful.",
+        "convergenceLevel": "high"
+      }
+    },
+    {
+      "id": "demo-round-5a",
+      "roundNumber": 5,
+      "phaseType": "A",
+      "label": "Round 5A - Final Position Update",
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "The final answer should be a decision rule, not a slogan. Move fast when the decision is reversible, capped, low-exposure, decision-linked, and time-boxed. Slow down when it is expensive, public, irreversible, trust-sensitive, or foundational."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "An experiment without pre-committed interpretation is not learning. It is activity. The team must define what means continue, change, or stop."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "Move fast inside a clear boundary, but communicate carefully wherever trust may be affected. A technically reversible experiment is not always socially reversible."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "The final method should be easy to use: fast where learning is cheap and reversible, slow where mistakes are expensive and lasting."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "If the decision is Fast Lane, launch in the next short cycle. If the decision is Careful Lane, do not pretend speed is wisdom."
+        }
+      ],
+      "blueWhaleSummary": {
+        "text": "The council converges: the team should not choose fast or slow as an identity. It should classify the decision and match the pace to the consequence.",
+        "convergenceLevel": "high"
+      }
+    },
+    {
+      "id": "demo-round-5b",
+      "roundNumber": 5,
+      "phaseType": "B",
+      "label": "Round 5B - Final Challenge & Decision",
+      "reintroducedPerspective": {
+        "chosenBySpeakerId": "ethan-shen",
+        "chosenBySpeakerName": "Rex Velocity",
+        "speakerId": "marcus-lu",
+        "speakerName": "Max Build",
+        "role": "Risk & Downside",
+        "reason": "The final recommendation already has enough support for speed and experimentation. Max returns to protect the boundary between Fast Lane and Careful Lane."
+      },
+      "statements": [
+        {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "role": "Facts & Evidence",
+          "text": "Start with a simple fork: is this decision reversible, capped, limited in exposure, decision-linked, and time-boxed? If yes, experiment fast. If no, plan carefully."
+        },
+        {
+          "speakerId": "marcus-lu",
+          "speakerName": "Max Build",
+          "role": "Risk & Downside",
+          "text": "Do not let learning become an excuse to spend trust, money, or focus casually. Fast experiments are good only when the downside is explicitly capped."
+        },
+        {
+          "speakerId": "iris-song",
+          "speakerName": "Owen Insight",
+          "role": "Blind Spots & Self-Deception",
+          "text": "The final method must force honesty. Before launching, write what result means continue, what result means change direction, and what result means stop."
+        },
+        {
+          "speakerId": "julian-cheng",
+          "speakerName": "Adrian North",
+          "role": "Relationships & Social Impact",
+          "text": "Evidence and trust cannot be separated. When people may be affected, say: this is a limited learning test, not a final decision."
+        },
+        {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "role": "Time, Energy & Sustainability",
+          "text": "The operating rhythm is Classify, Design, Test, Review, Decide. One decision, one assumption, one signal, one cap, one decision date."
+        },
+        {
+          "speakerId": "orion-zhuge",
+          "speakerName": "Orion Zhuge",
+          "role": "Timing & Momentum",
+          "text": "A safe test that never launches is still failure. If it is Fast Lane, launch in the next short cycle. If it is Careful Lane, plan properly."
+        }
+      ],
+      "voteSummary": {
+        "finalContributionVotes": {
+          "ethan-shen": 3,
+          "caleb-gu": 3
+        },
+        "starContributor": {
+          "speakerId": "ethan-shen",
+          "speakerName": "Rex Velocity",
+          "reason": "Highest cumulative contribution score entering the final round."
+        },
+        "operatingModelLead": {
+          "speakerId": "caleb-gu",
+          "speakerName": "Mira Ethos",
+          "reason": "Her rhythm shaped the final execution model."
+        }
+      },
+      "blueWhaleSummary": {
+        "text": "The final decision is a two-lane model: move fast when learning is cheap and reversible; slow down when mistakes are expensive and lasting.",
+        "convergenceLevel": "high"
+      }
+    }
+  ],
+  "finalRecap": {
+    "en": "The team should not choose speed or planning as a fixed identity. It should classify the decision and match the pace to the consequence. Use Fast Lane when the decision is reversible, downside is capped, stakeholder exposure is limited, the experiment informs a real decision, and there is a clear decision date. Use Careful Lane when the decision is expensive, public, irreversible, trust-sensitive, legally or safely sensitive, or strategically foundational. For Fast Lane, use one decision, one assumption, one signal, one cap, and one decision date. Move fast when learning is cheap and reversible; slow down when mistakes are expensive and lasting."
+  }
+}

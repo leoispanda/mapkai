@@ -4010,6 +4010,7 @@ const PDC_DEMO_SCRIPT = {
     zh: "示例演示 — 未使用 AI。这个委员会没有简单支持或反对清单，而是把问题压缩成一个有边界的下一步：如果清单能衡量一个具体用户反应、三周内可以平稳维护，并且在团队投入完整产品前有明确停止条件，就可以发布。",
   },
 };
+let activePdcDemoScript = PDC_DEMO_SCRIPT;
 const pdcWarmupStages = [
   {
     "blue-whale": "Blue Whale is preparing the council...",
@@ -4111,8 +4112,9 @@ const pdcWarmupStages = [
 const pdcWarmupStageDurationMs = 5000;
 
 function createPdcDemoRecap() {
+  const demoScript = activePdcDemoScript || PDC_DEMO_SCRIPT;
   const personas = pdcWarmupPersonas.map((persona) => ({ ...persona }));
-  const phases = PDC_DEMO_SCRIPT.rounds.map((round) => ({
+  const phases = demoScript.rounds.map((round) => ({
     id: round.id,
     label: `${round.label.en} / ${round.label.zh}`,
     phaseLabel: `${round.label.en} / ${round.label.zh}`,
@@ -4120,6 +4122,7 @@ function createPdcDemoRecap() {
     phaseType: round.phaseType,
     provider: "demo",
     dialogue: round.statements.map((item) => {
+      const source = Array.isArray(item) ? null : item;
       const [
         speakerId,
         speakerName,
@@ -4134,21 +4137,22 @@ function createPdcDemoRecap() {
         concernTargetId = "",
         concernTargetName = "",
         concernReason = "",
-      ] = item;
+      ] = Array.isArray(item) ? item : [];
+      const resolvedSpeakerName = source?.speakerName || speakerName;
       return {
-        speakerId,
-        speakerName,
-        speakerChineseName: speakerName === "Orion Zhuge" ? "诸葛观辰" : "",
-        speakerLocalName: speakerName === "Orion Zhuge" ? "诸葛观辰" : "",
-        role,
-        text,
-        stanceType,
-        targetSpeakerId,
-        targetSpeakerName,
-        stanceSummary: text,
+        speakerId: source?.speakerId || speakerId,
+        speakerName: resolvedSpeakerName,
+        speakerChineseName: resolvedSpeakerName === "Orion Zhuge" ? "诸葛观辰" : "",
+        speakerLocalName: resolvedSpeakerName === "Orion Zhuge" ? "诸葛观辰" : "",
+        role: source?.role || role,
+        text: source?.text || text,
+        stanceType: source?.stanceType || stanceType,
+        targetSpeakerId: source?.targetSpeakerId || targetSpeakerId,
+        targetSpeakerName: source?.targetSpeakerName || targetSpeakerName,
+        stanceSummary: source?.stanceSummary || source?.text || text,
         contentSource: "demo-script",
-        contributionVote: contributionTargetId ? { targetSpeakerId: contributionTargetId, targetSpeakerName: contributionTargetName, reason: contributionReason } : null,
-        concernVote: concernTargetId ? { targetSpeakerId: concernTargetId, targetSpeakerName: concernTargetName, reason: concernReason } : null,
+        contributionVote: source?.contributionVote || (contributionTargetId ? { targetSpeakerId: contributionTargetId, targetSpeakerName: contributionTargetName, reason: contributionReason } : null),
+        concernVote: source?.concernVote || (concernTargetId ? { targetSpeakerId: concernTargetId, targetSpeakerName: concernTargetName, reason: concernReason } : null),
       };
     }),
     blueWhaleSummary: {
@@ -4158,8 +4162,9 @@ function createPdcDemoRecap() {
       shouldConsiderStopping: round.blueWhaleSummary?.shouldConsiderStopping === true,
     },
     meetingMemory: createPdcMeetingMemory({ phaseType: round.phaseType, summaryText: round.blueWhaleSummary?.text || "" }),
-    voteSummary: round.voteSummary || null,
-    rosterUpdate: round.rosterUpdate || null,
+    voteSummary: normalizePdcDemoVoteSummary(round.voteSummary, personas),
+    rosterUpdate: normalizePdcDemoRosterUpdate(round),
+    reintroducedPerspective: round.reintroducedPerspective || null,
     canContinue: true,
     canStopAndSummarize: true,
   }));
@@ -4178,7 +4183,7 @@ function createPdcDemoRecap() {
     councilRoom: {
       title: "PDC Council Room",
       subtitle: "Demo script — no AI used. / 示例演示 — 未使用 AI。",
-      decisionOnTable: `${PDC_DEMO_SCRIPT.topic.en}\n${PDC_DEMO_SCRIPT.topic.zh}`,
+      decisionOnTable: [demoScript.topic?.en, demoScript.topic?.zh].filter(Boolean).join("\n"),
       personas,
       sessionRoster: personas,
       dialogueProvider: "demo",
@@ -4195,39 +4200,108 @@ function createPdcDemoRecap() {
       },
     },
     recap: {
-      decisionFrame: PDC_DEMO_SCRIPT.topic.en,
-      coreTension: "Whether a simple checklist can create useful evidence before the team commits to building a full product.",
+      decisionFrame: demoScript.topic?.en || "Demo decision question",
+      coreTension: demoScript.recap?.coreTension || "Whether the team should move fast with bounded experiments or slow down for careful planning.",
       councilHighlights: [
-        "The council separates a small evidence test from a full product commitment.",
-        "Contribution votes favor clear measurement, scope control, and sustainability.",
-        "The optional feedback layer is preserved as an observer perspective rather than forced into the first checklist release.",
+        ...(Array.isArray(demoScript.recap?.councilHighlights) ? demoScript.recap.councilHighlights : [
+          "The council separates fast learning from irreversible commitment.",
+          "Contribution votes favor clear criteria, capped downside, and a sustainable review rhythm.",
+          "Observer perspectives remain available for final reflection.",
+        ]),
       ],
-      debateSnapshot: "Rex Velocity pushes for measurable evidence; Max Build and Mira Ethos add boundaries; Wang Zhibai's feedback layer is archived as a perspective to revisit after usefulness is proven.",
-      condensedReview: PDC_DEMO_SCRIPT.finalRecap.en,
-      finalRecommendation: "Publish the checklist only as a bounded experiment with one response metric, a three-week review window, and a clear stop condition.",
-      nextActions: [
-        "Define the one user response the checklist must measure.",
-        "Set the checklist scope and three-week review window.",
-        "Review whether the checklist created real evidence before committing to the full product.",
+      debateSnapshot: demoScript.recap?.debateSnapshot || "The council narrows the decision into a two-lane model: fast when learning is cheap and reversible, slow when mistakes are expensive and lasting.",
+      condensedReview: demoScript.finalRecap?.en || "",
+      finalRecommendation: demoScript.recap?.finalRecommendation || "Match the team's pace to the consequence of the decision.",
+      nextActions: Array.isArray(demoScript.recap?.nextActions) ? demoScript.recap.nextActions : [
+        "Classify the decision as Fast Lane or Careful Lane.",
+        "Define one assumption, one signal, one cap, and one decision date.",
+        "Review the result before committing to a larger move.",
       ],
-      whatNotToDo: [
-        "Do not turn the checklist into the full product.",
-        "Do not treat sharing or compliments as proof of need.",
-        "Do not keep adding feedback layers before the first signal is clear.",
+      whatNotToDo: Array.isArray(demoScript.recap?.whatNotToDo) ? demoScript.recap.whatNotToDo : [
+        "Do not use speed as an identity.",
+        "Do not use planning as avoidance.",
+        "Do not interpret results after the fact without pre-committed criteria.",
       ],
-      reflectionNote: PDC_DEMO_SCRIPT.finalRecap.zh,
+      reflectionNote: demoScript.finalRecap?.zh || "",
     },
   };
 }
 
-function startPdcDemoMode() {
+function normalizePdcDemoVoteSummary(summary, personas = []) {
+  if (!summary) return null;
+  if (summary.leadingContributor || summary.mostPressuredPerspective) return summary;
+  const toRows = (votes = {}) => Object.entries(votes || {})
+    .map(([speakerId, count]) => {
+      const persona = personas.find((item) => item.id === speakerId) || {};
+      return {
+        targetSpeakerId: speakerId,
+        targetSpeakerName: persona.englishName || persona.name || speakerId,
+        speakerId,
+        speakerName: persona.englishName || persona.name || speakerId,
+        count: Number(count) || 0,
+        reasons: [],
+      };
+    })
+    .sort((a, b) => b.count - a.count);
+  const contributionVotes = toRows(summary.contributionVotes || summary.finalContributionVotes);
+  const concernVotes = toRows(summary.concernVotes);
+  const leading = contributionVotes[0] || summary.starContributor || summary.operatingModelLead || null;
+  const pressured = concernVotes[0] || summary.observerMoved || null;
+  return {
+    ...summary,
+    contributionVotes,
+    concernVotes,
+    leadingContributor: leading ? {
+      speakerId: leading.speakerId || leading.targetSpeakerId,
+      speakerName: leading.speakerName || leading.targetSpeakerName,
+      count: leading.count,
+      reasonSummary: leading.reason || leading.reasonSummary || "",
+    } : null,
+    mostPressuredPerspective: pressured ? {
+      speakerId: pressured.speakerId || pressured.targetSpeakerId,
+      speakerName: pressured.speakerName || pressured.targetSpeakerName,
+      count: pressured.count,
+      reasonSummary: pressured.reason || pressured.preservedInsight || pressured.reasonSummary || "",
+    } : null,
+  };
+}
+
+function normalizePdcDemoRosterUpdate(round) {
+  if (round.rosterUpdate) return round.rosterUpdate;
+  const moved = round.voteSummary?.observerMoved;
+  if (!moved?.speakerId) return null;
+  return {
+    shouldArchivePerspective: true,
+    archivedSpeakerId: moved.speakerId,
+    archivedSpeakerName: moved.speakerName,
+    archivedStance: moved.preservedInsight || "",
+    reason: moved.preservedInsight || "the council moved this perspective to Observer status",
+  };
+}
+
+async function loadPdcDemoScript() {
+  try {
+    const response = await fetch("/pdc-demo-script.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const data = await response.json();
+    if (data?.topic?.en && Array.isArray(data.rounds) && data.rounds.length) {
+      activePdcDemoScript = data;
+    }
+  } catch (error) {
+    console.warn("PDC demo script fallback used:", error);
+  }
+}
+
+async function startPdcDemoMode() {
+  await loadPdcDemoScript();
+  const demoScript = activePdcDemoScript || PDC_DEMO_SCRIPT;
   clearPdcPlaybackTimer();
   clearPdcWarmupTimer();
   pdcState = createPdcBaseState({
     valid: true,
     status: "ready",
     selectedMode: "personal",
-    question: `${PDC_DEMO_SCRIPT.topic.en}\n${PDC_DEMO_SCRIPT.topic.zh}`,
+    question: [demoScript.topic?.en, demoScript.topic?.zh].filter(Boolean).join("\n"),
     demoMode: true,
     demoFinalVisible: false,
     recap: createPdcDemoRecap(),
@@ -4891,6 +4965,7 @@ function normalizePdcPhase(phase, index, room) {
     meetingMemory: phase.meetingMemory || createPdcMeetingMemory({ phaseType, summaryText: summary.text || "" }),
     voteSummary: phase.voteSummary || null,
     rosterUpdate: phase.rosterUpdate || null,
+    reintroducedPerspective: phase.reintroducedPerspective || null,
     contentDiagnostics: phase.contentDiagnostics || null,
     isWarmup: phase.isWarmup === true,
     canContinue: phase.canContinue !== false,
@@ -5466,8 +5541,22 @@ function rebuildPdcDemoObserverState(phases = []) {
     const speakerId = phase?.rosterUpdate?.shouldArchivePerspective ? phase.rosterUpdate.archivedSpeakerId : "";
     if (speakerId && !observerIds.includes(speakerId)) observerIds.push(speakerId);
   });
+  const currentPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || null;
+  const reintroducedId = currentPhase?.reintroducedPerspective?.speakerId || "";
+  if (reintroducedId) {
+    pdcState.finalReintroducedPerspective = normalizePdcReintroducedForDisplay({
+      speakerId: reintroducedId,
+      speakerName: currentPhase.reintroducedPerspective.speakerName,
+      role: currentPhase.reintroducedPerspective.role,
+      reasonForReintroduction: currentPhase.reintroducedPerspective.reason,
+      finalReflection: currentPhase.reintroducedPerspective.reason,
+    });
+  } else if (!pdcState.demoFinalVisible) {
+    pdcState.finalReintroducedPerspective = null;
+  }
   pdcState.observerRosterIds = observerIds;
-  pdcState.activeRosterIds = allIds.filter((id) => !observerIds.includes(id));
+  if (reintroducedId) pdcState.observerRosterIds = pdcState.observerRosterIds.filter((id) => id !== reintroducedId);
+  pdcState.activeRosterIds = allIds.filter((id) => !pdcState.observerRosterIds.includes(id));
 }
 
 async function continuePdcPhase() {
