@@ -4474,13 +4474,13 @@ async function initPdcPilotPage() {
   renderPdcPilot();
   if (founderPreviewAllowed) {
     pdcState.valid = true;
-    pdcState.status = "ready";
-    pdcState.entryView = "full";
+    pdcState.status = "public";
+    pdcState.entryView = "founder-options";
     pdcState.founderPreview = true;
-    pdcState.councilTier = "full_function";
-    pdcState.requestedTier = "full_function";
-    pdcState.effectiveTier = "full_function";
-    pdcState.founderOnlyFullFunction = true;
+    pdcState.councilTier = "standard";
+    pdcState.requestedTier = "standard";
+    pdcState.effectiveTier = "standard";
+    pdcState.founderOnlyFullFunction = false;
     pdcState.message = "";
     renderPdcPilot();
     return;
@@ -4540,6 +4540,10 @@ function renderPdcPilot() {
   }
   if (pdcState.status === "public" && pdcState.entryView === "landing") {
     root.innerHTML = pdcShellTemplate(renderPdcPublicEntry());
+    return;
+  }
+  if (pdcState.status === "public" && pdcState.entryView === "founder-options") {
+    root.innerHTML = pdcShellTemplate(renderPdcFounderEntry());
     return;
   }
   const visibleRecap = getPdcVisibleRecap();
@@ -4616,6 +4620,24 @@ function renderPdcPublicEntry() {
         </form>
       </section>
       ${pdcState.message ? `<p class="pdc-status pdc-entry-status">${escapeHtml(pdcState.message)}</p>` : ""}
+    </div>`;
+}
+
+function renderPdcFounderEntry() {
+  return `
+    <div class="pdc-entry-grid">
+      <section class="pdc-entry-option">
+        <p class="eyebrow">Standard Council</p>
+        <h2>Standard Council</h2>
+        <p>Run the standard experience: mini rounds with a 5.5 final recap.</p>
+        <button class="button primary" type="button" data-pdc-founder-standard>Open Standard Council</button>
+      </section>
+      <section class="pdc-entry-option">
+        <p class="eyebrow">Founder Full Function</p>
+        <h2>Full Function</h2>
+        <p>Run the full high-quality council with 5.5 for all rounds.</p>
+        <button class="button primary" type="button" data-pdc-founder-full>Open Full Function</button>
+      </section>
     </div>`;
 }
 
@@ -8846,6 +8868,22 @@ document.addEventListener("click", (event) => {
       status: "public",
       entryView: "standard",
       founderPreview: false,
+      councilTier: "standard",
+      requestedTier: "standard",
+      effectiveTier: "standard",
+      founderOnlyFullFunction: false,
+      message: "",
+    });
+    renderPdcPilot();
+    return;
+  }
+  if (event.target.closest("[data-pdc-founder-standard]")) {
+    Object.assign(pdcState, {
+      valid: true,
+      status: "public",
+      entryView: "standard",
+      founderPreview: true,
+      selectedMode: "personal",
       councilTier: "standard",
       requestedTier: "standard",
       effectiveTier: "standard",
