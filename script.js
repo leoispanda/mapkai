@@ -4565,6 +4565,7 @@ function renderPdcPilot() {
 
   const remaining = 1200 - pdcState.question.length;
   const isFullFunction = pdcState.founderPreview && pdcState.councilTier === "full_function";
+  const showPdcBackOption = !pdcState.pass && !pdcState.founderPreview;
   root.innerHTML = pdcShellTemplate(`
     ${isFullFunction ? `
       <section class="pdc-entry-option">
@@ -4585,7 +4586,7 @@ function renderPdcPilot() {
     </label>
     <p class="pdc-count">${remaining} characters left</p>
     <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : isFullFunction ? "Start Founder Full Function" : "Start Standard Council"}</button>
-    <button class="button secondary" type="button" data-pdc-back-landing>Back to PDC options</button>
+    ${showPdcBackOption ? `<button class="button secondary" type="button" data-pdc-back-landing>Back to PDC options</button>` : ""}
     ${pdcState.message ? `<p class="pdc-status">${escapeHtml(pdcState.message)}</p>` : ""}
   `);
 }
