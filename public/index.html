@@ -7230,7 +7230,7 @@ function goToRoute(route, replace = false) {
     const isCurrent =
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
-      (linkRoute === "/pdc" && visibleTarget === "/pdc") ||
+      (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||

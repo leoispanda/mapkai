@@ -2132,3 +2132,12 @@ Push status:
 - Replaced the long PDC Private Pilot hero explanation with concise premium copy: `MapKAI PDC`, the Founder Mode Preview badge when applicable, a one-line subtitle, and a compact trust line.
 - Moved the longer responsible-use/privacy explanation into a default-collapsed `Responsible use & privacy` section below the action area so mode cards and the decision question appear sooner.
 - Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, API behavior, access validation, provider/model routing, schema, or pass lifecycle changed.
+
+## 2026-05-25 - Apply global Apple Revolut visual refresh
+- Reworked the global visual system away from the dark-green/beige template identity into an Apple/Revolut-inspired graphite, MapKAI blue, cool-gray, translucent-white system across Home, Map, Categories, Learning, About, PDC, and Founder Preview.
+- Refreshed global typography with the Apple/SF/Inter/system stack, lighter heading weights, refined hero/page/card title scales, cooler labels, and calmer mixed English/Chinese line-height behavior.
+- Added targeted CSS guard overrides for the old green/beige selectors that still won in computed styles: header/nav, buttons, cards, forms, PDC mode cards, decision question, council room surfaces, Council Recap, Advanced Final Audit, Founder debug panels, Explore cards, About blocks, and contact/footer surfaces.
+- Updated `/pdc-pilot` navigation state so the PDC nav item computes as the active blue state during Founder Preview/private pilot use.
+- Browser computed verification confirmed: About hero and PDC hero titles compute to `rgb(15, 23, 42)`, PDC body text to `rgb(100, 116, 139)`, selected Personal PDC card border to `rgba(37, 99, 235, 0.38)`, primary button to a `#2563eb -> #6366f1` gradient, and header background to `rgba(255, 255, 255, 0.78)`.
+- Desktop and 390px mobile browser spot checks covered `/`, `/map`, `/categories`, `/learning`, `/about`, `/pdc`, and `/pdc-pilot?founderPreview=1`; no horizontal overflow was detected.
+- Synced `styles.css`/`public/styles.css`, `script.js`/`public/script.js`, and `index.html`/`public/index.html`; no API logic, PDC generation logic, provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, access/pass behavior, or PDC member names changed.

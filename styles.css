@@ -1,16 +1,23 @@
 :root {
-  --ink: #17201b;
-  --muted: #64736b;
-  --paper: #f6f0e4;
-  --surface: #fffaf0;
-  --surface-soft: #edf4e9;
-  --line: #dacfb9;
-  --green: #0f6b57;
-  --green-dark: #123f34;
-  --ocean: #2f86b5;
-  --gold: #d6a947;
-  --coral: #c95f46;
-  --shadow: 0 22px 70px rgba(23, 32, 27, 0.13);
+  --ink: #0f172a;
+  --muted: #64748b;
+  --muted-soft: #94a3b8;
+  --paper: #f8fafc;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+  --line: rgba(15, 23, 42, 0.08);
+  --green: #2563eb;
+  --green-dark: #0f172a;
+  --ocean: #2563eb;
+  --gold: #f59e0b;
+  --coral: #6366f1;
+  --rust: #475569;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --cyan: #38bdf8;
+  --violet: #6366f1;
+  --purple: #8b5cf6;
+  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -24,12 +31,16 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(15, 107, 87, 0.07) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(15, 107, 87, 0.05) 1px, transparent 1px),
-    var(--paper);
+    radial-gradient(circle at 16% 0%, rgba(56, 189, 248, 0.14), transparent 30%),
+    radial-gradient(circle at 86% 8%, rgba(99, 102, 241, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 46%, #f6f8fb 100%);
   background-size: 42px 42px;
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 a {
@@ -47,8 +58,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 15px clamp(18px, 5vw, 64px);
-  border-bottom: 1px solid rgba(218, 207, 185, 0.86);
-  background: rgba(246, 240, 228, 0.88);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(18px);
 }
 
@@ -75,7 +86,8 @@ a {
   align-items: center;
   gap: clamp(16px, 4vw, 42px);
   color: var(--muted);
-  font-weight: 760;
+  font-size: 0.94rem;
+  font-weight: 680;
 }
 
 .nav-links a {
@@ -85,18 +97,19 @@ a {
 
 .nav-links a:hover,
 .nav-links a.is-current {
-  color: var(--green-dark);
+  color: var(--blue-dark);
 }
 
 .nav-links a[data-route="/explore"] {
-  border: 1px solid rgba(15, 107, 87, 0.22);
+  border: 1px solid rgba(37, 99, 235, 0.18);
   padding: 9px 14px;
-  background: rgba(255, 250, 240, 0.64);
-  color: var(--green-dark);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
 }
 
 .nav-links a[data-route="/explore"].is-current {
-  background: var(--green);
+  background: linear-gradient(135deg, var(--blue), var(--violet));
   color: white;
 }
 
@@ -128,7 +141,7 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .language-switch button[aria-pressed="true"] {
-  color: var(--green-dark);
+  color: var(--blue-dark);
 }
 
 .founder-toggle {
@@ -136,18 +149,18 @@ body:not(.founder-mode) .founder-public-entry {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0 12px;
-  background: rgba(255, 250, 240, 0.72);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--muted);
   font: inherit;
   font-size: 0.82rem;
-  font-weight: 780;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .founder-toggle[aria-pressed="true"] {
-  border-color: rgba(15, 107, 87, 0.36);
-  background: var(--surface-soft);
-  color: var(--green-dark);
+  border-color: rgba(37, 99, 235, 0.28);
+  background: rgba(239, 246, 255, 0.78);
+  color: var(--blue-dark);
 }
 
 .internal-code {
@@ -2113,6 +2126,7 @@ p {
   justify-content: center;
   border-radius: 8px;
   padding: 0 20px;
+  font-family: inherit;
   font-weight: 820;
 }
 
@@ -3605,5 +3619,519 @@ canvas {
 
   .pdc-founder-phase-debug summary span {
     white-space: normal;
+  }
+}
+
+/* Global premium graphite/blue visual system guard. */
+body,
+.page,
+.pdc-page,
+.pdc-entry-page {
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.page {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at 92% 6%, rgba(99, 102, 241, 0.1), transparent 28%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.92) 46%, rgba(246, 248, 251, 0.98));
+}
+
+.topbar {
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.nav-links,
+.language-switch,
+.founder-toggle {
+  color: var(--muted);
+}
+
+.nav-links a,
+.language-switch button,
+.founder-toggle,
+.button {
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a.is-current,
+.language-switch button[aria-pressed="true"] {
+  color: var(--blue-dark);
+}
+
+.nav-links a.is-current:not([data-route="/explore"]) {
+  box-shadow: inset 0 -2px 0 rgba(37, 99, 235, 0.72);
+}
+
+.nav-links a[data-route="/explore"] {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+}
+
+.nav-links a[data-route="/explore"]:hover,
+.nav-links a[data-route="/explore"].is-current {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.2);
+}
+
+.founder-toggle,
+.founder-indicator,
+.founder-indicator button {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--muted);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.founder-toggle[aria-pressed="true"],
+.founder-mode .founder-indicator {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: rgba(239, 246, 255, 0.82);
+  color: var(--blue-dark);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-weight: 720;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  line-height: 1.06;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  line-height: 1.14;
+}
+
+h3 {
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.2;
+}
+
+p,
+li,
+dd,
+.hero-copy,
+.section-heading p,
+.intro-copy p,
+.field-hero p,
+.about-block p,
+.about-closing p {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+.home-page .hero h1 {
+  color: var(--ink);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 720;
+  line-height: 1.02;
+}
+
+.section-heading.compact h1,
+.field-hero h1,
+.about-opening h1,
+.legal-hero h1,
+.pdc-entry-hero h1 {
+  color: var(--ink);
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.06;
+}
+
+.pdc-card h1,
+.pdc-page .pdc-card h1 {
+  color: var(--ink);
+  font-size: clamp(2.4rem, 4.8vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.04;
+}
+
+.pdc-result h1,
+.pdc-room-heading h1,
+.pdc-page .pdc-result h1,
+.pdc-page .pdc-room-heading h1 {
+  color: var(--ink);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 690;
+}
+
+.eyebrow,
+.pdc-page .eyebrow,
+.pdc-entry-page .eyebrow,
+.pdc-access-card .eyebrow,
+.pdc-question-label,
+.pdc-page .pdc-question-label,
+.pdc-facilitator-row small,
+.pdc-round-status span,
+.pdc-provider-label,
+.pdc-roster-panel h3,
+.pdc-table-topic span,
+.pdc-phase-guidance label span,
+.pdc-radio-group legend,
+.passport-panel dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-microcopy,
+.mission-belief,
+.thinking-lens,
+.explore-trust-note,
+.visitor-count,
+.quick-mirror-card h2,
+.reflection-status,
+.reflection-details summary,
+.answer-explanation h3,
+.title-modal-lines p,
+.note-row strong,
+.footer-links a,
+.contact-status a,
+.contact-methods a,
+.module-card a,
+.card-link {
+  color: var(--blue-dark);
+}
+
+.button {
+  min-height: 48px;
+  border-radius: 12px;
+  padding-inline: 20px;
+  font-family: inherit;
+  font-size: 0.96rem;
+  font-weight: 740;
+  letter-spacing: 0;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary,
+.pdc-page .button.primary,
+.pdc-entry-page .button.primary {
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
+}
+
+.button.primary:hover,
+.pdc-page .button.primary:hover,
+.pdc-entry-page .button.primary:hover {
+  box-shadow: 0 20px 42px rgba(37, 99, 235, 0.28);
+}
+
+.button.secondary,
+.pdc-page .button.secondary,
+.pdc-entry-page .button.secondary,
+.contact-methods a {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.module-card,
+.category-card,
+.passport-panel,
+.tree-panel,
+.field-main,
+.field-side,
+.preview-band,
+.why-section,
+.contact-section,
+.quick-mirror-card,
+.challenge-card,
+.reflection-panel,
+.lens-result-group,
+.reflection-summary-card,
+.deep-prompt-panel,
+.answer-explanation,
+.title-modal-card,
+.field-chip,
+.learning-timeline li,
+.mission-card,
+.pdc-entry-hero,
+.pdc-entry-demo,
+.pdc-access-card,
+.pdc-card,
+.pdc-result,
+.pdc-feedback,
+.pdc-founder-panel,
+.pdc-council-room,
+.pdc-roster-panel,
+.pdc-dialogue-panel,
+.pdc-advanced-audit {
+  border-color: rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.category-card:hover,
+.quick-mirror-options button:hover,
+.answer-grid button:hover,
+.field-chip.is-active {
+  border-color: rgba(37, 99, 235, 0.28);
+  background: rgba(239, 246, 255, 0.82);
+  color: var(--ink);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.1);
+}
+
+.module-card span,
+.code,
+.founder-mode .category-code,
+.learning-timeline li > span,
+.quick-mirror-options span {
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: #ffffff;
+}
+
+.module-card h3,
+.category-card h3,
+.reflection-snippets h2,
+.mission-card h3,
+.idea-grid strong,
+.message-board h3,
+.quick-mirror-sentence,
+.lens-result-group h3,
+.lens-bar-row span,
+.lens-bar-row strong,
+.reflection-output h3,
+.reflection-briefing-grid h3,
+.reflection-briefing-grid p,
+.reflection-summary-card p:last-child,
+.title-modal-card h2,
+.field-chip strong,
+.note-row strong,
+.challenge-card h2 {
+  color: var(--ink);
+}
+
+.reflection-snippets {
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+.snippet-list p {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.home-trust,
+.about-block,
+.about-closing,
+.legal-block,
+.site-footer,
+.reflection-briefing-grid,
+.reflection-details,
+.content-block,
+.note-row {
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.mission-card,
+.idea-grid article,
+.quick-mirror-options button,
+.answer-grid button,
+.field-chip,
+.example-list li,
+.status-line strong,
+.challenge-status.is-green,
+.challenge-feedback.is-correct,
+.knowledge-title-status.is-unlocked {
+  border-color: rgba(37, 99, 235, 0.12);
+  background: rgba(239, 246, 255, 0.72);
+  color: var(--ink);
+}
+
+.status-line span,
+.challenge-status,
+.challenge-feedback,
+.scope-count,
+.challenge-feedback.is-wrong,
+.answer-grid button.is-wrong,
+.pdc-page .pdc-vote-chip-row span:nth-child(2),
+.pdc-page .pdc-placeholder-notice,
+.pdc-page .pdc-invalid,
+.pdc-page .pdc-recap-warning {
+  border-color: rgba(245, 158, 11, 0.2);
+  background: rgba(255, 251, 235, 0.82);
+  color: #92400e;
+}
+
+.answer-grid button.is-correct {
+  border-color: rgba(37, 99, 235, 0.28);
+  background: rgba(239, 246, 255, 0.9);
+  color: var(--blue-dark);
+}
+
+.map-stage {
+  border-color: rgba(37, 99, 235, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.map-legend .ready {
+  background: #22c55e;
+}
+
+.contact-form label,
+.pdc-access-form label,
+.pdc-question-label,
+.pdc-page .pdc-question-label {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.contact-form input,
+.contact-form textarea,
+.pdc-access-form input,
+.pdc-question-label textarea,
+.pdc-page .pdc-question-label textarea,
+.pdc-phase-guidance textarea,
+.deep-prompt-panel textarea {
+  border-color: rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 rgba(15, 23, 42, 0.02);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.pdc-access-form input:focus,
+.pdc-question-label textarea:focus,
+.pdc-page .pdc-question-label textarea:focus,
+.pdc-phase-guidance textarea:focus,
+.deep-prompt-panel textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.38);
+}
+
+.pdc-page .pdc-subtitle,
+.pdc-page .pdc-trust-line,
+.pdc-page .pdc-responsible-use,
+.pdc-page .pdc-count,
+.pdc-page .pdc-status,
+.pdc-page .pdc-roster-note,
+.pdc-page .pdc-dialogue-note,
+.pdc-page .pdc-memo-subtitle,
+.pdc-page .pdc-audit-head p,
+.pdc-page .pdc-profile-panel p,
+.pdc-page .pdc-vote-snapshot small,
+.pdc-page .pdc-role-line,
+.pdc-page .pdc-trail-meta,
+.pdc-page .pdc-trail-votes,
+.pdc-entry-hero p:not(.eyebrow),
+.pdc-entry-demo p,
+.pdc-access-card p {
+  color: var(--muted);
+}
+
+.pdc-page .pdc-mode-option,
+.pdc-page .pdc-question-label textarea,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-dialogue-board li,
+.pdc-page .pdc-phase-guidance,
+.pdc-page .pdc-vote-snapshot,
+.pdc-page .pdc-reintroduced,
+.pdc-page .pdc-final-preview,
+.pdc-page .pdc-profile-panel,
+.pdc-page .pdc-recap-section,
+.pdc-page .pdc-advanced-audit-grid article,
+.pdc-page .pdc-adaptive-package-sections section,
+.pdc-page .pdc-radio-group label,
+.pdc-page .pdc-usage-grid div {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.pdc-page .pdc-mode-option.is-selected,
+.pdc-page .pdc-roster-row:hover,
+.pdc-page .pdc-roster-row.is-selected,
+.pdc-page .pdc-dialogue-board li.is-current {
+  border-color: rgba(37, 99, 235, 0.38);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.98), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
+}
+
+.pdc-page .pdc-facilitator-row,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-recap-recommendation,
+.pdc-page .pdc-audit-highlight {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.92), rgba(255, 255, 255, 0.92));
+}
+
+.pdc-page .pdc-round-summary {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, #111827, #1d4ed8 56%, #4f46e5);
+}
+
+.pdc-page .pdc-advanced-audit {
+  border-color: rgba(99, 102, 241, 0.18);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(242, 246, 255, 0.88)),
+    radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.12), transparent 30%);
+}
+
+.pdc-page .pdc-audit-judgment {
+  border-color: rgba(37, 99, 235, 0.16);
+  background: rgba(239, 246, 255, 0.82);
+}
+
+.pdc-page .pdc-founder-preview-tools,
+.message-board,
+.founder-contact-debug,
+.title-modal-lines,
+.founder-note,
+.review-log,
+.knowledge-title-status,
+.reflection-panel.is-unlocked,
+.lens-result-group.is-strongest {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: rgba(239, 246, 255, 0.72);
+}
+
+@media (max-width: 660px) {
+  .home-page .hero h1,
+  .section-heading.compact h1,
+  .field-hero h1,
+  .about-opening h1,
+  .legal-hero h1,
+  .pdc-entry-hero h1,
+  .pdc-card h1,
+  .pdc-page .pdc-card h1 {
+    font-size: clamp(2.15rem, 11vw, 3.25rem);
+  }
+
+  .nav-links {
+    gap: 8px 14px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    padding-block: 7px;
   }
 }
