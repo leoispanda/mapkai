@@ -557,6 +557,53 @@ body:not(.founder-mode) .founder-public-entry {
   line-height: 1.45;
 }
 
+.pdc-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.pdc-entry-option {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 100%;
+  border: 1px solid rgba(15, 107, 87, 0.14);
+  border-radius: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.pdc-entry-option h2,
+.pdc-entry-option p {
+  margin: 0;
+}
+
+.pdc-entry-option form {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.pdc-entry-option label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.pdc-entry-option input {
+  width: 100%;
+  border: 1px solid rgba(15, 107, 87, 0.2);
+  border-radius: 8px;
+  padding: 12px 13px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font: inherit;
+}
+
 .pdc-question-label {
   display: grid;
   gap: 9px;
@@ -3545,6 +3592,7 @@ canvas {
   }
 
   .pdc-mode-grid,
+  .pdc-entry-grid,
   .pdc-usage-grid,
   .pdc-entry-demo,
   .pdc-access-card,

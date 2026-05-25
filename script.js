@@ -3754,6 +3754,14 @@ function createPdcBaseState(overrides = {}) {
     question: "",
     recap: null,
     founderPreview: false,
+    councilTier: "standard",
+    requestedTier: "standard",
+    effectiveTier: "standard",
+    phaseModel: "",
+    finalModel: "",
+    founderOnlyFullFunction: false,
+    demoMode: false,
+    demoFinalVisible: false,
     selectedPersonaId: "",
     activeRoundIndex: 0,
     pdcPhases: [],
@@ -3831,6 +3839,8 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     message,
     question,
     recap: null,
+    demoMode: false,
+    demoFinalVisible: false,
     selectedPersonaId: "",
     activeRoundIndex: 0,
     pdcPhases: [],
@@ -3882,6 +3892,121 @@ const pdcWarmupPersonas = [
   { id: "caleb-gu", englishName: "Mira Ethos", name: "Mira Ethos", role: "Time, Energy & Sustainability", responsibility: "Check time and energy." },
   { id: "orion-zhuge", englishName: "Orion Zhuge", name: "诸葛观辰", role: "Timing & Momentum", responsibility: "Check timing and momentum." },
 ];
+const PDC_DEMO_SCRIPT = {
+  topic: {
+    en: "A new website has a big long-term vision, but currently has almost no attention. Should it release a small practical tool to attract early users?",
+    zh: "一个新网站有长期愿景，但现在几乎没人关注。是否应该先发布一个小工具来吸引第一批用户？",
+  },
+  rounds: [
+    {
+      id: "demo-round-1a",
+      roundNumber: 1,
+      phaseType: "A",
+      label: {
+        en: "Round 1A — Initial Positions",
+        zh: "第 1 轮 A — 初始立场",
+      },
+      statements: [
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "The first gap is evidence: attention is low, so a small practical tool can create real behavior data before the larger vision asks for trust."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "The team should check whether the tool is a genuine bridge to the vision, not just a panic response to quiet early traffic."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "A narrow tool lowers launch risk, but only if scope is tightly capped and maintenance cost is visible from day one."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "The tool can become the first doorway into the long-term idea if it teaches users one valuable habit."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "The best move may be a tool that also tells the story of the larger vision through its workflow."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "The hidden trap is building something useful but unrelated, then mistaking activity for strategic progress."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "A practical tool gives early supporters something concrete to share, which can make the project easier to explain."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "This is worth doing only if the first version can be built and supported without draining the core team."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The timing favors a small opening: the vision is too broad for a cold audience, but a useful first door can create momentum."],
+      ],
+    },
+    {
+      id: "demo-round-1b",
+      roundNumber: 1,
+      phaseType: "B",
+      label: {
+        en: "Round 1B — Challenge & Voting",
+        zh: "第 1 轮 B — 挑战与投票",
+      },
+      statements: [
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Owen Insight: the concern is real, but no attention means we need a measured experiment before judging strategic purity.", "challenge", "iris-song", "Owen Insight", "adrian-xu", "Nina Ember", "The long-view frame connects the tool to the future product.", "felix-jiang", "Wang Zhibai", "The third-path idea may be too broad for a first build."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: data is useful, but if the tool is emotionally disconnected from the mission, the team may resent maintaining it.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The blind-spot warning protects the team from chasing shallow activity.", "ethan-shen", "Rex Velocity", "Evidence can become a shield for avoiding a harder positioning choice."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Wang Zhibai: combining tool and story sounds elegant, but it may increase scope before the team proves basic demand.", "challenge", "felix-jiang", "Wang Zhibai", "caleb-gu", "Mira Ethos", "The energy constraint is the most operationally honest filter.", "felix-jiang", "Wang Zhibai", "The concept needs a sharper boundary before implementation."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I challenge Max Build: scope control matters, but being too defensive could produce a tool too small to teach the market anything.", "challenge", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The evidence-first approach gives the next move measurable value.", "clara-lin", "Vera Flow", "Emotional alignment matters, but it should not prevent a small learning move."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I build on Nina Ember: the tool should be tiny, but its interaction should quietly reveal the larger MapKAI promise.", "build", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The long-view bridge gives the tool strategic direction.", "marcus-lu", "Max Build", "Risk control could shrink the idea until it becomes forgettable."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: shareability is useful, but social spread should not become the substitute for solving a real user pain.", "challenge", "julian-cheng", "Adrian North", "caleb-gu", "Mira Ethos", "The energy boundary keeps the team from overbuilding for approval.", "julian-cheng", "Adrian North", "Social clarity is secondary until the practical value is proven."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I challenge Mira Ethos: if the build is too private and minimal, supporters may still have nothing concrete to recommend.", "challenge", "caleb-gu", "Mira Ethos", "felix-jiang", "Wang Zhibai", "A tool that carries the story can make sharing natural.", "iris-song", "Owen Insight", "The warning is valid but may underuse the social value of a useful artifact."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge Nina Ember: long-term opportunity is not enough unless the first tool has a strict support ceiling.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The risk frame gives the launch a sustainable boundary.", "adrian-xu", "Nina Ember", "The opportunity case needs a smaller first commitment."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify Rex Velocity: the right timing is not a grand release; it is a small signal that shows whether the audience leans in.", "clarify", "ethan-shen", "Rex Velocity", "ethan-shen", "Rex Velocity", "The evidence frame best fits the current quiet stage.", "felix-jiang", "Wang Zhibai", "The bridge idea should wait until the first signal is clearer."],
+      ],
+      voteSummary: {
+        leadingContributor: { speakerId: "ethan-shen", speakerName: "Rex Velocity", count: 3, reasonSummary: "The council values an evidence-producing practical tool as the first move." },
+        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 3, reasonSummary: "The creative bridge is attractive but currently carries the clearest scope risk." },
+      },
+      blueWhaleSummary: {
+        text: "The council is not asking whether the long-term vision is valid; it is asking what small public proof can earn attention without distorting the mission. The strongest tension is between a useful narrow tool and a tool that also carries the larger story.",
+        convergenceLevel: "medium",
+      },
+    },
+    {
+      id: "demo-round-2a",
+      roundNumber: 2,
+      phaseType: "A",
+      label: {
+        en: "Round 2A — Updated Positions",
+        zh: "第 2 轮 A — 更新立场",
+      },
+      statements: [
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I am more supportive now, but only if the tool defines one measurable behavior: first use, repeat use, or sharing."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I can support the tool if the team names the emotional promise first, so the experiment does not feel like a detour."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "My position tightens: build it only with a fixed scope, fixed support window, and clear stop condition."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I still support releasing it, but the tool must teach users the first habit the larger website will later deepen."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept the scope pressure and would reduce the idea to one practical action with one subtle story cue."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "My concern becomes sharper: the team should write what signal would prove the tool is not just busy work."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I still see sharing value, but it should come after usefulness, not before it."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I can support a first release if the team can maintain it calmly for four weeks without blocking the deeper product."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "The moment favors a small controlled release, not a large reveal."],
+      ],
+    },
+    {
+      id: "demo-round-2b",
+      roundNumber: 2,
+      phaseType: "B",
+      label: {
+        en: "Round 2B — Challenge, Contribution Vote & Concern Vote",
+        zh: "第 2 轮 B — 挑战、贡献票与顾虑票",
+      },
+      statements: [
+        ["ethan-shen", "Rex Velocity", "Facts & Evidence", "I challenge Vera Flow: emotional promise matters, but the first release should be judged by behavior evidence, not internal resonance alone.", "challenge", "clara-lin", "Vera Flow", "marcus-lu", "Max Build", "The stop condition makes the experiment responsible.", "clara-lin", "Vera Flow", "The emotional filter could slow the experiment too much."],
+        ["clara-lin", "Vera Flow", "Emotion & Inner Desire", "I challenge Rex Velocity: evidence without a clear promise can produce numbers that do not answer the real product question.", "challenge", "ethan-shen", "Rex Velocity", "iris-song", "Owen Insight", "The signal definition protects meaning, not just metrics.", "ethan-shen", "Rex Velocity", "Evidence needs a more explicit interpretation frame."],
+        ["marcus-lu", "Max Build", "Risk & Downside", "I challenge Nina Ember: teaching a future habit is good, but it must fit inside the fixed support window.", "challenge", "adrian-xu", "Nina Ember", "caleb-gu", "Mira Ethos", "The four-week maintenance limit is the strongest practical guardrail.", "adrian-xu", "Nina Ember", "The long-view habit could invite extra features."],
+        ["adrian-xu", "Nina Ember", "Opportunity & Long View", "I build on Max Build: the fixed scope should define the smallest habit that still points toward the larger MapKAI vision.", "build", "marcus-lu", "Max Build", "ethan-shen", "Rex Velocity", "The measurement frame helps the team learn fast.", "felix-jiang", "Wang Zhibai", "The creative bridge remains less essential than proof of need."],
+        ["felix-jiang", "Wang Zhibai", "Creativity & Third Path", "I accept observer status if the council needs to narrow; my remaining note is to keep one small story cue so the tool does not feel generic.", "clarify", "adrian-xu", "Nina Ember", "adrian-xu", "Nina Ember", "The habit bridge keeps the small release connected to the bigger promise.", "felix-jiang", "Wang Zhibai", "The creative layer is still the easiest part to overextend."],
+        ["iris-song", "Owen Insight", "Blind Spots & Self-Deception", "I challenge Adrian North: shareability should be treated as a secondary signal after actual usefulness.", "challenge", "julian-cheng", "Adrian North", "marcus-lu", "Max Build", "The stop condition prevents identity-driven overwork.", "julian-cheng", "Adrian North", "Social spread could tempt the team into optimizing the wrong thing."],
+        ["julian-cheng", "Adrian North", "Relationships & Social Impact", "I build on Owen Insight: sharing should be allowed but not designed as the main success metric yet.", "build", "iris-song", "Owen Insight", "caleb-gu", "Mira Ethos", "The sustainability frame protects long-term trust.", "felix-jiang", "Wang Zhibai", "The story cue should stay minimal."],
+        ["caleb-gu", "Mira Ethos", "Time, Energy & Sustainability", "I challenge everyone: if the first version cannot be maintained calmly, the decision should pause until the scope is smaller.", "challenge", "adrian-xu", "Nina Ember", "marcus-lu", "Max Build", "The fixed boundary turns the tool from ambition into an experiment.", "felix-jiang", "Wang Zhibai", "The creative layer remains the clearest maintenance risk."],
+        ["orion-zhuge", "Orion Zhuge", "Timing & Momentum", "I clarify the group: the right move is a controlled opening with a review point, not an open-ended product commitment.", "clarify", "caleb-gu", "Mira Ethos", "caleb-gu", "Mira Ethos", "The timing signal is strongest when paired with a sustainability limit.", "felix-jiang", "Wang Zhibai", "The story layer should move into observer status until the core signal is proven."],
+      ],
+      voteSummary: {
+        leadingContributor: { speakerId: "marcus-lu", speakerName: "Max Build", count: 3, reasonSummary: "The fixed scope and stop condition turn the release into a bounded experiment." },
+        mostPressuredPerspective: { speakerId: "felix-jiang", speakerName: "Wang Zhibai", count: 4, reasonSummary: "The creative bridge is useful later, but it is the most likely source of scope expansion now." },
+      },
+      rosterUpdate: {
+        shouldArchivePerspective: true,
+        archivedSpeakerId: "felix-jiang",
+        archivedSpeakerName: "Wang Zhibai",
+        reason: "the council wants the first public tool to prove practical demand before adding a stronger story layer",
+      },
+      blueWhaleSummary: {
+        text: "The council has compressed the decision into a conditional yes: release a small practical tool only if it measures one behavior, stays within a fixed support window, and has a clear stop condition. Wang Zhibai's creative bridge moves to observer status for now, so the first release does not overextend before usefulness is proven.",
+        convergenceLevel: "high",
+        shouldConsiderStopping: true,
+      },
+    },
+  ],
+  finalRecap: {
+    en: "Demo script — no AI used. The council does not simply support or reject the tool. It narrows the question into a bounded next step: release one small practical tool if it creates measurable early behavior, can be maintained calmly for four weeks, and includes a stop condition before scope expands. The larger vision stays intact, while the first move becomes a test of real user value.",
+    zh: "示例演示 — 未使用 AI。这个委员会没有简单支持或反对小工具，而是把问题压缩成一个有边界的下一步：如果它能带来可衡量的早期行为、四周内可以平稳维护，并且有明确停止条件，就发布一个小工具。长期愿景保留，但第一步先验证真实用户价值。",
+  },
+};
 const pdcWarmupStages = [
   {
     "blue-whale": "Blue Whale is preparing the council...",
@@ -3981,6 +4106,134 @@ const pdcWarmupStages = [
   },
 ];
 const pdcWarmupStageDurationMs = 5000;
+
+function createPdcDemoRecap() {
+  const personas = pdcWarmupPersonas.map((persona) => ({ ...persona }));
+  const phases = PDC_DEMO_SCRIPT.rounds.map((round) => ({
+    id: round.id,
+    label: `${round.label.en} / ${round.label.zh}`,
+    phaseLabel: `${round.label.en} / ${round.label.zh}`,
+    roundNumber: round.roundNumber,
+    phaseType: round.phaseType,
+    provider: "demo",
+    dialogue: round.statements.map((item) => {
+      const [
+        speakerId,
+        speakerName,
+        role,
+        text,
+        stanceType = "",
+        targetSpeakerId = "",
+        targetSpeakerName = "",
+        contributionTargetId = "",
+        contributionTargetName = "",
+        contributionReason = "",
+        concernTargetId = "",
+        concernTargetName = "",
+        concernReason = "",
+      ] = item;
+      return {
+        speakerId,
+        speakerName,
+        speakerChineseName: speakerName === "Orion Zhuge" ? "诸葛观辰" : "",
+        speakerLocalName: speakerName === "Orion Zhuge" ? "诸葛观辰" : "",
+        role,
+        text,
+        stanceType,
+        targetSpeakerId,
+        targetSpeakerName,
+        stanceSummary: text,
+        contentSource: "demo-script",
+        contributionVote: contributionTargetId ? { targetSpeakerId: contributionTargetId, targetSpeakerName: contributionTargetName, reason: contributionReason } : null,
+        concernVote: concernTargetId ? { targetSpeakerId: concernTargetId, targetSpeakerName: concernTargetName, reason: concernReason } : null,
+      };
+    }),
+    blueWhaleSummary: {
+      title: "Blue Whale Summary",
+      text: round.blueWhaleSummary?.text || "",
+      convergenceLevel: round.blueWhaleSummary?.convergenceLevel || "low",
+      shouldConsiderStopping: round.blueWhaleSummary?.shouldConsiderStopping === true,
+    },
+    meetingMemory: createPdcMeetingMemory({ phaseType: round.phaseType, summaryText: round.blueWhaleSummary?.text || "" }),
+    voteSummary: round.voteSummary || null,
+    rosterUpdate: round.rosterUpdate || null,
+    canContinue: true,
+    canStopAndSummarize: true,
+  }));
+  return {
+    title: "Public Demo",
+    modeId: "demo",
+    modeLabel: "Public Demo",
+    isDemo: true,
+    isPlaceholder: false,
+    dialogueProvider: "demo",
+    requestedProvider: "demo",
+    actualProvider: "demo",
+    fallbackUsed: false,
+    modelName: "",
+    placeholderNotice: "Demo script — no AI used. / 示例演示 — 未使用 AI。",
+    councilRoom: {
+      title: "PDC Council Room",
+      subtitle: "Demo script — no AI used. / 示例演示 — 未使用 AI。",
+      decisionOnTable: `${PDC_DEMO_SCRIPT.topic.en}\n${PDC_DEMO_SCRIPT.topic.zh}`,
+      personas,
+      sessionRoster: personas,
+      dialogueProvider: "demo",
+      currentRoundLabel: phases[0]?.label || "Round 1A — Initial Positions",
+      dialogue: phases[0]?.dialogue || [],
+      rounds: phases,
+      facilitator: {
+        id: "blue-whale",
+        name: "蓝鲸",
+        englishName: "Blue Whale",
+        role: "Facilitator",
+        summary: phases[0]?.blueWhaleSummary?.text || "",
+        summaryTitle: "Blue Whale Summary",
+      },
+    },
+    recap: {
+      decisionFrame: PDC_DEMO_SCRIPT.topic.en,
+      coreTension: "Whether a small practical tool can create real early-user evidence without pulling the website away from its long-term vision.",
+      councilHighlights: [
+        "The council separates attention-building from mission drift.",
+        "Contribution votes favor evidence, scope control, and sustainability.",
+        "The creative story layer is preserved as an observer perspective rather than forced into the first release.",
+      ],
+      debateSnapshot: "Rex Velocity pushes for measurable evidence; Max Build and Mira Ethos add boundaries; Wang Zhibai's story layer is archived as a perspective to revisit after usefulness is proven.",
+      condensedReview: PDC_DEMO_SCRIPT.finalRecap.en,
+      finalRecommendation: "Release one small practical tool only as a bounded experiment with one behavior metric, a four-week support limit, and a clear stop condition.",
+      nextActions: [
+        "Define the one behavior the tool must measure.",
+        "Set the first version scope and four-week support window.",
+        "Review whether the tool created real early-user evidence before expanding.",
+      ],
+      whatNotToDo: [
+        "Do not turn the demo tool into the full product.",
+        "Do not optimize for sharing before usefulness is proven.",
+        "Do not keep adding story layers before the first signal is clear.",
+      ],
+      reflectionNote: PDC_DEMO_SCRIPT.finalRecap.zh,
+    },
+  };
+}
+
+function startPdcDemoMode() {
+  clearPdcPlaybackTimer();
+  clearPdcWarmupTimer();
+  pdcState = createPdcBaseState({
+    valid: true,
+    status: "ready",
+    selectedMode: "personal",
+    question: `${PDC_DEMO_SCRIPT.topic.en}\n${PDC_DEMO_SCRIPT.topic.zh}`,
+    demoMode: true,
+    demoFinalVisible: false,
+    recap: createPdcDemoRecap(),
+    pdcSessionId: createPdcSessionId(),
+  });
+  pdcState.pdcPhases = pdcState.recap.councilRoom.rounds.map((phase, index) => normalizePdcPhase(phase, index, pdcState.recap.councilRoom));
+  ensurePdcRosterState(pdcState.recap.councilRoom.personas);
+  beginPdcPhasePlayback(0);
+}
 
 const reviewLog = {
   updatedModule: "Module Architecture MVP",
@@ -4187,7 +4440,7 @@ function getCurrentPdcPass() {
 
 function isPdcFounderPreviewAllowed(pass) {
   const params = new URLSearchParams(window.location.search);
-  const requested = params.get("founderPreview") === "1" || !pass;
+  const requested = params.get("founderPreview") === "1" && !pass;
   return requested && document.body.classList.contains("founder-mode");
 }
 
@@ -4212,6 +4465,13 @@ async function initPdcPilotPage() {
   if (founderPreviewAllowed) {
     pdcState.valid = true;
     pdcState.status = "ready";
+    pdcState.message = "";
+    renderPdcPilot();
+    return;
+  }
+  if (!pass && !founderPreviewRequested) {
+    pdcState.valid = true;
+    pdcState.status = "public";
     pdcState.message = "";
     renderPdcPilot();
     return;
@@ -4273,17 +4533,22 @@ function renderPdcPilot() {
     root.innerHTML = pdcShellTemplate(`<p class="pdc-invalid">${escapeHtml(pdcState.message)}</p>`);
     return;
   }
+  if (pdcState.status === "public") {
+    root.innerHTML = pdcShellTemplate(renderPdcPublicEntry());
+    return;
+  }
   const visibleRecap = getPdcVisibleRecap();
   if (visibleRecap) {
     root.innerHTML = `
       ${renderPdcCouncilRoom(visibleRecap)}
+      ${pdcState.demoMode ? renderPdcDemoNotice() : ""}
       ${pdcState.finalRecapLoading && !pdcState.warmup ? `<section class="pdc-result"><p class="trust-note">Generating Council Recap...</p></section>` : ""}
       ${renderPdcReintroducedPerspective()}
-      ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcRecap(pdcState.recap) : ""}
+      ${(pdcState.discussionStopped || pdcState.demoFinalVisible) && !pdcState.warmup ? renderPdcRecap(pdcState.recap) : ""}
       ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcAdvancedFinalAudit() : ""}
       ${renderPdcProviderDiagnostics()}
       ${renderPdcFounderPreviewActions()}
-      ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcFeedbackForm() : ""}
+      ${pdcState.discussionStopped && !pdcState.warmup && !pdcState.demoMode ? renderPdcFeedbackForm() : ""}
     `;
     return;
   }
@@ -4295,21 +4560,61 @@ function renderPdcPilot() {
 
   const remaining = 1200 - pdcState.question.length;
   root.innerHTML = pdcShellTemplate(`
-    <div class="pdc-mode-grid" role="radiogroup" aria-label="PDC type">
-      ${["personal", "company"].map((mode) => `
-        <button class="pdc-mode-option ${pdcState.selectedMode === mode ? "is-selected" : ""}" type="button" data-pdc-mode="${mode}" aria-pressed="${pdcState.selectedMode === mode}">
-          <strong>${mode === "personal" ? "Personal PDC" : "Company PDC"}</strong>
-          <span>${mode === "personal" ? "For personal direction, energy, learning, and identity decisions." : "For product, company, UX, technical, brand, privacy, and execution decisions."}</span>
-        </button>`).join("")}
-    </div>
+    ${pdcState.founderPreview && pdcState.councilTier === "full_function" ? `
+      <section class="pdc-entry-option">
+        <p class="eyebrow">Founder Full Function / Founder 完整高质量版本</p>
+        <h2>Founder Full Function</h2>
+        <p>Run the full high-quality council with 5.5 for all rounds.</p>
+        <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
+      </section>` : ""}
     <label class="pdc-question-label">
       <span>Decision question</span>
       <textarea data-pdc-question maxlength="1200" rows="7" placeholder="Write one decision question you want to examine.">${escapeHtml(pdcState.question)}</textarea>
     </label>
     <p class="pdc-count">${remaining} characters left</p>
-    <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : "Start PDC Experience"}</button>
+    <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : "Start Standard Council"}</button>
     ${pdcState.message ? `<p class="pdc-status">${escapeHtml(pdcState.message)}</p>` : ""}
   `);
+}
+
+function renderPdcPublicEntry() {
+  const founder = document.body.classList.contains("founder-mode");
+  return `
+    <div class="pdc-entry-grid">
+      <section class="pdc-entry-option">
+        <p class="eyebrow">Public Demo / 公开演示版</p>
+        <h2>Public Demo</h2>
+        <p>Curious how PDC works? Watch a no-AI demo first.</p>
+        <p>想先看看 PDC 如何运作？可以先观看一个不消耗 AI 的示例演示。</p>
+        <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看公开演示</button>
+      </section>
+      <section class="pdc-entry-option">
+        <p class="eyebrow">Standard Council / 标准体验版</p>
+        <h2>Standard Council</h2>
+        <p>Use Access Pass</p>
+        <p>使用体验码进入</p>
+        <form data-pdc-access-form>
+          <label>
+            <span>PDC access code</span>
+            <input name="pdc_access_code" type="text" autocomplete="off" placeholder="Enter access code" required>
+          </label>
+          <button class="button primary" type="submit">Use Access Pass / 使用体验码进入</button>
+          <p class="pdc-access-status" aria-live="polite"></p>
+        </form>
+      </section>
+      ${founder ? `
+        <section class="pdc-entry-option founder-only">
+          <p class="eyebrow">Founder 完整高质量版本</p>
+          <h2>Founder Full Function</h2>
+          <p>Run the full high-quality council with 5.5 for all rounds.</p>
+          <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
+          <button class="button primary" type="button" data-pdc-founder-full>Open Full Function Council / 打开完整高质量版本</button>
+        </section>` : ""}
+    </div>`;
+}
+
+function renderPdcDemoNotice() {
+  return `<section class="pdc-result"><p class="pdc-placeholder-notice">Demo script — no AI used. / 示例演示 — 未使用 AI。</p></section>`;
 }
 
 function renderPdcPreparingShell(message = "Preparing this phase...") {
@@ -4342,10 +4647,10 @@ function renderPdcPreparingShell(message = "Preparing this phase...") {
 function pdcShellTemplate(innerHtml) {
   return `
     <section class="pdc-card" aria-live="polite">
-      <p class="eyebrow">Private Pilot</p>
+      <p class="eyebrow">PDC Council Rhythm</p>
       <h1>MapKAI PDC</h1>
       ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Founder Mode Preview</p>` : ""}
-      <p class="pdc-subtitle">A private AI decision council for structured reflection.</p>
+      <p class="pdc-subtitle">A structured council debate for clearer decisions.</p>
       <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
       ${innerHtml}
       <details class="pdc-responsible-use">
@@ -4415,7 +4720,7 @@ function renderPdcCouncilRoom(recap) {
       <div class="pdc-room-heading">
         <p class="eyebrow">Council Preview</p>
         <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
-        <p>The council reviews your decision in structured rounds.</p>
+        <p>${pdcState.demoMode ? "Demo script — no AI used. / 示例演示 — 未使用 AI。" : "The council reviews your decision in structured rounds."}</p>
       </div>
       <div class="pdc-live-room ${selectedPersona ? "has-selected-profile" : ""}">
         <aside class="pdc-roster-panel ${selectedPersona ? "has-selected-profile" : ""}" aria-label="Council Members">
@@ -4470,7 +4775,7 @@ function renderPdcCouncilRoom(recap) {
           ${showPhaseAfterPlayback ? renderPdcPhaseGuidance(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcFinalRoundPreview(currentRound) : ""}
           ${renderPdcFounderPhaseDebug(currentRound)}
-          ${!isWarmupPhase ? renderPdcRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying) }) : `<div class="pdc-round-controls"><span class="pdc-stopped-label">Waiting for OpenAI structured phase...</span></div>`}
+          ${pdcState.demoMode ? renderPdcDemoRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying), currentIndex: roundIndex, total: rounds.length }) : (!isWarmupPhase ? renderPdcRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying) }) : `<div class="pdc-round-controls"><span class="pdc-stopped-label">Waiting for OpenAI structured phase...</span></div>`)}
         </section>
       </div>
     </section>`;
@@ -4727,6 +5032,19 @@ function renderPdcRoundControls({ hasDialogue, playbackActive = false }) {
     </div>`;
 }
 
+function renderPdcDemoRoundControls({ hasDialogue, playbackActive = false, currentIndex = 0, total = 0 }) {
+  if (!hasDialogue) return "";
+  if (playbackActive) return `<div class="pdc-round-controls"><span class="pdc-stopped-label">Demo round is playing...</span></div>`;
+  const isLast = currentIndex >= total - 1;
+  return `
+    <div class="pdc-round-controls">
+      ${currentIndex > 0 ? `<button class="button secondary" type="button" data-pdc-demo-prev>Previous demo round</button>` : ""}
+      ${isLast
+        ? `<button class="button primary" type="button" data-pdc-demo-final>Final Demo Recap</button>`
+        : `<button class="button primary" type="button" data-pdc-demo-next>Next demo round</button>`}
+    </div>`;
+}
+
 function renderPdcPhaseGuidance(currentRound) {
   if (pdcState.discussionStopped) return "";
   if (shouldShowPdcFinalRoundPreview(currentRound) || isPdcFinalPhaseComplete(currentRound)) return "";
@@ -4798,7 +5116,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
   const previousSummary = currentRound.previousSummary || "";
   const diagnostics = currentRound.contentDiagnostics || pdcState.providerDiagnostics?.contentDiagnostics || null;
   const playbackDebug = getPdcPlaybackDebug(currentRound);
-  const summary = `Provider: ${pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder"} · Model: ${pdcState.providerDiagnostics?.modelName || "-"} · Fallback: ${pdcState.providerDiagnostics?.fallbackUsed ? "yes" : "no"} · Strict: ${pdcState.providerDiagnostics?.strict ? "true" : "false"} · Duration: ${Number(diagnostics?.phaseTotalDurationMs || diagnostics?.totalPhaseDurationMs || diagnostics?.phaseOpenAiDurationMs || diagnostics?.openAiDurationMs || 0)}ms · Prompt chars: ${Number(diagnostics?.promptCharLength || 0)}`;
+  const summary = `Tier: ${pdcState.effectiveTier || pdcState.councilTier || "standard"} · Provider: ${pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder"} · Phase model: ${pdcState.phaseModel || pdcState.providerDiagnostics?.phaseModel || pdcState.providerDiagnostics?.modelName || "-"} · Final model: ${pdcState.finalModel || pdcState.providerDiagnostics?.finalModel || "-"} · Fallback: ${pdcState.providerDiagnostics?.fallbackUsed ? "yes" : "no"} · Strict: ${pdcState.providerDiagnostics?.strict ? "true" : "false"} · Duration: ${Number(diagnostics?.phaseTotalDurationMs || diagnostics?.totalPhaseDurationMs || diagnostics?.phaseOpenAiDurationMs || diagnostics?.openAiDurationMs || 0)}ms · Prompt chars: ${Number(diagnostics?.promptCharLength || 0)}`;
   return `
     <details class="pdc-founder-phase-debug">
       <summary>
@@ -4807,6 +5125,7 @@ function renderPdcFounderPhaseDebug(currentRound) {
       </summary>
       <div class="pdc-debug-details">
         <p>Previous summary: ${previousSummary ? "available" : "missing"} · User intervention: ${currentRound.userIntervention ? "included" : "empty"} · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}</p>
+        <p>councilTier: ${escapeHtml(pdcState.councilTier || "standard")} · requestedTier: ${escapeHtml(pdcState.requestedTier || "standard")} · effectiveTier: ${escapeHtml(pdcState.effectiveTier || "standard")} · phaseModel: ${escapeHtml(pdcState.phaseModel || "-")} · finalModel: ${escapeHtml(pdcState.finalModel || "-")} · founderOnlyFullFunction: ${pdcState.founderOnlyFullFunction ? "true" : "false"}</p>
         <p>warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)} · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}</p>
         ${diagnostics ? `<p>OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
         ${diagnostics ? `<p>duplicateSpeakerIds: ${escapeHtml((diagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted: ${diagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded: ${diagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed: ${diagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason: ${escapeHtml(pdcState.providerDiagnostics?.fallbackReason || "-")}</p>` : ""}
@@ -4998,8 +5317,8 @@ function createPdcWarmupPhase({ phaseLabel, roundNumber, phaseType, startedAt, p
 function createPdcWarmupRecap(phase, personas) {
   const roster = normalizePdcWarmupPersonas(personas);
   return {
-    modeId: pdcState.selectedMode,
-    modeLabel: pdcState.selectedMode === "company" ? "Company PDC" : "Personal PDC",
+    modeId: "personal",
+    modeLabel: "Personal PDC",
     dialogueProvider: "pending",
     councilRoom: {
       isWarmupRoom: true,
@@ -5091,6 +5410,38 @@ function isPdcPlaybackActive() {
   return pdcState.playback?.isPlaying === true;
 }
 
+function movePdcDemoRound(delta) {
+  if (!pdcState.demoMode || isPdcPlaybackActive()) return;
+  const room = pdcState.recap?.councilRoom;
+  const phases = room ? getPdcPhases(room) : [];
+  if (!phases.length) return;
+  pdcState.demoFinalVisible = false;
+  pdcState.activeRoundIndex = clampPdcIndex((Number(pdcState.activeRoundIndex) || 0) + delta, phases.length);
+  rebuildPdcDemoObserverState(phases);
+  beginPdcPhasePlayback(pdcState.activeRoundIndex);
+}
+
+function showPdcDemoFinalRecap() {
+  if (!pdcState.demoMode || isPdcPlaybackActive()) return;
+  rebuildPdcDemoObserverState(getPdcPhases(pdcState.recap?.councilRoom || {}));
+  pdcState.demoFinalVisible = true;
+  pdcState.discussionStopped = true;
+  renderPdcPilot();
+}
+
+function rebuildPdcDemoObserverState(phases = []) {
+  if (!pdcState.demoMode) return;
+  const room = pdcState.recap?.councilRoom || {};
+  const allIds = getPdcRosterPersonas(room, phases).map((persona) => persona.id).filter(Boolean);
+  const observerIds = [];
+  phases.slice(0, (Number(pdcState.activeRoundIndex) || 0) + 1).forEach((phase) => {
+    const speakerId = phase?.rosterUpdate?.shouldArchivePerspective ? phase.rosterUpdate.archivedSpeakerId : "";
+    if (speakerId && !observerIds.includes(speakerId)) observerIds.push(speakerId);
+  });
+  pdcState.observerRosterIds = observerIds;
+  pdcState.activeRosterIds = allIds.filter((id) => !observerIds.includes(id));
+}
+
 async function continuePdcPhase() {
   const room = pdcState.recap?.councilRoom;
   if (!room || pdcState.discussionStopped || pdcState.phaseLoading || pdcState.finalRecapLoading || isPdcPlaybackActive()) return;
@@ -5142,9 +5493,10 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     body: JSON.stringify({
       continue_phase: true,
       pass: pdcState.pass,
-      mode_id: pdcState.selectedMode,
+      mode_id: "personal",
       user_question: pdcState.question || room.decisionOnTable || "",
       founder_preview: pdcState.founderPreview,
+      council_tier: pdcState.councilTier || "standard",
       active_roster_ids: pdcState.activeRosterIds,
       observer_roster_ids: pdcState.observerRosterIds,
       observer_roster_context: (pdcState.observerRosterIds || []).map((speakerId) => {
@@ -5169,6 +5521,12 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok || data.ok !== true || !data.phase) throw new Error(data.message || "Could not continue PDC phase.");
   pdcState.recap.dialogueProvider = data.provider || pdcState.recap.dialogueProvider;
+  pdcState.councilTier = data.effectiveTier || data.councilTier || pdcState.councilTier || "standard";
+  pdcState.requestedTier = data.requestedTier || pdcState.requestedTier || "standard";
+  pdcState.effectiveTier = data.effectiveTier || pdcState.councilTier || "standard";
+  pdcState.phaseModel = data.phaseModel || pdcState.phaseModel || "";
+  pdcState.finalModel = data.finalModel || pdcState.finalModel || "";
+  pdcState.founderOnlyFullFunction = data.founderOnlyFullFunction === true || pdcState.founderOnlyFullFunction === true;
   pdcState.providerDiagnostics = {
     requestedProvider: data.requestedProvider,
     actualProvider: data.actualProvider || data.provider,
@@ -5177,6 +5535,12 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     providerErrorShort: data.providerErrorShort,
     jsonParseFailed: data.jsonParseFailed,
     modelName: data.modelName,
+    councilTier: pdcState.councilTier,
+    requestedTier: pdcState.requestedTier,
+    effectiveTier: pdcState.effectiveTier,
+    phaseModel: pdcState.phaseModel,
+    finalModel: pdcState.finalModel,
+    founderOnlyFullFunction: pdcState.founderOnlyFullFunction,
     schemaName: data.schemaName || data.contentDiagnostics?.schemaName || "",
     strict: data.strict === true || data.contentDiagnostics?.strict === true,
     contentDiagnostics: data.contentDiagnostics ? {
@@ -5292,6 +5656,12 @@ async function stopAndSummarizePdc() {
   renderPdcPilot();
   try {
     const result = await requestPdcFinalRecap();
+    pdcState.councilTier = result.effectiveTier || result.councilTier || pdcState.councilTier || "standard";
+    pdcState.requestedTier = result.requestedTier || pdcState.requestedTier || "standard";
+    pdcState.effectiveTier = result.effectiveTier || pdcState.councilTier || "standard";
+    pdcState.phaseModel = result.phaseModel || pdcState.phaseModel || "";
+    pdcState.finalModel = result.finalModel || result.modelName || pdcState.finalModel || "";
+    pdcState.founderOnlyFullFunction = result.founderOnlyFullFunction === true || pdcState.founderOnlyFullFunction === true;
     pdcState.recap.recap = normalizePdcRecapSectionsForDisplay(result.recap || pdcState.recap.recap);
     pdcState.recap.finalRecapProvider = result.actualProvider || result.provider || "";
     pdcState.recap.finalRecapFallbackUsed = result.fallbackUsed === true;
@@ -5327,9 +5697,10 @@ async function requestPdcFinalRecap() {
     body: JSON.stringify({
       final_recap: true,
       pass: pdcState.pass,
-      mode_id: pdcState.selectedMode,
+      mode_id: "personal",
       user_question: pdcState.question || room.decisionOnTable || "",
       founder_preview: pdcState.founderPreview,
+      council_tier: pdcState.councilTier || "standard",
       latest_phase: latestPhase,
       meeting_memory: latestPhase?.meetingMemory || null,
       vote_summary: latestPhase?.voteSummary || null,
@@ -5427,9 +5798,10 @@ async function requestPdcAdvancedFinalAudit() {
       advanced_audit_manual_trigger: true,
       pdc_session_id: pdcState.pdcSessionId || "",
       pass: pdcState.pass,
-      mode_id: pdcState.selectedMode,
+      mode_id: "personal",
       user_question: pdcState.question || room.decisionOnTable || "",
       founder_preview: true,
+      council_tier: pdcState.councilTier || "standard",
       final_recap_payload: pdcState.recap?.recap || null,
       phases: phases.map((phase) => ({
         label: phase.label || phase.phaseLabel || "",
@@ -6297,8 +6669,10 @@ function renderPdcProviderDiagnostics() {
   const auditDiagnostics = advancedAudit?.contentDiagnostics || null;
   const lifecycleDiagnostics = getPdcLifecycleDiagnostics(phaseDiagnostics);
   const summary = [
+    `councilTier: ${pdcState.effectiveTier || pdcState.councilTier || "standard"}`,
+    `phaseModel: ${pdcState.phaseModel || phase?.phaseModel || phase?.modelName || "-"}`,
+    `finalModel: ${pdcState.finalModel || final?.finalModel || final?.modelName || "-"}`,
     `Provider: ${phase?.actualProvider || phase?.provider || final?.actualProvider || final?.provider || "-"}`,
-    `Model: ${phase?.modelName || final?.modelName || "-"}`,
     `Fallback: ${(phase?.fallbackUsed || final?.fallbackUsed) ? "yes" : "no"}`,
     `Strict: ${(phase?.strict || phaseDiagnostics?.strict || final?.strict || finalDiagnostics?.finalRecapStrict) ? "true" : "false"}`,
     `Duration: ${Number(phaseDiagnostics?.phaseTotalDurationMs || phaseDiagnostics?.totalPhaseDurationMs || finalDiagnostics?.finalRecapTotalDurationMs || 0)}ms`,
@@ -6311,6 +6685,7 @@ function renderPdcProviderDiagnostics() {
         <em>Show debug details</em>
       </summary>
       <div class="pdc-debug-details">
+      <p>councilTier: ${escapeHtml(pdcState.councilTier || "standard")} · requestedTier: ${escapeHtml(pdcState.requestedTier || "standard")} · effectiveTier: ${escapeHtml(pdcState.effectiveTier || "standard")} · phaseModel: ${escapeHtml(pdcState.phaseModel || phase?.phaseModel || "-")} · finalModel: ${escapeHtml(pdcState.finalModel || final?.finalModel || "-")} · founderOnlyFullFunction: ${pdcState.founderOnlyFullFunction ? "true" : "false"}</p>
       ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
       ${phase ? `<p>Phase model: ${escapeHtml(phase.modelName || "-")} · Phase JSON parse failed: ${phase.jsonParseFailed ? "yes" : "no"} · Phase schema: ${escapeHtml(phase.schemaName || phaseDiagnostics?.schemaName || "-")} · Phase strict: ${(phase.strict || phaseDiagnostics?.strict) ? "true" : "false"}${phase.providerErrorShort ? ` · Phase error: ${escapeHtml(phase.providerErrorShort)}` : ""}</p>` : ""}
@@ -6428,15 +6803,22 @@ async function startPdcExperience() {
       headers,
       body: JSON.stringify({
         pass: pdcState.pass,
-        mode_id: pdcState.selectedMode,
+        mode_id: "personal",
         user_question: pdcState.question,
         founder_preview: pdcState.founderPreview,
+        council_tier: pdcState.councilTier || "standard",
       }),
     });
     const data = await response.json().catch(() => ({}));
     if (!response.ok || data.ok !== true) throw new Error(data.message || "The PDC experience could not be generated. Please try again later.");
     const warmupDiagnostics = finishPdcWarmup();
     pdcState.recap = data.recap;
+    pdcState.councilTier = data.effectiveTier || data.councilTier || data.recap?.councilTier || pdcState.councilTier || "standard";
+    pdcState.requestedTier = data.requestedTier || data.recap?.requestedTier || pdcState.requestedTier || "standard";
+    pdcState.effectiveTier = data.effectiveTier || data.recap?.effectiveTier || pdcState.councilTier || "standard";
+    pdcState.phaseModel = data.phaseModel || data.recap?.phaseModel || "";
+    pdcState.finalModel = data.finalModel || data.recap?.finalModel || "";
+    pdcState.founderOnlyFullFunction = data.founderOnlyFullFunction === true || data.recap?.founderOnlyFullFunction === true;
     pdcState.status = "complete";
     pdcState.selectedPersonaId = "";
     pdcState.activeRoundIndex = 0;
@@ -6454,6 +6836,12 @@ async function startPdcExperience() {
       providerErrorShort: data.recap.providerErrorShort,
       jsonParseFailed: data.recap.jsonParseFailed,
       modelName: data.recap.modelName,
+      councilTier: pdcState.councilTier,
+      requestedTier: pdcState.requestedTier,
+      effectiveTier: pdcState.effectiveTier,
+      phaseModel: pdcState.phaseModel,
+      finalModel: pdcState.finalModel,
+      founderOnlyFullFunction: pdcState.founderOnlyFullFunction,
       schemaName: data.recap.schemaName || data.recap.contentDiagnostics?.schemaName || "",
       strict: data.recap.strict === true || data.recap.contentDiagnostics?.strict === true,
       contentDiagnostics: {
@@ -6879,7 +7267,7 @@ function goToRoute(route, replace = false) {
     }
   }
   const visibleTarget = target;
-  document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc");
+  document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
@@ -8432,10 +8820,34 @@ document.addEventListener("click", (event) => {
     runPdcAdvancedFinalAudit();
     return;
   }
-  const pdcMode = event.target.closest("[data-pdc-mode]");
-  if (pdcMode) {
-    pdcState.selectedMode = pdcMode.dataset.pdcMode;
+  if (event.target.closest("[data-pdc-watch-demo]")) {
+    startPdcDemoMode();
+    return;
+  }
+  if (event.target.closest("[data-pdc-founder-full]")) {
+    pdcState = createPdcBaseState({
+      valid: true,
+      status: "ready",
+      founderPreview: true,
+      selectedMode: "personal",
+      councilTier: "full_function",
+      requestedTier: "full_function",
+      effectiveTier: "full_function",
+      founderOnlyFullFunction: true,
+    });
     renderPdcPilot();
+    return;
+  }
+  if (event.target.closest("[data-pdc-demo-next]")) {
+    movePdcDemoRound(1);
+    return;
+  }
+  if (event.target.closest("[data-pdc-demo-prev]")) {
+    movePdcDemoRound(-1);
+    return;
+  }
+  if (event.target.closest("[data-pdc-demo-final]")) {
+    showPdcDemoFinalRecap();
     return;
   }
   if (event.target.closest("[data-pdc-start]")) {
@@ -8551,6 +8963,9 @@ function setFounderMode(enabled) {
   }
   drawKnowledgeMap();
   renderChallenge();
+  if (normalizeRoute(window.location.pathname) === "/pdc-pilot") {
+    initPdcPilotPage();
+  }
 }
 
 function isFounderMode() {

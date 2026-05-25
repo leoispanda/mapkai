@@ -302,6 +302,15 @@ Latest PDC follow-up:
   Rex Velocity; Vera Flow; Max Stack; Nina Story; Wang Zhibai / 王之白; Owen Deep; Adrian North; Mira Sprint; Orion Zhuge / 诸葛观辰.
 - Existing PDC pass lifecycle, D1 tables, feedback API, founder summary API, and founder-only PDC Access Panel were preserved.
 
+Latest PDC access-tier follow-up:
+
+- Added no-AI Public Demo Mode with fixed topic and fixed scripted output.
+- Demo Mode is public, pass-free, no-AI, no-D1, and does not call `/api/pdc/start`.
+- Standard Council remains pass-based with mini phase rounds and 5.5 final recap.
+- Founder Full Function is founder-only and uses 5.5 for all rounds.
+- Company PDC is hidden from current UI but data is preserved.
+- Default visible PDC roster uses Rex Velocity, Vera Flow, Max Build, Nina Ember, Wang Zhibai, Owen Insight, Adrian North, Mira Ethos, and Orion Zhuge / 诸葛观辰.
+
 Latest PDC room UI follow-up:
 
 - Council Room participant display was upgraded from large persona speech cards to compact avatar/name seats around the meeting table.

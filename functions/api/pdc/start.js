@@ -1,16 +1,18 @@
 import { cleanText, ensurePdcTables, getFounderAccessCode, getIsoNow, getPass, hasValidFounderAccessCookie, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
-import { generatePdcAdvancedFinalAudit, generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
+import { generatePdcAdvancedFinalAudit, generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveCouncilTier, resolvePdcModels, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
 
   const body = await request.json().catch(() => ({}));
   const passCode = cleanText(body.pass, 80);
-  const modeId = ["personal", "company"].includes(body.mode_id) ? body.mode_id : "";
+  const modeId = "personal";
   const userQuestion = cleanText(body.user_question, 1200);
   const fixedFounderAccessEnabled = Boolean(getFounderAccessCode(env));
   const hasFounderAccess = fixedFounderAccessEnabled ? await hasValidFounderAccessCookie(request, env) : true;
   const isFounderPreview = body.founder_preview === true && isFounderRequest(request) && hasFounderAccess;
+  const tierInfo = resolveCouncilTier(body.council_tier, isFounderPreview);
+  const modelInfo = resolvePdcModels(tierInfo.effectiveTier);
   const isContinuePhase = body.continue_phase === true;
   const isFinalRecap = body.final_recap === true;
   const isAdvancedFinalAudit = body.advanced_final_audit === true;
@@ -20,21 +22,21 @@ export async function onRequest({ request, env }) {
   if (userQuestion.length > 1200) return json({ ok: false, message: "Please keep the decision question under 1200 characters." }, 400);
 
   if (isAdvancedFinalAudit) {
-    return handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview });
+    return handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview, tierInfo });
   }
   if (isContinuePhase) {
-    return handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview });
+    return handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo });
   }
   if (isFinalRecap) {
-    return handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview });
+    return handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo });
   }
 
   if (isFounderPreview) {
     try {
       const isPlaceholder = !env.OPENAI_API_KEY;
       const sessionRoster = resolveSessionRoster({ modeId, sessionRoster: null });
-      const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env });
-      return json({ ok: true, founder_preview: true, recap });
+      const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env, tierInfo });
+      return json({ ok: true, founder_preview: true, councilTier: tierInfo.effectiveTier, requestedTier: tierInfo.requestedTier, effectiveTier: tierInfo.effectiveTier, phaseModel: modelInfo.phaseModel, finalModel: modelInfo.finalModel, founderOnlyFullFunction: tierInfo.founderOnlyFullFunction, recap });
     } catch {
       return json({ ok: false, message: "The PDC experience could not be generated. Please try again later." }, 500);
     }
@@ -73,14 +75,14 @@ export async function onRequest({ request, env }) {
   try {
     const isPlaceholder = !env.OPENAI_API_KEY;
     const sessionRoster = resolveSessionRoster({ modeId, sessionRoster: null });
-    const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env });
+    const recap = await generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics: isFounderPreview, env, tierInfo });
     const usedAt = getIsoNow();
     await env.MAPKAI_DB.prepare(
       `UPDATE pdc_access_passes
        SET status = 'used', used_count = used_count + 1, used_at = ?, last_error = NULL
        WHERE pass_code = ?`,
     ).bind(usedAt, passCode).run();
-    return json({ ok: true, recap });
+    return json({ ok: true, councilTier: tierInfo.effectiveTier, requestedTier: tierInfo.requestedTier, effectiveTier: tierInfo.effectiveTier, phaseModel: modelInfo.phaseModel, finalModel: modelInfo.finalModel, recap });
   } catch (error) {
     await env.MAPKAI_DB.prepare(
       `UPDATE pdc_access_passes
@@ -91,7 +93,7 @@ export async function onRequest({ request, env }) {
   }
 }
 
-async function handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview }) {
+async function handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo }) {
   if (!isFounderPreview) {
     if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
     if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
@@ -105,6 +107,7 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
     body.observer_roster_context,
   );
   const mode = pdcModes[modeId];
+  const modelInfo = resolvePdcModels(tierInfo?.effectiveTier);
   const result = await generatePdcFinalRecap({
     modeId,
     modeLabel: mode.label,
@@ -117,8 +120,9 @@ async function handleFinalRecap({ request, env, body, passCode, modeId, userQues
     userInterventions: Array.isArray(body.user_interventions) ? body.user_interventions.map((item) => cleanText(item, 300)).filter(Boolean).slice(-8) : [],
     provider: String(env.PDC_DIALOGUE_PROVIDER || "placeholder").trim().toLowerCase(),
     env,
+    tierInfo,
   });
-  return json({ ok: true, ...result });
+  return json({ ok: true, councilTier: tierInfo?.effectiveTier || "standard", requestedTier: tierInfo?.requestedTier || "standard", effectiveTier: tierInfo?.effectiveTier || "standard", phaseModel: modelInfo.phaseModel, finalModel: modelInfo.finalModel, founderOnlyFullFunction: tierInfo?.founderOnlyFullFunction === true, ...result });
 }
 
 async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview }) {
@@ -194,7 +198,7 @@ async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuesti
   }
 }
 
-async function handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview }) {
+async function handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo }) {
   const roundNumber = Number(body.round_number) > 0 ? Math.min(Number(body.round_number), 99) : 1;
   const phaseType = String(body.phase_type || "A").toUpperCase() === "B" ? "B" : "A";
   const previousSummary = cleanText(body.previous_summary, 1200);
@@ -211,6 +215,7 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
 
   try {
     const mode = pdcModes[modeId];
+    const modelInfo = resolvePdcModels(tierInfo?.effectiveTier);
     const roster = resolveRosterByIds(modeId, body.active_roster_ids);
     const observerRoster = mergeObserverRosterContext(
       resolveRosterByIds(modeId, body.observer_roster_ids, { defaultAll: false }),
@@ -229,9 +234,18 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
       meetingMemory,
       userIntervention,
       env,
+      tierInfo,
     });
     const phase = Array.isArray(result.rounds) && result.rounds.length ? result.rounds[0] : null;
     if (!phase) throw new Error("No PDC phase returned");
+    const tierDiagnostics = {
+      councilTier: tierInfo?.effectiveTier || "standard",
+      requestedTier: tierInfo?.requestedTier || "standard",
+      effectiveTier: tierInfo?.effectiveTier || "standard",
+      phaseModel: modelInfo.phaseModel,
+      finalModel: modelInfo.finalModel,
+      founderOnlyFullFunction: tierInfo?.founderOnlyFullFunction === true,
+    };
     return json({
       ok: true,
       phase,
@@ -243,9 +257,10 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
       providerErrorShort: result.providerErrorShort || "",
       jsonParseFailed: result.jsonParseFailed === true,
       modelName: result.modelName || "",
+      ...tierDiagnostics,
       schemaName: result.schemaName || "",
       strict: result.strict === true,
-      ...(isFounderPreview ? { contentDiagnostics: result.contentDiagnostics || null } : {}),
+      ...(isFounderPreview ? { contentDiagnostics: { ...(result.contentDiagnostics || {}), ...tierDiagnostics } } : {}),
     });
   } catch (error) {
     console.error("PDC continue phase failed:", error);

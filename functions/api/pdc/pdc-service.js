@@ -629,6 +629,40 @@ const pdcAdvancedFinalAuditSchema = {
 // - Support larger rosters without changing the PDC rhythm.
 // - Future premium mode may use true multi-call council members: one call per persona plus one Blue Whale synthesis call for stronger independence at higher cost.
 
+const standardCouncilTier = "standard";
+const fullFunctionCouncilTier = "full_function";
+const standardPhaseModel = "gpt-5-mini";
+const standardFinalModel = "gpt-5.5";
+const fullFunctionModel = "gpt-5.5";
+
+export function resolveCouncilTier(requestedTier, isFounder = false) {
+  const requested = String(requestedTier || standardCouncilTier).trim().toLowerCase();
+  const requestedNormalized = requested === fullFunctionCouncilTier ? fullFunctionCouncilTier : standardCouncilTier;
+  const effectiveTier = requestedNormalized === fullFunctionCouncilTier && isFounder === true
+    ? fullFunctionCouncilTier
+    : standardCouncilTier;
+  return {
+    requestedTier: requestedNormalized,
+    effectiveTier,
+    founderOnlyFullFunction: effectiveTier === fullFunctionCouncilTier,
+  };
+}
+
+export function resolvePdcModels(effectiveTier = standardCouncilTier) {
+  if (effectiveTier === fullFunctionCouncilTier) {
+    return {
+      councilTier: fullFunctionCouncilTier,
+      phaseModel: fullFunctionModel,
+      finalModel: fullFunctionModel,
+    };
+  }
+  return {
+    councilTier: standardCouncilTier,
+    phaseModel: standardPhaseModel,
+    finalModel: standardFinalModel,
+  };
+}
+
 export function resolveSessionRoster({ modeId, sessionRoster }) {
   if (Array.isArray(sessionRoster) && sessionRoster.length) {
     return sessionRoster.filter((persona) => persona && persona.isParticipant !== false && persona.status !== "disabled" && persona.status !== "archived");
@@ -644,15 +678,15 @@ export function resolveFacilitator(modeId) {
   return pdcPersonaLibrary.find((persona) => persona.id === mode.facilitatorId && persona.isFacilitator) || pdcPersonaLibrary.find((persona) => persona.id === "blue-whale");
 }
 
-export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics = false, env }) {
+export async function generatePdcCouncilRecap({ modeId, sessionRoster, userQuestion, isPlaceholder, includeContentDiagnostics = false, env, tierInfo = null }) {
   const mode = pdcModes[modeId] || pdcModes.personal;
   const roster = resolveSessionRoster({ modeId: mode.id, sessionRoster });
   const facilitator = resolveFacilitator(mode.id);
 
-  return createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env });
+  return createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env, tierInfo });
 }
 
-async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env }) {
+async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, isPlaceholder, includeContentDiagnostics, env, tierInfo }) {
   const isCompany = mode.id === "company";
   const trimmedQuestion = String(userQuestion || "").replace(/\s+/g, " ").trim();
   const safeQuestion = trimmedQuestion.length > 520 ? `${trimmedQuestion.slice(0, 520)}...` : trimmedQuestion;
@@ -668,8 +702,18 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
     previousSummary: "",
     meetingMemory: null,
     env,
+    tierInfo,
   });
   const facilitatorSummary = dialogueResult.blueWhaleSummary?.text || facilitator?.placeholderSummary || "Blue Whale is summarizing the first layer of tension, risks, opportunities, and next-step questions. Live PDC generation will later deepen this into a structured council process and final decision memo.";
+  const modelInfo = resolvePdcModels(tierInfo?.effectiveTier);
+  const tierDiagnostics = {
+    councilTier: tierInfo?.effectiveTier || standardCouncilTier,
+    requestedTier: tierInfo?.requestedTier || standardCouncilTier,
+    effectiveTier: tierInfo?.effectiveTier || standardCouncilTier,
+    phaseModel: modelInfo.phaseModel,
+    finalModel: modelInfo.finalModel,
+    founderOnlyFullFunction: tierInfo?.founderOnlyFullFunction === true,
+  };
 
   return {
     title: "Council Recap",
@@ -684,7 +728,8 @@ async function createPdcCouncilRecap({ mode, roster, facilitator, userQuestion, 
     providerErrorShort: dialogueResult.providerErrorShort || "",
     jsonParseFailed: dialogueResult.jsonParseFailed === true,
     modelName: dialogueResult.modelName || "",
-    ...(includeContentDiagnostics ? { contentDiagnostics: dialogueResult.contentDiagnostics || null } : {}),
+    ...tierDiagnostics,
+    ...(includeContentDiagnostics ? { contentDiagnostics: { ...(dialogueResult.contentDiagnostics || {}), ...tierDiagnostics } } : {}),
     placeholderNotice: isPlaceholder
       ? "Development placeholder output — live PDC API is not connected yet."
       : "Council Recap placeholder output — live final memo generation is not connected yet.",
@@ -718,16 +763,16 @@ function resolveDialogueProvider(env = {}) {
   return allowedDialogueProviders.has(requested) ? requested : "placeholder";
 }
 
-export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
+export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, provider, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env, tierInfo = null }) {
   const fallback = createPlaceholderDialogueResult({ modeId, sessionRoster, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention });
   provider = provider === "cloudflare" ? (env?.OPENAI_API_KEY ? "openai" : "placeholder") : provider;
 
   if (provider === "openai") {
     if (!env?.OPENAI_API_KEY) {
-      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env } });
+      return fallbackDialogueResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env, tierInfo } });
     }
     try {
-      return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env });
+      return await generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster, userQuestion, roundNumber, phaseType, previousSummary, meetingMemory, userIntervention, env, tierInfo });
     } catch (error) {
       const message = String(error.message || "OpenAI call failed");
       console.error("PDC OpenAI dialogue provider failed:", message);
@@ -745,7 +790,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
         fallbackReason: "missing AI binding",
         providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.",
         jsonParseFailed: false,
-        modelName: "",
+        modelName: resolvePdcModels(tierInfo?.effectiveTier).phaseModel,
       };
     }
     try {
@@ -766,7 +811,7 @@ export async function generatePdcDialogue({ modeId, modeLabel, sessionRoster, ob
     }
   }
 
-  return { ...fallback, requestedProvider: "placeholder", actualProvider: "placeholder", fallbackUsed: false, fallbackReason: "", providerErrorShort: "", jsonParseFailed: false, modelName: "" };
+  return { ...fallback, requestedProvider: "placeholder", actualProvider: "placeholder", fallbackUsed: false, fallbackReason: "", providerErrorShort: "", jsonParseFailed: false, modelName: resolvePdcModels(tierInfo?.effectiveTier).phaseModel };
 }
 
 async function fallbackDialogueResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, providerDiagnostics = null, params }) {
@@ -807,7 +852,7 @@ async function fallbackDialogueResult({ fallback, requestedProvider, failedProvi
     fallbackReason: fallbackProvider === "cloudflare" ? `${failedProvider} unavailable: ${reason}. Cloudflare fallback missing AI binding.` : `${failedProvider} unavailable: ${reason}. Used placeholder fallback.`,
     providerErrorShort,
     jsonParseFailed: /json/i.test(providerErrorShort || reason),
-    modelName: failedProvider === "openai" ? getOpenAiModel(params.env) : "",
+    modelName: failedProvider === "openai" ? getPdcPhaseModel(params.env, params.tierInfo) : "",
     contentDiagnostics: diagnosticContent,
   };
 }
@@ -837,18 +882,18 @@ function getOpenAiFallbackReason(message) {
   return "OpenAI call failed";
 }
 
-export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, activeRoster = [], observerRoster = [], latestPhase = null, meetingMemory = null, voteSummary = null, userInterventions = [], provider, env }) {
+export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, activeRoster = [], observerRoster = [], latestPhase = null, meetingMemory = null, voteSummary = null, userInterventions = [], provider, env, tierInfo = null }) {
   const fallback = createPlaceholderFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
   if (provider === "openai") {
     if (!env?.OPENAI_API_KEY) {
-      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env } });
+      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: "missing OPENAI_API_KEY", providerErrorShort: "OpenAI API key is not configured.", params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env, tierInfo } });
     }
     try {
-      return await generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env });
+      return await generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env, tierInfo });
     } catch (error) {
       console.error("PDC OpenAI final recap failed:", error);
       const message = String(error.message || "OpenAI final recap failed");
-      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getFinalRecapFallbackReason(message), providerErrorShort: message.slice(0, 160), params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env } });
+      return fallbackFinalRecapResult({ fallback, requestedProvider: "openai", failedProvider: "openai", reason: getFinalRecapFallbackReason(message), providerErrorShort: message.slice(0, 160), params: { modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env, tierInfo } });
     }
   }
   if (provider === "cloudflare" && env?.AI) {
@@ -861,9 +906,9 @@ export async function generatePdcFinalRecap({ modeId, modeLabel, userQuestion, a
     }
   }
   if (provider === "cloudflare" && !env?.AI) {
-    return { ...fallback, requestedProvider: "cloudflare", fallbackReason: "missing AI binding", providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.", jsonParseFailed: false, modelName: "" };
+    return { ...fallback, requestedProvider: "cloudflare", fallbackReason: "missing AI binding", providerErrorShort: "Cloudflare Workers AI binding named AI is not configured.", jsonParseFailed: false, modelName: getPdcFinalModel(env, tierInfo) };
   }
-  return { ...fallback, requestedProvider: provider || "placeholder" };
+  return { ...fallback, requestedProvider: provider || "placeholder", modelName: getPdcFinalModel(env, tierInfo) };
 }
 
 async function fallbackFinalRecapResult({ fallback, requestedProvider, failedProvider, reason, providerErrorShort, params }) {
@@ -901,7 +946,7 @@ async function fallbackFinalRecapResult({ fallback, requestedProvider, failedPro
     fallbackReason: fallbackProvider === "cloudflare" ? `${failedProvider} unavailable: ${reason}. Cloudflare fallback missing AI binding.` : `${failedProvider} unavailable: ${reason}. Used placeholder fallback.`,
     providerErrorShort,
     jsonParseFailed: /json/i.test(providerErrorShort || reason),
-    modelName: failedProvider === "openai" ? getOpenAiModel(params.env) : "",
+    modelName: failedProvider === "openai" ? getPdcFinalModel(params.env, params.tierInfo) : "",
   };
 }
 
@@ -1519,8 +1564,8 @@ function getPlaceholderStanceType(persona) {
   return "challenge";
 }
 
-async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env }) {
-  const model = getOpenAiModel(env);
+async function generateOpenAiDialogue({ modeId, modeLabel, sessionRoster, observerRoster = [], userQuestion, roundNumber = 1, phaseType = "A", previousSummary = "", meetingMemory = null, userIntervention = "", env, tierInfo = null }) {
+  const model = getPdcPhaseModel(env, tierInfo);
   const phaseLabelPrefix = Number(roundNumber) >= 5 ? "Final Round" : `Round ${roundNumber}${phaseType}`;
   const phaseLabel = `${phaseLabelPrefix} — ${phaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
   let retryUsed = false;
@@ -2140,6 +2185,14 @@ function extractCloudflareText(result) {
 
 function getOpenAiModel(env = {}) {
   return String(env.OPENAI_MODEL || defaultOpenAiModel).trim() || defaultOpenAiModel;
+}
+
+function getPdcPhaseModel(env = {}, tierInfo = null) {
+  return resolvePdcModels(tierInfo?.effectiveTier).phaseModel || getOpenAiModel(env);
+}
+
+function getPdcFinalModel(env = {}, tierInfo = null) {
+  return resolvePdcModels(tierInfo?.effectiveTier).finalModel || getOpenAiModel(env);
 }
 
 function getAdvancedAuditModel(env = {}) {
@@ -2973,8 +3026,8 @@ function buildFinalReintroducedPerspective({ observerRoster, latestPhase, voteSu
   };
 }
 
-async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env }) {
-  const model = getOpenAiModel(env);
+async function generateOpenAiFinalRecap({ modeId, modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions, env, tierInfo = null }) {
+  const model = getPdcFinalModel(env, tierInfo);
   const prompt = buildCloudflareFinalRecapPrompt({ modeLabel, userQuestion, activeRoster, observerRoster, latestPhase, meetingMemory, voteSummary, userInterventions });
   const archivedSummaryCount = buildArchivedObserverSummaries(observerRoster).length;
   const contentDiagnostics = {
