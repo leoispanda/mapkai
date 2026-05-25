@@ -4122,16 +4122,38 @@ function handlePdcAccessSubmit(event) {
   const form = event.target.closest("[data-pdc-access-form]");
   if (!form) return false;
   event.preventDefault();
+  validatePdcAccessForm(form);
+  return true;
+}
+
+async function validatePdcAccessForm(form) {
   const input = form.elements.pdc_access_code;
   const status = form.querySelector(".pdc-access-status");
   const code = String(input?.value || "").trim();
   if (!code) {
     if (status) status.textContent = "Enter your PDC access code.";
-    return true;
+    return;
   }
   const normalizedCode = code.replace(/\s+/g, "");
-  window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
-  return true;
+  if (status) status.textContent = "Checking access code...";
+  try {
+    const response = await fetch("/api/pdc/validate-pass", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pass: normalizedCode }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.valid !== true) {
+      throw new Error(data.message || "This PDC access code is no longer available.");
+    }
+    if (data.founder_preview === true) {
+      window.location.href = "/pdc-pilot?founderPreview=1";
+      return;
+    }
+    window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
+  } catch (error) {
+    if (status) status.textContent = error.message || "This PDC access code is no longer available.";
+  }
 }
 
 async function loadFounderMessages() {
@@ -4174,23 +4196,47 @@ async function initPdcPilotPage() {
   clearPdcPlaybackTimer();
   clearPdcWarmupTimer();
   const pass = getCurrentPdcPass();
-  const founderPreview = isPdcFounderPreviewAllowed(pass);
-  if (pdcState.pass === pass && pdcState.founderPreview === founderPreview && pdcState.status !== "idle") {
+  const params = new URLSearchParams(window.location.search);
+  const founderPreviewRequested = params.get("founderPreview") === "1" && !pass;
+  const founderPreviewAllowed = isPdcFounderPreviewAllowed(pass);
+  if (pdcState.pass === pass && pdcState.founderPreview === founderPreviewAllowed && pdcState.status !== "idle") {
     renderPdcPilot();
     return;
   }
   pdcState = createPdcBaseState({
     pass,
     status: "validating",
-    founderPreview,
+    founderPreview: founderPreviewAllowed,
   });
   renderPdcPilot();
-  if (founderPreview) {
+  if (founderPreviewAllowed) {
     pdcState.valid = true;
     pdcState.status = "ready";
     pdcState.message = "";
     renderPdcPilot();
     return;
+  }
+  if (founderPreviewRequested) {
+    try {
+      const response = await fetch("/api/pdc/validate-pass?founderPreview=1");
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.valid !== true || data.founder_preview !== true) {
+        throw new Error(data.message || "This PDC access link is no longer available. It may have already been used or expired.");
+      }
+      pdcState.founderPreview = true;
+      pdcState.valid = true;
+      pdcState.status = "ready";
+      pdcState.message = "";
+      renderPdcPilot();
+      return;
+    } catch (error) {
+      pdcState.valid = false;
+      pdcState.founderPreview = false;
+      pdcState.status = "invalid";
+      pdcState.message = error.message || "This PDC access link is no longer available. It may have already been used or expired.";
+      renderPdcPilot();
+      return;
+    }
   }
   if (!pass) {
     pdcState.status = "invalid";

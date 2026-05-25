@@ -1,9 +1,9 @@
 export const INVALID_PDC_LINK_MESSAGE = "This PDC access link is no longer available. It may have already been used or expired.";
 
-export function json(data, status = 200) {
+export function json(data, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "Content-Type": "application/json; charset=utf-8" },
+    headers: { "Content-Type": "application/json; charset=utf-8", ...extraHeaders },
   });
 }
 
@@ -13,6 +13,55 @@ export function cleanText(value, maxLength) {
 
 export function isFounderRequest(request) {
   return request.headers.get("X-MapKAI-Founder") === "true";
+}
+
+export function getFounderAccessCode(env) {
+  return String(env?.MAPKAI_FOUNDER_ACCESS_CODE || "").trim();
+}
+
+export function isFounderAccessCode(env, passCode) {
+  const founderCode = getFounderAccessCode(env);
+  return Boolean(founderCode && passCode && passCode === founderCode);
+}
+
+export async function createFounderAccessCookie(env, request) {
+  const founderCode = getFounderAccessCode(env);
+  if (!founderCode) return "";
+  const issuedAt = Math.floor(Date.now() / 1000);
+  const signature = await signFounderAccessCookie(founderCode, issuedAt);
+  const isSecureRequest = request ? new URL(request.url).protocol === "https:" : true;
+  return `mapkai_pdc_founder=${issuedAt}.${signature}; Path=/; Max-Age=2592000; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+}
+
+export async function hasValidFounderAccessCookie(request, env) {
+  const founderCode = getFounderAccessCode(env);
+  if (!founderCode) return false;
+  const cookieHeader = request.headers.get("Cookie") || "";
+  const cookieValue = cookieHeader
+    .split(";")
+    .map((item) => item.trim())
+    .find((item) => item.startsWith("mapkai_pdc_founder="))
+    ?.split("=")[1] || "";
+  const [issuedAtRaw, signature] = cookieValue.split(".");
+  const issuedAt = Number(issuedAtRaw);
+  if (!issuedAt || !signature) return false;
+  const maxAgeSeconds = 30 * 24 * 60 * 60;
+  if (issuedAt < Math.floor(Date.now() / 1000) - maxAgeSeconds) return false;
+  const expected = await signFounderAccessCookie(founderCode, issuedAt);
+  return signature === expected;
+}
+
+async function signFounderAccessCookie(secret, issuedAt) {
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    "raw",
+    encoder.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"],
+  );
+  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(`mapkai-pdc-founder:${issuedAt}`));
+  return Array.from(new Uint8Array(signature), (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
 export function getIsoNow() {

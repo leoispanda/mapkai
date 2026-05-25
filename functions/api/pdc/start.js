@@ -1,4 +1,4 @@
-import { cleanText, ensurePdcTables, getIsoNow, getPass, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
+import { cleanText, ensurePdcTables, getFounderAccessCode, getIsoNow, getPass, hasValidFounderAccessCookie, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
 import { generatePdcAdvancedFinalAudit, generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
@@ -8,7 +8,9 @@ export async function onRequest({ request, env }) {
   const passCode = cleanText(body.pass, 80);
   const modeId = ["personal", "company"].includes(body.mode_id) ? body.mode_id : "";
   const userQuestion = cleanText(body.user_question, 1200);
-  const isFounderPreview = body.founder_preview === true && isFounderRequest(request);
+  const fixedFounderAccessEnabled = Boolean(getFounderAccessCode(env));
+  const hasFounderAccess = fixedFounderAccessEnabled ? await hasValidFounderAccessCookie(request, env) : true;
+  const isFounderPreview = body.founder_preview === true && isFounderRequest(request) && hasFounderAccess;
   const isContinuePhase = body.continue_phase === true;
   const isFinalRecap = body.final_recap === true;
   const isAdvancedFinalAudit = body.advanced_final_audit === true;

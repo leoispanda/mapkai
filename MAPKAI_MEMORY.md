@@ -2156,3 +2156,9 @@ Push status:
 - Kept `/pdc` as a manual access-code entry page only; it does not auto-trigger PDC API/GPT generation and ordinary users do not see Founder debug.
 - Refined `/pdc` card hierarchy and spacing in the existing Apple/Revolut graphite-blue visual system; no dark-green styling was introduced.
 - Synced root/public HTML, CSS, and JS; no PDC logic, API, access-code validation, provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, Founder Preview behavior, or public navigation logic changed.
+
+## 2026-05-25 - Add reusable Founder PDC access via Cloudflare secret
+- Added server-side reusable Founder PDC access using the `MAPKAI_FOUNDER_ACCESS_CODE` Cloudflare Pages Secret, without writing the secret value into frontend files, source logs, D1, or memory.
+- `/pdc` now validates entered codes through the server before navigation: matching the Founder secret sets a signed HttpOnly Founder access cookie and opens Founder Preview without consuming a D1 one-time pass.
+- Ordinary PDC access codes still use the existing D1 one-time pass validation path, including invalid, used, and expired pass failures.
+- `/pdc-pilot?founderPreview=1` now validates server-side Founder access before showing Founder Preview UI to ordinary visitors; Advanced Final Audit and Founder diagnostics remain gated behind Founder Preview.
