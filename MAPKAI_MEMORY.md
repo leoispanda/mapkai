@@ -2108,3 +2108,10 @@ Push status:
 - Updated Founder UI to display Decision Context, Decision Nature, User Real Need, Main Weakness of Council Recap, Recommended Output Shape, Why This Shape Fits, Bias & Stage Fit, Improved Final Judgment, Adaptive Final Package sections, and Recommended Next Step.
 - Fixed the final reintroduced perspective guard so a re-enabled perspective must come from observer/archived roster and must not still be active; debug now reports selection source, active-member blocking, invalid candidate reason, and skipped reason.
 - Synced root/public scripts, root/public styles, and inline production HTML; no normal OpenAI provider routing, strict Responses transport, global `OPENAI_MODEL`, D1/pass lifecycle, public navigation, member names, or normal Council Recap behavior was intentionally changed.
+
+## 2026-05-25 - Modernize PDC Council Room premium UI
+- Polished the PDC Council Room as a premium AI decision room with Apple-like spacing/clarity, restrained Revolut-like blue energy, soft card surfaces, status chips, and a calmer MapKAI knowledge-atlas feel.
+- Reworked council member rows into compact advisor cards, dialogue statements into cleaner speaker cards, B-phase votes into small chips, Council Recap into a polished decision memo, and Advanced Final Audit into a Founder insight/report card with highlighted conclusion and next-step areas.
+- Collapsed Founder diagnostics by default behind compact summaries showing provider, model, fallback, strictness, duration, and prompt size; full technical metadata remains available in muted monospace detail panels.
+- Improved responsive behavior so the PDC roster and main dialogue stack cleanly on narrower screens, and recap/audit subcards collapse to one column without horizontal overflow.
+- Synced `script.js`, `public/script.js`, `styles.css`, `public/styles.css`, `index.html`, and `public/index.html`; no PDC business logic, provider/model routing, Advanced Final Audit schema/prompt, observer lifecycle, D1/pass lifecycle, public navigation, or PDC member names were changed.

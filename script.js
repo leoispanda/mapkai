@@ -4263,6 +4263,22 @@ function renderPdcFounderPreviewActions() {
     </section>`;
 }
 
+function renderPdcStatusChips(items = []) {
+  const rows = items.map((item) => normalizePdcDisplayText(item)).filter(Boolean);
+  return rows.length ? `<div class="pdc-status-chips">${rows.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>` : "";
+}
+
+function getPdcProviderChips({ provider = "", model = "", strict = false, fallbackUsed = false, founderOnly = false, manualAudit = false } = {}) {
+  return [
+    provider ? provider.replace(/^openai$/i, "OpenAI") : "",
+    model,
+    strict ? "Strict" : "",
+    fallbackUsed ? "Fallback" : "No fallback",
+    founderOnly ? "Founder only" : "",
+    manualAudit ? "Manual audit" : "",
+  ].filter(Boolean);
+}
+
 function getPdcVisibleRecap() {
   return pdcState.warmup?.recap || pdcState.recap;
 }
@@ -4325,7 +4341,13 @@ function renderPdcCouncilRoom(recap) {
               <p class="eyebrow">Current Round</p>
               <h2>Live Council Dialogue</h2>
             </div>
-            ${recap.dialogueProvider && pdcState.founderPreview && !isWarmupPhase ? `<span class="pdc-provider-label">${escapeHtml(recap.dialogueProvider)}</span>` : ""}
+            ${pdcState.founderPreview && !isWarmupPhase ? renderPdcStatusChips(getPdcProviderChips({
+              provider: recap.dialogueProvider,
+              model: pdcState.providerDiagnostics?.modelName || "",
+              strict: pdcState.providerDiagnostics?.strict === true,
+              fallbackUsed: pdcState.providerDiagnostics?.fallbackUsed === true,
+              founderOnly: true,
+            })) : ""}
           </div>
           <div class="pdc-table-topic">
             <span>Decision on the table</span>
@@ -4510,11 +4532,13 @@ function renderPdcVotingLine(line) {
   return `
     <div class="pdc-voting-line">
       <p>${escapeHtml(line.text || "Voting rationale recorded.")}</p>
+      <div class="pdc-vote-chip-row">
+        <span>Contribution: ${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "-")}</span>
+        <span>Concern: ${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "-")}</span>
+      </div>
       <dl>
-        <dt>Contribution vote</dt><dd>${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "-")}</dd>
-        <dt>Contribution vote reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "-")}</dd>
-        <dt>Concern vote</dt><dd>${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "-")}</dd>
-        <dt>Concern vote reason</dt><dd>${escapeHtml(line.concernVote?.reason || "-")}</dd>
+        <dt>Contribution reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "-")}</dd>
+        <dt>Concern reason</dt><dd>${escapeHtml(line.concernVote?.reason || "-")}</dd>
       </dl>
     </div>`;
 }
@@ -4668,21 +4692,24 @@ function renderPdcFounderPhaseDebug(currentRound) {
   const previousSummary = currentRound.previousSummary || "";
   const diagnostics = currentRound.contentDiagnostics || pdcState.providerDiagnostics?.contentDiagnostics || null;
   const playbackDebug = getPdcPlaybackDebug(currentRound);
+  const summary = `Provider: ${pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder"} · Model: ${pdcState.providerDiagnostics?.modelName || "-"} · Fallback: ${pdcState.providerDiagnostics?.fallbackUsed ? "yes" : "no"} · Strict: ${pdcState.providerDiagnostics?.strict ? "true" : "false"} · Duration: ${Number(diagnostics?.phaseTotalDurationMs || diagnostics?.totalPhaseDurationMs || diagnostics?.phaseOpenAiDurationMs || diagnostics?.openAiDurationMs || 0)}ms · Prompt chars: ${Number(diagnostics?.promptCharLength || 0)}`;
   return `
-    <p class="pdc-founder-phase-debug">
-      Provider: ${escapeHtml(pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder")} ·
-      Previous summary: ${previousSummary ? "available" : "missing"} ·
-      User intervention: ${currentRound.userIntervention ? "included" : "empty"}
-      · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}
-      · warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)}
-      · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}
-      ${diagnostics ? ` · OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}` : ""}
-      ${diagnostics ? ` · duplicateSpeakerIds: ${escapeHtml((diagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted: ${diagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded: ${diagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed: ${diagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason: ${escapeHtml(pdcState.providerDiagnostics?.fallbackReason || "-")}` : ""}
-      ${diagnostics ? ` · bPhaseVotingOnlyMode: ${diagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength: ${Number(diagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage: ${Number(diagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount: ${Number(diagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount: ${Number(diagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected: ${diagnostics.aPhaseVoteLeakDetected ? "true" : "false"}` : ""}
-      ${diagnostics ? ` · phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}` : ""}
-      ${diagnostics ? ` · activeRosterPromptCount: ${Number(diagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount: ${Number(diagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt: ${diagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded: ${diagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction: ${Number(diagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied: ${diagnostics.costOptimizationApplied ? "true" : "false"}` : ""}
-      ${diagnostics ? ` · Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"}` : ""}
-    </p>`;
+    <details class="pdc-founder-phase-debug">
+      <summary>
+        <span>${escapeHtml(summary)}</span>
+        <em>Show debug details</em>
+      </summary>
+      <div class="pdc-debug-details">
+        <p>Previous summary: ${previousSummary ? "available" : "missing"} · User intervention: ${currentRound.userIntervention ? "included" : "empty"} · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}</p>
+        <p>warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)} · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}</p>
+        ${diagnostics ? `<p>OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
+        ${diagnostics ? `<p>duplicateSpeakerIds: ${escapeHtml((diagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted: ${diagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded: ${diagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed: ${diagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason: ${escapeHtml(pdcState.providerDiagnostics?.fallbackReason || "-")}</p>` : ""}
+        ${diagnostics ? `<p>bPhaseVotingOnlyMode: ${diagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength: ${Number(diagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage: ${Number(diagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount: ${Number(diagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount: ${Number(diagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected: ${diagnostics.aPhaseVoteLeakDetected ? "true" : "false"}</p>` : ""}
+        ${diagnostics ? `<p>phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}</p>` : ""}
+        ${diagnostics ? `<p>activeRosterPromptCount: ${Number(diagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount: ${Number(diagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt: ${diagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded: ${diagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction: ${Number(diagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied: ${diagnostics.costOptimizationApplied ? "true" : "false"}</p>` : ""}
+        ${diagnostics ? `<p>Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"}</p>` : ""}
+      </div>
+    </details>`;
 }
 
 function getPdcPlaybackForRound(round) {
@@ -5887,25 +5914,36 @@ function getPersonaInitials(persona) {
 function renderPdcRecap(recap) {
   const recapSections = normalizePdcRecapSectionsForDisplay(recap.recap || recap.sections || {});
   const sections = [
-    ["Decision Frame", recapSections.decisionFrame],
-    ["Core Tension", recapSections.coreTension],
-    ["Council Highlights", recapSections.councilHighlights],
-    ["Debate Snapshot", recapSections.debateSnapshot],
-    ["Condensed Review", recapSections.condensedReview],
-    ["Final Recommendation", recapSections.finalRecommendation],
-    ["Next Actions", recapSections.nextActions],
-    ["What Not To Do", recapSections.whatNotToDo],
-    ["Reflection Note", recapSections.reflectionNote],
+    ["Decision Frame", recapSections.decisionFrame, "frame"],
+    ["Core Tension", recapSections.coreTension, "tension"],
+    ["Council Highlights", recapSections.councilHighlights, "highlights"],
+    ["Debate Snapshot", recapSections.debateSnapshot, "snapshot"],
+    ["Condensed Review", recapSections.condensedReview, "review"],
+    ["Final Recommendation", recapSections.finalRecommendation, "recommendation"],
+    ["Next Actions", recapSections.nextActions, "actions"],
+    ["What Not To Do", recapSections.whatNotToDo, "warning"],
+    ["Reflection Note", recapSections.reflectionNote, "note"],
   ];
   return `
-    <section class="pdc-result">
-      <p class="eyebrow">${escapeHtml(recap.modeLabel || "PDC")}</p>
-      <h1>Council Recap</h1>
+    <section class="pdc-result pdc-decision-memo">
+      <div class="pdc-memo-head">
+        <div>
+          <p class="eyebrow">${escapeHtml(recap.modeLabel || "PDC")}</p>
+          <h1>Council Recap</h1>
+          <p class="pdc-memo-subtitle">A polished decision memo distilled from the council discussion.</p>
+        </div>
+        ${renderPdcStatusChips([
+          recap.finalRecapProvider ? recap.finalRecapProvider.replace(/^openai$/i, "OpenAI") : "",
+          recap.modelName || "",
+          recap.finalRecapStrict || recap.strict ? "Strict" : "",
+          recap.finalRecapFallbackUsed ? "Fallback" : "No fallback",
+        ])}
+      </div>
       ${renderPdcRecapNotice(recap)}
       ${recap.rosterSummary ? `<p class="pdc-roster-note">${escapeHtml(recap.rosterSummary)}</p>` : ""}
       <div class="pdc-recap-sections">
-        ${sections.map(([title, value]) => `
-          <article class="pdc-recap-section">
+        ${sections.map(([title, value, kind]) => `
+          <article class="pdc-recap-section pdc-recap-${kind}">
             <h2>${title}</h2>
             ${Array.isArray(value) ? `<ul>${value.map((item) => `<li>${escapeHtml(normalizePdcDisplayText(item))}</li>`).join("")}</ul>` : `<p>${escapeHtml(normalizePdcDisplayText(value))}</p>`}
           </article>`).join("")}
@@ -5927,13 +5965,27 @@ function renderPdcRecapNotice(recap) {
 function renderPdcAdvancedFinalAudit() {
   if (!pdcState.founderPreview) return "";
   const audit = pdcState.advancedAudit?.audit || null;
+  const diagnostics = pdcState.providerDiagnostics?.advancedAudit?.contentDiagnostics || {};
+  const advancedInfo = pdcState.providerDiagnostics?.advancedAudit || {};
   return `
     <section class="pdc-advanced-audit">
-      <p class="eyebrow">Advanced Final Audit</p>
-      <h2>Adaptive Final Decision Layer</h2>
-      <p>A manually triggered Founder-only layer that chooses the right final answer shape for this decision.</p>
+      <div class="pdc-audit-head">
+        <div>
+          <p class="eyebrow">Founder Insight Report</p>
+          <h2>Adaptive Final Decision Layer</h2>
+          <p>A manually triggered Founder-only layer that chooses the right final answer shape for this decision.</p>
+        </div>
+        ${renderPdcStatusChips(getPdcProviderChips({
+          provider: diagnostics.advancedAuditProvider || advancedInfo.actualProvider || advancedInfo.provider || "OpenAI",
+          model: diagnostics.advancedAuditActualModel || advancedInfo.actualModel || advancedInfo.modelName || "GPT-5.5",
+          strict: diagnostics.advancedAuditStrict === true || advancedInfo.strict === true,
+          fallbackUsed: diagnostics.advancedAuditFallbackUsed === true || advancedInfo.fallbackUsed === true,
+          founderOnly: true,
+          manualAudit: true,
+        }))}
+      </div>
       ${audit ? renderPdcAdvancedAuditResult(audit) : `
-        <button class="button secondary" type="button" data-pdc-run-advanced-audit ${pdcState.advancedAuditLoading ? "disabled" : ""}>${pdcState.advancedAuditLoading ? "Running Advanced Final Audit..." : "Run Advanced Final Audit"}</button>
+        <button class="button secondary pdc-audit-button" type="button" data-pdc-run-advanced-audit ${pdcState.advancedAuditLoading ? "disabled" : ""}>${pdcState.advancedAuditLoading ? "Running Advanced Final Audit..." : "Run Advanced Final Audit"}</button>
       `}
       ${pdcState.advancedAuditError ? `<p class="pdc-status">${escapeHtml(pdcState.advancedAuditError)}</p>` : ""}
     </section>`;
@@ -5947,6 +5999,11 @@ function renderPdcAdvancedAuditResult(audit) {
   const display = audit.finalDisplay || {};
   return `
     <div class="pdc-advanced-audit-grid">
+      ${display.objectiveConclusion ? `
+        <article class="pdc-audit-highlight">
+          <h3>Objective Conclusion</h3>
+          <p>${escapeHtml(display.objectiveConclusion)}</p>
+        </article>` : ""}
       <article>
         <h3>Decision Context</h3>
         <p>${escapeHtml(diagnosis.decisionContext || display.summary || "-")}</p>
@@ -5977,7 +6034,7 @@ function renderPdcAdvancedAuditResult(audit) {
         ${bias.stageMismatch ? `<p>${escapeHtml(bias.stageMismatch)}</p>` : ""}
         ${renderPdcAuditList([...normalizePdcDisplayList(bias.overcomplicatedParts), ...normalizePdcDisplayList(bias.falsePrecisionRisks)])}
       </article>
-      <article>
+      <article class="pdc-audit-judgment">
         <h3>Improved Final Judgment</h3>
         <p>${escapeHtml(judgment.oneSentenceConclusion || display.objectiveConclusion || "-")}</p>
         ${judgment.why ? `<p>${escapeHtml(judgment.why)}</p>` : ""}
@@ -5987,7 +6044,7 @@ function renderPdcAdvancedAuditResult(audit) {
         <h3>Adaptive Final Package</h3>
         ${renderPdcAdaptiveFinalPackage(adaptivePackage)}
       </article>
-      <article>
+      <article class="pdc-audit-highlight">
         <h3>Recommended Next Step</h3>
         <p>${escapeHtml(display.recommendedNextStep || judgment.bestFirstStep || "-")}</p>
       </article>
@@ -6003,7 +6060,7 @@ function renderPdcAdaptiveFinalPackage(adaptivePackage) {
       ${sections.map((section) => `
         <section>
           <h4>${escapeHtml(section.heading || "Decision section")}</h4>
-          ${section.content ? `<p>${escapeHtml(section.content)}</p>` : ""}
+          ${section.content ? `<p>${escapeHtml(normalizePdcDisplayText(section.content))}</p>` : ""}
           ${renderPdcAuditList(section.bullets)}
         </section>
       `).join("")}
@@ -6133,8 +6190,21 @@ function renderPdcProviderDiagnostics() {
   const finalDiagnostics = final?.contentDiagnostics || null;
   const auditDiagnostics = advancedAudit?.contentDiagnostics || null;
   const lifecycleDiagnostics = getPdcLifecycleDiagnostics(phaseDiagnostics);
+  const summary = [
+    `Provider: ${phase?.actualProvider || phase?.provider || final?.actualProvider || final?.provider || "-"}`,
+    `Model: ${phase?.modelName || final?.modelName || "-"}`,
+    `Fallback: ${(phase?.fallbackUsed || final?.fallbackUsed) ? "yes" : "no"}`,
+    `Strict: ${(phase?.strict || phaseDiagnostics?.strict || final?.strict || finalDiagnostics?.finalRecapStrict) ? "true" : "false"}`,
+    `Duration: ${Number(phaseDiagnostics?.phaseTotalDurationMs || phaseDiagnostics?.totalPhaseDurationMs || finalDiagnostics?.finalRecapTotalDurationMs || 0)}ms`,
+    `Prompt chars: ${Number(phaseDiagnostics?.promptCharLength || finalDiagnostics?.finalRecapPromptCharLength || 0)}`,
+  ].join(" · ");
   return `
-    <section class="pdc-founder-phase-debug">
+    <details class="pdc-founder-phase-debug pdc-provider-debug">
+      <summary>
+        <span>${escapeHtml(summary)}</span>
+        <em>Show debug details</em>
+      </summary>
+      <div class="pdc-debug-details">
       ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
       ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
       ${phase ? `<p>Phase model: ${escapeHtml(phase.modelName || "-")} · Phase JSON parse failed: ${phase.jsonParseFailed ? "yes" : "no"} · Phase schema: ${escapeHtml(phase.schemaName || phaseDiagnostics?.schemaName || "-")} · Phase strict: ${(phase.strict || phaseDiagnostics?.strict) ? "true" : "false"}${phase.providerErrorShort ? ` · Phase error: ${escapeHtml(phase.providerErrorShort)}` : ""}</p>` : ""}
@@ -6147,7 +6217,8 @@ function renderPdcProviderDiagnostics() {
       <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · cumulativeContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.cumulativeContributionVoteCounts || {}))} · latestBPhaseContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.latestBPhaseContributionVoteCounts || {}))} · mostRewardedTieDetected=${lifecycleDiagnostics.mostRewardedTieDetected ? "true" : "false"} · mostRewardedTieResolution=${escapeHtml(lifecycleDiagnostics.mostRewardedTieResolution || "-")} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · autoReenableApplied=${lifecycleDiagnostics.autoReenableApplied ? "true" : "false"} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · reEnabledObserverSelectedBy=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectedBy || "-")} · reEnabledObserverSelectionReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionReason || "-")} · reEnabledObserverSelectionSource=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionSource || "-")} · reEnabledObserverWasActiveMemberBlocked=${lifecycleDiagnostics.reEnabledObserverWasActiveMemberBlocked ? "true" : "false"} · reEnabledObserverCandidateInvalidReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverCandidateInvalidReason || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
       ${final ? `<p>Final recap debug: finalRecapProvider=${escapeHtml(final.actualProvider || final.provider || "-")} · finalRecapOpenAiDurationMs=${Number(finalDiagnostics?.finalRecapOpenAiDurationMs || 0)} · finalRecapTotalDurationMs=${Number(finalDiagnostics?.finalRecapTotalDurationMs || 0)} · finalRecapPromptCharLength=${Number(finalDiagnostics?.finalRecapPromptCharLength || 0)} · finalRecapOutputCharLength=${Number(finalDiagnostics?.finalRecapOutputCharLength || 0)} · finalRecapSchemaName=${escapeHtml(finalDiagnostics?.finalRecapSchemaName || final.schemaName || "-")} · finalRecapStrict=${(finalDiagnostics?.finalRecapStrict || final.strict) ? "true" : "false"} · finalRecapActiveRosterPromptCount=${Number(finalDiagnostics?.finalRecapActiveRosterPromptCount || 0)} · finalRecapObserverSummaryPromptCount=${Number(finalDiagnostics?.finalRecapObserverSummaryPromptCount || 0)} · archivedSummaryIncluded=${finalDiagnostics?.archivedSummaryIncluded ? "true" : "false"}</p>` : ""}
       ${advancedAudit ? `<p>Advanced audit debug: advancedAuditEnabled=${auditDiagnostics?.advancedAuditEnabled ? "true" : "false"} · advancedAuditFounderOnly=${auditDiagnostics?.advancedAuditFounderOnly ? "true" : "false"} · advancedAuditProvider=${escapeHtml(auditDiagnostics?.advancedAuditProvider || advancedAudit.actualProvider || advancedAudit.provider || "-")} · advancedAuditRequestedModel=${escapeHtml(auditDiagnostics?.advancedAuditRequestedModel || advancedAudit.requestedModel || advancedAudit.modelName || "-")} · advancedAuditActualModel=${escapeHtml(auditDiagnostics?.advancedAuditActualModel || advancedAudit.actualModel || advancedAudit.modelName || "-")} · advancedAuditFallbackUsed=${(auditDiagnostics?.advancedAuditFallbackUsed || advancedAudit.fallbackUsed) ? "true" : "false"} · advancedAuditFallbackReason=${escapeHtml(auditDiagnostics?.advancedAuditFallbackReason || advancedAudit.fallbackReason || "-")} · advancedAuditJsonParseFailed=${(auditDiagnostics?.advancedAuditJsonParseFailed || advancedAudit.jsonParseFailed) ? "true" : "false"} · advancedAuditSchemaName=${escapeHtml(auditDiagnostics?.advancedAuditSchemaName || advancedAudit.schemaName || "-")} · advancedAuditStrict=${(auditDiagnostics?.advancedAuditStrict || advancedAudit.strict) ? "true" : "false"} · advancedAuditDurationMs=${Number(auditDiagnostics?.advancedAuditDurationMs || 0)} · advancedAuditPromptCharLength=${Number(auditDiagnostics?.advancedAuditPromptCharLength || 0)} · advancedAuditOutputCharLength=${Number(auditDiagnostics?.advancedAuditOutputCharLength || 0)} · advancedAuditContextCompressed=${auditDiagnostics?.advancedAuditContextCompressed ? "true" : "false"} · advancedAuditAdaptivePackageIncluded=${auditDiagnostics?.advancedAuditAdaptivePackageIncluded ? "true" : "false"} · advancedAuditAutoRun=${auditDiagnostics?.advancedAuditAutoRun ? "true" : "false"} · advancedAuditManualTrigger=${auditDiagnostics?.advancedAuditManualTrigger ? "true" : "false"} · advancedAuditAlreadyExists=${auditDiagnostics?.advancedAuditAlreadyExists ? "true" : "false"} · advancedAuditDuplicateCallBlocked=${auditDiagnostics?.advancedAuditDuplicateCallBlocked ? "true" : "false"} · advancedAuditSessionId=${escapeHtml(auditDiagnostics?.advancedAuditSessionId || pdcState.pdcSessionId || "-")} · advancedAuditInFlight=${(auditDiagnostics?.advancedAuditInFlight || pdcState.advancedAuditLoading) ? "true" : "false"} · advancedAuditDecisionContext=${escapeHtml(auditDiagnostics?.advancedAuditDecisionContext || "-")} · advancedAuditDecisionNature=${escapeHtml(auditDiagnostics?.advancedAuditDecisionNature || "-")} · advancedAuditRecommendedOutputShape=${escapeHtml(auditDiagnostics?.advancedAuditRecommendedOutputShape || "-")} · advancedAuditRecapMainWeakness=${escapeHtml(auditDiagnostics?.advancedAuditRecapMainWeakness || "-")} · advancedAuditCostOptimizationApplied=${auditDiagnostics?.advancedAuditCostOptimizationApplied ? "true" : "false"}</p>` : ""}
-    </section>`;
+      </div>
+    </details>`;
 }
 
 function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
