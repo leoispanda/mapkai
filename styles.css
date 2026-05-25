@@ -29,7 +29,7 @@ body {
     var(--paper);
   background-size: 42px 42px;
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 a {
@@ -214,12 +214,28 @@ body:not(.founder-mode) .founder-public-entry {
 }
 
 .pdc-page {
+  --pdc-ink: #0f172a;
+  --pdc-ink-soft: #111827;
+  --pdc-muted: #64748b;
+  --pdc-muted-2: #6b7280;
+  --pdc-blue: #2563eb;
+  --pdc-blue-dark: #1d4ed8;
+  --pdc-cyan: #38bdf8;
+  --pdc-violet: #6366f1;
+  --pdc-purple: #8b5cf6;
+  --pdc-border: rgba(15, 23, 42, 0.08);
+  --pdc-blue-border: rgba(37, 99, 235, 0.14);
+  --pdc-card: rgba(255, 255, 255, 0.84);
+  --pdc-card-strong: rgba(255, 255, 255, 0.94);
+  --pdc-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
   display: none;
   align-items: center;
   background:
-    radial-gradient(circle at 18% 2%, rgba(73, 129, 255, 0.12), transparent 32%),
-    radial-gradient(circle at 88% 12%, rgba(111, 86, 255, 0.1), transparent 28%),
-    linear-gradient(180deg, #f8fbff 0%, #fffaf0 48%, #f5f8f6 100%);
+    radial-gradient(circle at 18% 2%, rgba(56, 189, 248, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(99, 102, 241, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 52%, #f6f8fb 100%);
+  color: var(--pdc-ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .pdc-page.is-active {
@@ -1478,6 +1494,276 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-recent-feedback strong {
   width: 100%;
   color: var(--green-dark);
+}
+
+/* PDC premium color and typography layer. */
+.pdc-page .pdc-card,
+.pdc-page .pdc-result,
+.pdc-page .pdc-feedback,
+.pdc-page .pdc-founder-panel,
+.pdc-page .pdc-council-room,
+.pdc-page .pdc-roster-panel,
+.pdc-page .pdc-dialogue-panel,
+.pdc-page .pdc-advanced-audit {
+  border-color: var(--pdc-border);
+  background: var(--pdc-card);
+  box-shadow: var(--pdc-shadow);
+}
+
+.pdc-page .pdc-card h1,
+.pdc-page .pdc-result h1,
+.pdc-page .pdc-room-heading h1,
+.pdc-page .pdc-dialogue-panel-head h2,
+.pdc-page .pdc-roster-panel h2,
+.pdc-page .pdc-feedback h2,
+.pdc-page .pdc-advanced-audit h2 {
+  color: var(--pdc-ink);
+  letter-spacing: -0.02em;
+}
+
+.pdc-page .pdc-advanced-audit h2 {
+  width: fit-content;
+  background: linear-gradient(100deg, var(--pdc-ink) 0%, var(--pdc-blue) 52%, var(--pdc-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pdc-page .eyebrow,
+.pdc-page .pdc-facilitator-row small,
+.pdc-page .pdc-round-status span,
+.pdc-page .pdc-provider-label,
+.pdc-page .pdc-roster-panel h3,
+.pdc-page .pdc-table-topic span,
+.pdc-page .pdc-phase-guidance label span,
+.pdc-page .pdc-radio-group legend,
+.pdc-page .pdc-profile-panel dt {
+  color: #64748b;
+  letter-spacing: 0.08em;
+}
+
+.pdc-page .pdc-subtitle,
+.pdc-page .pdc-boundary-copy,
+.pdc-page .pdc-room-heading p:not(.eyebrow),
+.pdc-page .pdc-count,
+.pdc-page .pdc-status,
+.pdc-page .pdc-roster-note,
+.pdc-page .pdc-dialogue-note,
+.pdc-page .pdc-memo-subtitle,
+.pdc-page .pdc-audit-head p,
+.pdc-page .pdc-profile-panel p,
+.pdc-page .pdc-vote-snapshot small,
+.pdc-page .pdc-role-line,
+.pdc-page .pdc-trail-meta,
+.pdc-page .pdc-trail-votes {
+  color: var(--pdc-muted);
+}
+
+.pdc-page .pdc-mode-option,
+.pdc-page .pdc-question-label textarea,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-dialogue-board li,
+.pdc-page .pdc-phase-guidance,
+.pdc-page .pdc-vote-snapshot,
+.pdc-page .pdc-reintroduced,
+.pdc-page .pdc-final-preview,
+.pdc-page .pdc-profile-panel,
+.pdc-page .pdc-recap-section,
+.pdc-page .pdc-advanced-audit-grid article,
+.pdc-page .pdc-adaptive-package-sections section,
+.pdc-page .pdc-radio-group label,
+.pdc-page .pdc-usage-grid div {
+  border-color: var(--pdc-border);
+  background: var(--pdc-card-strong);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+}
+
+.pdc-page .pdc-mode-option.is-selected,
+.pdc-page .pdc-roster-row:hover,
+.pdc-page .pdc-roster-row.is-selected,
+.pdc-page .pdc-dialogue-board li.is-current {
+  border-color: rgba(37, 99, 235, 0.28);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.96), rgba(255, 255, 255, 0.88));
+  box-shadow: 0 14px 34px rgba(37, 99, 235, 0.1);
+}
+
+.pdc-page .pdc-facilitator-row,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-recap-recommendation,
+.pdc-page .pdc-audit-highlight {
+  border-color: var(--pdc-blue-border);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(255, 255, 255, 0.9));
+}
+
+.pdc-page .pdc-avatar {
+  background: linear-gradient(135deg, var(--pdc-blue), var(--pdc-cyan) 55%, var(--pdc-violet));
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
+}
+
+.pdc-page .pdc-facilitator-row strong,
+.pdc-page .pdc-roster-copy strong,
+.pdc-page .pdc-table-topic p,
+.pdc-page .pdc-round-status strong,
+.pdc-page .pdc-dialogue-board li span,
+.pdc-page .pdc-vote-snapshot strong,
+.pdc-page .pdc-recap-section h2,
+.pdc-page .pdc-advanced-audit-grid h3,
+.pdc-page .pdc-adaptive-package-sections h4,
+.pdc-page .pdc-profile-panel h2,
+.pdc-page .pdc-perspective-trail h3,
+.pdc-page .pdc-usage-grid strong,
+.pdc-page .pdc-pass-table th,
+.pdc-page .pdc-distribution strong,
+.pdc-page .pdc-recent-feedback strong,
+.pdc-page .pdc-founder-preview-tools p,
+.pdc-page .pdc-founder-panel h3,
+.pdc-page .pdc-feedback-summary h4 {
+  color: var(--pdc-ink);
+}
+
+.pdc-page .pdc-roster-copy small,
+.pdc-page .pdc-dialogue-board li small,
+.pdc-page .pdc-trail-group h4 {
+  color: var(--pdc-muted-2);
+}
+
+.pdc-page .pdc-roster-copy em {
+  color: var(--pdc-blue-dark);
+}
+
+.pdc-page .pdc-roster-row {
+  border-color: var(--pdc-border);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.pdc-page .pdc-roster-row.is-speaking {
+  border-color: rgba(37, 99, 235, 0.34);
+  background: rgba(239, 246, 255, 0.94);
+  box-shadow: inset 3px 0 0 var(--pdc-blue), 0 14px 32px rgba(37, 99, 235, 0.14);
+}
+
+.pdc-page .pdc-roster-row.is-thinking,
+.pdc-page .pdc-dialogue-board li.is-thinking,
+.pdc-page .pdc-dialogue-board li.is-warmup,
+.pdc-page .pdc-playback-status.is-warmup {
+  border-style: solid;
+  border-color: rgba(56, 189, 248, 0.22);
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.92), rgba(255, 255, 255, 0.86));
+}
+
+.pdc-page .pdc-roster-row.is-speaking,
+.pdc-page .pdc-dialogue-board li.is-current {
+  animation: pdcBluePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pdcBluePulse {
+  0%,
+  100% {
+    box-shadow: inset 3px 0 0 var(--pdc-blue), 0 10px 26px rgba(37, 99, 235, 0.08);
+  }
+  50% {
+    box-shadow: inset 3px 0 0 var(--pdc-blue), 0 18px 38px rgba(37, 99, 235, 0.18);
+  }
+}
+
+.pdc-page .pdc-status-chips span,
+.pdc-page .pdc-vote-chip-row span,
+.pdc-page .pdc-founder-preview-label,
+.pdc-page .pdc-relation-label,
+.pdc-page .pdc-stopped-label {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: rgba(239, 246, 255, 0.82);
+  color: var(--pdc-blue-dark);
+}
+
+.pdc-page .pdc-vote-chip-row span:nth-child(2) {
+  border-color: rgba(245, 158, 11, 0.2);
+  background: rgba(255, 251, 235, 0.82);
+  color: #92400e;
+}
+
+.pdc-page .pdc-placeholder-notice,
+.pdc-page .pdc-invalid,
+.pdc-page .pdc-recap-warning {
+  border-color: rgba(245, 158, 11, 0.2);
+  background: rgba(255, 251, 235, 0.8);
+  color: #92400e;
+}
+
+.pdc-page .pdc-round-summary {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, #111827, #1e3a8a 58%, #312e81);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.pdc-page .pdc-playback-status {
+  border-color: rgba(37, 99, 235, 0.14);
+  background: rgba(239, 246, 255, 0.74);
+}
+
+.pdc-page .pdc-playback-status p {
+  color: var(--pdc-blue-dark);
+}
+
+.pdc-page .pdc-founder-phase-debug {
+  border-color: var(--pdc-border);
+  background: rgba(248, 250, 252, 0.82);
+}
+
+.pdc-page .pdc-founder-phase-debug summary span,
+.pdc-page .pdc-debug-details {
+  color: var(--pdc-muted);
+}
+
+.pdc-page .pdc-founder-phase-debug summary em,
+.pdc-page .pdc-audit-button {
+  color: var(--pdc-blue-dark);
+}
+
+.pdc-page .pdc-audit-button {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.96), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
+}
+
+.pdc-page .pdc-profile-inline,
+.pdc-page .pdc-trail-entry,
+.pdc-page .pdc-reintroduced blockquote {
+  border-color: rgba(37, 99, 235, 0.16);
+  box-shadow: inset 3px 0 0 rgba(37, 99, 235, 0.2);
+}
+
+.pdc-page .button {
+  border-radius: 12px;
+  font-weight: 780;
+  letter-spacing: -0.01em;
+}
+
+.pdc-page .button.primary {
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  background: linear-gradient(135deg, var(--pdc-blue), var(--pdc-blue-dark));
+  color: white;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
+}
+
+.pdc-page .button.secondary,
+.pdc-page .pdc-founder-preview-tools .button.secondary {
+  border-color: rgba(15, 23, 42, 0.1);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--pdc-ink);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.pdc-page .pdc-question-label,
+.pdc-page .pdc-mode-option strong {
+  color: var(--pdc-ink);
+}
+
+.pdc-page .pdc-question-label textarea:focus,
+.pdc-page .pdc-phase-guidance textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.38);
 }
 
 main {

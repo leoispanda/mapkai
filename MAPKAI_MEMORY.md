@@ -2115,3 +2115,9 @@ Push status:
 - Collapsed Founder diagnostics by default behind compact summaries showing provider, model, fallback, strictness, duration, and prompt size; full technical metadata remains available in muted monospace detail panels.
 - Improved responsive behavior so the PDC roster and main dialogue stack cleanly on narrower screens, and recap/audit subcards collapse to one column without horizontal overflow.
 - Synced `script.js`, `public/script.js`, `styles.css`, `public/styles.css`, `index.html`, and `public/index.html`; no PDC business logic, provider/model routing, Advanced Final Audit schema/prompt, observer lifecycle, D1/pass lifecycle, public navigation, or PDC member names were changed.
+
+## 2026-05-25 - Refine PDC typography and blue color system
+- Added a modern Apple/SF/Inter-like system font stack globally and scoped PDC typography to a graphite/cool-gray palette instead of the older ink/green template feel.
+- Introduced scoped PDC design tokens for near-black text, cool-gray metadata, MapKAI blue, cyan/violet accent gradients, neutral cool borders, translucent white cards, and lighter Apple-style shadows.
+- Recolored PDC headings, roster roles, dialogue metadata, status chips, warm-up/current speaker states, buttons, memo cards, and Advanced Final Audit surfaces toward MapKAI blue and neutral graphite; green is no longer the dominant PDC UI color.
+- Kept the change CSS-only apart from syncing `public/styles.css`; no PDC business logic, provider/model routing, Advanced Final Audit schema/prompt, observer lifecycle, D1/pass lifecycle, public navigation, or PDC member names were changed.
