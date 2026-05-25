@@ -297,7 +297,7 @@ Latest PDC follow-up:
 - Blue Whale / 蓝鲸 is stored once as `blue-whale`, marked as shared facilitator, and appears on the front screen only. Blue Whale is not a participant card, does not vote, and is not part of narrowing/elimination logic.
 - Orion Zhuge / 诸葛观辰 is stored once as `orion-zhuge` and reused by both Personal PDC and Company PDC.
 - Personal PDC names were finalized:
-  Ethan Shen / 沈知衡; Clara Lin / 林问心; Marcus Lu / 陆守衡; Adrian Xu / 许望远; Felix Jiang / 江试舟; Iris Song / 宋照微; Julian Cheng / 程和鸣; Caleb Gu / 顾安时; Orion Zhuge / 诸葛观辰.
+  Rex Velocity; Vera Flow; Max Build; Nina Ember; Wang Zhibai; Owen Insight; Adrian North; Mira Ethos; Orion Zhuge / 诸葛观辰.
 - Company PDC remains placeholder/default-v1:
   Rex Velocity; Vera Flow; Max Stack; Nina Story; Wang Zhibai / 王之白; Owen Deep; Adrian North; Mira Sprint; Orion Zhuge / 诸葛观辰.
 - Existing PDC pass lifecycle, D1 tables, feedback API, founder summary API, and founder-only PDC Access Panel were preserved.
@@ -1984,7 +1984,7 @@ Push status:
 - Cloudflare latency rows may still fall back to placeholder when Workers AI returns invalid JSON; the diagnostic keeps that clearly labeled instead of treating it as provider success.
 
 ## 2026-05-24 - Add local PDC warm-up UX
-- Added local-only warm-up playback for PDC start and continue: the Council Room opens immediately and shows deterministic preparation lines for Blue Whale, Ethan Shen, Clara Lin, Marcus Lu, and Adrian Xu while waiting for the real OpenAI structured phase.
+- Added local-only warm-up playback for PDC start and continue: the Council Room opens immediately and shows deterministic preparation lines for Blue Whale, Rex Velocity, Vera Flow, Max Build, and Nina Ember while waiting for the real OpenAI structured phase.
 - Warm-up lines are marked as local preparation cues, are not final council statements, are not stored, and do not call Cloudflare or any extra provider.
 - When the OpenAI phase returns, the warm-up room is replaced by the real progressive playback; Founder debug now shows `warmupMode`, `warmupStartedAt`, `warmupDurationMs`, and existing OpenAI phase timing.
 - Preserved model, provider, schema, D1, pass lifecycle, public navigation, persona names, Quality Mode, cost display, and normal PDC API behavior.

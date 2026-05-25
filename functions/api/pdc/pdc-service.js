@@ -23,8 +23,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "ethan-shen",
-    englishName: "Ethan Shen",
-    name: "沈知衡",
+    englishName: "Rex Velocity",
+    name: "Rex Velocity",
     family: "personal_committee",
     role: "Facts & Evidence",
     responsibility: "Clarify missing information, evidence, assumptions, and factual uncertainty.",
@@ -40,8 +40,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "clara-lin",
-    englishName: "Clara Lin",
-    name: "林问心",
+    englishName: "Vera Flow",
+    name: "Vera Flow",
     family: "personal_committee",
     role: "Emotion & Inner Desire",
     responsibility: "Examine feelings, real desire, emotional truth, and hidden motivation.",
@@ -57,8 +57,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "marcus-lu",
-    englishName: "Marcus Lu",
-    name: "陆守衡",
+    englishName: "Max Build",
+    name: "Max Build",
     family: "personal_committee",
     role: "Risk & Downside",
     responsibility: "Test downside, financial cost, opportunity cost, and worst-case outcome.",
@@ -74,8 +74,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "adrian-xu",
-    englishName: "Adrian Xu",
-    name: "许望远",
+    englishName: "Nina Ember",
+    name: "Nina Ember",
     family: "personal_committee",
     role: "Opportunity & Long View",
     responsibility: "Assess long-term upside, identity direction, external opportunity, and timing window.",
@@ -91,8 +91,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "felix-jiang",
-    englishName: "Felix Jiang",
-    name: "江试舟",
+    englishName: "Wang Zhibai",
+    name: "Wang Zhibai",
     family: "personal_committee",
     role: "Creativity & Third Path",
     responsibility: "Create alternative routes, experiments, reframing, and non-binary options.",
@@ -108,8 +108,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "iris-song",
-    englishName: "Iris Song",
-    name: "宋照微",
+    englishName: "Owen Insight",
+    name: "Owen Insight",
     family: "personal_committee",
     role: "Blind Spots & Self-Deception",
     responsibility: "Question vanity, avoidance, fear, pride, and self-deception.",
@@ -125,8 +125,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "julian-cheng",
-    englishName: "Julian Cheng",
-    name: "程和鸣",
+    englishName: "Adrian North",
+    name: "Adrian North",
     family: "personal_committee",
     role: "Relationships & Social Impact",
     responsibility: "Evaluate impact on family, colleagues, mentors, network, and relationship trust.",
@@ -142,8 +142,8 @@ export const pdcPersonaLibrary = [
   },
   {
     id: "caleb-gu",
-    englishName: "Caleb Gu",
-    name: "顾安时",
+    englishName: "Mira Ethos",
+    name: "Mira Ethos",
     family: "personal_committee",
     role: "Time, Energy & Sustainability",
     responsibility: "Evaluate time, attention, energy, health, and sustainability.",
@@ -3192,7 +3192,7 @@ function buildPlaceholderSections({ isCompany, safeQuestion, personas }) {
     councilHighlights: roleHighlights,
     debateSnapshot: isCompany
       ? "Rex Velocity asks whether the idea creates real traction; Vera Flow pushes back that first-time clarity must come before expansion; Max Stack adds that cost limits and failure behavior need to be visible before scaling."
-      : "Ethan Shen asks what facts are still missing; Clara Lin pushes back that the choice also needs emotional honesty; Marcus Lu adds that the downside should be named before the decision becomes too attractive.",
+      : "Rex Velocity asks what facts are still missing; Vera Flow pushes back that the choice also needs emotional honesty; Max Build adds that the downside should be named before the decision becomes too attractive.",
     condensedReview: "This is a Council Preview in placeholder mode. A full live council review will later deepen the discussion, track stance changes, and produce a more complete decision memo.",
     finalRecommendation: isCompany
       ? "Treat this as a structured test output. Keep the first version narrow, measure whether users understand it, and expand only after trust, cost, and feedback signals are clear."
