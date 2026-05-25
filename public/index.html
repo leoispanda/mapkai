@@ -236,6 +236,29 @@
 
       <section class="page pdc-entry-page" id="pdcEntry" data-page="/pdc">
         <div class="pdc-entry-shell">
+          <section class="pdc-access-card" aria-labelledby="pdc-access-title">
+            <div>
+              <p class="eyebrow">Public Demo / Demo 模式</p>
+              <h2>Demo Mode</h2>
+              <p>Watch a predefined PDC sample. No access code, no AI, no data saved.</p>
+              <p>观看一个预设 PDC 样例。不需要体验码，不消耗 AI，不保存数据。</p>
+              <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
+            </div>
+            <div>
+              <p class="eyebrow">Access Code / 访问码</p>
+              <h2 id="pdc-access-title">Enter PDC</h2>
+              <p>Normal access codes open Standard Council: mini rounds with a 5.5 final recap.</p>
+              <p>Founder access opens Full Function: 5.5 for every round.</p>
+              <form class="pdc-access-form" data-pdc-access-form>
+                <label>
+                  <span>Access code</span>
+                  <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
+                </label>
+                <button class="button primary" type="submit">Enter PDC / 进入 PDC</button>
+                <p class="pdc-access-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </section>
           <section class="pdc-entry-hero">
             <p class="eyebrow" data-i18n="pdcEntryEyebrow">PDC Experience</p>
             <h1 data-i18n="pdcEntryTitle">Partner Decision Council</h1>
@@ -264,21 +287,6 @@
               <h3 data-i18n="pdcStepThreeTitle">Leave with a decision memo</h3>
               <p data-i18n="pdcStepThreeCopy">The final output is designed to be easier to scan and act on than a raw chat transcript.</p>
             </article>
-          </section>
-          <section class="pdc-access-card" aria-labelledby="pdc-access-title">
-            <div>
-              <p class="eyebrow" data-i18n="pdcAccessEyebrow">Private Access</p>
-              <h2 id="pdc-access-title" data-i18n="pdcAccessTitle">Enter your one-time PDC access code</h2>
-              <p data-i18n="pdcAccessDescription">Use the one-time code shared with you to enter the private PDC experience.</p>
-            </div>
-            <form class="pdc-access-form" data-pdc-access-form>
-              <label>
-                <span data-i18n="pdcAccessLabel">Access code</span>
-                <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your one-time access code" required />
-              </label>
-              <button class="button primary" type="submit" data-i18n="pdcAccessButton">Enter PDC Experience</button>
-              <p class="pdc-access-status" aria-live="polite"></p>
-            </form>
           </section>
         </div>
       </section>

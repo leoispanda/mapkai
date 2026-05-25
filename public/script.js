@@ -8833,6 +8833,9 @@ document.addEventListener("click", (event) => {
     return;
   }
   if (event.target.closest("[data-pdc-watch-demo]")) {
+    if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") {
+      goToRoute("/pdc-pilot");
+    }
     startPdcDemoMode();
     return;
   }
