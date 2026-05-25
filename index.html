@@ -30,8 +30,7 @@
       <nav class="nav-links" aria-label="Site">
         <a href="/explore" data-route="/explore">Start Exploring</a>
         <a href="/map" data-route="/map">Map</a>
-        <a class="founder-public-entry" href="/categories" data-route="/categories">Categories</a>
-        <a class="founder-public-entry" href="/learning" data-route="/learning">Learning</a>
+        <a href="/pdc" data-route="/pdc">PDC</a>
         <a href="/about" data-route="/about">About</a>
       </nav>
       <div class="language-switch" aria-label="Language">
@@ -235,12 +234,56 @@
         </div>
       </section>
 
+      <section class="page pdc-entry-page" id="pdcEntry" data-page="/pdc">
+        <div class="pdc-entry-shell">
+          <section class="pdc-entry-hero">
+            <p class="eyebrow">PDC Experience</p>
+            <h1>Think through a decision before you act.</h1>
+            <p>
+              MapKAI PDC is a guided decision reflection experience. It helps you examine one question through multiple thinking lenses, then turn the discussion into a clearer decision memo.
+            </p>
+          </section>
+          <section class="pdc-entry-demo" aria-label="PDC introduction">
+            <article>
+              <span>01</span>
+              <h2>Bring one decision</h2>
+              <p>Start with a concrete question you want to examine from several angles.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h2>Review the council view</h2>
+              <p>PDC organizes perspectives such as evidence, risk, desire, timing, and social impact.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h2>Leave with a memo</h2>
+              <p>The final output is designed to be easier to scan than a raw chat transcript.</p>
+            </article>
+          </section>
+          <section class="pdc-access-card" aria-labelledby="pdc-access-title">
+            <div>
+              <p class="eyebrow">Private Access</p>
+              <h2 id="pdc-access-title">Enter your PDC access code</h2>
+              <p>Access codes are used during the private pilot to control usage and keep the experience stable.</p>
+            </div>
+            <form class="pdc-access-form" data-pdc-access-form>
+              <label>
+                <span>Access code</span>
+                <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
+              </label>
+              <button class="button primary" type="submit">Continue to PDC</button>
+              <p class="pdc-access-status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+      </section>
+
       <section class="page pdc-page" id="pdcPilot" data-page="/pdc-pilot">
         <div class="pdc-shell" data-pdc-root>
           <section class="pdc-card" aria-live="polite">
             <p class="eyebrow">Private Pilot</p>
-            <h1>MapKAI PDC Private Pilot</h1>
-            <p class="pdc-subtitle">A one-time guided decision reflection experience.</p>
+            <h1>MapKAI PDC</h1>
+            <p class="pdc-subtitle">A private AI decision council for structured reflection.</p>
             <p class="trust-note">Checking your private access link...</p>
           </section>
         </div>
@@ -424,6 +467,7 @@ const uiText = {
   en: {
     navExplore: "Start Exploring",
     navMap: "Map",
+    navPdc: "PDC",
     navCategories: "Categories",
     navLearning: "Learning",
     navAbout: "About",
@@ -706,6 +750,7 @@ const uiText = {
   zh: {
     navExplore: "开始探索",
     navMap: "地图",
+    navPdc: "PDC",
     navCategories: "分类",
     navLearning: "学习路径",
     navAbout: "关于",
@@ -4356,6 +4401,7 @@ function contactSectionTemplate() {
 function renderContactSections() {
   pages.forEach((page) => {
     if (page.dataset.page === "/") return;
+    if (page.dataset.page === "/pdc") return;
     if (page.dataset.page === "/pdc-pilot") return;
     if (page.querySelector(".contact-section")) return;
     page.insertAdjacentHTML("beforeend", contactSectionTemplate());
@@ -4453,6 +4499,22 @@ function getMessageBoardEntries() {
 function renderMessageBoards() {
   renderFounderMessages(founderMessages, founderMessageStatus);
   renderPdcFounderPanel();
+}
+
+function handlePdcAccessSubmit(event) {
+  const form = event.target.closest("[data-pdc-access-form]");
+  if (!form) return false;
+  event.preventDefault();
+  const input = form.elements.pdc_access_code;
+  const status = form.querySelector(".pdc-access-status");
+  const code = String(input?.value || "").trim();
+  if (!code) {
+    if (status) status.textContent = "Enter your PDC access code.";
+    return true;
+  }
+  const normalizedCode = code.replace(/\s+/g, "");
+  window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
+  return true;
 }
 
 async function loadFounderMessages() {
@@ -4618,15 +4680,20 @@ function pdcShellTemplate(innerHtml) {
   return `
     <section class="pdc-card" aria-live="polite">
       <p class="eyebrow">Private Pilot</p>
-      <h1>MapKAI PDC Private Pilot</h1>
+      <h1>MapKAI PDC</h1>
       ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Founder Mode Preview</p>` : ""}
-      <p class="pdc-subtitle">A one-time guided decision reflection experience.</p>
-      <div class="pdc-boundary-copy">
-        <p>MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
-        <p>This private access link can be used once. It helps us control usage and cost during the pilot.</p>
-        <p>MapKAI PDC is designed for reflection and critical thinking. It helps you examine a decision from multiple perspectives, but the final judgment remains yours. Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
-      </div>
+      <p class="pdc-subtitle">A private AI decision council for structured reflection.</p>
+      <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
       ${innerHtml}
+      <details class="pdc-responsible-use">
+        <summary>Responsible use &amp; privacy</summary>
+        <div>
+          <p>MapKAI is currently a free knowledge initiative.</p>
+          <p>You can explore it without creating an account or providing your name or email.</p>
+          <p>The final judgment remains yours.</p>
+          <p>Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
+        </div>
+      </details>
     </section>`;
 }
 
@@ -6983,6 +7050,7 @@ function applyLanguage() {
   });
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
+  setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText('.nav-links a[data-route="/learning"]', t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
@@ -7146,6 +7214,7 @@ function goToRoute(route, replace = false) {
     }
   }
   const visibleTarget = target;
+  document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc");
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
@@ -7161,6 +7230,7 @@ function goToRoute(route, replace = false) {
     const isCurrent =
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
+      (linkRoute === "/pdc" && visibleTarget === "/pdc") ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
@@ -8740,6 +8810,10 @@ document.addEventListener("click", (event) => {
   goToRoute(link.dataset.route);
 });
 
+document.addEventListener("submit", (event) => {
+  if (handlePdcAccessSubmit(event)) return;
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && activeTitleModalStats) {
     closeKnowledgeTitleModal();
@@ -8803,7 +8877,7 @@ function setFounderMode(enabled) {
     localStorage.removeItem(founderModeKey);
   }
   renderMessageBoards();
-  if (enabled) {
+  if (enabled && !document.body.classList.contains("pdc-public-route")) {
     loadFounderMessages();
     loadPdcFounderSummary();
   } else {

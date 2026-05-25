@@ -48,6 +48,7 @@ const uiText = {
   en: {
     navExplore: "Start Exploring",
     navMap: "Map",
+    navPdc: "PDC",
     navCategories: "Categories",
     navLearning: "Learning",
     navAbout: "About",
@@ -330,6 +331,7 @@ const uiText = {
   zh: {
     navExplore: "开始探索",
     navMap: "地图",
+    navPdc: "PDC",
     navCategories: "分类",
     navLearning: "学习路径",
     navAbout: "关于",
@@ -3980,6 +3982,7 @@ function contactSectionTemplate() {
 function renderContactSections() {
   pages.forEach((page) => {
     if (page.dataset.page === "/") return;
+    if (page.dataset.page === "/pdc") return;
     if (page.dataset.page === "/pdc-pilot") return;
     if (page.querySelector(".contact-section")) return;
     page.insertAdjacentHTML("beforeend", contactSectionTemplate());
@@ -4077,6 +4080,22 @@ function getMessageBoardEntries() {
 function renderMessageBoards() {
   renderFounderMessages(founderMessages, founderMessageStatus);
   renderPdcFounderPanel();
+}
+
+function handlePdcAccessSubmit(event) {
+  const form = event.target.closest("[data-pdc-access-form]");
+  if (!form) return false;
+  event.preventDefault();
+  const input = form.elements.pdc_access_code;
+  const status = form.querySelector(".pdc-access-status");
+  const code = String(input?.value || "").trim();
+  if (!code) {
+    if (status) status.textContent = "Enter your PDC access code.";
+    return true;
+  }
+  const normalizedCode = code.replace(/\s+/g, "");
+  window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
+  return true;
 }
 
 async function loadFounderMessages() {
@@ -4242,15 +4261,20 @@ function pdcShellTemplate(innerHtml) {
   return `
     <section class="pdc-card" aria-live="polite">
       <p class="eyebrow">Private Pilot</p>
-      <h1>MapKAI PDC Private Pilot</h1>
+      <h1>MapKAI PDC</h1>
       ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Founder Mode Preview</p>` : ""}
-      <p class="pdc-subtitle">A one-time guided decision reflection experience.</p>
-      <div class="pdc-boundary-copy">
-        <p>MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
-        <p>This private access link can be used once. It helps us control usage and cost during the pilot.</p>
-        <p>MapKAI PDC is designed for reflection and critical thinking. It helps you examine a decision from multiple perspectives, but the final judgment remains yours. Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
-      </div>
+      <p class="pdc-subtitle">A private AI decision council for structured reflection.</p>
+      <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
       ${innerHtml}
+      <details class="pdc-responsible-use">
+        <summary>Responsible use &amp; privacy</summary>
+        <div>
+          <p>MapKAI is currently a free knowledge initiative.</p>
+          <p>You can explore it without creating an account or providing your name or email.</p>
+          <p>The final judgment remains yours.</p>
+          <p>Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
+        </div>
+      </details>
     </section>`;
 }
 
@@ -6607,6 +6631,7 @@ function applyLanguage() {
   });
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
+  setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText('.nav-links a[data-route="/learning"]', t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
@@ -6770,6 +6795,7 @@ function goToRoute(route, replace = false) {
     }
   }
   const visibleTarget = target;
+  document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc");
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
@@ -6785,6 +6811,7 @@ function goToRoute(route, replace = false) {
     const isCurrent =
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
+      (linkRoute === "/pdc" && visibleTarget === "/pdc") ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
@@ -8364,6 +8391,10 @@ document.addEventListener("click", (event) => {
   goToRoute(link.dataset.route);
 });
 
+document.addEventListener("submit", (event) => {
+  if (handlePdcAccessSubmit(event)) return;
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && activeTitleModalStats) {
     closeKnowledgeTitleModal();
@@ -8427,7 +8458,7 @@ function setFounderMode(enabled) {
     localStorage.removeItem(founderModeKey);
   }
   renderMessageBoards();
-  if (enabled) {
+  if (enabled && !document.body.classList.contains("pdc-public-route")) {
     loadFounderMessages();
     loadPdcFounderSummary();
   } else {

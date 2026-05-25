@@ -2121,3 +2121,14 @@ Push status:
 - Introduced scoped PDC design tokens for near-black text, cool-gray metadata, MapKAI blue, cyan/violet accent gradients, neutral cool borders, translucent white cards, and lighter Apple-style shadows.
 - Recolored PDC headings, roster roles, dialogue metadata, status chips, warm-up/current speaker states, buttons, memo cards, and Advanced Final Audit surfaces toward MapKAI blue and neutral graphite; green is no longer the dominant PDC UI color.
 - Kept the change CSS-only apart from syncing `public/styles.css`; no PDC business logic, provider/model routing, Advanced Final Audit schema/prompt, observer lifecycle, D1/pass lifecycle, public navigation, or PDC member names were changed.
+
+## 2026-05-25 - Add public PDC navigation entry page
+- Added a top navigation PDC entry in the public order `Start Exploring / Map / PDC / About`, pointing to `/pdc`.
+- Added `/pdc` as a public PDC Experience intro page with a premium explanation, three-step demo/intro area, and access-code form that only redirects to `/pdc-pilot?pass=...` after user submission.
+- Kept `/pdc` free of Founder Mode, Founder Preview, provider/model/debug information, contact/founder admin panels, and automatic PDC/GPT API calls; `/pdc-pilot` remains the gated private pilot experience.
+- Synced `script.js`, `public/script.js`, `styles.css`, `public/styles.css`, `index.html`, and `public/index.html`; no PDC business logic, provider/model routing, D1/pass lifecycle, observer lifecycle, or member names were changed.
+
+## 2026-05-25 - Shorten PDC Private Pilot hero copy
+- Replaced the long PDC Private Pilot hero explanation with concise premium copy: `MapKAI PDC`, the Founder Mode Preview badge when applicable, a one-line subtitle, and a compact trust line.
+- Moved the longer responsible-use/privacy explanation into a default-collapsed `Responsible use & privacy` section below the action area so mode cards and the decision question appear sooner.
+- Synced root/public scripts, root/public styles, and inline production HTML; no PDC logic, API behavior, access validation, provider/model routing, schema, or pass lifecycle changed.
