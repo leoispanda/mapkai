@@ -3274,13 +3274,22 @@ canvas {
 }
 
 .challenge-card h2,
-.challenge-question {
+.challenge-question,
+.challenge-card > p:first-of-type {
   font-size: clamp(2rem, 3.6vw, 3.65rem);
 }
 
-.challenge-question {
+.challenge-question,
+.challenge-card > p:first-of-type {
   max-width: 1040px;
   line-height: 1.08;
+  color: var(--ink);
+  font-weight: 760;
+}
+
+.challenge-card > .eyebrow,
+.challenge-card > h2:not(.challenge-question) {
+  display: none;
 }
 
 .answer-grid {
