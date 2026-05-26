@@ -4690,8 +4690,6 @@ function renderPdcPublicEntry() {
       <section class="pdc-entry-option">
         <p class="eyebrow">Access Code / 访问码</p>
         <h2>Enter PDC</h2>
-        <p>Normal access codes open Standard Council: mini rounds with a 5.5 final recap.</p>
-        <p>Founder access opens Full Function: 5.5 for every round.</p>
         <form class="pdc-access-form" data-pdc-access-form>
           <label>
             <span>Access code</span>
