@@ -133,9 +133,9 @@ const uiText = {
     quickMirrorRestart: "Try again",
     quickMirrorInviteZh: "我最近在做 MapKAI，想邀请你做第一批体验者。\n\n它不是心理测试，也不用注册。\n我现在想先测试一个 30 秒思维镜像：3 个日常问题，看它能不能捕捉一个人的第一选择模式。\n\n你愿意帮我试一下吗？\n试完只要告诉我三件事：\n1. 第一眼看懂了吗？\n2. 结果有没有一点像你？\n3. 你会不会想继续探索？",
     quickMirrorInviteEn: "I’m testing a small early experience for MapKAI.\n\nIt is not a personality test and does not require login.\nIt is a 30-second thinking mirror with 3 everyday questions, designed to see whether it can capture a person’s first choice pattern.\n\nWould you be open to trying it and sharing quick feedback?\n\nI’m mainly looking for:\n1. Whether the idea is clear at first glance\n2. Whether the result feels somewhat relevant\n3. Whether you would continue exploring after it",
-    challengeEyebrow: "Current Exploration",
-    challengeTitle: "Answer one situation at a time.",
-    challengeCopy: "Your map and reflection become clearer as exploration accumulates.",
+    challengeEyebrow: "",
+    challengeTitle: "One question at a time.",
+    challengeCopy: "Choose the answer that feels closest.",
     challengeHeading: "Knowledge Exploration",
     challengeCompleteEyebrow: "Exploration complete",
     challengeCompleteTitle: "Your 20 situations are complete.",
@@ -434,9 +434,9 @@ const uiText = {
     quickMirrorRestart: "重新体验",
     quickMirrorInviteZh: "我最近在做 MapKAI，想邀请你做第一批体验者。\n\n它不是心理测试，也不用注册。\n我现在想先测试一个 30 秒思维镜像：3 个日常问题，看它能不能捕捉一个人的第一选择模式。\n\n你愿意帮我试一下吗？\n试完只要告诉我三件事：\n1. 第一眼看懂了吗？\n2. 结果有没有一点像你？\n3. 你会不会想继续探索？",
     quickMirrorInviteEn: "I’m testing a small early experience for MapKAI.\n\nIt is not a personality test and does not require login.\nIt is a 30-second thinking mirror with 3 everyday questions, designed to see whether it can capture a person’s first choice pattern.\n\nWould you be open to trying it and sharing quick feedback?\n\nI’m mainly looking for:\n1. Whether the idea is clear at first glance\n2. Whether the result feels somewhat relevant\n3. Whether you would continue exploring after it",
-    challengeEyebrow: "当前探索",
-    challengeTitle: "一次进入一个情境。",
-    challengeCopy: "随着探索积累，你的地图和反思会逐渐清晰。",
+    challengeEyebrow: "",
+    challengeTitle: "一次一个问题。",
+    challengeCopy: "选择最接近你直觉的答案。",
     challengeHeading: "知识探索",
     challengeCompleteEyebrow: "探索完成",
     challengeCompleteTitle: "你已经完成 20 个情境。",
@@ -8696,9 +8696,7 @@ function renderChallenge() {
 
   const optionEntries = Object.entries(questionContent.options || {});
   cardTarget.innerHTML = `
-    <p class="eyebrow">${t("currentExploration")}</p>
-    <h2>${t("challengeHeading")}</h2>
-    <p>${questionContent.question}</p>
+    <h2 class="challenge-question">${questionContent.question}</h2>
     <div class="answer-grid">
       ${optionEntries.map(([optionKey, option]) => {
         return `<button type="button" data-answer-key="${optionKey}">${option}</button>`;
