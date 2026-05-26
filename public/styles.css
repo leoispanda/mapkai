@@ -2894,12 +2894,12 @@ canvas {
 }
 
 .explore-page .map-challenge {
-  margin-top: 34px;
+  margin-top: 20px;
 }
 
 .quick-mirror {
   width: min(1180px, 100%);
-  margin: 0 auto 26px;
+  margin: 0 auto 18px;
 }
 
 .quick-mirror-card {
@@ -2909,15 +2909,15 @@ canvas {
   gap: 20px;
   border: 1px solid rgba(15, 107, 87, 0.18);
   border-radius: 8px;
-  padding: clamp(18px, 3vw, 28px);
+  padding: clamp(12px, 2vw, 18px);
   background: linear-gradient(135deg, rgba(255, 250, 240, 0.92), rgba(237, 244, 233, 0.68));
   box-shadow: var(--shadow);
 }
 
 .quick-mirror-card h2 {
-  margin-bottom: 8px;
+  margin-bottom: 0;
   color: var(--green-dark);
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
 }
 
 .quick-mirror-card p {
@@ -2995,9 +2995,14 @@ canvas {
   margin-top: 4px;
 }
 
+.map-challenge {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
 .challenge-panel {
   display: block;
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 .challenge-card {
@@ -3005,21 +3010,7 @@ canvas {
   border-radius: 8px;
   background: rgba(255, 250, 240, 0.82);
   box-shadow: var(--shadow);
-  padding: 18px;
-}
-
-.explore-heading {
-  display: grid;
-  gap: 12px;
-  padding-top: clamp(10px, 2vw, 24px);
-}
-
-.explore-heading h1 {
-  max-width: 760px;
-}
-
-.explore-heading p {
-  margin: 0;
+  padding: clamp(24px, 4vw, 42px);
 }
 
 .reflection-panel {
@@ -3284,18 +3275,18 @@ canvas {
 
 .challenge-card h2,
 .challenge-question {
-  font-size: clamp(1.45rem, 2.4vw, 2.2rem);
+  font-size: clamp(2rem, 3.6vw, 3.65rem);
 }
 
 .challenge-question {
-  max-width: 920px;
-  line-height: 1.15;
+  max-width: 1040px;
+  line-height: 1.08;
 }
 
 .answer-grid {
   display: grid;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: clamp(24px, 4vw, 40px);
 }
 
 .answer-grid button {
