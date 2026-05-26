@@ -4116,8 +4116,8 @@ function createPdcDemoRecap() {
   const personas = pdcWarmupPersonas.map((persona) => ({ ...persona }));
   const phases = demoScript.rounds.map((round) => ({
     id: round.id,
-    label: `${round.label.en} / ${round.label.zh}`,
-    phaseLabel: `${round.label.en} / ${round.label.zh}`,
+    label: normalizePdcDemoLabel(round.label, round.roundNumber, round.phaseType),
+    phaseLabel: normalizePdcDemoLabel(round.label, round.roundNumber, round.phaseType),
     roundNumber: round.roundNumber,
     phaseType: round.phaseType,
     provider: "demo",
@@ -4225,6 +4225,14 @@ function createPdcDemoRecap() {
       reflectionNote: demoScript.finalRecap?.zh || "",
     },
   };
+}
+
+function normalizePdcDemoLabel(label, roundNumber, phaseType) {
+  if (typeof label === "string" && label.trim()) return label.trim();
+  const english = label?.en || "";
+  const chinese = label?.zh || "";
+  const combined = [english, chinese].filter(Boolean).join(" / ");
+  return combined || getPdcPhaseLabel(roundNumber, phaseType);
 }
 
 function normalizePdcDemoVoteSummary(summary, personas = []) {
@@ -4874,6 +4882,7 @@ function renderPdcCouncilRoom(recap) {
           ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback, isWarmupPhase, currentRound)}
           ${showPhaseAfterPlayback ? renderPdcRoundSummary(currentRound, facilitator) : ""}
           ${showPhaseAfterPlayback ? renderPdcVotingSnapshot(currentRound) : ""}
+          ${showPhaseAfterPlayback ? renderPdcRoundOutcome(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcPhaseGuidance(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcFinalRoundPreview(currentRound) : ""}
           ${renderPdcFounderPhaseDebug(currentRound)}
@@ -5060,14 +5069,15 @@ function renderPdcVotingLine(line) {
 function renderPdcRelationLabel(line) {
   const stanceType = String(line.stanceType || "").toLowerCase();
   const targetName = line.targetSpeakerName || "";
-  if (!targetName || !["support", "challenge", "clarify", "build"].includes(stanceType)) return "";
+  if (!targetName) return "";
   const labelByType = {
     support: "Supports",
     challenge: "Challenges",
     clarify: "Clarifies",
     build: "Builds on",
   };
-  return `<em class="pdc-relation-label">${labelByType[stanceType]} ${escapeHtml(targetName)}</em>`;
+  const label = labelByType[stanceType] || "Challenges";
+  return `<em class="pdc-relation-label">${label} ${escapeHtml(targetName)}</em>`;
 }
 
 function renderPdcRoundSummary(round, facilitator) {
@@ -5111,6 +5121,58 @@ function renderPdcVotingSnapshot(round) {
         <p>${escapeHtml(round.rosterUpdate?.reason || "No clear narrowing consensus yet.")}</p>
       </div>
     </section>`;
+}
+
+function renderPdcRoundOutcome(round) {
+  if (!round || round.phaseType !== "B") return "";
+  const summary = round.voteSummary || {};
+  const pressureRows = getPdcRoundPressureRows(round);
+  const promoted = summary.leadingContributor || summary.starContributor || summary.operatingModelLead || null;
+  const observerMove = round.rosterUpdate?.shouldArchivePerspective ? round.rosterUpdate : null;
+  const reintroduced = round.reintroducedPerspective || null;
+  const hasOutcome = pressureRows.length || promoted || observerMove || reintroduced;
+  if (!hasOutcome) return "";
+  return `
+    <section class="pdc-round-outcome" aria-label="Round outcome">
+      <h3>Round Outcome</h3>
+      <div class="pdc-outcome-grid">
+        <div>
+          <strong>Attack / Defense Focus</strong>
+          ${pressureRows.length ? `<ul>${pressureRows.map((row) => `<li><span>${escapeHtml(row.name)}</span><small>${Number(row.count)} challenge${row.count === 1 ? "" : "s"}</small></li>`).join("")}</ul>` : `<p>No direct challenge target recorded.</p>`}
+        </div>
+        <div>
+          <strong>Promoted Contribution</strong>
+          <p>${escapeHtml(promoted?.speakerName || promoted?.targetSpeakerName || "-")}${promoted?.count ? ` · ${Number(promoted.count)} support votes` : ""}</p>
+          ${promoted?.reasonSummary || promoted?.reason ? `<small>${escapeHtml(promoted.reasonSummary || promoted.reason)}</small>` : ""}
+        </div>
+        <div>
+          <strong>Moved to Observer</strong>
+          <p>${escapeHtml(observerMove?.archivedSpeakerName || "-")}</p>
+          ${observerMove?.archivedStance || observerMove?.reason ? `<small>${escapeHtml(observerMove.archivedStance || observerMove.reason)}</small>` : ""}
+        </div>
+        ${reintroduced ? `
+          <div>
+            <strong>Reintroduced Perspective</strong>
+            <p>${escapeHtml(reintroduced.speakerName || "-")}${reintroduced.chosenBySpeakerName ? ` · chosen by ${escapeHtml(reintroduced.chosenBySpeakerName)}` : ""}</p>
+            ${reintroduced.reason ? `<small>${escapeHtml(reintroduced.reason)}</small>` : ""}
+          </div>` : ""}
+      </div>
+    </section>`;
+}
+
+function getPdcRoundPressureRows(round) {
+  const counts = new Map();
+  (Array.isArray(round.dialogue) ? round.dialogue : []).forEach((line) => {
+    const targetId = line.targetSpeakerId || "";
+    const targetName = line.targetSpeakerName || "";
+    if (!targetId && !targetName) return;
+    const key = targetId || targetName;
+    const current = counts.get(key) || { id: targetId, name: targetName || targetId, count: 0 };
+    current.count += 1;
+    if (targetName) current.name = targetName;
+    counts.set(key, current);
+  });
+  return Array.from(counts.values()).sort((a, b) => b.count - a.count || String(a.name).localeCompare(String(b.name)));
 }
 
 function renderPdcRoundControls({ hasDialogue, playbackActive = false }) {
