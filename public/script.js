@@ -5052,17 +5052,21 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, 
 }
 
 function renderPdcVotingLine(line) {
+  const hasContributionVote = Boolean(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || line.contributionVote?.reason);
+  const hasConcernVote = Boolean(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || line.concernVote?.reason);
+  const shouldShowVoteDetails = hasContributionVote || hasConcernVote;
   return `
     <div class="pdc-voting-line">
       <p>${escapeHtml(line.text || "Voting rationale recorded.")}</p>
-      <div class="pdc-vote-chip-row">
-        <span>Contribution: ${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "-")}</span>
-        <span>Concern: ${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "-")}</span>
-      </div>
-      <dl>
-        <dt>Contribution reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "-")}</dd>
-        <dt>Concern reason</dt><dd>${escapeHtml(line.concernVote?.reason || "-")}</dd>
-      </dl>
+      ${shouldShowVoteDetails ? `
+        <div class="pdc-vote-chip-row">
+          ${hasContributionVote ? `<span>Contribution: ${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "Recorded")}</span>` : ""}
+          ${hasConcernVote ? `<span>Concern: ${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "Recorded")}</span>` : ""}
+        </div>
+        <dl>
+          ${hasContributionVote ? `<dt>Contribution reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "Recorded in round vote summary.")}</dd>` : ""}
+          ${hasConcernVote ? `<dt>Concern reason</dt><dd>${escapeHtml(line.concernVote?.reason || "Recorded in round vote summary.")}</dd>` : ""}
+        </dl>` : ""}
     </div>`;
 }
 
