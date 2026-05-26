@@ -58,19 +58,11 @@ const uiText = {
     homePrimary: "Start Exploring",
     homeQuickMirrorHint: "3 questions · No login · 30 seconds",
     homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
-    homeTrust: "MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.",
     mapStartTrust: "Explore freely. No account, name, or email required. Your quiz progress is not linked to a personal profile.",
     contactTrust: "Contact is optional. Please avoid sharing highly sensitive personal information. If you send us a message, we use it only to respond to you.",
     reflectionSupportNote: "Use this as reflection and learning support, not as professional advice.",
     homeLearning: "View Knowledge Map",
     homeCategories: "Browse Domains",
-    reflectionSnippetsTitle: "What exploration begins to reveal",
-    reflectionSnippets: [
-      "Some questions feel clear before you can explain why.",
-      "Some answers reveal\nhow you frame problems.",
-      "You begin to notice\nwhich domains you avoid, rush through, or over-control.",
-      "Over time, the map becomes\na quieter mirror of your thinking.",
-    ],
     coreEyebrow: "Core exploration loop",
     coreTitle: "Explore, answer, reveal, reflect.",
     exploreCardTitle: "Explore - Answer questions",
@@ -359,19 +351,11 @@ const uiText = {
     homePrimary: "开始探索",
     homeQuickMirrorHint: "3个问题 · 不用注册 · 30秒看结果",
     homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
-    homeTrust: "MapKAI 目前是一个免费的知识倡议。你无需创建账户，也无需提供姓名或邮箱，就可以开始探索。",
     mapStartTrust: "自由探索。无需账户、姓名或邮箱。你的答题进度不会绑定到个人档案。",
     contactTrust: "联系是可选的。请避免提交高度敏感的个人信息。如果你发送留言，我们只会用它来回复你。",
     reflectionSupportNote: "请把它作为反思与学习支持，而不是专业建议。",
     homeLearning: "查看知识地图",
     homeCategories: "浏览领域",
-    reflectionSnippetsTitle: "探索会慢慢显现什么",
-    reflectionSnippets: [
-      "有些问题，\n你会在解释之前先感觉清楚。",
-      "有些答案，\n显现的是你组织问题的方式。",
-      "你会慢慢看见\n自己回避、匆忙跳过，或过度控制的领域。",
-      "时间久了，地图会变成\n一面更安静的思考镜子。",
-    ],
     coreEyebrow: "核心探索循环",
     coreTitle: "探索、回答、显现、反思。",
     exploreCardTitle: "探索 - 回答问题",
@@ -7301,8 +7285,6 @@ function applyLanguage() {
   setText(".home-page .hero-copy", t("homeCopy"));
   setAllText(".home-page .hero-actions .button", [t("homePrimary")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
-  setText("#reflection-snippets-title", t("reflectionSnippetsTitle"));
-  setAllText(".reflection-snippets .snippet-list p", t("reflectionSnippets"));
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
   setText("#core-modules-title", t("coreTitle"));
