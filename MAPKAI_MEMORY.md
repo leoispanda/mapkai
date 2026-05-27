@@ -2161,6 +2161,12 @@ Push status:
 - Initial local injection used git version `de4250a`, producing `/styles.css?v=de4250a` and `/script.js?v=de4250a`.
 - No business logic, PDC logic, OpenAI provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, public navigation, or UI design behavior changed beyond asset URL versioning.
 
+## 2026-05-27 - Tighten PDC intro copy
+- Shortened the public `/pdc` hero intro while keeping the title `Navigate Your Thinking with a Structured Council` and subtitle `Think through a decision before you act.`
+- Removed the separate “More Dimensions, Better Judgment” block and the long normal-chatbot comparison from the hero area; kept the existing three-step How it works structure.
+- Shortened Demo Mode copy and moved the quick-chat distinction into a small note below Demo Mode, keeping the page lighter before users reach the demo.
+- Synced root/public HTML, CSS, and JS. No `/learning` changes, no new page, and no analytics, tracking, database fields, API calls, data collection, access-code logic, Founder Mode behavior, provider routing, round logic, roster logic, observer logic, or final recap logic changed.
+
 ## 2026-05-27 - Refine PDC intro dimensions copy
 - Refined the public `/pdc` intro around “more dimensions, better judgment”: the hero now explains that two people can make the same choice while differing in decision quality depending on the assumptions, trade-offs, risks, opportunities, and competing priorities they considered.
 - Added a lightweight “More Dimensions, Better Judgment” note and a calm comparison line positioning PDC as different from a normal chatbot, useful when trade-offs, disagreement, and competing priorities need to be made clearer.

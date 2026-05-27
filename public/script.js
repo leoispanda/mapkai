@@ -227,12 +227,8 @@ const uiText = {
     pdcEntryEyebrow: "PDC Experience",
     pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
     pdcEntrySubtitle: "Think through a decision before you act.",
-    pdcEntryDescription: "Some questions are hard not because you are confused, but because several valid perspectives are pulling in different directions.",
-    pdcEntryDescriptionTwo: "A better decision is not only about choosing the right option. It is about seeing the dimensions behind the choice. Two people may reach the same answer today, but over time, the one who sees more assumptions, trade-offs, risks, opportunities, and competing priorities will make better judgments more consistently.",
-    pdcEntryDescriptionThree: "MapKAI PDC helps you explore those dimensions through a structured council, then turn the discussion into a clearer decision memo.",
-    pdcDimensionTitle: "More Dimensions, Better Judgment",
-    pdcDimensionCopy: "The goal is not to make the decision more complicated. The goal is to make the hidden dimensions visible before you move.",
-    pdcDifferenceLine: "Not better than a normal chatbot. Different. A normal chat is useful for quick answers, drafting, explanations, and brainstorming. A structured council is useful when you need to see trade-offs, disagreement, and competing priorities more clearly.",
+    pdcEntryDescription: "Good decisions are not only about the final choice. They are about seeing the dimensions behind it — assumptions, trade-offs, risks, opportunities, and competing priorities.",
+    pdcEntryDescriptionTwo: "MapKAI PDC helps you open those dimensions through a structured council, then turn the discussion into a clearer decision memo.",
     pdcHowEyebrow: "How it works",
     pdcHowTitle: "How it works",
     pdcStepOneTitle: "Bring one real question",
@@ -522,12 +518,8 @@ const uiText = {
     pdcEntryEyebrow: "PDC 体验",
     pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
     pdcEntrySubtitle: "在行动之前，先把一个决定想清楚。",
-    pdcEntryDescription: "有些问题之所以难，不是因为你混乱，而是因为几个合理视角正在把你拉向不同方向。",
-    pdcEntryDescriptionTwo: "更好的决策不只是选对选项，也是在选择之前看见背后的维度。两个人今天可能做出同样的选择，但长期来看，看见更多假设、取舍、风险、机会和优先级冲突的人，会更稳定地做出高质量判断。",
-    pdcEntryDescriptionThree: "MapKAI PDC 会通过结构化委员会帮你探索这些维度，并把讨论整理成更清晰的决策备忘录。",
-    pdcDimensionTitle: "更多维度，更稳判断",
-    pdcDimensionCopy: "目标不是把决策变复杂，而是在行动之前，让隐藏维度先变得可见。",
-    pdcDifferenceLine: "它不是比普通 chatbot 更好，而是适合不同情境。普通对话适合快速回答、起草、解释和头脑风暴；结构化委员会适合你需要更清楚看见取舍、分歧和优先级冲突的时候。",
+    pdcEntryDescription: "好的决策不只在于最后选了什么，也在于你是否看见了背后的维度：假设、取舍、风险、机会和相互竞争的优先级。",
+    pdcEntryDescriptionTwo: "MapKAI PDC 会通过结构化委员会帮你打开这些维度，并把讨论整理成更清晰的决策备忘录。",
     pdcHowEyebrow: "它如何运作",
     pdcHowTitle: "它如何运作",
     pdcStepOneTitle: "带来一个真实问题",
@@ -4671,7 +4663,8 @@ function renderPdcPublicEntry() {
       <section class="pdc-entry-option">
         <p class="eyebrow">Public Demo / Demo 模式</p>
         <h2>Demo Mode</h2>
-        <p>Explore a prepared PDC case. PDC does not give you the answer; it helps you see how different perspectives challenge, support, and refine one question until the decision feels less like guesswork and more like grounded judgment.</p>
+        <p>Explore a prepared PDC case. PDC does not give you the answer; it helps different perspectives challenge and refine one question until the decision feels less like guesswork and more like grounded judgment.</p>
+        <p class="pdc-demo-note">Different from a quick chat: PDC is designed for questions with trade-offs, competing priorities, and visible disagreement.</p>
         <p>这是一个 PDC 案例。PDC 不直接替你给解决方案，而是帮助你从更多维度审视问题，让判断更接近有依据的决策，而不是猜中或蒙对。</p>
         <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
       </section>
