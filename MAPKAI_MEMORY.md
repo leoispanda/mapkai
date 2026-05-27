@@ -2161,6 +2161,12 @@ Push status:
 - Initial local injection used git version `de4250a`, producing `/styles.css?v=de4250a` and `/script.js?v=de4250a`.
 - No business logic, PDC logic, OpenAI provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, public navigation, or UI design behavior changed beyond asset URL versioning.
 
+## 2026-05-27 - Refine PDC intro dimensions copy
+- Refined the public `/pdc` intro around “more dimensions, better judgment”: the hero now explains that two people can make the same choice while differing in decision quality depending on the assumptions, trade-offs, risks, opportunities, and competing priorities they considered.
+- Added a lightweight “More Dimensions, Better Judgment” note and a calm comparison line positioning PDC as different from a normal chatbot, useful when trade-offs, disagreement, and competing priorities need to be made clearer.
+- Updated the three How it works steps and Demo Mode copy to emphasize one real question, structured perspective challenge, Blue Whale’s memo, and grounded judgment without claiming correct, optimal, professional, legal, medical, or financial advice.
+- Synced root/public HTML, CSS, and JS. No `/learning` changes, no new `/pdc` page, and no analytics, tracking, database fields, API calls, data collection, access-code logic, Founder Mode behavior, provider routing, round logic, roster logic, observer logic, or final recap logic changed.
+
 ## 2026-05-25 - Polish public PDC entry hierarchy and copy
 - Updated `/pdc` from a flat access-code form into a clearer premium Partner Decision Council entry page: concept hero, three-step How it works section, and final Private Access action area.
 - Added English and Chinese copy for PDC Experience, Partner Decision Council, thinking partners, decision memo, one-time access code label/placeholder/button, and natural Chinese wording.

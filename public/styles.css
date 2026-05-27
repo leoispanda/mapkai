@@ -298,6 +298,34 @@ body:not(.founder-mode) .founder-public-entry {
   max-width: 720px !important;
 }
 
+.pdc-dimension-note {
+  display: grid;
+  gap: 8px;
+  max-width: 720px;
+  margin-top: 10px;
+  padding: 18px 20px;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.78), rgba(255, 255, 255, 0.92));
+}
+
+.pdc-dimension-note h2 {
+  margin: 0;
+  color: var(--pdc-ink);
+  font-size: clamp(1.12rem, 1.7vw, 1.38rem);
+  line-height: 1.2;
+}
+
+.pdc-dimension-note p,
+.pdc-entry-difference {
+  max-width: 760px !important;
+}
+
+.pdc-entry-difference {
+  padding-top: 4px;
+  color: #475569 !important;
+}
+
 .pdc-entry-page .eyebrow,
 .pdc-access-card .eyebrow {
   color: #64748b;
