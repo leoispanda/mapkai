@@ -230,7 +230,7 @@ const uiText = {
     pdcEntryDescription: "MapKAI PDC helps you examine one real question through multiple thinking partners, then turn the discussion into a clear decision memo.",
     pdcHowEyebrow: "How it works",
     pdcHowTitle: "How it works",
-    pdcStepOneTitle: "Bring one decision",
+    pdcStepOneTitle: "Bring one question",
     pdcStepOneCopy: "Start with one concrete question you want to examine from several angles.",
     pdcStepTwoTitle: "Meet your thinking partners",
     pdcStepTwoCopy: "PDC brings together perspectives such as evidence, risk, desire, timing, and social impact.",
@@ -4178,7 +4178,7 @@ function createPdcDemoRecap() {
       },
     },
     recap: {
-      decisionFrame: demoScript.topic?.en || "Demo decision question",
+      decisionFrame: demoScript.topic?.en || "Demo question",
       coreTension: demoScript.recap?.coreTension || "Whether the team should move fast with bounded experiments or slow down for careful planning.",
       councilHighlights: [
         ...(Array.isArray(demoScript.recap?.councilHighlights) ? demoScript.recap.councilHighlights : [
@@ -4645,8 +4645,8 @@ function renderPdcPilot() {
         <input data-pdc-start-pass type="text" autocomplete="off" maxlength="80" placeholder="Enter access code">
       </label>` : ""}
     <label class="pdc-question-label">
-      <span>Decision question</span>
-      <textarea data-pdc-question maxlength="1200" rows="7" placeholder="Write one decision question you want to examine.">${escapeHtml(pdcState.question)}</textarea>
+      <span>Question</span>
+      <textarea data-pdc-question maxlength="1200" rows="7" placeholder="Write one question you want to examine.">${escapeHtml(pdcState.question)}</textarea>
     </label>
     <p class="pdc-count">${remaining} characters left</p>
     <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : isFullFunction ? "Start Founder Full Function" : "Start Standard Council"}</button>
@@ -4721,7 +4721,7 @@ function renderPdcPreparingShell(message = "Preparing this phase...") {
           </div>
           <div class="pdc-table-topic">
             <span>Decision on the table</span>
-            <p>${escapeHtml(pdcState.question || "Decision question")}</p>
+            <p>${escapeHtml(pdcState.question || "Question")}</p>
           </div>
           <p class="pdc-status">${escapeHtml(message)}</p>
         </div>
@@ -4848,7 +4848,7 @@ function renderPdcCouncilRoom(recap) {
           </div>
           <div class="pdc-table-topic">
             <span>Decision on the table</span>
-            <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Decision question")}</p>
+            <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Question")}</p>
           </div>
           <div class="pdc-round-status">
             <strong>${escapeHtml(isWarmupPhase ? "Preparing the council" : currentRound.label || "Round 1 — Opening Views")}</strong>
@@ -5468,7 +5468,7 @@ function createPdcWarmupRecap(phase, personas) {
     councilRoom: {
       isWarmupRoom: true,
       title: "PDC Council Room",
-      decisionOnTable: pdcState.question || "Decision question",
+      decisionOnTable: pdcState.question || "Question",
       currentRoundLabel: phase.phaseLabel,
       facilitator: { id: "blue-whale", englishName: "Blue Whale", name: "蓝鲸", role: "Facilitator", summary: "" },
       personas: roster,
@@ -6956,7 +6956,7 @@ async function startPdcExperience() {
     return;
   }
   if (nextQuestion.length < 8) {
-    pdcState.message = "Please enter a decision question before starting.";
+    pdcState.message = "Please enter a question before starting.";
     renderPdcPilot();
     return;
   }
