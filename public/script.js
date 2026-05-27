@@ -3984,8 +3984,8 @@ const PDC_DEMO_SCRIPT = {
     },
   ],
   finalRecap: {
-    en: "Demo script — no AI used. The council does not simply support or reject the checklist. It narrows the decision into a bounded next step: publish the checklist if it measures one concrete user response, can be maintained calmly for three weeks, and includes a stop condition before the team commits to a full product.",
-    zh: "示例演示 — 未使用 AI。这个委员会没有简单支持或反对清单，而是把问题压缩成一个有边界的下一步：如果清单能衡量一个具体用户反应、三周内可以平稳维护，并且在团队投入完整产品前有明确停止条件，就可以发布。",
+    en: "Prepared PDC case. The council does not simply support or reject the checklist. It narrows the decision into a bounded next step: publish the checklist if it measures one concrete user response, can be maintained calmly for three weeks, and includes a stop condition before the team commits to a full product.",
+    zh: "PDC 案例演示。这个委员会没有简单支持或反对清单，而是把问题压缩成一个有边界的下一步：如果清单能衡量一个具体用户反应、三周内可以平稳维护，并且在团队投入完整产品前有明确停止条件，就可以发布。",
   },
 };
 let activePdcDemoScript = PDC_DEMO_SCRIPT;
@@ -4157,10 +4157,10 @@ function createPdcDemoRecap() {
     actualProvider: "demo",
     fallbackUsed: false,
     modelName: "",
-    placeholderNotice: "Demo script — no AI used. / 示例演示 — 未使用 AI。",
+    placeholderNotice: "Prepared PDC case. / PDC 案例演示。",
     councilRoom: {
       title: "PDC Council Room",
-      subtitle: "Demo script — no AI used. / 示例演示 — 未使用 AI。",
+      subtitle: "Prepared PDC case. / PDC 案例演示。",
       decisionOnTable: [demoScript.topic?.en, demoScript.topic?.zh].filter(Boolean).join("\n"),
       personas,
       sessionRoster: personas,
@@ -4661,8 +4661,8 @@ function renderPdcPublicEntry() {
       <section class="pdc-entry-option">
         <p class="eyebrow">Public Demo / Demo 模式</p>
         <h2>Demo Mode</h2>
-        <p>Watch a predefined PDC sample. No access code, no AI, no data saved.</p>
-        <p>观看一个预设 PDC 样例。不需要体验码，不消耗 AI，不保存数据。</p>
+        <p>Explore a prepared PDC case. PDC does not give you the answer; it helps you test a question from more angles so the decision is less guesswork and more grounded judgment.</p>
+        <p>这是一个 PDC 案例。PDC 不直接替你给解决方案，而是帮助你从更多维度审视问题，让判断更接近有依据的决策，而不是猜中或蒙对。</p>
         <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
       </section>
       <section class="pdc-entry-option">
@@ -4700,7 +4700,7 @@ function renderPdcFounderEntry() {
 }
 
 function renderPdcDemoNotice() {
-  return `<section class="pdc-result"><p class="pdc-placeholder-notice">Demo script — no AI used. / 示例演示 — 未使用 AI。</p></section>`;
+  return `<section class="pdc-result"><p class="pdc-placeholder-notice">Prepared PDC case. / PDC 案例演示。</p></section>`;
 }
 
 function renderPdcPreparingShell(message = "Preparing this phase...") {
@@ -4806,7 +4806,7 @@ function renderPdcCouncilRoom(recap) {
       <div class="pdc-room-heading">
         <p class="eyebrow">Council Preview</p>
         <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
-        <p>${pdcState.demoMode ? "Demo script — no AI used. / 示例演示 — 未使用 AI。" : "The council reviews your decision in structured rounds."}</p>
+        <p>${pdcState.demoMode ? "Prepared PDC case. / PDC 案例演示。" : "The council reviews your decision in structured rounds."}</p>
       </div>
       <div class="pdc-live-room ${selectedPersona ? "has-selected-profile" : ""}">
         <aside class="pdc-roster-panel ${selectedPersona ? "has-selected-profile" : ""}" aria-label="Council Members">
