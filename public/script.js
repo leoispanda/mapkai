@@ -227,14 +227,13 @@ const uiText = {
     pdcEntryEyebrow: "PDC Experience",
     pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
     pdcEntrySubtitle: "Think through a decision before you act.",
-    pdcEntryDescription: "Good decisions are not only about the final choice. They are about seeing the dimensions behind it — assumptions, trade-offs, risks, opportunities, and competing priorities.",
-    pdcEntryDescriptionTwo: "MapKAI PDC helps you open those dimensions through a structured council, then turn the discussion into a clearer decision memo.",
+    pdcEntryDescription: "PDC helps you examine one real decision through structured disagreement, then turn the discussion into a clearer decision memo.",
     pdcHowEyebrow: "How it works",
     pdcHowTitle: "How it works",
     pdcStepOneTitle: "Bring one real question",
-    pdcStepOneCopy: "Start with one concrete decision, tension, or trade-off.",
+    pdcStepOneCopy: "Start with a decision, tension, or trade-off you actually face.",
     pdcStepTwoTitle: "Open, challenge, and compare perspectives",
-    pdcStepTwoCopy: "The council brings different lenses into the room, then lets them question assumptions, risks, and trade-offs.",
+    pdcStepTwoCopy: "The council surfaces assumptions, risks, opportunities, and competing priorities.",
     pdcStepThreeTitle: "Leave with a clearer decision memo",
     pdcStepThreeCopy: "Blue Whale summarizes the strongest views, remaining tensions, and practical next steps.",
     pdcAccessEyebrow: "Private Access",
@@ -518,14 +517,13 @@ const uiText = {
     pdcEntryEyebrow: "PDC 体验",
     pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
     pdcEntrySubtitle: "在行动之前，先把一个决定想清楚。",
-    pdcEntryDescription: "好的决策不只在于最后选了什么，也在于你是否看见了背后的维度：假设、取舍、风险、机会和相互竞争的优先级。",
-    pdcEntryDescriptionTwo: "MapKAI PDC 会通过结构化委员会帮你打开这些维度，并把讨论整理成更清晰的决策备忘录。",
+    pdcEntryDescription: "PDC 帮你通过结构化分歧审视一个真实决定，并把讨论整理成更清晰的决策备忘录。",
     pdcHowEyebrow: "它如何运作",
     pdcHowTitle: "它如何运作",
     pdcStepOneTitle: "带来一个真实问题",
-    pdcStepOneCopy: "从一个具体决定、张力或取舍开始。",
+    pdcStepOneCopy: "从一个你真实面对的决定、张力或取舍开始。",
     pdcStepTwoTitle: "打开、挑战并比较视角",
-    pdcStepTwoCopy: "委员会把不同镜头带进同一个房间，让它们质询假设、风险和取舍。",
+    pdcStepTwoCopy: "委员会会呈现假设、风险、机会和相互竞争的优先级。",
     pdcStepThreeTitle: "带走一份更清晰的决策备忘录",
     pdcStepThreeCopy: "Blue Whale 会总结最强观点、仍然存在的张力和可执行的下一步。",
     pdcAccessEyebrow: "私人访问",
@@ -4663,9 +4661,9 @@ function renderPdcPublicEntry() {
       <section class="pdc-entry-option">
         <p class="eyebrow">Public Demo / Demo 模式</p>
         <h2>Demo Mode</h2>
-        <p>Explore a prepared PDC case. PDC does not give you the answer; it helps different perspectives challenge and refine one question until the decision feels less like guesswork and more like grounded judgment.</p>
-        <p class="pdc-demo-note">Different from a quick chat: PDC is designed for questions with trade-offs, competing priorities, and visible disagreement.</p>
-        <p>这是一个 PDC 案例。PDC 不直接替你给解决方案，而是帮助你从更多维度审视问题，让判断更接近有依据的决策，而不是猜中或蒙对。</p>
+        <p>Explore a prepared PDC case before entering your own question.</p>
+        <p class="pdc-demo-note">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
+        <p>先看一个 PDC 案例，再进入你自己的问题。</p>
         <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
       </section>
       <section class="pdc-entry-option">

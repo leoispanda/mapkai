@@ -2161,6 +2161,11 @@ Push status:
 - Initial local injection used git version `de4250a`, producing `/styles.css?v=de4250a` and `/script.js?v=de4250a`.
 - No business logic, PDC logic, OpenAI provider/model routing, Advanced Final Audit schema/prompt, D1/pass lifecycle, public navigation, or UI design behavior changed beyond asset URL versioning.
 
+## 2026-05-27 - Simplify PDC page structure
+- Simplified the public `/pdc` page with a less-is-more structure: short hero definition, Demo/Access action card immediately after the hero, and the existing three-step How it works section after the action card.
+- Shortened Demo Mode copy to a direct invitation to explore a prepared case before entering a personal question, with one compact note about trade-offs, competing priorities, and visible disagreement.
+- Kept the existing `/pdc` and `/pdc-pilot` flows, access-code form, Demo button, and three-step labels; synced root/public HTML and JS. No `/learning`, API, analytics, tracking, database, access-code, Founder Mode, provider, round, roster, observer, or final recap logic changed.
+
 ## 2026-05-27 - Tighten PDC intro copy
 - Shortened the public `/pdc` hero intro while keeping the title `Navigate Your Thinking with a Structured Council` and subtitle `Think through a decision before you act.`
 - Removed the separate “More Dimensions, Better Judgment” block and the long normal-chatbot comparison from the hero area; kept the existing three-step How it works structure.
