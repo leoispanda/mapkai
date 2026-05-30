@@ -2232,6 +2232,7 @@ Push status:
 Follow-up:
 - Public Stories cards now show only the story title and story body. The map link is also hidden in the Founder-only layer so ordinary readers get a pure short-story experience without labels, tags, or action prompts.
 - The three built-in public story bodies were expanded into fuller short scenes with clearer conflict, character action, and reflective endings while keeping all knowledge-coordinate metadata hidden from ordinary readers.
+- Follow-up: Stories cards now show only title and story body even in Founder Mode; story metadata remains in data/Studio but is no longer rendered on public story cards. The `/map` Story-driven Atlas panel is temporarily hidden while keeping the underlying data and map lighting logic intact.
 
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
