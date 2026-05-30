@@ -2231,3 +2231,4 @@ Push status:
 
 Follow-up:
 - Public Stories cards now show only the story title and story body. The map link is also hidden in the Founder-only layer so ordinary readers get a pure short-story experience without labels, tags, or action prompts.
+- The three built-in public story bodies were expanded into fuller short scenes with clearer conflict, character action, and reflective endings while keeping all knowledge-coordinate metadata hidden from ordinary readers.
