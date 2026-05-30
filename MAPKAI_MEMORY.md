@@ -2222,3 +2222,9 @@ Push status:
 - Updated the home page to emphasize `Read a Story / Explore the Map / Try PDC` and the no-account free knowledge initiative trust copy.
 - Added future task: redesign public Map into a warm knowledge atlas / constellation map and hide official numeric codes from public-first UI, while keeping codes visible in Founder Knowledge Graph and Story Studio validation.
 - Synced root/public `index.html`, `script.js`, and `styles.css`; no user registration, login, public accounts, personal tracking, server-side user progress, AI story generation, or major PDC rewrite was added.
+
+## 2026-05-30 - Simplify public story cards
+- Changed public Stories cards to focus on one title, one readable story body, and a light `See it on the Map` link.
+- Moved episode labels, event type, summary, characters, main field, activated fields, concept tags, mini question, and unmatched field warnings into a Founder-only knowledge layer.
+- Preserved Founder Mode access to field IDs and validation details while keeping ordinary readers away from visible knowledge-coordinate metadata.
+- Synced root/public `script.js` and `styles.css`; no story data model, map lighting logic, Founder Story Studio validation, PDC logic, D1 schema, accounts, login, or tracking behavior changed.

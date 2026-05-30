@@ -8176,21 +8176,24 @@ function renderStories() {
       const conceptTags = story.coreConcepts.map((concept) => `<span>${escapeHtml(concept)}</span>`).join("");
       return `
         <article class="story-card">
-          <div class="story-card-topline">
-            <span>${escapeHtml(story.episode)}</span>
-            <span>${escapeHtml(story.eventType)}</span>
-          </div>
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
-          <p>${escapeHtml(story.summary)}</p>
-          <dl class="story-meta">
-            <div><dt>Characters</dt><dd>${escapeHtml(characterList)}</dd></div>
-            <div><dt>Main field</dt><dd>${fieldLink(mainField)}</dd></div>
-            <div><dt>Activated fields</dt><dd>${activatedFields.map(fieldLink).join("")}</dd></div>
-            ${unmatchedFields.length ? `<div class="founder-only"><dt>Unmatched field IDs</dt><dd>${unmatchedFields.map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}</dd></div>` : ""}
-          </dl>
-          <div class="concept-row">${conceptTags}</div>
-          <div class="mini-question">${escapeHtml(story.miniQuestion || "Mini question coming soon: What changed in the town once this field became visible?")}</div>
-          <a class="button secondary" href="/map" data-route="/map">See it on the Map</a>
+          <p class="story-body">${escapeHtml(story.storyBody || story.summary)}</p>
+          <a class="story-map-link" href="/map" data-route="/map">See it on the Map</a>
+          <div class="story-founder-layer founder-only">
+            <div class="story-card-topline">
+              <span>${escapeHtml(story.episode)}</span>
+              <span>${escapeHtml(story.eventType)}</span>
+            </div>
+            <p>${escapeHtml(story.summary)}</p>
+            <dl class="story-meta">
+              <div><dt>Characters</dt><dd>${escapeHtml(characterList)}</dd></div>
+              <div><dt>Main field</dt><dd>${fieldLink(mainField)}</dd></div>
+              <div><dt>Activated fields</dt><dd>${activatedFields.map(fieldLink).join("")}</dd></div>
+              ${unmatchedFields.length ? `<div><dt>Unmatched field IDs</dt><dd>${unmatchedFields.map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}</dd></div>` : ""}
+            </dl>
+            <div class="concept-row">${conceptTags}</div>
+            <div class="mini-question">${escapeHtml(story.miniQuestion || "Mini question coming soon: What changed in the town once this field became visible?")}</div>
+          </div>
         </article>`;
     })
     .join("");
