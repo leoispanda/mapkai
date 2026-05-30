@@ -2228,3 +2228,6 @@ Push status:
 - Moved episode labels, event type, summary, characters, main field, activated fields, concept tags, mini question, and unmatched field warnings into a Founder-only knowledge layer.
 - Preserved Founder Mode access to field IDs and validation details while keeping ordinary readers away from visible knowledge-coordinate metadata.
 - Synced root/public `script.js` and `styles.css`; no story data model, map lighting logic, Founder Story Studio validation, PDC logic, D1 schema, accounts, login, or tracking behavior changed.
+
+Follow-up:
+- Public Stories cards now show only the story title and story body. The map link is also hidden in the Founder-only layer so ordinary readers get a pure short-story experience without labels, tags, or action prompts.

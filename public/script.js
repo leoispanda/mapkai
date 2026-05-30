@@ -8178,7 +8178,6 @@ function renderStories() {
         <article class="story-card">
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
           <p class="story-body">${escapeHtml(story.storyBody || story.summary)}</p>
-          <a class="story-map-link" href="/map" data-route="/map">See it on the Map</a>
           <div class="story-founder-layer founder-only">
             <div class="story-card-topline">
               <span>${escapeHtml(story.episode)}</span>
@@ -8193,6 +8192,7 @@ function renderStories() {
             </dl>
             <div class="concept-row">${conceptTags}</div>
             <div class="mini-question">${escapeHtml(story.miniQuestion || "Mini question coming soon: What changed in the town once this field became visible?")}</div>
+            <a class="button secondary" href="/map" data-route="/map">See it on the Map</a>
           </div>
         </article>`;
     })

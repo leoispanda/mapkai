@@ -4585,18 +4585,6 @@ dd,
   line-height: 1.75;
 }
 
-.story-map-link {
-  align-self: flex-start;
-  color: #2563eb;
-  font-size: 0.86rem;
-  font-weight: 760;
-  text-decoration: none;
-}
-
-.story-map-link:hover {
-  color: #1d4ed8;
-}
-
 .story-founder-layer {
   display: grid;
   gap: 0.85rem;
