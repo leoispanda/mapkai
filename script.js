@@ -1155,21 +1155,101 @@ const categories = [
 ];
 
 const fieldPlainMeanings = {
-  "0111": "How people learn, how teaching works, and how learning systems can be designed.",
-  "0231": "How people acquire language through use, practice, context, and feedback.",
-  "0311": "How scarcity, prices, incentives, and trade-offs shape everyday choices.",
-  "0312": "How groups make public decisions, distribute responsibility, and handle disagreement.",
-  "0314": "How culture, norms, identity, and social patterns shape community life.",
-  "0411": "How records, costs, taxes, and financial reports make money flows visible.",
-  "0416": "How goods move from producers to sellers to customers, including pricing and stock.",
-  "0521": "How natural systems, water, climate, pollution, and human use affect each other.",
-  "0541": "How numbers, patterns, quantities, and models help people reason clearly.",
-  "0613": "How software tools and applications are designed, built, tested, and improved.",
-  "0721": "How raw food becomes safe, stable, transportable, and sellable.",
-  "0732": "How roads, wells, bridges, buildings, and other physical systems are planned and maintained.",
-  "0811": "How crops and livestock are grown, cared for, and connected to food supply.",
-  "1021": "How communities keep shared spaces healthy through water, waste, and sanitation systems.",
+  "0111-education-science": "How people learn, how teaching works, and how learning systems can be designed.",
+  "0223-philosophy-and-ethics": "How people reason about values, duties, meaning, right action, and the assumptions behind judgment.",
+  "0231-language-acquisition": "How people acquire language through use, practice, context, and feedback.",
+  "0311-economics": "How scarcity, prices, incentives, and trade-offs shape everyday choices.",
+  "0312-political-sciences-and-civics": "How groups make public decisions, distribute responsibility, and handle disagreement.",
+  "0314-sociology-and-cultural-studies": "How culture, norms, identity, and social patterns shape community life.",
+  "0411-accounting-and-taxation": "How records, costs, taxes, and financial reports make money flows visible.",
+  "0416-wholesale-and-retail-sales": "How goods move from producers to sellers to customers, including pricing and stock.",
+  "0521-environmental-sciences": "How natural systems, water, climate, pollution, and human use affect each other.",
+  "0541-mathematics": "How numbers, patterns, quantities, and models help people reason clearly.",
+  "0613-software-and-applications-development-and-analysis": "How software tools and applications are designed, built, tested, and improved.",
+  "0721-food-processing": "How raw food becomes safe, stable, transportable, and sellable.",
+  "0732-building-and-civil-engineering": "How roads, wells, bridges, buildings, and other physical systems are planned and maintained.",
+  "0811-crop-and-livestock-production": "How crops and livestock are grown, cared for, and connected to food supply.",
+  "1021-community-sanitation": "How communities keep shared spaces healthy through water, waste, and sanitation systems.",
 };
+
+const specialKnowledgeCategory = {
+  code: "99",
+  title: "Field unknown",
+  chineseTitle: "未知领域",
+  status: "Internal",
+  readiness: readiness.classified,
+  groups: [
+    {
+      code: "999",
+      title: "Field unknown",
+      chineseTitle: "未知领域",
+      fields: [["9999", "Field unknown", "未知领域"]],
+    },
+  ],
+};
+
+const knowledgeCoordinateCategories = [...categories, specialKnowledgeCategory];
+const administrativeFieldPattern = /not further defined|not elsewhere classified|inter-disciplinary programmes|field unknown/i;
+
+function makeCoordinateId(code, title) {
+  return `${code}-${String(title)
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")}`;
+}
+
+function isAdministrativeCoordinate(title) {
+  return administrativeFieldPattern.test(title || "");
+}
+
+function makePlainMeaning(title) {
+  return `${title} in everyday life: the situations, tools, people, trade-offs, and decisions this field helps explain.`;
+}
+
+const knowledgeAreas = knowledgeCoordinateCategories.map((area, index) => ({
+  id: makeCoordinateId(area.code, area.title),
+  code: area.code,
+  title: area.title,
+  titleZh: area.chineseTitle || "",
+  sortOrder: index,
+}));
+
+const knowledgeNarrowFields = knowledgeCoordinateCategories.flatMap((area) => {
+  const areaId = makeCoordinateId(area.code, area.title);
+  return area.groups.map((group, index) => ({
+    id: makeCoordinateId(group.code, group.title),
+    code: group.code,
+    areaId,
+    title: group.title,
+    titleZh: group.chineseTitle || "",
+    sortOrder: index,
+  }));
+});
+
+const knowledgeFields = knowledgeCoordinateCategories.flatMap((area) => {
+  const areaId = makeCoordinateId(area.code, area.title);
+  return area.groups.flatMap((group) => {
+    const narrowFieldId = makeCoordinateId(group.code, group.title);
+    return group.fields.map(([code, title, titleZh = ""], index) => {
+      const id = makeCoordinateId(code, title);
+      const isAdministrative = isAdministrativeCoordinate(title);
+      return {
+        id,
+        code,
+        areaId,
+        narrowFieldId,
+        title,
+        titleZh,
+        plainMeaning: fieldPlainMeanings[id] || makePlainMeaning(title),
+        officialDescription: "",
+        isPractical: !isAdministrative,
+        isAdministrative,
+        sortOrder: index,
+      };
+    });
+  });
+});
 
 const characters = [
   { id: "mira", name: "Mira", nameZh: "米拉", role: "Town water keeper", tone: "calm, practical" },
@@ -1193,8 +1273,13 @@ const stories = [
     titleZh: "井水变浅了",
     episode: "Episode 1",
     eventType: "resource pressure",
-    mainField: "0521",
-    activatedFields: ["0811", "0732", "0312", "1021"],
+    mainField: "0521-environmental-sciences",
+    activatedFields: [
+      "0811-crop-and-livestock-production",
+      "0732-building-and-civil-engineering",
+      "0312-political-sciences-and-civics",
+      "1021-community-sanitation",
+    ],
     characters: ["mira", "toma", "niko", "aya", "blue-whale"],
     coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
     summary: "The town well drops after a dry month. Mira wants water limits, Toma worries about crops, and Niko asks whether the old pipes are wasting more water than anyone admits.",
@@ -1206,8 +1291,13 @@ const stories = [
     titleZh: "面包价格之争",
     episode: "Episode 2",
     eventType: "market tension",
-    mainField: "0311",
-    activatedFields: ["0411", "0416", "0721", "0312"],
+    mainField: "0311-economics",
+    activatedFields: [
+      "0411-accounting-and-taxation",
+      "0416-wholesale-and-retail-sales",
+      "0721-food-processing",
+      "0312-political-sciences-and-civics",
+    ],
     characters: ["otto", "maro", "beatrice", "aya", "pim"],
     coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
     summary: "Otto raises bread prices after flour costs jump. Some neighbors call it unfair, but Beatrice opens the ledger and Maro traces the supply chain behind the loaf.",
@@ -1219,8 +1309,14 @@ const stories = [
     titleZh: "学校课程之辩",
     episode: "Episode 3",
     eventType: "learning design",
-    mainField: "0111",
-    activatedFields: ["0231", "0541", "0613", "0223", "0314"],
+    mainField: "0111-education-science",
+    activatedFields: [
+      "0231-language-acquisition",
+      "0541-mathematics",
+      "0613-software-and-applications-development-and-analysis",
+      "0223-philosophy-and-ethics",
+      "0314-sociology-and-cultural-studies",
+    ],
     characters: ["lina", "ren", "sana", "blue-whale", "aya"],
     coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
     summary: "Lina wants the school to teach fewer facts and more thinking. Ren proposes map-based learning, while Sana asks what kind of person the curriculum is quietly shaping.",
@@ -1228,47 +1324,46 @@ const stories = [
   },
 ];
 
-const adminFieldPattern = /not further defined|not elsewhere classified|inter-disciplinary/i;
-
 function getKnowledgeAreas() {
-  return categories.map((category) => ({
-    code: category.code,
-    title: getCategoryTitle(category),
-    fieldCount: getPracticalFieldsForArea(category.code).length,
-  }));
-}
-
-function flattenKnowledgeFields() {
-  return categories.flatMap((area) =>
-    area.groups.flatMap((group) =>
-      group.fields.map(([code, title]) => ({
-        code,
-        title,
-        area: area.code,
-        areaTitle: getCategoryTitle(area),
-        groupCode: group.code,
-        groupTitle: group.title,
-        plainMeaning: fieldPlainMeanings[code] || makePlainMeaning(title),
-        isPractical: !adminFieldPattern.test(`${title} ${group.title}`),
-      }))
-    )
-  );
-}
-
-function makePlainMeaning(title) {
-  return `${title} in everyday life: the situations, tools, people, trade-offs, and decisions this field helps explain.`;
+  return knowledgeAreas
+    .filter((area) => area.code !== "99")
+    .map((area) => ({
+      ...area,
+      title: getAreaDisplayTitle(area),
+      fieldCount: getPracticalFieldsForArea(area.id).length,
+    }));
 }
 
 function getKnowledgeFields() {
-  return flattenKnowledgeFields().filter((field) => field.isPractical);
+  return knowledgeFields.filter((field) => field.isPractical);
 }
 
-function getPracticalFieldsForArea(areaCode) {
-  return getKnowledgeFields().filter((field) => field.area === areaCode);
+function getPracticalFieldsForArea(areaIdOrCode) {
+  return getKnowledgeFields().filter((field) => field.areaId === areaIdOrCode || field.areaId.startsWith(`${areaIdOrCode}-`));
+}
+
+function getFieldById(fieldIdOrCode) {
+  return knowledgeFields.find((field) => field.id === fieldIdOrCode || field.code === fieldIdOrCode);
 }
 
 function getFieldByCode(code) {
-  return flattenKnowledgeFields().find((field) => field.code === code);
+  return getFieldById(code);
+}
+
+function getAreaById(areaId) {
+  return knowledgeAreas.find((area) => area.id === areaId);
+}
+
+function getNarrowFieldById(narrowFieldId) {
+  return knowledgeNarrowFields.find((narrowField) => narrowField.id === narrowFieldId);
+}
+
+function getAreaDisplayTitle(area) {
+  return currentLanguage === "zh" ? area.titleZh || area.title : area.title;
+}
+
+function getFieldDisplayTitle(field) {
+  return currentLanguage === "zh" ? field.titleZh || field.title : field.title;
 }
 
 function getCharacterById(id) {
@@ -1293,35 +1388,66 @@ function getStoryFieldCodes(story) {
   return Array.from(new Set([story.mainField, ...(story.activatedFields || [])].filter(Boolean)));
 }
 
-function getStoriesForField(fieldCode) {
-  return getPublishedStories().filter((story) => getStoryFieldCodes(story).includes(fieldCode));
+function getValidatedStoryFields(story) {
+  const allFieldIds = getStoryFieldCodes(story);
+  const matched = [];
+  const unmatched = [];
+  allFieldIds.forEach((fieldId) => {
+    const field = getFieldById(fieldId);
+    if (field) matched.push(field);
+    else unmatched.push(fieldId);
+  });
+  return { matched, unmatched };
+}
+
+function getStoryUnmatchedFields(story) {
+  return getValidatedStoryFields(story).unmatched;
+}
+
+function getStoriesForField(fieldIdOrCode) {
+  const field = getFieldById(fieldIdOrCode);
+  if (!field) return [];
+  return getPublishedStories().filter((story) => getStoryFieldCodes(story).includes(field.id));
 }
 
 function getLitFieldCodes() {
-  return new Set(getPublishedStories().flatMap(getStoryFieldCodes));
+  return new Set(
+    getPublishedStories()
+      .flatMap((story) => getValidatedStoryFields(story).matched)
+      .map((field) => field.id)
+  );
 }
 
-function getConnectedFields(fieldCode) {
+function getConnectedFields(fieldIdOrCode) {
+  const field = getFieldById(fieldIdOrCode);
+  if (!field) return [];
   const connected = new Set();
-  getStoriesForField(fieldCode).forEach((story) => {
+  getStoriesForField(field.id).forEach((story) => {
     getStoryFieldCodes(story).forEach((code) => {
-      if (code !== fieldCode) connected.add(code);
+      if (code !== field.id) connected.add(code);
     });
   });
-  return Array.from(connected).map(getFieldByCode).filter(Boolean);
+  return Array.from(connected).map(getFieldById).filter(Boolean);
 }
 
 function getCoverageStats() {
   const fields = getKnowledgeFields();
   const litFields = getLitFieldCodes();
   const published = getPublishedStories();
-  const activatedTotal = published.reduce((total, story) => total + getStoryFieldCodes(story).length, 0);
+  const activatedTotal = published.reduce((total, story) => total + getValidatedStoryFields(story).matched.length, 0);
   return {
+    officialAreas: knowledgeAreas.filter((area) => area.code !== "99").length,
+    areasIncludingSpecial: knowledgeAreas.length,
+    narrowFields: knowledgeNarrowFields.length,
+    detailedFieldsExcludingUnknown: knowledgeFields.filter((field) => field.code !== "9999").length,
+    detailedFieldsIncludingUnknown: knowledgeFields.length,
     totalPracticalFields: fields.length,
-    litFields: fields.filter((field) => litFields.has(field.code)).length,
-    unlitFields: fields.filter((field) => !litFields.has(field.code)).length,
+    administrativeFields: knowledgeFields.filter((field) => field.isAdministrative).length,
+    litFields: fields.filter((field) => litFields.has(field.id)).length,
+    unlitFields: fields.filter((field) => !litFields.has(field.id)).length,
     publishedStories: published.length,
     averageActivatedFields: published.length ? activatedTotal / published.length : 0,
+    unmatchedStoryFields: published.flatMap(getStoryUnmatchedFields),
   };
 }
 
@@ -7612,7 +7738,7 @@ function goToRoute(route, replace = false) {
   document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
-  const fieldMatch = visibleTarget.match(/^\/fields\/(\d{4})$/);
+  const fieldMatch = visibleTarget.match(/^\/fields\/([a-z0-9-]+)$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   const activePage = categoryMatch ? "/categories/detail" : fieldMatch ? "/fields/detail" : visibleTarget;
@@ -7723,8 +7849,9 @@ function renderStories() {
   target.innerHTML = getPublishedStories()
     .slice(0, 3)
     .map((story) => {
-      const mainField = getFieldByCode(story.mainField);
-      const activatedFields = (story.activatedFields || []).map(getFieldByCode).filter(Boolean);
+      const mainField = getFieldById(story.mainField);
+      const activatedFields = (story.activatedFields || []).map(getFieldById).filter(Boolean);
+      const unmatchedFields = getStoryUnmatchedFields(story);
       const characterList = story.characters.map(getCharacterName).join(", ");
       const conceptTags = story.coreConcepts.map((concept) => `<span>${escapeHtml(concept)}</span>`).join("");
       return `
@@ -7739,6 +7866,7 @@ function renderStories() {
             <div><dt>Characters</dt><dd>${escapeHtml(characterList)}</dd></div>
             <div><dt>Main field</dt><dd>${fieldLink(mainField)}</dd></div>
             <div><dt>Activated fields</dt><dd>${activatedFields.map(fieldLink).join("")}</dd></div>
+            ${unmatchedFields.length ? `<div class="founder-only"><dt>Unmatched field IDs</dt><dd>${unmatchedFields.map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}</dd></div>` : ""}
           </dl>
           <div class="concept-row">${conceptTags}</div>
           <div class="mini-question">Mini question coming soon: What changed in the town once this field became visible?</div>
@@ -7761,6 +7889,7 @@ function renderCoverageSummary() {
   const stats = getCoverageStats();
   if (target) {
     target.innerHTML = `
+      <article><span>Areas</span><strong>${stats.officialAreas}</strong></article>
       <article><span>Practical fields</span><strong>${stats.totalPracticalFields}</strong></article>
       <article><span>Lit by stories</span><strong>${stats.litFields}</strong></article>
       <article><span>Still quiet</span><strong>${stats.unlitFields}</strong></article>
@@ -7771,12 +7900,23 @@ function renderCoverageSummary() {
     founderTarget.innerHTML = `
       <h3>Founder coverage dashboard</h3>
       <div class="coverage-founder-grid">
+        <span>Official areas <strong>${stats.officialAreas}</strong></span>
+        <span>Areas incl. 99 <strong>${stats.areasIncludingSpecial}</strong></span>
+        <span>Narrow fields <strong>${stats.narrowFields}</strong></span>
+        <span>Detailed fields excl. 9999 <strong>${stats.detailedFieldsExcludingUnknown}</strong></span>
+        <span>Detailed fields incl. 9999 <strong>${stats.detailedFieldsIncludingUnknown}</strong></span>
         <span>Total practical fields <strong>${stats.totalPracticalFields}</strong></span>
+        <span>Admin fields <strong>${stats.administrativeFields}</strong></span>
         <span>Lit fields <strong>${stats.litFields}</strong></span>
         <span>Unlit fields <strong>${stats.unlitFields}</strong></span>
         <span>Published stories <strong>${stats.publishedStories}</strong></span>
         <span>Average activated fields/story <strong>${stats.averageActivatedFields.toFixed(1)}</strong></span>
       </div>
+      ${stats.unmatchedStoryFields.length ? `<p class="unmatched-field-note">Unmatched story field IDs: ${stats.unmatchedStoryFields.map(escapeHtml).join(", ")}</p>` : `<p class="unmatched-field-note">Story validation: all published story field IDs match knowledgeFields.</p>`}
+      <details class="founder-knowledge-graph">
+        <summary>Founder Knowledge Graph: full coordinate tree</summary>
+        ${renderFounderKnowledgeGraph()}
+      </details>
     `;
   }
 }
@@ -7787,8 +7927,8 @@ function renderAreaLayer() {
   const litFields = getLitFieldCodes();
   target.innerHTML = getKnowledgeAreas()
     .map((area) => {
-      const areaFields = getPracticalFieldsForArea(area.code);
-      const litCount = areaFields.filter((field) => litFields.has(field.code)).length;
+      const areaFields = getPracticalFieldsForArea(area.id);
+      const litCount = areaFields.filter((field) => litFields.has(field.id)).length;
       return `
         <article class="area-card ${litCount ? "is-lit" : "is-unlit"}">
           <span class="internal-code">${area.code}</span>
@@ -7805,8 +7945,8 @@ function renderFieldLayer() {
   const litFields = getLitFieldCodes();
   target.innerHTML = getKnowledgeFields()
     .map((field) => {
-      const connectedStories = getStoriesForField(field.code);
-      const isLit = litFields.has(field.code);
+      const connectedStories = getStoriesForField(field.id);
+      const isLit = litFields.has(field.id);
       const storyLinks = connectedStories.length
         ? connectedStories.map((story) => `<span>${escapeHtml(getStoryTitle(story))}</span>`).join("")
         : "<span>No story yet</span>";
@@ -7816,10 +7956,10 @@ function renderFieldLayer() {
             <span class="internal-code">${field.code}</span>
             <span>${isLit ? "Lit" : "Unlit"}</span>
           </div>
-          <h4>${escapeHtml(field.title)}</h4>
+          <h4>${escapeHtml(getFieldDisplayTitle(field))}</h4>
           <p>${escapeHtml(field.plainMeaning)}</p>
           <div class="connected-story-row">${storyLinks}</div>
-          <a href="/fields/${field.code}" data-route="/fields/${field.code}">Open field</a>
+          <a href="/fields/${field.id}" data-route="/fields/${field.id}">Open field</a>
         </article>`;
     })
     .join("");
@@ -7833,7 +7973,10 @@ function renderMapStoryLayer() {
       <article class="map-story-card">
         <span>${escapeHtml(story.episode)}</span>
         <h4>${escapeHtml(getStoryTitle(story))}</h4>
-        <p>${getStoryFieldCodes(story).map((code) => fieldLink(getFieldByCode(code))).join("")}</p>
+        <p>
+          ${getValidatedStoryFields(story).matched.map(fieldLink).join("")}
+          ${getStoryUnmatchedFields(story).map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}
+        </p>
       </article>`)
     .join("");
 }
@@ -7841,22 +7984,28 @@ function renderMapStoryLayer() {
 function renderFieldDetail(code) {
   const target = document.getElementById("fieldDetailCard");
   if (!target) return;
-  const field = getFieldByCode(code);
+  const field = getFieldById(code);
   if (!field) {
     target.innerHTML = `<h1>Field not found</h1><p>This field is not available in the public map yet.</p>`;
     return;
   }
-  const storiesForField = getStoriesForField(code);
-  const connectedFields = getConnectedFields(code);
+  const storiesForField = getStoriesForField(field.id);
+  const connectedFields = getConnectedFields(field.id);
+  const area = getAreaById(field.areaId);
+  const narrowField = getNarrowFieldById(field.narrowFieldId);
   target.innerHTML = `
     <p class="eyebrow">Field detail</p>
     <div class="field-detail-title">
       <span class="internal-code">${field.code}</span>
-      <h1>${escapeHtml(field.title)}</h1>
+      <h1>${escapeHtml(getFieldDisplayTitle(field))}</h1>
     </div>
     <p>${escapeHtml(field.plainMeaning)}</p>
     <dl class="story-meta">
-      <div><dt>Area</dt><dd>${escapeHtml(field.areaTitle)}</dd></div>
+      <div><dt>Code</dt><dd>${escapeHtml(field.code)}</dd></div>
+      <div><dt>Area</dt><dd>${escapeHtml(area ? getAreaDisplayTitle(area) : field.areaId)}</dd></div>
+      <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || field.narrowFieldId)}</dd></div>
+      <div><dt>Coordinate ID</dt><dd>${escapeHtml(field.id)}</dd></div>
+      <div><dt>Status</dt><dd>${field.isAdministrative ? "Administrative" : "Practical"}</dd></div>
       <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => escapeHtml(getStoryTitle(story))).join(", ") : "No published story yet"}</dd></div>
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
     </dl>
@@ -7865,7 +8014,29 @@ function renderFieldDetail(code) {
 
 function fieldLink(field) {
   if (!field) return "";
-  return `<a class="field-pill" href="/fields/${field.code}" data-route="/fields/${field.code}"><span class="internal-code">${field.code}</span>${escapeHtml(field.title)}</a>`;
+  return `<a class="field-pill" href="/fields/${field.id}" data-route="/fields/${field.id}"><span class="internal-code">${field.code}</span>${escapeHtml(getFieldDisplayTitle(field))}</a>`;
+}
+
+function renderFounderKnowledgeGraph() {
+  return knowledgeAreas
+    .map((area) => {
+      const narrowFields = knowledgeNarrowFields.filter((narrowField) => narrowField.areaId === area.id);
+      return `
+        <section class="founder-graph-area">
+          <h4><span class="internal-code">${area.code}</span>${escapeHtml(area.title)}</h4>
+          ${narrowFields.map((narrowField) => {
+            const fields = knowledgeFields.filter((field) => field.narrowFieldId === narrowField.id);
+            return `
+              <div class="founder-graph-narrow">
+                <h5><span class="internal-code">${narrowField.code}</span>${escapeHtml(narrowField.title)}</h5>
+                <div class="founder-graph-fields">
+                  ${fields.map((field) => `<span class="${field.isAdministrative ? "is-admin" : "is-practical"}"><strong>${field.code}</strong>${escapeHtml(field.title)}</span>`).join("")}
+                </div>
+              </div>`;
+          }).join("")}
+        </section>`;
+    })
+    .join("");
 }
 
 function renderCategories() {

@@ -4473,7 +4473,7 @@ dd,
 .coverage-summary,
 .coverage-founder-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 1rem 0;
 }
@@ -4504,8 +4504,72 @@ dd,
 }
 
 .coverage-founder-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0.75rem 0 0;
+}
+
+.unmatched-field,
+.unmatched-field-note {
+  color: #b45309;
+  font-weight: 800;
+}
+
+.founder-knowledge-graph {
+  margin-top: 1rem;
+}
+
+.founder-knowledge-graph summary {
+  cursor: pointer;
+  color: #0f172a;
+  font-weight: 850;
+}
+
+.founder-graph-area {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 8px;
+  background: rgba(248, 250, 252, 0.82);
+}
+
+.founder-graph-area h4,
+.founder-graph-narrow h5 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.founder-graph-narrow {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.founder-graph-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.founder-graph-fields span {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.32rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: white;
+  color: #475569;
+  font-size: 0.74rem;
+}
+
+.founder-graph-fields .is-practical {
+  border-color: rgba(37, 99, 235, 0.18);
+  color: #1d4ed8;
+}
+
+.founder-graph-fields .is-admin {
+  opacity: 0.72;
 }
 
 .story-map-layout {

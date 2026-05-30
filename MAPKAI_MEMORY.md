@@ -2200,3 +2200,13 @@ Push status:
 - Added Founder-only coverage dashboard showing total practical fields, lit fields, unlit fields, published stories, and average activated fields per story.
 - Preserved the no-login privacy boundary and added the public trust copy: `MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.`
 - Synced `index.html`, `script.js`, and `styles.css` to `public/`; no registration, account system, personal tracking, server-side user progress, PDC provider logic, D1 schema, or access-code behavior was introduced or changed.
+
+## 2026-05-30 - Establish complete Knowledge Coordinate System
+- Upgraded the story-map data layer into the complete MapKAI Knowledge Coordinate System with `knowledgeAreas`, `knowledgeNarrowFields`, and `knowledgeFields` generated from the full ISCED-F-inspired coordinate list already present in `categories`, plus the special `99 / 999 / 9999 Field unknown` node.
+- Added stable coordinate IDs using `<code>-<english-title-slug>` such as `0311-economics`, `0312-political-sciences-and-civics`, `0223-philosophy-and-ethics`, and `0613-software-and-applications-development-and-analysis`.
+- Each `knowledgeArea` now has `id`, `code`, `title`, `titleZh`, and `sortOrder`; each `knowledgeNarrowField` has `id`, `code`, `areaId`, `title`, `titleZh`, and `sortOrder`; each `knowledgeField` has `id`, `code`, `areaId`, `narrowFieldId`, `title`, `titleZh`, `plainMeaning`, `officialDescription`, `isPractical`, `isAdministrative`, and `sortOrder`.
+- Administrative detection now marks `not further defined`, `not elsewhere classified`, `Inter-disciplinary programmes`, and `Field unknown` as `isPractical=false` / `isAdministrative=true`; public Map still shows practical fields by default.
+- Story field references now use stable `knowledgeFields.id` values, and story validation reports unmatched IDs clearly while only existing matched fields can light up the map.
+- Founder coverage dashboard now reports coordinate counts and exposes a Founder-only full coordinate tree including administrative fields.
+- Verified coordinate counts: 11 official areas, 12 including `99`, 58 narrow fields, 148 detailed fields excluding `9999`, 149 including `9999`, 80 practical public fields, and 69 administrative/internal fields.
+- Synced root/public `script.js` and `styles.css`; no registration, account system, personal tracking, server-side user progress, PDC provider logic, D1 schema, or access-code behavior changed.
