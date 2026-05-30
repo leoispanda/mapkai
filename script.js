@@ -8,6 +8,8 @@ const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
 const founderModeKey = "mapkaiFounderMode";
+const founderStoriesKey = "mapkaiFounderStories";
+const founderConsoleTabKey = "mapkaiFounderConsoleTab";
 const founderModePasscode = "2026leocindy";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const supportedLanguages = ["en", "zh"];
@@ -56,9 +58,11 @@ const uiText = {
     navAbout: "About",
     homeEyebrow: "",
     homeTitle: "Map your knowledge with AI",
-    homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
-    homePrimary: "Start Exploring",
-    homeQuickMirrorHint: "3 questions · No login · 30 seconds",
+    homeCopy: "MapKAI helps you understand the world through stories, knowledge maps, and structured thinking.",
+    homePrimary: "Read a Story",
+    homeMapAction: "Explore the Map",
+    homePdcAction: "Try PDC",
+    homeQuickMirrorHint: "MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.",
     homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
     mapStartTrust: "Explore freely. No account, name, or email required. Your quiz progress is not linked to a personal profile.",
     contactTrust: "Contact is optional. Please avoid sharing highly sensitive personal information. If you send us a message, we use it only to respond to you.",
@@ -348,9 +352,11 @@ const uiText = {
     navAbout: "关于",
     homeEyebrow: "",
     homeTitle: "Map your knowledge with AI",
-    homeCopy: "As AI generates more answers,\nunderstanding yourself may quietly become more important.",
-    homePrimary: "开始探索",
-    homeQuickMirrorHint: "3个问题 · 不用注册 · 30秒看结果",
+    homeCopy: "MapKAI 用故事、知识地图和结构化思考，帮助你理解世界。",
+    homePrimary: "读一个故事",
+    homeMapAction: "探索地图",
+    homePdcAction: "试试 PDC",
+    homeQuickMirrorHint: "MapKAI 目前是一个免费的知识探索项目。你无需创建账户，也无需提供姓名或邮箱即可探索。",
     homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
     mapStartTrust: "自由探索。无需账户、姓名或邮箱。你的答题进度不会绑定到个人档案。",
     contactTrust: "联系是可选的。请避免提交高度敏感的个人信息。如果你发送留言，我们只会用它来回复你。",
@@ -1212,6 +1218,7 @@ const knowledgeAreas = knowledgeCoordinateCategories.map((area, index) => ({
   code: area.code,
   title: area.title,
   titleZh: area.chineseTitle || "",
+  description: `${area.title} as a broad knowledge area in the MapKAI coordinate system.`,
   sortOrder: index,
 }));
 
@@ -1223,6 +1230,7 @@ const knowledgeNarrowFields = knowledgeCoordinateCategories.flatMap((area) => {
     areaId,
     title: group.title,
     titleZh: group.chineseTitle || "",
+    description: `${group.title} as a narrow field inside ${area.title}.`,
     sortOrder: index,
   }));
 });
@@ -1283,7 +1291,11 @@ const stories = [
     characters: ["mira", "toma", "niko", "aya", "blue-whale"],
     coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
     summary: "The town well drops after a dry month. Mira wants water limits, Toma worries about crops, and Niko asks whether the old pipes are wasting more water than anyone admits.",
+    storyBody: "Mira finds the well rope damp but the bucket only half full. Toma asks for enough water to keep seedlings alive, while Niko traces old pipe seams near the square. Aya turns the argument into a town rule question: should they ration use first, repair the system first, or do both before the next dry week?",
+    miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
     isPublished: true,
+    createdAt: "2026-05-30",
+    updatedAt: "2026-05-30",
   },
   {
     id: "bread-price-debate",
@@ -1301,7 +1313,11 @@ const stories = [
     characters: ["otto", "maro", "beatrice", "aya", "pim"],
     coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
     summary: "Otto raises bread prices after flour costs jump. Some neighbors call it unfair, but Beatrice opens the ledger and Maro traces the supply chain behind the loaf.",
+    storyBody: "Otto pins a new bread price to the bakery door. Pim hears complaints before breakfast. Beatrice asks to see the flour invoice, and Maro explains how transport delays changed the market price. By noon the debate is no longer just about bread. It is about what counts as fair when costs move faster than feelings.",
+    miniQuestion: "What information should a town look at before deciding whether a price increase is unfair?",
     isPublished: true,
+    createdAt: "2026-05-30",
+    updatedAt: "2026-05-30",
   },
   {
     id: "school-curriculum-debate",
@@ -1320,7 +1336,11 @@ const stories = [
     characters: ["lina", "ren", "sana", "blue-whale", "aya"],
     coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
     summary: "Lina wants the school to teach fewer facts and more thinking. Ren proposes map-based learning, while Sana asks what kind of person the curriculum is quietly shaping.",
+    storyBody: "Lina spreads three lesson plans across the school table. One teaches facts quickly, one teaches tools, and one teaches students how to connect ideas. Ren sketches a learning map on the board. Sana asks whether the town is training memory, judgment, or courage. Blue Whale listens until the room notices that curriculum is never neutral.",
+    miniQuestion: "If school time is limited, what should a curriculum protect first: facts, tools, judgment, or character?",
     isPublished: true,
+    createdAt: "2026-05-30",
+    updatedAt: "2026-05-30",
   },
 ];
 
@@ -1377,7 +1397,22 @@ function getCharacterName(id) {
 }
 
 function getPublishedStories() {
-  return stories.filter((story) => story.isPublished);
+  const builtInStories = stories.filter((story) => story.isPublished);
+  if (!document.body.classList.contains("founder-mode")) return builtInStories;
+  return [...builtInStories, ...getFounderStories().filter((story) => story.isPublished)];
+}
+
+function getFounderStories() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(founderStoriesKey) || "[]");
+    return Array.isArray(stored) ? stored.filter((story) => story && typeof story === "object") : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveFounderStories(nextStories) {
+  localStorage.setItem(founderStoriesKey, JSON.stringify(nextStories));
 }
 
 function getStoryTitle(story) {
@@ -4016,6 +4051,9 @@ let lensResultGenerated = false;
 let lensPromptCopied = false;
 let founderMessages = [];
 let founderMessageStatus = { state: "idle", loaded: 0, detail: "" };
+let founderConsoleTab = localStorage.getItem(founderConsoleTabKey) || "messages";
+let storyStudioInput = "";
+let storyStudioValidation = null;
 let pdcState = createPdcBaseState();
 const pdcMaxNormalRound = 5;
 let pdcPlaybackTimer = null;
@@ -4628,6 +4666,7 @@ function contactSectionTemplate() {
         <p class="contact-status" aria-live="polite"></p>
       </form>
       <div class="message-board founder-only" data-message-board></div>
+      <div class="founder-console founder-only" data-founder-console></div>
       <div class="pdc-founder-panel founder-only" data-pdc-founder-panel></div>
     </section>`;
 }
@@ -4732,6 +4771,7 @@ function getMessageBoardEntries() {
 
 function renderMessageBoards() {
   renderFounderMessages(founderMessages, founderMessageStatus);
+  renderFounderConsole();
   renderPdcFounderPanel();
 }
 
@@ -7508,7 +7548,9 @@ function renderFounderMessages(entries, status = founderMessageStatus) {
       </div>
       ${isFailed ? `<p>${t("couldNotLoadMessages")}</p>` : entries.length ? `
         <ul>
-          ${entries.map((entry) => `
+          ${entries.map((entry) => {
+            const important = Number(entry.is_important || 0) === 1;
+            return `
             <li>
               <time>${formatBoardTime(entry.created_at || entry.createdAt)}</time>
               <p>${escapeHtml(entry.message)}</p>
@@ -7517,10 +7559,288 @@ function renderFounderMessages(entries, status = founderMessageStatus) {
                 <dt>Email</dt><dd>${escapeHtml(entry.email || "-")}</dd>
                 <dt>Page</dt><dd>${escapeHtml(entry.page_path || "-")}</dd>
                 <dt>Language</dt><dd>${escapeHtml(entry.language || "-")}</dd>
+                <dt>Status</dt><dd>${escapeHtml(entry.status || "new")}${important ? " · Important" : ""}</dd>
               </dl>
-            </li>`).join("")}
+              <div class="message-manager-controls">
+                <label>Status
+                  <select data-message-status="${entry.id || ""}">
+                    ${["new", "reviewed", "replied", "archived"].map((value) => `<option value="${value}" ${(entry.status || "new") === value ? "selected" : ""}>${value}</option>`).join("")}
+                  </select>
+                </label>
+                <label class="message-important"><input type="checkbox" data-message-important="${entry.id || ""}" ${important ? "checked" : ""}> Important</label>
+                <label>Founder note
+                  <textarea rows="2" data-message-note="${entry.id || ""}" placeholder="Internal note">${escapeHtml(entry.founder_note || "")}</textarea>
+                </label>
+                <button class="button secondary" type="button" data-save-message="${entry.id || ""}">Save update</button>
+              </div>
+            </li>`;
+          }).join("")}
         </ul>` : `<p>${t("noMessages")}</p>`}`;
   });
+}
+
+async function saveMessageUpdate(messageId) {
+  const statusEl = document.querySelector(`[data-message-status="${messageId}"]`);
+  const importantEl = document.querySelector(`[data-message-important="${messageId}"]`);
+  const noteEl = document.querySelector(`[data-message-note="${messageId}"]`);
+  founderMessageStatus = { state: "saving", loaded: founderMessages.length, detail: "" };
+  renderFounderMessages(founderMessages, founderMessageStatus);
+  try {
+    const response = await fetch("/api/contact-messages", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", "X-MapKAI-Founder": "true" },
+      body: JSON.stringify({
+        id: Number(messageId),
+        status: statusEl?.value || "new",
+        is_important: importantEl?.checked ? 1 : 0,
+        founder_note: noteEl?.value || "",
+      }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.ok !== true) throw new Error(data.error || `HTTP ${response.status}`);
+    await loadFounderMessages();
+  } catch (error) {
+    founderMessageStatus = { state: "failed", loaded: founderMessages.length, detail: error.message || "Could not update message." };
+    renderFounderMessages(founderMessages, founderMessageStatus);
+  }
+}
+
+function renderFounderConsole() {
+  const consoles = Array.from(document.querySelectorAll("[data-founder-console]"));
+  if (!consoles.length) return;
+  const tabs = [
+    ["messages", "Messages"],
+    ["story-studio", "Story Studio"],
+    ["knowledge-graph", "Knowledge Graph"],
+    ["coverage", "Coverage"],
+    ["debug", "Debug"],
+  ];
+  consoles.forEach((target) => {
+    target.innerHTML = `
+      <div class="founder-console-head">
+        <p class="eyebrow">Founder Console</p>
+        <h3>Internal MapKAI Console</h3>
+      </div>
+      <div class="founder-console-tabs" role="tablist">
+        ${tabs.map(([id, label]) => `<button type="button" data-founder-console-tab="${id}" class="${founderConsoleTab === id ? "active" : ""}">${label}</button>`).join("")}
+      </div>
+      <div class="founder-console-panel">${renderFounderConsolePanel(founderConsoleTab)}</div>
+    `;
+  });
+}
+
+function renderFounderConsolePanel(tab) {
+  if (tab === "story-studio") return renderStoryStudioPanel();
+  if (tab === "knowledge-graph") return renderKnowledgeGraphPanel();
+  if (tab === "coverage") return renderCoveragePanel();
+  if (tab === "debug") return renderFounderDebugPanel();
+  return renderMessageManagerPanel();
+}
+
+function renderMessageManagerPanel() {
+  return `
+    <section class="founder-console-section">
+      <h4>Message Manager</h4>
+      <p>Use the message controls above to mark status, importance, and founder notes. Updates use the contact message API when the D1 management columns are available.</p>
+    </section>`;
+}
+
+function renderStoryStudioPanel() {
+  const sample = storyStudioInput || JSON.stringify(createStoryStudioSample(), null, 2);
+  return `
+    <section class="founder-console-section story-studio">
+      <div>
+        <h4>Story Studio</h4>
+        <p>Paste one story JSON object, validate field links against knowledgeFields, then save as draft or published in Founder localStorage.</p>
+      </div>
+      <textarea data-story-studio-input rows="14" spellcheck="false">${escapeHtml(sample)}</textarea>
+      <div class="story-studio-actions">
+        <button class="button secondary" type="button" data-story-validate>Validate JSON</button>
+        <button class="button secondary" type="button" data-story-save-draft>Save Draft</button>
+        <button class="button primary" type="button" data-story-save-published>Publish / Save Published</button>
+        <button class="button secondary" type="button" data-story-clear>Clear</button>
+      </div>
+      <div class="story-studio-preview">${renderStoryStudioValidation(storyStudioValidation)}</div>
+      <div class="local-story-list">
+        <h5>Founder localStorage stories</h5>
+        ${getFounderStories().length ? getFounderStories().map((story) => `<article><strong>${escapeHtml(story.title || story.id)}</strong><span>${story.isPublished ? "published" : "draft"}</span></article>`).join("") : "<p>No local founder stories yet.</p>"}
+      </div>
+    </section>`;
+}
+
+function createStoryStudioSample() {
+  const now = new Date().toISOString();
+  return {
+    id: "market-roof-repair",
+    episode: "Founder Draft",
+    title: "The Market Roof Repair",
+    titleZh: "市场屋顶维修",
+    summary: "Rain leaks into the market, forcing the town to compare short-term patching with a full rebuild.",
+    storyBody: "A sudden storm exposes weak beams above the market stalls. Niko wants to repair the structure properly, while Maro worries about closing the market for too long.",
+    eventType: "infrastructure trade-off",
+    mainField: "0732-building-and-civil-engineering",
+    activatedFields: ["0413-management-and-administration", "0312-political-sciences-and-civics"],
+    characters: ["niko", "maro", "aya"],
+    coreConcepts: ["maintenance", "downtime", "public trade-offs"],
+    miniQuestion: "When is a quick patch more expensive than a full repair?",
+    isPublished: false,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+function renderStoryStudioValidation(validation) {
+  if (!validation) return "<p>Validation preview will appear here.</p>";
+  const story = validation.story || {};
+  return `
+    <article class="story-studio-result ${validation.ok ? "is-valid" : "is-invalid"}">
+      <h5>${validation.ok ? "Valid story JSON" : "Needs attention"}</h5>
+      ${validation.errors.length ? `<ul>${validation.errors.map((error) => `<li>${escapeHtml(error)}</li>`).join("")}</ul>` : ""}
+      <h4>${escapeHtml(story.title || "Untitled story")}</h4>
+      <p>${escapeHtml(story.summary || "")}</p>
+      ${story.storyBody ? `<p>${escapeHtml(story.storyBody)}</p>` : ""}
+      <dl class="story-meta">
+        <div><dt>Main field</dt><dd>${fieldLink(validation.mainField)}</dd></div>
+        <div><dt>Matched fields</dt><dd>${validation.matchedFields.map(fieldLink).join("") || "-"}</dd></div>
+        <div><dt>Unmatched fields</dt><dd>${validation.unmatchedFields.length ? validation.unmatchedFields.map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("") : "None"}</dd></div>
+        <div><dt>Characters</dt><dd>${(story.characters || []).map(escapeHtml).join(", ")}</dd></div>
+        <div><dt>Core concepts</dt><dd>${(story.coreConcepts || []).map(escapeHtml).join(", ")}</dd></div>
+        <div><dt>Mini question</dt><dd>${escapeHtml(story.miniQuestion || "-")}</dd></div>
+      </dl>
+    </article>`;
+}
+
+function validateStoryJson(rawValue) {
+  const errors = [];
+  let story = null;
+  try {
+    story = JSON.parse(rawValue);
+  } catch (error) {
+    return { ok: false, errors: [`Invalid JSON: ${error.message}`], story: null, mainField: null, matchedFields: [], unmatchedFields: [] };
+  }
+  const required = ["id", "episode", "title", "summary", "storyBody", "mainField", "activatedFields", "characters", "coreConcepts", "isPublished"];
+  required.forEach((key) => {
+    if (story[key] === undefined || story[key] === null || story[key] === "") errors.push(`Missing required field: ${key}`);
+  });
+  if (!Array.isArray(story.activatedFields)) errors.push("activatedFields must be an array.");
+  if (!Array.isArray(story.characters)) errors.push("characters must be an array.");
+  if (!Array.isArray(story.coreConcepts)) errors.push("coreConcepts must be an array.");
+  const mainField = getFieldById(story.mainField);
+  const activatedFieldIds = Array.isArray(story.activatedFields) ? story.activatedFields : [];
+  const matchedFields = [mainField, ...activatedFieldIds.map(getFieldById)].filter(Boolean);
+  const unmatchedFields = [
+    ...(mainField ? [] : [story.mainField].filter(Boolean)),
+    ...activatedFieldIds.filter((fieldId) => !getFieldById(fieldId)),
+  ];
+  if (!mainField && story.mainField) errors.push(`mainField does not match knowledgeFields.id: ${story.mainField}`);
+  if (unmatchedFields.length) errors.push(`Unmatched field IDs: ${unmatchedFields.join(", ")}`);
+  return {
+    ok: errors.length === 0,
+    errors,
+    story,
+    mainField,
+    matchedFields: Array.from(new Map(matchedFields.map((field) => [field.id, field])).values()),
+    unmatchedFields,
+  };
+}
+
+function saveStoryStudioStory(forcePublished = false) {
+  const input = document.querySelector("[data-story-studio-input]");
+  const rawValue = input?.value || "";
+  storyStudioInput = rawValue;
+  const validation = validateStoryJson(rawValue);
+  storyStudioValidation = validation;
+  if (!validation.story || validation.errors.length) {
+    renderFounderConsole();
+    return;
+  }
+  const now = new Date().toISOString();
+  const nextStory = {
+    ...validation.story,
+    isPublished: forcePublished ? true : Boolean(validation.story.isPublished),
+    updatedAt: now,
+    createdAt: validation.story.createdAt || now,
+  };
+  const stored = getFounderStories().filter((story) => story.id !== nextStory.id);
+  saveFounderStories([...stored, nextStory]);
+  storyStudioValidation = validateStoryJson(JSON.stringify(nextStory, null, 2));
+  renderStories();
+  renderStoryMap();
+  renderFounderConsole();
+}
+
+function renderKnowledgeGraphPanel() {
+  return `
+    <section class="founder-console-section">
+      <h4>Knowledge Graph</h4>
+      <div class="knowledge-graph-views">
+        <article>
+          <h5>Tree View</h5>
+          ${renderFounderKnowledgeGraph()}
+        </article>
+        <article>
+          <h5>Table View</h5>
+          <div class="founder-table-wrap">${renderKnowledgeFieldTable()}</div>
+        </article>
+      </div>
+    </section>`;
+}
+
+function renderKnowledgeFieldTable() {
+  const litFields = getLitFieldCodes();
+  return `
+    <table class="founder-knowledge-table">
+      <thead><tr><th>Code</th><th>Title</th><th>Title Zh</th><th>Area</th><th>Narrow field</th><th>Type</th><th>Light</th><th>Stories</th></tr></thead>
+      <tbody>
+        ${knowledgeFields.map((field) => {
+          const area = getAreaById(field.areaId);
+          const narrow = getNarrowFieldById(field.narrowFieldId);
+          const storiesForField = getStoriesForField(field.id);
+          return `<tr>
+            <td>${field.code}</td>
+            <td>${escapeHtml(field.title)}</td>
+            <td>${escapeHtml(field.titleZh || "-")}</td>
+            <td>${escapeHtml(area?.title || "-")}</td>
+            <td>${escapeHtml(narrow?.title || "-")}</td>
+            <td>${field.isAdministrative ? "admin" : "practical"}</td>
+            <td>${litFields.has(field.id) ? "lit" : "unlit"}</td>
+            <td>${storiesForField.length}</td>
+          </tr>`;
+        }).join("")}
+      </tbody>
+    </table>`;
+}
+
+function renderCoveragePanel() {
+  const stats = getCoverageStats();
+  return `
+    <section class="founder-console-section">
+      <h4>Coverage</h4>
+      <div class="coverage-founder-grid">
+        <span>Total detailed fields <strong>${stats.detailedFieldsIncludingUnknown}</strong></span>
+        <span>Practical fields <strong>${stats.totalPracticalFields}</strong></span>
+        <span>Administrative fields <strong>${stats.administrativeFields}</strong></span>
+        <span>Lit practical fields <strong>${stats.litFields}</strong></span>
+        <span>Unlit practical fields <strong>${stats.unlitFields}</strong></span>
+        <span>Published stories <strong>${stats.publishedStories}</strong></span>
+        <span>Average fields/story <strong>${stats.averageActivatedFields.toFixed(1)}</strong></span>
+      </div>
+    </section>`;
+}
+
+function renderFounderDebugPanel() {
+  const stats = getCoverageStats();
+  return `
+    <section class="founder-console-section">
+      <h4>Debug</h4>
+      <pre>${escapeHtml(JSON.stringify({
+        route: window.location.pathname,
+        coordinateCounts: stats,
+        localFounderStories: getFounderStories().length,
+        messageApiStatus: founderMessageStatus,
+        pdcStatus: pdcState.status,
+      }, null, 2))}</pre>
+    </section>`;
 }
 
 function formatBoardTime(value) {
@@ -7581,7 +7901,7 @@ function applyLanguage() {
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
-  setAllText(".home-page .hero-actions .button", [t("homePrimary")]);
+  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homeMapAction"), t("homePdcAction")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
@@ -7846,8 +8166,8 @@ function getCategoryThinking(code) {
 function renderStories() {
   const target = document.getElementById("storiesGrid");
   if (!target) return;
-  target.innerHTML = getPublishedStories()
-    .slice(0, 3)
+  const visibleStories = getPublishedStories();
+  target.innerHTML = (document.body.classList.contains("founder-mode") ? visibleStories : visibleStories.slice(0, 3))
     .map((story) => {
       const mainField = getFieldById(story.mainField);
       const activatedFields = (story.activatedFields || []).map(getFieldById).filter(Boolean);
@@ -7869,7 +8189,7 @@ function renderStories() {
             ${unmatchedFields.length ? `<div class="founder-only"><dt>Unmatched field IDs</dt><dd>${unmatchedFields.map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}</dd></div>` : ""}
           </dl>
           <div class="concept-row">${conceptTags}</div>
-          <div class="mini-question">Mini question coming soon: What changed in the town once this field became visible?</div>
+          <div class="mini-question">${escapeHtml(story.miniQuestion || "Mini question coming soon: What changed in the town once this field became visible?")}</div>
           <a class="button secondary" href="/map" data-route="/map">See it on the Map</a>
         </article>`;
     })
@@ -7993,6 +8313,7 @@ function renderFieldDetail(code) {
   const connectedFields = getConnectedFields(field.id);
   const area = getAreaById(field.areaId);
   const narrowField = getNarrowFieldById(field.narrowFieldId);
+  const isLit = getLitFieldCodes().has(field.id);
   target.innerHTML = `
     <p class="eyebrow">Field detail</p>
     <div class="field-detail-title">
@@ -8006,6 +8327,7 @@ function renderFieldDetail(code) {
       <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || field.narrowFieldId)}</dd></div>
       <div><dt>Coordinate ID</dt><dd>${escapeHtml(field.id)}</dd></div>
       <div><dt>Status</dt><dd>${field.isAdministrative ? "Administrative" : "Practical"}</dd></div>
+      <div><dt>Light status</dt><dd>${isLit ? "Lit by stories" : "Waiting for a story"}</dd></div>
       <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => escapeHtml(getStoryTitle(story))).join(", ") : "No published story yet"}</dd></div>
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
     </dl>
@@ -9584,6 +9906,39 @@ document.addEventListener("click", (event) => {
     copyPdcLinks("all");
     return;
   }
+  const messageSave = event.target.closest("[data-save-message]");
+  if (messageSave) {
+    saveMessageUpdate(messageSave.dataset.saveMessage);
+    return;
+  }
+  const consoleTab = event.target.closest("[data-founder-console-tab]");
+  if (consoleTab) {
+    founderConsoleTab = consoleTab.dataset.founderConsoleTab;
+    localStorage.setItem(founderConsoleTabKey, founderConsoleTab);
+    renderFounderConsole();
+    return;
+  }
+  if (event.target.closest("[data-story-validate]")) {
+    const input = document.querySelector("[data-story-studio-input]");
+    storyStudioInput = input?.value || "";
+    storyStudioValidation = validateStoryJson(storyStudioInput);
+    renderFounderConsole();
+    return;
+  }
+  if (event.target.closest("[data-story-save-draft]")) {
+    saveStoryStudioStory(false);
+    return;
+  }
+  if (event.target.closest("[data-story-save-published]")) {
+    saveStoryStudioStory(true);
+    return;
+  }
+  if (event.target.closest("[data-story-clear]")) {
+    storyStudioInput = "";
+    storyStudioValidation = null;
+    renderFounderConsole();
+    return;
+  }
   const founderExit = event.target.closest("[data-founder-exit]");
   if (founderExit) {
     event.preventDefault();
@@ -9667,12 +10022,13 @@ function setFounderMode(enabled) {
   renderMessageBoards();
   if (enabled && !document.body.classList.contains("pdc-public-route")) {
     loadFounderMessages();
-    loadPdcFounderSummary();
+    if (normalizeRoute(window.location.pathname).startsWith("/pdc")) loadPdcFounderSummary();
   } else {
     pdcFounderSummary = null;
     pdcFounderStatus = { state: "idle", detail: "" };
   }
   drawKnowledgeMap();
+  renderStories();
   renderStoryMap();
   renderChallenge();
   if (normalizeRoute(window.location.pathname) === "/pdc-pilot") {

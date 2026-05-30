@@ -2734,6 +2734,180 @@ p {
   overflow-wrap: anywhere;
 }
 
+.message-manager-controls {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.message-manager-controls label {
+  display: grid;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.message-manager-controls select,
+.message-manager-controls textarea,
+.story-studio textarea {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+  font: inherit;
+}
+
+.message-manager-controls select,
+.message-manager-controls textarea {
+  padding: 8px 10px;
+}
+
+.message-important {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.founder-console {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 246, 255, 0.78));
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+body:not(.founder-mode) .founder-console {
+  display: none;
+}
+
+.founder-console-head {
+  display: grid;
+  gap: 4px;
+}
+
+.founder-console-head h3,
+.founder-console-section h4,
+.founder-console-section h5 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.founder-console-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.founder-console-tabs button {
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
+  font-weight: 820;
+  cursor: pointer;
+}
+
+.founder-console-tabs button.active {
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: white;
+}
+
+.founder-console-section,
+.story-studio,
+.knowledge-graph-views {
+  display: grid;
+  gap: 14px;
+}
+
+.story-studio textarea {
+  min-height: 280px;
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.story-studio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.story-studio-result {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.story-studio-result.is-invalid {
+  border-color: rgba(180, 83, 9, 0.3);
+}
+
+.story-studio-result ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #b45309;
+  font-weight: 760;
+}
+
+.local-story-list {
+  display: grid;
+  gap: 8px;
+}
+
+.local-story-list article {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.founder-table-wrap {
+  max-height: 520px;
+  overflow: auto;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 8px;
+}
+
+.founder-knowledge-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.76rem;
+}
+
+.founder-knowledge-table th,
+.founder-knowledge-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: left;
+  vertical-align: top;
+}
+
+.founder-console pre {
+  max-height: 420px;
+  overflow: auto;
+  margin: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #dbeafe;
+  font-size: 0.78rem;
+}
+
 .site-footer {
   width: min(1180px, 100%);
   margin: 18px auto 0;

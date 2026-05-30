@@ -22,9 +22,27 @@ async function ensureContactMessagesTable(database) {
       message TEXT NOT NULL,
       page_path TEXT,
       language TEXT,
-      created_at TEXT DEFAULT CURRENT_TIMESTAMP
+      created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+      status TEXT DEFAULT 'new',
+      is_read INTEGER DEFAULT 0,
+      is_important INTEGER DEFAULT 0,
+      founder_note TEXT,
+      updated_at TEXT
     )`,
   ).run();
+  await ensureColumn(database, "status", "TEXT DEFAULT 'new'");
+  await ensureColumn(database, "is_read", "INTEGER DEFAULT 0");
+  await ensureColumn(database, "is_important", "INTEGER DEFAULT 0");
+  await ensureColumn(database, "founder_note", "TEXT");
+  await ensureColumn(database, "updated_at", "TEXT");
+}
+
+async function ensureColumn(database, name, definition) {
+  try {
+    await database.prepare(`ALTER TABLE contact_messages ADD COLUMN ${name} ${definition}`).run();
+  } catch {
+    // Column already exists.
+  }
 }
 
 export async function onRequest({ request, env }) {
@@ -48,9 +66,9 @@ export async function onRequest({ request, env }) {
 
   await ensureContactMessagesTable(env.MAPKAI_DB);
   await env.MAPKAI_DB.prepare(
-    `INSERT INTO contact_messages (name, email, message, page_path, language, created_at)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-  ).bind(name, email, message, pagePath, language, new Date().toISOString()).run();
+    `INSERT INTO contact_messages (name, email, message, page_path, language, created_at, status, is_read, is_important, founder_note, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, 'new', 0, 0, '', ?)`,
+  ).bind(name, email, message, pagePath, language, new Date().toISOString(), new Date().toISOString()).run();
 
   return json({ ok: true });
 }

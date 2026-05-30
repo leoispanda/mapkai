@@ -2210,3 +2210,15 @@ Push status:
 - Founder coverage dashboard now reports coordinate counts and exposes a Founder-only full coordinate tree including administrative fields.
 - Verified coordinate counts: 11 official areas, 12 including `99`, 58 narrow fields, 148 detailed fields excluding `9999`, 149 including `9999`, 80 practical public fields, and 69 administrative/internal fields.
 - Synced root/public `script.js` and `styles.css`; no registration, account system, personal tracking, server-side user progress, PDC provider logic, D1 schema, or access-code behavior changed.
+
+## 2026-05-30 - Add Founder Console and Story Studio
+- Audited existing story-driven structure and kept completed Stories, Map, coordinate, and PDC work intact instead of rebuilding parallel paths.
+- Completed the story model with `storyBody`, `miniQuestion`, `createdAt`, and `updatedAt` on built-in demo stories; field detail now shows lit/unlit status derived from published stories.
+- Added Founder localStorage story support: published Founder stories participate in Stories and Map lighting only while Founder Mode is enabled, and story validation still only lights matched existing `knowledgeFields.id` values.
+- Added a Founder-only internal console with tabs for Messages, Story Studio, Knowledge Graph, Coverage, and Debug; public users do not see the console or Story Studio.
+- Added Story Studio JSON paste/validate/preview/save draft/publish/clear flow with required-field checks, matched field pills, and explicit unmatched field warnings; invalid or unmatched field IDs are not silently saved.
+- Upgraded the message board into a lightweight Message Manager with status, important flag, founder note, and save action; added D1 management columns via migration `0003_contact_message_management.sql` and safe `PATCH /api/contact-messages` support.
+- Local `server.js` now routes `/api/contact-message` and `/api/contact-messages` through Pages Function modules for local verification; missing local D1 returns an empty message list instead of an HTML fallback.
+- Updated the home page to emphasize `Read a Story / Explore the Map / Try PDC` and the no-account free knowledge initiative trust copy.
+- Added future task: redesign public Map into a warm knowledge atlas / constellation map and hide official numeric codes from public-first UI, while keeping codes visible in Founder Knowledge Graph and Story Studio validation.
+- Synced root/public `index.html`, `script.js`, and `styles.css`; no user registration, login, public accounts, personal tracking, server-side user progress, AI story generation, or major PDC rewrite was added.
