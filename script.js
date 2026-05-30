@@ -58,8 +58,8 @@ const uiText = {
     navAbout: "About",
     homeEyebrow: "",
     homeTitle: "Map your knowledge with AI",
-    homeCopy: "MapKAI helps you understand the world through stories, knowledge maps, and structured thinking.",
-    homePrimary: "Read a Story",
+    homeCopy: "MapKAI helps you understand the world through knowledge maps and structured thinking.",
+    homePrimary: "Explore the Map",
     homeMapAction: "Explore the Map",
     homePdcAction: "Try PDC",
     homeQuickMirrorHint: "MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.",
@@ -352,8 +352,8 @@ const uiText = {
     navAbout: "关于",
     homeEyebrow: "",
     homeTitle: "Map your knowledge with AI",
-    homeCopy: "MapKAI 用故事、知识地图和结构化思考，帮助你理解世界。",
-    homePrimary: "读一个故事",
+    homeCopy: "MapKAI 用知识地图和结构化思考，帮助你理解世界。",
+    homePrimary: "探索地图",
     homeMapAction: "探索地图",
     homePdcAction: "试试 PDC",
     homeQuickMirrorHint: "MapKAI 目前是一个免费的知识探索项目。你无需创建账户，也无需提供姓名或邮箱即可探索。",
@@ -7900,7 +7900,6 @@ function applyLanguage() {
     if (key) target.textContent = t(key);
   });
   setText('.nav-links a[data-route="/"]', t("navHome"));
-  setText('.nav-links a[data-route="/stories"]', t("navStories"));
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
@@ -7911,7 +7910,7 @@ function applyLanguage() {
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
-  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homeMapAction"), t("homePdcAction")]);
+  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homePdcAction")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
@@ -8058,6 +8057,13 @@ function normalizeRoute(path) {
 function goToRoute(route, replace = false) {
   let target = route || "/";
   if (target === "/leoyangandxinli") {
+    target = "/";
+    replace = true;
+    if (window.location.protocol !== "file:") {
+      history.replaceState({ route: "/" }, "", "/");
+    }
+  }
+  if (target === "/stories" || target.startsWith("/stories/")) {
     target = "/";
     replace = true;
     if (window.location.protocol !== "file:") {

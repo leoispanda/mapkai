@@ -2234,6 +2234,7 @@ Follow-up:
 - The three built-in public story bodies were expanded into fuller short scenes with clearer conflict, character action, and reflective endings while keeping all knowledge-coordinate metadata hidden from ordinary readers.
 - Follow-up: Stories cards now show only title and story body even in Founder Mode; story metadata remains in data/Studio but is no longer rendered on public story cards. The `/map` Story-driven Atlas panel is temporarily hidden while keeping the underlying data and map lighting logic intact.
 - Follow-up: Stories now open into individual `/stories/:id` reading pages. The list page acts as a simple story entrance, and the three built-in stories were rewritten with more everyday tension, sharper turns, and a more readable short-story feel.
+- Follow-up: Public Stories are temporarily hidden because the story direction is not ready. The top nav and home CTA no longer link to Stories, home copy no longer mentions stories, and `/stories` / `/stories/:id` routes redirect to Home. Story data, Story Studio, and internal data structures remain in place for future redesign.
 
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
