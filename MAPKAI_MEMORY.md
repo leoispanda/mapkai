@@ -2190,3 +2190,13 @@ Push status:
 - `/pdc` now validates entered codes through the server before navigation: matching the Founder secret sets a signed HttpOnly Founder access cookie and opens Founder Preview without consuming a D1 one-time pass.
 - Ordinary PDC access codes still use the existing D1 one-time pass validation path, including invalid, used, and expired pass failures.
 - `/pdc-pilot?founderPreview=1` now validates server-side Founder access before showing Founder Preview UI to ordinary visitors; Advanced Final Audit and Founder diagnostics remain gated behind Founder Preview.
+
+## 2026-05-30 - Add story-driven knowledge map structure
+- Added a public `/stories` entry and changed the main navigation to `Home / Stories / Map / PDC / About`, keeping MapKAI public and account-free.
+- Added static story-map data structures for 11 knowledge areas, practical detailed fields filtered from ISCED-F-inspired categories, the first 12 MapKAI Town characters, and three published demo stories: `The Well Runs Low`, `The Bread Price Debate`, and `The School Curriculum Debate`.
+- Published stories now light up fields when a field appears as the story `mainField` or in `activatedFields`; unactivated practical fields remain visibly unlit.
+- Expanded `/map` with Knowledge Areas, Fields, Stories Layer, and Coverage Summary sections; each field card shows connected stories and links into a field detail route.
+- Added generic `/fields/:code` detail rendering with code, title, plain meaning, area, activating stories, and connected fields.
+- Added Founder-only coverage dashboard showing total practical fields, lit fields, unlit fields, published stories, and average activated fields per story.
+- Preserved the no-login privacy boundary and added the public trust copy: `MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.`
+- Synced `index.html`, `script.js`, and `styles.css` to `public/`; no registration, account system, personal tracking, server-side user progress, PDC provider logic, D1 schema, or access-code behavior was introduced or changed.

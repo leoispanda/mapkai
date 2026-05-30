@@ -46,6 +46,8 @@ const masteryLabels = {
 
 const uiText = {
   en: {
+    navHome: "Home",
+    navStories: "Stories",
     navExplore: "Start Exploring",
     navMap: "Map",
     navPdc: "PDC",
@@ -336,6 +338,8 @@ const uiText = {
     thanks: "Thanks for visiting MapKAI.",
   },
   zh: {
+    navHome: "首页",
+    navStories: "故事",
     navExplore: "开始探索",
     navMap: "地图",
     navPdc: "PDC",
@@ -1149,6 +1153,177 @@ const categories = [
     ],
   },
 ];
+
+const fieldPlainMeanings = {
+  "0111": "How people learn, how teaching works, and how learning systems can be designed.",
+  "0231": "How people acquire language through use, practice, context, and feedback.",
+  "0311": "How scarcity, prices, incentives, and trade-offs shape everyday choices.",
+  "0312": "How groups make public decisions, distribute responsibility, and handle disagreement.",
+  "0314": "How culture, norms, identity, and social patterns shape community life.",
+  "0411": "How records, costs, taxes, and financial reports make money flows visible.",
+  "0416": "How goods move from producers to sellers to customers, including pricing and stock.",
+  "0521": "How natural systems, water, climate, pollution, and human use affect each other.",
+  "0541": "How numbers, patterns, quantities, and models help people reason clearly.",
+  "0613": "How software tools and applications are designed, built, tested, and improved.",
+  "0721": "How raw food becomes safe, stable, transportable, and sellable.",
+  "0732": "How roads, wells, bridges, buildings, and other physical systems are planned and maintained.",
+  "0811": "How crops and livestock are grown, cared for, and connected to food supply.",
+  "1021": "How communities keep shared spaces healthy through water, waste, and sanitation systems.",
+};
+
+const characters = [
+  { id: "mira", name: "Mira", nameZh: "米拉", role: "Town water keeper", tone: "calm, practical" },
+  { id: "otto", name: "Otto", nameZh: "奥托", role: "Baker", tone: "warm, stubborn about fairness" },
+  { id: "lina", name: "Lina", nameZh: "莉娜", role: "School teacher", tone: "curious, careful" },
+  { id: "ren", name: "Ren", nameZh: "任", role: "Young mapmaker", tone: "observant, systems-minded" },
+  { id: "sana", name: "Sana", nameZh: "萨娜", role: "Clinic helper", tone: "protective, human-first" },
+  { id: "maro", name: "Maro", nameZh: "马洛", role: "Market coordinator", tone: "fast, trade-focused" },
+  { id: "beatrice", name: "Beatrice", nameZh: "贝娅", role: "Archivist", tone: "precise, memory-oriented" },
+  { id: "toma", name: "Toma", nameZh: "托马", role: "Farmer", tone: "patient, field-tested" },
+  { id: "niko", name: "Niko", nameZh: "尼科", role: "Workshop builder", tone: "hands-on, constraint-aware" },
+  { id: "aya", name: "Aya", nameZh: "阿雅", role: "Council mediator", tone: "balanced, civic-minded" },
+  { id: "pim", name: "Pim", nameZh: "皮姆", role: "Street reporter", tone: "alert, narrative-driven" },
+  { id: "blue-whale", name: "Blue Whale", nameZh: "蓝鲸", role: "Town reflection guide", tone: "slow, integrative" },
+];
+
+const stories = [
+  {
+    id: "well-runs-low",
+    title: "The Well Runs Low",
+    titleZh: "井水变浅了",
+    episode: "Episode 1",
+    eventType: "resource pressure",
+    mainField: "0521",
+    activatedFields: ["0811", "0732", "0312", "1021"],
+    characters: ["mira", "toma", "niko", "aya", "blue-whale"],
+    coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
+    summary: "The town well drops after a dry month. Mira wants water limits, Toma worries about crops, and Niko asks whether the old pipes are wasting more water than anyone admits.",
+    isPublished: true,
+  },
+  {
+    id: "bread-price-debate",
+    title: "The Bread Price Debate",
+    titleZh: "面包价格之争",
+    episode: "Episode 2",
+    eventType: "market tension",
+    mainField: "0311",
+    activatedFields: ["0411", "0416", "0721", "0312"],
+    characters: ["otto", "maro", "beatrice", "aya", "pim"],
+    coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
+    summary: "Otto raises bread prices after flour costs jump. Some neighbors call it unfair, but Beatrice opens the ledger and Maro traces the supply chain behind the loaf.",
+    isPublished: true,
+  },
+  {
+    id: "school-curriculum-debate",
+    title: "The School Curriculum Debate",
+    titleZh: "学校课程之辩",
+    episode: "Episode 3",
+    eventType: "learning design",
+    mainField: "0111",
+    activatedFields: ["0231", "0541", "0613", "0223", "0314"],
+    characters: ["lina", "ren", "sana", "blue-whale", "aya"],
+    coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
+    summary: "Lina wants the school to teach fewer facts and more thinking. Ren proposes map-based learning, while Sana asks what kind of person the curriculum is quietly shaping.",
+    isPublished: true,
+  },
+];
+
+const adminFieldPattern = /not further defined|not elsewhere classified|inter-disciplinary/i;
+
+function getKnowledgeAreas() {
+  return categories.map((category) => ({
+    code: category.code,
+    title: getCategoryTitle(category),
+    fieldCount: getPracticalFieldsForArea(category.code).length,
+  }));
+}
+
+function flattenKnowledgeFields() {
+  return categories.flatMap((area) =>
+    area.groups.flatMap((group) =>
+      group.fields.map(([code, title]) => ({
+        code,
+        title,
+        area: area.code,
+        areaTitle: getCategoryTitle(area),
+        groupCode: group.code,
+        groupTitle: group.title,
+        plainMeaning: fieldPlainMeanings[code] || makePlainMeaning(title),
+        isPractical: !adminFieldPattern.test(`${title} ${group.title}`),
+      }))
+    )
+  );
+}
+
+function makePlainMeaning(title) {
+  return `${title} in everyday life: the situations, tools, people, trade-offs, and decisions this field helps explain.`;
+}
+
+function getKnowledgeFields() {
+  return flattenKnowledgeFields().filter((field) => field.isPractical);
+}
+
+function getPracticalFieldsForArea(areaCode) {
+  return getKnowledgeFields().filter((field) => field.area === areaCode);
+}
+
+function getFieldByCode(code) {
+  return flattenKnowledgeFields().find((field) => field.code === code);
+}
+
+function getCharacterById(id) {
+  return characters.find((character) => character.id === id);
+}
+
+function getCharacterName(id) {
+  const character = getCharacterById(id);
+  if (!character) return id;
+  return currentLanguage === "zh" ? character.nameZh || character.name : character.name;
+}
+
+function getPublishedStories() {
+  return stories.filter((story) => story.isPublished);
+}
+
+function getStoryTitle(story) {
+  return currentLanguage === "zh" ? story.titleZh || story.title : story.title;
+}
+
+function getStoryFieldCodes(story) {
+  return Array.from(new Set([story.mainField, ...(story.activatedFields || [])].filter(Boolean)));
+}
+
+function getStoriesForField(fieldCode) {
+  return getPublishedStories().filter((story) => getStoryFieldCodes(story).includes(fieldCode));
+}
+
+function getLitFieldCodes() {
+  return new Set(getPublishedStories().flatMap(getStoryFieldCodes));
+}
+
+function getConnectedFields(fieldCode) {
+  const connected = new Set();
+  getStoriesForField(fieldCode).forEach((story) => {
+    getStoryFieldCodes(story).forEach((code) => {
+      if (code !== fieldCode) connected.add(code);
+    });
+  });
+  return Array.from(connected).map(getFieldByCode).filter(Boolean);
+}
+
+function getCoverageStats() {
+  const fields = getKnowledgeFields();
+  const litFields = getLitFieldCodes();
+  const published = getPublishedStories();
+  const activatedTotal = published.reduce((total, story) => total + getStoryFieldCodes(story).length, 0);
+  return {
+    totalPracticalFields: fields.length,
+    litFields: fields.filter((field) => litFields.has(field.code)).length,
+    unlitFields: fields.filter((field) => !litFields.has(field.code)).length,
+    publishedStories: published.length,
+    averageActivatedFields: published.length ? activatedTotal / published.length : 0,
+  };
+}
 
 const modulePassports = {
   home: {
@@ -7268,6 +7443,8 @@ function applyLanguage() {
     const key = target.dataset.i18n;
     if (key) target.textContent = t(key);
   });
+  setText('.nav-links a[data-route="/"]', t("navHome"));
+  setText('.nav-links a[data-route="/stories"]', t("navStories"));
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
@@ -7398,6 +7575,8 @@ function applyLanguage() {
   });
 
   renderCategories();
+  renderStories();
+  renderStoryMap();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
     const match = normalizeRoute(window.location.pathname).match(/^\/categories\/(\d{2})$/);
     if (match) renderCategoryDetail(match[1]);
@@ -7433,8 +7612,10 @@ function goToRoute(route, replace = false) {
   document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
+  const fieldMatch = visibleTarget.match(/^\/fields\/(\d{4})$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
-  const activePage = categoryMatch ? "/categories/detail" : visibleTarget;
+  if (fieldMatch) renderFieldDetail(fieldMatch[1]);
+  const activePage = categoryMatch ? "/categories/detail" : fieldMatch ? "/fields/detail" : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -7448,6 +7629,7 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
+      (linkRoute === "/map" && visibleTarget.startsWith("/fields/")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
@@ -7533,6 +7715,157 @@ const categoryThinking = {
 function getCategoryThinking(code) {
   const labels = currentLanguage === "zh" ? categoryThinking.zh : categoryThinking.en;
   return labels[code] || labels["00"];
+}
+
+function renderStories() {
+  const target = document.getElementById("storiesGrid");
+  if (!target) return;
+  target.innerHTML = getPublishedStories()
+    .slice(0, 3)
+    .map((story) => {
+      const mainField = getFieldByCode(story.mainField);
+      const activatedFields = (story.activatedFields || []).map(getFieldByCode).filter(Boolean);
+      const characterList = story.characters.map(getCharacterName).join(", ");
+      const conceptTags = story.coreConcepts.map((concept) => `<span>${escapeHtml(concept)}</span>`).join("");
+      return `
+        <article class="story-card">
+          <div class="story-card-topline">
+            <span>${escapeHtml(story.episode)}</span>
+            <span>${escapeHtml(story.eventType)}</span>
+          </div>
+          <h2>${escapeHtml(getStoryTitle(story))}</h2>
+          <p>${escapeHtml(story.summary)}</p>
+          <dl class="story-meta">
+            <div><dt>Characters</dt><dd>${escapeHtml(characterList)}</dd></div>
+            <div><dt>Main field</dt><dd>${fieldLink(mainField)}</dd></div>
+            <div><dt>Activated fields</dt><dd>${activatedFields.map(fieldLink).join("")}</dd></div>
+          </dl>
+          <div class="concept-row">${conceptTags}</div>
+          <div class="mini-question">Mini question coming soon: What changed in the town once this field became visible?</div>
+          <a class="button secondary" href="/map" data-route="/map">See it on the Map</a>
+        </article>`;
+    })
+    .join("");
+}
+
+function renderStoryMap() {
+  renderCoverageSummary();
+  renderAreaLayer();
+  renderFieldLayer();
+  renderMapStoryLayer();
+}
+
+function renderCoverageSummary() {
+  const target = document.getElementById("coverageSummary");
+  const founderTarget = document.getElementById("coverageFounderDashboard");
+  const stats = getCoverageStats();
+  if (target) {
+    target.innerHTML = `
+      <article><span>Practical fields</span><strong>${stats.totalPracticalFields}</strong></article>
+      <article><span>Lit by stories</span><strong>${stats.litFields}</strong></article>
+      <article><span>Still quiet</span><strong>${stats.unlitFields}</strong></article>
+      <article><span>Published stories</span><strong>${stats.publishedStories}</strong></article>
+    `;
+  }
+  if (founderTarget) {
+    founderTarget.innerHTML = `
+      <h3>Founder coverage dashboard</h3>
+      <div class="coverage-founder-grid">
+        <span>Total practical fields <strong>${stats.totalPracticalFields}</strong></span>
+        <span>Lit fields <strong>${stats.litFields}</strong></span>
+        <span>Unlit fields <strong>${stats.unlitFields}</strong></span>
+        <span>Published stories <strong>${stats.publishedStories}</strong></span>
+        <span>Average activated fields/story <strong>${stats.averageActivatedFields.toFixed(1)}</strong></span>
+      </div>
+    `;
+  }
+}
+
+function renderAreaLayer() {
+  const target = document.getElementById("areaLayer");
+  if (!target) return;
+  const litFields = getLitFieldCodes();
+  target.innerHTML = getKnowledgeAreas()
+    .map((area) => {
+      const areaFields = getPracticalFieldsForArea(area.code);
+      const litCount = areaFields.filter((field) => litFields.has(field.code)).length;
+      return `
+        <article class="area-card ${litCount ? "is-lit" : "is-unlit"}">
+          <span class="internal-code">${area.code}</span>
+          <h4>${escapeHtml(area.title)}</h4>
+          <p>${litCount}/${area.fieldCount} fields lit</p>
+        </article>`;
+    })
+    .join("");
+}
+
+function renderFieldLayer() {
+  const target = document.getElementById("fieldLayer");
+  if (!target) return;
+  const litFields = getLitFieldCodes();
+  target.innerHTML = getKnowledgeFields()
+    .map((field) => {
+      const connectedStories = getStoriesForField(field.code);
+      const isLit = litFields.has(field.code);
+      const storyLinks = connectedStories.length
+        ? connectedStories.map((story) => `<span>${escapeHtml(getStoryTitle(story))}</span>`).join("")
+        : "<span>No story yet</span>";
+      return `
+        <article class="field-card ${isLit ? "is-lit" : "is-unlit"}">
+          <div class="field-card-head">
+            <span class="internal-code">${field.code}</span>
+            <span>${isLit ? "Lit" : "Unlit"}</span>
+          </div>
+          <h4>${escapeHtml(field.title)}</h4>
+          <p>${escapeHtml(field.plainMeaning)}</p>
+          <div class="connected-story-row">${storyLinks}</div>
+          <a href="/fields/${field.code}" data-route="/fields/${field.code}">Open field</a>
+        </article>`;
+    })
+    .join("");
+}
+
+function renderMapStoryLayer() {
+  const target = document.getElementById("mapStoryLayer");
+  if (!target) return;
+  target.innerHTML = getPublishedStories()
+    .map((story) => `
+      <article class="map-story-card">
+        <span>${escapeHtml(story.episode)}</span>
+        <h4>${escapeHtml(getStoryTitle(story))}</h4>
+        <p>${getStoryFieldCodes(story).map((code) => fieldLink(getFieldByCode(code))).join("")}</p>
+      </article>`)
+    .join("");
+}
+
+function renderFieldDetail(code) {
+  const target = document.getElementById("fieldDetailCard");
+  if (!target) return;
+  const field = getFieldByCode(code);
+  if (!field) {
+    target.innerHTML = `<h1>Field not found</h1><p>This field is not available in the public map yet.</p>`;
+    return;
+  }
+  const storiesForField = getStoriesForField(code);
+  const connectedFields = getConnectedFields(code);
+  target.innerHTML = `
+    <p class="eyebrow">Field detail</p>
+    <div class="field-detail-title">
+      <span class="internal-code">${field.code}</span>
+      <h1>${escapeHtml(field.title)}</h1>
+    </div>
+    <p>${escapeHtml(field.plainMeaning)}</p>
+    <dl class="story-meta">
+      <div><dt>Area</dt><dd>${escapeHtml(field.areaTitle)}</dd></div>
+      <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => escapeHtml(getStoryTitle(story))).join(", ") : "No published story yet"}</dd></div>
+      <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
+    </dl>
+  `;
+}
+
+function fieldLink(field) {
+  if (!field) return "";
+  return `<a class="field-pill" href="/fields/${field.code}" data-route="/fields/${field.code}"><span class="internal-code">${field.code}</span>${escapeHtml(field.title)}</a>`;
 }
 
 function renderCategories() {
@@ -9134,6 +9467,8 @@ window.addEventListener("popstate", () => goToRoute(normalizeRoute(window.locati
 window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.location.pathname), true));
 
 renderCategories();
+renderStories();
+renderStoryMap();
 renderContactSections();
 renderSiteFooters();
 registerVisit();
@@ -9167,6 +9502,7 @@ function setFounderMode(enabled) {
     pdcFounderStatus = { state: "idle", detail: "" };
   }
   drawKnowledgeMap();
+  renderStoryMap();
   renderChallenge();
   if (normalizeRoute(window.location.pathname) === "/pdc-pilot") {
     initPdcPilotPage();

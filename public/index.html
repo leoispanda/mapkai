@@ -28,7 +28,8 @@
         <img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" />
       </a>
       <nav class="nav-links" aria-label="Site">
-        <a href="/explore" data-route="/explore">Start Exploring</a>
+        <a href="/" data-route="/">Home</a>
+        <a href="/stories" data-route="/stories">Stories</a>
         <a href="/map" data-route="/map">Map</a>
         <a href="/pdc" data-route="/pdc">PDC</a>
         <a href="/about" data-route="/about">About</a>
@@ -298,6 +299,19 @@
         <section class="reflection-panel" id="reflectionPanel" aria-live="polite"></section>
       </section>
 
+      <section class="page stories-page" id="stories" data-page="/stories">
+        <section class="stories-hero">
+          <p class="eyebrow">Stories</p>
+          <h1>Today in MapKAI Town</h1>
+          <p>
+            Follow small town events that quietly light up the knowledge map. Each story opens a few
+            practical fields, connects characters, and leaves one question to think with.
+          </p>
+          <p class="trust-note">MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
+        </section>
+        <section class="stories-grid" id="storiesGrid" aria-live="polite"></section>
+      </section>
+
       <section class="page map-page" id="map" data-page="/map">
         <div class="split-layout">
           <section class="intro-copy">
@@ -322,6 +336,45 @@
               <span><i class="ready"></i> Green land</span>
             </div>
           </section>
+        </div>
+        <section class="story-map-panel" aria-labelledby="story-map-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Story-driven atlas</p>
+            <h2 id="story-map-title">Stories light up practical fields.</h2>
+            <p>Published stories activate fields across the map. Uncovered fields remain quiet until a story reaches them.</p>
+          </div>
+          <div class="coverage-summary" id="coverageSummary"></div>
+          <div class="founder-only coverage-founder-dashboard" id="coverageFounderDashboard"></div>
+          <div class="story-map-layout">
+            <section>
+              <div class="story-layer-heading">
+                <h3>Knowledge Areas</h3>
+                <p>Eleven broad areas inspired by ISCED-F 2013.</p>
+              </div>
+              <div class="area-layer" id="areaLayer"></div>
+            </section>
+            <section>
+              <div class="story-layer-heading">
+                <h3>Fields</h3>
+                <p>Practical fields only. Administrative buckets stay out of the public map.</p>
+              </div>
+              <div class="field-layer" id="fieldLayer"></div>
+            </section>
+            <section>
+              <div class="story-layer-heading">
+                <h3>Stories Layer</h3>
+                <p>Daily events that connect characters, fields, and concepts.</p>
+              </div>
+              <div class="map-story-layer" id="mapStoryLayer"></div>
+            </section>
+          </div>
+        </section>
+      </section>
+
+      <section class="page field-detail-page" id="fieldDetail" data-page="/fields/detail">
+        <div class="field-detail-shell">
+          <a class="button secondary" href="/map" data-route="/map">Back to Map</a>
+          <section class="field-detail-card" id="fieldDetailCard" aria-live="polite"></section>
         </div>
       </section>
 
