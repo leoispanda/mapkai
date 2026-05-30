@@ -4558,6 +4558,19 @@ dd,
   padding: 1.35rem;
 }
 
+.story-entry-card {
+  min-height: 220px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.story-entry-card:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 24px 52px rgba(37, 99, 235, 0.11);
+  transform: translateY(-2px);
+}
+
 .story-card-topline,
 .field-card-head {
   display: flex;
@@ -4581,8 +4594,40 @@ dd,
 .story-body {
   margin: 0;
   color: #334155;
-  font-size: 0.98rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.story-detail-shell {
+  width: min(840px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.story-back-link {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.story-reader {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.story-reader h1 {
+  margin: 0 0 1rem;
+  color: #0f172a;
+  letter-spacing: 0;
+}
+
+.story-reader .story-body {
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
 }
 
 .story-founder-layer {

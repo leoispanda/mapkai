@@ -1291,7 +1291,7 @@ const stories = [
     characters: ["mira", "toma", "niko", "aya", "blue-whale"],
     coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
     summary: "The town well drops after a dry month. Mira wants water limits, Toma worries about crops, and Niko asks whether the old pipes are wasting more water than anyone admits.",
-    storyBody: "At sunrise, Mira lowers the bucket and hears it scrape stone before it reaches water. By the time the square fills, everyone has a different fear. Toma needs enough water to keep the seedlings alive. Niko kneels beside the old pipe and finds wet soil where no one should be watering. Aya asks the town not to shout over the same empty bucket. If they ration too hard, the fields may fail. If they only repair pipes, the well may run dry first. By evening, the problem has changed shape: the town is not choosing between people and water, but learning how a shared thing survives when everyone needs it at once.",
+    storyBody: "Mira noticed it while brushing her teeth: the tap coughed twice, then gave up. Downstairs, her neighbor was already filling every pot in the kitchen. By eight, the group chat had turned mean. Toma said his seedlings would die without water by nightfall. Niko posted a photo of wet soil beside an old pipe and wrote, \"We're blaming each other while the street is leaking.\" Someone accused him of making excuses. Someone else said families with children should go first. By noon, Aya had everyone standing in the square with buckets, invoices, and too much pride. The town could ration water, dig up the pipe, or pretend the problem belonged to someone else. Then the bakery fire alarm went off, and everyone heard the same terrible question at once: what happens when a shared resource runs out before people learn how to share it?",
     miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
     isPublished: true,
     createdAt: "2026-05-30",
@@ -1313,7 +1313,7 @@ const stories = [
     characters: ["otto", "maro", "beatrice", "aya", "pim"],
     coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
     summary: "Otto raises bread prices after flour costs jump. Some neighbors call it unfair, but Beatrice opens the ledger and Maro traces the supply chain behind the loaf.",
-    storyBody: "Otto pins the new bread price to the bakery door before the first tray cools. By breakfast, Pim has already heard three versions of the same accusation: Otto is greedy, Otto is scared, Otto is hiding something. Beatrice does not argue. She asks for the flour invoice, then places last month beside this month on the counter. Maro points to the delayed carts, the higher fuel cost, and the smaller sacks arriving from the mill. The crowd grows quieter, but not happier. Bread is still dear. Trust is still thin. By noon, the question is no longer whether people like the price. It is whether a town can feel unfairness clearly while still checking what actually changed.",
+    storyBody: "Otto changed the bread price before opening, hoping no one would notice until after coffee. Pim noticed immediately. Ten minutes later, a photo of the sign was everywhere: \"Same bread, higher price.\" Mrs. Vale left her basket on the counter and said she would not be fooled by a warm smile. Otto snapped back that flour did not arrive by magic. The room went quiet in the worst possible way. Beatrice asked for the invoices, not because she trusted Otto, but because she trusted numbers more than shouting. Maro showed the delayed delivery messages on his phone. The flour sacks were smaller, the transport fee had jumped, and the mill wanted payment upfront. None of that made the bread cheaper. None of it made people less angry. Then Otto admitted he had raised the price more than the cost increase because he was afraid next week would be worse. That was when the argument finally became honest.",
     miniQuestion: "What information should a town look at before deciding whether a price increase is unfair?",
     isPublished: true,
     createdAt: "2026-05-30",
@@ -1336,7 +1336,7 @@ const stories = [
     characters: ["lina", "ren", "sana", "blue-whale", "aya"],
     coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
     summary: "Lina wants the school to teach fewer facts and more thinking. Ren proposes map-based learning, while Sana asks what kind of person the curriculum is quietly shaping.",
-    storyBody: "Lina spreads three lesson plans across the school table, each one neat enough to defend. The first promises fast facts. The second teaches tools students can use immediately. The third is slower: it asks students to connect ideas, explain trade-offs, and notice when a question is bigger than one subject. Ren draws a map on the board, with paths crossing between numbers, language, machines, and stories. Sana looks at the empty seats and asks what kind of adults the school is quietly rehearsing. No one answers quickly. Outside, children chase each other past the window, already learning from everything the town does not call a lesson.",
+    storyBody: "Lina thought the meeting would be boring. Three lesson plans, one vote, home before dinner. Then Ren projected the exam scores. The students could repeat definitions, but froze when asked what to do with a broken bus schedule, a confusing medicine label, or a rumor spreading online. A parent muttered that school was not supposed to become a life simulator. Sana, who had spent the morning calming a teenager after a panic attack, asked what school was for if life kept arriving anyway. The room split fast: facts first, tools first, character first. Lina erased the board and wrote one sentence: \"What should a child be able to notice?\" No one laughed. Outside the window, two students argued over a game rule, negotiated, changed it, and kept playing. The adults watched them for a moment and realized the curriculum had already started without permission.",
     miniQuestion: "If school time is limited, what should a curriculum protect first: facts, tools, judgment, or character?",
     isPublished: true,
     createdAt: "2026-05-30",
@@ -1443,6 +1443,16 @@ function getStoriesForField(fieldIdOrCode) {
   const field = getFieldById(fieldIdOrCode);
   if (!field) return [];
   return getPublishedStories().filter((story) => getStoryFieldCodes(story).includes(field.id));
+}
+
+function getStoryById(storyId) {
+  return getPublishedStories().find((story) => story.id === storyId);
+}
+
+function getStoryTeaser(story) {
+  const body = story.storyBody || story.summary || "";
+  const firstSentence = body.match(/^[^.!?。！？]+[.!?。！？]/)?.[0] || body;
+  return firstSentence.length > 180 ? `${firstSentence.slice(0, 177).trim()}...` : firstSentence;
 }
 
 function getLitFieldCodes() {
@@ -8059,9 +8069,17 @@ function goToRoute(route, replace = false) {
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   const fieldMatch = visibleTarget.match(/^\/fields\/([a-z0-9-]+)$/);
+  const storyMatch = visibleTarget.match(/^\/stories\/([a-z0-9-]+)$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
-  const activePage = categoryMatch ? "/categories/detail" : fieldMatch ? "/fields/detail" : visibleTarget;
+  if (storyMatch) renderStoryDetail(storyMatch[1]);
+  const activePage = categoryMatch
+    ? "/categories/detail"
+    : fieldMatch
+      ? "/fields/detail"
+      : storyMatch
+        ? "/stories/detail"
+        : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -8074,6 +8092,7 @@ function goToRoute(route, replace = false) {
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
+      (linkRoute === "/stories" && visibleTarget.startsWith("/stories")) ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
       (linkRoute === "/map" && visibleTarget.startsWith("/fields/")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
@@ -8169,11 +8188,26 @@ function renderStories() {
   const visibleStories = getPublishedStories();
   target.innerHTML = (document.body.classList.contains("founder-mode") ? visibleStories : visibleStories.slice(0, 3))
     .map((story) => `
-        <article class="story-card">
+        <a class="story-card story-entry-card" href="/stories/${story.id}" data-route="/stories/${story.id}">
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
-          <p class="story-body">${escapeHtml(story.storyBody || story.summary)}</p>
-        </article>`)
+          <p>${escapeHtml(getStoryTeaser(story))}</p>
+        </a>`)
     .join("");
+}
+
+function renderStoryDetail(storyId) {
+  const target = document.getElementById("storyReader");
+  if (!target) return;
+  const story = getStoryById(storyId);
+  if (!story) {
+    target.innerHTML = `
+      <h1>Story not found</h1>
+      <p class="story-body">This story is not available yet.</p>`;
+    return;
+  }
+  target.innerHTML = `
+    <h1>${escapeHtml(getStoryTitle(story))}</h1>
+    <p class="story-body">${escapeHtml(story.storyBody || story.summary)}</p>`;
 }
 
 function renderStoryMap() {
