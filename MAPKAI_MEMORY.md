@@ -2232,3 +2232,10 @@ Push status:
 Follow-up:
 - Public Stories cards now show only the story title and story body. The map link is also hidden in the Founder-only layer so ordinary readers get a pure short-story experience without labels, tags, or action prompts.
 - The three built-in public story bodies were expanded into fuller short scenes with clearer conflict, character action, and reflective endings while keeping all knowledge-coordinate metadata hidden from ordinary readers.
+
+## 2026-05-30 - Add timestamp asset versioning
+- Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
+- The script replaces an existing `?v=...` value instead of appending duplicate query strings, and only targets local `styles.css` / `script.js` references.
+- Updated `package.json` so `version-assets` runs `node scripts/update-asset-version.js`.
+- Ran the versioning script once, updating both HTML files to `/styles.css?v=20260530132110` and `/script.js?v=20260530132110`.
+- Root/public `index.html`, `script.js`, and `styles.css` were confirmed synced; no page behavior, PDC logic, D1 schema, accounts, login, or tracking behavior changed.

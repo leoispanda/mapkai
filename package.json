@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "version-assets": "node scripts/inject-asset-version.js",
+    "version-assets": "node scripts/update-asset-version.js",
     "build": "npm run version-assets",
     "dev:cloudflare": "wrangler pages dev public",
     "deploy": "npm run version-assets && wrangler pages deploy public"
