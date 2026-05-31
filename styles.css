@@ -2145,9 +2145,9 @@ main {
 
 .home-minimal {
   display: grid;
-  min-height: calc(100svh - 168px);
+  min-height: min(680px, calc(100svh - 168px));
   align-content: center;
-  padding-block: clamp(72px, 12vw, 150px);
+  padding-block: clamp(54px, 9vw, 112px);
 }
 
 .home-page .hero h1 {
@@ -2224,6 +2224,36 @@ p {
   max-width: 620px;
   margin-top: 22px;
   white-space: pre-line;
+}
+
+.home-section {
+  width: min(1180px, 100%);
+  margin: 0 auto clamp(28px, 4vw, 52px);
+}
+
+.home-preview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 16px;
+}
+
+.home-preview-grid .preview-band {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+.home-trust-line {
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 8px;
+  padding: 16px 18px;
+  background: rgba(239, 246, 255, 0.7);
+}
+
+.home-trust-line p {
+  margin: 0;
+  color: #1e40af;
+  font-weight: 760;
 }
 
 .hero-actions {
@@ -3804,6 +3834,7 @@ canvas {
   .path-type-grid,
   .category-preview,
   .split-layout,
+  .home-preview-grid,
   .reflection-panel,
   .challenge-panel,
   .field-layout {
@@ -4571,6 +4602,12 @@ dd,
   transform: translateY(-2px);
 }
 
+.story-entry-card strong {
+  margin-top: auto;
+  color: #2563eb;
+  font-size: 0.9rem;
+}
+
 .story-card-topline,
 .field-card-head {
   display: flex;
@@ -4596,6 +4633,48 @@ dd,
   color: #334155;
   font-size: 1rem;
   line-height: 1.85;
+}
+
+.story-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.story-tag-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 999px;
+  padding: 0 0.65rem;
+  background: rgba(239, 246, 255, 0.82);
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.map-how-panel {
+  margin-top: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.map-how-panel h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.map-how-panel ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #475569;
+  line-height: 1.5;
 }
 
 .story-detail-shell {

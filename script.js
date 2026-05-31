@@ -1,6 +1,7 @@
 const pages = Array.from(document.querySelectorAll("[data-page]"));
 const routeLinks = Array.from(document.querySelectorAll("[data-route]"));
 const founderToggle = document.getElementById("founderToggle");
+const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
@@ -25,18 +26,18 @@ const readiness = {
 };
 
 const masteryLevels = {
-  ocean: { label: "Ocean", mapLabel: "Unknown ocean", color: "#2f86b5" },
-  snow: { label: "Snow mountain", mapLabel: "Snow mountain", color: "#e8f6f7" },
-  land: { label: "Land", mapLabel: "Land", color: "#d6a947" },
-  green: { label: "Green land", mapLabel: "Green land", color: "#7fc76f" },
+  ocean: { label: "Unknown", mapLabel: "Unknown", color: "#2f86b5" },
+  snow: { label: "Emerging", mapLabel: "Emerging", color: "#e8f6f7" },
+  land: { label: "Familiar", mapLabel: "Familiar", color: "#d6a947" },
+  green: { label: "Active", mapLabel: "Active", color: "#7fc76f" },
 };
 
 const masteryLabels = {
   en: {
-    ocean: "Ocean",
-    snow: "Snow mountain",
-    land: "Land",
-    green: "Green land",
+    ocean: "Unknown",
+    snow: "Emerging",
+    land: "Familiar",
+    green: "Active",
   },
   zh: {
     ocean: "未探索的知识海洋",
@@ -46,23 +47,54 @@ const masteryLabels = {
   },
 };
 
+const routeMeta = {
+  "/": {
+    title: "MapKAI — Map Your Knowledge with AI",
+    description: "Answer 3 everyday questions and see which knowledge areas are active, quiet, or worth exploring next.",
+  },
+  "/stories": {
+    title: "MapKAI Stories — Learn Through Everyday Scenarios",
+    description: "Read everyday scenarios that show how practical knowledge fields connect to the MapKAI knowledge map.",
+  },
+  "/explore": {
+    title: "MapKAI Explore — 3 Questions to Start Your Knowledge Map",
+    description: "Answer everyday questions and reveal the first active and quiet areas in your knowledge map.",
+  },
+  "/pdc": {
+    title: "MapKAI PDC — Structured Council for Better Decisions",
+    description: "Use a structured council-style reflection tool for decisions with trade-offs, disagreement, and timing pressure.",
+  },
+  "/pdc-pilot": {
+    title: "MapKAI PDC — Structured Council for Better Decisions",
+    description: "Use a structured council-style reflection tool for decisions with trade-offs, disagreement, and timing pressure.",
+  },
+  "/map": {
+    title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
+    description: "Explore 11 knowledge lenses and see areas that are unknown, emerging, familiar, or active.",
+  },
+  "/about": {
+    title: "About MapKAI — A Knowledge Compass for the AI Era",
+    description: "Learn how MapKAI helps people navigate knowledge, reflection, and thinking in the AI era.",
+  },
+};
+
 const uiText = {
   en: {
     navHome: "Home",
     navStories: "Stories",
-    navExplore: "Start Exploring",
-    navMap: "Map",
+    navExplore: "Explore",
+    navMap: "Knowledge Map",
     navPdc: "PDC",
-    navCategories: "Categories",
+    navCategories: "Knowledge Lenses",
     navLearning: "Learning",
     navAbout: "About",
-    homeEyebrow: "",
-    homeTitle: "Map your knowledge with AI",
-    homeCopy: "MapKAI helps you understand the world through knowledge maps and structured thinking.",
-    homePrimary: "Explore the Map",
-    homeMapAction: "Explore the Map",
+    homeEyebrow: "Map your knowledge with AI",
+    homeTitle: "See your knowledge map in 30 seconds.",
+    homeCopy: "Answer 3 everyday questions and discover which knowledge areas are active, quiet, or worth exploring next.",
+    homePrimary: "Start 3-question exploration",
+    homeMapAction: "View Knowledge Map",
     homePdcAction: "Try PDC",
-    homeQuickMirrorHint: "MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.",
+    homeQuickMirrorHint: "No login. No account. Just a quiet starting point for navigating your thinking.",
     homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
     mapStartTrust: "Explore freely. No account, name, or email required. Your quiz progress is not linked to a personal profile.",
     contactTrust: "Contact is optional. Please avoid sharing highly sensitive personal information. If you send us a message, we use it only to respond to you.",
@@ -248,12 +280,12 @@ const uiText = {
     pdcAccessLabel: "Access code",
     pdcAccessPlaceholder: "Paste your one-time access code",
     pdcAccessButton: "Enter PDC Experience",
-    categoriesEyebrow: "Cognitive Domains",
-    categoriesTitle: "Each field tends to think differently.",
-    categoriesCopy: "Categories are not a directory. They are lenses for noticing how different fields structure reality.",
-    openCategory: "Open category",
-    categoryScope: "Category scope",
-    categoryCopy: (groups, fields) => `This page shows ${groups} groups and ${fields} detailed fields in this category.`,
+    categoriesEyebrow: "Knowledge Lenses",
+    categoriesTitle: "Eleven lenses for seeing what you know.",
+    categoriesCopy: "Each lens shows practical fields, everyday examples, and possible learning steps.",
+    openCategory: "Open lens",
+    categoryScope: "Lens scope",
+    categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
     groups: "groups",
     detailedFields: "detailed fields",
     learningEyebrow: "Cognitive Expansion",
@@ -344,19 +376,19 @@ const uiText = {
   zh: {
     navHome: "首页",
     navStories: "故事",
-    navExplore: "开始探索",
-    navMap: "地图",
+    navExplore: "探索",
+    navMap: "知识地图",
     navPdc: "PDC",
-    navCategories: "分类",
+    navCategories: "知识镜头",
     navLearning: "学习路径",
     navAbout: "关于",
-    homeEyebrow: "",
-    homeTitle: "Map your knowledge with AI",
-    homeCopy: "MapKAI 用知识地图和结构化思考，帮助你理解世界。",
-    homePrimary: "探索地图",
-    homeMapAction: "探索地图",
+    homeEyebrow: "Map your knowledge with AI",
+    homeTitle: "30 秒看见你的知识地图。",
+    homeCopy: "回答 3 个日常问题，发现哪些知识区域正在活跃、保持安静，或值得继续探索。",
+    homePrimary: "开始 3 题探索",
+    homeMapAction: "查看知识地图",
     homePdcAction: "试试 PDC",
-    homeQuickMirrorHint: "MapKAI 目前是一个免费的知识探索项目。你无需创建账户，也无需提供姓名或邮箱即可探索。",
+    homeQuickMirrorHint: "无需登录，无需账号。只是一个安静的起点，帮助你导航自己的思考。",
     homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
     mapStartTrust: "自由探索。无需账户、姓名或邮箱。你的答题进度不会绑定到个人档案。",
     contactTrust: "联系是可选的。请避免提交高度敏感的个人信息。如果你发送留言，我们只会用它来回复你。",
@@ -545,9 +577,9 @@ const uiText = {
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
     categoriesCopy: "分类不是目录，而是观察不同领域如何组织现实的认知镜头。",
-    openCategory: "打开分类",
-    categoryScope: "分类范围",
-    categoryCopy: (groups, fields) => `这个页面展示该分类下的 ${groups} 个组和 ${fields} 个具体领域。`,
+    openCategory: "打开镜头",
+    categoryScope: "镜头范围",
+    categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
     groups: "个组",
     detailedFields: "个具体领域",
     learningEyebrow: "认知扩展",
@@ -1277,7 +1309,7 @@ const characters = [
 const stories = [
   {
     id: "well-runs-low",
-    title: "The Well Runs Low",
+    title: "The Well Runs Dry",
     titleZh: "井水变浅了",
     episode: "Episode 1",
     eventType: "resource pressure",
@@ -1290,7 +1322,7 @@ const stories = [
     ],
     characters: ["mira", "toma", "niko", "aya", "blue-whale"],
     coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
-    summary: "The town well drops after a dry month. Mira wants water limits, Toma worries about crops, and Niko asks whether the old pipes are wasting more water than anyone admits.",
+    summary: "A small town discovers that water is not just a resource problem. It is also economics, engineering, health, governance, and trust.",
     storyBody: "Mira noticed it while brushing her teeth: the tap coughed twice, then gave up. Downstairs, her neighbor was already filling every pot in the kitchen. By eight, the group chat had turned mean. Toma said his seedlings would die without water by nightfall. Niko posted a photo of wet soil beside an old pipe and wrote, \"We're blaming each other while the street is leaking.\" Someone accused him of making excuses. Someone else said families with children should go first. By noon, Aya had everyone standing in the square with buckets, invoices, and too much pride. The town could ration water, dig up the pipe, or pretend the problem belonged to someone else. Then the bakery fire alarm went off, and everyone heard the same terrible question at once: what happens when a shared resource runs out before people learn how to share it?",
     miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
     isPublished: true,
@@ -1453,6 +1485,13 @@ function getStoryTeaser(story) {
   const body = story.storyBody || story.summary || "";
   const firstSentence = body.match(/^[^.!?。！？]+[.!?。！？]/)?.[0] || body;
   return firstSentence.length > 180 ? `${firstSentence.slice(0, 177).trim()}...` : firstSentence;
+}
+
+function getStoryPublicTags(story) {
+  if (story.id === "well-runs-low") return ["Economics", "Engineering", "Health", "Society"];
+  if (story.id === "bread-price-debate") return ["Economics", "Retail", "Food", "Trust"];
+  if (story.id === "school-curriculum-debate") return ["Education", "Language", "Technology", "Ethics"];
+  return (story.coreConcepts || []).slice(0, 4).map((tag) => tag.replace(/\b\w/g, (letter) => letter.toUpperCase()));
 }
 
 function getLitFieldCodes() {
@@ -5087,7 +5126,7 @@ function pdcShellTemplate(innerHtml) {
     <section class="pdc-card" aria-live="polite">
       <p class="eyebrow">PDC Council Rhythm</p>
       <h1>MapKAI PDC</h1>
-      ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Founder Mode Preview</p>` : ""}
+      ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Preview mode</p>` : ""}
       <p class="pdc-subtitle">A structured council debate for clearer decisions.</p>
       <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
       ${innerHtml}
@@ -5107,8 +5146,8 @@ function renderPdcFounderPreviewActions() {
   if (!pdcState.founderPreview) return "";
   return `
     <section class="pdc-founder-preview-tools">
-      <p>Founder Mode Preview</p>
-      <button class="button secondary" type="button" data-pdc-founder-reset>Start another Founder Preview</button>
+      <p>Preview mode</p>
+      <button class="button secondary" type="button" data-pdc-founder-reset>Start another preview</button>
     </section>`;
 }
 
@@ -7900,6 +7939,7 @@ function applyLanguage() {
     if (key) target.textContent = t(key);
   });
   setText('.nav-links a[data-route="/"]', t("navHome"));
+  setText('.nav-links a[data-route="/stories"]', t("navStories"));
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
@@ -7910,7 +7950,7 @@ function applyLanguage() {
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
-  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homePdcAction")]);
+  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homeMapAction")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
@@ -8063,13 +8103,6 @@ function goToRoute(route, replace = false) {
       history.replaceState({ route: "/" }, "", "/");
     }
   }
-  if (target === "/stories" || target.startsWith("/stories/")) {
-    target = "/";
-    replace = true;
-    if (window.location.protocol !== "file:") {
-      history.replaceState({ route: "/" }, "", "/");
-    }
-  }
   const visibleTarget = target;
   document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
   setFounderMode(isFounderMode());
@@ -8111,12 +8144,31 @@ function goToRoute(route, replace = false) {
   });
 
   if (visibleTarget === "/pdc-pilot") initPdcPilotPage();
+  updateRouteMeta(visibleTarget);
   if (replace) return;
   if (window.location.protocol === "file:") {
     window.location.hash = target;
   } else {
     history.pushState({ route: target }, "", target);
   }
+}
+
+function updateRouteMeta(route) {
+  const key = route.startsWith("/stories/") ? "/stories" : routeMeta[route] ? route : "/";
+  const meta = routeMeta[key] || routeMeta["/"];
+  document.title = meta.title;
+  const description = document.querySelector('meta[name="description"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  if (description) description.setAttribute("content", meta.description);
+  if (ogTitle) ogTitle.setAttribute("content", meta.title);
+  if (ogDescription) ogDescription.setAttribute("content", meta.description);
+  if (ogUrl) ogUrl.setAttribute("content", `https://www.mapkai.com${route === "/" ? "" : route}`);
+  if (twitterTitle) twitterTitle.setAttribute("content", meta.title);
+  if (twitterDescription) twitterDescription.setAttribute("content", meta.description);
 }
 
 function makeStatus(status, ready) {
@@ -8193,11 +8245,16 @@ function renderStories() {
   if (!target) return;
   const visibleStories = getPublishedStories();
   target.innerHTML = (document.body.classList.contains("founder-mode") ? visibleStories : visibleStories.slice(0, 3))
-    .map((story) => `
+    .map((story) => {
+      const tags = getStoryPublicTags(story).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+      return `
         <a class="story-card story-entry-card" href="/stories/${story.id}" data-route="/stories/${story.id}">
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
-          <p>${escapeHtml(getStoryTeaser(story))}</p>
-        </a>`)
+          <p>${escapeHtml(story.summary || getStoryTeaser(story))}</p>
+          <div class="story-tag-row">${tags}</div>
+          <strong>Read Story</strong>
+        </a>`;
+    })
     .join("");
 }
 
@@ -10030,6 +10087,12 @@ goToRoute(initialRoute, true);
 
 function setFounderMode(enabled) {
   document.body.classList.toggle("founder-mode", enabled);
+  if (founderIndicator) {
+    founderIndicator.hidden = !enabled;
+    founderIndicator.innerHTML = enabled
+      ? `<span>Founder Mode</span><button type="button" data-founder-exit>Exit</button>`
+      : "";
+  }
   if (founderToggle) {
     founderToggle.textContent = enabled ? "Founder mode on" : "Founder mode";
     founderToggle.setAttribute("aria-pressed", String(enabled));

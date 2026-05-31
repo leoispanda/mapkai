@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MapKAI - Map Your Knowledge with AI</title>
+    <title>MapKAI — Map Your Knowledge with AI</title>
     <meta
       name="description"
-      content="MapKAI helps you turn scattered knowledge into clear maps, reflection, and learning paths."
+      content="Answer 3 everyday questions and see which knowledge areas are active, quiet, or worth exploring next."
     />
-    <meta property="og:title" content="MapKAI - Map Your Knowledge with AI" />
-    <meta property="og:description" content="MapKAI helps you turn scattered knowledge into clear maps, reflection, and learning paths." />
+    <meta property="og:title" content="MapKAI — Map Your Knowledge with AI" />
+    <meta property="og:description" content="Answer 3 everyday questions and see which knowledge areas are active, quiet, or worth exploring next." />
     <meta property="og:image" content="https://www.mapkai.com/assets/og-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.mapkai.com" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MapKAI - Map Your Knowledge with AI" />
-    <meta name="twitter:description" content="MapKAI helps you turn scattered knowledge into clear maps, reflection, and learning paths." />
+    <meta name="twitter:title" content="MapKAI — Map Your Knowledge with AI" />
+    <meta name="twitter:description" content="Answer 3 everyday questions and see which knowledge areas are active, quiet, or worth exploring next." />
     <meta name="twitter:image" content="https://www.mapkai.com/assets/og-cover.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/mapkai-icon-square-180.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=20260530211047" />
+    <link rel="stylesheet" href="/styles.css?v=20260531122341" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -29,8 +29,9 @@
       </a>
       <nav class="nav-links" aria-label="Site">
         <a href="/" data-route="/">Home</a>
-        <a href="/map" data-route="/map">Map</a>
-        <a href="/pdc" data-route="/pdc">PDC</a>
+        <a href="/explore" data-route="/explore">Explore</a>
+        <a href="/stories" data-route="/stories">Stories</a>
+        <a href="/map" data-route="/map">Knowledge Map</a>
         <a href="/about" data-route="/about">About</a>
       </nav>
       <div class="language-switch" aria-label="Language">
@@ -39,25 +40,87 @@
         <button type="button" data-language="zh" aria-pressed="false">中文</button>
       </div>
     </header>
-    <div class="founder-indicator" aria-live="polite">
-      <span>Founder Mode</span>
-      <button type="button" data-founder-exit>Exit</button>
-    </div>
+    <div class="founder-indicator" aria-live="polite" hidden></div>
 
     <main id="app">
       <section class="page home-page is-active" id="home" data-page="/">
         <div class="hero home-minimal">
-          <p class="eyebrow"></p>
-          <h1>Map your knowledge with AI</h1>
+          <p class="eyebrow">Map your knowledge with AI</p>
+          <h1>See your knowledge map in 30 seconds.</h1>
           <p class="hero-copy">
-            MapKAI helps you understand the world through knowledge maps and structured thinking.
+            Answer 3 everyday questions and discover which knowledge areas are active, quiet, or worth exploring next.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="/map" data-route="/map">Explore the Map</a>
-            <a class="button secondary" href="/pdc" data-route="/pdc">Try PDC</a>
+            <a class="button primary" href="/explore" data-route="/explore">Start 3-question exploration</a>
+            <a class="button secondary" href="/map" data-route="/map">View Knowledge Map</a>
           </div>
-          <p class="hero-microcopy">MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
+          <p class="hero-microcopy">No login. No account. Just a quiet starting point for navigating your thinking.</p>
         </div>
+        <section class="home-section">
+          <div class="section-heading compact">
+            <p class="eyebrow">How it works</p>
+            <h2>Three small questions. One clearer starting point.</h2>
+          </div>
+          <div class="card-grid">
+            <article class="module-card compact-card">
+              <span>1</span>
+              <h3>Answer everyday scenarios</h3>
+              <p>Choose what feels most natural in short real-life situations.</p>
+            </article>
+            <article class="module-card compact-card">
+              <span>2</span>
+              <h3>Reveal active lenses</h3>
+              <p>MapKAI shows which knowledge lenses are already active in your thinking.</p>
+            </article>
+            <article class="module-card compact-card">
+              <span>3</span>
+              <h3>Choose what to explore next</h3>
+              <p>Use the map as a calm prompt for learning, reflection, or better questions.</p>
+            </article>
+          </div>
+        </section>
+        <section class="home-section">
+          <div class="section-heading compact">
+            <p class="eyebrow">What you get</p>
+            <h2>A practical map, not a personality label.</h2>
+          </div>
+          <div class="card-grid">
+            <article class="module-card compact-card">
+              <h3>Active areas</h3>
+              <p>The lenses you naturally use when thinking through everyday situations.</p>
+            </article>
+            <article class="module-card compact-card">
+              <h3>Quiet areas</h3>
+              <p>Knowledge spaces you may not notice yet, but can explore when useful.</p>
+            </article>
+            <article class="module-card compact-card">
+              <h3>Next steps</h3>
+              <p>Simple routes into stories, practical fields, and learning steps.</p>
+            </article>
+          </div>
+        </section>
+        <section class="home-section home-preview-grid">
+          <article class="preview-band">
+            <div>
+              <p class="eyebrow">Stories preview</p>
+              <h2>The Well Runs Dry</h2>
+              <p>A small town discovers that water is not just a resource problem. It is also economics, engineering, health, governance, and trust.</p>
+              <p class="trust-note">Stories show how practical fields can light up the map through ordinary situations.</p>
+            </div>
+            <a class="button secondary" href="/stories" data-route="/stories">Read Story</a>
+          </article>
+          <article class="preview-band">
+            <div>
+              <p class="eyebrow">PDC preview</p>
+              <h2>Need a structured decision room?</h2>
+              <p>PDC is a separate council-style thinking tool for decisions with trade-offs, disagreement, or timing pressure.</p>
+            </div>
+            <a class="button secondary" href="/pdc" data-route="/pdc">Open PDC</a>
+          </article>
+        </section>
+        <section class="home-section home-trust-line">
+          <p>No login. No tracking. No public profile. MapKAI is currently a free knowledge initiative.</p>
+        </section>
       </section>
 
       <section class="page about-page" id="about" data-page="/about">
@@ -301,12 +364,11 @@
       <section class="page stories-page" id="stories" data-page="/stories">
         <section class="stories-hero">
           <p class="eyebrow">Stories</p>
-          <h1>Today in MapKAI Town</h1>
+          <h1>Learn through everyday scenarios.</h1>
           <p>
-            Follow small town events that quietly light up the knowledge map. Each story opens a few
-            practical fields, connects characters, and leaves one question to think with.
+            Stories turn practical fields into situations you can recognize. Each story connects a
+            daily problem to the knowledge map without asking you to study a database first.
           </p>
-          <p class="trust-note">MapKAI is currently a free knowledge initiative. You can explore it without creating an account or providing your name or email.</p>
         </section>
         <section class="stories-grid" id="storiesGrid" aria-live="polite"></section>
       </section>
@@ -321,60 +383,35 @@
       <section class="page map-page" id="map" data-page="/map">
         <div class="split-layout">
           <section class="intro-copy">
-            <p class="eyebrow">General Knowledge Map</p>
-            <h1>The ocean is unknown. The land is what you can explain.</h1>
+            <p class="eyebrow">Knowledge Map</p>
+            <h1>Explore 11 knowledge lenses.</h1>
             <p>
-              In MapKAI, the ocean represents what you have not explored yet. The land represents
-              what you understand well enough to explain. Learning paths help you move from ocean
-              to land.
+              The map helps you see which areas are still unknown, which are emerging, and which
+              feel familiar or active through questions and stories.
             </p>
+            <div class="map-how-panel" aria-label="How this map works">
+              <h2>How this map works</h2>
+              <ol>
+                <li><strong>Ocean</strong> = areas you have not explored yet</li>
+                <li><strong>Land</strong> = areas you can explain through stories or questions</li>
+                <li><strong>Stories and exploration</strong> gradually light up the map</li>
+              </ol>
+            </div>
             <div class="hero-actions">
               <a class="button primary" href="/explore" data-route="/explore">Continue Exploring</a>
-              <a class="button secondary founder-public-entry" href="/categories" data-route="/categories">Browse Domains</a>
+              <a class="button secondary founder-public-entry" href="/categories" data-route="/categories">Browse Knowledge Lenses</a>
             </div>
           </section>
           <section class="map-stage" aria-label="Cartoon knowledge map">
             <canvas id="knowledgeCanvas" width="1100" height="619"></canvas>
             <div class="map-legend">
-              <span><i class="ocean"></i> Unknown ocean</span>
-              <span><i class="snow"></i> Snow mountain</span>
-              <span><i class="pilot"></i> Land</span>
-              <span><i class="ready"></i> Green land</span>
+              <span><i class="ocean"></i> Unknown</span>
+              <span><i class="snow"></i> Emerging</span>
+              <span><i class="pilot"></i> Familiar</span>
+              <span><i class="ready"></i> Active</span>
             </div>
           </section>
         </div>
-        <section class="story-map-panel" aria-labelledby="story-map-title" hidden>
-          <div class="section-heading compact">
-            <p class="eyebrow">Story-driven atlas</p>
-            <h2 id="story-map-title">Stories light up practical fields.</h2>
-            <p>Published stories activate fields across the map. Uncovered fields remain quiet until a story reaches them.</p>
-          </div>
-          <div class="coverage-summary" id="coverageSummary"></div>
-          <div class="founder-only coverage-founder-dashboard" id="coverageFounderDashboard"></div>
-          <div class="story-map-layout">
-            <section>
-              <div class="story-layer-heading">
-                <h3>Knowledge Areas</h3>
-                <p>Eleven broad areas inspired by ISCED-F 2013.</p>
-              </div>
-              <div class="area-layer" id="areaLayer"></div>
-            </section>
-            <section>
-              <div class="story-layer-heading">
-                <h3>Fields</h3>
-                <p>Practical fields only. Administrative buckets stay out of the public map.</p>
-              </div>
-              <div class="field-layer" id="fieldLayer"></div>
-            </section>
-            <section>
-              <div class="story-layer-heading">
-                <h3>Stories Layer</h3>
-                <p>Daily events that connect characters, fields, and concepts.</p>
-              </div>
-              <div class="map-story-layer" id="mapStoryLayer"></div>
-            </section>
-          </div>
-        </section>
       </section>
 
       <section class="page field-detail-page" id="fieldDetail" data-page="/fields/detail">
@@ -386,11 +423,11 @@
 
       <section class="page categories-page" id="categories" data-page="/categories">
         <div class="section-heading">
-          <p class="eyebrow">Knowledge Classification System</p>
-          <h1>Eleven categories, one maintainable backbone.</h1>
+          <p class="eyebrow">Knowledge Lenses</p>
+          <h1>Eleven lenses for seeing what you know.</h1>
           <p>
-            Explore the knowledge structure behind MapKAI. Each category shows what the field
-            covers and how it connects to other areas of knowledge.
+            Explore the practical fields behind MapKAI. Each lens shows what an area covers and
+            how it connects to stories, questions, and learning steps.
           </p>
         </div>
         <div class="route-cta">
@@ -417,10 +454,10 @@
       <section class="page field-page" id="field0412" data-page="/categories/04/0412">
         <div class="field-hero">
           <div>
-            <p class="eyebrow">Detailed field</p>
-            <h1>Detailed field map</h1>
+            <p class="eyebrow">Practical Field</p>
+            <h1>Practical field map</h1>
             <p>
-              Detailed field pages help turn one knowledge area into practical explanations,
+              Practical field pages help turn one knowledge area into practical explanations,
               everyday examples, and learning steps.
             </p>
           </div>
@@ -465,6 +502,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=20260530211047"></script>
+    <script src="/script.js?v=20260531122341"></script>
   </body>
 </html>

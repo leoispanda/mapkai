@@ -2236,6 +2236,15 @@ Follow-up:
 - Follow-up: Stories now open into individual `/stories/:id` reading pages. The list page acts as a simple story entrance, and the three built-in stories were rewritten with more everyday tension, sharper turns, and a more readable short-story feel.
 - Follow-up: Public Stories are temporarily hidden because the story direction is not ready. The top nav and home CTA no longer link to Stories, home copy no longer mentions stories, and `/stories` / `/stories/:id` routes redirect to Home. Story data, Story Studio, and internal data structures remain in place for future redesign.
 
+## 2026-05-31 - Clarify public IA and first-screen value
+- Reworked the public homepage around the clearer promise `See your knowledge map in 30 seconds.` with a 3-question exploration CTA and no-login trust line.
+- Reduced public navigation to `Home / Explore / Stories / Knowledge Map / About`; PDC is no longer a dominant nav item and is reachable from a secondary homepage preview and `/pdc`.
+- Restored `/stories` as a lightweight public preview with simple story cards, tags, and `Read Story` CTAs; story detail routes remain plain reading pages without Founder metadata.
+- Added a short `How this map works` explanation to `/map` and renamed public legend labels to `Unknown / Emerging / Familiar / Active`.
+- Shifted public category wording toward `11 knowledge lenses`, `lens`, and `practical field` language; internal/founder structures remain intact.
+- Added route-aware page title/meta description updates for Home, Explore, Stories, PDC, Map, and About.
+- Refreshed sitemap public routes and asset versions; no login, tracking, founder-private internals, PDC provider logic, D1 schema, or account behavior changed.
+
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
 - The script replaces an existing `?v=...` value instead of appending duplicate query strings, and only targets local `styles.css` / `script.js` references.
