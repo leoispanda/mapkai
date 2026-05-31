@@ -2249,6 +2249,7 @@ Follow-up:
 - Reduced oversized public page-opening typography and vertical hero space so MapKAI feels quieter and less like an AI-generated landing page.
 - Shortened homepage, About, Stories, Map, and Knowledge Lenses opening copy; the home headline is now `Your knowledge map, quickly.` with a simpler no-login support line.
 - Kept navigation, Stories, Map, PDC access, founder visibility rules, accounts, login, tracking, and core page behavior unchanged.
+- Follow-up: Replaced the homepage hero headline with the site slogan `Map your knowledge with AI`.
 
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
