@@ -2245,6 +2245,11 @@ Follow-up:
 - Added route-aware page title/meta description updates for Home, Explore, Stories, PDC, Map, and About.
 - Refreshed sitemap public routes and asset versions; no login, tracking, founder-private internals, PDC provider logic, D1 schema, or account behavior changed.
 
+## 2026-05-31 - Tone down page hero copy
+- Reduced oversized public page-opening typography and vertical hero space so MapKAI feels quieter and less like an AI-generated landing page.
+- Shortened homepage, About, Stories, Map, and Knowledge Lenses opening copy; the home headline is now `Your knowledge map, quickly.` with a simpler no-login support line.
+- Kept navigation, Stories, Map, PDC access, founder visibility rules, accounts, login, tracking, and core page behavior unchanged.
+
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
 - The script replaces an existing `?v=...` value instead of appending duplicate query strings, and only targets local `styles.css` / `script.js` references.
