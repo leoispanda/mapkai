@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /pdc-pilot
+Disallow: /categories
+Disallow: /fields/
 
 Sitemap: https://www.mapkai.com/sitemap.xml

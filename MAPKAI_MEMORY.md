@@ -2251,6 +2251,12 @@ Follow-up:
 - Kept navigation, Stories, Map, PDC access, founder visibility rules, accounts, login, tracking, and core page behavior unchanged.
 - Follow-up: Replaced the homepage hero headline with the site slogan `Map your knowledge with AI`.
 
+## 2026-06-01 - Strengthen public SEO metadata
+- Added canonical URL, robots meta, application/theme metadata, Open Graph site/image alt fields, and JSON-LD Organization/WebSite structured data to the public HTML head.
+- Updated route-aware metadata so canonical and `og:url` follow the active public route, and added distinct metadata for Privacy, Responsible Use, Cookies, and Terms.
+- Marked `/pdc-pilot` as `noindex, nofollow` in route metadata, and updated `robots.txt` to disallow API, pilot, categories, and field detail paths from crawling.
+- Expanded `sitemap.xml` entries with change frequency and priority, and added a manifest description; root/public copies remain synced.
+
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
 - The script replaces an existing `?v=...` value instead of appending duplicate query strings, and only targets local `styles.css` / `script.js` references.

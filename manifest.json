@@ -1,6 +1,7 @@
 {
   "name": "MapKAI",
   "short_name": "MapKAI",
+  "description": "Map your knowledge with AI through everyday questions, stories, and a personal knowledge map.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f0e4",

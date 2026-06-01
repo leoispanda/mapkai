@@ -50,7 +50,7 @@ const masteryLabels = {
 const routeMeta = {
   "/": {
     title: "MapKAI — Map Your Knowledge with AI",
-    description: "Answer 3 everyday questions and see which knowledge areas are active, quiet, or worth exploring next.",
+    description: "Map your knowledge with AI. Answer everyday questions and see which knowledge areas feel active, quiet, or worth exploring next.",
   },
   "/stories": {
     title: "MapKAI Stories — Learn Through Everyday Scenarios",
@@ -67,6 +67,7 @@ const routeMeta = {
   "/pdc-pilot": {
     title: "MapKAI PDC — Structured Council for Better Decisions",
     description: "Use a structured council-style reflection tool for decisions with trade-offs, disagreement, and timing pressure.",
+    robots: "noindex, nofollow",
   },
   "/map": {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
@@ -75,6 +76,22 @@ const routeMeta = {
   "/about": {
     title: "About MapKAI — A Knowledge Compass for the AI Era",
     description: "Learn how MapKAI helps people navigate knowledge, reflection, and thinking in the AI era.",
+  },
+  "/privacy": {
+    title: "MapKAI Privacy — Low-Data Knowledge Exploration",
+    description: "Learn how MapKAI keeps the public knowledge exploration low-data, account-free, and free from advertising tracking.",
+  },
+  "/responsible-use": {
+    title: "MapKAI Responsible Use — Reflection and Learning Support",
+    description: "Understand how to use MapKAI as reflection and learning support while keeping final judgment with you.",
+  },
+  "/cookies": {
+    title: "MapKAI Cookies — Browser Storage and Tracking",
+    description: "Read how MapKAI uses browser storage and avoids advertising or tracking cookies in the current public experience.",
+  },
+  "/terms": {
+    title: "MapKAI Terms — Free Knowledge Initiative",
+    description: "Review the basic terms for using MapKAI as a free knowledge and reflection initiative.",
   },
 };
 
@@ -8156,17 +8173,23 @@ function goToRoute(route, replace = false) {
 function updateRouteMeta(route) {
   const key = route.startsWith("/stories/") ? "/stories" : routeMeta[route] ? route : "/";
   const meta = routeMeta[key] || routeMeta["/"];
+  const canonicalRoute = key === "/" ? "/" : key;
+  const canonicalUrl = `https://www.mapkai.com${canonicalRoute === "/" ? "/" : canonicalRoute}`;
   document.title = meta.title;
   const description = document.querySelector('meta[name="description"]');
+  const robots = document.querySelector('meta[name="robots"]');
+  const canonical = document.querySelector('link[rel="canonical"]');
   const ogTitle = document.querySelector('meta[property="og:title"]');
   const ogDescription = document.querySelector('meta[property="og:description"]');
   const ogUrl = document.querySelector('meta[property="og:url"]');
   const twitterTitle = document.querySelector('meta[name="twitter:title"]');
   const twitterDescription = document.querySelector('meta[name="twitter:description"]');
   if (description) description.setAttribute("content", meta.description);
+  if (robots) robots.setAttribute("content", meta.robots || "index, follow");
+  if (canonical) canonical.setAttribute("href", canonicalUrl);
   if (ogTitle) ogTitle.setAttribute("content", meta.title);
   if (ogDescription) ogDescription.setAttribute("content", meta.description);
-  if (ogUrl) ogUrl.setAttribute("content", `https://www.mapkai.com${route === "/" ? "" : route}`);
+  if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
   if (twitterTitle) twitterTitle.setAttribute("content", meta.title);
   if (twitterDescription) twitterDescription.setAttribute("content", meta.description);
 }
