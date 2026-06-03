@@ -2257,6 +2257,10 @@ Follow-up:
 - Marked `/pdc-pilot` as `noindex, nofollow` in route metadata, and updated `robots.txt` to disallow API, pilot, categories, and field detail paths from crawling.
 - Expanded `sitemap.xml` entries with change frequency and priority, and added a manifest description; root/public copies remain synced.
 
+## 2026-06-03 - Restore lightweight public PDC navigation
+- Verified `/pdc` still exists and had only been moved out of the main nav into the homepage preview during the public IA cleanup.
+- Restored a lightweight `PDC` link in the top navigation so visitors can find it directly while keeping Explore, Stories, Knowledge Map, and About as the primary public IA.
+
 ## 2026-05-30 - Add timestamp asset versioning
 - Added `scripts/update-asset-version.js` to refresh local `/styles.css` and `/script.js` references in both `index.html` and `public/index.html` with a timestamp query string in `YYYYMMDDHHMMSS` format.
 - The script replaces an existing `?v=...` value instead of appending duplicate query strings, and only targets local `styles.css` / `script.js` references.
