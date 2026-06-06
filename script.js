@@ -49,33 +49,33 @@ const masteryLabels = {
 
 const routeMeta = {
   "/": {
-    title: "MapKAI — Map Your Knowledge with AI",
-    description: "Map your knowledge with AI. Answer everyday questions and see which knowledge areas feel active, quiet, or worth exploring next.",
+    title: "MapKAI — AI-Native Knowledge Mapping and Decision Systems",
+    description: "MapKAI helps people and teams turn scattered ideas into structured knowledge maps, reflective thinking systems, and clearer AI-assisted decisions.",
   },
   "/stories": {
-    title: "MapKAI Stories — Learn Through Everyday Scenarios",
-    description: "Read everyday scenarios that show how practical knowledge fields connect to the MapKAI knowledge map.",
+    title: "MapKAI Stories — Knowledge Mapping Through Real Scenarios",
+    description: "Read everyday scenarios that show how practical knowledge fields, reflection, and learning signals connect inside the MapKAI knowledge map.",
   },
   "/explore": {
-    title: "MapKAI Explore — 3 Questions to Start Your Knowledge Map",
-    description: "Answer everyday questions and reveal the first active and quiet areas in your knowledge map.",
+    title: "MapKAI Explore — Start an AI-Native Knowledge Map",
+    description: "Answer a few everyday questions and reveal early active, quiet, and unexplored areas in your personal knowledge map.",
   },
   "/pdc": {
-    title: "MapKAI PDC — Structured Council for Better Decisions",
-    description: "Use a structured council-style reflection tool for decisions with trade-offs, disagreement, and timing pressure.",
+    title: "MapKAI PDC — AI Decision Council for Structured Reflection",
+    description: "Use a structured AI council to think through decisions with trade-offs, disagreement, uncertainty, and timing pressure.",
   },
   "/pdc-pilot": {
-    title: "MapKAI PDC — Structured Council for Better Decisions",
-    description: "Use a structured council-style reflection tool for decisions with trade-offs, disagreement, and timing pressure.",
+    title: "MapKAI PDC — AI Decision Council for Structured Reflection",
+    description: "Use a structured AI council to think through decisions with trade-offs, disagreement, uncertainty, and timing pressure.",
     robots: "noindex, nofollow",
   },
   "/map": {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
-    description: "Explore 11 knowledge lenses and see areas that are unknown, emerging, familiar, or active.",
+    description: "Explore MapKAI's knowledge lenses and see which fields are unknown, emerging, familiar, or active in a learning map.",
   },
   "/about": {
-    title: "About MapKAI — A Knowledge Compass for the AI Era",
-    description: "Learn how MapKAI helps people navigate knowledge, reflection, and thinking in the AI era.",
+    title: "About MapKAI — Knowledge Mapping for the AI Era",
+    description: "Learn how MapKAI helps people and teams navigate knowledge, reflection, learning, and decisions in the AI era.",
   },
   "/privacy": {
     title: "MapKAI Privacy — Low-Data Knowledge Exploration",
@@ -8182,16 +8182,20 @@ function updateRouteMeta(route) {
   const ogTitle = document.querySelector('meta[property="og:title"]');
   const ogDescription = document.querySelector('meta[property="og:description"]');
   const ogUrl = document.querySelector('meta[property="og:url"]');
+  const ogImage = document.querySelector('meta[property="og:image"]');
   const twitterTitle = document.querySelector('meta[name="twitter:title"]');
   const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+  const twitterImage = document.querySelector('meta[name="twitter:image"]');
   if (description) description.setAttribute("content", meta.description);
   if (robots) robots.setAttribute("content", meta.robots || "index, follow");
   if (canonical) canonical.setAttribute("href", canonicalUrl);
   if (ogTitle) ogTitle.setAttribute("content", meta.title);
   if (ogDescription) ogDescription.setAttribute("content", meta.description);
   if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
+  if (ogImage) ogImage.setAttribute("content", "https://www.mapkai.com/assets/mapkai-og-image.png");
   if (twitterTitle) twitterTitle.setAttribute("content", meta.title);
   if (twitterDescription) twitterDescription.setAttribute("content", meta.description);
+  if (twitterImage) twitterImage.setAttribute("content", "https://www.mapkai.com/assets/mapkai-og-image.png");
 }
 
 function makeStatus(status, ready) {

@@ -1,8 +1,16 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /auth/
 Disallow: /pdc-pilot
+Disallow: /founder/
+Disallow: /admin/
+Disallow: /internal/
 Disallow: /categories
 Disallow: /fields/
+Disallow: /*?founder=
+Disallow: /*?admin=
+Disallow: /*?draft=
+Disallow: /*?test=
 
 Sitemap: https://www.mapkai.com/sitemap.xml

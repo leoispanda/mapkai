@@ -6,3 +6,21 @@
 
 /
   Cache-Control: no-cache
+
+/api/*
+  X-Robots-Tag: noindex, nofollow
+
+/auth/*
+  X-Robots-Tag: noindex, nofollow
+
+/pdc-pilot*
+  X-Robots-Tag: noindex, nofollow
+
+/founder/*
+  X-Robots-Tag: noindex, nofollow
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+
+/internal/*
+  X-Robots-Tag: noindex, nofollow
