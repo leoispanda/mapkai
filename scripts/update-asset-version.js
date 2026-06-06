@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 const repoRoot = resolve(new URL("..", import.meta.url).pathname);
 const htmlFiles = ["index.html", "public/index.html"].map((file) => resolve(repoRoot, file));
+const scriptFiles = ["script.js", "public/script.js"].map((file) => resolve(repoRoot, file));
 const versionPath = resolve(repoRoot, "version.json");
 
 function getNextVersion() {
@@ -24,12 +25,20 @@ function updateAssetReferences(html, version) {
   );
 }
 
+function updateScriptVersion(script, version) {
+  return script.replace(/\bconst appVersion = ["'][^"']*["'];/, `const appVersion = "${version}";`);
+}
+
 const version = getNextVersion();
 const sourceHtml = readFileSync(htmlFiles[0], "utf8");
 const updatedHtml = updateAssetReferences(sourceHtml, version);
 
 for (const file of htmlFiles) {
   writeFileSync(file, updatedHtml);
+}
+
+for (const file of scriptFiles) {
+  writeFileSync(file, updateScriptVersion(readFileSync(file, "utf8"), version));
 }
 
 writeFileSync(versionPath, `${JSON.stringify({ version, updatedAt: new Date().toISOString() }, null, 2)}\n`);

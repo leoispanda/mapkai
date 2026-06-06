@@ -5,6 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
+const appVersion = "0.1.2";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -4755,6 +4756,7 @@ function siteFooterTemplate() {
       <p class="visitor-count founder-only" data-founder-visitor-count></p>
       <p data-footer-rights>${t("footerRights")}</p>
       <p data-footer-notice>${t("footerNotice")}</p>
+      <p class="site-version">Version v${appVersion}</p>
       <nav class="footer-links" aria-label="Trust and legal">
         <a href="/privacy" data-route="/privacy" data-i18n="footerPrivacy">${t("footerPrivacy")}</a>
         <a href="/responsible-use" data-route="/responsible-use" data-i18n="footerResponsibleUse">${t("footerResponsibleUse")}</a>
