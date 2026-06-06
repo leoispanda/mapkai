@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+node scripts/update-asset-version.js
+git add version.json index.html public/index.html
