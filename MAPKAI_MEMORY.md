@@ -2267,3 +2267,9 @@ Follow-up:
 - Updated `package.json` so `version-assets` runs `node scripts/update-asset-version.js`.
 - Ran the versioning script once, updating both HTML files to `/styles.css?v=20260530132110` and `/script.js?v=20260530132110`.
 - Root/public `index.html`, `script.js`, and `styles.css` were confirmed synced; no page behavior, PDC logic, D1 schema, accounts, login, or tracking behavior changed.
+
+## 2026-06-06 - Simplify homepage below the hero
+- Temporarily hid the public homepage sections for `How it works`, `What you get`, `Stories preview`, `PDC preview`, and the repeated trust line because the first page felt too complex.
+- Kept the homepage hero, primary Explore CTA, Knowledge Map CTA, and no-login microcopy visible.
+- The hidden content remains in the HTML with `hidden` attributes, so it can be restored or redesigned later without rebuilding the section content.
+- Synced `index.html` to `public/index.html`; no Story, Map, Founder, PDC, D1, login, account, tracking, or server-side user progress behavior changed.
