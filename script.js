@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.9";
+const appVersion = "0.1.10";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -124,6 +124,9 @@ const uiText = {
     readStory: "Read story",
     backToStories: "Back to Stories",
     storyInsightTitle: "What it reveals",
+    storyPerspectivesTitle: "Different lenses",
+    storyPerspectivesCopy: "The same event changes meaning when each person protects a different layer of reality.",
+    storyFocusLabel: "Focus",
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
@@ -444,6 +447,9 @@ const uiText = {
     readStory: "阅读故事",
     backToStories: "返回故事",
     storyInsightTitle: "背后的道理",
+    storyPerspectivesTitle: "不同视角",
+    storyPerspectivesCopy: "同一件事，会因为每个人守护的现实层不同，而变成不同的问题。",
+    storyFocusLabel: "关注点",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
@@ -1407,8 +1413,34 @@ const stories = [
     summaryZh: "井水突然变浅，镇上的人先争水，后来才发现真正稀缺的是共同注意力。",
     storyBody: "The well did not run dry in one morning. It had been whispering for months: slower taps, damp stones near the old pipe, gardens needing more water than before. Nobody put the signs together until the bakery alarm rang and there was not enough pressure to fill the hose. Toma wanted water for seedlings. Sana wanted water for the clinic. Niko unfolded a repair sketch he had carried for weeks, but no one had wanted to close the road. Aya asked everyone to stop defending their own bucket and name the system they were standing inside. That was when the argument changed. The problem was not only water. It was memory, maintenance, priority, and trust. The town had treated the well like background scenery until it became the whole story.",
     storyBodyZh: "井水不是某个早晨突然消失的。它已经低声提醒了很久：水龙头越来越慢，老水管旁的石头总是潮湿，菜园需要的水也越来越多。只是没人把这些信号连起来，直到面包店的警报响起，水压却不够接上消防软管。托马想给幼苗留水，萨娜想先保证诊所，尼科摊开一张他带了好几周的维修图，但之前没有人愿意为修路停工。阿雅让大家先停止保护自己的水桶，说出他们共同站在哪个系统里。争论就在那一刻变了。问题不只是水，而是记忆、维护、优先级和信任。镇上的人一直把井当作背景，直到它变成了整个故事。",
-    insight: "A visible crisis is often the last chapter of an invisible system. MapKAI uses stories like this to show how one event can activate environment, engineering, health, agriculture, and civic reasoning at the same time.",
-    insightZh: "一个看得见的危机，常常是一个看不见系统的最后一章。MapKAI 用这样的故事提醒我们：同一件事会同时点亮环境、工程、健康、农业和公共治理等知识区域。",
+    insight: "A visible crisis is often the last chapter of an invisible system. The same dry well can be read as a broken pipe, a weak rule, a health risk, a crop threat, or a failure of collective memory. The deeper lesson is that people do not only disagree because they want different outcomes. They often disagree because their attention is trained by different knowledge maps.",
+    insightZh: "一个看得见的危机，常常是一个看不见系统的最后一章。同一口变浅的井，可以被看成水管问题、规则问题、健康风险、农作物威胁，或者共同记忆失效。更深的道理是：人们产生分歧，不只是因为想要不同结果，也常常是因为他们的注意力被不同的知识地图训练过。",
+    perspectives: [
+      {
+        lens: "Mira sees an environmental signal",
+        lensZh: "米拉看见的是环境信号",
+        focus: "The well changed slowly before it failed suddenly. Her focus is the long pattern, not only the emergency.",
+        focusZh: "井不是突然坏掉，而是先慢慢改变。她关注长期信号，而不只是当天的危机。",
+      },
+      {
+        lens: "Niko sees a maintenance debt",
+        lensZh: "尼科看见的是维护欠账",
+        focus: "The pipe was ignored because repair felt inconvenient. His focus is how invisible infrastructure becomes visible only when it breaks.",
+        focusZh: "水管之前被忽视，因为维修太麻烦。他关注的是：看不见的基础设施，往往只在坏掉时才被看见。",
+      },
+      {
+        lens: "Sana sees unequal vulnerability",
+        lensZh: "萨娜看见的是脆弱程度不同",
+        focus: "A water shortage does not hurt everyone in the same way. Her focus is who becomes unsafe first.",
+        focusZh: "缺水不会以同样方式伤害所有人。她关注的是谁会最先变得不安全。",
+      },
+      {
+        lens: "Aya sees public rules",
+        lensZh: "阿雅看见的是公共规则",
+        focus: "The town needs more than kindness. Her focus is how a shared resource needs shared rules before fear takes over.",
+        focusZh: "小镇不能只靠善意。她关注的是：共享资源需要共享规则，否则恐惧会接管局面。",
+      },
+    ],
     miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
     miniQuestionZh: "当共享资源变少时，一个社区应该先限制需求、修复供给，还是重新设计规则？",
     isPublished: true,
@@ -1434,8 +1466,34 @@ const stories = [
     summaryZh: "一个价格牌变成了一面镜子：成本、恐惧、公平和信任都藏在同一块面包里。",
     storyBody: "Otto raised the bread price before sunrise and hoped the town would read it as math. They read it as betrayal. Pim photographed the new sign. Beatrice asked for the ledger. Maro traced the flour route from the mill to the cart to the bakery shelf. The numbers explained part of the increase, but not all of it. Otto finally said the quiet part: he had added extra because he was afraid the next delivery would be worse. That sentence changed the room. A price was no longer a number on a board. It was a compressed story about cost, risk, bargaining power, and the fear of being the person blamed when tomorrow arrives.",
     storyBodyZh: "奥托天还没亮就改了面包价格，希望镇上的人把它理解成算术。大家却把它理解成背叛。皮姆拍下新价格，贝娅要看账本，马洛追踪面粉从磨坊到推车再到面包架的路径。数字解释了一部分涨价，但不是全部。最后奥托说出了没写在牌子上的那部分：他多加了一点，因为他害怕下一批货会更糟。房间里的气氛因此改变。价格不再只是木板上的数字，而是一段被压缩的故事，里面有成本、风险、议价能力，以及害怕明天来临时自己成为被责怪的那个人。",
-    insight: "Fairness cannot be judged from the surface alone. A better question opens the ledger behind the emotion: what changed, who carries the risk, and which part is cost versus fear?",
-    insightZh: "公平不能只从表面判断。更好的问题会打开情绪背后的账本：到底什么变了，谁在承担风险，哪一部分是成本，哪一部分是恐惧。",
+    insight: "Fairness cannot be judged from the surface alone. A price is a tiny public symbol that compresses many private realities: cost, uncertainty, bargaining power, reputation, and fear. The deeper question is not simply whether Otto is greedy or the town is emotional. It is which hidden layer each person treats as the real story.",
+    insightZh: "公平不能只从表面判断。价格是一个很小的公共符号，却压缩了许多私人现实：成本、不确定性、议价能力、声誉和恐惧。更深的问题不是奥托是不是贪心，也不是镇民是不是情绪化，而是每个人把哪一层隐藏结构当成了真正的故事。",
+    perspectives: [
+      {
+        lens: "Pim sees public trust",
+        lensZh: "皮姆看见的是公共信任",
+        focus: "A changed price without explanation feels like a broken relationship. Pim focuses on how a signal spreads through people.",
+        focusZh: "没有解释的涨价，会像关系被破坏一样被感知。皮姆关注一个信号如何在人群中扩散。",
+      },
+      {
+        lens: "Beatrice sees evidence",
+        lensZh: "贝娅看见的是证据",
+        focus: "Anger may be real, but it still needs a ledger. Her focus is separating facts from suspicion.",
+        focusZh: "愤怒可能是真的，但仍然需要账本。她关注的是把事实和猜疑分开。",
+      },
+      {
+        lens: "Maro sees the supply chain",
+        lensZh: "马洛看见的是供应链",
+        focus: "The loaf is the last stop, not the whole process. Maro focuses on transport, delays, payment terms, and upstream pressure.",
+        focusZh: "面包只是最后一站，不是全过程。马洛关注运输、延误、付款条件和上游压力。",
+      },
+      {
+        lens: "Otto sees tomorrow's risk",
+        lensZh: "奥托看见的是明天的风险",
+        focus: "His extra markup is partly fear disguised as pricing. His focus is survival under uncertainty.",
+        focusZh: "他多加的价格，有一部分是伪装成定价的恐惧。他关注的是不确定性里的生存。",
+      },
+    ],
     miniQuestion: "What information should a town look at before deciding whether a price increase is unfair?",
     miniQuestionZh: "在判断一次涨价是否不公平之前，社区应该先看哪些信息？",
     isPublished: true,
@@ -1462,8 +1520,34 @@ const stories = [
     summaryZh: "一次学校会议问出了比“教什么”更难的问题：一个学习者应该能看见什么？",
     storyBody: "Lina brought three lesson plans and expected a tidy vote. Ren brought a different kind of evidence: students who could recite definitions, but froze in front of a broken bus schedule, a medicine label, or a rumor spreading through a class chat. Someone said school should not become life itself. Sana answered softly that life had already entered the building. Lina erased the agenda and wrote one sentence on the board: \"What should a child be able to notice?\" The room became quieter. Facts still mattered. Tools still mattered. But the question had moved underneath them. A curriculum is not only a list of content. It is a training ground for attention: what learners see, what they miss, and what they learn to connect before the world asks them to act.",
     storyBodyZh: "莉娜带来了三份教案，以为会议会很快投票结束。任带来的却是另一种证据：学生能背定义，却在面对坏掉的公交时刻表、看不懂的药品标签、班级群里扩散的谣言时停住。有人说学校不应该变成现实生活本身。萨娜轻声回答，现实生活早就走进了教学楼。莉娜擦掉议程，在白板上写下一句话：“一个孩子应该能看见什么？”房间安静下来。事实仍然重要，工具仍然重要。但问题已经移到更深处。课程不只是内容清单，它是在训练注意力：学习者会看见什么，会忽略什么，又能在世界要求他们行动之前，把什么连接起来。",
-    insight: "Learning is not just storing answers. It is building attention. MapKAI treats knowledge as a map because real problems rarely arrive with subject labels attached.",
-    insightZh: "学习不只是储存答案，而是在建立注意力。MapKAI 把知识当作地图，是因为真实问题很少带着学科标签出现。",
+    insight: "Learning is not just storing answers. It is building attention. A curriculum quietly decides what counts as worth noticing, what can be ignored, and what connections a learner is allowed to make. MapKAI treats knowledge as a map because real problems rarely arrive with subject labels attached. They arrive as messy situations, and the learner's first advantage is knowing which lens to bring forward.",
+    insightZh: "学习不只是储存答案，而是在建立注意力。课程会悄悄决定什么值得被看见，什么可以被忽略，一个学习者被允许建立哪些连接。MapKAI 把知识当作地图，是因为真实问题很少带着学科标签出现。它们通常以混乱情境的形式到来，而学习者最早的优势，是知道该把哪个视角带到前面。",
+    perspectives: [
+      {
+        lens: "Lina sees transfer",
+        lensZh: "莉娜看见的是迁移能力",
+        focus: "Students know definitions but cannot move knowledge into real situations. Her focus is whether learning can travel.",
+        focusZh: "学生知道定义，却不能把知识带到真实情境里。她关注的是学习能不能迁移。",
+      },
+      {
+        lens: "Ren sees mapping",
+        lensZh: "任看见的是地图结构",
+        focus: "The issue is not one missing lesson. Ren focuses on how fields connect when life refuses to stay inside one subject.",
+        focusZh: "问题不是少了一节课。任关注的是：当生活不待在单一学科里时，知识领域如何连接。",
+      },
+      {
+        lens: "Sana sees human limits",
+        lensZh: "萨娜看见的是人的边界",
+        focus: "Tools and facts are not enough if students cannot handle fear, pressure, or confusion. Her focus is care and judgment.",
+        focusZh: "如果学生无法处理恐惧、压力和混乱，工具和事实还不够。她关注的是照护和判断。",
+      },
+      {
+        lens: "Aya sees social purpose",
+        lensZh: "阿雅看见的是社会目的",
+        focus: "A curriculum shapes what kind of citizen someone becomes. Her focus is the public consequence of private learning.",
+        focusZh: "课程会塑造一个人成为什么样的社会成员。她关注的是私人学习背后的公共后果。",
+      },
+    ],
     miniQuestion: "If school time is limited, what should a curriculum protect first: facts, tools, judgment, or character?",
     miniQuestionZh: "如果学校时间有限，课程最应该优先保护什么：事实、工具、判断力，还是人格？",
     isPublished: true,
@@ -1561,6 +1645,18 @@ function getStoryInsight(story) {
 
 function getStoryMiniQuestion(story) {
   return currentLanguage === "zh" ? story.miniQuestionZh || story.miniQuestion || "" : story.miniQuestion || "";
+}
+
+function getStoryPerspectives(story) {
+  return Array.isArray(story.perspectives) ? story.perspectives : [];
+}
+
+function getStoryPerspectiveLens(perspective) {
+  return currentLanguage === "zh" ? perspective.lensZh || perspective.lens || "" : perspective.lens || "";
+}
+
+function getStoryPerspectiveFocus(perspective) {
+  return currentLanguage === "zh" ? perspective.focusZh || perspective.focus || "" : perspective.focus || "";
 }
 
 function getStoryFieldCodes(story) {
@@ -8440,6 +8536,19 @@ function renderStoryDetail(storyId) {
   }
   const insight = getStoryInsight(story);
   const miniQuestion = getStoryMiniQuestion(story);
+  const perspectives = getStoryPerspectives(story)
+    .map((perspective) => {
+      const lens = getStoryPerspectiveLens(perspective);
+      const focus = getStoryPerspectiveFocus(perspective);
+      if (!lens && !focus) return "";
+      return `
+        <article>
+          ${lens ? `<h3>${escapeHtml(lens)}</h3>` : ""}
+          ${focus ? `<p><span>${escapeHtml(t("storyFocusLabel"))}</span> ${escapeHtml(focus)}</p>` : ""}
+        </article>`;
+    })
+    .filter(Boolean)
+    .join("");
   target.innerHTML = `
     <h1>${escapeHtml(getStoryTitle(story))}</h1>
     <p class="story-body">${escapeHtml(getStoryBody(story))}</p>
@@ -8448,7 +8557,15 @@ function renderStoryDetail(storyId) {
         <span>${escapeHtml(t("storyInsightTitle"))}</span>
         <p>${escapeHtml(insight)}</p>
         ${miniQuestion ? `<strong>${escapeHtml(miniQuestion)}</strong>` : ""}
-      </aside>` : ""}`;
+      </aside>` : ""}
+    ${perspectives ? `
+      <section class="story-perspectives" aria-label="${escapeHtml(t("storyPerspectivesTitle"))}">
+        <div class="story-perspectives-heading">
+          <span>${escapeHtml(t("storyPerspectivesTitle"))}</span>
+          <p>${escapeHtml(t("storyPerspectivesCopy"))}</p>
+        </div>
+        <div class="story-perspective-grid">${perspectives}</div>
+      </section>` : ""}`;
 }
 
 function renderStoryMap() {
