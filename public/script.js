@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.3";
+const appVersion = "0.1.4";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -73,6 +73,14 @@ const routeMeta = {
   "/map": {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
     description: "Explore MapKAI's knowledge lenses and see which fields are unknown, emerging, familiar, or active in a learning map.",
+  },
+  "/categories": {
+    title: "MapKAI Knowledge Lenses — Explore Practical Fields",
+    description: "Browse MapKAI's knowledge lenses and practical fields, organized as a calm map for learning and reflection.",
+  },
+  "/learning": {
+    title: "MapKAI Learning Paths — Connect Fields Into Next Steps",
+    description: "Explore how MapKAI can connect knowledge fields into practical learning paths and clearer next steps.",
   },
   "/about": {
     title: "About MapKAI — Knowledge Mapping for the AI Era",
@@ -8173,7 +8181,15 @@ function goToRoute(route, replace = false) {
 }
 
 function updateRouteMeta(route) {
-  const key = route.startsWith("/stories/") ? "/stories" : routeMeta[route] ? route : "/";
+  const key = route.startsWith("/stories/")
+    ? "/stories"
+    : route.startsWith("/fields/")
+      ? "/map"
+      : route.startsWith("/categories/")
+        ? "/categories"
+        : route.startsWith("/learning/")
+          ? "/learning"
+          : routeMeta[route] ? route : "/";
   const meta = routeMeta[key] || routeMeta["/"];
   const canonicalRoute = key === "/" ? "/" : key;
   const canonicalUrl = `https://www.mapkai.com${canonicalRoute === "/" ? "/" : canonicalRoute}`;

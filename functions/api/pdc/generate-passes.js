@@ -1,8 +1,8 @@
-import { createPassCode, ensurePdcTables, getIsoNow, getWeeklyBatchId, isFounderRequest, json } from "./_shared.js";
+import { createPassCode, ensurePdcTables, getIsoNow, getWeeklyBatchId, hasFounderApiAccess, json } from "./_shared.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
-  if (!isFounderRequest(request)) return json({ ok: false, error: "Founder mode required." }, 403);
+  if (!(await hasFounderApiAccess(request, env))) return json({ ok: false, error: "Founder mode required." }, 403);
   if (!env.MAPKAI_DB) return json({ ok: false, error: "PDC database is not configured." }, 500);
 
   await ensurePdcTables(env.MAPKAI_DB);

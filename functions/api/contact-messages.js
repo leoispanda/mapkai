@@ -1,3 +1,5 @@
+import { hasFounderApiAccess } from "./pdc/_shared.js";
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -52,12 +54,12 @@ export async function onRequest({ request, env }) {
     return json({ ok: false, error: "Method not allowed." }, 405);
   }
 
-  if (!env.MAPKAI_DB) {
-    return json({ ok: true, messages: [], warning: "Message database is not configured." });
+  if (!(await hasFounderApiAccess(request, env))) {
+    return json({ ok: false, error: "Founder mode required." }, 403);
   }
 
-  if (request.headers.get("X-MapKAI-Founder") !== "true") {
-    return json({ ok: false, error: "Founder mode required." }, 403);
+  if (!env.MAPKAI_DB) {
+    return json({ ok: true, messages: [], warning: "Message database is not configured." });
   }
 
   await ensureContactMessagesTable(env.MAPKAI_DB);

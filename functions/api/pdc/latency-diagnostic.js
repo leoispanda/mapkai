@@ -1,4 +1,4 @@
-import { isFounderRequest, json } from "./_shared.js";
+import { hasFounderApiAccess, json } from "./_shared.js";
 import { generatePdcDialogue, pdcModes, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 const diagnosticQuestion = "欧洲白领为什么收入比美国白领低那么多";
@@ -7,7 +7,7 @@ const diagnosticProviders = ["openai", "cloudflare", "placeholder"];
 
 export async function onRequest({ request, env }) {
   if (!["GET", "POST"].includes(request.method)) return json({ ok: false, error: "Method not allowed." }, 405);
-  if (!isFounderRequest(request)) return json({ ok: false, error: "Founder mode required." }, 403);
+  if (!(await hasFounderApiAccess(request, env))) return json({ ok: false, error: "Founder mode required." }, 403);
 
   const mode = pdcModes.personal;
   const sessionRoster = resolveSessionRoster({ modeId: mode.id, sessionRoster: null })

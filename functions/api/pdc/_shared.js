@@ -15,6 +15,12 @@ export function isFounderRequest(request) {
   return request.headers.get("X-MapKAI-Founder") === "true";
 }
 
+export async function hasFounderApiAccess(request, env) {
+  if (!isFounderRequest(request)) return false;
+  if (!getFounderAccessCode(env)) return true;
+  return hasValidFounderAccessCookie(request, env);
+}
+
 export function getFounderAccessCode(env) {
   return String(env?.MAPKAI_FOUNDER_ACCESS_CODE || "").trim();
 }

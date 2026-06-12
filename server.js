@@ -15,6 +15,7 @@ const codes = new Map();
 const sessions = new Map();
 
 const localFunctionRoutes = {
+  "/api/visit": "functions/api/visit.js",
   "/api/contact-message": "functions/api/contact-message.js",
   "/api/contact-messages": "functions/api/contact-messages.js",
   "/api/pdc/start": "functions/api/pdc/start.js",
@@ -83,7 +84,15 @@ async function handleLocalFunctionRoute(request, response, url) {
     requestInit.body = await readRawBody(request);
   }
 
-  const functionResponse = await routeModule.onRequest({
+  const methodHandlerName = `onRequest${request.method.charAt(0).toUpperCase()}${request.method.slice(1).toLowerCase()}`;
+  const routeHandler = routeModule[methodHandlerName] || routeModule.onRequest;
+
+  if (typeof routeHandler !== "function") {
+    sendJson(response, 405, { error: "Method not allowed." });
+    return;
+  }
+
+  const functionResponse = await routeHandler({
     request: new Request(url.href, requestInit),
     env: process.env,
   });
