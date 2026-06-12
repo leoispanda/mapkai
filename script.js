@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.6";
+const appVersion = "0.1.7";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -191,9 +191,13 @@ const uiText = {
     whyK: "for knowledge.",
     whyAI: "as a tool to organize, connect, and expand what we learn.",
     whyP4: "MapKAI is about transforming scattered knowledge into a structured learning journey, from unknown ocean to explored land.",
-    mapEyebrow: "General Knowledge Map",
-    mapTitle: "The ocean is unknown. The land is what you can explain.",
-    mapCopy: "In MapKAI, the ocean represents what you have not explored yet. The land represents what you understand well enough to explain. Learning paths help you move from ocean to land.",
+    mapEyebrow: "Knowledge Map",
+    mapTitle: "Your knowledge map.",
+    mapCopy: "Answer questions. Watch unknown ocean turn into land.",
+    mapStatesTitle: "Map states",
+    mapStateOcean: "Ocean Unknown",
+    mapStateSnow: "Snow Emerging",
+    mapStateLand: "Land Active",
     goCategories: "Continue Exploring",
     goLearning: "Browse Domains",
     quickMirrorTitle: "Quick Mirror",
@@ -501,9 +505,13 @@ const uiText = {
     whyK: "代表 knowledge，知识。",
     whyAI: "作为工具，帮助我们整理、连接并扩展所学。",
     whyP4: "MapKAI 不只是收集信息，而是把零散知识整理成一段结构清楚的学习旅程，从未探索的知识海洋走向能够解释的陆地。",
-    mapEyebrow: "通用知识地图",
-    mapTitle: "海洋是未知，陆地是你能解释的知识。",
-    mapCopy: "在 MapKAI 里，海洋代表你还没有探索的知识；陆地代表你已经能解释的理解。学习路径会帮助你一步步从海洋走向陆地。",
+    mapEyebrow: "知识地图",
+    mapTitle: "你的知识地图。",
+    mapCopy: "回答问题，看未知海洋逐渐变成陆地。",
+    mapStatesTitle: "地图状态",
+    mapStateOcean: "海洋 未知",
+    mapStateSnow: "雪山 初现",
+    mapStateLand: "陆地 激活",
     goCategories: "继续探索",
     goLearning: "浏览领域",
     quickMirrorTitle: "30秒思维镜像",
@@ -8095,6 +8103,17 @@ function applyLanguage() {
   setText(".map-page .intro-copy .eyebrow", t("mapEyebrow"));
   setText(".map-page .intro-copy h1", t("mapTitle"));
   setText(".map-page .intro-copy p:not(.eyebrow)", t("mapCopy"));
+  setText(".map-how-panel h2", t("mapStatesTitle"));
+  const mapStateItems = document.querySelectorAll(".map-how-panel li");
+  const mapStateLabels = [
+    t("mapStateOcean"),
+    t("mapStateSnow"),
+    t("mapStateLand"),
+  ];
+  mapStateItems.forEach((item, index) => {
+    const [label, ...rest] = mapStateLabels[index].split(" ");
+    item.innerHTML = `<strong>${escapeHtml(label || "")}</strong> ${escapeHtml(rest.join(" "))}`;
+  });
   setAllText(".map-page .intro-copy .button", [t("mapChallengeAction"), t("mapLensAction"), t("goLearning")]);
   setText("#mapChallenge .stories-hero .eyebrow", t("mapChallengeEyebrow"));
   setText("#mapChallenge .stories-hero h1", t("mapChallengeTitle"));
