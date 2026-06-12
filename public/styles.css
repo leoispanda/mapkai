@@ -3621,6 +3621,41 @@ canvas {
   color: #9c4938;
 }
 
+.challenge-progress-line {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 760;
+}
+
+.challenge-result {
+  margin-top: 16px;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: rgba(239, 246, 255, 0.86);
+  color: var(--muted);
+}
+
+.challenge-result strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue-dark);
+}
+
+.challenge-result p {
+  margin: 0;
+}
+
+.challenge-result.is-incorrect {
+  border-color: rgba(245, 158, 11, 0.22);
+  background: rgba(255, 251, 235, 0.86);
+}
+
+.challenge-result.is-incorrect strong {
+  color: #92400e;
+}
+
 .title-modal[hidden] {
   display: none;
 }

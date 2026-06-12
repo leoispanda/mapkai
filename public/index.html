@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.5" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.6" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -440,7 +440,8 @@
               </ol>
             </div>
             <div class="hero-actions">
-              <a class="button primary" href="/explore" data-route="/explore">Continue Exploring</a>
+              <a class="button primary" href="/map-challenge" data-route="/map-challenge">Start Map Challenge</a>
+              <a class="button secondary" href="/explore" data-route="/explore">Try Lens Explore</a>
               <a class="button secondary founder-public-entry" href="/categories" data-route="/categories">Browse Knowledge Lenses</a>
             </div>
           </section>
@@ -454,6 +455,25 @@
             </div>
           </section>
         </div>
+      </section>
+
+      <section class="page explore-page" id="mapChallenge" data-page="/map-challenge">
+        <section class="stories-hero">
+          <p class="eyebrow">Map Challenge</p>
+          <h1>Open the knowledge map.</h1>
+          <p>
+            Answer challenge questions from the original MapKAI question bank. Correct answers gradually reveal snowy mountains, land, and green oases.
+          </p>
+          <div class="hero-actions">
+            <a class="button secondary" href="/map" data-route="/map">View Map</a>
+            <a class="button secondary" href="/explore" data-route="/explore">Try Lens Explore</a>
+          </div>
+        </section>
+        <section class="map-challenge" aria-label="MapKAI Map Challenge">
+          <div class="challenge-panel">
+            <section class="challenge-card" id="mapChallengeCard" aria-live="polite"></section>
+          </div>
+        </section>
       </section>
 
       <section class="page field-detail-page" id="fieldDetail" data-page="/fields/detail">
@@ -543,6 +563,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=0.1.5"></script>
+    <script src="/script.js?v=0.1.6"></script>
   </body>
 </html>

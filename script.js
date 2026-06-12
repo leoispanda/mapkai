@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.5";
+const appVersion = "0.1.6";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -74,6 +74,10 @@ const routeMeta = {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
     description: "Explore MapKAI's knowledge lenses and see which fields are unknown, emerging, familiar, or active in a learning map.",
   },
+  "/map-challenge": {
+    title: "MapKAI Map Challenge — Open the Knowledge Map",
+    description: "Answer MapKAI challenge questions and gradually reveal snowy mountains, land, and green oases on the knowledge map.",
+  },
   "/categories": {
     title: "MapKAI Knowledge Lenses — Explore Practical Fields",
     description: "Browse MapKAI's knowledge lenses and practical fields, organized as a calm map for learning and reflection.",
@@ -135,6 +139,22 @@ const uiText = {
     mapCardTitle: "Map - See revealed territory",
     mapCardCopy: "Watch your knowledge world light up as exploration progresses.",
     mapCardLink: "Open map",
+    mapChallengeAction: "Start Map Challenge",
+    mapLensAction: "Try Lens Explore",
+    mapChallengeEyebrow: "Map Challenge",
+    mapChallengeTitle: "Open the knowledge map.",
+    mapChallengeCopy: "Answer challenge questions from the original MapKAI question bank. Correct answers gradually reveal snowy mountains, land, and green oases.",
+    mapChallengeViewMap: "View Map",
+    mapChallengeProgress: (current, total, subject) => `Question ${current}/${total} · ${subject}`,
+    mapChallengeCompleteTitle: "Challenge complete.",
+    mapChallengeCompleteCopy: "You explored the original MapKAI question bank. The map now reflects your correct answers by knowledge area.",
+    mapChallengeRestart: "Restart Challenge",
+    mapChallengeRestartShort: "Restart",
+    mapChallengeNext: "Next question",
+    mapChallengeCorrect: "Correct",
+    mapChallengeIncorrect: "Not this time",
+    mapChallengeStatus: (correct, answered, snow, land, green) => `${correct}/${answered} correct · ${snow} emerging · ${land} familiar · ${green} active`,
+    mapChallengeSource: (subjectCode, subjectName, questionId) => `Source: ${subjectCode} · ${subjectName} · ${questionId}`,
     categoriesCardTitle: "Categories - Choose domains",
     categoriesCardCopy: "Scan exploration domains, then continue into the question flow.",
     categoriesCardLink: "Browse categories",
@@ -429,6 +449,22 @@ const uiText = {
     mapCardTitle: "地图 - 看见已显现的领域",
     mapCardCopy: "随着探索推进，看见你的知识世界逐步点亮。",
     mapCardLink: "打开地图",
+    mapChallengeAction: "开始地图挑战",
+    mapLensAction: "试试视角探索",
+    mapChallengeEyebrow: "地图挑战",
+    mapChallengeTitle: "开启你的知识地图。",
+    mapChallengeCopy: "回答 MapKAI 原始题库里的挑战题。答对后，雪山、大陆和绿洲会逐步显现。",
+    mapChallengeViewMap: "查看地图",
+    mapChallengeProgress: (current, total, subject) => `第 ${current}/${total} 题 · ${subject}`,
+    mapChallengeCompleteTitle: "挑战完成。",
+    mapChallengeCompleteCopy: "你已经探索了 MapKAI 原始题库。地图会根据每个知识领域的答对情况呈现进度。",
+    mapChallengeRestart: "重新挑战",
+    mapChallengeRestartShort: "重来",
+    mapChallengeNext: "下一题",
+    mapChallengeCorrect: "答对了",
+    mapChallengeIncorrect: "这次不是",
+    mapChallengeStatus: (correct, answered, snow, land, green) => `${correct}/${answered} 答对 · ${snow} 初现 · ${land} 熟悉 · ${green} 激活`,
+    mapChallengeSource: (subjectCode, subjectName, questionId) => `来源：${subjectCode} · ${subjectName} · ${questionId}`,
     categoriesCardTitle: "分类 - 选择探索领域",
     categoriesCardCopy: "浏览知识领域，然后继续进入答题探索。",
     categoriesCardLink: "浏览分类",
@@ -4062,6 +4098,10 @@ const challengeState = Object.fromEntries(challengeSubjects.map((code) => [code,
   correct: 0,
   answered: [],
 }]));
+const mapChallengeState = Object.fromEntries(challengeSubjects.map((code) => [code, {
+  correct: 0,
+  answered: [],
+}]));
 const knowledgeTitleRules = {
   en: [
     { min: 90, title: "Legendary Mind" },
@@ -4106,6 +4146,7 @@ const explorerTitleRules = {
 };
 const milestoneModalThresholds = [20, 30, 40, 50, 60, 100, 200, 500, 1000];
 const masteryProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
+const mapChallengeProgress = Object.fromEntries(challengeSubjects.map((code) => [code, "ocean"]));
 let activeChallengeSubject = challengeSubjects[0];
 let activeChallengeQuestion = null;
 let currentAnsweredQuestion = null;
@@ -4113,6 +4154,13 @@ let challengeHistory = [];
 let challengeReviewIndex = null;
 let challengeQuestionPool = [];
 let challengePoolIndex = 0;
+let activeMapChallengeSubject = challengeSubjects[0];
+let activeMapChallengeQuestion = null;
+let currentMapChallengeResult = null;
+let mapChallengeHistory = [];
+let mapChallengeQuestionPool = [];
+let mapChallengePoolIndex = 0;
+let mapChallengeComplete = false;
 let lastTitleModalAt = 0;
 let activeTitleModalStats = null;
 let challengeRoundComplete = false;
@@ -8047,7 +8095,11 @@ function applyLanguage() {
   setText(".map-page .intro-copy .eyebrow", t("mapEyebrow"));
   setText(".map-page .intro-copy h1", t("mapTitle"));
   setText(".map-page .intro-copy p:not(.eyebrow)", t("mapCopy"));
-  setAllText(".map-page .intro-copy .button", [t("goCategories"), t("goLearning")]);
+  setAllText(".map-page .intro-copy .button", [t("mapChallengeAction"), t("mapLensAction"), t("goLearning")]);
+  setText("#mapChallenge .stories-hero .eyebrow", t("mapChallengeEyebrow"));
+  setText("#mapChallenge .stories-hero h1", t("mapChallengeTitle"));
+  setText("#mapChallenge .stories-hero p:not(.eyebrow)", t("mapChallengeCopy"));
+  setAllText("#mapChallenge .stories-hero .button", [t("mapChallengeViewMap"), t("mapLensAction")]);
   const legendItems = [
     ["ocean", getMasteryLabel("ocean")],
     ["snow", getMasteryLabel("snow")],
@@ -8109,6 +8161,7 @@ function applyLanguage() {
   renderVisitStats();
   renderQuickMirror();
   renderChallenge();
+  renderMapChallenge();
   renderReflectionPanel();
   renderKnowledgeTitleModal();
 }
@@ -8159,7 +8212,7 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/stories" && visibleTarget.startsWith("/stories")) ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
-      (linkRoute === "/map" && visibleTarget.startsWith("/fields/")) ||
+      (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
@@ -9658,6 +9711,168 @@ function handleChallengeClick(event) {
   if (!challengeRoundComplete) maybeShowKnowledgeTitleModal();
 }
 
+function getMapChallengeMasteryFromCorrect(subjectCode) {
+  const subject = questionBank[subjectCode];
+  const state = mapChallengeState[subjectCode];
+  const correct = state?.correct || 0;
+  const rule = subject?.unlockRule || { snow: 2, land: 4, green: 6 };
+  if (correct >= rule.green) return "green";
+  if (correct >= rule.land) return "land";
+  if (correct >= rule.snow) return "snow";
+  return "ocean";
+}
+
+function syncMapChallengeProgress(subjectCode) {
+  if (subjectCode) {
+    mapChallengeProgress[subjectCode] = getMapChallengeMasteryFromCorrect(subjectCode);
+    return;
+  }
+  challengeSubjects.forEach((code) => {
+    mapChallengeProgress[code] = getMapChallengeMasteryFromCorrect(code);
+  });
+}
+
+function getAllMapChallengeQuestions() {
+  return Object.entries(questionBank).flatMap(([subjectCode, subject]) => {
+    return subject.questions.map((question) => ({ subjectCode, question }));
+  });
+}
+
+function getMapChallengeTotalQuestionCount() {
+  return getAllMapChallengeQuestions().length;
+}
+
+function getMapChallengeAnsweredCount() {
+  return mapChallengeHistory.length;
+}
+
+function getMapChallengeCorrectCount() {
+  return Object.values(mapChallengeState).reduce((total, state) => total + state.correct, 0);
+}
+
+function refillMapChallengeQuestionPool() {
+  mapChallengeQuestionPool = shuffleQuestions(getAllMapChallengeQuestions());
+  mapChallengePoolIndex = 0;
+}
+
+function setRandomMapChallengeQuestion() {
+  if (mapChallengeComplete) {
+    activeMapChallengeQuestion = null;
+    return null;
+  }
+  if (!mapChallengeQuestionPool.length) refillMapChallengeQuestionPool();
+  if (mapChallengePoolIndex >= mapChallengeQuestionPool.length) {
+    mapChallengeComplete = true;
+    activeMapChallengeQuestion = null;
+    currentMapChallengeResult = null;
+    return null;
+  }
+  const nextItem = mapChallengeQuestionPool[mapChallengePoolIndex];
+  mapChallengePoolIndex += 1;
+  activeMapChallengeSubject = nextItem.subjectCode;
+  activeMapChallengeQuestion = nextItem.question;
+  currentMapChallengeResult = null;
+  return nextItem;
+}
+
+function resetMapChallenge() {
+  challengeSubjects.forEach((code) => {
+    mapChallengeState[code].correct = 0;
+    mapChallengeState[code].answered = [];
+    mapChallengeProgress[code] = "ocean";
+  });
+  activeMapChallengeSubject = challengeSubjects[0];
+  activeMapChallengeQuestion = null;
+  currentMapChallengeResult = null;
+  mapChallengeHistory = [];
+  mapChallengeQuestionPool = [];
+  mapChallengePoolIndex = 0;
+  mapChallengeComplete = false;
+  setRandomMapChallengeQuestion();
+  renderMapChallenge();
+  drawKnowledgeMap();
+}
+
+function renderMapChallenge() {
+  const target = document.getElementById("mapChallengeCard");
+  if (!target) return;
+  if (!activeMapChallengeQuestion && !mapChallengeComplete) setRandomMapChallengeQuestion();
+
+  const answered = getMapChallengeAnsweredCount();
+  const total = getMapChallengeTotalQuestionCount();
+  const correct = getMapChallengeCorrectCount();
+  const openedCounts = challengeSubjects.reduce((counts, code) => {
+    counts[mapChallengeProgress[code] || "ocean"] += 1;
+    return counts;
+  }, { ocean: 0, snow: 0, land: 0, green: 0 });
+
+  if (mapChallengeComplete) {
+    target.innerHTML = `
+      <div class="challenge-progress-line">${escapeHtml(t("mapChallengeEyebrow"))}</div>
+      <h2 class="challenge-question">${escapeHtml(t("mapChallengeCompleteTitle"))}</h2>
+      <p>${escapeHtml(t("mapChallengeCompleteCopy"))}</p>
+      <div class="challenge-status is-green">${escapeHtml(t("mapChallengeStatus", correct, answered, openedCounts.snow, openedCounts.land, openedCounts.green))}</div>
+      <div class="hero-actions">
+        <a class="button primary" href="/map" data-route="/map">${escapeHtml(t("mapChallengeViewMap"))}</a>
+        <button class="button secondary" type="button" data-map-challenge-reset>${escapeHtml(t("mapChallengeRestart"))}</button>
+      </div>`;
+    return;
+  }
+
+  const question = activeMapChallengeQuestion;
+  const questionContent = getQuestionContent(question);
+  const options = Array.isArray(questionContent.options) ? questionContent.options : [];
+  const answeredCurrent = Boolean(currentMapChallengeResult);
+  const subjectName = getSubjectTitle(activeMapChallengeSubject);
+  target.innerHTML = `
+    <div class="challenge-progress-line">${escapeHtml(t("mapChallengeProgress", answered + 1, total, subjectName))}</div>
+    <h2 class="challenge-question">${escapeHtml(questionContent.question || "")}</h2>
+    <div class="answer-grid">
+      ${options.map((option, index) => {
+        const selected = currentMapChallengeResult?.selectedIndex === index;
+        const correctOption = answeredCurrent && option === questionContent.answer;
+        const className = correctOption ? "is-correct" : selected ? "is-wrong" : "";
+        return `<button class="${className}" type="button" data-map-challenge-answer="${index}" ${answeredCurrent ? "disabled" : ""}>${escapeHtml(option)}</button>`;
+      }).join("")}
+    </div>
+    ${currentMapChallengeResult ? `
+      <div class="challenge-result ${currentMapChallengeResult.correct ? "is-correct" : "is-incorrect"}">
+        <strong>${escapeHtml(currentMapChallengeResult.correct ? t("mapChallengeCorrect") : t("mapChallengeIncorrect"))}</strong>
+        <p>${escapeHtml(questionContent.explanation || "")}</p>
+      </div>` : ""}
+    <div class="challenge-status">${escapeHtml(t("mapChallengeStatus", correct, answered, openedCounts.snow, openedCounts.land, openedCounts.green))}</div>
+    <div class="hero-actions">
+      ${answeredCurrent ? `<button class="button primary" type="button" data-map-challenge-next>${escapeHtml(t("mapChallengeNext"))}</button>` : ""}
+      <a class="button secondary" href="/map" data-route="/map">${escapeHtml(t("mapChallengeViewMap"))}</a>
+      <button class="button secondary" type="button" data-map-challenge-reset>${escapeHtml(t("mapChallengeRestartShort"))}</button>
+    </div>
+    <div class="founder-note internal-code">${escapeHtml(t("mapChallengeSource", activeMapChallengeSubject, subjectName, question.id || ""))}</div>`;
+}
+
+function answerMapChallenge(optionIndex) {
+  const question = activeMapChallengeQuestion;
+  const subjectCode = activeMapChallengeSubject;
+  const state = mapChallengeState[subjectCode];
+  const questionContent = getQuestionContent(question);
+  const options = Array.isArray(questionContent.options) ? questionContent.options : [];
+  const selectedOption = options[optionIndex];
+  if (!question || !state || selectedOption === undefined || currentMapChallengeResult) return;
+  const isCorrect = selectedOption === questionContent.answer;
+  state.answered.push(question.id);
+  if (isCorrect) state.correct += 1;
+  syncMapChallengeProgress(subjectCode);
+  currentMapChallengeResult = { selectedIndex: optionIndex, correct: isCorrect };
+  mapChallengeHistory.push({ subjectCode, questionId: question.id, selectedOption, correct: isCorrect });
+  renderMapChallenge();
+  drawKnowledgeMap();
+}
+
+function moveToNextMapChallengeQuestion() {
+  setRandomMapChallengeQuestion();
+  renderMapChallenge();
+  drawKnowledgeMap();
+}
+
 function renderPassport(targetId, passport) {
   const target = document.getElementById(targetId);
   if (!target) return;
@@ -9778,7 +9993,7 @@ function drawKnowledgeMap() {
   const founderMode = document.body.classList.contains("founder-mode");
 
   categories.forEach((category) => {
-    const level = masteryProgress[category.code] || "ocean";
+    const level = mapChallengeProgress[category.code] || "ocean";
     drawMapComponent(category.code, level, width, height);
   });
 
@@ -9874,7 +10089,7 @@ function drawMapFallback(width, height) {
 }
 
 function drawActiveMapMarker(width, height) {
-  const position = mapFounderLabelPositions[activeChallengeSubject];
+  const position = mapFounderLabelPositions[activeMapChallengeSubject];
   if (!position) return;
   const [sourceX, sourceY] = position;
   const x = sourceX * (width / 1100);
@@ -9953,6 +10168,19 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-copy-lens-prompt]")) {
     copyKnowledgeLensPrompt();
+    return;
+  }
+  const mapChallengeAnswer = event.target.closest("[data-map-challenge-answer]");
+  if (mapChallengeAnswer) {
+    answerMapChallenge(Number(mapChallengeAnswer.dataset.mapChallengeAnswer));
+    return;
+  }
+  if (event.target.closest("[data-map-challenge-next]")) {
+    moveToNextMapChallengeQuestion();
+    return;
+  }
+  if (event.target.closest("[data-map-challenge-reset]")) {
+    resetMapChallenge();
     return;
   }
   if (event.target.closest("[data-answer-key], [data-start-new-round]")) {
@@ -10180,6 +10408,7 @@ renderPassport("pathPassport", modulePassports.path);
 renderField();
 renderLearning();
 renderChallenge();
+renderMapChallenge();
 renderReflectionPanel();
 drawKnowledgeMap();
 applyLanguage();
@@ -10215,6 +10444,7 @@ function setFounderMode(enabled) {
   renderStories();
   renderStoryMap();
   renderChallenge();
+  renderMapChallenge();
   if (normalizeRoute(window.location.pathname) === "/pdc-pilot") {
     initPdcPilotPage();
   }
