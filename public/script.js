@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.7";
+const appVersion = "0.1.8";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -118,6 +118,12 @@ const uiText = {
     navCategories: "Knowledge Lenses",
     navLearning: "Learning",
     navAbout: "About",
+    storiesEyebrow: "Stories",
+    storiesTitle: "Small stories. Larger maps.",
+    storiesCopy: "Each story begins with an ordinary conflict, then reveals the knowledge hidden underneath.",
+    readStory: "Read story",
+    backToStories: "Back to Stories",
+    storyInsightTitle: "What it reveals",
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
@@ -432,6 +438,12 @@ const uiText = {
     navCategories: "知识镜头",
     navLearning: "学习路径",
     navAbout: "关于",
+    storiesEyebrow: "故事",
+    storiesTitle: "小故事，更大的知识地图。",
+    storiesCopy: "每个故事从一个日常冲突开始，慢慢显现背后的知识结构。",
+    readStory: "阅读故事",
+    backToStories: "返回故事",
+    storyInsightTitle: "背后的道理",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
@@ -1391,9 +1403,14 @@ const stories = [
     ],
     characters: ["mira", "toma", "niko", "aya", "blue-whale"],
     coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
-    summary: "A small town discovers that water is not just a resource problem. It is also economics, engineering, health, governance, and trust.",
-    storyBody: "Mira noticed it while brushing her teeth: the tap coughed twice, then gave up. Downstairs, her neighbor was already filling every pot in the kitchen. By eight, the group chat had turned mean. Toma said his seedlings would die without water by nightfall. Niko posted a photo of wet soil beside an old pipe and wrote, \"We're blaming each other while the street is leaking.\" Someone accused him of making excuses. Someone else said families with children should go first. By noon, Aya had everyone standing in the square with buckets, invoices, and too much pride. The town could ration water, dig up the pipe, or pretend the problem belonged to someone else. Then the bakery fire alarm went off, and everyone heard the same terrible question at once: what happens when a shared resource runs out before people learn how to share it?",
+    summary: "When the town well falls silent, people first argue over water. Then they discover the real shortage is shared attention.",
+    summaryZh: "井水突然变浅，镇上的人先争水，后来才发现真正稀缺的是共同注意力。",
+    storyBody: "The well did not run dry in one morning. It had been whispering for months: slower taps, damp stones near the old pipe, gardens needing more water than before. Nobody put the signs together until the bakery alarm rang and there was not enough pressure to fill the hose. Toma wanted water for seedlings. Sana wanted water for the clinic. Niko unfolded a repair sketch he had carried for weeks, but no one had wanted to close the road. Aya asked everyone to stop defending their own bucket and name the system they were standing inside. That was when the argument changed. The problem was not only water. It was memory, maintenance, priority, and trust. The town had treated the well like background scenery until it became the whole story.",
+    storyBodyZh: "井水不是某个早晨突然消失的。它已经低声提醒了很久：水龙头越来越慢，老水管旁的石头总是潮湿，菜园需要的水也越来越多。只是没人把这些信号连起来，直到面包店的警报响起，水压却不够接上消防软管。托马想给幼苗留水，萨娜想先保证诊所，尼科摊开一张他带了好几周的维修图，但之前没有人愿意为修路停工。阿雅让大家先停止保护自己的水桶，说出他们共同站在哪个系统里。争论就在那一刻变了。问题不只是水，而是记忆、维护、优先级和信任。镇上的人一直把井当作背景，直到它变成了整个故事。",
+    insight: "A visible crisis is often the last chapter of an invisible system. MapKAI uses stories like this to show how one event can activate environment, engineering, health, agriculture, and civic reasoning at the same time.",
+    insightZh: "一个看得见的危机，常常是一个看不见系统的最后一章。MapKAI 用这样的故事提醒我们：同一件事会同时点亮环境、工程、健康、农业和公共治理等知识区域。",
     miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
+    miniQuestionZh: "当共享资源变少时，一个社区应该先限制需求、修复供给，还是重新设计规则？",
     isPublished: true,
     createdAt: "2026-05-30",
     updatedAt: "2026-05-30",
@@ -1413,9 +1430,14 @@ const stories = [
     ],
     characters: ["otto", "maro", "beatrice", "aya", "pim"],
     coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
-    summary: "Otto raises bread prices after flour costs jump. Some neighbors call it unfair, but Beatrice opens the ledger and Maro traces the supply chain behind the loaf.",
-    storyBody: "Otto changed the bread price before opening, hoping no one would notice until after coffee. Pim noticed immediately. Ten minutes later, a photo of the sign was everywhere: \"Same bread, higher price.\" Mrs. Vale left her basket on the counter and said she would not be fooled by a warm smile. Otto snapped back that flour did not arrive by magic. The room went quiet in the worst possible way. Beatrice asked for the invoices, not because she trusted Otto, but because she trusted numbers more than shouting. Maro showed the delayed delivery messages on his phone. The flour sacks were smaller, the transport fee had jumped, and the mill wanted payment upfront. None of that made the bread cheaper. None of it made people less angry. Then Otto admitted he had raised the price more than the cost increase because he was afraid next week would be worse. That was when the argument finally became honest.",
+    summary: "A price tag becomes a mirror: cost, fear, fairness, and trust all appear in the same loaf of bread.",
+    summaryZh: "一个价格牌变成了一面镜子：成本、恐惧、公平和信任都藏在同一块面包里。",
+    storyBody: "Otto raised the bread price before sunrise and hoped the town would read it as math. They read it as betrayal. Pim photographed the new sign. Beatrice asked for the ledger. Maro traced the flour route from the mill to the cart to the bakery shelf. The numbers explained part of the increase, but not all of it. Otto finally said the quiet part: he had added extra because he was afraid the next delivery would be worse. That sentence changed the room. A price was no longer a number on a board. It was a compressed story about cost, risk, bargaining power, and the fear of being the person blamed when tomorrow arrives.",
+    storyBodyZh: "奥托天还没亮就改了面包价格，希望镇上的人把它理解成算术。大家却把它理解成背叛。皮姆拍下新价格，贝娅要看账本，马洛追踪面粉从磨坊到推车再到面包架的路径。数字解释了一部分涨价，但不是全部。最后奥托说出了没写在牌子上的那部分：他多加了一点，因为他害怕下一批货会更糟。房间里的气氛因此改变。价格不再只是木板上的数字，而是一段被压缩的故事，里面有成本、风险、议价能力，以及害怕明天来临时自己成为被责怪的那个人。",
+    insight: "Fairness cannot be judged from the surface alone. A better question opens the ledger behind the emotion: what changed, who carries the risk, and which part is cost versus fear?",
+    insightZh: "公平不能只从表面判断。更好的问题会打开情绪背后的账本：到底什么变了，谁在承担风险，哪一部分是成本，哪一部分是恐惧。",
     miniQuestion: "What information should a town look at before deciding whether a price increase is unfair?",
+    miniQuestionZh: "在判断一次涨价是否不公平之前，社区应该先看哪些信息？",
     isPublished: true,
     createdAt: "2026-05-30",
     updatedAt: "2026-05-30",
@@ -1436,9 +1458,14 @@ const stories = [
     ],
     characters: ["lina", "ren", "sana", "blue-whale", "aya"],
     coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
-    summary: "Lina wants the school to teach fewer facts and more thinking. Ren proposes map-based learning, while Sana asks what kind of person the curriculum is quietly shaping.",
-    storyBody: "Lina thought the meeting would be boring. Three lesson plans, one vote, home before dinner. Then Ren projected the exam scores. The students could repeat definitions, but froze when asked what to do with a broken bus schedule, a confusing medicine label, or a rumor spreading online. A parent muttered that school was not supposed to become a life simulator. Sana, who had spent the morning calming a teenager after a panic attack, asked what school was for if life kept arriving anyway. The room split fast: facts first, tools first, character first. Lina erased the board and wrote one sentence: \"What should a child be able to notice?\" No one laughed. Outside the window, two students argued over a game rule, negotiated, changed it, and kept playing. The adults watched them for a moment and realized the curriculum had already started without permission.",
+    summary: "A school meeting asks a harder question than what to teach: what should a learner be able to notice?",
+    summaryZh: "一次学校会议问出了比“教什么”更难的问题：一个学习者应该能看见什么？",
+    storyBody: "Lina brought three lesson plans and expected a tidy vote. Ren brought a different kind of evidence: students who could recite definitions, but froze in front of a broken bus schedule, a medicine label, or a rumor spreading through a class chat. Someone said school should not become life itself. Sana answered softly that life had already entered the building. Lina erased the agenda and wrote one sentence on the board: \"What should a child be able to notice?\" The room became quieter. Facts still mattered. Tools still mattered. But the question had moved underneath them. A curriculum is not only a list of content. It is a training ground for attention: what learners see, what they miss, and what they learn to connect before the world asks them to act.",
+    storyBodyZh: "莉娜带来了三份教案，以为会议会很快投票结束。任带来的却是另一种证据：学生能背定义，却在面对坏掉的公交时刻表、看不懂的药品标签、班级群里扩散的谣言时停住。有人说学校不应该变成现实生活本身。萨娜轻声回答，现实生活早就走进了教学楼。莉娜擦掉议程，在白板上写下一句话：“一个孩子应该能看见什么？”房间安静下来。事实仍然重要，工具仍然重要。但问题已经移到更深处。课程不只是内容清单，它是在训练注意力：学习者会看见什么，会忽略什么，又能在世界要求他们行动之前，把什么连接起来。",
+    insight: "Learning is not just storing answers. It is building attention. MapKAI treats knowledge as a map because real problems rarely arrive with subject labels attached.",
+    insightZh: "学习不只是储存答案，而是在建立注意力。MapKAI 把知识当作地图，是因为真实问题很少带着学科标签出现。",
     miniQuestion: "If school time is limited, what should a curriculum protect first: facts, tools, judgment, or character?",
+    miniQuestionZh: "如果学校时间有限，课程最应该优先保护什么：事实、工具、判断力，还是人格？",
     isPublished: true,
     createdAt: "2026-05-30",
     updatedAt: "2026-05-30",
@@ -1518,6 +1545,22 @@ function saveFounderStories(nextStories) {
 
 function getStoryTitle(story) {
   return currentLanguage === "zh" ? story.titleZh || story.title : story.title;
+}
+
+function getStorySummary(story) {
+  return currentLanguage === "zh" ? story.summaryZh || story.summary || getStoryTeaser(story) : story.summary || getStoryTeaser(story);
+}
+
+function getStoryBody(story) {
+  return currentLanguage === "zh" ? story.storyBodyZh || story.storyBody || story.summaryZh || story.summary : story.storyBody || story.summary;
+}
+
+function getStoryInsight(story) {
+  return currentLanguage === "zh" ? story.insightZh || story.insight || "" : story.insight || "";
+}
+
+function getStoryMiniQuestion(story) {
+  return currentLanguage === "zh" ? story.miniQuestionZh || story.miniQuestion || "" : story.miniQuestion || "";
 }
 
 function getStoryFieldCodes(story) {
@@ -8028,6 +8071,10 @@ function applyLanguage() {
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText('.nav-links a[data-route="/learning"]', t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
+  setText(".stories-page .stories-hero .eyebrow", t("storiesEyebrow"));
+  setText(".stories-page .stories-hero h1", t("storiesTitle"));
+  setText(".stories-page .stories-hero p:not(.eyebrow)", t("storiesCopy"));
+  setText(".story-back-link", t("backToStories"));
 
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
@@ -8168,6 +8215,8 @@ function applyLanguage() {
 
   renderCategories();
   renderStories();
+  const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
+  if (activeStory) renderStoryDetail(activeStory[1]);
   renderStoryMap();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
     const match = normalizeRoute(window.location.pathname).match(/^\/categories\/(\d{2})$/);
@@ -8365,10 +8414,14 @@ function renderStories() {
       const tags = getStoryPublicTags(story).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
       return `
         <a class="story-card story-entry-card" href="/stories/${story.id}" data-route="/stories/${story.id}">
+          <div class="story-card-topline">
+            <span>${escapeHtml(story.episode || t("storiesEyebrow"))}</span>
+            <span>${escapeHtml(story.eventType || "")}</span>
+          </div>
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
-          <p>${escapeHtml(story.summary || getStoryTeaser(story))}</p>
+          <p>${escapeHtml(getStorySummary(story))}</p>
           <div class="story-tag-row">${tags}</div>
-          <strong>Read Story</strong>
+          <strong>${escapeHtml(t("readStory"))}</strong>
         </a>`;
     })
     .join("");
@@ -8384,9 +8437,17 @@ function renderStoryDetail(storyId) {
       <p class="story-body">This story is not available yet.</p>`;
     return;
   }
+  const insight = getStoryInsight(story);
+  const miniQuestion = getStoryMiniQuestion(story);
   target.innerHTML = `
     <h1>${escapeHtml(getStoryTitle(story))}</h1>
-    <p class="story-body">${escapeHtml(story.storyBody || story.summary)}</p>`;
+    <p class="story-body">${escapeHtml(getStoryBody(story))}</p>
+    ${insight ? `
+      <aside class="story-insight">
+        <span>${escapeHtml(t("storyInsightTitle"))}</span>
+        <p>${escapeHtml(insight)}</p>
+        ${miniQuestion ? `<strong>${escapeHtml(miniQuestion)}</strong>` : ""}
+      </aside>` : ""}`;
 }
 
 function renderStoryMap() {

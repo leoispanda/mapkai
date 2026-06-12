@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.7" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.8" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -407,10 +407,10 @@
 
       <section class="page stories-page" id="stories" data-page="/stories">
         <section class="stories-hero">
-          <p class="eyebrow">Stories</p>
-          <h1>Everyday stories.</h1>
-          <p>
-            Short scenes connect daily problems to the knowledge map.
+          <p class="eyebrow" data-i18n="storiesEyebrow">Stories</p>
+          <h1 data-i18n="storiesTitle">Small stories. Larger maps.</h1>
+          <p data-i18n="storiesCopy">
+            Each story begins with an ordinary conflict, then reveals the knowledge hidden underneath.
           </p>
         </section>
         <section class="stories-grid" id="storiesGrid" aria-live="polite"></section>
@@ -418,7 +418,7 @@
 
       <section class="page story-detail-page" id="storyDetail" data-page="/stories/detail">
         <div class="story-detail-shell">
-          <a class="story-back-link" href="/stories" data-route="/stories">Back to Stories</a>
+          <a class="story-back-link" href="/stories" data-route="/stories" data-i18n="backToStories">Back to Stories</a>
           <article class="story-reader" id="storyReader" aria-live="polite"></article>
         </div>
       </section>
@@ -563,6 +563,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=0.1.7"></script>
+    <script src="/script.js?v=0.1.8"></script>
   </body>
 </html>
