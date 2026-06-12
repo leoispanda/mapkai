@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.4";
+const appVersion = "0.1.5";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -807,38 +807,37 @@ let quickMirrorState = {
   answers: [],
 };
 
-const mapAssetPath = "/assets/map/";
-const mapStateLayerNames = {
-  ocean: "unknown_ocean",
-  snow: "partial_pale_snow",
-  land: "golden_land",
-  green: "full_green",
+const mapAssetPath = "/assets/map-v2/";
+const mapComponentSets = {
+  snow: ["snow_01.png", "snow_02.png", "snow_03.png", "snow_04.png"],
+  land: ["land_01.png", "land_02.png", "land_03.png", "land_04.png"],
+  green: ["oasis_01.png", "oasis_02.png", "oasis_03.png", "oasis_04.png"],
 };
-const mapIslandLayers = {
-  "00": "01_island_forest",
-  "01": "02_island_snow",
-  "02": "03_island_desert",
-  "03": "04_island_tropical",
-  "04": "05_island_grass_path",
-  "05": "06_island_farming",
-  "06": "07_island_rocky",
-  "07": "08_island_lighthouse",
-  "08": "09_island_green_hill",
-  "09": "10_island_reserved_empty_01",
-  "10": "11_island_reserved_empty_02",
+const mapComponentPlacements = {
+  "00": { x: 72, y: 70, width: 235, variant: 0 },
+  "01": { x: 360, y: 46, width: 250, variant: 1 },
+  "02": { x: 722, y: 80, width: 225, variant: 2 },
+  "03": { x: 170, y: 230, width: 230, variant: 1 },
+  "04": { x: 495, y: 220, width: 245, variant: 0 },
+  "05": { x: 800, y: 248, width: 230, variant: 2 },
+  "06": { x: 75, y: 405, width: 225, variant: 1 },
+  "07": { x: 355, y: 390, width: 225, variant: 0 },
+  "08": { x: 630, y: 402, width: 210, variant: 2 },
+  "09": { x: 862, y: 430, width: 190, variant: 3 },
+  "10": { x: 500, y: 510, width: 170, variant: 3 },
 };
 const mapFounderLabelPositions = {
-  "00": [216, 154],
-  "01": [548, 143],
-  "02": [878, 158],
-  "03": [212, 343],
-  "04": [550, 325],
-  "05": [882, 341],
-  "06": [238, 507],
-  "07": [548, 500],
-  "08": [880, 493],
-  "09": [1006, 244],
-  "10": [1014, 405],
+  "00": [190, 150],
+  "01": [485, 138],
+  "02": [835, 158],
+  "03": [285, 314],
+  "04": [615, 304],
+  "05": [915, 326],
+  "06": [185, 485],
+  "07": [470, 475],
+  "08": [735, 474],
+  "09": [958, 500],
+  "10": [585, 584],
 };
 const mapAssetCache = {};
 
@@ -9774,18 +9773,15 @@ function drawKnowledgeMap() {
   ctx.clearRect(0, 0, width, height);
   drawMapFallback(width, height);
   drawMapLayer("00_base_ocean_background.png", width, height);
+  drawMapRouteOverlay(width, height);
 
   const founderMode = document.body.classList.contains("founder-mode");
 
   categories.forEach((category) => {
     const level = masteryProgress[category.code] || "ocean";
-    const layer = mapIslandLayers[category.code];
-    const stateName = mapStateLayerNames[level];
-    if (layer && stateName) drawMapLayer(`${layer}__${stateName}.png`, width, height);
+    drawMapComponent(category.code, level, width, height);
   });
 
-  drawMapLayer("40_routes_overlay_transparent.png", width, height);
-  if (getTotalCorrectAnswers() > 0) drawMapLayer("41_glow_progress_markers_overlay_transparent.png", width, height);
   drawActiveMapMarker(width, height);
   if (founderMode) drawFounderMapLabels(width, height);
 }
@@ -9805,6 +9801,66 @@ function drawMapLayer(fileName, width, height) {
   if (!image.complete || !image.naturalWidth) return false;
   ctx.drawImage(image, 0, 0, width, height);
   return true;
+}
+
+function drawMapComponent(categoryCode, level, width, height) {
+  const placement = mapComponentPlacements[categoryCode];
+  if (!placement) return false;
+  const isUnknown = level === "ocean";
+  const componentLevel = isUnknown ? "land" : level === "green" ? "green" : level;
+  const files = mapComponentSets[componentLevel] || mapComponentSets.land;
+  const fileName = files[placement.variant % files.length];
+  const image = loadMapAsset(fileName);
+  if (!image.complete || !image.naturalWidth) return false;
+
+  const scaleX = width / 1100;
+  const scaleY = height / 619;
+  const targetWidth = placement.width * scaleX;
+  const targetHeight = image.height * (targetWidth / image.width);
+  const x = placement.x * scaleX;
+  const y = placement.y * scaleY;
+
+  ctx.save();
+  if (isUnknown) {
+    ctx.globalAlpha = 0.34;
+  }
+  ctx.drawImage(image, x, y, targetWidth, targetHeight);
+  ctx.restore();
+  return true;
+}
+
+function drawMapRouteOverlay(width, height) {
+  const routes = [
+    ["00", "01", "02"],
+    ["03", "04", "05"],
+    ["06", "07", "08", "09"],
+    ["04", "10"],
+  ];
+  const scaleX = width / 1100;
+  const scaleY = height / 619;
+  ctx.save();
+  ctx.strokeStyle = "rgba(255, 250, 224, 0.38)";
+  ctx.lineWidth = Math.max(1.2, width / 820);
+  ctx.setLineDash([7 * scaleX, 14 * scaleX]);
+  ctx.lineCap = "round";
+  routes.forEach((route) => {
+    const points = route
+      .map((code) => mapFounderLabelPositions[code])
+      .filter(Boolean)
+      .map(([x, y]) => [x * scaleX, y * scaleY]);
+    if (points.length < 2) return;
+    ctx.beginPath();
+    ctx.moveTo(points[0][0], points[0][1]);
+    for (let index = 1; index < points.length; index += 1) {
+      const previous = points[index - 1];
+      const current = points[index];
+      const controlX = (previous[0] + current[0]) / 2;
+      const controlY = (previous[1] + current[1]) / 2 - 18 * scaleY;
+      ctx.quadraticCurveTo(controlX, controlY, current[0], current[1]);
+    }
+    ctx.stroke();
+  });
+  ctx.restore();
 }
 
 function drawMapFallback(width, height) {
