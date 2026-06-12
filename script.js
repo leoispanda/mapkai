@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.8";
+const appVersion = "0.1.9";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -4846,9 +4846,10 @@ function contactSectionTemplate() {
 
 function renderContactSections() {
   pages.forEach((page) => {
-    if (page.dataset.page === "/") return;
-    if (page.dataset.page === "/pdc") return;
-    if (page.dataset.page === "/pdc-pilot") return;
+    if (page.dataset.page !== "/about") {
+      page.querySelector(".contact-section")?.remove();
+      return;
+    }
     if (page.querySelector(".contact-section")) return;
     page.insertAdjacentHTML("beforeend", contactSectionTemplate());
   });
