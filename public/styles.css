@@ -5135,3 +5135,592 @@ dd,
     overflow: visible;
   }
 }
+
+/* Premium black glass theme. */
+:root {
+  --ink: #f8fafc;
+  --muted: #a8b3c7;
+  --muted-soft: #718098;
+  --paper: #05070d;
+  --surface: rgba(18, 23, 34, 0.72);
+  --surface-soft: rgba(12, 16, 26, 0.7);
+  --line: rgba(255, 255, 255, 0.12);
+  --green: #60a5fa;
+  --green-dark: #e5eefc;
+  --ocean: #38bdf8;
+  --gold: #facc15;
+  --coral: #22d3ee;
+  --rust: #94a3b8;
+  --blue: #60a5fa;
+  --blue-dark: #dbeafe;
+  --cyan: #67e8f9;
+  --violet: #a78bfa;
+  --purple: #c084fc;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+html {
+  background: #03050a;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.14) 0%, transparent 26%),
+    linear-gradient(225deg, rgba(34, 211, 238, 0.1) 0%, transparent 28%),
+    linear-gradient(180deg, #02040a 0%, #070a12 44%, #020309 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 72%);
+}
+
+.page,
+.pdc-page,
+.pdc-entry-page {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.08), transparent 30%),
+    linear-gradient(225deg, rgba(16, 185, 129, 0.055), transparent 32%),
+    linear-gradient(180deg, rgba(3, 6, 14, 0.92), rgba(5, 8, 17, 0.96));
+}
+
+.topbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(4, 7, 14, 0.64);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
+.brand-mark {
+  filter: drop-shadow(0 0 18px rgba(96, 165, 250, 0.22));
+}
+
+.nav-links,
+.language-switch,
+.founder-toggle {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.nav-links a:hover,
+.nav-links a.is-current,
+.language-switch button[aria-pressed="true"] {
+  color: #f8fafc;
+}
+
+.nav-links a.is-current:not([data-route="/explore"]) {
+  background-image: linear-gradient(90deg, rgba(103, 232, 249, 0.78), rgba(167, 139, 250, 0.7));
+}
+
+.nav-links a[data-route="/explore"],
+.founder-toggle,
+.founder-indicator,
+.founder-indicator button {
+  border-color: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 18px 44px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.nav-links a[data-route="/explore"]:hover,
+.nav-links a[data-route="/explore"].is-current,
+.button.primary,
+.pdc-page .button.primary,
+.pdc-entry-page .button.primary {
+  border-color: rgba(125, 211, 252, 0.38);
+  background: linear-gradient(135deg, #f8fafc 0%, #bfdbfe 34%, #60a5fa 68%, #8b5cf6 100%);
+  color: #030712;
+  box-shadow: 0 24px 70px rgba(96, 165, 250, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.button.primary:hover,
+.pdc-page .button.primary:hover,
+.pdc-entry-page .button.primary:hover {
+  box-shadow: 0 30px 90px rgba(96, 165, 250, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.button.secondary,
+.pdc-page .button.secondary,
+.pdc-entry-page .button.secondary,
+.contact-methods a {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f8fafc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 18px 44px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.button.secondary:hover,
+.contact-methods a:hover {
+  border-color: rgba(125, 211, 252, 0.34);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+h1,
+h2,
+h3,
+.home-page .hero h1,
+.section-heading.compact h1,
+.field-hero h1,
+.about-opening h1,
+.legal-hero h1,
+.pdc-entry-hero h1,
+.pdc-card h1,
+.pdc-page .pdc-card h1,
+.module-card h3,
+.category-card h3,
+.mission-card h3,
+.idea-grid strong,
+.quick-mirror-sentence,
+.challenge-card h2,
+.stories-hero h1,
+.story-reader h1,
+.field-detail-card h1,
+.story-card h2,
+.field-card h4,
+.area-card h4,
+.map-story-card h4,
+.story-perspective-grid h3,
+.founder-graph-area h4,
+.founder-graph-narrow h5 {
+  color: #f8fafc;
+  text-shadow: 0 12px 42px rgba(0, 0, 0, 0.28);
+}
+
+p,
+li,
+dd,
+.hero-copy,
+.section-heading p,
+.intro-copy p,
+.field-hero p,
+.about-block p,
+.about-closing p,
+.stories-hero p,
+.story-layer-heading p,
+.field-card p,
+.story-card p,
+.field-detail-card p,
+.story-body,
+.story-perspectives-heading p,
+.story-perspective-grid p,
+.pdc-page .pdc-subtitle,
+.pdc-page .pdc-trust-line,
+.pdc-page .pdc-responsible-use,
+.pdc-entry-hero p:not(.eyebrow),
+.pdc-entry-demo p,
+.pdc-access-card p {
+  color: rgba(226, 232, 240, 0.68);
+}
+
+.eyebrow,
+.pdc-page .eyebrow,
+.pdc-entry-page .eyebrow,
+.pdc-access-card .eyebrow,
+.story-card-topline,
+.field-card-head,
+.story-insight span,
+.story-perspectives-heading span,
+.story-perspective-grid p span {
+  color: rgba(125, 211, 252, 0.88);
+}
+
+.hero-microcopy,
+.mission-belief,
+.thinking-lens,
+.explore-trust-note,
+.visitor-count,
+.quick-mirror-card h2,
+.reflection-status,
+.reflection-details summary,
+.answer-explanation h3,
+.title-modal-lines p,
+.note-row strong,
+.footer-links a,
+.contact-status a,
+.contact-methods a,
+.module-card a,
+.card-link,
+.story-entry-card strong,
+.field-card > a {
+  color: #93c5fd;
+}
+
+.hero,
+.home-minimal,
+.module-card,
+.category-card,
+.passport-panel,
+.tree-panel,
+.field-main,
+.field-side,
+.preview-band,
+.why-section,
+.contact-section,
+.quick-mirror-card,
+.challenge-card,
+.reflection-panel,
+.lens-result-group,
+.reflection-summary-card,
+.deep-prompt-panel,
+.answer-explanation,
+.title-modal-card,
+.field-chip,
+.learning-timeline li,
+.mission-card,
+.stories-hero,
+.story-card,
+.field-card,
+.area-card,
+.map-story-card,
+.field-detail-card,
+.story-reader,
+.coverage-summary article,
+.coverage-founder-dashboard,
+.story-insight,
+.story-perspective-grid article,
+.map-how-panel,
+.legal-block,
+.pdc-entry-hero,
+.pdc-entry-demo,
+.pdc-access-card,
+.pdc-entry-page .pdc-entry-demo article,
+.pdc-card,
+.pdc-result,
+.pdc-feedback,
+.pdc-founder-panel,
+.pdc-council-room,
+.pdc-roster-panel,
+.pdc-dialogue-panel,
+.pdc-advanced-audit,
+.pdc-page .pdc-mode-option,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-dialogue-board li,
+.pdc-page .pdc-phase-guidance,
+.pdc-page .pdc-vote-snapshot,
+.pdc-page .pdc-reintroduced,
+.pdc-page .pdc-final-preview,
+.pdc-page .pdc-profile-panel,
+.pdc-page .pdc-recap-section,
+.pdc-page .pdc-advanced-audit-grid article,
+.pdc-page .pdc-adaptive-package-sections section,
+.pdc-page .pdc-radio-group label,
+.pdc-page .pdc-usage-grid div,
+.founder-graph-area {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.045)),
+    rgba(8, 12, 22, 0.72);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.home-minimal {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-minimal::after {
+  content: "";
+  position: absolute;
+  right: clamp(18px, 8vw, 92px);
+  bottom: clamp(16px, 6vw, 58px);
+  width: min(34vw, 420px);
+  aspect-ratio: 1.55;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(140deg, rgba(96, 165, 250, 0.22), rgba(34, 211, 238, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.035));
+  box-shadow: 0 35px 100px rgba(2, 132, 199, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  opacity: 0.56;
+  pointer-events: none;
+  transform: perspective(720px) rotateX(58deg) rotateZ(-9deg);
+}
+
+.category-card:hover,
+.story-entry-card:hover,
+.quick-mirror-options button:hover,
+.answer-grid button:hover,
+.field-chip.is-active,
+.pdc-page .pdc-mode-option.is-selected,
+.pdc-page .pdc-roster-row:hover,
+.pdc-page .pdc-roster-row.is-selected,
+.pdc-page .pdc-dialogue-board li.is-current {
+  border-color: rgba(125, 211, 252, 0.34);
+  background:
+    linear-gradient(145deg, rgba(96, 165, 250, 0.16), rgba(255, 255, 255, 0.07)),
+    rgba(8, 12, 22, 0.82);
+  color: #f8fafc;
+  box-shadow: 0 34px 100px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.module-card span,
+.code,
+.founder-mode .category-code,
+.learning-timeline li > span,
+.quick-mirror-options span {
+  background: linear-gradient(135deg, #f8fafc, #93c5fd 42%, #67e8f9);
+  color: #020617;
+}
+
+.mission-card,
+.idea-grid article,
+.quick-mirror-options button,
+.answer-grid button,
+.field-chip,
+.example-list li,
+.status-line strong,
+.challenge-status.is-green,
+.challenge-feedback.is-correct,
+.knowledge-title-status.is-unlocked,
+.area-card.is-lit,
+.field-card.is-lit,
+.story-insight,
+.story-perspective-grid article,
+.pdc-page .pdc-founder-preview-tools,
+.message-board,
+.founder-contact-debug,
+.title-modal-lines,
+.founder-note,
+.review-log,
+.knowledge-title-status,
+.reflection-panel.is-unlocked,
+.lens-result-group.is-strongest {
+  border-color: rgba(125, 211, 252, 0.16);
+  background:
+    linear-gradient(145deg, rgba(14, 165, 233, 0.13), rgba(16, 185, 129, 0.055)),
+    rgba(8, 12, 22, 0.72);
+  color: #f8fafc;
+}
+
+.status-line span,
+.challenge-status,
+.challenge-feedback,
+.scope-count,
+.challenge-feedback.is-wrong,
+.answer-grid button.is-wrong,
+.unmatched-field,
+.unmatched-field-note,
+.pdc-page .pdc-vote-chip-row span:nth-child(2),
+.pdc-page .pdc-placeholder-notice,
+.pdc-page .pdc-invalid,
+.pdc-page .pdc-recap-warning {
+  border-color: rgba(250, 204, 21, 0.24);
+  background: rgba(113, 63, 18, 0.26);
+  color: #fde68a;
+}
+
+.answer-grid button.is-correct {
+  border-color: rgba(125, 211, 252, 0.34);
+  background: rgba(14, 165, 233, 0.18);
+  color: #bfdbfe;
+}
+
+.map-stage {
+  border-color: rgba(125, 211, 252, 0.18);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(4, 8, 18, 0.74);
+}
+
+.map-stage canvas {
+  box-shadow: 0 24px 80px rgba(8, 47, 73, 0.22);
+}
+
+.map-legend {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.map-how-panel {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.contact-form label,
+.pdc-access-form label,
+.pdc-question-label,
+.pdc-page .pdc-question-label {
+  color: #e2e8f0;
+}
+
+.contact-form input,
+.contact-form textarea,
+.pdc-access-form input,
+.pdc-question-label textarea,
+.pdc-page .pdc-question-label textarea,
+.pdc-phase-guidance textarea,
+.deep-prompt-panel textarea,
+.message-manager-controls textarea,
+.story-studio textarea {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(2, 6, 23, 0.72);
+  color: #f8fafc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.pdc-access-form input::placeholder,
+.pdc-question-label textarea::placeholder,
+.deep-prompt-panel textarea::placeholder {
+  color: rgba(226, 232, 240, 0.46);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.pdc-access-form input:focus,
+.pdc-question-label textarea:focus,
+.pdc-page .pdc-question-label textarea:focus,
+.pdc-phase-guidance textarea:focus,
+.deep-prompt-panel textarea:focus {
+  outline: 3px solid rgba(96, 165, 250, 0.18);
+  border-color: rgba(125, 211, 252, 0.45);
+}
+
+.about-block,
+.about-closing,
+.legal-block,
+.site-footer,
+.reflection-briefing-grid,
+.reflection-details,
+.content-block,
+.note-row,
+.connected-story-row,
+.story-founder-layer,
+.story-meta {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.site-footer {
+  background: transparent;
+}
+
+.footer-links a {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.footer-links a:hover {
+  color: #f8fafc;
+}
+
+.field-pill,
+.story-tag-row span,
+.connected-story-row span,
+.founder-graph-fields span,
+.pdc-status-chips span,
+.pdc-page .pdc-vote-chip-row span {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(226, 232, 240, 0.78);
+}
+
+.field-pill:hover,
+.story-tag-row span:hover {
+  border-color: rgba(125, 211, 252, 0.32);
+  color: #f8fafc;
+}
+
+.field-card.is-unlit,
+.area-card.is-unlit {
+  opacity: 0.5;
+}
+
+.title-modal-backdrop {
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.pdc-entry-page {
+  --pdc-ink: #f8fafc;
+  --pdc-muted: rgba(226, 232, 240, 0.68);
+  --pdc-blue: #60a5fa;
+  --pdc-blue-dark: #dbeafe;
+  --pdc-border: rgba(255, 255, 255, 0.12);
+  --pdc-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.pdc-page {
+  --pdc-ink: #f8fafc;
+  --pdc-muted: rgba(226, 232, 240, 0.68);
+  --pdc-card: rgba(8, 12, 22, 0.72);
+  --pdc-card-strong: rgba(12, 17, 29, 0.82);
+  --pdc-border: rgba(255, 255, 255, 0.12);
+}
+
+.pdc-page .pdc-round-summary {
+  border-color: rgba(125, 211, 252, 0.28);
+  background: linear-gradient(135deg, #020617, #0f172a 45%, #2563eb);
+}
+
+.pdc-page .pdc-audit-judgment,
+.pdc-page .pdc-facilitator-row,
+.pdc-page .pdc-table-topic,
+.pdc-page .pdc-recap-recommendation,
+.pdc-page .pdc-audit-highlight {
+  border-color: rgba(125, 211, 252, 0.16);
+  background: rgba(14, 165, 233, 0.1);
+}
+
+@media (max-width: 720px) {
+  .home-minimal::after {
+    display: none;
+  }
+
+  .topbar {
+    background: rgba(4, 7, 14, 0.82);
+    min-height: auto;
+    gap: 10px 14px;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .brand-mark {
+    height: 28px;
+  }
+
+  .language-switch {
+    margin-left: auto;
+    font-size: 0.78rem;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a,
+  .nav-links a[data-route="/explore"] {
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+  }
+
+  .page {
+    padding-top: clamp(2rem, 9vw, 3.2rem);
+  }
+}
