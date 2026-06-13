@@ -5166,30 +5166,29 @@ dd,
 
 /* Optional dark theme. White remains the default experience. */
 body[data-theme="dark"] {
-  --ink: #f8fafc;
-  --muted: #a8b3c7;
-  --muted-soft: #718098;
-  --paper: #05070d;
-  --surface: rgba(18, 23, 34, 0.72);
-  --surface-soft: rgba(12, 16, 26, 0.7);
-  --line: rgba(255, 255, 255, 0.12);
-  --green: #60a5fa;
-  --green-dark: #e5eefc;
-  --ocean: #38bdf8;
-  --gold: #facc15;
-  --coral: #22d3ee;
-  --rust: #94a3b8;
-  --blue: #60a5fa;
-  --blue-dark: #dbeafe;
-  --cyan: #67e8f9;
-  --violet: #a78bfa;
-  --purple: #c084fc;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --ink: #f4efe4;
+  --muted: #aaa39a;
+  --muted-soft: #706a62;
+  --paper: #050505;
+  --surface: rgba(18, 18, 16, 0.86);
+  --surface-soft: #11110f;
+  --line: rgba(255, 255, 255, 0.08);
+  --green: #d8b15f;
+  --green-dark: #f4efe4;
+  --ocean: #d8b15f;
+  --gold: #d8b15f;
+  --coral: #f0cf82;
+  --rust: #aaa39a;
+  --blue: #d8b15f;
+  --blue-dark: #f0cf82;
+  --cyan: #f0cf82;
+  --violet: #d8b15f;
+  --purple: #f0cf82;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(96, 165, 250, 0.14) 0%, transparent 26%),
-    linear-gradient(225deg, rgba(34, 211, 238, 0.1) 0%, transparent 28%),
-    linear-gradient(180deg, #02040a 0%, #070a12 44%, #020309 100%);
+    linear-gradient(90deg, rgba(216, 177, 95, 0.04) 1px, transparent 1px) 0 0 / 72px 72px,
+    linear-gradient(180deg, #090908 0%, #050505 42%, #0a0907 100%);
   background-attachment: fixed;
   color: var(--ink);
 }
@@ -5199,34 +5198,31 @@ body[data-theme="dark"]::before {
   position: fixed;
   inset: 0;
   z-index: -1;
+  display: block;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 72%);
+    radial-gradient(circle at 78% 16%, rgba(216, 177, 95, 0.12), transparent 28%),
+    radial-gradient(circle at 18% 34%, rgba(255, 255, 255, 0.04), transparent 24%);
+  opacity: 0.75;
 }
 
 body[data-theme="dark"] .page,
 body[data-theme="dark"] .pdc-page,
 body[data-theme="dark"] .pdc-entry-page {
   color: var(--ink);
-  background:
-    linear-gradient(135deg, rgba(96, 165, 250, 0.08), transparent 30%),
-    linear-gradient(225deg, rgba(16, 185, 129, 0.055), transparent 32%),
-    linear-gradient(180deg, rgba(3, 6, 14, 0.92), rgba(5, 8, 17, 0.96));
+  background: transparent;
 }
 
 body[data-theme="dark"] .topbar {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  background: rgba(4, 7, 14, 0.72);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  background: rgba(5, 5, 5, 0.78);
+  box-shadow: none;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
 }
 
 body[data-theme="dark"] .brand-mark {
-  filter: drop-shadow(0 0 18px rgba(96, 165, 250, 0.22));
+  filter: drop-shadow(0 0 24px rgba(216, 177, 95, 0.14));
 }
 
 body[data-theme="dark"] .nav-links,
@@ -5240,22 +5236,22 @@ body[data-theme="dark"] .nav-links a:hover,
 body[data-theme="dark"] .nav-links a.is-current,
 body[data-theme="dark"] .language-switch button[aria-pressed="true"],
 body[data-theme="dark"] .theme-switch button[aria-pressed="true"] {
-  color: #f8fafc;
+  color: #f4efe4;
 }
 
 body[data-theme="dark"] .nav-links a.is-current:not([data-route="/explore"]) {
-  background-image: linear-gradient(90deg, rgba(103, 232, 249, 0.78), rgba(167, 139, 250, 0.7));
+  background-image: linear-gradient(90deg, rgba(216, 177, 95, 0.68), rgba(240, 207, 130, 0.52));
 }
 
 body[data-theme="dark"] .nav-links a[data-route="/explore"],
 body[data-theme="dark"] .founder-toggle,
 body[data-theme="dark"] .founder-indicator,
 body[data-theme="dark"] .founder-indicator button {
-  border-color: rgba(255, 255, 255, 0.13);
-  background: rgba(255, 255, 255, 0.06);
-  color: #f8fafc;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 18px 44px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(18px);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4efe4;
+  box-shadow: none;
 }
 
 body[data-theme="dark"] .nav-links a[data-route="/explore"]:hover,
@@ -5263,21 +5259,22 @@ body[data-theme="dark"] .nav-links a[data-route="/explore"].is-current,
 body[data-theme="dark"] .button.primary,
 body[data-theme="dark"] .pdc-page .button.primary,
 body[data-theme="dark"] .pdc-entry-page .button.primary {
-  border-color: rgba(125, 211, 252, 0.38);
-  background: linear-gradient(135deg, #f8fafc 0%, #bfdbfe 34%, #60a5fa 68%, #8b5cf6 100%);
-  color: #030712;
-  box-shadow: 0 24px 70px rgba(96, 165, 250, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(216, 177, 95, 0.48);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #e2be72 0%, #a77b33 100%);
+  color: #090806;
+  box-shadow: 0 12px 30px rgba(216, 177, 95, 0.16);
 }
 
 body[data-theme="dark"] .button.secondary,
 body[data-theme="dark"] .pdc-page .button.secondary,
 body[data-theme="dark"] .pdc-entry-page .button.secondary,
 body[data-theme="dark"] .contact-methods a {
-  border-color: rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.07);
-  color: #f8fafc;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 18px 44px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(18px);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #aaa39a;
+  box-shadow: none;
 }
 
 body[data-theme="dark"] h1,
@@ -5291,8 +5288,8 @@ body[data-theme="dark"] .field-card h4,
 body[data-theme="dark"] .area-card h4,
 body[data-theme="dark"] .map-story-card h4,
 body[data-theme="dark"] .pdc-card h1 {
-  color: #f8fafc;
-  text-shadow: 0 12px 42px rgba(0, 0, 0, 0.28);
+  color: #f4efe4;
+  text-shadow: none;
 }
 
 body[data-theme="dark"] p,
@@ -5308,7 +5305,7 @@ body[data-theme="dark"] .pdc-page .pdc-subtitle,
 body[data-theme="dark"] .pdc-page .pdc-trust-line,
 body[data-theme="dark"] .pdc-entry-hero p:not(.eyebrow),
 body[data-theme="dark"] .pdc-access-card p {
-  color: rgba(226, 232, 240, 0.68);
+  color: #aaa39a;
 }
 
 body[data-theme="dark"] .eyebrow,
@@ -5316,7 +5313,7 @@ body[data-theme="dark"] .story-card-topline,
 body[data-theme="dark"] .field-card-head,
 body[data-theme="dark"] .pdc-page .eyebrow,
 body[data-theme="dark"] .pdc-entry-page .eyebrow {
-  color: rgba(125, 211, 252, 0.88);
+  color: #d8b15f;
 }
 
 body[data-theme="dark"] .hero-microcopy,
@@ -5328,7 +5325,7 @@ body[data-theme="dark"] .footer-links a,
 body[data-theme="dark"] .contact-status a,
 body[data-theme="dark"] .module-card a,
 body[data-theme="dark"] .card-link {
-  color: #93c5fd;
+  color: #d8b15f;
 }
 
 body[data-theme="dark"] .hero,
@@ -5378,31 +5375,14 @@ body[data-theme="dark"] .pdc-page .pdc-phase-guidance,
 body[data-theme="dark"] .pdc-page .pdc-vote-snapshot,
 body[data-theme="dark"] .pdc-page .pdc-recap-section,
 body[data-theme="dark"] .pdc-page .pdc-radio-group label {
-  border-color: rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.045)),
-    rgba(8, 12, 22, 0.72);
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.11);
-  backdrop-filter: blur(24px) saturate(140%);
-  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(18, 18, 16, 0.86);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
 }
 
 body[data-theme="dark"] .home-minimal::after {
-  content: "";
-  position: absolute;
-  right: clamp(18px, 8vw, 92px);
-  bottom: clamp(16px, 6vw, 58px);
-  width: min(34vw, 420px);
-  aspect-ratio: 1.55;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 28px;
-  background:
-    linear-gradient(140deg, rgba(96, 165, 250, 0.22), rgba(34, 211, 238, 0.08)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.035));
-  box-shadow: 0 35px 100px rgba(2, 132, 199, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  opacity: 0.56;
-  pointer-events: none;
-  transform: perspective(720px) rotateX(58deg) rotateZ(-9deg);
+  display: none;
 }
 
 body[data-theme="dark"] .contact-form input,
@@ -5412,9 +5392,9 @@ body[data-theme="dark"] .pdc-question-label textarea,
 body[data-theme="dark"] .pdc-page .pdc-question-label textarea,
 body[data-theme="dark"] .pdc-phase-guidance textarea,
 body[data-theme="dark"] .deep-prompt-panel textarea {
-  border-color: rgba(255, 255, 255, 0.14);
-  background: rgba(2, 6, 23, 0.72);
-  color: #f8fafc;
+  border-color: rgba(216, 177, 95, 0.14);
+  background: #070707;
+  color: #e8ddc8;
 }
 
 body[data-theme="dark"] .site-footer {
@@ -5422,25 +5402,25 @@ body[data-theme="dark"] .site-footer {
 }
 
 body[data-theme="dark"] .pdc-entry-page {
-  --pdc-ink: #f8fafc;
-  --pdc-muted: rgba(226, 232, 240, 0.68);
-  --pdc-blue: #60a5fa;
-  --pdc-blue-dark: #dbeafe;
-  --pdc-border: rgba(255, 255, 255, 0.12);
-  --pdc-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --pdc-ink: #f4efe4;
+  --pdc-muted: #aaa39a;
+  --pdc-blue: #d8b15f;
+  --pdc-blue-dark: #f0cf82;
+  --pdc-border: rgba(255, 255, 255, 0.08);
+  --pdc-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
 }
 
 body[data-theme="dark"] .pdc-page {
-  --pdc-ink: #f8fafc;
-  --pdc-muted: rgba(226, 232, 240, 0.68);
-  --pdc-card: rgba(8, 12, 22, 0.72);
-  --pdc-card-strong: rgba(12, 17, 29, 0.82);
-  --pdc-border: rgba(255, 255, 255, 0.12);
+  --pdc-ink: #f4efe4;
+  --pdc-muted: #aaa39a;
+  --pdc-card: rgba(18, 18, 16, 0.86);
+  --pdc-card-strong: #11110f;
+  --pdc-border: rgba(255, 255, 255, 0.08);
 }
 
 body[data-theme="dark"] .pdc-page .pdc-round-summary {
-  border-color: rgba(125, 211, 252, 0.28);
-  background: linear-gradient(135deg, #020617, #0f172a 45%, #2563eb);
+  border-color: rgba(216, 177, 95, 0.28);
+  background: linear-gradient(135deg, #11110f, #0b0b0b 52%, rgba(216, 177, 95, 0.16));
 }
 
 @media (max-width: 720px) {
@@ -5449,6 +5429,6 @@ body[data-theme="dark"] .pdc-page .pdc-round-summary {
   }
 
   body[data-theme="dark"] .topbar {
-    background: rgba(4, 7, 14, 0.82);
+    background: rgba(5, 5, 5, 0.86);
   }
 }
