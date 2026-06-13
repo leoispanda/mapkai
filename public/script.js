@@ -5,17 +5,21 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.11";
+const appVersion = "0.1.12";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
+const themeKey = "mapkaiTheme";
 const founderModeKey = "mapkaiFounderMode";
 const founderStoriesKey = "mapkaiFounderStories";
 const founderConsoleTabKey = "mapkaiFounderConsoleTab";
 const founderModePasscode = "2026leocindy";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
+const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
 const supportedLanguages = ["en", "zh"];
+const supportedThemes = ["light", "dark"];
 let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
+let currentTheme = supportedThemes.includes(localStorage.getItem(themeKey)) ? localStorage.getItem(themeKey) : "light";
 let lastVisitStats = null;
 
 const readiness = {
@@ -8147,6 +8151,21 @@ function updateLanguageButtons() {
   document.documentElement.lang = currentLanguage === "zh" ? "zh-CN" : "en";
 }
 
+function applyTheme() {
+  document.body.dataset.theme = currentTheme;
+  themeButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.themeOption === currentTheme));
+  });
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", currentTheme === "dark" ? "#03050a" : "#f8fafc");
+}
+
+function setTheme(theme) {
+  if (!supportedThemes.includes(theme)) return;
+  currentTheme = theme;
+  localStorage.setItem(themeKey, theme);
+  applyTheme();
+}
+
 function setLanguage(language) {
   if (!supportedLanguages.includes(language)) return;
   currentLanguage = language;
@@ -10331,6 +10350,11 @@ function roundRect(context, x, y, width, height, radius) {
 }
 
 document.addEventListener("click", (event) => {
+  const themeOption = event.target.closest("[data-theme-option]");
+  if (themeOption) {
+    setTheme(themeOption.dataset.themeOption);
+    return;
+  }
   if (event.target.closest("[data-title-modal-close]")) {
     closeKnowledgeTitleModal();
     return;
@@ -10592,6 +10616,9 @@ if (founderToggle) {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => setTheme(button.dataset.themeOption));
+});
 
 window.addEventListener("popstate", () => goToRoute(normalizeRoute(window.location.pathname), true));
 window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.location.pathname), true));
@@ -10609,6 +10636,7 @@ renderChallenge();
 renderMapChallenge();
 renderReflectionPanel();
 drawKnowledgeMap();
+applyTheme();
 applyLanguage();
 const initialRoute = normalizeRoute(window.location.pathname);
 goToRoute(initialRoute, true);
