@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.14";
+const appVersion = "0.1.15";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -123,13 +123,13 @@ const uiText = {
     navLearning: "Learning",
     navAbout: "About",
     storiesEyebrow: "Stories",
-    storiesTitle: "Small stories. Larger maps.",
-    storiesCopy: "Each story begins with an ordinary conflict, then reveals the knowledge hidden underneath.",
+    storiesTitle: "Historical cases. Larger maps.",
+    storiesCopy: "Real events with conflict, debate, and conclusions across multiple knowledge lenses.",
     readStory: "Read story",
     backToStories: "Back to Stories",
-    storyInsightTitle: "What it reveals",
-    storyPerspectivesTitle: "Different lenses",
-    storyPerspectivesCopy: "The same event changes meaning when each person protects a different layer of reality.",
+    storyInsightTitle: "Conclusion",
+    storyPerspectivesTitle: "Historical debate",
+    storyPerspectivesCopy: "Actual arguments, role trade-offs, and a few counterfactual seats at the table.",
     storyFocusLabel: "Focus",
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
@@ -446,13 +446,13 @@ const uiText = {
     navLearning: "学习路径",
     navAbout: "关于",
     storiesEyebrow: "故事",
-    storiesTitle: "小故事，更大的知识地图。",
-    storiesCopy: "每个故事从一个日常冲突开始，慢慢显现背后的知识结构。",
+    storiesTitle: "真实历史，更大的知识地图。",
+    storiesCopy: "用真实发生的事件，呈现冲突、讨论过程，以及多重知识视角下的结论。",
     readStory: "阅读故事",
     backToStories: "返回故事",
-    storyInsightTitle: "背后的道理",
-    storyPerspectivesTitle: "不同视角",
-    storyPerspectivesCopy: "同一件事，会因为每个人守护的现实层不同，而变成不同的问题。",
+    storyInsightTitle: "结论",
+    storyPerspectivesTitle: "当时的讨论",
+    storyPerspectivesCopy: "真实争论、角色权衡，以及几个“如果他在场会怎样”的反事实席位。",
     storyFocusLabel: "关注点",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
@@ -1560,6 +1560,224 @@ const stories = [
   },
 ];
 
+const historicalStories = [
+  {
+    id: "broad-street-pump",
+    title: "The Broad Street Pump",
+    titleZh: "布罗德街水泵",
+    episode: "Historical Case 1",
+    eventType: "public health",
+    mainField: "1021-community-sanitation",
+    activatedFields: [
+      "0521-environmental-sciences",
+      "0312-political-sciences-and-civics",
+      "0542-statistics",
+      "0732-building-and-civil-engineering",
+    ],
+    characters: ["john-snow", "henry-whitehead", "st-james-guardians", "soho-residents"],
+    coreConcepts: ["epidemiology", "public health", "evidence mapping", "infrastructure"],
+    summary: "In 1854 London, John Snow had to argue against the dominant miasma theory while deaths clustered around one water pump.",
+    summaryZh: "1854 年伦敦，约翰·斯诺必须在“瘴气说”占主导的时代，用病例地图说服人们重新看待一口水泵。",
+    storyBody: "In late August 1854, cholera tore through Soho near Broad Street. The dominant explanation was still miasma: bad air, foul smells, poisoned atmosphere. John Snow looked elsewhere. With help from local knowledge, including the work of Reverend Henry Whitehead, he traced where people lived, which pump they used, who had fled, who had stayed, and which apparent exceptions were not exceptions at all. The discussion was not polite theory. To officials, removing a public pump handle meant disrupting a neighborhood on evidence that did not yet fit accepted medicine. To Snow, waiting for perfect proof meant letting a hidden water system keep acting. He met the St James parish authorities on September 7 and argued from pattern: deaths gathered around the Broad Street pump, while some nearby groups using other water sources were spared. The handle was removed the next day. The outbreak was already declining, so the handle did not magically end the epidemic by itself. Its deeper historical force was different: the case showed that a city could be read as data, infrastructure, habit, and disease pathway at the same time.",
+    storyBodyZh: "1854 年 8 月底，霍乱在伦敦 Soho 的 Broad Street 附近爆发。当时主流解释仍是“瘴气”：坏空气、臭味、有毒的环境。约翰·斯诺把目光转向别处。在当地知识的帮助下，包括牧师 Henry Whitehead 的走访，他追踪人们住在哪里、喝哪口水泵、谁已经逃离、谁留下，以及哪些看似反例其实并不是反例。这场讨论不是温和的学术争论。对官员来说，拆掉公共水泵把手，意味着用尚未被主流医学接受的证据打断一个社区的日常供水。对斯诺来说，等待完美证明，等于让隐藏的供水系统继续行动。9 月 7 日，他向 St James 教区管理者陈述病例模式：死亡集中在 Broad Street 水泵周围，而附近一些使用其他水源的人群相对幸免。第二天，水泵把手被拆除。疫情当时已经在下降，所以把手并不是“神奇终结”疫情的单一原因。它真正深刻的历史意义在于：这件事证明，一座城市可以同时被读成数据、基础设施、生活习惯和疾病路径。",
+    insight: "Conclusion: the breakthrough was not only removing a pump handle. It was changing what counted as evidence. Snow's case turned scattered deaths into a spatial argument, and it showed that public health decisions often happen before every mechanism is fully accepted. The MapKAI lesson: a real problem may only become visible when evidence, infrastructure, local memory, and institutional authority are mapped together.",
+    insightZh: "结论：真正的突破不只是拆掉一个水泵把手，而是改变了“什么算证据”。斯诺把分散的死亡变成空间论证，也说明公共卫生决策常常必须发生在机制被完全接受之前。对 MapKAI 来说，这个故事的结论是：真实问题往往只有把证据、基础设施、地方记忆和制度权力放在同一张图上，才会变得可见。",
+    perspectives: [
+      {
+        lens: "Medical orthodoxy asked: is the air poisoned?",
+        lensZh: "主流医学问：是不是空气有毒？",
+        focus: "Miasma theory made smell and atmosphere feel like the obvious cause. That lens protected the old explanation but missed the water route.",
+        focusZh: "瘴气说让气味和空气看起来像显而易见的原因。这个视角保护了旧解释，却错过了水源路径。",
+      },
+      {
+        lens: "Snow asked: where do the cases cluster?",
+        lensZh: "斯诺问：病例聚集在哪里？",
+        focus: "His argument treated streets, pumps, deaths, and exceptions as one evidence system. The map became a reasoning tool, not decoration.",
+        focusZh: "他的论证把街道、水泵、死亡和反例放进同一个证据系统。地图成了推理工具，而不是装饰。",
+      },
+      {
+        lens: "Local knowledge asked: who actually drank from the pump?",
+        lensZh: "地方知识问：谁真的喝了那口水？",
+        focus: "Household habits, workhouse wells, brewery beer, and people who crossed streets for preferred water mattered as much as formal data.",
+        focusZh: "家庭习惯、济贫院自己的井、啤酒厂的啤酒、以及特意跨街取水的人，都和正式数据一样重要。",
+      },
+      {
+        lens: "Authorities asked: can we act before certainty?",
+        lensZh: "管理者问：没有绝对确定前能不能行动？",
+        focus: "The pump handle decision was a governance problem: how much evidence is enough when delay has a human cost?",
+        focusZh: "拆水泵把手是一个治理问题：当拖延会带来生命代价时，多少证据才足够？",
+      },
+      {
+        lens: "If the water supplier had a stronger seat",
+        lensZh: "如果供水方拥有更强席位",
+        focus: "It might have framed the case as reputation risk, property concern, and insufficient proof. Its likely move would be to demand more testing while resisting blame for a citywide sanitation problem.",
+        focusZh: "它可能会把事件定义为声誉风险、产权问题和证据不足。它最可能的操作，是要求更多检测，同时拒绝为全城卫生系统问题单独背责。",
+      },
+      {
+        lens: "If Bazalgette's infrastructure lens entered early",
+        lensZh: "如果巴泽尔杰特式基础设施视角提前进入",
+        focus: "The discussion would move beyond one pump: cesspits, sewers, river intake, street density, and future city design. The intervention would be expensive, slow, and politically harder than removing a handle.",
+        focusZh: "讨论会越过单一水泵，转向粪坑、下水道、河流取水、街区密度和未来城市设计。这个操作更昂贵、更慢，也比拆把手更难获得政治支持。",
+      },
+      {
+        lens: "If a grieving family spoke in the room",
+        lensZh: "如果遇难家庭在场发言",
+        focus: "The standard of proof would feel different. The family would likely ask why uncertainty protects the institution more quickly than it protects the living.",
+        focusZh: "证据标准会立刻变得不同。家属很可能会问：为什么“不确定性”总是更快保护机构，而不是更快保护活着的人？",
+      },
+    ],
+    miniQuestion: "When evidence is strong but not yet culturally accepted, should public action wait, persuade, or intervene?",
+    miniQuestionZh: "当证据已经很强、但还没被文化接受时，公共行动应该等待、说服，还是先介入？",
+    isPublished: true,
+    createdAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+  },
+  {
+    id: "challenger-launch-decision",
+    title: "The Challenger Launch Decision",
+    titleZh: "挑战者号发射决策",
+    episode: "Historical Case 2",
+    eventType: "engineering risk",
+    mainField: "0716-motor-vehicles-ships-and-aircraft",
+    activatedFields: [
+      "0714-electronics-and-automation",
+      "0613-software-and-applications-development-and-analysis",
+      "0413-management-and-administration",
+      "1022-occupational-health-and-safety",
+      "0223-philosophy-and-ethics",
+    ],
+    characters: ["roger-boisjoly", "allan-mcdonald", "morton-thiokol", "nasa-managers", "challenger-crew"],
+    coreConcepts: ["engineering ethics", "risk communication", "organizational pressure", "safety margins"],
+    summary: "The night before Challenger launched, engineers warned that cold could make the O-rings unsafe. The organization still found a way to say yes.",
+    summaryZh: "挑战者号发射前夜，工程师警告低温可能让 O 型密封圈失效，但组织最后仍然找到了说“可以发射”的方式。",
+    storyBody: "On January 27, 1986, the argument was already inside the system before the shuttle was on the pad. Forecasts pointed to unusually low temperatures at Kennedy Space Center. Morton Thiokol engineers worried that the rubber O-rings in the solid rocket booster joints would not seal properly in the cold. In the teleconference with NASA, the engineering recommendation was not to launch below the previous experience base of 53 degrees Fahrenheit. Then the discussion shifted. NASA managers challenged the data. Thiokol managers went off-line, reconsidered, and reversed the recommendation. The burden of proof quietly changed: instead of proving it was safe to launch, engineers felt pushed to prove beyond doubt that it was unsafe. Challenger launched the next morning and broke apart 73 seconds after liftoff. The Rogers Commission later concluded that the immediate cause was failure of the right solid rocket motor joint seals, but the deeper cause was a flawed decision process: incomplete communication, management judgment overriding engineering concern, and safety information failing to reach the people who could have stopped the launch.",
+    storyBodyZh: "1986 年 1 月 27 日，挑战者号还没有升空，争论已经在系统内部发生。肯尼迪航天中心预计会出现异常低温。Morton Thiokol 的工程师担心，固体火箭助推器接缝里的橡胶 O 型密封圈在低温下无法及时密封。在与 NASA 的电话会议中，工程建议是：不要在低于既有飞行经验基础 53 华氏度的条件下发射。随后讨论发生了转向。NASA 管理者质疑数据，Thiokol 管理层离线内部讨论后推翻了原来的建议。举证责任悄悄改变：不再是证明“发射安全”，而变成工程师必须证明“绝对不安全”。第二天早晨，挑战者号发射，并在升空 73 秒后解体。罗杰斯委员会后来认定，直接原因是右侧固体火箭发动机接缝密封失效；更深的原因则是决策过程有严重缺陷：信息沟通不完整，管理判断压过工程担忧，安全信息没有抵达真正能叫停发射的人。",
+    insight: "Conclusion: Challenger was not simply a machine failure. It was a knowledge-routing failure. A fact that stays inside the wrong meeting is not yet organizational knowledge. The MapKAI lesson is severe: in high-risk systems, the question is not only whether someone knows the danger, but whether the structure lets that knowledge interrupt momentum.",
+    insightZh: "结论：挑战者号不只是机器失效，而是知识流动路径失效。一个事实如果只停留在错误的会议里，就还没有成为组织知识。对 MapKAI 来说，这个教训很严厉：在高风险系统里，问题不只是有没有人知道危险，而是组织结构是否允许这个知识打断惯性。",
+    perspectives: [
+      {
+        lens: "Engineers asked: are we outside the data?",
+        lensZh: "工程师问：我们是否已经超出数据范围？",
+        focus: "The 53-degree threshold was not superstition. It marked the lowest previous O-ring experience and the boundary of confidence.",
+        focusZh: "53 华氏度不是迷信，而是此前 O 型密封圈飞行经验的最低边界，也是信心边界。",
+      },
+      {
+        lens: "Managers asked: is the evidence conclusive?",
+        lensZh: "管理者问：证据是否足够确定？",
+        focus: "The fatal move was treating uncertainty as permission. In safety work, uncertainty often means slow down, not proceed.",
+        focusZh: "致命转向在于把“不确定”当作“可以继续”。在安全系统里，不确定常常意味着减速，而不是推进。",
+      },
+      {
+        lens: "The organization asked: who owns the no?",
+        lensZh: "组织问：谁拥有说“不”的权力？",
+        focus: "A system can contain warnings and still launch if warnings do not have a protected path to authority.",
+        focusZh: "一个系统可以拥有警告，却仍然发射；如果警告没有受保护的上行通道，它就无法改变结果。",
+      },
+      {
+        lens: "The public saw progress",
+        lensZh: "公众看见的是进步叙事",
+        focus: "The mission carried national confidence, education symbolism, and schedule pressure. That made the technical doubt harder to hear.",
+        focusZh: "这次任务承载着国家信心、教育象征和进度压力，这让技术疑虑更难被听见。",
+      },
+      {
+        lens: "If Feynman had been in the launch call",
+        lensZh: "如果费曼在发射前电话会议里",
+        focus: "He would likely force the abstraction into a physical question: show me what cold does to the seal. That move changes debate from managerial confidence to observable behavior.",
+        focusZh: "他很可能会把抽象争论变成物理问题：给我看低温会对密封圈做什么。这个动作会把讨论从管理信心转向可观察行为。",
+      },
+      {
+        lens: "If the crew's family had a translated-risk seat",
+        lensZh: "如果宇航员家属拥有“风险翻译”席位",
+        focus: "The question would become: can you explain this uncertainty in ordinary language to the people who bear the irreversible cost?",
+        focusZh: "问题会变成：你能不能用普通语言，把这个不确定性解释给那些承担不可逆代价的人？",
+      },
+      {
+        lens: "If a schedule owner argued honestly",
+        lensZh: "如果进度负责人诚实陈述",
+        focus: "The schedule pressure would not disappear, but it would become visible. The room could then compare schedule loss against loss of crew, vehicle, public trust, and program legitimacy.",
+        focusZh: "进度压力不会消失，但会变得可见。会议室才能把延期损失与人员、飞行器、公共信任和项目合法性的损失放在同一张桌上比较。",
+      },
+    ],
+    miniQuestion: "In a high-risk decision, who should carry the burden of proof: the person warning, or the system wanting to proceed?",
+    miniQuestionZh: "在高风险决策里，举证责任应该落在发出警告的人身上，还是落在想继续推进的系统身上？",
+    isPublished: true,
+    createdAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+  },
+  {
+    id: "cuban-missile-crisis-excomm",
+    title: "Thirteen Days at the Edge",
+    titleZh: "核边缘的十三天",
+    episode: "Historical Case 3",
+    eventType: "crisis governance",
+    mainField: "0312-political-sciences-and-civics",
+    activatedFields: [
+      "0311-economics",
+      "0222-history-and-archaeology",
+      "1031-military-and-defence",
+      "0314-sociology-and-cultural-studies",
+      "0231-language-acquisition",
+    ],
+    characters: ["john-f-kennedy", "nikita-khrushchev", "excomm", "robert-kennedy", "military-advisers"],
+    coreConcepts: ["deterrence", "crisis negotiation", "communication", "strategic restraint"],
+    summary: "In October 1962, Kennedy's advisers debated air strikes, invasion, and blockade while the world moved close to nuclear war.",
+    summaryZh: "1962 年 10 月，肯尼迪的顾问们在空袭、入侵和封锁之间争论，世界一度走到核战争边缘。",
+    storyBody: "In October 1962, U-2 photographs showed Soviet nuclear missile sites under construction in Cuba. President Kennedy did not announce the discovery immediately. He met secretly with advisers in what became ExComm, and the room divided around different kinds of fear. Some argued for air strikes or invasion: act fast, remove the missiles, show resolve. Others warned that a strike could miss missiles, kill Soviet personnel, invite retaliation in Berlin, or close the door to a negotiated exit. The chosen move was a naval quarantine, deliberately framed as less escalatory than an immediate attack while still forcing the crisis into public view. On October 22, Kennedy addressed the nation and demanded removal of the missiles. Then came the harder discussion: how to read Khrushchev's signals, whether to answer the softer message or the harder one, and what could be traded without appearing to trade. The public settlement was Soviet removal of missiles from Cuba in exchange for a US pledge not to invade. A separate US commitment to remove Jupiter missiles from Turkey stayed secret for more than twenty-five years. The crisis ended, but the arms race did not. The aftermath produced a hotline and helped lead toward the Limited Nuclear Test Ban Treaty, because both sides had seen how fragile command, language, and time could become.",
+    storyBodyZh: "1962 年 10 月，U-2 侦察照片显示苏联正在古巴建设核导弹基地。肯尼迪总统没有立刻公开，而是秘密召集顾问会议，也就是后来的 ExComm。会议室里的分歧不是简单的强硬与软弱，而是不同类型的恐惧。有人主张空袭或入侵：迅速行动，摧毁导弹，展示决心。也有人警告，空袭可能漏掉导弹，可能杀死苏联人员，可能引发柏林方向的报复，也可能关上谈判出口。最后选择的是海上“隔离”，它被刻意设计成比直接攻击更低级别的升级，但又足以把危机推到公开场域。10 月 22 日，肯尼迪向全国发表电视讲话，要求苏联拆除导弹。随后更困难的讨论开始了：如何解读赫鲁晓夫的信号，回复较温和的信息还是较强硬的信息，哪些让步可以做但不能公开成交易。公开协议是苏联拆除古巴导弹，美国承诺不入侵古巴。另一项美国撤出土耳其 Jupiter 导弹的承诺，则保密了二十多年。危机结束了，但军备竞赛没有结束。后续的美苏热线和《部分禁止核试验条约》，都来自一个共同认识：指挥、语言和时间在核危机里都脆弱得可怕。",
+    insight: "Conclusion: the deepest achievement was not victory but controlled ambiguity. Kennedy needed enough force to be believed and enough flexibility to leave the opponent a way out. The MapKAI lesson is that crisis decisions are rarely solved by one lens. Military capability, political signaling, historical memory, language, timing, and public legitimacy all act at once.",
+    insightZh: "结论：最深的成就不是胜利，而是被控制住的模糊性。肯尼迪既需要足够的力量让对方相信美国认真，又需要足够的弹性给对手留下退路。对 MapKAI 来说，这个故事说明：危机决策很少能靠单一视角解决。军事能力、政治信号、历史记忆、语言、时间和公共合法性会同时行动。",
+    perspectives: [
+      {
+        lens: "The military lens asked: can force remove the threat?",
+        lensZh: "军事视角问：武力能否清除威胁？",
+        focus: "Air strikes promised decisiveness but risked escalation if missiles survived or Soviet personnel were killed.",
+        focusZh: "空袭看起来果断，但如果导弹残留或苏联人员死亡，升级风险会急剧上升。",
+      },
+      {
+        lens: "The diplomatic lens asked: can the opponent retreat?",
+        lensZh: "外交视角问：对手是否还有退路？",
+        focus: "A deal had to remove missiles without making Khrushchev's retreat look like simple humiliation.",
+        focusZh: "协议必须拆除导弹，同时不能让赫鲁晓夫的退让显得只是被羞辱。",
+      },
+      {
+        lens: "The communication lens asked: which message is real?",
+        lensZh: "沟通视角问：哪条信息才是真正信号？",
+        focus: "The crisis turned letters, public speeches, private channels, and silence into strategic instruments.",
+        focusZh: "危机把信件、公开讲话、秘密渠道和沉默都变成了战略工具。",
+      },
+      {
+        lens: "The historical lens asked: what happens after the thirteen days?",
+        lensZh: "历史视角问：十三天之后会留下什么？",
+        focus: "The immediate settlement ended the missile crisis, but it also exposed the need for better crisis communication and nuclear restraint.",
+        focusZh: "即时协议结束了导弹危机，但也暴露了危机沟通和核克制机制的必要性。",
+      },
+      {
+        lens: "If Castro had been in the room",
+        lensZh: "如果卡斯特罗在会议室里",
+        focus: "The crisis would not look like only a US-Soviet chessboard. Cuba's invasion memory, sovereignty claim, and fear of abandonment would force a different definition of security.",
+        focusZh: "危机就不会只像美苏棋盘。古巴的被入侵记忆、主权诉求和被抛弃恐惧，会迫使会议重新定义什么叫安全。",
+      },
+      {
+        lens: "If Turkey or NATO allies had a visible seat",
+        lensZh: "如果土耳其或北约盟友公开在场",
+        focus: "The secret Jupiter missile trade would become harder. Kennedy's room would need to balance alliance trust against crisis exit, not simply bargain privately with Moscow.",
+        focusZh: "秘密撤出 Jupiter 导弹的交易会变得更困难。肯尼迪的会议室必须同时权衡盟友信任和危机出口，而不只是与莫斯科私下交易。",
+      },
+      {
+        lens: "If a UN mediator controlled the tempo",
+        lensZh: "如果联合国调停者控制节奏",
+        focus: "The likely move would be to slow public humiliation, create inspection language, and turn military movement into verifiable steps. That helps peace, but may weaken direct presidential control.",
+        focusZh: "最可能的操作，是降低公开羞辱、设计核查语言，并把军事动作转成可验证步骤。这有利于和平，但也会削弱总统直接控制节奏的能力。",
+      },
+    ],
+    miniQuestion: "When a crisis needs both firmness and an exit ramp, how should leaders decide what to make public and what to keep private?",
+    miniQuestionZh: "当危机同时需要强硬和退路时，领导者应该如何决定什么公开、什么保密？",
+    isPublished: true,
+    createdAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+  },
+];
+
 function getKnowledgeAreas() {
   return knowledgeAreas
     .filter((area) => area.code !== "99")
@@ -1613,7 +1831,7 @@ function getCharacterName(id) {
 }
 
 function getPublishedStories() {
-  const builtInStories = stories.filter((story) => story.isPublished);
+  const builtInStories = historicalStories.filter((story) => story.isPublished);
   if (!document.body.classList.contains("founder-mode")) return builtInStories;
   return [...builtInStories, ...getFounderStories().filter((story) => story.isPublished)];
 }
@@ -1700,9 +1918,9 @@ function getStoryTeaser(story) {
 }
 
 function getStoryPublicTags(story) {
-  if (story.id === "well-runs-low") return ["Economics", "Engineering", "Health", "Society"];
-  if (story.id === "bread-price-debate") return ["Economics", "Retail", "Food", "Trust"];
-  if (story.id === "school-curriculum-debate") return ["Education", "Language", "Technology", "Ethics"];
+  if (story.id === "broad-street-pump") return ["Public Health", "Evidence", "Infrastructure", "Governance"];
+  if (story.id === "challenger-launch-decision") return ["Engineering", "Risk", "Management", "Ethics"];
+  if (story.id === "cuban-missile-crisis-excomm") return ["Crisis", "Diplomacy", "Military", "Communication"];
   return (story.coreConcepts || []).slice(0, 4).map((tag) => tag.replace(/\b\w/g, (letter) => letter.toUpperCase()));
 }
 
