@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.21";
+const appVersion = "0.1.22";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -8616,6 +8616,13 @@ function goToRoute(route, replace = false) {
     replace = true;
     if (window.location.protocol !== "file:") {
       history.replaceState({ route: "/" }, "", "/");
+    }
+  }
+  if (target === "/knowledge-graph") {
+    target = "/categories";
+    replace = true;
+    if (window.location.protocol !== "file:") {
+      history.replaceState({ route: "/categories" }, "", "/categories");
     }
   }
   const visibleTarget = target;
