@@ -27,28 +27,37 @@ export async function onRequest({ request, env }) {
   const clarityResult = await env.MAPKAI_DB.prepare(
     `SELECT clarity_rating AS value, COUNT(*) AS count
      FROM pdc_feedback
-     WHERE clarity_rating IS NOT NULL AND clarity_rating != ''
+     JOIN pdc_access_passes ON pdc_access_passes.pass_code = pdc_feedback.pass_code
+     WHERE pdc_access_passes.batch_id = ?
+       AND clarity_rating IS NOT NULL AND clarity_rating != ''
      GROUP BY clarity_rating`,
-  ).all();
+  ).bind(batchId).all();
   const usefulResult = await env.MAPKAI_DB.prepare(
     `SELECT most_useful_part AS value, COUNT(*) AS count
      FROM pdc_feedback
-     WHERE most_useful_part IS NOT NULL AND most_useful_part != ''
+     JOIN pdc_access_passes ON pdc_access_passes.pass_code = pdc_feedback.pass_code
+     WHERE pdc_access_passes.batch_id = ?
+       AND most_useful_part IS NOT NULL AND most_useful_part != ''
      GROUP BY most_useful_part`,
-  ).all();
+  ).bind(batchId).all();
   const againResult = await env.MAPKAI_DB.prepare(
     `SELECT would_use_again AS value, COUNT(*) AS count
      FROM pdc_feedback
-     WHERE would_use_again IS NOT NULL AND would_use_again != ''
+     JOIN pdc_access_passes ON pdc_access_passes.pass_code = pdc_feedback.pass_code
+     WHERE pdc_access_passes.batch_id = ?
+       AND would_use_again IS NOT NULL AND would_use_again != ''
      GROUP BY would_use_again`,
-  ).all();
+  ).bind(batchId).all();
   const recentFeedbackResult = await env.MAPKAI_DB.prepare(
-    `SELECT pdc_type, clarity_rating, most_useful_part, would_use_again, short_feedback, created_at
+    `SELECT pdc_feedback.pdc_type, pdc_feedback.clarity_rating, pdc_feedback.most_useful_part,
+       pdc_feedback.would_use_again, pdc_feedback.short_feedback, pdc_feedback.created_at
      FROM pdc_feedback
-     WHERE short_feedback IS NOT NULL AND short_feedback != ''
-     ORDER BY created_at DESC, id DESC
+     JOIN pdc_access_passes ON pdc_access_passes.pass_code = pdc_feedback.pass_code
+     WHERE pdc_access_passes.batch_id = ?
+       AND short_feedback IS NOT NULL AND short_feedback != ''
+     ORDER BY pdc_feedback.created_at DESC, pdc_feedback.id DESC
      LIMIT 12`,
-  ).all();
+  ).bind(batchId).all();
 
   const usage = { total: 0, unused: 0, in_progress: 0, used: 0, expired: 0 };
   (usageResult.results || []).forEach((row) => {

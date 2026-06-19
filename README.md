@@ -30,6 +30,8 @@ Set these Cloudflare Pages environment variables:
 RESEND_API_KEY=your_resend_api_key
 EMAIL_FROM="MapKAI <your_verified_sender@mapkai.com>"
 AUTH_SECRET=generate_a_long_random_secret
+MAPKAI_FOUNDER_ACCESS_CODE=generate_a_private_founder_code
+MAPKAI_PDC_SESSION_SECRET=generate_a_long_random_secret
 ```
 
 Build settings in Cloudflare Pages:

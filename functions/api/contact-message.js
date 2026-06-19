@@ -1,3 +1,5 @@
+import { checkRateLimit, getClientIp } from "./_shared/rate-limit.js";
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -52,6 +54,14 @@ export async function onRequest({ request, env }) {
 
   if (!env.MAPKAI_DB) {
     return json({ ok: false, error: "Message database is not configured." }, 500);
+  }
+
+  const rateLimit = await checkRateLimit(env.MAPKAI_DB, `contact:${getClientIp(request)}`, {
+    limit: 8,
+    windowSeconds: 60 * 60,
+  });
+  if (!rateLimit.ok) {
+    return json({ ok: false, error: "Too many messages. Please try again later." }, 429);
   }
 
   const body = await request.json().catch(() => ({}));

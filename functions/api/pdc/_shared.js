@@ -1,4 +1,7 @@
 export const INVALID_PDC_LINK_MESSAGE = "This PDC access link is no longer available. It may have already been used or expired.";
+const founderCookieName = "mapkai_pdc_founder";
+const pdcSessionCookieName = "mapkai_pdc_session";
+const encoder = new TextEncoder();
 
 export function json(data, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(data), {
@@ -17,7 +20,7 @@ export function isFounderRequest(request) {
 
 export async function hasFounderApiAccess(request, env) {
   if (!isFounderRequest(request)) return false;
-  if (!getFounderAccessCode(env)) return true;
+  if (!getFounderAccessCode(env)) return false;
   return hasValidFounderAccessCookie(request, env);
 }
 
@@ -27,7 +30,7 @@ export function getFounderAccessCode(env) {
 
 export function isFounderAccessCode(env, passCode) {
   const founderCode = getFounderAccessCode(env);
-  return Boolean(founderCode && passCode && passCode === founderCode);
+  return Boolean(founderCode && passCode && safeEqualString(passCode, founderCode));
 }
 
 export async function createFounderAccessCookie(env, request) {
@@ -36,7 +39,7 @@ export async function createFounderAccessCookie(env, request) {
   const issuedAt = Math.floor(Date.now() / 1000);
   const signature = await signFounderAccessCookie(founderCode, issuedAt);
   const isSecureRequest = request ? new URL(request.url).protocol === "https:" : true;
-  return `mapkai_pdc_founder=${issuedAt}.${signature}; Path=/; Max-Age=2592000; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+  return `${founderCookieName}=${issuedAt}.${signature}; Path=/; Max-Age=2592000; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
 }
 
 export async function hasValidFounderAccessCookie(request, env) {
@@ -46,7 +49,7 @@ export async function hasValidFounderAccessCookie(request, env) {
   const cookieValue = cookieHeader
     .split(";")
     .map((item) => item.trim())
-    .find((item) => item.startsWith("mapkai_pdc_founder="))
+    .find((item) => item.startsWith(`${founderCookieName}=`))
     ?.split("=")[1] || "";
   const [issuedAtRaw, signature] = cookieValue.split(".");
   const issuedAt = Number(issuedAtRaw);
@@ -54,11 +57,10 @@ export async function hasValidFounderAccessCookie(request, env) {
   const maxAgeSeconds = 30 * 24 * 60 * 60;
   if (issuedAt < Math.floor(Date.now() / 1000) - maxAgeSeconds) return false;
   const expected = await signFounderAccessCookie(founderCode, issuedAt);
-  return signature === expected;
+  return safeEqualString(signature, expected);
 }
 
 async function signFounderAccessCookie(secret, issuedAt) {
-  const encoder = new TextEncoder();
   const key = await crypto.subtle.importKey(
     "raw",
     encoder.encode(secret),
@@ -68,6 +70,102 @@ async function signFounderAccessCookie(secret, issuedAt) {
   );
   const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(`mapkai-pdc-founder:${issuedAt}`));
   return Array.from(new Uint8Array(signature), (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+export async function createPdcSessionCookie(env, request, passCode) {
+  const sessionSecret = getPdcSessionSecret(env);
+  if (!sessionSecret) return "";
+  const issuedAt = Math.floor(Date.now() / 1000);
+  const expiresAt = issuedAt + 4 * 60 * 60;
+  const payload = base64UrlEncode(JSON.stringify({ passCode, issuedAt, expiresAt }));
+  const signature = await signValue(sessionSecret, payload);
+  const isSecureRequest = request ? new URL(request.url).protocol === "https:" : true;
+  return `${pdcSessionCookieName}=${payload}.${signature}; Path=/api/pdc; Max-Age=${4 * 60 * 60}; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+}
+
+export function clearPdcSessionCookie(request) {
+  const isSecureRequest = request ? new URL(request.url).protocol === "https:" : true;
+  return `${pdcSessionCookieName}=; Path=/api/pdc; Max-Age=0; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+}
+
+export async function readPdcSessionPassCode(env, request) {
+  const sessionSecret = getPdcSessionSecret(env);
+  if (!sessionSecret) return "";
+  const cookieValue = getCookieValue(request, pdcSessionCookieName);
+  const [payload, signature] = cookieValue.split(".");
+  if (!payload || !signature) return "";
+  const expected = await signValue(sessionSecret, payload);
+  if (!safeEqualString(signature, expected)) return "";
+  try {
+    const session = JSON.parse(base64UrlDecode(payload));
+    if (!session?.passCode || Number(session.expiresAt || 0) < Math.floor(Date.now() / 1000)) return "";
+    return cleanText(session.passCode, 80);
+  } catch {
+    return "";
+  }
+}
+
+export async function resolvePdcSessionPassCode({ env, request, suppliedPassCode = "", requireSession = false }) {
+  const sessionPassCode = await readPdcSessionPassCode(env, request);
+  const cleanSuppliedPassCode = cleanText(suppliedPassCode, 80);
+  if (requireSession && !sessionPassCode) return { ok: false, passCode: "", error: INVALID_PDC_LINK_MESSAGE };
+  if (sessionPassCode && cleanSuppliedPassCode && sessionPassCode !== cleanSuppliedPassCode) {
+    return { ok: false, passCode: "", error: INVALID_PDC_LINK_MESSAGE };
+  }
+  const passCode = sessionPassCode || cleanSuppliedPassCode;
+  return passCode ? { ok: true, passCode, error: "" } : { ok: false, passCode: "", error: INVALID_PDC_LINK_MESSAGE };
+}
+
+function getPdcSessionSecret(env) {
+  return String(env?.MAPKAI_PDC_SESSION_SECRET || env?.AUTH_SECRET || "").trim();
+}
+
+function getCookieValue(request, name) {
+  const cookieHeader = request.headers.get("Cookie") || "";
+  return cookieHeader
+    .split(";")
+    .map((item) => item.trim())
+    .find((item) => item.startsWith(`${name}=`))
+    ?.slice(name.length + 1) || "";
+}
+
+async function signValue(secret, value) {
+  const key = await crypto.subtle.importKey(
+    "raw",
+    encoder.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"],
+  );
+  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(value));
+  return arrayBufferToBase64Url(signature);
+}
+
+function safeEqualString(left, right) {
+  if (left.length !== right.length) return false;
+  let diff = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    diff |= left.charCodeAt(index) ^ right.charCodeAt(index);
+  }
+  return diff === 0;
+}
+
+function base64UrlEncode(value) {
+  return btoa(value).replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "");
+}
+
+function base64UrlDecode(value) {
+  const padded = value.padEnd(value.length + ((4 - (value.length % 4)) % 4), "=");
+  return atob(padded.replaceAll("-", "+").replaceAll("_", "/"));
+}
+
+function arrayBufferToBase64Url(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
+  return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "");
 }
 
 export function getIsoNow() {

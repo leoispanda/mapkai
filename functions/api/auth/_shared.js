@@ -2,7 +2,14 @@ const cookieName = "mapkai_login_challenge";
 const encoder = new TextEncoder();
 
 export function createCode() {
-  return String(Math.floor(100000 + Math.random() * 900000));
+  const values = new Uint32Array(1);
+  const max = Math.floor(0xffffffff / 900000) * 900000;
+  let value = 0;
+  do {
+    crypto.getRandomValues(values);
+    value = values[0];
+  } while (value >= max);
+  return String(100000 + (value % 900000));
 }
 
 export function normalizeEmail(email) {

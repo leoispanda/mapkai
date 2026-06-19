@@ -1,5 +1,6 @@
 import {
   createFounderAccessCookie,
+  createPdcSessionCookie,
   ensurePdcTables,
   getPass,
   hasValidFounderAccessCookie,
@@ -23,9 +24,10 @@ export async function onRequest({ request, env }) {
       ...(validFounderAccess ? {} : { message: INVALID_PDC_LINK_MESSAGE }),
     });
   }
+  if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
 
-  const body = request.method === "POST" ? await request.json().catch(() => ({})) : {};
-  const passCode = String(request.method === "POST" ? body.pass || "" : url.searchParams.get("pass") || "").trim();
+  const body = await request.json().catch(() => ({}));
+  const passCode = String(body.pass || "").trim();
 
   if (request.method === "POST" && isFounderAccessCode(env, passCode)) {
     const founderCookie = await createFounderAccessCookie(env, request);
@@ -51,14 +53,21 @@ export async function onRequest({ request, env }) {
   }
 
   const allowedModes = pass.allowed_modes ? pass.allowed_modes.split(",").map((mode) => mode.trim()).filter(Boolean) : ["personal", "company"];
-  return json({
-    ok: true,
-    valid: true,
-    pass: {
-      pass_code: pass.pass_code,
-      pdc_type: pass.pdc_type,
-      allowed_modes: allowedModes,
-      modes: allowedModes.map((modeId) => pdcModes[modeId]).filter(Boolean),
+  const sessionCookie = await createPdcSessionCookie(env, request, pass.pass_code);
+  if (!sessionCookie) {
+    return json({ ok: false, valid: false, message: "PDC session is not configured." }, 500);
+  }
+  return json(
+    {
+      ok: true,
+      valid: true,
+      pass: {
+        pdc_type: pass.pdc_type,
+        allowed_modes: allowedModes,
+        modes: allowedModes.map((modeId) => pdcModes[modeId]).filter(Boolean),
+      },
     },
-  });
+    200,
+    { "Set-Cookie": sessionCookie },
+  );
 }

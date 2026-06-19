@@ -1,15 +1,17 @@
-import { cleanText, ensurePdcTables, getFounderAccessCode, getIsoNow, getPass, hasValidFounderAccessCookie, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json } from "./_shared.js";
+import { cleanText, createPdcSessionCookie, ensurePdcTables, getFounderAccessCode, getIsoNow, getPass, hasValidFounderAccessCookie, INVALID_PDC_LINK_MESSAGE, isFounderRequest, isPassUsable, json, resolvePdcSessionPassCode } from "./_shared.js";
+import { checkRateLimit } from "../_shared/rate-limit.js";
 import { generatePdcAdvancedFinalAudit, generatePdcCouncilRecap, generatePdcDialogue, generatePdcFinalRecap, pdcModes, resolveCouncilTier, resolvePdcModels, resolveSessionRoster, toCouncilRoomPersona } from "./pdc-service.js";
 
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
 
   const body = await request.json().catch(() => ({}));
-  const passCode = cleanText(body.pass, 80);
-  const modeId = "personal";
+  const suppliedPassCode = cleanText(body.pass, 80);
+  const requestedModeId = cleanText(body.mode_id, 40);
+  const modeId = ["personal", "company"].includes(requestedModeId) ? requestedModeId : "personal";
   const userQuestion = cleanText(body.user_question, 1200);
   const fixedFounderAccessEnabled = Boolean(getFounderAccessCode(env));
-  const hasFounderAccess = fixedFounderAccessEnabled ? await hasValidFounderAccessCookie(request, env) : true;
+  const hasFounderAccess = fixedFounderAccessEnabled ? await hasValidFounderAccessCookie(request, env) : false;
   const isFounderPreview = body.founder_preview === true && isFounderRequest(request) && hasFounderAccess;
   const tierInfo = resolveCouncilTier(body.council_tier, isFounderPreview);
   const modelInfo = resolvePdcModels(tierInfo.effectiveTier);
@@ -25,10 +27,10 @@ export async function onRequest({ request, env }) {
     return handleAdvancedFinalAudit({ request, env, body, modeId, userQuestion, isFounderPreview, tierInfo });
   }
   if (isContinuePhase) {
-    return handleContinuePhase({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo });
+    return handleContinuePhase({ request, env, body, passCode: suppliedPassCode, modeId, userQuestion, isFounderPreview, tierInfo });
   }
   if (isFinalRecap) {
-    return handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo });
+    return handleFinalRecap({ request, env, body, passCode: suppliedPassCode, modeId, userQuestion, isFounderPreview, tierInfo });
   }
 
   if (isFounderPreview) {
@@ -43,7 +45,11 @@ export async function onRequest({ request, env }) {
   }
 
   if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
-  if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
+  const passAccess = await resolvePdcSessionPassCode({ env, request, suppliedPassCode });
+  if (!passAccess.ok) return json({ ok: false, message: passAccess.error || INVALID_PDC_LINK_MESSAGE }, 400);
+  const passCode = passAccess.passCode;
+  const sessionCookie = await createPdcSessionCookie(env, request, passCode);
+  if (!sessionCookie) return json({ ok: false, message: "PDC session is not configured." }, 500);
 
   await ensurePdcTables(env.MAPKAI_DB);
 
@@ -82,7 +88,11 @@ export async function onRequest({ request, env }) {
        SET status = 'used', used_count = used_count + 1, used_at = ?, last_error = NULL
        WHERE pass_code = ?`,
     ).bind(usedAt, passCode).run();
-    return json({ ok: true, councilTier: tierInfo.effectiveTier, requestedTier: tierInfo.requestedTier, effectiveTier: tierInfo.effectiveTier, phaseModel: modelInfo.phaseModel, finalModel: modelInfo.finalModel, recap });
+    return json(
+      { ok: true, councilTier: tierInfo.effectiveTier, requestedTier: tierInfo.requestedTier, effectiveTier: tierInfo.effectiveTier, phaseModel: modelInfo.phaseModel, finalModel: modelInfo.finalModel, recap },
+      200,
+      { "Set-Cookie": sessionCookie },
+    );
   } catch (error) {
     await env.MAPKAI_DB.prepare(
       `UPDATE pdc_access_passes
@@ -96,10 +106,19 @@ export async function onRequest({ request, env }) {
 async function handleFinalRecap({ request, env, body, passCode, modeId, userQuestion, isFounderPreview, tierInfo }) {
   if (!isFounderPreview) {
     if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
-    if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
+    const passAccess = await resolvePdcSessionPassCode({ env, request, suppliedPassCode: passCode, requireSession: true });
+    if (!passAccess.ok) return json({ ok: false, message: passAccess.error || INVALID_PDC_LINK_MESSAGE }, 403);
+    passCode = passAccess.passCode;
     await ensurePdcTables(env.MAPKAI_DB);
     const pass = await getPass(env.MAPKAI_DB, passCode);
     if (!pass || !["used", "in_progress"].includes(pass.status)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);
+    const rateLimit = await checkRateLimit(env.MAPKAI_DB, `pdc-final:${passCode}`, {
+      limit: 5,
+      windowSeconds: 4 * 60 * 60,
+    });
+    if (!rateLimit.ok) {
+      return json({ ok: false, message: "This PDC session has reached its temporary generation limit." }, 429);
+    }
   }
   const activeRoster = resolveRosterByIds(modeId, body.active_roster_ids);
   const observerRoster = mergeObserverRosterContext(
@@ -137,10 +156,10 @@ async function handleAdvancedFinalAudit({ request, env, body, modeId, userQuesti
   if (!advancedAuditAutoRun && !advancedAuditManualTrigger) {
     return json({ ok: false, message: "Advanced Final Audit requires a manual Founder trigger.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "manual_trigger_required", false, { manualTrigger: false, sessionId: advancedAuditSessionId }) }, 403);
   }
-  if (advancedAuditFounderOnly && !isFounderPreview) {
+  if ((advancedAuditFounderOnly || advancedAuditManualTrigger) && !isFounderPreview) {
     return json({ ok: false, message: "Advanced Final Audit is Founder-only.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "founder_only", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 403);
   }
-  if (!isFounderRequest(request)) {
+  if (!isFounderRequest(request) || !isFounderPreview) {
     return json({ ok: false, message: "Advanced Final Audit requires Founder Mode.", contentDiagnostics: buildAdvancedAuditDisabledDiagnostics(env, "missing_founder_header", false, { manualTrigger: advancedAuditManualTrigger, sessionId: advancedAuditSessionId }) }, 403);
   }
   if (!env.OPENAI_API_KEY) {
@@ -207,10 +226,19 @@ async function handleContinuePhase({ request, env, body, passCode, modeId, userQ
 
   if (!isFounderPreview) {
     if (!env.MAPKAI_DB) return json({ ok: false, message: "PDC is temporarily unavailable. Please try again later." }, 500);
-    if (!passCode) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 400);
+    const passAccess = await resolvePdcSessionPassCode({ env, request, suppliedPassCode: passCode, requireSession: true });
+    if (!passAccess.ok) return json({ ok: false, message: passAccess.error || INVALID_PDC_LINK_MESSAGE }, 403);
+    passCode = passAccess.passCode;
     await ensurePdcTables(env.MAPKAI_DB);
     const pass = await getPass(env.MAPKAI_DB, passCode);
     if (!pass || !["used", "in_progress"].includes(pass.status)) return json({ ok: false, message: INVALID_PDC_LINK_MESSAGE }, 403);
+    const rateLimit = await checkRateLimit(env.MAPKAI_DB, `pdc-continue:${passCode}`, {
+      limit: 20,
+      windowSeconds: 4 * 60 * 60,
+    });
+    if (!rateLimit.ok) {
+      return json({ ok: false, message: "This PDC session has reached its temporary generation limit." }, 429);
+    }
   }
 
   try {

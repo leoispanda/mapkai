@@ -1,3 +1,5 @@
+import { checkRateLimit, getClientIp } from "./_shared/rate-limit.js";
+
 const MODEL = "@cf/meta/llama-3.1-8b-instruct";
 
 function json(data, status = 200) {
@@ -97,6 +99,16 @@ export async function onRequestPost({ request, env }) {
 
   if (summary.totalAnswered < 15) {
     return json({ ok: false, error: "Reflection is locked until 15 answered questions." }, 403);
+  }
+
+  if (env.MAPKAI_DB) {
+    const rateLimit = await checkRateLimit(env.MAPKAI_DB, `reflection:${getClientIp(request)}`, {
+      limit: 10,
+      windowSeconds: 60 * 60,
+    });
+    if (!rateLimit.ok) {
+      return json({ ok: false, error: "Too many reflection requests. Please try again later." }, 429);
+    }
   }
 
   if (!env.AI) {

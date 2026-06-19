@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.15";
+const appVersion = "0.1.18";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -13,7 +13,6 @@ const themeKey = "mapkaiTheme";
 const founderModeKey = "mapkaiFounderMode";
 const founderStoriesKey = "mapkaiFounderStories";
 const founderConsoleTabKey = "mapkaiFounderConsoleTab";
-const founderModePasscode = "2026leocindy";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
 const supportedLanguages = ["en", "zh"];
@@ -4551,11 +4550,13 @@ let pdcPlaybackTimer = null;
 let pdcWarmupTimer = null;
 let pdcFounderSummary = null;
 let pdcFounderStatus = { state: "idle", detail: "" };
+const pdcAccessSessionKey = "mapkaiPdcAccessValidated";
 const pdcFounderAccessSessionKey = "mapkaiPdcFounderAccessValidated";
 
 function createPdcBaseState(overrides = {}) {
   return {
     pass: "",
+    accessSessionReady: false,
     valid: false,
     status: "idle",
     message: "",
@@ -5208,13 +5209,6 @@ async function handleContactSubmit(event) {
   const message = form.elements.message.value.trim();
   const status = form.querySelector(".contact-status");
   if (!message) return;
-  if (message === founderModePasscode) {
-    localStorage.setItem(founderModeKey, "true");
-    status.textContent = t("founderActivated");
-    form.reset();
-    setFounderMode(true);
-    return;
-  }
   if (email && !isValidContactEmail(email)) {
     status.textContent = t("invalidEmail");
     return;
@@ -5287,25 +5281,48 @@ async function validatePdcAccessForm(form) {
   const normalizedCode = code.replace(/\s+/g, "");
   if (status) status.textContent = "Checking access code...";
   try {
-    const response = await fetch("/api/pdc/validate-pass", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ pass: normalizedCode }),
-    });
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok || data.valid !== true) {
-      throw new Error(data.message || "This PDC access code is no longer available.");
-    }
+    const data = await validatePdcPassForSession(normalizedCode);
     if (data.founder_preview === true) {
       sessionStorage.setItem(pdcFounderAccessSessionKey, "true");
+      sessionStorage.removeItem(pdcAccessSessionKey);
       localStorage.setItem(founderModeKey, "true");
       window.location.href = "/pdc-pilot?founderPreview=1";
       return;
     }
     sessionStorage.removeItem(pdcFounderAccessSessionKey);
-    window.location.href = `/pdc-pilot?pass=${encodeURIComponent(normalizedCode)}`;
+    sessionStorage.setItem(pdcAccessSessionKey, "true");
+    window.location.href = "/pdc-pilot";
   } catch (error) {
     if (status) status.textContent = error.message || "This PDC access code is no longer available.";
+  }
+}
+
+async function validatePdcPassForSession(pass) {
+  const response = await fetch("/api/pdc/validate-pass", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pass }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || data.valid !== true) {
+    throw new Error(data.message || "This PDC access code is no longer available.");
+  }
+  return data;
+}
+
+async function validatePdcFounderPreviewSession() {
+  const response = await fetch("/api/pdc/validate-pass?founderPreview=1", { cache: "no-store" });
+  const data = await response.json().catch(() => ({}));
+  return response.ok && data.valid === true && data.founder_preview === true;
+}
+
+function hasPdcAccessSession() {
+  return sessionStorage.getItem(pdcAccessSessionKey) === "true";
+}
+
+function replacePdcPilotUrl() {
+  if (window.location.pathname === "/pdc-pilot" && window.location.search) {
+    window.history.replaceState({}, "", "/pdc-pilot");
   }
 }
 
@@ -5338,12 +5355,6 @@ function getCurrentPdcPass() {
   return new URLSearchParams(window.location.search).get("pass") || "";
 }
 
-function isPdcFounderPreviewAllowed(pass) {
-  const params = new URLSearchParams(window.location.search);
-  const requested = params.get("founderPreview") === "1" && !pass;
-  return requested && sessionStorage.getItem(pdcFounderAccessSessionKey) === "true";
-}
-
 async function initPdcPilotPage() {
   if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") return;
   clearPdcPlaybackTimer();
@@ -5351,9 +5362,15 @@ async function initPdcPilotPage() {
   const pass = getCurrentPdcPass();
   const params = new URLSearchParams(window.location.search);
   const founderPreviewRequested = params.get("founderPreview") === "1" && !pass;
-  const founderPreviewAllowed = isPdcFounderPreviewAllowed(pass);
-  if (pdcState.pass === pass && pdcState.founderPreview === founderPreviewAllowed && pdcState.status !== "idle") {
-    if (!pass && !founderPreviewAllowed && pdcState.status === "ready") {
+  const founderPreviewAllowed = founderPreviewRequested ? await validatePdcFounderPreviewSession() : false;
+  const accessSessionReady = !pass && !founderPreviewRequested && hasPdcAccessSession();
+  if (
+    pdcState.pass === pass
+    && pdcState.founderPreview === founderPreviewAllowed
+    && pdcState.accessSessionReady === accessSessionReady
+    && pdcState.status !== "idle"
+  ) {
+    if (!pass && !founderPreviewAllowed && !accessSessionReady && pdcState.status === "ready") {
       pdcState.status = "public";
       pdcState.entryView = "landing";
     }
@@ -5364,6 +5381,7 @@ async function initPdcPilotPage() {
     pass,
     status: "validating",
     founderPreview: founderPreviewAllowed,
+    accessSessionReady,
   });
   renderPdcPilot();
   if (founderPreviewAllowed) {
@@ -5379,6 +5397,14 @@ async function initPdcPilotPage() {
     renderPdcPilot();
     return;
   }
+  if (accessSessionReady) {
+    pdcState.valid = true;
+    pdcState.status = "ready";
+    pdcState.entryView = "standard";
+    pdcState.message = "";
+    renderPdcPilot();
+    return;
+  }
   if (!pass && !founderPreviewRequested) {
     pdcState.valid = true;
     pdcState.status = "public";
@@ -5388,6 +5414,7 @@ async function initPdcPilotPage() {
     return;
   }
   if (founderPreviewRequested) {
+    sessionStorage.removeItem(pdcFounderAccessSessionKey);
     pdcState.valid = true;
     pdcState.founderPreview = false;
     pdcState.status = "public";
@@ -5403,17 +5430,19 @@ async function initPdcPilotPage() {
     return;
   }
   try {
-    const response = await fetch(`/api/pdc/validate-pass?pass=${encodeURIComponent(pass)}`);
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok || data.valid !== true) {
-      throw new Error(data.message || "This PDC access link is no longer available. It may have already been used or expired.");
-    }
+    await validatePdcPassForSession(pass);
+    sessionStorage.setItem(pdcAccessSessionKey, "true");
+    sessionStorage.removeItem(pdcFounderAccessSessionKey);
+    replacePdcPilotUrl();
+    pdcState.pass = "";
+    pdcState.accessSessionReady = true;
     pdcState.valid = true;
     pdcState.status = "ready";
     pdcState.entryView = "standard";
     pdcState.message = "";
     renderPdcPilot();
   } catch (error) {
+    sessionStorage.removeItem(pdcAccessSessionKey);
     pdcState.valid = false;
     pdcState.status = "invalid";
     pdcState.message = error.message || "This PDC access link is no longer available. It may have already been used or expired.";
@@ -5463,7 +5492,7 @@ function renderPdcPilot() {
 
   const remaining = 1200 - pdcState.question.length;
   const isFullFunction = pdcState.founderPreview && pdcState.councilTier === "full_function";
-  const showPdcBackOption = !pdcState.pass && !pdcState.founderPreview;
+  const showPdcBackOption = !pdcState.pass && !pdcState.founderPreview && !pdcState.accessSessionReady;
   root.innerHTML = pdcShellTemplate(`
     ${isFullFunction ? `
       <section class="pdc-entry-option">
@@ -5473,7 +5502,7 @@ function renderPdcPilot() {
         <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
         <p class="trust-note">phaseModel = gpt-5.5 · finalModel = gpt-5.5</p>
       </section>` : ""}
-    ${!pdcState.pass && !pdcState.founderPreview ? `
+    ${!pdcState.pass && !pdcState.founderPreview && !pdcState.accessSessionReady ? `
       <label class="pdc-question-label">
         <span>PDC access code</span>
         <input data-pdc-start-pass type="text" autocomplete="off" maxlength="80" placeholder="Enter access code">
@@ -7785,7 +7814,7 @@ async function startPdcExperience() {
   const inlinePass = (document.querySelector("[data-pdc-start-pass]")?.value || "").trim().replace(/\s+/g, "");
   const question = document.querySelector("[data-pdc-question]")?.value.trim() || "";
   const nextQuestion = question.slice(0, 1200);
-  if (!pdcState.founderPreview && !pdcState.pass && !inlinePass) {
+  if (!pdcState.founderPreview && !pdcState.pass && !inlinePass && !pdcState.accessSessionReady) {
     pdcState.message = "Please enter your PDC access code.";
     renderPdcPilot();
     return;
@@ -7815,6 +7844,11 @@ async function startPdcExperience() {
     const data = await response.json().catch(() => ({}));
     if (!response.ok || data.ok !== true) throw new Error(data.message || "The PDC experience could not be generated. Please try again later.");
     const warmupDiagnostics = finishPdcWarmup();
+    if (!pdcState.founderPreview) {
+      sessionStorage.setItem(pdcAccessSessionKey, "true");
+      pdcState.accessSessionReady = true;
+      pdcState.pass = "";
+    }
     pdcState.recap = data.recap;
     pdcState.councilTier = data.effectiveTier || data.councilTier || data.recap?.councilTier || pdcState.councilTier || "standard";
     pdcState.requestedTier = data.requestedTier || data.recap?.requestedTier || pdcState.requestedTier || "standard";
@@ -10875,6 +10909,7 @@ function setFounderMode(enabled) {
     localStorage.setItem(founderModeKey, "true");
   } else {
     localStorage.removeItem(founderModeKey);
+    sessionStorage.removeItem(pdcFounderAccessSessionKey);
   }
   renderMessageBoards();
   if (enabled && !document.body.classList.contains("pdc-public-route")) {

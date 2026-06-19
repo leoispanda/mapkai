@@ -1,3 +1,5 @@
+import { checkRateLimit, getClientIp } from "./_shared/rate-limit.js";
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -13,6 +15,14 @@ function cleanVisitorId(value) {
 export async function onRequestPost({ request, env }) {
   if (!env.MAPKAI_DB) {
     return json({ error: "Visitor database is not configured." }, 500);
+  }
+
+  const rateLimit = await checkRateLimit(env.MAPKAI_DB, `visit:${getClientIp(request)}`, {
+    limit: 240,
+    windowSeconds: 60 * 60,
+  });
+  if (!rateLimit.ok) {
+    return json({ error: "Too many visit updates." }, 429);
   }
 
   const { visitorId } = await request.json().catch(() => ({}));

@@ -1,9 +1,18 @@
 import { clearChallengeCookie, json, normalizeEmail, readChallenge } from "./_shared.js";
+import { checkRateLimit, getClientIp } from "../_shared/rate-limit.js";
 
 export async function onRequestPost({ request, env }) {
   const { email, code } = await request.json().catch(() => ({}));
   const cleanEmail = normalizeEmail(email);
   const cleanCode = String(code || "").replace(/\D/g, "");
+  const rateLimit = await checkRateLimit(env.MAPKAI_DB, `auth-verify:${cleanEmail || "invalid"}:${getClientIp(request)}`, {
+    limit: 12,
+    windowSeconds: 10 * 60,
+  });
+  if (!rateLimit.ok) {
+    return json({ error: "Too many verification attempts. Request a new code later." }, 429);
+  }
+
   const challenge = await readChallenge(env, request);
 
   if (!challenge || challenge.expiresAt < Date.now()) {
