@@ -9,7 +9,9 @@ Every lens story should pass these checks:
 - One everyday object, place, or action appears in the first sentence.
 - The source should be a common social-life problem, awkward moment, or small anecdote: waiting in line, a group-chat misunderstanding, a receipt, a repair, a clinic visit, a family rule, a school activity, a missed notice, a shared bill, a noisy neighbor, a delayed bus, a meal, a form, a lost item, or a small service failure.
 - When the field has a famous founder, origin moment, classic experiment, or canonical case, prefer that over a purely invented anecdote.
-- Introduce the person before fame through ordinary work, place, tools, doubts, or small observations. Reveal the name and significance near the end, not in the opening sentence.
+- Introduce the person before fame through ordinary work, place, tools, doubts, or small observations. Give enough background for a student to recognize the person as human before they become famous.
+- Show the concrete discovery path: what the person noticed, what felt wrong, what they tried, and how the field slowly became visible.
+- Reveal the person's name and main contribution only in the final sentence of the story body. No biographical name reveal should appear earlier in the narrative.
 - Keep historical support visible enough to trust: dates, places, works, institutions, or what the person actually did.
 - A person initially misreads the situation or reaches for the easiest explanation.
 - Someone observes, asks, tests, compares, or listens before the meaning changes.
@@ -36,9 +38,9 @@ Every lens story should pass these checks:
 2. Before fame: the person is shown as someone working, observing, doubting, or trying.
 3. Turn: a detail changes the interpretation and opens the field.
 4. Field insight: the sublens becomes visible through action.
-5. Reveal: "这个人叫..." plus the person's role and contribution.
-6. Today: one short bridge to how the field has developed now.
-7. Support: dates, works, institutions, or factual anchors.
+5. Human turn: the reader can feel why this person cared before knowing the name.
+6. Final reveal: "这个人叫..." plus the person's role and contribution, as the final sentence of the story body.
+7. Today/support: dates, works, institutions, or factual anchors may appear after the story as support, not before the reveal.
 8. Reflection: one question the reader can carry away.
 
 ## Rewrite Policy
