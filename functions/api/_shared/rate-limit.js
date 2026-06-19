@@ -14,6 +14,9 @@ export async function checkRateLimit(database, key, { limit, windowSeconds }) {
       reset_at INTEGER NOT NULL
     )`,
   ).run();
+  await database.prepare(
+    `CREATE INDEX IF NOT EXISTS idx_rate_limits_reset_at ON rate_limits(reset_at)`,
+  ).run();
 
   const now = Math.floor(Date.now() / 1000);
   const resetAt = now + windowSeconds;
