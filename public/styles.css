@@ -5020,6 +5020,18 @@ dd,
   line-height: 1.78;
 }
 
+.lens-story-support {
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 8px;
+  background: rgba(248, 250, 252, 0.72);
+}
+
+.lens-story-support p {
+  color: #64748b;
+  font-size: 0.93rem;
+}
+
 .lens-story-insight {
   margin-top: 0;
 }
@@ -5657,6 +5669,7 @@ body[data-theme="dark"] .map-story-card,
 body[data-theme="dark"] .field-detail-card,
 body[data-theme="dark"] .story-reader,
 body[data-theme="dark"] .lens-story-meta > div,
+body[data-theme="dark"] .lens-story-support,
 body[data-theme="dark"] .legal-block,
 body[data-theme="dark"] .pdc-entry-hero,
 body[data-theme="dark"] .pdc-entry-demo,
@@ -5690,6 +5703,10 @@ body[data-theme="dark"] .lens-story-section p,
 body[data-theme="dark"] .lens-story-summary,
 body[data-theme="dark"] .lens-story-meta p {
   color: #f4efe4;
+}
+
+body[data-theme="dark"] .lens-story-support p {
+  color: #cfc7bc;
 }
 
 body[data-theme="dark"] .tree-group-story-link small,
