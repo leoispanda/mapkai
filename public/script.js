@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.25";
+const appVersion = "0.1.26";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -9164,8 +9164,7 @@ function renderStories() {
       return `
         <a class="story-card story-entry-card" href="/stories/${story.id}" data-route="/stories/${story.id}">
           <div class="story-card-topline">
-            <span>${escapeHtml(story.episode || t("storiesEyebrow"))}</span>
-            <span>${escapeHtml(story.eventType || "")}</span>
+            <span>${escapeHtml(story.eventType || t("storiesEyebrow"))}</span>
           </div>
           <h2>${escapeHtml(getStoryTitle(story))}</h2>
           <p>${escapeHtml(getStorySummary(story))}</p>
@@ -9315,7 +9314,7 @@ function renderMapStoryLayer() {
   target.innerHTML = getPublishedStories()
     .map((story) => `
       <article class="map-story-card">
-        <span>${escapeHtml(story.episode)}</span>
+        <span>${escapeHtml(story.eventType || t("storiesEyebrow"))}</span>
         <h4>${escapeHtml(getStoryTitle(story))}</h4>
         <p>
           ${getValidatedStoryFields(story).matched.map(fieldLink).join("")}
@@ -9346,10 +9345,8 @@ function renderFieldDetail(code) {
     </div>
     <p>${escapeHtml(field.plainMeaning)}</p>
     <dl class="story-meta">
-      <div><dt>Code</dt><dd>${escapeHtml(field.code)}</dd></div>
-      <div><dt>Area</dt><dd>${escapeHtml(area ? getAreaDisplayTitle(area) : field.areaId)}</dd></div>
-      <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || field.narrowFieldId)}</dd></div>
-      <div><dt>Coordinate ID</dt><dd>${escapeHtml(field.id)}</dd></div>
+      <div><dt>Area</dt><dd>${escapeHtml(area ? getAreaDisplayTitle(area) : "Not available")}</dd></div>
+      <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || "Not available")}</dd></div>
       <div><dt>Status</dt><dd>${field.isAdministrative ? "Administrative" : "Practical"}</dd></div>
       <div><dt>Light status</dt><dd>${isLit ? "Lit by stories" : "Waiting for a story"}</dd></div>
       <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => escapeHtml(getStoryTitle(story))).join(", ") : "No published story yet"}</dd></div>
@@ -9421,13 +9418,13 @@ function renderLensStoryShelf() {
   }
   const cards = lensStories.map((story) => {
     const category = categories.find((item) => item.code === story.categoryCode);
-    const categoryTitle = category ? getCategoryTitle(category) : story.categoryCode;
+    const categoryTitle = category ? getCategoryTitle(category) : t("lensStoryShelfLens");
     const href = `/lens-stories/${story.id}`;
     return `
       <a class="lens-story-sample-card" href="${href}" data-route="${href}">
         <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
         <span class="lens-story-sample-content">
-          <small>${escapeHtml(t("lensStoryShelfLens"))} ${escapeHtml(story.categoryCode)} · ${escapeHtml(categoryTitle)} · ${escapeHtml(story.groupCode)}</small>
+          <small>${escapeHtml(t("lensStoryShelfLens"))} · ${escapeHtml(categoryTitle)}</small>
           <strong>${escapeHtml(getLensStoryValue(story, "title"))}</strong>
           <em>${escapeHtml(getLensStoryValue(story, "summary"))}</em>
           <b>${escapeHtml(t("readLensStory"))}</b>
@@ -10843,6 +10840,7 @@ function renderLensStoryDetail(storyId) {
   }
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
+  const categoryTitle = category ? getCategoryTitle(category) : t("lensStoryShelfLens");
   const backLink = document.getElementById("lensStoryBack");
   if (backLink) {
     const categoryHref = `/categories/${story.categoryCode}`;
@@ -10865,7 +10863,7 @@ function renderLensStoryDetail(storyId) {
     </figure>
     <div class="story-card-topline lens-story-topline">
       <span>${escapeHtml(t("lensStoryEyebrow"))}</span>
-      <span>${escapeHtml(story.groupCode)}</span>
+      <span>${escapeHtml(categoryTitle)}</span>
     </div>
     <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
     <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>

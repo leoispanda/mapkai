@@ -179,11 +179,19 @@ body:not(.founder-mode) .founder-public-entry {
   display: none;
 }
 
+.code.internal-code {
+  display: none;
+}
+
 .founder-mode .internal-code {
   display: inline-flex;
   margin-right: 8px;
   color: var(--green-dark);
   font-weight: 860;
+}
+
+.founder-mode .code.internal-code {
+  display: inline-flex;
 }
 
 .founder-mode .category-code {
