@@ -3757,6 +3757,52 @@ canvas {
   margin-top: 26px;
 }
 
+.tree-group-story-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: center;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(239, 246, 255, 0.72);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.tree-group-story-link:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.tree-group-story-link strong,
+.tree-group-story-link small,
+.tree-group-story-link em {
+  display: block;
+}
+
+.tree-group-story-link strong {
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.tree-group-story-link small {
+  margin-top: 0.25rem;
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.tree-group-story-link em {
+  color: #1d4ed8;
+  font-size: 0.86rem;
+  font-style: normal;
+  font-weight: 820;
+  white-space: nowrap;
+}
+
 .field-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3785,6 +3831,12 @@ canvas {
   border-color: rgba(15, 107, 87, 0.36);
   background: var(--surface-soft);
   color: var(--green-dark);
+}
+
+.field-chip.has-story {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: rgba(255, 255, 255, 0.88);
+  color: #1d4ed8;
 }
 
 .field-hero {
@@ -3956,8 +4008,17 @@ canvas {
   }
 
   .field-list,
+  .lens-story-meta,
   .passport-panel dl {
     grid-template-columns: 1fr;
+  }
+
+  .tree-group-story-link {
+    grid-template-columns: 1fr;
+  }
+
+  .tree-group-story-link em {
+    white-space: normal;
   }
 
   .pdc-live-room {
@@ -4573,7 +4634,8 @@ dd,
 }
 
 .stories-page,
-.field-detail-page {
+.field-detail-page,
+.lens-story-page {
   padding: clamp(3.25rem, 6vw, 5rem) 5vw 4rem;
 }
 
@@ -4742,6 +4804,10 @@ dd,
   gap: 1rem;
 }
 
+.lens-story-shell {
+  width: min(980px, 100%);
+}
+
 .story-back-link {
   color: #2563eb;
   font-size: 0.9rem;
@@ -4763,6 +4829,103 @@ dd,
   margin: 0 0 1rem;
   color: #0f172a;
   letter-spacing: 0;
+}
+
+.lens-story-reader {
+  display: grid;
+  gap: 1.2rem;
+  padding-top: clamp(1rem, 3vw, 1.5rem);
+}
+
+.lens-story-figure {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 8px;
+  background: #e2e8f0;
+}
+
+.lens-story-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.lens-story-topline {
+  margin-top: 0.1rem;
+}
+
+.lens-story-summary {
+  margin: -0.35rem 0 0;
+  color: #475569;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.65;
+}
+
+.lens-story-section {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.lens-story-section > span,
+.lens-story-meta > div > span {
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lens-story-section p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.lens-story-insight {
+  margin-top: 0;
+}
+
+.lens-story-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.lens-story-meta > div {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 8px;
+  background: rgba(248, 250, 252, 0.78);
+}
+
+.lens-story-meta p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  color: #475569;
+}
+
+.lens-story-meta p > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 0 0.7rem;
+  background: rgba(239, 246, 255, 0.9);
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+@media (max-width: 660px) {
+  .lens-story-meta {
+    grid-template-columns: 1fr;
+  }
 }
 
 .story-reader .story-body {
@@ -5333,6 +5496,7 @@ body[data-theme="dark"] .module-card,
 body[data-theme="dark"] .category-card,
 body[data-theme="dark"] .passport-panel,
 body[data-theme="dark"] .tree-panel,
+body[data-theme="dark"] .tree-group-story-link,
 body[data-theme="dark"] .field-main,
 body[data-theme="dark"] .field-side,
 body[data-theme="dark"] .preview-band,
@@ -5354,6 +5518,7 @@ body[data-theme="dark"] .area-card,
 body[data-theme="dark"] .map-story-card,
 body[data-theme="dark"] .field-detail-card,
 body[data-theme="dark"] .story-reader,
+body[data-theme="dark"] .lens-story-meta > div,
 body[data-theme="dark"] .legal-block,
 body[data-theme="dark"] .pdc-entry-hero,
 body[data-theme="dark"] .pdc-entry-demo,
@@ -5378,6 +5543,18 @@ body[data-theme="dark"] .pdc-page .pdc-radio-group label {
   border-radius: 8px;
   background: rgba(18, 18, 16, 0.86);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+body[data-theme="dark"] .tree-group-story-link strong,
+body[data-theme="dark"] .lens-story-section p,
+body[data-theme="dark"] .lens-story-summary,
+body[data-theme="dark"] .lens-story-meta p {
+  color: #f4efe4;
+}
+
+body[data-theme="dark"] .tree-group-story-link small,
+body[data-theme="dark"] .field-chip.has-story {
+  color: #aaa39a;
 }
 
 body[data-theme="dark"] .home-minimal::after {

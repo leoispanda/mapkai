@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.22";
+const appVersion = "0.1.23";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -85,6 +85,10 @@ const routeMeta = {
     title: "MapKAI Knowledge Lenses — Explore Practical Fields",
     description: "Browse MapKAI's knowledge lenses and practical fields, organized as a calm map for learning and reflection.",
   },
+  "/lens-stories": {
+    title: "MapKAI Lens Stories — Everyday Knowledge Scenarios",
+    description: "Read everyday knowledge stories connected to MapKAI lens subcategories and practical fields.",
+  },
   "/learning": {
     title: "MapKAI Learning Paths — Connect Fields Into Next Steps",
     description: "Explore how MapKAI can connect knowledge fields into practical learning paths and clearer next steps.",
@@ -125,6 +129,15 @@ const uiText = {
     storiesTitle: "Historical cases. Larger maps.",
     storiesCopy: "Real events with conflict, debate, and conclusions across multiple knowledge lenses.",
     readStory: "Read story",
+    readLensStory: "Read everyday story",
+    backToLens: "Back to Lens",
+    lensStoryEyebrow: "Lens Story",
+    lensStorySceneLabel: "Everyday scene",
+    lensStoryKnowledgeLabel: "Knowledge hidden inside",
+    lensStoryTryLabel: "Try this reflection",
+    lensStoryFieldLabel: "Connected field",
+    lensStoryNotFoundTitle: "Story not found",
+    lensStoryNotFoundCopy: "This lens story is not available yet.",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
     storyPerspectivesTitle: "Historical debate",
@@ -448,6 +461,15 @@ const uiText = {
     storiesTitle: "真实历史，更大的知识地图。",
     storiesCopy: "用真实发生的事件，呈现冲突、讨论过程，以及多重知识视角下的结论。",
     readStory: "阅读故事",
+    readLensStory: "阅读生活故事",
+    backToLens: "返回知识镜头",
+    lensStoryEyebrow: "知识故事",
+    lensStorySceneLabel: "日常情景",
+    lensStoryKnowledgeLabel: "藏在里面的知识",
+    lensStoryTryLabel: "试着这样反思",
+    lensStoryFieldLabel: "关联领域",
+    lensStoryNotFoundTitle: "故事未找到",
+    lensStoryNotFoundCopy: "这个知识故事还没有开放。",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
     storyPerspectivesTitle: "当时的讨论",
@@ -1282,6 +1304,37 @@ const categories = [
   },
 ];
 
+const lensStories = [
+  {
+    id: "000-general-starter-course",
+    categoryCode: "00",
+    groupCode: "000",
+    groupTitle: "Generic programmes and qualifications not further defined",
+    groupTitleZh: "未进一步细分的通用课程与资格",
+    fieldCodes: ["0000"],
+    fieldTitlesZh: {
+      "0000": "未进一步细分的通用课程与资格",
+    },
+    image: "/assets/stories/000-general-starter-course.png",
+    imageAlt: "An adult learner and a mentor planning a general starter course in a community learning center.",
+    imageAltZh: "一位成年学习者和导师在社区学习中心规划通用入门课程。",
+    title: "The first evening class",
+    titleZh: "第一堂晚间课",
+    summary: "Before Ren chose a field, a general starter course helped him turn worry into a small learning plan.",
+    summaryZh: "在 Ren 还没决定具体方向之前，一门通用入门课先帮他把焦虑整理成一个小小的学习计划。",
+    scene: "At 7:10 p.m., Ren sat in a community learning center with a folder of forms, three possible courses, and no clear answer. The mentor did not ask him to choose a profession immediately. She asked what felt difficult this week: reading the course descriptions, counting study hours, sending an email, or explaining his goal to family. Ren circled all four.",
+    sceneZh: "晚上七点十分，Ren 坐在社区学习中心，面前是一叠报名表、三个可能的课程方向，以及一个还说不清的答案。导师没有立刻让他决定未来职业，而是问他这一周最难的是什么：读懂课程介绍、估算学习时间、写报名邮件，还是向家人解释自己的目标。Ren 把四项都圈了出来。",
+    storyBody: "The class was called a general starter programme, which sounded vague at first. But the vagueness was useful. In the first hour, the group learned how to read a timetable, compare course requirements, mark unknown words, and turn a large wish into next Tuesday's task. Ren noticed that his real first step was not choosing between business, design, or technology. It was learning how to approach any course without freezing. By the end of the evening, he had a two-week plan: one form to complete, one email to send, one budget number to check, and one conversation to have at home.",
+    storyBodyZh: "这门课叫“通用入门课程”，一开始听起来有点模糊。但这种模糊反而有用。第一小时里，大家学习如何读时间表、比较课程要求、标记不懂的词，并把一个很大的愿望拆成下周二能做的一件事。Ren 发现，他真正的第一步不是马上在商业、设计和技术之间做选择，而是学会面对任何课程时不僵住。晚上结束时，他有了一个两周计划：填完一张表、发出一封邮件、核对一个预算数字，并和家人认真聊一次。",
+    knowledgePoint: "Some knowledge fields are not yet a specialization. They give people the basic map-reading skills needed before a more specific path can make sense.",
+    knowledgePointZh: "有些知识领域还不是专业方向，而是进入专业方向之前的“地图阅读能力”：先能看懂要求、整理时间、提出问题，后面才有可能选择得更清楚。",
+    reflectionQuestion: "When you feel unsure about a big learning direction, what is the smallest general skill that would make the next choice less intimidating?",
+    reflectionQuestionZh: "当你对一个大的学习方向不确定时，哪一个最小的通用能力，能让下一步选择不再那么吓人？",
+    tags: ["starter course", "orientation", "learning plan"],
+    tagsZh: ["入门课程", "方向探索", "学习计划"],
+  },
+];
+
 const fieldPlainMeanings = {
   "0111-education-science": "How people learn, how teaching works, and how learning systems can be designed.",
   "0223-philosophy-and-ethics": "How people reason about values, duties, meaning, right action, and the assumptions behind judgment.",
@@ -1878,6 +1931,31 @@ function getStoryPerspectiveLens(perspective) {
 
 function getStoryPerspectiveFocus(perspective) {
   return currentLanguage === "zh" ? perspective.focusZh || perspective.focus || "" : perspective.focus || "";
+}
+
+function getLensStoryById(storyId) {
+  return lensStories.find((story) => story.id === storyId);
+}
+
+function getLensStoryForGroup(categoryCode, groupCode) {
+  return lensStories.find((story) => story.categoryCode === categoryCode && story.groupCode === groupCode);
+}
+
+function getLensStoryValue(story, key) {
+  if (!story) return "";
+  if (currentLanguage === "zh") return story[`${key}Zh`] || story[key] || "";
+  return story[key] || "";
+}
+
+function getLensStoryList(story, key) {
+  if (!story) return [];
+  if (currentLanguage === "zh") return story[`${key}Zh`] || story[key] || [];
+  return story[key] || [];
+}
+
+function getLensStoryFieldTitle(story, code, fallbackTitle) {
+  if (currentLanguage === "zh") return story?.fieldTitlesZh?.[code] || fallbackTitle;
+  return fallbackTitle;
 }
 
 function getStoryFieldCodes(story) {
@@ -8585,6 +8663,8 @@ function applyLanguage() {
   renderStories();
   const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
   if (activeStory) renderStoryDetail(activeStory[1]);
+  const activeLensStory = normalizeRoute(window.location.pathname).match(/^\/lens-stories\/([a-z0-9-]+)$/);
+  if (activeLensStory) renderLensStoryDetail(activeLensStory[1]);
   renderStoryMap();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
     const match = normalizeRoute(window.location.pathname).match(/^\/categories\/(\d{2})$/);
@@ -8631,16 +8711,20 @@ function goToRoute(route, replace = false) {
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   const fieldMatch = visibleTarget.match(/^\/fields\/([a-z0-9-]+)$/);
   const storyMatch = visibleTarget.match(/^\/stories\/([a-z0-9-]+)$/);
+  const lensStoryMatch = visibleTarget.match(/^\/lens-stories\/([a-z0-9-]+)$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   if (storyMatch) renderStoryDetail(storyMatch[1]);
+  if (lensStoryMatch) renderLensStoryDetail(lensStoryMatch[1]);
   const activePage = categoryMatch
     ? "/categories/detail"
     : fieldMatch
       ? "/fields/detail"
       : storyMatch
         ? "/stories/detail"
-        : visibleTarget;
+        : lensStoryMatch
+          ? "/lens-stories/detail"
+          : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -8654,7 +8738,7 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/stories" && visibleTarget.startsWith("/stories")) ||
-      (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
+      (linkRoute === "/categories" && (visibleTarget.startsWith("/categories") || visibleTarget.startsWith("/lens-stories/"))) ||
       (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
@@ -8680,11 +8764,13 @@ function updateRouteMeta(route) {
     ? "/stories"
     : route.startsWith("/fields/")
       ? "/map"
-      : route.startsWith("/categories/")
-        ? "/categories"
-        : route.startsWith("/learning/")
-          ? "/learning"
-          : routeMeta[route] ? route : "/";
+      : route.startsWith("/lens-stories/")
+        ? "/lens-stories"
+        : route.startsWith("/categories/")
+          ? "/categories"
+          : route.startsWith("/learning/")
+            ? "/learning"
+            : routeMeta[route] ? route : "/";
   const meta = routeMeta[key] || routeMeta["/"];
   const canonicalRoute = key === "/" ? "/" : key;
   const canonicalUrl = `https://www.mapkai.com${canonicalRoute === "/" ? "/" : canonicalRoute}`;
@@ -10398,17 +10484,85 @@ function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
   target.innerHTML = category.groups
-    .map((group) => `
-      <section class="tree-group">
-        <h2><span class="internal-code">${group.code}</span>${group.title}</h2>
-        <div class="field-list">
-          ${group.fields.map(([code, title]) => {
-            const href = `/categories/${category.code}`;
-            return `<a class="field-chip" href="${href}" data-route="${href}"><strong class="internal-code">${code}</strong>${title}</a>`;
-          }).join("")}
-        </div>
-      </section>`)
+    .map((group) => {
+      const story = getLensStoryForGroup(category.code, group.code);
+      const groupTitle = getLensStoryValue(story, "groupTitle") || group.title;
+      const storyHref = story ? `/lens-stories/${story.id}` : `/categories/${category.code}`;
+      const fields = group.fields.map(([code, title]) => {
+        const href = story ? storyHref : `/categories/${category.code}`;
+        const fieldTitle = getLensStoryFieldTitle(story, code, title);
+        return `<a class="field-chip ${story ? "has-story" : ""}" href="${href}" data-route="${href}"><strong class="internal-code">${escapeHtml(code)}</strong>${escapeHtml(fieldTitle)}</a>`;
+      }).join("");
+      return `
+        <section class="tree-group ${story ? "has-story" : ""}">
+          ${story ? `
+            <a class="tree-group-story-link" href="${storyHref}" data-route="${storyHref}">
+              <span class="internal-code">${escapeHtml(group.code)}</span>
+              <span>
+                <strong>${escapeHtml(groupTitle)}</strong>
+                <small>${escapeHtml(getLensStoryValue(story, "summary"))}</small>
+              </span>
+              <em>${escapeHtml(t("readLensStory"))}</em>
+            </a>` : `
+            <h2><span class="internal-code">${escapeHtml(group.code)}</span>${escapeHtml(group.title)}</h2>`}
+          <div class="field-list">${fields}</div>
+        </section>`;
+    })
     .join("");
+}
+
+function renderLensStoryDetail(storyId) {
+  const target = document.getElementById("lensStoryReader");
+  if (!target) return;
+  const story = getLensStoryById(storyId);
+  if (!story) {
+    target.innerHTML = `
+      <h1>${escapeHtml(t("lensStoryNotFoundTitle"))}</h1>
+      <p class="story-body">${escapeHtml(t("lensStoryNotFoundCopy"))}</p>`;
+    return;
+  }
+  const category = categories.find((item) => item.code === story.categoryCode);
+  const group = category?.groups.find((item) => item.code === story.groupCode);
+  const backLink = document.getElementById("lensStoryBack");
+  if (backLink) {
+    const categoryHref = `/categories/${story.categoryCode}`;
+    backLink.textContent = t("backToLens");
+    backLink.setAttribute("href", categoryHref);
+    backLink.dataset.route = categoryHref;
+  }
+  const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  const fieldRows = (group?.fields || [])
+    .filter(([code]) => story.fieldCodes.includes(code))
+    .map(([code, title]) => `
+      <span>
+        <strong class="internal-code">${escapeHtml(code)}</strong>
+        ${escapeHtml(getLensStoryFieldTitle(story, code, title))}
+      </span>`)
+    .join("");
+  target.innerHTML = `
+    <figure class="lens-story-figure">
+      <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
+    </figure>
+    <div class="story-card-topline lens-story-topline">
+      <span>${escapeHtml(t("lensStoryEyebrow"))}</span>
+      <span>${escapeHtml(story.groupCode)}</span>
+    </div>
+    <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
+    <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
+    <section class="lens-story-section">
+      <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
+      <p>${escapeHtml(getLensStoryValue(story, "scene"))}</p>
+      <p>${escapeHtml(getLensStoryValue(story, "storyBody"))}</p>
+    </section>
+    <aside class="story-insight lens-story-insight">
+      <span>${escapeHtml(t("lensStoryKnowledgeLabel"))}</span>
+      <p>${escapeHtml(getLensStoryValue(story, "knowledgePoint"))}</p>
+      <strong>${escapeHtml(getLensStoryValue(story, "reflectionQuestion"))}</strong>
+    </aside>
+    <div class="lens-story-meta">
+      ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
+      ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
+    </div>`;
 }
 
 function renderField() {
