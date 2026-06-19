@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.20";
+const appVersion = "0.1.21";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -77,10 +77,6 @@ const routeMeta = {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
     description: "Explore MapKAI's knowledge lenses and see which fields are unknown, emerging, familiar, or active in a learning map.",
   },
-  "/knowledge-graph": {
-    title: "MapKAI Knowledge Panorama — Full Knowledge Coordinate Tree",
-    description: "Browse the full MapKAI knowledge panorama, including areas, narrow fields, detailed fields, story coverage, and quiet spaces.",
-  },
   "/map-challenge": {
     title: "MapKAI Map Challenge — Open the Knowledge Map",
     description: "Answer MapKAI challenge questions and gradually reveal snowy mountains, land, and green oases on the knowledge map.",
@@ -122,7 +118,7 @@ const uiText = {
     navExplore: "Explore",
     navMap: "Knowledge Map",
     navPdc: "PDC",
-    navCategories: "Knowledge Lenses",
+    navCategories: "Lens",
     navLearning: "Learning",
     navAbout: "About",
     storiesEyebrow: "Stories",
@@ -8590,7 +8586,6 @@ function applyLanguage() {
   const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
   if (activeStory) renderStoryDetail(activeStory[1]);
   renderStoryMap();
-  renderKnowledgePanorama();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
     const match = normalizeRoute(window.location.pathname).match(/^\/categories\/(\d{2})$/);
     if (match) renderCategoryDetail(match[1]);
@@ -8632,7 +8627,6 @@ function goToRoute(route, replace = false) {
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   if (storyMatch) renderStoryDetail(storyMatch[1]);
-  if (visibleTarget === "/knowledge-graph") renderKnowledgePanorama();
   const activePage = categoryMatch
     ? "/categories/detail"
     : fieldMatch
@@ -8654,7 +8648,7 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/stories" && visibleTarget.startsWith("/stories")) ||
       (linkRoute === "/categories" && visibleTarget.startsWith("/categories")) ||
-      (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge" || visibleTarget === "/knowledge-graph")) ||
+      (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
@@ -9008,26 +9002,6 @@ function renderFounderKnowledgeGraph() {
         </section>`;
     })
     .join("");
-}
-
-function renderKnowledgePanorama() {
-  const summary = document.getElementById("knowledgePanoramaSummary");
-  const tree = document.getElementById("knowledgePanoramaTree");
-  const table = document.getElementById("knowledgePanoramaTable");
-  if (!summary && !tree && !table) return;
-  const stats = getCoverageStats();
-  if (summary) {
-    summary.innerHTML = `
-      <article><span>Official areas</span><strong>${stats.officialAreas}</strong></article>
-      <article><span>Narrow fields</span><strong>${stats.narrowFields}</strong></article>
-      <article><span>Detailed fields</span><strong>${stats.detailedFieldsIncludingUnknown}</strong></article>
-      <article><span>Practical fields</span><strong>${stats.totalPracticalFields}</strong></article>
-      <article><span>Lit by stories</span><strong>${stats.litFields}</strong></article>
-      <article><span>Still quiet</span><strong>${stats.unlitFields}</strong></article>
-    `;
-  }
-  if (tree) tree.innerHTML = renderFounderKnowledgeGraph();
-  if (table) table.innerHTML = renderKnowledgeFieldTable();
 }
 
 function renderCategories() {
@@ -10904,7 +10878,6 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 renderCategories();
 renderStories();
 renderStoryMap();
-renderKnowledgePanorama();
 renderContactSections();
 renderSiteFooters();
 registerVisit();
