@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.23";
+const appVersion = "0.1.24";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -138,6 +138,10 @@ const uiText = {
     lensStoryFieldLabel: "Connected field",
     lensStoryNotFoundTitle: "Story not found",
     lensStoryNotFoundCopy: "This lens story is not available yet.",
+    lensStoryShelfEyebrow: "Knowledge story sample",
+    lensStoryShelfTitle: "Start with the first lens story.",
+    lensStoryShelfCopy: "The full story set will grow one subcategory at a time. This first sample shows how an everyday scene can open a knowledge lens.",
+    lensStoryShelfLens: "Lens",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
     storyPerspectivesTitle: "Historical debate",
@@ -470,6 +474,10 @@ const uiText = {
     lensStoryFieldLabel: "关联领域",
     lensStoryNotFoundTitle: "故事未找到",
     lensStoryNotFoundCopy: "这个知识故事还没有开放。",
+    lensStoryShelfEyebrow: "知识故事样板",
+    lensStoryShelfTitle: "先从第一个镜头故事开始。",
+    lensStoryShelfCopy: "完整故事集会按子类一个一个扩展。这个样板先展示：如何用一个生活情景打开一个知识镜头。",
+    lensStoryShelfLens: "镜头",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
     storyPerspectivesTitle: "当时的讨论",
@@ -9098,6 +9106,7 @@ function renderFounderKnowledgeGraph() {
 }
 
 function renderCategories() {
+  renderLensStoryShelf();
   const grid = document.getElementById("categoryGrid");
   const detailCards = categories
     .map((category) => {
@@ -9121,6 +9130,37 @@ function renderCategories() {
     })
     .join("");
   if (grid) grid.innerHTML = detailCards;
+}
+
+function renderLensStoryShelf() {
+  const target = document.getElementById("lensStoryShelf");
+  if (!target) return;
+  if (!lensStories.length) {
+    target.innerHTML = "";
+    return;
+  }
+  const cards = lensStories.map((story) => {
+    const category = categories.find((item) => item.code === story.categoryCode);
+    const categoryTitle = category ? getCategoryTitle(category) : story.categoryCode;
+    const href = `/lens-stories/${story.id}`;
+    return `
+      <a class="lens-story-sample-card" href="${href}" data-route="${href}">
+        <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
+        <span class="lens-story-sample-content">
+          <small>${escapeHtml(t("lensStoryShelfLens"))} ${escapeHtml(story.categoryCode)} · ${escapeHtml(categoryTitle)} · ${escapeHtml(story.groupCode)}</small>
+          <strong>${escapeHtml(getLensStoryValue(story, "title"))}</strong>
+          <em>${escapeHtml(getLensStoryValue(story, "summary"))}</em>
+          <b>${escapeHtml(t("readLensStory"))}</b>
+        </span>
+      </a>`;
+  }).join("");
+  target.innerHTML = `
+    <div class="lens-story-shelf-heading">
+      <span>${escapeHtml(t("lensStoryShelfEyebrow"))}</span>
+      <h2>${escapeHtml(t("lensStoryShelfTitle"))}</h2>
+      <p>${escapeHtml(t("lensStoryShelfCopy"))}</p>
+    </div>
+    <div class="lens-story-sample-grid">${cards}</div>`;
 }
 
 function getMasteryFromCorrect(subjectCode) {
