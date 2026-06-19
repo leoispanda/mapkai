@@ -5042,6 +5042,58 @@ dd,
   opacity: 0.72;
 }
 
+.knowledge-graph-page {
+  gap: 1.25rem;
+}
+
+.knowledge-graph-page .internal-code {
+  display: inline-flex;
+  margin-right: 8px;
+  color: var(--green-dark);
+  font-weight: 860;
+}
+
+.knowledge-panorama-summary {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.knowledge-panorama-summary article {
+  display: grid;
+  gap: 0.25rem;
+  min-height: 86px;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.knowledge-panorama-summary span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.knowledge-panorama-summary strong {
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.knowledge-panorama-panel {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.knowledge-panorama-panel .founder-graph-area {
+  background: rgba(248, 250, 252, 0.92);
+}
+
 .story-map-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.6fr 1fr;
@@ -5126,7 +5178,8 @@ dd,
   .story-perspective-grid,
   .story-map-layout,
   .coverage-summary,
-  .coverage-founder-grid {
+  .coverage-founder-grid,
+  .knowledge-panorama-summary {
     grid-template-columns: 1fr;
   }
 

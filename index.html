@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.19" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.20" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -447,7 +447,8 @@
             <div class="hero-actions">
               <a class="button primary" href="/map-challenge" data-route="/map-challenge">Start Map Challenge</a>
               <a class="button secondary" href="/explore" data-route="/explore">Try Lens Explore</a>
-              <a class="button secondary founder-public-entry" href="/categories" data-route="/categories">Browse Knowledge Lenses</a>
+              <a class="button secondary" href="/knowledge-graph" data-route="/knowledge-graph">Open Knowledge Panorama</a>
+              <a class="button secondary" href="/categories" data-route="/categories">Browse Knowledge Lenses</a>
             </div>
           </section>
           <section class="map-stage" aria-label="Cartoon knowledge map">
@@ -460,6 +461,37 @@
             </div>
           </section>
         </div>
+      </section>
+
+      <section class="page knowledge-graph-page" id="knowledgeGraph" data-page="/knowledge-graph">
+        <div class="section-heading compact">
+          <p class="eyebrow">Knowledge Panorama</p>
+          <h1>MapKAI knowledge panorama.</h1>
+          <p>
+            Browse the full coordinate tree behind MapKAI: broad areas, narrow fields,
+            practical fields, story coverage, and quiet spaces still waiting to be explored.
+          </p>
+        </div>
+        <div class="route-cta">
+          <a class="button primary" href="/map-challenge" data-route="/map-challenge">Start Map Challenge</a>
+          <a class="button secondary" href="/map" data-route="/map">View Knowledge Map</a>
+          <a class="button secondary" href="/categories" data-route="/categories">Browse Knowledge Lenses</a>
+        </div>
+        <section class="knowledge-panorama-summary" id="knowledgePanoramaSummary" aria-label="Knowledge panorama summary"></section>
+        <section class="knowledge-panorama-panel">
+          <div class="story-layer-heading">
+            <h2>Full coordinate tree</h2>
+            <p>Every MapKAI knowledge coordinate, grouped from area to narrow field to detailed practical field.</p>
+          </div>
+          <div id="knowledgePanoramaTree"></div>
+        </section>
+        <section class="knowledge-panorama-panel">
+          <div class="story-layer-heading">
+            <h2>Field table</h2>
+            <p>A scannable table of detailed fields, coverage status, and story links.</p>
+          </div>
+          <div class="founder-table-wrap" id="knowledgePanoramaTable"></div>
+        </section>
       </section>
 
       <section class="page explore-page" id="mapChallenge" data-page="/map-challenge">
@@ -568,6 +600,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=0.1.19"></script>
+    <script src="/script.js?v=0.1.20"></script>
   </body>
 </html>
