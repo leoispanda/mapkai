@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.28";
+const appVersion = "0.1.29";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -2547,11 +2547,11 @@ const sublensStoryDrafts = [
 ];
 
 const fieldStoryDetailsZh = {
-  "0111": ["教育科学", "错题模式的研究", "同一张练习卷在两个班里出现了完全不同的错题模式。", "教育科学用证据研究学习过程、教学设计、评估和反馈是否真的有效。", "当一个学习结果不好时，你先责怪人，还是先检查学习条件？"],
-  "0112": ["学前教师培养", "午睡前的绘本时间忽然乱了，老师发现孩子们不是不听话，而是还没学会转换节奏。", "学前教师培养关注幼儿发展、照护、安全、游戏和早期学习之间的关系。", "你如何把一个小孩的情绪看成发展信号，而不是单纯的麻烦？"],
-  "0113": ["无学科专门化教师培养", "一位新老师要同时带阅读、数字、秩序和班级关系，她发现真正困难的是组织学习场面。", "无学科专门化教师培养训练通用教学能力、课堂管理、反馈和学习支持。", "什么样的教学能力不属于任何一门课，却支撑所有课？"],
-  "0114": ["有学科专门化教师培养", "数学老师讲分数时，学生会算却说不出为什么，课堂因此转向概念本身。", "有学科专门化教师培养把学科知识和教学方法结合起来。", "懂一门学科和教会一门学科，中间差了什么？"],
-  "0119": ["未另分类的教育", "社区做了一门亲子修理课，既不像学校课程，也不像普通培训。", "未另分类的教育收纳那些真实支持学习、但不适合标准教育标签的形式。", "哪些学习发生在正式课程之外，却真正改变了人？"],
+  "0111": ["教育科学", "错题背后的第二个班级", "同一张练习卷发到两个班，A 班几乎都错第 3 题，B 班却集中错第 7 题。", "教育科学用证据研究学习过程、教学设计、评估和反馈是否真的有效。", "当一个学习结果不好时，你先责怪人，还是先检查学习条件？", "陈老师第一反应是“孩子不细心”。实习老师却把错题按班级、座位和讲解顺序画成一张小表。她们发现，A 班第 3 题错，是因为前一天的演示少了一个步骤；B 班第 7 题错，是因为题目里的“至少”被很多孩子读成了“正好”。第二周，陈老师没有加练十页题，而是改了一个说明、一段板书和一个提问方式。错题不是消失了，而是换了形状。她第一次感觉到，教学不是把答案送出去，而是观察答案在哪里没有抵达。", "一张错题表让老师从责怪学生，转向观察学习条件。"],
+  "0112": ["学前教师培养", "午睡前那本太长的绘本", "午睡前的绘本时间突然失控，几个孩子开始滚垫子，还有一个孩子抱着鞋不肯躺下。", "学前教师培养关注幼儿发展、照护、安全、游戏和早期学习之间的关系。", "你如何把一个小孩的情绪看成发展信号，而不是单纯的麻烦？", "新来的助教以为自己读得不够有趣，于是把声音放得更夸张。老教师轻轻合上书，问她：“你看见他们的眼睛了吗？”孩子们不是讨厌故事，而是故事太长，睡前转换太突然，身体还停在游戏时间里。第二天，她们把绘本拆成三页，先收玩具，再摸一摸自己的小毯子，最后让每个孩子选一句晚安话。房间没有立刻安静，但孩子们开始知道接下来会发生什么。学前教育有时不是教更多内容，而是替尚未成熟的身体搭一座小桥。", "一次混乱的午睡前活动，让老师看见幼儿需要的是节奏、预告和安全感。"],
+  "0113": ["无学科专门化教师培养", "没有学科名字的一节课", "代课老师走进教室时，桌上同时有拼音卡、尺子、图画本和两个正在吵架的孩子。", "无学科专门化教师培养训练通用教学能力、课堂管理、反馈和学习支持。", "什么样的教学能力不属于任何一门课，却支撑所有课？", "她原本准备教阅读，五分钟后却发现真正的问题不是阅读。一个孩子不会等待轮到自己，一个孩子害怕读错，另一组已经把尺子当成玩具。她没有把课拆成“语文”“数学”“纪律”三件事，而是先画出今天的三个小步骤：听一句、做一件、告诉同桌你发现了什么。教室慢慢重新合拢。下课后，她才明白，无学科专门化的教师训练不是“不专门”，而是学习如何托住一个完整的学习场面，让任何内容都有地方发生。", "一节临时代课说明：课堂能不能发生，常常先取决于通用教学能力。"],
+  "0114": ["有学科专门化教师培养", "会算分数的孩子", "数学课上，学生都会把二分之一和四分之二写成相等，却没人能解释为什么。", "有学科专门化教师培养把学科知识和教学方法结合起来。", "懂一门学科和教会一门学科，中间差了什么？", "林老师差点又写下一排公式。她停住，把一张纸披萨剪成两块，又把另一张剪成四块。孩子们很快说：“一样多。”她追问：“什么一样？数字一样，还是量一样？”教室安静了几秒。一个孩子说，数字看起来变了，但吃到的没有变。那一刻，分数从计算题变成了关系。学科教师的困难就在这里：自己理解不够，还不能教；自己理解太熟，也可能忘了学生第一次看见概念时有多陌生。", "一个分数问题提醒老师：学科教学不是展示答案，而是带学生走进概念。"],
+  "0119": ["未另分类的教育", "修自行车的亲子课", "社区中心开了一门亲子修车课，报名表上却不知道该写它属于劳动、科学、家庭教育还是生活技能。", "未另分类的教育收纳那些真实支持学习、但不适合标准教育标签的形式。", "哪些学习发生在正式课程之外，却真正改变了人？", "第一节课，孩子只想转车铃，家长只想快点把车修好。老师没有急着讲结构，而是让每组先找出“哪里发出奇怪声音”。有人发现链条太干，有人发现刹车线松了，还有人第一次听见父亲承认：“这个我也不会。”一小时后，几辆车没有完全修好，但亲子之间多了一种共同检查问题的方法。这门课很难归类，却很真实：它教工具、耐心、合作、错误和生活里的判断。不是所有教育都长得像课程表。", "一门难以归类的修车课，让学习发生在工具、家庭和生活判断之间。"],
   "0211": ["视听技术与媒体制作", "生日视频剪完后，大家才发现同一段素材可以被剪成感谢、告别或广告。", "视听技术与媒体制作关注影像、声音、剪辑、传播和技术表达。", "当你剪掉一秒钟画面时，你是否也改变了意义？"],
   "0212": ["时装、室内与工业设计", "一把椅子看起来漂亮，却让老人起身困难。", "设计把材料、功能、身体、审美和使用情境放在一起思考。", "你身边哪个好看的东西，其实没有认真对待使用者？"],
   "0213": ["美术", "画室里一只普通杯子被画了十几遍，每张都像在问不同的问题。", "美术训练观察、构图、材料、表达和对可见世界的重新解释。", "当你真的看一个普通物件十分钟，会看见什么平时错过的东西？"],
@@ -2675,7 +2675,7 @@ const groupLensStories = [
 
 function makeFieldLensStory(category, group, code, title) {
   const detail = fieldStoryDetailsZh[code] || [];
-  const [fieldTitleZh, titleZh, sceneZh, knowledgePointZh, reflectionQuestionZh] = detail;
+  const [fieldTitleZh, titleZh, sceneZh, knowledgePointZh, reflectionQuestionZh, storyBodyZh, summaryZh] = detail;
   const sourceStory =
     groupLensStories.find((story) => story.categoryCode === category.code && story.groupCode === group.code) ||
     groupLensStories.find((story) => story.categoryCode === category.code) ||
@@ -2695,14 +2695,14 @@ function makeFieldLensStory(category, group, code, title) {
     image: sourceStory?.image || "/assets/stories/000-general-starter-course.png",
     imageAlt: sourceStory?.imageAlt || "An everyday learning scene connected to a MapKAI knowledge lens.",
     imageAltZh: sourceStory?.imageAltZh || "一个与 MapKAI 知识镜头相关的日常学习场景。",
-    title: `A closer look at ${title}`,
+    title: `When ${title.toLowerCase()} becomes visible`,
     titleZh: titleZh || `${zhFieldTitle}的小故事`,
     summary: `An everyday moment shows how ${title.toLowerCase()} works in real life.`,
-    summaryZh: `${sceneZh || `一个普通场景让${zhFieldTitle}变得具体。`}这则故事把${zhFieldTitle}放回日常生活。`,
+    summaryZh: summaryZh || `${sceneZh || `一个普通场景让${zhFieldTitle}变得具体。`}这则故事把${zhFieldTitle}放回日常生活。`,
     scene: `Someone notices a practical situation where ${title.toLowerCase()} matters more than expected.`,
     sceneZh: sceneZh || `一个普通场景让${zhFieldTitle}变得具体。`,
     storyBody: `At first, the situation looks like a small inconvenience. As people ask what changed, who is affected, and how better choices could be tested, the field becomes concrete. ${title} helps turn the moment into a question that can be studied, designed, improved, or cared for.`,
-    storyBodyZh: `一开始，旁观者只看到一个小麻烦。后来有人继续追问：谁受影响，什么条件在起作用，怎样判断改变真的有效。答案慢慢指向这个知识点：${knowledgePointZh || `${zhFieldTitle}帮助人把现实问题拆成可以理解和改进的部分。`}这时，${zhFieldTitle}不再只是一个分类名称，而是一副看见现实细节的镜头。`,
+    storyBodyZh: storyBodyZh || `一开始，旁观者只看到一个小麻烦。后来有人继续追问：谁受影响，什么条件在起作用，怎样判断改变真的有效。答案慢慢指向这个知识点：${knowledgePointZh || `${zhFieldTitle}帮助人把现实问题拆成可以理解和改进的部分。`}这时，${zhFieldTitle}不再只是一个分类名称，而是一副看见现实细节的镜头。`,
     knowledgePoint: `${title} focuses on a practical part of ${group.title.toLowerCase()} and helps people see what has to be learned, designed, measured, or cared for.`,
     knowledgePointZh: knowledgePointZh || `${zhFieldTitle}帮助人把现实问题拆成可以理解和改进的部分。`,
     reflectionQuestion: `Where have you seen ${title.toLowerCase()} quietly shaping an ordinary decision?`,
