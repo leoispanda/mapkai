@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.27";
+const appVersion = "0.1.28";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -2546,6 +2546,100 @@ const sublensStoryDrafts = [
   },
 ];
 
+const fieldStoryDetailsZh = {
+  "0111": ["教育科学", "错题模式的研究", "同一张练习卷在两个班里出现了完全不同的错题模式。", "教育科学用证据研究学习过程、教学设计、评估和反馈是否真的有效。", "当一个学习结果不好时，你先责怪人，还是先检查学习条件？"],
+  "0112": ["学前教师培养", "午睡前的绘本时间忽然乱了，老师发现孩子们不是不听话，而是还没学会转换节奏。", "学前教师培养关注幼儿发展、照护、安全、游戏和早期学习之间的关系。", "你如何把一个小孩的情绪看成发展信号，而不是单纯的麻烦？"],
+  "0113": ["无学科专门化教师培养", "一位新老师要同时带阅读、数字、秩序和班级关系，她发现真正困难的是组织学习场面。", "无学科专门化教师培养训练通用教学能力、课堂管理、反馈和学习支持。", "什么样的教学能力不属于任何一门课，却支撑所有课？"],
+  "0114": ["有学科专门化教师培养", "数学老师讲分数时，学生会算却说不出为什么，课堂因此转向概念本身。", "有学科专门化教师培养把学科知识和教学方法结合起来。", "懂一门学科和教会一门学科，中间差了什么？"],
+  "0119": ["未另分类的教育", "社区做了一门亲子修理课，既不像学校课程，也不像普通培训。", "未另分类的教育收纳那些真实支持学习、但不适合标准教育标签的形式。", "哪些学习发生在正式课程之外，却真正改变了人？"],
+  "0211": ["视听技术与媒体制作", "生日视频剪完后，大家才发现同一段素材可以被剪成感谢、告别或广告。", "视听技术与媒体制作关注影像、声音、剪辑、传播和技术表达。", "当你剪掉一秒钟画面时，你是否也改变了意义？"],
+  "0212": ["时装、室内与工业设计", "一把椅子看起来漂亮，却让老人起身困难。", "设计把材料、功能、身体、审美和使用情境放在一起思考。", "你身边哪个好看的东西，其实没有认真对待使用者？"],
+  "0213": ["美术", "画室里一只普通杯子被画了十几遍，每张都像在问不同的问题。", "美术训练观察、构图、材料、表达和对可见世界的重新解释。", "当你真的看一个普通物件十分钟，会看见什么平时错过的东西？"],
+  "0214": ["手工艺", "外婆补衣服时顺手换了针法，破洞变成了一小块图案。", "手工艺连接材料、手感、传统、耐心和实用美感。", "哪些知识只有手慢下来以后才会出现？"],
+  "0215": ["音乐与表演艺术", "合唱排练里，声音最大的人反而让整首歌失去方向。", "音乐与表演艺术关注节奏、身体、声音、舞台、合作和现场表达。", "什么时候表达不是更用力，而是更会听？"],
+  "0219": ["未另分类的艺术", "街角有人用废弃招牌做了一个会发光的小装置，没人知道该把它归进哪类艺术。", "未另分类的艺术容纳跨媒介、临时性和难以归档的创作。", "如果一个作品没有合适标签，它的价值会变少吗？"],
+  "0221": ["宗教与神学", "一家人在节日前争论一道菜该不该保留，后来谈到的不是菜，而是记忆、敬畏和传承。", "宗教与神学研究信仰、仪式、文本、共同体和终极意义。", "哪些日常仪式其实在回答人为什么活着的问题？"],
+  "0222": ["历史与考古", "工地挖出一块旧门牌，附近居民忽然开始讲起被遗忘的街道。", "历史与考古通过证据、遗迹、时间和叙述理解过去。", "当一个地方的过去被看见，今天的人会怎样改变走路方式？"],
+  "0223": ["哲学与伦理", "朋友捡到钱包，有人说交给警察，有人说先找失主，争论从办法变成了原则。", "哲学与伦理研究价值、责任、理由、判断和行动背后的假设。", "当两个选择都说得通时，你靠什么判断更应该做哪一个？"],
+  "0229": ["未另分类的人文学科", "一封没有署名的旧信同时涉及地方传说、家庭记忆和语言习惯。", "未另分类的人文学科处理那些关于意义、文本和人的经验但难以放入单一门类的问题。", "什么样的问题必须从人的故事进入，而不能只从数据进入？"],
+  "0231": ["语言习得", "孩子把第二语言里的词用在家乡话句子里，大人笑了，老师却听见了学习正在发生。", "语言习得关注人如何在使用、反馈、环境和身份中获得语言。", "错误有没有可能是语言正在生长的声音？"],
+  "0232": ["文学与语言学", "读书会为一个词争了二十分钟，最后发现每个人的理解都来自不同语境。", "文学与语言学研究文本、结构、声音、意义和语言规则。", "一个词为什么能让人同时靠近和误解彼此？"],
+  "0239": ["未另分类的语言", "移民市场里出现了混合菜单，三种语言挤在一张小黑板上。", "未另分类的语言关注不适合标准语种或课程标签的语言实践。", "语言什么时候不是考试科目，而是生存方式？"],
+  "0311": ["经济学", "面包店把临近打烊的面包降价，排队的人和浪费的食物同时变少了。", "经济学研究稀缺、价格、激励、选择和资源分配。", "一个价格改变时，谁的行为会跟着改变？"],
+  "0312": ["政治科学与公民学", "小区要不要开放停车位，争论最后变成规则、代表和公共利益的问题。", "政治科学与公民学关注公共决策、权力、制度、参与和责任。", "当大家都说为了公共利益时，谁来定义公共？"],
+  "0313": ["心理学", "朋友总在重要邮件发出前反复检查，问题不只是细心，而是焦虑在指挥注意力。", "心理学研究行为、情绪、认知、发展和人与环境的互动。", "你最近一个习惯背后，可能藏着什么心理需求？"],
+  "0314": ["社会学与文化研究", "同一栋楼里，年轻人觉得群聊方便，老人却觉得通知贴在门口才算正式。", "社会学与文化研究关注规范、身份、群体、文化差异和社会结构。", "一个简单通知为什么会因为群体不同而变成不同现实？"],
+  "0319": ["未另分类的社会与行为科学", "志愿者发现社区里的孤独感既不是心理问题，也不只是邻里关系问题。", "未另分类的社会与行为科学处理跨越行为、群体和制度的复杂现象。", "哪些人的问题其实是关系和环境共同制造的？"],
+  "0321": ["新闻与报道", "暴雨夜里，同一张积水照片被转发成三种说法，记者先去确认地点和时间。", "新闻与报道关注事实核查、采访、叙事、公共信息和责任。", "在转发之前，你愿意为一个事实多问哪一个问题？"],
+  "0322": ["图书馆、信息与档案研究", "老人想找一张几十年前的毕业照，管理员从标签、年份和捐赠记录一路追踪。", "图书馆、信息与档案研究关注信息组织、保存、检索和长期记忆。", "如果信息找不到，它和不存在有什么区别？"],
+  "0329": ["未另分类的新闻与信息", "社区建立了一个失物消息板，既不是新闻，也不是档案，却让信息开始可信地流动。", "未另分类的新闻与信息关注不适合标准媒体或档案标签的信息实践。", "什么样的信息系统小到不起眼，却支撑着信任？"],
+  "0411": ["会计与税务", "小店月底发现现金不少却利润很低，账本第一次把感觉变成事实。", "会计与税务让收入、成本、税务和责任变得可记录、可解释。", "没有记录的钱，真的能被管理吗？"],
+  "0412": ["金融、银行与保险", "朋友买保险时只看价格，直到有人问他真正害怕的风险是什么。", "金融、银行与保险研究时间、风险、信用、保护和资金选择。", "你付出的每一笔钱，是在买收益、买便利，还是买安心？"],
+  "0413": ["管理与行政", "活动当天每个人都很努力，却没人知道谁负责钥匙。", "管理与行政关注组织、流程、责任、协调和执行。", "一个团队失败时，问题一定是人不努力吗？"],
+  "0414": ["市场营销与广告", "海报写满优点却没人停下，换成一句真实痛点后才有人询问。", "市场营销与广告研究需求、定位、传播、注意力和信任。", "你是在告诉别人你有什么，还是在回应别人为什么在意？"],
+  "0415": ["秘书与办公事务", "会议顺利结束不是因为讨论少，而是有人提前整理了议程、资料和后续事项。", "秘书与办公事务关注文档、沟通、日程、流程和组织记忆。", "哪些看不见的准备，让一个组织看起来很顺？"],
+  "0416": ["批发与零售销售", "水果摊老板把最熟的桃放在前面，因为他知道今天谁会先来买。", "批发与零售销售关注库存、陈列、定价、顾客关系和流通。", "一个货架的顺序，怎样改变人的选择？"],
+  "0417": ["工作技能", "实习生技术不差，却总错过交付时间，导师先教他确认任务边界。", "工作技能关注沟通、协作、时间、责任和职业场景中的基本能力。", "什么能力不写在职位名称里，却决定你能不能可靠地完成事？"],
+  "0419": ["未另分类的商业与行政", "朋友经营一个临时市集，既要招商、排班、收款，又要处理投诉。", "未另分类的商业与行政收纳混合型经营和组织实践。", "哪些真实工作因为太混合，反而很难被一个岗位名称说清？"],
+  "0511": ["生物学", "窗台上的豆苗总向光弯曲，孩子第一次把生命看成会回应环境的系统。", "生物学研究生命、细胞、物种、遗传、适应和生态关系。", "你观察一个生命时，看到的是物体，还是正在调节的过程？"],
+  "0512": ["生物化学", "面团发酵失败后，厨师开始关心温度、酶和微小反应。", "生物化学研究生命里的分子、反应、能量和物质变化。", "一个看不见的反应，怎样改变你能看见的结果？"],
+  "0519": ["未另分类的生物相关科学", "水族箱里的藻类突然暴增，原因横跨光照、营养和微生物。", "未另分类的生物相关科学处理不适合单一生物门类的生命现象。", "哪些生命问题需要几个尺度一起看？"],
+  "0521": ["环境科学", "学校操场旁的空气检测值总比公园高，学生开始怀疑采样位置。", "环境科学研究污染、资源、气候、生态和人类活动之间的关系。", "当你说环境变好了，你测量的是哪一个环境？"],
+  "0522": ["自然环境与野生动物", "夜里路灯太亮，花园里的昆虫少了，孩子以为只是天气变了。", "自然环境与野生动物关注栖息地、物种行为、保护和生态平衡。", "一个方便人的改变，会怎样悄悄改变其他生命？"],
+  "0529": ["未另分类的环境", "社区池塘变浑浊，原因既不像单纯污染，也不像普通生态问题。", "未另分类的环境处理跨越水、土、气候、社区使用的复杂环境现象。", "什么环境问题被分门别类以后反而看不清？"],
+  "0531": ["化学", "清洁剂混用后刺鼻气味出现，大家才意识到物质会彼此反应。", "化学研究物质组成、性质、反应和变化条件。", "你身边哪件小事其实是物质关系在起作用？"],
+  "0532": ["地球科学", "雨后坡道总积水，邻居从土壤、坡度和地下排水开始找答案。", "地球科学研究岩石、水、气候、地形和地球系统。", "脚下的地面为什么从来不是静止背景？"],
+  "0533": ["物理学", "电梯突然停住时，孩子第一次认真感到速度、力和惯性。", "物理学研究运动、能量、力、物质和自然规律。", "哪些日常感觉其实是物理规律在提醒你？"],
+  "0539": ["未另分类的物理科学", "厨房里一个奇怪的结晶现象，说不清属于化学、物理还是材料问题。", "未另分类的物理科学收纳跨越物质、能量和实验现象的研究。", "当现象不听分类安排时，你会先观察还是先命名？"],
+  "0541": ["数学", "合租账单分摊时，大家发现公平不是平均这么简单。", "数学用数量、结构、模式和推理澄清关系。", "什么时候一个数字不是答案，而是重新提问的工具？"],
+  "0542": ["统计学", "家长群说新路口更危险，统计记录却显示事故少了但惊险更多。", "统计学研究数据收集、变化、不确定性、推断和偏差。", "你看到一个平均数时，最想知道它遮住了什么差异？"],
+  "0611": ["计算机使用", "妈妈学会保存文件后，终于不再把重要文档只放在聊天窗口里。", "计算机使用关注基本数字工具、文件、账户、安全和日常操作能力。", "一个人不会用工具时，问题是工具复杂，还是学习入口太少？"],
+  "0612": ["数据库与网络设计及管理", "社团名单存在三个人手机里，活动前一天没人知道哪个版本最新。", "数据库与网络设计及管理关注数据结构、连接、权限、可靠性和维护。", "当信息必须被多人同时信任时，它该住在哪里？"],
+  "0613": ["软件与应用开发及分析", "订餐小程序总让人重复填写地址，开发者第一次跟着用户走完整流程。", "软件与应用开发及分析关注需求、逻辑、界面、测试和持续改进。", "一个能运行的软件，是否就等于一个好用的软件？"],
+  "0619": ["未另分类的信息与通信技术", "社区用二维码、纸表和群消息混合登记老人需求，系统很小但很有效。", "未另分类的信息技术收纳不适合标准软件或网络标签的数字实践。", "哪些数字解决方案重要，不是因为先进，而是因为贴合现场？"],
+  "0711": ["化学工程与工艺", "洗衣液小厂换了配方，泡沫少了，管道却更稳定。", "化学工程与工艺把化学反应转化为安全、可控、可规模化的流程。", "从实验成功到稳定生产，中间需要哪些看不见的控制？"],
+  "0712": ["环境保护技术", "餐馆装了油烟过滤器后，邻居投诉少了，但维护记录也变得重要。", "环境保护技术用工程方法减少污染、处理废物和保护环境。", "一个环保设备如果没人维护，还算解决方案吗？"],
+  "0713": ["电力与能源", "停电那晚，整栋楼才意识到冰箱、电梯和网络都依赖同一条能源链。", "电力与能源关注发电、输配、效率、储能和安全使用。", "你最依赖的日常便利，背后是哪一种能源安排？"],
+  "0714": ["电子与自动化", "自动门总在高峰期误开，工程师调整的不只是传感器，还有人流逻辑。", "电子与自动化研究电路、控制、传感、机器和自动系统。", "当机器自动行动时，它到底读懂了什么信号？"],
+  "0715": ["机械与金属行业", "自行车刹车吱响，修车师傅听声音就知道摩擦面出了问题。", "机械与金属行业关注结构、部件、加工、维修和力的传递。", "哪些声音是在告诉你材料和结构正在求救？"],
+  "0716": ["机动车、船舶与航空器", "渡船延迟不是因为船慢，而是风、载重、燃油和安全规则一起改变了计划。", "机动车、船舶与航空器关注交通工具的设计、维护、运行和安全。", "移动得更快之前，系统必须先保证什么？"],
+  "0719": ["未另分类的工程行业", "维修队用非标准零件解决了老设备问题，但先做了临时安全测试。", "未另分类的工程行业处理不适合标准工程分支的技术实践。", "临场修复什么时候是创造，什么时候是风险？"],
+  "0721": ["食品加工", "招牌汤要装瓶出售后，味道、保质期和密封都成了问题。", "食品加工把原料变成安全、稳定、可运输和可销售的食品。", "一份好吃的食物，怎样才能经得起时间和距离？"],
+  "0722": ["材料：玻璃、纸、塑料与木材", "搬家纸箱看似一样，有的能承重，有的遇潮就塌。", "材料学习关注玻璃、纸、塑料、木材等材料的性质、加工和用途。", "你选择材料时，是在选择外观，还是在选择它能承受什么？"],
+  "0723": ["纺织品：服装、鞋类与皮革", "雨天鞋底打滑，设计师重新看了纹路、材料和走路姿势。", "纺织品与服装鞋类关注纤维、结构、舒适、安全和制作工艺。", "贴近身体的东西，为什么需要同时理解材料和动作？"],
+  "0724": ["采矿与开采", "一块手机电池让学生追问金属从哪里来，答案一路走到矿区。", "采矿与开采关注资源发现、提取、安全、环境和供应链。", "一个产品看起来很干净时，它的原料故事去了哪里？"],
+  "0729": ["未另分类的制造与加工", "手工肥皂作坊逐渐接到订单，配方、包装和批次记录都需要重新设计。", "未另分类的制造与加工收纳混合型生产和加工实践。", "当兴趣变成生产，哪些细节会突然变成责任？"],
+  "0731": ["建筑与城镇规划", "新广场很漂亮，却没有阴影，午后几乎没人停留。", "建筑与城镇规划关注空间、动线、公共生活、安全和长期使用。", "一个地方是给照片看的，还是给人生活的？"],
+  "0732": ["建筑与土木工程", "学校门口积水多年，修路队发现问题在坡度、排水和地基。", "建筑与土木工程把结构、道路、水、电和公共安全落到实体系统。", "一条路的问题，为什么可能藏在地下？"],
+  "0811": ["作物与畜牧生产", "农场主换了饲料，鸡蛋产量变了，粪肥和菜地也跟着变化。", "作物与畜牧生产关注种植、饲养、产量、健康和食物系统。", "一个农场决定怎样在多个生命之间传递后果？"],
+  "0812": ["园艺", "阳台花盆换了位置后，香草终于不再徒长。", "园艺关注观赏植物、果蔬、土壤、修剪、光照和空间照料。", "照料植物时，你是在控制它，还是在学习它的条件？"],
+  "0819": ["未另分类的农业", "社区堆肥项目既像种植，也像环保，还像邻里协作。", "未另分类的农业收纳不适合标准农业标签的土地与生产实践。", "哪些食物相关知识发生在田地和城市之间？"],
+  "0911": ["牙科研究", "孩子害怕看牙，牙医先让他摸一摸小镜子，再谈蛀牙。", "牙科研究关注口腔健康、牙齿结构、预防、治疗和患者体验。", "一次治疗能否成功，为什么也取决于恐惧被怎样处理？"],
+  "0912": ["医学", "老人说胸口不舒服，医生没有只听一个症状，而是追问时间、用药和风险。", "医学研究疾病、诊断、治疗、预防和人体系统。", "什么时候一个小症状不能被当成小事？"],
+  "0913": ["护理与助产", "病房夜里很安静，护士却从呼吸、表情和输液速度里读到变化。", "护理与助产关注持续照护、生命过程、观察、安慰和安全。", "照护为什么常常发生在别人没有注意到的细节里？"],
+  "0914": ["医学诊断与治疗技术", "影像检查没有直接给出答案，技术员的操作质量影响了医生能看见什么。", "医学诊断与治疗技术关注设备、检测、影像、治疗支持和质量控制。", "一项技术检查背后，人的判断还在哪里起作用？"],
+  "0915": ["治疗与康复", "摔伤后的第一次下楼梯，比检查报告更能说明恢复到了哪里。", "治疗与康复关注功能恢复、训练、适应、疼痛和长期支持。", "恢复是不是回到过去，还是学会新的生活方式？"],
+  "0916": ["药学", "同一种药饭前饭后效果不同，药师把说明书翻成了生活安排。", "药学研究药物作用、剂量、安全、相互作用和用药指导。", "一粒药真正进入生活时，需要哪些知识保护它的效果？"],
+  "0917": ["传统与补充医学及疗法", "邻居推荐草药，医生没有立刻否定，而是先问成分、剂量和正在服用的药。", "传统与补充医学关注传统疗法、身体经验、安全边界和证据对话。", "尊重传统和保护安全，如何同时发生？"],
+  "0919": ["未另分类的健康", "跑步社群发现新手受伤多，问题不只是运动医学，也涉及习惯和风险沟通。", "未另分类的健康收纳不适合标准医疗门类的健康实践。", "什么健康问题太生活化，以至于很难放进诊室？"],
+  "0921": ["老人和残障成人照护", "楼梯边多装一个扶手，让老人终于敢自己下楼买菜。", "老人和残障成人照护关注尊严、能力支持、安全和日常生活质量。", "帮助一个人时，怎样避免把他的自主性也拿走？"],
+  "0922": ["儿童照护与青少年服务", "少年活动室里，一张安静角落的桌子比更多规则更有用。", "儿童照护与青少年服务关注保护、发展、陪伴、边界和成长环境。", "年轻人需要的是管理，还是一个能安全试错的空间？"],
+  "0923": ["社会工作与咨询", "欠租通知背后，是失业、照护压力和羞耻感缠在一起。", "社会工作与咨询连接个人困难、家庭关系、资源系统和支持过程。", "当一个人求助时，你能看见问题背后的系统吗？"],
+  "0929": ["未另分类的福利", "社区冰箱解决的不只是食物，也是不知道向谁开口的难处。", "未另分类的福利收纳不适合标准福利服务标签的支持实践。", "什么样的帮助因为太朴素，反而最接近人的真实需要？"],
+  "1011": ["家政服务", "家里请人整理后，真正改变的是老人能更安全地在厨房转身。", "家政服务关注清洁、整理、照护辅助、家庭运行和生活安全。", "一个家变得好用，背后有哪些服务知识？"],
+  "1012": ["美发与美容服务", "婚礼前的发型沟通花了半小时，因为顾客要的不只是好看，还有安心。", "美发与美容服务关注形象、身体、审美、沟通和信任。", "服务身体外表时，为什么也在服务情绪？"],
+  "1013": ["酒店、餐厅与餐饮", "餐厅满座时，最难的不是上菜，而是让等待的人仍然感觉被看见。", "酒店、餐厅与餐饮关注接待、食物、流程、卫生和体验。", "一次用餐体验，哪些部分不是食物却决定记忆？"],
+  "1014": ["体育", "社区球赛里，裁判先解释规则，比赛反而更激烈也更安全。", "体育关注训练、规则、身体表现、团队和公平竞争。", "竞争什么时候会让人变好，什么时候会让人受伤？"],
+  "1015": ["旅行、旅游与休闲", "游客迷路后记住的不是景点，而是有人如何帮他重新找到路线。", "旅行、旅游与休闲关注目的地、体验设计、文化接触和安全协调。", "旅行中的自由，为什么常常依赖别人设计好的秩序？"],
+  "1019": ["未另分类的个人服务", "有人专门陪老人办理手机套餐，这项服务很难命名，却很必要。", "未另分类的个人服务收纳改善个人生活但不适合标准服务类别的实践。", "哪些服务因为太贴近生活，反而没有正式名字？"],
+  "1021": ["社区卫生", "小区垃圾点换了位置后，异味少了，投诉也少了。", "社区卫生关注废弃物、水、清洁、公共空间和群体健康。", "干净是个人习惯，还是共同系统？"],
+  "1022": ["职业健康与安全", "仓库新员工总撞到同一个货架，主管终于重画了通道线。", "职业健康与安全关注工作场所风险、预防、设备和安全行为。", "如果一个错误重复发生，问题在个人还是在现场设计？"],
+  "1029": ["未另分类的卫生与职业健康服务", "夜市摊位临时增加洗手点，既是卫生措施，也是经营安排。", "未另分类的卫生与职业健康服务处理混合型公共卫生和工作安全实践。", "哪些安全措施小到不起眼，却改变了整个现场？"],
+  "1031": ["军事与国防", "停电演练里，队伍最先检查的不是武器，而是通信和补给。", "军事与国防关注安全、组织、战略、训练、资源和风险准备。", "真正的防御只是力量，还是系统性的准备？"],
+  "1032": ["人身与财产保护", "商店装了摄像头后，店主还调整了灯光和入口视线。", "人身与财产保护关注风险识别、预防、响应和安全环境设计。", "安全感来自监控，还是来自一个更难被误用的环境？"],
+  "1039": ["未另分类的安全服务", "音乐节的失物和走散儿童由同一组志愿者处理，安全服务变得很难归类。", "未另分类的安全服务收纳非标准但真实保护人的现场支持。", "哪些保护工作只有在事情差点出错时才被看见？"],
+};
+
 function makeSublensStory(draft) {
   const category = categories.find((item) => item.code === draft.categoryCode);
   const group = category?.groups.find((item) => item.code === draft.groupCode);
@@ -2560,14 +2654,79 @@ function makeSublensStory(draft) {
     image: sourceStory.image,
     imageAlt: sourceStory.imageAlt,
     imageAltZh: sourceStory.imageAltZh,
+    storyLevel: "group",
     ...draft,
     groupTitleZh: draft.groupTitleZh || group?.title || draft.groupCode,
   };
 }
 
-const lensStories = [
-  ...baseLensStories,
+function slugifyLensStory(value) {
+  return String(value || "story")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 72) || "story";
+}
+
+const groupLensStories = [
+  ...baseLensStories.map((story) => ({ ...story, storyLevel: "group" })),
   ...sublensStoryDrafts.map(makeSublensStory),
+];
+
+function makeFieldLensStory(category, group, code, title) {
+  const detail = fieldStoryDetailsZh[code] || [];
+  const [fieldTitleZh, titleZh, sceneZh, knowledgePointZh, reflectionQuestionZh] = detail;
+  const sourceStory =
+    groupLensStories.find((story) => story.categoryCode === category.code && story.groupCode === group.code) ||
+    groupLensStories.find((story) => story.categoryCode === category.code) ||
+    groupLensStories[0];
+  const zhFieldTitle = fieldTitleZh || title;
+  return {
+    id: `${code}-${slugifyLensStory(title)}`,
+    storyLevel: "field",
+    categoryCode: category.code,
+    groupCode: group.code,
+    groupTitle: group.title,
+    groupTitleZh: sourceStory?.groupTitleZh || group.title,
+    fieldCodes: [code],
+    fieldTitlesZh: {
+      [code]: zhFieldTitle,
+    },
+    image: sourceStory?.image || "/assets/stories/000-general-starter-course.png",
+    imageAlt: sourceStory?.imageAlt || "An everyday learning scene connected to a MapKAI knowledge lens.",
+    imageAltZh: sourceStory?.imageAltZh || "一个与 MapKAI 知识镜头相关的日常学习场景。",
+    title: `A closer look at ${title}`,
+    titleZh: titleZh || `${zhFieldTitle}的小故事`,
+    summary: `An everyday moment shows how ${title.toLowerCase()} works in real life.`,
+    summaryZh: `${sceneZh || `一个普通场景让${zhFieldTitle}变得具体。`}这则故事把${zhFieldTitle}放回日常生活。`,
+    scene: `Someone notices a practical situation where ${title.toLowerCase()} matters more than expected.`,
+    sceneZh: sceneZh || `一个普通场景让${zhFieldTitle}变得具体。`,
+    storyBody: `At first, the situation looks like a small inconvenience. As people ask what changed, who is affected, and how better choices could be tested, the field becomes concrete. ${title} helps turn the moment into a question that can be studied, designed, improved, or cared for.`,
+    storyBodyZh: `一开始，旁观者只看到一个小麻烦。后来有人继续追问：谁受影响，什么条件在起作用，怎样判断改变真的有效。答案慢慢指向这个知识点：${knowledgePointZh || `${zhFieldTitle}帮助人把现实问题拆成可以理解和改进的部分。`}这时，${zhFieldTitle}不再只是一个分类名称，而是一副看见现实细节的镜头。`,
+    knowledgePoint: `${title} focuses on a practical part of ${group.title.toLowerCase()} and helps people see what has to be learned, designed, measured, or cared for.`,
+    knowledgePointZh: knowledgePointZh || `${zhFieldTitle}帮助人把现实问题拆成可以理解和改进的部分。`,
+    reflectionQuestion: `Where have you seen ${title.toLowerCase()} quietly shaping an ordinary decision?`,
+    reflectionQuestionZh: reflectionQuestionZh || `你身边哪个普通决定，其实正被${zhFieldTitle}悄悄塑造？`,
+    tags: [title, group.title, "everyday knowledge"],
+    tagsZh: [zhFieldTitle, "生活场景", "知识点"],
+  };
+}
+
+const groupStoryFieldCodes = new Set(
+  groupLensStories.flatMap((story) => Array.isArray(story.fieldCodes) ? story.fieldCodes : []),
+);
+
+const fieldLensStories = categories.flatMap((category) =>
+  category.groups.flatMap((group) =>
+    group.fields
+      .filter(([code]) => !groupStoryFieldCodes.has(code))
+      .map(([code, title]) => makeFieldLensStory(category, group, code, title)),
+  ),
+);
+
+const lensStories = [
+  ...groupLensStories,
+  ...fieldLensStories,
 ];
 
 const fieldPlainMeanings = {
@@ -3173,7 +3332,16 @@ function getLensStoryById(storyId) {
 }
 
 function getLensStoryForGroup(categoryCode, groupCode) {
-  return lensStories.find((story) => story.categoryCode === categoryCode && story.groupCode === groupCode);
+  return lensStories.find((story) => story.categoryCode === categoryCode && story.groupCode === groupCode && story.storyLevel !== "field");
+}
+
+function getLensStoryForField(categoryCode, groupCode, fieldCode) {
+  return lensStories.find((story) =>
+    story.categoryCode === categoryCode &&
+    story.groupCode === groupCode &&
+    Array.isArray(story.fieldCodes) &&
+    story.fieldCodes.includes(fieldCode),
+  );
 }
 
 function getLensStoryValue(story, key) {
@@ -11750,22 +11918,27 @@ function renderCategoryTree(category) {
   if (!target) return;
   target.innerHTML = category.groups
     .map((group) => {
-      const story = getLensStoryForGroup(category.code, group.code);
-      const groupTitle = getLensStoryValue(story, "groupTitle") || group.title;
-      const storyHref = story ? `/lens-stories/${story.id}` : `/categories/${category.code}`;
+      const groupStory = getLensStoryForGroup(category.code, group.code);
+      const groupTitle = getLensStoryValue(groupStory, "groupTitle") || group.title;
+      const groupStoryHref = groupStory ? `/lens-stories/${groupStory.id}` : `/categories/${category.code}`;
       const fields = group.fields.map(([code, title]) => {
-        const href = story ? storyHref : `/categories/${category.code}`;
-        const fieldTitle = getLensStoryFieldTitle(story, code, title);
-        return `<a class="field-chip ${story ? "has-story" : ""}" href="${href}" data-route="${href}"><strong class="internal-code">${escapeHtml(code)}</strong>${escapeHtml(fieldTitle)}</a>`;
+        const fieldStory = getLensStoryForField(category.code, group.code, code);
+        const href = fieldStory ? `/lens-stories/${fieldStory.id}` : `/categories/${category.code}`;
+        const fieldTitle = getLensStoryFieldTitle(fieldStory || groupStory, code, title);
+        return `<a class="field-chip ${fieldStory ? "has-story" : ""}" href="${href}" data-route="${href}">
+          <strong class="internal-code">${escapeHtml(code)}</strong>
+          <span class="field-chip-title">${escapeHtml(fieldTitle)}</span>
+          ${fieldStory ? `<em>${escapeHtml(t("readLensStory"))}</em>` : ""}
+        </a>`;
       }).join("");
       return `
-        <section class="tree-group ${story ? "has-story" : ""}">
-          ${story ? `
-            <a class="tree-group-story-link" href="${storyHref}" data-route="${storyHref}">
+        <section class="tree-group ${groupStory ? "has-story" : ""}">
+          ${groupStory ? `
+            <a class="tree-group-story-link" href="${groupStoryHref}" data-route="${groupStoryHref}">
               <span class="internal-code">${escapeHtml(group.code)}</span>
               <span>
                 <strong>${escapeHtml(groupTitle)}</strong>
-                <small>${escapeHtml(getLensStoryValue(story, "summary"))}</small>
+                <small>${escapeHtml(getLensStoryValue(groupStory, "summary"))}</small>
               </span>
               <em>${escapeHtml(t("readLensStory"))}</em>
             </a>` : `

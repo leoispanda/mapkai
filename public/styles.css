@@ -3915,8 +3915,10 @@ canvas {
 .field-chip {
   display: flex;
   gap: 10px;
-  align-items: center;
-  min-height: 54px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 68px;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
@@ -3925,8 +3927,21 @@ canvas {
   font-weight: 740;
 }
 
+.field-chip-title {
+  display: block;
+  line-height: 1.34;
+}
+
 .field-chip strong {
   color: var(--green-dark);
+}
+
+.field-chip em {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 820;
+  line-height: 1.2;
 }
 
 .field-chip.is-active {
