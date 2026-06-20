@@ -143,6 +143,40 @@ The story body must include at least:
 
 Do not compress a discovery into a clean paragraph. If the body can be summarized as "a person observed X and this led to field Y," it is still a synopsis and must be rebuilt.
 
+## Narrative Pressure And Story Movement
+
+A MapKAI story must not only be accurate and structurally correct. It must also feel like something is happening.
+
+After factual and structural checks pass, the story should still have narrative pressure. Narrative pressure does not mean fake drama, invented dialogue, danger, or emotional exaggeration. It means the reader can feel that the old way of seeing cannot comfortably continue.
+
+Use one of these forms of pressure when appropriate:
+
+- a repeated difficulty across places, people, samples, or records;
+- a number or reading that does not return to where it started;
+- a title object that changes meaning through use;
+- a tool that reveals something the eye or old method could not see;
+- a chart, route, ledger, sample, or object that makes a hidden pattern visible;
+- a practical problem that grows heavier when treated separately;
+- an explanation that works once but fails when repeated.
+
+Show the pressure through concrete details, not abstract announcement.
+
+- Weak: "The evidence created pressure and the problem changed."
+- Better: "By the third village, the order was familiar: fewer trees, longer walks for water, thinner soil, and harder firewood collection."
+
+- Weak: "The data revealed a long-term trend."
+- Better: "The line still rose and fell with the seasons, but after each fall it stood a little higher than before."
+
+The story body should normally include this movement:
+
+1. something is handled, counted, carried, observed, drawn, tested, or compared;
+2. the old way of reading it still seems reasonable;
+3. something repeats, resists, grows, fails, or does not fit;
+4. the person changes what they ask;
+5. the object, record, tool, or action means something different by the end.
+
+Do not make prose so cautious that it becomes a safe summary. Safety is necessary, but it is not the final goal. The final goal is an earned knowledge turn inside a readable story.
+
 ## Title Promise And Topic Specificity
 
 The title is a contract with the reader. If the title names a concrete object, place, event, instrument, organism, document, or puzzle, the story body must make that thing do real work.
@@ -355,6 +389,10 @@ Every scene object must serve the knowledge turn. A ledger, specimen folder, the
 - Prefer small cause-and-effect steps over grand transitions.
 - Use short concrete sentences when the story turns. Do not bury the question change in a long abstract sentence.
 - If a sentence could appear in any story, replace it with a detail from this story.
+- Avoid compressed expressions that make the reader guess missing logic. The first mention of a key problem should be concrete and literal; a shorter or more poetic version may appear later only after the real situation is clear.
+- Prefer "Women had to walk farther to find firewood for cooking" before any compressed phrase like "firewood became farther away."
+- Prefer "Rain washed away the topsoil, making the land harder to farm" before any compressed phrase like "soil became thinner."
+- Use this priority order: clarity first, story movement second, poetic quality last.
 - After drafting, remove the field name and famous person's name. The story should still be readable and worth continuing.
 - If the ending sounds like a definition, move that material to "藏在里面的知识" and end the body on the earned new way of seeing.
 - Make the old/new question contrast sharp and short. Long abstract rewrites weaken the turn.
@@ -378,6 +416,11 @@ Use cautious wording for complex historical claims: "often considered," "later b
 ## Output Format
 
 Use this format exactly:
+
+The one-sentence introduction must create curiosity, not reveal the full abstract conclusion. It may introduce the object, pressure, or puzzle, but it should not fully state the knowledge turn before the story begins.
+
+- Weak: "This story shows how separate ecological problems became a connected social-environmental system."
+- Better: "A water bucket, a bundle of firewood, and a seedling pulled several daily problems toward the same question."
 
 ```text
 知识故事

@@ -31,6 +31,17 @@ Readable for curious general adults and advanced students; sharp enough that gra
 
 Do not pass a story just because it is "easy." It must not become childish, fairy-tale-like, over-personified, or moralizing. Do not pass a story just because it is "serious." It must not become an academic abstract, a concept stack, or a disguised literature-review paragraph.
 
+Do not punish a story only because it is simple or short if the scene, evidence pressure, and knowledge turn are clear. The goal is not complexity. The goal is earned clarity.
+
+A simple story still needs:
+
+- concrete scene;
+- old understanding;
+- evidence pressure;
+- character action;
+- changed question;
+- new understanding.
+
 Strict scoring formula:
 
 ```text
@@ -164,7 +175,31 @@ Fail or mark `LOCAL EDIT` if:
 
 Reviewer question: What fact, number, object, or repeated pattern forced the new question?
 
-### 0C. Red Line Checklist
+### 0C. Narrative Pressure Check
+
+Check whether the story has movement, not only correct structure.
+
+Good signs:
+
+- The old way of seeing feels reasonable at first.
+- A concrete object, number, tool, route, record, or repeated difficulty pushes back.
+- The reader can feel why the old question cannot comfortably continue.
+- The key object changes meaning by the end.
+- The turn feels earned rather than announced.
+
+Weak signs:
+
+- The story is accurate but flat.
+- The body reads like a safe summary.
+- The old question and new question are stated, but the reader does not feel the pressure between them.
+- The story avoids false drama but also loses all tension.
+- The object in the title appears, but it does not create movement.
+
+Reviewer question: What exactly made the story move?
+
+If there is no movement, mark `LOCAL EDIT` if the scene is otherwise strong and can be improved locally; mark `FAIL` if the story is mostly synopsis or explanation.
+
+### 0D. Red Line Checklist
 
 The following cannot receive `PASS`:
 
@@ -198,7 +233,7 @@ The following cannot receive `PASS`:
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 
-### 0D. Title Promise And Template Leakage Gate
+### 0E. Title Promise And Template Leakage Gate
 
 Before language review, check the title against the body.
 
@@ -217,7 +252,7 @@ Reviewer question: If the title were "雨水里的小动物," where are the rain
 
 If page media is included in the review, check it against the same promise. A balcony basil image on a Leeuwenhoek microscope story is a page-level mismatch: the text may be locally passable, but the rendered story cannot receive full `PASS` until the visual asset is replaced or field-level images are supported.
 
-### 0E. Boundary Example: Nightingale
+### 0F. Boundary Example: Nightingale
 
 A Florence Nightingale story about wartime hospitals and statistical charts should usually be judged `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`, if it mixes Scutari hospital atmosphere with later London data analysis as one continuous scene.
 
@@ -240,7 +275,7 @@ Approved benchmark for this pattern:
 - Changed question: from "How many did the war take?" to "Which deaths did the total hide, and what conditions made them change?"
 - Knowledge turn: rearranged numbers become evidence for a preventable cause; the chart is a method of seeing, not decoration.
 
-### 0F. Boundary Example: Leeuwenhoek
+### 0G. Boundary Example: Leeuwenhoek
 
 A Leeuwenhoek story titled "雨水里的小动物" must not pass if it only says he made lenses and saw tiny life. It must show the promised scene.
 
@@ -556,6 +591,32 @@ After the handle was removed, the pump could no longer draw water from that sour
 
 Reviewer question: Is this sentence meaningful, or just atmospheric?
 
+### 9A. Compressed Expression Check
+
+Check whether any sentence sounds vivid but requires the reader to fill in missing logic.
+
+Risky compression examples:
+
+- "Firewood became farther away."
+- "Soil became thinner."
+- "Numbers began to speak."
+- "The problem changed position."
+- "The chart forced the truth out."
+
+These are not always forbidden, but the first mention of a key problem must be literal and clear.
+
+Better pattern:
+
+1. First explain the concrete reality.
+2. Then, if useful, use a shorter metaphor later.
+
+Example:
+
+- First: "Women had to walk farther to find firewood for cooking."
+- Later: "By then, firewood had become a longer road."
+
+If a compressed phrase appears before the concrete situation is clear, mark it as a sentence-level issue. If the story relies on many compressed phrases instead of actions and evidence, mark `LOCAL EDIT` or `FAIL`.
+
 ### 10. Environment Serving Knowledge
 
 Environmental description must serve story logic.
@@ -700,6 +761,50 @@ Flag if too many stories use:
 - The same sensory details.
 
 Reviewer question: Are these stories beginning to sound like one template?
+
+## Review Mode
+
+Support two review modes.
+
+### Quick Review Mode
+
+Use Quick Review Mode by default unless the user asks for a full audit, batch audit, strict audit, or detailed review.
+
+Output:
+
+```text
+Review Decision
+PASS | PASS / LOCAL EDIT | LOCAL EDIT | FAIL
+
+Biggest Issue
+{1 to 2 direct sentences explaining the main weakness.}
+
+What Works
+* {1 to 3 bullets.}
+
+Required Fixes
+* Fix 1:
+* Fix 2:
+* Fix 3:
+
+Final Recommendation
+{Small edit, local rewrite, or full rewrite.}
+```
+
+Quick Review should still be strict. Do not use it to soften judgment. It is shorter, not easier.
+
+### Full Audit Mode
+
+Use the existing full "Required Output Format" when:
+
+- the user asks for strict review, full review, audit, batch review, or detailed review;
+- the story receives `FAIL`;
+- the story has historical-scene risk;
+- the story shows template-shell risk;
+- the story is intended as a sample or benchmark;
+- the review needs a micro-edited version.
+
+Keep the existing full output format for Full Audit Mode.
 
 ## Required Output Format
 

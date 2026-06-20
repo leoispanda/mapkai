@@ -348,6 +348,28 @@ Verified:
 - YAML/frontmatter parsing and git diff checks were run before commit.
 
 Push:
+- Pushed to main in commit e879609.
+```
+
+Latest MapKAI story narrative-pressure / review-mode update:
+
+```text
+Changed:
+- Added Narrative Pressure And Story Movement to skills/mapkai-story-rewrite/SKILL.md so correct stories do not become dry safe summaries.
+- Rewrite now asks for concrete movement: something is handled/carried/observed/counted/drawn/tested, the old reading still seems reasonable, something repeats/resists/fails, the question changes, and the object/record/tool/action means something different by the end.
+- Added examples contrasting abstract pressure with concrete pressure, including repeated village difficulties and a seasonal line that rises higher after each fall.
+- Added the rule that the one-sentence introduction must create curiosity without revealing the full abstract knowledge turn.
+- Added compressed-expression guidance under Readability Rules: first mention key problems literally and clearly, then use compressed/poetic phrasing only after the situation is clear. Principle: clarity first, story movement second, poetic quality last.
+- Added Review Mode to skills/mapkai-story-review/SKILL.md: Quick Review Mode by default; Full Audit Mode for FAIL, samples/benchmarks, detailed reviews, historical-scene risk, template-shell risk, batch/strict audit, or micro-edits.
+- Added Narrative Pressure Check to review so accurate-but-flat stories are marked LOCAL EDIT or FAIL depending on severity.
+- Added Compressed Expression Check to review for phrases like "firewood became farther away", "soil became thinner", "numbers began to speak", and similar vivid-but-unclear shortcuts.
+- Updated both story skill agent default prompts to include narrative movement, quick/full review mode, and compressed-expression checks.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- YAML/frontmatter parsing and git diff checks were run before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
