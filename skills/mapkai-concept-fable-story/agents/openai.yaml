@@ -1,4 +1,4 @@
 interface:
   display_name: "MapKAI Concept Fable Story"
-  short_description: "Write serious allegorical stories for abstract concepts."
-  default_prompt: "Write this MapKAI abstract concept as a serious allegorical story. Do not name the concept until late. Avoid childish tone, fairy-tale morals, over-personification, and cute metaphors. Reveal the concept, map the metaphor, state analogy boundaries, and end with a reflection question."
+  short_description: "Write developed late-reveal concept fables."
+  default_prompt: "Use $mapkai-concept-fable-story to write this abstract concept as a developed, serious allegorical story with repeated tension, a late concept reveal, metaphor mapping, analogy boundaries, and a reflection question."

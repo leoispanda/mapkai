@@ -417,6 +417,30 @@ Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
+Latest MapKAI concept fable narrative-depth update:
+
+```text
+Changed:
+- Updated skills/mapkai-concept-fable-story/SKILL.md so Concept Fable Story outputs should feel like developed allegorical stories rather than short examples with labels.
+- Added recommended `寓言故事` length guidance: about 700-1100 Chinese characters or 600-900 English words unless compact output is requested.
+- Added narrative development requirements: opening scene, reasonable old way, first friction, repeated friction, character adjustment, visible pattern, late reveal, and short afterglow.
+- Added title/reveal guidance so concept fable titles create curiosity without spoiling the academic concept too early.
+- Updated skills/mapkai-story-review/SKILL.md with a Concept Fable Narrative Depth Check.
+- Review now downgrades concept fables that are correct but too short, reveal too soon, feel like examples rather than fables, or rush from one problem directly to the concept name.
+- Updated both related agents/openai.yaml prompts to reference developed late-reveal fables and narrative-depth review.
+- Bumped MapKAI asset/display version to v0.1.53.
+
+Verified:
+- Skill markdown, agent YAML, memory, and version assets were changed only; no story data, router mode list, public UI behavior, PDC logic, D1 schema, account behavior, or tracking behavior changed.
+- Skill frontmatter and agents/openai.yaml parsing checks passed via Ruby YAML.
+- skill-creator quick_validate was attempted for mapkai-concept-fable-story and mapkai-story-review, but both bundled Python and system Python lack the required `yaml` module in this local environment; Ruby YAML parsing was used as the available equivalent syntax check.
+- No TODO placeholders were introduced in skill files.
+- git diff --check passed before commit.
+
+Push:
+- Direct-push rule is active; final commit hash is reported in the Codex final response.
+```
+
 Latest MapKAI story skill requirement update:
 
 ```text

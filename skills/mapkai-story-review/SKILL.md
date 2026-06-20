@@ -146,7 +146,7 @@ Reviewer question: Did the writer choose the right mode before writing?
 
 For **Historical Discovery / Field-Origin Story**, require concrete time/place/action, old method, evidence pressure, changed question, historical support, hidden knowledge, and reflection question.
 
-For **Concept Fable Story**, require a serious fictional scene, concept-driven tension, late concept reveal, clear concept explanation, metaphor mapping, analogy boundary, and reflection question.
+For **Concept Fable Story**, require a serious fictional scene, enough narrative development before the reveal, concept-driven tension, more than one beat of friction, late concept reveal, clear concept explanation, metaphor mapping, analogy boundary, and reflection question.
 
 For **Mechanism Explainer Story**, require why the concept is needed, concrete problem, old intuitive approach, step-by-step mechanism, small checkable example, concept name, boundary or common mistake, and reflection question.
 
@@ -157,6 +157,37 @@ For **Case Pattern Story**, require concrete organizational situation, repeated 
 For **Misconception Correction Story**, require common belief, situation where it seems right, contradiction/counterexample, correction, and better mental model.
 
 Reviewer question: Does the piece satisfy the minimum structure for its selected mode?
+
+### -1B. Concept Fable Narrative Depth Check
+
+Apply this check to **Concept Fable Story** mode.
+
+Check whether the fable gives the reader enough time to enter the metaphor before the concept is revealed. A correct metaphor is not enough if the story reads like a short example with a label at the end.
+
+Good signs:
+
+- The old way of acting first seems reasonable.
+- Tension appears more than once.
+- The first friction can still be explained away, then a repeated friction makes the deeper pattern harder to ignore.
+- A character changes behavior, creates a new rule, avoids tension, connects groups, removes support, hides disagreement, or searches for another rhythm.
+- The metaphor develops across several actions or moments.
+- The reader can sense the concept before it is named.
+- The reveal near the end feels earned.
+- The story has enough narrative space to be engaging without becoming long-winded.
+
+Weak signs:
+
+- The story has only one scene and one quick turn.
+- The concept is revealed too soon.
+- The story feels like an example rather than a fable.
+- The metaphor is correct but underdeveloped.
+- The reader understands the explanation but does not feel the concept unfolding.
+- The ending rushes from one problem directly to the concept name.
+- Extra length comes from abstract explanation rather than visible actions.
+
+For generated concept fables, the `寓言故事` section should normally be about 700-1100 Chinese characters or 600-900 English words unless the user explicitly asked for compact output. Do not apply this as a mechanical word-count rule; use it as a depth signal. If the concept fable is structurally correct but too short or rushed, mark it `PASS / LOCAL EDIT` or `LOCAL EDIT` depending on severity, with the main recommendation: "expand narrative development before concept reveal."
+
+Reviewer question: Did the reader follow a small world until the concept became necessary, or did the writer give a short illustrative example and then name the concept?
 
 ### 0. Historical Scene Consistency Gate
 
