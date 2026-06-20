@@ -441,6 +441,27 @@ Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
+Latest MapKAI concept fable constraint-layer update:
+
+```text
+Changed:
+- Read the installed khazix-writer skill and its reference files as a constraint-design reference, not as a style source.
+- Borrowed only the transferable skill-design pattern: hard scan, narrative/style movement layer, content/concept fit layer, and final reader-effect layer.
+- Updated skills/mapkai-concept-fable-story/SKILL.md with a Four-Layer Self-Check: L1 hard scan, L2 narrative movement, L3 concept fit, and L4 reader effect.
+- Updated skills/mapkai-story-review/SKILL.md with a Concept Fable Four-Layer Review so review can name whether a concept fable fails on format/reveal timing, narrative movement, concept fit, or reader effect.
+- Updated both related agents/openai.yaml prompts to reference the four-layer constraint system.
+- Bumped MapKAI asset/display version to v0.1.54.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data, router mode list, public UI behavior, PDC logic, D1 schema, account behavior, or tracking behavior changed.
+- Skill frontmatter and agents/openai.yaml parsing checks passed.
+- No TODO placeholders were introduced in the changed skill files.
+- git diff --check passed before commit.
+
+Push:
+- Direct-push rule is active; final commit hash is reported in the Codex final response.
+```
+
 Latest MapKAI story skill requirement update:
 
 ```text

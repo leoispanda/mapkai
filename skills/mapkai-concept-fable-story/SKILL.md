@@ -83,6 +83,43 @@ For concept fables, the title should create curiosity without giving away the co
 
 The title may use the core metaphor, but it should not reveal the academic concept or its whole logic before the story begins.
 
+## Four-Layer Self-Check
+
+Run this check internally before output. Do not print the self-check unless the user asks for it. If any layer fails, revise the fable before final output.
+
+### L1 Hard Scan
+
+- All required output sections are present.
+- The concept name does not appear in the title or early story.
+- The reveal happens near the end of the `寓言故事`, not in the opening or middle.
+- The story section is long enough to develop a small world, normally 700-1100 Chinese characters or 600-900 English words unless compact output is requested.
+- The story does not use childish tone, fairy-tale morals, cute over-personification, or academic-paper summary language.
+- The story does not add length through abstract filler such as "the structure became visible" or "the group changed its understanding."
+
+### L2 Narrative Movement
+
+The story must be able to answer these questions from visible actions:
+
+- What old routine, rule, or assumption first seemed reasonable?
+- What first friction appeared, and why could it still be explained away?
+- What repeated friction made the same hidden pattern harder to ignore?
+- What did someone change, remove, connect, hide, delay, repeat, or re-check?
+- What final image lets the reader sense the concept before it is named?
+
+If these cannot be answered, do not patch the ending. Add a real middle beat before the reveal.
+
+### L3 Concept Fit
+
+- The metaphor must express this concept's specific structure, not a generic "people learn/change/coordinate" story.
+- The conflict must come from the concept's core tension, not random drama.
+- The concept explanation must directly match the allegory.
+- The metaphor mapping must identify the main forces in the concept.
+- The analogy boundary must state what the story should not be used to overclaim.
+
+### L4 Reader Effect
+
+Before the explanation, the reader should feel: "I am following a situation." Near the end, the reader should feel: "Now I see what concept this was." If the reader would instead feel "this is a short example and now comes the label," rewrite for more narrative development.
+
 ## Hard Rules
 
 - Do not make it childish.

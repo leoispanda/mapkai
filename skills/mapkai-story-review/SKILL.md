@@ -189,6 +189,44 @@ For generated concept fables, the `寓言故事` section should normally be abou
 
 Reviewer question: Did the reader follow a small world until the concept became necessary, or did the writer give a short illustrative example and then name the concept?
 
+### -1C. Concept Fable Four-Layer Review
+
+Apply this layered review to **Concept Fable Story** mode. Name the failed layer in the review when useful.
+
+**L1 Hard Scan**
+
+- Required output sections are present: story, concept reveal, explanation, metaphor mapping, analogy boundary, and reflection.
+- The concept name is not revealed in the title or early story.
+- The reveal happens near the end of the story.
+- The story section has enough space to develop a small world, normally 700-1100 Chinese characters or 600-900 English words unless compact output was requested.
+- The story avoids childish tone, fairy-tale morals, cute over-personification, academic-paper summary language, and abstract filler.
+
+If L1 fails because the output format or reveal timing is broken, mark `LOCAL EDIT` or `FAIL` depending on whether the existing body can be repaired locally.
+
+**L2 Narrative Movement**
+
+Check whether visible actions answer:
+
+- What old routine, rule, or assumption first seemed reasonable?
+- What first friction appeared, and why could it still be explained away?
+- What repeated friction made the hidden pattern harder to ignore?
+- What did someone change, remove, connect, hide, delay, repeat, or re-check?
+- What final image lets the reader sense the concept before it is named?
+
+If L2 fails, do not call for a nicer ending. Recommend expanding the middle of the fable before the concept reveal.
+
+**L3 Concept Fit**
+
+Check whether the metaphor expresses this concept's specific structure rather than a generic story about change, learning, conflict, or coordination. The concept explanation, metaphor mapping, and analogy boundary must all match the same structure.
+
+If L3 fails because the allegory could fit many unrelated concepts, mark `LOCAL EDIT` if the metaphor can be tightened, or `FAIL` if a new allegory is needed.
+
+**L4 Reader Effect**
+
+Ask whether a reader can follow the situation before knowing the concept, then experience a late "click" when the concept is named. If the piece feels like a short example with a label, mark `PASS / LOCAL EDIT` for mild underdevelopment or `LOCAL EDIT` for a rushed story that needs a fuller middle.
+
+Reviewer question: Which layer failed: hard format/reveal, narrative movement, concept fit, or reader effect?
+
 ### 0. Historical Scene Consistency Gate
 
 Review this before judging language for historical and field-origin stories. For non-historical modes, use this gate only to catch accidental fake historical claims.
