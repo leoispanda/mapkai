@@ -3999,24 +3999,24 @@ canvas {
 
 .submodule-browser {
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .submodule-button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .submodule-button {
   display: inline-grid;
-  min-height: 54px;
-  min-width: min(100%, 190px);
+  min-height: 42px;
+  min-width: min(100%, 180px);
   align-content: center;
   gap: 3px;
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 8px;
-  padding: 9px 12px;
+  padding: 8px 12px;
   background: rgba(255, 255, 255, 0.82);
   color: #0f172a;
   font: inherit;
@@ -4037,7 +4037,7 @@ canvas {
 }
 
 .submodule-button span {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 820;
   line-height: 1.22;
 }
@@ -4050,19 +4050,20 @@ canvas {
 }
 
 .detailed-field-button-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .detailed-field-button {
   display: inline-grid;
-  min-height: 58px;
+  flex: 1 1 210px;
+  min-height: 42px;
   align-content: center;
   gap: 3px;
   border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 8px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   background: rgba(255, 255, 255, 0.82);
   color: #0f172a;
   font: inherit;
@@ -4083,7 +4084,7 @@ canvas {
 }
 
 .detailed-field-button span {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 820;
   line-height: 1.25;
 }
@@ -4098,6 +4099,18 @@ canvas {
 .submodule-story-panel {
   display: grid;
   gap: 16px;
+}
+
+.submodule-compact-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.submodule-overview-row,
+.field-story-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .submodule-story-section {
@@ -4118,13 +4131,14 @@ canvas {
 }
 
 .submodule-story-button {
-  display: grid;
-  min-height: 70px;
+  display: inline-grid;
+  min-width: min(100%, 230px);
+  min-height: 46px;
   align-content: center;
-  gap: 5px;
+  gap: 2px;
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 8px;
-  padding: 12px 14px;
+  padding: 9px 12px;
   background: rgba(255, 255, 255, 0.86);
   color: var(--ink);
   text-decoration: none;
@@ -4140,6 +4154,7 @@ canvas {
 
 .submodule-story-button span {
   color: #1d4ed8;
+  font-size: 0.92rem;
   font-weight: 840;
   line-height: 1.28;
 }
@@ -4152,14 +4167,14 @@ canvas {
 
 .submodule-story-button em {
   color: #0f172a;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 820;
   line-height: 1.2;
 }
 
 .submodule-story-button.is-intro {
-  min-height: 82px;
+  min-height: 46px;
   border-color: rgba(37, 99, 235, 0.2);
   background: rgba(239, 246, 255, 0.78);
 }
