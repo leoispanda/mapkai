@@ -67,7 +67,7 @@ Development rules:
 - Do not regenerate the whole database.
 - Do not rewrite the whole site unless explicitly requested.
 - Do not do broad refactors without a strong reason.
-- Do not automatically push unless the founder explicitly says to push.
+- After completing requested edits and lightweight verification, commit and push directly unless the founder explicitly says not to push.
 - Before coding, read the current code structure first.
 - Preserve existing user-approved behavior unless the new request clearly changes it.
 - Keep root files and `public/` files synced.
@@ -84,7 +84,8 @@ git diff --check
 Push rule:
 
 ```text
-Commit and push only after the founder explicitly says "push".
+Direct push is the default after requested changes are complete and verified.
+Pause only if the founder says not to push, the change scope is unclear, or verification exposes a real blocker.
 ```
 
 ## 3. Product Memory
@@ -263,7 +264,8 @@ Verified:
 - Published story override scan found 6 reviewed stories, 0 forbidden story-pattern hits, and 0 missing question-turn hits.
 
 Push:
-- Not committed and not pushed in this turn.
+- Founder updated the working rule to push directly after requested changes are complete and verified.
+- This change set is being committed and pushed in this turn; final commit hash is reported in the Codex final response.
 ```
 
 Latest MapKAI story skill requirement update:
@@ -312,6 +314,34 @@ Verified:
 - script.js and public/script.js are byte-for-byte synced.
 - git diff --check passed.
 - Content scan found 148 lens stories and 6 published stories, with 0 too-short bodies, 0 forbidden phrase hits, 0 missing question-turn hits, 0 weak-action hits, and 0 repeated sentence patterns at the >=10 threshold.
+
+Push:
+- Not committed and not pushed in this turn.
+```
+
+Latest MapKAI story review failure follow-up:
+
+```text
+Changed:
+- User audit found the Leeuwenhoek / 雨水里的小动物 story should be judged FAIL, not LOCAL EDIT.
+- Root cause recorded: the batch rewrite layer allowed internal review/writing scaffolding to leak into storyBodyZh, and the review scan checked formal patterns without checking whether the title's concrete promise was actually fulfilled in the body.
+- Rewrote the effective 0511-biology reviewed override and the underlying 0511 code override in script.js/public/script.js around a real 1670s Delft microscope scene: rainwater sample, single lens, visible moving small organisms, repeated sample checking, and the turn from "is this water clean?" to "can invisible life become evidence?"
+- Removed the unsupported genetics framing from the Leeuwenhoek hidden knowledge and replaced it with tool/scale/repeated-observation evidence.
+- Rewrote the effective Humboldt / 山坡上的自然图 override and the underlying 0500 code override around an 1802 Andes measurement scene: pressed leaves, altitude, temperature, pressure, comparison, and mountain-profile visualization.
+- Cleaned the full active reviewedLensStoryOverridesZh layer for all 148 lens stories: removed internal scaffolding/template phrases, removed exact scene/body duplicate starts, reduced repeated old-method phrasing, and cleared review-sounding prose such as "故事最后留下的是" / "不是为了装饰" / "漂亮结论".
+- Changed field-level lens story detail rendering so inherited parent/group images are not shown as story detail media. This prevents page-level mismatches such as a Leeuwenhoek microscope story inheriting the balcony basil image until a story-specific asset exists.
+- Updated skills/mapkai-story-rewrite/SKILL.md with Title Promise And Topic Specificity plus Template Leakage Ban.
+- Updated skills/mapkai-story-review/SKILL.md with title/body mismatch, template leakage, generic old/new question, unsupported hidden-knowledge concept, field-method-by-template, and page-media mismatch as red lines; added Leeuwenhoek as a boundary FAIL example.
+- Updated both story skill agent default prompts to check title promise and reject template scaffolding.
+
+Verified:
+- Bundled Node syntax check passed for script.js and public/script.js.
+- script.js and public/script.js are byte-for-byte synced.
+- git diff --check passed.
+- Targeted Leeuwenhoek scan shows the effective 0511-biology override now contains the rainwater/lens/repeated-observation story rather than the generic template body.
+- Active reviewedLensStoryOverridesZh scan found 148 entries, 0 forbidden/template hits, 0 duplicate scene starts, 0 missing bodies, and 0 bodies below the compact safety threshold.
+- reviewedPublishedStoryOverridesZh scan found 6 entries, 0 forbidden/template hits, and 0 missing bodies.
+- Full root/public script scan found 0 red-line template leakage hits for the active banned phrase set.
 
 Push:
 - Not committed and not pushed in this turn.

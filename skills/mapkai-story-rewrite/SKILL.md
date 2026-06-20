@@ -48,6 +48,7 @@ Before drafting, identify the story's lived sequence:
 
 - Who is the one person the reader follows?
 - What is in that person's hands, notebook, instrument, room, street, field, table, or route?
+- What concrete promise does the title make, and which object or event must appear in the body because of that promise?
 - What old habit initially feels reasonable?
 - What detail blocks that habit from being enough?
 - What does the person do next, and then what do they do after that?
@@ -60,6 +61,47 @@ The story body must include at least:
 - **One slow turn of the question** that is earned by the obstruction, not merely announced with "问题从...变成...".
 
 Do not compress a discovery into a clean paragraph. If the body can be summarized as "a person observed X and this led to field Y," it is still a synopsis and must be rebuilt.
+
+## Title Promise And Topic Specificity
+
+The title is a contract with the reader. If the title names a concrete object, place, event, instrument, organism, document, or puzzle, the story body must make that thing do real work.
+
+Examples:
+
+- If the title is "雨水里的小动物," the body must actually include a water drop or water sample, a lens or microscope, tiny moving creatures, and repeated checking or comparison that lets the invisible become evidence.
+- If the title is about a chart, the body must include records, categories, counts, marks, shapes, or comparison on the chart.
+- If the title is about a tool, the body must show someone using, failing with, adjusting, or rechecking the tool.
+
+Before drafting, fill this internal topic sheet:
+
+1. Title promise:
+2. Main concrete object:
+3. Actual old question for this topic:
+4. Actual new question for this topic:
+5. Topic-specific actions:
+6. Field-method evidence inside this exact story:
+7. Concepts that must not appear because this story does not support them:
+
+Do not satisfy field fit with generic method language. The method must happen in this topic. "Measure, compare, graph, classify, model, repeat" are not story content until the reader sees what is measured, compared, graphed, classified, modeled, or repeated.
+
+If the story has page media, image alt text, or an image prompt, it must match the concrete scene. A microscope story should not inherit a balcony plant image; a chart story should not show unrelated fieldwork; a water-pump story should not show a generic hospital room. When no matching asset exists, mark the image as needing replacement instead of pretending the story is complete.
+
+## Template Leakage Ban
+
+Never output internal scaffolding as story prose. These patterns are review notes, not reader-facing story:
+
+- "旧办法并不荒唐"
+- "如果只求先有秩序"
+- "旧答案没有让...轻松过关"
+- "材料不再各说各话"
+- "让证据自己排队"
+- "现场细节开始获得发言权"
+- "动作开始变得具体"
+- "这个转弯没有立刻给出全部答案"
+- "新问题慢慢变成..."
+- "真正改变问题的常常不是大词"
+
+You may express the underlying idea only through topic-specific objects and actions. For example, instead of "旧办法并不荒唐," write what people actually did: "Naturalists pressed the leaf, wrote the name, and placed it in a cabinet." Instead of "证据自己排队," write who arranged which records, samples, marks, months, addresses, or measurements.
 
 Default body length is 500 to 800 Chinese characters for a full MapKAI knowledge story. Do not shorten to 150 to 250 Chinese characters unless the user explicitly asks for a compact teaser. A short body must still have scene, old habit, obstruction, two actions, changed question, and evidence-grown understanding.
 

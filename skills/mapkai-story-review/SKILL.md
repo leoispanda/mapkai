@@ -139,10 +139,35 @@ The following cannot receive `PASS`:
 10. Historical support repairs factual confusion that should have been clear in the body.
 11. Causality is overstated with "directly led to," "proved," "first discovered," or similar claims without reliable support.
 12. The final question is generic and does not return to the story's central object, evidence, or metaphor.
+13. The title promises a concrete object, event, place, or puzzle, but the story body barely uses it or never lets it affect the knowledge turn.
+14. The body contains internal scaffolding or template language such as "旧办法并不荒唐," "如果只求先有秩序," "材料不再各说各话," "让证据自己排队," or similarly generic review-skill prose.
+15. The old question and new question could be pasted into many unrelated stories without changing the nouns.
+16. The hidden knowledge section introduces concepts not supported by the story, such as adding genetics to a microscope-scale observation story that never shows inheritance.
+17. The field-method fit is satisfied only by generic words like "measure," "compare," "graph," "system," or "relationship," without topic-specific evidence.
+18. The supplied page image, image alt text, or image prompt contradicts the title/body enough to mislead the reader.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 
-### 0D. Boundary Example: Nightingale
+### 0D. Title Promise And Template Leakage Gate
+
+Before language review, check the title against the body.
+
+Ask:
+
+- What concrete thing does the title make the reader expect?
+- Does that thing appear in the main scene, not just in the title?
+- Does the person handle, inspect, mark, compare, test, count, wait for, or recheck it?
+- Does the old-to-new question turn depend on that thing?
+
+If the answer is no, mark `FAIL` unless the body only needs one local insertion to restore an already-working story.
+
+Also scan for template leakage. Phrases such as "旧办法并不荒唐," "如果只求先有秩序," "旧答案轻松过关," "材料不再各说各话," "证据自己排队," "现场细节开始获得发言权," and "真正改变问题的常常不是大词" are not literary style. They are internal scaffolding accidentally printed as story. If they appear in the story body, mark `FAIL` unless the rest of the story is already strong and the phrase is a single removable sentence.
+
+Reviewer question: If the title were "雨水里的小动物," where are the rainwater, the lens, the tiny moving organisms, the repeated observation, and the change from "clear water" to "invisible life can become evidence"?
+
+If page media is included in the review, check it against the same promise. A balcony basil image on a Leeuwenhoek microscope story is a page-level mismatch: the text may be locally passable, but the rendered story cannot receive full `PASS` until the visual asset is replaced or field-level images are supported.
+
+### 0E. Boundary Example: Nightingale
 
 A Florence Nightingale story about wartime hospitals and statistical charts should usually be judged `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`, if it mixes Scutari hospital atmosphere with later London data analysis as one continuous scene.
 
@@ -164,6 +189,27 @@ Approved benchmark for this pattern:
 - Actions: recopy months, recalculate categories, compare causes, draw a circular/polar-area chart, inspect which color or area expands.
 - Changed question: from "How many did the war take?" to "Which deaths did the total hide, and what conditions made them change?"
 - Knowledge turn: rearranged numbers become evidence for a preventable cause; the chart is a method of seeing, not decoration.
+
+### 0F. Boundary Example: Leeuwenhoek
+
+A Leeuwenhoek story titled "雨水里的小动物" must not pass if it only says he made lenses and saw tiny life. It must show the promised scene.
+
+Required story ingredients:
+
+- Time/place: 1670s Delft or another cautious 17th-century Dutch anchor.
+- Object: a drop or sample of rainwater, pond water, pepper water, tooth scrapings, or similar observed material.
+- Tool: a small single-lens microscope or handmade lens.
+- Old question: "Is this water clear or spoiled?" "Can something invisible to the naked eye count as real?" or another topic-specific old question.
+- Evidence pressure: the clear-looking drop shows moving specks under the lens, and the observation is repeated with samples or time.
+- Actions: adjust light or lens, place the drop, look again, compare another sample, wait, describe movement, write to others.
+- New question: "Can invisible life become part of natural knowledge through tools and repeated observation?"
+
+Fail this story if:
+
+- "rainwater" or "animalcules" appears only in title/support.
+- The body becomes generic method prose about naming, measuring, comparing, or scale.
+- The hidden knowledge adds unsupported concepts such as heredity.
+- The historical support is used to compensate for a body that never actually staged the observation.
 
 ### 1. Scene Before Explanation
 

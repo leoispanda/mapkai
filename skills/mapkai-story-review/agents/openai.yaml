@@ -1,4 +1,4 @@
 interface:
   display_name: "MapKAI Story Review"
   short_description: "Strictly review MapKAI stories for false scenes and weak turns."
-  default_prompt: "Review this MapKAI knowledge story with a hard verdict: PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL. Check historical time/place/action consistency first, then evidence pressure, narrative thickness, field/method fit, knowledge-turn sharpness, useful literary language, cautious causality, factual safety, and non-AI style."
+  default_prompt: "Review this MapKAI knowledge story with a hard verdict: PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL. Check historical time/place/action consistency first, then title promise vs body, template-language leakage, evidence pressure, narrative thickness, field/method fit, knowledge-turn sharpness, useful literary language, cautious causality, factual safety, and non-AI style. If the body contains internal scaffolding such as '旧办法并不荒唐' or generic old/new-question prose, usually mark FAIL."
