@@ -19,6 +19,8 @@ Do not imply that a broad discipline was created in one scene by one person. Man
 
 Use `references/examples.md` when a historical field-origin story feels correct but summary-like, especially for education or Reggio Emilia-style stories.
 
+Use `skills/mapkai-story-rewrite/references/approved-story-quality-patterns.md` when a historical story needs calibration around object-based discovery, reasonable old explanation, visible evidence pressure, changed question, and cautious historical support.
+
 For a full Subject Origin page, first use `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md`. This historical skill may shape the `起源故事` section, but it should not collapse the full page into the normal `知识故事` output format.
 
 ## Story-First Product Promise

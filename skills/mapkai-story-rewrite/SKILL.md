@@ -168,6 +168,8 @@ If rewriting an existing MapKAI story in the codebase, preserve IDs, codes, slug
 
 ## Reference Files
 
+For historical discovery, field-origin, or integrated reader-facing knowledge stories, consult `skills/mapkai-story-rewrite/references/approved-story-quality-patterns.md` before drafting when the story needs a clear quality benchmark.
+
 For education or Reggio Emilia-style historical field-origin stories, consult `skills/mapkai-historical-discovery-story/references/examples.md` when the draft feels like a correct feature summary rather than a story.
 
 For full Subject Origin pages, consult `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md` before drafting. Use it when the user asks for "学科起源", "领域起源", "Subject Origin page", "discipline origin page", or a page explaining how a field emerged.
@@ -294,6 +296,8 @@ Do not make prose so cautious that it becomes a safe summary. Safety is necessar
 ## Title Promise And Topic Specificity
 
 The title is a contract with the reader. If the title names a concrete object, place, event, instrument, organism, document, or puzzle, the story body must make that thing do real work.
+
+A strong story often turns one key object into method. The object should appear early, be handled or used, expose the limit of the old question, help produce the new question, and return in the final image or reflection.
 
 Examples:
 

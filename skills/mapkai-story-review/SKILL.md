@@ -9,6 +9,8 @@ description: Strictly review generated or rewritten MapKAI knowledge stories and
 
 Review MapKAI knowledge stories after generation or rewrite. Use `skills/mapkai-knowledge-router/SKILL.md` first when the output mode is unclear. The review must be mode-aware: a historical field-origin story, concept fable, mechanism explainer, lens story, case pattern story, and misconception correction story should not be judged by one universal structure.
 
+For historical discovery, field-origin, or integrated reader-facing knowledge stories, use `skills/mapkai-story-rewrite/references/approved-story-quality-patterns.md` as the baseline for object-based discovery, reasonable old explanation, visible evidence pressure, changed question, and cautious historical support.
+
 For historical or field-origin stories, a concrete scene should reveal why a discipline or knowledge field began to need its own object, question, and method. For non-historical modes, review the structure promised by that mode instead.
 
 This is not a polishing skill. It is a strict story-quality review. A story should not pass because it is fluent, longer, emotional, literary, or conceptually correct. It passes only when knowledge grows from a concrete scene, real tension, observable action, and a clear shift in understanding.
@@ -437,6 +439,18 @@ Fail or mark `LOCAL EDIT` if:
 - the old question changes only because the prose announces it.
 
 Reviewer question: What fact, number, object, or repeated pattern forced the new question?
+
+### 0B-2. Approved Pattern Gate
+
+For historical discovery or field-origin stories, check the approved quality pattern:
+
+- **Object-based discovery**: Does one concrete object appear early, get handled or used, make the old question insufficient, help produce the new question, and return in the final image or reflection?
+- **Reasonable old explanation**: Is the old explanation made plausible before it becomes insufficient?
+- **Visible evidence pressure**: Does the story show the pressure through dots, counts, readings, exceptions, marks, samples, routes, or repeated observations instead of announcing "the evidence challenged the theory"?
+- **Changed question**: Can the reader state the shift in a concrete sentence, such as "from where the air was worst to where the sick drew water"?
+- **Cautious historical support**: Does the ending avoid overclaims such as "proved forever," "single-handedly created," "for the first time in history," or "immediately solved"?
+
+Mark `LOCAL EDIT` if a structurally good story misses one pattern locally. Mark `FAIL` if the story has no working object, no visible pressure, and no concrete changed question.
 
 ### 0C. Field Origin Fit Gate
 

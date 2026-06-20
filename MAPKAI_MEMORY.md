@@ -2670,3 +2670,10 @@ Follow-up:
 - Review should now flag vague object-agency phrases such as `材料拒绝`, `现场不配合`, `证据开始发言`, `纸条制造麻烦`, `名字互相追问`, `图形提出问题`, and require concrete replacements such as `记录纸上的读数开始对不上原来的解释`.
 - Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill files.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Add approved MapKAI story quality patterns
+- Added `skills/mapkai-story-rewrite/references/approved-story-quality-patterns.md` with the approved patterns: object-based discovery, reasonable old explanation, visible evidence pressure, changed question, and cautious historical support.
+- Updated `mapkai-story-rewrite` and `mapkai-historical-discovery-story` to consult the approved patterns when calibrating historical / field-origin stories.
+- Updated `mapkai-story-review` with an Approved Pattern Gate so review checks whether the key object functions as method, old explanations are plausible before failing, evidence pressure is shown rather than announced, the question changes concretely, and historical claims stay cautious.
+- Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill/reference files.
+- Push status: committed and pushed to `main` in this turn.
