@@ -5,13 +5,28 @@ description: Route MapKAI knowledge-story inputs to the correct storytelling mod
 
 # MapKAI Knowledge Skill Router
 
-Use this router before generating any MapKAI knowledge story.
+Use this router before generating any MapKAI knowledge story or Subject Origin page.
 
 The goal is to select the correct storytelling mode based on the type of knowledge point. Do not force all knowledge points into one story structure.
 
+## Step 0: Check For Subject Origin Page
+
+If the user asks for "学科起源", "领域起源", "Subject Origin page", "discipline origin page", "field origin page", or a page explaining how a discipline emerged and later developed, route to:
+
+- `skills/mapkai-story-rewrite/SKILL.md`
+- `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md`
+
+This is a page-level article mode, not the normal single `知识故事` format.
+
+First-pass Subject Origin pages must output only article text and knowledge structure. Do not generate image prompts, visual module suggestions, illustration descriptions, layout notes, hero image text, or timeline image prompts until after the article has passed review.
+
+If the page needs a historical origin scene, the writer may use `skills/mapkai-historical-discovery-story/SKILL.md` to shape the `起源故事` section, but the final output still follows the Subject Origin page format.
+
+Do not route Subject Origin pages to Concept Fable or Mechanism Explainer unless the user explicitly asks for a fable or a formula/mechanism-first explanation instead of a discipline-origin page.
+
 ## Step 1: Classify The Knowledge Point
 
-Classify the input into one of these six knowledge types.
+If Step 0 does not apply, classify the input into one of these six knowledge types.
 
 ### 1. Historical Discovery Story
 

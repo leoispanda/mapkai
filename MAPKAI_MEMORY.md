@@ -2636,3 +2636,13 @@ Follow-up:
 - `quick_validate.py` could not run because the local and bundled Python environments are missing `yaml` / PyYAML; custom frontmatter validation was used instead.
 - Test generation/review: Reggio Emilia sample reviewed as historical field-origin story and passed the new story-first checks: concrete postwar scene, reasonable old school purpose, repeated material friction, changed adult practice, final classroom/workshop image before naming the approach.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Add Subject Origin page standard
+- Added `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md` for full discipline-origin pages: purpose, default length, required sections, page-level quality gate, and web-reading structure.
+- Updated `mapkai-story-rewrite` so Subject Origin pages use the `学科起源` article format instead of the normal `知识故事` format.
+- Updated `mapkai-knowledge-router` with a Step 0 route for "学科起源" / Subject Origin page requests, pointing to the rewrite skill plus the new reference.
+- Updated `mapkai-story-review` with a mode-aware Subject Origin review gate covering origin problem, old question, friction, new question, core turn, later branches, readability, and section clarity.
+- Updated `mapkai-historical-discovery-story` so it can shape the `起源故事` section without collapsing the whole page into a single historical story.
+- Important workflow: first-pass Subject Origin pages must generate article text only. Image prompts, visual suggestions, illustration descriptions, hero image text, timeline prompts, and layout notes are deferred until after the article passes review.
+- Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for the four edited skills; no `TODO` / `PLACEHOLDER` hits in the changed skill/reference files.
+- Push status: committed and pushed to `main` in this turn.

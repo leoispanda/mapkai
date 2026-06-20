@@ -1,6 +1,6 @@
 ---
 name: mapkai-story-rewrite
-description: Generate or rewrite MapKAI knowledge stories as historically situated, scene-consistent field-origin stories rather than encyclopedia cards, fake scenes, biographies, or single-discovery summaries. Use when creating, rewriting, or improving MapKAI story content from inputs such as selected language, field title, story title, person/event, time/place, knowledge point, historical support, and reflection direction; especially when the story must show why a discipline or knowledge field began to need its own object, question, and method through a concrete scene with an initially useful old practice, evidence pressure, narrative movement, delayed abstract knowledge, and cautious factual support.
+description: Generate or rewrite MapKAI knowledge stories and Subject Origin pages as historically situated, scene-consistent field-origin content rather than encyclopedia cards, fake scenes, biographies, or single-discovery summaries. Use when creating, rewriting, or improving MapKAI story content from inputs such as selected language, field title, story title, person/event, time/place, knowledge point, historical support, and reflection direction; especially when the output must show why a discipline or knowledge field began to need its own object, question, and method through a concrete scene with an initially useful old practice, evidence pressure, narrative movement, delayed abstract knowledge, cautious factual support, and, for full Subject Origin pages, sectioned article structure.
 ---
 
 # MapKAI Story Rewrite
@@ -169,6 +169,27 @@ If rewriting an existing MapKAI story in the codebase, preserve IDs, codes, slug
 ## Reference Files
 
 For education or Reggio Emilia-style historical field-origin stories, consult `skills/mapkai-historical-discovery-story/references/examples.md` when the draft feels like a correct feature summary rather than a story.
+
+For full Subject Origin pages, consult `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md` before drafting. Use it when the user asks for "学科起源", "领域起源", "Subject Origin page", "discipline origin page", or a page explaining how a field emerged.
+
+## Subject Origin Pages
+
+When writing a full Subject Origin page, do not output the normal `知识故事` format. Use the Subject Origin page format from `references/subject-origin-page-standard.md`.
+
+First-pass Subject Origin output must contain only article text and knowledge structure:
+
+- `学科起源`
+- `一句简介`
+- `起源故事`
+- `为什么这个学科需要出现`
+- `核心转向`
+- `关键人物 / 事件 / 工具`
+- `后来长出的分支`
+- `反思问题 / 小测`
+
+Do not include image prompts, visual module suggestions, illustration descriptions, layout notes, hero image text, or timeline image prompts in the first pass. Visual suggestions are optional and belong only after the article has passed review and the structure is fixed.
+
+Default target length for a Subject Origin page is 900-1500 Chinese characters. Do not shrink a full page below 800 Chinese characters unless the user explicitly asks for a compact card.
 
 ## Story Arc
 

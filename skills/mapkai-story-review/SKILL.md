@@ -1,6 +1,6 @@
 ---
 name: mapkai-story-review
-description: Strictly review generated or rewritten MapKAI knowledge stories for field-origin fit, historical scene consistency, evidence pressure, narrative movement, and field-method fit. Use when checking whether a MapKAI story shows why a discipline or knowledge field began to need its own object, question, and method through reliable time/place/action alignment, concrete scene, initially reasonable old method, field-based tension, character action, changed question, evidence-grown insight, factual safety, non-AI style, and non-decorative literary language; also use for batch audits after MapKAI story generation or rewrite.
+description: Strictly review generated or rewritten MapKAI knowledge stories and Subject Origin pages for field-origin fit, historical scene consistency, evidence pressure, narrative movement, section clarity, and field-method fit. Use when checking whether a MapKAI story or origin page shows why a discipline or knowledge field began to need its own object, question, and method through reliable time/place/action alignment, concrete scene, initially reasonable old method, field-based tension, character action, changed question, evidence-grown insight, factual safety, non-AI style, non-decorative literary language, and, for Subject Origin pages, page-level article structure with images deferred until after text approval; also use for batch audits after MapKAI story generation or rewrite.
 ---
 
 # MapKAI Story Review
@@ -52,6 +52,51 @@ No time-scene consistency = false scene.
 No changed question = knowledge introduction.
 No initially reasonable old method = no real discovery.
 ```
+
+## Subject Origin Page Review
+
+When the user requested a Subject Origin page, or the output begins with `学科起源`, review it as a page-level article, not as a normal single `知识故事`.
+
+Use `skills/mapkai-story-rewrite/references/subject-origin-page-standard.md`.
+
+First-pass Subject Origin pages must contain only:
+
+- `学科起源`
+- `一句简介`
+- `起源故事`
+- `为什么这个学科需要出现`
+- `核心转向`
+- `关键人物 / 事件 / 工具`
+- `后来长出的分支`
+- `反思问题 / 小测`
+
+Do not require images for first-pass approval. A Subject Origin article can pass without images.
+
+For a first-pass article, mark `LOCAL EDIT` or `FAIL` if it includes image prompts, visual module suggestions, illustration descriptions, layout notes, hero image text, timeline image prompts, or other visual planning before the article itself has passed review.
+
+Review the article for:
+
+- origin problem;
+- old question or old way of working;
+- friction or evidence pressure;
+- new question;
+- core knowledge turn;
+- later branches;
+- readability;
+- section clarity.
+
+A passable Subject Origin page normally uses 900-1500 Chinese characters, with an origin story of 500-800 Chinese characters. Do not fail only because the exact counts vary, but fail or mark `LOCAL EDIT` if the page collapses into a short encyclopedia card, a long undivided essay, a biography list, or a single-discovery summary.
+
+Quality gate:
+
+- What problem made this field necessary?
+- What older way of thinking or working was not enough?
+- What changed in the central question?
+- What object, method, tool, event, or practice made the change visible?
+- What later branches grew from this origin?
+- If visuals are present in a later visual stage, do they explain structure, sequence, contrast, or relationships rather than decorate?
+
+Fail if the page only defines the discipline, only tells history without showing the knowledge turn, implies one person or scene created a broad field, has no clear old question -> new question shift, or uses images to compensate for weak article structure.
 
 ## Story Body Removal Test
 
@@ -190,6 +235,7 @@ Topic-specific checks:
 Classify the story mode before applying detailed checks:
 
 - **Historical Discovery / Field-Origin Story**: real person, event, discovery, invention, reform, expedition, observation, or social movement.
+- **Subject Origin Page**: a sectioned page explaining why a discipline or field emerged, what old question became insufficient, what new way of seeing appeared, and how later branches developed.
 - **Concept Fable Story**: abstract concept, theory, relationship, or social-science idea without one necessary historical scene.
 - **Mechanism Explainer Story**: mathematical, statistical, computational, algorithmic, economic, or formula-based idea.
 - **Lens Story / Knowledge Lens**: a way of seeing a familiar situation differently.
@@ -209,6 +255,8 @@ Reviewer question: Did the writer choose the right mode before writing?
 ### -1A. Mode-Specific Minimums
 
 For **Historical Discovery / Field-Origin Story**, require concrete time/place/action, old method, evidence pressure, changed question, historical support, hidden knowledge, and reflection question.
+
+For **Subject Origin Page**, require the page-level sections from `subject-origin-page-standard.md`, a 500-800 Chinese character `起源故事`, a clear "why this field became necessary" section, a `从 X，转向 Y` core turn, 2-3 key anchors, later branches, and a reflection or mini-check. In first-pass review, images must be absent and should not block approval.
 
 For **Concept Fable Story**, require a serious fictional scene, enough narrative development before the reveal, concept-driven tension, more than one beat of friction, late concept reveal, clear concept explanation, metaphor mapping, analogy boundary, and reflection question.
 
