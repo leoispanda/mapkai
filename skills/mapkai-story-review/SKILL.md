@@ -82,6 +82,8 @@ Mark `FAIL` and return to rewrite when:
 - the body is mostly generic method prose that could fit many topics after replacing names;
 - the title promises a concrete object, event, or puzzle, but the body barely stages it;
 - the old question and new question are pasted formulas rather than topic-specific pressure;
+- the old question defaults to naming or classification even though the actual person/event is about scale, attribution, trend, uncertainty, proof, calibration, representation, coordination, decision, or another method turn;
+- the knowledge turn could have been attached to almost any historical figure because it comes from a generic science-method template rather than this story's person/event;
 - abstract method words such as scale, repetition, position, time, evidence, system, relationship, model, variable, or condition appear without the exact object, tool, record, sample, chart, or action that makes them necessary;
 - the historical support section is doing the work the story body should have done.
 
@@ -177,6 +179,9 @@ The following cannot receive `PASS`:
 19. The tone infantilizes the reader: childish wonder, fairy-tale framing, over-personified objects, or moral-of-the-story endings.
 20. The tone becomes academic-paper-like: stacked abstractions, thesis-summary endings, or concept terms used before concrete evidence prepares them.
 21. The story tries to explain the whole field instead of one core knowledge turn.
+22. The old question is a generic "what is this called?" when the topic is not actually about naming, classification, or natural-history categorization.
+23. The story uses high-risk invented details such as exact weather, private emotion, dialogue, named bystanders, room layout, or dramatic gestures without support.
+24. The "藏在里面的知识" section supplies a knowledge turn that the story body itself did not stage.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 

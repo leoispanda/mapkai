@@ -305,6 +305,27 @@ Verified:
 - YAML/frontmatter parsing and git diff checks were run before commit.
 
 Push:
+- Pushed to main in commit 5853c53.
+```
+
+Latest MapKAI story template v2 update:
+
+```text
+Changed:
+- Updated skills/mapkai-story-rewrite/SKILL.md so the old question must come from the actual person/event, not default to "what is this called?" unless the story is truly about naming/classification/natural history.
+- Added a rule that the core knowledge turn must come from the specific person/event/object/instrument/record, not a generic science-method template.
+- Expanded the internal rewrite judgment list with checks for event-specific turn, generic/false-scene content to delete, and facts that belong only in historical support.
+- Added factual-safety guidance against inventing high-risk scene details such as exact weather, private emotions, dialogue, named bystanders, room layout, dramatic gestures, or unsupported immediate effects.
+- Changed the rewrite output format so "藏在里面的知识" is 1-2 natural sentences, not a fixed "藏在这个故事里的，是..." formula, and cannot rescue a story body that failed to stage the turn.
+- Added final self-checks: if swapping person/place/object leaves the story intact, it is too generic; if hidden knowledge must explain the turn, the story body failed.
+- Updated skills/mapkai-story-review/SKILL.md to fail mismatched naming/classification old questions, generic science-template turns, unsupported high-risk details, and hidden-knowledge sections that supply unstaged turns.
+- Updated both story skill agent default prompts with the new event-specific old-question and hidden-knowledge-rescue checks.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- YAML/frontmatter parsing and git diff checks were run before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 

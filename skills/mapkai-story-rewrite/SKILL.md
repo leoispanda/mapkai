@@ -40,6 +40,8 @@ Generic-template failure signs:
 
 - The body could fit many unrelated topics after replacing the names.
 - The old problem is only "what is this called" or "how should this be classified" even when the topic's real turn is scale, attribution, long-term trend, proof, communication, or decision.
+- The old question defaults to naming or classification even though the person/event is actually about attribution, calibration, prediction, uncertainty, proof, coordination, representation, decision, or long-term change.
+- The supposed knowledge turn comes from a generic science-method template rather than from the specific person, event, object, instrument, record, or pressure in the input.
 - The prose talks about "scale, time, position, repetition, evidence, relationship, system, model, variables, or conditions" before showing the object, tool, record, or action that makes those words necessary.
 - A title promises a concrete thing, such as rainwater, a pump, a chart, an air sample, a mountain, or a classroom, but the body mostly explains a knowledge method.
 - The story needs the historical support section to tell the reader what actually happened.
@@ -57,7 +59,9 @@ Before rewriting, internally answer:
 7. What new method appears?
 8. What new question appears?
 9. Can the knowledge turn be stated in one sentence?
-10. Which original sentences are generic scaffolding and must be removed?
+10. Does the knowledge turn come from this person/event itself rather than a generic method template?
+11. Which original sentences are generic scaffolding, abstract explanation, false scene, or mismatched old question and must be removed?
+12. Which facts belong only in "历史支撑" and must not be written as if they happened immediately in the scene?
 
 ## Inputs
 
@@ -133,6 +137,8 @@ If the story has page media, image alt text, or an image prompt, it must match t
 ## Topic-Specific Turn
 
 Do not force every story into the same "naming/classification was not enough, so people measured/compared/graphed" pattern. Each topic needs its own pressure point and method turn.
+
+Do not default the old question to "what is this phenomenon called?" Use that old question only for classification, naming, or natural-history stories where it is historically and methodologically fitting. For other stories, define the old question from the actual practice: one reading versus a trend, total deaths versus preventable causes, a correct answer versus a procedure, a local error versus a process, a calculation versus symbolic instruction, or a visible object versus an invisible scale.
 
 Examples:
 
@@ -324,6 +330,8 @@ Use only reliable facts in the historical support section.
 
 Sensory detail may be used as plausible scene reconstruction when it does not assert unverifiable exact facts. Avoid exact dialogue, private emotion, exact weather, room layout, or causal claims unless the source input supports them.
 
+Do not invent high-risk scene details for visual drama: exact dates, exact weather, private emotions, dialogue, named bystanders, dramatic gestures, room layouts, or immediate causal effects not supported by the input. If the input is thin, stay with low-risk working details such as notebooks, instruments, samples, readings, charts, desks, observation stations, benches, routes, reports, or ledgers, and make sure each detail serves the knowledge turn.
+
 Use cautious wording for complex historical claims: "often considered," "later became associated with," "helped push," "is an important early example," or the selected-language equivalent. Avoid overclaims such as "proved forever," "first in history," "single-handedly changed the world," or "from then on everyone understood."
 
 ## Output Format
@@ -348,7 +356,7 @@ Use this format exactly:
 {Reliable facts only. Briefly state time, person/event, action, and impact. Do not exaggerate or invent.}
 
 藏在里面的知识
-藏在这个故事里的，是{fieldTitleInSelectedLanguage}的一个关键转向：{Explain the knowledge point in language that naturally grows from the story. Do not write a textbook definition.}
+{Explain the knowledge turn in 1 to 2 sentences that grow from the story. Do not write a textbook definition, and do not use this section to rescue a story body that failed to show the turn.}
 
 {One reflection question grown from the story's changed question.}
 ```
@@ -373,6 +381,10 @@ Use these final checks:
 - No time-scene consistency means the piece is a false scene.
 - No changed question means the piece is a knowledge introduction.
 - No initially reasonable old method means there is no real discovery.
+- If the body still works after replacing the person, place, and object, the story is too generic and must be rewritten.
+- If "藏在里面的知识" is needed to explain what changed, the story body has not done its job.
+- If historical support repairs the scene instead of anchoring it, the story is structurally weak.
+- If the final question does not return to the story's central object, action, or metaphor, replace it.
 
 ## Forbidden Patterns
 
