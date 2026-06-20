@@ -25,6 +25,17 @@ A concept fable should not feel like a short example with a label at the end. It
 - Strategy concepts
 - Abstract social-science ideas
 
+## Reference Files
+
+When generating concept fables, use the reference files when output quality is uncertain, when the user asks for benchmark quality, or when repeated samples feel rushed or generic.
+
+Read:
+
+- `references/examples.md` for benchmark quality levels and excellent examples.
+- `references/failure-patterns.md` for common mistakes and repair strategies.
+
+Do not copy examples directly. Use them to calibrate judgment, narrative depth, reveal timing, metaphor specificity, and analogy boundaries.
+
 ## Core Structure
 
 1. Fictional but concrete scene
@@ -82,6 +93,16 @@ For concept fables, the title should create curiosity without giving away the co
 - Better: "The Lines That Slowly Disappeared"
 
 The title may use the core metaphor, but it should not reveal the academic concept or its whole logic before the story begins.
+
+## Benchmark-Calibrated Generation
+
+Before finalizing, compare the draft internally against the benchmark levels:
+
+- If it feels like "short example + concept label," rewrite.
+- If it has only one friction point, expand.
+- If the title gives away the concept, revise the title.
+- If the concept explanation is doing work the story body should have done, rewrite the story body.
+- If the metaphor could fit many concepts, make the key object more concept-specific.
 
 ## Four-Layer Self-Check
 

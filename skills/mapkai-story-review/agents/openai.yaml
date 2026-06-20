@@ -1,4 +1,4 @@
 interface:
   display_name: "MapKAI Story Review"
   short_description: "Strictly review MapKAI stories for false scenes and weak turns."
-  default_prompt: "Use $mapkai-story-review to review this MapKAI knowledge story with a hard verdict. Use the router first when mode is unclear; for concept fables, apply the four-layer review: hard format/reveal constraints, narrative movement, concept fit, and reader effect."
+  default_prompt: "Use $mapkai-story-review to review this MapKAI knowledge story with a hard verdict. Use the router first when mode is unclear; for concept fables, compare against the reference examples and apply the four-layer review."

@@ -227,6 +227,34 @@ Ask whether a reader can follow the situation before knowing the concept, then e
 
 Reviewer question: Which layer failed: hard format/reveal, narrative movement, concept fit, or reader effect?
 
+### -1D. Concept Fable Reference Review
+
+When reviewing concept fables, use:
+
+- `skills/mapkai-concept-fable-story/references/examples.md`
+- `skills/mapkai-concept-fable-story/references/failure-patterns.md`
+- `skills/mapkai-story-review/references/concept-fable-review-examples.md`
+
+Use these references when:
+
+- the story is structurally correct but feels weak;
+- the reveal feels rushed;
+- the metaphor is attractive but possibly generic;
+- the review decision is between `PASS / LOCAL EDIT` and `LOCAL EDIT`;
+- the story is intended as a sample or benchmark.
+
+Do not judge concept fables only with historical discovery standards. Concept fables may be fictional, but they still need narrative depth, concept-driven tension, delayed reveal, accurate metaphor mapping, and meaningful analogy boundaries.
+
+### -1E. Benchmark Comparison Check
+
+Ask:
+
+- Is this closer to a weak example, pass example, or excellent example?
+- Does the story give the reader enough time inside the metaphor?
+- Does the concept become necessary before it is named?
+- Could the metaphor explain many other concepts? If yes, it is too generic.
+- Is the explanation rescuing the story? If yes, mark `LOCAL EDIT` or `FAIL`.
+
 ### 0. Historical Scene Consistency Gate
 
 Review this before judging language for historical and field-origin stories. For non-historical modes, use this gate only to catch accidental fake historical claims.

@@ -462,6 +462,29 @@ Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
+Latest MapKAI concept fable reference-benchmark update:
+
+```text
+Changed:
+- Added skills/mapkai-concept-fable-story/references/examples.md with benchmark quality levels and weak/pass/excellent examples for scaffolding, cognitive dissonance, organizational ambidexterity, and spiral of silence.
+- Added skills/mapkai-concept-fable-story/references/failure-patterns.md with concrete symptoms, repairs, weak examples, and better examples for eight common concept-fable failures.
+- Added skills/mapkai-story-review/references/concept-fable-review-examples.md with review samples for weak-but-understandable, structurally-correct-but-rushed, beautiful-but-inaccurate, and excellent concept fables.
+- Updated skills/mapkai-concept-fable-story/SKILL.md with Reference Files and Benchmark-Calibrated Generation sections so examples stay in references, not the main skill body.
+- Updated skills/mapkai-story-review/SKILL.md with Concept Fable Reference Review and Benchmark Comparison Check.
+- Updated both related agents/openai.yaml prompts to mention reference-based calibration.
+- Bumped MapKAI asset/display version to v0.1.55.
+
+Verified:
+- Reference files contain real examples and no TODO placeholders.
+- Skill frontmatter and agents/openai.yaml parsing checks passed.
+- New references were scanned for required benchmark/review headings.
+- git diff --check passed before commit.
+- No story data, router mode list, public UI behavior, PDC logic, D1 schema, account behavior, or tracking behavior changed beyond asset/display version sync.
+
+Push:
+- Direct-push rule is active; final commit hash is reported in the Codex final response.
+```
+
 Latest MapKAI story skill requirement update:
 
 ```text
