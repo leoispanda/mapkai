@@ -117,8 +117,8 @@ Fail if the page only defines the discipline, only tells history without showing
 
 Before approving a story, mentally remove:
 
-- historical support;
-- hidden knowledge;
+- final historical anchor;
+- final field-name point;
 - concept explanation;
 - field title;
 - famous person name if possible.
@@ -163,7 +163,7 @@ For `PASS` or `PASS / LOCAL EDIT`, provide a micro-edited version that directly 
 Micro-edits must not:
 
 - Invent new facts, scenes, dialogue, or private emotions.
-- Change the story's core event, knowledge point, or historical support.
+- Change the story's core event, knowledge point, or historical anchor.
 - Rebuild the story arc.
 - Hide a structural problem by polishing around it.
 
@@ -192,7 +192,7 @@ Mark `FAIL` and return to rewrite when:
 - the field-origin turn could have been attached to almost any historical figure because it comes from a generic science-method template rather than this story's person/event;
 - the story forces measurement, comparison, tables, charts, or visualization onto a topic whose real pressure is ecological action, tool change, institutional reform, artistic perception, or community organizing;
 - abstract method words such as scale, repetition, position, time, evidence, system, relationship, model, variable, or condition appear without the exact object, tool, record, sample, chart, or action that makes them necessary;
-- the historical support section is doing the work the story body should have done.
+- the final historical anchor or field-name point is doing the work the story body should have done.
 
 Do not mark these as `PASS / LOCAL EDIT`. Use `LOCAL EDIT` only when the scene already exists and one local paragraph or sentence is broken. If the main scene must be rebuilt, it is `FAIL`.
 
@@ -207,7 +207,7 @@ Symptoms:
 - The body lists features, principles, methods, outcomes, or approach components.
 - There is no concrete action sequence.
 - The reader does not experience friction before the concept appears.
-- The story would collapse if hidden knowledge, historical support, concept explanation, or metaphor mapping were removed.
+- The story would collapse if the final field-name point, historical anchor, concept explanation, or metaphor mapping were removed.
 
 Common weak pattern:
 
@@ -228,7 +228,7 @@ Repair strategy:
 - Replace keyword lists with one concrete scene.
 - Require at least three beats: opening action, repeated or deepening friction, changed practice.
 - End the story body on a final image before naming the concept, field, historical approach, or person.
-- Move theory vocabulary into historical support, hidden knowledge, concept explanation, or metaphor mapping.
+- Move theory vocabulary out of the scene and into the final earned point, concept explanation, or metaphor mapping.
 
 Decision guidance:
 
@@ -269,7 +269,7 @@ Reviewer question: Did the writer choose the right mode before writing?
 
 ### -1A. Mode-Specific Minimums
 
-For **Historical Discovery / Field-Origin Story**, require concrete time/place/action, old method, evidence pressure, changed question, historical support, hidden knowledge, and reflection question.
+For **Historical Discovery / Field-Origin Story**, require concrete time/place/action, old method, evidence pressure, changed question, integrated historical anchoring, an earned final field-name point, and an optional reflection question. Do not require separate "历史支撑" or "藏在里面的知识" sections in reader-facing output.
 
 For **Subject Origin Page**, require the page-level sections from `subject-origin-page-standard.md`, a 500-800 Chinese character `起源故事`, a clear "why this field became necessary" section, a `从 X，转向 Y` core turn, 2-3 key anchors, later branches, and a reflection or mini-check. In first-pass review, images must be absent and should not block approval.
 
@@ -399,7 +399,7 @@ Fail or mark `LOCAL EDIT` if:
 - The story has no time anchor but uses a historical person or event.
 - Different years, places, or phases are compressed into one attractive scene.
 - Field work, later data analysis, report publication, and policy impact are written as if they happened in one continuous moment.
-- The historical support section tries to fix a scene that was confused in the story body.
+- The final historical anchor tries to fix a scene that was confused in the story body.
 
 Reviewer question: Is this a reliable scene, or a good-looking scene assembled from later facts?
 
@@ -448,14 +448,14 @@ Good signs:
 - A concrete scene exposes the limit of that older practice.
 - A new object of attention appears: a route, organism, pattern, risk, relation, process, sign, record, tool, behavior, or environment.
 - The story shows the kind of question the emerging field begins to ask.
-- The hidden knowledge section names how the field starts to need its own method, rather than defining the whole discipline.
+- The final field-name point names how the field starts to need its own method, rather than defining the whole discipline.
 
 Weak signs:
 
 - The story is only a biography, discovery anecdote, reform story, or invention story.
 - The field title could be swapped for another field without changing the body.
 - The person/event is interesting, but the field's object, question, or method never becomes necessary.
-- Historical support supplies the field-origin meaning because the body only staged an event.
+- The final historical anchor supplies the field-origin meaning because the body only staged an event.
 
 Reviewer question: What older way of working reached its limit, and what new object/question/method began to belong to this field?
 
@@ -506,7 +506,7 @@ The following cannot receive `PASS`:
 13. The title promises a concrete object, event, place, or puzzle, but the story body barely uses it or never lets it affect the field-origin turn.
 14. The body contains internal scaffolding or template language such as "旧办法并不荒唐," "如果只求先有秩序," "材料不再各说各话," "让证据自己排队," or similarly generic review-skill prose.
 15. The old question and new question could be pasted into many unrelated stories without changing the nouns.
-16. The hidden knowledge section introduces concepts not supported by the story, such as adding genetics to a microscope-scale observation story that never shows inheritance.
+16. The final field-name point introduces concepts not supported by the story, such as adding genetics to a microscope-scale observation story that never shows inheritance.
 17. The field-method fit is satisfied only by generic words like "measure," "compare," "graph," "system," or "relationship," without topic-specific evidence.
 18. The supplied page image, image alt text, or image prompt contradicts the title/body enough to mislead the reader.
 19. The tone infantilizes the reader: childish wonder, fairy-tale framing, over-personified objects, or moral-of-the-story endings.
@@ -514,14 +514,15 @@ The following cannot receive `PASS`:
 21. The story tries to explain the whole field instead of one core field-origin turn.
 22. The old question is a generic "what is this called?" when the topic is not actually about naming, classification, or natural-history categorization.
 23. The story uses high-risk invented details such as exact weather, private emotion, dialogue, named bystanders, room layout, or dramatic gestures without support.
-24. The "藏在里面的知识" section supplies a field-origin turn that the story body itself did not stage.
+24. The final point supplies a field-origin turn that the story body itself did not stage.
 25. The story forces a measurement/table/chart turn onto a topic whose evidence pressure is not numerical or visualized data.
 26. Title objects such as seedlings, buckets, rainwater, ledgers, pumps, curves, tools, or maps appear as decoration instead of changing what the person can ask or do.
 27. The body contains abstract template phrases such as "尺度、次数、位置或时间一变," "数量、尺度、位置、时间和重复观察," "先重新测量数值," or "同一张可检查的图" without concrete scene-specific evidence.
 28. The story only shows a discovery, invention, reform, or biography, but not why the selected field began to need its own object, question, or method.
 29. The field title is only a label; the story body would still work under another field name.
-30. The body contains correct keywords, approach features, or concept vocabulary but no action sequence that lets the reader experience friction and changed practice.
-31. For broad disciplines, the story implies that one person or one scene created the entire field rather than presenting a historically cautious origin window or formation turn.
+30. The story uses a separate "历史支撑" or "藏在里面的知识" reader-facing section even though the requested final format is an integrated story.
+31. The body contains correct keywords, approach features, or concept vocabulary but no action sequence that lets the reader experience friction and changed practice.
+32. For broad disciplines, the story implies that one person or one scene created the entire field rather than presenting a historically cautious origin window or formation turn.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 
@@ -585,8 +586,8 @@ Fail this story if:
 
 - "rainwater" or "animalcules" appears only in title/support.
 - The body becomes generic method prose about naming, measuring, comparing, or scale.
-- The hidden knowledge adds unsupported concepts such as heredity.
-- The historical support is used to compensate for a body that never actually staged the observation.
+- The final field-name point adds unsupported concepts such as heredity.
+- The final historical anchor is used to compensate for a body that never actually staged the observation.
 
 ### 1. Scene Before Explanation
 
@@ -628,7 +629,7 @@ Reviewer question: Could a curious adult enjoy the story while a graduate studen
 
 ### 1B. Field Name Quarantine
 
-Check whether the story body names the field, explains the field, or uses the field title as a bridge before the "hidden knowledge" section.
+Check whether the story body names or explains the field too early. In integrated reader-facing output, the field name may appear near the end as a point of recognition after the scene has earned it.
 
 Fail or mark `LOCAL EDIT` if the story body contains patterns like:
 
@@ -661,7 +662,7 @@ Good signs:
 - There is a small resistance: damp paper, an exception, a failed explanation, a measurement that does not fit, a tool limit, a patient or object that refuses the old category.
 - The changed question feels like a result of what happened, not a sentence inserted by the writer.
 
-Reviewer question: If the field title and historical support were removed, would this still feel like a scene worth reading rather than a summary paragraph?
+Reviewer question: If the field title and final historical anchor were removed, would this still feel like a scene worth reading rather than a summary paragraph?
 
 ### 1D. Field Fit And Method Fit
 
@@ -699,7 +700,7 @@ Fail or mark `LOCAL EDIT` or `FAIL` if:
 
 - The new question is long but vague.
 - The new question uses broad words such as "system," "relationship," "meaning," or "conditions" without naming the concrete variables or evidence.
-- The hidden knowledge section says the correct concept, but the body does not make that concept visible.
+- The final field-name point says the correct concept, but the body does not make that concept visible.
 
 Reviewer question: After reading, can the reader state the precise field-origin turn in one sentence?
 
@@ -707,7 +708,7 @@ Reviewer question: After reading, can the reader state the precise field-origin 
 
 Check whether early naming helps the scene or turns the story into a biography.
 
-For many MapKAI stories, especially famous-person field-origin stories, it is often stronger to begin with "a doctor," "a young traveler," "a mathematician," "a student," or "an engineer," then reveal the name after the field-level question begins to form or in historical support.
+For many MapKAI stories, especially famous-person field-origin stories, it is often stronger to begin with "a doctor," "a young traveler," "a mathematician," "a student," or "an engineer," then reveal the name after the field-level question begins to form or in the final historical anchor.
 
 Do not automatically fail early naming. Fail it only when the name replaces observation, tension, or action.
 
@@ -944,11 +945,11 @@ Sensory details may be plausible scene reconstruction when they do not assert un
 
 Reviewer question: Would this sentence survive fact-checking?
 
-### 11A. Historical Support Bridge
+### 11A. Historical Anchor Bridge
 
-Check whether historical support is reliable and connected to the story.
+Check whether the integrated historical anchor is reliable and connected to the story.
 
-Good historical support:
+Good historical anchor:
 
 - Reveals or anchors the person/event if the body delayed naming.
 - States time, person/event, action, and influence without exaggeration.
@@ -960,7 +961,7 @@ Weak signs:
 - It ends with a generic academic phrase such as "被视为...的重要象征" without explaining what concrete artifact or practice made it important.
 - It names influence but not the specific method, evidence, or artifact.
 
-Reviewer question: Does the support section help the reader connect the story to verifiable history?
+Reviewer question: Does the final anchor help the reader connect the story to verifiable history without exposing a separate support section?
 
 ### 12. Not Just Longer
 
@@ -1000,13 +1001,13 @@ Weak signs:
 - The title or summary already says the abstract transformation.
 - The first half announces the final relationship before the old habit has had time to feel reasonable.
 - The body tells the reader "this is about systems/relationships/environment" before the scene earns it.
-- The final hidden knowledge section only repeats what was already obvious from the opening.
+- The final field-name point only repeats what was already obvious from the opening.
 
 Strong signs:
 
 - The first half lets the old method work well enough to feel plausible.
 - The obstruction makes the old method insufficient.
-- The reader reaches the hidden knowledge section with a sharper structure than they had at the start.
+- The reader reaches the final field-name point with a sharper structure than they had at the start.
 
 Reviewer question: Did the reader experience the field-origin turn, or did the title and early sentences spoil it?
 
@@ -1203,7 +1204,7 @@ A story cannot be approved unless these questions are clearly answered:
 8. What exact field method became visible: measuring, comparing, modeling, visualizing, testing, calculating, classifying, interpreting, or deciding?
 9. How did the new understanding grow from evidence?
 10. Did each literary sentence carry information, not just mood?
-11. Did historical support connect the story to verifiable facts without becoming a disconnected encyclopedia card?
+11. Did the integrated historical anchor connect the story to verifiable facts without becoming a disconnected encyclopedia card?
 12. Did the title and summary avoid spoiling the abstract conclusion?
 13. Did the field-origin turn emerge naturally and sharply?
 14. Does the final question contain real tension?

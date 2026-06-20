@@ -2654,3 +2654,12 @@ Follow-up:
 - Updated `mapkai-story-review` with a readability gate: a structurally sound story that appears as one dense text wall should be marked `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`.
 - Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; paragraphing rules were confirmed by `rg`.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Switch MapKAI stories to integrated reader-facing endings
+- Updated `mapkai-story-rewrite` so default reader-facing knowledge stories no longer expose separate `故事场景`, `历史支撑`, or `藏在里面的知识` sections.
+- New default output is title + one-sentence intro + a 700-1100 Chinese character integrated story in short paragraphs.
+- Historical facts and knowledge-turn checks remain internal, then appear only as concise final anchors after the scene has earned them.
+- Final endings should point to the discipline by name: narrow/well-supported origins may say `这就是{field}的诞生`; broad disciplines should use cautious wording such as `走向独立的开端之一` or `开始成形的入口`.
+- Updated `mapkai-historical-discovery-story` to match the integrated story format and updated `mapkai-story-review` so it reviews final anchors instead of requiring exposed support/hidden-knowledge sections.
+- Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill files.
+- Push status: committed and pushed to `main` in this turn.

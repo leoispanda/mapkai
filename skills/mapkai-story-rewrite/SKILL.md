@@ -21,7 +21,7 @@ A knowledge story cannot pass only because it is atmospheric or elegant. It must
 
 MapKAI stories must work as small stories before they work as explanations.
 
-Before finalizing any story body, mentally remove the field title, concept name, famous person name if possible, historical support, hidden knowledge section, and explanation section. Then ask:
+Before finalizing any story body, mentally remove the field title, concept name, famous person name if possible, final historical anchor, final field-name point, and explanation section. Then ask:
 
 ```text
 Would a reader still want to continue because something is happening?
@@ -130,7 +130,7 @@ Generic-template failure signs:
 - The supposed field-origin turn comes from a generic science-method template rather than from the specific person, event, object, instrument, record, or pressure in the input.
 - The prose talks about "scale, time, position, repetition, evidence, relationship, system, model, variables, or conditions" before showing the object, tool, record, or action that makes those words necessary.
 - A title promises a concrete thing, such as rainwater, a pump, a chart, an air sample, a mountain, or a classroom, but the body mostly explains a knowledge method.
-- The story needs the historical support section to tell the reader what actually happened.
+- The story needs a final fact paragraph to tell the reader what actually happened because the scene itself never staged it.
 
 If any of these are central, delete the template-like middle and write a new story scene. Do not make local sentence edits.
 
@@ -149,7 +149,7 @@ Before rewriting, internally answer:
 11. Does the field-origin turn come from this person/event itself rather than a generic method template?
 12. Is the turn type scale, attribution, trend, distribution, ecological relation/action, tool redesign, institutional decision, artistic perception, or something else specific?
 13. Which original sentences are generic scaffolding, abstract explanation, false scene, or mismatched old question and must be removed?
-14. Which facts belong only in "历史支撑" and must not be written as if they happened immediately in the scene?
+14. Which facts belong only in the final historical anchor and must not be written as if they happened immediately in the scene?
 
 ## Inputs
 
@@ -218,7 +218,7 @@ Follow this order unless the user gives a stronger structure:
 4. **Character action**: Make someone do things: observe, measure, record, compare, ask, test, draw, dismantle, wait, return, mark, calculate, or recheck.
 5. **Changed question**: Let the central question change. The change should be visible, not merely announced.
 6. **New understanding**: Let the new understanding grow from accumulated actions and evidence.
-7. **Delayed knowledge point**: Put the field name and abstract knowledge in the second half or in the required "hidden knowledge" section. Use the selected language's field title.
+7. **Delayed knowledge point**: Put the field name and abstract knowledge near the end, after the concrete scene has earned them. Use the selected language's field title.
 
 By the end, the reader should be able to say not only "what changed here," but "why this kind of problem began to belong to this field."
 
@@ -373,7 +373,7 @@ Before writing any historical knowledge story, internally answer this table. Do 
 8. What new method appears: reclassifying, measuring, comparing, mapping, graphing, modeling, testing, interpreting, or deciding?
 9. How does the question change?
 10. Can the field-origin turn be stated as one sentence?
-11. Which facts belong only in "历史支撑" because they happened later or elsewhere?
+11. Which facts belong only in the final historical anchor because they happened later or elsewhere?
 12. Which later impacts must not be written as if they happened in the main scene?
 
 Choose one primary scene axis:
@@ -414,7 +414,7 @@ For `自然科学、数学与统计`, do not merely show a natural observation. 
 - comparison across cases, heights, routes, populations, samples, or repeated observations;
 - a pattern, distribution, scale, table, map, graph, coordinate, or visual arrangement that turns scattered observations into evidence.
 
-The hidden knowledge section should name the precise turn. Avoid generic turns like "everything is connected." Prefer turns such as:
+The final field-name point should name the precise turn. Avoid generic turns like "everything is connected." Prefer turns such as:
 
 - from naming isolated specimens to comparing variables across a distribution;
 - from one case to a pattern across cases;
@@ -457,7 +457,9 @@ The story body must not contain sentences shaped like:
 - "藏在这个故事里的..."
 - "真正的意义在于..."
 
-Put that explanatory material in the "藏在里面的知识" section instead. The story body should read as a scene and a changed question even if the reader has not seen the field title.
+Reader-facing stories should not expose scaffolding sections such as "历史支撑" or "藏在里面的知识" by default. Keep factual support and knowledge-turn checks internal, then integrate only the necessary facts and field name into the final paragraphs after the scene has earned them.
+
+The story body should read as a scene and a changed question even if the reader has not seen the field title. The field name may appear near the end as a point of recognition, not as an opening explanation.
 
 ## Final Image Before Concept
 
@@ -475,7 +477,9 @@ Better:
 The room no longer looked like a place where children waited for lessons. Drawings, blocks, teacher notes, and parents' questions had started to work on the same problem.
 ```
 
-Only after this image should historical support, hidden knowledge, or concept explanation name the approach. The reader should feel the click before seeing the label.
+Only after this image should the story name the approach, person, discipline, or field-origin meaning. The reader should feel the click before seeing the label.
+
+Default reader-facing output should integrate the reveal into the final paragraph instead of adding separate "历史支撑" or "藏在里面的知识" sections.
 
 ## No Feature Lists In Story Body
 
@@ -493,7 +497,7 @@ Better:
 The teacher pinned the children's drawings beside her notes. Parents stood around them after work, not to admire the pictures, but to ask what problem the children were trying to solve. The next morning, more blocks sat near the window, clay lay beside the paper, and mirrors waited where children had argued about light.
 ```
 
-Stage features through action. Feature names belong in historical support, hidden knowledge, or concept explanation.
+Stage features through action. Feature names belong only after the story has earned them, usually in the final point of recognition rather than in separate reader-facing explanation sections.
 
 ## Storytelling Craft
 
@@ -544,7 +548,7 @@ Every scene object must serve the field-origin turn. A ledger, specimen folder, 
 - Prefer "Rain washed away the topsoil, making the land harder to farm" before any compressed phrase like "soil became thinner."
 - Use this priority order: clarity first, story movement second, poetic quality last.
 - After drafting, remove the field name and famous person's name. The story should still be readable and worth continuing.
-- If the ending sounds like a definition, move that material to "藏在里面的知识" and end the body on the earned new way of seeing.
+- If the ending sounds like a definition, rebuild it as a final point of recognition: a person, tool, institution, or repeated practice has made the field's new question visible.
 - Make the old/new question contrast sharp and short. Long abstract rewrites weaken the turn.
 
 ## Naming Guidance
@@ -555,7 +559,7 @@ Do not treat delayed naming as an absolute rule. Early naming is acceptable when
 
 ## Factual Safety
 
-Use only reliable facts in the historical support section.
+Use only reliable facts in the integrated historical anchor near the end of the story.
 
 Sensory detail may be used as plausible scene reconstruction when it does not assert unverifiable exact facts. Avoid exact dialogue, private emotion, exact weather, room layout, or causal claims unless the source input supports them.
 
@@ -565,7 +569,7 @@ Use cautious wording for complex historical claims: "often considered," "later b
 
 ## Output Format
 
-Use this format exactly:
+Use this reader-facing format by default unless the user explicitly asks for the old structured/audit format:
 
 The one-sentence introduction must create curiosity, not reveal the full abstract conclusion. It may introduce the object, pressure, or puzzle, but it should not fully state the field-origin turn before the story begins.
 
@@ -581,20 +585,17 @@ The one-sentence introduction must create curiosity, not reveal the full abstrac
 一句简介
 {One concrete sentence that creates curiosity without announcing the abstract conclusion.}
 
-故事场景
-{1 to 2 concrete scene sentences, not a summary}
+{Integrated story, normally 700 to 1100 Chinese characters or comparable length in the selected language. Use 4-7 short paragraphs separated by blank lines. It must include scene, old understanding, tension, action, changed question, evidence-grown new understanding, a concise historically cautious anchor, and a final point of recognition naming the field or discipline. Do not use separate "故事场景", "历史支撑", or "藏在里面的知识" headings unless the user explicitly asks for the old structured format.}
 
-{story body, about 500 to 800 Chinese characters or comparable length in the selected language. It must include scene, old understanding, tension, action, changed question, and evidence-grown new understanding.}
-{Use 3-5 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output.}
-
-历史支撑
-{Reliable facts only. Briefly state time, person/event, action, and impact. Do not exaggerate or invent.}
-
-藏在里面的知识
-{Explain the field-origin turn in 1 to 2 sentences that grow from the story: what older way of seeing reached its limit, and what new object/question/method began to define this field. Do not write a textbook definition, and do not use this section to rescue a story body that failed to show the turn.}
-
-{One reflection question grown from the story's changed question.}
+{Optional final reflection question grown from the story's changed question, only if it does not weaken the ending.}
 ```
+
+The final point should feel like the story arriving at its name:
+
+- For narrow or historically well-supported origins: "这就是{fieldTitleInSelectedLanguage}的诞生。"
+- For broad disciplines or complex formations: "这成为{fieldTitleInSelectedLanguage}开始成形的一个入口。" / "这常被看作{fieldTitleInSelectedLanguage}走向独立的开端之一。"
+
+Do not use the final point to overclaim that one person or one scene created an entire broad discipline.
 
 ## Style Rules
 
@@ -604,10 +605,10 @@ The one-sentence introduction must create curiosity, not reveal the full abstrac
 - Do not use decorative atmosphere that can be removed without changing the knowledge logic.
 - Do not make the final question a memory check. It should hold a real tension, such as fact vs relationship, tool vs intention, local error vs system, data vs judgment, or classification vs connection.
 - Do not write a historical summary paragraph and call it a story. If the paragraph can be summarized as "person did X and influenced Y," rebuild it around a tool, object, notebook, room, route, list, instrument, argument, or failed expectation.
-- Do not let the final third become a contribution list. The name, work, and historical influence belong in historical support unless the reveal is narratively earned.
+- Do not let the final third become a contribution list. The name, work, and historical influence should appear only as a concise final anchor, and only after the reveal is narratively earned.
 - Do not let the final third become a neat conceptual wrap-up. Stay with the changed question and the evidence that changed it.
 - Do not use atmosphere as a substitute for event. Light, dampness, noise, or shadow can support a scene, but the story still needs a cognitive action: finding an anomaly, separating categories, comparing records, changing a question, drawing a new form, or proposing a new explanation.
-- Historical support should reveal or anchor the person/event and carry the story's evidence forward. It may be concise, but it should not read like a disconnected encyclopedia card.
+- Historical support should be woven into the final paragraphs as an anchor for the person/event and field-origin meaning. It should not appear as a disconnected encyclopedia card unless the user asks for audit or structured mode.
 - Reflection questions should keep the story's exact tension. Avoid absolute words such as "only" or "always" unless historically or scientifically justified; prefer "under what conditions," "tends to appear with," "what else must be recorded," or similar phrasing when the story is about variables and patterns.
 
 Use these final checks:
@@ -617,8 +618,8 @@ Use these final checks:
 - No changed question means the piece is a knowledge introduction.
 - No initially reasonable old method means there is no real discovery.
 - If the body still works after replacing the person, place, and object, the story is too generic and must be rewritten.
-- If "藏在里面的知识" is needed to explain what changed, the story body has not done its job.
-- If historical support repairs the scene instead of anchoring it, the story is structurally weak.
+- If a separate "藏在里面的知识" paragraph would be needed to explain what changed, the integrated story has not done its job.
+- If historical facts repair the scene instead of anchoring the earned ending, the story is structurally weak.
 - If the final question does not return to the story's central object, action, or metaphor, replace it.
 
 ## Forbidden Patterns

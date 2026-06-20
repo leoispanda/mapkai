@@ -1,6 +1,6 @@
 ---
 name: mapkai-historical-discovery-story
-description: Write MapKAI stories for real historical people, discoveries, inventions, scientific observations, reforms, expeditions, and social movements. Use when the input names or depends on a real person/event and needs a historically situated scene with concrete time/place/action, old method, evidence pressure, changed question, historical support, hidden knowledge, and a reflection question.
+description: Write integrated MapKAI stories for real historical people, discoveries, inventions, scientific observations, reforms, expeditions, and social movements. Use when the input names or depends on a real person/event and needs a historically situated reader-facing story with concrete time/place/action, old method, evidence pressure, changed question, integrated historical anchoring, and an earned final field-name point rather than exposed "历史支撑" or "藏在里面的知识" sections.
 ---
 
 # MapKAI Historical Discovery Story Writer
@@ -25,7 +25,7 @@ For a full Subject Origin page, first use `skills/mapkai-story-rewrite/reference
 
 MapKAI stories must work as small stories before they work as explanations.
 
-Before finalizing the story body, mentally remove the field title, famous person name if possible, historical support, hidden knowledge section, and explanation section. Ask:
+Before finalizing the story body, mentally remove the field title, famous person name if possible, final historical anchor, final field-name point, and explanation section. Ask:
 
 ```text
 Would a reader still want to continue because something is happening?
@@ -91,7 +91,7 @@ Better:
 The classroom no longer looked like a place where children waited for lessons. It looked like a workshop where drawings, blocks, teachers' notes, and parents' questions could all become part of thinking.
 ```
 
-Only after that should historical support or hidden knowledge name the person, approach, or field.
+Only after that should the final anchor name the person, approach, or field.
 
 ## No Feature Lists In Story Body
 
@@ -109,23 +109,25 @@ Better:
 The teacher pinned the children's drawings beside her notes. Parents stood around them after work, not to admire the pictures, but to ask what the children were trying to solve. The next morning, more blocks sat near the window, clay lay beside the paper, and mirrors waited where children had argued about light.
 ```
 
-Stage features through action. Put feature names in historical support or hidden knowledge.
+Stage features through action. Put feature names only in the final earned point if they are still needed.
 
 ## Hard Rules
 
 - Do not invent false scenes.
 - Do not merge fieldwork, later analysis, publication, and impact into one moment.
-- Do not use a historical support section to rescue a weak story body.
+- Do not use later historical facts to rescue a weak story body.
 - Do not turn the person into a hero biography.
 - Do not reveal the abstract concept too early.
 - The key object in the title must do real work in the story.
-- The story body must still show a meaningful change if historical support and hidden knowledge are removed.
+- The story body must still show a meaningful change before the final field-name point appears.
 - Do not default to "what is this called?" unless the story is actually about naming, classification, or natural-history collecting.
 - Do not force measurement, comparison, tables, or charts onto stories whose pressure comes from scale, action, reform, tool use, or social movement.
 - Do not write the story body as a feature list, contribution list, or approach summary.
 - Keep high-risk details out unless supported: exact weather, private emotion, direct dialogue, room layout, named bystanders, or dramatic gestures.
 
 ## Output Format
+
+Default reader-facing output is an integrated story, not a story plus exposed support notes. Keep factual support and hidden knowledge checks internal, then weave only necessary facts into the final paragraphs.
 
 ```text
 知识故事
@@ -136,14 +138,9 @@ Stage features through action. Put feature names in historical support or hidden
 一句简介
 {A concrete sentence that creates curiosity without revealing the whole abstract conclusion.}
 
-故事场景
-{500-800 Chinese characters. Start with time, place, object, and action. Show old question, evidence pressure, new action, changed question, and new understanding. Use 3-5 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output.}
+{Integrated story, normally 700-1100 Chinese characters. Start with time, place, object, and action. Show old question, evidence pressure, new action, changed question, and new understanding. Use 4-7 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output. In the final paragraphs, reveal the person/event and name the field-origin meaning without adding separate "历史支撑" or "藏在里面的知识" headings.}
 
-历史支撑
-{Brief and accurate historical context. Do not exaggerate causality.}
-
-藏在里面的知识
-{1-2 sentences explaining the knowledge turn. For field-origin pages, explain what older way of seeing reached its limit and what new object/question/method began to define the field.}
-
-{Reflection question}
+{Optional reflection question, only if it grows naturally from the ending.}
 ```
+
+End with a point of recognition. For narrow or well-supported origins, a direct sentence such as "这就是{field}的诞生。" can work. For broad disciplines, use cautious wording such as "这成为{field}开始成形的一个入口" or "这常被看作{field}走向独立的开端之一."
