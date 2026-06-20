@@ -13,6 +13,24 @@ Write a historically situated MapKAI knowledge story. The story should not be an
 
 For MapKAI field pages, make the person/event an entrance into how a discipline or knowledge field began to need its own object, question, or method. Do not stop at "this person discovered X."
 
+Do not imply that a broad discipline was created in one scene by one person. Many fields formed through many people, institutions, tools, disputes, and teaching practices. Use the historical person/event as an origin window or formation turn unless the input is genuinely about a narrow invention or named approach.
+
+## Reference Files
+
+Use `references/examples.md` when a historical field-origin story feels correct but summary-like, especially for education or Reggio Emilia-style stories.
+
+## Story-First Product Promise
+
+MapKAI stories must work as small stories before they work as explanations.
+
+Before finalizing the story body, mentally remove the field title, famous person name if possible, historical support, hidden knowledge section, and explanation section. Ask:
+
+```text
+Would a reader still want to continue because something is happening?
+```
+
+If no, rewrite the body. A story body must have a concrete situation, a reasonable old way of acting, friction through action/object/repetition/material, at least one second beat of friction or adjustment, a changed practice or question, and a final image that already contains the turn before the label appears.
+
 ## Best For
 
 - Science history
@@ -39,6 +57,52 @@ For MapKAI field pages, make the person/event an entrance into how a discipline 
 11. Hidden knowledge
 12. Reflection question
 
+## One Scene, Three Beats
+
+Develop one main scene through at least three beats:
+
+1. **Opening action**: someone handles a concrete object, material, tool, room, route, record, child, graph, sample, or surface.
+2. **Friction or repetition**: the old interpretation still seems reasonable, but something repeats, resists, fails, becomes heavier, changes shape, or does not fit.
+3. **Changed practice or question**: someone records differently, rearranges a room, adds material, returns later, compares another case, asks a different question, or waits longer.
+
+If the story only stages one action and then jumps to explanation, it is too thin. Add length through visible action and repeated friction, not through abstract explanation.
+
+## Final Image Before Concept
+
+Before naming the approach, field label, or historical importance, end the story body on a final image that already contains the knowledge turn.
+
+Weak:
+
+```text
+This became the Reggio Emilia approach.
+```
+
+Better:
+
+```text
+The classroom no longer looked like a place where children waited for lessons. It looked like a workshop where drawings, blocks, teachers' notes, and parents' questions could all become part of thinking.
+```
+
+Only after that should historical support or hidden knowledge name the person, approach, or field.
+
+## No Feature Lists In Story Body
+
+Do not put lists of correct features inside the story body.
+
+Weak:
+
+```text
+The school used art, community, documentation, environment, and project learning.
+```
+
+Better:
+
+```text
+The teacher pinned the children's drawings beside her notes. Parents stood around them after work, not to admire the pictures, but to ask what the children were trying to solve. The next morning, more blocks sat near the window, clay lay beside the paper, and mirrors waited where children had argued about light.
+```
+
+Stage features through action. Put feature names in historical support or hidden knowledge.
+
 ## Hard Rules
 
 - Do not invent false scenes.
@@ -47,8 +111,10 @@ For MapKAI field pages, make the person/event an entrance into how a discipline 
 - Do not turn the person into a hero biography.
 - Do not reveal the abstract concept too early.
 - The key object in the title must do real work in the story.
+- The story body must still show a meaningful change if historical support and hidden knowledge are removed.
 - Do not default to "what is this called?" unless the story is actually about naming, classification, or natural-history collecting.
 - Do not force measurement, comparison, tables, or charts onto stories whose pressure comes from scale, action, reform, tool use, or social movement.
+- Do not write the story body as a feature list, contribution list, or approach summary.
 - Keep high-risk details out unless supported: exact weather, private emotion, direct dialogue, room layout, named bystanders, or dramatic gestures.
 
 ## Output Format

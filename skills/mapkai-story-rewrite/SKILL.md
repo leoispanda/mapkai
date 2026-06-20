@@ -17,6 +17,27 @@ The output must read like a story, not a correct synopsis of a discovery. Passin
 
 A knowledge story cannot pass only because it is atmospheric or elegant. It must be historically situated, scene-consistent, and epistemically sharp. Time, place, action, and knowledge transition must align.
 
+## Story-First Product Promise
+
+MapKAI stories must work as small stories before they work as explanations.
+
+Before finalizing any story body, mentally remove the field title, concept name, famous person name if possible, historical support, hidden knowledge section, and explanation section. Then ask:
+
+```text
+Would a reader still want to continue because something is happening?
+```
+
+If the answer is no, the story body is not ready. A MapKAI story body must not be a correct summary with scene decoration. It must have:
+
+1. a concrete opening situation;
+2. an old way of acting that first seems reasonable;
+3. friction that appears through action, object, repetition, or material;
+4. at least one second beat of friction, adjustment, or deepening;
+5. a changed practice or changed question;
+6. a final image that already contains the knowledge turn before the label appears.
+
+The story should make the field or concept necessary, not merely introduce it.
+
 ## Field Origin Frame
 
 The default MapKAI story is not merely "one knowledge point was discovered." It should show how a knowledge field begins to become necessary.
@@ -30,6 +51,15 @@ Use the person or event as an entrance, not as the final subject. The real subje
 - What method made that question answerable: observing, comparing, classifying, measuring, mapping, modeling, experimenting, interpreting, designing, caring, organizing, or deciding?
 
 The story should make the reader feel that the field did not begin as a school subject. It began because an older way of working ran into a scene it could not explain well enough.
+
+For broad disciplines, do not imply that one person, one discovery, or one scene created the whole field. Many fields formed through many people, tools, institutions, disputes, practices, and later teaching structures. A single MapKAI story should usually present an **origin window** or **formation turn**, not the total birth of the discipline.
+
+Use cautious framing:
+
+- Strong: "This scene shows one doorway through which biology began to need a new scale of evidence."
+- Weak: "This is where biology began."
+- Strong: "This reform helped make nursing a trained discipline."
+- Weak: "This person created nursing."
 
 Before drafting, state the field-origin turn internally:
 
@@ -136,6 +166,10 @@ Use the provided values when available:
 
 If rewriting an existing MapKAI story in the codebase, preserve IDs, codes, slugs, category relationships, quiz logic, founder mode behavior, and non-story fields unless the user explicitly asks for structural changes.
 
+## Reference Files
+
+For education or Reggio Emilia-style historical field-origin stories, consult `skills/mapkai-historical-discovery-story/references/examples.md` when the draft feels like a correct feature summary rather than a story.
+
 ## Story Arc
 
 Follow this order unless the user gives a stronger structure:
@@ -149,6 +183,21 @@ Follow this order unless the user gives a stronger structure:
 7. **Delayed knowledge point**: Put the field name and abstract knowledge in the second half or in the required "hidden knowledge" section. Use the selected language's field title.
 
 By the end, the reader should be able to say not only "what changed here," but "why this kind of problem began to belong to this field."
+
+## One Scene, Three Beats
+
+Every MapKAI story body should normally contain one main scene developed across at least three narrative beats.
+
+**Beat 1: Opening action**
+Someone is doing something with a concrete object, material, tool, room, route, record, child, graph, sample, or surface.
+
+**Beat 2: Friction or repetition**
+The old interpretation still seems reasonable, but something repeats, resists, fails, becomes heavier, changes shape, or does not fit.
+
+**Beat 3: Changed practice or question**
+Someone changes what they do: records differently, arranges the room differently, asks a different question, compares another case, removes support, adds a material, returns the next day, connects two groups, or waits longer.
+
+If the story only has one scene and then jumps to explanation, it is too thin. Do not add length through abstract explanation. Add length through visible action and repeated friction.
 
 ## Story, Not Synopsis Gate
 
@@ -371,6 +420,42 @@ The story body must not contain sentences shaped like:
 - "真正的意义在于..."
 
 Put that explanatory material in the "藏在里面的知识" section instead. The story body should read as a scene and a changed question even if the reader has not seen the field title.
+
+## Final Image Before Concept
+
+Before naming the historical approach, field label, or theoretical concept, end the story body on a final image that already contains the knowledge turn.
+
+Weak:
+
+```text
+This became the Reggio Emilia approach.
+```
+
+Better:
+
+```text
+The room no longer looked like a place where children waited for lessons. Drawings, blocks, teacher notes, and parents' questions had started to work on the same problem.
+```
+
+Only after this image should historical support, hidden knowledge, or concept explanation name the approach. The reader should feel the click before seeing the label.
+
+## No Feature Lists In Story Body
+
+Do not place a list of correct features inside the story body.
+
+Weak:
+
+```text
+The school used art, community, documentation, environment, and project learning.
+```
+
+Better:
+
+```text
+The teacher pinned the children's drawings beside her notes. Parents stood around them after work, not to admire the pictures, but to ask what problem the children were trying to solve. The next morning, more blocks sat near the window, clay lay beside the paper, and mirrors waited where children had argued about light.
+```
+
+Stage features through action. Feature names belong in historical support, hidden knowledge, or concept explanation.
 
 ## Storytelling Craft
 

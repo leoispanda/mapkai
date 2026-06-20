@@ -13,6 +13,27 @@ Explain a graduate-level concept through a serious allegorical story. The concep
 
 A concept fable should not feel like a short example with a label at the end. It should feel like a small world where the concept becomes necessary.
 
+## Story-First Product Promise
+
+MapKAI concept fables must work as small stories before they work as explanations.
+
+Before finalizing the `寓言故事`, mentally remove the field title, concept name, concept explanation, metaphor mapping, analogy boundary, and reflection question. Ask:
+
+```text
+Would a reader still want to continue because something is happening?
+```
+
+If no, rewrite the fable. The story body must not be a correct concept summary with allegorical decoration. It must have:
+
+1. a concrete opening situation;
+2. an old way of acting that first seems reasonable;
+3. friction through action, object, repetition, rule, material, silence, delay, or decision;
+4. at least one second beat of friction, adjustment, or deepening;
+5. a changed practice or changed question;
+6. a final image that already contains the concept before the concept name appears.
+
+The story should make the concept necessary, not merely introduce it.
+
 ## Best For
 
 - Management theory
@@ -85,6 +106,57 @@ Example ending pattern:
 Only after the quietest apprentices began correcting the master's measurements did the workshop understand what had changed. It was not that mistakes had disappeared. It was that mistakes could now enter the room before they became disasters. Much later, this kind of room would be called psychological safety.
 ```
 
+## One Scene, Three Beats
+
+Every concept fable should normally develop one main small world across at least three narrative beats.
+
+**Beat 1: Opening action**
+Someone is doing something with a concrete object, room, rule, schedule, surface, note, tool, record, group, or routine.
+
+**Beat 2: Friction or repetition**
+The old rule still seems reasonable, but something repeats, resists, fails, becomes heavier, changes shape, or does not fit.
+
+**Beat 3: Changed practice or question**
+Someone changes what they do: removes support, changes a rule, delays a decision, records differently, connects two groups, hides or reveals a note, returns the next day, or asks a different question.
+
+If the story only has one scene and then jumps to the concept label, it is too thin. Do not add length through abstract explanation. Add length through visible action and repeated friction.
+
+## Final Image Before Concept
+
+Before revealing the concept name, end the fable on a final image that already contains the knowledge turn.
+
+Weak:
+
+```text
+Then everyone understood this was psychological safety.
+```
+
+Better:
+
+```text
+The room had not become softer. It had become earlier: doubts, mistakes, and unfinished warnings could enter before the machine broke.
+```
+
+Only after this image should the concept name appear. The reader should feel the click before seeing the label.
+
+## No Feature Lists In Story Body
+
+Do not place a list of correct conceptual features inside the fable body.
+
+Weak:
+
+```text
+The team had trust, communication, shared norms, and learning.
+```
+
+Better:
+
+```text
+The apprentice put the cracked gear on the table before the shift began. No one praised him for courage. They simply opened the repair book to the earlier page where the same crack had been missed.
+```
+
+Stage features through action. Put feature names in concept explanation or metaphor mapping.
+
 ## Title And Reveal
 
 For concept fables, the title should create curiosity without giving away the concept too early.
@@ -116,6 +188,7 @@ Run this check internally before output. Do not print the self-check unless the 
 - The story section is long enough to develop a small world, normally 700-1100 Chinese characters or 600-900 English words unless compact output is requested.
 - The story does not use childish tone, fairy-tale morals, cute over-personification, or academic-paper summary language.
 - The story does not add length through abstract filler such as "the structure became visible" or "the group changed its understanding."
+- The story does not list correct keywords or features instead of staging friction.
 
 ### L2 Narrative Movement
 

@@ -53,6 +53,31 @@ No changed question = knowledge introduction.
 No initially reasonable old method = no real discovery.
 ```
 
+## Story Body Removal Test
+
+Before approving a story, mentally remove:
+
+- historical support;
+- hidden knowledge;
+- concept explanation;
+- field title;
+- famous person name if possible.
+
+Ask:
+
+```text
+Does the story body still show a meaningful change?
+```
+
+If the answer is no, the story is relying on explanation to rescue it.
+
+Decision guidance:
+
+- `PASS`: story body works independently and the explanation only clarifies.
+- `PASS / LOCAL EDIT`: story body works but one local paragraph needs more action.
+- `LOCAL EDIT`: story body has the right scene but not enough friction or changed practice.
+- `FAIL`: story body is mostly summary, feature list, or conceptual explanation.
+
 ## Decision Labels
 
 - `PASS`: Structure, facts, scene, action, and field-origin turn all work. Only tiny language edits may be needed.
@@ -110,6 +135,45 @@ Mark `FAIL` and return to rewrite when:
 - the historical support section is doing the work the story body should have done.
 
 Do not mark these as `PASS / LOCAL EDIT`. Use `LOCAL EDIT` only when the scene already exists and one local paragraph or sentence is broken. If the main scene must be rebuilt, it is `FAIL`.
+
+## Correct Keywords, No Story Failure Pattern
+
+Do not pass a story only because it contains the right vocabulary, historical facts, or approach components.
+
+Symptoms:
+
+- The story contains the right topic vocabulary.
+- The concept or historical facts are technically correct.
+- The body lists features, principles, methods, outcomes, or approach components.
+- There is no concrete action sequence.
+- The reader does not experience friction before the concept appears.
+- The story would collapse if hidden knowledge, historical support, concept explanation, or metaphor mapping were removed.
+
+Common weak pattern:
+
+```text
+Children draw, build, debate, listen, shape, measure, perform, and return to their ideas.
+```
+
+Problem: this lists features of Reggio Emilia but does not stage children thinking through materials.
+
+Better direction:
+
+```text
+One child used charcoal to draw a broken street. Another used scrap wood to build a bridge and argued that the bridge needed a shadow because people had to know where to wait. The teacher did not correct the model. She wrote down the argument and brought more wood, paper, clay, and mirrors the next day.
+```
+
+Repair strategy:
+
+- Replace keyword lists with one concrete scene.
+- Require at least three beats: opening action, repeated or deepening friction, changed practice.
+- End the story body on a final image before naming the concept, field, historical approach, or person.
+- Move theory vocabulary into historical support, hidden knowledge, concept explanation, or metaphor mapping.
+
+Decision guidance:
+
+- Mark `LOCAL EDIT` if the scene exists but needs expansion.
+- Mark `FAIL` if the story is mostly a feature list or explanation.
 
 Topic-specific checks:
 
@@ -393,6 +457,8 @@ The following cannot receive `PASS`:
 27. The body contains abstract template phrases such as "尺度、次数、位置或时间一变," "数量、尺度、位置、时间和重复观察," "先重新测量数值," or "同一张可检查的图" without concrete scene-specific evidence.
 28. The story only shows a discovery, invention, reform, or biography, but not why the selected field began to need its own object, question, or method.
 29. The field title is only a label; the story body would still work under another field name.
+30. The body contains correct keywords, approach features, or concept vocabulary but no action sequence that lets the reader experience friction and changed practice.
+31. For broad disciplines, the story implies that one person or one scene created the entire field rather than presenting a historically cautious origin window or formation turn.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 

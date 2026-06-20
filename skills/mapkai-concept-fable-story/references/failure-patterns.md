@@ -12,6 +12,7 @@ Use this file when a concept fable feels correct but weak, rushed, generic, or n
 6. Story Is Attractive But Concept Is Inaccurate
 7. Empty Analogy Boundary
 8. Reflection Question Too Broad
+9. Correct Keywords, No Story
 
 ## Failure Pattern 1: Reveal Too Early
 
@@ -244,3 +245,44 @@ Better:
 ```text
 当你的团队只看见白板上说出口的意见时，你会不会去找一找那些还压在杯子下面的纸条？
 ```
+
+## Failure Pattern 9: Correct Keywords, No Story
+
+### Symptoms
+
+- The story contains the right topic vocabulary.
+- The concept or historical facts are technically correct.
+- The body lists features, principles, methods, outcomes, or approach components.
+- There is no concrete action sequence.
+- The reader does not experience friction before the concept appears.
+- The story would collapse if the concept explanation, hidden knowledge, or historical support section were removed.
+
+### Common Example
+
+Weak:
+
+```text
+Children draw, build, debate, listen, shape, measure, perform, and return to their ideas.
+```
+
+Problem:
+
+This lists features of Reggio Emilia-style learning but does not stage children thinking through materials.
+
+Better:
+
+```text
+One child used charcoal to draw a broken street. Another used scrap wood to build a bridge and argued that the bridge needed a shadow because people had to know where to wait. The teacher did not correct the model. She wrote down the argument and brought more wood, paper, clay, and mirrors the next day.
+```
+
+### Repair
+
+- Replace keyword lists with one concrete scene.
+- Add at least three beats: opening action, repeated or deepening friction, changed practice.
+- End the story body on a final image before naming the concept or approach.
+- Move theory vocabulary into historical support, hidden knowledge, concept explanation, or metaphor mapping.
+
+### Decision Guidance
+
+- Mark `LOCAL EDIT` if the scene exists but needs expansion.
+- Mark `FAIL` if the story is mostly a feature list or explanation.

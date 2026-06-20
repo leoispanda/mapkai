@@ -2626,3 +2626,13 @@ Follow-up:
 - Verified: `node --check script.js`, `node --check public/script.js`, `git diff --check`, and a custom story review scan all passed.
 - Review scan result: 148 overrides present; banned template phrase hits 0; short scene+body stories 0; overlong stories 0; missing time anchors 0.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Strengthen story-first MapKAI skills
+- Updated `mapkai-story-rewrite`, `mapkai-historical-discovery-story`, `mapkai-concept-fable-story`, and `mapkai-story-review` so MapKAI stories must work as small stories before they work as explanations.
+- Added story-first gates: Story Body Removal Test, One Scene / Three Beats, Final Image Before Concept, No Feature Lists In Story Body, and Correct Keywords / No Story failure pattern.
+- Added a historical-discovery reference file with Reggio Emilia calibration so education-origin stories stage parents, children, materials, documentation, and room changes instead of listing approach keywords.
+- Added field-origin caution that broad disciplines usually form through many people, institutions, tools, disputes, and teaching practices; a MapKAI story should usually present an origin window or formation turn, not claim one person created the whole field.
+- Verification: `git diff --check` passed; custom Node frontmatter validation passed for the four edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill files.
+- `quick_validate.py` could not run because the local and bundled Python environments are missing `yaml` / PyYAML; custom frontmatter validation was used instead.
+- Test generation/review: Reggio Emilia sample reviewed as historical field-origin story and passed the new story-first checks: concrete postwar scene, reasonable old school purpose, repeated material friction, changed adult practice, final classroom/workshop image before naming the approach.
+- Push status: committed and pushed to `main` in this turn.
