@@ -3999,12 +3999,30 @@ canvas {
 
 .submodule-browser {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+}
+
+.hierarchy-layer {
+  display: grid;
+  gap: 8px;
+}
+
+.hierarchy-layer-label {
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 860;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.module-layer {
+  padding-bottom: 2px;
 }
 
 .submodule-button-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 8px;
   align-items: stretch;
 }
@@ -4020,7 +4038,7 @@ canvas {
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 8px;
   padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.88);
   color: #0f172a;
   font: inherit;
   text-align: left;
@@ -4031,7 +4049,7 @@ canvas {
 .submodule-button:hover,
 .submodule-button.is-active {
   border-color: rgba(37, 99, 235, 0.36);
-  background: rgba(239, 246, 255, 0.92);
+  background: rgba(239, 246, 255, 0.94);
   box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
 }
 
@@ -4064,6 +4082,15 @@ canvas {
   align-items: stretch;
 }
 
+.nested-field-layer {
+  border-left: 3px solid rgba(37, 99, 235, 0.2);
+  padding-left: 12px;
+}
+
+.nested-field-layer .hierarchy-layer-label {
+  color: #1d4ed8;
+}
+
 .detailed-field-button {
   display: inline-grid;
   width: 100%;
@@ -4072,10 +4099,10 @@ canvas {
   min-height: 64px;
   align-content: center;
   gap: 3px;
-  border: 1px solid rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 8px;
   padding: 10px 12px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(248, 250, 252, 0.82);
   color: #0f172a;
   font: inherit;
   text-align: left;
@@ -4086,7 +4113,7 @@ canvas {
 .detailed-field-button:hover,
 .detailed-field-button.is-active {
   border-color: rgba(37, 99, 235, 0.34);
-  background: rgba(239, 246, 255, 0.86);
+  background: rgba(239, 246, 255, 0.9);
   box-shadow: 0 14px 30px rgba(37, 99, 235, 0.09);
 }
 
@@ -4119,7 +4146,9 @@ canvas {
 
 .submodule-compact-panel {
   display: grid;
-  gap: 10px;
+  gap: 12px;
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
+  padding-top: 12px;
 }
 
 .submodule-overview-row,
@@ -4128,6 +4157,11 @@ canvas {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
   align-items: stretch;
+}
+
+.field-story-actions {
+  border-left: 3px solid rgba(214, 169, 71, 0.28);
+  padding-left: 12px;
 }
 
 .submodule-story-section {
@@ -4200,12 +4234,12 @@ canvas {
 .submodule-story-button.is-intro {
   min-height: 64px;
   border-color: rgba(37, 99, 235, 0.2);
-  background: rgba(239, 246, 255, 0.78);
+  background: rgba(239, 246, 255, 0.82);
 }
 
 .submodule-story-button.is-field {
-  border-color: rgba(37, 99, 235, 0.18);
-  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 107, 87, 0.18);
+  background: rgba(240, 253, 244, 0.72);
 }
 
 .submodule-story-button.is-concept {
@@ -6069,6 +6103,7 @@ body[data-theme="dark"] .tree-group-story-link strong,
 body[data-theme="dark"] .category-button strong,
 body[data-theme="dark"] .submodule-button,
 body[data-theme="dark"] .detailed-field-button,
+body[data-theme="dark"] .hierarchy-layer-label,
 body[data-theme="dark"] .submodule-story-section h2,
 body[data-theme="dark"] .submodule-story-button em,
 body[data-theme="dark"] .lens-story-shelf-heading h2,
@@ -6094,6 +6129,12 @@ body[data-theme="dark"] .lens-story-shelf-heading p,
 body[data-theme="dark"] .lens-story-sample-content em,
 body[data-theme="dark"] .field-chip.has-story {
   color: #aaa39a;
+}
+
+body[data-theme="dark"] .submodule-compact-panel,
+body[data-theme="dark"] .nested-field-layer,
+body[data-theme="dark"] .field-story-actions {
+  border-color: rgba(216, 177, 95, 0.22);
 }
 
 body[data-theme="dark"] .home-minimal::after {

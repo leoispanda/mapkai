@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.39";
+const appVersion = "0.1.40";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -385,7 +385,7 @@ const uiText = {
     openCategory: "Open lens",
     categoryScope: "Lens scope",
     categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
-    submoduleLabel: "Submodule",
+    submoduleLabel: "Module",
     submoduleIntroStory: "Module overview",
     detailedFieldLabel: "Detailed field",
     fieldIntroStory: "Field overview",
@@ -745,7 +745,7 @@ const uiText = {
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
     categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
-    submoduleLabel: "子模块",
+    submoduleLabel: "模块",
     submoduleIntroStory: "模块概览",
     detailedFieldLabel: "细分条目",
     fieldIntroStory: "条目概览",
@@ -13710,15 +13710,21 @@ function renderCategoryTree(category) {
   const fieldStoryActions = `${fieldIntroStory}${conceptFableButton}`.trim();
   target.innerHTML = `
     <div class="submodule-browser">
-      <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
-        ${submoduleButtons}
+      <div class="hierarchy-layer module-layer">
+        <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
+        <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
+          ${submoduleButtons}
+        </div>
       </div>
       <section class="submodule-compact-panel" aria-live="polite">
         <div class="submodule-overview-row">
           ${introStory}
         </div>
-        <div class="detailed-field-button-list" role="tablist" aria-label="${escapeHtml(t("detailedFieldLabel"))}">
-          ${fieldButtons}
+        <div class="hierarchy-layer nested-field-layer">
+          <span class="hierarchy-layer-label">${escapeHtml(t("detailedFieldLabel"))}</span>
+          <div class="detailed-field-button-list" role="tablist" aria-label="${escapeHtml(t("detailedFieldLabel"))}">
+            ${fieldButtons}
+          </div>
         </div>
         ${fieldStoryActions ? `<div class="field-story-actions">${fieldStoryActions}</div>` : ""}
        </section>
