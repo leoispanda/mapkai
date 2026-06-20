@@ -2617,3 +2617,12 @@ Follow-up:
 - Kept the homepage hero, primary Explore CTA, Knowledge Map CTA, and no-login microcopy visible.
 - The hidden content remains in the HTML with `hidden` attributes, so it can be restored or redesigned later without rebuilding the section content.
 - Synced `index.html` to `public/index.html`; no Story, Map, Founder, PDC, D1, login, account, tracking, or server-side user progress behavior changed.
+
+## 2026-06-20 - Rewrite all lens origin stories
+- Rebuilt all 148 `reviewedLensStoryOverridesZh` entries in `script.js` and `public/script.js` as stricter field-origin / discipline-origin stories.
+- Removed the prior generic template scaffolding from the final runtime story layer, including repeated phrases such as `故事的发动机`, `真正的转弯发生在这里`, `问题没有停在表面`, and `关键转向：`.
+- Kept the existing historical people, events, titles, field bindings, and support facts, but rewrote the final story bodies around concrete time/place anchors, old-method logic, evidence pressure, changed questions, and field-specific methods.
+- Added targeted fixes for mode-mismatch risks, especially environment stories, Leeuwenhoek / biology, Nightingale / care, medical imaging technology, and security / military / forensic service stories.
+- Verified: `node --check script.js`, `node --check public/script.js`, `git diff --check`, and a custom story review scan all passed.
+- Review scan result: 148 overrides present; banned template phrase hits 0; short scene+body stories 0; overlong stories 0; missing time anchors 0.
+- Push status: committed and pushed to `main` in this turn.
