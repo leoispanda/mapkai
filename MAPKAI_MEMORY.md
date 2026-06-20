@@ -2663,3 +2663,10 @@ Follow-up:
 - Updated `mapkai-historical-discovery-story` to match the integrated story format and updated `mapkai-story-review` so it reviews final anchors instead of requiring exposed support/hidden-knowledge sections.
 - Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill files.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Catch false agency in MapKAI story prose
+- Added a `Causal Subject Clarity` rule to `mapkai-story-rewrite`: objects can be subjects only when the verb is literal or visibly grounded.
+- Added a `False Agency / Wrong Causal Subject` review gate to `mapkai-story-review` after a sample sentence failed review: `按键旁的纸条开始制造麻烦`.
+- Review should now flag vague object-agency phrases such as `材料拒绝`, `现场不配合`, `证据开始发言`, `纸条制造麻烦`, `名字互相追问`, `图形提出问题`, and require concrete replacements such as `记录纸上的读数开始对不上原来的解释`.
+- Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill files.
+- Push status: committed and pushed to `main` in this turn.

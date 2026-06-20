@@ -434,6 +434,37 @@ If a metaphor appears, make its meaning clear in the same sentence or the next s
 
 If a beautiful sentence can be removed without weakening the field-origin turn, replace it with a concrete observation, measurement, comparison, or action.
 
+## Causal Subject Clarity
+
+Do not give vague agency to objects when the real pressure comes from a reading, mismatch, repeated result, mark, route, category, or comparison.
+
+Weak:
+
+```text
+按键旁的纸条开始制造麻烦。
+```
+
+Better:
+
+```text
+记录纸上的读数开始对不上原来的解释。
+```
+
+Better:
+
+```text
+纸上反复出现的差异让“他只是注意到了”这个说法不够用了。
+```
+
+Concrete objects may be sentence subjects only when the verb describes what they literally do or visibly show:
+
+- Good: "计时器留下一个数字。"
+- Good: "地图上的黑线在同一只水泵旁聚拢。"
+- Weak: "证据开始发言。"
+- Better: "同一片街区反复出现的死亡标记让水源变成了问题。"
+
+Avoid phrases where an object performs a vague intellectual action: "材料拒绝," "现场不配合," "纸条制造麻烦," "证据发言," "名字互相追问," "图形提出问题." Replace them with the specific mismatch, number, mark, route, sample, or comparison that creates pressure.
+
 ## Surprise And Reveal
 
 Keep the hidden knowledge hidden long enough for the reader to experience the turn.

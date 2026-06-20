@@ -884,6 +884,48 @@ After the handle was removed, the pump could no longer draw water from that sour
 
 Reviewer question: Is this sentence meaningful, or just atmospheric?
 
+### 9AA. False Agency / Wrong Causal Subject
+
+Check whether the sentence gives vague intellectual agency to an object when the real causal pressure should come from a concrete mark, reading, mismatch, repeated result, route, sample, category, or comparison.
+
+Mark `PASS / LOCAL EDIT` or `LOCAL EDIT` when the story is otherwise structurally sound but contains a sentence like this:
+
+```text
+按键旁的纸条开始制造麻烦。
+```
+
+Problem: the paper did not create the problem. The pressure came from the recorded differences on the paper.
+
+Better:
+
+```text
+记录纸上的读数开始对不上原来的解释。
+```
+
+Better:
+
+```text
+纸上反复出现的差异让“他只是注意到了”这个说法不够用了。
+```
+
+Flag these patterns unless they are immediately made concrete:
+
+- "材料拒绝..."
+- "现场不配合..."
+- "证据开始发言..."
+- "纸条制造麻烦..."
+- "名字互相追问..."
+- "图形提出问题..."
+- "数字自己说明..."
+
+Accept object-as-subject sentences only when the verb is literal or visibly grounded:
+
+- Good: "计时器留下一个数字。"
+- Good: "地图上的黑线在同一只水泵旁聚拢。"
+- Good: "账本里的疾病死亡数反复压过战伤数字。"
+
+Reviewer question: What exactly created pressure: the object itself, or a specific reading, mismatch, mark, route, or repeated pattern on it?
+
 ### 9A. Compressed Expression Check
 
 Check whether any sentence sounds vivid but requires the reader to fill in missing logic.
