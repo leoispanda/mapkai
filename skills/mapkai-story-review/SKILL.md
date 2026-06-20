@@ -77,6 +77,14 @@ For `FAIL`, do not provide a full micro-edited story. Give required fixes only a
 
 Before reviewing sentence quality, decide whether the story is a real story or a template shell. A template shell cannot be rescued by micro-editing.
 
+Common failing template:
+
+```text
+old method = naming/classification/single record -> evidence mismatch -> measurement/comparison -> table/chart -> checkable explanation
+```
+
+This template may fit classification, measurement, statistics, or visualization stories. It fails when the actual topic is scale change, ecological relation and community action, long-term trend, tool redesign, institutional reform, artistic perception, organizational decision, proof, or problem reframing.
+
 Mark `FAIL` and return to rewrite when:
 
 - the body is mostly generic method prose that could fit many topics after replacing names;
@@ -84,6 +92,7 @@ Mark `FAIL` and return to rewrite when:
 - the old question and new question are pasted formulas rather than topic-specific pressure;
 - the old question defaults to naming or classification even though the actual person/event is about scale, attribution, trend, uncertainty, proof, calibration, representation, coordination, decision, or another method turn;
 - the knowledge turn could have been attached to almost any historical figure because it comes from a generic science-method template rather than this story's person/event;
+- the story forces measurement, comparison, tables, charts, or visualization onto a topic whose real pressure is ecological action, tool change, institutional reform, artistic perception, or community organizing;
 - abstract method words such as scale, repetition, position, time, evidence, system, relationship, model, variable, or condition appear without the exact object, tool, record, sample, chart, or action that makes them necessary;
 - the historical support section is doing the work the story body should have done.
 
@@ -95,6 +104,7 @@ Topic-specific checks:
 - **Nightingale** stories must center attribution: ledgers, causes of death, months, counts/proportions, chart shape, and the question of which deaths point to changeable conditions.
 - **Humboldt** stories must center spatial distribution: specimen, height, temperature/pressure/moisture, comparison across places or elevations, and the question of why life appears there.
 - **Keeling** stories must center long-term trend: repeated air samples/readings, calibration or continuity, and the question of whether separate readings form a direction.
+- **Wangari Maathai** stories must center ecological relation and community action: women, seedlings, water, firewood, soil, local repetition across villages, and the question of whether tree planting can become an action point for connected problems.
 
 ## Review Checklist
 
@@ -182,6 +192,9 @@ The following cannot receive `PASS`:
 22. The old question is a generic "what is this called?" when the topic is not actually about naming, classification, or natural-history categorization.
 23. The story uses high-risk invented details such as exact weather, private emotion, dialogue, named bystanders, room layout, or dramatic gestures without support.
 24. The "藏在里面的知识" section supplies a knowledge turn that the story body itself did not stage.
+25. The story forces a measurement/table/chart turn onto a topic whose evidence pressure is not numerical or visualized data.
+26. Title objects such as seedlings, buckets, rainwater, ledgers, pumps, curves, tools, or maps appear as decoration instead of changing what the person can ask or do.
+27. The body contains abstract template phrases such as "尺度、次数、位置或时间一变," "数量、尺度、位置、时间和重复观察," "先重新测量数值," or "同一张可检查的图" without concrete scene-specific evidence.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 

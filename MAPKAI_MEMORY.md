@@ -326,6 +326,28 @@ Verified:
 - YAML/frontmatter parsing and git diff checks were run before commit.
 
 Push:
+- Pushed to main in commit d4e5a42.
+```
+
+Latest MapKAI story anti-universal-template update:
+
+```text
+Changed:
+- Added a Core Turn Selection Gate to skills/mapkai-story-rewrite/SKILL.md.
+- Rewrite must first identify the one true turn from the person/event itself using: "Originally the problem was treated as X; through Y, it became Z."
+- Explicitly banned the universal hidden structure: naming/classification/single record -> measurement/comparison -> table/chart -> checkable explanation.
+- Added turn-type options so stories can be scale change, attribution change, long-term trend, spatial distribution, ecological relation/action, tool redesign, institutional decision, artistic perception, or another event-specific turn.
+- Added Wangari Maathai as a boundary example: the turn is from separate firewood/water/soil problems to ecological relation and community action through tree planting.
+- Added exact banned abstract template phrases such as "尺度、次数、位置或时间一变", "数量、尺度、位置、时间和重复观察", "先重新测量数值", and "同一张可检查的图".
+- Updated skills/mapkai-story-review/SKILL.md so forcing measurement/table/chart logic onto non-data stories is a FAIL-level template-shell problem.
+- Review now checks whether title objects such as seedlings, buckets, rainwater, ledgers, pumps, curves, tools, or maps actually change what the person can ask or do.
+- Updated both story skill agent default prompts to identify the core turn type before writing or reviewing.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- YAML/frontmatter parsing and git diff checks were run before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 

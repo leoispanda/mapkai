@@ -15,6 +15,37 @@ The output must read like a story, not a correct synopsis of a discovery. Passin
 
 A knowledge story cannot pass only because it is atmospheric or elegant. It must be historically situated, scene-consistent, and epistemically sharp. Time, place, action, and knowledge transition must align.
 
+## Core Turn Selection Gate
+
+Before writing, identify the story's one core knowledge turn in this form:
+
+```text
+Originally the problem was treated as X; through Y, it became Z.
+```
+
+Do not draft until this sentence is specific to the person/event, not to science in general.
+
+MapKAI stories must not all use the same hidden structure:
+
+```text
+old method = naming/classification/single record -> evidence mismatch -> measurement/comparison -> table/chart -> checkable explanation
+```
+
+That structure is valid only for some classification, measurement, statistics, and visualization stories. It is wrong when the real turn is scale change, attribution, long-term trend, ecological relation, community action, tool redesign, institutional reform, artistic perception, organizational decision, proof, coordination, or problem reframing.
+
+Choose the turn type from the story itself:
+
+- **Scale change**: a tool makes an invisible or previously inaccessible level visible. Example: Leeuwenhoek moves from naked-eye absence to microscopic life through a lens and repeated looking.
+- **Attribution change**: records or observations shift the cause from one category to another. Example: Nightingale moves from total war deaths to deaths pointing to sanitary conditions.
+- **Long-term trend**: repeated readings over time reveal a direction that single readings cannot show. Example: Keeling moves from one CO2 sample to a rising long-term curve.
+- **Spatial distribution**: location, height, route, or environment changes what a specimen or case means. Example: Humboldt moves from plant name to where and under what conditions plants appear.
+- **Ecological relation and action**: lived problems start looking connected, and action finds an entry point. Example: Wangari Maathai moves from separate complaints about firewood, water, and soil to tree planting as a community action point.
+- **Tool or engineering redesign**: failure shows that the object must be reshaped, constrained, scaled, or used differently.
+- **Institutional or organizational decision**: a repeated failure, backlog, conflict, or risk changes the question from an individual case to a process, rule, or coordination problem.
+- **Artistic or interpretive perception**: the turn may be about seeing, framing, notation, audience attention, or representation, not measurement.
+
+Use these as diagnostic options. Do not print this list or imitate its wording.
+
 ## Audience And Register
 
 Write for curious general adults, upper-level high school students, undergraduates, graduate students, and non-specialists who want serious knowledge without academic gatekeeping.
@@ -41,6 +72,7 @@ Generic-template failure signs:
 - The body could fit many unrelated topics after replacing the names.
 - The old problem is only "what is this called" or "how should this be classified" even when the topic's real turn is scale, attribution, long-term trend, proof, communication, or decision.
 - The old question defaults to naming or classification even though the person/event is actually about attribution, calibration, prediction, uncertainty, proof, coordination, representation, decision, or long-term change.
+- The body pushes every topic toward measuring, comparing, tabulating, charting, or "making evidence checkable" even when the real story is ecological action, tool change, institutional reform, artistic perception, or community organizing.
 - The supposed knowledge turn comes from a generic science-method template rather than from the specific person, event, object, instrument, record, or pressure in the input.
 - The prose talks about "scale, time, position, repetition, evidence, relationship, system, model, variables, or conditions" before showing the object, tool, record, or action that makes those words necessary.
 - A title promises a concrete thing, such as rainwater, a pump, a chart, an air sample, a mountain, or a classroom, but the body mostly explains a knowledge method.
@@ -60,8 +92,9 @@ Before rewriting, internally answer:
 8. What new question appears?
 9. Can the knowledge turn be stated in one sentence?
 10. Does the knowledge turn come from this person/event itself rather than a generic method template?
-11. Which original sentences are generic scaffolding, abstract explanation, false scene, or mismatched old question and must be removed?
-12. Which facts belong only in "历史支撑" and must not be written as if they happened immediately in the scene?
+11. Is the turn type scale, attribution, trend, distribution, ecological relation/action, tool redesign, institutional decision, artistic perception, or something else specific?
+12. Which original sentences are generic scaffolding, abstract explanation, false scene, or mismatched old question and must be removed?
+13. Which facts belong only in "历史支撑" and must not be written as if they happened immediately in the scene?
 
 ## Inputs
 
@@ -140,12 +173,15 @@ Do not force every story into the same "naming/classification was not enough, so
 
 Do not default the old question to "what is this phenomenon called?" Use that old question only for classification, naming, or natural-history stories where it is historically and methodologically fitting. For other stories, define the old question from the actual practice: one reading versus a trend, total deaths versus preventable causes, a correct answer versus a procedure, a local error versus a process, a calculation versus symbolic instruction, or a visible object versus an invisible scale.
 
+Do not force "measurement, comparison, chart, table, graph, or visualization" onto stories whose turn is not about those methods. Use a chart only if the person/event historically or plausibly works through charting. Use measurement only if the story's pressure actually comes from a reading, count, distance, time, proportion, or observed change.
+
 Examples:
 
 - **Leeuwenhoek**: The core turn is scale. Old question: does invisible mean absent? New question: can life too small for the eye become scientific evidence through a lens and repeated observation?
 - **Nightingale**: The core turn is attribution. Old question: how many soldiers died in war? New question: which deaths point to changeable sanitary conditions hidden inside totals?
 - **Humboldt**: The core turn is spatial distribution. Old question: what is this plant called? New question: why does it tend to appear at this height, moisture, temperature, and terrain?
 - **Keeling**: The core turn is long-term trend. Old question: what is today's carbon dioxide reading? New question: do continuous readings form a direction that single samples cannot show?
+- **Wangari Maathai**: The core turn is ecological relation and community action. Old question: are firewood, water, and soil separate household problems? New question: could planting and protecting trees become an entry point into all three?
 
 Use these as pattern warnings, not as reusable wording.
 
@@ -163,6 +199,11 @@ Never output internal scaffolding as story prose. These patterns are review note
 - "这个转弯没有立刻给出全部答案"
 - "新问题慢慢变成..."
 - "真正改变问题的常常不是大词"
+- "把现象先命名、分类或记成单个结果"
+- "尺度、次数、位置或时间一变，答案也跟着变"
+- "数量、尺度、位置、时间和重复观察怎样让结果变成证据"
+- "先重新测量数值，再把样本、地点或时间排成可比较的顺序"
+- "让数字、位置和形状被放进同一张可检查的图里"
 
 You may express the underlying idea only through topic-specific objects and actions. For example, instead of "旧办法并不荒唐," write what people actually did: "Naturalists pressed the leaf, wrote the name, and placed it in a cabinet." Instead of "证据自己排队," write who arranged which records, samples, marks, months, addresses, or measurements.
 
