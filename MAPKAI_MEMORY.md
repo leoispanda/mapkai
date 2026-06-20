@@ -265,7 +265,27 @@ Verified:
 
 Push:
 - Founder updated the working rule to push directly after requested changes are complete and verified.
-- This change set is being committed and pushed in this turn; final commit hash is reported in the Codex final response.
+- Pushed to main in commit 5e98ccd.
+```
+
+Latest MapKAI story skill hardening update:
+
+```text
+Changed:
+- Added a Rewrite, Not Polish Gate to skills/mapkai-story-rewrite/SKILL.md: when an original story is a generic template shell, fake scene, abstract explanation, or mismatched old/new-question formula, the writer must rebuild the main historical scene instead of polishing sentences.
+- Added an internal pre-rewrite judgment list: main person, time/place, concrete action, old method, why it was reasonable, evidence pressure, new method, new question, one-sentence turn, and generic scaffolding to delete.
+- Added Topic-Specific Turn examples for Leeuwenhoek, Nightingale, Humboldt, and Keeling so the skill does not force every story into the same naming/classification-to-measurement pattern.
+- Updated the output format to include "一句简介" before "故事场景".
+- Added a Template-Shell Failure Rule to skills/mapkai-story-review/SKILL.md: if the main scene must be rebuilt, the reviewer must mark FAIL rather than micro-editing.
+- Updated both story skill agent default prompts to judge template-shell/fake-scene risk before sentence-level edits.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- Ruby YAML parser confirmed both SKILL.md frontmatter blocks and both agents/openai.yaml files parse.
+- git diff --check passed before commit.
+
+Push:
+- Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
 Latest MapKAI story skill requirement update:
@@ -296,7 +316,7 @@ Verified:
 - Skill markdown and YAML files were updated only; no story data was changed in this requirement update.
 
 Push:
-- Not committed and not pushed in this turn.
+- Pushed to main in commit 5e98ccd.
 ```
 
 Latest MapKAI story batch rewrite update:

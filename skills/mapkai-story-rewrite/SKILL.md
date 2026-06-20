@@ -15,6 +15,33 @@ The output must read like a story, not a correct synopsis of a discovery. Passin
 
 A knowledge story cannot pass only because it is atmospheric or elegant. It must be historically situated, scene-consistent, and epistemically sharp. Time, place, action, and knowledge transition must align.
 
+## Rewrite, Not Polish Gate
+
+When rewriting an existing story, first judge whether the original is actually story-shaped. Do not polish a body that is built from generic method language, a fake scene, abstract explanation, or an old/new question that does not match the topic. If these problems appear, rebuild the main scene from the historical evidence.
+
+Generic-template failure signs:
+
+- The body could fit many unrelated topics after replacing the names.
+- The old problem is only "what is this called" or "how should this be classified" even when the topic's real turn is scale, attribution, long-term trend, proof, communication, or decision.
+- The prose talks about "scale, time, position, repetition, evidence, relationship, system, model, variables, or conditions" before showing the object, tool, record, or action that makes those words necessary.
+- A title promises a concrete thing, such as rainwater, a pump, a chart, an air sample, a mountain, or a classroom, but the body mostly explains a knowledge method.
+- The story needs the historical support section to tell the reader what actually happened.
+
+If any of these are central, delete the template-like middle and write a new story scene. Do not make local sentence edits.
+
+Before rewriting, internally answer:
+
+1. Who is the main person?
+2. What time and place carries the main scene?
+3. What specific action is happening there?
+4. What old method or old question is being used?
+5. Why was that old method reasonable?
+6. What concrete evidence, anomaly, repeated result, or chart change creates pressure?
+7. What new method appears?
+8. What new question appears?
+9. Can the knowledge turn be stated in one sentence?
+10. Which original sentences are generic scaffolding and must be removed?
+
 ## Inputs
 
 Use the provided values when available:
@@ -85,6 +112,19 @@ Before drafting, fill this internal topic sheet:
 Do not satisfy field fit with generic method language. The method must happen in this topic. "Measure, compare, graph, classify, model, repeat" are not story content until the reader sees what is measured, compared, graphed, classified, modeled, or repeated.
 
 If the story has page media, image alt text, or an image prompt, it must match the concrete scene. A microscope story should not inherit a balcony plant image; a chart story should not show unrelated fieldwork; a water-pump story should not show a generic hospital room. When no matching asset exists, mark the image as needing replacement instead of pretending the story is complete.
+
+## Topic-Specific Turn
+
+Do not force every story into the same "naming/classification was not enough, so people measured/compared/graphed" pattern. Each topic needs its own pressure point and method turn.
+
+Examples:
+
+- **Leeuwenhoek**: The core turn is scale. Old question: does invisible mean absent? New question: can life too small for the eye become scientific evidence through a lens and repeated observation?
+- **Nightingale**: The core turn is attribution. Old question: how many soldiers died in war? New question: which deaths point to changeable sanitary conditions hidden inside totals?
+- **Humboldt**: The core turn is spatial distribution. Old question: what is this plant called? New question: why does it tend to appear at this height, moisture, temperature, and terrain?
+- **Keeling**: The core turn is long-term trend. Old question: what is today's carbon dioxide reading? New question: do continuous readings form a direction that single samples cannot show?
+
+Use these as pattern warnings, not as reusable wording.
 
 ## Template Leakage Ban
 
@@ -278,6 +318,9 @@ Use this format exactly:
 {fieldTitleInSelectedLanguage}
 
 {storyTitle}
+
+一句简介
+{One concrete sentence that creates curiosity without announcing the abstract conclusion.}
 
 故事场景
 {1 to 2 concrete scene sentences, not a summary}

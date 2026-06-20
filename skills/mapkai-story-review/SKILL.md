@@ -65,6 +65,27 @@ For `LOCAL EDIT`, provide only focused replacements for the broken sentence, par
 
 For `FAIL`, do not provide a full micro-edited story. Give required fixes only as examples, then send the story back to the rewrite step.
 
+## Template-Shell Failure Rule
+
+Before reviewing sentence quality, decide whether the story is a real story or a template shell. A template shell cannot be rescued by micro-editing.
+
+Mark `FAIL` and return to rewrite when:
+
+- the body is mostly generic method prose that could fit many topics after replacing names;
+- the title promises a concrete object, event, or puzzle, but the body barely stages it;
+- the old question and new question are pasted formulas rather than topic-specific pressure;
+- abstract method words such as scale, repetition, position, time, evidence, system, relationship, model, variable, or condition appear without the exact object, tool, record, sample, chart, or action that makes them necessary;
+- the historical support section is doing the work the story body should have done.
+
+Do not mark these as `PASS / LOCAL EDIT`. Use `LOCAL EDIT` only when the scene already exists and one local paragraph or sentence is broken. If the main scene must be rebuilt, it is `FAIL`.
+
+Topic-specific checks:
+
+- **Leeuwenhoek** stories must center the scale shift: water/sample, lens, tiny moving life, repeated looking, and the question of whether invisible life can become evidence.
+- **Nightingale** stories must center attribution: ledgers, causes of death, months, counts/proportions, chart shape, and the question of which deaths point to changeable conditions.
+- **Humboldt** stories must center spatial distribution: specimen, height, temperature/pressure/moisture, comparison across places or elevations, and the question of why life appears there.
+- **Keeling** stories must center long-term trend: repeated air samples/readings, calibration or continuity, and the question of whether separate readings form a direction.
+
 ## Review Checklist
 
 ### 0. Historical Scene Consistency Gate
