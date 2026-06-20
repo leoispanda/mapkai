@@ -4049,6 +4049,52 @@ canvas {
   line-height: 1.25;
 }
 
+.detailed-field-button-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.detailed-field-button {
+  display: inline-grid;
+  min-height: 58px;
+  align-content: center;
+  gap: 3px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f172a;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.detailed-field-button:hover,
+.detailed-field-button.is-active {
+  border-color: rgba(37, 99, 235, 0.34);
+  background: rgba(239, 246, 255, 0.86);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.09);
+}
+
+.detailed-field-button.is-active {
+  color: #1d4ed8;
+}
+
+.detailed-field-button span {
+  font-size: 0.92rem;
+  font-weight: 820;
+  line-height: 1.25;
+}
+
+.detailed-field-button small {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
 .submodule-story-panel {
   display: grid;
   gap: 16px;
@@ -4116,6 +4162,11 @@ canvas {
   min-height: 82px;
   border-color: rgba(37, 99, 235, 0.2);
   background: rgba(239, 246, 255, 0.78);
+}
+
+.submodule-story-button.is-field {
+  border-color: rgba(37, 99, 235, 0.18);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .submodule-story-button.is-concept {
@@ -4248,6 +4299,10 @@ canvas {
     grid-template-columns: 1fr;
   }
 
+  .detailed-field-button-list {
+    grid-template-columns: 1fr;
+  }
+
   .pdc-live-room {
     display: flex;
     flex-direction: column;
@@ -4335,6 +4390,10 @@ canvas {
   }
 
   .submodule-button {
+    width: 100%;
+  }
+
+  .detailed-field-button {
     width: 100%;
   }
 
@@ -4636,6 +4695,7 @@ dd,
 .title-modal-card,
 .field-chip,
 .submodule-button,
+.detailed-field-button,
 .submodule-story-button,
 .learning-timeline li,
 .mission-card,
@@ -4664,6 +4724,8 @@ dd,
 .field-chip.is-active,
 .submodule-button:hover,
 .submodule-button.is-active,
+.detailed-field-button:hover,
+.detailed-field-button.is-active,
 .submodule-story-button:hover {
   border-color: rgba(37, 99, 235, 0.28);
   background: rgba(239, 246, 255, 0.82);
@@ -4697,6 +4759,7 @@ dd,
 .title-modal-card h2,
 .field-chip strong,
 .submodule-story-section h2,
+.detailed-field-button,
 .submodule-story-button em,
 .note-row strong,
 .challenge-card h2 {
@@ -4720,6 +4783,7 @@ dd,
 .answer-grid button,
 .field-chip,
 .submodule-button,
+.detailed-field-button,
 .submodule-story-button,
 .example-list li,
 .status-line strong,
@@ -5923,6 +5987,7 @@ body[data-theme="dark"] .deep-prompt-panel,
 body[data-theme="dark"] .answer-explanation,
 body[data-theme="dark"] .field-chip,
 body[data-theme="dark"] .submodule-button,
+body[data-theme="dark"] .detailed-field-button,
 body[data-theme="dark"] .submodule-story-button,
 body[data-theme="dark"] .mission-card,
 body[data-theme="dark"] .stories-hero,
@@ -5964,6 +6029,7 @@ body[data-theme="dark"] .pdc-page .pdc-radio-group label {
 body[data-theme="dark"] .tree-group-story-link strong,
 body[data-theme="dark"] .category-button strong,
 body[data-theme="dark"] .submodule-button,
+body[data-theme="dark"] .detailed-field-button,
 body[data-theme="dark"] .submodule-story-section h2,
 body[data-theme="dark"] .submodule-story-button em,
 body[data-theme="dark"] .lens-story-shelf-heading h2,
@@ -5983,6 +6049,7 @@ body[data-theme="dark"] .tree-group-story-link small,
 body[data-theme="dark"] .category-button span,
 body[data-theme="dark"] .category-button small,
 body[data-theme="dark"] .submodule-button small,
+body[data-theme="dark"] .detailed-field-button small,
 body[data-theme="dark"] .submodule-story-button small,
 body[data-theme="dark"] .lens-story-shelf-heading p,
 body[data-theme="dark"] .lens-story-sample-content em,

@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.36";
+const appVersion = "0.1.37";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -21,6 +21,7 @@ let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageK
 let currentTheme = supportedThemes.includes(localStorage.getItem(themeKey)) ? localStorage.getItem(themeKey) : "light";
 let lastVisitStats = null;
 const activeCategorySubmodules = {};
+const activeCategoryFields = {};
 
 const readiness = {
   mapOnly: "Map only",
@@ -386,9 +387,12 @@ const uiText = {
     categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
     submoduleLabel: "Submodule",
     submoduleIntroStory: "Submodule story",
+    detailedFieldLabel: "Detailed field",
+    fieldIntroStory: "Detailed field story",
     importantConceptStories: "Important concept stories",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
+    openDetailedField: "Open field",
     openStory: "Open story",
     noStoryReady: "This story is still being prepared.",
     groups: "groups",
@@ -743,9 +747,12 @@ const uiText = {
     categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
     submoduleLabel: "子模块",
     submoduleIntroStory: "模块介绍故事",
+    detailedFieldLabel: "细分条目",
+    fieldIntroStory: "细分条目故事",
     importantConceptStories: "重要概念故事",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
+    openDetailedField: "打开条目",
     openStory: "打开故事",
     noStoryReady: "这个故事还在准备中。",
     groups: "个组",
@@ -13644,6 +13651,14 @@ function renderCategoryTree(category) {
   activeCategorySubmodules[category.code] = activeGroup.code;
   const activeGroupStory = getLensStoryForGroup(category.code, activeGroup.code);
   const activeGroupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
+  const fieldStateKey = `${category.code}:${activeGroup.code}`;
+  const savedFieldCode = activeCategoryFields[fieldStateKey];
+  const activeField = activeGroup.fields.find(([fieldCode]) => fieldCode === savedFieldCode) || activeGroup.fields[0];
+  const activeFieldCode = activeField?.[0] || "";
+  const activeFieldFallbackTitle = activeField?.[1] || "";
+  if (activeFieldCode) activeCategoryFields[fieldStateKey] = activeFieldCode;
+  const activeFieldStory = activeFieldCode ? getLensStoryForField(category.code, activeGroup.code, activeFieldCode) : null;
+  const activeFieldTitle = getLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle);
   const submoduleButtons = category.groups
     .map((group) => {
       const groupStory = getLensStoryForGroup(category.code, group.code);
@@ -13666,30 +13681,37 @@ function renderCategoryTree(category) {
         <span>${escapeHtml(activeGroupTitle)}</span>
         <small>${escapeHtml(t("noStoryReady"))}</small>
       </div>`;
-  const conceptFable = getConceptFableForCategory(category.code);
-  const conceptFableMatchesGroup = conceptFable && activeGroup.fields.some(([fieldCode]) => fieldCode === conceptFable.selectedFieldCode);
-  const fieldStories = activeGroup.fields
+  const fieldButtons = activeGroup.fields
     .map(([fieldCode, fieldTitle]) => {
       const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
-      if (!fieldStory) return "";
-      const href = `/lens-stories/${fieldStory.id}`;
-      const displayTitle = getLensStoryFieldTitle(fieldStory, fieldCode, fieldTitle);
+      const displayTitle = getLensStoryFieldTitle(fieldStory || activeGroupStory, fieldCode, fieldTitle);
+      const isActive = fieldCode === activeFieldCode;
       return `
-        <a class="submodule-story-button" href="${href}" data-route="${href}">
+        <button class="detailed-field-button ${isActive ? "is-active" : ""}" type="button" data-field-select="${escapeHtml(category.code)}:${escapeHtml(activeGroup.code)}:${escapeHtml(fieldCode)}" aria-pressed="${isActive}">
           <span>${escapeHtml(displayTitle)}</span>
-          <small>${escapeHtml(getLensStoryValue(fieldStory, "title"))}</small>
-          <em>${escapeHtml(t("openStory"))}</em>
-        </a>`;
+          <small>${fieldStory ? escapeHtml(t("fieldIntroStory")) : escapeHtml(t("noStoryReady"))}</small>
+        </button>`;
     })
     .join("");
-  const conceptFableButton = conceptFableMatchesGroup
+  const conceptFable = getConceptFableForCategory(category.code);
+  const fieldIntroStory = activeFieldStory
+    ? `<a class="submodule-story-button is-field" href="/lens-stories/${activeFieldStory.id}" data-route="/lens-stories/${activeFieldStory.id}">
+        <span>${escapeHtml(activeFieldTitle)}</span>
+        <small>${escapeHtml(getLensStoryValue(activeFieldStory, "title"))}</small>
+        <em>${escapeHtml(t("fieldIntroStory"))}</em>
+      </a>`
+    : `<div class="submodule-story-button is-empty">
+        <span>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</span>
+        <small>${escapeHtml(t("noStoryReady"))}</small>
+      </div>`;
+  const conceptFableMatchesField = conceptFable && conceptFable.selectedFieldCode === activeFieldCode;
+  const conceptFableButton = conceptFableMatchesField
     ? `<a class="submodule-story-button is-concept" href="/concept-fables/${conceptFable.id}" data-route="/concept-fables/${conceptFable.id}">
         <span>${escapeHtml(getConceptFableValue(conceptFable, "conceptName"))}</span>
         <small>${escapeHtml(getConceptFableValue(conceptFable, "title"))}</small>
         <em>${escapeHtml(t("advancedConceptStory"))}</em>
       </a>`
     : "";
-  const conceptButtons = `${fieldStories}${conceptFableButton}`.trim();
   target.innerHTML = `
     <div class="submodule-browser">
       <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
@@ -13701,9 +13723,19 @@ function renderCategoryTree(category) {
           ${introStory}
         </div>
         <div class="submodule-story-section">
+          <h2>${escapeHtml(t("detailedFieldLabel"))}</h2>
+          <div class="detailed-field-button-list" role="tablist" aria-label="${escapeHtml(t("detailedFieldLabel"))}">
+            ${fieldButtons}
+          </div>
+        </div>
+        <div class="submodule-story-section">
+          <h2>${escapeHtml(t("fieldIntroStory"))}</h2>
+          ${fieldIntroStory}
+        </div>
+        <div class="submodule-story-section">
           <h2>${escapeHtml(t("importantConceptStories"))}</h2>
           <div class="submodule-story-button-list">
-            ${conceptButtons || `<div class="submodule-story-button is-empty"><span>${escapeHtml(t("importantConceptStories"))}</span><small>${escapeHtml(t("noStoryReady"))}</small></div>`}
+            ${conceptFableButton || `<div class="submodule-story-button is-empty"><span>${escapeHtml(activeFieldTitle || t("importantConceptStories"))}</span><small>${escapeHtml(t("noStoryReady"))}</small></div>`}
           </div>
         </div>
       </section>
@@ -14199,6 +14231,19 @@ document.addEventListener("click", (event) => {
     const category = categories.find((item) => item.code === categoryCode);
     if (category && category.groups.some((group) => group.code === groupCode)) {
       activeCategorySubmodules[categoryCode] = groupCode;
+      renderCategoryTree(category);
+    }
+    return;
+  }
+  const fieldSelect = event.target.closest("[data-field-select]");
+  if (fieldSelect) {
+    event.preventDefault();
+    const [categoryCode, groupCode, fieldCode] = fieldSelect.dataset.fieldSelect.split(":");
+    const category = categories.find((item) => item.code === categoryCode);
+    const group = category?.groups.find((item) => item.code === groupCode);
+    if (category && group && group.fields.some(([code]) => code === fieldCode)) {
+      activeCategorySubmodules[categoryCode] = groupCode;
+      activeCategoryFields[`${categoryCode}:${groupCode}`] = fieldCode;
       renderCategoryTree(category);
     }
     return;
