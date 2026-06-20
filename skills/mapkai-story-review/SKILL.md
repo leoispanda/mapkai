@@ -1,13 +1,13 @@
 ---
 name: mapkai-story-review
-description: Strictly review generated or rewritten MapKAI knowledge stories for historical scene consistency, evidence pressure, discovery-based storytelling quality, and field-method fit. Use when checking whether a MapKAI story has reliable time/place/action alignment, concrete scene, initially reasonable old method, field-based tension, character action, changed question, evidence-grown insight, natural knowledge emergence, factual safety, non-AI style, and non-decorative literary language; also use for batch audits after MapKAI story generation or rewrite.
+description: Strictly review generated or rewritten MapKAI knowledge stories for field-origin fit, historical scene consistency, evidence pressure, narrative movement, and field-method fit. Use when checking whether a MapKAI story shows why a discipline or knowledge field began to need its own object, question, and method through reliable time/place/action alignment, concrete scene, initially reasonable old method, field-based tension, character action, changed question, evidence-grown insight, factual safety, non-AI style, and non-decorative literary language; also use for batch audits after MapKAI story generation or rewrite.
 ---
 
 # MapKAI Story Review
 
 ## Purpose
 
-Review MapKAI knowledge stories after generation or rewrite.
+Review MapKAI knowledge stories after generation or rewrite. The default target is a field-origin story: a concrete scene should reveal why a discipline or knowledge field began to need its own object, question, and method.
 
 This is not a polishing skill. It is a strict story-quality review. A story should not pass because it is fluent, longer, emotional, literary, or conceptually correct. It passes only when knowledge grows from a concrete scene, real tension, observable action, and a clear shift in understanding.
 
@@ -18,7 +18,7 @@ A knowledge story cannot pass only because it is atmospheric or elegant. It must
 Core question for every story:
 
 ```text
-Is this truly a story of discovery, or is it still a knowledge explanation with decorative writing?
+Is this truly a story of how a field-level way of seeing became necessary, or is it only a discovery/contribution with decorative writing?
 ```
 
 If it is mainly explanation, mark it `FAIL`.
@@ -31,7 +31,7 @@ Readable for curious general adults and advanced students; sharp enough that gra
 
 Do not pass a story just because it is "easy." It must not become childish, fairy-tale-like, over-personified, or moralizing. Do not pass a story just because it is "serious." It must not become an academic abstract, a concept stack, or a disguised literature-review paragraph.
 
-Do not punish a story only because it is simple or short if the scene, evidence pressure, and knowledge turn are clear. The goal is not complexity. The goal is earned clarity.
+Do not punish a story only because it is simple or short if the scene, evidence pressure, and field-origin turn are clear. The goal is not complexity. The goal is earned clarity.
 
 A simple story still needs:
 
@@ -53,9 +53,9 @@ No initially reasonable old method = no real discovery.
 
 ## Decision Labels
 
-- `PASS`: Structure, facts, scene, action, and knowledge turn all work. Only tiny language edits may be needed.
+- `PASS`: Structure, facts, scene, action, and field-origin turn all work. Only tiny language edits may be needed.
 - `PASS / LOCAL EDIT`: The story is basically passable, but one local time, scene, terminology, causality, or sentence-level risk should be fixed before publication.
-- `LOCAL EDIT`: The direction is right, but at least one important piece of time, scene, action, evidence pressure, field fit, or knowledge turn needs visible local rewriting.
+- `LOCAL EDIT`: The direction is right, but at least one important piece of time, scene, action, evidence pressure, field fit, or field-origin turn needs visible local rewriting.
 - `FAIL`: The story mainly relies on atmosphere, biography, explanation, a false scene, or a pasted knowledge point. It must return to rewrite.
 
 Use the harder label when uncertain. Do not let "beautiful but maybe unclear" pass.
@@ -102,7 +102,7 @@ Mark `FAIL` and return to rewrite when:
 - the title promises a concrete object, event, or puzzle, but the body barely stages it;
 - the old question and new question are pasted formulas rather than topic-specific pressure;
 - the old question defaults to naming or classification even though the actual person/event is about scale, attribution, trend, uncertainty, proof, calibration, representation, coordination, decision, or another method turn;
-- the knowledge turn could have been attached to almost any historical figure because it comes from a generic science-method template rather than this story's person/event;
+- the field-origin turn could have been attached to almost any historical figure because it comes from a generic science-method template rather than this story's person/event;
 - the story forces measurement, comparison, tables, charts, or visualization onto a topic whose real pressure is ecological action, tool change, institutional reform, artistic perception, or community organizing;
 - abstract method words such as scale, repetition, position, time, evidence, system, relationship, model, variable, or condition appear without the exact object, tool, record, sample, chart, or action that makes them necessary;
 - the historical support section is doing the work the story body should have done.
@@ -151,9 +151,9 @@ Identify the story's main axis:
 - policy or public persuasion;
 - classroom/workshop/lab testing.
 
-Fail or mark `LOCAL EDIT` if several axes are mixed without clear sequence. A story may refer back to an earlier scene, but the reader must know which scene carries the knowledge turn.
+Fail or mark `LOCAL EDIT` if several axes are mixed without clear sequence. A story may refer back to an earlier scene, but the reader must know which scene carries the field-origin turn.
 
-Reviewer question: Where does the knowledge turn actually happen?
+Reviewer question: Where does the field-origin turn actually happen?
 
 ### 0B. Evidence Pressure Gate
 
@@ -175,7 +175,30 @@ Fail or mark `LOCAL EDIT` if:
 
 Reviewer question: What fact, number, object, or repeated pattern forced the new question?
 
-### 0C. Narrative Pressure Check
+### 0C. Field Origin Fit Gate
+
+Check whether the story explains the origin of a knowledge field, not only one person's achievement.
+
+Good signs:
+
+- The story shows what people relied on before the field had a clear shape.
+- A concrete scene exposes the limit of that older practice.
+- A new object of attention appears: a route, organism, pattern, risk, relation, process, sign, record, tool, behavior, or environment.
+- The story shows the kind of question the emerging field begins to ask.
+- The hidden knowledge section names how the field starts to need its own method, rather than defining the whole discipline.
+
+Weak signs:
+
+- The story is only a biography, discovery anecdote, reform story, or invention story.
+- The field title could be swapped for another field without changing the body.
+- The person/event is interesting, but the field's object, question, or method never becomes necessary.
+- Historical support supplies the field-origin meaning because the body only staged an event.
+
+Reviewer question: What older way of working reached its limit, and what new object/question/method began to belong to this field?
+
+If this cannot be answered from the story body, mark `LOCAL EDIT` if a clear origin frame can be added locally; mark `FAIL` if the body must be rebuilt.
+
+### 0D. Narrative Pressure Check
 
 Check whether the story has movement, not only correct structure.
 
@@ -199,7 +222,7 @@ Reviewer question: What exactly made the story move?
 
 If there is no movement, mark `LOCAL EDIT` if the scene is otherwise strong and can be improved locally; mark `FAIL` if the story is mostly synopsis or explanation.
 
-### 0D. Red Line Checklist
+### 0E. Red Line Checklist
 
 The following cannot receive `PASS`:
 
@@ -207,7 +230,7 @@ The following cannot receive `PASS`:
 2. Different years, places, or phases compressed into one false scene.
 3. A person performs an action that was impossible or unsupported for that time and place.
 4. The first half has atmosphere but no cognitive obstruction.
-5. The body does not show the knowledge turn; the final explanation supplies it instead.
+5. The body does not show the field-origin turn; the final explanation supplies it instead.
 6. Abstract words such as "system," "variable," "relationship," "model," or "mechanism" appear without concrete action or evidence.
 7. The selected field label does not match the story's actual method.
 8. Old and new questions are slogans, not pressure from evidence.
@@ -215,7 +238,7 @@ The following cannot receive `PASS`:
 10. Historical support repairs factual confusion that should have been clear in the body.
 11. Causality is overstated with "directly led to," "proved," "first discovered," or similar claims without reliable support.
 12. The final question is generic and does not return to the story's central object, evidence, or metaphor.
-13. The title promises a concrete object, event, place, or puzzle, but the story body barely uses it or never lets it affect the knowledge turn.
+13. The title promises a concrete object, event, place, or puzzle, but the story body barely uses it or never lets it affect the field-origin turn.
 14. The body contains internal scaffolding or template language such as "旧办法并不荒唐," "如果只求先有秩序," "材料不再各说各话," "让证据自己排队," or similarly generic review-skill prose.
 15. The old question and new question could be pasted into many unrelated stories without changing the nouns.
 16. The hidden knowledge section introduces concepts not supported by the story, such as adding genetics to a microscope-scale observation story that never shows inheritance.
@@ -223,17 +246,19 @@ The following cannot receive `PASS`:
 18. The supplied page image, image alt text, or image prompt contradicts the title/body enough to mislead the reader.
 19. The tone infantilizes the reader: childish wonder, fairy-tale framing, over-personified objects, or moral-of-the-story endings.
 20. The tone becomes academic-paper-like: stacked abstractions, thesis-summary endings, or concept terms used before concrete evidence prepares them.
-21. The story tries to explain the whole field instead of one core knowledge turn.
+21. The story tries to explain the whole field instead of one core field-origin turn.
 22. The old question is a generic "what is this called?" when the topic is not actually about naming, classification, or natural-history categorization.
 23. The story uses high-risk invented details such as exact weather, private emotion, dialogue, named bystanders, room layout, or dramatic gestures without support.
-24. The "藏在里面的知识" section supplies a knowledge turn that the story body itself did not stage.
+24. The "藏在里面的知识" section supplies a field-origin turn that the story body itself did not stage.
 25. The story forces a measurement/table/chart turn onto a topic whose evidence pressure is not numerical or visualized data.
 26. Title objects such as seedlings, buckets, rainwater, ledgers, pumps, curves, tools, or maps appear as decoration instead of changing what the person can ask or do.
 27. The body contains abstract template phrases such as "尺度、次数、位置或时间一变," "数量、尺度、位置、时间和重复观察," "先重新测量数值," or "同一张可检查的图" without concrete scene-specific evidence.
+28. The story only shows a discovery, invention, reform, or biography, but not why the selected field began to need its own object, question, or method.
+29. The field title is only a label; the story body would still work under another field name.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 
-### 0E. Title Promise And Template Leakage Gate
+### 0F. Title Promise And Template Leakage Gate
 
 Before language review, check the title against the body.
 
@@ -252,7 +277,7 @@ Reviewer question: If the title were "雨水里的小动物," where are the rain
 
 If page media is included in the review, check it against the same promise. A balcony basil image on a Leeuwenhoek microscope story is a page-level mismatch: the text may be locally passable, but the rendered story cannot receive full `PASS` until the visual asset is replaced or field-level images are supported.
 
-### 0F. Boundary Example: Nightingale
+### 0G. Boundary Example: Nightingale
 
 A Florence Nightingale story about wartime hospitals and statistical charts should usually be judged `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`, if it mixes Scutari hospital atmosphere with later London data analysis as one continuous scene.
 
@@ -275,7 +300,7 @@ Approved benchmark for this pattern:
 - Changed question: from "How many did the war take?" to "Which deaths did the total hide, and what conditions made them change?"
 - Knowledge turn: rearranged numbers become evidence for a preventable cause; the chart is a method of seeing, not decoration.
 
-### 0G. Boundary Example: Leeuwenhoek
+### 0H. Boundary Example: Leeuwenhoek
 
 A Leeuwenhoek story titled "雨水里的小动物" must not pass if it only says he made lenses and saw tiny life. It must show the promised scene.
 
@@ -324,7 +349,7 @@ Good signs:
 - A general adult reader can follow the sequence of scene, old method, evidence pressure, action, and changed question.
 - A more advanced reader can identify the method shift: scale, attribution, distribution, trend, classification, modeling, measurement, visualization, interpretation, or decision.
 - Concept words appear after concrete objects, records, tools, samples, or actions have earned them.
-- The story keeps one core knowledge turn instead of explaining the whole field.
+- The story keeps one core field-origin turn instead of explaining the whole field.
 
 Weak signs:
 
@@ -409,17 +434,17 @@ Fail or mark `LOCAL EDIT` or `FAIL` if:
 - The new question uses broad words such as "system," "relationship," "meaning," or "conditions" without naming the concrete variables or evidence.
 - The hidden knowledge section says the correct concept, but the body does not make that concept visible.
 
-Reviewer question: After reading, can the reader state the precise knowledge turn in one sentence?
+Reviewer question: After reading, can the reader state the precise field-origin turn in one sentence?
 
 ### 2. Delayed Naming
 
 Check whether early naming helps the scene or turns the story into a biography.
 
-For many MapKAI stories, especially famous-person discovery stories, it is often stronger to begin with "a doctor," "a young traveler," "a mathematician," "a student," or "an engineer," then reveal the name after the discovery begins to form or in historical support.
+For many MapKAI stories, especially famous-person field-origin stories, it is often stronger to begin with "a doctor," "a young traveler," "a mathematician," "a student," or "an engineer," then reveal the name after the field-level question begins to form or in historical support.
 
 Do not automatically fail early naming. Fail it only when the name replaces observation, tension, or action.
 
-Reviewer question: Does naming the person early weaken the discovery effect?
+Reviewer question: Does naming the person early weaken the field-origin effect?
 
 ### 3. Specific Old Understanding
 
@@ -510,7 +535,7 @@ Good signs:
 Weak signs:
 
 - The story jumps to "this shows..." or "therefore..." without enough support.
-- The knowledge point is pasted onto the story.
+- The field-origin meaning is pasted onto the story.
 - The ending is a lecture.
 - The final sentence turns the scene into a definition instead of staying with the changed way of seeing.
 
@@ -526,7 +551,7 @@ Weak signs:
 - The story names the field and explains its importance instead of staying with the evidence.
 - A famous person's name carries the authority that the scene should have carried.
 
-Reviewer question: Is the ending still a discovery, or has it become a biography paragraph?
+Reviewer question: Is the ending still a field-origin story, or has it become a biography paragraph?
 
 ### 8. Abstract Sentence Support
 
@@ -562,7 +587,7 @@ Examples:
 - Weak: "标本夹越来越像一份不完整的证词。"
 - Better: "标本夹留下了叶片形状，却留下不了它出现时的高度、温度、湿度和周围植物。"
 
-Reviewer question: Does the literary sentence clarify the knowledge turn, or merely decorate it?
+Reviewer question: Does the literary sentence clarify the field-origin turn, or merely decorate it?
 
 ### 9. Fake Literary Sentences
 
@@ -626,7 +651,7 @@ Good environmental detail:
 - Makes the observation understandable.
 - Shows physical difficulty.
 - Supports the tension.
-- Helps the reader see why the discovery mattered.
+- Helps the reader see why the field-level question mattered.
 
 Weak environmental detail:
 
@@ -682,7 +707,7 @@ Reviewer question: Did the story gain structure, or only length?
 
 ### 12A. Readability And Narrative Thickness
 
-Check whether the story gives the reader enough time inside the discovery.
+Check whether the story gives the reader enough time inside the origin turn.
 
 Weak signs:
 
@@ -716,7 +741,7 @@ Strong signs:
 - The obstruction makes the old method insufficient.
 - The reader reaches the hidden knowledge section with a sharper structure than they had at the start.
 
-Reviewer question: Did the reader discover the knowledge turn, or did the title and early sentences spoil it?
+Reviewer question: Did the reader experience the field-origin turn, or did the title and early sentences spoil it?
 
 ### 13. Ending Question with Tension
 
@@ -815,7 +840,7 @@ Review Decision
 PASS | PASS / LOCAL EDIT | LOCAL EDIT | FAIL
 
 Overall Judgment
-{3 to 5 direct sentences. State whether the story truly works as discovery or only looks story-like.}
+{3 to 5 direct sentences. State whether the story truly works as a field-origin story or only looks story-like.}
 
 Main Problems
 * Problem 1:
@@ -913,5 +938,5 @@ A story cannot be approved unless these questions are clearly answered:
 10. Did each literary sentence carry information, not just mood?
 11. Did historical support connect the story to verifiable facts without becoming a disconnected encyclopedia card?
 12. Did the title and summary avoid spoiling the abstract conclusion?
-13. Did the knowledge point emerge naturally and sharply?
+13. Did the field-origin turn emerge naturally and sharply?
 14. Does the final question contain real tension?

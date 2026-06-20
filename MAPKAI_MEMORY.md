@@ -370,6 +370,27 @@ Verified:
 - YAML/frontmatter parsing and git diff checks were run before commit.
 
 Push:
+- Pushed to main in commit caacc68.
+```
+
+Latest MapKAI story field-origin correction:
+
+```text
+Changed:
+- Reframed skills/mapkai-story-rewrite/SKILL.md from single discovery/knowledge-point stories to discipline or knowledge-field origin stories.
+- Added Field Origin Frame: the person/event is only the entrance; the real subject is why a field began to need its own object, question, and method.
+- Rewrite now internally asks what people relied on before the field had a clear shape, what old practice could not hold, what new object of attention appeared, what question the emerging field began asking, and what method made that question answerable.
+- Added field-origin turn formula: "Before this field, X was treated as part of Y; through Z, it became a problem/object that needed its own question W."
+- Updated rewrite output guidance so "藏在里面的知识" explains the field-origin turn, not merely a discovered knowledge point.
+- Added Field Origin Fit Gate to skills/mapkai-story-review/SKILL.md.
+- Review now fails stories that only show a discovery, invention, reform, or biography without showing why the selected field began to need its own object, question, or method.
+- Updated both agent default prompts so generated/reviewed stories must be field-origin stories, not just discovery stories.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- YAML/frontmatter parsing and git diff checks were run before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
