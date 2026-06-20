@@ -1,4 +1,4 @@
 interface:
   display_name: "MapKAI Story Review"
-  short_description: "Strictly review MapKAI knowledge stories."
-  default_prompt: "Review this MapKAI knowledge story for discovery logic, factual safety, and non-AI style."
+  short_description: "Strictly review MapKAI stories for false scenes and weak turns."
+  default_prompt: "Review this MapKAI knowledge story with a hard verdict: PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL. Check historical time/place/action consistency first, then evidence pressure, narrative thickness, field/method fit, knowledge-turn sharpness, useful literary language, cautious causality, factual safety, and non-AI style."

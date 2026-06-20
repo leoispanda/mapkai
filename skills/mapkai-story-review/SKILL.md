@@ -1,6 +1,6 @@
 ---
 name: mapkai-story-review
-description: Strictly review generated or rewritten MapKAI knowledge stories for discovery-based storytelling quality and make only safe micro-edits when the story already works. Use when checking whether a MapKAI story has concrete scene, old understanding, field-based tension, character action, changed question, evidence-grown insight, natural knowledge emergence, factual safety, non-AI style, and non-decorative literary language; also use for batch audits after MapKAI story generation or rewrite.
+description: Strictly review generated or rewritten MapKAI knowledge stories for historical scene consistency, evidence pressure, discovery-based storytelling quality, and field-method fit. Use when checking whether a MapKAI story has reliable time/place/action alignment, concrete scene, initially reasonable old method, field-based tension, character action, changed question, evidence-grown insight, natural knowledge emergence, factual safety, non-AI style, and non-decorative literary language; also use for batch audits after MapKAI story generation or rewrite.
 ---
 
 # MapKAI Story Review
@@ -11,26 +11,41 @@ Review MapKAI knowledge stories after generation or rewrite.
 
 This is not a polishing skill. It is a strict story-quality review. A story should not pass because it is fluent, longer, emotional, literary, or conceptually correct. It passes only when knowledge grows from a concrete scene, real tension, observable action, and a clear shift in understanding.
 
+Passing the visible arc labels is not enough. If the story still reads like a tidy synopsis, encyclopedia teaser, false scene, or "correct but thin" discovery summary, mark it `LOCAL EDIT` or `FAIL`.
+
+A knowledge story cannot pass only because it is atmospheric or elegant. It must be historically situated, scene-consistent, and epistemically sharp. If time, place, action, and knowledge transition do not align, the story must be marked `LOCAL EDIT` or `FAIL`.
+
 Core question for every story:
 
 ```text
 Is this truly a story of discovery, or is it still a knowledge explanation with decorative writing?
 ```
 
-If it is mainly explanation, mark it `REVISE` or `REWRITE`.
+If it is mainly explanation, mark it `FAIL`.
+
+Strict scoring formula:
+
+```text
+No evidence pressure = explanation.
+No time-scene consistency = false scene.
+No changed question = knowledge introduction.
+No initially reasonable old method = no real discovery.
+```
 
 ## Decision Labels
 
-- `PASS`: The story works as a discovery-based MapKAI story. Only tiny edits may be needed.
-- `LOCAL EDIT`: The story basically works, but specific sentences or small sections need changes.
-- `REVISE`: The story has potential, but one or more core elements are weak: tension, action, changed question, evidence-grown insight, knowledge emergence, or ending question.
-- `REWRITE`: The story is still mainly a knowledge card, biography, or explanation. It should be rebuilt from the story arc.
+- `PASS`: Structure, facts, scene, action, and knowledge turn all work. Only tiny language edits may be needed.
+- `PASS / LOCAL EDIT`: The story is basically passable, but one local time, scene, terminology, causality, or sentence-level risk should be fixed before publication.
+- `LOCAL EDIT`: The direction is right, but at least one important piece of time, scene, action, evidence pressure, field fit, or knowledge turn needs visible local rewriting.
+- `FAIL`: The story mainly relies on atmosphere, biography, explanation, a false scene, or a pasted knowledge point. It must return to rewrite.
+
+Use the harder label when uncertain. Do not let "beautiful but maybe unclear" pass.
 
 ## Micro-Edit Rule
 
 The reviewer may make edits only when the story is already structurally working.
 
-For `PASS` or `LOCAL EDIT`, provide a micro-edited version that directly applies safe sentence-level fixes. Micro-edits may:
+For `PASS` or `PASS / LOCAL EDIT`, provide a micro-edited version that directly applies safe sentence-level fixes. Micro-edits may:
 
 - Replace vague literary phrasing with concrete action.
 - Remove small AI-like transitions.
@@ -46,9 +61,109 @@ Micro-edits must not:
 - Rebuild the story arc.
 - Hide a structural problem by polishing around it.
 
-For `REVISE` or `REWRITE`, do not provide a full micro-edited story as if the problem is solved. Give required sentence fixes only as examples, then send the story back to the rewrite step.
+For `LOCAL EDIT`, provide only focused replacements for the broken sentence, paragraph, or section if the rest of the story works. Do not pretend a structural issue is solved by polishing.
+
+For `FAIL`, do not provide a full micro-edited story. Give required fixes only as examples, then send the story back to the rewrite step.
 
 ## Review Checklist
+
+### 0. Historical Scene Consistency Gate
+
+Review this before judging language.
+
+Check:
+
+- Is there a clear time anchor: year, period, war, expedition, experiment stage, report stage, or "after/before" marker?
+- Is the place clear enough for the story's action?
+- Could the named or implied person plausibly be there at that time?
+- Could the person plausibly be doing the action described there?
+- Do the discovery, chart, report, theory, policy, or concept belong to the same historical phase?
+
+Fail or mark `LOCAL EDIT` if:
+
+- The story has no time anchor but uses a historical person or event.
+- Different years, places, or phases are compressed into one attractive scene.
+- Field work, later data analysis, report publication, and policy impact are written as if they happened in one continuous moment.
+- The historical support section tries to fix a scene that was confused in the story body.
+
+Reviewer question: Is this a reliable scene, or a good-looking scene assembled from later facts?
+
+### 0A. Main Scene Axis
+
+Identify the story's main axis:
+
+- field observation;
+- data sorting;
+- chart or model making;
+- theory formation;
+- policy or public persuasion;
+- classroom/workshop/lab testing.
+
+Fail or mark `LOCAL EDIT` if several axes are mixed without clear sequence. A story may refer back to an earlier scene, but the reader must know which scene carries the knowledge turn.
+
+Reviewer question: Where does the knowledge turn actually happen?
+
+### 0B. Evidence Pressure Gate
+
+Find the pressure point that forces the story to change question.
+
+Acceptable pressure points include:
+
+- a number that does not fit the expected category;
+- repeated cases with the same shape;
+- a comparison across time, place, height, route, sample, or group;
+- a chart shape that makes a hidden pattern visible;
+- an instrument limit, failed result, exception, or missing record.
+
+Fail or mark `LOCAL EDIT` if:
+
+- the first half only has mood or suffering;
+- the author tells the reader the old method was limited, but no evidence pushes back;
+- the old question changes only because the prose announces it.
+
+Reviewer question: What fact, number, object, or repeated pattern forced the new question?
+
+### 0C. Red Line Checklist
+
+The following cannot receive `PASS`:
+
+1. No time anchor in a historical-person story.
+2. Different years, places, or phases compressed into one false scene.
+3. A person performs an action that was impossible or unsupported for that time and place.
+4. The first half has atmosphere but no cognitive obstruction.
+5. The body does not show the knowledge turn; the final explanation supplies it instead.
+6. Abstract words such as "system," "variable," "relationship," "model," or "mechanism" appear without concrete action or evidence.
+7. The selected field label does not match the story's actual method.
+8. Old and new questions are slogans, not pressure from evidence.
+9. Charts, numbers, tools, ledgers, maps, or instruments are decorative rather than causal.
+10. Historical support repairs factual confusion that should have been clear in the body.
+11. Causality is overstated with "directly led to," "proved," "first discovered," or similar claims without reliable support.
+12. The final question is generic and does not return to the story's central object, evidence, or metaphor.
+
+When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
+
+### 0D. Boundary Example: Nightingale
+
+A Florence Nightingale story about wartime hospitals and statistical charts should usually be judged `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`, if it mixes Scutari hospital atmosphere with later London data analysis as one continuous scene.
+
+Check especially:
+
+- Is the scene 1854-1856 field nursing at Scutari, or later analysis/report work in Britain?
+- Are bed rows, hospital smells, and wheels on stone serving the data question, or only making the scene cinematic?
+- Does the story show how deaths were separated by cause, month, proportion, and chart shape?
+- Does the chart make preventable death visible as evidence, rather than merely "making numbers pretty"?
+- Does the story avoid implying that one chart alone caused reform?
+
+Better main axis for the statistical knowledge turn: a later desk/report scene where ledgers, months, causes of death, counts, proportions, and polar-area charting turn scattered deaths into a visible argument for sanitary reform.
+
+Approved benchmark for this pattern:
+
+- Time/scene: "1857 年前后" or another clear postwar analysis/report anchor, not an unanchored hospital night.
+- Old method: a ledger reasonably classifies and totals deaths for officials.
+- Evidence pressure: when deaths are separated by month and cause, disease categories repeatedly outweigh battle wounds or swell in particular months.
+- Actions: recopy months, recalculate categories, compare causes, draw a circular/polar-area chart, inspect which color or area expands.
+- Changed question: from "How many did the war take?" to "Which deaths did the total hide, and what conditions made them change?"
+- Knowledge turn: rearranged numbers become evidence for a preventable cause; the chart is a method of seeing, not decoration.
 
 ### 1. Scene Before Explanation
 
@@ -73,7 +188,7 @@ Reviewer question: Does the reader enter a scene before being told what the stor
 
 Check whether the story body names the field, explains the field, or uses the field title as a bridge before the "hidden knowledge" section.
 
-Fail or mark `REVISE` if the story body contains patterns like:
+Fail or mark `LOCAL EDIT` if the story body contains patterns like:
 
 - "{fieldTitle}在这里..."
 - "{fieldTitle}关注/研究/连接..."
@@ -83,6 +198,68 @@ Fail or mark `REVISE` if the story body contains patterns like:
 - "真正的意义在于..."
 
 Reviewer question: Could the story body still be worth reading if the field title were hidden?
+
+### 1B. Story, Not Synopsis Gate
+
+Check whether the story has enough lived sequence to be readable as a story.
+
+Fail or mark `LOCAL EDIT` or `FAIL` if:
+
+- The person is only a role label, such as "a young traveler," without visible task, pressure, tool, or constraint.
+- The body has fewer than two concrete actions separated in time.
+- The tension appears and resolves in one smooth explanatory jump.
+- "问题从...变成..." is present, but the prior scene has not made that change necessary.
+- The story can be reduced to "person observed X, compared Y, and the field changed Z" without losing much.
+- The title or summary reveals the abstract conclusion before the scene begins.
+- The body is shorter than 350 Chinese characters for a full knowledge story, unless the user explicitly requested compact mode; even compact mode still needs scene, old habit, obstruction, action, and turn.
+
+Good signs:
+
+- The reader can follow a body moving through time: first handling one thing, then checking or comparing another.
+- There is a small resistance: damp paper, an exception, a failed explanation, a measurement that does not fit, a tool limit, a patient or object that refuses the old category.
+- The changed question feels like a result of what happened, not a sentence inserted by the writer.
+
+Reviewer question: If the field title and historical support were removed, would this still feel like a scene worth reading rather than a summary paragraph?
+
+### 1C. Field Fit And Method Fit
+
+Check whether the story fits the selected field, not just a nearby easier field.
+
+Fail or mark `LOCAL EDIT` or `FAIL` if:
+
+- The story is about the right topic but not the right knowledge method.
+- A broad field title is satisfied only by name, not by evidence in the body.
+- The field includes mathematics, statistics, models, data, law, engineering, or communication, but those methods do not materially shape the story.
+
+For `自然科学、数学与统计`, a story should not stop at "nature is connected." It should show why measurement and comparison matter:
+
+- variables such as altitude, temperature, pressure, moisture, time, count, distance, or position;
+- comparison across heights, routes, places, samples, people, or repeated observations;
+- a pattern, distribution, scale, table, map, graph, coordinate, or visual arrangement that lets evidence be checked.
+
+Reviewer question: What exact method changed here: naming, measuring, comparing, modeling, visualizing, testing, calculating, classifying, or deciding?
+
+### 1D. Knowledge Turn Sharpness
+
+Check whether the old and new questions are sharp enough.
+
+Weak:
+
+- Old: "What is this?" New: "Everything is connected."
+- Old: "People misunderstood nature." New: "They saw relationships."
+
+Stronger:
+
+- Old: "Which cabinet does this specimen belong in?" New: "Under what height, temperature, moisture, and terrain conditions does this life form tend to appear?"
+- Old: "Where are the deaths?" New: "Which routes brought the same water into different bodies?"
+
+Fail or mark `LOCAL EDIT` or `FAIL` if:
+
+- The new question is long but vague.
+- The new question uses broad words such as "system," "relationship," "meaning," or "conditions" without naming the concrete variables or evidence.
+- The hidden knowledge section says the correct concept, but the body does not make that concept visible.
+
+Reviewer question: After reading, can the reader state the precise knowledge turn in one sentence?
 
 ### 2. Delayed Naming
 
@@ -146,8 +323,9 @@ Weak signs:
 - Too many lines say "he realized," "she understood," or "they discovered."
 - The character is only a name attached to an idea.
 - There is no physical or mental movement.
+- There is only one action, followed immediately by explanation.
 
-Reviewer question: What action moves the story forward?
+Reviewer question: What two or more actions move the story forward?
 
 ### 6. Change of Question
 
@@ -164,6 +342,7 @@ Weak signs:
 
 - The story says the person "saw something differently," but the actual question does not change.
 - The story jumps from action to contribution without showing the shift.
+- The story uses the formula "问题从...变成..." without enough prior obstruction to earn it.
 
 Reviewer question: What was the original question, and what did it become?
 
@@ -183,6 +362,7 @@ Weak signs:
 - The story jumps to "this shows..." or "therefore..." without enough support.
 - The knowledge point is pasted onto the story.
 - The ending is a lecture.
+- The final sentence turns the scene into a definition instead of staying with the changed way of seeing.
 
 Reviewer question: Could the reader follow the path from evidence to insight?
 
@@ -213,6 +393,26 @@ Watch for unsupported phrases:
 - Created a new way of thinking.
 
 Reviewer question: What concrete detail gives this abstract sentence the right to exist?
+
+### 8A. Useful Literary Language
+
+Check whether beautiful sentences do real knowledge work.
+
+Fail or mark `LOCAL EDIT` or `FAIL` if:
+
+- A metaphor sounds good but hides the actual question.
+- A phrase such as "互相追问," "不完整的证词," "重新阅读," or "看见关系" appears without specifying what is being asked, missing, compared, or re-read.
+- The sentence creates mood but does not move the evidence, action, tension, or changed question.
+
+Examples:
+
+- Weak: "低处的名字、高处的名字，单独看都像答案；排在同一页上，却像在互相追问。"
+- Better: "低处的名字、高处的名字，单独看都像答案；排在同一页上，却露出一个问题：为什么相似的植物总在相似的高度出现？"
+
+- Weak: "标本夹越来越像一份不完整的证词。"
+- Better: "标本夹留下了叶片形状，却留下不了它出现时的高度、温度、湿度和周围植物。"
+
+Reviewer question: Does the literary sentence clarify the knowledge turn, or merely decorate it?
 
 ### 9. Fake Literary Sentences
 
@@ -276,13 +476,71 @@ Sensory details may be plausible scene reconstruction when they do not assert un
 
 Reviewer question: Would this sentence survive fact-checking?
 
+### 11A. Historical Support Bridge
+
+Check whether historical support is reliable and connected to the story.
+
+Good historical support:
+
+- Reveals or anchors the person/event if the body delayed naming.
+- States time, person/event, action, and influence without exaggeration.
+- Carries forward the story's evidence: tools, measurements, maps, publication, experiment, report, or institutional change.
+
+Weak signs:
+
+- It reads like a detached encyclopedia card after a narrative body.
+- It ends with a generic academic phrase such as "被视为...的重要象征" without explaining what concrete artifact or practice made it important.
+- It names influence but not the specific method, evidence, or artifact.
+
+Reviewer question: Does the support section help the reader connect the story to verifiable history?
+
 ### 12. Not Just Longer
 
 Check whether the rewrite only made the story longer.
 
 Mark as weak if the story has more words but still lacks old understanding, field tension, character action, changed question, evidence-grown insight, or natural knowledge emergence.
 
+Also mark as weak if the story is shorter and cleaner but has become a synopsis. Brevity is not quality when it removes struggle, obstruction, and sequence.
+
 Reviewer question: Did the story gain structure, or only length?
+
+### 12A. Readability And Narrative Thickness
+
+Check whether the story gives the reader enough time inside the discovery.
+
+Weak signs:
+
+- The body feels like a polished caption under a museum object.
+- The person has no felt pressure, task, constraint, or repeated attempt.
+- Scene details are present but static; they do not change what the person does.
+- The old understanding, contradiction, action, and new understanding all appear in compressed summary form.
+
+Strong signs:
+
+- The reader can name what the person did first, what interrupted that, and what they did next.
+- The story lets confusion or insufficiency last for at least a few sentences.
+- The ending changes what the reader is looking at, rather than telling the reader what the field means.
+
+Reviewer question: Would a non-expert keep reading because something is happening, not because the topic is important?
+
+### 12B. Surprise And Reveal
+
+Check whether the story reveals its knowledge too early.
+
+Weak signs:
+
+- The title or summary already says the abstract transformation.
+- The first half announces the final relationship before the old habit has had time to feel reasonable.
+- The body tells the reader "this is about systems/relationships/environment" before the scene earns it.
+- The final hidden knowledge section only repeats what was already obvious from the opening.
+
+Strong signs:
+
+- The first half lets the old method work well enough to feel plausible.
+- The obstruction makes the old method insufficient.
+- The reader reaches the hidden knowledge section with a sharper structure than they had at the start.
+
+Reviewer question: Did the reader discover the knowledge turn, or did the title and early sentences spoil it?
 
 ### 13. Ending Question with Tension
 
@@ -294,6 +552,7 @@ Weak questions:
 - What did you learn?
 - Do you understand this concept?
 - How can we apply this today?
+- Questions using unjustified absolutes such as "only," "always," or "must" when the story is about tendencies, variables, or patterns.
 
 Strong questions often include a tension:
 
@@ -305,6 +564,8 @@ Strong questions often include a tension:
 - Classification vs connection.
 - Calculation vs expression.
 - Memory vs interpretation.
+- Naming vs mapping relationships.
+- Single fact vs variable pattern.
 
 Reviewer question: Does the final question leave the reader with a real choice or tension?
 
@@ -317,6 +578,7 @@ Flag if too many stories use:
 - "某年某地，一个人……"
 - "别人看到 A，他看到 B" with identical phrasing.
 - "多年后……" as the main transition.
+- "问题从...变成..." without a different earned setup in each story.
 - "今天我们……" as the modern link.
 - The same final question structure.
 - The same emotional pause.
@@ -330,7 +592,7 @@ For each story, output:
 
 ```text
 Review Decision
-PASS / LOCAL EDIT / REVISE / REWRITE
+PASS | PASS / LOCAL EDIT | LOCAL EDIT | FAIL
 
 Overall Judgment
 {3 to 5 direct sentences. State whether the story truly works as discovery or only looks story-like.}
@@ -346,10 +608,18 @@ Main Problems
   * Rule:
 
 Logic Chain Check
+* Time anchor:
+* Main scene axis:
+* Time/place/action consistency:
 * Old understanding:
+* Why old method originally worked:
 * Field tension:
 * Character actions:
+* Evidence pressure point:
+* Obstruction or resistance:
 * Question change:
+* Field/method fit:
+* Knowledge turn sharpness:
 * New understanding:
 * Missing or broken link:
 
@@ -359,13 +629,16 @@ Required Sentence Fixes
 * Suggested replacement:
 
 Micro-Edited Version
-{For PASS or LOCAL EDIT, provide the complete story with only safe micro-edits applied. For REVISE or REWRITE, write "Not applicable; return to rewrite."}
+{For PASS or PASS / LOCAL EDIT, provide the complete story with only safe micro-edits applied. For LOCAL EDIT, provide only the focused replacement section if safe; otherwise write "Not applicable; return to local rewrite." For FAIL, write "Not applicable; return to rewrite."}
 
 Factual Risk Notes
 {Mention overclaims, unsupported historical details, invented scenes, or wording that should be more cautious.}
 
 Fake Literary Risk Notes
 {Mention sentences that sound poetic but are unclear, decorative, or unsupported.}
+
+Field Fit Notes
+{Mention whether the story fits the selected field's actual method, especially for broad fields such as 自然科学、数学与统计.}
 
 Most Important Revision Direction
 {Give only one main direction.}
@@ -384,9 +657,9 @@ When reviewing a batch, add:
 Batch Summary
 * Number of stories reviewed:
 * PASS:
+* PASS / LOCAL EDIT:
 * LOCAL EDIT:
-* REVISE:
-* REWRITE:
+* FAIL:
 
 Common Problems
 {Repeated weaknesses across stories.}
@@ -412,8 +685,13 @@ A story cannot be approved unless these questions are clearly answered:
 2. Who is observing?
 3. What was the old understanding?
 4. What field-based tension appeared?
-5. What did the person do?
-6. How did the question change?
-7. How did the new understanding grow from evidence?
-8. Did the knowledge point emerge naturally?
-9. Does the final question contain real tension?
+5. What concrete obstruction or resistance made the old understanding insufficient?
+6. What two or more actions did the person take?
+7. How did the question change?
+8. What exact field method became visible: measuring, comparing, modeling, visualizing, testing, calculating, classifying, interpreting, or deciding?
+9. How did the new understanding grow from evidence?
+10. Did each literary sentence carry information, not just mood?
+11. Did historical support connect the story to verifiable facts without becoming a disconnected encyclopedia card?
+12. Did the title and summary avoid spoiling the abstract conclusion?
+13. Did the knowledge point emerge naturally and sharply?
+14. Does the final question contain real tension?

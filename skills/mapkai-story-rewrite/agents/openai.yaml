@@ -1,4 +1,4 @@
 interface:
   display_name: "MapKAI Story Rewrite"
-  short_description: "Generate readable discovery-based MapKAI stories."
-  default_prompt: "Rewrite this MapKAI knowledge story as a readable scene-first discovery story, revealing background through action rather than direct explanation."
+  short_description: "Generate reliable MapKAI discovery stories, not false scenes."
+  default_prompt: "Rewrite this MapKAI knowledge story as a historically situated, scene-consistent discovery story. First choose one main time/place/action axis, make the old method feel initially reasonable, add evidence pressure, include at least two concrete actions, show a sharp old-to-new question turn, and make visible field methods such as measuring, comparing, modeling, or visualizing where relevant."

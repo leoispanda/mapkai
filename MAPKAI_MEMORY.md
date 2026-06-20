@@ -237,11 +237,13 @@ When rewriting or reviewing MapKAI knowledge stories, use:
 Workflow:
 1. Rewrite story content.
 2. Review each story with the review skill.
-3. For PASS or LOCAL EDIT, apply the review skill's safe micro-edits.
-4. Any story marked REVISE or REWRITE must be rewritten again.
-5. Run the review again after revision.
-6. Do not commit or push until all stories are PASS or LOCAL EDIT and their micro-edits are applied.
-7. Update MAPKAI_MEMORY.md with Changed / Verified / Push status.
+3. Review decisions are PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL.
+4. For PASS or PASS / LOCAL EDIT, apply the review skill's safe micro-edits.
+5. Any story marked LOCAL EDIT must be locally revised and reviewed again.
+6. Any story marked FAIL must be rewritten again from the writing skill.
+7. Run the review again after revision.
+8. Do not commit or push until all stories are PASS or PASS / LOCAL EDIT and their micro-edits are applied.
+9. Update MAPKAI_MEMORY.md with Changed / Verified / Push status.
 ```
 
 Latest MapKAI story rewrite/review status:
@@ -259,6 +261,57 @@ Verified:
 - Bundled Node syntax check passed for script.js and public/script.js.
 - Effective runtime review scan found 148 lens stories, 0 forbidden story-pattern hits, 0 too-short visible story bodies, 0 missing question-turn hits, and 0 hidden-knowledge style misses.
 - Published story override scan found 6 reviewed stories, 0 forbidden story-pattern hits, and 0 missing question-turn hits.
+
+Push:
+- Not committed and not pushed in this turn.
+```
+
+Latest MapKAI story skill requirement update:
+
+```text
+Changed:
+- skills/mapkai-story-rewrite/SKILL.md now has a Story, Not Synopsis Gate.
+- Full knowledge story bodies should default to 500-800 Chinese characters unless compact mode is explicitly requested.
+- A story must have one followable person, at least two concrete actions separated in time, one scene-based obstruction or resistance, and a question change earned by that obstruction.
+- Title and summary should create curiosity or pressure, not reveal the abstract conclusion before the scene begins.
+- skills/mapkai-story-review/SKILL.md now fails "correct but thin" stories that read like summaries, captions, biographies, or encyclopedia teasers.
+- Review now checks narrative thickness, obstruction/resistance, two or more actions, earned question change, and summary/title leakage.
+- agents/openai.yaml prompts for both story rewrite and story review were updated to include the new narrative-thickness requirements.
+- Added Knowledge Turn Sharpness / Field Fit requirements after Humboldt sample review feedback.
+- Rewrite must now make the exact method shift visible, not just the general theme. For broad fields, the story must show the selected field's actual method in action.
+- For 自然科学、数学与统计, story bodies should show measured variables, comparison across cases/places/heights, and a pattern/distribution/map/graph/visual arrangement. A natural observation alone is not enough.
+- Review now checks whether literary sentences carry information. Pretty but vague phrases such as "互相追问" or "不完整的证词" must specify what question, evidence, or variable is missing.
+- Review now checks whether old/new questions are sharp, whether historical support bridges the story instead of reading like a detached encyclopedia card, whether the hidden knowledge is a real reveal, and whether reflection questions avoid unjustified absolutes.
+- Added the stricter "historically situated, scene-consistent, epistemically sharp" rule after the Nightingale sample exposed a false-scene risk.
+- Rewrite must now run an internal historical scene preflight before drafting: main person, time, place, action, old method, why it originally worked, evidence pressure, new method, changed question, later facts reserved for historical support, and later impacts that must not be written as immediate scene action.
+- Rewrite must choose one main scene axis: field observation or later analysis. It must not merge field care/observation, later data整理, report publication, and policy impact into one attractive scene.
+- Review now starts with a Historical Scene Consistency Gate and Evidence Pressure Gate before language review.
+- Review decisions are now PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL. Stories cannot PASS if they lack a time anchor, compress different phases into a fake scene, use atmosphere without a cognitive obstruction, paste the knowledge point into the ending, or use decorative charts/tools/numbers.
+- Nightingale is now recorded as a boundary example: a statistical story should not mix Scutari hospital atmosphere with later report/chart-making as one continuous scene; if the knowledge turn is statistical graphics, the main axis should be ledgers, months, causes of death, counts, proportions, chart shape, and persuasion.
+- The approved Nightingale sample pattern is now stored in both rewrite and review skills: postwar desk/report scene, ledger totals as a reasonable old method, disease-death counts as evidence pressure, recopy/recalculate/draw/compare as actions, and the turn from "how many died" to "which deaths did totals hide, and what conditions could change them."
+
+Verified:
+- Skill markdown and YAML files were updated only; no story data was changed in this requirement update.
+
+Push:
+- Not committed and not pushed in this turn.
+```
+
+Latest MapKAI story batch rewrite update:
+
+```text
+Changed:
+- Rewrote reviewedLensStoryOverridesZh in script.js and public/script.js for all 148 lens stories using the updated scene-consistent, evidence-pressure story pattern.
+- Rewrote reviewedPublishedStoryOverridesZh for 6 published stories.
+- Story bodies now keep abstract/hidden knowledge out of the body, preserve time/scene anchors, show an initially reasonable old method, add evidence pressure, include concrete actions, and make the old-to-new question turn explicit.
+- Added summaryZh/sceneZh overrides for lens stories where needed so first-screen text no longer has to rely on older synopsis-style copy.
+- Root script.js and public/script.js were kept byte-for-byte synced.
+
+Verified:
+- Bundled Node syntax check passed for script.js and public/script.js.
+- script.js and public/script.js are byte-for-byte synced.
+- git diff --check passed.
+- Content scan found 148 lens stories and 6 published stories, with 0 too-short bodies, 0 forbidden phrase hits, 0 missing question-turn hits, 0 weak-action hits, and 0 repeated sentence patterns at the >=10 threshold.
 
 Push:
 - Not committed and not pushed in this turn.
