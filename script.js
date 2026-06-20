@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.40";
+const appVersion = "0.1.41";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -13650,7 +13650,6 @@ function renderCategoryTree(category) {
   const activeGroup = category.groups.find((group) => group.code === savedGroupCode) || category.groups[0];
   activeCategorySubmodules[category.code] = activeGroup.code;
   const activeGroupStory = getLensStoryForGroup(category.code, activeGroup.code);
-  const activeGroupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
   const fieldStateKey = `${category.code}:${activeGroup.code}`;
   const savedFieldCode = activeCategoryFields[fieldStateKey];
   const activeField = savedFieldCode ? activeGroup.fields.find(([fieldCode]) => fieldCode === savedFieldCode) : null;
@@ -13670,15 +13669,6 @@ function renderCategoryTree(category) {
         </button>`;
     })
     .join("");
-  const introStory = activeGroupStory
-    ? `<a class="submodule-story-button is-intro" href="/lens-stories/${activeGroupStory.id}" data-route="/lens-stories/${activeGroupStory.id}">
-        <span>${escapeHtml(activeGroupTitle)}</span>
-        <em>${escapeHtml(t("submoduleIntroStory"))}</em>
-      </a>`
-    : `<div class="submodule-story-button is-empty">
-        <span>${escapeHtml(activeGroupTitle)}</span>
-        <small>${escapeHtml(t("noStoryReady"))}</small>
-      </div>`;
   const fieldButtons = activeGroup.fields
     .map(([fieldCode, fieldTitle]) => {
       const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
@@ -13717,9 +13707,6 @@ function renderCategoryTree(category) {
         </div>
       </div>
       <section class="submodule-compact-panel" aria-live="polite">
-        <div class="submodule-overview-row">
-          ${introStory}
-        </div>
         <div class="hierarchy-layer nested-field-layer">
           <span class="hierarchy-layer-label">${escapeHtml(t("detailedFieldLabel"))}</span>
           <div class="detailed-field-button-list" role="tablist" aria-label="${escapeHtml(t("detailedFieldLabel"))}">
