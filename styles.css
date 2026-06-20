@@ -4772,7 +4772,9 @@ dd,
 
 .stories-page,
 .field-detail-page,
-.lens-story-page {
+.lens-story-page,
+.concept-fables-page,
+.concept-fable-detail-page {
   padding: clamp(3.25rem, 6vw, 5rem) 5vw 4rem;
 }
 
@@ -4952,6 +4954,13 @@ dd,
   text-decoration: none;
 }
 
+.concept-back-link {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
 .story-reader {
   padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid rgba(148, 163, 184, 0.24);
@@ -5071,8 +5080,67 @@ dd,
   font-weight: 760;
 }
 
+.concept-fable-shell {
+  width: min(980px, 100%);
+}
+
+.concept-fable-reader h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  letter-spacing: 0;
+}
+
+.concept-fable-story p {
+  font-size: clamp(1.02rem, 1.35vw, 1.14rem);
+}
+
+.concept-metaphor-section {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.concept-metaphor-section > span {
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.concept-metaphor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.concept-metaphor-grid article {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 8px;
+  background: rgba(248, 250, 252, 0.78);
+}
+
+.concept-metaphor-grid strong {
+  color: #0f172a;
+  font-size: 0.96rem;
+}
+
+.concept-metaphor-grid p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.concept-fable-meta {
+  grid-template-columns: 1fr;
+}
+
 @media (max-width: 660px) {
-  .lens-story-meta {
+  .lens-story-meta,
+  .concept-metaphor-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -5598,6 +5666,8 @@ body[data-theme="dark"] .story-card h2,
 body[data-theme="dark"] .field-card h4,
 body[data-theme="dark"] .area-card h4,
 body[data-theme="dark"] .map-story-card h4,
+body[data-theme="dark"] .concept-fable-reader h2,
+body[data-theme="dark"] .concept-metaphor-grid strong,
 body[data-theme="dark"] .pdc-card h1 {
   color: #f4efe4;
   text-shadow: none;
@@ -5670,6 +5740,7 @@ body[data-theme="dark"] .field-detail-card,
 body[data-theme="dark"] .story-reader,
 body[data-theme="dark"] .lens-story-meta > div,
 body[data-theme="dark"] .lens-story-support,
+body[data-theme="dark"] .concept-metaphor-grid article,
 body[data-theme="dark"] .legal-block,
 body[data-theme="dark"] .pdc-entry-hero,
 body[data-theme="dark"] .pdc-entry-demo,
@@ -5701,7 +5772,8 @@ body[data-theme="dark"] .lens-story-shelf-heading h2,
 body[data-theme="dark"] .lens-story-sample-content strong,
 body[data-theme="dark"] .lens-story-section p,
 body[data-theme="dark"] .lens-story-summary,
-body[data-theme="dark"] .lens-story-meta p {
+body[data-theme="dark"] .lens-story-meta p,
+body[data-theme="dark"] .concept-metaphor-grid p {
   color: #f4efe4;
 }
 

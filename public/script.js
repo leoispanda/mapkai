@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.34";
+const appVersion = "0.1.35";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -59,6 +59,10 @@ const routeMeta = {
   "/stories": {
     title: "MapKAI Stories — Knowledge Mapping Through Real Scenarios",
     description: "Read everyday scenarios that show how practical knowledge fields, reflection, and learning signals connect inside the MapKAI knowledge map.",
+  },
+  "/concept-fables": {
+    title: "MapKAI Concept Fables — Advanced Ideas Through Hidden Stories",
+    description: "Read short fables that quietly unfold advanced knowledge concepts before revealing the concept and its metaphors.",
   },
   "/explore": {
     title: "MapKAI Explore — Start an AI-Native Knowledge Map",
@@ -128,6 +132,19 @@ const uiText = {
     storiesEyebrow: "Stories",
     storiesTitle: "Historical cases. Larger maps.",
     storiesCopy: "Real events with conflict, debate, and conclusions across multiple knowledge lenses.",
+    conceptFablesEyebrow: "Concept fables",
+    conceptFablesTitle: "Advanced ideas, hidden inside fables.",
+    conceptFablesCopy: "Each domain hides one graduate-level concept inside a story. Read first; the concept appears only near the end.",
+    conceptFablesAction: "Read concept fables",
+    conceptFableRead: "Read fable",
+    conceptFableBack: "Back to concept fables",
+    conceptFableStoryLabel: "Fable",
+    conceptFableRevealLabel: "Reveal",
+    conceptFableExplanationLabel: "Concept explained",
+    conceptFableMetaphorLabel: "Metaphor map",
+    conceptFableReflectionLabel: "Reflection",
+    conceptFableNotFoundTitle: "Concept fable not found",
+    conceptFableNotFoundCopy: "This concept fable is not available yet.",
     readStory: "Read story",
     readLensStory: "Read everyday story",
     backToLens: "Back to Lens",
@@ -465,6 +482,19 @@ const uiText = {
     storiesEyebrow: "故事",
     storiesTitle: "真实历史，更大的知识地图。",
     storiesCopy: "用真实发生的事件，呈现冲突、讨论过程，以及多重知识视角下的结论。",
+    conceptFablesEyebrow: "概念寓言",
+    conceptFablesTitle: "把高级概念藏进故事里。",
+    conceptFablesCopy: "每个领域先随机挑一个研究生水平概念，用寓言讲完，直到故事末尾才揭示它是什么。",
+    conceptFablesAction: "阅读概念寓言",
+    conceptFableRead: "阅读寓言",
+    conceptFableBack: "返回概念寓言",
+    conceptFableStoryLabel: "寓言故事",
+    conceptFableRevealLabel: "揭示",
+    conceptFableExplanationLabel: "概念解释",
+    conceptFableMetaphorLabel: "隐喻对应",
+    conceptFableReflectionLabel: "思考一下",
+    conceptFableNotFoundTitle: "没有找到这篇概念寓言",
+    conceptFableNotFoundCopy: "这篇概念寓言还没有开放。",
     readStory: "阅读故事",
     readLensStory: "阅读生活故事",
     backToLens: "返回知识镜头",
@@ -3938,6 +3968,372 @@ lensStories.forEach((story) => {
   if (override) Object.assign(story, override);
 });
 
+const conceptFables = [
+  {
+    id: "00-the-library-of-mirrors",
+    categoryCode: "00",
+    selectedFieldCode: "0031",
+    title: "The Library of Mirrors",
+    titleZh: "镜子图书馆",
+    summary: "A traveler learns to study by watching how he gets lost, not by collecting more maps.",
+    summaryZh: "一个旅人不是靠收集更多地图，而是靠看见自己怎样迷路，学会了学习。",
+    storyBody: "A traveler entered a city where every gate led to a different library. In the first hall he copied every map he found, but the streets still confused him. In the second hall he memorized the names of famous roads, yet he kept returning to the same fountain. An old librarian finally gave him a blank notebook and asked him to mark three things each night: where he thought he was going, where he actually turned, and what sign made him change his mind. The traveler was annoyed. He wanted a better map, not homework about his mistakes. After a week, the notebook looked uselessly small beside the city's shelves, but something had changed. He began to notice that he rushed past unfamiliar symbols, trusted wide roads too quickly, and avoided alleys where his map had no labels. The city had not become simpler. He had become able to watch his own searching while he searched. Only near the final gate did he understand that the hidden lesson was metacognitive regulation: monitoring one's own understanding, choosing strategies, and changing course when learning fails.",
+    storyBodyZh: "一个旅人走进一座城，城里的每一道门都通向一间不同的图书馆。第一间大厅里，他抄下所有地图，可街道依然让他迷糊。第二间大厅里，他背熟了名路的名字，却总是绕回同一座喷泉。最后，一位老馆员递给他一本空白小册子，只让他每天晚上记三件事：自己原本以为要去哪儿，实际在哪儿转错了弯，是什么标记让他改变判断。旅人很不耐烦。他想要更好的地图，不想写关于自己错误的作业。可一周以后，那本薄薄的小册子虽然比不上满城书架，却让某件事变了。他发现自己总是急着跳过陌生符号，总是太相信宽阔大路，也总是避开地图没有标注的小巷。城市没有变简单，他却开始能一边寻找，一边看见自己是怎样寻找的。直到最后一扇门前，他才明白，原来这个故事讲的是元认知调节：学习者监控自己的理解、选择策略，并在学习失效时主动改路。",
+    reveal: "The traveler did not become wiser because he owned more maps. He became wiser because he learned to observe his own learning.",
+    revealZh: "旅人不是因为拥有更多地图而变聪明，而是因为他学会了观察自己的学习。",
+    conceptName: "Metacognitive regulation",
+    conceptNameZh: "元认知调节",
+    explanation: "Metacognitive regulation is the learner's ability to plan, monitor, evaluate, and adjust learning strategies. At graduate level, it matters because expertise is not only knowing content; it is knowing how one's own attention, confusion, evidence, and strategy are behaving.",
+    explanationZh: "元认知调节指学习者对自己学习过程的计划、监控、评估和调整能力。研究生水平的学习不只是“知道更多内容”，更是知道自己的注意力、困惑、证据和策略正在怎样运作。",
+    metaphorMap: [
+      { image: "The city", meaning: "A broad learning landscape with many possible paths." },
+      { image: "Copied maps", meaning: "Information gathered without self-monitoring." },
+      { image: "The blank notebook", meaning: "Reflection logs and strategy monitoring." },
+      { image: "Wrong turns", meaning: "Learning failures that become data." },
+    ],
+    metaphorMapZh: [
+      { image: "城市", meaning: "庞大的学习世界，路径很多但不自动清晰。" },
+      { image: "抄来的地图", meaning: "只收集信息，却没有监控自己如何使用信息。" },
+      { image: "空白小册子", meaning: "反思记录、策略记录和学习过程监控。" },
+      { image: "转错的弯", meaning: "学习失败本身也可以成为可分析的数据。" },
+    ],
+    reflectionQuestion: "When you get stuck, do you only look for more information, or do you also look at how you are looking?",
+    reflectionQuestionZh: "当你卡住时，你只是寻找更多资料，还是也会观察自己是怎样寻找的？",
+    tags: ["learning", "self-monitoring", "strategy"],
+    tagsZh: ["学习", "自我监控", "策略"],
+  },
+  {
+    id: "01-the-bridge-too-short",
+    categoryCode: "01",
+    selectedFieldCode: "0111",
+    title: "The Bridge Too Short",
+    titleZh: "太短的桥",
+    summary: "A teacher in a mountain village learns that help must stop at the right distance.",
+    summaryZh: "山村里的老师发现，真正的帮助必须停在刚刚好的距离。",
+    storyBody: "In a mountain village, children crossed a stream on stones to reach school. When the water rose, the smallest child froze halfway. The village carpenter offered to carry her every morning. The child stayed dry, but she learned nothing about crossing. A merchant proposed a permanent bridge from bank to bank. The child crossed safely, but soon she never looked at the water, stones, or current. The teacher tried a third thing. She placed a narrow plank only across the hardest part, stood beside the stream, and asked the child to choose the first and last stones herself. Each week the plank grew shorter. At first the child still needed a hand near her elbow. Later she needed only a reminder to look where the current split. One day the plank was gone, and the child crossed slowly, naming the safe stones as if teaching someone behind her. Only then did the village understand that the lesson was the zone of proximal development with scaffolding: the space between what a learner can do alone and what she can do with carefully withdrawn support.",
+    storyBodyZh: "山村里的孩子每天踩着石头过溪去上学。涨水以后，最小的孩子走到一半就僵住了。木匠说，干脆每天早上把她抱过去。孩子鞋子干了，却没有学会过溪。商人说，不如直接修一座从岸到岸的大桥。孩子安全了，却再也不看水流、石头和深浅。老师试了第三种办法。她只在最难的一段放一块窄木板，自己站在溪边，让孩子自己选第一块和最后一块石头。每过一周，木板就短一点。开始时，孩子还需要有人扶着胳膊；后来，她只需要一句提醒：看水流分开的地方。终于有一天，木板撤掉了，孩子慢慢走过去，还能把安全的石头一块块说给身后的人听。直到这时，村里人才明白，原来这个故事讲的是最近发展区与支架式教学：学习者独自能做到的事和在恰当支持下能做到的事之间，有一段需要被看见、支持并逐步撤离的距离。",
+    reveal: "The right bridge was not the longest bridge. It was the bridge that disappeared at the learner's pace.",
+    revealZh: "真正好的桥不是最长的桥，而是能按照学习者的节奏慢慢消失的桥。",
+    conceptName: "Zone of proximal development and scaffolding",
+    conceptNameZh: "最近发展区与支架式教学",
+    explanation: "The zone of proximal development names the gap between independent performance and performance possible with guidance. Scaffolding is temporary support that helps the learner act beyond current ability, then withdraws as competence grows.",
+    explanationZh: "最近发展区指学习者“独立完成水平”和“在帮助下可完成水平”之间的空间。支架式教学则是在这个空间里提供临时支持，并随着能力形成逐步撤离。",
+    metaphorMap: [
+      { image: "The stream", meaning: "A learning task with real difficulty." },
+      { image: "Being carried", meaning: "Over-helping that removes the learning demand." },
+      { image: "The permanent bridge", meaning: "A solution that bypasses the learner's development." },
+      { image: "The shrinking plank", meaning: "Support that fades as competence grows." },
+    ],
+    metaphorMapZh: [
+      { image: "溪流", meaning: "真实有难度的学习任务。" },
+      { image: "被抱过去", meaning: "过度帮助，任务消失了，学习也消失了。" },
+      { image: "永久大桥", meaning: "绕开学习者发展的替代方案。" },
+      { image: "逐渐变短的木板", meaning: "随能力增长而撤离的临时支持。" },
+    ],
+    reflectionQuestion: "Where are you carrying someone when you should be building a plank that can later disappear?",
+    reflectionQuestionZh: "你在哪件事上正在“抱着别人过河”，而不是搭一块以后可以撤掉的木板？",
+    tags: ["education", "guidance", "learning support"],
+    tagsZh: ["教育", "指导", "学习支持"],
+  },
+  {
+    id: "02-the-tapestry-without-a-front",
+    categoryCode: "02",
+    selectedFieldCode: "0223",
+    title: "The Tapestry Without a Front",
+    titleZh: "没有正面的挂毯",
+    summary: "A museum apprentice learns that the whole picture and each thread keep changing each other.",
+    summaryZh: "博物馆学徒发现，整幅图和每一根线会不断互相改变。",
+    storyBody: "A museum received an old tapestry with no label. The apprentice wanted to hang it at once, but no one could tell which side was the front. From far away it looked like a storm at sea. Up close, one thread looked like a road, another like a river, another like the sleeve of a person bending down. Each time the apprentice stepped back, the whole scene changed; each time the whole scene changed, the tiny threads meant something different. He became frustrated and asked the curator for the correct answer. The curator laughed softly and told him to keep walking between the wall and the cloth. After many days, he stopped asking for one final front. He learned to let the whole guide the parts and let the parts disturb the whole. Only in the last note of his catalog did he realize that the hidden method was the hermeneutic circle: interpretation moves between parts and whole until meaning becomes richer, never simply extracted from one side.",
+    storyBodyZh: "一家博物馆收到一张没有标签的旧挂毯。学徒急着把它挂起来，可没人说得清哪一面才是正面。远看像海上的风暴，近看却有一根线像路，一根线像河，还有一小片颜色像一个弯腰人的袖口。学徒每退后一步，整幅画面就变了；而整幅画面一变，细小线头的意思也跟着变。他很烦，跑去问馆长到底哪一个答案才对。馆长只是笑笑，让他继续在墙和织物之间来回走。很多天以后，他不再急着找一个最终正面。他学会让整体照亮局部，也允许局部反过来打扰整体。直到在目录最后写下注释时，他才意识到，原来这个故事讲的是诠释循环：理解会在部分与整体之间来回移动，意义不是从某一面直接取出来，而是在反复往返中变得更深。",
+    reveal: "The apprentice did not solve the tapestry by choosing one distance. He learned to think by moving between distances.",
+    revealZh: "学徒不是靠选定一个观看距离解开挂毯，而是学会在不同距离之间移动地思考。",
+    conceptName: "Hermeneutic circle",
+    conceptNameZh: "诠释循环",
+    explanation: "The hermeneutic circle is a core idea in interpretation theory: we understand parts through the whole, and the whole through its parts. In advanced humanities work, interpretation is iterative rather than a one-time decoding.",
+    explanationZh: "诠释循环是解释学中的核心观念：我们通过整体理解局部，又通过局部重新理解整体。高阶人文研究中的理解不是一次性解码，而是反复往返、不断修正的过程。",
+    metaphorMap: [
+      { image: "The unlabeled tapestry", meaning: "A text, image, ritual, or artifact without self-evident meaning." },
+      { image: "Stepping close", meaning: "Attention to details, words, marks, and fragments." },
+      { image: "Stepping back", meaning: "Attention to form, context, genre, and historical whole." },
+      { image: "No final front", meaning: "Interpretation remains revisable and context-sensitive." },
+    ],
+    metaphorMapZh: [
+      { image: "没有标签的挂毯", meaning: "意义不自动显现的文本、图像、仪式或物件。" },
+      { image: "走近看", meaning: "关注词句、痕迹、碎片和局部细节。" },
+      { image: "退后看", meaning: "关注形式、语境、类型和历史整体。" },
+      { image: "没有唯一正面", meaning: "解释具有可修正性，也依赖语境。" },
+    ],
+    reflectionQuestion: "What are you trying to understand from too close, or from too far away?",
+    reflectionQuestionZh: "你正在理解的哪件事，是因为看得太近或太远，才一直看不清？",
+    tags: ["interpretation", "meaning", "humanities"],
+    tagsZh: ["解释", "意义", "人文"],
+  },
+  {
+    id: "03-the-village-paths-that-walked-back",
+    categoryCode: "03",
+    selectedFieldCode: "0314",
+    title: "The Paths That Walked Back",
+    titleZh: "会反过来走人的小路",
+    summary: "A village learns that its paths are made by footsteps, and footsteps are guided by paths.",
+    summaryZh: "一个村庄发现，小路由脚步踩出来，脚步又被小路带着走。",
+    storyBody: "In a village between two hills, people crossed the grass to reach the well. At first there was no road, only guesses. The shortest walkers cut through the meadow, the careful walkers went around the wet ground, and children followed whoever seemed confident. After a season, pale lines appeared in the grass. Newcomers treated those lines as rules, though no elder had written them. The miller complained that the lines made people pass too close to his door, so he placed flowerpots by the edge. Soon the path curved. A young woman opened a bread stall beside the curve, and the curve grew busier because bread now waited there. Years later, villagers argued whether the path had forced them to walk that way or whether they had made the path themselves. The answer was hidden in their own feet: the path shaped the walking, and the walking kept remaking the path. Only at the end did they realize that the story was structuration theory: social practices are produced by human action while also becoming the rules and resources that shape future action.",
+    storyBodyZh: "两座山之间有个村庄，村民每天穿过草地去井边打水。起初没有路，只有各自的猜测。赶时间的人抄近道，谨慎的人绕开湿地，孩子们跟着看起来最有把握的大人走。一个季节以后，草地上出现了浅浅的线。新来的人把这些线当成规矩，虽然没有长老写过任何告示。磨坊主抱怨小路离他门口太近，就在边上摆了几盆花。没多久，小路弯了一下。一个年轻女人又在弯道旁摆了面包摊，弯道于是越来越热闹，因为那里开始有热面包等着人。多年后，村民争论：到底是小路逼大家这样走，还是大家自己踩出了小路？答案藏在他们自己的脚下：小路塑造脚步，脚步又继续改写小路。直到故事结束，他们才意识到，原来这个故事讲的是结构化理论：社会实践由人的行动生产出来，同时又变成规则和资源，反过来塑造未来行动。",
+    reveal: "The village had no invisible ruler over the grass. Its order lived in repeated action.",
+    revealZh: "草地上没有看不见的统治者，村庄的秩序藏在重复行动里。",
+    conceptName: "Structuration theory",
+    conceptNameZh: "结构化理论",
+    explanation: "Structuration theory, associated with Anthony Giddens, argues that social structures are both the medium and the outcome of social practices. People act within rules and resources, but their repeated actions also reproduce or alter those rules and resources.",
+    explanationZh: "结构化理论通常与 Anthony Giddens 相关。它认为社会结构既是社会实践的媒介，也是社会实践的结果。人们在规则和资源中行动，但重复行动也会复制或改变这些规则和资源。",
+    metaphorMap: [
+      { image: "The grass", meaning: "An open social field before routines harden." },
+      { image: "Footsteps", meaning: "Everyday actions and choices." },
+      { image: "The visible path", meaning: "Stabilized social rules and expectations." },
+      { image: "Flowerpots and bread stall", meaning: "Interventions that redirect practices and create new incentives." },
+    ],
+    metaphorMapZh: [
+      { image: "草地", meaning: "惯例尚未稳定之前的社会场域。" },
+      { image: "脚步", meaning: "日常行动与选择。" },
+      { image: "显现出来的小路", meaning: "稳定下来的规则、期待和惯例。" },
+      { image: "花盆和面包摊", meaning: "改变实践路径的新资源与新激励。" },
+    ],
+    reflectionQuestion: "Which path in your life feels natural only because many people have kept walking it?",
+    reflectionQuestionZh: "你生活里哪条“理所当然”的路，其实只是因为很多人一直这样走？",
+    tags: ["society", "practice", "structure"],
+    tagsZh: ["社会", "实践", "结构"],
+  },
+  {
+    id: "04-the-market-with-three-doors",
+    categoryCode: "04",
+    selectedFieldCode: "0413",
+    title: "The Market With Three Doors",
+    titleZh: "三道门的集市",
+    summary: "A town discovers that a price is not the whole cost of getting work done.",
+    summaryZh: "一个小镇发现，标价并不是完成一件事的全部成本。",
+    storyBody: "A town needed winter coats for every child. The first door led to the open market, where sellers shouted low prices. The second led to a guild workshop, where coats cost more but every stitch was inspected. The third led to a long hallway of clerks who wrote promises, penalties, delivery dates, cloth standards, and rules for what counted as a warm coat. The mayor first chose the cheapest stall, but the sleeves tore and no one could prove whose fault it was. Then she chose the guild, but the town became dependent on one slow workshop. Finally she sat with the clerks, sellers, parents, and tailors and asked what had really been expensive: searching for honest sellers, checking quality, settling disputes, guarding against delay, and writing promises that would survive bad weather. The town did not learn that markets were bad or workshops were good. It learned that every way of organizing exchange carries hidden frictions. Near the last snowfall, the mayor understood that the story was transaction cost economics: institutions exist partly because exchange requires searching, bargaining, monitoring, enforcing, and protecting against opportunism.",
+    storyBodyZh: "一个小镇要给所有孩子准备冬衣。第一道门通向开放集市，卖家吆喝着最低价格。第二道门通向行会工坊，衣服贵一些，但每一道针脚都有人检查。第三道门后是一条长廊，文书们写下承诺、罚则、交货日期、布料标准，以及什么才算真正保暖。镇长起初选了最便宜的摊位，结果袖口很快裂开，却没人说得清责任在哪儿。后来她选了行会，质量稳了，小镇却被一个动作很慢的工坊卡住。最后，她让文书、卖家、父母和裁缝坐在一起，重新问：真正昂贵的到底是什么？是寻找可靠卖家，检查质量，处理争议，防止拖延，以及把承诺写到坏天气也能撑住。小镇学到的不是集市坏、工坊好，而是任何组织交换的方式都有看不见的摩擦。直到最后一场雪落下，镇长才明白，原来这个故事讲的是交易成本经济学：制度之所以存在，部分原因是交换需要搜索、谈判、监督、执行，并防止机会主义。",
+    reveal: "The cheapest coat was not cheapest once the town counted the work needed to make the promise real.",
+    revealZh: "当小镇把“让承诺真正成立”的工作也算进去，最便宜的外套就不再便宜了。",
+    conceptName: "Transaction cost economics",
+    conceptNameZh: "交易成本经济学",
+    explanation: "Transaction cost economics studies why firms, contracts, markets, and institutions take different forms. It asks what costs arise around exchange beyond the price itself: search, bargaining, monitoring, enforcement, asset specificity, uncertainty, and opportunism.",
+    explanationZh: "交易成本经济学研究企业、合同、市场和制度为什么会呈现不同形式。它关注价格之外的交换成本：搜索、谈判、监督、执行、资产专用性、不确定性和机会主义。",
+    metaphorMap: [
+      { image: "The three doors", meaning: "Market, hierarchy, and contractual governance options." },
+      { image: "Low-price stalls", meaning: "Market exchange that may hide quality and enforcement problems." },
+      { image: "Guild workshop", meaning: "Internal or hierarchical control that improves reliability but reduces flexibility." },
+      { image: "The clerks' hallway", meaning: "Contracts and governance mechanisms." },
+    ],
+    metaphorMapZh: [
+      { image: "三道门", meaning: "市场、层级组织和合同治理三种安排。" },
+      { image: "低价摊位", meaning: "看似便宜但可能隐藏质量与执行问题的市场交换。" },
+      { image: "行会工坊", meaning: "更可靠但灵活性较低的内部化或层级控制。" },
+      { image: "文书长廊", meaning: "合同、标准、罚则和治理机制。" },
+    ],
+    reflectionQuestion: "In a decision that looks cheap, what hidden work is required to make the promise dependable?",
+    reflectionQuestionZh: "一个看起来便宜的选择，需要哪些隐藏工作才能让承诺变得可靠？",
+    tags: ["organization", "contracts", "governance"],
+    tagsZh: ["组织", "合同", "治理"],
+  },
+  {
+    id: "05-the-lighthouse-and-the-fog",
+    categoryCode: "05",
+    selectedFieldCode: "0542",
+    title: "The Lighthouse and the Fog",
+    titleZh: "灯塔与雾",
+    summary: "A harbor keeper learns to revise belief without waiting for certainty.",
+    summaryZh: "一个守港人学会在没有绝对确定之前修正判断。",
+    storyBody: "A harbor keeper kept a chart of storms. When clouds gathered over the western cliffs, ships usually delayed departure. One morning the cliffs were hidden, but the wind smelled dry and the gulls flew low. The younger sailors demanded a yes-or-no answer: storm or no storm. The keeper refused to pretend the world owed them a clean word. He placed pebbles on the table. Some pebbles stood for old seasons, some for new signs, some for how reliable each sign had been. A dark cloud moved one pebble, a dry wind moved another back, a falling barometer moved three more. The pile did not become certainty, but it leaned. When a messenger arrived from the outer island reporting rough water, the keeper shifted the pile again and closed the harbor for heavy boats while allowing small local craft to stay near shore. That evening the storm brushed the coast but did not strike directly. The sailors thought he had guessed. He had not. At the end, he explained that the hidden idea was Bayesian inference: begin with a prior belief, update it with evidence according to reliability, and make decisions under uncertainty.",
+    storyBodyZh: "守港人有一本记录风暴的旧册子。西边悬崖上聚云时，船通常会延后出发。一天早晨，悬崖被雾遮住了，可风里有干燥气味，海鸥又飞得很低。年轻水手逼他给一句干脆话：会不会有风暴？守港人不肯假装世界欠他们一个干净的词。他把一把小石子摆在桌上。有些代表旧季节的经验，有些代表今天的新迹象，还有些代表每个迹象过去有多可靠。乌云把石子推向一边，干风又把几颗推回来，气压下降则让三颗石子一起移动。那堆石子没有变成绝对确定，只是慢慢倾斜。外岛信使赶来，说远海浪变粗了，守港人又移动石子，最后关闭大船出港，只允许小船留在近岸。傍晚，风暴擦过海岸，并没有正面击中。水手以为他是猜中了，其实不是。到最后他才说，原来这个故事讲的是贝叶斯推断：先带着一个初始信念，再根据证据及其可靠性不断更新，并在不确定中做决定。",
+    reveal: "The keeper's wisdom was not certainty. It was disciplined revision.",
+    revealZh: "守港人的智慧不是绝对确定，而是有纪律地修正判断。",
+    conceptName: "Bayesian inference",
+    conceptNameZh: "贝叶斯推断",
+    explanation: "Bayesian inference treats knowledge as updateable degrees of belief. A prior belief is revised by new evidence, weighted by how likely that evidence would be under different hypotheses. It is central to modern statistics, machine learning, scientific modeling, and decision-making under uncertainty.",
+    explanationZh: "贝叶斯推断把知识看作可以更新的信念程度。初始信念会被新证据修正，而证据的影响取决于它在不同假设下出现的可能性。它是现代统计、机器学习、科学建模和不确定决策的重要基础。",
+    metaphorMap: [
+      { image: "Old storm chart", meaning: "Prior belief based on past data." },
+      { image: "Cloud, wind, gulls, barometer", meaning: "New evidence with different reliability." },
+      { image: "Moving pebbles", meaning: "Updating belief weights." },
+      { image: "Different rules for large and small boats", meaning: "Decision-making under uncertainty and risk tolerance." },
+    ],
+    metaphorMapZh: [
+      { image: "旧风暴册子", meaning: "来自历史数据的初始信念。" },
+      { image: "云、风、海鸥、气压计", meaning: "可靠程度不同的新证据。" },
+      { image: "移动石子", meaning: "更新信念权重。" },
+      { image: "大船和小船的不同安排", meaning: "在不确定和风险承受能力下做决策。" },
+    ],
+    reflectionQuestion: "What belief are you treating as fixed when it should be updated by new evidence?",
+    reflectionQuestionZh: "你把哪一个判断当成固定答案，其实它应该随着新证据被更新？",
+    tags: ["statistics", "uncertainty", "evidence"],
+    tagsZh: ["统计", "不确定性", "证据"],
+  },
+  {
+    id: "06-the-islands-with-one-ledger",
+    categoryCode: "06",
+    selectedFieldCode: "0612",
+    title: "The Islands With One Ledger",
+    titleZh: "群岛上的同一本账",
+    summary: "Several islands try to keep one record while messages arrive late, twice, or not at all.",
+    summaryZh: "几个岛屿想维护同一本账，却不断遇到迟到、重复和丢失的消息。",
+    storyBody: "Five islands shared a fishing ledger. Each evening, boats returned to different harbors, and each harbor wrote down the catch. At first the islands trusted the fastest messenger. Whoever arrived first declared the day's total. Then a storm delayed one messenger, another copied the wrong number, and two islands sold fish from different versions of the ledger. The elders tried sending louder messengers, but shouting across water did not cure delay. They tried keeping every version, but merchants stopped trusting any record. Finally they agreed on a ritual. One island would propose the next page number, others would confirm whether they had seen the same earlier pages, and no page became official until enough islands had accepted it. If the proposer vanished in fog, another island waited, then proposed. The ritual felt slow, but trade became possible again because the ledger could survive late messages and missing boats. Only after the first calm season did the elders name what they had invented: distributed consensus, the problem of getting separate machines to agree on one state despite delays, failures, and partial views.",
+    storyBodyZh: "五个岛共用一本渔获账。每天傍晚，船会回到不同港口，每个港口都记下当天捕到多少鱼。起初，岛民相信最快的信使：谁先到，谁就宣布当天总数。后来一场风暴拖住了一个信使，另一个抄错了数字，两座岛还按照不同版本的账卖出了鱼。长老们试过派嗓门更大的信使，可隔海喊话并不能治好延迟。他们也试过保留所有版本，但商人很快不再相信任何记录。最后，长老们定下一套仪式：由一座岛提出下一页页码，其他岛确认自己是否见过相同的前文，只有足够多岛接受后，这一页才算正式。如果提出者消失在雾里，另一座岛就等待片刻后接手提出。这个仪式很慢，但贸易重新变得可能，因为账本终于能承受迟到的消息和失联的小船。第一个平静季节结束后，长老们才给它命名：原来这个故事讲的是分布式共识，也就是让彼此分离的机器在延迟、故障和局部视野中仍能同意同一个状态。",
+    reveal: "The islands did not remove uncertainty from the sea. They built a rule that could keep agreement alive inside it.",
+    revealZh: "群岛没有消除海上的不确定性，而是建出了一套能在不确定中维持共同记录的规则。",
+    conceptName: "Distributed consensus",
+    conceptNameZh: "分布式共识",
+    explanation: "Distributed consensus is the family of problems and algorithms that let multiple nodes agree on a shared state even when messages are delayed, duplicated, reordered, or some nodes fail. It underlies replicated databases, blockchains, coordination systems, and fault-tolerant services.",
+    explanationZh: "分布式共识指一类问题和算法：多个节点在消息延迟、重复、乱序或部分节点失效时，仍然就同一个状态达成一致。它支撑复制数据库、区块链、协调系统和容错服务。",
+    metaphorMap: [
+      { image: "Islands", meaning: "Separate nodes or servers." },
+      { image: "Messengers across water", meaning: "Network messages that may be delayed or lost." },
+      { image: "Ledger pages", meaning: "A replicated log or shared state." },
+      { image: "Enough islands accepting", meaning: "Quorum-based agreement." },
+    ],
+    metaphorMapZh: [
+      { image: "岛屿", meaning: "彼此分离的节点或服务器。" },
+      { image: "跨海信使", meaning: "可能延迟、丢失或重复的网络消息。" },
+      { image: "账本页码", meaning: "复制日志或共享状态。" },
+      { image: "足够多岛接受", meaning: "基于法定多数的确认机制。" },
+    ],
+    reflectionQuestion: "Where does a group you know need a shared record more than it needs the fastest messenger?",
+    reflectionQuestionZh: "你熟悉的哪个团队，比起最快发声的人，更需要一份可靠的共同记录？",
+    tags: ["systems", "databases", "coordination"],
+    tagsZh: ["系统", "数据库", "协调"],
+  },
+  {
+    id: "07-the-mill-that-listened-to-wind",
+    categoryCode: "07",
+    selectedFieldCode: "0714",
+    title: "The Mill That Listened to Wind",
+    titleZh: "会听风的磨坊",
+    summary: "A miller learns that strength without correction tears the machine apart.",
+    summaryZh: "磨坊主发现，只有力量没有修正，机器迟早会把自己撕坏。",
+    storyBody: "On a windy ridge, a miller built the strongest mill in the valley. In gentle weather it ground grain beautifully. In sudden gusts, the stones spun too fast, flour burned, belts snapped, and villagers blamed the wind. The miller first ordered thicker belts. They snapped later, but when they snapped, the damage was worse. He then hired a boy to shout whenever the sails turned too quickly. The boy shouted well, but by the time the miller heard him, the stones had already raced ahead. One winter, the miller tied a small set of swinging weights to the turning shaft. When the shaft sped up, the weights moved outward and pulled the sails back. When the shaft slowed, they relaxed. The mill no longer fought the wind with brute force; it listened to its own motion and corrected itself before disaster. At the final harvest, the miller understood that the hidden principle was feedback control: measure a system's output, compare it with a desired state, and feed that difference back into action to keep the system stable.",
+    storyBodyZh: "山脊上有一座全谷最结实的磨坊。天气温和时，它把谷物磨得很好；一遇上突来的强风，磨石就转得太快，面粉发焦，皮带断裂，村民都怪风太坏。磨坊主先换了更厚的皮带。皮带确实晚一点才断，可一断起来损失更大。后来他雇了一个男孩，只要帆转得太快就大喊。男孩喊得很及时，但等磨坊主听见时，磨石已经冲过头了。一个冬天，磨坊主在转轴上绑了一组会摆开的重锤。转轴一快，重锤就向外甩，把帆拉回一点；转轴一慢，重锤又收回来。磨坊不再用蛮力对抗风，而是听见自己的运动，并在灾难之前修正自己。到最后一次秋收时，磨坊主才明白，原来这个故事讲的是反馈控制：测量系统输出，把它与目标状态比较，再把差异送回行动，让系统保持稳定。",
+    reveal: "The mill survived not because it became stronger, but because it became responsive.",
+    revealZh: "磨坊活下来，不是因为它更强壮，而是因为它开始会回应自己的变化。",
+    conceptName: "Feedback control",
+    conceptNameZh: "反馈控制",
+    explanation: "Feedback control is central to engineering and automation. A controller observes output, compares it to a reference or target, and adjusts inputs to reduce error. It appears in thermostats, engines, robotics, process control, and biological regulation.",
+    explanationZh: "反馈控制是工程与自动化的核心思想。控制器观察输出，把输出与目标状态比较，再调整输入以减少误差。恒温器、发动机、机器人、工业过程控制和生物调节里都能看到它。",
+    metaphorMap: [
+      { image: "Wind", meaning: "External disturbance." },
+      { image: "Grinding speed", meaning: "System output." },
+      { image: "Swinging weights", meaning: "Sensor and controller mechanism." },
+      { image: "Pulling sails back", meaning: "Corrective input based on measured error." },
+    ],
+    metaphorMapZh: [
+      { image: "风", meaning: "外部扰动。" },
+      { image: "磨石速度", meaning: "系统输出。" },
+      { image: "甩开的重锤", meaning: "传感与控制机制。" },
+      { image: "把帆拉回", meaning: "基于误差的修正输入。" },
+    ],
+    reflectionQuestion: "Which system around you is being made stronger when it actually needs better feedback?",
+    reflectionQuestionZh: "你身边哪个系统一直在被加固，其实它真正需要的是更好的反馈？",
+    tags: ["engineering", "automation", "stability"],
+    tagsZh: ["工程", "自动化", "稳定性"],
+  },
+  {
+    id: "08-the-orchard-that-kept-notebooks",
+    categoryCode: "08",
+    selectedFieldCode: "0811",
+    title: "The Orchard That Kept Notebooks",
+    titleZh: "会记笔记的果园",
+    summary: "An orchard keeper learns to manage living land by treating action as experiment.",
+    summaryZh: "果园主人学会把每一次行动都当成实验，来管理有生命的土地。",
+    storyBody: "An orchard sat at the edge of a dry plain. Some years the apples were sweet, some years they cracked before harvest, and some years insects arrived as if invited by a secret letter. The keeper first demanded a permanent rule: always water on the same day, always prune in the same month, always spray when the first leaf opened. The orchard obeyed for one season and rebelled the next. A neighbor told him to stop treating the trees like furniture. So he divided the orchard into small plots. In one, he mulched early; in another, he delayed pruning; in a third, he planted flowers to draw insects away from fruit. He wrote down weather, soil moisture, pests, yield, and which mistakes were worth repeating more carefully. The orchard did not hand him a perfect answer. It taught him through response. After several seasons, he no longer asked for a rule that would never change. He asked how each decision could teach the next one. Near the final harvest, he realized the hidden concept was adaptive management: managing ecological systems through deliberate action, monitoring, learning, and adjustment under uncertainty.",
+    storyBodyZh: "一片果园长在干旱平原边上。有些年份苹果很甜，有些年份还没到收获就裂开，还有些年份虫子像收到了秘密邀请一样突然到来。果园主人起初想要一条永久规则：永远同一天浇水，永远同一个月修枝，永远第一片叶子出来就喷药。果园只顺从了一个季节，下一年就完全变了脸。邻居提醒他，别把树当家具。于是他把果园分成小块：一块早早覆盖草屑，一块推迟修枝，一块种花来吸引虫子离开果实。他记录天气、土壤湿度、虫害、产量，也记录哪些错误值得更谨慎地再试一次。果园没有给他完美答案，而是用反应教他。几个季节之后，他不再追问一条永不改变的规则，而是问：每个决定怎样能教会下一个决定？到最后一次收获时，他才意识到，原来这个故事讲的是适应性管理：在不确定的生态系统中，通过有意行动、监测、学习和调整来管理。",
+    reveal: "The orchard was not a puzzle solved once. It was a conversation across seasons.",
+    revealZh: "果园不是一次解开的谜题，而是一场跨越季节的对话。",
+    conceptName: "Adaptive management",
+    conceptNameZh: "适应性管理",
+    explanation: "Adaptive management is a structured approach for managing complex ecological and resource systems when uncertainty is unavoidable. Decisions are treated as learning opportunities: act, monitor outcomes, compare with expectations, and adjust future action.",
+    explanationZh: "适应性管理是一种面对复杂生态与资源系统的结构化方法。它承认不确定性无法完全消除，把决策当成学习机会：行动、监测结果、与预期比较，再调整下一步。",
+    metaphorMap: [
+      { image: "Variable seasons", meaning: "Ecological uncertainty and changing conditions." },
+      { image: "Small orchard plots", meaning: "Management experiments or treatment areas." },
+      { image: "Notebook records", meaning: "Monitoring and evidence collection." },
+      { image: "Changing next season's practice", meaning: "Learning-based adjustment." },
+    ],
+    metaphorMapZh: [
+      { image: "变化的季节", meaning: "生态不确定性和不断变化的条件。" },
+      { image: "分成小块的果园", meaning: "管理实验或不同处理区域。" },
+      { image: "记录本", meaning: "监测与证据收集。" },
+      { image: "下一季改变做法", meaning: "基于学习的调整。" },
+    ],
+    reflectionQuestion: "Where are you demanding a fixed rule from a living system that can only teach through response?",
+    reflectionQuestionZh: "你在哪个生命系统里要求一条固定规则，而它其实只能通过反应慢慢教你？",
+    tags: ["ecology", "learning", "resource management"],
+    tagsZh: ["生态", "学习", "资源管理"],
+  },
+  {
+    id: "09-the-town-with-three-fevers",
+    categoryCode: "09",
+    selectedFieldCode: "0919",
+    title: "The Town With Three Fevers",
+    titleZh: "三种发热的小镇",
+    summary: "A clinic learns that illnesses can strengthen one another when hardship links them.",
+    summaryZh: "一家诊所发现，当困境把疾病连在一起时，疾病会彼此加重。",
+    storyBody: "A town clinic treated coughs in one room, sadness in another, and hunger at the charity desk near the back door. Each room kept neat records. The cough room counted infections, the quiet room counted sleepless nights, and the desk counted empty cupboards. Yet the same families appeared in all three lines. A child with a cough missed school, the mother missed work, rent fell behind, meals became thinner, and the grandmother's old illness worsened. The doctors first tried to improve each room separately. More cough medicine helped some days. More counseling helped some nights. More food parcels helped some weeks. But the town kept producing the same braided suffering. Finally, the clinic moved the records onto one wall. Lines began connecting damp housing, unstable work, infection, stress, hunger, and delayed care. The staff saw that the illnesses were not merely neighbors; under social pressure, they were feeding one another. Only after the wall filled with lines did the clinic name the hidden idea: syndemic theory, the study of interacting epidemics or conditions that cluster and intensify through social and structural forces.",
+    storyBodyZh: "小镇诊所把咳嗽放在一间屋里，把悲伤放在另一间屋里，把饥饿放在后门旁的救济桌上。每个房间都有整齐记录：咳嗽房记录感染，安静房记录失眠，救济桌记录空掉的橱柜。可同一批家庭总是出现在三条队伍里。孩子咳嗽请假，母亲缺工，房租拖欠，饭菜变少，祖母的旧病也跟着加重。医生一开始试着分别改善每个房间。更多止咳药能帮几天，更多咨询能帮几个夜晚，更多食物包能帮几周。但小镇仍然不断生产同一串缠在一起的痛苦。最后，诊所把所有记录贴到同一面墙上。潮湿住房、不稳定工作、感染、压力、饥饿和延迟就医之间，一条条线开始连起来。工作人员发现，这些病不是简单相邻；在社会压力下，它们正在互相喂养。直到那面墙被连线填满，诊所才说出隐藏的概念：原来这个故事讲的是协同流行病理论，也就是研究多种疾病或健康困境如何在社会结构力量中聚集、互动并彼此加重。",
+    reveal: "The clinic did not discover a fourth fever. It discovered the relationships among the first three.",
+    revealZh: "诊所发现的不是第四种发热，而是前三种发热之间的关系。",
+    conceptName: "Syndemic theory",
+    conceptNameZh: "协同流行病理论",
+    explanation: "Syndemic theory examines how two or more diseases or health conditions cluster, interact, and worsen each other within social conditions such as poverty, discrimination, housing insecurity, violence, or limited access to care.",
+    explanationZh: "协同流行病理论研究两种或多种疾病或健康困境，如何在贫困、歧视、住房不稳、暴力、医疗可达性不足等社会条件中聚集、互动并彼此加重。",
+    metaphorMap: [
+      { image: "Separate clinic rooms", meaning: "Siloed health categories and services." },
+      { image: "Same families in every line", meaning: "Clustering of conditions in vulnerable groups." },
+      { image: "Lines on one wall", meaning: "Interaction between biological, psychological, and social forces." },
+      { image: "Braided suffering", meaning: "Mutually reinforcing health burdens." },
+    ],
+    metaphorMapZh: [
+      { image: "分开的诊室", meaning: "被切开的健康分类和服务。" },
+      { image: "同一批家庭反复排队", meaning: "弱势群体中的健康困境聚集。" },
+      { image: "同一面墙上的连线", meaning: "生物、心理与社会力量之间的互动。" },
+      { image: "缠在一起的痛苦", meaning: "彼此强化的健康负担。" },
+    ],
+    reflectionQuestion: "Which problem are you treating alone even though it is being strengthened by its neighbors?",
+    reflectionQuestionZh: "你正在把哪个问题单独处理，可它其实正被旁边的问题一起加重？",
+    tags: ["public health", "welfare", "social conditions"],
+    tagsZh: ["公共健康", "福利", "社会条件"],
+  },
+  {
+    id: "10-the-restaurant-with-no-menu",
+    categoryCode: "10",
+    selectedFieldCode: "1013",
+    title: "The Restaurant With No Menu",
+    titleZh: "没有菜单的餐馆",
+    summary: "A restaurant owner learns that value is not handed over like a plate.",
+    summaryZh: "餐馆老板发现，价值不是像盘子一样单方面递过去的。",
+    storyBody: "A restaurant owner believed service meant delivering perfect dishes. He polished plates, trained waiters to move silently, and printed a menu as thick as a small book. Guests still left confused. Some wanted a quiet place to talk, some needed quick food before a train, some cared about allergies, some wanted help choosing because the menu embarrassed them. The owner grew angry: the kitchen had done everything right. One evening the menu printer broke, and the head server had to ask each table what kind of evening they needed. A tired father wanted soup first so his child would calm down. Two travelers wanted a shared dish they could finish in fifteen minutes. An elderly guest wanted the same flavor she remembered but less salt. The kitchen did not become less skilled; it became more connected to use. By closing time, the owner saw that the meal was not created in the kitchen alone. It emerged from ingredients, staff, room, timing, memory, choice, and the guest's own purpose. Only then did he realize the hidden concept was service-dominant logic: value is co-created through use, interaction, and relationships rather than simply embedded in a product and handed to a passive customer.",
+    storyBodyZh: "一家餐馆老板相信，服务就是把完美菜品端出去。他擦亮盘子，训练服务员安静移动，还印了一本厚得像小书的菜单。客人却仍然常常困惑。有人想要安静聊天，有人赶火车前只想快点吃完，有人担心过敏，有人只是因为菜单太复杂而不好意思开口。老板很生气：厨房明明已经做对了一切。某天傍晚，菜单打印机坏了，领班只好一桌桌问客人：你今晚真正需要的是怎样的一顿饭？疲惫的父亲想先来一碗汤，让孩子安静下来；两个旅人想要十五分钟内能分着吃完的菜；一位老人想要记忆里的味道，但盐少一点。厨房没有因此变得不专业，反而更接近真实使用。打烊时，老板终于看见，一顿饭不是厨房单独制造出来的，它来自食材、员工、房间、时间、记忆、选择，以及客人自己的目的。直到这时，他才明白，原来这个故事讲的是服务主导逻辑：价值不是被装进产品再交给被动顾客，而是在使用、互动和关系中共同创造出来的。",
+    reveal: "The restaurant did not lose its menu. It found the guests inside the meal.",
+    revealZh: "餐馆不是失去了菜单，而是在一顿饭里重新找到了客人。",
+    conceptName: "Service-dominant logic",
+    conceptNameZh: "服务主导逻辑",
+    explanation: "Service-dominant logic is a marketing and service theory arguing that service, not goods alone, is the fundamental basis of exchange. Value is co-created with users through use, context, interaction, knowledge, and relationships.",
+    explanationZh: "服务主导逻辑是服务与营销理论中的重要观点，认为交换的基础不是孤立商品，而是服务过程。价值由用户在使用情境、互动、知识和关系中共同创造。",
+    metaphorMap: [
+      { image: "The thick menu", meaning: "A product-centered view that assumes value is prepackaged." },
+      { image: "The broken printer", meaning: "A disruption that forces direct interaction." },
+      { image: "Asking what evening guests need", meaning: "Understanding context of use." },
+      { image: "Meal emerging from room, timing, memory, and purpose", meaning: "Value co-creation." },
+    ],
+    metaphorMapZh: [
+      { image: "厚菜单", meaning: "以产品为中心，默认价值已经被预先包装好。" },
+      { image: "坏掉的打印机", meaning: "迫使服务回到直接互动的意外中断。" },
+      { image: "询问客人今晚需要什么", meaning: "理解真实使用情境。" },
+      { image: "由空间、时间、记忆和目的共同形成的一顿饭", meaning: "价值共创。" },
+    ],
+    reflectionQuestion: "Where are you trying to deliver value without first understanding how the other person will use it?",
+    reflectionQuestionZh: "你在哪件事上急着交付价值，却还没理解对方会怎样使用它？",
+    tags: ["service", "value", "co-creation"],
+    tagsZh: ["服务", "价值", "共创"],
+  },
+];
+
 const fieldPlainMeanings = {
   "0111-education-science": "How people learn, how teaching works, and how learning systems can be designed.",
   "0223-philosophy-and-ethics": "How people reason about values, duties, meaning, right action, and the assumptions behind judgment.",
@@ -4568,6 +4964,28 @@ function getLensStoryList(story, key) {
 function getLensStoryFieldTitle(story, code, fallbackTitle) {
   if (currentLanguage === "zh") return story?.fieldTitlesZh?.[code] || fallbackTitle;
   return fallbackTitle;
+}
+
+function getConceptFableById(fableId) {
+  return conceptFables.find((fable) => fable.id === fableId);
+}
+
+function getConceptFableValue(fable, key) {
+  if (!fable) return "";
+  if (currentLanguage === "zh") return fable[`${key}Zh`] || fable[key] || "";
+  return fable[key] || "";
+}
+
+function getConceptFableList(fable, key) {
+  if (!fable) return [];
+  if (currentLanguage === "zh") return fable[`${key}Zh`] || fable[key] || [];
+  return fable[key] || [];
+}
+
+function getConceptFableCategoryTitle(fable) {
+  const category = categories.find((item) => item.code === fable.categoryCode);
+  if (!category) return fable.categoryCode || "";
+  return getCategoryTitle(category);
 }
 
 function getStoryFieldCodes(story) {
@@ -11273,8 +11691,11 @@ function applyLanguage() {
 
   renderCategories();
   renderStories();
+  renderConceptFables();
   const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
   if (activeStory) renderStoryDetail(activeStory[1]);
+  const activeConceptFable = normalizeRoute(window.location.pathname).match(/^\/concept-fables\/([a-z0-9-]+)$/);
+  if (activeConceptFable) renderConceptFableDetail(activeConceptFable[1]);
   const activeLensStory = normalizeRoute(window.location.pathname).match(/^\/lens-stories\/([a-z0-9-]+)$/);
   if (activeLensStory) renderLensStoryDetail(activeLensStory[1]);
   renderStoryMap();
@@ -11323,10 +11744,12 @@ function goToRoute(route, replace = false) {
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   const fieldMatch = visibleTarget.match(/^\/fields\/([a-z0-9-]+)$/);
   const storyMatch = visibleTarget.match(/^\/stories\/([a-z0-9-]+)$/);
+  const conceptFableMatch = visibleTarget.match(/^\/concept-fables\/([a-z0-9-]+)$/);
   const lensStoryMatch = visibleTarget.match(/^\/lens-stories\/([a-z0-9-]+)$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   if (storyMatch) renderStoryDetail(storyMatch[1]);
+  if (conceptFableMatch) renderConceptFableDetail(conceptFableMatch[1]);
   if (lensStoryMatch) renderLensStoryDetail(lensStoryMatch[1]);
   const activePage = categoryMatch
     ? "/categories/detail"
@@ -11334,9 +11757,11 @@ function goToRoute(route, replace = false) {
       ? "/fields/detail"
       : storyMatch
         ? "/stories/detail"
-        : lensStoryMatch
-          ? "/lens-stories/detail"
-          : visibleTarget;
+        : conceptFableMatch
+          ? "/concept-fables/detail"
+          : lensStoryMatch
+            ? "/lens-stories/detail"
+            : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -11349,7 +11774,7 @@ function goToRoute(route, replace = false) {
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
-      (linkRoute === "/stories" && visibleTarget.startsWith("/stories")) ||
+      (linkRoute === "/stories" && (visibleTarget.startsWith("/stories") || visibleTarget.startsWith("/concept-fables"))) ||
       (linkRoute === "/categories" && (visibleTarget.startsWith("/categories") || visibleTarget.startsWith("/lens-stories/"))) ||
       (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
@@ -11374,6 +11799,8 @@ function goToRoute(route, replace = false) {
 function updateRouteMeta(route) {
   const key = route.startsWith("/stories/")
     ? "/stories"
+    : route.startsWith("/concept-fables/")
+      ? "/concept-fables"
     : route.startsWith("/fields/")
       ? "/map"
       : route.startsWith("/lens-stories/")
@@ -11499,6 +11926,28 @@ function renderStories() {
     .join("");
 }
 
+function renderConceptFables() {
+  const target = document.getElementById("conceptFableGrid");
+  if (!target) return;
+  target.innerHTML = conceptFables
+    .map((fable) => {
+      const href = `/concept-fables/${fable.id}`;
+      const tags = getConceptFableList(fable, "tags").slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+      return `
+        <a class="story-card story-entry-card concept-fable-card" href="${href}" data-route="${href}">
+          <div class="story-card-topline">
+            <span>${escapeHtml(t("conceptFablesEyebrow"))}</span>
+            <span>${escapeHtml(getConceptFableCategoryTitle(fable))}</span>
+          </div>
+          <h2>${escapeHtml(getConceptFableValue(fable, "title"))}</h2>
+          <p>${escapeHtml(getConceptFableValue(fable, "summary"))}</p>
+          <div class="story-tag-row">${tags}</div>
+          <strong>${escapeHtml(t("conceptFableRead"))}</strong>
+        </a>`;
+    })
+    .join("");
+}
+
 function renderStoryDetail(storyId) {
   const target = document.getElementById("storyReader");
   if (!target) return;
@@ -11541,6 +11990,56 @@ function renderStoryDetail(storyId) {
         </div>
         <div class="story-perspective-grid">${perspectives}</div>
       </section>` : ""}`;
+}
+
+function renderConceptFableDetail(fableId) {
+  const target = document.getElementById("conceptFableReader");
+  if (!target) return;
+  const fable = getConceptFableById(fableId);
+  if (!fable) {
+    target.innerHTML = `
+      <h1>${escapeHtml(t("conceptFableNotFoundTitle"))}</h1>
+      <p class="story-body">${escapeHtml(t("conceptFableNotFoundCopy"))}</p>`;
+    return;
+  }
+  const categoryTitle = getConceptFableCategoryTitle(fable);
+  const metaphorRows = getConceptFableList(fable, "metaphorMap")
+    .map((item) => `
+      <article>
+        <strong>${escapeHtml(item.image || "")}</strong>
+        <p>${escapeHtml(item.meaning || "")}</p>
+      </article>`)
+    .join("");
+  const tags = getConceptFableList(fable, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  target.innerHTML = `
+    <div class="story-card-topline lens-story-topline">
+      <span>${escapeHtml(t("conceptFablesEyebrow"))}</span>
+      <span>${escapeHtml(categoryTitle)}</span>
+    </div>
+    <h1>${escapeHtml(getConceptFableValue(fable, "title"))}</h1>
+    <p class="lens-story-summary">${escapeHtml(getConceptFableValue(fable, "summary"))}</p>
+    <section class="lens-story-section concept-fable-story">
+      <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
+      <p>${escapeHtml(getConceptFableValue(fable, "storyBody"))}</p>
+    </section>
+    <aside class="story-insight lens-story-insight concept-fable-reveal">
+      <span>${escapeHtml(t("conceptFableRevealLabel"))}</span>
+      <h2>${escapeHtml(getConceptFableValue(fable, "conceptName"))}</h2>
+      <p>${escapeHtml(getConceptFableValue(fable, "reveal"))}</p>
+    </aside>
+    <section class="lens-story-section lens-story-support">
+      <span>${escapeHtml(t("conceptFableExplanationLabel"))}</span>
+      <p>${escapeHtml(getConceptFableValue(fable, "explanation"))}</p>
+    </section>
+    <section class="concept-metaphor-section" aria-label="${escapeHtml(t("conceptFableMetaphorLabel"))}">
+      <span>${escapeHtml(t("conceptFableMetaphorLabel"))}</span>
+      <div class="concept-metaphor-grid">${metaphorRows}</div>
+    </section>
+    <aside class="story-insight lens-story-insight">
+      <span>${escapeHtml(t("conceptFableReflectionLabel"))}</span>
+      <strong>${escapeHtml(getConceptFableValue(fable, "reflectionQuestion"))}</strong>
+    </aside>
+    ${tags ? `<div class="lens-story-meta concept-fable-meta"><div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div></div>` : ""}`;
 }
 
 function renderStoryMap() {
@@ -13692,6 +14191,7 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 
 renderCategories();
 renderStories();
+renderConceptFables();
 renderStoryMap();
 renderContactSections();
 renderSiteFooters();

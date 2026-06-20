@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.34" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.35" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -418,6 +418,9 @@
           <p data-i18n="storiesCopy">
             Each story begins with an ordinary conflict, then reveals the knowledge hidden underneath.
           </p>
+          <div class="hero-actions">
+            <a class="button secondary" href="/concept-fables" data-route="/concept-fables" data-i18n="conceptFablesAction">Read concept fables</a>
+          </div>
         </section>
         <section class="stories-grid" id="storiesGrid" aria-live="polite"></section>
       </section>
@@ -426,6 +429,24 @@
         <div class="story-detail-shell">
           <a class="story-back-link" href="/stories" data-route="/stories" data-i18n="backToStories">Back to Stories</a>
           <article class="story-reader" id="storyReader" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="page concept-fables-page" id="conceptFables" data-page="/concept-fables">
+        <section class="stories-hero">
+          <p class="eyebrow" data-i18n="conceptFablesEyebrow">Concept fables</p>
+          <h1 data-i18n="conceptFablesTitle">Advanced ideas, hidden inside fables.</h1>
+          <p data-i18n="conceptFablesCopy">
+            Each domain hides one graduate-level concept inside a story. Read first; the concept appears only near the end.
+          </p>
+        </section>
+        <section class="stories-grid concept-fable-grid" id="conceptFableGrid" aria-live="polite"></section>
+      </section>
+
+      <section class="page concept-fable-detail-page" id="conceptFableDetail" data-page="/concept-fables/detail">
+        <div class="story-detail-shell concept-fable-shell">
+          <a class="concept-back-link" href="/concept-fables" data-route="/concept-fables" data-i18n="conceptFableBack">Back to concept fables</a>
+          <article class="story-reader lens-story-reader concept-fable-reader" id="conceptFableReader" aria-live="polite"></article>
         </div>
       </section>
 
@@ -577,6 +598,6 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/script.js?v=0.1.34"></script>
+    <script src="/script.js?v=0.1.35"></script>
   </body>
 </html>
