@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Historical Discovery Story"
+  short_description: "Write historical MapKAI stories from real people and events."
+  default_prompt: "Write this real historical MapKAI knowledge story with concrete time/place/action, an old method, evidence pressure, changed question, historical support, hidden knowledge, and reflection question. Do not write a biography, encyclopedia card, false scene, or decorative summary."

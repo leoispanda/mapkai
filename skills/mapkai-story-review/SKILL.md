@@ -7,7 +7,9 @@ description: Strictly review generated or rewritten MapKAI knowledge stories for
 
 ## Purpose
 
-Review MapKAI knowledge stories after generation or rewrite. The default target is a field-origin story: a concrete scene should reveal why a discipline or knowledge field began to need its own object, question, and method.
+Review MapKAI knowledge stories after generation or rewrite. Use `skills/mapkai-knowledge-router/SKILL.md` first when the output mode is unclear. The review must be mode-aware: a historical field-origin story, concept fable, mechanism explainer, lens story, case pattern story, and misconception correction story should not be judged by one universal structure.
+
+For historical or field-origin stories, a concrete scene should reveal why a discipline or knowledge field began to need its own object, question, and method. For non-historical modes, review the structure promised by that mode instead.
 
 This is not a polishing skill. It is a strict story-quality review. A story should not pass because it is fluent, longer, emotional, literary, or conceptually correct. It passes only when knowledge grows from a concrete scene, real tension, observable action, and a clear shift in understanding.
 
@@ -18,7 +20,7 @@ A knowledge story cannot pass only because it is atmospheric or elegant. It must
 Core question for every story:
 
 ```text
-Is this truly a story of how a field-level way of seeing became necessary, or is it only a discovery/contribution with decorative writing?
+Does this story use the correct MapKAI mode for the knowledge type, and does it make the deeper knowledge structure clear without becoming a template, fable-for-everything, or dry explanation?
 ```
 
 If it is mainly explanation, mark it `FAIL`.
@@ -119,9 +121,46 @@ Topic-specific checks:
 
 ## Review Checklist
 
+### -1. Mode Fit Gate
+
+Classify the story mode before applying detailed checks:
+
+- **Historical Discovery / Field-Origin Story**: real person, event, discovery, invention, reform, expedition, observation, or social movement.
+- **Concept Fable Story**: abstract concept, theory, relationship, or social-science idea without one necessary historical scene.
+- **Mechanism Explainer Story**: mathematical, statistical, computational, algorithmic, economic, or formula-based idea.
+- **Lens Story / Knowledge Lens**: a way of seeing a familiar situation differently.
+- **Case Pattern Story**: business, organization, technology, or social pattern across cases.
+- **Misconception Correction Story**: correcting a common misunderstanding.
+
+Fail or mark `LOCAL EDIT` if:
+
+- a historical person/event is turned into a fictional allegory without the user asking for allegory;
+- a formula-based mechanism is hidden inside a vague metaphor;
+- an abstract theory is forced into a fake historical scene;
+- a lens or misconception story is padded into a false origin story;
+- the output format does not match the selected mode.
+
+Reviewer question: Did the writer choose the right mode before writing?
+
+### -1A. Mode-Specific Minimums
+
+For **Historical Discovery / Field-Origin Story**, require concrete time/place/action, old method, evidence pressure, changed question, historical support, hidden knowledge, and reflection question.
+
+For **Concept Fable Story**, require a serious fictional scene, concept-driven tension, late concept reveal, clear concept explanation, metaphor mapping, analogy boundary, and reflection question.
+
+For **Mechanism Explainer Story**, require why the concept is needed, concrete problem, old intuitive approach, step-by-step mechanism, small checkable example, concept name, boundary or common mistake, and reflection question.
+
+For **Lens Story**, require daily scene, ordinary interpretation, lens shift, hidden structure becoming visible, and return to the scene with a better question.
+
+For **Case Pattern Story**, require concrete organizational situation, repeated pattern, old explanation failing, pattern logic becoming visible, and practical implication.
+
+For **Misconception Correction Story**, require common belief, situation where it seems right, contradiction/counterexample, correction, and better mental model.
+
+Reviewer question: Does the piece satisfy the minimum structure for its selected mode?
+
 ### 0. Historical Scene Consistency Gate
 
-Review this before judging language.
+Review this before judging language for historical and field-origin stories. For non-historical modes, use this gate only to catch accidental fake historical claims.
 
 Check:
 
@@ -177,7 +216,7 @@ Reviewer question: What fact, number, object, or repeated pattern forced the new
 
 ### 0C. Field Origin Fit Gate
 
-Check whether the story explains the origin of a knowledge field, not only one person's achievement.
+Apply this gate to historical / field-origin stories. Check whether the story explains the origin of a knowledge field, not only one person's achievement.
 
 Good signs:
 
@@ -223,6 +262,8 @@ Reviewer question: What exactly made the story move?
 If there is no movement, mark `LOCAL EDIT` if the scene is otherwise strong and can be improved locally; mark `FAIL` if the story is mostly synopsis or explanation.
 
 ### 0E. Red Line Checklist
+
+Apply historical/field-origin-specific red lines only to Historical Discovery / Field-Origin stories. Apply general red lines such as template leakage, fake scene, unsupported claims, childish tone, academic-paper tone, decorative title objects, and mode mismatch to every mode.
 
 The following cannot receive `PASS`:
 

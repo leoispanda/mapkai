@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Mechanism Explainer Story"
+  short_description: "Explain math, stats, algorithms, economics, and formulas."
+  default_prompt: "Explain this MapKAI mechanism-based concept through a concrete need, step-by-step mechanism, minimal formula if needed, small checkable example, concept name, boundary or common mistake, and reflection question. Prioritize accuracy and usability over mystery or literary beauty."

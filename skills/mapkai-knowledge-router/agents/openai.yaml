@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Knowledge Router"
+  short_description: "Route MapKAI knowledge into the right story mode."
+  default_prompt: "Route this MapKAI knowledge input into the correct story mode before writing. Classify it as historical discovery, concept fable, mechanism explainer, lens story, case pattern, or misconception correction, then invoke the matching writer."

@@ -7,6 +7,8 @@ description: Generate or rewrite MapKAI knowledge stories as historically situat
 
 ## Purpose
 
+Use `skills/mapkai-knowledge-router/SKILL.md` before this skill when the input may not be historical or field-origin content. This skill is the strict field-origin / historical-story writer, not the universal writer for every MapKAI knowledge type.
+
 Write MapKAI knowledge stories as readable origin scenes for disciplines or knowledge fields. Do not write encyclopedia introductions, concept cards, biographies, or direct event summaries with decorative atmosphere.
 
 The reader should first enter a concrete place, follow a person observing, struggling, acting, and changing the question, and only later recognize why this field began to need its own objects, questions, and methods.

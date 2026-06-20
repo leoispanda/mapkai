@@ -391,6 +391,29 @@ Verified:
 - YAML/frontmatter parsing and git diff checks were run before commit.
 
 Push:
+- Pushed to main in commit c23bf80.
+```
+
+Latest MapKAI knowledge story router update:
+
+```text
+Changed:
+- Added skills/mapkai-knowledge-router/SKILL.md as the first step before generating any MapKAI knowledge story.
+- Router classifies inputs into six modes: Historical Discovery Story, Concept Fable Story, Mechanism Explainer Story, Lens Story / Knowledge Lens, Case Pattern Story, and Misconception Correction Story.
+- Added skills/mapkai-historical-discovery-story/SKILL.md for real historical people, discoveries, inventions, observations, reforms, expeditions, and social movements.
+- Added skills/mapkai-concept-fable-story/SKILL.md for abstract concepts, theories, and relationship-based social-science or management ideas without one necessary historical scene.
+- Added skills/mapkai-mechanism-explainer-story/SKILL.md for mathematical, statistical, computational, algorithmic, economic, financial, logic, data-science, systems-modeling, or formula-based ideas.
+- Updated skills/mapkai-story-rewrite/SKILL.md so it explicitly says to use the router first when the input may not be historical or field-origin content.
+- Updated skills/mapkai-story-review/SKILL.md to be mode-aware: it now reviews historical/field-origin, concept fable, mechanism explainer, lens, case pattern, and misconception-correction stories against their own structures rather than forcing one universal review template.
+- Updated both existing rewrite/review agent prompts to reference router-first behavior.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- Ruby YAML parser confirmed all MapKAI skill SKILL.md frontmatter blocks and agents/openai.yaml files parse.
+- No initialized-skill TODO placeholders remain.
+- git diff --check passed before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 
