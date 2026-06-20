@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.57";
+const appVersion = "0.1.58";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -12791,7 +12791,6 @@ function applyLanguage() {
     if (key) target.textContent = t(key);
   });
   setText('.nav-links a[data-route="/"]', t("navHome"));
-  setText('.nav-links a[data-route="/stories"]', t("navStories"));
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
@@ -12801,7 +12800,8 @@ function applyLanguage() {
   setText(".stories-page .stories-hero .eyebrow", t("storiesEyebrow"));
   setText(".stories-page .stories-hero h1", t("storiesTitle"));
   setText(".stories-page .stories-hero p:not(.eyebrow)", t("storiesCopy"));
-  setText(".story-back-link", t("backToStories"));
+  setText(".story-detail-page .story-back-link", t("backToLens"));
+  setText(".lens-story-page .story-back-link", t("backToLens"));
 
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
@@ -12982,6 +12982,13 @@ function goToRoute(route, replace = false) {
       history.replaceState({ route: "/" }, "", "/");
     }
   }
+  if (target === "/stories") {
+    target = "/categories";
+    replace = true;
+    if (window.location.protocol !== "file:") {
+      history.replaceState({ route: "/categories" }, "", "/categories");
+    }
+  }
   if (target === "/knowledge-graph") {
     target = "/categories";
     replace = true;
@@ -13025,8 +13032,12 @@ function goToRoute(route, replace = false) {
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
-      (linkRoute === "/stories" && (visibleTarget.startsWith("/stories") || visibleTarget.startsWith("/concept-fables"))) ||
-      (linkRoute === "/categories" && (visibleTarget.startsWith("/categories") || visibleTarget.startsWith("/lens-stories/"))) ||
+      (linkRoute === "/categories" && (
+        visibleTarget.startsWith("/categories") ||
+        visibleTarget.startsWith("/lens-stories/") ||
+        visibleTarget.startsWith("/stories/") ||
+        visibleTarget.startsWith("/concept-fables")
+      )) ||
       (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
@@ -13473,6 +13484,7 @@ function renderCategories() {
     })
     .join("");
   if (grid) grid.innerHTML = categoryButtons;
+  renderLensStoryShelf();
 }
 
 function renderLensStoryShelf() {
