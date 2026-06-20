@@ -53,6 +53,21 @@ No changed question = knowledge introduction.
 No initially reasonable old method = no real discovery.
 ```
 
+## Readability And Paragraphing Gate
+
+Review web readability before approving publication.
+
+For a normal 500-800 Chinese character `故事场景`, the body should normally use 3-5 short paragraphs separated by blank lines. For Subject Origin pages, `起源故事` should normally use 2-4 short paragraphs, and the explanatory sections should avoid long uninterrupted blocks.
+
+Mark `PASS / LOCAL EDIT` or `LOCAL EDIT` when the story is structurally sound but appears as one dense text wall. The fix should preserve the prose and add paragraph breaks around narrative beats:
+
+- scene entry and old practice;
+- friction or evidence pressure;
+- changed action or comparison;
+- changed question and final image.
+
+Do not mark a story `FAIL` only because it lacks paragraph breaks if the underlying story works. But do not give clean `PASS` to a full public-page story that is hard to scan because it is one uninterrupted block.
+
 ## Subject Origin Page Review
 
 When the user requested a Subject Origin page, or the output begins with `学科起源`, review it as a page-level article, not as a normal single `知识故事`.

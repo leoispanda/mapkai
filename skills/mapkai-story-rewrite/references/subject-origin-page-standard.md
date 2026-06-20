@@ -78,6 +78,20 @@ Do not go below 800 Chinese characters for a full Subject Origin page unless the
 
 Do not exceed 2000 Chinese characters on normal public pages unless the page uses strong sectioning, visual cards, timeline blocks, or progressive disclosure.
 
+## Paragraphing And Scanability
+
+Do not write the Subject Origin page as one continuous block.
+
+Use short paragraphs within each required section:
+
+- `起源故事`: normally 2-4 short paragraphs, each carrying one beat: scene/old question, friction, changed action, changed question/new seeing.
+- `为什么这个学科需要出现`: 1-2 short paragraphs.
+- `核心转向`: 1-2 short paragraphs, with a clear "从 X，转向 Y" structure.
+- `关键人物 / 事件 / 工具`: 1-2 short paragraphs or a compact sentence chain, not a crowded name list.
+- `后来长出的分支`: 1-2 short paragraphs, showing branch directions rather than dumping terms.
+
+Avoid paragraphs longer than about 180-220 Chinese characters on normal public pages. Paragraph breaks should help scanning without turning the article into bullet notes.
+
 ## Required Content Structure
 
 ### 1. One-Sentence Entry

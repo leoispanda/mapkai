@@ -191,6 +191,23 @@ Do not include image prompts, visual module suggestions, illustration descriptio
 
 Default target length for a Subject Origin page is 900-1500 Chinese characters. Do not shrink a full page below 800 Chinese characters unless the user explicitly asks for a compact card.
 
+## Paragraphing And Reading Rhythm
+
+Do not output a 500-800 Chinese character story body as one dense paragraph unless the user explicitly asks for a single block.
+
+Use blank lines to divide the story body into 3-5 short paragraphs. For compact outputs, use at least 2 paragraphs when the format allows it.
+
+Each paragraph should carry one narrative job:
+
+1. scene entry and old practice;
+2. friction or evidence pressure;
+3. changed action or comparison;
+4. changed question and final image.
+
+Do not add headings inside the story body. The paragraph breaks should make the reading easier without turning the story into bullet notes.
+
+For Subject Origin pages, keep every required section scannable. The `起源故事` section should normally use 2-4 short paragraphs, and explanatory sections should avoid long blocks longer than 180-220 Chinese characters.
+
 ## Story Arc
 
 Follow this order unless the user gives a stronger structure:
@@ -338,7 +355,7 @@ Never output internal scaffolding as story prose. These patterns are review note
 
 You may express the underlying idea only through topic-specific objects and actions. For example, instead of "旧办法并不荒唐," write what people actually did: "Naturalists pressed the leaf, wrote the name, and placed it in a cabinet." Instead of "证据自己排队," write who arranged which records, samples, marks, months, addresses, or measurements.
 
-Default body length is 500 to 800 Chinese characters for a full MapKAI knowledge story. Do not shorten to 150 to 250 Chinese characters unless the user explicitly asks for a compact teaser. A short body must still have scene, old habit, obstruction, two actions, changed question, and evidence-grown understanding.
+Default body length is 500 to 800 Chinese characters for a full MapKAI knowledge story. Do not shorten to 150 to 250 Chinese characters unless the user explicitly asks for a compact teaser. A short body must still have scene, old habit, obstruction, two actions, changed question, and evidence-grown understanding. Use paragraph breaks to make the body readable; do not make readers cross the whole scene in one uninterrupted block.
 
 The title and summary must not reveal the abstract conclusion too early. They may create curiosity, pressure, or a concrete puzzle; they should not say "this pushed the field from X to Y" before the reader has entered the scene.
 
@@ -568,6 +585,7 @@ The one-sentence introduction must create curiosity, not reveal the full abstrac
 {1 to 2 concrete scene sentences, not a summary}
 
 {story body, about 500 to 800 Chinese characters or comparable length in the selected language. It must include scene, old understanding, tension, action, changed question, and evidence-grown new understanding.}
+{Use 3-5 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output.}
 
 历史支撑
 {Reliable facts only. Briefly state time, person/event, action, and impact. Do not exaggerate or invent.}

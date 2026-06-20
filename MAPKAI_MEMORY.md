@@ -2646,3 +2646,11 @@ Follow-up:
 - Important workflow: first-pass Subject Origin pages must generate article text only. Image prompts, visual suggestions, illustration descriptions, hero image text, timeline prompts, and layout notes are deferred until after the article passes review.
 - Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for the four edited skills; no `TODO` / `PLACEHOLDER` hits in the changed skill/reference files.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-06-20 - Add paragraph rhythm to MapKAI story skills
+- Updated `mapkai-story-rewrite` so 500-800 Chinese character story bodies should use 3-5 short paragraphs separated by blank lines, with each paragraph carrying a narrative beat.
+- Updated the Subject Origin page reference so `起源故事` normally uses 2-4 short paragraphs and explanatory sections avoid long uninterrupted blocks.
+- Updated `mapkai-historical-discovery-story` so direct historical story generation follows the same paragraphing rule.
+- Updated `mapkai-story-review` with a readability gate: a structurally sound story that appears as one dense text wall should be marked `PASS / LOCAL EDIT` or `LOCAL EDIT`, not clean `PASS`.
+- Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; paragraphing rules were confirmed by `rg`.
+- Push status: committed and pushed to `main` in this turn.

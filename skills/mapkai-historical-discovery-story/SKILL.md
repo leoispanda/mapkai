@@ -69,6 +69,12 @@ Develop one main scene through at least three beats:
 
 If the story only stages one action and then jumps to explanation, it is too thin. Add length through visible action and repeated friction, not through abstract explanation.
 
+## Paragraphing
+
+Do not output the `故事场景` body as one dense paragraph. Use 3-5 short paragraphs separated by blank lines, with each paragraph carrying one beat: opening action, friction, changed action, changed question, or final image.
+
+Do not add headings inside the story body. Paragraph breaks should improve web reading without turning the scene into notes.
+
 ## Final Image Before Concept
 
 Before naming the approach, field label, or historical importance, end the story body on a final image that already contains the knowledge turn.
@@ -131,7 +137,7 @@ Stage features through action. Put feature names in historical support or hidden
 {A concrete sentence that creates curiosity without revealing the whole abstract conclusion.}
 
 故事场景
-{500-800 Chinese characters. Start with time, place, object, and action. Show old question, evidence pressure, new action, changed question, and new understanding.}
+{500-800 Chinese characters. Start with time, place, object, and action. Show old question, evidence pressure, new action, changed question, and new understanding. Use 3-5 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output.}
 
 历史支撑
 {Brief and accurate historical context. Do not exaggerate causality.}
