@@ -2412,6 +2412,46 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.category-button {
+  display: grid;
+  min-height: 132px;
+  align-content: start;
+  gap: 8px;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.category-button:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 18px 42px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.category-button strong {
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.category-button span,
+.category-button small {
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.category-button small {
+  margin-top: auto;
+  color: #2563eb;
+  font-weight: 780;
+}
+
 .lens-story-shelf {
   display: grid;
   gap: 1rem;
@@ -2520,6 +2560,7 @@ p {
 
 .module-card,
 .category-card,
+.category-button,
 .passport-panel,
 .tree-panel,
 .field-main,
@@ -3956,6 +3997,137 @@ canvas {
   color: #1d4ed8;
 }
 
+.submodule-browser {
+  display: grid;
+  gap: 18px;
+}
+
+.submodule-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.submodule-button {
+  display: inline-grid;
+  min-height: 54px;
+  min-width: min(100%, 190px);
+  align-content: center;
+  gap: 3px;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f172a;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.submodule-button:hover,
+.submodule-button.is-active {
+  border-color: rgba(37, 99, 235, 0.36);
+  background: rgba(239, 246, 255, 0.92);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.1);
+}
+
+.submodule-button.is-active {
+  color: #1d4ed8;
+}
+
+.submodule-button span {
+  font-size: 0.92rem;
+  font-weight: 820;
+  line-height: 1.22;
+}
+
+.submodule-button small {
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.submodule-story-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.submodule-story-section {
+  display: grid;
+  gap: 10px;
+}
+
+.submodule-story-section h2 {
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.submodule-story-button-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.submodule-story-button {
+  display: grid;
+  min-height: 70px;
+  align-content: center;
+  gap: 5px;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.submodule-story-button:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  background: rgba(239, 246, 255, 0.76);
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.submodule-story-button span {
+  color: #1d4ed8;
+  font-weight: 840;
+  line-height: 1.28;
+}
+
+.submodule-story-button small {
+  color: #64748b;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.submodule-story-button em {
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 820;
+  line-height: 1.2;
+}
+
+.submodule-story-button.is-intro {
+  min-height: 82px;
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(239, 246, 255, 0.78);
+}
+
+.submodule-story-button.is-concept {
+  border-color: rgba(214, 169, 71, 0.34);
+  background: rgba(255, 247, 237, 0.82);
+}
+
+.submodule-story-button.is-empty {
+  border-style: dashed;
+  color: #64748b;
+}
+
 .field-hero {
   display: flex;
   align-items: end;
@@ -4072,6 +4244,10 @@ canvas {
     grid-template-columns: 1fr;
   }
 
+  .submodule-story-button-list {
+    grid-template-columns: 1fr;
+  }
+
   .pdc-live-room {
     display: flex;
     flex-direction: column;
@@ -4156,6 +4332,10 @@ canvas {
 
   .tree-group-story-link em {
     white-space: normal;
+  }
+
+  .submodule-button {
+    width: 100%;
   }
 
   .pdc-live-room {
@@ -4455,6 +4635,8 @@ dd,
 .answer-explanation,
 .title-modal-card,
 .field-chip,
+.submodule-button,
+.submodule-story-button,
 .learning-timeline li,
 .mission-card,
 .pdc-entry-hero,
@@ -4476,9 +4658,13 @@ dd,
 }
 
 .category-card:hover,
+.category-button:hover,
 .quick-mirror-options button:hover,
 .answer-grid button:hover,
-.field-chip.is-active {
+.field-chip.is-active,
+.submodule-button:hover,
+.submodule-button.is-active,
+.submodule-story-button:hover {
   border-color: rgba(37, 99, 235, 0.28);
   background: rgba(239, 246, 255, 0.82);
   color: var(--ink);
@@ -4496,6 +4682,7 @@ dd,
 
 .module-card h3,
 .category-card h3,
+.category-button strong,
 .mission-card h3,
 .idea-grid strong,
 .message-board h3,
@@ -4509,6 +4696,8 @@ dd,
 .reflection-summary-card p:last-child,
 .title-modal-card h2,
 .field-chip strong,
+.submodule-story-section h2,
+.submodule-story-button em,
 .note-row strong,
 .challenge-card h2 {
   color: var(--ink);
@@ -4530,6 +4719,8 @@ dd,
 .quick-mirror-options button,
 .answer-grid button,
 .field-chip,
+.submodule-button,
+.submodule-story-button,
 .example-list li,
 .status-line strong,
 .challenge-status.is-green,
@@ -5713,6 +5904,7 @@ body[data-theme="dark"] .hero,
 body[data-theme="dark"] .home-minimal,
 body[data-theme="dark"] .module-card,
 body[data-theme="dark"] .category-card,
+body[data-theme="dark"] .category-button,
 body[data-theme="dark"] .passport-panel,
 body[data-theme="dark"] .tree-panel,
 body[data-theme="dark"] .tree-group-story-link,
@@ -5730,6 +5922,8 @@ body[data-theme="dark"] .reflection-summary-card,
 body[data-theme="dark"] .deep-prompt-panel,
 body[data-theme="dark"] .answer-explanation,
 body[data-theme="dark"] .field-chip,
+body[data-theme="dark"] .submodule-button,
+body[data-theme="dark"] .submodule-story-button,
 body[data-theme="dark"] .mission-card,
 body[data-theme="dark"] .stories-hero,
 body[data-theme="dark"] .story-card,
@@ -5768,6 +5962,10 @@ body[data-theme="dark"] .pdc-page .pdc-radio-group label {
 }
 
 body[data-theme="dark"] .tree-group-story-link strong,
+body[data-theme="dark"] .category-button strong,
+body[data-theme="dark"] .submodule-button,
+body[data-theme="dark"] .submodule-story-section h2,
+body[data-theme="dark"] .submodule-story-button em,
 body[data-theme="dark"] .lens-story-shelf-heading h2,
 body[data-theme="dark"] .lens-story-sample-content strong,
 body[data-theme="dark"] .lens-story-section p,
@@ -5782,6 +5980,10 @@ body[data-theme="dark"] .lens-story-support p {
 }
 
 body[data-theme="dark"] .tree-group-story-link small,
+body[data-theme="dark"] .category-button span,
+body[data-theme="dark"] .category-button small,
+body[data-theme="dark"] .submodule-button small,
+body[data-theme="dark"] .submodule-story-button small,
 body[data-theme="dark"] .lens-story-shelf-heading p,
 body[data-theme="dark"] .lens-story-sample-content em,
 body[data-theme="dark"] .field-chip.has-story {

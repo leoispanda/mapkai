@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.35";
+const appVersion = "0.1.36";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -20,6 +20,7 @@ const supportedThemes = ["light", "dark"];
 let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
 let currentTheme = supportedThemes.includes(localStorage.getItem(themeKey)) ? localStorage.getItem(themeKey) : "light";
 let lastVisitStats = null;
+const activeCategorySubmodules = {};
 
 const readiness = {
   mapOnly: "Map only",
@@ -379,10 +380,17 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Each lens shows practical fields, everyday examples, and possible learning steps.",
+    categoriesCopy: "Choose a lens first, then open its submodules to read focused stories and concept fables.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
     categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
+    submoduleLabel: "Submodule",
+    submoduleIntroStory: "Submodule story",
+    importantConceptStories: "Important concept stories",
+    advancedConceptStory: "Advanced concept fable",
+    openSubmodule: "Open submodule",
+    openStory: "Open story",
+    noStoryReady: "This story is still being prepared.",
     groups: "groups",
     detailedFields: "detailed fields",
     learningEyebrow: "Cognitive Expansion",
@@ -729,10 +737,17 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "分类不是目录，而是观察不同领域如何组织现实的认知镜头。",
+    categoriesCopy: "先选择一个 Lens，再进入它的 submodule，阅读对应的介绍故事和概念寓言。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
     categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
+    submoduleLabel: "子模块",
+    submoduleIntroStory: "模块介绍故事",
+    importantConceptStories: "重要概念故事",
+    advancedConceptStory: "高级概念寓言",
+    openSubmodule: "打开子模块",
+    openStory: "打开故事",
+    noStoryReady: "这个故事还在准备中。",
     groups: "个组",
     detailedFields: "个具体领域",
     learningEyebrow: "认知扩展",
@@ -4968,6 +4983,10 @@ function getLensStoryFieldTitle(story, code, fallbackTitle) {
 
 function getConceptFableById(fableId) {
   return conceptFables.find((fable) => fable.id === fableId);
+}
+
+function getConceptFableForCategory(categoryCode) {
+  return conceptFables.find((fable) => fable.categoryCode === categoryCode);
 }
 
 function getConceptFableValue(fable, key) {
@@ -12206,30 +12225,22 @@ function renderFounderKnowledgeGraph() {
 }
 
 function renderCategories() {
-  renderLensStoryShelf();
+  const shelf = document.getElementById("lensStoryShelf");
+  if (shelf) shelf.innerHTML = "";
   const grid = document.getElementById("categoryGrid");
-  const detailCards = categories
+  const categoryButtons = categories
     .map((category) => {
       const href = `/categories/${category.code}`;
       const fieldCount = category.groups.reduce((total, group) => total + group.fields.length, 0);
-      const scopePreview = category.groups
-        .flatMap((group) => group.fields)
-        .slice(0, 5)
-        .map(([code, title]) => `<li><span class="internal-code">${code}</span>${title}</li>`)
-        .join("");
       return `
-        <a class="category-card" href="${href}" data-route="${href}" aria-label="${t("openCategory")} ${getCategoryTitle(category)}">
-          <span class="internal-code category-code">${category.code}</span>
-          <h3>${getCategoryTitle(category)}</h3>
-          ${makeStatus(category.status, category.readiness)}
-          <p class="thinking-lens">${getCategoryThinking(category.code)}</p>
-          <div class="scope-count">${category.groups.length} ${t("groups")} · ${fieldCount} ${t("detailedFields")}</div>
-          <ul class="scope-preview">${scopePreview}</ul>
-          <span class="card-link">${t("openCategory")}</span>
+        <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(getCategoryTitle(category))}">
+          <strong>${escapeHtml(getCategoryTitle(category))}</strong>
+          <span>${escapeHtml(getCategoryThinking(category.code))}</span>
+          <small>${category.groups.length} ${escapeHtml(t("groups"))} · ${fieldCount} ${escapeHtml(t("detailedFields"))}</small>
         </a>`;
     })
     .join("");
-  if (grid) grid.innerHTML = detailCards;
+  if (grid) grid.innerHTML = categoryButtons;
 }
 
 function renderLensStoryShelf() {
@@ -13624,37 +13635,79 @@ function renderCategoryDetail(code) {
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
-  target.innerHTML = category.groups
+  if (!category.groups.length) {
+    target.innerHTML = "";
+    return;
+  }
+  const savedGroupCode = activeCategorySubmodules[category.code];
+  const activeGroup = category.groups.find((group) => group.code === savedGroupCode) || category.groups[0];
+  activeCategorySubmodules[category.code] = activeGroup.code;
+  const activeGroupStory = getLensStoryForGroup(category.code, activeGroup.code);
+  const activeGroupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
+  const submoduleButtons = category.groups
     .map((group) => {
       const groupStory = getLensStoryForGroup(category.code, group.code);
       const groupTitle = getLensStoryValue(groupStory, "groupTitle") || group.title;
-      const groupStoryHref = groupStory ? `/lens-stories/${groupStory.id}` : `/categories/${category.code}`;
-      const fields = group.fields.map(([code, title]) => {
-        const fieldStory = getLensStoryForField(category.code, group.code, code);
-        const href = fieldStory ? `/lens-stories/${fieldStory.id}` : `/categories/${category.code}`;
-        const fieldTitle = getLensStoryFieldTitle(fieldStory || groupStory, code, title);
-        return `<a class="field-chip ${fieldStory ? "has-story" : ""}" href="${href}" data-route="${href}">
-          <strong class="internal-code">${escapeHtml(code)}</strong>
-          <span class="field-chip-title">${escapeHtml(fieldTitle)}</span>
-          ${fieldStory ? `<em>${escapeHtml(t("readLensStory"))}</em>` : ""}
-        </a>`;
-      }).join("");
+      const isActive = group.code === activeGroup.code;
       return `
-        <section class="tree-group ${groupStory ? "has-story" : ""}">
-          ${groupStory ? `
-            <a class="tree-group-story-link" href="${groupStoryHref}" data-route="${groupStoryHref}">
-              <span class="internal-code">${escapeHtml(group.code)}</span>
-              <span>
-                <strong>${escapeHtml(groupTitle)}</strong>
-                <small>${escapeHtml(getLensStoryValue(groupStory, "summary"))}</small>
-              </span>
-              <em>${escapeHtml(t("readLensStory"))}</em>
-            </a>` : `
-            <h2><span class="internal-code">${escapeHtml(group.code)}</span>${escapeHtml(group.title)}</h2>`}
-          <div class="field-list">${fields}</div>
-        </section>`;
+        <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-submodule-select="${escapeHtml(category.code)}:${escapeHtml(group.code)}" aria-pressed="${isActive}">
+          <span>${escapeHtml(groupTitle)}</span>
+          <small>${group.fields.length} ${escapeHtml(t("detailedFields"))}</small>
+        </button>`;
     })
     .join("");
+  const introStory = activeGroupStory
+    ? `<a class="submodule-story-button is-intro" href="/lens-stories/${activeGroupStory.id}" data-route="/lens-stories/${activeGroupStory.id}">
+        <span>${escapeHtml(activeGroupTitle)}</span>
+        <small>${escapeHtml(getLensStoryValue(activeGroupStory, "summary"))}</small>
+        <em>${escapeHtml(t("submoduleIntroStory"))}</em>
+      </a>`
+    : `<div class="submodule-story-button is-empty">
+        <span>${escapeHtml(activeGroupTitle)}</span>
+        <small>${escapeHtml(t("noStoryReady"))}</small>
+      </div>`;
+  const conceptFable = getConceptFableForCategory(category.code);
+  const conceptFableMatchesGroup = conceptFable && activeGroup.fields.some(([fieldCode]) => fieldCode === conceptFable.selectedFieldCode);
+  const fieldStories = activeGroup.fields
+    .map(([fieldCode, fieldTitle]) => {
+      const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
+      if (!fieldStory) return "";
+      const href = `/lens-stories/${fieldStory.id}`;
+      const displayTitle = getLensStoryFieldTitle(fieldStory, fieldCode, fieldTitle);
+      return `
+        <a class="submodule-story-button" href="${href}" data-route="${href}">
+          <span>${escapeHtml(displayTitle)}</span>
+          <small>${escapeHtml(getLensStoryValue(fieldStory, "title"))}</small>
+          <em>${escapeHtml(t("openStory"))}</em>
+        </a>`;
+    })
+    .join("");
+  const conceptFableButton = conceptFableMatchesGroup
+    ? `<a class="submodule-story-button is-concept" href="/concept-fables/${conceptFable.id}" data-route="/concept-fables/${conceptFable.id}">
+        <span>${escapeHtml(getConceptFableValue(conceptFable, "conceptName"))}</span>
+        <small>${escapeHtml(getConceptFableValue(conceptFable, "title"))}</small>
+        <em>${escapeHtml(t("advancedConceptStory"))}</em>
+      </a>`
+    : "";
+  const conceptButtons = `${fieldStories}${conceptFableButton}`.trim();
+  target.innerHTML = `
+    <div class="submodule-browser">
+      <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
+        ${submoduleButtons}
+      </div>
+      <section class="submodule-story-panel" aria-live="polite">
+        <div class="submodule-story-section">
+          <h2>${escapeHtml(t("submoduleIntroStory"))}</h2>
+          ${introStory}
+        </div>
+        <div class="submodule-story-section">
+          <h2>${escapeHtml(t("importantConceptStories"))}</h2>
+          <div class="submodule-story-button-list">
+            ${conceptButtons || `<div class="submodule-story-button is-empty"><span>${escapeHtml(t("importantConceptStories"))}</span><small>${escapeHtml(t("noStoryReady"))}</small></div>`}
+          </div>
+        </div>
+      </section>
+    </div>`;
 }
 
 function renderLensStoryDetail(storyId) {
@@ -14137,6 +14190,17 @@ document.addEventListener("click", (event) => {
   if (founderExit) {
     event.preventDefault();
     exitFounderMode();
+    return;
+  }
+  const submoduleSelect = event.target.closest("[data-submodule-select]");
+  if (submoduleSelect) {
+    event.preventDefault();
+    const [categoryCode, groupCode] = submoduleSelect.dataset.submoduleSelect.split(":");
+    const category = categories.find((item) => item.code === categoryCode);
+    if (category && category.groups.some((group) => group.code === groupCode)) {
+      activeCategorySubmodules[categoryCode] = groupCode;
+      renderCategoryTree(category);
+    }
     return;
   }
   const link = event.target.closest("[data-route]");
