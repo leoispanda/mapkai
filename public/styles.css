@@ -4003,20 +4003,23 @@ canvas {
 }
 
 .submodule-button-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
+  align-items: stretch;
 }
 
 .submodule-button {
   display: inline-grid;
-  min-height: 42px;
-  min-width: min(100%, 180px);
+  width: 100%;
+  min-width: 0;
+  height: 64px;
+  min-height: 64px;
   align-content: center;
   gap: 3px;
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   background: rgba(255, 255, 255, 0.82);
   color: #0f172a;
   font: inherit;
@@ -4040,6 +4043,11 @@ canvas {
   font-size: 0.9rem;
   font-weight: 820;
   line-height: 1.22;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .submodule-button small {
@@ -4050,20 +4058,23 @@ canvas {
 }
 
 .detailed-field-button-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
+  align-items: stretch;
 }
 
 .detailed-field-button {
   display: inline-grid;
-  flex: 1 1 210px;
-  min-height: 42px;
+  width: 100%;
+  min-width: 0;
+  height: 64px;
+  min-height: 64px;
   align-content: center;
   gap: 3px;
   border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   background: rgba(255, 255, 255, 0.82);
   color: #0f172a;
   font: inherit;
@@ -4087,6 +4098,11 @@ canvas {
   font-size: 0.9rem;
   font-weight: 820;
   line-height: 1.25;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .detailed-field-button small {
@@ -4108,9 +4124,10 @@ canvas {
 
 .submodule-overview-row,
 .field-story-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
+  align-items: stretch;
 }
 
 .submodule-story-section {
@@ -4132,8 +4149,10 @@ canvas {
 
 .submodule-story-button {
   display: inline-grid;
-  min-width: min(100%, 230px);
-  min-height: 46px;
+  width: 100%;
+  min-width: 0;
+  height: 64px;
+  min-height: 64px;
   align-content: center;
   gap: 2px;
   border: 1px solid rgba(37, 99, 235, 0.14);
@@ -4154,9 +4173,14 @@ canvas {
 
 .submodule-story-button span {
   color: #1d4ed8;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 840;
   line-height: 1.28;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .submodule-story-button small {
@@ -4174,7 +4198,7 @@ canvas {
 }
 
 .submodule-story-button.is-intro {
-  min-height: 46px;
+  min-height: 64px;
   border-color: rgba(37, 99, 235, 0.2);
   background: rgba(239, 246, 255, 0.78);
 }

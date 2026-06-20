@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.38";
+const appVersion = "0.1.39";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -386,10 +386,10 @@ const uiText = {
     categoryScope: "Lens scope",
     categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
     submoduleLabel: "Submodule",
-    submoduleIntroStory: "Overview story",
+    submoduleIntroStory: "Module overview",
     detailedFieldLabel: "Detailed field",
-    fieldIntroStory: "Field overview story",
-    importantConceptStories: "Important concept",
+    fieldIntroStory: "Field overview",
+    importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
     openDetailedField: "Open field",
@@ -746,9 +746,9 @@ const uiText = {
     categoryScope: "镜头范围",
     categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
     submoduleLabel: "子模块",
-    submoduleIntroStory: "Overview 故事",
+    submoduleIntroStory: "模块概览",
     detailedFieldLabel: "细分条目",
-    fieldIntroStory: "条目 Overview 故事",
+    fieldIntroStory: "条目概览",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
