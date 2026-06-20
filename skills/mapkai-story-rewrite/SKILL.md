@@ -15,6 +15,23 @@ The output must read like a story, not a correct synopsis of a discovery. Passin
 
 A knowledge story cannot pass only because it is atmospheric or elegant. It must be historically situated, scene-consistent, and epistemically sharp. Time, place, action, and knowledge transition must align.
 
+## Audience And Register
+
+Write for curious general adults, upper-level high school students, undergraduates, graduate students, and non-specialists who want serious knowledge without academic gatekeeping.
+
+The standard is two-layer readability:
+
+- A general reader can follow the story and understand what changed.
+- A graduate-level reader can recognize the underlying method shift.
+
+Do not infantilize the reader. Avoid childish tone, fairy-tale framing, over-personified objects, moral-of-the-story endings, or simplified wonder that makes the story feel like children's science writing.
+
+Do not write like an academic paper. Avoid stacked abstractions, long definitional sentences, literature-review tone, or paragraph endings that sound like thesis statements.
+
+Concept words such as scale, variable, trend, distribution, evidence, relationship, repeated observation, model, or mechanism are allowed only after the story has already shown the concrete action and evidence that make the concept necessary. Let the object, record, instrument, route, chart, sample, or repeated result prepare the reader first.
+
+Each story should carry one core knowledge turn. Do not try to explain the entire field. The best effect is that the reader first understands a concrete story, then realizes they have learned a more advanced way of thinking.
+
 ## Rewrite, Not Polish Gate
 
 When rewriting an existing story, first judge whether the original is actually story-shaped. Do not polish a body that is built from generic method language, a fake scene, abstract explanation, or an old/new question that does not match the topic. If these problems appear, rebuild the main scene from the historical evidence.

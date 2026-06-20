@@ -285,6 +285,26 @@ Verified:
 - git diff --check passed before commit.
 
 Push:
+- Pushed to main in commit 49ea17e.
+```
+
+Latest MapKAI story audience/register update:
+
+```text
+Changed:
+- Added Audience And Register guidance to skills/mapkai-story-rewrite/SKILL.md.
+- Default readers are curious general adults, upper-level high school students, undergraduates, graduate students, and non-specialists who want serious knowledge without academic gatekeeping.
+- The writing target is two-layer readability: general readers can follow the concrete story, and graduate-level readers can see the underlying method shift.
+- Rewrite must avoid infantilizing the reader, fairy-tale framing, over-personification, moral-of-the-story endings, academic-paper prose, stacked abstractions, and whole-field explanations.
+- Concept words such as scale, variable, trend, distribution, evidence, relationship, repeated observation, model, or mechanism may appear only after concrete story actions and evidence make them necessary.
+- Added Audience And Register Fit to skills/mapkai-story-review/SKILL.md, plus red lines for childish tone, academic-paper tone, and stories that try to explain the whole field instead of one core knowledge turn.
+- Updated both story skill agent default prompts with the new audience/register standard.
+
+Verified:
+- Skill markdown and agent YAML were changed only; no story data or app behavior was changed in this prompt update.
+- YAML/frontmatter parsing and git diff checks were run before commit.
+
+Push:
 - Direct-push rule is active; final commit hash is reported in the Codex final response.
 ```
 

@@ -23,6 +23,14 @@ Is this truly a story of discovery, or is it still a knowledge explanation with 
 
 If it is mainly explanation, mark it `FAIL`.
 
+Audience standard:
+
+```text
+Readable for curious general adults and advanced students; sharp enough that graduate-level readers can see the method shift.
+```
+
+Do not pass a story just because it is "easy." It must not become childish, fairy-tale-like, over-personified, or moralizing. Do not pass a story just because it is "serious." It must not become an academic abstract, a concept stack, or a disguised literature-review paragraph.
+
 Strict scoring formula:
 
 ```text
@@ -166,6 +174,9 @@ The following cannot receive `PASS`:
 16. The hidden knowledge section introduces concepts not supported by the story, such as adding genetics to a microscope-scale observation story that never shows inheritance.
 17. The field-method fit is satisfied only by generic words like "measure," "compare," "graph," "system," or "relationship," without topic-specific evidence.
 18. The supplied page image, image alt text, or image prompt contradicts the title/body enough to mislead the reader.
+19. The tone infantilizes the reader: childish wonder, fairy-tale framing, over-personified objects, or moral-of-the-story endings.
+20. The tone becomes academic-paper-like: stacked abstractions, thesis-summary endings, or concept terms used before concrete evidence prepares them.
+21. The story tries to explain the whole field instead of one core knowledge turn.
 
 When any red line appears, choose `LOCAL EDIT` if it is isolated and fixable without rebuilding the story, otherwise choose `FAIL`.
 
@@ -251,7 +262,26 @@ Weak signs:
 
 Reviewer question: Does the reader enter a scene before being told what the story means?
 
-### 1A. Field Name Quarantine
+### 1A. Audience And Register Fit
+
+Check whether the story is serious without becoming stiff, and accessible without becoming childish.
+
+Good signs:
+
+- A general adult reader can follow the sequence of scene, old method, evidence pressure, action, and changed question.
+- A more advanced reader can identify the method shift: scale, attribution, distribution, trend, classification, modeling, measurement, visualization, interpretation, or decision.
+- Concept words appear after concrete objects, records, tools, samples, or actions have earned them.
+- The story keeps one core knowledge turn instead of explaining the whole field.
+
+Weak signs:
+
+- The tone sounds like children's science writing: cute wonder, fairy-tale rhythm, over-personified objects, easy morals, or "little discovery" framing.
+- The tone sounds like academic prose: stacked abstract nouns, definitional sentences, thesis-summary language, or unexplained concept clusters.
+- The story is readable only because it removes the real knowledge method, or serious only because it hides the scene behind terminology.
+
+Reviewer question: Could a curious adult enjoy the story while a graduate student still sees the knowledge method changing?
+
+### 1B. Field Name Quarantine
 
 Check whether the story body names the field, explains the field, or uses the field title as a bridge before the "hidden knowledge" section.
 
@@ -266,7 +296,7 @@ Fail or mark `LOCAL EDIT` if the story body contains patterns like:
 
 Reviewer question: Could the story body still be worth reading if the field title were hidden?
 
-### 1B. Story, Not Synopsis Gate
+### 1C. Story, Not Synopsis Gate
 
 Check whether the story has enough lived sequence to be readable as a story.
 
@@ -288,7 +318,7 @@ Good signs:
 
 Reviewer question: If the field title and historical support were removed, would this still feel like a scene worth reading rather than a summary paragraph?
 
-### 1C. Field Fit And Method Fit
+### 1D. Field Fit And Method Fit
 
 Check whether the story fits the selected field, not just a nearby easier field.
 
@@ -306,7 +336,7 @@ For `自然科学、数学与统计`, a story should not stop at "nature is conn
 
 Reviewer question: What exact method changed here: naming, measuring, comparing, modeling, visualizing, testing, calculating, classifying, or deciding?
 
-### 1D. Knowledge Turn Sharpness
+### 1E. Knowledge Turn Sharpness
 
 Check whether the old and new questions are sharp enough.
 
