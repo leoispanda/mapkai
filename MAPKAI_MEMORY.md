@@ -7,7 +7,7 @@ This file is the portable working memory for continuing MapKAI development in a 
 Current local repository:
 
 ```text
-/Users/leoyang/Documents/Codex/2026-05-06/new-chat
+/Users/leoyang/Documents/mapkai
 ```
 
 Important files:
@@ -217,7 +217,51 @@ Recent pushed commit:
 Latest local update:
 
 ```text
-MapKAI PDC Private Pilot placeholder mode was added as a hidden controlled feature inside the existing MapKAI site.
+Knowledge story text was polished in script.js and synced to public/script.js. The approved Chinese story style is: enter through a concrete scene and human problem, delay the knowledge point, keep emotion restrained, include careful factual support for historical stories, avoid encyclopedia/card wording and obvious AI phrasing, and end with a natural reflection question. Second storytelling pass completed for all 148 runtime knowledge-lens stories, including the sublens draft source text used by category shelves: each final story should now have scene-first narrative, a human turn, a delayed knowledge bridge, and a natural reflection question without card-style filler.
+```
+
+Story content rule:
+
+```text
+When updating MapKAI stories, preserve IDs, codes, slugs, field names, category relationships, quiz logic, founder mode, PDC, contact, footer, legal, analytics, and deployment config. Change only story text fields unless the founder explicitly requests structure or UI work.
+```
+
+MapKAI story review workflow:
+
+```text
+When rewriting or reviewing MapKAI knowledge stories, use:
+
+- skills/mapkai-story-rewrite/SKILL.md for generation and rewriting.
+- skills/mapkai-story-review/SKILL.md for strict review.
+
+Workflow:
+1. Rewrite story content.
+2. Review each story with the review skill.
+3. For PASS or LOCAL EDIT, apply the review skill's safe micro-edits.
+4. Any story marked REVISE or REWRITE must be rewritten again.
+5. Run the review again after revision.
+6. Do not commit or push until all stories are PASS or LOCAL EDIT and their micro-edits are applied.
+7. Update MAPKAI_MEMORY.md with Changed / Verified / Push status.
+```
+
+Latest MapKAI story rewrite/review status:
+
+```text
+Changed:
+- Added reviewed runtime Chinese story overrides in script.js and public/script.js for all 148 effective lens stories.
+- Each effective lens story override now includes storyBodyZh and knowledgePointZh, so the visible story body stays scene/action/turn-based and the abstract knowledge moves to the hidden-knowledge section.
+- Added reviewed Chinese story/insight overrides for 6 published stories, including a revised Broad Street pump ending that removes the awkward hard name reveal.
+- Manually corrected high-risk samples after review: Humboldt/Naturgemalde, Shannon information theory, X-ray imaging, military strategy, service desk, computer-use demo, pharmacy, social work, forensic trace evidence, and private investigation.
+- Updated skills/mapkai-story-rewrite/SKILL.md and skills/mapkai-story-review/SKILL.md with Field Name Quarantine / Contribution Summary Risk rules.
+
+Verified:
+- script.js and public/script.js are byte-for-byte synced.
+- Bundled Node syntax check passed for script.js and public/script.js.
+- Effective runtime review scan found 148 lens stories, 0 forbidden story-pattern hits, 0 too-short visible story bodies, 0 missing question-turn hits, and 0 hidden-knowledge style misses.
+- Published story override scan found 6 reviewed stories, 0 forbidden story-pattern hits, and 0 missing question-turn hits.
+
+Push:
+- Not committed and not pushed in this turn.
 ```
 
 ## 6. Current PDC Provider Notes

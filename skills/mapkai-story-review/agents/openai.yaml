@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Story Review"
+  short_description: "Strictly review MapKAI knowledge stories."
+  default_prompt: "Review this MapKAI knowledge story for discovery logic, factual safety, and non-AI style."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Story Rewrite"
+  short_description: "Generate readable discovery-based MapKAI stories."
+  default_prompt: "Rewrite this MapKAI knowledge story as a readable scene-first discovery story, revealing background through action rather than direct explanation."
