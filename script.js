@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.64";
+const appVersion = "0.1.65";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -6189,6 +6189,91 @@ const reviewedLensStoryOverridesZh = {
   }
 };
 
+const topLensStoryRewriteOverridesZh20260621 = {
+  "000-general-starter-course": {
+    summaryZh: "一张夜间问题清单，让印刷铺外的经验开始变成可共同学习的公共方法。",
+    sceneZh: "1727 年的费城，年轻印刷工收好铅字，带着一张问题清单走向 Junto 的夜间聚会。",
+    storyBodyZh: "白天，他在印刷铺里排铅字、校样、送纸。到了晚上，几个人把各自碰到的麻烦带到 Junto：怎样预防火灾，哪里能借到书，货币短缺会怎样压住小店，年轻学徒怎样继续读书。把经验留在师傅和熟人手里，本来很自然；手艺、信用和门路都靠这样传下去。可同一类麻烦每周换个门面回来，单个师傅的答案开始不够。他们把问题写成清单，轮流查书、比较做法；下一次聚会，同一个问题会带着书页、账目或街头观察回到桌上，再把消防、图书馆、道路和学校这些事拉到公共讨论里。那张夜间问题单让学习离开单人的聪明，变成别人能接住、补充、检验和再使用的办法。这个年轻印刷工是 Benjamin Franklin，Junto 常被看作美国公共学习、社团教育和公共改进的早期入口。后来被称作通用学习的东西，先从这种场景里长出来：把生活里的反复问题变成共同练习。",
+    knowledgePointZh: "通用学习关注如何把个人经验、公共问题和跨领域方法组织成可持续学习能力。",
+    reflectionQuestionZh: "当一个问题反复出现在不同人的生活里，它还只是个人经验吗？"
+  },
+  "011-dewey-lab-school": {
+    summaryZh: "面粉、布料和木块进入教室后，学习不再只是在课本里找答案。",
+    sceneZh: "1896 年的芝加哥，Lab School 的桌上放着面粉、量杯、布料、木块和一群孩子的问题。",
+    storyBodyZh: "桌上的面粉没有先变成一段课文。孩子们量水、揉面、等面团变化，再回头算为什么这个比例能成形。布料也不是手工课的装饰，他们追着棉花从田地、纺线、染色走到衣服，木块则把长度、结构和合作带到同一张桌上。背诵和讲解并非无用，安静听课能让孩子得到整齐的答案；可是答案一离开生活，孩子很快只记得句子，不知道句子要处理什么。老师把厨房、作坊、测量和讨论排成连续活动，让孩子先碰到材料的限制，再需要数学、语言、历史和科学来解释它。桌面上的面团、布料和木块让课堂的重心移动了：生活不再被剪成学科碎片，学科知识反而被真实活动召唤出来。John Dewey 参与创办的 University of Chicago Laboratory School，成为进步教育史上重要的实验现场。它留下的问题后来进入教育学核心：学校怎样设计经验，让学生在行动、反思和共同问题中学会判断。",
+    knowledgePointZh: "教育学关注学习经验、课程设计、教学关系、儿童发展和学校如何组织理解。",
+    reflectionQuestionZh: "如果孩子先遇到真实材料，再需要知识，课堂应该怎样改变？"
+  },
+  "020-family-photo-meaning": {
+    summaryZh: "一块黑布板上的照片反复移动，让图像之间的关系比单幅作品更难忽视。",
+    sceneZh: "1920 年代后期的 Hamburg，一位学者把照片钉上黑布板，又一次次取下、挪开、重排。",
+    storyBodyZh: "一幅画单独放在书页里时，读法很熟悉：作者是谁，年代是哪一年，风格属于哪一派。这个办法能保护细节，也能防止胡乱解释；可是黑布板上的照片越排越多，单幅作品开始显得不够。一个手势在古代浮雕、文艺复兴绘画和近代海报里反复出现，一个衣褶的方向、一个哀悼的姿态、一个神话人物的动作，跨过年代后仍让人认出相似的身体姿态。Aby Warburg 没有把这些图像写成线性故事，而是把照片钉上去、取下来、挪到另一组旁边，让相邻关系不断改变。每一次重排都会暴露新的问题：图像不是只属于一个时代的孤立作品，它们还会携带记忆、迁移姿态、改变用途。Mnemosyne Atlas 没有给出一条整齐结论，却让黑布板变成一种研究工具。艺术与人文在这块板前要处理的，不只是作品名称，还有图像怎样穿过时间、换一处位置后又改变观看。",
+    knowledgePointZh: "艺术与人文学习图像、文本、形式、符号和历史语境怎样共同生成意义。",
+    reflectionQuestionZh: "当两张相隔很远的图像放在一起时，我们看到的是相似，还是一条文化记忆的路线？"
+  },
+  "030-neighbor-notice-board": {
+    summaryZh: "一张用颜色标出的街区地图，把贫困从道德判断推向可讨论的公共证据。",
+    sceneZh: "1890 年代的芝加哥，Hull-House 附近的街道、工厂和出租屋被一格格标到地图上。",
+    storyBodyZh: "她每天走过同一片街区：孩子从拥挤楼梯跑下，工人换班，移民家庭在狭小房间里做饭、缝补、接散工。把贫困看成个人懒惰或偶然不幸，在慈善传统里很常见，也能解释一些眼前需求；可是同样的低工资、疾病、语言隔阂和房租压力在相邻街道反复出现，单个家庭的品格解释开始不够用。Jane Addams 和 Hull-House 的同伴没有只写劝善文章，她们入户访问，记录职业、收入、国籍和居住状况，再把数据涂到街区地图上。颜色一铺开，贫困不再只是一个个求助故事，而是和工厂、住房、移民路径、学校和公共卫生挤在同一张图里。地图逼出一个更难的问题：要帮助一个家庭，还是要改变让许多家庭同时陷入困境的城市条件？这些调查成为社会工作、城市社会学和公共改革的重要早期材料。社会科学要做的事，也从责备个人，转向把同情、记录和公共证据放到一起。",
+    knowledgePointZh: "社会科学关注人群、制度、城市、关系和公共问题怎样通过证据被理解与改善。",
+    reflectionQuestionZh: "当贫困在地图上成片出现时，责任还只属于某一个家庭吗？"
+  },
+  "040-kitchen-repair-budget": {
+    summaryZh: "账本、合同和铁路运价进入大学后，商业不再只靠家族经验传下去。",
+    sceneZh: "1881 年的费城，一所大学开始把工厂账册、合同、金融和公共政策摆进商业教育。",
+    storyBodyZh: "在小店和作坊里，做生意常靠跟师傅学：记账、识人、压价、守信用，许多判断都从柜台后面慢慢练出来。这个办法在熟人市场里很有力量，可铁路、钢铁、保险、银行和跨州贸易把问题放大了。一本账册不再只是收支记录，它会牵到贷款、库存、工资、运价、关税、合同责任和公共规则；一个错误也不只影响一间铺子，可能拖动供应商、工人和投资者。Joseph Wharton 希望大学培养能理解商业、政治经济和公共责任的人，而不只是会赚钱的店主。The Wharton School 于 1881 年在 University of Pennsylvania 成立，常被认为是美国最早的大学商学院之一。商业教育的入口因此改变：经验仍重要，但账册、合同、金融和法律要被放在同一张桌上反复训练。商业、管理与法律不再只是成功者的诀窍，而开始成为可以被教学、争论和问责的公共方法。",
+    knowledgePointZh: "商业、管理与法律关注组织如何配置资源、承担责任、制定规则并在社会中创造价值。",
+    reflectionQuestionZh: "当一个商业决定会影响工人、资本和公共规则时，只靠个人经验还够吗？"
+  },
+  "050-balcony-plant-observation": {
+    summaryZh: "一座山坡上的植物记录，让自然不只是标本名称，而成为变量之间的关系。",
+    sceneZh: "1802 年前后的安第斯山坡上，Humboldt 把植物名、海拔、温度和气压写进同一本笔记。",
+    storyBodyZh: "采下一片叶子，压进标本夹，写上名称和地点，这是自然史里可靠而必要的工作。可是 Alexander von Humboldt 和同行者沿着山坡上行时，单个名称越来越难解释眼前的变化。低处的植物、云雾边缘的植物、高处稀薄空气里的植物，不只是换了名字，也随着高度、温度、湿度和地形改变了分布。他没有只把标本带回柜子，而是在笔记旁添上海拔、气压和位置，再把不同高度的植物放到同一幅剖面图里比较。回到纸面上，山不再只是背景，变成一条能让变量相互靠近的坐标。Naturgemalde 这样的图像让读者看到：植物在哪里出现，往往要同气候、地形和高度一起理解。给现象命名仍然重要，但这张山坡图把自然科学、数学与统计拉到同一项任务上：测量、比较，并把关系画成别人也能检查的结构。",
+    knowledgePointZh: "自然科学、数学与统计把观察、测量、比较和模型结合起来，寻找自然现象中的规律。",
+    reflectionQuestionZh: "如果同一种植物总和某些高度、温度、湿度一起出现，标本还只是一个名字吗？"
+  },
+  "061-phone-backup-help": {
+    summaryZh: "在有噪声的线路旁，消息先被拆成选择，才可能被可靠传远。",
+    sceneZh: "20 世纪中期的 Bell Labs，工程师面对电话线、开关、噪声和一串需要传送的符号。",
+    storyBodyZh: "一条消息平时会先被问是什么意思：一句话安慰谁，一封电报通知什么事。通信工程师当然也关心意义，可在线路和机器面前，另一个问题先挡住了路。电流会抖动，噪声会混进来，线路容量有限，同一句话如果不能稳定送到另一端，意义再丰富也会丢失。Claude Shannon 把注意力暂时从内容移开，问一个更冷的问题：在许多可能消息中，接收者到底需要排除多少选择，才能确定收到的是哪一个？他把消息看成选择的数量，把不确定性写进公式，又把信号、噪声和编码放在同一张工作台上。这样做不是说人的意义不重要，而是先为机器通信建立可计算的底座。bit 这个单位让信息像可以度量的东西一样进入工程设计。后来，信息与通信技术反复回到这个底座：通道能承载多少选择，错误怎样被发现，冗余怎样帮助恢复。",
+    knowledgePointZh: "信息与通信技术关注信息如何被编码、传输、存储、恢复，并在系统中可靠流动。",
+    reflectionQuestionZh: "当一条消息必须穿过噪声，先被保护的是意思，还是可被辨认的选择？"
+  },
+  "070-wobbly-shelf-repair": {
+    summaryZh: "桥、隧道和巨轮把勇气拉回图纸，让建造必须接受计算和材料的约束。",
+    sceneZh: "19 世纪的英国，工程图纸上同时出现山谷、河底、铁板、铆钉和一艘越来越大的船。",
+    storyBodyZh: "修一座小桥时，老匠人的眼力、手感和经验常常够用；木料弯到什么程度，石块怎样咬合，许多判断都从工地上长出来。可当跨度越过山谷，隧道要穿过河底，铁船的船体大到需要成排铆钉和隔舱时，手感开始被迫让位给计算。Isambard Kingdom Brunel 所处的时代，建造不再只是把胆量变成形状。图纸要先算重量和拉力，材料要接受试验，工人、资金、设备和风险要被安排到同一套流程里。一个尺寸改动会牵动支撑、成本和安全；一次漏水或变形，会让纸上的假设回到现场接受审问。工程的转向藏在这种往返里：先画，再算，再造，再从失败处修正。桥、隧道和巨轮不只是宏大物件，它们把一个问题推到台前：人类怎样把想象交给可验证的结构？工程学的责任也在图纸和现场之间变得清楚：让材料、力、工具、组织和安全共同约束野心。",
+    knowledgePointZh: "工程关注如何用可验证的设计、材料、系统和组织，把需求转化为可靠结构。",
+    reflectionQuestionZh: "当建造物大到眼力不再够用时，图纸和计算承担了什么责任？"
+  },
+  "080-community-garden-seedlings": {
+    summaryZh: "一株不容易倒伏的小麦，让田地里的问题从多收一点变成如何稳定养活更多人。",
+    sceneZh: "20 世纪中期的墨西哥试验田里，研究人员弯腰查看麦秆高度、锈病斑点和一排排产量记录。",
+    storyBodyZh: "农民当然希望小麦多结穗，研究人员也会先看哪一块地收成更好。可在试验田里，单纯追求高产很快遇到麻烦：秆子太高会倒伏，锈病会让叶片变色，肥料用多了未必变成粮食，雨水和季节又让一次好结果无法保证下一次。Norman Borlaug 和团队不断杂交、播种、淘汰，再把不同地点和季节的表现拿来比较。他们不是只问哪一株今年最高产，也看哪一株在施肥、病害和风雨之后还能站住。矮秆品种的价值不只在于矮，它能在施肥后把更多力量放进麦穗，而不是把整株植物推倒。试验田于是从一块地的经验，变成品种、病害、土壤、肥料、灌溉和农民实践共同接受检验的现场。后来这些工作和绿色革命联系在一起，也伴随关于生态、分配和长期代价的讨论。小麦行间留下的不是一个单独答案，而是一组农业问题：粮食怎样在生物、环境、技术和社会条件之间被反复调校出来。",
+    knowledgePointZh: "农业关注作物、土壤、水、技术、生态和食物系统如何共同支撑稳定生产。",
+    reflectionQuestionZh: "如果一株麦子能多产却容易倒下，农业要优化的到底是哪一个结果？"
+  },
+  "090-medicine-schedule-care": {
+    summaryZh: "一场斑疹伤寒调查，把病床旁的问题推向住房、食物和公共制度。",
+    sceneZh: "1848 年的上西里西亚，Rudolf Virchow 在斑疹伤寒流行地区查看病人，也查看贫困本身。",
+    storyBodyZh: "医生先看病人，这是职业的起点：发热、皮疹、虚弱、死亡人数，都会把注意力拉回诊断和治疗。可在上西里西亚的调查中，病床旁的症状不断指向病床之外。拥挤住房、饥饿、教育不足、交通隔绝和贫困，让疫情不是单靠药方就能解释的事件。Rudolf Virchow 记录病情，也记录生活条件；他没有把斑疹伤寒只写成微生物或个人卫生问题，而是把报告推向粮食、学校、地方自治和政治代表这些看似离诊室很远的条件。这样写并不减轻医学责任，反而扩大了医学必须面对的证据。病人身体上的热度，连到了村庄里的道路、饭桌和制度安排。治疗个体仍然重要，但如果许多人被同一组条件推向疾病，问题就不能停在个体治疗上。Virchow 后来常与社会医学传统联系在一起，公共健康与福利也因此必须同时看见病床、住房、食物和制度。",
+    knowledgePointZh: "健康与福利关注疾病、照护、公共卫生、社会条件和人的基本生活能力。",
+    reflectionQuestionZh: "当同一种疾病总和贫困、住房、食物一起出现时，医生该把边界画在哪里？"
+  },
+  "100-rainy-event-service-desk": {
+    summaryZh: "登机口的一次等待，让服务质量从后台流程走到人与人接触的瞬间。",
+    sceneZh: "1980 年代的 Scandinavian Airlines，乘客在柜台、电话、登机口和延误通知前一次次判断这家公司。",
+    storyBodyZh: "航空公司可以有整洁的机库、复杂的排班和厚厚的流程手册，许多工作确实发生在乘客看不见的后台。可是乘客记住一家公司的时刻，常常不是管理层开会的时刻，而是行李被问到哪里、电话有没有人接、延误时谁说明原因、登机口的员工能不能做决定。Jan Carlzon 在领导 Scandinavian Airlines 时，把这些接触称为 moments of truth。这个说法的力量不在口号，而在它重新排列了管理注意力：服务不是总部把标准写完再向下传递，服务发生在一线员工和顾客互相确认期待的那几秒钟。于是训练、授权、信息系统和组织层级都要围着接触点调整。一次柜台回应看似很小，却会让乘客判断整家公司是否可靠。服务问题也因此落回系统设计：后台流程要支持前台判断，前台经验又会反过来检验后台是否真的理解顾客。",
+    knowledgePointZh: "服务关注人与组织如何在接触点、流程、体验和信任中共同完成价值。",
+    reflectionQuestionZh: "如果顾客只通过几个接触瞬间认识一家公司，后台系统应该为谁而设计？"
+  }
+};
+
+Object.entries(topLensStoryRewriteOverridesZh20260621).forEach(([storyId, override]) => {
+  const target = reviewedLensStoryOverridesZh[storyId];
+  if (target) Object.assign(target, override);
+});
+
 lensStories.forEach((story) => {
   const override = reviewedLensStoryOverridesZh[story.id];
   if (override) Object.assign(story, override);
@@ -7300,6 +7385,10 @@ function getStoryPerspectiveFocus(perspective) {
 
 function getLensStoryById(storyId) {
   return lensStories.find((story) => story.id === storyId);
+}
+
+function getActiveBaseLensStories() {
+  return baseLensStories.map((story) => getLensStoryById(story.id) || story);
 }
 
 function getLensStoryForGroup(categoryCode, groupCode) {
@@ -14283,7 +14372,7 @@ function renderStories() {
   const target = document.getElementById("storiesGrid");
   if (!target) return;
   target.classList.add("is-lens-story-grid");
-  const visibleStories = baseLensStories;
+  const visibleStories = getActiveBaseLensStories();
   target.innerHTML = visibleStories
     .map((story, index) => {
       const category = categories.find((item) => item.code === story.categoryCode);
@@ -14603,7 +14692,7 @@ function renderCategories() {
 function renderLensStoryShelf() {
   const target = document.getElementById("lensStoryShelf");
   if (!target) return;
-  const shelfStories = baseLensStories;
+  const shelfStories = getActiveBaseLensStories();
   if (!shelfStories.length) {
     target.innerHTML = "";
     return;
