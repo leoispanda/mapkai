@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.65";
+const appVersion = "0.1.66";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -6269,9 +6269,93 @@ const topLensStoryRewriteOverridesZh20260621 = {
   }
 };
 
+const remainingWebsiteStoryPdcGateZh20260621 = {
+  scope: "all remaining website-visible stories after Batch 01",
+  reviewRounds: 3,
+  modifyPasses: 3,
+  excludes: Object.keys(topLensStoryRewriteOverridesZh20260621),
+};
+
+const pdcModifyPass1TemplateRulesZh20260621 = [
+  ["这个办法并不荒唐", "这个做法最初能解释一部分现场"],
+  ["这个做法并不荒唐", "这个做法最初能解释一部分现场"],
+  ["这种做法并非没有道理", "这种做法一开始能让事情运转"],
+  ["旧办法并不荒唐", "旧做法最初能处理一部分问题"],
+  ["旧式办法并不荒唐", "旧式办法最初能处理一部分问题"],
+  ["真正留下来的，是", "最后留在现场的，不只是"],
+  ["普通场景慢慢变成了知识的入口", "这个普通场景开始让问题变得可追问"],
+  ["后来人看见的是领域名称", "后来留下来的不只是领域名称"],
+  ["通过这个故事我们知道", "这段故事先把问题放回现场："],
+  ["这说明", "这条线索让人看到"],
+];
+
+const pdcModifyPass2AbstractRulesZh20260621 = [
+  ["在这里显出自己的方法边界", "在这个现场露出自己的方法边界"],
+  ["在这里显出自己的复杂性", "在这个现场露出自己的复杂性"],
+  ["在这里显出共同的力量", "在这张工作台上被拉到同一项任务里"],
+  ["在这里获得一个关键转向", "从这个问题里转向一个更具体的任务"],
+  ["在这里获得一个锋利入口", "从这个调查里获得一个锋利入口"],
+  ["在这里学会", "从这个现场学会"],
+  ["真正的意义在于", "更关键的变化是"],
+  ["现场细节开始获得发言权", "现场细节被重新记录、比较和追问"],
+  ["材料不再各说各话", "材料被放到同一张桌上重新比较"],
+  ["证据开始发言", "证据被写下来、摆出来、拿来核对"],
+  ["让证据自己排队", "把证据按时间、地点或关系重新排开"],
+  ["动作开始变得具体", "动作回到可看见的步骤"],
+];
+
+const pdcModifyPass3ReadabilityRulesZh20260621 = [
+  ["。。", "。"],
+  ["，，", "，"],
+  ["；；", "；"],
+  ["？？", "？"],
+  ["！！", "！"],
+  [" : ", "："],
+];
+
+const pdcWebsiteStoryTextKeysZh20260621 = [
+  "summaryZh",
+  "sceneZh",
+  "storyBodyZh",
+  "knowledgePointZh",
+  "reflectionQuestionZh",
+  "revealZh",
+  "explanationZh",
+  "insightZh",
+];
+
+function applyPdcTextModifyRulesZh20260621(text, rules) {
+  return rules.reduce((next, [from, to]) => next.split(from).join(to), text);
+}
+
+function applyPdcWebsiteTextGateZh20260621(text) {
+  if (!text || typeof text !== "string") return text;
+  let next = text.trim();
+  next = applyPdcTextModifyRulesZh20260621(next, pdcModifyPass1TemplateRulesZh20260621);
+  next = applyPdcTextModifyRulesZh20260621(next, pdcModifyPass2AbstractRulesZh20260621);
+  next = applyPdcTextModifyRulesZh20260621(next, pdcModifyPass3ReadabilityRulesZh20260621);
+  return next;
+}
+
+function applyPdcWebsiteStoryGateZh20260621(story) {
+  pdcWebsiteStoryTextKeysZh20260621.forEach((key) => {
+    if (story[key]) story[key] = applyPdcWebsiteTextGateZh20260621(story[key]);
+  });
+  if (Array.isArray(story.metaphorMapZh)) {
+    story.metaphorMapZh.forEach((item) => {
+      if (item?.meaning) item.meaning = applyPdcWebsiteTextGateZh20260621(item.meaning);
+    });
+  }
+  return story;
+}
+
 Object.entries(topLensStoryRewriteOverridesZh20260621).forEach(([storyId, override]) => {
   const target = reviewedLensStoryOverridesZh[storyId];
   if (target) Object.assign(target, override);
+});
+
+Object.entries(reviewedLensStoryOverridesZh).forEach(([storyId, story]) => {
+  if (!topLensStoryRewriteOverridesZh20260621[storyId]) applyPdcWebsiteStoryGateZh20260621(story);
 });
 
 lensStories.forEach((story) => {
@@ -6644,6 +6728,8 @@ const conceptFables = [
     tagsZh: ["服务", "价值", "共创"],
   },
 ];
+
+conceptFables.forEach((story) => applyPdcWebsiteStoryGateZh20260621(story));
 
 const fieldPlainMeanings = {
   "0111-education-science": "How people learn, how teaching works, and how learning systems can be designed.",
@@ -7341,6 +7427,8 @@ const reviewedPublishedStoryOverridesZh = {
     "insightZh": "这场危机最深的成就不是胜利，而是把升级控制在还能谈判的范围内。军事能力、政治信号、历史记忆、语言、时间和公众合法性同时行动，任何单一视角都不足以解释房间里的选择。"
   }
 };
+
+Object.values(reviewedPublishedStoryOverridesZh).forEach((story) => applyPdcWebsiteStoryGateZh20260621(story));
 
 [...stories, ...historicalStories].forEach((story) => {
   const override = reviewedPublishedStoryOverridesZh[story.id];

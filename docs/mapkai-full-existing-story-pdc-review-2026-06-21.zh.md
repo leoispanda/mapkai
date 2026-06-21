@@ -81,6 +81,62 @@ Gate 说明:
 
 本批可作为网站当前一级 story 的本地更新版本，并已补齐内部 `3 PDC review rounds + 2 Rewrite Modify passes`。但它不代表全量 404 个对象已经完成公开发布门槛；本批也未做外部 citation/source pass，因此不生成公开发布证明或 publish instruction。后续仍应按小批次继续 Rewrite Modify，并对历史人物类做更细 source pass。
 
+## Batch 02 Update｜剩余网站文章三轮 PDC + 三轮 Modify
+
+日期: 2026-06-21
+
+本批处理范围为 Batch 01 之后剩余的所有网站可见文章对象，共 154 个:
+
+| 类型 | 数量 | 处理状态 |
+| --- | ---: | --- |
+| remaining `reviewedLensStoryOverridesZh` | 137 | 已接入三轮 PDC text gate |
+| `conceptFables` | 11 | 已接入三轮 PDC text gate |
+| `reviewedPublishedStoryOverridesZh` | 6 | 已接入三轮 PDC text gate |
+
+修改位置:
+
+- `script.js`: 新增 `remainingWebsiteStoryPdcGateZh20260621` 与 `applyPdcWebsiteStoryGateZh20260621`
+- `public/script.js`: 同步新增相同 gate
+
+严格 PDC 流程记录:
+
+| Gate step | 状态 | 结果 |
+| --- | --- | --- |
+| Round 1 Initial PDC Review | 完成 | 批量识别剩余网站文章的模板泄漏、抽象雾气、字段化收束和可读性风险 |
+| Modify 1 | 完成 | `pdcModifyPass1TemplateRulesZh20260621`: 清理 `这个办法并不荒唐`、`这种做法并非没有道理`、`真正留下来的，是`、`通过这个故事我们知道` 等模板句 |
+| Round 2 PDC Re-review | 完成 | 检查 Modify 1 后是否仍有 AI-template、抽象 fog、story-body rescue 风险 |
+| Modify 2 | 完成 | `pdcModifyPass2AbstractRulesZh20260621`: 将 `在这里显出...`、`证据开始发言`、`让证据自己排队` 等抽象收束改回现场动作、记录、比较、核对 |
+| Round 3 Final PDC Review | 完成 | 检查最终对象数、字段完整、脚本一致性、模板命中情况 |
+| Modify 3 | 完成 | `pdcModifyPass3ReadabilityRulesZh20260621`: 清理重复标点和空白，保持页面读取文本稳定 |
+
+本批自检结果:
+
+- `node --check script.js`: 通过。
+- `node --check public/script.js`: 通过。
+- 两个脚本的 gate 接入点一致。
+- 154 个剩余网站文章对象最终高风险模板命中数: 0。
+- 未改 taxonomy、slug、category code、quiz、founder-mode、图片路径或页面结构。
+- 未把 PDC 内部评论写入公开 article text。
+
+docs 草稿扫描:
+
+纳入扫描的正文草稿文件:
+
+- `docs/mapkai-subject-origin-stories.zh.md`
+- `docs/mapkai-submodule-origin-stories-00-01.zh.md`
+- `docs/mapkai-submodule-origin-stories-02.zh.md`
+- `docs/mapkai-submodule-origin-stories-03-10.zh.md`
+- `docs/mapkai-submodule-concept-fables-00.zh.md`
+- `docs/mapkai-submodule-concept-fables-01.zh.md`
+- `docs/mapkai-submodule-concept-fables-02.zh.md`
+- `docs/mapkai-submodule-concept-stories-03-10.zh.md`
+
+扫描结果: 本轮高风险模板句命中数为 0，因此未做无意义替换。docs 中仍有 compact coverage / source-pass / 长度不足等旧风险，不能因为本批 text gate 而自动变成公开 publish-ready 文章。
+
+Gate 说明:
+
+Batch 02 完成的是所有剩余网站可见文章对象的内部 `3 PDC review rounds + 3 Modify passes` 文本门控。由于没有联网做外部 source/citation pass，也没有逐篇人工扩写 compact docs，因此最终状态是 `Approved for local website text update / Source pass deferred`，不是外部引用完备的公开发布证明。
+
 ## Scope
 
 纳入审查的有效故事对象:
