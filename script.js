@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.63";
+const appVersion = "0.1.64";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -133,8 +133,8 @@ const uiText = {
     navLearning: "Learning",
     navAbout: "About",
     storiesEyebrow: "Stories",
-    storiesTitle: "Historical cases. Larger maps.",
-    storiesCopy: "Real events with conflict, debate, and conclusions across multiple knowledge lenses.",
+    storiesTitle: "Each lens begins in a life scene.",
+    storiesCopy: "Image-led stories place each lens inside concrete people, objects, choices, and consequences.",
     conceptFablesEyebrow: "Concept fables",
     conceptFablesTitle: "Advanced ideas, hidden inside fables.",
     conceptFablesCopy: "Each domain hides one graduate-level concept inside a story. Read first; the concept appears only near the end.",
@@ -161,7 +161,7 @@ const uiText = {
     lensStoryNotFoundCopy: "This lens story is not available yet.",
     lensStoryShelfEyebrow: "Knowledge story collection",
     lensStoryShelfTitle: "Each lens opens into a story set.",
-    lensStoryShelfCopy: "Start with a General Entry story, then open a lens to find public fields and practical story paths.",
+    lensStoryShelfCopy: "Each image opens one everyday story for a MapKAI lens.",
     lensStoryShelfLens: "Lens",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
@@ -496,8 +496,8 @@ const uiText = {
     navLearning: "学习路径",
     navAbout: "关于",
     storiesEyebrow: "故事",
-    storiesTitle: "真实历史，更大的知识地图。",
-    storiesCopy: "用真实发生的事件，呈现冲突、讨论过程，以及多重知识视角下的结论。",
+    storiesTitle: "每个 Lens，都从一个生活场景开始。",
+    storiesCopy: "用一张图片和一则故事，把领域的问法放进具体的人、物、选择和后果里。",
     conceptFablesEyebrow: "概念寓言",
     conceptFablesTitle: "把高级概念藏进故事里。",
     conceptFablesCopy: "每个领域先随机挑一个研究生水平概念，用寓言讲完，直到故事末尾才揭示它是什么。",
@@ -524,7 +524,7 @@ const uiText = {
     lensStoryNotFoundCopy: "这个知识故事还没有开放。",
     lensStoryShelfEyebrow: "知识故事集",
     lensStoryShelfTitle: "每个 Lens 里面都有一组故事。",
-    lensStoryShelfCopy: "先从每个领域的总览故事进入，再打开公开小领域和实践故事路径。",
+    lensStoryShelfCopy: "每张图片打开一个 MapKAI Lens 的生活故事。",
     lensStoryShelfLens: "镜头",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
@@ -14101,13 +14101,6 @@ function goToRoute(route, replace = false) {
       history.replaceState({ route: "/" }, "", "/");
     }
   }
-  if (target === "/stories") {
-    target = "/categories";
-    replace = true;
-    if (window.location.protocol !== "file:") {
-      history.replaceState({ route: "/categories" }, "", "/categories");
-    }
-  }
   if (target === "/knowledge-graph") {
     target = "/categories";
     replace = true;
@@ -14289,19 +14282,22 @@ function getCategoryThinking(code) {
 function renderStories() {
   const target = document.getElementById("storiesGrid");
   if (!target) return;
-  const visibleStories = getPublishedStories();
-  target.innerHTML = (document.body.classList.contains("founder-mode") ? visibleStories : visibleStories.slice(0, 3))
-    .map((story) => {
-      const tags = getStoryPublicTags(story).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  target.classList.add("is-lens-story-grid");
+  const visibleStories = baseLensStories;
+  target.innerHTML = visibleStories
+    .map((story, index) => {
+      const category = categories.find((item) => item.code === story.categoryCode);
+      const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
+      const href = `/lens-stories/${story.id}`;
       return `
-        <a class="story-card story-entry-card" href="/stories/${story.id}" data-route="/stories/${story.id}">
-          <div class="story-card-topline">
-            <span>${escapeHtml(story.eventType || t("storiesEyebrow"))}</span>
-          </div>
-          <h2>${escapeHtml(getStoryTitle(story))}</h2>
-          <p>${escapeHtml(getStorySummary(story))}</p>
-          <div class="story-tag-row">${tags}</div>
-          <strong>${escapeHtml(t("readStory"))}</strong>
+        <a class="lens-story-sample-card" href="${href}" data-route="${href}">
+          <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="${index < 3 ? "eager" : "lazy"}" decoding="async" />
+          <span class="lens-story-sample-content">
+            <small>${escapeHtml(t("lensStoryShelfLens"))} · ${escapeHtml(categoryTitle)}</small>
+            <strong>${escapeHtml(getLensStoryValue(story, "title"))}</strong>
+            <em>${escapeHtml(getLensStoryValue(story, "summary"))}</em>
+            <b>${escapeHtml(t("readLensStory"))}</b>
+          </span>
         </a>`;
     })
     .join("");
@@ -14587,8 +14583,6 @@ function renderFounderKnowledgeGraph() {
 }
 
 function renderCategories() {
-  const shelf = document.getElementById("lensStoryShelf");
-  if (shelf) shelf.innerHTML = "";
   const grid = document.getElementById("categoryGrid");
   const categoryButtons = categories
     .map((category) => {
@@ -14604,7 +14598,6 @@ function renderCategories() {
     })
     .join("");
   if (grid) grid.innerHTML = categoryButtons;
-  renderLensStoryShelf();
 }
 
 function renderLensStoryShelf() {
