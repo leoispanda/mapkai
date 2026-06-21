@@ -232,40 +232,42 @@ MapKAI story review workflow:
 ```text
 When rewriting or reviewing MapKAI knowledge stories, use:
 
-- skills/mapkai-story-rewrite/SKILL.md for generation and rewriting.
-- skills/mapkai-story-review/SKILL.md for strict review.
+- skills/mapkai-knowledge-router/SKILL.md to choose the correct writing route.
+- The matching writing skill first: skills/mapkai-story-rewrite/SKILL.md, mapkai-historical-discovery-story, mapkai-concept-fable-story, or mapkai-mechanism-explainer-story.
+- skills/mapkai-story-review-pdc/SKILL.md for mandatory review + modify before publish.
+- skills/mapkai-story-review/SKILL.md remains the strict gate inside PDC decisions.
 
 Workflow:
-1. Rewrite story content.
-2. Review each story with the review skill.
-3. Review decisions are PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL.
-4. For PASS or PASS / LOCAL EDIT, apply the review skill's safe micro-edits.
-5. Any story marked LOCAL EDIT must be locally revised and reviewed again.
-6. Any story marked FAIL must be rewritten again from the writing skill.
-7. Run the review again after revision.
-8. Do not commit or push until all stories are PASS or PASS / LOCAL EDIT and their micro-edits are applied.
-9. Update MAPKAI_MEMORY.md with Changed / Verified / Push status.
+1. Route the article with the knowledge router.
+2. Generate or rewrite with the selected writing skill.
+3. Run MapKAI Story Review PDC before publish.
+4. PDC must review and modify the article, not merely comment on it.
+5. Review decisions are PASS, PASS / LOCAL EDIT, LOCAL EDIT, or FAIL.
+6. For PASS or PASS / LOCAL EDIT, apply the safe micro-edits.
+7. Any story marked LOCAL EDIT must be locally revised and reviewed again through PDC.
+8. Any story marked FAIL must be rewritten again from the writing skill, then sent back through PDC.
+9. No MapKAI article may be published until the writing-skill pass and the PDC review/modify pass are both complete.
+10. Update MAPKAI_MEMORY.md with Changed / Verified / Push status.
 ```
 
 Latest MapKAI story rewrite/review status:
 
 ```text
 Changed:
-- Added reviewed runtime Chinese story overrides in script.js and public/script.js for all 148 effective lens stories.
-- Each effective lens story override now includes storyBodyZh and knowledgePointZh, so the visible story body stays scene/action/turn-based and the abstract knowledge moves to the hidden-knowledge section.
-- Added reviewed Chinese story/insight overrides for 6 published stories, including a revised Broad Street pump ending that removes the awkward hard name reveal.
-- Manually corrected high-risk samples after review: Humboldt/Naturgemalde, Shannon information theory, X-ray imaging, military strategy, service desk, computer-use demo, pharmacy, social work, forensic trace evidence, and private investigation.
-- Updated skills/mapkai-story-rewrite/SKILL.md and skills/mapkai-story-review/SKILL.md with Field Name Quarantine / Contribution Summary Risk rules.
+- Ran MapKAI Story Review PDC over active runtime article/story sources: 148 reviewed lens story overrides, 11 concept fables, and 6 published story overrides.
+- Expanded and modified all 11 runtime concept fables in script.js and public/script.js to publish-ready integrated stories, with storyBodyZh lengths from 700 to 734 Chinese characters.
+- Removed residual template phrases from the runtime story fallback and the Challenger published story override.
+- Updated the standing MapKAI article workflow: route/generate with the appropriate writing skill first, then run mandatory PDC review + modify before publish.
 
 Verified:
 - script.js and public/script.js are byte-for-byte synced.
 - Bundled Node syntax check passed for script.js and public/script.js.
-- Effective runtime review scan found 148 lens stories, 0 forbidden story-pattern hits, 0 too-short visible story bodies, 0 missing question-turn hits, and 0 hidden-knowledge style misses.
-- Published story override scan found 6 reviewed stories, 0 forbidden story-pattern hits, and 0 missing question-turn hits.
+- git diff --check passed.
+- Scoped runtime article scan found 0 forbidden template hits in reviewedLensStoryOverridesZh, conceptFables, and reviewedPublishedStoryOverridesZh in both script.js and public/script.js.
+- Concept fable scan found 11 runtime concept fables, minimum storyBodyZh length 700, maximum length 734.
 
 Push:
-- Founder updated the working rule to push directly after requested changes are complete and verified.
-- Pushed to main in commit 5e98ccd.
+- Not pushed in this turn.
 ```
 
 Latest MapKAI story skill hardening update:
