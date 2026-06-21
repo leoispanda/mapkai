@@ -1,19 +1,37 @@
 # MapKAI 增补型知识架构建议
 
-目的: 保持现有 base 不动，只整理未来可以增加的内容方向。
+目的: 保持现有 internal base 不动，同时明确公开产品层、内部兼容层和未来可以增加的内容方向。
 
 ## 一句话原则
 
-现有 11 大类和 57 个 submodules 是 MapKAI 的稳定主干。新的知识层级、概念、故事、项目，只作为增补层进入，不替换、不重排、不改 code。
+现有 11 大类、57 个 submodules 和 148 个 detailed fields 是 MapKAI 的内部兼容主干。公开产品层优先使用 `11 大类 -> 29 narrow fields -> 80 practical detailed fields`。新的概念、故事、题目、学习路径、项目包，只作为增补层进入，不替换、不重排、不删除现有 code。
 
 ## 保持不动的 Base
 
-保持现有结构:
+保持现有内部兼容结构:
 
 ```text
 11 个大类
   -> 57 个 submodules
-    -> detailed fields / concepts / stories / questions
+    -> 148 个 detailed fields
+```
+
+其中 `not further defined`、`not elsewhere classified`、`Inter-disciplinary programmes`、`Field unknown` 等节点属于行政占位或统计兼容节点，不应默认作为普通用户的知识分类展示。
+
+公开产品层建议使用:
+
+```text
+11 个 knowledge areas
+  -> 29 个 public narrow fields
+    -> 80 个 practical detailed fields
+      -> concepts / stories / questions / learning paths
+```
+
+也就是说:
+
+```text
+11 -> 57 -> 148 = Founder / internal compatibility layer
+11 -> 29 -> 80 = public learning layer
 ```
 
 不建议现在新增 `自然世界 / 人类社会 / 人造系统` 作为正式 Level 0。它们可以暂时作为思考素材或未来导航实验，但不进入 base。
@@ -92,6 +110,375 @@ related_paths:
   - 09 健康与福利
   - 05 自然科学、数学与统计 > 051 Biological and related sciences
 ```
+
+## 父子关系审计规则
+
+外部 prompt 中的 parent-child audit 要求值得吸收，但它在 MapKAI 中应定位为内部治理规则，而不是公开 taxonomy redesign。
+
+### 固定原则
+
+- 不重命名、不重排、不删除现有 11 大类。
+- 不重命名、不重排、不删除现有 57 个 submodules。
+- 每个 submodule 必须有且只有一个 `primary_parent_code`。
+- 跨领域关系只进入 `related_paths`，不能制造多个父级。
+- Project packs 不是 taxonomy submodules。
+- Detailed fields 不应升格为新 submodule，除非它已经存在于当前 base。
+- ISCED-F 2013 只作为 reference logic，不替换 MapKAI 现有 base。
+
+### 审计对象
+
+内部审计对象:
+
+```text
+11 categories
+  -> 57 submodules
+    -> 148 detailed fields
+```
+
+公开展示对象:
+
+```text
+11 categories
+  -> 29 public narrow fields
+    -> 80 practical detailed fields
+```
+
+因此，审计 57 个 submodules 的目的不是让它们全部公开展示，而是确认它们在内部结构中的父子关系、可见性和维护状态。
+
+### 推荐审计字段
+
+```text
+category_code
+category_name_en
+category_name_zh
+submodule_code
+submodule_name_en
+submodule_name_zh
+primary_parent_code
+primary_parent_name
+relationship_status
+issue_type
+relationship_reason
+possible_related_paths
+recommended_action
+visibility_layer
+source_file_path
+notes
+```
+
+`relationship_status` 可以是:
+
+```text
+clear
+ambiguous
+missing_parent
+needs_review
+```
+
+`issue_type` 可以是:
+
+```text
+none
+cross-disciplinary
+too_broad
+too_detailed
+duplicate_or_overlapping
+project_pack_not_submodule
+unclear_name
+administrative_placeholder
+```
+
+`visibility_layer` 可以是:
+
+```text
+public_navigation
+founder_only
+internal_compatibility
+project_pack
+needs_review
+```
+
+### 行政占位项处理
+
+行政占位项不应改名或删除，因为它们保留了官方统计兼容性；但它们应默认隐藏在普通用户导航之外。
+
+处理建议:
+
+- `not further defined`: 标记为 `administrative_placeholder`，用于资料不足或只知道大方向的情况。
+- `not elsewhere classified`: 标记为 `administrative_placeholder`，用于官方分类没有合适位置的特殊内容。
+- `Inter-disciplinary programmes`: 不作为普通 submodule 展示，优先转为 `project_pack` 或 `related_paths`。
+- `Field unknown`: 标记为 `needs_review` 或 `internal_compatibility`，只用于导入、纠错和缺失数据处理。
+
+如确实需要在 Founder 或调试层显示，可以使用用户可懂的辅助标签，但不得替换原始 code 和官方名称:
+
+```text
+not further defined -> Overview / General Entry
+not elsewhere classified -> Other Topics / Special Topics
+Inter-disciplinary programmes -> Cross-field Path / Integrated Studies
+Field unknown -> Needs Review
+```
+
+### Public General Entry 规则
+
+`not further defined` 不应直接作为公开名称展示，但可以为每个大类派生一个公开的 `General Entry`。它不是 undefined，也不是其他分类的垃圾桶，而是这个大类的总论入口，用来承接基础概念、总览故事、入门问题和未来内容生产的起点。
+
+这样做的目的:
+
+- 防止只按 29/80 生产内容时漏掉总论型知识。
+- 给每个大类保留一个清楚的入门页。
+- 让 broad-category stories、概念总览、学习准备内容有稳定位置。
+- 避免把 `not further defined` 暴露给普通用户。
+
+规则:
+
+- Public 名称使用 `General Entry`、`Overview` 或中文 `总览入口`，不使用 `not further defined`。
+- 每个 General Entry 必须有明确限定门类，不能无限收纳所有内容。
+- General Entry 不替代 29 narrow fields 和 80 practical detailed fields。
+- 如果内容能放入具体 detailed field，优先放入具体 detailed field。
+- General Entry 适合放基础框架、总览故事、跨本大类的共同问题、学习前置概念。
+- General Entry 不适合放新兴热门主题、跨领域项目包、已经有明确 field 的专业内容。
+
+推荐字段:
+
+```text
+node_type: general_entry
+visibility_layer: public_navigation
+source_admin_code: original not further defined code if available
+primary_parent_code: category code
+allowed_scope_tags: limited generation lanes
+fallback_rule: use only when no more specific public narrow/detailed field fits
+```
+
+## 11 个 General Entry 的限定门类
+
+### 00 General Studies / 通用学习总览
+
+限定门类:
+
+- 学习如何学习: 元认知、学习策略、自我调节。
+- 基础能力: 读写、数量感、表达、提问。
+- 学习准备: 学习信心、环境、工具、时间安排。
+- 知识导航: 知识地图、迁移、资格与能力信号。
+
+不要放:
+
+- 已经属于具体学科的专业内容。
+- 完整教育学理论，应放 `01 Education`。
+
+### 01 Education / 教育总览
+
+限定门类:
+
+- 学习发生机制: 动机、反馈、支架、最近发展区。
+- 教学与课程: 课程目标、课堂设计、教学方法。
+- 评价与证据: 形成性评价、学习证据、测评公平。
+- 教育系统: 学校、教师、学习环境、教育机会。
+
+不要放:
+
+- 普通个人学习技巧，应回到 `00 General Studies`。
+- 心理治疗或临床心理，应关联 `09 Health & Medicine`。
+
+### 02 Arts & Humanities / 艺术与人文总览
+
+限定门类:
+
+- 意义与解释: 诠释、文本、图像、符号。
+- 创作与媒介: 艺术形式、设计表达、表演与声音。
+- 历史与文化记忆: 传统、遗产、时代语境。
+- 语言与伦理: 语言理解、价值判断、审美经验。
+
+不要放:
+
+- 市场营销设计，应关联 `04 Business & Law`。
+- 纯软件产品设计，应关联 `06 Computing & Technology`。
+
+### 03 Social Sciences / 社会科学总览
+
+限定门类:
+
+- 人与行为: 选择、群体、身份、社会互动。
+- 制度与社会结构: 家庭、组织、国家、公共领域。
+- 公共事实: 调查、统计、新闻、档案、信息传播。
+- 社会变化: 不平等、政策、文化变迁、集体行动。
+
+不要放:
+
+- 单纯商业运营，应放 `04 Business & Law`。
+- 临床健康干预，应放 `09 Health & Medicine`。
+
+### 04 Business & Law / 商业与法律总览
+
+限定门类:
+
+- 组织与管理: 分工、决策、流程、激励。
+- 钱与记录: 会计、金融、税务、风险。
+- 市场与客户: 营销、销售、交易、信任。
+- 规则与责任: 法律、合规、合同、权利义务。
+
+不要放:
+
+- 一般社会制度分析，应关联 `03 Social Sciences`。
+- 纯技术系统实现，应关联 `06 Computing & Technology`。
+
+### 05 Natural Sciences / 自然科学总览
+
+限定门类:
+
+- 观察与实验: 证据、测量、变量、可重复性。
+- 生命系统: 生物、生态、演化、细胞与化学基础。
+- 物质与能量: 化学、物理、地球系统。
+- 数学与模型: 数量、概率、统计、模型解释。
+
+不要放:
+
+- 工程建造应用，应关联 `07 Engineering & Construction`。
+- 医疗照护实践，应关联 `09 Health & Medicine`。
+
+### 06 Computing & Technology / 计算与技术总览
+
+限定门类:
+
+- 信息与数据: 表示、存储、检索、数据质量。
+- 程序与软件: 算法、开发、调试、系统设计。
+- 网络与安全: 通信、权限、隐私、安全风险。
+- 人机使用: 数字工具、交互、自动化、AI 作为工具。
+
+不要放:
+
+- 数学统计原理本身，应关联 `05 Natural Sciences`。
+- 商业产品策略，应关联 `04 Business & Law`。
+
+### 07 Engineering & Construction / 工程与建造总览
+
+限定门类:
+
+- 设计-建造-测试: 需求、方案、原型、验证。
+- 材料与能量: 强度、传热、用能、约束。
+- 机器与系统: 机械、电气、控制、自动化。
+- 制造与基础设施: 工厂、建筑、城市、交通设施。
+
+不要放:
+
+- 纯自然规律解释，应关联 `05 Natural Sciences`。
+- 纯服务运营流程，应关联 `10 Services & Transport`。
+
+### 08 Agriculture & Ecology / 农业与生态总览
+
+限定门类:
+
+- 食物生产: 作物、畜牧、园艺、渔业。
+- 土壤水与资源: 土壤肥力、水、林业、土地管理。
+- 生态关系: 生境、虫害、循环、可持续。
+- 动物与食物健康: 兽医、食品系统、One Health 入口。
+
+不要放:
+
+- 一般环境科学，应关联 `05 Natural Sciences > Environment`。
+- 临床医学和公共卫生主内容，应关联 `09 Health & Medicine`。
+
+### 09 Health & Medicine / 健康与医学总览
+
+限定门类:
+
+- 身体与疾病: 症状、诊断、风险因素、病程。
+- 预防与公共健康: 流行病、疫苗、卫生、健康公平。
+- 治疗与照护: 医学、护理、药学、康复。
+- 福利与支持: 老年照护、儿童服务、社会工作、咨询。
+
+不要放:
+
+- 一般生物学原理，应关联 `05 Natural Sciences`。
+- 职业安全流程，应关联 `10 Services & Transport`。
+
+### 10 Services & Transport / 服务与运输总览
+
+限定门类:
+
+- 服务体验: 等待、接待、前后台、服务恢复。
+- 生活服务: 酒店、餐饮、旅游、体育、休闲。
+- 安全与现场保护: 安保、应急、职业健康安全。
+- 运输与流动: 交通、物流、路径、最后一公里。
+
+不要放:
+
+- 组织管理理论，应关联 `04 Business & Law`。
+- 基础设施建造，应关联 `07 Engineering & Construction`。
+
+## 新知识点生成的 Golden Reference
+
+未来生成新的知识点、概念、故事、题目和学习路径时，golden reference 使用公开学习层，而不是完整内部兼容层。
+
+```text
+Golden reference:
+11 public categories
+  -> 11 General Entries
+  -> 29 public narrow fields
+    -> 80 practical detailed fields
+      -> concepts / stories / questions / learning paths
+```
+
+内部兼容层只用于 code 对齐、父子关系审计、导入缓冲和 Founder 维护:
+
+```text
+Internal reference:
+11 categories -> 57 submodules -> 148 detailed fields
+```
+
+### 生成时的选择顺序
+
+1. 优先匹配 `80 practical detailed fields`。如果知识点能明确放进某个 detailed field，就以它作为 `primary_path`。
+2. 如果知识点是某一大类的基础总论、共同问题、入门框架或学习前置内容，放入该大类的 `General Entry`。
+3. 如果知识点跨多个领域，仍然只选一个 `primary_path`，其他方向进入 `related_paths`。
+4. 如果内容是现实问题、任务、案例合集或跨领域探索路线，设为 `project_pack`，不要升格为 submodule。
+5. 如果找不到合适位置，不新增 category 或 submodule；标记为 `needs_review`，必要时进入内部兼容层的待分拣状态。
+
+### 判断 primary path 的标准
+
+选择 primary path 时，优先看这个知识点最核心的学习对象，而不是表面应用场景:
+
+- 它主要解释什么对象?
+- 它主要依靠什么证据或方法?
+- 学习者学完后，最应该进入哪个 field 继续学习?
+- 如果删掉某个领域，这个知识点是否还成立?
+
+例子:
+
+```text
+AI prompt engineering
+primary_path: 06 Computing & Technology > 061 ICT > 0613 Software and applications development and analysis
+related_paths: 03 Social Sciences; 04 Business & Law; 02 Arts & Humanities
+
+服务恢复
+primary_path: 10 Services & Transport > 101 Personal services or 10 General Entry depending on scope
+related_paths: 04 Business & Law; 03 Social Sciences
+
+贝叶斯思维
+primary_path: 05 Natural Sciences > 054 Mathematics and statistics > 0542 Statistics
+related_paths: 03 Social Sciences; 06 Computing & Technology; 04 Business & Law
+
+一座城市如何运行
+node_type: project_pack
+primary_path: 10 Services & Transport or 07 Engineering & Construction depending on story focus
+related_paths: 03 Social Sciences; 04 Business & Law; 05 Natural Sciences; 07 Engineering & Construction
+```
+
+### Source of Truth 分工
+
+```text
+内容生成的 golden reference:
+docs/mapkai-additive-knowledge-architecture.zh.md
+
+父子关系审计证据:
+docs/taxonomy-parent-child-audit.md
+taxonomy_parent_child_audit.csv
+
+运行时代码来源:
+script.js categories[]
+public/script.js categories[] mirror
+```
+
+也就是说，未来内容生产先看本文件定义的公开学习层和 General Entry 边界；需要确认 code、parent 或 related-path 风险时，再查 taxonomy audit 和运行时代码。
 
 ## 11 大类增补建议
 
@@ -375,18 +762,17 @@ related_paths:
 
 ## 建议优先增加的项目
 
-### 第一优先级: 每个 submodule 的 3 个概念寓言
+### 第一优先级: 29 narrow fields 和 80 practical detailed fields 的概念故事种子
 
 这是最适合 MapKAI 当前阶段的增补。
 
-现在已有 `00` 的 15 篇正式样稿。下一步可以按 submodule 批量推进:
+现在已有 `00` 的 15 篇正式样稿。下一步可以优先按公开产品层推进:
 
 ```text
-01 教育
-02 艺术与人文
-03 社会科学、新闻与信息
+11 categories
+  -> 29 public narrow fields
+    -> 80 practical detailed fields
 ...
-10 服务
 ```
 
 每批都必须:
@@ -401,8 +787,8 @@ related_paths:
 
 后续可以补:
 
-- 每个 submodule 的起源页。
-- 每个 detailed field 的起源故事。
+- 每个 public narrow field 的起源页。
+- 每个 practical detailed field 的起源故事。
 
 ### 第三优先级: 跨学科项目包
 
@@ -447,12 +833,15 @@ story_format
 difficulty_level
 review_status
 review_report
+visibility_layer
+primary_parent_code
 ```
 
 `node_type` 可以是:
 
 ```text
 detailed_field
+general_entry
 concept
 theory
 method
@@ -471,12 +860,14 @@ project_pack
 MapKAI 现在最稳的知识架构是:
 
 ```text
-Base 不动:
-11 大类 -> 57 submodules
+Internal base 不动:
+11 大类 -> 57 submodules -> 148 detailed fields
+
+Public learning layer:
+11 大类 -> 29 narrow fields -> 80 practical detailed fields
 
 增补:
-每个 submodule 增加 detailed fields
-每个 detailed field 增加 concept nodes
+每个 practical detailed field 增加 concept nodes
 每个 concept node 生成对应故事
 跨领域内容做 project packs / related paths
 ```
@@ -484,7 +875,8 @@ Base 不动:
 也就是:
 
 ```text
-现有分类 = 骨架
+内部分类 = 官方兼容骨架
+公开分类 = 用户学习货架
 新增概念 = 血肉
 故事内容 = 体验
 project pack = 探索路线

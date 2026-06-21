@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.59";
+const appVersion = "0.1.60";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -22,6 +22,7 @@ let currentTheme = supportedThemes.includes(localStorage.getItem(themeKey)) ? lo
 let lastVisitStats = null;
 const activeCategorySubmodules = {};
 const activeCategoryFields = {};
+const activeCategoryPublicEntries = {};
 
 const readiness = {
   mapOnly: "Map only",
@@ -160,7 +161,7 @@ const uiText = {
     lensStoryNotFoundCopy: "This lens story is not available yet.",
     lensStoryShelfEyebrow: "Knowledge story collection",
     lensStoryShelfTitle: "Each lens opens into a story set.",
-    lensStoryShelfCopy: "Start with one entry story here, then open a lens to find a focused story for every sublens inside it.",
+    lensStoryShelfCopy: "Start with a General Entry story, then open a lens to find public fields and practical story paths.",
     lensStoryShelfLens: "Lens",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
@@ -381,22 +382,25 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens first, then open its submodules to read focused stories and concept fables.",
+    categoriesCopy: "Choose a lens, start from its General Entry, then open public fields and practical story paths.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
-    categoryCopy: (groups, fields) => `This lens contains ${groups} groups and ${fields} practical fields.`,
-    submoduleLabel: "Module",
-    submoduleIntroStory: "Module overview",
-    detailedFieldLabel: "Detailed field",
-    fieldIntroStory: "Field overview",
+    categoryCopy: (groups, fields) => `This lens has one General Entry, ${groups} public fields, and ${fields} practical detailed fields.`,
+    submoduleLabel: "Public fields",
+    submoduleIntroStory: "Narrow field overview",
+    generalEntryLabel: "General Entry",
+    generalEntryStory: "General overview story",
+    generalEntryScope: "Broad foundations, shared questions, and entry stories for this lens.",
+    detailedFieldLabel: "Practical detailed fields",
+    fieldIntroStory: "Practical field story",
     importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
     openDetailedField: "Open field",
     openStory: "Open story",
     noStoryReady: "This story is still being prepared.",
-    groups: "groups",
-    detailedFields: "detailed fields",
+    groups: "public fields",
+    detailedFields: "practical fields",
     learningEyebrow: "Cognitive Expansion",
     learningTitle: "Learning is a direction for expanding how you think.",
     learningCopy: "MapKAI learning is not a course list. It suggests cognitive directions after exploration reveals a pattern.",
@@ -520,7 +524,7 @@ const uiText = {
     lensStoryNotFoundCopy: "这个知识故事还没有开放。",
     lensStoryShelfEyebrow: "知识故事集",
     lensStoryShelfTitle: "每个 Lens 里面都有一组故事。",
-    lensStoryShelfCopy: "这里保留每个 Lens 的入口故事；进入任一 Lens 后，每个 sublens 都可以打开一个针对性小故事。",
+    lensStoryShelfCopy: "先从每个领域的总览故事进入，再打开公开小领域和实践故事路径。",
     lensStoryShelfLens: "镜头",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
@@ -741,22 +745,25 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "先选择一个 Lens，再进入它的 submodule，阅读对应的介绍故事和概念寓言。",
+    categoriesCopy: "先选择一个领域，从总览入口进入，再打开公开小领域和实践故事路径。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
-    categoryCopy: (groups, fields) => `这个知识镜头包含 ${groups} 个组和 ${fields} 个实践领域。`,
-    submoduleLabel: "模块",
-    submoduleIntroStory: "模块概览",
-    detailedFieldLabel: "细分条目",
-    fieldIntroStory: "条目概览",
+    categoryCopy: (groups, fields) => `这个领域包含 1 个总览入口、${groups} 个公开小领域和 ${fields} 个实践细分领域。`,
+    submoduleLabel: "公开小领域",
+    submoduleIntroStory: "小领域概览",
+    generalEntryLabel: "总览入口",
+    generalEntryStory: "总览故事",
+    generalEntryScope: "这个领域的基础框架、共同问题和入口故事。",
+    detailedFieldLabel: "实践细分领域",
+    fieldIntroStory: "实践领域故事",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
     openDetailedField: "打开条目",
     openStory: "打开故事",
     noStoryReady: "这个故事还在准备中。",
-    groups: "个组",
-    detailedFields: "个具体领域",
+    groups: "个公开小领域",
+    detailedFields: "个实践领域",
     learningEyebrow: "认知扩展",
     learningTitle: "学习是扩展思考方式的方向。",
     learningCopy: "MapKAI 的学习不是课程列表，而是在探索显现模式后，给出认知扩展方向。",
@@ -1365,6 +1372,64 @@ const categories = [
     ],
   },
 ];
+
+const publicCategoryLabels = {
+  en: {
+    "00": "General Studies",
+    "01": "Education",
+    "02": "Arts & Humanities",
+    "03": "Social Sciences",
+    "04": "Business & Law",
+    "05": "Natural Sciences",
+    "06": "Computing & Technology",
+    "07": "Engineering & Construction",
+    "08": "Agriculture & Ecology",
+    "09": "Health & Medicine",
+    "10": "Services & Transport",
+  },
+  zh: {
+    "00": "通用学习",
+    "01": "教育",
+    "02": "艺术与人文",
+    "03": "社会科学",
+    "04": "商业与法律",
+    "05": "自然科学",
+    "06": "计算与技术",
+    "07": "工程与建造",
+    "08": "农业与生态",
+    "09": "健康与医学",
+    "10": "服务与运输",
+  },
+};
+
+const generalEntryScopes = {
+  en: {
+    "00": "learning to learn / basic abilities / readiness / knowledge navigation",
+    "01": "learning mechanisms / teaching and curriculum / evidence / education systems",
+    "02": "meaning and interpretation / media / cultural memory / language and ethics",
+    "03": "people and behavior / institutions / public facts / social change",
+    "04": "organization / money and records / markets / rules and responsibility",
+    "05": "observation and experiment / living systems / matter and energy / models",
+    "06": "information and data / software / networks and security / human-computer use",
+    "07": "design-build-test / materials and energy / machines / infrastructure",
+    "08": "food production / soil and resources / ecology / animal and food health",
+    "09": "bodies and disease / public health / treatment and care / welfare support",
+    "10": "service experience / personal services / safety / transport and movement",
+  },
+  zh: {
+    "00": "学习如何学习 / 基础能力 / 学习准备 / 知识导航",
+    "01": "学习机制 / 教学课程 / 评价证据 / 教育系统",
+    "02": "意义解释 / 创作媒介 / 文化记忆 / 语言伦理",
+    "03": "人与行为 / 制度结构 / 公共事实 / 社会变化",
+    "04": "组织管理 / 钱与记录 / 市场客户 / 规则责任",
+    "05": "观察实验 / 生命系统 / 物质能量 / 数学模型",
+    "06": "信息数据 / 软件程序 / 网络安全 / 人机使用",
+    "07": "设计建造测试 / 材料能量 / 机器系统 / 基础设施",
+    "08": "食物生产 / 土壤资源 / 生态关系 / 动物与食物健康",
+    "09": "身体疾病 / 公共健康 / 治疗照护 / 福利支持",
+    "10": "服务体验 / 生活服务 / 安全保护 / 运输流动",
+  },
+};
 
 const baseLensStories = [
   {
@@ -5598,6 +5663,114 @@ function isAdministrativeCoordinate(title) {
   return administrativeFieldPattern.test(title || "");
 }
 
+function isNotFurtherDefinedTitle(title) {
+  return /not further defined/i.test(title || "");
+}
+
+function isNotElsewhereClassifiedTitle(title) {
+  return /not elsewhere classified/i.test(title || "");
+}
+
+function isInterdisciplinaryTitle(title) {
+  return /inter-disciplinary programmes/i.test(title || "");
+}
+
+function isPublicNarrowFieldGroup(group) {
+  return Boolean(group) &&
+    !isNotFurtherDefinedTitle(group.title) &&
+    !isNotElsewhereClassifiedTitle(group.title) &&
+    !isInterdisciplinaryTitle(group.title);
+}
+
+function getPublicCategoryTitle(categoryOrCode) {
+  const code = typeof categoryOrCode === "string" ? categoryOrCode : categoryOrCode?.code;
+  const labels = currentLanguage === "zh" ? publicCategoryLabels.zh : publicCategoryLabels.en;
+  if (code && labels[code]) return labels[code];
+  if (!categoryOrCode || typeof categoryOrCode === "string") return "";
+  return currentLanguage === "zh" ? categoryOrCode.chineseTitle || categoryOrCode.title : categoryOrCode.title;
+}
+
+function getGeneralEntryScope(categoryCode) {
+  const labels = currentLanguage === "zh" ? generalEntryScopes.zh : generalEntryScopes.en;
+  return labels[categoryCode] || t("generalEntryScope");
+}
+
+function getPublicNarrowFieldGroups(category) {
+  return (category?.groups || []).filter(isPublicNarrowFieldGroup);
+}
+
+function getPracticalFieldRowsForGroup(group) {
+  return (group?.fields || []).filter(([, title]) => !isAdministrativeCoordinate(title));
+}
+
+function getPublicCategoryStats(category) {
+  const narrowFields = getPublicNarrowFieldGroups(category);
+  const practicalFields = narrowFields.reduce((total, group) => total + getPracticalFieldRowsForGroup(group).length, 0);
+  return {
+    narrowCount: narrowFields.length,
+    practicalCount: practicalFields,
+  };
+}
+
+function getGeneralEntrySource(category) {
+  const directOverviewGroup = (category?.groups || []).find((group) => isNotFurtherDefinedTitle(group.title));
+  if (directOverviewGroup) {
+    return {
+      group: directOverviewGroup,
+      field: directOverviewGroup.fields?.[0] || null,
+    };
+  }
+  for (const group of category?.groups || []) {
+    const overviewField = (group.fields || []).find(([, title]) => isNotFurtherDefinedTitle(title));
+    if (overviewField) return { group, field: overviewField };
+  }
+  const firstPublicGroup = getPublicNarrowFieldGroups(category)[0] || category?.groups?.[0] || null;
+  return {
+    group: firstPublicGroup,
+    field: firstPublicGroup?.fields?.[0] || null,
+  };
+}
+
+function getGeneralEntryNode(category) {
+  const source = getGeneralEntrySource(category);
+  const group = source.group;
+  const fieldCode = source.field?.[0] || "";
+  const story = fieldCode
+    ? getLensStoryForField(category.code, group?.code, fieldCode) || getLensStoryForGroup(category.code, group?.code)
+    : getLensStoryForGroup(category.code, group?.code);
+  return {
+    id: `general:${category.code}`,
+    type: "general_entry",
+    categoryCode: category.code,
+    sourceGroupCode: group?.code || "",
+    sourceFieldCode: fieldCode,
+    title: currentLanguage === "zh" ? `${getPublicCategoryTitle(category)}总览` : `${getPublicCategoryTitle(category)} Overview`,
+    label: t("generalEntryLabel"),
+    scope: getGeneralEntryScope(category.code),
+    story,
+  };
+}
+
+function getPublicCategoryEntryNodes(category) {
+  return [
+    getGeneralEntryNode(category),
+    ...getPublicNarrowFieldGroups(category).map((group) => ({
+      id: `narrow:${group.code}`,
+      type: "public_narrow_field",
+      categoryCode: category.code,
+      group,
+    })),
+  ];
+}
+
+function getPublicLensStoryFieldTitle(story, code, fallbackTitle) {
+  const fieldTitle = fallbackTitle || "";
+  if (isNotFurtherDefinedTitle(fieldTitle)) return t("generalEntryLabel");
+  if (isNotElsewhereClassifiedTitle(fieldTitle)) return currentLanguage === "zh" ? "其他待归类" : "Other topics";
+  if (isInterdisciplinaryTitle(fieldTitle)) return currentLanguage === "zh" ? "跨领域路径" : "Cross-field path";
+  return getLensStoryFieldTitle(story, code, fallbackTitle);
+}
+
 function makePlainMeaning(title) {
   return `${title} in everyday life: the situations, tools, people, trade-offs, and decisions this field helps explain.`;
 }
@@ -6079,7 +6252,7 @@ function getNarrowFieldById(narrowFieldId) {
 }
 
 function getAreaDisplayTitle(area) {
-  return currentLanguage === "zh" ? area.titleZh || area.title : area.title;
+  return getPublicCategoryTitle({ code: area.code, title: area.title, chineseTitle: area.titleZh });
 }
 
 function getFieldDisplayTitle(field) {
@@ -6236,7 +6409,7 @@ function getConceptFableList(fable, key) {
 function getConceptFableCategoryTitle(fable) {
   const category = categories.find((item) => item.code === fable.categoryCode);
   if (!category) return fable.categoryCode || "";
-  return getCategoryTitle(category);
+  return getPublicCategoryTitle(category);
 }
 
 function getStoryFieldCodes(story) {
@@ -13474,12 +13647,13 @@ function renderCategories() {
   const categoryButtons = categories
     .map((category) => {
       const href = `/categories/${category.code}`;
-      const fieldCount = category.groups.reduce((total, group) => total + group.fields.length, 0);
+      const stats = getPublicCategoryStats(category);
+      const categoryTitle = getPublicCategoryTitle(category);
       return `
-        <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(getCategoryTitle(category))}">
-          <strong>${escapeHtml(getCategoryTitle(category))}</strong>
+        <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(categoryTitle)}">
+          <strong>${escapeHtml(categoryTitle)}</strong>
           <span>${escapeHtml(getCategoryThinking(category.code))}</span>
-          <small>${category.groups.length} ${escapeHtml(t("groups"))} · ${fieldCount} ${escapeHtml(t("detailedFields"))}</small>
+          <small>1 ${escapeHtml(t("generalEntryLabel"))} · ${stats.narrowCount} ${escapeHtml(t("groups"))} · ${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</small>
         </a>`;
     })
     .join("");
@@ -13497,7 +13671,7 @@ function renderLensStoryShelf() {
   }
   const cards = shelfStories.map((story) => {
     const category = categories.find((item) => item.code === story.categoryCode);
-    const categoryTitle = category ? getCategoryTitle(category) : t("lensStoryShelfLens");
+    const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
     const href = `/lens-stories/${story.id}`;
     return `
       <a class="lens-story-sample-card" href="${href}" data-route="${href}">
@@ -14854,11 +15028,11 @@ function renderCategoryDetail(code) {
   const eyebrow = document.getElementById("categoryDetailEyebrow");
   const title = document.getElementById("categoryDetailTitle");
   const copy = document.getElementById("categoryDetailCopy");
-  const fieldCount = category.groups.reduce((total, group) => total + group.fields.length, 0);
+  const stats = getPublicCategoryStats(category);
   if (eyebrow) eyebrow.textContent = t("categoryScope");
-  if (title) title.textContent = getCategoryTitle(category);
+  if (title) title.textContent = getPublicCategoryTitle(category);
   if (copy) {
-    copy.textContent = t("categoryCopy", category.groups.length, fieldCount);
+    copy.textContent = t("categoryCopy", stats.narrowCount, stats.practicalCount);
   }
 
   renderPassport("categoryPassport", {
@@ -14879,37 +15053,92 @@ function renderCategoryDetail(code) {
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
-  if (!category.groups.length) {
+  const publicEntries = getPublicCategoryEntryNodes(category);
+  if (!publicEntries.length) {
     target.innerHTML = "";
     return;
   }
-  const savedGroupCode = activeCategorySubmodules[category.code];
-  const activeGroup = category.groups.find((group) => group.code === savedGroupCode) || category.groups[0];
+  const savedEntryId = activeCategoryPublicEntries[category.code] || activeCategorySubmodules[category.code];
+  const activeEntry =
+    publicEntries.find((entry) => entry.id === savedEntryId || entry.group?.code === savedEntryId) ||
+    publicEntries[0];
+  activeCategoryPublicEntries[category.code] = activeEntry.id;
+
+  const entryButtons = publicEntries
+    .map((entry) => {
+      const isActive = entry.id === activeEntry.id;
+      if (entry.type === "general_entry") {
+        return `
+          <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
+            <span>${escapeHtml(entry.title)}</span>
+            <small>${escapeHtml(t("generalEntryLabel"))}</small>
+          </button>`;
+      }
+      const groupStory = getLensStoryForGroup(category.code, entry.group.code);
+      const groupTitle = getLensStoryValue(groupStory, "groupTitle") || entry.group.title;
+      const practicalCount = getPracticalFieldRowsForGroup(entry.group).length;
+      return `
+        <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
+          <span>${escapeHtml(groupTitle)}</span>
+          <small>${practicalCount} ${escapeHtml(t("detailedFields"))}</small>
+        </button>`;
+    })
+    .join("");
+
+  if (activeEntry.type === "general_entry") {
+    activeCategorySubmodules[category.code] = activeEntry.sourceGroupCode;
+    const generalStory = activeEntry.story;
+    const generalStoryAction = generalStory
+      ? `<a class="submodule-story-button is-general" href="/lens-stories/${generalStory.id}" data-route="/lens-stories/${generalStory.id}">
+          <span>${escapeHtml(getLensStoryValue(generalStory, "title"))}</span>
+          <em>${escapeHtml(t("generalEntryStory"))}</em>
+        </a>`
+      : `<div class="submodule-story-button is-empty">
+          <span>${escapeHtml(activeEntry.title)}</span>
+          <small>${escapeHtml(t("noStoryReady"))}</small>
+        </div>`;
+    target.innerHTML = `
+      <div class="submodule-browser">
+        <div class="hierarchy-layer module-layer">
+          <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
+          <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
+            ${entryButtons}
+          </div>
+        </div>
+        <section class="submodule-compact-panel" aria-live="polite">
+          <div class="hierarchy-layer nested-field-layer">
+            <span class="hierarchy-layer-label">${escapeHtml(t("generalEntryLabel"))}</span>
+            <p class="general-entry-scope">${escapeHtml(activeEntry.scope)}</p>
+          </div>
+          <div class="field-story-actions">${generalStoryAction}</div>
+        </section>
+      </div>`;
+    return;
+  }
+
+  const activeGroup = activeEntry.group;
   activeCategorySubmodules[category.code] = activeGroup.code;
   const activeGroupStory = getLensStoryForGroup(category.code, activeGroup.code);
+  const practicalFields = getPracticalFieldRowsForGroup(activeGroup);
   const fieldStateKey = `${category.code}:${activeGroup.code}`;
   const savedFieldCode = activeCategoryFields[fieldStateKey];
-  const activeField = savedFieldCode ? activeGroup.fields.find(([fieldCode]) => fieldCode === savedFieldCode) : null;
+  const activeField = savedFieldCode ? practicalFields.find(([fieldCode]) => fieldCode === savedFieldCode) : null;
   const activeFieldCode = activeField?.[0] || "";
   const activeFieldFallbackTitle = activeField?.[1] || "";
   if (savedFieldCode && !activeFieldCode) delete activeCategoryFields[fieldStateKey];
   const activeFieldStory = activeFieldCode ? getLensStoryForField(category.code, activeGroup.code, activeFieldCode) : null;
-  const activeFieldTitle = activeFieldCode ? getLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
-  const submoduleButtons = category.groups
-    .map((group) => {
-      const groupStory = getLensStoryForGroup(category.code, group.code);
-      const groupTitle = getLensStoryValue(groupStory, "groupTitle") || group.title;
-      const isActive = group.code === activeGroup.code;
-      return `
-        <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-submodule-select="${escapeHtml(category.code)}:${escapeHtml(group.code)}" aria-pressed="${isActive}">
-          <span>${escapeHtml(groupTitle)}</span>
-        </button>`;
-    })
-    .join("");
-  const fieldButtons = activeGroup.fields
+  const activeFieldTitle = activeFieldCode ? getPublicLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
+  const groupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
+  const groupIntroStory = activeGroupStory
+    ? `<a class="submodule-story-button is-group" href="/lens-stories/${activeGroupStory.id}" data-route="/lens-stories/${activeGroupStory.id}">
+        <span>${escapeHtml(groupTitle)}</span>
+        <em>${escapeHtml(t("submoduleIntroStory"))}</em>
+      </a>`
+    : "";
+  const fieldButtons = practicalFields
     .map(([fieldCode, fieldTitle]) => {
       const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
-      const displayTitle = getLensStoryFieldTitle(fieldStory || activeGroupStory, fieldCode, fieldTitle);
+      const displayTitle = getPublicLensStoryFieldTitle(fieldStory || activeGroupStory, fieldCode, fieldTitle);
       const isActive = fieldCode === activeFieldCode;
       return `
         <button class="detailed-field-button ${isActive ? "is-active" : ""}" type="button" data-field-select="${escapeHtml(category.code)}:${escapeHtml(activeGroup.code)}:${escapeHtml(fieldCode)}" aria-pressed="${isActive}">
@@ -14934,13 +15163,13 @@ function renderCategoryTree(category) {
         <em>${escapeHtml(t("importantConceptStories"))}</em>
       </a>`
     : "";
-  const fieldStoryActions = `${fieldIntroStory}${conceptFableButton}`.trim();
+  const fieldStoryActions = `${groupIntroStory}${fieldIntroStory}${conceptFableButton}`.trim();
   target.innerHTML = `
     <div class="submodule-browser">
       <div class="hierarchy-layer module-layer">
         <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
         <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
-          ${submoduleButtons}
+          ${entryButtons}
         </div>
       </div>
       <section class="submodule-compact-panel" aria-live="polite">
@@ -14967,7 +15196,7 @@ function renderLensStoryDetail(storyId) {
   }
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
-  const categoryTitle = category ? getCategoryTitle(category) : t("lensStoryShelfLens");
+  const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
   const shouldShowFigure = story.image && !story.imageInheritedFromGroup;
   const backLink = document.getElementById("lensStoryBack");
   if (backLink) {
@@ -14983,7 +15212,7 @@ function renderLensStoryDetail(storyId) {
     .map(([code, title]) => `
       <span>
         <strong class="internal-code">${escapeHtml(code)}</strong>
-        ${escapeHtml(getLensStoryFieldTitle(story, code, title))}
+        ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
       </span>`)
     .join("");
   target.innerHTML = `
@@ -15439,6 +15668,20 @@ document.addEventListener("click", (event) => {
     exitFounderMode();
     return;
   }
+  const publicEntrySelect = event.target.closest("[data-public-entry-select]");
+  if (publicEntrySelect) {
+    event.preventDefault();
+    const [categoryCode, ...entryParts] = publicEntrySelect.dataset.publicEntrySelect.split(":");
+    const entryId = entryParts.join(":");
+    const category = categories.find((item) => item.code === categoryCode);
+    const entry = category ? getPublicCategoryEntryNodes(category).find((item) => item.id === entryId) : null;
+    if (category && entry) {
+      activeCategoryPublicEntries[categoryCode] = entry.id;
+      if (entry.type === "public_narrow_field") activeCategorySubmodules[categoryCode] = entry.group.code;
+      renderCategoryTree(category);
+    }
+    return;
+  }
   const submoduleSelect = event.target.closest("[data-submodule-select]");
   if (submoduleSelect) {
     event.preventDefault();
@@ -15459,6 +15702,7 @@ document.addEventListener("click", (event) => {
     const group = category?.groups.find((item) => item.code === groupCode);
     if (category && group && group.fields.some(([code]) => code === fieldCode)) {
       activeCategorySubmodules[categoryCode] = groupCode;
+      activeCategoryPublicEntries[categoryCode] = `narrow:${groupCode}`;
       activeCategoryFields[`${categoryCode}:${groupCode}`] = fieldCode;
       renderCategoryTree(category);
     }
