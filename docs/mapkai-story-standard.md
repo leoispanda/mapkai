@@ -20,6 +20,20 @@ Every lens story should pass these checks:
 - The story serves one field only. It should not try to cover every related perspective.
 - The Chinese version must read naturally as original writing, not translated documentation.
 
+## Mandatory Review Gate
+
+Every generated MapKAI article, origin page, knowledge story, or concept fable must receive a strict review after writing before it can be treated as final or publication-ready.
+
+Use the relevant writing skill first, then run `mapkai-story-review` against the finished text. For batches, record the review in a report under `docs/` with:
+
+- scope and source files;
+- mechanical checks such as story count, section count, and story-body length;
+- one decision per article or story: `PASS`, `PASS / LOCAL EDIT`, `LOCAL EDIT`, or `FAIL`;
+- common pattern risks across the batch;
+- required revision direction before the next generation or publishing pass.
+
+Do not call a generated article complete only because it has the right sections, fluent prose, or correct concepts. A story is complete only when the story body itself survives review: concrete scene, reasonable old way, repeated friction, changed action or question, late concept or field reveal, and a reflection question with real tension.
+
 ## Avoid
 
 - "This field helps people..." as the whole story.
