@@ -34,6 +34,44 @@ If no, rewrite the fable. The story body must not be a correct concept summary w
 
 The story should make the concept necessary, not merely introduce it.
 
+## Camera Test / Human Story Gate
+
+The `寓言故事` body must read like a story a human would choose to keep reading, not like a concept explanation with scene props.
+
+For every paragraph in the story body, apply the camera test:
+
+```text
+If this paragraph were filmed, what would the camera see or hear?
+```
+
+If the answer is mainly an abstract relation, a structural label, or a writer explanation, rewrite the paragraph before output. Keep abstract analysis for `概念解释`, `隐喻对应`, or `类比边界`.
+
+Avoid printed scaffolding inside the story body, especially phrases that expose the outline instead of showing action:
+
+- "第一处麻烦..."
+- "第二次，问题换了样子..."
+- "这个规矩一开始很合理..."
+- "共同点是..."
+- "这说明..."
+- "后来他们才知道..."
+
+Also avoid vague scale-change sentences that sound natural but do not say what visibly changed:
+
+- "镇子慢慢长大。"
+- "市场逐渐成熟。"
+- "团队变大以后。"
+- "需求越来越复杂。"
+
+Replace them with concrete changes a reader can see, count, or hear: new stalls opening, carts queueing outside, ledgers adding columns, tables filling a hallway, orders doubling, a second shift being added, a warehouse wall being moved, or a tool no longer fitting through a door.
+
+Better pattern:
+
+```text
+三天后，老学徒把一只银壳怀表贴到耳边，听见里面有一点细碎的擦声。他抬头看了看排队等交货的木牌，又把表重新扣上，只在自己的本子角落写了半行字：回头再听。
+```
+
+Do not let concept language leak into the fable before the reveal unless it is a natural word in the scene. Words such as "风险", "团队状态", "暴露", "反馈机制", "系统", "模式", "结构", "学习机制", "认知", or "激励" usually belong after the story body, not inside the early fable.
+
 ## Best For
 
 - Management theory
@@ -189,6 +227,9 @@ Run this check internally before output. Do not print the self-check unless the 
 - The story does not use childish tone, fairy-tale morals, cute over-personification, or academic-paper summary language.
 - The story does not add length through abstract filler such as "the structure became visible" or "the group changed its understanding."
 - The story does not list correct keywords or features instead of staging friction.
+- Each story paragraph passes the camera test: a reader can see or hear an action, object, mark, silence, delay, gesture, tool, room, record, or decision.
+- The story body does not expose outline labels such as "first problem", "second friction", "this rule was reasonable", or similar structural scaffolding.
+- Concept vocabulary stays out of the early fable unless it belongs naturally to the scene.
 
 ### L2 Narrative Movement
 
@@ -214,6 +255,32 @@ If these cannot be answered, do not patch the ending. Add a real middle beat bef
 
 Before the explanation, the reader should feel: "I am following a situation." Near the end, the reader should feel: "Now I see what concept this was." If the reader would instead feel "this is a short example and now comes the label," rewrite for more narrative development.
 
+Also ask whether the story sounds like a human telling a concrete incident. If it sounds like an AI outline with narrative decorations, rewrite the story body even when the conceptual structure is correct.
+
+### L5 Metaphor Strength And Reader Comments
+
+Before output, judge whether the metaphor is the best available metaphor for the concept, not merely an acceptable one.
+
+Ask:
+
+- Does this metaphor make the concept clearer than a direct explanation would?
+- Could a reader say "这个比喻说得不明不白"?
+- Is there a more concrete everyday scene, object, practice, or conflict that would carry the concept better?
+- Does the metaphor's central object return at the end with new meaning?
+
+If the metaphor is only adequate, keep the story if it works, but call out the limitation in `编辑评论（供迭代，不属于正文）` and suggest a better metaphor direction for the next version.
+
+## Leo CEO Product Lens
+
+Before final output, consult `leo-ceo` for the iteration comments. Use it as a product-quality and reader-value lens:
+
+- Is this fable worth a serious reader's time?
+- Does the metaphor help the concept compound in memory, or would a different scene carry more value?
+- Does the story feel like human writing with a real scene, or like safe AI explanation with props?
+- What is the highest-leverage next action: stronger object, fuller middle beat, clearer boundary, sharper reflection, or a different metaphor?
+
+Do not let this lens replace concept accuracy, metaphor mapping, analogy boundary, or the camera test. If the Leo CEO lens identifies that the fable is correct but forgettable, revise before output or name the limitation in `编辑评论（供迭代，不属于正文）`.
+
 ## Hard Rules
 
 - Do not make it childish.
@@ -227,6 +294,9 @@ Before the explanation, the reader should feel: "I am following a situation." Ne
 - Do not reveal the concept too quickly.
 - Do not write a one-scene example followed by a concept label.
 - Do not lengthen the story with abstract sentences such as "the hidden structure became visible" or "the group changed its understanding."
+- Do not keep unfilmable sentences in the fable body when their only job is to explain the structure.
+- Do not print writerly signposts that reveal the outline, such as "the first problem", "the second time", "this shows", or "the common point was".
+- Do not let abstract concept terms do story work before the reveal; show the table, note, tool, silence, repeated error, changed rule, or unfinished action instead.
 - Use visible actions instead: someone returns to the same place, a rule works once but fails again, a quiet person changes behavior, a record is checked twice, a meeting repeats the same silence, a tool is removed slowly, or two groups misunderstand the same message differently.
 
 ## Output Format
@@ -257,4 +327,11 @@ Before the explanation, the reader should feel: "I am following a situation." Ne
 
 反思问题
 {A question that brings the concept back to real thinking.}
+
+编辑评论（供迭代，不属于正文）
+* 比喻清晰度: {Candidly state whether the central metaphor is strong, merely adequate, or weak.}
+* 读者疑惑点: {Name the line, object, or transition that may feel unclear.}
+* 更好的比喻方向: {Suggest one stronger metaphor, scene, object, or everyday case if available.}
+* 下一版优先修改: {Give one concrete rewrite action.}
+* Leo CEO 视角: {Using `leo-ceo`, judge reader value, long-term MapKAI quality, and the highest-leverage next revision.}
 ```

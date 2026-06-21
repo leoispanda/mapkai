@@ -581,6 +581,7 @@ Every scene object must serve the field-origin turn. A ledger, specimen folder, 
 - Avoid compressed expressions that make the reader guess missing logic. The first mention of a key problem should be concrete and literal; a shorter or more poetic version may appear later only after the real situation is clear.
 - Prefer "Women had to walk farther to find firewood for cooking" before any compressed phrase like "firewood became farther away."
 - Prefer "Rain washed away the topsoil, making the land harder to farm" before any compressed phrase like "soil became thinner."
+- Avoid vague scale-change sentences such as "镇子慢慢长大", "市场逐渐成熟", "团队变大以后", or "需求越来越复杂" unless the sentence immediately shows what changed: more carts at the gate, a second warehouse, orders doubling, ledgers adding columns, a queue reaching the street, or a tool no longer fitting a doorway.
 - Use this priority order: clarity first, story movement second, poetic quality last.
 - After drafting, remove the field name and famous person's name. The story should still be readable and worth continuing.
 - If the ending sounds like a definition, rebuild it as a final point of recognition: a person, tool, institution, or repeated practice has made the field's new question visible.
@@ -623,6 +624,13 @@ The one-sentence introduction must create curiosity, not reveal the full abstrac
 {Integrated story, normally 700 to 1100 Chinese characters or comparable length in the selected language. Use 4-7 short paragraphs separated by blank lines. It must include scene, old understanding, tension, action, changed question, evidence-grown new understanding, a concise historically cautious anchor, and a final point of recognition naming the field or discipline. Do not use separate "故事场景", "历史支撑", or "藏在里面的知识" headings unless the user explicitly asks for the old structured format.}
 
 {Optional final reflection question grown from the story's changed question, only if it does not weaken the ending.}
+
+编辑评论（供迭代，不属于正文）
+* 场景清晰度: {Candidly state whether the central scene or metaphor is strong, adequate, or weak.}
+* 读者疑惑点: {Name where the reader may feel the article is vague, too abstract, or not earned.}
+* 更好的场景/比喻方向: {Suggest one stronger object, scene, historical anchor, or metaphor direction if available.}
+* 下一版优先修改: {Give one concrete rewrite action.}
+* Leo CEO 视角: {Using `leo-ceo`, state whether the piece is worth the reader's time, whether it supports long-term MapKAI quality, and the highest-leverage next action.}
 ```
 
 The final point should feel like the story arriving at its name:
@@ -656,6 +664,21 @@ Use these final checks:
 - If a separate "藏在里面的知识" paragraph would be needed to explain what changed, the integrated story has not done its job.
 - If historical facts repair the scene instead of anchoring the earned ending, the story is structurally weak.
 - If the final question does not return to the story's central object, action, or metaphor, replace it.
+
+## Iteration Comments
+
+Always keep `编辑评论（供迭代，不属于正文）` separate from the publishable article.
+
+Before final output, consult `leo-ceo` for the iteration comments. Use it as a product-quality and reader-value lens only. Do not let it override factual safety, historical scene consistency, or field-origin fit.
+
+Use this section to help future revisions, especially when:
+
+- the central metaphor is only adequate rather than excellent;
+- the article may feel "说得不明不白";
+- the historical scene is clear but not yet the best doorway into the field;
+- a different object, case, event, tool, or daily scene would make the knowledge turn sharper.
+
+Do not use this section for praise unless it names a specific reusable strength. A useful comment should help rewrite the next version.
 
 ## Forbidden Patterns
 

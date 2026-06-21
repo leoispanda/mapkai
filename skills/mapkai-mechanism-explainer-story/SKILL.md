@@ -47,6 +47,7 @@ Explain how a concept works. This mode should prioritize mechanism, accuracy, an
 - Make the concept usable, not just memorable.
 - Keep notation minimal and define each symbol when used.
 - State at least one boundary, common mistake, or condition where the concept should not be overextended.
+- Before final output, consult `leo-ceo` for the iteration comments as a product-quality and reader-value lens. Do not let it override mechanism accuracy, notation clarity, or checkable examples.
 
 ## Output Format
 
@@ -76,4 +77,11 @@ Explain how a concept works. This mode should prioritize mechanism, accuracy, an
 
 反思问题
 {A question that helps the reader apply the mechanism.}
+
+编辑评论（供迭代，不属于正文）
+* 机制清晰度: {State whether the mechanism is clear, adequate, or still confusing.}
+* 读者疑惑点: {Name the step, example, or notation that may cause confusion.}
+* 更好的场景/例子方向: {Suggest one stronger concrete example if available.}
+* 下一版优先修改: {Give one concrete rewrite action.}
+* Leo CEO 视角: {Using `leo-ceo`, judge reader value, long-term MapKAI quality, and the highest-leverage next revision.}
 ```

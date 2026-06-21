@@ -199,3 +199,34 @@ Each mode must still follow MapKAI's core standard:
 A MapKAI knowledge story should be clear enough for general readers, serious enough for advanced students, and sharp enough that graduate-level readers can see the deeper knowledge structure.
 
 Clarity first, story movement second, poetic quality last.
+
+## Step 3A: Leo CEO Consultation Layer
+
+For any MapKAI story or article generation task, use `leo-ceo` as an additional product and reader-value judgment layer after the mode-specific draft is structurally complete and before final output.
+
+This layer must not replace MapKAI factual review, mode routing, historical accuracy checks, mechanism accuracy, or concept-fit review. It should answer a narrower question:
+
+```text
+From Leo's CEO/product lens, is this story worth a reader's time, does the metaphor or scene compound into clearer understanding, and what is the highest-leverage next revision?
+```
+
+Apply the Leo CEO lens to the `编辑评论（供迭代，不属于正文）` section, not to the publishable article body unless the lens exposes a real clarity, metaphor, product-value, or reader-trust problem that requires rewriting before output.
+
+## Step 4: Iteration Comments
+
+After generating any MapKAI story or article, include a separate section named:
+
+```text
+编辑评论（供迭代，不属于正文）
+```
+
+Use it as a candid revision layer, not as part of the publishable article. Include 3-5 short comments that help improve the next version:
+
+- whether the core metaphor or historical scene is clear enough;
+- where a reader may feel "说得不明不白";
+- whether a stronger metaphor, object, scene, or case could replace the current one;
+- which paragraph should be rewritten first;
+- one concrete next-revision direction.
+- a `Leo CEO 视角` comment: whether the piece has enough reader value, long-term MapKAI quality, metaphor strength, and concrete next action from Leo's principles.
+
+If the output is meant for publication or export, remove this section after the article passes review.

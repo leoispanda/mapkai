@@ -95,6 +95,16 @@ The classroom no longer looked like a place where children waited for lessons. I
 
 Only after that should the final anchor name the person, approach, or field.
 
+## Leo CEO Product Lens
+
+Before final output, consult `leo-ceo` for the iteration comments. Use it as a product-quality and reader-value lens only:
+
+- Is the historical story worth a reader's time beyond being factually correct?
+- Does the chosen scene help MapKAI's long-term quality, reputation, and reader trust?
+- Is the article's highest-leverage next action a clearer object, stronger evidence pressure, better title promise, or more cautious ending?
+
+Do not let this lens override historical accuracy, time/place consistency, factual safety, or field-origin fit.
+
 ## No Feature Lists In Story Body
 
 Do not put lists of correct features inside the story body.
@@ -143,6 +153,13 @@ Default reader-facing output is an integrated story, not a story plus exposed su
 {Integrated story, normally 700-1100 Chinese characters. Start with time, place, object, and action. Show old question, evidence pressure, new action, changed question, and new understanding. Use 4-7 short paragraphs separated by blank lines unless the user explicitly requests compact single-block output. In the final paragraphs, reveal the person/event and name the field-origin meaning without adding separate "历史支撑" or "藏在里面的知识" headings.}
 
 {Optional reflection question, only if it grows naturally from the ending.}
+
+编辑评论（供迭代，不属于正文）
+* 场景清晰度: {Candidly state whether the central scene is strong, adequate, or weak.}
+* 读者疑惑点: {Name where the reader may feel the story is vague, too abstract, or not earned.}
+* 更好的场景/比喻方向: {Suggest one stronger object, historical anchor, or scene direction if available.}
+* 下一版优先修改: {Give one concrete rewrite action.}
+* Leo CEO 视角: {Using `leo-ceo`, judge reader value, long-term MapKAI quality, and the highest-leverage next revision.}
 ```
 
 End with a point of recognition. For narrow or well-supported origins, a direct sentence such as "这就是{field}的诞生。" can work. For broad disciplines, use cautious wording such as "这成为{field}开始成形的一个入口" or "这常被看作{field}走向独立的开端之一."

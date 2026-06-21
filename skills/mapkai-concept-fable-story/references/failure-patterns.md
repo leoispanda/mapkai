@@ -13,6 +13,7 @@ Use this file when a concept fable feels correct but weak, rushed, generic, or n
 7. Empty Analogy Boundary
 8. Reflection Question Too Broad
 9. Correct Keywords, No Story
+10. Outline Language / Camera Test Failure
 
 ## Failure Pattern 1: Reveal Too Early
 
@@ -286,3 +287,62 @@ One child used charcoal to draw a broken street. Another used scrap wood to buil
 
 - Mark `LOCAL EDIT` if the scene exists but needs expansion.
 - Mark `FAIL` if the story is mostly a feature list or explanation.
+
+## Failure Pattern 10: Outline Language / Camera Test Failure
+
+### Symptoms
+
+- The fable has the right structure, but the story body sounds like an outline.
+- Paragraphs use signposts such as "第一处麻烦", "第二次，问题换了样子", "这个规矩一开始很合理", "共同点是", or "这说明".
+- Paragraphs use vague scale-change sentences such as "镇子慢慢长大", "市场逐渐成熟", "团队变大以后", or "需求越来越复杂" without showing what visibly changed.
+- The story tells the reader the conceptual relation instead of staging a visible action.
+- Abstract concept terms appear before the reveal and do the work the scene should do.
+- If a camera filmed the paragraph, there would be little to see or hear beyond someone "realizing" or the writer explaining.
+
+### Common Example
+
+Weak:
+
+```text
+第一处麻烦出现在一枚齿轮上。新学徒发现了风险，但因为团队状态不安全，所以没有暴露问题。
+```
+
+Problem:
+
+The sentence names the structure and concept too directly. It explains "risk", "team state", and "exposure" instead of letting the reader see the apprentice's hesitation and the object on the table.
+
+Better:
+
+```text
+新学徒把那枚齿轮举到窗边，齿边有一道短得像头发的裂纹。他看了看黑盘里已经排好的三只表，又想起上周自己被笑过“连灰尘都分不清”。最后，他用细砂纸磨了磨裂口，把齿轮装了回去。
+```
+
+Weak:
+
+```text
+镇子慢慢长大，旧轨道就不够用了。
+```
+
+Problem:
+
+The sentence hides the actual change. The reader cannot see whether people, freight, buildings, carts, schedules, tools, or money changed.
+
+Better:
+
+```text
+货车开始排到桥外，账房在登记簿上添了两栏，旧仓库后墙被拆开，才勉强塞下第三排货架。
+```
+
+### Repair
+
+- Replace outline signposts with time, object, action, and choice.
+- Show why the old rule seemed usable through what people actually did.
+- Replace vague growth sentences with visible scale changes: queue length, extra shifts, doubled orders, new rooms, wider tools, heavier loads, or added ledger columns.
+- Move terms such as "risk", "system", "structure", "team state", "feedback", or "learning" into the concept explanation.
+- Run the camera test paragraph by paragraph: name what can be seen or heard.
+
+### Decision Guidance
+
+- Mark `PASS / LOCAL EDIT` if the story structure works but several sentences need camera-test rewriting.
+- Mark `LOCAL EDIT` if the body depends on outline language to make sense.
+- Mark `FAIL` if the story is mainly a concept explanation with props.

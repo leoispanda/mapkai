@@ -27,6 +27,19 @@ Does this story use the correct MapKAI mode for the knowledge type, and does it 
 
 If it is mainly explanation, mark it `FAIL`.
 
+## Leo CEO Product Lens
+
+After the MapKAI review gates are complete, consult `leo-ceo` as a final product and reader-value lens. This is an advisory layer, not a replacement for historical, factual, mechanism, or concept-fit review.
+
+Use the Leo CEO lens to judge:
+
+- whether the story is worth a serious reader's time, not only technically correct;
+- whether the scene or metaphor has enough compounding value for MapKAI's long-term quality bar;
+- whether the piece feels like real human writing rather than safe AI output;
+- whether the next revision should focus on a stronger metaphor, a clearer object, a sharper opening action, or a more useful final reflection.
+
+If the hard MapKAI gates fail, keep the stricter MapKAI label. If the hard gates pass but the Leo CEO lens says the piece is forgettable, vague, or low-upside, mark at most `PASS / LOCAL EDIT` and record the concern in `编辑评论（供迭代，不属于正文）` or the review notes.
+
 Audience standard:
 
 ```text
@@ -313,10 +326,45 @@ Weak signs:
 - The reader understands the explanation but does not feel the concept unfolding.
 - The ending rushes from one problem directly to the concept name.
 - Extra length comes from abstract explanation rather than visible actions.
+- The story body exposes the outline with phrases like "第一处麻烦", "第二次，问题换了样子", "这个规矩一开始很合理", "共同点是", or "这说明".
+- Paragraphs contain correct but unfilmable analysis that belongs in `概念解释`, not the fable body.
+- Abstract concept terms leak into the early story, such as "风险", "团队状态", "暴露", "反馈机制", "系统", "模式", "结构", "学习机制", "认知", or "激励", before the concrete scene has earned them.
 
 For generated concept fables, the `寓言故事` section should normally be about 700-1100 Chinese characters or 600-900 English words unless the user explicitly asked for compact output. Do not apply this as a mechanical word-count rule; use it as a depth signal. If the concept fable is structurally correct but too short or rushed, mark it `PASS / LOCAL EDIT` or `LOCAL EDIT` depending on severity, with the main recommendation: "expand narrative development before concept reveal."
 
 Reviewer question: Did the reader follow a small world until the concept became necessary, or did the writer give a short illustrative example and then name the concept?
+
+### -1B-1. Concept Fable Camera Test / Human Story Gate
+
+Apply this check to the `寓言故事` body before giving a clean `PASS`.
+
+For each paragraph, ask:
+
+```text
+If this paragraph were filmed, what would the camera see or hear?
+```
+
+Good signs:
+
+- A person handles a tool, record, note, object, surface, room, schedule, or unfinished task.
+- A silence, delay, repeated action, changed rule, returned object, or visible mark carries the tension.
+- The paragraph lets the reader infer why the old way worked or failed instead of announcing it.
+- The sentence could be remembered as a scene, not only as a correct idea.
+
+Weak signs:
+
+- The paragraph mainly explains the story structure: "first friction", "second pressure", "the common pattern", "the deeper issue".
+- The writer tells the reader the rule was reasonable instead of showing why people followed it.
+- The writer names abstract forces before the reveal instead of staging them through objects and action.
+- The story sounds like an AI-generated outline wearing narrative details.
+
+Decision rule:
+
+- If the concept fable is structurally correct but contains several outline-signpost or unfilmable sentences, do not mark clean `PASS`; use `PASS / LOCAL EDIT` at best.
+- If the story body depends on those abstract sentences to make sense, mark `LOCAL EDIT`.
+- If removing the explanation leaves no readable story, mark `FAIL`.
+
+Reviewer question: Is this a story a human could read for its own movement, or a well-structured concept example?
 
 ### -1C. Concept Fable Four-Layer Review
 
@@ -329,6 +377,8 @@ Apply this layered review to **Concept Fable Story** mode. Name the failed layer
 - The reveal happens near the end of the story.
 - The story section has enough space to develop a small world, normally 700-1100 Chinese characters or 600-900 English words unless compact output was requested.
 - The story avoids childish tone, fairy-tale morals, cute over-personification, academic-paper summary language, and abstract filler.
+- The story body passes the camera test: each paragraph contains something concrete a reader can see or hear.
+- The story body does not leak outline scaffolding such as "第一处麻烦", "第二次", "共同点", or "这个规矩合理" as a substitute for action.
 
 If L1 fails because the output format or reveal timing is broken, mark `LOCAL EDIT` or `FAIL` depending on whether the existing body can be repaired locally.
 
@@ -353,6 +403,8 @@ If L3 fails because the allegory could fit many unrelated concepts, mark `LOCAL 
 **L4 Reader Effect**
 
 Ask whether a reader can follow the situation before knowing the concept, then experience a late "click" when the concept is named. If the piece feels like a short example with a label, mark `PASS / LOCAL EDIT` for mild underdevelopment or `LOCAL EDIT` for a rushed story that needs a fuller middle.
+
+Also ask whether the piece reads like a human story rather than a tidy AI explanation. If the scene is correct but the prose keeps announcing the outline, mark `PASS / LOCAL EDIT` or `LOCAL EDIT` and request camera-test rewriting.
 
 Reviewer question: Which layer failed: hard format/reveal, narrative movement, concept fit, or reader effect?
 
@@ -951,8 +1003,14 @@ Risky compression examples:
 - "Numbers began to speak."
 - "The problem changed position."
 - "The chart forced the truth out."
+- "镇子慢慢长大。"
+- "市场逐渐成熟。"
+- "团队变大以后。"
+- "需求越来越复杂。"
 
 These are not always forbidden, but the first mention of a key problem must be literal and clear.
+
+Vague growth or complexity sentences must be flagged unless the next clause immediately specifies what changed in visible terms: more carts at the gate, a second warehouse, new stalls opening, orders doubling, ledgers adding columns, a queue reaching the street, a tool no longer fitting a doorway, or a schedule needing another shift.
 
 Better pattern:
 
@@ -963,6 +1021,8 @@ Example:
 
 - First: "Women had to walk farther to find firewood for cooking."
 - Later: "By then, firewood had become a longer road."
+- Weak: "镇子慢慢长大。"
+- Better: "货车开始排到桥外，账房在登记簿上添了两栏，旧仓库后墙被拆开，才勉强塞下第三排货架。"
 
 If a compressed phrase appears before the concrete situation is clear, mark it as a sentence-level issue. If the story relies on many compressed phrases instead of actions and evidence, mark `LOCAL EDIT` or `FAIL`.
 
@@ -1136,6 +1196,13 @@ Required Fixes
 * Fix 2:
 * Fix 3:
 
+编辑评论（供迭代，不属于正文）
+* 比喻/场景清晰度:
+* 读者疑惑点:
+* 更好的替代方向:
+* 下一版优先修改:
+* Leo CEO 视角:
+
 Final Recommendation
 {Small edit, local rewrite, or full rewrite.}
 ```
@@ -1212,11 +1279,35 @@ Field Fit Notes
 Most Important Revision Direction
 {Give only one main direction.}
 
+编辑评论（供迭代，不属于正文）
+* 比喻/场景清晰度: {Candidly state whether the central metaphor, object, or scene is strong, adequate, or weak.}
+* 读者疑惑点: {Name the most likely reader confusion in plain language.}
+* 更好的替代方向: {Suggest one stronger metaphor, scene, object, historical anchor, or case if available.}
+* 下一版优先修改: {Give one concrete rewrite action.}
+* Leo CEO 视角: {Using `leo-ceo`, state whether the piece is worth the reader's time, whether it supports long-term MapKAI quality, and the highest-leverage next action.}
+
 Final Recommendation
 {State whether the story needs a small edit, local rewrite, or full rewrite.}
 ```
 
 If there are no main problems, write `None` under that section rather than inventing issues.
+
+## Iteration Comment Rule
+
+Every review should include `编辑评论（供迭代，不属于正文）` unless the user explicitly asks for publication-only output.
+
+This section should be written like useful reader/editor comments below an article. It may say the article is structurally passable but the metaphor is not the best available one. Do not hide weak metaphor fit behind a positive `PASS`.
+
+Use comments to capture issues such as:
+
+- "这个比喻说得不明不白";
+- "核心物件没有承载概念";
+- "可以用更好的日常场景";
+- "读者看完知道概念名，但没有真正感到概念";
+- "下一版应该换比喻，而不是只润色句子".
+- "Leo CEO 视角认为它正确但不够值得读，需要换更高价值的场景或比喻".
+
+When the central metaphor is weak but the structure is otherwise working, mark at most `PASS / LOCAL EDIT` and recommend metaphor replacement or local rewrite.
 
 ## Batch Output Format
 
