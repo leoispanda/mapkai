@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-001",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 10,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "000-general-starter-course",
+    "011-dewey-lab-school",
+    "020-family-photo-meaning",
+    "030-neighbor-notice-board",
+    "040-kitchen-repair-budget",
+    "050-balcony-plant-observation",
+    "061-phone-backup-help",
+    "070-wobbly-shelf-repair",
+    "080-community-garden-seedlings",
+    "090-medicine-schedule-care"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-06-22",
+  "appVersion": "0.1.66",
+  "sourceFile": "script.js",
+  "totalItems": 165,
+  "batchSize": 10,
+  "batches": [
+    {
+      "batchId": "batch-001",
+      "file": "batch-001.json",
+      "count": 10,
+      "firstId": "000-general-starter-course",
+      "lastId": "090-medicine-schedule-care"
+    },
+    {
+      "batchId": "batch-002",
+      "file": "batch-002.json",
+      "count": 10,
+      "firstId": "100-rainy-event-service-desk",
+      "lastId": "028-black-mountain-studio"
+    },
+    {
+      "batchId": "batch-003",
+      "file": "batch-003.json",
+      "count": 10,
+      "firstId": "029-lomax-field-recorder",
+      "lastId": "051-yogurt-on-the-counter"
+    },
+    {
+      "batchId": "batch-004",
+      "file": "batch-004.json",
+      "count": 10,
+      "firstId": "052-stream-after-rain",
+      "lastId": "078-community-kitchen-build"
+    },
+    {
+      "batchId": "batch-005",
+      "file": "batch-005.json",
+      "count": 10,
+      "firstId": "079-unusual-repair-material",
+      "lastId": "098-after-discharge-plan"
+    },
+    {
+      "batchId": "batch-006",
+      "file": "batch-006.json",
+      "count": 10,
+      "firstId": "099-neighborhood-listening-chair",
+      "lastId": "0113-teacher-training-without-subject-specialisation"
+    },
+    {
+      "batchId": "batch-007",
+      "file": "batch-007.json",
+      "count": 10,
+      "firstId": "0114-teacher-training-with-subject-specialisation",
+      "lastId": "0222-history-and-archaeology"
+    },
+    {
+      "batchId": "batch-008",
+      "file": "batch-008.json",
+      "count": 10,
+      "firstId": "0223-philosophy-and-ethics",
+      "lastId": "0319-social-and-behavioural-sciences-not-elsewhere-classified"
+    },
+    {
+      "batchId": "batch-009",
+      "file": "batch-009.json",
+      "count": 10,
+      "firstId": "0321-journalism-and-reporting",
+      "lastId": "0417-work-skills"
+    },
+    {
+      "batchId": "batch-010",
+      "file": "batch-010.json",
+      "count": 10,
+      "firstId": "0419-business-and-administration-not-elsewhere-classified",
+      "lastId": "0533-physics"
+    },
+    {
+      "batchId": "batch-011",
+      "file": "batch-011.json",
+      "count": 10,
+      "firstId": "0539-physical-sciences-not-elsewhere-classified",
+      "lastId": "0713-electricity-and-energy"
+    },
+    {
+      "batchId": "batch-012",
+      "file": "batch-012.json",
+      "count": 10,
+      "firstId": "0714-electronics-and-automation",
+      "lastId": "0731-architecture-and-town-planning"
+    },
+    {
+      "batchId": "batch-013",
+      "file": "batch-013.json",
+      "count": 10,
+      "firstId": "0732-building-and-civil-engineering",
+      "lastId": "0916-pharmacy"
+    },
+    {
+      "batchId": "batch-014",
+      "file": "batch-014.json",
+      "count": 10,
+      "firstId": "0917-traditional-and-complementary-medicine-and-therapy",
+      "lastId": "1014-sports"
+    },
+    {
+      "batchId": "batch-015",
+      "file": "batch-015.json",
+      "count": 10,
+      "firstId": "1015-travel-tourism-and-leisure",
+      "lastId": "01-the-bridge-too-short"
+    },
+    {
+      "batchId": "batch-016",
+      "file": "batch-016.json",
+      "count": 10,
+      "firstId": "02-the-tapestry-without-a-front",
+      "lastId": "well-runs-low"
+    },
+    {
+      "batchId": "batch-017",
+      "file": "batch-017.json",
+      "count": 5,
+      "firstId": "bread-price-debate",
+      "lastId": "cuban-missile-crisis-excomm"
+    }
+  ],
+  "sourceCollections": {
+    "lensStories": 148,
+    "conceptFables": 11,
+    "stories": 3,
+    "historicalStories": 3
+  }
+}

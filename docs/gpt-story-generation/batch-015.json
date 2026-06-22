@@ -1,0 +1,290 @@
+{
+  "batchId": "batch-015",
+  "instruction": "把本 batch 的每个 item 改写成 MapKAI 可导入正文包。只返回 JSON，保持 id 不变。",
+  "items": [
+    {
+      "id": "1015-travel-tourism-and-leisure",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1015-travel-tourism-and-leisure"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "101",
+      "groupTitleZh": "个人服务",
+      "fieldCode": "1015",
+      "fieldTitleZh": "个人服务",
+      "currentTitleZh": "一张火车票里的旅行社",
+      "currentSummaryZh": "一次禁酒会旅行让旅游从个人冒险，变成组织路线、价格和体验的服务业。",
+      "currentSceneZh": "1841 年英国，一个木工出身的传教士组织数百人乘火车去参加集会，必须处理票价、时间和秩序。",
+      "currentStoryBodyZh": "他面对的不是远方风景，而是让一群普通人安全、便宜、有计划地抵达目的地。火车票、团体价格、行程安排、住宿、说明和陪同服务慢慢连成一个新行业。旅行、旅游与休闲在这里不再只是富人的个人游历，而成为被组织出来的体验：路线怎样设计，风险怎样降低，地方文化怎样被介绍，游客自由又怎样依赖别人提前安排。如果只按旧路走，把服务看成完成一次接待、保护、运输或回应，事情看上去也能继续。可路径、等待和接触点没有那么顺从：等待、空间、信息、权限和身体感受会决定服务是否成立。于是下一步不能只是补一句解释，而要发展出流程设计、前后台协作、现场证据和体验校正。最后留在现场的，不只是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Thomas Cook，他组织早期团体旅行并创办旅行服务企业，成为现代旅游业和旅行社服务的重要先驱。今天旅游服务也在平衡这件事：让人感觉自由，同时用路线、信息、保险和应急安排托住看不见的风险。后来留下来的不只是领域名称，当时真正被迫形成的，是围绕流程设计、前后台协作、现场证据和体验校正的一套工作。",
+      "currentKnowledgePointZh": "旅行、旅游与休闲关注目的地、行程、体验设计、文化接触、安全和服务协调。",
+      "currentReflectionQuestionZh": "旅行里的自由，为什么常常依赖别人已经设计好的秩序？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Thomas Cook 1841 年组织 Leicester 到 Loughborough 的团体火车旅行，后来发展旅行社业务，提供团体游、票务、住宿和旅行安排，被视为现代旅游业先驱之一。\n现有标签：旅游、旅行社、服务\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1019-personal-services-not-elsewhere-classified",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1019-personal-services-not-elsewhere-classified"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "101",
+      "groupTitleZh": "个人服务",
+      "fieldCode": "1019",
+      "fieldTitleZh": "个人服务",
+      "currentTitleZh": "一个陌生人替他看见标签",
+      "currentSummaryZh": "一款志愿协助服务让个人服务跨过标准分类，进入数字、残障支持和日常小困难之间。",
+      "currentSceneZh": "21 世纪，一个视障用户在厨房拿起一罐食品，却不确定标签上写的到底是什么。",
+      "currentStoryBodyZh": "传统服务窗口很难覆盖这种小而急的需求：不是医疗，不是旅游，不是家政，也不是普通客服。一个人只需要另一个可靠的人通过手机摄像头看一眼，告诉他颜色、文字、按钮或路线。这样的服务把志愿者、视频通话、无障碍和个人日常支持连接起来，也提醒我们服务价值不一定来自复杂流程，有时来自在正确时刻补上一点人的感知。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。最后留在现场的，不只是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Hans Jorgen Wiberg，他创立 Be My Eyes，使志愿者通过视频协助视障者处理日常视觉问题，成为未另分类个人服务的现代案例。今天数字服务越多，这类小帮助越重要：技术真正有温度的时候，常常是它补上了一个人刚好缺少的感知。",
+      "currentKnowledgePointZh": "未另分类的个人服务收纳改善个人生活但不适合标准服务类别的实践。",
+      "currentReflectionQuestionZh": "哪一种帮助小到不容易命名，却刚好让一个人能继续独立生活？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Hans Jorgen Wiberg 创立 Be My Eyes，这是一款通过视频连接志愿者和视障用户的应用，用于识别物品、标签、路线等日常视觉任务，是数字无障碍服务的重要案例。\n现有标签：个人服务、无障碍、数字服务\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1021-community-sanitation",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1021-community-sanitation"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "102",
+      "groupTitleZh": "卫生与职业健康服务",
+      "fieldCode": "1021",
+      "fieldTitleZh": "卫生与职业健康服务",
+      "currentTitleZh": "贫民区的排水沟",
+      "currentSummaryZh": "一份关于劳动者卫生的报告，让社区卫生从个人干净转向城市基础设施问题。",
+      "currentSceneZh": "19 世纪英国工业城市里，一个改革者调查工人居住区，看到污水、拥挤住房和疾病紧紧相连。",
+      "currentStoryBodyZh": "他发现，责怪穷人不爱干净很容易，却忽略了他们生活在怎样的街道、水源和排污条件里。污水横流、垃圾堆积、饮水污染和住房拥挤，让疾病传播成为结构性后果。他的报告推动公共卫生改革，也带着当时阶级眼光和治理控制的问题，需要被批判阅读。但社区卫生的核心已经清楚：干净不是只靠个人习惯，而要靠供水、排水、垃圾处理、住房和公共制度。这不是旧办法完全失灵的时刻。把服务看成完成一次接待、保护、运输或回应，本来就能让人先行动；真正顶住它的，是等待、空间、信息、权限和身体感受会决定服务是否成立。当这个卡点反复出现，新的问题变成了：整条路径怎样让人安全、清楚并被真正看见。一门领域不是先从名称开始，而是先从流程设计、前后台协作、现场证据和体验校正这些可练习的动作开始。这个人叫 Edwin Chadwick，他的 1842 年《Report on the Sanitary Condition of the Labouring Population》推动英国公共卫生和城市卫生改革。",
+      "currentKnowledgePointZh": "社区卫生关注废弃物、水、清洁、公共空间、住房条件和群体健康。",
+      "currentReflectionQuestionZh": "当一个地方不干净，你会先责怪个人，还是先看系统给了他们什么条件？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Edwin Chadwick 1842 年发表关于英国劳动人口卫生状况的报告，强调排水、供水、垃圾和住房条件对疾病的影响，对 Public Health Act 1848 等公共卫生改革有重要推动作用。\n现有标签：社区卫生、排水、公共卫生\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1022-occupational-health-and-safety",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1022-occupational-health-and-safety"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "102",
+      "groupTitleZh": "卫生与职业健康服务",
+      "fieldCode": "1022",
+      "fieldTitleZh": "卫生与职业健康服务",
+      "currentTitleZh": "铅尘落在工人的衣服上",
+      "currentSummaryZh": "一个医生走进工厂，把职业病从个人不幸变成可调查、可预防的工作场所风险。",
+      "currentSceneZh": "20 世纪初的美国，一位女医生进入铅厂、橡胶厂和油漆车间，询问工人头痛、麻木和中毒症状。",
+      "currentStoryBodyZh": "她没有只在诊室等待病人，而是去看病人工作的地方。毒物在哪里产生，粉尘怎样被吸入，通风是否足够，工人有没有防护，雇主是否隐瞒风险？这些问题让职业健康与安全成为一门现场科学。工作场所的伤害不是“粗心”两个字能解释的，它常常来自材料、设备、节奏、权力和缺乏监管。如果只按旧路走，把服务看成完成一次接待、保护、运输或回应，事情看上去也能继续。可路径、等待和接触点没有那么顺从：等待、空间、信息、权限和身体感受会决定服务是否成立。于是下一步不能只是补一句解释，而要发展出流程设计、前后台协作、现场证据和体验校正。后来的课程会给它命名，当时更急迫的是把流程设计、前后台协作、现场证据和体验校正变成可重复的做法。这个人叫 Alice Hamilton，她开创美国职业医学和工业毒理调查传统，推动工作场所健康与安全改革。今天的职业安全仍要抵抗一句轻飘飘的责怪：如果危险总在同一处重复，问题很可能已经写进流程和权力关系里。",
+      "currentKnowledgePointZh": "职业健康与安全关注工作场所风险、预防、设备、防护、制度和安全行为。",
+      "currentReflectionQuestionZh": "如果一个工伤反复出现，它是个人失误，还是现场在重复制造危险？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Alice Hamilton 是美国职业医学先驱，研究铅、汞、苯等工业毒物对工人的影响，1919 年成为 Harvard Medical School 首位女性教员之一，对职业健康和工业安全影响深远。\n现有标签：职业健康、安全、工业毒理\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1029-hygiene-and-occupational-health-services-not-elsewhere-classified",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1029-hygiene-and-occupational-health-services-not-elsewhere-classified"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "102",
+      "groupTitleZh": "卫生与职业健康服务",
+      "fieldCode": "1029",
+      "fieldTitleZh": "卫生与职业健康服务",
+      "currentTitleZh": "工厂火灾后的出口门",
+      "currentSummaryZh": "一场灾难让卫生与职业安全边界上的法规、劳动权利和公共责任同时浮现。",
+      "currentSceneZh": "1911 年纽约 Triangle Shirtwaist Factory 火灾后，一个年轻社会改革者站在悲痛和愤怒之间，追问为什么门会被锁上。",
+      "currentStoryBodyZh": "那场火灾暴露的不只是一个工厂的事故，而是逃生通道、工时、童工、消防检查、雇主责任和政府监管的失败。她后来参与调查和改革，推动工厂安全、最低工资、失业保险等劳动保护制度。未另分类的卫生与职业健康服务常常出现在这种交界处：它不是单一卫生措施，也不是单个安全培训，而是法律、工作现场、公共行政和人的生命价值如何被重新安排。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。最后留在现场的，不只是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Frances Perkins，她在 Triangle 火灾后推动劳动与安全改革，后来成为美国首位女性内阁部长并参与 New Deal 社会保障制度建设。后来留下来的不只是领域名称，当时真正被迫形成的，是围绕流程设计、前后台协作、现场证据和体验校正的一套工作。",
+      "currentKnowledgePointZh": "未另分类的卫生与职业健康服务处理混合型公共卫生、工作安全、法规和现场保护实践。",
+      "currentReflectionQuestionZh": "一个出口门被锁上时，锁住的是通道，还是整个社会对劳动者生命的想象？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Frances Perkins 目睹 1911 年 Triangle Shirtwaist Factory fire 后投入劳动安全改革，后任 Franklin D. Roosevelt 劳工部长，推动 Social Security Act、工时和劳动保护等 New Deal 政策。\n现有标签：职业安全、劳动、法规\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1031-military-and-defence",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1031-military-and-defence"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "103",
+      "groupTitleZh": "安全服务",
+      "fieldCode": "1031",
+      "fieldTitleZh": "安全服务",
+      "currentTitleZh": "胜利之前先计算代价",
+      "currentSummaryZh": "一部古老兵书让军事与国防从勇武叙事，转向战略、信息和避免无谓消耗。",
+      "currentSceneZh": "古代中国的战乱时代，一个军事思想者看见军队、粮草、地形、间谍和君主情绪如何决定生死。",
+      "currentStoryBodyZh": "他并不把战争写成单纯勇敢。旧式叙事容易问谁更强、谁更敢冲锋；这个问法在战乱中并非毫无用处，却遮住了更冷的事实：粮草、地形、间谍、士气、君主情绪和政治目标会一起决定生死。真正的将领要先计算代价，保存士气，使用信息，避免被愤怒驱动，也要知道不战而屈人之兵有时高于硬碰硬。地图、粮仓、行军速度和敌我判断，都会比一时勇猛更早决定结果。问题因此从“怎样取胜”，变成“什么行动值得付出代价，什么胜利会把国家拖向更大的危险”。军事与国防在这个现场露出自己的方法边界：力量只是其中一项，组织、补给、情报、训练、克制和风险准备共同决定安全。古代文本不能替代现代伦理和国际法，但它提醒后来的军事学习：知道怎样行动重要，知道怎样避免无谓行动同样重要。这个人叫 Sun Tzu，他的《The Art of War》成为军事战略、组织竞争和安全思考史上的经典文本。这些判断听起来像书上的格言，实际都落在很硬的现场：粮车能走多远，士兵能否休整，情报是否可靠，撤退会不会比进攻更能保存力量。军事与国防因此不是崇拜冲突，而是在冲突可能发生前训练代价判断。",
+      "currentKnowledgePointZh": "军事与国防关注安全、组织、战略、训练、资源、情报和风险准备。",
+      "currentReflectionQuestionZh": "真正的防御只是拥有力量，还是知道什么时候不该使用力量？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Sun Tzu 及《The Art of War》通常被置于中国春秋战国军事思想传统中，强调战略、情报、地形、士气、欺敌和避免无谓战争，对军事与战略思想影响广泛。\n现有标签：军事、国防、战略\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "lens_story"
+    },
+    {
+      "id": "1032-protection-of-persons-and-property",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1032-protection-of-persons-and-property"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "103",
+      "groupTitleZh": "安全服务",
+      "fieldCode": "1032",
+      "fieldTitleZh": "安全服务",
+      "currentTitleZh": "每一次接触都会留下痕迹",
+      "currentSummaryZh": "一个法医学实验室让保护人身与财产不只靠巡逻，也靠证据和可验证的调查。",
+      "currentSceneZh": "20 世纪初的法国里昂，一个年轻法医学者在实验室里研究灰尘、纤维、玻璃和指纹。",
+      "currentStoryBodyZh": "他相信犯罪现场不是沉默的。鞋底带走泥土，衣袖留下纤维，玻璃碎片交换微粒，人与物只要接触就会互相留下痕迹。可这些痕迹把问题推到另一层：如果判断只靠经验和供词，遗漏、逼供和偏见也会一起进入结论。于是保护人身与财产不只是更快反应，还包括保存现场、分析证据、重建事件，让判断经得起法庭检验。灰尘、纤维和玻璃碎屑的价值，不在于它们戏剧化，而在于它们迫使调查者说明每一步推理从哪里来。问题从“谁做了这件事”，变成“什么证据链能说明它，又怎样防止调查权力伤到无辜的人”。证据工作必须受程序和权利约束，否则技术会变成新的不公。这个人叫 Edmond Locard，他建立 Lyon police laboratory，并提出 Locard's exchange principle，成为现代法医学和犯罪调查的重要人物。这让实验室和街头第一次被紧紧连在一起：调查者不能只说自己相信什么，还要说明样本怎样取得、怎样保存、怎样排除污染。保护财产和人身安全，因此开始依赖证据链，也依赖对调查者本人的约束。",
+      "currentKnowledgePointZh": "人身与财产保护关注风险识别、预防、证据、响应和安全环境设计。",
+      "currentReflectionQuestionZh": "如果每一次接触都会留下痕迹，安全判断为什么必须同时尊重证据和权利？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Edmond Locard 是法国法医学先驱，1910 年建立 Lyon 警方实验室，提出接触会产生物质交换的 Locard's exchange principle，对现代犯罪现场调查和法医学影响深远。\n现有标签：安全、法医学、证据\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "1039-security-services-not-elsewhere-classified",
+      "sourceCollection": "lensStories",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "lensStories",
+        "id": "1039-security-services-not-elsewhere-classified"
+      },
+      "categoryCode": "10",
+      "categoryTitleZh": "服务",
+      "groupCode": "103",
+      "groupTitleZh": "安全服务",
+      "fieldCode": "1039",
+      "fieldTitleZh": "安全服务",
+      "currentTitleZh": "罪犯变成了侦探",
+      "currentSummaryZh": "一个身份复杂的人把犯罪经验、调查、档案和私人安保混成新的安全实践。",
+      "currentSceneZh": "19 世纪巴黎，一个曾多次入狱又熟悉地下世界的人，开始替警方辨认骗术、伪装和犯罪网络。",
+      "currentStoryBodyZh": "他的经历并不适合简单歌颂，也充满道德复杂性。旧式治安依赖巡逻、告密和熟人判断，确实能处理一部分街头犯罪；可伪装、骗术、地下网络和跨区域流动让这种办法越来越不够。正因为熟悉犯罪现场的语言和习惯，他能从细节里看出伪装，建立档案，使用卧底和线人，把调查从单纯巡逻变成信息工作。档案和线人能让风险更早显形，也会制造滥用权力、侵犯隐私和诱导犯罪的危险。后来他创办私人侦探机构，使安全服务出现警务、商业调查、情报和个人委托之间的灰色地带。问题从“怎样抓人”，变成“哪些信息可以合法使用，谁有权调查，隐私和安全的边界在哪里”。未另分类的安全服务正需要审慎处理这种边界：有效经验可能有用，但只有被法律、伦理和监督约束后，才不会伤到人。这个人叫 Eugene Francois Vidocq，他从罪犯转为侦探并创办侦探机构，被视为现代侦探和私人调查史上的重要人物。这种灰色地带正是“未另分类”的原因：它既不像普通警务，也不像单纯商业服务，而是在保护、调查、情报和委托之间移动。每向前一步，都要同时问有效性、合法性和被调查者的权利。",
+      "currentKnowledgePointZh": "未另分类的安全服务收纳那些跨越调查、保护、情报、现场支持和非标准风险管理的实践。",
+      "currentReflectionQuestionZh": "当安全工作依赖灰色经验时，谁来划定有效与越界的边界？",
+      "currentMetaphorMapZh": [],
+      "knownFacts": "已有事实支持：Eugene Francois Vidocq 是法国犯罪者、警方线人和侦探，曾领导 Surete 相关工作并创办私人侦探机构。他长期影响刑侦档案、卧底实践和侦探形象。\n现有标签：安全服务、侦探、调查\n来源集合：lensStories",
+      "uncertainInfo": "未附外部来源全文；不得新增精确日期、地点、人物对话、私人心理、因果断言或历史首次性。若现有事实不足，请在 sourceWarnings 标出 NEEDS_SOURCE_CHECK。",
+      "preferredMode": "historical_discovery_story"
+    },
+    {
+      "id": "00-the-library-of-mirrors",
+      "sourceCollection": "conceptFables",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "conceptFables",
+        "id": "00-the-library-of-mirrors"
+      },
+      "categoryCode": "00",
+      "categoryTitleZh": "通用课程与资格",
+      "groupCode": "",
+      "groupTitleZh": "",
+      "fieldCode": "0031",
+      "fieldTitleZh": "通用课程与资格",
+      "currentTitleZh": "镜子图书馆",
+      "currentSummaryZh": "一个旅人不是靠收集更多地图，而是靠看见自己怎样迷路，学会了学习。",
+      "currentSceneZh": "",
+      "currentStoryBodyZh": "一个旅人走进一座城，城里的每一道门都通向一间不同的图书馆。第一天，他抄下所有地图，把街名写满袖口，可黄昏时仍绕回同一座喷泉。这个办法并不愚蠢，陌生城市总要先有地图；只是他每次迷路，都只怪地图不够详细。第二天，他背熟名路的名字，专挑宽阔大道走，却在第三个广场被相似的拱门骗了方向。第三天，他带上指南针，还是在没有标记的小巷前退了回来，因为他一看见空白就急着换路。老馆员没有给他新地图，只递来一本薄册子，让他每晚写三行：原本以为要去哪里，实际在哪儿转弯，是什么标记让自己改变判断。旅人起初很恼火，觉得这不像学习，倒像承认笨拙。第四天，他照着一位商人的路线走，上午很顺，下午却又迷路；薄册子显示他不是不会看地图，而是每逢人多的路口就跟着最自信的人走。第五天，他刻意慢下来，在每个路口先写下自己的判断，再走过去验证。第六天，他把旧地图摊在桌上，给每条失败路线标上不同颜色，才发现自己常在看不懂符号时假装已经懂了，也常在疲惫时选择最近的宽路。可一周后，小册子旁边出现了更清楚的重复痕迹：他总在陌生符号前跳过，总把宽路当作正确，总在地图空白处放弃。于是他白天仍找路，夜里却开始比较自己的找法；第二周，他故意走进一条没标注的小巷，在墙角画下新记号，再回头检查自己为什么敢继续。第三周，老馆员让他带一个新来的孩子进城。旅人没有先递地图，而是让孩子先说出自己的猜测，再在转错弯后一起回看判断从哪里偏掉。到第三周末，别人问他哪张地图最好，他没有立刻回答，而是先问对方最近总在哪一种地方迷路。城市没有变简单，地图也没有突然增多，改变的是他开始能一边寻找，一边看见自己怎样寻找。临近最后一扇门时，他给这种能力起了名字：元认知调节，也就是监控自己的理解、选择策略，并在学习失效时主动改路。",
+      "currentKnowledgePointZh": "元认知调节指学习者对自己学习过程的计划、监控、评估和调整能力。研究生水平的学习不只是“知道更多内容”，更是知道自己的注意力、困惑、证据和策略正在怎样运作。",
+      "currentReflectionQuestionZh": "当你卡住时，你只是寻找更多资料，还是也会观察自己是怎样寻找的？",
+      "currentMetaphorMapZh": [
+        {
+          "storyElement": "城市",
+          "knowledgeElement": "庞大的学习世界，路径很多但不自动清晰。"
+        },
+        {
+          "storyElement": "抄来的地图",
+          "knowledgeElement": "只收集信息，却没有监控自己如何使用信息。"
+        },
+        {
+          "storyElement": "空白小册子",
+          "knowledgeElement": "反思记录、策略记录和学习过程监控。"
+        },
+        {
+          "storyElement": "转错的弯",
+          "knowledgeElement": "学习失败本身也可以成为可分析的数据。"
+        }
+      ],
+      "knownFacts": "概念名：元认知调节\n概念解释：元认知调节指学习者对自己学习过程的计划、监控、评估和调整能力。研究生水平的学习不只是“知道更多内容”，更是知道自己的注意力、困惑、证据和策略正在怎样运作。\n现有标签：学习、自我监控、策略\n来源集合：conceptFables",
+      "uncertainInfo": "寓言可虚构场景，但不得虚构真实人物、真实机构、真实历史事件或精确来源。若要引用学者或理论来源，请只使用输入中已给出的概念名。",
+      "preferredMode": "concept_fable"
+    },
+    {
+      "id": "01-the-bridge-too-short",
+      "sourceCollection": "conceptFables",
+      "sourceLocator": {
+        "file": "script.js",
+        "collection": "conceptFables",
+        "id": "01-the-bridge-too-short"
+      },
+      "categoryCode": "01",
+      "categoryTitleZh": "教育",
+      "groupCode": "",
+      "groupTitleZh": "",
+      "fieldCode": "0111",
+      "fieldTitleZh": "教育",
+      "currentTitleZh": "太短的桥",
+      "currentSummaryZh": "山村里的老师发现，真正的帮助必须停在刚刚好的距离。",
+      "currentSceneZh": "",
+      "currentStoryBodyZh": "山村里的孩子每天踩着石头过溪去上学。水浅时，最小的孩子也能跟着哥哥姐姐走；雨后溪水涨起来，她走到中间就停住，手里的书包被水声吓得越攥越紧。木匠说，干脆每天早上把她抱过去。这个办法很快，鞋也不会湿，可三天后，孩子一看见溪水还是不会动。商人又说，修一座从岸到岸的大桥更省心。大桥让所有人安全通过，却也让孩子再也不用看水流、石头和深浅。老师没有拆桥，也没有抱她。她只在最难的一段放一块窄木板，让孩子自己选第一块和最后一块石头，自己站在旁边，只在孩子犹豫太久时提醒一句：先看水流在哪里分开。第一周，孩子还要扶着老师的手肘。第二周，木板短了一尺，她开始自己数石头。第三周，木板只剩溪中央一小段，她滑了一下，老师没有立刻拉她，而是让她回头说出刚才哪一步太急。村民担心她摔伤，提议把木板重新加长，老师却把每天的过溪记录摊开：什么时候孩子只需要一句提醒，什么时候需要手扶，什么时候已经能自己判断。第四周，老师把木板放在岸边，只给她一根短树枝，让她试着先探深浅；孩子走到一半又停住，回头看老师，老师只点了点最亮的那块石头。第五周涨水更急，老师没有取消练习，而是把任务改小：今天只练前三块石头，明天再接上中段。后来，木板被收走，孩子仍走得慢，却能把安全的石头一块块说给后面的孩子听。又过几天，另一个小孩在溪边停住，她没有把人抱过去，而是把树枝递过去，问他第一步想踩哪里。老师也把自己的话越说越少：先从拉住手臂，变成提醒水流，再变成只等孩子说出判断。村里人这才看见，有用的不是最长的桥，而是会按能力退后的支持。支持没有消失，它变成提示、工具、等待和让学习者说出判断的空间。这就是最近发展区与支架式教学：在学习者独自能做到和在帮助下能做到之间，放入临时支撑，再随着能力形成逐步撤离。",
+      "currentKnowledgePointZh": "最近发展区指学习者“独立完成水平”和“在帮助下可完成水平”之间的空间。支架式教学则是在这个空间里提供临时支持，并随着能力形成逐步撤离。",
+      "currentReflectionQuestionZh": "你在哪件事上正在“抱着别人过河”，而不是搭一块以后可以撤掉的木板？",
+      "currentMetaphorMapZh": [
+        {
+          "storyElement": "溪流",
+          "knowledgeElement": "真实有难度的学习任务。"
+        },
+        {
+          "storyElement": "被抱过去",
+          "knowledgeElement": "过度帮助，任务消失了，学习也消失了。"
+        },
+        {
+          "storyElement": "永久大桥",
+          "knowledgeElement": "绕开学习者发展的替代方案。"
+        },
+        {
+          "storyElement": "逐渐变短的木板",
+          "knowledgeElement": "随能力增长而撤离的临时支持。"
+        }
+      ],
+      "knownFacts": "概念名：最近发展区与支架式教学\n概念解释：最近发展区指学习者“独立完成水平”和“在帮助下可完成水平”之间的空间。支架式教学则是在这个空间里提供临时支持，并随着能力形成逐步撤离。\n现有标签：教育、指导、学习支持\n来源集合：conceptFables",
+      "uncertainInfo": "寓言可虚构场景，但不得虚构真实人物、真实机构、真实历史事件或精确来源。若要引用学者或理论来源，请只使用输入中已给出的概念名。",
+      "preferredMode": "concept_fable"
+    }
+  ]
+}
