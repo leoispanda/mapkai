@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-002",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 20,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "100-rainy-event-service-desk",
+    "001-birkbeck-evening-lecture",
+    "002-braille-raised-dots",
+    "003-carnegie-speaking-class",
+    "009-brownsea-scout-camp",
+    "018-reggio-emilia-school",
+    "021-bauhaus-workshop",
+    "022-petrarch-mountain-letter",
+    "023-rosetta-cartouche",
+    "028-black-mountain-studio"
+  ]
+}
