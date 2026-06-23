@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.74";
+const appVersion = "0.1.76";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -9463,6 +9463,56 @@ Object.values(reviewedPublishedStoryOverridesZh).forEach((story) => applyPdcWebs
   applyGptWebsiteStoryOverrideZh20260622(story);
 });
 
+const publishedStoryLensRoutesByStoryId = applyPublishedStoriesToLensStories();
+
+function getLensStoryForPublishedStory(story) {
+  const fieldIds = getStoryFieldCodes(story);
+  return fieldIds
+    .map((fieldId) => lensStories.find((lensStory) => lensStory.id === fieldId))
+    .find(Boolean) || null;
+}
+
+function applyPublishedStoryToLensStory(story, lensStory) {
+  Object.assign(lensStory, {
+    title: story.title || lensStory.title,
+    titleZh: story.titleZh || lensStory.titleZh,
+    summary: story.summary || lensStory.summary,
+    summaryZh: story.summaryZh || lensStory.summaryZh,
+    scene: story.scene || lensStory.scene,
+    sceneZh: story.sceneZh || lensStory.sceneZh,
+    storyBody: story.storyBody || lensStory.storyBody,
+    storyBodyZh: story.storyBodyZh || lensStory.storyBodyZh,
+    knowledgePoint: story.knowledgePoint || story.insight || lensStory.knowledgePoint,
+    knowledgePointZh: story.knowledgePointZh || story.insightZh || lensStory.knowledgePointZh,
+    reflectionQuestion: story.reflectionQuestion || story.miniQuestion || lensStory.reflectionQuestion,
+    reflectionQuestionZh: story.reflectionQuestionZh || story.miniQuestionZh || lensStory.reflectionQuestionZh,
+    tags: story.coreConcepts || lensStory.tags,
+    sourceStoryId: story.id,
+    sourceStoryRoute: `/stories/${story.id}`,
+    migratedFromCaseStory: true,
+  });
+}
+
+function applyPublishedStoriesToLensStories() {
+  const routesByStoryId = {};
+  [...stories, ...historicalStories]
+    .filter((story) => story.isPublished)
+    .forEach((story) => {
+      const lensStory = getLensStoryForPublishedStory(story);
+      if (!lensStory) return;
+      applyPublishedStoryToLensStory(story, lensStory);
+      routesByStoryId[story.id] = `/lens-stories/${lensStory.id}`;
+    });
+  return routesByStoryId;
+}
+
+function getHiddenStoriesRedirectRoute(route) {
+  if (route === "/stories") return "/categories";
+  const match = route.match(/^\/stories\/([a-z0-9-]+)$/);
+  if (!match) return "";
+  return publishedStoryLensRoutesByStoryId[match[1]] || "/categories";
+}
+
 function saveFounderStories(nextStories) {
   localStorage.setItem(founderStoriesKey, JSON.stringify(nextStories));
 }
@@ -16313,6 +16363,14 @@ function goToRoute(route, replace = false) {
       history.replaceState({ route: "/categories" }, "", "/categories");
     }
   }
+  const hiddenStoriesRedirect = getHiddenStoriesRedirectRoute(target);
+  if (hiddenStoriesRedirect) {
+    target = hiddenStoriesRedirect;
+    replace = true;
+    if (window.location.protocol !== "file:") {
+      history.replaceState({ route: target }, "", target);
+    }
+  }
   const visibleTarget = target;
   document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
   setFounderMode(isFounderMode());
@@ -16352,7 +16410,6 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/categories" && (
         visibleTarget.startsWith("/categories") ||
         visibleTarget.startsWith("/lens-stories/") ||
-        visibleTarget.startsWith("/stories/") ||
         visibleTarget.startsWith("/concept-fables")
       )) ||
       (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
