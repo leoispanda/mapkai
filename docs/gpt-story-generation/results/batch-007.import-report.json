@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-007",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0114-teacher-training-with-subject-specialisation",
+    "0119-education-not-elsewhere-classified",
+    "0211-audio-visual-techniques-and-media-production",
+    "0212-fashion-interior-and-industrial-design",
+    "0213-fine-arts",
+    "0214-handicrafts",
+    "0215-music-and-performing-arts",
+    "0219-arts-not-elsewhere-classified",
+    "0221-religion-and-theology",
+    "0222-history-and-archaeology"
+  ]
+}

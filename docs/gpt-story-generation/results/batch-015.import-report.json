@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-015",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "1015-travel-tourism-and-leisure",
+    "1019-personal-services-not-elsewhere-classified",
+    "1021-community-sanitation",
+    "1022-occupational-health-and-safety",
+    "1029-hygiene-and-occupational-health-services-not-elsewhere-classified",
+    "1031-military-and-defence",
+    "1032-protection-of-persons-and-property",
+    "1039-security-services-not-elsewhere-classified",
+    "00-the-library-of-mirrors",
+    "01-the-bridge-too-short"
+  ]
+}

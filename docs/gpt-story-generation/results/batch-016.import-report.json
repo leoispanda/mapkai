@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-016",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "02-the-tapestry-without-a-front",
+    "03-the-village-paths-that-walked-back",
+    "04-the-market-with-three-doors",
+    "05-the-lighthouse-and-the-fog",
+    "06-the-islands-with-one-ledger",
+    "07-the-mill-that-listened-to-wind",
+    "08-the-orchard-that-kept-notebooks",
+    "09-the-town-with-three-fevers",
+    "10-the-restaurant-with-no-menu",
+    "well-runs-low"
+  ]
+}

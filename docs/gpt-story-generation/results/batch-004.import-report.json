@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-004",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "052-stream-after-rain",
+    "053-kitchen-ice-and-steam",
+    "054-shared-bill-pattern",
+    "058-school-air-quality",
+    "059-mystery-stain",
+    "068-repairing-the-club-website",
+    "071-flickering-hall-light",
+    "072-soup-that-travels",
+    "073-crosswalk-at-school",
+    "078-community-kitchen-build"
+  ]
+}

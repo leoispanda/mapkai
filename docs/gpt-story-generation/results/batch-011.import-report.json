@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-011",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0539-physical-sciences-not-elsewhere-classified",
+    "0541-mathematics",
+    "0542-statistics",
+    "0611-computer-use",
+    "0612-database-and-network-design-and-administration",
+    "0613-software-and-applications-development-and-analysis",
+    "0619-information-and-communication-technologies-icts-not-elsewhere-classified",
+    "0711-chemical-engineering-and-processes",
+    "0712-environmental-protection-technology",
+    "0713-electricity-and-energy"
+  ]
+}

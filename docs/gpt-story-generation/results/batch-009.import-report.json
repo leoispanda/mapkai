@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-009",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0321-journalism-and-reporting",
+    "0322-library-information-and-archival-studies",
+    "0329-journalism-and-information-not-elsewhere-classified",
+    "0411-accounting-and-taxation",
+    "0412-finance-banking-and-insurance",
+    "0413-management-and-administration",
+    "0414-marketing-and-advertising",
+    "0415-secretarial-and-office-work",
+    "0416-wholesale-and-retail-sales",
+    "0417-work-skills"
+  ]
+}

@@ -5233,6 +5233,7 @@ dd,
   color: #334155;
   font-size: 1rem;
   line-height: 1.85;
+  white-space: pre-line;
 }
 
 .story-tag-row {

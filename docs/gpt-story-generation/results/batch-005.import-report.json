@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-005",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "079-unusual-repair-material",
+    "081-balcony-tomato-plan",
+    "082-fallen-branch-trail",
+    "083-fish-market-morning",
+    "084-dog-that-stopped-eating",
+    "088-farm-visit-class",
+    "089-unusual-animal-garden",
+    "091-cough-in-the-waiting-room",
+    "092-key-under-the-mat",
+    "098-after-discharge-plan"
+  ]
+}

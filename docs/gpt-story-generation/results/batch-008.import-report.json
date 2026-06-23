@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-008",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0223-philosophy-and-ethics",
+    "0229-humanities-except-languages-not-elsewhere-classified",
+    "0231-language-acquisition",
+    "0232-literature-and-linguistics",
+    "0239-languages-not-elsewhere-classified",
+    "0311-economics",
+    "0312-political-sciences-and-civics",
+    "0313-psychology",
+    "0314-sociology-and-cultural-studies",
+    "0319-social-and-behavioural-sciences-not-elsewhere-classified"
+  ]
+}

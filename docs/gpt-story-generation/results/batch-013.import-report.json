@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-013",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0732-building-and-civil-engineering",
+    "0811-crop-and-livestock-production",
+    "0812-horticulture",
+    "0819-agriculture-not-elsewhere-classified",
+    "0911-dental-studies",
+    "0912-medicine",
+    "0913-nursing-and-midwifery",
+    "0914-medical-diagnostic-and-treatment-technology",
+    "0915-therapy-and-rehabilitation",
+    "0916-pharmacy"
+  ]
+}

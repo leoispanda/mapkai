@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-014",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0917-traditional-and-complementary-medicine-and-therapy",
+    "0919-health-not-elsewhere-classified",
+    "0921-care-of-the-elderly-and-of-disabled-adults",
+    "0922-child-care-and-youth-services",
+    "0923-social-work-and-counselling",
+    "0929-welfare-not-elsewhere-classified",
+    "1011-domestic-services",
+    "1012-hair-and-beauty-services",
+    "1013-hotel-restaurants-and-catering",
+    "1014-sports"
+  ]
+}

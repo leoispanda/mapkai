@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-010",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0419-business-and-administration-not-elsewhere-classified",
+    "0511-biology",
+    "0512-biochemistry",
+    "0519-biological-and-related-sciences-not-elsewhere-classified",
+    "0521-environmental-sciences",
+    "0522-natural-environments-and-wildlife",
+    "0529-environment-not-elsewhere-classified",
+    "0531-chemistry",
+    "0532-earth-sciences",
+    "0533-physics"
+  ]
+}

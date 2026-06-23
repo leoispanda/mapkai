@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-006",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "099-neighborhood-listening-chair",
+    "101-haircut-before-wedding",
+    "102-clean-hands-station",
+    "103-night-watch-call",
+    "104-missed-connection",
+    "108-festival-operations-plan",
+    "109-service-that-had-no-name",
+    "0111-education-science",
+    "0112-training-for-pre-school-teachers",
+    "0113-teacher-training-without-subject-specialisation"
+  ]
+}

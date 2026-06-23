@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-003",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "029-lomax-field-recorder",
+    "031-bus-stop-price",
+    "032-rumor-before-the-storm",
+    "038-community-data-project",
+    "039-unusual-community-signal",
+    "041-cafe-closing-sheet",
+    "042-bicycle-deposit",
+    "048-pop-up-market-rules",
+    "049-strange-side-business",
+    "051-yogurt-on-the-counter"
+  ]
+}

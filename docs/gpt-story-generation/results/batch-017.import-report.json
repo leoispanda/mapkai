@@ -1,0 +1,17 @@
+{
+  "batchId": "batch-017",
+  "importedAt": "2026-06-22",
+  "itemCount": 5,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "bread-price-debate",
+    "school-curriculum-debate",
+    "broad-street-pump",
+    "challenger-launch-decision",
+    "cuban-missile-crisis-excomm"
+  ]
+}

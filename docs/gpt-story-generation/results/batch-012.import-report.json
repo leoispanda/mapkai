@@ -1,0 +1,22 @@
+{
+  "batchId": "batch-012",
+  "importedAt": "2026-06-22",
+  "itemCount": 10,
+  "overrideCount": 165,
+  "validation": {
+    "errors": [],
+    "warnings": []
+  },
+  "ids": [
+    "0714-electronics-and-automation",
+    "0715-mechanics-and-metal-trades",
+    "0716-motor-vehicles-ships-and-aircraft",
+    "0719-engineering-and-engineering-trades-not-elsewhere-classified",
+    "0721-food-processing",
+    "0722-materials-glass-paper-plastic-and-wood",
+    "0723-textiles-clothes-footwear-and-leather",
+    "0724-mining-and-extraction",
+    "0729-manufacturing-and-processing-not-elsewhere-classified",
+    "0731-architecture-and-town-planning"
+  ]
+}
