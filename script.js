@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.71";
+const appVersion = "0.1.72";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -9414,7 +9414,7 @@ function getCharacterName(id) {
 }
 
 function getPublishedStories() {
-  const builtInStories = historicalStories.filter((story) => story.isPublished);
+  const builtInStories = [...stories, ...historicalStories].filter((story) => story.isPublished);
   if (!document.body.classList.contains("founder-mode")) return builtInStories;
   return [...builtInStories, ...getFounderStories().filter((story) => story.isPublished)];
 }
@@ -16487,24 +16487,53 @@ function getCategoryThinking(code) {
 function renderStories() {
   const target = document.getElementById("storiesGrid");
   if (!target) return;
-  target.classList.add("is-lens-story-grid");
-  const visibleStories = getActiveBaseLensStories();
-  target.innerHTML = visibleStories
-    .map((story, index) => {
+  target.classList.remove("is-lens-story-grid");
+  const lensStoryEntries = lensStories.map((story) => {
       const category = categories.find((item) => item.code === story.categoryCode);
       const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
-      const href = `/lens-stories/${story.id}`;
-      return `
-        <a class="lens-story-sample-card" href="${href}" data-route="${href}">
-          <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="${index < 3 ? "eager" : "lazy"}" decoding="async" />
-          <span class="lens-story-sample-content">
-            <small>${escapeHtml(t("lensStoryShelfLens"))} · ${escapeHtml(categoryTitle)}</small>
-            <strong>${escapeHtml(getLensStoryValue(story, "title"))}</strong>
-            <em>${escapeHtml(getLensStoryValue(story, "summary"))}</em>
-            <b>${escapeHtml(t("readLensStory"))}</b>
-          </span>
-        </a>`;
-    })
+    return {
+      href: `/lens-stories/${story.id}`,
+      typeLabel: currentLanguage === "zh" ? "知识故事" : "Lens story",
+      scopeLabel: categoryTitle,
+      title: getLensStoryValue(story, "title"),
+      summary: getLensStoryValue(story, "summary"),
+      tags: getLensStoryList(story, "tags").slice(0, 3),
+      sortKey: `${story.categoryCode || "99"}:${story.groupCode || ""}:${story.fieldCodes?.[0] || ""}:${getLensStoryValue(story, "title")}`,
+    };
+  });
+  const conceptEntries = conceptFables.map((fable) => ({
+    href: `/concept-fables/${fable.id}`,
+    typeLabel: currentLanguage === "zh" ? "概念寓言" : "Concept fable",
+    scopeLabel: getConceptFableCategoryTitle(fable),
+    title: getConceptFableValue(fable, "title"),
+    summary: getConceptFableValue(fable, "summary"),
+    tags: getConceptFableList(fable, "tags").slice(0, 3),
+    sortKey: `${fable.categoryCode || "99"}:concept:${getConceptFableValue(fable, "title")}`,
+  }));
+  const caseEntries = getPublishedStories().map((story) => ({
+    href: `/stories/${story.id}`,
+    typeLabel: currentLanguage === "zh" ? "案例故事" : "Case story",
+    scopeLabel: story.eventType || t("storiesEyebrow"),
+    title: getStoryTitle(story),
+    summary: getStorySummary(story),
+    tags: getStoryPublicTags(story).slice(0, 3),
+    sortKey: `zz:${story.eventType || ""}:${getStoryTitle(story)}`,
+  }));
+  const visibleStories = [...lensStoryEntries, ...conceptEntries, ...caseEntries]
+    .filter((entry) => entry.title)
+    .sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+  target.innerHTML = visibleStories
+    .map((entry) => `
+      <a class="story-card story-entry-card" href="${escapeHtml(entry.href)}" data-route="${escapeHtml(entry.href)}">
+        <div class="story-card-topline">
+          <span>${escapeHtml(entry.typeLabel)}</span>
+          <span>${escapeHtml(entry.scopeLabel)}</span>
+        </div>
+        <h2>${escapeHtml(entry.title)}</h2>
+        <p>${escapeHtml(entry.summary)}</p>
+        <div class="story-tag-row">${entry.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+        <strong>${escapeHtml(t("readStory"))}</strong>
+      </a>`)
     .join("");
 }
 
