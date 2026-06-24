@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.82";
+const appVersion = "0.1.83";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -7528,7 +7528,7 @@ const gptWebsiteStoryOverridesZh20260622 = {
     "titleZh": "烧杯放大以后",
     "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
     "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
-    "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。\n\n他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。\n\n把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。\n\n这个人叫 George E.Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
+    "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。\n\n他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。\n\n把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。\n\n这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
     "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
     "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
     "metaphorMapZh": []
