@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.77";
+const appVersion = "0.1.78";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -9463,44 +9463,84 @@ Object.values(reviewedPublishedStoryOverridesZh).forEach((story) => applyPdcWebs
   applyGptWebsiteStoryOverrideZh20260622(story);
 });
 
-const publishedStoryLensRoutesByStoryId = applyPublishedStoriesToLensStories();
+const publishedStoryLensIdPrefix = "story-";
+const publishedStoryLensStories = [];
+const publishedStoryLensRoutesByStoryId = addPublishedStoriesToLensStories();
 
-function getLensStoryForPublishedStory(story) {
-  const fieldIds = getStoryFieldCodes(story);
-  return fieldIds
-    .map((fieldId) => lensStories.find((lensStory) => lensStory.id === fieldId))
-    .find(Boolean) || null;
+function getPublishedStoryLensId(storyOrId) {
+  const id = typeof storyOrId === "string" ? storyOrId : storyOrId?.id;
+  return `${publishedStoryLensIdPrefix}${id || "unknown"}`;
 }
 
-function applyPublishedStoryToLensStory(story, lensStory) {
-  Object.assign(lensStory, {
-    title: story.title || lensStory.title,
-    titleZh: story.titleZh || lensStory.titleZh,
-    summary: story.summary || lensStory.summary,
-    summaryZh: story.summaryZh || lensStory.summaryZh,
-    scene: story.scene || lensStory.scene,
-    sceneZh: story.sceneZh || lensStory.sceneZh,
-    storyBody: story.storyBody || lensStory.storyBody,
-    storyBodyZh: story.storyBodyZh || lensStory.storyBodyZh,
-    knowledgePoint: story.knowledgePoint || story.insight || lensStory.knowledgePoint,
-    knowledgePointZh: story.knowledgePointZh || story.insightZh || lensStory.knowledgePointZh,
-    reflectionQuestion: story.reflectionQuestion || story.miniQuestion || lensStory.reflectionQuestion,
-    reflectionQuestionZh: story.reflectionQuestionZh || story.miniQuestionZh || lensStory.reflectionQuestionZh,
-    tags: story.coreConcepts || lensStory.tags,
+function getCategoryGroupForField(field) {
+  for (const category of categories) {
+    const group = category.groups.find((candidate) =>
+      candidate.fields.some(([fieldCode]) => fieldCode === field?.code)
+    );
+    if (group) return { category, group };
+  }
+  return { category: categories[0], group: categories[0]?.groups?.[0] };
+}
+
+function getPublishedStoryImageSource(category, group, primaryField) {
+  return (
+    lensStories.find((lensStory) => lensStory.id === primaryField?.id) ||
+    lensStories.find((lensStory) => lensStory.categoryCode === category?.code && lensStory.groupCode === group?.code) ||
+    baseLensStories.find((lensStory) => lensStory.categoryCode === category?.code) ||
+    baseLensStories[0]
+  );
+}
+
+function makePublishedStoryLensStory(story) {
+  const matchedFields = getValidatedStoryFields(story).matched;
+  const primaryField = matchedFields.find((field) => field.id === story.mainField) || matchedFields[0] || null;
+  const { category, group } = getCategoryGroupForField(primaryField);
+  const imageSource = getPublishedStoryImageSource(category, group, primaryField) || {};
+  const fieldCodes = matchedFields.map((field) => field.code);
+  const fieldTitlesZh = Object.fromEntries(matchedFields.map((field) => [field.code, field.titleZh || field.title]));
+  return {
+    id: getPublishedStoryLensId(story),
+    storyLevel: "published-story",
+    categoryCode: category?.code || "00",
+    groupCode: group?.code || "",
+    groupTitle: group?.title || "",
+    groupTitleZh: group?.chineseTitle || group?.title || "",
+    fieldCodes,
+    fieldTitlesZh,
+    image: imageSource.image || "/assets/stories/000-general-starter-course.png",
+    imageAlt: imageSource.imageAlt || "A MapKAI story connected to a knowledge lens.",
+    imageAltZh: imageSource.imageAltZh || "一个连接 MapKAI 知识镜头的故事。",
+    imageInheritedFromGroup: true,
+    title: story.title || story.id,
+    titleZh: story.titleZh || story.title || story.id,
+    summary: story.summary || story.insight || getStoryTeaser(story),
+    summaryZh: story.summaryZh || story.insightZh || story.summary || getStoryTeaser(story),
+    scene: story.scene || story.summary || "",
+    sceneZh: story.sceneZh || story.summaryZh || story.summary || "",
+    storyBody: story.storyBody || story.summary || "",
+    storyBodyZh: story.storyBodyZh || story.storyBody || story.summaryZh || story.summary || "",
+    support: story.support || "",
+    supportZh: story.supportZh || "",
+    knowledgePoint: story.knowledgePoint || story.insight || "",
+    knowledgePointZh: story.knowledgePointZh || story.insightZh || story.knowledgePoint || story.insight || "",
+    reflectionQuestion: story.reflectionQuestion || story.miniQuestion || "",
+    reflectionQuestionZh: story.reflectionQuestionZh || story.miniQuestionZh || story.reflectionQuestion || story.miniQuestion || "",
+    tags: getStoryPublicTags(story),
+    tagsZh: story.coreConcepts || getStoryPublicTags(story),
     sourceStoryId: story.id,
     sourceStoryRoute: `/stories/${story.id}`,
-    migratedFromCaseStory: true,
-  });
+    originalStory: story,
+  };
 }
 
-function applyPublishedStoriesToLensStories() {
+function addPublishedStoriesToLensStories() {
   const routesByStoryId = {};
   [...stories, ...historicalStories]
     .filter((story) => story.isPublished)
     .forEach((story) => {
-      const lensStory = getLensStoryForPublishedStory(story);
-      if (!lensStory) return;
-      applyPublishedStoryToLensStory(story, lensStory);
+      const lensStory = makePublishedStoryLensStory(story);
+      publishedStoryLensStories.push(lensStory);
+      lensStories.push(lensStory);
       routesByStoryId[story.id] = `/lens-stories/${lensStory.id}`;
     });
   return routesByStoryId;
@@ -9553,7 +9593,12 @@ function getLensStoryById(storyId) {
   return lensStories.find((story) => story.id === storyId);
 }
 
+function getPublishedStoryLensStories() {
+  return publishedStoryLensStories;
+}
+
 function getActiveBaseLensStories() {
+  if (publishedStoryLensStories.length) return publishedStoryLensStories;
   return baseLensStories.map((story) => getLensStoryById(story.id) || story);
 }
 
@@ -9561,13 +9606,32 @@ function getLensStoryForGroup(categoryCode, groupCode) {
   return lensStories.find((story) => story.categoryCode === categoryCode && story.groupCode === groupCode && story.storyLevel !== "field");
 }
 
+function getLensStoryPriority(story) {
+  if (story?.storyLevel === "published-story") return 0;
+  if (story?.storyLevel === "field") return 1;
+  if (story?.storyLevel === "group") return 2;
+  return 3;
+}
+
+function sortLensStoriesByStoryFirst(a, b) {
+  const priorityDiff = getLensStoryPriority(a) - getLensStoryPriority(b);
+  if (priorityDiff) return priorityDiff;
+  return getLensStoryValue(a, "title").localeCompare(getLensStoryValue(b, "title"));
+}
+
+function getLensStoriesForField(categoryCode, groupCode, fieldCode) {
+  return lensStories
+    .filter((story) =>
+      story.categoryCode === categoryCode &&
+      story.groupCode === groupCode &&
+      Array.isArray(story.fieldCodes) &&
+      story.fieldCodes.includes(fieldCode)
+    )
+    .sort(sortLensStoriesByStoryFirst);
+}
+
 function getLensStoryForField(categoryCode, groupCode, fieldCode) {
-  return lensStories.find((story) =>
-    story.categoryCode === categoryCode &&
-    story.groupCode === groupCode &&
-    Array.isArray(story.fieldCodes) &&
-    story.fieldCodes.includes(fieldCode),
-  );
+  return getLensStoriesForField(categoryCode, groupCode, fieldCode)[0] || null;
 }
 
 function getLensStoryValue(story, key) {
@@ -16118,6 +16182,15 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function renderEscapedParagraphs(value) {
+  return String(value || "")
+    .split(/\n{2,}|\r?\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("");
+}
+
 function setText(selector, value) {
   const target = document.querySelector(selector);
   if (target) target.textContent = value;
@@ -16643,7 +16716,7 @@ function renderStoryDetail(storyId) {
     .join("");
   target.innerHTML = `
     <h1>${escapeHtml(getStoryTitle(story))}</h1>
-    <p class="story-body">${escapeHtml(getStoryBody(story))}</p>
+    <div class="story-body">${renderEscapedParagraphs(getStoryBody(story))}</div>
     ${insight ? `
       <aside class="story-insight">
         <span>${escapeHtml(t("storyInsightTitle"))}</span>
@@ -16782,7 +16855,12 @@ function renderFieldLayer() {
       const connectedStories = getStoriesForField(field.id);
       const isLit = litFields.has(field.id);
       const storyLinks = connectedStories.length
-        ? connectedStories.map((story) => `<span>${escapeHtml(getStoryTitle(story))}</span>`).join("")
+        ? connectedStories
+            .map((story) => {
+              const href = publishedStoryLensRoutesByStoryId[story.id] || `/lens-stories/${getPublishedStoryLensId(story)}`;
+              return `<a href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">${escapeHtml(getStoryTitle(story))}</a>`;
+            })
+            .join("")
         : "<span>No story yet</span>";
       return `
         <article class="field-card ${isLit ? "is-lit" : "is-unlit"}">
@@ -16804,14 +16882,14 @@ function renderMapStoryLayer() {
   if (!target) return;
   target.innerHTML = getPublishedStories()
     .map((story) => `
-      <article class="map-story-card">
+      <a class="map-story-card" href="${escapeHtml(publishedStoryLensRoutesByStoryId[story.id] || `/lens-stories/${getPublishedStoryLensId(story)}`)}" data-route="${escapeHtml(publishedStoryLensRoutesByStoryId[story.id] || `/lens-stories/${getPublishedStoryLensId(story)}`)}">
         <span>${escapeHtml(story.eventType || t("storiesEyebrow"))}</span>
         <h4>${escapeHtml(getStoryTitle(story))}</h4>
         <p>
           ${getValidatedStoryFields(story).matched.map(fieldLink).join("")}
           ${getStoryUnmatchedFields(story).map((fieldId) => `<span class="unmatched-field">${escapeHtml(fieldId)}</span>`).join("")}
         </p>
-      </article>`)
+      </a>`)
     .join("");
 }
 
@@ -16840,7 +16918,10 @@ function renderFieldDetail(code) {
       <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || "Not available")}</dd></div>
       <div><dt>Status</dt><dd>${field.isAdministrative ? "Administrative" : "Practical"}</dd></div>
       <div><dt>Light status</dt><dd>${isLit ? "Lit by stories" : "Waiting for a story"}</dd></div>
-      <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => escapeHtml(getStoryTitle(story))).join(", ") : "No published story yet"}</dd></div>
+      <div><dt>Stories that activated this field</dt><dd>${storiesForField.length ? storiesForField.map((story) => {
+        const href = publishedStoryLensRoutesByStoryId[story.id] || `/lens-stories/${getPublishedStoryLensId(story)}`;
+        return `<a href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">${escapeHtml(getStoryTitle(story))}</a>`;
+      }).join(", ") : "No published story yet"}</dd></div>
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
     </dl>
   `;
@@ -18356,7 +18437,8 @@ function renderCategoryTree(category) {
   const activeFieldCode = activeField?.[0] || "";
   const activeFieldFallbackTitle = activeField?.[1] || "";
   if (savedFieldCode && !activeFieldCode) delete activeCategoryFields[fieldStateKey];
-  const activeFieldStory = activeFieldCode ? getLensStoryForField(category.code, activeGroup.code, activeFieldCode) : null;
+  const activeFieldStories = activeFieldCode ? getLensStoriesForField(category.code, activeGroup.code, activeFieldCode) : [];
+  const activeFieldStory = activeFieldStories[0] || null;
   const activeFieldTitle = activeFieldCode ? getPublicLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
   const groupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
   const groupIntroStory = activeGroupStory
@@ -18377,11 +18459,17 @@ function renderCategoryTree(category) {
     })
     .join("");
   const conceptFable = getConceptFableForCategory(category.code);
-  const fieldIntroStory = activeFieldStory
-    ? `<a class="submodule-story-button is-field" href="/lens-stories/${activeFieldStory.id}" data-route="/lens-stories/${activeFieldStory.id}">
-        <span>${escapeHtml(activeFieldTitle)}</span>
-        <em>${escapeHtml(t("fieldIntroStory"))}</em>
-      </a>`
+  const fieldIntroStory = activeFieldStories.length
+    ? activeFieldStories
+        .map((story) => {
+          const isPublishedStory = story.storyLevel === "published-story";
+          const label = isPublishedStory ? (currentLanguage === "zh" ? "故事" : "Story") : t("fieldIntroStory");
+          return `<a class="submodule-story-button ${isPublishedStory ? "is-case" : "is-field"}" href="/lens-stories/${story.id}" data-route="/lens-stories/${story.id}">
+            <span>${escapeHtml(getLensStoryValue(story, "title") || activeFieldTitle)}</span>
+            <em>${escapeHtml(label)}</em>
+          </a>`;
+        })
+        .join("")
     : activeFieldCode ? `<div class="submodule-story-button is-empty">
         <span>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</span>
         <small>${escapeHtml(t("noStoryReady"))}</small>
@@ -18437,14 +18525,24 @@ function renderLensStoryDetail(storyId) {
   }
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const support = getLensStoryValue(story, "support");
-  const fieldRows = (group?.fields || [])
-    .filter(([code]) => story.fieldCodes.includes(code))
-    .map(([code, title]) => `
-      <span>
-        <strong class="internal-code">${escapeHtml(code)}</strong>
-        ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
-      </span>`)
-    .join("");
+  const fieldRows = story.originalStory
+    ? getValidatedStoryFields(story.originalStory).matched
+        .map((field) => `
+          <span>
+            <strong class="internal-code">${escapeHtml(field.code)}</strong>
+            ${escapeHtml(getFieldDisplayTitle(field))}
+          </span>`)
+        .join("")
+    : (group?.fields || [])
+        .filter(([code]) => story.fieldCodes.includes(code))
+        .map(([code, title]) => `
+          <span>
+            <strong class="internal-code">${escapeHtml(code)}</strong>
+            ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
+          </span>`)
+        .join("");
+  const sceneHtml = renderEscapedParagraphs(getLensStoryValue(story, "scene"));
+  const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   target.innerHTML = `
     ${shouldShowFigure ? `
     <figure class="lens-story-figure">
@@ -18458,8 +18556,8 @@ function renderLensStoryDetail(storyId) {
     <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
     <section class="lens-story-section">
       <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
-      <p>${escapeHtml(getLensStoryValue(story, "scene"))}</p>
-      <p>${escapeHtml(getLensStoryValue(story, "storyBody"))}</p>
+      ${sceneHtml}
+      ${storyBodyHtml}
     </section>
     ${support ? `
     <section class="lens-story-section lens-story-support">

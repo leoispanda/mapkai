@@ -4255,6 +4255,11 @@ canvas {
   background: rgba(240, 253, 244, 0.72);
 }
 
+.submodule-story-button.is-case {
+  border-color: rgba(37, 99, 235, 0.26);
+  background: rgba(239, 246, 255, 0.86);
+}
+
 .submodule-story-button.is-concept {
   border-color: rgba(214, 169, 71, 0.34);
   background: rgba(255, 247, 237, 0.82);
@@ -5630,6 +5635,7 @@ dd,
 
 .concept-row span,
 .connected-story-row span,
+.connected-story-row a,
 .field-pill {
   display: inline-flex;
   align-items: center;
@@ -5815,6 +5821,18 @@ dd,
   color: #2563eb;
   font-weight: 800;
   text-decoration: none;
+}
+
+.map-story-card {
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.map-story-card:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 20px 46px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
 }
 
 .map-story-card p {
