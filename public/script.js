@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.84";
+const appVersion = "0.1.85";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -1446,31 +1446,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/000-general-starter-course.png",
     "imageAlt": "An adult learner and a mentor planning a general starter course in a community learning center.",
-    "imageAltZh": "一位成年学习者和导师在社区学习中心规划通用入门课程。",
-    "title": "The leather-apron evening",
-    "titleZh": "皮围裙俱乐部的夜晚",
-    "summary": "A small club of workers and readers showed why general learning often begins before a formal subject name appears.",
-    "summaryZh": "一群工匠、店员和读书人组成的小社团，让人看见通用学习常常早于正式学科名称出现。",
-    "scene": "In 1727 Philadelphia, a young printer closed the shop, wiped ink from his hands, and walked to an evening meeting where no one was earning a degree.",
-    "sceneZh": "1727 年的费城，一个年轻印刷工收好铅字，擦掉手上的油墨，走去参加一场没有学位、没有正式课表的夜间聚会。",
-    "storyBody": "He was only in his early twenties and still close enough to poverty to know that books, conversation, and reliable friends could change a life. The people who gathered were not all scholars. There were tradesmen, clerks, surveyors, makers, and men trying to get better at business, morals, politics, and the natural world. They brought questions instead of exams: what useful thing had you learned this week, what mistake should the city avoid, which book should we borrow next, who needs help finding work? Out of those evenings grew habits that looked too broad for any single course: reading together, arguing with evidence, improving speech, pooling books, and turning private curiosity into public projects. This person was Benjamin Franklin, whose Junto mutual-improvement club helped make civic discussion, shared books, and self-education part of the history of general learning.",
-    "storyBodyZh": "他二十出头，离贫穷还不远，所以很清楚：书、谈话和可靠的朋友，真的可能改变一个人的命运。来聚会的人并不都是学者，有工匠、店员、测量员、制造者，也有人只是想把生意、品格、政治和自然知识弄明白一点。他们带来的不是考试，而是问题：这周你学到什么有用的东西？城市应该避免什么错误？下一本书借什么？谁需要帮忙找工作？这些夜晚慢慢长出一种很难被单一学科命名的能力：共同阅读、用证据争论、练习表达、共享书籍，把私人的好奇心变成公共项目。通用课程与资格的意义就在这里：人在还没有确定专业之前，先学会如何学习、如何提问、如何和别人一起把知识变成行动。这个人叫 Benjamin Franklin，他发起 Junto 互助学习社群，并推动图书馆、公民讨论和自我教育成为现代通用学习的重要源头。这让今天的学习者回到一个很实际的问题：在选择具体道路之前，先怎样练习提问、表达和与别人一起学习。",
-    "support": "The Junto, founded in Philadelphia in 1727, was a mutual-improvement club associated with Benjamin Franklin. It brought together people from different occupations to discuss morals, politics, natural philosophy, business, books, and civic projects.",
-    "supportZh": "Junto 于 1727 年在费城成立，通常被视为 Benjamin Franklin 发起的互助改进社群。成员来自不同职业，讨论道德、政治、自然哲学、商业、读书和城市公共事务，也影响了后来的图书馆与公民学习实践。",
-    "knowledgePoint": "Generic programmes give learners orientation, reading habits, shared inquiry, and practical confidence before a narrower subject path is chosen.",
-    "knowledgePointZh": "通用课程与资格提供的是进入具体道路之前的基础能力：方向感、阅读习惯、共同探究，以及把知识转成行动的信心。",
-    "reflectionQuestion": "Before you choose a major direction, what kind of learning community would help you become less afraid of learning itself?",
-    "reflectionQuestionZh": "在你选择一个具体方向之前，什么样的学习共同体会让你不再害怕学习本身？",
-    "tags": [
-      "mutual improvement",
-      "general learning",
-      "civic inquiry"
-    ],
-    "tagsZh": [
-      "互助改进",
-      "通用学习",
-      "公民探究"
-    ]
+    "imageAltZh": "一位成年学习者和导师在社区学习中心规划通用入门课程。"
   },
   {
     "id": "011-dewey-lab-school",
@@ -1486,31 +1462,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/011-after-school-reading-plan.png",
     "imageAlt": "A teacher and children working around a classroom table in an early progressive school.",
-    "imageAltZh": "一位老师和孩子们围着教室桌子做活动，像早期进步教育学校里的场景。",
-    "title": "The classroom that tried breakfast",
-    "titleZh": "孩子们做早餐的教室",
-    "summary": "A school experiment in Chicago made education less like recitation and more like life being studied together.",
-    "summaryZh": "芝加哥的一次学校实验，让教育不再只是背诵，而像是把生活拿到教室里一起研究。",
-    "scene": "In 1896 Chicago, a classroom table held flour, cloth, wood, measuring tools, and questions that did not fit neatly into one textbook.",
-    "sceneZh": "1896 年的芝加哥，一张教室桌上放着面粉、布料、木头、量具，还有一些很难塞进单本课本里的问题。",
-    "storyBody": "The philosopher who helped run the school had spent years asking a plain question: why did school so often separate thinking from living? He had studied philosophy and psychology, then came to Chicago wanting to test ideas in a real classroom rather than leave them in lecture notes. He watched children work with cooking, sewing, building, measuring, and conversation, and noticed that a breakfast lesson could become chemistry, number, history, cooperation, and language at once. The classroom was not pretending that every activity was automatically deep. Teachers still had to prepare, observe, connect, and question. But the experiment changed the direction of attention: education was no longer only what adults delivered to children; it was a social situation where children learned by acting, noticing consequences, and making meaning with others. This person was John Dewey, whose University of Chicago Laboratory School helped make learning by doing and progressive education part of modern educational thought.",
-    "storyBodyZh": "参与这所学校的那位哲学家，原本研究哲学和心理学。他一直被一个很朴素的问题困住：为什么学校常常把“会思考”和“会生活”分开？来到芝加哥以后，他不想只在讲稿里谈教育，而是想把想法放进真实教室里试一试。他看孩子做饭、缝纫、制作、测量、交谈，然后追问为什么。一节早餐课可以同时牵出化学、数量、历史、合作和语言。教室并不是把所有活动都浪漫化，老师仍然需要准备、观察、连接和提问。但这个实验改变了教育的方向：教育不只是成人把内容交给儿童，而是一个社会性的情境，孩子在行动、后果和共同解释中学习。这个人叫 John Dewey，他创办芝加哥大学实验学校，让“做中学”和进步教育成为现代教育的重要线索。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是教育史的一页，也是在提醒老师和学生：先观察学习怎样发生，再决定怎样介入。",
-    "support": "John Dewey founded the University of Chicago Laboratory Schools in 1896. The school served as a laboratory for testing educational ideas connected to progressive education and learning through experience.",
-    "supportZh": "John Dewey 于 1896 年创办 University of Chicago Laboratory Schools。这所学校被用作教育思想实验场，和进步教育、经验学习、学校作为社会共同体等观念紧密相关。",
-    "knowledgePoint": "Education not further defined is the broad lens for asking what education is for, how learning situations are designed, and how school connects knowledge with life.",
-    "knowledgePointZh": "未进一步细分的教育，是追问教育目的、学习情境设计，以及学校如何把知识和生活连接起来的宽镜头。",
-    "reflectionQuestion": "If a classroom starts from a real activity instead of a finished answer, what kind of learning becomes possible?",
-    "reflectionQuestionZh": "如果一间教室从真实活动开始，而不是从标准答案开始，哪一种学习会变得可能？",
-    "tags": [
-      "progressive education",
-      "learning by doing",
-      "school design"
-    ],
-    "tagsZh": [
-      "进步教育",
-      "做中学",
-      "学校设计"
-    ]
+    "imageAltZh": "一位老师和孩子们围着教室桌子做活动，像早期进步教育学校里的场景。"
   },
   {
     "id": "020-family-photo-meaning",
@@ -1526,31 +1478,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/020-family-photo-meaning.png",
     "imageAlt": "A family at a dinner table interpreting an old photograph together.",
-    "imageAltZh": "一家人在餐桌旁一起解读一张旧照片。",
-    "title": "The black cloth full of pictures",
-    "titleZh": "黑布上的一千张图片",
-    "summary": "An unfinished image atlas showed how art and humanities can trace memory across objects, gestures, books, and public life.",
-    "summaryZh": "一部未完成的图像图谱，让人看见艺术与人文如何追踪物件、姿势、书籍和公共生活里的记忆。",
-    "scene": "In Hamburg, a young man from a wealthy banking family kept choosing books, images, and strange visual echoes instead of the expected life of finance.",
-    "sceneZh": "在汉堡，一个出身银行家家庭的年轻人，没有把全部人生放进金融账本里，反而总被书、图像和那些奇怪的视觉回声吸引。",
-    "storyBody": "He was not satisfied when a painting was described only by its artist, date, and style. A lifted arm in a Renaissance picture reminded him of an ancient sculpture; a goddess on a coin seemed to reappear in a newspaper image; a festival costume, an astrological diagram, and a political poster could all carry old gestures into new lives. Late in life, he pinned hundreds of reproductions onto black cloth panels and kept moving them around. There were few captions, because the point was not to give the viewer one neat explanation. The point was to let images think next to each other, so hidden paths of memory, fear, desire, ritual, and power could become visible. This person was Aby Warburg, whose unfinished Mnemosyne Atlas shaped later visual culture studies through image memory, cultural history, and interdisciplinary art history.",
-    "storyBodyZh": "他不满足于只用作者、年代和风格来解释一幅画。文艺复兴图像里抬起的手臂，会让他想起古代雕像；硬币上的女神，好像又出现在报纸图片里；节庆服装、占星图、政治海报，可能都把古老的姿势带进新的生活。晚年，他把几百张复制图钉在黑布板上，一次次挪动位置。图谱上几乎没有说明文字，因为重点不是给观众一个整齐答案，而是让图像彼此靠近，让记忆、恐惧、欲望、仪式和权力的暗线浮现出来。未进一步细分的艺术与人文正像这种工作：它不急着把意义分进固定盒子，而是先问图像、文本、物件和人的经验如何互相照亮。这个人叫 Aby Warburg，他创作未完成的 Mnemosyne Atlas，并以图像记忆、文化史和跨学科艺术史影响了后来的视觉文化研究。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。",
-    "support": "Aby Warburg's unfinished Mnemosyne Atlas, begun in the late 1920s, arranged hundreds of images on black panels to study visual memory, classical survivals, emotion, and cultural transmission.",
-    "supportZh": "Aby Warburg 在 1920 年代后期开始制作未完成的 Mnemosyne Atlas，把大量图像钉在黑布板上，研究视觉记忆、古典传统的延续、情感姿势与文化传递。",
-    "knowledgePoint": "Arts and humanities ask how images, texts, rituals, objects, and memory produce meaning before those meanings settle into a single discipline.",
-    "knowledgePointZh": "艺术与人文追问图像、文本、仪式、物件和记忆如何生产意义，尤其关注那些尚未能被单一学科收拢的意义关系。",
-    "reflectionQuestion": "What image from today's life might secretly carry an older human gesture inside it?",
-    "reflectionQuestionZh": "今天生活里哪一张图像，可能悄悄带着更古老的人类姿势？",
-    "tags": [
-      "image memory",
-      "interpretation",
-      "humanities"
-    ],
-    "tagsZh": [
-      "图像记忆",
-      "解释",
-      "人文"
-    ]
+    "imageAltZh": "一家人在餐桌旁一起解读一张旧照片。"
   },
   {
     "id": "030-neighbor-notice-board",
@@ -1566,29 +1494,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/030-neighbor-notice-board.png",
     "imageAlt": "Neighbors in an apartment lobby discussing a shared notice board and group messages.",
-    "imageAltZh": "邻居们在公寓大厅讨论公告板和群消息。",
-    "title": "The notice board problem",
-    "titleZh": "公告板上的问题",
-    "summary": "A missing package complaint turned into a small map of incentives, information, and community trust.",
-    "summaryZh": "一次包裹丢失的抱怨，慢慢变成了一张关于动机、信息和社区信任的小地图。",
-    "scene": "The apartment group chat had been arguing all morning. Someone's package was missing, another neighbor blamed delivery drivers, and the building manager posted a new notice that nobody seemed to read.",
-    "sceneZh": "公寓群聊吵了一上午。有人说包裹不见了，有人怪快递员，楼管贴了新公告，却好像没人真正读到。",
-    "storyBody": "When the neighbors finally met in the lobby, the problem looked different from every side. Older residents did not check the group chat often. New tenants did not know the side entrance was used for deliveries. Drivers left parcels where the camera could not see them because the lobby table was always full. The manager had information, but the notice board was placed where people only passed by in a hurry. They did not solve everything that day. They moved the board, simplified the instructions, created a shared shelf, and agreed on who would call the delivery company. The missing package mattered, but the deeper issue was how a small community moved information and responsibility.",
-    "storyBodyZh": "邻居们终于在大厅见面时，问题从每个人那里看都不一样。年纪大的住户不常看群聊，新搬来的人不知道侧门也会收快递，快递员因为大厅桌子总是堆满东西，只好把包裹放在摄像头拍不到的位置。楼管有信息，但公告板贴在大家只会匆匆路过的地方。那天他们没有解决所有问题，但把公告板移了位置，简化说明，设了一个共享架子，并约定谁去联系快递公司。丢失的包裹很重要，但更深的问题是：一个小社区如何流动信息和责任。这个小小大厅提醒学生，社会问题常常不是谁对谁错，而是信息、空间和责任有没有被安排得足够清楚。",
-    "knowledgePoint": "Social sciences, journalism, and information study how people behave in context, how information travels, and how shared realities are formed.",
-    "knowledgePointZh": "社会科学、新闻与信息研究人在具体语境中如何行动，信息如何传播，以及共同现实如何被形成。",
-    "reflectionQuestion": "When a group conflict looks like one person's mistake, what information channels or hidden incentives might be shaping it?",
-    "reflectionQuestionZh": "当一个群体冲突看起来像某个人的错误时，背后可能有哪些信息渠道或隐藏动机在塑造它？",
-    "tags": [
-      "community",
-      "information",
-      "social context"
-    ],
-    "tagsZh": [
-      "社区",
-      "信息",
-      "社会语境"
-    ]
+    "imageAltZh": "邻居们在公寓大厅讨论公告板和群消息。"
   },
   {
     "id": "040-kitchen-repair-budget",
@@ -1604,29 +1510,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/040-kitchen-repair-budget.png",
     "imageAlt": "Housemates at a kitchen table comparing repair costs and responsibilities for a broken washing machine.",
-    "imageAltZh": "合租室友在厨房桌边比较坏掉洗衣机的维修费用和责任分配。",
-    "title": "The washing machine decision",
-    "titleZh": "洗衣机维修决定",
-    "summary": "A broken appliance became a small business case about cost, risk, rules, and responsibility.",
-    "summaryZh": "一台坏掉的洗衣机，变成了关于成本、风险、规则和责任的小型商业案例。",
-    "scene": "The washing machine stopped mid-cycle on Sunday night. Four housemates stood around wet laundry, each hoping the solution would be cheap, fair, and quick.",
-    "sceneZh": "周日晚上，洗衣机洗到一半停了。四个室友围着一盆湿衣服，都希望解决方案便宜、公平、而且快。",
-    "storyBody": "They first argued from feelings. Then Noura opened a notebook. Repair was cheaper today, but might fail again. Replacement cost more, but came with a warranty. The landlord's agreement covered some parts, but not misuse. Everyone used the machine differently, and nobody had tracked maintenance. The decision changed when they separated questions: who is responsible, what is the real cost, what risk can they accept, and what rule should exist next time? They chose repair, created a small shared maintenance fund, and wrote down a clearer household rule.",
-    "storyBodyZh": "他们一开始凭感觉争论。后来 Noura 打开笔记本。维修今天更便宜，但可能很快再坏；换新更贵，却有保修。租房协议覆盖一部分零件，但不覆盖不当使用。每个人使用洗衣机的方式不同，也没人记录过维护。真正改变讨论的是把问题拆开：谁负责、真实成本是多少、能接受什么风险、下次应该有什么规则。最后他们选择维修，建立一个小小的共享维护金，并写下一条更清楚的住户规则。这也是商业、管理与法律在生活里出现的方式：不是先背概念，而是在共同承担后果之前，把成本、规则和责任摆到桌面上。",
-    "knowledgePoint": "Business, administration, and law make decisions visible: resources, incentives, contracts, duties, and trade-offs become things people can compare.",
-    "knowledgePointZh": "商业、管理与法律让决策变得可见：资源、激励、合同、义务和取舍，都需要被摆出来比较。",
-    "reflectionQuestion": "In a shared decision, which part is money, which part is risk, and which part is fairness?",
-    "reflectionQuestionZh": "在一次共同决策里，哪一部分是钱，哪一部分是风险，哪一部分其实是公平？",
-    "tags": [
-      "cost",
-      "responsibility",
-      "trade-off"
-    ],
-    "tagsZh": [
-      "成本",
-      "责任",
-      "取舍"
-    ]
+    "imageAltZh": "合租室友在厨房桌边比较坏掉洗衣机的维修费用和责任分配。"
   },
   {
     "id": "050-balcony-plant-observation",
@@ -1642,29 +1526,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/050-balcony-plant-observation.png",
     "imageAlt": "A person observing balcony basil plants with a notebook, measuring cup, and sunlight.",
-    "imageAltZh": "一个人在阳台用笔记本、量杯和日照观察罗勒盆栽。",
-    "title": "Why the basil kept wilting",
-    "titleZh": "罗勒为什么总是蔫",
-    "summary": "A balcony plant problem became a small experiment in evidence, variables, and uncertainty.",
-    "summaryZh": "一个阳台植物问题，变成了关于证据、变量和不确定性的小实验。",
-    "scene": "Every week, Aria bought a new basil plant. Every week, it drooped by Friday. She blamed herself, then the plant shop, then the weather, until a friend asked one simple question: what have you actually measured?",
-    "sceneZh": "Aria 每周买一盆新罗勒。每周到周五，它就开始发蔫。她先怪自己，再怪花店，又怪天气，直到朋友问了一个简单问题：你到底记录过什么？",
-    "storyBody": "For ten days, Aria wrote down sunlight hours, watering amounts, pot weight, window direction, and whether the leaves looked soft in the morning or evening. The answer was not one dramatic cause. The balcony was sunny in the morning but windy in the afternoon; the small pot dried fast; her extra watering sometimes drowned the roots. She changed one thing at a time: a larger pot, steadier water, a different corner. The basil improved slowly. More important, Aria stopped guessing wildly. She learned to ask what counted as evidence and how many possible causes could be tested.",
-    "storyBodyZh": "接下来的十天，Aria 记录日照时长、浇水量、花盆重量、窗户朝向，以及叶子是在早上还是晚上变软。答案不是某一个戏剧性的原因。阳台早上有阳光，下午风很大；小盆很快干掉；她额外浇水时又可能让根部缺氧。她一次只改一个条件：换大一点的盆、稳定水量、换一个角落。罗勒慢慢好起来。更重要的是，Aria 不再乱猜。她学会问：什么算证据？有多少可能原因可以被测试？这个阳台实验不大，却很像科学训练的开始：先停止猜测，再让记录、比较和一次只改一个条件来帮助判断。",
-    "knowledgePoint": "Natural sciences, mathematics, and statistics turn curiosity into models: observe, measure, compare, and stay honest about uncertainty.",
-    "knowledgePointZh": "自然科学、数学与统计把好奇心变成模型：观察、测量、比较，并诚实面对不确定性。",
-    "reflectionQuestion": "What everyday problem would look different if you recorded one small variable for a week?",
-    "reflectionQuestionZh": "如果你连续一周记录一个小变量，哪个日常问题会变得不一样？",
-    "tags": [
-      "evidence",
-      "variables",
-      "observation"
-    ],
-    "tagsZh": [
-      "证据",
-      "变量",
-      "观察"
-    ]
+    "imageAltZh": "一个人在阳台用笔记本、量杯和日照观察罗勒盆栽。"
   },
   {
     "id": "061-phone-backup-help",
@@ -1680,29 +1542,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/061-phone-backup-help.png",
     "imageAlt": "A younger adult helping an older neighbor organize phone settings, backups, and passwords before a trip.",
-    "imageAltZh": "年轻人帮助年长邻居在出行前整理手机设置、备份和密码。",
-    "title": "The phone before the trip",
-    "titleZh": "出发前的手机",
-    "summary": "A neighbor's travel worry revealed how systems, accounts, devices, and trust fit together.",
-    "summaryZh": "邻居出行前的一点担心，让系统、账户、设备和信任之间的关系显露出来。",
-    "scene": "Before flying to visit her sister, Mrs. Chen worried that her phone would stop working abroad. She had photos, tickets, contacts, passwords, and one confusing message about storage.",
-    "sceneZh": "去看妹妹之前，陈阿姨担心手机到了国外不能用。里面有照片、机票、联系人、密码，还有一条让人看不懂的存储提醒。",
-    "storyBody": "Her neighbor Jay did not start by pressing random settings. He asked what needed to be safe, what needed to be reachable, and what would happen if the phone was lost. Together they checked backups, wrote down recovery steps, updated contact information, removed unused apps, and tested whether tickets could open offline. Mrs. Chen did not need to become a programmer. She needed a working mental model: the phone was not one object, but a bundle of accounts, networks, files, permissions, and recovery paths.",
-    "storyBodyZh": "邻居 Jay 没有一上来就乱点设置。他先问：什么必须安全？什么必须随时拿到？如果手机丢了会发生什么？他们一起检查备份，写下找回步骤，更新联系人，删除不用的应用，并测试机票离线时能不能打开。陈阿姨不需要变成程序员。她需要一个能用的心智模型：手机不是一个单一物件，而是一组账户、网络、文件、权限和恢复路径。这样的帮助让 ICT 从抽象设备回到生活：真正重要的是人在丢失、离线、误删和被锁住时，是否仍有路可以回来。",
-    "knowledgePoint": "ICT is about systems people use every day: tools, data, networks, software, security, and the invisible assumptions that connect them.",
-    "knowledgePointZh": "信息与通信技术关心人每天使用的系统：工具、数据、网络、软件、安全，以及把它们连接起来的隐性假设。",
-    "reflectionQuestion": "Which digital tool do you use as if it were simple, even though it depends on several hidden systems?",
-    "reflectionQuestionZh": "你每天使用的哪一个数字工具，看起来很简单，其实依赖好几个看不见的系统？",
-    "tags": [
-      "digital systems",
-      "backup",
-      "security"
-    ],
-    "tagsZh": [
-      "数字系统",
-      "备份",
-      "安全"
-    ]
+    "imageAltZh": "年轻人帮助年长邻居在出行前整理手机设置、备份和密码。"
   },
   {
     "id": "070-wobbly-shelf-repair",
@@ -1718,29 +1558,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/070-wobbly-shelf-repair.png",
     "imageAlt": "Two adults measuring and securing a leaning bookshelf in a living room.",
-    "imageAltZh": "两位成年人在客厅测量并固定一组倾斜的书架。",
-    "title": "The shelf that leaned",
-    "titleZh": "歪掉的书架",
-    "summary": "A leaning shelf turned into a lesson about load, constraint, materials, and safe execution.",
-    "summaryZh": "一个歪掉的书架，变成了关于载荷、约束、材料和安全执行的小课。",
-    "scene": "The bookshelf had leaned for months, but everyone only noticed when the top shelf began to pull away from the wall. A stack of books, a plant, and one loose bracket had turned decoration into a small engineering problem.",
-    "sceneZh": "书架歪了好几个月，直到最上层开始离墙，大家才真正注意到。几摞书、一盆植物、一个松动的支架，让一个装饰问题变成了小小的工程问题。",
-    "storyBody": "Mara wanted to tighten every screw and call it done. Eli stopped her and checked the floor, wall, bracket angle, and weight distribution. The shelf was not failing in one place. The floor was slightly uneven, the heaviest books sat high, and the wall anchor had never matched the wall material. They removed weight, leveled the base, chose a better anchor, and tested the shelf before putting books back. The repair took longer than expected because the real task was not to make it look straight for one minute. It was to make the forces stay manageable after everyone forgot about it again.",
-    "storyBodyZh": "Mara 想把所有螺丝拧紧就结束。Eli 先停下来，检查地面、墙体、支架角度和重量分布。书架不是某一个地方坏了：地面有点不平，最重的书放得太高，墙锚也不适合这面墙。他们先卸重，再调平底部，换合适的固定件，测试之后才把书放回去。维修比想象中更久，因为真正的任务不是让它直一分钟，而是让受力在大家再次忘记它之后仍然可控。这个小维修让工程变得可见：不是把表面弄正，而是理解材料、受力、固定方式和未来反复使用时的风险。",
-    "knowledgePoint": "Engineering, manufacturing, and construction ask how ideas survive contact with materials, constraints, safety, and repeated use.",
-    "knowledgePointZh": "工程、制造与建筑关心想法如何经受材料、约束、安全和反复使用的考验。",
-    "reflectionQuestion": "Where in your daily life do you see a small design choice carrying more load than people realize?",
-    "reflectionQuestionZh": "你的日常生活里，哪里有一个小设计，其实承受着比人们意识到更多的负荷？",
-    "tags": [
-      "constraints",
-      "materials",
-      "safety"
-    ],
-    "tagsZh": [
-      "约束",
-      "材料",
-      "安全"
-    ]
+    "imageAltZh": "两位成年人在客厅测量并固定一组倾斜的书架。"
   },
   {
     "id": "080-community-garden-seedlings",
@@ -1756,29 +1574,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/080-community-garden-seedlings.png",
     "imageAlt": "Two neighbors checking young seedlings in a community garden after a cold night.",
-    "imageAltZh": "两位邻居在冷夜之后查看社区花园里的幼苗。",
-    "title": "The seedlings after the cold night",
-    "titleZh": "冷夜后的幼苗",
-    "summary": "A frosty morning showed why living systems require patience, timing, and field conditions.",
-    "summaryZh": "一个有霜的早晨，让人看见生命系统为什么需要耐心、时机和现场条件。",
-    "scene": "The community garden looked silver in the morning frost. Some seedlings stood upright; others had collapsed. Nobody had planned for the cold night to arrive after such a warm week.",
-    "sceneZh": "清晨的社区花园结着一层银白的霜。有些幼苗还直立着，有些已经伏倒。没人想到，在那样温暖的一周之后，会突然来这么冷的一晚。",
-    "storyBody": "Jon wanted to replant everything immediately. Asha asked him to wait and look closely. Which beds were sheltered by the fence? Which soil stayed warmer? Which covers worked, and which trapped too much moisture? They marked the damaged rows, left some plants to recover, moved the tender seedlings, and changed next week's planting plan. The garden did not obey the calendar printed on a seed packet. It answered to soil, temperature, water, exposure, pests, and care over time.",
-    "storyBodyZh": "Jon 想立刻全部重种。Asha 让他先等一等，仔细看。哪些畦被篱笆挡住了风？哪些土更保温？哪些覆盖物有用，哪些反而积了太多水汽？他们标记受损的行，留下部分植物观察恢复，把更脆弱的幼苗移走，并调整下周的种植计划。花园并不会完全服从种子包装上的日历。它回应的是土壤、温度、水分、暴露程度、病虫害，以及持续照料。花园教人的不是急着控制生命，而是先看现场条件怎样说话，再决定哪些行动能保护接下来的生长。",
-    "knowledgePoint": "Agriculture, forestry, fisheries, and veterinary fields work with living systems, where timing, ecology, care, and local conditions matter.",
-    "knowledgePointZh": "农业、林业、渔业与兽医面对的是生命系统。时机、生态、照料和现场条件，都会影响结果。",
-    "reflectionQuestion": "What living system around you changes too slowly or too subtly to be managed by impatience?",
-    "reflectionQuestionZh": "你身边哪一个生命系统变化太慢或太细微，不能靠急躁来管理？",
-    "tags": [
-      "ecology",
-      "care",
-      "field conditions"
-    ],
-    "tagsZh": [
-      "生态",
-      "照料",
-      "现场条件"
-    ]
+    "imageAltZh": "两位邻居在冷夜之后查看社区花园里的幼苗。"
   },
   {
     "id": "090-medicine-schedule-care",
@@ -1794,29 +1590,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/090-medicine-schedule-care.png",
     "imageAlt": "A caregiver and an older adult organizing a weekly medicine schedule at a kitchen table.",
-    "imageAltZh": "照护者和年长者在厨房桌边整理一周的服药安排。",
-    "title": "The medicine note on the fridge",
-    "titleZh": "冰箱上的服药便条",
-    "summary": "A household medicine routine revealed how care balances risk, dignity, and human limits.",
-    "summaryZh": "一个家庭服药安排，让人看见照护如何在风险、尊严和人的边界之间平衡。",
-    "scene": "After her father missed a dose twice in one week, Elena wanted to cover the fridge with reminders. Her father pushed the notes aside and said he did not want his kitchen to look like a clinic.",
-    "sceneZh": "父亲一周内两次忘记服药后，Elena 想把冰箱贴满提醒。父亲把便条推到一边，说他不想让自己的厨房看起来像诊所。",
-    "storyBody": "They sat down with the pill organizer, a glass of water, and the appointment list. Elena first heard only risk. Her father heard loss of independence. They changed the system together: fewer notes, clearer times, one shared check-in, and a place for questions after side effects or confusion. The goal was not to control every minute of his day. It was to reduce danger while preserving the feeling that his life was still his own.",
-    "storyBodyZh": "他们坐下来，面前是药盒、一杯水和预约清单。Elena 一开始只听见风险，父亲听见的却是独立感正在被拿走。最后他们一起改系统：少一点便条，更清楚的时间，一个共同确认点，以及一个在出现副作用或疑惑时可以提问的位置。目标不是控制他一天中的每一分钟，而是在降低危险的同时，保留“生活仍然属于自己”的感觉。这个安排最难的地方，不是多贴几张提醒，而是让安全和尊严同时留下位置。",
-    "knowledgePoint": "Health and welfare fields deal with risk, care, bodies, vulnerability, and the ethical boundary between helping and taking over.",
-    "knowledgePointZh": "健康与福利处理风险、照护、身体、脆弱性，以及帮助和接管之间的伦理边界。",
-    "reflectionQuestion": "When care is necessary, how can a system protect someone without making them feel smaller?",
-    "reflectionQuestionZh": "当照护是必要的，怎样的系统既能保护一个人，又不让他觉得自己被缩小了？",
-    "tags": [
-      "care",
-      "risk",
-      "dignity"
-    ],
-    "tagsZh": [
-      "照护",
-      "风险",
-      "尊严"
-    ]
+    "imageAltZh": "照护者和年长者在厨房桌边整理一周的服药安排。"
   },
   {
     "id": "100-rainy-event-service-desk",
@@ -1832,29 +1606,7 @@ const baseLensStories = [
     },
     "image": "/assets/stories/100-rainy-event-service-desk.png",
     "imageAlt": "Event staff coordinating check-in at a community event entrance on a rainy day.",
-    "imageAltZh": "雨天里，活动工作人员在社区活动入口协调签到。",
-    "title": "The rainy check-in table",
-    "titleZh": "雨天的签到桌",
-    "summary": "A rainy event entrance showed that service is the design of experience under real conditions.",
-    "summaryZh": "一个雨天活动入口，让人看见服务是在真实条件下设计体验。",
-    "scene": "The community event opened just as heavy rain began. Umbrellas crowded the doorway, the sign-in sheet became damp, and the line bent around the coat rack.",
-    "sceneZh": "社区活动刚开始，大雨就落下来。雨伞挤在门口，签到纸变潮，队伍绕到了衣架旁边。",
-    "storyBody": "At first, the volunteers tried to work faster. Then Sam noticed that speed was not the only issue. Wet coats needed a place to go. People could not hear instructions near the door. The elderly guests needed seats before checking in. The staff split the line, moved the cups away from the paperwork, created a dry handoff point, and sent one volunteer to greet people before they reached the desk. The service improved because they stopped seeing guests as a queue and started seeing the whole path of arrival.",
-    "storyBodyZh": "志愿者一开始只是努力加快速度。后来 Sam 发现，问题不只是慢。湿外套需要放的地方，门口太吵听不清说明，年长来宾需要先坐下再签到。工作人员把队伍分开，把杯子从文件旁移走，设了一个干燥交接点，并让一个志愿者在客人到桌前之前先迎接。服务变好，是因为他们不再只把客人看成一条队伍，而是看见了完整的到达路径。这样的服务设计从来不只发生在柜台后面；它发生在雨水、噪声、队伍、身体和人抵达现场的整条路径里。",
-    "knowledgePoint": "Services focus on coordination, experience, timing, and the practical reality of helping people in the moment.",
-    "knowledgePointZh": "服务关注协调、体验、时机，以及在具体时刻帮助人的现实条件。",
-    "reflectionQuestion": "In a familiar service experience, where does the real difficulty happen before anyone reaches the counter?",
-    "reflectionQuestionZh": "在一个熟悉的服务体验里，真正的困难是不是早在抵达柜台之前就已经发生了？",
-    "tags": [
-      "experience",
-      "coordination",
-      "service flow"
-    ],
-    "tagsZh": [
-      "体验",
-      "协调",
-      "服务流程"
-    ]
+    "imageAltZh": "雨天里，活动工作人员在社区活动入口协调签到。"
   }
 ];
 
@@ -1863,1405 +1615,281 @@ const sublensStoryDrafts = [
     "id": "001-birkbeck-evening-lecture",
     "categoryCode": "00",
     "groupCode": "001",
-    "groupTitleZh": "基础课程与资格",
-    "title": "The mechanics after work",
-    "titleZh": "下工后的力学课",
-    "summary": "A free evening lecture for working men showed how basic programmes turn curiosity into recognized access.",
-    "summaryZh": "一堂给工人开的免费晚课，让基础课程从“想学”变成了可以进入的公共通道。",
-    "scene": "Around 1799 in Glasgow, a teacher noticed that the men who handled tools all day were often kept outside the rooms where science was explained.",
-    "sceneZh": "1799 年前后的格拉斯哥，一位教师注意到：白天真正使用工具的人，常常被挡在讲解科学的房间外面。",
-    "storyBody": "He had trained in medicine and taught natural philosophy, but the factory floor made him uneasy in a productive way. Skilled mechanics could repair machines, judge materials, and feel force through their hands, yet many had no affordable path into the scientific language that described the work they already touched. So he began offering lectures after work, using apparatus, demonstrations, and plain explanations of heat, motion, chemistry, and machinery. The point was not to turn every worker into a university scholar overnight. It was to build a first rung: a place where practical people could enter formal knowledge without pretending they were already prepared. From that rung grew mechanics' institutes, evening classes, libraries, and a larger idea that basic qualifications should open doors instead of guarding them. This person was George Birkbeck, whose lectures helped inspire the mechanics' institute movement and the later institution known as Birkbeck, University of London.",
-    "storyBodyZh": "他受过医学训练，也教自然哲学，但工厂现场让他产生了一种不安。那些熟练工人能修机器、判断材料、用手感受力，却常常没有一条负担得起的路，去学习描述这些经验的科学语言。于是他把课放到下工之后，用仪器、演示和朴素解释讲热、运动、化学和机械。重点不是让每个工人一夜之间变成大学学者，而是搭出第一阶台阶：让有实践经验的人，不必假装已经准备好，也能进入正式知识。后来，从这一级台阶长出了 mechanics' institutes、晚间课程、图书馆，以及一种更大的观念：基础资格不应该只是守门，也应该开门。这个人叫 George Birkbeck，他的工人讲座推动了 mechanics' institute 运动，也成为后来的 Birkbeck, University of London 的重要源头。所以它不只是历史人物的小传，也是一种提醒：基础能力常常在正式学科名称出现以前就开始生长。",
-    "support": "George Birkbeck's lectures at the Andersonian Institution in Glasgow are widely linked to the mechanics' institute movement, which offered technical and scientific education to working men through lectures, libraries, and practical apparatus.",
-    "supportZh": "George Birkbeck 在格拉斯哥 Andersonian Institution 的讲座通常被视为 mechanics' institute 运动的重要源头。这类机构通过讲座、图书馆和实验器具，为工人提供技术与科学教育。",
-    "knowledgePoint": "Basic programmes and qualifications create the first recognized bridge between practical readiness and formal learning.",
-    "knowledgePointZh": "基础课程与资格搭建的是实践准备与正式学习之间的第一座被承认的桥。",
-    "reflectionQuestion": "Who around you already has real experience, but still needs a first rung into formal knowledge?",
-    "reflectionQuestionZh": "你身边谁已经有真实经验，却仍然需要进入正式知识的第一阶台阶？",
-    "tags": [
-      "mechanics institute",
-      "basic access",
-      "adult learning"
-    ],
-    "tagsZh": [
-      "机械学院",
-      "基础通道",
-      "成人学习"
-    ]
+    "groupTitleZh": "基础课程与资格"
   },
   {
     "id": "002-braille-raised-dots",
     "categoryCode": "00",
     "groupCode": "002",
-    "groupTitleZh": "读写与算术",
-    "title": "The dots under a fingertip",
-    "titleZh": "指尖下的六个凸点",
-    "summary": "A boy in a blind school turned reading from a slow performance into something a hand could do privately and quickly.",
-    "summaryZh": "一所盲校里的少年，把阅读从缓慢的展示，变成了指尖可以独立完成的行动。",
-    "scene": "In a small French village, a child injured his eye in his father's harness workshop. By the time he was sent to school in Paris, books had become heavy objects he could not truly use like other children.",
-    "sceneZh": "法国一个小村庄里，一个孩子在父亲的马具作坊里伤到眼睛。等他被送到巴黎读书时，书对他来说已经变成了沉重却不够自由的物件。",
-    "storyBody": "The school had raised-letter books, but they were slow, bulky, and gave blind students very little chance to write back. Then a soldier's night-writing code arrived: dots pressed into paper so messages could be read by touch in darkness. The boy tried it, but the system was too large for one fingertip and too clumsy for everyday reading. He kept reducing, testing, and rearranging until a tiny cell of six raised dots could hold letters, punctuation, numbers, and later music. The discovery was not only technical. It changed the dignity of literacy: a person could read silently, write privately, review a line again, and enter knowledge without waiting for someone else's voice. This person was Louis Braille, who developed the braille reading and writing system that became a foundation of literacy for blind and visually impaired people around the world.",
-    "storyBodyZh": "学校里有凸字书，但它们厚重、缓慢，也很少给盲学生真正“写回去”的机会。后来，一个士兵发明的夜间书写法传到学校：把点压进纸里，让人能在黑暗中摸读信息。这个少年试了试，却发现那套点太大，一个指尖很难一次读完，也不适合日常阅读。于是他不断缩小、测试、重新排列，直到六个凸点组成的小格子可以表达字母、标点、数字，后来还可以表达音乐。这个发现不只是技术，它改变了读写的尊严：一个人可以安静地读、私下地写、反复回看一行字，不必永远等待别人的声音带自己进入知识。这个人叫 Louis Braille，他发展出的 braille 读写系统，成为全球盲人和视障者基础读写能力的重要支柱。这让今天的学习者回到一个很实际的问题：在选择具体道路之前，先怎样练习提问、表达和与别人一起学习。",
-    "support": "Louis Braille was blinded after a childhood accident and later studied at the Royal Institute for Blind Youth in Paris. Inspired by Charles Barbier's raised-dot night writing, he developed a compact six-dot tactile system while still a student.",
-    "supportZh": "Louis Braille 幼年因意外失明，后来进入巴黎 Royal Institute for Blind Youth 学习。他受到 Charles Barbier 凸点夜间书写法启发，在学生时期发展出更紧凑的六点触读系统。",
-    "knowledgePoint": "Literacy and numeracy are not only school basics; they are ways of gaining independent access to information, symbols, counting, memory, and participation.",
-    "knowledgePointZh": "读写与算术不只是学校基础，它们让人独立进入信息、符号、数量、记忆和社会参与。",
-    "reflectionQuestion": "When a tool lets someone read without asking permission, what kind of freedom has quietly appeared?",
-    "reflectionQuestionZh": "当一种工具让人不必请求别人就能阅读时，哪一种自由已经悄悄出现了？",
-    "tags": [
-      "literacy",
-      "accessibility",
-      "braille"
-    ],
-    "tagsZh": [
-      "读写",
-      "可及性",
-      "盲文"
-    ]
+    "groupTitleZh": "读写与算术"
   },
   {
     "id": "003-carnegie-speaking-class",
     "categoryCode": "00",
     "groupCode": "003",
-    "groupTitleZh": "个人技能与发展",
-    "title": "The salesman who feared the room",
-    "titleZh": "害怕站到众人面前的推销员",
-    "summary": "A public-speaking class showed that personal development is often learned in the gap between fear and practice.",
-    "summaryZh": "一门演讲课说明：个人发展常常发生在恐惧和练习之间的那段距离里。",
-    "scene": "In early twentieth-century New York, a young man who had grown up far from polished boardrooms found that many adults were not defeated by lack of knowledge, but by the moment they had to speak.",
-    "sceneZh": "20 世纪初的纽约，一个从乡村背景走出来的年轻人发现，很多成年人不是败在没有知识，而是败在必须开口的那一刻。",
-    "storyBody": "He had tried selling, acting, and teaching, and he knew embarrassment from the inside. In evening classes, he watched clerks, salesmen, engineers, and managers arrive after work with the same hidden problem: they had something to say, but their bodies treated a roomful of people like danger. Instead of giving them elegant theories first, he made them stand up, tell a small true story, listen to one another, remember names, praise specifically, and try again next week. Gradually the subject widened. Speaking was not just voice; it was attention, confidence, empathy, memory, and the ability to make another person feel seen. Personal skills became trainable not because personality could be manufactured, but because courage could be practiced in small public acts. This person was Dale Carnegie, whose public-speaking and human-relations courses led to How to Win Friends and Influence People and shaped modern personal development training.",
-    "storyBodyZh": "他做过销售，试过表演，也教过课，所以很懂那种从身体里冒出来的尴尬。晚间课程里，他看见店员、推销员、工程师和经理下班后赶来，身上带着同一种隐秘难题：他们有话可说，可一站到众人面前，身体就像遇到危险。于是他没有先讲漂亮理论，而是让他们站起来，讲一个真实小故事，倾听别人，记住名字，具体地赞美，再下周继续试。慢慢地，这门课变宽了。表达不只是声音，它还包括注意力、信心、同理心、记忆，以及让另一个人感觉自己被看见的能力。个人技能之所以可以被训练，不是因为人格可以被制造，而是因为勇气可以在一个个小小的公开行动里练习。这个人叫 Dale Carnegie，他的公众演讲和人际关系课程发展出《How to Win Friends and Influence People》，也影响了现代个人发展训练。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是历史人物的小传，也是一种提醒：基础能力常常在正式学科名称出现以前就开始生长。",
-    "support": "Dale Carnegie began teaching business, public-speaking, and human-relations courses in New York in 1912. His 1936 book How to Win Friends and Influence People grew out of those courses and became a major text in self-development and communication training.",
-    "supportZh": "Dale Carnegie 1912 年开始在纽约教授商业、公众演讲和人际关系课程。1936 年出版的《How to Win Friends and Influence People》源自这些课程，后来成为自我发展与沟通训练的重要文本。",
-    "knowledgePoint": "Personal skills and development focus on self-management, communication, confidence, listening, adaptation, and social practice.",
-    "knowledgePointZh": "个人技能与发展关注自我管理、沟通、信心、倾听、适应，以及人在社会场景中的可练习能力。",
-    "reflectionQuestion": "Which ability in your life would change fastest if it were practiced publicly but gently every week?",
-    "reflectionQuestionZh": "你生活里的哪一种能力，如果每周被温和地公开练习，会最快发生变化？",
-    "tags": [
-      "communication",
-      "confidence",
-      "personal development"
-    ],
-    "tagsZh": [
-      "沟通",
-      "信心",
-      "个人发展"
-    ]
+    "groupTitleZh": "个人技能与发展"
   },
   {
     "id": "009-brownsea-scout-camp",
     "categoryCode": "00",
     "groupCode": "009",
-    "groupTitleZh": "未另分类的通用课程与资格",
-    "title": "The island with no school bell",
-    "titleZh": "没有上课铃的小岛",
-    "summary": "An experimental camp showed why some general programmes matter precisely because they do not fit one classroom label.",
-    "summaryZh": "一次实验营地说明：有些通用学习之所以重要，正因为它不属于单一课堂标签。",
-    "scene": "In August 1907, boys from different social backgrounds arrived on Brownsea Island to camp, cook, observe, signal, play games, and learn in patrols.",
-    "sceneZh": "1907 年 8 月，来自不同社会背景的男孩来到 Brownsea Island，露营、做饭、观察、打信号、做游戏，并以小队方式学习。",
-    "storyBody": "The organizer had been a soldier, but the camp was not simply military training. He had seen boys take responsibility as messengers, helpers, and observers, and he wondered whether ordinary young people could learn courage, service, outdoor judgment, teamwork, and civic responsibility through practice rather than lectures. The days mixed skills that no tidy timetable could easily separate: knots, tracking, first aid, woodcraft, storytelling, discipline, games, and care for the group. Some parts now feel historically dated and need thoughtful critique, but the deeper educational form remains recognizable: a mixed programme where character, practical skills, community, and self-reliance are learned together. This person was Robert Baden-Powell, whose Brownsea Island experiment helped launch the Scout movement and a large family of general youth programmes outside ordinary school categories.",
-    "storyBodyZh": "组织者曾是军人，但这次营地并不只是军事训练。他曾见过少年担任信使、助手和观察者，也开始想：普通年轻人能不能通过实践，而不是只听讲，学会勇气、服务、户外判断、团队合作和公民责任？营地每天混合着很难被整齐课表分开的内容：绳结、追踪、急救、野外技能、讲故事、纪律、游戏，以及对小队的照看。有些历史语境今天需要被审慎批判，但它留下的教育形式仍然清楚：一种混合型课程，把品格、实用技能、共同体和自立放在一起学习。这个人叫 Robert Baden-Powell，他在 Brownsea Island 的实验推动了 Scout movement，也开启了许多不属于普通学校分类的通用青少年课程。这让今天的学习者回到一个很实际的问题：在选择具体道路之前，先怎样练习提问、表达和与别人一起学习。",
-    "support": "The 1907 Brownsea Island experimental camp tested ideas later published in Scouting for Boys. It involved boys from different backgrounds and activities such as camping, observation, woodcraft, lifesaving, and patrol organization.",
-    "supportZh": "1907 年 Brownsea Island 实验营地用于测试后来写入《Scouting for Boys》的想法。参与者来自不同背景，活动包括露营、观察、野外技能、救助和小队组织等。",
-    "knowledgePoint": "Not elsewhere classified generic programmes preserve mixed learning forms that combine practical skill, character, access, and social participation.",
-    "knowledgePointZh": "未另分类的通用课程保留那些混合型学习形式，把实用技能、品格、进入能力和社会参与放在一起。",
-    "reflectionQuestion": "Which important life skill becomes harder to learn when every lesson must belong to one neat subject?",
-    "reflectionQuestionZh": "当每一节课都必须属于一个整齐学科时，哪一种重要生活能力反而更难学习？",
-    "tags": [
-      "mixed learning",
-      "youth programme",
-      "practical skills"
-    ],
-    "tagsZh": [
-      "混合学习",
-      "青少年课程",
-      "实用技能"
-    ]
+    "groupTitleZh": "未另分类的通用课程与资格"
   },
   {
     "id": "018-reggio-emilia-school",
     "categoryCode": "01",
     "groupCode": "018",
-    "groupTitleZh": "教育相关跨学科课程与资格",
-    "title": "The school rebuilt from broken streets",
-    "titleZh": "废墟旁边重新搭起的学校",
-    "summary": "In postwar Reggio Emilia, parents and an educator turned childcare into a community, art, language, and research project.",
-    "summaryZh": "战后的 Reggio Emilia，家长和一位教育者把儿童照护变成社区、艺术、语言和研究共同参与的项目。",
-    "scene": "After World War II, a group of parents near Reggio Emilia wanted a school before they had anything that looked like a complete school system.",
-    "sceneZh": "第二次世界大战后，Reggio Emilia 附近的一群家长想先给孩子建一所学校，哪怕他们还没有一个完整的学校系统。",
-    "storyBody": "The young educator had grown up around Reggio Emilia and studied pedagogy while war was changing the world around him. In 1945, he saw parents in a damaged village begin building a school for children, not as a neat government project but as a way to say that the future still belonged to them. What he found was not a finished method but a community trying to rebuild life around children. The school that slowly emerged did not separate learning into tidy boxes. Children drew, built, argued, listened, sculpted, measured, acted, and revisited their own ideas. Teachers documented the process, parents joined the conversation, and the classroom environment itself became part of the teaching. The point was not to add art to education as decoration. It was to admit that children think in many languages, and that education often needs several disciplines before it can hear them clearly. This person was Loris Malaguzzi, who helped develop the Reggio Emilia approach as an interdisciplinary educational experience built from community, art, documentation, and children's expression.",
-    "storyBodyZh": "那位年轻教育者在 Reggio Emilia 一带长大，战争期间仍在学习教育学。1945 年，他听说一个受战争破坏的村庄里，家长们正在为孩子建学校，就去看了看。那不是一个整齐的官方项目，更像是一群普通人用砖块和手艺告诉孩子：未来还没有被夺走。他看到的不是已经成型的方法，而是一个社区试着围绕孩子重新组织生活。后来慢慢长出来的学校，没有把学习切成整齐的小盒子。孩子们画画、搭建、争论、倾听、塑形、测量、表演，也一次次回到自己的想法。老师记录过程，家长参与讨论，教室环境本身也成了教学的一部分。重点不是把艺术加进教育当装饰，而是承认孩子用很多种语言思考，而教育常常需要好几个学科一起，才听得清这些语言。这个人叫 Loris Malaguzzi，他和家长们发展出 Reggio Emilia 教育取向，让跨学科、社区、艺术和儿童表达成为同一套学习经验。所以它不只是教育史的一页，也是在提醒老师和学生：先观察学习怎样发生，再决定怎样介入。",
-    "support": "The Reggio Emilia approach developed after World War II through Loris Malaguzzi and parents around Reggio Emilia, Italy. It is known for project work, documentation, parent/community involvement, atelier practice, and the idea that children have many languages of expression.",
-    "supportZh": "Reggio Emilia approach 在第二次世界大战后由 Loris Malaguzzi 和意大利 Reggio Emilia 周边家长共同发展。它强调项目学习、过程记录、家长和社区参与、atelier 艺术工作室，以及儿童拥有多种表达语言。",
-    "knowledgePoint": "Inter-disciplinary education connects learning goals across subjects so learners can use knowledge together instead of storing it separately.",
-    "knowledgePointZh": "教育相关跨学科课程把不同学习目标连接起来，让学习者一起使用知识，而不是把知识分开存放。",
-    "reflectionQuestion": "If a child has more than one language for thinking, which disciplines need to stand nearby to hear it?",
-    "reflectionQuestionZh": "如果一个孩子不只用一种语言思考，哪些学科需要站在旁边，才能真正听见他？",
-    "tags": [
-      "interdisciplinary",
-      "Reggio Emilia",
-      "documentation"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "Reggio Emilia",
-      "学习记录"
-    ]
+    "groupTitleZh": "教育相关跨学科课程与资格"
   },
   {
     "id": "021-bauhaus-workshop",
     "categoryCode": "02",
     "groupCode": "021",
-    "groupTitleZh": "艺术",
-    "title": "The workshop after the war",
-    "titleZh": "战后工坊里的新学校",
-    "summary": "A postwar school tried to put art, craft, design, and architecture back into one working room.",
-    "summaryZh": "一所战后学校试图把艺术、手工、设计和建筑重新放回同一个工作间。",
-    "scene": "After the First World War, a young architect in Weimar inherited a divided world: fine art on one side, craft and industry on the other.",
-    "sceneZh": "第一次世界大战后，魏玛的一位年轻建筑师面对的是一个分裂的世界：一边是纯艺术，一边是手工和工业。",
-    "storyBody": "He did not want students to treat beauty as a museum decoration or making as a lower kind of labor. In the new school, students began with materials, color, form, tools, and workshops before specializing. Painters, weavers, metalworkers, typographers, stage designers, and architects were asked to learn near one another, because modern life was no longer made by isolated arts. A chair, a poster, a lamp, a building, a stage costume, and a letterform all carried the same question: how should form serve life without losing imagination? The school struggled with politics, money, hierarchy, and its own exclusions, but it changed the vocabulary of modern art education by insisting that art could be thought through making. This person was Walter Gropius, who founded the Bauhaus in 1919 and helped make the unity of art, craft, design, and architecture a defining idea of modern arts education.",
-    "storyBodyZh": "他不希望学生把美只当作博物馆装饰，也不希望制作被看成较低级的劳动。在这所新学校里，学生先学习材料、色彩、形式、工具和工坊，再进入具体方向。画家、织物设计者、金属工、字体设计者、舞台设计者和建筑师被放到彼此附近学习，因为现代生活已经不再由孤立的艺术制造。一把椅子、一张海报、一盏灯、一栋建筑、一件舞台服装、一个字形，都在问同一个问题：形式怎样服务生活，同时不失去想象力？这所学校经历了政治、经费、等级和自身排斥问题，但它改变了现代艺术教育的词汇：艺术可以通过制作来思考。这个人叫 Walter Gropius，他于 1919 年创办 Bauhaus，让艺术、手工、设计和建筑的统一成为现代艺术教育的重要理念。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。",
-    "support": "The Bauhaus was founded by Walter Gropius in Weimar in 1919. It combined crafts and fine arts, worked through workshops, and became highly influential in modern design, architecture, and art education.",
-    "supportZh": "Bauhaus 于 1919 年由 Walter Gropius 在魏玛创办，强调工坊、手工与美术的结合，并深刻影响现代设计、建筑和艺术教育。",
-    "knowledgePoint": "Arts study form, material, image, sound, movement, making, and perception as ways of shaping human experience.",
-    "knowledgePointZh": "艺术研究形式、材料、图像、声音、动作、制作和感知如何塑造人的经验。",
-    "reflectionQuestion": "What object around you would change if its maker had to think like both an artist and a craftsperson?",
-    "reflectionQuestionZh": "你身边哪一个物件，如果制作者同时像艺术家和工匠一样思考，会变得不一样？",
-    "tags": [
-      "Bauhaus",
-      "workshop",
-      "modern art"
-    ],
-    "tagsZh": [
-      "Bauhaus",
-      "工坊",
-      "现代艺术"
-    ]
+    "groupTitleZh": "艺术"
   },
   {
     "id": "022-petrarch-mountain-letter",
     "categoryCode": "02",
     "groupCode": "022",
-    "groupTitleZh": "人文，不含语言",
-    "title": "The mountain climbed for a view",
-    "titleZh": "为了一眼风景爬上山的人",
-    "summary": "A famous mountain letter made the humanities feel like a turn toward memory, self-examination, and ancient voices.",
-    "summaryZh": "一封著名的登山信，让人文像是一次转身：面向记忆、自我审视和古代声音。",
-    "scene": "On 26 April 1336, a poet climbed Mont Ventoux with his brother, not because the road required it, but because he wanted to see from above.",
-    "sceneZh": "1336 年 4 月 26 日，一位诗人和兄弟登上 Mont Ventoux，不是因为路必须经过那里，而是因为他想从高处看一眼世界。",
-    "storyBody": "He had spent years loving old books, copying letters, searching for ancient authors, and feeling that the past was not dead if a living reader could answer it. On the mountain, the outside view became an inward disturbance. He opened a small book by Augustine and read words that seemed to accuse him of chasing the world while forgetting the soul. Whether every detail of the letter is literal history matters less than the kind of attention it staged: landscape, classical memory, Christian self-examination, friendship, ambition, and the feeling of being a person stretched between ages. Humanities begin in that tension. They ask how old texts, beliefs, histories, and inward questions still form a living person. This person was Francesco Petrarca, often called Petrarch, whose recovery of classical texts and self-reflective writing made him a central figure of Renaissance humanism.",
-    "storyBodyZh": "他多年热爱旧书，抄写书信，寻找古代作者，也越来越觉得：过去并没有死，只要仍有人带着自己的生命去回应它。登山时，外面的风景变成了内心的震动。他翻开随身带着的 Augustine 小书，读到的话仿佛在提醒他：人为何追逐世界，却忘了自己的灵魂。那封信的每个细节是否都完全符合现代历史标准，并不影响它呈现出的注意力：风景、古典记忆、基督教式自省、友谊、野心，以及一个人被拉在不同时代之间的感觉。人文就从这种张力里开始：古老文本、信念、历史和内心问题，怎样仍在塑造活着的人。这个人叫 Francesco Petrarca，通常被称为 Petrarch，他整理和重新发现古典文本，并以自我反思的写作成为文艺复兴人文主义的关键人物。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。",
-    "support": "Petrarch's letter about climbing Mont Ventoux, traditionally dated 26 April 1336, is often discussed as a symbolic text of Renaissance humanism, combining landscape, classical reading, Christian introspection, and self-conscious authorship.",
-    "supportZh": "Petrarch 关于登 Mont Ventoux 的书信传统上标为 1336 年 4 月 26 日，常被讨论为文艺复兴人文主义的象征性文本，连接风景、古典阅读、基督教自省和自我意识写作。",
-    "knowledgePoint": "Humanities examine history, religion, philosophy, ethics, cultural memory, and inner life as ways people inherit and revise meaning.",
-    "knowledgePointZh": "人文研究历史、宗教、哲学、伦理、文化记忆和内在生活，理解人如何继承并修订意义。",
-    "reflectionQuestion": "Which old text, place, or memory might change you because it lets you see your own life from above?",
-    "reflectionQuestionZh": "哪一本旧书、哪一个地点或哪段记忆，可能因为让你从高处看见自己，而改变你？",
-    "tags": [
-      "humanism",
-      "memory",
-      "self-examination"
-    ],
-    "tagsZh": [
-      "人文主义",
-      "记忆",
-      "自我审视"
-    ]
+    "groupTitleZh": "人文，不含语言"
   },
   {
     "id": "023-rosetta-cartouche",
     "categoryCode": "02",
     "groupCode": "023",
-    "groupTitleZh": "语言",
-    "title": "The oval around a royal name",
-    "titleZh": "王名外面的椭圆框",
-    "summary": "A young language scholar followed repeated names across scripts until a silent civilization began to speak again.",
-    "summaryZh": "一位年轻语言学者追踪不同文字里的重复王名，终于让沉默的古文明重新发声。",
-    "scene": "In nineteenth-century France, a boy who loved languages grew up under political uncertainty, copying scripts and listening for patterns long before he had a secure career.",
-    "sceneZh": "19 世纪的法国，一个热爱语言的少年在政治动荡中长大，还没有稳定事业时，就已经在抄写文字、寻找不同文字之间的模式。",
-    "storyBody": "The stone that fascinated Europe carried the same decree in several scripts, but the hieroglyphs still resisted readers. He did not treat the signs as decoration. He compared royal names, especially the names inside oval cartouches, with Greek letters and with Coptic, a later Egyptian language he knew could preserve older sounds. A sign that looked symbolic in one place began to behave like sound in another. The breakthrough was slow, competitive, and not the work of one mind alone, but his step changed everything: the signs were not merely sacred pictures; they could also record language. Once that became clear, monuments, tombs, names, prayers, and official records began to re-enter history. This person was Jean-Francois Champollion, who announced a decisive decipherment of Egyptian hieroglyphs in 1822 and became a founding figure of Egyptology.",
-    "storyBodyZh": "那块让欧洲学者着迷的石碑，用几种文字写着同一份诏令，可象形文字仍然拒绝被读懂。他没有把那些符号只当作装饰，而是反复比较王名，尤其是椭圆框里的名字，把它们同希腊字母、以及他熟悉的科普特语联系起来。一个在某处看似图画的符号，在另一处开始表现得像声音。突破很慢，也充满竞争，而且并不是一个人凭空完成的；但他的关键一步改变了一切：这些符号不只是神圣图像，也能记录语言。一旦这一点被确认，纪念碑、墓葬、名字、祷文和官方记录，开始重新进入历史。这个人叫 Jean-Francois Champollion，他在 1822 年宣布对埃及象形文字的决定性破译，并成为 Egyptology 的奠基人物之一。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。",
-    "support": "Champollion's 1822 breakthrough used comparisons among Greek, hieroglyphic cartouches, demotic, and Coptic to show that Egyptian hieroglyphs combined phonetic and ideographic elements.",
-    "supportZh": "Champollion 1822 年的突破通过比较希腊文、象形文字王名框、世俗体文字和科普特语，说明埃及象形文字同时包含表音和表意成分。",
-    "knowledgePoint": "Language study connects scripts, sounds, grammar, meaning, translation, and the historical conditions that make words readable.",
-    "knowledgePointZh": "语言研究连接文字、声音、语法、意义、翻译，以及让语言重新可读的历史条件。",
-    "reflectionQuestion": "What changes when a mark on stone stops being decoration and becomes a sentence?",
-    "reflectionQuestionZh": "当石头上的符号不再只是装饰，而变成一句话，世界会怎样改变？",
-    "tags": [
-      "decipherment",
-      "scripts",
-      "Egyptology"
-    ],
-    "tagsZh": [
-      "破译",
-      "文字系统",
-      "埃及学"
-    ]
+    "groupTitleZh": "语言"
   },
   {
     "id": "028-black-mountain-studio",
     "categoryCode": "02",
     "groupCode": "028",
-    "groupTitleZh": "艺术与人文相关跨学科课程与资格",
-    "title": "The college without tidy borders",
-    "titleZh": "没有整齐边界的学院",
-    "summary": "A small American college turned exile, craft, philosophy, music, poetry, and materials into one experimental education.",
-    "summaryZh": "美国一所小学院把流亡、工艺、哲学、音乐、诗歌和材料放进同一个实验教育里。",
-    "scene": "In 1933, after the Bauhaus was shut down in Germany, a teacher and his wife arrived in North Carolina with boxes, habits of workshop teaching, and no interest in keeping art safely separate from life.",
-    "sceneZh": "1933 年，Bauhaus 在德国被关闭后，一位教师和妻子带着行李、工坊教学习惯和一种不愿把艺术同生活分开的信念，来到北卡罗来纳。",
-    "storyBody": "The college they joined was small enough that students helped make institutional decisions, lived close to teachers, worked with materials, read philosophy, built things, performed, argued, cooked, and sometimes failed without a conventional map. The teacher's famous course in materials and form did not begin with masterpieces. It began with paper, color, glass, leaves, wire, pressure, balance, and the discipline of really seeing. Around that practice gathered dancers, poets, composers, painters, weavers, architects, and thinkers. Cross-disciplinary arts and humanities here did not mean adding extra topics. It meant treating making, reading, living, and perceiving as one education. This person was Josef Albers, whose teaching at Black Mountain College helped make interdisciplinary arts education a living experiment rather than a slogan.",
-    "storyBodyZh": "他们加入的那所学院很小，小到学生会参与学校决策，和老师一起生活，处理材料，读哲学，建造东西，表演，争论，做饭，也常常在没有传统地图的情况下失败。那位教师著名的材料与形式课程，并不是从名作开始，而是从纸、颜色、玻璃、树叶、金属丝、压力、平衡，以及真正看见东西的纪律开始。围绕这些练习，舞者、诗人、作曲家、画家、织物艺术家、建筑师和思想者彼此靠近。艺术与人文的跨学科在这里不是多加几个主题，而是把制作、阅读、生活和感知当成同一种教育。这个人叫 Josef Albers，他在 Black Mountain College 的教学让跨学科艺术教育成为真实实验，而不只是口号。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。",
-    "support": "Black Mountain College opened in 1933 in North Carolina. Josef Albers, formerly of the Bauhaus, became a key teacher there, and the college became famous for experimental, interdisciplinary arts and liberal education.",
-    "supportZh": "Black Mountain College 于 1933 年在北卡罗来纳创办。原 Bauhaus 教师 Josef Albers 是关键教师之一；这所学院以实验性、跨学科的艺术和通识教育闻名。",
-    "knowledgePoint": "Inter-disciplinary arts and humanities combine making, interpretation, history, language, performance, and lived experience into one field of inquiry.",
-    "knowledgePointZh": "艺术与人文跨学科课程把制作、解释、历史、语言、表演和生活经验放进同一个探究场域。",
-    "reflectionQuestion": "What would you learn differently if your classroom included tools, books, meals, arguments, and performance at the same time?",
-    "reflectionQuestionZh": "如果课堂同时包含工具、书、饭桌、争论和表演，你会以什么不同方式学习？",
-    "tags": [
-      "Black Mountain College",
-      "interdisciplinary",
-      "materials"
-    ],
-    "tagsZh": [
-      "Black Mountain College",
-      "跨学科",
-      "材料"
-    ]
+    "groupTitleZh": "艺术与人文相关跨学科课程与资格"
   },
   {
     "id": "029-lomax-field-recorder",
     "categoryCode": "02",
     "groupCode": "029",
-    "groupTitleZh": "未另分类的艺术与人文",
-    "title": "The heavy recorder in the trunk",
-    "titleZh": "后备箱里的沉重录音机",
-    "summary": "A field recorder showed why some cultural knowledge sits between music, archive, oral history, politics, and memory.",
-    "summaryZh": "一台田野录音机说明：有些文化知识横跨音乐、档案、口述史、政治和记忆。",
-    "scene": "In the 1930s and 1940s, a young collector drove long distances with recording equipment heavy enough to shape the whole trip.",
-    "sceneZh": "20 世纪三四十年代，一个年轻采集者带着沉重到足以改变整趟行程的录音设备，开车穿过很长的路。",
-    "storyBody": "He sat in prisons, porches, churches, kitchens, fields, and small rooms where people sang songs that rarely entered official culture. At first glance, he seemed to be collecting music. But the recordings also carried accents, work rhythms, jokes, local histories, racial violence, migration, memory, and the pride of people who had often been treated as raw material rather than authors of culture. The work did not fit neatly into one shelf. It was musicology, folklore, archive building, oral history, documentary practice, and a political argument that every community deserves to hear itself preserved. Not elsewhere classified arts and humanities live in exactly this kind of borderland, where the category is less important than the care taken with fragile human expression. This person was Alan Lomax, whose field recordings and cultural equity work helped preserve and reframe folk music and oral traditions across the United States and beyond.",
-    "storyBodyZh": "他坐进监狱、门廊、教堂、厨房、田野和小房间，录下那些很少进入官方文化的歌声。乍看之下，他是在采集音乐；但录音里也有口音、劳动节奏、玩笑、地方历史、种族暴力、迁徙、记忆，以及那些常被当成文化素材而不是文化作者的人所保有的尊严。这项工作很难放进一个格子。它既是音乐学，也是民俗学、档案建设、口述史、纪录实践，更是一种政治主张：每个共同体都应该有机会听见自己被保存。未另分类的艺术与人文，正生活在这种边界地带，分类不如对脆弱人类表达的照护重要。这个人叫 Alan Lomax，他的田野录音和 cultural equity 工作保存并重新解释了美国及世界各地的民间音乐与口述传统。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。",
-    "support": "Alan Lomax made extensive field recordings of folk music and oral traditions, including work for the Library of Congress Archive of Folk Song. His later idea of cultural equity argued for the public value of diverse local expressive traditions.",
-    "supportZh": "Alan Lomax 大量采集民间音乐和口述传统录音，曾参与 Library of Congress Archive of Folk Song 工作。他后来提出 cultural equity，强调不同地方表达传统的公共价值。",
-    "knowledgePoint": "Not elsewhere classified arts and humanities protect hybrid cultural practices that cross music, memory, archives, oral history, media, and public meaning.",
-    "knowledgePointZh": "未另分类的艺术与人文保护那些跨越音乐、记忆、档案、口述史、媒介和公共意义的混合文化实践。",
-    "reflectionQuestion": "Whose voice near you might disappear if no one treats it as culture before it becomes famous?",
-    "reflectionQuestionZh": "你身边谁的声音，如果没人先把它当作文化来对待，可能还没出名就消失？",
-    "tags": [
-      "field recording",
-      "oral history",
-      "cultural memory"
-    ],
-    "tagsZh": [
-      "田野录音",
-      "口述史",
-      "文化记忆"
-    ]
+    "groupTitleZh": "未另分类的艺术与人文"
   },
   {
     "id": "031-bus-stop-price",
     "categoryCode": "03",
     "groupCode": "031",
-    "groupTitleZh": "社会与行为科学",
-    "title": "The bus stop price",
-    "titleZh": "王朝为什么会衰弱",
-    "summary": "A changed bus fare revealed incentives, behavior, fairness, and public life.",
-    "summaryZh": "一个在动荡时代观察部落、城市和政权的人，试着把社会行为写成有规律的历史。",
-    "scene": "When the bus fare rose, some riders walked, some paid, and some began sharing rides. The city called it a small adjustment. The bus stop told a bigger story.",
-    "sceneZh": "14 世纪北非，一个年轻官员在宫廷、部落营地和监狱之间辗转，亲眼看见权力如何上升又崩塌。",
-    "storyBody": "A student counted who stopped riding. A shop owner noticed fewer morning customers. A planner saw revenue; riders felt lost time and dignity. Social and behavioural sciences ask how choices are shaped by incentives, norms, institutions, and unequal options.",
-    "storyBodyZh": "他的人生并不安稳，家族经历瘟疫，仕途几次卷入政治风浪。他开始怀疑，历史书里只记谁胜谁败是不够的。为什么一些群体能团结起来，为什么进入富裕城市后又慢慢松散，为什么税收、奢侈、教育、地理和共同体精神会一起改变政权命运？他把亲身见过的部落联盟、城市官僚和王朝循环放在一起分析，试着找出社会行为背后的力量。社会与行为科学的雏形就在这种追问里出现：人不是孤立行动，群体的凝聚、制度和环境会共同塑造历史。这个人叫 Ibn Khaldun，他在《Muqaddimah》中提出关于社会组织、王朝循环和 asabiyyah 的分析，被视为社会科学思想的重要先驱之一。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "knowledgePoint": "Social and behavioural sciences study economics, politics, psychology, sociology, and culture as forces shaping human action.",
-    "knowledgePointZh": "社会与行为科学研究人的选择、群体、制度、文化和环境如何共同塑造行动。",
-    "reflectionQuestion": "When a choice looks individual, what shared condition might be quietly choosing with the person?",
-    "reflectionQuestionZh": "当一个团队变弱时，你会只责怪个人，还是追问共同体的结构发生了什么？",
-    "tags": [
-      "behaviour",
-      "incentives",
-      "society"
-    ],
-    "tagsZh": [
-      "社会行为",
-      "历史规律",
-      "群体"
-    ]
+    "groupTitleZh": "社会与行为科学"
   },
   {
     "id": "032-rumor-before-the-storm",
     "categoryCode": "03",
     "groupCode": "032",
-    "groupTitleZh": "新闻与信息",
-    "title": "The rumor before the storm",
-    "titleZh": "世界知识的抽屉",
-    "summary": "A neighborhood rumor showed why information work is about verification, timing, and trust.",
-    "summaryZh": "一座纸卡片构成的知识宫殿，让新闻与信息不只是报道，也包括组织和检索世界。",
-    "scene": "Before a storm, a message spread through the neighborhood: the bridge was closed. People cancelled appointments before anyone checked the source.",
-    "sceneZh": "19 世纪末的布鲁塞尔，一个年轻律师坐在堆满纸卡片的房间里，想象全世界的知识都能被找到。",
-    "storyBody": "Mara called the transport office, checked the city update, and asked who first sent the message. The bridge was open, but one lane was flooded. The corrected message had to be short, clear, and fast. Journalism and information work is not just finding facts; it is helping facts travel before fear does.",
-    "storyBodyZh": "他关心的不是某一条新闻，而是人类怎样保存和共享所有已经写下来的东西。书、论文、报告、图片、剪报、统计表，如果不能被分类、编号、引用和检索，就像散在地上的碎片。他和同伴设计通用十进分类法，建立庞大的卡片目录，试图让任何地方的人都能提出问题并获得相关资料。这个梦想有时代局限，也带着欧洲中心的阴影，但它抓住了信息工作的核心：公共知识不是自然流动的，它需要索引、标准、媒介、机构和持续维护。这个人叫 Paul Otlet，他创建 Mundaneum 并推动文献学、知识组织和信息科学早期发展，被后世视为现代信息组织思想的重要先驱之一。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "knowledgePoint": "Journalism and information fields handle reporting, verification, archives, access, and the systems that make public knowledge reliable.",
-    "knowledgePointZh": "新闻与信息领域关注报道、保存、检索、组织和传播，让公共知识能够被找到、核实和使用。",
-    "reflectionQuestion": "What information do people around you pass on because it feels urgent rather than because it has been checked?",
-    "reflectionQuestionZh": "如果一条重要信息无法被找到，它还算真正进入公共生活了吗？",
-    "tags": [
-      "verification",
-      "reporting",
-      "trust"
-    ],
-    "tagsZh": [
-      "信息组织",
-      "文献",
-      "公共知识"
-    ]
+    "groupTitleZh": "新闻与信息"
   },
   {
     "id": "038-community-data-project",
     "categoryCode": "03",
     "groupCode": "038",
-    "groupTitleZh": "社会科学、新闻与信息相关跨学科课程与资格",
-    "title": "The map of empty benches",
-    "titleZh": "水泵周围的黑点",
-    "summary": "A park project needed observation, interviews, data, and reporting in one frame.",
-    "summaryZh": "一张疾病地图把社会调查、数据、地方访谈和公共信息放进同一个判断。",
-    "scene": "Students mapped which park benches stayed empty. The numbers said one thing; interviews with older residents said another.",
-    "sceneZh": "1854 年伦敦 Soho 的街道上，霍乱病例不断增加，一位医生拿着地址和地图追踪死亡的位置。",
-    "storyBody": "The empty benches were not simply unpopular. Some were too far from shade, some near loud traffic, and some felt unsafe after dusk. The final report combined counting, listening, mapping, and public storytelling. A social question often needs several methods to become visible.",
-    "storyBodyZh": "当时许多人仍相信坏空气是主要原因。他却把注意力放到人喝了什么水、住在哪里、谁离开、谁留下，以及哪些看似例外其实有共同解释。他不是一个人完成全部调查；当地牧师和居民提供了关键访问线索。病例被标到地图上后，Broad Street 水泵周围的黑点越来越密。这个判断既是医学问题，也是社会信息问题：数据要来自街道，访谈要校正地图，地图又要说服公共机构采取行动。跨学科的社会科学、新闻与信息在这里很清楚：证据要能穿过学科边界，才可能改变一个城市的决定。这个人叫 John Snow，他通过 Broad Street 霍乱调查和地图分析推动了流行病学、公共卫生和数据可视化的经典实践。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "knowledgePoint": "Inter-disciplinary social sciences, journalism, and information combine research, communication, data, and public context.",
-    "knowledgePointZh": "社会科学、新闻与信息的跨学科课程把社会调查、数据、地图、访谈和公共传播连接起来。",
-    "reflectionQuestion": "What public problem near you would change if numbers and stories were read together?",
-    "reflectionQuestionZh": "一个公共问题什么时候需要地图、访谈和行动同时出现？",
-    "tags": [
-      "data",
-      "interviews",
-      "public context"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "数据地图",
-      "公共卫生"
-    ]
+    "groupTitleZh": "社会科学、新闻与信息相关跨学科课程与资格"
   },
   {
     "id": "039-unusual-community-signal",
     "categoryCode": "03",
     "groupCode": "039",
-    "groupTitleZh": "未另分类的社会科学、新闻与信息",
-    "title": "The signal in the laundry room",
-    "titleZh": "渔民为什么没有把湖耗尽",
-    "summary": "A pattern nobody studied formally became a clue about trust in a building.",
-    "summaryZh": "一个长期观察共同资源的人发现，真实社区常常比简单理论更会发明规则。",
-    "scene": "In one apartment building, people left free items in the laundry room. In another, everything disappeared within minutes. Nobody knew what category this habit belonged to.",
-    "sceneZh": "20 世纪后半叶，一个研究者读到许多关于森林、灌溉渠和渔场的案例，发现它们并不总按课本预言崩坏。",
-    "storyBody": "A tenant started noting the signs people wrote, how long items stayed, and who greeted whom. The laundry room became a tiny information system and a trust experiment. Some social realities are too local, hybrid, or odd for standard labels, but still worth understanding.",
-    "storyBodyZh": "流行说法常把公共资源讲成两种结局：要么被市场私有化，要么由国家统一管理，否则人人都会多拿一点直到系统崩溃。她不满足于这个太整齐的故事。她和同伴比较世界各地的灌溉社群、渔业、牧场和森林，发现有些社区会自己制定边界、监测、惩罚、冲突解决和分层规则。它们不是完美乌托邦，也会失败，但它们证明社会现实比二分法复杂。未另分类的社会科学、新闻与信息需要这种耐心：有些制度知识藏在地方规则、口头协议和长期观察里，不一定属于单一学科。这个人叫 Elinor Ostrom，她通过共同池资源研究和制度分析获得诺贝尔经济学奖，改变了人们对集体治理的理解。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "knowledgePoint": "Not elsewhere classified social and information fields catch unusual public patterns that still reveal behaviour, norms, and communication.",
-    "knowledgePointZh": "未另分类的社会科学、新闻与信息收纳那些跨越制度、行为、地方知识和公共信息的复杂社会现象。",
-    "reflectionQuestion": "What tiny social habit around you says more than it first appears to?",
-    "reflectionQuestionZh": "你身边哪一套非正式规则，其实比外人想象得更精密？",
-    "tags": [
-      "local pattern",
-      "trust",
-      "informal systems"
-    ],
-    "tagsZh": [
-      "共同资源",
-      "制度",
-      "地方知识"
-    ]
+    "groupTitleZh": "未另分类的社会科学、新闻与信息"
   },
   {
     "id": "041-cafe-closing-sheet",
     "categoryCode": "04",
     "groupCode": "041",
-    "groupTitleZh": "商业与管理",
-    "title": "The cafe closing sheet",
-    "titleZh": "公司不是一台机器",
-    "summary": "A cafe closing routine showed how records, roles, stock, money, and customers fit together.",
-    "summaryZh": "一次对大企业的长期观察，让管理学开始把组织看成由人、目标和责任组成的社会机构。",
-    "scene": "At closing time, the cafe looked quiet, but the manager still had three questions: what sold, what was wasted, and who needed to know before morning.",
-    "sceneZh": "20 世纪中期，一个年轻管理思想者走进大型汽车公司，发现真正难的不是画组织图，而是理解组织为什么行动。",
-    "storyBody": "The closing sheet connected cash, stock, staff hours, supplier orders, and customer complaints. One missing note about oat milk could become a bad morning. Business and administration are the systems that make work visible before decisions are made.",
-    "storyBodyZh": "他不是工程师出身，也不是只看财务报表的人。他关心一个更朴素的问题：当公司越来越大，谁在决定目标？经理人的责任是什么？员工是不是只是一颗螺丝？顾客、社会和长期生存又放在哪里？他观察通用汽车这样的组织，发现管理不是命令链条那么简单，而是让知识、权责、绩效、创新和人的尊严保持可工作的关系。商业与行政在这里变成一门关于“组织如何有目的地行动”的学问。它既要看数字，也要看人；既要看效率，也要看责任。这个人叫 Peter Drucker，他通过《Concept of the Corporation》等作品奠定现代管理学的重要语言，被称为现代管理思想的重要奠基人之一。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "knowledgePoint": "Business and administration covers accounting, finance, management, marketing, office work, sales, and work skills as coordinated organizational practice.",
-    "knowledgePointZh": "商业与行政研究组织、流程、责任、协调、绩效和决策如何让集体工作可持续运转。",
-    "reflectionQuestion": "What small record keeps a workplace from having to remember everything by panic?",
-    "reflectionQuestionZh": "一个组织如果只追效率，却说不清自己的责任，会在哪些地方开始失灵？",
-    "tags": [
-      "management",
-      "records",
-      "operations"
-    ],
-    "tagsZh": [
-      "管理学",
-      "组织",
-      "行政"
-    ]
+    "groupTitleZh": "商业与管理"
   },
   {
     "id": "042-bicycle-deposit",
     "categoryCode": "04",
     "groupCode": "042",
-    "groupTitleZh": "法律",
-    "title": "The bicycle deposit",
-    "titleZh": "学生第一次听懂普通法",
-    "summary": "A small deposit dispute showed why rules need language, evidence, and fairness.",
-    "summaryZh": "一个讲课者把散落判例和法律传统整理成可学习的体系，让法律教育走向公共语言。",
-    "scene": "Kai rented a bicycle for a weekend. When he returned it, the shop kept part of the deposit for a scratch he said was already there.",
-    "sceneZh": "18 世纪的牛津，一个年轻律师面对学生，试着把复杂的普通法讲成一套有次序的课程。",
-    "storyBody": "The argument changed when they looked at the rental agreement, old photos, and what the word damage meant. Law entered the room not as drama, but as a way to ask: what was promised, what can be proven, and what outcome is fair enough to live with?",
-    "storyBodyZh": "当时普通法常被认为只能在律师事务所和法院里慢慢熬出来，外人很难进入。判例、惯例、术语和程序像一片森林，既保护权利，也让许多人迷路。他开始公开讲授英格兰法律，把权利、财产、私人侵害和公共犯罪整理成系统叙述。后来他的书影响巨大，也带着时代局限，尤其在殖民和社会等级问题上需要被批判阅读。但法律作为学科的一个关键变化已经出现：规则不只是专业圈的秘密技术，也可以被讲解、出版、争论和教学。这个人叫 William Blackstone，他的《Commentaries on the Laws of England》成为普通法教育和英美法律思想史上的经典文本。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "knowledgePoint": "Law studies rules, rights, responsibilities, evidence, interpretation, and the institutions that settle conflict.",
-    "knowledgePointZh": "法律研究规则、权利、责任、证据、解释和处理冲突的制度。",
-    "reflectionQuestion": "What agreement in your life depends on a word nobody defined carefully?",
-    "reflectionQuestionZh": "如果规则只被少数专业人士听懂，普通人还怎样保护自己的权利？",
-    "tags": [
-      "rights",
-      "evidence",
-      "agreement"
-    ],
-    "tagsZh": [
-      "法律",
-      "普通法",
-      "法律教育"
-    ]
+    "groupTitleZh": "法律"
   },
   {
     "id": "048-pop-up-market-rules",
     "categoryCode": "04",
     "groupCode": "048",
-    "groupTitleZh": "商业、管理与法律相关跨学科课程与资格",
-    "title": "The pop-up market rules",
-    "titleZh": "一份关于便宜保险的报告",
-    "summary": "A weekend market needed pricing, permits, roles, contracts, and public safety together.",
-    "summaryZh": "一个律师把商业数据、行政制度和法律公共性放在一起，试图保护普通人的金融生活。",
-    "scene": "A group planned a pop-up market in a courtyard. The first meeting was about tables and music. The second was about permits, payments, insurance, rubbish, and refunds.",
-    "sceneZh": "20 世纪初的波士顿，一个律师听见工薪家庭买不起可靠保险，也看见金融公司如何利用信息不对称。",
-    "storyBody": "No single person owned the whole problem. The designer saw layout, the treasurer saw risk, the organizer saw vendors, and the lawyer saw liability. The market only became real when those views were coordinated into rules people could follow.",
-    "storyBodyZh": "他并不把法律只看成诉讼技巧。对他来说，法律、商业和行政必须一起回答一个问题：普通人在复杂市场里怎样不被制度性弱势吞掉？他研究保险成本、公司利润、储蓄银行制度和公共监管，提出通过 savings bank life insurance 让普通家庭获得更便宜、更透明的人寿保险。这个方案不是单一学科能完成的：需要金融计算、法律授权、行政执行和公共说服。商业、管理与法律的跨学科意义就在这里，市场不是天然公平，规则也不是自动有效，它们必须被设计成能服务真实生活。这个人叫 Louis Brandeis，他推动 savings bank life insurance 等公共改革，并以律师、改革者和美国最高法院大法官身份影响了商业监管与法律公共责任。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "knowledgePoint": "Inter-disciplinary business, administration, and law links organizational design, financial decisions, contracts, regulation, and accountability.",
-    "knowledgePointZh": "商业、管理与法律跨学科课程连接组织设计、金融决策、合同、监管、行政执行和问责。",
-    "reflectionQuestion": "When an idea becomes public, what rules must appear before people can safely join it?",
-    "reflectionQuestionZh": "当一种产品太复杂，普通人无法判断风险时，法律和管理应该怎样介入？",
-    "tags": [
-      "coordination",
-      "permits",
-      "accountability"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "商业监管",
-      "公共责任"
-    ]
+    "groupTitleZh": "商业、管理与法律相关跨学科课程与资格"
   },
   {
     "id": "049-strange-side-business",
     "categoryCode": "04",
     "groupCode": "049",
-    "groupTitleZh": "未另分类的商业、管理与法律",
-    "title": "The neighborhood tool library",
-    "titleZh": "小店里的再装瓶",
-    "summary": "A shared tool shelf behaved like a business, a club, and a contract all at once.",
-    "summaryZh": "一家护肤小店把商业、伦理、供应链和行动主义混在一起，让分类变得不够用。",
-    "scene": "Neighbors built a tool library: drills, ladders, sewing kits, and a notebook. Nobody knew whether it was a shop, a charity, or a shared agreement.",
-    "sceneZh": "1970 年代英国海边小城，一个女性创业者开了一家小店，顾客拿着空瓶回来重新灌装。",
-    "storyBody": "They still had to decide deposits, repairs, responsibility, and how to remove someone who never returned things. Some practical arrangements do not fit standard business labels, but they still need administration and rules.",
-    "storyBodyZh": "她没有按当时化妆品行业的常规走。包装可以简单，动物测试可以被质疑，原料故事可以告诉顾客，商业也可以公开站在环保和人权议题旁边。她的做法后来同样需要复杂评价：品牌扩张、供应链、并购和市场叙事都会让理想变得不纯粹。但这个案例说明，未另分类的商业、管理与法律常常出现在边界上：一件商品既是买卖，也是价值主张、合同关系、劳动条件、生态选择和公共传播。这个人叫 Anita Roddick，她创办 The Body Shop，并以环保、反动物测试和 ethical consumerism 影响了商业伦理与品牌行动主义。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "knowledgePoint": "Not elsewhere classified business, administration, and law covers hybrid arrangements that still involve value, responsibility, and governance.",
-    "knowledgePointZh": "未另分类的商业、管理与法律处理那些跨越商业模式、伦理、监管、社区和公共价值的混合安排。",
-    "reflectionQuestion": "What shared thing near you works only because people quietly accept a rule?",
-    "reflectionQuestionZh": "当一个品牌说自己有价值立场时，你会看广告语，还是看它怎样组织供应链和责任？",
-    "tags": [
-      "hybrid model",
-      "governance",
-      "responsibility"
-    ],
-    "tagsZh": [
-      "商业伦理",
-      "品牌",
-      "混合安排"
-    ]
+    "groupTitleZh": "未另分类的商业、管理与法律"
   },
   {
     "id": "051-yogurt-on-the-counter",
     "categoryCode": "05",
     "groupCode": "051",
-    "groupTitleZh": "生物及相关科学",
-    "title": "The yogurt on the counter",
-    "titleZh": "小岛上的鸟嘴",
-    "summary": "A jar of yogurt made living processes visible in an ordinary kitchen.",
-    "summaryZh": "一场漫长航行让生物学问题从物种分类，转向生命如何随环境变化。",
-    "scene": "Lea left milk with a spoonful of yogurt near the warm window. By evening, the jar had changed texture, smell, and taste.",
-    "sceneZh": "1830 年代，一位年轻博物学者在船上晕船、采集标本，也在岛屿之间注意到鸟、龟和植物的细微差异。",
-    "storyBody": "Her brother called it cooking. Lea called it a living process. Temperature, microbes, time, and chemistry had worked together while nobody watched. Biology begins when the ordinary fact that things change becomes a question about life.",
-    "storyBodyZh": "他出发时还不是一个准备推翻传统观念的人，更像一个爱观察的年轻人：写笔记、收集昆虫、寄回标本、和船员一起经历风浪。真正改变他的不是某一个瞬间，而是大量小差异慢慢堆在一起：相近的岛屿有不同的鸟嘴，化石和现生动物彼此呼应，人工育种显示性状可以被选择。多年后，他才把这些线索组织成一个更大的解释：生命不是固定陈列，而是在变异、遗传、环境和选择中逐渐改变。生物及相关科学在这里不再只是给生命命名，也开始追问生命为什么会成为现在这样。这个人叫 Charles Darwin，他通过《On the Origin of Species》提出自然选择理论，成为现代进化生物学的重要奠基人。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。",
-    "knowledgePoint": "Biological and related sciences study living organisms, cells, ecosystems, biochemical processes, and the conditions that sustain life.",
-    "knowledgePointZh": "生物及相关科学研究生命、物种、遗传、适应、演化和生命系统之间的关系。",
-    "reflectionQuestion": "What living process happens near you so quietly that you rarely call it knowledge?",
-    "reflectionQuestionZh": "当你看到两个相似生命的细微差别时，你会把它当偶然，还是当成环境留下的线索？",
-    "tags": [
-      "biology",
-      "microbes",
-      "living systems"
-    ],
-    "tagsZh": [
-      "生物学",
-      "演化",
-      "自然选择"
-    ]
+    "groupTitleZh": "生物及相关科学"
   },
   {
     "id": "052-stream-after-rain",
     "categoryCode": "05",
     "groupCode": "052",
-    "groupTitleZh": "环境",
-    "title": "The stream after rain",
-    "titleZh": "春天为什么安静了",
-    "summary": "A muddy stream revealed the links between land, water, weather, and human use.",
-    "summaryZh": "一本关于鸟鸣消失的书，让环境问题从局部害虫控制变成整个生态系统的警报。",
-    "scene": "After heavy rain, the small stream behind the school turned brown. Some children blamed the rain. Their teacher asked what the rain had carried with it.",
-    "sceneZh": "20 世纪中期的美国，一个海洋生物学家收到越来越多来信：鸟少了，鱼死了，喷洒后的土地不对劲。",
-    "storyBody": "They walked upstream and found bare soil near a construction fence, leaves blocking a drain, and oil colors near the parking lot. The stream was not separate from the neighborhood. Environmental knowledge begins when place is read as a system of exchanges.",
-    "storyBodyZh": "她原本写过海洋，也擅长把科学写给普通读者。面对杀虫剂，她没有只问它能不能杀死目标害虫，而是追问它进入土壤、水、昆虫、鸟、鱼和人体之后会怎样移动。她阅读研究、整理案例、承受化工行业攻击，也小心避免把复杂生态写成简单恐吓。环境领域在这里变得清楚：人类技术不是只作用于一个点，它会穿过食物链、公共政策、商业利益和日常家庭。一个“有效”的工具，如果看不到长期代价，就可能把春天本身变安静。这个人叫 Rachel Carson，她的《Silent Spring》推动现代环境运动和农药监管讨论，成为环境科学与公共环保意识的重要经典。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "knowledgePoint": "Environment studies ecosystems, water, wildlife, pollution, climate, and the effects of human activity on natural systems.",
-    "knowledgePointZh": "环境领域研究生态系统、水、污染、气候、资源和人类活动之间的关系。",
-    "reflectionQuestion": "What place near you would look different if you followed what flows through it?",
-    "reflectionQuestionZh": "一种技术解决了眼前问题以后，你会不会继续追问它去了哪里？",
-    "tags": [
-      "environment",
-      "water",
-      "systems"
-    ],
-    "tagsZh": [
-      "环境",
-      "生态",
-      "农药"
-    ]
+    "groupTitleZh": "环境"
   },
   {
     "id": "053-kitchen-ice-and-steam",
     "categoryCode": "05",
     "groupCode": "053",
-    "groupTitleZh": "物理科学",
-    "title": "Ice, steam, and the kettle",
-    "titleZh": "斜面上的小球",
-    "summary": "A kitchen kettle turned matter, heat, and observation into a small physical science lesson.",
-    "summaryZh": "一个滚下斜面的小球，让物理科学开始用实验、测量和数学追问运动。",
-    "scene": "Noah watched ice melt in a glass while the kettle hissed on the stove. The same water seemed to have three personalities.",
-    "sceneZh": "17 世纪意大利，一个教师让小球沿斜面滚下，用水钟和刻度记录它怎样加速。",
-    "storyBody": "His grandmother asked what changed and what stayed the same. The shape changed, the temperature changed, the movement changed, but the question held together. Physical sciences teach people to look beneath appearances for matter, energy, forces, and patterns.",
-    "storyBodyZh": "他并不满足于背诵古代权威关于重物下落的说法。真实下落太快，不容易测；于是他把斜面变成放慢运动的工具，让时间、距离和速度之间的关系可以被观察。小球每次滚动都像在提醒他：自然不是只能被辩论，也可以被设计实验来询问。物理科学的精神在这里显现：把看似普通的运动拆成可测量关系，用数学表达规律，再让实验反复挑战直觉。这个人叫 Galileo Galilei，他通过落体、斜面和天文观察等研究推动近代物理科学和实验方法的发展。学生在实验室里重复这种动作时，学到的不只是公式，而是怎样让自然用可检查的方式回答问题。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。那颗小球滚下去的时间很短，却把科学学习拉长了：人开始愿意为了看清关系而重新设计问题。",
-    "knowledgePoint": "Physical sciences study chemistry, physics, earth processes, materials, energy, and the observable patterns of the physical world.",
-    "knowledgePointZh": "物理科学研究物质、能量、运动、力、材料和自然规律如何在可观察现象中表现出来。",
-    "reflectionQuestion": "What everyday change would become more interesting if you asked what stayed the same?",
-    "reflectionQuestionZh": "当一个现象太快看不清时，你能不能设计一种方法让它慢下来回答你？",
-    "tags": [
-      "matter",
-      "energy",
-      "observation"
-    ],
-    "tagsZh": [
-      "物理科学",
-      "实验",
-      "运动"
-    ]
+    "groupTitleZh": "物理科学"
   },
   {
     "id": "054-shared-bill-pattern",
     "categoryCode": "05",
     "groupCode": "054",
-    "groupTitleZh": "数学与统计",
-    "title": "The shared dinner bill",
-    "titleZh": "算术书里的陌生数字",
-    "summary": "A dinner bill showed how numbers can clarify fairness and uncertainty.",
-    "summaryZh": "一本关于计算的书让数学与统计从地方技巧走向可传播的符号系统。",
-    "scene": "Six friends shared dinner. One ordered only soup, another ordered wine, and someone suggested splitting everything equally.",
-    "sceneZh": "9 世纪的巴格达，一个学者在智慧宫附近整理印度数字、方程和实际计算问题。",
-    "storyBody": "The table became quiet until Ana wrote three options: equal split, itemized split, and shared dishes plus personal extras. The math did not decide their values, but it made the trade-off visible. Mathematics and statistics often help people see the shape of fairness before arguing about it.",
-    "storyBodyZh": "他面对的不是纯粹游戏，而是继承、贸易、测量、税收和土地分配中的真实计算。旧方法可以算，但不够统一，也不容易传播。他把印度数字和十进位计算介绍给阿拉伯语读者，又系统讨论线性和二次方程的解法。数学与统计的基础意义在这里很清楚：符号一旦变得可写、可教、可复用，复杂关系就能离开个人头脑，成为社会共同工具。这个人叫 Muhammad ibn Musa al-Khwarizmi，他的代数学著作和关于印度数字的作品影响了 algebra 与 algorithm 等概念的历史发展。后来无数课堂、账本和程序都沿着这条路继续走：先把关系写清楚，更多人才能一起检查、改进和使用它。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "knowledgePoint": "Mathematics and statistics use quantities, patterns, models, probability, and data to reason clearly about problems.",
-    "knowledgePointZh": "未进一步细分的数学与统计关注数量、结构、符号、模型和数据如何帮助人推理。",
-    "reflectionQuestion": "Where could a simple model make a difficult conversation less blurry?",
-    "reflectionQuestionZh": "一种更好的符号，怎样让原本困难的问题开始被更多人共同解决？",
-    "tags": [
-      "models",
-      "fairness",
-      "data"
-    ],
-    "tagsZh": [
-      "数学",
-      "代数",
-      "符号"
-    ]
+    "groupTitleZh": "数学与统计"
   },
   {
     "id": "058-school-air-quality",
     "categoryCode": "05",
     "groupCode": "058",
-    "groupTitleZh": "自然科学、数学与统计相关跨学科课程与资格",
-    "title": "The classroom air question",
-    "titleZh": "星星亮度里的尺子",
-    "summary": "A stuffy classroom needed sensors, biology, statistics, and environmental thinking together.",
-    "summaryZh": "一个在照片底片上比较星光的人，把天文学、数学和统计连成测量宇宙距离的方法。",
-    "scene": "Students complained that the classroom felt heavy after lunch. The teacher brought a small sensor, opened a spreadsheet, and asked them to track what changed.",
-    "sceneZh": "20 世纪初的哈佛天文台，一位女性计算员坐在成排玻璃底片前，逐颗比较变星的亮度。",
-    "storyBody": "They measured carbon dioxide, temperature, window opening, class size, and headaches. Biology explained breathing, environment explained ventilation, statistics helped compare days. The answer belonged to no single subject because the air did not either.",
-    "storyBodyZh": "她的工作头衔并不显赫，很多女性计算员被安排做重复而精细的记录。可她在麦哲伦云的变星中发现一种关系：某些造父变星变化周期越长，真实亮度越高。这个关系像一把宇宙尺子，只要知道周期，就能推算亮度，再进一步估计距离。自然科学、数学与统计在这里完全交织：天文观测提供材料，数学关系组织模式，统计比较让规律浮现。她的发现后来帮助人类测量银河系之外的距离。这个人叫 Henrietta Swan Leavitt，她发现造父变星周期-光度关系，成为现代宇宙距离尺度的重要基础。这也是数据和自然科学相遇时最动人的地方：微小记录不会自动说话，但耐心比较能让它们变成尺度。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。她面对的是一张张安静底片，但真正困难的是在重复记录中相信微小差别值得被认真比较。",
-    "knowledgePoint": "Inter-disciplinary natural sciences, mathematics, and statistics combine measurement, models, and evidence across scientific domains.",
-    "knowledgePointZh": "自然科学、数学与统计跨学科课程把观察、模型、测量和数据推断连接起来。",
-    "reflectionQuestion": "What problem around you needs both measurement and a story about living bodies?",
-    "reflectionQuestionZh": "一张照片底片里的小点，怎样可能变成测量宇宙的尺子？",
-    "tags": [
-      "measurement",
-      "science project",
-      "statistics"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "天文学",
-      "统计"
-    ]
+    "groupTitleZh": "自然科学、数学与统计相关跨学科课程与资格"
   },
   {
     "id": "059-mystery-stain",
     "categoryCode": "05",
     "groupCode": "059",
-    "groupTitleZh": "未另分类的自然科学、数学与统计",
-    "title": "The mystery stain",
-    "titleZh": "海岸线到底有多长",
-    "summary": "A stain on a wall became a question that refused one neat scientific category.",
-    "summaryZh": "一个关于海岸线的问题，让自然、数学和统计之间出现了新的粗糙尺度。",
-    "scene": "A brown stain appeared near the ceiling. One person blamed rain, another insects, another old paint. Each explanation sounded partly right.",
-    "sceneZh": "20 世纪中期，一个数学家盯着地图上的海岸线，发现尺子越短，量出的长度越长。",
-    "storyBody": "They checked humidity, roof angle, pipe location, material age, and the timing of the stain. The problem was too practical to respect subject boundaries. Some science work begins with messy clues that need several tools before they deserve a name.",
-    "storyBodyZh": "传统几何喜欢光滑线条，可真实世界的云、山、树、河流和海岸都不那么听话。用大尺子量，很多弯曲被忽略；用小尺子量，细节不断冒出来，长度似乎没有稳定终点。他把这种粗糙、重复、自相似的形状发展成新的数学语言。这个方向既不像普通几何，也不只是物理或统计，却能帮助人描述自然界大量不规则形态。未另分类的自然科学、数学与统计就适合保存这种边界问题：分类暂时跟不上现象，但现象已经在要求新工具。这个人叫 Benoit Mandelbrot，他发展 fractal geometry，使分形成为理解自然形态、复杂系统和尺度问题的重要数学语言。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "knowledgePoint": "Not elsewhere classified science and statistics catch practical investigations that use scientific reasoning without fitting a standard domain.",
-    "knowledgePointZh": "未另分类的自然科学、数学与统计收纳那些跨越自然形态、数学结构、数据和模型的边界问题。",
-    "reflectionQuestion": "What mystery near you is waiting for several kinds of evidence before becoming clear?",
-    "reflectionQuestionZh": "如果一个东西越仔细看越复杂，你会把它当噪声，还是当成需要新数学的信号？",
-    "tags": [
-      "investigation",
-      "evidence",
-      "messy problem"
-    ],
-    "tagsZh": [
-      "分形",
-      "尺度",
-      "复杂性"
-    ]
+    "groupTitleZh": "未另分类的自然科学、数学与统计"
   },
   {
     "id": "068-repairing-the-club-website",
     "categoryCode": "06",
     "groupCode": "068",
-    "groupTitleZh": "信息与通信技术相关跨学科课程与资格",
-    "title": "The club website that forgot people",
-    "titleZh": "防空炮为什么总慢半拍",
-    "summary": "A broken club website needed design, data, writing, access, and technical structure together.",
-    "summaryZh": "一个关于控制和反馈的问题，把计算、工程、生物和通信连成新的跨学科语言。",
-    "scene": "The community club had a website, but nobody could find the meeting time. The programmer said the page worked. The members said it did not work for them.",
-    "sceneZh": "第二次世界大战期间，一位数学家研究防空炮如何预测飞机位置，发现机器必须根据误差不断修正自己。",
-    "storyBody": "They rewrote the text, changed the navigation, checked mobile screens, fixed the calendar feed, and added a plain contact path. The technical problem was also a communication problem and a service problem. ICT often succeeds only when several domains agree on what usable means.",
-    "storyBodyZh": "他看到的不是单一工程问题。雷达给出信息，炮塔需要动作，目标在移动，系统根据误差反馈调整；类似过程也出现在神经系统、动物运动、通信网络和自动控制里。于是他把“控制与通信”作为共同问题来思考，提出 feedback、信息和系统调节的语言。ICT 的跨学科意义在这里出现：计算不只是电脑，通信不只是电线，控制不只是机器，而是生命、技术和组织都可能共享的结构。这个人叫 Norbert Wiener，他创立 cybernetics，使控制、通信、反馈和系统思想成为信息技术、自动化和跨学科研究的重要基础。所以它不只是会不会操作机器，而是在训练人把想法清楚地交给系统，也能检查系统怎样回应。一旦系统能听见误差，机器就不再只是执行命令；它开始在偏差里学习怎样回到可控状态。",
-    "knowledgePoint": "Inter-disciplinary ICT connects computing with communication, design, organizational needs, data, and real user contexts.",
-    "knowledgePointZh": "信息与通信技术跨学科课程连接计算、通信、控制、系统、工程和人的使用场景。",
-    "reflectionQuestion": "What tool around you technically works but fails the situation it is meant to serve?",
-    "reflectionQuestionZh": "一个系统能学习修正自己之前，必须先听见哪一种反馈？",
-    "tags": [
-      "usability",
-      "data",
-      "communication"
-    ],
-    "tagsZh": [
-      "控制论",
-      "反馈",
-      "跨学科ICT"
-    ]
+    "groupTitleZh": "信息与通信技术相关跨学科课程与资格"
   },
   {
     "id": "071-flickering-hall-light",
     "categoryCode": "07",
     "groupCode": "071",
-    "groupTitleZh": "工程与工程行业",
-    "title": "The flickering hallway light",
-    "titleZh": "屋顶为什么不能只靠图纸漂亮",
-    "summary": "A flickering light showed that engineering is diagnosis under constraints.",
-    "summaryZh": "一个工程师在复杂建筑里证明，工程不是给建筑补强，而是和形式一起思考可能性。",
-    "scene": "The hallway light flickered every evening. Residents blamed the bulb, but replacing it did nothing.",
-    "sceneZh": "20 世纪的悉尼，一座歌剧院的壳形屋顶让建筑师、政府和工程团队都陷入难题。",
-    "storyBody": "The electrician checked the switch, load, wiring age, and timing. The problem appeared only when several apartments used appliances at once. Engineering was not guessing the most visible part; it was tracing the system until cause and safe repair met.",
-    "storyBodyZh": "他面对的不是普通计算题。建筑形态大胆，预算和政治压力不断增加，原本的曲面难以制造和支撑。工程团队必须把美学愿望、几何规则、预制构件、受力路径和施工方法重新组合，直到壳体可以被分解、制造和安装。这个过程并不完美，也伴随争议，但它说明工程行业的核心不只是按图施工。真正的工程要在愿望与现实之间翻译：哪些形状能被建造，哪些材料能承受，哪些步骤能让危险变小。这个人叫 Ove Arup，他领导 Sydney Opera House 工程工作，并推动结构工程与建筑设计深度协作的现代实践。今天任何大胆设计落地时，都还要经过类似翻译：把愿望拆进材料、预算、工期、责任和可以被检验的安全边界里。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "knowledgePoint": "Engineering and engineering trades apply technical knowledge to electricity, mechanics, automation, materials, vehicles, and process systems.",
-    "knowledgePointZh": "工程及工程行业研究结构、材料、系统、施工、维护和技术约束如何让设计变成可靠现实。",
-    "reflectionQuestion": "What visible failure might be only the symptom of a hidden system under strain?",
-    "reflectionQuestionZh": "当一个想法看起来很美，你会从哪里开始判断它能不能被建成？",
-    "tags": [
-      "diagnosis",
-      "systems",
-      "technical repair"
-    ],
-    "tagsZh": [
-      "工程",
-      "结构",
-      "建筑协作"
-    ]
+    "groupTitleZh": "工程与工程行业"
   },
   {
     "id": "072-soup-that-travels",
     "categoryCode": "07",
     "groupCode": "072",
-    "groupTitleZh": "制造与加工",
-    "title": "The soup that had to travel",
-    "titleZh": "汽车底盘自己走过来",
-    "summary": "A soup recipe changed when it had to become safe, stable, packaged, and repeatable.",
-    "summaryZh": "一条移动装配线让制造从手工作坊转向节拍、标准化和大规模生产。",
-    "scene": "A small restaurant wanted to sell its soup in jars. The chef said the recipe was already perfect. The first delivery leaked and spoiled.",
-    "sceneZh": "1913 年的底特律工厂里，汽车底盘不再静静等工人围上来，而是沿着线缓慢移动。",
-    "storyBody": "They had to think about heat, sealing, shelf life, labeling, texture, and transport. Manufacturing and processing begin when making one good thing is no longer enough; the thing must survive repetition, storage, movement, and rules.",
-    "storyBodyZh": "他想解决的不是单台汽车能不能造出来，而是怎样让更多人买得起、怎样让每一步工作稳定重复。装配线把任务拆小，把零件标准化，把节拍固定，也把工人的动作纳入严格流程。这个方法提高产量、降低成本，同时也带来劳动单调、控制和工人压力等问题。制造与加工在这里变得现代：产品不是只由技术发明决定，还由流程、时间、供应链、工人技能和管理制度共同决定。这个人叫 Henry Ford，他在 Highland Park 工厂推广移动装配线，使汽车大规模生产成为 20 世纪制造业的重要范式。今天看一条生产线，也不能只看产量；还要看节拍怎样改变劳动、质量、价格，以及人和机器之间的关系。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。",
-    "knowledgePoint": "Manufacturing and processing transform raw materials into safe, stable, usable products through controlled methods and quality checks.",
-    "knowledgePointZh": "制造与加工关注原料、流程、标准化、质量、储存、运输和重复生产。",
-    "reflectionQuestion": "What changes when a handmade success has to become repeatable?",
-    "reflectionQuestionZh": "当一件商品变得便宜，是谁的时间、动作和自由被重新安排了？",
-    "tags": [
-      "processing",
-      "quality",
-      "repeatability"
-    ],
-    "tagsZh": [
-      "制造",
-      "装配线",
-      "标准化"
-    ]
+    "groupTitleZh": "制造与加工"
   },
   {
     "id": "073-crosswalk-at-school",
     "categoryCode": "07",
     "groupCode": "073",
-    "groupTitleZh": "建筑与施工",
-    "title": "The crosswalk near school",
-    "titleZh": "建筑必须站得住、用得上、看得动人",
-    "summary": "A dangerous crossing showed how built space shapes movement before anyone decides.",
-    "summaryZh": "一本古老建筑书把结构、功能和美感放在一起，成为建筑与施工的长久问题。",
-    "scene": "Parents complained that children ran across the street outside school. The city first blamed impatience, then watched the crossing for one morning.",
-    "sceneZh": "古罗马时期，一个建筑师和工程师回顾神庙、水道、机械和城市空间，试图把建造经验写给后来的人。",
-    "storyBody": "The nearest crosswalk was too far, the corner blocked sightlines, and parked cars narrowed the view. The solution involved curb design, markings, speed, drainage, and construction timing. Architecture and construction turn human movement into physical decisions.",
-    "storyBodyZh": "他不把建筑只看成墙和屋顶，也不把美当成表面装饰。一个建筑物必须坚固，能服务人的使用，也要有比例和秩序带来的美感。材料、地基、方向、公共用途、机械和人体尺度，都被放进同一套思考。建筑与施工的基础问题在这里很早就被说清：建造不是堆东西，而是在安全、用途、技术、气候、身体和文化之间达成一种可持久的安排。这个人叫 Vitruvius，他的《De architectura》提出 firmitas、utilitas、venustas 等思想，深刻影响建筑理论和建筑教育。学生读建筑时真正要练习的，正是这种同时看见结构、使用者和城市生活的能力。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "knowledgePoint": "Architecture and construction plan and build physical environments, from buildings and towns to roads, structures, and civil systems.",
-    "knowledgePointZh": "未进一步细分的建筑与施工关注空间、结构、材料、使用、施工和长期维护。",
-    "reflectionQuestion": "Where does a place near you ask people to behave better than its design allows?",
-    "reflectionQuestionZh": "一座建筑如果只好看，却不好用或不安全，它还算真正完成了吗？",
-    "tags": [
-      "built environment",
-      "safety",
-      "planning"
-    ],
-    "tagsZh": [
-      "建筑",
-      "施工",
-      "Vitruvius"
-    ]
+    "groupTitleZh": "建筑与施工"
   },
   {
     "id": "078-community-kitchen-build",
     "categoryCode": "07",
     "groupCode": "078",
-    "groupTitleZh": "工程、制造与建筑相关跨学科课程与资格",
-    "title": "The community kitchen build",
-    "titleZh": "一个圆顶能不能少用材料",
-    "summary": "A shared kitchen needed architecture, equipment, food safety, energy, and workflow together.",
-    "summaryZh": "一个几何圆顶把工程、制造、建筑和资源问题连接成同一个实验。",
-    "scene": "The community center wanted a kitchen for cooking classes. The first sketch had counters and sinks, but no one had discussed ventilation, storage, power load, or cleaning flow.",
-    "sceneZh": "20 世纪美国，一个总爱画结构线和地图的人，反复问怎样用更少材料覆盖更大空间。",
-    "storyBody": "The project changed when the cook, builder, electrician, cleaner, and teacher sat together. A kitchen is a room, a process, a safety system, and a learning environment. Interdisciplinary construction happens when all of those must work at once.",
-    "storyBodyZh": "他不是只想做奇特造型，而是着迷于效率：张力怎样分布，三角形为什么稳定，球面结构如何把重量分散，临时住房和大型空间能不能更轻、更快、更省。geodesic dome 把数学几何、结构工程、制造节点、建筑空间和资源伦理放在一起。它也不是万能答案，实际使用会遇到防水、维护、舒适和成本问题；但跨学科工程的价值正是在这里显现：一个形状同时要求几何、材料、建造、居住和社会理想共同受检验。这个人叫 Buckminster Fuller，他推广 geodesic dome，并以系统设计和“doing more with less”的思想影响工程、建筑和设计教育。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。圆顶的问题看似像几何游戏，真正牵动的却是住房、材料浪费和人类怎样更轻地占用世界。",
-    "knowledgePoint": "Inter-disciplinary engineering, manufacturing, and construction combine design, technical systems, materials, safety, and use.",
-    "knowledgePointZh": "工程、制造与建筑跨学科课程把结构、材料、生产、空间、资源和使用者需求放在同一问题里。",
-    "reflectionQuestion": "What space do you use that only works because several technical worlds cooperate invisibly?",
-    "reflectionQuestionZh": "一个结构如果更轻、更省，是否也必须更认真回答它怎样被人使用？",
-    "tags": [
-      "integrated design",
-      "safety",
-      "workflow"
-    ],
-    "tagsZh": [
-      "跨学科工程",
-      "圆顶",
-      "系统设计"
-    ]
+    "groupTitleZh": "工程、制造与建筑相关跨学科课程与资格"
   },
   {
     "id": "079-unusual-repair-material",
     "categoryCode": "07",
     "groupCode": "079",
-    "groupTitleZh": "未另分类的工程、制造与建筑",
-    "title": "The bridge made from leftovers",
-    "titleZh": "臭味背后的城市系统",
-    "summary": "A small improvised bridge showed useful engineering outside standard categories.",
-    "summaryZh": "一次城市污水工程说明，未另分类的工程常在公共健康、土木、政治和日常生活之间展开。",
-    "scene": "After rain, a path flooded behind the garden. Volunteers built a small crossing from leftover boards and stones.",
-    "sceneZh": "1858 年伦敦夏天，泰晤士河臭气冲进议会，城市终于无法继续假装污水问题只是气味问题。",
-    "storyBody": "It looked informal, but they still tested wobble, water flow, surface grip, and weight. The bridge was not a textbook project, yet it carried real bodies. Some engineering knowledge appears in local repairs where safety and improvisation meet.",
-    "storyBodyZh": "他面对的是一个被城市增长放大的系统性麻烦：厕所、河流、潮汐、疾病、街道、预算、政治拖延和公众恐惧全缠在一起。解决方案不是清理一条水沟，而是设计截流下水道、泵站和排放系统，把污水从城市生活核心转移出去。今天我们会继续追问污染被转移到哪里、谁承担环境代价，但这个工程确实让现代城市意识到，基础设施决定公共健康。未另分类的工程、制造与建筑常常就发生在这种边界：它既是土木工程，也是卫生、行政、政治和城市生活的重新组织。这个人叫 Joseph Bazalgette，他设计伦敦现代下水道系统，成为城市基础设施和公共卫生工程史上的重要人物。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "knowledgePoint": "Not elsewhere classified engineering and construction catches practical technical solutions that do not fit a standard industry label.",
-    "knowledgePointZh": "未另分类的工程、制造与建筑处理跨越基础设施、公共健康、材料、施工和治理的复杂项目。",
-    "reflectionQuestion": "What improvised fix near you contains more engineering than people admit?",
-    "reflectionQuestionZh": "一个城市最重要的工程，为什么常常是在你闻不到、看不见时才算成功？",
-    "tags": [
-      "improvisation",
-      "repair",
-      "local engineering"
-    ],
-    "tagsZh": [
-      "基础设施",
-      "下水道",
-      "公共健康"
-    ]
+    "groupTitleZh": "未另分类的工程、制造与建筑"
   },
   {
     "id": "081-balcony-tomato-plan",
     "categoryCode": "08",
     "groupCode": "081",
-    "groupTitleZh": "农业",
-    "title": "The balcony tomato plan",
-    "titleZh": "种子不再随手撒出去",
-    "summary": "A tomato plant showed how growing food involves soil, timing, pests, and care.",
-    "summaryZh": "一台播种机让农业从凭经验撒播，转向行距、深度和效率的系统管理。",
-    "scene": "Rafi planted tomatoes on a balcony and watered them whenever he remembered. The plant grew tall, then weak, then covered itself in tiny insects.",
-    "sceneZh": "18 世纪英国农田里，一个农场主看见种子被随手撒开，很多被鸟吃掉，很多落在不合适的深度。",
-    "storyBody": "A neighbor asked about pot size, sunlight, feeding, pruning, and air movement. Agriculture was not simply affection for plants. It was the disciplined care of living production under changing conditions.",
-    "storyBodyZh": "他并不是只想做一台新机器，而是对土地上的浪费感到不安。种子如果能按固定深度、固定间距进入土壤，就更容易发芽，也便于后续除草和管理。他改进 seed drill，让播种变得更有秩序。今天看来，机械化也带来单一化和土地管理的新的问法，但这个故事说明农业的基础问题从来不是“把种子扔进地里”这么简单。它涉及工具、土壤、时间、劳动力和对生命条件的精确安排。这个人叫 Jethro Tull，他推广播种机和条播思想，成为英国农业改良史上的重要人物。今天的农业技术也常在同一个问题里打转：怎样提高效率，同时不把土地、种子多样性和人的判断都交给单一工具。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。",
-    "knowledgePoint": "Agriculture studies crop and livestock production, horticulture, soil, pests, feeding, and the systems that produce food and plant life.",
-    "knowledgePointZh": "未进一步细分的农业关注土地、作物、工具、劳动、产量和长期照料条件。",
-    "reflectionQuestion": "What does care become when the living thing also has to produce?",
-    "reflectionQuestionZh": "一个种子能否发芽，取决于运气，还是取决于人怎样安排它进入土地？",
-    "tags": [
-      "production",
-      "soil",
-      "care"
-    ],
-    "tagsZh": [
-      "农业",
-      "播种机",
-      "农艺"
-    ]
+    "groupTitleZh": "农业"
   },
   {
     "id": "082-fallen-branch-trail",
     "categoryCode": "08",
     "groupCode": "082",
-    "groupTitleZh": "林业",
-    "title": "The fallen branch on the trail",
-    "titleZh": "森林不能只按木材计算",
-    "summary": "A fallen branch opened questions about forests as managed living systems.",
-    "summaryZh": "一个林务改革者让森林管理从砍伐收益，转向长期公共资源和专业治理。",
-    "scene": "After wind, a large branch blocked the trail. One walker wanted it removed immediately. Another noticed the insects already gathering under the bark.",
-    "sceneZh": "19 世纪末的美国，一个年轻人到欧洲学习林学后回国，看到大片森林被短期砍伐逻辑支配。",
-    "storyBody": "The ranger moved part of it for safety and left part nearby for habitat. Forestry is full of such decisions: timber, paths, disease, fire risk, biodiversity, and time scales longer than a single visit.",
-    "storyBodyZh": "他并不是反对使用森林，而是反对只把森林当作一次性矿藏。木材、水源、土壤、火灾、野生动物和地方经济都需要长期管理。他推动专业林务、国家森林和持续产出思想，主张为了公共利益管理自然资源。今天我们也会批判早期保护主义里对原住民和地方社区的忽视，但林业作为学科的一个核心问题由此凸显：森林的时间尺度比商业周期长得多。这个人叫 Gifford Pinchot，他是美国林务改革重要人物，首任 U.S. Forest Service 局长，并推动 conservation 林业理念。今天谈资源管理时，这个提醒仍然尖锐：如果只看眼前收益，森林很容易在账本里变短，在现实里变空。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "knowledgePoint": "Forestry manages forests as ecological, economic, protective, and long-term living systems.",
-    "knowledgePointZh": "林业关注森林资源、木材、生态、水土保持、火险、生物多样性和长期管理。",
-    "reflectionQuestion": "When is leaving something alone also a form of care?",
-    "reflectionQuestionZh": "如果一片森林的生命超过几代人，谁有资格替它做短期决定？",
-    "tags": [
-      "forest",
-      "habitat",
-      "long-term care"
-    ],
-    "tagsZh": [
-      "林业",
-      "森林管理",
-      "保护"
-    ]
+    "groupTitleZh": "林业"
   },
   {
     "id": "083-fish-market-morning",
     "categoryCode": "08",
     "groupCode": "083",
-    "groupTitleZh": "渔业",
-    "title": "The morning at the fish market",
-    "titleZh": "每一代人都以为海一直这么空",
-    "summary": "A fish stall connected weather, stock, freshness, ecosystems, and livelihoods.",
-    "summaryZh": "一个渔业科学家的警告让人看见，海洋资源的衰退常被记忆本身遮住。",
-    "scene": "At dawn, one fish stall was half empty. The seller said the wind changed, the boats stayed close, and the best fish never arrived.",
-    "sceneZh": "20 世纪后期，一个研究鱼类的人听到年轻渔民说收获还算正常，却在旧记录里看到完全不同的海。",
-    "storyBody": "Customers saw missing products. The seller saw tides, fuel, cold storage, regulations, spawning seasons, and families waiting for income. Fisheries knowledge lives between water ecosystems and human supply chains.",
-    "storyBodyZh": "他意识到一个危险：每一代人都把自己年轻时见到的鱼群数量当成“正常”。如果基准不断下降，大家就会在越来越贫瘠的海里继续觉得情况还可以。他提出 shifting baseline 的概念，提醒渔业不能只看今年和去年，还要看更长的生态记忆。渔业研究在这里不只是捕多少鱼，也要理解种群、食物网、捕捞压力、政策和人类记忆如何共同影响海洋。这个人叫 Daniel Pauly，他提出 shifting baseline syndrome，并通过全球渔业数据研究影响了现代渔业科学和海洋保护。这也是许多环境问题难被察觉的原因：失去不是一次发生的，而是在一代代“正常”的习惯里慢慢被接受。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。",
-    "knowledgePoint": "Fisheries study aquatic production, harvesting, ecosystems, regulation, preservation, and the communities that depend on them.",
-    "knowledgePointZh": "渔业关注水域生态、鱼类种群、捕捞、养殖、冷链、政策和食物供应。",
-    "reflectionQuestion": "What food on a counter still carries the weather of where it came from?",
-    "reflectionQuestionZh": "你以为正常的自然状态，会不会其实已经是上一代衰退后的结果？",
-    "tags": [
-      "aquatic systems",
-      "supply",
-      "livelihood"
-    ],
-    "tagsZh": [
-      "渔业",
-      "海洋",
-      "基线"
-    ]
+    "groupTitleZh": "渔业"
   },
   {
     "id": "084-dog-that-stopped-eating",
     "categoryCode": "08",
     "groupCode": "084",
-    "groupTitleZh": "兽医",
-    "title": "The dog that stopped eating",
-    "titleZh": "第一所兽医学校的病马",
-    "summary": "A pet's changed appetite showed how animal care reads body, behavior, and environment.",
-    "summaryZh": "一次牲畜疫病危机让兽医从民间经验走向系统教育和公共经济安全。",
-    "scene": "Milo the dog skipped breakfast twice. His family blamed picky eating until the vet asked about movement, water, gums, stool, and a new plant in the hallway.",
-    "sceneZh": "18 世纪法国，牛马疫病不断造成损失，一个关心马术和动物疾病的人看见农业和军队都被牵动。",
-    "storyBody": "The diagnosis was not a single dramatic clue. It came from patterns across species knowledge, anatomy, behavior, and household context. Veterinary work listens to patients who cannot explain symptoms in words.",
-    "storyBodyZh": "动物生病不是只影响一个主人。马牵动交通和军队，牛牵动耕作、食物和家庭收入。传统马医经验有价值，却缺少系统解剖、病理、教学和公共防疫。他推动建立专门学校，让动物医学成为可训练、可研究、可传承的专业。兽医领域在这里清楚出现：它既照料动物个体，也保护畜群、食品、农业经济和人与动物共同生活的安全。这个人叫 Claude Bourgelat，他在 Lyon 创办世界最早的兽医学校之一，被视为现代兽医学教育的重要奠基人。今天的兽医工作也仍在这个交叉点上：一只动物的健康，常常连着食物安全、公共卫生和人与动物相处的伦理。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "knowledgePoint": "Veterinary studies animal health, disease, treatment, welfare, species differences, and the human systems around animal care.",
-    "knowledgePointZh": "兽医研究动物疾病、诊断、治疗、公共卫生、畜群健康和人与动物关系。",
-    "reflectionQuestion": "How do you listen when the one who needs help cannot use your language?",
-    "reflectionQuestionZh": "当一头动物生病时，影响的只是它自己，还是整个食物和生活系统？",
-    "tags": [
-      "animal health",
-      "diagnosis",
-      "care"
-    ],
-    "tagsZh": [
-      "兽医",
-      "动物健康",
-      "兽医教育"
-    ]
+    "groupTitleZh": "兽医"
   },
   {
     "id": "088-farm-visit-class",
     "categoryCode": "08",
     "groupCode": "088",
-    "groupTitleZh": "农业、林业、渔业与兽医相关跨学科课程与资格",
-    "title": "The farm visit lesson",
-    "titleZh": "她看见牛害怕的影子",
-    "summary": "A farm visit connected plants, animals, soil, water, food, and responsibility.",
-    "summaryZh": "一个自闭症女性设计者把动物行为、工程、畜牧和福利放进同一套现场观察。",
-    "scene": "Students visited a small farm expecting cute animals. They left talking about feed, manure, water use, crop rotation, and veterinary visits.",
-    "sceneZh": "20 世纪后期的牧场和屠宰场里，一个年轻女性站在牲畜通道旁，注意到牛会被反光、阴影和突然的转角吓住。",
-    "storyBody": "The farmer explained that no decision stayed in one box. Changing feed affected manure; manure affected soil; soil affected crops; crops affected income. Interdisciplinary land-based learning shows the farm as a web of living consequences.",
-    "storyBodyZh": "她的感知方式和许多人不同，也让她更容易注意到动物在空间里的恐惧。她没有只责怪动物不听话，而是蹲到它们的视线高度，看光线、声音、地面、防滑、转弯和人的动作。她设计弧形通道和更低压力的处理系统，把动物行为学、工程设计、畜牧生产和伦理关怀放在一起。这个跨学科领域不只问怎样提高效率，也问人在利用动物时怎样减少恐惧和痛苦。这个人叫 Temple Grandin，她以畜牧设施设计和动物福利倡导闻名，推动农业、工程、兽医和动物行为之间的跨学科实践。学生从这里能学到，真正的专业不是把生命系统压服，而是愿意从另一个身体的位置重新检查设计。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。这条通道也把伦理带进工程：如果设计能减少恐惧，效率就不该建立在忽略恐惧之上。",
-    "knowledgePoint": "Inter-disciplinary agriculture, forestry, fisheries, and veterinary programmes link living production, ecology, animal care, and resource use.",
-    "knowledgePointZh": "农业、林业、渔业与兽医跨学科课程连接生产、生态、工程、动物健康、福利和资源管理。",
-    "reflectionQuestion": "What decision in a living system travels farther than the person making it expects?",
-    "reflectionQuestionZh": "如果从动物的视角重新看一条通道，人类的效率会不会也必须重新定义？",
-    "tags": [
-      "land systems",
-      "ecology",
-      "interdependence"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "动物福利",
-      "畜牧工程"
-    ]
+    "groupTitleZh": "农业、林业、渔业与兽医相关跨学科课程与资格"
   },
   {
     "id": "089-unusual-animal-garden",
     "categoryCode": "08",
     "groupCode": "089",
-    "groupTitleZh": "未另分类的农业、林业、渔业与兽医",
-    "title": "The rooftop beehive",
-    "titleZh": "冰山里的种子库",
-    "summary": "A rooftop beehive sat between gardening, animal care, ecology, and city rules.",
-    "summaryZh": "一个全球种子库说明，农业相关知识有时既是遗传保护，也是未来风险管理。",
-    "scene": "A restaurant kept beehives on its roof for herbs and honey. The neighbors loved the idea until someone was stung near the stairwell.",
-    "sceneZh": "21 世纪初的挪威斯瓦尔巴群岛，一群人把来自世界各地的种子样本送进冻土山体里的库房。",
-    "storyBody": "The owner had to learn bee behavior, plant cycles, allergy risk, signage, and local rules. The project was not simply agriculture or pet care. Some living practices in cities are hybrids that need careful naming.",
-    "storyBodyZh": "这个项目看起来像仓库，却不只是储藏。每一份种子都代表一种作物遗传资源，也代表某个地区的农业记忆和未来适应可能。战争、灾害、气候变化、病害和市场单一化，都可能让种子多样性消失。未另分类的农业、林业、渔业与兽医领域正需要这种边界意识：它不完全是种植，也不只是科研或外交，而是食物系统为未来保留选择。这个人叫 Cary Fowler，他长期推动作物多样性保护，并作为 Svalbard Global Seed Vault 的关键倡导者之一影响了全球种质资源保存。今天气候和供应链都变得不稳定时，这样的保存不只是科学工程，也是一种面向未来的责任安排。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "knowledgePoint": "Not elsewhere classified land and animal fields include hybrid practices that combine cultivation, animal care, ecology, and local constraints.",
-    "knowledgePointZh": "未另分类的农业、林业、渔业与兽医收纳跨越种质资源、食物安全、生态风险和长期保护的实践。",
-    "reflectionQuestion": "What living practice around you does not fit the place it happens in?",
-    "reflectionQuestionZh": "为未来保存一粒种子，究竟是在保存食物，还是保存选择权？",
-    "tags": [
-      "urban ecology",
-      "hybrid practice",
-      "local rules"
-    ],
-    "tagsZh": [
-      "种子库",
-      "食物安全",
-      "遗传资源"
-    ]
+    "groupTitleZh": "未另分类的农业、林业、渔业与兽医"
   },
   {
     "id": "091-cough-in-the-waiting-room",
     "categoryCode": "09",
     "groupCode": "091",
-    "groupTitleZh": "健康",
-    "title": "The cough in the waiting room",
-    "titleZh": "病床旁边的观察",
-    "summary": "A cough showed how health knowledge moves from symptom to body, risk, and treatment.",
-    "summaryZh": "古代医生把治疗从神秘解释拉向观察、记录和职业伦理。",
-    "scene": "In the waiting room, Amir said it was just a cough. The nurse asked how long, what time of day, what work he did, and whether stairs felt harder.",
-    "sceneZh": "古希腊的岛屿和城邦之间，一位医生走近发热、疼痛和呼吸困难的病人，先看他们实际怎样变化。",
-    "storyBody": "The symptom was small, but the questions widened it into a picture of lungs, environment, habits, infection, and care. Health fields begin where a body signal must be interpreted without reducing the person to the signal.",
-    "storyBodyZh": "他所处的时代，疾病常被解释成神灵惩罚或神秘力量。可他和传统中的同伴把注意力放到更具体的地方：症状何时开始，脉象和呼吸如何，饮食、季节、地点和体质有什么关系，医生应怎样谨慎判断而不伤害病人。许多文本并非都出自同一人之手，也带有时代局限；但健康领域的一个重要转向已经出现：照护身体需要观察、经验、记录和伦理约束，而不是只靠巫术或权威。这个人叫 Hippocrates，他所代表的 Hippocratic tradition 成为西方医学观察、临床伦理和医生职业形象的重要源头。这也是医学学习最早要守住的东西：先把人当作会变化的身体来看见，再谨慎决定知识该怎样介入。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "knowledgePoint": "Health includes medicine, nursing, diagnostics, therapy, pharmacy, dentistry, rehabilitation, and complementary approaches to human wellbeing.",
-    "knowledgePointZh": "未进一步细分的健康关注身体状态、疾病、预防、照护、风险和健康判断。",
-    "reflectionQuestion": "What symptom would be misunderstood if nobody asked about the life around it?",
-    "reflectionQuestionZh": "当一个人说不舒服时，最负责任的第一步是解释，还是观察？",
-    "tags": [
-      "symptom",
-      "diagnosis",
-      "wellbeing"
-    ],
-    "tagsZh": [
-      "健康",
-      "医学传统",
-      "观察"
-    ]
+    "groupTitleZh": "健康"
   },
   {
     "id": "092-key-under-the-mat",
     "categoryCode": "09",
     "groupCode": "092",
-    "groupTitleZh": "福利",
-    "title": "The key under the mat",
-    "titleZh": "从摇篮到坟墓的报告",
-    "summary": "A hidden spare key revealed care, independence, risk, and social support.",
-    "summaryZh": "一份战时报告让福利从零散救济，转向覆盖人生风险的社会制度设计。",
-    "scene": "After her mother fell once, Sofia wanted a key to the apartment. Her mother hid one under the mat instead and insisted she was fine.",
-    "sceneZh": "1942 年的英国，战争仍在继续，一个经济学家把贫困、疾病、失业和养老放进同一份报告。",
-    "storyBody": "The family conversation was not only about safety. It was about privacy, pride, neighbors, emergency plans, and what help should feel like. Welfare work often lives in the space between protecting people and respecting their agency.",
-    "storyBodyZh": "他面对的不是某个家庭的一次困难，而是社会中反复出现的风险：没有工作、生病、年老、孩子多、收入不足。过去的救济常常零散、羞辱性强，也难以覆盖人生不同阶段。他提出更系统的社会保险和福利国家设想，试图对抗所谓“五大巨人”：贫困、疾病、无知、肮脏和失业。福利在这里不是施舍，而是现代社会如何共同分担风险、保障最低安全和人的尊严。这个人叫 William Beveridge，他的 1942 年 Beveridge Report 深刻影响英国福利国家和现代社会保障制度。今天讨论福利时，争论仍不只关于钱，而是一个人跌倒、生病、老去或失业时，社会愿不愿意留下承接他的结构。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "knowledgePoint": "Welfare focuses on care, social work, counselling, child and youth services, elder support, disability support, and social wellbeing.",
-    "knowledgePointZh": "未进一步细分的福利关注社会支持、风险分担、尊严、照护和基本生活保障。",
-    "reflectionQuestion": "When does help start to feel like losing control, and how could it be redesigned?",
-    "reflectionQuestionZh": "一个社会怎样证明它不是只在成功时承认一个人？",
-    "tags": [
-      "support",
-      "agency",
-      "social care"
-    ],
-    "tagsZh": [
-      "福利",
-      "社会保障",
-      "风险"
-    ]
+    "groupTitleZh": "福利"
   },
   {
     "id": "098-after-discharge-plan",
     "categoryCode": "09",
     "groupCode": "098",
-    "groupTitleZh": "健康与福利相关跨学科课程与资格",
-    "title": "The day after discharge",
-    "titleZh": "疼痛不是最后才处理的事",
-    "summary": "Leaving hospital required medicine, housing, family support, transport, and follow-up care.",
-    "summaryZh": "一位医生听见临终病人的整体痛苦，让健康与福利重新理解照护的终点。",
-    "scene": "Rosa was discharged on Friday. The medical note was clear, but the stairs at home, missing groceries, and confused bus route were not in the note.",
-    "sceneZh": "20 世纪英国，一位曾做护士和社工、后来学医的女性，坐在临终病人床边，认真听他们说疼痛和孤独。",
-    "storyBody": "A nurse, social worker, daughter, pharmacist, and community driver had to coordinate. Recovery was not only a clinical process; it was a living arrangement. Health and welfare meet when care has to survive outside the institution.",
-    "storyBodyZh": "她发现病人的痛苦并不只在身体里。疼痛、恐惧、家庭关系、宗教疑问、经济压力和被遗弃感会叠在一起。如果医学只在治愈失败后才想起照护，就太晚了。她提出 total pain 的理解，建立 hospice 照护，把症状控制、心理支持、家属陪伴、社会工作和尊严放在同一套体系里。健康与福利的跨学科意义在这里非常清楚：人不是一组器官，也不是一张福利表格，而是在生命末端仍需要被完整看见。这个人叫 Cicely Saunders，她创办 St Christopher's Hospice，并奠定现代 hospice 和 palliative care 的重要基础。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "knowledgePoint": "Inter-disciplinary health and welfare connects clinical care, social support, rehabilitation, counselling, access, and everyday living conditions.",
-    "knowledgePointZh": "健康与福利跨学科课程连接医学、护理、心理、社会支持、家庭和人的尊严。",
-    "reflectionQuestion": "What care plan fails if it only works inside a professional building?",
-    "reflectionQuestionZh": "当治愈不再可能时，照护还能怎样继续保护一个人的完整性？",
-    "tags": [
-      "continuity of care",
-      "support systems",
-      "recovery"
-    ],
-    "tagsZh": [
-      "跨学科",
-      "临终关怀",
-      "姑息治疗"
-    ]
+    "groupTitleZh": "健康与福利相关跨学科课程与资格"
   },
   {
     "id": "099-neighborhood-listening-chair",
     "categoryCode": "09",
     "groupCode": "099",
-    "groupTitleZh": "未另分类的健康与福利",
-    "title": "The listening chair",
-    "titleZh": "她把战场护理带回和平时期",
-    "summary": "A simple chair outside a community center became informal care that did not fit a neat service box.",
-    "summaryZh": "一个战时救护组织者让健康与福利边界出现灾害、志愿服务和公共应急的混合实践。",
-    "scene": "Every afternoon, an older volunteer sat outside the community center. People stopped to talk before they were ready to ask for official help.",
-    "sceneZh": "美国南北战争期间，一个女性在战场附近分发物资、寻找伤员，也给家属传递生死消息。",
-    "storyBody": "She did not diagnose, counsel, or process forms. She listened, noticed patterns, and pointed people gently toward services. Some welfare work exists in the doorway before categories: not clinical, not administrative, but still protective.",
-    "storyBodyZh": "她不是只做临时善事。战争让她看到，伤员护理、物资协调、失踪人员信息、志愿者组织和灾后救援需要长期制度，而不该每次都从混乱开始。战后，她继续推动建立更稳定的人道救援组织，使救护从战争现场延伸到灾害、公共应急和社会支持。未另分类的健康与福利常常就站在这种边界：它既不是普通医院，也不是单一福利机构，而是在危机里把照护、信息、物资和组织能力接起来。这个人叫 Clara Barton，她创办 American Red Cross，并推动美国加入国际红十字人道救援体系。今天的灾害救援和社区支持仍在延续这条线：善意如果没有训练、记录和协调，很容易在真正紧急时散开。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "knowledgePoint": "Not elsewhere classified health and welfare includes informal or hybrid support practices that affect wellbeing but do not fit standard service labels.",
-    "knowledgePointZh": "未另分类的健康与福利处理那些跨越医疗、救援、信息、志愿组织和公共应急的支持实践。",
-    "reflectionQuestion": "What kind of help becomes possible before someone is ready to enter a system?",
-    "reflectionQuestionZh": "一场危机之后，怎样把临时善意变成下次能更快保护人的制度？",
-    "tags": [
-      "informal care",
-      "wellbeing",
-      "access"
-    ],
-    "tagsZh": [
-      "红十字",
-      "救援",
-      "健康福利"
-    ]
+    "groupTitleZh": "未另分类的健康与福利"
   },
   {
     "id": "101-haircut-before-wedding",
     "categoryCode": "10",
     "groupCode": "101",
-    "groupTitleZh": "个人服务",
-    "title": "The haircut before the wedding",
-    "titleZh": "美容院里的红门",
-    "summary": "A haircut showed how personal services combine skill, trust, timing, and emotion.",
-    "summaryZh": "一个女性创业者把个人服务从私密修饰，变成品牌、培训和现代消费体验。",
-    "scene": "The groom arrived nervous, asking for the same haircut as last time, but his hands kept touching the photo of the wedding suit.",
-    "sceneZh": "20 世纪初的纽约，一个年轻女性在美容院里学习护肤、销售和顾客沟通，发现服务身体也在服务身份。",
-    "storyBody": "The barber asked about the collar, the weather, the photographs, and how formal he wanted to feel. The service was technical, but also personal. Personal services work close to identity, comfort, and the body's presentation in social life.",
-    "storyBodyZh": "她明白顾客来这里不只是买一瓶霜。她们想被认真接待，想学习如何照顾自己，也想进入一种新的城市女性形象。她建立美容院、培训销售人员、统一产品和服务话术，把个人服务组织成可复制的体验系统。这个过程当然也和消费主义、阶层和审美压力纠缠在一起；但它说明个人服务并不是低级边角行业，而是身体、情绪、身份、信任和商业组织相遇的地方。这个人叫 Elizabeth Arden，她建立全球美容品牌和 salon 服务体系，深刻影响现代个人护理和美容服务业。今天许多个人服务也是这样：看似处理外表或小需求，实际常在处理信任、身份、身体边界和被尊重的感觉。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "knowledgePoint": "Personal services include domestic work, hair and beauty, hospitality, sports, travel, leisure, and other direct experience-based support.",
-    "knowledgePointZh": "个人服务关注身体、形象、舒适、沟通、身份和贴近日常生活的服务体验。",
-    "reflectionQuestion": "What service changes how someone enters a room, not just how they look?",
-    "reflectionQuestionZh": "当一个服务直接接触身体时，它是否也在接触一个人的自我想象？",
-    "tags": [
-      "experience",
-      "identity",
-      "personal care"
-    ],
-    "tagsZh": [
-      "个人服务",
-      "美容",
-      "品牌"
-    ]
+    "groupTitleZh": "个人服务"
   },
   {
     "id": "102-clean-hands-station",
     "categoryCode": "10",
     "groupCode": "102",
-    "groupTitleZh": "卫生与职业健康服务",
-    "title": "The handwashing station",
-    "titleZh": "城市空气、污水和实验室",
-    "summary": "A temporary handwashing station showed hygiene as design, habit, and workplace safety.",
-    "summaryZh": "一位卫生学家把公共卫生训练制度化，让卫生服务成为城市和工作场所的专业知识。",
-    "scene": "At a street food event, the handwashing station was placed behind a stack of boxes. Staff used it less, even though everyone agreed it mattered.",
-    "sceneZh": "19 世纪德国城市里，人口密集、污水和传染病让医学无法只待在病床旁。",
-    "storyBody": "Moving it into the workflow changed behavior faster than another reminder poster. Hygiene and occupational health services often depend on making the safe action the easy action.",
-    "storyBodyZh": "他关心空气、水、住房、排污和城市环境，也建立实验和教学体系，让卫生不只是日常清洁习惯，而成为可研究、可训练、可争论的公共专业。他的某些理论后来被修正，特别是在病菌理论发展后；但他推动卫生学进入大学、实验室和城市治理的努力，说明卫生与职业健康服务的基础意义：预防必须发生在疾病出现之前，发生在水、空气、建筑、工作和制度中。这个人叫 Max von Pettenkofer，他建立慕尼黑卫生学研究传统，被视为现代 hygiene 和公共卫生教育的重要先驱之一。今天的卫生服务依然需要这种宽视角：空气、水、垃圾、实验室和制度如果分开处理，风险就会从缝隙里回来。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "knowledgePoint": "Hygiene and occupational health services protect people through sanitation, prevention, safety systems, and healthy work environments.",
-    "knowledgePointZh": "未进一步细分的卫生与职业健康服务关注预防、环境、工作场所、清洁和群体健康条件。",
-    "reflectionQuestion": "Where does safety fail because the safer action is inconvenient?",
-    "reflectionQuestionZh": "真正的卫生服务，是在你生病后出现，还是在你没生病前就已经工作？",
-    "tags": [
-      "hygiene",
-      "workplace safety",
-      "prevention"
-    ],
-    "tagsZh": [
-      "卫生",
-      "公共卫生",
-      "预防"
-    ]
+    "groupTitleZh": "卫生与职业健康服务"
   },
   {
     "id": "103-night-watch-call",
     "categoryCode": "10",
     "groupCode": "103",
-    "groupTitleZh": "安全服务",
-    "title": "The night watch call",
-    "titleZh": "警察为什么应该穿制服",
-    "summary": "A late-night noise complaint showed security as judgment, prevention, and proportion.",
-    "summaryZh": "一个内政改革者把安全服务从临时镇压，推向可识别、可约束的公共警务。",
-    "scene": "At midnight, a guard received a call about noise in the parking area. It could be teenagers, a car problem, or something more serious.",
-    "sceneZh": "19 世纪伦敦街头，城市快速扩张，犯罪、贫困、拥挤和公众恐惧让旧式治安方式越来越不够。",
-    "storyBody": "He checked cameras, called a colleague, approached with light visible, and kept distance before speaking. Security work is not only force. It is assessing risk while avoiding unnecessary escalation.",
-    "storyBodyZh": "他要解决的不是单次抓捕，而是一个城市怎样在不变成军营的情况下维持公共秩序。新警察需要可识别的制服、巡逻、纪律、预防原则和公众信任。这个制度也一直伴随权力滥用、阶级控制和监督问题，必须被批判地看；但现代安全服务的一个核心矛盾已经出现：保护公众需要权力，而权力又必须被规则、透明和责任约束。这个人叫 Robert Peel，他创立 London Metropolitan Police，并使现代公共警务原则成为安全服务史上的重要起点。今天谈公共安全时，这个问题仍然没有过时：制服让权力可见，也要求权力被规则、责任和公众信任约束。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "knowledgePoint": "Security services include defence, protection of persons and property, risk assessment, preparedness, and safe response.",
-    "knowledgePointZh": "未进一步细分的安全服务关注风险识别、预防、响应、秩序、信任和权力约束。",
-    "reflectionQuestion": "When does protection require slowing down instead of reacting fast?",
-    "reflectionQuestionZh": "一个安全系统怎样既保护人，又不让保护人的权力失去边界？",
-    "tags": [
-      "risk",
-      "protection",
-      "response"
-    ],
-    "tagsZh": [
-      "安全服务",
-      "警务",
-      "公共秩序"
-    ]
+    "groupTitleZh": "安全服务"
   },
   {
     "id": "104-missed-connection",
     "categoryCode": "10",
     "groupCode": "104",
-    "groupTitleZh": "运输服务",
-    "title": "The missed connection",
-    "titleZh": "地铁线路为什么可以弯成图",
-    "summary": "A missed bus connection revealed transport as timing, reliability, access, and coordination.",
-    "summaryZh": "一张地铁图让运输服务从真实距离，转向乘客能不能迅速做出决定。",
-    "scene": "Marta missed her second bus because the first one arrived six minutes late. The timetable said the route worked; her appointment said otherwise.",
-    "sceneZh": "1930 年代伦敦，一个工程制图员看着复杂地铁线路，发现按真实地理画出的地图让乘客很难读。",
-    "storyBody": "The transport office looked at transfer windows, wheelchair boarding time, traffic lights, driver breaks, and real passenger patterns. Transport is not movement alone. It is the promise that people and goods can arrive with enough reliability to plan a life around it.",
-    "storyBodyZh": "他大胆舍弃精确距离，把线路画成水平、垂直和 45 度角，把站点间距简化，让换乘关系变得清楚。这个图一开始并不符合传统地图直觉，却更符合乘客在运输系统里的真实需要：我在哪，去哪换，下一站怎么走。运输服务在这里不仅是车辆移动，也包括信息设计、时间承诺、可达性和人在压力下的判断。一个系统如果让人看不懂，再准时也会让人迷失。这个人叫 Harry Beck，他设计 London Underground diagram，成为现代交通信息设计和运输服务体验的经典案例。今天的交通系统也一样：真正好用的不只是车会动，而是人在匆忙、陌生和压力下仍能做出清楚选择。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "knowledgePoint": "Transport services organize movement through routes, schedules, logistics, safety, reliability, access, and coordination.",
-    "knowledgePointZh": "运输服务关注人和物的移动、换乘、可靠性、信息设计、安全和时间协调。",
-    "reflectionQuestion": "What part of your day depends on a transport promise you rarely see?",
-    "reflectionQuestionZh": "一个交通系统真正好用，是因为路短，还是因为人在压力下也能看懂？",
-    "tags": [
-      "mobility",
-      "reliability",
-      "coordination"
-    ],
-    "tagsZh": [
-      "运输",
-      "地图",
-      "信息设计"
-    ]
+    "groupTitleZh": "运输服务"
   },
   {
     "id": "108-festival-operations-plan",
     "categoryCode": "10",
     "groupCode": "108",
-    "groupTitleZh": "服务相关跨学科课程与资格",
-    "title": "The festival operations plan",
-    "titleZh": "服务蓝图背后的看不见动作",
-    "summary": "A small festival needed hospitality, sanitation, transport, security, and customer care together.",
-    "summaryZh": "一个营销学者把服务拆成前台、后台和证据，让跨学科服务可以被设计和改进。",
-    "scene": "The festival team first booked musicians. Then came toilets, food queues, lost children, rain plans, delivery trucks, and elderly seating.",
-    "sceneZh": "20 世纪 80 年代，一位研究者观察服务现场，发现顾客看到的只是整个系统露出水面的部分。",
-    "storyBody": "The event worked only when services were designed as one experience. A clean toilet, a clear sign, a safe exit, and a warm greeting all belonged to the same promise: people should be able to be there without fighting the system.",
-    "storyBodyZh": "一次酒店入住、银行开户或维修预约，看起来是几句对话，背后却有表格、系统、培训、库存、授权、等待时间和失败补救。她提出 service blueprint，把顾客行为、前台接触、后台流程和有形证据画在一起。这样，服务不再只是态度好不好，而成为可以分析、设计和跨部门协调的系统。服务跨学科课程也由此清楚：运营、心理、空间、信息、人员和技术必须同时工作。这个人叫 G. Lynn Shostack，她提出 service blueprinting，成为服务设计和服务营销中的重要方法来源。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。如果只评价前台那一句话，很多服务失败就会被误判；真正要看的，是前台背后有没有足够清楚的流程在托住它。",
-    "knowledgePoint": "Inter-disciplinary services coordinate several service domains around a complete user experience and real operating conditions.",
-    "knowledgePointZh": "服务跨学科课程连接运营、体验、人员、空间、信息、技术和质量管理。",
-    "reflectionQuestion": "What event feels easy only because many services are quietly aligned?",
-    "reflectionQuestionZh": "一次服务失败时，问题真的在前台那个人身上，还是在蓝图里早就埋好了？",
-    "tags": [
-      "operations",
-      "experience",
-      "service systems"
-    ],
-    "tagsZh": [
-      "服务设计",
-      "蓝图",
-      "跨学科"
-    ]
+    "groupTitleZh": "服务相关跨学科课程与资格"
   },
   {
     "id": "109-service-that-had-no-name",
     "categoryCode": "10",
     "groupCode": "109",
-    "groupTitleZh": "未另分类的服务",
-    "title": "The service with no name",
-    "titleZh": "电话那头先不急着劝",
-    "summary": "A volunteer at the station helped people in a way no official service label quite captured.",
-    "summaryZh": "一个倾听热线说明，有些服务最重要的动作，是在正式分类之前先接住人。",
-    "scene": "At the train station, Lian helped travelers read signs, calm children, find elevators, and decide when to ask staff. Her badge simply said volunteer.",
-    "sceneZh": "1950 年代伦敦，一个牧师在报纸上看到年轻人因孤立和羞耻而走向绝望，开始想象一条任何人都能拨打的电话线。",
-    "storyBody": "She was not security, transport staff, tourism office, or social worker. Yet the station worked better because she stood between categories. Some services matter precisely because they catch the human needs no single desk owns.",
-    "storyBodyZh": "他发现，许多人并不是一开始就能走进医院、警局、福利机构或教堂。他们可能只需要一个不审判、不急着训诫、愿意在深夜听完的人。于是志愿者被训练去接电话，重点不是立刻给答案，而是让来电者在最危险、最孤单的时刻不再独自承受。这样的服务很难归类：它不是普通医疗，也不是正式咨询，不是安保，也不是家政；但它在许多系统之间守住了一条细小通道。未另分类的服务正需要容纳这种看似无名却极其关键的支持。这个人叫 Chad Varah，他创立 Samaritans，让危机倾听热线成为现代志愿服务和情绪支持服务的重要形式。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "knowledgePoint": "Not elsewhere classified services include practical support roles that improve experience but do not fit standard service categories.",
-    "knowledgePointZh": "未另分类的服务包括那些跨越医疗、咨询、社区、志愿和即时支持的实践角色。",
-    "reflectionQuestion": "Where does the most useful help happen between official roles?",
-    "reflectionQuestionZh": "一种服务如果只是先听你说完，它为什么仍然可能改变一个夜晚的结局？",
-    "tags": [
-      "informal service",
-      "access",
-      "human support"
-    ],
-    "tagsZh": [
-      "未分类服务",
-      "倾听",
-      "志愿服务"
-    ]
+    "groupTitleZh": "未另分类的服务"
   }
 ];
 
-const fieldStoryDetailsZh = {
-  "0111": ["教育科学", "孩子们自己搬动的小椅子", "1907 年，罗马圣洛伦佐一栋普通公寓里，一群白天无人照看的孩子被带进一间新教室。", "教育科学用观察、证据和设计研究学习如何发生，而不只是规定别人应该怎样学。", "如果一个孩子没有学进去，你会先要求他更努力，还是先检查环境有没有给他进入学习的路？", "来接手这间教室的女医生，年轻时并没有把“当老师”当成唯一出路。她先学工程，后来转向医学，进入当时很少有女性能进入的医学院；在医院和精神病院工作时，她看见一些被认为“学不会”的孩子，其实只是长期缺少适合他们动手、感知和尝试的环境。到了这间公寓教室，她没有急着把孩子排成整齐队伍。小椅子、小桌子、一个炉子、一些被锁在柜子里的材料，孩子们有的擦桌子，有的照看小花园，有的反复摸一块字母板。她站在旁边看：哪个材料会被孩子拿起，什么时候他们能安静很久，什么时候大人的一句打断反而让学习散掉。她慢慢发现，孩子并不是等待灌满的空杯子；桌椅的高度、材料的顺序、身体能不能自由移动、成人愿不愿意先观察，都会改变学习的发生方式。这个人叫 Maria Montessori，她在罗马开办 Casa dei Bambini，发展出蒙台梭利教育，让“观察儿童、准备环境、尊重发展节奏”成为教育科学的重要线索。这就是故事的发动机：大家以为事情只是照旧发生，主人公却看见背后还有一套正在运转的系统。藏在这个故事里的，是教育科学用观察、证据和设计真正要追问的问题：学习如何发生，而不只是规定别人应该怎样学。所以它不只是教育史的一页，也是在提醒老师和学生：先观察学习怎样发生，再决定怎样介入。", "一间普通公寓里的小椅子，让教育从命令孩子学习，转向观察学习如何发生。", "Maria Montessori 原是医生；第一所 Casa dei Bambini 于 1907 年 1 月 6 日在罗马 San Lorenzo 开办；她通过观察儿童自由活动、调整材料和环境，逐步形成后来影响世界的 Montessori 教育方法。"],
-  "0112": ["学前教师培养", "木球滚到孩子手边", "1837 年，德国 Bad Blankenburg 的一间小屋里，一个教育者把木球、积木、纸片和花园活动摆到孩子面前。", "学前教师培养关注幼儿发展、照护、安全、游戏、早期学习，以及成人如何陪伴孩子进入世界。", "当一个小孩在玩，你看见的是消遣，还是一种需要被理解和引导的学习？", "很多大人看见孩子玩，只会觉得那是消遣。那个教育者却没有急着把孩子拉回所谓正经学习。他看见一个孩子握住木球，又把它滚出去；另一个孩子把方块叠起来，再推倒重来；还有孩子把线穿过纸面，像是在用手指慢慢理解形状、方向和秩序。他停下来，看得比别人久了一点。他年轻时并不是一路从学校走向学校的人。他接触过自然、矿物、建筑和测量，也曾学习儿童教育思想。也许正因为这样，他看幼儿时，不只看见“不懂事的小孩”，还看见身体、材料、空间和节奏正在一起工作。问题开始变得不一样了：孩子真的只是在玩吗？还是正在用手、眼睛、声音和身体，练习理解世界？后来，他开始设计一套材料和活动，让孩子可以通过游戏感知形状、数量、关系和自然，也让照看孩子的成人学会怎样陪伴，而不是急着打断。很多年后，人们回头谈幼儿园的起点，常会提到这个名字：Friedrich Froebel。藏在这个故事里的，是学前教师培养最核心的问题之一：幼儿不是等着被灌输知识的小人，他们通过游戏、材料、动作和关系进入世界。成人的专业，不只是看住孩子，而是看懂孩子正在怎样学习，并为这种学习准备安全、丰富、合适的环境。", "一只木球让幼儿教育从“看管孩子”，走向理解游戏、材料和早期发展。", "Friedrich Froebel 于 1837 年在 Bad Blankenburg 开办面向幼儿的 play and activity institute，并在 1840 年使用 Kindergarten 一词。他设计的 Froebel Gifts 包括几何积木等材料，强调唱歌、舞蹈、园艺、自主游戏和儿童活动的教育价值。"],
-  "0113": ["无学科专门化教师培养", "只有三名学生的师范学校", "1839 年 7 月，马萨诸塞州 Lexington 的一所新学校开门时，第一批学生少到几乎不像一所学校。", "无学科专门化教师培养训练通用教学能力、课堂组织、学习观察、反馈、沟通和儿童发展理解。", "什么样的教学能力不属于任何一门课，却决定所有课能不能发生？", "这所学校的第一位负责人，原本长期在学校和教会之间工作。他在岛上办过学校，也做过牧师，见过太多真实课堂里的小麻烦：孩子会走神，会害怕，会同时处在不同进度，课堂也会因为一个问题没有说清楚而乱掉。那时很多人以为，只要一个人会读、会算、有品行，就自然能当老师。可他越来越明白，教师不是临时站上讲台的人，而是要学习怎样提问、怎样安排一节课、怎样观察学生是否真的明白、怎样让纪律不是恐惧，而是学习可以继续发生的秩序。最初只有少数学生，反而让这个实验更像是一次安静的试问：老师是不是也需要被系统训练？这个人叫 Cyrus Peirce，他受 Horace Mann 邀请主持 Lexington normal school，让无学科专门化教师培养从“会知识的人去教”转向“教师本身需要被训练”。那个小问题没有马上变成答案，却改变了提问方式：不是急着给结论，而是先弄清楚什么正在影响结果。藏在这个故事里的，是无学科专门化教师培养要培养的能力：通用教学能力、课堂组织、学习观察、反馈、沟通和儿童发展理解。所以它不只是教育史的一页，也是在提醒老师和学生：先观察学习怎样发生，再决定怎样介入。", "一所只有少数学生起步的师范学校，让教师培养从“会知识的人去教”，走向“教师本身需要被训练”。", "1839 年 7 月，Massachusetts 在 Lexington 建立实验性 normal school，常被称为美国第一所公立师范学校；Cyrus Peirce 是第一任负责人，Horace Mann 是 Massachusetts 公共教育改革的重要推动者。学校初期学生很少，后来发展为 Framingham State University 的历史源头。"],
-  "0114": ["有学科专门化教师培养", "教授把高等数学带回中学课堂", "20 世纪初的 Göttingen，一个数学教授发现，中学数学老师常站在两座桥之间：一边是大学数学，一边是学生眼前的题。", "有学科专门化教师培养把深层学科理解和教学方法结合起来，让老师知道怎样把一门学科教给第一次进入它的人。", "懂一门学科和教会一门学科，中间究竟隔着哪一种知识？", "这位数学家年轻时已经在几何研究里很出名，后来在 Göttingen 组织讲座、研讨班和研究机构。他越接近大学数学的深处，越觉得中学数学不该只是被切碎的公式。一个函数、一条曲线、一个证明，在专家眼里已经很自然，在学生眼里却可能像一堵墙。老师如果只会做更难的题，并不一定会教会学生；但如果老师能看见学校数学背后的结构、联系和来处，就能把抽象知识翻译成学生一步步能进入的路径。于是他把“从更高观点看初等数学”的想法带给教师，不是为了炫耀难度，而是为了让学科深度回到课堂。这个人叫 Felix Klein，他推动数学教师教育和国际数学教育改革，让有学科专门化的教师培养意识到：老师要知道答案，也要知道学生怎样抵达答案。真正的转弯发生在这里：别人可能只看见眼前的麻烦，故事里的人却把它拆成可以观察、记录和调整的问题。藏在这个故事里的，是有学科专门化教师培养要完成的转换：把深层学科理解和教学方法结合起来，让老师知道怎样把一门学科教给第一次进入它的人。这让今天的教室重新变得具体：学习不是把内容倒进学生脑子里，而是在环境、材料、关系和节奏中慢慢发生。", "Felix Klein 让学科教师培养看见：真正会教一门课，需要把学科深度翻译成学生能进入的路径。", "Felix Klein 在 Göttingen 推动数学教育改革；1893 年 Göttingen 设立数学教育相关讲席；ICMI 于 1908 年成立，Klein 成为首任主席。他的《Elementary Mathematics from an Advanced Standpoint》于 1908、1909 年出版，影响了数学教师如何连接高等数学与学校数学。"],
-  "0119": ["未另分类的教育", "工人把自己的词写上黑板", "1963 年，巴西 Angicos 的夜晚，一些甘蔗工人下班后坐进识字班，黑板上写的不是陌生例句，而是他们生活里的词。", "未另分类的教育收纳那些真实支持学习、但不适合标准学校、课程或学科标签的教育形式。", "哪些学习发生在正式课程之外，却真正改变了一个人看世界的方式？", "这位教育者小时候也经历过贫困和饥饿，他后来回忆，学不会有时不是因为一个人笨，而是因为生活条件把注意力和尊严都压得太低。长大后，他先做语言教师，又在成人教育里工作，越来越不相信那种把学生当空罐子的课堂。传统识字课常从课本句子开始，像是把世界先关在门外。他反过来做：先听人们平时说什么，工作里用什么词，害怕什么，想改变什么，再把这些词变成识字和讨论的入口。学习字母的同时，人也开始讨论土地、劳动、权利和沉默。识字不再只是技术，它变成一种重新说出自己生活的能力。这个人叫 Paulo Freire，他用 Angicos 成人识字实践和《Pedagogy of the Oppressed》影响了成人教育、批判教育学和社区学习。问题没有停在表面。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。藏在这个故事里的，是未另分类的教育需要保留下来的边界问题：那些真实支持学习、但不适合标准学校、课程或学科标签的教育形式。所以它不只是教育史的一页，也是在提醒老师和学生：先观察学习怎样发生，再决定怎样介入。", "Angicos 的夜校让教育不只是识字技术，也成为人重新命名生活和参与社会的入口。", "Paulo Freire 在巴西东北部发展成人识字方法。1963 年 Angicos 实验中，约 300 名甘蔗工人在短期课程中学习读写；Freire 后来提出“banking model of education”的批判，并在 1968 年出版《Pedagogy of the Oppressed》，成为批判教育学的重要文本。"],
-  "0211": ["视听技术与媒体制作", "工厂门口走出来的人群", "1895 年，法国一家照相器材厂门口，工人们下班离开，画面普通到几乎不像一件大事。", "视听技术与媒体制作关注影像、声音、剪辑、设备、传播和技术如何共同制造可感知的现实。", "当一个普通瞬间被机器记录下来，它还是原来的瞬间吗？", "那对兄弟从小生活在摄影工业里，家里做感光材料和照相器材。他们并不是一开始就想拍大片，也没有明星、剧情和宏大布景。真正让人震动的是一个很小的技术问题：怎样让连续照片被拍下、显影、放映，并让一群陌生人同时看见“时间在动”。他们把机器、胶片、放映和公开观看连在一起，让工厂门口、火车进站、婴儿吃饭这些普通场面突然有了新的力量。观众不是只看图像，而是在黑暗房间里共同经历运动、时间和注意力。视听技术从这里变得清楚：技术不是冷冰冰的设备，它会改变人如何记住一件事、相信一件事、一起观看一件事。这个人叫 Auguste Lumiere 和 Louis Lumiere，他们改进并推广 cinematograph，1895 年的放映实践成为电影和视听媒体史上的关键起点。重要的不是那一刻立刻出现了答案，而是注意力换了方向：从责怪个人，转向检查材料、规则、环境和选择。藏在这个故事里的，是视听技术与媒体制作最核心的问题之一：影像、声音、剪辑、设备、传播和技术如何共同制造可感知的现实。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一段普通工厂门口的影像，让电影从技术实验变成集体观看经验。", "Lumiere 兄弟在 1895 年公开放映多部短片，其中包括 Workers Leaving the Factory。cinematograph 兼具摄影机、洗印和放映相关功能，被视为早期电影技术和公共放映史的重要节点。"],
-  "0212": ["时装、室内与工业设计", "墙纸上的野草", "19 世纪英国，一个爱读诗、爱看中世纪故事的年轻人，走进工业时代的房间，却总觉得日用品正在失去人的手。", "时装、室内与工业设计把身体、空间、材料、功能、生产和审美放在同一个问题里。", "你每天使用的东西，是只被制造出来，还是也被认真理解过？", "他不是单纯反对机器，而是反对人和物之间的关系被粗糙地切断。漂亮不该只属于画廊，桌布、墙纸、椅子、书页、窗帘和房间的比例，也会影响一个人怎样生活。于是他开始研究染料、织物、木工、印刷和图案，让植物的枝叶重新爬上墙面，让手工的节奏回到家庭内部。他的理想有矛盾：手工产品常常昂贵，未必真的能让普通人都买得起。但他提出的问题仍然尖锐：如果生活中的物件都没有尊严，人怎么在日常里学习美感和自由？设计从这里不再只是“好看”，而是追问材料、劳动、使用者和社会理想之间的关系。这个人叫 William Morris，他是 Arts and Crafts movement 的核心人物之一，用家具、墙纸、纺织和书籍设计影响了现代室内与工业设计观念。这就是故事的发动机：大家以为事情只是照旧发生，主人公却看见背后还有一套正在运转的系统。藏在这个故事里的，是时装、室内与工业设计要完成的转换：把身体、空间、材料、功能、生产和审美放在同一个问题里。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一张墙纸上的植物纹样，让设计不再只是装饰，而是关于劳动、生活和尊严的问题。", "William Morris 是英国 Arts and Crafts movement 的关键人物。他创办设计公司，制作家具、墙纸、纺织品和书籍等，强调手工、材料、自然图案和日常生活中的美。"],
-  "0213": ["美术", "苹果为什么总是画不稳", "法国南部一个银行家家庭的儿子，本来被期待走向稳定职业，却一次次回到画布前，盯着苹果、桌布和一座山。", "美术训练观察、构图、色彩、材料、形式和对可见世界的重新解释。", "当你反复看同一个苹果，它会不会开始动摇你对“看见”的理解？", "他在巴黎受过冷落，也被展览体系拒绝过很久。别人画苹果，可能追求像；他画苹果，却像是在追问视觉本身为什么不稳定。桌面微微倾斜，盘子好像要滑落，色块彼此推挤，山体在光里变成结构。很多人起初看不懂，觉得这些画笨拙、不完整、不够讨好。可是他慢慢让后来者看见：绘画不必只是复制眼前物，也可以把观看拆开，重新组织成形、色、重量和时间。美术在这里变成一种极其诚实的训练：我到底看见了什么？我用什么方式把它放到画面上？这个人叫 Paul Cezanne，他通过静物、风景和结构化的观看影响了现代绘画，被后来的艺术家视为通往现代主义的重要桥梁。从这个角度看，知识不是被贴上去的标签，而是人在现场为了少一点误解、多一点判断而发展出的工具。藏在这个故事里的，是美术要培养的能力：观察、构图、色彩、材料、形式和对可见世界的重新解释。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一只反复被观看的苹果，让美术从再现世界转向研究观看本身。", "Paul Cezanne 长期以静物、人物和 Mont Sainte-Victoire 等主题作画。他对形体结构、色块关系和观看方式的探索深刻影响立体主义和现代艺术，常被称为现代绘画的重要先驱。"],
-  "0214": ["手工艺", "一只无名陶碗", "20 世纪初，日本城市快速现代化时，一个年轻思想者在朝鲜陶器和普通民间器物面前停了下来。", "手工艺连接材料、手感、传统、功能、地域经验和日常美感。", "一件没有作者签名的碗，为什么仍然可能改变审美史？", "他看到的不是昂贵古董，也不是宫廷珍品，而是普通人使用过的碗、盘、织物和木器。它们常常没有署名，价格不高，用途明确，形状朴素，却有一种无法被炫耀替代的安静力量。在工业化和精英艺术的夹缝里，他开始为这些“无名之物”辩护：手工艺的美不只是技巧表演，而是材料、用途、地方传统和长期重复劳动共同沉淀出来的东西。这种观点也需要今天继续批判地阅读，因为“民艺”容易浪漫化劳动者；但它至少提醒我们，知识不只在大师签名里，也在手掌、窑火、工具和日常使用的磨痕里。这个人叫 Yanagi Soetsu，他提出 mingei 理念并推动日本民艺运动，让普通人的手工艺成为现代审美和文化研究的重要对象。那个小问题没有马上变成答案，却改变了提问方式：不是急着给结论，而是先弄清楚什么正在影响结果。藏在这个故事里的，是手工艺要练习的连接能力：材料、手感、传统、功能、地域经验和日常美感。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一只无名陶碗，让手工艺从小技能变成关于材料、劳动和日常美的思想。", "Yanagi Soetsu 是日本 mingei 民艺运动的核心思想者，强调普通民众日用手工艺中的美，并于 1936 年推动建立日本民艺馆。mingei 理念关注匿名工匠、自然材料、功能性和地域传统。"],
-  "0215": ["音乐与表演艺术", "演员为什么不该只朝观众喊", "19 世纪末的莫斯科，一个热爱舞台的年轻人站在剧场里，越来越受不了那种夸张、空洞、只顾展示嗓门的表演。", "音乐与表演艺术关注声音、身体、节奏、角色、现场、训练和观众之间的关系。", "一次表演什么时候开始像真实生活，而不只是熟练展示？", "他出身并不贫寒，家里有条件让他接触剧场，也正因此，他早早看见舞台上最虚假的部分。演员站到台口，等提词人喂词，再用漂亮声音把台词甩给观众；角色之间并不真的互相听见。于是他开始记录自己的失败：什么时候情绪是装出来的，什么时候身体先于理解，什么时候一个角色有目标，表演才不再散掉。他把排练室当实验室，让演员追问“我在这个时刻想要什么”，练习注意力、行动、动机和真实交流。表演艺术在这里不再只是天赋和嗓音，而是一套可以反复训练的内在行动。这个人叫 Konstantin Stanislavski，他共同创办 Moscow Art Theatre，并发展出影响现代戏剧与电影表演训练的 Stanislavski system。真正的转弯发生在这里：别人可能只看见眼前的麻烦，故事里的人却把它拆成可以观察、记录和调整的问题。藏在这个故事里的，是音乐与表演艺术最核心的问题之一：声音、身体、节奏、角色、现场、训练和观众之间的关系。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一个演员对空洞表演的不满，发展成现代演员训练的重要方法。", "Konstantin Stanislavski 于 1898 年与 Vladimir Nemirovich-Danchenko 共同创办 Moscow Art Theatre。他发展出的 Stanislavski system 强调行动、动机、注意力、真实体验和系统化排练，对现代戏剧及后来的表演训练影响深远。"],
-  "0219": ["未另分类的艺术", "被转过方向的小便池", "1917 年纽约，一个艺术家把一件普通洁具换了方向，签上化名，送去一个号称开放的展览。", "未另分类的艺术容纳跨媒介、观念性、临时性和难以归档的创作。", "如果一件东西没有被手工制作，却迫使你重新定义艺术，它还算作品吗？", "他年轻时已经厌倦了只靠手艺和风格来判断艺术。那件东西不是雕刻出来的，也没有传统意义上的美；它的冲击来自选择、挪用、命名、展示位置和制度反应。展览规则说付费即可展出，但作品没有被摆出来。争论由此开始：艺术到底在物体里，还是在艺术家的选择、观众的判断、展览制度和问题本身里？未另分类的艺术常常就站在这个尴尬位置上。它让目录不舒服，却也迫使目录承认，有些作品的重要性不来自“像不像艺术”，而来自它让艺术边界暴露出来。这个人叫 Marcel Duchamp，他以 Fountain 和 readymade 观念深刻改变了 20 世纪艺术对作品、作者和制度的理解。问题没有停在表面。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。藏在这个故事里的，是未另分类的艺术需要认真追问的问题：未另分类的艺术容纳跨媒介、观念性、临时性和难以归档的创作。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一件被移位的日用品，让艺术边界本身变成作品的一部分。", "Marcel Duchamp 于 1917 年以 R. Mutt 名义提交 Fountain，这件 readymade 作品由普通小便池构成，被视为 20 世纪观念艺术和先锋艺术的重要转折点之一。"],
-  "0221": ["宗教与神学", "修士写给主教的一封信", "1517 年的德意志，一个年轻神学教师听见普通人谈论赎罪券，心里越来越不安。", "宗教与神学研究信仰、仪式、经典文本、教义、共同体、救赎和终极意义。", "当一种宗教实践让普通信徒误解信仰本身时，神学应该保持沉默吗？", "他原本是修道院里极其认真的人，对罪、良心和救赎有近乎痛苦的敏感。他不是一开始就想制造席卷欧洲的风暴，而是先从牧灵问题出发：如果人们以为钱可以买到灵魂的安心，那么悔改、信心、恩典和教会权威到底被理解成了什么？于是他写下用于学术辩论的条目，寄给教会高层，也很快被印刷和传播。接下来的历史远比他最初能控制的复杂，带来了信仰更新，也带来冲突、政治利用和痛苦分裂。宗教与神学在这里显示出重量：它不是抽象词语，而是普通人的恐惧、希望、权威和文本解释如何组织生活。这个人叫 Martin Luther，他的 Ninety-five Theses 成为 Protestant Reformation 的标志性起点之一，也深刻改变了欧洲宗教、教育和公共文化。重要的不是那一刻立刻出现了答案，而是注意力换了方向：从责怪个人，转向检查材料、规则、环境和选择。藏在这个故事里的，是宗教与神学真正要追问的问题：信仰、仪式、经典文本、教义、共同体、救赎和终极意义。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一封关于赎罪券的神学质疑，让宗教问题从讲坛走向公共历史。", "Martin Luther 1517 年写下 Ninety-five Theses，质疑赎罪券相关实践和教义理解。文本经印刷传播后成为宗教改革的重要标志之一，长期影响基督教神学、教会制度和欧洲社会。"],
-  "0222": ["历史与考古", "台阶下的封门", "1922 年，埃及帝王谷的尘土里，一个长期做发掘工作的男人几乎快要失去资助，却仍让工人继续清理一片看似普通的地面。", "历史与考古通过证据、遗迹、时间、材料和叙述理解过去，并谨慎处理过去被带回现在的方式。", "发现过去时，我们是在拥有它，还是开始承担解释它的责任？", "他并不是从大学讲台一路走来的学者，年轻时先靠绘画能力进入埃及考古现场，临摹壁画、记录细节、学习如何在沙土中保护易碎证据。多年寻找让人疲惫，资助人也接近放弃。直到工人发现一级石阶，清理继续向下，一道封门出现。洞口打开时，里面不是一个简单答案，而是成千上万件需要编号、保护、研究和搬运的物品。那一刻常被记成一句惊叹，但真正的考古不止是看见“奇迹”，还包括在兴奋之后缓慢、克制、系统地让过去说话。这个人叫 Howard Carter，他在 1922 年领导发现 Tutankhamun 墓，让近乎完整的古埃及王室墓葬震动世界，也让考古保护、记录和公众想象进入新的阶段。这就是故事的发动机：大家以为事情只是照旧发生，主人公却看见背后还有一套正在运转的系统。藏在这个故事里的，是历史与考古通过证据、遗迹、时间、材料和叙述理解过去，并谨慎必须面对的问题：过去被带回现在的方式。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一道封门背后不是单个宝藏，而是一整套关于证据、保护和过去如何进入现在的问题。", "Howard Carter 领导的团队于 1922 年在帝王谷发现 Tutankhamun 墓。墓中有数千件物品，保存和移出过程需要长期记录、保护和研究，是现代考古史上最著名发现之一。"],
-  "0223": ["哲学与伦理", "市场里那个不停追问的人", "公元前 5 世纪的雅典，一个出身普通工匠家庭的人，常在市场、体育场和宴席间同人谈话。", "哲学与伦理研究价值、理由、责任、知识、善、正义和行动背后的假设。", "当你说“我知道”时，是否真的知道自己知道什么？", "他没有留下自己的书，也不像收学费的教师那样提供一套现成答案。他更像一个让人不舒服的邻居：将军说勇敢，他问勇敢是什么；政治人物说正义，他问正义能不能自相矛盾；年轻人说想过好生活，他问好生活是否只是成功和名声。许多人被他问得恼火，因为问题会把漂亮话拆开，让人看见自己其实没有想清楚。哲学与伦理在这里不是远离生活的抽象游戏，而是把日常判断带回理由面前：我凭什么这样活？我怎样对别人负责？我愿不愿意让自己的观念接受追问？这个人叫 Socrates，他以持续问答形成 Socratic method，成为西方哲学和伦理探究的重要源头人物。从这个角度看，知识不是被贴上去的标签，而是人在现场为了少一点误解、多一点判断而发展出的工具。藏在这个故事里的，是哲学与伦理真正要追问的问题：价值、理由、责任、知识、善、正义和行动背后的假设。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一个不停追问的人，让哲学从答案的展示变成理由的检验。", "Socrates 活跃于古雅典，未留下亲笔著作，主要通过 Plato、Xenophon 等人的文本被后世认识。Socratic method 以问答检验信念的一致性和理由，对哲学、伦理和教育产生长期影响。"],
-  "0229": ["未另分类的人文学科", "她把家乡的故事重新听了一遍", "20 世纪 20 年代，一个从美国南方小镇走出去的年轻女性，带着人类学训练回到熟悉的门廊和街角。", "未另分类的人文学科处理那些关于意义、文本、民俗、记忆和人的经验但难以放入单一门类的问题。", "当一个人研究自己的文化时，她是旁观者，还是也在重新听见自己？", "她小时候听过许多故事：玩笑、传说、夸张的比喻、夜晚的闲谈、宗教和日常混在一起的声音。离开家乡后，她进入学术世界，学会访谈、记录和分析；可真正困难的是回到那些熟人之间时，既不能把他们当成标本，也不能只凭怀旧替他们说话。她坐在门廊上，跟人聊天、听笑话、记方言，也把自己的位置写进文本里。那些材料既像文学，又像民俗学、民族志、历史和语言研究，无法被单一标签收拢。未另分类的人文学科正需要这种敏感：有些知识必须从活人说话的声音里进入。这个人叫 Zora Neale Hurston，她以 Mules and Men 等作品记录非裔美国民俗，把文学、人类学和口述传统连接成独特的人文实践。那个小问题没有马上变成答案，却改变了提问方式：不是急着给结论，而是先弄清楚什么正在影响结果。藏在这个故事里的，是未另分类的人文学科必须面对的问题：那些关于意义、文本、民俗、记忆和人的经验但难以放入单一门类的问题。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一个回到家乡倾听的人，让门廊上的笑话和传说进入人文学术记忆。", "Zora Neale Hurston 是作家、人类学家和民俗采集者。她在 Eatonville、Florida 及其他地区采集非裔美国民俗，1935 年出版 Mules and Men，把民间故事、民族志和文学叙事结合起来。"],
-  "0231": ["语言习得", "一只叫 Wug 的小怪物", "20 世纪中期，一位年轻研究者坐在孩子面前，拿出一张画着陌生小动物的图片。", "语言习得关注人如何在输入、使用、规则、错误、反馈和社会情境中获得语言。", "孩子说错的时候，是否可能正在证明自己已经学会了规则？", "她没有先问孩子会不会背语法术语，而是给他们一个从未听过的词。图上只有一只小动物，她说这是一个 Wug；再出现一只，她问：现在有两个，叫两个什么？如果孩子回答出复数形式，就说明他们不是只在模仿听过的词，而是在把规则带到新情境里。这个实验简单得像游戏，却击中了语言习得的核心：孩子并不是被动复印成人话语，他们会从语言环境中抽出模式，再用到从未遇见过的词上。错误、发明词和犹豫，反而能让我们看见语言正在生长。这个人叫 Jean Berko Gleason，她设计的 Wug Test 成为儿童语言习得研究的经典实验之一。真正的转弯发生在这里：别人可能只看见眼前的麻烦，故事里的人却把它拆成可以观察、记录和调整的问题。藏在这个故事里的，是语言习得最核心的问题之一：人如何在输入、使用、规则、错误、反馈和社会情境中获得语言。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一只不存在的小动物，让研究者看见孩子不是背语言，而是在生成规则。", "Jean Berko Gleason 于 1958 年发表与 Wug Test 相关的研究，用虚构词测试儿童是否能把英语形态规则应用到新词上，成为语言习得研究中的经典范例。"],
-  "0232": ["文学与语言学", "一个词不是贴在东西上的标签", "20 世纪初的日内瓦，一位语言教师在课堂上反复提醒学生：语言不是一堆物体名称的清单。", "文学与语言学研究文本、叙事、声音、符号、结构、意义和语言规则。", "如果一个词的意义来自它和其他词的差异，你还能把语言当成词典列表吗？", "他早年研究印欧语言，熟悉古老音变和比较语法；可到了普通语言学讲课时，他把问题推得更深。一个词为什么有意义？不是因为它天然连着某个物体，而是因为声音形式和概念在语言系统里被社会约定地连在一起，又因为它和其他词不同而能被识别。这个看法听起来安静，却改变巨大：文学里的意象、日常里的称呼、诗歌里的节奏、社会里的身份，都可以被看成符号关系的一部分。语言学不再只是追踪词源，也开始研究系统、差异和意义如何生成。这个人叫 Ferdinand de Saussure，他的学生整理出版 Course in General Linguistics，使 signifier/signified 和结构语言学成为 20 世纪语言与文学理论的重要基础。问题没有停在表面。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。藏在这个故事里的，是文学与语言学真正要追问的问题：文本、叙事、声音、符号、结构、意义和语言规则。所以它不只是艺术史或人文史，而是在训练人看见作品、物件和生活经验之间的暗线。", "一次关于词语关系的课堂，让语言从名称清单变成意义系统。", "Ferdinand de Saussure 是瑞士语言学家。《Course in General Linguistics》由学生根据其讲课笔记整理出版，提出语言符号、能指/所指、语言系统和差异关系等思想，影响结构主义、语言学和文学理论。"],
-  "0239": ["未另分类的语言", "会说话的树叶", "19 世纪初，一个切罗基银匠看见白人士兵用纸传递消息，觉得那些纸像会说话的树叶。", "未另分类的语言关注不适合标准语种课程、主流文字传统或单一语言标签的语言实践。", "如果一个没有文字传统的共同体突然能书写自己的语言，会发生什么？", "他起初并不会读写任何现成文字，却被一个问题抓住：为什么纸上的痕迹能让远方的人听见消息，而自己的族人却必须依靠口头传递？身边人嘲笑他，甚至怀疑那是巫术；家里的生活也被他长时间的试验拖累。他先想给每个词画一个符号，后来发现太多，记不住。慢慢地，他转向声音，把语言拆成音节，为每个音节设计符号。经过多年试验，系统终于足够简洁，普通人可以很快学会。它让法律、书信、报纸、宗教文本和家族消息以本族语言流动，也让语言在压力巨大的历史中多了一条保存自己的路。这个人叫 Sequoyah，他创造 Cherokee syllabary，使 Cherokee Nation 在 1820 年代获得自己的书写系统，并成为语言史上极少数由个人成功发明文字体系的经典案例。重要的不是那一刻立刻出现了答案，而是注意力换了方向：从责怪个人，转向检查材料、规则、环境和选择。藏在这个故事里的，是未另分类的语言最核心的问题之一：不适合标准语种课程、主流文字传统或单一语言标签的语言实践。这让今天的作品、文本和日常物件重新变得可读：意义不是直接摆在表面，而是在反复观看和解释里慢慢出现。", "一个银匠追问纸为什么会说话，最终让一个民族拥有了书写自己语言的方式。", "Sequoyah 于 1821 年完成 Cherokee syllabary，Cherokee Nation 于 1825 年正式采用。该音节文字迅速传播，使 Cherokee 语能够用于书信、法律、宗教材料和 Cherokee Phoenix 报纸等。"],
-  "0311": ["经济学", "那枚小小的别针", "18 世纪的苏格兰，一个常在街上散步的教授，对商店、工坊和港口里的普通交易越来越着迷。", "经济学研究稀缺、分工、价格、激励、交换和资源如何在社会中被安排。", "当你看到一件很便宜的小东西时，会不会想到它背后有多少人的分工和协调？", "他原本教的是道德哲学，并不是坐在账房里算利润的人。可他总觉得，面包为什么会到餐桌上，工资为什么会这样定，一件小商品为什么能卖到远方，这些问题并不只是商人的私事。他在书里写下一个很不起眼的例子：一枚别针。如果一个人从拉铁丝、切断、磨尖到装盒全都自己做，产量很有限；如果许多人把工作拆开，各做一小步，速度会突然变得惊人。这个例子后来常被记住，因为它让人看见，财富不是凭空出现的，也不是单靠某个聪明人创造的。它来自分工、工具、市场大小、价格信号，以及许多陌生人之间并不亲密却持续发生的合作。后来，这个人叫 Adam Smith，是苏格兰道德哲学家和经济学家。他在 1776 年出版的《国富论》被认为是现代经济学的重要起点。今天，经济学已经扩展到家庭选择、平台市场、公共政策、行为偏差、贫困、环境和技术变化，但那个别针问题还在：一个社会如何让有限资源经过人的选择，变成可被共享的生活。", "一枚别针让经济学从抽象财富，落到分工、价格和陌生人的合作。", "Adam Smith 是苏格兰哲学家和经济学家，曾在 Glasgow 教授道德哲学；《国富论》出版于 1776 年；书中著名的别针制造例子用来说明分工如何提高生产力，并成为古典经济学的重要起点之一。"],
-  "0312": ["政治科学与公民学", "小区要不要开放停车位，争论最后变成规则、代表和公共利益的问题。", "政治科学与公民学关注公共决策、权力、制度、参与和责任。", "当大家都说为了公共利益时，谁来定义公共？"],
-  "0313": ["心理学", "朋友总在重要邮件发出前反复检查，问题不只是细心，而是焦虑在指挥注意力。", "心理学研究行为、情绪、认知、发展和人与环境的互动。", "你最近一个习惯背后，可能藏着什么心理需求？"],
-  "0314": ["社会学与文化研究", "同一栋楼里，年轻人觉得群聊方便，老人却觉得通知贴在门口才算正式。", "社会学与文化研究关注规范、身份、群体、文化差异和社会结构。", "一个简单通知为什么会因为群体不同而变成不同现实？"],
-  "0319": ["未另分类的社会与行为科学", "志愿者发现社区里的孤独感既不是心理问题，也不只是邻里关系问题。", "未另分类的社会与行为科学处理跨越行为、群体和制度的复杂现象。", "哪些人的问题其实是关系和环境共同制造的？"],
-  "0321": ["新闻与报道", "暴雨夜里，同一张积水照片被转发成三种说法，记者先去确认地点和时间。", "新闻与报道关注事实核查、采访、叙事、公共信息和责任。", "在转发之前，你愿意为一个事实多问哪一个问题？"],
-  "0322": ["图书馆、信息与档案研究", "老人想找一张几十年前的毕业照，管理员从标签、年份和捐赠记录一路追踪。", "图书馆、信息与档案研究关注信息组织、保存、检索和长期记忆。", "如果信息找不到，它和不存在有什么区别？"],
-  "0329": ["未另分类的新闻与信息", "社区建立了一个失物消息板，既不是新闻，也不是档案，却让信息开始可信地流动。", "未另分类的新闻与信息关注不适合标准媒体或档案标签的信息实践。", "什么样的信息系统小到不起眼，却支撑着信任？"],
-  "0411": ["会计与税务", "小店月底发现现金不少却利润很低，账本第一次把感觉变成事实。", "会计与税务让收入、成本、税务和责任变得可记录、可解释。", "没有记录的钱，真的能被管理吗？"],
-  "0412": ["金融、银行与保险", "朋友买保险时只看价格，直到有人问他真正害怕的风险是什么。", "金融、银行与保险研究时间、风险、信用、保护和资金选择。", "你付出的每一笔钱，是在买收益、买便利，还是买安心？"],
-  "0413": ["管理与行政", "活动当天每个人都很努力，却没人知道谁负责钥匙。", "管理与行政关注组织、流程、责任、协调和执行。", "一个团队失败时，问题一定是人不努力吗？"],
-  "0414": ["市场营销与广告", "海报写满优点却没人停下，换成一句真实痛点后才有人询问。", "市场营销与广告研究需求、定位、传播、注意力和信任。", "你是在告诉别人你有什么，还是在回应别人为什么在意？"],
-  "0415": ["秘书与办公事务", "会议顺利结束不是因为讨论少，而是有人提前整理了议程、资料和后续事项。", "秘书与办公事务关注文档、沟通、日程、流程和组织记忆。", "哪些看不见的准备，让一个组织看起来很顺？"],
-  "0416": ["批发与零售销售", "水果摊老板把最熟的桃放在前面，因为他知道今天谁会先来买。", "批发与零售销售关注库存、陈列、定价、顾客关系和流通。", "一个货架的顺序，怎样改变人的选择？"],
-  "0417": ["工作技能", "实习生技术不差，却总错过交付时间，导师先教他确认任务边界。", "工作技能关注沟通、协作、时间、责任和职业场景中的基本能力。", "什么能力不写在职位名称里，却决定你能不能可靠地完成事？"],
-  "0419": ["未另分类的商业与行政", "朋友经营一个临时市集，既要招商、排班、收款，又要处理投诉。", "未另分类的商业与行政收纳混合型经营和组织实践。", "哪些真实工作因为太混合，反而很难被一个岗位名称说清？"],
-  "0511": ["生物学", "窗台上的豆苗总向光弯曲，孩子第一次把生命看成会回应环境的系统。", "生物学研究生命、细胞、物种、遗传、适应和生态关系。", "你观察一个生命时，看到的是物体，还是正在调节的过程？"],
-  "0512": ["生物化学", "面团发酵失败后，厨师开始关心温度、酶和微小反应。", "生物化学研究生命里的分子、反应、能量和物质变化。", "一个看不见的反应，怎样改变你能看见的结果？"],
-  "0519": ["未另分类的生物相关科学", "水族箱里的藻类突然暴增，原因横跨光照、营养和微生物。", "未另分类的生物相关科学处理不适合单一生物门类的生命现象。", "哪些生命问题需要几个尺度一起看？"],
-  "0521": ["环境科学", "学校操场旁的空气检测值总比公园高，学生开始怀疑采样位置。", "环境科学研究污染、资源、气候、生态和人类活动之间的关系。", "当你说环境变好了，你测量的是哪一个环境？"],
-  "0522": ["自然环境与野生动物", "夜里路灯太亮，花园里的昆虫少了，孩子以为只是天气变了。", "自然环境与野生动物关注栖息地、物种行为、保护和生态平衡。", "一个方便人的改变，会怎样悄悄改变其他生命？"],
-  "0529": ["未另分类的环境", "社区池塘变浑浊，原因既不像单纯污染，也不像普通生态问题。", "未另分类的环境处理跨越水、土、气候、社区使用的复杂环境现象。", "什么环境问题被分门别类以后反而看不清？"],
-  "0531": ["化学", "清洁剂混用后刺鼻气味出现，大家才意识到物质会彼此反应。", "化学研究物质组成、性质、反应和变化条件。", "你身边哪件小事其实是物质关系在起作用？"],
-  "0532": ["地球科学", "雨后坡道总积水，邻居从土壤、坡度和地下排水开始找答案。", "地球科学研究岩石、水、气候、地形和地球系统。", "脚下的地面为什么从来不是静止背景？"],
-  "0533": ["物理学", "电梯突然停住时，孩子第一次认真感到速度、力和惯性。", "物理学研究运动、能量、力、物质和自然规律。", "哪些日常感觉其实是物理规律在提醒你？"],
-  "0539": ["未另分类的物理科学", "厨房里一个奇怪的结晶现象，说不清属于化学、物理还是材料问题。", "未另分类的物理科学收纳跨越物质、能量和实验现象的研究。", "当现象不听分类安排时，你会先观察还是先命名？"],
-  "0541": ["数学", "合租账单分摊时，大家发现公平不是平均这么简单。", "数学用数量、结构、模式和推理澄清关系。", "什么时候一个数字不是答案，而是重新提问的工具？"],
-  "0542": ["统计学", "他开始数街上的人", "19 世纪初，布鲁塞尔的夜空常常不够清楚，年轻的天文学家只能等云散开，再把星星的位置记在纸上。", "统计学研究数据收集、变化、不确定性、推断、偏差，以及大量个体记录背后的模式。", "你看到一个平均数时，最想知道它帮你看见了什么，又遮住了什么？", "天文观测总有误差。这个年轻人慢慢学会，不必把每一个偏差都当成失败；很多偏差放在一起，反而会显出一种分布。后来，他把这种耐心从天空带回城市。出生、死亡、婚姻、身高、犯罪记录，这些原本散在登记册里的数字，被他一列一列整理出来。一个人的一生不能被表格解释，但很多人的记录放在一起，会露出某种社会的形状。他提出“平均人”的想法，试着用平均值理解社会规律。这个想法很有启发，也很危险：平均值能让混乱变得可读，却也可能把真实的人压平，把差异、不公平和例外藏起来。后来，这个人叫 Adolphe Quetelet，是比利时天文学家、数学家和统计学家。他把统计方法引入社会现象研究，也留下了后来被称为 Quetelet Index 的身体质量指数源头。今天，统计学已经进入医学试验、公共卫生、经济决策、城市治理、AI 评估和体育分析，但它最重要的提醒仍然朴素：数字不是现实本身，它是我们学习如何诚实接近现实的一种工具。", "一个仰望星空的人转身整理城市登记册，让统计学成为理解社会模式的工具。", "Adolphe Quetelet 是比利时天文学家、数学家、统计学家和社会学先驱；他创办并主持 Brussels Observatory；1835 年出版关于社会物理学和“平均人”的重要著作；他把统计方法应用到犯罪、婚姻、死亡等社会现象，并提出后来影响 BMI 的 Quetelet Index。"],
-  "0611": ["计算机使用", "妈妈学会保存文件后，终于不再把重要文档只放在聊天窗口里。", "计算机使用关注基本数字工具、文件、账户、安全和日常操作能力。", "一个人不会用工具时，问题是工具复杂，还是学习入口太少？"],
-  "0612": ["数据库与网络设计及管理", "社团名单存在三个人手机里，活动前一天没人知道哪个版本最新。", "数据库与网络设计及管理关注数据结构、连接、权限、可靠性和维护。", "当信息必须被多人同时信任时，它该住在哪里？"],
-  "0613": ["软件与应用开发及分析", "她看见机器不只会算数", "1833 年的伦敦，客厅里有人低声交谈。桌上的纸页和茶杯旁，一台由齿轮、轴杆和金属片组成的机器吸引着来客。", "软件与应用开发及分析关心的不只是写代码，而是把需求、逻辑、符号、界面、测试和改进连成一套可靠过程，让机器能够执行人的想法。", "当机器开始执行人的想法时，最难的部分是机器足够聪明，还是人能不能把自己的想法说清楚？", "那个女孩才十七岁。她站在机器旁边，看着人们围过来，听他们谈论计算、速度和精确。那时的计算表常靠人一点点手算，出错并不稀奇。如果机器能替人算得更快，已经足够让很多人兴奋。可她停得久了一点。她想的不是这台机器能算多少，而是另一个问题：如果数字不只代表数量，也能代表音符、图案、关系和规则，那么机器处理的，真的只是数字吗？这个问题没有马上变成答案。几年后，她翻译一篇介绍 Analytical Engine 的文章。翻译本来只需要转述原文，她却把注释越写越长，试着说明机器怎样一步一步计算 Bernoulli numbers：先取什么数，再做什么运算，什么时候重复，什么时候停止。那些表格不像今天的代码，却已经很接近把人的意图拆成机器可以执行的步骤。很多年后，人们回头寻找计算机程序最早的影子，常会翻到那篇译文和后面的 Notes。署名处的名字，是 Ada Lovelace。藏在这个故事里的，其实是软件与应用开发最核心的问题：怎样把一个模糊的人类想法，写成机器可以理解、执行、检查和改进的步骤。对学生来说，信息技术不是只会操作工具，而是看懂工具背后有哪些假设、路径和责任。", "在一台尚未建成的机器旁，Ada Lovelace 看见了指令、符号和可执行想法的早期影子。", "Ada Lovelace 于 1843 年翻译 Luigi Menabrea 关于 Analytical Engine 的文章，并加入长篇 Notes。其中 Note G 描述了计算 Bernoulli numbers 的方法，常被视为最早公开发表的计算机程序之一。Analytical Engine 在当时并未真正建成。"],
-  "0619": ["未另分类的信息与通信技术", "社区用二维码、纸表和群消息混合登记老人需求，系统很小但很有效。", "未另分类的信息技术收纳不适合标准软件或网络标签的数字实践。", "哪些数字解决方案重要，不是因为先进，而是因为贴合现场？"],
-  "0711": ["化学工程与工艺", "洗衣液小厂换了配方，泡沫少了，管道却更稳定。", "化学工程与工艺把化学反应转化为安全、可控、可规模化的流程。", "从实验成功到稳定生产，中间需要哪些看不见的控制？"],
-  "0712": ["环境保护技术", "餐馆装了油烟过滤器后，邻居投诉少了，但维护记录也变得重要。", "环境保护技术用工程方法减少污染、处理废物和保护环境。", "一个环保设备如果没人维护，还算解决方案吗？"],
-  "0713": ["电力与能源", "停电那晚，整栋楼才意识到冰箱、电梯和网络都依赖同一条能源链。", "电力与能源关注发电、输配、效率、储能和安全使用。", "你最依赖的日常便利，背后是哪一种能源安排？"],
-  "0714": ["电子与自动化", "自动门总在高峰期误开，工程师调整的不只是传感器，还有人流逻辑。", "电子与自动化研究电路、控制、传感、机器和自动系统。", "当机器自动行动时，它到底读懂了什么信号？"],
-  "0715": ["机械与金属行业", "自行车刹车吱响，修车师傅听声音就知道摩擦面出了问题。", "机械与金属行业关注结构、部件、加工、维修和力的传递。", "哪些声音是在告诉你材料和结构正在求救？"],
-  "0716": ["机动车、船舶与航空器", "渡船延迟不是因为船慢，而是风、载重、燃油和安全规则一起改变了计划。", "机动车、船舶与航空器关注交通工具的设计、维护、运行和安全。", "移动得更快之前，系统必须先保证什么？"],
-  "0719": ["未另分类的工程行业", "维修队用非标准零件解决了老设备问题，但先做了临时安全测试。", "未另分类的工程行业处理不适合标准工程分支的技术实践。", "临场修复什么时候是创造，什么时候是风险？"],
-  "0721": ["食品加工", "招牌汤要装瓶出售后，味道、保质期和密封都成了问题。", "食品加工把原料变成安全、稳定、可运输和可销售的食品。", "一份好吃的食物，怎样才能经得起时间和距离？"],
-  "0722": ["材料：玻璃、纸、塑料与木材", "搬家纸箱看似一样，有的能承重，有的遇潮就塌。", "材料学习关注玻璃、纸、塑料、木材等材料的性质、加工和用途。", "你选择材料时，是在选择外观，还是在选择它能承受什么？"],
-  "0723": ["纺织品：服装、鞋类与皮革", "雨天鞋底打滑，设计师重新看了纹路、材料和走路姿势。", "纺织品与服装鞋类关注纤维、结构、舒适、安全和制作工艺。", "贴近身体的东西，为什么需要同时理解材料和动作？"],
-  "0724": ["采矿与开采", "一块手机电池让学生追问金属从哪里来，答案一路走到矿区。", "采矿与开采关注资源发现、提取、安全、环境和供应链。", "一个产品看起来很干净时，它的原料故事去了哪里？"],
-  "0729": ["未另分类的制造与加工", "手工肥皂作坊逐渐接到订单，配方、包装和批次记录都需要重新设计。", "未另分类的制造与加工收纳混合型生产和加工实践。", "当兴趣变成生产，哪些细节会突然变成责任？"],
-  "0731": ["建筑与城镇规划", "新广场很漂亮，却没有阴影，午后几乎没人停留。", "建筑与城镇规划关注空间、动线、公共生活、安全和长期使用。", "一个地方是给照片看的，还是给人生活的？"],
-  "0732": ["建筑与土木工程", "学校门口积水多年，修路队发现问题在坡度、排水和地基。", "建筑与土木工程把结构、道路、水、电和公共安全落到实体系统。", "一条路的问题，为什么可能藏在地下？"],
-  "0811": ["作物与畜牧生产", "农场主换了饲料，鸡蛋产量变了，粪肥和菜地也跟着变化。", "作物与畜牧生产关注种植、饲养、产量、健康和食物系统。", "一个农场决定怎样在多个生命之间传递后果？"],
-  "0812": ["园艺", "阳台花盆换了位置后，香草终于不再徒长。", "园艺关注观赏植物、果蔬、土壤、修剪、光照和空间照料。", "照料植物时，你是在控制它，还是在学习它的条件？"],
-  "0819": ["未另分类的农业", "社区堆肥项目既像种植，也像环保，还像邻里协作。", "未另分类的农业收纳不适合标准农业标签的土地与生产实践。", "哪些食物相关知识发生在田地和城市之间？"],
-  "0911": ["牙科研究", "孩子害怕看牙，牙医先让他摸一摸小镜子，再谈蛀牙。", "牙科研究关注口腔健康、牙齿结构、预防、治疗和患者体验。", "一次治疗能否成功，为什么也取决于恐惧被怎样处理？"],
-  "0912": ["医学", "老人说胸口不舒服，医生没有只听一个症状，而是追问时间、用药和风险。", "医学研究疾病、诊断、治疗、预防和人体系统。", "什么时候一个小症状不能被当成小事？"],
-  "0913": ["护理与助产", "夜里那盏灯", "1850 年代的军医院里，走廊潮湿、床位拥挤，伤兵身上的问题不只来自战场。", "护理与助产关注持续观察、照护、卫生、安全、生命过程和人在脆弱时刻的尊严。", "真正的照护，是等医生下指令，还是在细节恶化之前先看见变化？", "刚到医院时，她看到的不是传说里的英雄场面，而是一连串很具体的麻烦：脏床单、通风差、排水糟糕、物资混乱，病人有时不是死于伤口，而是死于伤口之后的环境。她带人清洁、整理供应、改善卫生，也一遍遍记录死亡原因和病房情况。夜里，她提着灯巡视，不只是为了安慰伤兵，更是在看呼吸、疼痛、发热和恐惧有没有改变。后来，人们记住了那盏灯，但真正重要的不是浪漫的光，而是她把照护变成一种有纪律的专业：观察、记录、卫生、训练和制度。这个人叫 Florence Nightingale，是现代护理的重要奠基人，也是一位使用统计推动公共卫生改革的人。今天，护理与助产已经发展到重症监护、社区护理、产前产后照护、慢病管理和临终关怀，但核心仍然很近：在别人最脆弱的时候，有人持续、准确、尊重地看见他。", "一盏夜巡的灯背后，是现代护理把善意变成专业训练、卫生制度和持续观察的开始。", "Florence Nightingale 在 Crimean War 期间管理和训练护士，改善 Scutari 军医院的卫生与照护条件；1860 年她在 London 的 St Thomas' Hospital 建立 Nightingale Training School；她也用统计图表和数据推动公共卫生改革，被广泛视为现代护理奠基人。"],
-  "0914": ["医学诊断与治疗技术", "影像检查没有直接给出答案，技术员的操作质量影响了医生能看见什么。", "医学诊断与治疗技术关注设备、检测、影像、治疗支持和质量控制。", "一项技术检查背后，人的判断还在哪里起作用？"],
-  "0915": ["治疗与康复", "摔伤后的第一次下楼梯，比检查报告更能说明恢复到了哪里。", "治疗与康复关注功能恢复、训练、适应、疼痛和长期支持。", "恢复是不是回到过去，还是学会新的生活方式？"],
-  "0916": ["药学", "同一种药饭前饭后效果不同，药师把说明书翻成了生活安排。", "药学研究药物作用、剂量、安全、相互作用和用药指导。", "一粒药真正进入生活时，需要哪些知识保护它的效果？"],
-  "0917": ["传统与补充医学及疗法", "邻居推荐草药，医生没有立刻否定，而是先问成分、剂量和正在服用的药。", "传统与补充医学关注传统疗法、身体经验、安全边界和证据对话。", "尊重传统和保护安全，如何同时发生？"],
-  "0919": ["未另分类的健康", "跑步社群发现新手受伤多，问题不只是运动医学，也涉及习惯和风险沟通。", "未另分类的健康收纳不适合标准医疗门类的健康实践。", "什么健康问题太生活化，以至于很难放进诊室？"],
-  "0921": ["老人和残障成人照护", "楼梯边多装一个扶手，让老人终于敢自己下楼买菜。", "老人和残障成人照护关注尊严、能力支持、安全和日常生活质量。", "帮助一个人时，怎样避免把他的自主性也拿走？"],
-  "0922": ["儿童照护与青少年服务", "少年活动室里，一张安静角落的桌子比更多规则更有用。", "儿童照护与青少年服务关注保护、发展、陪伴、边界和成长环境。", "年轻人需要的是管理，还是一个能安全试错的空间？"],
-  "0923": ["社会工作与咨询", "欠租通知背后，是失业、照护压力和羞耻感缠在一起。", "社会工作与咨询连接个人困难、家庭关系、资源系统和支持过程。", "当一个人求助时，你能看见问题背后的系统吗？"],
-  "0929": ["未另分类的福利", "社区冰箱解决的不只是食物，也是不知道向谁开口的难处。", "未另分类的福利收纳不适合标准福利服务标签的支持实践。", "什么样的帮助因为太朴素，反而最接近人的真实需要？"],
-  "1011": ["家政服务", "家里请人整理后，真正改变的是老人能更安全地在厨房转身。", "家政服务关注清洁、整理、照护辅助、家庭运行和生活安全。", "一个家变得好用，背后有哪些服务知识？"],
-  "1012": ["美发与美容服务", "婚礼前的发型沟通花了半小时，因为顾客要的不只是好看，还有安心。", "美发与美容服务关注形象、身体、审美、沟通和信任。", "服务身体外表时，为什么也在服务情绪？"],
-  "1013": ["酒店、餐厅与餐饮", "餐厅满座时，最难的不是上菜，而是让等待的人仍然感觉被看见。", "酒店、餐厅与餐饮关注接待、食物、流程、卫生和体验。", "一次用餐体验，哪些部分不是食物却决定记忆？"],
-  "1014": ["体育", "社区球赛里，裁判先解释规则，比赛反而更激烈也更安全。", "体育关注训练、规则、身体表现、团队和公平竞争。", "竞争什么时候会让人变好，什么时候会让人受伤？"],
-  "1015": ["旅行、旅游与休闲", "游客迷路后记住的不是景点，而是有人如何帮他重新找到路线。", "旅行、旅游与休闲关注目的地、体验设计、文化接触和安全协调。", "旅行中的自由，为什么常常依赖别人设计好的秩序？"],
-  "1019": ["未另分类的个人服务", "有人专门陪老人办理手机套餐，这项服务很难命名，却很必要。", "未另分类的个人服务收纳改善个人生活但不适合标准服务类别的实践。", "哪些服务因为太贴近生活，反而没有正式名字？"],
-  "1021": ["社区卫生", "小区垃圾点换了位置后，异味少了，投诉也少了。", "社区卫生关注废弃物、水、清洁、公共空间和群体健康。", "干净是个人习惯，还是共同系统？"],
-  "1022": ["职业健康与安全", "仓库新员工总撞到同一个货架，主管终于重画了通道线。", "职业健康与安全关注工作场所风险、预防、设备和安全行为。", "如果一个错误重复发生，问题在个人还是在现场设计？"],
-  "1029": ["未另分类的卫生与职业健康服务", "夜市摊位临时增加洗手点，既是卫生措施，也是经营安排。", "未另分类的卫生与职业健康服务处理混合型公共卫生和工作安全实践。", "哪些安全措施小到不起眼，却改变了整个现场？"],
-  "1031": ["军事与国防", "停电演练里，队伍最先检查的不是武器，而是通信和补给。", "军事与国防关注安全、组织、战略、训练、资源和风险准备。", "真正的防御只是力量，还是系统性的准备？"],
-  "1032": ["人身与财产保护", "商店装了摄像头后，店主还调整了灯光和入口视线。", "人身与财产保护关注风险识别、预防、响应和安全环境设计。", "安全感来自监控，还是来自一个更难被误用的环境？"],
-  "1039": ["未另分类的安全服务", "音乐节的失物和走散儿童由同一组志愿者处理，安全服务变得很难归类。", "未另分类的安全服务收纳非标准但真实保护人的现场支持。", "哪些保护工作只有在事情差点出错时才被看见？"],
-};
+const fieldStoryDetailsZh = {};
 
 function makeSublensStory(draft) {
   const category = categories.find((item) => item.code === draft.categoryCode);
@@ -3355,1646 +1983,7 @@ const lensStories = [
   ...fieldLensStories,
 ];
 
-const lensStoryOverridesZh = {
-  "1000": {
-    "titleZh": "真相时刻在登机口",
-    "summaryZh": "一个航空公司管理者把服务理解成每一次人与系统相遇的瞬间。",
-    "sceneZh": "20 世纪 80 年代的斯堪的纳维亚航空，一名乘客在柜台前等待，真正评价公司的时刻可能只有几十秒。",
-    "storyBodyZh": "他意识到，服务不是总部文件里的承诺，而是旅客和员工相遇的每一个瞬间：电话是否被接起，柜台是否有权解决问题，延误时信息是否诚实，员工是否被信任去判断现场。于是他强调 moments of truth，让组织把权力下放到前线，把服务体验看成无数接触点共同形成的结果。服务领域在这里变得具体：体验不是微笑装饰，而是流程、信息、权限、情绪和时间是否对齐。这个人叫 Jan Carlzon，他在 Scandinavian Airlines 推动服务管理转型，并以 moments of truth 思想影响现代服务管理。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Jan Carlzon 曾任 Scandinavian Airlines CEO，1980 年代推动以顾客接触点和前线员工授权为核心的服务管理转型，并在《Moments of Truth》中传播相关思想。",
-    "knowledgePointZh": "未进一步细分的服务关注体验、协调、接触点、时间和人在现场获得帮助的条件。",
-    "reflectionQuestionZh": "一个服务真正被评价的瞬间，是广告出现时，还是问题需要被解决时？",
-    "tagsZh": [
-      "服务",
-      "体验",
-      "管理"
-    ]
-  },
-  "1010": {
-    "titleZh": "美容院里的红门",
-    "summaryZh": "一个女性创业者把个人服务从私密修饰，变成品牌、培训和现代消费体验。",
-    "sceneZh": "20 世纪初的纽约，一个年轻女性在美容院里学习护肤、销售和顾客沟通，发现服务身体也在服务身份。",
-    "storyBodyZh": "她明白顾客来这里不只是买一瓶霜。她们想被认真接待，想学习如何照顾自己，也想进入一种新的城市女性形象。她建立美容院、培训销售人员、统一产品和服务话术，把个人服务组织成可复制的体验系统。这个过程当然也和消费主义、阶层和审美压力纠缠在一起；但它说明个人服务并不是低级边角行业，而是身体、情绪、身份、信任和商业组织相遇的地方。这个人叫 Elizabeth Arden，她建立全球美容品牌和 salon 服务体系，深刻影响现代个人护理和美容服务业。今天许多个人服务也是这样：看似处理外表或小需求，实际常在处理信任、身份、身体边界和被尊重的感觉。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "supportZh": "Elizabeth Arden 20 世纪初在 New York 开设美容院，发展护肤、化妆品销售、培训和红门 salon 品牌体系，成为现代美容产业重要人物。",
-    "knowledgePointZh": "个人服务关注身体、形象、舒适、沟通、身份和贴近日常生活的服务体验。",
-    "reflectionQuestionZh": "当一个服务直接接触身体时，它是否也在接触一个人的自我想象？",
-    "tagsZh": [
-      "个人服务",
-      "美容",
-      "品牌"
-    ]
-  },
-  "1011": {
-    "titleZh": "厨房里的化学课",
-    "summaryZh": "一位化学家把家庭清洁、饮食和通风变成可研究的家政服务知识。",
-    "sceneZh": "19 世纪末的美国，一位女性化学家走进厨房、水槽和餐桌，发现家庭生活里到处都是科学问题。",
-    "storyBodyZh": "她不把家务看成天生会做的女性本能。水质、污水、通风、食物营养、清洁剂、厨房动线和家庭预算，都需要知识和标准。她推动 domestic science 和 home economics，把家庭运行放进教育和公共卫生视野。今天我们会警惕家政知识被用来固定性别分工，但她的工作也提醒我们：一个家是否安全、健康、好用，背后有化学、卫生、营养和管理。这个人叫 Ellen Swallow Richards，她是美国早期女性化学家和 home economics 重要奠基人物之一。今天家政服务也可以被这样重新理解：它不是低声消失的劳动，而是让家庭系统更安全、更健康、更可持续的知识。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Ellen Swallow Richards 是 MIT 首位女性毕业生之一，也是化学家和公共卫生改革者。她推动 domestic science、sanitary chemistry 和 home economics，把家庭生活与科学、卫生和教育连接起来。",
-    "knowledgePointZh": "家政服务关注清洁、整理、照护辅助、家庭运行、营养、安全和生活环境质量。",
-    "reflectionQuestionZh": "一个家变得好用，是因为有人天生会做，还是因为有一整套被忽略的知识？",
-    "tagsZh": [
-      "家政",
-      "家庭科学",
-      "卫生"
-    ]
-  },
-  "1012": {
-    "titleZh": "她把头发护理做成事业",
-    "summaryZh": "一个洗衣女工出身的创业者，让美发美容服务连接技术、尊严和黑人女性经济机会。",
-    "sceneZh": "20 世纪初的美国，一个曾长期为脱发烦恼的女性，开始试验护发产品，并挨家挨户向顾客讲解。",
-    "storyBodyZh": "她知道头发不只是外表，也关系到工作、自尊、种族压力和女性互助。她开发产品、培训销售代理、开办美容学校，让许多黑人女性通过美发和美容服务获得收入与社群地位。今天我们也会讨论当时审美标准与种族政治的复杂性，但她的故事说明，美发与美容服务不是简单“变好看”，而是技术、身体、身份、商业和社会机会交织的行业。这个人叫 Madam C. J. Walker，她建立护发美容企业和培训体系，成为美国黑人女性创业和美容服务史上的标志性人物。今天美发美容服务仍在这条线上：技术贴着身体发生，所以也会贴着尊严、审美压力和经济机会发生。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "supportZh": "Madam C. J. Walker 是美国企业家，发展护发产品、销售网络和美容培训体系，常被称为美国首位白手起家的女性百万富翁之一，对黑人美容产业和女性就业影响深远。",
-    "knowledgePointZh": "美发与美容服务关注形象、身体、审美、技术、沟通和信任。",
-    "reflectionQuestionZh": "一次发型服务，什么时候也在处理尊严、身份和经济机会？",
-    "tagsZh": [
-      "美发",
-      "美容",
-      "创业"
-    ]
-  },
-  "1013": {
-    "titleZh": "厨房像军队一样有秩序",
-    "summaryZh": "一位厨师把豪华厨房重组为分工、菜单和服务节奏的现代餐饮系统。",
-    "sceneZh": "19 世纪末的欧洲酒店厨房里，炉火、锅具、侍者和订单交错，一个厨师发现混乱会毁掉最好的菜。",
-    "storyBodyZh": "他并不只追求菜品精致，也关心厨房怎样在高压下稳定交付。谁负责酱汁，谁负责烤肉，谁负责冷盘，菜单怎样简化，服务怎样按节奏送到餐桌，都需要组织。他把 brigade de cuisine 和现代菜单、酒店餐饮服务结合起来，让餐饮从个人手艺扩展成团队系统。酒店、餐厅与餐饮在这里变得清楚：食物只是体验的一部分，卫生、时间、分工、前后台协作和顾客感受同样决定记忆。这个人叫 Auguste Escoffier，他改革专业厨房组织和现代法餐服务，被视为现代餐饮管理和厨艺体系的重要人物。今天任何餐饮现场都能看到这套系统：客人记住的往往不是一道菜，而是混乱被怎样悄悄整理好。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Auguste Escoffier 是法国厨师和餐饮管理改革者，推广 kitchen brigade system，简化菜单和服务流程，与 César Ritz 等合作塑造现代酒店餐饮服务。",
-    "knowledgePointZh": "酒店、餐厅与餐饮关注接待、食物、流程、卫生、团队分工和体验。",
-    "reflectionQuestionZh": "一次好用餐，哪些部分不是味道，却决定你会不会记住它？",
-    "tagsZh": [
-      "餐饮",
-      "酒店",
-      "厨房组织"
-    ]
-  },
-  "1014": {
-    "titleZh": "冬天室内也能玩的球",
-    "summaryZh": "一个体育教师用两个桃篮和一只球，发明了兼顾规则、身体和公平竞争的新运动。",
-    "sceneZh": "1891 年马萨诸塞的冬天，一个体育教师面对一群精力旺盛却不能总在户外训练的学生。",
-    "storyBodyZh": "他需要一种室内运动，既能消耗体力，又不至于像橄榄球那样冲撞受伤。他把桃篮钉高，用足球传递，写下十三条规则，强调传球、空间、目标和限制身体接触。体育在这里不是随便竞争，而是通过规则设计让身体、团队、公平和安全同时存在。一个好运动并不只是让人赢，还要让人愿意反复练习、合作、遵守边界并在限制中创造。这个人叫 James Naismith，他于 1891 年发明 basketball，使篮球成为全球重要体育项目。今天设计体育活动时，这个原则仍然有用：好的限制不是减少自由，而是让身体、合作和公平能安全地出现。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。桃篮被钉上墙的那一刻，规则也被钉进了运动里：限制冲撞，留下配合，让身体在边界内创造。",
-    "supportZh": "James Naismith 1891 年在 International YMCA Training School 发明 basketball，最初使用桃篮和足球，并写下十三条基本规则，目标是在室内进行较安全的团队运动。",
-    "knowledgePointZh": "体育关注训练、规则、身体表现、团队合作、公平竞争和安全边界。",
-    "reflectionQuestionZh": "一条好规则，是限制了运动，还是让更好的运动成为可能？",
-    "tagsZh": [
-      "体育",
-      "篮球",
-      "规则"
-    ]
-  },
-  "1015": {
-    "titleZh": "一张火车票里的旅行社",
-    "summaryZh": "一次禁酒会旅行让旅游从个人冒险，变成组织路线、价格和体验的服务业。",
-    "sceneZh": "1841 年英国，一个木工出身的传教士组织数百人乘火车去参加集会，必须处理票价、时间和秩序。",
-    "storyBodyZh": "他面对的不是远方风景，而是让一群普通人安全、便宜、有计划地抵达目的地。火车票、团体价格、行程安排、住宿、说明和陪同服务慢慢连成一个新行业。旅行、旅游与休闲在这里不再只是富人的个人游历，而成为被组织出来的体验：路线怎样设计，风险怎样降低，地方文化怎样被介绍，游客自由又怎样依赖别人提前安排。这个人叫 Thomas Cook，他组织早期团体旅行并创办旅行服务企业，成为现代旅游业和旅行社服务的重要先驱。今天旅游服务也在平衡这件事：让人感觉自由，同时用路线、信息、保险和应急安排托住看不见的风险。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。旅行服务最微妙的地方就在这里：它让人走向陌生地方，却必须先把许多陌生风险安排好。",
-    "supportZh": "Thomas Cook 1841 年组织 Leicester 到 Loughborough 的团体火车旅行，后来发展旅行社业务，提供团体游、票务、住宿和旅行安排，被视为现代旅游业先驱之一。",
-    "knowledgePointZh": "旅行、旅游与休闲关注目的地、行程、体验设计、文化接触、安全和服务协调。",
-    "reflectionQuestionZh": "旅行里的自由，为什么常常依赖别人已经设计好的秩序？",
-    "tagsZh": [
-      "旅游",
-      "旅行社",
-      "服务"
-    ]
-  },
-  "1019": {
-    "titleZh": "一个陌生人替他看见标签",
-    "summaryZh": "一款志愿协助服务让个人服务跨过标准分类，进入数字、残障支持和日常小困难之间。",
-    "sceneZh": "21 世纪，一个视障用户在厨房拿起一罐食品，却不确定标签上写的到底是什么。",
-    "storyBodyZh": "传统服务窗口很难覆盖这种小而急的需求：不是医疗，不是旅游，不是家政，也不是普通客服。一个人只需要另一个可靠的人通过手机摄像头看一眼，告诉他颜色、文字、按钮或路线。这样的服务把志愿者、视频通话、无障碍和个人日常支持连接起来，也提醒我们服务价值不一定来自复杂流程，有时来自在正确时刻补上一点人的感知。这个人叫 Hans Jorgen Wiberg，他创立 Be My Eyes，使志愿者通过视频协助视障者处理日常视觉问题，成为未另分类个人服务的现代案例。今天数字服务越多，这类小帮助越重要：技术真正有温度的时候，常常是它补上了一个人刚好缺少的感知。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "supportZh": "Hans Jorgen Wiberg 创立 Be My Eyes，这是一款通过视频连接志愿者和视障用户的应用，用于识别物品、标签、路线等日常视觉任务，是数字无障碍服务的重要案例。",
-    "knowledgePointZh": "未另分类的个人服务收纳改善个人生活但不适合标准服务类别的实践。",
-    "reflectionQuestionZh": "哪一种帮助小到不容易命名，却刚好让一个人能继续独立生活？",
-    "tagsZh": [
-      "个人服务",
-      "无障碍",
-      "数字服务"
-    ]
-  },
-  "1020": {
-    "titleZh": "城市空气、污水和实验室",
-    "summaryZh": "一位卫生学家把公共卫生训练制度化，让卫生服务成为城市和工作场所的专业知识。",
-    "sceneZh": "19 世纪德国城市里，人口密集、污水和传染病让医学无法只待在病床旁。",
-    "storyBodyZh": "他关心空气、水、住房、排污和城市环境，也建立实验和教学体系，让卫生不只是日常清洁习惯，而成为可研究、可训练、可争论的公共专业。他的某些理论后来被修正，特别是在病菌理论发展后；但他推动卫生学进入大学、实验室和城市治理的努力，说明卫生与职业健康服务的基础意义：预防必须发生在疾病出现之前，发生在水、空气、建筑、工作和制度中。这个人叫 Max von Pettenkofer，他建立慕尼黑卫生学研究传统，被视为现代 hygiene 和公共卫生教育的重要先驱之一。今天的卫生服务依然需要这种宽视角：空气、水、垃圾、实验室和制度如果分开处理，风险就会从缝隙里回来。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Max von Pettenkofer 是德国卫生学家，19 世纪在 Munich 推动 hygiene 研究、教学和城市公共卫生改革。虽然其部分疾病理论后来被修正，但他对卫生学制度化有重要影响。",
-    "knowledgePointZh": "未进一步细分的卫生与职业健康服务关注预防、环境、工作场所、清洁和群体健康条件。",
-    "reflectionQuestionZh": "真正的卫生服务，是在你生病后出现，还是在你没生病前就已经工作？",
-    "tagsZh": [
-      "卫生",
-      "公共卫生",
-      "预防"
-    ]
-  },
-  "1021": {
-    "titleZh": "贫民区的排水沟",
-    "summaryZh": "一份关于劳动者卫生的报告，让社区卫生从个人干净转向城市基础设施问题。",
-    "sceneZh": "19 世纪英国工业城市里，一个改革者调查工人居住区，看到污水、拥挤住房和疾病紧紧相连。",
-    "storyBodyZh": "他发现，责怪穷人不爱干净很容易，却忽略了他们生活在怎样的街道、水源和排污条件里。污水横流、垃圾堆积、饮水污染和住房拥挤，让疾病传播成为结构性后果。他的报告推动公共卫生改革，也带着当时阶级眼光和治理控制的问题，需要被批判阅读。但社区卫生的核心已经清楚：干净不是只靠个人习惯，而要靠供水、排水、垃圾处理、住房和公共制度。这个人叫 Edwin Chadwick，他的 1842 年《Report on the Sanitary Condition of the Labouring Population》推动英国公共卫生和城市卫生改革。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Edwin Chadwick 1842 年发表关于英国劳动人口卫生状况的报告，强调排水、供水、垃圾和住房条件对疾病的影响，对 Public Health Act 1848 等公共卫生改革有重要推动作用。",
-    "knowledgePointZh": "社区卫生关注废弃物、水、清洁、公共空间、住房条件和群体健康。",
-    "reflectionQuestionZh": "当一个地方不干净，你会先责怪个人，还是先看系统给了他们什么条件？",
-    "tagsZh": [
-      "社区卫生",
-      "排水",
-      "公共卫生"
-    ]
-  },
-  "1022": {
-    "titleZh": "铅尘落在工人的衣服上",
-    "summaryZh": "一个医生走进工厂，把职业病从个人不幸变成可调查、可预防的工作场所风险。",
-    "sceneZh": "20 世纪初的美国，一位女医生进入铅厂、橡胶厂和油漆车间，询问工人头痛、麻木和中毒症状。",
-    "storyBodyZh": "她没有只在诊室等待病人，而是去看病人工作的地方。毒物在哪里产生，粉尘怎样被吸入，通风是否足够，工人有没有防护，雇主是否隐瞒风险？这些问题让职业健康与安全成为一门现场科学。工作场所的伤害不是“粗心”两个字能解释的，它常常来自材料、设备、节奏、权力和缺乏监管。这个人叫 Alice Hamilton，她开创美国职业医学和工业毒理调查传统，推动工作场所健康与安全改革。今天的职业安全仍要抵抗一句轻飘飘的责怪：如果危险总在同一处重复，问题很可能已经写进流程和权力关系里。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。职业安全最怕把反复出现的伤害说成个人不小心；如果危险总在同一处出现，现场本身就在说话。",
-    "supportZh": "Alice Hamilton 是美国职业医学先驱，研究铅、汞、苯等工业毒物对工人的影响，1919 年成为 Harvard Medical School 首位女性教员之一，对职业健康和工业安全影响深远。",
-    "knowledgePointZh": "职业健康与安全关注工作场所风险、预防、设备、防护、制度和安全行为。",
-    "reflectionQuestionZh": "如果一个工伤反复出现，它是个人失误，还是现场在重复制造危险？",
-    "tagsZh": [
-      "职业健康",
-      "安全",
-      "工业毒理"
-    ]
-  },
-  "1029": {
-    "titleZh": "工厂火灾后的出口门",
-    "summaryZh": "一场灾难让卫生与职业安全边界上的法规、劳动权利和公共责任同时浮现。",
-    "sceneZh": "1911 年纽约 Triangle Shirtwaist Factory 火灾后，一个年轻社会改革者站在悲痛和愤怒之间，追问为什么门会被锁上。",
-    "storyBodyZh": "那场火灾暴露的不只是一个工厂的事故，而是逃生通道、工时、童工、消防检查、雇主责任和政府监管的失败。她后来参与调查和改革，推动工厂安全、最低工资、失业保险等劳动保护制度。未另分类的卫生与职业健康服务常常出现在这种交界处：它不是单一卫生措施，也不是单个安全培训，而是法律、工作现场、公共行政和人的生命价值如何被重新安排。这个人叫 Frances Perkins，她在 Triangle 火灾后推动劳动与安全改革，后来成为美国首位女性内阁部长并参与 New Deal 社会保障制度建设。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Frances Perkins 目睹 1911 年 Triangle Shirtwaist Factory fire 后投入劳动安全改革，后任 Franklin D. Roosevelt 劳工部长，推动 Social Security Act、工时和劳动保护等 New Deal 政策。",
-    "knowledgePointZh": "未另分类的卫生与职业健康服务处理混合型公共卫生、工作安全、法规和现场保护实践。",
-    "reflectionQuestionZh": "一个出口门被锁上时，锁住的是通道，还是整个社会对劳动者生命的想象？",
-    "tagsZh": [
-      "职业安全",
-      "劳动",
-      "法规"
-    ]
-  },
-  "1030": {
-    "titleZh": "警察为什么应该穿制服",
-    "summaryZh": "一个内政改革者把安全服务从临时镇压，推向可识别、可约束的公共警务。",
-    "sceneZh": "19 世纪伦敦街头，城市快速扩张，犯罪、贫困、拥挤和公众恐惧让旧式治安方式越来越不够。",
-    "storyBodyZh": "他要解决的不是单次抓捕，而是一个城市怎样在不变成军营的情况下维持公共秩序。新警察需要可识别的制服、巡逻、纪律、预防原则和公众信任。这个制度也一直伴随权力滥用、阶级控制和监督问题，必须被批判地看；但现代安全服务的一个核心矛盾已经出现：保护公众需要权力，而权力又必须被规则、透明和责任约束。这个人叫 Robert Peel，他创立 London Metropolitan Police，并使现代公共警务原则成为安全服务史上的重要起点。今天谈公共安全时，这个问题仍然没有过时：制服让权力可见，也要求权力被规则、责任和公众信任约束。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "supportZh": "Robert Peel 1829 年推动建立 London Metropolitan Police。Peelian principles 强调预防犯罪、公众合作、有限使用武力和警察责任，虽历史归属和表述复杂，但与现代公共警务传统密切相关。",
-    "knowledgePointZh": "未进一步细分的安全服务关注风险识别、预防、响应、秩序、信任和权力约束。",
-    "reflectionQuestionZh": "一个安全系统怎样既保护人，又不让保护人的权力失去边界？",
-    "tagsZh": [
-      "安全服务",
-      "警务",
-      "公共秩序"
-    ]
-  },
-  "1031": {
-    "titleZh": "胜利之前先计算代价",
-    "summaryZh": "一部古老兵书让军事与国防从勇武叙事，转向战略、信息和避免无谓消耗。",
-    "sceneZh": "古代中国的战乱时代，一个军事思想者看见军队、粮草、地形、间谍和君主情绪如何决定生死。",
-    "storyBodyZh": "他并不把战争写成单纯勇敢。真正的将领要先计算代价，理解地形，保存士气，使用信息，避免被愤怒驱动，也要知道不战而屈人之兵有时高于硬碰硬。军事与国防在这里显出冷静的一面：力量不是全部，组织、补给、情报、时间、心理和政治目标共同决定安全。古代文本不能直接替代现代伦理和国际法，但它提醒我们，防御和战争从来不是单纯武器问题。这个人叫 Sun Tzu，他的《The Art of War》成为军事战略、组织竞争和安全思考史上的经典文本。今天军事与国防的学习也必须保留这种冷静：知道怎样行动重要，知道怎样避免无谓行动同样重要。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。真正的克制不是软弱，而是知道每一次行动都会带来补给、士气、政治和生命的代价。",
-    "supportZh": "Sun Tzu 及《The Art of War》通常被置于中国春秋战国军事思想传统中，强调战略、情报、地形、士气、欺敌和避免无谓战争，对军事与战略思想影响广泛。",
-    "knowledgePointZh": "军事与国防关注安全、组织、战略、训练、资源、情报和风险准备。",
-    "reflectionQuestionZh": "真正的防御只是拥有力量，还是知道什么时候不该使用力量？",
-    "tagsZh": [
-      "军事",
-      "国防",
-      "战略"
-    ]
-  },
-  "1032": {
-    "titleZh": "每一次接触都会留下痕迹",
-    "summaryZh": "一个法医学实验室让保护人身与财产不只靠巡逻，也靠证据和可验证的调查。",
-    "sceneZh": "20 世纪初的法国里昂，一个年轻法医学者在实验室里研究灰尘、纤维、玻璃和指纹。",
-    "storyBodyZh": "他相信犯罪现场不是沉默的。鞋底带走泥土，衣袖留下纤维，玻璃碎片交换微粒，人与物只要接触就会互相留下痕迹。这个思想改变了安全服务：保护人身与财产不只是锁门、巡逻和抓人，也包括保存现场、分析证据、重建事件和让判断经得起法庭检验。证据工作也必须受程序和权利约束，否则技术会变成新的不公。这个人叫 Edmond Locard，他建立 Lyon police laboratory，并提出 Locard's exchange principle，成为现代法医学和犯罪调查的重要人物。今天的调查技术越精密，越需要这条边界：证据能保护人，也必须被程序和权利保护起来。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Edmond Locard 是法国法医学先驱，1910 年建立 Lyon 警方实验室，提出接触会产生物质交换的 Locard's exchange principle，对现代犯罪现场调查和法医学影响深远。",
-    "knowledgePointZh": "人身与财产保护关注风险识别、预防、证据、响应和安全环境设计。",
-    "reflectionQuestionZh": "如果每一次接触都会留下痕迹，安全判断为什么必须同时尊重证据和权利？",
-    "tagsZh": [
-      "安全",
-      "法医学",
-      "证据"
-    ]
-  },
-  "1039": {
-    "titleZh": "罪犯变成了侦探",
-    "summaryZh": "一个身份复杂的人把犯罪经验、调查、档案和私人安保混成新的安全实践。",
-    "sceneZh": "19 世纪巴黎，一个曾多次入狱又熟悉地下世界的人，开始替警方辨认骗术、伪装和犯罪网络。",
-    "storyBodyZh": "他的经历并不适合简单歌颂，也充满道德复杂性。正因为熟悉犯罪现场的语言和习惯，他能从细节里看出伪装，建立档案，使用卧底和线人，把调查从单纯巡逻变成信息工作。后来他创办私人侦探机构，使安全服务出现警务、商业调查、情报和个人委托之间的灰色地带。未另分类的安全服务正需要审慎处理这种边界：有效信息、合法权力和隐私风险总是同时存在。这个人叫 Eugene Francois Vidocq，他从罪犯转为侦探并创办侦探机构，被视为现代侦探和私人调查史上的重要人物。今天许多安全服务仍在类似灰区里工作：经验可能有用，但只有被法律、伦理和监督驯服后，才不会伤到人。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。",
-    "supportZh": "Eugene Francois Vidocq 是法国犯罪者、警方线人和侦探，曾领导 Surete 相关工作并创办私人侦探机构。他长期影响刑侦档案、卧底实践和侦探形象。",
-    "knowledgePointZh": "未另分类的安全服务收纳那些跨越调查、保护、情报、现场支持和非标准风险管理的实践。",
-    "reflectionQuestionZh": "当安全工作依赖灰色经验时，谁来划定有效与越界的边界？",
-    "tagsZh": [
-      "安全服务",
-      "侦探",
-      "调查"
-    ]
-  },
-  "1041": {
-    "titleZh": "地铁线路为什么可以弯成图",
-    "summaryZh": "一张地铁图让运输服务从真实距离，转向乘客能不能迅速做出决定。",
-    "sceneZh": "1930 年代伦敦，一个工程制图员看着复杂地铁线路，发现按真实地理画出的地图让乘客很难读。",
-    "storyBodyZh": "他大胆舍弃精确距离，把线路画成水平、垂直和 45 度角，把站点间距简化，让换乘关系变得清楚。这个图一开始并不符合传统地图直觉，却更符合乘客在运输系统里的真实需要：我在哪，去哪换，下一站怎么走。运输服务在这里不仅是车辆移动，也包括信息设计、时间承诺、可达性和人在压力下的判断。一个系统如果让人看不懂，再准时也会让人迷失。这个人叫 Harry Beck，他设计 London Underground diagram，成为现代交通信息设计和运输服务体验的经典案例。今天的交通系统也一样：真正好用的不只是车会动，而是人在匆忙、陌生和压力下仍能做出清楚选择。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Harry Beck 1931 年设计 London Underground schematic map，使用简化线路、固定角度和非地理比例强调换乘关系。该图成为全球交通线路图设计的经典范式。",
-    "knowledgePointZh": "运输服务关注人和物的移动、换乘、可靠性、信息设计、安全和时间协调。",
-    "reflectionQuestionZh": "一个交通系统真正好用，是因为路短，还是因为人在压力下也能看懂？",
-    "tagsZh": [
-      "运输",
-      "地图",
-      "信息设计"
-    ]
-  },
-  "1088": {
-    "titleZh": "服务蓝图背后的看不见动作",
-    "summaryZh": "一个营销学者把服务拆成前台、后台和证据，让跨学科服务可以被设计和改进。",
-    "sceneZh": "20 世纪 80 年代，一位研究者观察服务现场，发现顾客看到的只是整个系统露出水面的部分。",
-    "storyBodyZh": "一次酒店入住、银行开户或维修预约，看起来是几句对话，背后却有表格、系统、培训、库存、授权、等待时间和失败补救。她提出 service blueprint，把顾客行为、前台接触、后台流程和有形证据画在一起。这样，服务不再只是态度好不好，而成为可以分析、设计和跨部门协调的系统。服务跨学科课程也由此清楚：运营、心理、空间、信息、人员和技术必须同时工作。这个人叫 G. Lynn Shostack，她提出 service blueprinting，成为服务设计和服务营销中的重要方法来源。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是态度好不好，而是在训练人把混乱的现场整理成能被人顺利使用的经验。如果只评价前台那一句话，很多服务失败就会被误判；真正要看的，是前台背后有没有足够清楚的流程在托住它。",
-    "supportZh": "G. Lynn Shostack 1980 年代提出 service blueprinting，用图示方式呈现顾客接触、前台、后台和支持流程，对服务设计、服务营销和运营管理影响深远。",
-    "knowledgePointZh": "服务跨学科课程连接运营、体验、人员、空间、信息、技术和质量管理。",
-    "reflectionQuestionZh": "一次服务失败时，问题真的在前台那个人身上，还是在蓝图里早就埋好了？",
-    "tagsZh": [
-      "服务设计",
-      "蓝图",
-      "跨学科"
-    ]
-  },
-  "1099": {
-    "titleZh": "电话那头先不急着劝",
-    "summaryZh": "一个倾听热线说明，有些服务最重要的动作，是在正式分类之前先接住人。",
-    "sceneZh": "1950 年代伦敦，一个牧师在报纸上看到年轻人因孤立和羞耻而走向绝望，开始想象一条任何人都能拨打的电话线。",
-    "storyBodyZh": "他发现，许多人并不是一开始就能走进医院、警局、福利机构或教堂。他们可能只需要一个不审判、不急着训诫、愿意在深夜听完的人。于是志愿者被训练去接电话，重点不是立刻给答案，而是让来电者在最危险、最孤单的时刻不再独自承受。这样的服务很难归类：它不是普通医疗，也不是正式咨询，不是安保，也不是家政；但它在许多系统之间守住了一条细小通道。未另分类的服务正需要容纳这种看似无名却极其关键的支持。这个人叫 Chad Varah，他创立 Samaritans，让危机倾听热线成为现代志愿服务和情绪支持服务的重要形式。这让今天的车站、餐厅、活动入口和服务台重新变得具体：人经历的是一整条路径，不只是某个窗口。",
-    "supportZh": "Chad Varah 于 1953 年在 London 创立 Samaritans，最初提供面向自杀危机和深度孤独者的电话倾听服务。Samaritans 后来发展为重要的志愿情绪支持组织。",
-    "knowledgePointZh": "未另分类的服务包括那些跨越医疗、咨询、社区、志愿和即时支持的实践角色。",
-    "reflectionQuestionZh": "一种服务如果只是先听你说完，它为什么仍然可能改变一个夜晚的结局？",
-    "tagsZh": [
-      "未分类服务",
-      "倾听",
-      "志愿服务"
-    ]
-  },
-  "0300": {
-    "titleZh": "街区地图上的贫困颜色",
-    "summaryZh": "一张街区地图让社会科学、新闻与信息从抽象议题变成可被公共讨论的证据。",
-    "sceneZh": "19 世纪末的芝加哥，一个年轻女性每天走过移民家庭、工厂、学校和拥挤出租屋之间的街道。",
-    "storyBodyZh": "她不是从安静书房里开始理解社会的。她住进一个工人和移民聚居的街区，听见母亲为孩子找托管，工人为工资争论，年轻人想学英语，病人不知道去哪里求助。问题看起来分散：贫困、语言、教育、卫生、劳动、住房、信息不通。她和同伴开始做调查、画地图、办课程、写报告，把街坊的生活经验变成城市能看见的公共知识。社会科学、新闻与信息在这里交汇：不是替别人说故事，而是把隐藏在日常里的结构、数据和声音放到同一张桌面上。这个人叫 Jane Addams，她创办 Hull House，并用社会调查、公共写作和社区实践推动美国社会科学、社会改革和公共信息工作的发展。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "Jane Addams 1889 年在芝加哥创办 Hull House。Hull House Maps and Papers 结合街区调查、地图和社会分析，记录移民社区、劳动、工资和居住情况，是早期社会调查和公共改革的重要案例。",
-    "knowledgePointZh": "未进一步细分的社会科学、新闻与信息关注社会现实如何被观察、记录、解释和传达给公共生活。",
-    "reflectionQuestionZh": "如果把你所在街区的一种困难画成地图，谁的生活会第一次被看见？",
-    "tagsZh": [
-      "社会调查",
-      "公共信息",
-      "社区"
-    ]
-  },
-  "0310": {
-    "titleZh": "王朝为什么会衰弱",
-    "summaryZh": "一个在动荡时代观察部落、城市和政权的人，试着把社会行为写成有规律的历史。",
-    "sceneZh": "14 世纪北非，一个年轻官员在宫廷、部落营地和监狱之间辗转，亲眼看见权力如何上升又崩塌。",
-    "storyBodyZh": "他的人生并不安稳，家族经历瘟疫，仕途几次卷入政治风浪。他开始怀疑，历史书里只记谁胜谁败是不够的。为什么一些群体能团结起来，为什么进入富裕城市后又慢慢松散，为什么税收、奢侈、教育、地理和共同体精神会一起改变政权命运？他把亲身见过的部落联盟、城市官僚和王朝循环放在一起分析，试着找出社会行为背后的力量。社会与行为科学的雏形就在这种追问里出现：人不是孤立行动，群体的凝聚、制度和环境会共同塑造历史。这个人叫 Ibn Khaldun，他在《Muqaddimah》中提出关于社会组织、王朝循环和 asabiyyah 的分析，被视为社会科学思想的重要先驱之一。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "Ibn Khaldun 于 14 世纪写作《Muqaddimah》，讨论历史方法、社会凝聚、政权兴衰、经济、教育和地理环境等主题，常被后世视为社会学、史学和社会科学的早期重要思想源头。",
-    "knowledgePointZh": "社会与行为科学研究人的选择、群体、制度、文化和环境如何共同塑造行动。",
-    "reflectionQuestionZh": "当一个团队变弱时，你会只责怪个人，还是追问共同体的结构发生了什么？",
-    "tagsZh": [
-      "社会行为",
-      "历史规律",
-      "群体"
-    ]
-  },
-  "0311": {
-    "titleZh": "那枚小小的别针",
-    "summaryZh": "一枚别针让经济学从抽象财富，落到分工、价格和陌生人的合作。",
-    "sceneZh": "18 世纪的苏格兰，一个常在街上散步的道德哲学教授，对商店、工坊和港口里的普通交易越来越着迷。",
-    "storyBodyZh": "他并不是坐在账房里只想着利润的人。可他总觉得，面包为什么会到餐桌上，工资为什么会这样定，一件小商品为什么能卖到远方，这些问题并不只是商人的私事。他在书里写下一个很不起眼的例子：一枚别针。如果一个人从拉铁丝、切断、磨尖到装盒全都自己做，产量很有限；如果许多人把工作拆开，各做一小步，速度会突然变得惊人。这个例子后来常被记住，因为它让人看见，财富不是凭空出现的，也不是单靠某个聪明人创造的。它来自分工、工具、市场大小、价格信号，以及许多陌生人之间并不亲密却持续发生的合作。这个人叫 Adam Smith，他在 1776 年出版《The Wealth of Nations》，成为现代经济学的重要奠基人物之一。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "Adam Smith 曾在 Glasgow 教授道德哲学；1776 年出版《The Wealth of Nations》。书中著名的别针制造例子用来说明分工如何提高生产力，是古典经济学的重要起点之一。",
-    "knowledgePointZh": "经济学研究稀缺、分工、价格、激励、交换和资源如何在社会中被安排。",
-    "reflectionQuestionZh": "当你看到一件便宜小物时，会不会想到它背后有多少陌生人的合作？",
-    "tagsZh": [
-      "经济学",
-      "分工",
-      "市场"
-    ]
-  },
-  "0312": {
-    "titleZh": "镇会里的民主细节",
-    "summaryZh": "一个外国观察者在美国小镇会议里看见，政治不只是选举，也是不停练习公共生活。",
-    "sceneZh": "1830 年代的美国，一个年轻法国贵族坐在地方会议旁边，认真听普通居民怎样争论道路、学校和税。",
-    "storyBodyZh": "他本来是来考察监狱制度，却很快被更小的场景吸引。人们在教堂、报纸、协会和镇会里组织自己，争吵也合作；他们对政府保持警惕，却又愿意为了公共事务花时间。他看到民主不是一句口号，而是一整套习惯：结社、发言、妥协、地方自治、对多数权力的担忧，以及普通人学习公共判断的笨拙过程。政治科学与公民学在这里变得具体，因为制度不是只写在宪法上，也活在公民如何参加会议、读新闻、组织协会和约束权力里。这个人叫 Alexis de Tocqueville，他在《Democracy in America》中分析美国民主、结社生活和多数暴政问题，成为政治科学与公民研究的重要经典。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "Alexis de Tocqueville 1831 年赴美国考察监狱制度，随后写成《Democracy in America》。该书分析地方自治、结社、民主习惯、平等和多数暴政等主题。",
-    "knowledgePointZh": "政治科学与公民学关注公共决策、权力、制度、参与、权利和责任如何组织共同生活。",
-    "reflectionQuestionZh": "如果民主不是只在投票日发生，你今天在哪个小地方练习过公共判断？",
-    "tagsZh": [
-      "政治科学",
-      "公民",
-      "民主"
-    ]
-  },
-  "0313": {
-    "titleZh": "实验室里的节拍器",
-    "summaryZh": "一个小小节拍器让心理学从哲学沉思走向可被训练和测量的实验。",
-    "sceneZh": "1879 年的莱比锡，一间房里有计时器、节拍器、反应键和一群被要求仔细报告经验的学生。",
-    "storyBodyZh": "那位教师原本受过医学和生理学训练，也熟悉哲学问题。他关心意识，但不满足于只在书本里争论心灵是什么。他让学生听声音、看光点、按键、记录反应时间，并练习把自己的感觉描述得尽量准确。今天看来，这些方法有局限，也和现代心理学差距很大；但关键转向已经发生：心理活动可以进入实验室，可以被设计任务、记录时间、比较差异，也可以被看作身体和经验共同发生的过程。心理学不再只是关于灵魂的抽象谈论，而开始成为研究注意、感觉、反应和意识的经验科学。这个人叫 Wilhelm Wundt，他在莱比锡建立实验心理学实验室，被广泛视为现代实验心理学的重要奠基人。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "Wilhelm Wundt 1879 年在 Leipzig 建立实验心理学实验室，使用反应时、感觉、注意和内省训练等方法推动心理学从哲学领域走向实验研究。",
-    "knowledgePointZh": "心理学研究行为、情绪、认知、发展和人与环境的互动，也研究人的经验如何被观察和测量。",
-    "reflectionQuestionZh": "你以为只属于内心的一个反应，能不能被时间、情境和身体一起解释？",
-    "tagsZh": [
-      "心理学",
-      "实验",
-      "注意"
-    ]
-  },
-  "0314": {
-    "titleZh": "费城街区的一户户人家",
-    "summaryZh": "一项城市调查让社会学看见，偏见不能替代挨家挨户的证据。",
-    "sceneZh": "19 世纪末的费城，一个年轻学者拿着表格和笔，走进被许多人用刻板印象谈论的黑人社区。",
-    "storyBodyZh": "他知道，如果只听报纸和政客的说法，这个社区会被简化成问题本身。于是他做了一件慢事：访问家庭、记录职业、收入、教育、住房、迁徙和邻里关系，把地图、统计和生活叙述放在一起。他不是把人当成数字，而是用数字抵抗懒惰的偏见；也不是把贫困归咎于某个群体，而是追问工作机会、歧视、居住条件和城市制度如何制造后果。社会学与文化研究在这里有了锋利的现实感：文化和社会结构不是空词，它们会落到哪条街、哪份工作、哪间屋子和哪一次被拒绝的机会里。这个人叫 W. E. B. Du Bois，他的《The Philadelphia Negro》成为美国城市社会学、实证社会研究和种族研究的重要经典。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "W. E. B. Du Bois 1899 年出版《The Philadelphia Negro》，基于对费城第七区黑人社区的详细调查，结合访谈、统计、地图和社会分析，是美国城市社会学的重要早期作品。",
-    "knowledgePointZh": "社会学与文化研究关注规范、身份、群体、文化差异和社会结构如何塑造人的机会与生活。",
-    "reflectionQuestionZh": "你对一个群体的判断里，有多少来自证据，又有多少只是被反复听来的说法？",
-    "tagsZh": [
-      "社会学",
-      "城市调查",
-      "文化"
-    ]
-  },
-  "0319": {
-    "titleZh": "孩子们的食物地图",
-    "summaryZh": "一个关于儿童营养的项目说明，有些行为问题必须同时看家庭、学校、社区和政策。",
-    "sceneZh": "1930 年代的美国南方，一位研究者走进学校和家庭，发现孩子的午餐盒里藏着比营养更多的社会线索。",
-    "storyBodyZh": "她受过心理学和人类学训练，却越来越不愿把人的行为拆成孤立变量。孩子吃什么，不只取决于母亲是否知道营养，也取决于收入、种族隔离、学校制度、地方食物习惯、农场生产和政府项目。她做访谈、观察餐桌、记录家庭安排，也研究政策怎样进入厨房。这个工作很难只归入心理学、社会学、教育或公共卫生，因为它关心的是行为在真实社会生态中如何发生。未另分类的社会与行为科学正需要这样的眼睛：当问题横跨个人、家庭、机构和文化时，分类要服务理解，而不是挡住理解。这个人叫 Margaret Mead，她把人类学、儿童发展、食物习惯和社会政策连接起来，影响了社会行为研究对文化和日常生活的理解。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "Margaret Mead 是美国人类学家，研究文化、儿童发展、性别、教育和日常生活实践。她参与过关于食物习惯、营养和社会行为的研究与公共讨论，把社会与行为科学的问题意识带进日常生活。",
-    "knowledgePointZh": "未另分类的社会与行为科学处理那些跨越心理、文化、家庭、制度和政策的复杂行为现象。",
-    "reflectionQuestionZh": "一个看似个人习惯的问题，背后可能有多少层社会条件在一起行动？",
-    "tagsZh": [
-      "行为科学",
-      "文化",
-      "日常生活"
-    ]
-  },
-  "0320": {
-    "titleZh": "世界知识的抽屉",
-    "summaryZh": "一座纸卡片构成的知识宫殿，让新闻与信息不只是报道，也包括组织和检索世界。",
-    "sceneZh": "19 世纪末的布鲁塞尔，一个年轻律师坐在堆满纸卡片的房间里，想象全世界的知识都能被找到。",
-    "storyBodyZh": "他关心的不是某一条新闻，而是人类怎样保存和共享所有已经写下来的东西。书、论文、报告、图片、剪报、统计表，如果不能被分类、编号、引用和检索，就像散在地上的碎片。他和同伴设计通用十进分类法，建立庞大的卡片目录，试图让任何地方的人都能提出问题并获得相关资料。这个梦想有时代局限，也带着欧洲中心的阴影，但它抓住了信息工作的核心：公共知识不是自然流动的，它需要索引、标准、媒介、机构和持续维护。这个人叫 Paul Otlet，他创建 Mundaneum 并推动文献学、知识组织和信息科学早期发展，被后世视为现代信息组织思想的重要先驱之一。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "Paul Otlet 与 Henri La Fontaine 创建 Mundaneum，并发展 Universal Decimal Classification。Otlet 的文献组织、卡片索引和全球知识网络设想，被视为现代信息科学和知识组织史的重要源头。",
-    "knowledgePointZh": "新闻与信息领域关注报道、保存、检索、组织和传播，让公共知识能够被找到、核实和使用。",
-    "reflectionQuestionZh": "如果一条重要信息无法被找到，它还算真正进入公共生活了吗？",
-    "tagsZh": [
-      "信息组织",
-      "文献",
-      "公共知识"
-    ]
-  },
-  "0321": {
-    "titleZh": "她查每一个名字",
-    "summaryZh": "一个记者对暴力名单的逐项核实，让报道成为对公共谎言的抵抗。",
-    "sceneZh": "19 世纪末的美国南方，一个年轻女教师兼报人听说朋友被私刑杀害，愤怒之外先做了一件慢事：查证。",
-    "storyBodyZh": "她没有满足于当时白人报纸常用的说法，也没有把恐惧写成空泛控诉。她收集报纸剪报，核对姓名、地点和借口，比较案件，追问所谓“罪名”怎样被制造出来为暴力辩护。她写文章、发表小册子、演讲，也因此遭到威胁，被迫离开原来的城市。新闻与报道在她手里不是中立地重复权力话语，而是在证据、勇气和公共责任之间建立联系。真正的记者工作，有时就是在多数人已经接受谎言的时候，仍然逐条核对事实。这个人叫 Ida B. Wells，她以反私刑调查报道和公共倡议成为美国调查新闻、民权运动和新闻责任史上的重要人物。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "Ida B. Wells 是美国记者、教育者和民权活动家。1890 年代她发表反私刑调查文章和小册子，如 Southern Horrors，通过收集案件、核对报道和公开演讲揭露私刑暴力。",
-    "knowledgePointZh": "新闻与报道关注事实核查、采访、证据、叙事、公共信息和对权力的责任。",
-    "reflectionQuestionZh": "当一个社会已经习惯某种说法时，谁还愿意逐条核对它？",
-    "tagsZh": [
-      "调查报道",
-      "事实核查",
-      "公共责任"
-    ]
-  },
-  "0322": {
-    "titleZh": "每本书都该找到它的读者",
-    "summaryZh": "一位图书馆员把图书馆从藏书仓库重新想象成会主动连接人的公共系统。",
-    "sceneZh": "20 世纪 20 年代的印度，一个年轻数学教师转到图书馆工作，发现书架整齐并不等于知识真正被使用。",
-    "storyBodyZh": "他看到很多图书馆像安静仓库，书被保护得很好，却不一定抵达需要它的人。数学训练让他喜欢秩序，但图书馆现场让他明白，秩序必须服务读者。他提出几条朴素却深刻的原则：书是为了使用的；每个读者有他的书；每本书有它的读者；节省读者时间；图书馆是生长的有机体。这些话听起来温和，其实改变了信息工作的重心：编目、分类、借阅、开放时间和馆员服务，都不只是内部技术，而是让社会记忆和个人问题相遇的方式。这个人叫 S. R. Ranganathan，他提出 Five Laws of Library Science，并发展 Colon Classification，成为图书馆与信息科学的重要奠基人物之一。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "S. R. Ranganathan 是印度图书馆学家，1931 年出版《The Five Laws of Library Science》，并发展 Colon Classification。他的思想强调读者、使用、分类和图书馆作为生长系统。",
-    "knowledgePointZh": "图书馆、信息与档案研究关注信息组织、保存、检索、可达性和长期公共记忆。",
-    "reflectionQuestionZh": "一个系统是为了保存资料，还是为了让需要资料的人及时找到它？",
-    "tagsZh": [
-      "图书馆学",
-      "信息检索",
-      "档案"
-    ]
-  },
-  "0329": {
-    "titleZh": "危机地图上的第一条短信",
-    "summaryZh": "一次临时搭起的信息平台说明，公共信息有时会出现在新闻、技术和社区行动之间。",
-    "sceneZh": "2007 年肯尼亚选举后，街头暴力和传言同时扩散，一个年轻律师在网上写下想法：能不能让人们报告身边发生的事？",
-    "storyBodyZh": "她看到的问题不是传统报纸能独自解决的。事件分散，消息混乱，很多人有手机却没有安全渠道把地点、危险和求助信息送到公共视野。于是开发者、志愿者和公民一起搭起平台，把短信、网页报告和地图连起来。它不等同于新闻社，也不只是技术产品，更不是政府档案；它在危机中把零散目击转为可视化信息，同时也暴露出核实、偏差和安全的难题。未另分类的新闻与信息正存在于这种边界地带：当现实太快、太分散、太危险，公共知识需要新的容器。这个人叫 Ory Okolloh，她提出并推动 Ushahidi 的早期构想，使众包危机地图成为新闻、信息技术和公民行动交汇的重要案例。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "Ushahidi 源于 2007-2008 年肯尼亚选举后暴力事件中的众包报告与地图项目。Ory Okolloh 是早期关键发起者之一，平台后来被用于多种危机、选举和灾害信息收集场景。",
-    "knowledgePointZh": "未另分类的新闻与信息关注那些不完全属于传统媒体、档案或标准信息系统的新型公共信息实践。",
-    "reflectionQuestionZh": "在混乱时刻，怎样的信息既能快速出现，又不放弃核实和保护人的责任？",
-    "tagsZh": [
-      "众包信息",
-      "危机地图",
-      "公共信息"
-    ]
-  },
-  "0388": {
-    "titleZh": "水泵周围的黑点",
-    "summaryZh": "一张疾病地图把社会调查、数据、地方访谈和公共信息放进同一个判断。",
-    "sceneZh": "1854 年伦敦 Soho 的街道上，霍乱病例不断增加，一位医生拿着地址和地图追踪死亡的位置。",
-    "storyBodyZh": "当时许多人仍相信坏空气是主要原因。他却把注意力放到人喝了什么水、住在哪里、谁离开、谁留下，以及哪些看似例外其实有共同解释。他不是一个人完成全部调查；当地牧师和居民提供了关键访问线索。病例被标到地图上后，Broad Street 水泵周围的黑点越来越密。这个判断既是医学问题，也是社会信息问题：数据要来自街道，访谈要校正地图，地图又要说服公共机构采取行动。跨学科的社会科学、新闻与信息在这里很清楚：证据要能穿过学科边界，才可能改变一个城市的决定。这个人叫 John Snow，他通过 Broad Street 霍乱调查和地图分析推动了流行病学、公共卫生和数据可视化的经典实践。所以它不只是关于社会的大词，而是在训练人判断信息从哪里来、谁被听见、谁被漏掉。",
-    "supportZh": "John Snow 在 1854 年伦敦 Soho 霍乱暴发中分析病例分布和饮水来源，并与 Henry Whitehead 等当地调查结合，Broad Street 水泵案例成为流行病学、公共卫生地图和证据决策的经典事件。",
-    "knowledgePointZh": "社会科学、新闻与信息的跨学科课程把社会调查、数据、地图、访谈和公共传播连接起来。",
-    "reflectionQuestionZh": "一个公共问题什么时候需要地图、访谈和行动同时出现？",
-    "tagsZh": [
-      "跨学科",
-      "数据地图",
-      "公共卫生"
-    ]
-  },
-  "0399": {
-    "titleZh": "渔民为什么没有把湖耗尽",
-    "summaryZh": "一个长期观察共同资源的人发现，真实社区常常比简单理论更会发明规则。",
-    "sceneZh": "20 世纪后半叶，一个研究者读到许多关于森林、灌溉渠和渔场的案例，发现它们并不总按课本预言崩坏。",
-    "storyBodyZh": "流行说法常把公共资源讲成两种结局：要么被市场私有化，要么由国家统一管理，否则人人都会多拿一点直到系统崩溃。她不满足于这个太整齐的故事。她和同伴比较世界各地的灌溉社群、渔业、牧场和森林，发现有些社区会自己制定边界、监测、惩罚、冲突解决和分层规则。它们不是完美乌托邦，也会失败，但它们证明社会现实比二分法复杂。未另分类的社会科学、新闻与信息需要这种耐心：有些制度知识藏在地方规则、口头协议和长期观察里，不一定属于单一学科。这个人叫 Elinor Ostrom，她通过共同池资源研究和制度分析获得诺贝尔经济学奖，改变了人们对集体治理的理解。这让今天的新闻、数据和公共讨论重新变得具体：事实要被收集，也要被组织、解释，并让被忽略的人有机会被看见。",
-    "supportZh": "Elinor Ostrom 研究 common-pool resources 和制度治理，1990 年出版《Governing the Commons》。她通过大量案例说明社区可通过规则、监测和协商管理共享资源，2009 年获诺贝尔经济学奖。",
-    "knowledgePointZh": "未另分类的社会科学、新闻与信息收纳那些跨越制度、行为、地方知识和公共信息的复杂社会现象。",
-    "reflectionQuestionZh": "你身边哪一套非正式规则，其实比外人想象得更精密？",
-    "tagsZh": [
-      "共同资源",
-      "制度",
-      "地方知识"
-    ]
-  },
-  "0400": {
-    "titleZh": "第一所商学院的疑问",
-    "summaryZh": "一个实业家把商业教育从家族经验和学徒习惯，推向大学里的系统训练。",
-    "sceneZh": "19 世纪后期的费城，一个在工业和金融世界工作多年的男人，越来越担心商业只靠机灵和家传经验是不够的。",
-    "storyBodyZh": "他见过铁路、制造、银行和贸易如何改变美国，也见过市场扩张带来的混乱。账目、合同、组织、法律、货币、运输和公共责任纠缠在一起，年轻人却常常只能靠店铺学徒或家族关系慢慢摸索。他提出一个当时并不自然的想法：商业也应该进入大学，被系统研究和训练。商业、管理与法律在这里并不是赚钱技巧，而是一套关于组织如何行动、承担责任、处理风险和遵守规则的知识。后来商学院有过许多争议，也不断被重新批判，但这个起点说明，现代商业已经复杂到需要制度化学习。这个人叫 Joseph Wharton，他资助建立 University of Pennsylvania 的 Wharton School，使商业教育成为现代大学体系中的重要领域之一。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Joseph Wharton 是美国实业家和慈善家，1881 年资助建立 University of Pennsylvania 的 Wharton School，通常被视为世界最早的大学商学院之一。",
-    "knowledgePointZh": "未进一步细分的商业、管理与法律关注组织、市场、制度、责任和规则如何共同塑造经济生活。",
-    "reflectionQuestionZh": "当一个行业越来越复杂，哪些经验必须从个人诀窍变成公开训练？",
-    "tagsZh": [
-      "商业教育",
-      "组织",
-      "规则"
-    ]
-  },
-  "0410": {
-    "titleZh": "公司不是一台机器",
-    "summaryZh": "一次对大企业的长期观察，让管理学开始把组织看成由人、目标和责任组成的社会机构。",
-    "sceneZh": "20 世纪中期，一个年轻管理思想者走进大型汽车公司，发现真正难的不是画组织图，而是理解组织为什么行动。",
-    "storyBodyZh": "他不是工程师出身，也不是只看财务报表的人。他关心一个更朴素的问题：当公司越来越大，谁在决定目标？经理人的责任是什么？员工是不是只是一颗螺丝？顾客、社会和长期生存又放在哪里？他观察通用汽车这样的组织，发现管理不是命令链条那么简单，而是让知识、权责、绩效、创新和人的尊严保持可工作的关系。商业与行政在这里变成一门关于“组织如何有目的地行动”的学问。它既要看数字，也要看人；既要看效率，也要看责任。这个人叫 Peter Drucker，他通过《Concept of the Corporation》等作品奠定现代管理学的重要语言，被称为现代管理思想的重要奠基人之一。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "supportZh": "Peter Drucker 1946 年出版《Concept of the Corporation》，基于对 General Motors 的研究，讨论大企业、分权、经理责任和组织目的。其后作品深刻影响现代管理学和组织实践。",
-    "knowledgePointZh": "商业与行政研究组织、流程、责任、协调、绩效和决策如何让集体工作可持续运转。",
-    "reflectionQuestionZh": "一个组织如果只追效率，却说不清自己的责任，会在哪些地方开始失灵？",
-    "tagsZh": [
-      "管理学",
-      "组织",
-      "行政"
-    ]
-  },
-  "0411": {
-    "titleZh": "商人账本里的两边",
-    "summaryZh": "一本算术书里的记账章节，让交易从记忆和信任走向可检查的系统。",
-    "sceneZh": "文艺复兴时期的意大利，一个修士兼数学教师看到商人的账本里，货物、债务和现金总在流动。",
-    "storyBodyZh": "城市贸易越来越复杂，单靠脑子记住谁欠谁、货从哪里来、钱到哪里去，已经很危险。他把商人实际使用的复式记账方法写进书里，说明每笔交易都要从两个方向进入账本：一边记录来源，一边记录去向。这个方法不是让商业变得道德完美，却让错误、欺骗、成本和责任更容易被发现。会计与税务的核心由此显露：数字不是单纯记录财富，而是在社会中建立可解释、可核对、可承担责任的证据。这个人叫 Luca Pacioli，他在 1494 年《Summa de arithmetica》中系统介绍复式记账，被后世称为会计学的重要奠基人物之一。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "supportZh": "Luca Pacioli 1494 年出版《Summa de arithmetica, geometria, proportioni et proportionalita》，其中介绍威尼斯商人使用的复式记账方法，对现代会计史影响深远。",
-    "knowledgePointZh": "会计与税务让收入、成本、资产、负债、税务和责任变得可记录、可解释、可检查。",
-    "reflectionQuestionZh": "当一笔钱进入账本两边，它是不是也进入了责任之中？",
-    "tagsZh": [
-      "会计",
-      "复式记账",
-      "责任"
-    ]
-  },
-  "0412": {
-    "titleZh": "死亡表里的保险问题",
-    "summaryZh": "一位天文学家整理城市死亡记录，让风险、时间和金钱第一次被更可靠地放在同一张表里。",
-    "sceneZh": "17 世纪末，一个习惯计算彗星轨道的人，开始认真阅读一座城市的出生和死亡记录。",
-    "storyBodyZh": "他关心的不是个体命运能不能被预测，而是许多人的寿命放在一起，会不会呈现可用于公共判断的规律。年金和保险长期依赖粗略估计，价格常常不公平。于是他整理 Breslau 的年龄与死亡数据，计算不同年龄的人还能活多久的概率。这个工作让金融、银行与保险中的核心问题变得清楚：钱不只在空间里流动，也在时间和风险里流动。保险不是消灭不确定性，而是用大量记录、概率和合同把不确定性分担开来。这个人叫 Edmond Halley，他制作的生命表成为精算科学和人寿保险定价史上的重要早期成果。今天保险、养老金和公共预算仍在面对同一件事：没有人能预知个人命运，但群体数据会改变社会分担风险的方式。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Edmond Halley 1693 年根据 Breslau 出生与死亡记录发表生命表研究，用于估算不同年龄的死亡概率和年金价格，被视为精算科学和保险数学的重要早期成果。",
-    "knowledgePointZh": "金融、银行与保险研究时间、风险、信用、资金流动和保护机制如何影响选择。",
-    "reflectionQuestionZh": "你买一份保险时，真正买的是钱、时间，还是对不确定性的共同分担？",
-    "tagsZh": [
-      "金融",
-      "保险",
-      "风险"
-    ]
-  },
-  "0413": {
-    "titleZh": "她不想让工人只服从命令",
-    "summaryZh": "一个在社区中心和工厂之间思考的人，把管理从控制他人转向共同解决问题。",
-    "sceneZh": "20 世纪初的波士顿，一个女性社会思想者在社区工作、企业会议和公共事务之间来回走动。",
-    "storyBodyZh": "她看到冲突常被处理成输赢：老板命令，工人服从；部门争资源，谁声音大谁赢。可她越来越相信，真正的管理不该只是压制冲突，而要把不同经验组织起来，让问题本身把人带向新的解决方案。她提出“power with”而不是“power over”，强调协调、参与、情境判断和共同责任。她的思想一度不如科学管理那样显眼，却在后来影响组织行为、领导力和协作管理。管理与行政在她这里不是冷冰冰的流程，而是把人的经验、权力和目标重新安排到可合作的结构中。这个人叫 Mary Parker Follett，她以关于协作、权力和冲突整合的思想成为现代管理学的重要先驱之一。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "supportZh": "Mary Parker Follett 是 20 世纪初管理和社会思想家，提出 power with、integration、情境领导等思想，对组织行为、管理理论和协作实践产生长期影响。",
-    "knowledgePointZh": "管理与行政关注组织、流程、责任、协调、执行和人在共同目标中的合作方式。",
-    "reflectionQuestionZh": "面对冲突时，你是在寻找谁赢，还是寻找问题本身要求大家怎样改变？",
-    "tagsZh": [
-      "管理",
-      "协作",
-      "组织行为"
-    ]
-  },
-  "0414": {
-    "titleZh": "牙膏广告里的一个小习惯",
-    "summaryZh": "一次关于牙膏的推广，让营销从夸张口号转向测试、心理触发和可重复行动。",
-    "sceneZh": "20 世纪初的美国，一个广告人盯着报纸版面和销售数字，越来越不相信只靠漂亮句子就能卖出东西。",
-    "storyBodyZh": "他把广告当作可以测试的实验，而不是纯粹灵感。他关心标题能不能让人停下，优惠券能不能追踪回应，产品承诺是不是能进入人的日常习惯。推广牙膏时，广告不只是说产品好，而是抓住“牙齿表面那层膜”的感觉，让人每天用舌头确认自己是否需要清洁。这个方法后来也必须被批判，因为营销可以帮助人理解需求，也可以制造焦虑和欲望。但它确实让市场营销与广告的学科特征显出来：注意力、证据、行为触发、信任和伦理边界总是缠在一起。这个人叫 Claude Hopkins，他以《Scientific Advertising》和 Pepsodent 推广案例影响了现代广告测试、直效营销和消费行为传播。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Claude C. Hopkins 是美国广告人，1923 年出版《Scientific Advertising》，强调测试、优惠券、回应追踪和具体卖点。Pepsodent 牙膏推广常被作为习惯形成与广告策略的经典案例讨论。",
-    "knowledgePointZh": "市场营销与广告研究需求、定位、传播、注意力、行为、信任和商业伦理。",
-    "reflectionQuestionZh": "一个广告是在帮你看见真实需求，还是在替你制造一个新焦虑？",
-    "tagsZh": [
-      "营销",
-      "广告",
-      "习惯"
-    ]
-  },
-  "0415": {
-    "titleZh": "键盘把办公室重新排了一遍",
-    "summaryZh": "一台打字机让办公事务从手写书信变成速度、格式、复制和职业角色的系统。",
-    "sceneZh": "19 世纪美国，一个报纸编辑兼发明者反复调试一台会卡键的机器，想让文字能更快落到纸上。",
-    "storyBodyZh": "他面对的不是浪漫的文学问题，而是办公室里极普通的痛点：信件太多，手写难读，副本难做，速度跟不上商业往来。早期机器笨重又不稳定，键位也不断调整。可一旦打字机进入办公室，文件格式、通信速度、记录保存、秘书职业和性别化劳动分工都被改变了。秘书与办公事务不是“杂活”的集合，而是组织记忆、沟通节奏和文件可靠性的基础设施。每一份议程、备忘录、合同副本和来往信件，都在帮助组织不用只靠个人记忆运转。这个人叫 Christopher Latham Sholes，他参与发明并推广早期实用打字机，长期影响现代办公室文书和秘书工作。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。从那以后，办公室里的速度变快了，但人们也不得不重新安排谁记录、谁校对、谁保存组织记忆。",
-    "supportZh": "Christopher Latham Sholes 是美国发明者和报人，参与发明 Sholes and Glidden typewriter，并发展 QWERTY 键盘布局。打字机改变了办公通信、文书处理和秘书职业结构。",
-    "knowledgePointZh": "秘书与办公事务关注文档、沟通、日程、流程、记录和组织记忆如何支持日常运转。",
-    "reflectionQuestionZh": "一个组织里哪些看似琐碎的文件，实际是在保护大家不被混乱吞掉？",
-    "tagsZh": [
-      "办公事务",
-      "打字机",
-      "组织记忆"
-    ]
-  },
-  "0416": {
-    "titleZh": "顾客自己拿货的商店",
-    "summaryZh": "一家自助杂货店改变了货架、价格标签和顾客行动，也改变了零售业的基本想象。",
-    "sceneZh": "1916 年的孟菲斯，一个杂货商看着柜台后的店员不停替顾客取货，觉得整套流程太慢也太贵。",
-    "storyBodyZh": "当时买东西常由店员在柜台后取货，顾客说，店员拿，价格和选择都被柜台隔开。他反过来设计商店动线：让顾客推开转门，沿着货架自己拿商品，看清包装和价格，最后到出口结账。这个改变不是简单节省人力，它重写了批发与零售销售的现场逻辑：陈列、包装、冲动购买、库存、价格标签、防盗和收银都变成同一套系统。顾客获得更多自由，也被新的货架设计影响选择。这个人叫 Clarence Saunders，他创办 Piggly Wiggly，把自助式超市模式推向商业实践，深刻影响现代零售销售。今天零售设计仍在问类似问题：顾客自己完成一部分服务时，便利、成本、信任和被监控的感觉怎样重新分配。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Clarence Saunders 1916 年在 Memphis 创办 Piggly Wiggly，通常被认为是早期自助式杂货店模式的重要开端，改变了零售动线、包装、陈列和结账方式。",
-    "knowledgePointZh": "批发与零售销售关注商品流通、陈列、定价、库存、顾客关系和购买现场如何被设计。",
-    "reflectionQuestionZh": "当你以为自己自由选择商品时，货架已经替你做了哪些安排？",
-    "tagsZh": [
-      "零售",
-      "自助商店",
-      "销售"
-    ]
-  },
-  "0417": {
-    "titleZh": "砖头该怎样拿才不累",
-    "summaryZh": "一对研究工作动作的人让工作技能从吃苦耐劳，转向可观察、可改进、可保护身体的实践。",
-    "sceneZh": "20 世纪初的工地和厨房里，一对夫妻拿着秒表和摄像机，认真观察人怎样伸手、弯腰、拿起工具。",
-    "storyBodyZh": "他们不是只想让人更快工作。真正的问题是，为什么同样的任务有人疲惫，有人顺手；为什么工人要做那么多多余动作；为什么家庭劳动也被当成不值得研究的自然习惯。他们拍摄砌砖动作，分析手的路径，也研究厨房高度、工具摆放和休息。今天我们会警惕效率研究被用来压榨劳动者，但他们留下的一个重要提醒仍然成立：工作技能不是天生会的，也不只是态度好。它包括动作、工具、时间、沟通、身体保护和学习反馈。这个人叫 Frank Gilbreth 和 Lillian Gilbreth，他们通过 motion study 和工作流程研究影响了工业工程、人体工效和现代工作技能训练。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "supportZh": "Frank and Lillian Gilbreth 以 motion study、工作动作分析和效率改进闻名，也研究疲劳、工具布置、家庭管理和人体工效，对工业工程和工作设计产生影响。",
-    "knowledgePointZh": "工作技能关注沟通、协作、时间、任务边界、工具使用和职业场景中的可靠行动。",
-    "reflectionQuestionZh": "你觉得自己不够努力的时候，有没有可能只是动作、工具或流程需要被重新设计？",
-    "tagsZh": [
-      "工作技能",
-      "动作研究",
-      "人体工效"
-    ]
-  },
-  "0419": {
-    "titleZh": "一张小额贷款的桌子",
-    "summaryZh": "一次乡村小额贷款实验让商业与行政越过传统银行、慈善和社区组织的边界。",
-    "sceneZh": "20 世纪 70 年代的孟加拉，一个经济学教师走到村里，发现课本里的贫困理论解释不了一张竹凳的债务。",
-    "storyBodyZh": "他看到一些手工劳动者每天辛苦，却因为借原料的钱来自高利贷，永远被锁在极小利润里。传统银行嫌他们没有抵押，慈善又未必改变生产关系。于是他试着借出很小的钱，观察人们是否能通过互助小组、还款纪律和本地信任建立新的可能。这个模式后来受到广泛赞扬，也面对关于债务压力、性别负担和商业化的批评；但它确实说明，有些商业与行政实践很难放入标准格子。它既像金融，也像发展项目、社会组织和制度实验。这个人叫 Muhammad Yunus，他创立 Grameen Bank 并推动 microcredit，使社会企业和小额金融成为商业与行政边界上的重要案例。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Muhammad Yunus 1970 年代在孟加拉发展小额贷款实践，1983 年 Grameen Bank 正式成立。他与 Grameen Bank 于 2006 年获诺贝尔和平奖；microcredit 后来也受到关于债务和效果的持续讨论。",
-    "knowledgePointZh": "未另分类的商业与行政收纳那些跨越金融、组织、发展、社区和治理的混合实践。",
-    "reflectionQuestionZh": "一个商业工具什么时候是在打开机会，什么时候又可能制造新的依赖？",
-    "tagsZh": [
-      "小额贷款",
-      "社会企业",
-      "混合实践"
-    ]
-  },
-  "0421": {
-    "titleZh": "学生第一次听懂普通法",
-    "summaryZh": "一个讲课者把散落判例和法律传统整理成可学习的体系，让法律教育走向公共语言。",
-    "sceneZh": "18 世纪的牛津，一个年轻律师面对学生，试着把复杂的普通法讲成一套有次序的课程。",
-    "storyBodyZh": "当时普通法常被认为只能在律师事务所和法院里慢慢熬出来，外人很难进入。判例、惯例、术语和程序像一片森林，既保护权利，也让许多人迷路。他开始公开讲授英格兰法律，把权利、财产、私人侵害和公共犯罪整理成系统叙述。后来他的书影响巨大，也带着时代局限，尤其在殖民和社会等级问题上需要被批判阅读。但法律作为学科的一个关键变化已经出现：规则不只是专业圈的秘密技术，也可以被讲解、出版、争论和教学。这个人叫 William Blackstone，他的《Commentaries on the Laws of England》成为普通法教育和英美法律思想史上的经典文本。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "William Blackstone 18 世纪在 Oxford 讲授普通法，1765-1769 年出版《Commentaries on the Laws of England》。该书系统介绍英格兰普通法，对英美法律教育和法律文化影响深远。",
-    "knowledgePointZh": "法律研究规则、权利、责任、证据、解释和处理冲突的制度。",
-    "reflectionQuestionZh": "如果规则只被少数专业人士听懂，普通人还怎样保护自己的权利？",
-    "tagsZh": [
-      "法律",
-      "普通法",
-      "法律教育"
-    ]
-  },
-  "0488": {
-    "titleZh": "一份关于便宜保险的报告",
-    "summaryZh": "一个律师把商业数据、行政制度和法律公共性放在一起，试图保护普通人的金融生活。",
-    "sceneZh": "20 世纪初的波士顿，一个律师听见工薪家庭买不起可靠保险，也看见金融公司如何利用信息不对称。",
-    "storyBodyZh": "他并不把法律只看成诉讼技巧。对他来说，法律、商业和行政必须一起回答一个问题：普通人在复杂市场里怎样不被制度性弱势吞掉？他研究保险成本、公司利润、储蓄银行制度和公共监管，提出通过 savings bank life insurance 让普通家庭获得更便宜、更透明的人寿保险。这个方案不是单一学科能完成的：需要金融计算、法律授权、行政执行和公共说服。商业、管理与法律的跨学科意义就在这里，市场不是天然公平，规则也不是自动有效，它们必须被设计成能服务真实生活。这个人叫 Louis Brandeis，他推动 savings bank life insurance 等公共改革，并以律师、改革者和美国最高法院大法官身份影响了商业监管与法律公共责任。所以它不只是商业技巧，而是在训练人把共同承担的后果提前摆到桌面上。",
-    "supportZh": "Louis Brandeis 是美国律师和最高法院大法官，早年作为公共利益律师参与反垄断、劳工和保险改革。Massachusetts savings bank life insurance 运动把金融、法律和行政改革放在同一个问题里。",
-    "knowledgePointZh": "商业、管理与法律跨学科课程连接组织设计、金融决策、合同、监管、行政执行和问责。",
-    "reflectionQuestionZh": "当一种产品太复杂，普通人无法判断风险时，法律和管理应该怎样介入？",
-    "tagsZh": [
-      "跨学科",
-      "商业监管",
-      "公共责任"
-    ]
-  },
-  "0499": {
-    "titleZh": "小店里的再装瓶",
-    "summaryZh": "一家护肤小店把商业、伦理、供应链和行动主义混在一起，让分类变得不够用。",
-    "sceneZh": "1970 年代英国海边小城，一个女性创业者开了一家小店，顾客拿着空瓶回来重新灌装。",
-    "storyBodyZh": "她没有按当时化妆品行业的常规走。包装可以简单，动物测试可以被质疑，原料故事可以告诉顾客，商业也可以公开站在环保和人权议题旁边。她的做法后来同样需要复杂评价：品牌扩张、供应链、并购和市场叙事都会让理想变得不纯粹。但这个案例说明，未另分类的商业、管理与法律常常出现在边界上：一件商品既是买卖，也是价值主张、合同关系、劳动条件、生态选择和公共传播。这个人叫 Anita Roddick，她创办 The Body Shop，并以环保、反动物测试和 ethical consumerism 影响了商业伦理与品牌行动主义。这让今天的组织、合同、账本和价格重新变得具体：合作要持续，就必须有人把成本、责任和风险说清楚。",
-    "supportZh": "Anita Roddick 1976 年在英国 Brighton 创办 The Body Shop。品牌以简约包装、反动物测试、环保和公平贸易等公共议题闻名，是 ethical consumerism 和品牌行动主义的重要案例。",
-    "knowledgePointZh": "未另分类的商业、管理与法律处理那些跨越商业模式、伦理、监管、社区和公共价值的混合安排。",
-    "reflectionQuestionZh": "当一个品牌说自己有价值立场时，你会看广告语，还是看它怎样组织供应链和责任？",
-    "tagsZh": [
-      "商业伦理",
-      "品牌",
-      "混合安排"
-    ]
-  },
-  "0500": {
-    "titleZh": "山坡上的自然图",
-    "summaryZh": "一张山体剖面图，让被压在标本夹里的叶片重新回到海拔、温度和位置中。",
-    "sceneZh": "1802 年前后，南美安第斯山的山坡上，仪器盒、气压计和压花纸被潮气打湿。",
-    "storyBodyZh": "山脚还带着热气，压花纸到了高处却被冷雾弄软。一个旅行者把叶片夹进纸里，照习惯写下名称；这种办法很有用，标本能被带回欧洲，别人也能知道它属于哪一类。可山坡没有只留下名字。低处的阔叶旁写着一个温度，再往上，硬叶灌木、草本和苔藓挤在更低的气压数字旁；同一页笔记里，植物像是沿着高度换了队形。他停下来重抄记录，把海拔、气温、气压和植物名排成同一列，又把南美山坡同欧洲高山、热带低地的旧记录放在一起比较。原来的问题是“这株植物叫什么”。笔记把问题推向另一处：为什么相似的植物总在相似的高度、冷暖和水汽条件下出现？当这些数字和叶片被画进一座山的剖面，山不再只是采集背景，而变成一张能检查生命分布的图。后来，这位旅行者名叫 Alexander von Humboldt。",
-    "supportZh": "Alexander von Humboldt 1799-1804 年在美洲考察，测量气候、地理、植物分布等。他的 Chimborazo Naturgemalde 把海拔、植物带和环境数据综合在一张图中，被视为生态和综合自然科学思想的重要象征。",
-    "knowledgePointZh": "未进一步细分的自然科学、数学与统计在这里出现的关键转向，是把标本名称、海拔、温度、气压和位置放到同一张可检查的图里，让自然从孤立事实变成可比较的分布。",
-    "reflectionQuestionZh": "当你记录一个现象时，你是在给它取名，还是也在画出它和哪些条件一起出现？",
-    "tagsZh": [
-      "自然科学",
-      "综合观察",
-      "Humboldt"
-    ]
-  },
-  "0510": {
-    "titleZh": "小岛上的鸟嘴",
-    "summaryZh": "一场漫长航行让生物学问题从物种分类，转向生命如何随环境变化。",
-    "sceneZh": "1830 年代，一位年轻博物学者在船上晕船、采集标本，也在岛屿之间注意到鸟、龟和植物的细微差异。",
-    "storyBodyZh": "他出发时还不是一个准备推翻传统观念的人，更像一个爱观察的年轻人：写笔记、收集昆虫、寄回标本、和船员一起经历风浪。真正改变他的不是某一个瞬间，而是大量小差异慢慢堆在一起：相近的岛屿有不同的鸟嘴，化石和现生动物彼此呼应，人工育种显示性状可以被选择。多年后，他才把这些线索组织成一个更大的解释：生命不是固定陈列，而是在变异、遗传、环境和选择中逐渐改变。生物及相关科学在这里不再只是给生命命名，也开始追问生命为什么会成为现在这样。这个人叫 Charles Darwin，他通过《On the Origin of Species》提出自然选择理论，成为现代进化生物学的重要奠基人。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。",
-    "supportZh": "Charles Darwin 1831-1836 年随 HMS Beagle 航行，观察地质、生物和岛屿差异；1859 年出版《On the Origin of Species》，系统提出自然选择理论。",
-    "knowledgePointZh": "生物及相关科学研究生命、物种、遗传、适应、演化和生命系统之间的关系。",
-    "reflectionQuestionZh": "当你看到两个相似生命的细微差别时，你会把它当偶然，还是当成环境留下的线索？",
-    "tagsZh": [
-      "生物学",
-      "演化",
-      "自然选择"
-    ]
-  },
-  "0511": {
-    "titleZh": "雨水里的小动物",
-    "summaryZh": "一滴看似清亮的水，在小透镜下把自然的尺度往下推了一层。",
-    "sceneZh": "1670 年代的 Delft，窗边桌上放着一枚自制单透镜、一根细针和一滴存放过的雨水。",
-    "storyBodyZh": "窗玻璃把北方的光磨得很薄，黄铜小板被手指捏得发热。这个做布料生意的人原先磨镜片，是为了看清纱线粗细、纤维断口和布面瑕疵。清水在肉眼里只是清水；若变浑了，人们也多半说它放坏了。那天，他把一滴存放过的雨水挑到针尖旁，贴近小透镜，先调光，再屏住呼吸找焦点。水滴里忽然有细小的点在转，有的像在划水，有的猛地一闪又躲开。原来的问题很简单：这水干不干净。可如果清亮的水里也有东西在动，肉眼的清楚就不再等于世界的全部。他换另一份水样，又等几天再看，把不同小东西的形状和游动方式写进信里。问题慢慢改口：不是只问水有没有变坏，而是问看不见的生命能不能被工具、样本和重复观察拉到证据面前。那些信后来寄到 Royal Society；署名是 Antonie van Leeuwenhoek。",
-    "supportZh": "Antonie van Leeuwenhoek 是 17 世纪 Delft 的布商和显微观察者。他使用自制单透镜显微镜观察水样、牙垢、血液、精子等，并在 1670 年代起通过信件向 Royal Society 报告被译为 animalcules 的微小生物观察。",
-    "knowledgePointZh": "生物学在这里出现的关键转向，是生命不只存在于肉眼能直接确认的尺度里；当工具改变观察尺度，微小生命也能通过样本、重复观察、形态和运动记录进入可检查的自然世界。",
-    "reflectionQuestionZh": "如果一个东西小到肉眼看不见，你会用什么重复动作让它从猜想变成证据？",
-    "tagsZh": [
-      "生物学",
-      "显微镜",
-      "微生物"
-    ]
-  },
-  "0512": {
-    "titleZh": "没有活细胞也会发酵",
-    "summaryZh": "一瓶被压碎的酵母汁让生物化学看见，生命过程也可以由分子机器推动。",
-    "sceneZh": "19 世纪末的柏林，一个研究者把酵母细胞磨碎过滤，本来只想保存提取物，却发现液体自己开始冒泡。",
-    "storyBodyZh": "当时很多人认为发酵必须依赖完整活细胞。可那瓶无细胞酵母汁仍然把糖变成酒精和二氧化碳，像是在提醒人们：生命活动背后还有更小的化学执行者。他反复确认不是污染，也不是残余细胞在偷偷工作。这个发现把问题从“细胞是否活着”推向“细胞内部是什么在催化反应”。生物化学的门由此被推开：生命不是脱离物质的神秘力量，它由酶、分子、能量和反应网络持续维持。这个人叫 Eduard Buchner，他发现无细胞发酵并推动酶学发展，因这项工作获得 1907 年诺贝尔化学奖。今天的生物技术仍在延续这个转念：生命过程可以被研究成反应系统，但每一次应用都要重新问安全和边界。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Eduard Buchner 1897 年发现无细胞酵母提取液仍可发酵糖，证明发酵可由细胞内化学物质催化；他因此获得 1907 年诺贝尔化学奖。",
-    "knowledgePointZh": "生物化学研究生命里的分子、酶、反应、能量转换和物质变化。",
-    "reflectionQuestionZh": "当生命现象被拆到分子层面，它是变得更冷，还是变得更精细？",
-    "tagsZh": [
-      "生物化学",
-      "酶",
-      "发酵"
-    ]
-  },
-  "0519": {
-    "titleZh": "玉米籽粒上的颜色跳动",
-    "summaryZh": "一个长期被低估的玉米实验，让生命科学看见基因并不总是安静地待在原位。",
-    "sceneZh": "20 世纪中期的玉米田里，一位女科学家一粒粒观察籽粒颜色，记录那些像斑点一样变化的图案。",
-    "storyBodyZh": "她的工作很安静，也很孤独。显微镜下的染色体、田里的玉米穗、纸上的谱系图，被她年复一年地连在一起。许多人期待基因像固定位置上的字母，她却从异常颜色和断裂模式里看到另一种可能：某些遗传因子会移动，会调控别的基因表达。这个发现一开始并没有被充分理解，因为它超出了当时主流想象。未另分类的生物相关科学常常就在这种边缘发现中出现：问题横跨遗传、细胞、发育和调控，暂时没有舒服的格子。这个人叫 Barbara McClintock，她发现 transposable elements，后来获得 1983 年诺贝尔生理学或医学奖。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。一粒玉米籽上的斑点很小，却让她意识到基因并不总像固定文字那样安静排列。",
-    "supportZh": "Barbara McClintock 通过玉米遗传学研究发现 transposable elements，也称 jumping genes。她的发现起初未被广泛理解，后来成为理解基因调控和基因组动态的重要线索，并获 1983 年诺贝尔生理学或医学奖。",
-    "knowledgePointZh": "未另分类的生物相关科学处理那些跨越遗传、细胞、发育、生态或生命尺度的复杂现象。",
-    "reflectionQuestionZh": "如果一个异常现象多年没人相信，你还会不会继续认真看它？",
-    "tagsZh": [
-      "遗传学",
-      "转座子",
-      "生命科学"
-    ]
-  },
-  "0520": {
-    "titleZh": "春天为什么安静了",
-    "summaryZh": "一本关于鸟鸣消失的书，让环境问题从局部害虫控制变成整个生态系统的警报。",
-    "sceneZh": "20 世纪中期的美国，一个海洋生物学家收到越来越多来信：鸟少了，鱼死了，喷洒后的土地不对劲。",
-    "storyBodyZh": "她原本写过海洋，也擅长把科学写给普通读者。面对杀虫剂，她没有只问它能不能杀死目标害虫，而是追问它进入土壤、水、昆虫、鸟、鱼和人体之后会怎样移动。她阅读研究、整理案例、承受化工行业攻击，也小心避免把复杂生态写成简单恐吓。环境领域在这里变得清楚：人类技术不是只作用于一个点，它会穿过食物链、公共政策、商业利益和日常家庭。一个“有效”的工具，如果看不到长期代价，就可能把春天本身变安静。这个人叫 Rachel Carson，她的《Silent Spring》推动现代环境运动和农药监管讨论，成为环境科学与公共环保意识的重要经典。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Rachel Carson 1962 年出版《Silent Spring》，批判 DDT 等农药对生态系统和公共健康的影响。该书促进美国环境运动和后续监管讨论，被视为现代环境意识的重要文本。",
-    "knowledgePointZh": "环境领域研究生态系统、水、污染、气候、资源和人类活动之间的关系。",
-    "reflectionQuestionZh": "一种技术解决了眼前问题以后，你会不会继续追问它去了哪里？",
-    "tagsZh": [
-      "环境",
-      "生态",
-      "农药"
-    ]
-  },
-  "0521": {
-    "titleZh": "山顶仪器画出的曲线",
-    "summaryZh": "一个长期测量二氧化碳的人，让环境科学用一条曲线看见整个地球的呼吸。",
-    "sceneZh": "1958 年的夏威夷 Mauna Loa 山上，一个年轻化学家把空气样本送进仪器，关心小数点后的稳定性。",
-    "storyBodyZh": "他做的事看起来枯燥：校准仪器，排除局地污染，重复测量，保存长期记录。可正是这种近乎执拗的精确，让大气中二氧化碳逐年上升的趋势变得无法忽视。那条曲线还带着季节性起伏，像地球植被呼吸的节律：春夏下降，秋冬上升。环境科学在这里显示出力量，不是靠一次戏剧性灾难，而是靠持续、可比、可信的数据，把看不见的全球变化变成公共证据。这个人叫 Charles David Keeling，他建立的 Mauna Loa 二氧化碳长期记录形成 Keeling Curve，成为气候变化科学的核心证据之一。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Charles David Keeling 从 1958 年开始在 Mauna Loa Observatory 持续测量大气二氧化碳浓度，形成著名 Keeling Curve，显示 CO2 长期上升和季节性变化，是气候科学的重要证据。",
-    "knowledgePointZh": "环境科学研究污染、资源、气候、生态和人类活动之间的关系，并依赖长期测量与模型判断变化。",
-    "reflectionQuestionZh": "什么样的变化只有被测量很多年，才终于让人无法继续忽略？",
-    "tagsZh": [
-      "环境科学",
-      "气候",
-      "长期测量"
-    ]
-  },
-  "0522": {
-    "titleZh": "黑猩猩手里的草茎",
-    "summaryZh": "一次野外观察让人重新理解野生动物行为，也让保护不再只是一张物种清单。",
-    "sceneZh": "1960 年的坦桑尼亚森林里，一个年轻女性坐在树下，长时间等待黑猩猩愿意靠近。",
-    "storyBodyZh": "她一开始没有传统博士训练，带着笔记本、望远镜和极大的耐心进入森林。很多天里，动物只是远远躲开。后来她看到一只黑猩猩把草茎伸进白蚁丘，再把沾满白蚁的草茎送入口中。这个小动作意义巨大：工具使用不再能轻易被说成只有人类才会。更重要的是，长期观察让每只动物有了个体性格、亲属关系、冲突、照料和学习。自然环境与野生动物研究因此不只是数有多少只动物，也要理解栖息地、行为、社会关系和人类干扰。这个人叫 Jane Goodall，她在 Gombe 的黑猩猩长期研究改变了灵长类行为学和野生动物保护的公众理解。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。那根草茎很轻，却让“会不会使用工具”这个问题变得沉重起来。它要求观察者把耐心放在判断之前。",
-    "supportZh": "Jane Goodall 1960 年开始在 Gombe Stream 观察黑猩猩，记录工具使用、社会行为、亲属关系和个体差异。她的长期研究深刻影响灵长类动物学和野生动物保护。",
-    "knowledgePointZh": "自然环境与野生动物关注栖息地、物种行为、保护、生态平衡和人类活动影响。",
-    "reflectionQuestionZh": "当你发现一种动物也会学习和使用工具，你对“人类特殊性”的想法会怎样改变？",
-    "tagsZh": [
-      "野生动物",
-      "行为观察",
-      "保护"
-    ]
-  },
-  "0529": {
-    "titleZh": "树苗和妇女手里的水桶",
-    "summaryZh": "一场种树运动说明，环境问题常常同时是土地、水、性别、民主和社区组织问题。",
-    "sceneZh": "1970 年代的肯尼亚，一个受过生物学训练的女性听见乡村妇女说，柴火远了，水少了，土也越来越薄。",
-    "storyBodyZh": "她没有把这些抱怨当作零散生活困难。树被砍掉，水源变差，土壤流失，妇女走更远的路找燃料，家庭和地方政治都被牵动。于是她从最朴素的动作开始：组织妇女育苗、种树、照看树，也让种树变成教育、收入、社区权利和民主参与的入口。未另分类的环境领域常常这样出现：它不只是生态学，也不只是扶贫、女性权益或政治改革，而是这些东西在同一片土地上纠缠。这个人叫 Wangari Maathai，她创立 Green Belt Movement，并因环境保护、妇女赋权和民主行动获得 2004 年诺贝尔和平奖。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Wangari Maathai 1977 年在肯尼亚创立 Green Belt Movement，组织社区尤其是妇女种树，连接环境恢复、社区发展、妇女赋权和民主倡议。她于 2004 年获诺贝尔和平奖。",
-    "knowledgePointZh": "未另分类的环境领域处理跨越水、土、生态、社区、政策和社会公平的复杂环境实践。",
-    "reflectionQuestionZh": "一棵树什么时候不只是树，而是水、时间、收入和公共权利的交点？",
-    "tagsZh": [
-      "环境",
-      "社区",
-      "种树"
-    ]
-  },
-  "0530": {
-    "titleZh": "斜面上的小球",
-    "summaryZh": "一个滚下斜面的小球，让物理科学开始用实验、测量和数学追问运动。",
-    "sceneZh": "17 世纪意大利，一个教师让小球沿斜面滚下，用水钟和刻度记录它怎样加速。",
-    "storyBodyZh": "他并不满足于背诵古代权威关于重物下落的说法。真实下落太快，不容易测；于是他把斜面变成放慢运动的工具，让时间、距离和速度之间的关系可以被观察。小球每次滚动都像在提醒他：自然不是只能被辩论，也可以被设计实验来询问。物理科学的精神在这里显现：把看似普通的运动拆成可测量关系，用数学表达规律，再让实验反复挑战直觉。这个人叫 Galileo Galilei，他通过落体、斜面和天文观察等研究推动近代物理科学和实验方法的发展。学生在实验室里重复这种动作时，学到的不只是公式，而是怎样让自然用可检查的方式回答问题。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。那颗小球滚下去的时间很短，却把科学学习拉长了：人开始愿意为了看清关系而重新设计问题。",
-    "supportZh": "Galileo Galilei 研究落体和斜面运动，使用实验与数学分析运动规律；他也通过望远镜天文观察挑战传统宇宙观，被视为近代科学革命的重要人物。",
-    "knowledgePointZh": "物理科学研究物质、能量、运动、力、材料和自然规律如何在可观察现象中表现出来。",
-    "reflectionQuestionZh": "当一个现象太快看不清时，你能不能设计一种方法让它慢下来回答你？",
-    "tagsZh": [
-      "物理科学",
-      "实验",
-      "运动"
-    ]
-  },
-  "0531": {
-    "titleZh": "燃烧后少了什么",
-    "summaryZh": "一次关于燃烧和称量的坚持，让化学从旧术语转向质量、元素和反应。",
-    "sceneZh": "18 世纪巴黎，一个税务官兼科学家在实验室里反复称量金属、空气和燃烧后的残留物。",
-    "storyBodyZh": "当时流行的燃素说把燃烧解释成某种东西逃走。可他的天平总把问题拉回物质本身：如果燃烧后质量增加，是否说明空气中的某部分加入了反应？他和同伴改进仪器、命名氧气和氢气、整理元素概念，也推动化学语言从含混传统走向更可核对的体系。化学在这里不是神秘炼金，而是精确称量、封闭系统、命名规则和反应关系。这个人叫 Antoine Lavoisier，他通过燃烧理论、质量守恒和化学命名改革成为现代化学的重要奠基人之一。学生第一次认真看一个反应时，学到的不只是物质名称，而是守恒、测量和证据如何一起改变解释。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。称量让解释变得克制。它把“好像消失了”的感觉，变成了可以追问空气、物质和反应关系的证据。",
-    "supportZh": "Antoine Lavoisier 18 世纪通过燃烧和氧化研究推翻燃素说，提出质量守恒思想，并参与现代化学命名体系改革，常被称为现代化学奠基人之一。",
-    "knowledgePointZh": "化学研究物质组成、性质、反应、能量变化和变化条件。",
-    "reflectionQuestionZh": "当你改变一个物质时，你会只看结果，还是追问每一部分去了哪里？",
-    "tagsZh": [
-      "化学",
-      "燃烧",
-      "质量守恒"
-    ]
-  },
-  "0532": {
-    "titleZh": "大陆像拼图一样裂开",
-    "summaryZh": "一位气象学家的地图直觉，让地球科学重新想象大陆、海洋和深时间。",
-    "sceneZh": "20 世纪初，一个研究天气和极地的科学家看着世界地图，注意到南美和非洲海岸像可以拼合的边缘。",
-    "storyBodyZh": "他不是地质学正统圈里的权威人物。除了海岸线，他还比较化石分布、岩层、古气候痕迹和冰川证据，提出大陆曾经连在一起，后来漂移分开。许多地质学家一开始反对，尤其因为他无法解释大陆移动的可靠机制。这个理论长期被冷落，直到海底扩张、古地磁和板块构造证据出现，才重新获得力量。地球科学在这里显示出耐心：一条好问题有时先于完整机制出现，而地球的历史远比脚下的静止感更活跃。这个人叫 Alfred Wegener，他提出 continental drift 理论，为后来板块构造学说的发展提供了关键思想前身。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Alfred Wegener 1912 年提出大陆漂移思想，1915 年出版《The Origin of Continents and Oceans》。他的理论起初因缺少机制受批评，后在海底扩张和板块构造证据出现后被重新评价。",
-    "knowledgePointZh": "地球科学研究岩石、水、气候、地形、地球内部和地球系统在长时间尺度上的变化。",
-    "reflectionQuestionZh": "你脚下看似稳定的地面，可能在多长的时间里一直移动？",
-    "tagsZh": [
-      "地球科学",
-      "大陆漂移",
-      "板块"
-    ]
-  },
-  "0533": {
-    "titleZh": "苹果和月亮之间",
-    "summaryZh": "一个关于坠落的普通问题，把地上的运动和天上的轨道放进同一套物理规则。",
-    "sceneZh": "17 世纪英格兰，一位年轻学者在瘟疫期间离开大学回到乡下，继续独自思考光、运动和数学。",
-    "storyBodyZh": "故事常被讲成苹果砸头的瞬间，其实更重要的是他愿意把两个世界连起来：苹果为什么落下，月亮为什么不直线飞走，而是绕着地球？如果同一种吸引力既作用在地面物体，也作用在天体上，那么自然界就不是由两套规则管理。他用数学表达运动定律和万有引力，把经验、几何和天文观测组织成新的体系。物理学由此展现出一种强大想象：最普通的下落，可能和宇宙尺度的运行属于同一个问题。这个人叫 Isaac Newton，他在《Philosophiae Naturalis Principia Mathematica》中提出运动定律和万有引力理论，奠定经典力学基础。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。",
-    "supportZh": "Isaac Newton 1687 年出版《Principia》，系统提出三大运动定律和万有引力理论，统一解释地面运动与天体运动，是经典物理学的重要奠基成果。",
-    "knowledgePointZh": "物理学研究运动、能量、力、物质和自然规律，用模型解释从日常到宇宙尺度的现象。",
-    "reflectionQuestionZh": "你身边哪一个普通动作，可能和更大的自然规律连在一起？",
-    "tagsZh": [
-      "物理学",
-      "运动定律",
-      "引力"
-    ]
-  },
-  "0539": {
-    "titleZh": "磁针旁边的电流",
-    "summaryZh": "一次讲台上的偏转让物理科学边界松动，电和磁开始成为同一个故事。",
-    "sceneZh": "1820 年的哥本哈根，一个教师在课堂演示中发现，通电导线旁的磁针突然偏转。",
-    "storyBodyZh": "他原本想展示的是电学实验，却被一个看似偶然的小动作抓住：电流经过时，磁针不再安静指北。这个现象说明电和磁之间可能有深层联系。后来更多实验者接过问题，把电流、磁场、感应和力的关系逐渐展开。未另分类的物理科学常出现在这样的交界处：它不完全属于旧的电学，也不完全属于磁学，而是在现象逼迫分类改变时出现。科学进展有时不是给旧抽屉再贴标签，而是承认抽屉本身需要重做。这个人叫 Hans Christian Oersted，他发现电流的磁效应，推动电磁学作为统一研究领域的发展。今天许多新领域也这样出现：一个小现象先让旧分类不舒服，然后才慢慢逼出新的问题和新的语言。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Hans Christian Oersted 1820 年发现电流可使磁针偏转，显示电与磁之间存在联系。该发现开启了电磁学发展，影响 Ampere、Faraday、Maxwell 等后续研究。",
-    "knowledgePointZh": "未另分类的物理科学收纳跨越物质、能量、场、实验现象和学科边界的研究。",
-    "reflectionQuestionZh": "当一个小偏转让两个领域突然相遇，你会先修正实验，还是修正分类？",
-    "tagsZh": [
-      "电磁学",
-      "物理科学",
-      "实验"
-    ]
-  },
-  "0540": {
-    "titleZh": "算术书里的陌生数字",
-    "summaryZh": "一本关于计算的书让数学与统计从地方技巧走向可传播的符号系统。",
-    "sceneZh": "9 世纪的巴格达，一个学者在智慧宫附近整理印度数字、方程和实际计算问题。",
-    "storyBodyZh": "他面对的不是纯粹游戏，而是继承、贸易、测量、税收和土地分配中的真实计算。旧方法可以算，但不够统一，也不容易传播。他把印度数字和十进位计算介绍给阿拉伯语读者，又系统讨论线性和二次方程的解法。数学与统计的基础意义在这里很清楚：符号一旦变得可写、可教、可复用，复杂关系就能离开个人头脑，成为社会共同工具。这个人叫 Muhammad ibn Musa al-Khwarizmi，他的代数学著作和关于印度数字的作品影响了 algebra 与 algorithm 等概念的历史发展。后来无数课堂、账本和程序都沿着这条路继续走：先把关系写清楚，更多人才能一起检查、改进和使用它。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Muhammad ibn Musa al-Khwarizmi 是 9 世纪巴格达学者，著有关于代数学的《Al-jabr wa'l muqabala》及介绍印度数字和十进位计算的作品，其名字和著作影响了 algebra 与 algorithm 的词源和数学史。",
-    "knowledgePointZh": "未进一步细分的数学与统计关注数量、结构、符号、模型和数据如何帮助人推理。",
-    "reflectionQuestionZh": "一种更好的符号，怎样让原本困难的问题开始被更多人共同解决？",
-    "tagsZh": [
-      "数学",
-      "代数",
-      "符号"
-    ]
-  },
-  "0541": {
-    "titleZh": "从一点到一座几何世界",
-    "summaryZh": "一本从定义和公设开始的书，让数学成为可一步步证明的共同建筑。",
-    "sceneZh": "公元前 3 世纪的亚历山大，一个教师面对学生，把点、线、圆和角整理成一条严格道路。",
-    "storyBodyZh": "他没有从最华丽的图形讲起，而是从最小的东西开始：什么是点，什么是线，什么可以被假定，什么必须证明。一个命题接一个命题，像砖块一样搭起几何体系。重要的不只是结论，而是任何人都可以沿着理由回走，检查每一步是否成立。数学在这里显示出独特力量：它把直觉变成证明，把图形变成结构，把个人聪明变成可共享的推理秩序。这个人叫 Euclid，他编写《Elements》，成为几何学、证明传统和数学教育史上最重要的经典之一。今天学习证明仍有这种价值：它让人不只得到答案，也学会把相信建立在别人可以回走检查的理由上。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。几何从点和线开始，却把人带到一种更大的训练里：每一步都要能被别人沿着理由重新走一遍。",
-    "supportZh": "Euclid 活跃于公元前 3 世纪左右的 Alexandria。《Elements》系统整理平面几何、数论和比例等内容，以定义、公设和证明组织数学知识，对数学教育和证明传统影响极深。",
-    "knowledgePointZh": "数学用数量、结构、空间、模式和证明澄清关系。",
-    "reflectionQuestionZh": "当一个结论必须一步步被证明，它会不会也训练你更诚实地相信？",
-    "tagsZh": [
-      "数学",
-      "几何",
-      "证明"
-    ]
-  },
-  "0542": {
-    "titleZh": "他开始数街上的人",
-    "summaryZh": "一个仰望星空的人转身整理城市登记册，让统计学成为理解社会模式的工具。",
-    "sceneZh": "19 世纪初的布鲁塞尔，夜空常常不够清楚，一个年轻天文学家只能等云散开，再把星星位置记在纸上。",
-    "storyBodyZh": "天文观测总有误差。这个年轻人慢慢学会，不必把每个偏差都当成失败；很多偏差放在一起，反而会显出一种分布。后来，他把这种耐心从天空带回城市。出生、死亡、婚姻、身高、犯罪记录，这些原本散在登记册里的数字，被他一列一列整理出来。一个人的一生不能被表格解释，但很多人的记录放在一起，会露出某种社会形状。他提出“平均人”的想法，启发很大，也很危险：平均值能让混乱变得可读，却也可能压平真实差异。这个人叫 Adolphe Quetelet，他把统计方法引入社会现象研究，并留下后来影响 BMI 的 Quetelet Index 源头。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Adolphe Quetelet 是比利时天文学家、数学家、统计学家和社会学先驱；1835 年出版关于社会物理学和“平均人”的重要著作，并将统计方法应用到犯罪、婚姻、死亡等社会现象。",
-    "knowledgePointZh": "统计学研究数据收集、变化、不确定性、推断、偏差，以及大量个体记录背后的模式。",
-    "reflectionQuestionZh": "你看到一个平均数时，最想知道它帮你看见了什么，又遮住了什么？",
-    "tagsZh": [
-      "统计学",
-      "平均数",
-      "社会数据"
-    ]
-  },
-  "0588": {
-    "titleZh": "星星亮度里的尺子",
-    "summaryZh": "一个在照片底片上比较星光的人，把天文学、数学和统计连成测量宇宙距离的方法。",
-    "sceneZh": "20 世纪初的哈佛天文台，一位女性计算员坐在成排玻璃底片前，逐颗比较变星的亮度。",
-    "storyBodyZh": "她的工作头衔并不显赫，很多女性计算员被安排做重复而精细的记录。可她在麦哲伦云的变星中发现一种关系：某些造父变星变化周期越长，真实亮度越高。这个关系像一把宇宙尺子，只要知道周期，就能推算亮度，再进一步估计距离。自然科学、数学与统计在这里完全交织：天文观测提供材料，数学关系组织模式，统计比较让规律浮现。她的发现后来帮助人类测量银河系之外的距离。这个人叫 Henrietta Swan Leavitt，她发现造父变星周期-光度关系，成为现代宇宙距离尺度的重要基础。这也是数据和自然科学相遇时最动人的地方：微小记录不会自动说话，但耐心比较能让它们变成尺度。所以它不只是科学史，而是在训练人慢下来，让自然用可检查的方式回答问题。她面对的是一张张安静底片，但真正困难的是在重复记录中相信微小差别值得被认真比较。",
-    "supportZh": "Henrietta Swan Leavitt 在 Harvard College Observatory 工作，1912 年发表关于小麦哲伦云造父变星周期与光度关系的研究。该关系成为测量宇宙距离的重要方法基础。",
-    "knowledgePointZh": "自然科学、数学与统计跨学科课程把观察、模型、测量和数据推断连接起来。",
-    "reflectionQuestionZh": "一张照片底片里的小点，怎样可能变成测量宇宙的尺子？",
-    "tagsZh": [
-      "跨学科",
-      "天文学",
-      "统计"
-    ]
-  },
-  "0599": {
-    "titleZh": "海岸线到底有多长",
-    "summaryZh": "一个关于海岸线的问题，让自然、数学和统计之间出现了新的粗糙尺度。",
-    "sceneZh": "20 世纪中期，一个数学家盯着地图上的海岸线，发现尺子越短，量出的长度越长。",
-    "storyBodyZh": "传统几何喜欢光滑线条，可真实世界的云、山、树、河流和海岸都不那么听话。用大尺子量，很多弯曲被忽略；用小尺子量，细节不断冒出来，长度似乎没有稳定终点。他把这种粗糙、重复、自相似的形状发展成新的数学语言。这个方向既不像普通几何，也不只是物理或统计，却能帮助人描述自然界大量不规则形态。未另分类的自然科学、数学与统计就适合保存这种边界问题：分类暂时跟不上现象，但现象已经在要求新工具。这个人叫 Benoit Mandelbrot，他发展 fractal geometry，使分形成为理解自然形态、复杂系统和尺度问题的重要数学语言。这让今天的实验和自然观察重新变得具体：一个现象不会自己变成证据，必须有人愿意测量、比较、记录和修正解释。",
-    "supportZh": "Benoit Mandelbrot 1967 年发表关于英国海岸线长度的论文，后来系统发展 fractal geometry。分形几何用于描述自相似、粗糙和尺度相关的自然及数学形态。",
-    "knowledgePointZh": "未另分类的自然科学、数学与统计收纳那些跨越自然形态、数学结构、数据和模型的边界问题。",
-    "reflectionQuestionZh": "如果一个东西越仔细看越复杂，你会把它当噪声，还是当成需要新数学的信号？",
-    "tagsZh": [
-      "分形",
-      "尺度",
-      "复杂性"
-    ]
-  },
-  "0610": {
-    "titleZh": "信息像硬币一样可以计量",
-    "summaryZh": "一个电话实验室里的年轻数学家，把通信问题变成现代信息时代的基础语言。",
-    "sceneZh": "20 世纪 40 年代的 Bell Labs，一个年轻研究员面对电报、电话和噪声，问一个奇怪问题：信息到底能不能被测量？",
-    "storyBodyZh": "他不先关心消息内容是情书、新闻还是订单，而是问信号如何通过带噪声的通道，怎样编码，怎样减少不确定性，怎样在有限带宽里可靠传输。这个抽象看似冷，却非常有力：信息可以用 bit 计量，通信可以用数学模型分析，冗余、噪声、编码和容量都能被系统研究。信息与通信技术在这里不只是设备集合，而是一整套关于信息如何表示、传输、压缩和保护的思想。这个人叫 Claude Shannon，他在 1948 年发表《A Mathematical Theory of Communication》，奠定现代信息论基础。这让今天的软件、网络、数据和 AI 工具重新变得具体：工具背后总有路径、假设、权限和责任。",
-    "supportZh": "Claude Shannon 1948 年发表《A Mathematical Theory of Communication》，提出 bit、entropy、channel capacity 等核心思想，被视为现代信息论奠基人。",
-    "knowledgePointZh": "未进一步细分的信息与通信技术关注信息表示、传输、计算、工具、网络和数字系统如何协同工作。",
-    "reflectionQuestionZh": "当一条消息穿过噪声抵达你面前，中间有多少不可见的设计在保护它？",
-    "tagsZh": [
-      "信息论",
-      "通信",
-      "ICT"
-    ]
-  },
-  "0611": {
-    "titleZh": "鼠标第一次指向屏幕",
-    "summaryZh": "一次公开演示让计算机使用从输入命令，转向人与屏幕、指针和协作工具的互动。",
-    "sceneZh": "1968 年旧金山，一个工程师坐在舞台控制台前，屏幕上出现文字、窗口、链接和一个会移动的光标。",
-    "storyBodyZh": "他关心的不是让机器替人炫技，而是怎样增强人的思考和协作能力。打字、指向、编辑、共享屏幕、远程协作、超文本链接，这些今天看似普通的动作，当时像是从未来提前出现。他把计算机使用理解为人和工具共同构成的工作环境：手怎样移动，眼睛怎样寻找，团队怎样共享文档，想法怎样被外化和修改。计算机使用从此不只是会不会操作机器，而是怎样让数字工具进入人的认知、沟通和日常工作。这个人叫 Douglas Engelbart，他在 1968 年的 Mother of All Demos 中展示鼠标、窗口、超文本和协作计算等关键思想。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是会不会操作机器，而是在训练人把想法清楚地交给系统，也能检查系统怎样回应。",
-    "supportZh": "Douglas Engelbart 1968 年在 Fall Joint Computer Conference 进行著名演示，后来被称为 Mother of All Demos，展示鼠标、图形交互、超文本、视频会议和协作编辑等技术。",
-    "knowledgePointZh": "计算机使用关注基本数字工具、文件、账户、安全、界面和日常操作能力。",
-    "reflectionQuestionZh": "一个好工具是在替你思考，还是让你更容易看见并改写自己的思考？",
-    "tagsZh": [
-      "计算机使用",
-      "鼠标",
-      "人机交互"
-    ]
-  },
-  "0612": {
-    "titleZh": "表格为什么应该彼此有关系",
-    "summaryZh": "一个数据库研究者把数据从杂乱文件中解放出来，让表、关系和查询成为可靠系统。",
-    "sceneZh": "20 世纪 60 年代末，一位 IBM 研究员看着企业数据系统，发现程序和数据像缠在一起的线团。",
-    "storyBodyZh": "当时许多数据系统依赖复杂文件结构，应用程序必须知道数据怎样存放，改一点结构就可能牵动一片代码。他提出用关系模型表示数据：把数据看作表，把关系和约束说清楚，再用更高层的语言查询，而不是让每个程序都迷失在存储细节里。数据库与网络设计及管理的核心由此变得清楚：多人共享信息时，结构、独立性、一致性和查询能力比临时保存更重要。这个人叫 Edgar F. Codd，他提出 relational model，奠定关系型数据库理论基础，深刻影响 SQL 和现代数据管理系统。今天每个共享表格、账号系统和应用后台都还在回应这个问题：数据怎样才能不靠记忆，而靠结构被多人信任。这让今天的软件、网络、数据和 AI 工具重新变得具体：工具背后总有路径、假设、权限和责任。",
-    "supportZh": "Edgar F. Codd 1970 年发表论文《A Relational Model of Data for Large Shared Data Banks》，提出关系模型，对关系型数据库和 SQL 发展产生基础性影响。",
-    "knowledgePointZh": "数据库与网络设计及管理关注数据结构、连接、权限、可靠性、查询和维护。",
-    "reflectionQuestionZh": "当很多人必须同时信任同一份数据时，它应该靠记忆，还是靠结构？",
-    "tagsZh": [
-      "数据库",
-      "关系模型",
-      "数据管理"
-    ]
-  },
-  "0613": {
-    "titleZh": "她看见机器不只会算数",
-    "summaryZh": "在一台尚未建成的机器旁，Ada Lovelace 看见了指令、符号和可执行想法的早期影子。",
-    "sceneZh": "1833 年的伦敦，客厅里有人低声交谈。桌上的纸页和茶杯旁，一台由齿轮、轴杆和金属片组成的机器吸引着来客。",
-    "storyBodyZh": "那个女孩才十七岁。她站在机器旁边，看着人们围过来，听他们谈论计算、速度和精确。那时的计算表常靠人一点点手算，出错并不稀奇。如果机器能替人算得更快，已经足够让很多人兴奋。可她停得久了一点。她想的不是这台机器能算多少，而是另一个问题：如果数字不只代表数量，也能代表音符、图案、关系和规则，那么机器处理的，真的只是数字吗？这个问题没有马上变成答案。几年后，她翻译一篇介绍 Analytical Engine 的文章。翻译本来只需要转述原文，她却把注释越写越长，试着说明机器怎样一步一步计算 Bernoulli numbers：先取什么数，再做什么运算，什么时候重复，什么时候停止。那些表格不像今天的代码，却已经很接近把人的意图拆成机器可以执行的步骤。很多年后，人们回头寻找计算机程序最早的影子，常会翻到那篇译文和后面的 Notes。署名处的名字，是 Ada Lovelace。藏在这个故事里的，其实是软件与应用开发最核心的问题：怎样把一个模糊的人类想法，写成机器可以理解、执行、检查和改进的步骤。对学生来说，信息技术不是只会操作工具，而是看懂工具背后有哪些假设、路径和责任。",
-    "supportZh": "Ada Lovelace 于 1843 年翻译 Luigi Menabrea 关于 Analytical Engine 的文章，并加入长篇 Notes。其中 Note G 描述了计算 Bernoulli numbers 的方法，常被视为最早公开发表的计算机程序之一。Analytical Engine 在当时并未真正建成。",
-    "knowledgePointZh": "软件与应用开发及分析关心的不只是写代码，而是把需求、逻辑、符号、界面、测试和改进连成一套可靠过程，让机器能够执行人的想法。",
-    "reflectionQuestionZh": "当机器开始执行人的想法时，最难的部分是机器足够聪明，还是人能不能把自己的想法说清楚？",
-    "tagsZh": [
-      "软件",
-      "程序",
-      "Ada Lovelace"
-    ]
-  },
-  "0619": {
-    "titleZh": "钢琴卷纸和编译器",
-    "summaryZh": "一位海军数学家把程序语言从机器细节中拉近人类表达，也让 ICT 边界更宽。",
-    "sceneZh": "20 世纪中期，一位女性数学家在早期计算机旁工作，看到程序员被机器码和接线细节困住。",
-    "storyBodyZh": "她喜欢把抽象问题讲得可操作，也相信计算机不该只属于少数能背机器指令的人。她推动自动编程和编译器思想，让人可以用更接近英语的方式表达商业计算任务，再由机器翻译成可执行指令。许多人起初怀疑机器怎么可能理解这种语言，但这条路改变了软件生产和普通组织使用计算机的可能。未另分类的信息与通信技术常常容纳这种跨界发明：它既是语言设计，也是工具、教育、商业流程和计算文化。这个人叫 Grace Hopper，她推动早期编译器和 COBOL 发展，成为现代编程语言和计算普及史上的关键人物。今天的低代码工具和 AI 编程仍在延续这条线：技术入口变低以后，更重要的是让更多人清楚表达、检查和负责。这让今天的软件、网络、数据和 AI 工具重新变得具体：工具背后总有路径、假设、权限和责任。",
-    "supportZh": "Grace Hopper 是美国计算机科学家和海军军官，参与早期编译器、FLOW-MATIC 和 COBOL 相关工作，推动更接近自然语言的商业编程语言发展。",
-    "knowledgePointZh": "未另分类的信息技术收纳那些不适合标准软件、网络或使用标签的数字实践和工具创新。",
-    "reflectionQuestionZh": "当工具语言更接近人的语言，谁会第一次被允许进入技术世界？",
-    "tagsZh": [
-      "编译器",
-      "编程语言",
-      "ICT"
-    ]
-  },
-  "0688": {
-    "titleZh": "防空炮为什么总慢半拍",
-    "summaryZh": "一个关于控制和反馈的问题，把计算、工程、生物和通信连成新的跨学科语言。",
-    "sceneZh": "第二次世界大战期间，一位数学家研究防空炮如何预测飞机位置，发现机器必须根据误差不断修正自己。",
-    "storyBodyZh": "他看到的不是单一工程问题。雷达给出信息，炮塔需要动作，目标在移动，系统根据误差反馈调整；类似过程也出现在神经系统、动物运动、通信网络和自动控制里。于是他把“控制与通信”作为共同问题来思考，提出 feedback、信息和系统调节的语言。ICT 的跨学科意义在这里出现：计算不只是电脑，通信不只是电线，控制不只是机器，而是生命、技术和组织都可能共享的结构。这个人叫 Norbert Wiener，他创立 cybernetics，使控制、通信、反馈和系统思想成为信息技术、自动化和跨学科研究的重要基础。所以它不只是会不会操作机器，而是在训练人把想法清楚地交给系统，也能检查系统怎样回应。一旦系统能听见误差，机器就不再只是执行命令；它开始在偏差里学习怎样回到可控状态。",
-    "supportZh": "Norbert Wiener 1948 年出版《Cybernetics: Or Control and Communication in the Animal and the Machine》，提出控制、通信、反馈等跨生物、机器和社会系统的思想，对信息技术和系统科学影响深远。",
-    "knowledgePointZh": "信息与通信技术跨学科课程连接计算、通信、控制、系统、工程和人的使用场景。",
-    "reflectionQuestionZh": "一个系统能学习修正自己之前，必须先听见哪一种反馈？",
-    "tagsZh": [
-      "控制论",
-      "反馈",
-      "跨学科ICT"
-    ]
-  },
-  "0700": {
-    "titleZh": "铁桥、隧道和一艘大船",
-    "summaryZh": "一个总把约束推到极限的工程师，让工程、制造与建筑成为现代世界的骨架。",
-    "sceneZh": "19 世纪英国，一个年轻工程师站在泥泞河岸、铁路工地和造船厂之间，面对的从来不是单一难题。",
-    "storyBodyZh": "桥要跨得更远，隧道要穿过更危险的地层，铁路要让城市和港口重新连接，船要在大西洋上承受风浪、燃料和钢铁结构的限制。他常常大胆到让人害怕，也并非每个项目都顺利；成本、事故、健康和公众信任不断压过来。但正是在这种现实压力里，工程、制造与建筑的共同本质显出来：把材料、力、资金、时间、风险和人的移动需求组织成可运行的实体世界。这个人叫 Isambard Kingdom Brunel，他通过 Great Western Railway、Thames Tunnel、Clifton Suspension Bridge 和大型蒸汽船等项目成为工业时代工程史的重要人物。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。",
-    "supportZh": "Isambard Kingdom Brunel 是 19 世纪英国工程师，参与 Thames Tunnel，设计 Great Western Railway、Clifton Suspension Bridge，并建造 SS Great Western、SS Great Britain、SS Great Eastern 等船舶。",
-    "knowledgePointZh": "未进一步细分的工程、制造与建筑关注材料、结构、流程、风险、执行和真实世界约束如何共同形成可用系统。",
-    "reflectionQuestionZh": "一个宏大工程背后，最难的到底是想象力，还是把想象放进材料和风险里？",
-    "tagsZh": [
-      "工程",
-      "制造",
-      "建筑"
-    ]
-  },
-  "0710": {
-    "titleZh": "屋顶为什么不能只靠图纸漂亮",
-    "summaryZh": "一个工程师在复杂建筑里证明，工程不是给建筑补强，而是和形式一起思考可能性。",
-    "sceneZh": "20 世纪的悉尼，一座歌剧院的壳形屋顶让建筑师、政府和工程团队都陷入难题。",
-    "storyBodyZh": "他面对的不是普通计算题。建筑形态大胆，预算和政治压力不断增加，原本的曲面难以制造和支撑。工程团队必须把美学愿望、几何规则、预制构件、受力路径和施工方法重新组合，直到壳体可以被分解、制造和安装。这个过程并不完美，也伴随争议，但它说明工程行业的核心不只是按图施工。真正的工程要在愿望与现实之间翻译：哪些形状能被建造，哪些材料能承受，哪些步骤能让危险变小。这个人叫 Ove Arup，他领导 Sydney Opera House 工程工作，并推动结构工程与建筑设计深度协作的现代实践。今天任何大胆设计落地时，都还要经过类似翻译：把愿望拆进材料、预算、工期、责任和可以被检验的安全边界里。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Ove Arup 是结构工程师和 Arup 公司创始人。他的团队参与 Sydney Opera House 复杂壳体结构工程，项目成为建筑与工程协作史上的重要案例。",
-    "knowledgePointZh": "工程及工程行业研究结构、材料、系统、施工、维护和技术约束如何让设计变成可靠现实。",
-    "reflectionQuestionZh": "当一个想法看起来很美，你会从哪里开始判断它能不能被建成？",
-    "tagsZh": [
-      "工程",
-      "结构",
-      "建筑协作"
-    ]
-  },
-  "0711": {
-    "titleZh": "烧杯放大以后",
-    "summaryZh": "一只小烧杯里的成功，到了生产罐里会变成传热、搅拌、控制和安全问题。",
-    "sceneZh": "实验室里，一种清洁剂配方在小烧杯中表现很好；生产主管却追问它放大到一千升后是否仍然稳定。",
-    "storyBodyZh": "实验室里，一种清洁剂配方在小烧杯中表现很好。颜色稳定，气味可接受，反应也很快。研发人员把样品交给工厂后，生产主管只问了一句：“放大到一千升，还会这样吗？”\n\n在实验室里成功，很容易让人觉得问题已经解决。比例清楚，步骤写好，反应能发生，产品效果也不错。小烧杯里的结果看起来很可靠，像是只要把原料按比例放大，就能进入生产。\n\n可工厂里的罐体不是一只大号烧杯。搅拌速度不同，温度散得更慢，原料加入顺序会影响局部浓度，反应放热也可能在大体积中累积。小烧杯里几秒钟消失的泡沫，放大后可能变成溢出风险；实验室里手动滴加的步骤，到了生产线需要泵、阀门和监测仪表配合。\n\n生产主管让团队先做中试。他们把配方放到较小的试验罐中，记录温度变化、搅拌时间、泡沫高度和杂质比例。第一次测试时，温度上升比预期快，操作员不得不暂停加料。配方没有错，但工艺路线还不够稳。\n\n化学工程与工艺关心的，正是从“反应能发生”到“生产能持续”的转变。它要处理反应器、传热、传质、流体、分离、控制、安全、成本和废料。化学变化一旦走出烧杯，就进入了设备、人员和风险共同存在的现场。\n\n几轮调整后，团队改变了加料顺序，并增加冷却控制。清洁剂终于能稳定生产。研发人员再次看那只小烧杯时，知道真正的难题不是让反应发生一次，而是让它在更大的世界里安全地重复发生。",
-    "supportZh": "虚构生产场景；工艺要点来自化学工程常见的放大、中试、传热、搅拌、过程控制与安全风险。",
-    "knowledgePointZh": "化学工程与工艺把实验室反应转化为安全、可控、可规模化、可维护的生产流程，关注反应器、传热传质、流体、分离、控制、安全、成本和废料等条件。",
-    "reflectionQuestionZh": "当一个方案在小规模里成功时，你会不会继续追问：放大以后，哪些条件会变成新的风险？",
-    "tagsZh": [
-      "化学工程",
-      "工艺",
-      "规模化"
-    ]
-  },
-  "0712": {
-    "titleZh": "水龙头里的安全",
-    "summaryZh": "一位公共卫生工程师让净水技术成为城市看不见却最重要的保护系统之一。",
-    "sceneZh": "20 世纪初的美国城市里，自来水进入家庭，但病菌、管网和消毒剂剂量仍然让人不安。",
-    "storyBodyZh": "他关心的不只是把水变清，而是怎样让数十万人每天喝到足够安全的水。氯能杀菌，但剂量、接触时间、味道、管网污染和公众信任都要被精确处理。环境保护技术在这里不是某个漂亮设备，而是一整套工程判断：检测、消毒、输送、监测和维护，必须长期稳定地工作。人们最好永远不要想起它，因为想起它时往往已经出事。这个人叫 Abel Wolman，他与 Linn Enslow 发展供水氯化剂量控制方法，推动现代城市饮用水消毒和公共卫生工程。今天任何保护环境的技术都必须经过这一步：装置不是答案本身，长期运行、维护和责任才决定它是否真的保护了人。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。一杯清水看起来普通，背后却有剂量、管网、病菌和公众信任共同维持的脆弱平衡。",
-    "supportZh": "Abel Wolman 与 Linn Enslow 于 1919 年提出供水氯化剂量控制方法，对城市饮用水消毒和公共卫生工程影响深远。Wolman 后来成为环境工程和公共卫生工程重要人物。",
-    "knowledgePointZh": "环境保护技术用工程方法减少污染、处理废物、保护水气土壤和公共健康。",
-    "reflectionQuestionZh": "一个环保技术如果每天都成功，你是不是反而最容易忘记它存在？",
-    "tagsZh": [
-      "环境保护",
-      "水处理",
-      "公共卫生工程"
-    ]
-  },
-  "0713": {
-    "titleZh": "交流电的长路",
-    "summaryZh": "一个总在脑中旋转机器的人，让电力从局部照明走向远距离能源系统。",
-    "sceneZh": "19 世纪末，一个移民工程师在美国工厂和实验室之间工作，脑子里不断想着旋转磁场。",
-    "storyBodyZh": "直流系统可以点亮城市的一部分，但远距离输电困难。这个年轻人想象电流可以周期性改变方向，利用变压器升压降压，让电能走得更远。他的交流电机和多相系统并不是只解决一个机器问题，而是改变了发电、输电、工业动力和家庭用电的基础结构。电力与能源从这里显出系统性：能源不是插座里的瞬间便利，而是一张由发电机、线路、标准、商业竞争和公共安全组成的网络。这个人叫 Nikola Tesla，他的交流电机和多相交流系统专利对现代交流电力系统发展产生关键影响。今天能源系统的争论仍类似：发电方式、输送距离、标准、成本和安全，都会决定一种技术能不能进入普通生活。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。",
-    "supportZh": "Nikola Tesla 1880 年代获得交流电机和多相交流系统相关专利，后来与 Westinghouse 交流电系统推广相关。交流输电成为现代电力系统的重要基础。",
-    "knowledgePointZh": "电力与能源关注发电、输配、效率、储能、安全和能源系统如何支撑生活与产业。",
-    "reflectionQuestionZh": "你按下开关时，背后是哪一整套能源系统在替你工作？",
-    "tagsZh": [
-      "电力",
-      "交流电",
-      "能源系统"
-    ]
-  },
-  "0714": {
-    "titleZh": "蒸汽机自己调节速度",
-    "summaryZh": "一个旋转的调速器让自动化第一次显得像机器在听自己的状态。",
-    "sceneZh": "18 世纪的工坊里，蒸汽机一会儿太快一会儿太慢，工人必须不断照看速度。",
-    "storyBodyZh": "他改进蒸汽机时面对的不只是功率问题，还有稳定性。机器如果负载变化就失控，工厂就无法可靠运转。离心调速器通过旋转球感知速度变化，速度快时收小蒸汽，速度慢时放开，让机器根据自身状态自动修正。这个装置看似机械，却包含自动化的核心思想：传感、反馈、调节和控制。电子与自动化后来进入电路、传感器和软件，但这个早期机械反馈已经说明，机器可以不只是执行命令，也可以持续比较目标和现实。这个人叫 James Watt，他改进蒸汽机并使用离心调速器，使反馈控制成为自动化和控制工程史上的经典例子。今天从恒温器到自动驾驶都还在处理同一个核心：系统必须看见自己的偏差，才可能在危险前修正动作。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "James Watt 对蒸汽机作出关键改进，并在蒸汽机中使用离心调速器控制速度。离心调速器常被作为反馈控制和自动化史上的重要早期装置。",
-    "knowledgePointZh": "电子与自动化研究电路、控制、传感、机器和自动系统如何感知并行动。",
-    "reflectionQuestionZh": "当机器能根据自己的误差调整行为，它和普通工具之间的界线在哪里？",
-    "tagsZh": [
-      "自动化",
-      "反馈",
-      "控制"
-    ]
-  },
-  "0715": {
-    "titleZh": "螺丝终于可以彼此替换",
-    "summaryZh": "一台车床让机械与金属加工从手工配合走向标准化和可重复制造。",
-    "sceneZh": "18 世纪末的伦敦工坊里，一个年轻机械师反复改进车床，想让螺纹不再只靠师傅手感。",
-    "storyBodyZh": "在精密制造之前，零件常常要手工修配，坏了也难以替换。螺丝看起来小，却决定机器能不能被拆装、维修和复制。他改进螺纹车床，让螺纹加工更准确、更一致，也推动机床成为制造其他机器的“母机器”。机械与金属行业在这里显出基础性：现代工业不只是发明一台机器，而是让零件、标准、工具和工人的技能形成可重复的制造体系。这个人叫 Henry Maudslay，他发展精密螺纹车床和机床技术，被视为英国机床工业和精密机械制造的重要奠基人物之一。今天制造业里的标准件也在提醒人：效率不只来自机器更快，还来自许多部件能被可靠地替换、检查和协作。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。标准化听起来冷，但它让陌生零件可以彼此配合，也让维修、制造和安全不再完全依赖个人手感。",
-    "supportZh": "Henry Maudslay 是英国机械师和发明者，改进螺纹车床和精密机床，对标准螺纹、可互换零件和机床工业发展具有重要影响。",
-    "knowledgePointZh": "机械与金属行业关注结构、部件、加工、维修、精度和力的传递。",
-    "reflectionQuestionZh": "一个小螺丝如果不能被可靠复制，整台机器会失去什么？",
-    "tagsZh": [
-      "机械",
-      "金属加工",
-      "机床"
-    ]
-  },
-  "0716": {
-    "titleZh": "沙丘上的十二秒",
-    "summaryZh": "一次短暂飞行让交通工具设计同时面对升力、控制、发动机和人的判断。",
-    "sceneZh": "1903 年北卡罗来纳的沙丘上，两位自行车店出身的兄弟把木架、布翼和发动机推向海风。",
-    "storyBodyZh": "他们并不是只把发动机装到翅膀上。此前他们做风洞实验，测试翼型，研究滑翔，尤其盯住一个关键问题：飞起来之后怎样控制？许多失败让他们明白，航空器不是单一部件的胜利，而是升力、推力、结构重量、操纵面和飞行员身体判断的协调。机动车、船舶与航空器领域正是这样：移动系统必须把速度、稳定、安全、材料和环境放在一起。那十二秒并不长，却证明有动力、可控、持续的重于空气飞行成为可能。这个人叫 Orville Wright 和 Wilbur Wright，他们完成 1903 年 Kitty Hawk 飞行，成为航空器发展史上的关键人物。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Wright brothers 1903 年 12 月 17 日在 Kitty Hawk 附近完成有动力、可控、持续的重于空气飞行。他们此前通过滑翔机、风洞和控制系统研究逐步改进设计。",
-    "knowledgePointZh": "机动车、船舶与航空器关注交通工具设计、维护、运行、安全和环境约束。",
-    "reflectionQuestionZh": "移动得更快之前，一个交通工具必须先学会怎样不失控？",
-    "tagsZh": [
-      "航空",
-      "交通工具",
-      "控制"
-    ]
-  },
-  "0719": {
-    "titleZh": "战斗机咳嗽了一下",
-    "summaryZh": "一个小金属垫圈说明，未另分类的工程实践常在现场故障和快速修复之间出现。",
-    "sceneZh": "第二次世界大战期间，一位女工程师听飞行员抱怨：战斗机俯冲后发动机会短暂失力。",
-    "storyBodyZh": "问题并不适合被慢慢放进整齐研发流程。飞行员在空中需要立即可靠的动力，发动机在负 G 机动中供油异常，完整改造又来不及。她研究化油器问题，设计一个简单节流装置，让燃油流量在关键时刻不至于失控。这个小零件不是华丽发明，却让飞机在等待更彻底方案前获得实用改善。未另分类的工程行业常常这样：现场约束、临时修复、安全验证和制造可行性一起逼迫工程师作出足够可靠的判断。这个人叫 Beatrice Shilling，她设计的 R.A.E. restrictor 帮助缓解 Merlin 发动机负 G 供油问题，成为航空工程现场解决方案的经典故事。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。她听见的不是抱怨，而是机器在极端动作里暴露出的限制；真正的修复从愿意相信现场声音开始。",
-    "supportZh": "Beatrice Shilling 是英国工程师。二战期间她设计的 R.A.E. restrictor，俗称 Miss Shilling's orifice，用于缓解早期 Merlin 发动机在负 G 机动中燃油供应问题。",
-    "knowledgePointZh": "未另分类的工程行业处理不适合标准工程分支、但需要安全、制造和现场判断的技术实践。",
-    "reflectionQuestionZh": "临时修复什么时候是冒险，什么时候是经过约束检验后的工程智慧？",
-    "tagsZh": [
-      "工程",
-      "航空",
-      "现场修复"
-    ]
-  },
-  "0720": {
-    "titleZh": "汽车底盘自己走过来",
-    "summaryZh": "一条移动装配线让制造从手工作坊转向节拍、标准化和大规模生产。",
-    "sceneZh": "1913 年的底特律工厂里，汽车底盘不再静静等工人围上来，而是沿着线缓慢移动。",
-    "storyBodyZh": "他想解决的不是单台汽车能不能造出来，而是怎样让更多人买得起、怎样让每一步工作稳定重复。装配线把任务拆小，把零件标准化，把节拍固定，也把工人的动作纳入严格流程。这个方法提高产量、降低成本，同时也带来劳动单调、控制和工人压力等问题。制造与加工在这里变得现代：产品不是只由技术发明决定，还由流程、时间、供应链、工人技能和管理制度共同决定。这个人叫 Henry Ford，他在 Highland Park 工厂推广移动装配线，使汽车大规模生产成为 20 世纪制造业的重要范式。今天看一条生产线，也不能只看产量；还要看节拍怎样改变劳动、质量、价格，以及人和机器之间的关系。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。",
-    "supportZh": "Henry Ford 的 Highland Park 工厂于 1913 年引入移动装配线，大幅缩短 Model T 生产时间，成为大规模生产和制造流程标准化史上的重要案例。",
-    "knowledgePointZh": "制造与加工关注原料、流程、标准化、质量、储存、运输和重复生产。",
-    "reflectionQuestionZh": "当一件商品变得便宜，是谁的时间、动作和自由被重新安排了？",
-    "tagsZh": [
-      "制造",
-      "装配线",
-      "标准化"
-    ]
-  },
-  "0721": {
-    "titleZh": "瓶子里的汤为什么没有坏",
-    "summaryZh": "一场为军队供食的竞赛，让食品加工从厨房经验走向保存、密封和时间管理。",
-    "sceneZh": "19 世纪初的法国，一个糖果师把食物装进玻璃瓶，加热、密封，再观察它能保存多久。",
-    "storyBodyZh": "他并不知道后来微生物理论会怎样解释这一切。他面对的是更实际的问题：军队和远航需要食物不那么快腐坏。经过多年试验，他发现把食物放入瓶中、加热、密封，可以显著延长保存时间。食品加工在这里出现为一门关于时间和安全的技术：味道只是开始，真正困难的是微生物、温度、容器、密封、运输和可重复流程。这个人叫 Nicolas Appert，他发明早期罐藏保存方法，并于 1810 年出版相关实践，成为食品保存和加工史上的重要先驱。今天食品加工仍在这条线上工作：好吃只是开始，安全、时间、运输、标签和信任决定食物能不能离开厨房。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Nicolas Appert 通过加热密封容器保存食物，1810 年出版《L'Art de conserver...》，被称为罐藏食品保存法的重要发明者，早于 Pasteur 对微生物机制的解释。",
-    "knowledgePointZh": "食品加工把原料变成安全、稳定、可运输、可储存和可销售的食品。",
-    "reflectionQuestionZh": "一份好吃的食物，要怎样才能经得起时间、距离和看不见的生命？",
-    "tagsZh": [
-      "食品加工",
-      "保存",
-      "罐藏"
-    ]
-  },
-  "0722": {
-    "titleZh": "橡胶不再怕热和冷",
-    "summaryZh": "一次偶然加热让材料从黏糊糊的麻烦变成现代工业可依赖的部件。",
-    "sceneZh": "19 世纪美国，一个负债累累的发明者反复摆弄天然橡胶，冬天变硬，夏天发黏的问题总解决不了。",
-    "storyBodyZh": "他不是在整洁实验室里顺利推进，而是在失败、贫困和执念里不断尝试。天然橡胶有弹性，却太受温度影响，难以成为可靠工业材料。后来橡胶与硫在加热条件下发生变化，材料变得更稳定、更耐用、更适合制造。材料领域的关键就在这里：玻璃、纸、塑料、木材或橡胶都不是只有外观，它们有结构、性能、加工条件和使用环境。一个材料被真正理解，意味着人知道它在压力、温度、时间和反复使用中会怎样。这个人叫 Charles Goodyear，他发现橡胶硫化工艺，使橡胶成为现代工业中更稳定可用的材料。今天材料选择也常这样改变生活：一个配方调整，可能让轮胎、电线、鞋底和医疗用品都获得新的可靠性。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。",
-    "supportZh": "Charles Goodyear 19 世纪发现橡胶 vulcanization 硫化工艺，通过加热橡胶和硫改善天然橡胶的耐热、弹性和稳定性，对材料和工业制品影响深远。",
-    "knowledgePointZh": "材料学习关注玻璃、纸、塑料、木材等材料的性质、加工、性能和用途。",
-    "reflectionQuestionZh": "你选择材料时，是在选择它看起来怎样，还是选择它在压力下会怎样？",
-    "tagsZh": [
-      "材料",
-      "橡胶",
-      "硫化"
-    ]
-  },
-  "0723": {
-    "titleZh": "织机读懂了打孔卡",
-    "summaryZh": "一台会按卡片织花的机器，让纺织品、自动化和后来计算思想意外相遇。",
-    "sceneZh": "19 世纪初的里昂，一个织工之子看见复杂花纹需要大量人力，也让纺织生产昂贵缓慢。",
-    "storyBodyZh": "他改进织机，让打孔卡片控制经线抬起的顺序。卡片上的孔不是花纹本身，却像一套可执行指令，告诉机器何时让哪根线通过。纺织品领域在这里不只是衣料和皮革，也包括纤维结构、图案、机器、劳动和可重复生产。这个发明带来效率，也引发工人对失业的恐惧；技术进步从来不只是机器更聪明，也会改变人的工作。这个人叫 Joseph Marie Jacquard，他推广 Jacquard loom，使复杂织物图案可通过打孔卡控制，也影响了自动化和早期计算思想。今天编程和自动化仍能听见这台织机的回声：当图案被写成指令，手工、机器和符号之间的边界就变了。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Joseph Marie Jacquard 1804-1805 年推广使用打孔卡控制的 Jacquard loom，使复杂花纹织造自动化。该机制后来常被提及为可编程机器和计算史的重要前身。",
-    "knowledgePointZh": "纺织品、服装、鞋类与皮革关注纤维、结构、舒适、安全、工艺和贴近身体的材料。",
-    "reflectionQuestionZh": "当图案变成机器可以读取的指令，工艺和计算之间的距离还剩多远？",
-    "tagsZh": [
-      "纺织",
-      "织机",
-      "打孔卡"
-    ]
-  },
-  "0724": {
-    "titleZh": "矿井里的木梯和空气",
-    "summaryZh": "一本关于矿业的书让采矿从经验秘方，走向可记录的技术、风险和环境知识。",
-    "sceneZh": "16 世纪中欧矿区，一个医生兼学者下到矿井附近，观察矿工怎样通风、排水、支护和冶炼。",
-    "storyBodyZh": "他看到的不是地下宝藏的浪漫，而是危险劳动：塌方、毒气、积水、矿石分类、冶炼烟尘和工具磨损。于是他把采矿、地质、机械、冶金和劳动现场写成系统知识，配上图像，让经验可以被传递和讨论。采矿与开采的核心由此显现：资源从地下进入社会，必须经过发现、提取、安全、环境和供应链，每一步都有代价。这个人叫 Georgius Agricola，他的《De Re Metallica》系统记录 16 世纪矿业与冶金实践，成为采矿工程史上的经典著作。今天谈资源开采，仍不能只问能不能挖出来；还要问人在地下怎样呼吸，土地怎样恢复，风险由谁承担。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。矿井里的每个决定都贴着身体：一根木梯、一股空气、一点水位变化，都可能决定人能不能安全回来。",
-    "supportZh": "Georgius Agricola 1556 年出版《De Re Metallica》，系统描述采矿、矿物、冶金、通风、排水、机械和矿工劳动，是矿业和冶金史的重要经典。",
-    "knowledgePointZh": "采矿与开采关注资源发现、提取、安全、环境影响和供应链。",
-    "reflectionQuestionZh": "一个产品看起来很干净时，它的地下故事被谁承担了？",
-    "tagsZh": [
-      "采矿",
-      "冶金",
-      "资源"
-    ]
-  },
-  "0729": {
-    "titleZh": "工厂为什么要停下来",
-    "summaryZh": "一种看似反直觉的生产方式，让制造从盲目多做转向持续发现浪费。",
-    "sceneZh": "20 世纪日本汽车工厂里，一个工程师看到库存堆得很高，却并不代表流程健康。",
-    "storyBodyZh": "传统直觉会觉得机器不停才有效率，库存多才安全。他反过来观察：过量生产会掩盖问题，等待会吞掉时间，搬运和返工会消耗人。生产线如果出现异常，应该让问题显露出来，而不是继续把缺陷向后推。他推动 just-in-time、看板和持续改进等实践，让制造不只是加工物品，也是在设计学习系统。未另分类的制造与加工常常处理这种跨流程、管理、现场技能和质量的混合知识。这个人叫 Taiichi Ohno，他发展 Toyota Production System，长期影响精益生产和现代制造管理。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。让工厂停下来并不是浪费时间，有时正是为了让被库存和速度遮住的问题终于露出来。",
-    "supportZh": "Taiichi Ohno 是 Toyota Production System 的关键发展者，推动 just-in-time、kanban、jidoka 和持续改进等思想，对 lean manufacturing 和制造管理影响深远。",
-    "knowledgePointZh": "未另分类的制造与加工收纳那些跨越生产流程、质量、现场管理和混合加工实践的问题。",
-    "reflectionQuestionZh": "一个工厂什么时候应该追求不停运转，什么时候应该停下来让问题出现？",
-    "tagsZh": [
-      "制造",
-      "精益生产",
-      "流程"
-    ]
-  },
-  "0730": {
-    "titleZh": "建筑必须站得住、用得上、看得动人",
-    "summaryZh": "一本古老建筑书把结构、功能和美感放在一起，成为建筑与施工的长久问题。",
-    "sceneZh": "古罗马时期，一个建筑师和工程师回顾神庙、水道、机械和城市空间，试图把建造经验写给后来的人。",
-    "storyBodyZh": "他不把建筑只看成墙和屋顶，也不把美当成表面装饰。一个建筑物必须坚固，能服务人的使用，也要有比例和秩序带来的美感。材料、地基、方向、公共用途、机械和人体尺度，都被放进同一套思考。建筑与施工的基础问题在这里很早就被说清：建造不是堆东西，而是在安全、用途、技术、气候、身体和文化之间达成一种可持久的安排。这个人叫 Vitruvius，他的《De architectura》提出 firmitas、utilitas、venustas 等思想，深刻影响建筑理论和建筑教育。学生读建筑时真正要练习的，正是这种同时看见结构、使用者和城市生活的能力。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Vitruvius 是古罗马建筑师和工程师，著有《De architectura》。其中关于坚固、实用、美观的思想长期影响建筑理论，并在文艺复兴后被广泛重新阅读。",
-    "knowledgePointZh": "未进一步细分的建筑与施工关注空间、结构、材料、使用、施工和长期维护。",
-    "reflectionQuestionZh": "一座建筑如果只好看，却不好用或不安全，它还算真正完成了吗？",
-    "tagsZh": [
-      "建筑",
-      "施工",
-      "Vitruvius"
-    ]
-  },
-  "0731": {
-    "titleZh": "她站在街角看人行道",
-    "summaryZh": "一个普通街区观察者让城市规划重新看见人行道、邻里和日常安全。",
-    "sceneZh": "20 世纪中期的纽约，一个写作者推着婴儿车走在街上，注意到孩子、店主、邻居和陌生人怎样共享人行道。",
-    "storyBodyZh": "当时许多规划者迷恋大尺度清除、分区和高速道路，觉得旧街区混乱低效。她却从日常生活里看到另一套秩序：小店的眼睛、短街区的穿行、混合用途带来的活力、不同时间出现的人群，以及邻里之间不必认识也能互相照看的关系。建筑与城镇规划在这里从鸟瞰图回到人的身体高度。城市不是只给汽车、模型和开发指标看的，它首先是人们不断相遇、停留、绕行、照看和争论的生活场。这个人叫 Jane Jacobs，她的《The Death and Life of Great American Cities》改变了现代城市规划对街道、社区和混合用途的理解。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。街角不是抽象规划单位，而是孩子、老人、店主和路人每天互相确认安全感的地方。",
-    "supportZh": "Jane Jacobs 1961 年出版《The Death and Life of Great American Cities》，批判自上而下的城市更新，强调人行道生活、混合用途、短街区和社区自组织，对城市规划影响深远。",
-    "knowledgePointZh": "建筑与城镇规划关注空间、动线、公共生活、安全、使用者和城市长期发展。",
-    "reflectionQuestionZh": "你熟悉的一条街，是被规划图救活的，还是被每天使用它的人救活的？",
-    "tagsZh": [
-      "城市规划",
-      "街道",
-      "公共生活"
-    ]
-  },
-  "0732": {
-    "titleZh": "桥上的钢缆和病床旁的笔记",
-    "summaryZh": "一座大桥的建成说明，土木工程不仅是结构计算，也是长期组织和现场责任。",
-    "sceneZh": "19 世纪纽约，一座跨越 East River 的大桥开工后，主工程师病倒，工地却不能停。",
-    "storyBodyZh": "她原本不是官方意义上的工程师，却在丈夫因减压病无法到现场后，承担起传递计算、材料、索缆、沉箱和施工指令的工作。她学习技术细节，和工人、政界、工程团队沟通，也在质疑声中维护项目连续性。建筑与土木工程在这里不是单个天才的图纸，而是结构力学、材料、施工风险、公共资金、疾病和沟通共同组成的长期承诺。桥真正跨越的不只是河流，还有设计和现实之间的漫长距离。这个人叫 Emily Warren Roebling，她在 Brooklyn Bridge 建设后期发挥关键工程协调作用，成为土木工程史上重要女性人物。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Brooklyn Bridge 由 John A. Roebling 设计，Washington Roebling 主持施工；Washington 因减压病受限后，Emily Warren Roebling 在沟通、技术学习和项目协调中发挥关键作用，1883 年大桥开放。",
-    "knowledgePointZh": "建筑与土木工程把结构、道路、桥梁、水、电和公共安全落到实体系统。",
-    "reflectionQuestionZh": "一座桥建成时，除了钢和石头，还有谁的学习、照护和坚持被埋进结构里？",
-    "tagsZh": [
-      "土木工程",
-      "桥梁",
-      "施工"
-    ]
-  },
-  "0788": {
-    "titleZh": "一个圆顶能不能少用材料",
-    "summaryZh": "一个几何圆顶把工程、制造、建筑和资源问题连接成同一个实验。",
-    "sceneZh": "20 世纪美国，一个总爱画结构线和地图的人，反复问怎样用更少材料覆盖更大空间。",
-    "storyBodyZh": "他不是只想做奇特造型，而是着迷于效率：张力怎样分布，三角形为什么稳定，球面结构如何把重量分散，临时住房和大型空间能不能更轻、更快、更省。geodesic dome 把数学几何、结构工程、制造节点、建筑空间和资源伦理放在一起。它也不是万能答案，实际使用会遇到防水、维护、舒适和成本问题；但跨学科工程的价值正是在这里显现：一个形状同时要求几何、材料、建造、居住和社会理想共同受检验。这个人叫 Buckminster Fuller，他推广 geodesic dome，并以系统设计和“doing more with less”的思想影响工程、建筑和设计教育。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。圆顶的问题看似像几何游戏，真正牵动的却是住房、材料浪费和人类怎样更轻地占用世界。",
-    "supportZh": "Buckminster Fuller 推广 geodesic dome，并在结构、设计、资源效率和系统思维方面产生广泛影响。geodesic dome 使用三角网格分布受力，以较少材料覆盖较大空间。",
-    "knowledgePointZh": "工程、制造与建筑跨学科课程把结构、材料、生产、空间、资源和使用者需求放在同一问题里。",
-    "reflectionQuestionZh": "一个结构如果更轻、更省，是否也必须更认真回答它怎样被人使用？",
-    "tagsZh": [
-      "跨学科工程",
-      "圆顶",
-      "系统设计"
-    ]
-  },
-  "0799": {
-    "titleZh": "臭味背后的城市系统",
-    "summaryZh": "一次城市污水工程说明，未另分类的工程常在公共健康、土木、政治和日常生活之间展开。",
-    "sceneZh": "1858 年伦敦夏天，泰晤士河臭气冲进议会，城市终于无法继续假装污水问题只是气味问题。",
-    "storyBodyZh": "他面对的是一个被城市增长放大的系统性麻烦：厕所、河流、潮汐、疾病、街道、预算、政治拖延和公众恐惧全缠在一起。解决方案不是清理一条水沟，而是设计截流下水道、泵站和排放系统，把污水从城市生活核心转移出去。今天我们会继续追问污染被转移到哪里、谁承担环境代价，但这个工程确实让现代城市意识到，基础设施决定公共健康。未另分类的工程、制造与建筑常常就发生在这种边界：它既是土木工程，也是卫生、行政、政治和城市生活的重新组织。这个人叫 Joseph Bazalgette，他设计伦敦现代下水道系统，成为城市基础设施和公共卫生工程史上的重要人物。这让今天的工厂、工地和机器重新变得具体：想法只有经过材料、流程、安全和长期使用，才算真正站得住。",
-    "supportZh": "Joseph Bazalgette 19 世纪为 London 设计大型下水道系统，Great Stink of 1858 后工程获得推动。该系统改善城市污水处理，对公共卫生和现代城市基础设施影响深远。",
-    "knowledgePointZh": "未另分类的工程、制造与建筑处理跨越基础设施、公共健康、材料、施工和治理的复杂项目。",
-    "reflectionQuestionZh": "一个城市最重要的工程，为什么常常是在你闻不到、看不见时才算成功？",
-    "tagsZh": [
-      "基础设施",
-      "下水道",
-      "公共健康"
-    ]
-  },
-  "0800": {
-    "titleZh": "麦田里的矮秆",
-    "summaryZh": "一片小麦试验田让农业、生态、育种和公共饥饿问题连成同一个世界。",
-    "sceneZh": "20 世纪中期的墨西哥试验田里，一个植物病理学家弯腰查看小麦，关心的是茎秆为什么会倒伏。",
-    "storyBodyZh": "他面对的不是一株植物的漂亮问题，而是饥饿、病害、产量、土壤、灌溉、肥料和国家粮食政策。高产小麦如果太高，施肥后容易倒伏；如果抗病性不足，一场病害就能毁掉收成。他和团队反复杂交、筛选、试种，把矮秆、高产和抗病性结合起来。农业、林业、渔业与兽医的宽镜头在这里很清楚：人类照料生命并不是只追产量，还要面对生态代价、社会分配和长期可持续。这个人叫 Norman Borlaug，他推动半矮秆高产小麦育种和绿色革命，因对粮食增产的贡献获得 1970 年诺贝尔和平奖。今天再谈粮食安全时，这个问题还在：增产不能只算亩产，也要把土壤、水、农民处境和生态风险一起放进账本。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "supportZh": "Norman Borlaug 在墨西哥推动抗病、高产半矮秆小麦育种，相关品种在绿色革命中发挥重要作用。他于 1970 年获诺贝尔和平奖；绿色革命也持续面临关于生态和社会影响的讨论。",
-    "knowledgePointZh": "未进一步细分的农业、林业、渔业与兽医关注人如何在生态、生产、健康和资源限制中照料生命。",
-    "reflectionQuestionZh": "当一种作物救了很多人，它的生态和社会代价也应该怎样被认真看见？",
-    "tagsZh": [
-      "农业",
-      "育种",
-      "粮食"
-    ]
-  },
-  "0810": {
-    "titleZh": "种子不再随手撒出去",
-    "summaryZh": "一台播种机让农业从凭经验撒播，转向行距、深度和效率的系统管理。",
-    "sceneZh": "18 世纪英国农田里，一个农场主看见种子被随手撒开，很多被鸟吃掉，很多落在不合适的深度。",
-    "storyBodyZh": "他并不是只想做一台新机器，而是对土地上的浪费感到不安。种子如果能按固定深度、固定间距进入土壤，就更容易发芽，也便于后续除草和管理。他改进 seed drill，让播种变得更有秩序。今天看来，机械化也带来单一化和土地管理的新的问法，但这个故事说明农业的基础问题从来不是“把种子扔进地里”这么简单。它涉及工具、土壤、时间、劳动力和对生命条件的精确安排。这个人叫 Jethro Tull，他推广播种机和条播思想，成为英国农业改良史上的重要人物。今天的农业技术也常在同一个问题里打转：怎样提高效率，同时不把土地、种子多样性和人的判断都交给单一工具。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。",
-    "supportZh": "Jethro Tull 是 18 世纪英国农业改良者，推广 seed drill 播种机和条播等方法，1731 年出版《Horse-Hoeing Husbandry》，影响农业机械化和播种管理。",
-    "knowledgePointZh": "未进一步细分的农业关注土地、作物、工具、劳动、产量和长期照料条件。",
-    "reflectionQuestionZh": "一个种子能否发芽，取决于运气，还是取决于人怎样安排它进入土地？",
-    "tagsZh": [
-      "农业",
-      "播种机",
-      "农艺"
-    ]
-  },
-  "0811": {
-    "titleZh": "花生不是穷作物",
-    "summaryZh": "一个从艰难童年走出的植物学家，让作物生产和土地恢复成为同一个问题。",
-    "sceneZh": "20 世纪初的美国南方，一个农业教师走进被棉花耗累的土地，手里拿着花生、甘薯和土样。",
-    "storyBodyZh": "他知道农民不是不努力，而是被单一作物、贫困和土壤退化困住。棉花长期消耗土地，也让农户收入脆弱。他研究豆科作物、轮作、土壤改良和可替代用途，向农民推广花生、甘薯等作物的种植和加工方法。作物与畜牧生产在这里不只是产量竞赛，而是土地、营养、市场、家庭收入和生态恢复的关系。这个人叫 George Washington Carver，他在 Tuskegee Institute 推动作物轮作、土壤改良和花生等作物用途研究，成为美国农业教育史上的重要人物。今天作物与畜牧生产也需要这种眼光：一种作物不是单独存在，它和土壤、市场、营养、病虫害和农民收入一起变化。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。",
-    "supportZh": "George Washington Carver 在 Tuskegee Institute 工作，推广作物轮作、花生和甘薯等替代作物，帮助南方农民改善土壤和收入结构。他的推广教育对农业实践影响广泛。",
-    "knowledgePointZh": "作物与畜牧生产关注种植、饲养、产量、健康、土壤和食物系统。",
-    "reflectionQuestionZh": "一种被看低的作物，什么时候可能成为土地和家庭重新恢复的入口？",
-    "tagsZh": [
-      "作物",
-      "土壤",
-      "农业教育"
-    ]
-  },
-  "0812": {
-    "titleZh": "一棵李树开出太多可能",
-    "summaryZh": "一个植物育种者让园艺从照看花园，走向选择、杂交和长期耐心。",
-    "sceneZh": "19 世纪末的加州，一个年轻人从东部来到气候温和的土地上，开始试验果树、花卉和种子。",
-    "storyBodyZh": "他没有把园艺只当作把植物养漂亮。每一株植物都有差异，哪一株更甜，哪一株更耐寒，哪一株花色更特别，哪一株适合当地市场，都需要被观察、选择和繁殖。他培育李子、马铃薯、仙人掌和许多观赏植物，也留下关于育种商业化和科学严谨性的争议。园艺在这里显出双重性：它既是审美和照料，也是遗传、环境、市场和时间共同塑造植物的实践。这个人叫 Luther Burbank，他以大量植物育种和园艺新品种闻名，影响了美国园艺和植物改良文化。今天园艺仍保留这种耐心：修剪、嫁接和选育不是控制生命，而是在许多季节里和植物条件慢慢协商。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "supportZh": "Luther Burbank 是美国园艺家和植物育种者，培育 Burbank potato、Shasta daisy、plum 等众多植物品种。他的工作影响园艺和植物改良，也伴随科学记录严谨性等争议。",
-    "knowledgePointZh": "园艺关注观赏植物、果蔬、土壤、修剪、繁殖、光照和空间照料。",
-    "reflectionQuestionZh": "当你照料一株植物时，你是在让它服从，还是在和它的可能性合作？",
-    "tagsZh": [
-      "园艺",
-      "育种",
-      "植物"
-    ]
-  },
-  "0819": {
-    "titleZh": "一根稻草也可以是一种哲学",
-    "summaryZh": "一个农民的长期试验让农业边界出现自然农法、生态和生活方式的混合问题。",
-    "sceneZh": "20 世纪日本乡间，一个受过植物病理学训练的人回到家乡田地，开始怀疑现代农业是否越做越复杂。",
-    "storyBodyZh": "他并不是因为不懂科学才反对过度干预，恰恰相反，他见过病理学和农业技术如何解释植物，也看到农民越来越依赖耕作、化肥、农药和劳力。他在稻田里试验不耕作、覆盖稻草、混播、减少外部投入，让田地成为一个更自我调节的生态系统。这个方法并不适合被简单神化，也需要根据地区和产量现实审慎判断；但它说明未另分类的农业经常处在科学、哲学、生态和生活实践之间。这个人叫 Masanobu Fukuoka，他提出 natural farming，并通过《The One-Straw Revolution》影响了生态农业和永续农业思潮。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。他退回田里，不是为了拒绝知识，而是为了问知识是否还能听见土地自己的节奏。",
-    "supportZh": "Masanobu Fukuoka 是日本农民和思想者，提出 natural farming，强调不耕作、覆盖、少投入和顺应生态过程。其《The One-Straw Revolution》对生态农业和 permaculture 思潮有影响。",
-    "knowledgePointZh": "未另分类的农业收纳那些跨越种植、生态、社区、哲学和土地实践的农业形式。",
-    "reflectionQuestionZh": "少做一件事，什么时候不是偷懒，而是对生态过程的信任？",
-    "tagsZh": [
-      "自然农法",
-      "生态农业",
-      "土地"
-    ]
-  },
-  "0821": {
-    "titleZh": "森林不能只按木材计算",
-    "summaryZh": "一个林务改革者让森林管理从砍伐收益，转向长期公共资源和专业治理。",
-    "sceneZh": "19 世纪末的美国，一个年轻人到欧洲学习林学后回国，看到大片森林被短期砍伐逻辑支配。",
-    "storyBodyZh": "他并不是反对使用森林，而是反对只把森林当作一次性矿藏。木材、水源、土壤、火灾、野生动物和地方经济都需要长期管理。他推动专业林务、国家森林和持续产出思想，主张为了公共利益管理自然资源。今天我们也会批判早期保护主义里对原住民和地方社区的忽视，但林业作为学科的一个核心问题由此凸显：森林的时间尺度比商业周期长得多。这个人叫 Gifford Pinchot，他是美国林务改革重要人物，首任 U.S. Forest Service 局长，并推动 conservation 林业理念。今天谈资源管理时，这个提醒仍然尖锐：如果只看眼前收益，森林很容易在账本里变短，在现实里变空。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "supportZh": "Gifford Pinchot 是美国林业家和政治人物，曾任 U.S. Forest Service 首任局长，主张以科学管理和公共利益原则管理森林资源，是美国 conservation 运动重要人物。",
-    "knowledgePointZh": "林业关注森林资源、木材、生态、水土保持、火险、生物多样性和长期管理。",
-    "reflectionQuestionZh": "如果一片森林的生命超过几代人，谁有资格替它做短期决定？",
-    "tagsZh": [
-      "林业",
-      "森林管理",
-      "保护"
-    ]
-  },
-  "0831": {
-    "titleZh": "每一代人都以为海一直这么空",
-    "summaryZh": "一个渔业科学家的警告让人看见，海洋资源的衰退常被记忆本身遮住。",
-    "sceneZh": "20 世纪后期，一个研究鱼类的人听到年轻渔民说收获还算正常，却在旧记录里看到完全不同的海。",
-    "storyBodyZh": "他意识到一个危险：每一代人都把自己年轻时见到的鱼群数量当成“正常”。如果基准不断下降，大家就会在越来越贫瘠的海里继续觉得情况还可以。他提出 shifting baseline 的概念，提醒渔业不能只看今年和去年，还要看更长的生态记忆。渔业研究在这里不只是捕多少鱼，也要理解种群、食物网、捕捞压力、政策和人类记忆如何共同影响海洋。这个人叫 Daniel Pauly，他提出 shifting baseline syndrome，并通过全球渔业数据研究影响了现代渔业科学和海洋保护。这也是许多环境问题难被察觉的原因：失去不是一次发生的，而是在一代代“正常”的习惯里慢慢被接受。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。",
-    "supportZh": "Daniel Pauly 是渔业科学家，1995 年提出 shifting baseline syndrome 概念，指出每代研究者或渔民可能以自己早年经验作为资源正常状态，导致长期衰退被低估。",
-    "knowledgePointZh": "渔业关注水域生态、鱼类种群、捕捞、养殖、冷链、政策和食物供应。",
-    "reflectionQuestionZh": "你以为正常的自然状态，会不会其实已经是上一代衰退后的结果？",
-    "tagsZh": [
-      "渔业",
-      "海洋",
-      "基线"
-    ]
-  },
-  "0841": {
-    "titleZh": "第一所兽医学校的病马",
-    "summaryZh": "一次牲畜疫病危机让兽医从民间经验走向系统教育和公共经济安全。",
-    "sceneZh": "18 世纪法国，牛马疫病不断造成损失，一个关心马术和动物疾病的人看见农业和军队都被牵动。",
-    "storyBodyZh": "动物生病不是只影响一个主人。马牵动交通和军队，牛牵动耕作、食物和家庭收入。传统马医经验有价值，却缺少系统解剖、病理、教学和公共防疫。他推动建立专门学校，让动物医学成为可训练、可研究、可传承的专业。兽医领域在这里清楚出现：它既照料动物个体，也保护畜群、食品、农业经济和人与动物共同生活的安全。这个人叫 Claude Bourgelat，他在 Lyon 创办世界最早的兽医学校之一，被视为现代兽医学教育的重要奠基人。今天的兽医工作也仍在这个交叉点上：一只动物的健康，常常连着食物安全、公共卫生和人与动物相处的伦理。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "supportZh": "Claude Bourgelat 于 1761 年在 Lyon 创办兽医学校，常被视为世界最早的现代兽医学校之一。其工作推动兽医学从经验性动物医治走向专业教育和公共畜牧健康。",
-    "knowledgePointZh": "兽医研究动物疾病、诊断、治疗、公共卫生、畜群健康和人与动物关系。",
-    "reflectionQuestionZh": "当一头动物生病时，影响的只是它自己，还是整个食物和生活系统？",
-    "tagsZh": [
-      "兽医",
-      "动物健康",
-      "兽医教育"
-    ]
-  },
-  "0888": {
-    "titleZh": "她看见牛害怕的影子",
-    "summaryZh": "一个自闭症女性设计者把动物行为、工程、畜牧和福利放进同一套现场观察。",
-    "sceneZh": "20 世纪后期的牧场和屠宰场里，一个年轻女性站在牲畜通道旁，注意到牛会被反光、阴影和突然的转角吓住。",
-    "storyBodyZh": "她的感知方式和许多人不同，也让她更容易注意到动物在空间里的恐惧。她没有只责怪动物不听话，而是蹲到它们的视线高度，看光线、声音、地面、防滑、转弯和人的动作。她设计弧形通道和更低压力的处理系统，把动物行为学、工程设计、畜牧生产和伦理关怀放在一起。这个跨学科领域不只问怎样提高效率，也问人在利用动物时怎样减少恐惧和痛苦。这个人叫 Temple Grandin，她以畜牧设施设计和动物福利倡导闻名，推动农业、工程、兽医和动物行为之间的跨学科实践。学生从这里能学到，真正的专业不是把生命系统压服，而是愿意从另一个身体的位置重新检查设计。所以它不只是生产技术，而是在训练人读懂时机、条件和长期后果。这条通道也把伦理带进工程：如果设计能减少恐惧，效率就不该建立在忽略恐惧之上。",
-    "supportZh": "Temple Grandin 是动物科学家和畜牧设施设计者，关注牲畜行为、低压力处理系统和动物福利。她的弧形通道等设计广泛影响畜牧处理设施。",
-    "knowledgePointZh": "农业、林业、渔业与兽医跨学科课程连接生产、生态、工程、动物健康、福利和资源管理。",
-    "reflectionQuestionZh": "如果从动物的视角重新看一条通道，人类的效率会不会也必须重新定义？",
-    "tagsZh": [
-      "跨学科",
-      "动物福利",
-      "畜牧工程"
-    ]
-  },
-  "0899": {
-    "titleZh": "冰山里的种子库",
-    "summaryZh": "一个全球种子库说明，农业相关知识有时既是遗传保护，也是未来风险管理。",
-    "sceneZh": "21 世纪初的挪威斯瓦尔巴群岛，一群人把来自世界各地的种子样本送进冻土山体里的库房。",
-    "storyBodyZh": "这个项目看起来像仓库，却不只是储藏。每一份种子都代表一种作物遗传资源，也代表某个地区的农业记忆和未来适应可能。战争、灾害、气候变化、病害和市场单一化，都可能让种子多样性消失。未另分类的农业、林业、渔业与兽医领域正需要这种边界意识：它不完全是种植，也不只是科研或外交，而是食物系统为未来保留选择。这个人叫 Cary Fowler，他长期推动作物多样性保护，并作为 Svalbard Global Seed Vault 的关键倡导者之一影响了全球种质资源保存。今天气候和供应链都变得不稳定时，这样的保存不只是科学工程，也是一种面向未来的责任安排。这让今天的花园、农场、森林、海洋和动物照护重新变得具体：生命系统不会完全照着人的计划走。",
-    "supportZh": "Svalbard Global Seed Vault 于 2008 年启用，用于备份全球作物种子样本。Cary Fowler 是作物多样性保护的重要倡导者，也是该种子库建立过程中的关键人物之一。",
-    "knowledgePointZh": "未另分类的农业、林业、渔业与兽医收纳跨越种质资源、食物安全、生态风险和长期保护的实践。",
-    "reflectionQuestionZh": "为未来保存一粒种子，究竟是在保存食物，还是保存选择权？",
-    "tagsZh": [
-      "种子库",
-      "食物安全",
-      "遗传资源"
-    ]
-  },
-  "0900": {
-    "titleZh": "斑疹伤寒为什么也是社会问题",
-    "summaryZh": "一位医生在疫区看到，健康与福利不能只靠药，也要面对贫困、住房和政治。",
-    "sceneZh": "1848 年的上西里西亚，一位年轻医生被派去调查斑疹伤寒疫情，却很快发现病床之外的问题更大。",
-    "storyBodyZh": "他看到的不只是病原体和症状。饥饿、恶劣住房、缺乏教育、贫困、政治无力和公共卫生缺位，都在让疾病扩散。单纯开药无法解决这种病，因为病人回到同样的生活条件，风险还在那里。他把报告写成一种更尖锐的医学判断：医学是一门社会科学，政治不过是大规模的医学。健康与福利在这里被连接起来：人的身体状态常常是社会制度写在皮肤、肺和血液里的结果。这个人叫 Rudolf Virchow，他通过上西里西亚斑疹伤寒报告和社会医学思想，成为公共卫生、病理学和健康社会决定因素思想的重要人物。今天的公共卫生仍常遇到同样的难题：药物能处理一部分痛苦，但住房、教育、收入和信任也会决定疾病是否反复回来。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Rudolf Virchow 1848 年调查 Upper Silesia 斑疹伤寒疫情，报告强调贫困、教育、民主参与和公共卫生条件。他也被称为现代病理学重要奠基人，并与社会医学思想密切相关。",
-    "knowledgePointZh": "未进一步细分的健康与福利关注身体、照护、风险、社会支持和人的生活条件如何彼此影响。",
-    "reflectionQuestionZh": "当一种疾病反复出现，你会只找药，还是也去看病人回到什么样的生活里？",
-    "tagsZh": [
-      "健康",
-      "福利",
-      "社会医学"
-    ]
-  },
-  "0910": {
-    "titleZh": "病床旁边的观察",
-    "summaryZh": "古代医生把治疗从神秘解释拉向观察、记录和职业伦理。",
-    "sceneZh": "古希腊的岛屿和城邦之间，一位医生走近发热、疼痛和呼吸困难的病人，先看他们实际怎样变化。",
-    "storyBodyZh": "他所处的时代，疾病常被解释成神灵惩罚或神秘力量。可他和传统中的同伴把注意力放到更具体的地方：症状何时开始，脉象和呼吸如何，饮食、季节、地点和体质有什么关系，医生应怎样谨慎判断而不伤害病人。许多文本并非都出自同一人之手，也带有时代局限；但健康领域的一个重要转向已经出现：照护身体需要观察、经验、记录和伦理约束，而不是只靠巫术或权威。这个人叫 Hippocrates，他所代表的 Hippocratic tradition 成为西方医学观察、临床伦理和医生职业形象的重要源头。这也是医学学习最早要守住的东西：先把人当作会变化的身体来看见，再谨慎决定知识该怎样介入。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Hippocrates 与 Hippocratic Corpus 代表古希腊医学传统，强调观察、自然原因、预后和医生伦理。Hippocratic Oath 也长期影响医学职业伦理，虽然文本来源复杂。",
-    "knowledgePointZh": "未进一步细分的健康关注身体状态、疾病、预防、照护、风险和健康判断。",
-    "reflectionQuestionZh": "当一个人说不舒服时，最负责任的第一步是解释，还是观察？",
-    "tagsZh": [
-      "健康",
-      "医学传统",
-      "观察"
-    ]
-  },
-  "0911": {
-    "titleZh": "牙医不该只是拔牙的人",
-    "summaryZh": "一本牙科书让口腔治疗从手艺和止痛，走向结构、预防和专业训练。",
-    "sceneZh": "18 世纪巴黎，一个外科医生面对牙痛、假牙、蛀牙和口腔感染，发现街头拔牙远远不够。",
-    "storyBodyZh": "当时很多牙病由理发师、游医或拔牙匠处理，常常只在疼痛无法忍受时才动手。他把牙齿解剖、龋齿原因、牙周问题、矫治、假牙和器械整理成系统知识，强调保存牙齿、清洁和专业判断。牙科研究在这里变得清楚：口腔不是身体之外的小零件，牙齿结构、疼痛、营养、感染、说话和人的尊严都连在一起。这个人叫 Pierre Fauchard，他出版《Le Chirurgien Dentiste》，被广泛称为现代牙科学的重要奠基人之一。今天牙科仍在这个转弯处工作：治疗一颗牙，也要处理疼痛、恐惧、卫生习惯和一个人敢不敢再次走进诊室。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。牙痛把人带到椅子上，但真正的牙科还要处理恐惧、预防、工具和长期卫生习惯。",
-    "supportZh": "Pierre Fauchard 1728 年出版《Le Chirurgien Dentiste》，系统讨论牙齿解剖、龋齿、牙周、修复、矫治和器械，被称为现代牙科学之父。",
-    "knowledgePointZh": "牙科研究关注口腔健康、牙齿结构、预防、治疗、修复和患者体验。",
-    "reflectionQuestionZh": "如果牙齿影响吃饭、说话和自尊，为什么口腔健康不该被当成小事？",
-    "tagsZh": [
-      "牙科",
-      "口腔健康",
-      "专业化"
-    ]
-  },
-  "0912": {
-    "titleZh": "产房里的洗手盆",
-    "summaryZh": "一个医生发现洗手能救命，却也见识到证据进入制度有多困难。",
-    "sceneZh": "19 世纪维也纳的产科病房里，一个年轻医生发现两个产房的产妇死亡率差得让人无法安心。",
-    "storyBodyZh": "他没有先把死亡归咎于命运，而是比较班次、人员、流程和尸检接触。他注意到医生和学生从解剖室进入产房，可能把看不见的致命物质带到产妇身边。要求用含氯石灰洗手后，死亡率显著下降。可是这个发现并没有立刻得到欢迎，因为它暗示医生自己的手可能造成伤害。医学在这里显出痛苦的一面：正确证据如果挑战职业自尊和制度习惯，仍然会被抵抗。这个人叫 Ignaz Semmelweis，他提出产科洗手消毒可降低产褥热死亡率，成为感染控制和医学证据史上的关键人物。今天医学安全文化常回到这只洗手盆前：一个简单动作背后，是证据、权威、习惯和承认错误的困难。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Ignaz Semmelweis 1840 年代在 Vienna General Hospital 发现含氯石灰洗手可显著降低产褥热死亡率。其发现起初遭遇抵抗，后被视为感染控制史上的重要事件。",
-    "knowledgePointZh": "医学研究疾病、诊断、治疗、预防、人体系统和临床证据如何保护生命。",
-    "reflectionQuestionZh": "当证据说明问题可能出在自己手上，你还能不能接受它？",
-    "tagsZh": [
-      "医学",
-      "感染控制",
-      "洗手"
-    ]
-  },
-  "0913": {
-    "titleZh": "夜里那盏灯",
-    "summaryZh": "一盏夜巡的灯背后，是护理把善意变成专业训练、卫生制度和持续观察的开始。",
-    "sceneZh": "1850 年代的军医院里，走廊潮湿、床位拥挤，伤兵身上的问题不只来自战场。",
-    "storyBodyZh": "刚到医院时，她看到的不是传说里的英雄场面，而是一连串很具体的麻烦：脏床单、通风差、排水糟糕、物资混乱，病人有时不是死于伤口，而是死于伤口之后的环境。她带人清洁、整理供应、改善卫生，也一遍遍记录死亡原因和病房情况。夜里，她提着灯巡视，不只是为了安慰伤兵，更是在看呼吸、疼痛、发热和恐惧有没有改变。真正重要的不是浪漫的光，而是她把照护变成一种有纪律的专业：观察、记录、卫生、训练和制度。这个人叫 Florence Nightingale，她建立现代护理训练的重要传统，并用统计和公共卫生改革改变了护理与助产的专业地位。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "Florence Nightingale 在 Crimean War 期间改善 Scutari 军医院卫生与照护；1860 年在 St Thomas' Hospital 建立 Nightingale Training School。她也用统计图表推动公共卫生改革，被视为现代护理奠基人。",
-    "knowledgePointZh": "护理与助产关注持续观察、照护、卫生、安全、生命过程和人在脆弱时刻的尊严。",
-    "reflectionQuestionZh": "真正的照护，是等医生下指令，还是在细节恶化之前先看见变化？",
-    "tagsZh": [
-      "护理",
-      "助产",
-      "照护"
-    ]
-  },
-  "0914": {
-    "titleZh": "手骨第一次出现在照片里",
-    "summaryZh": "一次意外荧光让医学诊断进入影像时代，也带来技术安全的新责任。",
-    "sceneZh": "1895 年的德国实验室里，一个物理学家研究阴极射线管，忽然发现远处涂层在黑暗中发光。",
-    "storyBodyZh": "他没有把异常当成干扰丢掉，而是反复遮挡、测试、记录，发现一种未知射线能穿过纸板和软组织，却被骨头和金属阻挡。他拍下妻子的手，骨骼和戒指清晰显现。医学诊断与治疗技术由此被彻底改变：医生可以不用切开身体就看见内部结构。可是技术也带来新风险，早期 X 光使用曾因不了解辐射伤害而造成损害。这个领域因此一直同时包含设备、图像、质量控制和安全边界。这个人叫 Wilhelm Conrad Rontgen，他发现 X-rays，并于 1901 年获得首届诺贝尔物理学奖。今天每一次影像检查都还在问同样的问题：看见更多并不自动等于更安全，技术必须和防护、解释、质量一起前进。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Wilhelm Conrad Rontgen 1895 年发现 X-rays，并拍摄著名手部 X 光影像。X 光迅速进入医学诊断，同时也推动后来的辐射防护和医学影像技术发展。",
-    "knowledgePointZh": "医学诊断与治疗技术关注设备、检测、影像、治疗支持、质量控制和安全使用。",
-    "reflectionQuestionZh": "当技术让身体变得可见，它同时让哪些风险也必须被看见？",
-    "tagsZh": [
-      "医学影像",
-      "诊断技术",
-      "X光"
-    ]
-  },
-  "0915": {
-    "titleZh": "病人不是出院就结束了",
-    "summaryZh": "一位医生把康复从附属护理，变成帮助人重新生活的现代医学领域。",
-    "sceneZh": "第二次世界大战后，许多伤兵和病人活了下来，却发现活下来不等于能重新走路、工作和生活。",
-    "storyBodyZh": "他看到医院常把治疗重点放在疾病消失或伤口愈合，却没有充分回答之后怎么办。一个人可能需要重新训练肌肉、学习使用辅助器具、处理疼痛、调整家庭和工作环境，也要重新获得尊严。他推动 rehabilitation medicine，把物理治疗、作业治疗、心理支持、社会安排和长期目标放在同一个计划里。治疗与康复因此不只是把人恢复到过去，而是在新的身体条件下重新组织生活能力。这个人叫 Howard A. Rusk，他推动现代康复医学发展，被称为康复医学的重要奠基人物之一。今天康复计划也从这里开始：病历上的好转只有走进楼梯、厨房、公交和工作岗位时，才真正接受生活的检验。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "Howard A. Rusk 是美国医生，二战期间和战后推动 rehabilitation medicine，将物理治疗、职业治疗、心理和社会支持整合进康复体系，被视为现代康复医学重要人物。",
-    "knowledgePointZh": "治疗与康复关注功能恢复、训练、适应、疼痛管理、辅助技术和长期支持。",
-    "reflectionQuestionZh": "恢复是不是回到过去，还是学会带着新的身体条件继续生活？",
-    "tagsZh": [
-      "康复",
-      "治疗",
-      "功能"
-    ]
-  },
-  "0916": {
-    "titleZh": "药房不只是卖药的柜台",
-    "summaryZh": "一个药剂师把药房工作推向教育、标准和专业责任。",
-    "sceneZh": "19 世纪费城，一个年轻药剂师在柜台后调配药物，也看见药品质量、剂量和训练并不总可靠。",
-    "storyBodyZh": "药物能救人，也能伤人。粉末、酊剂、植物提取物和处方如果没有标准，病人很难知道自己真正拿到什么。他不满足于药剂师只靠师徒经验和商业买卖，而是推动药学教育、专业组织、药典标准和伦理责任。药学在这里从“把药交出去”变成一门保护药物效果和安全的专业：成分、剂量、相互作用、储存、说明和患者理解都重要。这个人叫 William Procter Jr.，他推动美国药学教育和专业化，被称为美国药学的重要奠基人物之一。今天药师的角色仍在扩大：不是把盒子递出去就结束，而是帮助药物在真实生活里被正确、安全地使用。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。药学真正进入生活时，药盒只是开始；说明、剂量、相互作用和患者是否理解，都会改变治疗结果。",
-    "supportZh": "William Procter Jr. 是 19 世纪美国药剂师和教育者，参与 Philadelphia College of Pharmacy 和 American Pharmaceutical Association 等发展，被称为美国药学之父。",
-    "knowledgePointZh": "药学研究药物作用、剂量、安全、相互作用、质量标准和用药指导。",
-    "reflectionQuestionZh": "一粒药真正进入生活时，需要哪些知识保护它不被误用？",
-    "tagsZh": [
-      "药学",
-      "药房",
-      "专业标准"
-    ]
-  },
-  "0917": {
-    "titleZh": "药草书里的长期修订",
-    "summaryZh": "一位明代医者花几十年整理本草，让传统医学成为经验、文本和安全边界的持续对话。",
-    "sceneZh": "16 世纪中国，一个医生走访山野、市场和旧书，发现许多药名、产地和用法彼此混乱。",
-    "storyBodyZh": "他没有把传统当成一成不变的权威。相反，他反复校对古书，记录产地，辨别同名异物，补充民间经验，也纠正前人错误。这个过程说明传统与补充医学最严肃的部分不是神秘化，而是长期积累、辨伪、剂量、适应症和风险边界。今天看传统疗法，更需要尊重历史经验，也需要现代证据和安全评估。这个人叫 Li Shizhen，他编写《本草纲目》，系统整理药物知识，成为中国本草学和传统医学史上的重要人物。今天面对传统疗法时，最负责任的态度也许正是这种耐心：既不轻易嘲笑经验，也不停止核对风险和证据。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。传统如果值得被尊重，就更值得被认真核对；辨名、辨物、辨剂量，本身就是保护人的一部分。",
-    "supportZh": "Li Shizhen 明代医药学家，历时多年编写《本草纲目》，1596 年刊行。该书整理大量药物、性味、产地、用法和辨误，对中国本草学影响深远。",
-    "knowledgePointZh": "传统与补充医学关注传统疗法、身体经验、安全边界、文本传承和现代证据对话。",
-    "reflectionQuestionZh": "尊重传统时，怎样同时保留追问证据和保护安全的勇气？",
-    "tagsZh": [
-      "传统医学",
-      "本草",
-      "安全"
-    ]
-  },
-  "0919": {
-    "titleZh": "老鼠为什么生病了",
-    "summaryZh": "一次实验室里的异常反应，让健康研究看见压力也能成为身体问题。",
-    "sceneZh": "20 世纪 30 年代，一个年轻研究者给实验动物注射不同提取物，却发现它们出现相似身体反应。",
-    "storyBodyZh": "他一开始以为自己在研究某种特定物质的作用。可是无论注射什么，动物都出现胃溃疡、肾上腺变化、免疫组织萎缩等相似反应。他开始怀疑，身体可能是在对各种有害刺激作出一种一般性反应。这个想法后来发展为 stress 的生理研究，也经历过概念扩张和争议。未另分类的健康领域常常这样出现：问题不完全属于单一疾病，也不只是心理或社会，而是身体、环境、情绪和长期负荷交织。这个人叫 Hans Selye，他提出 general adaptation syndrome 并推动 stress 进入现代健康研究。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。实验动物的反应让问题变得不舒服：身体里的缺乏有时不是单一器官的问题，而是一整套营养关系。",
-    "supportZh": "Hans Selye 20 世纪 30 年代起研究 stress 和 general adaptation syndrome，观察机体对不同有害刺激的非特异性反应，对压力生理学和健康研究产生广泛影响。",
-    "knowledgePointZh": "未另分类的健康收纳那些不适合标准医疗门类、却影响身体和生活质量的健康现象。",
-    "reflectionQuestionZh": "当你说自己只是累了，身体会不会其实已经在长期报警？",
-    "tagsZh": [
-      "健康",
-      "压力",
-      "身体反应"
-    ]
-  },
-  "0920": {
-    "titleZh": "从摇篮到坟墓的报告",
-    "summaryZh": "一份战时报告让福利从零散救济，转向覆盖人生风险的社会制度设计。",
-    "sceneZh": "1942 年的英国，战争仍在继续，一个经济学家把贫困、疾病、失业和养老放进同一份报告。",
-    "storyBodyZh": "他面对的不是某个家庭的一次困难，而是社会中反复出现的风险：没有工作、生病、年老、孩子多、收入不足。过去的救济常常零散、羞辱性强，也难以覆盖人生不同阶段。他提出更系统的社会保险和福利国家设想，试图对抗所谓“五大巨人”：贫困、疾病、无知、肮脏和失业。福利在这里不是施舍，而是现代社会如何共同分担风险、保障最低安全和人的尊严。这个人叫 William Beveridge，他的 1942 年 Beveridge Report 深刻影响英国福利国家和现代社会保障制度。今天讨论福利时，争论仍不只关于钱，而是一个人跌倒、生病、老去或失业时，社会愿不愿意留下承接他的结构。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "William Beveridge 1942 年发布 Beveridge Report，提出从 cradle to grave 的社会保险和福利改革设想，影响英国战后福利国家建设和 NHS 等制度背景。",
-    "knowledgePointZh": "未进一步细分的福利关注社会支持、风险分担、尊严、照护和基本生活保障。",
-    "reflectionQuestionZh": "一个社会怎样证明它不是只在成功时承认一个人？",
-    "tagsZh": [
-      "福利",
-      "社会保障",
-      "风险"
-    ]
-  },
-  "0921": {
-    "titleZh": "他想自己决定几点睡",
-    "summaryZh": "一个坐轮椅的大学生把照护问题改写成独立生活和自主权问题。",
-    "sceneZh": "20 世纪 60 年代的加州，一个重度残障青年想上大学，却被安排住在校医院，而不是普通宿舍。",
-    "storyBodyZh": "别人常把他的需求理解成护理和保护，他却不断追问：为什么帮助必须以失去自主为代价？他和同伴争取校园无障碍、个人助理、住房选择和自我决定权，后来推动独立生活运动。老人和残障成人照护在这里发生了重要转向：照护不只是替人做事，也不是把人安置到方便管理的地方，而是支持一个人尽可能掌握自己的生活节奏、关系和选择。这个人叫 Ed Roberts，他推动 Berkeley Independent Living Movement，成为残障权利和独立生活运动的重要人物。今天谈无障碍和长期照护时，这个追问仍然锋利：帮助如果不能增加选择，它就可能只是换了一种方式管理别人。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "Ed Roberts 是美国残障权利运动人物，1960 年代进入 University of California, Berkeley 后推动校园无障碍和独立生活理念，参与建立 Center for Independent Living。",
-    "knowledgePointZh": "老人和残障成人照护关注尊严、能力支持、安全、日常生活质量和自主性。",
-    "reflectionQuestionZh": "帮助一个人时，怎样确保你没有顺手拿走他的决定权？",
-    "tagsZh": [
-      "照护",
-      "残障权利",
-      "独立生活"
-    ]
-  },
-  "0922": {
-    "titleZh": "孩子也有自己的共和国",
-    "summaryZh": "一位儿科医生兼教育者把儿童照护从管理孩子，推向尊重孩子作为人的权利。",
-    "sceneZh": "20 世纪初的华沙，一位照顾孤儿的医生在院舍里设置儿童议会、法庭和报纸。",
-    "storyBodyZh": "他并不把孩子只看成等待成人塑造的半成品。孩子会恐惧，会犯错，会需要规则，也有被认真倾听的尊严。他在孤儿院里让孩子参与自治，处理冲突，表达意见，练习责任。后来在纳粹占领和犹太隔都的极端处境中，他仍尽力保护孩子的尊严。儿童照护与青少年服务在这里不是简单看管，而是创造一个年轻人能够被保护、被听见、能学习承担责任的环境。这个人叫 Janusz Korczak，他以儿童权利思想、孤儿院实践和最后陪伴孩子进入 Treblinka 的选择，成为儿童照护与教育伦理的重要人物。今天的儿童服务仍需要这种提醒：保护不是让年轻人永远沉默，而是给他们能表达、犯错、修正和被认真对待的空间。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Janusz Korczak 是波兰犹太医生、教育者和作家，经营孤儿院，提倡儿童权利和儿童自治。1942 年他与孤儿院儿童一起被送往 Treblinka，成为儿童尊严与照护伦理的象征人物。",
-    "knowledgePointZh": "儿童照护与青少年服务关注保护、发展、陪伴、边界、参与和成长环境。",
-    "reflectionQuestionZh": "当成年人说“为了孩子好”时，孩子自己的声音在哪里？",
-    "tagsZh": [
-      "儿童照护",
-      "儿童权利",
-      "青年服务"
-    ]
-  },
-  "0923": {
-    "titleZh": "她先画出家庭和邻里关系",
-    "summaryZh": "一位社会工作者把求助从施舍，变成对人、家庭和资源系统的细致理解。",
-    "sceneZh": "19 世纪末的美国城市里，一个慈善组织工作者面对求助家庭，发现简单发放物资常常不够。",
-    "storyBodyZh": "她看到贫困背后可能有失业、疾病、亲属关系、住房、债务、羞耻和制度缺口。帮助如果只看眼前请求，很容易误解人，也容易重复失败。她强调调查、访谈、记录、家庭和社区资源，把个案工作变成有方法的专业实践。今天我们会更敏感地批判早期慈善中的阶级眼光和道德判断，但她推动的一个转向仍然重要：社会工作与咨询必须理解一个人所处的关系网，而不是只评价个人。这个人叫 Mary Ellen Richmond，她通过《Social Diagnosis》等作品奠定现代社会个案工作的重要方法基础。今天个案工作仍不该只停在表面请求上；它要把人的困难放回家庭、社区、制度和可获得资源的网里看。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "Mary Ellen Richmond 是美国社会工作先驱，1917 年出版《Social Diagnosis》，强调调查、个案记录、家庭和社会环境分析，对 social casework 专业化影响深远。",
-    "knowledgePointZh": "社会工作与咨询连接个人困难、家庭关系、资源系统、支持过程和专业伦理。",
-    "reflectionQuestionZh": "当一个人求助时，你能不能看见问题背后的关系和制度？",
-    "tagsZh": [
-      "社会工作",
-      "咨询",
-      "个案"
-    ]
-  },
-  "0929": {
-    "titleZh": "战场上的红十字臂章",
-    "summaryZh": "一个旅行者在战场边组织救助，让福利实践越过国界、军队和普通慈善分类。",
-    "sceneZh": "1859 年意大利 Solferino 战场附近，一个瑞士商人偶然看见成千上万伤兵无人照料。",
-    "storyBodyZh": "他原本不是来创办组织的，却被眼前场面困住：不同国家的士兵一样流血，医疗力量远远不足，平民临时参与救助。他组织当地人照顾伤员，后来把经历写成书，提出建立中立救援组织和国际规则。未另分类的福利正像这种实践：它不只是医院，不只是军队，也不只是慈善，而是在灾难、战争、法律和人道责任之间为脆弱者开出一条保护通道。这个人叫 Henry Dunant，他推动 International Committee of the Red Cross 和 Geneva Convention 的形成，并成为现代人道主义救援的重要奠基人。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。战场把照护问题推到最残酷的地方：如果没人组织善意，善意就可能来得太晚。",
-    "supportZh": "Henry Dunant 目睹 1859 年 Battle of Solferino 后写作《A Memory of Solferino》，倡议中立救援组织和战时伤员保护，推动 ICRC 与 Geneva Convention 形成，1901 年获首届诺贝尔和平奖。",
-    "knowledgePointZh": "未另分类的福利收纳那些跨越救助、人道、社区、法律和紧急支持的实践。",
-    "reflectionQuestionZh": "当一个人受伤时，为什么他的阵营不该决定他是否值得被救？",
-    "tagsZh": [
-      "福利",
-      "人道救援",
-      "红十字"
-    ]
-  },
-  "0988": {
-    "titleZh": "疼痛不是最后才处理的事",
-    "summaryZh": "一位医生听见临终病人的整体痛苦，让健康与福利重新理解照护的终点。",
-    "sceneZh": "20 世纪英国，一位曾做护士和社工、后来学医的女性，坐在临终病人床边，认真听他们说疼痛和孤独。",
-    "storyBodyZh": "她发现病人的痛苦并不只在身体里。疼痛、恐惧、家庭关系、宗教疑问、经济压力和被遗弃感会叠在一起。如果医学只在治愈失败后才想起照护，就太晚了。她提出 total pain 的理解，建立 hospice 照护，把症状控制、心理支持、家属陪伴、社会工作和尊严放在同一套体系里。健康与福利的跨学科意义在这里非常清楚：人不是一组器官，也不是一张福利表格，而是在生命末端仍需要被完整看见。这个人叫 Cicely Saunders，她创办 St Christopher's Hospice，并奠定现代 hospice 和 palliative care 的重要基础。有人多看了一会儿，开始追问条件、关系和后果，于是一个普通场景慢慢变成了知识的入口。所以它不只是专业机构里的知识，而是在训练人准确看见脆弱时刻里的真实需要。",
-    "supportZh": "Cicely Saunders 曾接受护理、社会工作和医学训练，1967 年创办 St Christopher's Hospice。她提出 total pain 概念，推动现代临终关怀和 palliative care 发展。",
-    "knowledgePointZh": "健康与福利跨学科课程连接医学、护理、心理、社会支持、家庭和人的尊严。",
-    "reflectionQuestionZh": "当治愈不再可能时，照护还能怎样继续保护一个人的完整性？",
-    "tagsZh": [
-      "跨学科",
-      "临终关怀",
-      "姑息治疗"
-    ]
-  },
-  "0999": {
-    "titleZh": "她把战场护理带回和平时期",
-    "summaryZh": "一个战时救护组织者让健康与福利边界出现灾害、志愿服务和公共应急的混合实践。",
-    "sceneZh": "美国南北战争期间，一个女性在战场附近分发物资、寻找伤员，也给家属传递生死消息。",
-    "storyBodyZh": "她不是只做临时善事。战争让她看到，伤员护理、物资协调、失踪人员信息、志愿者组织和灾后救援需要长期制度，而不该每次都从混乱开始。战后，她继续推动建立更稳定的人道救援组织，使救护从战争现场延伸到灾害、公共应急和社会支持。未另分类的健康与福利常常就站在这种边界：它既不是普通医院，也不是单一福利机构，而是在危机里把照护、信息、物资和组织能力接起来。这个人叫 Clara Barton，她创办 American Red Cross，并推动美国加入国际红十字人道救援体系。今天的灾害救援和社区支持仍在延续这条线：善意如果没有训练、记录和协调，很容易在真正紧急时散开。这让今天的诊室、家庭照护和社区支持重新变得具体：保护身体的同时，也要保护人的尊严和选择。",
-    "supportZh": "Clara Barton 在美国南北战争期间组织护理和物资救援，战后推动失踪士兵信息工作。1881 年她创办 American Red Cross，并长期领导该组织参与灾害救援。",
-    "knowledgePointZh": "未另分类的健康与福利处理那些跨越医疗、救援、信息、志愿组织和公共应急的支持实践。",
-    "reflectionQuestionZh": "一场危机之后，怎样把临时善意变成下次能更快保护人的制度？",
-    "tagsZh": [
-      "红十字",
-      "救援",
-      "健康福利"
-    ]
-  }
-};
+const lensStoryOverridesZh = {};
 
 lensStories.forEach((story) => {
   const code = Array.isArray(story.fieldCodes) ? story.fieldCodes[0] : "";
@@ -5002,1272 +1991,9 @@ lensStories.forEach((story) => {
   if (override) Object.assign(story, override);
 });
 
-const reviewedLensStoryOverridesZh = {
-  "000-general-starter-course": {
-    "titleZh": "皮围裙俱乐部的夜晚",
-    "summaryZh": "一群工匠、店员和读书人组成的小社团，让人看见通用学习常常早于正式学科名称出现。",
-    "sceneZh": "1727 年的费城，一个年轻印刷工收好铅字，擦掉手上的油墨，走去参加一场没有学位、没有正式课表的夜间聚会。",
-    "storyBodyZh": "他二十出头，离贫穷还不远，所以很清楚：书、谈话和可靠的朋友，真的可能改变一个人的命运。来聚会的人并不都是学者，有工匠、店员、测量员、制造者，也有人只是想把生意、品格、政治和自然知识弄明白一点。他们带来的不是考试，而是问题：这周你学到什么有用的东西？城市应该避免什么错误？下一本书借什么？谁需要帮忙找工作？这些夜晚慢慢长出一种很难被单一学科命名的能力：共同阅读、用证据争论、练习表达、共享书籍，把私人的好奇心变成公共项目。通用课程与资格的意义就在这里：人在还没有确定专业之前，先学会如何学习、如何提问、如何和别人一起把知识变成行动。麻烦在于，真实经验已经在手上，正式入口却常常不承认它。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样搭出第一阶台阶，让人带着经验进入可继续的学习。这个人叫 Benjamin Franklin，他发起 Junto 互助学习社群，并推动图书馆、公民讨论和自我教育成为现代通用学习的重要源头。",
-    "knowledgePointZh": "通用课程与资格提供的是进入具体道路之前的基础能力：方向感、阅读习惯、共同探究，以及把知识转成行动的信心。",
-    "reflectionQuestionZh": "在你选择一个具体方向之前，什么样的学习共同体会让你不再害怕学习本身？"
-  },
-  "011-dewey-lab-school": {
-    "titleZh": "孩子们做早餐的教室",
-    "summaryZh": "芝加哥的一次学校实验，让教育不再只是背诵，而像是把生活拿到教室里一起研究。",
-    "sceneZh": "1896 年的芝加哥，一张教室桌上放着面粉、布料、木头、量具，还有一些很难塞进单本课本里的问题。",
-    "storyBodyZh": "参与这所学校的那位哲学家，原本研究哲学和心理学。他一直被一个很朴素的问题困住：为什么学校常常把“会思考”和“会生活”分开？来到芝加哥以后，他不想只在讲稿里谈教育，而是想把想法放进真实教室里试一试。他看孩子做饭、缝纫、制作、测量、交谈，然后追问为什么。一节早餐课可以同时牵出化学、数量、历史、合作和语言。教室并不是把所有活动都浪漫化，老师仍然需要准备、观察、连接和提问。但这个实验改变了教育的方向：教育不只是成人把内容交给儿童，而是一个社会性的情境，孩子在行动、后果和共同解释中学习。可是现场的压力在于，孩子、材料和情境会不断改变学习发生的方式。真正留下来的，是观察记录、环境设计、发展判断和教学反思从个人经验变成可以传递的训练。这个人叫 John Dewey，他创办芝加哥大学实验学校，让“做中学”和进步教育成为现代教育的重要线索。",
-    "knowledgePointZh": "未进一步细分的教育，是追问教育目的、学习情境设计，以及学校如何把知识和生活连接起来的宽镜头。",
-    "reflectionQuestionZh": "如果一间教室从真实活动开始，而不是从标准答案开始，哪一种学习会变得可能？"
-  },
-  "020-family-photo-meaning": {
-    "titleZh": "黑布上的一千张图片",
-    "summaryZh": "一部未完成的图像图谱，让人看见艺术与人文如何追踪物件、姿势、书籍和公共生活里的记忆。",
-    "sceneZh": "1920 年代后期的 Hamburg，一块黑布板前，图像被一次次取下又钉回去。",
-    "storyBodyZh": "他不满足于只用作者、年代和风格来解释一幅画。文艺复兴图像里抬起的手臂，会让他想起古代雕像；硬币上的女神，好像又出现在报纸图片里；节庆服装、占星图、政治海报，可能都把古老的姿势带进新的生活。晚年，他把几百张复制图钉在黑布板上，一次次挪动位置。图谱上几乎没有说明文字，因为重点不是给观众一个整齐答案，而是让图像彼此靠近，让记忆、恐惧、欲望、仪式和权力的暗线浮现出来。未进一步细分的艺术与人文正像这种工作：它不急着把意义分进固定盒子，而是先问图像、文本、物件和人的经验如何互相照亮。按作者、年代、风格或门类整理作品，仍有它的用处；但要让判断走得更远，就必须把细读、比较、材料分析和解释传统变成可学习的工作。后来的课程会给它命名，当时更急迫的是把细读、比较、材料分析和解释传统变成可重复的做法。这个人叫 Aby Warburg，他创作未完成的 Mnemosyne Atlas，并以图像记忆、文化史和跨学科艺术史影响了后来的视觉文化研究。",
-    "knowledgePointZh": "艺术与人文追问图像、文本、仪式、物件和记忆如何生产意义，尤其关注那些尚未能被单一学科收拢的意义关系。",
-    "reflectionQuestionZh": "今天生活里哪一张图像，可能悄悄带着更古老的人类姿势？"
-  },
-  "030-neighbor-notice-board": {
-    "titleZh": "街区地图上的贫困颜色",
-    "summaryZh": "一张街区地图让社会科学、新闻与信息从抽象议题变成可被公共讨论的证据。",
-    "sceneZh": "19 世纪末的芝加哥，一个年轻女性每天走过移民家庭、工厂、学校和拥挤出租屋之间的街道。",
-    "storyBodyZh": "她不是从安静书房里开始理解社会的。她住进一个工人和移民聚居的街区，听见母亲为孩子找托管，工人为工资争论，年轻人想学英语，病人不知道去哪里求助。问题看起来分散：贫困、语言、教育、卫生、劳动、住房、信息不通。她和同伴开始做调查、画地图、办课程、写报告，把街坊的生活经验变成城市能看见的公共知识。社会科学、新闻与信息在这里交汇：不是替别人说故事，而是把隐藏在日常里的结构、数据和声音放到同一张桌面上。把社会问题交给意见、传闻或单一记录，仍有它的用处；但要让判断走得更远，就必须把调查、核对、分类、传播和公共解释变成可学习的工作。这个人叫 Jane Addams，她创办 Hull House，并用社会调查、公共写作和社区实践推动美国社会科学、社会改革和公共信息工作的发展。",
-    "knowledgePointZh": "未进一步细分的社会科学、新闻与信息关注社会现实如何被观察、记录、解释和传达给公共生活。",
-    "reflectionQuestionZh": "如果把你所在街区的一种困难画成地图，谁的生活会第一次被看见？"
-  },
-  "040-kitchen-repair-budget": {
-    "titleZh": "第一所商学院的疑问",
-    "summaryZh": "一个实业家把商业教育从家族经验和学徒习惯，推向大学里的系统训练。",
-    "sceneZh": "19 世纪后期的费城，一个在工业和金融世界工作多年的男人，越来越担心商业只靠机灵和家传经验是不够的。",
-    "storyBodyZh": "他见过铁路、制造、银行和贸易如何改变美国，也见过市场扩张带来的混乱。账目、合同、组织、法律、货币、运输和公共责任纠缠在一起，年轻人却常常只能靠店铺学徒或家族关系慢慢摸索。他提出一个当时并不自然的想法：商业也应该进入大学，被系统研究和训练。商业、管理与法律在这里并不是赚钱技巧，而是一套关于组织如何行动、承担责任、处理风险和遵守规则的知识。后来商学院有过许多争议，也不断被重新批判，但这个起点说明，现代商业已经复杂到需要制度化学习。麻烦在于，成本、责任、权利和风险经常被藏到决定之后。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是规则、资源和责任怎样被安排，才经得起共同承担。这不是替未进一步细分的商业、管理与法律寻找漂亮起源，而是看见账目、制度、案例、权利边界和组织设计怎样先把问题托住。这个人叫 Joseph Wharton，他资助建立 University of Pennsylvania 的 Wharton School，使商业教育成为现代大学体系中的重要领域之一。",
-    "knowledgePointZh": "未进一步细分的商业、管理与法律关注组织、市场、制度、责任和规则如何共同塑造经济生活。",
-    "reflectionQuestionZh": "当一个行业越来越复杂，哪些经验必须从个人诀窍变成公开训练？"
-  },
-  "050-balcony-plant-observation": {
-    "titleZh": "山坡上的自然图",
-    "summaryZh": "一张山体剖面图，让被压在标本夹里的叶片重新回到海拔、温度和位置中。",
-    "sceneZh": "1802 年前后，南美安第斯山的山坡上，仪器盒、气压计和压花纸被潮气打湿。",
-    "storyBodyZh": "山脚还带着热气，压花纸到了高处却被冷雾弄软。一个旅行者把叶片夹进纸里，照习惯写下名称；这种办法很有用，标本能被带回欧洲，别人也能知道它属于哪一类。可山坡没有只留下名字。低处的阔叶旁写着一个温度，再往上，硬叶灌木、草本和苔藓挤在更低的气压数字旁；同一页笔记里，植物像是沿着高度换了队形。他停下来重抄记录，把海拔、气温、气压和植物名排成同一列，又把南美山坡同欧洲高山、热带低地的旧记录放在一起比较。原来的问题是“这株植物叫什么”。笔记把问题推向另一处：为什么相似的植物总在相似的高度、冷暖和水汽条件下出现？当这些数字和叶片被画进一座山的剖面，山不再只是采集背景，而变成一张能检查生命分布的图。麻烦在于，尺度、位置、时间和重复结果会让孤立答案变得不够。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样让工具、测量、比较和记录把自然变成可检查的证据。后来，这位旅行者名叫 Alexander von Humboldt。",
-    "knowledgePointZh": "把标本名称、海拔、温度、气压和位置放到同一张可检查的图里，让自然从孤立事实变成可比较的分布。",
-    "reflectionQuestionZh": "当你记录一个现象时，你是在给它取名，还是也在画出它和哪些条件一起出现？"
-  },
-  "061-phone-backup-help": {
-    "titleZh": "信息像硬币一样可以计量",
-    "summaryZh": "一个电话实验室里的年轻数学家，把通信问题变成现代信息时代的基础语言。",
-    "sceneZh": "20 世纪 40 年代的 Bell Labs，一个年轻研究员面对电报、电话和噪声，问一个奇怪问题：信息到底能不能被测量？",
-    "storyBodyZh": "他不先关心消息内容是情书、新闻还是订单，而是问信号如何通过带噪声的通道，怎样编码，怎样减少不确定性，怎样在有限带宽里可靠传输。这个抽象看似冷，却非常有力：信息可以用 bit 计量，通信可以用数学模型分析，冗余、噪声、编码和容量都能被系统研究。信息与通信技术在这里不只是设备集合，而是一整套关于信息如何表示、传输、压缩和保护的思想。麻烦在于，符号、噪声、结构和使用错误会在黑箱内部暴露问题。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是信息怎样被表示、组织、传输和执行，才可靠又可维护。在名称固定以前，编码、结构、接口、权限、测试和恢复路径已经先把现场和判断连接起来。这个人叫 Claude Shannon，他在 1948 年发表《A Mathematical Theory of Communication》，奠定现代信息论基础。",
-    "knowledgePointZh": "未进一步细分的信息与通信技术关注信息表示、传输、计算、工具、网络和数字系统如何协同工作。",
-    "reflectionQuestionZh": "当一条消息穿过噪声抵达你面前，中间有多少不可见的设计在保护它？"
-  },
-  "070-wobbly-shelf-repair": {
-    "titleZh": "铁桥、隧道和一艘大船",
-    "summaryZh": "一个总把约束推到极限的工程师，让工程、制造与建筑成为现代世界的骨架。",
-    "sceneZh": "19 世纪英国，一个年轻工程师站在泥泞河岸、铁路工地和造船厂之间，面对的从来不是单一难题。",
-    "storyBodyZh": "桥要跨得更远，隧道要穿过更危险的地层，铁路要让城市和港口重新连接，船要在大西洋上承受风浪、燃料和钢铁结构的限制。他常常大胆到让人害怕，也并非每个项目都顺利；成本、事故、健康和公众信任不断压过来。但正是在这种现实压力里，工程、制造与建筑的共同本质显出来：把材料、力、资金、时间、风险和人的移动需求组织成可运行的实体世界。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。后来的课程会给它命名，当时更急迫的是把材料测试、流程控制、结构计算和安全边界变成可重复的做法。这个人叫 Isambard Kingdom Brunel，他通过 Great Western Railway、Thames Tunnel、Clifton Suspension Bridge 和大型蒸汽船等项目成为工业时代工程史的重要人物。后来人看见的是领域名称，当时真正被迫形成的，是围绕材料测试、流程控制、结构计算和安全边界的一套工作。",
-    "knowledgePointZh": "未进一步细分的工程、制造与建筑关注材料、结构、流程、风险、执行和真实世界约束如何共同形成可用系统。",
-    "reflectionQuestionZh": "一个宏大工程背后，最难的到底是想象力，还是把想象放进材料和风险里？"
-  },
-  "080-community-garden-seedlings": {
-    "titleZh": "麦田里的矮秆",
-    "summaryZh": "一片小麦试验田让农业、生态、育种和公共饥饿问题连成同一个世界。",
-    "sceneZh": "20 世纪中期的墨西哥试验田里，一个植物病理学家弯腰查看小麦，关心的是茎秆为什么会倒伏。",
-    "storyBodyZh": "他面对的不是一株植物的漂亮问题，而是饥饿、病害、产量、土壤、灌溉、肥料和国家粮食政策。高产小麦如果太高，施肥后容易倒伏；如果抗病性不足，一场病害就能毁掉收成。他和团队反复杂交、筛选、试种，把矮秆、高产和抗病性结合起来。农业、林业、渔业与兽医的宽镜头在这里很清楚：人类照料生命并不是只追产量，还要面对生态代价、社会分配和长期可持续。麻烦在于，土壤、水、疾病、行为和季节会把后果带到下一轮。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是哪些生命条件会让结果持续变好或变坏。这个人叫 Norman Borlaug，他推动半矮秆高产小麦育种和绿色革命，因对粮食增产的贡献获得 1970 年诺贝尔和平奖。今天再谈粮食安全时，这个问题还在：增产不能只算亩产，也要把土壤、水、农民处境和生态风险一起放进账本。",
-    "knowledgePointZh": "未进一步细分的农业、林业、渔业与兽医关注人如何在生态、生产、健康和资源限制中照料生命。",
-    "reflectionQuestionZh": "当一种作物救了很多人，它的生态和社会代价也应该怎样被认真看见？"
-  },
-  "090-medicine-schedule-care": {
-    "titleZh": "斑疹伤寒为什么也是社会问题",
-    "summaryZh": "一位医生在疫区看到，健康与福利不能只靠药，也要面对贫困、住房和政治。",
-    "sceneZh": "1848 年的上西里西亚，一位年轻医生被派去调查斑疹伤寒疫情，却很快发现病床之外的问题更大。",
-    "storyBodyZh": "他看到的不只是病原体和症状。饥饿、恶劣住房、缺乏教育、贫困、政治无力和公共卫生缺位，都在让疾病扩散。单纯开药无法解决这种病，因为病人回到同样的生活条件，风险还在那里。他把报告写成一种更尖锐的医学判断：医学是一门社会科学，政治不过是大规模的医学。健康与福利在这里被连接起来：人的身体状态常常是社会制度写在皮肤、肺和血液里的结果。把健康问题缩成一个症状、一次治疗或一项救助，仍有它的用处；但要让判断走得更远，就必须把观察、诊断、照护记录、制度支持和伦理判断变成可学习的工作。这个人叫 Rudolf Virchow，他通过上西里西亚斑疹伤寒报告和社会医学思想，成为公共卫生、病理学和健康社会决定因素思想的重要人物。今天的公共卫生仍常遇到同样的难题：药物能处理一部分痛苦，但住房、教育、收入和信任也会决定疾病是否反复回来。",
-    "knowledgePointZh": "未进一步细分的健康与福利关注身体、照护、风险、社会支持和人的生活条件如何彼此影响。",
-    "reflectionQuestionZh": "当一种疾病反复出现，你会只找药，还是也去看病人回到什么样的生活里？"
-  },
-  "100-rainy-event-service-desk": {
-    "titleZh": "真相时刻在登机口",
-    "summaryZh": "一个航空公司管理者把服务理解成每一次人与系统相遇的瞬间。",
-    "sceneZh": "20 世纪 80 年代的斯堪的纳维亚航空，一名乘客在柜台前等待，真正评价公司的时刻可能只有几十秒。",
-    "storyBodyZh": "他意识到，服务不是总部文件里的承诺，而是旅客和员工相遇的每一个瞬间：电话是否被接起，柜台是否有权解决问题，延误时信息是否诚实，员工是否被信任去判断现场。于是他强调 moments of truth，让组织把权力下放到前线，把服务体验看成无数接触点共同形成的结果。服务领域在这里变得具体：体验不是微笑装饰，而是流程、信息、权限、情绪和时间是否对齐。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。这个人叫 Jan Carlzon，他在 Scandinavian Airlines 推动服务管理转型，并以 moments of truth 思想影响现代服务管理。",
-    "knowledgePointZh": "未进一步细分的服务关注体验、协调、接触点、时间和人在现场获得帮助的条件。",
-    "reflectionQuestionZh": "一个服务真正被评价的瞬间，是广告出现时，还是问题需要被解决时？"
-  },
-  "001-birkbeck-evening-lecture": {
-    "titleZh": "下工后的力学课",
-    "summaryZh": "一堂给工人开的免费晚课，让基础课程从“想学”变成了可以进入的公共通道。",
-    "sceneZh": "1799 年前后的格拉斯哥，一位教师注意到：白天真正使用工具的人，常常被挡在讲解科学的房间外面。",
-    "storyBodyZh": "他受过医学训练，也教自然哲学，但工厂现场让他产生了一种不安。那些熟练工人能修机器、判断材料、用手感受力，却常常没有一条负担得起的路，去学习描述这些经验的科学语言。于是他把课放到下工之后，用仪器、演示和朴素解释讲热、运动、化学和机械。重点不是让每个工人一夜之间变成大学学者，而是搭出第一阶台阶：让有实践经验的人，不必假装已经准备好，也能进入正式知识。后来，从这一级台阶长出了 mechanics' institutes、晚间课程、图书馆，以及一种更大的观念：基础资格不应该只是守门，也应该开门。麻烦在于，真实经验已经在手上，正式入口却常常不承认它。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样搭出第一阶台阶，让人带着经验进入可继续的学习。后来能被学习的，正是这些课程入口、练习、同伴反馈和被承认的资格：它们让下一次相似现场不必重新摸索。这个人叫 George Birkbeck，他的工人讲座推动了 mechanics' institute 运动，也成为后来的 Birkbeck, University of London 的重要源头。",
-    "knowledgePointZh": "基础课程与资格搭建的是实践准备与正式学习之间的第一座被承认的桥。",
-    "reflectionQuestionZh": "你身边谁已经有真实经验，却仍然需要进入正式知识的第一阶台阶？"
-  },
-  "002-braille-raised-dots": {
-    "titleZh": "指尖下的六个凸点",
-    "summaryZh": "一所盲校里的少年，把阅读从缓慢的展示，变成了指尖可以独立完成的行动。",
-    "sceneZh": "1810 年代的法国 Coupvray 和巴黎之间，一个失明少年摸着厚重凸字书，发现读写仍被别人控制。",
-    "storyBodyZh": "学校里有凸字书，但它们厚重、缓慢，也很少给盲学生真正“写回去”的机会。后来，一个士兵发明的夜间书写法传到学校：把点压进纸里，让人能在黑暗中摸读信息。这个少年试了试，却发现那套点太大，一个指尖很难一次读完，也不适合日常阅读。于是他不断缩小、测试、重新排列，直到六个凸点组成的小格子可以表达字母、标点、数字，后来还可以表达音乐。这个发现不只是技术，它改变了读写的尊严：一个人可以安静地读、私下地写、反复回看一行字，不必永远等待别人的声音带自己进入知识。如果只按旧路走，把入门学习当成个人先补齐的零散准备，事情看上去也能继续。可练习和门槛没有那么顺从：真实经验已经在手上，正式入口却常常不承认它。于是下一步不能只是补一句解释，而要发展出课程入口、练习、同伴反馈和被承认的资格。名字可以晚一点出现；先被留下来的，是这些必须反复练习的课程入口、练习、同伴反馈和被承认的资格。这个人叫 Louis Braille，他发展出的 braille 读写系统，成为全球盲人和视障者基础读写能力的重要支柱。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把课程入口、练习、同伴反馈和被承认的资格一点点固定下来。",
-    "knowledgePointZh": "读写与算术不只是学校基础，它们让人独立进入信息、符号、数量、记忆和社会参与。",
-    "reflectionQuestionZh": "当一种工具让人不必请求别人就能阅读时，哪一种自由已经悄悄出现了？"
-  },
-  "003-carnegie-speaking-class": {
-    "titleZh": "害怕站到众人面前的推销员",
-    "summaryZh": "一门演讲课说明：个人发展常常发生在恐惧和练习之间的那段距离里。",
-    "sceneZh": "20 世纪初的纽约，一个从乡村背景走出来的年轻人发现，很多成年人不是败在没有知识，而是败在必须开口的那一刻。",
-    "storyBodyZh": "他做过销售，试过表演，也教过课，所以很懂那种从身体里冒出来的尴尬。晚间课程里，他看见店员、推销员、工程师和经理下班后赶来，身上带着同一种隐秘难题：他们有话可说，可一站到众人面前，身体就像遇到危险。于是他没有先讲漂亮理论，而是让他们站起来，讲一个真实小故事，倾听别人，记住名字，具体地赞美，再下周继续试。慢慢地，这门课变宽了。表达不只是声音，它还包括注意力、信心、同理心、记忆，以及让另一个人感觉自己被看见的能力。个人技能之所以可以被训练，不是因为人格可以被制造，而是因为勇气可以在一个个小小的公开行动里练习。如果只按旧路走，把入门学习当成个人先补齐的零散准备，事情看上去也能继续。可练习和门槛没有那么顺从：真实经验已经在手上，正式入口却常常不承认它。于是下一步不能只是补一句解释，而要发展出课程入口、练习、同伴反馈和被承认的资格。这个人叫 Dale Carnegie，他的公众演讲和人际关系课程发展出《How to Win Friends and Influence People》，也影响了现代个人发展训练。",
-    "knowledgePointZh": "个人技能与发展关注自我管理、沟通、信心、倾听、适应，以及人在社会场景中的可练习能力。",
-    "reflectionQuestionZh": "你生活里的哪一种能力，如果每周被温和地公开练习，会最快发生变化？"
-  },
-  "009-brownsea-scout-camp": {
-    "titleZh": "没有上课铃的小岛",
-    "summaryZh": "一次实验营地说明：有些通用学习之所以重要，正因为它不属于单一课堂标签。",
-    "sceneZh": "1907 年 8 月，来自不同社会背景的男孩来到 Brownsea Island，露营、做饭、观察、打信号、做游戏，并以小队方式学习。",
-    "storyBodyZh": "组织者曾是军人，但这次营地并不只是军事训练。他曾见过少年担任信使、助手和观察者，也开始想：普通年轻人能不能通过实践，而不是只听讲，学会勇气、服务、户外判断、团队合作和公民责任？营地每天混合着很难被整齐课表分开的内容：绳结、追踪、急救、野外技能、讲故事、纪律、游戏，以及对小队的照看。有些历史语境今天需要被审慎批判，但它留下的教育形式仍然清楚：一种混合型课程，把品格、实用技能、共同体和自立放在一起学习。可是现场的压力在于，真实经验已经在手上，正式入口却常常不承认它。未另分类的通用课程与资格后来会有课程和机构；在这个现场里，它先贴着课程入口、练习、同伴反馈和被承认的资格展开。这个人叫 Robert Baden-Powell，他在 Brownsea Island 的实验推动了 Scout movement，也开启了许多不属于普通学校分类的通用青少年课程。",
-    "knowledgePointZh": "未另分类的通用课程保留那些混合型学习形式，把实用技能、品格、进入能力和社会参与放在一起。",
-    "reflectionQuestionZh": "当每一节课都必须属于一个整齐学科时，哪一种重要生活能力反而更难学习？"
-  },
-  "018-reggio-emilia-school": {
-    "titleZh": "废墟旁边重新搭起的学校",
-    "summaryZh": "战后的 Reggio Emilia，家长和一位教育者把儿童照护变成社区、艺术、语言和研究共同参与的项目。",
-    "sceneZh": "第二次世界大战后，Reggio Emilia 附近的一群家长想先给孩子建一所学校，哪怕他们还没有一个完整的学校系统。",
-    "storyBodyZh": "那位年轻教育者在 Reggio Emilia 一带长大，战争期间仍在学习教育学。1945 年，他听说一个受战争破坏的村庄里，家长们正在为孩子建学校，就去看了看。那不是一个整齐的官方项目，更像是一群普通人用砖块和手艺告诉孩子：未来还没有被夺走。他看到的不是已经成型的方法，而是一个社区试着围绕孩子重新组织生活。后来慢慢长出来的学校，没有把学习切成整齐的小盒子。孩子们画画、搭建、争论、倾听、塑形、测量、表演，也一次次回到自己的想法。老师记录过程，家长参与讨论，教室环境本身也成了教学的一部分。重点不是把艺术加进教育当装饰，而是承认孩子用很多种语言思考，而教育常常需要好几个学科一起，才听得清这些语言。如果只按旧路走，把教育看成成人把内容交给学生，事情看上去也能继续。可材料和学习停顿没有那么顺从：孩子、材料和情境会不断改变学习发生的方式。于是下一步不能只是补一句解释，而要发展出观察记录、环境设计、发展判断和教学反思。后来的课程会给它命名，当时更急迫的是把观察记录、环境设计、发展判断和教学反思变成可重复的做法。这个人叫 Loris Malaguzzi，他和家长们发展出 Reggio Emilia 教育取向，让跨学科、社区、艺术和儿童表达成为同一套学习经验。",
-    "knowledgePointZh": "教育相关跨学科课程把不同学习目标连接起来，让学习者一起使用知识，而不是把知识分开存放。",
-    "reflectionQuestionZh": "如果一个孩子不只用一种语言思考，哪些学科需要站在旁边，才能真正听见他？"
-  },
-  "021-bauhaus-workshop": {
-    "titleZh": "战后工坊里的新学校",
-    "summaryZh": "一所战后学校试图把艺术、手工、设计和建筑重新放回同一个工作间。",
-    "sceneZh": "第一次世界大战后，魏玛的一位年轻建筑师面对的是一个分裂的世界：一边是纯艺术，一边是手工和工业。",
-    "storyBodyZh": "他不希望学生把美只当作博物馆装饰，也不希望制作被看成较低级的劳动。在这所新学校里，学生先学习材料、色彩、形式、工具和工坊，再进入具体方向。画家、织物设计者、金属工、字体设计者、舞台设计者和建筑师被放到彼此附近学习，因为现代生活已经不再由孤立的艺术制造。一把椅子、一张海报、一盏灯、一栋建筑、一件舞台服装、一个字形，都在问同一个问题：形式怎样服务生活，同时不失去想象力？这所学校经历了政治、经费、等级和自身排斥问题，但它改变了现代艺术教育的词汇：艺术可以通过制作来思考。麻烦在于，手势、材料、声音和记忆会越过这些格子彼此回应。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是作品怎样带着历史经验、身体感受和观看方式生产意义。在名称固定以前，细读、比较、材料分析和解释传统已经先把现场和判断连接起来。这个人叫 Walter Gropius，他于 1919 年创办 Bauhaus，让艺术、手工、设计和建筑的统一成为现代艺术教育的重要理念。",
-    "knowledgePointZh": "艺术研究形式、材料、图像、声音、动作、制作和感知如何塑造人的经验。",
-    "reflectionQuestionZh": "你身边哪一个物件，如果制作者同时像艺术家和工匠一样思考，会变得不一样？"
-  },
-  "022-petrarch-mountain-letter": {
-    "titleZh": "为了一眼风景爬上山的人",
-    "summaryZh": "一封著名的登山信，让人文像是一次转身：面向记忆、自我审视和古代声音。",
-    "sceneZh": "1336 年 4 月 26 日，一位诗人和兄弟登上 Mont Ventoux，不是因为路必须经过那里，而是因为他想从高处看一眼世界。",
-    "storyBodyZh": "他多年热爱旧书，抄写书信，寻找古代作者，也越来越觉得：过去并没有死，只要仍有人带着自己的生命去回应它。登山时，外面的风景变成了内心的震动。他翻开随身带着的 Augustine 小书，读到的话仿佛在提醒他：人为何追逐世界，却忘了自己的灵魂。那封信的每个细节是否都完全符合现代历史标准，并不影响它呈现出的注意力：风景、古典记忆、基督教式自省、友谊、野心，以及一个人被拉在不同时代之间的感觉。人文就从这种张力里开始：古老文本、信念、历史和内心问题，怎样仍在塑造活着的人。可这一幕留下的细节提醒研究者，手势、材料、声音和记忆会越过这些格子彼此回应。问题从这里换了重心：作品怎样带着历史经验、身体感受和观看方式生产意义，而不是把异常当作例外丢开。这个人叫 Francesco Petrarca，通常被称为 Petrarch，他整理和重新发现古典文本，并以自我反思的写作成为文艺复兴人文主义的关键人物。",
-    "knowledgePointZh": "人文研究历史、宗教、哲学、伦理、文化记忆和内在生活，理解人如何继承并修订意义。",
-    "reflectionQuestionZh": "哪一本旧书、哪一个地点或哪段记忆，可能因为让你从高处看见自己，而改变你？"
-  },
-  "023-rosetta-cartouche": {
-    "titleZh": "王名外面的椭圆框",
-    "summaryZh": "一位年轻语言学者追踪不同文字里的重复王名，终于让沉默的古文明重新发声。",
-    "sceneZh": "19 世纪的法国，一个热爱语言的少年在政治动荡中长大，还没有稳定事业时，就已经在抄写文字、寻找不同文字之间的模式。",
-    "storyBodyZh": "那块让欧洲学者着迷的石碑，用几种文字写着同一份诏令，可象形文字仍然拒绝被读懂。他没有把那些符号只当作装饰，而是反复比较王名，尤其是椭圆框里的名字，把它们同希腊字母、以及他熟悉的科普特语联系起来。一个在某处看似图画的符号，在另一处开始表现得像声音。突破很慢，也充满竞争，而且并不是一个人凭空完成的；但他的关键一步改变了一切：这些符号不只是神圣图像，也能记录语言。一旦这一点被确认，纪念碑、墓葬、名字、祷文和官方记录，开始重新进入历史。这不是旧办法完全失灵的时刻。按作者、年代、风格或门类整理作品，本来就能让人先行动；真正顶住它的，是手势、材料、声音和记忆会越过这些格子彼此回应。当这个卡点反复出现，新的问题变成了：作品怎样带着历史经验、身体感受和观看方式生产意义。语言的名字还可以推迟，细读、比较、材料分析和解释传统却已经在现场要求一种新训练。这个人叫 Jean-Francois Champollion，他在 1822 年宣布对埃及象形文字的决定性破译，并成为 Egyptology 的奠基人物之一。",
-    "knowledgePointZh": "语言研究连接文字、声音、语法、意义、翻译，以及让语言重新可读的历史条件。",
-    "reflectionQuestionZh": "当石头上的符号不再只是装饰，而变成一句话，世界会怎样改变？"
-  },
-  "028-black-mountain-studio": {
-    "titleZh": "没有整齐边界的学院",
-    "summaryZh": "美国一所小学院把流亡、工艺、哲学、音乐、诗歌和材料放进同一个实验教育里。",
-    "sceneZh": "1933 年，Bauhaus 在德国被关闭后，一位教师和妻子带着行李、工坊教学习惯和一种不愿把艺术同生活分开的信念，来到北卡罗来纳。",
-    "storyBodyZh": "他们加入的那所学院很小，小到学生会参与学校决策，和老师一起生活，处理材料，读哲学，建造东西，表演，争论，做饭，也常常在没有传统地图的情况下失败。那位教师著名的材料与形式课程，并不是从名作开始，而是从纸、颜色、玻璃、树叶、金属丝、压力、平衡，以及真正看见东西的纪律开始。围绕这些练习，舞者、诗人、作曲家、画家、织物艺术家、建筑师和思想者彼此靠近。艺术与人文的跨学科在这里不是多加几个主题，而是把制作、阅读、生活和感知当成同一种教育。这不是旧办法完全失灵的时刻。按作者、年代、风格或门类整理作品，本来就能让人先行动；真正顶住它的，是手势、材料、声音和记忆会越过这些格子彼此回应。当这个卡点反复出现，新的问题变成了：作品怎样带着历史经验、身体感受和观看方式生产意义。后来能被学习的，正是这些细读、比较、材料分析和解释传统：它们让下一次相似现场不必重新摸索。这个人叫 Josef Albers，他在 Black Mountain College 的教学让跨学科艺术教育成为真实实验，而不只是口号。",
-    "knowledgePointZh": "艺术与人文跨学科课程把制作、解释、历史、语言、表演和生活经验放进同一个探究场域。",
-    "reflectionQuestionZh": "如果课堂同时包含工具、书、饭桌、争论和表演，你会以什么不同方式学习？"
-  },
-  "029-lomax-field-recorder": {
-    "titleZh": "后备箱里的沉重录音机",
-    "summaryZh": "一台田野录音机说明：有些文化知识横跨音乐、档案、口述史、政治和记忆。",
-    "sceneZh": "20 世纪三四十年代，一个年轻采集者带着沉重到足以改变整趟行程的录音设备，开车穿过很长的路。",
-    "storyBodyZh": "他坐进监狱、门廊、教堂、厨房、田野和小房间，录下那些很少进入官方文化的歌声。乍看之下，他是在采集音乐；但录音里也有口音、劳动节奏、玩笑、地方历史、种族暴力、迁徙、记忆，以及那些常被当成文化素材而不是文化作者的人所保有的尊严。这项工作很难放进一个格子。它既是音乐学，也是民俗学、档案建设、口述史、纪录实践，更是一种政治主张：每个共同体都应该有机会听见自己被保存。未另分类的艺术与人文，正生活在这种边界地带，分类不如对脆弱人类表达的照护重要。麻烦在于，手势、材料、声音和记忆会越过这些格子彼此回应。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是作品怎样带着历史经验、身体感受和观看方式生产意义。这个人叫 Alan Lomax，他的田野录音和 cultural equity 工作保存并重新解释了美国及世界各地的民间音乐与口述传统。",
-    "knowledgePointZh": "未另分类的艺术与人文保护那些跨越音乐、记忆、档案、口述史、媒介和公共意义的混合文化实践。",
-    "reflectionQuestionZh": "你身边谁的声音，如果没人先把它当作文化来对待，可能还没出名就消失？"
-  },
-  "031-bus-stop-price": {
-    "titleZh": "王朝为什么会衰弱",
-    "summaryZh": "一个在动荡时代观察部落、城市和政权的人，试着把社会行为写成有规律的历史。",
-    "sceneZh": "14 世纪北非，一个年轻官员在宫廷、部落营地和监狱之间辗转，亲眼看见权力如何上升又崩塌。",
-    "storyBodyZh": "他的人生并不安稳，家族经历瘟疫，仕途几次卷入政治风浪。他开始怀疑，历史书里只记谁胜谁败是不够的。为什么一些群体能团结起来，为什么进入富裕城市后又慢慢松散，为什么税收、奢侈、教育、地理和共同体精神会一起改变政权命运？他把亲身见过的部落联盟、城市官僚和王朝循环放在一起分析，试着找出社会行为背后的力量。社会与行为科学的雏形就在这种追问里出现：人不是孤立行动，群体的凝聚、制度和环境会共同塑造历史。把社会问题交给意见、传闻或单一记录，仍有它的用处；但要让判断走得更远，就必须把调查、核对、分类、传播和公共解释变成可学习的工作。社会与行为科学的名字还可以推迟，调查、核对、分类、传播和公共解释却已经在现场要求一种新训练。这个人叫 Ibn Khaldun，他在《Muqaddimah》中提出关于社会组织、王朝循环和 asabiyyah 的分析，被视为社会科学思想的重要先驱之一。",
-    "knowledgePointZh": "社会与行为科学研究人的选择、群体、制度、文化和环境如何共同塑造行动。",
-    "reflectionQuestionZh": "当一个团队变弱时，你会只责怪个人，还是追问共同体的结构发生了什么？"
-  },
-  "032-rumor-before-the-storm": {
-    "titleZh": "世界知识的抽屉",
-    "summaryZh": "一座纸卡片构成的知识宫殿，让新闻与信息不只是报道，也包括组织和检索世界。",
-    "sceneZh": "19 世纪末的布鲁塞尔，一个年轻律师坐在堆满纸卡片的房间里，想象全世界的知识都能被找到。",
-    "storyBodyZh": "他关心的不是某一条新闻，而是人类怎样保存和共享所有已经写下来的东西。书、论文、报告、图片、剪报、统计表，如果不能被分类、编号、引用和检索，就像散在地上的碎片。他和同伴设计通用十进分类法，建立庞大的卡片目录，试图让任何地方的人都能提出问题并获得相关资料。这个梦想有时代局限，也带着欧洲中心的阴影，但它抓住了信息工作的核心：公共知识不是自然流动的，它需要索引、标准、媒介、机构和持续维护。这不是旧办法完全失灵的时刻。把社会问题交给意见、传闻或单一记录，本来就能让人先行动；真正顶住它的，是不同人的位置会留下互相冲突却都不能忽略的证据。当这个卡点反复出现，新的问题变成了：什么记录能让分散生活进入公共判断。这个人叫 Paul Otlet，他创建 Mundaneum 并推动文献学、知识组织和信息科学早期发展，被后世视为现代信息组织思想的重要先驱之一。",
-    "knowledgePointZh": "新闻与信息领域关注报道、保存、检索、组织和传播，让公共知识能够被找到、核实和使用。",
-    "reflectionQuestionZh": "如果一条重要信息无法被找到，它还算真正进入公共生活了吗？"
-  },
-  "038-community-data-project": {
-    "titleZh": "水泵周围的黑点",
-    "summaryZh": "一张疾病地图把社会调查、数据、地方访谈和公共信息放进同一个判断。",
-    "sceneZh": "1854 年伦敦 Soho 的街道上，霍乱病例不断增加，一位医生拿着地址和地图追踪死亡的位置。",
-    "storyBodyZh": "当时许多人仍相信坏空气是主要原因。他却把注意力放到人喝了什么水、住在哪里、谁离开、谁留下，以及哪些看似例外其实有共同解释。他不是一个人完成全部调查；当地牧师和居民提供了关键访问线索。病例被标到地图上后，Broad Street 水泵周围的黑点越来越密。这个判断既是医学问题，也是社会信息问题：数据要来自街道，访谈要校正地图，地图又要说服公共机构采取行动。跨学科的社会科学、新闻与信息在这里很清楚：证据要能穿过学科边界，才可能改变一个城市的决定。可是现场的压力在于，不同人的位置会留下互相冲突却都不能忽略的证据。在名称固定以前，调查、核对、分类、传播和公共解释已经先把现场和判断连接起来。这个人叫 John Snow，他通过 Broad Street 霍乱调查和地图分析推动了流行病学、公共卫生和数据可视化的经典实践。这类起源常常不宏大：旧办法带不走的现场先留下来，调查、核对、分类、传播和公共解释才慢慢变成方法。",
-    "knowledgePointZh": "社会科学、新闻与信息的跨学科课程把社会调查、数据、地图、访谈和公共传播连接起来。",
-    "reflectionQuestionZh": "一个公共问题什么时候需要地图、访谈和行动同时出现？"
-  },
-  "039-unusual-community-signal": {
-    "titleZh": "渔民为什么没有把湖耗尽",
-    "summaryZh": "一个长期观察共同资源的人发现，真实社区常常比简单理论更会发明规则。",
-    "sceneZh": "20 世纪后半叶，一个研究者读到许多关于森林、灌溉渠和渔场的案例，发现它们并不总按课本预言崩坏。",
-    "storyBodyZh": "流行说法常把公共资源讲成两种结局：要么被市场私有化，要么由国家统一管理，否则人人都会多拿一点直到系统崩溃。她不满足于这个太整齐的故事。她和同伴比较世界各地的灌溉社群、渔业、牧场和森林，发现有些社区会自己制定边界、监测、惩罚、冲突解决和分层规则。它们不是完美乌托邦，也会失败，但它们证明社会现实比二分法复杂。未另分类的社会科学、新闻与信息需要这种耐心：有些制度知识藏在地方规则、口头协议和长期观察里，不一定属于单一学科。可这一幕留下的细节提醒研究者，不同人的位置会留下互相冲突却都不能忽略的证据。问题从这里换了重心：什么记录能让分散生活进入公共判断，而不是把异常当作例外丢开。未另分类的社会科学、新闻与信息的名字还可以推迟，调查、核对、分类、传播和公共解释却已经在现场要求一种新训练。这个人叫 Elinor Ostrom，她通过共同池资源研究和制度分析获得诺贝尔经济学奖，改变了人们对集体治理的理解。",
-    "knowledgePointZh": "未另分类的社会科学、新闻与信息收纳那些跨越制度、行为、地方知识和公共信息的复杂社会现象。",
-    "reflectionQuestionZh": "你身边哪一套非正式规则，其实比外人想象得更精密？"
-  },
-  "041-cafe-closing-sheet": {
-    "titleZh": "公司不是一台机器",
-    "summaryZh": "一次对大企业的长期观察，让管理学开始把组织看成由人、目标和责任组成的社会机构。",
-    "sceneZh": "20 世纪中期，一个年轻管理思想者走进大型汽车公司，发现真正难的不是画组织图，而是理解组织为什么行动。",
-    "storyBodyZh": "他不是工程师出身，也不是只看财务报表的人。他关心一个更朴素的问题：当公司越来越大，谁在决定目标？经理人的责任是什么？员工是不是只是一颗螺丝？顾客、社会和长期生存又放在哪里？他观察通用汽车这样的组织，发现管理不是命令链条那么简单，而是让知识、权责、绩效、创新和人的尊严保持可工作的关系。商业与行政在这里变成一门关于“组织如何有目的地行动”的学问。它既要看数字，也要看人；既要看效率，也要看责任。麻烦在于，成本、责任、权利和风险经常被藏到决定之后。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是规则、资源和责任怎样被安排，才经得起共同承担。商业与管理的名字还可以推迟，账目、制度、案例、权利边界和组织设计却已经在现场要求一种新训练。这个人叫 Peter Drucker，他通过《Concept of the Corporation》等作品奠定现代管理学的重要语言，被称为现代管理思想的重要奠基人之一。",
-    "knowledgePointZh": "商业与行政研究组织、流程、责任、协调、绩效和决策如何让集体工作可持续运转。",
-    "reflectionQuestionZh": "一个组织如果只追效率，却说不清自己的责任，会在哪些地方开始失灵？"
-  },
-  "042-bicycle-deposit": {
-    "titleZh": "学生第一次听懂普通法",
-    "summaryZh": "一个讲课者把散落判例和法律传统整理成可学习的体系，让法律教育走向公共语言。",
-    "sceneZh": "18 世纪的牛津，一个年轻律师面对学生，试着把复杂的普通法讲成一套有次序的课程。",
-    "storyBodyZh": "当时普通法常被认为只能在律师事务所和法院里慢慢熬出来，外人很难进入。判例、惯例、术语和程序像一片森林，既保护权利，也让许多人迷路。他开始公开讲授英格兰法律，把权利、财产、私人侵害和公共犯罪整理成系统叙述。后来他的书影响巨大，也带着时代局限，尤其在殖民和社会等级问题上需要被批判阅读。但法律作为学科的一个关键变化已经出现：规则不只是专业圈的秘密技术，也可以被讲解、出版、争论和教学。这不是旧办法完全失灵的时刻。靠经验、契约或账目先处理交易和组织，本来就能让人先行动；真正顶住它的，是成本、责任、权利和风险经常被藏到决定之后。当这个卡点反复出现，新的问题变成了：规则、资源和责任怎样被安排，才经得起共同承担。一门领域不是先从名称开始，而是先从账目、制度、案例、权利边界和组织设计这些可练习的动作开始。这个人叫 William Blackstone，他的《Commentaries on the Laws of England》成为普通法教育和英美法律思想史上的经典文本。",
-    "knowledgePointZh": "法律研究规则、权利、责任、证据、解释和处理冲突的制度。",
-    "reflectionQuestionZh": "如果规则只被少数专业人士听懂，普通人还怎样保护自己的权利？"
-  },
-  "048-pop-up-market-rules": {
-    "titleZh": "一份关于便宜保险的报告",
-    "summaryZh": "一个律师把商业数据、行政制度和法律公共性放在一起，试图保护普通人的金融生活。",
-    "sceneZh": "20 世纪初的波士顿，一个律师听见工薪家庭买不起可靠保险，也看见金融公司如何利用信息不对称。",
-    "storyBodyZh": "他并不把法律只看成诉讼技巧。对他来说，法律、商业和行政必须一起回答一个问题：普通人在复杂市场里怎样不被制度性弱势吞掉？他研究保险成本、公司利润、储蓄银行制度和公共监管，提出通过 savings bank life insurance 让普通家庭获得更便宜、更透明的人寿保险。这个方案不是单一学科能完成的：需要金融计算、法律授权、行政执行和公共说服。商业、管理与法律的跨学科意义就在这里，市场不是天然公平，规则也不是自动有效，它们必须被设计成能服务真实生活。麻烦在于，成本、责任、权利和风险经常被藏到决定之后。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Louis Brandeis，他推动 savings bank life insurance 等公共改革，并以律师、改革者和美国最高法院大法官身份影响了商业监管与法律公共责任。",
-    "knowledgePointZh": "商业、管理与法律跨学科课程连接组织设计、金融决策、合同、监管、行政执行和问责。",
-    "reflectionQuestionZh": "当一种产品太复杂，普通人无法判断风险时，法律和管理应该怎样介入？"
-  },
-  "049-strange-side-business": {
-    "titleZh": "小店里的再装瓶",
-    "summaryZh": "一家护肤小店把商业、伦理、供应链和行动主义混在一起，让分类变得不够用。",
-    "sceneZh": "1970 年代英国海边小城，一个女性创业者开了一家小店，顾客拿着空瓶回来重新灌装。",
-    "storyBodyZh": "她没有按当时化妆品行业的常规走。包装可以简单，动物测试可以被质疑，原料故事可以告诉顾客，商业也可以公开站在环保和人权议题旁边。她的做法后来同样需要复杂评价：品牌扩张、供应链、并购和市场叙事都会让理想变得不纯粹。但这个案例说明，未另分类的商业、管理与法律常常出现在边界上：一件商品既是买卖，也是价值主张、合同关系、劳动条件、生态选择和公共传播。这不是旧办法完全失灵的时刻。靠经验、契约或账目先处理交易和组织，本来就能让人先行动；真正顶住它的，是成本、责任、权利和风险经常被藏到决定之后。当这个卡点反复出现，新的问题变成了：规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Anita Roddick，她创办 The Body Shop，并以环保、反动物测试和 ethical consumerism 影响了商业伦理与品牌行动主义。",
-    "knowledgePointZh": "未另分类的商业、管理与法律处理那些跨越商业模式、伦理、监管、社区和公共价值的混合安排。",
-    "reflectionQuestionZh": "当一个品牌说自己有价值立场时，你会看广告语，还是看它怎样组织供应链和责任？"
-  },
-  "051-yogurt-on-the-counter": {
-    "titleZh": "小岛上的鸟嘴",
-    "summaryZh": "一场漫长航行让生物学问题从物种分类，转向生命如何随环境变化。",
-    "sceneZh": "1830 年代，一位年轻博物学者在船上晕船、采集标本，也在岛屿之间注意到鸟、龟和植物的细微差异。",
-    "storyBodyZh": "他出发时还不是一个准备推翻传统观念的人，更像一个爱观察的年轻人：写笔记、收集昆虫、寄回标本、和船员一起经历风浪。真正改变他的不是某一个瞬间，而是大量小差异慢慢堆在一起：相近的岛屿有不同的鸟嘴，化石和现生动物彼此呼应，人工育种显示性状可以被选择。多年后，他才把这些线索组织成一个更大的解释：生命不是固定陈列，而是在变异、遗传、环境和选择中逐渐改变。生物及相关科学在这里不再只是给生命命名，也开始追问生命为什么会成为现在这样。靠肉眼或孤立标本确认生命现象，仍有它的用处；但要让判断走得更远，就必须把样本、镜片、比较、记录和重复观察变成可学习的工作。这个人叫 Charles Darwin，他通过《On the Origin of Species》提出自然选择理论，成为现代进化生物学的重要奠基人。",
-    "knowledgePointZh": "生物及相关科学研究生命、物种、遗传、适应、演化和生命系统之间的关系。",
-    "reflectionQuestionZh": "当你看到两个相似生命的细微差别时，你会把它当偶然，还是当成环境留下的线索？"
-  },
-  "052-stream-after-rain": {
-    "titleZh": "春天为什么安静了",
-    "summaryZh": "一本关于鸟鸣消失的书，让环境问题从局部害虫控制变成整个生态系统的警报。",
-    "sceneZh": "20 世纪中期的美国，一个海洋生物学家收到越来越多来信：鸟少了，鱼死了，喷洒后的土地不对劲。",
-    "storyBodyZh": "她原本写过海洋，也擅长把科学写给普通读者。面对杀虫剂，她没有只问它能不能杀死目标害虫，而是追问它进入土壤、水、昆虫、鸟、鱼和人体之后会怎样移动。她阅读研究、整理案例、承受化工行业攻击，也小心避免把复杂生态写成简单恐吓。环境领域在这里变得清楚：人类技术不是只作用于一个点，它会穿过食物链、公共政策、商业利益和日常家庭。一个“有效”的工具，如果看不到长期代价，就可能把春天本身变安静。可是现场的压力在于，同一片土地上的水源、燃料、土壤、物种和社区生活会一起改变。名字可以晚一点出现；先被留下来的，是这些必须反复练习的长期观察、社区记录、生态关系和行动反馈。这个人叫 Rachel Carson，她的《Silent Spring》推动现代环境运动和农药监管讨论，成为环境科学与公共环保意识的重要经典。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把长期观察、社区记录、生态关系和行动反馈一点点固定下来。",
-    "knowledgePointZh": "环境领域研究生态系统、水、污染、气候、资源和人类活动之间的关系。",
-    "reflectionQuestionZh": "一种技术解决了眼前问题以后，你会不会继续追问它去了哪里？"
-  },
-  "053-kitchen-ice-and-steam": {
-    "titleZh": "斜面上的小球",
-    "summaryZh": "一个滚下斜面的小球，让物理科学开始用实验、测量和数学追问运动。",
-    "sceneZh": "17 世纪意大利，一个教师让小球沿斜面滚下，用水钟和刻度记录它怎样加速。",
-    "storyBodyZh": "他并不满足于背诵古代权威关于重物下落的说法。真实下落太快，不容易测；于是他把斜面变成放慢运动的工具，让时间、距离和速度之间的关系可以被观察。小球每次滚动都像在提醒他：自然不是只能被辩论，也可以被设计实验来询问。物理科学的精神在这里显现：把看似普通的运动拆成可测量关系，用数学表达规律，再让实验反复挑战直觉。沿用权威解释或把现象当作孤立实验结果，仍有它的用处；但要让判断走得更远，就必须把实验装置、测量、条件控制和数学表达变成可学习的工作。真正留下来的，是实验装置、测量、条件控制和数学表达从个人经验变成可以传递的训练。这个人叫 Galileo Galilei，他通过落体、斜面和天文观察等研究推动近代物理科学和实验方法的发展。学生在实验室里重复这种动作时，学到的不只是公式，而是怎样让自然用可检查的方式回答问题。",
-    "knowledgePointZh": "物理科学研究物质、能量、运动、力、材料和自然规律如何在可观察现象中表现出来。",
-    "reflectionQuestionZh": "当一个现象太快看不清时，你能不能设计一种方法让它慢下来回答你？"
-  },
-  "054-shared-bill-pattern": {
-    "titleZh": "算术书里的陌生数字",
-    "summaryZh": "一本关于计算的书让数学与统计从地方技巧走向可传播的符号系统。",
-    "sceneZh": "9 世纪的巴格达，一个学者在智慧宫附近整理印度数字、方程和实际计算问题。",
-    "storyBodyZh": "他面对的不是纯粹游戏，而是继承、贸易、测量、税收和土地分配中的真实计算。旧方法可以算，但不够统一，也不容易传播。他把印度数字和十进位计算介绍给阿拉伯语读者，又系统讨论线性和二次方程的解法。数学与统计的基础意义在这里很清楚：符号一旦变得可写、可教、可复用，复杂关系就能离开个人头脑，成为社会共同工具。把计算或数字当成给出答案的技巧，仍有它的用处；但要让判断走得更远，就必须把符号、证明、数据收集、模型和误差判断变成可学习的工作。后来的课程会给它命名，当时更急迫的是把符号、证明、数据收集、模型和误差判断变成可重复的做法。这个人叫 Muhammad ibn Musa al-Khwarizmi，他的代数学著作和关于印度数字的作品影响了 algebra 与 algorithm 等概念的历史发展。后来无数课堂、账本和程序都沿着这条路继续走：先把关系写清楚，更多人才能一起检查、改进和使用它。后来人看见的是领域名称，当时真正被迫形成的，是围绕符号、证明、数据收集、模型和误差判断的一套工作。",
-    "knowledgePointZh": "未进一步细分的数学与统计关注数量、结构、符号、模型和数据如何帮助人推理。",
-    "reflectionQuestionZh": "一种更好的符号，怎样让原本困难的问题开始被更多人共同解决？"
-  },
-  "058-school-air-quality": {
-    "titleZh": "星星亮度里的尺子",
-    "summaryZh": "一个在照片底片上比较星光的人，把天文学、数学和统计连成测量宇宙距离的方法。",
-    "sceneZh": "20 世纪初的哈佛天文台，一位女性计算员坐在成排玻璃底片前，逐颗比较变星的亮度。",
-    "storyBodyZh": "她的工作头衔并不显赫，很多女性计算员被安排做重复而精细的记录。可她在麦哲伦云的变星中发现一种关系：某些造父变星变化周期越长，真实亮度越高。这个关系像一把宇宙尺子，只要知道周期，就能推算亮度，再进一步估计距离。自然科学、数学与统计在这里完全交织：天文观测提供材料，数学关系组织模式，统计比较让规律浮现。她的发现后来帮助人类测量银河系之外的距离。麻烦在于，一个难题常常同时需要观测、数量关系和跨学科解释。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样把测量、模型和自然证据连成同一套判断。这不是替自然科学、数学与统计相关跨学科课程与资格寻找漂亮起源，而是看见跨学科数据、模型、图示和验证怎样先把问题托住。这个人叫 Henrietta Swan Leavitt，她发现造父变星周期-光度关系，成为现代宇宙距离尺度的重要基础。这也是数据和自然科学相遇时最动人的地方：微小记录不会自动说话，但耐心比较能让它们变成尺度。",
-    "knowledgePointZh": "自然科学、数学与统计跨学科课程把观察、模型、测量和数据推断连接起来。",
-    "reflectionQuestionZh": "一张照片底片里的小点，怎样可能变成测量宇宙的尺子？"
-  },
-  "059-mystery-stain": {
-    "titleZh": "海岸线到底有多长",
-    "summaryZh": "一个关于海岸线的问题，让自然、数学和统计之间出现了新的粗糙尺度。",
-    "sceneZh": "20 世纪中期，一个数学家盯着地图上的海岸线，发现尺子越短，量出的长度越长。",
-    "storyBodyZh": "传统几何喜欢光滑线条，可真实世界的云、山、树、河流和海岸都不那么听话。用大尺子量，很多弯曲被忽略；用小尺子量，细节不断冒出来，长度似乎没有稳定终点。他把这种粗糙、重复、自相似的形状发展成新的数学语言。这个方向既不像普通几何，也不只是物理或统计，却能帮助人描述自然界大量不规则形态。未另分类的自然科学、数学与统计就适合保存这种边界问题：分类暂时跟不上现象，但现象已经在要求新工具。可是现场的压力在于，粗糙、尺度或混合现象会不断逃出单一门类。这个人叫 Benoit Mandelbrot，他发展 fractal geometry，使分形成为理解自然形态、复杂系统和尺度问题的重要数学语言。",
-    "knowledgePointZh": "未另分类的自然科学、数学与统计收纳那些跨越自然形态、数学结构、数据和模型的边界问题。",
-    "reflectionQuestionZh": "如果一个东西越仔细看越复杂，你会把它当噪声，还是当成需要新数学的信号？"
-  },
-  "068-repairing-the-club-website": {
-    "titleZh": "防空炮为什么总慢半拍",
-    "summaryZh": "一个关于控制和反馈的问题，把计算、工程、生物和通信连成新的跨学科语言。",
-    "sceneZh": "1940 年代的第二次世界大战期间，一位数学家研究防空炮如何预测飞机位置，发现机器必须根据误差不断修正自己。",
-    "storyBodyZh": "他看到的不是单一工程问题。雷达给出信息，炮塔需要动作，目标在移动，系统根据误差反馈调整；类似过程也出现在神经系统、动物运动、通信网络和自动控制里。于是他把“控制与通信”作为共同问题来思考，提出 feedback、信息和系统调节的语言。ICT 的跨学科意义在这里出现：计算不只是电脑，通信不只是电线，控制不只是机器，而是生命、技术和组织都可能共享的结构。可这一幕留下的细节提醒研究者，符号、噪声、结构和使用错误会在黑箱内部暴露问题。问题从这里换了重心：信息怎样被表示、组织、传输和执行，才可靠又可维护，而不是把异常当作例外丢开。在名称固定以前，编码、结构、接口、权限、测试和恢复路径已经先把现场和判断连接起来。这个人叫 Norbert Wiener，他创立 cybernetics，使控制、通信、反馈和系统思想成为信息技术、自动化和跨学科研究的重要基础。",
-    "knowledgePointZh": "信息与通信技术跨学科课程连接计算、通信、控制、系统、工程和人的使用场景。",
-    "reflectionQuestionZh": "一个系统能学习修正自己之前，必须先听见哪一种反馈？"
-  },
-  "071-flickering-hall-light": {
-    "titleZh": "屋顶为什么不能只靠图纸漂亮",
-    "summaryZh": "一个工程师在复杂建筑里证明，工程不是给建筑补强，而是和形式一起思考可能性。",
-    "sceneZh": "20 世纪的悉尼，一座歌剧院的壳形屋顶让建筑师、政府和工程团队都陷入难题。",
-    "storyBodyZh": "他面对的不是普通计算题。建筑形态大胆，预算和政治压力不断增加，原本的曲面难以制造和支撑。工程团队必须把美学愿望、几何规则、预制构件、受力路径和施工方法重新组合，直到壳体可以被分解、制造和安装。这个过程并不完美，也伴随争议，但它说明工程行业的核心不只是按图施工。真正的工程要在愿望与现实之间翻译：哪些形状能被建造，哪些材料能承受，哪些步骤能让危险变小。可是现场的压力在于，材料、负载、流程和长期使用会把弱点推回现场。工程与工程行业后来会有课程和机构；在这个现场里，它先贴着材料测试、流程控制、结构计算和安全边界展开。这个人叫 Ove Arup，他领导 Sydney Opera House 工程工作，并推动结构工程与建筑设计深度协作的现代实践。今天任何大胆设计落地时，都还要经过类似翻译：把愿望拆进材料、预算、工期、责任和可以被检验的安全边界里。",
-    "knowledgePointZh": "工程及工程行业研究结构、材料、系统、施工、维护和技术约束如何让设计变成可靠现实。",
-    "reflectionQuestionZh": "当一个想法看起来很美，你会从哪里开始判断它能不能被建成？"
-  },
-  "072-soup-that-travels": {
-    "titleZh": "汽车底盘自己走过来",
-    "summaryZh": "一条移动装配线让制造从手工作坊转向节拍、标准化和大规模生产。",
-    "sceneZh": "1913 年的底特律工厂里，汽车底盘不再静静等工人围上来，而是沿着线缓慢移动。",
-    "storyBodyZh": "他想解决的不是单台汽车能不能造出来，而是怎样让更多人买得起、怎样让每一步工作稳定重复。装配线把任务拆小，把零件标准化，把节拍固定，也把工人的动作纳入严格流程。这个方法提高产量、降低成本，同时也带来劳动单调、控制和工人压力等问题。制造与加工在这里变得现代：产品不是只由技术发明决定，还由流程、时间、供应链、工人技能和管理制度共同决定。这不是旧办法完全失灵的时刻。把图纸、配方或一次成功当成完成，本来就能让人先行动；真正顶住它的，是材料、负载、流程和长期使用会把弱点推回现场。当这个卡点反复出现，新的问题变成了：怎样让设计在规模、风险和维护中仍然站得住。这个人叫 Henry Ford，他在 Highland Park 工厂推广移动装配线，使汽车大规模生产成为 20 世纪制造业的重要范式。今天看一条生产线，也不能只看产量；还要看节拍怎样改变劳动、质量、价格，以及人和机器之间的关系。",
-    "knowledgePointZh": "制造与加工关注原料、流程、标准化、质量、储存、运输和重复生产。",
-    "reflectionQuestionZh": "当一件商品变得便宜，是谁的时间、动作和自由被重新安排了？"
-  },
-  "073-crosswalk-at-school": {
-    "titleZh": "建筑必须站得住、用得上、看得动人",
-    "summaryZh": "一本古老建筑书把结构、功能和美感放在一起，成为建筑与施工的长久问题。",
-    "sceneZh": "公元前 1 世纪前后的古罗马，一个建筑师和工程师回顾神庙、水道、机械和城市空间，试图把建造经验写给后来的人。",
-    "storyBodyZh": "他不把建筑只看成墙和屋顶，也不把美当成表面装饰。一个建筑物必须坚固，能服务人的使用，也要有比例和秩序带来的美感。材料、地基、方向、公共用途、机械和人体尺度，都被放进同一套思考。建筑与施工的基础问题在这里很早就被说清：建造不是堆东西，而是在安全、用途、技术、气候、身体和文化之间达成一种可持久的安排。这不是旧办法完全失灵的时刻。把图纸、配方或一次成功当成完成，本来就能让人先行动；真正顶住它的，是材料、负载、流程和长期使用会把弱点推回现场。当这个卡点反复出现，新的问题变成了：怎样让设计在规模、风险和维护中仍然站得住。后来能被学习的，正是这些材料测试、流程控制、结构计算和安全边界：它们让下一次相似现场不必重新摸索。这个人叫 Vitruvius，他的《De architectura》提出 firmitas、utilitas、venustas 等思想，深刻影响建筑理论和建筑教育。学生读建筑时真正要练习的，正是这种同时看见结构、使用者和城市生活的能力。",
-    "knowledgePointZh": "未进一步细分的建筑与施工关注空间、结构、材料、使用、施工和长期维护。",
-    "reflectionQuestionZh": "一座建筑如果只好看，却不好用或不安全，它还算真正完成了吗？"
-  },
-  "078-community-kitchen-build": {
-    "titleZh": "一个圆顶能不能少用材料",
-    "summaryZh": "一个几何圆顶把工程、制造、建筑和资源问题连接成同一个实验。",
-    "sceneZh": "20 世纪美国，一个总爱画结构线和地图的人，反复问怎样用更少材料覆盖更大空间。",
-    "storyBodyZh": "他不是只想做奇特造型，而是着迷于效率：张力怎样分布，三角形为什么稳定，球面结构如何把重量分散，临时住房和大型空间能不能更轻、更快、更省。geodesic dome 把数学几何、结构工程、制造节点、建筑空间和资源伦理放在一起。它也不是万能答案，实际使用会遇到防水、维护、舒适和成本问题；但跨学科工程的价值正是在这里显现：一个形状同时要求几何、材料、建造、居住和社会理想共同受检验。这不是旧办法完全失灵的时刻。把图纸、配方或一次成功当成完成，本来就能让人先行动；真正顶住它的，是材料、负载、流程和长期使用会把弱点推回现场。当这个卡点反复出现，新的问题变成了：怎样让设计在规模、风险和维护中仍然站得住。后来能被学习的，正是这些材料测试、流程控制、结构计算和安全边界：它们让下一次相似现场不必重新摸索。这个人叫 Buckminster Fuller，他推广 geodesic dome，并以系统设计和“doing more with less”的思想影响工程、建筑和设计教育。",
-    "knowledgePointZh": "工程、制造与建筑跨学科课程把结构、材料、生产、空间、资源和使用者需求放在同一问题里。",
-    "reflectionQuestionZh": "一个结构如果更轻、更省，是否也必须更认真回答它怎样被人使用？"
-  },
-  "079-unusual-repair-material": {
-    "titleZh": "臭味背后的城市系统",
-    "summaryZh": "一次城市污水工程说明，未另分类的工程常在公共健康、土木、政治和日常生活之间展开。",
-    "sceneZh": "1858 年伦敦夏天，泰晤士河臭气冲进议会，城市终于无法继续假装污水问题只是气味问题。",
-    "storyBodyZh": "他面对的是一个被城市增长放大的系统性麻烦：厕所、河流、潮汐、疾病、街道、预算、政治拖延和公众恐惧全缠在一起。解决方案不是清理一条水沟，而是设计截流下水道、泵站和排放系统，把污水从城市生活核心转移出去。今天我们会继续追问污染被转移到哪里、谁承担环境代价，但这个工程确实让现代城市意识到，基础设施决定公共健康。未另分类的工程、制造与建筑常常就发生在这种边界：它既是土木工程，也是卫生、行政、政治和城市生活的重新组织。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。这个人叫 Joseph Bazalgette，他设计伦敦现代下水道系统，成为城市基础设施和公共卫生工程史上的重要人物。",
-    "knowledgePointZh": "未另分类的工程、制造与建筑处理跨越基础设施、公共健康、材料、施工和治理的复杂项目。",
-    "reflectionQuestionZh": "一个城市最重要的工程，为什么常常是在你闻不到、看不见时才算成功？"
-  },
-  "081-balcony-tomato-plan": {
-    "titleZh": "种子不再随手撒出去",
-    "summaryZh": "一台播种机让农业从凭经验撒播，转向行距、深度和效率的系统管理。",
-    "sceneZh": "18 世纪英国农田里，一个农场主看见种子被随手撒开，很多被鸟吃掉，很多落在不合适的深度。",
-    "storyBodyZh": "他并不是只想做一台新机器，而是对土地上的浪费感到不安。种子如果能按固定深度、固定间距进入土壤，就更容易发芽，也便于后续除草和管理。他改进 seed drill，让播种变得更有秩序。今天看来，机械化也带来单一化和土地管理的新的问法，但这个故事说明农业的基础问题从来不是“把种子扔进地里”这么简单。它涉及工具、土壤、时间、劳动力和对生命条件的精确安排。这不是旧办法完全失灵的时刻。把土地、作物或动物先看成产出问题，本来就能让人先行动；真正顶住它的，是土壤、水、疾病、行为和季节会把后果带到下一轮。当这个卡点反复出现，新的问题变成了：哪些生命条件会让结果持续变好或变坏。这个人叫 Jethro Tull，他推广播种机和条播思想，成为英国农业改良史上的重要人物。今天的农业技术也常在同一个问题里打转：怎样提高效率，同时不把土地、种子多样性和人的判断都交给单一工具。",
-    "knowledgePointZh": "未进一步细分的农业关注土地、作物、工具、劳动、产量和长期照料条件。",
-    "reflectionQuestionZh": "一个种子能否发芽，取决于运气，还是取决于人怎样安排它进入土地？"
-  },
-  "082-fallen-branch-trail": {
-    "titleZh": "森林不能只按木材计算",
-    "summaryZh": "一个林务改革者让森林管理从砍伐收益，转向长期公共资源和专业治理。",
-    "sceneZh": "19 世纪末的美国，一个年轻人到欧洲学习林学后回国，看到大片森林被短期砍伐逻辑支配。",
-    "storyBodyZh": "他并不是反对使用森林，而是反对只把森林当作一次性矿藏。木材、水源、土壤、火灾、野生动物和地方经济都需要长期管理。他推动专业林务、国家森林和持续产出思想，主张为了公共利益管理自然资源。今天我们也会批判早期保护主义里对原住民和地方社区的忽视，但林业作为学科的一个核心问题由此凸显：森林的时间尺度比商业周期长得多。麻烦在于，土壤、水、疾病、行为和季节会把后果带到下一轮。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是哪些生命条件会让结果持续变好或变坏。这个人叫 Gifford Pinchot，他是美国林务改革重要人物，首任 U.S. Forest Service 局长，并推动 conservation 林业理念。今天谈资源管理时，这个提醒仍然尖锐：如果只看眼前收益，森林很容易在账本里变短，在现实里变空。",
-    "knowledgePointZh": "林业关注森林资源、木材、生态、水土保持、火险、生物多样性和长期管理。",
-    "reflectionQuestionZh": "如果一片森林的生命超过几代人，谁有资格替它做短期决定？"
-  },
-  "083-fish-market-morning": {
-    "titleZh": "每一代人都以为海一直这么空",
-    "summaryZh": "一个渔业科学家的警告让人看见，海洋资源的衰退常被记忆本身遮住。",
-    "sceneZh": "20 世纪后期，一个研究鱼类的人听到年轻渔民说收获还算正常，却在旧记录里看到完全不同的海。",
-    "storyBodyZh": "他意识到一个危险：每一代人都把自己年轻时见到的鱼群数量当成“正常”。如果基准不断下降，大家就会在越来越贫瘠的海里继续觉得情况还可以。他提出 shifting baseline 的概念，提醒渔业不能只看今年和去年，还要看更长的生态记忆。渔业研究在这里不只是捕多少鱼，也要理解种群、食物网、捕捞压力、政策和人类记忆如何共同影响海洋。把土地、作物或动物先看成产出问题，仍有它的用处；但要让判断走得更远，就必须把田间试验、育种、生态照料和长期管理变成可学习的工作。这个人叫 Daniel Pauly，他提出 shifting baseline syndrome，并通过全球渔业数据研究影响了现代渔业科学和海洋保护。这也是许多环境问题难被察觉的原因：失去不是一次发生的，而是在一代代“正常”的习惯里慢慢被接受。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把田间试验、育种、生态照料和长期管理一点点固定下来。",
-    "knowledgePointZh": "渔业关注水域生态、鱼类种群、捕捞、养殖、冷链、政策和食物供应。",
-    "reflectionQuestionZh": "你以为正常的自然状态，会不会其实已经是上一代衰退后的结果？"
-  },
-  "084-dog-that-stopped-eating": {
-    "titleZh": "第一所兽医学校的病马",
-    "summaryZh": "一次牲畜疫病危机让兽医从民间经验走向系统教育和公共经济安全。",
-    "sceneZh": "18 世纪法国，牛马疫病不断造成损失，一个关心马术和动物疾病的人看见农业和军队都被牵动。",
-    "storyBodyZh": "动物生病不是只影响一个主人。马牵动交通和军队，牛牵动耕作、食物和家庭收入。传统马医经验有价值，却缺少系统解剖、病理、教学和公共防疫。他推动建立专门学校，让动物医学成为可训练、可研究、可传承的专业。兽医领域在这里清楚出现：它既照料动物个体，也保护畜群、食品、农业经济和人与动物共同生活的安全。可是现场的压力在于，土壤、水、疾病、行为和季节会把后果带到下一轮。这个人叫 Claude Bourgelat，他在 Lyon 创办世界最早的兽医学校之一，被视为现代兽医学教育的重要奠基人。今天的兽医工作也仍在这个交叉点上：一只动物的健康，常常连着食物安全、公共卫生和人与动物相处的伦理。",
-    "knowledgePointZh": "兽医研究动物疾病、诊断、治疗、公共卫生、畜群健康和人与动物关系。",
-    "reflectionQuestionZh": "当一头动物生病时，影响的只是它自己，还是整个食物和生活系统？"
-  },
-  "088-farm-visit-class": {
-    "titleZh": "她看见牛害怕的影子",
-    "summaryZh": "一个自闭症女性设计者把动物行为、工程、畜牧和福利放进同一套现场观察。",
-    "sceneZh": "20 世纪后期的牧场和屠宰场里，一个年轻女性站在牲畜通道旁，注意到牛会被反光、阴影和突然的转角吓住。",
-    "storyBodyZh": "她的感知方式和许多人不同，也让她更容易注意到动物在空间里的恐惧。她没有只责怪动物不听话，而是蹲到它们的视线高度，看光线、声音、地面、防滑、转弯和人的动作。她设计弧形通道和更低压力的处理系统，把动物行为学、工程设计、畜牧生产和伦理关怀放在一起。这个跨学科领域不只问怎样提高效率，也问人在利用动物时怎样减少恐惧和痛苦。把土地、作物或动物先看成产出问题，仍有它的用处；但要让判断走得更远，就必须把田间试验、育种、生态照料和长期管理变成可学习的工作。这个人叫 Temple Grandin，她以畜牧设施设计和动物福利倡导闻名，推动农业、工程、兽医和动物行为之间的跨学科实践。学生从这里能学到，真正的专业不是把生命系统压服，而是愿意从另一个身体的位置重新检查设计。后来人看见的是领域名称，当时真正被迫形成的，是围绕田间试验、育种、生态照料和长期管理的一套工作。",
-    "knowledgePointZh": "农业、林业、渔业与兽医跨学科课程连接生产、生态、工程、动物健康、福利和资源管理。",
-    "reflectionQuestionZh": "如果从动物的视角重新看一条通道，人类的效率会不会也必须重新定义？"
-  },
-  "089-unusual-animal-garden": {
-    "titleZh": "冰山里的种子库",
-    "summaryZh": "一个全球种子库说明，农业相关知识有时既是遗传保护，也是未来风险管理。",
-    "sceneZh": "21 世纪初的挪威斯瓦尔巴群岛，一群人把来自世界各地的种子样本送进冻土山体里的库房。",
-    "storyBodyZh": "这个项目看起来像仓库，却不只是储藏。每一份种子都代表一种作物遗传资源，也代表某个地区的农业记忆和未来适应可能。战争、灾害、气候变化、病害和市场单一化，都可能让种子多样性消失。未另分类的农业、林业、渔业与兽医领域正需要这种边界意识：它不完全是种植，也不只是科研或外交，而是食物系统为未来保留选择。可是现场的压力在于，土壤、水、疾病、行为和季节会把后果带到下一轮。这个人叫 Cary Fowler，他长期推动作物多样性保护，并作为 Svalbard Global Seed Vault 的关键倡导者之一影响了全球种质资源保存。今天气候和供应链都变得不稳定时，这样的保存不只是科学工程，也是一种面向未来的责任安排。",
-    "knowledgePointZh": "未另分类的农业、林业、渔业与兽医收纳跨越种质资源、食物安全、生态风险和长期保护的实践。",
-    "reflectionQuestionZh": "为未来保存一粒种子，究竟是在保存食物，还是保存选择权？"
-  },
-  "091-cough-in-the-waiting-room": {
-    "titleZh": "病床旁边的观察",
-    "summaryZh": "古代医生把治疗从神秘解释拉向观察、记录和职业伦理。",
-    "sceneZh": "公元前 5 世纪前后的古希腊岛屿和城邦之间，一位医生走近发热、疼痛和呼吸困难的病人，先看他们实际怎样变化。",
-    "storyBodyZh": "他所处的时代，疾病常被解释成神灵惩罚或神秘力量。可他和传统中的同伴把注意力放到更具体的地方：症状何时开始，脉象和呼吸如何，饮食、季节、地点和体质有什么关系，医生应怎样谨慎判断而不伤害病人。许多文本并非都出自同一人之手，也带有时代局限；但健康领域的一个重要转向已经出现：照护身体需要观察、经验、记录和伦理约束，而不是只靠巫术或权威。这不是旧办法完全失灵的时刻。把健康问题缩成一个症状、一次治疗或一项救助，本来就能让人先行动；真正顶住它的，是身体变化常和环境、制度、照护关系及尊严缠在一起。当这个卡点反复出现，新的问题变成了：怎样在风险、证据和人的生活之间作出可靠照护。名字可以晚一点出现；先被留下来的，是这些必须反复练习的观察、诊断、照护记录、制度支持和伦理判断。这个人叫 Hippocrates，他所代表的 Hippocratic tradition 成为西方医学观察、临床伦理和医生职业形象的重要源头。这也是医学学习最早要守住的东西：先把人当作会变化的身体来看见，再谨慎决定知识该怎样介入。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把观察、诊断、照护记录、制度支持和伦理判断一点点固定下来。",
-    "knowledgePointZh": "未进一步细分的健康关注身体状态、疾病、预防、照护、风险和健康判断。",
-    "reflectionQuestionZh": "当一个人说不舒服时，最负责任的第一步是解释，还是观察？"
-  },
-  "092-key-under-the-mat": {
-    "titleZh": "从摇篮到坟墓的报告",
-    "summaryZh": "一份战时报告让福利从零散救济，转向覆盖人生风险的社会制度设计。",
-    "sceneZh": "1942 年的英国，战争仍在继续，一个经济学家把贫困、疾病、失业和养老放进同一份报告。",
-    "storyBodyZh": "他面对的不是某个家庭的一次困难，而是社会中反复出现的风险：没有工作、生病、年老、孩子多、收入不足。过去的救济常常零散、羞辱性强，也难以覆盖人生不同阶段。他提出更系统的社会保险和福利国家设想，试图对抗所谓“五大巨人”：贫困、疾病、无知、肮脏和失业。福利在这里不是施舍，而是现代社会如何共同分担风险、保障最低安全和人的尊严。麻烦在于，身体变化常和环境、制度、照护关系及尊严缠在一起。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样在风险、证据和人的生活之间作出可靠照护。福利的名字还可以推迟，观察、诊断、照护记录、制度支持和伦理判断却已经在现场要求一种新训练。这个人叫 William Beveridge，他的 1942 年 Beveridge Report 深刻影响英国福利国家和现代社会保障制度。今天讨论福利时，争论仍不只关于钱，而是一个人跌倒、生病、老去或失业时，社会愿不愿意留下承接他的结构。",
-    "knowledgePointZh": "未进一步细分的福利关注社会支持、风险分担、尊严、照护和基本生活保障。",
-    "reflectionQuestionZh": "一个社会怎样证明它不是只在成功时承认一个人？"
-  },
-  "098-after-discharge-plan": {
-    "titleZh": "疼痛不是最后才处理的事",
-    "summaryZh": "一位医生听见临终病人的整体痛苦，让健康与福利重新理解照护的终点。",
-    "sceneZh": "20 世纪英国，一位曾做护士和社工、后来学医的女性，坐在临终病人床边，认真听他们说疼痛和孤独。",
-    "storyBodyZh": "她发现病人的痛苦并不只在身体里。疼痛、恐惧、家庭关系、宗教疑问、经济压力和被遗弃感会叠在一起。如果医学只在治愈失败后才想起照护，就太晚了。她提出 total pain 的理解，建立 hospice 照护，把症状控制、心理支持、家属陪伴、社会工作和尊严放在同一套体系里。健康与福利的跨学科意义在这里非常清楚：人不是一组器官，也不是一张福利表格，而是在生命末端仍需要被完整看见。这不是旧办法完全失灵的时刻。把健康问题缩成一个症状、一次治疗或一项救助，本来就能让人先行动；真正顶住它的，是身体变化常和环境、制度、照护关系及尊严缠在一起。当这个卡点反复出现，新的问题变成了：怎样在风险、证据和人的生活之间作出可靠照护。这个人叫 Cicely Saunders，她创办 St Christopher's Hospice，并奠定现代 hospice 和 palliative care 的重要基础。",
-    "knowledgePointZh": "健康与福利跨学科课程连接医学、护理、心理、社会支持、家庭和人的尊严。",
-    "reflectionQuestionZh": "当治愈不再可能时，照护还能怎样继续保护一个人的完整性？"
-  },
-  "099-neighborhood-listening-chair": {
-    "titleZh": "她把战场护理带回和平时期",
-    "summaryZh": "一个战时救护组织者让健康与福利边界出现灾害、志愿服务和公共应急的混合实践。",
-    "sceneZh": "1860 年代的美国南北战争期间，一个女性在战场附近分发物资、寻找伤员，也给家属传递生死消息。",
-    "storyBodyZh": "她不是只做临时善事。战争让她看到，伤员护理、物资协调、失踪人员信息、志愿者组织和灾后救援需要长期制度，而不该每次都从混乱开始。战后，她继续推动建立更稳定的人道救援组织，使救护从战争现场延伸到灾害、公共应急和社会支持。未另分类的健康与福利常常就站在这种边界：它既不是普通医院，也不是单一福利机构，而是在危机里把照护、信息、物资和组织能力接起来。这不是旧办法完全失灵的时刻。把健康问题缩成一个症状、一次治疗或一项救助，本来就能让人先行动；真正顶住它的，是身体变化常和环境、制度、照护关系及尊严缠在一起。当这个卡点反复出现，新的问题变成了：怎样在风险、证据和人的生活之间作出可靠照护。这不是替未另分类的健康与福利寻找漂亮起源，而是看见观察、诊断、照护记录、制度支持和伦理判断怎样先把问题托住。这个人叫 Clara Barton，她创办 American Red Cross，并推动美国加入国际红十字人道救援体系。今天的灾害救援和社区支持仍在延续这条线：善意如果没有训练、记录和协调，很容易在真正紧急时散开。后来人看见的是领域名称，当时真正被迫形成的，是围绕观察、诊断、照护记录、制度支持和伦理判断的一套工作。",
-    "knowledgePointZh": "未另分类的健康与福利处理那些跨越医疗、救援、信息、志愿组织和公共应急的支持实践。",
-    "reflectionQuestionZh": "一场危机之后，怎样把临时善意变成下次能更快保护人的制度？"
-  },
-  "101-haircut-before-wedding": {
-    "titleZh": "美容院里的红门",
-    "summaryZh": "一个女性创业者把个人服务从私密修饰，变成品牌、培训和现代消费体验。",
-    "sceneZh": "20 世纪初的纽约，一个年轻女性在美容院里学习护肤、销售和顾客沟通，发现服务身体也在服务身份。",
-    "storyBodyZh": "她明白顾客来这里不只是买一瓶霜。她们想被认真接待，想学习如何照顾自己，也想进入一种新的城市女性形象。她建立美容院、培训销售人员、统一产品和服务话术，把个人服务组织成可复制的体验系统。这个过程当然也和消费主义、阶层和审美压力纠缠在一起；但它说明个人服务并不是低级边角行业，而是身体、情绪、身份、信任和商业组织相遇的地方。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。当流程设计、前后台协作、现场证据和体验校正被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Elizabeth Arden，她建立全球美容品牌和 salon 服务体系，深刻影响现代个人护理和美容服务业。今天许多个人服务也是这样：看似处理外表或小需求，实际常在处理信任、身份、身体边界和被尊重的感觉。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把流程设计、前后台协作、现场证据和体验校正一点点固定下来。",
-    "knowledgePointZh": "个人服务关注身体、形象、舒适、沟通、身份和贴近日常生活的服务体验。",
-    "reflectionQuestionZh": "当一个服务直接接触身体时，它是否也在接触一个人的自我想象？"
-  },
-  "102-clean-hands-station": {
-    "titleZh": "城市空气、污水和实验室",
-    "summaryZh": "一位卫生学家把公共卫生训练制度化，让卫生服务成为城市和工作场所的专业知识。",
-    "sceneZh": "19 世纪德国城市里，人口密集、污水和传染病让医学无法只待在病床旁。",
-    "storyBodyZh": "他关心空气、水、住房、排污和城市环境，也建立实验和教学体系，让卫生不只是日常清洁习惯，而成为可研究、可训练、可争论的公共专业。他的某些理论后来被修正，特别是在病菌理论发展后；但他推动卫生学进入大学、实验室和城市治理的努力，说明卫生与职业健康服务的基础意义：预防必须发生在疾病出现之前，发生在水、空气、建筑、工作和制度中。麻烦在于，等待、空间、信息、权限和身体感受会决定服务是否成立。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是整条路径怎样让人安全、清楚并被真正看见。这不是替卫生与职业健康服务寻找漂亮起源，而是看见流程设计、前后台协作、现场证据和体验校正怎样先把问题托住。这个人叫 Max von Pettenkofer，他建立慕尼黑卫生学研究传统，被视为现代 hygiene 和公共卫生教育的重要先驱之一。今天的卫生服务依然需要这种宽视角：空气、水、垃圾、实验室和制度如果分开处理，风险就会从缝隙里回来。",
-    "knowledgePointZh": "未进一步细分的卫生与职业健康服务关注预防、环境、工作场所、清洁和群体健康条件。",
-    "reflectionQuestionZh": "真正的卫生服务，是在你生病后出现，还是在你没生病前就已经工作？"
-  },
-  "103-night-watch-call": {
-    "titleZh": "警察为什么应该穿制服",
-    "summaryZh": "一个内政改革者把安全服务从临时镇压，推向可识别、可约束的公共警务。",
-    "sceneZh": "19 世纪伦敦街头，城市快速扩张，犯罪、贫困、拥挤和公众恐惧让旧式治安方式越来越不够。",
-    "storyBodyZh": "他要解决的不是单次抓捕，而是一个城市怎样在不变成军营的情况下维持公共秩序。旧式治安可以临时压住混乱，也能让权力迅速行动；它的边界在伦敦街头变得清楚：贫困、拥挤、巡逻空白和公众恐惧反复回来，临时镇压很难换来长期信任。新警察需要可识别的制服、固定巡逻、纪律、预防原则和公众合作；制服不是为了威风，而是让权力在街上可被辨认，也因此更容易被追问。问题从“怎样抓住坏人”，变成“怎样让保护公众的权力本身也被规则、透明和责任约束”。这个制度后来仍伴随阶级控制、权力滥用和监督争议，必须被批判地看；但安全服务的一个起源问题已经出现：保护不能只靠力量，还要靠可识别的职责、有限授权、训练和公共信任。这个人叫 Robert Peel，他创立 London Metropolitan Police，并使现代公共警务原则成为安全服务史上的重要起点。这不是把警察天然正当化；相反，制服和巡逻把权力放到可见处，也把监督责任带进制度内部。只有当公众能辨认、投诉、质疑和期待一致规则时，治安才不只是压制，而开始接近公共服务。这让“安全”第一次更明确地接受公共规则的反向检查。",
-    "knowledgePointZh": "未进一步细分的安全服务关注风险识别、预防、响应、秩序、信任和权力约束。",
-    "reflectionQuestionZh": "一个安全系统怎样既保护人，又不让保护人的权力失去边界？"
-  },
-  "104-missed-connection": {
-    "titleZh": "地铁线路为什么可以弯成图",
-    "summaryZh": "一张地铁图让运输服务从真实距离，转向乘客能不能迅速做出决定。",
-    "sceneZh": "1930 年代伦敦，一个工程制图员看着复杂地铁线路，发现按真实地理画出的地图让乘客很难读。",
-    "storyBodyZh": "他大胆舍弃精确距离，把线路画成水平、垂直和 45 度角，把站点间距简化，让换乘关系变得清楚。这个图一开始并不符合传统地图直觉，却更符合乘客在运输系统里的真实需要：我在哪，去哪换，下一站怎么走。运输服务在这里不仅是车辆移动，也包括信息设计、时间承诺、可达性和人在压力下的判断。一个系统如果让人看不懂，再准时也会让人迷失。把服务看成完成一次接待、保护、运输或回应，仍有它的用处；但要让判断走得更远，就必须把流程设计、前后台协作、现场证据和体验校正变成可学习的工作。这个人叫 Harry Beck，他设计 London Underground diagram，成为现代交通信息设计和运输服务体验的经典案例。今天的交通系统也一样：真正好用的不只是车会动，而是人在匆忙、陌生和压力下仍能做出清楚选择。",
-    "knowledgePointZh": "运输服务关注人和物的移动、换乘、可靠性、信息设计、安全和时间协调。",
-    "reflectionQuestionZh": "一个交通系统真正好用，是因为路短，还是因为人在压力下也能看懂？"
-  },
-  "108-festival-operations-plan": {
-    "titleZh": "服务蓝图背后的看不见动作",
-    "summaryZh": "一个营销学者把服务拆成前台、后台和证据，让跨学科服务可以被设计和改进。",
-    "sceneZh": "20 世纪 80 年代，一位研究者观察服务现场，发现顾客看到的只是整个系统露出水面的部分。",
-    "storyBodyZh": "一次酒店入住、银行开户或维修预约，看起来是几句对话，背后却有表格、系统、培训、库存、授权、等待时间和失败补救。她提出 service blueprint，把顾客行为、前台接触、后台流程和有形证据画在一起。这样，服务不再只是态度好不好，而成为可以分析、设计和跨部门协调的系统。服务跨学科课程也由此清楚：运营、心理、空间、信息、人员和技术必须同时工作。这不是旧办法完全失灵的时刻。把服务看成完成一次接待、保护、运输或回应，本来就能让人先行动；真正顶住它的，是等待、空间、信息、权限和身体感受会决定服务是否成立。当这个卡点反复出现，新的问题变成了：整条路径怎样让人安全、清楚并被真正看见。这个人叫 G. Lynn Shostack，她提出 service blueprinting，成为服务设计和服务营销中的重要方法来源。",
-    "knowledgePointZh": "服务跨学科课程连接运营、体验、人员、空间、信息、技术和质量管理。",
-    "reflectionQuestionZh": "一次服务失败时，问题真的在前台那个人身上，还是在蓝图里早就埋好了？"
-  },
-  "109-service-that-had-no-name": {
-    "titleZh": "电话那头先不急着劝",
-    "summaryZh": "一个倾听热线说明，有些服务最重要的动作，是在正式分类之前先接住人。",
-    "sceneZh": "1950 年代伦敦，一个牧师在报纸上看到年轻人因孤立和羞耻而走向绝望，开始想象一条任何人都能拨打的电话线。",
-    "storyBodyZh": "他发现，许多人并不是一开始就能走进医院、警局、福利机构或教堂。他们可能只需要一个不审判、不急着训诫、愿意在深夜听完的人。于是志愿者被训练去接电话，重点不是立刻给答案，而是让来电者在最危险、最孤单的时刻不再独自承受。这样的服务很难归类：它不是普通医疗，也不是正式咨询，不是安保，也不是家政；但它在许多系统之间守住了一条细小通道。未另分类的服务正需要容纳这种看似无名却极其关键的支持。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。这个人叫 Chad Varah，他创立 Samaritans，让危机倾听热线成为现代志愿服务和情绪支持服务的重要形式。",
-    "knowledgePointZh": "未另分类的服务包括那些跨越医疗、咨询、社区、志愿和即时支持的实践角色。",
-    "reflectionQuestionZh": "一种服务如果只是先听你说完，它为什么仍然可能改变一个夜晚的结局？"
-  },
-  "0111-education-science": {
-    "titleZh": "孩子们自己搬动的小椅子",
-    "summaryZh": "一间普通公寓里的小椅子，让教育从命令孩子学习，转向观察学习如何发生。",
-    "sceneZh": "1907 年，罗马圣洛伦佐一栋普通公寓里，一群白天无人照看的孩子被带进一间新教室。",
-    "storyBodyZh": "来接手这间教室的女医生，年轻时并没有把“当老师”当成唯一出路。她先学工程，后来转向医学，进入当时很少有女性能进入的医学院；在医院和精神病院工作时，她看见一些被认为“学不会”的孩子，其实只是长期缺少适合他们动手、感知和尝试的环境。到了这间公寓教室，她没有急着把孩子排成整齐队伍。小椅子、小桌子、一个炉子、一些被锁在柜子里的材料，孩子们有的擦桌子，有的照看小花园，有的反复摸一块字母板。她站在旁边看：哪个材料会被孩子拿起，什么时候他们能安静很久，什么时候大人的一句打断反而让学习散掉。她慢慢发现，孩子并不是等待灌满的空杯子；桌椅的高度、材料的顺序、身体能不能自由移动、成人愿不愿意先观察，都会改变学习的发生方式。可这一幕留下的细节提醒研究者，孩子、材料和情境会不断改变学习发生的方式。问题从这里换了重心：怎样观察学习条件，再设计能让理解发生的环境，而不是把异常当作例外丢开。这个人叫 Maria Montessori，她在罗马开办 Casa dei Bambini，发展出蒙台梭利教育，让“观察儿童、准备环境、尊重发展节奏”成为教育科学的重要线索。",
-    "knowledgePointZh": "教育科学用观察、证据和设计研究学习如何发生，而不只是规定别人应该怎样学。",
-    "reflectionQuestionZh": "如果一个孩子没有学进去，你会先要求他更努力，还是先检查环境有没有给他进入学习的路？"
-  },
-  "0112-training-for-pre-school-teachers": {
-    "titleZh": "木球滚到孩子手边",
-    "summaryZh": "一只木球让幼儿教育从“看管孩子”，走向理解游戏、材料和早期发展。",
-    "sceneZh": "1837 年，德国 Bad Blankenburg 的一间小屋里，一个教育者把木球、积木、纸片和花园活动摆到孩子面前。",
-    "storyBodyZh": "很多大人看见孩子玩，只会觉得那是消遣。那个教育者却没有急着把孩子拉回所谓正经学习。他看见一个孩子握住木球，又把它滚出去；另一个孩子把方块叠起来，再推倒重来；还有孩子把线穿过纸面，像是在用手指慢慢理解形状、方向和秩序。他停下来，看得比别人久了一点。他年轻时并不是一路从学校走向学校的人。他接触过自然、矿物、建筑和测量，也曾学习儿童教育思想。也许正因为这样，他看幼儿时，不只看见“不懂事的小孩”，还看见身体、材料、空间和节奏正在一起工作。问题开始变得不一样了：孩子真的只是在玩吗？还是正在用手、眼睛、声音和身体，练习理解世界？后来，他开始设计一套材料和活动，让孩子可以通过游戏感知形状、数量、关系和自然，也让照看孩子的成人学会怎样陪伴，而不是急着打断。把教育看成成人把内容交给学生，仍有它的用处；但要让判断走得更远，就必须把观察记录、环境设计、发展判断和教学反思变成可学习的工作。真正留下来的，是观察记录、环境设计、发展判断和教学反思从个人经验变成可以传递的训练。很多年后，人们回头谈幼儿园的起点，常会提到这个名字：Friedrich Froebel。",
-    "knowledgePointZh": "学前教师培养关注幼儿发展、照护、安全、游戏、早期学习，以及成人如何陪伴孩子进入世界。",
-    "reflectionQuestionZh": "当一个小孩在玩，你看见的是消遣，还是一种需要被理解和引导的学习？"
-  },
-  "0113-teacher-training-without-subject-specialisation": {
-    "titleZh": "只有三名学生的师范学校",
-    "summaryZh": "一所只有少数学生起步的师范学校，让教师培养从“会知识的人去教”，走向“教师本身需要被训练”。",
-    "sceneZh": "1839 年 7 月，马萨诸塞州 Lexington 的一所新学校开门时，第一批学生少到几乎不像一所学校。",
-    "storyBodyZh": "这所学校的第一位负责人，原本长期在学校和教会之间工作。他在岛上办过学校，也做过牧师，见过太多真实课堂里的小麻烦：孩子会走神，会害怕，会同时处在不同进度，课堂也会因为一个问题没有说清楚而乱掉。那时很多人以为，只要一个人会读、会算、有品行，就自然能当老师。可他越来越明白，教师不是临时站上讲台的人，而是要学习怎样提问、怎样安排一节课、怎样观察学生是否真的明白、怎样让纪律不是恐惧，而是学习可以继续发生的秩序。最初只有少数学生，反而让这个实验更像是一次安静的试问：老师是不是也需要被系统训练？如果只按旧路走，把教育看成成人把内容交给学生，事情看上去也能继续。可材料和学习停顿没有那么顺从：孩子、材料和情境会不断改变学习发生的方式。于是下一步不能只是补一句解释，而要发展出观察记录、环境设计、发展判断和教学反思。这个人叫 Cyrus Peirce，他受 Horace Mann 邀请主持 Lexington normal school，让无学科专门化教师培养从“会知识的人去教”转向“教师本身需要被训练”。",
-    "knowledgePointZh": "无学科专门化教师培养训练通用教学能力、课堂组织、学习观察、反馈、沟通和儿童发展理解。",
-    "reflectionQuestionZh": "什么样的教学能力不属于任何一门课，却决定所有课能不能发生？"
-  },
-  "0114-teacher-training-with-subject-specialisation": {
-    "titleZh": "教授把高等数学带回中学课堂",
-    "summaryZh": "Felix Klein 让学科教师培养看见：真正会教一门课，需要把学科深度翻译成学生能进入的路径。",
-    "sceneZh": "20 世纪初的 Göttingen，一个数学教授发现，中学数学老师常站在两座桥之间：一边是大学数学，一边是学生眼前的题。",
-    "storyBodyZh": "这位数学家年轻时已经在几何研究里很出名，后来在 Göttingen 组织讲座、研讨班和研究机构。他越接近大学数学的深处，越觉得中学数学不该只是被切碎的公式。一个函数、一条曲线、一个证明，在专家眼里已经很自然，在学生眼里却可能像一堵墙。老师如果只会做更难的题，并不一定会教会学生；但如果老师能看见学校数学背后的结构、联系和来处，就能把抽象知识翻译成学生一步步能进入的路径。于是他把“从更高观点看初等数学”的想法带给教师，不是为了炫耀难度，而是为了让学科深度回到课堂。麻烦在于，孩子、材料和情境会不断改变学习发生的方式。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样观察学习条件，再设计能让理解发生的环境。这个人叫 Felix Klein，他推动数学教师教育和国际数学教育改革，让有学科专门化的教师培养意识到：老师要知道答案，也要知道学生怎样抵达答案。",
-    "knowledgePointZh": "有学科专门化教师培养把深层学科理解和教学方法结合起来，让老师知道怎样把一门学科教给第一次进入它的人。",
-    "reflectionQuestionZh": "懂一门学科和教会一门学科，中间究竟隔着哪一种知识？"
-  },
-  "0119-education-not-elsewhere-classified": {
-    "titleZh": "工人把自己的词写上黑板",
-    "summaryZh": "Angicos 的夜校让教育不只是识字技术，也成为人重新命名生活和参与社会的入口。",
-    "sceneZh": "1963 年，巴西 Angicos 的夜晚，一些甘蔗工人下班后坐进识字班，黑板上写的不是陌生例句，而是他们生活里的词。",
-    "storyBodyZh": "这位教育者小时候也经历过贫困和饥饿，他后来回忆，学不会有时不是因为一个人笨，而是因为生活条件把注意力和尊严都压得太低。长大后，他先做语言教师，又在成人教育里工作，越来越不相信那种把学生当空罐子的课堂。传统识字课常从课本句子开始，像是把世界先关在门外。他反过来做：先听人们平时说什么，工作里用什么词，害怕什么，想改变什么，再把这些词变成识字和讨论的入口。学习字母的同时，人也开始讨论土地、劳动、权利和沉默。识字不再只是技术，它变成一种重新说出自己生活的能力。麻烦在于，孩子、材料和情境会不断改变学习发生的方式。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样观察学习条件，再设计能让理解发生的环境。在名称固定以前，观察记录、环境设计、发展判断和教学反思已经先把现场和判断连接起来。这个人叫 Paulo Freire，他用 Angicos 成人识字实践和《Pedagogy of the Oppressed》影响了成人教育、批判教育学和社区学习。",
-    "knowledgePointZh": "未另分类的教育收纳那些真实支持学习、但不适合标准学校、课程或学科标签的教育形式。",
-    "reflectionQuestionZh": "哪些学习发生在正式课程之外，却真正改变了一个人看世界的方式？"
-  },
-  "0211-audio-visual-techniques-and-media-production": {
-    "titleZh": "工厂门口走出来的人群",
-    "summaryZh": "一段普通工厂门口的影像，让电影从技术实验变成集体观看经验。",
-    "sceneZh": "1895 年，法国一家照相器材厂门口，工人们下班离开，画面普通到几乎不像一件大事。",
-    "storyBodyZh": "那对兄弟从小生活在摄影工业里，家里做感光材料和照相器材。他们并不是一开始就想拍大片，也没有明星、剧情和宏大布景。真正让人震动的是一个很小的技术问题：怎样让连续照片被拍下、显影、放映，并让一群陌生人同时看见“时间在动”。他们把机器、胶片、放映和公开观看连在一起，让工厂门口、火车进站、婴儿吃饭这些普通场面突然有了新的力量。观众不是只看图像，而是在黑暗房间里共同经历运动、时间和注意力。视听技术从这里变得清楚：技术不是冷冰冰的设备，它会改变人如何记住一件事、相信一件事、一起观看一件事。麻烦在于，手势、材料、声音和记忆会越过这些格子彼此回应。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是作品怎样带着历史经验、身体感受和观看方式生产意义。这不是替视听技术与媒体制作寻找漂亮起源，而是看见细读、比较、材料分析和解释传统怎样先把问题托住。这个人叫 Auguste Lumiere 和 Louis Lumiere，他们改进并推广 cinematograph，1895 年的放映实践成为电影和视听媒体史上的关键起点。",
-    "knowledgePointZh": "视听技术与媒体制作关注影像、声音、剪辑、设备、传播和技术如何共同制造可感知的现实。",
-    "reflectionQuestionZh": "当一个普通瞬间被机器记录下来，它还是原来的瞬间吗？"
-  },
-  "0212-fashion-interior-and-industrial-design": {
-    "titleZh": "墙纸上的野草",
-    "summaryZh": "一张墙纸上的植物纹样，让设计不再只是装饰，而是关于劳动、生活和尊严的问题。",
-    "sceneZh": "19 世纪英国，一个爱读诗、爱看中世纪故事的年轻人，走进工业时代的房间，却总觉得日用品正在失去人的手。",
-    "storyBodyZh": "他不是单纯反对机器，而是反对人和物之间的关系被粗糙地切断。漂亮不该只属于画廊，桌布、墙纸、椅子、书页、窗帘和房间的比例，也会影响一个人怎样生活。于是他开始研究染料、织物、木工、印刷和图案，让植物的枝叶重新爬上墙面，让手工的节奏回到家庭内部。他的理想有矛盾：手工产品常常昂贵，未必真的能让普通人都买得起。但他提出的问题仍然尖锐：如果生活中的物件都没有尊严，人怎么在日常里学习美感和自由？设计从这里不再只是“好看”，而是追问材料、劳动、使用者和社会理想之间的关系。可是现场的压力在于，手势、材料、声音和记忆会越过这些格子彼此回应。名字可以晚一点出现；先被留下来的，是这些必须反复练习的细读、比较、材料分析和解释传统。这个人叫 William Morris，他是 Arts and Crafts movement 的核心人物之一，用家具、墙纸、纺织和书籍设计影响了现代室内与工业设计观念。",
-    "knowledgePointZh": "时装、室内与工业设计把身体、空间、材料、功能、生产和审美放在同一个问题里。",
-    "reflectionQuestionZh": "你每天使用的东西，是只被制造出来，还是也被认真理解过？"
-  },
-  "0213-fine-arts": {
-    "titleZh": "苹果为什么总是画不稳",
-    "summaryZh": "一只反复被观看的苹果，让美术从再现世界转向研究观看本身。",
-    "sceneZh": "19 世纪后期的法国南部，一个银行家家庭的儿子一次次回到画布前，盯着苹果、桌布和一座山。",
-    "storyBodyZh": "他在巴黎受过冷落，也被展览体系拒绝过很久。别人画苹果，可能追求像；他画苹果，却像是在追问视觉本身为什么不稳定。桌面微微倾斜，盘子好像要滑落，色块彼此推挤，山体在光里变成结构。很多人起初看不懂，觉得这些画笨拙、不完整、不够讨好。可是他慢慢让后来者看见：绘画不必只是复制眼前物，也可以把观看拆开，重新组织成形、色、重量和时间。美术在这里变成一种极其诚实的训练：我到底看见了什么？我用什么方式把它放到画面上？如果只按旧路走，按作者、年代、风格或门类整理作品，事情看上去也能继续。可图像、声音和物件没有那么顺从：手势、材料、声音和记忆会越过这些格子彼此回应。于是下一步不能只是补一句解释，而要发展出细读、比较、材料分析和解释传统。这个人叫 Paul Cezanne，他通过静物、风景和结构化的观看影响了现代绘画，被后来的艺术家视为通往现代主义的重要桥梁。",
-    "knowledgePointZh": "美术训练观察、构图、色彩、材料、形式和对可见世界的重新解释。",
-    "reflectionQuestionZh": "当你反复看同一个苹果，它会不会开始动摇你对“看见”的理解？"
-  },
-  "0214-handicrafts": {
-    "titleZh": "一只无名陶碗",
-    "summaryZh": "一只无名陶碗，让手工艺从小技能变成关于材料、劳动和日常美的思想。",
-    "sceneZh": "20 世纪初，日本城市快速现代化时，一个年轻思想者在朝鲜陶器和普通民间器物面前停了下来。",
-    "storyBodyZh": "他看到的不是昂贵古董，也不是宫廷珍品，而是普通人使用过的碗、盘、织物和木器。它们常常没有署名，价格不高，用途明确，形状朴素，却有一种无法被炫耀替代的安静力量。在工业化和精英艺术的夹缝里，他开始为这些“无名之物”辩护：手工艺的美不只是技巧表演，而是材料、用途、地方传统和长期重复劳动共同沉淀出来的东西。这种观点也需要今天继续批判地阅读，因为“民艺”容易浪漫化劳动者；但它至少提醒我们，知识不只在大师签名里，也在手掌、窑火、工具和日常使用的磨痕里。可这一幕留下的细节提醒研究者，手势、材料、声音和记忆会越过这些格子彼此回应。问题从这里换了重心：作品怎样带着历史经验、身体感受和观看方式生产意义，而不是把异常当作例外丢开。后来能被学习的，正是这些细读、比较、材料分析和解释传统：它们让下一次相似现场不必重新摸索。这个人叫 Yanagi Soetsu，他提出 mingei 理念并推动日本民艺运动，让普通人的手工艺成为现代审美和文化研究的重要对象。",
-    "knowledgePointZh": "手工艺连接材料、手感、传统、功能、地域经验和日常美感。",
-    "reflectionQuestionZh": "一件没有作者签名的碗，为什么仍然可能改变审美史？"
-  },
-  "0215-music-and-performing-arts": {
-    "titleZh": "演员为什么不该只朝观众喊",
-    "summaryZh": "一个演员对空洞表演的不满，发展成现代演员训练的重要方法。",
-    "sceneZh": "19 世纪末的莫斯科，一个热爱舞台的年轻人站在剧场里，越来越受不了那种夸张、空洞、只顾展示嗓门的表演。",
-    "storyBodyZh": "他出身并不贫寒，家里有条件让他接触剧场，也正因此，他早早看见舞台上最虚假的部分。演员站到台口，等提词人喂词，再用漂亮声音把台词甩给观众；角色之间并不真的互相听见。于是他开始记录自己的失败：什么时候情绪是装出来的，什么时候身体先于理解，什么时候一个角色有目标，表演才不再散掉。他把排练室当实验室，让演员追问“我在这个时刻想要什么”，练习注意力、行动、动机和真实交流。表演艺术在这里不再只是天赋和嗓音，而是一套可以反复训练的内在行动。这不是旧办法完全失灵的时刻。按作者、年代、风格或门类整理作品，本来就能让人先行动；真正顶住它的，是手势、材料、声音和记忆会越过这些格子彼此回应。当这个卡点反复出现，新的问题变成了：作品怎样带着历史经验、身体感受和观看方式生产意义。一门领域不是先从名称开始，而是先从细读、比较、材料分析和解释传统这些可练习的动作开始。这个人叫 Konstantin Stanislavski，他共同创办 Moscow Art Theatre，并发展出影响现代戏剧与电影表演训练的 Stanislavski system。",
-    "knowledgePointZh": "音乐与表演艺术关注声音、身体、节奏、角色、现场、训练和观众之间的关系。",
-    "reflectionQuestionZh": "一次表演什么时候开始像真实生活，而不只是熟练展示？"
-  },
-  "0219-arts-not-elsewhere-classified": {
-    "titleZh": "被转过方向的小便池",
-    "summaryZh": "一件被移位的日用品，让艺术边界本身变成作品的一部分。",
-    "sceneZh": "1917 年纽约，一个艺术家把一件普通洁具换了方向，签上化名，送去一个号称开放的展览。",
-    "storyBodyZh": "他年轻时已经厌倦了只靠手艺和风格来判断艺术。那件东西不是雕刻出来的，也没有传统意义上的美；它的冲击来自选择、挪用、命名、展示位置和制度反应。展览规则说付费即可展出，但作品没有被摆出来。争论由此开始：艺术到底在物体里，还是在艺术家的选择、观众的判断、展览制度和问题本身里？未另分类的艺术常常就站在这个尴尬位置上。它让目录不舒服，却也迫使目录承认，有些作品的重要性不来自“像不像艺术”，而来自它让艺术边界暴露出来。按作者、年代、风格或门类整理作品，仍有它的用处；但要让判断走得更远，就必须把细读、比较、材料分析和解释传统变成可学习的工作。未另分类的艺术后来会有课程和机构；在这个现场里，它先贴着细读、比较、材料分析和解释传统展开。这个人叫 Marcel Duchamp，他以 Fountain 和 readymade 观念深刻改变了 20 世纪艺术对作品、作者和制度的理解。",
-    "knowledgePointZh": "未另分类的艺术容纳跨媒介、观念性、临时性和难以归档的创作。",
-    "reflectionQuestionZh": "如果一件东西没有被手工制作，却迫使你重新定义艺术，它还算作品吗？"
-  },
-  "0221-religion-and-theology": {
-    "titleZh": "修士写给主教的一封信",
-    "summaryZh": "一封关于赎罪券的神学质疑，让宗教问题从讲坛走向公共历史。",
-    "sceneZh": "1517 年的德意志，一个年轻神学教师听见普通人谈论赎罪券，心里越来越不安。",
-    "storyBodyZh": "他原本是修道院里极其认真的人，对罪、良心和救赎有近乎痛苦的敏感。他不是一开始就想制造席卷欧洲的风暴，而是先从牧灵问题出发：如果人们以为钱可以买到灵魂的安心，那么悔改、信心、恩典和教会权威到底被理解成了什么？于是他写下用于学术辩论的条目，寄给教会高层，也很快被印刷和传播。接下来的历史远比他最初能控制的复杂，带来了信仰更新，也带来冲突、政治利用和痛苦分裂。宗教与神学在这里显示出重量：它不是抽象词语，而是普通人的恐惧、希望、权威和文本解释如何组织生活。这不是旧办法完全失灵的时刻。按作者、年代、风格或门类整理作品，本来就能让人先行动；真正顶住它的，是手势、材料、声音和记忆会越过这些格子彼此回应。当这个卡点反复出现，新的问题变成了：作品怎样带着历史经验、身体感受和观看方式生产意义。在名称固定以前，细读、比较、材料分析和解释传统已经先把现场和判断连接起来。这个人叫 Martin Luther，他的 Ninety-five Theses 成为 Protestant Reformation 的标志性起点之一，也深刻改变了欧洲宗教、教育和公共文化。",
-    "knowledgePointZh": "宗教与神学研究信仰、仪式、经典文本、教义、共同体、救赎和终极意义。",
-    "reflectionQuestionZh": "当一种宗教实践让普通信徒误解信仰本身时，神学应该保持沉默吗？"
-  },
-  "0222-history-and-archaeology": {
-    "titleZh": "台阶下的封门",
-    "summaryZh": "一道封门背后不是单个宝藏，而是一整套关于证据、保护和过去如何进入现在的问题。",
-    "sceneZh": "1922 年，埃及帝王谷的尘土里，一个长期做发掘工作的男人几乎快要失去资助，却仍让工人继续清理一片看似普通的地面。",
-    "storyBodyZh": "他并不是从大学讲台一路走来的学者，年轻时先靠绘画能力进入埃及考古现场，临摹壁画、记录细节、学习如何在沙土中保护易碎证据。多年寻找让人疲惫，资助人也接近放弃。直到工人发现一级石阶，清理继续向下，一道封门出现。洞口打开时，里面不是一个简单答案，而是成千上万件需要编号、保护、研究和搬运的物品。那一刻常被记成一句惊叹，但真正的考古不止是看见“奇迹”，还包括在兴奋之后缓慢、克制、系统地让过去说话。如果只按旧路走，按作者、年代、风格或门类整理作品，事情看上去也能继续。可图像、声音和物件没有那么顺从：手势、材料、声音和记忆会越过这些格子彼此回应。于是下一步不能只是补一句解释，而要发展出细读、比较、材料分析和解释传统。真正留下来的，是细读、比较、材料分析和解释传统从个人经验变成可以传递的训练。这个人叫 Howard Carter，他在 1922 年领导发现 Tutankhamun 墓，让近乎完整的古埃及王室墓葬震动世界，也让考古保护、记录和公众想象进入新的阶段。后来人看见的是领域名称，当时真正被迫形成的，是围绕细读、比较、材料分析和解释传统的一套工作。",
-    "knowledgePointZh": "历史与考古通过证据、遗迹、时间、材料和叙述理解过去，并谨慎处理过去被带回现在的方式。",
-    "reflectionQuestionZh": "发现过去时，我们是在拥有它，还是开始承担解释它的责任？"
-  },
-  "0223-philosophy-and-ethics": {
-    "titleZh": "市场里那个不停追问的人",
-    "summaryZh": "一个不停追问的人，让哲学从答案的展示变成理由的检验。",
-    "sceneZh": "公元前 5 世纪的雅典，一个出身普通工匠家庭的人，常在市场、体育场和宴席间同人谈话。",
-    "storyBodyZh": "他没有留下自己的书，也不像收学费的教师那样提供一套现成答案。他更像一个让人不舒服的邻居：将军说勇敢，他问勇敢是什么；政治人物说正义，他问正义能不能自相矛盾；年轻人说想过好生活，他问好生活是否只是成功和名声。许多人被他问得恼火，因为问题会把漂亮话拆开，让人看见自己其实没有想清楚。哲学与伦理在这里不是远离生活的抽象游戏，而是把日常判断带回理由面前：我凭什么这样活？我怎样对别人负责？我愿不愿意让自己的观念接受追问？按作者、年代、风格或门类整理作品，仍有它的用处；但要让判断走得更远，就必须把细读、比较、材料分析和解释传统变成可学习的工作。哲学与伦理后来会有课程和机构；在这个现场里，它先贴着细读、比较、材料分析和解释传统展开。这个人叫 Socrates，他以持续问答形成 Socratic method，成为西方哲学和伦理探究的重要源头人物。",
-    "knowledgePointZh": "哲学与伦理研究价值、理由、责任、知识、善、正义和行动背后的假设。",
-    "reflectionQuestionZh": "当你说“我知道”时，是否真的知道自己知道什么？"
-  },
-  "0229-humanities-except-languages-not-elsewhere-classified": {
-    "titleZh": "她把家乡的故事重新听了一遍",
-    "summaryZh": "一个回到家乡倾听的人，让门廊上的笑话和传说进入人文学术记忆。",
-    "sceneZh": "20 世纪 20 年代，一个从美国南方小镇走出去的年轻女性，带着人类学训练回到熟悉的门廊和街角。",
-    "storyBodyZh": "她小时候听过许多故事：玩笑、传说、夸张的比喻、夜晚的闲谈、宗教和日常混在一起的声音。离开家乡后，她进入学术世界，学会访谈、记录和分析；可真正困难的是回到那些熟人之间时，既不能把他们当成标本，也不能只凭怀旧替他们说话。她坐在门廊上，跟人聊天、听笑话、记方言，也把自己的位置写进文本里。那些材料既像文学，又像民俗学、民族志、历史和语言研究，无法被单一标签收拢。未另分类的人文学科正需要这种敏感：有些知识必须从活人说话的声音里进入。按作者、年代、风格或门类整理作品，仍有它的用处；但要让判断走得更远，就必须把细读、比较、材料分析和解释传统变成可学习的工作。这个人叫 Zora Neale Hurston，她以 Mules and Men 等作品记录非裔美国民俗，把文学、人类学和口述传统连接成独特的人文实践。后来人看见的是领域名称，当时真正被迫形成的，是围绕细读、比较、材料分析和解释传统的一套工作。",
-    "knowledgePointZh": "未另分类的人文学科处理那些关于意义、文本、民俗、记忆和人的经验但难以放入单一门类的问题。",
-    "reflectionQuestionZh": "当一个人研究自己的文化时，她是旁观者，还是也在重新听见自己？"
-  },
-  "0231-language-acquisition": {
-    "titleZh": "一只叫 Wug 的小怪物",
-    "summaryZh": "一只不存在的小动物，让研究者看见孩子不是背语言，而是在生成规则。",
-    "sceneZh": "20 世纪中期，一位年轻研究者坐在孩子面前，拿出一张画着陌生小动物的图片。",
-    "storyBodyZh": "她没有先问孩子会不会背语法术语，而是给他们一个从未听过的词。图上只有一只小动物，她说这是一个 Wug；再出现一只，她问：现在有两个，叫两个什么？如果孩子回答出复数形式，就说明他们不是只在模仿听过的词，而是在把规则带到新情境里。这个实验简单得像游戏，却击中了语言习得的核心：孩子并不是被动复印成人话语，他们会从语言环境中抽出模式，再用到从未遇见过的词上。错误、发明词和犹豫，反而能让我们看见语言正在生长。麻烦在于，手势、材料、声音和记忆会越过这些格子彼此回应。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是作品怎样带着历史经验、身体感受和观看方式生产意义。这个人叫 Jean Berko Gleason，她设计的 Wug Test 成为儿童语言习得研究的经典实验之一。",
-    "knowledgePointZh": "语言习得关注人如何在输入、使用、规则、错误、反馈和社会情境中获得语言。",
-    "reflectionQuestionZh": "孩子说错的时候，是否可能正在证明自己已经学会了规则？"
-  },
-  "0232-literature-and-linguistics": {
-    "titleZh": "一个词不是贴在东西上的标签",
-    "summaryZh": "一次关于词语关系的课堂，让语言从名称清单变成意义系统。",
-    "sceneZh": "20 世纪初的日内瓦，一位语言教师在课堂上反复提醒学生：语言不是一堆物体名称的清单。",
-    "storyBodyZh": "他早年研究印欧语言，熟悉古老音变和比较语法；可到了普通语言学讲课时，他把问题推得更深。一个词为什么有意义？不是因为它天然连着某个物体，而是因为声音形式和概念在语言系统里被社会约定地连在一起，又因为它和其他词不同而能被识别。这个看法听起来安静，却改变巨大：文学里的意象、日常里的称呼、诗歌里的节奏、社会里的身份，都可以被看成符号关系的一部分。语言学不再只是追踪词源，也开始研究系统、差异和意义如何生成。可是现场的压力在于，手势、材料、声音和记忆会越过这些格子彼此回应。后来的课程会给它命名，当时更急迫的是把细读、比较、材料分析和解释传统变成可重复的做法。这个人叫 Ferdinand de Saussure，他的学生整理出版 Course in General Linguistics，使 signifier/signified 和结构语言学成为 20 世纪语言与文学理论的重要基础。",
-    "knowledgePointZh": "文学与语言学研究文本、叙事、声音、符号、结构、意义和语言规则。",
-    "reflectionQuestionZh": "如果一个词的意义来自它和其他词的差异，你还能把语言当成词典列表吗？"
-  },
-  "0239-languages-not-elsewhere-classified": {
-    "titleZh": "会说话的树叶",
-    "summaryZh": "一个银匠追问纸为什么会说话，最终让一个民族拥有了书写自己语言的方式。",
-    "sceneZh": "19 世纪初，一个切罗基银匠看见白人士兵用纸传递消息，觉得那些纸像会说话的树叶。",
-    "storyBodyZh": "他起初并不会读写任何现成文字，却被一个问题抓住：为什么纸上的痕迹能让远方的人听见消息，而自己的族人却必须依靠口头传递？身边人嘲笑他，甚至怀疑那是巫术；家里的生活也被他长时间的试验拖累。他先想给每个词画一个符号，后来发现太多，记不住。慢慢地，他转向声音，把语言拆成音节，为每个音节设计符号。经过多年试验，系统终于足够简洁，普通人可以很快学会。它让法律、书信、报纸、宗教文本和家族消息以本族语言流动，也让语言在压力巨大的历史中多了一条保存自己的路。可这一幕留下的细节提醒研究者，手势、材料、声音和记忆会越过这些格子彼此回应。问题从这里换了重心：作品怎样带着历史经验、身体感受和观看方式生产意义，而不是把异常当作例外丢开。一门领域不是先从名称开始，而是先从细读、比较、材料分析和解释传统这些可练习的动作开始。这个人叫 Sequoyah，他创造 Cherokee syllabary，使 Cherokee Nation 在 1820 年代获得自己的书写系统，并成为语言史上极少数由个人成功发明文字体系的经典案例。",
-    "knowledgePointZh": "未另分类的语言关注不适合标准语种课程、主流文字传统或单一语言标签的语言实践。",
-    "reflectionQuestionZh": "如果一个没有文字传统的共同体突然能书写自己的语言，会发生什么？"
-  },
-  "0311-economics": {
-    "titleZh": "那枚小小的别针",
-    "summaryZh": "一枚别针让经济学从抽象财富，落到分工、价格和陌生人的合作。",
-    "sceneZh": "18 世纪的苏格兰，一个常在街上散步的道德哲学教授，对商店、工坊和港口里的普通交易越来越着迷。",
-    "storyBodyZh": "他并不是坐在账房里只想着利润的人。可他总觉得，面包为什么会到餐桌上，工资为什么会这样定，一件小商品为什么能卖到远方，这些问题并不只是商人的私事。他在书里写下一个很不起眼的例子：一枚别针。如果一个人从拉铁丝、切断、磨尖到装盒全都自己做，产量很有限；如果许多人把工作拆开，各做一小步，速度会突然变得惊人。这个例子后来常被记住，因为它让人看见，财富不是凭空出现的，也不是单靠某个聪明人创造的。它来自分工、工具、市场大小、价格信号，以及许多陌生人之间并不亲密却持续发生的合作。可是现场的压力在于，不同人的位置会留下互相冲突却都不能忽略的证据。这个人叫 Adam Smith，他在 1776 年出版《The Wealth of Nations》，成为现代经济学的重要奠基人物之一。",
-    "knowledgePointZh": "经济学研究稀缺、分工、价格、激励、交换和资源如何在社会中被安排。",
-    "reflectionQuestionZh": "当你看到一件便宜小物时，会不会想到它背后有多少陌生人的合作？"
-  },
-  "0312-political-sciences-and-civics": {
-    "titleZh": "镇会里的民主细节",
-    "summaryZh": "一个外国观察者在美国小镇会议里看见，政治不只是选举，也是不停练习公共生活。",
-    "sceneZh": "1830 年代的美国，一个年轻法国贵族坐在地方会议旁边，认真听普通居民怎样争论道路、学校和税。",
-    "storyBodyZh": "他本来是来考察监狱制度，却很快被更小的场景吸引。人们在教堂、报纸、协会和镇会里组织自己，争吵也合作；他们对政府保持警惕，却又愿意为了公共事务花时间。他看到民主不是一句口号，而是一整套习惯：结社、发言、妥协、地方自治、对多数权力的担忧，以及普通人学习公共判断的笨拙过程。政治科学与公民学在这里变得具体，因为制度不是只写在宪法上，也活在公民如何参加会议、读新闻、组织协会和约束权力里。如果只按旧路走，把社会问题交给意见、传闻或单一记录，事情看上去也能继续。可档案、地图和人的声音没有那么顺从：不同人的位置会留下互相冲突却都不能忽略的证据。于是下一步不能只是补一句解释，而要发展出调查、核对、分类、传播和公共解释。这个人叫 Alexis de Tocqueville，他在《Democracy in America》中分析美国民主、结社生活和多数暴政问题，成为政治科学与公民研究的重要经典。",
-    "knowledgePointZh": "政治科学与公民学关注公共决策、权力、制度、参与、权利和责任如何组织共同生活。",
-    "reflectionQuestionZh": "如果民主不是只在投票日发生，你今天在哪个小地方练习过公共判断？"
-  },
-  "0313-psychology": {
-    "titleZh": "实验室里的节拍器",
-    "summaryZh": "一个小小节拍器让心理学从哲学沉思走向可被训练和测量的实验。",
-    "sceneZh": "1879 年的莱比锡，一间房里有计时器、节拍器、反应键和一群被要求仔细报告经验的学生。",
-    "storyBodyZh": "那位教师原本受过医学和生理学训练，也熟悉哲学问题。他关心意识，但不满足于只在书本里争论心灵是什么。他让学生听声音、看光点、按键、记录反应时间，并练习把自己的感觉描述得尽量准确。今天看来，这些方法有局限，也和现代心理学差距很大；但关键转向已经发生：心理活动可以进入实验室，可以被设计任务、记录时间、比较差异，也可以被看作身体和经验共同发生的过程。心理学不再只是关于灵魂的抽象谈论，而开始成为研究注意、感觉、反应和意识的经验科学。麻烦在于，不同人的位置会留下互相冲突却都不能忽略的证据。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是什么记录能让分散生活进入公共判断。当调查、核对、分类、传播和公共解释被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Wilhelm Wundt，他在莱比锡建立实验心理学实验室，被广泛视为现代实验心理学的重要奠基人。",
-    "knowledgePointZh": "心理学研究行为、情绪、认知、发展和人与环境的互动，也研究人的经验如何被观察和测量。",
-    "reflectionQuestionZh": "你以为只属于内心的一个反应，能不能被时间、情境和身体一起解释？"
-  },
-  "0314-sociology-and-cultural-studies": {
-    "titleZh": "费城街区的一户户人家",
-    "summaryZh": "一项城市调查让社会学看见，偏见不能替代挨家挨户的证据。",
-    "sceneZh": "19 世纪末的费城，一个年轻学者拿着表格和笔，走进被许多人用刻板印象谈论的黑人社区。",
-    "storyBodyZh": "他知道，如果只听报纸和政客的说法，这个社区会被简化成问题本身。于是他做了一件慢事：访问家庭、记录职业、收入、教育、住房、迁徙和邻里关系，把地图、统计和生活叙述放在一起。他不是把人当成数字，而是用数字抵抗懒惰的偏见；也不是把贫困归咎于某个群体，而是追问工作机会、歧视、居住条件和城市制度如何制造后果。社会学与文化研究在这里有了锋利的现实感：文化和社会结构不是空词，它们会落到哪条街、哪份工作、哪间屋子和哪一次被拒绝的机会里。如果只按旧路走，把社会问题交给意见、传闻或单一记录，事情看上去也能继续。可档案、地图和人的声音没有那么顺从：不同人的位置会留下互相冲突却都不能忽略的证据。于是下一步不能只是补一句解释，而要发展出调查、核对、分类、传播和公共解释。社会学与文化研究后来会有课程和机构；在这个现场里，它先贴着调查、核对、分类、传播和公共解释展开。这个人叫 W. E. B. Du Bois，他的《The Philadelphia Negro》成为美国城市社会学、实证社会研究和种族研究的重要经典。",
-    "knowledgePointZh": "社会学与文化研究关注规范、身份、群体、文化差异和社会结构如何塑造人的机会与生活。",
-    "reflectionQuestionZh": "你对一个群体的判断里，有多少来自证据，又有多少只是被反复听来的说法？"
-  },
-  "0319-social-and-behavioural-sciences-not-elsewhere-classified": {
-    "titleZh": "孩子们的食物地图",
-    "summaryZh": "一个关于儿童营养的项目说明，有些行为问题必须同时看家庭、学校、社区和政策。",
-    "sceneZh": "1930 年代的美国南方，一位研究者走进学校和家庭，发现孩子的午餐盒里藏着比营养更多的社会线索。",
-    "storyBodyZh": "她受过心理学和人类学训练，却越来越不愿把人的行为拆成孤立变量。孩子吃什么，不只取决于母亲是否知道营养，也取决于收入、种族隔离、学校制度、地方食物习惯、农场生产和政府项目。她做访谈、观察餐桌、记录家庭安排，也研究政策怎样进入厨房。这个工作很难只归入心理学、社会学、教育或公共卫生，因为它关心的是行为在真实社会生态中如何发生。未另分类的社会与行为科学正需要这样的眼睛：当问题横跨个人、家庭、机构和文化时，分类要服务理解，而不是挡住理解。这不是旧办法完全失灵的时刻。把社会问题交给意见、传闻或单一记录，本来就能让人先行动；真正顶住它的，是不同人的位置会留下互相冲突却都不能忽略的证据。当这个卡点反复出现，新的问题变成了：什么记录能让分散生活进入公共判断。这个人叫 Margaret Mead，她把人类学、儿童发展、食物习惯和社会政策连接起来，影响了社会行为研究对文化和日常生活的理解。",
-    "knowledgePointZh": "未另分类的社会与行为科学处理那些跨越心理、文化、家庭、制度和政策的复杂行为现象。",
-    "reflectionQuestionZh": "一个看似个人习惯的问题，背后可能有多少层社会条件在一起行动？"
-  },
-  "0321-journalism-and-reporting": {
-    "titleZh": "她查每一个名字",
-    "summaryZh": "一个记者对暴力名单的逐项核实，让报道成为对公共谎言的抵抗。",
-    "sceneZh": "19 世纪末的美国南方，一个年轻女教师兼报人听说朋友被私刑杀害，愤怒之外先做了一件慢事：查证。",
-    "storyBodyZh": "她没有满足于当时白人报纸常用的说法，也没有把恐惧写成空泛控诉。她收集报纸剪报，核对姓名、地点和借口，比较案件，追问所谓“罪名”怎样被制造出来为暴力辩护。她写文章、发表小册子、演讲，也因此遭到威胁，被迫离开原来的城市。新闻与报道在她手里不是中立地重复权力话语，而是在证据、勇气和公共责任之间建立联系。真正的记者工作，有时就是在多数人已经接受谎言的时候，仍然逐条核对事实。如果只按旧路走，把社会问题交给意见、传闻或单一记录，事情看上去也能继续。可档案、地图和人的声音没有那么顺从：不同人的位置会留下互相冲突却都不能忽略的证据。于是下一步不能只是补一句解释，而要发展出调查、核对、分类、传播和公共解释。这个人叫 Ida B. Wells，她以反私刑调查报道和公共倡议成为美国调查新闻、民权运动和新闻责任史上的重要人物。这类起源常常不宏大：旧办法带不走的现场先留下来，调查、核对、分类、传播和公共解释才慢慢变成方法。",
-    "knowledgePointZh": "新闻与报道关注事实核查、采访、证据、叙事、公共信息和对权力的责任。",
-    "reflectionQuestionZh": "当一个社会已经习惯某种说法时，谁还愿意逐条核对它？"
-  },
-  "0322-library-information-and-archival-studies": {
-    "titleZh": "每本书都该找到它的读者",
-    "summaryZh": "一位图书馆员把图书馆从藏书仓库重新想象成会主动连接人的公共系统。",
-    "sceneZh": "20 世纪 20 年代的印度，一个年轻数学教师转到图书馆工作，发现书架整齐并不等于知识真正被使用。",
-    "storyBodyZh": "他看到很多图书馆像安静仓库，书被保护得很好，却不一定抵达需要它的人。数学训练让他喜欢秩序，但图书馆现场让他明白，秩序必须服务读者。他提出几条朴素却深刻的原则：书是为了使用的；每个读者有他的书；每本书有它的读者；节省读者时间；图书馆是生长的有机体。这些话听起来温和，其实改变了信息工作的重心：编目、分类、借阅、开放时间和馆员服务，都不只是内部技术，而是让社会记忆和个人问题相遇的方式。可这一幕留下的细节提醒研究者，不同人的位置会留下互相冲突却都不能忽略的证据。问题从这里换了重心：什么记录能让分散生活进入公共判断，而不是把异常当作例外丢开。真正留下来的，是调查、核对、分类、传播和公共解释从个人经验变成可以传递的训练。这个人叫 S. R. Ranganathan，他提出 Five Laws of Library Science，并发展 Colon Classification，成为图书馆与信息科学的重要奠基人物之一。后来人看见的是领域名称，当时真正被迫形成的，是围绕调查、核对、分类、传播和公共解释的一套工作。",
-    "knowledgePointZh": "图书馆、信息与档案研究关注信息组织、保存、检索、可达性和长期公共记忆。",
-    "reflectionQuestionZh": "一个系统是为了保存资料，还是为了让需要资料的人及时找到它？"
-  },
-  "0329-journalism-and-information-not-elsewhere-classified": {
-    "titleZh": "危机地图上的第一条短信",
-    "summaryZh": "一次临时搭起的信息平台说明，公共信息有时会出现在新闻、技术和社区行动之间。",
-    "sceneZh": "2007 年肯尼亚选举后，街头暴力和传言同时扩散，一个年轻律师在网上写下想法：能不能让人们报告身边发生的事？",
-    "storyBodyZh": "她看到的问题不是传统报纸能独自解决的。事件分散，消息混乱，很多人有手机却没有安全渠道把地点、危险和求助信息送到公共视野。于是开发者、志愿者和公民一起搭起平台，把短信、网页报告和地图连起来。它不等同于新闻社，也不只是技术产品，更不是政府档案；它在危机中把零散目击转为可视化信息，同时也暴露出核实、偏差和安全的难题。未另分类的新闻与信息正存在于这种边界地带：当现实太快、太分散、太危险，公共知识需要新的容器。可这一幕留下的细节提醒研究者，不同人的位置会留下互相冲突却都不能忽略的证据。问题从这里换了重心：什么记录能让分散生活进入公共判断，而不是把异常当作例外丢开。未另分类的新闻与信息后来会有课程和机构；在这个现场里，它先贴着调查、核对、分类、传播和公共解释展开。这个人叫 Ory Okolloh，她提出并推动 Ushahidi 的早期构想，使众包危机地图成为新闻、信息技术和公民行动交汇的重要案例。",
-    "knowledgePointZh": "未另分类的新闻与信息关注那些不完全属于传统媒体、档案或标准信息系统的新型公共信息实践。",
-    "reflectionQuestionZh": "在混乱时刻，怎样的信息既能快速出现，又不放弃核实和保护人的责任？"
-  },
-  "0411-accounting-and-taxation": {
-    "titleZh": "商人账本里的两边",
-    "summaryZh": "一本算术书里的记账章节，让交易从记忆和信任走向可检查的系统。",
-    "sceneZh": "文艺复兴时期的意大利，一个修士兼数学教师看到商人的账本里，货物、债务和现金总在流动。",
-    "storyBodyZh": "城市贸易越来越复杂，单靠脑子记住谁欠谁、货从哪里来、钱到哪里去，已经很危险。他把商人实际使用的复式记账方法写进书里，说明每笔交易都要从两个方向进入账本：一边记录来源，一边记录去向。这个方法不是让商业变得道德完美，却让错误、欺骗、成本和责任更容易被发现。会计与税务的核心由此显露：数字不是单纯记录财富，而是在社会中建立可解释、可核对、可承担责任的证据。麻烦在于，成本、责任、权利和风险经常被藏到决定之后。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Luca Pacioli，他在 1494 年《Summa de arithmetica》中系统介绍复式记账，被后世称为会计学的重要奠基人物之一。",
-    "knowledgePointZh": "会计与税务让收入、成本、资产、负债、税务和责任变得可记录、可解释、可检查。",
-    "reflectionQuestionZh": "当一笔钱进入账本两边，它是不是也进入了责任之中？"
-  },
-  "0412-finance-banking-and-insurance": {
-    "titleZh": "死亡表里的保险问题",
-    "summaryZh": "一位天文学家整理城市死亡记录，让风险、时间和金钱第一次被更可靠地放在同一张表里。",
-    "sceneZh": "17 世纪末，一个习惯计算彗星轨道的人，开始认真阅读一座城市的出生和死亡记录。",
-    "storyBodyZh": "他关心的不是个体命运能不能被预测，而是许多人的寿命放在一起，会不会呈现可用于公共判断的规律。年金和保险长期依赖粗略估计，价格常常不公平。于是他整理 Breslau 的年龄与死亡数据，计算不同年龄的人还能活多久的概率。这个工作让金融、银行与保险中的核心问题变得清楚：钱不只在空间里流动，也在时间和风险里流动。保险不是消灭不确定性，而是用大量记录、概率和合同把不确定性分担开来。如果只按旧路走，靠经验、契约或账目先处理交易和组织，事情看上去也能继续。可账本、合同和责任后果没有那么顺从：成本、责任、权利和风险经常被藏到决定之后。于是下一步不能只是补一句解释，而要发展出账目、制度、案例、权利边界和组织设计。等到金融、银行与保险成为可教的领域，真正被保留下来的正是账目、制度、案例、权利边界和组织设计。这个人叫 Edmond Halley，他制作的生命表成为精算科学和人寿保险定价史上的重要早期成果。今天保险、养老金和公共预算仍在面对同一件事：没有人能预知个人命运，但群体数据会改变社会分担风险的方式。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把账目、制度、案例、权利边界和组织设计一点点固定下来。",
-    "knowledgePointZh": "金融、银行与保险研究时间、风险、信用、资金流动和保护机制如何影响选择。",
-    "reflectionQuestionZh": "你买一份保险时，真正买的是钱、时间，还是对不确定性的共同分担？"
-  },
-  "0413-management-and-administration": {
-    "titleZh": "她不想让工人只服从命令",
-    "summaryZh": "一个在社区中心和工厂之间思考的人，把管理从控制他人转向共同解决问题。",
-    "sceneZh": "20 世纪初的波士顿，一个女性社会思想者在社区工作、企业会议和公共事务之间来回走动。",
-    "storyBodyZh": "她看到冲突常被处理成输赢：老板命令，工人服从；部门争资源，谁声音大谁赢。可她越来越相信，真正的管理不该只是压制冲突，而要把不同经验组织起来，让问题本身把人带向新的解决方案。她提出“power with”而不是“power over”，强调协调、参与、情境判断和共同责任。她的思想一度不如科学管理那样显眼，却在后来影响组织行为、领导力和协作管理。管理与行政在她这里不是冷冰冰的流程，而是把人的经验、权力和目标重新安排到可合作的结构中。这不是旧办法完全失灵的时刻。靠经验、契约或账目先处理交易和组织，本来就能让人先行动；真正顶住它的，是成本、责任、权利和风险经常被藏到决定之后。当这个卡点反复出现，新的问题变成了：规则、资源和责任怎样被安排，才经得起共同承担。后来能被学习的，正是这些账目、制度、案例、权利边界和组织设计：它们让下一次相似现场不必重新摸索。这个人叫 Mary Parker Follett，她以关于协作、权力和冲突整合的思想成为现代管理学的重要先驱之一。",
-    "knowledgePointZh": "管理与行政关注组织、流程、责任、协调、执行和人在共同目标中的合作方式。",
-    "reflectionQuestionZh": "面对冲突时，你是在寻找谁赢，还是寻找问题本身要求大家怎样改变？"
-  },
-  "0414-marketing-and-advertising": {
-    "titleZh": "牙膏广告里的一个小习惯",
-    "summaryZh": "一次关于牙膏的推广，让营销从夸张口号转向测试、心理触发和可重复行动。",
-    "sceneZh": "20 世纪初的美国，一个广告人盯着报纸版面和销售数字，越来越不相信只靠漂亮句子就能卖出东西。",
-    "storyBodyZh": "他把广告当作可以测试的实验，而不是纯粹灵感。他关心标题能不能让人停下，优惠券能不能追踪回应，产品承诺是不是能进入人的日常习惯。推广牙膏时，广告不只是说产品好，而是抓住“牙齿表面那层膜”的感觉，让人每天用舌头确认自己是否需要清洁。这个方法后来也必须被批判，因为营销可以帮助人理解需求，也可以制造焦虑和欲望。但它确实让市场营销与广告的学科特征显出来：注意力、证据、行为触发、信任和伦理边界总是缠在一起。这不是旧办法完全失灵的时刻。靠经验、契约或账目先处理交易和组织，本来就能让人先行动；真正顶住它的，是成本、责任、权利和风险经常被藏到决定之后。当这个卡点反复出现，新的问题变成了：规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Claude Hopkins，他以《Scientific Advertising》和 Pepsodent 推广案例影响了现代广告测试、直效营销和消费行为传播。",
-    "knowledgePointZh": "市场营销与广告研究需求、定位、传播、注意力、行为、信任和商业伦理。",
-    "reflectionQuestionZh": "一个广告是在帮你看见真实需求，还是在替你制造一个新焦虑？"
-  },
-  "0415-secretarial-and-office-work": {
-    "titleZh": "键盘把办公室重新排了一遍",
-    "summaryZh": "一台打字机让办公事务从手写书信变成速度、格式、复制和职业角色的系统。",
-    "sceneZh": "19 世纪美国，一个报纸编辑兼发明者反复调试一台会卡键的机器，想让文字能更快落到纸上。",
-    "storyBodyZh": "他面对的不是浪漫的文学问题，而是办公室里极普通的痛点：信件太多，手写难读，副本难做，速度跟不上商业往来。早期机器笨重又不稳定，键位也不断调整。可一旦打字机进入办公室，文件格式、通信速度、记录保存、秘书职业和性别化劳动分工都被改变了。秘书与办公事务不是“杂活”的集合，而是组织记忆、沟通节奏和文件可靠性的基础设施。每一份议程、备忘录、合同副本和来往信件，都在帮助组织不用只靠个人记忆运转。可这一幕留下的细节提醒研究者，成本、责任、权利和风险经常被藏到决定之后。问题从这里换了重心：规则、资源和责任怎样被安排，才经得起共同承担，而不是把异常当作例外丢开。这个人叫 Christopher Latham Sholes，他参与发明并推广早期实用打字机，长期影响现代办公室文书和秘书工作。",
-    "knowledgePointZh": "秘书与办公事务关注文档、沟通、日程、流程、记录和组织记忆如何支持日常运转。",
-    "reflectionQuestionZh": "一个组织里哪些看似琐碎的文件，实际是在保护大家不被混乱吞掉？"
-  },
-  "0416-wholesale-and-retail-sales": {
-    "titleZh": "顾客自己拿货的商店",
-    "summaryZh": "一家自助杂货店改变了货架、价格标签和顾客行动，也改变了零售业的基本想象。",
-    "sceneZh": "1916 年的孟菲斯，一个杂货商看着柜台后的店员不停替顾客取货，觉得整套流程太慢也太贵。",
-    "storyBodyZh": "当时买东西常由店员在柜台后取货，顾客说，店员拿，价格和选择都被柜台隔开。他反过来设计商店动线：让顾客推开转门，沿着货架自己拿商品，看清包装和价格，最后到出口结账。这个改变不是简单节省人力，它重写了批发与零售销售的现场逻辑：陈列、包装、冲动购买、库存、价格标签、防盗和收银都变成同一套系统。顾客获得更多自由，也被新的货架设计影响选择。麻烦在于，成本、责任、权利和风险经常被藏到决定之后。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Clarence Saunders，他创办 Piggly Wiggly，把自助式超市模式推向商业实践，深刻影响现代零售销售。今天零售设计仍在问类似问题：顾客自己完成一部分服务时，便利、成本、信任和被监控的感觉怎样重新分配。",
-    "knowledgePointZh": "批发与零售销售关注商品流通、陈列、定价、库存、顾客关系和购买现场如何被设计。",
-    "reflectionQuestionZh": "当你以为自己自由选择商品时，货架已经替你做了哪些安排？"
-  },
-  "0417-work-skills": {
-    "titleZh": "砖头该怎样拿才不累",
-    "summaryZh": "一对研究工作动作的人让工作技能从吃苦耐劳，转向可观察、可改进、可保护身体的实践。",
-    "sceneZh": "20 世纪初的工地和厨房里，一对夫妻拿着秒表和摄像机，认真观察人怎样伸手、弯腰、拿起工具。",
-    "storyBodyZh": "他们不是只想让人更快工作。真正的问题是，为什么同样的任务有人疲惫，有人顺手；为什么工人要做那么多多余动作；为什么家庭劳动也被当成不值得研究的自然习惯。他们拍摄砌砖动作，分析手的路径，也研究厨房高度、工具摆放和休息。今天我们会警惕效率研究被用来压榨劳动者，但他们留下的一个重要提醒仍然成立：工作技能不是天生会的，也不只是态度好。它包括动作、工具、时间、沟通、身体保护和学习反馈。可这一幕留下的细节提醒研究者，成本、责任、权利和风险经常被藏到决定之后。问题从这里换了重心：规则、资源和责任怎样被安排，才经得起共同承担，而不是把异常当作例外丢开。这个人叫 Frank Gilbreth 和 Lillian Gilbreth，他们通过 motion study 和工作流程研究影响了工业工程、人体工效和现代工作技能训练。",
-    "knowledgePointZh": "工作技能关注沟通、协作、时间、任务边界、工具使用和职业场景中的可靠行动。",
-    "reflectionQuestionZh": "你觉得自己不够努力的时候，有没有可能只是动作、工具或流程需要被重新设计？"
-  },
-  "0419-business-and-administration-not-elsewhere-classified": {
-    "titleZh": "一张小额贷款的桌子",
-    "summaryZh": "一次乡村小额贷款实验让商业与行政越过传统银行、慈善和社区组织的边界。",
-    "sceneZh": "20 世纪 70 年代的孟加拉，一个经济学教师走到村里，发现课本里的贫困理论解释不了一张竹凳的债务。",
-    "storyBodyZh": "他看到一些手工劳动者每天辛苦，却因为借原料的钱来自高利贷，永远被锁在极小利润里。传统银行嫌他们没有抵押，慈善又未必改变生产关系。于是他试着借出很小的钱，观察人们是否能通过互助小组、还款纪律和本地信任建立新的可能。这个模式后来受到广泛赞扬，也面对关于债务压力、性别负担和商业化的批评；但它确实说明，有些商业与行政实践很难放入标准格子。它既像金融，也像发展项目、社会组织和制度实验。这不是旧办法完全失灵的时刻。靠经验、契约或账目先处理交易和组织，本来就能让人先行动；真正顶住它的，是成本、责任、权利和风险经常被藏到决定之后。当这个卡点反复出现，新的问题变成了：规则、资源和责任怎样被安排，才经得起共同承担。这个人叫 Muhammad Yunus，他创立 Grameen Bank 并推动 microcredit，使社会企业和小额金融成为商业与行政边界上的重要案例。",
-    "knowledgePointZh": "未另分类的商业与行政收纳那些跨越金融、组织、发展、社区和治理的混合实践。",
-    "reflectionQuestionZh": "一个商业工具什么时候是在打开机会，什么时候又可能制造新的依赖？"
-  },
-  "0511-biology": {
-    "titleZh": "雨水里的小动物",
-    "summaryZh": "一滴看似清亮的水，在小透镜下把自然的尺度往下推了一层。",
-    "sceneZh": "1670 年代的 Delft，窗边桌上放着一枚自制单透镜、一根细针和一滴存放过的雨水。",
-    "storyBodyZh": "窗玻璃把北方的光磨得很薄，黄铜小板被手指捏得发热。这个做布料生意的人原先磨镜片，是为了看清纱线粗细、纤维断口和布面瑕疵。清水在肉眼里只是清水；若变浑了，人们也多半说它放坏了。那天，他把一滴存放过的雨水挑到针尖旁，贴近小透镜，先调光，再屏住呼吸找焦点。水滴里忽然有细小的点在转，有的像在划水，有的猛地一闪又躲开。原来的问题很简单：这水干不干净。可如果清亮的水里也有东西在动，肉眼的清楚就不再等于世界的全部。他换另一份水样，又等几天再看，把不同小东西的形状和游动方式写进信里。问题慢慢改口：不是只问水有没有变坏，而是问看不见的生命能不能被工具、样本和重复观察拉到证据面前。麻烦在于，尺度改变后，原来清楚的边界会突然不够用。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是看不见或不断变异的生命怎样进入可重复的观察。署名是 Antonie van Leeuwenhoek。",
-    "knowledgePointZh": "生命不只存在于肉眼能直接确认的尺度里；当工具改变观察尺度，微小生命也能通过样本、重复观察、形态和运动记录进入可检查的自然世界。",
-    "reflectionQuestionZh": "如果一个东西小到肉眼看不见，你会用什么重复动作让它从猜想变成证据？"
-  },
-  "0512-biochemistry": {
-    "titleZh": "没有活细胞也会发酵",
-    "summaryZh": "一瓶被压碎的酵母汁让生物化学看见，生命过程也可以由分子机器推动。",
-    "sceneZh": "19 世纪末的柏林，一个研究者把酵母细胞磨碎过滤，本来只想保存提取物，却发现液体自己开始冒泡。",
-    "storyBodyZh": "当时很多人认为发酵必须依赖完整活细胞。可那瓶无细胞酵母汁仍然把糖变成酒精和二氧化碳，像是在提醒人们：生命活动背后还有更小的化学执行者。他反复确认不是污染，也不是残余细胞在偷偷工作。这个发现把问题从“细胞是否活着”推向“细胞内部是什么在催化反应”。生物化学的门由此被推开：生命不是脱离物质的神秘力量，它由酶、分子、能量和反应网络持续维持。麻烦在于，尺度改变后，原来清楚的边界会突然不够用。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是看不见或不断变异的生命怎样进入可重复的观察。生物化学的名字还可以推迟，样本、镜片、比较、记录和重复观察却已经在现场要求一种新训练。这个人叫 Eduard Buchner，他发现无细胞发酵并推动酶学发展，因这项工作获得 1907 年诺贝尔化学奖。今天的生物技术仍在延续这个转念：生命过程可以被研究成反应系统，但每一次应用都要重新问安全和边界。",
-    "knowledgePointZh": "生物化学研究生命里的分子、酶、反应、能量转换和物质变化。",
-    "reflectionQuestionZh": "当生命现象被拆到分子层面，它是变得更冷，还是变得更精细？"
-  },
-  "0519-biological-and-related-sciences-not-elsewhere-classified": {
-    "titleZh": "玉米籽粒上的颜色跳动",
-    "summaryZh": "一个长期被低估的玉米实验，让生命科学看见基因并不总是安静地待在原位。",
-    "sceneZh": "20 世纪中期的玉米田里，一位女科学家一粒粒观察籽粒颜色，记录那些像斑点一样变化的图案。",
-    "storyBodyZh": "她的工作很安静，也很孤独。显微镜下的染色体、田里的玉米穗、纸上的谱系图，被她年复一年地连在一起。许多人期待基因像固定位置上的字母，她却从异常颜色和断裂模式里看到另一种可能：某些遗传因子会移动，会调控别的基因表达。这个发现一开始并没有被充分理解，因为它超出了当时主流想象。未另分类的生物相关科学常常就在这种边缘发现中出现：问题横跨遗传、细胞、发育和调控，暂时没有舒服的格子。可是现场的压力在于，尺度改变后，原来清楚的边界会突然不够用。这个人叫 Barbara McClintock，她发现 transposable elements，后来获得 1983 年诺贝尔生理学或医学奖。这类起源常常不宏大：旧办法带不走的现场先留下来，样本、镜片、比较、记录和重复观察才慢慢变成方法。",
-    "knowledgePointZh": "未另分类的生物相关科学处理那些跨越遗传、细胞、发育、生态或生命尺度的复杂现象。",
-    "reflectionQuestionZh": "如果一个异常现象多年没人相信，你还会不会继续认真看它？"
-  },
-  "0521-environmental-sciences": {
-    "titleZh": "山顶仪器画出的曲线",
-    "summaryZh": "一个长期测量二氧化碳的人，让环境科学用一条曲线看见整个地球的呼吸。",
-    "sceneZh": "1958 年的夏威夷 Mauna Loa 山上，一个年轻化学家把空气样本送进仪器，关心小数点后的稳定性。",
-    "storyBodyZh": "他做的事看起来枯燥：校准仪器，排除局地污染，重复测量，保存长期记录。可正是这种近乎执拗的精确，让大气中二氧化碳逐年上升的趋势变得无法忽视。那条曲线还带着季节性起伏，像地球植被呼吸的节律：春夏下降，秋冬上升。环境科学在这里显示出力量，不是靠一次戏剧性灾难，而是靠持续、可比、可信的数据，把看不见的全球变化变成公共证据。可这一幕留下的细节提醒研究者，同一片土地上的水源、燃料、土壤、物种和社区生活会一起改变。问题从这里换了重心：怎样把生态变化和人的行动放回同一个现场判断，而不是把异常当作例外丢开。这个人叫 Charles David Keeling，他建立的 Mauna Loa 二氧化碳长期记录形成 Keeling Curve，成为气候变化科学的核心证据之一。",
-    "knowledgePointZh": "环境科学研究污染、资源、气候、生态和人类活动之间的关系，并依赖长期测量与模型判断变化。",
-    "reflectionQuestionZh": "什么样的变化只有被测量很多年，才终于让人无法继续忽略？"
-  },
-  "0522-natural-environments-and-wildlife": {
-    "titleZh": "黑猩猩手里的草茎",
-    "summaryZh": "一次野外观察让人重新理解野生动物行为，也让保护不再只是一张物种清单。",
-    "sceneZh": "1960 年的坦桑尼亚森林里，一个年轻女性坐在树下，长时间等待黑猩猩愿意靠近。",
-    "storyBodyZh": "她一开始没有传统博士训练，带着笔记本、望远镜和极大的耐心进入森林。很多天里，动物只是远远躲开。后来她看到一只黑猩猩把草茎伸进白蚁丘，再把沾满白蚁的草茎送入口中。这个小动作意义巨大：工具使用不再能轻易被说成只有人类才会。更重要的是，长期观察让每只动物有了个体性格、亲属关系、冲突、照料和学习。自然环境与野生动物研究因此不只是数有多少只动物，也要理解栖息地、行为、社会关系和人类干扰。这不是旧办法完全失灵的时刻。把环境问题拆成水、树、土地或污染的单项麻烦，本来就能让人先行动；真正顶住它的，是同一片土地上的水源、燃料、土壤、物种和社区生活会一起改变。当这个卡点反复出现，新的问题变成了：怎样把生态变化和人的行动放回同一个现场判断。这个人叫 Jane Goodall，她在 Gombe 的黑猩猩长期研究改变了灵长类行为学和野生动物保护的公众理解。",
-    "knowledgePointZh": "自然环境与野生动物关注栖息地、物种行为、保护、生态平衡和人类活动影响。",
-    "reflectionQuestionZh": "当你发现一种动物也会学习和使用工具，你对“人类特殊性”的想法会怎样改变？"
-  },
-  "0529-environment-not-elsewhere-classified": {
-    "titleZh": "树苗和妇女手里的水桶",
-    "summaryZh": "一场种树运动说明，环境问题常常同时是土地、水、性别、民主和社区组织问题。",
-    "sceneZh": "1970 年代的肯尼亚，一个受过生物学训练的女性听见乡村妇女说，柴火远了，水少了，土也越来越薄。",
-    "storyBodyZh": "她没有把这些抱怨当作零散生活困难。树被砍掉，水源变差，土壤流失，妇女走更远的路找燃料，家庭和地方政治都被牵动。于是她从最朴素的动作开始：组织妇女育苗、种树、照看树，也让种树变成教育、收入、社区权利和民主参与的入口。未另分类的环境领域常常这样出现：它不只是生态学，也不只是扶贫、女性权益或政治改革，而是这些东西在同一片土地上纠缠。可这一幕留下的细节提醒研究者，同一片土地上的水源、燃料、土壤、物种和社区生活会一起改变。问题从这里换了重心：怎样把生态变化和人的行动放回同一个现场判断，而不是把异常当作例外丢开。未另分类的环境后来会有课程和机构；在这个现场里，它先贴着长期观察、社区记录、生态关系和行动反馈展开。这个人叫 Wangari Maathai，她创立 Green Belt Movement，并因环境保护、妇女赋权和民主行动获得 2004 年诺贝尔和平奖。",
-    "knowledgePointZh": "未另分类的环境领域处理跨越水、土、生态、社区、政策和社会公平的复杂环境实践。",
-    "reflectionQuestionZh": "一棵树什么时候不只是树，而是水、时间、收入和公共权利的交点？"
-  },
-  "0531-chemistry": {
-    "titleZh": "燃烧后少了什么",
-    "summaryZh": "一次关于燃烧和称量的坚持，让化学从旧术语转向质量、元素和反应。",
-    "sceneZh": "18 世纪巴黎，一个税务官兼科学家在实验室里反复称量金属、空气和燃烧后的残留物。",
-    "storyBodyZh": "当时流行的燃素说把燃烧解释成某种东西逃走。可他的天平总把问题拉回物质本身：如果燃烧后质量增加，是否说明空气中的某部分加入了反应？他和同伴改进仪器、命名氧气和氢气、整理元素概念，也推动化学语言从含混传统走向更可核对的体系。化学在这里不是神秘炼金，而是精确称量、封闭系统、命名规则和反应关系。可是现场的压力在于，仪器、条件和重复结果会暴露旧解释没有覆盖的自然关系。化学后来会有课程和机构；在这个现场里，它先贴着实验装置、测量、条件控制和数学表达展开。这个人叫 Antoine Lavoisier，他通过燃烧理论、质量守恒和化学命名改革成为现代化学的重要奠基人之一。学生第一次认真看一个反应时，学到的不只是物质名称，而是守恒、测量和证据如何一起改变解释。",
-    "knowledgePointZh": "化学研究物质组成、性质、反应、能量变化和变化条件。",
-    "reflectionQuestionZh": "当你改变一个物质时，你会只看结果，还是追问每一部分去了哪里？"
-  },
-  "0532-earth-sciences": {
-    "titleZh": "大陆像拼图一样裂开",
-    "summaryZh": "一位气象学家的地图直觉，让地球科学重新想象大陆、海洋和深时间。",
-    "sceneZh": "20 世纪初，一个研究天气和极地的科学家看着世界地图，注意到南美和非洲海岸像可以拼合的边缘。",
-    "storyBodyZh": "他不是地质学正统圈里的权威人物。除了海岸线，他还比较化石分布、岩层、古气候痕迹和冰川证据，提出大陆曾经连在一起，后来漂移分开。许多地质学家一开始反对，尤其因为他无法解释大陆移动的可靠机制。这个理论长期被冷落，直到海底扩张、古地磁和板块构造证据出现，才重新获得力量。地球科学在这里显示出耐心：一条好问题有时先于完整机制出现，而地球的历史远比脚下的静止感更活跃。这不是旧办法完全失灵的时刻。沿用权威解释或把现象当作孤立实验结果，本来就能让人先行动；真正顶住它的，是仪器、条件和重复结果会暴露旧解释没有覆盖的自然关系。当这个卡点反复出现，新的问题变成了：怎样用实验和数学关系检验物质、能量和运动。一门领域不是先从名称开始，而是先从实验装置、测量、条件控制和数学表达这些可练习的动作开始。这个人叫 Alfred Wegener，他提出 continental drift 理论，为后来板块构造学说的发展提供了关键思想前身。",
-    "knowledgePointZh": "地球科学研究岩石、水、气候、地形、地球内部和地球系统在长时间尺度上的变化。",
-    "reflectionQuestionZh": "你脚下看似稳定的地面，可能在多长的时间里一直移动？"
-  },
-  "0533-physics": {
-    "titleZh": "苹果和月亮之间",
-    "summaryZh": "一个关于坠落的普通问题，把地上的运动和天上的轨道放进同一套物理规则。",
-    "sceneZh": "17 世纪英格兰，一位年轻学者在瘟疫期间离开大学回到乡下，继续独自思考光、运动和数学。",
-    "storyBodyZh": "故事常被讲成苹果砸头的瞬间，其实更重要的是他愿意把两个世界连起来：苹果为什么落下，月亮为什么不直线飞走，而是绕着地球？如果同一种吸引力既作用在地面物体，也作用在天体上，那么自然界就不是由两套规则管理。他用数学表达运动定律和万有引力，把经验、几何和天文观测组织成新的体系。物理学由此展现出一种强大想象：最普通的下落，可能和宇宙尺度的运行属于同一个问题。这不是旧办法完全失灵的时刻。沿用权威解释或把现象当作孤立实验结果，本来就能让人先行动；真正顶住它的，是仪器、条件和重复结果会暴露旧解释没有覆盖的自然关系。当这个卡点反复出现，新的问题变成了：怎样用实验和数学关系检验物质、能量和运动。一门领域不是先从名称开始，而是先从实验装置、测量、条件控制和数学表达这些可练习的动作开始。这个人叫 Isaac Newton，他在《Philosophiae Naturalis Principia Mathematica》中提出运动定律和万有引力理论，奠定经典力学基础。",
-    "knowledgePointZh": "物理学研究运动、能量、力、物质和自然规律，用模型解释从日常到宇宙尺度的现象。",
-    "reflectionQuestionZh": "你身边哪一个普通动作，可能和更大的自然规律连在一起？"
-  },
-  "0539-physical-sciences-not-elsewhere-classified": {
-    "titleZh": "磁针旁边的电流",
-    "summaryZh": "一次讲台上的偏转让物理科学边界松动，电和磁开始成为同一个故事。",
-    "sceneZh": "1820 年的哥本哈根，一个教师在课堂演示中发现，通电导线旁的磁针突然偏转。",
-    "storyBodyZh": "他原本想展示的是电学实验，却被一个看似偶然的小动作抓住：电流经过时，磁针不再安静指北。这个现象说明电和磁之间可能有深层联系。后来更多实验者接过问题，把电流、磁场、感应和力的关系逐渐展开。未另分类的物理科学常出现在这样的交界处：它不完全属于旧的电学，也不完全属于磁学，而是在现象逼迫分类改变时出现。科学进展有时不是给旧抽屉再贴标签，而是承认抽屉本身需要重做。沿用权威解释或把现象当作孤立实验结果，仍有它的用处；但要让判断走得更远，就必须把实验装置、测量、条件控制和数学表达变成可学习的工作。名字可以晚一点出现；先被留下来的，是这些必须反复练习的实验装置、测量、条件控制和数学表达。这个人叫 Hans Christian Oersted，他发现电流的磁效应，推动电磁学作为统一研究领域的发展。今天许多新领域也这样出现：一个小现象先让旧分类不舒服，然后才慢慢逼出新的问题和新的语言。",
-    "knowledgePointZh": "未另分类的物理科学收纳跨越物质、能量、场、实验现象和学科边界的研究。",
-    "reflectionQuestionZh": "当一个小偏转让两个领域突然相遇，你会先修正实验，还是修正分类？"
-  },
-  "0541-mathematics": {
-    "titleZh": "从一点到一座几何世界",
-    "summaryZh": "一本从定义和公设开始的书，让数学成为可一步步证明的共同建筑。",
-    "sceneZh": "公元前 3 世纪的亚历山大，一个教师面对学生，把点、线、圆和角整理成一条严格道路。",
-    "storyBodyZh": "他没有从最华丽的图形讲起，而是从最小的东西开始：什么是点，什么是线，什么可以被假定，什么必须证明。一个命题接一个命题，像砖块一样搭起几何体系。重要的不只是结论，而是任何人都可以沿着理由回走，检查每一步是否成立。数学在这里显示出独特力量：它把直觉变成证明，把图形变成结构，把个人聪明变成可共享的推理秩序。麻烦在于，同一组数量一旦进入证明、结构或不确定性，就会提出更深的问题。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样让数量、结构和推理成为可检查的公共语言。这个人叫 Euclid，他编写《Elements》，成为几何学、证明传统和数学教育史上最重要的经典之一。今天学习证明仍有这种价值：它让人不只得到答案，也学会把相信建立在别人可以回走检查的理由上。这类起源常常不宏大：旧办法带不走的现场先留下来，符号、证明、数据收集、模型和误差判断才慢慢变成方法。",
-    "knowledgePointZh": "数学用数量、结构、空间、模式和证明澄清关系。",
-    "reflectionQuestionZh": "当一个结论必须一步步被证明，它会不会也训练你更诚实地相信？"
-  },
-  "0542-statistics": {
-    "titleZh": "他开始数街上的人",
-    "summaryZh": "一个仰望星空的人转身整理城市登记册，让统计学成为理解社会模式的工具。",
-    "sceneZh": "19 世纪初的布鲁塞尔，夜空常常不够清楚，一个年轻天文学家只能等云散开，再把星星位置记在纸上。",
-    "storyBodyZh": "天文观测总有误差。这个年轻人慢慢学会，不必把每个偏差都当成失败；很多偏差放在一起，反而会显出一种分布。后来，他把这种耐心从天空带回城市。出生、死亡、婚姻、身高、犯罪记录，这些原本散在登记册里的数字，被他一列一列整理出来。一个人的一生不能被表格解释，但很多人的记录放在一起，会露出某种社会形状。他提出“平均人”的想法，启发很大，也很危险：平均值能让混乱变得可读，却也可能压平真实差异。这不是旧办法完全失灵的时刻。把计算或数字当成给出答案的技巧，本来就能让人先行动；真正顶住它的，是同一组数量一旦进入证明、结构或不确定性，就会提出更深的问题。当这个卡点反复出现，新的问题变成了：怎样让数量、结构和推理成为可检查的公共语言。这个人叫 Adolphe Quetelet，他把统计方法引入社会现象研究，并留下后来影响 BMI 的 Quetelet Index 源头。",
-    "knowledgePointZh": "统计学研究数据收集、变化、不确定性、推断、偏差，以及大量个体记录背后的模式。",
-    "reflectionQuestionZh": "你看到一个平均数时，最想知道它帮你看见了什么，又遮住了什么？"
-  },
-  "0611-computer-use": {
-    "titleZh": "鼠标第一次指向屏幕",
-    "summaryZh": "一次公开演示让计算机使用从输入命令，转向人与屏幕、指针和协作工具的互动。",
-    "sceneZh": "1968 年旧金山，一个工程师坐在舞台控制台前，屏幕上出现文字、窗口、链接和一个会移动的光标。",
-    "storyBodyZh": "他关心的不是让机器替人炫技，而是怎样增强人的思考和协作能力。打字、指向、编辑、共享屏幕、远程协作、超文本链接，这些今天看似普通的动作，当时像是从未来提前出现。他把计算机使用理解为人和工具共同构成的工作环境：手怎样移动，眼睛怎样寻找，团队怎样共享文档，想法怎样被外化和修改。计算机使用从此不只是会不会操作机器，而是怎样让数字工具进入人的认知、沟通和日常工作。可是现场的压力在于，符号、噪声、结构和使用错误会在黑箱内部暴露问题。名字可以晚一点出现；先被留下来的，是这些必须反复练习的编码、结构、接口、权限、测试和恢复路径。这个人叫 Douglas Engelbart，他在 1968 年的 Mother of All Demos 中展示鼠标、窗口、超文本和协作计算等关键思想。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把编码、结构、接口、权限、测试和恢复路径一点点固定下来。",
-    "knowledgePointZh": "计算机使用关注基本数字工具、文件、账户、安全、界面和日常操作能力。",
-    "reflectionQuestionZh": "一个好工具是在替你思考，还是让你更容易看见并改写自己的思考？"
-  },
-  "0612-database-and-network-design-and-administration": {
-    "titleZh": "表格为什么应该彼此有关系",
-    "summaryZh": "一个数据库研究者把数据从杂乱文件中解放出来，让表、关系和查询成为可靠系统。",
-    "sceneZh": "20 世纪 60 年代末，一位 IBM 研究员看着企业数据系统，发现程序和数据像缠在一起的线团。",
-    "storyBodyZh": "当时许多数据系统依赖复杂文件结构，应用程序必须知道数据怎样存放，改一点结构就可能牵动一片代码。他提出用关系模型表示数据：把数据看作表，把关系和约束说清楚，再用更高层的语言查询，而不是让每个程序都迷失在存储细节里。数据库与网络设计及管理的核心由此变得清楚：多人共享信息时，结构、独立性、一致性和查询能力比临时保存更重要。如果只按旧路走，把机器当成能算、能存、能传的黑箱，事情看上去也能继续。可符号和系统故障没有那么顺从：符号、噪声、结构和使用错误会在黑箱内部暴露问题。于是下一步不能只是补一句解释，而要发展出编码、结构、接口、权限、测试和恢复路径。真正留下来的，是编码、结构、接口、权限、测试和恢复路径从个人经验变成可以传递的训练。这个人叫 Edgar F. Codd，他提出 relational model，奠定关系型数据库理论基础，深刻影响 SQL 和现代数据管理系统。今天每个共享表格、账号系统和应用后台都还在回应这个问题：数据怎样才能不靠记忆，而靠结构被多人信任。",
-    "knowledgePointZh": "数据库与网络设计及管理关注数据结构、连接、权限、可靠性、查询和维护。",
-    "reflectionQuestionZh": "当很多人必须同时信任同一份数据时，它应该靠记忆，还是靠结构？"
-  },
-  "0613-software-and-applications-development-and-analysis": {
-    "titleZh": "她看见机器不只会算数",
-    "summaryZh": "在一台尚未建成的机器旁，Ada Lovelace 看见了指令、符号和可执行想法的早期影子。",
-    "sceneZh": "1833 年的伦敦，客厅里有人低声交谈。桌上的纸页和茶杯旁，一台由齿轮、轴杆和金属片组成的机器吸引着来客。",
-    "storyBodyZh": "那个女孩才十七岁。她站在机器旁边，看着人们围过来，听他们谈论计算、速度和精确。那时的计算表常靠人一点点手算，出错并不稀奇。如果机器能替人算得更快，已经足够让很多人兴奋。可她停得久了一点。她想的不是这台机器能算多少，而是另一个问题：如果数字不只代表数量，也能代表音符、图案、关系和规则，那么机器处理的，真的只是数字吗？这个问题没有马上变成答案。几年后，她翻译一篇介绍 Analytical Engine 的文章。翻译本来只需要转述原文，她却把注释越写越长，试着说明机器怎样一步一步计算 Bernoulli numbers：先取什么数，再做什么运算，什么时候重复，什么时候停止。那些表格不像今天的代码，却已经很接近把人的意图拆成机器可以执行的步骤。可这一幕留下的细节提醒研究者，符号、噪声、结构和使用错误会在黑箱内部暴露问题。问题从这里换了重心：信息怎样被表示、组织、传输和执行，才可靠又可维护，而不是把异常当作例外丢开。很多年后，人们回头寻找计算机程序最早的影子，常会翻到那篇译文和后面的 Notes。署名处的名字，是 Ada Lovelace。",
-    "knowledgePointZh": "软件与应用开发及分析关心的不只是写代码，而是把需求、逻辑、符号、界面、测试和改进连成一套可靠过程，让机器能够执行人的想法。",
-    "reflectionQuestionZh": "当机器开始执行人的想法时，最难的部分是机器足够聪明，还是人能不能把自己的想法说清楚？"
-  },
-  "0619-information-and-communication-technologies-icts-not-elsewhere-classified": {
-    "titleZh": "钢琴卷纸和编译器",
-    "summaryZh": "一位海军数学家把程序语言从机器细节中拉近人类表达，也让 ICT 边界更宽。",
-    "sceneZh": "20 世纪中期，一位女性数学家在早期计算机旁工作，看到程序员被机器码和接线细节困住。",
-    "storyBodyZh": "她喜欢把抽象问题讲得可操作，也相信计算机不该只属于少数能背机器指令的人。她推动自动编程和编译器思想，让人可以用更接近英语的方式表达商业计算任务，再由机器翻译成可执行指令。许多人起初怀疑机器怎么可能理解这种语言，但这条路改变了软件生产和普通组织使用计算机的可能。未另分类的信息与通信技术常常容纳这种跨界发明：它既是语言设计，也是工具、教育、商业流程和计算文化。可是现场的压力在于，符号、噪声、结构和使用错误会在黑箱内部暴露问题。这不是替未另分类的信息与通信技术寻找漂亮起源，而是看见编码、结构、接口、权限、测试和恢复路径怎样先把问题托住。这个人叫 Grace Hopper，她推动早期编译器和 COBOL 发展，成为现代编程语言和计算普及史上的关键人物。今天的低代码工具和 AI 编程仍在延续这条线：技术入口变低以后，更重要的是让更多人清楚表达、检查和负责。",
-    "knowledgePointZh": "未另分类的信息技术收纳那些不适合标准软件、网络或使用标签的数字实践和工具创新。",
-    "reflectionQuestionZh": "当工具语言更接近人的语言，谁会第一次被允许进入技术世界？"
-  },
-  "0711-chemical-engineering-and-processes": {
-    "titleZh": "烧杯放大以后",
-    "summaryZh": "一只小烧杯里的成功，到了生产罐里会变成传热、搅拌、控制和安全问题。",
-    "sceneZh": "实验室里，一种清洁剂配方在小烧杯中表现很好；生产主管却追问它放大到一千升后是否仍然稳定。",
-    "storyBodyZh": "实验室里，一种清洁剂配方在小烧杯中表现很好。颜色稳定，气味可接受，反应也很快。研发人员把样品交给工厂后，生产主管只问了一句：“放大到一千升，还会这样吗？”\n\n在实验室里成功，很容易让人觉得问题已经解决。比例清楚，步骤写好，反应能发生，产品效果也不错。小烧杯里的结果看起来很可靠，像是只要把原料按比例放大，就能进入生产。\n\n可工厂里的罐体不是一只大号烧杯。搅拌速度不同，温度散得更慢，原料加入顺序会影响局部浓度，反应放热也可能在大体积中累积。小烧杯里几秒钟消失的泡沫，放大后可能变成溢出风险；实验室里手动滴加的步骤，到了生产线需要泵、阀门和监测仪表配合。\n\n生产主管让团队先做中试。他们把配方放到较小的试验罐中，记录温度变化、搅拌时间、泡沫高度和杂质比例。第一次测试时，温度上升比预期快，操作员不得不暂停加料。配方没有错，但工艺路线还不够稳。\n\n化学工程与工艺关心的，正是从“反应能发生”到“生产能持续”的转变。它要处理反应器、传热、传质、流体、分离、控制、安全、成本和废料。化学变化一旦走出烧杯，就进入了设备、人员和风险共同存在的现场。\n\n几轮调整后，团队改变了加料顺序，并增加冷却控制。清洁剂终于能稳定生产。研发人员再次看那只小烧杯时，知道真正的难题不是让反应发生一次，而是让它在更大的世界里安全地重复发生。",
-    "knowledgePointZh": "化学工程与工艺把实验室反应转化为安全、可控、可规模化、可维护的生产流程，关注反应器、传热传质、流体、分离、控制、安全、成本和废料等条件。",
-    "reflectionQuestionZh": "当一个方案在小规模里成功时，你会不会继续追问：放大以后，哪些条件会变成新的风险？"
-  },
-  "0712-environmental-protection-technology": {
-    "titleZh": "水龙头里的安全",
-    "summaryZh": "一位公共卫生工程师让净水技术成为城市看不见却最重要的保护系统之一。",
-    "sceneZh": "20 世纪初的美国城市里，自来水进入家庭，但病菌、管网和消毒剂剂量仍然让人不安。",
-    "storyBodyZh": "他关心的不只是把水变清，而是怎样让数十万人每天喝到足够安全的水。氯能杀菌，但剂量、接触时间、味道、管网污染和公众信任都要被精确处理。环境保护技术在这里不是某个漂亮设备，而是一整套工程判断：检测、消毒、输送、监测和维护，必须长期稳定地工作。人们最好永远不要想起它，因为想起它时往往已经出事。可是现场的压力在于，材料、负载、流程和长期使用会把弱点推回现场。真正留下来的，是材料测试、流程控制、结构计算和安全边界从个人经验变成可以传递的训练。这个人叫 Abel Wolman，他与 Linn Enslow 发展供水氯化剂量控制方法，推动现代城市饮用水消毒和公共卫生工程。今天任何保护环境的技术都必须经过这一步：装置不是答案本身，长期运行、维护和责任才决定它是否真的保护了人。",
-    "knowledgePointZh": "环境保护技术用工程方法减少污染、处理废物、保护水气土壤和公共健康。",
-    "reflectionQuestionZh": "一个环保技术如果每天都成功，你是不是反而最容易忘记它存在？"
-  },
-  "0713-electricity-and-energy": {
-    "titleZh": "交流电的长路",
-    "summaryZh": "一个总在脑中旋转机器的人，让电力从局部照明走向远距离能源系统。",
-    "sceneZh": "19 世纪末，一个移民工程师在美国工厂和实验室之间工作，脑子里不断想着旋转磁场。",
-    "storyBodyZh": "直流系统可以点亮城市的一部分，但远距离输电困难。这个年轻人想象电流可以周期性改变方向，利用变压器升压降压，让电能走得更远。他的交流电机和多相系统并不是只解决一个机器问题，而是改变了发电、输电、工业动力和家庭用电的基础结构。电力与能源从这里显出系统性：能源不是插座里的瞬间便利，而是一张由发电机、线路、标准、商业竞争和公共安全组成的网络。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。这个人叫 Nikola Tesla，他的交流电机和多相交流系统专利对现代交流电力系统发展产生关键影响。今天能源系统的争论仍类似：发电方式、输送距离、标准、成本和安全，都会决定一种技术能不能进入普通生活。",
-    "knowledgePointZh": "电力与能源关注发电、输配、效率、储能、安全和能源系统如何支撑生活与产业。",
-    "reflectionQuestionZh": "你按下开关时，背后是哪一整套能源系统在替你工作？"
-  },
-  "0714-electronics-and-automation": {
-    "titleZh": "蒸汽机自己调节速度",
-    "summaryZh": "一个旋转的调速器让自动化第一次显得像机器在听自己的状态。",
-    "sceneZh": "18 世纪的工坊里，蒸汽机一会儿太快一会儿太慢，工人必须不断照看速度。",
-    "storyBodyZh": "他改进蒸汽机时面对的不只是功率问题，还有稳定性。机器如果负载变化就失控，工厂就无法可靠运转。离心调速器通过旋转球感知速度变化，速度快时收小蒸汽，速度慢时放开，让机器根据自身状态自动修正。这个装置看似机械，却包含自动化的核心思想：传感、反馈、调节和控制。电子与自动化后来进入电路、传感器和软件，但这个早期机械反馈已经说明，机器可以不只是执行命令，也可以持续比较目标和现实。可是现场的压力在于，材料、负载、流程和长期使用会把弱点推回现场。当材料测试、流程控制、结构计算和安全边界被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 James Watt，他改进蒸汽机并使用离心调速器，使反馈控制成为自动化和控制工程史上的经典例子。今天从恒温器到自动驾驶都还在处理同一个核心：系统必须看见自己的偏差，才可能在危险前修正动作。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把材料测试、流程控制、结构计算和安全边界一点点固定下来。",
-    "knowledgePointZh": "电子与自动化研究电路、控制、传感、机器和自动系统如何感知并行动。",
-    "reflectionQuestionZh": "当机器能根据自己的误差调整行为，它和普通工具之间的界线在哪里？"
-  },
-  "0715-mechanics-and-metal-trades": {
-    "titleZh": "螺丝终于可以彼此替换",
-    "summaryZh": "一台车床让机械与金属加工从手工配合走向标准化和可重复制造。",
-    "sceneZh": "18 世纪末的伦敦工坊里，一个年轻机械师反复改进车床，想让螺纹不再只靠师傅手感。",
-    "storyBodyZh": "在精密制造之前，零件常常要手工修配，坏了也难以替换。螺丝看起来小，却决定机器能不能被拆装、维修和复制。他改进螺纹车床，让螺纹加工更准确、更一致，也推动机床成为制造其他机器的“母机器”。机械与金属行业在这里显出基础性：现代工业不只是发明一台机器，而是让零件、标准、工具和工人的技能形成可重复的制造体系。可这一幕留下的细节提醒研究者，材料、负载、流程和长期使用会把弱点推回现场。问题从这里换了重心：怎样让设计在规模、风险和维护中仍然站得住，而不是把异常当作例外丢开。机械与金属行业后来会有课程和机构；在这个现场里，它先贴着材料测试、流程控制、结构计算和安全边界展开。这个人叫 Henry Maudslay，他发展精密螺纹车床和机床技术，被视为英国机床工业和精密机械制造的重要奠基人物之一。今天制造业里的标准件也在提醒人：效率不只来自机器更快，还来自许多部件能被可靠地替换、检查和协作。",
-    "knowledgePointZh": "机械与金属行业关注结构、部件、加工、维修、精度和力的传递。",
-    "reflectionQuestionZh": "一个小螺丝如果不能被可靠复制，整台机器会失去什么？"
-  },
-  "0716-motor-vehicles-ships-and-aircraft": {
-    "titleZh": "沙丘上的十二秒",
-    "summaryZh": "一次短暂飞行让交通工具设计同时面对升力、控制、发动机和人的判断。",
-    "sceneZh": "1903 年北卡罗来纳的沙丘上，两位自行车店出身的兄弟把木架、布翼和发动机推向海风。",
-    "storyBodyZh": "他们并不是只把发动机装到翅膀上。此前他们做风洞实验，测试翼型，研究滑翔，尤其盯住一个关键问题：飞起来之后怎样控制？许多失败让他们明白，航空器不是单一部件的胜利，而是升力、推力、结构重量、操纵面和飞行员身体判断的协调。机动车、船舶与航空器领域正是这样：移动系统必须把速度、稳定、安全、材料和环境放在一起。那十二秒并不长，却证明有动力、可控、持续的重于空气飞行成为可能。麻烦在于，材料、负载、流程和长期使用会把弱点推回现场。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样让设计在规模、风险和维护中仍然站得住。一门领域不是先从名称开始，而是先从材料测试、流程控制、结构计算和安全边界这些可练习的动作开始。这个人叫 Orville Wright 和 Wilbur Wright，他们完成 1903 年 Kitty Hawk 飞行，成为航空器发展史上的关键人物。",
-    "knowledgePointZh": "机动车、船舶与航空器关注交通工具设计、维护、运行、安全和环境约束。",
-    "reflectionQuestionZh": "移动得更快之前，一个交通工具必须先学会怎样不失控？"
-  },
-  "0719-engineering-and-engineering-trades-not-elsewhere-classified": {
-    "titleZh": "战斗机咳嗽了一下",
-    "summaryZh": "一个小金属垫圈说明，未另分类的工程实践常在现场故障和快速修复之间出现。",
-    "sceneZh": "1940 年代的第二次世界大战期间，一位女工程师听飞行员抱怨：战斗机俯冲后发动机会短暂失力。",
-    "storyBodyZh": "问题并不适合被慢慢放进整齐研发流程。飞行员在空中需要立即可靠的动力，发动机在负 G 机动中供油异常，完整改造又来不及。她研究化油器问题，设计一个简单节流装置，让燃油流量在关键时刻不至于失控。这个小零件不是华丽发明，却让飞机在等待更彻底方案前获得实用改善。未另分类的工程行业常常这样：现场约束、临时修复、安全验证和制造可行性一起逼迫工程师作出足够可靠的判断。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。当材料测试、流程控制、结构计算和安全边界被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Beatrice Shilling，她设计的 R.A.E. restrictor 帮助缓解 Merlin 发动机负 G 供油问题，成为航空工程现场解决方案的经典故事。",
-    "knowledgePointZh": "未另分类的工程行业处理不适合标准工程分支、但需要安全、制造和现场判断的技术实践。",
-    "reflectionQuestionZh": "临时修复什么时候是冒险，什么时候是经过约束检验后的工程智慧？"
-  },
-  "0721-food-processing": {
-    "titleZh": "瓶子里的汤为什么没有坏",
-    "summaryZh": "一场为军队供食的竞赛，让食品加工从厨房经验走向保存、密封和时间管理。",
-    "sceneZh": "19 世纪初的法国，一个糖果师把食物装进玻璃瓶，加热、密封，再观察它能保存多久。",
-    "storyBodyZh": "他并不知道后来微生物理论会怎样解释这一切。他面对的是更实际的问题：军队和远航需要食物不那么快腐坏。经过多年试验，他发现把食物放入瓶中、加热、密封，可以显著延长保存时间。食品加工在这里出现为一门关于时间和安全的技术：味道只是开始，真正困难的是微生物、温度、容器、密封、运输和可重复流程。可这一幕留下的细节提醒研究者，材料、负载、流程和长期使用会把弱点推回现场。问题从这里换了重心：怎样让设计在规模、风险和维护中仍然站得住，而不是把异常当作例外丢开。这个人叫 Nicolas Appert，他发明早期罐藏保存方法，并于 1810 年出版相关实践，成为食品保存和加工史上的重要先驱。今天食品加工仍在这条线上工作：好吃只是开始，安全、时间、运输、标签和信任决定食物能不能离开厨房。",
-    "knowledgePointZh": "食品加工把原料变成安全、稳定、可运输、可储存和可销售的食品。",
-    "reflectionQuestionZh": "一份好吃的食物，要怎样才能经得起时间、距离和看不见的生命？"
-  },
-  "0722-materials-glass-paper-plastic-and-wood": {
-    "titleZh": "橡胶不再怕热和冷",
-    "summaryZh": "一次偶然加热让材料从黏糊糊的麻烦变成现代工业可依赖的部件。",
-    "sceneZh": "19 世纪美国，一个负债累累的发明者反复摆弄天然橡胶，冬天变硬，夏天发黏的问题总解决不了。",
-    "storyBodyZh": "他不是在整洁实验室里顺利推进，而是在失败、贫困和执念里不断尝试。天然橡胶有弹性，却太受温度影响，难以成为可靠工业材料。后来橡胶与硫在加热条件下发生变化，材料变得更稳定、更耐用、更适合制造。材料领域的关键就在这里：玻璃、纸、塑料、木材或橡胶都不是只有外观，它们有结构、性能、加工条件和使用环境。一个材料被真正理解，意味着人知道它在压力、温度、时间和反复使用中会怎样。可这一幕留下的细节提醒研究者，材料、负载、流程和长期使用会把弱点推回现场。问题从这里换了重心：怎样让设计在规模、风险和维护中仍然站得住，而不是把异常当作例外丢开。在名称固定以前，材料测试、流程控制、结构计算和安全边界已经先把现场和判断连接起来。这个人叫 Charles Goodyear，他发现橡胶硫化工艺，使橡胶成为现代工业中更稳定可用的材料。今天材料选择也常这样改变生活：一个配方调整，可能让轮胎、电线、鞋底和医疗用品都获得新的可靠性。",
-    "knowledgePointZh": "材料学习关注玻璃、纸、塑料、木材等材料的性质、加工、性能和用途。",
-    "reflectionQuestionZh": "你选择材料时，是在选择它看起来怎样，还是选择它在压力下会怎样？"
-  },
-  "0723-textiles-clothes-footwear-and-leather": {
-    "titleZh": "织机读懂了打孔卡",
-    "summaryZh": "一台会按卡片织花的机器，让纺织品、自动化和后来计算思想意外相遇。",
-    "sceneZh": "19 世纪初的里昂，一个织工之子看见复杂花纹需要大量人力，也让纺织生产昂贵缓慢。",
-    "storyBodyZh": "他改进织机，让打孔卡片控制经线抬起的顺序。卡片上的孔不是花纹本身，却像一套可执行指令，告诉机器何时让哪根线通过。纺织品领域在这里不只是衣料和皮革，也包括纤维结构、图案、机器、劳动和可重复生产。这个发明带来效率，也引发工人对失业的恐惧；技术进步从来不只是机器更聪明，也会改变人的工作。可是现场的压力在于，材料、负载、流程和长期使用会把弱点推回现场。名字可以晚一点出现；先被留下来的，是这些必须反复练习的材料测试、流程控制、结构计算和安全边界。这个人叫 Joseph Marie Jacquard，他推广 Jacquard loom，使复杂织物图案可通过打孔卡控制，也影响了自动化和早期计算思想。今天编程和自动化仍能听见这台织机的回声：当图案被写成指令，手工、机器和符号之间的边界就变了。",
-    "knowledgePointZh": "纺织品、服装、鞋类与皮革关注纤维、结构、舒适、安全、工艺和贴近身体的材料。",
-    "reflectionQuestionZh": "当图案变成机器可以读取的指令，工艺和计算之间的距离还剩多远？"
-  },
-  "0724-mining-and-extraction": {
-    "titleZh": "矿井里的木梯和空气",
-    "summaryZh": "一本关于矿业的书让采矿从经验秘方，走向可记录的技术、风险和环境知识。",
-    "sceneZh": "16 世纪中欧矿区，一个医生兼学者下到矿井附近，观察矿工怎样通风、排水、支护和冶炼。",
-    "storyBodyZh": "他看到的不是地下宝藏的浪漫，而是危险劳动：塌方、毒气、积水、矿石分类、冶炼烟尘和工具磨损。于是他把采矿、地质、机械、冶金和劳动现场写成系统知识，配上图像，让经验可以被传递和讨论。采矿与开采的核心由此显现：资源从地下进入社会，必须经过发现、提取、安全、环境和供应链，每一步都有代价。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。当材料测试、流程控制、结构计算和安全边界被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Georgius Agricola，他的《De Re Metallica》系统记录 16 世纪矿业与冶金实践，成为采矿工程史上的经典著作。今天谈资源开采，仍不能只问能不能挖出来；还要问人在地下怎样呼吸，土地怎样恢复，风险由谁承担。",
-    "knowledgePointZh": "采矿与开采关注资源发现、提取、安全、环境影响和供应链。",
-    "reflectionQuestionZh": "一个产品看起来很干净时，它的地下故事被谁承担了？"
-  },
-  "0729-manufacturing-and-processing-not-elsewhere-classified": {
-    "titleZh": "工厂为什么要停下来",
-    "summaryZh": "一种看似反直觉的生产方式，让制造从盲目多做转向持续发现浪费。",
-    "sceneZh": "20 世纪日本汽车工厂里，一个工程师看到库存堆得很高，却并不代表流程健康。",
-    "storyBodyZh": "传统直觉会觉得机器不停才有效率，库存多才安全。他反过来观察：过量生产会掩盖问题，等待会吞掉时间，搬运和返工会消耗人。生产线如果出现异常，应该让问题显露出来，而不是继续把缺陷向后推。他推动 just-in-time、看板和持续改进等实践，让制造不只是加工物品，也是在设计学习系统。未另分类的制造与加工常常处理这种跨流程、管理、现场技能和质量的混合知识。把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。未另分类的制造与加工的名字还可以推迟，材料测试、流程控制、结构计算和安全边界却已经在现场要求一种新训练。这个人叫 Taiichi Ohno，他发展 Toyota Production System，长期影响精益生产和现代制造管理。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把材料测试、流程控制、结构计算和安全边界一点点固定下来。",
-    "knowledgePointZh": "未另分类的制造与加工收纳那些跨越生产流程、质量、现场管理和混合加工实践的问题。",
-    "reflectionQuestionZh": "一个工厂什么时候应该追求不停运转，什么时候应该停下来让问题出现？"
-  },
-  "0731-architecture-and-town-planning": {
-    "titleZh": "她站在街角看人行道",
-    "summaryZh": "一个普通街区观察者让城市规划重新看见人行道、邻里和日常安全。",
-    "sceneZh": "20 世纪中期的纽约，一个写作者推着婴儿车走在街上，注意到孩子、店主、邻居和陌生人怎样共享人行道。",
-    "storyBodyZh": "当时许多规划者迷恋大尺度清除、分区和高速道路，觉得旧街区混乱低效。她却从日常生活里看到另一套秩序：小店的眼睛、短街区的穿行、混合用途带来的活力、不同时间出现的人群，以及邻里之间不必认识也能互相照看的关系。建筑与城镇规划在这里从鸟瞰图回到人的身体高度。城市不是只给汽车、模型和开发指标看的，它首先是人们不断相遇、停留、绕行、照看和争论的生活场。如果只按旧路走，把图纸、配方或一次成功当成完成，事情看上去也能继续。可材料、负载和流程没有那么顺从：材料、负载、流程和长期使用会把弱点推回现场。于是下一步不能只是补一句解释，而要发展出材料测试、流程控制、结构计算和安全边界。这个人叫 Jane Jacobs，她的《The Death and Life of Great American Cities》改变了现代城市规划对街道、社区和混合用途的理解。后来人看见的是领域名称，当时真正被迫形成的，是围绕材料测试、流程控制、结构计算和安全边界的一套工作。",
-    "knowledgePointZh": "建筑与城镇规划关注空间、动线、公共生活、安全、使用者和城市长期发展。",
-    "reflectionQuestionZh": "你熟悉的一条街，是被规划图救活的，还是被每天使用它的人救活的？"
-  },
-  "0732-building-and-civil-engineering": {
-    "titleZh": "桥上的钢缆和病床旁的笔记",
-    "summaryZh": "一座大桥的建成说明，土木工程不仅是结构计算，也是长期组织和现场责任。",
-    "sceneZh": "19 世纪纽约，一座跨越 East River 的大桥开工后，主工程师病倒，工地却不能停。",
-    "storyBodyZh": "她原本不是官方意义上的工程师，却在丈夫因减压病无法到现场后，承担起传递计算、材料、索缆、沉箱和施工指令的工作。她学习技术细节，和工人、政界、工程团队沟通，也在质疑声中维护项目连续性。建筑与土木工程在这里不是单个天才的图纸，而是结构力学、材料、施工风险、公共资金、疾病和沟通共同组成的长期承诺。桥真正跨越的不只是河流，还有设计和现实之间的漫长距离。这不是旧办法完全失灵的时刻。把图纸、配方或一次成功当成完成，本来就能让人先行动；真正顶住它的，是材料、负载、流程和长期使用会把弱点推回现场。当这个卡点反复出现，新的问题变成了：怎样让设计在规模、风险和维护中仍然站得住。这个人叫 Emily Warren Roebling，她在 Brooklyn Bridge 建设后期发挥关键工程协调作用，成为土木工程史上重要女性人物。这类起源常常不宏大：旧办法带不走的现场先留下来，材料测试、流程控制、结构计算和安全边界才慢慢变成方法。",
-    "knowledgePointZh": "建筑与土木工程把结构、道路、桥梁、水、电和公共安全落到实体系统。",
-    "reflectionQuestionZh": "一座桥建成时，除了钢和石头，还有谁的学习、照护和坚持被埋进结构里？"
-  },
-  "0811-crop-and-livestock-production": {
-    "titleZh": "花生不是穷作物",
-    "summaryZh": "一个从艰难童年走出的植物学家，让作物生产和土地恢复成为同一个问题。",
-    "sceneZh": "20 世纪初的美国南方，一个农业教师走进被棉花耗累的土地，手里拿着花生、甘薯和土样。",
-    "storyBodyZh": "他知道农民不是不努力，而是被单一作物、贫困和土壤退化困住。棉花长期消耗土地，也让农户收入脆弱。他研究豆科作物、轮作、土壤改良和可替代用途，向农民推广花生、甘薯等作物的种植和加工方法。作物与畜牧生产在这里不只是产量竞赛，而是土地、营养、市场、家庭收入和生态恢复的关系。可是现场的压力在于，土壤、水、疾病、行为和季节会把后果带到下一轮。当田间试验、育种、生态照料和长期管理被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 George Washington Carver，他在 Tuskegee Institute 推动作物轮作、土壤改良和花生等作物用途研究，成为美国农业教育史上的重要人物。今天作物与畜牧生产也需要这种眼光：一种作物不是单独存在，它和土壤、市场、营养、病虫害和农民收入一起变化。",
-    "knowledgePointZh": "作物与畜牧生产关注种植、饲养、产量、健康、土壤和食物系统。",
-    "reflectionQuestionZh": "一种被看低的作物，什么时候可能成为土地和家庭重新恢复的入口？"
-  },
-  "0812-horticulture": {
-    "titleZh": "一棵李树开出太多可能",
-    "summaryZh": "一个植物育种者让园艺从照看花园，走向选择、杂交和长期耐心。",
-    "sceneZh": "19 世纪末的加州，一个年轻人从东部来到气候温和的土地上，开始试验果树、花卉和种子。",
-    "storyBodyZh": "他没有把园艺只当作把植物养漂亮。每一株植物都有差异，哪一株更甜，哪一株更耐寒，哪一株花色更特别，哪一株适合当地市场，都需要被观察、选择和繁殖。他培育李子、马铃薯、仙人掌和许多观赏植物，也留下关于育种商业化和科学严谨性的争议。园艺在这里显出双重性：它既是审美和照料，也是遗传、环境、市场和时间共同塑造植物的实践。把土地、作物或动物先看成产出问题，仍有它的用处；但要让判断走得更远，就必须把田间试验、育种、生态照料和长期管理变成可学习的工作。这个人叫 Luther Burbank，他以大量植物育种和园艺新品种闻名，影响了美国园艺和植物改良文化。今天园艺仍保留这种耐心：修剪、嫁接和选育不是控制生命，而是在许多季节里和植物条件慢慢协商。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把田间试验、育种、生态照料和长期管理一点点固定下来。",
-    "knowledgePointZh": "园艺关注观赏植物、果蔬、土壤、修剪、繁殖、光照和空间照料。",
-    "reflectionQuestionZh": "当你照料一株植物时，你是在让它服从，还是在和它的可能性合作？"
-  },
-  "0819-agriculture-not-elsewhere-classified": {
-    "titleZh": "一根稻草也可以是一种哲学",
-    "summaryZh": "一个农民的长期试验让农业边界出现自然农法、生态和生活方式的混合问题。",
-    "sceneZh": "20 世纪日本乡间，一个受过植物病理学训练的人回到家乡田地，开始怀疑现代农业是否越做越复杂。",
-    "storyBodyZh": "他并不是因为不懂科学才反对过度干预，恰恰相反，他见过病理学和农业技术如何解释植物，也看到农民越来越依赖耕作、化肥、农药和劳力。他在稻田里试验不耕作、覆盖稻草、混播、减少外部投入，让田地成为一个更自我调节的生态系统。这个方法并不适合被简单神化，也需要根据地区和产量现实审慎判断；但它说明未另分类的农业经常处在科学、哲学、生态和生活实践之间。可这一幕留下的细节提醒研究者，土壤、水、疾病、行为和季节会把后果带到下一轮。问题从这里换了重心：哪些生命条件会让结果持续变好或变坏，而不是把异常当作例外丢开。后来能被学习的，正是这些田间试验、育种、生态照料和长期管理：它们让下一次相似现场不必重新摸索。这个人叫 Masanobu Fukuoka，他提出 natural farming，并通过《The One-Straw Revolution》影响了生态农业和永续农业思潮。",
-    "knowledgePointZh": "未另分类的农业收纳那些跨越种植、生态、社区、哲学和土地实践的农业形式。",
-    "reflectionQuestionZh": "少做一件事，什么时候不是偷懒，而是对生态过程的信任？"
-  },
-  "0911-dental-studies": {
-    "titleZh": "牙医不该只是拔牙的人",
-    "summaryZh": "一本牙科书让口腔治疗从手艺和止痛，走向结构、预防和专业训练。",
-    "sceneZh": "18 世纪巴黎，一个外科医生面对牙痛、假牙、蛀牙和口腔感染，发现街头拔牙远远不够。",
-    "storyBodyZh": "当时很多牙病由理发师、游医或拔牙匠处理，常常只在疼痛无法忍受时才动手。他把牙齿解剖、龋齿原因、牙周问题、矫治、假牙和器械整理成系统知识，强调保存牙齿、清洁和专业判断。牙科研究在这里变得清楚：口腔不是身体之外的小零件，牙齿结构、疼痛、营养、感染、说话和人的尊严都连在一起。可是现场的压力在于，身体变化常和环境、制度、照护关系及尊严缠在一起。后来能被学习的，正是这些观察、诊断、照护记录、制度支持和伦理判断：它们让下一次相似现场不必重新摸索。这个人叫 Pierre Fauchard，他出版《Le Chirurgien Dentiste》，被广泛称为现代牙科学的重要奠基人之一。今天牙科仍在这个转弯处工作：治疗一颗牙，也要处理疼痛、恐惧、卫生习惯和一个人敢不敢再次走进诊室。",
-    "knowledgePointZh": "牙科研究关注口腔健康、牙齿结构、预防、治疗、修复和患者体验。",
-    "reflectionQuestionZh": "如果牙齿影响吃饭、说话和自尊，为什么口腔健康不该被当成小事？"
-  },
-  "0912-medicine": {
-    "titleZh": "产房里的洗手盆",
-    "summaryZh": "一个医生发现洗手能救命，却也见识到证据进入制度有多困难。",
-    "sceneZh": "19 世纪维也纳的产科病房里，一个年轻医生发现两个产房的产妇死亡率差得让人无法安心。",
-    "storyBodyZh": "他没有先把死亡归咎于命运，而是比较班次、人员、流程和尸检接触。他注意到医生和学生从解剖室进入产房，可能把看不见的致命物质带到产妇身边。要求用含氯石灰洗手后，死亡率显著下降。可是这个发现并没有立刻得到欢迎，因为它暗示医生自己的手可能造成伤害。医学在这里显出痛苦的一面：正确证据如果挑战职业自尊和制度习惯，仍然会被抵抗。麻烦在于，身体变化常和环境、制度、照护关系及尊严缠在一起。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是怎样在风险、证据和人的生活之间作出可靠照护。这不是替医学寻找漂亮起源，而是看见观察、诊断、照护记录、制度支持和伦理判断怎样先把问题托住。这个人叫 Ignaz Semmelweis，他提出产科洗手消毒可降低产褥热死亡率，成为感染控制和医学证据史上的关键人物。今天医学安全文化常回到这只洗手盆前：一个简单动作背后，是证据、权威、习惯和承认错误的困难。后来人看见的是领域名称，当时真正被迫形成的，是围绕观察、诊断、照护记录、制度支持和伦理判断的一套工作。",
-    "knowledgePointZh": "医学研究疾病、诊断、治疗、预防、人体系统和临床证据如何保护生命。",
-    "reflectionQuestionZh": "当证据说明问题可能出在自己手上，你还能不能接受它？"
-  },
-  "0913-nursing-and-midwifery": {
-    "titleZh": "夜里那盏灯",
-    "summaryZh": "一盏夜巡的灯背后，是护理把善意变成专业训练、卫生制度和持续观察的开始。",
-    "sceneZh": "1850 年代的军医院里，走廊潮湿、床位拥挤，伤兵身上的问题不只来自战场。",
-    "storyBodyZh": "刚到医院时，她看到的不是传说里的英雄场面，而是一连串很具体的麻烦：脏床单、通风差、排水糟糕、物资混乱，病人有时不是死于伤口，而是死于伤口之后的环境。她带人清洁、整理供应、改善卫生，也一遍遍记录死亡原因和病房情况。夜里，她提着灯巡视，不只是为了安慰伤兵，更是在看呼吸、疼痛、发热和恐惧有没有改变。真正重要的不是浪漫的光，而是她把照护变成一种有纪律的专业：观察、记录、卫生、训练和制度。可这一幕留下的细节提醒研究者，身体变化常和环境、制度、照护关系及尊严缠在一起。问题从这里换了重心：怎样在风险、证据和人的生活之间作出可靠照护，而不是把异常当作例外丢开。后来的课程会给它命名，当时更急迫的是把观察、诊断、照护记录、制度支持和伦理判断变成可重复的做法。这个人叫 Florence Nightingale，她建立现代护理训练的重要传统，并用统计和公共卫生改革改变了护理与助产的专业地位。后来人看见的是领域名称，当时真正被迫形成的，是围绕观察、诊断、照护记录、制度支持和伦理判断的一套工作。",
-    "knowledgePointZh": "护理与助产关注持续观察、照护、卫生、安全、生命过程和人在脆弱时刻的尊严。",
-    "reflectionQuestionZh": "真正的照护，是等医生下指令，还是在细节恶化之前先看见变化？"
-  },
-  "0914-medical-diagnostic-and-treatment-technology": {
-    "titleZh": "手骨第一次出现在照片里",
-    "summaryZh": "一次意外荧光让医学诊断进入影像时代，也带来技术安全的新责任。",
-    "sceneZh": "1895 年的德国实验室里，一个物理学家研究阴极射线管，忽然发现远处涂层在黑暗中发光。",
-    "storyBodyZh": "他没有把异常当成干扰丢掉，而是反复遮挡、测试、记录，发现一种未知射线能穿过纸板和软组织，却被骨头和金属阻挡。他拍下妻子的手，骨骼和戒指清晰显现。原来的诊断并不是无用：问诊、触诊和经验判断已经能帮助医生处理许多疾病。可这张手骨照片把问题推到另一层：身体内部能不能通过设备、成像、操作质量和防护规则变成可检查的证据？于是医学诊断与治疗技术不只是机器进入医院，而是让设备、图像、剂量、安全和解释一起接受训练。拍片者要摆位，医生要读片，医院要保存影像，病人也要承担辐射风险；任何一环粗糙，照片都可能从证据变成误导。技术也带来新风险，早期 X 光使用曾因不了解辐射伤害而造成损害。这个领域因此一直同时包含设备、图像、质量控制和安全边界。这个人叫 Wilhelm Conrad Rontgen，他发现 X-rays，并于 1901 年获得首届诺贝尔物理学奖。今天每一次影像检查都还在问同样的问题：看见更多并不自动等于更安全，技术必须和防护、解释、质量一起前进。这让医学技术从一次惊奇的照片，转向一整套可培训、可校准、可追责的临床工作。",
-    "knowledgePointZh": "医学诊断与治疗技术关注设备、检测、影像、治疗支持、质量控制和安全使用。",
-    "reflectionQuestionZh": "当技术让身体变得可见，它同时让哪些风险也必须被看见？"
-  },
-  "0915-therapy-and-rehabilitation": {
-    "titleZh": "病人不是出院就结束了",
-    "summaryZh": "一位医生把康复从附属护理，变成帮助人重新生活的现代医学领域。",
-    "sceneZh": "第二次世界大战后，许多伤兵和病人活了下来，却发现活下来不等于能重新走路、工作和生活。",
-    "storyBodyZh": "他看到医院常把治疗重点放在疾病消失或伤口愈合，却没有充分回答之后怎么办。一个人可能需要重新训练肌肉、学习使用辅助器具、处理疼痛、调整家庭和工作环境，也要重新获得尊严。他推动 rehabilitation medicine，把物理治疗、作业治疗、心理支持、社会安排和长期目标放在同一个计划里。治疗与康复因此不只是把人恢复到过去，而是在新的身体条件下重新组织生活能力。可这一幕留下的细节提醒研究者，身体变化常和环境、制度、照护关系及尊严缠在一起。问题从这里换了重心：怎样在风险、证据和人的生活之间作出可靠照护，而不是把异常当作例外丢开。当观察、诊断、照护记录、制度支持和伦理判断被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Howard A. Rusk，他推动现代康复医学发展，被称为康复医学的重要奠基人物之一。今天康复计划也从这里开始：病历上的好转只有走进楼梯、厨房、公交和工作岗位时，才真正接受生活的检验。",
-    "knowledgePointZh": "治疗与康复关注功能恢复、训练、适应、疼痛管理、辅助技术和长期支持。",
-    "reflectionQuestionZh": "恢复是不是回到过去，还是学会带着新的身体条件继续生活？"
-  },
-  "0916-pharmacy": {
-    "titleZh": "药房不只是卖药的柜台",
-    "summaryZh": "一个药剂师把药房工作推向教育、标准和专业责任。",
-    "sceneZh": "19 世纪费城，一个年轻药剂师在柜台后调配药物，也看见药品质量、剂量和训练并不总可靠。",
-    "storyBodyZh": "药物能救人，也能伤人。粉末、酊剂、植物提取物和处方如果没有标准，病人很难知道自己真正拿到什么。他不满足于药剂师只靠师徒经验和商业买卖，而是推动药学教育、专业组织、药典标准和伦理责任。药学在这里从“把药交出去”变成一门保护药物效果和安全的专业：成分、剂量、相互作用、储存、说明和患者理解都重要。可是现场的压力在于，身体变化常和环境、制度、照护关系及尊严缠在一起。这个人叫 William Procter Jr.，他推动美国药学教育和专业化，被称为美国药学的重要奠基人物之一。今天药师的角色仍在扩大：不是把盒子递出去就结束，而是帮助药物在真实生活里被正确、安全地使用。",
-    "knowledgePointZh": "药学研究药物作用、剂量、安全、相互作用、质量标准和用药指导。",
-    "reflectionQuestionZh": "一粒药真正进入生活时，需要哪些知识保护它不被误用？"
-  },
-  "0917-traditional-and-complementary-medicine-and-therapy": {
-    "titleZh": "药草书里的长期修订",
-    "summaryZh": "一位明代医者花几十年整理本草，让传统医学成为经验、文本和安全边界的持续对话。",
-    "sceneZh": "16 世纪中国，一个医生走访山野、市场和旧书，发现许多药名、产地和用法彼此混乱。",
-    "storyBodyZh": "他没有把传统当成一成不变的权威。相反，他反复校对古书，记录产地，辨别同名异物，补充民间经验，也纠正前人错误。这个过程说明传统与补充医学最严肃的部分不是神秘化，而是长期积累、辨伪、剂量、适应症和风险边界。今天看传统疗法，更需要尊重历史经验，也需要现代证据和安全评估。这不是旧办法完全失灵的时刻。把健康问题缩成一个症状、一次治疗或一项救助，本来就能让人先行动；真正顶住它的，是身体变化常和环境、制度、照护关系及尊严缠在一起。当这个卡点反复出现，新的问题变成了：怎样在风险、证据和人的生活之间作出可靠照护。后来的课程会给它命名，当时更急迫的是把观察、诊断、照护记录、制度支持和伦理判断变成可重复的做法。这个人叫 Li Shizhen，他编写《本草纲目》，系统整理药物知识，成为中国本草学和传统医学史上的重要人物。今天面对传统疗法时，最负责任的态度也许正是这种耐心：既不轻易嘲笑经验，也不停止核对风险和证据。后来人看见的是领域名称，当时真正被迫形成的，是围绕观察、诊断、照护记录、制度支持和伦理判断的一套工作。",
-    "knowledgePointZh": "传统与补充医学关注传统疗法、身体经验、安全边界、文本传承和现代证据对话。",
-    "reflectionQuestionZh": "尊重传统时，怎样同时保留追问证据和保护安全的勇气？"
-  },
-  "0919-health-not-elsewhere-classified": {
-    "titleZh": "老鼠为什么生病了",
-    "summaryZh": "一次实验室里的异常反应，让健康研究看见压力也能成为身体问题。",
-    "sceneZh": "20 世纪 30 年代，一个年轻研究者给实验动物注射不同提取物，却发现它们出现相似身体反应。",
-    "storyBodyZh": "他一开始以为自己在研究某种特定物质的作用。可是无论注射什么，动物都出现胃溃疡、肾上腺变化、免疫组织萎缩等相似反应。他开始怀疑，身体可能是在对各种有害刺激作出一种一般性反应。这个想法后来发展为 stress 的生理研究，也经历过概念扩张和争议。未另分类的健康领域常常这样出现：问题不完全属于单一疾病，也不只是心理或社会，而是身体、环境、情绪和长期负荷交织。这不是旧办法完全失灵的时刻。把健康问题缩成一个症状、一次治疗或一项救助，本来就能让人先行动；真正顶住它的，是身体变化常和环境、制度、照护关系及尊严缠在一起。当这个卡点反复出现，新的问题变成了：怎样在风险、证据和人的生活之间作出可靠照护。真正留下来的，是观察、诊断、照护记录、制度支持和伦理判断从个人经验变成可以传递的训练。这个人叫 Hans Selye，他提出 general adaptation syndrome 并推动 stress 进入现代健康研究。",
-    "knowledgePointZh": "未另分类的健康收纳那些不适合标准医疗门类、却影响身体和生活质量的健康现象。",
-    "reflectionQuestionZh": "当你说自己只是累了，身体会不会其实已经在长期报警？"
-  },
-  "0921-care-of-the-elderly-and-of-disabled-adults": {
-    "titleZh": "他想自己决定几点睡",
-    "summaryZh": "一个坐轮椅的大学生把照护问题改写成独立生活和自主权问题。",
-    "sceneZh": "20 世纪 60 年代的加州，一个重度残障青年想上大学，却被安排住在校医院，而不是普通宿舍。",
-    "storyBodyZh": "别人常把他的需求理解成护理和保护，他却不断追问：为什么帮助必须以失去自主为代价？他和同伴争取校园无障碍、个人助理、住房选择和自我决定权，后来推动独立生活运动。老人和残障成人照护在这里发生了重要转向：照护不只是替人做事，也不是把人安置到方便管理的地方，而是支持一个人尽可能掌握自己的生活节奏、关系和选择。可这一幕留下的细节提醒研究者，身体变化常和环境、制度、照护关系及尊严缠在一起。问题从这里换了重心：怎样在风险、证据和人的生活之间作出可靠照护，而不是把异常当作例外丢开。当观察、诊断、照护记录、制度支持和伦理判断被写进训练，现场里的判断才不再只靠少数人的直觉。这个人叫 Ed Roberts，他推动 Berkeley Independent Living Movement，成为残障权利和独立生活运动的重要人物。今天谈无障碍和长期照护时，这个追问仍然锋利：帮助如果不能增加选择，它就可能只是换了一种方式管理别人。完整体系会在后来出现；起点处更重要的，是这个现场已经逼人把观察、诊断、照护记录、制度支持和伦理判断一点点固定下来。",
-    "knowledgePointZh": "老人和残障成人照护关注尊严、能力支持、安全、日常生活质量和自主性。",
-    "reflectionQuestionZh": "帮助一个人时，怎样确保你没有顺手拿走他的决定权？"
-  },
-  "0922-child-care-and-youth-services": {
-    "titleZh": "孩子也有自己的共和国",
-    "summaryZh": "一位儿科医生兼教育者把儿童照护从管理孩子，推向尊重孩子作为人的权利。",
-    "sceneZh": "20 世纪初的华沙，一位照顾孤儿的医生在院舍里设置儿童议会、法庭和报纸。",
-    "storyBodyZh": "他并不把孩子只看成等待成人塑造的半成品。孩子会恐惧，会犯错，会需要规则，也有被认真倾听的尊严。他在孤儿院里让孩子参与自治，处理冲突，表达意见，练习责任。后来在纳粹占领和犹太隔都的极端处境中，他仍尽力保护孩子的尊严。儿童照护与青少年服务在这里不是简单看管，而是创造一个年轻人能够被保护、被听见、能学习承担责任的环境。可这一幕留下的细节提醒研究者，身体变化常和环境、制度、照护关系及尊严缠在一起。问题从这里换了重心：怎样在风险、证据和人的生活之间作出可靠照护，而不是把异常当作例外丢开。这个人叫 Janusz Korczak，他以儿童权利思想、孤儿院实践和最后陪伴孩子进入 Treblinka 的选择，成为儿童照护与教育伦理的重要人物。今天的儿童服务仍需要这种提醒：保护不是让年轻人永远沉默，而是给他们能表达、犯错、修正和被认真对待的空间。",
-    "knowledgePointZh": "儿童照护与青少年服务关注保护、发展、陪伴、边界、参与和成长环境。",
-    "reflectionQuestionZh": "当成年人说“为了孩子好”时，孩子自己的声音在哪里？"
-  },
-  "0923-social-work-and-counselling": {
-    "titleZh": "她先画出家庭和邻里关系",
-    "summaryZh": "一位社会工作者把求助从施舍，变成对人、家庭和资源系统的细致理解。",
-    "sceneZh": "19 世纪末的美国城市里，一个慈善组织工作者面对求助家庭，发现简单发放物资常常不够。",
-    "storyBodyZh": "她看到贫困背后可能有失业、疾病、亲属关系、住房、债务、羞耻和制度缺口。帮助如果只看眼前请求，很容易误解人，也容易重复失败。她强调调查、访谈、记录、家庭和社区资源，把个案工作变成有方法的专业实践。今天我们会更敏感地批判早期慈善中的阶级眼光和道德判断，但她推动的一个转向仍然重要：社会工作与咨询必须理解一个人所处的关系网，而不是只评价个人。可是现场的压力在于，身体变化常和环境、制度、照护关系及尊严缠在一起。这个人叫 Mary Ellen Richmond，她通过《Social Diagnosis》等作品奠定现代社会个案工作的重要方法基础。今天个案工作仍不该只停在表面请求上；它要把人的困难放回家庭、社区、制度和可获得资源的网里看。",
-    "knowledgePointZh": "社会工作与咨询连接个人困难、家庭关系、资源系统、支持过程和专业伦理。",
-    "reflectionQuestionZh": "当一个人求助时，你能不能看见问题背后的关系和制度？"
-  },
-  "0929-welfare-not-elsewhere-classified": {
-    "titleZh": "战场上的红十字臂章",
-    "summaryZh": "一个旅行者在战场边组织救助，让福利实践越过国界、军队和普通慈善分类。",
-    "sceneZh": "1859 年意大利 Solferino 战场附近，一个瑞士商人偶然看见成千上万伤兵无人照料。",
-    "storyBodyZh": "他原本不是来创办组织的，却被眼前场面困住：不同国家的士兵一样流血，医疗力量远远不足，平民临时参与救助。他组织当地人照顾伤员，后来把经历写成书，提出建立中立救援组织和国际规则。未另分类的福利正像这种实践：它不只是医院，不只是军队，也不只是慈善，而是在灾难、战争、法律和人道责任之间为脆弱者开出一条保护通道。可是现场的压力在于，身体变化常和环境、制度、照护关系及尊严缠在一起。未另分类的福利后来会有课程和机构；在这个现场里，它先贴着观察、诊断、照护记录、制度支持和伦理判断展开。这个人叫 Henry Dunant，他推动 International Committee of the Red Cross 和 Geneva Convention 的形成，并成为现代人道主义救援的重要奠基人。",
-    "knowledgePointZh": "未另分类的福利收纳那些跨越救助、人道、社区、法律和紧急支持的实践。",
-    "reflectionQuestionZh": "当一个人受伤时，为什么他的阵营不该决定他是否值得被救？"
-  },
-  "1011-domestic-services": {
-    "titleZh": "厨房里的化学课",
-    "summaryZh": "一位化学家把家庭清洁、饮食和通风变成可研究的家政服务知识。",
-    "sceneZh": "19 世纪末的美国，一位女性化学家走进厨房、水槽和餐桌，发现家庭生活里到处都是科学问题。",
-    "storyBodyZh": "她不把家务看成天生会做的女性本能。水质、污水、通风、食物营养、清洁剂、厨房动线和家庭预算，都需要知识和标准。她推动 domestic science 和 home economics，把家庭运行放进教育和公共卫生视野。今天我们会警惕家政知识被用来固定性别分工，但她的工作也提醒我们：一个家是否安全、健康、好用，背后有化学、卫生、营养和管理。麻烦在于，等待、空间、信息、权限和身体感受会决定服务是否成立。这种麻烦一旦被认真记录，领域的起点就不再是名称，而是整条路径怎样让人安全、清楚并被真正看见。在名称固定以前，流程设计、前后台协作、现场证据和体验校正已经先把现场和判断连接起来。这个人叫 Ellen Swallow Richards，她是美国早期女性化学家和 home economics 重要奠基人物之一。今天家政服务也可以被这样重新理解：它不是低声消失的劳动，而是让家庭系统更安全、更健康、更可持续的知识。",
-    "knowledgePointZh": "家政服务关注清洁、整理、照护辅助、家庭运行、营养、安全和生活环境质量。",
-    "reflectionQuestionZh": "一个家变得好用，是因为有人天生会做，还是因为有一整套被忽略的知识？"
-  },
-  "1012-hair-and-beauty-services": {
-    "titleZh": "她把头发护理做成事业",
-    "summaryZh": "一个洗衣女工出身的创业者，让美发美容服务连接技术、尊严和黑人女性经济机会。",
-    "sceneZh": "20 世纪初的美国，一个曾长期为脱发烦恼的女性，开始试验护发产品，并挨家挨户向顾客讲解。",
-    "storyBodyZh": "她知道头发不只是外表，也关系到工作、自尊、种族压力和女性互助。她开发产品、培训销售代理、开办美容学校，让许多黑人女性通过美发和美容服务获得收入与社群地位。今天我们也会讨论当时审美标准与种族政治的复杂性，但她的故事说明，美发与美容服务不是简单“变好看”，而是技术、身体、身份、商业和社会机会交织的行业。可这一幕留下的细节提醒研究者，等待、空间、信息、权限和身体感受会决定服务是否成立。问题从这里换了重心：整条路径怎样让人安全、清楚并被真正看见，而不是把异常当作例外丢开。这个人叫 Madam C. J. Walker，她建立护发美容企业和培训体系，成为美国黑人女性创业和美容服务史上的标志性人物。今天美发美容服务仍在这条线上：技术贴着身体发生，所以也会贴着尊严、审美压力和经济机会发生。这类起源常常不宏大：旧办法带不走的现场先留下来，流程设计、前后台协作、现场证据和体验校正才慢慢变成方法。",
-    "knowledgePointZh": "美发与美容服务关注形象、身体、审美、技术、沟通和信任。",
-    "reflectionQuestionZh": "一次发型服务，什么时候也在处理尊严、身份和经济机会？"
-  },
-  "1013-hotel-restaurants-and-catering": {
-    "titleZh": "厨房像军队一样有秩序",
-    "summaryZh": "一位厨师把豪华厨房重组为分工、菜单和服务节奏的现代餐饮系统。",
-    "sceneZh": "19 世纪末的欧洲酒店厨房里，炉火、锅具、侍者和订单交错，一个厨师发现混乱会毁掉最好的菜。",
-    "storyBodyZh": "他并不只追求菜品精致，也关心厨房怎样在高压下稳定交付。谁负责酱汁，谁负责烤肉，谁负责冷盘，菜单怎样简化，服务怎样按节奏送到餐桌，都需要组织。他把 brigade de cuisine 和现代菜单、酒店餐饮服务结合起来，让餐饮从个人手艺扩展成团队系统。酒店、餐厅与餐饮在这里变得清楚：食物只是体验的一部分，卫生、时间、分工、前后台协作和顾客感受同样决定记忆。这不是旧办法完全失灵的时刻。把服务看成完成一次接待、保护、运输或回应，本来就能让人先行动；真正顶住它的，是等待、空间、信息、权限和身体感受会决定服务是否成立。当这个卡点反复出现，新的问题变成了：整条路径怎样让人安全、清楚并被真正看见。这个人叫 Auguste Escoffier，他改革专业厨房组织和现代法餐服务，被视为现代餐饮管理和厨艺体系的重要人物。今天任何餐饮现场都能看到这套系统：客人记住的往往不是一道菜，而是混乱被怎样悄悄整理好。",
-    "knowledgePointZh": "酒店、餐厅与餐饮关注接待、食物、流程、卫生、团队分工和体验。",
-    "reflectionQuestionZh": "一次好用餐，哪些部分不是味道，却决定你会不会记住它？"
-  },
-  "1014-sports": {
-    "titleZh": "冬天室内也能玩的球",
-    "summaryZh": "一个体育教师用两个桃篮和一只球，发明了兼顾规则、身体和公平竞争的新运动。",
-    "sceneZh": "1891 年马萨诸塞的冬天，一个体育教师面对一群精力旺盛却不能总在户外训练的学生。",
-    "storyBodyZh": "他需要一种室内运动，既能消耗体力，又不至于像橄榄球那样冲撞受伤。他把桃篮钉高，用足球传递，写下十三条规则，强调传球、空间、目标和限制身体接触。体育在这里不是随便竞争，而是通过规则设计让身体、团队、公平和安全同时存在。一个好运动并不只是让人赢，还要让人愿意反复练习、合作、遵守边界并在限制中创造。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。这个人叫 James Naismith，他于 1891 年发明 basketball，使篮球成为全球重要体育项目。今天设计体育活动时，这个原则仍然有用：好的限制不是减少自由，而是让身体、合作和公平能安全地出现。",
-    "knowledgePointZh": "体育关注训练、规则、身体表现、团队合作、公平竞争和安全边界。",
-    "reflectionQuestionZh": "一条好规则，是限制了运动，还是让更好的运动成为可能？"
-  },
-  "1015-travel-tourism-and-leisure": {
-    "titleZh": "一张火车票里的旅行社",
-    "summaryZh": "一次禁酒会旅行让旅游从个人冒险，变成组织路线、价格和体验的服务业。",
-    "sceneZh": "1841 年英国，一个木工出身的传教士组织数百人乘火车去参加集会，必须处理票价、时间和秩序。",
-    "storyBodyZh": "他面对的不是远方风景，而是让一群普通人安全、便宜、有计划地抵达目的地。火车票、团体价格、行程安排、住宿、说明和陪同服务慢慢连成一个新行业。旅行、旅游与休闲在这里不再只是富人的个人游历，而成为被组织出来的体验：路线怎样设计，风险怎样降低，地方文化怎样被介绍，游客自由又怎样依赖别人提前安排。如果只按旧路走，把服务看成完成一次接待、保护、运输或回应，事情看上去也能继续。可路径、等待和接触点没有那么顺从：等待、空间、信息、权限和身体感受会决定服务是否成立。于是下一步不能只是补一句解释，而要发展出流程设计、前后台协作、现场证据和体验校正。真正留下来的，是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Thomas Cook，他组织早期团体旅行并创办旅行服务企业，成为现代旅游业和旅行社服务的重要先驱。今天旅游服务也在平衡这件事：让人感觉自由，同时用路线、信息、保险和应急安排托住看不见的风险。后来人看见的是领域名称，当时真正被迫形成的，是围绕流程设计、前后台协作、现场证据和体验校正的一套工作。",
-    "knowledgePointZh": "旅行、旅游与休闲关注目的地、行程、体验设计、文化接触、安全和服务协调。",
-    "reflectionQuestionZh": "旅行里的自由，为什么常常依赖别人已经设计好的秩序？"
-  },
-  "1019-personal-services-not-elsewhere-classified": {
-    "titleZh": "一个陌生人替他看见标签",
-    "summaryZh": "一款志愿协助服务让个人服务跨过标准分类，进入数字、残障支持和日常小困难之间。",
-    "sceneZh": "21 世纪，一个视障用户在厨房拿起一罐食品，却不确定标签上写的到底是什么。",
-    "storyBodyZh": "传统服务窗口很难覆盖这种小而急的需求：不是医疗，不是旅游，不是家政，也不是普通客服。一个人只需要另一个可靠的人通过手机摄像头看一眼，告诉他颜色、文字、按钮或路线。这样的服务把志愿者、视频通话、无障碍和个人日常支持连接起来，也提醒我们服务价值不一定来自复杂流程，有时来自在正确时刻补上一点人的感知。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。真正留下来的，是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Hans Jorgen Wiberg，他创立 Be My Eyes，使志愿者通过视频协助视障者处理日常视觉问题，成为未另分类个人服务的现代案例。今天数字服务越多，这类小帮助越重要：技术真正有温度的时候，常常是它补上了一个人刚好缺少的感知。",
-    "knowledgePointZh": "未另分类的个人服务收纳改善个人生活但不适合标准服务类别的实践。",
-    "reflectionQuestionZh": "哪一种帮助小到不容易命名，却刚好让一个人能继续独立生活？"
-  },
-  "1021-community-sanitation": {
-    "titleZh": "贫民区的排水沟",
-    "summaryZh": "一份关于劳动者卫生的报告，让社区卫生从个人干净转向城市基础设施问题。",
-    "sceneZh": "19 世纪英国工业城市里，一个改革者调查工人居住区，看到污水、拥挤住房和疾病紧紧相连。",
-    "storyBodyZh": "他发现，责怪穷人不爱干净很容易，却忽略了他们生活在怎样的街道、水源和排污条件里。污水横流、垃圾堆积、饮水污染和住房拥挤，让疾病传播成为结构性后果。他的报告推动公共卫生改革，也带着当时阶级眼光和治理控制的问题，需要被批判阅读。但社区卫生的核心已经清楚：干净不是只靠个人习惯，而要靠供水、排水、垃圾处理、住房和公共制度。这不是旧办法完全失灵的时刻。把服务看成完成一次接待、保护、运输或回应，本来就能让人先行动；真正顶住它的，是等待、空间、信息、权限和身体感受会决定服务是否成立。当这个卡点反复出现，新的问题变成了：整条路径怎样让人安全、清楚并被真正看见。一门领域不是先从名称开始，而是先从流程设计、前后台协作、现场证据和体验校正这些可练习的动作开始。这个人叫 Edwin Chadwick，他的 1842 年《Report on the Sanitary Condition of the Labouring Population》推动英国公共卫生和城市卫生改革。",
-    "knowledgePointZh": "社区卫生关注废弃物、水、清洁、公共空间、住房条件和群体健康。",
-    "reflectionQuestionZh": "当一个地方不干净，你会先责怪个人，还是先看系统给了他们什么条件？"
-  },
-  "1022-occupational-health-and-safety": {
-    "titleZh": "铅尘落在工人的衣服上",
-    "summaryZh": "一个医生走进工厂，把职业病从个人不幸变成可调查、可预防的工作场所风险。",
-    "sceneZh": "20 世纪初的美国，一位女医生进入铅厂、橡胶厂和油漆车间，询问工人头痛、麻木和中毒症状。",
-    "storyBodyZh": "她没有只在诊室等待病人，而是去看病人工作的地方。毒物在哪里产生，粉尘怎样被吸入，通风是否足够，工人有没有防护，雇主是否隐瞒风险？这些问题让职业健康与安全成为一门现场科学。工作场所的伤害不是“粗心”两个字能解释的，它常常来自材料、设备、节奏、权力和缺乏监管。如果只按旧路走，把服务看成完成一次接待、保护、运输或回应，事情看上去也能继续。可路径、等待和接触点没有那么顺从：等待、空间、信息、权限和身体感受会决定服务是否成立。于是下一步不能只是补一句解释，而要发展出流程设计、前后台协作、现场证据和体验校正。后来的课程会给它命名，当时更急迫的是把流程设计、前后台协作、现场证据和体验校正变成可重复的做法。这个人叫 Alice Hamilton，她开创美国职业医学和工业毒理调查传统，推动工作场所健康与安全改革。今天的职业安全仍要抵抗一句轻飘飘的责怪：如果危险总在同一处重复，问题很可能已经写进流程和权力关系里。",
-    "knowledgePointZh": "职业健康与安全关注工作场所风险、预防、设备、防护、制度和安全行为。",
-    "reflectionQuestionZh": "如果一个工伤反复出现，它是个人失误，还是现场在重复制造危险？"
-  },
-  "1029-hygiene-and-occupational-health-services-not-elsewhere-classified": {
-    "titleZh": "工厂火灾后的出口门",
-    "summaryZh": "一场灾难让卫生与职业安全边界上的法规、劳动权利和公共责任同时浮现。",
-    "sceneZh": "1911 年纽约 Triangle Shirtwaist Factory 火灾后，一个年轻社会改革者站在悲痛和愤怒之间，追问为什么门会被锁上。",
-    "storyBodyZh": "那场火灾暴露的不只是一个工厂的事故，而是逃生通道、工时、童工、消防检查、雇主责任和政府监管的失败。她后来参与调查和改革，推动工厂安全、最低工资、失业保险等劳动保护制度。未另分类的卫生与职业健康服务常常出现在这种交界处：它不是单一卫生措施，也不是单个安全培训，而是法律、工作现场、公共行政和人的生命价值如何被重新安排。可是现场的压力在于，等待、空间、信息、权限和身体感受会决定服务是否成立。真正留下来的，是流程设计、前后台协作、现场证据和体验校正从个人经验变成可以传递的训练。这个人叫 Frances Perkins，她在 Triangle 火灾后推动劳动与安全改革，后来成为美国首位女性内阁部长并参与 New Deal 社会保障制度建设。后来人看见的是领域名称，当时真正被迫形成的，是围绕流程设计、前后台协作、现场证据和体验校正的一套工作。",
-    "knowledgePointZh": "未另分类的卫生与职业健康服务处理混合型公共卫生、工作安全、法规和现场保护实践。",
-    "reflectionQuestionZh": "一个出口门被锁上时，锁住的是通道，还是整个社会对劳动者生命的想象？"
-  },
-  "1031-military-and-defence": {
-    "titleZh": "胜利之前先计算代价",
-    "summaryZh": "一部古老兵书让军事与国防从勇武叙事，转向战略、信息和避免无谓消耗。",
-    "sceneZh": "古代中国的战乱时代，一个军事思想者看见军队、粮草、地形、间谍和君主情绪如何决定生死。",
-    "storyBodyZh": "他并不把战争写成单纯勇敢。旧式叙事容易问谁更强、谁更敢冲锋；这个问法在战乱中并非毫无用处，却遮住了更冷的事实：粮草、地形、间谍、士气、君主情绪和政治目标会一起决定生死。真正的将领要先计算代价，保存士气，使用信息，避免被愤怒驱动，也要知道不战而屈人之兵有时高于硬碰硬。地图、粮仓、行军速度和敌我判断，都会比一时勇猛更早决定结果。问题因此从“怎样取胜”，变成“什么行动值得付出代价，什么胜利会把国家拖向更大的危险”。军事与国防在这里显出自己的方法边界：力量只是其中一项，组织、补给、情报、训练、克制和风险准备共同决定安全。古代文本不能替代现代伦理和国际法，但它提醒后来的军事学习：知道怎样行动重要，知道怎样避免无谓行动同样重要。这个人叫 Sun Tzu，他的《The Art of War》成为军事战略、组织竞争和安全思考史上的经典文本。这些判断听起来像书上的格言，实际都落在很硬的现场：粮车能走多远，士兵能否休整，情报是否可靠，撤退会不会比进攻更能保存力量。军事与国防因此不是崇拜冲突，而是在冲突可能发生前训练代价判断。",
-    "knowledgePointZh": "军事与国防关注安全、组织、战略、训练、资源、情报和风险准备。",
-    "reflectionQuestionZh": "真正的防御只是拥有力量，还是知道什么时候不该使用力量？"
-  },
-  "1032-protection-of-persons-and-property": {
-    "titleZh": "每一次接触都会留下痕迹",
-    "summaryZh": "一个法医学实验室让保护人身与财产不只靠巡逻，也靠证据和可验证的调查。",
-    "sceneZh": "20 世纪初的法国里昂，一个年轻法医学者在实验室里研究灰尘、纤维、玻璃和指纹。",
-    "storyBodyZh": "他相信犯罪现场不是沉默的。鞋底带走泥土，衣袖留下纤维，玻璃碎片交换微粒，人与物只要接触就会互相留下痕迹。可这些痕迹把问题推到另一层：如果判断只靠经验和供词，遗漏、逼供和偏见也会一起进入结论。于是保护人身与财产不只是更快反应，还包括保存现场、分析证据、重建事件，让判断经得起法庭检验。灰尘、纤维和玻璃碎屑的价值，不在于它们戏剧化，而在于它们迫使调查者说明每一步推理从哪里来。问题从“谁做了这件事”，变成“什么证据链能说明它，又怎样防止调查权力伤到无辜的人”。证据工作必须受程序和权利约束，否则技术会变成新的不公。这个人叫 Edmond Locard，他建立 Lyon police laboratory，并提出 Locard's exchange principle，成为现代法医学和犯罪调查的重要人物。这让实验室和街头第一次被紧紧连在一起：调查者不能只说自己相信什么，还要说明样本怎样取得、怎样保存、怎样排除污染。保护财产和人身安全，因此开始依赖证据链，也依赖对调查者本人的约束。",
-    "knowledgePointZh": "人身与财产保护关注风险识别、预防、证据、响应和安全环境设计。",
-    "reflectionQuestionZh": "如果每一次接触都会留下痕迹，安全判断为什么必须同时尊重证据和权利？"
-  },
-  "1039-security-services-not-elsewhere-classified": {
-    "titleZh": "罪犯变成了侦探",
-    "summaryZh": "一个身份复杂的人把犯罪经验、调查、档案和私人安保混成新的安全实践。",
-    "sceneZh": "19 世纪巴黎，一个曾多次入狱又熟悉地下世界的人，开始替警方辨认骗术、伪装和犯罪网络。",
-    "storyBodyZh": "他的经历并不适合简单歌颂，也充满道德复杂性。旧式治安依赖巡逻、告密和熟人判断，确实能处理一部分街头犯罪；可伪装、骗术、地下网络和跨区域流动让这种办法越来越不够。正因为熟悉犯罪现场的语言和习惯，他能从细节里看出伪装，建立档案，使用卧底和线人，把调查从单纯巡逻变成信息工作。档案和线人能让风险更早显形，也会制造滥用权力、侵犯隐私和诱导犯罪的危险。后来他创办私人侦探机构，使安全服务出现警务、商业调查、情报和个人委托之间的灰色地带。问题从“怎样抓人”，变成“哪些信息可以合法使用，谁有权调查，隐私和安全的边界在哪里”。未另分类的安全服务正需要审慎处理这种边界：有效经验可能有用，但只有被法律、伦理和监督约束后，才不会伤到人。这个人叫 Eugene Francois Vidocq，他从罪犯转为侦探并创办侦探机构，被视为现代侦探和私人调查史上的重要人物。这种灰色地带正是“未另分类”的原因：它既不像普通警务，也不像单纯商业服务，而是在保护、调查、情报和委托之间移动。每向前一步，都要同时问有效性、合法性和被调查者的权利。",
-    "knowledgePointZh": "未另分类的安全服务收纳那些跨越调查、保护、情报、现场支持和非标准风险管理的实践。",
-    "reflectionQuestionZh": "当安全工作依赖灰色经验时，谁来划定有效与越界的边界？"
-  }
-};
+const reviewedLensStoryOverridesZh = {};
 
-const topLensStoryRewriteOverridesZh20260621 = {
-  "000-general-starter-course": {
-    summaryZh: "一张夜间问题清单，让印刷铺外的经验开始变成可共同学习的公共方法。",
-    sceneZh: "1727 年的费城，年轻印刷工收好铅字，带着一张问题清单走向 Junto 的夜间聚会。",
-    storyBodyZh: "白天，他在印刷铺里排铅字、校样、送纸。到了晚上，几个人把各自碰到的麻烦带到 Junto：怎样预防火灾，哪里能借到书，货币短缺会怎样压住小店，年轻学徒怎样继续读书。把经验留在师傅和熟人手里，本来很自然；手艺、信用和门路都靠这样传下去。可同一类麻烦每周换个门面回来，单个师傅的答案开始不够。他们把问题写成清单，轮流查书、比较做法；下一次聚会，同一个问题会带着书页、账目或街头观察回到桌上，再把消防、图书馆、道路和学校这些事拉到公共讨论里。那张夜间问题单让学习离开单人的聪明，变成别人能接住、补充、检验和再使用的办法。这个年轻印刷工是 Benjamin Franklin，Junto 常被看作美国公共学习、社团教育和公共改进的早期入口。后来被称作通用学习的东西，先从这种场景里长出来：把生活里的反复问题变成共同练习。",
-    knowledgePointZh: "通用学习关注如何把个人经验、公共问题和跨领域方法组织成可持续学习能力。",
-    reflectionQuestionZh: "当一个问题反复出现在不同人的生活里，它还只是个人经验吗？"
-  },
-  "011-dewey-lab-school": {
-    summaryZh: "面粉、布料和木块进入教室后，学习不再只是在课本里找答案。",
-    sceneZh: "1896 年的芝加哥，Lab School 的桌上放着面粉、量杯、布料、木块和一群孩子的问题。",
-    storyBodyZh: "桌上的面粉没有先变成一段课文。孩子们量水、揉面、等面团变化，再回头算为什么这个比例能成形。布料也不是手工课的装饰，他们追着棉花从田地、纺线、染色走到衣服，木块则把长度、结构和合作带到同一张桌上。背诵和讲解并非无用，安静听课能让孩子得到整齐的答案；可是答案一离开生活，孩子很快只记得句子，不知道句子要处理什么。老师把厨房、作坊、测量和讨论排成连续活动，让孩子先碰到材料的限制，再需要数学、语言、历史和科学来解释它。桌面上的面团、布料和木块让课堂的重心移动了：生活不再被剪成学科碎片，学科知识反而被真实活动召唤出来。John Dewey 参与创办的 University of Chicago Laboratory School，成为进步教育史上重要的实验现场。它留下的问题后来进入教育学核心：学校怎样设计经验，让学生在行动、反思和共同问题中学会判断。",
-    knowledgePointZh: "教育学关注学习经验、课程设计、教学关系、儿童发展和学校如何组织理解。",
-    reflectionQuestionZh: "如果孩子先遇到真实材料，再需要知识，课堂应该怎样改变？"
-  },
-  "020-family-photo-meaning": {
-    summaryZh: "一块黑布板上的照片反复移动，让图像之间的关系比单幅作品更难忽视。",
-    sceneZh: "1920 年代后期的 Hamburg，一位学者把照片钉上黑布板，又一次次取下、挪开、重排。",
-    storyBodyZh: "一幅画单独放在书页里时，读法很熟悉：作者是谁，年代是哪一年，风格属于哪一派。这个办法能保护细节，也能防止胡乱解释；可是黑布板上的照片越排越多，单幅作品开始显得不够。一个手势在古代浮雕、文艺复兴绘画和近代海报里反复出现，一个衣褶的方向、一个哀悼的姿态、一个神话人物的动作，跨过年代后仍让人认出相似的身体姿态。Aby Warburg 没有把这些图像写成线性故事，而是把照片钉上去、取下来、挪到另一组旁边，让相邻关系不断改变。每一次重排都会暴露新的问题：图像不是只属于一个时代的孤立作品，它们还会携带记忆、迁移姿态、改变用途。Mnemosyne Atlas 没有给出一条整齐结论，却让黑布板变成一种研究工具。艺术与人文在这块板前要处理的，不只是作品名称，还有图像怎样穿过时间、换一处位置后又改变观看。",
-    knowledgePointZh: "艺术与人文学习图像、文本、形式、符号和历史语境怎样共同生成意义。",
-    reflectionQuestionZh: "当两张相隔很远的图像放在一起时，我们看到的是相似，还是一条文化记忆的路线？"
-  },
-  "030-neighbor-notice-board": {
-    summaryZh: "一张用颜色标出的街区地图，把贫困从道德判断推向可讨论的公共证据。",
-    sceneZh: "1890 年代的芝加哥，Hull-House 附近的街道、工厂和出租屋被一格格标到地图上。",
-    storyBodyZh: "她每天走过同一片街区：孩子从拥挤楼梯跑下，工人换班，移民家庭在狭小房间里做饭、缝补、接散工。把贫困看成个人懒惰或偶然不幸，在慈善传统里很常见，也能解释一些眼前需求；可是同样的低工资、疾病、语言隔阂和房租压力在相邻街道反复出现，单个家庭的品格解释开始不够用。Jane Addams 和 Hull-House 的同伴没有只写劝善文章，她们入户访问，记录职业、收入、国籍和居住状况，再把数据涂到街区地图上。颜色一铺开，贫困不再只是一个个求助故事，而是和工厂、住房、移民路径、学校和公共卫生挤在同一张图里。地图逼出一个更难的问题：要帮助一个家庭，还是要改变让许多家庭同时陷入困境的城市条件？这些调查成为社会工作、城市社会学和公共改革的重要早期材料。社会科学要做的事，也从责备个人，转向把同情、记录和公共证据放到一起。",
-    knowledgePointZh: "社会科学关注人群、制度、城市、关系和公共问题怎样通过证据被理解与改善。",
-    reflectionQuestionZh: "当贫困在地图上成片出现时，责任还只属于某一个家庭吗？"
-  },
-  "040-kitchen-repair-budget": {
-    summaryZh: "账本、合同和铁路运价进入大学后，商业不再只靠家族经验传下去。",
-    sceneZh: "1881 年的费城，一所大学开始把工厂账册、合同、金融和公共政策摆进商业教育。",
-    storyBodyZh: "在小店和作坊里，做生意常靠跟师傅学：记账、识人、压价、守信用，许多判断都从柜台后面慢慢练出来。这个办法在熟人市场里很有力量，可铁路、钢铁、保险、银行和跨州贸易把问题放大了。一本账册不再只是收支记录，它会牵到贷款、库存、工资、运价、关税、合同责任和公共规则；一个错误也不只影响一间铺子，可能拖动供应商、工人和投资者。Joseph Wharton 希望大学培养能理解商业、政治经济和公共责任的人，而不只是会赚钱的店主。The Wharton School 于 1881 年在 University of Pennsylvania 成立，常被认为是美国最早的大学商学院之一。商业教育的入口因此改变：经验仍重要，但账册、合同、金融和法律要被放在同一张桌上反复训练。商业、管理与法律不再只是成功者的诀窍，而开始成为可以被教学、争论和问责的公共方法。",
-    knowledgePointZh: "商业、管理与法律关注组织如何配置资源、承担责任、制定规则并在社会中创造价值。",
-    reflectionQuestionZh: "当一个商业决定会影响工人、资本和公共规则时，只靠个人经验还够吗？"
-  },
-  "050-balcony-plant-observation": {
-    summaryZh: "一座山坡上的植物记录，让自然不只是标本名称，而成为变量之间的关系。",
-    sceneZh: "1802 年前后的安第斯山坡上，Humboldt 把植物名、海拔、温度和气压写进同一本笔记。",
-    storyBodyZh: "采下一片叶子，压进标本夹，写上名称和地点，这是自然史里可靠而必要的工作。可是 Alexander von Humboldt 和同行者沿着山坡上行时，单个名称越来越难解释眼前的变化。低处的植物、云雾边缘的植物、高处稀薄空气里的植物，不只是换了名字，也随着高度、温度、湿度和地形改变了分布。他没有只把标本带回柜子，而是在笔记旁添上海拔、气压和位置，再把不同高度的植物放到同一幅剖面图里比较。回到纸面上，山不再只是背景，变成一条能让变量相互靠近的坐标。Naturgemalde 这样的图像让读者看到：植物在哪里出现，往往要同气候、地形和高度一起理解。给现象命名仍然重要，但这张山坡图把自然科学、数学与统计拉到同一项任务上：测量、比较，并把关系画成别人也能检查的结构。",
-    knowledgePointZh: "自然科学、数学与统计把观察、测量、比较和模型结合起来，寻找自然现象中的规律。",
-    reflectionQuestionZh: "如果同一种植物总和某些高度、温度、湿度一起出现，标本还只是一个名字吗？"
-  },
-  "061-phone-backup-help": {
-    summaryZh: "在有噪声的线路旁，消息先被拆成选择，才可能被可靠传远。",
-    sceneZh: "20 世纪中期的 Bell Labs，工程师面对电话线、开关、噪声和一串需要传送的符号。",
-    storyBodyZh: "一条消息平时会先被问是什么意思：一句话安慰谁，一封电报通知什么事。通信工程师当然也关心意义，可在线路和机器面前，另一个问题先挡住了路。电流会抖动，噪声会混进来，线路容量有限，同一句话如果不能稳定送到另一端，意义再丰富也会丢失。Claude Shannon 把注意力暂时从内容移开，问一个更冷的问题：在许多可能消息中，接收者到底需要排除多少选择，才能确定收到的是哪一个？他把消息看成选择的数量，把不确定性写进公式，又把信号、噪声和编码放在同一张工作台上。这样做不是说人的意义不重要，而是先为机器通信建立可计算的底座。bit 这个单位让信息像可以度量的东西一样进入工程设计。后来，信息与通信技术反复回到这个底座：通道能承载多少选择，错误怎样被发现，冗余怎样帮助恢复。",
-    knowledgePointZh: "信息与通信技术关注信息如何被编码、传输、存储、恢复，并在系统中可靠流动。",
-    reflectionQuestionZh: "当一条消息必须穿过噪声，先被保护的是意思，还是可被辨认的选择？"
-  },
-  "070-wobbly-shelf-repair": {
-    summaryZh: "桥、隧道和巨轮把勇气拉回图纸，让建造必须接受计算和材料的约束。",
-    sceneZh: "19 世纪的英国，工程图纸上同时出现山谷、河底、铁板、铆钉和一艘越来越大的船。",
-    storyBodyZh: "修一座小桥时，老匠人的眼力、手感和经验常常够用；木料弯到什么程度，石块怎样咬合，许多判断都从工地上长出来。可当跨度越过山谷，隧道要穿过河底，铁船的船体大到需要成排铆钉和隔舱时，手感开始被迫让位给计算。Isambard Kingdom Brunel 所处的时代，建造不再只是把胆量变成形状。图纸要先算重量和拉力，材料要接受试验，工人、资金、设备和风险要被安排到同一套流程里。一个尺寸改动会牵动支撑、成本和安全；一次漏水或变形，会让纸上的假设回到现场接受审问。工程的转向藏在这种往返里：先画，再算，再造，再从失败处修正。桥、隧道和巨轮不只是宏大物件，它们把一个问题推到台前：人类怎样把想象交给可验证的结构？工程学的责任也在图纸和现场之间变得清楚：让材料、力、工具、组织和安全共同约束野心。",
-    knowledgePointZh: "工程关注如何用可验证的设计、材料、系统和组织，把需求转化为可靠结构。",
-    reflectionQuestionZh: "当建造物大到眼力不再够用时，图纸和计算承担了什么责任？"
-  },
-  "080-community-garden-seedlings": {
-    summaryZh: "一株不容易倒伏的小麦，让田地里的问题从多收一点变成如何稳定养活更多人。",
-    sceneZh: "20 世纪中期的墨西哥试验田里，研究人员弯腰查看麦秆高度、锈病斑点和一排排产量记录。",
-    storyBodyZh: "农民当然希望小麦多结穗，研究人员也会先看哪一块地收成更好。可在试验田里，单纯追求高产很快遇到麻烦：秆子太高会倒伏，锈病会让叶片变色，肥料用多了未必变成粮食，雨水和季节又让一次好结果无法保证下一次。Norman Borlaug 和团队不断杂交、播种、淘汰，再把不同地点和季节的表现拿来比较。他们不是只问哪一株今年最高产，也看哪一株在施肥、病害和风雨之后还能站住。矮秆品种的价值不只在于矮，它能在施肥后把更多力量放进麦穗，而不是把整株植物推倒。试验田于是从一块地的经验，变成品种、病害、土壤、肥料、灌溉和农民实践共同接受检验的现场。后来这些工作和绿色革命联系在一起，也伴随关于生态、分配和长期代价的讨论。小麦行间留下的不是一个单独答案，而是一组农业问题：粮食怎样在生物、环境、技术和社会条件之间被反复调校出来。",
-    knowledgePointZh: "农业关注作物、土壤、水、技术、生态和食物系统如何共同支撑稳定生产。",
-    reflectionQuestionZh: "如果一株麦子能多产却容易倒下，农业要优化的到底是哪一个结果？"
-  },
-  "090-medicine-schedule-care": {
-    summaryZh: "一场斑疹伤寒调查，把病床旁的问题推向住房、食物和公共制度。",
-    sceneZh: "1848 年的上西里西亚，Rudolf Virchow 在斑疹伤寒流行地区查看病人，也查看贫困本身。",
-    storyBodyZh: "医生先看病人，这是职业的起点：发热、皮疹、虚弱、死亡人数，都会把注意力拉回诊断和治疗。可在上西里西亚的调查中，病床旁的症状不断指向病床之外。拥挤住房、饥饿、教育不足、交通隔绝和贫困，让疫情不是单靠药方就能解释的事件。Rudolf Virchow 记录病情，也记录生活条件；他没有把斑疹伤寒只写成微生物或个人卫生问题，而是把报告推向粮食、学校、地方自治和政治代表这些看似离诊室很远的条件。这样写并不减轻医学责任，反而扩大了医学必须面对的证据。病人身体上的热度，连到了村庄里的道路、饭桌和制度安排。治疗个体仍然重要，但如果许多人被同一组条件推向疾病，问题就不能停在个体治疗上。Virchow 后来常与社会医学传统联系在一起，公共健康与福利也因此必须同时看见病床、住房、食物和制度。",
-    knowledgePointZh: "健康与福利关注疾病、照护、公共卫生、社会条件和人的基本生活能力。",
-    reflectionQuestionZh: "当同一种疾病总和贫困、住房、食物一起出现时，医生该把边界画在哪里？"
-  },
-  "100-rainy-event-service-desk": {
-    summaryZh: "登机口的一次等待，让服务质量从后台流程走到人与人接触的瞬间。",
-    sceneZh: "1980 年代的 Scandinavian Airlines，乘客在柜台、电话、登机口和延误通知前一次次判断这家公司。",
-    storyBodyZh: "航空公司可以有整洁的机库、复杂的排班和厚厚的流程手册，许多工作确实发生在乘客看不见的后台。可是乘客记住一家公司的时刻，常常不是管理层开会的时刻，而是行李被问到哪里、电话有没有人接、延误时谁说明原因、登机口的员工能不能做决定。Jan Carlzon 在领导 Scandinavian Airlines 时，把这些接触称为 moments of truth。这个说法的力量不在口号，而在它重新排列了管理注意力：服务不是总部把标准写完再向下传递，服务发生在一线员工和顾客互相确认期待的那几秒钟。于是训练、授权、信息系统和组织层级都要围着接触点调整。一次柜台回应看似很小，却会让乘客判断整家公司是否可靠。服务问题也因此落回系统设计：后台流程要支持前台判断，前台经验又会反过来检验后台是否真的理解顾客。",
-    knowledgePointZh: "服务关注人与组织如何在接触点、流程、体验和信任中共同完成价值。",
-    reflectionQuestionZh: "如果顾客只通过几个接触瞬间认识一家公司，后台系统应该为谁而设计？"
-  }
-};
+const topLensStoryRewriteOverridesZh20260621 = {};
 
 // BEGIN GPT website story overrides 20260622
 const gptWebsiteStoryOverridesZh20260622 = {
@@ -8972,383 +4698,95 @@ const characters = [
 
 const stories = [
   {
-    id: "well-runs-low",
-    title: "The Well Runs Dry",
-    titleZh: "井水变浅了",
-    episode: "Episode 1",
-    eventType: "resource pressure",
-    mainField: "0521-environmental-sciences",
-    activatedFields: [
+    "id": "well-runs-low",
+    "title": "well-runs-low",
+    "mainField": "0521-environmental-sciences",
+    "activatedFields": [
       "0811-crop-and-livestock-production",
       "0732-building-and-civil-engineering",
       "0312-political-sciences-and-civics",
-      "1021-community-sanitation",
+      "1021-community-sanitation"
     ],
-    characters: ["mira", "toma", "niko", "aya", "blue-whale"],
-    coreConcepts: ["scarcity", "shared resources", "maintenance", "public rules"],
-    summary: "When the town well falls silent, people first argue over water. Then they discover the real shortage is shared attention.",
-    summaryZh: "井水突然变浅，镇上的人先争水，后来才发现真正稀缺的是共同注意力。",
-    storyBody: "The well did not run dry in one morning. It had been whispering for months: slower taps, damp stones near the old pipe, gardens needing more water than before. Nobody put the signs together until the bakery alarm rang and there was not enough pressure to fill the hose. Toma wanted water for seedlings. Sana wanted water for the clinic. Niko unfolded a repair sketch he had carried for weeks, but no one had wanted to close the road. Aya asked everyone to stop defending their own bucket and name the system they were standing inside. That was when the argument changed. The problem was not only water. It was memory, maintenance, priority, and trust. The town had treated the well like background scenery until it became the whole story.",
-    storyBodyZh: "井水不是某个早晨突然消失的。它已经低声提醒了很久：水龙头越来越慢，老水管旁的石头总是潮湿，菜园需要的水也越来越多。只是没人把这些信号连起来，直到面包店的警报响起，水压却不够接上消防软管。托马想给幼苗留水，萨娜想先保证诊所，尼科摊开一张他带了好几周的维修图，但之前没有人愿意为修路停工。阿雅让大家先停止保护自己的水桶，说出他们共同站在哪个系统里。争论就在那一刻变了。问题不只是水，而是记忆、维护、优先级和信任。镇上的人一直把井当作背景，直到它变成了整个故事。等人们愿意把这些线索放到同一张桌上，水井才不只是资源问题，也成了一堂关于系统记忆的课。",
-    insight: "A visible crisis is often the last chapter of an invisible system. The same dry well can be read as a broken pipe, a weak rule, a health risk, a crop threat, or a failure of collective memory. The deeper lesson is that people do not only disagree because they want different outcomes. They often disagree because their attention is trained by different knowledge maps.",
-    insightZh: "一个看得见的危机，常常是一个看不见系统的最后一章。同一口变浅的井，可以被看成水管问题、规则问题、健康风险、农作物威胁，或者共同记忆失效。更深的道理是：人们产生分歧，不只是因为想要不同结果，也常常是因为他们的注意力被不同的知识地图训练过。",
-    perspectives: [
-      {
-        lens: "Mira sees an environmental signal",
-        lensZh: "米拉看见的是环境信号",
-        focus: "The well changed slowly before it failed suddenly. Her focus is the long pattern, not only the emergency.",
-        focusZh: "井不是突然坏掉，而是先慢慢改变。她关注长期信号，而不只是当天的危机。",
-      },
-      {
-        lens: "Niko sees a maintenance debt",
-        lensZh: "尼科看见的是维护欠账",
-        focus: "The pipe was ignored because repair felt inconvenient. His focus is how invisible infrastructure becomes visible only when it breaks.",
-        focusZh: "水管之前被忽视，因为维修太麻烦。他关注的是：看不见的基础设施，往往只在坏掉时才被看见。",
-      },
-      {
-        lens: "Sana sees unequal vulnerability",
-        lensZh: "萨娜看见的是脆弱程度不同",
-        focus: "A water shortage does not hurt everyone in the same way. Her focus is who becomes unsafe first.",
-        focusZh: "缺水不会以同样方式伤害所有人。她关注的是谁会最先变得不安全。",
-      },
-      {
-        lens: "Aya sees public rules",
-        lensZh: "阿雅看见的是公共规则",
-        focus: "The town needs more than kindness. Her focus is how a shared resource needs shared rules before fear takes over.",
-        focusZh: "小镇不能只靠善意。她关注的是：共享资源需要共享规则，否则恐惧会接管局面。",
-      },
-    ],
-    miniQuestion: "When a shared resource runs low, should a town first limit demand, repair supply, or redesign the rules?",
-    miniQuestionZh: "当共享资源变少时，一个社区应该先限制需求、修复供给，还是重新设计规则？",
-    isPublished: true,
-    createdAt: "2026-05-30",
-    updatedAt: "2026-05-30",
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
   },
   {
-    id: "bread-price-debate",
-    title: "The Bread Price Debate",
-    titleZh: "面包价格之争",
-    episode: "Episode 2",
-    eventType: "market tension",
-    mainField: "0311-economics",
-    activatedFields: [
+    "id": "bread-price-debate",
+    "title": "bread-price-debate",
+    "mainField": "0311-economics",
+    "activatedFields": [
       "0411-accounting-and-taxation",
       "0416-wholesale-and-retail-sales",
       "0721-food-processing",
-      "0312-political-sciences-and-civics",
+      "0312-political-sciences-and-civics"
     ],
-    characters: ["otto", "maro", "beatrice", "aya", "pim"],
-    coreConcepts: ["price signals", "cost structure", "supply chains", "fairness"],
-    summary: "A price tag becomes a mirror: cost, fear, fairness, and trust all appear in the same loaf of bread.",
-    summaryZh: "一个价格牌变成了一面镜子：成本、恐惧、公平和信任都藏在同一块面包里。",
-    storyBody: "Otto raised the bread price before sunrise and hoped the town would read it as math. They read it as betrayal. Pim photographed the new sign. Beatrice asked for the ledger. Maro traced the flour route from the mill to the cart to the bakery shelf. The numbers explained part of the increase, but not all of it. Otto finally said the quiet part: he had added extra because he was afraid the next delivery would be worse. That sentence changed the room. A price was no longer a number on a board. It was a compressed story about cost, risk, bargaining power, and the fear of being the person blamed when tomorrow arrives.",
-    storyBodyZh: "奥托天还没亮就改了面包价格，希望镇上的人把它理解成算术。大家却把它理解成背叛。皮姆拍下新价格，贝娅要看账本，马洛追踪面粉从磨坊到推车再到面包架的路径。数字解释了一部分涨价，但不是全部。最后奥托说出了没写在牌子上的那部分：他多加了一点，因为他害怕下一批货会更糟。房间里的气氛因此改变。价格不再只是木板上的数字，而是一段被压缩的故事，里面有成本、风险、议价能力，以及害怕明天来临时自己成为被责怪的那个人。从那以后，镇上的人再看价格牌时，会多停一秒：数字看起来冷，其实常常带着人的处境和对未来的判断。",
-    insight: "Fairness cannot be judged from the surface alone. A price is a tiny public symbol that compresses many private realities: cost, uncertainty, bargaining power, reputation, and fear. The deeper question is not simply whether Otto is greedy or the town is emotional. It is which hidden layer each person treats as the real story.",
-    insightZh: "公平不能只从表面判断。价格是一个很小的公共符号，却压缩了许多私人现实：成本、不确定性、议价能力、声誉和恐惧。更深的问题不是奥托是不是贪心，也不是镇民是不是情绪化，而是每个人把哪一层隐藏结构当成了真正的故事。",
-    perspectives: [
-      {
-        lens: "Pim sees public trust",
-        lensZh: "皮姆看见的是公共信任",
-        focus: "A changed price without explanation feels like a broken relationship. Pim focuses on how a signal spreads through people.",
-        focusZh: "没有解释的涨价，会像关系被破坏一样被感知。皮姆关注一个信号如何在人群中扩散。",
-      },
-      {
-        lens: "Beatrice sees evidence",
-        lensZh: "贝娅看见的是证据",
-        focus: "Anger may be real, but it still needs a ledger. Her focus is separating facts from suspicion.",
-        focusZh: "愤怒可能是真的，但仍然需要账本。她关注的是把事实和猜疑分开。",
-      },
-      {
-        lens: "Maro sees the supply chain",
-        lensZh: "马洛看见的是供应链",
-        focus: "The loaf is the last stop, not the whole process. Maro focuses on transport, delays, payment terms, and upstream pressure.",
-        focusZh: "面包只是最后一站，不是全过程。马洛关注运输、延误、付款条件和上游压力。",
-      },
-      {
-        lens: "Otto sees tomorrow's risk",
-        lensZh: "奥托看见的是明天的风险",
-        focus: "His extra markup is partly fear disguised as pricing. His focus is survival under uncertainty.",
-        focusZh: "他多加的价格，有一部分是伪装成定价的恐惧。他关注的是不确定性里的生存。",
-      },
-    ],
-    miniQuestion: "What information should a town look at before deciding whether a price increase is unfair?",
-    miniQuestionZh: "在判断一次涨价是否不公平之前，社区应该先看哪些信息？",
-    isPublished: true,
-    createdAt: "2026-05-30",
-    updatedAt: "2026-05-30",
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
   },
   {
-    id: "school-curriculum-debate",
-    title: "The School Curriculum Debate",
-    titleZh: "学校课程之辩",
-    episode: "Episode 3",
-    eventType: "learning design",
-    mainField: "0111-education-science",
-    activatedFields: [
+    "id": "school-curriculum-debate",
+    "title": "school-curriculum-debate",
+    "mainField": "0111-education-science",
+    "activatedFields": [
       "0231-language-acquisition",
       "0541-mathematics",
       "0613-software-and-applications-development-and-analysis",
       "0223-philosophy-and-ethics",
-      "0314-sociology-and-cultural-studies",
+      "0314-sociology-and-cultural-studies"
     ],
-    characters: ["lina", "ren", "sana", "blue-whale", "aya"],
-    coreConcepts: ["curriculum design", "transfer", "language", "ethics", "tools"],
-    summary: "A school meeting asks a harder question than what to teach: what should a learner be able to notice?",
-    summaryZh: "一次学校会议问出了比“教什么”更难的问题：一个学习者应该能看见什么？",
-    storyBody: "Lina brought three lesson plans and expected a tidy vote. Ren brought a different kind of evidence: students who could recite definitions, but froze in front of a broken bus schedule, a medicine label, or a rumor spreading through a class chat. Someone said school should not become life itself. Sana answered softly that life had already entered the building. Lina erased the agenda and wrote one sentence on the board: \"What should a child be able to notice?\" The room became quieter. Facts still mattered. Tools still mattered. But the question had moved underneath them. A curriculum is not only a list of content. It is a training ground for attention: what learners see, what they miss, and what they learn to connect before the world asks them to act.",
-    storyBodyZh: "莉娜带来了三份教案，以为会议会很快投票结束。任带来的却是另一种证据：学生能背定义，却在面对坏掉的公交时刻表、看不懂的药品标签、班级群里扩散的谣言时停住。有人说学校不应该变成现实生活本身。萨娜轻声回答，现实生活早就走进了教学楼。莉娜擦掉议程，在白板上写下一句话：“一个孩子应该能看见什么？”房间安静下来。事实仍然重要，工具仍然重要。但问题已经移到更深处。课程不只是内容清单，它是在训练注意力：学习者会看见什么，会忽略什么，又能在世界要求他们行动之前，把什么连接起来。那天之后，课程表没有立刻变得完美，但老师们开始少问一点“这一章教完了吗”，多问一点“学生能把它带到哪里”。",
-    insight: "Learning is not just storing answers. It is building attention. A curriculum quietly decides what counts as worth noticing, what can be ignored, and what connections a learner is allowed to make. MapKAI treats knowledge as a map because real problems rarely arrive with subject labels attached. They arrive as messy situations, and the learner's first advantage is knowing which lens to bring forward.",
-    insightZh: "学习不只是储存答案，而是在建立注意力。课程会悄悄决定什么值得被看见，什么可以被忽略，一个学习者被允许建立哪些连接。MapKAI 把知识当作地图，是因为真实问题很少带着学科标签出现。它们通常以混乱情境的形式到来，而学习者最早的优势，是知道该把哪个视角带到前面。",
-    perspectives: [
-      {
-        lens: "Lina sees transfer",
-        lensZh: "莉娜看见的是迁移能力",
-        focus: "Students know definitions but cannot move knowledge into real situations. Her focus is whether learning can travel.",
-        focusZh: "学生知道定义，却不能把知识带到真实情境里。她关注的是学习能不能迁移。",
-      },
-      {
-        lens: "Ren sees mapping",
-        lensZh: "任看见的是地图结构",
-        focus: "The issue is not one missing lesson. Ren focuses on how fields connect when life refuses to stay inside one subject.",
-        focusZh: "问题不是少了一节课。任关注的是：当生活不待在单一学科里时，知识领域如何连接。",
-      },
-      {
-        lens: "Sana sees human limits",
-        lensZh: "萨娜看见的是人的边界",
-        focus: "Tools and facts are not enough if students cannot handle fear, pressure, or confusion. Her focus is care and judgment.",
-        focusZh: "如果学生无法处理恐惧、压力和混乱，工具和事实还不够。她关注的是照护和判断。",
-      },
-      {
-        lens: "Aya sees social purpose",
-        lensZh: "阿雅看见的是社会目的",
-        focus: "A curriculum shapes what kind of citizen someone becomes. Her focus is the public consequence of private learning.",
-        focusZh: "课程会塑造一个人成为什么样的社会成员。她关注的是私人学习背后的公共后果。",
-      },
-    ],
-    miniQuestion: "If school time is limited, what should a curriculum protect first: facts, tools, judgment, or character?",
-    miniQuestionZh: "如果学校时间有限，课程最应该优先保护什么：事实、工具、判断力，还是人格？",
-    isPublished: true,
-    createdAt: "2026-05-30",
-    updatedAt: "2026-05-30",
-  },
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
+  }
 ];
 
 const historicalStories = [
   {
-    id: "broad-street-pump",
-    title: "The Broad Street Pump",
-    titleZh: "布罗德街水泵",
-    episode: "Historical Case 1",
-    eventType: "public health",
-    mainField: "1021-community-sanitation",
-    activatedFields: [
+    "id": "broad-street-pump",
+    "title": "broad-street-pump",
+    "mainField": "1021-community-sanitation",
+    "activatedFields": [
       "0521-environmental-sciences",
       "0312-political-sciences-and-civics",
       "0542-statistics",
-      "0732-building-and-civil-engineering",
+      "0732-building-and-civil-engineering"
     ],
-    characters: ["john-snow", "henry-whitehead", "st-james-guardians", "soho-residents"],
-    coreConcepts: ["epidemiology", "public health", "evidence mapping", "infrastructure"],
-    summary: "In 1854 London, John Snow had to argue against the dominant miasma theory while deaths clustered around one water pump.",
-    summaryZh: "1854 年伦敦，约翰·斯诺必须在“瘴气说”占主导的时代，用病例地图说服人们重新看待一口水泵。",
-    storyBody: "In late August 1854, cholera tore through Soho near Broad Street. The dominant explanation was still miasma: bad air, foul smells, poisoned atmosphere. John Snow looked elsewhere. With help from local knowledge, including the work of Reverend Henry Whitehead, he traced where people lived, which pump they used, who had fled, who had stayed, and which apparent exceptions were not exceptions at all. The discussion was not polite theory. To officials, removing a public pump handle meant disrupting a neighborhood on evidence that did not yet fit accepted medicine. To Snow, waiting for perfect proof meant letting a hidden water system keep acting. He met the St James parish authorities on September 7 and argued from pattern: deaths gathered around the Broad Street pump, while some nearby groups using other water sources were spared. The handle was removed the next day. The outbreak was already declining, so the handle did not magically end the epidemic by itself. Its deeper historical force was different: the case showed that a city could be read as data, infrastructure, habit, and disease pathway at the same time.",
-    storyBodyZh: "1854 年 8 月底，霍乱在伦敦 Soho 的 Broad Street 附近爆发。当时主流解释仍是“瘴气”：坏空气、臭味、有毒的环境。约翰·斯诺把目光转向别处。在当地知识的帮助下，包括牧师 Henry Whitehead 的走访，他追踪人们住在哪里、喝哪口水泵、谁已经逃离、谁留下，以及哪些看似反例其实并不是反例。这场讨论不是温和的学术争论。对官员来说，拆掉公共水泵把手，意味着用尚未被主流医学接受的证据打断一个社区的日常供水。对斯诺来说，等待完美证明，等于让隐藏的供水系统继续行动。9 月 7 日，他向 St James 教区管理者陈述病例模式：死亡集中在 Broad Street 水泵周围，而附近一些使用其他水源的人群相对幸免。第二天，水泵把手被拆除。疫情当时已经在下降，所以把手并不是“神奇终结”疫情的单一原因。它真正深刻的历史意义在于：这件事证明，一座城市可以同时被读成数据、基础设施、生活习惯和疾病路径。",
-    insight: "Conclusion: the breakthrough was not only removing a pump handle. It was changing what counted as evidence. Snow's case turned scattered deaths into a spatial argument, and it showed that public health decisions often happen before every mechanism is fully accepted. The MapKAI lesson: a real problem may only become visible when evidence, infrastructure, local memory, and institutional authority are mapped together.",
-    insightZh: "结论：真正的突破不只是拆掉一个水泵把手，而是改变了“什么算证据”。斯诺把分散的死亡变成空间论证，也说明公共卫生决策常常必须发生在机制被完全接受之前。对 MapKAI 来说，这个故事的结论是：真实问题往往只有把证据、基础设施、地方记忆和制度权力放在同一张图上，才会变得可见。",
-    perspectives: [
-      {
-        lens: "Medical orthodoxy asked: is the air poisoned?",
-        lensZh: "主流医学问：是不是空气有毒？",
-        focus: "Miasma theory made smell and atmosphere feel like the obvious cause. That lens protected the old explanation but missed the water route.",
-        focusZh: "瘴气说让气味和空气看起来像显而易见的原因。这个视角保护了旧解释，却错过了水源路径。",
-      },
-      {
-        lens: "Snow asked: where do the cases cluster?",
-        lensZh: "斯诺问：病例聚集在哪里？",
-        focus: "His argument treated streets, pumps, deaths, and exceptions as one evidence system. The map became a reasoning tool, not decoration.",
-        focusZh: "他的论证把街道、水泵、死亡和反例放进同一个证据系统。地图成了推理工具，而不是装饰。",
-      },
-      {
-        lens: "Local knowledge asked: who actually drank from the pump?",
-        lensZh: "地方知识问：谁真的喝了那口水？",
-        focus: "Household habits, workhouse wells, brewery beer, and people who crossed streets for preferred water mattered as much as formal data.",
-        focusZh: "家庭习惯、济贫院自己的井、啤酒厂的啤酒、以及特意跨街取水的人，都和正式数据一样重要。",
-      },
-      {
-        lens: "Authorities asked: can we act before certainty?",
-        lensZh: "管理者问：没有绝对确定前能不能行动？",
-        focus: "The pump handle decision was a governance problem: how much evidence is enough when delay has a human cost?",
-        focusZh: "拆水泵把手是一个治理问题：当拖延会带来生命代价时，多少证据才足够？",
-      },
-      {
-        lens: "If the water supplier had a stronger seat",
-        lensZh: "如果供水方拥有更强席位",
-        focus: "It might have framed the case as reputation risk, property concern, and insufficient proof. Its likely move would be to demand more testing while resisting blame for a citywide sanitation problem.",
-        focusZh: "它可能会把事件定义为声誉风险、产权问题和证据不足。它最可能的操作，是要求更多检测，同时拒绝为全城卫生系统问题单独背责。",
-      },
-      {
-        lens: "If Bazalgette's infrastructure lens entered early",
-        lensZh: "如果巴泽尔杰特式基础设施视角提前进入",
-        focus: "The discussion would move beyond one pump: cesspits, sewers, river intake, street density, and future city design. The intervention would be expensive, slow, and politically harder than removing a handle.",
-        focusZh: "讨论会越过单一水泵，转向粪坑、下水道、河流取水、街区密度和未来城市设计。这个操作更昂贵、更慢，也比拆把手更难获得政治支持。",
-      },
-      {
-        lens: "If a grieving family spoke in the room",
-        lensZh: "如果遇难家庭在场发言",
-        focus: "The standard of proof would feel different. The family would likely ask why uncertainty protects the institution more quickly than it protects the living.",
-        focusZh: "证据标准会立刻变得不同。家属很可能会问：为什么“不确定性”总是更快保护机构，而不是更快保护活着的人？",
-      },
-    ],
-    miniQuestion: "When evidence is strong but not yet culturally accepted, should public action wait, persuade, or intervene?",
-    miniQuestionZh: "当证据已经很强、但还没被文化接受时，公共行动应该等待、说服，还是先介入？",
-    isPublished: true,
-    createdAt: "2026-06-13",
-    updatedAt: "2026-06-13",
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
   },
   {
-    id: "challenger-launch-decision",
-    title: "The Challenger Launch Decision",
-    titleZh: "挑战者号发射决策",
-    episode: "Historical Case 2",
-    eventType: "engineering risk",
-    mainField: "0716-motor-vehicles-ships-and-aircraft",
-    activatedFields: [
+    "id": "challenger-launch-decision",
+    "title": "challenger-launch-decision",
+    "mainField": "0716-motor-vehicles-ships-and-aircraft",
+    "activatedFields": [
       "0714-electronics-and-automation",
       "0613-software-and-applications-development-and-analysis",
       "0413-management-and-administration",
       "1022-occupational-health-and-safety",
-      "0223-philosophy-and-ethics",
+      "0223-philosophy-and-ethics"
     ],
-    characters: ["roger-boisjoly", "allan-mcdonald", "morton-thiokol", "nasa-managers", "challenger-crew"],
-    coreConcepts: ["engineering ethics", "risk communication", "organizational pressure", "safety margins"],
-    summary: "The night before Challenger launched, engineers warned that cold could make the O-rings unsafe. The organization still found a way to say yes.",
-    summaryZh: "挑战者号发射前夜，工程师警告低温可能让 O 型密封圈失效，但组织最后仍然找到了说“可以发射”的方式。",
-    storyBody: "On January 27, 1986, the argument was already inside the system before the shuttle was on the pad. Forecasts pointed to unusually low temperatures at Kennedy Space Center. Morton Thiokol engineers worried that the rubber O-rings in the solid rocket booster joints would not seal properly in the cold. In the teleconference with NASA, the engineering recommendation was not to launch below the previous experience base of 53 degrees Fahrenheit. Then the discussion shifted. NASA managers challenged the data. Thiokol managers went off-line, reconsidered, and reversed the recommendation. The burden of proof quietly changed: instead of proving it was safe to launch, engineers felt pushed to prove beyond doubt that it was unsafe. Challenger launched the next morning and broke apart 73 seconds after liftoff. The Rogers Commission later concluded that the immediate cause was failure of the right solid rocket motor joint seals, but the deeper cause was a flawed decision process: incomplete communication, management judgment overriding engineering concern, and safety information failing to reach the people who could have stopped the launch.",
-    storyBodyZh: "1986 年 1 月 27 日，挑战者号还没有升空，争论已经在系统内部发生。肯尼迪航天中心预计会出现异常低温。Morton Thiokol 的工程师担心，固体火箭助推器接缝里的橡胶 O 型密封圈在低温下无法及时密封。在与 NASA 的电话会议中，工程建议是：不要在低于既有飞行经验基础 53 华氏度的条件下发射。随后讨论发生了转向。NASA 管理者质疑数据，Thiokol 管理层离线内部讨论后推翻了原来的建议。举证责任悄悄改变：不再是证明“发射安全”，而变成工程师必须证明“绝对不安全”。第二天早晨，挑战者号发射，并在升空 73 秒后解体。罗杰斯委员会后来认定，直接原因是右侧固体火箭发动机接缝密封失效；更深的原因则是决策过程有严重缺陷：信息沟通不完整，管理判断压过工程担忧，安全信息没有抵达真正能叫停发射的人。",
-    insight: "Conclusion: Challenger was not simply a machine failure. It was a knowledge-routing failure. A fact that stays inside the wrong meeting is not yet organizational knowledge. The MapKAI lesson is severe: in high-risk systems, the question is not only whether someone knows the danger, but whether the structure lets that knowledge interrupt momentum.",
-    insightZh: "结论：挑战者号不只是机器失效，而是知识流动路径失效。一个事实如果只停留在错误的会议里，就还没有成为组织知识。对 MapKAI 来说，这个教训很严厉：在高风险系统里，问题不只是有没有人知道危险，而是组织结构是否允许这个知识打断惯性。",
-    perspectives: [
-      {
-        lens: "Engineers asked: are we outside the data?",
-        lensZh: "工程师问：我们是否已经超出数据范围？",
-        focus: "The 53-degree threshold was not superstition. It marked the lowest previous O-ring experience and the boundary of confidence.",
-        focusZh: "53 华氏度不是迷信，而是此前 O 型密封圈飞行经验的最低边界，也是信心边界。",
-      },
-      {
-        lens: "Managers asked: is the evidence conclusive?",
-        lensZh: "管理者问：证据是否足够确定？",
-        focus: "The fatal move was treating uncertainty as permission. In safety work, uncertainty often means slow down, not proceed.",
-        focusZh: "致命转向在于把“不确定”当作“可以继续”。在安全系统里，不确定常常意味着减速，而不是推进。",
-      },
-      {
-        lens: "The organization asked: who owns the no?",
-        lensZh: "组织问：谁拥有说“不”的权力？",
-        focus: "A system can contain warnings and still launch if warnings do not have a protected path to authority.",
-        focusZh: "一个系统可以拥有警告，却仍然发射；如果警告没有受保护的上行通道，它就无法改变结果。",
-      },
-      {
-        lens: "The public saw progress",
-        lensZh: "公众看见的是进步叙事",
-        focus: "The mission carried national confidence, education symbolism, and schedule pressure. That made the technical doubt harder to hear.",
-        focusZh: "这次任务承载着国家信心、教育象征和进度压力，这让技术疑虑更难被听见。",
-      },
-      {
-        lens: "If Feynman had been in the launch call",
-        lensZh: "如果费曼在发射前电话会议里",
-        focus: "He would likely force the abstraction into a physical question: show me what cold does to the seal. That move changes debate from managerial confidence to observable behavior.",
-        focusZh: "他很可能会把抽象争论变成物理问题：给我看低温会对密封圈做什么。这个动作会把讨论从管理信心转向可观察行为。",
-      },
-      {
-        lens: "If the crew's family had a translated-risk seat",
-        lensZh: "如果宇航员家属拥有“风险翻译”席位",
-        focus: "The question would become: can you explain this uncertainty in ordinary language to the people who bear the irreversible cost?",
-        focusZh: "问题会变成：你能不能用普通语言，把这个不确定性解释给那些承担不可逆代价的人？",
-      },
-      {
-        lens: "If a schedule owner argued honestly",
-        lensZh: "如果进度负责人诚实陈述",
-        focus: "The schedule pressure would not disappear, but it would become visible. The room could then compare schedule loss against loss of crew, vehicle, public trust, and program legitimacy.",
-        focusZh: "进度压力不会消失，但会变得可见。会议室才能把延期损失与人员、飞行器、公共信任和项目合法性的损失放在同一张桌上比较。",
-      },
-    ],
-    miniQuestion: "In a high-risk decision, who should carry the burden of proof: the person warning, or the system wanting to proceed?",
-    miniQuestionZh: "在高风险决策里，举证责任应该落在发出警告的人身上，还是落在想继续推进的系统身上？",
-    isPublished: true,
-    createdAt: "2026-06-13",
-    updatedAt: "2026-06-13",
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
   },
   {
-    id: "cuban-missile-crisis-excomm",
-    title: "Thirteen Days at the Edge",
-    titleZh: "核边缘的十三天",
-    episode: "Historical Case 3",
-    eventType: "crisis governance",
-    mainField: "0312-political-sciences-and-civics",
-    activatedFields: [
+    "id": "cuban-missile-crisis-excomm",
+    "title": "cuban-missile-crisis-excomm",
+    "mainField": "0312-political-sciences-and-civics",
+    "activatedFields": [
       "0311-economics",
       "0222-history-and-archaeology",
       "1031-military-and-defence",
       "0314-sociology-and-cultural-studies",
-      "0231-language-acquisition",
+      "0231-language-acquisition"
     ],
-    characters: ["john-f-kennedy", "nikita-khrushchev", "excomm", "robert-kennedy", "military-advisers"],
-    coreConcepts: ["deterrence", "crisis negotiation", "communication", "strategic restraint"],
-    summary: "In October 1962, Kennedy's advisers debated air strikes, invasion, and blockade while the world moved close to nuclear war.",
-    summaryZh: "1962 年 10 月，肯尼迪的顾问们在空袭、入侵和封锁之间争论，世界一度走到核战争边缘。",
-    storyBody: "In October 1962, U-2 photographs showed Soviet nuclear missile sites under construction in Cuba. President Kennedy did not announce the discovery immediately. He met secretly with advisers in what became ExComm, and the room divided around different kinds of fear. Some argued for air strikes or invasion: act fast, remove the missiles, show resolve. Others warned that a strike could miss missiles, kill Soviet personnel, invite retaliation in Berlin, or close the door to a negotiated exit. The chosen move was a naval quarantine, deliberately framed as less escalatory than an immediate attack while still forcing the crisis into public view. On October 22, Kennedy addressed the nation and demanded removal of the missiles. Then came the harder discussion: how to read Khrushchev's signals, whether to answer the softer message or the harder one, and what could be traded without appearing to trade. The public settlement was Soviet removal of missiles from Cuba in exchange for a US pledge not to invade. A separate US commitment to remove Jupiter missiles from Turkey stayed secret for more than twenty-five years. The crisis ended, but the arms race did not. The aftermath produced a hotline and helped lead toward the Limited Nuclear Test Ban Treaty, because both sides had seen how fragile command, language, and time could become.",
-    storyBodyZh: "1962 年 10 月，U-2 侦察照片显示苏联正在古巴建设核导弹基地。肯尼迪总统没有立刻公开，而是秘密召集顾问会议，也就是后来的 ExComm。会议室里的分歧不是简单的强硬与软弱，而是不同类型的恐惧。有人主张空袭或入侵：迅速行动，摧毁导弹，展示决心。也有人警告，空袭可能漏掉导弹，可能杀死苏联人员，可能引发柏林方向的报复，也可能关上谈判出口。最后选择的是海上“隔离”，它被刻意设计成比直接攻击更低级别的升级，但又足以把危机推到公开场域。10 月 22 日，肯尼迪向全国发表电视讲话，要求苏联拆除导弹。随后更困难的讨论开始了：如何解读赫鲁晓夫的信号，回复较温和的信息还是较强硬的信息，哪些让步可以做但不能公开成交易。公开协议是苏联拆除古巴导弹，美国承诺不入侵古巴。另一项美国撤出土耳其 Jupiter 导弹的承诺，则保密了二十多年。危机结束了，但军备竞赛没有结束。后续的美苏热线和《部分禁止核试验条约》，都来自一个共同认识：指挥、语言和时间在核危机里都脆弱得可怕。",
-    insight: "Conclusion: the deepest achievement was not victory but controlled ambiguity. Kennedy needed enough force to be believed and enough flexibility to leave the opponent a way out. The MapKAI lesson is that crisis decisions are rarely solved by one lens. Military capability, political signaling, historical memory, language, timing, and public legitimacy all act at once.",
-    insightZh: "结论：最深的成就不是胜利，而是被控制住的模糊性。肯尼迪既需要足够的力量让对方相信美国认真，又需要足够的弹性给对手留下退路。对 MapKAI 来说，这个故事说明：危机决策很少能靠单一视角解决。军事能力、政治信号、历史记忆、语言、时间和公共合法性会同时行动。",
-    perspectives: [
-      {
-        lens: "The military lens asked: can force remove the threat?",
-        lensZh: "军事视角问：武力能否清除威胁？",
-        focus: "Air strikes promised decisiveness but risked escalation if missiles survived or Soviet personnel were killed.",
-        focusZh: "空袭看起来果断，但如果导弹残留或苏联人员死亡，升级风险会急剧上升。",
-      },
-      {
-        lens: "The diplomatic lens asked: can the opponent retreat?",
-        lensZh: "外交视角问：对手是否还有退路？",
-        focus: "A deal had to remove missiles without making Khrushchev's retreat look like simple humiliation.",
-        focusZh: "协议必须拆除导弹，同时不能让赫鲁晓夫的退让显得只是被羞辱。",
-      },
-      {
-        lens: "The communication lens asked: which message is real?",
-        lensZh: "沟通视角问：哪条信息才是真正信号？",
-        focus: "The crisis turned letters, public speeches, private channels, and silence into strategic instruments.",
-        focusZh: "危机把信件、公开讲话、秘密渠道和沉默都变成了战略工具。",
-      },
-      {
-        lens: "The historical lens asked: what happens after the thirteen days?",
-        lensZh: "历史视角问：十三天之后会留下什么？",
-        focus: "The immediate settlement ended the missile crisis, but it also exposed the need for better crisis communication and nuclear restraint.",
-        focusZh: "即时协议结束了导弹危机，但也暴露了危机沟通和核克制机制的必要性。",
-      },
-      {
-        lens: "If Castro had been in the room",
-        lensZh: "如果卡斯特罗在会议室里",
-        focus: "The crisis would not look like only a US-Soviet chessboard. Cuba's invasion memory, sovereignty claim, and fear of abandonment would force a different definition of security.",
-        focusZh: "危机就不会只像美苏棋盘。古巴的被入侵记忆、主权诉求和被抛弃恐惧，会迫使会议重新定义什么叫安全。",
-      },
-      {
-        lens: "If Turkey or NATO allies had a visible seat",
-        lensZh: "如果土耳其或北约盟友公开在场",
-        focus: "The secret Jupiter missile trade would become harder. Kennedy's room would need to balance alliance trust against crisis exit, not simply bargain privately with Moscow.",
-        focusZh: "秘密撤出 Jupiter 导弹的交易会变得更困难。肯尼迪的会议室必须同时权衡盟友信任和危机出口，而不只是与莫斯科私下交易。",
-      },
-      {
-        lens: "If a UN mediator controlled the tempo",
-        lensZh: "如果联合国调停者控制节奏",
-        focus: "The likely move would be to slow public humiliation, create inspection language, and turn military movement into verifiable steps. That helps peace, but may weaken direct presidential control.",
-        focusZh: "最可能的操作，是降低公开羞辱、设计核查语言，并把军事动作转成可验证步骤。这有利于和平，但也会削弱总统直接控制节奏的能力。",
-      },
-    ],
-    miniQuestion: "When a crisis needs both firmness and an exit ramp, how should leaders decide what to make public and what to keep private?",
-    miniQuestionZh: "当危机同时需要强硬和退路时，领导者应该如何决定什么公开、什么保密？",
-    isPublished: true,
-    createdAt: "2026-06-13",
-    updatedAt: "2026-06-13",
-  },
+    "characters": [],
+    "coreConcepts": [],
+    "isPublished": true
+  }
 ];
 
 function getKnowledgeAreas() {
@@ -9418,32 +4856,7 @@ function getFounderStories() {
   }
 }
 
-const reviewedPublishedStoryOverridesZh = {
-  "well-runs-low": {
-    "storyBodyZh": "井水不是某个早晨突然消失的。先是水龙头出水变慢，接着老水管旁的石头总是潮湿，菜园浇水的桶数也越来越多。镇上的这种做法并非没有道理：谁先缺水，谁先去井边取；谁的事情更急，谁就多说几句。它能让一天勉强运转，却把维护、优先级和共同记忆都推到旁边。直到面包店警报响起，水压却不够接上消防软管，原来的做法才顶不住了。托马想给幼苗留水，萨娜先问诊所还能撑多久，尼科摊开那张带了好几周的维修图，阿雅让大家把各自水桶放到桌下，先沿着水管、井口、菜园和消防栓画一遍。原来的做法最危险的地方，是让每个人都以为自己只是在保护一桶水。可井不是私人物件，它把厨房、诊所、菜园、消防和道路施工拴在一起。只要这些关系不被画出来，下一次警报仍会把大家推回互相争抢。阿雅又让人把过去三次维修、两次停水和消防演练日期写在井旁石板上。那些原本只是抱怨的日期排在一起，才显出维护被一再推迟。问题不再只是“谁现在最需要水”，而变成“这口井怎样同时支撑食物、健康、生计和安全”。当漏水点、用水高峰和维修延误被放在同一张图上，井才从背景变成证据：危机不是突然来临，而是系统很久以前就开始低声提醒。于是，分水不再是临时善意，而变成要被记录、维修和共同复盘的公共安排。",
-    "insightZh": "一场看得见的危机，常常是看不见系统的最后一章。水井可以被看成资源、维护、健康、农业、消防和信任的交汇点；真正的判断不是谁更急，而是哪一条关系已经长期没有被看见。"
-  },
-  "bread-price-debate": {
-    "storyBodyZh": "奥托天还没亮就改了面包价格，木牌上的新数字被雨水打湿了一角。原来的做法很简单：顾客看价格，店主给理由，大家用贵不贵来判断公平。这个办法并不荒唐，价格确实能把面粉、人工和租金压缩成一个数。可当天早晨，数字没有结束争论，反而点燃了它。皮姆拍下新价格，贝娅要求看最近三周的面粉账，马洛沿着磨坊、推车、烤炉和货架追了一遍，才发现涨价里有真实成本，也有没写出来的恐惧。奥托承认，他多加了一点，因为下一批面粉可能更贵，而他害怕到时候所有人只责怪他。原来的做法最容易漏掉的是时间。今天的价格不只来自昨天的面粉，也来自店主对下一批货、下一场雨和下一次指责的预判。镇民不必接受所有涨价，但他们需要知道自己反对的是哪一层：真实成本、风险转嫁，还是没有说出口的恐惧。贝娅把账本翻到上个月，皮姆把价格照片按日期排开，马洛在纸上画出磨坊到面包架的路线。争论终于有了可以检查的顺序。问题不再只是“这个面包是不是太贵”，而变成“一个价格里，哪些是成本，哪些是风险，哪些是议价能力，哪些是对未来的判断”。当账本、路线和害怕被摊开，价格牌不再只是算术；它变成一段公共关系，要求人们同时看见事实和处境。从那以后，镇民看价格牌时会多停一秒：他们要问的不是数字冷不冷，而是数字藏了什么。",
-    "insightZh": "公平不能只从表面数字判断。价格压缩了成本、不确定性、议价能力、声誉和恐惧；把这些层次拆开，争论才不只是情绪，也不只是账本。"
-  },
-  "school-curriculum-debate": {
-    "storyBodyZh": "莉娜带来三份教案，以为会议会很快投票结束。原来的做法看起来可靠：课程按章节排列，目标写清楚，考试能检查学生记住了什么。学校需要这种秩序，否则每个人都会把课堂拉向自己的关心。可任带来的不是另一份教案，而是一叠小记录：学生能背定义，却在坏掉的公交时刻表前停住；能说出健康概念，却看不懂药品标签；能复述媒体素养，却在班级群谣言里不知道先核对什么。有人说学校不该变成现实生活本身。萨娜没有反驳口号，只把几张记录贴到白板上。莉娜擦掉原来的议程，写下：“一个孩子应该能看见什么？”原来的做法的局限，不是事实不重要，而是事实被放得太整齐。学生在真实生活里遇到的从来不是“第几章”的问题，而是同时带着文字、数字、身体、信任和判断的混合情境。课程若不训练这种迁移，答案就会留在纸上。任没有用一句“生活很复杂”压过别人，而是把三个学生卡住的瞬间逐条读出来：读不懂、不会查、不敢判断。会议因此有了证据压力。问题不再只是“这一章要不要加入课程”，而变成“课程训练学生注意什么、连接什么、在混乱里先检查什么”。事实仍然重要，工具仍然重要；只是它们不再躺在清单里，而要能跟着学生走出教室。那一刻，课程表没有变成答案，却开始像一张地图：它要告诉孩子遇到混乱时先看哪里。",
-    "insightZh": "学习不只是储存答案，而是在建立注意力。课程会悄悄决定什么值得被看见，什么可以被忽略，以及学习者能不能把事实、工具和判断带到真实情境里。"
-  },
-  "broad-street-pump": {
-    "storyBodyZh": "1854 年 9 月初，London Soho 的 Broad Street 附近，门牌号和死亡姓名被一行行记进纸上。那时许多人先看空气：臭沟、潮湿、腐败气味，好像已经足够解释霍乱。这个解释并非没有道理，气味确实常和污水、拥挤和疾病站在一起。可一个医生把地址标到地图上时，纸面开始不听气味的指挥。某些气味重的地方死亡不多，某些离街口远的人却喝过同一口水；济贫院和啤酒厂的例外，也需要被重新核对。他没有只画黑点，而是敲门询问水从哪里来，借助 Henry Whitehead 等地方知识追查习惯、路径和反例。旧解释的吸引力在于它很直观：臭味人人看得见、闻得到，也和贫穷街区的污水相连。地图的困难则在于，它要求人暂时相信一条看不见的路径。病例、门牌、水泵和例外被一起核对时，水才从日常用品变成可以干预的传播线索。这不是一张漂亮地图。每一个黑点背后都有地址、家庭习惯和取水路线；每一个反例都必须被追问，否则图形很容易变成另一种偏见。问题不再只是“哪片空气最脏”，而变成“哪些身体把同一口水带进了生活”。9 月 7 日，他向 St James 教区管理者陈述这种病例模式；第二天水泵把手被拆除。疫情当时已经在下降，把手不是神奇终点，但那张地图和走访让公共卫生看见：城市疾病可以沿着水源、街道、习惯和基础设施被追问。",
-    "insightZh": "真正的转向不只是拆掉水泵把手，而是改变什么可以成为公共证据。分散死亡被放回地图、供水和生活习惯里，公共卫生才不再只盯着气味和恐惧。"
-  },
-  "challenger-launch-decision": {
-    "storyBodyZh": "1986 年 1 月 27 日夜里，发射台还没有火焰，争论已经挤进电话会议。桌上有温度预报、旧飞行记录和几张 O 型密封圈图。原来的做法看起来像工程会议的常规动作：拿出数据，说明风险，管理层判断是否继续。它并非没有秩序；航天项目每天都要在复杂证据和进度压力之间做选择。可这一次，低温把旧秩序顶住了。Morton Thiokol 工程师担心橡胶密封圈在异常寒冷条件下无法及时封住固体火箭助推器接缝，并提出不要在低于既有经验边界 53 华氏度的条件下发射。随后问题被悄悄换了方向。会议不再追问“系统是否证明安全”，而变成工程师要证明“它一定不安全”。管理层离线重议后推翻建议，第二天挑战者号升空，并在 73 秒后解体。后来的调查指出右侧固体火箭发动机接缝密封失效，也指出决策过程本身失效：警告存在，却没有获得足够清楚、受保护、能叫停行动的路径。旧流程的可怕之处，是它看起来仍像正常流程。有人提数据，有人问证据，有人负责进度，每一步都能被解释成工作需要。举证责任被调换以后，风险不再需要证明自己不存在；警告反而必须证明灾难必然发生。这个翻转让风险管理从技术判断变成组织问题：谁能把坏消息送到真正能停下按钮的人面前。",
-    "insightZh": "挑战者号不只是机器失效，也是知识流动路径失效。高风险系统真正要问的不是有没有人知道危险，而是警告有没有权力打断惯性。"
-  },
-  "cuban-missile-crisis-excomm": {
-    "storyBodyZh": "1962 年 10 月，U-2 侦察照片摊在会议桌上，黑白影像里的发射场还在建设。原来的问题似乎很直接：怎样把古巴的苏联导弹拿掉。这个问法并不幼稚，因为导弹真实存在，时间也在收紧。可每一种快答案都带着下一步危险。空袭可能漏掉导弹，入侵可能杀死苏联人员，强硬公开表态可能关上谈判出口，软弱又可能让威慑失去可信度。肯尼迪没有立刻公开，而是召集 ExComm 反复比较军事动作、措辞、时间和对方还能后退的余地。原来的问题的危险，是它把对方也当成没有内部压力的棋子。会议室真正难处理的，是每个动作都会被莫斯科、哈瓦那、盟友、军方和公众同时阅读。危机管理因此不只是选择工具，而是设计一串还能被对方接受、被自己解释的信号。照片只是入口。顾问们还要比较舰队位置、公开讲话、私下渠道和赫鲁晓夫信件里的语气。每一项都可能改变下一步的读法。问题不再只是“怎样清除威胁”，而变成“怎样施压，同时给对手留下可接受的退路”。最后选择的海上“隔离”比直接攻击低一级，却把危机推到公开场域。后来的解决方案包括苏联撤出古巴导弹、美国承诺不入侵古巴，以及秘密撤出土耳其 Jupiter 导弹。危机结束后，热线和核试验限制谈判继续出现，因为双方都看见了指挥、语言和时间在核危机里有多脆弱。",
-    "insightZh": "这场危机最深的成就不是胜利，而是把升级控制在还能谈判的范围内。军事能力、政治信号、历史记忆、语言、时间和公众合法性同时行动，任何单一视角都不足以解释房间里的选择。"
-  }
-};
+const reviewedPublishedStoryOverridesZh = {};
 
 Object.values(reviewedPublishedStoryOverridesZh).forEach((story) => applyPdcWebsiteStoryGateZh20260621(story));
 
@@ -9587,7 +5000,9 @@ function getPublishedStoryLensStories() {
   return publishedStoryLensStories;
 }
 
+const gptBatchStoryIds = new Set(Object.keys(gptWebsiteStoryOverridesZh20260622));
 const conceptFableLensStories = addConceptFablesToLensStories();
+removeNonGptBatchLensStories();
 
 function makeConceptFableLensStory(fable) {
   const field = getFieldByCode(fable.selectedFieldCode);
@@ -9639,6 +5054,24 @@ function addConceptFablesToLensStories() {
     lensStories.push(lensStory);
   });
   return nextStories;
+}
+
+function getGptBatchSourceStoryId(story) {
+  if (!story) return "";
+  if (story.sourceStoryId) return story.sourceStoryId;
+  if (story.sourceConceptFableId) return story.sourceConceptFableId;
+  const id = story.id || "";
+  return id.startsWith(publishedStoryLensIdPrefix) ? id.slice(publishedStoryLensIdPrefix.length) : id;
+}
+
+function isGptBatchLensStory(story) {
+  return gptBatchStoryIds.has(getGptBatchSourceStoryId(story));
+}
+
+function removeNonGptBatchLensStories() {
+  for (let index = lensStories.length - 1; index >= 0; index -= 1) {
+    if (!isGptBatchLensStory(lensStories[index])) lensStories.splice(index, 1);
+  }
 }
 
 function getActiveBaseLensStories() {
