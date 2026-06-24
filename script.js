@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.78";
+const appVersion = "0.1.79";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -163,6 +163,7 @@ const uiText = {
     lensStoryShelfTitle: "Each lens opens into a story set.",
     lensStoryShelfCopy: "Each image opens one everyday story for a MapKAI lens.",
     lensStoryShelfLens: "Lens",
+    browseAllStories: "Browse all Lens Stories",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
     storyPerspectivesTitle: "Historical debate",
@@ -526,6 +527,7 @@ const uiText = {
     lensStoryShelfTitle: "每个 Lens 里面都有一组故事。",
     lensStoryShelfCopy: "每张图片打开一个 MapKAI Lens 的生活故事。",
     lensStoryShelfLens: "镜头",
+    browseAllStories: "浏览全部故事",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
     storyPerspectivesTitle: "当时的讨论",
@@ -9547,7 +9549,6 @@ function addPublishedStoriesToLensStories() {
 }
 
 function getHiddenStoriesRedirectRoute(route) {
-  if (route === "/stories") return "/categories";
   const match = route.match(/^\/stories\/([a-z0-9-]+)$/);
   if (!match) return "";
   return publishedStoryLensRoutesByStoryId[match[1]] || "/categories";
@@ -16640,7 +16641,7 @@ function renderStories() {
     tags: getConceptFableList(fable, "tags").slice(0, 3),
     sortKey: `${fable.categoryCode || "99"}:concept:${getConceptFableValue(fable, "title")}`,
   }));
-  const caseEntries = getPublishedStories().map((story) => ({
+  const caseEntries = getPublishedStories().filter((story) => !publishedStoryLensRoutesByStoryId[story.id]).map((story) => ({
     href: `/stories/${story.id}`,
     typeLabel: currentLanguage === "zh" ? "案例故事" : "Case story",
     scopeLabel: story.eventType || t("storiesEyebrow"),
