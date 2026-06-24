@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.83";
+const appVersion = "0.1.84";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -4366,12 +4366,12 @@ const lensStoryOverridesZh = {
   },
   "0711": {
     "titleZh": "烧杯放大以后",
-    "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
-    "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
-    "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。从实验室到工厂，成功不只是反应发生了，而是反应能不能被稳定、可控、可维护地重复。",
-    "supportZh": "George E. Davis 是英国化学工程先驱，1887 年在 Manchester 开设化学工程系列讲座，1901 年出版《A Handbook of Chemical Engineering》，强调工业化学过程和单元操作思想。",
-    "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
+    "summaryZh": "一只小烧杯里的成功，到了生产罐里会变成传热、搅拌、控制和安全问题。",
+    "sceneZh": "实验室里，一种清洁剂配方在小烧杯中表现很好；生产主管却追问它放大到一千升后是否仍然稳定。",
+    "storyBodyZh": "实验室里，一种清洁剂配方在小烧杯中表现很好。颜色稳定，气味可接受，反应也很快。研发人员把样品交给工厂后，生产主管只问了一句：“放大到一千升，还会这样吗？”\n\n在实验室里成功，很容易让人觉得问题已经解决。比例清楚，步骤写好，反应能发生，产品效果也不错。小烧杯里的结果看起来很可靠，像是只要把原料按比例放大，就能进入生产。\n\n可工厂里的罐体不是一只大号烧杯。搅拌速度不同，温度散得更慢，原料加入顺序会影响局部浓度，反应放热也可能在大体积中累积。小烧杯里几秒钟消失的泡沫，放大后可能变成溢出风险；实验室里手动滴加的步骤，到了生产线需要泵、阀门和监测仪表配合。\n\n生产主管让团队先做中试。他们把配方放到较小的试验罐中，记录温度变化、搅拌时间、泡沫高度和杂质比例。第一次测试时，温度上升比预期快，操作员不得不暂停加料。配方没有错，但工艺路线还不够稳。\n\n化学工程与工艺关心的，正是从“反应能发生”到“生产能持续”的转变。它要处理反应器、传热、传质、流体、分离、控制、安全、成本和废料。化学变化一旦走出烧杯，就进入了设备、人员和风险共同存在的现场。\n\n几轮调整后，团队改变了加料顺序，并增加冷却控制。清洁剂终于能稳定生产。研发人员再次看那只小烧杯时，知道真正的难题不是让反应发生一次，而是让它在更大的世界里安全地重复发生。",
+    "supportZh": "虚构生产场景；工艺要点来自化学工程常见的放大、中试、传热、搅拌、过程控制与安全风险。",
+    "knowledgePointZh": "化学工程与工艺把实验室反应转化为安全、可控、可规模化、可维护的生产流程，关注反应器、传热传质、流体、分离、控制、安全、成本和废料等条件。",
+    "reflectionQuestionZh": "当一个方案在小规模里成功时，你会不会继续追问：放大以后，哪些条件会变成新的风险？",
     "tagsZh": [
       "化学工程",
       "工艺",
@@ -5861,11 +5861,11 @@ const reviewedLensStoryOverridesZh = {
   },
   "0711-chemical-engineering-and-processes": {
     "titleZh": "烧杯放大以后",
-    "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
-    "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
-    "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
-    "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？"
+    "summaryZh": "一只小烧杯里的成功，到了生产罐里会变成传热、搅拌、控制和安全问题。",
+    "sceneZh": "实验室里，一种清洁剂配方在小烧杯中表现很好；生产主管却追问它放大到一千升后是否仍然稳定。",
+    "storyBodyZh": "实验室里，一种清洁剂配方在小烧杯中表现很好。颜色稳定，气味可接受，反应也很快。研发人员把样品交给工厂后，生产主管只问了一句：“放大到一千升，还会这样吗？”\n\n在实验室里成功，很容易让人觉得问题已经解决。比例清楚，步骤写好，反应能发生，产品效果也不错。小烧杯里的结果看起来很可靠，像是只要把原料按比例放大，就能进入生产。\n\n可工厂里的罐体不是一只大号烧杯。搅拌速度不同，温度散得更慢，原料加入顺序会影响局部浓度，反应放热也可能在大体积中累积。小烧杯里几秒钟消失的泡沫，放大后可能变成溢出风险；实验室里手动滴加的步骤，到了生产线需要泵、阀门和监测仪表配合。\n\n生产主管让团队先做中试。他们把配方放到较小的试验罐中，记录温度变化、搅拌时间、泡沫高度和杂质比例。第一次测试时，温度上升比预期快，操作员不得不暂停加料。配方没有错，但工艺路线还不够稳。\n\n化学工程与工艺关心的，正是从“反应能发生”到“生产能持续”的转变。它要处理反应器、传热、传质、流体、分离、控制、安全、成本和废料。化学变化一旦走出烧杯，就进入了设备、人员和风险共同存在的现场。\n\n几轮调整后，团队改变了加料顺序，并增加冷却控制。清洁剂终于能稳定生产。研发人员再次看那只小烧杯时，知道真正的难题不是让反应发生一次，而是让它在更大的世界里安全地重复发生。",
+    "knowledgePointZh": "化学工程与工艺把实验室反应转化为安全、可控、可规模化、可维护的生产流程，关注反应器、传热传质、流体、分离、控制、安全、成本和废料等条件。",
+    "reflectionQuestionZh": "当一个方案在小规模里成功时，你会不会继续追问：放大以后，哪些条件会变成新的风险？"
   },
   "0712-environmental-protection-technology": {
     "titleZh": "水龙头里的安全",
@@ -7526,11 +7526,11 @@ const gptWebsiteStoryOverridesZh20260622 = {
   },
   "0711-chemical-engineering-and-processes": {
     "titleZh": "烧杯放大以后",
-    "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
-    "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
-    "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。\n\n他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。\n\n把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。\n\n这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
-    "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
+    "summaryZh": "一只小烧杯里的成功，到了生产罐里会变成传热、搅拌、控制和安全问题。",
+    "sceneZh": "实验室里，一种清洁剂配方在小烧杯中表现很好；生产主管却追问它放大到一千升后是否仍然稳定。",
+    "storyBodyZh": "实验室里，一种清洁剂配方在小烧杯中表现很好。颜色稳定，气味可接受，反应也很快。研发人员把样品交给工厂后，生产主管只问了一句：“放大到一千升，还会这样吗？”\n\n在实验室里成功，很容易让人觉得问题已经解决。比例清楚，步骤写好，反应能发生，产品效果也不错。小烧杯里的结果看起来很可靠，像是只要把原料按比例放大，就能进入生产。\n\n可工厂里的罐体不是一只大号烧杯。搅拌速度不同，温度散得更慢，原料加入顺序会影响局部浓度，反应放热也可能在大体积中累积。小烧杯里几秒钟消失的泡沫，放大后可能变成溢出风险；实验室里手动滴加的步骤，到了生产线需要泵、阀门和监测仪表配合。\n\n生产主管让团队先做中试。他们把配方放到较小的试验罐中，记录温度变化、搅拌时间、泡沫高度和杂质比例。第一次测试时，温度上升比预期快，操作员不得不暂停加料。配方没有错，但工艺路线还不够稳。\n\n化学工程与工艺关心的，正是从“反应能发生”到“生产能持续”的转变。它要处理反应器、传热、传质、流体、分离、控制、安全、成本和废料。化学变化一旦走出烧杯，就进入了设备、人员和风险共同存在的现场。\n\n几轮调整后，团队改变了加料顺序，并增加冷却控制。清洁剂终于能稳定生产。研发人员再次看那只小烧杯时，知道真正的难题不是让反应发生一次，而是让它在更大的世界里安全地重复发生。",
+    "knowledgePointZh": "化学工程与工艺把实验室反应转化为安全、可控、可规模化、可维护的生产流程，关注反应器、传热传质、流体、分离、控制、安全、成本和废料等条件。",
+    "reflectionQuestionZh": "当一个方案在小规模里成功时，你会不会继续追问：放大以后，哪些条件会变成新的风险？",
     "metaphorMapZh": []
   },
   "0712-environmental-protection-technology": {
@@ -9585,6 +9585,60 @@ function getLensStoryById(storyId) {
 
 function getPublishedStoryLensStories() {
   return publishedStoryLensStories;
+}
+
+const conceptFableLensStories = addConceptFablesToLensStories();
+
+function makeConceptFableLensStory(fable) {
+  const field = getFieldByCode(fable.selectedFieldCode);
+  const { category, group } = getCategoryGroupForField(field);
+  const imageSource = getPublishedStoryImageSource(category, group, field) || {};
+  const fieldCode = field?.code || fable.selectedFieldCode || "";
+  const fieldTitleZh = field?.titleZh || field?.title || fable.conceptNameZh || fable.titleZh || fable.id;
+  return {
+    id: fable.id,
+    storyLevel: "concept-fable",
+    categoryCode: category?.code || fable.categoryCode || "00",
+    groupCode: group?.code || "",
+    groupTitle: group?.title || "",
+    groupTitleZh: group?.chineseTitle || group?.title || "",
+    fieldCodes: fieldCode ? [fieldCode] : [],
+    fieldTitlesZh: fieldCode ? { [fieldCode]: fieldTitleZh } : {},
+    image: imageSource.image || "/assets/stories/000-general-starter-course.png",
+    imageAlt: imageSource.imageAlt || "A MapKAI concept story connected to a knowledge lens.",
+    imageAltZh: imageSource.imageAltZh || "一个连接 MapKAI 知识镜头的概念故事。",
+    imageInheritedFromGroup: true,
+    title: fable.title || fable.conceptName || fable.id,
+    titleZh: fable.titleZh || fable.conceptNameZh || fable.title || fable.id,
+    summary: fable.summary || fable.reveal || fable.explanation || "",
+    summaryZh: fable.summaryZh || fable.revealZh || fable.explanationZh || "",
+    scene: fable.scene || fable.summary || "",
+    sceneZh: fable.sceneZh || fable.summaryZh || "",
+    storyBody: fable.storyBody || fable.summary || "",
+    storyBodyZh: fable.storyBodyZh || fable.summaryZh || "",
+    support: "",
+    supportZh: "",
+    knowledgePoint: fable.knowledgePoint || fable.explanation || fable.reveal || "",
+    knowledgePointZh: fable.knowledgePointZh || fable.explanationZh || fable.revealZh || "",
+    reflectionQuestion: fable.reflectionQuestion || "",
+    reflectionQuestionZh: fable.reflectionQuestionZh || fable.reflectionQuestion || "",
+    tags: fable.tags || [fable.conceptName || fable.title || "concept fable"],
+    tagsZh: fable.tagsZh || [fable.conceptNameZh || fable.titleZh || "概念寓言"],
+    sourceConceptFableId: fable.id,
+    sourceConceptFableRoute: `/concept-fables/${fable.id}`,
+    originalConceptFable: fable,
+  };
+}
+
+function addConceptFablesToLensStories() {
+  const nextStories = [];
+  conceptFables.forEach((fable) => {
+    if (lensStories.some((story) => story.id === fable.id)) return;
+    const lensStory = makeConceptFableLensStory(fable);
+    nextStories.push(lensStory);
+    lensStories.push(lensStory);
+  });
+  return nextStories;
 }
 
 function getActiveBaseLensStories() {
@@ -18430,7 +18484,7 @@ function renderCategoryTree(category) {
     .join("");
   const conceptFableMatchesField = conceptFable && conceptFable.selectedFieldCode === activeFieldCode;
   const conceptFableButton = conceptFableMatchesField
-    ? `<a class="submodule-story-button is-concept" href="/concept-fables/${conceptFable.id}" data-route="/concept-fables/${conceptFable.id}">
+    ? `<a class="submodule-story-button is-concept" href="/lens-stories/${conceptFable.id}" data-route="/lens-stories/${conceptFable.id}">
         <small>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</small>
         <span>${escapeHtml(getConceptFableValue(conceptFable, "conceptName"))}</span>
         <em>${escapeHtml(t("importantConceptStories"))}</em>
