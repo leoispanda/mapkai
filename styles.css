@@ -4177,6 +4177,16 @@ canvas {
   padding-left: 12px;
 }
 
+.field-story-actions .submodule-story-button {
+  height: 78px;
+  min-height: 78px;
+}
+
+.submodule-story-button.is-active-field-story {
+  border-color: rgba(15, 107, 87, 0.34);
+  box-shadow: 0 14px 30px rgba(15, 107, 87, 0.08);
+}
+
 .submodule-story-section {
   display: grid;
   gap: 10px;

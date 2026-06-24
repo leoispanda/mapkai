@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.80";
+const appVersion = "0.1.81";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -8820,10 +8820,7 @@ function isInterdisciplinaryTitle(title) {
 }
 
 function isPublicNarrowFieldGroup(group) {
-  return Boolean(group) &&
-    !isNotFurtherDefinedTitle(group.title) &&
-    !isNotElsewhereClassifiedTitle(group.title) &&
-    !isInterdisciplinaryTitle(group.title);
+  return Boolean(group);
 }
 
 function getPublicCategoryTitle(categoryOrCode) {
@@ -8844,7 +8841,7 @@ function getPublicNarrowFieldGroups(category) {
 }
 
 function getPracticalFieldRowsForGroup(group) {
-  return (group?.fields || []).filter(([, title]) => !isAdministrativeCoordinate(title));
+  return group?.fields || [];
 }
 
 function getPublicCategoryStats(category) {
@@ -8896,22 +8893,15 @@ function getGeneralEntryNode(category) {
 }
 
 function getPublicCategoryEntryNodes(category) {
-  return [
-    getGeneralEntryNode(category),
-    ...getPublicNarrowFieldGroups(category).map((group) => ({
-      id: `narrow:${group.code}`,
-      type: "public_narrow_field",
-      categoryCode: category.code,
-      group,
-    })),
-  ];
+  return getPublicNarrowFieldGroups(category).map((group) => ({
+    id: `narrow:${group.code}`,
+    type: "public_narrow_field",
+    categoryCode: category.code,
+    group,
+  }));
 }
 
 function getPublicLensStoryFieldTitle(story, code, fallbackTitle) {
-  const fieldTitle = fallbackTitle || "";
-  if (isNotFurtherDefinedTitle(fieldTitle)) return t("generalEntryLabel");
-  if (isNotElsewhereClassifiedTitle(fieldTitle)) return currentLanguage === "zh" ? "其他待归类" : "Other topics";
-  if (isInterdisciplinaryTitle(fieldTitle)) return currentLanguage === "zh" ? "跨领域路径" : "Cross-field path";
   return getLensStoryFieldTitle(story, code, fallbackTitle);
 }
 
@@ -18399,13 +18389,6 @@ function renderCategoryTree(category) {
   const activeFieldStories = activeFieldCode ? getLensStoriesForField(category.code, activeGroup.code, activeFieldCode) : [];
   const activeFieldStory = activeFieldStories[0] || null;
   const activeFieldTitle = activeFieldCode ? getPublicLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
-  const groupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
-  const groupIntroStory = activeGroupStory && !activeFieldStories.length
-    ? `<a class="submodule-story-button is-group" href="/lens-stories/${activeGroupStory.id}" data-route="/lens-stories/${activeGroupStory.id}">
-        <span>${escapeHtml(groupTitle)}</span>
-        <em>${escapeHtml(t("submoduleIntroStory"))}</em>
-      </a>`
-    : "";
   const fieldButtons = practicalFields
     .map(([fieldCode, fieldTitle]) => {
       const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
@@ -18417,30 +18400,43 @@ function renderCategoryTree(category) {
         </button>`;
     })
     .join("");
+  const allFieldStoryActions = practicalFields
+    .map(([fieldCode, fieldTitle]) => {
+      const primaryStory = getLensStoriesForField(category.code, activeGroup.code, fieldCode)
+        .find((story) => story.storyLevel !== "published-story");
+      const displayTitle = getPublicLensStoryFieldTitle(primaryStory || activeGroupStory, fieldCode, fieldTitle);
+      if (!primaryStory) {
+        return `<div class="submodule-story-button is-empty">
+          <small>${escapeHtml(displayTitle || t("detailedFieldLabel"))}</small>
+          <span>${escapeHtml(t("noStoryReady"))}</span>
+          <em>${escapeHtml(t("fieldIntroStory"))}</em>
+        </div>`;
+      }
+      return `<a class="submodule-story-button is-field ${fieldCode === activeFieldCode ? "is-active-field-story" : ""}" href="/lens-stories/${primaryStory.id}" data-route="/lens-stories/${primaryStory.id}">
+        <small>${escapeHtml(displayTitle)}</small>
+        <span>${escapeHtml(getLensStoryValue(primaryStory, "title") || displayTitle)}</span>
+        <em>${escapeHtml(t("fieldIntroStory"))}</em>
+      </a>`;
+    })
+    .join("");
   const conceptFable = getConceptFableForCategory(category.code);
-  const fieldIntroStory = activeFieldStories.length
-    ? activeFieldStories
-        .map((story) => {
-          const isPublishedStory = story.storyLevel === "published-story";
-          const label = isPublishedStory ? (currentLanguage === "zh" ? "故事" : "Story") : t("fieldIntroStory");
-          return `<a class="submodule-story-button ${isPublishedStory ? "is-case" : "is-field"}" href="/lens-stories/${story.id}" data-route="/lens-stories/${story.id}">
-            <span>${escapeHtml(getLensStoryValue(story, "title") || activeFieldTitle)}</span>
-            <em>${escapeHtml(label)}</em>
-          </a>`;
-        })
-        .join("")
-    : activeFieldCode ? `<div class="submodule-story-button is-empty">
-        <span>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</span>
-        <small>${escapeHtml(t("noStoryReady"))}</small>
-      </div>` : "";
+  const activeCaseStoryActions = activeFieldStories
+    .filter((story) => story.storyLevel === "published-story")
+    .map((story) => `<a class="submodule-story-button is-case" href="/lens-stories/${story.id}" data-route="/lens-stories/${story.id}">
+      <small>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</small>
+      <span>${escapeHtml(getLensStoryValue(story, "title") || activeFieldTitle)}</span>
+      <em>${escapeHtml(currentLanguage === "zh" ? "补充故事" : "Related story")}</em>
+    </a>`)
+    .join("");
   const conceptFableMatchesField = conceptFable && conceptFable.selectedFieldCode === activeFieldCode;
   const conceptFableButton = conceptFableMatchesField
     ? `<a class="submodule-story-button is-concept" href="/concept-fables/${conceptFable.id}" data-route="/concept-fables/${conceptFable.id}">
+        <small>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</small>
         <span>${escapeHtml(getConceptFableValue(conceptFable, "conceptName"))}</span>
         <em>${escapeHtml(t("importantConceptStories"))}</em>
       </a>`
     : "";
-  const fieldStoryActions = `${groupIntroStory}${fieldIntroStory}${conceptFableButton}`.trim();
+  const fieldStoryActions = `${allFieldStoryActions}${activeCaseStoryActions}${conceptFableButton}`.trim();
   target.innerHTML = `
     <div class="submodule-browser">
       <div class="hierarchy-layer module-layer">
