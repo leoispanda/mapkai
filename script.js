@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.79";
+const appVersion = "0.1.80";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -163,7 +163,6 @@ const uiText = {
     lensStoryShelfTitle: "Each lens opens into a story set.",
     lensStoryShelfCopy: "Each image opens one everyday story for a MapKAI lens.",
     lensStoryShelfLens: "Lens",
-    browseAllStories: "Browse all Lens Stories",
     backToStories: "Back to Stories",
     storyInsightTitle: "Conclusion",
     storyPerspectivesTitle: "Historical debate",
@@ -527,7 +526,6 @@ const uiText = {
     lensStoryShelfTitle: "每个 Lens 里面都有一组故事。",
     lensStoryShelfCopy: "每张图片打开一个 MapKAI Lens 的生活故事。",
     lensStoryShelfLens: "镜头",
-    browseAllStories: "浏览全部故事",
     backToStories: "返回故事",
     storyInsightTitle: "结论",
     storyPerspectivesTitle: "当时的讨论",
@@ -9549,6 +9547,7 @@ function addPublishedStoriesToLensStories() {
 }
 
 function getHiddenStoriesRedirectRoute(route) {
+  if (route === "/stories") return "/categories";
   const match = route.match(/^\/stories\/([a-z0-9-]+)$/);
   if (!match) return "";
   return publishedStoryLensRoutesByStoryId[match[1]] || "/categories";
@@ -16619,53 +16618,7 @@ function renderStories() {
   const target = document.getElementById("storiesGrid");
   if (!target) return;
   target.classList.remove("is-lens-story-grid");
-  const lensStoryEntries = lensStories.map((story) => {
-      const category = categories.find((item) => item.code === story.categoryCode);
-      const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
-    return {
-      href: `/lens-stories/${story.id}`,
-      typeLabel: currentLanguage === "zh" ? "知识故事" : "Lens story",
-      scopeLabel: categoryTitle,
-      title: getLensStoryValue(story, "title"),
-      summary: getLensStoryValue(story, "summary"),
-      tags: getLensStoryList(story, "tags").slice(0, 3),
-      sortKey: `${story.categoryCode || "99"}:${story.groupCode || ""}:${story.fieldCodes?.[0] || ""}:${getLensStoryValue(story, "title")}`,
-    };
-  });
-  const conceptEntries = conceptFables.map((fable) => ({
-    href: `/concept-fables/${fable.id}`,
-    typeLabel: currentLanguage === "zh" ? "概念寓言" : "Concept fable",
-    scopeLabel: getConceptFableCategoryTitle(fable),
-    title: getConceptFableValue(fable, "title"),
-    summary: getConceptFableValue(fable, "summary"),
-    tags: getConceptFableList(fable, "tags").slice(0, 3),
-    sortKey: `${fable.categoryCode || "99"}:concept:${getConceptFableValue(fable, "title")}`,
-  }));
-  const caseEntries = getPublishedStories().filter((story) => !publishedStoryLensRoutesByStoryId[story.id]).map((story) => ({
-    href: `/stories/${story.id}`,
-    typeLabel: currentLanguage === "zh" ? "案例故事" : "Case story",
-    scopeLabel: story.eventType || t("storiesEyebrow"),
-    title: getStoryTitle(story),
-    summary: getStorySummary(story),
-    tags: getStoryPublicTags(story).slice(0, 3),
-    sortKey: `zz:${story.eventType || ""}:${getStoryTitle(story)}`,
-  }));
-  const visibleStories = [...lensStoryEntries, ...conceptEntries, ...caseEntries]
-    .filter((entry) => entry.title)
-    .sort((a, b) => a.sortKey.localeCompare(b.sortKey));
-  target.innerHTML = visibleStories
-    .map((entry) => `
-      <a class="story-card story-entry-card" href="${escapeHtml(entry.href)}" data-route="${escapeHtml(entry.href)}">
-        <div class="story-card-topline">
-          <span>${escapeHtml(entry.typeLabel)}</span>
-          <span>${escapeHtml(entry.scopeLabel)}</span>
-        </div>
-        <h2>${escapeHtml(entry.title)}</h2>
-        <p>${escapeHtml(entry.summary)}</p>
-        <div class="story-tag-row">${entry.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
-        <strong>${escapeHtml(t("readStory"))}</strong>
-      </a>`)
-    .join("");
+  target.innerHTML = "";
 }
 
 function renderConceptFables() {
@@ -18371,9 +18324,11 @@ function renderCategoryTree(category) {
     return;
   }
   const savedEntryId = activeCategoryPublicEntries[category.code] || activeCategorySubmodules[category.code];
-  const activeEntry =
-    publicEntries.find((entry) => entry.id === savedEntryId || entry.group?.code === savedEntryId) ||
-    publicEntries[0];
+  const defaultEntry = publicEntries.find((entry) => entry.type === "public_narrow_field") || publicEntries[0];
+  const savedEntry = savedEntryId
+    ? publicEntries.find((entry) => entry.id === savedEntryId || entry.group?.code === savedEntryId)
+    : null;
+  const activeEntry = savedEntry || defaultEntry;
   activeCategoryPublicEntries[category.code] = activeEntry.id;
 
   const entryButtons = publicEntries
@@ -18434,15 +18389,18 @@ function renderCategoryTree(category) {
   const practicalFields = getPracticalFieldRowsForGroup(activeGroup);
   const fieldStateKey = `${category.code}:${activeGroup.code}`;
   const savedFieldCode = activeCategoryFields[fieldStateKey];
-  const activeField = savedFieldCode ? practicalFields.find(([fieldCode]) => fieldCode === savedFieldCode) : null;
+  const activeField = savedFieldCode
+    ? practicalFields.find(([fieldCode]) => fieldCode === savedFieldCode)
+    : practicalFields[0];
   const activeFieldCode = activeField?.[0] || "";
   const activeFieldFallbackTitle = activeField?.[1] || "";
   if (savedFieldCode && !activeFieldCode) delete activeCategoryFields[fieldStateKey];
+  if (!savedFieldCode && activeFieldCode) activeCategoryFields[fieldStateKey] = activeFieldCode;
   const activeFieldStories = activeFieldCode ? getLensStoriesForField(category.code, activeGroup.code, activeFieldCode) : [];
   const activeFieldStory = activeFieldStories[0] || null;
   const activeFieldTitle = activeFieldCode ? getPublicLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
   const groupTitle = getLensStoryValue(activeGroupStory, "groupTitle") || activeGroup.title;
-  const groupIntroStory = activeGroupStory
+  const groupIntroStory = activeGroupStory && !activeFieldStories.length
     ? `<a class="submodule-story-button is-group" href="/lens-stories/${activeGroupStory.id}" data-route="/lens-stories/${activeGroupStory.id}">
         <span>${escapeHtml(groupTitle)}</span>
         <em>${escapeHtml(t("submoduleIntroStory"))}</em>
