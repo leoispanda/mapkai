@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.81";
+const appVersion = "0.1.82";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -382,10 +382,10 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens, start from its General Entry, then open public fields and practical story paths.",
+    categoriesCopy: "Choose a lens, then open public fields and practical story paths.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
-    categoryCopy: (groups, fields) => `This lens has one General Entry, ${groups} public fields, and ${fields} practical detailed fields.`,
+    categoryCopy: (groups, fields) => `This lens has ${groups} public fields and ${fields} practical detailed fields.`,
     submoduleLabel: "Public fields",
     submoduleIntroStory: "Narrow field overview",
     generalEntryLabel: "General Entry",
@@ -745,10 +745,10 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "先选择一个领域，从总览入口进入，再打开公开小领域和实践故事路径。",
+    categoriesCopy: "先选择一个领域，再打开公开小领域和实践故事路径。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
-    categoryCopy: (groups, fields) => `这个领域包含 1 个总览入口、${groups} 个公开小领域和 ${fields} 个实践细分领域。`,
+    categoryCopy: (groups, fields) => `这个领域包含 ${groups} 个公开小领域和 ${fields} 个实践细分领域。`,
     submoduleLabel: "公开小领域",
     submoduleIntroStory: "小领域概览",
     generalEntryLabel: "总览入口",
@@ -4365,13 +4365,13 @@ const lensStoryOverridesZh = {
     ]
   },
   "0711": {
-    "titleZh": "工厂里的化学不再只是烧瓶",
+    "titleZh": "烧杯放大以后",
     "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
     "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
     "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。所以它不只是把东西做出来，而是在训练人让设计经得起真实压力。从实验室到工厂，成功不只是反应发生了，而是反应能不能被稳定、可控、可维护地重复。",
     "supportZh": "George E. Davis 是英国化学工程先驱，1887 年在 Manchester 开设化学工程系列讲座，1901 年出版《A Handbook of Chemical Engineering》，强调工业化学过程和单元操作思想。",
     "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧瓶成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
+    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
     "tagsZh": [
       "化学工程",
       "工艺",
@@ -5860,12 +5860,12 @@ const reviewedLensStoryOverridesZh = {
     "reflectionQuestionZh": "当工具语言更接近人的语言，谁会第一次被允许进入技术世界？"
   },
   "0711-chemical-engineering-and-processes": {
-    "titleZh": "工厂里的化学不再只是烧瓶",
+    "titleZh": "烧杯放大以后",
     "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
     "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
     "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。这个人叫 George E. Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
     "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧瓶成功到工厂稳定，中间有哪些条件会突然变成真正的问题？"
+    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？"
   },
   "0712-environmental-protection-technology": {
     "titleZh": "水龙头里的安全",
@@ -7525,12 +7525,12 @@ const gptWebsiteStoryOverridesZh20260622 = {
     "metaphorMapZh": []
   },
   "0711-chemical-engineering-and-processes": {
-    "titleZh": "工厂里的化学不再只是烧瓶",
+    "titleZh": "烧杯放大以后",
     "summaryZh": "一个讲授工业流程的人，让化学工程从实验室反应走向可放大的生产系统。",
     "sceneZh": "19 世纪英国的化工厂旁，一个顾问和教师看见酸、碱、气体和设备在大规模生产里变得危险又昂贵。",
     "storyBodyZh": "实验室里反应成功，不等于工厂就能稳定、安全、便宜地生产。温度、压力、流量、腐蚀、废气、管道和工人安全都会改变结果。\n\n他开始把不同化工行业中的共同操作抽出来讲：蒸馏、吸收、过滤、传热、物料平衡。这个思路让化学工程有了自己的对象：不是单个化学反应，而是把反应变成连续、可控、可规模化流程的全部条件。\n\n把图纸、配方或一次成功当成完成，仍有它的用处；但要让判断走得更远，就必须把材料测试、流程控制、结构计算和安全边界变成可学习的工作。\n\n这个人叫 George E.Davis，他通过化学工程讲座和《A Handbook of Chemical Engineering》推动 chemical engineering 作为独立工程领域形成。",
     "knowledgePointZh": "化学工程与工艺把化学反应转化为安全、可控、可规模化和可维护的生产流程。",
-    "reflectionQuestionZh": "从烧瓶成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
+    "reflectionQuestionZh": "从烧杯成功到工厂稳定，中间有哪些条件会突然变成真正的问题？",
     "metaphorMapZh": []
   },
   "0712-environmental-protection-technology": {
@@ -16909,7 +16909,7 @@ function renderCategories() {
         <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(categoryTitle)}">
           <strong>${escapeHtml(categoryTitle)}</strong>
           <span>${escapeHtml(getCategoryThinking(category.code))}</span>
-          <small>1 ${escapeHtml(t("generalEntryLabel"))} · ${stats.narrowCount} ${escapeHtml(t("groups"))} · ${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</small>
+          <small>${stats.narrowCount} ${escapeHtml(t("groups"))} · ${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</small>
         </a>`;
     })
     .join("");
