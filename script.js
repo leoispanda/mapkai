@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.85";
+const appVersion = "0.1.86";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -382,25 +382,26 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens, then open public fields and practical story paths.",
+    categoriesCopy: "Choose a lens, then open a subject to see its stories.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
-    categoryCopy: (groups, fields) => `This lens has ${groups} public fields and ${fields} practical detailed fields.`,
-    submoduleLabel: "Public fields",
-    submoduleIntroStory: "Narrow field overview",
+    categoryCopy: (subjects, stories) => `This lens has ${subjects} subjects and ${stories} story cards.`,
+    submoduleLabel: "Subjects",
+    submoduleIntroStory: "Subject overview",
     generalEntryLabel: "General Entry",
     generalEntryStory: "General overview story",
     generalEntryScope: "Broad foundations, shared questions, and entry stories for this lens.",
-    detailedFieldLabel: "Practical detailed fields",
-    fieldIntroStory: "Practical field story",
+    detailedFieldLabel: "Stories",
+    fieldIntroStory: "Subject story",
     importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
     openDetailedField: "Open field",
     openStory: "Open story",
     noStoryReady: "This story is still being prepared.",
-    groups: "public fields",
-    detailedFields: "practical fields",
+    groups: "subjects",
+    detailedFields: "story cards",
+    subjectStoryCount: (count) => count === 1 ? "1 story" : `${count} stories`,
     learningEyebrow: "Cognitive Expansion",
     learningTitle: "Learning is a direction for expanding how you think.",
     learningCopy: "MapKAI learning is not a course list. It suggests cognitive directions after exploration reveals a pattern.",
@@ -745,25 +746,26 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "先选择一个领域，再打开公开小领域和实践故事路径。",
+    categoriesCopy: "先选择一个领域，再打开 subject 查看故事。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
-    categoryCopy: (groups, fields) => `这个领域包含 ${groups} 个公开小领域和 ${fields} 个实践细分领域。`,
-    submoduleLabel: "公开小领域",
-    submoduleIntroStory: "小领域概览",
+    categoryCopy: (subjects, stories) => `这个领域包含 ${subjects} 个 subject 和 ${stories} 张故事卡片。`,
+    submoduleLabel: "Subject",
+    submoduleIntroStory: "Subject 概览",
     generalEntryLabel: "总览入口",
     generalEntryStory: "总览故事",
     generalEntryScope: "这个领域的基础框架、共同问题和入口故事。",
-    detailedFieldLabel: "实践细分领域",
-    fieldIntroStory: "实践领域故事",
+    detailedFieldLabel: "故事卡片",
+    fieldIntroStory: "Subject 故事",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
     openDetailedField: "打开条目",
     openStory: "打开故事",
     noStoryReady: "这个故事还在准备中。",
-    groups: "个公开小领域",
-    detailedFields: "个实践领域",
+    groups: "个 subject",
+    detailedFields: "张故事卡片",
+    subjectStoryCount: (count) => `${count} 张故事卡片`,
     learningEyebrow: "认知扩展",
     learningTitle: "学习是扩展思考方式的方向。",
     learningCopy: "MapKAI 的学习不是课程列表，而是在探索显现模式后，给出认知扩展方向。",
@@ -4188,7 +4190,8 @@ const conceptFables = [
     titleZh: "没有正面的挂毯",
     summary: "A museum apprentice learns that the whole picture and each thread keep changing each other.",
     summaryZh: "博物馆学徒发现，整幅图和每一根线会不断互相改变。",
-    storyBody: "A museum received an old tapestry with no label. The apprentice wanted to hang it at once, but no one could tell which side was the front. From far away it looked like a storm at sea. Up close, one thread looked like a road, another like a river, another like the sleeve of a person bending down. Each time the apprentice stepped back, the whole scene changed; each time the whole scene changed, the tiny threads meant something different. He became frustrated and asked the curator for the correct answer. The curator laughed softly and told him to keep walking between the wall and the cloth. After many days, he stopped asking for one final front. He learned to let the whole guide the parts and let the parts disturb the whole. Only in the last note of his catalog did he realize that the hidden method was the hermeneutic circle: interpretation moves between parts and whole until meaning becomes richer, never simply extracted from one side.",
+    scene: "A museum received an unlabeled old tapestry. As soon as the crate opened, dust and loose threads spread across the restoration table.",
+    storyBody: "A museum received an unlabeled old tapestry. As soon as the crate opened, dust and loose threads spread across the restoration table. The apprentice was eager to hang it, but no one could say which side was the front.\n\nFrom far away, it looked like a storm at sea. Up close, one thread looked like a road, another like a river, and a small patch of color looked like the sleeve of a person bending down. He followed the museum catalog habit and numbered every patch of color, assuming that once all the parts were identified, the whole picture would become clear.\n\nBut on the second day, when he stepped back to the wall, the blue thread he had labeled as a river could also be a fold in clothing, and the gray thread he had labeled as a road looked like the shadow of a mast. He tried starting from the whole instead, calling the tapestry a storm scene, but several details refused to obey that whole: there were wheat stalks near the sleeve, and in the corner, a bird almost broken by missing thread.\n\nOn the third day, the exhibition lead pressed him to write a label. The apprentice wrote \"shipwreck scene,\" but as soon as it was posted, gold thread revealed under the restoration lamp looked like festival banners. He tore the label down and changed \"shipwreck\" into a temporary hypothesis.\n\nOn the fourth day, he asked two colleagues to describe the image from different positions, one from the doorway and one beside the restoration table. The person at the door saw a migrating group; the person at the table saw fragments of ceremonial clothing.\n\nThe two readings conflicted, yet both sent him back to threads he had ignored. The curator did not give him an answer. She only asked him to walk between the wall and the cloth three times each day: first to record the picture from a distance, second to record the nearby threads, and third to write which detail had changed his judgment of the whole.\n\nAfter a month, he rewrote the label into three columns: current whole judgment, details that supported it, and clues that still disturbed it. When visitors asked what the tapestry really was, he no longer hurried to defend his pride. He pointed out how judgment changed when a new thread came into view.\n\nHe also kept abandoned interpretations in the archive, because old readings showed where he had once looked wrongly. A few weeks later, the apprentice stopped searching for the one true front.\n\nHe learned to let the whole give direction to the parts, while also allowing a thread, a patch, or a worn place to overturn the whole. When he wrote the catalog, the tapestry still had not been solved once and for all, but it had become more readable than on the first day.\n\nThe label no longer gave only a conclusion. It showed which details kept rewriting the judgment. This is the hermeneutic circle: understanding moves back and forth between part and whole. Meaning is not extracted directly from one side; it becomes deeper through repeated revision.",
     storyBodyZh: "一家博物馆收到一张没有标签的旧挂毯，木箱一打开，灰尘和细线一起散在修复台上。学徒急着把它挂起来，可没人说得清哪一面才是正面。远看像海上的风暴，近看却有一根线像路，一根线像河，还有一小片颜色像弯腰人的袖口。他先照目录习惯给每一块颜色编号，以为把局部都认完，整幅图自然会清楚。可第二天，他退到墙边，发现昨天标成河流的蓝线也可能是衣褶，标成道路的灰线又像船桅的阴影。他改从整体入手，把挂毯暂定为风暴图，结果近看时几个细节又不肯服从：袖口旁有麦穗，角落里还有一只几乎断线的鸟。第三天，展览负责人催他写一张说明牌，学徒写下「海难场景」，可刚贴上去，修复灯下露出的金线又像节庆旗帜；他只好撕掉说明牌，把「海难」改成一个暂时假设。第四天，他请两位同伴分别从门口和修复台边描述画面。门口的人看见迁徙队伍，台边的人看见祭服残片；两种说法互相冲突，却都让他回去重看那些被忽略的线。馆长没有给答案，只让他每天在墙和织物之间走三次，第一次记录远看的画面，第二次记录近处的线头，第三次写下哪一个局部改变了整体判断。一个月后，他把说明牌改成三栏：目前的整体判断、支持它的细节、仍会扰动判断的线索。参观者问他到底是哪一种，他不再急着维护面子，而是指给他们看判断怎样被新线头改变。他还把被放弃的解释留在档案里，因为旧解释说明了自己曾经从哪里看错。几周后，学徒不再追问唯一正面。他会先让整体给局部一个方向，又允许一根线、一块补丁、一个磨损处把整体推翻。等他写目录时，挂毯仍没有被一次性解开，却比第一天更可读了；说明牌上也不再只有一句结论，而是写着哪些细节让判断被不断重写。这就是诠释循环：理解在部分与整体之间往返，意义不是从某一面直接取出，而是在反复修正中变得更深。",
     reveal: "The apprentice did not solve the tapestry by choosing one distance. He learned to think by moving between distances.",
     revealZh: "学徒不是靠选定一个观看距离解开挂毯，而是学会在不同距离之间移动地思考。",
@@ -4570,12 +4573,23 @@ function getPracticalFieldRowsForGroup(group) {
   return group?.fields || [];
 }
 
+function isPublicSubjectFieldTitle(title) {
+  return !isAdministrativeCoordinate(title);
+}
+
+function getPublicSubjectFieldRowsForGroup(group) {
+  return getPracticalFieldRowsForGroup(group).filter(([, title]) => isPublicSubjectFieldTitle(title));
+}
+
 function getPublicCategoryStats(category) {
-  const narrowFields = getPublicNarrowFieldGroups(category);
-  const practicalFields = narrowFields.reduce((total, group) => total + getPracticalFieldRowsForGroup(group).length, 0);
+  const subjectEntries = getPublicCategoryEntryNodes(category);
+  const storyIds = new Set();
+  subjectEntries.forEach((entry) => {
+    getPublicSubjectStoryItems(category, entry).forEach((item) => storyIds.add(item.id));
+  });
   return {
-    narrowCount: narrowFields.length,
-    practicalCount: practicalFields,
+    narrowCount: subjectEntries.length,
+    practicalCount: storyIds.size,
   };
 }
 
@@ -4619,12 +4633,71 @@ function getGeneralEntryNode(category) {
 }
 
 function getPublicCategoryEntryNodes(category) {
-  return getPublicNarrowFieldGroups(category).map((group) => ({
-    id: `narrow:${group.code}`,
-    type: "public_narrow_field",
-    categoryCode: category.code,
-    group,
-  }));
+  return getPublicNarrowFieldGroups(category).flatMap((group) =>
+    getPublicSubjectFieldRowsForGroup(group).map(([fieldCode, fieldTitle, fieldTitleZh = ""]) => ({
+      id: `subject:${group.code}:${fieldCode}`,
+      type: "subject_field",
+      categoryCode: category.code,
+      group,
+      fieldCode,
+      fieldTitle,
+      fieldTitleZh,
+    }))
+  );
+}
+
+function getPublicSubjectFallbackTitle(entry) {
+  if (!entry) return "";
+  return currentLanguage === "zh" ? entry.fieldTitleZh || entry.fieldTitle : entry.fieldTitle;
+}
+
+function getPublicSubjectTitle(entry) {
+  if (!entry) return "";
+  const referenceStory =
+    getLensStoryForField(entry.categoryCode, entry.group?.code, entry.fieldCode) ||
+    getLensStoryForGroup(entry.categoryCode, entry.group?.code);
+  return getPublicLensStoryFieldTitle(referenceStory, entry.fieldCode, getPublicSubjectFallbackTitle(entry));
+}
+
+function getPublicSubjectStoryLabel(story) {
+  if (story?.storyLevel === "published-story") return t("openStory");
+  if (story?.storyLevel === "field") return t("fieldIntroStory");
+  if (story?.storyLevel === "group") return t("submoduleIntroStory");
+  return t("openStory");
+}
+
+function getPublicSubjectStoryItems(category, entry) {
+  if (!category || !entry?.fieldCode || !entry.group?.code) return [];
+  const subjectTitle = getPublicSubjectTitle(entry);
+  const seen = new Set();
+  const storyItems = getLensStoriesForField(category.code, entry.group.code, entry.fieldCode)
+    .filter((story) => {
+      const id = `story:${story.id}`;
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    })
+    .map((story) => ({
+      id: `story:${story.id}`,
+      href: `/lens-stories/${story.id}`,
+      className: story.storyLevel === "published-story" ? "is-case" : story.storyLevel === "field" ? "is-field" : "is-intro",
+      kicker: subjectTitle,
+      title: getLensStoryValue(story, "title") || subjectTitle,
+      label: getPublicSubjectStoryLabel(story),
+    }));
+  const conceptFable = getConceptFableForCategory(category.code);
+  const conceptId = conceptFable ? `concept:${conceptFable.id}` : "";
+  if (conceptFable?.selectedFieldCode === entry.fieldCode && !seen.has(conceptId)) {
+    storyItems.push({
+      id: conceptId,
+      href: `/lens-stories/${conceptFable.id}`,
+      className: "is-concept",
+      kicker: subjectTitle,
+      title: getConceptFableValue(conceptFable, "conceptName"),
+      label: t("importantConceptStories"),
+    });
+  }
+  return storyItems;
 }
 
 function getPublicLensStoryFieldTitle(story, code, fallbackTitle) {
@@ -13795,137 +13868,51 @@ function renderCategoryDetail(code) {
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
-  const publicEntries = getPublicCategoryEntryNodes(category);
-  if (!publicEntries.length) {
+  const subjectEntries = getPublicCategoryEntryNodes(category);
+  if (!subjectEntries.length) {
     target.innerHTML = "";
     return;
   }
-  const savedEntryId = activeCategoryPublicEntries[category.code] || activeCategorySubmodules[category.code];
-  const defaultEntry = publicEntries.find((entry) => entry.type === "public_narrow_field") || publicEntries[0];
-  const savedEntry = savedEntryId
-    ? publicEntries.find((entry) => entry.id === savedEntryId || entry.group?.code === savedEntryId)
-    : null;
-  const activeEntry = savedEntry || defaultEntry;
+  const savedEntryId = activeCategoryPublicEntries[category.code];
+  const savedGroupCode = activeCategorySubmodules[category.code];
+  const savedFieldCode = savedGroupCode ? activeCategoryFields[`${category.code}:${savedGroupCode}`] : "";
+  const savedEntry = subjectEntries.find((entry) =>
+    entry.id === savedEntryId ||
+    entry.fieldCode === savedEntryId ||
+    (entry.group.code === savedGroupCode && entry.fieldCode === savedFieldCode)
+  );
+  const activeEntry = savedEntry || subjectEntries.find((entry) => entry.group.code === savedGroupCode) || subjectEntries[0];
   activeCategoryPublicEntries[category.code] = activeEntry.id;
+  activeCategorySubmodules[category.code] = activeEntry.group.code;
+  activeCategoryFields[`${category.code}:${activeEntry.group.code}`] = activeEntry.fieldCode;
 
-  const entryButtons = publicEntries
+  const entryButtons = subjectEntries
     .map((entry) => {
       const isActive = entry.id === activeEntry.id;
-      if (entry.type === "general_entry") {
-        return `
-          <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
-            <span>${escapeHtml(entry.title)}</span>
-            <small>${escapeHtml(t("generalEntryLabel"))}</small>
-          </button>`;
-      }
-      const groupStory = getLensStoryForGroup(category.code, entry.group.code);
-      const groupTitle = getLensStoryValue(groupStory, "groupTitle") || entry.group.title;
-      const practicalCount = getPracticalFieldRowsForGroup(entry.group).length;
+      const subjectTitle = getPublicSubjectTitle(entry);
+      const storyCount = getPublicSubjectStoryItems(category, entry).length;
       return `
         <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
-          <span>${escapeHtml(groupTitle)}</span>
-          <small>${practicalCount} ${escapeHtml(t("detailedFields"))}</small>
+          <span>${escapeHtml(subjectTitle)}</span>
+          <small>${escapeHtml(t("subjectStoryCount", storyCount))}</small>
         </button>`;
     })
     .join("");
-
-  if (activeEntry.type === "general_entry") {
-    activeCategorySubmodules[category.code] = activeEntry.sourceGroupCode;
-    const generalStory = activeEntry.story;
-    const generalStoryAction = generalStory
-      ? `<a class="submodule-story-button is-general" href="/lens-stories/${generalStory.id}" data-route="/lens-stories/${generalStory.id}">
-          <span>${escapeHtml(getLensStoryValue(generalStory, "title"))}</span>
-          <em>${escapeHtml(t("generalEntryStory"))}</em>
-        </a>`
-      : `<div class="submodule-story-button is-empty">
-          <span>${escapeHtml(activeEntry.title)}</span>
-          <small>${escapeHtml(t("noStoryReady"))}</small>
-        </div>`;
-    target.innerHTML = `
-      <div class="submodule-browser">
-        <div class="hierarchy-layer module-layer">
-          <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
-          <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
-            ${entryButtons}
-          </div>
-        </div>
-        <section class="submodule-compact-panel" aria-live="polite">
-          <div class="hierarchy-layer nested-field-layer">
-            <span class="hierarchy-layer-label">${escapeHtml(t("generalEntryLabel"))}</span>
-            <p class="general-entry-scope">${escapeHtml(activeEntry.scope)}</p>
-          </div>
-          <div class="field-story-actions">${generalStoryAction}</div>
-        </section>
-      </div>`;
-    return;
-  }
-
-  const activeGroup = activeEntry.group;
-  activeCategorySubmodules[category.code] = activeGroup.code;
-  const activeGroupStory = getLensStoryForGroup(category.code, activeGroup.code);
-  const practicalFields = getPracticalFieldRowsForGroup(activeGroup);
-  const fieldStateKey = `${category.code}:${activeGroup.code}`;
-  const savedFieldCode = activeCategoryFields[fieldStateKey];
-  const activeField = savedFieldCode
-    ? practicalFields.find(([fieldCode]) => fieldCode === savedFieldCode)
-    : practicalFields[0];
-  const activeFieldCode = activeField?.[0] || "";
-  const activeFieldFallbackTitle = activeField?.[1] || "";
-  if (savedFieldCode && !activeFieldCode) delete activeCategoryFields[fieldStateKey];
-  if (!savedFieldCode && activeFieldCode) activeCategoryFields[fieldStateKey] = activeFieldCode;
-  const activeFieldStories = activeFieldCode ? getLensStoriesForField(category.code, activeGroup.code, activeFieldCode) : [];
-  const activeFieldStory = activeFieldStories[0] || null;
-  const activeFieldTitle = activeFieldCode ? getPublicLensStoryFieldTitle(activeFieldStory || activeGroupStory, activeFieldCode, activeFieldFallbackTitle) : "";
-  const fieldButtons = practicalFields
-    .map(([fieldCode, fieldTitle]) => {
-      const fieldStory = getLensStoryForField(category.code, activeGroup.code, fieldCode);
-      const displayTitle = getPublicLensStoryFieldTitle(fieldStory || activeGroupStory, fieldCode, fieldTitle);
-      const isActive = fieldCode === activeFieldCode;
-      return `
-        <button class="detailed-field-button ${isActive ? "is-active" : ""}" type="button" data-field-select="${escapeHtml(category.code)}:${escapeHtml(activeGroup.code)}:${escapeHtml(fieldCode)}" aria-pressed="${isActive}">
-          <span>${escapeHtml(displayTitle)}</span>
-        </button>`;
-    })
-    .join("");
-  const allFieldStoryActions = practicalFields
-    .map(([fieldCode, fieldTitle]) => {
-      const primaryStory = getLensStoriesForField(category.code, activeGroup.code, fieldCode)
-        .find((story) => story.storyLevel !== "published-story");
-      const displayTitle = getPublicLensStoryFieldTitle(primaryStory || activeGroupStory, fieldCode, fieldTitle);
-      if (!primaryStory) {
-        return `<div class="submodule-story-button is-empty">
-          <small>${escapeHtml(displayTitle || t("detailedFieldLabel"))}</small>
-          <span>${escapeHtml(t("noStoryReady"))}</span>
-          <em>${escapeHtml(t("fieldIntroStory"))}</em>
-        </div>`;
-      }
-      return `<a class="submodule-story-button is-field ${fieldCode === activeFieldCode ? "is-active-field-story" : ""}" href="/lens-stories/${primaryStory.id}" data-route="/lens-stories/${primaryStory.id}">
-        <small>${escapeHtml(displayTitle)}</small>
-        <span>${escapeHtml(getLensStoryValue(primaryStory, "title") || displayTitle)}</span>
-        <em>${escapeHtml(t("fieldIntroStory"))}</em>
-      </a>`;
-    })
-    .join("");
-  const conceptFable = getConceptFableForCategory(category.code);
-  const activeCaseStoryActions = activeFieldStories
-    .filter((story) => story.storyLevel === "published-story")
-    .map((story) => `<a class="submodule-story-button is-case" href="/lens-stories/${story.id}" data-route="/lens-stories/${story.id}">
-      <small>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</small>
-      <span>${escapeHtml(getLensStoryValue(story, "title") || activeFieldTitle)}</span>
-      <em>${escapeHtml(currentLanguage === "zh" ? "补充故事" : "Related story")}</em>
+  const activeSubjectTitle = getPublicSubjectTitle(activeEntry);
+  const storyCards = getPublicSubjectStoryItems(category, activeEntry)
+    .map((item) => `<a class="submodule-story-button ${item.className}" href="${escapeHtml(item.href)}" data-route="${escapeHtml(item.href)}">
+      <small>${escapeHtml(item.kicker)}</small>
+      <span>${escapeHtml(item.title)}</span>
+      <em>${escapeHtml(item.label)}</em>
     </a>`)
     .join("");
-  const conceptFableMatchesField = conceptFable && conceptFable.selectedFieldCode === activeFieldCode;
-  const conceptFableButton = conceptFableMatchesField
-    ? `<a class="submodule-story-button is-concept" href="/lens-stories/${conceptFable.id}" data-route="/lens-stories/${conceptFable.id}">
-        <small>${escapeHtml(activeFieldTitle || t("detailedFieldLabel"))}</small>
-        <span>${escapeHtml(getConceptFableValue(conceptFable, "conceptName"))}</span>
-        <em>${escapeHtml(t("importantConceptStories"))}</em>
-      </a>`
-    : "";
-  const fieldStoryActions = `${allFieldStoryActions}${activeCaseStoryActions}${conceptFableButton}`.trim();
+  const emptyStoryCard = `<div class="submodule-story-button is-empty">
+    <small>${escapeHtml(activeSubjectTitle || t("submoduleLabel"))}</small>
+    <span>${escapeHtml(t("noStoryReady"))}</span>
+    <em>${escapeHtml(t("openStory"))}</em>
+  </div>`;
   target.innerHTML = `
-    <div class="submodule-browser">
+    <div class="submodule-browser is-subject-browser">
       <div class="hierarchy-layer module-layer">
         <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
         <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
@@ -13933,13 +13920,7 @@ function renderCategoryTree(category) {
         </div>
       </div>
       <section class="submodule-compact-panel" aria-live="polite">
-        <div class="hierarchy-layer nested-field-layer">
-          <span class="hierarchy-layer-label">${escapeHtml(t("detailedFieldLabel"))}</span>
-          <div class="detailed-field-button-list" role="tablist" aria-label="${escapeHtml(t("detailedFieldLabel"))}">
-            ${fieldButtons}
-          </div>
-        </div>
-        ${fieldStoryActions ? `<div class="field-story-actions">${fieldStoryActions}</div>` : ""}
+        <div class="field-story-actions">${storyCards || emptyStoryCard}</div>
        </section>
     </div>`;
 }
@@ -14447,7 +14428,12 @@ document.addEventListener("click", (event) => {
     const entry = category ? getPublicCategoryEntryNodes(category).find((item) => item.id === entryId) : null;
     if (category && entry) {
       activeCategoryPublicEntries[categoryCode] = entry.id;
-      if (entry.type === "public_narrow_field") activeCategorySubmodules[categoryCode] = entry.group.code;
+      if (entry.type === "subject_field") {
+        activeCategorySubmodules[categoryCode] = entry.group.code;
+        activeCategoryFields[`${categoryCode}:${entry.group.code}`] = entry.fieldCode;
+      } else if (entry.type === "public_narrow_field") {
+        activeCategorySubmodules[categoryCode] = entry.group.code;
+      }
       renderCategoryTree(category);
     }
     return;
@@ -14472,7 +14458,7 @@ document.addEventListener("click", (event) => {
     const group = category?.groups.find((item) => item.code === groupCode);
     if (category && group && group.fields.some(([code]) => code === fieldCode)) {
       activeCategorySubmodules[categoryCode] = groupCode;
-      activeCategoryPublicEntries[categoryCode] = `narrow:${groupCode}`;
+      activeCategoryPublicEntries[categoryCode] = `subject:${groupCode}:${fieldCode}`;
       activeCategoryFields[`${categoryCode}:${groupCode}`] = fieldCode;
       renderCategoryTree(category);
     }

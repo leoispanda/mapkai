@@ -4177,9 +4177,42 @@ canvas {
   padding-left: 12px;
 }
 
+.is-subject-browser .submodule-compact-panel {
+  gap: 10px;
+}
+
+.is-subject-browser .field-story-actions {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  border-left: 0;
+  padding-left: 0;
+}
+
+.is-subject-browser .submodule-button {
+  height: 76px;
+  min-height: 76px;
+}
+
 .field-story-actions .submodule-story-button {
   height: 78px;
   min-height: 78px;
+}
+
+.is-subject-browser .field-story-actions .submodule-story-button {
+  height: 110px;
+  min-height: 110px;
+}
+
+.is-subject-browser .submodule-story-button small {
+  font-size: 0.8rem;
+  line-height: 1.28;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.is-subject-browser .submodule-story-button span {
+  -webkit-line-clamp: 2;
 }
 
 .submodule-story-button.is-active-field-story {
