@@ -1,8 +1,8 @@
 {
   "batchId": "batch-001",
-  "importedAt": "2026-06-22",
+  "importedAt": "2026-06-27",
   "itemCount": 10,
-  "overrideCount": 10,
+  "overrideCount": 165,
   "validation": {
     "errors": [],
     "warnings": []
@@ -14,6 +14,19 @@
     "030-neighbor-notice-board",
     "040-kitchen-repair-budget",
     "050-balcony-plant-observation",
+    "061-phone-backup-help",
+    "070-wobbly-shelf-repair",
+    "080-community-garden-seedlings",
+    "090-medicine-schedule-care"
+  ],
+  "inputCorrections": [
+    {
+      "from": "061-information-choice-noise",
+      "to": "061-phone-backup-help",
+      "reason": "Attached GPT output renamed the existing MapKAI story id; restored the exported id."
+    }
+  ],
+  "replacedIds": [
     "061-phone-backup-help",
     "070-wobbly-shelf-repair",
     "080-community-garden-seedlings",

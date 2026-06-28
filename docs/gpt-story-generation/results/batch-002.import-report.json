@@ -1,8 +1,8 @@
 {
   "batchId": "batch-002",
-  "importedAt": "2026-06-22",
+  "importedAt": "2026-06-27",
   "itemCount": 10,
-  "overrideCount": 20,
+  "overrideCount": 165,
   "validation": {
     "errors": [],
     "warnings": []
@@ -14,6 +14,19 @@
     "003-carnegie-speaking-class",
     "009-brownsea-scout-camp",
     "018-reggio-emilia-school",
+    "021-bauhaus-workshop",
+    "022-petrarch-mountain-letter",
+    "023-rosetta-cartouche",
+    "028-black-mountain-studio"
+  ],
+  "inputCorrections": [
+    {
+      "from": "021-bauhaus-workshop-table",
+      "to": "021-bauhaus-workshop",
+      "reason": "Attached GPT output changed the existing MapKAI story id; restored the exported id."
+    }
+  ],
+  "replacedIds": [
     "021-bauhaus-workshop",
     "022-petrarch-mountain-letter",
     "023-rosetta-cartouche",

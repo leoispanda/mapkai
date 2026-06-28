@@ -123,6 +123,16 @@ The `寓言故事` section should normally be longer than a quick example.
 
 The concept explanation, metaphor mapping, analogy boundary, and reflection question should stay concise.
 
+## Paragraphing And Web Reading
+
+Do not output the `寓言故事` body as one dense paragraph unless the user explicitly requests a single-block draft.
+
+Use blank lines to divide a normal concept fable into 4-7 short paragraphs. Compact fables still need at least 2 paragraphs when the format allows it.
+
+Each story paragraph should carry one visible narrative job: scene entry, old rule, first friction, repeated friction, changed action, final image, or late reveal. Do not add headings inside the story body; paragraph breaks should improve reading rhythm without turning the fable into notes.
+
+The concept explanation, analogy boundary, and reflection question should also stay scannable. If an explanatory paragraph grows past about 180-220 Chinese characters, split it unless the sentence logic would be damaged.
+
 ## Narrative Development
 
 Build the fable in several beats:
@@ -308,7 +318,7 @@ Do not let this lens replace concept accuracy, metaphor mapping, analogy boundar
 {title}
 
 寓言故事
-{A serious, developed allegorical story. Do not name the concept until late in the story. Normally 700-1100 Chinese characters or 600-900 English words. Include old way, first friction, repeated friction, character adjustment, visible pattern, late reveal, and a short afterglow.}
+{A serious, developed allegorical story. Do not name the concept until late in the story. Normally 700-1100 Chinese characters or 600-900 English words. Use 4-7 short paragraphs separated by blank lines. Include old way, first friction, repeated friction, character adjustment, visible pattern, late reveal, and a short afterglow.}
 
 揭示的概念
 {Concept name}

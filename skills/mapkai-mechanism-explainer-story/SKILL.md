@@ -36,6 +36,20 @@ Explain how a concept works. This mode should prioritize mechanism, accuracy, an
 8. Boundary or common mistake
 9. Reflection question
 
+## Paragraphing And Scanability
+
+Do not output a mechanism article as one dense block.
+
+Use short paragraphs and clear section breaks. Each section should do one job:
+
+- `为什么需要它`: state the need in 1-2 short paragraphs.
+- `小场景`: show one concrete situation in 1-3 short paragraphs.
+- `机制解释`: split steps into short paragraphs or a compact numbered sequence.
+- `小例子`: keep the calculation or checkable example visually separate from the explanation.
+- `常见误解或边界`: use 1 short paragraph or a few compact bullets.
+
+For Chinese public website copy, avoid explanatory paragraphs longer than about 180-220 Chinese characters when possible. Split before the reader has to hold too many symbols, conditions, or causal steps at once.
+
 ## Hard Rules
 
 - Do not hide the mechanism behind a vague story.
@@ -58,16 +72,16 @@ Explain how a concept works. This mode should prioritize mechanism, accuracy, an
 {title}
 
 为什么需要它
-{Explain the problem this concept solves.}
+{Explain the problem this concept solves in 1-2 short paragraphs.}
 
 小场景
-{A concrete situation that makes the need visible.}
+{A concrete situation that makes the need visible. Use 1-3 short paragraphs if needed.}
 
 机制解释
-{Step-by-step explanation. Use clear language. Include a minimal formula if needed.}
+{Step-by-step explanation. Use clear language, short paragraphs, and a minimal formula if needed.}
 
 小例子
-{A short checkable example.}
+{A short checkable example, visually separated from the mechanism explanation.}
 
 概念名称
 {Concept name}
