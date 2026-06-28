@@ -5,9 +5,10 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.91";
+const appVersion = "0.1.98";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
+const storyRatingsKey = "mapkaiStoryRatings";
 const languageKey = "mapkaiLanguage";
 const themeKey = "mapkaiTheme";
 const founderModeKey = "mapkaiFounderMode";
@@ -23,6 +24,10 @@ let lastVisitStats = null;
 const activeCategorySubmodules = {};
 const activeCategoryFields = {};
 const activeCategoryPublicEntries = {};
+let storyRatingSummaries = {};
+let storyRatingTopList = [];
+let storyRatingsLoaded = false;
+let storyRatingStatus = "";
 
 // Keep existing story data in place while the public article rebuild is underway.
 const publicContentVisibility = {
@@ -182,6 +187,19 @@ const uiText = {
     storyPerspectivesTitle: "Historical debate",
     storyPerspectivesCopy: "Actual arguments, role trade-offs, and a few counterfactual seats at the table.",
     storyFocusLabel: "Focus",
+    ratingTitle: "Rate this story",
+    ratingCopy: "After reading, give this story a score from 1 to 5.",
+    ratingAverage: (average, count) => `Average ${average} / 5 · ${count} ${count === 1 ? "rating" : "ratings"}`,
+    ratingNoAverage: "No ratings yet.",
+    ratingYourScore: (score) => `Your score: ${score}/5`,
+    ratingSaved: "Thanks. Your score was saved.",
+    ratingLocalSaved: "Saved locally. Submit again when the rating API is available.",
+    ratingChoose: "Choose a score",
+    topRatedEyebrow: "Reader recommendations",
+    topRatedTitle: "Top rated stories",
+    topRatedCopy: "The five highest average scores rise here automatically.",
+    topRatedOpen: "Open story",
+    topRatedAverage: (average, count) => `${average}/5 · ${count} ${count === 1 ? "rating" : "ratings"}`,
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
@@ -396,25 +414,25 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens, then open a subject to explore its fields and questions.",
+    categoriesCopy: "Choose a lens to see its formal subfields directly.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
-    categoryCopy: (subjects) => `This lens has ${subjects} subjects.`,
-    submoduleLabel: "Subjects",
+    categoryCopy: (fields) => `This lens contains ${fields} formal subfields.`,
+    submoduleLabel: "Formal subfields",
     submoduleIntroStory: "Subject overview",
     generalEntryLabel: "General Entry",
     generalEntryStory: "General overview story",
     generalEntryScope: "Broad foundations and shared questions for this lens.",
-    detailedFieldLabel: "Fields",
-    fieldIntroStory: "Subject field",
+    detailedFieldLabel: "Formal subfields",
+    fieldIntroStory: "Field story",
     importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
     openDetailedField: "Open field",
     openStory: "Open story",
     noStoryReady: "This story is still being prepared.",
-    groups: "subjects",
-    detailedFields: "fields",
+    groups: "subfields",
+    detailedFields: "formal subfields",
     subjectStoryCount: (count) => count === 1 ? "1 story" : `${count} stories`,
     learningEyebrow: "Cognitive Expansion",
     learningTitle: "Learning is a direction for expanding how you think.",
@@ -548,6 +566,19 @@ const uiText = {
     storyPerspectivesTitle: "当时的讨论",
     storyPerspectivesCopy: "真实争论、角色权衡，以及几个“如果他在场会怎样”的反事实席位。",
     storyFocusLabel: "关注点",
+    ratingTitle: "给这篇故事打分",
+    ratingCopy: "读完之后，给这篇故事打一个 1 到 5 分。",
+    ratingAverage: (average, count) => `平均 ${average} / 5 · ${count} 次评分`,
+    ratingNoAverage: "还没有评分。",
+    ratingYourScore: (score) => `你的评分：${score}/5`,
+    ratingSaved: "谢谢，评分已保存。",
+    ratingLocalSaved: "已先保存在本地。评分接口可用后可再次提交。",
+    ratingChoose: "选择分数",
+    topRatedEyebrow: "读者推荐",
+    topRatedTitle: "评分最高的故事",
+    topRatedCopy: "平均分最高的 5 篇文章会自动出现在这里。",
+    topRatedOpen: "打开故事",
+    topRatedAverage: (average, count) => `${average}/5 · ${count} 次评分`,
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
@@ -762,25 +793,25 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "先选择一个领域，再打开 subject 查看结构和问题。",
+    categoriesCopy: "选择一个领域后，直接查看它下面的正式小学科。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
-    categoryCopy: (subjects) => `这个领域包含 ${subjects} 个 subject。`,
-    submoduleLabel: "Subject",
-    submoduleIntroStory: "Subject 概览",
+    categoryCopy: (fields) => `这个领域包含 ${fields} 个正式小学科。`,
+    submoduleLabel: "正式小学科",
+    submoduleIntroStory: "小学科概览",
     generalEntryLabel: "总览入口",
     generalEntryStory: "总览故事",
     generalEntryScope: "这个领域的基础框架和共同问题。",
-    detailedFieldLabel: "领域条目",
-    fieldIntroStory: "Subject 条目",
+    detailedFieldLabel: "正式小学科",
+    fieldIntroStory: "小学科故事",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
     openDetailedField: "打开条目",
     openStory: "打开故事",
     noStoryReady: "这个故事还在准备中。",
-    groups: "个 subject",
-    detailedFields: "个领域条目",
+    groups: "个小学科",
+    detailedFields: "个正式小学科",
     subjectStoryCount: (count) => `${count} 张故事卡片`,
     learningEyebrow: "认知扩展",
     learningTitle: "学习是扩展思考方式的方向。",
@@ -1417,6 +1448,151 @@ const publicCategoryLabels = {
     "08": "农业与生态",
     "09": "健康与医学",
     "10": "服务与运输",
+  },
+};
+
+const publicCategoryCardDisplay = {
+  zh: {
+    "00": {
+      originalTitle: "通用学习",
+      displayTitle: "成长的起点",
+      displayDescription: "一个人真正的起点，不是知道多少答案，而是开始知道如何寻找答案。",
+    },
+    "01": {
+      originalTitle: "教育",
+      displayTitle: "文明的接力",
+      displayDescription: "每一代人都会离开，但教育让他们的光没有熄灭，而是继续照亮后来的人。",
+    },
+    "02": {
+      originalTitle: "艺术与人文",
+      displayTitle: "文明的灵魂",
+      displayDescription: "当生命短暂、世界沉默时，人类用艺术、语言和记忆证明：我们曾经感受过，也曾经追问过。",
+    },
+    "03": {
+      originalTitle: "社会科学",
+      displayTitle: "秩序与冲突",
+      displayDescription: "它研究的不是遥远的世界，而是我们每天身处其中、却常常看不清的社会。",
+    },
+    "04": {
+      originalTitle: "商业与法律",
+      displayTitle: "欲望与责任",
+      displayDescription: "当欲望、资源和责任相遇，人类创造了商业与法律，努力让合作不只靠强者的意志。",
+    },
+    "05": {
+      originalTitle: "自然科学",
+      displayTitle: "向宇宙提问",
+      displayDescription: "人类向宇宙提问，并等待世界用规律回答。",
+    },
+    "06": {
+      originalTitle: "计算与技术",
+      displayTitle: "第二个大脑",
+      displayDescription: "人类把思想交给机器，把距离交给网络，把不可能交给下一次尝试。",
+    },
+    "07": {
+      originalTitle: "工程与建造",
+      displayTitle: "人类的手",
+      displayDescription: "像把梦想钉进大地的手。桥梁、城市和机器，让看不见的想法真正站起来。",
+    },
+    "08": {
+      originalTitle: "农业与生态",
+      displayTitle: "古老的约定",
+      displayDescription: "我们从土地获得生命，也终将明白：真正的丰收，不是征服自然，而是学会与它共同活下去。",
+    },
+    "09": {
+      originalTitle: "健康与医学",
+      displayTitle: "人类的守夜人",
+      displayDescription: "它不是让人永远不受伤，而是在痛苦、疾病和失去面前，为生命争取更多可能。",
+    },
+    "10": {
+      originalTitle: "服务与运输",
+      displayTitle: "抵达彼此",
+      displayDescription: "像连接世界的血脉。它让人、物、关怀和希望，能够穿过距离抵达彼此。",
+    },
+  },
+};
+
+const publicFieldLabels = {
+  zh: {
+    "0011": "基础课程与资格",
+    "0021": "读写与计算能力",
+    "0031": "个人技能与发展",
+    "0111": "教育科学",
+    "0112": "学前教师培养",
+    "0113": "非学科专项教师培养",
+    "0114": "学科专项教师培养",
+    "0211": "视听技术与媒体制作",
+    "0212": "时尚、室内与工业设计",
+    "0213": "美术",
+    "0214": "手工艺",
+    "0215": "音乐与表演艺术",
+    "0221": "宗教与神学",
+    "0222": "历史与考古",
+    "0223": "哲学与伦理",
+    "0231": "语言习得",
+    "0232": "文学与语言学",
+    "0311": "经济学",
+    "0312": "政治科学与公民学",
+    "0313": "心理学",
+    "0314": "社会学与文化研究",
+    "0321": "新闻与报道",
+    "0322": "图书馆、信息与档案研究",
+    "0411": "会计与税务",
+    "0412": "金融、银行与保险",
+    "0413": "管理与行政",
+    "0414": "市场营销与广告",
+    "0415": "秘书与办公室工作",
+    "0416": "批发与零售销售",
+    "0417": "工作技能",
+    "0421": "法律",
+    "0511": "生物学",
+    "0512": "生物化学",
+    "0521": "环境科学",
+    "0522": "自然环境与野生生物",
+    "0531": "化学",
+    "0532": "地球科学",
+    "0533": "物理学",
+    "0541": "数学",
+    "0542": "统计学",
+    "0611": "计算机使用",
+    "0612": "数据库与网络设计及管理",
+    "0613": "软件与应用开发及分析",
+    "0711": "化学工程与工艺",
+    "0712": "环境保护技术",
+    "0713": "电力与能源",
+    "0714": "电子与自动化",
+    "0715": "机械与金属工艺",
+    "0716": "机动车、船舶与航空器",
+    "0721": "食品加工",
+    "0722": "材料：玻璃、纸、塑料与木材",
+    "0723": "纺织：服装、鞋类与皮革",
+    "0724": "采矿与开采",
+    "0731": "建筑学与城市规划",
+    "0732": "建筑与土木工程",
+    "0811": "作物与畜牧生产",
+    "0812": "园艺",
+    "0821": "林业",
+    "0831": "渔业",
+    "0841": "兽医学",
+    "0911": "牙科研究",
+    "0912": "医学",
+    "0913": "护理与助产",
+    "0914": "医学诊断与治疗技术",
+    "0915": "治疗与康复",
+    "0916": "药学",
+    "0917": "传统与补充医学及疗法",
+    "0921": "老年人与残障成人照护",
+    "0922": "儿童照护与青少年服务",
+    "0923": "社会工作与咨询",
+    "1011": "家政服务",
+    "1012": "美发与美容服务",
+    "1013": "酒店、餐厅与餐饮服务",
+    "1014": "体育",
+    "1015": "旅行、旅游与休闲",
+    "1021": "社区环境卫生",
+    "1022": "职业健康与安全",
+    "1031": "军事与国防",
+    "1032": "人身与财产保护",
+    "1041": "运输服务",
   },
 };
 
@@ -6070,6 +6246,30 @@ function getPublicCategoryTitle(categoryOrCode) {
   return currentLanguage === "zh" ? categoryOrCode.chineseTitle || categoryOrCode.title : categoryOrCode.title;
 }
 
+function getPublicCategoryCardDisplay(category) {
+  const originalTitle = getPublicCategoryTitle(category);
+  const display = currentLanguage === "zh" ? publicCategoryCardDisplay.zh[category?.code] : null;
+  if (display) {
+    return {
+      originalTitle: display.originalTitle || originalTitle,
+      displayTitle: display.displayTitle || originalTitle,
+      displayDescription: display.displayDescription || getCategoryThinking(category.code),
+    };
+  }
+  return {
+    originalTitle,
+    displayTitle: originalTitle,
+    displayDescription: getCategoryThinking(category.code),
+  };
+}
+
+function getPublicFieldTitleByCode(fieldCode, fieldTitle, fieldTitleZh = "") {
+  if (currentLanguage === "zh") {
+    return publicFieldLabels.zh[fieldCode] || fieldTitleZh || fieldTitle || fieldCode;
+  }
+  return fieldTitle || fieldCode;
+}
+
 function getGeneralEntryScope(categoryCode) {
   const labels = currentLanguage === "zh" ? generalEntryScopes.zh : generalEntryScopes.en;
   return labels[categoryCode] || t("generalEntryScope");
@@ -6165,16 +6365,13 @@ function getPublicCategoryEntryNodes(category) {
 
 function getPublicSubjectFallbackTitle(entry) {
   if (!entry) return "";
-  return currentLanguage === "zh" ? entry.fieldTitleZh || entry.fieldTitle : entry.fieldTitle;
+  return getPublicFieldTitleByCode(entry.fieldCode, entry.fieldTitle, entry.fieldTitleZh);
 }
 
 function getPublicSubjectTitle(entry) {
   if (!entry) return "";
   if (entry.type === "general_entry") return entry.title || getPublicSubjectFallbackTitle(entry);
-  const referenceStory =
-    getLensStoryForField(entry.categoryCode, entry.group?.code, entry.fieldCode) ||
-    getLensStoryForGroup(entry.categoryCode, entry.group?.code);
-  return getPublicLensStoryFieldTitle(referenceStory, entry.fieldCode, getPublicSubjectFallbackTitle(entry));
+  return getPublicSubjectFallbackTitle(entry);
 }
 
 function getPublicSubjectStoryLabel(story) {
@@ -6433,7 +6630,7 @@ function getAreaDisplayTitle(area) {
 }
 
 function getFieldDisplayTitle(field) {
-  return currentLanguage === "zh" ? field.titleZh || field.title : field.title;
+  return getPublicFieldTitleByCode(field.code, field.title, field.titleZh);
 }
 
 function getCharacterById(id) {
@@ -6769,6 +6966,298 @@ function getConceptFableCategoryTitle(fable) {
   const category = categories.find((item) => item.code === fable.categoryCode);
   if (!category) return fable.categoryCode || "";
   return getPublicCategoryTitle(category);
+}
+
+function normalizeRatingSummary(summary) {
+  if (!summary?.storyId) return null;
+  return {
+    storyId: summary.storyId,
+    averageRating: Number(summary.averageRating || 0),
+    ratingCount: Number(summary.ratingCount || 0),
+  };
+}
+
+function mergeStoryRatingSummary(summary) {
+  const normalized = normalizeRatingSummary(summary);
+  if (!normalized) return;
+  storyRatingSummaries[normalized.storyId] = normalized;
+}
+
+function getLocalStoryRatings() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(storyRatingsKey) || "{}");
+    return stored && typeof stored === "object" && !Array.isArray(stored) ? stored : {};
+  } catch {
+    return {};
+  }
+}
+
+function setLocalStoryRating(storyId, rating) {
+  const ratings = getLocalStoryRatings();
+  ratings[storyId] = {
+    rating,
+    updatedAt: new Date().toISOString(),
+  };
+  localStorage.setItem(storyRatingsKey, JSON.stringify(ratings));
+}
+
+function getUserStoryRating(storyId) {
+  return Number(getLocalStoryRatings()[storyId]?.rating || 0);
+}
+
+function makeRatingArticle({ id, title, summary, href, categoryTitle, kind }) {
+  if (!id || !href) return null;
+  return {
+    id,
+    title: title || id,
+    summary: summary || "",
+    href,
+    categoryTitle: categoryTitle || "",
+    kind: kind || t("storiesEyebrow"),
+  };
+}
+
+function getRatingArticleForConceptFable(fable) {
+  if (!fable) return null;
+  return makeRatingArticle({
+    id: `concept-fable:${fable.id}`,
+    title: getConceptFableValue(fable, "title"),
+    summary: getConceptFableValue(fable, "summary"),
+    href: `/concept-fables/${fable.id}`,
+    categoryTitle: getConceptFableCategoryTitle(fable),
+    kind: t("conceptFablesEyebrow"),
+  });
+}
+
+function getRatingArticleForLensStory(story) {
+  if (!story) return null;
+  if (story.originalConceptFable || story.sourceConceptFableId) {
+    const fable = story.originalConceptFable || conceptFables.find((item) => item.id === story.sourceConceptFableId || item.id === story.id);
+    return getRatingArticleForConceptFable(fable);
+  }
+  const category = categories.find((item) => item.code === story.categoryCode);
+  const sourceStoryId = story.sourceStoryId || "";
+  return makeRatingArticle({
+    id: sourceStoryId ? `published-story:${sourceStoryId}` : `lens-story:${story.id}`,
+    title: getLensStoryValue(story, "title"),
+    summary: getLensStoryValue(story, "summary"),
+    href: sourceStoryId ? publishedStoryLensRoutesByStoryId[sourceStoryId] || `/lens-stories/${story.id}` : `/lens-stories/${story.id}`,
+    categoryTitle: category ? getPublicCategoryTitle(category) : "",
+    kind: story.storyLevel === "subject-intro" ? t("submoduleIntroStory") : t("lensStoryEyebrow"),
+  });
+}
+
+function getRatingArticleForPublishedStory(story) {
+  if (!story) return null;
+  return makeRatingArticle({
+    id: `published-story:${story.id}`,
+    title: getStoryTitle(story),
+    summary: getStorySummary(story),
+    href: publishedStoryLensRoutesByStoryId[story.id] || `/lens-stories/${getPublishedStoryLensId(story)}`,
+    categoryTitle: "",
+    kind: t("storiesEyebrow"),
+  });
+}
+
+function getAllRateableArticles() {
+  if (!arePublicArticlesVisible()) return [];
+  const articlesById = new Map();
+  conceptFables.forEach((fable) => {
+    const article = getRatingArticleForConceptFable(fable);
+    if (article) articlesById.set(article.id, article);
+  });
+  lensStories.forEach((story) => {
+    const article = getRatingArticleForLensStory(story);
+    if (article && !articlesById.has(article.id)) articlesById.set(article.id, article);
+  });
+  getPublishedStories().forEach((story) => {
+    const article = getRatingArticleForPublishedStory(story);
+    if (article && !articlesById.has(article.id)) articlesById.set(article.id, article);
+  });
+  return Array.from(articlesById.values());
+}
+
+function getRateableArticleById(storyId) {
+  return getAllRateableArticles().find((article) => article.id === storyId) || null;
+}
+
+function getStoryRatingSummary(storyId) {
+  const savedSummary = storyRatingSummaries[storyId];
+  const userRating = getUserStoryRating(storyId);
+  if (savedSummary?.ratingCount) return savedSummary;
+  return userRating ? { storyId, averageRating: userRating, ratingCount: 1 } : { storyId, averageRating: 0, ratingCount: 0 };
+}
+
+function formatAverageRating(value) {
+  const rating = Number(value || 0);
+  return rating ? rating.toFixed(1).replace(/\.0$/, "") : "0";
+}
+
+function getLocalTopRatedStorySummaries() {
+  return Object.entries(getLocalStoryRatings())
+    .map(([storyId, item]) => ({
+      storyId,
+      averageRating: Number(item.rating || 0),
+      ratingCount: item.rating ? 1 : 0,
+    }))
+    .filter((item) => item.ratingCount > 0);
+}
+
+function getTopRatedStorySummaries() {
+  const source = storyRatingTopList.length ? storyRatingTopList : getLocalTopRatedStorySummaries();
+  return source
+    .map(normalizeRatingSummary)
+    .filter((summary) => summary && getRateableArticleById(summary.storyId))
+    .sort((a, b) => {
+      const averageDiff = b.averageRating - a.averageRating;
+      if (averageDiff) return averageDiff;
+      return b.ratingCount - a.ratingCount;
+    })
+    .slice(0, 5);
+}
+
+function renderStoryRatingPanel(article) {
+  if (!article?.id || !arePublicArticlesVisible()) return "";
+  const summary = getStoryRatingSummary(article.id);
+  const userRating = getUserStoryRating(article.id);
+  const average = formatAverageRating(summary.averageRating);
+  const averageText = summary.ratingCount ? t("ratingAverage", average, summary.ratingCount) : t("ratingNoAverage");
+  const buttons = [1, 2, 3, 4, 5].map((score) => `
+    <button class="${userRating === score ? "is-selected" : ""}" type="button" data-rate-story="${escapeHtml(article.id)}" data-rating-value="${score}" aria-pressed="${userRating === score}">
+      <span>${score}</span>
+    </button>`).join("");
+
+  return `
+    <section class="story-rating-panel" data-story-rating-panel data-story-id="${escapeHtml(article.id)}">
+      <div>
+        <span>${escapeHtml(t("ratingTitle"))}</span>
+        <h2>${escapeHtml(article.title)}</h2>
+        <p>${escapeHtml(t("ratingCopy"))}</p>
+      </div>
+      <div class="story-rating-controls" aria-label="${escapeHtml(t("ratingChoose"))}">
+        ${buttons}
+      </div>
+      <p class="story-rating-summary">${escapeHtml(averageText)}${userRating ? ` · ${escapeHtml(t("ratingYourScore", userRating))}` : ""}</p>
+      ${storyRatingStatus ? `<p class="story-rating-status">${escapeHtml(storyRatingStatus)}</p>` : ""}
+    </section>`;
+}
+
+function renderStoryRatingPanels() {
+  document.querySelectorAll("[data-story-rating-panel]").forEach((panel) => {
+    const article = getRateableArticleById(panel.dataset.storyId || "");
+    if (article) panel.outerHTML = renderStoryRatingPanel(article);
+  });
+}
+
+function renderTopRatedStories() {
+  const target = document.getElementById("topRatedStories");
+  if (!target) return;
+  if (!arePublicArticlesVisible()) {
+    target.hidden = true;
+    target.innerHTML = "";
+    return;
+  }
+  const summaries = getTopRatedStorySummaries();
+  if (!summaries.length) {
+    target.hidden = true;
+    target.innerHTML = "";
+    return;
+  }
+  target.hidden = false;
+  const cards = summaries.map((summary, index) => {
+    const article = getRateableArticleById(summary.storyId);
+    const average = formatAverageRating(summary.averageRating);
+    return `
+      <a class="top-rated-story-card" href="${escapeHtml(article.href)}" data-route="${escapeHtml(article.href)}">
+        <small>${index + 1} · ${escapeHtml(article.kind)}${article.categoryTitle ? ` · ${escapeHtml(article.categoryTitle)}` : ""}</small>
+        <strong>${escapeHtml(article.title)}</strong>
+        <span>${escapeHtml(t("topRatedAverage", average, summary.ratingCount))}</span>
+        <em>${escapeHtml(t("topRatedOpen"))}</em>
+      </a>`;
+  }).join("");
+
+  target.innerHTML = `
+    <div class="section-heading compact">
+      <p class="eyebrow">${escapeHtml(t("topRatedEyebrow"))}</p>
+      <h2>${escapeHtml(t("topRatedTitle"))}</h2>
+      <p>${escapeHtml(t("topRatedCopy"))}</p>
+    </div>
+    <div class="top-rated-story-grid">${cards}</div>`;
+}
+
+async function loadStoryRatings() {
+  if (!arePublicArticlesVisible()) {
+    renderTopRatedStories();
+    return;
+  }
+  try {
+    const response = await fetch("/api/story-ratings?limit=5", { cache: "no-store" });
+    if (!response.ok) throw new Error("Story rating API unavailable");
+    const data = await response.json();
+    (data.summaries || []).forEach(mergeStoryRatingSummary);
+    storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
+    storyRatingsLoaded = true;
+  } catch {
+    storyRatingTopList = getLocalTopRatedStorySummaries();
+    storyRatingsLoaded = true;
+  }
+  renderTopRatedStories();
+  renderStoryRatingPanels();
+}
+
+async function loadStoryRatingForArticle(storyId) {
+  if (!arePublicArticlesVisible() || !storyId) return;
+  try {
+    const query = new URLSearchParams({
+      storyId,
+      visitorId: getVisitorId(),
+      limit: "5",
+    });
+    const response = await fetch(`/api/story-ratings?${query}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("Story rating API unavailable");
+    const data = await response.json();
+    (data.summaries || []).forEach(mergeStoryRatingSummary);
+    storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
+    const userRating = Number(data.userRatings?.[storyId] || 0);
+    if (userRating) setLocalStoryRating(storyId, userRating);
+  } catch {
+    // The local rating stays visible if the API is not available in development.
+  }
+  renderStoryRatingPanels();
+  renderTopRatedStories();
+}
+
+async function rateStory(storyId, rating) {
+  const article = getRateableArticleById(storyId);
+  if (!article || !rating) return;
+  setLocalStoryRating(storyId, rating);
+  storyRatingStatus = t("ratingLocalSaved");
+  renderStoryRatingPanels();
+  renderTopRatedStories();
+
+  try {
+    const response = await fetch("/api/story-ratings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        storyId,
+        rating,
+        visitorId: getVisitorId(),
+        pagePath: window.location.pathname,
+        language: currentLanguage,
+      }),
+    });
+    if (!response.ok) throw new Error("Story rating API unavailable");
+    const data = await response.json();
+    mergeStoryRatingSummary(data.summary);
+    storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
+    storyRatingStatus = t("ratingSaved");
+  } catch {
+    storyRatingTopList = getLocalTopRatedStorySummaries();
+  }
+
+  renderStoryRatingPanels();
+  renderTopRatedStories();
 }
 
 function getStoryFieldCodes(story) {
@@ -13484,6 +13973,7 @@ function applyLanguage() {
   renderCategories();
   renderStories();
   renderConceptFables();
+  renderTopRatedStories();
   const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
   if (activeStory) renderStoryDetail(activeStory[1]);
   const activeConceptFable = normalizeRoute(window.location.pathname).match(/^\/concept-fables\/([a-z0-9-]+)$/);
@@ -13505,6 +13995,7 @@ function applyLanguage() {
   renderMapChallenge();
   renderReflectionPanel();
   renderKnowledgeTitleModal();
+  renderStoryRatingPanels();
 }
 
 function normalizeRoute(path) {
@@ -13757,6 +14248,7 @@ function renderStoryDetail(storyId) {
   }
   const insight = getStoryInsight(story);
   const miniQuestion = getStoryMiniQuestion(story);
+  const ratingArticle = getRatingArticleForPublishedStory(story);
   const perspectives = getStoryPerspectives(story)
     .map((perspective) => {
       const lens = getStoryPerspectiveLens(perspective);
@@ -13786,7 +14278,9 @@ function renderStoryDetail(storyId) {
           <p>${escapeHtml(t("storyPerspectivesCopy"))}</p>
         </div>
         <div class="story-perspective-grid">${perspectives}</div>
-      </section>` : ""}`;
+      </section>` : ""}
+    ${renderStoryRatingPanel(ratingArticle)}`;
+  if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
 function renderConceptFableDetail(fableId) {
@@ -13804,6 +14298,7 @@ function renderConceptFableDetail(fableId) {
     return;
   }
   const categoryTitle = getConceptFableCategoryTitle(fable);
+  const ratingArticle = getRatingArticleForConceptFable(fable);
   const metaphorRows = getConceptFableList(fable, "metaphorMap")
     .map((item) => `
       <article>
@@ -13840,7 +14335,9 @@ function renderConceptFableDetail(fableId) {
       <span>${escapeHtml(t("conceptFableReflectionLabel"))}</span>
       <strong>${escapeHtml(getConceptFableValue(fable, "reflectionQuestion"))}</strong>
     </aside>
-    ${tags ? `<div class="lens-story-meta concept-fable-meta"><div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div></div>` : ""}`;
+    ${tags ? `<div class="lens-story-meta concept-fable-meta"><div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div></div>` : ""}
+    ${renderStoryRatingPanel(ratingArticle)}`;
+  if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
 function renderStoryMap() {
@@ -14020,12 +14517,18 @@ function renderCategories() {
     .map((category) => {
       const href = `/categories/${category.code}`;
       const stats = getPublicCategoryStats(category);
-      const categoryTitle = getPublicCategoryTitle(category);
+      const cardDisplay = getPublicCategoryCardDisplay(category);
+      const originalMeta = currentLanguage === "zh" && cardDisplay.originalTitle !== cardDisplay.displayTitle
+        ? `<span>原分类：${escapeHtml(cardDisplay.originalTitle)}</span>`
+        : "";
       return `
-        <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(categoryTitle)}">
-          <strong>${escapeHtml(categoryTitle)}</strong>
-          <span>${escapeHtml(getCategoryThinking(category.code))}</span>
-          <small>${stats.narrowCount} ${escapeHtml(t("groups"))} · ${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</small>
+        <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(cardDisplay.displayTitle)}">
+          <strong>${escapeHtml(cardDisplay.displayTitle)}</strong>
+          <span class="category-display-description">${escapeHtml(cardDisplay.displayDescription)}</span>
+          <small class="category-card-meta">
+            ${originalMeta}
+            <span>${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</span>
+          </small>
         </a>`;
     })
     .join("");
@@ -15403,7 +15906,7 @@ function renderCategoryDetail(code) {
   if (eyebrow) eyebrow.textContent = t("categoryScope");
   if (title) title.textContent = getPublicCategoryTitle(category);
   if (copy) {
-    copy.textContent = t("categoryCopy", stats.narrowCount, stats.practicalCount);
+    copy.textContent = t("categoryCopy", stats.practicalCount);
   }
 
   renderPassport("categoryPassport", {
@@ -15424,60 +15927,31 @@ function renderCategoryDetail(code) {
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
-  const subjectEntries = getPublicCategoryEntryNodes(category);
-  if (!subjectEntries.length) {
+  const fieldEntries = getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry");
+  if (!fieldEntries.length) {
     target.innerHTML = "";
     return;
   }
-  const savedEntryId = activeCategoryPublicEntries[category.code];
-  const savedGroupCode = activeCategorySubmodules[category.code];
-  const savedFieldCode = savedGroupCode ? activeCategoryFields[`${category.code}:${savedGroupCode}`] : "";
-  const savedEntry = subjectEntries.find((entry) =>
-    entry.id === savedEntryId ||
-    entry.fieldCode === savedEntryId ||
-    (entry.group.code === savedGroupCode && entry.fieldCode === savedFieldCode)
-  );
-  const activeEntry = savedEntry || subjectEntries.find((entry) => entry.group.code === savedGroupCode) || subjectEntries[0];
-  activeCategoryPublicEntries[category.code] = activeEntry.id;
-  activeCategorySubmodules[category.code] = activeEntry.group.code;
-  activeCategoryFields[`${category.code}:${activeEntry.group.code}`] = activeEntry.fieldCode;
-
-  const entryButtons = subjectEntries
+  const fieldCards = fieldEntries
     .map((entry) => {
-      const isActive = entry.id === activeEntry.id;
-      const subjectTitle = getPublicSubjectTitle(entry);
-      const storyCount = getPublicSubjectStoryItems(category, entry).length;
+      const field = getFieldById(entry.fieldCode);
+      const href = field ? `/fields/${field.id}` : `/fields/${entry.fieldCode}`;
+      const fieldTitle = getPublicSubjectTitle(entry);
       return `
-        <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
-          <span>${escapeHtml(subjectTitle)}</span>
-          ${arePublicArticlesVisible() ? `<small>${escapeHtml(t("subjectStoryCount", storyCount))}</small>` : ""}
-        </button>`;
+        <a class="submodule-button public-field-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
+          <small>${escapeHtml(entry.fieldCode)}</small>
+          <span>${escapeHtml(fieldTitle)}</span>
+        </a>`;
     })
     .join("");
-  const activeSubjectTitle = getPublicSubjectTitle(activeEntry);
-  const storyCards = getPublicSubjectStoryItems(category, activeEntry)
-    .map((item) => `<a class="submodule-story-button ${item.className}" href="${escapeHtml(item.href)}" data-route="${escapeHtml(item.href)}">
-      <small>${escapeHtml(item.kicker)}</small>
-      <span>${escapeHtml(item.title)}</span>
-      <em>${escapeHtml(item.label)}</em>
-    </a>`)
-    .join("");
-  const emptyStoryCard = arePublicArticlesVisible() ? `<div class="submodule-story-button is-empty">
-    <small>${escapeHtml(activeSubjectTitle || t("submoduleLabel"))}</small>
-    <span>${escapeHtml(t("noStoryReady"))}</span>
-    <em>${escapeHtml(t("openStory"))}</em>
-  </div>` : "";
   target.innerHTML = `
-    <div class="submodule-browser is-subject-browser">
+    <div class="submodule-browser is-field-list-browser">
       <div class="hierarchy-layer module-layer">
         <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
-        <div class="submodule-button-row" role="tablist" aria-label="${escapeHtml(t("submoduleLabel"))}">
-          ${entryButtons}
+        <div class="submodule-button-row public-field-grid" aria-label="${escapeHtml(t("submoduleLabel"))}">
+          ${fieldCards}
         </div>
       </div>
-      <section class="submodule-compact-panel" aria-live="polite">
-        <div class="field-story-actions">${storyCards || emptyStoryCard}</div>
-       </section>
     </div>`;
 }
 
@@ -15513,6 +15987,7 @@ function renderLensStoryDetail(storyId) {
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const storyEyebrow = story.storyLevel === "subject-intro" ? t("submoduleIntroStory") : t("lensStoryEyebrow");
+  const ratingArticle = getRatingArticleForLensStory(story);
   const fieldRows = story.originalStory
     ? getValidatedStoryFields(story.originalStory).matched
         .map((field) => `
@@ -15571,7 +16046,9 @@ function renderLensStoryDetail(storyId) {
     <div class="lens-story-meta">
       ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
       ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
-    </div>`;
+    </div>
+    ${renderStoryRatingPanel(ratingArticle)}`;
+  if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
 function renderField() {
@@ -15829,6 +16306,11 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-answer-key], [data-start-new-round]")) {
     handleChallengeClick(event);
+    return;
+  }
+  const ratingButton = event.target.closest("[data-rate-story]");
+  if (ratingButton) {
+    rateStory(ratingButton.dataset.rateStory, Number(ratingButton.dataset.ratingValue));
     return;
   }
   const pdcPersona = event.target.closest("[data-pdc-persona]");
@@ -16093,6 +16575,7 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 renderCategories();
 renderStories();
 renderConceptFables();
+renderTopRatedStories();
 renderStoryMap();
 renderContactSections();
 renderSiteFooters();
@@ -16108,6 +16591,7 @@ applyTheme();
 applyLanguage();
 const initialRoute = normalizeRoute(window.location.pathname);
 goToRoute(initialRoute, true);
+loadStoryRatings();
 
 function setFounderMode(enabled) {
   document.body.classList.toggle("founder-mode", enabled);

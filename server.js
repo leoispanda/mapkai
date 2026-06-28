@@ -18,6 +18,7 @@ const localFunctionRoutes = {
   "/api/visit": "functions/api/visit.js",
   "/api/contact-message": "functions/api/contact-message.js",
   "/api/contact-messages": "functions/api/contact-messages.js",
+  "/api/story-ratings": "functions/api/story-ratings.js",
   "/api/pdc/start": "functions/api/pdc/start.js",
   "/api/pdc/validate-pass": "functions/api/pdc/validate-pass.js",
   "/api/pdc/feedback": "functions/api/pdc/feedback.js",
