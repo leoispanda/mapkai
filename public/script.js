@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.88";
+const appVersion = "0.1.91";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const languageKey = "mapkaiLanguage";
@@ -23,6 +23,15 @@ let lastVisitStats = null;
 const activeCategorySubmodules = {};
 const activeCategoryFields = {};
 const activeCategoryPublicEntries = {};
+
+// Keep existing story data in place while the public article rebuild is underway.
+const publicContentVisibility = {
+  articles: false,
+};
+
+function arePublicArticlesVisible() {
+  return Boolean(publicContentVisibility.articles);
+}
 
 const readiness = {
   mapOnly: "Map only",
@@ -62,10 +71,12 @@ const routeMeta = {
   "/stories": {
     title: "MapKAI Stories — Knowledge Mapping Through Real Scenarios",
     description: "Read everyday scenarios that show how practical knowledge fields, reflection, and learning signals connect inside the MapKAI knowledge map.",
+    robots: "noindex, nofollow",
   },
   "/concept-fables": {
     title: "MapKAI Concept Fables — Advanced Ideas Through Hidden Stories",
     description: "Read short fables that quietly unfold advanced knowledge concepts before revealing the concept and its metaphors.",
+    robots: "noindex, nofollow",
   },
   "/explore": {
     title: "MapKAI Explore — Start an AI-Native Knowledge Map",
@@ -95,6 +106,7 @@ const routeMeta = {
   "/lens-stories": {
     title: "MapKAI Lens Stories — Everyday Knowledge Scenarios",
     description: "Read everyday knowledge stories connected to MapKAI lens subcategories and practical fields.",
+    robots: "noindex, nofollow",
   },
   "/learning": {
     title: "MapKAI Learning Paths — Connect Fields Into Next Steps",
@@ -155,6 +167,8 @@ const uiText = {
     lensStorySceneLabel: "Story scene",
     lensStoryKnowledgeLabel: "Knowledge hidden inside",
     lensStorySupportLabel: "Historical anchors",
+    lensStoryFormalLabel: "Formal explanation",
+    lensStoryBoundaryLabel: "Analogy boundary",
     lensStoryTryLabel: "Try this reflection",
     lensStoryFieldLabel: "Connected field",
     lensStoryNotFoundTitle: "Story not found",
@@ -382,17 +396,17 @@ const uiText = {
     pdcAccessButton: "Enter PDC Experience",
     categoriesEyebrow: "Knowledge Lenses",
     categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens, then open a subject to see its stories.",
+    categoriesCopy: "Choose a lens, then open a subject to explore its fields and questions.",
     openCategory: "Open lens",
     categoryScope: "Lens scope",
-    categoryCopy: (subjects, stories) => `This lens has ${subjects} subjects and ${stories} story cards.`,
+    categoryCopy: (subjects) => `This lens has ${subjects} subjects.`,
     submoduleLabel: "Subjects",
     submoduleIntroStory: "Subject overview",
     generalEntryLabel: "General Entry",
     generalEntryStory: "General overview story",
-    generalEntryScope: "Broad foundations, shared questions, and entry stories for this lens.",
-    detailedFieldLabel: "Stories",
-    fieldIntroStory: "Subject story",
+    generalEntryScope: "Broad foundations and shared questions for this lens.",
+    detailedFieldLabel: "Fields",
+    fieldIntroStory: "Subject field",
     importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
     openSubmodule: "Open submodule",
@@ -400,7 +414,7 @@ const uiText = {
     openStory: "Open story",
     noStoryReady: "This story is still being prepared.",
     groups: "subjects",
-    detailedFields: "story cards",
+    detailedFields: "fields",
     subjectStoryCount: (count) => count === 1 ? "1 story" : `${count} stories`,
     learningEyebrow: "Cognitive Expansion",
     learningTitle: "Learning is a direction for expanding how you think.",
@@ -519,6 +533,8 @@ const uiText = {
     lensStorySceneLabel: "故事场景",
     lensStoryKnowledgeLabel: "藏在里面的知识",
     lensStorySupportLabel: "历史支撑",
+    lensStoryFormalLabel: "正式解释",
+    lensStoryBoundaryLabel: "类比边界",
     lensStoryTryLabel: "试着这样反思",
     lensStoryFieldLabel: "关联领域",
     lensStoryNotFoundTitle: "故事未找到",
@@ -746,17 +762,17 @@ const uiText = {
     pdcAccessButton: "进入 PDC 体验",
     categoriesEyebrow: "认知领域",
     categoriesTitle: "每个领域都有自己的思考方式。",
-    categoriesCopy: "先选择一个领域，再打开 subject 查看故事。",
+    categoriesCopy: "先选择一个领域，再打开 subject 查看结构和问题。",
     openCategory: "打开镜头",
     categoryScope: "镜头范围",
-    categoryCopy: (subjects, stories) => `这个领域包含 ${subjects} 个 subject 和 ${stories} 张故事卡片。`,
+    categoryCopy: (subjects) => `这个领域包含 ${subjects} 个 subject。`,
     submoduleLabel: "Subject",
     submoduleIntroStory: "Subject 概览",
     generalEntryLabel: "总览入口",
     generalEntryStory: "总览故事",
-    generalEntryScope: "这个领域的基础框架、共同问题和入口故事。",
-    detailedFieldLabel: "故事卡片",
-    fieldIntroStory: "Subject 故事",
+    generalEntryScope: "这个领域的基础框架和共同问题。",
+    detailedFieldLabel: "领域条目",
+    fieldIntroStory: "Subject 条目",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
     openSubmodule: "打开子模块",
@@ -764,7 +780,7 @@ const uiText = {
     openStory: "打开故事",
     noStoryReady: "这个故事还在准备中。",
     groups: "个 subject",
-    detailedFields: "张故事卡片",
+    detailedFields: "个领域条目",
     subjectStoryCount: (count) => `${count} 张故事卡片`,
     learningEyebrow: "认知扩展",
     learningTitle: "学习是扩展思考方式的方向。",
@@ -1893,6 +1909,95 @@ const sublensStoryDrafts = [
 
 const fieldStoryDetailsZh = {};
 
+const subjectIntroStoriesZh20260628 = [
+  {
+    code: "00",
+    subjectTitleZh: "通用课程与资格",
+    titleZh: "学徒进城的第一张地图",
+    summaryZh: "一个年轻学徒进城学习，却发现真正困难的不是学哪一门手艺，而是先知道自己如何学习、如何准备、如何把已有能力带到新地方。",
+    sceneZh: "一座有许多工坊的城市，年轻学徒需要在木工、账房、修桥、医馆和书院之间选择自己的学习道路。",
+    storyBodyZh: `有个年轻人第一次进城。他以为学习就是找一间好工坊，拜一个好师傅，然后把手艺学会。城里有木工坊、账房、修桥队、医馆和书院，每个门口都挂着牌子，写着不同的规矩和要求。
+
+他先去了木工坊。师傅让他量木板，他总是量错。师傅没有骂他，只问：“你会看尺吗？”年轻人点头，却说不清一寸和一尺的差别。后来他去了账房，掌柜让他记账，他能写字，却看不懂数字之间的关系。再后来，他去修桥队，工头让他搬石头，他很用力，却不知道为什么有些石头必须先放，有些必须后放。
+
+年轻人很沮丧。他觉得自己不适合任何一门手艺。城门口的老登记员听了他的抱怨，带他回到最初的街口。老人说：“你急着问自己该学什么，却还没有看清自己已经会什么、缺什么、怎样学。”
+
+老人让他先不进工坊，而是在城里做三件小事：每天记录自己哪里听懂、哪里没听懂；把相似的工具和规矩放在一起比较；遇到新任务时，先想它和过去做过的事有什么相同和不同。
+
+几个月后，年轻人再去木工坊，尺子不再只是木条上的刻度；去账房，数字也不再只是纸上的符号；去修桥队，他开始明白先后顺序不是命令，而是结构。后来他还是选择了修桥，但这一次，他知道自己学的不只是一门手艺，也是在学习如何进入任何一门手艺。
+
+这座城后来把这种入门训练放在所有工坊之前。不是为了替代真正的专业学习，而是为了让人先具备继续学习的能力。这个故事通向的，是通用课程与资格。`,
+    formalExplanationZh: "通用课程与资格关注学习者进入不同知识领域之前所需要的基础能力、学习方法和资格准备。它不一定直接对应某个专业职业，而是帮助学习者建立读写、计算、学习策略、自我管理和迁移能力。研究生层面理解这一领域，重点是看到它如何为后续学习、职业转换和终身发展提供基础。",
+    coreInsightZh: "这个领域真正关心的，不是先把人训练成某一种专家，而是让人具备继续学习和进入不同领域的能力。",
+    analogyBoundaryZh: "这个故事强调基础准备的重要性，但不能把通用课程与资格理解成低层次或不专业的学习。它也涉及学习能力、资格体系和社会流动等更复杂的问题。",
+  },
+  {
+    code: "01",
+    subjectTitleZh: "教育",
+    titleZh: "还没有自己过桥的孩子",
+    summaryZh: "一位老师带孩子过桥，却发现教育不是替学生走路，而是在适当的时候扶一把，又在适当的时候放手。",
+    sceneZh: "一所靠近河边的小学校，学生每天要学习如何从浅桥走到更远的石桥。",
+    storyBodyZh: `河边有一所小学校。学校后面有两座桥。一座很低，水浅时孩子们可以自己走过去；另一座更高，通向城外的书院和工坊。孩子们都想走高桥，因为他们觉得那才算真正长大。
+
+有个孩子最着急。他每天跑到高桥前，刚走几步就退回来。桥面不宽，下面水声很响，他一紧张，就忘了老师教过的步子。于是他开始说：“我学不会。”
+
+老师没有马上把他抱过去，也没有让他一个人硬走。她先带他回到低桥，让他练习看脚下的石缝、听水声时保持平衡、走到一半时不要回头。等他能稳稳走过低桥，老师才带他上高桥。
+
+第一次上高桥时，老师走在旁边，提醒他看下一块石板。第二次，老师只在桥头说几句话。第三次，老师站在桥尾等他。孩子走得很慢，中间停了两次，但没有退回去。
+
+旁边有人问老师：“你到底是在帮他，还是让他自己学？”老师说：“这两件事不能分开。太早放手，他会把失败当成自己不行；扶得太久，他又永远不知道自己已经可以走。”
+
+后来，这个孩子能自己过桥了。老师没有把这件事写成奇迹，只在本子上记了一句：他今天能独立完成昨天还不能独立完成的事。
+
+学校里的老师们慢慢明白，教书不是把知识倒进学生手里，也不是等学生自己撞明白。教育发生在一个细小的位置上：学生还不能独立完成，但在合适帮助下已经接近能够完成。这个故事通向的，是教育。`,
+    formalExplanationZh: "教育关注人如何学习、成长和发展，也关注教师、课程、环境和评价如何支持这一过程。它不仅研究知识如何被传递，也研究学习者如何理解、练习、犯错、调整和逐步独立。研究生层面理解教育，重点是看到学习不是简单接受信息，而是在个体能力、社会支持和具体情境之间发生的过程。",
+    coreInsightZh: "教育真正关心的，不是替学生完成道路，而是判断什么时候支持、怎样支持，以及什么时候让学习者自己前进。",
+    analogyBoundaryZh: "这个故事强调教师支持和学习成长，但不能把教育只理解成师生之间的帮助。教育还包括制度、课程、公平、文化、技术和社会结构等问题。",
+  },
+  {
+    code: "02",
+    subjectTitleZh: "艺术与人文",
+    titleZh: "被修补的旧戏台",
+    summaryZh: "一座旧戏台即将被拆除，人们在修补它的过程中发现，艺术与人文关心的不只是美，也包括记忆、解释、表达和人的处境。",
+    sceneZh: "一座老城里的旧戏台，木柱开裂，墙面褪色，城里人争论它是否还有保留的价值。",
+    storyBodyZh: `老城中央有一座旧戏台。它的木柱已经开裂，墙上的颜色也被雨水冲淡。新剧院建好以后，很多人觉得这座戏台没有用了。商人想拆掉它，改成店铺；官员说它不安全；年轻人说他们已经看不懂台上那些旧故事。
+
+拆除前，一位修木匠被请来检查柱子。她发现柱子内侧刻着许多名字，有演员的，有看戏人的，也有逃难时住在戏台下的人。一个抄书人又在后台找到几本旧戏文，里面同一个故事被改过很多次。有的版本让英雄胜利，有的版本让母亲沉默，有的版本把原本不起眼的仆人写成最清醒的人。
+
+城里人开始争论。商人说：“这些只是旧木头和旧纸。”抄书人说：“可每一次改写，都说明当时的人怎样理解自己。”年轻人问：“如果同一个故事能有这么多说法，那哪一个才是真的？”
+
+修木匠没有回答。她只把最旧的一块木板放在阳光下。木板上有刀痕、火印和新旧不同的漆。她说：“它不是因为完好才值得留下，而是因为许多人在它上面留下过看世界的方式。”
+
+后来，城里没有把戏台恢复成崭新的样子。他们加固了危险的地方，保留了刻字和旧漆，也让年轻演员在台上演新的故事。旧戏不再只是旧戏，新戏也不是凭空来的。
+
+人们这才明白，有些东西的价值，不在于它能不能立刻使用，也不只在于它好不好看。它保存了人怎样表达悲伤、想象正义、记住过去、解释自己和他人。这个故事通向的，是艺术与人文。`,
+    formalExplanationZh: "艺术与人文关注人的表达、意义、历史、价值和解释。艺术研究形式、媒介和审美经验，人文学科研究文本、历史、伦理、语言、文化和思想。研究生层面理解这一领域，重点不是把它看成主观欣赏，而是理解人如何通过作品、文本、记忆和解释来理解自身和世界。",
+    coreInsightZh: "艺术与人文真正关心的，不只是作品好不好看，而是人如何留下意义、争论意义，并在意义中理解自己。",
+    analogyBoundaryZh: "这个故事用旧戏台说明记忆和解释，但不能把艺术与人文只理解成保护传统。它也包括当代表达、批判思考、跨文化理解和新的媒介形式。",
+  },
+  {
+    code: "03",
+    subjectTitleZh: "社会科学、新闻与信息",
+    titleZh: "广场上的第三种声音",
+    summaryZh: "一座城市的广场上发生争执，人们最初只想找出谁对谁错，后来发现更重要的是理解信息如何流动、群体如何形成判断、制度如何影响声音。",
+    sceneZh: "一座有大广场的城市，商人、工人、学生、报信人和官员每天在这里交换消息和意见。",
+    storyBodyZh: `城里有一个大广场。清晨，商人在这里谈价格，工人在这里找活，学生在墙边读公告，报信人站在台阶上讲城外发生的事。广场很吵，但城里人觉得，消息越多，大家就越能知道真相。
+
+有一天，粮价突然上涨。有人说是商人囤货，有人说是外地道路断了，也有人说是官员提前知道消息，却没有告诉百姓。争吵很快传遍全城。每个人都说自己听到的才是真的。
+
+市长想平息争论，于是让报信人每天只发布一条“准确信息”。可事情没有变好。市场里仍有传言，工人仍然害怕失业，商人仍然不愿卖粮。学生发现，同一条消息被不同人听到后，会变成不同意思。对有粮的人，它只是价格变化；对没粮的人，它就是生存威胁。
+
+后来，一位长期在广场记录的人提出，不要只问哪一句话是真的，还要问谁能说话，谁被听见，消息从哪里来，经过谁的手，又为什么会被相信。她发现，站在高台上的声音传得最远，靠近仓库的人最早知道变化，外来工人的担心很少被写进公告，商人的沉默也会被别人解释成有罪。
+
+市长这才明白，广场不是一个简单的说话地方。它有位置，有权力，有规则，也有被忽略的人。信息不是自己流动的，群体也不是自动形成判断的。
+
+后来，城里不只发布粮价，还公开道路、库存和救济安排；不只听商人，也听搬运工、家庭主妇和外来工人的说法。争论没有消失，但人们开始知道，理解社会不能只看单个声音，而要看声音之间的关系。这个故事通向的，是社会科学、新闻与信息。`,
+    formalExplanationZh: "社会科学、新闻与信息关注人与社会、制度、媒体和信息之间的关系。它研究个体行为、群体互动、社会结构、公共传播、新闻生产和信息流动。研究生层面理解这一领域，重点是看到社会事实不是孤立存在的，信息也不是中性的；它们会受到权力、文化、制度、媒介和群体关系的影响。",
+    coreInsightZh: "这个领域真正关心的，不只是发生了什么，而是谁看见、谁解释、谁传播，以及这些过程如何影响社会判断。",
+    analogyBoundaryZh: "这个故事用广场说明社会和信息关系，但不能把该领域只理解成舆论或新闻。它还包括心理、政治、经济、社会结构、数据、知识组织和公共生活等更广的问题。",
+  },
+];
+
 function makeSublensStory(draft) {
   const category = categories.find((item) => item.code === draft.categoryCode);
   const group = category?.groups.find((item) => item.code === draft.groupCode);
@@ -1968,6 +2073,51 @@ function makeFieldLensStory(category, group, code, title) {
   };
 }
 
+function makeSubjectIntroLensStory(draft) {
+  const category = categories.find((item) => item.code === draft.code);
+  const imageSource = baseLensStories.find((story) => story.categoryCode === draft.code) || baseLensStories[0];
+  const fallbackTitle = draft.subjectTitleZh || category?.chineseTitle || category?.title || draft.code;
+  return {
+    id: `${draft.code}-subject-intro`,
+    storyLevel: "subject-intro",
+    categoryCode: draft.code,
+    groupCode: "",
+    groupTitle: category?.title || "",
+    groupTitleZh: fallbackTitle,
+    fieldCodes: [],
+    fieldTitlesZh: {},
+    image: imageSource?.image || "/assets/stories/000-general-starter-course.png",
+    imageAlt: imageSource?.imageAlt || "A MapKAI subject overview story.",
+    imageAltZh: imageSource?.imageAltZh || "一个 MapKAI 学科总览故事。",
+    imageInheritedFromGroup: true,
+    title: draft.title || draft.titleZh || fallbackTitle,
+    titleZh: draft.titleZh || draft.title || fallbackTitle,
+    summary: draft.summary || draft.summaryZh || "",
+    summaryZh: draft.summaryZh || draft.summary || "",
+    scene: draft.scene || draft.sceneZh || "",
+    sceneZh: draft.sceneZh || draft.scene || "",
+    storyBody: draft.storyBody || draft.storyBodyZh || "",
+    storyBodyZh: draft.storyBodyZh || draft.storyBody || "",
+    formalExplanation: draft.formalExplanation || draft.formalExplanationZh || "",
+    formalExplanationZh: draft.formalExplanationZh || draft.formalExplanation || "",
+    coreInsight: draft.coreInsight || draft.coreInsightZh || "",
+    coreInsightZh: draft.coreInsightZh || draft.coreInsight || "",
+    analogyBoundary: draft.analogyBoundary || draft.analogyBoundaryZh || "",
+    analogyBoundaryZh: draft.analogyBoundaryZh || draft.analogyBoundary || "",
+    support: "",
+    supportZh: "",
+    knowledgePoint: draft.coreInsight || draft.coreInsightZh || "",
+    knowledgePointZh: draft.coreInsightZh || draft.coreInsight || "",
+    reflectionQuestion: "",
+    reflectionQuestionZh: "",
+    tags: [fallbackTitle, "subject overview"],
+    tagsZh: [fallbackTitle, "学科总览"],
+    sourceBatchId: "subject-intro-00-03",
+  };
+}
+
+const subjectIntroLensStories = subjectIntroStoriesZh20260628.map(makeSubjectIntroLensStory);
+
 const groupStoryFieldCodes = new Set(
   groupLensStories.flatMap((story) => Array.isArray(story.fieldCodes) ? story.fieldCodes : []),
 );
@@ -1981,6 +2131,7 @@ const fieldLensStories = categories.flatMap((category) =>
 );
 
 const lensStories = [
+  ...subjectIntroLensStories,
   ...groupLensStories,
   ...fieldLensStories,
 ];
@@ -5941,14 +6092,10 @@ function getPublicSubjectFieldRowsForGroup(group) {
 }
 
 function getPublicCategoryStats(category) {
-  const subjectEntries = getPublicCategoryEntryNodes(category);
-  const storyIds = new Set();
-  subjectEntries.forEach((entry) => {
-    getPublicSubjectStoryItems(category, entry).forEach((item) => storyIds.add(item.id));
-  });
+  const subjectEntries = getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry");
   return {
-    narrowCount: subjectEntries.length,
-    practicalCount: storyIds.size,
+    narrowCount: getPublicNarrowFieldGroups(category).length,
+    practicalCount: subjectEntries.length,
   };
 }
 
@@ -5971,17 +6118,26 @@ function getGeneralEntrySource(category) {
   };
 }
 
+function getSubjectIntroStoryForCategory(categoryCode) {
+  if (!arePublicArticlesVisible()) return null;
+  return subjectIntroLensStories.find((story) => story.categoryCode === categoryCode) || null;
+}
+
 function getGeneralEntryNode(category) {
   const source = getGeneralEntrySource(category);
   const group = source.group;
   const fieldCode = source.field?.[0] || "";
-  const story = fieldCode
+  const story = getSubjectIntroStoryForCategory(category.code) || (fieldCode
     ? getLensStoryForField(category.code, group?.code, fieldCode) || getLensStoryForGroup(category.code, group?.code)
-    : getLensStoryForGroup(category.code, group?.code);
+    : getLensStoryForGroup(category.code, group?.code));
   return {
     id: `general:${category.code}`,
     type: "general_entry",
     categoryCode: category.code,
+    group,
+    fieldCode,
+    fieldTitle: source.field?.[1] || "",
+    fieldTitleZh: source.field?.[2] || "",
     sourceGroupCode: group?.code || "",
     sourceFieldCode: fieldCode,
     title: currentLanguage === "zh" ? `${getPublicCategoryTitle(category)}总览` : `${getPublicCategoryTitle(category)} Overview`,
@@ -5992,7 +6148,7 @@ function getGeneralEntryNode(category) {
 }
 
 function getPublicCategoryEntryNodes(category) {
-  return getPublicNarrowFieldGroups(category).flatMap((group) =>
+  const fieldEntries = getPublicNarrowFieldGroups(category).flatMap((group) =>
     getPublicSubjectFieldRowsForGroup(group).map(([fieldCode, fieldTitle, fieldTitleZh = ""]) => ({
       id: `subject:${group.code}:${fieldCode}`,
       type: "subject_field",
@@ -6003,6 +6159,8 @@ function getPublicCategoryEntryNodes(category) {
       fieldTitleZh,
     }))
   );
+  const generalEntry = getSubjectIntroStoryForCategory(category.code) ? [getGeneralEntryNode(category)] : [];
+  return [...generalEntry, ...fieldEntries];
 }
 
 function getPublicSubjectFallbackTitle(entry) {
@@ -6012,6 +6170,7 @@ function getPublicSubjectFallbackTitle(entry) {
 
 function getPublicSubjectTitle(entry) {
   if (!entry) return "";
+  if (entry.type === "general_entry") return entry.title || getPublicSubjectFallbackTitle(entry);
   const referenceStory =
     getLensStoryForField(entry.categoryCode, entry.group?.code, entry.fieldCode) ||
     getLensStoryForGroup(entry.categoryCode, entry.group?.code);
@@ -6019,6 +6178,7 @@ function getPublicSubjectTitle(entry) {
 }
 
 function getPublicSubjectStoryLabel(story) {
+  if (story?.storyLevel === "subject-intro") return t("generalEntryStory");
   if (story?.storyLevel === "published-story") return t("openStory");
   if (story?.storyLevel === "field") return t("fieldIntroStory");
   if (story?.storyLevel === "group") return t("submoduleIntroStory");
@@ -6026,8 +6186,21 @@ function getPublicSubjectStoryLabel(story) {
 }
 
 function getPublicSubjectStoryItems(category, entry) {
-  if (!category || !entry?.fieldCode || !entry.group?.code) return [];
+  if (!arePublicArticlesVisible()) return [];
+  if (!category) return [];
   const subjectTitle = getPublicSubjectTitle(entry);
+  if (entry?.type === "general_entry") {
+    const introStory = getSubjectIntroStoryForCategory(category.code) || entry.story;
+    return introStory ? [{
+      id: `story:${introStory.id}`,
+      href: `/lens-stories/${introStory.id}`,
+      className: "is-intro",
+      kicker: subjectTitle || getPublicCategoryTitle(category),
+      title: getLensStoryValue(introStory, "title") || subjectTitle,
+      label: getPublicSubjectStoryLabel(introStory),
+    }] : [];
+  }
+  if (!entry?.fieldCode || !entry.group?.code) return [];
   const seen = new Set();
   const storyItems = getLensStoriesForField(category.code, entry.group.code, entry.fieldCode)
     .filter((story) => {
@@ -6274,6 +6447,7 @@ function getCharacterName(id) {
 }
 
 function getPublishedStories() {
+  if (!arePublicArticlesVisible()) return [];
   const builtInStories = [...stories, ...historicalStories].filter((story) => story.isPublished);
   if (!document.body.classList.contains("founder-mode")) return builtInStories;
   return [...builtInStories, ...getFounderStories().filter((story) => story.isPublished)];
@@ -6369,6 +6543,7 @@ function makePublishedStoryLensStory(story) {
 }
 
 function addPublishedStoriesToLensStories() {
+  if (!arePublicArticlesVisible()) return {};
   const routesByStoryId = {};
   [...stories, ...historicalStories]
     .filter((story) => story.isPublished)
@@ -6425,10 +6600,12 @@ function getStoryPerspectiveFocus(perspective) {
 }
 
 function getLensStoryById(storyId) {
+  if (!arePublicArticlesVisible()) return null;
   return lensStories.find((story) => story.id === storyId);
 }
 
 function getPublishedStoryLensStories() {
+  if (!arePublicArticlesVisible()) return [];
   return publishedStoryLensStories;
 }
 
@@ -6478,6 +6655,7 @@ function makeConceptFableLensStory(fable) {
 }
 
 function addConceptFablesToLensStories() {
+  if (!arePublicArticlesVisible()) return [];
   const nextStories = [];
   conceptFables.forEach((fable) => {
     if (lensStories.some((story) => story.id === fable.id)) return;
@@ -6497,6 +6675,7 @@ function getGptBatchSourceStoryId(story) {
 }
 
 function isGptBatchLensStory(story) {
+  if (story?.storyLevel === "subject-intro") return true;
   return gptBatchStoryIds.has(getGptBatchSourceStoryId(story));
 }
 
@@ -6507,15 +6686,18 @@ function removeNonGptBatchLensStories() {
 }
 
 function getActiveBaseLensStories() {
+  if (!arePublicArticlesVisible()) return [];
   if (publishedStoryLensStories.length) return publishedStoryLensStories;
   return baseLensStories.map((story) => getLensStoryById(story.id) || story);
 }
 
 function getLensStoryForGroup(categoryCode, groupCode) {
+  if (!arePublicArticlesVisible()) return null;
   return lensStories.find((story) => story.categoryCode === categoryCode && story.groupCode === groupCode && story.storyLevel !== "field");
 }
 
 function getLensStoryPriority(story) {
+  if (story?.storyLevel === "subject-intro") return -1;
   if (story?.storyLevel === "published-story") return 0;
   if (story?.storyLevel === "field") return 1;
   if (story?.storyLevel === "group") return 2;
@@ -6529,6 +6711,7 @@ function sortLensStoriesByStoryFirst(a, b) {
 }
 
 function getLensStoriesForField(categoryCode, groupCode, fieldCode) {
+  if (!arePublicArticlesVisible()) return [];
   return lensStories
     .filter((story) =>
       story.categoryCode === categoryCode &&
@@ -6561,10 +6744,12 @@ function getLensStoryFieldTitle(story, code, fallbackTitle) {
 }
 
 function getConceptFableById(fableId) {
+  if (!arePublicArticlesVisible()) return null;
   return conceptFables.find((fable) => fable.id === fableId);
 }
 
 function getConceptFableForCategory(categoryCode) {
+  if (!arePublicArticlesVisible()) return null;
   return conceptFables.find((fable) => fable.categoryCode === categoryCode);
 }
 
@@ -13533,6 +13718,10 @@ function renderStories() {
 function renderConceptFables() {
   const target = document.getElementById("conceptFableGrid");
   if (!target) return;
+  if (!arePublicArticlesVisible()) {
+    target.innerHTML = "";
+    return;
+  }
   target.innerHTML = conceptFables
     .map((fable) => {
       const href = `/concept-fables/${fable.id}`;
@@ -13555,6 +13744,10 @@ function renderConceptFables() {
 function renderStoryDetail(storyId) {
   const target = document.getElementById("storyReader");
   if (!target) return;
+  if (!arePublicArticlesVisible()) {
+    target.innerHTML = "";
+    return;
+  }
   const story = getStoryById(storyId);
   if (!story) {
     target.innerHTML = `
@@ -13599,6 +13792,10 @@ function renderStoryDetail(storyId) {
 function renderConceptFableDetail(fableId) {
   const target = document.getElementById("conceptFableReader");
   if (!target) return;
+  if (!arePublicArticlesVisible()) {
+    target.innerHTML = "";
+    return;
+  }
   const fable = getConceptFableById(fableId);
   if (!fable) {
     target.innerHTML = `
@@ -15253,7 +15450,7 @@ function renderCategoryTree(category) {
       return `
         <button class="submodule-button ${isActive ? "is-active" : ""}" type="button" data-public-entry-select="${escapeHtml(category.code)}:${escapeHtml(entry.id)}" aria-pressed="${isActive}">
           <span>${escapeHtml(subjectTitle)}</span>
-          <small>${escapeHtml(t("subjectStoryCount", storyCount))}</small>
+          ${arePublicArticlesVisible() ? `<small>${escapeHtml(t("subjectStoryCount", storyCount))}</small>` : ""}
         </button>`;
     })
     .join("");
@@ -15265,11 +15462,11 @@ function renderCategoryTree(category) {
       <em>${escapeHtml(item.label)}</em>
     </a>`)
     .join("");
-  const emptyStoryCard = `<div class="submodule-story-button is-empty">
+  const emptyStoryCard = arePublicArticlesVisible() ? `<div class="submodule-story-button is-empty">
     <small>${escapeHtml(activeSubjectTitle || t("submoduleLabel"))}</small>
     <span>${escapeHtml(t("noStoryReady"))}</span>
     <em>${escapeHtml(t("openStory"))}</em>
-  </div>`;
+  </div>` : "";
   target.innerHTML = `
     <div class="submodule-browser is-subject-browser">
       <div class="hierarchy-layer module-layer">
@@ -15287,6 +15484,10 @@ function renderCategoryTree(category) {
 function renderLensStoryDetail(storyId) {
   const target = document.getElementById("lensStoryReader");
   if (!target) return;
+  if (!arePublicArticlesVisible()) {
+    target.innerHTML = "";
+    return;
+  }
   const story = getLensStoryById(storyId);
   if (!story) {
     target.innerHTML = `
@@ -15307,6 +15508,11 @@ function renderLensStoryDetail(storyId) {
   }
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const support = getLensStoryValue(story, "support");
+  const formalExplanation = getLensStoryValue(story, "formalExplanation");
+  const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
+  const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
+  const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
+  const storyEyebrow = story.storyLevel === "subject-intro" ? t("submoduleIntroStory") : t("lensStoryEyebrow");
   const fieldRows = story.originalStory
     ? getValidatedStoryFields(story.originalStory).matched
         .map((field) => `
@@ -15316,7 +15522,7 @@ function renderLensStoryDetail(storyId) {
           </span>`)
         .join("")
     : (group?.fields || [])
-        .filter(([code]) => story.fieldCodes.includes(code))
+        .filter(([code]) => (story.fieldCodes || []).includes(code))
         .map(([code, title]) => `
           <span>
             <strong class="internal-code">${escapeHtml(code)}</strong>
@@ -15331,7 +15537,7 @@ function renderLensStoryDetail(storyId) {
       <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
     </figure>` : ""}
     <div class="story-card-topline lens-story-topline">
-      <span>${escapeHtml(t("lensStoryEyebrow"))}</span>
+      <span>${escapeHtml(storyEyebrow)}</span>
       <span>${escapeHtml(categoryTitle)}</span>
     </div>
     <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
@@ -15341,16 +15547,27 @@ function renderLensStoryDetail(storyId) {
       ${sceneHtml}
       ${storyBodyHtml}
     </section>
+    ${formalExplanation ? `
+    <section class="lens-story-section">
+      <span>${escapeHtml(t("lensStoryFormalLabel"))}</span>
+      ${renderEscapedParagraphs(formalExplanation)}
+    </section>` : ""}
     ${support ? `
     <section class="lens-story-section lens-story-support">
       <span>${escapeHtml(t("lensStorySupportLabel"))}</span>
       <p>${escapeHtml(support)}</p>
     </section>` : ""}
+    ${knowledgePoint || reflectionQuestion ? `
     <aside class="story-insight lens-story-insight">
       <span>${escapeHtml(t("lensStoryKnowledgeLabel"))}</span>
-      <p>${escapeHtml(getLensStoryValue(story, "knowledgePoint"))}</p>
-      <strong>${escapeHtml(getLensStoryValue(story, "reflectionQuestion"))}</strong>
-    </aside>
+      ${knowledgePoint ? `<p>${escapeHtml(knowledgePoint)}</p>` : ""}
+      ${reflectionQuestion ? `<strong>${escapeHtml(reflectionQuestion)}</strong>` : ""}
+    </aside>` : ""}
+    ${analogyBoundary ? `
+    <section class="lens-story-section lens-story-support">
+      <span>${escapeHtml(t("lensStoryBoundaryLabel"))}</span>
+      ${renderEscapedParagraphs(analogyBoundary)}
+    </section>` : ""}
     <div class="lens-story-meta">
       ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
       ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}

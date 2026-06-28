@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI Article Pipeline"
+  short_description: "One-click MapKAI article generation flow"
+  default_prompt: "Use $mapkai-article-production-pipeline to generate and prepare a publish-ready MapKAI article."
