@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.101";
+const appVersion = "0.1.103";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -1454,59 +1454,59 @@ const publicCategoryLabels = {
 const publicCategoryCardDisplay = {
   en: {
     "00": {
-      originalTitle: "General Studies",
-      displayTitle: "The Starting Point of Growth",
-      displayDescription: "A person's true beginning is not how many answers they know, but when they begin to learn how to find them.",
+      originalTitle: "Generic Learning",
+      displayTitle: "Where Growth Begins",
+      displayDescription: "A person’s true beginning is not knowing many answers, but learning how to search for them.",
     },
     "01": {
       originalTitle: "Education",
-      displayTitle: "The Relay of Civilization",
-      displayDescription: "Every generation leaves, but education keeps their light from going out and lets it shine on those who come after.",
+      displayTitle: "Passing the Flame",
+      displayDescription: "Each generation eventually leaves, but education keeps its light alive for those who come after.",
     },
     "02": {
-      originalTitle: "Arts & Humanities",
+      originalTitle: "Arts and Humanities",
       displayTitle: "The Soul of Civilization",
-      displayDescription: "When life is brief and the world falls silent, humanity uses art, language, and memory to prove that we felt and questioned.",
+      displayDescription: "When life is brief and the world is silent, art, language, and memory show that we have felt, questioned, and lived.",
     },
     "03": {
       originalTitle: "Social Sciences",
       displayTitle: "Order and Conflict",
-      displayDescription: "It studies not a distant world, but the society we live inside every day and often fail to see clearly.",
+      displayDescription: "It studies not a distant world, but the society we live in every day and often fail to see clearly.",
     },
     "04": {
-      originalTitle: "Business & Law",
+      originalTitle: "Business and Law",
       displayTitle: "Desire and Responsibility",
-      displayDescription: "When desire, resources, and responsibility meet, humans create business and law so cooperation need not depend only on the will of the strong.",
+      displayDescription: "When desire, resources, and responsibility meet, business and law help cooperation depend on more than the will of the powerful.",
     },
     "05": {
       originalTitle: "Natural Sciences",
-      displayTitle: "Asking the Universe",
-      displayDescription: "Humanity asks the universe questions and waits for the world to answer through its laws.",
+      displayTitle: "Questioning the Universe",
+      displayDescription: "Humanity asks questions of the universe, and waits for the world to answer through its laws.",
     },
     "06": {
-      originalTitle: "Computing & Technology",
-      displayTitle: "The Second Brain",
-      displayDescription: "Humans entrust thought to machines, distance to networks, and the impossible to the next attempt.",
+      originalTitle: "Computing and Technology",
+      displayTitle: "The Second Mind",
+      displayDescription: "Humanity gives thought to machines, distance to networks, and the impossible to the next attempt.",
     },
     "07": {
-      originalTitle: "Engineering & Construction",
+      originalTitle: "Engineering and Construction",
       displayTitle: "The Human Hand",
-      displayDescription: "Like a hand that nails dreams into the earth. Bridges, cities, and machines let invisible ideas stand upright.",
+      displayDescription: "Like a hand that fastens dreams into the earth, bridges, cities, and machines allow invisible ideas to stand.",
     },
     "08": {
-      originalTitle: "Agriculture & Ecology",
-      displayTitle: "The Ancient Pact",
-      displayDescription: "We receive life from the land, and eventually learn that a true harvest is not conquering nature, but living with it.",
+      originalTitle: "Agriculture and Ecology",
+      displayTitle: "The Ancient Promise",
+      displayDescription: "We receive life from the land, and slowly learn that a true harvest is not to conquer nature, but to live with it.",
     },
     "09": {
-      originalTitle: "Health & Medicine",
-      displayTitle: "Humanity's Night Watch",
-      displayDescription: "It does not promise a life without wounds. It fights for more possibilities in the face of pain, illness, and loss.",
+      originalTitle: "Health and Medicine",
+      displayTitle: "The Human Watchkeeper",
+      displayDescription: "It does not promise that we will never be hurt, but it fights for more possibilities in the face of pain, illness, and loss.",
     },
     "10": {
-      originalTitle: "Services & Transport",
+      originalTitle: "Services and Transport",
       displayTitle: "Reaching One Another",
-      displayDescription: "Like the bloodstream of a connected world, it lets people, goods, care, and hope cross distance and reach one another.",
+      displayDescription: "Like the bloodstream of the world, it carries people, goods, care, and hope across distance.",
     },
   },
   zh: {
