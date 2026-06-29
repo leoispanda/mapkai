@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.98";
+const appVersion = "0.1.101";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -1452,6 +1452,63 @@ const publicCategoryLabels = {
 };
 
 const publicCategoryCardDisplay = {
+  en: {
+    "00": {
+      originalTitle: "General Studies",
+      displayTitle: "The Starting Point of Growth",
+      displayDescription: "A person's true beginning is not how many answers they know, but when they begin to learn how to find them.",
+    },
+    "01": {
+      originalTitle: "Education",
+      displayTitle: "The Relay of Civilization",
+      displayDescription: "Every generation leaves, but education keeps their light from going out and lets it shine on those who come after.",
+    },
+    "02": {
+      originalTitle: "Arts & Humanities",
+      displayTitle: "The Soul of Civilization",
+      displayDescription: "When life is brief and the world falls silent, humanity uses art, language, and memory to prove that we felt and questioned.",
+    },
+    "03": {
+      originalTitle: "Social Sciences",
+      displayTitle: "Order and Conflict",
+      displayDescription: "It studies not a distant world, but the society we live inside every day and often fail to see clearly.",
+    },
+    "04": {
+      originalTitle: "Business & Law",
+      displayTitle: "Desire and Responsibility",
+      displayDescription: "When desire, resources, and responsibility meet, humans create business and law so cooperation need not depend only on the will of the strong.",
+    },
+    "05": {
+      originalTitle: "Natural Sciences",
+      displayTitle: "Asking the Universe",
+      displayDescription: "Humanity asks the universe questions and waits for the world to answer through its laws.",
+    },
+    "06": {
+      originalTitle: "Computing & Technology",
+      displayTitle: "The Second Brain",
+      displayDescription: "Humans entrust thought to machines, distance to networks, and the impossible to the next attempt.",
+    },
+    "07": {
+      originalTitle: "Engineering & Construction",
+      displayTitle: "The Human Hand",
+      displayDescription: "Like a hand that nails dreams into the earth. Bridges, cities, and machines let invisible ideas stand upright.",
+    },
+    "08": {
+      originalTitle: "Agriculture & Ecology",
+      displayTitle: "The Ancient Pact",
+      displayDescription: "We receive life from the land, and eventually learn that a true harvest is not conquering nature, but living with it.",
+    },
+    "09": {
+      originalTitle: "Health & Medicine",
+      displayTitle: "Humanity's Night Watch",
+      displayDescription: "It does not promise a life without wounds. It fights for more possibilities in the face of pain, illness, and loss.",
+    },
+    "10": {
+      originalTitle: "Services & Transport",
+      displayTitle: "Reaching One Another",
+      displayDescription: "Like the bloodstream of a connected world, it lets people, goods, care, and hope cross distance and reach one another.",
+    },
+  },
   zh: {
     "00": {
       originalTitle: "通用学习",
@@ -2172,6 +2229,94 @@ const subjectIntroStoriesZh20260628 = [
     coreInsightZh: "这个领域真正关心的，不只是发生了什么，而是谁看见、谁解释、谁传播，以及这些过程如何影响社会判断。",
     analogyBoundaryZh: "这个故事用广场说明社会和信息关系，但不能把该领域只理解成舆论或新闻。它还包括心理、政治、经济、社会结构、数据、知识组织和公共生活等更广的问题。",
   },
+  {
+    code: "05",
+    subjectTitle: "Natural Sciences",
+    subjectTitleZh: "自然科学",
+    title: "The Clock-Mender Who Asked the Mountain",
+    titleZh: "山顶上的问钟人",
+    summary: "Humanity asks the universe questions and waits for the world to answer through its laws.",
+    summaryZh: "人类向宇宙提问，并等待世界用规律回答。",
+    scene: "A village at the foot of a mountain slowly learns, in rain, thunder, starlight, and drought, how to turn fear into observation.",
+    sceneZh: "一座建在山脚下的村子，人们在雨水、雷声、星空和旱灾面前，慢慢学会把害怕变成观察。",
+    storyBody: `Long ago, there was a village built at the foot of a mountain. The people lived every day under the same slope. In spring, snowmelt came down from above; in summer, thunder rolled through the valley; in autumn, stars were scattered across the night sky like salt; in winter, wind came through the pass and made the cracks in the doors sound as if they were whispering.
+
+Everyone in the village knew the mountain was large, and everyone knew it had a temper. If too much rain fell, the river would rise. If the wind came too quickly, roofs would fly. When a bright streak crossed the sky, the elders said it was a god moving a basin of fire. The children listened, afraid and believing. In those days, fear was often a kind of explanation.
+
+There was a clock-mender in the village, living in the house closest to the mountain road. He was not good at pretty speeches, and he did not enjoy taking part in rituals. When people asked why thunder always came after lightning, he did not answer at once. When people asked why the moon was sometimes full and sometimes thin, he only looked up for a long time, then carved a mark into a wooden board.
+
+At first, the villagers thought he was strange. The mountain was already there, the wind had always blown, and the stars appeared every night. Since life went on as usual, why keep asking?
+
+The clock-mender did not argue. Every day, he did only three things: look, record, and compare.
+
+He placed twelve water jars by his door and recorded how much rain fell each month. He set wooden stakes on the hillside and recorded the length of their shadows on different days. He took clocks apart and put them together again, listening to the sound of the gears biting into one another. He also brought children to the river and showed them how the same stone moved in fast water and slow water.
+
+One year, a severe drought struck the village. The priest said people had forgotten to revere the mountain spirit. The merchants said the northern road had broken, so grain could not arrive. The elders said there had been dry years before, and people only needed to endure.
+
+The clock-mender brought out the wooden boards he had carved over many years. He had noticed that whenever the winter snowline retreated too high, the spring river became shallow; and whenever the spring river became shallow, the summer fields were more likely to crack. He did not say the mountain spirit did not exist, and he did not say the elders were wrong. He only pointed to the marks and said, "Perhaps the mountain is not angry. Perhaps it has been saying the same thing all along, and we had not yet learned how to listen."
+
+The villagers were unsure. But that year, they followed his advice. They dug the channels deeper, moved part of the seed to lower ground, and stored some grain earlier than usual. The drought did not disappear, but the village did not fall into famine as it had before.
+
+After that, more and more children came to the clock-mender. They thought he would teach them how to control the mountain, the wind, and the stars. But the clock-mender always shook his head.
+
+He said, "We cannot command the mountain to answer. We can only ask clearer questions."
+
+So the children learned to count stars at night, measure water after rain, and listen to the direction of leaves in the wind. They discovered that the world did not become smaller because it was explained. On the contrary, the more carefully they observed, the deeper the world became. Thunder was no longer only fear, and the starry sky was no longer only legend. The mountain was still silent, but it was no longer completely unfamiliar.
+
+Many years later, the clock-mender grew old. The village now had new waterwheels, a more accurate calendar, and stronger bridges. Some people said the clock-mender had changed the village. Others said he had only helped it lose a few superstitions.
+
+The clock-mender smiled when he heard this. Pointing toward the mountaintop, he said, "I did not change the mountain. I only believed that even a silent world has its order. If people are honest enough and patient enough, they can hear a little answer in wind, stone, water, and starlight."
+
+That night, the children stood on the mountaintop and saw the Milky Way crossing the sky. No one spoke. For the first time, they understood that questioning does not begin because human beings are strong enough to judge the universe. It begins because human beings are so small, and still refuse to stop trying to understand the world.`,
+    storyBodyZh: `很久以前，有一座村子建在山脚下。村里的人每天看着同一座山生活。春天，雪水从山上流下来；夏天，雷声在山谷里滚动；秋天，星星像盐一样洒在夜空；冬天，风从山口吹来，把门缝吹得像在低声说话。
+
+村里的人都知道山很大，也都知道山有脾气。下雨太多，河就会涨；风来得太急，屋顶就会飞；天上有亮光划过，老人就说，那是神在搬动火盆。孩子们听了，既害怕，也相信。因为在那时，害怕常常就是一种解释。
+
+村里有一个修钟人，住在最靠近山路的地方。他不太会说漂亮话，也不喜欢参加祭祀。别人问他为什么雷声总在闪光之后来，他不会立刻回答。别人问他为什么月亮有时圆、有时缺，他也只是抬头看很久，然后在木板上刻下一道痕迹。
+
+起初，村民觉得他有些古怪。山已经在那里，风也一直在吹，星星每天晚上都会出现。既然日子照样过，为什么还要不停地问？
+
+修钟人没有反驳。他只是每天做三件事：看，记，比较。
+
+他在门口放了十二个水罐，记录每个月落下的雨水。他在山坡上插了木桩，记录影子在不同日子的长度。他把钟拆开又装回去，听齿轮咬合的声音。他还把孩子们带到河边，让他们看同一块石头在急流和缓流中如何移动。
+
+有一年，村子发生了很大的旱灾。祭司说，是因为人们忘了敬畏山神。商人说，是因为北边的路断了，粮食来不了。长老说，过去也有旱年，忍一忍就会过去。
+
+修钟人却翻出自己多年来刻下的木板。他发现，每当冬天的雪线退得太高，春天的河水就会变浅；每当春天的河水变浅，夏天的田就更容易干裂。他没有说山神不存在，也没有说长老错了。他只是指着那些痕迹说：“也许山不是在发怒。也许它一直在说同一种话，只是我们以前没有学会听。”
+
+村民半信半疑。但那一年，他们按照他的建议，把水渠挖深，把部分种子换到低地，把一部分粮食提前存起来。旱灾没有消失，可村子没有像从前那样陷入饥荒。
+
+从那以后，越来越多的孩子来找修钟人。他们以为他会教他们如何控制山、控制风、控制星星。可是修钟人总是摇头。
+
+他说：“我们不能命令山回答。我们只能把问题问得更清楚。”
+
+于是孩子们学会了在夜里数星，在雨后量水，在风中听树叶的方向。他们发现，世界不是因为被解释而变小。相反，当他们越认真观察，世界越显得深远。雷声不再只是恐惧，星空也不再只是传说。山仍然沉默，却不再完全陌生。
+
+很多年后，修钟人老了。村里已经有了新的水车、更准的历法和更坚固的桥。有人说，是修钟人改变了村子。也有人说，他只是让村子少了一些迷信。
+
+修钟人听后笑了。他指着山顶，说：“我没有改变山。我只是相信，沉默的世界也有它的秩序。人若足够诚实，足够耐心，就能从风、石头、水和星光里，听见一点回答。”
+
+那天晚上，孩子们站在山顶，看见银河横过天空。没有人说话。因为他们第一次明白，所谓提问，并不是因为人类已经强大到可以审判宇宙，而是因为人类如此渺小，却仍然不愿停止理解世界。`,
+    formalExplanation: `This fable describes the basic spirit of the natural sciences. Natural science is not simply the collection of facts, and it does not make the world dull by taking it apart from mystery. It is closer to a continuing practice of asking questions, observing, recording, comparing, and revising explanations. The clock-mender in the fable does not directly deny the villagers' older beliefs. Instead, through long observation of rain, shadows, rivers, and seasonal change, he gradually notices that stable relationships may exist among natural phenomena. This corresponds to empirical observation, systematic record keeping, pattern recognition, and causal explanation in the natural sciences.
+
+The importance of natural science lies in helping humanity move from fear and guesswork toward more reliable understanding. Thunder and lightning, drought, the night sky, disease, and changes in matter were once often understood as forces beyond explanation. Natural science uses observable evidence and testable reasoning to let human beings gradually understand the laws behind such phenomena. This does not mean humans can fully control nature. It means humans can live with nature more cautiously and more clearly.
+
+At a graduate level, the fable also emphasizes the limits and openness of scientific knowledge. The clock-mender never claims to possess the final answer. He only keeps asking clearer questions and uses long-term evidence to revise earlier judgments. This point matters because natural science does not receive truth once and for all. It is a process of approaching better explanations over time. Scientific theories need evidence, and they must withstand new observation, experiment, and refutation. Their strength does not lie in being forever correct, but in being willing to be tested, corrected, and made more reliable through correction.
+
+For that reason, "asking the universe" is not merely a romantic phrase. It is the central posture of the natural sciences. Human beings are very small before the universe, but that smallness gives questioning its dignity. Natural science allows humanity to search for laws among wind, stone, water, life, and starlight. It also teaches us that the world will not necessarily explain itself, but with patience, evidence, and reason, human beings can move a little closer to its answer.`,
+    formalExplanationZh: `这个寓言描写的是自然科学的基本精神。自然科学并不是简单地收集知识，也不是把世界从神秘中“拆开”之后变得无趣。它更像是一种持续提问、观察、记录、比较和修正解释的方式。寓言中的修钟人并没有直接否定村民原有的信念，而是通过长期观察雨水、影子、河流和季节变化，逐渐发现自然现象之间可能存在稳定的关系。这对应自然科学中的经验观察、系统记录、模式识别和因果解释。
+
+自然科学的重要性在于，它帮助人类从恐惧和猜测中走向更可靠的理解。雷电、旱灾、星空、疾病和物质变化，曾经都可能被理解为不可解释的力量。但自然科学通过可观察的证据和可检验的推理，使人类能够逐步理解这些现象背后的规律。它并不意味着人类可以完全控制自然，而是意味着人类可以更谨慎、更清楚地与自然相处。
+
+对于研究生层面的理解来说，这个寓言也强调了科学认识的有限性和开放性。修钟人没有说自己拥有最终答案。他只是不断提出更清楚的问题，并用长期证据来修正原来的判断。这一点非常重要，因为自然科学不是一次性得到真理，而是一个不断逼近更好解释的过程。科学理论需要证据支持，也需要经受新的观察、实验和反驳。它的力量不在于永远正确，而在于愿意被检验、被修正，并在修正中变得更可靠。
+
+因此，“向宇宙提问”不是一种浪漫口号，而是自然科学的核心姿态。人类面对宇宙时非常渺小，但正是这种渺小，使提问本身变得有尊严。自然科学让人类在风、石头、水、生命和星光之间寻找规律，也让我们明白：世界并不一定会主动解释自己，但人类可以用耐心、证据和理性，一点点靠近它的回答。`,
+    coreInsight: "Natural science is not about turning a mysterious world into a list of answers. It is about using observation, records, comparison, and testing to move humanity closer to more reliable laws.",
+    coreInsightZh: "自然科学真正关心的，不是把神秘世界变成答案清单，而是用观察、记录、比较和检验，让人类一点点接近更可靠的规律。",
+    analogyBoundary: "This story emphasizes the questioning spirit and evidence-based method of the natural sciences, but natural science should not be reduced to personal observation or to the control of nature. Real natural science also involves experimental design, mathematical models, peer review, technical instruments, and continuous revision.",
+    analogyBoundaryZh: "这个故事强调自然科学的提问精神和证据方法，但不能把自然科学理解成只靠个人观察或只服务于控制自然。真正的自然科学还包括实验设计、数学模型、同行检验、技术工具和持续修正。",
+    sourceBatchId: "subject-intro-05-natural-science-20260629",
+  },
 ];
 
 function makeSublensStory(draft) {
@@ -2252,14 +2397,15 @@ function makeFieldLensStory(category, group, code, title) {
 function makeSubjectIntroLensStory(draft) {
   const category = categories.find((item) => item.code === draft.code);
   const imageSource = baseLensStories.find((story) => story.categoryCode === draft.code) || baseLensStories[0];
-  const fallbackTitle = draft.subjectTitleZh || category?.chineseTitle || category?.title || draft.code;
+  const fallbackTitle = draft.subjectTitle || category?.title || draft.subjectTitleZh || category?.chineseTitle || draft.code;
+  const fallbackTitleZh = draft.subjectTitleZh || category?.chineseTitle || category?.title || draft.code;
   return {
     id: `${draft.code}-subject-intro`,
     storyLevel: "subject-intro",
     categoryCode: draft.code,
     groupCode: "",
     groupTitle: category?.title || "",
-    groupTitleZh: fallbackTitle,
+    groupTitleZh: fallbackTitleZh,
     fieldCodes: [],
     fieldTitlesZh: {},
     image: imageSource?.image || "/assets/stories/000-general-starter-course.png",
@@ -2267,7 +2413,7 @@ function makeSubjectIntroLensStory(draft) {
     imageAltZh: imageSource?.imageAltZh || "一个 MapKAI 学科总览故事。",
     imageInheritedFromGroup: true,
     title: draft.title || draft.titleZh || fallbackTitle,
-    titleZh: draft.titleZh || draft.title || fallbackTitle,
+    titleZh: draft.titleZh || draft.title || fallbackTitleZh,
     summary: draft.summary || draft.summaryZh || "",
     summaryZh: draft.summaryZh || draft.summary || "",
     scene: draft.scene || draft.sceneZh || "",
@@ -2287,8 +2433,8 @@ function makeSubjectIntroLensStory(draft) {
     reflectionQuestion: "",
     reflectionQuestionZh: "",
     tags: [fallbackTitle, "subject overview"],
-    tagsZh: [fallbackTitle, "学科总览"],
-    sourceBatchId: "subject-intro-00-03",
+    tagsZh: [fallbackTitleZh, "学科总览"],
+    sourceBatchId: draft.sourceBatchId || "subject-intro-00-03",
   };
 }
 
@@ -6248,7 +6394,7 @@ function getPublicCategoryTitle(categoryOrCode) {
 
 function getPublicCategoryCardDisplay(category) {
   const originalTitle = getPublicCategoryTitle(category);
-  const display = currentLanguage === "zh" ? publicCategoryCardDisplay.zh[category?.code] : null;
+  const display = publicCategoryCardDisplay[currentLanguage]?.[category?.code] || null;
   if (display) {
     return {
       originalTitle: display.originalTitle || originalTitle,
