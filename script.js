@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.106";
+const appVersion = "0.1.108";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -16117,10 +16117,15 @@ function renderCategoryDetail(code) {
   const title = document.getElementById("categoryDetailTitle");
   const copy = document.getElementById("categoryDetailCopy");
   const stats = getPublicCategoryStats(category);
+  const cardDisplay = getPublicCategoryCardDisplay(category);
+  const originalLabel = currentLanguage === "zh" ? "原分类" : "Original category";
+  const countText = currentLanguage === "zh" ? `${stats.practicalCount} ${t("detailedFields")}` : `${stats.practicalCount} ${t("detailedFields")}`;
   if (eyebrow) eyebrow.textContent = t("categoryScope");
-  if (title) title.textContent = getPublicCategoryTitle(category);
+  if (title) title.textContent = cardDisplay.displayTitle || getPublicCategoryTitle(category);
   if (copy) {
-    copy.textContent = t("categoryCopy", stats.practicalCount);
+    copy.innerHTML = `
+      <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>
+      <span class="category-detail-meta">${escapeHtml(originalLabel)}: ${escapeHtml(cardDisplay.originalTitle || getPublicCategoryTitle(category))} · ${escapeHtml(countText)}</span>`;
   }
 
   renderPassport("categoryPassport", {
