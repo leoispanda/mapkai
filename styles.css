@@ -4077,6 +4077,11 @@ canvas {
   gap: 14px;
 }
 
+.category-subject-story-layout {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
 .hierarchy-layer {
   display: grid;
   gap: 8px;
@@ -4164,6 +4169,11 @@ canvas {
 
 .public-field-card span {
   -webkit-line-clamp: 3;
+}
+
+.category-inline-story {
+  width: min(920px, 100%);
+  margin: 0 auto;
 }
 
 .detailed-field-button-list {
