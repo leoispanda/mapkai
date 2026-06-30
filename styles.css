@@ -5806,6 +5806,34 @@ dd,
   font-size: clamp(1.02rem, 1.5vw, 1.18rem);
 }
 
+.story-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.story-navigation-link {
+  width: 100%;
+  min-height: 44px;
+  padding-inline: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.story-navigation-link.is-menu {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 660px) {
+  .story-navigation {
+    grid-template-columns: 1fr;
+  }
+}
+
 .story-insight {
   display: grid;
   gap: 0.75rem;
@@ -6331,6 +6359,14 @@ body[data-theme="dark"] .contact-methods a {
   background: rgba(255, 255, 255, 0.04);
   color: #aaa39a;
   box-shadow: none;
+}
+
+body[data-theme="dark"] .story-navigation {
+  border-top-color: rgba(216, 177, 95, 0.18);
+}
+
+body[data-theme="dark"] .story-navigation-link.is-menu {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 body[data-theme="dark"] h1,

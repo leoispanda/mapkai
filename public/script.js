@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.114";
+const appVersion = "0.1.117";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -34,7 +34,7 @@ const publicContentVisibility = {
   articles: false,
 };
 
-const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02"]);
+const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04"]);
 
 function arePublicArticlesVisible() {
   return Boolean(publicContentVisibility.articles);
@@ -189,6 +189,9 @@ const uiText = {
     lensStoryShelfCopy: "Each image opens one everyday story for a MapKAI lens.",
     lensStoryShelfLens: "Lens",
     backToStories: "Back to Stories",
+    previousStory: "Previous story",
+    nextStory: "Next story",
+    backToMainMenu: "Back to main menu",
     storyInsightTitle: "Conclusion",
     storyPerspectivesTitle: "Historical debate",
     storyPerspectivesCopy: "Actual arguments, role trade-offs, and a few counterfactual seats at the table.",
@@ -568,6 +571,9 @@ const uiText = {
     lensStoryShelfCopy: "每张图片打开一个 MapKAI Lens 的生活故事。",
     lensStoryShelfLens: "镜头",
     backToStories: "返回故事",
+    previousStory: "上一个故事",
+    nextStory: "下一个故事",
+    backToMainMenu: "回到主菜单",
     storyInsightTitle: "结论",
     storyPerspectivesTitle: "当时的讨论",
     storyPerspectivesCopy: "真实争论、角色权衡，以及几个“如果他在场会怎样”的反事实席位。",
@@ -1480,7 +1486,7 @@ const publicCategoryCardDisplay = {
       displayDescription: "It studies not a distant world, but the society we live in every day and often fail to see clearly.",
     },
     "04": {
-      originalTitle: "Business and Law",
+      originalTitle: "Business, administration and law",
       displayTitle: "Desire and Responsibility",
       displayDescription: "When desire, resources, and responsibility meet, business and law help cooperation depend on more than the will of the powerful.",
     },
@@ -2395,24 +2401,217 @@ Slowly, she understood that some learning is not meant to solve an immediate pra
   },
   {
     code: "03",
-    subjectTitleZh: "社会科学、新闻与信息",
-    titleZh: "广场上的第三种声音",
-    summaryZh: "一座城市的广场上发生争执，人们最初只想找出谁对谁错，后来发现更重要的是理解信息如何流动、群体如何形成判断、制度如何影响声音。",
-    sceneZh: "一座有大广场的城市，商人、工人、学生、报信人和官员每天在这里交换消息和意见。",
-    storyBodyZh: `城里有一个大广场。清晨，商人在这里谈价格，工人在这里找活，学生在墙边读公告，报信人站在台阶上讲城外发生的事。广场很吵，但城里人觉得，消息越多，大家就越能知道真相。
+    subjectTitle: "Social sciences",
+    subjectTitleZh: "社会科学",
+    title: "Social sciences",
+    titleZh: "秩序与冲突",
+    summary: "Zhou learns, through a blocked sidewalk, a class election, and city-work choices, how society works through rules, resources, cooperation, and conflict.",
+    summaryZh: "小周从被堵住的人行道、班级投票和城市去留选择里，慢慢看见社会如何在规则、资源和冲突中运行。",
+    scene: "Zhou first notices rules beside a narrow sidewalk blocked by electric bikes at the entrance of his residential community.",
+    sceneZh: "小周第一次认真看见规则，是在小区门口一条被电动车堵住的人行道旁。",
+    storyBody: `Zhou first became aware of “rules” at the entrance of his residential community.
 
-有一天，粮价突然上涨。有人说是商人囤货，有人说是外地道路断了，也有人说是官员提前知道消息，却没有告诉百姓。争吵很快传遍全城。每个人都说自己听到的才是真的。
+When he was young, he passed a small shop every day after school. There was a narrow sidewalk in front of the shop, and several electric bikes were often parked beside it. During the morning rush hour, parents sending children to school, people buying breakfast, and people riding to work were all crowded together.
 
-市长想平息争论，于是让报信人每天只发布一条“准确信息”。可事情没有变好。市场里仍有传言，工人仍然害怕失业，商人仍然不愿卖粮。学生发现，同一条消息被不同人听到后，会变成不同意思。对有粮的人，它只是价格变化；对没粮的人，它就是生存威胁。
+One day, an old man pushing a wheelchair tried to pass by. The wheelchair was blocked by an electric bike and had to move onto the road. The old man became angry. The owner of the bike was also unhappy and said he had only parked there for a few minutes. They started arguing. Some people nearby supported the old man, while others felt that the bike owner also had difficulties, because there was really no proper place to park nearby.
 
-后来，一位长期在广场记录的人提出，不要只问哪一句话是真的，还要问谁能说话，谁被听见，消息从哪里来，经过谁的手，又为什么会被相信。她发现，站在高台上的声音传得最远，靠近仓库的人最早知道变化，外来工人的担心很少被写进公告，商人的沉默也会被别人解释成有罪。
+Zhou stood there and watched. At first, he thought the matter was very simple: electric bikes should not block the sidewalk.
 
-市长这才明白，广场不是一个简单的说话地方。它有位置，有权力，有规则，也有被忽略的人。信息不是自己流动的，群体也不是自动形成判断的。
+But the next day, the same thing happened again. On the third day, someone still parked there. Later, the property office put up a notice asking residents not to block the sidewalk. The situation improved for a few days, but soon it returned to the same as before.
 
-后来，城里不只发布粮价，还公开道路、库存和救济安排；不只听商人，也听搬运工、家庭主妇和外来工人的说法。争论没有消失，但人们开始知道，理解社会不能只看单个声音，而要看声音之间的关系。这个故事通向的，是社会科学、新闻与信息。`,
-    formalExplanationZh: "社会科学、新闻与信息关注人与社会、制度、媒体和信息之间的关系。它研究个体行为、群体互动、社会结构、公共传播、新闻生产和信息流动。研究生层面理解这一领域，重点是看到社会事实不是孤立存在的，信息也不是中性的；它们会受到权力、文化、制度、媒介和群体关系的影响。",
-    coreInsightZh: "这个领域真正关心的，不只是发生了什么，而是谁看见、谁解释、谁传播，以及这些过程如何影响社会判断。",
-    analogyBoundaryZh: "这个故事用广场说明社会和信息关系，但不能把该领域只理解成舆论或新闻。它还包括心理、政治、经济、社会结构、数据、知识组织和公共生活等更广的问题。",
+Zhou began to feel puzzled. Why was something that seemed so clear still so difficult to solve?
+
+Later, the school asked them to do a community observation assignment. Each student had to choose a small problem around them, record why it happened, who was involved, and whether it could be improved. Zhou immediately thought of the sidewalk in front of the small shop.
+
+He observed it for a full week.
+
+He found that the place was most crowded between 7:30 and 8:30 in the morning. Parents sending children to school parked in a hurry because they were afraid of being late. People buying breakfast parked for a short time, but there were many of them. The shop owner did not want to interfere, because more customers meant better business. The property office sometimes reminded people, but no one was always there. Older people, children, and people pushing baby strollers were affected the most, but they were usually not the ones with the strongest voice.
+
+At first, Zhou thought it was only a problem of public manners. After observing it, he found that it was not only that. It was also related to space, time pressure, business interests, management, and residents' habits.
+
+He wrote these points in his assignment. After reading it, the teacher asked him, "If you were the property manager, what would you do?"
+
+Zhou said, "Put up more notices."
+
+The teacher asked again, "If notices worked, why was the problem not solved before?"
+
+Zhou thought for a while and said, "Maybe there should be a temporary parking area. The shop owner also needs to cooperate. During the morning rush hour, someone could guide people. And we need to hear what residents think."
+
+The teacher nodded and said, "You are beginning to see the relationship between people and systems."
+
+In middle school, Zhou encountered another situation. The class needed to elect a class monitor. The teacher said that this time, the teacher would not appoint anyone directly. The students would vote. Several classmates began to ask for support. Some promised to fight for more activity time. Some said they would make the class more organized. Some received many votes simply because they had more friends.
+
+After the vote, one student who was serious but quiet was not elected. He felt upset and said, "I could also do this well. Why didn't they choose me?"
+
+At first, Zhou did not know how to answer. Later, he slowly realized that a classroom was also a small society. Ability was important, but relationships, expression, trust, impression, and group atmosphere could also shape the result. Whether a person is chosen does not only depend on whether they are “good enough.” It also depends on how others understand and evaluate them, and what the group feels it needs at that moment.
+
+Later, at university, Zhou joined a research project. The project studied why young people choose to stay in big cities or return to their hometowns for work. Zhou first thought that the answer would mainly be about salary. But after the interviews, he found that each person had different reasons.
+
+Some people stayed in big cities because there were more opportunities. Some returned home because their parents needed care. Some wanted to stay, but the rent was too high. Some wanted to return, but worried that smaller cities had fewer development opportunities. Some were not making a fully free choice at all. They were trying to find an acceptable result between family expectations, economic pressure, and personal goals.
+
+When Zhou organized the interviews, he suddenly thought of the blocked sidewalk in front of the small shop when he was young. At that time, he thought the problem was only that someone had done something wrong. Now he slowly understood that many social problems are not caused by one person alone. Individuals do have responsibility, but individuals always act within families, organizations, markets, rules, culture, and the distribution of resources.
+
+He also began to understand that society is not a completely orderly whole. It operates every day between cooperation and conflict. People need rules, but rules are not equally convenient for everyone. People pursue their own interests, but interests often conflict. People say they are making free choices, but behind those choices there are often conditions that are not easy to see.
+
+Later, when he saw news about employment, education, cities, families, gender, inequality, migration, and public policy, he no longer rushed to ask who was right and who was wrong. He first asked: Which groups are involved in this issue? Who has more resources? Who makes the rules? Who benefits? Who carries the cost? Why do people make these choices?
+
+These questions did not make the world simpler. Instead, they made the world look more complex. But Zhou felt that this complexity was not confusion. It was a way of understanding life more closely.`,
+    storyBodyZh: `小周第一次意识到“规则”这件事，是在小区门口。
+
+那时候，他每天放学都会经过一个小卖部。小卖部门口有一条不宽的人行道，旁边停着几辆电动车。早高峰时，送孩子上学的家长、买早餐的人、骑车上班的人都会挤在一起。
+
+有一天，一个老人推着轮椅经过。轮椅被一辆电动车挡住了，只能绕到机动车道上。老人很生气，骑车的人也不高兴，说自己只是停几分钟。两个人吵了起来，旁边的人有人帮老人说话，有人觉得骑车的人也不容易，因为附近确实没有地方停车。
+
+小周站在旁边看着，觉得这件事很简单：电动车不应该挡路。
+
+可是第二天，他发现同样的事情又发生了。第三天，还是有人把车停在那里。后来，小区物业贴了通知，要求大家不要占用人行道。通知贴了几天，情况好了一点，但很快又变回原样。
+
+小周开始觉得奇怪。为什么一件看起来很清楚的事情，大家却一直做不好？
+
+后来，学校让他们做一个社区观察作业。每个人要选择一个身边的小问题，记录它为什么会出现，涉及哪些人，以及有没有可能改善。小周马上想到了小卖部门口的人行道。
+
+他连续观察了一个星期。
+
+他发现，早上七点半到八点半最拥挤。送孩子的家长停得最急，因为他们怕迟到。买早餐的人停得最短，但人数最多。小卖部老板不愿意管，因为来买东西的人多，对生意有好处。物业有时会提醒，但没有人一直在现场。老人、孩子和推婴儿车的人受到影响最大，但他们通常不是最有力量表达意见的人。
+
+小周原本以为，这是“有没有公德心”的问题。观察之后，他发现事情不只是这样。它还和空间安排、时间压力、商铺利益、管理方式、居民习惯有关。
+
+他把这些写进作业里。老师看完后问他：“如果你是物业，你会怎么做？”
+
+小周说：“贴更多通知。”
+
+老师又问：“如果贴通知有用，为什么之前没有解决？”
+
+小周想了想，说：“可能还要安排临时停车区，也要让小卖部老板配合。早高峰时可以有人引导。还要听听居民怎么想。”
+
+老师点点头，说：“你开始看到人和制度之间的关系了。”
+
+上中学后，小周又遇到一件事。班里要选班长。老师说，这次不由老师直接指定，而是让大家投票。几个同学开始拉票。有的人承诺会帮大家争取更多活动时间，有的人说自己会让班级更有秩序，还有人只是因为朋友多，得到了很多支持。
+
+投票结束后，一个平时很认真但不太爱说话的同学落选了。他很难过，说：“我明明也能做好，为什么大家不选我？”
+
+小周一开始不知道怎么回答。后来他慢慢发现，班级里也有一种小社会。能力很重要，但关系、表达、信任、印象和群体气氛也会影响结果。一个人是否被选择，并不只取决于他“好不好”，还取决于别人怎样理解他、评价他，以及这个群体当时需要什么。
+
+再后来，小周在大学参加了一个调研项目。项目研究年轻人为什么选择留在大城市，或者回到家乡工作。小周原以为，答案应该主要和工资有关。可是访谈之后，他发现每个人的理由都不一样。
+
+有人留在大城市，是因为机会多；有人回家乡，是因为父母需要照顾；有人想留下，但房租太高；有人想回去，却担心小地方没有发展空间；也有人根本不是在“自由选择”，而是在家庭期待、经济压力和个人理想之间找一个还能接受的结果。
+
+小周整理访谈时，突然想起小时候小卖部门口那条被堵住的人行道。那时，他以为问题只是某个人做错了。现在他慢慢明白，很多社会问题都不是单独由某一个人造成的。个人当然有责任，但个人总是在家庭、组织、市场、规则、文化和资源分配中行动。
+
+他也开始明白，社会并不是一个完全有秩序的整体。它每天都在合作和冲突之间运转。人们需要规则，但规则不一定对所有人一样方便；人们追求利益，但利益之间常常会冲突；人们说自己是自由选择，但选择背后往往有看不见的条件。
+
+后来，他再看到新闻里的就业、教育、城市、家庭、性别、贫富差距、移民和公共政策问题时，不再急着问“谁对谁错”。他会先问：这个问题涉及哪些群体？谁拥有更多资源？规则是谁制定的？谁从中受益？谁承担成本？人们为什么会做出这样的选择？
+
+这些问题没有让世界变简单。相反，它让世界看起来更复杂。但小周觉得，这种复杂不是混乱，而是一种更接近真实生活的理解。`,
+    formalExplanation: "This is what Social sciences are mainly concerned with. This field studies how people live in society, and how people cooperate, compete, conflict, and form order. It focuses on families, organizations, markets, states, culture, group behavior, social inequality, power relations, and public policy. It does not only describe individual behavior, but also tries to understand the social structures and institutional environments behind individual actions. Its roots are connected with human reflection on social order, political life, economic exchange, group relations, and public governance. Later, with the development of modern states, cities, markets, statistical methods, and social surveys, Social sciences gradually became a formal academic field. It studies how society works, and why people act in the ways they do within society.",
+    formalExplanationZh: "这就是“社会科学”真正关心的内容。它研究人如何在社会中生活，人与人之间如何合作、竞争、冲突和形成秩序。它关注家庭、组织、市场、国家、文化、群体行为、社会不平等、权力关系和公共政策等问题。它不只是描述个人行为，也试图理解个人行为背后的社会结构和制度环境。在正式学科中，它对应的是 Social sciences（社会科学）。它的来源与人类对社会秩序、政治生活、经济交换、群体关系和公共治理的思考有关。后来，随着现代国家、城市、市场、统计方法和社会调查的发展，社会科学逐渐成为正式学科，用来研究社会如何运行，以及人在社会中为什么会这样行动。",
+    coreInsight: "Social sciences do not only ask who is right or wrong. They ask how groups, rules, resources, institutions, and culture shape human action.",
+    coreInsightZh: "社会科学不只问谁对谁错，而是追问群体、规则、资源、制度和文化如何共同塑造人的行动。",
+    analogyBoundary: "This story uses a community, a classroom, and work choices to show social relations, but Social sciences also include politics, economics, psychology, communication, data, policy, and inequality.",
+    analogyBoundaryZh: "这个故事用社区、班级和就业选择说明社会关系，但社会科学还包括政治、经济、心理、传播、数据、政策和社会不平等等更广的问题。",
+    sourceBatchId: "subject-intro-03-social-sciences-order-conflict-20260630",
+  },
+  {
+    code: "04",
+    subjectTitle: "Business, administration and law",
+    subjectTitleZh: "商业、管理与法律",
+    title: "Business, administration and law",
+    titleZh: "欲望与责任",
+    summary: "Yaya learns through a bakery price increase, a charity sale, and a company internship how business and law organize desire, resources, rules, and responsibility.",
+    summaryZh: "小雅从面包涨价、义卖饼干和公司实习里，看见商业如何在欲望、资源、规则和责任之间组织合作。",
+    scene: "Yaya first realizes buying is not simple in a small bakery near her home after her favorite bread becomes more expensive.",
+    sceneZh: "小雅第一次觉得买东西并不简单，是在家附近一家涨价的小面包店。",
+    storyBody: `Yaya first felt that “buying something” was not so simple at a small bakery near her home.
+
+The bakery was small, but there was always a line in the morning. Her favorite item was the red bean bread. It was not expensive, and the taste was always the same. Before, she only thought that customers paid money, the owner sold bread, and the matter ended there.
+
+One day, when she went to buy bread, she found that the price had increased. The red bean bread, which used to cost five yuan, now cost six yuan. People in the line began to complain. Some said the owner was too greedy. Some said they would not come again. The owner stood behind the counter and explained that flour, butter, and labor costs had all increased. If he did not raise the price, it would be difficult for the shop to continue.
+
+After hearing this, Yaya felt a little conflicted. As a customer, of course she wanted the price to be lower. But if the owner really lost money, the shop might close. Then she would not be able to buy this bread anymore.
+
+For the first time, she realized that behind a very ordinary purchase, there were many relationships. Customers wanted lower prices. The owner wanted the shop to survive. Employees needed wages. Suppliers also needed to make money. Everyone had their own needs, but these needs did not always fit together.
+
+Later, the school organized a small charity sale. Each group had to design a product, calculate the cost, set the price, and donate the income to a public project. Yaya's group decided to sell handmade cookies.
+
+At first, they only thought about making the cookies tasty and the packaging attractive. But soon, problems appeared one after another. How much would the ingredients cost? Did they need to buy packaging boxes? If the price was too high, would classmates still buy them? If the price was too low, there might be no money left to donate. Who would make the cookies? Who would collect the money? What if someone had an allergy? What if many cookies were left unsold after the event?
+
+Yaya used to think that doing business meant “selling things.” Now she found that selling was only the result. Before that, there were planning, costs, division of work, risks, communication, and responsibility.
+
+On the day of the event, their cookies sold well. But near the end, one classmate came back and said that one cookie was missing from the bag he had bought. Yaya's group became nervous. Someone said, “It is only one cookie. We do not need to deal with it.” But Yaya felt that this was not right. In the end, they gave the classmate a new bag and wrote a note beside the table: if the number is wrong, please come back and exchange it.
+
+It was a small matter, but Yaya remembered it clearly. She found that trust is not built by slogans. It is built by how people handle problems when they appear.
+
+At university, Yaya did an internship in the marketing department of a company. She joined a promotion project for a new product. In the meeting, the team discussed the advertising message, price, sales channels, and target users. Someone suggested making the product effect sound more attractive, because this could increase sales.
+
+Yaya asked, “But can we really guarantee this effect?”
+
+The meeting room became quiet for a moment. The manager said, “If we cannot guarantee something, we cannot write it as a guarantee. We can emphasize advantages, but we cannot mislead consumers.”
+
+Later, colleagues from the legal department also joined the discussion. They checked whether the advertising content met the rules, how responsibilities should be written in the contract, whether user data could be collected in this way, and what would happen if a partner failed to deliver on time. Before this, Yaya had thought that law was far from business, something used only after problems appeared. That time, she realized that many legal issues already exist before things begin.
+
+If a contract is not clear, cooperation may turn into conflict.
+If advertising is exaggerated, sales may lead to complaints.
+If data is used improperly, growth may harm user rights.
+If a company only looks at profit, it may lose trust.
+
+Before the internship ended, the company faced a supply problem. One partner factory wanted to change to a cheaper material because of cost pressure. The material could be used, but its quality was less stable than the original one. The purchasing department wanted to reduce costs. The sales department worried about reputation. The legal department reminded everyone of the contract terms. The branding department worried about consumer trust.
+
+Yaya sat in the meeting room and listened to different departments arguing. She suddenly thought of the bakery from her childhood. At that time, she had only seen the price of one bread increase. Now she saw that in an organization, similar problems happened every day, only on a larger scale, with more people involved and more complex consequences.
+
+She slowly understood that business is not simply about pursuing profit, and law is not simply about limiting behavior. Business allows people to exchange resources, organize production, and create value. Law makes these exchanges and forms of cooperation depend not only on personal promises, but also on clearer rules and responsibilities. Without business, many ideas would be difficult to turn into products and services. Without law, cooperation could easily become a game in which the stronger side has more advantage.
+
+Later, when Yaya saw a shop opening, a contract being signed, a brand promotion, a company hiring people, or a consumer complaint, she no longer looked only at the surface transaction. She would think: Who is creating value? Who is taking the risk? Are the rules clear? Who carries the responsibility? Are the benefits distributed fairly? If a conflict happens, how should it be solved?
+
+These questions helped her see that desire itself is not frightening. People want to earn money, develop, and receive better products and services. These are normal needs. What matters is whether, when desire and resources meet, people can use suitable forms of organization and rules to turn personal interests into actions that can be cooperative, limited, and responsible.`,
+    storyBodyZh: `小雅第一次觉得“买东西”没有那么简单，是在家附近的一家面包店。
+
+那家店很小，早上总是排队。她最喜欢里面的红豆面包。面包不贵，味道也稳定。她以前只觉得，顾客付钱，老板卖面包，这件事就结束了。
+
+有一天，她去买面包时，发现价格涨了。原来五块钱一个的红豆面包，变成了六块。排队的人开始抱怨。有人说老板太贪心，有人说以后不来了。老板站在柜台后面，只是解释说，面粉、黄油和人工都涨价了，如果不涨价，店就很难继续开下去。
+
+小雅听了以后，心里有点矛盾。作为顾客，她当然希望价格低一点。可是如果老板真的亏钱，店可能就关门了。那样她以后也买不到这个面包。
+
+她第一次发现，一次很普通的购买背后，其实有很多关系：顾客想要便宜，老板想要生存，员工需要工资，供应商也要赚钱。每个人都有自己的需求，但这些需求不一定总是合得上。
+
+后来，学校组织了一次小型义卖活动。每个小组要自己设计产品，计算成本，定价格，最后把收入捐给公益项目。小雅的小组决定卖手工饼干。
+
+一开始，他们只想着饼干要好吃、包装要好看。可是很快，问题一个接一个出现。原材料要多少钱？包装盒要不要买？如果价格太高，同学会不会不买？如果价格太低，最后可能根本没有剩余可以捐。谁负责制作？谁负责收钱？如果有人吃了过敏怎么办？如果活动结束后还有很多饼干卖不出去，又该怎么办？
+
+小雅原来以为，做生意就是“把东西卖出去”。现在她发现，卖出去只是结果。前面还有计划、成本、分工、风险、沟通和责任。
+
+活动当天，他们的饼干卖得不错。但快结束时，一个同学回来，说自己买到的一袋饼干少了一块。小雅的小组很紧张。有人说：“就一块饼干，不用管吧。”但小雅觉得不对。最后，他们重新给了那位同学一袋，并在摊位旁边写清楚：如果数量不对，可以回来更换。
+
+这件事很小，却让小雅印象很深。她发现，信任不是靠口号建立的，而是在出现问题时看你怎么处理。
+
+大学时，小雅去一家公司的市场部实习。她参与一个新产品的推广项目。会议上，团队讨论广告语、价格、销售渠道和目标用户。有人提出，可以把产品效果写得更吸引人一点，这样销量会更好。
+
+小雅问：“可是这个效果真的能保证吗？”
+
+会议室里安静了一下。经理说：“不能保证的东西，就不能写成保证。可以强调优势，但不能误导消费者。”
+
+后来，法务同事也加入了讨论。他们检查广告内容是否符合规定，合同里责任怎么写，用户数据能不能这样收集，合作方如果没有按时交付应该怎么办。小雅以前觉得法律离商业很远，是出了问题以后才会用到的东西。那次她才发现，很多法律问题其实在事情开始之前就已经存在了。
+
+如果合同不清楚，合作可能会变成争吵。
+如果广告夸大，销售可能会带来投诉。
+如果数据使用不当，增长可能会伤害用户权益。
+如果只看利润，企业可能会失去信任。
+
+实习结束前，公司遇到了一次供应问题。一个合作工厂因为成本压力，想换一种更便宜的材料。那种材料不是不能用，但质量不如原来的稳定。采购部门想降低成本，销售部门担心影响口碑，法务部门提醒合同条款，品牌部门担心消费者信任。
+
+小雅坐在会议室里，听不同部门争论。她突然想到小时候那家面包店。那时她只看到一个面包涨价。现在她看到，在一个组织里，类似的问题每天都在发生，只是规模更大，牵涉的人更多，后果也更复杂。
+
+她慢慢明白，商业不是单纯地追求利润，法律也不是单纯地限制行为。商业让人们可以交换资源、组织生产、创造价值；法律让这些交换和合作不完全依赖个人承诺，而有更清楚的规则和责任。没有商业，很多想法很难变成产品和服务；没有法律，合作又很容易变成强者占优势的游戏。
+
+后来，小雅再看到一家店开张、一份合同签署、一个品牌宣传、一家公司招聘或一次消费者投诉时，不会只看表面的交易。她会想到：谁在创造价值？谁承担风险？规则是否清楚？责任由谁承担？利益有没有被公平地分配？如果发生争议，应该怎样解决？
+
+这些问题让她看到，欲望本身并不可怕。人想赚钱，想发展，想得到更好的产品和服务，这些都很正常。真正重要的是，当欲望和资源相遇时，人们是否能用合适的组织方式和规则，把个人利益变成可以合作、可以约束、也可以负责的行动。`,
+    formalExplanation: "This is what Business, administration and law are mainly concerned with. This field studies how people and organizations create, exchange, and manage resources. It also studies how rules protect cooperation, limit risks, and distribute responsibility. It focuses on management, accounting, finance, marketing, organizational behavior, contracts, rights, obligations, compliance, and governance. Its roots are connected with early human exchange, bookkeeping, markets, agreements, governance, and dispute resolution. Later, with the development of companies, banks, trade, national legal systems, and modern management practice, Business, administration and law gradually became a formal academic field. It studies how organizations operate, how value is created and distributed, and how rules make cooperation more stable and fair.",
+    formalExplanationZh: "这就是“商业与法律”真正关心的内容。它研究人和组织如何创造、交换和管理资源，也研究规则如何保护合作、限制风险和分配责任。它关注管理、会计、金融、市场营销、组织行为、合同、权利、义务、合规和治理等问题。在正式学科中，它对应的是 Business, administration and law（商业、管理与法律）。它的来源与人类早期的交换、记账、市场、契约、治理和纠纷解决有关。后来，随着公司、银行、贸易、国家法律制度和现代管理实践的发展，商业与法律逐渐成为正式学科领域，用来研究组织如何运行、价值如何被创造和分配，以及规则如何让合作更稳定、更公平。",
+    coreInsight: "Business, administration and law are not only about profit and limits. They study how organizations create value, distribute risk, and use rules to make cooperation sustainable and accountable.",
+    coreInsightZh: "商业与法律不只是赚钱和限制，而是研究组织如何创造价值、分配风险，并用规则把合作变得可持续、可负责。",
+    analogyBoundary: "This story uses a bakery, a charity sale, and a company internship to show the basic tension of business and law, but the field also includes accounting, finance, management, marketing, organizational behavior, compliance, governance, and legal systems.",
+    analogyBoundaryZh: "这个故事用面包店、义卖和公司实习说明商业与法律的基本张力，但该领域还包括会计、金融、管理、营销、组织行为、合规、治理和法律制度等更广问题。",
+    sourceBatchId: "subject-intro-04-business-administration-law-desire-responsibility-20260630",
   },
   {
     code: "05",
@@ -7417,6 +7616,31 @@ function getAllRateableArticles() {
     if (article && !articlesById.has(article.id)) articlesById.set(article.id, article);
   });
   return Array.from(articlesById.values());
+}
+
+function getStoryNavigationForArticle(article) {
+  if (!article?.id) return null;
+  const articles = getAllRateableArticles().filter((item) => item?.href);
+  const currentIndex = articles.findIndex((item) => item.id === article.id);
+  if (!articles.length || currentIndex < 0) return null;
+  const previousIndex = (currentIndex - 1 + articles.length) % articles.length;
+  const nextIndex = (currentIndex + 1) % articles.length;
+  return {
+    previous: articles[previousIndex],
+    next: articles[nextIndex],
+    menuHref: "/categories",
+  };
+}
+
+function renderStoryNavigation(article) {
+  const navigation = getStoryNavigationForArticle(article);
+  if (!navigation) return "";
+  return `
+    <nav class="story-navigation" aria-label="${escapeHtml(t("backToStories"))}">
+      <a class="button secondary story-navigation-link" href="${escapeHtml(navigation.previous.href)}" data-route="${escapeHtml(navigation.previous.href)}">${escapeHtml(`← ${t("previousStory")}`)}</a>
+      <a class="button secondary story-navigation-link is-menu" href="${escapeHtml(navigation.menuHref)}" data-route="${escapeHtml(navigation.menuHref)}">${escapeHtml(t("backToMainMenu"))}</a>
+      <a class="button primary story-navigation-link" href="${escapeHtml(navigation.next.href)}" data-route="${escapeHtml(navigation.next.href)}">${escapeHtml(`${t("nextStory")} →`)}</a>
+    </nav>`;
 }
 
 function getRateableArticleById(storyId) {
@@ -14622,7 +14846,8 @@ function renderStoryDetail(storyId) {
         </div>
         <div class="story-perspective-grid">${perspectives}</div>
       </section>` : ""}
-    ${renderStoryRatingPanel(ratingArticle)}`;
+    ${renderStoryRatingPanel(ratingArticle)}
+    ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
@@ -14675,7 +14900,8 @@ function renderConceptFableDetail(fableId) {
       <strong>${escapeHtml(getConceptFableValue(fable, "reflectionQuestion"))}</strong>
     </aside>
     ${tags ? `<div class="lens-story-meta concept-fable-meta"><div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div></div>` : ""}
-    ${renderStoryRatingPanel(ratingArticle)}`;
+    ${renderStoryRatingPanel(ratingArticle)}
+    ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
@@ -16423,6 +16649,7 @@ function renderInlineLensStoryArticle(story) {
         ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
       </div>
       ${renderStoryRatingPanel(ratingArticle)}
+      ${renderStoryNavigation(ratingArticle)}
     </article>`;
 }
 
@@ -16546,7 +16773,8 @@ function renderLensStoryDetail(storyId) {
       ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
       ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
     </div>
-    ${renderStoryRatingPanel(ratingArticle)}`;
+    ${renderStoryRatingPanel(ratingArticle)}
+    ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
