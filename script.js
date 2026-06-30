@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.109";
+const appVersion = "0.1.110";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -16118,8 +16118,6 @@ function renderCategoryDetail(code) {
   const copy = document.getElementById("categoryDetailCopy");
   const stats = getPublicCategoryStats(category);
   const cardDisplay = getPublicCategoryCardDisplay(category);
-  const originalLabel = currentLanguage === "zh" ? "原分类" : "Original category";
-  const countText = currentLanguage === "zh" ? `${stats.practicalCount} ${t("detailedFields")}` : `${stats.practicalCount} ${t("detailedFields")}`;
   if (eyebrow) {
     eyebrow.hidden = true;
     eyebrow.textContent = "";
@@ -16127,8 +16125,7 @@ function renderCategoryDetail(code) {
   if (title) title.textContent = cardDisplay.displayTitle || getPublicCategoryTitle(category);
   if (copy) {
     copy.innerHTML = `
-      <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>
-      <span class="category-detail-meta">${escapeHtml(originalLabel)}: ${escapeHtml(cardDisplay.originalTitle || getPublicCategoryTitle(category))} · ${escapeHtml(countText)}</span>`;
+      <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>`;
   }
 
   renderPassport("categoryPassport", {
@@ -16146,6 +16143,14 @@ function renderCategoryDetail(code) {
   renderCategoryTree(category);
 }
 
+function getCategoryDetailMetaText(category) {
+  const stats = getPublicCategoryStats(category);
+  const cardDisplay = getPublicCategoryCardDisplay(category);
+  const originalLabel = currentLanguage === "zh" ? "原分类" : "Original category";
+  const countText = `${stats.practicalCount} ${t("detailedFields")}`;
+  return `${originalLabel}: ${cardDisplay.originalTitle || getPublicCategoryTitle(category)} · ${countText}`;
+}
+
 function getFeaturedCategoryFieldEntries(fieldEntries) {
   const practicalEntries = fieldEntries.filter((entry) =>
     !isNotFurtherDefinedTitle(entry.fieldTitle) &&
@@ -16158,6 +16163,7 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
 function renderInlineLensStoryArticle(story) {
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
+  const categoryMeta = category ? getCategoryDetailMetaText(category) : "";
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
@@ -16176,7 +16182,10 @@ function renderInlineLensStoryArticle(story) {
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
+      <header class="category-story-header">
+        <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
+        ${categoryMeta ? `<p class="category-story-detail-meta">${escapeHtml(categoryMeta)}</p>` : ""}
+      </header>
       <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
       <section class="lens-story-section">
         <span>${escapeHtml(t("lensStorySceneLabel"))}</span>

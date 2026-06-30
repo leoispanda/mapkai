@@ -4252,6 +4252,23 @@ canvas {
   margin: 0 auto;
 }
 
+.category-story-header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.category-story-header h1 {
+  margin: 0;
+}
+
+.category-story-detail-meta {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
 @media (max-width: 820px) {
   .category-subject-story-layout .public-field-grid {
     grid-template-columns: 1fr;
@@ -6467,6 +6484,7 @@ body[data-theme="dark"] .detailed-field-button small,
 body[data-theme="dark"] .submodule-story-button small,
 body[data-theme="dark"] .lens-story-shelf-heading p,
 body[data-theme="dark"] .lens-story-sample-content em,
+body[data-theme="dark"] .category-story-detail-meta,
 body[data-theme="dark"] .story-rating-panel p,
 body[data-theme="dark"] .top-rated-story-card span,
 body[data-theme="dark"] .field-chip.has-story {
