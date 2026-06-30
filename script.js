@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.110";
+const appVersion = "0.1.113";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -34,7 +34,7 @@ const publicContentVisibility = {
   articles: false,
 };
 
-const rebuiltSubjectIntroCategoryCodes = new Set(["00"]);
+const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02"]);
 
 function arePublicArticlesVisible() {
   return Boolean(publicContentVisibility.articles);
@@ -2223,47 +2223,175 @@ He knew that he could first observe, then ask questions; first organize, then ma
   },
   {
     code: "01",
+    subjectTitle: "Education",
     subjectTitleZh: "教育",
-    titleZh: "还没有自己过桥的孩子",
-    summaryZh: "一位老师带孩子过桥，却发现教育不是替学生走路，而是在适当的时候扶一把，又在适当的时候放手。",
-    sceneZh: "一所靠近河边的小学校，学生每天要学习如何从浅桥走到更远的石桥。",
-    storyBodyZh: `河边有一所小学校。学校后面有两座桥。一座很低，水浅时孩子们可以自己走过去；另一座更高，通向城外的书院和工坊。孩子们都想走高桥，因为他们觉得那才算真正长大。
+    title: "The Relay of Civilization",
+    titleZh: "文明的接力",
+    summary: "Xiaoyu learns, from packing her schoolbag to tutoring a child, that education is conscious support that helps people truly learn.",
+    summaryZh: "小雨从整理书包、修改作文到辅导小朋友，慢慢明白教育不是替人走路，而是帮助人真正学会。",
+    scene: "Xiaoyu first learns to prepare her schoolbag with a checklist, then later recognizes the same educational pattern in classrooms and tutoring.",
+    sceneZh: "小雨从每天检查书包开始，后来在课堂和社区辅导里，看见教育怎样把人往前带一点。",
+    storyBody: `When Xiaoyu was a child, she often felt that her mother talked too much.
 
-有个孩子最着急。他每天跑到高桥前，刚走几步就退回来。桥面不宽，下面水声很响，他一紧张，就忘了老师教过的步子。于是他开始说：“我学不会。”
+Every morning, her mother reminded her to check her schoolbag: whether she had packed her textbooks, filled her water bottle, and put her homework into the folder. Xiaoyu thought these things were very simple. She did not understand why adults had to repeat them every day.
 
-老师没有马上把他抱过去，也没有让他一个人硬走。她先带他回到低桥，让他练习看脚下的石缝、听水声时保持平衡、走到一半时不要回头。等他能稳稳走过低桥，老师才带他上高桥。
+Once, her mother had to go on a business trip. For the first time, Xiaoyu prepared for school by herself. She felt that she was already old enough and did not need reminders. But when she arrived at school, she found that her math homework was still on her desk at home, and her lunch card was also missing. That noon, she had to borrow a card from a classmate. In the afternoon, her teacher wrote down her name because she did not hand in the homework.
 
-第一次上高桥时，老师走在旁边，提醒他看下一块石板。第二次，老师只在桥头说几句话。第三次，老师站在桥尾等他。孩子走得很慢，中间停了两次，但没有退回去。
+When she went home, her mother did not blame her. She took out a piece of paper and asked Xiaoyu to list the things she needed to bring the next day. At first, Xiaoyu thought it was troublesome. Her mother said, “It is not because you cannot do it. It is because people easily forget. A person who knows how to learn does not never make mistakes. A person who knows how to learn prepares methods for herself.”
 
-旁边有人问老师：“你到底是在帮他，还是让他自己学？”老师说：“这两件事不能分开。太早放手，他会把失败当成自己不行；扶得太久，他又永远不知道自己已经可以走。”
+Later, Xiaoyu slowly got used to making lists. She no longer waited for her mother to remind her, but checked by herself. She found that many things were not learned by remembering them once. They were learned through repeated practice, until they became her own habit.
 
-后来，这个孩子能自己过桥了。老师没有把这件事写成奇迹，只在本子上记了一句：他今天能独立完成昨天还不能独立完成的事。
+In middle school, Xiaoyu met a language teacher. This teacher did not only give them standard answers. Every time they read a text, the teacher first asked, “Why do you think the writer wrote it in this way?” After a student answered, the teacher asked again, “Where can you see that in the text?” If someone gave a wrong answer, the teacher did not immediately say “No.” Instead, she asked the student to go back to the text and look for evidence again.
 
-学校里的老师们慢慢明白，教书不是把知识倒进学生手里，也不是等学生自己撞明白。教育发生在一个细小的位置上：学生还不能独立完成，但在合适帮助下已经接近能够完成。这个故事通向的，是教育。`,
-    formalExplanationZh: "教育关注人如何学习、成长和发展，也关注教师、课程、环境和评价如何支持这一过程。它不仅研究知识如何被传递，也研究学习者如何理解、练习、犯错、调整和逐步独立。研究生层面理解教育，重点是看到学习不是简单接受信息，而是在个体能力、社会支持和具体情境之间发生的过程。",
-    coreInsightZh: "教育真正关心的，不是替学生完成道路，而是判断什么时候支持、怎样支持，以及什么时候让学习者自己前进。",
-    analogyBoundaryZh: "这个故事强调教师支持和学习成长，但不能把教育只理解成师生之间的帮助。教育还包括制度、课程、公平、文化、技术和社会结构等问题。",
+At the beginning, Xiaoyu was not used to this. She was used to waiting for the teacher to give the answer and then writing it down. But this teacher always asked them to think first, discuss, and then revise. Xiaoyu felt that this was very slow.
+
+Until one writing class, she wrote a very ordinary essay. The teacher did not rewrite it for her. Instead, she wrote several questions in the margin: Why is this event important? What do you want the reader to remember most? Which paragraph can be more specific?
+
+Xiaoyu looked at the essay for a long time. For the first time, she felt that the teacher was not writing for her. The teacher was teaching her how to make her own ideas clear.
+
+Later, Xiaoyu went to university and joined a volunteer activity. She needed to help children in a community with their homework. On the first day, she prepared carefully and brought many exercises. She thought that as long as she explained clearly, the children would understand.
+
+But she soon found that it was not that simple.
+
+One child always confused multiplication with addition. Xiaoyu explained it three times, but he still made mistakes. Xiaoyu became a little impatient and almost said, “This is very easy.” But she remembered how her teacher had treated her before, so she stopped. She did not continue to explain the answer. Instead, she took out several pencils and asked the child to place them in groups. Two pencils in three groups, and three pencils in two groups, looked different, but the total number was the same.
+
+The child looked at them for a while and suddenly said, “Oh, I understand.”
+
+At that moment, Xiaoyu realized that teaching others is not simply pouring what one knows into another person. To teach someone, one first needs to understand where that person is, where they are stuck, and then use a way they can understand to help them move a little further.
+
+Later, she understood the work of teachers more and more. A teacher is not only a person who gives lessons, and not only a person who prepares students for exams. A teacher observes students, designs questions, arranges practice, gives feedback, and judges when to give a hint and when to wait, especially when students have not fully understood something yet.
+
+She also found that education does not only happen in school. Parents teach children how to prepare their schoolbags. Masters teach new workers how to use tools. Coaches teach students how to adjust their movements. Friends explain new ideas to each other. All these situations contain something educational. When one person passes on what they have understood in a suitable way and helps another person truly learn it, education is already taking place.
+
+When Xiaoyu was little, she thought learning was only her own task, and teachers were people who gave answers. After she grew up, she understood that education is more like a conscious form of support. It does not walk for another person. It gives support when someone cannot yet walk steadily, and slowly lets go when that person can move forward alone.`,
+    storyBodyZh: `小雨小时候，总觉得妈妈很啰嗦。
+
+每天早上，妈妈都会提醒她检查书包：课本有没有带，水杯有没有装，作业有没有放进文件夹。小雨觉得这些事情很简单，不明白为什么大人要每天重复。
+
+有一次，妈妈临时出差。小雨第一次自己准备上学。她觉得自己已经长大了，不需要别人提醒。可是到了学校，她才发现数学作业放在了书桌上，午餐卡也忘在家里。那天中午，她只能向同学借卡，下午还因为没有交作业被老师记了名字。
+
+回家后，妈妈没有责怪她，只拿出一张纸，让她把第二天要带的东西列出来。小雨一开始觉得这很麻烦。妈妈说：“不是因为你不会，而是因为人很容易忘。会学习的人，不是永远不犯错，而是会给自己准备方法。”
+
+后来，小雨慢慢习惯了写清单。她不再等妈妈提醒，而是自己检查。她发现，原来很多事情不是靠一次记住，而是靠一次一次练习，最后变成自己的习惯。
+
+上中学后，小雨遇到了一位语文老师。老师不像以前那样只告诉他们标准答案。每次读文章，老师都会先问：“你觉得作者为什么这样写？”学生回答后，老师又问：“你从哪里看出来的？”如果有人答错了，老师不会马上说“不对”，而是让他回到原文里再找证据。
+
+刚开始，小雨很不适应。她习惯了等老师给答案，然后把答案记下来。可是这位老师总是让他们自己先想，再讨论，再修改。小雨觉得这样很慢。
+
+直到有一次作文课，她写了一篇很普通的文章。老师没有直接改完，而是在旁边写了几个问题：这件事为什么重要？你最想让读者记住什么？哪一段可以写得更具体？
+
+小雨拿着作文看了很久。她第一次感觉到，老师不是在替她写，而是在教她怎样把自己的想法写清楚。
+
+后来，小雨上了大学，参加了一个志愿活动。她要给社区里的小朋友辅导功课。第一天，她准备得很认真，带了很多练习题。她以为只要自己讲得清楚，小朋友就会学会。
+
+可是她很快发现，并不是这样。
+
+有个孩子总是把乘法和加法弄混。小雨讲了三遍，他还是错。小雨有点着急，差点说：“这个很简单啊。”但她想起以前老师对她的方式，就停了下来。她没有继续讲答案，而是拿出几支铅笔，让孩子一组一组地摆。两支铅笔摆三组，和三支铅笔摆两组，看起来不一样，但总数一样。
+
+孩子看了一会儿，突然说：“哦，我懂了。”
+
+那一刻，小雨才明白，教别人不是把自己知道的东西倒给对方。教别人要先知道对方现在在哪里，哪里卡住了，然后用对方能理解的方式，把他往前带一点。
+
+后来，她越来越能理解老师这份工作。老师不是只会讲课的人，也不是只负责考试的人。老师要观察学生，设计问题，安排练习，给出反馈，也要在学生还没有完全理解时，判断什么时候该提醒，什么时候该等待。
+
+她也发现，教育不只发生在学校。父母教孩子整理书包，师傅教新人使用工具，教练教学生调整动作，朋友之间互相解释一个新想法，这些都带有教育的影子。只要一个人把已经理解的东西，用合适的方式传给另一个人，并帮助对方真正掌握，教育就已经发生了。
+
+小雨小时候以为，学习是自己的事，老师只是给答案的人。长大后她才明白，教育更像是一种有意识的陪伴。它不是替人走路，而是在一个人还不会走稳时，先扶一把；等他能自己走了，再慢慢松手。`,
+    formalExplanation: "This is what “education” is mainly concerned with. It studies and practices how people learn, and how people can help others learn better. It focuses on teaching, curriculum, learning processes, student development, assessment, and educational environments. It also cares about how knowledge is passed from one generation to the next. As a formal field of study, it corresponds to Education. Its roots are very old and are connected with family upbringing, apprenticeship, school systems, religious teaching, and social life. Later, with the development of modern schools and teacher training systems, education gradually became a formal academic field. It studies how learning happens, how teaching can be designed, and how a society continues its knowledge, abilities, and values through education.",
+    formalExplanationZh: "这就是“教育”真正关心的内容。它研究和实践的是人如何学习，以及人如何帮助别人更好地学习。它关注教学、课程、学习过程、学生发展、评价方式和教育环境，也关心知识如何从一代人传到下一代人。在正式学科中，它对应的是 Education（教育）。它的来源很早，和家庭养育、师徒传授、学校制度、宗教教学和社会共同生活都有关系。后来，随着现代学校和教师培养体系的发展，教育逐渐成为一个正式学科，用来研究学习怎样发生、教学怎样设计，以及一个社会如何通过教育延续知识、能力和价值。",
+    coreInsight: "Education is not only giving answers. It is the careful design of support, practice, feedback, and environments so that people can gradually understand and move forward on their own.",
+    coreInsightZh: "教育不只是给答案，而是通过支持、练习、反馈和环境设计，帮助人逐步理解，并能自己往前走。",
+    analogyBoundary: "This story uses family reminders, classroom questions, and tutoring to show education as support, but education also includes systems, equity, curriculum, assessment, policy, technology, and culture.",
+    analogyBoundaryZh: "这个故事用家庭提醒、课堂提问和辅导功课说明教育中的支持，但教育还包括制度、公平、课程、评价、政策、技术和文化等问题。",
+    sourceBatchId: "subject-intro-01-education-civilization-relay-20260630",
   },
   {
     code: "02",
+    subjectTitle: "Arts and humanities",
     subjectTitleZh: "艺术与人文",
-    titleZh: "被修补的旧戏台",
-    summaryZh: "一座旧戏台即将被拆除，人们在修补它的过程中发现，艺术与人文关心的不只是美，也包括记忆、解释、表达和人的处境。",
-    sceneZh: "一座老城里的旧戏台，木柱开裂，墙面褪色，城里人争论它是否还有保留的价值。",
-    storyBodyZh: `老城中央有一座旧戏台。它的木柱已经开裂，墙上的颜色也被雨水冲淡。新剧院建好以后，很多人觉得这座戏台没有用了。商人想拆掉它，改成店铺；官员说它不安全；年轻人说他们已经看不懂台上那些旧故事。
+    title: "Arts and humanities",
+    titleZh: "文明的灵魂",
+    summary: "Anning learns, through an old coat, a difficult novel, and a community video project, that culture is an entrance into human experience.",
+    summaryZh: "阿宁从一件旧外套、一篇小说和一条老街的影像项目里，慢慢看见艺术与人文如何让人理解人的经验。",
+    scene: "Anning once hurried through museums, until an ordinary repaired coat made her stop and see the person behind the object.",
+    sceneZh: "阿宁小时候总想快点离开博物馆，直到一件被反复修补的旧外套让她停下来，看见物品背后的人。",
+    storyBody: `When Anning was a child, she did not like going to museums.
 
-拆除前，一位修木匠被请来检查柱子。她发现柱子内侧刻着许多名字，有演员的，有看戏人的，也有逃难时住在戏台下的人。一个抄书人又在后台找到几本旧戏文，里面同一个故事被改过很多次。有的版本让英雄胜利，有的版本让母亲沉默，有的版本把原本不起眼的仆人写成最清醒的人。
+She thought museums were too quiet, the lights were too dim, and the paintings on the walls felt far away from her life. Adults could stand in front of one painting for a long time, but she only wanted to leave quickly. She did not understand why an old painting, a broken bowl, or a yellowed book had to be carefully kept behind glass.
 
-城里人开始争论。商人说：“这些只是旧木头和旧纸。”抄书人说：“可每一次改写，都说明当时的人怎样理解自己。”年轻人问：“如果同一个故事能有这么多说法，那哪一个才是真的？”
+Once, her school organized a visit to a small exhibition. There were no very expensive objects there. There were only old things from ordinary people: a letter that had never been sent, a black-and-white photo, a coat that had been repaired many times, and an old book full of notes.
 
-修木匠没有回答。她只把最旧的一块木板放在阳光下。木板上有刀痕、火印和新旧不同的漆。她说：“它不是因为完好才值得留下，而是因为许多人在它上面留下过看世界的方式。”
+At first, Anning was still not interested. Then she stopped in front of the coat.
 
-后来，城里没有把戏台恢复成崭新的样子。他们加固了危险的地方，保留了刻字和旧漆，也让年轻演员在台上演新的故事。旧戏不再只是旧戏，新戏也不是凭空来的。
+The sleeves of the coat were worn out, and a piece of cloth in a different color had been sewn inside. The note beside it said that the coat had belonged to a mother when she was young. Later, when the family did not have much money, she made it smaller so that her daughter could wear it. Years later, when the daughter left home to study in another city, she also took the coat with her.
 
-人们这才明白，有些东西的价值，不在于它能不能立刻使用，也不只在于它好不好看。它保存了人怎样表达悲伤、想象正义、记住过去、解释自己和他人。这个故事通向的，是艺术与人文。`,
-    formalExplanationZh: "艺术与人文关注人的表达、意义、历史、价值和解释。艺术研究形式、媒介和审美经验，人文学科研究文本、历史、伦理、语言、文化和思想。研究生层面理解这一领域，重点不是把它看成主观欣赏，而是理解人如何通过作品、文本、记忆和解释来理解自身和世界。",
-    coreInsightZh: "艺术与人文真正关心的，不只是作品好不好看，而是人如何留下意义、争论意义，并在意义中理解自己。",
-    analogyBoundaryZh: "这个故事用旧戏台说明记忆和解释，但不能把艺术与人文只理解成保护传统。它也包括当代表达、批判思考、跨文化理解和新的媒介形式。",
+Anning looked at it for a long time. She suddenly thought of an old sweater in her grandmother’s wardrobe. Her grandmother always said that the sweater could still be worn and did not want to throw it away. Before, Anning thought this was only about saving money. Now, for the first time, she felt that a piece of clothing might not only be clothing. It might also carry a person’s life, memory, and feelings.
+
+After they returned to school, the teacher asked them to write about the visit. Anning did not write sentences like “this exhibition was meaningful.” She wrote about the coat. She wrote why it had been repaired, why it had been kept, and why an old piece of cloth could make someone stop and look.
+
+After reading it, the teacher only wrote one sentence beside her text: “You are beginning to see the people behind the objects.”
+
+Later, Anning entered middle school and started reading literary works. At first, she always wanted to know the “standard answer”: What is the main idea of this text? What does this character represent? What rhetorical device is used in this sentence?
+
+But one novel confused her. In the novel, the father rarely spoke and was always silent. At first, Anning thought he was cold. But as she continued reading, she found that he left home very early and returned very late every day. He only did not know how to express care. He did not say love, but he always prepared what his daughter needed in advance.
+
+In the class discussion, one student said the father was repressed. Another said he was gentle. Someone else said he was shaped by his time and family environment. The teacher did not ask them to choose one final answer. Instead, she asked them to return to the text and find evidence. She also asked them to think about why different people could read different feelings from the same story.
+
+Anning then realized that reading is not turning words into one standard answer. Reading is a way to practice understanding the complexity of people through other people’s stories. A person’s silence may be coldness, but it may also be a difficulty in expression. A period of history may be something in the past, but it may still shape people in the present.
+
+At university, Anning joined a community video project. The project asked students to interview old residents and record the changes of an old street. She was responsible for interviewing an auntie who had run a small shop there for thirty years.
+
+The auntie said that young people often thought the street was old and the shop was small, not as convenient as a new shopping mall. But she remembered many people buying their first daily supplies there when they first came to the city. Many children waited for their parents at the shop door after school. Many neighbors had argued there, but they had also helped each other.
+
+At first, Anning only wanted to take a few street photos and write a short description. Later, she found that if she only photographed the buildings, the voices of people would be missing. If she only wrote about change, the reasons why some things remained would be missing. So she put photos, interviews, old maps, and residents’ stories together. She wanted others to see that this street was not only an area in urban planning. It was also a place where many people had lived.
+
+On the day of the project exhibition, someone said after watching it, “I passed by this street every day, but I never really looked at it.”
+
+When Anning heard this, she suddenly remembered herself as a child in the museum. At that time, she had also passed by many things without really seeing them.
+
+Slowly, she understood that some learning is not meant to solve an immediate practical problem, and it is not meant to produce a result that can be calculated. It teaches people how to look, how to listen, how to express, how to understand the past, and how to understand the feelings of others. It cares about what people leave behind, and also why people choose to leave these things behind. It makes a painting, a poem, a language, a period of history, a building, or a performance not only a “work” or a “source,” but also an entrance to understanding human experience.`,
+    storyBodyZh: `阿宁小时候不喜欢去博物馆。
+
+她觉得那里太安静，灯光太暗，墙上的画也离她很远。大人站在一幅画前看很久，她却只想快点走出去。她不明白，一张旧画、一只破碗、一本发黄的书，为什么要被小心地放在玻璃柜里。
+
+有一次，学校组织参观一个小型展览。展览里没有很贵重的东西，只有一些普通人的旧物：一封没有寄出的信，一张黑白照片，一件补过很多次的外套，还有一本写满批注的旧书。
+
+阿宁一开始还是不感兴趣。直到她停在那件外套前。
+
+外套的袖口已经磨破，里面缝着一块颜色不同的布。旁边的说明写着：这是一位母亲年轻时穿过的外套。后来家里条件不好，她把外套改小，给女儿继续穿。再后来，女儿离开家去外地读书，也把这件外套带走了。
+
+阿宁看了很久。她突然想到自己奶奶衣柜里也有一件旧毛衣。奶奶总说那件毛衣还能穿，不舍得扔。以前阿宁觉得那只是节省。现在她第一次觉得，一件衣服可能不只是衣服。它也可能装着一个人的生活、记忆和感情。
+
+回到学校后，老师让他们写一段参观感受。阿宁没有写“这个展览很有意义”这种句子。她写的是那件外套。她写它为什么被修补，为什么被留下，为什么一块旧布也能让人停下来。
+
+老师看完后，只在旁边写了一句话：“你开始看见物品背后的人了。”
+
+后来，阿宁上了中学。她开始读一些文学作品。刚开始，她总想知道“标准答案”是什么：这篇文章表达了什么中心思想？这个人物代表什么？这句话用了什么修辞？
+
+可是有一篇小说让她很困惑。小说里的父亲很少说话，总是沉默。阿宁一开始觉得这个父亲冷漠。可读到后面，她发现父亲每天很早出门，很晚回家，只是不知道怎样表达关心。他不说爱，却总是把女儿需要的东西提前准备好。
+
+课堂讨论时，有同学说这个父亲压抑，有同学说他温柔，也有人说他受时代和家庭环境影响。老师没有要求他们选一个唯一答案，而是让他们回到文本里找证据，也让他们想一想：为什么不同的人会读出不同的感受？
+
+阿宁这才发现，阅读不是把文字翻译成一个标准答案。阅读是在别人的故事里练习理解人的复杂性。一个人的沉默，可能是冷淡，也可能是不善表达；一段历史，可能是过去的事实，也可能还影响着现在的人。
+
+大学时，阿宁参加了一个社区影像项目。项目要求他们采访老居民，记录一条旧街的变化。她负责采访一位开了三十年小店的阿姨。
+
+阿姨说，年轻人总觉得这条街旧，店也小，不如新商场方便。可是她记得很多人第一次来城市时，就在这里买过生活用品；很多孩子放学后在门口等父母；很多邻居吵过架，也互相帮过忙。
+
+阿宁原本只想拍几张街景，写一段介绍。后来她发现，如果只拍建筑，就少了人的声音；如果只写变化，就少了留下来的理由。于是她把照片、访谈、旧地图和居民的故事放在一起。她想让别人看到，这条街不只是城市规划里的一个区域，也是一群人生活过的地方。
+
+项目展示那天，有人看完后说：“我以前每天路过这里，但从来没有认真看过。”
+
+阿宁听到这句话，突然想起自己小时候在博物馆里的样子。她那时也只是路过很多东西，却没有真正看见它们。
+
+慢慢地，她明白，有些学习不是为了马上解决一个实际问题，也不是为了做出一个可以计算的结果。它让人学习怎样观看，怎样倾听，怎样表达，怎样理解过去，也怎样理解他人的感受。它关心人留下了什么，也关心人为什么要留下这些东西。它让一幅画、一首诗、一种语言、一段历史、一座建筑、一场表演，不只是“作品”或“资料”，而成为理解人类经验的入口。`,
+    formalExplanation: "This is what Arts and humanities are mainly concerned with. This field studies how people express feelings, preserve memory, create meaning, and understand themselves and others. It includes art, literature, language, history, philosophy, religion, and cultural studies. It does not only focus on works themselves, but also on the time, society, values, and human experience behind them. Its roots are very old and are connected with storytelling, painting, ritual, historical recording, reflection on the meaning of life, and the learning of language and writing. Later, with the development of schools, libraries, museums, universities, and modern research methods, Arts and humanities gradually became a formal academic field. It studies how people create culture, and how people understand themselves through culture.",
+    formalExplanationZh: "这就是“艺术与人文”真正关心的内容。它研究人如何表达感受、保存记忆、创造意义，并理解自己和他人。它包括艺术、文学、语言、历史、哲学、宗教、文化研究等方向。它不只关注作品本身，也关注作品背后的时代、社会、价值观和人的经验。在正式学科中，它对应的是 Arts and humanities（艺术与人文）。它的来源很早，和人类讲故事、绘画、祭祀、记录历史、思考生命意义和学习语言文字都有关系。后来，随着学校、图书馆、博物馆、大学和现代研究方法的发展，艺术与人文逐渐成为正式的学科领域，用来研究人如何创造文化，也如何通过文化理解自身。",
+    coreInsight: "Arts and humanities are not only about appreciating works. They train people to see, listen, interpret, preserve memory, and understand human experience through culture.",
+    coreInsightZh: "艺术与人文不只是欣赏作品，而是训练人观看、倾听、表达、解释、保存记忆，并通过文化理解人的经验。",
+    analogyBoundary: "This story emphasizes museums, literature, and community memory, but Arts and humanities also include contemporary art, language, philosophy, history, religion, cultural studies, criticism, and new media.",
+    analogyBoundaryZh: "这个故事强调博物馆、文学和社区记忆，但艺术与人文还包括当代表达、语言、哲学、历史、宗教、文化研究、批评方法和新的媒介形式。",
+    sourceBatchId: "subject-intro-02-arts-humanities-civilization-soul-20260630",
   },
   {
     code: "03",
