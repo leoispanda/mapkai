@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.103";
+const appVersion = "0.1.104";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -2145,24 +2145,75 @@ const fieldStoryDetailsZh = {};
 const subjectIntroStoriesZh20260628 = [
   {
     code: "00",
-    subjectTitleZh: "通用课程与资格",
-    titleZh: "学徒进城的第一张地图",
-    summaryZh: "一个年轻学徒进城学习，却发现真正困难的不是学哪一门手艺，而是先知道自己如何学习、如何准备、如何把已有能力带到新地方。",
-    sceneZh: "一座有许多工坊的城市，年轻学徒需要在木工、账房、修桥、医馆和书院之间选择自己的学习道路。",
-    storyBodyZh: `有个年轻人第一次进城。他以为学习就是找一间好工坊，拜一个好师傅，然后把手艺学会。城里有木工坊、账房、修桥队、医馆和书院，每个门口都挂着牌子，写着不同的规矩和要求。
+    subjectTitle: "Generic Learning",
+    subjectTitleZh: "通用学习",
+    title: "The Beginning of Growth",
+    titleZh: "成长的起点",
+    summary: "Lin is good at remembering answers, until one open-ended route-planning task teaches him that real learning begins with asking, checking, and revising.",
+    summaryZh: "小林很会背答案，直到一次没有标准格式的路线规划任务，让他开始学习如何提问、检查和修改。",
+    scene: "A middle school classroom where a student who is good at prepared answers faces a practical task without a standard form.",
+    sceneZh: "一间中学教室里，一个很会背答案的学生，第一次遇到没有标准格式的真实任务。",
+    storyBody: `When Lin first entered middle school, he was very good at remembering answers.
 
-他先去了木工坊。师傅让他量木板，他总是量错。师傅没有骂他，只问：“你会看尺吗？”年轻人点头，却说不清一寸和一尺的差别。后来他去了账房，掌柜让他记账，他能写字，却看不懂数字之间的关系。再后来，他去修桥队，工头让他搬石头，他很用力，却不知道为什么有些石头必须先放，有些必须后放。
+In language class, he could recite the last paragraph of the text. In math class, he could remember the formulas the teacher had explained. In history class, whenever the teacher asked about a year, he was often the first student to raise his hand. His family also often said that he was a child who “knew how to study.”
 
-年轻人很沮丧。他觉得自己不适合任何一门手艺。城门口的老登记员听了他的抱怨，带他回到最初的街口。老人说：“你急着问自己该学什么，却还没有看清自己已经会什么、缺什么、怎样学。”
+But one day, the teacher did not give them a question from the textbook.
 
-老人让他先不进工坊，而是在城里做三件小事：每天记录自己哪里听懂、哪里没听懂；把相似的工具和规矩放在一起比较；遇到新任务时，先想它和过去做过的事有什么相同和不同。
+In that lesson, the teacher gave each group a bus route map and a task. Before three o’clock the next afternoon, they had to leave school and go to a library on the other side of the city for an activity. Each group had to find the route by themselves, arrange the time by themselves, and explain what they would do if the bus was late.
 
-几个月后，年轻人再去木工坊，尺子不再只是木条上的刻度；去账房，数字也不再只是纸上的符号；去修桥队，他开始明白先后顺序不是命令，而是结构。后来他还是选择了修桥，但这一次，他知道自己学的不只是一门手艺，也是在学习如何进入任何一门手艺。
+At first, Lin thought it was very easy. He opened the map, found one route, and wrote it down. But a classmate sitting next to him asked, “Does this route need a transfer? If the first bus is late, can we still arrive on time? Which entrance of the library should we meet at? Should we arrive ten minutes earlier?”
 
-这座城后来把这种入门训练放在所有工坊之前。不是为了替代真正的专业学习，而是为了让人先具备继续学习的能力。这个故事通向的，是通用课程与资格。`,
-    formalExplanationZh: "通用课程与资格关注学习者进入不同知识领域之前所需要的基础能力、学习方法和资格准备。它不一定直接对应某个专业职业，而是帮助学习者建立读写、计算、学习策略、自我管理和迁移能力。研究生层面理解这一领域，重点是看到它如何为后续学习、职业转换和终身发展提供基础。",
-    coreInsightZh: "这个领域真正关心的，不是先把人训练成某一种专家，而是让人具备继续学习和进入不同领域的能力。",
-    analogyBoundaryZh: "这个故事强调基础准备的重要性，但不能把通用课程与资格理解成低层次或不专业的学习。它也涉及学习能力、资格体系和社会流动等更复杂的问题。",
+Lin suddenly did not know how to answer.
+
+He realized that he was usually good at answering questions that had already been clearly prepared. But when a problem did not have a standard form, he did not know where to look first, or what questions he should ask.
+
+The next day, his group almost arrived late. It was not because the route was completely wrong. It was because they had not included the time needed to walk to the bus stop, and they had not noticed that the weekend bus schedule was different from the weekday schedule. The teacher did not criticize them. She only asked each student to write down: What went wrong in this plan? How can you check it next time?
+
+Lin wrote very slowly. For the first time, he was not writing an answer. He was thinking about why he had made a mistake.
+
+After that, the teacher often gave them similar tasks. Sometimes, they read a news article and had to decide which parts were facts and which parts were only the writer’s opinion. Sometimes, they received a set of numbers and had to make a simple table to explain what the numbers could show and what they could not show. Sometimes, they interviewed someone in their family, organized the information into a clear paragraph, and then explained it to their classmates.
+
+These tasks did not look like one formal subject. They were not only language, not only math, and not exactly history or science. But Lin slowly found that these exercises changed the way he learned all subjects.
+
+He began to understand that when reading an article, he should not only look for the final conclusion. He also needed to see how the writer built the idea step by step. When solving a math problem, he should not only use a formula. He first needed to understand what the question was really asking. When working with others, he could not only say, “I think this is right.” He also needed to explain his reasons and understand why others might disagree.
+
+Later, Lin no longer saw learning as “remembering more answers.” He cared more about whether he could find information, ask questions, check mistakes, and divide a complex task into smaller steps. When he met something unfamiliar, he still felt nervous, but he no longer felt that he had no way to begin.
+
+He knew that he could first observe, then ask questions; first organize, then make judgments; first try once, then revise.`,
+    storyBodyZh: `小林刚上中学时，很会背答案。
+
+语文课上，他能背出课文最后一段。数学课上，他能记住老师讲过的公式。历史课上，只要老师问年份，他总能第一个举手。家里人也常说，他是个“会学习”的孩子。
+
+可是有一天，老师没有出书上的题。
+
+那节课，老师把一张公交线路图发给全班，又给了他们一个任务：明天下午三点以前，要从学校出发，去城市另一边的图书馆参加活动。每组自己查路线，自己安排时间，还要说明如果公交晚点，应该怎么办。
+
+小林一开始觉得这很简单。他打开地图，看到一条路线，就把它写了下来。可是旁边的同学问他：“这条路线要不要换乘？如果第一班车晚了，还来得及吗？图书馆哪个入口集合？我们要不要提前十分钟到？”
+
+小林突然答不上来。
+
+他发现，自己平时很擅长回答已经整理好的问题。可是当问题没有标准格式时，他不知道该先看哪里，也不知道该问什么。
+
+第二天，他们小组差点迟到。不是因为路线完全错了，而是因为他们没有考虑走到公交站的时间，也没有注意周末班次和平日不同。老师没有批评他们，只让每个人写下：这次计划哪里出了问题？下次可以怎样检查？
+
+小林写得很慢。他第一次不是在写答案，而是在想自己为什么会错。
+
+后来，老师经常给他们类似的任务。有时是读一篇新闻，让他们判断哪些是事实，哪些只是作者的看法。有时是给一组数字，让他们做一个简单表格，说明这些数字能说明什么、不能说明什么。有时是让他们采访家里人，整理成一段清楚的文字，再向同学解释。
+
+这些任务看起来不像某一门正式学科。它们不是单纯的语文，也不是单纯的数学，更不是历史或科学。可是小林慢慢发现，这些练习会影响他学习所有课程的方式。
+
+他开始知道，读文章时不能只找最后一句结论，还要看作者怎样一步一步说出来。做数学题时不能只套公式，还要先理解题目到底问什么。和别人合作时，不能只说“我觉得这样”，还要说明理由，也要听懂别人为什么不同意。
+
+到后来，小林不再把学习看成“记住更多答案”。他更关心自己会不会找到信息，会不会提出问题，会不会检查错误，会不会把一个复杂任务拆成几个简单步骤。遇到不熟悉的事情时，他还是会紧张，但不再觉得自己完全没有办法。
+
+他知道，可以先观察，再提问；先整理，再判断；先试一次，再修改。`,
+    formalExplanation: "This is what “generic learning” is mainly concerned with. It does not lead people directly into one specific professional field. Instead, it first develops the most basic abilities for learning, understanding, and personal development. It teaches people how to read information, use numbers, express ideas, reflect on their own learning process, and transfer existing knowledge to new situations. In modern educational classification, it corresponds to Generic programmes and qualifications. It is not a field that developed directly from an ancient profession, such as medicine, law, or engineering. Rather, it is inspired by basic courses, general education, and learning-skill development in the modern formal education system. It helps us understand learning areas that do not have one clear professional direction, but still provide the foundation for further study. Its source is closer to the earliest goal of education: before a person enters a more specific field, they first need to develop the ability to learn other kinds of knowledge.",
+    formalExplanationZh: "这就是“通用学习”真正关心的内容。它不急着把人带进某一个专业领域，而是先训练最基本的学习能力、理解能力和自我发展能力。它教人如何读懂信息，如何使用数字，如何表达想法，如何反思自己的学习过程，也如何把已有知识迁移到新的情境中。在现代教育分类中，它对应的是 Generic programmes and qualifications（通用课程与资格）。它不是像医学、法律或工程那样从某个古代职业直接发展出来的学科，而是受到现代正式教育体系中基础课程、通识教育和学习能力培养的启发，用来理解那些没有明显单一专业方向、但为继续学习打基础的内容。它的来源更接近人类教育最早的目标：先让一个人具备学习其他知识的能力，再让他走向更具体的世界。",
+    coreInsight: "Generic learning is not about memorizing more answers. It is about building the basic ability to find information, ask questions, check mistakes, organize thought, and move knowledge into new situations.",
+    coreInsightZh: "通用学习关心的不是记住更多答案，而是建立寻找信息、提出问题、检查错误、组织思路，并把知识迁移到新情境中的基础能力。",
+    analogyBoundary: "This story emphasizes learning ability and transfer, but generic learning should not be treated as vague or easy. It also involves literacy, numeracy, learning strategy, communication, self-management, and the qualifications that support further study.",
+    analogyBoundaryZh: "这个故事强调学习能力和迁移能力，但不能把通用学习理解成模糊或简单的学习。它还涉及读写、计算、学习策略、沟通、自我管理，以及支持继续学习的资格体系。",
+    sourceBatchId: "subject-intro-00-generic-learning-20260630",
   },
   {
     code: "01",
