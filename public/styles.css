@@ -3970,14 +3970,13 @@ canvas {
 }
 
 .category-detail-meta {
-  display: inline-flex;
+  display: block;
   width: fit-content;
   max-width: 100%;
-  flex-wrap: wrap;
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  border-radius: 999px;
-  padding: 0.45rem 0.75rem;
-  background: rgba(255, 255, 255, 0.62);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: #64748b;
   font-size: 0.82rem;
   font-weight: 760;
@@ -3988,6 +3987,13 @@ canvas {
 .tree-panel {
   margin-top: 22px;
   padding: 24px;
+}
+
+.category-page .tree-panel {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .passport-panel dl {
@@ -4116,7 +4122,7 @@ canvas {
 
 .category-subject-story-layout {
   display: grid;
-  gap: clamp(1.25rem, 3vw, 2rem);
+  gap: clamp(1rem, 2.2vw, 1.5rem);
 }
 
 .category-subject-story-layout .hierarchy-layer-label {
@@ -4125,7 +4131,7 @@ canvas {
 
 .category-subject-story-layout .public-field-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .hierarchy-layer {
@@ -4218,9 +4224,9 @@ canvas {
 }
 
 .category-subject-story-layout .public-field-card {
-  min-height: 78px;
+  min-height: 58px;
   border-color: rgba(37, 99, 235, 0.12);
-  padding: 14px 16px;
+  padding: 12px 14px;
   background: rgba(255, 255, 255, 0.72);
   box-shadow: none;
 }
@@ -4237,7 +4243,8 @@ canvas {
 
 .category-subject-story-layout .public-field-card span {
   color: #0f172a;
-  font-size: 0.96rem;
+  font-size: 0.94rem;
+  -webkit-line-clamp: 2;
 }
 
 .category-inline-story {

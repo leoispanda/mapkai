@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.108";
+const appVersion = "0.1.109";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -2155,11 +2155,11 @@ const subjectIntroStoriesZh20260628 = [
     subjectTitleZh: "通用学习",
     title: "The Beginning of Growth",
     titleZh: "成长的起点",
-    summary: "Lin is good at remembering answers, until one open-ended route-planning task teaches him that real learning begins with asking, checking, and revising.",
-    summaryZh: "小林很会背答案，直到一次没有标准格式的路线规划任务，让他开始学习如何提问、检查和修改。",
+    summary: "Eli is good at remembering answers, until one open-ended route-planning task teaches him that real learning begins with asking, checking, and revising.",
+    summaryZh: "艾利很会背答案，直到一次没有标准格式的路线规划任务，让他开始学习如何提问、检查和修改。",
     scene: "A middle school classroom where a student who is good at prepared answers faces a practical task without a standard form.",
     sceneZh: "一间中学教室里，一个很会背答案的学生，第一次遇到没有标准格式的真实任务。",
-    storyBody: `When Lin first entered middle school, he was very good at remembering answers.
+    storyBody: `When Eli first entered middle school, he was very good at remembering answers.
 
 In language class, he could recite the last paragraph of the text. In math class, he could remember the formulas the teacher had explained. In history class, whenever the teacher asked about a year, he was often the first student to raise his hand. His family also often said that he was a child who “knew how to study.”
 
@@ -2167,26 +2167,26 @@ But one day, the teacher did not give them a question from the textbook.
 
 In that lesson, the teacher gave each group a bus route map and a task. Before three o’clock the next afternoon, they had to leave school and go to a library on the other side of the city for an activity. Each group had to find the route by themselves, arrange the time by themselves, and explain what they would do if the bus was late.
 
-At first, Lin thought it was very easy. He opened the map, found one route, and wrote it down. But a classmate sitting next to him asked, “Does this route need a transfer? If the first bus is late, can we still arrive on time? Which entrance of the library should we meet at? Should we arrive ten minutes earlier?”
+At first, Eli thought it was very easy. He opened the map, found one route, and wrote it down. But a classmate sitting next to him asked, “Does this route need a transfer? If the first bus is late, can we still arrive on time? Which entrance of the library should we meet at? Should we arrive ten minutes earlier?”
 
-Lin suddenly did not know how to answer.
+Eli suddenly did not know how to answer.
 
 He realized that he was usually good at answering questions that had already been clearly prepared. But when a problem did not have a standard form, he did not know where to look first, or what questions he should ask.
 
 The next day, his group almost arrived late. It was not because the route was completely wrong. It was because they had not included the time needed to walk to the bus stop, and they had not noticed that the weekend bus schedule was different from the weekday schedule. The teacher did not criticize them. She only asked each student to write down: What went wrong in this plan? How can you check it next time?
 
-Lin wrote very slowly. For the first time, he was not writing an answer. He was thinking about why he had made a mistake.
+Eli wrote very slowly. For the first time, he was not writing an answer. He was thinking about why he had made a mistake.
 
 After that, the teacher often gave them similar tasks. Sometimes, they read a news article and had to decide which parts were facts and which parts were only the writer’s opinion. Sometimes, they received a set of numbers and had to make a simple table to explain what the numbers could show and what they could not show. Sometimes, they interviewed someone in their family, organized the information into a clear paragraph, and then explained it to their classmates.
 
-These tasks did not look like one formal subject. They were not only language, not only math, and not exactly history or science. But Lin slowly found that these exercises changed the way he learned all subjects.
+These tasks did not look like one formal subject. They were not only language, not only math, and not exactly history or science. But Eli slowly found that these exercises changed the way he learned all subjects.
 
 He began to understand that when reading an article, he should not only look for the final conclusion. He also needed to see how the writer built the idea step by step. When solving a math problem, he should not only use a formula. He first needed to understand what the question was really asking. When working with others, he could not only say, “I think this is right.” He also needed to explain his reasons and understand why others might disagree.
 
-Later, Lin no longer saw learning as “remembering more answers.” He cared more about whether he could find information, ask questions, check mistakes, and divide a complex task into smaller steps. When he met something unfamiliar, he still felt nervous, but he no longer felt that he had no way to begin.
+Later, Eli no longer saw learning as “remembering more answers.” He cared more about whether he could find information, ask questions, check mistakes, and divide a complex task into smaller steps. When he met something unfamiliar, he still felt nervous, but he no longer felt that he had no way to begin.
 
 He knew that he could first observe, then ask questions; first organize, then make judgments; first try once, then revise.`,
-    storyBodyZh: `小林刚上中学时，很会背答案。
+    storyBodyZh: `艾利刚上中学时，很会背答案。
 
 语文课上，他能背出课文最后一段。数学课上，他能记住老师讲过的公式。历史课上，只要老师问年份，他总能第一个举手。家里人也常说，他是个“会学习”的孩子。
 
@@ -2194,23 +2194,23 @@ He knew that he could first observe, then ask questions; first organize, then ma
 
 那节课，老师把一张公交线路图发给全班，又给了他们一个任务：明天下午三点以前，要从学校出发，去城市另一边的图书馆参加活动。每组自己查路线，自己安排时间，还要说明如果公交晚点，应该怎么办。
 
-小林一开始觉得这很简单。他打开地图，看到一条路线，就把它写了下来。可是旁边的同学问他：“这条路线要不要换乘？如果第一班车晚了，还来得及吗？图书馆哪个入口集合？我们要不要提前十分钟到？”
+艾利一开始觉得这很简单。他打开地图，看到一条路线，就把它写了下来。可是旁边的同学问他：“这条路线要不要换乘？如果第一班车晚了，还来得及吗？图书馆哪个入口集合？我们要不要提前十分钟到？”
 
-小林突然答不上来。
+艾利突然答不上来。
 
 他发现，自己平时很擅长回答已经整理好的问题。可是当问题没有标准格式时，他不知道该先看哪里，也不知道该问什么。
 
 第二天，他们小组差点迟到。不是因为路线完全错了，而是因为他们没有考虑走到公交站的时间，也没有注意周末班次和平日不同。老师没有批评他们，只让每个人写下：这次计划哪里出了问题？下次可以怎样检查？
 
-小林写得很慢。他第一次不是在写答案，而是在想自己为什么会错。
+艾利写得很慢。他第一次不是在写答案，而是在想自己为什么会错。
 
 后来，老师经常给他们类似的任务。有时是读一篇新闻，让他们判断哪些是事实，哪些只是作者的看法。有时是给一组数字，让他们做一个简单表格，说明这些数字能说明什么、不能说明什么。有时是让他们采访家里人，整理成一段清楚的文字，再向同学解释。
 
-这些任务看起来不像某一门正式学科。它们不是单纯的语文，也不是单纯的数学，更不是历史或科学。可是小林慢慢发现，这些练习会影响他学习所有课程的方式。
+这些任务看起来不像某一门正式学科。它们不是单纯的语文，也不是单纯的数学，更不是历史或科学。可是艾利慢慢发现，这些练习会影响他学习所有课程的方式。
 
 他开始知道，读文章时不能只找最后一句结论，还要看作者怎样一步一步说出来。做数学题时不能只套公式，还要先理解题目到底问什么。和别人合作时，不能只说“我觉得这样”，还要说明理由，也要听懂别人为什么不同意。
 
-到后来，小林不再把学习看成“记住更多答案”。他更关心自己会不会找到信息，会不会提出问题，会不会检查错误，会不会把一个复杂任务拆成几个简单步骤。遇到不熟悉的事情时，他还是会紧张，但不再觉得自己完全没有办法。
+到后来，艾利不再把学习看成“记住更多答案”。他更关心自己会不会找到信息，会不会提出问题，会不会检查错误，会不会把一个复杂任务拆成几个简单步骤。遇到不熟悉的事情时，他还是会紧张，但不再觉得自己完全没有办法。
 
 他知道，可以先观察，再提问；先整理，再判断；先试一次，再修改。`,
     formalExplanation: "This is what “generic learning” is mainly concerned with. It does not lead people directly into one specific professional field. Instead, it first develops the most basic abilities for learning, understanding, and personal development. It teaches people how to read information, use numbers, express ideas, reflect on their own learning process, and transfer existing knowledge to new situations. In modern educational classification, it corresponds to Generic programmes and qualifications. It is not a field that developed directly from an ancient profession, such as medicine, law, or engineering. Rather, it is inspired by basic courses, general education, and learning-skill development in the modern formal education system. It helps us understand learning areas that do not have one clear professional direction, but still provide the foundation for further study. Its source is closer to the earliest goal of education: before a person enters a more specific field, they first need to develop the ability to learn other kinds of knowledge.",
@@ -16120,7 +16120,10 @@ function renderCategoryDetail(code) {
   const cardDisplay = getPublicCategoryCardDisplay(category);
   const originalLabel = currentLanguage === "zh" ? "原分类" : "Original category";
   const countText = currentLanguage === "zh" ? `${stats.practicalCount} ${t("detailedFields")}` : `${stats.practicalCount} ${t("detailedFields")}`;
-  if (eyebrow) eyebrow.textContent = t("categoryScope");
+  if (eyebrow) {
+    eyebrow.hidden = true;
+    eyebrow.textContent = "";
+  }
   if (title) title.textContent = cardDisplay.displayTitle || getPublicCategoryTitle(category);
   if (copy) {
     copy.innerHTML = `
@@ -16155,13 +16158,11 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
 function renderInlineLensStoryArticle(story) {
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
-  const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
-  const storyEyebrow = story.storyLevel === "subject-intro" ? t("submoduleIntroStory") : t("lensStoryEyebrow");
   const ratingArticle = getRatingArticleForLensStory(story);
   const fieldRows = (group?.fields || [])
     .filter(([code]) => (story.fieldCodes || []).includes(code))
@@ -16175,10 +16176,6 @@ function renderInlineLensStoryArticle(story) {
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      <div class="story-card-topline lens-story-topline">
-        <span>${escapeHtml(storyEyebrow)}</span>
-        <span>${escapeHtml(categoryTitle)}</span>
-      </div>
       <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
       <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
       <section class="lens-story-section">
@@ -16227,7 +16224,6 @@ function renderCategoryTree(category) {
       const fieldTitle = getPublicSubjectTitle(entry);
       return `
         <a class="submodule-button public-field-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
-          <small>${escapeHtml(entry.fieldCode)}</small>
           <span>${escapeHtml(fieldTitle)}</span>
         </a>`;
     })
@@ -16237,7 +16233,6 @@ function renderCategoryTree(category) {
     <div class="category-subject-story-layout">
     ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
       <div class="hierarchy-layer module-layer">
-        <span class="hierarchy-layer-label">${escapeHtml(t("submoduleLabel"))}</span>
         <div class="submodule-button-row public-field-grid" aria-label="${escapeHtml(t("submoduleLabel"))}">
           ${fieldCards}
         </div>
