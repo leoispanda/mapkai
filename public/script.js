@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.117";
+const appVersion = "0.1.121";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -34,7 +34,7 @@ const publicContentVisibility = {
   articles: false,
 };
 
-const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04"]);
+const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07"]);
 
 function arePublicArticlesVisible() {
   return Boolean(publicContentVisibility.articles);
@@ -428,6 +428,9 @@ const uiText = {
     categoryScope: "Lens scope",
     categoryCopy: (fields) => `This lens contains ${fields} formal subfields.`,
     submoduleLabel: "Formal subfields",
+    subfieldContextLine: (count) => count === 1
+      ? "Subfields within this major field · 1 formal subfield"
+      : `Subfields within this major field · ${count} formal subfields`,
     submoduleIntroStory: "Subject overview",
     generalEntryLabel: "General Entry",
     generalEntryStory: "General overview story",
@@ -810,6 +813,7 @@ const uiText = {
     categoryScope: "镜头范围",
     categoryCopy: (fields) => `这个领域包含 ${fields} 个正式小学科。`,
     submoduleLabel: "正式小学科",
+    subfieldContextLine: (count) => `主学科下的细分学科 · ${count} 个正式小学科`,
     submoduleIntroStory: "小学科概览",
     generalEntryLabel: "总览入口",
     generalEntryStory: "总览故事",
@@ -1491,17 +1495,17 @@ const publicCategoryCardDisplay = {
       displayDescription: "When desire, resources, and responsibility meet, business and law help cooperation depend on more than the will of the powerful.",
     },
     "05": {
-      originalTitle: "Natural Sciences",
+      originalTitle: "Natural sciences, mathematics and statistics",
       displayTitle: "Questioning the Universe",
       displayDescription: "Humanity asks questions of the universe, and waits for the world to answer through its laws.",
     },
     "06": {
-      originalTitle: "Computing and Technology",
+      originalTitle: "Information and Communication Technologies",
       displayTitle: "The Second Mind",
       displayDescription: "Humanity gives thought to machines, distance to networks, and the impossible to the next attempt.",
     },
     "07": {
-      originalTitle: "Engineering and Construction",
+      originalTitle: "Engineering, manufacturing and construction",
       displayTitle: "The Human Hand",
       displayDescription: "Like a hand that fastens dreams into the earth, bridges, cities, and machines allow invisible ideas to stand.",
     },
@@ -2615,91 +2619,265 @@ These questions helped her see that desire itself is not frightening. People wan
   },
   {
     code: "05",
-    subjectTitle: "Natural Sciences",
-    subjectTitleZh: "自然科学",
-    title: "The Clock-Mender Who Asked the Mountain",
-    titleZh: "山顶上的问钟人",
-    summary: "Humanity asks the universe questions and waits for the world to answer through its laws.",
-    summaryZh: "人类向宇宙提问，并等待世界用规律回答。",
-    scene: "A village at the foot of a mountain slowly learns, in rain, thunder, starlight, and drought, how to turn fear into observation.",
-    sceneZh: "一座建在山脚下的村子，人们在雨水、雷声、星空和旱灾面前，慢慢学会把害怕变成观察。",
-    storyBody: `Long ago, there was a village built at the foot of a mountain. The people lived every day under the same slope. In spring, snowmelt came down from above; in summer, thunder rolled through the valley; in autumn, stars were scattered across the night sky like salt; in winter, wind came through the pass and made the cracks in the doors sound as if they were whispering.
+    subjectTitle: "Natural sciences, mathematics and statistics",
+    subjectTitleZh: "自然科学、数学与统计",
+    title: "Natural sciences, mathematics and statistics",
+    titleZh: "向宇宙提问",
+    summary: "Hang learns through ice, mung beans, heat tests, online claims, and temperature data that science asks questions through observation, comparison, evidence, mathematics, and statistics.",
+    summaryZh: "小航从冰、水、绿豆、保温实验、网络说法和气温数据里，学会用观察、比较、证据、数学和统计向世界提问。",
+    scene: "Hang's habit of asking why begins with rain, melting ice, moonlight during a power outage, and a cup of water placed in the refrigerator.",
+    sceneZh: "小航的为什么，从下雨、冰棍融化、停电后的月光和一杯放进冰箱的水开始。",
+    storyBody: `When Hang was a child, he liked asking “why.”
 
-Everyone in the village knew the mountain was large, and everyone knew it had a temper. If too much rain fell, the river would rise. If the wind came too quickly, roofs would fly. When a bright streak crossed the sky, the elders said it was a god moving a basin of fire. The children listened, afraid and believing. In those days, fear was often a kind of explanation.
+When it rained, he asked why clouds could drop water.
+When he ate an ice pop, he asked why ice slowly turned into water.
+When the electricity went out at night, he asked why the moon could still shine.
+Sometimes his mother answered him. Sometimes she said, “You will know when you grow older.”
 
-There was a clock-mender in the village, living in the house closest to the mountain road. He was not good at pretty speeches, and he did not enjoy taking part in rituals. When people asked why thunder always came after lightning, he did not answer at once. When people asked why the moon was sometimes full and sometimes thin, he only looked up for a long time, then carved a mark into a wooden board.
+But Hang did not want to wait.
 
-At first, the villagers thought he was strange. The mountain was already there, the wind had always blown, and the stars appeared every night. Since life went on as usual, why keep asking?
+Once, he put a cup of water into the refrigerator and took it out a few hours later. The water had become ice. Then he put the ice on the table and watched it slowly melt. That day, he did not learn any very complex knowledge. But for the first time, he found that some questions did not have to be answered only by other people. He could also observe them by himself.
 
-The clock-mender did not argue. Every day, he did only three things: look, record, and compare.
+Later, in science class, the teacher asked them to grow mung beans. Each group had two cups. One cup was placed under sunlight, and the other was placed inside a cabinet. Both cups received the same amount of water. A few days later, the beans under sunlight became greener. The beans in the cabinet also grew taller, but they were yellow and thin.
 
-He placed twelve water jars by his door and recorded how much rain fell each month. He set wooden stakes on the hillside and recorded the length of their shadows on different days. He took clocks apart and put them together again, listening to the sound of the gears biting into one another. He also brought children to the river and showed them how the same stone moved in fast water and slow water.
+At first, Hang said, “Because they are not happy.”
 
-One year, a severe drought struck the village. The priest said people had forgotten to revere the mountain spirit. The merchants said the northern road had broken, so grain could not arrive. The elders said there had been dry years before, and people only needed to endure.
+The teacher smiled. She did not say he was wrong. She only asked, “If we do not talk about whether they are happy or not, and only look at what we can observe, how can we describe it?”
 
-The clock-mender brought out the wooden boards he had carved over many years. He had noticed that whenever the winter snowline retreated too high, the spring river became shallow; and whenever the spring river became shallow, the summer fields were more likely to crack. He did not say the mountain spirit did not exist, and he did not say the elders were wrong. He only pointed to the marks and said, "Perhaps the mountain is not angry. Perhaps it has been saying the same thing all along, and we had not yet learned how to listen."
+Hang looked down at the record sheet and said, “It did not have sunlight, so its color and growth were different.”
 
-The villagers were unsure. But that year, they followed his advice. They dug the channels deeper, moved part of the seed to lower ground, and stored some grain earlier than usual. The drought did not disappear, but the village did not fall into famine as it had before.
+The teacher asked again, “How do you know it was because of sunlight, not because of water?”
 
-After that, more and more children came to the clock-mender. They thought he would teach them how to control the mountain, the wind, and the stars. But the clock-mender always shook his head.
+This time, Hang thought for a while before he understood. The two cups received the same amount of water, and the soil was almost the same. The only clear difference was where they were placed. If the results were different, sunlight was more likely to be related to the change.
 
-He said, "We cannot command the mountain to answer. We can only ask clearer questions."
+For the first time, he understood that asking questions was not enough. People also needed to design a fair way to compare things. They could not only say “I think so” based on feeling. They needed to let the phenomenon speak through evidence.
 
-So the children learned to count stars at night, measure water after rain, and listen to the direction of leaves in the wind. They discovered that the world did not become smaller because it was explained. On the contrary, the more carefully they observed, the deeper the world became. Thunder was no longer only fear, and the starry sky was no longer only legend. The mountain was still silent, but it was no longer completely unfamiliar.
+In middle school, Hang joined a school interest group. In one activity, the teacher asked them to test how well different materials kept heat. Each group received several cups. Some cups were wrapped with paper, some with cloth, some with foam, and one cup was not wrapped. Then they poured hot water of the same temperature into each cup and recorded the temperature every five minutes.
 
-Many years later, the clock-mender grew old. The village now had new waterwheels, a more accurate calendar, and stronger bridges. Some people said the clock-mender had changed the village. Others said he had only helped it lose a few superstitions.
+Hang thought the experiment was simple. But when he started doing it, he found that many details could affect the result. Was the amount of water the same? Did the thermometer touch the bottom of the cup? Was the reading taken by the same person each time? Was there any mistake in recording? If they tested only once, could the result be trusted?
 
-The clock-mender smiled when he heard this. Pointing toward the mountaintop, he said, "I did not change the mountain. I only believed that even a silent world has its order. If people are honest enough and patient enough, they can hear a little answer in wind, stone, water, and starlight."
+He used to think that science meant knowing many conclusions, such as the Earth moving around the Sun, water freezing under certain conditions, and plants needing light. Later, he slowly found that science also cares about how these conclusions are reached. Behind a reliable conclusion, there are often observation, measurement, comparison, repetition, and revision.
 
-That night, the children stood on the mountaintop and saw the Milky Way crossing the sky. No one spoke. For the first time, they understood that questioning does not begin because human beings are strong enough to judge the universe. It begins because human beings are so small, and still refuse to stop trying to understand the world.`,
-    storyBodyZh: `很久以前，有一座村子建在山脚下。村里的人每天看着同一座山生活。春天，雪水从山上流下来；夏天，雷声在山谷里滚动；秋天，星星像盐一样洒在夜空；冬天，风从山口吹来，把门缝吹得像在低声说话。
+Once, Hang saw a message online saying that a certain food “could clearly improve memory.” Many people shared it, and many comments said they felt more awake after eating it.
 
-村里的人都知道山很大，也都知道山有脾气。下雨太多，河就会涨；风来得太急，屋顶就会飞；天上有亮光划过，老人就说，那是神在搬动火盆。孩子们听了，既害怕，也相信。因为在那时，害怕常常就是一种解释。
+Hang almost believed it. But he remembered what the teacher had said in experiment class: feeling is not the same as evidence, and a single example is not the same as a general rule.
 
-村里有一个修钟人，住在最靠近山路的地方。他不太会说漂亮话，也不喜欢参加祭祀。别人问他为什么雷声总在闪光之后来，他不会立刻回答。别人问他为什么月亮有时圆、有时缺，他也只是抬头看很久，然后在木板上刻下一道痕迹。
+So he began to search for more information. He found that, to judge whether such a claim was trustworthy, he needed to look at how many people were included in the experiment, whether there was a comparison group, whether the result could be repeated, whether the study had been checked by other researchers, and whether the conclusion had been exaggerated. That time, he first felt that science was not only something in laboratories. It was also related to judgment in everyday life.
 
-起初，村民觉得他有些古怪。山已经在那里，风也一直在吹，星星每天晚上都会出现。既然日子照样过，为什么还要不停地问？
+At university, Hang studied statistics and basic research methods. They analyzed a set of city temperature data to see whether temperatures had changed over the past decades. At first, he only saw many numbers and found them boring. But when the teacher guided them to draw charts, calculate averages, and compare different years, the numbers began to have meaning.
 
-修钟人没有反驳。他只是每天做三件事：看，记，比较。
+He saw that some years were especially hot. He also saw that long-term trends were different from short-term changes. The weather on one day might become colder, but the long-term climate could still be warming. One data point might be very noticeable, but it could not represent everything. To understand the world, people cannot only look at one day in front of them, and they cannot only choose examples they like.
 
-他在门口放了十二个水罐，记录每个月落下的雨水。他在山坡上插了木桩，记录影子在不同日子的长度。他把钟拆开又装回去，听齿轮咬合的声音。他还把孩子们带到河边，让他们看同一块石头在急流和缓流中如何移动。
+Later, when Hang saw the sky, rivers, plants, the human body, medicines, weather forecasts, or data in the news, he would think one step further: How does this phenomenon happen? Is there a pattern? How do we know? Is the evidence enough? Is there another explanation? If the conditions change, will the result also change?
 
-有一年，村子发生了很大的旱灾。祭司说，是因为人们忘了敬畏山神。商人说，是因为北边的路断了，粮食来不了。长老说，过去也有旱年，忍一忍就会过去。
+These questions did not make the world less interesting. Instead, they made it more worth approaching. Hang found that many things look ordinary, but behind them there are patterns that can be questioned and studied. Why a cup of water freezes, why a seed grows, why a medicine works, and why a set of numbers changes are not only “common sense.” They are understandings built slowly through long-term observation, experiments, and reasoning.
 
-修钟人却翻出自己多年来刻下的木板。他发现，每当冬天的雪线退得太高，春天的河水就会变浅；每当春天的河水变浅，夏天的田就更容易干裂。他没有说山神不存在，也没有说长老错了。他只是指着那些痕迹说：“也许山不是在发怒。也许它一直在说同一种话，只是我们以前没有学会听。”
+He also knew that science does not mean people already know everything. On the contrary, science often begins with “we do not know.” It allows people to ask questions, but it also asks people to check their answers carefully. It does not like easy conclusions, but it is not afraid to change old conclusions. When evidence changes, understanding can continue to be updated.`,
+    storyBodyZh: `小航小时候，很喜欢问“为什么”。
 
-村民半信半疑。但那一年，他们按照他的建议，把水渠挖深，把部分种子换到低地，把一部分粮食提前存起来。旱灾没有消失，可村子没有像从前那样陷入饥荒。
+下雨的时候，他问为什么云会掉水。
+吃冰棍的时候，他问为什么冰会慢慢变成水。
+晚上停电时，他问为什么月亮还能亮。
+妈妈有时会回答他，有时也会说：“等你长大一点就知道了。”
 
-从那以后，越来越多的孩子来找修钟人。他们以为他会教他们如何控制山、控制风、控制星星。可是修钟人总是摇头。
+可是小航等不及。
 
-他说：“我们不能命令山回答。我们只能把问题问得更清楚。”
+有一次，他把一杯水放进冰箱，过几个小时再拿出来看。水变成了冰。他又把冰放在桌上，看它慢慢融化。那天他没有学到很复杂的知识，只是第一次发现，有些问题可以不靠别人直接告诉他，也可以自己观察。
 
-于是孩子们学会了在夜里数星，在雨后量水，在风中听树叶的方向。他们发现，世界不是因为被解释而变小。相反，当他们越认真观察，世界越显得深远。雷声不再只是恐惧，星空也不再只是传说。山仍然沉默，却不再完全陌生。
+后来，学校上科学课。老师让他们种绿豆。每个小组有两个杯子，一杯放在阳光下，一杯放在柜子里；两杯都浇一样多的水。几天后，阳光下的绿豆长得更绿，柜子里的绿豆虽然也长高了，却发黄、很细。
 
-很多年后，修钟人老了。村里已经有了新的水车、更准的历法和更坚固的桥。有人说，是修钟人改变了村子。也有人说，他只是让村子少了一些迷信。
+小航一开始说：“因为它不开心。”
 
-修钟人听后笑了。他指着山顶，说：“我没有改变山。我只是相信，沉默的世界也有它的秩序。人若足够诚实，足够耐心，就能从风、石头、水和星光里，听见一点回答。”
+老师笑了笑，没有说他错，只问：“如果我们不说它开心不开心，只看我们能观察到的东西，可以怎么说？”
 
-那天晚上，孩子们站在山顶，看见银河横过天空。没有人说话。因为他们第一次明白，所谓提问，并不是因为人类已经强大到可以审判宇宙，而是因为人类如此渺小，却仍然不愿停止理解世界。`,
-    formalExplanation: `This fable describes the basic spirit of the natural sciences. Natural science is not simply the collection of facts, and it does not make the world dull by taking it apart from mystery. It is closer to a continuing practice of asking questions, observing, recording, comparing, and revising explanations. The clock-mender in the fable does not directly deny the villagers' older beliefs. Instead, through long observation of rain, shadows, rivers, and seasonal change, he gradually notices that stable relationships may exist among natural phenomena. This corresponds to empirical observation, systematic record keeping, pattern recognition, and causal explanation in the natural sciences.
+小航低头看了看记录表，说：“它没有阳光，所以颜色不一样，长得也不一样。”
 
-The importance of natural science lies in helping humanity move from fear and guesswork toward more reliable understanding. Thunder and lightning, drought, the night sky, disease, and changes in matter were once often understood as forces beyond explanation. Natural science uses observable evidence and testable reasoning to let human beings gradually understand the laws behind such phenomena. This does not mean humans can fully control nature. It means humans can live with nature more cautiously and more clearly.
+老师又问：“那你怎么知道是阳光的原因，而不是水的原因？”
 
-At a graduate level, the fable also emphasizes the limits and openness of scientific knowledge. The clock-mender never claims to possess the final answer. He only keeps asking clearer questions and uses long-term evidence to revise earlier judgments. This point matters because natural science does not receive truth once and for all. It is a process of approaching better explanations over time. Scientific theories need evidence, and they must withstand new observation, experiment, and refutation. Their strength does not lie in being forever correct, but in being willing to be tested, corrected, and made more reliable through correction.
+这次，小航想了一会儿才明白。因为两杯水浇得一样多，土也差不多，只有放的位置不同。如果结果不同，就更可能和阳光有关。
 
-For that reason, "asking the universe" is not merely a romantic phrase. It is the central posture of the natural sciences. Human beings are very small before the universe, but that smallness gives questioning its dignity. Natural science allows humanity to search for laws among wind, stone, water, life, and starlight. It also teaches us that the world will not necessarily explain itself, but with patience, evidence, and reason, human beings can move a little closer to its answer.`,
-    formalExplanationZh: `这个寓言描写的是自然科学的基本精神。自然科学并不是简单地收集知识，也不是把世界从神秘中“拆开”之后变得无趣。它更像是一种持续提问、观察、记录、比较和修正解释的方式。寓言中的修钟人并没有直接否定村民原有的信念，而是通过长期观察雨水、影子、河流和季节变化，逐渐发现自然现象之间可能存在稳定的关系。这对应自然科学中的经验观察、系统记录、模式识别和因果解释。
+他第一次知道，提问还不够，还要设计一种比较公平的方法。不能只凭感觉说“我觉得是这样”，而要想办法让现象自己说话。
 
-自然科学的重要性在于，它帮助人类从恐惧和猜测中走向更可靠的理解。雷电、旱灾、星空、疾病和物质变化，曾经都可能被理解为不可解释的力量。但自然科学通过可观察的证据和可检验的推理，使人类能够逐步理解这些现象背后的规律。它并不意味着人类可以完全控制自然，而是意味着人类可以更谨慎、更清楚地与自然相处。
+上中学后，小航加入了学校的兴趣小组。一次活动中，老师让他们测量不同材料的保温效果。每组拿到几个杯子，分别用纸、布、泡沫和没有包裹的方式处理，再倒入同样温度的热水，每隔五分钟记录一次水温。
 
-对于研究生层面的理解来说，这个寓言也强调了科学认识的有限性和开放性。修钟人没有说自己拥有最终答案。他只是不断提出更清楚的问题，并用长期证据来修正原来的判断。这一点非常重要，因为自然科学不是一次性得到真理，而是一个不断逼近更好解释的过程。科学理论需要证据支持，也需要经受新的观察、实验和反驳。它的力量不在于永远正确，而在于愿意被检验、被修正，并在修正中变得更可靠。
+小航觉得这个实验很简单。但做起来以后，他发现很多细节都会影响结果。水是不是一样多？温度计有没有碰到杯底？每次读数是不是同一个人？记录时有没有看错？如果只测一次，结果能不能相信？
 
-因此，“向宇宙提问”不是一种浪漫口号，而是自然科学的核心姿态。人类面对宇宙时非常渺小，但正是这种渺小，使提问本身变得有尊严。自然科学让人类在风、石头、水、生命和星光之间寻找规律，也让我们明白：世界并不一定会主动解释自己，但人类可以用耐心、证据和理性，一点点靠近它的回答。`,
-    coreInsight: "Natural science is not about turning a mysterious world into a list of answers. It is about using observation, records, comparison, and testing to move humanity closer to more reliable laws.",
-    coreInsightZh: "自然科学真正关心的，不是把神秘世界变成答案清单，而是用观察、记录、比较和检验，让人类一点点接近更可靠的规律。",
-    analogyBoundary: "This story emphasizes the questioning spirit and evidence-based method of the natural sciences, but natural science should not be reduced to personal observation or to the control of nature. Real natural science also involves experimental design, mathematical models, peer review, technical instruments, and continuous revision.",
-    analogyBoundaryZh: "这个故事强调自然科学的提问精神和证据方法，但不能把自然科学理解成只靠个人观察或只服务于控制自然。真正的自然科学还包括实验设计、数学模型、同行检验、技术工具和持续修正。",
-    sourceBatchId: "subject-intro-05-natural-science-20260629",
+他原来以为科学就是知道很多结论，比如地球绕太阳转，水在一定条件下会结冰，植物需要光。后来他慢慢发现，科学也关心这些结论是怎样来的。一个可靠的结论，背后常常有观察、测量、比较、重复和修正。
+
+有一次，小航在网上看到一条消息，说某种食物“可以明显提高记忆力”。很多人转发，也有很多评论说自己吃了以后确实感觉更清醒。
+
+小航差点相信。可是他想起实验课上老师说过的话：感觉不等于证据，个别例子也不等于规律。
+
+于是他开始查更多信息。他发现，要判断这种说法是否可信，需要看实验人数有多少，有没有对照组，结果是否可以重复，研究有没有被同行检查，结论是不是被夸大了。那一次，他第一次觉得，科学不只是实验室里的事情，也和日常生活中的判断有关。
+
+大学时，小航学习统计和基础研究方法。他们分析一组城市气温数据，研究过去几十年里温度是否发生变化。刚开始，他只看到一堆数字，觉得很枯燥。可是当老师带他们画出图表、计算平均值、比较不同年份时，那些数字开始变得有意义。
+
+他看到某些年份特别热，也看到长期趋势和短期波动不一样。一天的天气可能会变冷，但长期气候仍可能变暖。一个数据点可能很突出，但不能代表全部。要理解世界，不能只看自己眼前的一天，也不能只挑选自己喜欢的例子。
+
+后来，小航再看见天空、河流、植物、身体、药物、天气预报和新闻里的数据时，都会多想一步：这个现象是怎样发生的？有没有规律？我们怎么知道？证据够不够？有没有别的解释？如果换一种条件，结果会不会不同？
+
+这些问题让世界没有变得更神秘，反而更值得靠近。小航发现，很多事情看起来平常，其实背后都有可以被追问的规律。一杯水为什么会结冰，一颗种子为什么会发芽，一种药为什么有效，一组数字为什么会变化，这些都不是简单的“常识”，而是人们长期观察、实验和推理后，慢慢建立起来的理解。
+
+他也知道，科学并不意味着人已经知道一切。相反，科学常常从“不知道”开始。它允许人提出问题，也要求人认真检查自己的答案。它不喜欢轻易下结论，但也不害怕推翻旧结论。只要证据改变，理解就可以继续更新。`,
+    formalExplanation: "This is what Natural sciences, mathematics and statistics are mainly concerned with. This field studies phenomena, patterns, and relationships in the natural world. It also studies how people understand these patterns through observation, experiments, measurement, mathematics, and statistics. It focuses on matter, life, Earth, the universe, quantity, change, and evidence. Its roots are connected with early human observation of seasons, the sky, illness, plants, animals, numbers, and space. Later, with the development of experimental methods, mathematical tools, instruments, and modern university research systems, Natural sciences, mathematics and statistics gradually became a formal academic field. It helps people understand nature more systematically and answer questions about the world more carefully.",
+    formalExplanationZh: "这就是“自然科学”真正关心的内容。它研究自然世界中的现象、规律和关系，也研究人如何通过观察、实验、测量、数学和统计来理解这些规律。它关注物质、生命、地球、宇宙、数量、变化和证据。在正式学科中，它对应的是 Natural sciences, mathematics and statistics（自然科学、数学与统计）。它的来源与人类很早以前对季节、天象、疾病、植物、动物、数量和空间的观察有关。后来，随着实验方法、数学工具、仪器设备和现代大学研究体系的发展，自然科学逐渐成为正式学科领域，用来帮助人类更系统地理解自然，也更谨慎地回答关于世界的问题。",
+    coreInsight: "Natural sciences, mathematics and statistics are not only collections of conclusions. They are disciplined ways of asking, observing, measuring, comparing, testing, and revising what we think we know.",
+    coreInsightZh: "自然科学、数学与统计不只是结论集合，而是一套认真提问、观察、测量、比较、检验并修正理解的方法。",
+    analogyBoundary: "This story uses everyday experiments and simple data to show the field's basic habit of mind, but Natural sciences, mathematics and statistics also include physics, chemistry, biology, Earth science, astronomy, mathematics, statistics, instruments, models, peer review, and advanced research methods.",
+    analogyBoundaryZh: "这个故事用日常实验和简单数据说明该领域的基本思维习惯，但自然科学、数学与统计还包括物理、化学、生物、地球科学、天文学、数学、统计、仪器、模型、同行检验和更高级的研究方法。",
+    sourceBatchId: "subject-intro-05-natural-sciences-mathematics-statistics-questioning-universe-20260630",
+  },
+  {
+    code: "06",
+    subjectTitle: "Information and Communication Technologies",
+    subjectTitleZh: "信息与通信技术",
+    title: "Information and Communication Technologies",
+    titleZh: "第二个大脑",
+    summary: "Chen learns through photo search, a school presentation, programming, and a logistics error that technology works only when people design information, rules, checks, and responsibility clearly.",
+    summaryZh: "小辰从找照片、做展示、写程序和物流系统错误中，明白技术不是替人判断，而是把信息、规则和责任设计成可用的系统。",
+    scene: "Chen first feels the power of computers when he helps his mother find an old seaside photo among thousands of mixed pictures.",
+    sceneZh: "小辰第一次觉得电脑很厉害，是帮妈妈从几千张照片里找到一张旧海边照片。",
+    storyBody: `Chen first felt that computers were powerful when he helped his mother find a photo.
+
+There were thousands of photos on her phone: travel photos, food photos, screenshots, and many others mixed together. She wanted to find a photo taken by the sea several years ago, but she searched for a long time and still could not find it. Chen filtered the photos by time, place, and people, and soon found it in an old album.
+
+His mother smiled and said, “You are smarter than me.”
+
+Chen felt a little proud. He did not think he was really smarter. He only felt that he knew better how to use the phone.
+
+Later, the school asked them to make a group presentation about “changes in the city.” Chen volunteered to organize the materials. He used the computer to download pictures, copy text, and make slides. He worked very fast, and his group members all thought he was good at it.
+
+But the day before the presentation, problems appeared. Someone found that two pictures were not from their city at all. Another part of the text contradicted something written earlier. One chart had no clear source, so if the teacher asked about it, no one could explain it.
+
+Chen felt wronged. He had clearly done a lot of work. But after checking the file again, he saw that the problems were real. He had only put information together. He had not judged whether the information was correct, reliable, or suitable to use.
+
+The next day, the teacher did not criticize him. She only said one sentence: “Tools can help you work faster, but they cannot judge for you what is correct.”
+
+Later, Chen began to learn programming. The teacher asked them to write a simple program: enter two numbers, and the computer gives their sum. He thought it was easy, but the program was wrong the first time he ran it. After checking for a long time, he found that he had written one symbol incorrectly.
+
+He was not convinced. “It is only one symbol. Why is the whole program wrong?”
+
+The teacher said, “A computer does not guess what you mean. It does exactly what you write.”
+
+This sentence stayed with Chen. He slowly found that technology is not simply about “letting machines help people.” Before a machine can work, people must first make the problem clear: where the information comes from, how the rules should be written, how errors should be handled, who will read the result, and whether other people may use it in the wrong way.
+
+At university, Chen had an internship at a logistics company. One day, the system recognized the address of a group of goods incorrectly. The warehouse had already packed the goods, and the driver had already left, but the customer still did not receive the package. One small error affected customer service, the warehouse, the driver, and the customer.
+
+Later, the team found that the problem was not caused by one careless person. The address input format was not consistent, the system rules were too simple, and the manual check did not cover this type of situation. So they changed the input rules, added reminders, and set up exception checks.
+
+Chen then understood that an information system is not only something on a screen. It affects real time, cost, work, and trust. Technology can remember more, calculate faster, and connect farther, but it can also make errors bigger. What matters most is not how smart the machine is, but whether people can turn a problem into a form that machines can process and people can understand and use.`,
+    storyBodyZh: `小辰第一次觉得电脑很厉害，是在帮妈妈找照片的时候。
+
+妈妈手机里有几千张照片，旅游的、吃饭的、截图的，全都混在一起。她想找一张几年前在海边拍的照片，翻了很久也找不到。小辰按时间、地点和人物慢慢筛选，很快就在旧相册里找到了。
+
+妈妈笑着说：“你比我聪明多了。”
+
+小辰有点得意。他觉得自己不是更聪明，只是更会用手机。
+
+后来，学校让他们做一个关于“城市变化”的小组展示。小辰主动负责资料整理。他用电脑下载图片、复制文字、做幻灯片，速度很快。组员都觉得他很厉害。
+
+可是展示前一天，问题来了。有人发现两张图片根本不是他们的城市；有一段文字前后说法不一致；还有一张图没有来源，老师如果问起来，没人能解释。
+
+小辰很委屈。他明明做了很多。可是重新检查后，他发现问题确实存在。他只是把信息放在一起，却没有判断这些信息是否正确、是否可靠、是否适合使用。
+
+第二天，老师没有批评他，只说了一句话：“工具可以帮你做得快，但不能替你判断什么是对的。”
+
+后来，小辰开始学编程。老师让他们写一个简单程序：输入两个数字，电脑输出它们的和。他以为这很容易，可程序第一次运行就错了。检查很久后，他发现只是一个符号写错了。
+
+他很不服气：“就一个符号，为什么整个程序都不对？”
+
+老师说：“电脑不会猜你的意思。你怎么写，它就怎么执行。”
+
+这句话让小辰印象很深。他慢慢发现，技术不是简单地“让机器帮人做事”。在机器工作之前，人必须先把问题想清楚：信息从哪里来，规则怎么写，错误怎么处理，结果给谁看，别人会不会用错。
+
+大学时，小辰去物流公司实习。有一天，系统把一批货的地址识别错了。仓库已经打包，司机已经出发，客户却收不到货。一个小错误影响了客服、仓库、司机和客户。
+
+团队后来发现，问题不是某个人粗心，而是地址输入格式不统一，系统规则太简单，人工检查也没有覆盖到这种情况。于是他们修改了输入规则，增加了提示和异常检查。
+
+小辰这才明白，信息系统不是屏幕里的东西。它会影响真实的时间、成本、工作和信任。技术能记得更多、算得更快、连接得更远，但它也会放大错误。真正重要的不是机器有多聪明，而是人能不能把问题转化成机器可以处理、也能被人理解和使用的形式。`,
+    formalExplanation: "This is what Information and Communication Technologies are mainly concerned with. This field studies how information is represented, processed, stored, transmitted, and applied. It also studies how people design systems, software, networks, and digital tools to solve problems. It focuses on computational thinking, programming, data, algorithms, networks, security, human-computer interaction, and information systems. Its roots are connected with the long human need for calculation, recording, communication, and automation tools. Later, with the development of computers, the internet, software engineering, databases, artificial intelligence, and digital platforms, Information and Communication Technologies gradually became a formal academic field. It studies how people turn information into forms that machines can process, and how these technologies change work, life, and social connection.",
+    formalExplanationZh: "这就是“计算与技术”真正关心的内容。它研究信息如何被表示、处理、存储、传输和应用，也研究人如何设计系统、软件、网络和数字工具来解决问题。它关注计算思维、程序设计、数据、算法、网络、安全、人机交互和信息系统等内容。在正式学科中，它对应的是 Information and Communication Technologies（信息与通信技术）。它的来源与人类长期以来对计算、记录、通信和自动化工具的需求有关。后来，随着计算机、互联网、软件工程、数据库、人工智能和数字平台的发展，计算与技术逐渐成为正式学科领域，用来研究人如何把信息变成可以被机器处理的形式，也研究这些技术如何改变人的工作、生活和社会连接。",
+    coreInsight: "Information and Communication Technologies are not only about using smart tools. They ask how information, rules, systems, checks, and interfaces can be designed so machines help people without replacing judgment.",
+    coreInsightZh: "计算与技术不只是使用聪明工具，而是追问信息、规则、系统、检查和界面如何被设计，才能让机器帮助人而不替代人的判断。",
+    analogyBoundary: "This story uses phone search, slides, programming, and logistics systems to show the field's basic logic, but Information and Communication Technologies also include databases, networks, cybersecurity, software engineering, algorithms, artificial intelligence, human-computer interaction, and digital platforms.",
+    analogyBoundaryZh: "这个故事用手机搜索、幻灯片、编程和物流系统说明该领域的基本逻辑，但信息与通信技术还包括数据库、网络、安全、软件工程、算法、人工智能、人机交互和数字平台等更广问题。",
+    sourceBatchId: "subject-intro-06-information-communication-technologies-second-mind-20260630",
+  },
+  {
+    code: "07",
+    subjectTitle: "Engineering, manufacturing and construction",
+    subjectTitleZh: "工程、制造与建筑",
+    title: "Engineering, manufacturing and construction",
+    titleZh: "人类的手",
+    summary: "Chuan learns through repair, a cardboard bridge, campus seating, and factory testing that engineering turns ideas into reliable things under real constraints.",
+    summaryZh: "小川从修东西、纸板桥、校园座椅和工厂测试中，明白工程与建造是在真实限制下把想法变成可靠可用的成果。",
+    scene: "Chuan first admires making and repair while watching his father tighten chairs, fix taps, and turn loose parts back into useful objects.",
+    sceneZh: "小川最早被工程吸引，是看爸爸把松动的椅子、滴水的龙头和零散零件重新修好。",
+    storyBody: `When Chuan was a child, he liked watching his father repair things.
+
+When a chair at home became loose, his father took out a screwdriver and tightened each joint again. When the tap leaked, his father opened it and checked the small washer inside. Chuan found these things amazing. A few pieces of wood, some screws, and several pipes could become useful again in his father's hands.
+
+Once, the school gave them a craft assignment: use cardboard and glue to make a small bridge, and see which group's bridge could hold the most books.
+
+Chuan was excited. He thought that a bridge would be stronger if it was bigger and thicker. So he stacked many pieces of cardboard together and glued them into a heavy bridge. At first, it looked stable. But when the third book was placed on it, the middle suddenly collapsed.
+
+Another classmate's bridge looked much lighter, but it could hold more books. Chuan felt unconvinced. He looked at it carefully and found that the classmate had not simply made the cardboard thicker. Instead, he had folded the cardboard into triangular supports. The bridge was not large, but its structure handled the weight better.
+
+The teacher said, “Strength is not only about using more material. It also depends on whether the structure is right.”
+
+This was the first time Chuan understood that making things is not just putting materials together. For an idea to become something that truly works, it needs design, calculation, testing, and adjustment.
+
+Later, in middle school, Chuan joined a campus improvement project. The school wanted to add a row of seats beside the playground so that students could rest during breaks. At first, Chuan and his classmates only thought about whether the seats looked nice. But the teacher asked them to observe: Which place gets the strongest sun? Where does water collect after rain? From which direction do students usually walk over? Will the seats be uncomfortable if they are too high or too low? Will the material be damaged by rain?
+
+They made the first plan, but the logistics teacher rejected it. The reason was simple: the seats blocked the path of the cleaning vehicle.
+
+Chuan felt embarrassed. They had drawn the plan carefully, but they had forgotten that the school still needed to clean, maintain, and use the space every day. Later, they measured the area again, moved the seats to the side, and chose a material that was easier to clean. The second plan was not as beautiful as the first one, but it was more suitable for real use.
+
+At university, Chuan had an internship at a manufacturing company. For the first time, he saw how a product moved from a drawing to a real object. The design department created the structure, engineers checked the dimensions, the workshop produced the parts, and the quality team tested strength and safety. If one part was only a few millimeters different, the later assembly could have problems.
+
+One day, a batch of products failed the test. Chuan first thought they could simply produce them again. But the engineers did not act immediately. They first checked the reason together: Was it a material problem, or a processing error? Was the design too ideal, or was the usage situation more complex than expected? If only one part was changed, would it affect other parts?
+
+Chuan found that engineering is not about something being “almost right.” It must face the real world: weight, temperature, friction, cost, time, and safety. A design can look perfect on a computer, but on site, it may meet many limits. What truly matters is whether an idea can still be reliable under real conditions.
+
+Later, when Chuan saw bridges, elevators, phone cases, factory production lines, city roads, or buildings, he no longer looked only at their appearance. He would think: What must this thing carry? Who will use it? How is it made? How will it be maintained? If something goes wrong, what will happen? How do people balance cost, quality, safety, and efficiency?
+
+These questions helped him understand that engineering and construction are not simply about “making things.” They turn human needs into objects and spaces that can be used, produced, maintained, and kept relatively safe. They allow an invisible idea to go through design and testing, and finally stand in the real world.`,
+    storyBodyZh: `小川小时候，最喜欢看爸爸修东西。
+
+家里的椅子松了，爸爸会拿出螺丝刀，把每个连接处重新拧紧。水龙头滴水，爸爸会拆开检查里面的小垫圈。小川觉得这些事情很神奇。明明只是几块木板、几颗螺丝、几根管子，到了爸爸手里，就能重新变得好用。
+
+有一次，学校布置了一个手工作业：用纸板和胶水做一座小桥，看哪一组能承受最多的书本重量。
+
+小川很兴奋。他觉得桥只要做得大一点、厚一点，就一定更结实。于是他把很多纸板叠在一起，用胶水粘成一座很重的桥。刚开始，桥看起来确实很稳。可是放到第三本书时，中间突然塌了。
+
+旁边一个同学做的桥看起来很轻，却能承受更多书。小川有点不服气。他仔细看了看，发现那个同学没有一味加厚纸板，而是把纸板折成三角形支撑。桥不大，但受力更合理。
+
+老师说：“结实不只是材料多，也要看结构对不对。”
+
+这句话让小川第一次明白，做东西不是把材料堆起来。一个想法要变成真正能用的东西，中间需要设计、计算、测试和调整。
+
+后来，小川上中学，参加了一个校园改造项目。学校想在操场边增加一排座椅，让学生课间可以休息。小川和同学们一开始只考虑座椅好不好看。可是老师让他们去观察：哪里阳光最晒？哪里容易积水？学生一般从哪个方向走过来？座椅太高或太低会不会不舒服？如果下雨，材料会不会坏？
+
+他们做了第一版方案，结果被后勤老师退了回来。原因很简单：座椅挡住了清洁车的通道。
+
+小川觉得很尴尬。他们画得很认真，却忘了学校每天还要打扫、维护和使用这个空间。后来他们重新测量，把座椅位置往旁边移，又选择了更容易清洁的材料。第二版没有第一版那么漂亮，但更适合实际使用。
+
+大学时，小川去一家制造企业实习。他第一次看到一件产品从图纸变成实物。设计部门画出结构，工程师检查尺寸，车间负责生产，质量部门测试强度和安全性。一个零件如果差了几毫米，后面的组装就可能出问题。
+
+有一天，一批产品在测试时没有通过。小川原以为只要重新生产就可以。可是工程师们没有马上动手，而是先一起查原因：是材料问题，还是加工误差？是设计太理想，还是使用场景比预期更复杂？如果只改一个部件，会不会影响其他部分？
+
+小川发现，工程不是追求“看起来差不多”。它要面对真实世界的重量、温度、摩擦、成本、时间和安全。一个设计在电脑里可以很完美，但到了现场，可能会受到很多限制。真正重要的，是让想法在现实条件下仍然可靠。
+
+后来，小川再看到桥梁、电梯、手机外壳、工厂生产线、城市道路和一栋楼时，不再只看它们的外观。他会想到：这个东西要承受什么？谁来使用？怎样制造？怎样维护？如果出错，会造成什么后果？怎样在成本、质量、安全和效率之间做取舍？
+
+这些问题让他明白，工程与建造并不是简单地“做东西”。它是把人的需要变成可以使用、可以生产、可以维护、也相对安全的现实物品和空间。它让一个看不见的想法，经过设计和试验，最后真正站在地面上。`,
+    formalExplanation: "This is what Engineering, manufacturing and construction are mainly concerned with. This field studies how people design, make, build, and improve objects, machines, systems, and environments. It focuses on structure, materials, energy, production, quality, safety, efficiency, maintenance, and life cycle. Its roots are connected with early human practices of making tools, building shelters, constructing roads and bridges, using machines, and organizing production. Later, with the development of industrialization, modern architecture, mechanical manufacturing, engineering education, and technical standards, Engineering, manufacturing and construction gradually became a formal academic field. It studies how ideas can be turned into reliable, safe, and usable real-world outcomes.",
+    formalExplanationZh: "这就是“工程与建造”真正关心的内容。它研究人如何设计、制造、建造和改进物品、机器、系统和环境。它关注结构、材料、能源、生产、质量、安全、效率、维护和生命周期等问题。在正式学科中，它对应的是 Engineering, manufacturing and construction（工程、制造与建筑）。它的来源与人类早期制作工具、建造住所、修路造桥、使用机械和组织生产的实践有关。后来，随着工业化、现代建筑、机械制造、工程教育和技术标准的发展，工程与建造逐渐成为正式学科领域，用来研究如何把想法转化为可靠、安全、可用的现实成果。",
+    coreInsight: "Engineering, manufacturing and construction turn needs and ideas into usable reality by balancing structure, material, production, maintenance, cost, safety, and real-world constraints.",
+    coreInsightZh: "工程、制造与建筑把人的需要和想法变成可用现实，同时平衡结构、材料、生产、维护、成本、安全和真实条件。",
+    analogyBoundary: "This story uses repair, a cardboard bridge, campus seating, and factory testing to show the field's basic logic, but Engineering, manufacturing and construction also include energy systems, manufacturing processes, architecture, civil engineering, materials, automation, standards, and lifecycle management.",
+    analogyBoundaryZh: "这个故事用修东西、纸板桥、校园座椅和工厂测试说明该领域的基本逻辑，但工程、制造与建筑还包括能源系统、制造流程、建筑、土木工程、材料、自动化、标准和生命周期管理等更广问题。",
+    sourceBatchId: "subject-intro-07-engineering-manufacturing-construction-human-hand-20260630",
   },
 ];
 
@@ -14815,7 +14993,6 @@ function renderStoryDetail(storyId) {
   const insight = getStoryInsight(story);
   const miniQuestion = getStoryMiniQuestion(story);
   const ratingArticle = getRatingArticleForPublishedStory(story);
-  const storyMeta = getPublishedStoryDetailMetaText(story);
   const perspectives = getStoryPerspectives(story)
     .map((perspective) => {
       const lens = getStoryPerspectiveLens(perspective);
@@ -14830,7 +15007,7 @@ function renderStoryDetail(storyId) {
     .filter(Boolean)
     .join("");
   target.innerHTML = `
-    ${renderStoryDetailHeader(getStoryTitle(story), storyMeta)}
+    ${renderStoryDetailHeader(getStoryTitle(story))}
     <div class="story-body">${renderEscapedParagraphs(getStoryBody(story))}</div>
     ${insight ? `
       <aside class="story-insight">
@@ -14866,7 +15043,6 @@ function renderConceptFableDetail(fableId) {
     return;
   }
   const ratingArticle = getRatingArticleForConceptFable(fable);
-  const storyMeta = getConceptFableDetailMetaText(fable);
   const metaphorRows = getConceptFableList(fable, "metaphorMap")
     .map((item) => `
       <article>
@@ -14876,8 +15052,7 @@ function renderConceptFableDetail(fableId) {
     .join("");
   const tags = getConceptFableList(fable, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   target.innerHTML = `
-    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"), storyMeta)}
-    <p class="lens-story-summary">${escapeHtml(getConceptFableValue(fable, "summary"))}</p>
+    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"))}
     <section class="lens-story-section concept-fable-story">
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
       <p>${escapeHtml(getConceptFableValue(fable, "storyBody"))}</p>
@@ -16602,7 +16777,6 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
 function renderInlineLensStoryArticle(story) {
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
-  const storyMeta = getLensStoryDetailMetaText(story);
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
@@ -16617,17 +16791,11 @@ function renderInlineLensStoryArticle(story) {
         ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
       </span>`)
     .join("");
-  const sceneHtml = renderEscapedParagraphs(getLensStoryValue(story, "scene"));
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      ${renderStoryDetailHeader(getLensStoryValue(story, "title"), storyMeta)}
-      <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
-      <section class="lens-story-section">
-        <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
-        ${sceneHtml}
-        ${storyBodyHtml}
-      </section>
+      ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+      <div class="story-body">${storyBodyHtml}</div>
       ${formalExplanation ? `
       <section class="lens-story-section">
         <span>${escapeHtml(t("lensStoryFormalLabel"))}</span>
@@ -16679,6 +16847,7 @@ function renderCategoryTree(category) {
     <div class="category-subject-story-layout">
     ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
       <div class="hierarchy-layer module-layer">
+        <p class="category-subfield-context">${escapeHtml(t("subfieldContextLine", visibleFieldEntries.length))}</p>
         <div class="submodule-button-row public-field-grid" aria-label="${escapeHtml(t("submoduleLabel"))}">
           ${fieldCards}
         </div>
@@ -16717,7 +16886,6 @@ function renderLensStoryDetail(storyId) {
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
-  const storyMeta = getLensStoryDetailMetaText(story);
   const fieldRows = story.originalStory
     ? getValidatedStoryFields(story.originalStory).matched
         .map((field) => `
@@ -16734,20 +16902,14 @@ function renderLensStoryDetail(storyId) {
             ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
           </span>`)
         .join("");
-  const sceneHtml = renderEscapedParagraphs(getLensStoryValue(story, "scene"));
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   target.innerHTML = `
     ${shouldShowFigure ? `
     <figure class="lens-story-figure">
       <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
     </figure>` : ""}
-    ${renderStoryDetailHeader(getLensStoryValue(story, "title"), storyMeta)}
-    <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
-    <section class="lens-story-section">
-      <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
-      ${sceneHtml}
-      ${storyBodyHtml}
-    </section>
+    ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+    <div class="story-body">${storyBodyHtml}</div>
     ${formalExplanation ? `
     <section class="lens-story-section">
       <span>${escapeHtml(t("lensStoryFormalLabel"))}</span>

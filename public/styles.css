@@ -4129,9 +4129,18 @@ canvas {
   color: #475569;
 }
 
+.category-subfield-context {
+  margin: 0 0 0.25rem;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 780;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+}
+
 .category-subject-story-layout .public-field-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .hierarchy-layer {
@@ -4224,9 +4233,9 @@ canvas {
 }
 
 .category-subject-story-layout .public-field-card {
-  min-height: 58px;
+  min-height: 46px;
   border-color: rgba(37, 99, 235, 0.12);
-  padding: 12px 14px;
+  padding: 9px 12px;
   background: rgba(255, 255, 255, 0.72);
   box-shadow: none;
 }
@@ -4243,7 +4252,8 @@ canvas {
 
 .category-subject-story-layout .public-field-card span {
   color: #0f172a;
-  font-size: 0.94rem;
+  font-size: 0.86rem;
+  line-height: 1.18;
   -webkit-line-clamp: 2;
 }
 
@@ -6518,6 +6528,7 @@ body[data-theme="dark"] .lens-story-support p {
 body[data-theme="dark"] .tree-group-story-link small,
 body[data-theme="dark"] .category-button span,
 body[data-theme="dark"] .category-button small,
+body[data-theme="dark"] .category-subfield-context,
 body[data-theme="dark"] .submodule-button small,
 body[data-theme="dark"] .detailed-field-button small,
 body[data-theme="dark"] .submodule-story-button small,
