@@ -4252,15 +4252,18 @@ canvas {
   margin: 0 auto;
 }
 
+.story-detail-header,
 .category-story-header {
   display: grid;
   gap: 0.45rem;
 }
 
+.story-detail-header h1,
 .category-story-header h1 {
   margin: 0;
 }
 
+.story-detail-meta,
 .category-story-detail-meta {
   margin: 0;
   color: #64748b;
@@ -6484,6 +6487,7 @@ body[data-theme="dark"] .detailed-field-button small,
 body[data-theme="dark"] .submodule-story-button small,
 body[data-theme="dark"] .lens-story-shelf-heading p,
 body[data-theme="dark"] .lens-story-sample-content em,
+body[data-theme="dark"] .story-detail-meta,
 body[data-theme="dark"] .category-story-detail-meta,
 body[data-theme="dark"] .story-rating-panel p,
 body[data-theme="dark"] .top-rated-story-card span,

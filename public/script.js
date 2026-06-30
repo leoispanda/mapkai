@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.113";
+const appVersion = "0.1.114";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -14591,6 +14591,7 @@ function renderStoryDetail(storyId) {
   const insight = getStoryInsight(story);
   const miniQuestion = getStoryMiniQuestion(story);
   const ratingArticle = getRatingArticleForPublishedStory(story);
+  const storyMeta = getPublishedStoryDetailMetaText(story);
   const perspectives = getStoryPerspectives(story)
     .map((perspective) => {
       const lens = getStoryPerspectiveLens(perspective);
@@ -14605,7 +14606,7 @@ function renderStoryDetail(storyId) {
     .filter(Boolean)
     .join("");
   target.innerHTML = `
-    <h1>${escapeHtml(getStoryTitle(story))}</h1>
+    ${renderStoryDetailHeader(getStoryTitle(story), storyMeta)}
     <div class="story-body">${renderEscapedParagraphs(getStoryBody(story))}</div>
     ${insight ? `
       <aside class="story-insight">
@@ -14639,8 +14640,8 @@ function renderConceptFableDetail(fableId) {
       <p class="story-body">${escapeHtml(t("conceptFableNotFoundCopy"))}</p>`;
     return;
   }
-  const categoryTitle = getConceptFableCategoryTitle(fable);
   const ratingArticle = getRatingArticleForConceptFable(fable);
+  const storyMeta = getConceptFableDetailMetaText(fable);
   const metaphorRows = getConceptFableList(fable, "metaphorMap")
     .map((item) => `
       <article>
@@ -14650,11 +14651,7 @@ function renderConceptFableDetail(fableId) {
     .join("");
   const tags = getConceptFableList(fable, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   target.innerHTML = `
-    <div class="story-card-topline lens-story-topline">
-      <span>${escapeHtml(t("conceptFablesEyebrow"))}</span>
-      <span>${escapeHtml(categoryTitle)}</span>
-    </div>
-    <h1>${escapeHtml(getConceptFableValue(fable, "title"))}</h1>
+    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"), storyMeta)}
     <p class="lens-story-summary">${escapeHtml(getConceptFableValue(fable, "summary"))}</p>
     <section class="lens-story-section concept-fable-story">
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
@@ -16279,6 +16276,94 @@ function getCategoryDetailMetaText(category) {
   return `${originalLabel}: ${cardDisplay.originalTitle || getPublicCategoryTitle(category)} · ${countText}`;
 }
 
+function getStoryMetaLabel(key) {
+  const labels = {
+    en: {
+      originalCategory: "Original category",
+      connectedField: "Connected field",
+      connectedFields: "Connected fields",
+      mainField: "Main field",
+      concept: "Concept",
+    },
+    zh: {
+      originalCategory: "原分类",
+      connectedField: "关联领域",
+      connectedFields: "关联领域",
+      mainField: "主领域",
+      concept: "概念",
+    },
+  };
+  return labels[currentLanguage]?.[key] || labels.en[key] || key;
+}
+
+function joinStoryMetaParts(parts) {
+  return parts.filter(Boolean).join(" · ");
+}
+
+function getOriginalCategoryMetaPart(categoryOrCode) {
+  const category = typeof categoryOrCode === "string"
+    ? categories.find((item) => item.code === categoryOrCode)
+    : categoryOrCode;
+  if (!category) return "";
+  const cardDisplay = getPublicCategoryCardDisplay(category);
+  const categoryTitle = cardDisplay.originalTitle || getPublicCategoryTitle(category);
+  return `${getStoryMetaLabel("originalCategory")}: ${categoryTitle}`;
+}
+
+function getLensStoryConnectedFieldTitles(story, group) {
+  if (!story) return [];
+  if (story.originalStory) return getValidatedStoryFields(story.originalStory).matched.map(getFieldDisplayTitle);
+  return (group?.fields || [])
+    .filter(([code]) => (story.fieldCodes || []).includes(code))
+    .map(([code, title]) => getPublicLensStoryFieldTitle(story, code, title))
+    .filter(Boolean);
+}
+
+function getFieldMetaPart(fieldTitles, singularKey = "connectedField", pluralKey = "connectedFields") {
+  const uniqueTitles = Array.from(new Set((fieldTitles || []).filter(Boolean)));
+  if (!uniqueTitles.length) return "";
+  const label = uniqueTitles.length === 1 ? getStoryMetaLabel(singularKey) : getStoryMetaLabel(pluralKey);
+  return `${label}: ${uniqueTitles.join(", ")}`;
+}
+
+function getPublishedStoryDetailMetaText(story) {
+  const validation = getValidatedStoryFields(story);
+  const mainField = getFieldById(story.mainField) || validation.matched[0] || null;
+  const { category } = getCategoryGroupForField(mainField);
+  return joinStoryMetaParts([
+    getOriginalCategoryMetaPart(category),
+    mainField ? `${getStoryMetaLabel("mainField")}: ${getFieldDisplayTitle(mainField)}` : "",
+  ]);
+}
+
+function getConceptFableDetailMetaText(fable) {
+  const category = categories.find((item) => item.code === fable?.categoryCode);
+  return joinStoryMetaParts([
+    getOriginalCategoryMetaPart(category),
+    getConceptFableValue(fable, "conceptName") ? `${getStoryMetaLabel("concept")}: ${getConceptFableValue(fable, "conceptName")}` : "",
+  ]);
+}
+
+function getLensStoryDetailMetaText(story) {
+  const category = categories.find((item) => item.code === story?.categoryCode);
+  if (story?.storyLevel === "subject-intro") return category ? getCategoryDetailMetaText(category) : "";
+  if (story?.originalStory) return getPublishedStoryDetailMetaText(story.originalStory);
+  if (story?.originalConceptFable) return getConceptFableDetailMetaText(story.originalConceptFable);
+  const group = category?.groups.find((item) => item.code === story?.groupCode);
+  return joinStoryMetaParts([
+    getOriginalCategoryMetaPart(category),
+    getFieldMetaPart(getLensStoryConnectedFieldTitles(story, group)),
+  ]);
+}
+
+function renderStoryDetailHeader(title, metaText = "") {
+  return `
+    <header class="story-detail-header">
+      <h1>${escapeHtml(title)}</h1>
+      ${metaText ? `<p class="story-detail-meta">${escapeHtml(metaText)}</p>` : ""}
+    </header>`;
+}
+
 function getFeaturedCategoryFieldEntries(fieldEntries) {
   const practicalEntries = fieldEntries.filter((entry) =>
     !isNotFurtherDefinedTitle(entry.fieldTitle) &&
@@ -16291,7 +16376,7 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
 function renderInlineLensStoryArticle(story) {
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
-  const categoryMeta = category ? getCategoryDetailMetaText(category) : "";
+  const storyMeta = getLensStoryDetailMetaText(story);
   const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
@@ -16310,10 +16395,7 @@ function renderInlineLensStoryArticle(story) {
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      <header class="category-story-header">
-        <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
-        ${categoryMeta ? `<p class="category-story-detail-meta">${escapeHtml(categoryMeta)}</p>` : ""}
-      </header>
+      ${renderStoryDetailHeader(getLensStoryValue(story, "title"), storyMeta)}
       <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
       <section class="lens-story-section">
         <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
@@ -16393,7 +16475,6 @@ function renderLensStoryDetail(storyId) {
   }
   const category = categories.find((item) => item.code === story.categoryCode);
   const group = category?.groups.find((item) => item.code === story.groupCode);
-  const categoryTitle = category ? getPublicCategoryTitle(category) : t("lensStoryShelfLens");
   const shouldShowFigure = story.image && !story.imageInheritedFromGroup;
   const backLink = document.getElementById("lensStoryBack");
   if (backLink) {
@@ -16408,8 +16489,8 @@ function renderLensStoryDetail(storyId) {
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
-  const storyEyebrow = story.storyLevel === "subject-intro" ? t("submoduleIntroStory") : t("lensStoryEyebrow");
   const ratingArticle = getRatingArticleForLensStory(story);
+  const storyMeta = getLensStoryDetailMetaText(story);
   const fieldRows = story.originalStory
     ? getValidatedStoryFields(story.originalStory).matched
         .map((field) => `
@@ -16433,11 +16514,7 @@ function renderLensStoryDetail(storyId) {
     <figure class="lens-story-figure">
       <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
     </figure>` : ""}
-    <div class="story-card-topline lens-story-topline">
-      <span>${escapeHtml(storyEyebrow)}</span>
-      <span>${escapeHtml(categoryTitle)}</span>
-    </div>
-    <h1>${escapeHtml(getLensStoryValue(story, "title"))}</h1>
+    ${renderStoryDetailHeader(getLensStoryValue(story, "title"), storyMeta)}
     <p class="lens-story-summary">${escapeHtml(getLensStoryValue(story, "summary"))}</p>
     <section class="lens-story-section">
       <span>${escapeHtml(t("lensStorySceneLabel"))}</span>
