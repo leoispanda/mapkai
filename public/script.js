@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.121";
+const appVersion = "0.1.123";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -34,7 +34,7 @@ const publicContentVisibility = {
   articles: false,
 };
 
-const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07"]);
+const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07", "08"]);
 
 function arePublicArticlesVisible() {
   return Boolean(publicContentVisibility.articles);
@@ -111,8 +111,8 @@ const routeMeta = {
     description: "Answer MapKAI challenge questions and gradually reveal snowy mountains, land, and green oases on the knowledge map.",
   },
   "/categories": {
-    title: "MapKAI Knowledge Lenses — Explore Practical Fields",
-    description: "Browse MapKAI's knowledge lenses and practical fields, organized as a calm map for learning and reflection.",
+    title: "MapKAI Cognitive Fields",
+    description: "Every field has its own way of thinking. After choosing a field, view the formal subfields beneath it directly.",
   },
   "/lens-stories": {
     title: "MapKAI Lens Stories — Everyday Knowledge Scenarios",
@@ -152,7 +152,7 @@ const uiText = {
     navExplore: "Explore",
     navMap: "Knowledge Map",
     navPdc: "PDC",
-    navCategories: "Lens",
+    navCategories: "Fields",
     navLearning: "Learning",
     navAbout: "About",
     storiesEyebrow: "Stories",
@@ -290,7 +290,7 @@ const uiText = {
     mapStateSnow: "Snow Emerging",
     mapStateLand: "Land Active",
     goCategories: "Continue Exploring",
-    goLearning: "Browse Domains",
+    goLearning: "Browse Fields",
     quickMirrorTitle: "Quick Mirror",
     tryQuickMirror: "Try Quick Mirror",
     skipQuickMirror: "Skip and start full exploration",
@@ -421,12 +421,12 @@ const uiText = {
     pdcAccessLabel: "Access code",
     pdcAccessPlaceholder: "Paste your one-time access code",
     pdcAccessButton: "Enter PDC Experience",
-    categoriesEyebrow: "Knowledge Lenses",
-    categoriesTitle: "Eleven lenses for seeing what you know.",
-    categoriesCopy: "Choose a lens to see its formal subfields directly.",
-    openCategory: "Open lens",
-    categoryScope: "Lens scope",
-    categoryCopy: (fields) => `This lens contains ${fields} formal subfields.`,
+    categoriesEyebrow: "Cognitive Fields",
+    categoriesTitle: "Every field has its own way of thinking.",
+    categoriesCopy: "After choosing a field, view the formal subfields beneath it directly.",
+    openCategory: "Open field",
+    categoryScope: "Field scope",
+    categoryCopy: (fields) => `This field contains ${fields} formal subfields.`,
     submoduleLabel: "Formal subfields",
     subfieldContextLine: (count) => count === 1
       ? "Subfields within this major field · 1 formal subfield"
@@ -434,7 +434,7 @@ const uiText = {
     submoduleIntroStory: "Subject overview",
     generalEntryLabel: "General Entry",
     generalEntryStory: "General overview story",
-    generalEntryScope: "Broad foundations and shared questions for this lens.",
+    generalEntryScope: "This field's foundational framework and shared questions.",
     detailedFieldLabel: "Formal subfields",
     fieldIntroStory: "Field story",
     importantConceptStories: "Key concept",
@@ -1510,7 +1510,7 @@ const publicCategoryCardDisplay = {
       displayDescription: "Like a hand that fastens dreams into the earth, bridges, cities, and machines allow invisible ideas to stand.",
     },
     "08": {
-      originalTitle: "Agriculture and Ecology",
+      originalTitle: "Agriculture, forestry, fisheries and veterinary",
       displayTitle: "The Ancient Promise",
       displayDescription: "We receive life from the land, and slowly learn that a true harvest is not to conquer nature, but to live with it.",
     },
@@ -2878,6 +2878,104 @@ These questions helped him understand that engineering and construction are not 
     analogyBoundary: "This story uses repair, a cardboard bridge, campus seating, and factory testing to show the field's basic logic, but Engineering, manufacturing and construction also include energy systems, manufacturing processes, architecture, civil engineering, materials, automation, standards, and lifecycle management.",
     analogyBoundaryZh: "这个故事用修东西、纸板桥、校园座椅和工厂测试说明该领域的基本逻辑，但工程、制造与建筑还包括能源系统、制造流程、建筑、土木工程、材料、自动化、标准和生命周期管理等更广问题。",
     sourceBatchId: "subject-intro-07-engineering-manufacturing-construction-human-hand-20260630",
+  },
+  {
+    code: "08",
+    subjectTitle: "Agriculture, forestry, fisheries and veterinary",
+    subjectTitleZh: "农业、林业、渔业与兽医",
+    title: "Agriculture, forestry, fisheries and veterinary",
+    titleZh: "古老的约定",
+    summary: "Xiaohe learns through tomatoes, pests, farmers, and livestock that agriculture is a long relationship among land, water, animals, people, production, and responsibility.",
+    summaryZh: "小禾从番茄、虫害、农户和养殖场里，明白农业与生态是一种关于土地、水、动物、人、生产和责任的长期关系。",
+    scene: "Xiaohe first dislikes the hot, muddy vegetable field, until her grandmother shows her that plants need care that is suitable rather than simply abundant.",
+    sceneZh: "小禾一开始不喜欢炎热又泥泞的菜地，直到外婆让她看见植物需要的不是越多越好，而是刚刚合适。",
+    storyBody: `When Xiaohe was a child, she did not like going to her grandmother's vegetable field.
+
+It was too hot in summer. Mud stuck to her shoes, and there were many mosquitoes. But her grandmother went to the field every day to check the vegetables: whether there were insects, whether the soil was too dry, whether the cucumbers needed support, and whether the leafy vegetables were damaged by the sun.
+
+Xiaohe thought it was troublesome. She asked her grandmother, “Don't vegetables just grow after you plant them?”
+
+Her grandmother smiled and said, “They may grow, but they may not grow well.”
+
+One summer holiday, Xiaohe wanted to grow a pot of tomatoes by herself. She put the seeds into a flowerpot, watered them a lot every day, and placed the pot in the sunniest place on the balcony. At first, the tomato seedlings grew quickly, and she was happy. But after a few days, the leaves began to turn yellow, and the soil was always wet. In the end, the small seedlings fell down.
+
+Xiaohe was very disappointed. She felt that she had worked hard, so why did she still fail?
+
+Her grandmother did not say she was foolish. She only showed her the soil in the pot. The soil was too wet, so the roots could not breathe. The sunlight was too strong for the young seedlings. Several seedlings were too close to each other, so they competed for space. Her grandmother said, “Taking care of plants does not mean giving them more and more. Water, light, soil, and temperature all need to be suitable.”
+
+For the first time, Xiaohe realized that growing something is not simply “letting it grow.” People first need to understand what it needs, and also what it can bear.
+
+Later, the village had an insect problem. Many vegetable leaves had holes. Some people suggested using more pesticide immediately, because that would be the fastest solution. But her grandmother did not agree at once. She first checked how many insects there were, which vegetables were most affected, and whether nearby families had the same problem.
+
+Xiaohe did not understand. “Why not just spray pesticide?”
+
+Her grandmother said, “Pesticide can kill insects, but it may also harm other things. If we use too much, the soil may be affected, and people may worry about eating the vegetables. If we can use less, we should not use it carelessly.”
+
+In the end, her grandmother first cut off the most damaged leaves, covered some vegetables with a net, and asked neighbors to deal with the problem together. The insects did not disappear immediately, but the problem was slowly controlled.
+
+Only then did Xiaohe understand that land is not only a place that produces food. There are plants, insects, water, soil, weather, and people's daily choices. One decision may seem to affect only a few leaves, but it can actually affect the whole field.
+
+At university, Xiaohe joined a rural research project. She interviewed several farmers to understand why they were not willing to move quickly to more environmentally friendly farming methods. At first, she thought they simply “did not care enough about the environment.” But after the interviews, she found that the situation was more complex.
+
+Some farmers worried that their harvest would decrease.
+Some lacked technical guidance.
+Some knew that land should be protected in the long term, but they still had to repay loans, pay workers, and secure their income.
+Some had tried new methods, but the market did not give them a higher price.
+
+Xiaohe slowly understood that agriculture is not as relaxed as it looks in beautiful countryside photos. Every day, it has to make choices between natural conditions, market prices, family income, food safety, and environmental protection. People live from the land, but they also change the land. People want a harvest, but they also have responsibility for the land.
+
+Later, she visited a livestock farm. The staff told her that animal health was not only about giving animals enough food. Space, disease prevention, medicine use, and cleaning conditions all affected animals. They also affected food safety and human health. For the first time, Xiaohe connected animals, food, the environment, and people together.
+
+After that, when she saw a bowl of rice, a fish, a wooden table, or a box of eggs, she no longer looked only at whether it was cheap, tasty, or useful. She would think: Where does it come from? Has the land been overused? Is the water polluted? Are the animals healthy? Can the people who produce it make a living? Can this way of production continue?
+
+These questions helped her understand that agriculture and ecology are not simply about taking things from nature. They are more like a long-term relationship. Humans obtain food and materials from land, water, forests, and animals, but they also need to control how much they take. A real harvest is not only high production today. It also means that after years, or even decades, the land can still grow, the water can still flow, and people and other living things can still live together.`,
+    storyBodyZh: `小禾小时候，最不喜欢去外婆家的菜地。
+
+夏天太热，泥土会粘在鞋底，蚊子也多。外婆却每天都要去地里看看：今天有没有虫，土是不是太干，黄瓜是不是该搭架，青菜有没有被晒坏。
+
+小禾觉得很麻烦。她问外婆：“菜不是种下去就会长吗？”
+
+外婆笑了笑，说：“会长，但不一定长得好。”
+
+有一年暑假，小禾想自己种一盆番茄。她把种子撒进花盆里，每天浇很多水，还把花盆放在阳台最晒的地方。刚开始，番茄苗长得很快，她很高兴。可过了几天，叶子开始发黄，土也总是湿湿的。最后，几棵小苗都倒了。
+
+小禾很失望。她觉得自己明明很用心，为什么还是失败了。
+
+外婆没有说她笨，只带她看了看花盆里的土。土太湿，根透不过气；阳光太强，小苗还承受不了；几棵苗挤在一起，也会互相抢空间。外婆说：“照顾植物，不是给得越多越好。水、光、土、温度，都要合适。”
+
+小禾第一次发现，种东西不是简单地“让它长”。人要先理解它需要什么，也要理解它能承受什么。
+
+后来，村里遇到了一次虫害。很多菜叶被咬出洞。有人建议马上多喷药，这样最快。外婆却没有立刻同意。她先看虫子多不多，哪些菜受影响最严重，又问隔壁几家是不是也有同样情况。
+
+小禾不理解：“直接喷药不就好了？”
+
+外婆说：“药能杀虫，也可能伤到别的东西。喷多了，土会受影响，吃菜的人也会担心。能少用，就不要乱用。”
+
+最后，外婆先剪掉受害最重的叶子，又用纱网盖住一部分菜，还请邻居一起处理。虫害没有马上消失，但慢慢被控制住了。
+
+小禾那时才明白，土地不是一个只负责生产的地方。它里面有植物、虫子、水、土、天气，也有人每天的选择。一个决定看起来只影响一片菜叶，实际上可能影响整块地。
+
+大学时，小禾参加了一个乡村调研项目。她访问了几位种植户，想了解他们为什么不愿意马上转向更环保的种植方式。她原来以为，大家只是“不够重视环境”。但访谈后，她发现事情没那么简单。
+
+有的农户担心产量下降。
+有的农户缺少技术指导。
+有的人知道长期来看应该保护土地，但眼前还要还贷款、付人工、保证收入。
+也有人试过新方法，可市场并没有给更高的价格。
+
+小禾慢慢明白，农业不是田园照片里那么轻松。它每天都在自然条件、市场价格、家庭生计、食品安全和环境保护之间做选择。人靠土地生活，也会改变土地；人希望获得收成，也必须承担对土地的责任。
+
+后来，她去参观一个养殖场。工作人员告诉她，动物健康不只是给它们吃饱。饲养空间、疫病预防、用药管理、清洁条件，都会影响动物，也会影响食品安全和人的健康。小禾第一次把“动物”“食物”“环境”和“人”放在一起看。
+
+从那以后，她再看到一碗米饭、一条鱼、一件木制家具、一盒鸡蛋时，不再只看它们是不是便宜、好吃或好用。她会想到：它从哪里来？土地是否被过度使用？水源有没有被污染？动物是否健康？生产的人能不能维持生活？这种方式还能不能持续下去？
+
+这些问题让她理解，农业与生态并不是简单地从自然中拿东西。它更像一种长期关系。人类从土地、水域、森林和动物那里获得食物与材料，也必须学会控制自己的索取。真正的丰收，不只是眼前产量高，而是几年以后、几十年以后，土地仍然能生长，水仍然能流动，人和其他生命仍然可以一起活下去。`,
+    formalExplanation: "This is what Agriculture, forestry, fisheries and veterinary are mainly concerned with. This field studies how people grow crops, raise animals, use forests and waters, care for animals, protect resources, and maintain the balance between food production and the natural environment. It focuses on crops, soil, water, climate, forests, fisheries, animal health, food safety, and sustainable production. Its roots are connected with early human practices of farming, herding, fishing, domesticating animals, using forests, and caring for livestock. Later, with the development of agricultural science, ecological protection, food safety, veterinary medicine, and sustainable development, Agriculture, forestry, fisheries and veterinary gradually became a formal academic field. It studies how people obtain what they need from nature, and how they can keep a longer-lasting relationship with nature.",
+    formalExplanationZh: "这就是“农业与生态”真正关心的内容。它研究人如何种植、养殖、利用森林和水域，也研究人如何照顾动物、保护资源，并维持食物生产与自然环境之间的平衡。它关注作物、土壤、水、气候、森林、渔业、动物健康、食品安全和可持续生产等问题。在正式学科中，它对应的是 Agriculture, forestry, fisheries and veterinary（农业、林业、渔业与兽医）。它的来源与人类最早的耕种、放牧、捕鱼、驯养动物、使用森林和照顾牲畜的实践有关。后来，随着农业科学、生态保护、食品安全、动物医学和可持续发展理念的形成，农业与生态逐渐成为正式学科领域，用来研究人如何从自然中获得生活所需，也如何与自然保持更长久的关系。",
+    coreInsight: "Agriculture, forestry, fisheries and veterinary are not only about producing food and materials. They ask how people can live from land, water, forests, and animals without exhausting the relationships that sustain life.",
+    coreInsightZh: "农业、林业、渔业与兽医不只是生产食物和材料，而是追问人如何依靠土地、水域、森林和动物生活，同时不耗尽支撑生命的关系。",
+    analogyBoundary: "This story uses vegetable fields, tomatoes, pests, farmers, and a livestock farm to show the field's core relationship, but Agriculture, forestry, fisheries and veterinary also include forestry, fisheries, veterinary medicine, food systems, resource management, ecology, public health, and sustainable development.",
+    analogyBoundaryZh: "这个故事用菜地、番茄、虫害、农户和养殖场说明该领域的核心关系，但农业、林业、渔业与兽医还包括林业、渔业、动物医学、食物系统、资源管理、生态、公共健康和可持续发展等更广问题。",
+    sourceBatchId: "subject-intro-08-agriculture-forestry-fisheries-veterinary-ancient-promise-20260630",
   },
 ];
 
