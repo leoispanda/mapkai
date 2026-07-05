@@ -5638,6 +5638,41 @@ dd,
   margin-top: 0;
 }
 
+.lens-story-note {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 8px;
+  background: rgba(239, 246, 255, 0.58);
+}
+
+.lens-story-note > span {
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lens-story-note > div {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.lens-story-note p,
+.lens-story-note strong {
+  margin: 0;
+  color: #334155;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.lens-story-note strong {
+  color: #0f172a;
+  font-weight: 760;
+}
+
 .lens-story-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6473,6 +6508,7 @@ body[data-theme="dark"] .area-card,
 body[data-theme="dark"] .map-story-card,
 body[data-theme="dark"] .field-detail-card,
 body[data-theme="dark"] .story-reader,
+body[data-theme="dark"] .lens-story-note,
 body[data-theme="dark"] .lens-story-meta > div,
 body[data-theme="dark"] .lens-story-support,
 body[data-theme="dark"] .concept-metaphor-grid article,
@@ -6512,6 +6548,8 @@ body[data-theme="dark"] .submodule-story-button em,
 body[data-theme="dark"] .lens-story-shelf-heading h2,
 body[data-theme="dark"] .lens-story-sample-content strong,
 body[data-theme="dark"] .lens-story-section p,
+body[data-theme="dark"] .lens-story-note p,
+body[data-theme="dark"] .lens-story-note strong,
 body[data-theme="dark"] .lens-story-summary,
 body[data-theme="dark"] .lens-story-meta p,
 body[data-theme="dark"] .story-rating-panel h2,

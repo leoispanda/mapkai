@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.123";
+const appVersion = "0.1.124";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -180,6 +180,7 @@ const uiText = {
     lensStorySupportLabel: "Historical anchors",
     lensStoryFormalLabel: "Formal explanation",
     lensStoryBoundaryLabel: "Analogy boundary",
+    lensStoryNoteLabel: "Story note",
     lensStoryTryLabel: "Try this reflection",
     lensStoryFieldLabel: "Connected field",
     lensStoryNotFoundTitle: "Story not found",
@@ -198,17 +199,18 @@ const uiText = {
     storyFocusLabel: "Focus",
     ratingTitle: "Rate this story",
     ratingCopy: "After reading, give this story a score from 1 to 5.",
-    ratingAverage: (average, count) => `Average ${average} / 5 · ${count} ${count === 1 ? "rating" : "ratings"}`,
+    ratingAverage: (average, count) => `Average ${average} / 5 · ${count} ${count === 1 ? "person rated" : "people rated"}`,
     ratingNoAverage: "No ratings yet.",
     ratingYourScore: (score) => `Your score: ${score}/5`,
-    ratingSaved: "Thanks. Your score was saved.",
-    ratingLocalSaved: "Saved locally. Submit again when the rating API is available.",
+    ratingSaved: "Thanks. Rating saved and synced.",
+    ratingLocalSaved: "Saved locally. Online rating sync is unavailable right now.",
+    ratingSyncing: "Syncing rating...",
     ratingChoose: "Choose a score",
     topRatedEyebrow: "Reader recommendations",
     topRatedTitle: "Top rated stories",
     topRatedCopy: "The five highest average scores rise here automatically.",
     topRatedOpen: "Open story",
-    topRatedAverage: (average, count) => `${average}/5 · ${count} ${count === 1 ? "rating" : "ratings"}`,
+    topRatedAverage: (average, count) => `${average}/5 · ${count} ${count === 1 ? "person rated" : "people rated"}`,
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
@@ -565,6 +567,7 @@ const uiText = {
     lensStorySupportLabel: "历史支撑",
     lensStoryFormalLabel: "正式解释",
     lensStoryBoundaryLabel: "类比边界",
+    lensStoryNoteLabel: "故事提示",
     lensStoryTryLabel: "试着这样反思",
     lensStoryFieldLabel: "关联领域",
     lensStoryNotFoundTitle: "故事未找到",
@@ -583,17 +586,18 @@ const uiText = {
     storyFocusLabel: "关注点",
     ratingTitle: "给这篇故事打分",
     ratingCopy: "读完之后，给这篇故事打一个 1 到 5 分。",
-    ratingAverage: (average, count) => `平均 ${average} / 5 · ${count} 次评分`,
+    ratingAverage: (average, count) => `平均 ${average} / 5 · ${count} 人评分`,
     ratingNoAverage: "还没有评分。",
     ratingYourScore: (score) => `你的评分：${score}/5`,
-    ratingSaved: "谢谢，评分已保存。",
-    ratingLocalSaved: "已先保存在本地。评分接口可用后可再次提交。",
+    ratingSaved: "谢谢，评分已保存，人数已同步。",
+    ratingLocalSaved: "已先保存在本地。在线评分同步暂时不可用。",
+    ratingSyncing: "正在同步评分...",
     ratingChoose: "选择分数",
     topRatedEyebrow: "读者推荐",
     topRatedTitle: "评分最高的故事",
     topRatedCopy: "平均分最高的 5 篇文章会自动出现在这里。",
     topRatedOpen: "打开故事",
-    topRatedAverage: (average, count) => `${average}/5 · ${count} 次评分`,
+    topRatedAverage: (average, count) => `${average}/5 · ${count} 人评分`,
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
@@ -7919,6 +7923,20 @@ function renderStoryNavigation(article) {
     </nav>`;
 }
 
+function renderLensStoryNote({ knowledgePoint, reflectionQuestion, analogyBoundary } = {}) {
+  const body = [
+    knowledgePoint ? `<p>${escapeHtml(knowledgePoint)}</p>` : "",
+    analogyBoundary ? renderEscapedParagraphs(analogyBoundary) : "",
+    reflectionQuestion ? `<strong>${escapeHtml(reflectionQuestion)}</strong>` : "",
+  ].filter(Boolean).join("");
+  if (!body) return "";
+  return `
+    <aside class="lens-story-note">
+      <span>${escapeHtml(t("lensStoryNoteLabel"))}</span>
+      <div>${body}</div>
+    </aside>`;
+}
+
 function getRateableArticleById(storyId) {
   return getAllRateableArticles().find((article) => article.id === storyId) || null;
 }
@@ -8027,6 +8045,28 @@ function renderTopRatedStories() {
     <div class="top-rated-story-grid">${cards}</div>`;
 }
 
+async function syncStoryRatingForArticle(storyId) {
+  if (!storyId || (!arePublicArticlesVisible() && !getRateableArticleById(storyId))) return false;
+  try {
+    const query = new URLSearchParams({
+      storyId,
+      visitorId: getVisitorId(),
+      limit: "5",
+    });
+    const response = await fetch(`/api/story-ratings?${query}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("Story rating API unavailable");
+    const data = await response.json();
+    (data.summaries || []).forEach(mergeStoryRatingSummary);
+    storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
+    const userRating = Number(data.userRatings?.[storyId] || 0);
+    if (userRating) setLocalStoryRating(storyId, userRating);
+    return true;
+  } catch {
+    // The local rating stays visible if the API is not available in development.
+    return false;
+  }
+}
+
 async function loadStoryRatings() {
   if (!arePublicArticlesVisible()) {
     renderTopRatedStories();
@@ -8048,23 +8088,7 @@ async function loadStoryRatings() {
 }
 
 async function loadStoryRatingForArticle(storyId) {
-  if (!storyId || (!arePublicArticlesVisible() && !getRateableArticleById(storyId))) return;
-  try {
-    const query = new URLSearchParams({
-      storyId,
-      visitorId: getVisitorId(),
-      limit: "5",
-    });
-    const response = await fetch(`/api/story-ratings?${query}`, { cache: "no-store" });
-    if (!response.ok) throw new Error("Story rating API unavailable");
-    const data = await response.json();
-    (data.summaries || []).forEach(mergeStoryRatingSummary);
-    storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
-    const userRating = Number(data.userRatings?.[storyId] || 0);
-    if (userRating) setLocalStoryRating(storyId, userRating);
-  } catch {
-    // The local rating stays visible if the API is not available in development.
-  }
+  await syncStoryRatingForArticle(storyId);
   renderStoryRatingPanels();
   renderTopRatedStories();
 }
@@ -8073,7 +8097,7 @@ async function rateStory(storyId, rating) {
   const article = getRateableArticleById(storyId);
   if (!article || !rating) return;
   setLocalStoryRating(storyId, rating);
-  storyRatingStatus = t("ratingLocalSaved");
+  storyRatingStatus = t("ratingSyncing");
   renderStoryRatingPanels();
   renderTopRatedStories();
 
@@ -8093,9 +8117,12 @@ async function rateStory(storyId, rating) {
     const data = await response.json();
     mergeStoryRatingSummary(data.summary);
     storyRatingTopList = (data.top || []).map(normalizeRatingSummary).filter(Boolean);
+    if (data.userRating) setLocalStoryRating(storyId, Number(data.userRating));
     storyRatingStatus = t("ratingSaved");
+    await syncStoryRatingForArticle(storyId);
   } catch {
     storyRatingTopList = getLocalTopRatedStorySummaries();
+    storyRatingStatus = t("ratingLocalSaved");
   }
 
   renderStoryRatingPanels();
@@ -16873,22 +16900,11 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
 }
 
 function renderInlineLensStoryArticle(story) {
-  const category = categories.find((item) => item.code === story.categoryCode);
-  const group = category?.groups.find((item) => item.code === story.groupCode);
-  const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
-  const fieldRows = (group?.fields || [])
-    .filter(([code]) => (story.fieldCodes || []).includes(code))
-    .map(([code, title]) => `
-      <span>
-        <strong class="internal-code">${escapeHtml(code)}</strong>
-        ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
-      </span>`)
-    .join("");
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
@@ -16899,21 +16915,7 @@ function renderInlineLensStoryArticle(story) {
         <span>${escapeHtml(t("lensStoryFormalLabel"))}</span>
         ${renderEscapedParagraphs(formalExplanation)}
       </section>` : ""}
-      ${knowledgePoint || reflectionQuestion ? `
-      <aside class="story-insight lens-story-insight">
-        <span>${escapeHtml(t("lensStoryKnowledgeLabel"))}</span>
-        ${knowledgePoint ? `<p>${escapeHtml(knowledgePoint)}</p>` : ""}
-        ${reflectionQuestion ? `<strong>${escapeHtml(reflectionQuestion)}</strong>` : ""}
-      </aside>` : ""}
-      ${analogyBoundary ? `
-      <section class="lens-story-section lens-story-support">
-        <span>${escapeHtml(t("lensStoryBoundaryLabel"))}</span>
-        ${renderEscapedParagraphs(analogyBoundary)}
-      </section>` : ""}
-      <div class="lens-story-meta">
-        ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
-        ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
-      </div>
+      ${renderLensStoryNote({ knowledgePoint, reflectionQuestion, analogyBoundary })}
       ${renderStoryRatingPanel(ratingArticle)}
       ${renderStoryNavigation(ratingArticle)}
     </article>`;
@@ -16967,8 +16969,6 @@ function renderLensStoryDetail(storyId) {
       <p class="story-body">${escapeHtml(t("lensStoryNotFoundCopy"))}</p>`;
     return;
   }
-  const category = categories.find((item) => item.code === story.categoryCode);
-  const group = category?.groups.find((item) => item.code === story.groupCode);
   const shouldShowFigure = story.image && !story.imageInheritedFromGroup;
   const backLink = document.getElementById("lensStoryBack");
   if (backLink) {
@@ -16977,29 +16977,12 @@ function renderLensStoryDetail(storyId) {
     backLink.setAttribute("href", categoryHref);
     backLink.dataset.route = categoryHref;
   }
-  const tags = getLensStoryList(story, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const support = getLensStoryValue(story, "support");
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
   const knowledgePoint = getLensStoryValue(story, "coreInsight") || getLensStoryValue(story, "knowledgePoint");
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
-  const fieldRows = story.originalStory
-    ? getValidatedStoryFields(story.originalStory).matched
-        .map((field) => `
-          <span>
-            <strong class="internal-code">${escapeHtml(field.code)}</strong>
-            ${escapeHtml(getFieldDisplayTitle(field))}
-          </span>`)
-        .join("")
-    : (group?.fields || [])
-        .filter(([code]) => (story.fieldCodes || []).includes(code))
-        .map(([code, title]) => `
-          <span>
-            <strong class="internal-code">${escapeHtml(code)}</strong>
-            ${escapeHtml(getPublicLensStoryFieldTitle(story, code, title))}
-          </span>`)
-        .join("");
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   target.innerHTML = `
     ${shouldShowFigure ? `
@@ -17018,21 +17001,7 @@ function renderLensStoryDetail(storyId) {
       <span>${escapeHtml(t("lensStorySupportLabel"))}</span>
       <p>${escapeHtml(support)}</p>
     </section>` : ""}
-    ${knowledgePoint || reflectionQuestion ? `
-    <aside class="story-insight lens-story-insight">
-      <span>${escapeHtml(t("lensStoryKnowledgeLabel"))}</span>
-      ${knowledgePoint ? `<p>${escapeHtml(knowledgePoint)}</p>` : ""}
-      ${reflectionQuestion ? `<strong>${escapeHtml(reflectionQuestion)}</strong>` : ""}
-    </aside>` : ""}
-    ${analogyBoundary ? `
-    <section class="lens-story-section lens-story-support">
-      <span>${escapeHtml(t("lensStoryBoundaryLabel"))}</span>
-      ${renderEscapedParagraphs(analogyBoundary)}
-    </section>` : ""}
-    <div class="lens-story-meta">
-      ${fieldRows ? `<div><span>${escapeHtml(t("lensStoryFieldLabel"))}</span><p>${fieldRows}</p></div>` : ""}
-      ${tags ? `<div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div>` : ""}
-    </div>
+    ${renderLensStoryNote({ knowledgePoint, reflectionQuestion, analogyBoundary })}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
