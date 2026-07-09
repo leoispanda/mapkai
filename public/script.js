@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.124";
+const appVersion = "0.1.128";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -1032,37 +1032,68 @@ let quickMirrorState = {
   answers: [],
 };
 
-const mapAssetPath = "/assets/map-v2/";
+const mapBaseAssetPath = "/assets/map-v3/";
+const mapComponentAssetPath = "/assets/map-v2/";
 const mapComponentSets = {
   snow: ["snow_01.png", "snow_02.png", "snow_03.png", "snow_04.png"],
   land: ["land_01.png", "land_02.png", "land_03.png", "land_04.png"],
   green: ["oasis_01.png", "oasis_02.png", "oasis_03.png", "oasis_04.png"],
 };
+const mapStateVisuals = {
+  ocean: {
+    alpha: 0,
+    filter: "saturate(0.72) hue-rotate(138deg) brightness(0.9) contrast(0.92)",
+    shadow: "rgba(16, 84, 108, 0.08)",
+    rim: "rgba(235, 252, 255, 0.18)",
+    veil: "rgba(218, 245, 247, 0.12)",
+  },
+  snow: {
+    alpha: 0.86,
+    filter: "saturate(0.72) brightness(1.02) contrast(0.94)",
+    shadow: "rgba(45, 91, 118, 0.16)",
+    rim: "rgba(245, 254, 255, 0.5)",
+    veil: "rgba(241, 252, 255, 0.16)",
+  },
+  land: {
+    alpha: 0.9,
+    filter: "saturate(0.82) brightness(0.99) contrast(0.96)",
+    shadow: "rgba(88, 91, 48, 0.16)",
+    rim: "rgba(255, 246, 204, 0.45)",
+    veil: "rgba(255, 248, 218, 0.08)",
+  },
+  green: {
+    alpha: 0.94,
+    filter: "saturate(0.9) brightness(1.01) contrast(0.98)",
+    shadow: "rgba(33, 103, 74, 0.18)",
+    rim: "rgba(232, 255, 214, 0.48)",
+    veil: "rgba(232, 255, 214, 0.1)",
+  },
+};
 const mapComponentPlacements = {
-  "00": { x: 72, y: 70, width: 235, variant: 0 },
-  "01": { x: 360, y: 46, width: 250, variant: 1 },
-  "02": { x: 722, y: 80, width: 225, variant: 2 },
-  "03": { x: 170, y: 230, width: 230, variant: 1 },
-  "04": { x: 495, y: 220, width: 245, variant: 0 },
-  "05": { x: 800, y: 248, width: 230, variant: 2 },
-  "06": { x: 75, y: 405, width: 225, variant: 1 },
-  "07": { x: 355, y: 390, width: 225, variant: 0 },
-  "08": { x: 630, y: 402, width: 210, variant: 2 },
-  "09": { x: 862, y: 430, width: 190, variant: 3 },
-  "10": { x: 500, y: 510, width: 170, variant: 3 },
+  "00": { x: 104, y: 92, width: 212, variant: 0 },
+  "01": { x: 342, y: 82, width: 212, variant: 1 },
+  "02": { x: 582, y: 88, width: 214, variant: 2 },
+  "03": { x: 802, y: 86, width: 230, variant: 1 },
+  "04": { x: 92, y: 270, width: 224, variant: 0 },
+  "05": { x: 344, y: 278, width: 222, variant: 2 },
+  "06": { x: 588, y: 272, width: 220, variant: 1 },
+  "07": { x: 812, y: 278, width: 218, variant: 3 },
+  "08": { x: 172, y: 440, width: 230, variant: 1 },
+  "09": { x: 452, y: 438, width: 218, variant: 0 },
+  "10": { x: 706, y: 436, width: 230, variant: 2 },
 };
 const mapFounderLabelPositions = {
-  "00": [190, 150],
-  "01": [485, 138],
-  "02": [835, 158],
-  "03": [285, 314],
-  "04": [615, 304],
-  "05": [915, 326],
-  "06": [185, 485],
-  "07": [470, 475],
-  "08": [735, 474],
-  "09": [958, 500],
-  "10": [585, 584],
+  "00": [210, 166],
+  "01": [448, 162],
+  "02": [690, 166],
+  "03": [918, 168],
+  "04": [204, 346],
+  "05": [456, 352],
+  "06": [698, 348],
+  "07": [922, 354],
+  "08": [287, 516],
+  "09": [561, 514],
+  "10": [821, 512],
 };
 const mapAssetCache = {};
 
@@ -17054,12 +17085,15 @@ function renderLearning() {
 
 function drawKnowledgeMap() {
   if (!ctx || !canvas) return;
-  syncMasteryProgress();
+  syncMapChallengeProgress();
   const width = canvas.width;
   const height = canvas.height;
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
   ctx.clearRect(0, 0, width, height);
   drawMapFallback(width, height);
-  drawMapLayer("00_base_ocean_background.png", width, height);
+  drawMapLayer("00_base_ocean_background.png", width, height, mapBaseAssetPath);
+  drawMapAtmosphere(width, height);
   drawMapRouteOverlay(width, height);
 
   const founderMode = document.body.classList.contains("founder-mode");
@@ -17073,18 +17107,19 @@ function drawKnowledgeMap() {
   if (founderMode) drawFounderMapLabels(width, height);
 }
 
-function loadMapAsset(fileName) {
-  if (!mapAssetCache[fileName]) {
+function loadMapAsset(fileName, assetPath = mapComponentAssetPath) {
+  const cacheKey = `${assetPath}${fileName}`;
+  if (!mapAssetCache[cacheKey]) {
     const image = new Image();
     image.addEventListener("load", drawKnowledgeMap);
-    image.src = mapAssetPath + fileName;
-    mapAssetCache[fileName] = image;
+    image.src = assetPath + fileName;
+    mapAssetCache[cacheKey] = image;
   }
-  return mapAssetCache[fileName];
+  return mapAssetCache[cacheKey];
 }
 
-function drawMapLayer(fileName, width, height) {
-  const image = loadMapAsset(fileName);
+function drawMapLayer(fileName, width, height, assetPath = mapComponentAssetPath) {
+  const image = loadMapAsset(fileName, assetPath);
   if (!image.complete || !image.naturalWidth) return false;
   ctx.drawImage(image, 0, 0, width, height);
   return true;
@@ -17094,7 +17129,9 @@ function drawMapComponent(categoryCode, level, width, height) {
   const placement = mapComponentPlacements[categoryCode];
   if (!placement) return false;
   const isUnknown = level === "ocean";
-  const componentLevel = isUnknown ? "land" : level === "green" ? "green" : level;
+  if (isUnknown) return true;
+  const componentLevel = level === "green" ? "green" : level;
+  const visual = mapStateVisuals[level] || mapStateVisuals.land;
   const files = mapComponentSets[componentLevel] || mapComponentSets.land;
   const fileName = files[placement.variant % files.length];
   const image = loadMapAsset(fileName);
@@ -17107,28 +17144,100 @@ function drawMapComponent(categoryCode, level, width, height) {
   const x = placement.x * scaleX;
   const y = placement.y * scaleY;
 
+  drawMapIslandShadow(x, y, targetWidth, targetHeight, visual);
+  drawMapIslandRim(x, y, targetWidth, targetHeight, visual);
+
   ctx.save();
-  if (isUnknown) {
-    ctx.globalAlpha = 0.34;
-  }
+  ctx.globalAlpha = visual.alpha;
+  ctx.filter = visual.filter;
   ctx.drawImage(image, x, y, targetWidth, targetHeight);
   ctx.restore();
+
+  drawMapIslandSheen(x, y, targetWidth, targetHeight, visual);
   return true;
+}
+
+function drawMapAtmosphere(width, height) {
+  ctx.save();
+  const wash = ctx.createLinearGradient(0, 0, width, height);
+  wash.addColorStop(0, "rgba(255, 255, 255, 0.16)");
+  wash.addColorStop(0.48, "rgba(255, 255, 255, 0)");
+  wash.addColorStop(1, "rgba(13, 93, 122, 0.1)");
+  ctx.fillStyle = wash;
+  roundRect(ctx, 0, 0, width, height, 28);
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawMapIslandShadow(x, y, width, height, visual) {
+  const centerX = x + width / 2;
+  const centerY = y + height * 0.78;
+  const radiusX = width * 0.48;
+  const radiusY = Math.max(8, height * 0.13);
+  const shadow = ctx.createRadialGradient(centerX, centerY, 1, centerX, centerY, radiusX);
+  shadow.addColorStop(0, visual.shadow);
+  shadow.addColorStop(0.64, "rgba(20, 82, 102, 0.08)");
+  shadow.addColorStop(1, "rgba(20, 82, 102, 0)");
+  ctx.save();
+  ctx.fillStyle = shadow;
+  ctx.beginPath();
+  ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawMapIslandRim(x, y, width, height, visual) {
+  const centerX = x + width / 2;
+  const centerY = y + height * 0.78;
+  const radiusX = width * 0.48;
+  const radiusY = Math.max(8, height * 0.13);
+  ctx.save();
+  ctx.strokeStyle = visual.rim;
+  ctx.lineWidth = Math.max(1.1, width / 155);
+  ctx.beginPath();
+  ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.globalAlpha = 0.46;
+  ctx.lineWidth = Math.max(0.8, width / 260);
+  ctx.beginPath();
+  ctx.ellipse(centerX, centerY + radiusY * 0.1, radiusX * 1.12, radiusY * 1.45, 0, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawMapIslandSheen(x, y, width, height, visual) {
+  const centerX = x + width / 2;
+  const centerY = y + height * 0.34;
+  const sheen = ctx.createRadialGradient(centerX, centerY, width * 0.04, centerX, centerY, width * 0.45);
+  sheen.addColorStop(0, visual.veil);
+  sheen.addColorStop(1, "rgba(255, 255, 255, 0)");
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.fillStyle = sheen;
+  ctx.beginPath();
+  ctx.ellipse(centerX, centerY, width * 0.42, height * 0.33, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
 }
 
 function drawMapRouteOverlay(width, height) {
   const routes = [
-    ["00", "01", "02"],
-    ["03", "04", "05"],
-    ["06", "07", "08", "09"],
-    ["04", "10"],
+    ["00", "01", "02", "03"],
+    ["04", "05", "06", "07"],
+    ["08", "09", "10"],
+    ["00", "04", "08"],
+    ["01", "05", "09"],
+    ["02", "06", "10"],
+    ["03", "07"],
   ];
   const scaleX = width / 1100;
   const scaleY = height / 619;
   ctx.save();
-  ctx.strokeStyle = "rgba(255, 250, 224, 0.38)";
-  ctx.lineWidth = Math.max(1.2, width / 820);
-  ctx.setLineDash([7 * scaleX, 14 * scaleX]);
+  ctx.strokeStyle = "rgba(255, 250, 224, 0.28)";
+  ctx.lineWidth = Math.max(1.1, width / 950);
+  ctx.shadowColor = "rgba(23, 83, 106, 0.1)";
+  ctx.shadowBlur = 3 * scaleX;
+  ctx.setLineDash([7 * scaleX, 15 * scaleX]);
   ctx.lineCap = "round";
   routes.forEach((route) => {
     const points = route
@@ -17166,13 +17275,26 @@ function drawActiveMapMarker(width, height) {
   const [sourceX, sourceY] = position;
   const x = sourceX * (width / 1100);
   const y = sourceY * (height / 619);
-  const glow = ctx.createRadialGradient(x, y, 8, x, y, 42);
-  glow.addColorStop(0, "rgba(255, 245, 166, 0.72)");
+  const scale = width / 1100;
+  const glow = ctx.createRadialGradient(x, y, 6 * scale, x, y, 46 * scale);
+  glow.addColorStop(0, "rgba(255, 246, 170, 0.78)");
+  glow.addColorStop(0.58, "rgba(255, 220, 112, 0.28)");
   glow.addColorStop(1, "rgba(255, 245, 166, 0)");
+  ctx.save();
   ctx.fillStyle = glow;
   ctx.beginPath();
-  ctx.arc(x, y, 42, 0, Math.PI * 2);
+  ctx.arc(x, y, 46 * scale, 0, Math.PI * 2);
   ctx.fill();
+  ctx.strokeStyle = "rgba(255, 255, 245, 0.78)";
+  ctx.lineWidth = Math.max(1.2, 2.2 * scale);
+  ctx.beginPath();
+  ctx.arc(x, y, 12 * scale, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.fillStyle = "rgba(215, 152, 44, 0.92)";
+  ctx.beginPath();
+  ctx.arc(x, y, 4.2 * scale, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
 }
 
 function drawFounderMapLabels(width, height) {

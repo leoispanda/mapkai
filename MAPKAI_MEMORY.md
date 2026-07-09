@@ -88,6 +88,13 @@ Direct push is the default after requested changes are complete and verified.
 Pause only if the founder says not to push, the change scope is unclear, or verification exposes a real blocker.
 ```
 
+Founder push preference:
+
+```text
+The founder explicitly said: "以后直接push 告诉codex所有的都要直接push".
+Treat commit + direct push as the normal end of completed MapKAI work. Do not ask for push confirmation unless the founder explicitly says not to push, the repo state is unsafe, or the requested change is unclear.
+```
+
 ## 3. Product Memory
 
 MapKAI means:
@@ -2679,3 +2686,13 @@ Follow-up:
 - Updated `mapkai-story-review` with an Approved Pattern Gate so review checks whether the key object functions as method, old explanations are plausible before failing, evidence pressure is shown rather than announced, the question changes concretely, and historical claims stay cautious.
 - Verification: `git diff --check` passed for changed skill files; custom Node frontmatter validation passed for edited skills; no `TODO` / `PLACEHOLDER` hits in changed skill/reference files.
 - Push status: committed and pushed to `main` in this turn.
+
+## 2026-07-09 - Upgrade Knowledge Map image to v3 atlas background
+- Generated a new refined watercolor knowledge-atlas ocean background and saved it under `assets/map-v3/` and `public/assets/map-v3/`.
+- Updated `script.js` and `public/script.js` so the base map uses `/assets/map-v3/00_base_ocean_background.png` while progress islands still reuse the existing `/assets/map-v2/` component assets.
+- Repositioned the 11 map component anchors and Founder label positions to match the new atlas layout.
+- Changed unknown/ocean state so it no longer draws old semi-transparent island PNGs; the v3 background now carries the unknown knowledge-sea visual.
+- Added canvas smoothing, route overlay tuning, island shadow/rim/sheen styling, and a cleaner map-stage frame in `styles.css` / `public/styles.css`.
+- Bumped the public asset version to `0.1.128`.
+- Verification: bundled Node `--check` passed for `script.js` and `public/script.js`; desktop/mobile/dark map screenshots were checked with local Chrome headless after in-app browser control became unstable; new map resources loaded correctly. Local `/api/visit` still returns 500 without local analytics config, but this is unrelated to map assets.
+- Push status: direct-push rule is active; final pushed commit hash is reported in the Codex final response.
