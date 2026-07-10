@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.128";
+const appVersion = "0.1.149";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -441,6 +441,14 @@ const uiText = {
     fieldIntroStory: "Field story",
     importantConceptStories: "Key concept",
     advancedConceptStory: "Advanced concept fable",
+    formalSubfieldEyebrow: "Formal subfield",
+    fieldCoreFablesTitle: "Three ideas at the heart of this field",
+    fieldCoreFablesCopy: "Each story lets the idea unfold before naming it.",
+    fieldCoreFableLabel: "Knowledge fable",
+    fieldCoreFableRead: "Read story",
+    fieldCoreFablesPending: "These stories are being prepared.",
+    backToCognitiveField: "← Back to cognitive field",
+    backToFormalSubfield: "← Back to formal subfield",
     openSubmodule: "Open submodule",
     openDetailedField: "Open field",
     openStory: "Open story",
@@ -826,6 +834,14 @@ const uiText = {
     fieldIntroStory: "小学科故事",
     importantConceptStories: "重要概念",
     advancedConceptStory: "高级概念寓言",
+    formalSubfieldEyebrow: "正式小学科",
+    fieldCoreFablesTitle: "这个学科最核心的三个概念",
+    fieldCoreFablesCopy: "每个概念先在故事中发生，最后才被说出名字。",
+    fieldCoreFableLabel: "知识寓言",
+    fieldCoreFableRead: "阅读故事",
+    fieldCoreFablesPending: "这个学科的故事正在创作中。",
+    backToCognitiveField: "← 返回认知领域",
+    backToFormalSubfield: "← 返回正式小学科",
     openSubmodule: "打开子模块",
     openDetailedField: "打开条目",
     openStory: "打开故事",
@@ -6642,7 +6658,7 @@ lensStories.forEach((story) => {
   applyGptWebsiteStoryOverrideZh20260622(story);
 });
 
-const conceptFables = [
+const legacyConceptFables = [
   {
     id: "00-the-library-of-mirrors",
     categoryCode: "00",
@@ -7008,6 +7024,19 @@ const conceptFables = [
     tagsZh: ["服务", "价值", "共创"],
   },
 ];
+
+const fieldConceptFables = Array.isArray(globalThis.MAPKAI_FIELD_CONCEPT_FABLES)
+  ? globalThis.MAPKAI_FIELD_CONCEPT_FABLES
+  : [];
+const conceptFables = [...legacyConceptFables, ...fieldConceptFables];
+
+function isFieldCoreConceptFable(fable) {
+  return fable?.collection === "field-core-fables" && fable?.status === "approved";
+}
+
+function getFieldCoreConceptFables(fieldCode) {
+  return fieldConceptFables.filter((fable) => fable.fieldCode === fieldCode && isFieldCoreConceptFable(fable));
+}
 
 conceptFables.forEach((story) => {
   applyPdcWebsiteStoryGateZh20260621(story);
@@ -7785,8 +7814,10 @@ function getLensStoryFieldTitle(story, code, fallbackTitle) {
 }
 
 function getConceptFableById(fableId) {
-  if (!arePublicArticlesVisible()) return null;
-  return conceptFables.find((fable) => fable.id === fableId);
+  const fable = conceptFables.find((item) => item.id === fableId) || null;
+  if (!fable) return null;
+  if (isFieldCoreConceptFable(fable)) return fable;
+  return arePublicArticlesVisible() ? fable : null;
 }
 
 function getConceptFableForCategory(categoryCode) {
@@ -7911,6 +7942,11 @@ function getAllRateableArticles() {
   const articlesById = new Map();
   getVisibleSubjectIntroStories().forEach((story) => {
     const article = getRatingArticleForLensStory(story);
+    if (article) articlesById.set(article.id, article);
+  });
+  fieldConceptFables.forEach((fable) => {
+    if (!isFieldCoreConceptFable(fable)) return;
+    const article = getRatingArticleForConceptFable(fable);
     if (article) articlesById.set(article.id, article);
   });
   if (!arePublicArticlesVisible()) return Array.from(articlesById.values());
@@ -14874,6 +14910,8 @@ function applyLanguage() {
   renderStories();
   renderConceptFables();
   renderTopRatedStories();
+  const activeField = normalizeRoute(window.location.pathname).match(/^\/fields\/([a-z0-9-]+)$/);
+  if (activeField) renderFieldDetail(activeField[1]);
   const activeStory = normalizeRoute(window.location.pathname).match(/^\/stories\/([a-z0-9-]+)$/);
   if (activeStory) renderStoryDetail(activeStory[1]);
   const activeConceptFable = normalizeRoute(window.location.pathname).match(/^\/concept-fables\/([a-z0-9-]+)$/);
@@ -14967,10 +15005,11 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/categories" && (
         visibleTarget.startsWith("/categories") ||
+        visibleTarget.startsWith("/fields/") ||
         visibleTarget.startsWith("/lens-stories/") ||
         visibleTarget.startsWith("/concept-fables")
       )) ||
-      (linkRoute === "/map" && (visibleTarget.startsWith("/fields/") || visibleTarget === "/map-challenge")) ||
+      (linkRoute === "/map" && visibleTarget === "/map-challenge") ||
       (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
@@ -15187,10 +15226,6 @@ function renderStoryDetail(storyId) {
 function renderConceptFableDetail(fableId) {
   const target = document.getElementById("conceptFableReader");
   if (!target) return;
-  if (!arePublicArticlesVisible()) {
-    target.innerHTML = "";
-    return;
-  }
   const fable = getConceptFableById(fableId);
   if (!fable) {
     target.innerHTML = `
@@ -15199,38 +15234,42 @@ function renderConceptFableDetail(fableId) {
     return;
   }
   const ratingArticle = getRatingArticleForConceptFable(fable);
-  const metaphorRows = getConceptFableList(fable, "metaphorMap")
-    .map((item) => `
-      <article>
-        <strong>${escapeHtml(item.image || "")}</strong>
-        <p>${escapeHtml(item.meaning || "")}</p>
-      </article>`)
-    .join("");
-  const tags = getConceptFableList(fable, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  const backLink = document.querySelector(".concept-fable-detail-page .concept-back-link");
+  if (backLink) {
+    if (isFieldCoreConceptFable(fable)) {
+      const field = getFieldByCode(fable.fieldCode);
+      const fieldHref = field ? `/fields/${field.id}` : `/fields/${fable.fieldCode}`;
+      backLink.textContent = t("backToFormalSubfield");
+      backLink.setAttribute("href", fieldHref);
+      backLink.dataset.route = fieldHref;
+    } else {
+      backLink.textContent = t("conceptFableBack");
+      backLink.setAttribute("href", "/concept-fables");
+      backLink.dataset.route = "/concept-fables";
+    }
+  }
+  const storyParagraphs = getConceptFableList(fable, "storyParagraphs");
+  const explanationParagraphs = getConceptFableList(fable, "explanationParagraphs");
+  const storyMarkup = storyParagraphs.length
+    ? storyParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
+    : renderEscapedParagraphs(getConceptFableValue(fable, "storyBody"));
+  const explanationMarkup = explanationParagraphs.length
+    ? explanationParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
+    : renderEscapedParagraphs(getConceptFableValue(fable, "explanation"));
   target.innerHTML = `
     ${renderStoryDetailHeader(getConceptFableValue(fable, "title"))}
     <section class="lens-story-section concept-fable-story">
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
-      <p>${escapeHtml(getConceptFableValue(fable, "storyBody"))}</p>
+      <div class="concept-fable-story-body">${storyMarkup}</div>
     </section>
-    <aside class="story-insight lens-story-insight concept-fable-reveal">
+    <aside class="story-insight lens-story-insight concept-fable-reveal concept-fable-knowledge-box">
       <span>${escapeHtml(t("conceptFableRevealLabel"))}</span>
       <h2>${escapeHtml(getConceptFableValue(fable, "conceptName"))}</h2>
-      <p>${escapeHtml(getConceptFableValue(fable, "reveal"))}</p>
+      <div class="concept-fable-explanation">
+        <strong>${escapeHtml(t("conceptFableExplanationLabel"))}</strong>
+        ${explanationMarkup}
+      </div>
     </aside>
-    <section class="lens-story-section lens-story-support">
-      <span>${escapeHtml(t("conceptFableExplanationLabel"))}</span>
-      <p>${escapeHtml(getConceptFableValue(fable, "explanation"))}</p>
-    </section>
-    <section class="concept-metaphor-section" aria-label="${escapeHtml(t("conceptFableMetaphorLabel"))}">
-      <span>${escapeHtml(t("conceptFableMetaphorLabel"))}</span>
-      <div class="concept-metaphor-grid">${metaphorRows}</div>
-    </section>
-    <aside class="story-insight lens-story-insight">
-      <span>${escapeHtml(t("conceptFableReflectionLabel"))}</span>
-      <strong>${escapeHtml(getConceptFableValue(fable, "reflectionQuestion"))}</strong>
-    </aside>
-    ${tags ? `<div class="lens-story-meta concept-fable-meta"><div><span>${escapeHtml(t("storyFocusLabel"))}</span><p class="story-tag-row">${tags}</p></div></div>` : ""}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
@@ -15351,7 +15390,7 @@ function renderFieldDetail(code) {
   if (!target) return;
   const field = getFieldById(code);
   if (!field) {
-    target.innerHTML = `<h1>Field not found</h1><p>This field is not available in the public map yet.</p>`;
+    target.innerHTML = `<h1>${escapeHtml(t("lensStoryNotFoundTitle"))}</h1><p>${escapeHtml(t("noStoryReady"))}</p>`;
     return;
   }
   const storiesForField = getStoriesForField(field.id);
@@ -15359,14 +15398,43 @@ function renderFieldDetail(code) {
   const area = getAreaById(field.areaId);
   const narrowField = getNarrowFieldById(field.narrowFieldId);
   const isLit = getLitFieldCodes().has(field.id);
+  const coreFables = getFieldCoreConceptFables(field.code);
+  const categoryHref = area?.code ? `/categories/${area.code}` : "/categories";
+  const backLink = document.querySelector(".field-detail-shell > .button.secondary");
+  if (backLink) {
+    backLink.textContent = t("backToCognitiveField");
+    backLink.setAttribute("href", categoryHref);
+    backLink.dataset.route = categoryHref;
+  }
+  const fableCards = coreFables.map((fable, index) => {
+    const href = `/concept-fables/${fable.id}`;
+    return `
+      <a class="field-core-fable-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
+        <span>${escapeHtml(`${t("fieldCoreFableLabel")} ${index + 1}`)}</span>
+        <h2>${escapeHtml(getConceptFableValue(fable, "title"))}</h2>
+        <p>${escapeHtml(getConceptFableValue(fable, "summary"))}</p>
+        <strong>${escapeHtml(t("fieldCoreFableRead"))}</strong>
+      </a>`;
+  }).join("");
   target.innerHTML = `
-    <p class="eyebrow">Field detail</p>
-    <div class="field-detail-title">
-      <span class="internal-code">${field.code}</span>
-      <h1>${escapeHtml(getFieldDisplayTitle(field))}</h1>
-    </div>
-    <p>${escapeHtml(field.plainMeaning)}</p>
-    <dl class="story-meta">
+    <header class="field-detail-header">
+      <p class="eyebrow">${escapeHtml(t("formalSubfieldEyebrow"))}</p>
+      <div class="field-detail-title">
+        <span class="internal-code">${escapeHtml(field.code)}</span>
+        <h1>${escapeHtml(getFieldDisplayTitle(field))}</h1>
+      </div>
+      ${area ? `<p class="field-detail-area">${escapeHtml(getAreaDisplayTitle(area))}</p>` : ""}
+    </header>
+    <section class="field-core-fables" aria-label="${escapeHtml(t("fieldCoreFablesTitle"))}">
+      <div class="field-core-fables-heading">
+        <h2>${escapeHtml(t("fieldCoreFablesTitle"))}</h2>
+        <p>${escapeHtml(t("fieldCoreFablesCopy"))}</p>
+      </div>
+      ${fableCards
+        ? `<div class="field-core-fable-grid">${fableCards}</div>`
+        : `<p class="field-core-fables-pending">${escapeHtml(t("fieldCoreFablesPending"))}</p>`}
+    </section>
+    <dl class="story-meta founder-only">
       <div><dt>Area</dt><dd>${escapeHtml(area ? getAreaDisplayTitle(area) : "Not available")}</dd></div>
       <div><dt>Narrow field</dt><dd>${escapeHtml(narrowField?.title || "Not available")}</dd></div>
       <div><dt>Status</dt><dd>${field.isAdministrative ? "Administrative" : "Practical"}</dd></div>
@@ -15376,8 +15444,7 @@ function renderFieldDetail(code) {
         return `<a href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">${escapeHtml(getStoryTitle(story))}</a>`;
       }).join(", ") : "No published story yet"}</dd></div>
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
-    </dl>
-  `;
+    </dl>`;
 }
 
 function fieldLink(field) {
@@ -16927,7 +16994,7 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
     !isNotElsewhereClassifiedTitle(entry.fieldTitle) &&
     !isInterdisciplinaryTitle(entry.fieldTitle)
   );
-  return (practicalEntries.length ? practicalEntries : fieldEntries).slice(0, 3);
+  return practicalEntries.length ? practicalEntries : fieldEntries;
 }
 
 function renderInlineLensStoryArticle(story) {

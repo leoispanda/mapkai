@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-011",
+  "articles": [
+    {
+      "id": "0722-structure-property-relationship",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0722",
+      "fieldTitle": "Materials glass paper plastic and wood",
+      "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
+      "title": "The Two Windows from One Furnace",
+      "titleZh": "同一座炉里出来的两扇窗",
+      "summary": "Two panes made from the same glass batch respond differently to impact because cooling leaves different internal arrangements and residual stresses.",
+      "summaryZh": "同批玻璃制成的两扇窗面对撞击时表现不同，因为冷却留下了不同的内部状态与残余应力。",
+      "storyParagraphs": [
+        "Glassmaker Elian cast two windows from the same molten batch, with the same thickness and dimensions. He cooled one slowly in the annealing chamber. The other was reheated and rapidly cooled at its surfaces. Since the recipe was identical, Elian stamped both panes with one strength mark. During installation, a small edge knock sent a long crack across the first pane. A harder central impact left the second intact. Composition had not been enough to predict what the windows would do.",
+        "Materials engineer Sena placed both panes between crossed polarisers. Coloured bands revealed residual stresses that ordinary light concealed. Slow cooling had allowed much of the stress to relax. Rapid surface cooling had left compression near the exterior and balancing tension inside. A surface crack in the second pane first had to overcome that compressive layer before opening. The glass had not acquired a new ingredient; processing had left a different residual-stress field and frozen structural state.",
+        "Elian then struck an exposed edge of the second pane. It broke suddenly into many small pieces. The very stress pattern that delayed ordinary surface cracking also stored energy and changed the fracture pattern once the protected layer was penetrated. Cutting or drilling it after treatment could release that balance. The first pane was easier to shape and failed in larger sharp fragments. Neither description could be reduced to simply stronger or weaker without naming the load, flaw, location, and desired failure behaviour.",
+        "A third window added a polymer interlayer between two sheets. Its individual glass layers could still crack, yet the fragments remained attached and the opening stayed covered. Sena distinguished a material test from the performance of a finished window. Surface finish, edge quality, thickness, mounting, temperature gradients, chemical attack, loading rate, and defect population all joined the result. A catalogue value measured under one method did not automatically describe a scratched pane clamped into a twisting frame.",
+        "The workshop changed its records. Each pane now carried its composition, forming history, cooling route, residual-stress inspection, machining restrictions, and intended use. Elian selected properties rather than prestige words: stiffness for deflection, strength for fracture resistance under a stated test, toughness for energy absorbed, optical quality for seeing, and a safe breakage mode for occupied spaces. When production speed changed, Sena repeated validation instead of assuming the old certificate travelled with the recipe.",
+        "The windows revealed the structure-property relationship: composition and processing create structure across atomic, microscopic, and macroscopic scales, and that structure helps determine measured properties and eventual performance. Heat history, orientation, phases, defects, interfaces, residual stress, and geometry can make nominally similar materials behave differently. Properties remain conditional on how they are measured and used. Both panes came from one furnace. Their different journeys through cooling had left different answers inside them before either met a stone."
+      ],
+      "storyParagraphsZh": [
+        "玻璃匠埃利安用同一炉熔体浇出两扇厚度与尺寸相同的窗。第一扇在退火室缓慢冷却，第二扇重新加热后让表面迅速降温。配方既然完全相同，埃利安便给两扇玻璃盖上同一种强度印章。安装时，一次轻微边缘磕碰让第一扇裂纹贯穿；更重的中央撞击却没有打破第二扇。只知道成分，并不足以预测窗会怎样回应。",
+        "材料工程师塞娜把两扇玻璃放在交叉偏振片之间。普通光下看不见的残余应力显成彩带。缓慢冷却让大部分应力得到松弛，表面快速冷却则在外层留下压应力，并由内部拉应力平衡。第二扇的表面裂纹要先克服这层压缩才能张开。玻璃没有增加新配料；加工过程留下了不同的残余应力场与冻结结构状态。",
+        "埃利安随后敲击第二扇暴露的边缘，它突然碎成许多小块。那套延缓普通表面开裂的应力分布，一旦保护层被突破，也会释放储能并改变破裂方式。处理后再切割或钻孔，可能打破这种平衡。第一扇更容易加工，却会形成较大的尖锐碎片。若不说明载荷、缺陷、位置与期望失效方式，就不能只用更强或更弱概括二者。",
+        "第三扇窗在两片玻璃间加入聚合物夹层。单片仍会开裂，碎片却留在夹层上，洞口也继续被覆盖。塞娜把材料试验与整扇窗的表现区分开。表面状态、边缘质量、厚度、安装、温度梯度、化学侵蚀、加载速度与缺陷分布都会参与结果。在一种方法下测得的目录数值，不能自动描述一扇被刮伤、又夹在扭曲窗框里的玻璃。",
+        "工坊改变了记录方式。每扇玻璃都标注成分、成形历史、冷却路线、残余应力检查、加工限制与预定用途。埃利安不再选华丽形容词，而是选择具体性质：用刚度判断挠曲，用规定试验下的强度判断抗断裂，用韧性判断吸收能量，用光学质量保证视野，并为有人空间选择较安全的破裂方式。生产速度变化后，塞娜重新验证，不假定旧证书会随配方自动迁移。",
+        "两扇窗揭示的是结构与性能关系：成分和加工在原子、微观与宏观尺度形成内部结构，结构再帮助决定测得的性质与最终表现。热历史、方向、相、缺陷、界面、残余应力与几何，会让名义相似的材料表现不同；性质也取决于怎样测量和怎样使用。两扇玻璃来自同一座炉，它们在遇见石头以前，已经因不同冷却旅程把不同答案留在内部。"
+      ],
+      "conceptName": "Structure-property relationship",
+      "conceptNameZh": "结构与性能关系",
+      "explanationParagraphs": [
+        "The structure-property relationship connects composition and processing to internal structure, measured properties, and performance across scales. Identical recipes can behave differently after different thermal, mechanical, or forming histories.",
+        "Phases, orientation, defects, interfaces, residual stress, geometry, environment, and test method all matter. A property value is evidence under stated conditions, not a complete prediction of a finished component."
+      ],
+      "explanationParagraphsZh": [
+        "结构与性能关系把成分和加工同跨尺度内部结构、测得性质及最终表现联系起来。相同配方经过不同热、力或成形历史后，行为可能不同。",
+        "相、方向、缺陷、界面、残余应力、几何、环境与试验方法都会影响结果。性质数值是规定条件下的证据，不是对成品构件的完整预言。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0722-anisotropy",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0722",
+      "fieldTitle": "Materials glass paper plastic and wood",
+      "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
+      "title": "The Beam That Was Strong Only Northward",
+      "titleZh": "只朝北方坚固的木梁",
+      "summary": "Boards cut from one tree carry, split, and swell differently when their grain directions are rotated relative to the same load and moisture change.",
+      "summaryZh": "同一棵树切出的木板，在纹理方向相对相同载荷与湿度变化旋转后，承载、开裂与膨胀表现都不同。",
+      "storyParagraphs": [
+        "Carpenter Oren cut two beams from the same straight trunk and gave them equal dimensions. He laid the first with its long fibres following the bridge span. It carried a loaded cart with little complaint. To fit a short repair, he rotated a second piece so the load pulled across the visible grain. A modest peg force split it. Oren accused the tree of hiding a weak patch, but the broken surface followed a direction that had been visible all along.",
+        "Wood scientist Mira marked three axes on the remaining timber: along the trunk, outward through the growth rings, and around them. The elongated cells and layered rings had been built to carry sap and support a standing tree, not to respond identically in every direction. Stiffness, tensile and compressive strength, shear resistance, fracture, thermal movement, and permeability could each vary with orientation. The preferred direction for one property did not have to match another. A single number copied from a handbook was incomplete until its material axis and loading axis were named.",
+        "Rain brought another argument. Two floorboards had equal moisture gain, yet one cupped while the other changed width more quietly. Their ring orientation and restraint differed. Wood moved far less along its fibres than across them, and radial and tangential movement were not the same. A joint that allowed harmless movement in one direction could concentrate stress in another. Knots, slope of grain, checks, and local density further bent the neat coordinate system around real features.",
+        "Mira cut test coupons along several directions and conditioned them at controlled humidity. She recorded orientation, moisture, temperature, specimen location, and loading mode. The resulting curves did not collapse into one universal property. Even a board labelled longitudinal could fail early if grain wandered around a knot. Sampling had to represent the product, while design values needed uncertainty and the consequences of a rare weak piece.",
+        "Oren began turning direction into a design tool. He aligned fibres with principal loads, added cross-laminated layers where loads changed direction, protected vulnerable end grain, and detailed joints for moisture movement. Crossing layers reduced directional imbalance but introduced adhesive interfaces, rolling shear, and edge exposure that required their own checks. Manufactured sheets and composites could tailor behaviour; they did not erase every preferred direction or defect.",
+        "The bridge taught anisotropy: a material is anisotropic when its properties depend on direction. Internal orientation from fibres, grains, layers, crystals, pores, forming, or printing can make stiffness, strength, transport, expansion, and fracture differ along different axes. Measurement and design must state those axes and the relevant environment. Oren had not found two personalities in one tree. He had asked a structure grown for one direction to carry a demand arriving from another."
+      ],
+      "storyParagraphsZh": [
+        "木匠奥伦从同一根笔直树干切出两根尺寸相同的梁。第一根让长纤维顺着桥跨方向，满载小车驶过时几乎没有异响。修补一处短缺口时，他把第二块旋转，让载荷横着可见木纹拉扯。并不大的木栓力便使它劈开。奥伦指责树木暗藏弱点，断面却沿着早已看得见的方向展开。",
+        "木材科学家米拉在余料上标出三条轴：沿树干、穿过年轮向外，以及顺年轮环绕。细长细胞与层叠年轮原本为了输送水分并支撑直立树木，并非为了向每个方向作出相同回应。刚度、拉压强度、抗剪、断裂、热变形与渗透性都可能随方向变化，一项性质最有利的方向也不必与另一项相同。从手册抄来一个数字，若未说明材料轴与受力轴，信息便不完整。",
+        "雨季又带来争论。两块地板吸收同样水分，一块翘成弧形，另一块只较平静地变宽。它们的年轮方向和约束不同。木材沿纤维方向的移动远小于横向，径向与弦向变化也不相同。一个接头能在一向释放无害移动，却可能在另一向集中应力。节疤、斜纹、裂隙与局部密度还会让整齐坐标围着真实缺陷弯曲。",
+        "米拉沿多个方向切取试样，在受控湿度中调节，再记录方向、水分、温度、取样位置与加载方式。所得曲线无法合成一个普遍性质。即使标作纵向的木板，纹理绕过节疤时也可能提前失效。取样要代表真实产品，设计值还要考虑不确定性，以及一块罕见弱板造成的后果。",
+        "奥伦开始把方向变成设计工具。他让纤维对准主要载荷，在载荷转向处使用交叉层板，保护脆弱端面，并给湿胀留下接头余量。交叉铺层减弱方向差异，却引入胶合界面、滚动剪切与边缘暴露，需要另行检查。人造板与复合材料可以调节行为，却不会抹掉所有优选方向或缺陷。",
+        "这座桥教授的是各向异性：材料性质会随方向改变。纤维、晶粒、层片、晶体、孔隙、成形或打印留下的内部取向，会使刚度、强度、传输、膨胀与断裂沿不同轴表现不同。测量与设计必须说明这些轴以及相关环境。奥伦并非在一棵树里发现两种性格，而是让一套为一个方向生长的结构，承接从另一方向抵达的要求。"
+      ],
+      "conceptName": "Anisotropy",
+      "conceptNameZh": "各向异性",
+      "explanationParagraphs": [
+        "Anisotropy means that a material's properties depend on direction. Fibres, grains, layers, crystals, pores, forming, and manufacturing can create preferred axes.",
+        "Stiffness, strength, fracture, swelling, thermal expansion, permeability, and other responses may each have different directional patterns. Tests and designs must identify orientation, environment, variability, and loading mode."
+      ],
+      "explanationParagraphsZh": [
+        "各向异性指材料性质取决于方向。纤维、晶粒、层片、晶体、孔隙、成形与制造都可能建立优选轴。",
+        "刚度、强度、断裂、湿胀、热膨胀、渗透等响应可能各有不同方向规律。试验与设计必须说明方向、环境、变异与加载方式。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0722-design-for-circularity",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0722",
+      "fieldTitle": "Materials glass paper plastic and wood",
+      "fieldTitleZh": "材料：玻璃、纸、塑料与木材",
+      "title": "The Package with No Second Door",
+      "titleZh": "没有第二扇门的包装",
+      "summary": "A celebrated multilayer package protects its product once but cannot be repaired, separated, reused, or recovered when it reaches the sorting hall.",
+      "summaryZh": "一只获奖的多层包装首次保护产品十分出色，抵达分拣厂后却无法修复、分离、复用或回收。",
+      "storyParagraphs": [
+        "Packager Lio won the harbour prize for a medicine case that resisted rain, puncture, light, and tampering. Paperboard supplied stiffness, plastic film blocked moisture, metal foil excluded light, foam cushioned impact, and a permanent adhesive fused every layer. After one voyage, the case arrived spotless at the sorting hall. Workers turned it in their hands, tried three machines, and sent it to disposal. Every layer had performed its first duty so completely that none could begin a second one.",
+        "Designer Sera followed the discarded cases. The fibre mill rejected foil and adhesive; the plastic line could not identify the mixed polymer; the metal was too thin and contaminated to recover economically. A label showing three recycling arrows had described ingredients, not an available route through the local system. Small inks, closures, coatings, and glues determined the fate of much larger masses. Lio had designed until the factory gate, while the package continued travelling after the customer opened it.",
+        "The next case used separable barrier pouches, a reusable rigid shell, replaceable cushioning, standard fasteners, and clear material identification. Sera timed disassembly with gloved hands and tested whether repair parts remained available. She reduced unnecessary material combinations and placed unavoidable combinations where equipment could separate them. The return label linked the case to a collection route. Recovery was treated as a designed operation with people, tools, information, and tolerances, not a hopeful symbol printed at the end.",
+        "The lighter prototype then failed a drop test and spoiled valuable medicine. Avoided packaging waste had created far greater product waste. Sera restored protection where evidence required it and compared the whole service over repeated trips. Durability, cleanliness, tamper evidence, transport mass, user safety, and shelf life could conflict with easy separation. Some high-barrier applications still needed composite structures, so the team searched for compatible layers, specialist recovery, or longer reuse rather than declaring one material morally pure.",
+        "A reusable shell only paid back its extra material when enough customers returned it and cleaning did not consume the gain. The harbour therefore tracked return rate, losses, washing, repair, trip count, and the quality of recovered output. Contracts assigned responsibility and financed reverse logistics. If the secondary material had no reliable buyer, collection merely moved inventory into a warehouse. Sera designed the business path beside the physical object and changed it when local infrastructure changed.",
+        "The harbour was practising design for circularity: creating products and systems so value can remain in use through durability, maintenance, repair, reuse, remanufacture, and appropriate material recovery, while preventing waste and harmful leakage. Material choice, joining, disassembly, information, collection, economics, safety, and actual infrastructure all shape the loop. Circularity is not guaranteed by recyclability in theory or by using less material once. Lio's first case had one magnificent entrance into service. Sera gave the next one several credible ways to leave and return."
+      ],
+      "storyParagraphsZh": [
+        "包装师利奥凭一只药品箱赢得海港大奖。纸板提供刚度，塑料膜阻挡水汽，金属箔隔绝光线，泡沫缓冲撞击，永久胶把所有层牢牢粘合，使它能抗雨、抗穿刺、避光并显示拆封。完成一次航行后，箱子完好抵达分拣厂。工人翻看它，试过三台机器，最终送去处置。每一层都把第一次职责完成得太彻底，以至没有一层能开始第二次生命。",
+        "设计师塞拉跟着废箱前行。造纸厂拒收金属箔与胶，塑料线无法识别混合聚合物，金属又薄且受污染，回收不合算。印着三枚循环箭头的标签只描述配料，没有说明当地系统中真正存在的去路。少量油墨、封口、涂层与胶水决定了大得多的材料质量去向。利奥设计到工厂大门便停下，包装却在顾客开启后继续旅行。",
+        "下一版使用可分离阻隔袋、可复用硬壳、可替换缓冲件、标准紧固件与清晰材料标识。塞拉让戴手套的工人计时拆解，并检查维修件能否持续取得。她减少不必要的材料组合，把无法避免的组合放在设备可分离的位置。退回标签把箱子接入收集路线。回收不再是末端印上的希望符号，而是一项有人员、工具、信息与公差的设计操作。",
+        "轻量原型随后跌落失败，昂贵药品因此报废。少掉的包装废物制造了远大得多的产品浪费。塞拉按证据恢复必要保护，并比较多次航程中的完整服务。耐久、清洁、防拆、运输重量、用户安全与货架寿命，可能同易拆解冲突。有些高阻隔用途仍需复合结构，团队便寻找相容层、专业回收或更长复用，而不宣布某一种材料天生纯洁。",
+        "可复用硬壳只有在足够多顾客退回、清洗又没有吃掉收益时，才值得多用的材料。海港于是追踪返还率、丢失、清洗、维修、周转次数与回收产物质量。合同分配责任并为逆向物流付费。若二次材料没有可靠买家，收集只是把库存搬进仓库。塞拉把商业路径与物件一同设计，并在当地设施改变时同步调整。",
+        "海港实践的是循环设计：让产品与系统通过耐用、维护、修理、复用、再制造及适当材料回收，使价值尽量留在使用中，同时防止废物与有害泄漏。材料选择、连接、拆解、信息、收集、经济、安全和真实基础设施共同塑造循环。理论上可回收或一次少用材料，并不自动等于循环。利奥的第一只箱只有一次壮丽的入场；塞拉让下一只拥有几条可信的离开与返回路径。"
+      ],
+      "conceptName": "Design for circularity",
+      "conceptNameZh": "循环设计",
+      "explanationParagraphs": [
+        "Design for circularity creates products and supporting systems that preserve value through durability, maintenance, repair, reuse, remanufacture, and suitable material recovery while reducing waste and leakage.",
+        "It depends on material compatibility, joining, disassembly, information, safety, collection, reverse logistics, economics, user behaviour, and real infrastructure. Theoretical recyclability alone does not close a loop."
+      ],
+      "explanationParagraphsZh": [
+        "循环设计让产品及支撑系统通过耐用、维护、修理、复用、再制造和适当材料回收来保存价值，同时减少废物与泄漏。",
+        "它取决于材料相容、连接、拆解、信息、安全、收集、逆向物流、经济、用户行为与真实基础设施。理论可回收性本身不能闭合循环。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0723-fibre-structure-property",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0723",
+      "fieldTitle": "Textiles clothes footwear and leather",
+      "fieldTitleZh": "纺织：服装、鞋类与皮革",
+      "title": "Two Cloaks of Equal Thickness",
+      "titleZh": "两件同样厚的斗篷",
+      "summary": "Two cloaks of equal thickness handle rain, wind, sweat, and warmth differently because performance emerges from fibres, yarns, fabric geometry, finishes, and use.",
+      "summaryZh": "两件厚度相同的斗篷处理雨、风、汗与保暖的方式不同，因为表现来自纤维、纱线、织物几何、整理与使用情境。",
+      "storyParagraphs": [
+        "Cloth merchant Nela sold two winter cloaks of equal thickness and nearly equal mass. She called them equivalent. In sleet, the first absorbed water, grew heavy, and stayed cold after the rain stopped. The second shed droplets but trapped the walker's sweat until the inner shirt became wet. At the mountain pass, wind pushed through one fabric and ballooned the other. A ruler across the cloth had measured thickness; it had not measured the journeys of water, air, and heat.",
+        "Textile engineer Ivo opened the cloth layer by layer. Fibre chemistry influenced wetting and moisture uptake. Diameter, cross-section, length, crimp, and whether fibres were continuous filaments or short staples changed surface area, bending, warmth, and shedding. Spinning aligned and twisted them into yarn: more twist could strengthen a weak bundle yet reduce loft or alter capillary channels. Two yarns made from the same polymer could therefore feel and transport moisture differently before either entered a loom.",
+        "The loom added another level. Tight woven intersections resisted wind and abrasion; open structures exchanged air more readily. Knitted loops stretched and recovered but could snag or deform. Pore size and connectivity determined whether liquid pressure drove rain through, while surface energy and capillary geometry influenced spreading. A fabric could resist a brief spray yet leak under sustained pressure at seams. The cloak's cut and movement pumped air, so a flat laboratory swatch did not tell the entire wearing experience.",
+        "Nela applied a water-repellent finish to the first cloak. Its initial test improved, but repeated washing and abrasion weakened the effect. A continuous coating blocked rain more strongly and also restricted vapour transfer unless its membrane and construction were designed for both. Ivo measured air permeability, water resistance, vapour transfer, drying, thermal insulation, tensile and tear behaviour, abrasion, dimensional change, and performance after care cycles. One dramatic demonstration could not substitute for the service profile.",
+        "For guides who walked hard uphill, Ivo combined a wicking inner layer, insulating middle, and weather-resistant outer shell, with vents that could be opened before sweat accumulated. For guards standing still, the priorities changed. Seams, zips, compression under straps, fit, and maintenance often became the weak points. The team stated trade-offs rather than promising one cloth that was simultaneously maximally sealed, breathable, light, warm, durable, quiet, and inexpensive.",
+        "The two cloaks revealed fibre structure and textile properties: textile behaviour emerges across nested levels, from fibre chemistry and morphology through yarn construction, fabric geometry, finishes, garment assembly, care, and use. Thickness or fibre name alone cannot predict comfort, protection, strength, or durability. Tests must match the transport process, load, environment, and life cycle that matter. Nela had sold two equal distances between outer surfaces. The mountain exposed everything arranged inside that distance."
+      ],
+      "storyParagraphsZh": [
+        "布商奈拉卖出两件厚度相同、重量也近似的冬斗篷，称它们表现等同。雨夹雪中，第一件吸水后变重，雨停很久仍然冰冷；第二件让水珠滚落，却把行者汗气困住，内衣反而湿透。到了山口，风穿过一件，又把另一件鼓成气囊。横放在布面的尺只量了厚度，没有量水、空气与热如何旅行。",
+        "纺织工程师伊沃逐层拆开布料。纤维化学影响润湿与吸湿；直径、截面、长度、卷曲，以及连续长丝还是短纤，会改变表面积、弯曲、保暖与脱落。纺纱再把它们排列、加捻成纱：更多捻度可增强松散纤维束，也会降低蓬松或改变毛细通道。因此，同一种聚合物制成的两根纱，在进入织机前就可能拥有不同触感与传湿方式。",
+        "织机又增加一层。紧密交织抵抗风和磨损，开放结构更容易交换空气；针织线圈能伸展回弹，也可能勾挂变形。孔隙大小与连通方式决定液体压力能否把雨推过布面，表面能与毛细几何则影响水怎样铺展。一块布能挡住短时喷淋，却可能在持续水压下从接缝渗漏。斗篷剪裁和动作还会泵动空气，平放的实验室布样不能讲完穿着体验。",
+        "奈拉给第一件施加拒水整理，初测改善，反复洗涤与摩擦后效果却减弱。连续涂层挡雨更强，若膜和结构没有同时设计，也会限制水汽通过。伊沃测量透气、耐水、透湿、干燥、保温、拉伸与撕裂、耐磨、尺寸变化，以及护理循环后的表现。一场醒目演示不能替代完整使用轮廓。",
+        "对于奋力上坡的向导，伊沃组合导湿内层、保温中层和抗候外壳，并设置能在汗液累积前开启的通风口。对于长时间站立的守卫，优先项又不同。接缝、拉链、背带压缩、合身度与维护常成为弱点。团队开始说明取舍，不再承诺一块布能同时做到最密封、最透气、最轻、最暖、最耐久、最安静又最便宜。",
+        "两件斗篷揭示的是纤维结构与织物性能：织物行为从纤维化学与形态，经纱线构造、布面几何、整理、成衣组合、护理一直延伸到使用。仅凭厚度或纤维名称，无法预测舒适、防护、强度与耐久。试验必须匹配真正重要的传输过程、载荷、环境与生命周期。奈拉卖出的是两段相等的表面距离，山路暴露了这段距离内部的一切安排。"
+      ],
+      "conceptName": "Fibre structure and textile properties",
+      "conceptNameZh": "纤维结构与织物性能",
+      "explanationParagraphs": [
+        "Fibre structure and textile properties connect fibre chemistry and morphology with yarn construction, fabric geometry, finishes, garment assembly, care, and use. Performance emerges across these nested levels.",
+        "Thickness or fibre name alone cannot predict transport, comfort, strength, protection, or durability. Tests must match relevant loads, environments, interfaces, and service cycles."
+      ],
+      "explanationParagraphsZh": [
+        "纤维结构与织物性能把纤维化学与形态，同纱线构造、织物几何、整理、成衣组合、护理与使用联系起来。表现从这些嵌套层次共同产生。",
+        "厚度或纤维名称无法单独预测传输、舒适、强度、防护或耐久。试验必须匹配相关载荷、环境、界面与使用循环。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0723-grain-and-pattern-alignment",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0723",
+      "fieldTitle": "Textiles clothes footwear and leather",
+      "fieldTitleZh": "纺织：服装、鞋类与皮革",
+      "title": "The Coat That Kept Turning Left",
+      "titleZh": "总向左转的外套",
+      "summary": "A perfectly sewn coat twists after hanging and washing because its pattern pieces ignored warp, weft, bias, nap, checks, and relaxation.",
+      "summaryZh": "一件缝制工整的外套在悬挂与洗涤后扭转，因为纸样忽略了经纬、斜向、绒向、格纹与松弛。",
+      "storyParagraphs": [
+        "Tailor Sela nested a coat pattern as tightly as possible across an expensive checked cloth. Every piece fit on the table, and almost no fabric remained. On the mannequin, the left front edge curled inward, one sleeve rotated toward the thumb, and the checks climbed uphill across the pocket. Sela resewed each seam with exquisite precision. By morning the coat had turned left again. The stitches were straight; the pieces had been asking the cloth to hang in conflicting directions.",
+        "Pattern cutter Iva found the selvages and pulled a thread to reveal the warp and weft. Warp yarns ran along the roll under one history of tension; weft yarns crossed them with another. Along these axes the fabric stretched and recovered differently. At roughly diagonal directions, shear between yarns allowed greater deformation and fluid drape. Sela had rotated one front panel to save a narrow strip, placing it off the intended line while its partner remained straight.",
+        "The checks exposed a second error. Matching required more than placing two coloured squares together at the cutting edge. The pattern had to continue across seams, pockets, lapels, and the body's curved volume, with seam allowance and ease included. A brushed surface also had a one-way nap that changed colour and friction when reversed. Under shop light the panels looked like the same blue; outdoors one side appeared darker and caught dust in the opposite direction.",
+        "Iva relaxed the roll before cutting and measured shrinkage after the intended wash and press. Finishing tension had held the cloth in a temporary shape, so pieces cut immediately changed after release. She marked each paper piece with a reference line, direction, matching notch, nap instruction, and balance point. During assembly she prevented one seam from feeding faster than its partner and let the half-made coat hang before final hemming.",
+        "A dancer then requested a gown that flowed on the diagonal. Iva did not ban the bias; she used it deliberately, supported areas that could grow, and allowed time for hanging before levelling the hem. Direction was a design variable, not a superstition. Digital nesting still had to respect it, and matching large motifs increased fabric use. The workshop priced that waste honestly instead of hiding distortion inside the finished garment.",
+        "The stubborn coat taught grain and pattern alignment: pattern pieces must be oriented and matched to the fabric's structural directions, stretch, drape, nap, motif, relaxation, and expected care so the assembled garment hangs and moves as intended. Warp, weft, and bias are not interchangeable, while deliberate off-grain cutting requires its own control. Sela's first layout had been efficient on a flat table. The body revealed that cloth remembers directions the paper can ignore but cannot repeal."
+      ],
+      "storyParagraphsZh": [
+        "裁缝塞拉把外套纸样尽可能紧密地排在昂贵格纹布上。每一片都放得下，桌上几乎没有余料。穿到人台后，左前襟向内卷，一只袖子朝拇指扭转，口袋上的格线还一路爬坡。塞拉用极精确的针脚重缝每条缝，第二天早晨外套仍再次向左转。针脚是直的，各片却要求布料朝彼此冲突的方向垂落。",
+        "打版师伊瓦找到布边，抽出一根线来显出经纬。经纱沿布卷延伸，经历一种张力历史；纬纱横向交织，经历另一种。布料沿两条轴的伸展与回弹不同，接近斜向时，纱线间剪切允许更大变形与流动垂坠。塞拉为了省下一条窄布，把一片前身旋转离开应有方向，另一片仍保持正直。",
+        "格纹暴露了第二处错误。对格不只是让裁剪边上的两个色块相遇；图案要跨过缝线、口袋、翻领与身体曲面继续，还要计入缝份与松量。起绒表面另有单向绒向，反转后颜色与摩擦都会改变。在店内灯下，两片看似同一种蓝，拿到户外，一侧更暗，灰尘也朝相反方向附着。",
+        "伊瓦在裁剪前让整卷布松弛，并按预定洗涤与熨烫测量缩水。整理张力曾把布暂时固定在一种形状里，立即裁下的片会在释放后变化。她给每片纸样标出基准线、方向、对花剪口、绒向指示与平衡点。缝制时，她避免一侧比另一侧送布更快，并让半成品先悬挂，再确定最终下摆。",
+        "一名舞者随后要求长裙沿斜向流动。伊瓦没有禁止斜裁，而是有意使用它，支撑可能延伸的部位，并在裙摆找平前留出悬挂时间。方向是设计变量，不是迷信。数字排料仍要尊重它，大型图案对花也会增加用布。工坊如实计算这些余料，不再把变形藏进成衣。",
+        "这件顽固外套教授的是纹理与版型对齐：纸样必须依照织物结构方向、伸展、垂坠、绒向、图案、松弛和预期护理来定向与匹配，成衣才能按预期垂落和运动。经、纬与斜向不能随意互换，有意偏离纹理也需要专门控制。塞拉第一版排料在平桌上很高效，身体却揭示布会记住纸张可以忽略、却无法废除的方向。"
+      ],
+      "conceptName": "Grain and pattern alignment",
+      "conceptNameZh": "纹理与版型对齐",
+      "explanationParagraphs": [
+        "Grain and pattern alignment orients garment pieces to warp, weft, bias, stretch, drape, nap, motifs, and reference marks so the assembled product hangs, moves, and appears as intended.",
+        "Fabric relaxation, shrinkage, seam feeding, curved geometry, matching, and care conditions matter. Bias cutting can be deliberate, but it requires support and allowance for directional deformation."
+      ],
+      "explanationParagraphsZh": [
+        "纹理与版型对齐让成衣裁片依照经、纬、斜向、伸展、垂坠、绒向、图案与基准标记定向，使组合后按预期垂落、运动与呈现。",
+        "织物松弛、缩水、缝线送布、曲面几何、对花与护理条件都重要。斜裁可以是有意设计，但要为方向变形提供支撑与余量。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0723-supply-chain-traceability",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0723",
+      "fieldTitle": "Textiles clothes footwear and leather",
+      "fieldTitleZh": "纺织：服装、鞋类与皮革",
+      "title": "The Red Thread with Three Birthplaces",
+      "titleZh": "拥有三个出生地的红线",
+      "summary": "A dye complaint cannot be traced because receipts name suppliers but fail to preserve lot identity through mixing, transformation, custody, and claims.",
+      "summaryZh": "一次染料投诉无法追查，因为收据虽写着供应商，却没有在混合、转化、交接与声明中保存批次身份。",
+      "storyParagraphs": [
+        "Cloth house Arin sold a red ceremonial coat with a certificate naming one responsible dye workshop. When river inspectors found a prohibited colourant in a shipment, Arin opened his ledgers. The yarn merchant had bought from three spinners; two had blended fibres from several farms; the dye house had topped one vat with leftover liquor from the previous lot. Every receipt named a company, yet the red thread now appeared to have three birthplaces and no recoverable path between them.",
+        "Auditor Sera assigned unique lot identities at each custody event. Incoming material, storage bin, machine run, rework, output, shipment, and customer order were linked by time and quantity. When lots mixed, the record created a new identity and preserved its parent proportions rather than choosing the most attractive parent for the label. Physical segregation supported one kind of claim; controlled mass balance supported another; certificates traded without matching material described a third, non-physical claim model and could not be presented as physical origin. Sera required the public wording to state which chain-of-custody model it actually used.",
+        "The first digital system still failed. Operators scanned a label once, then moved yarn into an unmarked trolley. A perfect database faithfully preserved the wrong location. Sera reconciled input, output, waste, yield, and inventory, investigated impossible volumes, and sampled high-risk claims. She mapped transformations beyond direct suppliers because a finished mill could not answer for dye precursors or farms it had never identified. Audits tested controls, but a scheduled visit alone could not prove every daily entry true.",
+        "A second shipment contained colourant from the suspect vat. This time Arin isolated twelve rolls instead of recalling every red fabric sold that year. Customers were notified with the affected order numbers, and unaffected mills continued operating. The record made response narrower and faster. It did not by itself prove that workers were treated fairly, water was clean, or every certificate was honest; those questions needed standards, evidence, grievance channels, testing, and enforcement in addition to a path.",
+        "Sera limited personal data, protected commercial information, controlled access, and kept records long enough for the relevant risk without building permanent surveillance. Small suppliers received simple tools and training rather than impossible paperwork. Contracts assigned who recorded transformations and who corrected errors. When an identifier broke, the lot entered quarantine instead of inheriting an unsupported origin. Trust came from recoverable evidence and consequences for gaps, not from adding more decorative seals.",
+        "The red thread required supply-chain traceability: the ability to identify and follow materials, products, transformations, custody, and relevant claims backward and forward through a defined chain. Reliable traceability needs identifiers, event records, links across mixing and conversion, quantity reconciliation, governance, verification, and claim-specific custody rules. It supports recalls, due diligence, and learning but does not automatically prove sustainability or ethics. Arin's old ledger listed names. Sera's system preserved the route by which one physical lot became another."
+      ],
+      "storyParagraphsZh": [
+        "布庄阿林售出一件红色礼服，证书只写着一家负责染坊。河道检查员在一批货里发现禁用着色剂后，阿林翻开账本。纱商从三家纺纱厂进货，其中两家混合多个农场的纤维，染坊又用上一批剩余染液补进新染缸。每张收据都有公司名称，这根红线却像拥有三个出生地，名字之间再也拼不出可恢复的路线。",
+        "审计员塞拉在每次交接中赋予唯一批次身份。进料、储仓、机台运行、返工、产出、发运与客户订单按时间和数量相连。批次混合时，记录建立新身份并保留各母批比例，而不是为标签挑一个最好看的母亲。实物隔离支撑一种声明，受控质量平衡支撑另一种；与实物不对应的证书交易描述的是第三种非实物声明模型，不能被说成物理来源。塞拉要求公开文字说明实际采用哪种监管链模型。",
+        "第一套数字系统仍然失败。操作员扫过一次标签，随后把纱移进没有标记的推车；完美数据库忠实保存了错误位置。塞拉核对投入、产出、废物、收率与库存，调查不可能的数量，并抽查高风险声明。她把转化路线画到直接供应商之外，因为成品厂无法替从未识别的染料前体或农场作答。审计能测试控制，预定的一次到访却不能证明每天每项输入都真实。",
+        "第二批货又含有可疑染缸的着色剂。这一次，阿林只隔离十二卷布，不必召回全年所有红布。客户收到受影响订单号，未涉事工厂继续运行。记录让响应更窄也更快。它本身并不能证明工人受到公平对待、水体清洁或所有证书诚实；这些问题还需要标准、证据、申诉渠道、检测与执法。",
+        "塞拉限制个人数据，保护商业信息，控制访问，并只按相关风险需要的期限保存记录，不把体系变成永久监视。小供应商得到简单工具与培训，而非无法完成的文书。合同写明谁记录转化、谁修正错误。标识一旦中断，批次便进入隔离，而不能自动继承未经支持的产地。信任来自可恢复证据与缺口后果，不来自更多装饰印章。",
+        "红线需要的是供应链可追溯性：在定义好的链条中，向前和向后识别并跟随材料、产品、转化、交接与相关声明的能力。可靠追溯需要标识、事件记录、混合与加工链接、数量核对、治理、验证，以及针对声明的监管链规则。它支持召回、尽职调查与学习，却不会自动证明可持续或合乎伦理。阿林旧账本列出名字，塞拉的体系保存了一批实物如何变成下一批的路线。"
+      ],
+      "conceptName": "Supply-chain traceability",
+      "conceptNameZh": "供应链可追溯性",
+      "explanationParagraphs": [
+        "Supply-chain traceability follows materials, products, transformations, custody, and relevant claims backward and forward through a defined chain using linked identities and event records.",
+        "Mixing, yield, inventory, custody models, verification, governance, privacy, and broken links must be managed. Traceability supports response and due diligence but does not by itself prove ethical or environmental performance."
+      ],
+      "explanationParagraphsZh": [
+        "供应链可追溯性利用相连身份与事件记录，在定义链条中向前和向后跟随材料、产品、转化、交接与相关声明。",
+        "混合、收率、库存、监管链模型、验证、治理、隐私与断链都要管理。追溯支持响应与尽职调查，却不能单独证明伦理或环境表现。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0724-cut-off-grade",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0724",
+      "fieldTitle": "Mining and extraction",
+      "fieldTitleZh": "采矿与开采",
+      "title": "The Stone That Changed Its Name at Noon",
+      "titleZh": "正午改变名字的石头",
+      "summary": "The same mineralised block moves between ore, stockpile, and waste as recovery, capacity, costs, prices, uncertainty, and obligations change.",
+      "summaryZh": "同一块含矿岩石会随回收率、能力、成本、价格、不确定性与义务变化，在矿石、堆存与废石之间移动。",
+      "storyParagraphs": [
+        "At the Aru mine, surveyor Nera painted valuable rock blue and waste rock white. She believed the mountain contained a natural border. One morning, a blue block was sent to the mill. At noon the mill lost a recovery circuit and could treat only half its normal feed; the planner redirected that same block to a stockpile. A week later, a metal-price fall placed it below the day's processing priority. The stone had not changed its mineral content, yet its operational name changed three times.",
+        "Mine planner Ivo began with assays but did not stop there. Grade described concentration, while saleable output also depended on mineralogy, liberation, recovery, dilution, moisture, payable terms, and penalties. He estimated revenue from recovered product, then subtracted incremental mining, hauling, processing, handling, and selling costs appropriate to the decision. Sunk expenditure did not become a reason to process a loss-making tonne, and an average mine-wide cost could hide the consequence of one additional block.",
+        "The mill had limited hours. Feeding a marginal block could displace a richer block that produced more value through the bottleneck, so capacity carried an opportunity cost. Processing only the richest material raised early cash but could strand lower-grade zones, distort blending, shorten mine life, and violate a plan built around later access. Ivo therefore connected the threshold to sequence, plant constraints, blending requirements, contracts, and the value of waiting rather than ranking rocks by grade alone.",
+        "Drill samples were sparse and the orebody varied between them. Nera modelled uncertainty instead of drawing a perfectly sharp surface. Selective mining introduced dilution when surrounding material entered the load and ore loss when valuable fragments were left behind. Stockpiles preserved options but created rehandling cost, oxidation, mixing, and imperfect identity. Reconciliation between model, mined tonnes, plant feed, recovery, and product taught the team where assumptions were drifting.",
+        "Environmental controls, water management, worker safety, closure, rehabilitation, royalties, and binding permit conditions entered the plan rather than remaining an unpaid appendix. Some obligations applied regardless of a block's short-term margin. Price and technology scenarios changed future choices, so Ivo documented each assumption and tested sensitivity instead of presenting one permanent boundary. A mineral resource in the ground was not automatically an economically mineable reserve.",
+        "The shifting paint line represented cut-off grade: a decision threshold used to separate material for processing, stockpiling, alternative treatment, or waste under stated technical, economic, operational, environmental, and regulatory assumptions. Grade matters, but recovery, costs, capacity, sequence, uncertainty, dilution, prices, obligations, and opportunity cost can move the threshold. It is a planning rule, not a geological law, and it can change with the decision context. The stone remained the same at noon. The system deciding what to do with it did not."
+      ],
+      "storyParagraphsZh": [
+        "阿鲁矿山里，测量员奈拉把有价值岩石涂成蓝色，废石涂成白色。她相信山体内部存在一条天然边界。一天早晨，一块蓝色岩石被送往选厂；正午，选厂一套回收回路故障，只能处理平时一半进料，计划员把同一块岩石转去堆场。一周后，金属价格下跌，它又低于当天处理优先级。石头的矿物含量没有改变，运行中的名字却换了三次。",
+        "矿山计划师伊沃从化验品位开始，却不在那里停下。品位描述浓度，可售产出还取决于矿物学、解离、回收率、贫化、水分、计价条款与罚金。他估算回收产品收入，再扣除与该项决策相关的增量采掘、运输、处理、装卸与销售成本。已经花掉的钱不能成为继续处理亏损吨位的理由，全矿平均成本也可能掩盖新增一块岩石的后果。",
+        "选厂工时有限。让一块边缘岩石进入，可能挤掉通过同一瓶颈能创造更多价值的高品位岩石，因此能力本身带有机会成本。只采最富部分能提高早期现金，却可能把较低品位区困在原地，破坏配矿，缩短矿山寿命，还违背围绕后续通道制定的计划。伊沃把阈值同开采顺序、工厂约束、配矿要求、合同与等待价值连接起来，不再只按品位排行。",
+        "钻孔样本稀疏，矿体在样本之间不断变化。奈拉建模不确定性，而不是画出一张完美锐利的界面。选择性开采会因周边材料混入造成贫化，也会因有价碎块留下造成矿石损失。堆存保留选择，却带来二次搬运、氧化、混合与身份误差。模型、实际采量、进厂料、回收与产品之间的核对，让团队看见假设在哪里漂移。",
+        "环境控制、水管理、工人安全、闭矿、修复、权利金与有约束力的许可条件进入计划，不再留作无人付费的附录。有些义务不因一块岩石短期利润而消失。价格与技术情景会改变未来选择，伊沃于是记录每项假设并测试敏感性，不把一条边界说成永久不变。地下矿产资源也不自动等于经济上可采的储量。",
+        "这条移动的涂漆线代表边界品位：在说明技术、经济、运行、环境与法规假设后，用来区分材料应进入处理、堆存、替代工艺还是废弃的决策阈值。品位重要，回收、成本、能力、顺序、不确定性、贫化、价格、义务与机会成本都能移动阈值。它是计划规则，不是地质定律，也会随决策情境改变。正午的石头仍是同一块，决定如何处置它的体系却已不同。"
+      ],
+      "conceptName": "Cut-off grade",
+      "conceptNameZh": "边界品位",
+      "explanationParagraphs": [
+        "Cut-off grade is a decision threshold for routing material to processing, stockpiling, another treatment, or waste under stated assumptions. It is not a natural geological boundary.",
+        "Recovery, mineralogy, costs, capacity, sequence, opportunity cost, prices, dilution, uncertainty, environmental duties, and regulations affect the threshold. Resource classification and operational decisions therefore change with context."
+      ],
+      "explanationParagraphsZh": [
+        "边界品位是在规定假设下，把材料分配到处理、堆存、其他工艺或废弃路线的决策阈值，并非天然地质界线。",
+        "回收、矿物学、成本、能力、顺序、机会成本、价格、贫化、不确定性、环境义务与法规都会影响阈值，因此资源分类与运行决策会随情境改变。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0724-extraction-externalities",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0724",
+      "fieldTitle": "Mining and extraction",
+      "fieldTitleZh": "采矿与开采",
+      "title": "The Profit That Floated Downstream",
+      "titleZh": "顺流而下的利润",
+      "summary": "A profitable mine leaves sediment, road damage, noise, water risk, and closure burdens on people who never appear in its sales ledger.",
+      "summaryZh": "一座盈利矿山把泥沙、道路损坏、噪声、水风险与闭矿负担留给从未出现在销售账本中的人。",
+      "storyParagraphs": [
+        "The mountain mine sold enough copper to report a handsome profit. Director Daro pointed to wages, taxes, and export receipts as proof that every gain had been counted. After the first wet season, silt settled in downstream irrigation channels. Farmers spent days clearing them, fishers travelled farther, and a village repaired a road broken by ore trucks. None of those entries appeared beside the copper revenue. The mine's clean ledger depended on several dirtier ledgers being kept elsewhere.",
+        "Environmental economist Sera first refused an easy accusation. She established water, dust, noise, traffic, health, and livelihood baselines; mapped other sources; and placed monitors upstream, downstream, and through time. Rainfall and natural erosion also moved sediment. Causal attribution required evidence, not the convenience of blaming the largest machine in sight. Yet uncertainty did not justify treating visible burdens as zero, especially where pathways, timing, and affected groups were credible.",
+        "Engineers changed drainage, stabilised exposed ground, covered loads, treated water, altered blasting schedules, and maintained shared roads. Permits, fees, bonds, liability, insurance, and compensation shifted part of the burden back toward the decision that created it. Community representatives helped define what should be measured and how complaints triggered investigation. Prevention often cost less than repairing dispersed harm after it travelled through a river or a generation.",
+        "Daro proposed paying every impact in money. Sera objected that some losses were difficult to price, unevenly distributed, irreversible, or tied to rights rather than preferences. People also differed in their capacity to avoid harm or recover from it. An average compensation figure could leave one household protected and another without safe water. Children and future residents could not bargain at the opening meeting. Decision records therefore showed who gained, who bore residual risk, which limits could not be traded away, and what uncertainty remained.",
+        "The mine then purchased electricity from a distant coal plant and sent concentrate through another valley. Moving a polluting step outside the permit boundary did not remove its consequence. Sera examined supply chains, cumulative effects with neighbouring projects, closure, tailings stewardship, and conditions after revenue ended. Monitoring data and financial assurance remained available beyond the last shipment. Benefits mattered, but they did not cancel harms by being written in a different column.",
+        "The unshared ledgers exposed extraction externalities: costs or benefits from extraction that affect people, ecosystems, places, or future periods without being fully reflected in the extractor's transactions and decisions. Baselines, causal evidence, participation, prevention, regulation, liability, pricing, compensation, and long-term stewardship can make some effects visible and shift responsibility, but not every value is safely monetised. Daro's mine had earned a profit. The downstream work showed how much of that profit had been calculated after part of the bill was handed to strangers."
+      ],
+      "storyParagraphsZh": [
+        "山中矿场卖出足够铜，报告出漂亮利润。主管达罗指着工资、税收与出口收入，声称所有收益都已算清。第一个雨季后，泥沙沉进下游灌溉渠，农民花数日清理，渔民要走得更远，村庄还修补被矿车压坏的道路。这些项目没有一项列在铜收入旁边。矿山整洁的账本，依靠几本更肮脏的账被放在别处。",
+        "环境经济学家塞拉首先拒绝轻易指控。她建立水、粉尘、噪声、交通、健康与生计基线，绘制其他来源，并沿上下游与时间布设监测。降雨和自然侵蚀也会搬运泥沙，因果归属需要证据，不能只怪视野中最大的机器。但不确定性也不能成为把可见负担记作零的理由，尤其当路径、时序和受影响群体都有可信证据时。",
+        "工程师改变排水、稳定裸露地面、遮盖运输、处理水体、调整爆破时段并维护共用道路。许可、费用、保证金、责任、保险与补偿，把部分负担移回制造它的决策。社区代表参与决定测什么，以及投诉怎样触发调查。危害还未沿河流或一代人扩散前进行预防，往往比事后修复便宜。",
+        "达罗提议给每项影响都标上钱数。塞拉反对，因为有些损失难以定价、分布不均、不可逆，或关乎权利而非偏好；不同人避免伤害或从中恢复的能力也不同。一个平均补偿数可以让一户受到保护，却让另一户失去安全用水。儿童与未来居民也无法在开工会议上讨价还价。因此，决策记录要说明谁获益、谁承受剩余风险、哪些底线不能交易，以及仍有什么不确定。",
+        "矿山随后从远方煤电厂买电，又把精矿送过另一条山谷。把污染步骤移出许可证边界，不会消除其后果。塞拉检查供应链、与邻近项目的累积影响、闭矿、尾矿长期管理，以及收入停止后的条件。监测数据与财务保障一直保留到最后一船货之后。收益当然重要，却不能因为写在另一栏就抵消伤害。",
+        "这些没有共享的账本暴露的是开采外部性：开采造成的成本或收益影响他人、生态、地点或未来时期，却没有被开采者的交易与决策充分反映。基线、因果证据、参与、预防、监管、责任、定价、补偿与长期管理，能让部分影响显形并移动责任，但并非所有价值都适合货币化。达罗的矿确实赚了钱，下游劳动则显示，这份利润有多少是在把部分账单交给陌生人以后算出的。"
+      ],
+      "conceptName": "Extraction externalities",
+      "conceptNameZh": "开采外部性",
+      "explanationParagraphs": [
+        "Extraction externalities are costs or benefits imposed by extraction on other people, ecosystems, places, or future periods without being fully reflected in the extractor's transactions and choices.",
+        "Evidence, baselines, participation, prevention, regulation, liability, compensation, financial assurance, and stewardship can internalise or govern some effects. Distribution, rights, irreversibility, uncertainty, and non-monetary values still matter."
+      ],
+      "explanationParagraphsZh": [
+        "开采外部性是开采给其他人、生态、地点或未来时期带来的成本或收益，却未被开采者的交易与选择充分反映。",
+        "证据、基线、参与、预防、监管、责任、补偿、财务保障与长期管理可内化或治理部分影响，分布、权利、不可逆性、不确定性与非货币价值仍然重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0724-geotechnical-risk",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0724",
+      "fieldTitle": "Mining and extraction",
+      "fieldTitleZh": "采矿与开采",
+      "title": "The Cracks That Met Beneath the Rain",
+      "titleZh": "在雨水下面相遇的裂缝",
+      "summary": "Familiar cracks become dangerous when rainfall raises groundwater pressure and links discontinuities into a potential failure surface above an exposed haul road.",
+      "summaryZh": "雨水抬高地下水压力，把熟悉裂隙连成潜在滑面，而下方运输道路又处在暴露位置，危险由此改变。",
+      "storyParagraphs": [
+        "For years, miners stepped over three narrow cracks on the upper bench. Each ended within a few metres, and none had visibly widened. After five days of rain, a survey prism moved slightly before dawn. Water seeped from a joint that had always looked dry, and small stones reached the haul road below. Shift boss Arin called the signs familiar and wanted trucks to continue. Geologist Mira closed the road. By noon, a slab had moved into the empty lane without becoming the catastrophe routine had invited.",
+        "Mira mapped bedding, joints, faults, weathered zones, bench geometry, and previous excavation. Separate marks at the surface could connect beneath it into a larger sliding or toppling mechanism. Rock strength alone did not govern the slope; discontinuity orientation, persistence, roughness, infill, confinement, and groundwater changed which blocks could move. Rain raised pore pressure and reduced effective resistance along some surfaces, while erosion or blasting could remove support at the toe.",
+        "The team separated hazard from exposure and consequence. A possible rock movement above an unused valley did not create the same risk as the same movement above a staffed road, fuel line, or settlement. Probability remained uncertain, so Mira used geological models, analysis, back-analysis, inspections, and independent review rather than one precise-looking number. Conservative assumptions reflected data quality and consequence, but excessive confidence could hide on either side of a calculated safety margin.",
+        "The first alarm threshold depended on one prism. Heat shimmer and a loose mount produced false movement, and crews began distrusting alerts. Mira combined survey points with crack measurements, groundwater pressure, drainage flow, visual inspections, and remote sensing where appropriate. Instruments had known ranges, accuracy, maintenance, and failure modes. A flat surface reading could not rule out movement at depth, and stable movement rate did not guarantee that acceleration would never begin.",
+        "Before the next storm, managers agreed trigger levels and actions: increase observation, restrict access, stop work, evacuate, inspect drainage, and obtain competent review. Authority to close the road was assigned before production pressure arrived. Controls included water management, geometry changes, support, exclusion zones, and emergency routes selected through site-specific design. Temporary excavation stages and post-closure slopes received attention because the ground did not recognise the date on a project schedule.",
+        "The rain exposed geotechnical risk: the combination of uncertain ground or rock failure mechanisms, their likelihood, the people and assets exposed, and the consequences if movement occurs. Geology, geometry, groundwater, excavation, time, monitoring, controls, and human decisions interact. No single crack, instrument, or factor proves safety; qualified assessment and pre-agreed action manage changing evidence. Arin had seen three old marks. Mira saw the possibility that water could make them one surface and place a road beneath its answer."
+      ],
+      "storyParagraphsZh": [
+        "多年来，矿工每天跨过上部台阶的三条窄裂缝。每条都在几米内结束，也没有明显变宽。连续下雨五天后，天亮前一只测量棱镜轻微位移，一条从来干燥的节理开始渗水，小石块滚到下方运输道路。班长阿林说这些迹象都很熟悉，想让卡车继续。地质师米拉关闭道路。正午，一块岩体滑进空车道，没有变成日常惯性原本会邀请来的灾难。",
+        "米拉绘制层理、节理、断层、风化带、台阶几何与以往开挖。地表彼此分开的痕迹，可能在地下连成更大的滑动或倾倒机制。边坡不只由岩石强度控制；不连续面的方向、延续、粗糙、填充、约束与地下水都会改变哪些岩块能动。雨水抬高孔隙压力，降低某些表面的有效阻力，侵蚀或爆破还可能移走坡脚支撑。",
+        "团队把危险源、暴露与后果分开。同一种岩体运动发生在无人山谷上方，与发生在有人道路、燃料管线或居民点上方，不是同一风险。概率仍有不确定，米拉因此结合地质模型、分析、反分析、检查与独立复核，而不迷信一个看似精确的数字。保守假设要对应数据质量与后果，但过度自信也可能藏在计算安全裕度的任一侧。",
+        "第一套警报阈值只依赖一只棱镜。热扰动与松动支架制造虚假位移，工人逐渐不信警报。米拉把测点与裂缝量测、地下水压力、排水流量、目视检查及适用的遥感结合。每件仪器都有已知量程、精度、维护与失效方式。地表读数平坦不能排除深部移动，稳定移动速度也不能保证永不开始加速。",
+        "下一场风暴前，管理者预先约定触发级别与行动：增加观察、限制进入、停工、撤离、检查排水，并取得合格专业复核。关闭道路的权力在产量压力到来前就已分配。控制措施包括经场地专门设计的水管理、几何调整、支护、隔离区与应急路线。临时开挖阶段和闭矿后边坡同样受到关注，因为地面不认识项目日程上的日期。",
+        "雨水暴露的是岩土工程风险：不确定的土体或岩体失效机制、发生可能、暴露的人与资产，以及运动发生后果的组合。地质、几何、地下水、开挖、时间、监测、控制与人的决定相互作用。没有一条裂缝、一件仪器或一个系数能证明安全；合格评估与预先约定行动用来管理变化中的证据。阿林看见三条旧痕，米拉看见水可能让它们合成一个表面，并把道路放在答案下面。"
+      ],
+      "conceptName": "Geotechnical risk",
+      "conceptNameZh": "岩土工程风险",
+      "explanationParagraphs": [
+        "Geotechnical risk combines uncertain ground or rock failure mechanisms and likelihood with exposure and consequences. It changes as water, excavation, loading, deterioration, and use change.",
+        "Site investigation, modelling, monitoring, independent review, controls, trigger-action plans, and competent decisions reduce and manage risk. No single instrument reading or safety factor proves a slope safe."
+      ],
+      "explanationParagraphsZh": [
+        "岩土工程风险把不确定的土体或岩体失效机制与发生可能，同暴露和后果组合起来，并随水、开挖、荷载、劣化与使用改变。",
+        "场地调查、建模、监测、独立复核、控制、触发行动计划与合格决策用于降低和管理风险。单一仪器读数或安全系数不能证明边坡安全。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0731-human-scale",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0731",
+      "fieldTitle": "Architecture and town planning",
+      "fieldTitleZh": "建筑学与城市规划",
+      "title": "The Square Everyone Crossed Quickly",
+      "titleZh": "人人都加快脚步的广场",
+      "summary": "A monumental square succeeds in aerial drawings but fails at walking speed until distance, edges, shelter, sensory detail, access, and varied bodies shape its ground level.",
+      "summaryZh": "一座纪念性广场在鸟瞰图上成功，却在步行速度下失败，直到距离、边缘、遮蔽、感官细节、通达与不同身体共同塑造地面。",
+      "storyParagraphs": [
+        "Mayor Oren opened a stone square wide enough to frame the council tower from every avenue. In the aerial drawing it looked calm and magnificent. At noon, pedestrians crossed it diagonally without stopping. Elderly residents followed the shaded wall, children played behind delivery carts, and café chairs remained empty in the wind. Oren blamed people for lacking civic pride. Architect Mira noticed that the square was admired from windows and endured at ground level.",
+        "Mira walked it at several speeds and hours. The next doorway was far away; blank façades offered no reason to slow; the centre had neither shade nor shelter; benches faced traffic with no protected back. At eye level, the tower disappeared above the field of view while the nearest experience was glare, paving joints, and a cold gust. Distance on a plan became time and effort in a body. Edges, thresholds, sounds, surfaces, and visible activity shaped whether that effort felt invited or exposed.",
+        "For a month, Mira used movable chairs, trees in containers, market awnings, drinking water, a raised crossing, and small vendor fronts. People gathered where several conditions overlapped, then shifted when afternoon shade moved. Mira counted dwell time and return visits rather than only crossings. A single sculpture in the centre drew photographs but did not sustain daily use. The temporary pieces created shorter visual intervals, choices of refuge and prospect, and reasons to return without dividing the square into decorative fenced rooms.",
+        "The first redesign placed identical benches at mathematically equal spacing. Wheelchair users found some routes too steep, children could not reach the fountain controls, and people with low vision lost the edge where paving colours lacked contrast. Mira widened the question beyond an imagined average adult. Reach, pace, balance, sensory ability, age, culture, climate, crowding, and whether someone carried goods or cared for another person changed the useful dimensions.",
+        "Large space itself was not the enemy. Ceremonies needed assembly, sightlines, and clear movement; markets needed services and loading; ordinary afternoons needed shade, frontage, seating, toilets, crossings, and maintenance. Mira nested smaller places within the civic whole and preserved flexible open ground. She observed behaviour after opening, including who never arrived, instead of treating one successful festival as proof of everyday life.",
+        "The changed square expressed human scale: shaping buildings and public space around how people perceive, move, reach, pause, meet, and feel conditions at bodily speed and distance. Proportion matters, but so do active edges, time, shelter, sensory detail, accessibility, climate, safety, and diverse bodies. It is not one universal measurement or a demand that every place be small. Oren's first square had made the tower legible to the city. Mira's changes made the ground legible to the people crossing it."
+      ],
+      "storyParagraphsZh": [
+        "市长奥伦启用一座石砌广场，从每条大道都能完整框住议会高塔。鸟瞰图上，它平静而宏伟。正午时，行人却斜穿广场，谁也不停；老人贴着阴影墙行走，孩子躲在送货车后玩，咖啡馆座椅在风里空着。奥伦责怪人们缺少公民自豪，建筑师米拉却发现，这座广场适合从窗内欣赏，只能在地面忍受。",
+        "米拉在不同时间以不同速度走过。下一道门很远，空白立面没有让人减速的理由，中心既无荫蔽也无遮风，长椅面向车流，背后毫无保护。站在眼睛高度，高塔消失在视野上方，最近的体验只剩眩光、铺地接缝与冷风。平面图上的距离进入身体后变成时间和力气；边缘、门槛、声音、表面与可见活动，决定这份力气像受到邀请还是暴露在外。",
+        "米拉用可移动座椅、盆栽树、市场篷布、饮水点、抬高过街与小型店面试验一个月。人们聚到多种条件重叠的位置，午后阴影移动时又跟着改变。米拉不只统计穿行人数，也记录停留时间与再次到访。一座中心雕塑吸引拍照，却无法维持日常生活。临时物件缩短视觉间隔，提供藏身与眺望的选择，也给人再来的理由，同时没有把广场切成带围栏的装饰小房间。",
+        "第一版改造按数学等距放置相同长椅。轮椅使用者发现部分坡道过陡，孩子够不到喷泉控制器，低视力者又因铺地颜色缺少对比而找不到边缘。米拉把问题扩展到想象中的平均成年人之外。伸手范围、步速、平衡、感官能力、年龄、文化、气候、拥挤，以及是否搬运物品或照料他人，都会改变有用尺寸。",
+        "大空间本身不是敌人。仪式需要集会、视线与清晰移动，市场需要服务与装卸，普通午后则需要阴影、临街活动、座椅、厕所、过街与维护。米拉在完整市民空间中嵌入较小场所，同时保留可灵活使用的开放地面。开放后她继续观察，包括谁从未出现，而不把一次成功节庆当成日常生命的证明。",
+        "改变后的广场体现的是人性尺度：按照人们在身体速度与距离中怎样感知、移动、伸手、停留、相遇和感受环境来塑造建筑与公共空间。比例重要，活跃边缘、时间、遮蔽、感官细节、无障碍、气候、安全与不同身体也同样重要。它不是一个普遍尺寸，也不要求所有地方都很小。奥伦的第一座广场让高塔对城市清晰可读，米拉的改变让脚下地面对穿行的人清晰可读。"
+      ],
+      "conceptName": "Human scale",
+      "conceptNameZh": "人性尺度",
+      "explanationParagraphs": [
+        "Human scale shapes built environments around how people perceive, move, reach, pause, interact, and experience conditions at bodily speed and distance.",
+        "Proportion combines with edges, time, shelter, sensory detail, accessibility, climate, safety, maintenance, and diverse bodies. It does not require every space to be small or assume one average person."
+      ],
+      "explanationParagraphsZh": [
+        "人性尺度依照人们在身体速度与距离中怎样感知、移动、伸手、停留、互动与体验环境来塑造建成空间。",
+        "比例还要同边缘、时间、遮蔽、感官细节、无障碍、气候、安全、维护与多样身体结合。它不要求每处空间都小，也不假设只有一种平均人。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0731-mixed-use-development",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0731",
+      "fieldTitle": "Architecture and town planning",
+      "fieldTitleZh": "建筑学与城市规划",
+      "title": "The District with Two Midnights",
+      "titleZh": "一天拥有两个午夜的新区",
+      "summary": "An office district empties after work and a housing enclave empties each morning until compatible daily uses, access, fine grain, and affordability share time and place.",
+      "summaryZh": "办公新区下班后空无一人，住宅片区每天早晨又变空，直到相容的日常用途、通达、细密街区与可负担性共享时间和地点。",
+      "storyParagraphs": [
+        "Planner Daro built a district of offices around one grand station. At eight each morning, trains emptied into the streets; at six, the crowd reversed and shutters fell. Restaurants queued at lunch and failed at dinner. Across the river, a housing enclave woke at night but had no nearby jobs, clinic, or grocer. Its residents boarded the same crowded trains in the opposite direction. The city had created two places that each experienced midnight for half the day.",
+        "Planner Sera introduced homes, workshops, shops, childcare, health services, schools, and public rooms near employment. She did not merely place coloured zones beside one another on a regional map. Door frequency, block size, ground-floor access, walking routes, transit, delivery space, and the distance between complementary activities determined whether daily trips actually shortened. Routes mattered in both directions. She mapped five-minute walking networks along real crossings and slopes instead of drawing perfect circles around destinations. A supermarket behind a six-lane road was technically nearby and practically distant.",
+        "The first residential tower above the entertainment street produced sleepless complaints. A metal workshop sent vibration through a shared slab; early deliveries blocked a school crossing; restaurant exhaust reached bedroom windows. Sera used separation, acoustic and ventilation design, operating agreements, service access, and careful placement for incompatible effects. Combining uses did not mean pretending every use could occupy every adjacency without engineering or governance.",
+        "Property values then rose around the lively streets. Older workshops and lower-income tenants were displaced, leaving an attractive mixture of expensive apartments and identical cafés. Sera added varied dwelling sizes, affordable space, secure tenure, adaptable small units, and support for ordinary services. A list of categories was insufficient if ownership, rent, floor plates, and regulation allowed only one customer and one business model to survive.",
+        "Over several years, the district's balance changed. Schools needed pupils, shops needed enough regular demand, transit needed frequency, and streets needed safe activity without constant surveillance. Uses that complemented one another in time also competed for kerb space, utilities, and public investment. Sera tracked travel, vacancies, noise, freight, service access, displacement, and use by hour. She preserved some flexible parcels because a fixed ratio copied from another city could not anticipate local demographics, culture, economy, or future work patterns.",
+        "The district learned mixed-use development: planning compatible residential, commercial, civic, productive, recreational, and service activities within buildings, blocks, or neighbourhoods in connected proximity so daily needs can share place and different times of use. Real mixture depends on fine-grained access, density, transit, public space, affordability, management, and protection from incompatible impacts, not just stacked labels. It can shorten trips and sustain street life but does not automatically create equity or safety. Daro had mixed commuters on trains. Sera worked to mix the reasons people could remain."
+      ],
+      "storyParagraphsZh": [
+        "规划师达罗围绕一座宏伟车站建成纯办公新区。每天早上八点，列车把人群倒进街道；下午六点，人潮反转，卷帘门落下。餐馆午间排队，晚餐时却无法维持。河对岸的住宅片区夜里醒来，附近却没有工作、诊所或杂货店，居民每天反向挤上同一批列车。城市造出两个地方，每个都在一天的一半时间经历午夜。",
+        "规划师塞拉把住宅、工坊、商店、托育、医疗、学校与公共房间引到就业附近。她不只在区域图上把不同颜色放在相邻地块。门的密度、街块大小、首层通达、步行路线、公共交通、送货空间，以及互补活动之间的距离，决定日常行程是否真的缩短；路线还必须双向可行。她沿真实过街与坡度绘制五分钟步行网络，而不是在目的地周围画完美圆圈。隔着六车道的超市，在技术上很近，在实际中却很远。",
+        "第一栋建在娱乐街上的住宅塔制造了整夜投诉。金属工坊把振动传过共用楼板，清晨送货堵住学校过街，餐馆排气飘进卧室窗户。塞拉用间距、声学与通风设计、运行协议、服务通道及谨慎布置处理不相容影响。组合用途并不意味着假装所有功能都能在任意邻接中相安无事，而无需工程或治理。",
+        "热闹街道周边地价随后上升。老工坊与低收入租户被挤走，只剩昂贵公寓和彼此相同的咖啡店，看似多样。塞拉加入不同面积住宅、可负担空间、稳定租约、可调整小单元，并支持普通生活服务。若所有权、租金、楼板尺度与规则只允许一种顾客和一种商业模式生存，一张用途清单仍然不够。",
+        "几年间，新区平衡持续变化。学校需要学生，商店需要稳定日常需求，公共交通需要班次，街道也要在不依赖持续监控下保持安全活动。时间上互补的用途仍会争夺路缘、公共设施与公共投资。塞拉按小时追踪出行、空置、噪声、货运、服务通达、迁移与使用。她保留一些灵活地块，因为从别城抄来的固定比例，无法预知本地人口、文化、经济与未来工作方式。",
+        "新区学会的是混合功能开发：在建筑、街块或社区尺度，让相容的居住、商业、公共、生产、休闲与服务活动处于连通的邻近范围，使日常需要共享地点，并覆盖不同时段。真正混合取决于细密通达、密度、交通、公共空间、可负担性、管理与隔离不相容影响，而非只把标签叠在一起。它可缩短行程并支撑街道生命，却不会自动创造公平或安全。达罗曾把通勤者混在列车里，塞拉努力混合的是人们能够留下的理由。"
+      ],
+      "conceptName": "Mixed-use development",
+      "conceptNameZh": "混合功能开发",
+      "explanationParagraphs": [
+        "Mixed-use development brings compatible residential, commercial, civic, productive, recreational, and service activities into connected proximity across different times of day.",
+        "Its effects depend on fine-grained access, density, transit, public space, affordability, governance, freight, and protection from incompatible impacts. A mixture of zoning labels alone does not guarantee lively, equitable, or safe places."
+      ],
+      "explanationParagraphsZh": [
+        "混合功能开发把相容的居住、商业、公共、生产、休闲与服务活动放进连通的邻近范围，并覆盖一天不同时段。",
+        "效果取决于细密通达、密度、交通、公共空间、可负担性、治理、货运与不相容影响控制。用途标签混合本身不保证活力、公平或安全。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0731-adaptive-reuse",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0731",
+      "fieldTitle": "Architecture and town planning",
+      "fieldTitleZh": "建筑学与城市规划",
+      "title": "The Warehouse That Refused to Sing",
+      "titleZh": "拒绝歌唱的旧仓库",
+      "summary": "A harbour warehouse cannot safely become the opera house drawn for it, but its existing grid, height, fabric, and history support a different public life.",
+      "summaryZh": "一座港口旧仓库无法安全成为图纸上的歌剧院，它既有的柱网、高度、材料与历史却能承接另一种公共生活。",
+      "storyParagraphs": [
+        "Mayor Lio selected an abandoned harbour warehouse for a new opera house. The brick shell looked dramatic beside the water, and the first rendering preserved every exterior wall. Inside, closely spaced columns blocked sightlines, the roof was too low for stage equipment, freight floors carried sound into every bay, and only one narrow stair reached the upper level. Lio ordered the architect to be more imaginative. The warehouse did not refuse culture; it refused to become a different geometry without consequence.",
+        "Architect Nera began with a measured survey, material tests, structural assessment, moisture mapping, archival research, and conversations with former workers and neighbours. She identified what carried loads, what could change, what held heritage value, and what had already deteriorated. Reusing brick and timber could preserve memory and avoid part of the material and carbon burden of replacement, but Nera compared retention, replacement, intervention, and future operation rather than assuming every saved wall produced a net benefit. Keeping an unsafe or contaminated element merely because it was old would not honour anyone.",
+        "The first scheme removed most columns and hung new balconies inside the shell. Temporary works, new foundations, lateral strengthening, acoustic isolation, fire separation, and services consumed the budget while leaving compromised views. The retained walls became a thin costume around an almost entirely new building. Nera showed that preservation measured only by façade area could destroy the spatial logic and material evidence that made the place worth keeping.",
+        "She asked what uses fit the warehouse's existing strengths. Its regular bays suited a market, workshops, rehearsal rooms, a library store, and a covered public hall. New rooms were inserted as reversible boxes that touched the old fabric lightly; a few openings improved circulation without erasing the grid. The city placed the opera programme on a site where height, acoustics, audience movement, and backstage access could be designed honestly.",
+        "The warehouse still required accessibility, fire and life safety, seismic and wind checks, healthy materials, ventilation, daylight, energy upgrades, drainage, and maintainable services under applicable rules. Nera planned phased work and monitored old walls as loads changed. She considered rents and governance so public investment did not simply remove the craftspeople whose activity had made the proposal attractive. New use had to remain viable after opening photographs faded.",
+        "The harbour chose adaptive reuse: giving an existing building or site a viable new use by working with its retained fabric, spatial logic, cultural value, condition, and constraints while meeting present needs and safety requirements. Reuse can preserve memory and embodied resources, but benefits depend on intervention, operation, displacement, and whether the new programme truly fits. It does not mean forcing every old shell to host any desired function. The warehouse never became an opera house. It began serving the city when the city finally listened to the kind of room it already was."
+      ],
+      "storyParagraphsZh": [
+        "市长利奥选中废弃港口仓库改建歌剧院。水边砖壳极具戏剧感，第一张效果图也保留了每一面外墙。进入内部，密集柱网挡住视线，屋顶低到容不下舞台设备，货运楼板把声音传遍每个跨间，上层又只有一座狭窄楼梯。利奥要求建筑师更有想象力。仓库并非拒绝文化，而是拒绝在毫无后果下变成另一种几何。",
+        "建筑师奈拉先做实测、材料试验、结构评估、湿度绘图与档案研究，并同老工人和邻居交谈。她辨认什么在承重、什么可以改变、什么具有遗产价值、什么已经劣化。复用砖木可以保存记忆，也避免部分拆建材料与碳负担；但奈拉会比较保留、替换、干预与未来运行，而不假定每一面留下的墙都必然产生净收益。只因一件构件古老就保留不安全或受污染的部分，并不尊重任何人。",
+        "第一版方案移除大部分柱子，再把新看台悬进砖壳。临时工程、新基础、侧向加固、声学隔离、防火分隔与机电服务耗尽预算，视线仍不理想。被保留的墙只剩套在几乎全新建筑外的薄服装。奈拉说明，若只按外立面面积衡量保护，反而会摧毁使这个地方值得保留的空间逻辑与材料证据。",
+        "她改问，什么用途真正适合仓库已有长处。规则柱跨适合市场、工坊、排练室、图书储藏与有顶公共大厅。新房间像可逆盒子轻触旧材料，少量开口改善流线，却不抹去柱网。城市把歌剧项目放到另一处，让高度、声学、观众移动与后台通达能够被诚实设计。",
+        "仓库仍必须依适用规则满足无障碍、消防与生命安全、抗震抗风、健康材料、通风采光、能源升级、排水及可维护机电。奈拉分阶段施工，并在荷载变化时监测旧墙。她也考虑租金与治理，避免公共投资把原本让提案有吸引力的工匠赶走。新用途必须在开幕照片褪色后仍能生存。",
+        "海港选择的是适应性再利用：在满足当代需求与安全要求时，顺着既有建筑或场地保留的材料、空间逻辑、文化价值、状况与约束，赋予它可持续的新用途。再利用可保存记忆与既有资源，实际收益却取决于干预、运行、迁移影响，以及新功能是否真正适合。它不表示任何旧壳都能被迫装下任何愿望。仓库从未成为歌剧院；当城市终于听见它本来是哪一种房间时，它开始以另一种方式服务城市。"
+      ],
+      "conceptName": "Adaptive reuse",
+      "conceptNameZh": "适应性再利用",
+      "explanationParagraphs": [
+        "Adaptive reuse gives an existing building or site a viable new use by working with retained fabric, spatial logic, cultural value, condition, and constraints while meeting current needs and safety requirements.",
+        "Potential benefits include preserved memory and embodied resources, but structural intervention, contaminants, accessibility, fire safety, operation, cost, displacement, and programme fit determine the outcome."
+      ],
+      "explanationParagraphsZh": [
+        "适应性再利用顺着既有建筑或场地保留的材料、空间逻辑、文化价值、状况与约束，在满足当前需求和安全要求下赋予可行新用途。",
+        "它可能保存记忆与既有资源，但结构干预、污染物、无障碍、消防、运行、成本、迁移影响与功能适配共同决定结果。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0732-load-path",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0732",
+      "fieldTitle": "Building and civil engineering",
+      "fieldTitleZh": "建筑与土木工程",
+      "title": "The Snow That Could Not Find the Ground",
+      "titleZh": "找不到大地的积雪",
+      "summary": "Strong roof members still fail when snow, wind, and uplift meet a missing connection between the deck, beam, wall, foundation, and soil.",
+      "summaryZh": "即使屋面构件各自坚固，积雪、风与上拔力遇到屋面、梁、墙、基础和土之间缺失的连接时，结构仍会失败。",
+      "storyParagraphs": [
+        "Builder Arin ordered roof beams twice as strong as the old code example. After the first heavy snow, none of the beams broke, yet one roof bay dropped several centimetres. A narrow ledger supporting their ends had pulled away from the wall because its fasteners were chosen for convenient installation, not the accumulated reaction. Arin had strengthened every visible span and overlooked the short metal pieces between them. The snow found strong rooms along its journey and one locked door.",
+        "Engineer Sera began at each square metre of roof. Snow pressed on cladding, then deck, secondary members, main beams, bearings, walls or columns, foundations, and finally soil. At every transfer she wrote the force, direction, eccentricity, and connection that carried it. Tributary areas gathered distributed weight into larger reactions downstream. A component with ample bending capacity could still lose support through shear, bearing, buckling, punching, anchor pull-out, or foundation failure.",
+        "Wind asked for a different route. Suction pulled roof panels upward, a diaphragm collected horizontal forces, and collectors delivered them to braced frames or shear walls before anchors and foundations resisted overturning and sliding. An opening cut for a new duct interrupted the diaphragm near its collector. The roof remained capable of carrying gravity while its lateral route had been severed. Sera designed continuity for each governing direction and combination rather than drawing one downward arrow for every hazard.",
+        "During construction, temporary shores and incomplete bracing changed the routes again. A beam stable in the finished frame twisted before the slab cured; stacked materials loaded an area never intended as storage. Years later, a contractor removed a wall called non-structural without checking that it supported a façade tie. Sera required temporary works, changes, penetrations, and sequence to be reviewed because forces used whatever structure existed at that moment, not the final drawing in the office.",
+        "She detailed connections with compatible stiffness, deformation capacity, durability, fire protection, access, and inspectability. Alternate routes could limit disproportionate collapse after local damage, but redundancy also needed continuity and capacity where forces redistributed. Field inspection checked actual fasteners, welds, reinforcement, anchors, bearing lengths, and soil preparation. A calculation could not carry force across a connection that had never been installed.",
+        "The sagging bay revealed the load path: the continuous route by which gravity, environmental, imposed, and accidental actions pass through structural elements and connections into supports and the ground. Every transfer must have adequate strength, stiffness, stability, ductility, durability, and compatible detailing for relevant directions, stages, and failure modes. A missing link can govern an assembly of strong parts. Arin had bought enough resistance for the snow at every long beam. Sera showed him the complete route the snow needed in order to reach the earth."
+      ],
+      "storyParagraphsZh": [
+        "建造师阿林订购了比旧规范示例强一倍的屋面梁。第一场大雪后，没有一根梁折断，一跨屋面却下沉数厘米。支撑梁端的窄托板从墙上拔开，因为紧固件按安装方便选择，而不是按汇集反力设计。阿林加强了每段看得见的跨度，却漏掉它们之间的短小金属件。积雪一路遇见许多坚固房间，最后撞上一扇锁住的门。",
+        "工程师塞拉从每平方米屋面开始。雪先压在面层，再经过屋面板、次构件、主梁、支座、墙或柱、基础，最终到达土体。每次传递，她都写下承载它的力、方向、偏心与连接。分担面积把分布重量逐级汇成更大的下游反力。一个抗弯充分的构件，仍可能因剪切、承压、屈曲、冲切、锚栓拔出或地基失效而失去支撑。",
+        "风要求另一条路线。负压向上拉屋面板，楼盖或屋面水平构件汇集水平力，集力构件再把它送往支撑框架或剪力墙，最后由锚固与基础抵抗倾覆和滑移。一处新风管开洞恰好切断靠近集力构件的连续面。屋顶仍能承受重力，侧向路线却已中断。塞拉为每个控制方向与组合建立连续性，不用一支向下箭头解释所有危险。",
+        "施工期间，临时支撑与未完成支撑体系又改变路线。完工框架中稳定的梁，在楼板硬化前发生扭转；堆放材料压在从未设计作仓储的区域。多年后，承包商拆掉一面所谓非承重墙，却没有检查它还固定着外墙拉结。塞拉要求审查临时工程、改动、开洞与顺序，因为力只会使用当时真正存在的结构，不会使用办公室里的最终图纸。",
+        "她让连接拥有相容的刚度、变形能力、耐久、防火、可接近与可检查性。局部损伤后，替代路线可限制不成比例倒塌，但冗余也要求重新分配力的路径连续且有能力。现场检查真实紧固件、焊缝、钢筋、锚固、支承长度与地基处理。计算无法让力穿过一处从未安装的连接。",
+        "下沉屋面揭示的是荷载路径：重力、环境、使用与偶然作用通过结构构件和连接，传到支座与大地的连续路线。每次传递都要在相关方向、阶段与失效方式下具备足够强度、刚度、稳定、延性、耐久与相容构造。一处断链可以控制一整套强构件。阿林为积雪经过的每根长梁买够了抗力，塞拉则让他看见积雪抵达大地所需的完整路线。"
+      ],
+      "conceptName": "Load path",
+      "conceptNameZh": "荷载路径",
+      "explanationParagraphs": [
+        "A load path is the continuous route by which gravity, environmental, imposed, and accidental actions pass through structural elements and connections into supports and the ground.",
+        "Each transfer must address strength, stiffness, stability, ductility, durability, directions, combinations, construction stages, and failure modes. Strong components cannot compensate for a missing or incompatible connection."
+      ],
+      "explanationParagraphsZh": [
+        "荷载路径是重力、环境、使用与偶然作用通过结构构件和连接，传到支座与大地的连续路线。",
+        "每次传递都要处理强度、刚度、稳定、延性、耐久、方向、组合、施工阶段与失效方式。强构件无法补偿缺失或不相容的连接。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0732-factor-of-safety",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0732",
+      "fieldTitle": "Building and civil engineering",
+      "fieldTitleZh": "建筑与土木工程",
+      "title": "The Bridge Built for the Average River",
+      "titleZh": "为平均河流建造的桥",
+      "summary": "A bridge sized from average flow and average material strength loses its foundation margin during a rare flood because uncertainty and failure modes do not average away together.",
+      "summaryZh": "一座按平均流量和平均材料强度设计的桥在罕见洪水中失去基础裕度，因为不确定性与失效方式不会一起被平均掉。",
+      "storyParagraphs": [
+        "Engineer Daro designed a footbridge from the river's ten-year average flow and the timber yard's average strength certificate. On most days it felt rigid. During an exceptional flood, faster water carried debris against the piers and scoured soil from one foundation. The deck remained below its breaking load, yet the support rotated and the bridge closed before anyone was hurt. Daro had compared two averages as if unusual demand and weak resistance would politely avoid the same day.",
+        "Reviewer Mira listed uncertainty on both sides. Loads varied with occupancy, wind, water, snow, impact, construction, and future use. Resistance varied with dimensions, material scatter, workmanship, deterioration, model error, and how force actually entered each connection. Demand and resistance also shared dependencies that could move them together. She compared nominal capacity with nominal demand to see available margin, but the ratio alone meant little unless values, failure mode, reliability basis, and consequences were stated.",
+        "Modern design provisions did not simply multiply every dimension by one traditional number. They used characteristic values, separate factors or combinations for different actions and resistances, and calibrated rules for relevant limit states. A frequent service condition governed vibration and deflection; a rare ultimate condition governed collapse resistance. Load combinations recognised that every variable maximum was unlikely to occur simultaneously, while certain dependent events, such as flood and scour, could not be treated as independent conveniences.",
+        "Daro proposed doubling the deck beams. Mira traced the failure and kept the foundations in view. Extra deck capacity would not replace missing scour protection, lateral stability, connection ductility, or a correct hydraulic model. Different modes demanded different margins, and a brittle failure with little warning deserved different treatment from a visible, repairable deformation. Consequence class, redundancy, inspection access, and evacuation possibilities also influenced acceptable reliability.",
+        "The redesigned bridge used applicable standards, qualified analysis, site data, robust detailing, and independent checking. It also carried an inspection and maintenance plan because decay and river geometry changed after construction. Climate and land-use shifts could make the historical record less representative. Mira treated margin as one layer among good models, quality control, monitoring, restrictions, and timely intervention, not as permission to stop asking how the bridge might fail.",
+        "The closed bridge taught factor of safety: a stated ratio between a measure of resistance and a corresponding measure of demand, used to provide margin for uncertainty and variability under a defined method. Its meaning depends on whether values are nominal, allowable, ultimate, or otherwise specified; many codes instead or additionally use separate load and resistance factors calibrated to target reliability. No factor guarantees safety when the model, failure mode, construction, deterioration, or load case is wrong. Daro had added averages. Mira designed for the uncertain distance between them."
+      ],
+      "storyParagraphsZh": [
+        "工程师达罗用河流十年平均流量和木材场平均强度证书设计一座步行桥。多数日子里，它十分坚挺。一次罕见洪水中，更快水流把漂浮物推向桥墩，又冲走一处基础周围的土。桥面尚未达到断裂载荷，支座却发生转动，桥在无人受伤前关闭。达罗把两个平均数放在一起，仿佛异常需求与较弱抗力会礼貌地避开同一天。",
+        "复核工程师米拉列出两侧不确定性。荷载随人群、风、水、雪、撞击、施工与未来用途变化；抗力随尺寸、材料离散、施工质量、劣化、模型误差及力怎样真正进入连接而变化。需求与抗力还可能共享会让二者一起移动的依赖。她比较名义承载力与名义需求，查看可用裕度；但若不说明数值类型、失效方式、可靠度依据与后果，这个比值本身意义有限。",
+        "现代设计规定不会简单地把每个尺寸乘上一个传统数字，而会对不同作用和抗力采用特征值、独立分项或组合，并针对相关极限状态校准规则。常见使用状态控制振动与挠度，罕见极限状态控制抗倒塌。荷载组合承认所有变量峰值不太可能同时发生，也承认洪水与冲刷这类相关事件不能被方便地当成相互独立。",
+        "达罗提议把桥面梁加倍。米拉追踪真实失效，视线仍留在基础。更多桥面能力不能替代缺失的抗冲刷、侧向稳定、连接延性或正确水力模型。不同失效方式需要不同裕度，毫无预警的脆性破坏也应区别于可见、可修复的变形。后果等级、冗余、检查通道与撤离可能同样影响可接受可靠度。",
+        "重建桥梁采用适用标准、合格分析、场地数据、稳健构造与独立复核。它还带着检查维护计划，因为腐朽与河道几何会在建成后改变。气候与土地使用变化也可能让历史记录不再具有代表性。米拉把裕度当成良好模型、质量控制、监测、限制与及时干预中的一层，而不是停止追问桥会怎样失效的许可。",
+        "关闭的桥教授的是安全系数：在规定方法下，用某种抗力度量与相应需求度量的比值，为不确定性与变异提供裕度。它的意义取决于数值是名义、容许、极限还是其他定义；许多规范还会改用或同时使用按目标可靠度校准的荷载与抗力分项系数。若模型、失效方式、施工、劣化或荷载情景错误，没有一个系数能保证安全。达罗曾把平均数相加，米拉设计的是它们之间那段不确定距离。"
+      ],
+      "conceptName": "Factor of safety",
+      "conceptNameZh": "安全系数",
+      "explanationParagraphs": [
+        "Factor of safety is a defined ratio between a measure of resistance and a corresponding measure of demand, providing margin for variability and uncertainty under a stated design method.",
+        "Its interpretation depends on value definitions and failure mode. Codes may use calibrated load and resistance factors instead or as well. Correct models, combinations, detailing, construction, inspection, and maintenance remain essential."
+      ],
+      "explanationParagraphsZh": [
+        "安全系数是在规定设计方法下，某种抗力度量与相应需求度量之间的定义比值，用来为变异与不确定性提供裕度。",
+        "解释取决于数值定义与失效方式，规范也可能改用或同时使用校准后的荷载与抗力分项系数。正确模型、组合、构造、施工、检查与维护仍不可缺。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0732-infrastructure-life-cycle",
+      "batchId": "batch-011",
+      "categoryCode": "07",
+      "fieldCode": "0732",
+      "fieldTitle": "Building and civil engineering",
+      "fieldTitleZh": "建筑与土木工程",
+      "title": "What Began After the Ribbon",
+      "titleZh": "剪彩以后才开始的事",
+      "summary": "A celebrated bridge quietly accumulates water, chloride, fatigue, wear, and obsolete records until stewardship shifts from opening day to decades of service decisions.",
+      "summaryZh": "一座获赞的桥悄悄累积渗水、氯盐、疲劳、磨耗与过期资料，管理视线不得不从开幕日转向数十年的服务决策。",
+      "storyParagraphs": [
+        "When the harbour bridge opened, Mayor Pela cut a red ribbon and filed the project under completed. Twelve winters later, water leaked through an expansion joint, carrying salt onto a hidden bearing. Paint blistered beneath a drain, fatigue cracks began near a welded detail, and heavier vehicles used a route designed for older traffic. Each defect looked small in a separate maintenance notebook. Together they were quietly changing how the bridge carried the next decade.",
+        "Asset engineer Sian built an inventory that linked components, location, age, design assumptions, inspections, repairs, failures, traffic, environment, and ownership. A condition score was not a diagnosis by itself, and acceptable service could decline before visible collapse damage appeared. Two bearings with similar corrosion could have different consequences if one supported an alternate route and the other governed the only hospital crossing. She combined condition, deterioration, service criticality, exposure, failure mode, and uncertainty before setting priorities.",
+        "The old budget repaired only visible failures. Crews repeatedly patched wet concrete while the blocked drain above remained untouched. Sian compared preventive, corrective, rehabilitative, replacement, and demand-management options over time. Closing one lane early to replace the joint cost less and disrupted fewer journeys than emergency bearing replacement later. Lowest initial cost did not equal lowest whole-life cost, and discounted money could not make an intolerable safety or access consequence acceptable.",
+        "Inspection also had limits. Some components were inaccessible, ratings varied between inspectors, and an annual photograph could miss rapid change after a storm or vehicle strike. Sian specified methods, intervals, data quality, thresholds, and responsibilities according to failure mechanisms. Sensors added useful trends at selected locations but required calibration, communication, interpretation, and maintenance. Missing data became an uncertainty to manage, not evidence that deterioration had stopped.",
+        "Across the network, every bridge could not be repaired first. Sian used risk, service, equity, resilience, coordination with other works, and intervention windows to programme spending. She recorded why an intervention was advanced, deferred, or replaced so later teams could revisit the decision as evidence changed. She tested climate, traffic, material, and economic scenarios because future conditions could depart from the original design record. Plans included emergency response, spare capacity, supplier skills, and knowledge transfer so stewardship survived staff changes and the last available specialist's retirement.",
+        "The decades after the ribbon required infrastructure life-cycle management: coordinated decisions across planning, design, construction, operation, inspection, maintenance, renewal, adaptation, and retirement to sustain required service, safety, resilience, value, and environmental performance over time. It uses condition and risk evidence, but also considers uncertainty, users, resources, timing, and changing context. Completion is not the end of responsibility. Pela had opened a bridge in one afternoon. Sian managed the long sequence of futures in which it still had to work."
+      ],
+      "storyParagraphsZh": [
+        "海港大桥启用时，市长佩拉剪断红丝带，把项目归档为已完成。十二个冬天后，伸缩缝渗水，把盐带到隐藏支座；排水口下方油漆起泡，焊接细部旁开始出现疲劳裂纹，更重车辆也驶上按旧交通设计的路线。每项缺陷在不同维护本里都很小，合在一起却悄悄改变着桥怎样承接下一个十年。",
+        "资产工程师西安建立清单，把构件、位置、年龄、设计假设、检查、修理、故障、交通、环境与责任连接起来。一个状况评分本身不是诊断，可接受服务也可能在可见倒塌损伤出现前先下降。两个腐蚀相近的支座，若一个位于有替代路线的桥，另一个控制唯一医院通道，后果便不同。她先组合状况、劣化、服务关键性、暴露、失效方式与不确定性，再确定优先级。",
+        "旧预算只修可见故障。工人反复补湿混凝土，却从未处理上方堵塞排水。西安跨时间比较预防、纠正、修复、替换与需求管理。提前封闭一条车道更换接缝，比日后紧急更换支座成本更低、打断行程也更少。最低初始成本不等于最低全寿命成本，折现后的钱也不能让不可接受的安全或通达后果变得可接受。",
+        "检查本身也有限。部分构件无法接近，不同检查员评分不一，一张年度照片还可能漏掉风暴或车辆撞击后的快速变化。西安按失效机制规定方法、间隔、数据质量、阈值与责任。传感器能在选定位置提供趋势，却也需要校准、通信、解释和维护。缺失数据成为需要管理的不确定性，而非劣化已停止的证据。",
+        "放眼整个网络，不可能每座桥都最先维修。西安用风险、服务、公平、韧性、与其他工程协调及干预窗口来安排支出。她记录一项干预为何提前、推迟或被替代，让后来的团队能随证据变化重新审视决定。她测试气候、交通、材料与经济情景，因为未来条件可能偏离原设计记录。计划还包含应急响应、备用能力、供应商技能与知识传递，让管理不因人员变化或最后一位专家退休而中断。",
+        "剪彩后的数十年需要的是基础设施全生命周期管理：协调规划、设计、建造、运行、检查、维护、更新、适应与退役各阶段决策，使所需服务、安全、韧性、价值与环境表现跨时间持续。它使用状况与风险证据，也考虑不确定性、用户、资源、时机与变化情境。竣工不是责任终点。佩拉用一个下午启用一座桥，西安管理的是它仍必须工作的漫长未来序列。"
+      ],
+      "conceptName": "Infrastructure life-cycle management",
+      "conceptNameZh": "基础设施全生命周期管理",
+      "explanationParagraphs": [
+        "Infrastructure life-cycle management coordinates planning, design, construction, operation, inspection, maintenance, renewal, adaptation, and retirement to sustain required service and value over time.",
+        "Condition, deterioration, risk, criticality, uncertainty, users, equity, resilience, resources, intervention timing, and changing future conditions guide decisions. Opening day begins rather than ends stewardship."
+      ],
+      "explanationParagraphsZh": [
+        "基础设施全生命周期管理协调规划、设计、建造、运行、检查、维护、更新、适应与退役，以跨时间维持所需服务与价值。",
+        "状况、劣化、风险、关键性、不确定性、用户、公平、韧性、资源、干预时机与未来条件变化共同指导决策。开幕日是管理开始，不是结束。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

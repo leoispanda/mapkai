@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-016",
+  "articles": [
+    {
+      "id": "1021-sanitation-service-chain",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1021",
+      "fieldTitle": "Community sanitation",
+      "fieldTitleZh": "社区环境卫生",
+      "title": "The Clean Door and the Black River",
+      "titleZh": "洁净的门与发黑的河",
+      "summary": "A town celebrates spotless new toilets while waste escapes through neglected containment, emptying, transport, treatment, and disposal downstream.",
+      "summaryZh": "小镇庆祝崭新的洁净厕所，废物却从被忽视的收集、清掏、运输、处理与处置环节流向下游。",
+      "storyParagraphs": [
+        "Mayor Pell opened one hundred tiled toilets and declared the sanitation problem solved. Doors locked, floors could be cleaned, and families no longer crossed dark fields at night. Six months later, the lower river turned black after rain. Pits overflowed, an informal emptier worked without protection, a leaking cart crossed the market, and its load disappeared beside a drainage ditch. Pell pointed to photographs of the spotless doors. River keeper Sera asked him to follow what passed through each door after the ribbon ceremony ended.",
+        "They mapped the whole path. A toilet had to separate people safely from excreta; containment had to remain sound; emptying and conveyance had to protect workers and communities; treatment had to reduce relevant hazards; final disposal or end use had to remain safe for the actual purpose. Liquid and solid fractions sometimes followed different routes. One well-managed step could not compensate for an open break later in the path, and a sewer connection did not prove that downstream treatment was functioning.",
+        "Pell ordered one grand treatment plant for every neighbourhood. Sera showed settlements where distance, terrain, density, water availability, cost, maintenance capacity, flooding, and tenure made different combinations of onsite, sewered, centralised, or decentralised systems more realistic. Technology had to fit local conditions while meeting public-health outcomes. A prestigious asset without operators, finance, spare parts, regulation, monitoring, or a route for safely collected material would become another clean photograph attached to an unsafe flow.",
+        "The town's first contract paid collectors by the number of pits emptied, so the cheapest destination won. Sera changed accountability across the path: licensing and service standards, traceable delivery, worker protection, affordable and inclusive access, treatment performance, safe end use, complaint routes, and enforcement. Households could not protect the river through individual purchasing alone, because sanitation produced public consequences beyond one property line. Informal workers were included in safer systems rather than erased from the map.",
+        "A later flood bypassed a containment wall and exposed a weakness the dry-season inspection had missed. The town adopted risk-based safety planning for routine work, equipment failure, heavy rain, drought, population growth, and emergency conditions. It monitored hazards and controls from the user interface to the final destination. Reuse was allowed only when treatment, handling, crop or other end use, exposure pathways, and applicable standards made it safe; calling waste a resource did not remove its hazards.",
+        "The black river revealed the sanitation service chain: the connected sequence from toilet use and containment through emptying, transport or conveyance, treatment, and safe end use or disposal. Sanitation is safely managed only when people, workers, and the environment are protected across the entire chain, with suitable technology, institutions, finance, and oversight. Pell had counted one hundred clean doors. Sera counted every point after those doors where the town could still lose what the toilets were built to protect."
+      ],
+      "storyParagraphsZh": [
+        "佩尔市长启用一百间铺砖厕所，宣布环境卫生问题已经解决。门可以上锁，地板能够清洗，家庭夜里也不必再穿过黑暗田野。六个月后，一场雨让下游河水发黑。粪坑溢出，非正式清掏工没有防护，漏液小车穿过市场，最后把载物倒在排水沟旁。佩尔指着洁净厕所门的照片，河流看守塞拉却请他在剪彩结束后，继续追踪穿过每扇门的东西。",
+        "他们绘出完整路径。厕所必须让人与排泄物安全分离；收集设施必须保持完整；清掏与输送要保护劳动者和社区；处理必须降低相关危险；最终处置或回用也要对实际用途保持安全。液体和固体有时会走不同路线。一个管理良好的环节无法补偿后方的开放断点，接上管网也不能证明下游处理正在正常运作。",
+        "佩尔命令为所有社区建一座宏伟处理厂。塞拉指出，不同聚落的距离、地形、密度、供水、成本、维护能力、洪水与土地权属，使现场、管网、集中或分散系统的不同组合更为现实。技术必须适合当地条件，同时达到公共卫生结果。缺少操作人员、资金、备件、监管、监测或安全来料路线的知名资产，只会成为贴在不安全水流上的另一张干净照片。",
+        "小镇第一份合同按清空粪坑数量付费，于是最便宜的倾倒地点获胜。塞拉把问责铺到整条路径：许可与服务标准、可追踪交付、劳动保护、可负担且包容的服务、处理表现、安全终端用途、投诉渠道与执行。家庭无法只靠个人购买保护河流，因为环境卫生会越过一条地产边界产生公共后果。非正式劳动者被纳入更安全的系统，而不是从地图上抹去。",
+        "后来一场洪水绕过收集墙，暴露出旱季检查未发现的弱点。小镇开始为日常工作、设备失效、暴雨、干旱、人口增长与紧急状况做基于风险的安全规划，从使用界面一直监测到最终去向的危险与控制。只有处理、操作、作物或其他终端用途、暴露路径和适用标准都能保证安全时才允许回用；把废物称为资源不会自动消除危险。",
+        "发黑的河揭示的是环境卫生服务链：从厕所使用与收集开始，经过清掏、运输或输送、处理，直到安全回用或处置的一系列相连环节。只有整条链都保护使用者、劳动者与环境，并获得合适技术、机构、资金和监督，环境卫生才算安全管理。佩尔只数了一百扇洁净的门；塞拉数的是门后每一个仍可能失去厕所原本要保护之物的断点。"
+      ],
+      "conceptName": "Sanitation service chain",
+      "conceptNameZh": "环境卫生服务链",
+      "explanationParagraphs": [
+        "The sanitation service chain connects toilet use and containment with emptying, transport or conveyance, treatment, and safe end use or disposal.",
+        "Safety must hold across every step for users, workers, communities, and the environment. Technology alone is insufficient without operations, finance, inclusion, regulation, monitoring, and climate-resilient risk management."
+      ],
+      "explanationParagraphsZh": [
+        "环境卫生服务链把厕所使用与收集，同清掏、运输或输送、处理及安全回用或处置连接起来。",
+        "每一环都必须保护使用者、劳动者、社区与环境。只有技术并不足够，还需要运营、资金、包容、监管、监测与具气候韧性的风险管理。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1021-wash-behaviour-change",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1021",
+      "fieldTitle": "Community sanitation",
+      "fieldTitleZh": "社区环境卫生",
+      "title": "The New Pump No One Used",
+      "titleZh": "无人使用的新水泵",
+      "summary": "A village installs a technically sound pump but residents return to the old well because routines, access, trust, norms, and maintenance were never designed with it.",
+      "summaryZh": "村庄安装技术合格的新水泵，居民却回到旧井，因为日常习惯、可及性、信任、规范与维护从未同水泵一起设计。",
+      "storyParagraphs": [
+        "Brightwell village received a new protected pump beside the council hall. Engineer Daro tested its flow, posted a health lecture, and expected the old open well to empty. A month later, most morning buckets still came from the well. Daro called residents irrational and printed larger warnings. Investigator Mina arrived before dawn and found the pump locked until office hours, its handle too heavy for several older users, a queue visible from the road, and water with an unfamiliar mineral taste. The technology worked during inspection and failed inside daily life.",
+        "Mina asked who fetched water, for what purposes, at which times, with what containers, costs, risks, memories, and social expectations. The old well sat beside the route to fields, offered shade and conversation, and could be used without requesting a key. Some households trusted water they had known for generations; others feared being blamed when the new mechanism broke. Knowledge was only one determinant. Capability, physical and social opportunity, motivation, habit, technology, household roles, and wider institutions interacted across levels.",
+        "Daro proposed paying people for every pump visit. Use rose while coins lasted and collapsed when payment stopped. A public shaming campaign made some families conceal their source rather than change it. Mina refused to treat behaviour as a button pressed by one message. Incentives, disgust, status, fear, convenience, commitment, and social norms could all influence action, but effects varied and could produce coercion, stigma, gaming, or exclusion. Formative inquiry had to precede the choice of intervention.",
+        "Residents helped redesign the service. Opening hours matched water collection, the handle and platform became more accessible, maintenance and spare-part responsibility were public, waiting and drainage improved, and trusted users demonstrated the pump without pretending uncertainty did not exist. Messages connected safe practice to locally meaningful goals and gave practical skills, while households could report taste, function, affordability, harassment, or access problems. The intervention changed environment and service as well as individual intention.",
+        "Mina measured more than attendance at a launch. She observed correct and sustained use across seasons and groups, pump function, competing sources, unintended consequences, equity, and relevant health or service outcomes. When adoption differed, the team reopened its assumptions instead of blaming a resistant culture. Infrastructure and behaviour supported one another: a broken or inaccessible facility could not be rescued by education, while a technically sound facility could not produce benefit if routines and institutions never made reliable use possible.",
+        "The returning buckets revealed WASH behaviour change: the design and support of sustained water, sanitation, and hygiene practices by addressing interacting contextual, psychosocial, technological, and habitual determinants at individual, household, community, and structural levels. It is not information delivery or infrastructure alone. Daro had installed a pump and expected behaviour to arrive with it. Mina learned that use was another system, built from capability, opportunity, motivation, trust, maintenance, social meaning, and the repeated experience that the pump would still work tomorrow."
+      ],
+      "storyParagraphsZh": [
+        "亮井村在议事厅旁得到一台受保护的新水泵。工程师达罗测试流量，张贴健康讲座，期待旧露天井从此无人使用。一个月后，大多数清晨水桶仍从旧井提起。达罗称居民不理性，又印出更大的警告。调查者米娜天亮前到场，发现水泵到办公时间才开锁，手柄对几位老人太重，队伍从道路上清晰可见，水还有陌生的矿物味。技术在检查时工作，却在日常生活里失效。",
+        "米娜询问谁取水、为了什么、在何时、使用何种容器，并面对哪些成本、风险、记忆与社会期待。旧井位于去田地的路旁，有树荫与交谈，也不必向人借钥匙。一些家庭信任世代熟悉的水，另一些担心新机械损坏时会被责怪。知识只是一个决定因素。能力、物理与社会机会、动机、习惯、技术、家庭角色和更广机构在多个层次相互作用。",
+        "达罗提议按每次使用水泵付钱。硬币还在时使用上升，付款结束后立刻回落。公开羞辱又让一些家庭隐瞒水源，而不是改变。米娜拒绝把行为当成一条信息就能按下的按钮。奖励、厌恶、地位、恐惧、便利、承诺与社会规范都可能影响行动，但效果不一，也可能制造强迫、污名、钻空子或排斥。选择干预以前必须先做形成性调查。",
+        "居民参与重新设计服务。开放时间匹配取水时段，手柄和平台变得更可及，维护与备件责任公开，等候和排水得到改善，受信任的使用者示范水泵，却不假装没有不确定。信息把安全实践同当地有意义的目标相连，并提供实际技能；家庭也能报告味道、功能、可负担性、骚扰或可及问题。干预改变环境与服务，而不只改变个人意愿。",
+        "米娜衡量的不只是启用仪式出席人数。她观察不同季节与人群能否正确持续使用、水泵功能、竞争水源、意外后果、公平，以及相关健康或服务结果。采用情况不同时，团队会重开自身假设，而不责怪某种抗拒文化。基础设施与行为彼此支持：损坏或不可及设施无法靠教育挽救，技术合格的设施若没有日程和机构支持可靠使用，也不会自动产生获益。",
+        "重新回到旧井的水桶揭示的是水、环境卫生与个人卫生行为改变：通过处理个人、家庭、社区与结构层次上相互作用的情境、心理社会、技术与习惯因素，设计并支持可持续的相关实践。它既不只是传递信息，也不只是建设设施。达罗安装水泵，期待行为随设备一同抵达；米娜发现，使用本身也是一套系统，由能力、机会、动机、信任、维护、社会意义，以及水泵明天仍会工作的重复经验共同建成。"
+      ],
+      "conceptName": "WASH behaviour change",
+      "conceptNameZh": "水、环境卫生与个人卫生行为改变",
+      "explanationParagraphs": [
+        "WASH behaviour change supports sustained water, sanitation, and hygiene practices by addressing contextual, psychosocial, technological, and habitual determinants across several social levels.",
+        "Knowledge and infrastructure matter, but so do capability, opportunity, motivation, trust, norms, maintenance, access, and equity. Effective interventions are locally investigated, co-designed, monitored, and revised."
+      ],
+      "explanationParagraphsZh": [
+        "水、环境卫生与个人卫生行为改变通过处理多个社会层次的情境、心理社会、技术与习惯因素，支持相关实践持续发生。",
+        "知识与基础设施重要，能力、机会、动机、信任、规范、维护、可及与公平也同样重要。有效干预需要当地调查、共同设计、监测与修订。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1021-wastewater-surveillance",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1021",
+      "fieldTitle": "Community sanitation",
+      "fieldTitleZh": "社区环境卫生",
+      "title": "The City Beneath the Clinic Queue",
+      "titleZh": "诊所队伍下方的城市",
+      "summary": "An analyst reads pooled traces in the sewer before clinic queues grow, but must learn what a population signal can and cannot reveal.",
+      "summaryZh": "分析员在诊所队伍变长前读到下水道中的汇总痕迹，却必须理解群体信号能够与不能揭示什么。",
+      "storyParagraphs": [
+        "In Greyport, public-health clerk Lio counted illness only when people entered a clinic. One winter, sewer analyst Sera reported that a biological marker had risen for three consecutive samples while waiting rooms remained quiet. Lio dismissed news from drains as dirt without patients. Ten days later, clinics filled rapidly. He then made the opposite mistake, announcing that everyone upstream was infected and sending inspectors to identify the responsible houses. The pooled signal had warned earlier than his queue, but it had never supplied a list of names.",
+        "Sera showed how the city beneath the streets formed one composite sample. People shed target organisms, genetic material, chemicals, or other markers at variable rates and times; toilets, industry, rain, groundwater, travel, and sewer connections mixed or diluted them. Sampling location defined a catchment, not a perfectly closed population. Daily and weekly population movement could change its denominator without changing any resident's health. Collection method, flow, storage, laboratory recovery, assay performance, normalisation, and data processing all shaped the measured signal before interpretation began.",
+        "A rising concentration could indicate a changing population trend, yet it did not translate directly into a precise case count. Shedding differed among people and stages, non-residents entered the catchment, some residents used other systems, and a marker might persist without representing infectious material. A non-detection could reflect low prevalence, poor sampling, dilution, degradation, or assay limits rather than guaranteed absence. Trends, uncertainty, supporting data, and the decision question mattered more than one dramatic number.",
+        "Greyport integrated sewer results with clinical, laboratory, syndromic, demographic, and contextual surveillance. A wastewater signal could prompt closer review, targeted communication, resource preparation, or further sampling when linked to an agreed action plan. It complemented rather than replaced individual testing, diagnosis, care, and epidemiology. When the marker rose without clinic cases, officials investigated several explanations instead of declaring either system wrong.",
+        "Small catchments created ethical concern because a signal might stigmatise a dormitory, prison, neighbourhood, or minority community even without naming individuals. The city established purpose limitation, governance, data minimisation, access controls, community engagement, careful communication, and rules for retaining or sharing results. It assessed costs, laboratory capacity, representativeness, sustainability, and whether the programme would lead to proportionate public-health benefit rather than surveillance for its own sake.",
+        "The underground composite revealed wastewater surveillance: systematic sampling and analysis of wastewater or related environmental material to monitor population-level markers and trends as a complement to other public-health surveillance. Its value depends on catchment knowledge, methods, uncertainty, interpretation, ethics, and links to action; it neither diagnoses individuals nor produces exact case counts by itself. Lio had watched illness only after it took a chair in his clinic. Sera listened to a pooled city signal while it was still moving beneath the queue."
+      ],
+      "storyParagraphsZh": [
+        "灰港的公共卫生职员利奥只在人们走进诊所时统计疾病。一个冬天，污水分析员塞拉报告某项生物标记连续三次取样上升，而候诊室仍然安静。利奥把排水沟里的消息当成没有患者的污物。十天后，诊所队伍迅速变长。他随即犯下相反错误，宣布上游人人都已感染，还派检查员寻找责任住户。汇总信号确实早于队伍发出警告，却从未提供姓名清单。",
+        "塞拉展示街道下方的城市怎样形成一份混合样本。人们以不同速度和时间排出目标生物、遗传物质、化学物或其他标记；厕所、工业、降雨、地下水、通勤与管网连接又把它们混合或稀释。取样地点定义的是汇水人群，不是完全封闭的人口。每日与每周人口流动可以在居民健康不变时改变分母。采集方法、流量、储存、实验室回收、检测表现、标准化与数据处理都会在解释开始前塑造测量信号。",
+        "浓度上升可以说明群体趋势变化，却不能直接换算成精确病例数。不同人和不同阶段的排出量不同，非居民进入汇水区，一些居民使用别种系统，标记也可能持续存在却不代表具有感染性的物质。未检出可能来自低流行、取样不足、稀释、降解或检测限制，而非保证不存在。趋势、不确定性、支持资料与决策问题比一个戏剧数字更重要。",
+        "灰港把污水结果同临床、实验室、症候群、人口和情境监测整合。污水信号若连接到商定行动计划，可以触发更密切复核、针对性沟通、资源准备或进一步取样。它补充而不替代个体检测、诊断、照护与流行病学。标记上升而诊所尚无病例时，官员会调查多个解释，而不是宣布其中一个系统错误。",
+        "小型汇水区带来伦理忧虑，因为一个信号即使不点名，也可能污名化宿舍、监狱、社区或少数群体。城市建立目的限制、治理、数据最少化、访问控制、社区参与、谨慎沟通，以及结果保存与共享规则。它还评估成本、实验室能力、代表性、可持续性，以及项目能否带来相称的公共卫生获益，而非只为监测而监测。",
+        "地下混合样本揭示的是污水监测：系统采集并分析污水或相关环境材料，把其中的标记与趋势作为其他公共卫生监测的群体层面补充。其价值取决于汇水区知识、方法、不确定性、解释、伦理与行动连接；它既不诊断个人，也不能独自给出精确病例数。利奥只在疾病坐上诊所椅子后才看见它，塞拉却在队伍形成以前，听见整座城市汇合后从地下流过的信号。"
+      ],
+      "conceptName": "Wastewater surveillance",
+      "conceptNameZh": "污水监测",
+      "explanationParagraphs": [
+        "Wastewater surveillance analyses pooled wastewater or environmental samples to monitor population-level markers and trends alongside other public-health surveillance.",
+        "Signals depend on catchment, shedding, flow, sampling, laboratory methods, and interpretation. They can support early warning and trends but do not independently diagnose people or yield exact case counts; governance and ethics are essential."
+      ],
+      "explanationParagraphsZh": [
+        "污水监测分析汇总污水或环境样本中的群体标记与趋势，并同其他公共卫生监测配合。",
+        "信号取决于汇水区、排出、流量、取样、实验室方法与解释。它可支持预警和趋势判断，却不能独立诊断个人或给出精确病例数，治理与伦理不可缺少。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1022-hierarchy-of-controls",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1022",
+      "fieldTitle": "Occupational health and safety",
+      "fieldTitleZh": "职业健康与安全",
+      "title": "The Factory of Careful Breathing",
+      "titleZh": "小心呼吸的工厂",
+      "summary": "A dusty factory trains workers to be more careful until an engineer asks why the hazard is allowed to reach their faces at all.",
+      "summaryZh": "多尘工厂不断训练工人更加小心，直到工程师追问，为何危险竟被允许一路抵达他们脸上。",
+      "storyParagraphs": [
+        "At White Tile Works, grinders released a pale dust each afternoon. Manager Pell hung a sign saying BREATHE CAREFULLY, trained workers to turn their heads, and issued masks from a locked cabinet. Exposure records remained high. Pell added signatures to prove everyone understood. When one worker became ill, he searched for the missed instruction. Engineer Sera stood beside the grinder and asked why the safety plan began only after the dust had already left the machine and entered the worker's breathing zone.",
+        "Sera first challenged the source. Could the dusty step be removed through a different design, or the hazardous material or process replaced with a demonstrably safer alternative? A substitute had to be assessed for new hazards rather than trusted because its label sounded green. Where source removal was not feasible, enclosure, isolation, local extraction, automation, guarding, and other engineered changes could keep exposure from reaching people with less dependence on perfect moment-to-moment behaviour.",
+        "Pell argued that engineering cost more than posters. Sera calculated maintenance, illness, turnover, downtime, waste, and the repeated cost of controls that relied on every person, every hour. Work procedures, scheduling, restricted access, housekeeping, training, and rest could reduce exposure, while correctly selected and maintained personal protective equipment protected the individual when needed. These controls remained valuable, but administrative rules and equipment worn on the body generally demanded more continuing human action than removing or isolating the hazard.",
+        "The factory replaced one process, enclosed another, improved extraction, changed workflow, and retained suitable procedures and protective equipment for residual risk and maintenance tasks. The order was a preference based on general reliability, not a command to wait for a perfect top-level solution while workers remained exposed. Feasibility, law, emergency conditions, and the specific hazard could require combinations or interim protection, but inability to eliminate did not justify jumping straight to a mask forever.",
+        "Air measurements later improved, then rose again when an extraction duct clogged. A control drawn on a plan was not the same as a control performing in use. The factory commissioned, inspected, maintained, tested, and reviewed controls with workers who knew where shortcuts and awkward tasks appeared. It checked whether a change shifted risk to cleaners, contractors, another department, or the environment. Training taught people how the system worked and how to report failure; it no longer served as proof that management had transferred responsibility.",
+        "The pale dust revealed the hierarchy of controls: a preferred order for controlling workplace hazards by elimination, substitution, engineering controls, administrative controls, and personal protective equipment. Measures that remove or isolate hazards are generally more reliable because they depend less on continuous individual action, while lower levels remain important in combination and for residual risk. Pell had trained lungs to meet the factory. Sera redesigned the factory so fewer hazards could reach a lung in the first place."
+      ],
+      "storyParagraphsZh": [
+        "白砖工厂的研磨机每天下午释放浅色粉尘。经理佩尔挂出“小心呼吸”的告示，训练工人转开头，并把口罩锁在柜里发放。暴露记录仍然很高，佩尔便增加签名，证明人人都已理解。一名工人生病后，他开始寻找哪条指令没有遵守。工程师塞拉站到研磨机旁，询问为何安全方案竟在粉尘离开机器、进入工人呼吸区域以后才开始。",
+        "塞拉先挑战源头。能否通过另一种设计移除产生粉尘的步骤，或用经评估确实更安全的材料与过程替代危险源？替代物必须检查新危险，不能只因标签听起来环保就被信任。源头移除不可行时，封闭、隔离、局部抽排、自动化、防护与其他工程改变，可以在较少依赖每一刻完美行为的情况下，阻止暴露抵达人。",
+        "佩尔说工程比海报昂贵。塞拉计算维护、疾病、人员流失、停工、浪费，以及依靠每个人每小时执行的控制所带来的重复成本。工作程序、排班、限制进入、现场整理、培训与休息可以减少暴露，正确选择并维护的个人防护装备则在需要时保护个体。这些方法仍有价值，但行政规则与穿戴在身上的设备，通常比移除或隔离危险更依赖持续人为行动。",
+        "工厂替换一项工艺，封闭另一项，改善抽排并改变工作流，同时为残余风险与维护任务保留合适程序和防护装备。这一顺序是基于普遍可靠性的偏好，不是要求工人在等待完美顶层方案时继续暴露。可行性、法律、紧急情形和具体危险可能需要组合或临时保护，但无法消除危险也不意味着可以永远直接跳到口罩。",
+        "空气测量后来改善，抽排管堵塞时又上升。图纸上的控制不等于使用中的控制。工厂同最了解捷径与困难任务的工人一起，对控制进行启用、检查、维护、测试与复核，并查看改变是否把风险推给清洁工、承包商、另一部门或环境。培训用于解释系统怎样工作、怎样报告失效，不再用来证明管理层已把责任转移出去。",
+        "浅色粉尘揭示的是控制层级：按消除、替代、工程控制、行政控制和个人防护装备的优先顺序管理职业危险。移除或隔离危险的方法通常更可靠，因为它们较少依赖持续个人行动；较低层级在组合使用与处理残余风险时仍然重要。佩尔训练肺去适应工厂，塞拉重新设计工厂，让更少危险从一开始就有机会抵达肺。"
+      ],
+      "conceptName": "Hierarchy of controls",
+      "conceptNameZh": "控制层级",
+      "explanationParagraphs": [
+        "The hierarchy of controls prioritises elimination, substitution, engineering controls, administrative controls, and personal protective equipment when managing workplace hazards.",
+        "Source and engineering measures generally depend less on perfect individual behaviour. Multiple controls, interim protection, worker participation, maintenance, monitoring, and reassessment are often still required."
+      ],
+      "explanationParagraphsZh": [
+        "控制层级在管理职业危险时，优先考虑消除、替代、工程控制、行政控制与个人防护装备。",
+        "源头与工程措施通常较少依赖个人始终完美执行。多重控制、临时保护、工人参与、维护、监测与复核往往仍然需要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1022-swiss-cheese-model",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1022",
+      "fieldTitle": "Occupational health and safety",
+      "fieldTitleZh": "职业健康与安全",
+      "title": "The Day Five Gates Opened",
+      "titleZh": "五道门同时打开的那一天",
+      "summary": "A foundry trusts five imperfect defences until maintenance, staffing, design, alarms, and a final human action align into one path for harm.",
+      "summaryZh": "铸造厂信赖五道并不完美的防线，直到维护、人员、设计、警报与最后的人为动作排成一条伤害通道。",
+      "storyParagraphs": [
+        "The Ember Foundry protected its furnace with five gates: a temperature sensor, an automatic interlock, a written inspection, a control-room alarm, and a final operator check. Director Pell called an accident mathematically impossible because no single gate was perfect but five stood in sequence. One night the furnace overheated and a worker was burned. Pell blamed the operator who had opened the last valve. Investigator Mara laid five records across the table and found that the path to the valve had begun months before the shift.",
+        "The sensor was drifting because calibration had been postponed. The interlock had been bypassed during a difficult repair and never restored. Inspection forms copied yesterday's value when the understaffed team rushed. The alarm had sounded so often without meaningful support that the control room lowered its volume. The operator then interpreted a familiar display under time pressure and made the final action. Some weaknesses were active at the sharp end; others were latent in design, maintenance, staffing, supervision, procurement, and organisational priorities.",
+        "Pell proposed adding five more identical alarms. Mara asked whether they shared the same sensor, power, software, maintenance team, and mistaken assumption. Layers that failed for one common reason offered less independence than their number suggested. Defences could deter, detect, prevent, contain, recover, or provide time for response, but each had changing weaknesses. Diversity, separation, testing, usability, ownership, and feedback mattered more than stacking copies of one neglected barrier.",
+        "The investigation did not declare the operator blameless in every possible sense. People still had duties, deliberate violations required fair examination, and competence mattered. A systems account instead asked why one foreseeable action could pass through all other protections and why local work made that action reasonable at the time. Punishing the last person without repairing latent conditions would preserve the route for another person to enter later.",
+        "The foundry restored and redesigned controls, reduced nuisance alarms, clarified stop authority, staffed inspection, tested independence and recovery, and learned from near misses as well as injuries. It did not assume more layers always meant more safety; complexity could obscure ownership or create new interactions. Each defence had a purpose, performance measure, maintenance plan, and escalation route. Workers could report weak signals without waiting for all gates to open.",
+        "The aligned gates revealed the Swiss cheese model: complex systems use successive defensive layers, each with weaknesses that can change; harm can occur when active failures and latent conditions align to create a path through them. The model shifts investigation from one final error toward how defences and organisational conditions interacted, without erasing accountability. Pell had counted five gates and imagined five certainties. Mara examined the moving openings inside each gate and the night they briefly faced the same direction."
+      ],
+      "storyParagraphsZh": [
+        "余烬铸造厂用五道门保护熔炉：温度传感器、自动联锁、书面检查、控制室警报和操作员最终核对。厂长佩尔说事故在数学上不可能，因为每道门虽不完美，五道却依次排列。一天夜里熔炉过热，一名工人被灼伤。佩尔责怪打开最后阀门的操作员。调查者玛拉把五份记录铺上桌，发现通往阀门的路径在这个班次数月以前已经开始。",
+        "传感器因校准延期而漂移；联锁在一次困难维修中被旁路，之后没有恢复；人员不足的团队赶工时，把昨天数值抄进检查表；警报多次响起却没有有效支持，控制室便降低音量；最后，操作员在时间压力下按熟悉显示作出动作。有些弱点活跃在工作最前端，另一些潜伏在设计、维护、人员、监督、采购与组织优先次序里。",
+        "佩尔提议再加五个相同警报。玛拉询问，它们是否共用同一传感器、电源、软件、维护团队和错误假设。因同一原因失效的层级，并没有数量看起来那么独立。防线可以威慑、发现、预防、限制、恢复，或为响应争取时间，但每一层都有变化的弱点。多样、分离、测试、可用性、负责人和反馈比堆叠同一项被忽视的屏障更重要。",
+        "调查没有宣布操作员在所有意义上都无责任。人仍有职责，故意违规需要公平审查，胜任能力也重要。系统解释追问的是，为何一项可预见动作能穿过所有其他保护，以及为何当地工作条件让它当时显得合理。只惩罚最后一个人而不修复潜伏条件，会把同一条路线留给后来另一个人。",
+        "铸造厂恢复并重新设计控制，减少无意义警报，明确停止权限，为检查配置人员，并测试独立性与恢复能力；没有造成伤害的险情也进入学习。它不再假定层级越多越安全，因为复杂性会模糊责任或制造新互动。每道防线都有目的、表现指标、维护计划与升级路径，工人不必等所有门同时打开才报告微弱信号。",
+        "排成一线的门揭示的是瑞士奶酪模型：复杂系统使用连续防御层，每层都有会变化的弱点；主动失误与潜伏条件对齐时，伤害便可能沿通道穿过所有层级。模型把调查从最后一次错误转向防线和组织条件怎样互动，却不抹去问责。佩尔数着五道门，想象五份确定；玛拉检查每道门里移动的开口，以及它们短暂朝向同一方向的那个夜晚。"
+      ],
+      "conceptName": "Swiss cheese model",
+      "conceptNameZh": "瑞士奶酪模型",
+      "explanationParagraphs": [
+        "The Swiss cheese model represents safety as successive defensive layers whose changing weaknesses can align, allowing a hazard to pass through.",
+        "It connects active failures with latent design, organisational, and management conditions. Useful application examines independence, common causes, maintenance, learning, and accountability rather than merely adding layers or blaming the last person."
+      ],
+      "explanationParagraphsZh": [
+        "瑞士奶酪模型把安全表示为连续防御层，其中变化的弱点可能对齐，让危险穿过。",
+        "它连接主动失误与潜伏的设计、组织和管理条件。有效应用会检查独立性、共同原因、维护、学习与问责，而非只增加层级或责怪最后一人。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1022-normalisation-of-deviance",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1022",
+      "fieldTitle": "Occupational health and safety",
+      "fieldTitleZh": "职业健康与安全",
+      "title": "The Rope That Passed Every Morning",
+      "titleZh": "每天早晨都通过的绳索",
+      "summary": "A lifting crew treats each incident-free use of a worn sling as evidence of safety until yesterday's exception quietly becomes today's standard.",
+      "summaryZh": "吊运班组把磨损吊索每次无事故使用都当成安全证据，直到昨天的例外悄悄变成今天的标准。",
+      "storyParagraphs": [
+        "Crane leader Oren noticed a worn patch on a lifting sling during harvest rush. The replacement was delayed, the load looked light, and a supervisor approved one exceptional lift after a brief check. Nothing failed. The next morning the patch looked the same, so yesterday's success became evidence for another lift. By the tenth day, new workers assumed the sling had always been acceptable. The inspection box was pre-ticked, and anyone who hesitated was reminded that experienced hands had used it safely all week.",
+        "Engineer Mina reconstructed the drift. A formal limit had first been crossed consciously under pressure, then the absence of harm was interpreted as proof that the limit was conservative. Repetition reduced discomfort; production rewards favoured continuity; contrary signs were explained as familiar; and the group's practical rule moved while the written standard stayed still. No one had held a meeting to choose a dangerous culture. Local adaptations accumulated until deviation no longer felt like deviation.",
+        "Oren defended the practice with ten successful lifts. Mina placed them beside the one failure that had not yet occurred. A low-probability consequence could remain absent through many unsafe trials, so survival was weak evidence of adequate margin. Near misses, wear, alarms, workarounds, bypasses, delayed maintenance, and repeated exceptions were leading information, not noise erased by a good outcome. Each success under degraded conditions could perversely reinforce the behaviour that increased future risk.",
+        "The director issued a slogan demanding zero deviation. Workers then hid practical conflicts between the official process and real equipment. Mina insisted that standards themselves could be outdated, ambiguous, or impossible and should be challenged through a visible review, not silently rewritten in use. A justified adaptation needed hazard assessment, authorised change, time limit, controls, documentation, and feedback. Stop-work authority had to be credible when production pressure made speaking costly.",
+        "The sling was removed, but the response did not end with replacement. The crew reviewed scheduling, spare inventory, inspection quality, contractor interfaces, supervisory signals, reporting protection, and how exceptions closed. Audits compared work as imagined with work as performed. Managers rewarded early interruption and tracked drift indicators instead of celebrating only injury-free days. The goal was not blind rule obedience; it was preventing repeated uneventful exposure from becoming the organisation's unofficial proof of safety.",
+        "The worn rope revealed normalization of deviance: the gradual process by which departures from acceptable standards become familiar and socially accepted, often because repeated use produces no immediate negative outcome and production or cultural pressures reward continuation. It is usually incremental rather than malicious. Oren had treated every morning without a fall as a new safety certificate. Mina showed that luck could sign the certificate many times while the margin beneath it continued to fray."
+      ],
+      "storyParagraphsZh": [
+        "收获旺季里，起重组长奥伦发现一条吊索有磨损斑。替代品尚未送达，载荷看着不重，主管简短检查后批准一次例外吊运。什么都没有发生。第二天早上磨损看起来一样，昨天的成功便成为再用一次的证据。到第十天，新工人以为这条吊索一直都合格。检查框提前被勾上，任何犹豫者都会被提醒，经验丰富的人已经安全使用整整一周。",
+        "工程师米娜重建漂移过程。一条正式界限最初在压力下被有意识越过，随后没有伤害便被解释为界限过于保守。重复降低不安，生产奖励偏爱不停工，相反迹象被解释成熟悉现象；群体的实际规则不断移动，书面标准却留在原处。没有人开会决定建立危险文化，本地适应逐渐累积，直到偏差不再感觉像偏差。",
+        "奥伦用十次成功吊运为做法辩护。米娜把它们放到那次尚未发生的失败旁。低概率后果可以在许多不安全尝试中保持缺席，因此幸存并不是安全余度充足的有力证据。险情、磨损、警报、变通、旁路、维护延期与重复例外都是领先信息，不是被良好结果抹掉的噪声。退化条件下的每次成功，反而可能强化增加未来风险的行为。",
+        "厂长发布“零偏差”口号，工人随即开始隐瞒正式流程与真实设备间的实际冲突。米娜坚持，标准本身也可能过时、含糊或无法执行，应通过可见复核挑战，而不是在使用中悄悄重写。合理调整需要危险评估、授权改变、时间限制、控制、记录与反馈。生产压力让发言昂贵时，停止工作权限必须真实可信。",
+        "吊索被移除，回应却没有停在更换上。班组复核排程、备件库存、检查质量、承包商接口、主管信号、报告保护与例外怎样关闭。审计比较想象中的工作与实际执行的工作。管理者奖励提早中断，并追踪漂移指标，不再只庆祝无伤害天数。目标不是盲从规则，而是阻止一次次无事故暴露变成组织非正式的安全证明。",
+        "磨损绳索揭示的是偏差正常化：偏离可接受标准的行为逐渐变得熟悉并获得社会接受，常因为反复使用没有立刻产生坏结果，而生产或文化压力又奖励继续。它通常是渐进过程，而非恶意选择。奥伦把每个没有坠落的早晨都当成一张新安全证书；米娜让他看见，运气可以反复签字，而证书下方的余度仍在继续磨损。"
+      ],
+      "conceptName": "Normalization of deviance",
+      "conceptNameZh": "偏差正常化",
+      "explanationParagraphs": [
+        "Normalization of deviance is the gradual acceptance of departures from safe or approved standards, reinforced when repeated exposure produces no immediate harm.",
+        "Production pressure, group culture, workarounds, and weak feedback can move the practical norm. Prevention requires credible reporting and stop authority, attention to weak signals, formal review of infeasible standards, and correction of system pressures."
+      ],
+      "explanationParagraphsZh": [
+        "偏差正常化是偏离安全或批准标准的行为逐渐获得接受，并因反复暴露未立刻造成伤害而被强化。",
+        "生产压力、群体文化、变通与薄弱反馈会移动实际规范。预防需要可信报告与停止权限、关注微弱信号、正式复核不可行标准，并修正系统压力。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1031-deterrence",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1031",
+      "fieldTitle": "Military and defence",
+      "fieldTitleZh": "军事与国防",
+      "title": "The Gate Neither Fortress Wanted to Test",
+      "titleZh": "两座堡垒都不愿测试的门",
+      "summary": "Two fortresses learn that preventing an attack depends not only on strength, but on what the other side perceives about capability, resolve, consequences, and restraint.",
+      "summaryZh": "两座堡垒发现，阻止进攻不只依靠力量，还依靠对方怎样理解能力、决心、后果与克制。",
+      "storyParagraphs": [
+        "North Keep built an iron gate strong enough to resist a raid but concealed every test. South Keep saw only rust on the outer plates and concluded that a quick push would succeed. The raid failed at heavy cost to both sides. North's governor complained that strength should have prevented the attempt. Adviser Mira replied that a capability unknown or misunderstood could not reliably shape the choice made across the valley. The gate had worked as a barrier after attack began, but it had failed to make the attack look unprofitable beforehand.",
+        "The governor then announced that any touch on any road would bring limitless retaliation. South knew North lacked both the means and political resolve to carry out such an indiscriminate promise, so the threat reduced credibility. It also frightened neutral villages and made every patrol fear accidental escalation. Mira separated two broad logics: denying an opponent the expected gain by making success unlikely, and threatening costs that would outweigh the gain. Both depended on capability, credibility, communication, and the other side's perception.",
+        "Capability alone was not enough. A response had to be possible under the conditions claimed; resolve had to appear consistent with interests and institutions; thresholds and consequences had to be communicated without creating fatal ambiguity. Yet perfect clarity was impossible, and the receiver interpreted signals through its own information, biases, leadership, culture, and domestic pressures. What North intended to signal was not necessarily what South believed it saw.",
+        "Mira paired warnings with assurance. North stated what it would defend, maintained lawful and proportionate options under civilian authority, and made clear which peaceful actions would not trigger a response. Channels remained open for clarification and off-ramps. This did not make the relationship safe by definition. Arms competition, commitment traps, misperception, accidents, new technology, multiple actors, and fear could make mutual threats unstable or produce the conflict they were meant to prevent.",
+        "When South did not attack the following year, the governor claimed proof. Mira resisted. Absence of attack could reflect the gate, diplomacy, changing intentions, cost, weather, alliances, internal politics, or no plan to attack in the first place. Evaluating prevention required evidence about perceptions and alternatives, not a simple count of peace. Defence, resilience, diplomacy, confidence-building, arms control, law, and political settlement could interact; no single threat explained every quiet border.",
+        "The untested gate revealed deterrence: attempting to prevent an adversary's action by credibly shaping its expectations that gains will be denied or unacceptable costs will follow. It rests on perceived capability, resolve, communication, and context, while assurance and escalation management help reduce dangerous misunderstanding. North had first hidden a real gate, then advertised an impossible punishment. Mira learned that prevention lived inside another decision-maker's uncertain belief about both what North could do and what it would choose not to do."
+      ],
+      "storyParagraphsZh": [
+        "北堡建起一扇足以抵抗突袭的铁门，却把所有测试都藏起来。南堡只看见外层锈迹，判断快速一推就能成功。突袭最终失败，双方都付出沉重代价。北堡总督抱怨，力量本应阻止尝试。顾问米拉回答，一项无人知晓或被误解的能力无法可靠塑造山谷对面的选择。铁门在攻击开始后发挥屏障作用，却没能提前让攻击显得不值得。",
+        "总督随后宣布，任何人触碰任何道路都将遭到无限报复。南堡知道北堡既无能力，也无政治决心执行这种不加区分的承诺，威胁反而失去可信度；它还吓坏中立村庄，让每次巡逻都担心意外升级。米拉分开两种宽泛逻辑：让成功变得不可能，从而拒止对方预期收益；或威胁施加超过收益的代价。两者都依靠能力、可信度、沟通与对方感知。",
+        "只有能力还不够。回应必须在所声称的条件下可执行，决心必须同利益和制度看起来一致，门槛与后果也要沟通而不制造致命含糊。然而完全清晰不可能实现，接收者会通过自身信息、偏差、领导、文化与内部压力解释信号。北堡意图表达的东西，并不必然就是南堡相信自己看见的东西。",
+        "米拉把警告与保证结合。北堡说明自己保护什么，在文官权威下保持合法、相称的选项，也明确哪些和平行动不会触发回应。澄清渠道与退出坡道保持开放。这并不会按定义让关系安全。军备竞争、承诺陷阱、误判、事故、新技术、多方行动者与恐惧，都可能让相互威胁不稳定，甚至制造原本想预防的冲突。",
+        "第二年南堡没有攻击，总督宣布这就是证明。米拉拒绝了。没有攻击可能来自铁门、外交、意图改变、成本、天气、联盟、内部政治，或对方本来就没有计划。评估预防需要关于感知与替代解释的证据，而不能只数和平。防御、韧性、外交、信任建设、军控、法律与政治解决会彼此作用，没有一项威胁能解释所有安静边境。",
+        "那扇未被测试的门揭示的是威慑：通过可信地塑造对手预期，使其相信收益会被拒止，或将付出不可接受的代价，从而尝试阻止某项行动。它建立在被感知的能力、决心、沟通与情境上，保证与升级管理则帮助减少危险误解。北堡先隐藏真实铁门，又宣传不可能的惩罚；米拉发现，预防存在于另一名决策者的不确定信念里，既关于北堡能做什么，也关于它会选择不做什么。"
+      ],
+      "conceptName": "Deterrence",
+      "conceptNameZh": "威慑",
+      "explanationParagraphs": [
+        "Deterrence seeks to prevent an action by shaping an adversary's expectations that intended gains will be denied or unacceptable costs will follow.",
+        "Its effect depends on perceived capability, credibility, resolve, communication, and context. Misperception and escalation remain risks, so assurance, lawful authority, diplomacy, and off-ramps matter alongside defence."
+      ],
+      "explanationParagraphsZh": [
+        "威慑通过塑造对手预期，使其相信预期收益会被拒止，或将付出不可接受代价，从而阻止某项行动。",
+        "效果取决于被感知的能力、可信度、决心、沟通与情境。误判与升级仍是风险，因此保证、合法权威、外交与退出路径同防御一样重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1031-ooda-loop",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1031",
+      "fieldTitle": "Military and defence",
+      "fieldTitleZh": "军事与国防",
+      "title": "The Fastest Messengers and Yesterday's Map",
+      "titleZh": "最快的信使与昨天的地图",
+      "summary": "An exercise force sends orders faster than anyone else but keeps interpreting new signals through a map the changing situation has already invalidated.",
+      "summaryZh": "一支演习队传令速度无人能及，却持续用已经失效的旧地图解释不断变化的新信号。",
+      "storyParagraphs": [
+        "General Pell won every messenger race. In the annual exercise, scouts sent observations, headquarters chose an order, and riders delivered it before the opposing force had finished breakfast. Yet Pell's unit repeatedly arrived at empty crossings. A flood had moved the usable ford, villagers had changed road signs, and the opposing commander stopped following last year's pattern. Pell shortened decision time again. Faster riders now carried the wrong order sooner, giving the field less time to expose the map that had misread it.",
+        "Analyst Sera separated seeing from making sense. Observation gathered changing information from the environment, friendly forces, constraints, and effects of prior action. Orientation interpreted it through experience, training, culture, doctrine, analysis, new information, and mental models. That orientation shaped what counted as a signal, which options appeared possible, and even where scouts looked next. A stale frame could filter out accurate reports without anyone consciously ignoring them.",
+        "A decision selected a course under uncertainty; action tested it in the world and changed the conditions for the next observation. The sequence therefore did not end after four boxes. Feedback could force reorientation, parallel teams ran nested cycles, and experienced people sometimes moved implicitly between stages. Sera made assumptions and decision rights visible so contradiction could travel upward instead of being edited into agreement with yesterday's map.",
+        "Pell concluded that whoever completed the cycle fastest always won. Sera introduced noise, deception, delayed reports, legal constraints, civilian objectives, and a choice whose consequences could not be reversed. Raw tempo without accurate orientation produced rapid error; endless analysis surrendered initiative. Useful tempo meant learning and acting at a pace suited to stakes, information, capability, and reversibility. Consequential decisions also required a traceable record of the evidence and assumptions shaping orientation. Sometimes the right decision was to pause, verify, or refuse an unlawful option rather than race.",
+        "The unit decentralised some decisions within clear intent and limits, improved sensing and cross-checks, rehearsed challenges to assumptions, and recorded what action actually produced. Authority remained accountable; distributed judgement did not mean every patrol invented its own political objective. After-action review compared expectation with outcome and updated models. The opposing force could also learn, so no loop granted permanent advantage. Adaptation remained a relationship between two changing systems and a wider environment.",
+        "The failed crossings revealed the OODA loop: an iterative cycle of observation, orientation, decision, and action in which action changes the environment and feeds the next cycle. Orientation is central because prior experience, culture, analysis, and mental models shape how information becomes meaning. Pell had treated four boxes as a race won by the fastest messenger. Sera treated them as a learning system whose speed mattered only when its interpretation could change quickly enough to stop yesterday's map from commanding today's field."
+      ],
+      "storyParagraphsZh": [
+        "佩尔将军赢得每场信使比赛。年度演习里，侦察员送回观察，总部选定命令，骑手在对方吃完早餐前便传达到位。可佩尔的部队总抵达空无一人的渡口。洪水移走可用浅滩，村民更换路牌，对方指挥官也不再沿用去年模式。佩尔再次压缩决策时间。更快骑手如今更早送达错误命令，让战场更少有机会揭穿误读它的地图。",
+        "分析员塞拉把看见与理解分开。观察从环境、己方状态、约束与先前行动后果中收集变化信息；判断则通过经验、训练、文化、理论、分析、新信息与心智模型解释它。这个方向感决定什么算信号、哪些选项看起来可行，甚至决定侦察员下一次看向哪里。过时框架可以过滤准确报告，而无需任何人有意识忽略。",
+        "决策在不确定性下选择行动，行动在世界中检验决定，也改变下一次观察的条件。因此顺序不会在四个方框后结束。反馈可能迫使重新判断，平行团队运行嵌套循环，有经验者有时还会隐性地跨越阶段。塞拉让假设与决策权限变得可见，使矛盾能够向上传递，而不被编辑成符合昨天地图的意见。",
+        "佩尔断言，谁最快完成循环谁就永远获胜。塞拉加入噪声、欺骗、延迟报告、法律限制、文官目标，以及后果无法撤销的选择。缺少准确判断的纯速度只会制造快速错误，无止境分析又会交出主动。有效节奏是以适合风险、信息、能力与可逆性的速度学习并行动。重要决定还需要可追溯记录，说明哪些证据与假设塑造了判断。有时正确决定是暂停、核实或拒绝非法选项，而不是竞速。",
+        "部队在清晰意图与界限内下放部分决定，改善感知与交叉核查，练习挑战假设，并记录行动实际产生什么。权力仍受问责；分布式判断不等于每支巡逻队都能发明自己的政治目标。事后复盘比较预期与结果并更新模型。对方同样会学习，因此没有一个循环能提供永久优势。适应始终发生在两个变化系统与更广环境之间。",
+        "失败的渡口揭示的是观察、判断、决策与行动循环：行动会改变环境并反馈到下一轮，因此这是不断迭代的观察、定向理解、选择与行动过程。判断居于中心，因为既往经验、文化、分析与心智模型塑造信息怎样变成意义。佩尔把四个方框当成最快信使会赢的比赛；塞拉把它们视为学习系统，只有解释改变得足够快、不再让昨天地图指挥今天战场时，速度才有价值。"
+      ],
+      "conceptName": "OODA loop",
+      "conceptNameZh": "观察、判断、决策与行动循环",
+      "explanationParagraphs": [
+        "The OODA loop is an iterative cycle of observing, orienting, deciding, and acting, with action changing the environment and informing the next cycle.",
+        "Orientation shapes meaning through experience, culture, analysis, and mental models. Advantage comes from relevant learning and adaptation, not speed alone; legality, accountability, uncertainty, and decision consequences remain essential."
+      ],
+      "explanationParagraphsZh": [
+        "观察、判断、决策与行动循环是不断迭代的观察、定向理解、选择与行动过程，行动会改变环境并进入下一轮。",
+        "判断通过经验、文化、分析与心智模型塑造意义。优势来自相关学习与适应，而不只来自速度；合法性、问责、不确定性与决策后果仍不可缺少。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1031-civilian-control",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1031",
+      "fieldTitle": "Military and defence",
+      "fieldTitleZh": "军事与国防",
+      "title": "The Sword That Chose the City's Enemy",
+      "titleZh": "替城市选择敌人的剑",
+      "summary": "A highly capable guard force begins deciding why the city should fight until constitutional authority separates political ends from professional military means.",
+      "summaryZh": "一支能力出众的守城军开始自行决定城市为何而战，直到宪制权威把政治目的与专业军事手段分开。",
+      "storyParagraphs": [
+        "River City entrusted its walls to General Oren because he understood defence better than any councillor. When a border dispute threatened trade, the council asked for military options. Oren instead selected the city's objective, mobilised without authorisation, and announced that only soldiers understood what security required. His plan was technically coherent, but merchants, neighbouring towns, families, law, finance, diplomacy, and the public consequences of war had never entered the decision. The sword had moved from advising how to protect the city to deciding whom the city would become.",
+        "Constitutional scholar Mara drew a line that was institutional rather than personal. Democratically authorised civilian leaders determined political ends, law, budgets, appointments, oversight, and whether force could be used within constitutional and international obligations. Military professionals provided candid expertise, described feasibility, risk, resources, and consequences, and executed lawful decisions with professional competence. Possessing specialised knowledge and organised force did not grant an independent mandate to choose national policy.",
+        "The council then overcorrected. One minister selected patrol formations, suppressed unwelcome risk estimates, and promoted personal loyalists while claiming that any civilian instruction proved control. Mara objected. Civilian authority did not make every intervention wise, lawful, or democratically accountable. Effective control required institutions: executive responsibility, legislative scrutiny, budgets, courts, audit, clear command, lawful orders, transparent policy where security allowed, and protection for professional advice and reporting.",
+        "Oren asked whether obedience required carrying out any command. Mara answered that armed forces served constitutional order and law, not the private will of one officeholder. Rules governing unlawful orders, human rights, armed conflict, discipline, and individual responsibility remained. Military personnel were citizens with rights as well as duties, while political neutrality protected public trust. Refusing partisan use differed from claiming a military veto over legitimate policy merely because commanders disagreed.",
+        "River City created regular channels for advice, challenge, authorisation, review, and after-action accountability. Civilian leaders learned enough to question assumptions without pretending to replace expertise; commanders stated consequences without using operational control to coerce political choice. Disagreement became visible in the proper forum, then lawful decisions passed through a clear chain. Public confidence depended on neither expertise nor coercive power escaping review. The arrangement could still fail through secrecy, politicisation, corruption, incompetence, or weak institutions, so oversight remained a continuing practice rather than a ceremonial signature.",
+        "The self-directing sword revealed civilian control of the military: the constitutional and democratic principle that legitimate civilian authorities set political objectives and oversee armed forces, while military professionals advise and execute lawful policy within defined command and accountability. It is neither civilian micromanagement nor military autonomy from law. Oren knew how the city could fight. Mara protected the prior question that belonged to the polity: whether, why, and under whose lawful authority its sword should leave the wall."
+      ],
+      "storyParagraphsZh": [
+        "河城把城墙交给奥伦将军，因为他比任何议员都懂防御。边境争端威胁贸易时，议事会请他提供军事选项，奥伦却直接选择城市目标，未经授权动员，并宣布只有军人才懂安全需要什么。他的计划在技术上连贯，可商人、邻镇、家庭、法律、财政、外交与战争公共后果从未进入决定。那把剑已从建议如何保护城市，移动到决定城市要变成什么。",
+        "宪制学者玛拉画出一条制度界线，而非个人界线。经民主授权的文官领导决定政治目的、法律、预算、任命、监督，以及是否能在宪法和国际义务下使用武力。军事专业人员坦诚提供专长，说明可行性、风险、资源与后果，再以专业能力执行合法决定。拥有专门知识和组织化武力，并不会授予独立选择国家政策的使命。",
+        "议事会随后矫枉过正。一名部长亲自选择巡逻阵型，压下不受欢迎的风险估计，又提拔私人忠诚者，同时宣称任何文官指令都证明统制。玛拉反对。文官权威不会让每项干预自动明智、合法或接受民主问责。有效统制需要制度：行政责任、立法审查、预算、法院、审计、清晰指挥、合法命令、在安全允许处公开政策，以及保护专业意见与报告。",
+        "奥伦问，服从是否意味着执行任何命令。玛拉回答，军队服务宪制秩序与法律，而非某名官员的私人意志。关于非法命令、人权、武装冲突、纪律与个人责任的规则仍然存在。军人是承担义务、也享有权利的公民，政治中立则保护公共信任。拒绝被党派利用，不同于仅因指挥官不同意，就主张军方可以否决合法政策。",
+        "河城建立定期的建议、质询、授权、复核与事后问责渠道。文官领导学习足够知识以挑战假设，却不假装取代专业；指挥官说明后果，却不利用行动控制胁迫政治选择。分歧在合适场所变得可见，合法决定再沿清晰链条传递。公共信任依赖专业知识与强制权力都不能逃离审查。这套安排仍可能因秘密、政治化、腐败、无能或制度薄弱而失败，因此监督是持续实践，不是仪式签名。",
+        "自行决定方向的剑揭示的是文官统制：合法文官权威设定政治目标并监督武装力量，军事专业人员则在明确指挥与问责下建议并执行合法政策的宪制与民主原则。它既不是文官微观管理，也不是军队脱离法律的自主。奥伦知道城市可以怎样战斗；玛拉保护的是此前属于全体政治共同体的问题：城市是否、为何，以及在谁的合法权威下让剑离开城墙。"
+      ],
+      "conceptName": "Civilian control of the military",
+      "conceptNameZh": "文官统制",
+      "explanationParagraphs": [
+        "Civilian control of the military places political objectives, authorisation, oversight, and accountability under legitimate constitutional civilian institutions.",
+        "Military professionals provide candid expertise and execute lawful policy. The principle requires institutions and law, not partisan micromanagement, suppression of advice, unlawful obedience, or an autonomous military veto over policy."
+      ],
+      "explanationParagraphsZh": [
+        "文官统制把政治目标、授权、监督与问责置于合法宪制文官机构之下。",
+        "军事专业人员坦诚提供专长并执行合法政策。这一原则需要制度与法律，不等于党派微观管理、压制意见、服从非法命令，或军队自主否决政策。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1032-situational-crime-prevention",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1032",
+      "fieldTitle": "Protection of persons and property",
+      "fieldTitleZh": "人身与财产保护",
+      "title": "The Market That Changed Its Corners",
+      "titleZh": "改变角落的市场",
+      "summary": "A market reduces a recurring theft pattern by changing immediate opportunities, then tests whether harm moved elsewhere or new barriers excluded the public.",
+      "summaryZh": "市场通过改变即时机会减少一类反复盗窃，又检验伤害是否转移到别处，或新屏障是否排斥公众。",
+      "storyParagraphs": [
+        "At Lantern Market, small purses disappeared every seventh-day evening near the eastern arcade. Captain Pell doubled random patrols and arrested more people for unrelated disorder, yet the same theft pattern continued. He demanded harsher character judgments about the district. Analyst Sera instead marked the exact times, paths, targets, transactions, guardians, exits, crowding, and reporting delays. The losses clustered where a blind turn met an unstaffed payment queue and customers had to expose open bags while both hands were occupied.",
+        "The market changed the immediate setting. Stalls were rearranged to improve natural visibility, the queue no longer crossed a hidden corner, secure storage became available, payment handling required less exposure, staff roles and reporting were clear, and confusing rules were simplified. These changes altered opportunity by increasing effort or perceived risk, reducing expected reward, reducing provocation, and removing excuses in ways tailored to that specific problem. They did not require discovering or transforming every possible offender before preventing the next event.",
+        "Pell declared the district cured after reports fell. Sera checked whether people had stopped reporting, whether theft moved to another entrance, time, target, method, or nearby market, which groups were affected, and whether benefits spread beyond the treated corner. Some displacement was possible but not automatic; changes could also produce diffusion of benefit when uncertainty about controls affected nearby choices. Counts were compared with suitable baselines and visitor volume, while residents and workers described consequences the incident ledger missed.",
+        "One proposed measure would have searched every young person entering the arcade. Sera rejected a broad intrusive response unsupported by the specific pattern. Prevention could create surveillance, privacy loss, stigma, inaccessible barriers, racial or class discrimination, hostile space, or exclusion of legitimate users. Measures therefore required proportionality, legality, evidence, accessibility, community participation, data safeguards, and review. Making a place harder to offend in should not make it impossible for some citizens to belong there.",
+        "The market also refused to treat opportunity reduction as a complete theory of crime or justice. Housing, inequality, trauma, exploitation, markets for stolen goods, policing legitimacy, and social services could require broader action. Victims were not blamed for carrying purses, and reduced opportunity did not determine guilt or replace fair investigation. The approach addressed one preventable event pattern while other institutions addressed causes and harms at other levels.",
+        "The altered corner revealed situational crime prevention: reducing specific crime opportunities by systematically changing the immediate environment or management to increase effort and risk, reduce rewards and provocations, or remove excuses. It is problem-specific and should be tested for displacement, benefit, equity, and unintended harm. Pell had searched the whole district for worse people. Sera studied one repeated situation closely enough to change what it invited, concealed, rewarded, and allowed."
+      ],
+      "storyParagraphsZh": [
+        "灯笼市场每逢第七日晚间，东侧拱廊附近就有小钱包失窃。佩尔队长把随机巡逻加倍，因无关扰序逮捕的人更多，同样盗窃模式却继续。他要求对整个街区作出更严厉的性格判断。分析员塞拉改为标记精确时间、路径、目标、交易、看护者、出口、拥挤与报告延迟。损失集中在一处盲弯、无人管理的付款队伍交会之处，顾客双手被占用时不得不露出敞开的袋子。",
+        "市场改变即时环境。摊位重新排列以改善自然可见性，队伍不再穿过隐蔽角落，安全存放变得可用，付款减少暴露，职员角色和报告路径清楚，令人困惑的规则也被简化。这些改变针对具体问题，通过提高行动难度或被发现风险、降低预期收益、减少诱发因素并消除借口来改变机会。它们不必先找出并改造所有潜在行为者，才预防下一起事件。",
+        "报告下降后，佩尔宣布街区已经治愈。塞拉检查人们是否停止报告、盗窃是否转移到另一入口、时段、目标、方法或邻近市场、哪些群体受到影响，以及改变的益处是否扩散到处理点以外。转移可能发生却不自动发生；当附近的人也不确定控制范围时，还可能出现益处扩散。事件数会同合适基线与访客量比较，居民和劳动者也描述事故账册遗漏的后果。",
+        "一项建议想搜查每个进入拱廊的年轻人。塞拉拒绝了这种缺少具体模式支持的广泛侵入回应。预防可能制造监视、隐私损失、污名、不可及屏障、种族或阶级歧视、敌意空间，或排斥合法使用者。因此措施需要相称、合法、证据、可及、社区参与、数据保护与复核。让一个地方更难发生违法，不应让一些公民无法在其中正常生活。",
+        "市场也拒绝把机会减少当成犯罪或正义的完整理论。住房、不平等、创伤、剥削、赃物市场、执法正当性与社会服务可能需要更广行动。受害者不会因携带钱包而被责怪，机会减少也不能判定罪责或替代公平调查。这套方法处理一个可预防的事件模式，其他机构则在别的层次处理原因与伤害。",
+        "改变后的角落揭示的是情境犯罪预防：系统改变即时环境或管理，通过提高行动难度和风险、降低收益与诱发因素，或消除借口，减少特定犯罪机会。它针对具体问题，还应检验转移、获益、公平与意外伤害。佩尔曾在整个街区寻找更坏的人；塞拉把一种反复情境研究得足够仔细，从而改变它邀请、隐藏、奖励和允许的行为。"
+      ],
+      "conceptName": "Situational crime prevention",
+      "conceptNameZh": "情境犯罪预防",
+      "explanationParagraphs": [
+        "Situational crime prevention reduces opportunities for specific offences by changing immediate environments or management to alter effort, risk, reward, provocation, or excuses.",
+        "It requires precise problem analysis and evaluation for displacement, benefit, equity, privacy, and exclusion. It complements rather than replaces fair investigation, social prevention, and attention to wider causes."
+      ],
+      "explanationParagraphsZh": [
+        "情境犯罪预防通过改变即时环境或管理，调整行动难度、风险、收益、诱发因素或借口，从而减少特定违法机会。",
+        "它需要精确问题分析，并评估转移、获益、公平、隐私与排斥。它补充而非替代公平调查、社会预防与对更广原因的关注。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1032-layered-security",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1032",
+      "fieldTitle": "Protection of persons and property",
+      "fieldTitleZh": "人身与财产保护",
+      "title": "The Museum's One Perfect Door",
+      "titleZh": "博物馆唯一完美的门",
+      "summary": "A museum invests everything in one magnificent entrance while people, information, detection, response, and recovery remain unconnected behind it.",
+      "summaryZh": "博物馆把一切投入一扇宏伟入口，门后的人、信息、发现、响应与恢复却彼此断开。",
+      "storyParagraphs": [
+        "The City Museum bought the thickest door in the kingdom. Director Pell cancelled guard training, inventory checks, alarm maintenance, and incident exercises because no intruder could pass the entrance. During a crowded exhibition, a valuable object went missing without the great door moving. The record was discovered days later, video could not be retrieved, and no one knew who had authority to preserve evidence or notify owners. Pell had protected one boundary while treating the organisation behind it as if security ended at the lock.",
+        "Security planner Mara mapped several functions rather than buying a thicker object. Some measures discouraged attempts; some controlled access; others detected anomalies, delayed progress, enabled proportionate response, protected people, preserved evidence, maintained operations, or supported recovery. Physical design, personnel, procedures, information, technology, suppliers, and governance formed interacting layers across the object's life, not concentric decorations around a single door.",
+        "Pell installed five alarms from one vendor and called them independent. Mara found that they shared power, network, credentials, maintenance, and one control room. A single failure could silence all five. Layers gained value when their failure modes, placement, timing, and owners were sufficiently diverse, when alerts reached a capable response, and when performance was tested. Independence was a claim to demonstrate, not a count of purchased devices. A sensor without response was a noise-maker; a backup no one could restore was only a comforting label.",
+        "More security also created costs and hazards. Confusing access rules blocked disabled visitors, intrusive collection threatened privacy, delayed evacuation increased life-safety risk, and exhausted guards missed real signals among false alarms. Mara used a current threat and vulnerability assessment to make controls proportionate, lawful, usable, accessible, and compatible with fire, worker, data, and public obligations. Infinite barriers could reduce the museum's purpose while still leaving a common weakness untouched.",
+        "The museum combined prevention, detection, delay, response, continuity, and recovery, assigned ownership, exercised failures, and reviewed near misses. Exercises included lost communications, evacuation, evidence handling, degraded operation, and restoration under realistic staffing. It restricted sensitive details while keeping policy and accountability as transparent as safety allowed. Insider, contractor, cyber, physical, environmental, and accidental risks were considered without treating every person as an adversary. Security remained dynamic because assets, threats, technology, staffing, and public use changed.",
+        "The untouched door revealed layered security: integrating multiple people, process, physical, and technological controls so the failure or defeat of one measure does not alone expose the protected people, assets, or operations. Effective layers deter, prevent, detect, delay, respond, and recover with sufficiently independent failure modes and tested connections. Pell had built one perfect answer at the entrance. Mara built an imperfect but coordinated system that could still notice, act, and recover when one answer failed."
+      ],
+      "storyParagraphsZh": [
+        "城市博物馆买下王国最厚的门。馆长佩尔取消守卫培训、藏品核对、警报维护与事故演练，因为没有入侵者能穿过入口。一次拥挤展览中，一件珍贵物品在大门纹丝未动时失踪。几天后账目才发现异常，影像无法取回，也没人知道谁有权保存证据或通知所有者。佩尔保护一道边界，却把门后的组织当成安全会在锁芯处结束。",
+        "安全规划师玛拉绘制多种功能，而不是购买更厚物件。有些措施劝阻尝试，有些控制进入，另一些发现异常、延缓进展、支持相称响应、保护人员、保存证据、维持运行或帮助恢复。物理设计、人员、程序、信息、技术、供应商与治理在物品整个生命周期形成互动层级，而不是围绕一扇门的同心装饰。",
+        "佩尔从同一家供应商安装五个警报，称它们彼此独立。玛拉发现它们共用电源、网络、凭证、维护与一个控制室，一次故障就能让五个同时沉默。只有失效方式、位置、时机与负责人足够多样，警报能抵达有能力的响应者，且表现经过测试时，层级才增加价值。独立性是需要证明的主张，不是购买设备的数量。没有响应的传感器只是噪声机，无人会恢复的备份只是安慰标签。",
+        "更多安保也会制造成本与危险。混乱进入规则挡住残障访客，侵入式收集威胁隐私，延迟疏散增加生命安全风险，疲惫守卫又会在误报中错过真信号。玛拉依据当前威胁与脆弱性评估，让控制相称、合法、可用、可及，并符合消防、劳动、数据与公共义务。无限屏障可能削弱博物馆目的，却仍留下一个共同弱点。",
+        "博物馆结合预防、发现、延缓、响应、连续与恢复，分配负责人，演练失效并复核险情。演练涵盖通信丢失、疏散、证据处理、降级运行，以及现实人员配置下的恢复。在限制敏感细节的同时，政策与问责在安全允许范围内保持透明。内部人员、承包商、网络、物理、环境与意外风险都被考虑，却不把每个人都当成对手。资产、威胁、技术、人员与公共使用会变化，因此安全也始终动态。",
+        "那扇未被触碰的门揭示的是分层防护：整合人员、流程、物理与技术控制，使一项措施失效或被绕过时，不会单独暴露受保护的人、资产或运行。有效层级以足够独立的失效方式和经过测试的连接来威慑、预防、发现、延缓、响应与恢复。佩尔在入口建造一个完美答案；玛拉建造的是一套不完美却协调的系统，让一个答案失效后仍能看见、行动并恢复。"
+      ],
+      "conceptName": "Layered security",
+      "conceptNameZh": "分层防护",
+      "explanationParagraphs": [
+        "Layered security coordinates multiple people, process, physical, and technological controls so one failure does not alone expose protected assets, people, or operations.",
+        "Layers should have useful functions, sufficiently independent failure modes, tested connections, and capable response and recovery. Proportionality, accessibility, privacy, life safety, maintenance, and common dependencies still matter."
+      ],
+      "explanationParagraphsZh": [
+        "分层防护协调多项人员、流程、物理与技术控制，使一次失效不会单独暴露受保护资产、人员或运行。",
+        "各层应有实际功能、足够独立的失效方式、经过测试的连接，以及有能力的响应与恢复。相称、可及、隐私、生命安全、维护与共同依赖仍很重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1032-de-escalation",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1032",
+      "fieldTitle": "Protection of persons and property",
+      "fieldTitleZh": "人身与财产保护",
+      "title": "The Guard Who Stopped Winning",
+      "titleZh": "不再争胜的守卫",
+      "summary": "A guard's louder commands intensify a station dispute until slowing the encounter reveals the loss, fear, and choices hidden beneath the shouting.",
+      "summaryZh": "守卫越来越响的命令加剧车站争执，直到放慢相遇，才显出喊叫下隐藏的失物、恐惧与选择。",
+      "storyParagraphs": [
+        "At North Station, traveller Ivo shouted that the baggage desk had stolen his case. Guard Pell stepped close, matched his volume, issued three rapid commands, and gathered a crowd. Ivo clenched his hands and repeated himself more loudly. Pell interpreted every increase as proof that stronger dominance was needed. The lost case remained behind the desk under a misspelled label, but neither man could hear the clerk trying to explain it. Each was now responding to the other's threat rather than the problem that had started the encounter.",
+        "Senior guard Mara first assessed immediate danger, people at risk, exits, available support, and whether time and distance could be created safely. She reduced unnecessary noise and spectators, kept a respectful space, used one calm speaker, identified herself, and gave Ivo time to answer one simple question. She acknowledged the loss without agreeing that theft had occurred. Lowering stimulation and preserving dignity made new information possible; it did not require surrendering lawful boundaries.",
+        "Ivo said the case contained his late mother's letters and that the departing train made every minute feel final. Mara reflected the concern, explained what she knew and did not know, and offered two feasible next steps. Choice restored some control. She avoided sarcasm, threats she could not support, sudden touch, contradictory orders, and arguing over pride. Communication considered language, hearing, disability, trauma, intoxication, mental distress, culture, and other factors without using any of them as a casual diagnosis.",
+        "Pell concluded that calm words should resolve every confrontation. Mara corrected him. Some situations involved an immediate serious threat, weapons, ongoing harm, or a person unable or unwilling to engage; delay or proximity could increase danger. Staff followed law, policy, training, role, and emergency procedures, sought appropriate specialist or emergency support, and used only options justified by the actual circumstances. No communication technique guaranteed safety or made a harmed worker responsible for another person's violence.",
+        "After the case was returned, the station reviewed more than Pell's tone. A misspelled label, inaccessible complaint route, poor queue information, time pressure, and crowd design had contributed. Staff practised recognition, communication, teamwork, disengagement, reporting, medical aid, and post-incident support, while management fixed the service system. Success meant reducing danger and resolving the underlying need where possible, not forcing visible obedience or avoiding every necessary boundary.",
+        "The recovered letters revealed de-escalation: deliberate strategies to reduce the intensity, immediacy, or likelihood of conflict and create safer conditions for communication, voluntary cooperation, assessment, and resolution when feasible. It can use time, distance, calm speech, listening, clear limits, choice, and environmental change, but it is not guaranteed or always appropriate. Pell had tried to win the volume contest. Mara made enough space for the original problem to re-enter the station."
+      ],
+      "storyParagraphsZh": [
+        "北站里，旅客伊沃大喊行李柜台偷了他的箱子。守卫佩尔走得很近，以同样音量回应，快速发出三条命令，还引来人群。伊沃握紧双手，更大声重复。佩尔把每次升级都解释为需要更强支配的证明。丢失箱子其实就在柜台后，只因姓名拼错；可两人都听不见职员试图解释。此刻他们回应的已是彼此威胁，而非最初引发相遇的问题。",
+        "资深守卫玛拉先评估即时危险、受风险影响的人、出口、可用支持，以及能否安全创造时间与距离。她减少无关噪声和围观，保持尊重空间，只由一名冷静的人讲话，说明自己身份，并让伊沃有时间回答一个简单问题。她承认失物带来的担忧，却不赞同行李已被盗。降低刺激并保留尊严，让新信息得以出现，并不要求放弃合法界限。",
+        "伊沃说箱里装着已故母亲的信，列车即将离开，让每一分钟都像最后机会。玛拉复述他的关切，说明自己知道与不知道什么，并提供两个可行下一步。选择恢复部分控制。她避免讥讽、无法兑现的威胁、突然触碰、相互矛盾的命令和意气争论。沟通会考虑语言、听力、残障、创伤、醉酒、精神痛苦、文化及其他因素，却不把其中任何一项当成随意诊断。",
+        "佩尔于是认为平静话语应解决每场冲突。玛拉纠正他。有些情境存在即时严重威胁、武器、持续伤害，或当事人无法或不愿沟通；延迟或靠近反而会增加危险。职员依法律、政策、训练、职责与紧急程序行动，寻求适当专业或紧急支持，只使用具体情境真正支持的选项。没有沟通技巧能保证安全，也不能让受到伤害的劳动者为他人暴力负责。",
+        "箱子归还后，车站复核的不只佩尔语气。拼错标签、不可及投诉路径、薄弱队伍信息、时间压力与围观空间都促成事件。职员练习识别、沟通、团队、撤离、报告、医疗援助与事后支持，管理层则修复服务系统。成功是尽可能降低危险并解决底层需要，而非强迫可见服从，或逃避每项必要界限。",
+        "找回的信件揭示的是降级冲突：在可行时有意降低冲突强度、即时性或发生可能，为沟通、自愿合作、评估与解决创造更安全条件。它可以使用时间、距离、平静语言、倾听、清晰边界、选择和环境改变，却没有保证，也并非永远合适。佩尔试图赢下音量比赛，玛拉则腾出足够空间，让最初问题重新走进车站。"
+      ],
+      "conceptName": "De-escalation",
+      "conceptNameZh": "降级冲突",
+      "explanationParagraphs": [
+        "De-escalation uses deliberate communication, time, distance, clear limits, choice, and environmental changes to reduce conflict intensity and create safer conditions when feasible.",
+        "It requires ongoing risk assessment and is neither guaranteed nor always appropriate. Immediate threats may require emergency action; law, policy, worker safety, dignity, support, reporting, and system causes remain important."
+      ],
+      "explanationParagraphsZh": [
+        "降级冲突通过有意使用沟通、时间、距离、清晰边界、选择与环境改变，在可行时降低冲突强度并创造更安全条件。",
+        "它需要持续风险评估，没有保证，也并非永远合适。即时威胁可能需要紧急行动；法律、政策、劳动者安全、尊严、支持、报告与系统原因仍很重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1041-induced-demand",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1041",
+      "fieldTitle": "Transport services",
+      "fieldTitleZh": "运输服务",
+      "title": "The Road That Filled Its Own Empty Space",
+      "titleZh": "自己填满空处的路",
+      "summary": "A city widens its busiest road and briefly defeats congestion, only to discover that travellers, developers, and destinations respond to the new capacity.",
+      "summaryZh": "城市拓宽最繁忙的道路，短暂战胜拥堵，却发现出行者、开发商与目的地都会回应新增容量。",
+      "storyParagraphs": [
+        "Meren's east road had become a daily queue, so Mayor Rusk added two lanes and promised ten years of free movement. On opening morning, carts and coaches crossed the city in half the old time. Rusk placed the saved minutes in a glass case at city hall. Planner Asha asked him to leave room for later measurements. Within months, the morning queue returned. The mayor accused the engineers of miscounting capacity, but the lanes were carrying far more vehicles than before. The road had not failed to accept traffic; it had changed the choices that produced traffic.",
+        "Asha followed individual journeys. Drivers who had used side streets returned to the faster road. Some left at the busiest hour instead of travelling early. Former bus passengers began driving because the time advantage had shifted, and households that had postponed optional trips now made them. These were not one identical kind of journey. Some traffic had moved from another route, time, or mode; some trips had previously been suppressed by cost and delay. A snapshot of the widened road could not show which source had filled each new lane.",
+        "The slower change appeared beyond the kerb. Warehouses moved toward cheaper eastern land, shops surrounded themselves with parking, and new homes rose farther from schools and work. Destinations that had once seemed inconvenient became normal, while walking and frequent bus service became harder to sustain across the spreading city. Each household's decision made sense under the new conditions. Together, those decisions lengthened journeys and made owning a vehicle more useful, feeding traffic that the original forecast had treated as fixed.",
+        "Rusk concluded that extra road space must therefore be worthless. Asha disagreed. A safer junction, a missing rural link, reliable freight access, emergency resilience, or relief at a tightly constrained bottleneck could create real benefits. Nor was every newly made journey a social loss; access itself had value. The error was promising that capacity would preserve its first-day speed without estimating how routes, departure times, modes, trip frequency, destinations, and land use would respond in the short and long run.",
+        "The council stopped judging success by vehicle speed alone. It compared how many people and goods reached useful destinations, how reliable the whole journey was, who gained or lost access, and what happened to safety, emissions, neighbourhoods, and public cost. Road changes were tested alongside frequent transit, walking and cycling connections, parking and pricing choices, freight management, and land-use planning. Comparison corridors and updated forecasts helped separate the capacity response from population, income, fuel-price, and wider policy changes. Measurements continued after opening, so policy could adjust when behaviour differed from forecasts rather than calling every returning queue a surprise.",
+        "The road that filled its own empty space revealed induced demand: when travel becomes faster, cheaper, or easier, people and organisations alter routes, times, modes, trip frequency, destinations, and eventually land use, producing more use of the expanded capacity than a fixed-demand forecast predicts. Some of the increase is diverted or rescheduled travel, some is previously suppressed or newly generated travel, and some develops gradually through location choices. Rusk had built lanes for yesterday's journeys. Asha learned to forecast the journeys that the lanes themselves would help make reasonable tomorrow."
+      ],
+      "storyParagraphsZh": [
+        "梅伦城东路每天排成长队，拉斯克市长于是增加两条车道，并承诺十年畅行。开通清晨，货车与客车穿城时间只有过去一半。拉斯克把节省下来的分钟写进玻璃柜，摆在市政厅里。规划师阿莎请他为后续测量留些空位。几个月后，早高峰队伍重新出现。市长责怪工程师算错容量，可车道实际承载的车辆远多于从前。道路不是没有接住交通，而是改变了产生交通的选择。",
+        "阿莎逐一追踪出行。曾走小路的司机回到更快的主路；一些人不再提早出门，而在最拥挤时段上路；原先乘公交的人因为时间优势变化开始开车；过去因成本与延误而搁置可选行程的家庭，也把它们重新排进生活。这些并非同一种旅程。有的交通从其他路线、时段或方式转来，有的是此前被压下的出行。只看拓宽后的路面，无法知道每条新车道被哪一种来源填满。",
+        "更慢的变化出现在路缘之外。仓库迁向东部廉价土地，商店被停车场包围，新住宅建在离学校和工作更远的地方。过去显得不便的目的地变得寻常，步行和高频公交却难以覆盖不断摊开的城市。每个家庭在新条件下的决定都有道理；这些决定合在一起，却拉长了路程，使拥有车辆更有用，也不断喂养原预测中被当成固定不变的交通量。",
+        "拉斯克因此断定，增加道路空间毫无价值。阿莎并不同意。更安全的路口、缺失的乡村连接、可靠货运通道、紧急韧性，或极端瓶颈的缓解，都可能带来真实收益。新发生的旅程也不全是社会损失，可达性本身具有价值。错误在于承诺新增容量会永远保留开通首日的速度，却不估计路线、出发时间、交通方式、出行频率、目的地与土地利用在短期和长期如何回应。",
+        "议会不再只用车速判断成功。它比较有多少人与货物可靠抵达有用目的地，谁获得或失去可达性，以及安全、排放、社区和公共成本发生了什么。道路改变要同高频公共交通、步行与骑行连接、停车和定价选择、货运管理及土地规划一起检验。比较走廊与更新预测帮助区分容量回应和人口、收入、燃料价格及更广政策变化。开通后的测量持续进行，当行为偏离预测时就调整政策，而不是把每次重新出现的队伍都称为意外。",
+        "这条自己填满空处的路揭示的是诱发需求：当出行变得更快、更便宜或更容易，人和组织会改变路线、时段、方式、频率、目的地，最终还会改变区位与土地利用，使扩容后的使用量超过固定需求预测。有些增量来自改道或改时，有些来自过去受抑制或新生成的出行，还有一些通过区位选择逐渐形成。拉斯克为昨天的旅程修建车道；阿莎则学会预测这些车道会让哪些明日旅程变得合理。"
+      ],
+      "conceptName": "Induced demand",
+      "conceptNameZh": "诱发需求",
+      "explanationParagraphs": [
+        "Induced demand occurs when improved travel conditions change route, time, mode, frequency, destination, or location choices, causing expanded capacity to attract more use than fixed-demand forecasts expect.",
+        "It does not mean every capacity project or added trip lacks value. Good appraisal distinguishes sources and time scales, tests land-use and modal responses, measures access as well as speed, and compares road expansion with complementary or alternative policies."
+      ],
+      "explanationParagraphsZh": [
+        "诱发需求发生在出行条件改善改变路线、时段、方式、频率、目的地或区位选择时，使扩建容量吸引的使用量超过固定需求预测。",
+        "它不意味着每项扩容工程或新增旅程都没有价值。良好评估会区分增量来源与时间尺度，检验土地和方式变化，同时衡量可达性与速度，并比较道路扩建和其他配套或替代政策。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1041-network-topology",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1041",
+      "fieldTitle": "Transport services",
+      "fieldTitleZh": "运输服务",
+      "title": "The Island Every Journey Had to Touch",
+      "titleZh": "每段旅程都必须触碰的岛",
+      "summary": "An archipelago replaces an unaffordable web of direct ferries with one efficient hub, then learns what its map gains in consolidation and loses in resilience.",
+      "summaryZh": "群岛用一个高效枢纽取代无法负担的直达航线网，随后看见地图在集中运输中获得什么，又在韧性上失去什么。",
+      "storyParagraphs": [
+        "The Seven Isles once demanded a direct ferry between every pair of harbours. The map looked generous, but many vessels sailed half empty, crews and docks were scattered across thin routes, and maintaining every promised connection consumed the treasury. Minister Orin redrew the system: six islands would send passengers and cargo to Crown Island, where larger vessels would carry consolidated loads onward. Frequency rose, costs fell, and small harbours gained access to more destinations through one transfer. Orin framed the new map as the final answer to distance.",
+        "The first warning came when fog closed Crown harbour. A baker travelling between two neighbouring islands could see her destination across the water, yet her ticket required a long journey to the closed hub. Medicines, mail, and schoolchildren gathered at spoke terminals. Nothing was wrong with most vessels or local harbours; the pattern of connections had made one disruption reachable from almost every journey. Efficiency had been created by concentrating flows, but so had dependency, transfer delay, and a point where queues could multiply one another.",
+        "Orin restored every direct line. The treasury immediately fractured again, and low-volume routes lost frequency until a line existing on paper might require a two-day wait. Network analyst Sen laid stones for harbours and strings for links. A complete web offered direct paths and alternatives but demanded many links. A star used fewer links and consolidated demand, yet placed enormous importance on its centre. A line, ring, branching tree, grid, and mixed pattern each distributed path length, transfer, cost, and vulnerability differently.",
+        "Sen then removed strings one at a time. She measured whether all islands remained connected, how many links a harbour held, which harbour sat on many shortest routes, how far journeys became after disruption, and whether spare paths had enough capacity to carry displaced flows. She distinguished a second path on the drawing from operational resilience: the alternative still needed vessels, crews, energy, terminal capacity, and working interchange. Two drawings could share the same pattern but perform differently because schedules, fares, information, or operating rules differed. A nearby backup link was useless if its dock could not accept the cargo, and identical routes could fail together when they shared one channel or control system.",
+        "The archipelago adopted a mixed design: high-frequency trunk services through Crown, selected cross-links where demand or emergency value justified them, backup docking and communications, coordinated transfers, and capacity reserved for recovery. Passenger, freight, school, health, and remote-community needs were not assumed to have the same acceptable transfer or delay. The map was tested under storms, maintenance, seasonal peaks, and hub closure. No pattern eliminated trade-offs; the task was to make them visible and fit the network to public purpose.",
+        "Sen's stones and strings revealed transport network topology: the arrangement of nodes and links that structures possible paths, transfers, concentration, accessibility, and routes around failure. Hub-and-spoke forms can consolidate flows and support frequency, while denser or cross-linked forms can shorten journeys and add alternatives at greater cost. Topology is not the whole transport service, because capacity, schedules, interoperability, demand, governance, and shared hazards determine how the pattern actually performs. Orin had asked which map looked simplest. Sen asked what could still move when its most important string was cut."
+      ],
+      "storyParagraphsZh": [
+        "七岛群岛曾要求每一对港口之间都有直达渡船。地图看起来慷慨，许多船却半空航行，船员与码头分散在稀薄航线上，维持每条承诺连接耗尽国库。奥林大臣重画系统：六座岛把人货送到王冠岛，再由较大船只集中运往下一站。班次增加，成本下降，小港口经一次换乘便能抵达更多目的地。奥林把这张新地图装裱成距离问题的最终答案。",
+        "第一次警告来自关闭王冠港的浓雾。一名往返两座相邻岛屿的面包师明明看得见目的地，船票却要求她先绕到已经关闭的枢纽。药物、信件与学童堆在辐射端点。大多数船只和地方港口都没有故障，是连接方式让一次中断能够触及几乎每段旅程。集中流量创造了效率，也集中出依赖、换乘延误，以及让多条队伍彼此放大的节点。",
+        "奥林恢复所有直达线，国库立刻再次裂开；低客流航线的班次越来越少，纸面存在的一条线可能要等两天。网络分析师森用石头表示港口，用细绳表示连接。完整网络提供直达路径和替代选择，却需要大量航线；星形网络用较少连接汇集需求，却让中心承受极高重要性。直线、环形、分枝树、网格与混合形态，会以不同方式分配路程、换乘、成本与脆弱性。",
+        "森随后逐条移走细绳。她测量所有岛屿能否保持连接、港口拥有多少连接、哪座港口位于许多最短路径上、中断后旅程会变多远，以及备用路径是否有足够容量接住转移流量。她把图上的第二条路同运营韧性分开：替代路线仍需要船只、人员、能源、场站容量与有效换乘。两张图可以具有相同形态，却因时刻、票价、信息或运营规则而表现不同。邻近备用线若码头接不住货物便毫无用处；不同路线若共用一条水道或控制系统，也可能同时失效。",
+        "群岛最终采用混合设计：经王冠岛运行高频干线，在需求或紧急价值足够时设置精选横向连接，并准备备用停靠、通信、协调换乘与恢复容量。客运、货运、上学、医疗和偏远社区的需要，不再被假定能接受同样的换乘与延误。地图要在风暴、维护、季节高峰和枢纽关闭情境下接受检验。没有一种形态能消除权衡，任务是让权衡可见，并使网络符合公共目的。",
+        "森的石头与细绳揭示的是运输网络拓扑：节点与连接的排列方式，它塑造可能路径、换乘、流量集中、可达性和绕开故障的路线。枢纽辐射形态能集中流量并支持班次，更稠密或交叉连接的形态则能缩短旅程、增加替代，却成本更高。拓扑不是完整运输服务，因为容量、时刻、互操作性、需求、治理与共同风险决定图形如何真正运行。奥林问哪张图最简单，森问的是最重要那根绳断开后，还有什么能够继续移动。"
+      ],
+      "conceptName": "Transport network topology",
+      "conceptNameZh": "运输网络拓扑",
+      "explanationParagraphs": [
+        "Transport network topology describes how transport nodes and links are arranged, shaping connectivity, path length, transfers, concentration, accessibility, and alternatives during disruption.",
+        "Hub, spoke, ring, line, mesh, tree, and hybrid patterns offer different efficiency and resilience trade-offs. Actual performance also depends on capacity, schedules, interoperability, demand, operations, governance, and common failure sources."
+      ],
+      "explanationParagraphsZh": [
+        "运输网络拓扑描述运输节点与连接如何排列，从而塑造连通性、路径长度、换乘、集中程度、可达性及中断时的替代路线。",
+        "枢纽、辐射、环形、直线、网格、树形与混合结构各有不同的效率和韧性权衡；实际表现还取决于容量、时刻、互操作性、需求、运营、治理与共同故障来源。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1041-last-mile-integration",
+      "batchId": "batch-016",
+      "categoryCode": "10",
+      "fieldCode": "1041",
+      "fieldTitle": "Transport services",
+      "fieldTitleZh": "运输服务",
+      "title": "The Grain That Stopped Two Kilometres Away",
+      "titleZh": "停在两公里外的粮食",
+      "summary": "Grain crosses mountains and rivers efficiently, then spoils near the market because nobody designed the short final movement or the handoffs between carriers.",
+      "summaryZh": "粮食高效跨过山河，却在市场附近变质，因为没有人设计短短的末段移动与承运者之间的交接。",
+      "storyParagraphs": [
+        "A drought left Bellmarket waiting for grain from the northern plains. The harvest travelled nine hundred kilometres by rail and another hundred by barge, arriving at South Wharf ahead of schedule. Yet five days later the market shelves were still bare. Sacks sat only two kilometres away beneath damp canvas. Rail director Venn, barge master Ilya, and the city cart guild each presented a perfect record for the portion they controlled. Every long movement had succeeded, while the food spoiled at the shortest distance in the journey.",
+        "Coordinator Nara walked the handoffs. Rail wagons discharged sealed bulk bins, the barge terminal expected loose sacks, and city carts accepted a third size that could pass old market gates. Arrival notices used incompatible ledgers. The barge departed forty minutes before the train's revised arrival, storage responsibility changed at an unsigned line on the quay, and no one owned the transfer equipment when rain began. Each operator had optimised its own segment. The journey had been divided administratively without being joined physically, informationally, or contractually.",
+        "Venn proposed extending rails to every shop. Nara asked what that would cost, what streets and residents it would displace, and whether one rigid mode could serve stalls, clinics, homes, rural villages, and changing volumes. Ilya proposed one ticket while keeping separate timetables and claims rules. A single label did not coordinate vehicles. A journey became multimodal by using several modes; it became integrated only when their handoffs worked. Rail could carry heavy long-distance flows, water serve suitable corridors, and flexible vehicles complete local distribution, but the interfaces had to be designed parts of the service rather than cracks between businesses.",
+        "The city standardised transferable containers where feasible, matched equipment and platforms, shared timely arrival and capacity data, clarified custody and liability, coordinated schedules with recovery time, and created one traceable consignment record. Prices no longer rewarded a carrier for arriving just before an impossible connection. For passengers, the same logic meant safe and accessible paths, understandable information, through-ticketing where useful, space for mobility devices and luggage, and connections that still worked for people who could not sprint across a terminal.",
+        "Nara also measured the whole door-to-door result. A cheap trunk journey could hide expensive handling, missed transfers, theft, spoilage, waiting, unsafe work, neighbourhood pollution, or an inaccessible final stop. Reliability mattered as much as average speed, and the first short collection could be as difficult as the final delivery. Integration did not require one owner or erase the responsibilities of individual carriers; it required explicit coordination, standards, accountability, contingency, and fair treatment across the places where control changed hands.",
+        "The grain beside the full market revealed last-mile and intermodal integration: designing the first and final local movements together with the physical, temporal, informational, commercial, and institutional interfaces between transport modes so the complete journey works. Different modes can retain their strengths, but their containers, terminals, schedules, tickets or documents, data, responsibilities, accessibility, and recovery plans must meet. Bellmarket had measured one thousand kilometres of motion and ignored two kilometres plus three handoffs. Nara measured whether the person or goods actually reached the door they travelled for."
+      ],
+      "storyParagraphsZh": [
+        "干旱让铃市等待北方平原的粮食。收成先乘火车九百公里，再由驳船运送一百公里，提前抵达南码头。可五天后，市场货架仍然空着。粮袋停在仅两公里外的湿帆布下。铁路主管文恩、驳船船长伊利亚和城市车夫行会，都拿出自己负责路段的完美记录。所有漫长移动都成功了，食物却在整段旅程最短的距离上变质。",
+        "协调员娜拉逐一走过交接点。火车卸下密封散装箱，驳船码头等待松散粮袋，城市货车又只接受能穿过旧市场门的第三种尺寸。到达通知使用彼此不通的账簿；驳船在火车改点到达前四十分钟离开；保管责任在码头一条未签字的线上改变；下雨时，没有人负责转运设备。每个运营者都优化自己的路段，旅程在行政上被切开，却没有在物理、信息和合同上接合。",
+        "文恩提议把铁路延伸到每家商铺。娜拉追问这需要多少成本，会挤走哪些街道与居民，以及一种僵硬方式能否同时服务摊位、诊所、家庭、乡村和变化的货量。伊利亚提议发行一张联票，却保留分离的时刻与索赔规则。一个标签无法协调车辆。一段旅程使用多种方式便是多式运输，只有交接真正运作才实现整合。铁路可承担长途重载，水运用于合适通道，灵活车辆完成地方配送，但接口必须成为服务中被设计的部分，而不是企业之间的裂缝。",
+        "城市在可行处统一可转运容器，匹配设备与站台，共享及时的到达和容量数据，明确保管与责任，协调时刻并留出恢复时间，还建立一份可追踪的全程托运记录。定价不再奖励承运者刚好赶在不可能衔接前抵达。对乘客而言，同一逻辑意味着安全可及路径、易懂信息、适用时的联程票、轮椅和行李空间，以及不要求人们在车站狂奔的可靠换乘。",
+        "娜拉也衡量完整的门到门结果。廉价干线旅程可能掩盖昂贵装卸、错过衔接、盗损、腐坏、等候、不安全劳动、社区污染或不可及的终点。可靠性同平均速度一样重要，起始的短途收集可能和最终送达一样困难。整合不要求所有环节属于同一主人，也不抹去各承运者责任；它要求在控制权改变之处建立明确协调、标准、问责、应变与公平待遇。",
+        "停在满载市场旁的粮食揭示的是最后一公里与多式联运：把起始和最终地方移动，同不同运输方式之间的物理、时间、信息、商业与制度接口一起设计，使完整旅程真正运作。不同方式可以保留各自优势，但容器、场站、时刻、票证或文件、数据、责任、可及性与恢复计划必须相接。铃市测量了一千公里移动，却忽略两公里与三次交接；娜拉衡量的是人或货物是否真正抵达出发时想去的那扇门。"
+      ],
+      "conceptName": "Last-mile and intermodal integration",
+      "conceptNameZh": "最后一公里与多式联运",
+      "explanationParagraphs": [
+        "Last-mile and intermodal integration connects first and final local movements with coordinated transfers between modes across infrastructure, equipment, schedules, information, documents or tickets, responsibility, and accessibility.",
+        "The goal is reliable door-to-door movement, not merely fast line-haul segments. It requires compatible interfaces, traceability, fair handoff incentives, contingency planning, and attention to total cost, workers, users, communities, and environmental effects."
+      ],
+      "explanationParagraphsZh": [
+        "最后一公里与多式联运把起始和最终地方移动，同不同方式之间在基础设施、设备、时刻、信息、文件或票证、责任与可及性上的协调交接连接起来。",
+        "目标是可靠的门到门移动，而不只是快速干线路段；它需要兼容接口、可追踪性、公平交接激励、应变规划，以及对总成本、劳动者、使用者、社区和环境影响的关注。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

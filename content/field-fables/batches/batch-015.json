@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-015",
+  "articles": [
+    {
+      "id": "1011-invisible-labour",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1011",
+      "fieldTitle": "Domestic services",
+      "fieldTitleZh": "家政服务",
+      "title": "The Day the House Did Not Reset",
+      "titleZh": "房子没有复原的那一天",
+      "summary": "A household that appears to restore itself each night discovers the planning, remembering, anticipating, and care hidden behind its ordinary mornings.",
+      "summaryZh": "一户人家以为房子每晚都会自行复原，直到他们看见普通清晨背后隐藏的计划、记忆、预判与照料。",
+      "storyParagraphs": [
+        "Every morning, the Vale household seemed to begin from zero. Milk stood in the cold box, uniforms hung dry, medicine had been renewed, the leaking tap had an appointment, and Grandmother's birthday call somehow occurred before anyone forgot. The family paid Mira for six visible hours of cleaning and described everything else as the house running normally. One Tuesday she was absent. By noon there were still no dramatic piles of dirt, so everyone congratulated the system. By evening, three small failures had collided into a missed school trip, an empty prescription, and a frightened grandmother waiting alone.",
+        "When Mira returned, she opened a notebook no one had counted as work. It held food levels, allergies, washing cycles, school messages, repair dates, transport changes, names of relatives, and signs that Grandmother was tiring earlier. Many entries described events that had not happened because someone had anticipated them. The polished floor was visible after an hour; noticing that shoes would be needed on Friday, checking their size, obtaining them, and placing them by the door disappeared into the appearance of an ordinary departure.",
+        "The family responded by creating a giant checklist and assigning every line a tick. It captured repeatable tasks but soon failed at exceptions. A fever rearranged meals and transport; a delayed delivery changed the sequence of laundry; one child's silence required attention that could not be scheduled by square. Mira was not merely executing isolated chores. She was monitoring a changing household, deciding priorities, connecting information, absorbing interruptions, and sometimes managing emotion so that other people could continue their paid work or rest.",
+        "Mr Vale argued that work without a produced object could not be measured. Mira asked him to remove coordination for one week while preserving every outcome. He spent hours discovering dependencies only after they broke. The experiment also showed that not every act of affection should be converted into a priced transaction, and not every household contribution carried the same burden. Work could be paid or unpaid, physical, cognitive, or emotional; its distribution was shaped by role, income, gender expectations, migration, and who was assumed to be naturally available.",
+        "They redesigned the household rather than merely thanking Mira. Recurring responsibilities received owners, time, authority, handover, and fair compensation where employment was involved. Family members shared planning as well as execution; accessible calendars held common information without turning Mira into a permanent on-call memory. They reviewed workloads, rest, privacy, boundaries, decent working conditions, and what Grandmother wanted for herself. Recognition mattered most when it changed resources and responsibility, not when praise left the same person carrying the hidden shift.",
+        "The failed Tuesday revealed invisible labour: necessary physical, cognitive, organisational, and emotional work that remains unnoticed because its outcomes look ordinary, its prevention leaves no incident, or social arrangements treat it as natural rather than labour. It often includes anticipating, remembering, coordinating, and sustaining care, whether paid or unpaid. The Vale house had not been resetting itself. Each seamless morning was evidence of work so successful that everyone mistook its result for the absence of a worker."
+      ],
+      "storyParagraphsZh": [
+        "每天清晨，维尔家的生活都像从零开始：牛奶在冷藏柜里，校服已经晾干，药物及时续上，漏水龙头约好了维修，祖母生日的电话也总能在所有人忘记前打出。家里按六小时可见清洁工作付钱给米拉，其他一切则被称为房子正常运转。一个星期二她没有来。中午仍未出现惊人的脏乱，大家便称赞系统可靠；到了晚上，三个小故障却撞成一次错过的校外活动、一份用空的处方药，以及独自等待而受到惊吓的祖母。",
+        "米拉回来后，打开一本从未有人算作工作的笔记。里面记着食物余量、过敏、洗涤周期、学校通知、维修日期、交通变化、亲属姓名，以及祖母比往常更早疲倦的迹象。许多条目描述的是因为有人提前预判，所以没有发生的事情。擦亮地板一小时后清晰可见；发现周五需要鞋、核对尺寸、取得鞋子并放到门边，却会消失在一次看似普通的出门里。",
+        "家人制作一张巨型清单，为每行安排勾选。它抓住重复任务，却很快败给例外。一次发热重排餐食与交通，延迟送货改变洗衣顺序，一个孩子突然沉默所需的关注也无法塞进方框。米拉并非只执行互不相干的家务，她还在监测不断变化的家庭、决定优先次序、连接信息、承接打断，有时还要调节情绪，让其他人可以继续有偿工作或休息。",
+        "维尔先生坚持，没有产出物件的事情不能算工作。米拉请他在保留全部结果的前提下，把协调移除一周。他花费数小时，往往要等依赖断裂后才发现它们。实验也说明，不是每项出于关爱的行动都该换算成交易，不同家庭贡献承受的负担也不相同。工作可以有偿或无偿，可以是身体、认知或情绪劳动；其分配又受角色、收入、性别期待、迁移身份，以及谁被假定天然有空所塑造。",
+        "他们没有只向米拉道谢，而是重新设计家庭。重复责任获得明确负责人、时间、权限与交接；涉及雇佣时提供公平报酬。家人共同承担计划和执行，可及日历保存共享信息，不再让米拉永远充当随叫随到的记忆。他们复核工作量、休息、隐私、边界、体面劳动条件，以及祖母自己想要什么。真正的承认会改变资源与责任，而不是用赞美把隐蔽班次继续留给同一个人。",
+        "那个失败的星期二揭示的是隐形劳动：维持生活所必需的身体、认知、组织与情绪工作，因为结果显得普通、预防成功后没有事故，或社会安排把它视为天性而非劳动，所以未被看见。它常包含预判、记忆、协调与持续照料，可以有偿也可以无偿。维尔家的房子从未自行复原；每个无缝清晨都在证明一项工作做得太成功，以至所有人把结果误认成工人不存在。"
+      ],
+      "conceptName": "Invisible labour",
+      "conceptNameZh": "隐形劳动",
+      "explanationParagraphs": [
+        "Invisible labour is necessary physical, cognitive, organisational, or emotional work that goes unrecognised because it prevents disruption or is treated as natural and ordinary.",
+        "It can be paid or unpaid and often includes anticipation, memory, coordination, and care. Recognition is meaningful when workload, authority, compensation, rest, and responsibility are distributed fairly."
+      ],
+      "explanationParagraphsZh": [
+        "隐形劳动是维持生活所需、却因预防了中断或被视为天然普通而未获承认的身体、认知、组织或情绪工作。",
+        "它可以有偿或无偿，常包含预判、记忆、协调与照料。只有工作量、权限、报酬、休息与责任得到公平分配，承认才真正有意义。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1011-standardisation-personalisation",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1011",
+      "fieldTitle": "Domestic services",
+      "fieldTitleZh": "家政服务",
+      "title": "The Twelve Identical Rooms",
+      "titleZh": "十二间完全相同的房间",
+      "summary": "A residence first makes every room identical, then lets every worker improvise, before discovering which parts of service should stay stable and which should adapt.",
+      "summaryZh": "一所居所先让所有房间完全相同，又让每名职员随意发挥，最终才发现服务中哪些部分应保持稳定、哪些部分应当调整。",
+      "storyParagraphs": [
+        "The House of Twelve Doors promised perfect consistency. Every worker entered clockwise, opened curtains first, placed three towels at the same angle, used one fragrance, and finished in twenty-eight minutes. Errors fell and training became easy. Yet resident Besa developed headaches from the scent, Mr Orin could not reach towels placed on the high shelf, and night-shift nurse Lio was repeatedly awakened by the approved morning sequence. Manager Fen insisted that equal treatment required an identical room, even as each resident spent extra effort undoing the service after it was delivered.",
+        "Fen abolished the manual and told workers to do whatever each resident liked. The first week felt generous. By the second, allergy information lived in one worker's memory, a safety check was skipped because it seemed impersonal, supplies could not be forecast, and residents received different outcomes depending on who happened to arrive. Personal attention had become undocumented improvisation. Workers carried rising cognitive load and blame, while residents could not tell which promises would still exist tomorrow.",
+        "Service designer Mara separated the process into layers. Hygiene controls, safeguarding, key access, product labels, reporting, and agreed quality checks formed a reliable core. Around it she created configurable modules for timing, sequence, fragrance, linen placement, communication, privacy, cultural practice, and participation. Some preferences were selected once; others were confirmed at each visit because health, guests, mood, or daily plans changed. A standard could protect an outcome without dictating every gesture used to reach it.",
+        "The new system still met conflict. One resident requested a product that damaged the floor and created risk for the next worker. Another wanted a visit so short that essential tasks could not be completed. Mara made trade-offs visible: purpose, safety, evidence, cost, worker rights, accessibility, environmental impact, and the resident's priorities. Personalisation meant negotiated fit within real responsibilities, not treating any request as automatically feasible or asking frontline staff to absorb every exception without time and authority.",
+        "They documented preferences in an accessible profile controlled with the resident, limited information to what the service needed, and created a handover for changes. Workers could exercise judgement inside clear boundaries and report when the pattern no longer worked. The house measured reliability, effort, satisfaction, safety, continuity, and whether adaptations truly reduced burden. Besa chose fragrance-free supplies, Orin placed towels where he could reach them, and Lio received an afternoon sequence without losing the common hygiene standard.",
+        "The twelve rooms revealed standardisation and personalisation in service: designing a dependable common process while adapting relevant elements to individual needs, goals, context, and preferences. Standardisation can improve reliability, safety, training, and efficiency; personalisation can improve fit, control, dignity, and value. Neither is universally superior. Fen's first system made residents adapt to the room, and his second made workers reinvent the room. Mara built a stable frame whose useful parts could move with the person inside it."
+      ],
+      "storyParagraphsZh": [
+        "十二门之家承诺完美一致。每名职员都按顺时针进入，先拉窗帘，把三条毛巾以相同角度放好，使用同一种香味，并在二十八分钟内结束。错误减少，培训也变容易。可住民贝萨因香味头痛，奥林先生够不到高架毛巾，夜班护士利奥又不断被规定的晨间顺序叫醒。经理芬坚持，平等服务就是完全相同的房间，即使每位住民都要在服务结束后额外花力气把它改回去。",
+        "芬于是废除手册，要求职员按每位住民喜好随意处理。第一周显得十分慷慨，第二周问题便出现：过敏信息只存在一名职员记忆里，一项安全检查因看起来不够个性化而被跳过，用品无法预测，不同值班者还带来不同结果。个人关注变成没有记录的即兴发挥。职员承担越来越高的认知负担和责任，住民也不知道哪些承诺明天仍会存在。",
+        "服务设计师玛拉把过程分成几层。卫生控制、保护、钥匙权限、产品标签、报告与约定质量检查构成可靠核心；外围则设置可配置模块，包括时间、顺序、香味、布品位置、沟通、隐私、文化习惯与参与方式。有些偏好只需选一次，另一些每次都要确认，因为健康、访客、心情或当天计划会改变。标准可以保护结果，而不必规定通向结果的每个动作。",
+        "新系统仍会遇到冲突。一名住民要求使用会损坏地板、也给下一位职员带来风险的产品；另一人希望把访问压缩到无法完成必要任务的程度。玛拉让取舍清楚可见：目的、安全、证据、成本、劳动者权利、可及性、环境影响和住民优先事项。个性化是在真实责任中协商适配，不是把每项要求自动视为可行，也不是让一线职员在没有时间和权限时吞下所有例外。",
+        "他们与住民共同管理一份可及偏好档案，只保存服务所需信息，并为变化建立交接。职员可在清晰边界内运用判断，也能报告旧模式何时不再合适。居所同时衡量可靠性、付出、满意度、安全、连续性，以及调整是否真正减轻负担。贝萨选择无香用品，奥林把毛巾放到可及之处，利奥获得午后服务，却没有失去共同卫生标准。",
+        "十二间房揭示的是服务标准化与个性化：设计可靠的共同流程，同时按个体需要、目标、情境与偏好调整相关部分。标准化可提高可靠、安全、培训与效率，个性化可改善适配、控制、尊严与价值，两者没有一方普遍更优。芬的第一个系统让住民适应房间，第二个系统让职员重新发明房间；玛拉建造的是一副稳定框架，其中真正需要移动的部分可以随人而动。"
+      ],
+      "conceptName": "Standardisation and personalisation in service",
+      "conceptNameZh": "服务标准化与个性化",
+      "explanationParagraphs": [
+        "Standardisation and personalisation in service balance a reliable common process with adaptations to individual needs, goals, contexts, and preferences.",
+        "Standards can protect quality, safety, and continuity; personalisation can improve fit and dignity. Effective design decides which elements must remain stable, which may vary, and how changes are documented and resourced."
+      ],
+      "explanationParagraphsZh": [
+        "服务标准化与个性化是在可靠共同流程与个体需要、目标、情境及偏好调整之间取得平衡。",
+        "标准可保护质量、安全与连续性，个性化可改善适配与尊严。有效设计会决定哪些部分必须稳定、哪些可以变化，以及变化如何记录并获得资源。"
+      ],
+      "mode": "case-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1011-cross-contamination",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1011",
+      "fieldTitle": "Domestic services",
+      "fieldTitleZh": "家政服务",
+      "title": "The Cloth That Cleaned Every Room",
+      "titleZh": "擦遍每个房间的布",
+      "summary": "A celebrated cleaning cloth makes every surface shine while carrying an unseen problem from one room into all the others.",
+      "summaryZh": "一块备受称赞的清洁布让所有表面发亮，却把看不见的问题从一个房间带进其余房间。",
+      "storyParagraphs": [
+        "Housekeeper Teren prized one blue cloth above all others. It absorbed spills, left no streaks, and survived an entire shift. He began in the washroom, moved through the nursery, polished the dining table, and finished in the kitchen. Every surface looked cleaner after he passed. Two days later, several residents became ill in rooms that had never shared food or close conversation. The manager inspected the gleaming tables and declared hygiene an impossible cause. Teren's cloth hung drying at the centre of the house, spotless to the eye.",
+        "Inspector Nala marked the cloth with harmless visible dye and repeated its route. Blue traces appeared on handles, taps, toys, chair backs, and a ready-to-eat fruit tray. Hands and gloves then carried the marks farther. Cleaning pressure had not only removed material; the same damp tool had collected it from one zone and deposited part elsewhere. A surface could look free of dirt while still carrying a relevant biological, chemical, or allergenic hazard, and a cloth could become a moving reservoir.",
+        "The manager ordered stronger disinfectant on every object. Nala stopped him from treating product strength as magic. Soil could reduce a disinfectant's performance; the wrong product, concentration, contact, material, or use could create new hazards; and cleaning, sanitising, and disinfecting served different purposes. Labels, ventilation, compatibility, occupational protection, and local procedures mattered. More chemical did not repair a route that continued dipping the same cloth into the same bucket and carrying it across zones.",
+        "They mapped source, carrier, route, destination, and time. High-risk material and ready-to-use areas were separated. Work moved according to a planned clean-to-dirtier sequence where appropriate; cloths and equipment were changed, contained, cleaned, or reprocessed between defined zones; hand and glove practices prevented the worker from becoming another bridge. Food handling, personal care, illness, sharps, laundry, waste, and vulnerable residents required different risk controls rather than one universal colour code.",
+        "A week later, the blue dye still appeared on a door. Nala traced it not to Teren's cloth but to a shared spray bottle handled with contaminated gloves. The first fix had focused on the most dramatic object instead of the whole movement system. Training, sufficient supplies, staffing, storage, workflow, reporting, and supervision were revised together. The house followed current public-health, food-safety, product, and workplace guidance suited to its setting rather than copying a hospital routine or household tip without assessment.",
+        "The travelling dye revealed cross-contamination: the unintended transfer of microorganisms, allergens, chemicals, or other hazards from a source to another person, object, surface, or food through contact involving hands, tools, liquids, storage, or workflow. Visible cleanliness does not prove that transfer has been interrupted, and other transmission routes require their own controls. Teren judged each room by how it looked after the cloth arrived. Nala judged the route by what the cloth, the hand, and the bottle carried onward after they left."
+      ],
+      "storyParagraphsZh": [
+        "家政员特伦最珍爱一块蓝布。它吸水、不留痕，还能撑过整个班次。他从洗手间开始，接着擦婴幼儿房、餐桌，最后进入厨房。每个表面在他离开后都更明亮。两天后，从未共餐、也没有密切交谈的几个房间却有人生病。经理检查闪亮桌面，认定卫生不可能是原因。特伦的布挂在房子中央晾干，肉眼看来一尘不染。",
+        "检查员娜拉给布涂上无害可见染料，重走原路线。蓝色痕迹出现在门把、水龙头、玩具、椅背与一盘即食水果上，手和手套又把标记带得更远。擦拭压力不只移除物质；同一块湿布从一个区域收集东西，又把一部分放到别处。表面可以看不见污垢，却仍带有重要的生物、化学或过敏原危险，而一块布也会变成移动储库。",
+        "经理命令在每件物品上使用更强消毒剂。娜拉阻止他把产品强度当成魔法。污物可能降低消毒效果，错误产品、浓度、接触、材料或用法会制造新危险，而清洁、卫生处理与消毒承担不同目的。标签、通风、相容性、劳动保护与当地程序都重要。增加化学剂量无法修复一条仍把同一块布放进同一只桶、再带过所有区域的路线。",
+        "他们绘出来源、载体、路线、目的地与时间。高风险物质同可直接使用的区域分开；在适用处，工作按计划从较清洁区移向较脏区；布与设备在规定区域之间更换、封存、清洁或再处理；手和手套的做法也防止工作人员变成另一座桥。食品处理、个人照护、疾病、锐器、洗衣、废物和易受影响住民需要不同风险控制，而不是一套通用颜色规则。",
+        "一周后，蓝色染料仍出现在一扇门上。娜拉追踪到的不是特伦的布，而是一只被污染手套握过的共用喷瓶。第一次修正只盯着最醒目的物件，没有处理完整移动系统。培训、充足用品、人员配置、储存、工作流、报告与监督因此一同调整。房子依据适合自身场景的最新公共卫生、食品安全、产品与劳动指引行动，而不照搬未经评估的医院流程或家庭窍门。",
+        "移动的染料揭示的是交叉污染：微生物、过敏原、化学物或其他危险通过手、工具、液体、储存或工作流程中的接触，从来源非预期地转移到另一人、物体、表面或食物。肉眼干净不能证明转移已经中断，其他传播路线则需要各自的控制。特伦按布到达后房间的样子判断清洁；娜拉按布、手与瓶子离开以后还把什么带向下一处，判断整条路线。"
+      ],
+      "conceptName": "Cross-contamination",
+      "conceptNameZh": "交叉污染",
+      "explanationParagraphs": [
+        "Cross-contamination is the unintended movement of microorganisms, allergens, chemicals, or other hazards from one source to another person, surface, object, or food.",
+        "Transfer can occur through contact involving hands, tools, cloths, liquids, storage, or workflow. Prevention depends on setting-specific separation, sequencing, cleaning or reprocessing, hand practices, supplies, and current safety guidance."
+      ],
+      "explanationParagraphsZh": [
+        "交叉污染是微生物、过敏原、化学物或其他危险从一个来源非预期地移动到另一人、表面、物体或食物。",
+        "转移可经手、工具、布、液体、储存或工作流程中的接触发生。预防依赖适合场景的分隔、顺序、清洁或再处理、手部做法、用品与当前安全指引。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1012-hair-and-skin-structure",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1012",
+      "fieldTitle": "Hair and beauty services",
+      "fieldTitleZh": "美发与美容服务",
+      "title": "The Salon of One Surface",
+      "titleZh": "只有一种表面的沙龙",
+      "summary": "A stylist treats scalp, skin, and every strand as the same dry surface until their different layers and histories produce opposite results.",
+      "summaryZh": "发型师把头皮、皮肤与每根头发都当成同一种干燥表面，直到不同层次与经历产生相反结果。",
+      "storyParagraphs": [
+        "Master Pell judged every problem by touch. If a surface felt rough, he scrubbed it smooth and added heavy oil. The method made one client's straight, unprocessed hair shine, so he repeated it on tightly curled hair that had been lightened twice, on an irritated scalp, and on a guest with fragile skin near the hairline. The first hair became limp, the second snapped during combing, and the scalp burned. Pell blamed inconsistent clients because the same hand, product, and timing had been used on everyone.",
+        "Biologist Sera placed a shed strand beside a living patch of scalp. The visible hair shaft was largely keratinised material organised into an outer cuticle and a cortex that supplied much of its strength, shape, and pigment, sometimes around a medulla. Beneath the skin, the follicle produced the fibre within living tissue connected to blood supply, nerves, glands, and growth cycles. A cosmetic could coat or alter the emerged shaft, but the shaft itself had no living repair process; an irritated scalp therefore demanded a different kind of attention.",
+        "She then mapped the skin. Its outer epidermis included a barrier whose cells and lipids limited water loss and entry of irritants; below lay supporting dermal tissue with vessels, nerves, follicles, and glands. Body site, age, climate, disease, prior treatment, washing, friction, and individual variation changed function. Oiliness at the surface did not prove a universal cause, and visible flaking could arise from conditions a salon was not qualified to diagnose. Scrubbing harder could damage the barrier it was meant to improve.",
+        "Pell replaced one universal treatment with a chart that classified people by appearance alone. Sera stopped him again. Curl pattern, fibre diameter, density, porosity, weathering, chemical history, scalp condition, goals, allergies, and daily practice could combine in many ways. Race or a visual label could not substitute for consultation and direct assessment. Even fibres on one head differed from root to end because older lengths had accumulated more sunlight, friction, heat, and chemical exposure.",
+        "The salon began asking about history, symptoms, products, prior reactions, medicines where relevant, and desired outcome. Staff examined within their competence, followed product instructions and applicable testing or safety requirements, used appropriate technique, and stopped when pain, swelling, broken skin, unexpected loss, or other warning signs appeared. They referred possible disease or significant reactions to qualified healthcare rather than selling another treatment. Structural knowledge guided safer choices but did not grant a salon medical authority.",
+        "The failed treatments revealed hair and skin structure: hair is a layered keratin fibre produced by living follicles, while skin is a living, layered organ whose barrier, support tissues, glands, nerves, and vessels perform different functions. Their response depends on site, fibre properties, condition, history, and individual context. Pell had seen one rough surface and prescribed one smoothing ritual. Sera showed him that the strand above the skin, the follicle below it, and the barrier surrounding both could look close together while obeying very different rules."
+      ],
+      "storyParagraphsZh": [
+        "佩尔师傅只凭触感判断问题。表面粗糙，他就用力磨平，再涂厚油。这种方法曾让一位顾客未经处理的直发发亮，于是他把它重复用在两次漂浅的紧密卷发、受刺激的头皮，以及发际线附近皮肤脆弱的客人身上。第一人的头发变得扁塌，第二人的头发梳理时断裂，第三人的头皮灼痛。佩尔责怪顾客不一致，因为自己明明对所有人用了相同手法、产品与时间。",
+        "生物学家塞拉把一根脱落头发放在一块活的头皮旁。可见毛干主要是角化材料，外层为毛小皮，内部皮质提供大部分强度、形态与色素，有时中央还有髓质。皮肤之下，毛囊在活组织中制造纤维，并同血供、神经、腺体及生长周期相连。美容产品可以包覆或改变露出的毛干，但毛干本身没有活的修复过程；受到刺激的头皮因此需要另一种关注。",
+        "她接着画出皮肤。外侧表皮包含一道由细胞和脂质构成的屏障，限制水分流失与刺激物进入；下方真皮支持组织则有血管、神经、毛囊与腺体。身体部位、年龄、气候、疾病、既往处理、清洗、摩擦和个体差异都会改变功能。表面油腻不能证明只有一种原因，可见脱屑也可能来自沙龙无资格诊断的状况；更用力摩擦反而会伤害原本想改善的屏障。",
+        "佩尔放弃通用处理，又做出按外表给人分类的图表。塞拉再次阻止他。卷曲形态、纤维直径、密度、孔隙性、风化、化学经历、头皮状况、目标、过敏与日常习惯可以形成许多组合。种族或视觉标签不能替代咨询与直接评估。同一头头发从根到梢也会不同，因为较老长度承受了更多阳光、摩擦、热与化学暴露。",
+        "沙龙开始询问历史、症状、产品、既往反应、相关药物与期望结果。职员在能力范围内检查，遵守产品说明和适用测试或安全要求，使用合适技术；出现疼痛、肿胀、破损皮肤、意外脱落或其他警讯时立即停止。可能的疾病或明显反应会被转给合格医疗人员，而不是再卖一项护理。结构知识能指导更安全选择，却不会赋予沙龙医疗权限。",
+        "失败的处理揭示的是毛发与皮肤结构：毛发是由活毛囊产生的分层角蛋白纤维，皮肤则是活的分层器官，其中屏障、支持组织、腺体、神经与血管各有功能。两者反应取决于部位、纤维性质、状态、经历与个体情境。佩尔只看见一种粗糙表面，便开出一种磨平仪式；塞拉让他看见，皮肤上方的毛干、下方的毛囊和包围两者的屏障虽然相邻，却遵循不同规则。"
+      ],
+      "conceptName": "Hair and skin structure",
+      "conceptNameZh": "毛发与皮肤结构",
+      "explanationParagraphs": [
+        "Hair is a layered keratin fibre produced by living follicles; skin is a living, layered organ with barrier, support, sensory, vascular, and glandular functions.",
+        "Responses vary with site, fibre properties, prior processing, health, environment, and individual context. Structural knowledge supports appropriate cosmetic care but does not replace product safety or medical assessment when warning signs appear."
+      ],
+      "explanationParagraphsZh": [
+        "毛发是由活毛囊产生的分层角蛋白纤维；皮肤是具有屏障、支持、感觉、血管与腺体功能的活分层器官。",
+        "反应随部位、纤维性质、既往处理、健康、环境与个体情境而变。结构知识支持合适美容照护，但不能替代产品安全或出现警讯时的医疗评估。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1012-colour-chemistry",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1012",
+      "fieldTitle": "Hair and beauty services",
+      "fieldTitleZh": "美发与美容服务",
+      "title": "The Blue Bottle's Broken Promise",
+      "titleZh": "蓝色瓶子的失约",
+      "summary": "A colourist promises the shade printed on a bottle until two different starting colours turn the same formula into two different results.",
+      "summaryZh": "染色师按瓶上印出的颜色作出承诺，直到两种不同底色让同一配方产生两种不同结果。",
+      "storyParagraphs": [
+        "Colourist Lio owned a bottle labelled Winter Ash and promised that every strand would leave the salon in its printed blue-grey shade. He applied it to pale untreated hair and obtained a cool silver. The same mixture placed on dark warm hair produced a muted brown; on previously lightened porous ends it grabbed an intense smoky tone. Lio accused the bottle of containing three colours. Chemist Mara set the bottle beside the three starting swatches and asked why he had counted only what was added, never what was already there.",
+        "Mara separated perceived colour into light reflected from existing pigment, artificial colour, fibre structure, and illumination. Darker starting material returned less light; underlying warm pigments became visible as natural melanin was reduced; porous, weathered regions accepted and lost colour differently. A cool-looking formula did not erase the substrate beneath it. Complementary hues could reduce the perception of an unwanted tone in a particular balance, but adding more opposite colour could overshoot into a new cast rather than produce neutral nothingness.",
+        "Lio next tried to lighten every base until it looked blank. The oxidising mixture did not operate like white paint. In permanent oxidative colouring, alkaline conditions helped the fibre swell, oxidant altered natural melanin and enabled small dye precursors to react into larger coloured molecules within the cortex. Temporary and other direct colourants could follow different deposition or penetration mechanisms and were not all oxidative. Time, strength, formulation, temperature, previous processing, fibre condition, and pigment history influenced how far each process went. Lightening and forming colour were related but not the same chemical event.",
+        "One test strand reached the desired level, so Lio repeated the process across damaged ends and a healthier root area. The result banded and several fibres weakened. Mara explained that a successful sample answered only for material sufficiently similar to the tested strand. Repeated oxidation could change cuticle and cortex properties as well as colour. A target image also depended on lighting, screen reproduction, fading, washing, and maintenance; no formula could guarantee an identical visual result on every starting canvas.",
+        "The salon replaced colour promises with consultation and controlled prediction. Staff documented starting level, tone, artificial pigment history, fibre condition, goal, constraints, and uncertainty; used strand or other safety tests where appropriate; followed product instructions and exposure precautions; and refused combinations beyond competence or reasonable condition. Unexpected burning, swelling, breathing difficulty, or other significant reactions triggered stopping and appropriate urgent or professional help, not another round of colour correction.",
+        "The three swatches revealed colour theory and oxidation: colour results arise from the interaction of starting pigment, added hues, light, and material structure, while oxidative processes can reduce natural melanin and form larger dye molecules inside the hair fibre. The target is therefore not contained in the bottle alone. Lio had treated Winter Ash as a destination. Mara treated it as one participant in a reaction whose other participants included the starting canvas, the chemistry, the condition of the fibre, and the light in which the result would finally be seen."
+      ],
+      "storyParagraphsZh": [
+        "染色师利奥有一瓶标着“冬灰”的染剂，承诺每束头发都会变成包装上的蓝灰色。他把它用在浅色未处理头发上，得到冷银色；同一混合物落在深色暖调头发上，成为压低的棕色；用在先前漂浅且孔隙较高的发梢，又抓出浓重烟色。利奥认定一只瓶子里装了三种颜色。化学师玛拉把瓶子放在三块起始发束旁，问他为何只计算加进去什么，却从不计算那里原本有什么。",
+        "玛拉把所见颜色拆成现有色素、人工颜色、纤维结构与照明共同反射的光。较深底材返回的光更少；天然黑色素减少时，底层暖色素会显露；风化且孔隙较高的区域吸收和流失颜色的方式也不同。看起来偏冷的配方不会抹掉下面的底色。互补色在特定平衡下可以降低某种不需要色调的感知，加入过多相反颜色却会越过中和，制造新的偏色。",
+        "利奥随后试图把所有底色漂到空白。氧化混合物并不像白漆工作。在永久氧化染色中，碱性条件帮助纤维膨胀，氧化剂改变天然黑色素，也让小型染料前体在皮质内部反应成较大的有色分子。暂时性及其他直接染料可能采用不同的沉积或渗透机制，并非全都依赖氧化。时间、强度、配方、温度、既往处理、纤维状态与色素经历都会影响过程。提浅与形成颜色彼此相关，却不是同一项化学事件。",
+        "一束测试发达到目标，利奥便在受损发梢与较健康发根上重复。结果出现色带，几根纤维也变弱。玛拉说明，成功样本只回答与测试发束足够相似的材料。反复氧化会改变毛小皮与皮质性质，而不只改变颜色。目标图像还受照明、屏幕再现、褪色、清洗与维护影响，没有任何配方能保证在所有起始画布上得到完全相同的视觉结果。",
+        "沙龙用咨询与受控预测取代颜色承诺。职员记录起始深浅、色调、人工色素历史、纤维状态、目标、限制与不确定性；在适用处做发束或其他安全测试；遵守产品说明与暴露防护；超出能力或头发合理承受范围时拒绝操作。意外灼痛、肿胀、呼吸困难或其他明显反应会触发停止与适当紧急或专业帮助，而不是再做一轮颜色修正。",
+        "三块发束揭示的是色彩理论与氧化过程：颜色结果来自起始色素、加入色相、光与材料结构的相互作用，氧化过程则能减少天然黑色素，并在毛发纤维内形成较大的染料分子。因此目标颜色并不独自装在瓶子里。利奥把“冬灰”当成目的地；玛拉把它视为一场反应中的一名参与者，其他参与者还有起始画布、化学过程、纤维状态，以及结果最终被看见时的光。"
+      ],
+      "conceptName": "Colour theory and oxidation",
+      "conceptNameZh": "色彩理论与氧化过程",
+      "explanationParagraphs": [
+        "Colour theory and oxidation explain how starting pigment, added hues, reflected light, fibre condition, and chemical reactions combine to produce a hair-colour result.",
+        "Oxidative colouring can alter natural melanin and form dye molecules within the fibre. Outcomes vary with the starting material and process, so consultation, testing, product instructions, and safety limits remain essential."
+      ],
+      "explanationParagraphsZh": [
+        "色彩理论与氧化过程解释起始色素、加入色相、反射光、纤维状态与化学反应怎样共同产生染发结果。",
+        "氧化染色可改变天然黑色素，并在纤维内部形成染料分子。结果随底材与过程而变，因此咨询、测试、产品说明与安全限制仍不可缺少。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1012-ethical-consultation",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1012",
+      "fieldTitle": "Hair and beauty services",
+      "fieldTitleZh": "美发与美容服务",
+      "title": "The Mirror with a Sales Target",
+      "titleZh": "背着销售目标的镜子",
+      "summary": "A salon turns a client's broad unhappiness into a profitable treatment list until one consultant asks what the mirror is being asked to repair.",
+      "summaryZh": "沙龙把顾客宽泛的不安变成高利润项目清单，直到一名咨询者追问，人们究竟要求镜子修复什么。",
+      "storyParagraphs": [
+        "At Glass House Salon, every consultation began beside a magnifying mirror. When Nera said, 'I need everything fixed before the reunion,' manager Voss circled six features under bright light and assembled the largest package on the menu. Nera agreed quickly, then returned the next day asking whether her jaw, skin texture, brows, and hairline could all be changed further. Voss called this excellent demand. Consultant Aya noticed that each promised correction made the list of defects longer rather than bringing Nera closer to a clear goal.",
+        "Aya moved the magnifying mirror aside and asked what Nera hoped would be different at the reunion. At first the answer remained 'my whole face.' With time, Nera described fear of photographs, months of comparing edited images, repeated checking, and a belief that one visible detail would make everyone reject her. Aya did not diagnose a mental disorder, and she did not declare all appearance choices unhealthy. She distinguished an informed style preference from distress, unrealistic expectations, external pressure, and a request that cosmetic change alone was unlikely to satisfy.",
+        "Voss argued that autonomy meant selling whatever an adult requested. Aya replied that meaningful choice required understandable information, freedom from pressure, realistic limits, costs, maintenance, alternatives, foreseeable risks, privacy, and time where appropriate. The salon had created urgency, named ordinary variation as defect, and tied staff commission to expanding dissatisfaction. A signed form after that sales sequence would record agreement without proving that the consultation had been honest.",
+        "Aya reviewed what lay within the salon's competence and what did not. She could discuss reversible styling options, likely variation in result, product and procedure risks, and the client's right to stop. She could refuse a service that was unsafe, outside training, based on an impossible promise, or likely to exploit visible distress. Persistent preoccupation, severe impairment, repeated unsatisfying procedures, or safety concerns could justify a sensitive suggestion of qualified health support, but a stylist should not label or shame a client from one conversation.",
+        "Nera chose a modest, reversible change and postponed the rest. Aya documented the agreed goal without storing unnecessary intimate details, obtained consent for images separately, and did not use altered before-and-after photographs as guarantees. When Nera later sought professional help for her distress, the salon did not claim credit or treat referral as rejection. Voss changed staff incentives so a good consultation could end with a smaller service, a delay, a refusal, or no sale at all.",
+        "The sales mirror revealed ethical consultation and body image: a process that explores goals, expectations, autonomy, social pressure, distress, competence, risk, alternatives, and consent without manufacturing defects or exploiting appearance-related vulnerability. Body image is shaped by perception, emotion, relationships, culture, and media; cosmetic change may be a valid choice but is not a universal remedy for distress. Voss had used a mirror to enlarge whatever could be sold. Aya used conversation to discover whether the requested service could honestly serve the person looking into it."
+      ],
+      "storyParagraphsZh": [
+        "玻璃屋沙龙的每次咨询都从放大镜旁开始。内拉说“聚会前我要把一切都修好”时，经理沃斯在强光下圈出六处特征，组成菜单上最大的套餐。内拉很快同意，第二天又回来问下颌、皮肤纹理、眉毛和发际线能否全部继续改变。沃斯称这是优秀需求。咨询师阿雅却注意到，每承诺一次修正，缺陷清单就变得更长，而内拉并没有更接近清楚目标。",
+        "阿雅移开放大镜，询问内拉希望聚会时究竟有什么不同。起初答案仍是“整张脸”。慢慢地，内拉说到对照片的恐惧、数月来同修图影像比较、反复检查，以及相信一处可见细节会让所有人拒绝她。阿雅没有诊断精神障碍，也没有宣布所有外貌选择都不健康。她把知情的风格偏好，同痛苦、不现实期待、外界压力，以及美容改变本身很难满足的要求区分开。",
+        "沃斯认为，自主就是向成年人出售其要求的一切。阿雅回答，有意义的选择需要易懂信息、免受压力、现实边界、成本、维护、替代方案、可预见风险、隐私，以及适当的考虑时间。沙龙制造紧迫感，把普通差异命名为缺陷，又让职员提成依赖扩大不满。在这套销售流程之后签下的表格只能记录同意，不能证明咨询诚实。",
+        "阿雅复核哪些属于沙龙能力，哪些不属于。她可以讨论可逆造型、结果可能的变化、产品与程序风险，以及顾客随时停止的权利。服务不安全、超出训练、依靠不可能承诺，或可能利用明显痛苦时，她可以拒绝。持续外貌困扰、严重功能受损、反复不满意操作或安全忧虑，可以支持她敏感地建议寻求合格健康服务，但发型师不能凭一次谈话给顾客贴标签或使其蒙羞。",
+        "内拉选择一项温和可逆的改变，把其余计划延后。阿雅记录商定目标，却不保存不必要的私密细节；影像同意单独取得，也不把修改过的前后照片当成保证。内拉后来为痛苦寻求专业帮助时，沙龙没有争功，也不把转介当成拒绝。沃斯改变职员激励，让一次良好咨询可以以较小服务、延后、拒绝，甚至完全不销售而结束。",
+        "那面销售镜揭示的是伦理咨询与身体意象：在不制造缺陷、不利用外貌脆弱性的前提下，探索目标、期待、自主、社会压力、痛苦、胜任范围、风险、替代与同意。身体意象受感知、情绪、关系、文化与媒体塑造，美容改变可以是有效选择，却不是所有痛苦的通用药方。沃斯用镜子放大一切可出售之物；阿雅用对话判断，被要求的服务能否诚实地服务镜中那个人。"
+      ],
+      "conceptName": "Ethical consultation and body image",
+      "conceptNameZh": "伦理咨询与身体意象",
+      "explanationParagraphs": [
+        "Ethical consultation and body image require practitioners to explore goals, expectations, pressure, distress, competence, risk, alternatives, and informed consent without creating or exploiting insecurity.",
+        "Cosmetic choice is not itself pathology, and beauty practitioners should not diagnose. They should provide honest limits, respect autonomy, refuse unsafe or exploitative work, and suggest qualified support when significant concerns lie beyond their role."
+      ],
+      "explanationParagraphsZh": [
+        "伦理咨询与身体意象要求从业者探索目标、期待、压力、痛苦、胜任范围、风险、替代与知情同意，而不制造或利用不安。",
+        "美容选择本身不是病理，美容从业者也不应诊断。他们应诚实说明限制、尊重自主、拒绝不安全或剥削性服务，并在明显忧虑超出职责时建议合格支持。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1013-service-dominant-logic",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1013",
+      "fieldTitle": "Hotel restaurants and catering",
+      "fieldTitleZh": "酒店、餐厅与餐饮服务",
+      "title": "The Night the Menu Printer Failed",
+      "titleZh": "菜单打印机坏掉的那一夜",
+      "summary": "A restaurant that believes value is sealed inside its dishes discovers that the same food becomes valuable only through different guests, purposes, and resources in use.",
+      "summaryZh": "一家相信价值密封在菜品里的餐厅发现，同样食物只有进入不同客人、目的与资源的使用过程才产生不同价值。",
+      "storyParagraphs": [
+        "Chef Rolan priced every plate by ingredients, labour, and the number of gold seals printed beside it. He believed the kitchen inserted value before a dish left the pass. Then the menu printer failed on festival night. Without descriptions or seals, servers had to ask what brought each table in. One traveller needed a quick warm meal before the last train; an anniversary pair wanted time and privacy; a family hoped their child could help finish a simple dessert. The same soup became valuable in three different ways that no inventory label had contained.",
+        "Rolan first concluded that guests should design everything themselves. Service slowed as tired diners were asked to invent recipes, calculate portions, and coordinate the room. Server Mina explained that participation did not erase professional contribution. The restaurant offered culinary skill, equipment, ingredients, timing, safety, and hospitality; guests brought appetite, memories, abilities, companions, purpose, money, and time. Suppliers, booking systems, transport, cultural conventions, and public rules also provided resources. Value emerged as these elements were integrated in a particular use context.",
+        "A beautifully made tasting menu still failed for the traveller who missed his train. A plain bowl delivered promptly supported his intended journey and therefore created greater value for him. The kitchen could offer a value proposition and prepare conditions, but it could not manufacture the final experience independently inside a plate. Nor was value always positive: confusion, inaccessible design, disrespect, waiting, waste, or a meal that conflicted with dietary need could destroy value during use even when production met every internal specification.",
+        "The new approach created conflict when Rolan treated every request as co-creation. One guest demanded an unsafe preparation; another expected a cultural performance from a server who had not consented. Mina kept food safety, worker dignity, accessibility, honest capacity, and other diners' needs within the system. Collaboration required negotiation and sometimes refusal. A customer was not an unpaid employee obliged to perform the service, and a worker was not a prop whose boundaries disappeared whenever a guest invoked experience.",
+        "When the printer returned, the restaurant kept its menu but changed what it measured. Dish consistency and cost still mattered, alongside purpose, ease, participation, recovery, relationships, and what guests could actually accomplish with the offering. Feedback informed new resources rather than functioning as a ceremonial survey. The kitchen standardised what protected quality while leaving meaningful choices in timing, sequence, explanation, and participation. Goods remained useful, but often as vehicles through which knowledge and skill could serve someone.",
+        "The broken printer revealed service-dominant logic: the view that service, understood as applying competences for another's benefit, is fundamental to exchange, and that value is co-created through actors integrating resources and realised in use and context rather than embedded by a producer alone. Firms can propose and support value but cannot unilaterally deliver its final form. Rolan had counted what the kitchen placed on the plate. Mina learned to ask what the plate enabled in a life already moving beyond the restaurant door."
+      ],
+      "storyParagraphsZh": [
+        "主厨罗兰按食材、劳动和菜名旁金印数量给每只盘子定价。他相信菜离开出餐口以前，厨房已经把价值放进其中。节庆夜菜单打印机突然坏掉，没有描述和金印，服务员只好询问每桌为何而来。一名旅客需要在末班车前快速吃到热食，一对周年伴侣想要时间与私密，一家人希望孩子能参与完成一份简单甜点。同一碗汤以三种方式产生价值，而库存标签里从未装着这些东西。",
+        "罗兰先得出结论：顾客应当自己设计一切。服务随即变慢，疲惫食客被要求发明菜谱、计算份量并协调餐厅。服务员米娜说明，参与并不抹去专业贡献。餐厅提供烹饪技能、设备、食材、时机、安全与款待；顾客带来食欲、记忆、能力、同伴、目的、金钱与时间；供应商、预订系统、交通、文化惯例和公共规则也提供资源。价值在这些要素进入具体使用情境并被整合时出现。",
+        "一套制作精美的品鉴菜单仍会让错过火车的旅客失望，一碗及时送达的普通汤却支持他的旅程，因此对他产生更大价值。厨房可以提出价值主张并准备条件，却不能独自在盘子里制造最终体验。价值也不总是正向的：混乱、不可及设计、不尊重、等待、浪费，或与饮食需要冲突的餐食，都可能在使用中摧毁价值，即使生产符合全部内部规格。",
+        "罗兰把每项要求都称为共同创造时，新做法发生冲突。一名客人要求不安全的烹制，另一人期待一名未同意的服务员表演其文化。米娜把食品安全、劳动者尊严、可及性、诚实产能和其他食客需要保留在系统里。合作需要协商，有时也需要拒绝。顾客不是必须替餐厅完成服务的无薪雇员，员工也不是只要客人提出“体验”，边界就会消失的道具。",
+        "打印机修好后，餐厅保留菜单，却改变衡量内容。菜品一致性与成本仍然重要，同时记录目的、便利、参与、补救、关系，以及客人借助餐食真正完成了什么。反馈不再是仪式性问卷，而会进入新资源设计。厨房把保护质量的部分标准化，在时间、顺序、说明与参与方式上留下有意义选择。物品仍然有用，却往往是知识与技能借以服务他人的载体。",
+        "坏掉的打印机揭示的是服务主导逻辑：把服务理解为运用能力使他人受益，并视其为交换基础；价值由行动者整合资源、在使用与情境中共同形成，而非由生产者单独嵌入。企业可以提出并支持价值，却不能单方面交付它的最终形态。罗兰一直计算厨房放进盘子的东西，米娜开始追问，这只盘子让一段已经向餐厅门外延伸的生活得以完成什么。"
+      ],
+      "conceptName": "Service-dominant logic",
+      "conceptNameZh": "服务主导逻辑",
+      "explanationParagraphs": [
+        "Service-dominant logic treats service, the application of competences for benefit, as fundamental to exchange and sees value as co-created through resource integration in use and context.",
+        "An organisation can offer a value proposition and supporting resources, but cannot embed or deliver final value alone. Co-creation does not remove professional, safety, worker, or customer boundaries."
+      ],
+      "explanationParagraphsZh": [
+        "服务主导逻辑把运用能力使他人受益的服务视为交换基础，并认为价值通过资源整合在使用与情境中共同形成。",
+        "组织可以提出价值主张并提供资源，却不能独自嵌入或交付最终价值。共同创造不会取消专业、安全、劳动者或顾客边界。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1013-service-recovery-paradox",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1013",
+      "fieldTitle": "Hotel restaurants and catering",
+      "fieldTitleZh": "酒店、餐厅与餐饮服务",
+      "title": "The Inn That Practised Mistakes",
+      "titleZh": "练习犯错的旅店",
+      "summary": "An inn earns unusual loyalty after repairing one failure brilliantly, then learns why deliberately creating failures cannot reproduce the result.",
+      "summaryZh": "旅店出色补救一次失误后赢得异常忠诚，随后才明白刻意制造错误为何无法复制结果。",
+      "storyParagraphs": [
+        "The Blue Heron Inn gave traveller Sima the wrong room on the night of her examination. The replacement was delayed, her notes were moved without permission, and she arrived at reception furious. Clerk Oren listened without defending the booking system, apologised for the specific failures, found a quiet room, arranged her belongings with consent, covered the added meal, and checked later without demanding praise. Sima returned the next year and recommended the inn more warmly than her companion, whose flawless stay had produced only ordinary satisfaction.",
+        "Manager Pell called this discovery profitable. He instructed staff to create one small recoverable error for selected guests so that an impressive rescue could manufacture loyalty. A couple given a deliberately late dinner missed their theatre performance. A business traveller recognised the staged apology. A family experiencing its second 'accidental' room error concluded that the inn could not learn. The same recovery gifts now looked like compensation for avoidable disrespect, and trust fell below what a merely adequate stay would have produced.",
+        "Researcher Mara separated the first case into perceived justice. Sima had received a useful outcome, a responsive and not needlessly burdensome process, and respectful interpersonal treatment. The remedy matched her actual loss; she had voice; responsibility was acknowledged; speed, explanation, and follow-up were credible. Surprise also reset an expectation that had fallen during a failure. These features could make a successful recovery especially memorable, but they did not erase the original cost or operate like a loyalty machine.",
+        "Mara compared other cases. Severe or irreversible harm, repeated failures, high prior expectations, obvious organisational control, weak relationships, and inadequate remedies made an uplift less likely. Customers differed in purpose, attribution, history, and preferred response. Some wanted an apology, others immediate correction, information, refund, or assurance that recurrence would be prevented. Results also depended on when satisfaction was measured and what no-failure comparison was used. The apparent uplift was a conditional group pattern, not a promise about every incident.",
+        "The inn stopped practising mistakes and built a recovery system instead. Frontline staff had authority and resources within clear limits; failures were recorded by type and consequence; urgent safety and safeguarding issues followed separate escalation; customers could choose among suitable remedies; and root causes were reviewed. Success meant restoring the customer and reducing recurrence, not merely raising a post-incident score. When recovery could not undo the harm, the inn said so plainly and pursued fair redress rather than theatrical warmth.",
+        "Sima's return revealed the service recovery paradox: under some conditions, a customer who experiences a failure followed by excellent recovery may report greater satisfaction or loyalty than a customer who experienced no failure. The effect is neither universal nor a reason to create or tolerate errors; severity, repetition, attribution, expectations, relationship, and perceived fairness all matter. Pell tried to bottle the gratitude that followed one honest repair. Mara showed that the only dependable strategy was preventing failure and becoming capable of accountable recovery when prevention failed."
+      ],
+      "storyParagraphsZh": [
+        "蓝鹭旅店在思玛参加考试前夜给错了房间。更换迟迟未完成，她的笔记也未经允许被移动，于是她愤怒地来到前台。职员奥伦没有替预订系统辩护，而是为具体失误道歉，找到安静房间，在得到同意后整理物品，承担额外餐费，并在稍后复核却不索要赞美。第二年思玛再次入住，向别人推荐旅店时，比同行那位全程无误、却只感到普通满意的朋友更热情。",
+        "经理佩尔称这项发现很有利润，命令职员为部分客人制造一个可补救的小错误，再用精彩救援生产忠诚。一对伴侣因刻意延迟的晚餐错过演出，一名商务旅客识破排练过的道歉，一家人第二次遇到“意外”房间错误后认定旅店根本不会学习。同样的补救礼物如今像是为可避免的不尊重付款，信任跌到一次仅仅合格住宿本可达到的水平之下。",
+        "研究者玛拉把第一起事件拆成几种被感知的公平。思玛得到实用结果、及时且不过度增加负担的流程，以及尊重的人际对待。补救匹配实际损失，她有表达机会，责任被承认，速度、解释与后续联系也可信。惊喜还重新调整了失误期间下落的期待。这些特征能让成功补救格外难忘，却不会消除原始代价，也不像忠诚机器那样自动工作。",
+        "玛拉比较其他案例。伤害严重或不可逆、错误反复、原先期待很高、组织明显可控、关系薄弱和补救不足时，反向提升更不可能发生。顾客的目的、归因、历史和偏好也不同：有人要道歉，有人要立即纠正、信息、退款，或防止重演的保证。结果还取决于何时测量满意，以及使用何种无失误比较基线。所谓提升是有条件的人群模式，不是对每次事件的承诺。",
+        "旅店不再练习犯错，转而建立补救系统。一线职员在清楚边界内拥有权限与资源；错误按类型和后果记录；紧急安全与保护问题走不同升级路径；顾客可在合适方案中选择；根本原因也会复核。成功意味着恢复顾客并减少重演，而非只提高事后评分。补救无法撤销伤害时，旅店会坦白说明并寻求公平补偿，而不是表演温暖。",
+        "思玛的再次入住揭示的是服务补救悖论：在某些条件下，经历服务失败后又得到出色补救的顾客，可能比从未遇到失败者报告更高满意或忠诚。它并不普遍，更不是制造或容忍错误的理由；严重度、重复、归因、期待、关系与公平感都会影响结果。佩尔想把一次诚实修复后的感激装进瓶子；玛拉证明，可靠策略只有预防失误，并在预防失败时具备负责任的补救能力。"
+      ],
+      "conceptName": "Service recovery paradox",
+      "conceptNameZh": "服务补救悖论",
+      "explanationParagraphs": [
+        "The service recovery paradox is the conditional finding that excellent recovery after a failure can sometimes produce higher satisfaction or loyalty than an error-free experience.",
+        "It is not reliable or universal, especially after severe or repeated failures. Fair outcomes, process, respect, attribution, expectations, and history matter; prevention and learning remain preferable to manufactured mistakes."
+      ],
+      "explanationParagraphsZh": [
+        "服务补救悖论是一个有条件的发现：失败后得到出色补救，有时会带来高于无失误体验的满意或忠诚。",
+        "它并不可靠或普遍，严重或重复失败后尤其如此。结果、流程与人际公平、归因、期待和历史都会影响它；预防与学习始终优于制造错误。"
+      ],
+      "mode": "case-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1013-revenue-management",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1013",
+      "fieldTitle": "Hotel restaurants and catering",
+      "fieldTitleZh": "酒店、餐厅与餐饮服务",
+      "title": "The Rooms That Died at Dawn",
+      "titleZh": "黎明时消失的房间",
+      "summary": "An innkeeper learns that an unsold room cannot be stored for tomorrow, so price and availability must respond to uncertain demand over time.",
+      "summaryZh": "旅店主人发现未售房间无法保存到明天，因此价格与可售容量必须随不确定需求和时间调整。",
+      "storyParagraphs": [
+        "Innkeeper Daro treated rooms like barrels of grain. He set one price in January and sold to the first person who asked. Before the summer fair, every room was booked cheaply months in advance, and a late group willing to stay three nights was turned away. During the rainy week, Daro protected the same price and finished with half the inn empty. He planned to sell those unused nights later, until accountant Sela reminded him that a room-night vanished at dawn. Yesterday's empty bed could not be placed on today's shelf.",
+        "Daro responded by raising every price whenever the lobby looked busy. Guests saw arbitrary changes, regular visitors felt punished, and high prices remained after demand disappeared. Sela instead forecast booking patterns by date, event, segment, channel, length of stay, cancellation, and uncertainty. She distinguished requests observed from demand that had been turned away or never appeared at an unsuitable price. Forecasts were revisable estimates, not prophecies, and unusual shocks could make historical patterns fail.",
+        "For each future night, the inn had limited, perishable capacity. Accepting a low-price booking now could displace a later high-value stay; refusing it could leave the room empty if later demand never arrived. Sela adjusted price and availability, protected some capacity where evidence justified it, and considered stay duration and contribution after distribution costs. She did not maximise occupancy alone: a full inn at unsustainable rates could earn less than a slightly emptier one, while a narrow revenue target could still damage service and long-term value.",
+        "Cancellations and no-shows created another puzzle. A cautious amount of overbooking could offset expected empty rooms, but an error meant walking a real guest who held a promise. Sela modelled probabilities and the full cost of displacement, set conservative limits, monitored changes, and prepared fair recovery. The average no-show rate did not tell her exactly who would arrive. Capacity control transferred uncertainty; it did not abolish responsibility for the person standing at reception.",
+        "Daro proposed charging each guest the highest amount a clerk guessed they would tolerate. Sela required explainable offers and defensible rate fences tied to conditions such as flexibility, timing, package, or channel, while considering accessibility, consumer law, transparency, discrimination risk, data quality, and perceived fairness. Segmentation was not permission to exploit emergencies or hidden personal traits. The system needed audit, human oversight, and room for exceptional needs as well as numerical optimisation.",
+        "The vanishing nights revealed revenue management: using demand forecasts, pricing, segmentation, and inventory controls to allocate perishable capacity across customers and time under uncertainty. It weighs the opportunity cost of accepting, rejecting, or holding capacity now against possible later demand, while cancellations and channels complicate the decision. Daro had tried to store empty rooms like grain and then price them by mood. Sela treated every night as a closing window whose value depended on timing, alternatives, fairness, and the promises the inn intended to keep."
+      ],
+      "storyParagraphsZh": [
+        "旅店主人达罗把房间当成粮桶。他一月定下全年统一价格，谁先来就卖给谁。夏季集市前，所有房间数月前便被低价订走，后来愿意连续住三晚的团体只能被拒。到了雨季，他又守着同一价格，最终半间旅店空置。达罗计划以后再卖掉那些没有使用的夜晚，会计塞拉却提醒他，一个“房间之夜”会在黎明消失，昨天的空床无法放上今天的货架。",
+        "达罗于是每逢大厅看着热闹就提高全部价格。客人只看见任意变动，常客觉得受惩罚，需求消退后高价还留着。塞拉改按日期、活动、客群、渠道、入住长度、取消与不确定性预测预订模式。她把观察到的请求，同因价格不合适而被拒或根本没有出现的需求区分开。预测是可以修订的估计，不是预言，异常冲击也会让历史模式失效。",
+        "对每个未来夜晚，旅店拥有的是有限且会过期的容量。现在接受低价预订，可能挤掉后来更高价值的住宿；拒绝它，又可能在后续需求未出现时留下空房。塞拉调整价格与可售量，在证据支持时保留部分容量，并考虑入住长度与扣除分销成本后的贡献。她不只追求入住率：不可持续低价住满可能比略有空置赚得更少，只盯狭窄收入目标又会损害服务与长期价值。",
+        "取消与未到店带来另一道难题。谨慎超订可以抵消预期空房，判断错误却会拒绝一名手持承诺的真实客人。塞拉建立概率与完整转移成本模型，设置保守限制、监测变化，并准备公平补救。平均未到店率不能告诉她具体谁会出现。容量控制只是转移不确定性，不会取消对站在前台那个人的责任。",
+        "达罗提议向每名客人收取职员猜测其能忍受的最高价格。塞拉要求报价可以解释，价格围栏必须与灵活性、时机、套餐或渠道等条件合理相连，同时考虑可及性、消费者法律、透明度、歧视风险、数据质量与公平感。客群划分不是利用紧急处境或隐藏个人特征的许可。系统需要审计、人工监督，并为特殊需要留出空间，而不只是数字最优。",
+        "消失的夜晚揭示的是收益管理：在不确定性下，运用需求预测、定价、客群划分与库存控制，把会过期的容量分配给不同顾客和时间。它衡量现在接受、拒绝或保留容量的机会成本与未来可能需求，取消和渠道则让决定更复杂。达罗曾想像存粮一样保存空房，再凭心情定价；塞拉把每个夜晚视为正在关闭的窗口，其价值取决于时机、替代方案、公平，以及旅店打算守住的承诺。"
+      ],
+      "conceptName": "Revenue management",
+      "conceptNameZh": "收益管理",
+      "explanationParagraphs": [
+        "Revenue management uses forecasting, pricing, segmentation, and inventory controls to allocate limited, perishable capacity across customers and time under uncertainty.",
+        "It weighs present bookings against later opportunity, cancellations, channels, and displacement costs. Sustainable practice also requires transparency, fairness, lawful data use, service responsibility, and human oversight."
+      ],
+      "explanationParagraphsZh": [
+        "收益管理在不确定性下运用预测、定价、客群划分与库存控制，把有限且会过期的容量分配到不同顾客与时间。",
+        "它衡量当前预订与未来机会、取消、渠道及转移成本。可持续实践还需要透明、公平、合法数据使用、服务责任与人工监督。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1014-progressive-overload",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1014",
+      "fieldTitle": "Sports",
+      "fieldTitleZh": "体育",
+      "title": "The Stone That Stopped Growing",
+      "titleZh": "不再变重的石头",
+      "summary": "An athlete first repeats the same easy stone forever, then doubles every challenge at once, before learning how adaptation and recovery shape useful progression.",
+      "summaryZh": "运动员先永远重复同一块轻松石头，又一次把所有挑战加倍，最终才理解适应与恢复如何塑造有效进阶。",
+      "storyParagraphs": [
+        "Runner and stone-lifter Eno trained with the same river rock every dawn. At first it left his arms shaking; after six weeks he could raise it while talking. His diary still contained sixty lifts, so he expected sixty units of improvement. At the midsummer contest, the heavier gate did not move. Coach Mara explained that the rock had not lost weight. Eno had changed: the stimulus that once disrupted his usual capacity had become an ordinary demand, no longer giving the same reason to adapt.",
+        "Eno responded by doubling the rock, the repetitions, the training days, and the running distance in one week. His performance fell, sleep worsened, and pain altered his movement. He accused adaptation of being too slow. Mara showed that training created both a signal for change and fatigue that temporarily obscured performance. Adaptation required sufficient challenge, recovery, nutrition, sleep, time, and an athlete able to tolerate the work. More external load did not guarantee more useful internal response.",
+        "They separated ways a task could progress. Resistance, repetitions, sets, frequency, duration, range, speed, density, complexity, stability, and technical demand could each change the stimulus. Increasing several together made the true change hard to see. A progression also had to match the desired adaptation: heavier lifting, longer endurance, faster decision-making, and sport-specific skill did not transfer perfectly to one another. The most visible number was not always the most relevant load.",
+        "Mara stopped treating progress as a fixed weekly staircase. She considered Eno's training history, age, health, competition, life stress, symptoms, technique, response, and recent work. Some weeks the useful progression was an additional challenge; another week it was consolidating quality, reducing fatigue, or returning gradually after interruption. Internal effort could change even when the external stone did not, especially in heat, illness, or poor sleep. Monitoring informed decisions but did not predict injury with certainty.",
+        "At the next contest, Eno met a gate heavier than any single practice stone. He moved it because training had progressively prepared related capacities without requiring a maximal test every dawn. When sharp or persistent warning signs appeared, he stopped and sought appropriately qualified assessment rather than interpreting pain as proof of growth. The plan belonged to his sport and condition; it was not a public formula of percentage increases that every body should copy.",
+        "The river rock revealed progressive overload: gradually increasing or altering training demands beyond an accustomed level so the body receives a sufficient, specific stimulus to adapt. Overload is relative to current capacity and specific to the adaptation sought; it is a condition supporting change, not a guarantee of it. Progression can involve many variables and must be balanced with recovery, technique, individual response, and the goal. Eno had first asked an adapted body to keep changing without a new signal, then shouted through every channel at once. Mara taught him to make challenge legible."
+      ],
+      "storyParagraphsZh": [
+        "跑步兼举石运动员埃诺每天黎明都用同一块河石训练。起初它让双臂发抖，六周后他已能边聊天边举起。日记里仍写着六十次，所以他期待获得六十份进步。仲夏比赛时，更重的城门却纹丝不动。教练玛拉解释，石头没有变轻，是埃诺改变了：曾经扰动日常能力的刺激已经成为普通要求，不再提供同样的适应理由。",
+        "埃诺随即在一周内把石重、次数、训练日和跑步距离全部加倍。表现下滑，睡眠变差，疼痛也改变动作。他责怪适应太慢。玛拉指出，训练既发出改变信号，也产生暂时遮蔽表现的疲劳。适应需要足够挑战，也需要恢复、营养、睡眠、时间，以及能够承受工作的运动员。外部负荷更多，并不保证内部产生更多有用反应。",
+        "他们拆开任务可以进阶的方式。阻力、次数、组数、频率、时长、幅度、速度、密度、复杂度、稳定性与技术要求都能改变刺激，同时增加多项则会让真实变化难以辨认。进阶还必须匹配目标适应：更大力量、更长耐力、更快决策和专项技能之间不会完美迁移。最醒目的数字不一定就是最相关的负荷。",
+        "玛拉不再把进步当成固定的每周阶梯。她考虑埃诺的训练史、年龄、健康、比赛、生活压力、症状、技术、反应与近期工作。有些星期适合增加挑战，另一些星期则需要巩固质量、降低疲劳，或在中断后渐进返回。高温、疾病或睡眠不足时，即使外部石头不变，内部努力也可能改变。监测帮助决策，却不能确定预测受伤。",
+        "下一次比赛，埃诺遇到一扇比任何单块训练石都重的门。他能够移动它，因为训练逐渐准备了相关能力，并不需要每天黎明都做最大测试。出现尖锐或持续警讯时，他会停止并寻求适当合格评估，而不把疼痛解释成成长证明。计划属于他的运动与状态，不是一条所有身体都应照搬的公开百分比公式。",
+        "河石揭示的是渐进超负荷：逐步提高或改变训练要求，使其超过已经习惯的水平，让身体获得足够且特异的适应刺激。超负荷相对于当前能力而定，也必须对应所追求的适应；它是支持改变的条件，不是改变保证。进阶可涉及多种变量，并须与恢复、技术、个体反应和目标平衡。埃诺先要求身体在没有新信号时继续改变，又把所有通道同时喊到最大；玛拉教他让挑战变得可以辨认。"
+      ],
+      "conceptName": "Progressive overload",
+      "conceptNameZh": "渐进超负荷",
+      "explanationParagraphs": [
+        "Progressive overload gradually increases or alters training demands beyond an accustomed level to provide a sufficient, specific stimulus for adaptation.",
+        "Load can change through many variables and must be balanced with recovery, technique, goals, and individual response. It is not a fixed percentage rule, constant maximal effort, or permission to train through warning signs."
+      ],
+      "explanationParagraphsZh": [
+        "渐进超负荷逐步提高或改变训练要求，使其超过已习惯水平，从而提供足够且特异的适应刺激。",
+        "负荷可以通过多种变量变化，并需与恢复、技术、目标和个体反应平衡。它不是固定百分比规则、持续最大努力或带着警讯继续训练的许可。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1014-periodisation",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1014",
+      "fieldTitle": "Sports",
+      "fieldTitleZh": "体育",
+      "title": "The Team That Won Every Tuesday",
+      "titleZh": "赢下每个星期二的队伍",
+      "summary": "A team proves its fitness in maximal weekly trials yet arrives exhausted at the only match its season was meant to serve.",
+      "summaryZh": "一支队伍在每周最大测试中不断证明状态，却精疲力竭地抵达整个赛季真正要服务的那场比赛。",
+      "storyParagraphs": [
+        "Coach Varo made every Tuesday a final. His rowing team raced the full championship distance at maximum effort, then lifted heavily and repeated the hardest start drill. Their test times improved for a month, and Varo posted each record on the boathouse wall. By the regional final, four athletes carried persistent fatigue, one had missed technical practice, and the crew's fastest Tuesday remained three weeks behind them. They had become experts at proving readiness so often that no readiness remained for the day it mattered.",
+        "Planner Sela placed the competition calendar beside the training log. Preparation had several demands that could not all peak at once: general capacity, strength, technical skill, race-specific speed, tactical coordination, and recovery. A hard session could stimulate adaptation but also produce fatigue; sequences and timing changed whether one session supported or interfered with another. The annual goal therefore required managing volume, intensity, specificity, frequency, and rest across nested spans rather than repeating the desired performance every week.",
+        "Sela organised broad phases, shorter blocks, weeks, and individual sessions around intended adaptations and competition. Earlier work developed capacities that later work made more race-specific; difficult periods alternated with lower-load opportunities; testing answered a question instead of serving as ritual. Before the final, training reduced accumulated fatigue while retaining relevant intensity and coordination. The plan created emphasis, not sealed compartments: technique, health, and recovery continued throughout.",
+        "Varo turned the new plan into a rigid coloured calendar and refused to alter a red day when two athletes were ill. Sela tore up that page. Planning was a hypothesis about how adaptation and fatigue might unfold, not a command issued to biology months in advance. Performance, well-being, symptoms, competition changes, travel, life stress, and individual response could justify adjustment. Athletes on the same crew did not always require identical loading, even when they needed to coordinate in one boat.",
+        "The team also stopped worshipping one named model. Linear, undulating, block, and other arrangements described ways of organising variation, but comparative evidence did not make one sequence universally superior for every sport, outcome, and athlete. Total work, specificity, adherence, coaching, training status, measurement, and study duration complicated claims. The value of the plan lay in explicit purpose, coherent sequencing, monitoring, and revision, not in the prestige of its diagram.",
+        "The exhausted final revealed periodisation: the planned organisation and variation of training over time to manage adaptation and fatigue and prepare desired capacities for important performance periods. It coordinates load, recovery, specificity, and sequencing across sessions and longer cycles, while remaining responsive to evidence and the athlete. Varo's team had tried to peak every Tuesday and discovered that a peak repeated without valleys becomes a plateau of fatigue. Sela gave each hard day a place in a season rather than asking it to be the season."
+      ],
+      "storyParagraphsZh": [
+        "教练瓦罗把每个星期二都当成决赛。赛艇队以最大努力完成冠军赛全程，随后做大重量训练，再重复最难的起步练习。一个月里测试成绩不断提高，瓦罗把每项纪录贴上船屋墙。地区决赛到来时，四名队员持续疲劳，一人错过技术训练，而全队最快的星期二已经停在三周前。他们太频繁地证明自己准备好了，以至真正需要准备的那天已经什么都没剩。",
+        "规划师塞拉把比赛日历放到训练日志旁。准备包含无法同时达到高峰的多项要求：一般能力、力量、技术、专项速度、战术协调与恢复。艰苦训练既刺激适应，也制造疲劳；顺序和时机又决定一堂课支持还是干扰另一堂课。因此年度目标需要跨越彼此嵌套的时段管理训练量、强度、特异性、频率与休息，而不是每周重复一次目标表现。",
+        "塞拉围绕预期适应与比赛，把宽泛阶段、较短区块、周和单次训练组织起来。较早工作发展基础能力，后来训练变得更贴近比赛；困难时期与较低负荷机会交替；测试只在需要回答问题时进行，不再充当仪式。决赛前，训练减少累积疲劳，同时保留相关强度与协调。阶段只是强调重点，而非密封隔间，技术、健康与恢复始终继续。",
+        "瓦罗把新计划变成僵硬彩色日历，两名运动员生病时仍拒绝改变红色训练日。塞拉撕掉那页。计划是关于适应和疲劳将如何展开的假设，不是数月前向生物学发出的命令。表现、福祉、症状、比赛变化、旅行、生活压力与个体反应都可能要求调整。同一条船上的运动员需要协调，却不一定始终需要完全相同负荷。",
+        "队伍也不再崇拜某一个有名字的模型。线性、波动、区块及其他安排描述组织变化的方式，但比较证据并未证明一套顺序对每项运动、结局和运动员都普遍更优。总工作量、特异性、依从、教练、训练水平、测量与研究时长都会使主张复杂。计划的价值来自明确目的、连贯顺序、监测与修订，而非图表名望。",
+        "那场疲惫决赛揭示的是周期化训练：有计划地组织并改变训练随时间的分布，以管理适应与疲劳，并让目标能力为重要表现期做好准备。它跨越单次训练与更长周期协调负荷、恢复、特异性和顺序，同时回应证据与运动员。瓦罗的队伍试图每周二都登顶，结果发现没有山谷的山峰会变成疲劳高原；塞拉让每个艰苦日子在赛季里拥有位置，而不再要求它独自成为整个赛季。"
+      ],
+      "conceptName": "Periodisation",
+      "conceptNameZh": "周期化训练",
+      "explanationParagraphs": [
+        "Periodisation is the planned organisation and variation of training over time to manage adaptation and fatigue and prepare desired capacities for important periods.",
+        "It coordinates load, recovery, specificity, and sequencing across nested cycles. Plans should remain responsive, and no single named model is universally best for every athlete, sport, or outcome."
+      ],
+      "explanationParagraphsZh": [
+        "周期化训练是有计划地组织并改变训练随时间的分布，以管理适应与疲劳，并为重要时期准备目标能力。",
+        "它在嵌套周期中协调负荷、恢复、特异性与顺序。计划需要保持响应性，没有一种命名模型对所有运动员、项目与结局普遍最优。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1014-constraints-led-approach",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1014",
+      "fieldTitle": "Sports",
+      "fieldTitleZh": "体育",
+      "title": "The Coach Who Moved the Lines",
+      "titleZh": "移动场线的教练",
+      "summary": "A coach stops dictating every movement and changes space, rules, opponents, and goals so players must perceive and solve the game themselves.",
+      "summaryZh": "教练不再逐句规定动作，而是改变空间、规则、对手与目标，让运动员必须亲自感知并解决比赛。",
+      "storyParagraphs": [
+        "Coach Pell taught the Falcon players a perfect eight-step attack. He placed footprints on the court and shouted the name of each pass before it happened. In rehearsal, the ball moved like a clock. In the final, opponents blocked the third footprint, wind altered the long pass, and the Falcons continued the memorised sequence into empty space. Pell shouted louder instructions, but every instruction arrived after the information that should have shaped the action had already changed.",
+        "Coach Mira removed the footprints and narrowed one practice court. With less space, players had to scan earlier and use shorter passing options. She then widened it, limited touches, changed scoring zones, varied player numbers, and introduced opponents whose movement mattered. Each adjustment made some information and actions more available while discouraging others. Players learned by perceiving opportunities in a task, acting, and receiving consequences, not by retrieving one movement detached from the game that gave it meaning.",
+        "Pell concluded that coaches should say nothing and let chaos teach. The next session produced unsafe collisions and clever tricks that won the drill but transferred poorly to competition. Mira explained that designing a learning environment was active coaching. Constraints had to represent the performance problem, preserve key perception-action links, fit developmental level and individual capacities, and allow exploration without unnecessary hazard. Questions, demonstration, feedback, and direct instruction still had a place when they served learning rather than replacing every decision.",
+        "The same rule did not shape every player identically. Height, speed, fatigue, confidence, injury history, attention, experience, and current skill formed individual constraints; surface, weather, equipment, and social climate belonged to the environment; goals and rules belonged to the task. Behaviour emerged from their interaction. A player finding an effective solution did not prove it was universally optimal, and a movement that looked unconventional could still be functional for that person and situation.",
+        "Mira tested whether solutions survived altered but representative situations. She watched who was excluded by a rule, whether players discovered multiple options, whether skill transferred, and whether the drill invited the tactical behaviour intended. Constraints were adjusted when athletes merely gamed the scoring system. The Falcons retained shared principles and safety responsibilities while becoming less dependent on a script. Variability was not random noise to eliminate; some of it helped the team adapt to a changing opponent.",
+        "The moving lines revealed the constraints-led approach: designing practice by manipulating interacting individual, task, and environmental constraints so learners explore and self-organise functional movement solutions in representative situations. It emphasises perception coupled to action, variability, and adaptation rather than one ideal technique copied unchanged. Pell had attempted to store the match in eight footprints. Mira changed the landscape so players learned to read what the next step was for, even when no familiar footprint remained."
+      ],
+      "storyParagraphsZh": [
+        "佩尔教练教猎鹰队一套完美的八步进攻。他在场上画出脚印，在每次传球发生前喊出名称。排练时，球像钟表一样移动。决赛中，对手堵住第三个脚印，风改变长传轨迹，猎鹰队却继续把背熟的顺序送向空地。佩尔更大声地下指令，但每条指令抵达时，本应塑造行动的信息早已改变。",
+        "米拉教练擦掉脚印，先把一块训练场缩窄。空间变小，队员必须更早扫描并使用短传。她随后加宽场地、限制触球、改变得分区、调整人数，并加入真正会移动的对手。每项调整都会让某些信息与行动更容易出现，同时抑制其他选择。运动员通过感知任务中的机会、采取行动并接收后果来学习，而不是提取一个脱离比赛意义的孤立动作。",
+        "佩尔于是认定教练应当什么都不说，让混乱教学。下一堂课发生不安全碰撞，也出现只会赢下练习、却难以迁移到比赛的聪明花招。米拉说明，设计学习环境本身就是积极执教。限制条件必须代表表现问题，保留关键的感知行动联系，适合发展水平与个体能力，并允许在不制造无谓危险的情况下探索。提问、示范、反馈与直接指导仍有位置，前提是服务学习，而不是替代每个决定。",
+        "同一条规则不会以同样方式塑造所有人。身高、速度、疲劳、信心、伤病史、注意、经验与当前技能构成个体限制；场地、天气、器材与社会氛围属于环境；目标和规则属于任务。行为从三者互动中涌现。运动员找到有效方案，不证明它对所有人普遍最优；一个看起来不传统的动作，也可能对这个人与这个情境具有功能。",
+        "米拉检验方案能否在变化但具有代表性的情境中继续工作。她观察规则排除了谁、队员是否发现多种选择、技能能否迁移，以及练习是否邀请了真正想训练的战术行为。运动员只是在钻得分制度空子时，限制会被重新调整。猎鹰队保留共同原则与安全责任，却不再依赖脚本。变化不全是必须消除的随机噪声，其中一些帮助球队适应不断改变的对手。",
+        "移动的场线揭示的是限制导向训练：通过操纵相互作用的个体、任务与环境限制来设计练习，让学习者在有代表性的情境中探索并自组织出具有功能的动作方案。它强调感知与行动相连、变化与适应，而不是原样复制一种理想技术。佩尔试图把整场比赛存进八个脚印；米拉改变地形，让队员即使看不见熟悉脚印，也知道下一步是为了解决什么。"
+      ],
+      "conceptName": "Constraints-led approach",
+      "conceptNameZh": "限制导向训练",
+      "explanationParagraphs": [
+        "The constraints-led approach manipulates interacting individual, task, and environmental constraints so learners explore and self-organise functional solutions in representative practice.",
+        "It links perception to action and values adaptable variability. It does not mean absent coaching: representative design, safety, feedback, instruction when useful, inclusion, and transfer still require skilled judgement."
+      ],
+      "explanationParagraphsZh": [
+        "限制导向训练操纵相互作用的个体、任务与环境限制，让学习者在有代表性的练习中探索并自组织出功能性方案。",
+        "它连接感知与行动，并重视可适应的变化；它不等于教练缺席，代表性设计、安全、反馈、必要指导、包容与迁移仍需要专业判断。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1015-tourism-carrying-capacity",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1015",
+      "fieldTitle": "Travel tourism and leisure",
+      "fieldTitleZh": "旅行、旅游与休闲",
+      "title": "The Island That Sold Its Silence",
+      "titleZh": "卖掉宁静的岛",
+      "summary": "An island welcomes ever more visitors until the reefs, water system, residents, and visitor experience all begin crossing different limits.",
+      "summaryZh": "一座岛不断迎来更多游客，直到珊瑚礁、供水系统、居民生活与游客体验先后越过不同界限。",
+      "storyParagraphs": [
+        "Quietfin Island became famous for mornings when only waves could be heard. Mayor Pell counted every new ferry ticket as success. More visitors supported guesthouses and boats, so he added sailings whenever a queue formed. By the fourth summer, the beach was crowded, freshwater deliveries doubled, footpaths cut through nesting ground, rents rose, and residents avoided the harbour. Visitors then complained that the island no longer felt like the photograph that had brought them. Pell proposed an even larger campaign to replace disappointed guests with new ones.",
+        "Ecologist Sera asked which limit he meant to manage. The reef responded to anchoring, water quality, season, and location; the water system responded to daily peak use; paths and waste facilities had physical thresholds; residents cared about housing, access, culture, work, and control; visitors cared about crowding and quality. Economic dependence created another vulnerability. These dimensions could reach unacceptable change at different visitor numbers, and an island-wide total concealed intense pressure at one bay during one hour.",
+        "Pell divided the beach area by the space occupied by one towel and announced a scientific maximum. Sera showed that management altered the result. Booking times, ferry size, guiding, trail design, moorings, pricing, infrastructure, enforcement, visitor behaviour, season, and restoration could increase or reduce pressure without changing island size. The acceptable threshold also involved values: whose losses counted, what ecological condition was to be protected, and how much change residents and managers considered tolerable.",
+        "A residents' council, businesses, workers, conservation staff, and visitor representatives defined desired conditions and warning indicators. They tracked reef damage, water demand, waste, path erosion, housing effects, crowding, resident sentiment, visitor experience, and distribution of benefits. Limits were placed on specific places and times, not only annual arrivals. Revenue supported infrastructure and conservation, while access and livelihoods were considered so that restriction did not simply reserve the island for the wealthiest visitor.",
+        "The first cap was not treated as eternal. A storm damaged the pier, lowering safe throughput; a repaired water system raised one operational limit but not the reef's tolerance; visitor routing relieved one cove while pressuring another. Monitoring triggered adjustment, and uncertainty led to precaution where damage could be difficult to reverse. The aim was not the largest number that could physically stand on the sand, but a level and pattern of use consistent with agreed environmental, social, experiential, and economic conditions.",
+        "The lost silence revealed tourism carrying capacity: the level and pattern of visitor activity a destination can accommodate without unacceptable deterioration of its physical, ecological, social, economic, cultural, or visitor-experience conditions. It is multidimensional, place- and time-specific, shaped by management, and rarely one permanent scientific number. Pell had counted people entering the island. Sera counted what happened to the island, its residents, and those same visitors after the ferry doors opened."
+      ],
+      "storyParagraphsZh": [
+        "静鳍岛因清晨只能听见海浪而闻名。佩尔市长把每张新增船票都算作成功。更多游客支持旅店与船家，于是排队一长，他就增加航班。第四个夏天，海滩拥挤，淡水运输翻倍，小路穿过筑巢地，租金上涨，居民开始避开港口。游客随后抱怨，小岛不再像吸引他们前来的照片。佩尔提议开展更大宣传，用新游客替代失望的人。",
+        "生态学家塞拉询问，他究竟要管理哪一种界限。珊瑚礁会回应锚泊、水质、季节与地点，供水系统回应每日峰值，步道和废物设施有物理阈值；居民关心住房、可及、文化、工作与控制权，游客关心拥挤和体验质量，经济依赖还制造另一种脆弱性。这些维度可能在不同游客数量下达到不可接受变化，而全岛总数会遮住某个海湾某个小时的集中压力。",
+        "佩尔用海滩面积除以一条毛巾占地，宣布一个科学上限。塞拉指出，管理方式会改变结果。预订时段、渡轮大小、引导、步道设计、系泊、定价、基础设施、执行、游客行为、季节与修复，都能在岛屿面积不变时增减压力。可接受阈值还涉及价值判断：谁的损失被计算，要保护怎样的生态状态，以及居民和管理者愿意容忍多少变化。",
+        "居民委员会、企业、劳动者、保护人员与游客代表共同定义期望状态和预警指标。他们追踪珊瑚损伤、用水、废物、步道侵蚀、住房影响、拥挤、居民感受、游客体验与收益分布。限制针对具体地点与时段，而不只控制年度到访总数。收入支持基础设施与保护，同时考虑可及性和生计，避免限制只把小岛留给最富裕的游客。",
+        "第一项限额没有被当成永恒数字。风暴损坏码头，降低安全通行能力；供水系统修好，提高一项运营界限，却没有提高珊瑚容忍度；游客分流缓解一个海湾，又可能压迫另一个。监测触发调整，可能难以逆转的损害面前，不确定性支持谨慎。目标不是让最多人勉强站上沙滩，而是让使用水平与方式符合商定的环境、社会、体验与经济状态。",
+        "失去的宁静揭示的是旅游承载力：一个目的地能够容纳的游客活动水平与方式，在此范围内，其物理、生态、社会、经济、文化或游客体验条件不会发生不可接受的恶化。它是多维度、随地点与时间而变、受管理塑造的，很少是一项永久科学数字。佩尔只数进入岛屿的人；塞拉计算的是渡轮开门以后，岛屿、居民与这些游客本身发生了什么。"
+      ],
+      "conceptName": "Tourism carrying capacity",
+      "conceptNameZh": "旅游承载力",
+      "explanationParagraphs": [
+        "Tourism carrying capacity is the level and pattern of visitor use a destination can accommodate without unacceptable environmental, physical, social, cultural, economic, or experiential deterioration.",
+        "It is multidimensional and depends on place, time, behaviour, infrastructure, management, values, and desired conditions. Monitoring and adaptive limits are usually more useful than one permanent visitor number."
+      ],
+      "explanationParagraphsZh": [
+        "旅游承载力是目的地能够容纳的游客使用水平与方式，而不造成不可接受的环境、物理、社会、文化、经济或体验恶化。",
+        "它是多维度的，取决于地点、时间、行为、基础设施、管理、价值与期望状态。监测和适应性限制通常比一个永久游客数字更有用。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1015-experience-economy",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1015",
+      "fieldTitle": "Travel tourism and leisure",
+      "fieldTitleZh": "旅行、旅游与休闲",
+      "title": "The Souvenir No One Remembered",
+      "titleZh": "无人记得的纪念品",
+      "summary": "A harbour sells ever more polished souvenirs until a simple hour of meaningful participation becomes the part travellers remember and value.",
+      "summaryZh": "港口出售越来越精致的纪念品，直到一小时有意义的参与成为旅人真正记住并珍视的部分。",
+      "storyParagraphs": [
+        "Bell Harbour competed by polishing the same shell souvenir more brightly each season. Merchant Ruan added velvet boxes, faster service, and lower prices, yet visitors could not distinguish his shell from the one sold at the next port. During a storm delay, lighthouse keeper Iva invited stranded travellers to help prepare safe signal cards, hear why each pattern mattered, and place one under supervision. Weeks later, letters arrived describing that hour. Few writers mentioned the shells still lying in their luggage.",
+        "Ruan concluded that every purchase needed actors, costumes, and loud music. His staged spectacle exhausted staff and trapped visitors in a performance they had not chosen. Iva explained that an experience was not merely entertainment or decoration. It occurred when services formed a stage and goods served as props for engaging people in a personally meaningful, memorable event. Learning, escape, aesthetic attention, active participation, quiet reflection, and social connection could all matter in different combinations.",
+        "The same lighthouse hour did not create equal value for everyone. One visitor wanted hands-on participation, another preferred to observe, and a third needed accessible instructions and seating. Context, prior knowledge, companions, identity, mood, and agency shaped what was remembered. The harbour could design cues, sequence, setting, interaction, and choice, but it could not guarantee an emotion. A visitor remained a participant in experience, not an empty container into which memorability could be poured.",
+        "Success brought a new danger. Ruan copied a sacred local ceremony, paid performers poorly, and advertised authenticity without community consent. Residents felt turned into scenery, while visitors sensed the script was extracting rather than sharing meaning. Iva involved cultural holders and workers in deciding what could be offered, how it would be represented, who benefited, and what remained private. A profitable memory did not justify distortion, appropriation, coercive participation, surveillance, or manufactured emotional pressure.",
+        "Bell Harbour redesigned selected offerings around coherent purpose rather than constant spectacle. Goods and efficient services still mattered: safe equipment, clear booking, clean facilities, skilled guides, fair cancellation, and reliable transport made engagement possible. The harbour measured accessibility, worker conditions, resident effects, learning, satisfaction, repeat interest, and whether the event delivered its promised meaning. Some travellers still wanted only a shell, and a good system allowed that simple transaction without forcing a story upon it.",
+        "The remembered hour revealed the experience economy: an economic offering in which an organisation uses services as the stage and goods as supporting props to engage people in memorable, personally meaningful events. Experiences differ from commodities, goods, and routine services, though all may combine in one offering; they depend on participation and context rather than spectacle alone. Ruan had improved the object travellers carried away. Iva designed the conditions for an encounter they could carry without holding anything."
+      ],
+      "storyParagraphsZh": [
+        "钟港每季都把相同贝壳纪念品磨得更亮，以此竞争。商人阮加入天鹅绒盒、更快服务和更低价格，游客仍分不清他的贝壳与下一座港口卖的有什么不同。一次风暴延误时，灯塔守护人伊娃邀请滞留旅客协助准备安全信号卡，听每种图案为何重要，再在监督下放置一张。数周后，描述那一小时的信件不断寄来，很少有人提到仍躺在行李里的贝壳。",
+        "阮于是认定每次购买都需要演员、服装与响亮音乐。他安排的表演让职员疲惫，也把没有选择参与的游客困在其中。伊娃解释，体验不只是娱乐或装饰。当服务构成舞台、物品成为道具，让人进入一场具有个人意义且可被记住的事件时，体验才出现。学习、暂时逃离日常、审美注意、主动参与、安静反思与社会联结，都可能以不同组合发挥作用。",
+        "同一小时不会为每个人创造相同价值。一名游客想亲手参与，另一人更愿观察，第三人需要可及说明和座位。情境、既有知识、同伴、身份、心情与能动性都会塑造记忆。港口可以设计线索、顺序、环境、互动与选择，却无法保证某种情绪。游客是体验的参与者，不是一个可以被倒入“难忘”的空容器。",
+        "成功带来新危险。阮复制一项当地神圣仪式，低薪雇用表演者，又在没有社区同意时宣传“原真”。居民觉得自己被变成布景，游客也感到脚本在提取意义，而不是分享。伊娃让文化持有者与劳动者共同决定什么可以提供、如何呈现、谁会受益，以及什么仍属私密。一段有利润的记忆不能为歪曲、挪用、强迫参与、监视或人为情绪压力辩护。",
+        "钟港围绕连贯目的重新设计部分项目，而不是持续制造奇观。物品和高效服务仍然重要：安全设备、清晰预订、洁净设施、胜任向导、公平取消与可靠交通让参与成为可能。港口衡量可及性、劳动条件、居民影响、学习、满意、再次兴趣，以及事件是否兑现承诺意义。有些游客仍只想买一枚贝壳，良好系统允许这项简单交易，而不会强迫每个人接受故事。",
+        "被记住的一小时揭示的是体验经济：组织以服务为舞台、物品为支持道具，让人参与可记忆且具有个人意义的事件，从而形成一种经济供给。体验不同于原料、商品与常规服务，尽管它们可结合在同一供给中；体验依赖参与和情境，而非只有奇观。阮改善的是旅客带走的物件，伊娃设计的是一场即使手里什么都没有，也能被带走的相遇。"
+      ],
+      "conceptName": "Experience economy",
+      "conceptNameZh": "体验经济",
+      "explanationParagraphs": [
+        "The experience economy describes offerings that use services as a stage and goods as supporting props to engage people in memorable, personally meaningful events.",
+        "Experience is not entertainment alone and cannot be guaranteed independently of participation and context. Ethical design also considers accessibility, worker and community rights, truthful representation, choice, and who benefits."
+      ],
+      "explanationParagraphsZh": [
+        "体验经济描述组织以服务为舞台、物品为支持道具，让人参与可记忆且具有个人意义事件的供给。",
+        "体验不只等于娱乐，也无法脱离参与与情境得到保证。伦理设计还要考虑可及性、劳动者与社区权利、真实呈现、选择及谁会受益。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "1015-tourism-leakage",
+      "batchId": "batch-015",
+      "categoryCode": "10",
+      "fieldCode": "1015",
+      "fieldTitle": "Travel tourism and leisure",
+      "fieldTitleZh": "旅行、旅游与休闲",
+      "title": "The Full Bay and the Empty Purse",
+      "titleZh": "客满的海湾与空钱袋",
+      "summary": "A bay celebrates record visitor spending while tracing how booking fees, imports, debt, ownership, and supply chains carry much of it away.",
+      "summaryZh": "海湾庆祝游客消费创下纪录，却追踪到预订费、进口、债务、所有权与供应链怎样带走其中很大一部分。",
+      "storyParagraphs": [
+        "Sun Bay's rooms were full, restaurants crowded, and visitor spending twice the previous record. Mayor Pell expected every household to prosper. Yet the fisher repaired his roof with borrowed money, the farm lost workers without gaining hotel orders, and the town clinic still lacked funds. Pell displayed gross receipts from the harbour gate and accused residents of failing to feel growth. Accountant Nira asked to follow one hundred visitor coins after they entered rather than assuming all one hundred remained because they had once crossed the bay.",
+        "The first coins left as commission to a distant booking platform. Others paid interest on foreign construction debt, imported food and furnishings, fuel, insurance, management contracts, intellectual property, and profits remitted to owners elsewhere. Some wages stayed locally but were low or seasonal; some taxes funded services beyond the bay; local purchases circulated again through shops and farms. The economic effect depended on direct, indirect, and induced links, not only the amount a visitor initially placed on a hotel bill.",
+        "Pell proposed banning every import and outside investor. Nira showed why that could also fail. The bay did not produce medical equipment, enough food in the dry season, specialised systems, or all the capital and knowledge needed to build safely. Imports could support a viable service, and external investment could bring useful resources. The question was not whether every coin stayed forever, but which outflows were necessary, what local value was created in exchange, who bore risks, and whether realistic local linkages could become stronger.",
+        "They mapped ownership, procurement, wages, working conditions, taxes, finance, distribution channels, skills, seasonality, and profit. Hotels met farmers before menu contracts were signed, but local sourcing was not declared successful merely by shifting impossible quality, timing, or price demands onto small suppliers. Training, logistics, credit, standards, storage, and fair purchasing terms helped local firms participate. Community ownership and enterprise support increased local retention where appropriate, while environmental and social costs were counted alongside income.",
+        "The new dashboard separated visitor expenditure from local value added, household benefit, public revenue, and foreign-exchange outflow. It also showed distribution: a high local share could still concentrate in a few families, and retaining money in a harmful or inefficient arrangement was not automatically good. The bay compared alternatives over time, protected competition, published contracts where required, and avoided promising that one local percentage captured resilience, dignity, ecological health, or the quality of work.",
+        "The hundred coins revealed tourism leakage: the portion of tourism revenue that leaves or fails to circulate in the destination economy through imports, external ownership, profit repatriation, debt service, commissions, and other outside payments. Leakage means gross visitor spending can overstate local benefit, but not every outflow is avoidable or harmful. Pell had measured money at the moment it arrived. Nira measured the routes it travelled, what the bay received in return, and how many times a coin could support local life before the tide carried it away."
+      ],
+      "storyParagraphsZh": [
+        "太阳湾房间客满、餐厅拥挤，游客消费达到上次纪录的两倍。佩尔市长期待每个家庭都繁荣起来，可渔民仍借钱修屋顶，农场失去劳动力却没有得到酒店订单，镇诊所也依旧缺少资金。佩尔展示港口记录的总收入，责怪居民不会感受增长。会计尼拉要求在一百枚游客硬币进入后继续追踪，而不是因为它们曾越过海湾，就假定一百枚全都留了下来。",
+        "第一批硬币作为佣金流向远方预订平台，另一些支付外部建设债务利息、进口食品与家具、燃料、保险、管理合同、知识产权，以及汇给外地所有者的利润。部分工资留在本地，却可能低且季节化；部分税收支持海湾以外的公共服务；本地采购则会经商店与农场再次流动。经济效果取决于直接、间接与诱发联系，而不只取决于游客最初写在酒店账单上的金额。",
+        "佩尔提议禁止所有进口与外来投资。尼拉指出这也可能失败。海湾不生产医疗设备，旱季食物不足，也缺少安全建设所需的部分专业系统、资本与知识。进口能支持可行服务，外部投资也能带来有用资源。问题不是每枚硬币是否永远留下，而是哪些流出确有必要、换回了什么本地价值、风险由谁承担，以及哪些现实的本地联系可以增强。",
+        "他们绘制所有权、采购、工资、劳动条件、税收、融资、分销渠道、技能、季节性与利润。酒店在签菜单合同前同农民会面，但本地采购不会因为把不可能的质量、时机或价格要求转给小供应商就算成功。培训、物流、信贷、标准、储存与公平采购条款帮助本地企业参与。适当的社区所有权和企业支持提高本地留存，环境与社会成本也同收入一起计算。",
+        "新仪表板把游客支出与本地增加值、家庭获益、公共收入和外汇流出分开，也显示分配情况：很高的本地份额仍可能集中在少数家庭，让钱留在有害或低效安排中也不自动是好事。海湾随时间比较替代方案、保护竞争、在需要时公开合同，并避免承诺一个本地百分比就能代表韧性、尊严、生态健康或工作质量。",
+        "一百枚硬币揭示的是旅游收入外流：旅游收入通过进口、外部所有权、利润汇回、债务偿付、佣金与其他对外支付离开或未能在目的地经济中循环的部分。外流意味着游客总支出可能夸大本地获益，却不是每项流出都可避免或有害。佩尔只在钱抵达的一刻测量；尼拉测量它随后走过的路线、海湾换回什么，以及一枚硬币在潮水带走它以前能支持几次本地生活。"
+      ],
+      "conceptName": "Tourism leakage",
+      "conceptNameZh": "旅游收入外流",
+      "explanationParagraphs": [
+        "Tourism leakage is the share of tourism revenue that leaves or does not circulate locally through imports, external ownership, repatriated profits, debt, commissions, and other outside payments.",
+        "Gross visitor spending can therefore overstate local benefit. Not every outflow is avoidable or harmful; analysis should examine value created, ownership, supply links, work, distribution, public revenue, costs, and resilience."
+      ],
+      "explanationParagraphsZh": [
+        "旅游收入外流是旅游收入通过进口、外部所有权、利润汇回、债务、佣金与其他对外支付离开或未在本地循环的部分。",
+        "因此游客总支出可能夸大本地获益。并非所有流出都可避免或有害，分析还应考察创造的价值、所有权、供应联系、工作、分配、公共收入、成本与韧性。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

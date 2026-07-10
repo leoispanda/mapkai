@@ -1,0 +1,241 @@
+batch_id	category_code	field_code	field_title_en	field_title_zh	slot	story_id	concept_en	concept_zh	mode	story_anchor_zh	status
+batch-001	00	0011	Basic programmes and qualifications	基础课程与资格	1	0011-prerequisite-structure	Prerequisite structure	先备知识结构	concept-fable	跳过绳结基础课的年轻领航员	integrated
+batch-001	00	0011	Basic programmes and qualifications	基础课程与资格	2	0011-mastery-learning	Mastery learning	掌握学习	concept-fable	按钟声换工位却不断积错的钟表学校	integrated
+batch-001	00	0011	Basic programmes and qualifications	基础课程与资格	3	0011-transfer-of-learning	Transfer of learning	学习迁移	concept-fable	在模型河上满分却过不了真河的造桥学徒	integrated
+batch-001	00	0021	Literacy and numeracy	读写与计算能力	1	0021-orthographic-mapping	Orthographic mapping	正字法映射	mechanism-fable	总靠猜招牌的送信人开始听见字里的声音	integrated
+batch-001	00	0021	Literacy and numeracy	读写与计算能力	2	0021-number-sense	Number sense	数感	mechanism-fable	不用逐颗数也能发现粮袋数目不对的仓库女孩	integrated
+batch-001	00	0021	Literacy and numeracy	读写与计算能力	3	0021-functional-literacy	Functional literacy	功能性读写能力	concept-fable	会背所有告示却错过渡船规则的抄写员	integrated
+batch-001	00	0031	Personal skills and development	个人技能与发展	1	0031-metacognitive-regulation	Metacognitive regulation	元认知调节	concept-fable	在镜子图书馆记录自己如何迷路的旅人	integrated
+batch-001	00	0031	Personal skills and development	个人技能与发展	2	0031-self-efficacy	Self-efficacy	自我效能感	concept-fable	被安排一连串刚好够难任务的塔楼学徒	integrated
+batch-001	00	0031	Personal skills and development	个人技能与发展	3	0031-deliberate-practice	Deliberate practice	刻意练习	concept-fable	每天只拉最难四小节的提琴手	integrated
+batch-001	01	0111	Education science	教育科学	1	0111-constructivist-learning	Constructivist learning	建构主义学习	concept-fable	用自己的错误水渠重画河流的学生	integrated
+batch-001	01	0111	Education science	教育科学	2	0111-formative-assessment	Formative assessment	形成性评价	concept-fable	烧窑前在湿陶上留下修正记号的老师	integrated
+batch-001	01	0111	Education science	教育科学	3	0111-cognitive-load	Cognitive load	认知负荷	mechanism-fable	同时背七道命令而忘掉城门的信使	integrated
+batch-001	01	0112	Training for pre-school teachers	学前教师培养	1	0112-play-based-learning	Play-based learning	游戏本位学习	concept-fable	孩子们自发开出的石子市场	integrated
+batch-001	01	0112	Training for pre-school teachers	学前教师培养	2	0112-joint-attention	Joint attention	共同注意	concept-fable	老师顺着孩子手指第一次看见窗外的鸟巢	integrated
+batch-001	01	0112	Training for pre-school teachers	学前教师培养	3	0112-emergent-curriculum	Emergent curriculum	生成课程	concept-fable	一场雨把既定课程带进水洼和排水沟	integrated
+batch-002	01	0113	Teacher training without subject specialisation	非学科专项教师培养	1	0113-teacher-noticing	Teacher noticing	教师察觉	lens-fable	总答对的孩子在草稿边缘反复画同一种错误	integrated
+batch-002	01	0113	Teacher training without subject specialisation	非学科专项教师培养	2	0113-inclusive-pedagogy	Inclusive pedagogy	全纳教学法	concept-fable	只有一扇标准门的教室开始改造入口	integrated
+batch-002	01	0113	Teacher training without subject specialisation	非学科专项教师培养	3	0113-classroom-routines	Classroom routines	课堂常规	concept-fable	每次过渡都丢失十分钟的多科教室	integrated
+batch-002	01	0114	Teacher training with subject specialisation	学科专项教师培养	1	0114-pedagogical-content-knowledge	Pedagogical content knowledge	学科教学知识	concept-fable	会观星却教不会孩子看影子的天文学家	integrated
+batch-002	01	0114	Teacher training with subject specialisation	学科专项教师培养	2	0114-misconception-diagnosis	Misconception diagnosis	错误概念诊断	lens-fable	学生每次都算对却坚信更重的石头先落地	integrated
+batch-002	01	0114	Teacher training with subject specialisation	学科专项教师培养	3	0114-disciplinary-literacy	Disciplinary literacy	学科读写能力	concept-fable	同一页文字在史官和药剂师手里变成不同证据	integrated
+batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	1	0211-montage	Montage	蒙太奇	concept-fable	剪辑师调换两个镜头后让同一张脸显得有罪	integrated
+batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	2	0211-diegetic-sound	Diegetic and non-diegetic sound	叙事内声与叙事外声	concept-fable	剧场里一声看不见来源的钟改变整场追逐	integrated
+batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	3	0211-framing	Framing	取景与框架	lens-fable	庆典影片边缘被裁掉的抗议队伍	integrated
+batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	1	0212-affordance	Affordance	可供性	concept-fable	所有人都会推错方向的华丽门把手	integrated
+batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	2	0212-ergonomics	Ergonomics	人体工学	concept-fable	让每位工匠都疼痛的获奖工作台	integrated
+batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	3	0212-design-constraints	Design constraints	设计约束	concept-fable	只能用三种材料完成的暴风灯竞赛	integrated
+batch-002	02	0213	Fine arts	美术	1	0213-visual-hierarchy	Visual hierarchy	视觉层级	concept-fable	每个人物都同样醒目而无人知道该看哪里的壁画	integrated
+batch-002	02	0213	Fine arts	美术	2	0213-negative-space	Negative space	负空间	concept-fable	画家擦掉中央人物后才让离别出现	integrated
+batch-002	02	0213	Fine arts	美术	3	0213-medium-specificity	Medium specificity	媒介特性	concept-fable	把水彩画硬刻进石头的宫廷画师	integrated
+batch-003	02	0214	Handicrafts	手工艺	1	0214-tacit-knowledge	Tacit knowledge	默会知识	concept-fable	能做出完美陶碗却说不出手腕角度的老匠人	integrated
+batch-003	02	0214	Handicrafts	手工艺	2	0214-material-affordance	Material affordance	材料可供性	concept-fable	坚持逆着木纹雕刻的订单与裂开的椅背	integrated
+batch-003	02	0214	Handicrafts	手工艺	3	0214-iterative-craftsmanship	Iterative craftsmanship	迭代式工艺	concept-fable	每一只失败篮子都留下一根不同颜色的藤条	integrated
+batch-003	02	0215	Music and performing arts	音乐与表演艺术	1	0215-entrainment	Entrainment	节律同步	mechanism-fable	没有共同口令却逐渐同桨的夜航船队	integrated
+batch-003	02	0215	Music and performing arts	音乐与表演艺术	2	0215-tension-and-resolution	Tension and resolution	张力与解决	concept-fable	拒绝回到主音的宫廷乐曲让舞会无法散场	integrated
+batch-003	02	0215	Music and performing arts	音乐与表演艺术	3	0215-ensemble-coordination	Ensemble coordination	合奏协调	concept-fable	指挥失声后才开始真正互相聆听的乐团	integrated
+batch-003	02	0221	Religion and theology	宗教与神学	1	0221-sacred-and-profane	Sacred and profane	神圣与世俗	concept-fable	同一口井在集市日与纪念日拥有两套规则	integrated
+batch-003	02	0221	Religion and theology	宗教与神学	2	0221-theological-hermeneutics	Theological hermeneutics	神学诠释	concept-fable	三代抄经人面对同一句关于门的古文	integrated
+batch-003	02	0221	Religion and theology	宗教与神学	3	0221-theodicy	Theodicy	神义论	concept-fable	风暴之后仍要回答祈祷与苦难关系的小镇	integrated
+batch-003	02	0222	History and archaeology	历史与考古	1	0222-source-criticism	Source criticism	史料批判	lens-fable	凯旋碑、军粮账和士兵家书讲出三个版本	integrated
+batch-003	02	0222	History and archaeology	历史与考古	2	0222-stratigraphy	Stratigraphy	地层学	mechanism-fable	新广场下层层叠着旧市场与火灾灰烬	integrated
+batch-003	02	0222	History and archaeology	历史与考古	3	0222-historical-contingency	Historical contingency	历史偶然性	concept-fable	一封迟到的命令让后来人误以为结局注定	integrated
+batch-003	02	0223	Philosophy and ethics	哲学与伦理	1	0223-reflective-equilibrium	Reflective equilibrium	反思平衡	concept-fable	法官在普遍规则与三个刺手案件之间往返	integrated
+batch-003	02	0223	Philosophy and ethics	哲学与伦理	2	0223-moral-luck	Moral luck	道德运气	concept-fable	作出同一决定却因风向不同受到相反审判的船长	integrated
+batch-003	02	0223	Philosophy and ethics	哲学与伦理	3	0223-validity-and-soundness	Validity and soundness	有效性与可靠性	mechanism-fable	把蓝色道路误当成高程证据的议会	integrated
+batch-004	02	0231	Language acquisition	语言习得	1	0231-comprehensible-input	Comprehensible input	可理解输入	concept-fable	不懂当地话的面包师从动作和半句提示开始听懂	integrated
+batch-004	02	0231	Language acquisition	语言习得	2	0231-interlanguage	Interlanguage	中介语	concept-fable	每月都换一套错误却越来越能被理解的学徒	integrated
+batch-004	02	0231	Language acquisition	语言习得	3	0231-noticing-hypothesis	Noticing hypothesis	注意假说	lens-fable	总漏掉词尾的译员终于在订单颜色中看见差别	integrated
+batch-004	02	0232	Literature and linguistics	文学与语言学	1	0232-arbitrariness-of-the-sign	Arbitrariness of the sign	符号任意性	concept-fable	河两岸用相反词语称呼同一种蓝色	integrated
+batch-004	02	0232	Literature and linguistics	文学与语言学	2	0232-focalization	Focalization	叙事聚焦	concept-fable	灯塔失火被三个窗口讲成三种故事	integrated
+batch-004	02	0232	Literature and linguistics	文学与语言学	3	0232-pragmatics	Pragmatics	语用学	concept-fable	一句门还开着在宴会、审讯和病房里意思不同	integrated
+batch-004	03	0311	Economics	经济学	1	0311-opportunity-cost	Opportunity cost	机会成本	concept-fable	只能把水引向磨坊或果园的村庄	integrated
+batch-004	03	0311	Economics	经济学	2	0311-marginal-analysis	Marginal analysis	边际分析	mechanism-fable	港主发现第十艘船与第一艘船价值不同	integrated
+batch-004	03	0311	Economics	经济学	3	0311-negative-externality	Negative externality	负外部性	concept-fable	皮革坊的利润顺流变成下游人的成本	integrated
+batch-004	03	0312	Political sciences and civics	政治科学与公民学	1	0312-collective-action-problem	Collective action problem	集体行动困境	concept-fable	人人都等别人修最后一段海堤的港镇	integrated
+batch-004	03	0312	Political sciences and civics	政治科学与公民学	2	0312-separation-of-powers	Separation of powers	权力分立	concept-fable	开启粮仓必须由三把钥匙共同转动	integrated
+batch-004	03	0312	Political sciences and civics	政治科学与公民学	3	0312-political-legitimacy	Political legitimacy	政治合法性	concept-fable	同一项港税在强令与共同议定下得到不同回应	integrated
+batch-004	03	0313	Psychology	心理学	1	0313-cognitive-dissonance	Cognitive dissonance	认知失调	concept-fable	桥梁失败后不断重写记录来维护自尊的设计师	integrated
+batch-004	03	0313	Psychology	心理学	2	0313-operant-conditioning	Operant conditioning	操作性条件作用	mechanism-fable	奖励铃声让鸽舍管理员得到意外行为	integrated
+batch-004	03	0313	Psychology	心理学	3	0313-fundamental-attribution-error	Fundamental attribution error	基本归因错误	lens-fable	总被骂懒惰的车夫背后有一座每天落闸的桥	integrated
+batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	1	0314-social-construction	Social construction	社会建构	concept-fable	临时颜色徽章逐渐变成不可质疑的身份等级	integrated
+batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	2	0314-habitus	Habitus	惯习	concept-fable	新生不经提醒就暴露出来自哪一张餐桌	integrated
+batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	3	0314-norm-enforcement	Norm enforcement	规范执行	concept-fable	没有告示却始终空着的渡船长椅	integrated
+batch-005	03	0321	Journalism and reporting	新闻与报道	1	0321-verification	Verification	新闻核实	concept-fable	大坝将塌的消息跑得比任何证人更快	integrated
+batch-005	03	0321	Journalism and reporting	新闻与报道	2	0321-agenda-setting	Agenda-setting	议程设置	lens-fable	城里并非只有公告板头条上的三件事	integrated
+batch-005	03	0321	Journalism and reporting	新闻与报道	3	0321-source-triangulation	Source triangulation	来源三角验证	concept-fable	三名目击者各自只看见失火仓库的一面墙	integrated
+batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	1	0322-provenance	Provenance	来源原则	concept-fable	一封没有流转记录的密信改变了王室展览	integrated
+batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	2	0322-metadata	Metadata	元数据	concept-fable	仓库拥有全部箱子却再也找不到任何东西	integrated
+batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	3	0322-archival-silence	Archival silence	档案沉默	concept-fable	港口史里没有留下搬运整座城市的女人们	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	1	0411-double-entry-bookkeeping	Double-entry bookkeeping	复式记账	mechanism-fable	每枚离开金库的硬币都必须在另一页出现	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	2	0411-accrual-accounting	Accrual accounting	权责发生制	mechanism-fable	冬季订单与春季收款让账本讲出两种繁荣	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	3	0411-tax-incidence	Tax incidence	税负归宿	concept-fable	城门税从商人票据一路走到面包价格里	integrated
+batch-005	04	0412	Finance banking and insurance	金融、银行与保险	1	0412-time-value-of-money	Time value of money	货币时间价值	mechanism-fable	今天的一袋种子与十年后的同一袋种子	integrated
+batch-005	04	0412	Finance banking and insurance	金融、银行与保险	2	0412-diversification	Diversification	分散化	concept-fable	把全部香料装上最快一艘船的商人	integrated
+batch-005	04	0412	Finance banking and insurance	金融、银行与保险	3	0412-moral-hazard	Moral hazard	道德风险	concept-fable	投保后不再巡夜的仓库主人	integrated
+batch-006	04	0413	Management and administration	管理与行政	1	0413-principal-agent-problem	Principal-agent problem	委托代理问题	concept-fable	远方矿主只按车数奖励看守人	integrated
+batch-006	04	0413	Management and administration	管理与行政	2	0413-psychological-safety	Psychological safety	心理安全感	concept-fable	没人敢把裂纹齿轮放上晨会桌的铸造坊	integrated
+batch-006	04	0413	Management and administration	管理与行政	3	0413-dynamic-capabilities	Dynamic capabilities	动态能力	case-fable	帆布需求消失后重新学习测风的老作坊	integrated
+batch-006	04	0414	Marketing and advertising	市场营销与广告	1	0414-segmentation-targeting-positioning	Segmentation, targeting, and positioning	细分、目标选择与定位	case-fable	一块肥皂向所有人说同一句话却无人记住	integrated
+batch-006	04	0414	Marketing and advertising	市场营销与广告	2	0414-signaling	Signaling	信号传递	concept-fable	陌生市场里两罐看不见内部的蜂蜜	integrated
+batch-006	04	0414	Marketing and advertising	市场营销与广告	3	0414-customer-lifetime-value	Customer lifetime value	客户终身价值	mechanism-fable	旅店为一次豪客赶走十年常客	integrated
+batch-006	04	0415	Secretarial and office work	秘书与办公室工作	1	0415-information-triage	Information triage	信息分诊	concept-fable	所有公文都系红带后真正紧急的信件消失了	integrated
+batch-006	04	0415	Secretarial and office work	秘书与办公室工作	2	0415-record-version-control	Record version control	记录版本控制	concept-fable	三份略有不同的命令同时抵达工地	integrated
+batch-006	04	0415	Secretarial and office work	秘书与办公室工作	3	0415-coordination-cost	Coordination cost	协调成本	concept-fable	为了让每个人知情而再也没有时间工作的办公室	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	1	0416-inventory-turnover	Inventory turnover	库存周转	mechanism-fable	货架最满的水果店每天扔掉最多果子	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	2	0416-bullwhip-effect	Bullwhip effect	牛鞭效应	concept-fable	一场小雨在供应链上变成十倍雨伞订单	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	3	0416-price-discrimination	Price discrimination	价格歧视	mechanism-fable	同一班渡船为何卖出三种票价	integrated
+batch-006	04	0417	Work skills	工作技能	1	0417-community-of-practice	Community of practice	实践共同体	concept-fable	修理知识总出现在午间长凳而不在手册里	integrated
+batch-006	04	0417	Work skills	工作技能	2	0417-role-clarity	Role clarity	角色清晰度	concept-fable	所有人都负责灭火却没人带水桶的仓库	integrated
+batch-006	04	0417	Work skills	工作技能	3	0417-adaptive-expertise	Adaptive expertise	适应性专长	concept-fable	完美复刻旧配方却无法处理新面粉的师傅	integrated
+batch-007	04	0421	Law	法律	1	0421-rule-of-law	Rule of law	法治	concept-fable	国王自己的货物也必须经过同一把秤	integrated
+batch-007	04	0421	Law	法律	2	0421-precedent	Precedent	判例原则	concept-fable	第二座桥的争议被第一座桥留下的判词牵住	integrated
+batch-007	04	0421	Law	法律	3	0421-burden-of-proof	Burden of proof	举证责任	concept-fable	粮仓少了一袋米却不能让全镇证明自己无罪	integrated
+batch-007	05	0511	Biology	生物学	1	0511-natural-selection	Natural selection	自然选择	mechanism-fable	岛上浅色与深色蛾群在新树皮上改变比例	integrated
+batch-007	05	0511	Biology	生物学	2	0511-homeostasis	Homeostasis	稳态	mechanism-fable	温室不是保持不动而是持续调节阀门	integrated
+batch-007	05	0511	Biology	生物学	3	0511-gene-environment-interaction	Gene-environment interaction	基因与环境交互	concept-fable	同批种子在山谷两端长成不同高度	integrated
+batch-007	05	0512	Biochemistry	生物化学	1	0512-enzyme-catalysis	Enzyme catalysis	酶催化	mechanism-fable	专门改变反应路径却不被消耗的钥匙匠	integrated
+batch-007	05	0512	Biochemistry	生物化学	2	0512-protein-structure-function	Protein structure and function	蛋白质结构与功能	mechanism-fable	同一条纸带折叠不同便打不开同一把锁	integrated
+batch-007	05	0512	Biochemistry	生物化学	3	0512-feedback-inhibition	Feedback inhibition	反馈抑制	mechanism-fable	最后一炉面包反过来关闭最前面的磨坊	integrated
+batch-007	05	0521	Environmental sciences	环境科学	1	0521-ecosystem-services	Ecosystem services	生态系统服务	concept-fable	被视为荒地的湿地消失后洪水进入城门	integrated
+batch-007	05	0521	Environmental sciences	环境科学	2	0521-tragedy-of-the-commons	Tragedy of the commons	公地悲剧	concept-fable	每户多放一只羊都合理的共同牧场	integrated
+batch-007	05	0521	Environmental sciences	环境科学	3	0521-ecological-resilience	Ecological resilience and tipping points	生态韧性与临界点	concept-fable	年年恢复的湖泊在某个夏天没有回来	integrated
+batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	1	0522-carrying-capacity	Carrying capacity	环境承载力	mechanism-fable	没有天敌的小岛鹿群越繁盛越接近饥荒	integrated
+batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	2	0522-trophic-cascade	Trophic cascade	营养级联	concept-fable	山谷赶走少数捕食者后河岸也开始改变	integrated
+batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	3	0522-habitat-fragmentation	Habitat fragmentation	栖息地破碎化	concept-fable	看似仍有大片森林却被道路切成孤岛	integrated
+batch-008	05	0531	Chemistry	化学	1	0531-chemical-equilibrium	Chemical equilibrium	化学平衡	mechanism-fable	染坊两只槽之间的颜色不断交换却保持比例	integrated
+batch-008	05	0531	Chemistry	化学	2	0531-activation-energy	Activation energy	活化能	mechanism-fable	堆满木柴的窑炉仍需要第一簇足够热的火	integrated
+batch-008	05	0531	Chemistry	化学	3	0531-stoichiometry	Stoichiometry	化学计量	mechanism-fable	烟火师多加一勺粉末反而失去整片蓝色	integrated
+batch-008	05	0532	Earth sciences	地球科学	1	0532-plate-tectonics	Plate tectonics	板块构造	mechanism-fable	两座城每年重测边界石却都以为对方在移动	integrated
+batch-008	05	0532	Earth sciences	地球科学	2	0532-deep-time	Deep time	深时	concept-fable	峡谷守门人用人的一生衡量岩层而屡屡误判	integrated
+batch-008	05	0532	Earth sciences	地球科学	3	0532-rock-cycle	Rock cycle	岩石循环	mechanism-fable	一块石头穿过山、河、熔炉与海底的漫长旅程	integrated
+batch-008	05	0533	Physics	物理学	1	0533-conservation-of-energy	Conservation of energy	能量守恒	mechanism-fable	水车停下后能量并没有像账外硬币一样消失	integrated
+batch-008	05	0533	Physics	物理学	2	0533-entropy	Entropy	熵	concept-fable	冰窖主人发现冷不会自行从热屋搬回来	integrated
+batch-008	05	0533	Physics	物理学	3	0533-field-concept	Field concept	场概念	concept-fable	没有绳索接触却让铁针同时转向的广场	integrated
+batch-008	05	0541	Mathematics	数学	1	0541-invariance	Invariance	不变量	mechanism-fable	盒子不断换位时唯一没有改变的石子总数	integrated
+batch-008	05	0541	Mathematics	数学	2	0541-proof-by-contradiction	Proof by contradiction	反证法	mechanism-fable	制图师暂时相信一张不可能存在的完整假地图	integrated
+batch-008	05	0541	Mathematics	数学	3	0541-mathematical-induction	Mathematical induction	数学归纳法	mechanism-fable	只检查第一阶和相邻阶就证明整座灯塔楼梯	integrated
+batch-008	05	0542	Statistics	统计学	1	0542-sampling-bias	Sampling bias	抽样偏差	concept-fable	只询问能穿过高门的人便得出全城身高	integrated
+batch-008	05	0542	Statistics	统计学	2	0542-regression-to-the-mean	Regression to the mean	均值回归	concept-fable	最佳一炉面包之后奖励与惩罚都被误认成原因	integrated
+batch-008	05	0542	Statistics	统计学	3	0542-bayesian-updating	Bayesian updating	贝叶斯更新	mechanism-fable	灯塔守望员让每条新线索改写而非抹掉旧判断	integrated
+batch-009	06	0611	Computer use	计算机使用	1	0611-mental-models	Mental models in human-computer interaction	人机交互中的心智模型	concept-fable	按钮标着保存却像投递口一样吞掉文件的机器	integrated
+batch-009	06	0611	Computer use	计算机使用	2	0611-file-hierarchy	Hierarchical information organization	层级化信息组织	mechanism-fable	所有卷宗都放在桌面的数字档案馆	integrated
+batch-009	06	0611	Computer use	计算机使用	3	0611-least-privilege	Principle of least privilege	最小权限原则	concept-fable	每位新职员都拿到整座城全部钥匙的办公室	integrated
+batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	1	0612-database-normalization	Database normalization	数据库规范化	mechanism-fable	地址改一次却要在七本名册同步的城市	integrated
+batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	2	0612-distributed-consensus	Distributed consensus	分布式共识	mechanism-fable	没有中央钟塔的群岛必须认定同一班船已出发	integrated
+batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	3	0612-defense-in-depth	Defense in depth	纵深防御	concept-fable	只依赖一道无比坚固城门的数据城	integrated
+batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	1	0613-modularity	Modularity	模块化	concept-fable	换一只木偶就必须重建整个剧场的机关师	integrated
+batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	2	0613-software-testing	Software testing and feedback	软件测试与反馈	concept-fable	只在开幕夜第一次承重的自动舞台	integrated
+batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	3	0613-computational-complexity	Computational complexity	计算复杂度	mechanism-fable	藏书翻倍后查找时间增长远超一倍的图书馆	integrated
+batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	1	0711-mass-balance	Mass balance	物料衡算	mechanism-fable	染坊每天少掉的蓝色必须在产品、废水或管壁出现	integrated
+batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	2	0711-residence-time	Residence time	停留时间	mechanism-fable	配方相同却因流过管道太快而没有完成的发酵液	integrated
+batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	3	0711-process-control	Process control	过程控制	mechanism-fable	蒸馏塔不能靠一天一次的温度记录保持稳定	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	1	0712-treatment-train	Treatment train	处理工艺链	mechanism-fable	单层滤网无法独自处理整条河的不同污染物	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	2	0712-source-control	Source control	源头控制	concept-fable	城市不断加高烟囱却没有减少炉膛里的烟	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	3	0712-life-cycle-assessment	Life-cycle assessment	生命周期评价	concept-fable	一只可重复杯子跨越矿山、船队、洗涤房和垃圾场	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	1	0713-grid-balancing	Grid balancing	电网平衡	mechanism-fable	岛上每盏灯亮起都要求发电房同时回应	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	2	0713-energy-efficiency	Energy efficiency	能源效率	mechanism-fable	两台锅炉烧同样煤却只有一台把热送进屋里	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	3	0713-energy-storage	Energy storage and intermittency	储能与间歇性	concept-fable	风最强时无人用电而晚宴时风停的海岛	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	1	0714-feedback-control	Feedback control	反馈控制	mechanism-fable	烤炉根据刚测得的温度不断修正火门	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	2	0714-signal-to-noise-ratio	Signal-to-noise ratio	信噪比	mechanism-fable	暴风雨里港口接收员分辨一声真正求救信号	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	3	0714-fail-safe-design	Fail-safe design	故障安全设计	concept-fable	断电时自动落下还是升起的水闸引发争论	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	1	0715-stress-strain	Stress and strain	应力与应变	mechanism-fable	两根外形相同的桥索在载荷下伸长不同	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigue	Material fatigue	材料疲劳	concept-fable	从未超载却在第一万次转动后断裂的车轴	integrated
+batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	3	0715-engineering-tolerance	Engineering tolerance	工程公差	mechanism-fable	每只齿轮单独合格却无法共同转动的机器	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	1	0716-stability-and-control	Stability and control	稳定性与操纵性	mechanism-fable	越想装更多货越容易倾覆的窄船	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	2	0716-drag	Drag and transport efficiency	阻力与运输效率	mechanism-fable	更强发动机输给一条重新修形的船身	integrated
+batch-010	07	0716	Motor vehicles ships and aircraft	机动车、船舶与航空器	3	0716-redundancy	Safety redundancy	安全冗余	concept-fable	天空邮船失去一根控制索后仍能返航	integrated
+batch-010	07	0721	Food processing	食品加工	1	0721-thermal-processing	Thermal processing	热加工	mechanism-fable	温度相同但加热时间不同的两批密封牛奶	integrated
+batch-010	07	0721	Food processing	食品加工	2	0721-water-activity	Water activity	水分活度	mechanism-fable	看起来更干的果脯反而更快变坏	integrated
+batch-010	07	0721	Food processing	食品加工	3	0721-haccp	Hazard Analysis and Critical Control Points	危害分析与关键控制点	concept-fable	面包坊不再等成品出炉后才寻找危险	integrated
+batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	1	0722-structure-property-relationship	Structure-property relationship	结构与性能关系	mechanism-fable	同样成分的玻璃因冷却方式不同承受不同撞击	integrated
+batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	2	0722-anisotropy	Anisotropy	各向异性	mechanism-fable	沿木纹与横木纹切出的梁像两种材料	integrated
+batch-011	07	0722	Materials glass paper plastic and wood	材料：玻璃、纸、塑料与木材	3	0722-design-for-circularity	Design for circularity	循环设计	concept-fable	无法拆开的精美包装在第二次生命前停住	integrated
+batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	1	0723-fibre-structure-property	Fibre structure and textile properties	纤维结构与织物性能	mechanism-fable	同样厚度的两块布在雨雪中表现相反	integrated
+batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	2	0723-grain-and-pattern-alignment	Grain and pattern alignment	纹理与版型对齐	mechanism-fable	漂亮纸样顺着错误布纹裁出扭转的外套	integrated
+batch-011	07	0723	Textiles clothes footwear and leather	纺织：服装、鞋类与皮革	3	0723-supply-chain-traceability	Supply-chain traceability	供应链可追溯性	concept-fable	一滴红染料追不回经过哪些河流与工坊	integrated
+batch-011	07	0724	Mining and extraction	采矿与开采	1	0724-cut-off-grade	Cut-off grade	边界品位	mechanism-fable	矿石并非有或没有而是何时值得开采	integrated
+batch-011	07	0724	Mining and extraction	采矿与开采	2	0724-extraction-externalities	Extraction externalities	开采外部性	concept-fable	山上的金属收入变成下游看不见的泥沙成本	integrated
+batch-011	07	0724	Mining and extraction	采矿与开采	3	0724-geotechnical-risk	Geotechnical risk	岩土工程风险	concept-fable	人人熟悉的小裂纹在雨季连成新的形状	integrated
+batch-011	07	0731	Architecture and town planning	建筑学与城市规划	1	0731-human-scale	Human scale	人性尺度	concept-fable	宏伟广场让所有人加快脚步离开	integrated
+batch-011	07	0731	Architecture and town planning	建筑学与城市规划	2	0731-mixed-use-development	Mixed-use development	混合功能开发	concept-fable	白天繁忙夜晚空无一人的单一用途新区	integrated
+batch-011	07	0731	Architecture and town planning	建筑学与城市规划	3	0731-adaptive-reuse	Adaptive reuse	适应性再利用	concept-fable	旧仓库的柱距拒绝成为新歌剧院却接住另一种生活	integrated
+batch-011	07	0732	Building and civil engineering	建筑与土木工程	1	0732-load-path	Load path	荷载路径	mechanism-fable	屋顶上的雪必须沿每根梁柱找到大地	integrated
+batch-011	07	0732	Building and civil engineering	建筑与土木工程	2	0732-factor-of-safety	Factor of safety	安全系数	mechanism-fable	只为平均河水设计的桥遇到罕见洪峰	integrated
+batch-011	07	0732	Building and civil engineering	建筑与土木工程	3	0732-infrastructure-life-cycle	Infrastructure life-cycle management	基础设施全生命周期管理	concept-fable	剪彩后无人再看桥底缓慢生长的锈迹	integrated
+batch-012	08	0811	Crop and livestock production	作物与畜牧生产	1	0811-nutrient-cycling	Nutrient cycling	养分循环	mechanism-fable	不断运走收成却从不归还土壤的农场	integrated
+batch-012	08	0811	Crop and livestock production	作物与畜牧生产	2	0811-integrated-pest-management	Integrated pest management	综合虫害管理	concept-fable	杀光所有昆虫后害虫反而更快回来的果园	integrated
+batch-012	08	0811	Crop and livestock production	作物与畜牧生产	3	0811-selective-breeding-tradeoffs	Selective breeding trade-offs	选择育种的权衡	concept-fable	只追求最大果实后失去抗旱能力的种群	integrated
+batch-012	08	0812	Horticulture	园艺	1	0812-grafting	Grafting and propagation	嫁接与繁殖	mechanism-fable	一棵树的根与另一棵树的枝共同结果	integrated
+batch-012	08	0812	Horticulture	园艺	2	0812-microclimate	Microclimate	微气候	concept-fable	同一花园里靠墙与低洼处经历不同春天	integrated
+batch-012	08	0812	Horticulture	园艺	3	0812-phenology	Phenology	物候学	lens-fable	园丁不再只看日历而开始记录花与昆虫的时间	integrated
+batch-012	08	0821	Forestry	林业	1	0821-sustainable-yield	Sustainable yield	可持续采伐量	mechanism-fable	每年砍同样树数却逐渐透支不同年龄的森林	integrated
+batch-012	08	0821	Forestry	林业	2	0821-ecological-succession	Ecological succession	生态演替	concept-fable	火后空地并没有一步返回原来的森林	integrated
+batch-012	08	0821	Forestry	林业	3	0821-fire-ecology	Fire ecology	火生态学	concept-fable	成功扑灭每场小火的林区积下更大的燃料	integrated
+batch-012	08	0831	Fisheries	渔业	1	0831-maximum-sustainable-yield	Maximum sustainable yield	最大可持续产量	mechanism-fable	今年多捕一网让明年的鱼群少掉不止一网	integrated
+batch-012	08	0831	Fisheries	渔业	2	0831-bycatch	Bycatch and ecosystem-based fisheries	兼捕与生态系统渔业	concept-fable	只统计目标鱼的港口忽略网中其他生命	integrated
+batch-012	08	0831	Fisheries	渔业	3	0831-fisheries-co-management	Fisheries co-management	渔业共同管理	concept-fable	外来统一禁令不如渔民共同记录潮汐与繁殖地	integrated
+batch-012	08	0841	Veterinary	兽医学	1	0841-one-health	One Health	同一健康	concept-fable	牲畜、饮水、野生动物与村民的病被分进四本账	integrated
+batch-012	08	0841	Veterinary	兽医学	2	0841-herd-immunity	Herd immunity	群体免疫	mechanism-fable	一道防火间隔如何保护没有直接加固的谷仓	integrated
+batch-012	08	0841	Veterinary	兽医学	3	0841-five-domains-welfare	Five Domains model of animal welfare	动物福利五域模型	concept-fable	吃饱且无伤的动物仍在每天重复撞栏	integrated
+batch-013	09	0911	Dental studies	牙科研究	1	0911-caries-biofilm	Dental caries as a biofilm-mediated process	龋病的生物膜过程	mechanism-fable	不是一颗糖而是反复改变口腔环境的钟声	integrated
+batch-013	09	0911	Dental studies	牙科研究	2	0911-occlusion	Occlusion	咬合	mechanism-fable	单颗牙齿完好却让整套齿轮受力偏斜	integrated
+batch-013	09	0911	Dental studies	牙科研究	3	0911-minimal-intervention-dentistry	Minimal intervention dentistry	微创牙科学	concept-fable	修复师不再为了去掉裂痕而削掉整块石材	integrated
+batch-013	09	0912	Medicine	医学	1	0912-differential-diagnosis	Differential diagnosis	鉴别诊断	concept-fable	三种不同原因在诊所门口都穿着同一种发热外衣	integrated
+batch-013	09	0912	Medicine	医学	2	0912-base-rate-reasoning	Base-rate reasoning in diagnosis	诊断中的基础率推理	mechanism-fable	罕见警报即使准确也可能带来许多误判	integrated
+batch-013	09	0912	Medicine	医学	3	0912-evidence-based-medicine	Evidence-based medicine	循证医学	concept-fable	名医经验、研究记录与病人处境必须坐到同一张桌	integrated
+batch-013	09	0913	Nursing and midwifery	护理与助产	1	0913-early-warning-observation	Early warning through clinical observation	临床观察与早期预警	lens-fable	数值尚未越线但护士看见一组细小变化同时出现	integrated
+batch-013	09	0913	Nursing and midwifery	护理与助产	2	0913-continuity-of-care	Continuity of care	照护连续性	concept-fable	每次交班都丢失一句关键背景的长夜病房	integrated
+batch-013	09	0913	Nursing and midwifery	护理与助产	3	0913-informed-consent	Informed consent and shared decision-making	知情同意与共同决策	concept-fable	助产团队必须先听见产妇如何理解自己的选择	integrated
+batch-013	09	0914	Medical diagnostic and treatment technology	医学诊断与治疗技术	1	0914-sensitivity-specificity	Sensitivity and specificity	敏感度与特异度	mechanism-fable	港口警报要在漏报与误报之间寻找用途	integrated
+batch-013	09	0914	Medical diagnostic and treatment technology	医学诊断与治疗技术	2	0914-signal-detection	Signal detection	信号检测	mechanism-fable	影像室在模糊纹理中设定何时值得进一步查看	integrated
+batch-013	09	0914	Medical diagnostic and treatment technology	医学诊断与治疗技术	3	0914-calibration	Measurement calibration	测量校准	concept-fable	三台机器给同一块标准砝码报出不同答案	integrated
+batch-013	09	0915	Therapy and rehabilitation	治疗与康复	1	0915-neuroplasticity	Neuroplasticity	神经可塑性	concept-fable	受伤的制图师用每天一条新线重新训练手掌	integrated
+batch-013	09	0915	Therapy and rehabilitation	治疗与康复	2	0915-graded-exposure	Graded exposure	分级暴露	concept-fable	害怕楼梯的人从一阶、转身和停留时间重新开始	integrated
+batch-013	09	0915	Therapy and rehabilitation	治疗与康复	3	0915-biopsychosocial-model	Biopsychosocial model	生物心理社会模型	concept-fable	同样疼痛在睡眠、工作与恐惧中拥有不同重量	integrated
+batch-014	09	0916	Pharmacy	药学	1	0916-therapeutic-window	Therapeutic window	治疗窗	mechanism-fable	太少无效、太多有害的窄桥剂量	integrated
+batch-014	09	0916	Pharmacy	药学	2	0916-pharmacokinetics	Pharmacokinetics	药代动力学	mechanism-fable	一滴药液穿过吸收、分布、转化与清除四座水门	integrated
+batch-014	09	0916	Pharmacy	药学	3	0916-drug-interactions	Drug interactions	药物相互作用	concept-fable	两种各自平稳的药剂在同一管道相遇后改变速度	integrated
+batch-014	09	0917	Traditional and complementary medicine and therapy	传统与补充医学及疗法	1	0917-contextual-effects	Contextual and placebo effects	情境效应与安慰剂效应	concept-fable	同一种照护在仪式、期待与关系中产生额外感受	integrated
+batch-014	09	0917	Traditional and complementary medicine and therapy	传统与补充医学及疗法	2	0917-evidence-hierarchy	Hierarchy of evidence	证据层级	concept-fable	三个村庄都说自己的疗法有效却记录方式完全不同	integrated
+batch-014	09	0917	Traditional and complementary medicine and therapy	传统与补充医学及疗法	3	0917-herb-drug-interactions	Herb-drug interactions	草药与药物相互作用	concept-fable	来自不同医柜的两种制剂在身体里并不会彼此隐身	integrated
+batch-014	09	0921	Care of the elderly and of disabled adults	老年人与残障成人照护	1	0921-person-centred-care	Person-centred care	以人为中心的照护	concept-fable	整齐作息表让每个人安全却让他们不再像自己	integrated
+batch-014	09	0921	Care of the elderly and of disabled adults	老年人与残障成人照护	2	0921-dignity-of-risk	Dignity of risk	风险尊严	concept-fable	老木匠要求重新拿起工具而照护者只看见危险	integrated
+batch-014	09	0921	Care of the elderly and of disabled adults	老年人与残障成人照护	3	0921-universal-design	Universal design	通用设计	concept-fable	为一位轮椅使用者改的入口让推车、孩子和老人都受益	integrated
+batch-014	09	0922	Child care and youth services	儿童照护与青少年服务	1	0922-attachment	Attachment	依恋	concept-fable	总有一盏灯回应的港湾让小船敢驶得更远	integrated
+batch-014	09	0922	Child care and youth services	儿童照护与青少年服务	2	0922-safeguarding	Safeguarding	儿童与青少年保护	concept-fable	善意俱乐部因没有边界和报告路径而忽略警讯	integrated
+batch-014	09	0922	Child care and youth services	儿童照护与青少年服务	3	0922-positive-youth-development	Positive youth development	积极青少年发展	concept-fable	被当成问题的少年第一次得到真实职责	integrated
+batch-014	09	0923	Social work and counselling	社会工作与咨询	1	0923-ecological-systems-perspective	Ecological systems perspective	生态系统视角	concept-fable	一个家庭的问题沿住房、学校、工作与政策连成地图	integrated
+batch-014	09	0923	Social work and counselling	社会工作与咨询	2	0923-therapeutic-alliance	Therapeutic alliance	治疗联盟	concept-fable	咨询师不替旅人选终点而先共同画路线	integrated
+batch-014	09	0923	Social work and counselling	社会工作与咨询	3	0923-motivational-interviewing	Motivational interviewing	动机式访谈	concept-fable	守井人停止劝说后让村民自己说出改变理由	integrated
+batch-015	10	1011	Domestic services	家政服务	1	1011-invisible-labour	Invisible labour	隐形劳动	concept-fable	每天自动恢复整洁的宅邸第一次停止一天	integrated
+batch-015	10	1011	Domestic services	家政服务	2	1011-standardisation-personalisation	Standardisation and personalisation in service	服务标准化与个性化	case-fable	完全相同的房间让每位住户都多做一次适应	integrated
+batch-015	10	1011	Domestic services	家政服务	3	1011-cross-contamination	Cross-contamination	交叉污染	mechanism-fable	一块看似干净的抹布把问题带过所有房间	integrated
+batch-015	10	1012	Hair and beauty services	美发与美容服务	1	1012-hair-and-skin-structure	Hair and skin structure	毛发与皮肤结构	mechanism-fable	同一处理方式落在不同发质和皮肤上产生不同结果	integrated
+batch-015	10	1012	Hair and beauty services	美发与美容服务	2	1012-colour-chemistry	Colour theory and oxidation	色彩理论与氧化过程	mechanism-fable	染色师发现目标颜色取决于底色而非只看瓶子	integrated
+batch-015	10	1012	Hair and beauty services	美发与美容服务	3	1012-ethical-consultation	Ethical consultation and body image	伦理咨询与身体意象	concept-fable	美容师拒绝把顾客的不安直接变成销售清单	integrated
+batch-015	10	1013	Hotel restaurants and catering	酒店、餐厅与餐饮服务	1	1013-service-dominant-logic	Service-dominant logic	服务主导逻辑	concept-fable	打印机坏掉后餐馆第一次询问客人需要怎样的夜晚	integrated
+batch-015	10	1013	Hotel restaurants and catering	酒店、餐厅与餐饮服务	2	1013-service-recovery-paradox	Service recovery paradox	服务补救悖论	case-fable	一次出错后处理得当反而留下更忠诚的客人	integrated
+batch-015	10	1013	Hotel restaurants and catering	酒店、餐厅与餐饮服务	3	1013-revenue-management	Revenue management	收益管理	mechanism-fable	不能储存到明天的空房间如何随时间改变价值	integrated
+batch-015	10	1014	Sports	体育	1	1014-progressive-overload	Progressive overload	渐进超负荷	mechanism-fable	每天举同一块石头的运动员停止进步	integrated
+batch-015	10	1014	Sports	体育	2	1014-periodisation	Periodisation	周期化训练	concept-fable	每场训练都全力以赴的队伍在决赛前耗尽	integrated
+batch-015	10	1014	Sports	体育	3	1014-constraints-led-approach	Constraints-led approach	限制导向训练	concept-fable	教练改变场地和规则而不再逐句规定动作	integrated
+batch-015	10	1015	Travel tourism and leisure	旅行、旅游与休闲	1	1015-tourism-carrying-capacity	Tourism carrying capacity	旅游承载力	concept-fable	越来越受欢迎的岛屿开始失去人们前来寻找的东西	integrated
+batch-015	10	1015	Travel tourism and leisure	旅行、旅游与休闲	2	1015-experience-economy	Experience economy	体验经济	concept-fable	游客记住的不是纪念品而是被安排参与的一小时	integrated
+batch-015	10	1015	Travel tourism and leisure	旅行、旅游与休闲	3	1015-tourism-leakage	Tourism leakage	旅游收入外流	mechanism-fable	客栈客满的海湾却发现钱沿外来供应链离开	integrated
+batch-016	10	1021	Community sanitation	社区环境卫生	1	1021-sanitation-service-chain	Sanitation service chain	环境卫生服务链	mechanism-fable	干净厕所之后还有收集、运输、处理与安全回用	integrated
+batch-016	10	1021	Community sanitation	社区环境卫生	2	1021-wash-behaviour-change	WASH behaviour change	水、环境卫生与个人卫生行为改变	concept-fable	新水泵建成后村民仍回到熟悉的旧水井	integrated
+batch-016	10	1021	Community sanitation	社区环境卫生	3	1021-wastewater-surveillance	Wastewater surveillance	污水监测	lens-fable	诊所尚未排长队时下水道已经留下全城信号	integrated
+batch-016	10	1022	Occupational health and safety	职业健康与安全	1	1022-hierarchy-of-controls	Hierarchy of controls	控制层级	concept-fable	工厂先要求工人更小心而不是移走产生粉尘的机器	integrated
+batch-016	10	1022	Occupational health and safety	职业健康与安全	2	1022-swiss-cheese-model	Swiss cheese model	瑞士奶酪模型	concept-fable	多道各有小孔的防线在同一天排成一条直线	integrated
+batch-016	10	1022	Occupational health and safety	职业健康与安全	3	1022-normalisation-of-deviance	Normalization of deviance	偏差正常化	concept-fable	每次都没出事让磨损吊索逐渐被当成正常	integrated
+batch-016	10	1031	Military and defence	军事与国防	1	1031-deterrence	Deterrence	威慑	concept-fable	两座堡垒都必须让对方相信某道门不会被轻易推开	integrated
+batch-016	10	1031	Military and defence	军事与国防	2	1031-ooda-loop	OODA loop	观察、判断、决策与行动循环	mechanism-fable	传令速度更快却总按昨天地图行动的演习队伍	integrated
+batch-016	10	1031	Military and defence	军事与国防	3	1031-civilian-control	Civilian control of the military	文官统制	concept-fable	守城军队拥有武器却不能独自决定城市为何而战	integrated
+batch-016	10	1032	Protection of persons and property	人身与财产保护	1	1032-situational-crime-prevention	Situational crime prevention	情境犯罪预防	concept-fable	市场没有抓到更多人却因照明与动线减少失窃	integrated
+batch-016	10	1032	Protection of persons and property	人身与财产保护	2	1032-layered-security	Layered security	分层防护	concept-fable	博物馆不再把全部希望压在最厚的一扇门上	integrated
+batch-016	10	1032	Protection of persons and property	人身与财产保护	3	1032-de-escalation	De-escalation	降级冲突	concept-fable	守卫放低声音后才听见争执真正围绕的东西	integrated
+batch-016	10	1041	Transport services	运输服务	1	1041-induced-demand	Induced demand	诱发需求	concept-fable	拓宽道路后拥堵短暂消失又带着更多车回来	integrated
+batch-016	10	1041	Transport services	运输服务	2	1041-network-topology	Transport network topology	运输网络拓扑	mechanism-fable	每座岛直连与枢纽换乘之间的航线之争	integrated
+batch-016	10	1041	Transport services	运输服务	3	1041-last-mile-integration	Last-mile and intermodal integration	最后一公里与多式联运	concept-fable	粮食横跨千里却停在离市场最后两公里	integrated

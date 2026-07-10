@@ -20,7 +20,7 @@ function getNextVersion() {
 
 function updateAssetReferences(html, version) {
   return html.replace(
-    /\b(href|src)=(["'])(\/?)(styles\.css|script\.js)(?:\?v=[^"']*)?\2/g,
+    /\b(href|src)=(["'])(\/?)(styles\.css|script\.js|content\/field-fables\.js)(?:\?v=[^"']*)?\2/g,
     (_match, attribute, quote, slash, asset) => `${attribute}=${quote}${slash}${asset}?v=${version}${quote}`,
   );
 }

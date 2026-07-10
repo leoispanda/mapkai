@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-002",
+  "articles": [
+    {
+      "id": "0113-teacher-noticing",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0113",
+      "fieldTitle": "Teacher training without subject specialisation",
+      "fieldTitleZh": "非学科专项教师培养",
+      "title": "The Answer in the Margin",
+      "titleZh": "写在页边的答案",
+      "summary": "A primary teacher stops counting only correct answers after the same small drawing appears beside several unrelated mistakes.",
+      "summaryZh": "一名小学教师不再只数正确答案，因为同一幅小图开始出现在几种看似无关的错误旁边。",
+      "storyParagraphs": [
+        "Teacher Sela ended every mathematics lesson by walking between the desks with a green pencil. A correct answer received a dot; a wrong answer received a short line. She could inspect thirty pages before the lunch bell and knew exactly who had scored eight out of ten. Aron usually scored well. His columns were neat, his final numbers mostly correct, and he never asked for extra help. Sela spent her time beside louder pupils whose errors were easier to see.",
+        "During a lesson on perimeter, Aron wrote the correct total but drew a tiny fence inside the rectangle. A week later, he multiplied correctly to find the area of a garden, yet again sketched fence posts through the middle. Sela nearly placed a green dot and moved on. The repeated drawing made her pause. She asked him to show where a real fence would stand. Aron traced every grid line inside the shape. He had memorized formulas while treating perimeter as all the lines a figure contained.",
+        "Sela corrected the definition and assumed the problem was solved. In a map lesson, Aron measured a route by adding every printed boundary the road crossed. In an art activity, he called the internal lines of a tiled pattern its edge. The mistakes belonged to different subjects on Sela's timetable, but his pencil was carrying the same idea from room to room. A score sheet organized by lesson could not show that continuity.",
+        "The next morning, Sela stopped trying to observe everything. She chose one question: how were children deciding what counted as a boundary? She watched gestures, sketches, pauses, and explanations rather than final answers alone. She saw one child count corners, another follow the outer line with a finger, and Aron include every visible division. Sela placed string around objects, cut shapes apart, and asked pupils to predict whether the boundary would change before checking.",
+        "Her first response was too broad. She gave the whole class another lecture and buried the useful observation under twenty minutes of explanation. On the next task, Sela instead grouped children by the reasoning they had shown. Aron compared a tiled square with the same square covered by plain paper; another group investigated irregular edges. The green pencil remained, but it came after listening. Within days, Aron began drawing his fence outside the garden and could explain why the internal paths did not lengthen it.",
+        "Sela had developed teacher noticing: the professional practice of attending to significant details in classroom activity, interpreting what they may reveal about learning, and deciding how to respond. Expertise does not mean seeing every movement. It means selecting what matters through knowledge of learners, content, and context. The crucial answer had not been Aron's final number. It had been the small fence in the margin and the pattern of thought that kept drawing it."
+      ],
+      "storyParagraphsZh": [
+        "塞拉老师每堂数学课结束后都会拿着绿铅笔在课桌间巡视。答案正确就点一个圆点，错误就画一条短线。午饭铃响以前，她能检查完三十页练习，也清楚谁得了十分里的八分。阿伦通常成绩很好，竖式整齐，最后数字大多正确，也从不要求额外帮助。塞拉把时间留给那些声音更大、错误更明显的孩子。",
+        "学习周长时，阿伦算出了正确总数，却在长方形内部画了一圈小篱笆。一周后，他用乘法正确求出花园面积，旁边仍在中间格线画满篱笆桩。塞拉差点照常点一个绿点离开，那幅重复出现的小图让她停住。她让阿伦指出真正的篱笆会立在哪里，阿伦却沿着图形内部每一条网格线描了一遍。他记住了公式，心里仍把周长理解成图形里所有能看见的线。",
+        "塞拉纠正定义，以为问题已经结束。地图课上，阿伦计算路线时把道路经过的每条印刷边界都加了进去；美术活动中，他又把瓷砖图案内部的分隔线称作边缘。这些错误分属课程表上的不同学科，阿伦的铅笔却把同一个想法从一间教室带到另一间。按课次排列的分数表看不见这种连续。",
+        "第二天，塞拉不再试图同时观察一切，只带着一个问题进入课堂：孩子们怎样判断什么算作边界？她开始看手势、草图、停顿和解释，而不只看最后答案。有人数角，有人用手指沿外轮廓移动，阿伦则把每道可见分隔都算进去。塞拉用绳子围住实物，把图形剪开，还让学生在检验前先预测边界会不会改变。",
+        "她第一次回应得太宽，给全班又讲了一次长课，把真正有用的观察埋进二十分钟说明里。下一项任务中，塞拉改为按刚才显出的推理方式分组。阿伦比较有瓷砖格线的正方形与被白纸盖住的同一正方形，另一组则研究不规则边缘。绿铅笔仍然存在，只是落笔以前多了倾听。几天后，阿伦开始把篱笆画在花园外侧，也能解释内部小路为什么不会让周长变长。",
+        "塞拉逐渐形成的是教师察觉：在课堂活动中关注具有意义的细节，解释它们可能揭示的学习状态，再决定怎样回应的专业实践。专业并不等于同时看见每个动作，而是依靠对学习者、内容和情境的理解，选择真正重要的线索。关键答案从来不是阿伦最后写出的数字，而是页边那圈小篱笆，以及不断把它画出来的思考方式。"
+      ],
+      "conceptName": "Teacher noticing",
+      "conceptNameZh": "教师察觉",
+      "explanationParagraphs": [
+        "Teacher noticing is commonly described as a cycle of attending to important classroom events, interpreting them in relation to learning, and deciding how to respond. What becomes noticeable depends on professional knowledge; the same gesture or error may carry different meaning in different tasks.",
+        "Noticing is therefore more than general attentiveness. It is disciplined selection and interpretation, followed by a response proportionate to the evidence rather than an automatic whole-class correction."
+      ],
+      "explanationParagraphsZh": [
+        "教师察觉通常包括三个相连环节：关注重要课堂事件，结合学习过程解释其意义，再决定怎样回应。什么值得被注意，取决于教师的专业知识；同一动作或错误在不同任务里可能代表不同问题。",
+        "因此，它不只是一般意义上的细心，而是有纪律地选择和解释线索，再根据证据作出适度回应，而不是自动把每个局部问题变成一次全班纠正。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0113-inclusive-pedagogy",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0113",
+      "fieldTitle": "Teacher training without subject specialisation",
+      "fieldTitleZh": "非学科专项教师培养",
+      "title": "The Door Built for an Average Child",
+      "titleZh": "只适合平均孩子的门",
+      "summary": "A school keeps adding side entrances for individual pupils until a teacher questions the ordinary doorway itself.",
+      "summaryZh": "一所学校不断为个别学生增设侧门，直到一名教师开始质疑那扇所谓普通的正门。",
+      "storyParagraphs": [
+        "Room Seven was designed around an imaginary average child. Instructions were spoken once from the front. Answers were written quickly on one kind of paper. Materials lived on a high shelf, and every activity ended when the brass timer rang. The arrangement worked smoothly for many pupils. Others received exceptions: Lina sat near the teacher to hear more clearly, Mo had a separate large-print sheet, Ravi was allowed extra time, and Esme used a side table because her chair did not fit beneath the standard desks.",
+        "Teacher Asha spent each morning preparing four versions of the same lesson. The special arrangements were kind and often necessary, but they also formed four small side doors. When the class investigated local birds, Lina missed instructions while Asha searched for Mo's enlarged page. Ravi began the observation after the others had moved on, and Esme could not reach the specimen tray without asking. Each solution depended on the teacher remembering who needed which rescue at exactly the right moment.",
+        "Asha first tried working faster. She colour-coded folders, added reminder cards, and asked an assistant to move materials. The system became more efficient but no less fragile. One day the assistant was absent and the printer failed. Asha drew one large bird on the board while pupils waited for their individual sheets. Esme rolled to the front, pointed out a detail everyone had missed, and asked why the shared drawing had not been the starting place all along.",
+        "The next unit began differently. Asha displayed images at several scales, spoke instructions while also showing the sequence with symbols, placed materials at reachable heights, and offered pupils ways to respond through labels, sketches, arranged objects, or oral explanation. Everyone worked toward the same demanding question about how beaks related to feeding. Supports were available to the whole class without requiring a child to announce a deficit before using them.",
+        "The redesign created new problems. Too many choices left some pupils uncertain, and one group selected the easiest response every time. Asha did not confuse access with absence of challenge. She reduced redundant options, made success criteria visible, and held short conferences about which form best showed each pupil's reasoning. Lina used the picture sequence but answered orally; Mo chose ordinary print on a screen he could enlarge himself; Ravi finished within the shared investigation because the task no longer wasted his first ten minutes.",
+        "Room Seven had moved toward inclusive pedagogy: extending what is ordinarily available so that learner difference is anticipated within common teaching, rather than responding mainly by separating some pupils from it. Individual accommodations can still be essential, and inclusion does not mean identical treatment. The deeper change is to question the doorway before deciding that the child is the problem. A classroom designed for human variation gives more pupils a genuine way into the same intellectual room."
+      ],
+      "storyParagraphsZh": [
+        "七号教室是按照一个想象中的“平均孩子”设计的。指令只从前方口头说一遍，答案必须快速写在同一种纸上，材料放在高架子，铜计时器一响，所有活动同时结束。这样的安排对许多学生运行顺畅，其他孩子则获得例外：莉娜坐在老师附近才能听清，莫使用单独放大的纸张，拉维可以延长时间，埃斯梅的椅子放不进标准课桌，只能使用侧边小桌。",
+        "阿莎老师每天早晨都要准备同一节课的四种版本。那些特殊安排出于善意，也常常必要，却渐渐变成四扇小侧门。观察本地鸟类时，阿莎寻找莫的放大页面，莉娜便错过了口头指令；等拉维开始观察，其他人已经进入下一环节；埃斯梅够不到标本盘，每次都得开口求助。每项解决办法都依赖老师在恰当一刻记住谁需要哪一种补救。",
+        "阿莎最初试着把工作做得更快。她给文件夹标色，制作提醒卡，还让助教负责搬材料。整套程序更有效率，却没有更稳固。一天，助教缺席，打印机也坏了。阿莎只好在黑板上画一只大鸟，学生们坐着等待各自的纸张。埃斯梅移动到前方，指出一个所有人都没看见的细节，随后问：为什么这幅大家都能使用的图，不能从一开始就是课程入口？",
+        "下一单元换了一种开始。阿莎用不同大小展示图像，一边说指令，一边用符号排出步骤；材料被放到人人能够到的位置，学生可以用标签、草图、排列实物或口头解释来回答。所有人面对的是同一个具有挑战的问题：鸟喙形状怎样与进食方式相关。支持向全班开放，孩子不必先公开宣布自己缺少什么，才能使用它。",
+        "重新设计也产生新问题。选择太多让部分学生不知从何开始，还有一组总挑最容易的表达方式。阿莎没有把“能够进入”误当成“无需挑战”。她删掉重复选项，把成功标准明确展示出来，又用短谈话帮助学生判断哪种形式最能呈现自己的推理。莉娜使用图示步骤却选择口头回答；莫在普通屏幕上自行放大文字；拉维也能跟上共同探究，因为任务不再浪费他最初的十分钟。",
+        "七号教室正在接近全纳教学法：预先把学习者差异纳入共同教学，扩展通常提供给所有人的学习机会，而不是主要依靠把部分学生分离出去再补救。个别调整仍可能必不可少，全纳也不等于人人接受完全相同的安排。更深的变化，是在认定孩子有问题以前先检查那扇门。为真实差异而设计的课堂，会让更多学生真正进入同一个智力空间。"
+      ],
+      "conceptName": "Inclusive pedagogy",
+      "conceptNameZh": "全纳教学法",
+      "explanationParagraphs": [
+        "Inclusive pedagogy responds to learner diversity by expanding the learning opportunities ordinarily available to everyone, while maintaining meaningful participation and intellectual challenge. It asks teachers to anticipate variation in access, representation, engagement, and expression within shared classroom activity.",
+        "It does not eliminate individual accommodations, specialist support, or differences in goals where these are genuinely needed. It resists treating separation as the automatic first response to difference."
+      ],
+      "explanationParagraphsZh": [
+        "全纳教学法通过扩展通常向所有人开放的学习机会来回应学习者差异，同时保持有意义的参与和智力挑战。它要求教师在共同课堂活动中，预先考虑获取信息、理解表达、参与方式和成果呈现的多样性。",
+        "它不会取消真正需要的个别调整、专业支持或目标差异，而是拒绝把分离当成面对差异时自动出现的第一答案。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0113-classroom-routines",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0113",
+      "fieldTitle": "Teacher training without subject specialisation",
+      "fieldTitleZh": "非学科专项教师培养",
+      "title": "The Ten Missing Minutes",
+      "titleZh": "每天失踪的十分钟",
+      "summary": "A teacher who repeats instructions all day discovers that the class is spending its attention on transitions instead of learning.",
+      "summaryZh": "一名整天重复指令的教师发现，全班把注意力花在了课程转换，而不是学习本身。",
+      "storyParagraphs": [
+        "Every change of subject cost Teacher Beren ten minutes. After reading, pupils wandered to the cupboard for rulers, argued about whose books belonged in which basket, and asked whether yesterday's unfinished page should remain on the desk. Beren answered each question patiently. By the time mathematics began, one child had lost a pencil, another was still reading, and the class needed a second explanation of the first problem. The timetable contained five lessons; the day seemed to contain only three and a half.",
+        "Beren responded with more instructions. He wrote a long transition list on the board and read it before every change. Pupils listened at nine o'clock, less carefully at ten, and not at all after lunch. When a visiting inspector entered, Beren rang the bell, delivered twelve reminders, and watched two children collide at the cupboard. The inspector noted poor discipline. Beren added a thirteenth reminder the next morning.",
+        "His colleague Yara asked the class to reconstruct what happened during those missing minutes. Pupils drew routes between desks, cupboards, baskets, and the sink. Almost everyone needed the same narrow aisle at once. Materials had no fixed return place, and the bell announced only that something should stop, not what should happen next. The children were not refusing one clear procedure. They were solving a new coordination problem five times a day.",
+        "Beren redesigned one transition with the class. A short chime meant finish the current sentence. Table stewards collected one labelled tray while others closed books and checked the picture sequence beside the cupboard. Mathematics always began with a small problem already visible on each table. They practised the sequence when no lesson was at stake, found that the green table blocked the aisle, and moved its tray to the opposite shelf.",
+        "The first week became faster, then brittle. When Beren changed the science materials, pupils followed the old picture sequence and brought rulers instead of jars. He had taught obedience to a pattern, not understanding of its purpose. Together they named the stable parts—finish, return, prepare, begin—and the details that could change. On the day the bell failed, a child quietly raised the chime card, stewards checked the new tray labels, and the transition continued without Beren narrating every movement.",
+        "The recovered minutes came from classroom routines: explicitly taught, practised, and revisable patterns for recurring activity. Routines reduce uncertainty and repeated decision making, preserving attention for academic and social work. They are not valuable because silent compliance is an end in itself. A useful routine makes purpose and sequence predictable, distributes responsibility, and can adapt when materials or people change. Beren stopped spending the day as a human instruction bell, and the class gained time it could actually think with."
+      ],
+      "storyParagraphsZh": [
+        "每次更换学科，贝伦老师都会损失十分钟。阅读课结束后，学生四处去柜子找尺，争论谁的书该放进哪只篮子，还追问昨天没写完的页面要不要留在桌上。贝伦耐心回答每个问题。等数学真正开始，一个孩子丢了铅笔，另一个还在读书，全班又得重新听第一道题。课程表上写着五堂课，一天却总像只剩三堂半。",
+        "贝伦用更多指令解决问题。他在黑板上写下一长串转换步骤，每次换课前都读一遍。孩子们九点还会听，十点开始走神，午饭后便几乎不再理会。检查员来访那天，贝伦敲钟，连续说出十二项提醒，仍看见两个学生在柜子前撞在一起。检查记录写着“纪律不足”，第二天早晨，贝伦又增加了第十三项提醒。",
+        "同事雅拉请全班重画那十分钟里究竟发生了什么。学生们在纸上画出课桌、柜子、篮子和水池之间的路线，几乎所有人都要同时经过同一条窄道。材料没有固定归还位置，钟声只表示某件事该停止，却没有说明下一步怎样开始。孩子们不是拒绝服从一套清楚程序，而是每天五次重新解决一项协调难题。",
+        "贝伦与学生一起重新设计其中一次转换。短促铃音表示先写完当前句子，各桌值日生领取一只带标签的托盘，其他人合上书，再对照柜边图示检查。每次数学课开始，桌上已经摆着一道小题。他们在没有正式课程压力时练习流程，发现绿桌总会堵住过道，便把它的托盘移到另一侧架子。",
+        "第一个星期确实更快，却也很僵硬。贝伦更换科学材料以后，学生仍按旧图示拿来尺子，而不是玻璃罐。他教会的是服从固定图案，不是理解图案的用途。全班重新说出稳定部分：结束、归还、准备、开始；再区分哪些细节可以改变。后来钟坏了一天，一名孩子安静举起铃音卡，值日生核对新托盘标签，转换照常发生，贝伦不必再逐句解说每个动作。",
+        "那些被找回的时间来自课堂常规：针对反复出现的活动，被明确教授、实际练习并能够修订的行动模式。常规减少不确定性和重复决策，把注意力留给学术任务与社会互动。它的价值不在于把沉默服从变成终点，而在于让目的和顺序可预测，让责任能够分担，并在材料或人员变化时仍能调整。贝伦不再充当整天说话的指令钟，全班也终于拥有了可以真正拿来思考的时间。"
+      ],
+      "conceptName": "Classroom routines",
+      "conceptNameZh": "课堂常规",
+      "explanationParagraphs": [
+        "Classroom routines are predictable patterns for recurring activities such as entering, transitioning, accessing materials, discussing, seeking help, and closing a task. When explicitly taught and practised, they reduce uncertainty, coordination costs, and unnecessary demands on attention.",
+        "A routine is not merely a rule or a demand for compliance. Effective routines make purpose visible, support increasing learner responsibility, and are reviewed when the classroom context changes."
+      ],
+      "explanationParagraphsZh": [
+        "课堂常规是为进入教室、课程转换、取用材料、讨论、求助和结束任务等反复活动建立的可预测模式。经过明确教授和实际练习后，它们能够减少不确定性、协调成本和不必要的注意负担。",
+        "常规不只是规则，也不等于要求服从。有效常规会让目的可见，逐步支持学习者承担责任，并在课堂情境变化时接受重新检查。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0114-pedagogical-content-knowledge",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0114",
+      "fieldTitle": "Teacher training with subject specialisation",
+      "fieldTitleZh": "学科专项教师培养",
+      "title": "The Astronomer Who Could Not Teach a Shadow",
+      "titleZh": "教不会影子的天文学家",
+      "summary": "A celebrated astronomer knows exactly why shadows move but cannot understand why his pupils keep drawing the Sun in the wrong place.",
+      "summaryZh": "一名著名天文学家完全知道影子为何移动，却不明白学生为什么总把太阳画在错误位置。",
+      "storyParagraphs": [
+        "Master Vei could calculate an eclipse years before it occurred. When the academy asked him to teach children why a tower's shadow moved, he prepared his finest lecture. He drew the celestial sphere, named the Earth's rotation, and wrote three equations across the board. The children copied every line. At the end, Vei placed a tower model beneath a lamp and asked where its noon shadow would fall. Most pointed toward the lamp.",
+        "Vei repeated the explanation with greater precision. He corrected their vocabulary and assigned the equations for homework. On the next day, pupils could recite that light travels in straight lines, yet several still drew the shadow between the object and the light. One child explained that a shadow was a dark substance pushed outward by the Sun. Vei heard an incorrect answer. He did not yet hear the model making it reasonable.",
+        "A veteran teacher named Sori asked Vei to place a candle, a wooden figure, and a white screen on the floor. Before changing anything, children had to stand where they believed the shadow would appear. Their bodies made their predictions visible. Sori then moved the candle without naming a rule. Pupils watched the dark shape travel in the opposite direction. One child walked behind the screen and discovered that no dark substance had passed through it.",
+        "Vei now had another problem. The demonstration was memorable, but some children concluded that shadows always grow when a light moves. He arranged contrasting cases: the light moved closer, then higher; the object moved instead; two lights produced overlapping shadows. He asked pupils to explain each result with a ray drawn from the source past the object. The celestial sphere returned only after the relation among source, object, and surface had become something the class could use.",
+        "By the final lesson, Vei no longer began with everything he knew. He began with what made this idea difficult for a novice. He chose a representation that exposed the hidden relation, listened for common alternative models, sequenced examples to challenge them, and selected questions that distinguished memorized words from usable understanding. He also learned that each representation solved one difficulty while creating another to inspect. His astronomy had not become smaller. It had been reconstructed with a path, obstacles, and tests another mind could enter.",
+        "That transformation is pedagogical content knowledge: knowledge of how to make particular subject matter learnable, including useful representations, analogies, examples, explanations, likely misconceptions, and ways of assessing understanding. Deep subject expertise is necessary but not sufficient. Vei knew the sky; teaching required him to know the routes by which learners commonly approach it, where they turn the wrong way, and which carefully placed lamp might help them see why."
+      ],
+      "storyParagraphsZh": [
+        "维师傅能提前多年算出一次日食。学院请他教孩子理解钟塔影子为什么移动，他准备了自己最好的讲座：画出天球，说明地球自转，又在黑板上写下三条方程。孩子们完整抄下每一行。最后，维把塔楼模型放在灯下，问正午影子会落在哪里，大多数孩子却指向灯的方向。",
+        "维用更精确的方式重讲了一遍，纠正学生用词，还把方程布置成作业。第二天，孩子们能够背出光沿直线传播，仍有人把影子画在物体与光源之间。一个孩子解释，影子是太阳推出去的一团黑色物质。维听见了错误答案，却还没有听见那个使错误显得合理的底层模型。",
+        "老教师索莉让维把蜡烛、木偶和白幕放到地面上。改变任何东西以前，孩子必须站到自己认为影子会出现的位置，用身体把预测显出来。索莉移动蜡烛，没有先讲规则，学生看着暗影向相反方向滑动。一个孩子绕到白幕后面，发现并没有任何黑色物质穿过幕布。",
+        "维随即遇到另一个问题。演示很难忘，一些孩子却得出“只要灯移动，影子一定变大”的新结论。他安排了一组对照：灯先靠近，再升高；随后改为移动物体；两盏灯又产生重叠影子。他让学生每次都从光源画一条越过物体的射线来解释结果。只有当光源、物体和承接面之间的关系真正可用以后，天球才重新回到课堂。",
+        "最后一堂课，维不再从自己知道的全部内容开始，而是从初学者为什么难以理解这个想法开始。他挑选能暴露隐藏关系的表示方式，倾听常见替代模型，按顺序安排能够挑战它们的案例，又用问题区分背熟术语与真正理解。他也明白，每种表示解决一个困难时，还会制造另一个需要检查的困难。他的天文学没有变小，而是被重新铺出路径、障碍和检验，让另一颗心智能够进入。",
+        "这种转化就是学科教学知识：关于怎样让某一具体学科内容变得可学的知识，包括有效表示、类比、案例、解释、常见错误观念和理解评价方式。深厚学科知识必不可少，却并不足够。维熟悉天空，教学还要求他熟悉学习者通常从哪条路接近天空、在哪里转错，以及哪一盏被仔细放置的灯能帮助他们看清原因。"
+      ],
+      "conceptName": "Pedagogical content knowledge",
+      "conceptNameZh": "学科教学知识",
+      "explanationParagraphs": [
+        "Pedagogical content knowledge is the specialised knowledge teachers use to transform particular subject matter for learning. It includes representations, examples, analogies, explanations, task sequences, assessment approaches, and understanding of what learners commonly find difficult or misconceive.",
+        "It is distinct from subject knowledge alone and from general teaching technique alone. It lies in their interaction around a specific idea, learner group, and instructional context."
+      ],
+      "explanationParagraphsZh": [
+        "学科教学知识是教师把具体学科内容转化成可学习形式时使用的专门知识。它包括表示方式、案例、类比、解释、任务顺序、评价方法，以及对学习者常见困难和错误观念的理解。",
+        "它既不同于单纯的学科知识，也不同于一般教学技巧，而存在于两者围绕某个具体概念、学习者群体和教学情境发生的交互之中。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0114-misconception-diagnosis",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0114",
+      "fieldTitle": "Teacher training with subject specialisation",
+      "fieldTitleZh": "学科专项教师培养",
+      "title": "The Stone That Kept Winning",
+      "titleZh": "总是获胜的石头",
+      "summary": "Students repeat the correct law of falling objects while designing every prediction around a heavier stone that must arrive first.",
+      "summaryZh": "学生们背得出物体下落的正确规律，作出的每个预测却仍围绕一块必定先落地的重石展开。",
+      "storyParagraphs": [
+        "In Master Ruan's mechanics class, every pupil could recite the sentence required by the examination: without other effects, falling objects share the same acceleration. Their notebooks contained the correct words. Before a tower experiment, however, Ruan asked which would land first, a heavy stone or a small clay ball. Nearly every hand pointed to the stone. When challenged, pupils repeated the memorized sentence and then quietly kept their original prediction.",
+        "Ruan dropped both objects. They struck the padded ground too close together for the class to distinguish. He declared the law proven. At lunch, pupils explained that the stone had probably won by a tiny amount. The demonstration had not corrected their model; its ambiguity had been absorbed by it. The next week, they predicted that a sheet of paper would fall more slowly than the same paper crumpled into a ball and treated the result as further proof that heavier things fall faster.",
+        "Instead of giving a third lecture, Ruan collected explanations before experiments. Why should weight change speed? Which observation would make you reconsider? He found several different ideas hidden beneath one prediction. Some imagined gravity pulling heavy objects more strongly without considering inertia. Others treated air resistance as part of weight. A few believed the examination sentence applied only to objects of similar size. The class did not possess one error that could be erased with one correction.",
+        "Ruan designed contrasts for each line of reasoning. He compared two balls of similar size but different mass, then the same sheet flat and crumpled, then objects descending through a tall transparent tube before and after much of the air was removed. Pupils wrote predictions first and marked which explanation each result supported or troubled. The heavier stone stopped being a contestant in a race and became one variable among mass, shape, air, and measurement.",
+        "A surprise remained. One pupil changed every answer but still believed the old rule, explaining that school experiments were special. Ruan asked her to design a test she would trust. She chose two sealed boxes with identical shape but different contents and requested a recording that could be replayed slowly. When the boxes arrived together, she did not surrender instantly. She began revising the conditions under which her earlier idea could survive. That revision was more important than obtaining the approved sentence once again.",
+        "Ruan was practising misconception diagnosis: eliciting the learner's underlying explanation, distinguishing among possible sources of an error, and choosing evidence or questions that can test that specific model. A misconception is often coherent enough to interpret ambiguous results and coexist with memorized knowledge. Diagnosis therefore comes before correction. The teacher must discover not only which answer is wrong, but what invisible rule keeps making the heavy stone win."
+      ],
+      "storyParagraphsZh": [
+        "阮师傅的力学班里，每名学生都会背考试要求的句子：不考虑其他影响时，下落物体具有相同加速度。笔记本里的措辞完全正确。塔楼实验前，阮问重石与小泥球哪一个先落地，几乎所有手都指向石头。被追问时，学生又背了一遍正确句子，随后安静保留原来的预测。",
+        "阮把两个物体同时放下，它们撞上软垫的时间近得无法由肉眼区分。他宣布规律已被证明。午饭时，学生们仍解释，石头大概只是快了很小一点。演示没有修正他们的模型，模糊结果反而被旧模型吸收。下一周，他们预测平纸会比揉成球的同一张纸落得慢，并把结果继续当成“重物更快”的证据。",
+        "阮没有再讲第三遍，而是在实验前先收集解释：为什么重量会改变速度？哪一种观察会让你重新考虑？他发现，同一预测下面藏着几种不同想法。有人只想到重物受到更大引力，却没有考虑惯性；有人把空气阻力当成重量的一部分；还有人相信考试句子只适用于大小接近的物体。全班并不拥有一个能够被一句纠正擦掉的统一错误。",
+        "阮针对不同推理设计对照。他先比较体积相近、质量不同的两个球，再比较同一张纸展开与揉皱的状态，又让物体在高透明管中下落，比较抽走大量空气前后的表现。学生每次先写预测，再标记结果支持或扰动哪一种解释。那块重石不再是比赛里的选手，而成了质量、形状、空气和测量方式中的一个变量。",
+        "仍有一个意外。一名学生改对了所有答案，心里却保留旧规律，理由是学校实验比较特殊。阮让她自己设计愿意相信的检验。她选择外形完全相同、内部重量不同的两个密封盒，还要求用可以慢放的影像记录。两个盒子同时抵达时，她没有立刻放弃旧想法，而是开始修改旧想法还能成立的条件。这种修改比再次说出标准句子更重要。",
+        "阮进行的是错误概念诊断：先引出学习者的底层解释，区分错误可能来自哪里，再选择能够检验特定模型的证据或问题。错误概念往往具有足够一致性，能够解释模糊结果，也能与背熟的正确知识同时存在。因此，诊断必须先于纠正。教师需要发现的不只是哪个答案错了，还要看见哪一条无形规则让重石一次次被判定为赢家。"
+      ],
+      "conceptName": "Misconception diagnosis",
+      "conceptNameZh": "错误概念诊断",
+      "explanationParagraphs": [
+        "Misconception diagnosis identifies the reasoning or mental model that generates a learner's recurring error. It uses predictions, explanations, confidence, contrast cases, and carefully chosen evidence to distinguish a stable alternative conception from a slip, missing fact, language problem, or procedural mistake.",
+        "Correction is more effective when it addresses the learner's actual model. Simply supplying the accepted answer may change performance without changing the explanation that will be used in the next unfamiliar situation."
+      ],
+      "explanationParagraphsZh": [
+        "错误概念诊断旨在识别不断产生某类错误的推理方式或心智模型。它利用预测、解释、信心水平、对照案例和经过选择的证据，区分稳定的替代观念与偶然失误、知识缺失、语言问题或程序错误。",
+        "只有回应学习者真正使用的模型，纠正才更可能有效。单纯提供标准答案可以暂时改变表现，却未必改变人在下一个陌生情境中仍会调用的解释。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0114-disciplinary-literacy",
+      "batchId": "batch-002",
+      "categoryCode": "01",
+      "fieldCode": "0114",
+      "fieldTitle": "Teacher training with subject specialisation",
+      "fieldTitleZh": "学科专项教师培养",
+      "title": "The Same Page, Three Readings",
+      "titleZh": "同一页的三种读法",
+      "summary": "A teacher discovers that asking every apprentice for the main idea of a quarantine ledger trains none of them to read as their field requires.",
+      "summaryZh": "一名教师发现，让所有学徒概括隔离记录的中心思想，并不能教会任何人按照自己的学科阅读。",
+      "storyParagraphs": [
+        "The Collegium trained historians, pharmacists, and engineers beneath one roof. Because every field used difficult texts, Rector Pell created a common reading course. Its method was simple: underline unfamiliar words, identify the main idea, and summarize each page in three sentences. Teacher Mara followed it faithfully. Her pupils became quick at producing summaries that sounded clear, orderly, and almost interchangeable.",
+        "For the final exercise, Mara brought an old quarantine ledger from the river district. One page described a fever, a bitter powder, a collapsed footbridge, and the magistrate's claim that the district had recovered within six days. Every pupil wrote the same main idea: decisive treatment restored public order. Pell praised the agreement. Then three subject tutors read the page and became alarmed for three different reasons.",
+        "The historian asked who had written the ledger, whose deaths were absent, and why the recovery claim appeared just before the magistrate requested promotion. The pharmacy tutor noticed that the powder's amount was recorded in a local spoon whose capacity was unknown; copying the dose could poison a patient. The engineer saw that the bridge failure was mentioned after heavy rain but no load, span, or material had been recorded. A smooth summary had converted uncertain claims into settled facts.",
+        "Mara tried to repair the lesson by giving everyone a longer checklist. The pupils dutifully asked about authorship, dosage, and bridge dimensions on every page. In a poem, they demanded the beam length; in a laboratory protocol, they searched for an unreliable narrator. They had learned three sets of questions as decorations, not why a community of inquiry used them. General caution alone could not tell them what counted as evidence in a particular field.",
+        "She divided the ledger into three working rooms. Historians compared it with burial rolls and letters from residents. Pharmacy pupils reconstructed the old unit before judging the remedy. Engineers treated the rain account as a hypothesis and drew the missing structural information they would need. Each room also rejected one tempting conclusion that its own standards could not support. When the groups returned, they did not offer rival summaries of one fixed meaning. They showed how different purposes, standards of proof, vocabularies, and ways of representing knowledge had made different features of the page visible.",
+        "Mara was now teaching disciplinary literacy: the specialised ways in which members of a field read, write, reason with, and evaluate texts. It extends beyond generic comprehension because a source, a measurement, an omission, or even a diagram carries different evidential weight across disciplines. The page had never contained three ready-made readings. It became historical evidence, a dosage claim, or an engineering report only when readers brought the disciplined questions by which those kinds of knowledge are made."
+      ],
+      "storyParagraphsZh": [
+        "联合学院把史学、药学和工程学徒安排在同一屋檐下。每个领域都要阅读艰深文本，院长佩尔便设立一门共同阅读课，方法很简单：划出陌生词，找出中心思想，再用三句话概括每一页。教师玛拉忠实照做。学生很快都能写出清楚、整齐，而且几乎可以互换的摘要。",
+        "期末练习时，玛拉带来一本河区旧隔离簿。其中一页记着高热、苦味药粉、倒塌的步桥，以及地方官关于六天内恢复秩序的声明。所有学生都写出同一个中心思想：果断治疗恢复了公共秩序。佩尔称赞这种一致，三名专业导师读完却因三种不同理由同时警觉起来。",
+        "历史导师追问记录是谁写的、哪些死者没有出现，以及康复声明为何恰好写在地方官申请升迁之前。药学导师发现药粉剂量使用一种容量不明的当地汤匙，照抄可能使病人中毒。工程导师注意到桥塌发生在暴雨后，记录里却没有载荷、跨度和材料。流畅摘要把尚未确定的主张变成了既成事实。",
+        "玛拉试图用一张更长的检查表补救。学生于是对每篇文字都机械询问作者、剂量和桥梁尺寸；读诗时寻找横梁长度，读实验规程时寻找不可靠叙述者。他们把三套问题当成装饰，却不理解某个求知共同体为什么需要这些问题。一般性的谨慎仍不能告诉他们，在特定学科里什么才算证据。",
+        "她把隔离簿带进三个工作室。历史学徒拿它与埋葬名册和居民书信对照；药学徒先重建旧单位，再判断药方；工程学徒把暴雨叙述视为假说，画出判断结构失效仍需哪些信息。每个工作室还否定了一个诱人的结论，因为本学科的标准不足以支持它。再次会合时，他们给出的不是同一固定含义的三种摘要，而是展示不同目的、证据标准、词汇和知识表示方式怎样让页面上的不同细节显现出来。",
+        "玛拉此刻教授的是学科读写能力：一个领域的成员阅读、写作、推理和评价文本的专门方式。它超越一般理解技巧，因为来源、测量、缺失，甚至一张图，在不同学科中具有不同证据分量。那一页从未预装三种读法；只有读者带着制造相应知识所需的学科问题，它才分别成为历史证据、剂量主张或工程报告。"
+      ],
+      "conceptName": "Disciplinary literacy",
+      "conceptNameZh": "学科读写能力",
+      "explanationParagraphs": [
+        "Disciplinary literacy concerns the field-specific practices used to construct meaning and judge knowledge through texts, symbols, data, images, and other representations. Historians source and corroborate claims; scientists examine methods and evidence; other disciplines develop their own characteristic questions and conventions.",
+        "Generic reading strategies remain useful, but they are not sufficient for advanced participation in a discipline. Readers must learn why particular features matter and how the field decides whether a claim is warranted."
+      ],
+      "explanationParagraphsZh": [
+        "学科读写能力关注各领域通过文字、符号、数据、图像和其他表示来建构意义、判断知识的专门实践。历史研究重视来源与互证，科学研究检查方法和证据，其他学科也各有典型问题与规范。",
+        "一般阅读策略仍然有用，却不足以支持深入参与一个学科。学习者还需要理解某些特征为何重要，以及该领域依据什么判断一项主张是否成立。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0211-montage",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0211",
+      "fieldTitle": "Audio-visual techniques and media production",
+      "fieldTitleZh": "视听技术与媒体制作",
+      "title": "The Face Between Two Doors",
+      "titleZh": "两扇门之间的脸",
+      "summary": "An editor makes the same silent face confess to two incompatible motives by changing only the shots around it.",
+      "summaryZh": "一名剪辑师只改变前后镜头，就让同一张沉默的脸承认两种互不相容的动机。",
+      "storyParagraphs": [
+        "After a fire destroyed the city granary, the council asked editor Nera to assemble the scattered security recordings. One camera showed Treasurer Iven standing in a corridor. He looked toward something beyond the frame, tightened his mouth, and entered a side door. The image was sharp but silent. A councillor placed a shot of empty grain bins before it and a shot of Iven's private carriage after it. In the screening room, his neutral face appeared calculating. Several viewers whispered that they had just watched a thief decide to flee.",
+        "Nera checked the time stamps. The carriage image had been recorded three days later, yet the sequence felt more persuasive than the dates. To demonstrate the problem, she placed a shot of an injured porter before the same corridor image and followed it with Iven entering the infirmary. Now the tightened mouth looked like concern. Nothing in the central shot had changed. The council nevertheless felt that it had seen a different emotion occur inside him.",
+        "The chief investigator dismissed this as an editor's trick and ordered Nera to arrange every clip chronologically. The result was accurate in order but almost unintelligible: six cameras repeated empty minutes, actions began without causes, and the fire appeared in several rooms at once. Viewers could not tell which simultaneous event mattered. Refusing selection had not removed interpretation. It had merely hidden decisions inside a flood of footage.",
+        "Nera began again. She joined a hand turning a valve to a gauge falling in the next shot, then cut to workers discovering that the sprinklers had no pressure. The three images had come from different cameras, but together they proposed a causal relation the investigation could test. She also held back a reverse angle until the audience had formed a suspicion, then revealed that Iven had been looking not at the grain bins but at smoke entering through a stairwell door.",
+        "At the hearing, Nera screened both versions. The first made Iven seem guilty; the second made him seem heroic. She then showed the original corridor shot alone. It proved only that a man looked, reacted, and moved. Meaning had arisen in the intervals: from order, duration, contrast, repetition, and the viewer's attempt to connect one image with the next. The council stopped asking which sequence was neutral and began asking which connections were supported by independent evidence.",
+        "Nera's craft was montage: creating relations and meaning through the selection and juxtaposition of shots. A cut can compress time, connect spaces, build rhythm, invite comparison, or imply causality and emotion that no single image contains. Montage is not automatically deceptive; without it, complex audiovisual accounts would often be shapeless. Its power demands precision because the face between two shots may appear to reveal an inner truth that the camera never recorded."
+      ],
+      "storyParagraphsZh": [
+        "城中粮仓失火后，议会请剪辑师奈拉整理分散的监控影像。一台摄像机拍到财务官伊文站在走廊里，望向画外，抿紧嘴角，随后进入侧门。画面清楚，却没有声音。一名议员把空粮箱的镜头放在它前面，又在后面接上伊文的私人马车。放映室里，那张原本中性的脸显得精于算计。几名观众低声说，他们刚看见一个窃贼决定逃跑。",
+        "奈拉核对时间码，发现马车画面其实拍于三天后，组合起来的顺序却比日期更有说服力。为说明问题，她在同一段走廊画面前放上受伤搬运工，后面接伊文进入医务室。抿紧的嘴角立刻像是担忧。中央镜头没有任何变化，议会却觉得自己看见他心中发生了另一种情绪。",
+        "首席调查官把这称作剪辑把戏，命令奈拉严格按时间排列全部素材。结果顺序准确，却几乎无法理解：六台摄像机重复漫长空白，行动没有起因，火焰仿佛同时出现在几个房间。观众无法判断并发事件中哪一个重要。拒绝选择并没有消除解释，只是把决定藏进素材洪流。",
+        "奈拉重新开始。她先接上某只手转动阀门与下一镜头中压力表下降，再切到工人发现喷淋没有水压。三幅画面来自不同摄像机，组合后提出一个可由调查检验的因果关系。她还故意延后反打镜头，让观众先产生怀疑，随后才揭示伊文看的并非粮箱，而是从楼梯门涌入的烟。",
+        "听证会上，奈拉放映两个版本。第一版让伊文像罪犯，第二版让他像英雄。随后她单独播放原始走廊镜头。它只能证明一个人看见、反应并移动。意义产生在镜头间隙里：顺序、时长、对照、重复，以及观众把前后图像连起来的冲动。议会不再追问哪种排列绝对中立，而开始检查哪些联系得到独立证据支持。",
+        "奈拉使用的是蒙太奇：通过选择和并置镜头来创造关系与意义。一次剪切可以压缩时间、连接空间、形成节奏、促成比较，也可能暗示单个画面从未包含的因果与情绪。蒙太奇并不天然欺骗；没有它，复杂视听叙述往往只剩无形素材。它的力量要求精确，因为夹在两个镜头之间的脸，可能看似泄露了摄影机从未记录的内心真相。"
+      ],
+      "conceptName": "Montage",
+      "conceptNameZh": "蒙太奇",
+      "explanationParagraphs": [
+        "Montage is the construction of audiovisual meaning through the selection, ordering, duration, and juxtaposition of shots. Viewers infer spatial, temporal, emotional, rhythmic, and causal relations across cuts, so a sequence can communicate more than the sum of its individual images.",
+        "The inferred relation may clarify real events or manufacture a misleading one. Responsible editing therefore distinguishes what a shot records from what its placement invites an audience to conclude."
+      ],
+      "explanationParagraphsZh": [
+        "蒙太奇是通过镜头的选择、排列、时长和并置来建构视听意义。观众会跨越剪切推断空间、时间、情绪、节奏和因果关系，因此一组镜头能够表达超过各个画面简单相加的内容。",
+        "这种推断既可能澄清真实事件，也可能制造误导。负责任的剪辑需要区分镜头实际记录了什么，以及它所在的位置诱导观众得出什么结论。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0211-diegetic-sound",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0211",
+      "fieldTitle": "Audio-visual techniques and media production",
+      "fieldTitleZh": "视听技术与媒体制作",
+      "title": "The Bell No One Could Find",
+      "titleZh": "找不到的钟声",
+      "summary": "A sound editor adds one unseen bell to a chase and accidentally gives the characters knowledge they were never meant to possess.",
+      "summaryZh": "一名声音剪辑师给追逐戏加入一声看不见的钟，却意外让角色知道了他们本不该知道的事。",
+      "storyParagraphs": [
+        "Director Oren's new film ended with a courier running through a night market while guards searched the surrounding lanes. The pictures were tense, but the first cut felt strangely weightless. Sound editor Lio added a low bell just before the courier turned into an alley. The note came from nowhere visible, and its fading vibration seemed to fill the whole district. At the next screening, everyone leaned forward. Oren declared the chase repaired.",
+        "A script supervisor raised one question: why did the courier turn when the bell sounded? Viewers assumed he had heard a signal. In the following shot, however, the guards continued searching as if nothing had happened. Some spectators concluded that the courier had an accomplice; others thought the guards were deaf. A sound intended only to tighten the audience's nerves had entered the story as an apparent cause.",
+        "Lio tried making the bell quieter and hiding it beneath strings. The confusion remained because loudness did not decide where a sound belonged. He then showed the market clock in a distant tower, believing a visible source would solve everything. It created a worse problem: the clock read midnight in one angle and eleven in another. The added image anchored the bell inside the scene and exposed a continuity error the original cut had never needed.",
+        "The team made two deliberate versions. In the first, Lio replaced the bell with a pulsing musical tone that no character acknowledged. It rose as the guards approached and stopped when the courier found cover; the audience felt pressure without treating the tone as information available to him. In the second, an unseen watchmaker's bell rang from beyond the alley wall. The courier paused, counted three strokes, and chose the door marked by a brass gear. Though the source stayed outside the frame, later action confirmed it existed in his world.",
+        "During the final mix, Oren wanted both versions at once: the clarity of a real signal and the freedom of an invisible score. Lio refused to let ambiguity do unplanned work. If the bell crossed from audience accompaniment into the characters' environment, reactions, space, and consequences had to support that crossing. They kept the watchmaker's bell and built the escape around it. What had begun as decoration became an event with a source and a listener.",
+        "Lio had separated diegetic from non-diegetic sound. Diegetic sound belongs to the represented story world and can, in principle, be heard by its characters; its source may be on-screen or off-screen. Non-diegetic sound, such as much background score, is presented for the audience without belonging to that world. The distinction is not a rule that forbids ambiguity. It is a control over meaning, because one unseen bell can either describe a character's situation or secretly instruct the viewer how to feel about it."
+      ],
+      "storyParagraphsZh": [
+        "奥伦导演的新片以一场夜市追逐结尾：信使穿过摊位，卫兵在四周巷道搜捕。画面紧张，初剪却轻得没有重量。声音剪辑师利奥在信使转入小巷前加入一声低沉钟响。画面里看不见来源，余震仿佛填满整片街区。再次放映时，所有人都向前倾身。奥伦宣布追逐戏修好了。",
+        "场记只问了一个问题：钟响以后，信使为什么转弯？观众自然以为他听见了信号，可下一镜头里的卫兵仍像什么都没发生一样继续搜索。有人猜信使有同伙，有人认定卫兵听不见。原本只想收紧观众神经的一声钟，已经进入故事，成了角色行动的表面原因。",
+        "利奥试着把钟声调小，再藏到弦乐下面，困惑仍未消失，因为音量并不能决定声音属于哪里。他又拍进远处塔楼上的市钟，以为可见来源能解决一切，结果制造更大问题：一个角度的钟指向午夜，另一个角度却是十一点。新增画面把钟声固定进场景，也暴露出原先根本不必面对的连续性错误。",
+        "团队有意制作两个版本。第一版把钟换成无人回应的脉动乐音，卫兵靠近时升起，信使藏好时停止；观众感到压力，却不会把声音当作信使掌握的信息。第二版让墙外看不见的钟表铺响铃。信使停步，数完三下，选择带黄铜齿轮标记的门。声源仍在画外，后续行动却证明它存在于角色世界。",
+        "终混时，奥伦希望两种好处同时保留：真实信号的清晰，以及无形配乐的自由。利奥拒绝让含混替创作者做没有计划的工作。如果钟声从观众伴随跨进角色环境，反应、空间和后果都必须支持这次跨越。他们留下钟表铺的铃，并围绕它重建逃脱过程。最初的装饰变成了有来源、也有听者的事件。",
+        "利奥区分的是叙事内声与叙事外声。叙事内声属于作品呈现的故事世界，原则上可被角色听见，声源既可能在画面内，也可能位于画面之外；叙事外声则提供给观众，却不属于那个世界，例如许多背景配乐。这个区分不是禁止含混的规则，而是对意义的控制：同一声看不见的钟，既可以描述角色所处的环境，也可以在角色毫不知情时暗中指导观众怎样感受。"
+      ],
+      "conceptName": "Diegetic and non-diegetic sound",
+      "conceptNameZh": "叙事内声与叙事外声",
+      "explanationParagraphs": [
+        "Diegetic sound originates within the represented story world, whether its source appears on-screen or remains off-screen. Non-diegetic sound is supplied to the audience from outside that world, as with much musical scoring or external narration.",
+        "Filmmakers can blur or shift the boundary deliberately, but the choice affects causality, point of view, space, and what viewers believe characters know. A sound's narrative status is therefore distinct from its volume or the visibility of its source."
+      ],
+      "explanationParagraphsZh": [
+        "叙事内声来自作品呈现的故事世界，无论声源出现在画面内还是留在画面外；叙事外声则从故事世界之外提供给观众，常见于配乐或外部旁白。",
+        "创作者可以有意模糊或移动两者边界，但这种选择会改变因果、视点、空间，以及观众认为角色知道什么。声音的叙事身份因此不同于它的音量，也不同于声源是否可见。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0211-framing",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0211",
+      "fieldTitle": "Audio-visual techniques and media production",
+      "fieldTitleZh": "视听技术与媒体制作",
+      "title": "Outside the Celebration",
+      "titleZh": "庆典画面之外",
+      "summary": "A flawless film of a civic parade becomes evidence of an event that happened just beyond every beautiful image.",
+      "summaryZh": "一部完美的城市庆典影片，最终成了另一场始终发生在漂亮画面之外的事件证据。",
+      "storyParagraphs": [
+        "Camera operator Toma was hired to record the opening of the city's new river gate. The square was crowded with banners, musicians, officials, and families. Along the eastern curb, mill workers held signs asking who would compensate homes flooded during construction. Toma's brief called for a dignified public record. He chose a long lens, placed the mayor against the shining gate, and kept the protesting signs just beyond the right edge of the image.",
+        "Every shot was true. The musicians played; children waved; the gate opened exactly as shown. When the film screened, however, viewers saw a city without disagreement. The mayor praised Toma for capturing the spirit of the day. A worker named Senn objected that the film had erased half the square. Toma replied that a camera could never include everything and showed him the crowded edges that would have ruined the composition.",
+        "Senn returned with a spectator's recording made from behind the workers. In that image, their signs filled the foreground and the mayor appeared small between them. It looked like a protest interrupted by a gate ceremony. Toma accused the spectator of distortion, then heard his own defence repeated back: every camera has an edge. The two films contained incompatible events without either inventing a person or altering a spoken word.",
+        "For the archive version, Toma first tried an extremely wide shot. It included the whole square but made every action too small to read. Inclusion without emphasis produced another kind of absence. He began building a sequence instead: a wide view established the competing groups, medium shots showed their spatial relation, close views gave the mayor's promise and Senn's unanswered letter equal human scale, and a slow pan revealed where the polished ceremonial platform ended and the water-damaged houses began. Scale had restored context while still declaring where attention should rest.",
+        "The council demanded that he remove the damaged houses because they had not been part of the official ceremony. Toma kept them but labelled the time and location of every shot. He also preserved the unedited recordings so later viewers could examine his choices. The finished film no longer pretended to be the square itself. It offered a defensible perspective while leaving evidence of what its perspective excluded.",
+        "Toma had confronted framing: deciding the visual boundaries, position, scale, angle, and arrangement through which an event becomes an image. A frame directs attention by including some relations and excluding others; even a wider frame cannot escape selection. Framing is therefore not automatically manipulation, because intelligible images require it. The ethical and expressive question is whether the chosen edge clarifies a warranted perspective or quietly turns what stands just outside it into something that appears never to have existed."
+      ],
+      "storyParagraphsZh": [
+        "摄影师托马受雇记录城市新河闸启用。广场上挤满旗帜、乐手、官员和家庭，东侧路边则站着一群磨坊工人，举牌追问施工期间被淹房屋由谁赔偿。委托要求留下庄重的公共记录。托马使用长焦，让市长与闪亮闸门同框，并把抗议标语留在画面右边缘之外。",
+        "每个镜头都是真的。乐队确实演奏，孩子确实挥手，河闸也如画面所示开启。然而影片放映时，观众看见的是一座没有分歧的城市。市长称赞托马捕捉了当天精神。工人森恩抗议影片抹掉半个广场，托马回答，摄影机不可能容纳一切，还指给他看那些一旦进入就会破坏构图的拥挤边缘。",
+        "森恩带回一名旁观者从工人身后拍摄的影像。标语占据前景，市长缩小在它们之间，看起来像一场被闸门仪式打断的抗议。托马指责那段录像扭曲事实，随即听见自己的辩护被原样送回：每台摄影机都有边缘。两部影片没有虚构任何人，也没有改动一句话，却包含两件彼此不相容的事件。",
+        "制作档案版时，托马先尝试极广镜头。整座广场都被收入，所有行动却小得无法辨认。没有重点的包容制造了另一种缺失。他转而组织一组镜头：全景交代竞争群体，中景显示空间关系，近景让市长承诺与森恩未获回复的信具有同等人物尺度，一次缓慢摇摄则揭示抛光典礼台在哪里结束、受水损房屋又从哪里开始。尺度恢复了语境，也仍明确告诉观众注意力应落在哪里。",
+        "议会要求删去受损房屋，因为它们不属于正式典礼。托马保留画面，却标明每个镜头的时间地点，也保存未经剪辑的记录，供后人检查他的选择。成片不再假装自己就是整个广场，而是提供一个能够辩护的视角，同时留下证据，说明这个视角排除了什么。",
+        "托马面对的是取景与框架：通过视觉边界、位置、尺度、角度和排列，让一场事件成为一个画面的决定。框架以纳入某些关系、排除另一些关系来引导注意，即使更宽的画面也无法逃离选择。因此，取景并不自动等于操纵，因为可理解的图像离不开它。真正的表达与伦理问题是：选定的边缘究竟澄清了有依据的视角，还是悄悄让边缘之外的存在看起来从未发生。"
+      ],
+      "conceptName": "Framing",
+      "conceptNameZh": "取景与框架",
+      "explanationParagraphs": [
+        "Framing organizes what viewers can see and how elements relate within an image through boundaries, camera position, angle, scale, lens choice, and composition. These decisions establish emphasis and perspective while necessarily leaving other information outside the frame.",
+        "No frame is exhaustive or wholly neutral. Responsible framing makes exclusions and point of view intelligible, uses wider context when it changes interpretation, and avoids presenting a selected view as the totality of an event."
+      ],
+      "explanationParagraphsZh": [
+        "取景与框架通过画面边界、机位、角度、尺度、镜头选择和构图，组织观众能看见什么，以及元素之间怎样发生关系。这些决定建立重点和视角，也必然把其他信息留在画外。",
+        "没有任何框架能够穷尽事件或保持绝对中立。负责任的取景会让排除与视点可被理解，在更宽语境足以改变解释时提供它，并避免把经过选择的视野冒充事件全貌。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0212-affordance",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0212",
+      "fieldTitle": "Fashion interior and industrial design",
+      "fieldTitleZh": "时尚、室内与工业设计",
+      "title": "The Door Everyone Misread",
+      "titleZh": "人人都读错的门",
+      "summary": "A celebrated bronze door keeps defeating careful visitors until its designer watches what the hardware asks their bodies to do.",
+      "summaryZh": "一扇备受赞美的青铜门不断难倒谨慎的访客，直到设计师开始观察门上的部件究竟要求身体做什么。",
+      "storyParagraphs": [
+        "Designer Ren made the new civic clinic entrance from dark glass and polished bronze. On the outside he placed a handsome vertical bar; the door actually opened inward when pushed. On the inside he fitted a broad bronze plate; that side had to be pulled. During the opening ceremony, the first visitor grasped the bar and tugged. The second did the same. By noon, a queue was forming behind people who believed the locked clinic had invited them inside.",
+        "Ren attached a card saying PUSH in four languages. Error rates fell until rain blurred the ink. He engraved larger words, added green arrows, and asked guards to point. During a smoke drill, visitors reached for the bar before reading anything. A nurse carrying boxes leaned against the door and could not find a way to pull it from the other side. Ren had supplied more information while leaving the body's first invitation unchanged.",
+        "He spent a morning beside the entrance without correcting anyone. Hands closed naturally around the bar because it could be grasped. Palms pressed the plate because it offered a surface for pressure. The shapes suggested actions opposite to the mechanism. Yet the problem was not only suggestion. A child could understand the arrow and still fail against the heavy closing spring. A wheelchair user on the sloping threshold could pull the door only by rolling backward into the queue.",
+        "Ren built a plain prototype. The push side received a broad plate that yielded under light pressure; the pull side received a loop with clearance for different grips. He reduced the closing force, levelled the approach, and left enough space to move while opening. A narrow strip revealed the door's swing before anyone touched it. Visitors no longer had to translate a written command against what the object seemed to permit.",
+        "The building committee wanted the bronze bar restored because it had become the entrance's signature. Ren offered them a test. He mounted the old and new doors side by side, then invited people carrying bags, using canes, pushing prams, or arriving in a hurry. The old door photographed beautifully and accumulated collisions. The plain door almost disappeared from attention because action followed perception without negotiation. The committee kept the bronze as a wall sculpture.",
+        "Ren had redesigned the door's affordances: the possibilities for action that arise in relation between an object's properties and an actor's capabilities. A handle may afford grasping for one person but not another; a heavy door may technically open yet offer no usable action to a weaker visitor. Visible cues that help people perceive an action are often called signifiers. Good design aligns actual possibility, perceived possibility, and consequence so the entrance does not demand an argument before it allows a body through."
+      ],
+      "storyParagraphsZh": [
+        "设计师任为新市立诊所制作了深色玻璃与抛光青铜入口。门外装着漂亮的竖直拉杆，实际却需要向内推；门内是一块宽青铜板，那一侧反而需要拉。开幕式上，第一名访客抓住拉杆向外拽，第二名也照做。到了中午，门前已排起队，人们以为那家邀请自己进入的诊所锁了门。",
+        "任贴上一张用四种语言写着“推”的卡片。错误减少，直到雨水模糊字迹。他刻出更大的字，加上绿色箭头，又让门卫负责指引。消防演习时，访客还没读字，手已经伸向拉杆。一名抱着纸箱的护士靠上门板，却在另一侧找不到拉门方式。任提供了更多信息，身体最先收到的邀请却没有改变。",
+        "他在入口旁观察一上午，不再纠正任何人。手自然合拢抓住拉杆，因为它可以被握住；手掌自然压向平板，因为它提供了施力表面。形状暗示的动作恰好与机械方向相反。但问题不只在暗示：孩子即使读懂箭头，也推不动过重的回门弹簧；轮椅使用者位于倾斜门槛上，只能一边拉门一边向后退进队伍。",
+        "任做了一扇朴素原型。推门侧换成轻压即动的宽板，拉门侧使用为不同握法留出空间的环形把手；他减小闭门力，铺平入口，并留出开门时移动身体的空间。一条窄标记还在人触碰以前显示门扇方向。访客不再需要让书面命令与物体似乎允许的动作争辩。",
+        "建筑委员会希望恢复青铜拉杆，因为它已经成为入口标志。任提出一次测试：把新旧两扇门并排安装，邀请提袋、拄杖、推婴儿车和匆忙赶来的人通过。旧门很上镜，也不断积累碰撞；朴素的门几乎从注意中消失，因为感知到的动作无需协商就能完成。委员会最后把青铜拉杆留下做了墙饰。",
+        "任重新设计的是门的可供性：物体属性与行动者能力相遇时形成的行动可能。一个把手可能对某人可握，对另一个人却不可握；一扇门在机械上能够打开，也可能不给力量较弱的访客提供可用动作。帮助人看见行动可能的线索常被称为意符。良好设计让实际可能、感知可能与行动后果相互一致，使入口不必先与身体争论，才肯让人通过。"
+      ],
+      "conceptName": "Affordance",
+      "conceptNameZh": "可供性",
+      "explanationParagraphs": [
+        "An affordance is a possibility for action arising from the relation between features of an environment or object and the capabilities of an actor. It is relational: the same stair, handle, or control can afford different actions to different bodies and in different conditions.",
+        "A signifier is a perceptible cue indicating where or how to act. Effective design aligns signifiers with real, accessible affordances rather than relying on labels to compensate for a misleading or unusable form."
+      ],
+      "explanationParagraphsZh": [
+        "可供性是环境或物体的特征与行动者能力相遇时产生的行动可能，因而具有关系性：同一级台阶、把手或控制器，对不同身体、在不同条件下可以提供不同动作。",
+        "意符是提示人在哪里或怎样行动的可感知线索。有效设计会让意符与真实、可使用的可供性相互一致，而不是依靠标签弥补误导或不可用的形式。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0212-ergonomics",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0212",
+      "fieldTitle": "Fashion interior and industrial design",
+      "fieldTitleZh": "时尚、室内与工业设计",
+      "title": "The Prize Bench",
+      "titleZh": "获奖的工作台",
+      "summary": "A geometrically perfect workbench wins a design prize while teaching every craft worker a different kind of pain.",
+      "summaryZh": "一张几何上完美的工作台赢得设计大奖，却让每位工匠学会一种不同的疼痛。",
+      "storyParagraphs": [
+        "The guild awarded its gold compass to Lale's new assembly bench. Its proportions followed the official diagram of an average worker: elbows at a clean right angle, tools arranged in a perfect arc, stool centred beneath a white stone surface. Visitors admired its order. Within a month, the craft workers also knew its less visible geometry. Niko's shoulders burned from reaching upward, tall Bera bent her neck, and left-handed Omi crossed his wrist over the clamp hundreds of times a day.",
+        "The foreman blamed posture. He painted footprints on the floor, pinned a drawing of the correct seated position to the wall, and rang a bell whenever a back curved. Workers became skilled at looking correct while he passed. Their pain continued. One fast assembler finished every quota and developed numb fingers because her apparently proper wrist repeated the same forceful turn nearly two thousand times per shift.",
+        "Lale first lowered the entire bench. Niko improved, Bera suffered more, and a heavy press now required everyone to lift material from below the knee. She replaced the stools with softer ones; workers sat longer without shifting and reported new aches. Each repair treated one body part in isolation. The work itself kept determining reach, force, repetition, visibility, pace, and recovery.",
+        "She stopped measuring the worker against the bench and measured the whole task around the workers. She recorded body-size ranges rather than one average, watched where errors and fatigue appeared across a shift, weighed the tools, counted repeated motions, and asked operators which adjustments slowed them down. She filmed from the operator's eye line and found controls disappearing behind the worker's own hands. A task that felt harmless in its first minute became punishing only after its thousandth repetition. The most painful station was not the heaviest. It combined a small pinch grip, poor lighting, and a conveyor pace that removed every natural pause.",
+        "The rebuilt line used adjustable surface heights, movable parts bins, balanced tools, ambidextrous fixtures, clearer lighting, and short task rotations. The conveyor slowed slightly, so the foreman predicted lower output. Instead, dropped parts and rework declined, and experienced workers stopped leaving early with swollen hands. No single posture was declared perfect. The system allowed variation while keeping loads, reaches, and repetition within more tolerable ranges.",
+        "Lale had learned ergonomics: designing work, products, and environments to fit human capabilities and limitations across physical, cognitive, and organisational conditions. It is not the art of forcing people into a prescribed pose. It examines the interaction among person, task, tool, information, pace, and setting, then redesigns that system for safety and effective performance. The prize bench had been shaped around an average body that no one inhabited for an average moment that never occurred."
+      ],
+      "storyParagraphsZh": [
+        "工匠行会把金圆规奖授予拉莱的新装配台。它严格遵循“平均工人”图纸：手肘形成整齐直角，工具沿完美弧线排列，凳子居中放在白石台面下。访客赞叹它井然有序。一个月内，工匠也认识了另一种不易看见的几何：尼科因向上伸手而肩膀灼痛，高个子的贝拉总要弯颈，左撇子奥米每天数百次让手腕交叉越过夹具。",
+        "工头把问题归咎于姿势。他在地面画脚印，把标准坐姿图钉上墙，每见一次弯背就敲铃。工人很快学会在他经过时看起来正确，疼痛却没有停止。一名装配速度很快的工人每次都完成定额，却因看似端正的手腕每班近两千次重复用力转动，逐渐失去手指知觉。",
+        "拉莱起初把整张工作台降低。尼科好转，贝拉更加难受，重型压具还迫使所有人从膝盖以下抬起材料。她又换上更软的凳子，工人坐得更久、不再变换姿势，随后报告新的酸痛。每次修补都把某个身体部位单独处理，工作本身却继续决定伸手距离、用力大小、重复频率、可见度、节奏和恢复机会。",
+        "她不再拿工人去适应工作台，而开始围绕工人测量整项任务。她记录身材范围，不再只取一个平均值；观察整班工作中错误与疲劳何时出现；称量工具、计算重复动作，还询问操作员哪些调整最拖慢工作。她又从操作员视线拍摄，发现某些控制器会被工人自己的手遮住。第一分钟毫无负担的动作，重复到第一千次才显出惩罚。最痛苦的工位并非搬运最重，而是把细小捏握、昏暗照明和消除所有自然停顿的传送带速度叠在一起。",
+        "重建后的生产线采用可调台面、可移动料箱、平衡工具、左右手都能使用的夹具、更清楚的照明和短时任务轮换。传送带稍微变慢，工头预言产量下降，结果掉落零件和返工减少，熟练工人也不再因双手肿胀提前离开。没有一种姿势被宣布为完美；系统允许变化，同时把负荷、伸展和重复控制在更可承受的范围。",
+        "拉莱学会的是人体工学：依据人在身体、认知和组织条件中的能力与限制，设计工作、产品和环境。它不是强迫人保持规定姿势的技术，而是检查人、任务、工具、信息、节奏与场所怎样相互作用，再为安全和有效表现重新设计整个系统。那张获奖工作台围绕一个无人真正拥有的平均身体，塑造了一个从未真正发生的平均瞬间。"
+      ],
+      "conceptName": "Ergonomics",
+      "conceptNameZh": "人体工学",
+      "explanationParagraphs": [
+        "Ergonomics applies knowledge of human abilities, variation, and limitations to the design of tasks, products, workplaces, and systems. It considers physical demands alongside perception, cognition, organisation, environment, duration, and recovery.",
+        "Its aim is not merely comfort or correct posture. It seeks a better fit between people and systems so that safety, wellbeing, reliability, and performance can improve together."
+      ],
+      "explanationParagraphsZh": [
+        "人体工学把关于人类能力、差异与限制的知识用于任务、产品、工作场所和系统设计。它在身体要求之外，也考察感知、认知、组织、环境、持续时间和恢复机会。",
+        "它的目标不只是舒适或所谓正确姿势，而是改善人与系统的适配，使安全、福祉、可靠性和表现能够共同提高。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0212-design-constraints",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0212",
+      "fieldTitle": "Fashion interior and industrial design",
+      "fieldTitleZh": "时尚、室内与工业设计",
+      "title": "Three Materials Before the Storm",
+      "titleZh": "暴风前的三种材料",
+      "summary": "A lantern competition becomes serious only after the harbour forbids the materials that made the first winner impossible to repair.",
+      "summaryZh": "港口禁用那些使首个冠军无法维修的材料后，一场灯具竞赛才真正变得严肃。",
+      "storyParagraphs": [
+        "The harbour offered a silver prize for a storm lantern that could guide rescue boats through winter rain. The first brief said only that the lamp should be bright and beautiful. Master Faren produced a marvel: curved imported glass, six polished alloys, a clockwork shutter, and a sealed hinge made by one distant workshop. It shone like a small palace and won unanimously. The judges displayed it indoors until the first real storm arrived.",
+        "Salt spray clouded the mechanism, a gust cracked one glass panel, and the special hinge jammed half open. No harbour craft worker had the tool required to remove it. Faren sent for replacement parts, but the mountain road had closed. By dawn, the prize lantern sat dark while fishers hung ordinary oil lamps from hooks and shielded them with buckets. Beauty had answered a competition that the sea had never agreed to judge.",
+        "The harbour issued a second brief. The lamp had to remain visible in driving rain, burn for twelve hours, open with gloved hands, and be repairable beside the quay. Its body could use only three materials already stocked locally. Designers protested that the rules had abolished creativity. Apprentice Nia instead marked each demand on the workshop wall. She discovered that the restrictions did not specify a shape, a joining method, or whether one part could perform several functions.",
+        "Her first model used folded iron sheet, mica panels, and common wire pins. A deep hood protected the flame but starved it of air. Wider vents fed it and also admitted wind. Nia turned the upper seam into a narrow labyrinth: air could change direction through it while direct rain could not. She folded the sheet edges to stiffen the body instead of adding a fourth reinforcing material, and made every wire pin removable with the mariner's pliers already hanging on the quay.",
+        "In testing, heat expanded a mica panel until it split. Nia enlarged its slot and let the same clearance serve as an air inlet. Another entrant secretly used imported adhesive to stop rattling; his lamp survived the first hour but could not be opened when soot covered the wick. Nia's lantern was not the brightest in calm weather. In the storm tunnel, it remained bright enough, could be serviced in minutes, and returned to use after every deliberate break.",
+        "Nia had designed through constraints: requirements and limits that define the feasible space within which a solution must work. Some constraints come from safety, users, materials, cost, environment, or law; others are assumptions that should be challenged. Productive constraints expose trade-offs and can provoke parts to do more than one job, but arbitrary limits can also damage a design. The craft lies in identifying which boundaries are real, testing their interactions, and finding freedom inside the storm rather than pretending there is no storm."
+      ],
+      "storyParagraphsZh": [
+        "港口悬出银奖，征集一盏能在冬季风雨中引导救援船的暴风灯。第一份要求只写着明亮、漂亮。法伦大师做出一件奇观：弯曲进口玻璃、六种抛光合金、钟表式遮光机构，还有只能由远方工坊制造的密封铰链。它像一座小宫殿般发光，全票获胜。评委把它陈列在室内，直到第一场真正的暴风抵达。",
+        "盐雾蒙住机构，阵风震裂一块玻璃，特殊铰链卡在半开位置。港口没有工匠拥有拆卸它的工具。法伦派人索取备件，山路却已封闭。天亮时，获奖灯具一片漆黑，渔民只好把普通油灯挂上钩，再用桶替它们挡雨。美回应了一场竞赛，海却从未同意按那套标准裁判。",
+        "港口发出第二份要求：灯必须在横雨中可见，连续燃烧十二小时，戴手套也能打开，并可在码头边维修；灯体只能使用本地已有的三种材料。设计师抗议规则消灭了创造力。学徒妮娅却把每项要求写上墙。她发现，限制没有规定形状、连接方式，也没有规定一个部件不能同时承担多项功能。",
+        "她的第一版使用折叠铁片、云母窗和普通铁丝销。深灯罩保护火焰，也让它缺氧；扩大通风口补进空气，又让风灌入。妮娅把上方接缝折成狭窄曲道，空气可以转弯通过，雨水却不能直入。她折叠铁片边缘增加刚度，不再引入第四种加固材料，并让所有铁丝销都能用码头现成的水手钳拆下。",
+        "测试时，热胀使一块云母裂开。妮娅扩大卡槽，让同一段余量兼作进气口。另一名参赛者偷偷用进口黏合剂消除震动，他的灯撑过第一小时，却在灯芯积灰时无法打开。妮娅的灯在静风中不是最亮，在风暴通道里却始终足够明亮，几分钟就能维护，每次被故意损坏后都能重新投入使用。",
+        "妮娅是在设计约束中工作：要求与限制共同划出方案必须有效的可行空间。有些约束来自安全、使用者、材料、成本、环境或法律，有些则只是应被质疑的假设。有效约束会暴露取舍，也可能迫使一个部件承担多重功能；任意限制同样会伤害设计。真正的技艺在于识别哪些边界真实存在，检验它们怎样相互作用，并在风暴之内找到自由，而不是假装风暴不存在。"
+      ],
+      "conceptName": "Design constraints",
+      "conceptNameZh": "设计约束",
+      "explanationParagraphs": [
+        "Design constraints are requirements or limits that bound possible solutions, including user needs, safety rules, physical conditions, available materials, manufacturing, cost, time, and regulation. Their interactions reveal trade-offs and define what counts as a viable design.",
+        "Constraints can stimulate invention when they represent real conditions, but they should not be accepted blindly. Designers distinguish fixed requirements from negotiable assumptions, test conflicts among them, and revise the brief as evidence changes."
+      ],
+      "explanationParagraphsZh": [
+        "设计约束是限定可能方案的要求或边界，包括使用者需求、安全规则、物理条件、可用材料、制造方式、成本、时间与法规。它们之间的相互作用会暴露取舍，并界定什么才算可行设计。",
+        "代表真实条件的约束能够激发创造，但不应被盲目接受。设计者需要区分固定要求与可协商假设，检验它们之间的冲突，并随证据变化修订任务定义。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0213-visual-hierarchy",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0213",
+      "fieldTitle": "Fine arts",
+      "fieldTitleZh": "美术",
+      "title": "The Wall Where Every Figure Shouted",
+      "titleZh": "每个人都在喊的墙",
+      "summary": "A mural gives every guild equal brilliance and leaves the city unable to tell where its own founding story begins.",
+      "summaryZh": "一幅壁画让每个行会同样耀眼，整座城市却再也看不出自己的建城故事从哪里开始。",
+      "storyParagraphs": [
+        "Painter Elian received the longest wall in the assembly hall for a mural of the city's founding. Twelve guilds funded it, and each demanded equal honour. The bakers wanted every loaf visible, the shipwrights requested gold on every tool, and the archivists insisted that no written name be smaller than another. Elian obeyed. He gave each figure the same height, each colour the same intensity, every edge the same sharpness, and every object an equal share of detail.",
+        "The finished wall glittered. It also refused to begin. Visitors looked left, right, and back again without finding the storm, the landing, or the moment the first shelter was raised. A guide had to point with a pole while explaining the scene. The guilds praised their individual sections but complained that the founding itself felt absent. Elian responded by adding brighter gold to the central captain. The new shine competed with twelve other patches of gold and disappeared among them.",
+        "One evening, the hall keeper covered half the wall with dust sheets before repairing a window. Through the remaining opening, Elian noticed that a single pale sail against a dark sky held attention more strongly than the captain's jewellery. The contrast created a first glance; the sail's diagonal led toward the figures pulling a rope; their repeated bent backs carried the eye to the shelter. The image had begun to form a route only because much of its noise was temporarily hidden.",
+        "Elian repainted without removing any guild. He enlarged the storm-dark sea and reserved the lightest value for the sail. Secondary figures shared quieter colours and softer edges. Repeated ropes linked distant groups, while open areas separated major actions. Names remained legible near their guilds, but the founding oath occupied the position where converging gestures and architectural lines met. Viewers could enter through the storm, move through collective labour, and arrive at the oath without a guide's pole.",
+        "The jewellers protested that softer edges made them less important. Elian invited them to stand at three distances. Up close, their tools retained fine detail; across the hall, they joined a larger rhythm. Equal civic worth had never required equal visual force at every scale. In fact, when every element demanded the first glance, none could sustain it, and the relation among them vanished. The mural honoured the guilds more clearly once it stopped making all of them shout at once.",
+        "Elian had established visual hierarchy: the ordering of attention and perceived importance through contrast, scale, position, spacing, colour, detail, direction, and other visual relations. Hierarchy helps viewers decide where to look first, what comes next, and how parts belong to a whole. It does not prove that the largest or brightest subject is morally superior. It is an expressive structure, and its meaning depends on what the artist chooses to emphasise, subordinate, connect, or leave quiet."
+      ],
+      "storyParagraphsZh": [
+        "画家埃利安得到议事厅最长的一面墙，要绘制城市建立的故事。十二个行会共同出资，也都要求同等荣誉。面包师希望每只面包清晰可见，造船匠要求每件工具都贴金，档案员则坚持所有姓名一样大。埃利安全部照办：人物等高，颜色同样强烈，每条边缘同样锐利，每件物品都得到同等细节。",
+        "完成的墙面光芒四射，却拒绝开始。访客左右来回看，找不到暴风、登陆，也找不到第一座庇护所被立起的时刻。讲解员只能拿长杆指着说明。各行会都称赞自己的部分，同时抱怨建城本身仿佛缺席。埃利安给中央船长加上更亮金色，那片新光却与另外十二处金光竞争，最后消失在它们之间。",
+        "一天傍晚，管理员维修窗户，用防尘布盖住半面墙。透过剩余开口，埃利安发现，暗色天空前的一面浅帆比船长珠宝更能抓住注意。对比形成第一眼，帆的斜线把视线引向拉绳的人，弯曲背影的重复又把目光带到庇护所。只有当大部分噪声被暂时遮住，图像才开始出现路线。",
+        "埃利安重新上色，却没有移走任何行会。他扩大风暴中的暗海，把最亮明度只留给船帆；次要人物使用更安静的颜色与柔和边缘；重复绳索连接远处分组，开放区域则分隔主要行动。姓名仍在各自行会旁清晰可读，建城誓言却落在手势与建筑线条共同汇聚的位置。观众能从风暴进入，经过协作劳动，最终抵达誓言，不再需要长杆。",
+        "珠宝匠抗议，柔和边缘让他们显得不重要。埃利安请他们分别站在三种距离观看。近处，工具仍保留精细纹理；大厅另一端，它们则加入更大的节奏。平等的城市价值从来不要求每种尺度上都拥有同等视觉力量。事实上，当每个元素都争抢第一眼，谁也无法留住它，元素之间的关系也随之消失。壁画停止让所有人同时叫喊以后，反而更清楚地尊重了所有行会。",
+        "埃利安建立的是视觉层级：利用对比、尺度、位置、间距、颜色、细节、方向等视觉关系，安排注意顺序与感知重要性。层级帮助观众判断先看哪里、接着看什么，以及局部怎样归入整体。它并不证明最大或最亮的对象在道德上更重要，而是一种表达结构；其意义取决于艺术家选择强调、弱化、连接或留白什么。"
+      ],
+      "conceptName": "Visual hierarchy",
+      "conceptNameZh": "视觉层级",
+      "explanationParagraphs": [
+        "Visual hierarchy structures the order in which elements attract attention and are understood. Artists and designers create it through relationships of scale, contrast, value, colour, position, spacing, detail, direction, repetition, and grouping.",
+        "Hierarchy makes complex compositions legible, but it is never value-free: emphasis shapes interpretation. Equal social or conceptual importance does not require identical visual prominence, and prominence itself should not be mistaken for moral worth."
+      ],
+      "explanationParagraphsZh": [
+        "视觉层级组织元素吸引注意和被理解的顺序。艺术家与设计者通过尺度、对比、明度、颜色、位置、间距、细节、方向、重复和分组之间的关系来建立它。",
+        "层级使复杂构图可以阅读，但强调会塑造解释，因此并非价值中立。社会或概念上的同等重要不要求完全相同的视觉突出程度，突出本身也不应被误认成道德价值。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0213-negative-space",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0213",
+      "fieldTitle": "Fine arts",
+      "fieldTitleZh": "美术",
+      "title": "The Space Between Two Hands",
+      "titleZh": "两只手之间的空处",
+      "summary": "A painter fills every inch of a farewell scene until an accidental erasure gives the departure somewhere to happen.",
+      "summaryZh": "一名画家把告别场景的每寸画面都填满，直到一次意外擦除终于给离别腾出发生的位置。",
+      "storyParagraphs": [
+        "Mira was commissioned to paint the departure of the winter fleet for the harbour memorial. She filled the canvas with everything witnesses remembered: sailors on the rails, families on the quay, gulls, ropes, baskets, banners, wet cobbles, and a governor raising his hat. At the centre, a mother and her grown son reached toward one another across the gangway. Their fingers almost touched. Every face carried an expression, yet the patron said the scene felt crowded rather than sorrowful.",
+        "Mira intensified the farewell. She reddened eyes, bent mouths, added a dropped glove, and painted a child clinging to a post. The emotion became louder and less convincing. Viewers catalogued the details without feeling the ship pull away. The mother and son were surrounded by so much evidence of grief that no distance remained between them. Even the strip of sea had been occupied by gulls and reflected flags.",
+        "While removing a badly painted official, Mira's cloth slipped across the centre. It erased part of the gangway, a sailor's shoulder, and the nearly touching fingers. A pale wedge of underpainting opened between the two hands. Mira froze. For the first time, the eye crossed an interval before reaching the son. The empty shape narrowed near the fingers, widened toward the water, and seemed to carry the ship away more strongly than any painted wave.",
+        "She began attending to unoccupied shapes as carefully as to figures. She quieted the sky around the mast, opened a channel of water between vessel and quay, and simplified the gaps among watching bodies so they formed a rhythm rather than accidental holes. A small untouched triangle beside the mast now steadied the entire upper half. The remaining people became more distinct because the surrounding intervals gave their gestures direction. What was not painted started organising what was.",
+        "The patron mistook the pale wedge for unfinished work and ordered the city crest placed inside it. Mira painted the crest on a removable panel and set it over the gap. The two hands immediately became decorations on either side of an emblem; the departure collapsed into ceremony. When she removed the panel, tension returned. The area was not valuable merely because it was blank. Its contour, scale, position, and relation to the figures made absence active.",
+        "Mira had composed with negative space: the areas around, between, or within depicted forms that participate in the image's structure. Negative space need not be white or empty; it may contain sky, ground, shadow, or quiet texture. By shaping figure and ground together, an artist can create balance, legibility, rhythm, and meaning. A vacant area is not automatically expressive, but the interval between two hands can become the precise form through which separation is seen."
+      ],
+      "storyParagraphsZh": [
+        "米拉受托为港口纪念堂绘制冬季船队离岸。她把见证者记得的一切都填进画布：栏杆上的水手、码头上的家人、海鸥、绳索、篮筐、旗帜、湿石路，还有举帽致意的总督。中央，一位母亲与成年儿子隔着跳板伸手，指尖几乎相触。每张脸都有表情，委托人却说画面只显拥挤，并不悲伤。",
+        "米拉加强告别。她画红眼眶，压弯嘴角，添上一只掉落的手套和抱住木桩的孩子。情绪越来越响，也越来越不可信。观众忙着清点细节，感受不到船正在离开。母子周围堆满悲伤证据，彼此之间反而没有距离；连那一小条海面也被海鸥与旗帜倒影占据。",
+        "米拉擦去一名画坏的官员时，布意外滑过中央，带走部分跳板、一名水手的肩膀和那对几乎相触的手指。两只手之间露出一块浅色底层。米拉停住了。视线第一次必须跨过一段间隔才能抵达儿子。空处在指尖附近收窄，朝水面逐渐展开，推动船离开的力量竟比任何浪花都强。",
+        "她开始像照顾人物一样照顾未被占据的形状：让桅杆周围的天空安静下来，在船与码头间打开一条水路，又简化旁观者身体间的间隙，使它们形成节奏而非偶然孔洞。桅杆旁一个未着色的小三角稳住了整个上半部。剩余人物反而更清楚，因为周围间隔给手势指明方向。没有被画出的部分开始组织已经被画出的部分。",
+        "委托人把浅色空处当成未完成，命令在那里加上城徽。米拉先把城徽画在可拆面板上，盖住间隔。两只手立刻变成徽章两侧的装饰，离别重新塌缩成典礼。取下面板，张力又回来。那片区域并非只因空白而有价值，是它的轮廓、尺度、位置和人物关系让缺席具有行动。",
+        "米拉运用的是负空间：图中形体周围、之间或内部那些共同参与结构的区域。负空间不必是白色或空无，也可以包含天空、地面、阴影或安静纹理。艺术家把图与底一起塑造，便能建立平衡、可读性、节奏和意义。一块空地不会自动变得深刻，但两只手之间的间隔，可以成为让人真正看见分离的准确形状。"
+      ],
+      "conceptName": "Negative space",
+      "conceptNameZh": "负空间",
+      "explanationParagraphs": [
+        "Negative space consists of the areas around, between, and within positive forms. These areas have shape, proportion, rhythm, and visual weight, and they influence figure-ground relationships, balance, emphasis, and legibility.",
+        "It is not synonymous with a blank white background or with minimalism. Negative space becomes meaningful through its specific relation to depicted forms and to the composition as a whole."
+      ],
+      "explanationParagraphsZh": [
+        "负空间是正形周围、之间和内部的区域。这些区域拥有形状、比例、节奏与视觉重量，会影响图底关系、平衡、重点和可读性。",
+        "它不等同于空白白底，也不等同于极简主义。负空间只有在与所描绘形体及整体构图的具体关系中，才形成意义。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0213-medium-specificity",
+      "batchId": "batch-002",
+      "categoryCode": "02",
+      "fieldCode": "0213",
+      "fieldTitle": "Fine arts",
+      "fieldTitleZh": "美术",
+      "title": "The Rain That Refused to Become Stone",
+      "titleZh": "不肯变成石头的雨",
+      "summary": "A watercolourist orders stone to reproduce every translucent wash and learns that translation begins where imitation fails.",
+      "summaryZh": "一名水彩画家命令石头复制每层透明水色，最终发现转化恰好从模仿失败之处开始。",
+      "storyParagraphs": [
+        "Court painter Aro was famous for a watercolour of rain entering a bamboo garden. Pale washes floated through darker ones; edges dissolved where wet pigment met wet paper; a second glance revealed roofs behind the mist. The palace asked for the image on an outdoor stone wall so it would survive for generations. Aro gave carver Sena the painting and instructed her to reproduce every mark exactly.",
+        "Sena traced the bamboo, cut shallow outlines, polished the mist smooth, and rubbed thin colour into the surface. From a distance, the relief resembled a stiff copy. In sunlight, the translucent layers became flat stains. During the first rain, pigment ran from the polished stone, collecting in grooves like dirty tears. Aro accused Sena of failing to preserve the softness. Sena replied that the paper had performed half the original painting, and the wall was not paper waiting to improve.",
+        "She placed a chisel in Aro's hand. A shallow cut vanished under noon light and deepened at dusk; a rough plane held shadow while a polished ridge shed water. Viewers moving along the wall saw forms appear and recede. Stone offered weight, depth, touch, changing shadow, weather, and endurance, but it would not bleed colour through fibres it did not possess. Aro had treated the visible result of one process as an ornament transferable without that process.",
+        "They began again from the event rather than the marks. Sena carved bamboo as alternating ridges that bent across the joints between blocks. Recessed planes gathered darkness like approaching rain. Narrow channels accepted real water and carried it diagonally through the garden, while projecting leaves cast shadows that shifted with the sun. The wall no longer looked like Aro's watercolour. During a storm, however, it produced the same movement from clear air into layered rain.",
+        "Aro later tried to paint Sena's relief. His first grey copy recorded every contour and lost the wall's changing presence. He then let transparent washes pool differently across rough and smooth paper, using drying time to separate near stone from distant shadow. The painting did not pretend to have weight. It used fluid colour, absorbency, and sequence to create a temporal experience the wall could not. Each work approached the same garden by accepting a different set of powers.",
+        "Their lesson concerned medium specificity: the way a medium's material properties, processes, conventions, and conditions shape what it can express and how it is experienced. Attention to specificity does not require artistic purity or forbid hybrid work. It asks creators to understand what changes when an idea moves among paper, pigment, stone, sound, screen, or body. Translation becomes inventive when it does not disguise those differences, but lets each medium answer in the language its substance makes possible."
+      ],
+      "storyParagraphsZh": [
+        "宫廷画家阿洛以一幅雨入竹园的水彩闻名。浅色水层漂进深色水层，湿颜料在湿纸上相遇时边缘溶开，第二眼才能看出雾后的屋顶。宫廷希望把它做成户外石墙，保存数代。阿洛把画交给石匠塞娜，要求每一道痕迹都精确复制。",
+        "塞娜描出竹子，刻下浅轮廓，把雾所在处磨平，再将稀薄颜色擦入石面。远看像一张僵硬摹本，日光下的透明层却成了平坦污迹。第一场雨里，颜料从光滑石面流下，积在沟槽中如浑浊泪痕。阿洛责怪她没有保存柔软，塞娜回答，原画有一半是纸完成的，而石墙并不是一张等待改进的纸。",
+        "她把凿子放进阿洛手中。浅刻在正午光线下消失，黄昏时又加深；粗糙平面留住阴影，抛光棱线让水滑落。观众沿墙移动，形体随之出现又退去。石头能够提供重量、深度、触感、变化阴影、风化与耐久，却不会让颜色渗进自己并不存在的纤维。阿洛把一种过程产生的视觉结果，当成了可以脱离过程搬运的装饰。",
+        "他们不再从笔痕开始，而从那场雨开始。塞娜把竹子刻成跨越石块接缝的交替棱线，凹面聚起如雨将至的暗色，窄水道接住真实雨水，让它斜穿花园，突出的叶片则投下随太阳移动的阴影。石墙不再像阿洛的水彩，可当暴雨来临，它同样完成了空气从清晰进入层层雨幕的运动。",
+        "后来，阿洛反过来画塞娜的浮雕。第一张灰色摹本记录所有轮廓，也失去墙面不断变化的存在感。第二次，他让透明色在粗细不同的纸面上以不同方式积聚，用干燥时间分开近处石面与远处阴影。画不再假装拥有重量，而利用流动颜色、吸水性和先后顺序，创造石墙无法提供的时间经验。两件作品接受不同能力，才各自抵达同一座花园。",
+        "他们理解的是媒介特性：一种媒介的材料属性、制作过程、惯例与呈现条件，怎样塑造它能够表达什么，以及作品如何被体验。重视特性不要求艺术保持纯粹，也不禁止混合媒介；它要求创作者理解一个想法从纸、颜料、石头、声音、屏幕或身体之间移动时，究竟改变了什么。转化不掩饰这些差异，而让每种媒介用自身物质允许的语言回答，才真正具有创造性。"
+      ],
+      "conceptName": "Medium specificity",
+      "conceptNameZh": "媒介特性",
+      "explanationParagraphs": [
+        "Medium specificity refers to the distinctive possibilities and limits created by a medium's materials, processes, conventions, modes of display, and forms of audience experience. These conditions shape both artistic decisions and the meanings a work can produce.",
+        "The concept need not prescribe purity or reject mixed media. It is most useful as a question: what does this medium make possible, resist, or transform, and what is gained or lost when a work moves into another one?"
+      ],
+      "explanationParagraphsZh": [
+        "媒介特性指一种媒介的材料、过程、惯例、展示方式和观众体验所产生的独特可能与限制。这些条件共同塑造艺术决定，也塑造作品能够生成的意义。",
+        "这个概念不必主张纯粹性或拒绝混合媒介。它更适合作为一个问题：这种媒介允许、抵抗或转化什么，而作品进入另一种媒介时又获得或失去什么？"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

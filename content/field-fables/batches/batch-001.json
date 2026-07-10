@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-001",
+  "articles": [
+    {
+      "id": "0011-prerequisite-structure",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0011",
+      "fieldTitle": "Basic programmes and qualifications",
+      "fieldTitleZh": "基础课程与资格",
+      "title": "The Lesson Above the Knot Room",
+      "titleZh": "绳结教室楼上的课",
+      "summary": "A gifted chart student discovers why the simplest room in the academy stands beneath every advanced lesson.",
+      "summaryZh": "一名擅长海图的学生终于明白，学院里最简单的教室为什么位于所有高阶课程之下。",
+      "storyParagraphs": [
+        "At the Grey Cape navigation school, the knot room occupied the ground floor. Its walls held nothing impressive: lengths of hemp, iron rings, wet gloves, and three posts rubbed smooth by generations of hands. The chart room was upstairs, bright with brass instruments and maps stitched in blue silk. When new students were assigned to both rooms, Luan asked to skip the ground floor. He could name every current in the bay and calculate a vessel's position from two stars. Spending a month tying rope around a post felt like walking backward. The head instructor looked at his entrance score and allowed the exception.",
+        "For the first six weeks, the decision appeared wise. During tabletop exercises, assistants fixed the model buoys while Luan drew routes between them. He found shorter passages than older students and corrected a lecturer's tide calculation. His maps were pinned beside the stairwell, one floor above the smell of tar and rope. Whenever he passed the knot room, he heard beginners counting turns under their breath and climbed faster.",
+        "The winter examination took place outside. Each student had to guide a small cutter through fog by setting signal lamps along a practice channel. Luan plotted the route in minutes, but the assistant who normally secured his lines had been sent to another boat. He wrapped the first lamp rope twice around the rail and pulled until it felt firm. Halfway across the channel, the line loosened under changing tension. One lamp struck the hull, a second turned away from the channel, and the following cutter steered toward the mud bank. Luan returned furious with the rope and asked for better equipment.",
+        "Two days later, a squall hit the school. Students were ordered to close the storm shutters and rig a pulley for lifting water barrels. Luan knew exactly how the wind would load the western wall, yet his fastening jammed when wet and could not be released. At the pulley, he used so many turns that the rope bit into itself. The barrels remained on the quay while a beginner from downstairs freed the line with one pull. This time there was no map to blame and no assistant to complete the missing movement.",
+        "The instructor placed Luan's finest chart on a workbench and asked him to trace everything the route required before a ship could follow it. A mark on the map required a lamp; a lamp required a line; a line required a fastening that would hold under one load and release under another. Luan went downstairs. He learned why the same rope behaved differently when wet, how a knot carried force through its turns, and how to test one with numb fingers. Weeks later, he repeated the fog passage. His route was no less elegant, but now every blue mark remained attached to the world it claimed to describe.",
+        "At graduation, Luan noticed that the school had been built like its curriculum: the chart room literally rested on the knot room. The arrangement expressed a prerequisite structure. Complex performance depends on component knowledge and skills that must already be available when attention is occupied by a harder task. A learner can sometimes appear advanced while another person, a calm setting, or a prepared tool quietly supplies the missing foundation. The gap becomes visible only when conditions change and the learner must carry the whole task alone."
+      ],
+      "storyParagraphsZh": [
+        "灰角航海学校的一楼是绳结教室。墙上没有什么体面的东西，只有麻绳、铁环、湿手套，以及被几代学生磨亮的三根木桩。二楼的海图室却摆着黄铜仪器，墙上挂着用蓝线缝出的航道图。新生原本要同时进入两间教室，陆安却申请跳过一楼。他能说出海湾里每一道洋流，也能凭两颗星算出船位；花一个月把绳子绑在木桩上，在他看来像是在倒退。总教员看过他的入学成绩，批准了例外。",
+        "最初六周，这个决定看起来十分正确。桌面演习时，助教替他固定模型浮标，陆安负责在它们之间画出航线。他找到了比高年级学生更短的通道，还纠正过讲师的一处潮汐计算。他的海图被钉在楼梯旁，正好高过一楼焦油与麻绳的气味。每次经过绳结教室，他听见初学者低声数着绕绳圈数，便把脚步迈得更快。",
+        "冬季考试被安排在真正的水面上。学生要在浓雾里驾驶小艇，沿练习航道布置信号灯。陆安几分钟就画好路线，可平时替他固定绳索的助教被调去了另一条船。他把第一盏灯的绳子在栏杆上绕了两圈，用力一拉，觉得已经很牢。小艇走到航道中段，绳结在不断变化的拉力下松开了。一盏灯撞上船身，另一盏转离航道，跟在后面的艇朝泥滩驶去。陆安气冲冲地返航，认定是绳子太差，要求更换器材。",
+        "两天后，学校遇到一场骤风。学生们奉命关紧防风板，再搭起滑轮把水桶吊上塔楼。陆安很清楚西墙会怎样受力，绑好的绳子却在淋湿后卡死，既收不紧，也解不开。到了滑轮旁，他绕了太多圈，麻绳互相咬住，水桶仍留在码头。一名一楼的初学者走过来，只拉了一下正确的绳头，整套装置便松开了。这一次，没有海图可以责怪，也没有助教替他补上那双缺席的手。",
+        "总教员把陆安最漂亮的海图铺在工作台上，让他逐项指出，一条画好的路线要靠什么才能真正被船只使用。图上的记号需要信号灯，信号灯需要绳索，绳索需要一种在受力时能守住、在需要时又能解开的系法。陆安回到了一楼。他开始辨认湿绳与干绳的差别，观察力量怎样沿着每一圈传递，还要戴着冻硬的手套完成检验。几周后，他重新进入浓雾。路线依然漂亮，只是这一次，图上的每一道蓝线都牢牢连在它声称要描述的世界上。",
+        "毕业那天，陆安才注意到，学校本身就像它的课程：海图室真的压在绳结教室之上。这种安排对应的是先备知识结构。复杂能力依赖若干更基础的知识与技能；当注意力被高难度任务占满时，这些基础必须已经能够被稳定调用。一个人有时看起来已经进入高阶阶段，只是因为助教、平静环境或预先准备好的工具替他补上了基础。条件一变，他必须独自承担完整任务，下面缺失的那一层才会显出来。"
+      ],
+      "conceptName": "Prerequisite structure",
+      "conceptNameZh": "先备知识结构",
+      "explanationParagraphs": [
+        "A prerequisite structure describes the dependency relationship within learning: later knowledge or performance relies on earlier components that must be sufficiently understood or automated. Foundations are not valuable because they are simple; they are valuable because advanced tasks consume attention and leave little capacity to reconstruct missing basics in the moment.",
+        "This does not mean every learner must follow one rigid sequence. Prior knowledge can be demonstrated in different ways, and some foundations can be learned alongside more complex work. The key question is whether the learner can independently call on the required components when the context becomes less supported or more demanding."
+      ],
+      "explanationParagraphsZh": [
+        "先备知识结构描述学习中的依赖关系：后续知识或复杂表现，需要建立在若干已经被充分理解、甚至能够熟练调用的基础成分上。基础之所以重要，不是因为它简单，而是因为高阶任务会占用大量注意力，使学习者很难在现场重新补造缺失的基本能力。",
+        "这并不意味着所有人都必须遵循一条僵硬、完全相同的顺序。先备能力可以用不同方式证明，有些基础也可以与复杂任务同步学习。真正需要检查的是：当支持减少、情境改变或任务难度上升时，学习者能否独立调用那些不可缺少的组成部分。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0011-mastery-learning",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0011",
+      "fieldTitle": "Basic programmes and qualifications",
+      "fieldTitleZh": "基础课程与资格",
+      "title": "The Clock That Refused the Bell",
+      "titleZh": "不肯听钟声的钟",
+      "summary": "A clock school moves every apprentice forward on time until one unfinished gear reaches the tower.",
+      "summaryZh": "钟表学校让所有学徒准时进入下一课，直到一枚没有学会的齿轮一路走进钟塔。",
+      "storyParagraphs": [
+        "The Bell School trained the clockmakers of seven towns. Its rule was admired for its order: every six days, the courtyard bell rang and every apprentice moved to the next bench. Six days for filing teeth, six for fitting springs, six for regulating the balance. No class waited for a slow hand. The guild could tell families exactly when a child would graduate, and the benches never stood empty.",
+        "Mira worked carefully but filed one side of each gear a fraction too deep. On the sixth day, her practice clock lost four minutes before noon. The bell rang anyway. At the spring bench she learned quickly, and her new scores hid the old weakness. When the class assembled a full mechanism, Mira compensated by tightening the spring. The clock kept time during inspection, then raced after two hours. Her teacher marked the final result in red and sent her onward with everyone else.",
+        "By winter, the class was repairing the western tower clock. Each apprentice contributed one part. Mira's gear passed a quick measurement because its average diameter was correct, but under load the uneven teeth struck the escapement. The tower stopped during market opening, restarted with a jump, and rang thirteen times. The mayor blamed the final assembly. The assembly teacher blamed the spring. Every bench had a signed sheet showing that its lesson had been completed on schedule.",
+        "An older clockmaker named Sorel removed the courtyard bell rope for one term. Apprentices still received new instruction every six days, but they did not leave a skill merely because the calendar moved. Each bench now had a small performance test, a repair period, a different explanation, and another attempt. Fast learners could begin an extension clock; those who needed longer stayed without being labelled failures. Mira returned to the filing bench and coated her gear with lampblack. As it turned, the rubbed places showed exactly where her hand leaned.",
+        "The mayor complained that the school could no longer promise a single graduation date. Sorel invited him to the tower in early spring. A storm had bent one tooth in the striking train. Several former top students proposed replacing the whole wheel. Mira listened to the uneven click, filed only the damaged face, and tested it under three loads before reinstalling it. The clock rang once, paused, and then continued through the hour without gaining a second. She had taken longer at one bench, but she no longer carried an unfinished lesson into every mechanism above it.",
+        "The school restored its bell, but changed what the sound meant. It announced new teaching, not automatic advancement. Movement depended on demonstrated understanding, useful feedback, correction, and another chance. This is mastery learning: time and support may vary, while the standard of learning remains clear. The tower clock had refused the school's old bell because a timetable can move a student to the next room, but it cannot make an unmastered gear fit."
+      ],
+      "storyParagraphsZh": [
+        "钟声学校为七座城镇培养钟表匠。它最受称赞的是秩序：每过六天，院子里的钟一响，所有学徒便换到下一张工作台。六天锉齿，六天装发条，六天校准摆轮。没有一班会等一双慢手，行会可以准确告诉每个家庭孩子何时毕业，所有工作台也永远不会空着。",
+        "米拉做事很仔细，却总把齿轮的一侧锉得稍深。第六天，她的练习钟不到中午已经慢了四分钟，院钟仍照常响起。到了发条工作台，她学得很快，新成绩盖住了旧问题。全班开始组装完整机芯时，她只好把发条拧得更紧来补偿。检查时钟走得很准，两小时后却越来越快。老师用红笔记下结果，仍让她与所有人一起前进。",
+        "入冬后，全班开始修理西侧钟塔。每个学徒负责一个零件。米拉的齿轮在快速测量中通过了，因为平均直径正确；真正受力时，那些深浅不一的齿却不断撞上擒纵机构。钟塔在开市时停住，突然又跳起来，一口气敲了十三下。市长责怪最后组装的人，组装老师责怪发条。每张工作台都拿出签过字的表格，证明自己的课程按时完成了。",
+        "老钟表匠索雷尔把院钟的拉绳拆了一个学期。学徒仍每六天接触新内容，却不再因为日历翻页就离开一项技能。每张工作台增加了现场检验、修正时间、另一种讲解和再次尝试。学得快的人可以制作额外的钟，尚未掌握的人则留下来继续，不会因此被贴上失败标签。米拉回到锉齿台，在齿轮表面涂上灯黑。齿轮一转，被磨亮的位置便准确显出她的手总往哪一边偏。",
+        "市长抱怨学校再也不能承诺统一的毕业日期。早春时，索雷尔请他登上钟塔。一场风暴压弯了报时轮的一枚齿，几名从前的高分学生主张更换整只轮盘。米拉先听那一声不均匀的咔嗒，只锉平受损的一面，再让齿轮承受三种不同负荷。重新装好后，钟敲了一声，停顿片刻，随后走完整个小时，一秒也没有多。她曾在一张工作台上停留得更久，却不再把一堂没学会的课带进上面的每一层机芯。",
+        "学校后来重新接上院钟，但改变了钟声的含义。它只宣布新的教学开始，不再自动宣布所有人已经学会。前进要以清楚表现、有效反馈、修正和再次尝试为依据。这就是掌握学习：允许学习时间和支持方式不同，同时保持明确的掌握标准。钟塔之所以不肯听从旧钟声，是因为课程表可以把学生送进下一间教室，却不能让一枚尚未学会的齿轮自动咬合。"
+      ],
+      "conceptName": "Mastery learning",
+      "conceptNameZh": "掌握学习",
+      "explanationParagraphs": [
+        "Mastery learning organizes progress around demonstrated understanding rather than a fixed amount of instructional time. Learners receive clear objectives, frequent checks, targeted correction, and further opportunities to succeed before foundational gaps are allowed to accumulate.",
+        "It does not mean lowering standards or letting study continue without limit. The standard should remain demanding and visible. What varies is the route, feedback, practice, and time needed to reach it."
+      ],
+      "explanationParagraphsZh": [
+        "掌握学习不是按固定教学时间自动推进，而是根据学习者是否真正表现出理解来安排进度。它强调清楚目标、频繁检查、针对性修正和再次成功的机会，避免基础缺口一路累积到更复杂的任务中。",
+        "它不等于降低标准，也不等于无限期拖延。掌握标准仍应明确并具有挑战性；可以变化的是抵达标准所需的路径、反馈、练习方式和时间。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0011-transfer-of-learning",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0011",
+      "fieldTitle": "Basic programmes and qualifications",
+      "fieldTitleZh": "基础课程与资格",
+      "title": "Beyond the Model River",
+      "titleZh": "模型河之外",
+      "summary": "The academy's best model-bridge builder meets a river that refuses to resemble the examination table.",
+      "summaryZh": "学院里最会搭模型桥的学生，遇见了一条拒绝长得像考试桌面的真河。",
+      "storyParagraphs": [
+        "At the bridge academy, final marks were decided on a twelve-foot model river. Every student received the same timber strips, the same clay banks, and iron weights stamped one through ten. Jian had memorized the winning designs from twenty years of examinations. He could look at a span, choose the matching truss, and place each brace before other students had sorted their tools. His bridges survived every numbered weight. Three years in a row, his name was carved into the academy rail.",
+        "His first commission was a footbridge for Reed Village. When Jian arrived, the river was low and narrow, almost easier than the model. He copied his strongest examination design, widened it by the scale written in his notebook, and promised completion before the autumn fair. Then rain fell in the hills. The water rose sideways into the soft bank, one support settled deeper than the other, and the perfectly familiar truss twisted. No beam broke, yet the bridge could no longer close against its landing.",
+        "Jian blamed the village clay and rebuilt with thicker timber. The second bridge held its shape, but the added weight pressed the same bank farther down. He ordered stone for both sides. During delivery, an old ferry worker asked why the upstream pier faced the current as if water always arrived straight. Jian answered that the academy river had never required another angle. The worker pushed a reed into the shallows; its tip bent toward a slow whirl behind the bend.",
+        "Jian returned to his examination notebooks and found they contained many completed bridges but almost no questions. His former tutor made him cover the drawings with blank paper. What forces must travel from the deck to the ground? Which conditions can change? Which dimensions matter, and which merely belong to one example? Jian began measuring the bank after rain, watching floating branches trace the current, and testing small foundations in wet clay. He did not discard the trusses he knew. He separated the principles inside them from the table on which he had learned them.",
+        "The third bridge looked unlike any prize design. One landing stood farther back on compact ground; the upstream pier turned slightly into the actual current; the deck allowed a small movement instead of fighting every shift. At the opening, the academy examiner frowned at its asymmetry. That winter the river flooded again. Mud covered the lower steps, one bank moved, and the deck settled by less than a finger's width. When the water withdrew, villagers crossed without waiting for a repair crew.",
+        "Jian had not solved Reed Village by remembering a better model. He had learned what could travel from one situation into another and what had to be rebuilt from local conditions. This is transfer of learning: using knowledge or skill beyond the context in which it was first acquired. Transfer is strongest when learners understand underlying relationships, notice meaningful differences, and practise deciding when an old method applies instead of merely reproducing its visible form."
+      ],
+      "storyParagraphsZh": [
+        "造桥学院的结业成绩由一条十二尺长的模型河决定。每名学生拿到同样的木条、同样的黏土河岸，以及刻着一到十的铁砝码。简记住了过去二十年所有获奖桥型。他看一眼跨度，就能挑出相应的桁架，在别人还没分好工具时装完斜撑。他的桥能承受每一枚编号砝码，名字连续三年被刻在学院栏杆上。",
+        "他的第一份真正委托来自芦苇村。简抵达时，河水又低又窄，看起来甚至比模型更容易。他照抄自己最稳固的考试设计，再按笔记里的比例放大，承诺秋季集市前完工。随后，山里下起大雨。河水斜着冲进松软河岸，一侧桥基沉得更深，熟悉得不能再熟悉的桁架随之扭转。没有一根梁断裂，桥面却再也接不上岸。",
+        "简把失败归咎于村里的黏土，第二次用了更粗的木材。新桥保持住了形状，增加的重量却让同一片河岸沉得更深。他又订来石料准备加固两侧。运料时，老摆渡人问他，为什么上游桥墩正对河水，好像水永远只会直着来。简回答，学院的模型河从来不需要别的角度。老人把一根芦苇插进浅水，芦苇尖却朝河湾后面一股缓慢的旋流弯去。",
+        "简重新翻开考试笔记，发现里面装满了已经完成的桥，却几乎没有问题。旧导师让他用白纸遮住所有图样：桥面承受的力量要怎样一路走进大地？哪些条件会改变？哪些尺寸代表真正关系，哪些只是某一道题的外形？简开始在雨后测量河岸，看漂来的树枝怎样勾出水流，在湿黏土里测试小型基础。他没有丢掉熟悉的桁架，而是把其中的原理从当初学习它们的桌面上分离出来。",
+        "第三座桥不像任何获奖模型。一侧桥台后退到更坚实的地面，上游桥墩稍稍转向真正的来水方向，桥面还允许很小的位移，不再抵抗每一次变化。开桥那天，学院考官皱眉看着它的不对称。那年冬天，河水再次漫涨，泥浆盖住低处台阶，一边河岸又有移动，桥面却只沉下不到一指宽。水退以后，村民没有等维修队，照常从桥上走过。",
+        "简解决芦苇村，靠的不是记住一座更好的模型，而是看清什么能够从旧情境带进新情境，什么必须根据当地条件重新建立。这就是学习迁移：把已经获得的知识或技能用于最初学习环境之外。真正稳定的迁移来自对底层关系的理解、对关键差异的识别，以及反复练习判断旧方法何时适用，而不是复制它表面的样子。"
+      ],
+      "conceptName": "Transfer of learning",
+      "conceptNameZh": "学习迁移",
+      "explanationParagraphs": [
+        "Transfer of learning occurs when knowledge or skill acquired in one setting improves performance in another. Near transfer involves similar tasks; far transfer requires recognizing a deeper principle across situations that may look quite different.",
+        "Transfer is not automatic. It becomes more likely when learners compare cases, explain why a method works, encounter varied conditions, and practise choosing rather than merely repeating a procedure."
+      ],
+      "explanationParagraphsZh": [
+        "学习迁移是指在一种情境中获得的知识或技能，能够改善人在另一种情境中的表现。近迁移发生在相似任务之间，远迁移则要求学习者穿过不同外表，识别可复用的深层原理。",
+        "迁移并不会自动发生。比较不同案例、解释方法为什么有效、接触变化条件，以及练习判断何时使用某种方法，都比单纯重复步骤更能促进迁移。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0021-orthographic-mapping",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0021",
+      "fieldTitle": "Literacy and numeracy",
+      "fieldTitleZh": "读写与计算能力",
+      "title": "The Signs That Would Not Stay Still",
+      "titleZh": "总在变样的招牌",
+      "summary": "A courier who memorizes words as pictures discovers why every new hand makes the city unreadable again.",
+      "summaryZh": "一名把词语当图画记住的信使发现，为什么每换一种笔迹，整座城就会再次变得陌生。",
+      "storyParagraphs": [
+        "Neri became the fastest apprentice in the city courier house by memorizing signs. The fish market had a blue board shaped like a wave, the west gate used three tall strokes, and the magistrate's office began with a mark that resembled a hooked nose. Neri could match a sealed letter to fifty familiar boards without reading the smaller writing beneath them. The chief courier praised his remarkable visual memory and gave him the central route.",
+        "The method failed when the sign painter injured his hand. His daughter repainted the market boards in a narrower style, without the flourishes Neri had stored in memory. The west gate no longer looked like the west gate. Two shop names that had always seemed different now shared almost the same outline. Neri delivered a spice invoice to a candle maker and carried a summons past the courthouse twice. He spent that evening copying whole signs more carefully, convinced he simply needed sharper pictures in his head.",
+        "A month later, winter rain blurred several boards. Neri could still recognize the blue fish, but not a temporary notice beside it announcing that deliveries had moved to the south hall. He guessed from the first large mark and joined the wrong queue. By noon, three carts blocked the market entrance. The chief courier took away the central route. Neri had memorized more signs than any apprentice, yet a new word, a new hand, or a missing ornament returned him to guessing.",
+        "The retired typesetter across the lane offered him a different exercise. She said a street name aloud and made Neri break it into its smallest sound movements. Then she placed letter tiles beneath those sounds and asked what changed when one sound was replaced. Neri disliked the slowness. He already knew the name as a single shape. But after several evenings, he could hear where the spoken word turned and see which marks consistently carried those turns. The letters stopped being decorative edges around a picture.",
+        "The typesetter then mixed familiar and invented shop names in plain black print. Neri could not retrieve the new names from memory because he had never seen them. He sounded through one, joined the parts, and reached a meaning he recognized from speech. The first attempts were laborious. Repeated encounters became quicker until several words seemed to arrive at once, without conscious sounding. When the sign painter returned with yet another style, Neri noticed the difference but did not lose the city.",
+        "What changed was not the size of Neri's picture collection. Written forms had become bonded to their pronunciations and meanings through orthographic mapping. In alphabetic reading, this process draws on awareness of speech sounds and knowledge of how letters represent them; repeated successful connections allow words to be stored for rapid recognition. The familiar word eventually looks effortless, but the memory is supported by an ordered link among spelling, sound, and meaning, not by a photograph of its outline."
+      ],
+      "storyParagraphsZh": [
+        "内里靠记招牌，成了城里信使馆跑得最快的学徒。鱼市是一块像波浪的蓝牌，西门开头有三道高高的竖笔，执政官办公室的第一个记号像一只弯鼻子。内里不用读下面的小字，就能把密封信件送到五十块熟悉的牌子前。总信使夸他有惊人的图像记忆，把最重要的中央路线交给了他。",
+        "招牌画师伤了手以后，这个办法开始失灵。画师的女儿用更窄、更少花饰的笔法重画市场招牌，西门忽然不再像西门；两个从前轮廓完全不同的店名，现在看起来几乎一样。内里把香料账单送进蜡烛铺，又两次从法院门前带着传票走过。那晚，他更认真地临摹整块招牌，认定自己只是需要把脑中的图画记得更清楚。",
+        "一个月后，冬雨冲淡了几块木牌。内里仍认得蓝色的鱼，却读不出旁边临时加上的通知：货物改送南厅。他根据第一个大字猜了方向，排进错误队伍。中午前，三辆货车堵住了市场入口，总信使收回了他的中央路线。内里记住的招牌比任何学徒都多，可一遇到新词、新笔迹或少掉的花饰，他便重新回到猜测。",
+        "街对面的退休排字工给了他另一种练习。她先念出一个街名，让内里把它拆成最小的声音变化，再把字母木块排到这些声音下面，问他替换一个声音时，哪些字母也要跟着改变。内里嫌这种做法太慢，因为他早已把街名记成一个完整形状。几个晚上以后，他却开始听见口语中的转折，也看见哪些记号总在承担同一种声音。字母不再只是围在图画边缘的装饰。",
+        "排字工把熟悉店名和编造出来的新店名混在一起，全部用最普通的黑字印出。新词从未见过，内里无法从记忆里直接取出。他逐个辨认声音，再把它们合起来，终于抵达一个自己在口语中认识的意思。最初几次十分费力，重复成功以后，若干词开始像同时出现一样，不必再刻意拼读。招牌画师后来换了另一种笔法，内里看得出变化，却没有再次失去整座城市。",
+        "改变的不是内里收藏了更多词语图画，而是书写形式通过正字法映射，与发音和意义建立了稳定连接。在拼音文字阅读中，这个过程依赖对语音成分的觉察，以及对字母如何表示声音的认识；一次次成功连接，会让词语逐渐进入快速识别的长期记忆。熟词后来似乎可以毫不费力地被认出，但支撑这种熟练的不是轮廓照片，而是拼写、声音与意义之间有秩序的联系。"
+      ],
+      "conceptName": "Orthographic mapping",
+      "conceptNameZh": "正字法映射",
+      "explanationParagraphs": [
+        "Orthographic mapping is the process through which a written word becomes securely linked in memory to its pronunciation and meaning. In alphabetic systems, phonemic awareness and letter-sound knowledge allow the reader to connect the sequence of letters with the sequence of sounds in a known spoken word.",
+        "It is not simple visual memorization. Repeated decoding strengthens the bond until recognition becomes fast and apparently immediate, while still being supported by the internal structure of the word."
+      ],
+      "explanationParagraphsZh": [
+        "正字法映射是书面词形在记忆中与其发音和意义建立稳定联系的过程。在拼音文字体系中，音位意识和字母—声音知识，使读者能够把字母序列与熟悉口语词的声音序列对应起来。",
+        "它不是单纯记住词语外形。反复而成功的解码会不断加固这种联系，直到识别变得快速、近乎即时，但这种熟练仍然建立在词语内部结构之上。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0021-number-sense",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0021",
+      "fieldTitle": "Literacy and numeracy",
+      "fieldTitleZh": "读写与计算能力",
+      "title": "The Warehouse That Could Not Wait to Count",
+      "titleZh": "等不及数完的仓库",
+      "summary": "When floodwater enters a grain warehouse, an apprentice must judge quantity before the clerk can finish counting from one.",
+      "summaryZh": "洪水进入粮仓时，一名学徒必须在账房从一数到最后之前判断出数量。",
+      "storyParagraphs": [
+        "The North Granary trusted exact counting. Every morning, Clerk Oren touched each sack with a cane and called out the next number while an assistant marked the ledger. He disliked estimates. Ninety-seven was useful; 'about a hundred' was laziness wearing a respectable coat. His apprentice, Sia, was often scolded for looking across a room before beginning. She noticed rows, gaps, halves, and groups, but Oren insisted that every reliable answer start at one.",
+        "One market morning, a delivery note claimed that 102 sacks had arrived. The sacks stood in eight rows of twelve, with a short row at the door. Sia looked once and said the total could not be 102: ninety-six would fill the main block, and the short row held only four. Oren told her not to perform tricks and began tapping sacks. Halfway through, a merchant moved two to make space for a cart. Oren lost his place and started again. The final count was one hundred. He corrected the note but credited patience, not Sia's glance.",
+        "Spring rain brought a harder test. Water entered under the eastern doors while three barges waited outside. Each barge could safely take sixty sacks, but no one knew how long the lower rows would remain usable. Oren began his cane count. Sia saw twelve full stacks of twenty, three half-stacks, and a damaged cluster that should not be loaded. She proposed filling the barges evenly and keeping the remainder on the raised platform. Oren refused to release grain on an estimate.",
+        "A lower stack collapsed before he reached two hundred. The sequence broke, workers shifted sacks, and the water crossed the first chalk line. Sia placed four empty pallets in the yard. For every group of ten loaded sacks, a worker moved one marker stone onto the matching pallet. The crews could see whether the barges were near equal without stopping, while Oren used the ledger to verify each finished load. When the final gate closed, the three barges differed by no more than one sack, and the unsafe cluster remained ashore.",
+        "After the flood, Oren tested Sia with scattered beans, uneven piles, and numbers written in unfamiliar arrangements. She did not always answer exactly. Instead, she knew when an answer was impossible, which quantity was larger without calculating every unit, how ninety-eight related to one hundred, and how the same total could be regrouped to make a task easier. Her quick judgments did not replace the ledger. They told her what the ledger ought to be near, where an error might hide, and which calculation was worth doing first.",
+        "Oren eventually added a new column beside the exact count: expected range and grouping check. The granary had made room for number sense, an intuitive and flexible understanding of quantity, magnitude, numerical relationships, and useful representations. Exact calculation remained essential, but it was no longer blind. A person with number sense can estimate, compare, decompose, recognize unreasonable results, and move between forms; in a warehouse filling with water, those relationships can become visible before counting reaches the final sack."
+      ],
+      "storyParagraphsZh": [
+        "北粮仓只相信精确计数。每天早晨，账房奥伦用手杖碰过每一只粮袋，依次喊出数字，助手就在账本上落下一笔。他不喜欢估计。九十七才有用，“大约一百”只是给懒惰穿了一件体面外衣。学徒希娅常因为计数前先环顾整间仓库而挨训。她会先看行列、空缺、一半和成组数量，奥伦却坚持，可靠答案必须从一开始。",
+        "一个开市日，送货单声称运来了一百零二袋粮。粮袋排成八行，每行十二袋，门边还有一小排。希娅看了一眼便说不可能是一百零二：主体方阵装满是九十六，短排只有四袋。奥伦让她别表演小把戏，举起手杖逐袋点数。数到一半，商人为给货车让路挪动了两袋，他只好从头再来。最后答案是一百。他改正了货单，却把功劳归给耐心，而不是希娅的那一眼。",
+        "春雨带来了一次更难的考验。水从东门下方涌进来，三艘驳船等在外面，每艘可以安全装六十袋粮，没人知道低处粮袋还能撑多久。奥伦又开始敲手杖。希娅看见十二垛完整的二十袋、三垛半高粮袋，以及一组不该装船的受潮货。她建议把驳船均匀装满，剩余粮食转移到高台。奥伦拒绝根据估算放粮。",
+        "他还没数到两百，低处一垛粮袋便塌了。顺序被打断，工人开始搬动粮袋，水也漫过第一道粉笔线。希娅把四只空托盘放到院子里，每装十袋，就让工人把一颗标记石移到对应托盘上。大家不用停工，也能看见三艘船是否接近均分；奥伦则在每批装完后用账本核对。最后一道闸门关上时，三艘船彼此最多只差一袋，受潮的那组粮食也始终留在岸上。",
+        "洪水过后，奥伦用散落豆子、不均匀的小堆和陌生排列的数字考验希娅。她并不总能立即给出精确答案，却知道某个答案何时绝不可能，能在不逐个计算时判断哪个数量更大，也知道九十八离一百有多近，同一个总数怎样重新分组会更容易处理。她的快速判断没有取代账本，而是在告诉她，账本答案大致应落在哪里，错误可能藏在哪一段，哪一种计算最值得先做。",
+        "奥伦最终在精确数量旁增加了两栏：预期范围与分组核对。粮仓终于为数感留出了位置。数感是对数量、大小、数字关系和表示方式的直觉性、灵活理解。精确计算仍然重要，只是不再盲目。具备数感的人能够估计、比较、拆分、识别不合理结果，并在不同表示之间移动；当粮仓正在进水时，这些关系往往会在最后一袋被数到之前先显出来。"
+      ],
+      "conceptName": "Number sense",
+      "conceptNameZh": "数感",
+      "explanationParagraphs": [
+        "Number sense is a flexible understanding of quantities, magnitudes, numerical relationships, and representations. It supports estimation, comparison, decomposition, mental calculation, and the ability to notice that a result is implausible.",
+        "It is not a substitute for exact arithmetic. It guides and checks exact work by providing benchmarks, alternative groupings, and expectations about what a reasonable answer should look like."
+      ],
+      "explanationParagraphsZh": [
+        "数感是对数量、大小、数字关系和表示方式的灵活理解。它支持估计、比较、拆分、心算，也帮助人识别一个结果是否明显不合理。",
+        "数感不能替代精确运算。它通过提供基准、不同分组方法和合理结果的预期，为精确计算选择方向并进行核查。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0021-functional-literacy",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0021",
+      "fieldTitle": "Literacy and numeracy",
+      "fieldTitleZh": "读写与计算能力",
+      "title": "The Clerk at the Wrong Ferry",
+      "titleZh": "上错渡船的抄写员",
+      "summary": "A celebrated reader can pronounce every notice in the harbour but repeatedly fails to act on what it asks.",
+      "summaryZh": "一名备受称赞的读者能念出港口每张告示，却一次次做错告示要求人们完成的事。",
+      "storyParagraphs": [
+        "Teren won the civic reading prize by reciting twelve pages of harbour law without missing a word. He could pronounce old legal terms, preserve punctuation in his voice, and copy a decree in a hand so even that the lines looked ruled. The harbour office hired him as a junior clerk. On his first morning, the supervisor handed him a passenger notice and asked him to reach Gull Island before noon. Teren read the notice aloud with perfect dignity, folded it, and boarded the ferry named at the top.",
+        "The vessel carried him east, away from Gull Island. Beneath the ferry name, a table showed that the usual route operated only after the second high tide. A shaded box directed morning passengers to a temporary pier, while a small triangle linked to a note about market-day changes. Teren had read every sentence, but he had treated the page as a sequence of words rather than a tool for making a journey. He returned after dark and blamed the notice for hiding its most important message in different places.",
+        "The supervisor moved him to the grain desk. There he received an invoice listing thirty barrels, a delivery record listing twenty-eight, and a contract allowing a two-barrel loss only when the seal was broken before weighing. Teren copied all three documents into the ledger. He did not compare them or ask whether the condition applied. The merchant was paid for thirty barrels, the warehouse received twenty-eight, and the neat new ledger preserved the disagreement instead of resolving it.",
+        "An older clerk named Veya stopped asking Teren to read pages from the beginning. She placed a work order beside each document. What must be decided? Who produced this information? Which number, label, symbol, exception, or date changes the action? Teren learned to move through a page rather than merely down it. On the ferry notice he traced the relation among heading, timetable, map, and footnote. On the invoice he aligned quantities across documents and circled the condition that determined whether a difference was permitted.",
+        "A storm later closed two harbour mouths at different hours. The emergency notice included a paragraph, a colour-coded chart, a map, and an instruction that applied only to boats carrying animals. Messengers gathered around Teren, expecting another elegant recitation. Instead, he asked where each boat was going, marked the relevant row, checked the legend, and gave different crews different instructions. One captain challenged him, so Teren pointed to the source, condition, and time rather than repeating the whole notice. Every vessel reached an open channel.",
+        "Teren had always been able to decode print. What he had lacked was functional literacy: the ability to use written, numerical, and visual information to accomplish a purpose in a real context. It includes locating relevant information, integrating formats, interpreting conditions, judging sources, comparing claims, and turning understanding into action. Reading is not complete when the final word has been pronounced; sometimes it is complete only when the reader boards the right ferry."
+      ],
+      "storyParagraphsZh": [
+        "特伦因为一字不错地背读十二页港口法令，赢得了城市阅读奖。他能念准古老法律词汇，用声音保留每一个标点，抄出的公文整齐得像拿尺量过。港务办公室聘他做初级文书。上班第一天，主管递给他一张客运告示，让他中午前赶到鸥岛。特伦庄重地把告示从头读完，折好，登上最上方写着名字的那艘渡船。",
+        "船却载着他向东，离鸥岛越来越远。船名下方的时刻表写着，通常航线要等第二次高潮以后才运行；一个灰色方框让上午旅客改去临时码头，旁边的小三角又连接着集市日的变更说明。特伦读出了每一句话，却把整张纸当成依次排列的词，而不是帮助人完成旅程的工具。他天黑后才回来，抱怨告示把最重要的信息藏在不同角落。",
+        "主管把他调到粮食柜台。那里有一张写着三十桶的发票、一份写着二十八桶的入库单，以及一份合同：只有货物在称重前已经破封，才允许损失两桶。特伦把三份文件一字不差抄进账本，却没有比较它们，也没判断例外条件是否成立。商人收到三十桶的货款，仓库只得到二十八桶，新账本则把矛盾整齐地保存了下来。",
+        "老文书维娅不再让特伦每次从第一页第一行开始读。她在每份文件旁放一张任务单：现在必须作出什么决定？信息是谁提供的？哪个数字、标签、符号、例外或日期会改变行动？特伦开始学会在页面之间移动，而不是只沿文字往下走。他在渡船告示上连起标题、时刻表、地图和脚注，又把发票与入库单的数量对齐，圈出决定差额是否被允许的那项条件。",
+        "后来，一场风暴让两个港口入口在不同时段关闭。紧急通知里同时出现段落、彩色图表、地图，以及一条只适用于载有动物船只的指令。信使们围在特伦身边，等他再次朗读全文。他却先问每条船要去哪里，再标出相应行，核对图例，给不同船员不同指示。一名船长提出质疑，特伦没有重念整张告示，而是指出信息来源、适用条件和生效时间。所有船只最终都找到仍然开放的航道。",
+        "特伦一直具备把文字读出来的能力，缺少的是功能性读写能力：在真实情境中使用文字、数字和视觉信息完成具体目的。它包括找到相关内容、整合不同形式、解释条件、判断来源、比较说法，并把理解转化成行动。阅读不一定在最后一个词被念出时完成；有时，只有当读者登上正确的渡船，它才真正完成。"
+      ],
+      "conceptName": "Functional literacy",
+      "conceptNameZh": "功能性读写能力",
+      "explanationParagraphs": [
+        "Functional literacy is the capacity to understand and use written, numerical, and visual information in order to participate effectively in everyday, civic, educational, or work situations. It goes beyond decoding words to include locating, integrating, evaluating, and applying information.",
+        "Its demands depend on context. A person may read fluent prose yet struggle with a timetable, form, contract, chart, or digital instruction. Literacy therefore includes knowing what a document is for and how its parts change a real decision."
+      ],
+      "explanationParagraphsZh": [
+        "功能性读写能力是理解并使用文字、数字与视觉信息，从而有效参与日常生活、公民事务、教育或工作的能力。它超越了把词语读出来，还包括查找、整合、评价和应用信息。",
+        "这种能力会随情境变化。一个人可能流畅阅读文章，却无法处理时刻表、表格、合同、图表或数字指令。因此，读写能力也包括理解一份文件是用来做什么的，以及其中哪些部分会改变现实决定。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0031-metacognitive-regulation",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0031",
+      "fieldTitle": "Personal skills and development",
+      "fieldTitleZh": "个人技能与发展",
+      "title": "The Notebook With Three Lines",
+      "titleZh": "只有三行的笔记本",
+      "summary": "A traveller stops collecting maps and begins recording the moments when his own judgment changes direction.",
+      "summaryZh": "一个旅人不再收集更多地图，转而记录自己的判断究竟在什么时刻改变方向。",
+      "storyParagraphs": [
+        "A traveller named Sen entered a city where every gate opened onto another district of libraries. He bought the largest map at the east gate and copied its street names onto his sleeves. Before sunset he had returned to the same fountain three times. The next morning he purchased a newer map with coloured roads. It carried him farther, but at an unlabelled alley he followed a confident merchant and arrived at the fountain again. Sen concluded that the city contained too little information and began collecting guidebooks.",
+        "An elderly librarian watched him fill a suitcase with maps. She offered no better one. Instead, she handed him a thin notebook and asked for three lines each evening: where he intended to go, where he actually changed course, and what made him change his mind. Sen considered the task insulting. He needed knowledge about the city, not a diary of his confusion. Still, the librarian would lend him a rare northern map only after seven completed pages, so he agreed.",
+        "The first pages looked trivial. He had turned because a road was crowded, because a symbol was unfamiliar, because someone else walked quickly. On the fourth day, Sen used the coloured map and still became lost. His notes showed that he repeatedly treated wide roads as correct roads. On the fifth, he stopped at an unlabelled alley, noticed the familiar impulse to retreat, and wrote down his prediction before entering. The alley led directly behind the museum he had been seeking all week.",
+        "Sen then tried to improve too many things at once. He walked slowly, checked every sign twice, questioned every passer-by, and arrived nowhere before closing time. That evening, the three lines exposed a different mistake: a strategy that helped at difficult junctions had been applied to every step. The librarian asked him to mark only the moments when confidence was high but evidence was weak. The next day, he reserved his careful checks for those points and moved quickly elsewhere.",
+        "Several weeks later, a child at the south gate asked Sen which map was best. He almost opened his suitcase. Then he asked where the child usually became lost. Together they walked one route, recording a guess before each difficult turn and checking it afterward. The child discovered that she ignored house numbers whenever shop signs were bright. Sen discovered that fatigue made him follow crowds. The city had not become simple; their searching had become visible to the people doing it.",
+        "The three-line notebook had cultivated metacognitive regulation: planning how to approach a task, monitoring one's understanding and strategy while acting, evaluating what happened, and adjusting the next attempt. It is not endless self-analysis. Its purpose is to make learning more controllable by noticing when a method is failing, when confidence is misleading, and when a useful strategy is being overused. Sen still carried maps, but he no longer mistook owning them for knowing how he was learning."
+      ],
+      "storyParagraphsZh": [
+        "旅人森走进一座城，每一道城门后面都连着另一个图书馆街区。他在东门买下最大的一张地图，把街名抄满衣袖，日落前却三次回到同一座喷泉。第二天，他又买了一张用颜色标路的新地图，走得更远，却在一条没有标注的小巷前跟随一名步子很快的商人，再次到了喷泉。森认定这座城提供的信息太少，开始四处收集指南。",
+        "一位老馆员看着他把地图塞满整只箱子，没有递来更好的一张，只给了他一本很薄的笔记本，让他每晚写三行：原本打算去哪里，实际在哪一刻改变路线，是什么让自己改变判断。森觉得这种任务近乎冒犯。他需要的是城市知识，不是记录困惑的日记。可馆员说，写满七页才肯借给他珍贵的北区图，于是他勉强答应。",
+        "最初几页看起来毫无价值。他转弯是因为道路拥挤，因为看不懂一个符号，因为别人走得很快。第四天，森拿着彩色地图仍然迷路，记录却显出他总把宽路当成正确的路。第五天，他站在一条无标记小巷前，察觉自己又想立刻后退，便先写下预测再走进去。小巷直接通到他找了整整一周的博物馆后门。",
+        "森随后试图一次改掉所有问题。他放慢脚步，把每个标志核对两遍，向每个路人追问，结果关门前什么地方也没到。那晚，三行记录暴露了另一种错误：只在困难路口有用的策略，被他套在了每一步上。馆员让他只标记那些“信心很高、证据很弱”的时刻。第二天，他把仔细核查留给这些节点，其余路段照常快走。",
+        "几周后，南门一个孩子问森哪张地图最好。他差点打开自己的箱子，随后先问孩子通常在哪里迷路。他们一起走了一条路线，在每个困难路口先写下猜测，走过以后再核对。孩子发现，招牌颜色鲜艳时，自己总会忽略门牌号；森也发现，疲惫时他更容易跟随人群。城市并没有变简单，只是寻找的过程终于能被正在寻找的人看见。",
+        "那本只有三行的笔记本培养的是元认知调节：为任务作计划，在行动中监控自己的理解与策略，评价结果，再调整下一次尝试。它不是无休止地分析自己，而是让学习变得更可控，使人能看见方法何时失效、信心何时误导，以及某种好策略何时被用过了头。森仍然携带地图，却不再把拥有地图误当成知道自己怎样学习。"
+      ],
+      "conceptName": "Metacognitive regulation",
+      "conceptNameZh": "元认知调节",
+      "explanationParagraphs": [
+        "Metacognitive regulation is the active management of one's own learning through planning, monitoring, evaluation, and adjustment. It turns confusion, confidence, errors, and strategy use into information that can guide the next action.",
+        "It is most useful when it remains tied to a task. The aim is not constant introspection but better decisions about what to try, what to check, when to persist, and when to change course."
+      ],
+      "explanationParagraphsZh": [
+        "元认知调节是通过计划、监控、评价和调整，主动管理自身学习的能力。它把困惑、信心、错误和策略使用情况变成能够指导下一步行动的信息。",
+        "它只有与具体任务相连时才真正有用。目标不是持续沉浸在自我分析里，而是更好地决定尝试什么、核查什么、何时坚持，以及何时改变方向。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0031-self-efficacy",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0031",
+      "fieldTitle": "Personal skills and development",
+      "fieldTitleZh": "个人技能与发展",
+      "title": "The Seventh Platform",
+      "titleZh": "第七层平台",
+      "summary": "A tower apprentice learns that belief grows from interpretable evidence, not from being told to feel brave.",
+      "summaryZh": "一名塔楼学徒发现，信念来自能够理解的成功证据，而不是别人反复叫她勇敢。",
+      "storyParagraphs": [
+        "Ilya joined the tower guild to repair bells, but froze whenever a ladder rose above the workshop roof. On the ground she could dismantle a clockwork striker faster than any new apprentice. At height, her hands tightened and every rung seemed to announce the distance below. The foreman tried encouragement. He called her fearless, praised her hidden talent, and one morning ordered her to carry a tool case directly to the seventh platform. Ilya reached the second, looked up through six open floors, and climbed down without the case.",
+        "A quieter master named Mara stopped using the word brave. She asked Ilya to repair the striker on the first outdoor landing, where both feet remained level with the roof tiles. Ilya completed it while gripping the rail. The next day Mara placed the same mechanism one platform higher and sent another apprentice ahead to demonstrate how he clipped the tool case to the ladder. Ilya followed, copied the movement, and finished slowly. Mara noted exactly what had worked: she had kept three points of contact and secured the case before looking down.",
+        "The third task went badly. A gust moved the bell rope, Ilya dropped a spanner into the safety net, and the old certainty returned: the earlier success had been luck. Mara did not deny the fear or offer a compliment. They descended, examined the sequence, and changed one thing. Ilya would pause below the exposed corner, wait for the rope to settle, then move the spanner before stepping out. She repeated the corner twice without doing any repair. On the third attempt, she crossed with the tool still in her hand.",
+        "Across the yard, another instructor praised his pupils constantly and moved them to high platforms before they had mastered the clips. They sounded confident on the ground. After one apprentice slipped safely into a harness, several began avoiding tower duty. Ilya, meanwhile, kept a narrow card for each platform: what she had completed, what still disrupted her, and which action had restored control. The cards contained no declarations about courage. They contained evidence she could interpret.",
+        "When a spring storm silenced the seventh bell, the foreman prepared to send a senior repairer. Ilya asked to carry the small case. Halfway up, rain began striking the east face. She stopped at the exposed corner, secured the case, and waited for the rope's movement to repeat before crossing. At the seventh platform she found a loose pin, replaced it, and rang the bell once for the yard below. Her fear had not vanished. It no longer decided in advance what she was capable of attempting.",
+        "Ilya's cards had built self-efficacy: a task-specific belief that one can organize and carry out the actions required in a particular situation. Such belief influences which challenges people approach, how much effort they invest, and how they respond to setbacks. It is strengthened most reliably by real mastery experiences, credible models, specific feedback, and an understandable reading of physical reactions. Empty praise had asked Ilya to borrow confidence; the seven platforms let her construct it."
+      ],
+      "storyParagraphsZh": [
+        "伊莉娅加入钟塔行会学习修钟，却只要梯子高过工坊屋顶就会僵住。在地面上，她拆解报时机芯的速度胜过所有新学徒；一到高处，双手便紧紧收拢，每一级横档都像在提醒她脚下有多深。工头试着鼓励她，说她天生勇敢、藏着才能，还在一个早晨命令她把工具箱直接送到第七层平台。伊莉娅爬到第二层，抬头看见上方六层空架，最终没带工具箱就退了下来。",
+        "沉默寡言的师傅玛拉不再使用“勇敢”这个词。她先让伊莉娅修第一层室外平台的报时锤，双脚仍与屋瓦差不多高。伊莉娅抓着栏杆完成了工作。第二天，玛拉把同一套机件放到更高一层，又让另一名学徒先演示怎样把工具箱扣在梯侧。伊莉娅跟上去，照着动作慢慢完成。玛拉只指出具体有效之处：她保持了三个接触点，也在低头前先固定了箱子。",
+        "第三次任务出了差错。一阵风吹动钟绳，伊莉娅把扳手掉进安全网，旧判断立刻回来：前两次成功只是运气。玛拉没有否认她的害怕，也没有再说一句漂亮话。两人下到地面，重看刚才的顺序，只改一个动作：伊莉娅先在暴露的转角下方停住，等钟绳摆动稳定，再把扳手换到另一只手，然后迈出去。她空着任务重复两次，第三次才带着工具通过。",
+        "院子另一边，一名教员不断夸奖学生，并在他们尚未熟练使用安全扣时就带上高台。那些学生在地面上说得很自信，一人安全滑进吊带以后，却有几个人开始躲避登塔任务。伊莉娅则为每层平台留下一张窄卡片：自己完成了什么，什么仍会打乱动作，哪个步骤能让控制回来。卡片上没有关于勇气的宣言，只有她能够解释的证据。",
+        "春季风暴让第七口钟失声，工头准备派资深修理工上去。伊莉娅主动拿起小工具箱。爬到一半，雨点开始击打东侧塔面。她在暴露转角前停住，固定箱子，等钟绳的摆动出现熟悉节奏，再跨过去。第七层平台上，她找到一枚松动的销钉，换好以后只敲了一下钟，让院子里的人听见。恐惧没有消失，却不再提前替她决定哪些事绝不可能。",
+        "那些卡片建立的是自我效能感：一个人相信自己能够组织并完成特定情境所需行动的任务性信念。它会影响人选择接近哪些挑战、投入多少努力，以及遇到挫折后怎样回应。真正可靠的来源通常包括亲自完成的经验、可信的示范、具体反馈，以及对身体反应的合理理解。空洞夸奖只是让伊莉娅借用信心，七层平台却让她亲手把信心建了起来。"
+      ],
+      "conceptName": "Self-efficacy",
+      "conceptNameZh": "自我效能感",
+      "explanationParagraphs": [
+        "Self-efficacy is a person's belief in their capacity to execute the actions needed for a particular task or situation. It affects challenge selection, effort, persistence, and recovery after difficulty, but it is not the same as general self-esteem or actual skill.",
+        "Mastery experiences are usually its strongest source. Models, specific encouragement, and interpretations of stress or fatigue also matter when they help a person form a credible judgment about what they can do next."
+      ],
+      "explanationParagraphsZh": [
+        "自我效能感是一个人对自己能否完成某项具体任务或情境所需行动的信念。它会影响挑战选择、努力程度、坚持时间和受挫后的恢复，但不等同于一般自尊，也不等同于真实技能水平。",
+        "亲自取得的掌握经验通常是它最有力的来源。榜样示范、具体鼓励，以及对紧张或疲劳的解释，也会在帮助人形成可信的下一步判断时发挥作用。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0031-deliberate-practice",
+      "batchId": "batch-001",
+      "categoryCode": "00",
+      "fieldCode": "0031",
+      "fieldTitle": "Personal skills and development",
+      "fieldTitleZh": "个人技能与发展",
+      "title": "Four Measures Before Dawn",
+      "titleZh": "天亮前的四小节",
+      "summary": "A diligent violinist practises entire concerts for years until four uncomfortable measures expose the difference between repetition and improvement.",
+      "summaryZh": "一名勤奋的小提琴手多年反复演奏整场曲目，直到四个令人不适的小节揭开重复与进步的差别。",
+      "storyParagraphs": [
+        "Eren was the first violinist to enter the conservatory each morning and the last to close his case at night. He played the entire winter concerto twice before breakfast and once after supper. Visitors heard the familiar opening pour through the windows and called him disciplined. His hours filled three practice ledgers. Yet the same four measures near the middle remained cloudy: a fast crossing between strings, a shift high on the fingerboard, then an entrance that arrived a breath late.",
+        "Eren disliked stopping there. The passages before and after sounded rich, and playing the full movement restored his confidence. During lessons, he blamed the difficult measures on cold fingers or the hall's echo. His teacher marked the same places in red. At the winter audition, Eren reached the crossing, tightened his shoulder, and rushed the shift. He recovered by the final page and bowed to generous applause, but the orchestra appointed another player to the solo desk.",
+        "The appointed player, Sava, often left the conservatory earlier than Eren. Curious and resentful, Eren followed the sound from her small room before dawn. She played only four measures. First she reduced the tempo until each string crossing could be heard. Then she changed the rhythm, isolated the shift, and asked a cellist in the next room to signal whenever her entrance was late. After five accurate attempts she increased the tempo slightly. When three failed, she lowered it again and wrote down where tension returned.",
+        "Eren copied the routine but turned it into punishment. He repeated the passage fifty times without pause, and by the end the errors had become faster. Sava stopped him after the ninth repetition. What exactly are you trying to change? He could not answer. Together they chose one target: release the thumb before the high shift. Eren played two notes, checked the movement in a mirror, listened to immediate feedback, rested, and tried again. The work felt smaller than a concerto and more demanding than an evening of music.",
+        "For several weeks, Eren divided practice between maintaining complete works and attacking narrow weaknesses just beyond reliable control. Targets changed as performance changed. Some mornings focused on timing with another player; others on the sound of one shift under concert tempo. He recorded accuracy, not hours alone. At the spring performance, a stage light failed just before the cloudy measures. Eren could not rely on the familiar visual cue. His thumb released, the hand moved, and the entrance met the orchestra without being chased.",
+        "The four measures had taught him deliberate practice: focused work designed to improve a specific aspect of performance through clear goals, tasks near the edge of current ability, informative feedback, correction, and repeated concentration. It is not simply doing an activity often, nor does every domain improve in exactly the same way. Eren's long rehearsals preserved what he could already play; the uncomfortable measures changed what he could not yet do."
+      ],
+      "storyParagraphsZh": [
+        "埃伦每天最早进入音乐学院，夜里最后一个合上琴盒。他早餐前把整部冬季协奏曲拉两遍，晚饭后再拉一遍。访客听见熟悉的开头从窗里流出来，都称赞他的勤奋。练习时数写满了三本记录册，中段同样的四小节却始终模糊：一次快速换弦，一个高把位转换，随后又有一个总慢半口气的进入。",
+        "埃伦不喜欢停在那里。前后段落都很好听，完整拉完一个乐章便能让信心回来。上课时，他把那四小节归咎于手指太冷，或音乐厅回声不佳，老师却一次次在同样位置画红线。冬季试演时，埃伦拉到换弦处，肩膀收紧，高把位被匆忙带过。他在最后一页挽回了表现，也获得不少掌声，独奏席却给了另一名学生。",
+        "得到席位的萨瓦常常比埃伦更早离开学院。一天清晨，埃伦带着好奇与不服，循声走到她的小练习室。萨瓦只拉四小节。她先把速度降到每次换弦都能被听清，再改变节奏，单独练习换把，还请隔壁的大提琴手在她迟进时立刻敲墙。连续五次准确以后，她稍微提速；三次失败，她又降回来，记下紧张从哪里重新出现。",
+        "埃伦照搬这个办法，却把它变成惩罚。他不停顿地重复五十遍，最后只是把错误拉得更快。萨瓦在第九遍后叫停，问他究竟想改变什么。埃伦答不上来。两人只选一个目标：高把位移动前先放松拇指。埃伦拉两个音，在镜子里检查动作，听完即时反馈，休息片刻再试。工作看起来比一部协奏曲小得多，却比演奏整晚更费神。",
+        "接下来几周，埃伦把练习分成两部分：维持完整曲目，以及攻击刚好超出稳定控制的狭窄弱点。表现变化，目标也跟着变化。有些清晨专练与另一名乐手的进入时机，有些只听一个换把在演出速度下是否干净。他开始记录准确率，不再只记录时间。春季演出中，那四小节前的舞台灯突然熄灭，熟悉的视觉提示消失了。埃伦的拇指仍然放松，手掌移动，进入点没有追赶乐团，而是与它同时落下。",
+        "这四小节教会他的是刻意练习：围绕表现中的具体部分设定明确目标，在接近当前能力边缘的任务上集中工作，获得有信息量的反馈，修正以后再次尝试。它不等于频繁重复同一活动，不同领域也不会完全用同一种方式进步。埃伦过去的长时间排练维持了已经会的东西，而那些令人不舒服的四小节，才真正改变了他尚且不会的部分。"
+      ],
+      "conceptName": "Deliberate practice",
+      "conceptNameZh": "刻意练习",
+      "explanationParagraphs": [
+        "Deliberate practice is structured activity aimed at improving a clearly identified component of performance. It typically uses specific goals, tasks beyond comfortable automaticity, timely feedback, error correction, and sustained attention.",
+        "It differs from repetition, work experience, or performing familiar material. Those activities may maintain skill and still matter, but improvement requires practice that changes in response to evidence about the learner's current weakness."
+      ],
+      "explanationParagraphsZh": [
+        "刻意练习是以改善某个明确表现成分为目的的结构化活动。它通常包含具体目标、略高于舒适自动化水平的任务、及时反馈、错误修正和持续集中注意。",
+        "它不同于单纯重复、积累工作年限或反复表演熟悉内容。这些活动可以维持技能，也有自身价值；真正的提升则要求练习根据当前弱点的证据不断改变。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0111-constructivist-learning",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0111",
+      "fieldTitle": "Education science",
+      "fieldTitleZh": "教育科学",
+      "title": "The Canal That Would Not Copy the Board",
+      "titleZh": "不肯照抄黑板的水渠",
+      "summary": "Students who can reproduce a perfect canal diagram meet a sand table that exposes what they actually think water does.",
+      "summaryZh": "一群能完整复画水渠图的学生，遇到了一张暴露他们真实水流观念的沙盘。",
+      "storyParagraphs": [
+        "Master Olan taught irrigation from a blackboard. His canal diagram was famous for its clarity: reservoir at the top, two gates in the middle, four fields below. Students copied every line and labelled the slope, channel, and outlet. At examination time, Lio could redraw it from memory with his eyes nearly closed. When asked why the lower field received less water, he repeated Olan's sentence about distance and friction. The answer earned a perfect mark.",
+        "The next week, Olan replaced the desks with a long sand table. He gave each group a bucket, wooden gates, stones, and four cloth squares representing fields. Lio rebuilt the blackboard canal exactly. When water was poured, it cut through one sandy wall, pooled behind a level section, and flooded the nearest cloth. Lio quickly made the channels deeper. More water rushed into the same field. He stared at the broken diagram and said the sand table was too imperfect to demonstrate the lesson.",
+        "Olan did not correct the model. He asked every student to draw where the next cup of water would go before it was poured. Their predictions disagreed. One believed water used itself up as it travelled; another thought the widest channel always received most; Lio assumed the labelled lower field must eventually fill because that was what the board showed. They tested each prediction. Stones redirected the current, a gate changed pressure upstream, and a slight rise that no one had measured stopped an entire branch.",
+        "The class then built a second canal with the same amount of water but different slopes. Olan introduced a clear tube to help them compare heights and asked which observation their earlier ideas could not explain. Lio crossed out 'distance' in his notebook and replaced it with a set of relations among level, resistance, gate position, and channel shape. He still used Olan's diagram, but now as one case among several rather than a picture whose labels guaranteed the outcome.",
+        "At the village garden, the students encountered a blocked ditch after heavy rain. Lio did not immediately reproduce the school model. He asked gardeners where water had pooled, measured the ground, and invited them to predict what opening one gate would do upstream. Their first repair shifted the problem to another bed. They revised the channel together, using the failed attempt as information. By evening, the water reached all four plots without drowning the closest one.",
+        "The sand table had made learning constructive rather than merely reproductive. Constructivist learning holds that learners actively build and revise understanding by connecting new experience with prior ideas. Those prior ideas shape what they notice and can survive beneath correct words until prediction, evidence, dialogue, and guided activity make them available for revision. The teacher does not disappear; Olan designed the problem, supplied tools, asked questions, and introduced evidence. What he could not do was pour a finished model directly into Lio's mind."
+      ],
+      "storyParagraphsZh": [
+        "奥兰师傅用黑板教授灌溉。他的水渠图以清楚闻名：上方一座蓄水池，中段两道闸门，下方四块田。学生抄下每一根线，标出坡度、渠道和出口。考试时，里奥几乎闭着眼也能完整重画。被问到为什么低处田地得到的水较少，他便复述奥兰关于距离与摩擦的句子，拿到满分。",
+        "下一周，奥兰撤走课桌，换成一张长长沙盘，给每组一桶水、木闸、石头和四块代表田地的布。里奥完全照着黑板重建水渠。水一倒下去，便冲破一侧沙墙，在一段水平渠道后积住，又淹没最近的布块。里奥赶紧把渠道挖深，更多水反而冲向同一块田。他看着破掉的图形，认定沙盘太不完美，根本无法演示课程。",
+        "奥兰没有替他修模型，只让每个人在下一杯水倒下前先画出它会去哪里。学生的预测互不相同。有人以为水在路上会被用完，有人认为最宽渠道总能得到最多水，里奥则相信标着“低处”的田最后一定会灌满，因为黑板就是这样画的。他们逐一检验。石头改变水向，闸门影响上游，一点没人量过的小隆起就让整条支渠停住。",
+        "全班随后用同样多的水，按照不同坡度建第二套水渠。奥兰拿出透明软管帮助他们比较高度，又追问：哪一项观察是旧想法解释不了的？里奥划掉笔记里的“距离”，改写成水位、阻力、闸门位置与渠道形状之间的一组关系。他仍然使用奥兰的图，只是不再把它当成标签会自动兑现的答案，而是众多情形中的一个。",
+        "学生来到村庄菜园时，正遇上暴雨后堵塞的水沟。里奥没有立刻复制学校模型，而是先问园丁水积在哪里，测量地面，再请大家预测打开某道闸会怎样影响上游。第一次修理把问题推去了另一块菜畦，他们便把失败当成信息，一起改动渠道。黄昏时，水终于到达四块田，又没有淹掉最近的一块。",
+        "沙盘让学习从复制变成了建构。建构主义学习认为，学习者会把新经验与原有观念连接起来，主动建立并修正理解。旧观念会影响人看见什么，也可能藏在正确术语下面，直到预测、证据、对话和有引导的活动让它们接受检验。教师并没有消失：奥兰设计问题、提供工具、提出追问并引入证据；他唯一不能做的，是把一套完成的模型直接倒进里奥脑中。"
+      ],
+      "conceptName": "Constructivist learning",
+      "conceptNameZh": "建构主义学习",
+      "explanationParagraphs": [
+        "Constructivist learning describes understanding as something learners actively build and revise through the interaction of prior knowledge, new experience, language, evidence, and social activity. Correct recall does not guarantee that the underlying model has changed.",
+        "It does not require leaving learners to discover everything alone. Well-designed instruction provides structure, tasks, tools, explanations, questions, and feedback that make existing ideas visible and help learners reorganize them."
+      ],
+      "explanationParagraphsZh": [
+        "建构主义学习把理解视为学习者在原有知识、新经验、语言、证据和社会互动之间主动建立并修正的结果。能够正确复述，并不保证底层理解模型已经改变。",
+        "它不等于让学习者独自发现一切。良好教学仍会提供结构、任务、工具、解释、问题和反馈，使原有观念变得可见，并帮助学习者重新组织它们。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0111-formative-assessment",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0111",
+      "fieldTitle": "Education science",
+      "fieldTitleZh": "教育科学",
+      "title": "Marks Before the Kiln",
+      "titleZh": "入窑前的记号",
+      "summary": "A pottery school gives precise final grades until a teacher asks what use a judgment has after the clay can no longer change.",
+      "summaryZh": "一所陶艺学校拥有精确的期末评分，直到一位老师追问：泥土已经无法改变以后，判断还有什么用。",
+      "storyParagraphs": [
+        "At the Red Kiln School, students worked for a month and received judgment only after firing day. The masters placed every finished vessel on a long table, measured symmetry, tapped the walls for hidden cracks, and wrote a score beneath the base. The system was respected because every student faced the same test. Nara's first jar received sixty-two points. The note said 'wall uneven, foot too thin.' She understood the words, but the clay had become stone and the next assignment was already a different shape.",
+        "For her second jar, Nara tried to remember the old comments. Afraid of a thin foot, she made the base heavy. The vessel survived firing but leaned outward at the neck. The final note now said 'poor balance.' Another student received 'trapped air' for the third time without knowing when the pocket had entered the clay. Scores described the wreckage accurately. They arrived too late to steer the work that produced it.",
+        "A new teacher named Elian began walking through the studio while the clay was still wet. He did not assign early grades. At Nara's wheel, he asked her to place two fingers on opposite walls as the jar turned. One side pushed back sooner. He drew a small chalk line on the board and asked what single adjustment she would test before the next inspection. Nara slowed the wheel and changed her hand pressure. Ten minutes later, she compared the wall again and could feel the difference herself.",
+        "The class initially treated Elian's visits as chances to obtain the correct answer. Students called him over before making any choice. He changed the routine. Each had to state the intended result, show current evidence, and name a next move. During glazing, Nara predicted that a thick coat would deepen the colour. A test tile came out bubbled. Instead of telling her the right amount, Elian set three tiles beside it and asked her to rank their thickness before the trial firing. Her next mixture was not perfect, but it improved for a reason she could explain.",
+        "At the end of term, the masters again arranged the finished vessels. Nara's jar was not the highest-scoring piece. When a judge pointed to a slight pull at the rim, however, she took out her work card and identified when it had appeared, which correction had helped, and what she would change in another version. The student with repeated air pockets had begun cutting one practice cylinder at midday, finding the flaw before it became permanent. The final table no longer contained the first useful information students received.",
+        "Elian's questions, test tiles, comparisons, and work cards were formative assessment: evidence gathered during learning and used to decide what teacher and learner should do next. Its purpose is not frequent scoring. It requires clear goals, information about the present state, and feedback that can still change action. The Red Kiln School had always measured finished pots carefully; it began teaching more effectively when some of its most important judgments arrived while the clay could still move."
+      ],
+      "storyParagraphsZh": [
+        "红窑学校的学生连续做陶一个月，只在烧制日以后得到评价。师傅们把成品摆上长桌，测量对称，敲击陶壁寻找暗裂，再把分数写在底部。所有学生接受同一套检验，因此这套制度很受尊敬。娜拉第一只罐子得了六十二分，评语是“壁厚不均，底足过薄”。她看懂了每个字，泥土却已经变成石头，下一项作业也换成了另一种器形。",
+        "做第二只罐子时，娜拉努力记住旧评语。她害怕底足太薄，便把底部做得很重。新罐成功出窑，瓶颈却向外倾斜，这次评语变成“整体失衡”。另一名学生连续第三次得到“内部有气泡”，仍然不知道气泡究竟在什么时候进入泥土。分数对残留下来的问题描述得很准确，却来得太迟，无法引导产生问题的那双手。",
+        "新老师埃利安开始在泥土仍然湿润时穿过工作室。他没有提前打分。走到娜拉的拉坯轮旁，他让她在陶壁两侧各放一根手指，随着罐身转动，一边比另一边更早顶回手指。埃利安只在黑板上画一条短线，问她下一次检查前准备试着改变哪一个动作。娜拉放慢转速，调整手掌压力，十分钟后再次比较，已经能亲手感觉出差别。",
+        "起初，学生把埃利安的巡视当成索取正确答案的机会，每做选择前都叫他过来。他于是改变规则：每个人必须先说出目标、展示目前证据，再提出下一步动作。上釉时，娜拉预测厚釉能让颜色更深，一块试片出窑后却满是气泡。埃利安没有告诉她正确用量，而是把三块不同厚度的试片放在旁边，让她在试烧前先排序。下一次配釉仍不完美，却因为一个她能解释的理由而改善。",
+        "学期末，师傅们再次把成品排上长桌。娜拉的罐子并非最高分，一名评审指出罐口还有轻微拉扯时，她却能拿出工作卡，说清问题何时出现、哪次修正有效，以及下一版还要改变什么。那个反复留下气泡的学生也开始每天中午切开一只练习圆筒，在缺陷变得永久以前找到它。期末长桌不再是学生第一次获得有用信息的地方。",
+        "埃利安的提问、试片、比较和工作卡构成了形成性评价：在学习仍在进行时收集证据，并用它决定教师和学习者接下来该做什么。它的目的不是频繁打分，而是让目标清楚、让当前位置可见，并提供尚能改变行动的反馈。红窑学校一直很会测量烧好的陶器；当最重要的判断开始在泥土仍能移动时到来，它才真正更会教学。"
+      ],
+      "conceptName": "Formative assessment",
+      "conceptNameZh": "形成性评价",
+      "explanationParagraphs": [
+        "Formative assessment is a process of eliciting evidence about learning while there is still time to respond, interpreting that evidence against a goal, and using it to choose the next teaching or learning action. Questions, observations, drafts, demonstrations, and peer discussion can all serve this purpose.",
+        "It is not defined by how often a score is recorded. Feedback becomes formative only when it helps the learner understand the gap and take a useful next step."
+      ],
+      "explanationParagraphsZh": [
+        "形成性评价是在学习仍可改变时获得证据，依据目标解释这些证据，并据此选择下一项教学或学习行动的过程。提问、观察、草稿、现场展示和同伴讨论都可以承担这种作用。",
+        "它不由打分频率决定。只有当反馈帮助学习者理解差距，并能采取有效下一步时，这种评价才真正具有形成性。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0111-cognitive-load",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0111",
+      "fieldTitle": "Education science",
+      "fieldTitleZh": "教育科学",
+      "title": "Seven Orders at the North Gate",
+      "titleZh": "北门的七道命令",
+      "summary": "A messenger's errors reveal that adding more instruction can leave less room for the task itself.",
+      "summaryZh": "一名信使不断犯错，使人们发现：增加更多指令，有时反而会让任务本身无处容身。",
+      "storyParagraphs": [
+        "During the siege exercises, every message entering the city passed through the north gate. Captain Ro believed a good courier should carry instructions entirely in the mind. He gave young Davi seven orders at once: visit the mill, change the eastern guard, collect two seals, avoid Market Street, confirm the water level, return by the bell tower, and report before noon. To make the lesson memorable, he added a rhyme about geese and a story about the last courier who had failed.",
+        "Davi repeated everything at the gate. At the mill, the foreman asked an unexpected question about which seal to use. While Davi tried to answer, the rhyme displaced the return route. He changed the western guard instead of the eastern one, then remembered the water level only after passing the cistern. He arrived late with both seals and the wrong patrol moved. Captain Ro concluded that Davi needed stronger concentration and gave him nine orders the next morning.",
+        "The second run failed sooner. A parade blocked Market Street, forcing Davi to choose another route while keeping names, quantities, sequence, exceptions, and times active. He stopped beneath the clock and could recall the goose rhyme perfectly but not which task depended on the first seal. The city's map keeper, Ina, watched him empty his pockets in frustration. She drew the route as three stops and placed the relevant instruction beside each stop. Information needed later was sealed in a small note rather than held in mind during the first task.",
+        "Davi completed the route, so Captain Ro covered the map with more arrows, colours, crests, and warnings. The beautiful sheet became another obstacle. At a glance, Davi could not tell route from decoration. Ina removed every mark that did not change a decision, grouped related actions, and used one symbol consistently. She also practised the unusual seal choice separately until Davi could recognize it without reconstructing the whole explanation.",
+        "A week later, an exercise bell announced two broken gates at once. Davi used the simple route card, dealt with each cluster of actions, and freed attention for the unexpected part: a cart overturned near the cistern. He changed course, checked which order could safely wait, and still reached the tower before noon. He had not enlarged his mind in seven days. The task had been arranged so that memory was not forced to carry directions, decoration, new procedures, and live decisions all at the same moment.",
+        "Ina had redesigned the lesson around cognitive load. Working memory can hold and process only a limited amount of unfamiliar information at once. Some load comes from the inherent complexity of the task; some is created by confusing presentation or unnecessary demands; useful mental effort is needed to build organized knowledge that later becomes easier to retrieve. Good teaching does not remove every difficulty. It protects enough mental space for the difficulty that actually matters."
+      ],
+      "storyParagraphsZh": [
+        "围城演习期间，所有进入城市的消息都要经过北门。罗队长相信，好信使应该把指令完整装进脑中。他一次交给年轻的达维七道命令：去磨坊、更换东侧卫兵、取回两枚印章、避开市场街、核对蓄水高度、从钟塔返回，并在中午前报告。为了让课程更好记，他又添了一段关于鹅的押韵口诀，还讲起上一名失败信使的故事。",
+        "达维在门口完整复述了一遍。到了磨坊，工头突然问该用哪一枚印章。达维努力回答时，鹅的口诀挤走了回程路线。他把西侧卫兵换掉而不是东侧，走过蓄水池后才想起要看水位。最后，他带着两枚印章迟到，错误巡逻队已经出发。罗队长认定达维需要更强的专注力，第二天一早给了他九道命令。",
+        "第二次更早失败。游行队伍堵住市场街，达维必须临时选路，同时还要把人名、数量、顺序、例外和时间都留在脑中。他停在钟下，关于鹅的口诀记得一字不差，却想不起哪项任务必须先用第一枚印章。城市制图员伊娜看着他沮丧地翻空口袋，把路线画成三个站点，并把相关指令放在对应站点旁。晚些时候才需要的信息，则先封在一张小纸条里，不必在第一项任务中持续记住。",
+        "达维顺利跑完路线，罗队长于是往图上加了更多箭头、颜色、徽章和警告。漂亮的纸张很快变成另一种障碍，达维一眼分不出哪些是路线，哪些只是装饰。伊娜删掉所有不会改变决定的记号，把相关动作分组，同一含义只使用一种符号。她还把不常见的印章选择单独拿出来练，直到达维不必重建整段说明也能识别。",
+        "一周后，演习钟同时报告两座城门受损。达维拿着简洁路线卡，按组处理行动，把注意力留给真正意外的部分：一辆货车在蓄水池旁翻倒。他改变路线，判断哪道命令可以安全延后，仍然在中午前抵达钟塔。七天里，他的脑容量并没有突然变大；改变的是任务不再要求记忆同时扛住方向、装饰、新程序和现场决定。",
+        "伊娜是按照认知负荷重新设计课程。工作记忆在同一时刻能够保持和加工的陌生信息十分有限。有些负荷来自任务本身的复杂性，有些由混乱表达和无关要求额外制造，还有一些有效心力需要用来建立有组织、以后更容易调用的知识。良好教学不是消除所有困难，而是给真正值得处理的困难保留足够的心理空间。"
+      ],
+      "conceptName": "Cognitive load",
+      "conceptNameZh": "认知负荷",
+      "explanationParagraphs": [
+        "Cognitive load theory starts from the limited capacity of working memory when people deal with novel information. Instruction must manage the task's inherent complexity, reduce unnecessary load created by presentation, and support the effort that helps durable knowledge structures form.",
+        "Once elements become organized in long-term memory, they can often be handled as larger units, freeing attention for decisions and new problems. Simplification is therefore a means of directing effort, not an argument for making learning permanently easy."
+      ],
+      "explanationParagraphsZh": [
+        "认知负荷理论以工作记忆处理陌生信息时容量有限为出发点。教学需要管理任务本身的复杂性，减少由表达方式额外制造的无关负荷，并支持有助于形成稳定知识结构的心理努力。",
+        "当多个成分在长期记忆中被组织起来以后，人往往能把它们作为更大的整体处理，从而释放注意力应对决定和新问题。因此，简化是引导心力的手段，不是让学习永远轻松的理由。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0112-play-based-learning",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0112",
+      "fieldTitle": "Training for pre-school teachers",
+      "fieldTitleZh": "学前教师培养",
+      "title": "The Market Under the Mulberry Tree",
+      "titleZh": "桑树下的市场",
+      "summary": "A children's pretend market becomes a serious place for counting, negotiation, symbols, and rules when a teacher learns how to enter without taking over.",
+      "summaryZh": "一座儿童假想市场，在老师学会不接管游戏以后，成为练习计数、协商、符号与规则的认真场所。",
+      "storyParagraphs": [
+        "In the preschool courtyard, four children placed leaves on a bench and announced that they had opened a market. Smooth stones became coins. Seed pods were fish, red leaves were festival cloth, and a cracked bowl served as the shop bell. Teacher Mina watched two buyers hand over entire fistfuls of stones for one leaf. She almost stopped the game to teach correct counting, but the children were already arguing about whether a large stone was worth more than three small ones.",
+        "Mina brought paper squares, baskets, a simple balance, and pencils the next morning. She did not assign prices. The shopkeepers decided that every fish cost two marked squares. A buyer protested that the smallest pod should cost less. They placed pods on the balance, changed the rule, and drew different marks for different prices. One child who rarely spoke during number lessons guarded the coin bowl and began correcting customers who counted the same stone twice.",
+        "The game nearly collapsed when every child wanted to be the seller. Mina could have distributed roles herself. Instead, she asked what jobs a real market needed before opening. The children added carrier, sign maker, inspector, and cook. The inspector invented rules so strict that no fish could be sold. Customers walked away, and the seller complained. Around the bench, they revised the rules, deciding which protected the game and which prevented it from continuing.",
+        "A visiting administrator saw leaves on the ground and asked why the class was not completing its number sheets. Mina invited her to wait. A sudden shortage of red leaves had divided the market. One group secretly made more red leaves with paint; another declared painted leaves false. The children compared colour, negotiated a stamp for authorised cloth, and recorded how many real leaves remained. Mina introduced the word 'scarce' only after they had experienced what a shortage did to price and trust.",
+        "Over several days, Mina changed the materials when the play stopped producing new questions. She added envelopes for orders, pictures for children who did not yet write, and a delivery path that required measuring whether a basket would fit through two gates. She also withdrew objects when the market became crowded. The children still chose roles and storylines, but the environment was deliberately shaped, and Mina entered with questions or tools at moments when they could extend the children's thinking.",
+        "The mulberry market was play-based learning: learning organised through meaningful, voluntary, imaginative activity in which children exercise choice, rules, language, relationships, and problem solving. Strong play-based teaching is neither a disguised worksheet nor adult absence. The educator observes, protects time, arranges materials, joins sensitively, and introduces challenge without taking ownership of the play. The leaves were imaginary goods; the decisions around them were real intellectual work."
+      ],
+      "storyParagraphsZh": [
+        "幼儿园院子里，四个孩子把树叶摆上长凳，宣布开了一座市场。光滑石子是钱，豆荚是鱼，红叶是节庆布，一只裂碗则成了店铺铃。米娜老师看着两名顾客抓起整把石子，只为买一片叶子。她差点叫停游戏，教大家正确计数，孩子们却已经争论起来：一块大石头到底应不应该值三块小石头。",
+        "第二天早晨，米娜带来纸片、篮子、一架简单天平和几支铅笔，却没有替任何商品定价。店主们决定每条鱼卖两张有记号的纸片，一名顾客却说最小的豆荚应该便宜。孩子们把豆荚放上天平，改动规则，又用不同符号画出不同价格。一个平时在数字课上很少开口的孩子守着钱碗，开始纠正那些把同一块石子数两遍的顾客。",
+        "所有人都想当卖家，游戏差点散掉。米娜本可以直接分配角色，却只问：真正的市场开门前还需要哪些工作？孩子们增加了搬运员、招牌画师、检查员和厨师。检查员制定的规则太严，结果一条鱼也不能出售，顾客纷纷离开，卖家开始抱怨。他们围着长凳重新修改，讨论哪些规则是在保护市场，哪些规则让市场根本无法继续。",
+        "一名来访管理者看见满地树叶，问孩子们为什么不做数字练习纸。米娜请她再等一会儿。红叶突然短缺，市场分成两派：一组偷偷用颜料制作更多红叶，另一组宣布染过的叶子是假货。孩子们比较颜色，协商用印章认证节庆布，还记录真正红叶剩下多少。直到他们亲自经历短缺怎样影响价格和信任，米娜才引入“稀缺”这个词。",
+        "接下来几天，每当游戏不再产生新问题，米娜就调整材料。她加入订单信封、帮助尚未写字孩子参与的图画，以及一条送货路线，让大家测量篮子能否穿过两道门；市场太拥挤时，她也会拿走部分物品。角色和情节仍由孩子选择，环境却经过有意设计，米娜只在问题有机会向前发展时，带着工具或提问进入游戏。",
+        "桑树市场体现的是游戏本位学习：通过有意义、自愿且富有想象的活动组织学习，让儿童在选择、规则、语言、关系和问题解决中行动。成熟的游戏本位教学既不是把练习纸伪装成游戏，也不是成人完全离场。教育者需要观察、保护时间、安排材料、敏感加入，并在不夺走游戏主导权的情况下引入挑战。树叶是假想商品，围绕它们发生的判断却是真实的智力工作。"
+      ],
+      "conceptName": "Play-based learning",
+      "conceptNameZh": "游戏本位学习",
+      "explanationParagraphs": [
+        "Play-based learning uses children's active, meaningful, socially interactive, iterative, and often imaginative play as a context for development and learning. It can support language, early mathematics, self-regulation, collaboration, and inquiry because children must make and revise consequential choices within the activity.",
+        "High-quality practice may range from child-led play to guided play. Adult intention matters, but guidance should extend attention and challenge rather than replace children's agency with a predetermined answer."
+      ],
+      "explanationParagraphsZh": [
+        "游戏本位学习把儿童主动、有意义、具有社会互动、能够反复尝试且常带想象性的游戏，作为发展与学习的情境。它能支持语言、早期数学、自我调节、合作与探究，因为儿童必须在活动中作出有后果的选择并不断修正。",
+        "高质量实践可以从儿童主导游戏延伸到有引导的游戏。成人的教育意图很重要，但引导应当扩展注意和挑战，而不是用预设答案取代儿童的主动性。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0112-joint-attention",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0112",
+      "fieldTitle": "Training for pre-school teachers",
+      "fieldTitleZh": "学前教师培养",
+      "title": "The Bird Beyond the Picture Cards",
+      "titleZh": "图卡外面的鸟",
+      "summary": "A teacher gains a child's attention only after she stops pulling his eyes away from the thing he is trying to share.",
+      "summaryZh": "一名老师不再把孩子的目光从他想分享的事物上拉开以后，才真正获得了他的注意。",
+      "storyParagraphs": [
+        "Teacher Lian used picture cards every morning. She held up a painted bird, said 'bird,' and waited for the children to look at her mouth. Most repeated the word. Bo rarely did. His eyes moved to the window, where sparrows carried grass beneath the roof tiles. Lian tapped the card and called his name. When he pointed toward the window, she gently turned the card back into his view, believing she was rescuing his attention from distraction.",
+        "For a week, Bo learned the routine of the lesson without learning the word. He looked at the card long enough to make the tapping stop, then returned to the roof. One morning, he pulled Lian's sleeve and pointed urgently. She almost reached for the painted card. Instead, she followed the line of his finger. A sparrow was pushing a long straw into a gap, losing it, retrieving it, and trying again. Lian crouched beside Bo, looked from him to the roof, and said, 'The bird is carrying straw.'",
+        "Bo looked at Lian's face, then back at the sparrow. He pointed again when the straw fell. Lian answered, and both watched the same movement. Later she placed the bird card on the sill rather than between them. Bo touched the painted wing, then pointed outside. The card, the spoken word, the real bird, and Lian's gaze now belonged to one shared event instead of competing for his eyes.",
+        "The next difficulty was less obvious. Bo pointed at a worker climbing a ladder and used the new word for everything above the window. Lian did not simply correct him. She followed his gaze, named the worker, waited until he checked her face, and then looked with him toward a sparrow landing on the ladder. Across several shared moments, Bo began separating bird, worker, ladder, flying, and climbing. Meaning grew around what both people knew they were attending to.",
+        "Lian changed the classroom. She still used cards, but she also noticed what children tried to show her. During block play, she followed a child's look toward a falling tower before supplying the word 'unstable.' In the garden, she waited for two children to track the same snail before describing its trail. She learned that attention was not a rope an adult pulled toward a lesson. It could be a triangle built among child, adult, and something both recognized as their present object.",
+        "That triangle is joint attention: two people coordinate attention toward the same object or event while also registering that the focus is shared. Gaze following, pointing, checking another person's face, and responsive language help establish it. Joint attention supports early communication, word learning, and social understanding because a child is not only seeing an object and hearing a sound; the child is learning what another person means to refer to."
+      ],
+      "storyParagraphsZh": [
+        "莲老师每天早晨都使用图卡。她举起一只画出来的鸟，说“鸟”，再等孩子们看着她的嘴。大多数孩子会跟着念，博却很少开口。他总望向窗外，那里有麻雀衔着草钻进屋瓦。莲敲敲图卡，叫他的名字。博伸手指向窗外时，她又温和地把卡片移回他眼前，以为自己正在把注意力从分心中救回来。",
+        "整整一周，博学会了课堂程序，却没有学会那个词。他盯着图卡，直到敲击停止，随即又看向屋顶。一个早晨，博拉住莲的袖子，急切地往窗外指。她差点再次去拿图卡，最后顺着手指方向看过去：一只麻雀正把长草塞进瓦缝，草掉下来，它又捡起重试。莲蹲在博身旁，先看他，再看屋顶，说：“鸟在衔草。”",
+        "博看了一眼莲的脸，又转回麻雀。草再次落下时，他又指了一次，莲作出回应，两人共同看着同一个动作。稍后，她把鸟图卡放在窗台上，而不是挡在两人之间。博摸摸画出的翅膀，又指向窗外。卡片、说出的词、真正的鸟和莲的目光，终于属于同一件共享事件，不再互相争夺他的眼睛。",
+        "接下来的困难更不明显。博看见工人爬梯子，竟用刚学的词称呼所有窗户上方的东西。莲没有直接说他错了，而是顺着他的视线看，先说“工人”，等博回头确认她的脸，再与他一起看一只落在梯子上的麻雀。经过多次共享时刻，博开始分开鸟、工人、梯子、飞和爬。意义围绕着两个人都知道彼此正在关注的对象生长出来。",
+        "莲重新安排了教室。她仍然使用图卡，也开始留意孩子试图让她看见什么。积木游戏中，她先跟随孩子的目光看到摇晃的高塔，再提供“不稳”这个词；花园里，她等两个孩子一起追踪同一只蜗牛，才描述它留下的痕迹。她慢慢明白，注意力不是成人把孩子拖向课程的一根绳子，而可以是儿童、成人与双方共同确认的对象之间搭出的三角形。",
+        "这个三角形就是共同注意：两个人把注意协调到同一对象或事件上，同时也意识到这份关注正在被彼此共享。跟随目光、指向、查看对方表情和及时回应的语言，都能帮助它建立。共同注意支持早期沟通、词汇学习和社会理解，因为孩子不只是在看一个物体、听一个声音，也在学习另一个人此刻究竟指的是什么。"
+      ],
+      "conceptName": "Joint attention",
+      "conceptNameZh": "共同注意",
+      "explanationParagraphs": [
+        "Joint attention occurs when two people coordinate their focus on the same object or event and share awareness of that coordination. It commonly involves gaze following, pointing, alternating attention between a person and an object, and a responsive partner.",
+        "It is foundational for social communication and language learning because shared reference helps a child infer what another person is naming, feeling, or intending. Simply forcing eye contact is not the same as creating a shared focus."
+      ],
+      "explanationParagraphsZh": [
+        "共同注意发生在两个人把关注协调到同一对象或事件上，并且共同意识到这种协调时。它常通过跟随目光、指向、在人与物之间来回查看，以及另一方的及时回应建立。",
+        "它是社会沟通和语言学习的重要基础，因为共享指向帮助儿童推断另一个人在命名、感受或意图什么。单纯强迫目光接触，并不等于建立共同焦点。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0112-emergent-curriculum",
+      "batchId": "batch-001",
+      "categoryCode": "01",
+      "fieldCode": "0112",
+      "fieldTitle": "Training for pre-school teachers",
+      "fieldTitleZh": "学前教师培养",
+      "title": "The Week the Shapes Floated Away",
+      "titleZh": "形状漂走的那一周",
+      "summary": "A carefully planned week of shapes is interrupted by rain, and a teacher must decide whether following children's questions means abandoning teaching.",
+      "summaryZh": "一场雨打断了精心安排的形状周，老师必须判断：跟随儿童的问题，是否就意味着放弃教学。",
+      "storyParagraphs": [
+        "Mara began Monday with a complete plan for Shape Week. Circles on Monday, squares on Tuesday, triangles on Wednesday. She had cut cards, prepared songs, and arranged three assessment boxes. Before the first circle card reached the wall, rain struck the courtyard roof. Water slipped beneath the door and carried a paper circle across the floor. The children abandoned the song and followed it. One asked why the circle moved while a wooden block stayed still.",
+        "Mara nearly dried the floor and returned everyone to the carpet. Instead, she placed the wet circle, the block, and a tray near the door. The children tried cork, cloth, lids, stones, and folded paper. They called everything that moved a boat until a flat stone slid along the bottom. Mara wrote their claims beside quick sketches. She introduced no lecture on floating. She asked which object they wanted to test twice and how they could tell whether the second trial was fair.",
+        "Tuesday's square lesson never occurred as written. Children built channels from blocks to steer the water, then argued because the longest channel delivered the least water to its cup. Mara added measuring strips and transparent containers. One child counted block lengths; another marked water height with charcoal. When a channel leaked, they first blamed its triangular corner, then discovered a loose joint in a square section. The shapes had not vanished from the curriculum. They had acquired consequences.",
+        "The head teacher saw the unused cards and warned Mara not to let every puddle govern the school. Mara took the warning seriously. That afternoon she reviewed her notes: which children compared quantities, who used position words, who changed a prediction, who could represent a route in a drawing. She selected the next materials rather than simply waiting for another idea. On Wednesday she brought tubes of different widths because the children's channel question could now support work on comparison, flow, counting, and language.",
+        "By Friday, the class had designed a drainage path for the doorway. Their first version sent water toward the book shelf. The second held too much in one basin. On the third, they used arrows, numbered blocks, and a raised barrier, explaining their choices to the caretaker. Mara finally hung the original shape cards beside photographs of the channels. The children named circles, squares, and triangles easily, but also argued about why a shape's position and connection changed what it did.",
+        "Mara had not discarded curriculum; she had allowed it to emerge through a disciplined exchange among children's interests, observed questions, teacher intentions, documentation, and planned provocations. This is emergent curriculum. It is responsive without being directionless: the teacher listens for intellectually productive threads, connects them to developmental aims, chooses resources, records learning, and decides how to deepen or close an inquiry. Shape Week floated away only as a schedule. Its learning returned with wet edges and a reason to matter."
+      ],
+      "storyParagraphsZh": [
+        "玛拉带着一份完整的“形状周”计划开始星期一：周一圆形，周二正方形，周三三角形。她剪好图卡，准备了歌曲，还摆好三只评价盒。第一张圆形卡还没贴上墙，雨点就敲响院子屋顶。水从门下钻进来，带着一张纸圆片滑过地面。孩子们离开歌曲追了过去，有人问，为什么圆片会移动，旁边的木块却不动。",
+        "玛拉差点擦干地面，把所有人带回地毯。最后，她把湿圆片、木块和一只托盘留在门边。孩子们拿来软木、布、瓶盖、石头和折纸，起初把所有会移动的东西都叫作船，直到一块扁石贴着水底滑过去。玛拉把他们的说法和简图记下来，没有讲一堂漂浮课，只问大家最想把哪个物体再试一次，以及怎样判断第二次测试是否公平。",
+        "星期二的正方形课没有按教案出现。孩子们用积木修水道，却因为最长水道送进杯子的水最少而争论。玛拉加入测量条和透明容器。一个孩子数积木长度，另一个用炭笔标记水位。某段渠道漏水时，他们先怪三角形拐角，随后发现松动接口其实位于正方形积木之间。形状没有从课程消失，只是开始承担真实后果。",
+        "园长看见尚未使用的图卡，提醒玛拉不能让每一个水洼支配学校。玛拉认真接受了这个警告。那天下午，她重看记录：哪些孩子比较数量，谁开始使用方位词，谁修改过预测，谁能把路线画出来。她没有只是等待下一个偶然想法，而是主动挑选后续材料。周三，她带来宽窄不同的管子，因为孩子的水道问题已经能够连接比较、流动、计数和语言。",
+        "到星期五，全班为门口设计了一条排水路线。第一版把水送向书架，第二版又让一只水盆积得太满。第三版中，他们画箭头、给积木编号、抬高一道挡水边，还向维修员解释每个选择。玛拉终于把原来的形状卡挂在水道照片旁。孩子们能轻易说出圆形、正方形和三角形，也开始争论同一种形状为什么会因位置和连接方式不同而产生不同作用。",
+        "玛拉没有抛弃课程，而是让课程从儿童兴趣、被观察到的问题、教师意图、学习记录和有计划的材料刺激之间逐渐长出来。这就是生成课程。它会回应儿童，却不是没有方向：教师需要辨认具有思考价值的线索，把它们连接到发展目标，选择资源，记录学习，再决定怎样深化或结束探究。形状周漂走的只是日程表，它的学习带着湿润边缘和真实理由重新回来了。"
+      ],
+      "conceptName": "Emergent curriculum",
+      "conceptNameZh": "生成课程",
+      "explanationParagraphs": [
+        "Emergent curriculum develops through an ongoing cycle of observing children's interests and theories, interpreting their learning, connecting it with educational goals, and deliberately planning environments, materials, questions, and documentation that extend inquiry.",
+        "It is not improvised teaching without objectives. Professional judgment is central: educators decide which interests contain sustained learning potential, how to include different children, what knowledge to introduce, and when an inquiry has reached a useful stopping point."
+      ],
+      "explanationParagraphsZh": [
+        "生成课程通过持续循环发展：观察儿童的兴趣与解释，判断其中的学习，把它与教育目标连接，再有意识地规划环境、材料、问题和记录方式，使探究继续深入。",
+        "它不是没有目标的临场教学。教师的专业判断居于核心位置：哪些兴趣具有持续学习潜力，怎样让不同儿童进入活动，何时引入新知识，以及何时让探究在合适位置结束。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

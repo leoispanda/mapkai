@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-012",
+  "articles": [
+    {
+      "id": "0811-nutrient-cycling",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0811",
+      "fieldTitle": "Crop and livestock production",
+      "fieldTitleZh": "作物与畜牧生产",
+      "title": "The Harvest That Never Came Home",
+      "titleZh": "从未回家的收成",
+      "summary": "A farm exports grain, straw, and milk year after year without tracing the elements removed, transformed, stored, lost, or returned to soil.",
+      "summaryZh": "一座农场年复一年运走谷物、秸秆与牛奶，却从未追踪从土壤移走、转化、储存、流失或归还的元素。",
+      "storyParagraphs": [
+        "Farmer Daro celebrated every cart of grain leaving his valley. He also sold the straw and moved manure from the dairy yard to a distant buyer. For several seasons the soil still looked dark, yet yields gradually fell and pale leaves appeared first on the far field. Daro blamed tired seed. Agronomist Sera placed the grain, straw, milk, manure, rain, dust, feed, fertiliser, runoff, and soil tests on one ledger. The farm had counted money crossing its gate and ignored elements crossing with it.",
+        "Sera treated the soil as changing stocks rather than an inexhaustible container. Nitrogen, phosphorus, potassium, sulfur, and other elements entered in different forms, moved through plants, animals, microbes, water, and organic matter, then left in products, gases, erosion, drainage, or waste. Energy flowed through sunlight and heat; chemical elements could be reused but were also exported or dispersed. A balanced annual total still concealed a depleted hilltop and an overloaded yard.",
+        "The first response spread more nitrogen everywhere. Rain soon carried nitrate below shallow roots, and wet compacted patches released nitrogen gases. Phosphorus accumulated near the barn while remaining less available in other soils because chemistry and erosion controlled its movement. Sera distinguished total content from plant-available form and matched source, rate, timing, and placement to crop demand, weather, soil, and realistic yield. More input at the wrong place or time increased loss without feeding the plant.",
+        "Daro began returning crop residues, composting suitable manure, growing legumes, rotating deep- and shallow-rooted crops, and protecting soil from erosion. These practices did not create every element from nothing. Legumes brought biologically fixed atmospheric nitrogen into the farm system but still required other nutrients; manure redistributed nutrients originally taken from feed and land. Composting, storage, and application could lose nitrogen or introduce pathogens, salts, contaminants, and runoff if poorly managed.",
+        "Sera used repeated soil and tissue tests, yield maps, nutrient budgets, field history, and observations of water and soil structure. She accounted for uncertainty and delayed release from organic pools. The goal was neither mining fertility nor forcing every input to remain on the farm. Excess nutrients could damage water, air, climate, animal health, and crop quality. Efficient production meant retaining useful flows, replacing unavoidable exports, and preventing harmful accumulation or escape.",
+        "The valley learned nutrient cycling: the movement, transformation, storage, reuse, and loss of essential elements through soil, organisms, water, air, products, and management. Harvest and animal products remove nutrients; weathering, fixation, feed, fertiliser, residues, manure, deposition, and biological processes add or redistribute them. Availability depends on form, place, timing, biology, and conditions, not only total quantity. Daro's harvests had never vanished. Each cart carried part of the farm away, and the ledger finally showed which parts needed a safe route home."
+      ],
+      "storyParagraphsZh": [
+        "农夫达罗为每一车驶出山谷的谷物庆祝。他还卖掉秸秆，又把奶牛场粪肥运给远方买家。几个季节里，土壤仍显得黝黑，产量却慢慢下降，远处田块先出现苍白叶片。达罗责怪种子疲惫。农艺师塞拉把谷物、秸秆、牛奶、粪肥、雨、尘、饲料、肥料、径流与土壤检测放进同一本账。农场只数过穿越大门的钱，没有数随之穿越的元素。",
+        "塞拉把土壤看成变化的储库，而非取之不尽的容器。氮、磷、钾、硫与其他元素以不同形态进入，经植物、动物、微生物、水和有机质移动，再通过产品、气体、侵蚀、排水或废物离开。能量随阳光与热流动，化学元素可以再利用，也会被运走或分散。全场年度总量平衡，仍可能掩盖山顶耗竭与畜栏旁过量。",
+        "第一项反应是在所有地方增加氮肥。雨水很快把硝酸盐带到浅根以下，潮湿压实地块又释放含氮气体。磷在牛舍旁累积，在其他土中却因化学与侵蚀控制而较难利用。塞拉区分总含量与植物可用形态，再按作物需求、天气、土壤与现实目标产量匹配来源、用量、时间与位置。错误地点或时间的更多投入，只会增加流失，不会喂饱植物。",
+        "达罗开始归还作物残体，妥善堆肥，种植豆科，轮作深浅根作物，并保护土壤免受侵蚀。这些做法并不会凭空创造每种元素。豆科把生物固定的空气氮带入农场，仍需其他养分；粪肥只是重新分配原本来自饲料与土地的养分。若管理不当，堆制、储存与施用会损失氮，也可能引入病原、盐分、污染物和径流。",
+        "塞拉反复使用土壤与植株检测、产量地图、养分预算、田块历史，并观察水与土壤结构。她考虑不确定性，以及有机库迟缓释放。目标既不是开采肥力，也不是强迫每份投入永远留在农场。过量养分会伤害水、空气、气候、动物健康与作物质量。高效生产要保留有用流动，补回无法避免的输出，并防止有害累积或逃逸。",
+        "山谷学会的是养分循环：必需元素在土壤、生物、水、空气、产品与管理之间的移动、转化、储存、再利用与损失。收成与动物产品会带走养分，风化、固定、饲料、肥料、残体、粪肥、沉降与生物过程会添加或重分配它们。可利用程度取决于形态、地点、时间、生物与条件，而非只有总量。达罗的收成从未消失，每辆车都带走农场的一部分，账本终于显示哪些部分需要一条安全回家路。"
+      ],
+      "conceptName": "Nutrient cycling",
+      "conceptNameZh": "养分循环",
+      "explanationParagraphs": [
+        "Nutrient cycling is the movement, transformation, storage, reuse, and loss of essential elements through soil, organisms, water, air, products, and management.",
+        "Inputs, harvest exports, animal flows, chemical form, microbial processes, timing, placement, erosion, drainage, and gaseous losses determine availability and environmental impact. Balancing one total can hide local depletion or accumulation."
+      ],
+      "explanationParagraphsZh": [
+        "养分循环是必需元素在土壤、生物、水、空气、产品与管理之间的移动、转化、储存、再利用与损失。",
+        "投入、收成输出、动物流动、化学形态、微生物过程、时间、位置、侵蚀、排水与气态损失共同决定可利用性和环境影响。一个总量平衡可掩盖局部耗竭或累积。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0811-integrated-pest-management",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0811",
+      "fieldTitle": "Crop and livestock production",
+      "fieldTitleZh": "作物与畜牧生产",
+      "title": "The Orchard After the Perfect Silence",
+      "titleZh": "彻底安静以后的果园",
+      "summary": "An orchard eliminates nearly every insect, then suffers a faster pest rebound after natural enemies disappear and resistant survivors reproduce.",
+      "summaryZh": "果园消灭几乎所有昆虫后，天敌随之消失，耐受幸存者繁殖，害虫反而更快回潮。",
+      "storyParagraphs": [
+        "Orchard keeper Pela wanted leaves without a single bite mark. At the first sign of caterpillars, she sprayed every row until the orchard became perfectly quiet. The damaged leaves stopped increasing, and Pela called the campaign complete. Three weeks later, mites covered the undersides of leaves more densely than before. The predatory insects that normally consumed them were gone, while a few survivors had reproduced quickly. A treatment that won the first afternoon had altered the next contest.",
+        "Crop specialist Ivo began by identifying species, life stages, damage, weather, and beneficial organisms rather than calling every small creature an enemy. He placed traps and inspected representative trees on a regular schedule. A visible insect did not automatically mean economically or ecologically important harm; hidden disease, nutrient stress, or weather injury could mimic feeding. Sampling intensity reflected patchiness and uncertainty, and local action thresholds included crop stage, expected loss, control cost, and non-target consequences. Monitoring established where populations were changing and whether action was justified before a calendar date dictated it.",
+        "Ivo pruned infected material, adjusted irrigation and canopy airflow, removed alternate hosts where appropriate, protected predators and pollinators, used resistant varieties, and timed physical or biological controls to vulnerable pest stages. These measures did not promise a sterile orchard. They lowered the chance that one species crossed a decision threshold at which expected damage justified intervention, while preserving organisms that supplied control for free.",
+        "When targeted pesticide use was necessary, Pela followed the authorised label, worker and environmental protections, timing restrictions, and species-specific guidance. She selected the narrowest effective option, avoided unnecessary repeats, and managed modes of action to slow resistance. A surviving pest population was not proof that the dose should be improvised upward. Poor coverage, wrong timing, misidentification, immigration, weather, or resistance each required a different response and qualified advice.",
+        "The second season brought an unfamiliar pest for which old thresholds did not fit. Ivo treated the plan as adaptive: record action and outcome, verify identification, consult current local guidance, and revise as climate, markets, regulations, and ecology changed. He also measured crop quality, beneficial species, costs, residues, and worker exposure, not only pest counts. Success meant acceptable production and risk, not the permanent absence of all insects.",
+        "The orchard adopted integrated pest management: an evidence-based process that combines prevention, identification, monitoring, decision thresholds, and compatible cultural, biological, physical, genetic, and chemical controls to manage pests with acceptable economic, health, and environmental risk. Methods are selected and evaluated as a system, with pesticides used judiciously rather than automatically excluded or routinely applied. Pela's first silence had removed enemies and allies together. The later orchard remained full of life, but fewer lives were allowed to become an unchecked problem."
+      ],
+      "storyParagraphsZh": [
+        "果园主人佩拉希望叶片上没有一个咬痕。毛虫刚出现，她便喷遍每行果树，直到园中彻底安静。受损叶片暂时不再增加，佩拉宣布行动完成。三周后，螨虫比从前更密地覆在叶背。平时捕食它们的昆虫已经消失，少数幸存者却迅速繁殖。赢下第一个下午的处理，改变了下一场竞争。",
+        "作物专家伊沃先识别物种、生命阶段、损伤、天气与有益生物，而不把每只小动物都称作敌人。他设置诱捕并按固定节奏检查代表性树木。看见昆虫不自动等于存在经济或生态上重要的损害；隐藏病害、养分胁迫或天气伤害也可能伪装成取食。抽样强度要反映斑块性与不确定，本地行动阈值还要考虑作物阶段、预期损失、控制成本和非目标后果。监测用来确定种群在哪里变化，以及行动是否有依据，而非让日历日期替果园决定。",
+        "伊沃修剪受感染材料，调整灌溉与树冠通风，在适当处清除替代寄主，保护捕食者和传粉者，使用抗性品种，并让物理或生物控制对准害虫脆弱阶段。这些措施不承诺一座无菌果园，而是降低某个物种越过决策阈值的机会；当预期损害足以支持干预时才行动，同时保留免费提供控制的生物。",
+        "确需定向使用农药时，佩拉遵循获准标签、工人与环境保护、时段限制及物种专门指导。她选择最窄而有效的选项，避免无必要重复，并管理作用方式以减慢抗性。害虫仍有幸存，并不表示剂量应自行提高。覆盖不良、时机错误、误认、迁入、天气或抗性，各自需要不同应对与合格建议。",
+        "第二季出现一种陌生害虫，旧阈值不再适用。伊沃把计划当成可调整过程：记录行动与结果，核实鉴定，咨询当前本地指导，并随气候、市场、法规与生态变化修订。他还测量作物质量、有益物种、成本、残留与工人暴露，而不只数害虫。成功意味着可接受的生产与风险，不是所有昆虫永久消失。",
+        "果园采用的是综合虫害管理：一种基于证据的过程，结合预防、鉴定、监测、决策阈值，以及相容的栽培、生物、物理、遗传与化学控制，在可接受的经济、健康与环境风险下管理有害生物。各种方法作为一个体系选择和评估，农药被审慎使用，而非自动排除或例行施用。佩拉第一次制造的安静同时移走敌友；后来的果园仍充满生命，却少有生命被允许失控成灾。"
+      ],
+      "conceptName": "Integrated pest management",
+      "conceptNameZh": "综合虫害管理",
+      "explanationParagraphs": [
+        "Integrated pest management combines prevention, correct identification, monitoring, decision thresholds, and compatible cultural, biological, physical, genetic, and chemical controls.",
+        "It aims for acceptable production and risk, not eradication of every organism. Methods and thresholds are crop-, pest-, place-, and time-specific; authorised pesticide directions and qualified local guidance remain essential."
+      ],
+      "explanationParagraphsZh": [
+        "综合虫害管理结合预防、正确鉴定、监测、决策阈值，以及相容的栽培、生物、物理、遗传与化学控制。",
+        "它追求可接受的生产与风险，而非消灭所有生物。方法与阈值依作物、害虫、地点与时间而定，获准农药说明和合格本地指导仍不可缺。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0811-selective-breeding-tradeoffs",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0811",
+      "fieldTitle": "Crop and livestock production",
+      "fieldTitleZh": "作物与畜牧生产",
+      "title": "The Orchard of Giant Fruit and Empty Wells",
+      "titleZh": "巨果与空井的果园",
+      "summary": "Selecting only the largest fruit increases size while narrowing diversity and weakening drought performance, storage, flavour, and disease resilience.",
+      "summaryZh": "只选择最大果实会增大尺寸，却同时缩窄多样性，并削弱抗旱、储藏、风味与病害韧性。",
+      "storyParagraphs": [
+        "Breeder Nera saved seed only from the largest melons in each harvest. Within six generations, market tables displayed fruit twice the old size. Buyers applauded until a dry summer emptied the shallow wells. The giant-fruited line wilted first, split more often after irregular rain, and lost flavour in storage. Smaller plants in an overlooked border survived. Nera had not commanded the population to abandon drought tolerance; she had repeatedly admitted only one kind of success into the next generation.",
+        "Geneticist Ivo separated observed performance into inherited differences, environment, and their interaction. The biggest melon in a wet, fertile corner was not necessarily the parent with the best genetic tendency for size. He used replicated families, common environments, records across seasons, and relatedness to estimate which differences could respond to selection. Heritability described a population in stated conditions, not a permanent percentage stamped on an individual trait everywhere.",
+        "Size was also connected to other traits through shared genes, linkage, physiology, and resource allocation. Selection shifted correlated traits even when no one measured them. A larger fruit could require more water, mature later, carry thinner skin, or reduce fruit number, although relationships differed among populations and environments. Reusing a few parents increased inbreeding and exposed harmful recessive variants while narrowing the variation available for future disease or climate change.",
+        "Ivo built a selection index with explicit weights for yield, drought response, flavour, storage, disease resistance, maturity, and market requirements. Growers, breeders, buyers, and welfare specialists reviewed the weights because the mathematics formalised value choices rather than removing them. Trials spanned dry and wet sites because rankings changed with environment. He kept check varieties and measured uncertainty rather than declaring one champion from a single season. Crossing introduced useful variation, while records prevented novelty from being mistaken for improvement before several generations of evaluation.",
+        "Not every wild or old trait had to remain in every commercial line, and no programme could maximise all traits at once. Nera conserved diverse material and maintained multiple breeding populations instead of relying on one genetic answer. For animals, Ivo added health, fertility, behaviour, longevity, and welfare because production gain that increased suffering or biological fragility was not a hidden success. Breeding goals remained open to review as climate, disease, ethics, and farming systems changed.",
+        "The dry orchard exposed selective breeding trade-offs: choosing parents for heritable traits changes a population across generations, but correlated responses, genetic diversity, inbreeding, genotype-by-environment interaction, measurement error, and competing objectives shape what else changes. Selection can deliver major gains; it cannot optimise one trait without asking what is sacrificed, under which conditions, and for whom. Nera's giant melons were not a breeding failure. They were the accurate answer to a question that had been made too narrow."
+      ],
+      "storyParagraphsZh": [
+        "育种者奈拉每次收获只保存最大甜瓜的种子。六代之后，市场上的果实已有旧品种两倍大。买家称赞不已，直到一个干旱夏季耗空浅井。巨果品系最先萎蔫，雨量不稳时更易开裂，储存后风味也变淡；角落里被忽略的小株却活了下来。奈拉从未命令种群放弃抗旱，她只是一次次只让一种成功进入下一代。",
+        "遗传学家伊沃把观察表现分成遗传差异、环境及二者相互作用。湿润肥沃角落里最大的瓜，不一定是拥有最佳遗传增大倾向的亲本。他用重复家系、共同环境、跨季记录与亲缘关系，估计哪些差异能够响应选择。遗传力描述规定条件下的一个种群，不是永远印在任何个体性状上的固定百分比。",
+        "大小还会通过共享基因、连锁、生理与资源分配同其他性状相连。即使无人测量，选择也会推动相关性状。更大的果实可能需水更多、成熟更晚、果皮更薄或数量更少，具体关系又随种群与环境改变。反复使用少数亲本会提高近交，暴露有害隐性变异，并缩窄未来面对病害或气候变化可用的差异。",
+        "伊沃建立选择指数，为产量、抗旱、风味、储藏、抗病、成熟期与市场要求明确赋权。种植者、育种者、买家与福利专家共同审查权重，因为数学只是把价值选择形式化，并没有消除它。试验跨越干湿地点，因为排名会随环境改变。他保留对照品种并测量不确定性，不用一个季节宣布唯一冠军。杂交引入有用变异，记录则防止新奇在多代评估前被误认成改良。",
+        "不是每个野生或旧性状都必须留在每条商业品系中，也没有计划能同时最大化所有性状。奈拉保存多样材料并维持多个育种群体，不依赖一个遗传答案。对于动物，伊沃还加入健康、繁殖、行为、寿命与福利，因为增加痛苦或生物脆弱性的生产收益不是隐藏成功。育种目标会随气候、疾病、伦理与生产体系变化而重新审视。",
+        "干旱果园暴露的是选择育种的权衡：为可遗传性状挑选亲本，会跨代改变种群，相关响应、遗传多样性、近交、基因型与环境互作、测量误差及竞争目标，则决定还有什么随之改变。选择能带来巨大进步，却不能在不追问牺牲什么、在哪些条件下、为谁牺牲的情况下单独优化一个性状。奈拉的巨果并非育种失败，而是对一个被问得太窄的问题给出的准确答案。"
+      ],
+      "conceptName": "Selective breeding trade-offs",
+      "conceptNameZh": "选择育种的权衡",
+      "explanationParagraphs": [
+        "Selective breeding trade-offs arise because selecting parents for heritable traits also changes correlated traits, genetic diversity, inbreeding, and performance across environments.",
+        "Multi-trait goals, representative trials, uncertainty, welfare, diversity conservation, and changing future conditions matter. Strong gain in one measured trait can coexist with hidden losses elsewhere."
+      ],
+      "explanationParagraphsZh": [
+        "选择育种的权衡来自这样一个事实：为可遗传性状挑选亲本，也会改变相关性状、遗传多样性、近交与不同环境下的表现。",
+        "多性状目标、代表性试验、不确定性、福利、多样性保存与未来条件变化都重要。一个测量性状的大幅进步可以与其他地方的隐藏损失并存。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0812-grafting",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0812",
+      "fieldTitle": "Horticulture",
+      "fieldTitleZh": "园艺",
+      "title": "The Tree with Two Histories",
+      "titleZh": "拥有两段历史的树",
+      "summary": "A valued fruiting shoot survives only after its living tissues join a compatible root system, while each partner keeps its own genotype and risks.",
+      "summaryZh": "一段珍贵结果枝只有在活组织与相容根系连接后才存活，而两个伙伴仍保留各自基因型与风险。",
+      "storyParagraphs": [
+        "Gardener Lio tried to save the last branch of a pear known for its flavour. He tied it onto a vigorous seedling, wrapped the joint, and waited. The buds opened using stored reserves, then wilted because water never crossed the cut. On a second attempt, the branch survived but the union swelled and split after two seasons. Lio had treated joining as carpentry: if two pieces touched tightly, he expected them to become one tree.",
+        "Horticulturist Nera cut healthy material at the proper stage, kept surfaces clean and moist, aligned living cambial regions, secured contact without crushing tissue, and protected the wound. Cells formed callus across the interface; new vascular connections then had to differentiate so xylem could move water and minerals upward and phloem could distribute sugars and signals. She supported the joint because vascular function and mechanical strength did not mature at exactly the same pace. Early bud growth was not proof of a durable union. Temperature, desiccation, contamination, movement, and timing all influenced healing.",
+        "The upper partner still produced the valued pear genotype, while the lower partner remained genetically distinct. The root system influenced vigour, size, anchorage, soil adaptation, water relations, nutrient uptake, disease response, and the age at which fruiting began. The upper branch influenced demand and hormones in return. Compatibility depended on biological relationship and long-term interaction; a union that healed initially could later fail through weak structure, disease, or physiological mismatch.",
+        "Nera propagated more trees from selected buds so the fruit remained largely true to the chosen clone. That uniformity preserved a valuable trait and also repeated its vulnerabilities. Viruses, viroids, systemic pathogens, hidden mutations, and labelling errors could travel through every descendant. She used verified clean source material, traceable records, appropriate sanitation, quarantine rules, and inspection instead of assuming a familiar-looking mother plant was safe.",
+        "Not every plant needed the same method. Seed created new genetic combinations; cuttings, layering, division, and tissue culture multiplied selected genotypes with different costs and risks. Some species rooted readily, others required a compatible lower partner, and some combinations were prohibited or impractical. Nera chose the method according to purpose, species, health status, scale, environment, law, and the diversity needed across the orchard.",
+        "The surviving pear taught grafting and propagation: grafting joins a shoot or bud to a compatible rooted partner so living tissues heal and establish functional vascular continuity, while propagation creates new plants sexually or clonally through methods suited to the species and goal. The partners do not genetically merge into one uniform organism, though they influence one another's performance. Lio had first fastened wood to wood. Nera preserved a lineage only after she joined living pathways and protected the histories carried on both sides of the scar."
+      ],
+      "storyParagraphsZh": [
+        "园丁利奥想保存最后一根以风味闻名的梨枝。他把它绑在一棵强壮实生苗上，包好接口等待。芽用储存养分展开，随后因水无法穿过切口而萎蔫。第二次，枝条活了下来，接口却在两季后肿胀裂开。利奥把连接当成木工活：两块材料只要紧密接触，就该变成一棵树。",
+        "园艺师奈拉在合适阶段切取健康材料，保持表面洁净湿润，让有活性的形成层区域对齐，固定接触而不压坏组织，并保护伤口。细胞先在界面形成愈伤组织，随后还要分化出新的维管连接，让木质部向上输送水和矿物，让韧皮部分配糖与信号。她继续支撑接口，因为维管功能与机械强度不会按完全相同速度成熟。早期萌芽不能证明接口会长久。温度、干燥、污染、晃动与时机都会影响愈合。",
+        "上方伙伴仍产生那种珍贵梨的基因型，下方伙伴也保持自己的遗传身份。根系会影响长势、大小、锚固、土壤适应、水分关系、养分吸收、疾病反应与开始结果的年龄，上部枝条则反过来影响需求与激素。相容性取决于生物亲缘与长期互作；最初愈合的接口，日后仍可能因结构薄弱、疾病或生理不匹配而失败。",
+        "奈拉从选定芽体繁出更多树，让果实大体忠实于所选克隆。统一性保存珍贵性状，也会重复它的脆弱。病毒、类病毒、系统性病原、隐藏突变与标签错误，都可能穿过每一个后代。她使用经确认的洁净母本、可追踪记录、适当卫生与检疫规则，并持续检查，而不假定外观熟悉的母株天然安全。",
+        "并非每种植物都需要同一种方法。种子创造新的遗传组合，扦插、压条、分株与组织培养则以不同成本和风险复制选定基因型。有些物种容易生根，有些需要相容下部伙伴，还有一些组合受到禁止或并不实际。奈拉按目的、物种、健康状态、规模、环境、法规与果园所需多样性选择方法。",
+        "存活的梨树教授的是嫁接与繁殖：嫁接把枝条或芽接到相容的有根伙伴上，让活组织愈合并建立有效维管连续；繁殖则依物种与目标，通过有性或克隆方法产生新植株。两个伙伴不会遗传融合成一个均一生物，却会相互影响表现。利奥起初只把木头绑住，奈拉在连接活的通路并保护伤痕两侧的历史后，才真正保存了这个谱系。"
+      ],
+      "conceptName": "Grafting and propagation",
+      "conceptNameZh": "嫁接与繁殖",
+      "explanationParagraphs": [
+        "Grafting joins a shoot or bud to a compatible rooted partner so tissues heal and establish vascular continuity. Propagation produces new plants sexually or clonally through seeds, cuttings, layering, division, tissue culture, or other suitable methods.",
+        "The partners retain distinct genotypes while influencing performance. Compatibility, plant health, sanitation, traceability, diversity, environment, timing, and law determine success and risk."
+      ],
+      "explanationParagraphsZh": [
+        "嫁接把枝条或芽接到相容有根伙伴上，使组织愈合并建立维管连续。繁殖则通过种子、扦插、压条、分株、组织培养或其他适当方法有性或克隆地产生新植株。",
+        "伙伴保留不同基因型并相互影响表现。相容性、植物健康、卫生、追踪、多样性、环境、时机与法规共同决定成功和风险。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0812-microclimate",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0812",
+      "fieldTitle": "Horticulture",
+      "fieldTitleZh": "园艺",
+      "title": "Two Springs in One Garden",
+      "titleZh": "同一座花园里的两个春天",
+      "summary": "Plants beside a sunlit wall flower safely while identical plants in a hollow freeze because radiation, wind, cold-air drainage, moisture, and canopy create local conditions.",
+      "summaryZh": "向阳墙边植株安全开花，低洼处相同植株却受冻，因为辐射、风、冷空气下沉、水分与冠层形成局地条件。",
+      "storyParagraphs": [
+        "Gardener Mira planted identical apricot saplings on the same estate and trusted the town weather report. Trees beside a south-facing stone wall opened blossoms first and kept them. Trees only eighty metres away in a shallow hollow browned after a clear night, though the official station reported no severe frost. Mira accused the nursery of mixing varieties. At dawn she found cold air pooled ankle-deep in the hollow while the wall still released heat stored from the previous sun.",
+        "Climatologist Sian placed shielded sensors at flower height, soil depth, open lawn, wall edge, and hollow, recording through day and night. Sun angle and surface colour changed absorbed radiation; the wall stored and reradiated heat; wind removed warm boundary air; dense canopy altered shade and long-wave cooling; slope guided heavier cold air downward. Soil moisture and mulch changed heat capacity and evaporation. The duration below a damaging temperature mattered alongside the minimum reached. One regional temperature could not represent every leaf, root, or hour.",
+        "Mira added a windbreak and discovered that a solid barrier created turbulence behind it. A permeable screen slowed wind more gently but also reduced drying, raising humidity around disease-prone foliage. Shade cloth protected tender leaves from intense afternoon radiation and delayed ripening elsewhere. Irrigation cooled through evaporation by day and could either buffer or worsen conditions depending on timing, soil, and weather. Each intervention moved several local variables, not one isolated dial.",
+        "The hollow was not always the worst place. During hot, dry weeks it retained moisture and protected shade-tolerant plants; on still clear nights it collected cold air. Leaf-wetness duration mattered too. Sian mapped conditions by season and event instead of assigning permanent labels. Sensor placement, calibration, shielding, height, response time, and missing data mattered. A thermometer touching sunlit stone measured the stone, while one too high missed the flowers that actually froze.",
+        "Mira matched species and planting stage to exposure, used topography and structures deliberately, and kept drainage and airflow open where needed. She preserved variation rather than making every bed identical, since sheltered niches extended seasons and supported different organisms. Local design could moderate heat, wind, frost, and water stress but could not cancel a regional drought, extreme freeze, or shifting climate. Forecasts and contingency plans still mattered.",
+        "The garden contained microclimate: climatic conditions at a local scale that differ from surrounding averages because of radiation, surfaces, topography, vegetation, soil, water, wind, structures, and time. Conditions can change over centimetres to neighbourhoods and from minutes to seasons, so measurements must match the organism and process of interest. Mira had planted one variety under one town forecast. The garden answered with two springs because each blossom occupied a different exchange of heat, air, light, and water."
+      ],
+      "storyParagraphsZh": [
+        "园丁米拉在同一庄园种下相同杏树苗，相信镇里的天气报告。朝南石墙边的树先开花并顺利保住花朵，只有八十米外浅洼中的树却在一个晴夜后变褐，官方气象站并未报告严重霜冻。米拉怀疑苗圃混错品种。黎明时，她发现冷空气在低洼处积到脚踝，而石墙仍释放前一日阳光储下的热。",
+        "气候学家西安把有遮蔽的传感器放在花朵高度、土层、开阔草地、墙边与低洼处，跨昼夜记录。太阳角度与表面颜色改变吸收辐射，墙体储热再放热，风带走温暖边界空气，浓密冠层改变遮阴与长波冷却，坡度则引导较重冷空气向下。土壤水分与覆盖物还会改变热容量与蒸发。低于伤害温度持续多久，与最低值本身同样重要。一个区域温度无法代表每片叶、每条根或每个小时。",
+        "米拉加设防风障，才发现实体墙会在背后制造湍流。透风屏能更平缓地减速，也会降低干燥，让易感病叶片周围湿度上升。遮阳布保护嫩叶免受午后强辐射，在别处又推迟成熟。白天灌溉通过蒸发降温，效果还会随时机、土壤与天气缓冲或恶化条件。每项干预都会移动多个局地变量，不是一只独立旋钮。",
+        "低洼处并不永远最差。炎热干燥周里，它保存水分并庇护耐阴植物；晴朗无风夜里，它又收集冷空气，叶面湿润持续时间也会改变结果。西安按季节和事件绘图，不给地点贴永久标签。传感器位置、校准、遮蔽、高度、响应时间与缺失数据都重要。贴着向阳石面的温度计量到的是石头，放得太高的温度计又会漏掉真正结霜的花。",
+        "米拉让物种与种植阶段匹配暴露，有意利用地形和结构，并在需要处保持排水与通风。她保留差异，而不把每块花床改成相同，因为受庇护的小环境能延长季节并支持不同生物。局部设计可以缓和热、风、霜与水分胁迫，却无法取消区域干旱、极端冰冻或变化气候，预报与应变计划仍然需要。",
+        "花园包含的是微气候：由于辐射、表面、地形、植被、土壤、水、风、结构与时间，在局地尺度上偏离周围平均的气候条件。它可在厘米到社区、分钟到季节之间变化，因此测量必须匹配关注的生物与过程。米拉按一份镇级预报种下一个品种，花园却给出两个春天，因为每朵花都身处不同的热、空气、光与水交换。"
+      ],
+      "conceptName": "Microclimate",
+      "conceptNameZh": "微气候",
+      "explanationParagraphs": [
+        "Microclimate is the local pattern of temperature, radiation, humidity, wind, and water conditions created by surfaces, topography, vegetation, soil, structures, and time relative to broader averages.",
+        "Its relevant scale depends on the organism and process. Sensor siting and intervention trade-offs matter, and local design can moderate but not eliminate regional extremes or climate change."
+      ],
+      "explanationParagraphsZh": [
+        "微气候是表面、地形、植被、土壤、结构与时间相对较大范围平均所形成的局地温度、辐射、湿度、风与水分格局。",
+        "相关尺度取决于生物与过程。传感器布置和干预取舍很重要，局部设计能缓和却不能消除区域极端或气候变化。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0812-phenology",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0812",
+      "fieldTitle": "Horticulture",
+      "fieldTitleZh": "园艺",
+      "title": "The Calendar the Flowers Refused",
+      "titleZh": "花朵拒绝服从的日历",
+      "summary": "A gardener stops scheduling bloom and pollination by date alone after cold exposure, warmth, daylight, moisture, and interacting species shift their timing differently.",
+      "summaryZh": "寒冷积累、升温、日长、水分与互作物种各自改变时间后，园丁不再只按日期安排开花与授粉。",
+      "storyParagraphs": [
+        "Every year, gardener Elian hired pollination hives on the same calendar date. One warm winter, the orchard bloomed twelve days early, while the hives arrived to rows already dropping petals. The next year, a cold spring delayed flowers but a brief warm spell woke some insects first. Elian moved the date back and forth, always correcting the previous year. The date was easy to print; the organisms were responding to histories the page did not record.",
+        "Ecologist Nera began a ledger of first budburst, full bloom, leaf expansion, insect emergence, migration, fruit set, colouring, and leaf fall. She recorded species, variety, life stage, location, elevation, and observation method rather than one vague note saying spring began. Repeated observations turned scattered events into comparable time series. A first flower and half the orchard in bloom answered different management questions.",
+        "Temperature mattered through more than today's warmth. Some buds required accumulated cold before they could respond normally to later heat; inadequate chilling could make emergence uneven. Warmth after dormancy accelerated development within limits, while photoperiod constrained some species and moisture controlled others. Simple heat sums could aid prediction only when their base, start point, biological stage, and local calibration matched the organism. An extreme day or drought could break a neat accumulation rule.",
+        "Nera placed the flower record beside records for bees, pests, birds, and harvest labour. Two species could each shift earlier yet move by different amounts, creating or closing a timing mismatch. A brief overlap could occur yet be too short, or happen at the wrong time of day, to provide the old ecological service. Earlier bloom also increased exposure to a late frost even if average spring became warmer. Calendar change therefore affected relationships, risk, and management, not merely the date printed beside one species.",
+        "Observers agreed on definitions and photographed uncertain stages. Missing visits, observer turnover, cultivar changes, moved sensors, and altered land use entered the metadata. Observation frequency had to be high enough to locate short events rather than merely confirm that they occurred between two distant visits. Long records from gardens, farms, satellites, and community observers extended coverage but required quality control and protection against confusing a changed method with a biological change. Nera used forecasts probabilistically and updated them as events unfolded.",
+        "The orchard ledger became phenology: the study and observation of recurring biological life-cycle events and how their timing relates to seasonal and interannual environmental variation. Flowering, emergence, migration, breeding, fruiting, and senescence respond to temperature history, daylight, water, genetics, interactions, and place. Comparable records reveal trends and mismatches, but prediction remains organism- and context-specific. Elian's calendar had demanded obedience to a date. Nera's ledger listened to how several living clocks answered the season."
+      ],
+      "storyParagraphsZh": [
+        "园丁埃利安每年都在同一个日历日期租来授粉蜂箱。一个暖冬，果园提前十二天开花，蜂箱抵达时整排花瓣已经脱落。下一年，寒冷春季推迟花朵，一段短暂暖期却先唤醒部分昆虫。埃利安把日期前后挪动，总在修正上一年。日期容易印刷，生物回应的却是纸页从未记录的历史。",
+        "生态学家奈拉开始记录首次萌芽、盛花、展叶、昆虫羽化、迁徙、坐果、转色与落叶。她写明物种、品种、生命阶段、地点、海拔与观察方法，而不只含糊记一句春天开始。重复观察把零散事件变成可比较时间序列。第一朵花与半座果园开花，回答的是不同管理问题。",
+        "温度的影响不只来自今天有多暖。有些芽必须先累积足够低温，才能正常回应后续热量；低温不足会让萌发不整齐。休眠后的温暖在一定范围内加快发育，日长会约束一些物种，水分又控制另一些。简单积温只有在基准温度、起点、生物阶段与本地校准都匹配对象时才有助预测，极端一天或干旱仍能打破整齐累加规则。",
+        "奈拉把花期记录放到蜜蜂、害虫、鸟类与收获劳力记录旁边。两个物种都可能提前，却提前不同幅度，从而制造或关闭时间错配。短暂重叠即使发生，也可能太短或出现在一天中错误时段，无法提供过去的生态服务。即使平均春季变暖，更早开花也会增加遭遇晚霜的机会。因此，日历变化改变的是关系、风险与管理，不只是一个物种旁边印着的日期。",
+        "观察者统一定义，并给不确定阶段拍照。漏访、观察员更替、栽培品种变化、传感器移动与土地使用改变都进入元数据。观察频率要足以定位短暂事件，而不只是确认它发生在两次遥远到访之间。来自花园、农场、卫星与社区观察者的长期记录能扩大覆盖，也需要质量控制，避免把方法改变误认成生物改变。奈拉用概率方式看待预报，并在事件展开时更新。",
+        "果园账本成为物候学：研究和观察反复发生的生物生命周期事件，以及它们的时间怎样关联季节与年际环境变化。开花、羽化、迁徙、繁殖、结果与衰老回应温度历史、日长、水、遗传、相互作用与地点。可比较记录能揭示趋势与错配，预测仍依生物和情境而定。埃利安的日历曾要求生命服从一个日期，奈拉的账本则倾听多只活时钟怎样回答季节。"
+      ],
+      "conceptName": "Phenology",
+      "conceptNameZh": "物候学",
+      "explanationParagraphs": [
+        "Phenology studies recurring biological life-cycle events and how their timing relates to seasonal and interannual environmental variation.",
+        "Temperature history, chilling, heat, photoperiod, water, genetics, interactions, and place affect timing. Standardised long-term observations reveal trends and mismatches, while forecasts remain organism- and context-specific."
+      ],
+      "explanationParagraphsZh": [
+        "物候学研究反复发生的生物生命周期事件，以及它们的时间怎样关联季节与年际环境变化。",
+        "温度历史、低温积累、热量、日长、水分、遗传、相互作用与地点都会影响时间。标准化长期观察可揭示趋势与错配，预测仍依生物与情境而定。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0821-sustainable-yield",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0821",
+      "fieldTitle": "Forestry",
+      "fieldTitleZh": "林业",
+      "title": "The Forest That Repaid Trees in the Wrong Century",
+      "titleZh": "在错误世纪还树的森林",
+      "summary": "A forest cuts the same number of trees each year while exhausting old cohorts because count, volume, growth, age, regeneration, disturbance, and habitat do not mature together.",
+      "summaryZh": "森林每年砍同样数量树木，却耗尽老龄群体，因为株数、材积、生长、年龄、更新、扰动与栖息地不会同时成熟。",
+      "storyParagraphs": [
+        "Forester Daro authorised ten thousand trees each year because surveys showed at least ten thousand seedlings establishing. The arithmetic appeared balanced. After twenty years, sawmills received thinner logs, old-tree cavities disappeared, and the road reached farther for the same timber volume. The forest had indeed added ten thousand young stems in many years. It had not added ten thousand mature trees with the size, quality, habitat, and resilience of those removed.",
+        "Forest scientist Mira replaced the single count with an inventory by species, diameter, age or developmental stage, site, condition, volume, growth, mortality, regeneration, and spatial pattern. A fast-growing plantation compartment and a slow old stand could contribute equal stem counts but not equal services or replacement times. Annual increment measured change in a stock; harvest drew from particular cohorts and locations. Growth in protected or inaccessible stands could not automatically offset removals from the operable area. A forest could show positive total growth while liquidating the scarce structures people valued most.",
+        "The first revised plan set harvest equal to estimated average growth. A windstorm then felled mature trees, drought killed seedlings, and a disease reduced one dominant species. Growth estimates carried sampling and model uncertainty, while future climate altered them. Mira included mortality, disturbance, inaccessible areas, regeneration delay, and the possibility that salvage logging would remove habitat and soil protection needed for recovery. The allowable amount became conditional rather than a promise extracted from one mean.",
+        "She planned across rotations and landscapes. Some stands supplied timber, others protected water, soil, carbon stores, connectivity, cultural values, rare species, and seed sources; many supplied several at once. Harvest method, size, season, road design, retained trees, and regeneration success mattered alongside volume. Spatial concentration also affected road pressure and habitat fragmentation. Cutting less in one year did not repair damage if operations repeatedly concentrated on the same vulnerable habitat or left regeneration unable to establish.",
+        "Monitoring compared predicted and observed growth, mortality, regeneration, product quality, biodiversity indicators, and social outcomes. Mira adjusted harvest when evidence changed and retained reserves against uncertainty. She also distinguished sustained production of a chosen commodity from sustaining the wider forest system. No annual timber target could by itself guarantee ecological integrity, community consent, or fair distribution across generations.",
+        "The forest required sustainable yield: a rate and pattern of harvest that can be maintained over a defined period without undermining the productive stock and regeneration needed for future yields under stated objectives and uncertainty. Growth, mortality, age structure, species, site, disturbance, access, quality, and management all matter; wider sustainability includes ecosystem and social values beyond yield. Daro had matched trees cut with seedlings counted. Mira matched today's removals with the slow, uneven futures capable of replacing what was actually taken."
+      ],
+      "storyParagraphsZh": [
+        "林务员达罗每年批准采伐一万棵树，因为调查显示至少有一万株幼苗建立，算术看似平衡。二十年后，锯木厂收到的原木越来越细，老树洞穴消失，道路要延伸更远才能取得相同材积。许多年里，森林确实增加了一万株幼树，却没有增加一万棵在尺寸、质量、栖息功能与韧性上等同于被移走者的成熟树。",
+        "森林科学家米拉不再只数树，而按物种、胸径、年龄或发育阶段、地点、状况、材积、生长、死亡、更新与空间格局建立清单。快速生长的人工林小班与缓慢老林可以拥有相同株数，却没有相同服务或替换时间。年生长量描述储量变化，采伐则从特定群体与位置提取。保护地或不可达林分中的生长，不能自动抵消可作业区域的移除。总生长仍为正的森林，也可能正在清算最稀缺、最受重视的结构。",
+        "第一版修订计划让采伐等于估计平均生长。一场风暴随后吹倒成熟树木，干旱杀死幼苗，疾病又削弱一种优势树种。生长估计含有抽样与模型不确定，未来气候还会改变它。米拉计入死亡、扰动、不可达区域、更新延迟，以及救灾采伐可能移走恢复所需栖息地与土壤保护的风险。允许数量变成有条件判断，而非从一个均值中提取的承诺。",
+        "她跨轮伐期与景观规划。有些林分供应木材，有些保护水、土壤、碳储、连通、文化价值、稀有物种与种源，许多同时承担多项。采伐方式、尺度、季节、道路设计、保留木与更新成功，和材积一样重要；空间集中还会改变道路压力与栖息地破碎。某年少砍并不能修复损害，若作业仍反复集中于同一脆弱栖息地，或让更新无法建立。",
+        "监测比较预测与真实生长、死亡、更新、产品质量、生物多样性指标与社会结果。证据变化时，米拉调整采伐并为不确定性保留储备。她还区分持续生产某种商品与维持更广森林系统。没有一个年度木材目标能单独保证生态完整、社区同意或代际公平分配。",
+        "森林需要的是可持续采伐量：在说明目标与不确定性后，可以在规定时期维持、又不破坏未来产量所需生产储量与更新能力的采伐速率和格局。生长、死亡、年龄结构、物种、地点、扰动、通达、质量与管理都会影响它；更广的可持续性还包括产量以外的生态与社会价值。达罗曾用砍伐株数匹配幼苗株数，米拉匹配的是今天移走的东西，与真正能替代它们的缓慢而不均匀未来。"
+      ],
+      "conceptName": "Sustainable yield",
+      "conceptNameZh": "可持续采伐量",
+      "explanationParagraphs": [
+        "Sustainable yield is a rate and pattern of harvest maintainable over a defined period without undermining the productive stock and regeneration required for future yields under stated objectives and uncertainty.",
+        "Growth, mortality, age and species structure, site, disturbance, access, product quality, and management matter. Sustained commodity yield is only one part of ecological and social sustainability."
+      ],
+      "explanationParagraphsZh": [
+        "可持续采伐量是在规定目标与不确定性下，可于一定时期维持而不破坏未来产量所需生产储量和更新能力的采伐速率与格局。",
+        "生长、死亡、年龄与物种结构、地点、扰动、通达、产品质量及管理都重要。商品产量持续只是生态与社会可持续性的一部分。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0821-ecological-succession",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0821",
+      "fieldTitle": "Forestry",
+      "fieldTitleZh": "林业",
+      "title": "The Clearing That Would Not Rewind",
+      "titleZh": "不肯倒带的林间空地",
+      "summary": "After fire, a clearing follows several possible recovery paths because surviving legacies, arrivals, interactions, climate, herbivory, and repeated disturbance reshape what establishes next.",
+      "summaryZh": "火后空地沿多条可能路径恢复，因为残留遗产、物种到达、相互作用、气候、取食与重复扰动会重塑下一步建立者。",
+      "storyParagraphs": [
+        "After a fire crossed the northern forest, manager Pela ordered workers to recreate the old stand. They planted its former dominant tree in straight rows. Many seedlings died in exposed heat, while grasses, shrubs, fungi, and windborne pioneers occupied the gaps. On a nearby burned patch left alone, resprouting roots produced a different mixture. Pela called both sites incomplete versions of the past. Ecologist Sian saw that the disturbance had not pressed a rewind button; it had changed the conditions under which the next community formed.",
+        "Some legacies survived: soil layers, seed banks, roots, fallen trunks, microbes, shaded pockets, and living trees. Their pattern depended on fire severity and earlier land use. Where soil remained, this secondary recovery differed from primary development on bare new substrate without an established biological legacy. Species arrived by seed, spores, animals, and vegetative growth at unequal times and distances. The first occupants altered light, temperature, moisture, nutrients, and shelter for those arriving later.",
+        "Early plants sometimes facilitated tree seedlings by cooling soil or fixing nitrogen. Elsewhere dense grasses competed for water, shrubs blocked light, or established organisms inhibited newcomers. Seed arrival could fail when source populations were distant, sparse, or isolated across fragmented landscapes. Herbivores selected among seedlings, pathogens accumulated, and a wet sequence of years favoured a different route than drought. The same species list could therefore assemble in another order, and order itself changed the interactions that followed.",
+        "Pela cleared every shrub to help the planted trees. Exposed soil then eroded and seedlings suffered more heat. On another plot, leaving all growth untouched allowed an invasive plant to dominate after repeated vehicle disturbance. Sian used experiments, reference sites, monitoring, and clearly stated restoration goals. Intervention ranged from protecting legacies and controlling a specific pressure to planting missing species, but action followed diagnosis rather than a universal instruction to leave alone or tidy up.",
+        "Years later, neither plot exactly matched the pre-fire forest. Some old functions returned before old species composition; other values required decades or might not return under a changed climate and disturbance regime. Sian described multiple pathways, thresholds, and alternative relatively persistent states rather than one inevitable climax. A later storm, fire, grazing shift, or human decision could redirect the path again.",
+        "The clearing revealed ecological succession: change in community composition, structure, and ecosystem processes through time after new habitat or disturbance, shaped by surviving legacies, dispersal, establishment, species interactions, environment, and further events. Succession is often directional without being a fixed ladder toward one final community. History and chance constrain what becomes possible. Pela had asked the clearing to reconstruct yesterday in the original order. The forest answered by building tomorrow from whatever survived, arrived, and changed the ground first."
+      ],
+      "storyParagraphsZh": [
+        "一场火穿过北部森林后，管理者佩拉命令工人重建原有林分。他们把从前的优势树种排成直线栽下，许多幼苗死于暴露高温，草、灌木、真菌与风送先锋种则占据空隙。旁边一片未干预火烧地里，残存根系萌芽出另一种组合。佩拉把两处都称为过去的不完整版本，生态学家西安却看见，扰动没有按下倒带键，而是改变了下一群落形成的条件。",
+        "一些遗产存活下来：土层、种子库、根、倒木、微生物、阴影小区与活树。它们的格局取决于火灾严重度与更早土地使用。保留土壤处发生的次生恢复，不同于没有既有生物遗产的裸露新基质上从头发展的初生过程。物种通过种子、孢子、动物与营养生长，以不同时间和距离到达。先占者改变光、温度、水分、养分与遮蔽，影响后来者。",
+        "早期植物有时通过降温或固氮帮助树苗，另一些地方，密草竞争水分，灌木遮光，已建立生物抑制新来者。在破碎景观中，若种源遥远、稀少或被隔离，种子也可能根本无法抵达。食草动物选择幼苗，病原逐渐累积，连续湿润年份也会偏爱不同于干旱的路线。因此，同一份物种名单可以按另一顺序组合，顺序本身又改变后续相互作用。",
+        "佩拉清除所有灌木来帮助栽植树，暴露土壤随后侵蚀，幼苗承受更多热。另一块地完全不管，又让一种外来植物在车辆反复扰动后占据优势。西安使用实验、参照地、监测与明确修复目标。干预可以是保护遗产、控制一项特定压力，也可以补种缺失物种，但行动跟随诊断，而非普遍要求完全放任或清理整齐。",
+        "多年以后，两块地都没有精确复制火前森林。有些旧功能先于旧物种组成回来，另一些价值需要数十年，或在改变的气候与扰动格局下不再返回。西安描述多条路径、阈值与相对持久的替代状态，而非一座必然抵达的顶极群落。后来风暴、火、放牧变化或人的决定，仍可再次改道。",
+        "空地揭示的是生态演替：新栖息地形成或扰动后，群落组成、结构与生态过程随时间改变，并受残留遗产、扩散、建立、物种互作、环境与后续事件塑造。演替常有方向，却不是通往唯一终点的固定阶梯；历史与偶然共同限制可能性。佩拉要求空地按原顺序重建昨天，森林却用先存活、先抵达并先改变地面的事物搭建明天。"
+      ],
+      "conceptName": "Ecological succession",
+      "conceptNameZh": "生态演替",
+      "explanationParagraphs": [
+        "Ecological succession is change in community composition, structure, and ecosystem processes through time after new habitat or disturbance.",
+        "Legacies, dispersal, establishment, facilitation, competition, inhibition, herbivory, environment, history, chance, and repeated disturbance create multiple pathways. Succession need not follow one fixed ladder or end state."
+      ],
+      "explanationParagraphsZh": [
+        "生态演替是新栖息地形成或扰动后，群落组成、结构与生态过程随时间发生的变化。",
+        "遗产、扩散、建立、促进、竞争、抑制、取食、环境、历史、偶然与反复扰动共同创造多条路径。演替不必沿一座固定阶梯走向唯一终态。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0821-fire-ecology",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0821",
+      "fieldTitle": "Forestry",
+      "fieldTitleZh": "林业",
+      "title": "The Forest That Saved Every Spark",
+      "titleZh": "保存了每一粒火星的森林",
+      "summary": "Decades of suppressing every small fire leave dense fuels and altered stands, turning a later drought fire into a different ecological and public-safety event.",
+      "summaryZh": "数十年扑灭每场小火留下密集燃料并改变林分，使后来干旱中的火成为完全不同的生态与公共安全事件。",
+      "storyParagraphs": [
+        "For thirty years, Warden Oren extinguished every flame before it crossed a single ridge. The forest grew dense with young stems, fallen branches, needles, and shrubs. Residents praised the unburned view. During a long drought, lightning started a fire that climbed from surface fuels into the canopy and crossed breaks once considered wide. Oren said the forest had betrayed his protection. Fire specialist Mira replied that the quiet years had been storing part of the later event.",
+        "Mira reconstructed the local fire history from scars, charcoal, sediments, old records, vegetation, and Indigenous knowledge shared under appropriate authority. She distinguished frequency, season, size, intensity, severity, spatial pattern, and type of fire. Some species had thick bark, resprouting organs, serotinous cones, or life cycles shaped by recurring fire; other ecosystems burned rarely and recovered poorly from short intervals. The word fire did not describe one universal ecological force.",
+        "Excluding frequent low- or mixed-severity burning had changed fuels and stand structure in parts of the landscape. It also allowed homes, roads, and expectations to expand into hazardous positions. Yet Mira refused the slogan that every wildfire was caused by suppression. Drought, heat, wind, ignition, invasive grasses, logging history, land use, topography, and climate change interacted, and severe fire had always occurred under some conditions.",
+        "The first fuel treatment removed small trees near one road but left cut material piled on the ground. Risk shifted rather than disappeared. Mira connected site-specific thinning, removal or treatment of residues, carefully planned prescribed fire, and cultural burning led by rightful knowledge holders where ecologically and legally appropriate. Qualified teams used permits, weather and smoke limits, contingency resources, communication, and stop criteria. No reader-facing rule could make intentional fire universally safe.",
+        "Around homes, residents reduced vulnerable fuels and improved access and building resilience without assuming the wider forest could be made nonflammable. Across the landscape, managers protected evacuation routes, old trees, watersheds, habitat refuges, and places where treatment had the greatest strategic value. Smoke exposure and public health, including cumulative smoke, shaped when and where any burning could be considered. They monitored outcomes because repeated burning at the wrong season or interval could also damage soils, wildlife, air quality, and fire-sensitive communities.",
+        "The changed forest taught fire ecology: the study of how fire regimes interact with organisms, fuels, climate, soils, landscapes, and human societies, and how those systems shape fire in return. Ecological effects depend on frequency, season, extent, intensity, severity, pattern, and history rather than the presence of flame alone. Suppression, planned burning, fuel treatment, adaptation, and response all carry context-specific benefits and risks. Oren had saved the forest from thousands of small flames. He had not saved it from becoming a different forest before the large one arrived."
+      ],
+      "storyParagraphsZh": [
+        "三十年来，护林员奥伦在每场火越过一道山脊前将其扑灭。森林长满密集幼树、倒枝、针叶与灌木，居民称赞从未烧过的景色。一次长期干旱中，闪电点燃的火从地表燃料爬进树冠，又越过曾被认为足够宽的隔离带。奥伦说森林背叛了他的保护。火管理专家米拉回答，安静岁月一直在储存后来事件的一部分。",
+        "米拉从火痕、木炭、沉积、旧记录、植被，以及在适当权利下分享的原住民知识重建本地火历史。她区分频率、季节、面积、强度、严重度、空间格局与火类型。有些物种拥有厚树皮、萌蘖器官、遇热开裂球果或由反复火塑造的生命周期；另一些生态系统很少燃烧，短间隔重复火会使其难以恢复。火这个字不代表一种普遍相同的生态力量。",
+        "在部分景观里，排除频繁低度或混合严重度火改变了燃料与林分结构，也让住宅、道路与期待扩展到危险位置。米拉却拒绝“每场野火都由灭火造成”的口号。干旱、高温、风、点火、入侵草、采伐历史、土地使用、地形与气候变化会相互作用，严重火在某些条件下也从来存在。",
+        "第一项燃料处理移除道路旁小树，却把砍下材料堆在地面，风险只是换了位置。米拉在生态与法律适宜处，把场地专门疏伐、残余物移除或处理、严密计划的规定燃烧，以及由合法知识持有者领导的文化用火连接起来。合格团队使用许可、天气与烟雾限制、应变资源、沟通和停止标准。没有一条面向读者的规则能让主动点火在所有地方都安全。",
+        "住宅周围，居民减少脆弱燃料、改善通道与建筑韧性，却不假定整片森林可以变得不可燃。景观尺度上，管理者保护撤离路线、老树、水源地、栖息避难所，以及处理最有战略价值的位置。烟雾暴露与公共健康，包括累积烟雾，会决定任何燃烧何时何地才可被考虑。他们监测结果，因为在错误季节或间隔反复燃烧，也会损害土壤、野生动物、空气质量与怕火群落。",
+        "改变的森林教授的是火生态学：研究火制度怎样同生物、燃料、气候、土壤、景观与人类社会相互作用，以及这些系统怎样反过来塑造火。生态效果取决于频率、季节、范围、强度、严重度、格局与历史，而非只有火焰是否出现。灭火、计划用火、燃料处理、适应与响应都有依情境而定的收益与风险。奥伦曾从数千场小火中救下森林，却没有阻止它在大火到来前先变成另一座森林。"
+      ],
+      "conceptName": "Fire ecology",
+      "conceptNameZh": "火生态学",
+      "explanationParagraphs": [
+        "Fire ecology studies reciprocal relationships among fire regimes, organisms, fuels, climate, soils, landscapes, and human societies.",
+        "Effects depend on frequency, season, extent, intensity, severity, pattern, and history. Suppression, cultural or prescribed burning, fuel treatment, adaptation, and response require ecosystem-specific evidence, authority, safety controls, and monitoring."
+      ],
+      "explanationParagraphsZh": [
+        "火生态学研究火制度与生物、燃料、气候、土壤、景观及人类社会之间的双向关系。",
+        "效果取决于频率、季节、范围、强度、严重度、格局与历史。灭火、文化或规定燃烧、燃料处理、适应和响应都需要生态系统专门证据、权责、安全控制与监测。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0831-maximum-sustainable-yield",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0831",
+      "fieldTitle": "Fisheries",
+      "fieldTitleZh": "渔业",
+      "title": "The Net That Borrowed from Tomorrow",
+      "titleZh": "向明天借鱼的一网",
+      "summary": "A port treats last year's largest catch as repeatable until removing mature fish changes recruitment, age structure, catchability, and future productive capacity.",
+      "summaryZh": "港口把去年最大渔获当成可重复数字，直到成熟鱼被移走，补充、年龄结构、可捕性与未来生产能力同时改变。",
+      "storyParagraphs": [
+        "Harbour master Daro set next year's catch equal to the largest haul the fleet had ever landed. The first season met the target, and boats returned proud. The second required longer trips and finer searching. Fishers still filled holds by gathering around the last dense schools, so catch per day looked stable until those schools vanished. The third year's juveniles were fewer. Daro had treated a successful withdrawal as proof that the living account would deposit the same amount again.",
+        "Fisheries scientist Mira estimated stock abundance, age and size structure, growth, natural mortality, maturity, recruitment, and fishing mortality from surveys, catches, tagging, and models. Catch was abundance multiplied by catchability and effort, not a direct census. Better sonar or concentration during spawning could keep catches high while stock declined. Missing landings, discards, changing gear, and uncertain biology widened the range of plausible stock states.",
+        "In a simplified population model, net production was low when few mature fish remained, rose at intermediate abundance as growth and recruitment exceeded natural losses, and fell again near environmental carrying capacity as resources limited growth. The largest long-run average surplus under specified assumptions offered a model-based equilibrium reference. It was not last year's maximum catch, nor did it remain fixed when productivity, habitat, climate, predators, prey, or fishing selectivity changed.",
+        "The fleet targeted large adults because they were valuable. Removing them altered reproductive output and age structure; a tonne of young fish did not necessarily replace the reproductive role of a tonne of older fish. Year classes varied with ocean conditions, and several weak recruitment years could arrive together. Mira included observation error, delayed data, and imperfect implementation alongside model uncertainty. She used uncertainty ranges, reference points, harvest-control rules, monitoring, and precautionary buffers rather than setting a quota exactly on a model's most optimistic peak.",
+        "Managers also considered mixed fisheries, bycatch, food-web effects, habitat damage, illegal catch, fleet behaviour, livelihoods, and who received access. A target that might be sustainable for one stock could still harm another species or community. When indicators crossed agreed limits, action had to occur before perfect certainty, and rebuilding required lower removals for long enough that mature structure and recruitment could recover.",
+        "The port was trying to use maximum sustainable yield: the greatest average catch that a stock is theoretically capable of supporting over the long term under specified environmental conditions and a defined model. It is an uncertain reference concept, not a guaranteed annual quota; real management must account for stock structure, changing productivity, ecosystem effects, data limits, and risk. Daro's record haul had come from fish accumulated over earlier years. Repeating it without rebuilding was not harvesting the same year twice. It was borrowing from cohorts that had not yet reached the harbour."
+      ],
+      "storyParagraphsZh": [
+        "港务长达罗把下一年捕捞量定为船队有史以来最大的登陆量。第一季完成目标，船只骄傲返航；第二季要走更远、搜索更细。鱼群聚到最后几处密集位置时，渔民仍能装满船舱，日渔获看似稳定，直到这些鱼群消失。第三年幼鱼更少。达罗把一次成功提款，当成活账户会再次存入同样金额的证明。",
+        "渔业科学家米拉根据调查、渔获、标记与模型，估计种群丰度、年龄与体型结构、生长、自然死亡、成熟、补充与捕捞死亡。渔获是丰度、可捕性与努力共同结果，不是直接普查。更好声呐或产卵期聚集能让渔获维持高位，同时种群已经下降。漏报登陆、弃捕、渔具改变与生物学不确定，会扩大可能种群状态范围。",
+        "在简化种群模型中，成熟鱼很少时净生产低；丰度居中、增长与补充超过自然损失时净生产上升；接近环境承载能力后，资源限制又使增长下降。在指定假设下，最大的长期平均剩余生产可提供一个基于模型的均衡参照。它不是去年最大渔获，也不会在生产力、栖息地、气候、捕食者、猎物或渔具选择性改变后保持固定。",
+        "船队因价值高而瞄准大成鱼。移走它们会改变繁殖产出与年龄结构；一吨幼鱼不一定能替代一吨老鱼的繁殖作用。年级群随海洋条件波动，几个弱补充年份还可能连续到来。除模型不确定外，米拉还计入观察误差、数据延迟与执行不完全。她使用不确定区间、参照点、捕捞控制规则、监测与预防缓冲，而不把配额正好放在模型最乐观峰值上。",
+        "管理者还考虑混合渔业、兼捕、食物网效应、栖息地损伤、非法捕捞、船队行为、生计与准入分配。一个目标对某种鱼可能可持续，对另一物种或社区仍会造成伤害。指标越过约定界限时，行动必须早于完美确定；种群重建也要让移除量降低足够久，使成熟结构与补充真正恢复。",
+        "港口试图使用的是最大可持续产量：在指定环境条件与定义模型下，一个种群理论上能长期支持的最大平均渔获量。它是不确定的参照概念，不是有保证的年度配额；真实管理必须考虑种群结构、生产力变化、生态系统效应、数据限制与风险。达罗的纪录渔获来自早年积累的鱼，不经重建就重复它，并非把同一年收获两次，而是在向尚未抵达港口的年级群借鱼。"
+      ],
+      "conceptName": "Maximum sustainable yield",
+      "conceptNameZh": "最大可持续产量",
+      "explanationParagraphs": [
+        "Maximum sustainable yield is the greatest average catch a stock is theoretically capable of supporting over the long term under specified environmental conditions and a defined model.",
+        "It is an uncertain reference, not a guaranteed annual quota. Stock structure, recruitment variation, changing productivity, catchability, ecosystem effects, data limits, control rules, and precaution shape actual management."
+      ],
+      "explanationParagraphsZh": [
+        "最大可持续产量是在指定环境条件与定义模型下，一个种群理论上能够长期支持的最大平均渔获量。",
+        "它是不确定参照，不是保证年度配额。种群结构、补充波动、生产力变化、可捕性、生态效应、数据限制、控制规则与预防原则共同塑造实际管理。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0831-bycatch",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0831",
+      "fieldTitle": "Fisheries",
+      "fieldTitleZh": "渔业",
+      "title": "Everything Outside the Blue Crates",
+      "titleZh": "蓝色鱼箱外的一切",
+      "summary": "A port praises target-fish landings while unrecorded juveniles, turtles, seabirds, benthic damage, predators, and discarded catch reshape the wider ecosystem.",
+      "summaryZh": "港口只称赞目标鱼登陆量，未记录的幼鱼、海龟、海鸟、海底损伤、捕食者与弃捕却在重塑更广生态系统。",
+      "storyParagraphs": [
+        "Port inspector Nela counted only the blue crates holding market fish. The fleet met its target, and the report called the season efficient. On deck, smaller fish slipped dead through sorting chutes, a turtle was released after a long struggle, seabirds followed discarded catch, and heavy gear crossed a nursery ground. None entered the blue ledger. Months later, target fish were still present, but their prey, young stages, and habitat told a less successful story.",
+        "Marine scientist Ivo recorded everything caught, retained, released, injured, or unobserved as far as methods allowed. Unwanted catch included non-target species, protected animals, undersized target fish, and individuals discarded for market or rule reasons. Survival after release varied by species, gear, depth, temperature, handling, and injury. For long-lived or rare species, a small number of deaths could matter greatly because replacement was slow and population estimates uncertain. Seasonal repetition compounded the effect. Lost gear and animals that escaped injured added cryptic mortality beyond observed decks. An empty hold record could not assume every released animal lived, while observer coverage and electronic monitoring each had blind spots and behaviour effects.",
+        "Fishers tested mesh and hook changes, escape devices, deterrents, depth, time, and area choices to improve selectivity. A modification that spared turtles could increase another species' capture or reduce target catch enough to shift effort elsewhere. Closing one hotspot displaced boats toward a different habitat. Ivo evaluated total mortality and effort across the fleet rather than celebrating one gear trial in isolation.",
+        "The port mapped spawning and nursery grounds, migration, seabird colonies, vulnerable seabed, predator-prey relationships, and climate-driven movement. Limits considered several species together because fleets caught mixed assemblages and one stock served as food for another. Habitat and food-web effects could arise without any animal entering the net. The management unit therefore extended beyond a single target population and season.",
+        "Nela involved crews in reporting and gear design while protecting data integrity and independent verification. Rules accounted for safety, vessel size, livelihoods, compliance cost, illegal incentives, and unequal ability to change equipment. Rapid feedback allowed temporary measures when unusual encounters rose, followed by review. The goal was not zero interaction with nature, an impossible claim, but lower avoidable mortality and damage within explicit ecological and social objectives.",
+        "The fuller ledger connected bycatch and ecosystem-based fisheries: bycatch is the incidental capture or mortality of non-target or unwanted organisms during fishing, while an ecosystem-based approach manages fishing in relation to habitats, food webs, multiple species, environmental change, and people rather than one stock alone. Monitoring, selectivity, spatial and temporal measures, handling, effort, incentives, and adaptive rules work together. Nela's blue crates had accurately counted what the market kept. They had hidden everything the fishing process changed without selling."
+      ],
+      "storyParagraphsZh": [
+        "港口检查员奈拉只统计装着商品鱼的蓝色鱼箱。船队完成目标，报告称本季高效。甲板上，小鱼死后滑过分拣槽，一只海龟挣扎许久才被放回，海鸟追随弃鱼，重型渔具又穿过育幼场。这些都没有进入蓝色账本。数月后，目标鱼仍在，它们的猎物、幼体与栖息地却讲出一段不那么成功的故事。",
+        "海洋科学家伊沃在方法允许范围内，记录所有被捕、保留、释放、受伤或未观察的生命。不需要的渔获包括非目标物种、受保护动物、未达尺寸的目标鱼，以及因市场或规则被丢弃者。释放后存活随物种、渔具、深度、温度、处理与伤害改变。对于长寿或稀有物种，少量死亡也可能很重要，因为替换缓慢、种群估计又不确定，逐季重复还会累积影响。丢失渔具与受伤逃脱动物还会增加甲板观察之外的隐蔽死亡。空船舱记录不能假定每只放生动物都活着，观察员覆盖与电子监测也各有盲区和行为影响。",
+        "渔民试验网目与鱼钩改变、逃生装置、驱避、深度、时间与区域选择来改善选择性。一项能避开海龟的改动，可能增加另一物种捕获，或让目标渔获下降到船队把努力移往别处。关闭一个热点也会把船推向另一栖息地。伊沃评估全船队总死亡与努力，不因一项孤立渔具试验而庆祝。",
+        "港口绘制产卵与育幼地、迁徙、海鸟繁殖地、脆弱海床、捕食关系与气候驱动移动。限制要同时考虑多个物种，因为船队捕捞混合群落，一种鱼又可能是另一种的食物。即使没有动物进入网，栖息地与食物网影响仍会发生。因此，管理单位扩展到单一目标种群和单一季节之外。",
+        "奈拉让船员参与报告与渔具设计，同时保护数据完整与独立验证。规则考虑安全、船只大小、生计、合规成本、非法诱因与更换设备能力差异。异常遭遇增加时，快速反馈先启动临时措施，再进行复核。目标不是宣称与自然零互动，而是在明确生态与社会目标下，降低可避免死亡与损伤。",
+        "更完整的账本连接了兼捕与生态系统渔业：兼捕是捕捞时意外捕获或造成非目标、不需要生物死亡；生态系统方法则把捕捞放进栖息地、食物网、多物种、环境变化与人的关系中管理，而非只看一种鱼。监测、选择性、时空措施、处理、努力、激励与适应规则共同作用。奈拉的蓝色鱼箱准确数出市场留下的东西，却藏住了捕捞过程改变而没有出售的一切。"
+      ],
+      "conceptName": "Bycatch and ecosystem-based fisheries",
+      "conceptNameZh": "兼捕与生态系统渔业",
+      "explanationParagraphs": [
+        "Bycatch is incidental capture or mortality of non-target or unwanted organisms. Ecosystem-based fisheries manage fishing in relation to habitats, food webs, multiple species, environmental change, and people rather than one target stock alone.",
+        "Monitoring, release survival, gear selectivity, time and area measures, total effort, displacement, incentives, compliance, and adaptive review determine outcomes and trade-offs."
+      ],
+      "explanationParagraphsZh": [
+        "兼捕是捕捞中意外捕获或造成非目标、不需要生物死亡。生态系统渔业把捕捞放进栖息地、食物网、多物种、环境变化与人的关系中管理，而非只看单一目标种群。",
+        "监测、释放后存活、渔具选择性、时空措施、总努力、转移效应、激励、合规与适应复核共同决定结果和取舍。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0831-fisheries-co-management",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0831",
+      "fieldTitle": "Fisheries",
+      "fieldTitleZh": "渔业",
+      "title": "The Rule Written Far from the Tide",
+      "titleZh": "远离潮汐写下的禁令",
+      "summary": "A uniform closure misses shifting spawning grounds until public authorities, fishers, scientists, and affected communities share evidence, authority, enforcement, and revision.",
+      "summaryZh": "统一禁令错过移动的产卵地，直到公共机构、渔民、科学家与受影响社区共同承担证据、权力、执法与修订。",
+      "storyParagraphs": [
+        "The capital closed every coastal bay for the same thirty days, based on a spawning survey from twelve years earlier. In the northern bay, fish spawned before the closure; in the southern bay, they spawned after it. Small boats lost their safest fishing month while industrial vessels waited outside the line. Compliance fell, catches were hidden, and officials blamed local ignorance. Fisher Mara had warned that currents and timing had shifted, but the rule arrived already printed.",
+        "Mediator Sera brought fishers, processors, Indigenous and coastal communities, scientists, conservation groups, local officers, and national regulators to one table. They first clarified legal rights, conservation duties, decision scope, representation, and who could be held accountable. Local knowledge contributed fine observations of tides, grounds, gear, and behaviour; surveys contributed standardised estimates and wider comparison. Neither source became automatically correct by identity alone, and disagreement was recorded rather than erased.",
+        "Crews kept logbooks, sampled catches, mapped spawning observations, and tested reporting methods with independent checks. Data rules protected sensitive grounds while allowing public evaluation of decisions. The committee agreed indicators, seasonal and spatial measures, gear rules, access arrangements, and actions if evidence worsened. Authority was shared only within law and with clear escalation where protected species, cross-boundary stocks, or national obligations required broader action.",
+        "The first council meeting was dominated by large boat owners. Shore gatherers, women processing fish, younger crew, and people without formal licences bore consequences but held little voice. Sera changed representation, translation, meeting times, conflict-of-interest disclosure, and appeal routes. Participation without power could decorate a decision while preserving the old hierarchy. Shared management required capacity and resources for less powerful groups to use their seat.",
+        "A strong season tempted members to raise limits immediately. Scientists warned that one good recruitment event did not erase uncertainty; fishers warned that delayed official data missed rapid local change. Meetings, monitoring, and dispute resolution required time and money, so stable financing mattered. Trust also required records that outlasted individual leaders. The committee used pre-agreed review rules, enforcement shared between community monitoring and public authority, sanctions with due process, and periodic independent evaluation. It could adapt more quickly than the distant rule, but it was not exempt from capture, short-term pressure, corruption, or error.",
+        "The bays developed fisheries co-management: a governance arrangement in which public authorities and resource users, often with scientists and other affected groups, share defined responsibility and authority for fisheries decisions, implementation, monitoring, enforcement, and learning. Effective arrangements need legitimate rights, inclusive representation, evidence, accountability, resources, nested scales, conflict resolution, and adaptive review. Mara's knowledge alone could not govern a shared sea, and the capital's map alone could not hear a moving tide. The stronger rule was built where both could correct the other."
+      ],
+      "storyParagraphsZh": [
+        "首都根据十二年前一次产卵调查，让每个海湾在同样三十天里禁捕。北湾鱼在禁期前产卵，南湾鱼又在禁期后产卵。小船失去最安全的作业月份，工业船却在界线外等待。合规下降，渔获被隐藏，官员指责地方无知。渔民玛拉早已提醒洋流与时序改变，规则抵达时却已经印好。",
+        "协调者塞拉把渔民、加工者、原住民与海岸社区、科学家、保护团体、地方官员和国家监管者带到一张桌前。他们先澄清法定权利、保护义务、决策范围、代表方式，以及谁要承担责任。本地知识提供潮汐、渔场、渔具与行为的细致观察，调查提供标准估计与更广比较。两种来源都不因身份自动正确，分歧也被记录而非抹去。",
+        "船员保留日志、抽样渔获、绘制产卵观察，并用独立检查测试报告方法。数据规则保护敏感渔场，同时让公众能够评估决定。委员会约定指标、季节与空间措施、渔具规则、准入安排，以及证据恶化时的行动。权力只在法律内共享；受保护物种、跨界种群或国家义务需要更广行动时，也有明确升级路径。",
+        "第一次理事会被大船东主导。岸边采集者、加工鱼类的女性、年轻船员与没有正式许可的人承受后果，却几乎没有声音。塞拉改变代表席位、翻译、会议时间、利益冲突披露与申诉渠道。没有权力的参与可以装饰决定，同时保存旧等级。共同管理还需要能力与资源，让较弱群体真正使用自己的座位。",
+        "一个丰收季诱使成员立即提高限额。科学家提醒，一次良好补充不能抹去不确定；渔民则提醒，延迟官方数据会漏掉快速本地变化。会议、监测与争议解决都需要时间和资金，因此稳定融资同样重要；信任还需要比个别领导任期更长久的记录。委员会使用预先约定的复核规则，由社区监测与公共权力共同执法，制裁保留正当程序，并定期独立评估。它能比远方规则调整更快，却不会免于俘获、短期压力、腐败或错误。",
+        "海湾发展出渔业共同管理：公共机构与资源使用者，通常连同科学家及其他受影响群体，共同承担界定好的渔业决策、执行、监测、执法与学习责任和权力。有效安排需要合法权利、包容代表、证据、问责、资源、嵌套尺度、冲突解决与适应复核。玛拉的知识不能单独治理共享海洋，首都地图也听不见移动潮汐；更强的规则建立在二者能够互相纠正的位置。"
+      ],
+      "conceptName": "Fisheries co-management",
+      "conceptNameZh": "渔业共同管理",
+      "explanationParagraphs": [
+        "Fisheries co-management shares defined responsibility and authority among public bodies and resource users, often with scientists and other affected groups, for decisions, implementation, monitoring, enforcement, and learning.",
+        "Legitimate rights, inclusive representation, evidence, accountability, capacity, nested scales, due process, conflict resolution, and adaptive review are necessary. Participation alone does not prevent capture or error."
+      ],
+      "explanationParagraphsZh": [
+        "渔业共同管理让公共机构与资源使用者，通常连同科学家及其他受影响群体，共享界定好的决策、执行、监测、执法与学习责任和权力。",
+        "合法权利、包容代表、证据、问责、能力、嵌套尺度、正当程序、冲突解决与适应复核都不可缺。参与本身不能防止俘获或错误。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0841-one-health",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0841",
+      "fieldTitle": "Veterinary",
+      "fieldTitleZh": "兽医学",
+      "title": "The Illness Filed in Four Rooms",
+      "titleZh": "被分进四个房间的疾病",
+      "summary": "Animal illness, human symptoms, wildlife movement, and contaminated water remain separate cases until disciplines compare timing, pathways, samples, and shared drivers.",
+      "summaryZh": "动物患病、居民症状、野生动物移动与受污染水源被当成四件事，直到不同专业比较时序、路径、样本与共同驱动。",
+      "storyParagraphs": [
+        "In the valley, the veterinarian recorded calves with fever, the clinic recorded several people with stomach illness, the wildlife officer noted dead birds near a wetland, and the water engineer found a damaged well cover after flooding. Each office opened a separate file. Because no file contained the other three, every team called its event isolated. Village nurse Sera placed the dates on one wall and asked whether separate causes, a shared exposure, or transmission between hosts could explain the overlap.",
+        "Sera did not assume that animals had infected people. Veterinarians, physicians, laboratorians, ecologists, epidemiologists, food specialists, and water staff defined cases, collected appropriate samples, compared locations and contact histories, and used laboratory evidence where available. Similar symptoms did not prove a common agent, and finding the same organism did not by itself establish direction of transmission. They kept alternative hypotheses open while immediate protections addressed credible exposure routes.",
+        "The investigation followed feed, food, water, waste, vectors, workers, animal movements, wildlife interfaces, and weather. A flood had connected places that administrative boundaries kept separate. A shared incident structure named decision rights, sample ownership, communication channels, and review times so collaboration did not become a room full of unassigned concern. Joint exercises tested those routes before emergencies. The team repaired water protection, improved hygiene and biosecurity, managed affected animals under veterinary direction, communicated food precautions, and monitored wildlife without indiscriminate removal. Each action had a responsible authority and was adjusted as evidence changed.",
+        "Antimicrobial resistance exposed another shared pathway. Medicines used in animals and people selected within different settings, while resistant organisms and genes could move through healthcare, farms, food, wastewater, soil, and travel. The response combined prevention, diagnostics, appropriate prescribing, infection control, husbandry, sanitation, surveillance, and environmental management. Blaming one sector would have been simpler and less effective.",
+        "The joint system protected medical privacy, farm confidentiality, community trust, worker safety, and transparent public reporting. It included people who bore exposure but lacked institutional power. Cooperation did not erase professional standards or legal duties; it made interfaces explicit and created routes for escalation, shared analysis, and feedback. Not every animal disease threatened humans, and not every human outbreak required a wildlife explanation.",
+        "The four files became One Health: an integrated, unifying, and collaborative approach that aims to balance and optimise the health of humans, domestic animals, wildlife, plants, and ecosystems sustainably, while recognising that some risks require coordinated work across sectors and scales. It is useful for zoonoses, food and water safety, antimicrobial resistance, vector-borne disease, environmental hazards, and prevention, but it does not replace specialised expertise or evidence of a specific pathway. The valley did not solve illness by putting every cause in one box. It solved a blind spot by letting four rooms compare the doors between them."
+      ],
+      "storyParagraphsZh": [
+        "山谷里，兽医记录小牛发热，诊所记录几名居民肠胃不适，野生动物官员记下湿地旁死亡鸟类，水务工程师又在洪水后发现水井盖损坏。每个部门各开一份档案。因为任何档案里都没有另外三件事，每支队伍都把事件称作孤立。村庄护士塞拉把日期贴在一面墙上，追问是几个独立原因、共同暴露，还是宿主间传播能解释这段重叠。",
+        "塞拉没有先假定动物感染了人。兽医、医生、实验室人员、生态学家、流行病学家、食品专家与水务人员共同定义病例，采集合适样本，比较地点与接触史，并在可行处使用实验室证据。相似症状不能证明同一病原，找到相同生物也不能单独确定传播方向。团队保留多个假设，同时针对可信暴露路线采取即时保护。",
+        "调查沿饲料、食物、水、废物、媒介、工人、动物移动、野生动物界面与天气前进。洪水连接了行政边界原本分开的地点。共同事件架构写明决策权、样本归属、沟通渠道与复核时间，避免合作变成一屋子无人认领的担忧；联合演练在紧急事件前测试这些路线。团队修复水源保护，改善卫生与生物安全，在兽医指导下管理受影响动物，沟通食品注意事项，并监测野生动物而不进行无差别清除。每项行动都有负责权力，并随证据变化调整。",
+        "抗微生物药物耐药暴露另一条共享路线。人和动物用药在不同环境产生选择，耐药生物与基因又可经医疗、农场、食品、废水、土壤与旅行移动。应对结合预防、诊断、合理处方、感染控制、饲养、卫生、监测与环境管理。责怪一个行业更简单，也更无效。",
+        "联合体系保护医疗隐私、农场机密、社区信任、工人安全与透明公共报告，也纳入承受暴露却缺乏机构权力的人。合作不会抹去专业标准或法定义务，而会明确界面，建立升级、共享分析与反馈路线。并非每种动物病都威胁人类，也并非每次人类暴发都需要野生动物解释。",
+        "四份档案汇成同一健康：一种综合、统一且协作的方法，旨在可持续地平衡并优化人类、家养动物、野生动物、植物与生态系统健康，同时承认部分风险需要跨行业与尺度协调。它适用于人畜共患病、食品与水安全、抗微生物药物耐药、媒介传播病、环境危害与预防，却不取代专业知识或对具体路径的证据。山谷并非把所有原因塞进一个盒子来解决疾病，而是让四个房间比较彼此之间的门，从而消除盲区。"
+      ],
+      "conceptName": "One Health",
+      "conceptNameZh": "同一健康",
+      "explanationParagraphs": [
+        "One Health is an integrated, unifying, and collaborative approach that aims to balance and optimise human, domestic-animal, wildlife, plant, and ecosystem health sustainably, while recognising that some risks require coordinated work across sectors and scales.",
+        "It supports prevention and response for zoonoses, food and water safety, antimicrobial resistance, vectors, and environmental hazards. It does not replace specialised expertise, privacy, authority, or evidence of specific pathways."
+      ],
+      "explanationParagraphsZh": [
+        "同一健康是一种综合、统一且协作的方法，旨在可持续地平衡并优化人类、家养动物、野生动物、植物与生态系统健康，同时承认部分风险需要跨行业与尺度协调。",
+        "它支持人畜共患病、食品水安全、抗微生物药物耐药、媒介与环境危害的预防应对，却不取代专业知识、隐私、权责或具体路径证据。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0841-herd-immunity",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0841",
+      "fieldTitle": "Veterinary",
+      "fieldTitleZh": "兽医学",
+      "title": "The Calf Behind the Broken Chain",
+      "titleZh": "站在断链后面的小牛",
+      "summary": "A vulnerable calf avoids infection only when enough surrounding animals interrupt transmission, while clustered susceptibility lets the same average coverage fail.",
+      "summaryZh": "一头脆弱小牛只有在足够多周围动物切断传播时才避开感染，而易感者聚集会让相同平均覆盖失效。",
+      "storyParagraphs": [
+        "A young calf could not yet receive a particular vaccine under the herd veterinarian's schedule. Farmer Lio placed it in the centre barn and trusted the farm's high average vaccination record. When an infectious disease entered through a newly purchased animal, most transmission chains stopped quickly. The calf remained well. In the east shed, however, several unvaccinated animals had been housed together; infection moved through that cluster despite the same farm-wide percentage.",
+        "Veterinary epidemiologist Nera drew the contact network rather than one average circle. An infectious animal could generate a certain number of secondary infections in a wholly susceptible population, but existing immunity reduced the fraction of contacts able to continue the chain. The effective reproduction number changed with susceptibility, contact, behaviour, and control over time. Births and arrivals continually renewed susceptibility between management reviews. In a simple homogeneous model with durable, complete protection, the threshold fraction is often expressed as one minus the reciprocal of the basic reproduction number. Real farms violated several of those assumptions.",
+        "Vaccine effectiveness was not identical to coverage. Some animals did not develop full protection, immunity could wane, schedules varied, maternal antibodies affected timing, and pathogens differed in transmissibility and immune escape. Contacts were clustered by pen, age, transport, milking, market, and staff movement. Vaccination coverage counted animals given vaccine during a stated period; population immunity counted those effectively immunised at a particular time. To estimate protection, Nera considered effectiveness as well as uptake and where protected and susceptible animals sat in the network.",
+        "Lio proposed allowing infection to pass through the young herd so survivors would become immune. Nera rejected using preventable disease as a harmless tool: infection brought illness, death, production loss, long-term effects, transmission beyond the farm, and uncertain protection. Where safe and effective vaccination was authorised, it offered immunity without requiring the full cost of disease, alongside biosecurity, testing, ventilation, isolation, movement controls, and treatment under veterinary direction.",
+        "Even high population protection did not create an invisible wall around every individual. Introductions could still cause cases, especially in dense susceptible pockets or when conditions changed. Surveillance measured disease and immunity rather than assuming records equalled protection. Nera used current pathogen-, vaccine-, species-, and setting-specific guidance; the simple threshold explained a mechanism but could not set a universal farm target by itself.",
+        "The calf benefited from herd immunity: indirect population protection that arises when enough individuals are immune, in the right contact pattern and over time, to reduce transmission so even some susceptible individuals face fewer infectious encounters. The required level depends on transmissibility, vaccine effectiveness, waning, clustering, behaviour, introductions, and population structure. It is not guaranteed individual protection or a substitute for veterinary control. The calf was not protected by an average written in the office. It stood behind enough broken links in the chains that actually reached its stall."
+      ],
+      "storyParagraphsZh": [
+        "一头小牛按牧群兽医计划尚不能接种某种疫苗。农夫利奥把它安置在中央牛舍，相信农场很高的平均接种记录。传染病经一头新购动物进入后，多数传播链很快停止，小牛保持健康。东侧牛舍里，多头未接种动物却住在一起；尽管全场百分比相同，感染仍穿过这个聚集群体。",
+        "兽医流行病学家奈拉画出接触网络，而不是一个平均圆圈。在完全易感种群中，一头感染动物可以产生一定数量的继发感染；已有免疫会减少能继续传链的接触比例。有效再生数会随易感比例、接触、行为与控制跨时间变化，在两次管理复核之间，出生与新引入动物又会不断补充易感者。在保护完全、持久且混合均匀的简化模型里，阈值比例常写成一减去基本再生数的倒数，真实农场却违反其中多项假设。",
+        "疫苗有效性不等于覆盖率。有些动物不会形成完整保护，免疫可能衰减，程序不同，母源抗体影响时机，病原的传播性与免疫逃逸也不同。接触按栏舍、年龄、运输、挤奶、市场与人员移动聚集。接种覆盖率计算规定时期内获得疫苗的动物，种群免疫则计算特定时点真正形成有效免疫的动物。为了估计保护，奈拉不仅考虑接种人数，也考虑有效性，以及受保护与易感动物在网络中坐在哪里。",
+        "利奥提议让疾病穿过年轻牧群，让幸存者获得免疫。奈拉拒绝把可预防感染当成无害工具：感染会带来患病、死亡、产量损失、长期影响、场外传播与不确定保护。在获准且安全有效疫苗可用时，它能在不承担完整疾病代价下提供免疫，同时配合生物安全、检测、通风、隔离、移动控制及兽医指导下治疗。",
+        "即使种群保护很高，也不会在每个个体周围造出隐形墙。外来输入仍可能造成病例，尤其在易感者密集或条件改变时。监测要测疾病与免疫，不能假定记录就等于保护。奈拉使用针对当前病原、疫苗、物种与场景的指导；简化阈值解释机制，却不能独自规定所有农场的普遍目标。",
+        "小牛受益于群体免疫：当足够多个体在正确接触格局与时间中拥有免疫，传播被压低，于是部分易感个体也减少感染接触，从而形成间接种群保护。所需水平取决于传播性、疫苗有效性、衰减、聚集、行为、输入与种群结构。它既不保证个体绝对安全，也不能替代兽医控制。保护小牛的不是办公室里一个平均数，而是通向它栏舍的真实传播链上，有足够多环节已经断开。"
+      ],
+      "conceptName": "Herd immunity",
+      "conceptNameZh": "群体免疫",
+      "explanationParagraphs": [
+        "Herd immunity is indirect population protection produced when enough individuals are immune, in relevant contact patterns and over time, to reduce transmission and infectious exposure for some susceptible individuals.",
+        "Thresholds depend on transmissibility, vaccine effectiveness, waning, clustering, introductions, behaviour, and population structure. Simple formulas explain assumptions but do not replace pathogen- and setting-specific veterinary guidance."
+      ],
+      "explanationParagraphsZh": [
+        "群体免疫是当足够多个体在相关接触格局与时间中拥有免疫、降低传播后，为部分易感个体减少感染暴露而产生的间接种群保护。",
+        "阈值取决于传播性、疫苗有效性、衰减、聚集、输入、行为与种群结构。简化公式解释假设，不能取代针对病原与场景的兽医指导。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0841-five-domains-welfare",
+      "batchId": "batch-012",
+      "categoryCode": "08",
+      "fieldCode": "0841",
+      "fieldTitle": "Veterinary",
+      "fieldTitleZh": "兽医学",
+      "title": "The Cow That Kept Striking the Gate",
+      "titleZh": "不断撞门的奶牛",
+      "summary": "A well-fed, uninjured cow repeatedly strikes a gate until welfare assessment expands from survival and health to environment, behavioural interactions, agency, and inferred mental experience.",
+      "summaryZh": "一头吃饱、无伤的奶牛反复撞门，福利评估不得不从生存与健康扩展到环境、行为互动、能动性与推断的心理体验。",
+      "storyParagraphs": [
+        "Farmer Pela showed the inspector a cow with a full trough, clean coat, normal temperature, and no visible wound. By her checklist, the animal lacked nothing. Every afternoon, however, the cow paced the same six steps and struck the gate until the hinge bent. Pela replaced the hinge twice and called the behaviour stubbornness. Veterinarian Sera watched when it began, what preceded it, and what changed when the herd moved outside.",
+        "Sera first checked nutrition: access, quantity, quality, balance, competition, thirst, and feeding pattern rather than the presence of feed alone. She examined the physical environment for heat, cold, flooring, mud, air, light, space, noise, and resting comfort. She assessed health through injury, disease, pain, function, body condition, and subclinical problems. A normal temperature did not rule out lameness or chronic discomfort.",
+        "The fourth area concerned behavioural interactions with the environment, other animals, and people. Could the cow move, rest, explore, groom, avoid aggression, maintain preferred social contact, and exercise meaningful choice within safe limits? The gate striking began when a dominant animal blocked the only route to water after milking. Outside, several routes and more space allowed avoidance. Sera changed group composition, access points, flooring, timing, and staff handling, then observed whether behaviour and resource use changed.",
+        "None of the first four areas was the animal's mental state itself. They supplied evidence from which likely negative and positive experiences could be cautiously inferred: thirst, pain, fear, frustration, breathlessness, comfort, interest, security, pleasure, or social connection. Sera combined behaviour, physiology, health, preference and motivation tests, context, and repeated observation. Preference showed what an animal chose under test conditions, while motivation tests helped indicate how hard it would work for access; neither measure stood alone. Positive signs required genuine opportunity, not coercion. She did not claim direct access to the cow's thoughts or explain every repetitive action with one emotion.",
+        "After the changes, gate striking declined and resting, exploration, and affiliative contact increased. Pela learned that removing obvious suffering was not the full aim; animals could also have opportunities for positive engagement and agency. Domains interacted: heat altered drinking and behaviour, pain changed social contact, and crowding affected rest. Assessments remained individual and time-specific, supported decisions, and triggered investigation rather than producing one eternal welfare score.",
+        "The cow was assessed with the Five Domains model of animal welfare: nutrition, physical environment, health, and behavioural interactions provide evidence used to infer the animal's overall mental experiences. The model considers negative and positive states and how interacting conditions affect welfare over time. It is a structured assessment framework, not mind reading or a substitute for species-specific expertise. Pela's first checklist proved that the cow was alive, fed, and visibly unbroken. The bent hinge revealed what those facts had not yet asked about living."
+      ],
+      "storyParagraphsZh": [
+        "农场主佩拉向检查员展示一头食槽充足、皮毛干净、体温正常且没有可见伤口的奶牛。按她的清单，动物什么都不缺。可每天下午，奶牛都会沿同样六步来回走动，再撞击栏门直到铰链弯曲。佩拉换过两次铰链，把行为归为固执。兽医塞拉则观察它何时开始、之前发生什么，以及牛群移到户外后有什么改变。",
+        "塞拉先检查营养：不只看有无饲料，还看取得、数量、质量、平衡、竞争、口渴与进食节奏。她检查物理环境中的热、冷、地面、泥、水、空气、光、空间、噪声与休息舒适，并从伤害、疾病、疼痛、功能、体况与亚临床问题评估健康。体温正常并不能排除跛行或慢性不适。",
+        "第四个领域关注奶牛与环境、其他动物及人的行为互动。奶牛能否移动、休息、探索、梳理、避开攻击、维持偏好社交，并在安全界限内作出有意义选择？撞门始于挤奶后，一头优势牛堵住唯一饮水路线。到了户外，多条路线与更大空间允许回避。塞拉改变分组、入口、地面、时序与人员操作，再观察行为和资源使用是否变化。",
+        "前四个领域都不是动物心理状态本身，而是用来谨慎推断可能负面与正面体验的证据：口渴、疼痛、恐惧、挫败、呼吸困难、舒适、兴趣、安全、愉悦或社交连接。塞拉结合行为、生理、健康、偏好与动机测试、情境及重复观察。偏好显示动物在测试条件下选择什么，动机测试帮助判断它愿为取得资源付出多少；二者都不能单独作答。积极迹象还需要真实机会，而非强迫。她不声称直接进入奶牛思想，也不把每项重复行为都归给一种情绪。",
+        "调整后，撞门减少，休息、探索与友好接触增加。佩拉明白，移除明显痛苦不是全部目标；动物还可以拥有积极参与与能动机会。各领域相互作用：热改变饮水与行为，疼痛改变社交，拥挤影响休息。评估依个体与时间而定，用来支持决定并触发调查，而非制造一个永恒福利分数。",
+        "这头奶牛使用的是动物福利五域模型：营养、物理环境、健康与行为互动提供证据，用来推断动物总体心理体验。模型同时考虑负面与正面状态，以及相互作用的条件怎样跨时间影响福利。它是结构化评估框架，不是读心，也不取代物种专门知识。佩拉第一张清单证明奶牛活着、吃饱、外观未损；弯曲铰链则暴露这些事实尚未追问的生活。"
+      ],
+      "conceptName": "Five Domains model of animal welfare",
+      "conceptNameZh": "动物福利五域模型",
+      "explanationParagraphs": [
+        "The Five Domains model of animal welfare uses evidence from nutrition, physical environment, health, and behavioural interactions to infer an animal's overall mental experiences.",
+        "It considers negative and positive states, interactions among domains, individual variation, and change over time. It structures assessment but does not provide direct access to an animal's thoughts or replace species-specific expertise."
+      ],
+      "explanationParagraphsZh": [
+        "动物福利五域模型使用营养、物理环境、健康与行为互动的证据，推断动物总体心理体验。",
+        "它考虑负面与正面状态、领域间互动、个体差异与时间变化。它组织评估，却不能直接读取动物思想，也不取代物种专门知识。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

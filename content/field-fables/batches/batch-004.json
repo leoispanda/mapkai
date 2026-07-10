@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-004",
+  "articles": [
+    {
+      "id": "0231-comprehensible-input",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0231",
+      "fieldTitle": "Language acquisition",
+      "fieldTitleZh": "语言习得",
+      "title": "Bread Before Grammar",
+      "titleZh": "语法以前的面包",
+      "summary": "A baker understands his first unfamiliar sentences when customers place their words beside loaves, gestures, and choices he already knows.",
+      "summaryZh": "一名面包师第一次听懂陌生句子，是因为顾客把话语放在他已知的面包、手势和选择旁边。",
+      "storyParagraphs": [
+        "When Simo opened a bakery in Luren, he knew fifty local words and understood almost no local speech. He kept a grammar chart beside the oven and memorised lists before dawn. Customers spoke, and the words arrived as one unbroken rope. Simo recognised flour, good, and tomorrow, yet missed what anyone wanted. Speaking more slowly merely stretched the same unknown rope across a longer silence.",
+        "An elderly customer changed the exchange. She touched the dark loaf, held up two fingers, pointed to herself, and said a short sentence containing one word Simo did not know. He could infer that the new word meant reserve. The next day she repeated it while taking a wrapped parcel from a shelf. Gesture, object, routine, and familiar words made the unfamiliar element interpretable without translating every sound.",
+        "Simo enrolled in an evening lesson. The teacher explained verb agreement with flawless examples, all in language beyond his reach. He understood the drawings on the board and none of the explanation. Later, a child told him a repetitive story using toy loaves: one baker gives, two bakers give, yesterday the baker gave. The forms changed inside a scene he could follow. Grammatical accuracy had not made the lecture accessible; connected meaning made the forms available for attention.",
+        "In the shop, Simo asked regulars to reformulate rather than switch immediately to his language. They used familiar alternatives, pointed, repeated key contrasts, and confirmed his guesses. Each week, more speech became understandable, while a small amount remained new. Repeated encounters also mattered: one supported sentence was not a lesson by itself, but recurring patterns let Simo test and revise the same prediction again. He began recognising requests he could not yet produce. Comprehension widened first, giving later speaking a stock of patterns rather than a collection of isolated dictionary entries.",
+        "One afternoon, context misled him. A customer pointed at a rye loaf while asking whether it contained seeds, and Simo assumed she wanted to buy it. He wrapped the loaf and missed the question. He learned to ask for confirmation, attend to endings, and notice when a familiar routine did not fit. Meaningful input was necessary, but interaction, output, correction, memory, and motivation helped turn partial understanding into more stable command.",
+        "Simo was learning through comprehensible input: language that a learner can understand despite containing elements not yet fully acquired, because context, prior knowledge, linguistic cues, interaction, or support make meaning accessible. It is not simply speech made slower or stripped of complexity. Input supplies patterns from which a system can grow, but accounts differ on whether it is sufficient by itself. The first useful grammar entered Simo's mind beside a loaf he already knew how to hold."
+      ],
+      "storyParagraphsZh": [
+        "西莫在卢伦开面包店时，会五十个当地词，却几乎听不懂当地话。他把语法表贴在烤炉旁，黎明前背词单。顾客开口以后，词语像一根没有断点的绳子抵达。西莫能认出“面粉”“好”和“明天”，仍不知道任何人要什么。说得更慢，只把同一根陌生绳子拉过更长的沉默。",
+        "一名老妇改变了交流。她摸着黑面包，举起两根手指，指向自己，说出一句短话，其中只有一个词西莫不懂。他能推测新词是“预留”。第二天，她从架上取走包好的面包时又说一遍。手势、物件、惯例与熟悉词语，让陌生成分可以解释，而无需翻译每个声音。",
+        "西莫参加夜课。老师用完美例句解释动词一致，整段语言却远超他的理解。他看懂黑板图画，一个解释也没听懂。后来，一个孩子用玩具面包讲重复故事：一个面包师给，两个面包师给，昨天面包师给过。形式在他能跟随的场景里变化。语法正确没有让讲座可进入，连贯意义才让形式变得可注意。",
+        "在店里，西莫请熟客换一种说法，而不是立刻改用他的母语。人们使用熟悉近义表达，配合指点，重复关键对比，也确认他的猜测。每周都有更多话语变得可懂，同时保留少量新成分。反复相遇同样重要：一句得到支持的话本身还不是一堂课，重复模式却让西莫再次检验并修订同一预测。他开始听懂一些自己还说不出的请求。理解先扩展，为后来表达储存模式，而不是只积累孤立词典条目。",
+        "一天下午，语境误导了他。顾客指着黑麦面包，实际询问里面是否有籽，西莫却以为她要购买，直接把面包包好，也漏掉问题。他学会请求确认、注意词尾，并发现熟悉惯例何时不再适合。可理解的输入必不可少，互动、输出、纠正、记忆和动机也会帮助局部理解变成更稳定的掌握。",
+        "西莫借助的是可理解输入：学习者虽然尚未完全掌握其中部分成分，却能依靠语境、既有知识、语言线索、互动或支持理解其意义的语言。它不只是放慢语速，也不是删除所有复杂性。输入提供语言系统可以生长的模式，但不同理论对它单独是否充分仍有分歧。第一份真正有用的语法，是在西莫已经会拿起的面包旁进入他心里的。"
+      ],
+      "conceptName": "Comprehensible input",
+      "conceptNameZh": "可理解输入",
+      "explanationParagraphs": [
+        "Comprehensible input is language a learner can understand even though it contains forms or words not yet fully acquired. Context, prior knowledge, visual or situational cues, redundancy, interaction, and carefully calibrated support can make meaning accessible.",
+        "It is widely regarded as important for acquisition, but theories differ about sufficiency and mechanism. Interaction, noticing, output, feedback, memory, identity, and motivation may also shape what learners retain and can use."
+      ],
+      "explanationParagraphsZh": [
+        "可理解输入是学习者能够理解、但仍含有尚未完全习得形式或词语的语言。语境、既有知识、视觉或情境线索、冗余、互动和适度支持都能使意义可进入。",
+        "它被广泛视为语言习得的重要条件，但不同理论对其是否充分及作用机制存在分歧。互动、注意、输出、反馈、记忆、身份与动机也可能影响学习者保留和使用什么。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0231-interlanguage",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0231",
+      "fieldTitle": "Language acquisition",
+      "fieldTitleZh": "语言习得",
+      "title": "The Errors That Kept Moving",
+      "titleZh": "不断搬家的错误",
+      "summary": "An apprentice seems to exchange one set of mistakes for another until her teacher recognises an evolving language system rather than a damaged copy.",
+      "summaryZh": "一名学徒似乎不断用一套错误换另一套，老师终于看见的是发展中的语言系统，而非损坏的复制品。",
+      "storyParagraphs": [
+        "Tavi entered the translators' workshop saying yesterday I go and three book. Master Eren circled every error in red and made her copy the correct sentences ten times. A month later, those forms improved. New errors appeared: yesterday I goed and three bookses. Eren complained that correction merely pushed mistakes from one corner of the page to another.",
+        "The senior translator disagreed. Tavi had begun marking past time and plurality, but she applied newly inferred rules too widely. Goed was not random noise; it showed that she had built a productive past-tense pattern before learning its exceptions. Bookses revealed two plural markers competing in one system. The surface had become less correct in places because the learner's underlying organisation had become more ambitious.",
+        "Her speech also changed by situation. During careful dictation, Tavi used forms she lost in fast market conversation. On quiet mornings she sometimes produced the target form after a pause, then returned to the older rule when bargaining accelerated. The two forms coexisted instead of replacing one another overnight. With familiar merchants, she took risks and produced longer sentences; before the guild examiner, she shortened everything to avoid mistakes. Eren had been treating performance as a fixed inventory. In reality, attention, pressure, topic, audience, and recently activated language altered which part of her developing system appeared.",
+        "Not every moving error meant progress. Tavi used one incorrect preposition for months because it rarely prevented understanding, and merchants stopped correcting it. The form began to settle. The senior translator designed tasks where that small difference changed delivery location, supplied contrasting examples, and asked Tavi to predict the listener's interpretation. Stability could become fossilisation when communication succeeded well enough for revision to stop.",
+        "Eren replaced the red total with a map. He tracked patterns, self-corrections, variability, and newly attempted structures. He discovered that an error could disappear from rehearsed phrases while remaining productive in new sentences, so a correct recital did not prove the system had changed under pressure or unfamiliar meaning. His map distinguished controlled performance, spontaneous use, and what Tavi could understand before she could reliably produce it. Lessons targeted the current system rather than comparing every sentence directly with an expert endpoint. Tavi gradually regularised some forms, abandoned others, and created still newer hypotheses. Her language was not a straight road from error to correctness; it was a working route repeatedly rebuilt under use.",
+        "That evolving route is called interlanguage: a learner's developing linguistic system, shaped by prior languages, input from the target language, learning strategies, communication, and its own internal development. It has patterns and rules rather than being a defective version of the target. Interlanguage can vary across contexts, reorganise in non-linear ways, and stabilise before full target-like use. The errors kept moving because a system was moving beneath them."
+      ],
+      "storyParagraphsZh": [
+        "塔维进入翻译工坊时，会用目标语说出相当于“昨天我去”和“三个书”的形式。师傅埃伦用红笔圈出每个错误，让她把正确句子抄十遍。一个月后，旧形式改善，新错误却出现了，相当于“昨天我去了了”和“三个书们们”。埃伦抱怨，纠正只是把错误从纸的一角推到另一角。",
+        "资深译员不同意。塔维已经开始标记过去时间和复数，只是把新推断的规则用得过宽。“去了了”不是随机噪声，而说明她在掌握例外以前，建立了可以生产过去式的模式；双重复数则显示两个复数标记正在同一系统里竞争。表面在一些地方更不正确，是因为底层组织变得更有企图。",
+        "她的语言还随情境变化。仔细听写时，塔维能使用一些在快速集市对话中丢失的形式。安静早晨里，她有时停顿后能说出目标形式，讨价还价一加快又回到旧规则。两种形式共同存在，并非一夜之间彼此替换。面对熟悉商人，她敢冒险说长句；面对行会考官，又把一切缩短以免出错。埃伦一直把表现当成固定清单，实际却是注意、压力、话题、受众和刚被激活的语言共同决定发展系统的哪一部分出现。",
+        "并非每个移动错误都代表进步。塔维连续几个月使用同一个错误介词，因为它很少妨碍理解，商人也停止纠正，这个形式开始固定。资深译员设计一些让细小介词差异改变送货地点的任务，提供对照例句，并让塔维预测听者会怎样理解。当交流已经足够成功，修订停止，稳定就可能变成僵化。",
+        "埃伦不再统计红圈总数，而改画一张地图，记录模式、自我纠正、变异和新尝试结构。他发现，错误可能从背熟短语中消失，却继续在新句子里生产，因此一次正确背诵不能证明系统在压力或陌生意义下已经改变。地图还区分受控表现、自发表达，以及塔维能理解却尚不能稳定说出的内容。课程针对当前系统，不再把每句话直接与专家终点比较。塔维逐渐规范一些形式，放弃另一些，又产生更新假设。她的语言不是一条从错误直达正确的路，而是一条在使用中反复重建的可行路线。",
+        "这条发展路线叫作中介语：学习者形成中的语言系统，受到既有语言、目标语输入、学习策略、交流和自身内部发展共同塑造。它拥有模式和规则，不只是目标语的损坏版本。中介语会随情境变动，以非线性方式重组，也可能在完全接近目标语以前稳定下来。错误不断搬家，是因为它们下面有一套系统正在移动。"
+      ],
+      "conceptName": "Interlanguage",
+      "conceptNameZh": "中介语",
+      "explanationParagraphs": [
+        "Interlanguage is the developing linguistic system constructed by a language learner. It draws on prior languages and target-language input while also exhibiting internally generated rules, developmental sequences, communication strategies, and variability.",
+        "Learner errors can therefore be systematic evidence rather than random failure. Interlanguage may reorganise, vary by task and attention, or fossilise when forms stabilise before becoming target-like."
+      ],
+      "explanationParagraphsZh": [
+        "中介语是语言学习者建构的、处于发展中的语言系统。它吸收既有语言与目标语输入，也呈现内部生成规则、发展顺序、交流策略和变异。",
+        "因此，学习者错误可能是系统证据，而非随机失败。中介语会重组、随任务与注意变化，也可能在接近目标语以前因形式稳定而发生僵化。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0231-noticing-hypothesis",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0231",
+      "fieldTitle": "Language acquisition",
+      "fieldTitleZh": "语言习得",
+      "title": "The Red Thread at the End of Every Word",
+      "titleZh": "每个词尾的红线",
+      "summary": "A market interpreter keeps hearing the important nouns and missing the small endings that change where and how many goods should move.",
+      "summaryZh": "一名市场译员总能听见重要名词，却不断漏掉那些决定货物去哪里、要多少的小词尾。",
+      "storyParagraphs": [
+        "Interpreter Lera knew the market's major nouns: wool, blue, warehouse, tomorrow. She could grasp the general topic of almost every order and confidently filled whatever remained. The local language, however, placed number and destination in short endings. Lera heard bring blue cloth and missed whether the speaker meant one roll or several, to the warehouse or from it. Meaning survived just well enough to conceal recurring error.",
+        "Her supervisor explained the endings on a chart. Lera passed the written exercise and missed them again in conversation. The sounds were brief, unstressed, and predictable from context most of the time, so her attention continued selecting louder content words. Because successful guesses rewarded attention to the noun alone, the market gave her little reason to redistribute limited processing capacity toward the quiet ending. More exposure repeated the same pattern: the forms reached her ears without becoming units she consciously registered in the stream.",
+        "A dyer named Senn changed the order cards. He marked each relevant ending with a short red thread and placed contrasting orders side by side. One ending sent a single blue roll inward; another sent several outward. Lera listened while physically moving bundles according to the cards. For the first time, she could point to the exact difference between what had been said and what she had assumed.",
+        "At first she overcorrected. Lera stared at every ending, lost the beginning of sentences, and responded too slowly for the market. Detecting a form once did not make processing automatic or guarantee that she understood every function. She also learned that salience can be engineered without making the feature permanent in every task. Senn narrowed practice to one contrast, then varied speakers and speed. Lera began predicting where the ending would occur, checking it, and receiving immediate evidence when her interpretation moved the wrong bundle.",
+        "Weeks later, a merchant used an unfamiliar noun with a familiar ending. Lera did not know the object, but she correctly inferred that several of them were being collected from the eastern warehouse. She asked for the missing noun instead of inventing the whole order. The red threads had disappeared from the cards; the contrast had become available inside her attention, though continued use was still needed for stable, fluent command.",
+        "Lera's change illustrates the noticing hypothesis: the proposal that learners must consciously register relevant features of language in input for those features to become intake available for learning. Noticing can involve detecting a form, its function, or a gap between one's own production and the target. Strong versions of the claim remain debated, and noticing alone is not acquisition. The red thread did not teach every ending; it made a previously invisible difference possible to learn."
+      ],
+      "storyParagraphsZh": [
+        "译员莱拉知道集市里的主要名词：羊毛、蓝色、仓库、明天。她能抓住几乎每张订单的大意，再自信地补上其余部分。当地语言却把数量和方向放在短词尾里。莱拉听见“搬蓝布”，却漏掉说话者要一卷还是多卷、送进仓库还是从仓库取出。意义保留得刚好足够，反而遮住重复错误。",
+        "主管把词尾写成表格解释。莱拉通过书面练习，进入对话又继续漏听。那些声音短促、不重读，而且多数时候可由语境猜出，于是她的注意仍只选择更响亮的内容词。成功猜测只奖励对名词的注意，集市便没有给她充分理由，把有限加工能力重新分配到安静词尾。更多接触重复同一模式：形式抵达耳朵，却没有成为她在连续语流中有意识登记的单位。",
+        "染工森恩改变订单卡，在每个关键词尾旁系一截红线，再把对照订单并排放置。一个词尾让单卷蓝布送入，另一个则让多卷蓝布送出。莱拉一边听，一边按卡片实际搬运布卷。她第一次能够准确指出说出的内容与自己假定的内容差在哪里。",
+        "起初，她纠枉过正。莱拉盯住每个词尾，漏掉句子开头，反应也慢得不适合集市。一次发现形式，并不会让加工自动化，也不保证理解每种功能。她还明白，显著性可以被设计，却不必让特征永久突出在每项任务里。森恩把练习缩小到一种对比，再逐步更换说话人和速度。莱拉开始预测词尾位置、核对声音，并在搬错布卷时立即得到证据。",
+        "几周后，商人使用一个陌生名词，配上熟悉词尾。莱拉不知道物件是什么，却正确推断有多个物件正从东仓取出。她只追问缺失名词，不再虚构整张订单。卡片上的红线已经消失，差异却能进入她的注意；要让掌握稳定流畅，仍需继续使用。",
+        "莱拉的变化说明注意假说：它主张学习者需要在输入中有意识登记相关语言特征，这些特征才会成为可供学习的摄入。注意可以指发现形式、功能，或自己表达与目标形式之间的差距。这个主张的强版本仍有争论，注意本身也不等于习得。红线没有教会所有词尾，只让原本不可见的差异变得可以学习。"
+      ],
+      "conceptName": "Noticing hypothesis",
+      "conceptNameZh": "注意假说",
+      "explanationParagraphs": [
+        "The noticing hypothesis proposes that learners must consciously register features of language in input for those features to become intake available to acquisition. Noticing may concern a form, a form-meaning relation, or a gap between current and target-like use.",
+        "Researchers debate how much awareness is necessary and how noticing should be measured. Salience, attention, task demands, frequency, instruction, and interaction can affect noticing, but noticing a feature once does not ensure learning or fluent use."
+      ],
+      "explanationParagraphsZh": [
+        "注意假说主张，学习者需要在输入中有意识登记语言特征，这些特征才会成为可供习得的摄入。注意对象可以是形式、形式与意义的关系，或当前使用与目标形式之间的差距。",
+        "研究者对需要多少意识、怎样测量注意仍有争论。显著性、注意资源、任务要求、频率、教学与互动都会影响注意，但一次看见某个特征并不保证学会或流畅使用。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0232-arbitrariness-of-the-sign",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0232",
+      "fieldTitle": "Literature and linguistics",
+      "fieldTitleZh": "文学与语言学",
+      "title": "The Blue That Changed Names at the Bridge",
+      "titleZh": "过桥就改名的蓝色",
+      "summary": "A dyer carries one vat of blue across a bridge and discovers that each bank treats a different sound as its proper name.",
+      "summaryZh": "染工把同一缸蓝色运过桥，却发现两岸各自把不同声音当作它唯一正确的名字。",
+      "storyParagraphs": [
+        "Dyer Mara made a blue so clear that both river towns wanted it for their festival banners. On the western bank, customers called the colour sel. Across the bridge, the eastern guild called the same sample nor. Mara believed one word must be the true name and the other a corruption. She printed SEL on every jar and sent half the shipment east.",
+        "The eastern clerk returned it unopened. Their order requested nor, and the label promised something else. Mara carried a jar across, removed the lid, and watched the clerk praise the colour while rejecting its name. She placed an eastern label on the same jar. Nothing in the pigment altered, yet the shipment became acceptable. The sound had no blue property that the eye could find.",
+        "Mara concluded that names therefore did not matter. She let her daughter invent a private term, river-sleep, and wrote it on the next invoice. Neither town knew what to deliver, charge, or compare. A speaker could not freely replace the established word merely because no natural cord tied sound to colour. The bond was conventional, but convention exerted real force through shared expectations.",
+        "A further problem appeared when Mara offered a blue-green cloth. Western buyers placed it with sel; eastern buyers used a separate colour term. An eastern child learning the western term initially searched for a different shade, then learned that the boundary itself had moved. Translation required mapping systems, not exchanging labels one by one. Their words did not simply attach different labels to identical boxes already cut by nature. The linguistic systems also guided which contrasts were habitually marked. Still, neither language prevented people from seeing variation or learning the other's distinction when a task required it.",
+        "At the festival, Mara used colour chips beside both words and added an image of the river. The chips resembled the requested hue more directly than either sound, but even their use depended on agreed lighting, placement, and purpose. Even a chip could fade, and communities needed conventions for replacing it while claiming continuity across future festivals and trades. Some signs could be more motivated by resemblance, gesture, or sound symbolism than others. No sign system was arbitrary in every respect, and no individual controlled it alone.",
+        "The bridge had taught Mara the arbitrariness of the sign: the absence of a necessary natural bond between a linguistic signifier, such as a sound pattern, and the signified concept it conventionally evokes. Different languages can link different forms and concepts, while social use stabilises those links. Arbitrariness does not mean random speech, meaningless words, or unlimited private choice. The blue kept its colour; the names worked because communities had learned where each one belonged."
+      ],
+      "storyParagraphsZh": [
+        "染工玛拉调出一种清澈蓝色，河两岸城镇都想用来制作节庆旗帜。西岸顾客称这种颜色为“塞尔”，过桥以后，东岸行会却把同一块样布叫作“诺尔”。玛拉相信两个词中必有一个是真名，另一个只是讹误，于是在每只罐上印“塞尔”，把一半货送往东岸。",
+        "东岸书记没有开罐就退货。他们订的是“诺尔”，标签承诺的却是别的东西。玛拉亲自过桥，打开罐盖，看见书记一边赞美颜色，一边拒绝名字。她把同一只罐换上东岸标签。颜料没有任何变化，货物却立刻可以接收。那个声音里没有眼睛能够找到的蓝色属性。",
+        "玛拉于是断定名字根本不重要，让女儿自创“河的睡眠”，写进下一张订单。两座城都不知道该送什么、怎样计价或比较。一个说话者不能只因声音与颜色之间没有天然绳索，就任意替换既有词语。连接来自约定，约定却通过共同期待施加真实力量。",
+        "玛拉后来提供一块蓝绿色布，又遇到新问题。西岸买家把它归入“塞尔”，东岸买家却使用独立颜色词。东岸孩子学习西岸词语时，最初寻找另一种色调，后来才明白移动的是分类边界。翻译需要映射系统，不能只逐个交换标签。语言并非只把不同标签贴到自然早已切好的相同盒子上，也会引导人们习惯标记哪些对比。不过，两种语言都不会阻止人看见变化，任务需要时也能学习对方的区分。",
+        "节庆时，玛拉在两个词旁放置色卡，又加上一幅河流图。色卡比两种声音都更直接地类似目标色，它的使用仍依赖大家对光线、位置和用途的约定。色卡也会褪色，共同体需要约定怎样替换，又怎样让未来节庆与交易仍承认连续。有些符号可因相似、手势或语音象征而比另一些更有动因。没有任何符号系统在所有方面都任意，也不由任何个人独自控制。",
+        "这座桥教给玛拉的是符号任意性：语言能指，如一组声音，与它按约定唤起的所指概念之间，不存在必然自然纽带。不同语言可以连接不同形式与概念，社会使用则使连接稳定。任意性不等于说话随机、词语无意义或个人拥有无限选择。蓝色保持原色，名字之所以有效，是因为共同体已经学会它们各自属于哪里。"
+      ],
+      "conceptName": "Arbitrariness of the sign",
+      "conceptNameZh": "符号任意性",
+      "explanationParagraphs": [
+        "Arbitrariness of the sign means that no necessary natural bond connects most linguistic signifiers with the concepts they signify. Languages can therefore use different sound patterns and organise distinctions differently for comparable parts of experience.",
+        "Arbitrary does not mean individually optional or structurally random. Social convention, contrast with other signs, history, and repeated use stabilise meanings, while iconicity and sound symbolism show that some signs are partially motivated."
+      ],
+      "explanationParagraphsZh": [
+        "符号任意性指多数语言能指与其所指概念之间不存在必然自然联系。因此，不同语言可以用不同声音形式，也可以用不同方式组织相近经验中的区分。",
+        "任意不等于个人可以随意选择，也不等于系统毫无结构。社会约定、与其他符号的对比、历史和反复使用会稳定意义；象似性与语音象征也说明部分符号具有一定动因。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0232-focalization",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0232",
+      "fieldTitle": "Literature and linguistics",
+      "fieldTitleZh": "文学与语言学",
+      "title": "Three Windows on the Burning Lighthouse",
+      "titleZh": "燃烧灯塔的三扇窗",
+      "summary": "An archivist tells one lighthouse fire through three witnesses and learns that a narrator can speak with knowledge borrowed from different eyes.",
+      "summaryZh": "档案员通过三名见证者讲述同一场灯塔火灾，发现叙述者可以借不同双眼的知识说话。",
+      "storyParagraphs": [
+        "When the old lighthouse burned, archivist Osa received three accounts. The keeper inside saw smoke curling beneath the stair door but could not see the fishing boat approaching through fog. A child on the cliff saw the boat and the upper windows, yet knew nothing of the jammed water pump. The sailor saw a figure at the lantern and believed the keeper had abandoned the lower rooms. Osa decided to combine the best details into one seamless story.",
+        "Her draft followed the keeper up the stairs, described the boat hidden behind his back, entered the child's fear on the cliff, and announced the sailor's mistaken belief as if all knowledge occupied one mind. Readers found the account vivid but impossible. The keeper appeared to react to a boat he could not see and to thoughts no one had spoken. By gathering every fact, Osa had erased the conditions under which each fact became available.",
+        "She rewrote the opening through the keeper's access. The narrator remained outside the story and spoke in the third person, but disclosed only what he perceived, remembered, inferred, or misunderstood. The unseen boat entered first as a horn in the fog. A dark shape at the door seemed like a fallen beam until heat moved it. The reader's knowledge narrowed with the keeper's, even though the keeper was not the one narrating.",
+        "In the second section, Osa shifted to the child and marked the transition. The keeper became a silhouette behind glass; the pump problem vanished; the boat looked close enough to rescue him, though currents made that judgement false. The shift changed not only information but moral judgement: distance made the keeper's hesitation look colder than it had from inside. A final section stayed outside all minds and recorded only observable movement. It felt colder and withheld motives that the earlier sections had made intimate.",
+        "Osa considered alternating viewpoints line by line to create urgency. The experiment produced confusion rather than intensity because readers could not tell whose limits governed a sentence. She retained deliberate shifts at structural points and let contradictions remain visible. Multiple perspectives did not automatically yield total truth; they revealed how attention, knowledge, emotion, and misrecognition organised different versions of the same flames.",
+        "Osa had learned focalization: the regulation of narrative information through the position or consciousness from which events are perceived, known, and filtered. It differs from narration, the question of who speaks. A narrator may focalize through a character, shift among characters, or present events with more external or unrestricted access. The choice determines what readers can notice, when they learn it, and which absences acquire force. The fire was one event; each window gave it a different field of vision."
+      ],
+      "storyParagraphsZh": [
+        "旧灯塔失火后，档案员奥萨收到三份叙述。塔内守灯人看见烟从楼梯门下卷入，却看不见雾中驶近的渔船；悬崖上的孩子看见船和高窗，却不知道水泵卡住；船员看见灯室里有个人影，以为守灯人抛弃了下层房间。奥萨决定把最好细节合成一个无缝故事。",
+        "初稿跟随守灯人上楼，又描述他背后看不见的船，进入悬崖上孩子的恐惧，还把船员的误判写成仿佛所有知识都住在一个脑中。读者觉得生动，却不可能。守灯人似乎会回应自己看不见的船，也会回应无人说出的想法。奥萨收集全部事实，反而擦掉了每项事实得以出现的条件。",
+        "她让开头受守灯人的信息范围限制。叙述者仍在故事外，以第三人称说话，却只透露他感知、记起、推断或误解的事。看不见的船先以雾中号声进入，门边黑影起初像倒下横梁，直到热流使它晃动。即使不是守灯人在叙述，读者的知识仍与他一起收窄。",
+        "第二部分，奥萨转向孩子，并清楚标出转换。守灯人成为玻璃后的剪影，水泵问题消失，渔船看起来近得足以救人，虽然水流使这项判断错误。转换改变的不只信息，还有道德判断：距离让守灯人的迟疑显得比从内部看时更冷漠。最后一段停在所有心智之外，只记录可观察动作。它感觉更冷，也扣住了前两部分曾让人接近的动机。",
+        "奥萨尝试逐行交替视点来制造紧迫，结果产生的不是强度，而是混乱，因为读者无法知道一句话由谁的限制支配。她只在结构节点有意切换，并让矛盾保持可见。多重视角不会自动合成全部真相，却能揭示注意、知识、情绪与误认怎样组织同一场火焰的不同版本。",
+        "奥萨学会的是叙事聚焦：通过事件被感知、知晓和过滤的位置或意识，调节叙事信息。它不同于“谁在说”的叙述问题。叙述者可以通过某个角色聚焦，在角色间切换，也可使用更外部或不受限的信息范围。选择决定读者能注意什么、何时知道，以及哪些缺失获得力量。火灾只有一场，每扇窗却给它不同视野。"
+      ],
+      "conceptName": "Focalization",
+      "conceptNameZh": "叙事聚焦",
+      "explanationParagraphs": [
+        "Focalization concerns the perspective or consciousness through which narrative information is selected and filtered: who perceives or knows. It is analytically distinct from narration, which concerns who tells or speaks.",
+        "Narratives may use internal, external, shifting, multiple, or comparatively unrestricted focalization. These choices distribute knowledge, attention, uncertainty, sympathy, and surprise, and need not correspond to an objectively true viewpoint."
+      ],
+      "explanationParagraphsZh": [
+        "叙事聚焦关注叙事信息通过哪一个视角或意识被选择和过滤，也就是谁在感知或知晓。它在分析上不同于谁在讲述或说话。",
+        "叙事可以采用内部、外部、切换、多重或相对不受限的聚焦方式。这些选择分配知识、注意、不确定、同情与惊奇，也不必对应某个客观真实视角。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0232-pragmatics",
+      "batchId": "batch-004",
+      "categoryCode": "02",
+      "fieldCode": "0232",
+      "fieldTitle": "Literature and linguistics",
+      "fieldTitleZh": "文学与语言学",
+      "title": "The Door Was Still Open",
+      "titleZh": "那扇门还开着",
+      "summary": "A literal-minded steward hears the same sentence at a banquet, an inquiry, and a sickroom, then performs three different mistakes.",
+      "summaryZh": "一名只按字面理解的管事在宴会、调查和病房听见同一句话，随后犯下三种不同错误。",
+      "storyParagraphs": [
+        "At the winter banquet, the host looked toward a cold draft and told steward Rin, the door is still open. Rin inspected the hinges and replied that the statement was correct. The host shivered until another servant closed it. Nothing in the sentence grammatically commanded an action, yet shared circumstances made a request obvious to everyone except the person treating words as a report alone.",
+        "The next morning, an investigator repeated the same sentence while questioning a guard about a theft: the door was still open. Rin, standing nearby, closed the inquiry-room door. The investigator had not requested that action. She was drawing an implication about opportunity: someone could have entered the storehouse. Identical words now contributed to an accusation because the prior question, speakers' roles, and shared evidence had changed.",
+        "That evening, a physician told a worried family, the door is still open. Rin hurried to close the ward. The physician meant that a treatment option remained available. The physical door was already shut. A conventional metaphor, the family's question, and the physician's reassuring tone made the utterance an offer of possibility rather than a description of wood. Rin began suspecting that sentences carried more than their dictionary cargo.",
+        "He then overlearned the lesson. Whenever anyone mentioned a door, Rin searched for a hidden command. A carpenter saying the door is open while measuring its frame intended a factual observation. Rin closed it and spoiled the measurement. Rin now understood that literal truth could remain constant while the relevant conversational move changed, but he still needed a disciplined way to choose among possibilities. Context did not license unlimited invention. An interpretation needed evidence from common ground, conversational purpose, social relation, timing, intonation, and what a cooperative speaker could reasonably expect a listener to infer.",
+        "Rin adopted two habits. He first asked what action the utterance was performing here: informing, requesting, warning, accusing, promising, reassuring, or something else. He listened for what question was already on the table and what response would now make the exchange coherent. When consequences were high and cues ambiguous, he checked. At the next banquet, the host glanced at the draft and repeated the sentence. Rin closed the door. During a later inquiry, he left the door untouched and asked which period of access the investigator meant.",
+        "Rin was learning pragmatics: how context, speaker intention, shared knowledge, social relations, and inference contribute to meaning in use. Pragmatics examines speech acts, implicature, presupposition, deixis, politeness, and other ways utterances do more than encode literal propositions. It does not make meaning a private guess; interpretations remain constrained by language and publicly available context. The door stayed grammatically open while each conversation changed what that openness was doing."
+      ],
+      "storyParagraphsZh": [
+        "冬宴上，主人望向冷风，对管事林说：“门还开着。”林检查铰链，回答这句话完全正确。主人一直发抖，直到另一名仆人把门关上。句子在语法上没有命令动作，共同处境却让请求对所有人都显而易见，只有那个把词语单纯当报告的人例外。",
+        "第二天早晨，调查员询问守卫失窃案时重复同一句：“门当时还开着。”站在旁边的林立刻关上问讯室的门。调查员并未请求这个动作，而是在提出关于机会的含义：有人可能进入仓库。相同词语现在参与一项指控，因为此前问题、说话人角色和共同证据已经改变。",
+        "当晚，医生对忧心家属说：“门仍然开着。”林赶紧去关病房门。医生的意思是还有一种治疗选择，物理门本来就关着。惯用隐喻、家属问题和医生安慰语调，使话语成为可能性的提供，而非木门描述。林开始怀疑，句子携带的不只是词典货物。",
+        "随后，他又学过了头。任何人提到门，林都寻找隐藏命令。木匠量门框时说“门开着”，只是在作事实观察；林把门关上，破坏了测量。林此刻明白，字面真值可以保持不变，相关对话行动却会改变，但他仍需要有纪律地选择可能解释。语境不允许无限发明。解释需要得到共同知识、对话目的、社会关系、时机、语调，以及合作说话者可以合理期待听者推断什么的支持。",
+        "林养成两个习惯。先问话语在这里执行什么行动：告知、请求、警告、指控、承诺、安慰，还是别的？再听当前桌面上已有哪个问题，怎样回应才能让交流连贯。后果重大且线索含混时，再请求确认。下一场宴会，主人望着冷风重复那句话，林关上门。后来调查中，他没有碰门，只追问调查员指的是哪一段可进入时间。",
+        "林学会的是语用学：语境、说话者意图、共同知识、社会关系与推断怎样共同生成使用中的意义。语用学研究言语行为、会话含义、预设、指示、礼貌等话语超出字面命题的方式。它并不把意义变成私人猜测，解释仍受语言和公开语境约束。门在语法上一直开着，每场对话却改变了这种“开着”正在做什么。"
+      ],
+      "conceptName": "Pragmatics",
+      "conceptNameZh": "语用学",
+      "explanationParagraphs": [
+        "Pragmatics studies how utterance meaning depends on context, speaker intentions, shared assumptions, social relations, and inference beyond literal semantic content. It includes speech acts, implicature, presupposition, deixis, information structure, and politeness.",
+        "Contextual interpretation is constrained rather than arbitrary. Listeners use linguistic form and publicly available cues to infer what a speaker is doing, while clarification remains important when cues conflict or consequences are serious."
+      ],
+      "explanationParagraphsZh": [
+        "语用学研究话语意义怎样依赖语境、说话者意图、共同假设、社会关系，以及超出字面语义的推断。它涵盖言语行为、会话含义、预设、指示、信息结构与礼貌。",
+        "语境解释受到约束，并非任意猜测。听者利用语言形式和公开线索推断说话者正在做什么；当线索冲突或后果重大时，请求澄清仍然重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0311-opportunity-cost",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0311",
+      "fieldTitle": "Economics",
+      "fieldTitleZh": "经济学",
+      "title": "The Water That Could Flow Only Once",
+      "titleZh": "只能流一次的水",
+      "summary": "A drought village calls river water free until directing it toward the mill silently chooses what the orchard must lose.",
+      "summaryZh": "干旱村庄把河水称作免费资源，直到水流向磨坊的同时，果园的损失也被悄悄选定。",
+      "storyParagraphs": [
+        "During the drought, Valen's canal carried enough water to serve either the grain mill or the hillside orchard each afternoon, not both. The mill needed a strong six-hour flow to turn its wheel. The orchard needed the same volume to keep young trees alive. The council called the river free and chose the mill because flour sales appeared in that week's ledger while unripe fruit did not.",
+        "The mill produced sacks of flour without anyone paying for the water. Councillors congratulated themselves on obtaining output at no resource cost. Three weeks later, orchard leaves browned and part of the future harvest died. Families bought fruit from another valley, seasonal workers lost employment, and bare soil washed toward the canal. The mill's choice had carried a cost even though no coin changed hands at the gate.",
+        "An accountant tried to total every possible thing the village might have done with water: washing streets, filling ponds, making bricks, growing reeds, and watering gardens. The list became enormous. Orchard keeper Sena objected that most options were not serious alternatives under current tools and needs. If the orchard was truly next best, its expected harvest and related benefits formed the comparison; brick ponds could not all be lost at once. The relevant comparison was the most valuable feasible option that would have been chosen next, not the sum of every imaginable use.",
+        "The following year, the council saved the orchard and reduced milling. Now flour had to be ground at a distant town. The same water generated a different sacrifice because harvest prices, grain stocks, tree maturity, and transport conditions had changed. Uncertainty required expected values rather than certainty about either harvest before the gate opened. No use possessed one permanent hidden price. The cost depended on what scarce resources could otherwise have achieved at the moment of choice.",
+        "A proposal to split the water equally looked fair but failed both technologies: the wheel stalled under weak flow, and too little water reached the upper roots. The council redesigned the schedule instead, alternating full flows and investing in storage. That did not remove scarcity, but it changed the feasible alternatives and therefore changed what had to be forgone. Better infrastructure could lower a cost by making the next-best option less incompatible.",
+        "Valen had encountered opportunity cost: the value of the best alternative forgone when a choice uses scarce resources. It need not be a monetary payment, and it is not the sum of every rejected possibility. Opportunity cost makes choice visible by comparing what is selected with the next-best feasible use. River water could be free at the point of collection and still be costly, because every afternoon it flowed toward one future rather than another."
+      ],
+      "storyParagraphsZh": [
+        "干旱期间，瓦伦水渠每天下午的水量只够服务谷物磨坊或山坡果园之一，不能两者兼顾。磨坊需要连续六小时强水流才能转轮，果园也需要同样水量保住幼树。议会称河水免费，选择磨坊，因为面粉销售会出现在当周账簿，未成熟的果实不会。",
+        "磨坊生产出一袋袋面粉，没有人为水付钱。议员庆祝自己在没有资源成本的情况下得到产出。三周后，果园叶片变褐，部分未来收成死亡。家庭从另一山谷买水果，季节工失去工作，裸露土壤也被冲进水渠。即使闸门前没有钱币交换，磨坊选择仍携带成本。",
+        "会计试图把村庄可能拿水做的每件事全部相加：洗街、填池、制砖、种芦苇、浇菜园，清单无限变长。果园主塞娜反驳，在现有工具和需求下，多数用途并非认真替代。若果园确是次佳方案，比较对象就是它的预期收成与相关收益；制砖和池塘不可能同时都被失去。相关比较是若不选当前方案，下一步会选择的最有价值可行方案，而不是所有想象用途之和。",
+        "第二年，议会保护果园，减少磨粉，面粉便要运到远镇加工。同一份水产生不同牺牲，因为果价、粮食库存、树龄和运输条件都已变化。闸门开启以前，必须比较预期价值，而不能假装确定知道哪种收成。任何用途都没有一个永久隐藏价格。成本取决于稀缺资源在选择当时原本还能实现什么。",
+        "平均分水的提案看似公平，却让两种技术同时失效：弱水流推不动磨轮，抵达山坡根部的水也不足。议会改为交替提供完整水流，并投资蓄水。这样没有消灭稀缺，却改变了可行替代，也改变必须放弃什么。更好基础设施能够让次优方案不再完全冲突，从而降低成本。",
+        "瓦伦遇到的是机会成本：一项选择占用稀缺资源时，所放弃的最佳替代方案的价值。它不必是货币支付，也不是所有拒绝可能的总和。机会成本把选择变得可见，因为它拿已选方案与次佳可行用途比较。河水在取用处可以免费，却仍然昂贵，因为每个下午它都流向一个未来，而不是另一个。"
+      ],
+      "conceptName": "Opportunity cost",
+      "conceptNameZh": "机会成本",
+      "explanationParagraphs": [
+        "Opportunity cost is the value of the next-best feasible alternative forgone when a choice is made. It reflects scarcity and can include time, output, experience, risk, or other valued outcomes, not only money.",
+        "It is not the sum of all rejected options and may change as prices, technology, constraints, and preferences change. Comparing realistic alternatives makes the trade-off of a decision explicit."
+      ],
+      "explanationParagraphsZh": [
+        "机会成本是一项选择作出时，被放弃的次佳可行替代方案的价值。它反映稀缺性，可以包含时间、产出、体验、风险或其他有价值结果，不只包括金钱。",
+        "它不是所有未选方案的总和，也会随价格、技术、约束和偏好变化。比较现实可行的替代，能够使决策取舍变得明确。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0311-marginal-analysis",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0311",
+      "fieldTitle": "Economics",
+      "fieldTitleZh": "经济学",
+      "title": "The Tenth Ship",
+      "titleZh": "第十艘船",
+      "summary": "A harbour council praises the value of shipping in general until one additional vessel consumes the berth reserved for emergencies.",
+      "summaryZh": "港口议会一直赞美航运整体价值，直到新增一艘船占用了为紧急情况保留的泊位。",
+      "storyParagraphs": [
+        "Port Rell could safely manage nine trading ships a day. The first brought grain the town could not grow and used an empty quay. Later ships carried timber, cloth, wine, and tools. Each added commerce, but each also increased pilot hours, waiting, collision risk, and pressure on the narrow channel. The council heard only that ships created wealth and approved a tenth daily arrival.",
+        "On a calm morning, the tenth ship paid harbour fees and unloaded luxury mirrors. Its visible benefit looked much like the average value of the other nine. That afternoon, a medical vessel requested the emergency berth. The mirror ship occupied it, so the medical crew waited outside the channel while tugboats rearranged traffic. The delay revealed a cost that existed specifically because capacity had already been nearly used.",
+        "One councillor demanded that all shipping be reduced, pointing to congestion as proof that vessels were harmful. Harbourmaster Iva placed the first and tenth arrivals side by side. Removing the first grain ship would cost food supply while freeing capacity that was already abundant at dawn. Removing the tenth would sacrifice mirrors and fees while recovering a scarce emergency option. The relevant increments differed even though both units were called one ship.",
+        "Iva listed the additional benefit and additional cost of admitting one more vessel at each traffic level. Early arrivals produced large gains at low congestion. Later gains tended to shrink while delay and risk rose. Averages described the fleet already admitted; they concealed in practice the steep cost created at the remaining bottleneck after capacity became scarce that very afternoon. The stopping point was not where total benefit became zero, nor where the average ship looked profitable, but where the expected gain from the next admission no longer justified its expected cost.",
+        "The rule did not make the tenth position permanently worthless. A ship carrying urgent medicine could have a very high additional benefit, while fog could raise the cost of even an eighth arrival. Rell created priority windows and flexible capacity charges rather than a blind numerical ceiling. Distribution also mattered: mirror buyers gained from the tenth vessel while patients bore much of its delay, so the council made those effects explicit instead of hiding them in one total.",
+        "Iva was using marginal analysis: comparing the additional benefit and additional cost produced by a small change from the current level of activity. It asks about one more or one less unit, not whether the activity is good in general. Marginal values can change with capacity, timing, uncertainty, identity, and cumulative use. The first ship and the tenth both crossed the harbour mouth, but only one arrived after nearly every easy berth had already been taken."
+      ],
+      "storyParagraphsZh": [
+        "雷尔港每天可安全处理九艘商船。第一艘带来本地无法种植的谷物，也面对空码头；后续船只运来木材、布匹、葡萄酒和工具。每一艘都增加贸易，也增加领航工时、等待、碰撞风险和窄航道压力。议会只听见船舶创造财富，批准每天第十艘抵达。",
+        "一个平静早晨，第十艘船缴纳港费，卸下奢华镜子。可见收益看起来与前九艘平均价值相似。当天下午，一艘医疗船请求紧急泊位，镜船正占着它，医疗队只能在航道外等待拖船重新安排交通。延误揭示一种只因容量已接近用尽才出现的成本。",
+        "一名议员要求削减所有航运，以拥堵证明船只有害。港务长伊瓦把第一艘与第十艘并排比较。取消第一艘谷物船会损失食物供应，却只释放清晨本就充足的容量；取消第十艘会牺牲镜子与费用，却恢复稀缺紧急选项。两个单位都叫一艘船，相关增量却不同。",
+        "伊瓦列出每种流量下再接纳一艘船产生的额外收益与额外成本。早期船只收益大、拥堵低；后来收益趋于缩小，延误和风险上升。平均值描述的是已经接纳的船队，在实践中却会遮住容量于当天下午变得稀缺后，剩余瓶颈突然产生的高成本。停止点不是总收益归零之处，也不是平均船只看起来不再赚钱之处，而是下一次接纳的预期收益不再足以证明其预期成本。",
+        "这条规则不表示第十个位置永久无价值。运送急救药物的船可能产生极高额外收益，浓雾也可能让第八艘就变得昂贵。雷尔设置优先时段与弹性容量费，而不是盲目数字上限。分配同样重要：镜子买家获得第十艘收益，病人却承担大部分延误，议会必须让这些影响显形，不能藏进一个总数。",
+        "伊瓦运用的是边际分析：比较从当前活动水平作出小幅改变所产生的额外收益与额外成本。它询问再多一个或少一个，而不是这项活动总体好不好。边际价值会随容量、时机、不确定性、对象与累积使用而变化。第一艘与第十艘都穿过港口，只有一艘是在几乎所有容易使用的泊位都被占据以后抵达。"
+      ],
+      "conceptName": "Marginal analysis",
+      "conceptNameZh": "边际分析",
+      "explanationParagraphs": [
+        "Marginal analysis compares the additional benefit and additional cost of a small change from the current level, such as producing, consuming, admitting, or removing one more unit. Decisions often turn on these increments rather than totals or averages.",
+        "Marginal values can vary with scale, capacity, timing, risk, and who receives costs and benefits. A common decision rule expands an activity while expected marginal benefit exceeds expected marginal cost, subject to other constraints and distributional concerns."
+      ],
+      "explanationParagraphsZh": [
+        "边际分析比较从当前水平作出小幅改变的额外收益与额外成本，例如再生产、消费、接纳或移除一个单位。决策往往取决于这些增量，而非总量或平均值。",
+        "边际价值会随规模、容量、时机、风险及成本收益归属变化。常见决策规则是在其他约束和分配问题允许时，只要预期边际收益高于预期边际成本，就继续扩展活动。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0311-negative-externality",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0311",
+      "fieldTitle": "Economics",
+      "fieldTitleZh": "经济学",
+      "title": "The Price That Floated Downstream",
+      "titleZh": "顺流而下的价格",
+      "summary": "An efficient tannery lowers the price of leather by sending a portion of production cost into water used by people outside every contract.",
+      "summaryZh": "一家高效制革坊通过把部分生产成本送进合同之外人们使用的河水，降低了皮革价格。",
+      "storyParagraphs": [
+        "Maro's tannery produced leather more cheaply than any workshop in the valley. He reduced waste inside the building, trained workers well, and negotiated low prices for hides. Boots became affordable and employment grew. The accounts showed wages, bark, tools, transport, and rent. Wastewater left through a rear channel and did not appear as an expense after crossing the tannery wall.",
+        "Downstream, fishers found dead trout near their nets. A brewer used more fuel to purify water, children stopped swimming, and farmers cleared sediment from irrigation screens. None had bought leather or signed a contract with Maro. Their losses were caused partly by his production, yet the market price transmitted no charge back to the decision that created them. Upstream accounts therefore reported efficiency by drawing the boundary around the firm more narrowly than the river carried its effects. Cheap boots contained costs paid by other hands.",
+        "Maro argued that every business affected someone and that downstream complaints were impossible to measure. The council first banned tanning entirely. River quality improved, but workers lost income and households imported expensive leather from a town whose wastewater entered another river. Eliminating the local activity had moved some harm and destroyed benefits without asking whether the unpriced damage could be reduced or included.",
+        "The valley measured discharge, fish loss, treatment costs, and seasonal flow. It required filters and reuse systems, charged for remaining pollution, and created compensation for verifiable damage. The fee followed measured discharge rather than leather output alone, giving Maro an incentive to find cleaner methods instead of merely producing less. Maro redesigned soaking vats because pollution now entered his production calculation rather than disappearing at the property line. Leather prices rose, though less than opponents predicted, and the river recovered enough for fishing to resume.",
+        "The arrangement was imperfect. Measurement remained uncertain, some ecological losses could not be restored with money, and powerful workshops tried to influence the fee. Downstream residents received standing in monthly review meetings where monitoring data were published openly for everyone. The council revised limits as evidence improved and used direct prohibitions where damage was severe or irreversible. Making a cost visible did not guarantee justice; rights, enforcement, distribution, and who had authority to consent still mattered.",
+        "The downstream burden was a negative externality: a cost imposed by an activity on third parties that was not fully reflected in the transaction or decision producing it. Because decision-makers face private rather than total social costs, too much of the harmful activity may occur. Taxes, regulation, liability, bargaining under suitable conditions, technology, or collective rules can internalise part of the effect. Maro's profit was real, but it had looked larger because part of its cost floated off the page."
+      ],
+      "storyParagraphsZh": [
+        "马罗的制革坊比山谷任何工坊都更便宜。他减少楼内浪费，训练工人，也以低价采购兽皮。靴子变得可负担，就业增加。账目列出工资、树皮、工具、运输和租金。废水从后渠流走，一旦越过工坊墙壁，便不再作为费用出现。",
+        "下游渔民在网旁发现死鳟鱼。酿酒师使用更多燃料净水，孩子停止游泳，农民清理灌溉滤网上的沉积。他们没有购买皮革，也没与马罗签约。损失部分由其生产造成，市场价格却没有把费用送回制造它的决定。上游账目之所以报告高效率，是因为它围绕企业画出的边界，比河流携带影响的范围更窄。便宜靴子里包含由其他双手支付的成本。",
+        "马罗辩称每家企业都会影响别人，下游抱怨也无法测量。议会最初完全禁止制革。河水改善，工人却失业，家庭只好从另一座把废水排进别条河的城镇进口昂贵皮革。取消本地活动转移了一些伤害，也摧毁收益，却没有追问未计价损害能否降低或纳入。",
+        "山谷测量排放、鱼类损失、净水成本和季节流量，要求安装过滤与回用系统，对剩余污染收费，并对可核实损害提供补偿。费用依据实测排放，而非单看皮革产量，使马罗有动力寻找更清洁方法，而不是只减少生产。污染不再消失在产权边界外，而进入生产计算，马罗因此重做浸泡槽。皮革涨价，却没有反对者预测得那么多，河流也恢复到可以重新捕鱼。",
+        "制度并不完美。测量仍有不确定，一些生态损失无法用钱恢复，强势工坊也试图影响收费。下游居民获得参加每月复核会议的正式地位，监测数据也向所有人公开发布。议会随证据改善修订限额，对严重或不可逆伤害使用直接禁止。让成本可见不自动保证正义；权利、执行、分配，以及谁有权同意仍然重要。",
+        "下游负担是一种负外部性：某项活动把成本施加给第三方，却没有在制造它的交易或决定中得到充分反映。决策者面对私人成本而非完整社会成本，有害活动就可能发生过多。税费、监管、责任制度、适当条件下的协商、技术或集体规则，都可使部分影响内部化。马罗的利润真实存在，只是看起来更大，因为一部分成本已经顺流漂出账页。"
+      ],
+      "conceptName": "Negative externality",
+      "conceptNameZh": "负外部性",
+      "explanationParagraphs": [
+        "A negative externality occurs when an activity imposes costs on third parties that are not fully reflected in the price or decision faced by those producing the activity. Private marginal cost then falls below social marginal cost, which can lead to excessive harmful activity.",
+        "Possible responses include regulation, taxes or charges, liability, property-right arrangements, technology, and collective governance. Measurement, power, enforcement, distribution, and irreversible harm limit simple pricing solutions."
+      ],
+      "explanationParagraphsZh": [
+        "负外部性发生于某项活动把成本施加给第三方，而这些成本没有充分进入活动制造者面对的价格或决定。此时私人边际成本低于社会边际成本，可能导致有害活动过量。",
+        "应对方式包括监管、税费、责任制度、产权安排、技术和集体治理。测量、权力、执行、分配与不可逆伤害会限制简单定价方案。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0312-collective-action-problem",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0312",
+      "fieldTitle": "Political sciences and civics",
+      "fieldTitleZh": "政治科学与公民学",
+      "title": "The Last Gap in the Sea Wall",
+      "titleZh": "海堤最后一段",
+      "summary": "Every harbour household values the final section of sea wall and still finds a private reason to wait for someone else to build it.",
+      "summaryZh": "港镇每户人家都重视海堤最后一段，却也都找到私人理由等待别人动工。",
+      "storyParagraphs": [
+        "Eleven neighbourhoods protected Teren harbour with stone walls. Ten sections stood beside streets whose residents could see exactly which homes they guarded. The last gap faced the common market and, if left open, allowed a high tide to travel behind every wall. All households benefited from closing it, but no one neighbourhood gained enough alone to justify paying the full cost.",
+        "At the town meeting, each family promised support after others began. Their reasoning was awkwardly sensible. If few contributed, one household's stones would not complete the wall and its money would be wasted. If enough others contributed, the wall would be completed without that household's payment. Each household preferred a completed wall to an incomplete one, yet preferred a completed wall paid for by others to either. Whether the others failed or succeeded, waiting seemed privately attractive. The pledge list remained blank beneath unanimous agreement that the work mattered.",
+        "The mayor appealed to civic virtue. Several families donated, then withdrew when rumours spread that wealthy merchants were holding back. A public honour board produced decorative contributions too small for foundations. Repeated meetings without assurance made early generosity look naive, weakening the norm the mayor hoped to invoke. The obstacle was not simply selfish character. People doubted that a sufficient group would act, could not verify hidden promises, and feared becoming the few who paid for a benefit available even to those who refused.",
+        "A moderate storm entered through the gap and flooded storage rooms behind sections already complete. Afterwards, anger briefly filled the treasury, but the mayor knew memory would fade before yearly maintenance. Teren created a conditional commitment: contributions would be collected only after a published threshold guaranteed completion. Threshold design turned uncertainty about others into a condition everyone could observe before collective funds changed hands. Neighbourhoods elected inspectors, merchants matched early payments, and a general levy covered the shared remainder.",
+        "The new arrangement did not rely on perfect altruism. It changed expectations, made contributions observable, spread costs, and connected payment to a credible shared result. Exemptions protected families unable to pay, while work hours could substitute for coin. Arguments continued over fairness and enforcement, yet the town no longer asked each household to solve a public problem through private sacrifice in isolation.",
+        "Teren had faced a collective action problem: a situation in which people share an interest in a collective good but individual incentives, uncertainty, or strategic waiting prevent sufficient coordinated contribution. Public or common benefits can invite free riding because contributors cannot easily exclude non-contributors. Communication, trust, norms, monitoring, selective incentives, conditional commitments, and governing institutions can change the outcome. The last gap was everyone's problem, which was precisely why it had belonged to no one."
+      ],
+      "storyParagraphsZh": [
+        "特伦港十一个街区依靠石墙防海。十段墙立在居民能够清楚看见所保护房屋的街旁，最后一道缺口却面向公共市场；若不封闭，高潮会从后方绕过每段已建海堤。所有家庭都从补缺受益，没有一个街区单独得到足够收益，愿意独自承担全部费用。",
+        "镇民会上，每户都承诺等别人开始后再支持。推理尴尬地合理：若贡献者很少，自家石料不足以完成海堤，钱会浪费；若别人已经足够，海堤无需自家付款也会完成。每户都更喜欢完整海堤而非残缺海堤，也更喜欢由别人付款的完整海堤。无论他人失败还是成功，等待在私人层面都很诱人。大家一致同意工程重要，认捐表却保持空白。",
+        "镇长呼吁公民美德。几户捐款，听说富商仍在观望后又撤回。荣誉榜只换来不足以打地基的装饰性贡献。没有保证的反复会议甚至让早期慷慨显得天真，削弱镇长想唤起的规范。障碍不只是自私品格。人们怀疑是否有足够成员行动，无法验证隐藏承诺，也害怕自己成为少数付款者，让拒绝者同样享受收益。",
+        "一场中等风暴从缺口涌入，淹没已完成墙段后方的仓库。愤怒短暂填满金库，镇长却知道记忆会在年度维护前消退。特伦建立有条件承诺：只有公开认捐达到足以保证完工的门槛，款项才实际收取。门槛设计把对他人的不确定变成所有人都能在集体资金转手前观察的条件。街区选出检查员，商人配捐早期款项，普遍征费承担共享余款。",
+        "新制度不依赖完美利他，而是改变期待，让贡献可观察、成本可分担，并把付款与可信共同结果连接。无力缴费家庭获得豁免，也可用工时替代钱币。关于公平和执行的争论仍在，小镇却不再要求每户孤立地用私人牺牲解决公共问题。",
+        "特伦面对的是集体行动困境：人们共享一种集体利益，个体激励、不确定或策略性等待却阻止足够协调贡献。公共或共同收益难以排除未贡献者，因此可能诱发搭便车。沟通、信任、规范、监督、选择性激励、有条件承诺和治理制度都可改变结果。最后一道缺口属于所有人的问题，这恰恰使它长期不属于任何人。"
+      ],
+      "conceptName": "Collective action problem",
+      "conceptNameZh": "集体行动困境",
+      "explanationParagraphs": [
+        "A collective action problem arises when people would benefit from a shared outcome but individual incentives, uncertainty, coordination costs, or opportunities to free ride prevent enough contribution. The pattern is common with public goods and common-pool resources.",
+        "Solutions can alter information, trust, monitoring, contribution rules, incentives, exclusion, or authority. Their fairness and enforceability matter; invoking cooperation alone does not remove the strategic structure."
+      ],
+      "explanationParagraphsZh": [
+        "集体行动困境发生于人们都能从共同结果受益，个体激励、不确定性、协调成本或搭便车机会却阻止足够贡献的情形。它常见于公共物品和公共池资源。",
+        "应对方式可以改变信息、信任、监督、贡献规则、激励、排除机制或权威安排。公平与可执行性同样重要，单纯呼吁合作不会消除策略结构。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0312-separation-of-powers",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0312",
+      "fieldTitle": "Political sciences and civics",
+      "fieldTitleZh": "政治科学与公民学",
+      "title": "The Granary With Three Keys",
+      "titleZh": "三把钥匙的粮仓",
+      "summary": "A city takes the granary from one swift keeper, gives its locks to three offices, and discovers that restraint must still be designed to act.",
+      "summaryZh": "一座城市把粮仓从一名高效管事手中收回，将锁交给三个机构，随后发现制约仍必须被设计成能够行动。",
+      "storyParagraphs": [
+        "For years, Keeper Daro controlled the civic granary. He decided when scarcity existed, chose who received grain, opened the door, and judged complaints about his own decisions. During the first famine, he acted within an hour and prevented panic. Later, he delayed a district that had opposed his brother, released grain to allies, and declared every appeal unfounded. The same concentration that enabled speed also protected abuse.",
+        "The city replaced his single key with three. The assembly held one and authorised release by public rule. The steward held another and managed stores. The tribunal held the third and heard challenges. No door could open unless all three turned. Each office could prevent release, but none had a clearly bounded power to initiate ordinary action without converting every decision into a veto contest. Citizens praised the arrangement until a flash flood isolated the northern district while the assembly was away and a tribunal clerk disputed the wording of an emergency order.",
+        "For two days, grain remained behind a perfectly restrained door. Critics said the city had exchanged tyranny for paralysis. Reformers answered that merely dividing keys had confused functions with unanimous permission. Review after execution sometimes constrained abuse more effectively than requiring advance consent for each sack. They redesigned the system: the assembly established general eligibility and budgets, the steward executed releases within those limits, and the tribunal reviewed legality without administering sacks itself. Each branch gained both a distinct role and means to check encroachment.",
+        "Emergency authority remained difficult. The steward could now open a limited reserve when specified indicators were met, but had to publish reasons immediately. The authority expired after forty-eight hours unless the assembly renewed it, and the tribunal could review misuse afterward. Speed came from a pre-authorised procedure, not from pretending that emergencies made accountability unnecessary.",
+        "Another danger appeared when leaders of all three offices belonged to one merchant family and coordinated informally. Separate locks meant little if appointments, information, money, and careers collapsed into one network. The city staggered terms, protected institutional budgets, required public records, and barred certain overlapping interests. It also protected professional staff who could refuse unlawful instructions without losing their livelihood to any one branch. Independence needed practical resources and norms, not only labels painted on doors.",
+        "The granary embodied separation of powers: allocating governing functions among distinct institutions so no single authority makes, executes, and judges the rules without constraint. Separation usually works through checks, balances, differentiated roles, and partial interdependence rather than complete isolation. It can limit arbitrary rule but also create delay, deadlock, or hidden collusion. Three keys protected the grain only when their holders could disagree, cooperate under rules, and remain answerable for both action and refusal."
+      ],
+      "storyParagraphsZh": [
+        "多年来，达罗管事独自控制公共粮仓。他判断何时构成短缺，选择谁能领粮，亲自开门，也裁决针对自己决定的申诉。第一次饥荒时，他一小时内行动，阻止恐慌。后来，他拖延一个反对过其兄长的街区，向盟友放粮，再宣布所有上诉都无根据。使速度成为可能的权力集中，也保护了滥用。",
+        "城市用三把钥匙替代单钥匙。议会持一把，按公开规则授权放粮；粮仓管事持一把，管理储备；裁判机构持第三把，受理挑战。三把钥匙不同时转动，门就不开。每个机构都能阻止放粮，却没有一个拥有边界清楚的日常启动权，结果每项决定都变成否决竞赛。市民赞美安排，直到突发洪水隔断北区，议会又在外地，裁判书记还对紧急命令措辞提出异议。",
+        "两天里，粮食留在一扇受到完美制约的门后。批评者说城市用暴政换来瘫痪。改革者回应，简单分钥匙把职能区分误成全体一致许可。事后审查有时比要求每袋粮都事先获得同意，更能约束滥用。他们重新设计：议会制定一般资格与预算，管事在界限内执行发放，裁判机构审查合法性，却不亲自管理粮袋。每个机构既有不同角色，也有制止越权的手段。",
+        "紧急权力仍然棘手。特定指标满足时，管事可开启有限储备，却必须立即公开理由。权力四十八小时后自动失效，除非议会续期；裁判机构还可事后审查滥用。速度来自预先授权程序，而不是假装紧急状态使问责不再必要。",
+        "另一种危险出现了：三个机构领导都来自同一商人家族，私下协调。若任命、信息、金钱和职业都归入同一网络，分开的锁几乎没有意义。城市错开任期，保护机构预算，要求公开记录，并禁止部分利益重叠；还保护专业人员，使他们拒绝非法命令时不会失去在任何单一机构手中的生计。独立需要实际资源与规范，而不只是门上的标签。",
+        "粮仓体现的是权力分立：把治理职能配置给不同机构，防止单一权威不受约束地同时制定、执行和裁判规则。分立通常依靠制衡、角色区分和部分相互依赖，而非完全隔绝。它能限制任意统治，也可能制造延迟、僵局或隐藏合谋。三把钥匙只有在持有人能够分歧、按规则合作，并为行动与拒绝同时负责时，才真正保护粮食。"
+      ],
+      "conceptName": "Separation of powers",
+      "conceptNameZh": "权力分立",
+      "explanationParagraphs": [
+        "Separation of powers distributes legislative, executive, judicial, or comparable governing functions among distinct institutions. Checks and balances give institutions ways to constrain, review, or depend on one another so authority cannot be concentrated without resistance.",
+        "Effective separation requires practical independence, information, resources, and accountable procedures. Complete isolation is neither typical nor desirable, while poor design can produce deadlock, delay, or coordinated capture across formally separate bodies."
+      ],
+      "explanationParagraphsZh": [
+        "权力分立把立法、行政、司法或可比治理职能配置给不同机构。制衡安排让机构能够互相约束、审查或依赖，使权力集中受到抵抗。",
+        "有效分立需要实际独立、信息、资源和可问责程序。完全隔绝既不典型，也未必可取；设计不良还会制造僵局、延迟，或形式分立机构之间的协同俘获。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0312-political-legitimacy",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0312",
+      "fieldTitle": "Political sciences and civics",
+      "fieldTitleZh": "政治科学与公民学",
+      "title": "The Same Two Coins",
+      "titleZh": "同样的两枚钱",
+      "summary": "A harbour tax raises the same amount under two governments, yet only one can give citizens reasons they might owe obedience.",
+      "summaryZh": "同一项港税在两届政府下筹得相同金额，只有一届能向公民说明为何可能有服从义务。",
+      "storyParagraphs": [
+        "Governor Rask imposed a two-coin harbour tax to rebuild the lighthouse. His decree was legal under the charter, the light was useful, and collectors were efficient. Fishers nevertheless hid catches, merchants bribed inspectors, and families treated payment as surrender to superior force. Rask pointed to the working lighthouse and concluded that effective government had proved its right to command.",
+        "After Rask left office, an elected council proposed the same two coins. It published repair accounts, heard objections in each district, explained why ordinary fees could not cover the work, and allowed representatives to amend collection dates. Compliance increased even before enforcement changed. Citizens who disliked the tax could recognise a procedure in which they had standing and reasons addressed to them rather than an order issued over them.",
+        "The council declared the tax legitimate because a majority had approved it. Island fishers then showed that the flat charge consumed a large share of their seasonal income while wealthy exporters paid the same two coins. They had attended meetings but lacked boats during the scheduled vote. A fair procedure could not be reduced to counting whoever managed to appear, nor could majority support alone justify every burden placed on a minority.",
+        "Debate reopened. The council scaled charges by cargo, protected subsistence landings, created an appeal, and published who benefited from contracts. Some citizens still opposed the lighthouse plan. Their disagreement did not automatically destroy authority, just as widespread obedience would not automatically create it. The question was whether institutions could offer publicly defensible reasons, respect basic claims, and remain revisable under challenge. Those reasons also had to remain available after the vote, when officials interpreted rules and citizens challenged particular decisions.",
+        "A storm later damaged the light again. This time, payments arrived quickly enough for repair. Rask argued that compliance proved people now agreed with the tax. Council member Sela corrected him: people may obey from habit, fear, interest, trust, or judgement, and legitimacy is not identical to any one attitude. An authority may be widely believed legitimate yet unjustified, or justified by a theory that citizens do not in fact accept. Yet institutions perceived as justified often gain more durable cooperation because coercion no longer carries the whole load.",
+        "The two coins revealed political legitimacy: the justified right of an authority to rule and issue binding decisions, along with the question of why citizens may owe it compliance. Legality, effectiveness, consent, fair procedure, justice, rights, and public justification can all contribute, and political theories weigh them differently. Legitimacy is not mere popularity or raw acceptance. The tax became more than an extraction when those governed could ask for reasons and the government had to answer in terms they could contest."
+      ],
+      "storyParagraphsZh": [
+        "拉斯克总督强征两枚钱的港税来重建灯塔。根据宪章，命令合法；灯塔有用，收税也有效率。渔民仍隐藏渔获，商人贿赂检查员，家庭把付款视为向强力屈服。拉斯克指着正常运转的灯塔，断言有效政府已经证明自己拥有命令权。",
+        "拉斯克离任后，民选议会提出同样两枚钱。它公开维修账目，在各区听取反对，说明普通费用为何不足，还允许代表修改征收日期。即使执行方式未变，缴纳率已经提高。不喜欢税项的公民仍能看见一种让自己拥有地位、向自己提出理由的程序，而不是从头顶压下的命令。",
+        "议会因多数通过而宣布税项正当。岛上渔民却指出，固定费用占其季节收入很大比例，富有出口商也只付两枚钱。他们参加了会议，却在投票日没有船可返回。公平程序不能缩减成计算谁恰好到场，多数支持也不能单独证明施加给少数群体的每种负担。",
+        "讨论重新开启。议会按货量调整税费，保护维生捕捞，设置申诉，并公开合同受益者。仍有人反对灯塔计划。分歧不会自动摧毁权威，正如广泛服从也不会自动创造它。问题在于制度能否提供公开可辩护的理由，尊重基本主张，并在挑战下保持可修订。这些理由在投票结束后仍须持续可用，尤其当官员解释规则、公民挑战具体决定时。",
+        "后来风暴再次损坏灯塔，这次款项及时抵达。拉斯克说缴纳证明人们终于同意税项。议员塞拉纠正他：人们可能因习惯、恐惧、利益、信任或判断而服从，合法性并不等同任何一种态度。一个权威可能被广泛相信具有正当性，实际却缺乏正当理由；也可能在某套理论下有正当性，公民事实上却不接受。不过，被认为有正当性的制度往往得到更持久合作，因为强制不再承担全部重量。",
+        "两枚钱揭示的是政治合法性：权威拥有统治和发布有约束力决定的正当权利，以及公民为何可能对其负有服从义务的问题。法律、效能、同意、公平程序、正义、权利与公共论证都可能贡献，不同政治理论赋予它们不同分量。合法性不是单纯受欢迎或实际接受。当被治理者能够索取理由，政府也必须以可被争论的方式回答，税收才不只是一项抽取。"
+      ],
+      "conceptName": "Political legitimacy",
+      "conceptNameZh": "政治合法性",
+      "explanationParagraphs": [
+        "Political legitimacy concerns an authority's justified right to govern and make binding decisions, and the grounds on which people may have duties to comply. Proposed grounds include consent, fair procedures, public justification, justice, rights protection, legality, and effective provision of common goods.",
+        "Normative legitimacy asks whether authority is justified; sociological legitimacy asks whether people believe it to be rightful. These questions overlap without becoming identical and may point in opposite directions. Legitimacy is also distinct from mere power, legal validity, or popularity. Different theories disagree about its sources, thresholds, and whether legitimacy is held by institutions, decisions, or entire political orders."
+      ],
+      "explanationParagraphsZh": [
+        "政治合法性关注权威拥有治理和作出有约束力决定的正当权利，以及人们可能基于什么负有服从义务。可能根据包括同意、公平程序、公共论证、正义、权利保护、法律与共同物品的有效提供。",
+        "规范性合法性追问权威是否有正当理由，社会学合法性则追问人们是否相信它正当。两者相互重叠，却并不相同，也可能指向相反方向。合法性还不同于单纯权力、法律有效或受欢迎。不同理论对其来源、门槛，以及合法性属于机构、决定还是整体政治秩序仍有分歧。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0313-cognitive-dissonance",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0313",
+      "fieldTitle": "Psychology",
+      "fieldTitleZh": "心理学",
+      "title": "The Bridge That Improved in the Records",
+      "titleZh": "只在记录里变好的桥",
+      "summary": "After his bridge fails, a celebrated designer repairs the story of its construction each time new evidence threatens the person he believes himself to be.",
+      "summaryZh": "桥梁失败后，一名著名设计师每遇到威胁自我形象的新证据，就重新修补一次建造故事。",
+      "storyParagraphs": [
+        "Engineer Oran built his reputation on careful measurement. He often said that careless designers blamed weather for errors already present in their drawings. When his new bridge twisted during an ordinary autumn wind and dropped an empty wagon into the river, nobody died, but Oran faced two statements he could not comfortably hold together: I am unusually rigorous, and my design may have failed through preventable neglect.",
+        "He first called the wind unprecedented. A clerk found stronger gusts in the previous year's record. Oran then said builders must have substituted weak bolts. Purchase receipts showed the specified bolts had been used. Each explanation removed pressure briefly, then evidence restored it. Because each rejected explanation had protected his identity for a day, abandoning it felt like losing more than a technical argument. Admitting the design fault would alter his judgement of the bridge and of the identity around which his career had been organised.",
+        "Oran began revising the project archive. He changed a warning from junior engineer Lio into a minor question, described a cancelled load test as redundant, and added a note suggesting the council had forced an early opening. None of the edits repaired steel. They made the past more compatible with the belief that a rigorous person could not have overlooked the joint. Publicly defending the account made retreat increasingly costly under scrutiny.",
+        "Lio had kept dated copies. At the inquiry, she placed Oran's versions in order beside wind measurements and stress calculations. The room saw not one lie invented at once but a sequence of small reductions in conflict: blame the storm, minimise the warning, reinterpret the test, enlarge political pressure. The sequence recruited colleagues who had defended earlier versions and now shared an interest in preserving them in public. Oran's self-protection had converted discomfort into a new record and then used that record as evidence for further self-protection.",
+        "He could still reduce the conflict in another way. Oran withdrew his account, accepted responsibility for omitting the test, and revised what professional rigour required: not never being wrong, but creating procedures that allow error to be discovered before loyalty and reputation bury it. The rebuilt bridge used independent review, preserved dissenting notes, and tested the vulnerable joint. His self-concept changed enough to permit his behaviour and evidence to change with it.",
+        "Oran's revisions illustrate cognitive dissonance: aversive tension arising from inconsistency among relevant beliefs, commitments, actions, or evidence, which motivates efforts to reduce that inconsistency. People may change behaviour or belief, seek supporting information, rationalise, deny, add justifications, or trivialise the conflict. Dissonance is not every unpleasant feeling and does not always produce deception. The bridge improved only when Oran stopped repairing coherence solely inside the record."
+      ],
+      "storyParagraphsZh": [
+        "工程师奥兰以精确测量建立名声。他常说，粗心设计者才会把图纸里的错误归咎天气。新桥却在普通秋风中扭转，让一辆空车落入河中。无人死亡，奥兰却面对两句话，无法舒服地同时保留：我是异常严谨的人；我的设计可能因可避免疏忽而失败。",
+        "他先称风前所未有。书记找到上一年更强阵风记录。奥兰改说施工者换了脆弱螺栓，采购凭证却证明使用的是指定型号。每种解释短暂卸压，证据又把压力送回。每项后来被否定的解释都曾保护他一天，放弃它便像失去的不只是一场技术争论。承认设计错误，不只会改变他对桥的判断，也会改变整个职业围绕的自我身份。",
+        "奥兰开始修改项目档案。他把年轻工程师莉奥的警告改写成小问题，把取消的承重试验称为多余，又补一条注释，暗示议会强迫提前开放。没有一处修改修复钢材，却使过去更符合“严谨的人不可能漏掉接头”这一信念。在公开审视下捍卫新版本以后，后退成本越来越高。",
+        "莉奥保留了带日期的副本。听证会上，她把奥兰历次版本与风速、应力计算按顺序并排。人们看见的不是一次制造的谎言，而是一连串缩小冲突的小动作：责怪风暴、弱化警告、重释试验、放大政治压力。这套序列还拉入曾公开捍卫早期版本的同事，使他们也有利益继续保存。自我保护把不适变成新记录，又把新记录用作下一轮自我保护证据。",
+        "他仍可用另一种方式减少冲突。奥兰撤回陈述，承认取消测试的责任，并重新定义专业严谨：不是永不犯错，而是建立程序，让错误在忠诚与名声掩埋前被发现。重建桥梁采用独立复核，保留反对意见，也测试薄弱接头。他的自我概念改变到足以允许行为与证据随之改变。",
+        "奥兰的修改说明认知失调：相关信念、承诺、行动或证据不一致时产生的厌恶性张力，会推动人减少不一致。人可能改变行为或信念、寻找支持信息、合理化、否认、增加理由或淡化冲突。认知失调不是每种不愉快，也不必然导致欺骗。只有奥兰停止单独在记录里修理融贯，桥梁才真正改善。"
+      ],
+      "conceptName": "Cognitive dissonance",
+      "conceptNameZh": "认知失调",
+      "explanationParagraphs": [
+        "Cognitive dissonance is an aversive motivational state produced by inconsistency among psychologically relevant cognitions, commitments, actions, or evidence. Its strength depends on the importance and relation of the conflicting elements.",
+        "People can reduce dissonance by changing behaviour or belief, adding consonant reasons, seeking selective information, denying responsibility, or trivialising the inconsistency. The process is not identical to hypocrisy, ordinary uncertainty, or any form of discomfort."
+      ],
+      "explanationParagraphsZh": [
+        "认知失调是心理上相关的认知、承诺、行动或证据彼此不一致时产生的厌恶性动机状态，其强度取决于冲突元素的重要性与关系。",
+        "人可以通过改变行为或信念、增加一致理由、选择性寻找信息、否认责任或淡化冲突来降低失调。这个过程不等同于虚伪、普通不确定，也不等同于任何形式的不适。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0313-operant-conditioning",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0313",
+      "fieldTitle": "Psychology",
+      "fieldTitleZh": "心理学",
+      "title": "The Pigeon That Bowed to the Bell",
+      "titleZh": "向铃声鞠躬的鸽子",
+      "summary": "A loft keeper rewards birds after they enter their perches and accidentally strengthens a bow that has nothing to do with the task.",
+      "summaryZh": "鸽舍管理员在鸽子进入栖架后给予奖励，却意外强化了一个与任务无关的鞠躬动作。",
+      "storyParagraphs": [
+        "Keeper Miro needed twelve messenger pigeons to enter numbered perches before dusk. He rang a bell, waited until the flock was inside, and scattered grain. One bird happened to dip its head twice just before the first reward. On the next trial, the bird bowed again. Grain followed. Within days, it performed an elaborate sequence of bows whenever the bell sounded, while still entering its perch late.",
+        "Miro called the bird superstitious, but his own timing had selected the pattern. The consequence repeatedly followed the bow closely enough to increase it, even though the movement did not cause the grain. Had grain arrived before the bow, or equally often without it, the relation would have selected the action differently or not at all. Other pigeons acquired turns, wing flicks, and pecks according to whatever they happened to be doing before reward. The bell signalled that reinforcement might be available; the behaviour was shaped by what followed actions in its presence.",
+        "Miro changed the contingency. Grain arrived immediately when a pigeon entered the correct perch and not after unrelated movements. For birds that never approached, he reinforced successive steps: facing the perch, moving closer, touching its edge, then entering. The target behaviour increased because consequences were contingent and timely, not because Miro explained the rule or the birds understood his intention.",
+        "The bowing pigeon first intensified its performance when grain stopped following bows. It dipped faster, varied the sequence, and only gradually abandoned it. Miro nearly rewarded the burst out of pity, which would have taught the bird that persistence eventually restored grain. His temptation showed why intermittent accidental reinforcement can make unwanted patterns unusually persistent. He waited and reinforced the next correct perch entry. Behaviour weakened when the maintaining consequence no longer followed it, though old patterns sometimes returned after a pause.",
+        "A variable reward schedule made perch entry durable, but also harder to extinguish. Miro used it carefully after the behaviour was established. He avoided punishing late birds, because startling them suppressed approach and produced fear near the loft without teaching the desired route. The function of a consequence had to be observed in behaviour, not assigned from the keeper's intention. Removing an unpleasant obstacle could also reinforce behaviour; adding and removing were separate from whether a consequence increased or decreased future responding.",
+        "Miro was observing operant conditioning: changes in the future probability of behaviour as a function of its consequences and the conditions signalling those consequences. Reinforcement increases behaviour, while punishment decreases it; positive and negative refer to adding or removing a stimulus, not good and bad. Timing, contingency, shaping, schedules, extinction, and context all matter. The pigeon bowed because consequences had edited its behaviour more precisely than the keeper's purpose had."
+      ],
+      "storyParagraphsZh": [
+        "管理员米罗需要十二只信鸽在黄昏前进入编号栖架。他敲铃，等整群进入，再撒谷粒。第一轮奖励前，一只鸽子恰好低头两次；下一轮它又鞠躬，谷粒随后出现。几天内，只要铃响，它就表演一整套鞠躬，却仍然很晚才进入栖架。",
+        "米罗称鸽子迷信，实际是自己的时机选择了模式。后果反复紧跟鞠躬，足以提高动作频率，即使它并未造成谷粒。如果谷粒出现在鞠躬前，或不鞠躬时也同样常见，这种关系就会以不同方式选择动作，甚至根本不会选择。其他鸽子也按照奖励前恰好在做的事，学会转圈、抖翅和啄地。铃声提示强化机会可能出现；真正塑造行为的是在铃声条件下，行动之后发生了什么。",
+        "米罗改变后果关系。鸽子一进入正确栖架，谷粒立即出现，与任务无关的动作后则不提供。对从不靠近的鸟，他依次强化连续步骤：面向栖架、移近、碰到边缘，最后进入。目标行为增加，是因为后果及时且取决于行动，不是因为米罗解释了规则，或鸽子理解他的意图。",
+        "鞠躬不再换来谷粒后，那只鸽子起初表演得更猛烈：低头更快，变化更多，随后才逐渐放弃。米罗差点因同情奖励这轮爆发，那会教它坚持最终可以恢复谷粒。他的冲动说明，偶尔发生的意外强化会让无关模式异常持久。他等待并强化下一次正确入架。维持后果不再跟随，行为便减弱，旧模式有时仍会在停顿后短暂返回。",
+        "变动奖励安排让入架行为更持久，也更难消退，米罗只在行为建立后谨慎使用。他不惩罚迟到鸽子，因为惊吓会压制靠近，在鸽舍旁制造恐惧，却不教正确路线。后果的功能必须从行为变化中观察，不能只由管理员意图指定。移除不愉快障碍同样可能强化行为；增加或移除刺激，与后果提高还是降低未来反应是两套不同区分。",
+        "米罗观察的是操作性条件作用：行为未来出现概率会随其后果及提示这些后果的条件而改变。强化提高行为，惩罚降低行为；正与负指增加或移除刺激，不等于好与坏。时机、后果关联、塑造、安排、消退与情境都很重要。鸽子鞠躬，是因为后果编辑行为，比管理员的目的更精确。"
+      ],
+      "conceptName": "Operant conditioning",
+      "conceptNameZh": "操作性条件作用",
+      "explanationParagraphs": [
+        "Operant conditioning describes how behaviour changes as a function of its consequences. Reinforcement increases future behaviour and punishment decreases it; positive and negative specify whether a stimulus is added or removed.",
+        "Learning depends on contingency, timing, context, motivating conditions, shaping, reinforcement schedules, and extinction. A cue may signal when consequences are available, but consequences contingent on action distinguish operant learning from merely pairing two stimuli."
+      ],
+      "explanationParagraphsZh": [
+        "操作性条件作用描述行为怎样随其后果改变。强化提高行为未来出现概率，惩罚降低它；正与负只说明刺激被增加还是移除。",
+        "学习取决于后果关联、时机、情境、动机条件、塑造、强化安排与消退。线索可以提示何时有后果可得，但后果取决于行动，才把操作性学习与单纯配对两个刺激区分开。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0313-fundamental-attribution-error",
+      "batchId": "batch-004",
+      "categoryCode": "03",
+      "fieldCode": "0313",
+      "fieldTitle": "Psychology",
+      "fieldTitleZh": "心理学",
+      "title": "The Lazy Man at the Lowered Bridge",
+      "titleZh": "落闸桥边的懒人",
+      "summary": "A merchant explains one driver's repeated lateness as character until he travels the same route under the same closing bridge.",
+      "summaryZh": "商人把一名车夫反复迟到归为品格问题，直到自己在同一座落闸桥下走过同一条路线。",
+      "storyParagraphs": [
+        "Merchant Varo hired driver Toma to bring vegetables from the northern farms. Toma arrived late three mornings in a row. Varo saw him step down calmly and concluded that the man lacked urgency. He began describing Toma as lazy before checking departure records, route conditions, or other drivers. The label guided attention: Varo remembered each calm arrival and stopped asking whether haste could be invisible before the driver reached him. A visible person supplied an easy cause; the less visible situation remained outside the story.",
+        "The northern route crossed a lifting bridge that closed for cargo boats at an irregular time announced only after dawn. Farm loading also depended on an inspector who served five villages. Toma left early but could wait at either point. He had mentioned the bridge once, and Varo treated it as an excuse because punctual workers, in his view, overcame obstacles rather than explaining them.",
+        "When Toma fell ill, Varo drove the route himself. The inspector arrived late, a cart axle blocked the narrow lane, and the bridge lifted just as Varo approached. He reached market after noon and gave a detailed account of each circumstance. The contrast was immediate: another person's lateness revealed character, while his own lateness revealed the world. Access to his intentions and effort made situational causes easier to see from inside.",
+        "Varo then swung too far and declared Toma blameless on every day. The records showed one morning when Toma had departed late after gambling. One dispositional episode did not validate the earlier global label, just as one difficult route did not erase every difference among drivers. Situations constrain behaviour without erasing choice, and dispositions can matter. The error was not ever inferring a trait; it was overweighting a personal explanation while underexamining powerful circumstances, especially from a small and selective sample.",
+        "Varo compared several drivers across days. Everyone was delayed when the bridge lifted; differences remained on mornings when it stayed down. Prediction improved when causes were carefully separated and tested repeatedly. He arranged earlier loading notices and a shared alert from the harbour, then assessed departures separately from arrival times. Toma improved but was still late once by his own decision. A better explanation distributed causal weight rather than replacing one total story with its opposite.",
+        "Varo had encountered the fundamental attribution error: the tendency, when explaining others' behaviour, to overemphasise dispositional causes and underweight situational influences. The effect varies with information, attention, culture, motivation, and context, and it does not prove that traits are unreal. It warns that people are perceptually prominent while constraints are often backgrounded. Toma stood in the market where Varo could judge him; the raised bridge remained miles away and out of sight."
+      ],
+      "storyParagraphsZh": [
+        "商人瓦罗雇车夫托马从北部农场运菜。托马连续三个早晨迟到。瓦罗看见他平静下车，便断定这人缺少紧迫感。还没检查出发记录、路线条件或其他车夫，他已经开始称托马懒惰。标签随即引导注意：瓦罗记住每次平静抵达，不再追问车夫来到面前以前，那些匆忙是否可能不可见。一个可见的人提供了容易的原因，不那么可见的情境则留在故事之外。",
+        "北路要经过一座升降桥，货船通过时会临时落闸，时间要到黎明后才通知。农场装货还依赖一名服务五个村庄的检查员。托马出发很早，仍可能在任一地点等待。他提过一次桥，瓦罗却把它当借口，因为在他看来，守时的人会克服障碍，而不是解释障碍。",
+        "托马生病后，瓦罗亲自驾车。检查员迟到，窄道又被断轴马车堵住；瓦罗刚接近，桥正好升起。他午后才抵达市场，并详细说明每项处境。对比非常直接：别人的迟到揭示品格，自己的迟到揭示世界。从内部掌握自身意图和努力，使情境原因更容易被看见。",
+        "瓦罗随后又走得太远，宣布托马每天都毫无责任。记录却显示有一天，托马赌博后很晚出发。一次特质性事件不能证明原先全局标签正确，正如一条困难路线也不能擦除车夫间全部差异。情境约束行为，不等于擦除选择；性情也可能重要。错误不在于永远不能推断特质，而在于过度赋予个人解释权重，同时没有检查强大处境，尤其只依据一个小而有选择的样本。",
+        "瓦罗比较多名车夫在不同日期的表现。桥升起时所有人都延误，桥保持通行的早晨仍有个人差异。仔细把原因分开并反复检验以后，预测才改善。他安排更早装货通知和港口共享提醒，把出发时间与抵达时间分开评价。托马改善了，也仍有一次因自己决定迟到。更好的解释是分配因果重量，不是用另一套总体故事替换原来那套。",
+        "瓦罗遇到的是基本归因错误：解释他人行为时，倾向过分强调个人特质原因，低估情境影响。这个效应会随信息、注意、文化、动机和语境变化，也不证明特质不存在。它提醒我们，人通常在知觉上突出，约束却常退到背景。托马站在市场里接受判断，那座升起的桥则远在几英里外，不可见。"
+      ],
+      "conceptName": "Fundamental attribution error",
+      "conceptNameZh": "基本归因错误",
+      "explanationParagraphs": [
+        "The fundamental attribution error is the tendency to give disproportionate weight to dispositional explanations and insufficient weight to situational influences when interpreting other people's behaviour. Salient actors and less visible contexts can encourage the bias.",
+        "It does not mean dispositions never matter, and its size varies across cultures, information conditions, goals, and studies. Better attribution compares people and situations across occasions and considers what evidence would distinguish competing explanations."
+      ],
+      "explanationParagraphsZh": [
+        "基本归因错误是解释他人行为时，给予特质性原因过多权重、给予情境影响不足权重的倾向。突出的行动者与不易看见的背景会推动这种偏差。",
+        "它不表示特质从不重要，效应大小也会随文化、信息条件、目标和研究变化。更好的归因会跨情境与时间比较，并思考什么证据能够区分竞争解释。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

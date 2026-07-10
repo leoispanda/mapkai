@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-09",
+  "targetFields": 80,
+  "topicsPerField": 3,
+  "targetBilingualArticles": 240,
+  "plannedTopics": 240,
+  "draftedZh": 240,
+  "translatedEn": 240,
+  "approved": 240,
+  "integrated": 240,
+  "currentBatch": null,
+  "nextStoryId": null,
+  "batches": [
+    { "id": "batch-001", "fieldCodes": ["0011", "0021", "0031", "0111", "0112"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-002", "fieldCodes": ["0113", "0114", "0211", "0212", "0213"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-003", "fieldCodes": ["0214", "0215", "0221", "0222", "0223"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-004", "fieldCodes": ["0231", "0232", "0311", "0312", "0313"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-005", "fieldCodes": ["0314", "0321", "0322", "0411", "0412"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-006", "fieldCodes": ["0413", "0414", "0415", "0416", "0417"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-007", "fieldCodes": ["0421", "0511", "0512", "0521", "0522"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-008", "fieldCodes": ["0531", "0532", "0533", "0541", "0542"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-009", "fieldCodes": ["0611", "0612", "0613", "0711", "0712"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-010", "fieldCodes": ["0713", "0714", "0715", "0716", "0721"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-011", "fieldCodes": ["0722", "0723", "0724", "0731", "0732"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-012", "fieldCodes": ["0811", "0812", "0821", "0831", "0841"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-013", "fieldCodes": ["0911", "0912", "0913", "0914", "0915"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-014", "fieldCodes": ["0916", "0917", "0921", "0922", "0923"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-015", "fieldCodes": ["1011", "1012", "1013", "1014", "1015"], "status": "complete", "approved": 15, "integrated": 15 },
+    { "id": "batch-016", "fieldCodes": ["1021", "1022", "1031", "1032", "1041"], "status": "complete", "approved": 15, "integrated": 15 }
+  ]
+}

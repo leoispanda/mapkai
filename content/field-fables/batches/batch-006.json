@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-006",
+  "articles": [
+    {
+      "id": "0413-principal-agent-problem",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0413",
+      "fieldTitle": "Management and administration",
+      "fieldTitleZh": "管理与行政",
+      "title": "The Mine That Filled the Road",
+      "titleZh": "把道路填满的矿井",
+      "summary": "A distant mine owner pays a superintendent for cart count and receives a crowded road, exhausted workers, and less valuable ore.",
+      "summaryZh": "远方矿主按矿车数量奖励主管，最后得到拥挤道路、疲惫工人和价值更低的矿石。",
+      "storyParagraphs": [
+        "Owner Varen could visit his mountain mine only twice a year. Superintendent Ero knew the tunnels, chose crews, and reported output. Varen wanted valuable ore extracted safely and the mine preserved. Unable to observe daily work, he promised Ero a bonus for every cart reaching the valley. Cart totals rose immediately. From the capital, the crowded road looked like proof that delegation and incentive had finally aligned.",
+        "At the smelter, yields fell. Ero had sent half-filled carts, mixed poor stone with rich ore, postponed timber replacement, and moved skilled miners from exploration to loading. These choices increased the measured count while lowering value and raising hidden risk. Because ore quality and tunnel condition were observed months later, Ero could collect the visible reward before much of the hidden damage entered Varen's reports or the smelter's official accounts. Ero was not indifferent to the mine, but his bonus, reputation, and short contract rewarded what Varen could see sooner than what Varen ultimately wanted.",
+        "Varen hired an inspector. On inspection days, Ero filled carts completely and repaired the main tunnel while neglecting distant shafts. Constant inspection would cost nearly as much as management, and the inspector could be bribed or misunderstand local conditions. Varen replaced the single measure with sampled ore quality, safety indicators, maintenance records, worker reports, and a deferred component tied to the mine's later condition. No measure received unlimited weight.",
+        "The first new contract failed differently. A landslide outside anyone's control reduced production, cutting Ero's bonus so sharply that he nearly resigned. Making him bear every outcome transferred risks he could not control and encouraged concealment. Varen added a base salary, adjusted for independently recorded shocks, rewarded good-faith reporting, and required Ero to hold part of his bonus until safety audits were complete. Incentive strength had to be balanced against risk, distortion, and information quality.",
+        "Workers also gained a protected route to report hazards, while Ero retained authority over methods that only local knowledge could guide. Results improved, though monitoring, bonding, residual loss, and contract administration all consumed resources. Varen learned that no contract could specify every valuable action or future contingency. Trust reduced some cost, but trust without information left room for divergence; surveillance reduced some divergence, but surveillance without discretion destroyed useful initiative.",
+        "Varen faced the principal-agent problem: one party, the principal, delegates work or decisions to another, the agent, whose interests differ in some respects and whose actions or information cannot be fully observed or contracted. Incentives, monitoring, governance, risk sharing, reputation, and trust can reduce agency costs, but each creates trade-offs and no metric perfectly represents the principal's objective. The road had filled because cart count was the visible part of a much larger task."
+      ],
+      "storyParagraphsZh": [
+        "矿主瓦伦每年只能两次到访山中矿场。主管埃罗熟悉隧道、安排班组并报告产量。瓦伦希望安全采出高价值矿石，也保存矿井长期能力；因无法观察日常工作，他承诺每辆抵达山谷的矿车都给埃罗奖金。矿车数立刻上升，从首都看，拥挤道路仿佛证明授权与激励终于一致。",
+        "冶炼厂的产出率却下降。埃罗让矿车半满就出发，把贫矿混入富矿，推迟更换支撑木，还把熟练矿工从勘探调去装车。这些选择提高可计数数量，同时降低价值、增加隐藏风险。矿石质量与隧道状况数月后才被看见，因此大量隐藏损害进入瓦伦报告或冶炼厂正式账目以前，埃罗已经取得可见奖励。埃罗并非不在乎矿场，只是奖金、声誉与短期合同，更快奖励瓦伦看得见的东西，而非瓦伦最终想要的结果。",
+        "瓦伦雇来检查员。检查日里，埃罗把车装满、修理主隧道，却忽略偏远矿道。持续检查的成本几乎等于管理本身，检查员也可能受贿或误解地方条件。瓦伦用抽样矿石质量、安全指标、维护记录、工人报告和与矿井后续状态挂钩的递延部分，替代单一数字，不让任何指标获得无限权重。",
+        "第一版新合同又以另一种方式失败。无人能控制的山体滑坡压低产量，埃罗奖金骤减，几乎辞职。让他承担所有结果，会转移其无法控制的风险，也鼓励隐瞒。瓦伦加入基本薪资，依据独立记录的外部冲击调整，奖励善意报告，并让部分奖金等安全审计完成后才发放。激励强度必须与风险、扭曲和信息质量平衡。",
+        "工人获得受保护的危险报告渠道，埃罗则保留只有地方知识能指导的方法决定权。结果改善，监督、保证、剩余损失与合同管理仍耗费资源。瓦伦明白，没有合同能写尽每项有价值行动与未来状况。信任减少部分成本，无信息的信任却容许目标偏离；监督减少部分偏离，无裁量的监督又会摧毁有益主动。",
+        "瓦伦面对的是委托代理问题：一方作为委托人，把工作或决定交给代理人；双方利益在某些方面不同，代理人的行动或信息又无法被完整观察或写入合同。激励、监督、治理、风险分担、声誉与信任可以降低代理成本，却各有取舍，也没有指标能完美代表委托人目标。道路之所以被填满，是因为矿车数只是庞大任务中可见的一小部分。"
+      ],
+      "conceptName": "Principal-agent problem",
+      "conceptNameZh": "委托代理问题",
+      "explanationParagraphs": [
+        "The principal-agent problem arises when a principal delegates decisions or work to an agent whose interests are not perfectly aligned and whose information or actions are costly or impossible to observe fully.",
+        "Contracts, incentives, monitoring, governance, reputation, trust, and risk sharing can reduce agency costs, but narrow metrics invite distortion and strong incentives may transfer uncontrollable risk. Complete alignment is rarely costless or possible."
+      ],
+      "explanationParagraphsZh": [
+        "委托代理问题发生于委托人把决定或工作交给代理人，双方利益并不完全一致，而代理人的信息或行动又难以或无法被完整观察。",
+        "合同、激励、监督、治理、声誉、信任与风险分担可以降低代理成本，但狭窄指标会诱发扭曲，过强激励也可能转移不可控风险。完全一致很少能够无成本实现。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0413-psychological-safety",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0413",
+      "fieldTitle": "Management and administration",
+      "fieldTitleZh": "管理与行政",
+      "title": "The Gear Nobody Put on the Table",
+      "titleZh": "无人放上桌的齿轮",
+      "summary": "Foundry workers each notice a cracked gear and each decide that carrying bad news into the morning meeting is more dangerous than leaving it in the machine.",
+      "summaryZh": "铸造工人都看见开裂齿轮，也都认为把坏消息带进晨会，比把裂纹留在机器里更危险。",
+      "storyParagraphs": [
+        "Apprentice Lio found a hairline crack in the foundry's lifting gear. A senior worker had seen it too, as had the maintenance clerk. At morning meetings, Master Daren asked whether production would meet target and praised concise answers. The previous month, he had mocked a worker who raised an uncertain noise and reassigned her from skilled work. Lio left the gear beside the machine rather than place it on the meeting table.",
+        "The gear broke during a lift. A mould fell, injuring no one but stopping the furnace for two days. Daren demanded to know why nobody had spoken. Each person had privately judged the crack worth examining; each had also predicted that an incomplete concern would be treated as incompetence, delay, or disloyalty. The team possessed the information in separate minds and still behaved as if the information did not exist.",
+        "Daren announced that everyone was now free to speak. Silence continued. When Lio reported a minor temperature fluctuation, a supervisor sighed and asked whether he had evidence. The formal invitation was weaker than remembered consequences and status differences. An anonymous box produced warnings but prevented the questions and shared learning needed to interpret several of them. Daren changed his own response: he thanked Lio, helped test the reading, admitted a recent judgement error, and reported back what action followed. Meetings began with a structured round for concerns before production promises.",
+        "More reports arrived, including poor ones. One worker used the process to attack a rival without evidence, and another repeatedly ignored operating rules. Daren did not protect every statement from challenge or every action from accountability. He required respectful inquiry, evidence where available, and learning from good-faith mistakes while maintaining technical standards. Being safe to take an interpersonal risk did not mean being comfortable, agreeable, or exempt from consequences.",
+        "The foundry tracked whether questions, error reports, and dissent came from all ranks, not merely how many suggestions appeared. Leaders examined retaliation, workload, inclusion, and whether reported problems received follow-up. Reports initially rose, making the workshop look less safe on paper even as hidden defects became visible. Over time, earlier detection reduced serious failures. The crucial change was a shared expectation about how the group would respond when someone exposed uncertainty or fallibility.",
+        "The missing gear revealed psychological safety: a shared belief that a team is safe for interpersonal risk taking such as asking questions, admitting errors, requesting help, or challenging a plan. It supports learning behaviour when combined with clear goals, competence, resources, and accountability. It is not friendliness, low standards, or freedom from disagreement, and it can vary across teams inside one organisation. The crack became discussable only when speaking carried a credible chance of inquiry rather than humiliation."
+      ],
+      "storyParagraphsZh": [
+        "学徒利奥在铸造坊起重齿轮上发现一道细裂纹。资深工人看见过，维护书记也看见过。晨会上，师傅达伦只问产量能否达标，并赞扬简短回答。上个月，一名工人报告不确定异响，遭他嘲笑，还被调离技术岗位。利奥把齿轮留在机器旁，没有放上会议桌。",
+        "起吊时齿轮断裂，模具坠落，幸而无人受伤，熔炉却停工两天。达伦追问为何没人开口。每个人私下都认为裂纹值得检查，也都预测不完整的担忧会被视为无能、拖延或不忠。团队把信息分别装在多个头脑里，整体行为却像信息根本不存在。",
+        "达伦宣布从此人人可以发言，沉默仍然持续。利奥报告一次轻微温度波动，主管叹气，追问他是否有证据。正式邀请敌不过记忆中的后果与地位差异。匿名箱收到了警告，却阻断解释其中数项所需的追问与共同学习。达伦先改变自身回应：感谢利奥，协助测试读数，承认自己最近一次判断错误，并回报问题后来得到怎样处理。会议也改为先按顺序报告担忧，再承诺产量。",
+        "报告增加，其中也有糟糕报告。一名工人借流程无证攻击对手，另一人反复无视操作规则。达伦没有让所有说法免受质疑，也没有让所有行为免于问责。他要求尊重地追问，在可得时提供证据，并从善意错误中学习，同时维持技术标准。承担人际风险的安全，不等于舒适、全体同意或没有后果。",
+        "铸造坊开始检查提问、报错与异议是否来自所有等级，而不只统计建议数量。领导者审查报复、工作量、包容，以及报告问题是否得到后续处理。起初报告变多，纸面上工坊仿佛更不安全，实际是隐藏缺陷变得可见。随着更早发现，严重故障下降。关键变化是共同体对成员暴露不确定或可错性时，团队会怎样回应形成了共同预期。",
+        "那只缺席的齿轮揭示的是心理安全感：团队成员共同相信，提问、承认错误、请求帮助或挑战方案等人际冒险是安全的。它与清晰目标、能力、资源和问责结合时，能支持学习行为。它不是友好气氛、低标准或没有分歧，同一组织内不同团队也可能不同。只有当开口可信地带来调查而非羞辱，裂纹才变得可以讨论。"
+      ],
+      "conceptName": "Psychological safety",
+      "conceptNameZh": "心理安全感",
+      "explanationParagraphs": [
+        "Psychological safety is a shared team belief that interpersonal risk taking, including questions, dissent, help seeking, and admitting mistakes, will not predictably lead to humiliation or punishment.",
+        "It supports learning but is not comfort, consensus, low performance standards, or immunity from accountability. Leader responses, status, inclusion, work design, and follow-through shape whether invitations to speak are credible."
+      ],
+      "explanationParagraphsZh": [
+        "心理安全感是团队共同相信，提问、异议、求助与承认错误等人际冒险，不会可预期地带来羞辱或惩罚。",
+        "它支持学习，却不等于舒适、一致、低绩效标准或免于问责。领导回应、地位、包容、工作设计与后续行动共同决定发言邀请是否可信。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0413-dynamic-capabilities",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0413",
+      "fieldTitle": "Management and administration",
+      "fieldTitleZh": "管理与行政",
+      "title": "The Workshop That Perfected Yesterday",
+      "titleZh": "把昨天做到完美的作坊",
+      "summary": "An old sailcloth workshop responds to disappearing demand by producing yesterday's canvas ever more efficiently until it learns to sense, choose, and reconfigure.",
+      "summaryZh": "老帆布作坊面对需求消失，只把昨天的帆布做得越来越高效，直到学会感知、选择与重组。",
+      "storyParagraphs": [
+        "For sixty years, Meral Workshop made the harbour's strongest sailcloth. Its routines were exact: apprentices sorted flax, looms held standard tension, inspectors found weak threads, and purchasing kept costs low. When steam vessels replaced sailing ships on the main route, orders fell. Master Oren tightened schedules, reduced waste, and made each roll faster. Productivity rose while revenue continued to disappear.",
+        "Oren blamed temporary fashion and invested in a larger version of the same loom. The new machine produced more cloth that remained unsold. The better Meral became at exploiting its established process, the harder managers found it to question assets, identities, and supplier relationships built around that process despite mounting external evidence of change. Apprentice Tavi visited customers rather than mills. Fisher crews still needed repairable canvas, mountain traders wanted weatherproof tents, and balloon makers were experimenting with lighter woven skins. These scattered signals did not yet prove a market, but they showed that the workshop's old demand assumptions had become a question rather than a fact.",
+        "The workshop tested small batches. Heavy sailcloth worked for tents but trapped moisture; light cloth tore under balloon pressure. Oren could not simply redirect existing stock. He chose the tent opportunity first, partnered with a resin maker, hired a pattern cutter, and reassigned one loom for experiments. This decision committed scarce attention and money while leaving other possibilities open. Sensing change had required exploration; seizing one path required judgement and investment.",
+        "Reconfiguration caused conflict. Inspectors trained to reject variation now had to distinguish controlled experiments from defects. Purchasing contracts tied Meral to the wrong flax, senior weavers feared lost status, and the larger loom could not handle new coatings. The workshop changed incentives, retrained staff, sold one machine, and created feedback between field repairs and design. Existing assets and history shaped what could be transformed quickly and what had to be abandoned.",
+        "The first tent line failed in winter, but the feedback system exposed why and produced a stronger second version. Meral kept ordinary capabilities for reliable daily production while building repeated processes for scanning, experimentation, selection, partnership, and resource movement. Not every change deserved pursuit, and constant reorganisation would have destroyed accumulated skill. The valuable ability was to alter the resource base when evidence justified it, not merely to celebrate novelty.",
+        "Meral was developing dynamic capabilities: an organisation's higher-level capacity to sense changes and opportunities, seize selected possibilities, and integrate, build, or reconfigure resources and competences as environments change. They differ from ordinary capabilities that perform current activities efficiently, though both are needed. Dynamic capabilities are path-dependent, costly, and no guarantee of success; their value depends on strategic judgement and execution. Meral survived when excellence stopped meaning only doing yesterday's work faster."
+      ],
+      "storyParagraphsZh": [
+        "六十年来，梅拉尔作坊一直制造港口最结实的帆布。流程极其精确：学徒筛选亚麻，织机保持标准张力，检查员发现弱线，采购则压低成本。蒸汽船取代主航线帆船后，订单下降。师傅奥伦收紧排程、减少浪费，让每卷布更快完成。生产率提高，收入却继续消失。",
+        "奥伦把变化归咎于短暂时尚，又投资一台更大的同类织机。新机器生产更多无人购买的帆布。梅拉尔越擅长利用既有流程，管理者就越难质疑围绕它建立的资产、身份与供应商关系，即使外部变化证据不断增加。学徒塔维没有去看别家工厂，而去访问客户。渔船仍需可修补帆布，山地商人想要防风雨帐篷，气球制造者也在试验更轻织物。这些零散信号尚不能证明市场存在，却说明旧需求假设已从事实变成问题。",
+        "作坊试做小批产品。厚帆布用于帐篷会积湿，轻布又承受不住气球压力。奥伦不能简单改卖库存。他先选择帐篷机会，与树脂工合作，雇来版型师，并拨出一台织机试验。决定占用稀缺注意与资金，同时让其他可能保持开放。感知变化需要探索，抓住一条路径则需要判断与投入。",
+        "重组引发冲突。过去专门排除变异的检查员，现在必须区分受控试验与缺陷；采购合同把梅拉尔锁在错误亚麻上；资深织工担心失去地位；那台大织机也无法处理新涂层。作坊改变激励，重新培训，卖掉一台机器，并让现场维修反馈进入设计。既有资产与历史决定什么能迅速转变、什么必须放弃。",
+        "第一批帐篷在冬天失败，反馈系统却暴露原因，催生更结实的第二版。梅拉尔保留可靠日常生产所需的普通能力，同时建立反复扫描、试验、选择、合作和移动资源的流程。并非每个变化都值得追逐，持续重组也会摧毁积累技能。真正有价值的是证据足够时改变资源基础，而非单纯赞美新奇。",
+        "梅拉尔正在形成动态能力：组织感知变化与机会、抓住选定可能，并随环境改变整合、建立或重组资源与能力的高阶能力。它不同于高效执行当前活动的普通能力，尽管两者都需要。动态能力受既有路径限制、成本高昂，也不保证成功；价值取决于战略判断与执行。只有当卓越不再只意味着更快完成昨天的工作，梅拉尔才得以生存。"
+      ],
+      "conceptName": "Dynamic capabilities",
+      "conceptNameZh": "动态能力",
+      "explanationParagraphs": [
+        "Dynamic capabilities are higher-level organisational capacities to sense change, seize selected opportunities, and integrate, build, or reconfigure resources and competences in changing environments.",
+        "They complement ordinary capabilities that execute current operations efficiently. Dynamic capabilities are shaped by prior assets and paths, require investment and judgement, and do not make every transformation timely or successful."
+      ],
+      "explanationParagraphsZh": [
+        "动态能力是组织感知变化、抓住选定机会，并在环境改变时整合、建立或重组资源与能力的高阶能力。",
+        "它补充高效执行当前运营的普通能力。动态能力受既有资产与路径塑造，需要投入与判断，也不会让每次转型都及时或成功。"
+      ],
+      "mode": "case-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0414-segmentation-targeting-positioning",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0414",
+      "fieldTitle": "Marketing and advertising",
+      "fieldTitleZh": "市场营销与广告",
+      "title": "The Soap That Promised Everything",
+      "titleZh": "承诺一切的肥皂",
+      "summary": "A soap maker addresses every buyer with one enormous promise and becomes memorable only after choosing whose problem to solve and what place to earn among alternatives.",
+      "summaryZh": "肥皂商用一个巨大承诺面对所有买家，直到选择要解决谁的问题、在替代品中占据什么位置，才终于被记住。",
+      "storyParagraphs": [
+        "Soap maker Pera painted one message across the market: For every person, every stain, every skin, at the lowest price and greatest luxury. Dockworkers found it too gentle for tar. Parents found the perfume harsh for infants. Inns wanted large plain blocks, while travellers wanted small wrapped bars. Everyone could recognise one phrase intended for everyone, yet nobody could tell why this soap was especially relevant to a particular job.",
+        "Pera first divided customers by hair colour and birth month because those groups were easy to count. Their response to soap barely differed. She then observed needs, usage situations, buying behaviour, sensitivity, volume, and alternatives. Workers handling oil valued cleaning strength without cracked hands; caregivers valued mild ingredients; inns valued reliable bulk delivery; travellers valued portability. Useful groups emerged where differences predicted a distinct response, not wherever a convenient label could be drawn.",
+        "The workshop could not serve every group equally with one formula and budget. Pera estimated group size, growth, access, competition, expected margin, product fit, and potential harm. She chose dockworkers for the first line because the problem was severe, reachable through guild shops, and matched a new resin-removal formula. She retained a smaller mild line because abandoning existing caregivers would impose transition costs her averages concealed. Choosing meant declining attractive opportunities for now. A target was a resource decision, not a declaration that people outside it lacked value.",
+        "Pera then advertised not merely strong soap but the safest effective way for tar workers to remove resin at the end of a shift. Demonstrations compared it with abrasive ash and perfumed household bars. Product formulation, package grip, price, distribution, and evidence supported the same promise. When a rival claimed greater strength, Pera did not add another universal superlative; she defended a specific place in buyers' minds relative to relevant alternatives.",
+        "Success tempted her to create dozens of tiny groups and charge each whatever data predicted. Research costs rose, labels hardened into stereotypes, and some workers were excluded by assumptions based on their district. Pera restored minimum evidence standards, tested groups over time, protected sensitive data, and allowed people to choose outside predicted profiles. Markets changed, individuals crossed categories, and ethical limits constrained which differences should be used even when prediction improved.",
+        "Pera had learned the linked framework of segmentation, targeting, and positioning: dividing a heterogeneous market into meaningful groups with different needs or responses, selecting which group or groups to serve, and designing a distinct value proposition and marketing mix relative to alternatives. Segments are analytical models, not natural tribes; targeting requires strategic and ethical trade-offs; positioning must be credible in product experience, not only words. The soap became memorable when it stopped promising everything and began proving one relevant promise to chosen users."
+      ],
+      "storyParagraphsZh": [
+        "肥皂商佩拉在集市写下一句广告：“适合每个人、每种污渍、每种皮肤，价格最低，也最奢华。”码头工觉得它洗不掉焦油，父母嫌香味刺激婴儿，旅店要大块无香皂，旅行者则要小块包装。人人都能认出这句面向所有人的话，却没人知道它为何特别适合某项具体工作。",
+        "佩拉先按发色与出生月份划分顾客，因为容易计数，群体对肥皂的反应却几乎无差异。她转而观察需要、使用场景、购买行为、敏感程度、数量与替代品。接触油污的工人看重强力清洁又不裂手，照护者看重温和成分，旅店看重稳定批量配送，旅行者看重便携。真正有用的分组来自可预测不同反应的差异，而非任何方便画出的标签。",
+        "作坊无法用一种配方和预算同等服务所有群体。佩拉估计群体规模、增长、可触达性、竞争、预期利润、产品匹配与潜在伤害。她先选择码头工，因为问题严重，可经行会商店触达，也符合新去树脂配方。她保留规模较小的温和产品线，因为放弃现有照护者会产生平均值掩盖的转换成本。选择意味着暂时放下其他诱人机会。目标选择是资源决定，不是宣布目标以外的人缺少价值。",
+        "佩拉随后不再只说“强力”，而承诺为焦油工人提供下班后安全有效去除树脂的方法。演示把它与粗糙草木灰和香味家用皂比较；配方、包装握感、价格、渠道与证据共同支持同一承诺。对手宣称力量更强时，佩拉没有再加一个万能最高级，而是在相关替代品之间捍卫买家心中一个具体位置。",
+        "成功诱使她制造几十个微小群体，再按数据预测向每群收取不同价格。研究成本上升，标签固化成刻板印象，一些工人还因所在街区的假设被排除。佩拉恢复最低证据标准，持续检验群体，保护敏感数据，并允许人们选择预测画像以外的产品。市场会变，个人会跨越类别；即使预测改善，伦理界限仍约束哪些差异可以使用。",
+        "佩拉学会的是细分、目标选择与定位：把异质市场划成需求或反应不同的有意义群体，选择要服务的一个或多个群体，再相对替代品设计独特价值主张与营销组合。细分是分析模型，不是天然部落；目标选择包含战略与伦理取舍；定位必须由产品体验证明，不能只靠语言。肥皂停止承诺一切、开始向选定用户证明一项相关承诺后，才终于被记住。"
+      ],
+      "conceptName": "Segmentation, targeting, and positioning",
+      "conceptNameZh": "细分、目标选择与定位",
+      "explanationParagraphs": [
+        "Segmentation identifies meaningful groups with different needs, behaviours, or likely responses; targeting selects which groups to serve; positioning defines a credible, distinctive value proposition relative to alternatives.",
+        "The framework links market understanding to resource allocation and the marketing mix. Segments are provisional models, and evidence quality, reachability, economics, stereotyping, privacy, exclusion, and change over time all matter."
+      ],
+      "explanationParagraphsZh": [
+        "细分识别需求、行为或可能反应不同的有意义群体；目标选择决定服务哪些群体；定位则相对替代品定义可信且独特的价值主张。",
+        "该框架把市场理解连接到资源配置与营销组合。细分只是暂时模型，证据质量、可触达性、经济性、刻板印象、隐私、排斥与时间变化都很重要。"
+      ],
+      "mode": "case-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0414-signaling",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0414",
+      "fieldTitle": "Marketing and advertising",
+      "fieldTitleZh": "市场营销与广告",
+      "title": "Two Sealed Jars of Honey",
+      "titleZh": "两罐看不见内部的蜂蜜",
+      "summary": "Two beekeepers sell sealed honey in an unfamiliar market, where buyers must decide which visible action can credibly reveal hidden quality.",
+      "summaryZh": "两名养蜂人在陌生市场出售密封蜂蜜，买家必须判断哪种可见行动能够可信地揭示隐藏质量。",
+      "storyParagraphs": [
+        "In the northern market, buyers could not open honey jars before purchase. Good honey and diluted syrup looked alike through dark clay. Beekeeper Mara tied gold cord around her jars and charged more, expecting price and decoration to prove purity. Within a week, every seller copied the cord. Buyers paid for prettier shelves but learned almost nothing about what remained hidden inside.",
+        "Beekeeper Sol offered a different promise. An independent guild sampled each batch, his seal named the hive and harvest date, and any buyer who found dilution could return the jar for twice its price. Pure honey made refunds rare; a diluter expected the guarantee to become expensive. The visible commitment was credible because copying it imposed a systematically higher expected cost on sellers of poor quality. Hive location itself was an index rather than a chosen signal: it correlated with flavour but was not an action selected to persuade buyers. The distinction mattered when buyers inferred intent from every cue.",
+        "Mara purchased one clean certificate, then mixed later batches under the same mark. Sol's system also failed when the guild inspector accepted gifts. A visible signal worked only while its production, verification, and penalties remained connected to the hidden attribute. Reputation accumulated from repeated transactions helped, but reputation could lag behind changed behaviour and punish newcomers who had no history despite good honey.",
+        "Buyers developed a second tool. The market offered every seller the same choice: permit random testing and receive access to premium stalls, or decline and sell in the ordinary row. This was a screening device initiated by the less-informed side, while Sol's guarantee was information sent by the seller. Honest producers did not always choose testing if fees were excessive, so refusal alone could not be treated as proof of fraud.",
+        "Over time, testing, traceable batches, guarantees, and repeat purchase produced a separating pattern, though some sellers still pooled together when costs or quality differences were small. The council limited wasteful displays that consumed resources without improving information and punished counterfeit seals. It also published error rates because even credible systems produced false reassurance and false suspicion. Signals changed beliefs probabilistically; they did not turn inference into direct observation.",
+        "The honey market illustrated signaling: an informed party takes an observable action intended to convey hidden information to a less-informed party. A signal is informative when different underlying types have different incentives or costs in producing it, making imitation difficult enough to affect beliefs. Signals may separate types, leave them pooled, be manipulated, or become wasteful conventions; screening reverses who designs the test. The gold cord said only that cord was cheap. The costly guarantee said more because bad honey had more to fear from it."
+      ],
+      "storyParagraphsZh": [
+        "北方集市不许顾客购买前打开蜂蜜罐，优质蜂蜜与稀释糖浆隔着深色陶壁看起来相同。养蜂人玛拉给罐子系金绳并提高价格，以为价格与装饰足以证明纯度。一周内，每个卖家都复制金绳。买家为更漂亮的货架付钱，对里面隐藏的东西却几乎一无所知。",
+        "养蜂人索尔作出另一种承诺。独立行会抽检每批产品，封印写明蜂巢与收获日期；发现掺水的顾客可按两倍价格退货。纯蜂蜜很少触发赔付，掺假者则预期保证会变得昂贵。可见承诺之所以可信，是因为劣质卖家复制它时要承担系统性更高的预期成本。蜂巢位置本身是指标而非主动信号：它与风味相关，却不是为说服买家而选择的行动。当买家从每条线索推断意图时，这个区别很重要。",
+        "玛拉买下一张合格证明，后来批次却继续混装同一标记。行会检查员收礼后，索尔的制度也会失败。只有信号的生产、验证与惩罚持续连接隐藏属性，可见行动才有效。重复交易积累的声誉有所帮助，声誉却可能落后于行为变化，也会惩罚虽有好蜂蜜却没有历史的新卖家。",
+        "买家又设计第二种工具。市场向每名卖家提供相同选择：接受随机测试，即可进入高价摊位；拒绝则留在普通区域。这是信息较少一方发起的筛选，索尔保证则由卖方主动发送信息。若检测费用过高，诚实生产者也可能拒绝，因此拒绝本身不能被当成造假证明。",
+        "随着时间推移，检测、可追踪批次、保证与重复购买形成一定分离，成本或质量差异很小时，部分卖家仍会混在一起。议会限制那些耗费资源却不改善信息的展示，也惩罚伪造封印；同时公布错误率，因为可信制度仍会制造虚假安心与误疑。信号以概率方式改变信念，不会把推断变成直接观察。",
+        "蜂蜜市场展示的是信号传递：掌握更多信息的一方采取可观察行动，试图向信息较少一方传达隐藏信息。当不同底层类型生产信号的激励或成本不同，使模仿足够困难时，信号才具有信息量。信号可能分离类型、让它们混同、被操纵，或变成浪费性惯例；筛选则反转测试设计者。金绳只说明绳子便宜，昂贵保证说得更多，因为坏蜂蜜更怕它。"
+      ],
+      "conceptName": "Signaling",
+      "conceptNameZh": "信号传递",
+      "explanationParagraphs": [
+        "Signaling occurs when an informed party takes an observable action to communicate hidden information. A signal is credible when its cost or incentive differs across underlying types enough to make imitation unattractive or unsustainable.",
+        "Signals can separate types, produce pooling, be copied, corrupted, or waste resources. They change beliefs rather than guarantee truth. Screening is related but is designed by the less-informed party to induce informative choices."
+      ],
+      "explanationParagraphsZh": [
+        "信号传递发生于掌握更多信息的一方采取可观察行动，以传达隐藏信息。当不同底层类型承担的成本或激励差异足以让模仿失去吸引力或无法持续时，信号才可信。",
+        "信号可使类型分离，也可能混同、被复制、腐化或浪费资源。它改变信念，并不保证真相。筛选与之相关，却由信息较少一方设计，用选择诱发信息。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0414-customer-lifetime-value",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0414",
+      "fieldTitle": "Marketing and advertising",
+      "fieldTitleZh": "市场营销与广告",
+      "title": "The Guest Who Paid for One Night",
+      "titleZh": "只付一晚钱的豪客",
+      "summary": "An innkeeper displaces quiet families for one extravagant guest and discovers that a spectacular bill can be worth less than a modest relationship repeated over years.",
+      "summaryZh": "旅店老板为一名豪客赶走安静家庭，随后发现惊人账单的价值可能低于多年重复的普通关系。",
+      "storyParagraphs": [
+        "Innkeeper Ressa received a prince who rented every upper room, ordered rare wine, and paid a spectacular bill. To make space, she cancelled reservations held by six trading families who had returned each season for a decade. The prince never came again. Two displaced families chose another inn permanently, and their companions followed. Ressa's monthly ledger celebrated its largest sale while quietly damaging a stream of smaller future margins.",
+        "Accountant Fio reconstructed each relationship. He estimated expected future visits, contribution margin after variable service costs, probability of retention, acquisition cost, and the time value of later earnings. A frequent guest with moderate revenue could be valuable if service cost was low and return probability high. A lavish guest could destroy value through special expenses, discounts, complaints, and low likelihood of return. Revenue on one invoice was not the same as relationship value.",
+        "Ressa tried to keep everyone at any cost. She offered gifts larger than the expected future margin and rewarded customers who threatened to leave while ignoring loyal guests. Retention itself was not always profitable, and an intervention had to change future behaviour rather than subsidise what would have happened anyway. Fio compared incremental cost with the expected increase in future contribution, using ranges rather than pretending uncertain probabilities were exact under several plausible scenarios.",
+        "The model also exposed a trap. Families labelled low value received slower service, became less likely to return, and then appeared to confirm the label. Ressa stopped using individual scores as moral ranks. She set a common service floor, audited variables that could proxy for protected or disadvantaged groups, and used relationship estimates mainly for capacity, acquisition, and programme design. People were guests with rights and choices, not assets owned by the inn.",
+        "Over several years, actual retention, visit frequency, margins, and campaign effects replaced early assumptions. Cohorts sometimes predicted better than fragile individual estimates; referrals were counted cautiously to avoid crediting the same future guest to several people. The inn kept space for regulars during festivals and offered the prince rooms only when displacement cost was justified. A forecast guided a decision and then had to be tested against the consequences of that decision.",
+        "Fio was estimating customer lifetime value: the present value of expected future contribution from a customer relationship, usually incorporating revenue, variable costs, retention or churn, timing, and sometimes acquisition or service costs. It is a forecast, not a known property of a person, and it depends on assumptions and on how the firm treats customers. Used carefully, it shifts attention from one transaction to sustainable relationships; used carelessly, it can invite self-fulfilling neglect or unfair exclusion. The prince won one month's ledger and lost the inn several future seasons."
+      ],
+      "storyParagraphsZh": [
+        "旅店老板雷莎接待一名王子，他包下楼上所有房间，订购稀有葡萄酒，付出惊人账单。为腾空间，她取消六个贸易家庭的预订，这些家庭已连续十年每季回来。王子再未出现，两户被赶走的家庭永久改投别店，同行者也随之离开。月度账本庆祝最大一笔销售，同时悄悄损害未来一串较小利润。",
+        "会计菲奥重新计算每段关系。他估计未来访问、扣除可变服务成本后的贡献利润、留存概率、获客成本和后来收益的时间价值。收入中等的常客若服务成本低、回访概率高，可能很有价值；挥霍客也可能因特殊支出、折扣、投诉和低回访率摧毁价值。一张发票上的收入不等于关系价值。",
+        "雷莎转而不惜代价留住所有人。她赠送超过预期未来利润的礼物，奖励威胁离开的顾客，却忽略忠诚客。留存本身并非总有利润，干预必须改变未来行为，而不能补贴本来就会发生的事。菲奥比较增量成本与未来贡献的预期增加，用范围表达，并比较多种合理情景，不假装不确定概率十分精确。",
+        "模型也暴露一项陷阱。被标为低价值的家庭得到更慢服务，更不愿回来，随后仿佛证明原标签。雷莎不再把个人分数当道德等级。她设置共同服务底线，审计可能替代受保护或弱势群体的变量，并主要把关系估计用于容量、获客和项目设计。人是拥有权利与选择的客人，不是旅店拥有的资产。",
+        "几年里，实际留存、访问频率、利润和活动效果逐渐替换早期假设。群组有时比脆弱的个人估计更可靠；推荐价值也谨慎计算，避免把同一名未来客人重复归给多人。节庆期间，旅店为常客保留空间，只有在赶客成本合理时才给王子房间。预测指导决定，随后还要用决定造成的后果检验。",
+        "菲奥估计的是客户终身价值：客户关系预期未来贡献的现值，通常包括收入、可变成本、留存或流失、时间，有时也包括获客与服务成本。它是预测，不是某个人已知不变的属性，也取决于假设和企业怎样对待顾客。谨慎使用能把注意从单次交易转向可持续关系；粗暴使用则会诱发自我实现的忽视或不公平排斥。王子赢得一个月的账本，却让旅店失去数个未来季节。"
+      ],
+      "conceptName": "Customer lifetime value",
+      "conceptNameZh": "客户终身价值",
+      "explanationParagraphs": [
+        "Customer lifetime value estimates the present value of expected future contribution from a customer relationship. Models commonly include revenue, variable margin, retention or churn, timing, and relevant acquisition, retention, or service costs.",
+        "It is uncertain and partly shaped by the firm's own treatment of customers. CLV should inform resource decisions without becoming a moral ranking, and models require validation, sensitivity analysis, privacy protection, and fairness review."
+      ],
+      "explanationParagraphsZh": [
+        "客户终身价值估计客户关系预期未来贡献的现值。模型通常包括收入、可变利润、留存或流失、时间，以及相关获客、维系或服务成本。",
+        "它具有不确定性，也部分受企业自身对待顾客的方式塑造。客户终身价值可支持资源决定，却不应成为道德排名；模型需要验证、敏感性分析、隐私保护与公平审查。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0415-information-triage",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0415",
+      "fieldTitle": "Secretarial and office work",
+      "fieldTitleZh": "秘书与办公室工作",
+      "title": "Every Letter Wore Red",
+      "titleZh": "每封信都系着红带",
+      "summary": "An office marks every request urgent until a quiet warning about contaminated water disappears beneath louder claims that borrowed the same colour.",
+      "summaryZh": "办公室把每项请求都标为紧急，结果一封关于水源污染的安静警告，被借用同种颜色的喧闹主张彻底淹没。",
+      "storyParagraphs": [
+        "The governor's office used red ribbon for urgent correspondence. Department heads soon discovered that red letters were opened first. Within a month, banquet menus, furniture requests, inspection warnings, and family petitions all arrived in red. Secretary Mara worked from the top of a growing pile and chose the loudest titles. A modest note from a village nurse reporting unusual sickness remained unopened for four days while officials debated ceremonial chairs.",
+        "The well had been contaminated. Nobody had intended to hide the warning; the system had erased distinction by allowing every sender to declare priority. Mara first solved the problem by trusting rank. Letters from ministers moved first, which accelerated routine prestige work and delayed a second warning from a junior bridge keeper. Authority could identify ownership, but sender status was a poor substitute for severity, time sensitivity, reversibility, and the cost of delay.",
+        "Mara created an initial screen. Each item recorded affected people, deadline, evidence quality, potential harm, dependencies, responsible owner, and whether delay could be repaired. Imminent and severe harm moved to immediate review even when uncertain; reversible low-impact requests entered a queue. A quiet item with a distant deadline could still move forward when delay would close an irreversible option, while a loud request could wait if its effects were recoverable at modest later cost. Ambiguous items received rapid clarification rather than automatic rejection. The first classification directed attention and action, but did not pretend to be a final judgement on truth or merit.",
+        "Departments adapted by exaggerating casualty estimates and inventing deadlines. Mara required reasons for escalation, sampled outcomes, and compared predicted urgency with what later occurred. Penalties targeted deliberate gaming, while good-faith over-escalation in uncertain safety cases remained protected. Capacity also mattered: an emergency lane with no available decision-maker was merely a differently coloured queue. Rotating duty officers received explicit authority to act within bounded thresholds.",
+        "The office reviewed deferred work because low urgency did not mean no importance. Old items aged upward, recurring minor complaints were grouped to reveal patterns, and petitioners could challenge classification. Mara audited whether remote villages and low-status senders were systematically delayed. A triage system distributed scarce attention under uncertainty; if left unexamined, it could encode the visibility and power differences it was meant to overcome.",
+        "Mara was practising information triage: the rapid, provisional sorting and routing of incoming information according to urgency, impact, confidence, reversibility, dependency, and required action. Triage protects attention when volume exceeds immediate processing capacity, but it can generate false negatives, gaming, and inequity. Criteria, escalation paths, ownership, feedback, and queue review keep the first screen corrigible. Red ribbon became useful again only when it represented a reasoned pathway rather than a sender's demand to be first."
+      ],
+      "storyParagraphsZh": [
+        "总督办公室用红带标记紧急公文。各部门很快发现，红信最先拆开。一个月内，宴会菜单、家具请求、检查警告和家庭请愿全都系上红带。秘书玛拉从不断增高的纸堆顶端工作，优先选择标题最响亮的信。一名乡村护士低调报告异常疾病，竟在官员争论仪式座椅时四天无人拆阅。",
+        "水井已经污染。没人有意隐藏警告，是制度允许每名寄件人自行宣布优先，抹掉了区分。玛拉先改为信任等级，大臣来信最先处理，结果日常显贵事务加快，初级守桥人的第二次警告又被拖延。权威可以说明谁负责，却不能替代严重性、时间敏感、可逆性与延误代价。",
+        "玛拉建立初筛。每项材料记录受影响人数、期限、证据质量、潜在伤害、依赖关系、责任人，以及延误能否补救。伤害迫近且严重的事项即使不确定也进入即时审查；可逆、低影响请求进入队列。安静事项即使期限遥远，若延误会关闭不可逆选项，仍可提前；响亮请求若后果能以不高的后续成本补救，也可以等待。含混材料则快速澄清，不自动拒绝。第一次分类负责引导注意与行动，不假装是对真假或价值的终局裁决。",
+        "各部门开始夸大伤亡估计、虚构期限。玛拉要求升级理由，抽样检查结果，并把预期紧急程度与后来事实比较。处罚针对故意操纵，安全事项中的善意过度升级仍受保护。容量也很重要：没有决策者的应急通道，只是换了颜色的队列。轮值官员获得在明确门槛内行动的授权。",
+        "办公室复查延后工作，因为低紧急不等于不重要。旧事项随时间上调，反复出现的小投诉被汇总以揭示模式，来信者也可挑战分类。玛拉审计偏远村庄和低地位寄件人是否系统性被拖延。分诊是在不确定下分配稀缺注意，若无人检查，也会编码它原本要克服的可见性与权力差异。",
+        "玛拉实践的是信息分诊：按照紧迫性、影响、可信度、可逆性、依赖与所需行动，对进入信息进行快速、暂时的分类和路由。分诊在信息量超过即时处理能力时保护注意，却也会产生漏判、操纵与不公。标准、升级路径、责任归属、反馈与队列复查使初筛可以纠正。只有当红带代表一条有理由的处理路径，而非寄件人要求第一，红色才重新有用。"
+      ],
+      "conceptName": "Information triage",
+      "conceptNameZh": "信息分诊",
+      "explanationParagraphs": [
+        "Information triage is the rapid, provisional classification and routing of incoming information when immediate processing capacity is limited. Criteria may include urgency, severity, confidence, reversibility, dependencies, ownership, and required action.",
+        "Triage is not a final truth judgement. It needs escalation, feedback, queue ageing, review, protection for uncertain safety reports, and fairness checks because senders can game priority and quiet harms can be missed."
+      ],
+      "explanationParagraphsZh": [
+        "信息分诊是在即时处理能力有限时，对进入信息作快速、暂时的分类与路由。标准可包括紧迫性、严重性、可信度、可逆性、依赖、责任归属与所需行动。",
+        "分诊不是终局真相判断。它需要升级、反馈、队列老化、复查、对不确定安全报告的保护与公平检查，因为寄件人会操纵优先级，安静伤害也可能被漏掉。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0415-record-version-control",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0415",
+      "fieldTitle": "Secretarial and office work",
+      "fieldTitleZh": "秘书与办公室工作",
+      "title": "Three Orders for One Bridge",
+      "titleZh": "一座桥的三份命令",
+      "summary": "Three crews build from slightly different copies of the same order and discover that a document without identity, status, and history cannot reliably command shared work.",
+      "summaryZh": "三支队伍按略有差异的同一命令施工，终于发现缺少身份、状态与历史的文件无法可靠指挥共同工作。",
+      "storyParagraphs": [
+        "At the bridge site, the stone crew received an order placing support arches twelve paces apart. The timber crew held a copy marked ten. The surveyor's sheet said eleven and carried a handwritten correction with no signature. Each page bore the title Final Bridge Instruction. By the time the discrepancy surfaced, foundations had been dug to three incompatible rhythms, and each crew could prove that it had obeyed an apparently official record.",
+        "Secretary Osa traced the copies. The ten-pace draft had been attached to an early message, the eleven-pace page reflected an engineer's test, and twelve paces had been approved after a load review. People had renamed files, printed local copies, and forwarded attachments without their surrounding decisions. The office knew which design was newest in one mailbox but not which version was authorised, effective, received, or superseded at the worksite.",
+        "Osa assigned a stable record identifier, revision number, date, author, approver, status, effective time, and change description. Draft, under review, approved, superseded, and withdrawn became distinct states. A controlled register pointed to the current authorised version, while old versions remained preserved with their history. The register also linked each revision to the requirement, test, and decision that justified it, so change history preserved meaning rather than numbering alone. Workers could see the governing instruction without gaining permission to rewrite it from their local copies during execution. Crews acknowledged receipt, and critical changes generated a comparison showing exactly what had altered and why.",
+        "The next approved revision contained a calculation error. If Osa had destroyed every prior copy, engineers could not reconstruct when the error entered or restore the last safe design. Keeping history did not mean allowing workers to choose whichever older instruction they preferred. Access controls separated reference from execution, and a documented rollback created a new authorised state rather than silently pretending the mistaken version had never existed.",
+        "Remote crews sometimes worked without connection to the register. They carried signed offline packages with expiry rules and synchronised before starting irreversible work. Emergency oral changes had to be captured, confirmed, and reconciled afterward. Osa also protected authenticity and permissions: a perfectly numbered record could still be altered by the wrong person. Control joined identity, sequence, authority, integrity, distribution, and traceable change.",
+        "Osa established record version control: the disciplined identification, status management, authorisation, distribution, preservation, and tracking of changes across versions of a record. It helps people know which version governs action while retaining enough history for audit, comparison, rollback, and accountability. Newest does not automatically mean approved or correct, and preserving old versions does not make them current. The bridge failed on paper before any stone failed, because three documents used one title without sharing one controlled history."
+      ],
+      "storyParagraphsZh": [
+        "桥梁工地上，石工队收到命令，要求支撑拱每十二步一座；木工队的副本写十步；测量员纸上写十一，旁边还有一处无签名手改。每页标题都叫《最终桥梁指令》。差异被发现时，地基已按三种不兼容节奏开挖，每支队伍都能证明自己服从了一份看似正式的记录。",
+        "秘书奥萨追查副本。十步版是早期消息所附草稿，十一步版反映工程师试验，十二步版则经承重评审批准。人们重命名文件、打印本地副本，又脱离周边决定转发附件。办公室只知道某个邮箱里哪份设计最新，却不知道工地上哪版已授权、生效、收讫或废止。",
+        "奥萨为记录配置稳定标识符、修订号、日期、作者、批准人、状态、生效时间与变更说明。草稿、审查中、已批准、已废止和已撤回成为不同状态。受控登记表指向当前授权版本，旧版则连同历史保存。登记表还把每次修订连接到证明其合理的要求、测试与决定，使变更历史保存意义，而不只保存编号。工人可以看见支配行动的指令，却无权在施工中通过本地副本改写它。队伍确认收讫，关键变更还生成比较，准确显示改了什么、为什么改。",
+        "下一份批准修订却包含计算错误。若奥萨销毁所有旧本，工程师就无法重建错误何时进入，也无法恢复最后安全设计。保留历史不表示工人可任意挑选旧指令。访问控制把参考与执行分开，回退也要形成一项有记录的新授权状态，而不是悄悄假装错误版本从未存在。",
+        "偏远队伍有时无法连接登记表，于是携带带签名、含到期规则的离线包，并在开始不可逆工作前同步。紧急口头更改事后必须捕获、确认与核对。奥萨也保护真实性与权限：编号再完美的记录，仍可能被错误的人改动。控制连接身份、顺序、权威、完整性、分发与可追踪变更。",
+        "奥萨建立的是记录版本控制：对记录各版本进行有纪律的识别、状态管理、授权、分发、保存与变更追踪。它让人知道哪一版支配行动，同时保留足够历史用于审计、比较、回退与问责。最新不自动等于批准或正确，保存旧版也不让它继续生效。石头尚未失败，桥已经先在纸上失败，因为三份文件共用一个标题，却没有共用一段受控历史。"
+      ],
+      "conceptName": "Record version control",
+      "conceptNameZh": "记录版本控制",
+      "explanationParagraphs": [
+        "Record version control identifies versions, records their status and authority, manages distribution and access, and preserves a traceable history of changes, approvals, effective dates, and supersession.",
+        "The newest copy may be a draft or error, while an older copy may be valid only for audit or rollback. Reliable control combines identifiers, integrity, permissions, acknowledgements, change logs, retention, and an authoritative source."
+      ],
+      "explanationParagraphsZh": [
+        "记录版本控制识别各版本，记录其状态与权威，管理分发和访问，并保存变更、批准、生效日期与废止的可追踪历史。",
+        "最新副本可能仍是草稿或错误，旧副本也可能只用于审计或回退。可靠控制结合标识符、完整性、权限、收讫确认、变更日志、保留与权威来源。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0415-coordination-cost",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0415",
+      "fieldTitle": "Secretarial and office work",
+      "fieldTitleZh": "秘书与办公室工作",
+      "title": "The Office That Had No Time to Work",
+      "titleZh": "没有时间工作的办公室",
+      "summary": "An administrator keeps every employee informed about every decision until meetings, messages, and mutual approvals consume the work they were meant to coordinate.",
+      "summaryZh": "行政官让每名员工了解每项决定，最终会议、消息与相互批准耗尽了原本需要协调的工作。",
+      "storyParagraphs": [
+        "When the relief office had six employees, director Vela gathered everyone each morning. Shared discussion prevented duplicate purchases and exposed conflicting delivery plans. The office grew to forty people, but Vela kept the same rule: everyone attended every meeting, received every message, and approved every change. Staff spent afternoons explaining work to colleagues who neither used nor influenced it, then worked at night to complete the tasks discussed during the day.",
+        "Vela added a second daily meeting to repair misunderstandings created by the first. Preparation expanded, decisions waited for absent people, and each new participant introduced more possible communication relationships. One warehouse request passed through twelve acknowledgements before reaching the buyer. Transparency had become confused with universal participation. The office was reducing one class of error by creating delay, attention loss, duplicated interpretation, and unclear ownership.",
+        "Secretary Mina mapped dependencies. Procurement and warehouse teams needed frequent shared inventory data; vehicle maintenance needed only a stable delivery schedule; legal staff needed exceptions, not every routine order. The office formed smaller decision groups, defined owners and interfaces, and published concise records for others. Standard forms and shared data reduced repeated translation. People could subscribe to detail, while critical changes crossed explicit escalation paths.",
+        "The first redesign went too far. Teams optimised locally, purchased incompatible containers, and scheduled vehicles against the same loading bay. Coordination was not waste to eliminate. Mina restored joint planning where work was tightly interdependent and created integration reviews at selected milestones. The question became which connections carried enough uncertainty, consequence, or mutual dependence to justify their cost, and which could be handled through rules or modular boundaries.",
+        "Meeting time fell, but Mina also measured rework, waiting, search, handoff failures, and decisions reversed because an affected group had been excluded. Mina estimated not only meeting hours but interruption recovery: a ten-minute question could fragment much more concentrated work across many recipients. She therefore treated attention as a shared but exhaustible organisational resource whose use needed an explicit purpose and owner for each request. New tasks received denser communication until interfaces stabilised; routine tasks moved asynchronously. Turnover, ambiguity, geographic distance, and changing goals raised the need for coordination, while clear roles, common standards, trust, and good tools lowered repeated effort without making relationships unnecessary.",
+        "Mina was managing coordination cost: the time, attention, communication, negotiation, monitoring, delay, and integration effort required to align interdependent people and tasks. Coordination creates value by preventing incompatible action, but its cost grows with participants, connections, uncertainty, and dependence. Modular design, decision rights, standards, shared information, and deliberate cadence can reduce unnecessary load, while too little coordination produces rework and conflict. The office regained time to work when being informed stopped meaning being involved in everything."
+      ],
+      "storyParagraphsZh": [
+        "救济办公室只有六人时，主任维拉每天早晨召集全员。共同讨论避免重复采购，也暴露冲突配送计划。办公室扩至四十人，维拉仍保留同一规则：人人参加每场会议、收到每条消息、批准每项更改。员工下午向既不用也不影响该工作的同事解释，夜里再完成白天讨论的任务。",
+        "维拉增加第二场日会，试图修补第一场制造的误解。准备工作膨胀，决定等待缺席者，每名新参与者又增加更多可能沟通关系。一项仓库请求经过十二次确认才抵达采购员。透明被误认为普遍参与。办公室减少一种错误，同时制造延迟、注意损耗、重复解释与责任不清。",
+        "秘书米娜绘出依赖关系。采购与仓库需要频繁共享库存数据；车辆维修只需稳定配送排程；法务需要例外，不需要每项日常订单。办公室组成更小决策组，明确责任人与接口，并为其他人发布简洁记录。标准表格和共享数据减少重复翻译。人们可以订阅细节，关键变化则走明确升级路径。",
+        "第一次重设走得太远。各团队局部优化，购买不兼容容器，还把车辆排到同一装货台。协调不是应该消灭的浪费。米娜在工作高度相互依赖处恢复联合规划，在选定里程碑设置整合评审。问题变成：哪些连接因不确定、后果或相互依赖足以证明成本合理，哪些可由规则或模块边界处理。",
+        "会议时间下降，米娜也同时衡量返工、等待、搜索、交接失败，以及因遗漏受影响群体而被推翻的决定。她不仅计算会议时数，也计算中断后的恢复：一个十分钟问题可能切碎许多接收者更长的专注工作。因此，注意被视为共享却会耗尽的组织资源，每次调用都需要明确目的与责任人。新任务在接口稳定前保持密集沟通，例行任务则转为异步。人员流动、含混、地理距离与目标变化会提高协调需要；清晰角色、共同标准、信任与良好工具减少重复努力，却不会让关系不再必要。",
+        "米娜管理的是协调成本：为了让相互依赖的人与任务一致而付出的时间、注意、沟通、协商、监督、延迟与整合努力。协调通过防止不兼容行动创造价值，成本却随参与者、连接、不确定与依赖增加。模块设计、决策权、标准、共享信息与有意节奏可减少无谓负担，协调过少又会造成返工与冲突。当“知情”不再意味着“参与一切”，办公室才重新获得工作时间。"
+      ],
+      "conceptName": "Coordination cost",
+      "conceptNameZh": "协调成本",
+      "explanationParagraphs": [
+        "Coordination cost is the time, attention, communication, negotiation, monitoring, delay, and integration effort required to align interdependent activities. It generally rises with connections, uncertainty, ambiguity, and task dependence.",
+        "Coordination also prevents costly incompatibility, so the aim is not zero coordination. Modular boundaries, decision rights, standards, shared data, selective participation, and suitable communication cadence can balance coordination benefit and burden."
+      ],
+      "explanationParagraphsZh": [
+        "协调成本是为了让相互依赖活动一致所需的时间、注意、沟通、协商、监督、延迟与整合努力，通常随连接、不确定、含混和任务依赖增加。",
+        "协调也会防止代价高昂的不兼容，因此目标不是零协调。模块边界、决策权、标准、共享数据、选择性参与与合适沟通节奏可以平衡收益与负担。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0416-inventory-turnover",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0416",
+      "fieldTitle": "Wholesale and retail sales",
+      "fieldTitleZh": "批发与零售销售",
+      "title": "The Fullest Fruit Shop",
+      "titleZh": "货架最满的水果店",
+      "summary": "A fruit seller displays abundance by keeping every shelf full and discovers that inventory can look rich while tying up cash and quietly becoming waste.",
+      "summaryZh": "水果商用满货架展示富足，却发现库存可以看似丰盛，同时占住现金并悄悄变成废物。",
+      "storyParagraphs": [
+        "Seller Pavo judged his fruit shop by fullness. Empty shelf space looked like failure, so he ordered enough pears, berries, and melons to cover every board twice. Customers admired the display, but fruit at the back softened before reaching a buyer. Each evening, workers discarded crates while Pavo pointed to the remaining abundance as evidence that the business was strong. Cash had entered inventory and was leaving as rot.",
+        "Accountant Nera compared the cost of fruit sold during the month with average inventory held. The resulting ratio estimated how many times stock moved through the sales cycle. She also translated it into approximate days held. Nera separated sales from purchases because buying more fruit could make activity look busy during the month while leaving turnover unchanged or worse. She used cost rather than selling price in the numerator so margins did not masquerade as overall inventory movement across product categories. Berries turned slowly relative to their short life; preserved apples turned slowly but remained usable. One number raised a question about efficiency, yet category, shelf life, season, and supply lead time shaped its meaning.",
+        "Pavo cut every order in half. Waste dropped, but the shop ran out of popular pears before market day, sending regular customers elsewhere. A very high rate could signal efficient movement or insufficient stock, missed sales, and fragile service. Nera set different replenishment points by item, tracked demand variation and delivery reliability, and retained safety stock where the consequence of shortage justified its carrying cost.",
+        "The ratio changed when Pavo altered cost-flow assumptions and when a festival made month-end inventory unusually low. Comparing one period or another shop without checking accounting policy and product mix misled him. Nera used average balances, longer trends, physical counts, industry context, and complementary measures such as gross margin, stockouts, shrinkage, ageing, and cash conversion. Fast movement at a loss was not success.",
+        "The new system exposed hidden choices. Bulk discounts lowered purchase price but increased spoilage and storage. Some rare fruit turned slowly yet attracted customers who bought profitable staples. Other stock occupied space because Pavo disliked admitting a bad purchase. Decisions therefore combined the ratio with strategy, service level, perishability, obsolescence, financing cost, and supplier constraints rather than treating speed as an isolated goal.",
+        "Nera was analysing inventory turnover: the number of times average inventory is sold or used during a period, commonly estimated as cost of goods sold divided by average inventory. Its inverse can be expressed as days in inventory. Low turnover may indicate excess, obsolete, or slow stock; extremely high turnover may indicate shortages or lost sales. The fullest shop became healthier when stock moved at a rate fitted to demand and service, not when shelves merely looked rich."
+      ],
+      "storyParagraphsZh": [
+        "水果商帕沃用货架丰满判断生意。空位看起来像失败，于是梨、浆果和甜瓜的订货足以把每块木板铺满两层。顾客赞叹陈列，后排水果却在卖出前变软。工人每晚丢掉整箱果子，帕沃仍指着剩余丰盛，证明店铺强大。现金进入库存，正以腐烂方式离开。",
+        "会计内拉把当月售出水果的成本与平均持有库存比较，得到的比率估计存货经过销售循环多少次，她又把它换算成大致持有天数。内拉把销售与采购分开，因为多买水果能让当月活动看似繁忙，周转却不变甚至恶化。她在分子中使用成本而非售价，避免利润差异伪装成跨品类库存移动。浆果相对短寿命周转很慢，腌存苹果虽同样慢，却仍可使用。一个数字能提出效率问题，类别、保质期、季节与供应提前期却共同决定其意义。",
+        "帕沃把每项订货砍半。浪费下降，热门梨却在集市日前售罄，常客转去别店。极高比率可能表示高效流动，也可能表示库存不足、销售流失与服务脆弱。内拉按商品设置不同补货点，追踪需求波动和配送可靠性，并在缺货后果足以证明持有成本合理时保留安全库存。",
+        "帕沃改变成本流转假设时，比率会变化；节庆又让月末库存异常偏低。若不检查会计政策和产品组合，只比较一个时期或另一家店就会误导。内拉使用平均余额、长期趋势、实物盘点、行业背景，以及毛利、缺货、损耗、库龄和现金转换等补充指标。亏损中的快速流动并非成功。",
+        "新制度暴露隐藏取舍。批量折扣降低采购价，也增加腐损与储存；一些稀有水果卖得慢，却吸引顾客购买高利润主食；另一些存货占着空间，只因帕沃不愿承认采购错误。因此，决定把比率与战略、服务水平、易腐性、过时、融资成本及供应商约束结合，而不把速度当孤立目标。",
+        "内拉分析的是库存周转：一段时期内平均库存被售出或使用的次数，常用销售成本除以平均库存估计，反向还可表达为库存天数。周转过低可能表示过量、过时或滞销；过高则可能表示短缺或销售流失。只有当存货按适合需求与服务的速度移动，而非货架单纯显得富有，最满的店才真正变健康。"
+      ],
+      "conceptName": "Inventory turnover",
+      "conceptNameZh": "库存周转",
+      "explanationParagraphs": [
+        "Inventory turnover estimates how often average inventory is sold or used during a period, commonly as cost of goods sold divided by average inventory. Days in inventory expresses the related holding duration.",
+        "Interpretation depends on product life, seasonality, lead time, accounting policy, margins, and service goals. Low turnover may signal excess or obsolescence; very high turnover may signal stockouts, underinvestment, or lost sales."
+      ],
+      "explanationParagraphsZh": [
+        "库存周转估计一段时期内平均库存被售出或使用多少次，常用销售成本除以平均库存计算；库存天数表达相关持有时长。",
+        "解释取决于产品寿命、季节、提前期、会计政策、利润与服务目标。低周转可能表示过量或过时，极高周转也可能表示缺货、投入不足或销售流失。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0416-bullwhip-effect",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0416",
+      "fieldTitle": "Wholesale and retail sales",
+      "fieldTitleZh": "批发与零售销售",
+      "title": "The Rain That Grew Upstream",
+      "titleZh": "逆流变大的那场雨",
+      "summary": "A small shower raises umbrella sales slightly, yet repeated forecasting, batching, and shortage fear turn it into a factory order many times larger.",
+      "summaryZh": "一场小雨只让雨伞销量略增，反复预测、批量订货与缺货恐惧却把它变成大得多的工厂订单。",
+      "storyParagraphs": [
+        "A brief shower made the riverside shop sell ten more umbrellas than usual. Retailer Lio feared a wet month and ordered twenty extra from the wholesaler. The wholesaler saw the order, assumed several shops had detected a trend, and requested forty from the distributor. The distributor combined orders into a full wagon and asked the factory for eighty. Upstream, one small shower appeared to have become a season of rain.",
+        "Each participant acted on orders from the next stage rather than the sales made to final customers. Long lead times encouraged larger safety adjustments. The wholesaler ordered in batches to save transport, while a temporary discount pulled future purchases into one week. When the factory warned it might ration scarce cloth, shops inflated requests to secure a larger allocation. Each stage protected itself rationally against uncertainty, yet none saw how its adjustment became new evidence for the next stage's larger adjustment after another lead-time delay further upstream. Forecast updating, batching, price variation, shortage gaming, and delay amplified one another.",
+        "The following weeks were dry. Customers bought at normal rates while warehouses filled with umbrellas. The factory cut production, cloth suppliers dismissed workers, and later shortages appeared when everyone reduced orders together. Final demand had changed modestly; replenishment orders had oscillated dramatically. Costs emerged as excess inventory, emergency transport, unstable schedules, poor service, and mistrust between firms that blamed one another for the variation they had jointly produced.",
+        "Coordinator Sera created shared access to point-of-sale data and inventory positions, reduced lead time, encouraged smaller replenishment batches, and replaced temporary wholesale discounts with steadier terms. During scarcity, allocation depended partly on prior sales rather than current inflated orders. Firms agreed who would hold safety stock and tested forecasts against actual consumption. Orders moved closer to customer demand, though weather uncertainty itself could not be removed.",
+        "Sharing data was not a complete cure. Firms could misreport, systems could lag, and a genuine storm required rapid upstream response. Centralising every decision also risked ignoring local knowledge. Sera monitored variance at each stage, distinguished true demand shifts from order-policy reactions, and revised incentives that rewarded local protection at network expense. The goal was not perfectly flat orders but less avoidable amplification and faster recognition of its causes.",
+        "The chain had produced the bullwhip effect: demand information becomes distorted as orders move upstream, so order variability grows larger than variability in final customer sales. Forecast updating, order batching, price promotions, rationing games, lead times, and local incentives are common drivers. Shared demand data, shorter lead times, stable pricing, coordinated replenishment, and allocation rules can reduce it. The factory had never seen the shower; it had seen each intermediary's increasingly cautious interpretation of the umbrella order below."
+      ],
+      "storyParagraphsZh": [
+        "一场短雨让河边商店比平常多卖十把伞。零售商利奥担心整月多雨，向批发商多订二十把。批发商看见订单，以为多家店已发现趋势，向分销商要四十把。分销商凑成整车，向工厂要八十把。到达上游时，一场小雨仿佛变成整季降水。",
+        "每名参与者依据下一环节订单行动，而非终端顾客真实购买。漫长提前期鼓励更大安全调整；批发商为省运输而批量订货，临时折扣又把未来采购拉进一周。工厂警告可能限量供应伞布后，商店夸大请求以争取更大配额。每一层都在理性保护自己，却看不见自身调整怎样在又一段提前期后，成为更上游扩大调整的新证据。预测更新、批量、价格变化、缺货博弈与延迟互相放大。",
+        "随后数周天气干燥。顾客恢复正常购买，仓库却塞满雨伞。工厂削减生产，布料供应商裁员；当所有人一起减单，后来又出现短缺。终端需求变化温和，补货订单却剧烈摆动，造成过量库存、紧急运输、不稳排程、糟糕服务，以及企业间相互归咎共同制造波动的不信任。",
+        "协调员塞拉让各方共享销售点数据与库存位置，缩短提前期，鼓励小批补货，并用稳定条款替代临时批发折扣。短缺时，配额部分依据过去真实销量，不只看当前夸大订单。企业约定由谁持有安全库存，并用实际消费检验预测。订单更接近顾客需求，天气本身的不确定却无法消除。",
+        "共享数据并非万能。企业可能误报，系统会延迟，真正风暴也要求上游快速回应；把所有决定集中还可能忽略地方知识。塞拉监测每一环节的方差，区分真实需求变化与订货政策反应，也修订那些奖励局部自保、损害整体网络的激励。目标不是完全平坦的订单，而是减少可避免放大，并更早看见原因。",
+        "这条链制造的是牛鞭效应：需求信息随订单向上游移动而失真，订单波动因此大于终端顾客销量波动。预测更新、批量订货、价格促销、限量博弈、提前期和局部激励都是常见驱动。共享需求数据、缩短提前期、稳定价格、协调补货与配额规则能够缓解。工厂从未看见那场小雨，只看见每个中间人对下游雨伞订单越来越谨慎的解释。"
+      ],
+      "conceptName": "Bullwhip effect",
+      "conceptNameZh": "牛鞭效应",
+      "explanationParagraphs": [
+        "The bullwhip effect occurs when order variability becomes larger than final-demand variability as information moves upstream through a supply chain. Local forecasting and replenishment decisions can turn small sales changes into large production swings.",
+        "Drivers include forecast updating, batching, promotions, rationing games, lead times, and incentives. Point-of-sale visibility, shorter lead times, stable pricing, smaller batches, coordinated inventory, and better allocation rules can reduce amplification."
+      ],
+      "explanationParagraphsZh": [
+        "牛鞭效应发生于信息沿供应链向上游移动时，订单波动大于终端需求波动。局部预测与补货决定会把小幅销售变化变成巨大生产摆动。",
+        "驱动因素包括预测更新、批量、促销、限量博弈、提前期与激励。销售点可见、缩短提前期、稳定价格、小批量、协调库存和更好配额规则能够缓解放大。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0416-price-discrimination",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0416",
+      "fieldTitle": "Wholesale and retail sales",
+      "fieldTitleZh": "批发与零售销售",
+      "title": "Three Tickets for the Same Tide",
+      "titleZh": "同一班潮水的三种船票",
+      "summary": "Passengers on one ferry pay three prices for the same crossing, forcing the harbour to distinguish cost differences from prices shaped by willingness and ability to pay.",
+      "summaryZh": "同一渡船的乘客为同一航程支付三种价格，港口必须区分成本差异与按支付意愿和能力塑造的价格。",
+      "storyParagraphs": [
+        "The noon ferry charged merchants six coins, residents three, and travellers who booked a week early two. All stood on the same deck and crossed on the same tide. Merchant Varo accused the captain of arbitrary unfairness. The captain replied that empty off-peak places earned nothing, residents kept the route viable year-round, and merchants paid for flexibility. Yet the actual cost of carrying one more passenger was nearly identical across the three tickets.",
+        "Accountant Lera examined demand. Merchants travelling for a closing market were less willing to delay when price rose. Leisure travellers could change day or route, and early purchase revealed that flexibility. Capacity also mattered because an empty seat vanished at departure and could never be stored for any later crossing. Named tickets and immediate consumption made resale difficult; otherwise low-price buyers could resell to high-price passengers and erase the separation. The ferry also possessed market power at noon because the bridge was distant and no rival boat met the market bell.",
+        "The captain introduced menu choices: refundable flexible tickets cost more, fixed early tickets less, and residents qualified by route use. Some passengers selected themselves through conditions; others were assigned a group price. Lera separated these designs from price differences caused by genuine extra costs, such as private cabins or heavy cargo. Charging more because service costs more is not the same mechanism as varying prices for comparable service according to willingness to pay.",
+        "A trader began buying cheap tickets through local residents. The captain added identity checks, which reduced resale but delayed boarding and collected personal data. Enforcement had cost and privacy consequences. If competing ferries entered or a bridge opened, high-price passengers could leave and the scheme would weaken. Different prices required both some power over price and an ability to limit arbitrage or design choices that induced separation.",
+        "The policy filled seats and preserved low fares for flexible travellers, expanding access on quiet days. It also extracted more from captive merchants and could burden people misclassified by crude groups. The harbour reviewed disability access, essential travel, transparency, data use, and applicable law. Efficiency, output, profit, and fairness did not always move together, so economic description could not by itself settle the policy's legitimacy.",
+        "Lera identified price discrimination: charging different effective prices for comparable goods or services in ways not fully explained by cost differences, often according to willingness to pay, demand responsiveness, group, quantity, timing, or self-selected terms. It generally requires market power and limits on resale. It can increase output and access or transfer surplus and create unfair exclusion; forms and legal treatment vary. The tide carried every passenger equally, but the ferry sold their different alternatives, urgency, and flexibility along with the crossing."
+      ],
+      "storyParagraphsZh": [
+        "正午渡船向商人收六枚钱，居民三枚，提前一周订票的旅客两枚。所有人站在同一甲板，随同一班潮水过河。商人瓦罗指责船长任意不公。船长回答，离峰空位没有收入，居民全年维持航线，商人则为灵活性付费。可实际上，多载一名乘客的成本在三种票间几乎相同。",
+        "会计莱拉检查需求。赶闭市的商人面对涨价时不愿延后；休闲旅客可以改日或改道，早订也暴露这种灵活。容量同样重要，因为空座在开船时消失，不能储存给任何后续航程。实名票和即时消费让转售困难，否则低价买家可转卖给高价乘客，消除区分。渡船在正午还有定价力量，因为桥很远，也没有竞争船赶得上市钟。",
+        "船长引入菜单选择：可退款灵活票更贵，固定早鸟票更便宜，居民则按日常使用资格定价。一些乘客通过条件自行选择，另一些被分进群体价格。莱拉把这些设计与真正额外成本造成的价格差异分开，例如私人舱位或重货。因服务成本更高而加价，不同于按支付意愿改变可比服务价格。",
+        "一名商人开始通过本地居民购买便宜票。船长加入身份检查，减少转售，却拖慢登船并收集个人数据。执行本身带来成本与隐私后果。若竞争渡船进入或桥梁开放，高价乘客可以离开，方案便会削弱。差异价格既需要一定定价力量，也需要限制套利，或用选择条件诱发分离。",
+        "政策填满座位，为灵活旅客保留低价，扩大安静时段的可及性；它也从被锁定商人身上取得更多，并可能让粗糙分组误伤乘客。港口审查残障通行、必要出行、透明、数据使用和适用法律。效率、产量、利润与公平不总同向，经济描述本身不能决定政策是否正当。",
+        "莱拉辨认的是价格歧视：对可比商品或服务收取不能由成本差异充分解释的不同有效价格，常依据支付意愿、需求反应、群体、数量、时机或自选条款。它通常需要市场力量和对转售的限制。它可能扩大产量与可及性，也可能转移剩余、制造不公排斥；形式与法律处理各不相同。潮水平等承载每位乘客，渡船出售的却不只航程，还有他们不同的替代、紧迫与灵活。"
+      ],
+      "conceptName": "Price discrimination",
+      "conceptNameZh": "价格歧视",
+      "explanationParagraphs": [
+        "Price discrimination charges different effective prices for comparable goods or services for reasons not fully explained by cost, often using group, timing, quantity, willingness to pay, or self-selected contract terms.",
+        "It typically requires some market power and limits on resale. It may expand output or access, but can also extract surplus, use intrusive data, or create unfair exclusion. Cost-based price differences are conceptually distinct."
+      ],
+      "explanationParagraphsZh": [
+        "价格歧视因成本不能充分解释的原因，对可比商品或服务收取不同有效价格，常使用群体、时机、数量、支付意愿或自选合同条款。",
+        "它通常需要一定市场力量和转售限制。它可能扩大产量或可及性，也可能抽取剩余、使用侵入性数据或制造不公排斥。成本造成的价格差异在概念上不同。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0417-community-of-practice",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0417",
+      "fieldTitle": "Work skills",
+      "fieldTitleZh": "工作技能",
+      "title": "The Bench That Repaired More Than Machines",
+      "titleZh": "修理的不只是机器的长凳",
+      "summary": "A workshop's repair manual contains every official procedure, yet newcomers learn the difficult work on a lunch bench where practitioners share cases, language, and judgement.",
+      "summaryZh": "工坊维修手册包含所有正式程序，新人真正学会困难工作，却是在午间长凳上分享案例、语言与判断。",
+      "storyParagraphs": [
+        "The mill printed a complete repair manual and placed one copy at every station. New apprentice Ina could name each component and follow standard procedures. When an old press began knocking only under wet weather and heavy load, the manual offered three possible faults. Ina replaced the obvious bearing twice. At lunch, mechanics on the courtyard bench listened to the rhythm, compared it with remembered failures, and asked which operator had first noticed the sound.",
+        "Ina began sitting at the edge of the bench. At first she carried tools, cleaned failed parts, and listened to stories whose shorthand she barely understood. Senior mechanics let her inspect low-risk jobs and explained why a rule applied differently in particular machines. Her peripheral tasks were not pretend work; they gave legitimate access to materials, conversations, standards, and consequences while limiting the cost of novice error. Access was organised through relationships: permission to observe, touch tools, ask questions, and contribute small tasks determined whether the periphery led inward or remained a boundary of exclusion. A manual alone could not grant that social membership.",
+        "Months later, Ina brought a worn seal to the bench and proposed that heat, not moisture, caused the knock. Others challenged her evidence, then tested the press and revised their shared diagnostic sequence. Knowledge did not move only from experts to novice. Participation changed Ina's identity from visitor to mechanic and changed the group's repertoire through her observation. Membership, competence, and the practice itself developed together.",
+        "The manager tried to capture every bench conversation in a database and cancelled long lunches. Reports became formal, cautious, and detached from the parts being handled; useful exchange declined. Restoring the bench did not mean rejecting documents. Mechanics added photographs, cases, and decision rationales to the manual, while keeping time for joint problem solving. Some judgement could be represented, but participation supplied context for knowing when and how to use it.",
+        "The bench also had faults. Senior members mocked one newcomer, protected unsafe shortcuts, and excluded night-shift workers from conversation. Ina created rotating case reviews, remote participation, newcomer sponsorship, and links to engineering evidence outside the group. A shared practice could preserve expertise or reproduce error and hierarchy. Its value depended on access, challenge, connection, and stewardship, not merely on people gathering informally.",
+        "The mechanics formed a community of practice: people who share a domain of concern and deepen knowledge through sustained participation in a common practice, relationships, stories, tools, language, and problem solving. Learning involves becoming able to participate and developing an identity, not only receiving information. Such communities may emerge rather than be commanded, and they can exclude or stagnate. The bench repaired machines because it also repaired, tested, and transmitted what counted as competent work."
+      ],
+      "storyParagraphsZh": [
+        "工厂印制完整维修手册，每个工位都有一册。新学徒伊娜能说出所有部件，也会遵循标准程序。一台旧压力机却只在潮湿天气和重载时敲响，手册列出三种可能故障。伊娜两次更换最明显的轴承。午餐时，院中长凳上的技工听其节奏，与记忆中的故障比较，又追问哪名操作员最先听见。",
+        "伊娜开始坐在长凳边缘。起初，她搬工具、清理损坏零件，听那些几乎听不懂的行话故事。资深技工让她检查低风险任务，并解释同一规则为何在特定机器上用法不同。边缘任务并非假工作，它们在限制新手错误代价的同时，让她正当地接触材料、对话、标准与后果。进入由关系组织：能否观察、触碰工具、提问并贡献小任务，决定边缘会通向内部，还是继续成为排斥。手册本身无法授予这种社会成员身份。",
+        "几个月后，伊娜把磨损密封件带到长凳，提出敲击来自热而非潮湿。其他人质疑证据，随后测试机器并修订共同诊断顺序。知识不只从专家流向新人。参与把伊娜的身份从访客变成技工，她的观察也改变群体的共同方法。成员身份、能力与实践本身一起发展。",
+        "经理试图把所有长凳谈话录入数据库，取消漫长午餐。报告变得正式、谨慎，并脱离手中零件，有用交流下降。恢复长凳不等于拒绝文件。技工把照片、案例与判断理由加入手册，同时保留共同解决问题的时间。部分判断可以被表达，参与则提供何时、怎样使用它的语境。",
+        "长凳也有缺点。资深成员嘲笑一名新人，保护不安全捷径，还把夜班工人排除在对话外。伊娜建立轮换案例评审、远程参与、新人支持，并连接群体外的工程证据。共同实践可以保存专长，也会复制错误与等级；价值取决于进入、质疑、外部连接与维护，而不只是人们非正式聚集。",
+        "这些技工形成的是实践共同体：一群人共享某个关切领域，通过持续参与共同实践、关系、故事、工具、语言与问题解决来深化知识。学习不仅是接收信息，也包括能够参与并形成身份。这种共同体可能自然形成而非被命令，也可能排斥或停滞。长凳之所以能修机器，是因为它还在修订、检验并传递什么才算胜任工作。"
+      ],
+      "conceptName": "Community of practice",
+      "conceptNameZh": "实践共同体",
+      "explanationParagraphs": [
+        "A community of practice is a group that shares a domain and develops knowledge through sustained participation in common activities, relationships, tools, stories, language, and problem solving. Learning includes movement toward fuller participation and identity.",
+        "It is more than a team, database, or informal gathering. Communities can preserve tacit judgement and innovate, but may also exclude newcomers or reproduce error, so access, challenge, documentation, and external connections matter."
+      ],
+      "explanationParagraphsZh": [
+        "实践共同体是一群共享某个领域的人，通过持续参与共同活动、关系、工具、故事、语言与问题解决来发展知识。学习包括走向更充分参与与身份形成。",
+        "它不只是团队、数据库或非正式聚会。共同体可保存默会判断并创新，也会排斥新人或复制错误，因此进入、质疑、记录与外部连接都很重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0417-role-clarity",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0417",
+      "fieldTitle": "Work skills",
+      "fieldTitleZh": "工作技能",
+      "title": "Everyone Was Responsible for the Fire",
+      "titleZh": "那场人人负责的火",
+      "summary": "A warehouse declares fire safety everyone's duty and discovers that shared concern without defined outcomes, authority, and handoffs can leave every bucket untouched.",
+      "summaryZh": "仓库宣布消防是所有人的责任，却发现共同关切若缺少明确结果、权力与交接，会让每只水桶都无人拿起。",
+      "storyParagraphs": [
+        "The warehouse charter said every employee was responsible for fire safety. When smoke rose from the packing room, clerks assumed loaders would fetch water because they worked near the pumps. Loaders assumed the watch captain would command them. The captain waited for the manager, believing only she could stop production. Everyone watched the same smoke and acted consistently with a different interpretation of the same shared responsibility.",
+        "The fire was contained late and damaged a week's stock. Manager Sela wrote a longer statement declaring safety the highest priority. During the next drill, hesitation returned. Importance did not answer who detected, who decided, who fetched equipment, who called external help, or whose authority overrode ordinary work. Nor did it define what information had to pass between roles or how an absent person would be replaced.",
+        "Sela mapped outcomes, tasks, decision rights, interfaces, escalation, and backup. The first observer sounded the alarm; the watch captain assessed and directed evacuation; named floor leads checked zones; any worker could stop dangerous machinery; an alternate inherited each critical role when the primary was absent. The map distinguished accountability from execution: one person could remain answerable for an outcome while several others performed defined parts and supplied evidence. People practised handoffs and could state both what they owned and what they needed from others.",
+        "The new chart became too rigid during a night fire when the appointed water lead was trapped outside. Workers waited because the box carrying his role contained no explicit permission to adapt. Sela revised the system around intent and bounded authority. Cross-trained backups could step in, and anyone could act against imminent harm while reporting as soon as possible. Clear roles coordinated judgement; they did not eliminate judgement.",
+        "A further conflict appeared when production supervisors ordered speed while safety leads ordered inspection. Both roles were individually clear but issued incompatible expectations to the same worker. Senior leaders resolved priorities and created a rapid appeal path. Workers also needed clarity about where discretion began, what success looked like, and which trade-offs required consultation rather than private choice during unusual or rapidly changing conditions on site. Sela reviewed roles as equipment, staffing, and risks changed, because yesterday's clarity could become tomorrow's gap. Too much prescription also narrowed learning and discouraged useful mutual aid.",
+        "Sela built role clarity: a shared understanding of a role's purpose, expected outcomes, responsibilities, authority, priorities, interfaces, and standards. Clarity reduces ambiguity, duplication, omission, and stress, especially in interdependent work. It differs from rigid job boundaries and does not resolve role conflict unless incompatible expectations are addressed. Everyone could still care about fire safety, but care became actionable only when people knew where responsibility began, connected, transferred, and could be assumed."
+      ],
+      "storyParagraphsZh": [
+        "仓库章程写着，每名员工都负责消防。包装间冒烟时，书记以为装卸工会取水，因为他们靠近水泵；装卸工以为巡夜队长会下令；队长则等待经理，认为只有她能停产。所有人看着同一股烟，却依据对同一份共同责任的不同解释一致行动。",
+        "火势很晚才被控制，烧坏一周存货。经理塞拉写出更长声明，宣布安全是最高优先。下一次演练，迟疑仍然出现。重要性没有回答谁发现、谁决定、谁取设备、谁呼叫外援、谁有权压过日常工作，也没规定信息如何在角色间传递，缺席者又由谁替代。",
+        "塞拉绘出结果、任务、决策权、接口、升级与备份。第一位发现者拉响警报；巡夜队长判断并指挥疏散；指定楼层负责人检查区域；任何工人都可停止危险机器；关键岗位缺席时由替补继承。图表还区分问责与执行：一人可继续对结果负责，其他多人则执行明确部分并提供证据。人们练习交接，也能说清自己负责什么、需要别人提供什么。",
+        "新图表在一次夜火中又变得过于僵硬，指定取水负责人被困在外，工人等待，因为角色框没有明确允许调整。塞拉围绕意图与有限授权修订。交叉训练的替补可以接手，任何人面对迫近伤害都可行动，并尽快报告。清晰角色协调判断，不是消灭判断。",
+        "后来又出现冲突：生产主管要求加速，安全负责人要求检查。两个角色各自清楚，却向同一工人发出不兼容期待。高层明确优先顺序，并建立快速申诉路径。现场遇到异常或快速变化时，工人还需要知道裁量从哪里开始、成功是什么，以及哪些取舍必须协商而非私下决定。设备、人员与风险变化时，塞拉会复查角色，因为昨天的清楚可能成为明天的缺口。规定过细也会缩窄学习，压制有益互助。",
+        "塞拉建立的是角色清晰度：成员共同理解一项角色的目的、预期结果、责任、权力、优先级、接口与标准。清晰可减少含混、重复、遗漏与压力，尤其适用于相互依赖工作。它不同于僵硬岗位边界，也不会在不处理冲突期待时自动解决角色冲突。人人仍可关心消防，只有当责任从哪里开始、连接、转移，又可由谁接手变得明确，关心才成为行动。"
+      ],
+      "conceptName": "Role clarity",
+      "conceptNameZh": "角色清晰度",
+      "explanationParagraphs": [
+        "Role clarity is shared understanding of a role's purpose, expected outcomes, responsibilities, authority, priorities, interfaces, and performance standards. It reduces ambiguity, duplicated effort, gaps, and coordination stress.",
+        "Clarity is not rigid prescription. Work still needs judgement, backup, adaptation, and mutual aid, while incompatible expectations create role conflict that must be resolved rather than merely described more precisely."
+      ],
+      "explanationParagraphsZh": [
+        "角色清晰度是成员对角色目的、预期结果、责任、权力、优先级、接口与绩效标准的共同理解，可减少含混、重复、缺口与协调压力。",
+        "清晰不等于僵硬规定。工作仍需判断、备份、适应与互助；不兼容期待造成的角色冲突，也必须被解决，而非只描述得更精确。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0417-adaptive-expertise",
+      "batchId": "batch-006",
+      "categoryCode": "04",
+      "fieldCode": "0417",
+      "fieldTitle": "Work skills",
+      "fieldTitleZh": "工作技能",
+      "title": "The Recipe That Obeyed the Old Flour",
+      "titleZh": "只服从旧面粉的配方",
+      "summary": "A master baker reproduces an old recipe perfectly and fails with a new harvest until efficiency is joined by an understanding that can generate a new response.",
+      "summaryZh": "烘焙师完美复刻旧配方，却在新收成前失败，直到高效熟练与能够生成新反应的理解结合。",
+      "storyParagraphs": [
+        "Master baker Taro could make two hundred loaves with identical crust, weight, and timing. He measured water by one brass cup and kneaded for exactly four songs. After a wet harvest, the new flour absorbed water differently. Dough collapsed, but Taro repeated the proven procedure more precisely, blamed apprentices for inconsistency, and rejected every deviation as loss of craft. His efficiency protected a solution after the problem had changed.",
+        "Apprentice Mira compared small batches. She varied water, rest, temperature, and kneading one at a time, recorded texture and rise, and asked the miller about moisture and protein. Her first improvised loaf was worse than Taro's. Novelty without knowledge produced noise. Mira's notes connected observable cues to underlying mechanisms, allowing later adjustments to be predictions rather than guesses. She then used fermentation and gluten principles to predict which adjustment should compensate for the changed flour, tested it, and explained why it worked.",
+        "Taro adopted the new quantities and soon reproduced them efficiently. Mira then brought flour from a dry upland farm; the revised recipe failed in the opposite direction. Memorising the second answer would only replace one brittle routine with another. The bakery began identifying cues that indicated when the standard process fit, when minor adjustment sufficed, and when a new model or experiment was needed.",
+        "Training changed. Apprentices first acquired reliable routines, because constant invention before basic control wasted food and hid cause. They then compared cases, explained mechanisms, diagnosed deliberately varied dough, predicted outcomes, and received feedback. The bakery deliberately alternated consolidation with variation, because experience becomes adaptive only when learners compare cases and extract what changes and what remains invariant. Senior bakers had to expose reasoning, not just demonstrate speed under pressure. Timed production built fluency; unfamiliar problems built flexibility. Efficiency and innovation were treated as complementary dimensions rather than stages where one permanently replaced the other.",
+        "During a festival, a broken oven forced the team to bake with uneven stone heat. Mira adapted loading order and loaf size while preserving safety and quality constraints. She stated which assumptions were uncertain and returned to the standard method when the oven was repaired. Adaptation did not mean improvising forever. It included recognising novelty, transferring principles, testing responsibly, and knowing when an established routine remained the best tool.",
+        "Mira was developing adaptive expertise: the capacity to perform efficiently in familiar conditions while using conceptual understanding, metacognition, and flexible experimentation to respond productively to unfamiliar ones. It grows from strong routine knowledge joined with varied experience, explanation, feedback, and opportunities to innovate. It differs from both rigid mastery and ungrounded improvisation. Taro's old recipe had not become foolish; it had become an answer that no longer knew which question it answered."
+      ],
+      "storyParagraphsZh": [
+        "烘焙师塔罗能做出两百个外壳、重量与时间完全一致的面包。他用同一只黄铜杯量水，揉面固定四首歌。一次潮湿收成后，新面粉吸水不同，面团坍塌。塔罗更精确地重复旧程序，指责学徒不一致，并把一切偏离视为手艺退化。他的效率在问题改变后仍保护旧答案。",
+        "学徒米拉比较小批面团。她逐项改变水量、静置、温度与揉制，记录质地和膨胀，又向磨坊主询问水分与蛋白。她第一次即兴面包比塔罗更糟，新奇而无知识只产生噪声。米拉的笔记把可观察线索连接到底层机制，使后续调整成为预测而非猜测。随后，她用发酵与面筋原理预测哪项调整能补偿面粉变化，进行测试并解释为何有效。",
+        "塔罗采用新用量，很快又能高效复刻。米拉随后带来旱地面粉，修订配方却向相反方向失败。背熟第二个答案，只会用另一套脆弱惯例替换原来那套。烘焙坊开始识别线索：何时标准程序适合，何时微调足够，何时需要新模型或试验。",
+        "训练随之改变。学徒先掌握可靠流程，因为尚无基本控制就不断创新，会浪费食物、遮住原因；随后比较案例、解释机制、诊断有意变化的面团、预测结果并获得反馈。烘焙坊有意交替巩固与变式，因为只有比较案例、提取什么改变和什么不变，经验才会变得可适应。资深烘焙师必须暴露推理，不能只在压力下展示速度。计时生产建立流畅，陌生问题建立灵活。效率与创新成为互补维度，而非前者被后者永久替代的阶段。",
+        "节庆期间，烤炉损坏，石面受热不均。米拉调整装炉顺序与面包大小，同时保留安全和质量约束。她说明哪些假设仍不确定，烤炉修复后又回到标准方法。适应不等于永远即兴，它包括识别新颖、迁移原理、负责任测试，以及知道何时既有流程仍是最佳工具。",
+        "米拉正在形成适应性专长：在熟悉条件下高效执行，同时借助概念理解、元认知与灵活试验，对陌生条件作出有效回应的能力。它来自扎实惯例知识与多样经验、解释、反馈和创新机会的结合，既不同于僵硬熟练，也不同于无根据即兴。塔罗旧配方没有变愚蠢，只是变成一个已不知道自己回答哪道问题的答案。"
+      ],
+      "conceptName": "Adaptive expertise",
+      "conceptNameZh": "适应性专长",
+      "explanationParagraphs": [
+        "Adaptive expertise combines efficient, accurate performance in familiar situations with conceptual understanding and flexible problem solving in unfamiliar ones. It includes recognising when routine assumptions no longer fit.",
+        "It develops through robust foundational skill, varied cases, explanation, prediction, feedback, reflection, and responsible experimentation. It is neither rigid routine expertise nor improvisation without evidence or constraints."
+      ],
+      "explanationParagraphsZh": [
+        "适应性专长把熟悉情境中的高效准确表现，与陌生情境中的概念理解和灵活问题解决结合，也包括识别惯例假设何时不再适用。",
+        "它通过扎实基础技能、多样案例、解释、预测、反馈、反思与负责任试验发展，既非僵硬惯例专长，也非没有证据或约束的即兴。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

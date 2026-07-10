@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-009",
+  "articles": [
+    {
+      "id": "0611-mental-models",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0611",
+      "fieldTitle": "Computer use",
+      "fieldTitleZh": "计算机使用",
+      "title": "The Save Button That Ate the Letter",
+      "titleZh": "吞掉信件的保存按钮",
+      "summary": "A writing machine labels a slot Save but behaves like a dispatch chute, forcing its maker to confront the system users reasonably imagine from visible cues.",
+      "summaryZh": "写作机把投递口标为“保存”，行为却像发送滑槽，迫使设计者面对用户从可见线索中合理想象的系统。",
+      "storyParagraphs": [
+        "The archive installed a writing machine with a blue button labelled Save. Clerk Mina drafted a contract, pressed it, and watched the page vanish. She assumed the document had been stored in her personal drawer, as paper filing worked. In fact, the machine immediately dispatched the page to a central review queue and removed the editable copy. When Mina could not retrieve it, engineer Taro called her careless for not understanding the mechanism.",
+        "Other clerks failed differently. One pressed Save repeatedly because nothing confirmed success, creating five review copies. Another avoided the button and lost work during a power cut. A third believed the back arrow would undo the dispatch because it returned to the previous screen, but the external action had already occurred. Each person built a plausible account from labels, familiar objects, sequence, and feedback. Their actions were coherent inside that account even when it differed from the machine. Blame had merely hidden a design failure.",
+        "Taro first wrote a longer manual. Errors continued because people needed an actionable understanding while working, not a complete diagram memorised beforehand. He separated Save draft from Submit for review, kept editing state visible, showed destination and version, confirmed irreversible actions, and offered recovery where possible. A preview stated what would happen before commitment; a status history showed what had happened afterward. The gap between intention and available action narrowed, as did the gap between system state and human interpretation.",
+        "The redesign created a new problem. To appear familiar, Taro copied the appearance of paper folders while allowing one document to exist in several collections. Users inferred physical duplication and deleted what they thought was a spare, removing the shared original. Familiar metaphor helped only where behaviour remained consistent. Taro showed references explicitly, named shared ownership, and tested comprehension through realistic tasks rather than asking whether users liked the screen.",
+        "Expert clerks and newcomers did not imagine identical systems, and their understanding changed with experience. Taro did not demand a perfectly accurate internal theory. He aimed for a sufficiently useful account that predicted consequences, supported transfer to new tasks, and could be corrected by timely feedback. Training remained necessary for complex permissions, but training no longer had to compensate for misleading labels and invisible state changes.",
+        "The machine exposed mental models in human-computer interaction: users form internal explanations of how a system works from prior experience, interface cues, observed outcomes, and instruction, then use those explanations to predict and act. Designers provide a conceptual model through structure, signifiers, mappings, constraints, and feedback. Mismatch creates systematic error rather than mere user stupidity. Mina had not misunderstood a neutral button. The machine had borrowed the language of keeping while performing the act of sending."
+      ],
+      "storyParagraphsZh": [
+        "档案馆安装一台写作机，蓝色按钮上写着“保存”。书记米娜起草合同后按下按钮，页面随即消失。她依照纸质归档经验，以为文件已存进个人抽屉；机器实际立即把页面发到中央审核队列，并移除可编辑副本。米娜无法取回时，工程师塔罗斥责她粗心，不懂机器机制。",
+        "其他书记以不同方式失败。有人因没有成功反馈而反复按“保存”，制造五份审核件；有人避开按钮，断电时丢掉工作；还有人以为返回箭头能撤销投递，因为界面回到上一页，外部动作却早已完成。每个人都从标签、熟悉物件、操作顺序与反馈建立一套合理解释。他们的行为在那套解释中一致，只是解释与机器不同。责怪用户只是藏住了一次设计失败。",
+        "塔罗先写出更长手册，错误仍然继续。人们工作时需要可用于行动的理解，不是预先背下一张完整结构图。他把“保存草稿”与“提交审核”分开，让编辑状态持续可见，显示目的地与版本，对不可逆动作先确认，并在可能时提供恢复。预览在提交前说明将发生什么，状态历史在事后说明已发生什么。意图与可用动作、系统状态与人的解释之间的距离都缩小。",
+        "重设计又产生新问题。为了显得熟悉，塔罗复制纸质文件夹外观，却允许一份文件同时存在于多个集合。用户推断那里有多个实体副本，删除以为多余的一份，结果共享原件也消失。熟悉隐喻只在行为一致处有用。塔罗明确显示引用关系与共享所有权，并用真实任务测试理解，而不是只问用户是否喜欢屏幕。",
+        "熟练书记与新手想象的系统并不相同，理解也会随经验变化。塔罗不要求人人拥有完全准确的内部理论，只求那套解释足够有用，能预测后果、迁移到新任务，并由及时反馈纠正。复杂权限仍需培训，但培训不再负责弥补误导标签与不可见状态变化。",
+        "这台机器暴露的是人机交互中的心智模型：用户根据过去经验、界面线索、观察结果与说明，在头脑中形成系统怎样运作的解释，再据此预测和行动。设计者则通过结构、示意、映射、约束与反馈提供概念模型。两者错位会制造系统性错误，并非只是用户愚笨。米娜没有误解一个中性按钮；机器借用了“保留”的语言，执行的却是“发送”的动作。"
+      ],
+      "conceptName": "Mental models in human-computer interaction",
+      "conceptNameZh": "人机交互中的心智模型",
+      "explanationParagraphs": [
+        "Mental models in human-computer interaction are users' internal explanations of system structure and behaviour, formed from prior experience, visible cues, feedback, and learning. They guide prediction and action without needing to reproduce the implementation exactly.",
+        "Designers shape a conceptual model through labels, mappings, constraints, state visibility, and feedback. Persistent mismatch between the presented model and actual behaviour produces systematic errors that documentation alone may not repair."
+      ],
+      "explanationParagraphsZh": [
+        "人机交互中的心智模型是用户根据经验、可见线索、反馈与学习形成的系统结构和行为解释。它指导预测与行动，无需精确复制底层实现。",
+        "设计者通过标签、映射、约束、状态可见性与反馈塑造概念模型。呈现模型与真实行为持续错位会制造系统性错误，单靠文档未必能修复。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0611-file-hierarchy",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0611",
+      "fieldTitle": "Computer use",
+      "fieldTitleZh": "计算机使用",
+      "title": "The Archive With One Enormous Desk",
+      "titleZh": "只有一张巨大桌面的档案馆",
+      "summary": "A digital archive places every record on one desktop until paths, containers, names, links, and search must divide location from meaning.",
+      "summaryZh": "数字档案馆把所有卷宗堆在同一桌面，直到路径、容器、命名、链接与搜索迫使人们区分位置和意义。",
+      "storyParagraphs": [
+        "The new digital archive gave every clerk one enormous desktop. At first, placing a file there felt faster than choosing a cabinet. After ten thousand records, names collided, icons covered one another, and nobody knew whether Final contract, Final contract 2, or Final contract latest was authoritative. Search returned hundreds of similar results because names carried neither context nor stable location. Convenience at deposit became cost at every later retrieval.",
+        "Archivist Nilo created a root cabinet with branches for departments, projects, years, and record types. Each file received a path built from nested containers and a naming convention that separated identifier, date, status, and version. A clerk could navigate from broad context toward a specific record, and software could apply retention or access rules to a branch. Moving a folder changed descendant paths, so links and automated scripts needed stable identifiers or controlled updates.",
+        "The first tree grew too rigid. A procurement report belonged to both Bridge Project and Annual Audit, but one physical file had only one primary location. Clerks copied it into both branches, then edited different copies. Nilo kept one authoritative object and placed shortcuts or references in alternate views. The same file could have one stable identity even when users reached it through several paths. Tags and indexed search described cross-cutting properties that a single parent-child path could not express. Location organised storage; metadata and links supported additional meanings.",
+        "A second conflict came from permissions. Granting access at a high branch unintentionally exposed every descendant, while one exception buried deep in the tree became impossible to audit. Nilo documented inheritance, limited exceptions, and separated organisational grouping from security boundaries where necessary. The visible tree was not the storage device itself: deleting a shortcut should not delete its target, and deleting a folder required a preview of affected records and references.",
+        "Clerks still needed shared conventions, ownership, lifecycle rules, and backups. A beautiful tree could not rescue ambiguous names or abandoned branches. Excessive depth made navigation slow, while a flat directory recreated the original desk. Nilo measured common retrieval tasks, kept frequently used paths short, archived inactive material, and preserved search. The best structure balanced predictability, breadth, depth, and the fact that users approached the same record through different questions.",
+        "Nilo had built hierarchical information organization: items are grouped into nested parent-child containers, producing paths that supply context, scope, and manageable navigation. Hierarchies support naming, inheritance, and administration, but one tree cannot represent every relationship. Stable identifiers, metadata, tags, search, and references complement it, while copies require version control. The archive did not need a more powerful desktop. It needed a structure that made putting something away and finding the same thing later part of one design."
+      ],
+      "storyParagraphsZh": [
+        "新数字档案馆给每名书记一张巨大桌面。起初，把文件直接放上去比选择柜子快。卷宗达到一万份后，名称相撞，图标彼此覆盖，也没人知道“最终合同”“最终合同 2”还是“最终合同最新版”才权威。搜索返回数百条相似结果，因为名称既不带情境，也没有稳定位置。存入时的便利，变成以后每次取用的成本。",
+        "档案师尼洛建立根柜，再按部门、项目、年份与记录类型分支。每份文件拥有由嵌套容器组成的路径，命名规范则区分标识、日期、状态与版本。书记可从宽泛情境逐层走向具体卷宗，软件也能对一个分支应用保留或访问规则。移动文件夹会改变后代路径，因此链接与自动脚本需要稳定标识或受控更新。",
+        "第一棵树很快过于僵硬。一份采购报告同时属于“桥梁项目”与“年度审计”，实体文件却只能有一个主要位置。书记把它复制到两边，随后编辑出不同版本。尼洛保留一个权威对象，在其他视图放快捷方式或引用。即使用户从多条路径到达，同一文件仍可保有一个稳定身份。标签与索引搜索描述单一父子路径无法表达的交叉属性。位置组织存储，元数据与链接支持额外意义。",
+        "第二场冲突来自权限。给高层分支授权，会意外暴露所有后代；深藏树中的一项例外又难以审计。尼洛记录继承关系、限制例外，并在必要时把组织分组与安全边界分开。可见树也不是存储设备本身：删除快捷方式不应删除目标，删除文件夹前则要预览受影响卷宗与引用。",
+        "书记仍需共享惯例、所有权、生命周期规则与备份。再漂亮的树也救不了含糊名称或废弃分支。层级过深会拖慢导航，完全平铺又重造原来的桌面。尼洛测量常见取用任务，让高频路径保持简短，归档不活跃材料，并保留搜索。最佳结构要平衡可预期性、广度、深度，以及用户会带着不同问题走向同一卷宗的事实。",
+        "尼洛建立的是层级化信息组织：把项目放入嵌套的父子容器，以路径提供情境、范围与可管理导航。层级支持命名、继承和管理，却无法用一棵树表达所有关系。稳定标识、元数据、标签、搜索与引用可以补充它，副本则需要版本控制。档案馆不需要更强大的桌面，而需要一套让“放好某物”与“日后找到同一物”属于同一设计的结构。"
+      ],
+      "conceptName": "Hierarchical information organization",
+      "conceptNameZh": "层级化信息组织",
+      "explanationParagraphs": [
+        "Hierarchical information organization groups items into nested parent-child containers, creating paths that provide context, navigation, scope, and administrative inheritance.",
+        "A hierarchy cannot represent every cross-cutting relationship. Stable identifiers, metadata, tags, search, references, naming conventions, permissions, lifecycle rules, and version control are complementary parts of a usable information system."
+      ],
+      "explanationParagraphsZh": [
+        "层级化信息组织把项目放入嵌套父子容器，形成能提供情境、导航、范围与管理继承的路径。",
+        "层级无法表达所有交叉关系。稳定标识、元数据、标签、搜索、引用、命名规范、权限、生命周期规则与版本控制，是可用信息系统的互补部分。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0611-least-privilege",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0611",
+      "fieldTitle": "Computer use",
+      "fieldTitleZh": "计算机使用",
+      "title": "The Clerk With Every Key",
+      "titleZh": "拿着所有钥匙的书记",
+      "summary": "An office gives every clerk a master key for convenience, turning one mistaken door and one stolen credential into building-wide incidents.",
+      "summaryZh": "办公室为方便给每名书记一把万能钥匙，使一次开错门与一次凭据被盗都升级成整栋楼事故。",
+      "storyParagraphs": [
+        "The Hall of Records gave every new clerk a master key. Managers said shared keys prevented delays when someone was absent. Clerk Pera needed the tax room each morning, but her key also opened payroll, sealed court files, backups, and the furnace controls. One afternoon she mistook two similar doors and cleared a shelf scheduled for permanent retention. Her ordinary task had carried authority far beyond its purpose.",
+        "A week later, a visitor copied another clerk's key impression. Because the same credential opened every room, one small theft became a hall-wide breach. Investigators could not tell whose identical key had entered which room, and rotating it meant replacing every lock at once. Convenience had enlarged both accidental and hostile consequences while erasing useful attribution.",
+        "Security officer Sian mapped tasks to resources and granted each role only the actions normally required. Pera could read and update current tax records but not erase archives, view payroll, or change furnace controls. Destructive operations required a separate approval, and temporary emergency access expired automatically after a recorded reason and limited interval. Administrators used ordinary accounts for routine work and elevated only for a specific maintenance step. Service accounts received noninteractive credentials scoped to one program, while machines were denied human permissions they could never legitimately exercise safely during routine processing.",
+        "The first redesign was too strict. Clerks waited hours for harmless exceptions, began sharing credentials, and accumulated permanent access to avoid future requests. Sian simplified common workflows, created rapid time-bound elevation, reviewed denied actions, and removed rights when roles changed. Restriction without usability produced workarounds; usability without review produced privilege creep. Access design had to follow real work and remain revisable.",
+        "No permission scheme replaced other safeguards. The hall still used authentication, training, backups, monitoring, segmentation, and recovery plans. Emergency access was tested before crisis, because a control that could not be granted, logged, and revoked reliably under pressure was only a promise written on the lockroom wall. A compromised tax clerk could damage tax records within her legitimate scope, and colluding approvers could abuse a two-person rule. Smaller authority reduced blast radius and made anomalies clearer; it did not promise that every authorised action was wise or every account trustworthy.",
+        "Sian was applying the principle of least privilege: give a user, process, or device only the permissions needed for a defined task, for no longer than needed, and review them as duties change. Role-based access, separation of duties, just-in-time elevation, logging, and periodic recertification can implement it. Excess restriction can obstruct work and invite bypasses, so task fit matters. The safest key was not the one that opened nothing. It was the one whose reach matched the door the clerk had come to open."
+      ],
+      "storyParagraphsZh": [
+        "档案大厅给每位新书记一把万能钥匙。经理说，共享钥匙可防止有人缺席时耽误工作。书记佩拉每天只需进入税务室，她的钥匙却还能打开薪资室、密封法院卷宗、备份库与锅炉控制间。一天下午，她认错两扇相似门，清空了一架本应永久保留的材料。普通任务携带的权力远超其目的。",
+        "一周后，访客复制了另一名书记的钥匙印。因同一凭据能开所有房间，一次小偷窃变成全馆泄露。调查员无法判断哪把相同钥匙进入哪间屋，更换它又意味着同时替换全部门锁。便利扩大了意外与敌意行为的后果，也抹去有用归因。",
+        "安全官西安把任务映射到资源，让每个角色只获得日常所需动作。佩拉可读取并更新当前税务记录，却不能删除档案、查看薪资或改变锅炉控制。破坏性操作需要独立批准，临时紧急访问则在记录理由与限定时间后自动到期。管理员日常使用普通账户，只在具体维护步骤中提升权限。服务账户获得仅供一个程序使用的非交互凭据，机器也拿不到日常处理时永远不应行使的人类权限。",
+        "第一版重设计过于严格。书记为无害例外等待数小时，开始共享凭据，还为避免未来申请而积累永久权限。西安简化常见流程，建立快速限时提升，审查被拒动作，并在角色变化时移除权利。无可用性的限制会制造绕过，无复核的便利会制造权限膨胀。访问设计必须跟随真实工作并保持可修订。",
+        "任何权限方案都不能替代其他防护。大厅仍使用身份验证、培训、备份、监测、分区与恢复计划。紧急权限要在危机前测试，因为无法在压力下可靠授予、记录并撤回的控制，只是写在钥匙房墙上的承诺。被攻破的税务书记仍可在合法范围内破坏税务记录，串通的批准者也可滥用双人规则。缩小权力能限制影响范围、让异常更清楚，却不保证每项授权动作都明智，也不保证每个账户可信。",
+        "西安运用的是最小权限原则：用户、进程或设备只获得完成明确任务所需的权限，持有时间不超过需要，并随职责变化接受复核。基于角色的访问、职责分离、即时提升、日志与周期再认证都可实现它。过度限制会妨碍工作并诱发绕过，因此任务匹配同样重要。最安全的钥匙不是一扇门也打不开，而是它的触及范围恰好匹配书记前来开启的那扇门。"
+      ],
+      "conceptName": "Principle of least privilege",
+      "conceptNameZh": "最小权限原则",
+      "explanationParagraphs": [
+        "The principle of least privilege gives users, processes, or devices only the permissions required for a defined task and only for the necessary duration. It reduces accidental and malicious impact when an account is misused or compromised.",
+        "Role design, separation of duties, time-bound elevation, logging, recertification, and prompt revocation support it. Controls must remain usable and reviewed because excessive restriction encourages bypasses and accumulated exceptions create privilege creep."
+      ],
+      "explanationParagraphsZh": [
+        "最小权限原则让用户、进程或设备只在必要时段拥有完成明确任务所需的权限，从而降低账户误用或被攻破时的意外与恶意影响。",
+        "角色设计、职责分离、限时提升、日志、再认证与及时撤权都可支持它。控制还须可用并持续复核，因为过度限制会诱发绕过，累积例外则会造成权限膨胀。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0612-database-normalization",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0612",
+      "fieldTitle": "Database and network design and administration",
+      "fieldTitleZh": "数据库与网络设计及管理",
+      "title": "The Address Written in Seven Ledgers",
+      "titleZh": "写在七本名册里的地址",
+      "summary": "A merchant changes address once, but seven copied ledgers disagree until the city separates facts according to keys and dependencies.",
+      "summaryZh": "商人只搬一次家，七本重复名册却彼此冲突，直到城市按键与依赖关系拆分事实。",
+      "storyParagraphs": [
+        "The city kept one wide table for every sale. Each row repeated merchant name, address, district tax rate, product, supplier, and order quantity. When merchant Ina moved, clerks changed her newest order but missed six older rows. Tax notices went to three addresses, and a report counted the same merchant as several people. The table had stored a fact about Ina once per transaction, making one real-world change require many coordinated edits.",
+        "Archivist Sol marked the dependencies. Merchant ID determined merchant name and current address; district ID determined tax rate; order ID with product ID determined quantity. He separated merchants, districts, orders, products, and order lines into relations with primary keys, then connected them through foreign keys. Ina's address now appeared once. Because tax rate depended on district rather than merchant, storing it with merchants would merely move the transitive duplication into a new table. The determinant, not convenience, chose the fact's home. Joining the tables could reconstruct each order without inventing or losing rows when the decomposition was designed correctly.",
+        "The first attempt failed because a clerk split columns by appearance rather than dependency. A table of order IDs and product names could not identify which supplier version applied, and joining it back multiplied rows. Sol tested lossless reconstruction and whether important constraints could be enforced without expensive global checks. Decomposition was not the act of making many small tables; it was preserving meaning while placing each fact where its determinant belonged.",
+        "A repeating list of products inside one order cell caused another problem. Clerks could not query or constrain individual items reliably. Sol made one row per order-product pair and used a junction relation for many-to-many relationships. He distinguished unknown values from inapplicable ones and avoided encoding several facts into one text field. Keys, domains, uniqueness, and referential integrity made the logical design explicit.",
+        "Reports now required joins, and one high-volume dashboard became slow. The mayor demanded that every table be merged again. Sol instead measured workload, added indexes and materialised views, and denormalised one read model under controlled refresh rules. The authoritative transactional data remained structured to prevent anomalies, while derived copies had named owners and reconciliation. Higher normal forms were tools, not commandments; performance, history, distributed boundaries, and access patterns still mattered.",
+        "Sol had applied database normalization: organising relations according to keys and functional dependencies so each fact is represented in an appropriate place, reducing insertion, update, and deletion anomalies. Successive normal forms address repeating groups, partial dependencies, transitive dependencies, and more subtle dependency patterns. Decomposition should be lossless and constraints should remain enforceable where practical. Ina had moved once. The database finally made one change mean one authoritative update rather than seven chances to disagree."
+      ],
+      "storyParagraphsZh": [
+        "城市用一张宽表记录每笔销售。每行重复商人姓名、地址、城区税率、产品、供应商与订购量。商人伊娜搬家后，书记只改了最新订单，漏掉六条旧记录。税单被寄往三个地址，报表还把同一商人算成多人。表格把关于伊娜的一项事实按交易重复储存，使现实中一次变化需要多次协调编辑。",
+        "档案师索尔标出依赖关系。商人 ID 决定姓名与当前地址，城区 ID 决定税率，订单 ID 与产品 ID 共同决定数量。他把商人、城区、订单、产品和订单明细拆成带主键的关系，再以外键连接。伊娜地址只出现一次。税率依赖城区而非商人，把它放进商人表只会把传递重复搬进新表。决定因素而非便利，决定事实应住在哪里。若分解设计正确，连接各表便可重建订单，不会凭空增加或丢失记录。",
+        "第一次尝试失败，因为书记按外观拆列，而非按依赖。只含订单 ID 与产品名的表无法识别适用哪版供应商，连接回去还让行数成倍增加。索尔检验能否无损重建，也检查重要约束能否不靠昂贵全局扫描执行。分解不是制造许多小表，而是在保留意义的同时，把每项事实放到其决定因素所在之处。",
+        "把多个产品写进同一订单单元格又造成问题。书记无法可靠查询或约束单件商品。索尔让每个订单与产品组合占一行，用连接关系表达多对多。他区分未知值与不适用值，也避免把多项事实编码进一段文字。键、取值域、唯一性与参照完整性让逻辑设计变得明确。",
+        "报表现在需要连接，一块高流量看板开始变慢。市长要求重新合并全部表。索尔先测量工作负载，增加索引与物化视图，并在受控刷新规则下为一项读取模型做冗余。权威交易数据仍按防止异常的结构保存，派生副本则有明确负责人和对账。更高范式是工具，不是戒律；性能、历史、分布边界与访问模式仍然重要。",
+        "索尔运用的是数据库规范化：依据键与函数依赖组织关系，让每项事实位于恰当位置，从而减少插入、更新与删除异常。连续范式处理重复组、部分依赖、传递依赖及更细的依赖模式。分解应当无损，并在可行时保留约束执行能力。伊娜只搬了一次家，数据库终于让一次变化意味着一次权威更新，而非七次产生分歧的机会。"
+      ],
+      "conceptName": "Database normalization",
+      "conceptNameZh": "数据库规范化",
+      "explanationParagraphs": [
+        "Database normalization organises relations around keys and functional dependencies so facts are stored in appropriate places, reducing insertion, update, and deletion anomalies.",
+        "A good decomposition is lossless and preserves important constraints where practical. Normal forms guide design, but workload, performance, history, distribution, and controlled denormalisation still require explicit engineering choices."
+      ],
+      "explanationParagraphsZh": [
+        "数据库规范化围绕键与函数依赖组织关系，把事实存放在恰当位置，以减少插入、更新与删除异常。",
+        "良好分解应当无损，并在可行时保留重要约束。范式指导设计，但工作负载、性能、历史、分布与受控反规范化仍需明确工程选择。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0612-distributed-consensus",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0612",
+      "fieldTitle": "Database and network design and administration",
+      "fieldTitleZh": "数据库与网络设计及管理",
+      "title": "The Ship That Departed Twice",
+      "titleZh": "出发了两次的船",
+      "summary": "Island harbours without a central clock must decide one durable departure record while messages delay, leaders fail, and the network divides.",
+      "summaryZh": "没有中央时钟的群岛港口，要在消息延迟、领导故障与网络分裂时认定一条持久一致的离港记录。",
+      "storyParagraphs": [
+        "Five island harbours shared a cargo ledger. A ship could depart only once, yet fog delayed signal boats. Harbour A recorded departure and sent copies; before acknowledgements returned, its tower lost power. Harbour B saw no entry, elected itself coordinator, and recorded a second departure token. When the fog cleared, two valid-looking histories claimed the same cargo. Fast local action had sacrificed a single shared order.",
+        "Engineer Rhea divided time into numbered terms. In each term, a harbour could vote for at most one coordinator. The coordinator appended proposed entries to its log and considered one committed only after acknowledgements from a majority. Any two majorities among five shared at least one harbour, making it harder for conflicting entries at the same position to both become committed. A new coordinator had to carry a sufficiently up-to-date log before receiving votes.",
+        "During the next outage, two harbours formed one group and three formed another. The pair could not reach a majority, so it stopped confirming departures even though local docks remained usable. The group of three continued after electing a coordinator. Both groups could keep serving stale reads, but only the majority side could safely append a newly committed departure under the chosen consistency rule during partition. Waiting protected agreement but reduced availability for the minority partition. Rhea refused to label silence a failure of the protocol; under uncertain delay and partition, sometimes no safe progress could be guaranteed until communication improved.",
+        "A coordinator crashed after sending an entry to two followers but before announcing commitment. The next coordinator retained the surviving entry but did not mark it committed merely because an old-term entry appeared on a majority. It first followed the protocol's current-term commitment rule, which established a safe prefix containing that entry, and only then exposed the departure as durable. Clients retried timed-out requests, so commands carried unique identifiers and were processed idempotently. Receiving, appending, committing, applying, and replying were distinct states; treating any one as the others recreated duplicate departures.",
+        "The design assumed harbours might stop or lose messages, not forge arbitrary votes. Defending against malicious participants required different quorum sizes, signatures, and protocols. Clock synchronisation could improve performance but could not replace the ordering rules. Membership changes were themselves committed decisions because changing the voters carelessly could create two disjoint majorities. Safety and progress depended on an explicit fault model.",
+        "The islands had built distributed consensus: multiple nodes agree on one value or ordered log despite failures and message delay, preserving safety so conflicting decisions are not both committed while seeking liveness when conditions permit. Leaders, terms, quorum intersection, replicated logs, and durable commitment are common mechanisms under crash-fault assumptions. Network partitions force trade-offs, and retries require idempotency. The ship had not physically departed twice. Two coordinators had each mistaken a local record for a decision shared by the system."
+      ],
+      "storyParagraphsZh": [
+        "五座岛港共享一份货运账。每艘船只能离港一次，浓雾却会拖延信号船。A 港记录离港并发送副本，确认返回前灯塔断电。B 港看不见该记录，推选自己为协调者，又登记一枚离港令牌。雾散以后，两段看似有效的历史都声称拥有同一批货。快速本地行动牺牲了单一共享顺序。",
+        "工程师蕾娅把时间划成编号任期。每个任期里，一座港口最多投票给一名协调者。协调者把提议条目追加到日志，只有得到多数确认后才视为提交。五港中任意两个多数至少共享一港，使同一位置的冲突条目更难同时提交。新协调者还必须携带足够新的日志，才可获得选票。",
+        "下一次中断时，两港组成一组，三港组成另一组。两港无法取得多数，即使本地码头可用，也停止确认离港；三港组则选出协调者后继续。两组都可继续提供旧读取，但按所选一致性规则，分区期间只有多数侧能安全追加新提交离港。等待保护一致，却降低少数分区的可用性。蕾娅拒绝把沉默称为协议失败：在延迟与分区不确定时，有时必须等通信改善，才能保证安全推进。",
+        "一名协调者把条目发给两名跟随者后崩溃，尚未宣布提交。下一任协调者保留存活条目，却没有因为旧任期条目出现在多数节点就直接宣布提交；它先按协议完成当前任期的提交规则，确立包含该条目的安全日志前缀，才对外显示离港已持久。客户端会重试超时请求，因此命令带唯一标识，并按幂等方式处理。接收、追加、提交、应用与回复是不同状态；把其中任一个当成其他状态，就会重造重复离港。",
+        "这套设计假设港口可能停机或丢消息，不假设它们伪造任意选票。防御恶意参与者需要不同的 quorum 大小、签名与协议。时钟同步可改善性能，却不能替代排序规则。成员变更本身也要作为决定提交，因为随意改变投票者可能制造两个互不相交的多数。安全与推进取决于明确故障模型。",
+        "群岛建立的是分布式共识：多个节点在故障与消息延迟中，对一个值或有序日志达成一致；它要保持安全性，不让冲突决定同时提交，也在条件允许时追求活性。领导者、任期、quorum 交叠、复制日志与持久提交，是崩溃故障假设下的常见机制。网络分区迫使系统取舍，重试则要求幂等。船并未真正离港两次，只是两名协调者都把本地记录误当成全系统共享的决定。"
+      ],
+      "conceptName": "Distributed consensus",
+      "conceptNameZh": "分布式共识",
+      "explanationParagraphs": [
+        "Distributed consensus lets multiple nodes agree on a value or ordered log despite failures and message delay. Safety prevents conflicting commitments; liveness seeks eventual progress when the fault and communication assumptions permit it.",
+        "Leader terms, intersecting quorums, replicated logs, and explicit commitment rules are common mechanisms for crash faults. Exact commitment rules differ by protocol, so majority replication alone is not a universal test. Partitions create availability trade-offs, while malicious faults, retries, and membership changes require additional design."
+      ],
+      "explanationParagraphsZh": [
+        "分布式共识让多个节点在故障与消息延迟下，对一个值或有序日志达成一致。安全性阻止冲突提交，活性则在故障与通信假设允许时追求最终推进。",
+        "领导任期、交叠 quorum、复制日志与明确提交规则是处理崩溃故障的常见机制。具体提交规则随协议而异，因此复制到多数并非普遍充分条件。分区带来可用性取舍，恶意故障、重试与成员变更还需要额外设计。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0612-defense-in-depth",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0612",
+      "fieldTitle": "Database and network design and administration",
+      "fieldTitleZh": "数据库与网络设计及管理",
+      "title": "The City Behind One Perfect Gate",
+      "titleZh": "只有一道完美城门的城市",
+      "summary": "A data city invests everything in one magnificent gate and discovers that insiders, side channels, stolen credentials, and recovery demand different barriers.",
+      "summaryZh": "数据城把一切押在一道宏伟城门上，随后发现内部人、侧通道、被盗凭据与恢复需要不同屏障。",
+      "storyParagraphs": [
+        "The data city of Arx spent its security budget on one perfect outer gate. Its stone resisted rams, its lock used the finest cipher, and guards checked every traveller. Inside, every district connected by open streets and trusted anyone carrying a gate token. When an accountant surrendered his token to a convincing impostor, the intruder walked from public records to treasury backups without meeting another barrier.",
+        "The council doubled the gate thickness. Security architect Lena instead traced attack paths. She added strong identity checks, limited internal privileges, separated sensitive districts, encrypted valuable records, filtered traffic between zones, monitored unusual movement, patched exposed services, and kept offline recoverable backups. The encrypted treasury still required separate key protection, because ciphertext and its decryption key stored under the same administrator would fall together. Some controls prevented entry, others detected movement, slowed expansion, protected data, or restored operations. No single layer claimed to stop every threat.",
+        "The first layered design failed together during an outage because every control consulted the same identity tower. When the tower broke, doors opened in emergency mode and logs stopped. Lena removed common dependencies, gave critical layers independent failure behaviour, and tested backup restoration rather than merely owning backups. Several walls painted different colours were still one wall if the same fault disabled them all.",
+        "More controls also created friction. Guards ignored thousands of low-value alarms, staff found unofficial tunnels around repeated checks, and delayed patches left systems exposed. Lena tuned alerts to response capacity, automated routine decisions, documented exceptions, and measured detection and recovery. A barrier that nobody maintained or that legitimate users constantly bypassed contributed less protection than its diagram suggested.",
+        "Threats changed. A fire, software defect, malicious administrator, stolen laptop, and remote attacker crossed different paths. Lena used threat modelling to decide which assets, actors, entry points, and failures mattered, then rehearsed incidents that crossed several layers. Backups used credentials and storage unavailable to ordinary production accounts, and restoration drills checked whether clean copies survived the very compromise they were meant to repair without importing the attacker again during recovery. She assumed each control could fail without assuming all controls would fail identically. Residual risk remained, and the council decided which risks to reduce, transfer, accept, or avoid.",
+        "Arx learned defense in depth: use multiple complementary preventive, detective, limiting, and recovery controls so failure of one does not expose the whole system. Effective layers address different attack stages and failure modes, minimise shared dependencies, and are tested as a combined system. More controls are not automatically better; correlated failure, complexity, alert fatigue, and unusable workflows can erase value. The perfect gate had guarded one path. Security required the city to remain defensible after somebody crossed it."
+      ],
+      "storyParagraphsZh": [
+        "数据城阿克斯把安全预算都花在一道完美外门上。石墙扛得住撞锤，门锁采用最精细密码，守卫检查每名旅客。城内各区却由开放街道相连，人人信任持有城门令牌者。一名会计把令牌交给善于伪装的骗子后，入侵者从公共记录走到财政备份，再没遇到一道屏障。",
+        "议会要求把城门再加厚一倍。安全架构师莱娜却追踪攻击路径。她增加强身份验证，限制内部权限，隔离敏感城区，加密贵重记录，过滤区间流量，监测异常移动，修补暴露服务，并保留离线可恢复备份。加密金库仍需独立保护密钥，因为密文和解密钥匙若由同一管理员保管，就会一起失守。有些控制阻止进入，有些负责发现、减缓扩散、保护数据或恢复业务，没有一层声称阻挡所有威胁。",
+        "第一版多层设计在停电时一起失效，因为所有控制都询问同一座身份塔。塔一断，门锁进入紧急开启模式，日志也停止。莱娜移除共同依赖，为关键层设置独立故障行为，并实际测试备份恢复，而非只拥有备份。若同一故障能让它们全部失效，几面颜色不同的墙仍只是一面墙。",
+        "更多控制也制造摩擦。守卫忽略成千上万条低价值警报，员工在重复检查旁挖出非正式隧道，补丁延迟又让系统继续暴露。莱娜按响应能力调整警报，自动处理常规决定，记录例外，并测量发现与恢复。无人维护或被合法用户持续绕过的屏障，贡献远低于图纸所示。",
+        "威胁不断变化。火灾、软件缺陷、恶意管理员、失窃设备与远程攻击者走不同路径。莱娜用威胁建模决定哪些资产、行为者、入口与故障重要，再演练跨越多层的事故。备份使用普通生产账户无法取得的凭据与存储，恢复演练还检查干净副本能否熬过原本要修复的入侵，并避免恢复时把攻击者重新导入。她假设每项控制都可能失败，却不让所有控制以同一方式失败。剩余风险依然存在，议会要决定降低、转移、接受还是避开。",
+        "阿克斯学会的是纵深防御：使用多项互补的预防、侦测、限制与恢复控制，使一层失效不至于暴露整个系统。有效层要覆盖不同攻击阶段与故障模式，减少共同依赖，并作为组合系统接受测试。控制越多并非自动越好，相关失效、复杂度、警报疲劳与不可用流程都会抹去价值。完美城门只守住一条路径，真正的安全要求有人越过它以后，城市仍然可守。"
+      ],
+      "conceptName": "Defense in depth",
+      "conceptNameZh": "纵深防御",
+      "explanationParagraphs": [
+        "Defense in depth combines complementary preventive, detective, limiting, and recovery controls so that one failure does not expose an entire system. Layers should address different attack stages and failure modes.",
+        "Independent failure behaviour, monitoring, testing, maintenance, usability, and recovery matter more than raw control count. Shared dependencies, complexity, alert fatigue, and routine bypasses can make apparently separate layers fail together."
+      ],
+      "explanationParagraphsZh": [
+        "纵深防御组合互补的预防、侦测、限制与恢复控制，使一项失效不至于暴露整个系统。各层应覆盖不同攻击阶段与故障模式。",
+        "独立故障行为、监测、测试、维护、可用性与恢复比控制数量更重要。共同依赖、复杂度、警报疲劳与日常绕过，会让表面分离的层一起失效。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0613-modularity",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0613",
+      "fieldTitle": "Software and applications development and analysis",
+      "fieldTitleZh": "软件与应用开发及分析",
+      "title": "The Puppet That Required a New Theatre",
+      "titleZh": "换一只木偶就要重建的剧场",
+      "summary": "A mechanist couples every puppet, curtain, lamp, and drum through one axle until replacing a single character requires rebuilding the theatre.",
+      "summaryZh": "机关师用一根轴把木偶、幕布、灯与鼓全部耦合，结果更换一个角色就必须重建剧场。",
+      "storyParagraphs": [
+        "Mechanist Vale built an automated theatre around one long axle. A notch lifted the hero's arm, the same rod opened the curtain, its speed set the drumbeat, and a hidden cam changed the lamps. The first play ran beautifully. When the director replaced the hero with a taller puppet, the arm struck the curtain gear, the drum lost time, and the lamps dimmed. One local change travelled through the entire machine.",
+        "Vale first added more marks to the axle. Each new play multiplied exceptions, and nobody could reason about one effect without tracing every linkage. Engineer Suri separated the theatre into puppet control, scenery, lighting, sound, and scheduling units. Each unit owned a coherent responsibility and exposed a narrow connection: start cue, timing signal, position request, or status response. Internal gears could change while the agreed connection remained stable.",
+        "The first separation leaked. Lighting users had to know which internal cog controlled blue, and the puppet unit reached directly into the scheduler's memory. Suri hid internal representation, defined contracts, and made dependencies point through explicit interfaces. She tested units alone with substitutes, then tested their integration at boundaries. The goal was high cohesion within a unit and low unnecessary coupling between units, not simply cutting the axle into arbitrary pieces.",
+        "A touring company brought an older sound unit. It accepted Start but interpreted timing in beats rather than seconds. Both sides satisfied their own documentation and still failed together. Suri versioned interfaces, stated units and failure behaviour, offered compatibility adapters, and made breaking changes visible. She also defined timeout and retry behaviour. Without that, one unit could repeat a cue after silence while another had already performed it, turning a boundary failure into duplicated movement. Contracts covered failure semantics and timing as carefully as successful messages. A boundary was useful only if its semantics were shared, not because two sockets had matching shapes.",
+        "The director then demanded a separate unit for every lamp. Messages, configuration, deployment, and debugging became harder than the original play. Suri recombined pieces that changed together and separated those needing independent evolution, scaling, ownership, or failure isolation. Some shared functions became libraries; others remained services. The right boundaries followed change patterns and responsibilities, and they could be revised as the theatre learned.",
+        "Suri had introduced modularity: decomposing a system into components with cohesive responsibilities, hidden internals, and explicit interfaces so parts can be understood, tested, changed, replaced, or isolated with limited effects elsewhere. Good modules reduce coupling but still require stable contracts, compatibility, and integration testing. Excessive fragmentation adds coordination and operational cost. Vale's first theatre had one magnificent mechanism. Its weakness was that every new idea had to become a change to the same axle."
+      ],
+      "storyParagraphsZh": [
+        "机关师瓦尔围绕一根长轴建造自动剧场。一个凹口抬起英雄手臂，同一根杆拉开幕布，转速决定鼓点，暗藏凸轮又改变灯光。第一出戏运转完美。导演换上更高的木偶后，手臂撞到幕布齿轮，鼓声失拍，灯也变暗。一次局部改变穿过了整台机器。",
+        "瓦尔起初只在轴上增加更多标记。每出新戏都让例外成倍增加，没人能在不追踪全部连接时理解一个效果。工程师苏里把剧场拆成木偶控制、布景、灯光、声音与调度单元。每个单元拥有一致职责，只暴露狭窄连接：开始提示、计时信号、位置请求或状态回应。只要约定连接稳定，内部齿轮便可更换。",
+        "第一次拆分仍然泄漏。灯光使用者必须知道哪枚内部齿轮控制蓝色，木偶单元还直接伸进调度器记忆。苏里隐藏内部表示，定义契约，让依赖只通过明确接口连接。她用替身单独测试单元，再测试边界整合。目标是单元内部高内聚、单元之间低不必要耦合，不是任意把长轴切碎。",
+        "巡演公司带来旧版声音单元。它能接受“开始”，却把计时理解成拍数而非秒。双方都符合自己的文档，合在一起仍然失败。苏里给接口标版本，说明单位与故障行为，提供兼容适配，并让破坏性变更可见。她还定义超时与重试；否则一边可能在沉默后重复提示，另一边却已执行，使边界故障变成重复动作。契约对失败语义与时序的说明，要像成功消息一样谨慎。边界有用，是因为语义共享，不是两只插口形状相同。",
+        "导演随后要求每盏灯都成为独立单元。消息、配置、部署与调试比原剧更困难。苏里重新合并共同变化的部分，分开需要独立演进、扩缩、所有权或故障隔离的部分。有些共享功能成为库，另一些保留为服务。正确边界跟随变化模式与职责，也会随剧场学习而修订。",
+        "苏里引入的是模块化：把系统拆成职责内聚、内部隐藏、接口明确的组件，使各部分可被理解、测试、修改、替换或隔离，并限制对其他部分的影响。好模块减少耦合，仍需稳定契约、兼容管理与集成测试；过度切分则增加协调和运行成本。瓦尔第一座剧场只有一套宏伟机关，弱点在于每个新想法都必须改动同一根轴。"
+      ],
+      "conceptName": "Modularity",
+      "conceptNameZh": "模块化",
+      "explanationParagraphs": [
+        "Modularity decomposes a system into components with cohesive responsibilities, hidden implementation details, and explicit interfaces, limiting how far changes and failures propagate.",
+        "Effective boundaries follow patterns of change, ownership, scaling, and responsibility. Contracts, versioning, compatibility, and integration testing remain necessary, while excessive fragmentation creates coordination and operational overhead."
+      ],
+      "explanationParagraphsZh": [
+        "模块化把系统拆成职责内聚、实现细节隐藏、接口明确的组件，以限制变更和故障传播范围。",
+        "有效边界应跟随变化、所有权、扩缩与职责模式。契约、版本、兼容与集成测试仍不可少，过度切分则会制造协调与运行负担。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0613-software-testing",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0613",
+      "fieldTitle": "Software and applications development and analysis",
+      "fieldTitleZh": "软件与应用开发及分析",
+      "title": "The Stage Tested on Opening Night",
+      "titleZh": "开幕夜才第一次承重的舞台",
+      "summary": "An automated stage passes a perfect empty rehearsal and fails under actors, rain, timing, and recovery until evidence begins arriving throughout its life.",
+      "summaryZh": "自动舞台在空场排练中完美通过，却在演员、雨水、时序与恢复面前失效，直到证据贯穿整个生命周期。",
+      "storyParagraphs": [
+        "The theatre's new automated stage moved perfectly during an empty rehearsal. On opening night, twelve actors stood on the lift, rain dampened one sensor, and two cues arrived almost together. The platform stopped between floors while the curtain descended. Builder Omi protested that every command had worked once in his workshop. He had tested a happy path without the load, environment, timing, or recovery conditions of the real performance.",
+        "Engineer Jara began with small checks. Individual calculations and state transitions were tested against known expected results. Components were joined and their interfaces exercised. A full stage ran representative scenes, boundary loads, invalid cues, power interruption, and restart. Some examples came from past failures and remained as regression checks so repaired defects would not quietly return. Each level sought different evidence; passing one did not make the others redundant.",
+        "The first suite became a wall of green lamps but still missed a dangerous reversal. The expected-result code had copied the same mistaken formula as production. Jara used independent examples, properties that must always hold, model comparisons, code review, and fault injection. She asked not only whether a test ran, but whether it could fail for the defect it claimed to detect. Coverage showed exercised structure, not correctness by itself.",
+        "More tests then slowed every change, and several failed randomly because they depended on clock timing and shared scenery. Actors stopped trusting red lamps. Jara isolated state, controlled time, recorded reproducible seeds, removed duplicate low-value cases, and quarantined flaky tests only with named owners and deadlines. Fast checks ran on every change; slower system and endurance checks ran at suitable gates. Feedback had to arrive soon enough to influence the decision that created the risk.",
+        "Even the strongest rehearsal could not enumerate every input and interaction. Jara added canary releases, health metrics, logs, traces, user reports, rollback, and incident review. Release criteria linked each signal to an owner and action. A dashboard without thresholds, context, or response authority only displayed failure more beautifully. Feedback became useful when someone could interpret it and change course before wider harm. Production observation did not excuse weak pre-release checks; it supplied evidence from conditions no laboratory fully represented. Security, accessibility, performance, and failure recovery needed specialised methods and human judgement alongside automated assertions.",
+        "The theatre developed software testing and feedback: a continuous process of designing observations that compare actual behaviour with expectations across units, integrations, systems, and operation, then using results to improve code and decisions. Tests reveal defects and reduce uncertainty but cannot prove their absence. Oracles, representativeness, independence, reliability, speed, and production observability determine value. Omi had asked whether the empty stage could move. Jara kept asking what evidence justified trusting the next performance."
+      ],
+      "storyParagraphsZh": [
+        "剧场新自动舞台在空场排练中运行完美。开幕夜，十二名演员站上升降台，雨水打湿一只传感器，两条提示又几乎同时到达。平台停在两层之间，幕布却继续落下。建造者奥米辩称每项命令都曾在作坊成功一次。他测试的是顺利路径，没有真实演出中的载荷、环境、时序与恢复条件。",
+        "工程师嘉拉先做小型检查。单项计算与状态转移对照已知预期结果，组件组合后测试接口，完整舞台则运行代表场景、边界载荷、无效提示、断电与重启。部分案例来自过去故障，并保留为回归检查，防止修复缺陷悄悄返回。每个层级寻找不同证据，通过一层不会让其他层多余。",
+        "第一套测试亮起整墙绿灯，仍漏掉一次危险逆转，因为预期结果代码复制了生产代码中的同一错误公式。嘉拉使用独立样例、永远应成立的性质、模型对比、代码审查与故障注入。她不只问测试是否运行，还问它能否因声称检测的缺陷而失败。覆盖率显示哪些结构被执行，不独自证明正确。",
+        "更多测试随后拖慢每项变更，其中数项因依赖时钟与共享布景而随机失败，演员逐渐不信红灯。嘉拉隔离状态、控制时间、记录可复现随机种子、移除重复低价值案例，并只在指定负责人和期限后隔离不稳定测试。快速检查随每次变更运行，较慢系统与耐久检查则放在合适关口。反馈必须及时到足以影响制造风险的那项决定。",
+        "再强的排练也无法枚举所有输入与交互。嘉拉加入小流量发布、健康指标、日志、追踪、用户报告、回滚与事故复盘。发布标准让每项信号都对应负责人和行动；没有阈值、情境或响应权限的看板，只会把失败展示得更漂亮。只有有人能解释并在伤害扩大前改变方向，反馈才有用。生产观察不能为薄弱发布前检查开脱，而是补充实验室无法完整代表的条件。安全、无障碍、性能与故障恢复，还需要专门方法和人的判断，与自动断言共同工作。",
+        "剧场发展出的是软件测试与反馈：持续设计观察，在单元、集成、系统与运行层面对比实际行为和预期，再用结果改善代码与决定。测试能揭示缺陷、降低不确定，却不能证明缺陷不存在。判定标准、代表性、独立性、可靠性、速度与生产可观测性共同决定价值。奥米只问空舞台能否移动，嘉拉持续追问什么证据足以让人信任下一场演出。"
+      ],
+      "conceptName": "Software testing and feedback",
+      "conceptNameZh": "软件测试与反馈",
+      "explanationParagraphs": [
+        "Software testing and feedback compare observed behaviour with expectations across units, integrations, systems, and production, then use the evidence to reduce uncertainty and guide change.",
+        "Tests can reveal defects but cannot prove their absence. Their value depends on valid oracles, representative risks, independence, reliability, speed, regression protection, and operational observability."
+      ],
+      "explanationParagraphsZh": [
+        "软件测试与反馈在单元、集成、系统与生产层面对比观察行为和预期，再用证据降低不确定性并指导变更。",
+        "测试能揭示缺陷，却不能证明缺陷不存在。其价值取决于有效判定标准、风险代表性、独立性、可靠性、速度、回归保护与运行可观测性。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0613-computational-complexity",
+      "batchId": "batch-009",
+      "categoryCode": "06",
+      "fieldCode": "0613",
+      "fieldTitle": "Software and applications development and analysis",
+      "fieldTitleZh": "软件与应用开发及分析",
+      "title": "When Twice the Books Took Four Times the Night",
+      "titleZh": "书翻倍而夜晚变成四倍",
+      "summary": "A library doubles its collection and discovers that different procedures grow linearly, quadratically, logarithmically, or beyond practical reach.",
+      "summaryZh": "图书馆把藏书翻倍后发现，不同程序会按线性、平方、对数增长，甚至越过实际可计算范围。",
+      "storyParagraphs": [
+        "The Bell Library held one thousand books. To find an uncatalogued title, a clerk sometimes inspected every spine, requiring up to one thousand checks. To identify every pair of books sharing a citation, another clerk compared each book with every later book, making roughly half a million comparisons. A third clerk tested every possible shelf subset for a themed display. Twenty books meant about one million subsets; forty meant roughly one trillion, so doubling the input multiplied work by about a million rather than two for that procedure. When the collection doubled, the first task roughly doubled, but the pair task approached four times the work and consumed the whole night.",
+        "Librarian Eda stopped timing only one input. She described work as a function of collection size. Ignoring constant multipliers and lower-order terms revealed how procedures scaled: one pass grew linearly, pairwise comparison quadratically, and trying every subset exponentially. A fast desk could halve the duration of each step, but repeated doubling would eventually overwhelm it if the growth class remained steep.",
+        "For title lookup, Eda sorted an index and repeatedly discarded half the remaining range. Among 1,024 entries, at most ten comparisons located a title; doubling to 2,048 added only one comparison. Building and maintaining the index cost time and space, and updates became more expensive than dropping a book onto an unsorted pile. The better procedure depended on how often the library searched, inserted, deleted, and changed keys.",
+        "A hash catalogue often found a title in near-constant average time, but poor hashing or adversarial collisions could produce a long chain. Eda therefore distinguished worst-case, average-case, amortised, and expected analysis and stated assumptions about input distribution and computation model. A notation giving an asymptotic upper bound did not report an exact runtime or prove two implementations equally fast for realistic sizes.",
+        "Some tasks remained expensive even with clever organisation. Exact search through combinations grew so quickly that approximation, heuristics, parameter limits, or special input structure became more useful than buying faster desks. Memory could trade for time through caches and precomputed indexes; parallel clerks could reduce elapsed time without reducing total work. Input representation also mattered because an integer's numeric value and the number of digits encoding it were different measures of size.",
+        "Eda was analysing computational complexity: how an algorithm's time, space, communication, or other resources grow with input size, commonly described through asymptotic bounds. Growth rate helps compare scalability beyond one machine or sample, while constants, distributions, worst cases, data structures, and hardware still affect practice. The library's problem was not simply that it had more books. It was that one procedure asked one new question per book, while another asked new questions about nearly every pair."
+      ],
+      "storyParagraphsZh": [
+        "贝尔图书馆有一千本书。寻找未编目书名时，书记有时要检查每条书脊，最多一千次。识别所有互引书对时，另一名书记把每本书与其后每本比较，约需五十万次。第三名书记为主题展尝试每个可能书架子集：二十本约有一百万种，四十本约一万亿种，输入翻倍使该程序的工作扩大约一百万倍，而非两倍。藏书翻倍后，第一项工作大致翻倍，书对任务却接近四倍，耗尽整夜。",
+        "馆长埃达不再只给一组输入计时，而把工作描述成藏书规模的函数。忽略常数倍与低阶项后，程序怎样扩张变得可见：单次扫描线性增长，两两比较按平方增长，尝试所有子集则指数增长。更快书桌可以把每步时间减半，规模不断翻倍时，陡峭增长类别最终仍会压垮它。",
+        "查找书名时，埃达给索引排序，每次排除剩余范围的一半。1,024 条记录最多比较十次，翻倍到 2,048 只多一次。建立维护索引需要时间与空间，更新也比把书丢进无序堆更昂贵。更好程序取决于图书馆多频繁查找、插入、删除与改变键。",
+        "散列目录平均常能近似恒定时间找到书名，糟糕散列或对抗性碰撞却会形成长链。埃达因此区分最坏、平均、摊还与期望分析，并说明输入分布和计算模型假设。给出渐近上界的记号不报告精确运行时间，也不证明两个实现对现实规模同样快。",
+        "有些任务即使巧妙组织仍很昂贵。组合精确搜索增长极快，近似、启发式、参数限制或特殊输入结构，往往比购买更快书桌有用。缓存与预计算索引可用空间换时间，并行书记可缩短经过时间，却不一定减少总工作。输入表示也重要，因为整数数值与编码它所需的位数是两种不同规模。",
+        "埃达分析的是计算复杂度：算法的时间、空间、通信或其他资源怎样随输入规模增长，通常用渐近界描述。增长率帮助跨越一台机器或一个样本比较可扩展性，常数、分布、最坏情形、数据结构与硬件仍影响实践。图书馆的问题不只是书更多，而是一种程序每本只问一个新问题，另一种却要对几乎每一书对提出新问题。"
+      ],
+      "conceptName": "Computational complexity",
+      "conceptNameZh": "计算复杂度",
+      "explanationParagraphs": [
+        "Computational complexity studies how time, space, communication, or other resource use grows with input size. Asymptotic bounds distinguish scaling classes such as logarithmic, linear, quadratic, and exponential growth.",
+        "Bounds are not exact runtimes. Constants, data structures, hardware, input distributions, worst versus average cases, representation, approximation, parallelism, and time-space trade-offs determine practical performance."
+      ],
+      "explanationParagraphsZh": [
+        "计算复杂度研究时间、空间、通信或其他资源使用怎样随输入规模增长。渐近界区分对数、线性、平方与指数等扩张类别。",
+        "渐近界不是精确运行时间。常数、数据结构、硬件、输入分布、最坏与平均情形、表示方式、近似、并行和时空取舍共同决定实际性能。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0711-mass-balance",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0711",
+      "fieldTitle": "Chemical engineering and processes",
+      "fieldTitleZh": "化学工程与工艺",
+      "title": "Where the Blue Went",
+      "titleZh": "蓝色去了哪里",
+      "summary": "A dye plant buys more blue than it ships and must find the difference in inventory, wastewater, reactions, leaks, sampling, or measurement.",
+      "summaryZh": "染厂购入的蓝料多于出货量，差额必须出现在库存、废水、反应、泄漏、采样或测量中。",
+      "storyParagraphs": [
+        "The Lorn dye plant received one hundred barrels of blue concentrate each day but shipped cloth containing the equivalent of only eighty-five. Manager Pela accused workers of theft. Engineer Jan drew a boundary around receiving tanks, mixers, pipes, dye baths, dryers, product, vents, and drains. He refused to call fifteen barrels lost until every route across that boundary and every change stored inside it had been counted on the same time basis.",
+        "Five barrel-equivalents accumulated in tanks because production had slowed. Four left in wastewater, two remained on wet cloth awaiting the dryer, and one coated pipe walls and filter cake. Sampling showed that incoming concentration had been overstated by two, while flow meters disagreed by another within uncertainty. The apparent gap had several destinations, not one dramatic culprit. Jan also distinguished gross flow from net transfer when wash water recirculated through the boundary. Counting every internal loop as a new input inflated both sides without explaining inventory, while placing the boundary too narrowly hid the actual discharge route outside the unit. Jan reconciled units, concentrations, densities, moisture, and measurement intervals before comparing numbers.",
+        "The next month, no inventory level changed, and Pela assumed input must equal product. Jan called that condition steady rather than universal. At steady state, total accumulation inside a chosen boundary was zero, but outputs still included product, waste, emissions, and losses. During start-up, shutdown, cleaning, or a tank-level change, accumulation mattered. A daily average could hide a dangerous hourly build-up.",
+        "A colour-changing reaction complicated species accounting. Blue molecules could be consumed while products formed, so a balance on the blue species included generation and consumption terms. Total mass remained conserved when all reacting species were counted, apart from negligible relativistic changes, but an individual chemical species did not. Jan used element balances to cross-check reactions because atoms persisted through molecular rearrangement.",
+        "One unexplained residual remained. Instead of forcing the spreadsheet to close, Jan reported measurement uncertainty, inspected valves, and used an independent tracer. A small leak appeared only under high pressure. Perfect closure was neither expected from imperfect instruments nor an excuse for large persistent discrepancies. The residual became a diagnostic signal whose significance depended on uncertainty and process risk.",
+        "Jan had performed a mass balance: for a defined system and time interval, accumulation equals mass entering minus mass leaving plus generation minus consumption for the tracked quantity. For total mass in ordinary chemical processes, reaction generation and consumption cancel; species balances retain them. Boundaries, units, holdup, time dependence, sampling, and uncertainty determine whether the account is meaningful. The missing blue had never been one invisible barrel. It was a question that became answerable only after the whole plant received a boundary and a ledger."
+      ],
+      "storyParagraphsZh": [
+        "洛恩染厂每天接收一百桶蓝色浓缩料，出货布匹却只含相当于八十五桶的蓝色。经理佩拉指控工人偷窃。工程师扬把收料罐、混合器、管道、染浴、干燥机、产品、排气与排水全部画进边界。在按同一时间基准统计每条跨界路径与内部储存变化前，他拒绝把十五桶称为失踪。",
+        "生产放慢后，五桶当量积在罐内，四桶进入废水，两桶留在等待干燥的湿布上，一桶附着管壁与滤饼。采样发现来料浓度高估两桶，流量计分歧又落在一桶的不确定范围内。表面缺口有多个去向，并非一个戏剧性元凶。清洗水穿过边界循环时，扬还区分总流量与净转移；把每次内部循环都算成新输入，只会同时夸大两边，边界画得过窄又会藏住单元外的真实排放路径。扬先统一单位、浓度、密度、水分与测量区间，再比较数字。",
+        "下个月库存液位不变，佩拉便认定输入必等于产品。扬称这只是稳态条件，并非普遍规律。稳态下，选定边界内部总积累为零，输出仍包括产品、废物、排放与损失。启动、停机、清洗或罐液位变化时，积累不可忽略；日平均还可能藏住危险的小时级堆积。",
+        "一次变色反应让物种核算更复杂。蓝色分子可以被消耗，同时生成其他产物，因此蓝色物种衡算要加入生成与消耗项。把所有反应物种计入时，普通化学过程中总质量仍守恒，只有可忽略的相对论质量变化；单一化学物种却不守恒。扬用元素衡算交叉检查，因为原子会穿过分子重排而保留。",
+        "仍有一项未解释残差。扬没有强迫表格闭合，而是报告测量不确定性、检查阀门并使用独立示踪。小泄漏只在高压时出现。仪器不完美时不应期待绝对闭合，却也不能拿误差为持续大差额开脱。残差成为诊断信号，其重要性取决于不确定性与过程风险。",
+        "扬完成的是物料衡算：对定义清楚的系统与时间区间，积累等于流入减流出，再加所追踪量的生成减消耗。普通化学过程中，总质量衡算的反应生成消耗会抵消，物种衡算则保留它们。边界、单位、持液量、时间变化、采样与不确定性决定核算是否有意义。失踪蓝色从来不是一只隐形桶，而是全厂拥有边界和账本后才能回答的问题。"
+      ],
+      "conceptName": "Mass balance",
+      "conceptNameZh": "物料衡算",
+      "explanationParagraphs": [
+        "A mass balance states that accumulation within a defined system equals inflow minus outflow plus generation minus consumption of the tracked quantity over a stated interval.",
+        "Total mass is conserved in ordinary chemical processes, while individual species may react. Boundary choice, holdup, steady versus transient operation, units, sampling, and measurement uncertainty are essential to a valid balance."
+      ],
+      "explanationParagraphsZh": [
+        "物料衡算指出，在规定时间内，定义系统中的积累等于流入减流出，再加所追踪量的生成减消耗。",
+        "普通化学过程中总质量守恒，单一物种却可能反应。边界选择、持液、稳态与瞬态、单位、采样及测量不确定性，是有效衡算的必要部分。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0711-residence-time",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0711",
+      "fieldTitle": "Chemical engineering and processes",
+      "fieldTitleZh": "化学工程与工艺",
+      "title": "The Fermenter With a Fast Door",
+      "titleZh": "出口太快的发酵器",
+      "summary": "Two vessels share volume, flow, and recipe yet produce different conversion because some fluid exits early while other fluid waits in dead zones.",
+      "summaryZh": "两只容器拥有相同体积、流量与配方，却因部分流体过早离开、另一部分困在死区而得到不同转化。",
+      "storyParagraphs": [
+        "Brewer Sela pumped the same sweet broth and culture through two continuous vessels. Both held one hundred jars and received ten jars per hour, so she expected each parcel to remain about ten hours and ferment equally. The first drink matured; the second remained sweet. Its inlet jet ran almost directly to the outlet, carrying part of the broth away before microbes had time to act, while fluid in quiet corners lingered far longer.",
+        "Engineer Arun injected a harmless tracer pulse and measured its concentration at the outlet over time. An ideal plug-like vessel would show a narrow arrival around the nominal volume divided by volumetric flow. A perfectly mixed vessel would show a broad exponential tail. Sela's faulty vessel produced an early spike and a long tail, revealing short-circuiting and dead zones. The tracer curve was normalised so its area represented recovery. From it Arun estimated mean age and spread, then compared measured volume with active volume. Poor recovery warned that sampling or tracer loss, not hydrodynamics alone, might explain the shape seen at the outlet. The mean alone had hidden a distribution of fluid ages.",
+        "Arun added baffles, moved the inlet, and adjusted mixing. The early spike shrank, and conversion improved. Stronger mixing was not automatically better: for some reaction kinetics, back-mixing reduced performance relative to plug-like flow, while for heat removal or safety it could be valuable. Vessel hydrodynamics, reaction rate, mass transfer, and biological growth interacted. Equal nominal time did not guarantee equal exposure history.",
+        "A second batch contained two sequential reactions. Product B formed from A but degraded into C if held too long. Very early exit left unreacted A; excessive tails destroyed B. Arun designed the age distribution around the desired window rather than maximising a single average. He also distinguished the time individual fluid elements spent inside from the vessel's space time calculated from feed conditions.",
+        "Tracer interpretation required assumptions. Density changes, recirculation, adsorption, sensor delay, and nonideal injection could distort the curve. Arun closed the tracer balance, repeated tests at operating conditions, and used models only as approximations. A distribution measured for the liquid phase did not automatically describe cells, bubbles, or solids that slipped or settled differently.",
+        "The vessels revealed residence time: how long material spends within a process system, represented in flowing equipment by a distribution rather than necessarily one value. Nominal space time often equals vessel volume divided by inlet volumetric flow under stated conditions, while tracer tests expose nonideal mixing, short-circuiting, and dead zones. Conversion and selectivity depend on the interaction between this distribution and kinetics. Sela's recipe had been correct. The second vessel simply let some broth leave before the recipe had time to become a process."
+      ],
+      "storyParagraphsZh": [
+        "酿造师塞拉把同样甜液与菌种泵入两只连续容器。两者都容纳一百罐，每小时流入十罐，她便预计每份流体约停十小时，发酵程度相同。第一只饮料成熟，第二只仍然甜。后者入口射流几乎直通出口，让部分液体在微生物来得及作用前离开，静角中的液体却停留远久。",
+        "工程师阿伦注入一脉冲无害示踪剂，随时间测量出口浓度。理想活塞式容器会在名义体积除以体积流量附近出现窄峰，完全混合容器则给出宽阔指数尾。故障容器出现早峰与长尾，暴露短路流与死区。示踪曲线先归一化，使面积代表回收率；阿伦再估计平均年龄与分散度，并比较实测活性体积。回收不足说明出口曲线形状也可能来自采样或示踪损失，而非只来自流体动力学。单一平均值藏住了流体年龄分布。",
+        "阿伦增加挡板、移动入口并调整搅拌。早峰缩小，转化提高。更强混合并非自动更好：对某些反应动力学，返混相对活塞流会降低性能；对移热或安全，它又可能有价值。容器流体动力学、反应速率、传质与生物生长彼此作用。名义时间相同，不保证暴露历史相同。",
+        "第二批包含连续两步反应。A 先生成 B，停得过久时 B 又降解成 C。过早离开留下未反应 A，过长尾部则毁掉 B。阿伦围绕目标时间窗设计年龄分布，而非让单一平均最大化。他也区分单个流体元素在内时间，与按进料条件计算的容器空间时间。",
+        "解释示踪曲线需要假设。密度变化、回流、吸附、传感器延迟与非理想注入都可能扭曲结果。阿伦闭合示踪物衡算，在运行条件下重复测试，并只把模型当近似。液相测得的分布，也不能自动代表会以不同方式滑移或沉降的细胞、气泡与固体。",
+        "两只容器揭示的是停留时间：物料在过程系统中停留多久；对流动设备，它通常表现为分布，而非必然只有一个值。在指定条件下，名义空间时间常等于容器体积除以入口体积流量，示踪测试则暴露非理想混合、短路流与死区。转化率与选择性取决于这项分布和动力学的交互。塞拉的配方没有错，第二只容器只是让部分甜液在配方来得及变成过程前就离开。"
+      ],
+      "conceptName": "Residence time",
+      "conceptNameZh": "停留时间",
+      "explanationParagraphs": [
+        "Residence time describes how long material remains in a process system. In flowing equipment, material has a residence-time distribution; the nominal space time is often vessel volume divided by inlet volumetric flow under defined conditions.",
+        "Tracer tests reveal mixing, short-circuiting, dead zones, and tails. Conversion and selectivity depend on how the distribution interacts with kinetics, phases, transport, and operating conditions, not on the mean alone."
+      ],
+      "explanationParagraphsZh": [
+        "停留时间描述物料在过程系统中停留多久。流动设备中的物料具有停留时间分布；在定义条件下，名义空间时间常取容器体积除以入口体积流量。",
+        "示踪测试可暴露混合、短路流、死区与长尾。转化和选择性取决于分布与动力学、相态、传递及运行条件的交互，而非只取决于平均值。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0711-process-control",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0711",
+      "fieldTitle": "Chemical engineering and processes",
+      "fieldTitleZh": "化学工程与工艺",
+      "title": "The Distillation Tower Checked at Sunset",
+      "titleZh": "只在日落检查的蒸馏塔",
+      "summary": "A distillation tower drifts for hours between daily readings until sensing, feedback, feedforward action, constraints, and tuned response form a continuous loop.",
+      "summaryZh": "蒸馏塔在每日读数之间漂移数小时，直到感知、反馈、前馈、约束与调校响应形成连续回路。",
+      "storyParagraphs": [
+        "The Varo distillery measured its tower temperature once at sunset. If the reading was low, operator Leni opened the steam valve for the next day; if high, she closed it. Morning feed composition changed, noon weather cooled the condenser, and product quality drifted for hours before anyone reacted. By sunset, the delayed correction often addressed a disturbance that had already passed.",
+        "Engineer Musa installed continuous sensors, a target, a controller, and an actuator on steam flow. The controller compared measured temperature with the target and adjusted the valve to reduce error. A proportional response acted on current error, accumulated error corrected persistent offset, and a rate-sensitive term responded to how quickly error changed and could add damping. Musa did not add all three blindly; noise, delay, and process dynamics determined useful tuning.",
+        "The first tuning was aggressive. The valve swung fully open, the tower warmed slowly, then overshot after stored heat arrived. The controller reversed, producing sustained oscillation. When the steam valve reached its limit, accumulated error kept growing and drove a severe overshoot after the valve regained authority. Musa added anti-windup logic and distinguished an actuator limit from a process that merely responded slowly. Musa identified dead time and lag, limited actuator movement, filtered noisy signals without hiding real change, and tuned the loop for stability and acceptable response rather than fastest possible correction. A delayed process punished impatience.",
+        "Temperature was only an indirect indicator of composition and changed with pressure. Musa added pressure compensation and laboratory validation. When feed composition was measured upstream, a feedforward adjustment acted before tower temperature drifted, while feedback corrected model error and unmeasured disturbances. A faster inner steam-flow loop supported a slower outer quality-related loop. Multiple measurements improved control only when their relationships were understood.",
+        "Constraints remained. Valves saturated, sensors failed, and safe pressure limits outranked product targets. At start-up, the steady operating model was unreliable, so a staged sequence established circulation, pressure, and heat before automatic quality control took command. Validation included sensor redundancy and plausibility checks, because a precise controller acting on a biased measurement could stabilise the wrong state. Musa designed alarms, interlocks, fallback modes, manual authority, and bumpless transfer between modes. Operators saw controller state and could diagnose rather than fight hidden automation. Performance was monitored because fouling and seasonal changes altered the process after commissioning.",
+        "Musa had established process control: measuring process variables, comparing them with desired behaviour, and manipulating inputs so a dynamic process remains stable, safe, and suitably close to its targets despite disturbances. Feedback corrects observed error; feedforward anticipates measured disturbances; models, tuning, cascade loops, constraints, and safety systems shape performance. The tower could not be controlled by a perfect sunset decision because it did not wait until sunset to change."
+      ],
+      "storyParagraphsZh": [
+        "瓦罗蒸馏厂每天日落测一次塔温。读数低，操作员莱妮就把次日蒸汽阀开大；读数高，则关小。早晨进料组成变化，中午天气冷却冷凝器，产品质量漂移数小时才有人反应。到日落时，迟来的修正往往还在处理早已过去的扰动。",
+        "工程师穆萨安装连续传感器、目标值、控制器与蒸汽流量执行器。控制器比较实测温度和目标，调节阀门以减小误差。比例响应处理当前误差，累积误差修正持续偏差，变化率项则响应误差改变得多快，并可增加阻尼。穆萨没有盲目加入三项，噪声、延迟与过程动态决定怎样调校有用。",
+        "第一版调校过于激进。阀门全开，塔缓慢升温，储存热量到达后又越过目标。控制器反向动作，造成持续振荡。蒸汽阀达到极限后，累积误差仍继续增长，阀门恢复控制能力时又造成严重超调。穆萨加入抗积分饱和逻辑，也区分执行器已到极限与过程只是响应缓慢。随后他识别纯延迟与滞后，限制执行器动作，过滤噪声却不隐藏真实变化，并以稳定和可接受响应为目标，而非追求最快修正。延迟过程会惩罚急躁。",
+        "温度只是组成的间接指标，也会随压力改变。穆萨加入压力补偿与实验室验证。上游测得进料组成时，前馈调整会在塔温漂移前行动，反馈则修正模型误差与未测扰动。更快的内层蒸汽流量回路支持较慢的外层质量相关回路。只有理解测量间关系，增加测量才会改善控制。",
+        "约束依然存在。阀门会饱和，传感器会失效，安全压力上限优先于产品目标。启动时，稳态模型并不可靠，因此要先分阶段建立循环、压力与热量，再让自动质量控制接管。验证还包括传感器冗余与合理性检查，因为精确控制器若读取偏差测量，也可能把错误状态稳定住。穆萨设计警报、联锁、降级模式、人工权限与模式间无扰切换。操作员能看见控制器状态，进行诊断，而不是与隐藏自动化对抗。系统还持续监测性能，因为结垢和季节变化会改变投运后的过程。",
+        "穆萨建立的是过程控制：测量过程变量，与期望行为比较，再操纵输入，使动态过程在扰动下保持稳定、安全并适度接近目标。反馈修正已观察误差，前馈预先处理已测扰动，模型、调校、串级回路、约束与安全系统共同塑造性能。再完美的日落决定也控制不了整座塔，因为塔不会等到日落才变化。"
+      ],
+      "conceptName": "Process control",
+      "conceptNameZh": "过程控制",
+      "explanationParagraphs": [
+        "Process control measures process variables, compares them with targets or constraints, and manipulates inputs to maintain stable, safe, and acceptable operation despite disturbances.",
+        "Feedback, feedforward action, dynamic models, controller tuning, cascade structures, actuator limits, sensor quality, interlocks, fallback modes, and operator visibility all determine real performance."
+      ],
+      "explanationParagraphsZh": [
+        "过程控制测量过程变量，把它们与目标或约束比较，再操纵输入，使系统在扰动下保持稳定、安全且可接受的运行。",
+        "反馈、前馈、动态模型、控制器调校、串级结构、执行器限制、传感器质量、联锁、降级模式与操作员可见性共同决定真实表现。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0712-treatment-train",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0712",
+      "fieldTitle": "Environmental protection technology",
+      "fieldTitleZh": "环境保护技术",
+      "title": "The Filter Asked to Clean a River",
+      "titleZh": "被要求净化整条河的滤网",
+      "summary": "A city relies on one fine screen for mud, dissolved chemicals, pathogens, and nutrients until different hazards demand linked barriers.",
+      "summaryZh": "城市让一层细滤网处理泥沙、溶解化学物、病原体与营养物，直到不同危害要求彼此衔接的屏障。",
+      "storyParagraphs": [
+        "River Nera carried leaves, clay, dissolved dye, microbes, excess nutrients, and traces of solvent. The city installed its finest woven screen and promised clean water. The screen caught leaves, then clogged with mud. Dissolved colour passed through, microbes crossed openings too small to see, and solvent appeared downstream. Officials kept tightening the weave, raising pressure and tearing the cloth without addressing hazards governed by different physical, chemical, and biological properties.",
+        "Engineer Osa separated the tasks. Coarse screening protected pumps; settling and coagulation removed suspended particles; biological treatment consumed biodegradable organics; filtration polished remaining solids; adsorption or specialised oxidation targeted selected dissolved compounds; disinfection reduced pathogens. Nutrient removal required its own biological or chemical steps. Unit order mattered: placing adsorption before removing bulk organics exhausted expensive media quickly, while insufficient pretreatment damaged membranes and shortened ultraviolet penetration. The train had hydraulic and chemical interfaces, not just a list of boxes. Osa tracked pressure loss, contact time, dose, and breakthrough so deterioration became visible before final water failed. Maintenance was part of treatment performance rather than an afterthought. Each unit received water prepared by the one before it and protected later units from loads they could not tolerate.",
+        "The first sequence produced clear water but failed a microbial test because particles shielding organisms had bypassed settling during a storm. Osa added flow equalisation, monitored turbidity before disinfection, and defined a safe diversion when upstream performance failed. Several barriers addressed the same serious hazard through different mechanisms, so one weak step did not silently become the only protection.",
+        "Treatment also created new streams. Settled solids became sludge requiring handling; oxidation could create by-products; spent adsorbent required regeneration or disposal; energy and chemicals carried environmental burdens. Osa balanced removal with residuals rather than moving contamination from water into an unnamed elsewhere. She placed monitoring at critical transitions and verified final performance against intended uses and discharge limits.",
+        "A factory release changed influent chemistry and poisoned the biological stage. The city learned that downstream equipment had design ranges, not unlimited appetite. Osa combined upstream prevention, emergency storage, redundancy for critical units, maintenance bypass control, and adaptive operating set points. Pilot tests preceded unfamiliar contaminants because adding a celebrated technology without compatibility evidence could disrupt the rest of the sequence.",
+        "Osa had designed a treatment train: a planned sequence of complementary physical, chemical, and biological processes in which each stage targets particular contaminants or prepares conditions for later stages. Multiple barriers, monitoring, equalisation, residuals management, redundancy, and safe diversion determine reliability. The best train depends on influent, required effluent, scale, energy, cost, and risk. One screen had failed not because screens were useless, but because the city had asked one mechanism to solve several different problems."
+      ],
+      "storyParagraphsZh": [
+        "奈拉河带来树叶、黏土、溶解染料、微生物、过量营养物与痕量溶剂。城市安装最细密织网，承诺得到净水。滤网先拦住树叶，随后被泥堵塞；溶解颜色直接穿过，肉眼不可见的微生物也越过孔隙，溶剂则出现在下游。官员不断收紧网眼、提高压力并撕裂滤布，却没有面对受不同物理、化学与生物性质支配的危害。",
+        "工程师奥萨拆分任务。粗筛保护水泵，沉淀与混凝去除悬浮颗粒，生物处理消耗可降解有机物，过滤精修剩余固体，吸附或专门氧化针对特定溶解化合物，消毒降低病原体。营养物去除还需自己的生物或化学步骤。单元顺序很重要：未先去除大量有机物就做吸附，会迅速耗尽昂贵介质；预处理不足也会损害膜并缩短紫外穿透。工艺链拥有水力与化学接口，不只是一排方框。奥萨追踪压降、接触时间、剂量与穿透，让退化在最终水质失败前显形；维护本身就是处理性能的一部分。每个单元接收前一步准备的水，也保护后续单元免受无法承受的负荷。",
+        "第一条序列产出清水，微生物检测却不合格。暴雨时，包裹并保护微生物的颗粒绕过沉淀。奥萨增加流量调节，在消毒前监测浊度，并规定上游失效时的安全分流。几道屏障以不同机制处理同一严重危害，使一处薄弱不会悄悄变成唯一保护。",
+        "处理也会制造新物流。沉降固体成为需要处置的污泥，氧化可能生成副产物，耗尽吸附剂要再生或处置，能源与药剂也带来环境负担。奥萨把去除与残余物一起核算，不让污染从水里搬到一个没有名字的别处。她在关键过渡点设置监测，并按目标用途与排放限值验证最终表现。",
+        "一次工厂排放改变进水化学，毒害生物阶段。城市这才明白，下游设备有设计范围，不是胃口无限。奥萨结合上游预防、紧急储存、关键单元冗余、维护旁路控制与适应性运行设定。面对陌生污染物先做试验，因为没有兼容证据就加入一种热门技术，可能破坏整条序列。",
+        "奥萨设计的是处理工艺链：一套有计划的互补物理、化学与生物过程序列，每级针对特定污染物，或为后级准备条件。多重屏障、监测、均化、残余物管理、冗余与安全分流共同决定可靠性。最佳工艺链取决于进水、所需出水、规模、能源、成本与风险。滤网失败并非滤网无用，而是城市要求一种机制解决多个不同问题。"
+      ],
+      "conceptName": "Treatment train",
+      "conceptNameZh": "处理工艺链",
+      "explanationParagraphs": [
+        "A treatment train sequences complementary physical, chemical, and biological processes so each stage removes selected contaminants or prepares conditions for later stages.",
+        "Reliability depends on influent variability, multiple barriers, monitoring, equalisation, residuals and by-products, redundancy, safe bypass behaviour, and verification against the required effluent or use."
+      ],
+      "explanationParagraphsZh": [
+        "处理工艺链把互补的物理、化学与生物过程按序连接，使每级去除特定污染物或为后级准备条件。",
+        "可靠性取决于进水变化、多重屏障、监测、均化、残余物与副产物、冗余、安全旁路行为，以及按所需出水或用途验证。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0712-source-control",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0712",
+      "fieldTitle": "Environmental protection technology",
+      "fieldTitleZh": "环境保护技术",
+      "title": "The Chimney That Grew Taller",
+      "titleZh": "不断长高的烟囱",
+      "summary": "A city raises chimneys to move smoke farther away until exposure returns elsewhere and engineers change materials and processes before waste is mixed.",
+      "summaryZh": "城市不断加高烟囱，把烟送得更远，直到暴露在别处返回，工程师才在废物混合前改变材料与过程。",
+      "storyParagraphs": [
+        "The furnaces of Kera filled nearby streets with smoke. The council ordered taller chimneys. Ground-level air improved beside the furnaces, and officials celebrated. Months later, farmers beyond the ridge reported damaged leaves and deposited ash. The city had diluted and relocated emissions, not reduced how much harmful material the furnaces created. A longer path had changed exposure patterns while preserving the source.",
+        "Engineer Vena entered the workshops. One pigment contained a toxic metal that a safer formulation could replace. Poor burners left fuel partly combusted; closed transfer and maintenance could prevent leaks; precise dosing reduced rejected batches. She mapped each pollutant back to a material purchase, reaction, cleaning step, or maintenance condition. That map revealed losses that stack monitoring could measure only after valuable material had already become waste. Process operators then tested smaller batches, lower temperatures, and closed-loop rinsing, comparing product quality and worker safety before permanent change. Prevention succeeded when production and environmental evidence improved together, not when one instrument stopped seeing emissions that had merely moved into another medium elsewhere. Where generation could not be avoided, capture at a concentrated exhaust point was easier than cleaning the same material after it dispersed through city air or mixed into large wastewater volumes.",
+        "The first substitution lowered air toxicity but increased water use and produced a persistent solvent stream. Vena refused to call the change complete. She compared hazards and quantities across air, water, waste, worker exposure, energy, and upstream supply. Preventing one pollutant by creating a worse burden in another medium was displacement, not improvement. Pilot trials and lifecycle evidence guided the choice.",
+        "Some furnaces could not immediately change because the product required a specific reaction and small firms lacked capital. Vena prioritised the most hazardous and avoidable releases, offered shared equipment and deadlines, and retained end-of-pipe controls for residual emissions. Prevention stood higher in the hierarchy when feasible, but it did not make treatment, monitoring, or enforcement unnecessary.",
+        "Production records now tracked material use, yield, spills, and waste per useful product, not merely chimney concentration. A factory could meet a concentration limit by adding more air while emitting the same total mass, so both rates and exposure mattered. Workers helped identify losses hidden from managers, and confidential reporting reduced the incentive to conceal near misses.",
+        "Kera adopted source control: prevent or reduce pollution where it originates through material substitution, product and process redesign, maintenance, closed handling, efficiency, and operational change before contaminants are diluted or mixed. It often lowers treatment burden and exposure but requires cross-media and lifecycle checks. Residual releases still need capture, treatment, monitoring, and regulation. The tall chimney had changed where the city looked for smoke. Vena changed why so much smoke existed to be moved."
+      ],
+      "storyParagraphsZh": [
+        "凯拉城的炉火让附近街道烟雾弥漫。议会下令加高烟囱，炉边地面空气改善，官员随即庆祝。几个月后，山脊外农民报告叶片受损与灰尘沉降。城市只是稀释并搬走排放，没有减少炉膛制造的有害物总量。更长路径改变暴露格局，源头却原样保留。",
+        "工程师维娜走进作坊。一种颜料含有可由更安全配方替代的有毒金属；燃烧器状态差造成燃料不完全燃烧，密闭转运与维护可防泄漏，精确投料可减少废批。她把每种污染物追溯到材料采购、反应、清洗步骤或维护状态。这张图暴露的损失，烟囱监测只能在贵重材料已变成废物后看见。操作员再测试小批量、较低温度与闭路冲洗，在永久改变前比较产品质量和工人安全。只有生产与环境证据一起改善，预防才算成功，不能只是某台仪器看不见已经搬到别种介质的排放。无法避免的生成，也更容易在集中排气点捕集，而不是等它散入全城空气或混进大量废水后再处理。",
+        "第一次替代降低空气毒性，却增加用水，并产生持久溶剂流。维娜拒绝宣布完成。她跨空气、水、废物、工人暴露、能源与上游供应比较危害和数量。防止一种污染却在另一介质制造更严重负担，只是转移，不是改善。试验与生命周期证据指导选择。",
+        "有些炉子无法立即改变，因为产品需要特定反应，小企业也缺乏资本。维娜优先处理最危险且可避免的排放，提供共享设备与期限，并为残余排放保留末端控制。可行时预防在层级中更优先，却不会让处理、监测与执法失去必要性。",
+        "生产记录开始追踪单位有用产品的材料使用、产率、泄漏与废物，不再只看烟囱浓度。工厂可增加空气来满足浓度限值，同时排放同样总质量，因此速率与暴露都重要。工人帮助识别管理者看不见的损失，保密报告也降低隐瞒险情的诱因。",
+        "凯拉采用的是源头控制：在污染物被稀释或混合前，通过材料替代、产品与过程重设计、维护、密闭处理、效率与运行改变，在产生处预防或减少污染。它常能降低处理负担与暴露，却需要跨介质和生命周期检查。残余排放仍需捕集、处理、监测与监管。高烟囱只改变城市去哪里找烟，维娜改变的是为何会有那么多烟需要搬走。"
+      ],
+      "conceptName": "Source control",
+      "conceptNameZh": "源头控制",
+      "explanationParagraphs": [
+        "Source control prevents or reduces pollution where it originates through material substitution, product or process redesign, maintenance, closed handling, efficiency, and operational change before dilution or mixing.",
+        "It can reduce downstream treatment and exposure but must be checked for burden shifting across media and lifecycle stages. Residual emissions still require capture, treatment, monitoring, and regulation."
+      ],
+      "explanationParagraphsZh": [
+        "源头控制在污染物被稀释或混合前，通过材料替代、产品或过程重设计、维护、密闭处理、效率与运行改变，在产生处预防或减少污染。",
+        "它可降低下游处理与暴露，却须检查污染是否转移到其他介质或生命周期阶段。残余排放仍需捕集、处理、监测与监管。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0712-life-cycle-assessment",
+      "batchId": "batch-009",
+      "categoryCode": "07",
+      "fieldCode": "0712",
+      "fieldTitle": "Environmental protection technology",
+      "fieldTitleZh": "环境保护技术",
+      "title": "The Cup That Travelled Before Breakfast",
+      "titleZh": "早餐前已经走很远的杯子",
+      "summary": "A reusable cup crosses mines, factories, ships, washrooms, repeated uses, and disposal before anyone can compare it fairly with a disposable rival.",
+      "summaryZh": "一只可重复杯在被公平比较前，已经穿过矿山、工厂、船队、洗涤房、重复使用与废弃。",
+      "storyParagraphs": [
+        "Cafe owner Mira replaced disposable cups with a heavy reusable cup and declared it environmentally harmless. Analyst Tovan asked what service was being compared. One reusable object versus one disposable object was unfair if the first served hundreds of drinks. They defined a functional unit: delivering one thousand specified drinks under the cafe's conditions, then calculated how many cups, lids, losses, and washes each system required.",
+        "The reusable cup began at mines and material plants, passed through a high-temperature factory, travelled by ship, and required detergent, hot water, drying, and replacement after breakage or theft. The disposable cup used less material per item but demanded repeated manufacturing and collection. End-of-life routes differed by local recycling, contamination, incineration, and landfill. The visible breakfast object carried processes before and after the moment of use.",
+        "Results changed with assumptions. If customers returned the cup many times and washing used efficient low-carbon energy, the initial manufacturing burden was spread across many services. If cups disappeared after three uses or travelled long distances for washing, the advantage could vanish for some impact categories. Return logistics also mattered: dedicated collection trips could dominate transport, while backhauling on vehicles already travelling changed the allocated burden. Loss rates linked user behaviour directly to manufacturing demand. Tovan reported break-even reuse counts as ranges rather than one universal number.",
+        "The first inventory counted factory electricity twice because an upstream dataset already included it. Another dataset allocated a shared furnace between cup and by-product only by mass, though economic value told a different story. Tovan compared scenarios rather than burying those choices in one baseline. He reported contribution ranges for hotspots and asked which uncertain parameter could actually change the decision before commissioning more data collection. Tovan documented system boundaries, allocation rules, data age, geography, technology, and cut-offs. He tested sensitivity and avoided claiming precision beyond the underlying measurements and models.",
+        "Climate impact did not answer every question. Water scarcity, toxicity, particulate pollution, land use, resource depletion, and waste could point in different directions, and impact models carried uncertainty. A single weighted score required value judgements about unlike harms. Before publishing a comparative superiority claim, Mira commissioned an independent critical review of methods, data consistency, interpretation, and transparency. The study did not decide policy automatically; it made trade-offs, hotspots, and burden shifting visible for a specified comparison.",
+        "Tovan had conducted life-cycle assessment: a structured evaluation of inputs, outputs, and potential environmental impacts across a product system from raw materials through production, transport, use, and end of life, referenced to a functional unit. Goal and scope, inventory, impact assessment, and interpretation must align. Boundaries, allocation, data quality, geography, reuse, and uncertainty can change conclusions. Mira's cup had not become good or bad by receiving a reusable label. Its result depended on the full system of journeys and uses that label concealed."
+      ],
+      "storyParagraphsZh": [
+        "咖啡馆老板米拉用厚重可重复杯替换一次性杯，宣布它对环境无害。分析师托万先问比较的服务是什么。若一只重复杯能服务数百次，用一个物件对比一个物件并不公平。他们定义功能单位：在本店条件下提供一千杯指定饮品，再计算每套系统需要多少杯、杯盖、损失与清洗。",
+        "重复杯从矿山与材料厂开始，经过高温工厂，由船运输，还需要洗涤剂、热水、烘干，并在破损或失窃后补充。一次性杯单件用料较少，却要求反复制造与收集。终端路径又随本地回收、污染、焚烧和填埋而变。早餐桌上可见的物件，在使用瞬间前后都携带过程。",
+        "结果会随假设变化。顾客多次归还，清洗使用高效低碳能源时，初始制造负担可分摊到多次服务；杯子三次后就消失，或长途运去清洗时，某些影响类别中的优势可能消失。回收物流也重要：专程收杯可能主导运输负担，搭载本就行驶的车辆返程则改变分配结果；丢失率把用户行为直接连接到制造需求。托万把盈亏平衡复用次数报告成范围，而非一个普遍数字。",
+        "第一版清单把工厂电力计算两次，因为上游数据已经包含它。另一套数据只按质量在杯子与副产品间分配共享炉火，按经济价值却会得到不同结果。托万比较多个情景，不把选择藏进单一基线。他报告热点贡献范围，并在收集更多数据前先问，哪个不确定参数真的可能改变决定。托万记录系统边界、分配规则、数据年代、地域、技术与截断，测试敏感性，也不让结论精度超过底层测量与模型。",
+        "气候影响不能回答所有问题。缺水、毒性、颗粒污染、土地使用、资源耗竭与废物可能指向不同方向，影响模型也有不确定性。把它们压成一个加权总分，需要对不同伤害作价值判断。公开发布比较优越声明前，米拉委托独立关键审查，检查方法、数据一致性、解释与透明度。研究不会自动决定政策，而是在指定比较中让取舍、热点与负担转移可见。",
+        "托万完成的是生命周期评价：以功能单位为参照，对产品系统从原料、生产、运输、使用到终端的投入、产出与潜在环境影响进行结构化评估。目标与范围、清单、影响评价和解释必须彼此一致。边界、分配、数据质量、地域、复用与不确定性都可改变结论。米拉的杯子不会因贴上“可重复”就自动变好或变坏；结果取决于标签藏住的完整旅程与使用系统。"
+      ],
+      "conceptName": "Life-cycle assessment",
+      "conceptNameZh": "生命周期评价",
+      "explanationParagraphs": [
+        "Life-cycle assessment evaluates inputs, outputs, and potential environmental impacts across a product system from raw-material extraction through production, transport, use, and end of life, referenced to a functional unit.",
+        "Goal and scope, inventory, impact assessment, and interpretation depend on boundaries, allocation, data quality, geography, technology, reuse, and uncertainty. Multiple impact categories and value choices resist one universal answer; public comparative claims require transparent assumptions and appropriate critical review."
+      ],
+      "explanationParagraphsZh": [
+        "生命周期评价以功能单位为参照，评估产品系统从原料开采、生产、运输、使用到终端的投入、产出与潜在环境影响。",
+        "目标范围、清单、影响评价与解释都受边界、分配、数据质量、地域、技术、复用与不确定性影响。多种影响类别与价值选择使结论无法普遍唯一；公开比较声明还需要透明假设与适当关键审查。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

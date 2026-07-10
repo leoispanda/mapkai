@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-013",
+  "articles": [
+    {
+      "id": "0911-caries-biofilm",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0911",
+      "fieldTitle": "Dental studies",
+      "fieldTitleZh": "牙科研究",
+      "title": "The Bell Between the Feasts",
+      "titleZh": "两顿盛宴之间的钟声",
+      "summary": "A keeper blames one sweet banquet for damage to a mineral gate, while small repeated deliveries keep its surface under acid attack for much longer.",
+      "summaryZh": "守门人把矿石城门受损归咎于一次甜食盛宴，真正延长酸性侵袭的却是全天反复送来的小份食物。",
+      "storyParagraphs": [
+        "The white gate of Saliva Harbour was built from mineral tiles and washed by a steady canal. After the annual sugar feast, Keeper Lio found a chalky patch near one hinge. He blamed a single sack of sweets and ordered the gate scrubbed once with great force. The patch remained. More puzzling, another appeared during a month with no feast at all. Small sweetened drinks and starchy snacks had been arriving at every bell, but each delivery looked too modest to enter his incident book.",
+        "Miner Nera sampled the sticky community that lived on the gate. Its organisms were not simply loose invaders waiting to be swept away; they occupied a structured film, used shared material, and changed their surroundings. When fermentable carbohydrate arrived, acid-producing members converted it into acids. The liquid at the tile surface became more acidic than the broad canal beyond it, and minerals began leaving the outer layer. Saliva diluted and buffered the acids, carried minerals back, and helped the surface recover, but recovery required time between challenges.",
+        "Lio tested one enormous delivery followed by a long quiet interval. The surface lost mineral, then partly recovered. He next divided the same amount among many bells. Each arrival pushed the local environment acidic again before the previous recovery had finished. Total sugar mattered, yet frequency, duration, retention, saliva, exposed surfaces, and the film's ecology altered the result. A dry channel at night and a deep sheltered groove behaved differently from a smooth tile beside a strong flow.",
+        "His first remedy tried to kill every organism in the harbour. The film returned, while harsh treatment irritated the living banks and ignored diet pattern, fluoride exposure, salivary function, cleaning access, and social conditions that shaped repeated risk. Nera did not divide residents into one guilty species and many innocent ones. Disease emerged when the community and environment repeatedly favoured acid production and acid tolerance strongly enough that mineral loss exceeded repair over time.",
+        "The chalky patch was not yet the same as a collapsed tile. Nera assessed whether the surface was active, whether it could be kept clean, whether a cavity had formed, and whether deeper tissue or symptoms changed urgency. She used current professional guidance to combine risk assessment, biofilm control, fluoride and remineralising measures where appropriate, dietary discussion, sealing or restoration when indicated, and follow-up. A visible mark alone neither prescribed drilling nor guaranteed harmlessness.",
+        "The gate revealed dental caries as a biofilm-mediated process: repeated ecological shifts in a dental biofilm produce acids that drive demineralisation, while saliva, fluoride, time, and other conditions support remineralisation. A lesion develops when loss repeatedly exceeds repair; it is not a hole made instantly by one food or one organism. Lio had waited for a spectacular feast to explain the damage. Nera listened instead to the small bell that restarted the local acid tide before the mineral gate had time to come home."
+      ],
+      "storyParagraphsZh": [
+        "唾液港的白门由矿质砖砌成，一条稳定水渠终日冲洗。年度甜食盛宴后，守门人利奥在铰链旁发现一块粉白斑。他把责任归给一袋糖，命人用力刷洗一次，白斑却没有消失。更奇怪的是，没有盛宴的月份又出现一处。加糖饮料和淀粉点心在每次钟响时少量送来，可每一份都小得不值得写进事故簿。",
+        "矿质师奈拉取样检查黏附在门上的生物群落。它们不是等着被扫走的散乱入侵者，而是住在有结构的膜里，共用材料并改变周围环境。可发酵碳水到来时，产酸成员把它转成酸，砖面液体比远处水渠更酸，矿物开始离开外层。唾液会稀释并缓冲酸，带回矿物，帮助表面恢复，但两次挑战之间必须留下恢复时间。",
+        "利奥先测试一次巨大投放，随后保持长时间安静。表面失去部分矿物，又有所恢复。他再把同样总量分到许多次钟声之间，每次到货都在上一次修复完成前重新压低局地环境。糖的总量重要，频率、持续时间、滞留、唾液、暴露表面和膜内生态同样改变结果。夜间干涸的渠道、隐蔽深沟与强水流旁的光滑砖面并不相同。",
+        "他的第一项补救试图杀掉港里所有生物。膜很快回来，强烈处理却刺激活的岸壁，还忽略饮食节奏、氟暴露、唾液功能、清洁可及性及塑造反复风险的社会条件。奈拉没有把居民分成一个有罪物种和一群无辜物种。只有当群落与环境反复偏向产酸和耐酸，令矿物损失长期超过修复时，疾病才逐渐形成。",
+        "粉白斑还不等于砖面已经坍塌。奈拉评估表面是否活跃、能否保持清洁、是否已经形成洞，以及深层组织或症状是否改变紧迫性。她依据当前专业指导，把风险评估、生物膜控制、适当的氟与再矿化措施、饮食讨论、必要时封闭或修复，以及随访结合起来。一个可见斑点既不能自动要求钻除，也不能保证无害。",
+        "城门揭示的是龋病的生物膜过程：牙面生物膜反复发生生态偏移，产生酸并推动脱矿；唾液、氟、时间与其他条件又支持再矿化。病损在损失一再超过修复时形成，不是一种食物或一种生物瞬间打出的洞。利奥一直等一场盛宴解释损伤，奈拉听见的却是那声细小钟响：它总在矿质城门来得及回家以前，再次推起局地酸潮。"
+      ],
+      "conceptName": "Dental caries as a biofilm-mediated process",
+      "conceptNameZh": "龋病的生物膜过程",
+      "explanationParagraphs": [
+        "Dental caries is a dynamic, biofilm-mediated process in which repeated acid production shifts the balance between tooth demineralisation and remineralisation.",
+        "Frequency and duration of fermentable carbohydrate exposure, biofilm ecology, saliva, fluoride, tooth surface, behaviour, and wider conditions all matter. Lesion activity and treatment require individual dental assessment."
+      ],
+      "explanationParagraphsZh": [
+        "龋病是动态的生物膜介导过程，反复产酸会改变牙体脱矿与再矿化之间的平衡。",
+        "可发酵碳水暴露的频率与持续时间、生物膜生态、唾液、氟、牙面、行为及更广条件都重要。病损活性与处理需要个体化牙科评估。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0911-occlusion",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0911",
+      "fieldTitle": "Dental studies",
+      "fieldTitleZh": "牙科研究",
+      "title": "The Mill with Thirty-Two Good Teeth",
+      "titleZh": "拥有三十二枚好齿的磨坊",
+      "summary": "Every tooth in a mill passes inspection, yet their contacts guide load into one hinge whenever the moving jaws close, slide, and work.",
+      "summaryZh": "磨坊的每枚齿都通过检查，闭合、滑动和工作时的接触关系却把负荷反复引向同一处铰链。",
+      "storyParagraphs": [
+        "The twin wheels of Orin Mill carried thirty-two carved teeth. Inspector Pela examined each tooth alone, repaired every chip, and certified the set perfect. Yet sacks began leaving with uneven flour, one tooth polished to a bright facet, and the left hinge warm after every shift. Pela replaced the bright tooth twice. Each replacement acquired the same mark. Nothing was wrong with the piece while it rested on her bench; the problem appeared only when both wheels met under motion and load.",
+        "Mechanist Sera marked where the wheels first touched, how contacts spread when force increased, and which teeth guided sideward and forward movement. A contact that looked harmless in a still closing position could become an interference during a slide. Timing, direction, magnitude, duration, frequency, material shape, support, and the path of movement determined how force travelled. The system also adapted: bearings shifted slightly, surfaces wore, and operators changed how they fed grain when discomfort began.",
+        "Pela filed the highest blue mark until all visible contacts appeared equal. The mill became quieter for a day, then loosened elsewhere. Removing material had changed the path rather than proven why the mark existed. Sera checked alignment, wheel shape, hinge support, frame flexure, repeated clenching during idle periods, and whether the mill's task required the same contact pattern at every moment. A perfectly even ink pattern was not a universal mechanical destination.",
+        "The warm hinge did not prove that contact alone caused every complaint. Lubrication failure, inflammation, damaged support, muscle overuse, stress-driven operating habits, previous injury, and other faults could produce similar signs or interact with loading. Because evidence did not support irreversible surface adjustment as a general cure for joint or muscle pain, Sera kept several explanations open and examined the whole machine first. She also asked whether the mill functioned comfortably, protected its components, and met the operator's needs rather than chasing an abstract geometric ideal.",
+        "They first changed a reversible guide and reduced idle grinding while observing the effect. The bright facet stopped enlarging, but a worn bearing still required separate repair. In another mill, an unusual contact pattern caused no damage because supports, movement, and use differed. Sera documented baseline function, symptoms, wear, supporting structures, movement, and uncertainty, then referred structural or pain problems to the appropriate specialist rather than promising that one adjustment would cure the entire frame.",
+        "The mill taught occlusion: the static and dynamic relationships among opposing teeth when jaws close and move, including how contacts guide and distribute force through teeth, supporting tissues, muscles, and joints. There is no single visible contact map that explains every symptom or suits every person; function, adaptation, parafunction, anatomy, disease, and context matter. Pela had inspected thirty-two excellent pieces. Sera found the answer in what happened between them whenever the wheels met, moved, and carried weight."
+      ],
+      "storyParagraphsZh": [
+        "奥林磨坊的两只轮盘装着三十二枚雕齿。检查员佩拉把每枚齿单独查看，修好所有缺口，再证明整套完美。可面粉开始粗细不均，一枚齿被磨出明亮小面，左侧铰链每班结束都发热。佩拉两次替换亮齿，新齿却得到同一伤痕。零件静放在工作台上时毫无问题，异常只在两轮带着运动与负荷相遇时出现。",
+        "机械师塞拉标记两轮最先在哪里接触、力量增加后接触怎样扩散，以及哪些齿引导侧向和前向运动。静止闭合时无害的触点，滑动中可能成为干扰。时间、方向、大小、持续、频率、形态、支撑与运动路径共同决定力量怎样行走。系统也会适应：轴承轻微移动，表面磨耗，操作员感到不适后还会改变投料方式。",
+        "佩拉把蓝色标记最高处逐一锉低，直到所有可见接触似乎相等。磨坊安静一天，别处随后又松动。去除材料只改变了路径，并没有证明标记为何出现。塞拉检查对位、轮形、铰链支撑、框架弯曲、停工时的反复咬紧，以及磨坊的任务是否在每个时刻都需要相同接触格局。完全均匀的墨迹不是普遍机械终点。",
+        "发热铰链也不能证明所有问题都只由接触造成。润滑失效、炎症、支撑损伤、肌肉过用、压力驱动的操作习惯、旧伤与其他故障都可产生相似迹象，或与负荷相互作用。由于证据不支持把不可逆表面调整当成关节或肌肉疼痛的通用治疗，塞拉先保留多个解释并检查整台机器。她追问的是磨坊能否舒适运转、保护构件并满足使用者需要，而非追逐抽象几何理想。",
+        "他们先换上可逆导向件，减少停工时空磨，并观察变化。明亮磨面停止扩大，一只已磨损轴承却仍需单独修理。另一座磨坊里，不寻常接触因支撑、运动与使用不同，并未造成损伤。塞拉记录基线功能、症状、磨耗、支持结构、运动与不确定性，再把结构或疼痛问题交给适当专家，而不承诺一次调整治好整副框架。",
+        "磨坊揭示的是咬合：上下牙在颌骨闭合与运动时的静态和动态关系，包括接触怎样引导并把力量分配到牙齿、支持组织、肌肉与关节。不存在一张可见触点图能解释所有症状或适合每个人，功能、适应、异常功能、解剖、疾病与情境都重要。佩拉检查了三十二枚优秀零件，塞拉却在它们每次相遇、移动和承重的关系中找到了答案。"
+      ],
+      "conceptName": "Occlusion",
+      "conceptNameZh": "咬合",
+      "explanationParagraphs": [
+        "Occlusion describes how opposing teeth contact during closure and movement and how those contacts participate in distributing forces through the oral system.",
+        "Contact patterns interact with anatomy, supporting tissues, muscles, joints, adaptation, habits, and disease. They do not by themselves explain every pain or dysfunction, so assessment must be individual and clinically qualified."
+      ],
+      "explanationParagraphsZh": [
+        "咬合描述上下牙在闭合与运动中怎样接触，以及这些接触怎样参与口腔系统中的力量分配。",
+        "接触格局会与解剖、支持组织、肌肉、关节、适应、习惯及疾病相互作用，不能单独解释所有疼痛或功能障碍，因此必须由合格专业人员个体化评估。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0911-minimal-intervention-dentistry",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0911",
+      "fieldTitle": "Dental studies",
+      "fieldTitleZh": "牙科研究",
+      "title": "The Arch Repaired into Ruin",
+      "titleZh": "被修到崩塌的拱门",
+      "summary": "A conservator replaces an ever-larger block around each small defect until preserving the structure requires a different definition of successful repair.",
+      "summaryZh": "修复师每遇一处小缺陷就替换更大的石块，直到保存结构迫使他重新定义什么才算成功修复。",
+      "storyParagraphs": [
+        "Restorer Daro found a dark seam in one stone of the old city arch. To ensure that no damaged material remained, he cut out the stone and its neighbours, then installed a large new block. Five years later the joint failed at one edge. Daro removed the block, enlarged the opening to obtain clean margins, and replaced it again. Each repair looked immaculate on opening day. Each left less original arch available for the next repair.",
+        "Conservator Mira first asked whether the seam was active, stable, accessible to cleaning, structurally loaded, painful to the building's users, or connected to deeper failure. A surface change, a soft interior, a fractured edge, and a threatened central chamber demanded different responses. She mapped risk and causes before choosing an instrument. Prevention, monitoring, environmental control, sealing, repair, selective removal, restoration, and replacement belonged on a continuum rather than beneath one automatic drill.",
+        "Daro objected that leaving any altered stone meant leaving disease behind. Mira showed him that some weakened surfaces could stabilise when the destructive environment changed, while a deep cavity might require an operative repair to restore cleanability, function, or protection. When removal was necessary, the objective was not maximal excavation but preservation of sound and potentially recoverable tissue while creating a durable seal. Protecting the living centre sometimes required accepting affected material that could safely remain under controlled conditions.",
+        "Their first conservative patch failed because the moisture source continued behind it. Small treatment was not automatically good treatment. Mira corrected drainage, verified the diagnosis, selected material and technique for the load and site, and scheduled review. She distinguished doing less from doing enough with less sacrifice. Symptoms, infection, structural fracture, patient cooperation, access, lesion activity, age, risk, and available evidence could all change the appropriate choice.",
+        "When an old restoration chipped at its margin, Daro prepared to replace the whole block. Mira inspected the rest of the work and repaired only the local defect where evidence supported it. The repair postponed a larger replacement and preserved future options, but it remained documented and monitored. She also addressed the process that created new defects; otherwise conservative restorations would merely repeat beneath a gentler name. No public rule could select treatment without examination and current professional judgement.",
+        "The arch adopted minimal intervention dentistry: a risk-based, prevention-centred approach that aims to control disease, preserve sound and remineralisable tooth tissue, use operative treatment only when indicated, remove as little tissue as reasonably necessary, and repair rather than replace suitable restorations. Minimal does not mean neglect or the smallest procedure at any cost; it means the least irreversible intervention capable of meeting the person's clinical need. Daro had perfected the opening-day repair. Mira protected the material every future repair would still need."
+      ],
+      "storyParagraphsZh": [
+        "修复师达罗在古城拱门的一块石头里发现黑缝。为了确保不留下任何受损材料，他切掉那块石头和两侧邻石，再装上一块大型新石。五年后，接缝一角失效。达罗拆下整块，为取得干净边缘扩大开口，再次替换。每次工程在启用日都无可挑剔，也都让下一次修复可保留的原始拱门更少。",
+        "保护师米拉先问裂缝是否活跃、稳定、可清洁、承受结构负荷、令使用者疼痛，或连接更深失效。表面改变、内部软化、边缘折裂和中央活组织受威胁，需要不同回应。她在拿起工具前先绘制风险与原因。预防、监测、环境控制、封闭、修补、选择性去除、修复与替换是一条连续谱，而非同一把钻头下的自动程序。",
+        "达罗反对说，留下任何改变的石材就是留下疾病。米拉让他看见，有些弱化表面会在破坏环境改变后稳定；深洞则可能需要操作性修复，以恢复可清洁性、功能或保护。确需去除时，目标不是最大挖除，而是在建立耐久封闭的同时，保存健康和可能恢复的组织。保护活的中心，有时反而需要在受控条件下接受可安全保留的受影响材料。",
+        "他们第一次保守补片失败，因为背后的水源仍在。小治疗并不自动等于好治疗。米拉修正排水，核实诊断，按负荷与位置选择材料和技术，并安排复核。她区分少做与用较少牺牲做足够的事。症状、感染、结构折裂、患者配合、可及性、病损活性、年龄、风险与现有证据都会改变合适选择。",
+        "旧修复体边缘崩掉一角时，达罗准备整块替换。米拉检查其余部分，在证据支持处只修补局部缺陷。修补推迟更大替换并保存未来选项，但仍被记录和监测。她还处理制造新缺陷的过程，否则保守修复只会在温和名称下继续重复。没有一条公开规则能在缺少检查与当前专业判断时替人选择治疗。",
+        "拱门采用的是微创牙科学：一种以风险为基础、以预防为中心的方法，目标是控制疾病、保存健康和可再矿化牙体组织，只在有指征时进行操作性治疗，合理地尽量少去除组织，并在适当时修补而非替换修复体。“微创”不等于忽视，也不等于不惜代价选择最小操作，而是用能满足个体临床需要的最少不可逆干预。达罗完善的是启用日，米拉保护的是未来每次修复仍会需要的材料。"
+      ],
+      "conceptName": "Minimal intervention dentistry",
+      "conceptNameZh": "微创牙科学",
+      "explanationParagraphs": [
+        "Minimal intervention dentistry manages disease and risk while preserving as much sound and potentially recoverable tooth tissue as reasonably possible.",
+        "It combines prevention, activity and risk assessment, monitoring, remineralisation or sealing where suitable, selective operative care when indicated, and repair rather than automatic replacement. It is not delayed care or a universal treatment recipe."
+      ],
+      "explanationParagraphsZh": [
+        "微创牙科学在管理疾病与风险的同时，合理地尽可能保存健康及可能恢复的牙体组织。",
+        "它结合预防、活性与风险评估、监测、适当的再矿化或封闭、有指征时的选择性操作，以及修补而非自动替换。它不是延误照护，也不是普遍治疗配方。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0912-differential-diagnosis",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0912",
+      "fieldTitle": "Medicine",
+      "fieldTitleZh": "医学",
+      "title": "Three Visitors in the Same Red Coat",
+      "titleZh": "穿同一件红外衣的三位访客",
+      "summary": "Three patients arrive with fever, but changing histories, examinations, time courses, and risks force the clinic to test competing explanations rather than name one coat.",
+      "summaryZh": "三名患者都带着发热而来，变化的病史、检查、病程与风险迫使诊所检验相互竞争的解释，而非只给外衣命名。",
+      "storyParagraphs": [
+        "Three visitors entered Dr Mira's clinic wearing the same red coat of fever. One had returned from travel, one had started a new medicine, and one had weeks of joint pain that had not seemed relevant at the door. Mira's apprentice named the seasonal infection that filled the waiting room and wrote it on all three charts. By evening, one improved, one developed a rash, and one became short of breath. The shared coat had concealed different wearers.",
+        "Mira replaced the first label with a working list of explanations. She organised possibilities by mechanism and site, then weighted them using prevalence, exposure, age, medicines, history, examination, time course, and context. Common causes deserved attention because they were common; dangerous or reversible causes could deserve early action even when less likely. The list was not a catalogue of every disease ever described. It was a ranked set of hypotheses that could guide the next useful question, examination, test, or review.",
+        "The apprentice ordered a broad panel for all three visitors. Several borderline results appeared by chance, opening new investigations that did not explain the illness. Mira instead asked which finding would meaningfully raise or lower each competing possibility and whether the result would change management. A test did not speak outside its target condition, threshold, timing, accuracy, and pretest probability. She also looked for expected findings that were absent and for contradictions the favourite explanation could not comfortably hold.",
+        "Urgency did not always wait for certainty. When one visitor showed signs of immediate danger, the team stabilised and escalated care while collecting evidence. For another, observation and a scheduled reassessment were safer than an invasive search. Mira explained the provisional diagnosis, what remained uncertain, which warning changes required urgent help, and who would review outstanding results. A working answer became dangerous when everyone forgot that it was still working.",
+        "New information repeatedly reordered the list. The travel history proved less important after the exposure dates were checked; the new medicine rose when its timing matched the rash; the joint history connected findings previously stored in separate boxes. Consultation added expertise without erasing responsibility. When treatment response differed from expectation, Mira reopened the reasoning instead of forcing the patient to fit the first story. The final diagnoses were not prizes for the longest list, but explanations that survived comparison with evidence and context.",
+        "The clinic practised differential diagnosis: generating, ranking, testing, and revising plausible causes for a person's findings until the evidence supports a sufficiently coherent working explanation and plan. Probability, potential harm, treatability, test value, time, and the patient's circumstances shape that process. It manages uncertainty rather than pretending to abolish it. The apprentice had named the red coat. Mira kept asking who was wearing it, what else they carried, and which next observation could tell one visitor from another."
+      ],
+      "storyParagraphsZh": [
+        "三名访客穿着同一件发热的红外衣走进米拉医生的诊所。一人刚旅行归来，一人开始服用新药，另一人关节已痛数周，却在门口看来无关。学徒写下候诊室里最常见的季节性感染，把它抄进三份病历。当晚，一人好转，一人出现皮疹，一人开始气短。相同外衣遮住了不同穿着者。",
+        "米拉把第一个标签换成一份解释工作清单。她按机制与部位组织可能性，再用流行程度、暴露、年龄、药物、病史、检查、病程与情境赋予不同权重。常见原因因常见而值得重视；危险或可逆原因即使概率较低，也可能需要提早行动。清单不是把所有疾病抄一遍，而是能指导下一个有用问题、检查、检测或复核的排序假设。",
+        "学徒为三人都开出一大片检查。几个偶然出现的临界结果又开启新调查，却没有解释病情。米拉改问：哪项发现会真正提高或降低相互竞争的可能性，结果是否会改变管理。检测离开目标状况、阈值、时机、准确度与检测前概率就不会自己说话。她也寻找本应出现却缺席的表现，以及最受偏爱解释无法容纳的矛盾。",
+        "紧急性并不总会等待确定。某位访客出现即时危险迹象时，团队一边稳定并升级照护，一边收集证据。对另一人，观察和约定复查比侵入性搜索更安全。米拉解释暂定判断、尚存不确定、哪些警示变化需要紧急帮助，以及谁来追踪未回结果。一份工作答案最危险的时刻，是所有人忘记它仍在工作。",
+        "新信息不断重排清单。核对暴露日期后，旅行史的重要性下降；新药时序与皮疹吻合后上升；关节史则连接起先前分装在不同盒子里的发现。会诊增加专长，却不会抹去责任。治疗反应偏离预期时，米拉重新打开推理，而不是强迫患者配合最初故事。最终判断不是最长清单的奖品，而是经得起证据与情境比较的解释。",
+        "诊所实行的是鉴别诊断：生成、排序、检验并修订能够解释个体表现的合理原因，直到证据支持一项足够连贯的工作解释与计划。概率、潜在伤害、可治疗性、检测价值、时间与患者处境都会塑造过程。它管理不确定性，而非假装消灭不确定性。学徒只给红外衣命名，米拉持续追问谁穿着它、还携带什么，以及下一项观察怎样区分三位访客。"
+      ],
+      "conceptName": "Differential diagnosis",
+      "conceptNameZh": "鉴别诊断",
+      "explanationParagraphs": [
+        "Differential diagnosis is the structured generation, ranking, testing, and revision of plausible explanations for a patient's findings.",
+        "Likelihood, severity, reversibility, test performance, time course, and patient context guide what is considered and acted on. It produces a revisable working diagnosis and plan, not automatic certainty or indiscriminate testing."
+      ],
+      "explanationParagraphsZh": [
+        "鉴别诊断是对能够解释患者表现的合理原因进行结构化生成、排序、检验与修订。",
+        "可能性、严重度、可逆性、检测表现、病程与患者情境决定考虑和行动次序。它形成可修订的工作判断与计划，而非自动确定或无差别检查。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0912-base-rate-reasoning",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0912",
+      "fieldTitle": "Medicine",
+      "fieldTitleZh": "医学",
+      "title": "The Accurate Alarm and the Empty Crates",
+      "titleZh": "准确警报与空箱",
+      "summary": "A highly accurate harbour alarm sounds mostly over clean cargo because the dangerous contaminant is rare in the population being screened.",
+      "summaryZh": "港口警报十分准确，却大多在干净货物上响起，因为被筛查人群中的危险污染本来十分罕见。",
+      "storyParagraphs": [
+        "North Harbour bought an alarm that detected almost every crate carrying a rare mould. The maker called it highly accurate, so Inspector Lio treated every red light as proof. During the first mass screening, the alarm marked fifty-one of one thousand crates. Workers isolated them, delayed medicines and food, and frightened their owners. Laboratory confirmation found mould in only one. Lio accused the machine of lying, although its promised performance had been reported correctly.",
+        "Statistician Nera arranged one thousand tiles on the floor. The mould appeared in roughly one crate in that screened population. If the alarm caught that crate, it produced one true red light. Even when it correctly cleared ninety-five of every hundred clean crates, the small false-positive fraction acted on the other nine hundred ninety-nine. About fifty clean crates could therefore turn red. Accuracy within mouldy and clean groups did not directly answer what fraction of all red lights contained mould.",
+        "Nera began with the probability before the alarm: the condition's frequency in a relevant population, adjusted by exposure, symptoms, setting, and other information. The test result then changed that probability according to how much more likely the result was with the condition than without it. A positive result could move risk upward without making it certain; a negative result could move risk downward without making it impossible. Predictive meaning changed when the same device moved from an outbreak warehouse to low-risk general cargo.",
+        "Lio proposed ignoring rare mould entirely. Nera refused. Low prior probability did not mean zero risk, and a severe, transmissible, or treatable threat could justify confirmation or precaution at a lower threshold. The costs of missed cases, false alarms, delay, invasive follow-up, anxiety, and resources all mattered. She separated screening from confirmation and required that action match the remaining uncertainty rather than the colour of one lamp.",
+        "They presented results as natural frequencies and ranges instead of saying the alarm was simply ninety-five percent accurate. They defined the target condition and reference method, examined whether performance transferred to new crate types, and tracked verification bias, missing results, and threshold changes. When operators tested only crates already considered suspicious, reported accuracy shifted. A number from one study could not be detached from its population and installed unchanged in another harbour.",
+        "The tiles taught base-rate reasoning in diagnosis: interpreting new evidence by combining it with the prior frequency or probability of the condition in the relevant person and setting. Sensitivity, specificity, and likelihood information update that starting point; they do not erase it. Rare conditions can produce many false positives in broad screening even with a good test, while serious rare risks still deserve proportionate attention. Lio had asked what the red light meant inside the machine. Nera first counted the crates waiting outside it."
+      ],
+      "storyParagraphsZh": [
+        "北港买来一台警报器，几乎能发现所有携带罕见霉菌的货箱。制造商称它高度准确，检查员利奥便把每次红灯都当成证据。第一次大规模筛查中，一千只箱有五十一只亮红。工人隔离货物，延误药品与食品，也惊吓货主。实验室确认后，只有一箱真的有霉。利奥指责机器说谎，尽管它承诺的性能其实被正确报告。",
+        "统计师奈拉在地上摆出一千块砖。在这批被筛查货物中，约一箱带霉。若警报抓到它，就产生一个真红灯。即使机器能正确放行每一百只干净箱中的九十五只，那小部分误报仍会作用在其余九百九十九只上，于是约五十只干净箱也可能变红。机器在有霉组和无霉组内的准确度，并不直接回答所有红灯中多少真的带霉。",
+        "奈拉先从警报前的概率开始：目标状况在相关人群中的频率，再按暴露、症状、场景与其他信息调整。检测结果随后根据“有该状况时比无该状况时更可能出现多少”来改变概率。阳性可以把风险推高，却不必然变成确定；阴性可以把风险推低，却不等于绝不可能。同一设备从暴发仓库移到低风险普通货物时，预测含义会改变。",
+        "利奥提议干脆忽略罕见霉菌。奈拉拒绝。低先验概率不等于零风险，严重、可传播或可治疗的威胁可能值得在较低门槛下确认或防范。漏诊、误报、延迟、侵入性复查、焦虑与资源成本都重要。她把筛查与确认分开，要求行动匹配剩余不确定，而不是只匹配一盏灯的颜色。",
+        "他们改用自然频数与区间表达结果，不再笼统说警报有百分之九十五准确。他们定义目标状况与参照方法，检查性能能否转移到新箱型，并追踪验证偏倚、结果缺失与阈值改变。当操作员只检测本来就可疑的货箱时，报告性能也会移动。一项研究里的数字不能脱离人群，再原封不动装进另一座港口。",
+        "这些地砖揭示的是诊断中的基础率推理：解释新证据时，要把它与相关个体和场景中目标状况原有的频率或概率结合。敏感度、特异度与似然信息会更新起点，却不会抹去起点。即使检测很好，广泛筛查罕见状况仍会产生许多假阳性；严重的罕见风险也仍值得合比例关注。利奥只问红灯在机器里代表什么，奈拉先数了机器外等候的货箱。"
+      ],
+      "conceptName": "Base-rate reasoning in diagnosis",
+      "conceptNameZh": "诊断中的基础率推理",
+      "explanationParagraphs": [
+        "Base-rate reasoning interprets a diagnostic result by combining the prior probability of a condition in the relevant person and setting with the evidence supplied by the test.",
+        "Test sensitivity and specificity do not equal the probability that a particular positive or negative result is correct. Predictive meaning also depends on prevalence, selection, thresholds, reference standards, and context."
+      ],
+      "explanationParagraphsZh": [
+        "基础率推理把相关个体与场景中目标状况的先验概率，同检测提供的新证据结合起来解释诊断结果。",
+        "检测敏感度与特异度不等于某一次阳性或阴性正确的概率。预测含义还取决于患病率、选择、阈值、参照标准与情境。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0912-evidence-based-medicine",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0912",
+      "fieldTitle": "Medicine",
+      "fieldTitleZh": "医学",
+      "title": "The Three Chairs at the Bedside",
+      "titleZh": "病床边的三把椅子",
+      "summary": "A celebrated physician, a library of trials, and a patient with a different life each hold part of a decision that none can make alone.",
+      "summaryZh": "名医经验、临床研究与拥有独特生活的患者各自握着决定的一部分，任何一方都不能独自完成它。",
+      "storyParagraphs": [
+        "Dr Oren kept one chair beside every bed and sat in it himself. His memory held forty years of cases, and younger clinicians copied his choices. When a patient named Ela arrived with a condition Oren had treated many times, he recommended his familiar remedy. Ela asked whether it would help her return to work without worsening another illness. Oren could recall several successes, but not how many similar patients had failed, been harmed, or never returned to his clinic.",
+        "Researcher Mira brought a second chair and a stack of studies. Some compared treatments fairly; others selected unusual patients, stopped early, measured surrogate outcomes, lost participants, or reported only favourable analyses. A famous paper was not automatically strong evidence. Mira asked whether allocation, masking where possible, follow-up, outcome choice, effect size, uncertainty, harms, and consistency made the result credible. A statistically noticeable difference could still be too small, too uncertain, or too irrelevant to matter clinically.",
+        "The strongest review favoured a newer intervention on average. Oren prepared to follow it exactly, but Ela would have been excluded from most trials because of age, another condition, and concurrent medicine. The studies estimated effects in groups; they did not issue a personal command. Mira examined applicability, baseline risk, absolute benefit and harm, alternatives, burden, feasibility, and what evidence was missing. Clinical expertise was needed to recognise Ela's state and judge how research might transfer, not to overrule evidence by prestige.",
+        "Ela pulled in a third chair. She valued symptom relief, but also alertness at work, avoiding hospital visits, caring for her father, cost, and the possibility of changing course. Those preferences did not alter whether a medicine had a biological effect; they altered which trade-offs made sense for her. The team explained options and uncertainty in understandable terms, checked comprehension, and left room for refusal. Shared choice was not asking Ela to decide without professional support.",
+        "They selected a plan, defined what improvement and harm would look like, arranged monitoring, and agreed when to reconsider. A later high-quality study changed the estimated balance, so the plan changed too. Oren's experience helped notice an early adverse pattern; the research prevented one memorable success from becoming universal law; Ela's priorities determined which acceptable option served her life. None of the three chairs was decorative, and none could safely occupy the whole bedside.",
+        "Their practice became evidence-based medicine: the conscientious integration of current best research evidence, clinical expertise, and the individual patient's values and circumstances in decisions about care. It requires answerable questions, searching, critical appraisal, application, shared decision-making, and evaluation of outcomes. Evidence does not mean obeying one paper, and expertise does not mean relying on memory alone. Oren had once treated knowledge as the possession of the person in the chair. Ela's care improved when the bedside made room for three different kinds of knowing."
+      ],
+      "storyParagraphsZh": [
+        "奥伦医生在每张病床旁只放一把椅子，由他自己坐。四十年病例存于记忆，年轻医生照着他的选择行动。患者埃拉带着一种奥伦处理过许多次的状况到来，他推荐熟悉方案。埃拉问，它能否帮助她回去工作，又不恶化另一种疾病。奥伦记得几次成功，却不记得多少相似患者失败、受伤，或再也没有回诊。",
+        "研究员米拉搬来第二把椅子和一叠研究。有些公平比较治疗，另一些选择特殊患者、提前停止、只测替代终点、失去参与者，或只报告有利分析。著名论文不会自动变成强证据。米拉检查分配、可行处的盲法、随访、结局选择、效应大小、不确定性、伤害与一致性是否可信。统计上可见的差异仍可能太小、太不确定或太无关，无法产生临床意义。",
+        "最可靠综述显示一种新干预平均更有利。奥伦准备完全照做，埃拉却因年龄、另一疾病与同时用药而被多数试验排除。研究估计群体效应，不会签发个人命令。米拉检查适用性、基线风险、绝对获益与伤害、替代方案、负担、可行性及缺失证据。临床专长用于识别埃拉的状态并判断研究如何转移，而非凭声望推翻证据。",
+        "埃拉拉来第三把椅子。她重视症状缓解，也重视工作时清醒、避免住院、照顾父亲、费用，以及日后改变路线的可能。这些偏好不会改变药物是否具有生物效应，却会改变哪种取舍对她合理。团队用可理解方式解释选项与不确定，核对理解，也为拒绝保留空间。共同选择不是让埃拉在缺少专业支持时独自决定。",
+        "他们选定计划，定义改善与伤害会是什么样，安排监测，并约好何时重新考虑。后来一项高质量研究改变了估计平衡，计划也随之改变。奥伦的经验帮助发现早期不良模式；研究阻止一段难忘成功成为普遍法律；埃拉的优先事项则决定哪个可接受选项服务于她的生活。三把椅子没有一把是装饰，也没有一把能安全占满床边。",
+        "他们实行的是循证医学：在照护决定中审慎整合当前最佳研究证据、临床专长，以及个体患者的价值与处境。它需要提出可回答问题、检索、批判评估、应用、共同决策与结局复核。证据不等于服从一篇论文，专长也不等于只依赖记忆。奥伦曾把知识当成坐椅者的所有物；当床边为三种不同的知道方式腾出位置，埃拉的照护才真正改善。"
+      ],
+      "conceptName": "Evidence-based medicine",
+      "conceptNameZh": "循证医学",
+      "explanationParagraphs": [
+        "Evidence-based medicine integrates current best research evidence with clinical expertise and the individual patient's values, goals, and circumstances.",
+        "It involves asking, finding, critically appraising, applying, and evaluating evidence. Research averages require judgement about validity and applicability, while expertise and preference cannot substitute for reliable evidence about benefits and harms."
+      ],
+      "explanationParagraphsZh": [
+        "循证医学把当前最佳研究证据、临床专长与个体患者的价值、目标及处境整合起来。",
+        "它包括提问、检索、批判评估、应用与复核证据。研究平均值需要判断可信度和适用性，而专长与偏好也不能替代关于获益和伤害的可靠证据。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0913-early-warning-observation",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0913",
+      "fieldTitle": "Nursing and midwifery",
+      "fieldTitleZh": "护理与助产",
+      "title": "The Patient Whose Numbers Stayed Green",
+      "titleZh": "数字始终绿色的病人",
+      "summary": "A ward chart stays below its alarm line while a nurse notices several small physiological and behavioural changes moving together across the night.",
+      "summaryZh": "病房图表一直没有越过报警线，护士却看见几项细小的生理与行为变化在整夜朝同一方向移动。",
+      "storyParagraphs": [
+        "On the night ward, every box beside patient Oren's bed remained green. His temperature, pulse, pressure, breathing, oxygen reading, and alertness had not crossed the hospital's individual alarm lines. The departing team called him stable. Nurse Mira had cared for him the previous evening. She noticed that he now paused halfway through a sentence, used his shoulder muscles to breathe, asked for less water, and needed help to sit where he had not before. No single change looked dramatic enough to win an argument alone.",
+        "Mira repeated the measurements with suitable equipment and technique rather than trusting one convenient value. She compared them with Oren's baseline, previous hours, treatment, oxygen use, fluid balance, pain, medicines, and the clinical setting. The numbers had moved together: still inside broad normal ranges, but consistently away from his own earlier state. She documented what she saw in concrete language, including new confusion and work of breathing, instead of writing only that he looked wrong.",
+        "The first clinician answered that the total warning score was low. Mira treated the score as a shared language, not a veto. Aggregate systems could combine small physiological deviations and standardise escalation, while a severe single parameter, a rapid trend, a new concern, or a condition poorly represented by the tool might still require action. Different populations and settings needed validated approaches; one adult ward chart could not be exported unchanged to pregnancy, children, chronic baselines, or every community service.",
+        "She escalated through the ward's agreed pathway, stated the situation and trend, invited review, and used read-back to confirm the response. The first review found no immediate catastrophe, but increased observation and ordered focused assessment. Two hours later, the pattern had progressed enough to clarify the problem, and treatment began before a late threshold crossing forced an emergency. The value of Mira's concern was not that intuition named the disease; it changed the timing and attention given to uncertain deterioration.",
+        "The ward later reviewed both signal and response. Missing observations, copied values, poor sensor placement, alarm fatigue, staff hierarchy, workload, and delayed review could break the system even when the scoring rule was sound. Patients and families sometimes recognised meaningful changes first. A safe process therefore linked accurate observation to trend display, communication, authority, timely clinical assessment, action, and feedback. It also protected staff who escalated a reasonable concern that ultimately proved benign.",
+        "Mira had practised early warning through clinical observation: systematic measurement and repeated bedside assessment used to recognise patterns of deterioration early enough for timely review and response. Scores can organise physiological information, but trends, baselines, measurement quality, patient or family concern, and clinical judgement remain essential. An alarm is useful only inside a functioning response system. Oren's chart never shouted during the first hours. Mira heard several quiet changes begin to speak in the same direction."
+      ],
+      "storyParagraphsZh": [
+        "夜班病房里，奥伦床边每个格子都保持绿色。他的体温、脉搏、血压、呼吸、血氧读数与清醒程度都没有越过医院各自的报警线。离班团队称他稳定。护士米拉前一晚也照顾过他，发现他如今一句话说到一半就要停顿，呼吸时开始用肩部肌肉，喝水更少，还需要别人帮助坐起，而之前不需要。每项变化单独看都不够惊人。",
+        "米拉用合适设备和方法重新测量，没有相信一个方便读数。她把结果同奥伦的基线、前几小时、治疗、吸氧、液体平衡、疼痛、用药与临床场景比较。多个数字一起移动：仍在宽泛正常范围，却持续离开他自己的早先状态。她用具体语言记录新出现的意识混乱与呼吸用力，而不是只写“看起来不对”。",
+        "第一位临床人员回答说，总预警分数很低。米拉把分数当成共同语言，而不是否决权。综合系统能组合细小生理偏移并规范升级，但一项严重参数、快速趋势、新担忧，或工具未充分代表的状况，仍可能要求行动。不同人群与场景需要经过验证的方法，一张成人病房表不能原样搬到妊娠、儿童、慢性基线或所有社区服务。",
+        "她沿病房约定路线升级，说明现状与趋势，请求复核，并用回读确认回应。第一次复核没有发现即时灾难，却增加观察并安排聚焦评估。两小时后，格局进一步发展，问题变得清楚，治疗在迟来的阈值越线迫使紧急处置前开始。米拉的担忧价值不在于直觉直接叫出病名，而在于改变了对不确定恶化投入注意与行动的时机。",
+        "病房后来同时复核信号和响应。观察缺失、复制数值、传感器放置错误、警报疲劳、人员等级、工作负荷与复核延迟，都能让可靠评分规则失效。患者和家属有时最早认出重要变化。因此，安全流程必须把准确观察连接到趋势显示、沟通、权力、及时临床评估、行动与反馈，也要保护提出合理担忧但最终证明无事的员工。",
+        "米拉实行的是临床观察与早期预警：通过系统测量和反复床边评估，及早识别恶化格局，以便及时复核与响应。评分能组织生理信息，但趋势、基线、测量质量、患者或家属担忧与临床判断仍不可缺。警报只有置于能运作的响应系统里才有价值。最初几小时，奥伦的图表从未高喊；米拉却听见几项安静变化开始朝同一方向说话。"
+      ],
+      "conceptName": "Early warning through clinical observation",
+      "conceptNameZh": "临床观察与早期预警",
+      "explanationParagraphs": [
+        "Early warning through clinical observation combines reliable repeated measurements with bedside assessment to recognise deterioration and trigger timely review.",
+        "Validated scores can standardise communication and escalation, but they supplement rather than replace trends, individual baselines, measurement quality, patient concern, clinical judgement, and an effective response system."
+      ],
+      "explanationParagraphsZh": [
+        "临床观察与早期预警把可靠的重复测量同床边评估结合，用来识别恶化并触发及时复核。",
+        "经验证评分能规范沟通与升级，却只能补充而不能取代趋势、个体基线、测量质量、患者担忧、临床判断与有效响应系统。"
+      ],
+      "mode": "lens-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0913-continuity-of-care",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0913",
+      "fieldTitle": "Nursing and midwifery",
+      "fieldTitleZh": "护理与助产",
+      "title": "The Sentence Lost at Every Dawn",
+      "titleZh": "每个黎明丢失的一句话",
+      "summary": "Each shift performs its own tasks correctly, but one sentence of history disappears at every transfer until no caregiver holds the patient's changing story.",
+      "summaryZh": "每班都正确完成自己的任务，一句背景却在每次转移时消失，直到再也没有照护者握着患者不断变化的完整故事。",
+      "storyParagraphs": [
+        "Ela spent six days moving from emergency care to a ward, an imaging unit, a rehabilitation room, and finally home. Each team completed its assigned work. Yet at every transfer, one sentence vanished. The emergency note mentioned a recent medicine change; the ward copy omitted it. A nurse recorded dizziness on standing; the discharge list retained only the blood pressure measured in bed. Ela repeated her story until she assumed the system already knew it. No individual error seemed large, but the missing sentences began to change decisions.",
+        "Nurse Sera drew a line through the entire episode rather than separate boxes around each encounter. She tracked Ela's goals, baseline function, working diagnoses and uncertainty, medicines and reasons, allergies, recent changes, test results, pending results, response to treatment, risks, preferences, support at home, and contingency plan. Information had to remain current and relevant; copying every old note would bury the signal as surely as omitting it.",
+        "The first improved form failed because senders filled it without a receiver present. Sera introduced protected handover time, a standard structure, questions, and read-back for critical details. Responsibility did not pass merely because a document was sent. The receiving professional had to know that responsibility had arrived, understand the current plan, and know who owned unresolved tasks. A pending result without a clearly named responsible reviewer was not continuity; it was a delayed orphan.",
+        "Ela joined the handover at the level she chose. She corrected the medicine history, explained that the stairs at home differed from the training room, and received an understandable account of what to expect, whom to contact, and what changes required help. The patient was often the only person present across every boundary, but Sera refused to make her the sole courier of safety-critical information. Records, people, and organisations still carried professional duties.",
+        "After discharge, the community nurse saw the same plan, but also sent new observations back. Coordination was two-way and longitudinal, not a final packet travelling downstream. Stable relationships helped clinicians recognise changes in Ela over time, while access and timely appointments made that relationship usable. The team reviewed duplicated tests, conflicting instructions, missed follow-up, and whether Ela's goals were actually advancing, rather than counting completed encounters as proof of connected care.",
+        "The line represented continuity of care: coherent, coordinated care experienced over time and across people, settings, and transitions, with information, relationships, management, and responsibility connected around the person's needs. It does not require one professional to provide everything; it requires each contribution to remain intelligible and accountable within the larger course. Every team had treated Ela during its own hour. Sera protected the sentence that allowed the next hour to understand what the previous one had changed."
+      ],
+      "storyParagraphsZh": [
+        "埃拉六天内从急诊转到病房、影像室、康复室，最后回家。每支团队都完成分配任务，可每次转移都会丢失一句话。急诊记录提到近期换药，病房副本漏掉它；护士写下站起时头晕，出院清单只留下卧位血压。埃拉不断重复自己的故事，后来以为系统早已知道。没有一项遗漏单独看来很大，消失的句子却开始改变决定。",
+        "护士塞拉画出贯穿整段经历的一条线，而非为每次接触各画方框。她追踪埃拉的目标、基线功能、工作判断与不确定、用药及原因、过敏、近期变化、检查结果、待回结果、治疗反应、风险、偏好、家庭支持与应变计划。信息必须保持当前且相关；把每份旧记录全部复制，会像遗漏一样埋没真正信号。",
+        "第一张改良表格失败，因为发送者独自填写，接收者不在场。塞拉加入受保护的交班时间、标准结构、提问与关键细节回读。责任不会因为文档发送就自动转移。接收专业人员必须知道责任已经到达，理解当前计划，并清楚谁负责未解决任务。一项没有清楚指定负责复核者的待回结果，不是连续，而是被延迟遗弃。",
+        "埃拉按自己愿意的程度参与交接。她纠正用药史，说明家中楼梯与训练室不同，并得到可理解的说明：接下来会发生什么、联系谁、哪些变化需要帮助。患者常是唯一跨越所有边界的人，但塞拉拒绝让她成为安全关键信息的唯一信使。记录、专业人员与机构仍承担职业责任。",
+        "出院后，社区护士看见同一计划，也把新观察送回去。协调是双向且纵向的，不是一个最终文件包只向下游漂流。稳定关系帮助临床人员跨时间识别埃拉的变化，可及与及时预约又让关系真正可用。团队复核重复检查、冲突指令、漏掉的随访，以及埃拉目标是否进展，而不是把完成接触次数当成连接照护的证明。",
+        "这条线代表的是照护连续性：围绕个体需要，把跨时间、人员、场景与转移的照护组织成连贯协调的经历，使信息、关系、管理与责任保持连接。它不要求一位专业人员包办一切，而要求每份贡献在更大病程中仍然可理解、可问责。每支团队都照顾过自己那一小时的埃拉，塞拉保护的则是让下一小时理解上一小时改变了什么的那句话。"
+      ],
+      "conceptName": "Continuity of care",
+      "conceptNameZh": "照护连续性",
+      "explanationParagraphs": [
+        "Continuity of care is the coherence and coordination of care over time and across professionals, services, settings, and transitions from the patient's perspective.",
+        "It depends on connected information, relationships, management plans, responsibility, access, patient involvement, and two-way follow-up. A sent document or a series of completed visits alone does not create continuity."
+      ],
+      "explanationParagraphsZh": [
+        "照护连续性是从患者角度看，照护跨时间、专业人员、服务、场景与转移保持连贯和协调。",
+        "它依赖相连的信息、关系、管理计划、责任、可及性、患者参与与双向随访。仅仅发送文档或完成一串就诊并不会自动产生连续性。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0913-informed-consent",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0913",
+      "fieldTitle": "Nursing and midwifery",
+      "fieldTitleZh": "护理与助产",
+      "title": "The Birth Plan Written in Moving Ink",
+      "titleZh": "用流动墨水写成的分娩计划",
+      "summary": "A maternity team treats a signed plan as permanent until a labouring woman shows that understanding, preference, capacity, and circumstances can change in real time.",
+      "summaryZh": "产科团队把签署计划当作永久指令，直到分娩中的女性表明理解、偏好、能力与情境都会实时变化。",
+      "storyParagraphs": [
+        "Before labour, Nela signed a page listing her preferred approach to birth. The team placed it at the front of her record and called the decision settled. Hours later, conditions changed and a clinician proposed another intervention. One staff member pointed to the old signature; another began explaining while standing at the door. Midwife Sera sat beside Nela and asked what she understood now, what mattered most, and whether she wanted time, support, or a different way of receiving information.",
+        "Sera explained the relevant purpose, expected benefits, material risks, uncertainties, reasonable alternatives, and the option of declining, using language and communication support Nela could understand. She separated what was recommended from what was required by immediate circumstances. Understanding was checked through conversation, not a yes-or-no question or a dense leaflet. Information was proportionate to the decision, yet important uncertainty was not hidden to make agreement easier.",
+        "The first discussion was interrupted by pain and urgency. Sera did not treat labour pain, distress, or disagreement with a recommendation as automatic incapacity, nor a signature as proof of capacity forever. Decision-making ability concerned the particular choice at the particular time and could be supported by quieter explanation, an interpreter, a chosen companion, relief, or breaking information into steps. When capacity was genuinely absent and urgent action could not wait, applicable law and professional duties governed action in the person's interests, with documentation and later explanation.",
+        "Nela changed one preference after hearing new evidence and kept another despite the team's recommendation. Her refusal prompted further dialogue about consequences and contingency, not punishment or abandonment. Consent remained voluntary and could be revised or withdrawn before or during a course of care where clinically and legally possible. Sera also ensured that hierarchy, family pressure, cost, language, or fear of receiving worse care did not silently manufacture agreement.",
+        "The team contributed expertise and a clear recommendation rather than handing Nela a menu and retreating. Nela contributed her goals, tolerance for trade-offs, lived circumstances, and authority over her body. Together they selected a plan, defined what changes would reopen the decision, and confirmed who would communicate if urgency increased. Shared work did not guarantee the outcome Nela hoped for, but it made the reasoning and respect visible throughout a changing situation.",
+        "The moving ink represented informed consent and shared decision-making: an ongoing process in which a person receives and understands relevant information, decides voluntarily with appropriate capacity and support, and works with professionals to choose among reasonable options in light of evidence and personal values. A form records part of that process; it does not replace it. Nela's earlier page mattered because it carried her voice forward. It remained respectful only while the team also listened to the person whose voice was still changing beside it."
+      ],
+      "storyParagraphsZh": [
+        "临产前，奈拉签下一页偏好的分娩方式。团队把它放在病历首页，称决定已经完成。数小时后，状况改变，一位临床人员提出另一项干预。一名员工指着旧签名，另一人站在门口开始解释。助产士塞拉坐到奈拉身边，询问她此刻理解什么、最重视什么，以及是否需要时间、支持或另一种接收信息的方式。",
+        "塞拉用奈拉能够理解的语言和沟通支持，说明相关目的、预期获益、重要风险、不确定、合理替代方案，以及拒绝的选项。她把专业推荐与即时情境真正要求的事情分开。理解通过对话核对，不靠一个“是”或“否”，也不靠一张密集传单。信息要与决定相称，但重要不确定不能为更容易取得同意而被藏起。",
+        "第一次讨论被疼痛与紧迫打断。塞拉不把分娩疼痛、痛苦或不同意专业建议自动等同于无能力，也不把签名当成能力永久证明。决策能力针对特定时间的特定选择，可通过更安静说明、翻译、所选陪伴者、缓解或分步骤信息获得支持。当能力确实缺失且紧急行动不能等待时，适用法律与专业义务会指导符合个体利益的行动，并要求记录及事后解释。",
+        "奈拉听到新证据后改变一项偏好，又在团队提出不同建议时保留另一项。她的拒绝引发的是关于后果与应变的进一步对话，而非惩罚或抛弃。在临床与法律允许处，同意始终自愿，也可在照护前或过程中修改或撤回。塞拉还确保等级、家庭压力、费用、语言或害怕遭受较差照护，不会悄悄制造出表面同意。",
+        "团队贡献专业知识和清楚建议，而不是递给奈拉菜单后退开。奈拉贡献目标、对取舍的承受、生活处境，以及对自己身体的权利。他们共同选择计划，定义哪些变化会重新打开决定，并确认紧迫升级时由谁沟通。共同工作不能保证奈拉希望的结局，却能让不断变化情境中的推理与尊重始终可见。",
+        "流动墨水代表的是知情同意与共同决策：个体获得并理解相关信息，在具备适当能力和支持下自愿决定，再依据证据与个人价值同专业人员一起从合理选项中选择。这张表格只记录过程的一部分，不能替代过程。奈拉先前那一页之所以重要，是因为它把她的声音带向未来；只有团队同时听见页面旁仍在变化的本人，它才继续保持尊重。"
+      ],
+      "conceptName": "Informed consent and shared decision-making",
+      "conceptNameZh": "知情同意与共同决策",
+      "explanationParagraphs": [
+        "Informed consent and shared decision-making connect understandable relevant information, voluntary choice, decision-specific capacity and support, professional recommendation, evidence, and the person's values.",
+        "Consent is an ongoing process that may be revisited as information, preferences, or circumstances change. A signature documents but does not by itself prove understanding, voluntariness, or a shared decision."
+      ],
+      "explanationParagraphsZh": [
+        "知情同意与共同决策把可理解的相关信息、自愿选择、针对具体决定的能力与支持、专业建议、证据及个人价值连接起来。",
+        "同意是可随信息、偏好或情境变化而重新讨论的持续过程。签名可以记录，却不能单独证明理解、自愿或共同决定。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0914-sensitivity-specificity",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0914",
+      "fieldTitle": "Medical diagnostic and treatment technology",
+      "fieldTitleZh": "医学诊断与治疗技术",
+      "title": "The Harbour Gate That Heard Too Much",
+      "titleZh": "听见太多的港口闸门",
+      "summary": "Lowering an acoustic alarm catches more damaged hulls but stops more sound ships, forcing the harbour to define both error types and the intended use.",
+      "summaryZh": "降低声学警报阈值会抓住更多破损船体，也会拦下更多完好船只，迫使港口同时定义两类错误与真实用途。",
+      "storyParagraphs": [
+        "Grey Harbour installed an acoustic gate to detect a hidden hull defect before ships entered rough water. At a high alarm setting, nearly every ship passed quickly, but one damaged vessel was missed. Warden Lio lowered the setting until that echo triggered. The next morning, fog, cargo movement, and harmless rivets made the gate stop half the fleet. Lio had improved one kind of success by purchasing another kind of error.",
+        "Engineer Sera assembled ships whose hull status had been established by the best available reference process, including follow-up where needed. Among ships truly carrying the target defect, she counted the fraction the gate marked positive. Among ships without it, she counted the fraction the gate correctly cleared. Missed defects and false alarms occupied different cells; neither disappeared when the two correct fractions were averaged into one flattering accuracy number.",
+        "The device produced a continuous echo score, not a natural red-or-green truth. Moving the cut-point downward usually found a greater share of defective hulls while incorrectly stopping more sound ones. Moving it upward did the reverse. Sera traced pairs of true-positive and false-positive rates across possible settings rather than announcing one universally best threshold. The appropriate operating point depended on purpose, consequences, confirmatory capacity, prevalence, timing, and what action followed an alarm.",
+        "For an initial safety screen, the harbour valued missing fewer dangerous defects and accepted a manageable number of inspections. A costly irreversible repair required stronger confirmation. Lio could not quote the screen's performance as if it were the probability that one stopped ship was damaged; that predictive question also depended on how common the defect was in the fleet being tested. Nor could results from new cargo ships automatically describe old fishing boats or a different sea state.",
+        "They documented the target condition, index test, reference standard, population spectrum, missing and indeterminate results, threshold chosen in advance, and uncertainty around each estimate. Operators were blinded where feasible to prevent expectations from changing interpretation. Sera also examined verification: if only alarmed ships received the reference inspection, unobserved misses would make the gate look better than it was. Performance belonged to a defined test process in a defined population, not to the brass casing alone.",
+        "The harbour learned sensitivity and specificity: sensitivity is the proportion of people with the target condition whom a test correctly identifies as positive, while specificity is the proportion without it whom the test correctly identifies as negative. Both depend on how the target, reference, population, and threshold are defined, and a threshold often trades one against the other. Lio had asked the gate to hear every dangerous whisper and no harmless sound. Sera showed that its useful setting had to answer which mistake mattered for the next decision."
+      ],
+      "storyParagraphsZh": [
+        "灰港安装一道声学闸门，在船驶入恶劣水域前寻找隐藏船体缺陷。警报设得高时，几乎所有船都快速通过，却漏掉一艘受损船。守卫利奥把阈值调低，直到那种回声会触发警报。第二天早晨，雾、货物移动与无害铆钉让闸门拦下半支船队。利奥用另一类错误购买了一类成功。",
+        "工程师塞拉找来一组船，用现有最佳参照程序确认船体状态，必要时还包括后续观察。在真正带有目标缺陷的船中，她计算闸门判为阳性的比例；在没有缺陷的船中，她计算闸门正确放行的比例。漏掉缺陷与错误报警住在不同格子里，把两项正确比例平均成一个悦耳准确率，也不会让任何一格消失。",
+        "设备给出的是连续回声分数，不是天然红绿真相。把切点下移，通常会发现更大比例的缺陷船，也会错误拦下更多完好船；上移则相反。塞拉描出各种设置下真阳性率与假阳性率的成对变化，不宣布一个普遍最佳阈值。合适运行点取决于用途、后果、确认能力、患病率、时机及警报后采取什么行动。",
+        "作为初步安全筛查，港口重视少漏危险缺陷，也接受可管理的额外检查。昂贵且不可逆的维修则需要更强确认。利奥不能把筛查性能说成某一艘被拦船真的受损的概率，那个预测问题还取决于缺陷在受检船队中有多常见。新货轮得到的结果也不能自动描述旧渔船或不同海况。",
+        "他们记录目标状况、待评检测、参照标准、人群谱、缺失与不确定结果、预先选定阈值，以及各估计的不确定区间。在可行处，操作员不知道参照结果，避免预期改变解释。塞拉还检查验证过程：若只有报警船接受参照检查，未被看见的漏检会让闸门显得比实际更好。性能属于特定人群中的完整检测过程，不只属于黄铜外壳。",
+        "港口学会的是敏感度与特异度：敏感度是在具有目标状况的人中被检测正确判为阳性的比例，特异度是在不具有目标状况的人中被正确判为阴性的比例。二者都取决于目标、参照、人群与阈值怎样定义，阈值也常在两者之间制造取舍。利奥要求闸门听见每声危险低语，又忽略所有无害声音；塞拉让设置先回答，下一项决定最不能承受哪种错误。"
+      ],
+      "conceptName": "Sensitivity and specificity",
+      "conceptNameZh": "敏感度与特异度",
+      "explanationParagraphs": [
+        "Sensitivity is the proportion of people with a target condition correctly identified as positive; specificity is the proportion without it correctly identified as negative.",
+        "They describe performance against a reference in a defined population and at a defined threshold. They do not directly give the probability that one person's result is correct, and changing the threshold often trades misses against false alarms."
+      ],
+      "explanationParagraphsZh": [
+        "敏感度是具有目标状况的人中被正确判为阳性的比例，特异度是不具有该状况的人中被正确判为阴性的比例。",
+        "二者描述检测在定义人群、参照与阈值下的表现，不直接给出某个个体结果正确的概率；改变阈值也常在漏报与误报之间产生取舍。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0914-signal-detection",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0914",
+      "fieldTitle": "Medical diagnostic and treatment technology",
+      "fieldTitleZh": "医学诊断与治疗技术",
+      "title": "The Speck in the Snowy Plate",
+      "titleZh": "雪纹底片里的斑点",
+      "summary": "Image readers must separate overlapping patterns of signal and noise while their decision criterion moves with purpose, prevalence, consequence, and fatigue.",
+      "summaryZh": "影像阅读者要从重叠的信号与噪声中作出区分，而判定标准会随用途、基础率、后果与疲劳移动。",
+      "storyParagraphs": [
+        "In the mountain imaging room, faint defects appeared as pale specks against plates filled with snowy texture. Reader Pela marked every unusual speck so that none would be missed. Her report caught subtle defects, but workshops filled with follow-up work on harmless texture. On the next shift she became stricter and the false alarms fell; later review found that several weak defects had also passed. The pictures had not changed. Her criterion for calling a pattern meaningful had.",
+        "Physicist Oren separated two questions. How far apart were the distributions of image evidence when a defect was present and absent? And where did a reader place the decision criterion along that overlapping evidence? Better acquisition, reconstruction, display, training, or task design might improve distinguishability. A more cautious or liberal criterion could alter hits and false alarms without changing the underlying separation at all. The same reader could move the criterion while retaining similar discrimination; two readers could share a criterion yet differ in what evidence they could separate.",
+        "They collected confidence ratings across representative cases whose status and, where required, location were established independently. Moving through possible criteria produced a curve of hit rate against false-positive rate. Correctly saying that some defect existed somewhere was different from locating the actual speck, and one case could contain several candidate marks. Oren chose evaluation methods that matched the clinical task rather than rewarding a reader for pointing vaguely at any abnormal plate.",
+        "The optimal operating point was not purely optical. Screening a serious condition with confirmatory review could justify a different criterion from deciding on an invasive action. Prevalence, missed-case harm, false-positive harm, workload, downstream capacity, and patient consequences influenced the threshold. Yet changing prevalence or cost did not magically improve the image's physical information. Oren reported discrimination and operating behaviour separately so policy choices would not masquerade as image quality.",
+        "Readers varied with experience, fatigue, interruptions, prior cases, display conditions, and knowledge of prevalence. An algorithm could shift attention or create automation bias rather than simply add accuracy. The team used multi-reader, multi-case evaluation, representative spectra, blinding, localisation where relevant, uncertainty estimates, and real workflow outcomes. They monitored performance after deployment because a laboratory case set could not guarantee behaviour in a changing clinic.",
+        "The snowy plates taught signal detection: decisions made when evidence generated by signal and noise overlaps, requiring both an assessment of discriminability and a criterion for calling the signal present. Hits, misses, false alarms, and correct rejections change as the criterion moves; receiver-operating curves show performance across criteria. Context can justify an operating point but cannot abolish overlap. Pela had searched for a line printed inside each speck. Oren found instead a noisy evidence field and a consequential line drawn by the reader."
+      ],
+      "storyParagraphsZh": [
+        "山地影像室里，微小缺陷像淡斑，躺在满是雪纹的底片上。阅片员佩拉标记每处不寻常斑点，以免漏掉任何一个。她抓住了细微缺陷，维修间却挤满对无害纹理的后续处理。下一班她变得更严格，误报下降；后来复核又发现几处弱缺陷被放过。图像没有改变，改变的是她把纹理称为有意义信号的判定标准。",
+        "物理师奥伦拆开两个问题。缺陷存在与不存在时，图像证据的两个分布相隔多远？阅读者又把决策标准放在这片重叠证据的什么位置？更好的采集、重建、显示、训练或任务设计可能提高可区分程度。更谨慎或更宽松的标准则能改变命中与误报，即使底层分离程度完全没变。同一阅读者可在区分能力近似不变时移动标准；两位阅读者也可采用相同标准，却拥有不同的证据区分能力。",
+        "他们在一组有代表性的案例上收集置信判断，案例状态以及必要时的具体位置由独立方式建立。沿各种可能标准移动，会产生一条命中率对假阳性率的曲线。正确说出某处存在缺陷，不同于定位真正斑点；一张底片也可能包含多个候选标记。奥伦选择匹配临床任务的评估方法，不因阅读者模糊指出任意异常片就奖励他。",
+        "合适运行点不只由光学决定。对严重状况进行且有确认复核的筛查，可以采用不同于决定侵入性行动的标准。基础率、漏诊伤害、误报伤害、工作量、下游能力与患者后果都会影响阈值。但改变基础率或成本不会神奇增加图像物理信息。奥伦分开报告区分能力与运行行为，防止政策选择伪装成图像质量。",
+        "阅读者会随经验、疲劳、打断、前序案例、显示条件与对患病率的了解而变化。算法可能转移注意或制造自动化偏误，不是简单增加准确。团队使用多阅读者、多案例评估、有代表性人群谱、盲法、适当的定位要求、不确定估计与真实流程结局。部署后仍继续监测，因为实验室案例集不能保证变化诊所中的表现。",
+        "雪纹底片揭示的是信号检测：当信号与噪声产生的证据彼此重叠时作出决定，既要评估可区分程度，也要设定把信号称为存在的标准。标准移动时，命中、漏报、误报与正确排除都会改变；受试者工作特征曲线展示跨标准表现。情境可以决定运行点，却不能消灭重叠。佩拉寻找斑点内部印好的一条线，奥伦看见的却是一片嘈杂证据场，以及阅读者画下的后果之线。"
+      ],
+      "conceptName": "Signal detection",
+      "conceptNameZh": "信号检测",
+      "explanationParagraphs": [
+        "Signal detection analyses decisions made when evidence from signal-present and signal-absent cases overlaps, separating discriminability from the chosen decision criterion.",
+        "Moving the criterion changes hits and false alarms. ROC methods examine performance across criteria, while task, prevalence, consequences, readers, cases, workflow, and localisation requirements shape valid evaluation and use."
+      ],
+      "explanationParagraphsZh": [
+        "信号检测分析信号存在与不存在时的证据发生重叠下的决定，并把可区分程度与所选决策标准分开。",
+        "移动标准会改变命中与误报。ROC 方法考察跨标准表现，而任务、基础率、后果、阅读者、案例、流程与定位要求共同塑造有效评估和使用。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0914-calibration",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0914",
+      "fieldTitle": "Medical diagnostic and treatment technology",
+      "fieldTitleZh": "医学诊断与治疗技术",
+      "title": "Three Machines and One Reference Vial",
+      "titleZh": "三台机器与一支参照样本",
+      "summary": "Three analysers report different values for the same stable reference, revealing drift, bias, uncertainty, matrix effects, and broken comparison chains.",
+      "summaryZh": "三台分析仪为同一稳定参照报出不同数值，暴露漂移、偏倚、不确定、基质效应与断裂的比较链。",
+      "storyParagraphs": [
+        "Three clinics tested halves of the same reference vial. The north analyser reported twelve, the river analyser fourteen, and the hill analyser twelve every single time. Director Lio trusted the hill machine because it was perfectly consistent. Metrologist Sera opened the vial's certificate: under stated conditions, its assigned value was fourteen with a documented uncertainty. The hill machine was precise in repeating the wrong answer.",
+        "Sera did not turn one screw until all screens displayed fourteen and declare victory. She established the relation between instrument indications and reference values across the measurement range, under specified conditions, including uncertainty. A single point could not reveal slope, nonlinearity, carryover, or behaviour near a clinical decision level. She repeated measurements to estimate short-term variation and reserved independent check material so fitting the calibration relation could not also serve as its only test. Adjustment might use that relation to change indications; verification then had to show whether performance met requirements.",
+        "The clinic's working material was linked through a documented chain of comparisons to a higher-order reference, with each link contributing uncertainty. Traceability belonged to a measurement result produced by a defined process, not as a permanent badge attached to a machine. A calibration performed last year did not guarantee today's result after reagent changes, maintenance, transport, temperature variation, software updates, wear, or operator error.",
+        "The first control solution behaved well while patient samples remained biased. Their chemical matrix differed from the clean standard, and sample preparation introduced a new effect. Sera used commutable or otherwise fit-for-purpose materials where possible, compared methods, examined interference, and separated calibration from quality control and clinical validation. Clinical reference intervals and decision limits required their own evidence; calibrating the units could not decide what action a value warranted. A device could be calibrated to a reference yet still be unsuitable for a particular measurand, specimen, population, or decision.",
+        "She established routine controls, trend charts, maintenance, lot checks, proficiency comparison, acceptance rules, investigation, and records. Random variation, systematic bias, drift, resolution, repeatability, reproducibility, and uncertainty answered different questions. When control moved, staff paused affected reporting according to the laboratory's governed process, assessed the period at risk, and communicated corrected results where required. Reliability depended on an active measurement system, not a ceremonial sticker.",
+        "The vial taught measurement calibration: under specified conditions, establishing a documented relationship between indications from a measurement system and values with uncertainties provided by suitable standards, so later results can be interpreted and, where required, traced through an unbroken comparison chain. Calibration does not itself adjust, validate, or guarantee every future result. Lio had asked which machine spoke truth. Sera asked how each result reached a common reference, how uncertain the journey was, and whether the road still remained open today."
+      ],
+      "storyParagraphsZh": [
+        "三家诊所检测同一支参照样本的等分。北部分析仪报告十二，河畔分析仪报告十四，山地分析仪每一次都稳定报告十二。主任利奥最信任山地机器，因为它完全一致。计量师塞拉打开样本证书：在规定条件下，赋值为十四，并带有记录的不确定度。山地机器只是精密地重复错误答案。",
+        "塞拉没有把一颗螺丝调到所有屏幕显示十四就宣布成功。她在规定条件下，跨测量范围建立仪器示值与参照值之间的关系，并包括不确定度。单点无法揭示斜率、非线性、携带污染或临床决策水平附近的行为。她重复测量来估计短期变异，并保留独立核查材料，避免拟合校准关系同时成为这段关系唯一的检验。调整可以利用该关系改变示值，随后仍须验证表现是否满足要求。",
+        "诊所工作材料通过有记录的比较链连接到更高阶参照，每个环节都贡献不确定度。溯源性属于由特定过程产生的测量结果，不是永久贴在机器上的徽章。去年完成的校准不能保证机器在试剂更换、维护、运输、温度变化、软件更新、磨损或操作错误后的今日结果。",
+        "第一种质控液表现良好，患者样本却仍有偏倚。患者样本的化学基质不同于干净标准，制备过程又引入新效应。塞拉在可行处使用可互换或适合用途的材料，比较方法，检查干扰，并把校准、质量控制与临床验证分开。临床参考区间与决策界限需要自己的证据；校准计量单位不能决定某个数值应触发什么行动。设备可以追到参照，仍可能不适合某个被测量、样本、人群或决定。",
+        "她建立日常质控、趋势图、维护、批次核查、能力比较、接受规则、调查与记录。随机变异、系统偏倚、漂移、分辨率、重复性、再现性与不确定度回答不同问题。质控移动时，人员按实验室治理流程暂停受影响报告，评估风险时段，并在需要时沟通更正结果。可靠性依赖活的测量体系，不依赖仪式性贴纸。",
+        "这支样本揭示的是测量校准：在规定条件下，建立并记录测量系统示值与适当标准所提供带不确定度数值之间的关系，使后续结果可被解释，并在需要时经不间断比较链实现溯源。校准本身不等于调整、验证，也不保证每个未来结果。利奥问哪台机器说真话，塞拉问每个结果如何抵达共同参照、路途有多不确定，以及那条路今天是否仍然畅通。"
+      ],
+      "conceptName": "Measurement calibration",
+      "conceptNameZh": "测量校准",
+      "explanationParagraphs": [
+        "Measurement calibration establishes, under specified conditions, a relationship between a system's indications and reference values with associated uncertainties.",
+        "Traceability requires a documented unbroken calibration chain, each link contributing uncertainty. Calibration is distinct from adjustment, quality control, validation, and a guarantee that all later results remain suitable for clinical use."
+      ],
+      "explanationParagraphsZh": [
+        "测量校准是在规定条件下，建立测量系统示值与带相关不确定度的参照值之间的关系。",
+        "溯源性需要有记录且不间断的校准链，每个环节都会贡献不确定度。校准不同于调整、质量控制、验证，也不保证所有后续结果始终适合临床使用。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0915-neuroplasticity",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0915",
+      "fieldTitle": "Therapy and rehabilitation",
+      "fieldTitleZh": "治疗与康复",
+      "title": "The Cartographer's Trembling Line",
+      "titleZh": "制图师颤动的线",
+      "summary": "After injury, a cartographer repeatedly practises meaningful routes with feedback, variation, rest, and growing difficulty instead of tracing one easy line forever.",
+      "summaryZh": "受伤后，制图师用反馈、变化、休息与渐增难度反复练习有意义的路线，而不是永远描摹一条简单直线。",
+      "storyParagraphs": [
+        "After a brain injury, cartographer Lio could see the coast clearly but his right hand could no longer guide the pen along it. He practised one straight line a hundred times each morning. The line became faster on that page, yet his hand still failed when drawing a curve, fastening a button, or lifting a cup. Lio concluded that recovery had ended. Therapist Mira saw that he had trained one repeated movement and mistaken improvement on the exercise for return of a wider skill.",
+        "Mira chose tasks connected to Lio's goals and current capacity. He traced coastlines, reached for tools, turned pages, and marked symbols with enough challenge to require attention without sacrificing safety or useful form. Repetition mattered, but the nervous system changed in response to what was practised, how actively it was attempted, the feedback received, and the conditions surrounding it. Meaningful success, error, reward, sensation, attention, and motivation helped shape learning.",
+        "More practice was not always better in one unbroken block. Fatigue degraded movement and taught compensation. Mira adjusted intensity, spacing, rest, sleep, task difficulty, and assistance under a qualified rehabilitation plan. She varied objects, directions, speed, context, and sensory cues so learning would not remain trapped in one page. Feedback gradually shifted from constant correction toward information Lio could use to detect and adjust his own errors.",
+        "The recovering nervous system could strengthen, weaken, reorganise, or recruit networks, while the body also learned compensations. Some changes were useful; others could reinforce pain, neglect, fear, or reliance on the unaffected side. Improvement also reflected healing, reduced swelling, strategy, equipment, support, and practice, so no scan or performance gain proved that one mechanism alone caused recovery. Timing and potential differed with injury, person, function, and health.",
+        "Mira measured what Lio could do in the clinic, at home, and in the map room. A beautiful trained line that did not transfer to daily activity was incomplete progress. A skill learned with one object or cue could fail when the environment, sequence, or demand changed. She tracked accuracy, speed, effort, quality, retention, generalisation, participation, fatigue, and adverse effects, then revised goals with Lio. Assistive tools were not surrender; they could enable participation while restorative learning continued. Nor did the promise of change justify unsafe intensity or guarantees of complete recovery.",
+        "The new maps embodied neuroplasticity: the nervous system's capacity to change functional organisation, connection strength, structure, and behaviour in response to injury, experience, activity, and environment. Rehabilitation can guide experience-dependent change through task-specific, meaningful, appropriately dosed practice with feedback and variation, but outcomes remain individual and constrained. Lio's hand did not discover a secret replacement road overnight. It learned, rested, erred, adapted, and slowly drew routes that mattered beyond the practice page."
+      ],
+      "storyParagraphsZh": [
+        "脑损伤后，制图师利奥仍能清楚看见海岸，右手却无法引导笔沿岸移动。他每天早晨把一条直线描一百遍，在那张纸上越来越快，可画曲线、扣纽扣或端杯时仍然失败。利奥认定恢复已经结束。治疗师米拉看见，他只训练了一种重复动作，却把练习成绩提高误当成更广技能已经回来。",
+        "米拉选择同利奥目标及当前能力相连的任务。他描海岸线、伸手取工具、翻页并标记符号，难度足以要求注意，又不牺牲安全与有用动作形式。重复很重要，但神经系统会回应练了什么、是否主动尝试、得到什么反馈，以及练习周围的条件。具有意义的成功、错误、奖励、感觉、注意与动机都会塑造学习。",
+        "更多练习并不等于一口气练得越久越好。疲劳会降低动作质量，也可能教会代偿。米拉在合格康复计划下调整强度、间隔、休息、睡眠、任务难度与辅助。她改变物件、方向、速度、情境与感觉提示，防止学习被困在一张纸上。反馈也从持续纠正，逐步转向利奥能用来发现并调整自身错误的信息。",
+        "恢复中的神经系统可以强化、削弱、重组或招募网络，身体也会学习代偿。有些改变有用，另一些会加固疼痛、忽视、恐惧或对未受影响一侧的依赖。改善还可能来自愈合、肿胀减轻、策略、设备、支持与练习，因此一张扫描或一次表现提高不能证明只有一种机制导致恢复。时机与潜力随损伤、个体、功能与健康而异。",
+        "米拉测量利奥在诊所、家中与制图室分别能做什么。一条完美练熟却无法转移到日常活动的线，只是未完成的进步。依赖一种物件或提示学会的技能，在环境、顺序或要求改变后仍可能失败。她追踪准确、速度、用力、质量、保持、泛化、参与、疲劳与不良效应，再同利奥修订目标。辅助工具不是投降，它能在恢复性学习继续时支持参与。改变的可能也不能成为不安全强度或完整康复保证的理由。",
+        "新地图体现的是神经可塑性：神经系统响应损伤、经验、活动与环境，改变功能组织、连接强度、结构与行为的能力。康复可以通过任务专门、具有意义、剂量适当并包含反馈与变化的练习，引导经验依赖改变，但结局仍因人而异，也受条件约束。利奥的手没有一夜发现秘密替代道路，而是在学习、休息、犯错与适应中，慢慢画出练习纸之外真正重要的路线。"
+      ],
+      "conceptName": "Neuroplasticity",
+      "conceptNameZh": "神经可塑性",
+      "explanationParagraphs": [
+        "Neuroplasticity is the nervous system's capacity to change function, organisation, connections, structure, and behaviour in response to experience, activity, environment, and injury.",
+        "Rehabilitation can guide experience-dependent change through meaningful task-specific practice, suitable dose, feedback, variation, and rest. Change may be adaptive or maladaptive, and recovery also reflects healing, compensation, context, and individual limits."
+      ],
+      "explanationParagraphsZh": [
+        "神经可塑性是神经系统响应经验、活动、环境与损伤，改变功能、组织、连接、结构及行为的能力。",
+        "康复可通过有意义的任务专门练习、适当剂量、反馈、变化与休息来引导经验依赖改变。改变可能适应良好，也可能不良；恢复还受愈合、代偿、情境与个体限制影响。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0915-graded-exposure",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0915",
+      "fieldTitle": "Therapy and rehabilitation",
+      "fieldTitleZh": "治疗与康复",
+      "title": "The Staircase That Grew While Avoided",
+      "titleZh": "在回避中长高的楼梯",
+      "summary": "After a fall, each avoided stair enlarges a man's predicted danger until collaborative, controlled steps let new evidence compete with fear.",
+      "summaryZh": "一次跌倒后，每级被回避的台阶都放大男子预想的危险，直到协作而可控的小步让新证据开始与恐惧竞争。",
+      "storyParagraphs": [
+        "After falling on the courthouse stairs, Oren began using the distant ramp. Soon he avoided every staircase, then steep streets, then buildings whose lifts might fail. Each escape brought immediate relief, which convinced him that avoidance had kept disaster away. In his imagination, the courthouse steps grew taller each month. A friend dragged him onto the top landing to prove there was nothing to fear. Oren fled, shaken, and avoided the square as well.",
+        "Therapist Sera first assessed the feared outcome, actual physical risk, health condition, pain, balance, trauma history, avoidance, safety behaviours, goals, and readiness. Some stairs truly were unsafe; fear was not evidence that all danger was imaginary. They agreed that returning to chosen places mattered to Oren and built a flexible sequence from looking at a small step, approaching it, placing one foot, climbing with support, and eventually using varied staircases. Oren helped choose the pace and could communicate throughout.",
+        "Before each practice, Oren stated what he predicted would happen. During a manageable step, he stayed long enough to observe what actually occurred rather than escaping at the first rise of fear. The aim was not necessarily to make anxiety vanish inside every session. It was to learn that distress could be tolerated, that feared outcomes were less inevitable or manageable in new ways, and that action remained possible while sensations changed.",
+        "The first sequence became too dependent on Sera holding his arm and repeating reassurance. Those supports made entry possible, but if never adjusted they could teach that the stair was safe only when the ritual was present. Together they reduced unnecessary safety behaviours while retaining genuine physical safeguards. They varied height, light, location, company, pace, and purpose, because learning on one familiar stair might not transfer to a dark station or a crowded office. Learning was tested over time, not by one brave performance.",
+        "Progress was not a race upward or a fixed increase in exercise regardless of symptoms. A pain flare, new medical finding, overwhelming distress, or changed goal could require reassessment, smaller steps, another treatment, or stopping. Sera tracked function and participation alongside fear, expectations, avoidance, confidence, and adverse effects. She did not prescribe exposure indiscriminately for every trauma, condition, or hazard, and the story was not a self-treatment plan. Qualified, person-centred care determined suitability and safeguards.",
+        "The shrinking staircase represented graded exposure: planned, collaborative, repeated engagement with feared but appropriately assessed situations or activities, arranged in workable steps so avoidance is reduced and new learning can occur. It is not flooding, coercion, proof that symptoms are unreal, or a fixed ladder that everyone must climb. Oren had used relief after escape as evidence that catastrophe had been prevented. By returning under safer, chosen conditions, he finally gathered evidence from what happened when he stayed."
+      ],
+      "storyParagraphsZh": [
+        "奥伦在法院台阶跌倒后，开始绕远使用坡道。不久，他回避所有楼梯，再回避陡街，最后连可能电梯故障的建筑也不去。每次逃开都立刻缓解，于是他相信正是回避阻止灾难发生。在想象里，法院台阶每月都长高。朋友为证明没什么可怕，把他拖上最高平台。奥伦惊慌逃走，从此连广场也一起回避。",
+        "治疗师塞拉先评估所恐惧的结局、真实身体风险、健康状况、疼痛、平衡、创伤史、回避、安全行为、目标与准备程度。有些楼梯确实不安全，恐惧也不证明所有危险都是虚构。他们同意重返所选地点对奥伦重要，再共同建立灵活序列：先看一小级，靠近，放上一只脚，在支持下攀登，最后尝试不同楼梯。奥伦参与选择节奏，也始终能够沟通。",
+        "每次练习前，奥伦说出自己预测会发生什么。在可承受步骤中，他停留到足以观察实际发生的事，而不是恐惧一升起就逃走。目标不一定是在每次练习里消灭焦虑，而是学习不适可以承受，所怕结局并非必然或能以新方式应对，并且感觉变化时仍可采取行动。",
+        "第一套序列过度依赖塞拉挽着手臂和反复保证。这些支持让开始成为可能，但若永不调整，就会教会他只有仪式在场时楼梯才安全。他们保留真实身体防护，逐步减少不必要安全行为，并改变高度、光线、地点、同伴、速度与目的，因为在一座熟悉楼梯学到的事，未必会转移到昏暗车站或拥挤办公室。学习要跨时间检验，不能由一次勇敢表现证明。",
+        "进步不是向上竞赛，也不是无视症状固定增加运动量。疼痛加剧、新医学发现、压倒性不适或目标改变，都可能要求重新评估、缩小步骤、改用其他治疗或停止。塞拉除恐惧外，还追踪功能与参与、预期、回避、信心与不良效应。她不会把暴露无差别用于每种创伤、状况或危险，这个故事也不是自我治疗计划。是否适合及如何防护，由合格且以人为中心的照护决定。",
+        "逐渐缩小的楼梯代表的是分级暴露：对经过适当评估却令人恐惧的情境或活动，按可执行步骤进行有计划、协作且反复的接触，使回避减少并让新学习发生。它不是洪水式逼迫、强制、证明症状虚假，也不是人人必须攀登的固定梯子。奥伦曾把逃开后的缓解当成灾难被阻止的证据；当他在更安全且自主选择的条件下回来，终于收集到留下时实际发生什么的证据。"
+      ],
+      "conceptName": "Graded exposure",
+      "conceptNameZh": "分级暴露",
+      "explanationParagraphs": [
+        "Graded exposure is planned, collaborative, repeated engagement with assessed feared situations or activities in workable steps to reduce avoidance and support new learning.",
+        "It is not coercive flooding or proof that danger and symptoms are unreal. Suitability, pacing, safeguards, goals, medical factors, trauma context, and professional guidance must be individualised."
+      ],
+      "explanationParagraphsZh": [
+        "分级暴露是对经过评估且令人恐惧的情境或活动，按可执行步骤进行有计划、协作和反复接触，以减少回避并支持新学习。",
+        "它不是强制性洪水式暴露，也不证明危险或症状虚假。适用性、节奏、防护、目标、医学因素、创伤情境与专业指导都必须个体化。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0915-biopsychosocial-model",
+      "batchId": "batch-013",
+      "categoryCode": "09",
+      "fieldCode": "0915",
+      "fieldTitle": "Therapy and rehabilitation",
+      "fieldTitleZh": "治疗与康复",
+      "title": "The Pain That Changed Weight Across Town",
+      "titleZh": "穿过城镇时改变重量的疼痛",
+      "summary": "One injury produces different disability as sleep, fear, work demands, family support, tissue state, and meaning interact across a person's days.",
+      "summaryZh": "同一处损伤在睡眠、恐惧、工作要求、家庭支持、组织状态与意义的互动中，产生不同程度的功能受限。",
+      "storyParagraphs": [
+        "Stonecutter Ela injured her back lifting a beam. An image showed a physical change, and the first clinician treated the picture as the whole explanation. Months later the tissue had partly healed, yet Ela's pain felt light while walking with a friend, heavy before a punitive work shift, and overwhelming after sleepless nights. Her employer concluded the variation proved invention. Ela concluded that if the image remained imperfect, movement must still be causing damage.",
+        "Rehabilitation physician Mira began with biology rather than abandoning it. She reviewed the injury, neurological signs, inflammation, strength, movement, general health, medicines, sleep, and signs requiring further investigation. She also examined how threat expectations, attention, mood, prior experience, coping, and learning changed symptoms and behaviour. Work demands, income, family support, housing, culture, access to care, and employer response shaped what Ela could attempt and sustain.",
+        "These were not three independent boxes to tick equally. Mira built a testable formulation of interactions. Poor sleep increased sensitivity and fatigue; fear led Ela to guard and avoid movement; deconditioning then made work harder; an inflexible supervisor removed opportunities for gradual return; financial threat intensified vigilance. Some factors were consequences as well as contributors, so chronology and feedback mattered. At another point, a new biological finding could dominate the plan. The relevant factors and their causal weight changed over time and required evidence rather than assumption.",
+        "The first broad plan failed because it offered relaxation while leaving an unsafe lifting process and untreated weakness unchanged. Calling pain multidimensional did not permit clinicians to psychologise, blame, or dismiss it. Mira addressed physical capacity and medical needs, adapted work with the employer, supported sleep and pacing, explored feared predictions through appropriate rehabilitation, and included Ela in choosing goals. Social intervention did not make tissue irrelevant; biological treatment did not make the workplace disappear.",
+        "Progress appeared in several outcomes across time and settings. Pain intensity sometimes remained, while walking, confidence, sleep, work participation, and recovery after activity improved. On other weeks, symptoms rose and the formulation was revised rather than used to accuse Ela of failure. Mira distinguished disease, pain, distress, disability, and participation while tracing their relationships. She used specialist referral when needed and avoided claiming that every factor was modifiable or under Ela's control.",
+        "Ela's changing burden illustrated the biopsychosocial model: health, illness, functioning, and disability emerge through interacting biological, psychological, and social processes across levels and time. The model expands investigation and action beyond a single lesion without denying lesions, replacing diagnosis with a checklist, or declaring symptoms imaginary. A useful formulation identifies relevant pathways for this person and tests them against outcomes. Ela carried one body through town. What it could do depended not only on the stone within it, but on fear, sleep, work, support, and the roads allowed around that stone."
+      ],
+      "storyParagraphsZh": [
+        "石匠埃拉抬梁时伤了背。影像显示一处身体改变，第一位临床人员把图片当成全部解释。数月后，组织已有部分愈合，可埃拉同朋友散步时疼痛很轻，面对惩罚性的工作班次前很重，连续失眠后又难以承受。雇主认定这种变化证明她编造，埃拉则认定只要影像仍不完美，运动就一定继续造成损伤。",
+        "康复医生米拉从生物因素开始，而不是放弃它。她复核损伤、神经表现、炎症、力量、动作、整体健康、用药、睡眠与需要进一步调查的迹象，也检查威胁预期、注意、情绪、既往经验、应对与学习怎样改变症状和行为。工作要求、收入、家庭支持、住房、文化、照护可及与雇主反应，又塑造埃拉能尝试并维持什么。",
+        "这些不是三个必须同等打勾的独立盒子。米拉建立一份可检验的互动解释：睡眠差提高敏感与疲劳；恐惧使埃拉防御并回避动作；失去体能又令工作更难；僵硬主管不给渐进返岗机会；经济威胁进一步加强警觉。有些因素既是结果又反过来成为贡献者，因此时序与反馈很重要。另一个时点，新的生物发现也可能主导计划。相关因素及因果权重会随时间变化，需要证据而非假设。",
+        "第一份广泛计划失败，因为它只提供放松，却不改变不安全的抬举流程与未处理的力量不足。承认疼痛多维，并不允许临床人员把它心理化、责怪或否认。米拉处理身体能力与医学需要，同雇主调整工作，通过适当康复支持睡眠、节奏并探索所怕预期，也让埃拉参与选择目标。社会干预不会让组织消失，生物治疗也不会让工作场所消失。",
+        "进步跨时间与场景出现在多项结局里。疼痛强度有时仍在，步行、信心、睡眠、工作参与及活动后恢复却改善。另一些星期症状上升，团队会修订解释，而不是用它指责埃拉失败。米拉区分疾病、疼痛、痛苦、功能受限与参与，同时追踪彼此关系；需要时转介专家，也不声称每项因素都能改变或由埃拉控制。",
+        "埃拉不断变化的负担体现的是生物心理社会模型：健康、疾病、功能与失能由生物、心理和社会过程跨层级、跨时间相互作用而产生。模型把调查与行动扩展到单一病损之外，却不否认病损，不用清单替代诊断，也不宣布症状虚假。有用解释要识别这个人的相关路径，再用结局检验。埃拉带着同一个身体穿过城镇；它能做什么，不只取决于体内那块石头，也取决于围绕石头的恐惧、睡眠、工作、支持与道路。"
+      ],
+      "conceptName": "Biopsychosocial model",
+      "conceptNameZh": "生物心理社会模型",
+      "explanationParagraphs": [
+        "The biopsychosocial model understands health, illness, functioning, and disability through interactions among biological, psychological, and social processes across time and levels.",
+        "It does not deny biological pathology, make symptoms imaginary, or require equal weight for every factor. Individual formulations should identify relevant pathways, guide proportionate action, and be revised against evidence and outcomes."
+      ],
+      "explanationParagraphsZh": [
+        "生物心理社会模型通过生物、心理与社会过程跨时间和层级的相互作用，理解健康、疾病、功能与失能。",
+        "它不否认生物病理，不把症状变成虚构，也不要求每项因素权重相等。个体化解释应识别相关路径、指导合比例行动，并依据证据与结局修订。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}

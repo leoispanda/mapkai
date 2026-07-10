@@ -1,0 +1,620 @@
+{
+  "batchId": "batch-014",
+  "articles": [
+    {
+      "id": "0916-therapeutic-window",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0916",
+      "fieldTitle": "Pharmacy",
+      "fieldTitleZh": "药学",
+      "title": "The Lantern on the Narrow Ledge",
+      "titleZh": "窄岩台上的灯",
+      "summary": "An apothecary learns that the same blue tincture can leave a harbour dark, guide every ship, or scorch the keeper who tends it.",
+      "summaryZh": "药剂师发现，同一瓶蓝色药液既可能让港口一片漆黑，也可能引导所有船只，还可能灼伤照看灯火的人。",
+      "storyParagraphs": [
+        "Grey Cape's harbour lamp burned with a blue flame that alone could pierce the winter fog. Apothecary Mara supplied one measured vial each evening. When a new keeper decided that half a vial would save money, the flame glowed prettily inside the tower but failed to reach the reef. A cargo ship struck stone before dawn. The keeper then poured in two vials to make certain the light would never be weak again. The beam became brilliant, the metal housing overheated, and Mara found him dizzy beside a room full of bitter smoke.",
+        "The harbour council demanded a single safe number. Mara refused to choose between the failed half-vial and the harmful double-vial by averaging them. She marked two boundaries instead: below one, the flame rarely produced enough useful light; above the other, heat and fumes became unacceptably dangerous. Between them lay a workable ledge, but it was not equally wide under every condition. A calm new lamp, a corroded old lamp, and a keeper with damaged lungs could receive the same amount and face different consequences.",
+        "To discover why, Mara stopped recording only what went into the reservoir. She measured the blue vapour actually circulating through the lamp, the intensity of the beam, the temperature of the casing, and the keeper's symptoms over time. A blocked wick left much of a dose unused. A slow drain let yesterday's tincture remain when tonight's arrived. Another fuel changed the flame's response without changing the measured vapour. Input, exposure, useful effect, and harm were connected, but they were not interchangeable names for one quantity.",
+        "The council's next rule ordered every keeper to adjust the vial until the beam sat exactly at the middle mark. That also failed. On storm nights the needed effect changed; after repairs the lamp cleared tincture faster; when another oil was introduced, accumulation appeared only after several evenings. Mara used a starting regimen based on available evidence, then considered the lamp's condition, other fuels, timing, response, and the reliability of each measurement. For some lamps, observation of function was enough. For others, the narrow ledge justified repeated level checks and cautious adjustment by trained hands.",
+        "A merchant copied Mara's chart and began selling it as a household recipe. She tore down his notice. The marked interval did not tell an untrained keeper to increase, skip, divide, or stop a vial, and it did not promise that every point inside it was harmless. The boundaries were estimates drawn from populations, indications, measured outcomes, and tolerable risk; an individual could still suffer an adverse effect within them or receive too little benefit. Clinical purpose and professional judgement determined what counted as an acceptable balance.",
+        "The lamp revealed the therapeutic window: the range of exposure or dose in which a medicine is expected to produce sufficient benefit without unacceptable toxicity. When that range is narrow, small changes in dose, clearance, adherence, illness, formulation, or interacting substances can shift a person from too little effect toward harm, so monitoring may be especially important. Mara's achievement was not finding a magical middle number. It was learning to keep a changing lamp on a narrow ledge while watching both the sea it illuminated and the heat gathering inside the tower."
+      ],
+      "storyParagraphsZh": [
+        "灰岬港的灯塔燃着蓝焰，只有它能穿透冬雾。药剂师玛拉每晚供应一只量好的小瓶。新来的守灯人想节省费用，只倒半瓶，火焰在塔内看着漂亮，光却到不了礁石，一艘货船黎明前触礁。守灯人随即倒入两瓶，决心再也不让灯光微弱。光束确实耀眼，金属灯罩却迅速过热；玛拉找到他时，他正头晕地倒在充满苦烟的房间里。",
+        "港务会要求玛拉给出一个绝对安全的数字。她没有把无效的半瓶与有害的两瓶取平均，而是标出两条边界：低于第一条，火焰通常不能产生足够有用的光；越过第二条，热量与烟气会带来不可接受的危险。两者之间是一段可工作的窄岩台，但在不同条件下并不等宽。平稳的新灯、锈蚀的旧灯和肺部受损的守灯人，即使得到同样用量，也可能面对不同结果。",
+        "为找出原因，玛拉不再只记录倒进储槽多少。她随时间测量真正流过灯体的蓝色蒸气、光束强度、外壳温度与守灯人的症状。堵塞的灯芯会让大部分投入无法利用；迟缓的排出口会使昨夜药液留到今夜；另一种燃油则能在蒸气量不变时改变火焰反应。投入、体内暴露般的实际水平、有用效果与伤害彼此相连，却不是同一个数量的四种叫法。",
+        "港务会下一条规则要求所有守灯人调节瓶量，直到光束恰好位于中央刻度，结果仍然失败。风暴夜所需效果会变，修理后的灯清除药液更快，加入另一种油后，积聚又可能连续数晚才显现。玛拉依据现有证据选择起始方案，再考虑灯况、其他燃料、时机、反应与测量可靠性。有些灯观察功能已经足够，另一些灯的岩台极窄，必须由受训者反复检测水平并谨慎调整。",
+        "一名商人抄下玛拉的图表，作为家庭配方出售。她立刻拆掉告示。标出的区间并没有教未经训练的人自行增加、漏掉、拆分或停止一瓶药液，也不保证区间内每一点都毫无伤害。边界来自人群、用途、测量结果与可容忍风险的估计；具体个体仍可能在其中出现不良反应，也可能获益不足。临床目的与专业判断共同决定何种平衡可以接受。",
+        "灯塔揭示的是治疗窗：药物暴露或剂量处在某个范围内时，预期能够产生足够获益而不造成不可接受的毒性。治疗窗狭窄时，剂量、清除、依从性、疾病、剂型或相互作用物质的细小变化，都可能让人从效果不足移向伤害，因此监测尤其重要。玛拉的成就不是找到一个神奇中点，而是学会把不断变化的灯维持在窄岩台上，同时看见它照亮的海面与塔内逐渐聚集的热。"
+      ],
+      "conceptName": "Therapeutic window",
+      "conceptNameZh": "治疗窗",
+      "explanationParagraphs": [
+        "The therapeutic window is the interval of dose or exposure expected to provide adequate benefit without unacceptable toxicity.",
+        "Its width and position depend on the medicine, indication, person, measurement, and context. A narrow window can require close professional monitoring; it is not a range for self-adjusting treatment."
+      ],
+      "explanationParagraphsZh": [
+        "治疗窗是药物剂量或暴露预计能够提供足够获益、又不产生不可接受毒性的区间。",
+        "它的宽度与位置取决于药物、用途、个体、测量及情境。狭窄治疗窗可能需要密切的专业监测，并不是供人自行调整治疗的范围。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0916-pharmacokinetics",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0916",
+      "fieldTitle": "Pharmacy",
+      "fieldTitleZh": "药学",
+      "title": "The Dye That Missed the Bell",
+      "titleZh": "错过钟声的染料",
+      "summary": "Two identical jars enter a city by different routes, and only one reaches the clockworks at the needed concentration and time.",
+      "summaryZh": "两只相同染料罐从不同路线进入城市，只有一只在需要的时间以合适浓度抵达钟楼机芯。",
+      "storyParagraphs": [
+        "Every noon, a thread of red dye had to reach Bell City's clockworks so the gears would reveal invisible cracks. Courier Niko carried the usual jar through the south market, where it crossed a porous cloth gate before entering the central canal. One festival day the bell remained pale. The master accused Niko of delivering too little, but the sealed jar had contained exactly the usual amount. A second jar poured directly into the canal coloured the clockworks quickly, while the market route produced only a late, weak blush.",
+        "Canal keeper Suri followed the first jar rather than weighing it again. Some dye never crossed the cloth and left with market waste; the fraction that entered did so gradually. Once in the canal, part remained in the central water while part spread into side reservoirs and bound to their stone. At the mill district, enzymes altered some molecules into products that behaved differently. At the northern sluice, water and dissolved material left the city. Four movements shaped the journey: entry, dispersal, transformation, and removal.",
+        "Niko assumed that disappearance from the central canal meant destruction. Suri opened a side reservoir and released a red cloud that had merely been stored beyond his measuring point. She then slowed the northern sluice. The same delivered amount now lingered longer and accumulated when jars arrived repeatedly. A larger apparent space of distribution could lower the early central concentration without removing the dye from the city; lower clearance could prolong exposure even when the entry route stayed unchanged. Where and when one measured mattered.",
+        "The council tried to solve every delay by doubling the jar. That produced an excessive peak through the direct route and a long tail when the sluice was slow. Suri instead drew a concentration-time curve. Route and formulation influenced how much entered and how fast; distribution changed the relationship between total amount and measured central level; transformation and excretion contributed to clearance; half-life described the time for concentration to fall by half under defined conditions. Repeated delivery approached a changing balance only after several intervals. A loading delivery could approach a desired level sooner, but it did not change the sluice's clearance or erase later accumulation.",
+        "Even the neat curve was not a complete verdict. The clockworks could become more or less sensitive to the same concentration, and a measured blood-like canal was not every tissue reservoir. Illness, age, organ function, genetics, food, adherence, formulation, and other substances could alter the route. Suri used models and population estimates to choose and test a regimen, but individual measurements were interpreted with timing, clinical response, assay limits, and current professional guidance. The courier's log was evidence, not a universal dosing instruction.",
+        "The dye's journey revealed pharmacokinetics: the study of what the body does to a drug through absorption, distribution, metabolism, and excretion, and how those processes produce concentration over time. It differs from pharmacodynamics, which asks what the drug does to the body at a given exposure. Niko had believed one full jar guaranteed one full effect. Suri showed that the bell could receive too little, too late, or for too long because the decisive story occurred after delivery, inside gates and reservoirs no one at the market could see."
+      ],
+      "storyParagraphsZh": [
+        "每天正午，一缕红色染料必须抵达钟城机芯，才能显出齿轮上的隐裂。信使尼科照例带着一罐染料穿过南市，在那里越过一道多孔布门，才进入中央水渠。节庆那天，钟面仍旧苍白。工匠责怪尼科送得太少，可密封罐里的量与往常完全相同。第二罐直接倒入水渠后很快染红机芯，经市场路线进入的那罐却只留下迟来而微弱的红晕。",
+        "水渠看守苏芮没有再次称罐，而是沿路追踪第一罐。部分染料从未穿过布门，随市场废水离开；进入的部分也只是逐渐渗入。到了水渠，一些留在中央水体，另一些扩散进侧边蓄池并附着石壁。磨坊区的酶把部分分子变成性质不同的产物；北闸则让水和溶解物离城。四种运动塑造旅程：进入、散布、转化与移除。",
+        "尼科以为染料从中央水渠消失就等于被摧毁。苏芮打开一座侧池，释放出一团只是储存在测量点以外的红云。她随后放慢北闸，相同投入便停留更久，并在反复送达时积聚。更大的表观分布空间会降低早期中央浓度，却不代表染料已离开城市；更低的清除能力会延长暴露，即使进入路线完全不变。在哪里、何时测量都很重要。",
+        "议事会试图用加倍罐量解决所有延误，结果直接路线出现过高峰值，闸门缓慢时又拖出漫长尾部。苏芮改画浓度随时间变化的曲线。路线与剂型影响进入多少、进入多快；分布改变总量与中央测量水平的关系；转化和排出共同贡献清除；半衰期则描述在规定条件下浓度下降一半所需时间。反复投送要经过若干间隔才接近动态平衡。负荷投入可以更快接近期望水平，却不会改变闸门清除能力，也不会消除之后的积聚。",
+        "即使整齐的曲线也不是完整裁决。机芯对同一浓度可能变得更敏感或更迟钝，类似血液的中央水渠也不等于每个组织蓄池。疾病、年龄、器官功能、遗传、食物、依从性、剂型与其他物质都可能改变路线。苏芮用模型和人群估计选择并检验方案，但解读个体测量时仍会结合时机、临床反应、检测限制与当前专业指引。信使日志是证据，不是通用给药指令。",
+        "染料之旅揭示的是药代动力学：研究身体通过吸收、分布、代谢与排泄怎样处理药物，以及这些过程如何形成随时间变化的浓度。它不同于药效动力学，后者追问药物在某一暴露水平下对身体做了什么。尼科相信满满一罐必然带来完整效果；苏芮却证明，钟声可能收到得太少、太迟或持续太久，因为决定性故事发生在交付之后，藏在市场无人看见的闸门与蓄池里。"
+      ],
+      "conceptName": "Pharmacokinetics",
+      "conceptNameZh": "药代动力学",
+      "explanationParagraphs": [
+        "Pharmacokinetics describes how absorption, distribution, metabolism, and excretion shape a drug's concentration over time.",
+        "Route, bioavailability, distribution, clearance, half-life, repeated dosing, individual physiology, and interactions all influence exposure. These models support qualified dosing and monitoring; they do not replace clinical assessment."
+      ],
+      "explanationParagraphsZh": [
+        "药代动力学描述吸收、分布、代谢与排泄怎样塑造药物浓度随时间的变化。",
+        "路线、生物利用度、分布、清除、半衰期、重复给药、个体生理与相互作用都会影响暴露。这些模型支持合格的给药与监测，不能替代临床评估。"
+      ],
+      "mode": "mechanism-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0916-drug-interactions",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0916",
+      "fieldTitle": "Pharmacy",
+      "fieldTitleZh": "药学",
+      "title": "Two Couriers, One Gate",
+      "titleZh": "两名信使，一道城门",
+      "summary": "Two reliable couriers share a city route, but one closes the other's exit while their messages also press the same sleeping guard.",
+      "summaryZh": "两名可靠信使共用一条城市路线，其中一人关闭了另一人的出口，两封命令又同时压向同一名困倦守卫。",
+      "storyParagraphs": [
+        "Courier Vale delivered a silver message each dusk to quiet the city's racing bells. For months the dose arrived, did its work, and left through the west gate. Then Courier Orra began carrying a separate order to stop mould in the granaries. Each order had served other cities well. Within three evenings, however, Vale's silver messages crowded the streets, the bells slowed too far, and the gate guards could barely stay awake. The mayor blamed a defective batch, because neither courier had ever caused such trouble alone.",
+        "Archivist Sen placed both route maps on one table. Orra's order occupied the mill that normally transformed Vale's silver seal before departure, and it slowed the transporter at the west gate. Vale's message therefore remained longer and rose to a higher level despite an unchanged delivery. In another district, two orders left by separate gates yet both commanded guards to become drowsy; their effects added at the same target. A third pair pushed in opposite directions and reduced one another's visible result. Shared timing did not imply one single mechanism.",
+        "The mayor proposed banning every pair of couriers. Sen refused. Some combinations had no meaningful effect, some were intentionally coordinated, and some could be managed by choosing another route, changing timing, adjusting a regimen, or monitoring a relevant outcome under qualified supervision. Severity depended on dose, duration, pathway, therapeutic margin, the citizen's organ function and genetics, and the presence of more messages than the mayor remembered to list. A theoretical route conflict was a reason to investigate, not automatic proof of clinical harm.",
+        "Their first investigation failed because the official ledger contained only orders issued by the palace. The sleepy guard had also bought a night tonic, used a neighbour's pain draught, and started a concentrated botanical extract whose label said only natural strength. Sen performed a complete reconciliation: prescribed and non-prescribed medicines, supplements, herbs, alcohol or other relevant substances, recent starts and stops, formulation, dose, timing, and actual use. The missing lines explained why a previously stable arrangement had changed.",
+        "Sen warned the council against solving the case by abruptly cancelling a courier from a public list. Stopping or altering an essential order could itself cause harm, and interaction resources differed in evidence, population, and intended use. She checked current product information and trusted professional guidance, assessed symptoms and urgency, contacted the responsible clinicians and pharmacist, and documented a shared plan. When severe new symptoms appeared, the city used its emergency route rather than waiting for an archive debate.",
+        "The crowded streets revealed drug interactions: one medicine or substance can alter another's exposure through absorption, distribution, metabolism, transport, or excretion, or alter its effect through additive, opposing, or otherwise changed action at physiological targets. Not every co-administration is harmful, and risk is specific to the agents, person, purpose, evidence, and management. The mayor had inspected two couriers separately and declared each trustworthy. Sen discovered that safety also belonged to the gate they shared and the guard who received both messages."
+      ],
+      "storyParagraphsZh": [
+        "信使维尔每天黄昏送来一封银色命令，让城市疾驰的钟声平静。数月里，命令按时抵达、发挥作用，再从西门离开。后来，信使奥拉开始携带另一道命令，阻止粮仓发霉。两道命令在别的城市各自都很可靠，可三个夜晚后，维尔的银色信件挤满街道，钟声慢得过头，守门人困得几乎站不住。市长认定某一批信件有缺陷，因为两名信使单独行动时从未惹出这种麻烦。",
+        "档案师森把两张路线图铺在同一张桌上。奥拉的命令占用了平时负责改造维尔银印的磨坊，也拖慢西门的运输者。于是维尔送达量没有改变，命令却停留更久、累积更高。另一城区里，两道命令经不同城门离开，却都要求守卫困倦，作用便在同一目标上相加。还有一对命令方向相反，彼此削弱可见结果。共同出现的时间并不说明只有一种机制。",
+        "市长提议禁止所有信使结伴。森拒绝了。有些组合没有重要影响，有些本就为协同而设，另一些可以在专业监督下通过改换路线、调整时机或方案、监测相关结果来管理。严重程度取决于剂量、持续时间、通路、治疗余地、市民的器官功能与遗传，也取决于市长忘记登记的其他命令。一项理论上的路线冲突值得调查，却不自动证明已经造成临床伤害。",
+        "第一次调查失败了，因为官方账册只记着宫廷签发的命令。那名困倦守卫还买过夜间补剂，用了邻居的止痛药水，又开始服用标签只写“天然强效”的浓缩植物提取物。森进行完整用药核对：处方与非处方药、补充剂、草药、酒精或其他相关物质、近期开始和停止的项目、剂型、剂量、时机及实际使用方式。那些缺失的行，解释了原本稳定的安排为何改变。",
+        "森提醒议事会，不能照着一张公开清单骤然取消某名信使。突然停止或改变必要药物本身就可能造成伤害，不同相互作用资料库的证据、人群与用途也不相同。她核对最新产品信息和可信专业指引，评估症状与紧迫性，联系负责的临床人员和药师，并记录共同方案。出现严重新症状时，城市会启动紧急通道，而不是等待档案争论结束。",
+        "拥挤街道揭示的是药物相互作用：一种药物或物质可以通过吸收、分布、代谢、转运或排泄改变另一种药物的暴露，也可以在生理目标上以相加、相反或其他方式改变其作用。并非所有共同使用都会有害，风险取决于具体物质、个体、目的、证据与管理。市长把两名信使分开检查，便宣布各自可靠；森却发现，安全也存在于他们共享的城门，以及同时收到两封命令的守卫身上。"
+      ],
+      "conceptName": "Drug interactions",
+      "conceptNameZh": "药物相互作用",
+      "explanationParagraphs": [
+        "Drug interactions occur when one medicine or substance changes another's exposure or effect through pharmacokinetic or pharmacodynamic mechanisms.",
+        "Their importance varies by agent, dose, timing, person, indication, evidence, and monitoring. Medication changes should be based on complete reconciliation and qualified advice, not an isolated public interaction list."
+      ],
+      "explanationParagraphsZh": [
+        "药物相互作用是指一种药物或物质通过药代动力学或药效动力学机制，改变另一种药物的暴露或作用。",
+        "其重要性随物质、剂量、时机、个体、用途、证据与监测而变。用药改变应建立在完整核对与合格专业意见上，而不是孤立的公开相互作用清单。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0917-contextual-effects",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0917",
+      "fieldTitle": "Traditional and complementary medicine and therapy",
+      "fieldTitleZh": "传统与补充医学及疗法",
+      "title": "The Room Around the Remedy",
+      "titleZh": "药方周围的房间",
+      "summary": "A healer attributes every improvement to a silver cup until an accidental exchange shows how expectation, ritual, learning, and care have entered the treatment room.",
+      "summaryZh": "疗愈师把所有好转都归功于一只银杯，直到一次意外调换显出期待、仪式、学习与照护怎样共同进入治疗室。",
+      "storyParagraphs": [
+        "At Moon Court, healer Aven served a bitter infusion in a silver cup beneath seven quiet bells. People with recurring pain often left reporting relief, and Aven credited the mountain leaf alone. During a crowded morning, an assistant mistakenly filled several silver cups with the clinic's plain comparison drink and served the infusion in unmarked clay. Some recipients of the plain drink still improved; several who received the leaf in clay said it had done nothing. Aven accused the assistant of ruining the evidence, but investigator Lin asked what the accident had revealed.",
+        "Lin separated features that had travelled together. The silver cup carried reputation. The bells predicted relief after years of repeated pairings. Aven's calm attention changed fear and interpretation; the warm room, explanation, touch, price, and confidence shaped expectation. Context could also work in the opposite direction: an alarming warning or learned cue could intensify symptoms or adverse experiences. Symptoms fluctuated, people often sought help near their worst point, and some recovered with time. Reporting, measurement, concurrent care, and the desire to please a respected healer added further movement. None of these made the pain imaginary, but none could simply be credited to the leaf.",
+        "Aven then staged a magnificent ceremony around every treatment and claimed the larger improvement proved a stronger cure. Lin objected that a change in experienced pain or nausea did not establish repair of hidden tissue, clearance of infection, prevention of future disease, or the specific biological action proposed for the infusion. Different outcomes responded differently. Expectation and learning could alter perception, attention, behaviour, and some physiological responses, yet a serious underlying condition still required appropriate diagnosis and effective care.",
+        "They designed a fairer comparison. Participants received credible information and consented to uncertainty; allocation and outcome measurement reduced predictable differences where feasible; the active preparation was compared with a suitable control; both benefits and harms were followed. Lin also measured the treatment setting rather than treating it as empty space. When blinding broke because the infusion had a distinctive taste, they recorded the problem. A controlled result could estimate a specific contribution only within the question, population, procedure, and outcomes actually studied.",
+        "The council wanted to exploit the silver cup by telling every visitor that it contained a proven powerful substance. Lin refused to turn care into deception. Trust, autonomy, cultural meaning, and honest communication were themselves part of responsible treatment. She did not dismiss traditional practice merely because context mattered, nor endorse it merely because people felt better. She asked what was safe, what component produced which outcome, what evidence supported the claim, and how a helpful encounter could accompany rather than displace indicated care. She also recorded harms and worsening, not only relief.",
+        "The accidental exchange revealed contextual and placebo effects: changes associated with meaning, expectation, learning, ritual, relationship, and the treatment environment, including responses that can occur around an inactive or comparison intervention. They are real features of experience and care, but observed improvement also includes natural history, regression toward usual levels, measurement, and other influences; it does not by itself prove a treatment's specific efficacy. Aven had studied the liquid in the cup. Lin showed that the whole room had entered the result."
+      ],
+      "storyParagraphsZh": [
+        "月庭里，疗愈师阿文总在七声轻铃下，用银杯端出一剂苦汤。许多反复疼痛的人离开时说有所缓解，阿文便把功劳全归给山叶。一个拥挤清晨，助手误把诊所的普通对照饮品倒进几只银杯，又把真正药汤装进没有标记的陶杯。喝普通饮品的人中仍有人好转，几名用陶杯喝到山叶的人却说毫无作用。阿文责怪助手毁了证据，调查者琳却追问这场意外究竟显出了什么。",
+        "琳把原本一同出现的因素逐个分开。银杯携带声誉；多年反复配对后，铃声已经预告缓解；阿文平静的关注改变了恐惧与解释方式，温暖房间、说明、触碰、价格和信心也塑造期待。情境也可能向相反方向作用：令人恐惧的警告或学会的线索会加重症状或不良体验。症状本会波动，人们常在最难受时求助，有些人会随时间恢复。报告方式、测量、同时接受的照护，以及取悦受尊敬疗愈师的愿望，又带来额外变化。这些因素都不表示疼痛是想象，却也都不能直接算作山叶的功劳。",
+        "阿文随后为每项治疗安排盛大仪式，宣称更大改善证明疗效更强。琳指出，疼痛或恶心感受改变，并不能证明隐蔽组织已经修复、感染已经清除、未来疾病得到预防，也不能自动证实药汤所声称的特异生物作用。不同结局的反应并不相同。期待与学习可以影响感知、注意、行为及某些生理反应，但严重的潜在状况仍需要适当诊断与有效照护。",
+        "他们设计更公平的比较。参与者得到可信信息并同意面对不确定性；在可行处，分配和结局测量尽量减少可预见差异；活性制剂与合适对照比较，同时追踪获益与伤害。琳还测量治疗环境，而不把它当成空白。药汤味道独特导致盲法被识破时，他们如实记录。受控结果只能在真正研究过的问题、人群、程序与结局范围内，估计某项特异贡献。",
+        "议事会想利用银杯，告诉每位来访者里面装着已被证明的强效物质。琳拒绝把照护变成欺骗。信任、自主、文化意义与诚实沟通，本身就是负责任治疗的一部分。她不会因为情境重要就否定传统实践，也不会因为有人感觉好转就予以认可。她追问什么是安全的、哪个组成部分产生何种结果、主张得到什么证据支持，以及一次有帮助的相遇怎样伴随而不是取代有指征的照护。她也记录伤害与恶化，而不只记录缓解。",
+        "那次意外调换揭示的是情境效应与安慰剂效应：与意义、期待、学习、仪式、关系及治疗环境有关的变化，包括围绕无活性或对照干预也可能出现的反应。它们是体验与照护中的真实组成部分，但观察到的改善还混有自然病程、向通常水平回归、测量及其他影响，不能单独证明某项治疗的特异疗效。阿文一直研究杯中的液体，琳让他看见，整间房都进入了结果。"
+      ],
+      "conceptName": "Contextual and placebo effects",
+      "conceptNameZh": "情境效应与安慰剂效应",
+      "explanationParagraphs": [
+        "Contextual and placebo effects arise from meaning, expectation, learning, relationship, ritual, and other features surrounding an intervention.",
+        "They can influence genuine experiences and some responses, but improvement may also reflect natural history, regression, measurement, or concurrent care. It does not alone establish a treatment's specific efficacy or justify deception."
+      ],
+      "explanationParagraphsZh": [
+        "情境效应与安慰剂效应来自干预周围的意义、期待、学习、关系、仪式及其他特征。",
+        "它们会影响真实体验与某些反应，但改善也可能来自自然病程、回归、测量或同时照护，不能单独确立治疗的特异疗效，也不能为欺骗提供理由。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0917-evidence-hierarchy",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0917",
+      "fieldTitle": "Traditional and complementary medicine and therapy",
+      "fieldTitleZh": "传统与补充医学及疗法",
+      "title": "The Three Valleys of Certain Cures",
+      "titleZh": "三个确信药方的山谷",
+      "summary": "Three valleys claim the same spring cures fever, but their records support different questions with very different certainty.",
+      "summaryZh": "三个山谷都声称同一眼泉水能治发热，可各自记录只能以迥异的确定性回答不同问题。",
+      "storyParagraphs": [
+        "Three valleys drew water from Saint Rowan's Spring and each declared it a certain cure for winter fever. In East Vale, the mayor displayed twelve grateful letters. In North Vale, the healer counted everyone who drank after arriving ill and found that most were well a week later. In West Vale, families who chose the spring recovered faster than families who did not. When a fourth village asked whether to build an expensive aqueduct, all three reports reached the council stamped PROOF, although they had not asked or answered the same question.",
+        "Scholar Meira began with the letters. They showed that improvement was possible and revealed experiences worth investigating, but not how many people failed, recovered without water, received other care, or were selected for display. North Vale had a larger series, yet fever often resolved with time and the sickest residents sometimes went elsewhere. West Vale had a comparison, but spring users were wealthier, lived nearer the clinic, and sought help earlier. More pages reduced neither selection nor confounding by themselves.",
+        "Meira organised a prospective trial in which eligible volunteers were assigned by chance to credible alternatives, allocation was concealed, outcomes were defined beforehand, and follow-up included harms. Random assignment balanced known and unknown differences on average; blinding reduced some changes in behaviour and measurement where it was feasible. The spring group did no better on the chosen outcome. The mayors called the trial superior by ritual alone, until Meira showed missing participants, a wide uncertainty interval, and a preparation unlike the one commonly used.",
+        "A later, larger trial corrected those weaknesses, while several independent teams reported similar results. Meira synthesised them systematically rather than choosing the most dramatic study. Even then, she examined risk of bias, inconsistency, indirectness, imprecision, and missing negative findings. Study design offered a starting point for judging causal claims, not an automatic seal of truth. One meticulous observation could expose an unexpected danger; one poorly conducted randomised trial could still mislead.",
+        "The council then asked whether rare liver injury appeared after ten years. Meira did not demand an impossibly vast decade-long trial before listening. Registries, pharmacovigilance, mechanistic evidence, case reports, and well-designed observational studies could be crucial for rare or delayed harms. Diagnostic accuracy, prognosis, lived experience, prevalence, and intervention benefit each required fitting evidence and methods. Ethical and practical limits also mattered. The strongest available answer was the one best matched to the question and least damaged by avoidable bias, not always the same rung on a rigid ladder.",
+        "The valleys learned the hierarchy of evidence: a structured way to give different study designs and bodies of evidence different initial weight, then judge how directly and reliably they answer a specific question. Randomised controlled evidence is often powerful for intervention causality, but certainty also depends on conduct, consistency, precision, directness, reporting, and the total evidence; other designs may be indispensable for harms and other questions. Certainty about an effect was not itself a recommendation: benefits, harms, values, equity, feasibility, and resources still entered the aqueduct decision. The stamp PROOF disappeared. Meira wrote what was known, how it was known, and what uncertainty remained."
+      ],
+      "storyParagraphsZh": [
+        "三个山谷都从圣罗文泉取水，也都宣布它是冬季发热的确定疗法。东谷市长展示十二封感谢信；北谷疗愈师统计所有患病后喝水的人，发现一周后大多康复；西谷则发现自愿选择泉水的家庭恢复得比未选择者更快。第四个村庄询问是否应修一条昂贵水渠时，三份报告都盖着“证明”送进议事会，尽管它们提出和回答的并不是同一个问题。",
+        "学者梅拉先看感谢信。它们说明改善可能发生，也显出值得调查的体验，却没有告诉她多少人失败、多少人不喝水也会恢复、谁还接受其他照护，以及哪些来信被挑出来展示。北谷病例更多，但发热本会随时间消退，最重者有时去了别处。西谷有比较组，可饮泉水者更富裕、离诊所更近，也更早求助。页面增多本身并不会减少选择偏差或混杂。",
+        "梅拉组织一项前瞻试验，把符合条件且同意参加的人随机分到可信替代方案，隐藏分配，预先规定结局，并在随访中记录伤害。随机分配会在平均意义上平衡已知与未知差异；可行时的盲法能减少某些行为与测量变化。泉水组在选定结局上并不更好。市长们正想仅凭仪式把试验奉为最高证据，梅拉却指出失访、很宽的不确定区间，以及所用制剂与日常版本并不相同。",
+        "后来一项更大的试验修正这些弱点，几个独立团队也报告相似结果。梅拉系统综合它们，而不是挑选最戏剧性的研究。即便如此，她仍检查偏倚风险、不一致、间接性、不精确与未发表的负面发现。研究设计只是判断因果主张的起点，不是自动真理印章。一项严谨观察可能发现意外危险，一项执行糟糕的随机试验仍然可能误导。",
+        "议事会接着问，十年后是否会出现罕见肝损伤。梅拉没有在倾听前强求一项几乎不可能的大型十年试验。登记资料、药物警戒、机制证据、病例报告与设计良好的观察研究，对罕见或延迟伤害可能至关重要。诊断准确性、预后、生活体验、流行程度和干预获益各自需要匹配的证据与方法，伦理和实践限制也必须考虑。最强答案是最贴合问题、最少受可避免偏倚损害的答案，并不永远来自僵硬梯子的同一级。",
+        "三个山谷学会的是证据层级：先按不同研究设计与证据总体赋予不同起始权重，再判断它们能以多直接、多可靠的方式回答具体问题。随机对照证据常对干预因果很有力，但确定性还取决于执行、相互一致、精确度、直接性、报告与全部证据；伤害及其他问题又可能离不开别种设计。对效应的确定性本身还不是建议，修建水渠仍要衡量获益、伤害、价值、公平、可行性与资源。“证明”印章被撤下，梅拉改写清楚我们知道什么、如何知道，以及还剩多少不确定。"
+      ],
+      "conceptName": "Hierarchy of evidence",
+      "conceptNameZh": "证据层级",
+      "explanationParagraphs": [
+        "A hierarchy of evidence gives study designs different initial weight according to the question and their ability to limit bias and support inference.",
+        "It is not a rigid universal pyramid. Certainty also depends on study conduct, consistency, precision, directness, reporting, and the whole evidence base; different questions may require different designs."
+      ],
+      "explanationParagraphsZh": [
+        "证据层级依据具体问题，以及研究设计限制偏倚和支持推断的能力，给予不同证据不同的起始权重。",
+        "它不是僵硬的通用金字塔。确定性还取决于研究执行、一致性、精确度、直接性、报告与整体证据，不同问题可能需要不同设计。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0917-herb-drug-interactions",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0917",
+      "fieldTitle": "Traditional and complementary medicine and therapy",
+      "fieldTitleZh": "传统与补充医学及疗法",
+      "title": "The Root That Was Missing from the Ledger",
+      "titleZh": "账册上缺失的根",
+      "summary": "A gardener's prescribed medicine becomes unstable after a concentrated root extract enters a treatment ledger that had counted only palace bottles.",
+      "summaryZh": "园丁服用的处方药在加入浓缩根提取物后变得不稳定，而原先账册只统计宫廷药瓶。",
+      "storyParagraphs": [
+        "Royal gardener Toma took a carefully adjusted palace medicine that kept the rhythm of his heart-work steady. At the autumn fair, a seller offered concentrated moonroot for sleep and assured him that plants could not interfere with manufactured bottles. Toma omitted it from the clinic ledger because he did not regard tea, powder, and tincture as medicines. Two weeks later his measurements shifted and bruises appeared along his arms. Physician Eda increased the palace dose, not knowing that a second active preparation had already entered the same body.",
+        "Pharmacist Ro noticed dried purple sediment in Toma's cup and reopened the history without accusation. The extract contained multiple constituents whose amount varied with species, plant part, harvest, processing, storage, and concentration. A leaf eaten as food was not necessarily equivalent to an extract distilled into drops. Labels could be incomplete; substitution, contamination, and inconsistent strength complicated prediction. Natural origin described where a substance came from, not whether it lacked pharmacological action, toxicity, or quality problems.",
+        "Ro traced several possible crossings. A constituent might inhibit or induce an enzyme or transporter, changing how quickly the palace medicine was absorbed, transformed, or cleared. Another might act on the same physiological system, adding to or opposing its effect without changing blood concentration. Food, alcohol, supplements, smoking, illness, organ function, genetics, dose, timing, and duration could alter the result. Some changes appeared quickly; enzyme induction or cumulative effects could take longer and persist after the last cup.",
+        "The court demanded a permanent blacklist of all roots. Ro resisted. For many products, evidence came from laboratory findings, case reports, small studies, or variable preparations; a plausible mechanism did not always become a meaningful effect in every person. Conversely, absence from a warning list did not prove safety. She checked the exact product and purpose, current authoritative resources, known and uncertain risks, Toma's symptoms and measurements, and whether a safer alternative or monitoring plan existed.",
+        "Eda nearly told Toma to stop both preparations immediately. Ro paused her. Abruptly changing an essential medicine or a regularly used active product could create new harm, and the right response depended on urgency. They arranged prompt qualified review, documented every prescribed and non-prescribed substance, and agreed on one coordinated plan. Toma learned to bring bottles, photographs, doses, and timing to every appointment. Severe symptoms would trigger urgent care, not an experiment conducted alone at home.",
+        "The missing root revealed herb-drug interactions: herbal products can change a medicine's exposure through absorption, metabolism, transport, or elimination, or change its effect through additive or opposing physiological action. Risk depends on the exact product, strength, dose, person, medicine, timing, evidence, and management; uncertainty is often substantial. The palace medicine had not suddenly become unreliable in isolation. The ledger had drawn an artificial border around one cabinet while two biologically active preparations were already meeting beyond it."
+      ],
+      "storyParagraphsZh": [
+        "皇家园丁托马服用一种经过仔细调整的宫廷药物，让心脏工作的节律保持平稳。秋季集市上，一名商贩出售帮助睡眠的浓缩月根，保证植物绝不会干扰人工药瓶。托马没有把它写进诊所账册，因为他不把茶、粉末和酊剂当成药物。两周后，他的测量结果发生变化，手臂也出现瘀斑。医生埃达不知道另一种活性制剂已经进入同一身体，反而增加了宫廷药物的量。",
+        "药师洛在托马杯底看见紫色沉淀，便不带指责地重新询问。提取物含有多种成分，其含量会随物种、植物部位、采收、加工、储存与浓缩程度而变。作为食物吃下一片叶，与把它浓缩成滴剂并不必然相同。标签可能不完整，替代、污染和强度不一致也使预测更难。“天然”只说明物质来自哪里，并不表示它没有药理作用、毒性或质量问题。",
+        "洛追踪几种可能交叉。一种成分可能抑制或诱导某种酶或转运体，改变宫廷药物被吸收、转化或清除的速度；另一种成分可能作用于相同生理系统，在不改变血中浓度时叠加或抵消效果。食物、酒精、补充剂、吸烟、疾病、器官功能、遗传、剂量、时机和持续时间也会改变结果。有些变化很快出现，酶诱导或累积作用却可能较慢，最后一杯之后仍会延续。",
+        "宫廷要求列出一张永不改变的禁根清单。洛拒绝了。许多产品的证据来自实验室发现、病例报告、小型研究或成分多变的制剂；机制合理并不保证每个人都会出现有临床意义的效果。反过来，没有进入警示清单也不证明安全。她核对具体产品与用途、当前权威资料、已知与不确定风险、托马的症状和测量，以及是否存在更安全替代或监测方案。",
+        "埃达差点要求托马立刻停止两种制剂，洛拦住了她。突然改变必要药物或长期使用的活性产品，本身可能制造新伤害，正确回应取决于紧迫性。他们安排及时的专业复核，记录每一种处方与非处方物质，并商定一项协调方案。托马学会每次就诊都带来药瓶、照片、剂量和服用时间；严重症状应触发紧急照护，而不是独自在家试验。",
+        "那条缺失记录揭示的是草药与药物相互作用：草药产品可以通过吸收、代谢、转运或清除改变药物暴露，也能通过相加或相反的生理作用改变药效。风险取决于具体产品、强度、剂量、个体、药物、时机、证据与管理，而不确定性往往很大。宫廷药物并非孤立地突然失去可靠性，账册只在人为划定的药柜边界停下，两种具有生物活性的制剂早已在边界之外相遇。"
+      ],
+      "conceptName": "Herb-drug interactions",
+      "conceptNameZh": "草药与药物相互作用",
+      "explanationParagraphs": [
+        "Herb-drug interactions occur when a herbal product changes a medicine's exposure or physiological effect.",
+        "Product identity, concentration, quality, dose, timing, individual factors, and evidence all matter. Full medication reconciliation and qualified advice are safer than assuming natural means inert or changing treatment from a generic blacklist."
+      ],
+      "explanationParagraphsZh": [
+        "草药与药物相互作用是草药产品改变某种药物的暴露或生理作用。",
+        "产品身份、浓度、质量、剂量、时机、个体因素与证据都很重要。完整用药核对与合格专业意见，比假定天然即无活性或照通用禁用清单自行改药更安全。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0921-person-centred-care",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0921",
+      "fieldTitle": "Care of the elderly and of disabled adults",
+      "fieldTitleZh": "老年人与残障成人照护",
+      "title": "The House That Ran on Time",
+      "titleZh": "准点运转的房子",
+      "summary": "A residence becomes perfectly orderly by making every life identical, until one resident's missing dawn routine exposes what the timetable cannot see.",
+      "summaryZh": "一所居所通过让所有生活完全相同而变得井然有序，直到一名住民失去清晨习惯，暴露出时间表看不见的东西。",
+      "storyParagraphs": [
+        "Director Pell made Cedar House the safest residence in the county. Everyone woke at seven, bathed on alternate mornings, ate identical portions, and joined music at three. Medication omissions fell and every checklist turned green. Yet former baker Mr Han began refusing breakfast, Mara stopped wearing the bright scarves her sister brought, and quiet Ivo struck the dining table whenever staff moved his chair. Pell called these difficult behaviours and added them to the schedule for correction. The house ran precisely while the people inside it became harder to recognise.",
+        "New coordinator Sela began with a different record. She asked what mattered to each resident, what a good day looked like, who they trusted, how they communicated, what they could do independently, and where support was wanted. Mr Han had risen before dawn for fifty years and was hungry long before seven. Mara chose clothes by texture because colours had become difficult to distinguish. Ivo's chair faced away from the door, preventing him from seeing who entered. Their actions contained information that the incident chart had translated into defects.",
+        "Sela brought residents, chosen supporters, care workers, nurses, therapists, and other relevant professionals around one plan. Information was offered in speech, pictures, demonstration, plain language, and time to respond. Capacity was considered for the particular decision and moment, with support provided rather than assumed away by age or disability. Preferences, culture, identity, strengths, health needs, medicines, pain, mobility, communication, safeguarding, and practical resources were connected instead of stored in separate files.",
+        "The first revised plan was not a menu on which every request automatically became an order. Mr Han wanted to use an industrial oven alone despite a recent change in vision. The team explained the specific risk, checked his understanding and goals, explored an adapted workstation and supported sessions, and documented responsibilities. When an urgent health threat arose, professional duties and lawful safeguards still applied. Respecting a person's direction required honest negotiation about benefit, harm, evidence, other people's rights, and what could actually be sustained.",
+        "Cedar House kept the reliable medication system but loosened the life around it. Mr Han prepared early bread with support; its smell brought several reluctant eaters to breakfast. Mara arranged tactile labels on her wardrobe. Ivo chose a doorway-facing place and stopped striking the table. Plans were reviewed when needs, wishes, function, relationships, or circumstances changed. Staff measured not only falls and completed tasks, but participation, comfort, continuity, meaningful goals, and whether residents themselves recognised the life being supported.",
+        "The changed house revealed person-centred care: care organised around an individual's values, goals, preferences, identity, strengths, relationships, communication, and changing clinical and practical needs, developed through partnership and coordinated support. It does not mean abandoning professional judgement, safety, evidence, or duty, nor treating everyone as an isolated consumer. Pell had made every task belong to the institution. Sela kept the useful systems, then made each system answer to the person whose morning, body, and future it was meant to serve."
+      ],
+      "storyParagraphsZh": [
+        "佩尔主任把雪松之家变成全郡最安全的居所。所有人七点起床，隔日上午沐浴，吃相同份量，三点参加音乐活动。漏服药物减少，每张检查表都变成绿色。可前面包师韩先生开始拒绝早餐，玛拉不再戴姐姐送来的鲜艳围巾，安静的伊沃每逢职员移动他的椅子就拍打餐桌。佩尔把这些称为困难行为，排进日程等待纠正。房子运转得分秒不差，里面的人却越来越难被认出来。",
+        "新协调员塞拉换了一种记录。她问每个人什么最重要、怎样才算好日子、信任谁、如何沟通、哪些事情能独立完成、哪里希望得到支持。韩先生五十年来都在天亮前起床，七点以前早已饥饿；玛拉凭触感选衣服，因为颜色变得难以分辨；伊沃的椅子背对门口，让他看不见谁在进入。他们的行动包含信息，事故表却把信息翻译成缺陷。",
+        "塞拉请住民、他们选择的支持者、照护员、护士、治疗师及其他相关专业人员围绕同一份计划合作。信息用语言、图片、示范和简明文字提供，也留下回应时间。决策能力按具体事项和时刻评估，并先提供支持，不能仅凭年龄或残障就假定不存在。偏好、文化、身份、优势、健康需要、药物、疼痛、行动、沟通、保护与实际资源彼此连接，不再分装进互不相见的档案。",
+        "第一份新计划不是一张把每项要求自动变成命令的菜单。韩先生在视力近期变化后仍想独自使用工业烤炉。团队解释具体风险，核实他的理解与目标，探索改装工作台和有人支持的操作，并记录各方责任。出现紧急健康威胁时，专业职责与合法保护仍然适用。尊重一个人的方向，需要诚实协商获益、伤害、证据、他人权利与真正可持续的安排。",
+        "雪松之家保留可靠的用药系统，却放松它周围的生活。韩先生在支持下提早烤面包，香气把几名不愿进食的人带到早餐桌；玛拉为衣柜加上触觉标签；伊沃选择面向门的位置，不再拍桌。需要、愿望、功能、关系或处境变化时，计划会被复核。职员不仅统计跌倒与任务完成，也观察参与、舒适、连续性、有意义的目标，以及住民是否仍认得这就是自己被支持的生活。",
+        "改变后的房子揭示的是以人为中心的照护：围绕个体的价值、目标、偏好、身份、优势、关系、沟通，以及不断变化的临床与实际需要来组织照护，并通过伙伴关系与协调支持共同形成。它不等于放弃专业判断、安全、证据或职责，也不把每个人当成孤立消费者。佩尔曾让所有任务属于机构；塞拉保留有用系统，再让每套系统对那个真正拥有清晨、身体与未来的人负责。"
+      ],
+      "conceptName": "Person-centred care",
+      "conceptNameZh": "以人为中心的照护",
+      "explanationParagraphs": [
+        "Person-centred care aligns coordinated support with a person's values, goals, identity, strengths, communication, relationships, and changing needs.",
+        "It relies on participation, accessible information, supported decision-making, evidence, and professional responsibility. It is neither identical routines nor automatic agreement with every request."
+      ],
+      "explanationParagraphsZh": [
+        "以人为中心的照护让协调支持与个体的价值、目标、身份、优势、沟通、关系及变化中的需要相一致。",
+        "它依靠参与、可及信息、支持性决策、证据与专业责任，既不是相同日程，也不是对每项要求自动同意。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0921-dignity-of-risk",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0921",
+      "fieldTitle": "Care of the elderly and of disabled adults",
+      "fieldTitleZh": "老年人与残障成人照护",
+      "title": "The Carpenter's Locked Toolbox",
+      "titleZh": "木匠上锁的工具箱",
+      "summary": "A care home removes every sharp tool from an older carpenter's reach and discovers that eliminating visible danger can create another kind of harm.",
+      "summaryZh": "照护机构把所有锋利工具移出老木匠的手边，却发现消除可见危险也会制造另一种伤害。",
+      "storyParagraphs": [
+        "For sixty years, carpenter Oren could identify a wood species by its shavings. After a stroke weakened one hand, he moved into Harbour House with a small toolbox. The safety officer locked it away on his first afternoon. Oren then asked to sand a chair, but dust was prohibited; he asked to mark timber, but the awl was sharp; he asked to teach apprentices, but the workshop floor was uneven. Six months passed without a cut. His grip weakened further, he stopped joining meals, and the unfinished chair became a place for folded laundry.",
+        "Advocate Mina asked the officer to name not only the probability of injury but what Oren lost under the ban: identity, mastery, social role, movement, pleasure, and the right to shape an ordinary life. Safety was a real good, yet it was not the only good. Adults without disability were allowed to cook, travel, spend money, and make imperfect choices. Turning support into permanent prevention could protect a body while quietly taking authority over the life that body carried.",
+        "Mina did not simply return every tool and walk away. She asked Oren what he wanted to make, explained foreseeable hazards in a form he could use, checked his understanding for this decision, and sought communication and decision support where needed. An occupational therapist assessed grip, vision, fatigue, seating, and the task. Together they chose a guarded tool, a stable bench, shorter sessions, accessible storage, an agreed signal for help, and review after each stage. The remaining risk was named rather than disguised.",
+        "On the first day, Oren nicked a piece of scrap and laughed too quickly. The officer wanted to restore the ban. Mina reviewed what had happened: the cut was in wood, fatigue had risen, and the support plan required an earlier pause. They changed the interval without erasing the goal. A later request to operate a large saw alone raised risks that could not yet be reduced to an acceptable level, including danger to apprentices nearby. Respect for choice did not cancel duty of care, lawful limits, or the rights of other people.",
+        "Oren completed a small cedar box and began teaching joinery from a seated bench. His strength did not return by miracle, and some tasks remained unavailable. What changed was who took part in judging the trade-offs. Decisions were specific, revisable, and documented; risk was balanced against benefit, alternatives, capacity, support, and consequences. If Oren's condition or understanding changed, the conversation would reopen. If he made an informed choice others disliked, discomfort alone would not justify taking the choice away.",
+        "The unlocked bench revealed dignity of risk: an adult's right to make informed choices and take reasonable risks as part of autonomy, identity, learning, and participation, with decision support and proportionate safeguards where needed. It is neither abandonment nor permission to ignore serious foreseeable harm, impaired decision-making, professional duties, or other people's rights. The officer had counted six months without a cut. Mina also counted the craft, strength, and authorship that disappeared when a safe room left its resident nothing meaningful to do."
+      ],
+      "storyParagraphsZh": [
+        "六十年来，木匠奥伦只看刨花就能辨认木材。一次中风削弱他的一只手，他带着小工具箱搬进港湾之家。安全员第一天下午便把箱子锁走。奥伦请求打磨椅子，木屑被禁止；请求给木料做标记，锥子太尖；请求教学徒，工坊地面又不平。六个月里没有发生一次割伤，他的握力却进一步下降，也不再参加聚餐，那把未完成的椅子最后只用来堆放叠好的衣物。",
+        "权益倡导者米娜请安全员不只说受伤概率，也列出禁令让奥伦失去什么：身份、技艺、社会角色、活动、快乐，以及塑造普通生活的权利。安全是真实的善，却不是唯一的善。没有残障的成年人可以做饭、旅行、花钱，也可以做不完美的选择。把支持变成永久阻止，可能保护一具身体，同时悄悄夺走这具身体所承载人生的决定权。",
+        "米娜没有简单归还所有工具后转身离开。她询问奥伦想做什么，用他能理解的方式说明可预见危险，核实他对这项具体决定的理解，并在需要时提供沟通与决策支持。作业治疗师评估握力、视力、疲劳、坐姿和任务。大家共同选择带护罩的工具、稳定工作台、较短时段、可及收纳、约定求助信号，并在每一步后复核。剩余风险被明确说出，而非藏起来。",
+        "第一天，奥伦在一块废料上划出小口，还笑得过分响亮。安全员想恢复禁令。米娜复盘发生了什么：伤口在木头上，疲劳确实上升，支持计划要求更早暂停。他们调整间隔，却没有抹掉目标。后来奥伦想独自操作大型锯机，其中一些危险暂时无法降到可接受水平，也会威胁附近学徒。尊重选择不会取消照护责任、合法限制或他人权利。",
+        "奥伦完成一只小雪松盒，开始坐在工作台前教授榫接。他的力量没有奇迹般恢复，有些任务仍无法进行。真正改变的是谁参与衡量取舍。决定针对具体事项，可以修订并被记录；风险要同获益、替代方案、决策能力、支持与后果一起衡量。奥伦的状况或理解改变时，对话会重开；如果他作出别人不喜欢但知情的选择，仅仅感到不安不足以夺走它。",
+        "重新开放的工作台揭示的是风险尊严：成年人有权在知情情况下作出选择，并把合理风险作为自主、身份、学习与参与的一部分，同时在需要时获得决策支持与相称保护。它既不是遗弃，也不允许忽略严重可预见伤害、受损决策能力、专业职责或他人权利。安全员统计六个月没有割伤；米娜还统计了一个安全房间让住民无事可做时，消失的技艺、力量与人生作者身份。"
+      ],
+      "conceptName": "Dignity of risk",
+      "conceptNameZh": "风险尊严",
+      "explanationParagraphs": [
+        "Dignity of risk recognises that informed, reasonable risk-taking can be part of adult autonomy, identity, participation, and growth.",
+        "It requires accessible information, decision support, individual assessment, and proportionate safeguards. It does not remove duties of care, lawful limits, or protection of other people's rights."
+      ],
+      "explanationParagraphsZh": [
+        "风险尊严承认，知情且合理的风险承担可以成为成年人自主、身份、参与与成长的一部分。",
+        "它需要可及信息、决策支持、个体评估与相称保护，并不取消照护职责、合法限制或对他人权利的保护。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0921-universal-design",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0921",
+      "fieldTitle": "Care of the elderly and of disabled adults",
+      "fieldTitleZh": "老年人与残障成人照护",
+      "title": "The Door Everyone Entered",
+      "titleZh": "所有人都走的门",
+      "summary": "A city replaces a locked side ramp with one dignified entrance shaped by the varied people who actually use it.",
+      "summaryZh": "城市把上锁的侧边坡道改成一处有尊严的共同入口，并由真正使用它的不同人群共同塑造。",
+      "storyParagraphs": [
+        "The Civic Hall had twelve marble steps and, behind the coal shed, a steep metal ramp built for one councillor who used a wheelchair. The ramp met the rule on opening day, then its key migrated to the caretaker's pocket. Delivery workers blocked it, rain made it slippery, and visitors using it entered beside rubbish bins. Architect Pel called it a special solution. Councillor Asha called it a second-class door. During an election queue, a parent lifted a pram up the marble steps while an older voter turned home without casting a ballot.",
+        "Asha convened people with mobility, sensory, cognitive, and communication differences, along with children, older adults, workers, and staff. They did not offer one average body for Pel to design around. They mapped the full journey: finding the building, reaching it, entering, navigating, hearing announcements, reading forms, using counters and toilets, leaving during an emergency, and obtaining help without humiliation. A barrier at any link could make the nominally accessible room unusable.",
+        "Pel replaced the divided approach with a broad gradual route at the principal entrance. It offered firm slip-resistant surfaces, resting places, handrails, clear width, predictable edges, and doors operable with little force. High contrast and tactile cues supported wayfinding; signs used readable text and symbols; information came in more than one format; counters and seating offered choices; lighting and acoustics reduced avoidable strain. The design did not announce which feature belonged to which diagnosis. It simply gave more people a workable first path.",
+        "On reopening day, a wheelchair user entered independently, a courier moved a cart without lifting it, a child found the symbols, and a traveller with a temporary leg injury rested halfway. Pel declared that specialised support was now obsolete. Asha corrected him. One deaf visitor still required an interpreter for a complex hearing; another person needed a particular assistive device; an individual adjustment remained necessary for a staff member. Designing broadly reduced predictable exclusion but could not erase every specific requirement.",
+        "The first tactile map also confused people because Pel had copied a fashionable pattern without testing it. Users returned to evaluate prototypes, report friction, and change the details. Accessibility standards and rights obligations supplied minimum duties, not a ceiling for imagination. Cost, maintenance, emergency procedures, digital services, procurement, and future renovation were considered from the beginning. Inclusion worked better when it was a design condition and continuing process, rather than a late attachment requested by whoever was excluded first.",
+        "The shared entrance revealed universal design: creating products, environments, programmes, and services so they can be used by all people, to the greatest extent possible, without requiring adaptation or specialised design. It anticipates human diversity and often benefits many people, while still allowing assistive devices, reasonable accommodation, and individual support where needed. Pel's side ramp had asked one councillor to leave the public route. Asha changed the public route itself, and the city discovered how many citizens had been waiting behind the same steps."
+      ],
+      "storyParagraphsZh": [
+        "市政厅正面有十二级大理石台阶，煤棚后方另建一条陡峭金属坡道，专供一名使用轮椅的议员。坡道在启用日符合规定，钥匙后来却总待在管理员口袋里；送货员会堵住它，下雨时表面打滑，来访者还得从垃圾桶旁进门。建筑师佩尔称它为特殊解决方案，阿莎议员却称它为二等入口。一次选举排队时，家长把婴儿车抬上大理石阶，一名年长选民则转身回家，没能投票。",
+        "阿莎召集具有不同移动、感官、认知与沟通需要的人，也请来儿童、老年人、工人和职员。他们没有交给佩尔一具“平均身体”作为设计对象，而是绘制完整旅程：找到建筑、抵达、进入、辨路、听见通知、阅读表格、使用柜台与卫生间、紧急离开，以及不受羞辱地获得帮助。任何一环的障碍，都能让名义上可及的房间无法使用。",
+        "佩尔把分裂的入口改成正门前宽阔平缓的共同路线，设置坚实防滑表面、休息处、扶手、足够宽度、可预测边缘和低力即可开启的门。高对比度与触觉提示帮助辨路，标牌结合易读文字和符号，信息提供多种格式，柜台与座椅有不同选择，灯光与声学也减少可避免负担。设计不再宣布哪项功能属于哪种诊断，只是让更多人一开始就有可行路径。",
+        "重新开放那天，轮椅使用者独立进门，快递员不用抬起推车，孩子认出图形，腿部暂时受伤的旅客在半途休息。佩尔宣布专门支持从此已经过时，阿莎立刻纠正他。一名聋人参加复杂听证仍需要口译，另一人需要特定辅助设备，一名职员也仍需个别调整。广泛设计减少可预见排斥，却不可能抹去每项具体需要。",
+        "第一版触觉地图也让人困惑，因为佩尔只是照搬流行图样，未让使用者测试。人们回来评估原型、报告摩擦并修改细节。可及性标准与权利义务提供最低责任，不是想象力的天花板。成本、维护、紧急程序、数字服务、采购与未来翻修从一开始就被考虑。当包容成为设计条件和持续过程，而不是等最先被排除者提出后才加上的附件时，它才更可靠。",
+        "共同入口揭示的是通用设计：让产品、环境、方案与服务在最大可能程度上可由所有人使用，而不必另行改装或专门设计。它预先考虑人的多样性，常使许多人一同受益，同时仍为必要的辅助设备、合理便利与个别支持留下位置。佩尔的侧边坡道曾要求一名议员离开公共路线；阿莎改变了公共路线本身，城市这才发现，原来有那么多市民一直被同一排台阶挡在后面。"
+      ],
+      "conceptName": "Universal design",
+      "conceptNameZh": "通用设计",
+      "explanationParagraphs": [
+        "Universal design makes products, environments, programmes, and services usable by the widest range of people from the outset, to the greatest extent possible.",
+        "It anticipates diversity and reduces predictable barriers, but does not eliminate the need for accessibility standards, assistive technology, reasonable accommodation, participation, or individual support."
+      ],
+      "explanationParagraphsZh": [
+        "通用设计从一开始就让产品、环境、方案与服务在最大可能程度上可由最广泛的人群使用。",
+        "它预先考虑多样性并减少可预见障碍，但不会取消可及性标准、辅助技术、合理便利、参与或个别支持的需要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0922-attachment",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0922",
+      "fieldTitle": "Child care and youth services",
+      "fieldTitleZh": "儿童照护与青少年服务",
+      "title": "The Harbour That Answered",
+      "titleZh": "会回应的港湾",
+      "summary": "A harbour master tries both ignoring and tethering a young boat before learning why a reliable return point makes exploration possible.",
+      "summaryZh": "港务长先后尝试忽视与拴住一艘小船，才明白可靠的返回点为何能让探索成为可能。",
+      "storyParagraphs": [
+        "Little Tavi was the smallest boat in Reed Harbour. On calm mornings she ventured toward the outer reeds, then glanced back for the keeper's yellow flag. Harbour Master Dren believed courage meant never needing reassurance, so he ordered the keeper to hide the flag whenever Tavi looked homeward. She did not sail farther. She circled close to the wall, sounding her horn at every shadow. Dren then tried the opposite remedy and tied her permanently to the pier. Her horn became quiet, but so did every attempt to explore.",
+        "Keeper Mara restored a predictable signal. When Tavi was curious and conditions were safe, the yellow flag remained visible without pulling her back. When sudden wind frightened her, Mara answered, offered shelter, and helped her settle before the next voyage. The harbour served two connected functions: a dependable refuge under distress and a secure point from which movement outward could begin. Dependence and exploration were not simple opposites; reliable availability could make age-appropriate independence more possible.",
+        "Dren demanded that Mara prevent every separation cry. She refused. A good relationship did not require constant happiness, perfect timing, or the absence of ordinary departures. Sometimes Mara misread a signal or responded late. What mattered was a broader pattern of sensitive, sufficiently consistent care and the possibility of repair: noticing the mismatch, reconnecting, and restoring trust. Tavi also brought her own temperament, health, developmental stage, and prior experience to every exchange.",
+        "Other boats behaved differently. One appeared not to signal even in rough water; another sounded continuously and struggled to settle after help arrived. Mara treated these patterns as adaptations within particular relationships and contexts, not permanent character verdicts; the same child could show different expectations with different caregivers. She did not infer an entire future from one observation or use a harbour exercise as a casual diagnosis. Stress, trauma, caregiving instability, culture, disability, and the testing situation could all shape what appeared at the surface, and trained assessment required more than a single scene.",
+        "Tavi formed meaningful bonds with Mara, her night keeper, and an aunt who maintained the winter dock. The relationships were not identical, nor did care have to come from one biologically defined person. Continuity, responsiveness, protection, communication, and culturally situated caregiving mattered. When the harbour struggled, support addressed both child and caregivers: practical strain, mental and physical health, housing, safety, time, and relationships. Blaming one exhausted keeper would not repair a system that kept changing the pier beneath them.",
+        "Tavi's voyages revealed attachment: an enduring, selective emotional bond in which a child seeks proximity, comfort, or protection from familiar caregivers, who can function as a safe haven in distress and a secure base for exploration. Attachment patterns describe relationship strategies, not fixed destinies or measures of parental worth, and children may form bonds with more than one caregiver. Dren had tried to manufacture bravery first by silence and then by rope. Mara gave the young boat something harder to see: a harbour whose answer made leaving, returning, and leaving again bearable."
+      ],
+      "storyParagraphsZh": [
+        "小塔维是芦湾里最小的船。风平浪静的早晨，她会驶向外侧芦苇，又回头寻找守护人的黄旗。港务长德伦相信勇敢就是永不需要安慰，因此命令塔维每次回望时都把旗藏起来。她没有驶得更远，反而贴着港墙绕圈，见到每个影子都鸣笛。德伦随后采取相反办法，把她永远拴在码头。她的笛声安静下来，所有探索的尝试也一同消失。",
+        "守护人玛拉恢复了可预测的信号。塔维好奇且条件安全时，黄旗会保持可见，却不把她拉回来；突如其来的风让她害怕时，玛拉会回应、提供庇护，帮助她平静后再出航。港湾承担两项相连功能：受惊时可靠的避难处，以及向外移动得以开始的稳固起点。依赖与探索并非简单对立，可靠的可获得性反而能让符合年龄的独立更有可能。",
+        "德伦要求玛拉消灭每一次分离时的哭鸣。她拒绝了。良好关系并不要求持续快乐、每次时机完美，也不意味着没有普通离别。玛拉有时也会误读信号或回应较迟，重要的是较长时间里敏感而足够一致的照护，以及关系能够修复：发现错位、重新连接、恢复信任。塔维自身的气质、健康、发展阶段与既往经历也会进入每次互动。",
+        "其他小船的表现并不相同。一艘即使遇到大浪也像是不发信号，另一艘持续鸣笛，帮助抵达后仍难平静。玛拉把这些视为特定关系与情境中的适应方式，而非永久性格判决；同一个孩子面对不同照护者时也可能形成不同期待。她不会从一次观察推断整个人生，也不拿港湾练习随意诊断。压力、创伤、照护不稳定、文化、残障与测试情境都可能塑造表面表现，受训评估需要的远不止一个场景。",
+        "塔维同玛拉、夜班守护人和维护冬季船坞的姨妈都形成有意义的联结。这些关系不必相同，照护也不必只来自一个由血缘定义的人。连续、回应、保护、沟通与置于文化中的照护方式都很重要。港湾陷入困难时，支持会同时面向孩子与照护者，包括实际压力、身心健康、住房、安全、时间和关系。责怪一名筋疲力尽的守护人，修不好不断在他们脚下变动的码头。",
+        "塔维的航行揭示的是依恋：一种持久且有选择性的情感联结，孩子会向熟悉照护者寻求接近、安慰或保护，照护者则可在痛苦时成为安全港，在探索时成为安全基地。依恋模式描述关系中的策略，不是固定命运或父母价值的量尺，孩子也可以同多名照护者形成联结。德伦先用沉默、再用绳索制造勇敢；玛拉给予小船的是更难看见的东西：一座会回应的港湾，让离开、返回和再次离开都变得可以承受。"
+      ],
+      "conceptName": "Attachment",
+      "conceptNameZh": "依恋",
+      "explanationParagraphs": [
+        "Attachment is an enduring, selective bond through which a child seeks safety and comfort from familiar caregivers and uses them as a secure base for exploration.",
+        "Patterns emerge within relationships and contexts; they are not fixed destinies, simple parent scores, or casual diagnoses. Multiple caregivers, culture, development, adversity, and support all matter."
+      ],
+      "explanationParagraphsZh": [
+        "依恋是持久而有选择性的联结，孩子借此向熟悉照护者寻求安全与安慰，并把他们作为探索的安全基地。",
+        "模式产生于关系与情境，不是固定命运、简单的父母评分或随意诊断。多名照护者、文化、发展、逆境与支持都很重要。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0922-safeguarding",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0922",
+      "fieldTitle": "Child care and youth services",
+      "fieldTitleZh": "儿童照护与青少年服务",
+      "title": "The Theatre of Trusted People",
+      "titleZh": "只靠信任的剧团",
+      "summary": "A beloved youth theatre has no boundaries or reporting path, so a child's quiet warning nearly disappears inside everyone's confidence in one another.",
+      "summaryZh": "一个深受喜爱的青年剧团没有行为边界与报告路径，孩子安静的警讯险些消失在所有人的相互信任里。",
+      "storyParagraphs": [
+        "Lantern Theatre admitted only kind people, its founder liked to say. Volunteers joined after a friendly conversation, adults messaged young performers from personal accounts, and whoever owned a cart drove children home alone after rehearsals. Written rules felt insulting among friends. When twelve-year-old Nia began avoiding a popular tutor, missing rehearsals, and returning expensive gifts unopened, each change received a separate explanation. The tutor was generous, Nia was moody, and the theatre was family. Trust closed the case before anyone had opened it.",
+        "One evening Nia told costume helper Sol that she did not want to be alone with the tutor. Sol promised absolute secrecy to make her feel safe. For two days he tried to discover what had happened by asking increasingly detailed questions, while the next private lesson remained on the schedule. Nia withdrew her words. Sol had meant to protect her confidence, but he had accepted a promise he could not safely keep, delayed immediate precautions, and begun an investigation for which he was neither trained nor authorised.",
+        "The new protection lead, Amara, acted differently. She listened calmly, thanked Nia for speaking, avoided leading questions, explained that information would be shared only with people who needed it to help keep her safe, and recorded her words and the observable facts. She assessed immediate danger and followed the organisation's procedure and applicable local reporting duties, involving qualified child-protection or emergency services where required. Her task was to report and protect, not decide guilt in the costume room.",
+        "The board first treated the event as one bad adult. Amara mapped the environment that had made warning difficult: informal recruitment, private communication, one-to-one isolation, uncontrolled transport, gifts, weak supervision, no designated route, no training, and fear of damaging the theatre's reputation. Prevention required safer selection and checks appropriate to law and role, codes of conduct, risk assessment, supervision, accessible complaints, whistleblowing protection, record handling, referral routes, and regular review. Children and families needed to know the boundaries too.",
+        "New rules did not mean treating every adult as guilty or asking children to manage their own safety. They created predictable limits and made concerns easier to notice and escalate. Responses remained child-centred, proportionate, confidential on a need-to-know basis, and attentive to retaliation, culture, disability, communication, and support after disclosure. Allegations also required fair process. When danger was immediate, emergency action came first; when facts were uncertain, uncertainty did not justify leaving the child exposed while professionals decided the next step.",
+        "Lantern Theatre learned safeguarding: the organisational responsibility to prevent, identify, report, and respond to risks of abuse, exploitation, neglect, or other harm, through safe systems, conduct, participation, and accountable action. It is broader than reacting after proof and cannot rest on goodwill alone. Sol had believed trust meant keeping a secret inside one room. Amara built a form of trust strong enough to set boundaries, carry a concern to the right people, and keep a child's quiet sentence from disappearing beneath the applause."
+      ],
+      "storyParagraphsZh": [
+        "灯笼剧团只接纳善良的人，创办者总这样说。志愿者友好聊几句就能加入，成人用私人账号联系年轻演员，排练后谁有车谁就单独送孩子回家。朋友之间写规则显得像一种冒犯。十二岁的妮娅开始躲避一名受欢迎的导师、缺席排练，又原封不动退回昂贵礼物时，每项变化都得到单独解释：导师只是慷慨，妮娅只是情绪多变，而剧团就是一家人。还没有人真正打开问题，信任便先替它结了案。",
+        "一天晚上，妮娅告诉服装助理索尔，她不愿同那名导师单独相处。索尔为让她安心，承诺绝对保密。接下来两天，他用越来越具体的问题自行追查，而下一次单独课程仍留在日程上。妮娅收回了自己的话。索尔本想保护她的信任，却作出无法安全遵守的承诺，延误即时保护，还开始进行一项自己既未受训也无权承担的调查。",
+        "新任保护负责人阿玛拉采取不同做法。她平静倾听，感谢妮娅说出来，不问诱导问题，并解释信息只会分享给为了帮助她保持安全而必须知道的人。她记录妮娅的原话与可观察事实，评估即时危险，依照机构程序及当地适用报告义务行动，在需要时让合格儿童保护或紧急服务介入。她的任务是报告与保护，不是在服装间判定谁有罪。",
+        "理事会起初只把事件视为一名坏成人。阿玛拉却画出让警讯难以出现的环境：非正式招募、私人通信、一对一隔离、无人管理的接送、礼物、薄弱监督、没有指定路径、没有培训，以及害怕损害剧团名声。预防需要符合法律与岗位的安全甄选和核查、行为准则、风险评估、监督、可及投诉、举报保护、记录管理、转介路径与定期复核。孩子和家人也需要知道边界。",
+        "新规则不等于把每名成人当成有罪，也不要求孩子独自管理自己的安全。它们建立可预测界限，让疑虑更容易被发现和升级。回应仍以孩子为中心、与风险相称，只按必要知情范围保密，并关注报复、文化、残障、沟通及披露后的支持。指控同样需要公平程序。危险即时存在时先采取紧急行动；事实尚不确定时，也不能一边等待专业人员决定下一步，一边让孩子继续暴露。",
+        "灯笼剧团学会的是儿童与青少年保护：机构通过安全系统、行为规范、参与和问责行动，预防、识别、报告并回应虐待、剥削、忽视或其他伤害风险的责任。它比事后等待证明更广，也不能只靠善意。索尔曾以为信任就是把秘密留在一间房里；阿玛拉建立的信任足够坚固，能够设下边界、把疑虑送到正确的人手中，也让孩子轻声说出的一句话不被掌声淹没。"
+      ],
+      "conceptName": "Safeguarding",
+      "conceptNameZh": "儿童与青少年保护",
+      "explanationParagraphs": [
+        "Safeguarding is the organised prevention, identification, reporting, and response to risks of abuse, exploitation, neglect, and other harm.",
+        "It requires safe recruitment, conduct, supervision, accessible reporting, need-to-know confidentiality, child-centred response, and lawful referral. Staff should protect and report, not promise secrecy or conduct amateur investigations."
+      ],
+      "explanationParagraphsZh": [
+        "儿童与青少年保护是对虐待、剥削、忽视及其他伤害风险进行有组织的预防、识别、报告与回应。",
+        "它需要安全招募、行为规范、监督、可及报告、必要知情保密、以孩子为中心的回应及合法转介。工作人员应保护并报告，而非承诺绝对保密或自行调查。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0922-positive-youth-development",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0922",
+      "fieldTitle": "Child care and youth services",
+      "fieldTitleZh": "儿童照护与青少年服务",
+      "title": "The Town's List of Broken Windows",
+      "titleZh": "镇上的破窗清单",
+      "summary": "A town defines its teenagers by incidents until a flood project gives them real roles, resources, relationships, and a say in the work.",
+      "summaryZh": "小镇一直用事故定义青少年，直到一项防洪工程给予他们真实角色、资源、关系与发言权。",
+      "storyParagraphs": [
+        "Riverbend kept a careful ledger of its teenagers: seven broken windows, eleven late arrivals, four fights, and thirty-two warnings for gathering near the bridge. The council funded a programme called Fix the Youth and invited young people to a lecture on better choices. Only three attended; two left early. Councillor Venn entered their absence as another deficit. When spring floods damaged the bridge, however, sixteen teenagers appeared without invitation to move bicycles, translate warnings for grandparents, and mark where water crossed paths the official map had missed.",
+        "Planner Imani asked why the town recorded every risk but none of those capacities. She met the group in places they already used and invited them to define what a safer riverfront would mean. They identified dark paths, inaccessible notices, a missing evening bus, and a low wall where younger children climbed during high water. Artists, coders, carers, mechanics, quiet observers, and persuasive speakers brought different strengths. Imani did not pretend hardship was absent; she added assets and aspirations to a picture previously made entirely of problems.",
+        "The council's first response was decorative participation. It put two teenagers in a publicity photograph after engineers had completed the plan. The group refused. With adult support, they received a real design brief, budget limits, safety training, transport, accessible meetings, named responsibilities, and authority over defined choices. Engineers retained duties that required professional competence, while young people tested routes, designed multilingual signs, gathered peer evidence, and presented alternatives. Partnership meant neither adult domination nor handing adult liability to minors.",
+        "Conflict arrived when the young designers chose a night market beside the river. Venn cited the old ledger and proposed cancelling everything. Imani helped them examine lighting, supervision, transport, weather triggers, safeguarding, costs, noise, and emergency closure. The group revised the site and operating plan. Strength-based work did not deny risk or excuse harmful conduct; it combined prevention with opportunities to practise judgement, contribution, connection, and recovery after mistakes.",
+        "By autumn, several participants had learned technical skills, but the deeper change was relational. Each had at least one reliable adult who knew more than an incident number, peers expected useful contribution, and the town had made visible space for their decisions. Outcomes differed and no programme guaranteed a smooth future. Some young people needed specialised services beyond the project. The council tracked belonging, competence, confidence, agency, contribution, safety, and access to opportunity alongside reductions in harm.",
+        "Riverbend discovered positive youth development: an intentional, strengths-based approach that engages young people as active partners and supports their assets through opportunities, supportive relationships, participation, skill-building, and enabling environments. It complements risk prevention and targeted services rather than replacing them, and youth need not carry adult burdens to prove leadership. Venn's ledger had accurately counted broken windows. Imani changed the town by counting who could read the river, then giving them the tools and authority to help repair more than glass."
+      ],
+      "storyParagraphsZh": [
+        "河湾镇认真记录青少年：七扇破窗、十一次迟到、四场打架，以及三十二次因聚集在桥边而收到的警告。议事会资助一项“修好青年”计划，请年轻人来听如何作出更好选择的讲座。只有三人出席，两人提前离开。维恩议员把缺席也记作一项缺陷。然而春洪冲坏桥梁时，十六名青少年不请自来，搬开自行车、为祖辈翻译警报，还标出官方地图遗漏的积水路径。",
+        "规划师伊曼妮追问，小镇为何记录每项风险，却不记录这些能力。她在年轻人本来就会去的地方见面，请他们定义更安全的河岸意味着什么。他们指出昏暗小路、无法理解的告示、缺失的夜班公交，以及涨水时幼童会攀爬的矮墙。画家、程序员、照护者、修理者、安静观察者与善于说服的人带来不同优势。伊曼妮没有假装困境不存在，只是在原本全由问题组成的图画里加入资源与愿望。",
+        "议事会最初只提供装饰性参与：工程师完成方案后，请两名少年站进宣传照片。小组拒绝了。在成人支持下，他们得到真实设计任务、预算限制、安全培训、交通、可及会议、明确职责，以及对规定范围内选择的决定权。工程师保留需要专业能力的责任，年轻人则测试路线、设计多语标牌、收集同伴证据并提出替代方案。伙伴关系既不是成人支配，也不是把成人责任推给未成年人。",
+        "年轻设计者选择在河边办夜市时，冲突到来。维恩翻出旧账册，提议取消全部项目。伊曼妮帮助他们检查照明、监督、交通、天气触发条件、保护、成本、噪声与紧急关闭。小组随后修改地点和运行计划。优势导向并不否认风险，也不为伤害行为开脱；它把预防同练习判断、贡献、联结及犯错后恢复的机会结合起来。",
+        "到了秋天，一些参与者学会技术技能，更深的变化却发生在关系里。每个人至少有一名可靠成人知道的不只是事故编号，同伴期待彼此作出有用贡献，小镇也为他们的决定留下可见空间。结果各不相同，没有任何计划能保证未来一路平顺，有些年轻人还需要项目之外的专门服务。议事会在伤害减少以外，也追踪归属、能力、信心、能动性、贡献、安全与机会可及性。",
+        "河湾镇发现的是积极青少年发展：一种有意且以优势为基础的方法，把年轻人作为积极伙伴，通过机会、支持性关系、参与、技能培养与有利环境发展他们的资源。它补充而非取代风险预防与针对性服务，年轻人也不必背负成人责任才能证明领导力。维恩的账册准确数出了破窗；伊曼妮先数清谁能读懂河流，再给他们工具与权限，镇子修复的便不再只有玻璃。"
+      ],
+      "conceptName": "Positive youth development",
+      "conceptNameZh": "积极青少年发展",
+      "explanationParagraphs": [
+        "Positive youth development intentionally builds on young people's strengths through supportive relationships, meaningful opportunities, participation, skill-building, and enabling environments.",
+        "It treats youth as active partners while retaining adult responsibility. It complements prevention and specialised support; it does not deny harm, erase inequality, or require every young person to lead."
+      ],
+      "explanationParagraphsZh": [
+        "积极青少年发展通过支持性关系、有意义机会、参与、技能培养与有利环境，有意识地发展年轻人的优势。",
+        "它把青年视为积极伙伴，同时保留成人责任；它补充预防与专门支持，而不是否认伤害、抹去不平等或要求每个人都承担领导角色。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0923-ecological-systems-perspective",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0923",
+      "fieldTitle": "Social work and counselling",
+      "fieldTitleZh": "社会工作与咨询",
+      "title": "The Family Who Failed Every Form",
+      "titleZh": "在每张表格上都失败的家庭",
+      "summary": "A family labelled disorganised turns out to be living at the crossing of a night shift, a cancelled bus, school rules, housing pressure, and changing policy.",
+      "summaryZh": "一个被贴上混乱标签的家庭，原来生活在夜班、公交取消、学校规则、住房压力与政策变化的交叉点上。",
+      "storyParagraphs": [
+        "By March, the Rami family had failed every public form. Mother Leila missed two clinic appointments, twelve-year-old Sam arrived late to school nine times, rent notices covered the kitchen shelf, and the housing office recorded an unanswered inspection. Caseworker Varo prescribed a household calendar and a course in personal organisation. Leila completed both. The following month Sam was later, the clinic discharged her for non-attendance, and the landlord began eviction proceedings. Varo concluded that the family lacked motivation because his intervention had been delivered correctly.",
+        "New social worker Anik visited at five in the morning, the only time Leila was home and awake. Her factory had moved her onto a rotating night shift without her choosing it. A cancelled bus route added forty minutes to Sam's school journey; he first took his younger sister to a neighbour because childcare opened after Leila left. Damp worsened the sister's breathing, but the inspector called during work hours from a blocked number. Each agency saw one missed obligation. No agency saw the timetable formed by all of them together.",
+        "Anik drew a map around the family. Immediate relationships and daily settings occupied the centre: home, school, peers, work, and care. Connections among those settings mattered too; the school had never spoken with the childcare centre or clinic. Decisions made beyond the family's presence still entered their lives through factory scheduling, transport planning, landlord practice, service thresholds, and benefit administration. Wider norms and policies shaped whose time counted as flexible, while a recent bereavement and months of rising rent gave the map a history.",
+        "The map also showed loops. Lateness produced detention, detention caused Sam to miss the last bus, and another absence followed. Damp illness increased Leila's care work, missed shifts reduced income, rent arrears increased stress, and stress made every letter harder to open. These links did not make individual action meaningless or absolve harmful choices. They changed what an effective action had to address. Teaching Sam punctuality without altering the route merely asked him to overcome a system whose parts were reinforcing one another.",
+        "Anik coordinated a school transport adjustment and a single contact plan, connected Leila with tenancy and income advice, arranged an accessible inspection time, and helped the family negotiate childcare and work options. Leila chose which goals came first and still took responsibility for calls and agreements within her control. Some barriers required advocacy and inter-agency work; others required family routines, skills, or therapeutic support. Progress was reviewed for unintended effects, because changing one part of a connected system could move pressure elsewhere.",
+        "The Rami map revealed an ecological systems perspective: understanding a person or family within interacting immediate relationships, connections among settings, external institutions, wider social and policy structures, and changes over time. Difficulties and resources can arise at several levels and circulate through feedback, so support may need individual, relational, organisational, community, and structural action. Varo's calendar was not wrong. It was simply too small for a problem whose clocks were also hanging in a factory, a school, a bus depot, a landlord's office, and the rules of the city."
+      ],
+      "storyParagraphsZh": [
+        "到了三月，拉米一家在每张公共表格上都失败了。母亲莱拉错过两次诊所预约，十二岁的萨姆九次上学迟到，租金通知铺满厨房架，住房办公室还记录了一次无人回应的检查。个案工作者瓦罗给他们一本家庭日历和一门个人组织课程。莱拉两项都完成了，下个月萨姆却更迟，诊所因未出席停止服务，房东也启动驱逐程序。瓦罗认定自己的干预正确送达，因此失败只能说明这家人缺乏动力。",
+        "新社工阿尼克清晨五点上门，那是莱拉唯一在家且清醒的时间。工厂在她没有选择的情况下把她调到轮换夜班；取消的公交路线又让萨姆上学多花四十分钟，他还要先把妹妹送去邻居家，因为托儿所在莱拉离开后才开门。潮湿让妹妹的呼吸更糟，检查员却总在工作时间用隐藏号码来电。每个机构只看见一项未履行义务，没有一个看见所有机构共同排出的时间表。",
+        "阿尼克围绕家庭画图。最中心是直接关系和日常场所：家庭、学校、同伴、工作与照护。场所之间的连接同样重要，学校从未同托儿所或诊所沟通。家庭未参与的决定仍会通过工厂排班、交通规划、房东做法、服务门槛与福利管理进入生活。更广的规范和政策决定谁的时间被视为可以随意调整，而近期丧亲与数月上涨的租金又让地图拥有历史。",
+        "地图也显出循环。迟到带来留校，留校让萨姆错过末班车，下一次缺席随即发生。潮湿导致的疾病增加莱拉的照护工作，误班减少收入，欠租提高压力，压力又让每封信都更难打开。这些联系不会让个人行动失去意义，也不会免除有害选择的责任，却改变了有效行动必须处理什么。只教萨姆守时而不改变路线，只是在要求他独自战胜一个各部分相互强化的系统。",
+        "阿尼克协调学校交通调整与单一联络计划，把莱拉连接到租住权益和收入建议，安排可行的检查时间，并帮助家庭协商托儿与工作选择。莱拉决定目标先后，也继续为自己能够控制的电话和约定负责。有些障碍需要倡导与跨机构工作，另一些需要家庭日程、技能或治疗支持。进展还要检查意外影响，因为改变相联系系统的一部分，可能把压力推向别处。",
+        "拉米家的地图揭示的是生态系统视角：把个人或家庭放在相互作用的直接关系、场所之间的连接、外部机构、更广社会与政策结构，以及随时间发生的变化中理解。困难与资源可在多个层次产生并通过反馈循环，因此支持可能需要个人、关系、组织、社区和结构行动。瓦罗的日历并没有错，只是小得装不下这个问题；它的时钟还挂在工厂、学校、公交站、房东办公室与城市规则里。"
+      ],
+      "conceptName": "Ecological systems perspective",
+      "conceptNameZh": "生态系统视角",
+      "explanationParagraphs": [
+        "An ecological systems perspective understands people within interacting relationships, settings, institutions, social structures, and changes over time.",
+        "It traces risks, resources, and feedback across levels to guide appropriately placed action. Context does not erase agency or responsibility; it shows why individual change alone may be insufficient."
+      ],
+      "explanationParagraphsZh": [
+        "生态系统视角把人放在相互作用的关系、场所、机构、社会结构与时间变化中理解。",
+        "它追踪不同层次的风险、资源与反馈，以安排位置合适的行动。情境不会抹去能动性或责任，却说明为何只改变个人可能不足。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0923-therapeutic-alliance",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0923",
+      "fieldTitle": "Social work and counselling",
+      "fieldTitleZh": "社会工作与咨询",
+      "title": "The Guide's Excellent Northern Map",
+      "titleZh": "向导那张优秀的北方地图",
+      "summary": "A skilled guide keeps leading a traveller north until they discover that a shared destination, workable route, and trustworthy bond must be built together.",
+      "summaryZh": "一名熟练向导不断把旅人带向北方，直到两人发现，共同目的地、可行路线与可信关系必须一起建立。",
+      "storyParagraphs": [
+        "Guide Sorin owned the finest northern map in the province. When traveller Elia arrived unable to cross open bridges after a storm, he selected a proven mountain route, assigned daily crossings, and explained every contour with precision. Elia nodded through each meeting and completed none of the journeys. Sorin privately called her resistant. At their fourth appointment she said she was leaving: the destination she cared about was her sister's wedding in the east, while every task on his northern map seemed designed for someone else's life.",
+        "Sorin put away the map and asked three neglected questions. What change did Elia actually seek? Which activities could plausibly move toward it? What kind of working relationship would let them speak honestly when fear, disagreement, or shame entered the room? They agreed on the wedding as a meaningful goal, selected graded practice connected to the real journey, and discussed why each step might help. Elia could question a task without rejecting all help; Sorin could offer expertise without owning the destination.",
+        "Their agreement did not remove difficulty. Sorin scheduled a crowded bridge too early and interpreted Elia's silence as consent. She missed the next meeting. Instead of labelling the absence, he invited discussion of the rupture. Elia said his urgency had made her feel examined rather than accompanied. Sorin acknowledged the mismatch, clarified what he had been trying to do, and changed the sequence with her. Repair strengthened their ability to notice future strain; politeness had previously hidden it.",
+        "Warmth alone was not enough. A guide who offered comfort but no useful method would not necessarily help Elia cross, and a shared goal could still be inappropriate or unsafe. Sorin used relevant assessment, evidence, supervision, cultural humility, and referral when needs exceeded his competence. He monitored progress and adverse effects rather than assuming a good relationship guaranteed benefit. Collaboration could support progress, while early progress could also make collaboration easier; their association did not prove one simple causal direction. Elia's view mattered especially, because a guide could believe trust existed while the traveller experienced pressure.",
+        "Nor did trust turn the relationship into friendship. Boundaries, confidentiality and its limits, roles, time, consent, records, and conflicts of interest remained explicit. Sorin did not ask Elia to protect his feelings or make his personal needs part of her journey. When she chose a different route, he explored the reasons without punishment. Their bond supported difficult work because it held respect and reliability, not because professional responsibility had disappeared.",
+        "The eastern journey revealed the therapeutic alliance: the collaborative working relationship formed through agreement on the goals of therapy, agreement on the tasks used to pursue them, and a bond of trust and respect. Its quality is associated with outcomes across approaches, but it is not friendship, a guarantee of success, or a substitute for competent methods and safety. Sorin's northern map had been excellent. It became useful only after guide and traveller could name the same destination, test the route together, and repair the road between them when it cracked."
+      ],
+      "storyParagraphsZh": [
+        "向导索林拥有全省最出色的北方地图。旅人埃莉娅在一场风暴后无法跨越无遮蔽的桥，他便选出一条经验证的山路，安排每日过桥练习，还精确解释每条等高线。埃莉娅每次会面都点头，却一次也没有完成旅程。索林私下称她抗拒。第四次预约时，她说要离开：她真正想去的是东方参加姐姐的婚礼，而北方地图上的每项任务都像是为别人的人生设计。",
+        "索林收起地图，问出三个被忽略的问题。埃莉娅真正想实现什么改变？哪些活动可能把她带过去？当恐惧、分歧或羞耻进入房间时，怎样的工作关系才能让两人诚实说话？他们把参加婚礼定为有意义的目标，选择同真实行程相连的渐进练习，并讨论每一步为何可能有效。埃莉娅可以质疑任务而不等于拒绝所有帮助，索林也可以贡献专长而不占有目的地。",
+        "达成一致并未消除困难。索林过早安排一座拥挤桥梁，又把埃莉娅的沉默解释成同意。她缺席下一次会面。他没有给缺席贴标签，而是邀请她讨论关系裂痕。埃莉娅说，他的急迫让她觉得自己在受考察，而不是有人同行。索林承认错位，说明原本意图，同她一起改变顺序。修复提高了他们发现未来紧张的能力，此前的礼貌反而把问题藏了起来。",
+        "只有温暖还不够。只给安慰却没有有效方法的向导，不一定能帮助埃莉娅过桥；共同目标也仍可能不合适或不安全。索林使用相关评估、证据、督导与文化谦逊，需求超出能力时及时转介。他监测进展与不良影响，而不假定关系良好就必然获益。合作可以支持进展，早期进展也可能让合作变得容易，两者相关不证明只有一个简单因果方向。埃莉娅的体验尤其重要，因为向导可能确信信任存在，旅人感受到的却是压力。",
+        "信任也不会把这种关系变成友谊。边界、保密及其限制、角色、时间、同意、记录与利益冲突仍需明确。索林不会让埃莉娅照顾他的感受，也不把个人需要塞进她的旅程。她选择另一条路线时，他会探索理由而非惩罚。两人的联结之所以能承载困难工作，是因为其中有尊重与可靠，而不是专业责任已经消失。",
+        "东方旅程揭示的是治疗联盟：通过对治疗目标达成一致、对实现目标所用任务达成一致，以及建立信任与尊重的联结，共同形成的合作性工作关系。它的质量在多种方法中都与结局相关，却不是友谊、成功保证，也不能替代胜任的方法与安全。索林的北方地图本来就很优秀；只有当向导与旅人说出同一个目的地、共同检验路线，并在两人之间的道路开裂时修复它，地图才真正有用。"
+      ],
+      "conceptName": "Therapeutic alliance",
+      "conceptNameZh": "治疗联盟",
+      "explanationParagraphs": [
+        "The therapeutic alliance is the collaborative relationship built through shared goals, agreed therapeutic tasks, and a bond of trust and respect.",
+        "It can support engagement and outcome, including through rupture and repair, but is not friendship or sufficient treatment by itself. Competence, boundaries, evidence, consent, and safety remain essential."
+      ],
+      "explanationParagraphsZh": [
+        "治疗联盟是通过共同目标、商定的治疗任务，以及信任与尊重的联结所建立的合作关系。",
+        "它可通过关系裂痕与修复支持参与和结局，却不是友谊，也不能独自构成充分治疗。胜任能力、边界、证据、同意与安全仍不可缺少。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    },
+    {
+      "id": "0923-motivational-interviewing",
+      "batchId": "batch-014",
+      "categoryCode": "09",
+      "fieldCode": "0923",
+      "fieldTitle": "Social work and counselling",
+      "fieldTitleZh": "社会工作与咨询",
+      "title": "The Well That Won Every Argument",
+      "titleZh": "赢下每场争论的井",
+      "summary": "A council overwhelms villagers with reasons to leave an unsafe well, while one listener helps a resistant keeper hear his own reasons for change.",
+      "summaryZh": "议事会用离开危险水井的理由压倒村民，一名倾听者却帮助抗拒的守井人听见自己改变的理由。",
+      "storyParagraphs": [
+        "The old stone well had begun failing safety tests, but Keeper Tomas still drank from it each morning. The council displayed charts, listed diseases, scolded his stubbornness, and sent three experts to defeat every objection. Tomas became better at defending the well. He praised its taste, recalled his father's work there, and pointed to eighty healthy mornings. After each argument he drew another bucket, partly because abandoning the well now felt like admitting that outsiders understood his life better than he did.",
+        "Counsellor Rhea arrived without a longer lecture. She asked what Tomas valued about the well and listened until tradition, independence, and his father's memory were fully on the table. Then she asked what worried him. Tomas mentioned his granddaughter's visits and a recent stomach illness, quickly adding that either could mean nothing. Rhea reflected both sides without choosing one for him: the well carried home, and uncertainty about its water had begun to threaten someone he wanted to protect.",
+        "When Tomas asked whether the tests mattered, Rhea requested permission to explain them briefly, checked what he understood, and invited his response. She did not hide relevant risk or pretend every choice was equally safe. Instead of supplying all the reasons for change herself, she asked why he might consider the new spring, what confidence he had in trying it for one week, and why that confidence was not lower. Tomas began naming his own arguments: his granddaughter, the repeated results, and the possibility of preserving the old well without drinking from it.",
+        "The council mistook his change talk for surrender and pushed for an immediate permanent oath. Tomas withdrew. Rhea returned to the unresolved ambivalence rather than treating it as disobedience. She asked what made the trial difficult, elicited ideas, and offered options only after consent. Tomas chose to fetch spring water with a neighbour, keep one ceremonial bucket for the garden, and review the plan after seven days. The plan belonged to a specific goal and to his stated reasons, not to Rhea's need to win.",
+        "This approach was neither passive listening nor a trick that secretly forced the council's answer. Rhea had a directional concern, used evidence honestly, and respected Tomas's autonomy. Immediate danger, safeguarding duties, impaired decision-making, or mandated settings could require additional actions and clear limits. Some people needed practical resources or other treatment more than another conversation. The method depended on genuine partnership; questions used as disguised persuasion would recreate the struggle it was meant to soften.",
+        "The well revealed motivational interviewing: a collaborative, goal-oriented communication style that attends to the language of change and strengthens motivation by evoking a person's own reasons within an atmosphere of acceptance and compassion. It works with ambivalence through partnership, careful listening, information by permission, and support for autonomy; it is not confrontation, manipulation, or withholding necessary advice. The council had won every argument and strengthened the well. Rhea stopped wrestling for the bucket, and Tomas finally heard which future his own words were pulling toward."
+      ],
+      "storyParagraphsZh": [
+        "老石井开始无法通过安全检测，守井人托马斯却仍每天清晨饮用井水。议事会展示图表、罗列疾病、责骂他的固执，又派三名专家击败每项反驳。托马斯反而越来越擅长替井辩护：它味道好，父亲曾在这里工作，而且他已经健康喝过八十个早晨。每次争论后，他都会再打一桶水，部分原因是放弃老井如今像在承认，外来者比他更懂自己的人生。",
+        "咨询者瑞娅到来时没有带更长的讲稿。她先问托马斯珍视老井的什么，一直听到传统、独立与父亲的记忆全都摆上桌面，再问什么让他担心。托马斯提到孙女常来，也提到近期一次胃病，随即补充两件事可能都毫无意义。瑞娅不替他选择，只把两边都映照出来：老井承载着家，而水质的不确定已开始威胁一个他想保护的人。",
+        "托马斯主动问检测是否重要时，瑞娅先征得同意，再简短说明，核实他的理解并邀请回应。她没有隐瞒相关风险，也不假装所有选择同样安全。她不亲自提供全部改变理由，而是问他为何可能考虑新泉、试用一周有多少信心，以及为什么信心不是更低。托马斯开始说出自己的理由：孙女、反复结果，以及保留老井却不再饮用的可能。",
+        "议事会把这些改变语言当成投降，立即催他作出永久承诺。托马斯又退了回去。瑞娅回到尚未解决的矛盾心态，没有把它当成不服从。她询问试行困难，唤出他的想法，并在得到同意后才提供选项。托马斯决定同邻居去取泉水，留一桶老井水浇花，七天后复核。计划属于一项具体目标和他亲口说出的理由，而不是瑞娅想赢的需要。",
+        "这种做法既不是消极倾听，也不是暗中强迫他接受议事会答案的技巧。瑞娅有明确的方向性关切，诚实使用证据，同时尊重托马斯自主。即时危险、保护职责、受损决策能力或强制性情境可能需要额外行动与清晰限制；有些人更需要实际资源或其他治疗，而非又一次谈话。方法依赖真正伙伴关系，用提问伪装说服只会重建它本想缓和的对抗。",
+        "老井揭示的是动机式访谈：一种合作且以目标为导向的沟通方式，关注改变语言，在接纳与关怀的氛围中唤起当事人自己的理由，从而增强改变动机。它通过伙伴关系、细致倾听、征得同意后提供信息及支持自主来处理矛盾心态，不是对抗、操纵或扣留必要建议。议事会赢下每场争论，却让老井更牢固；瑞娅不再争夺水桶，托马斯终于听见自己的话正把未来拉向哪里。"
+      ],
+      "conceptName": "Motivational interviewing",
+      "conceptNameZh": "动机式访谈",
+      "explanationParagraphs": [
+        "Motivational interviewing is a collaborative, goal-oriented style that evokes a person's own reasons for change while working respectfully with ambivalence.",
+        "It combines partnership, acceptance, compassion, careful listening, honest information, and autonomy support. It is directional but not manipulative, and does not replace urgent protection, practical help, or other indicated care."
+      ],
+      "explanationParagraphsZh": [
+        "动机式访谈是一种合作且以目标为导向的方式，在尊重矛盾心态的同时，唤起当事人自己的改变理由。",
+        "它结合伙伴关系、接纳、关怀、细致倾听、诚实信息与自主支持，有方向但不操纵，也不能替代紧急保护、实际帮助或其他有指征的照护。"
+      ],
+      "mode": "concept-fable",
+      "status": "approved",
+      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+    }
+  ]
+}
