@@ -191,20 +191,16 @@ function validateArticle(article, planned, errors, warnings) {
   }
   const storyBodyZh = (article.storyParagraphsZh || []).join("\n\n");
   const storyBody = (article.storyParagraphs || []).join("\n\n");
-  if (storyBodyZh.length < 650 || storyBodyZh.length > 1250) {
+  if (storyBodyZh.length < 280 || storyBodyZh.length > 600) {
     warnings.push(`${article.id} Chinese story length is ${storyBodyZh.length}`);
   }
   const enWords = englishWordCount(storyBody);
-  if (enWords < 450 || enWords > 950) warnings.push(`${article.id} English story word count is ${enWords}`);
+  if (enWords < 170 || enWords > 360) warnings.push(`${article.id} English story word count is ${enWords}`);
 
   const zhRevealIndex = storyBodyZh.indexOf(article.conceptNameZh);
   const enRevealIndex = storyBody.toLowerCase().indexOf(article.conceptName.toLowerCase());
-  if (zhRevealIndex >= 0 && zhRevealIndex < storyBodyZh.length * 0.7) {
-    errors.push(`${article.id} reveals the Chinese concept before the final 30%`);
-  }
-  if (enRevealIndex >= 0 && enRevealIndex < storyBody.length * 0.7) {
-    errors.push(`${article.id} reveals the English concept before the final 30%`);
-  }
+  if (zhRevealIndex >= 0) errors.push(`${article.id} reveals the Chinese concept inside the story body`);
+  if (enRevealIndex >= 0) errors.push(`${article.id} reveals the English concept inside the story body`);
   if (article.titleZh.includes(article.conceptNameZh) || article.title.toLowerCase().includes(article.conceptName.toLowerCase())) {
     errors.push(`${article.id} title reveals the concept`);
   }

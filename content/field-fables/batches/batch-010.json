@@ -8,39 +8,40 @@
       "fieldCode": "0713",
       "fieldTitle": "Electricity and energy",
       "fieldTitleZh": "电力与能源",
-      "title": "The Dinner Bell That Slowed the Island",
-      "titleZh": "让整座岛慢下来的晚餐钟",
-      "summary": "An island produces enough electricity over the day yet its shared frequency falls when thousands of dinner stoves switch on before generation responds.",
-      "summaryZh": "海岛全天发电量足够，数千只晚餐炉却在发电响应前同时开启，使共同频率下降。",
+      "title": "The Electricity Left Over at Noon",
+      "titleZh": "白天多出来的电",
+      "summary": "A new wind farm produces more electricity than the city uses in a day, yet at suppertime its lamps still dim one after another.",
+      "summaryZh": "新风场一天发出的电明明超过全城所需，晚饭时分，城里的灯却还是一盏接一盏暗下去。",
       "storyParagraphs": [
-        "The island of Vey generated exactly as much electrical energy each day as its residents consumed. Governor Pela therefore called the system balanced. At the dinner bell, thousands of electric stoves switched on within minutes while generators still followed the afternoon schedule. Rotating machines slowed, system frequency fell, and protective devices disconnected a workshop. Surplus wind from dawn could not answer a deficit occurring now merely because both belonged to the same daily total.",
-        "Operator Sian watched frequency as an immediate signal of mismatch. When demand exceeded generation plus imports, stored rotational energy briefly supplied the gap and frequency declined; when supply exceeded demand, it rose. Fast reserves responded first, slower generators followed, and scheduled dispatch replaced emergency action. Automatic controls responded before operators could speak, while economic dispatch acted over minutes and schedules over hours. Sian separated energy markets from ancillary services because a generator selling enough daily energy might still lack ramp rate, headroom, or response speed when frequency moved after the dinner bell rang. The objective was continuous balance of injections and withdrawals, subject to losses, not equality in one accounting period.",
-        "The first remedy kept abundant reserve at one western plant. A storm damaged the transmission line, leaving eastern demand unable to reach that power even though island totals looked adequate. Sian included network constraints, line flows, voltage support, and location. A megawatt behind congestion was not interchangeable with a megawatt beside the load. Local reserves and secure transmission paths became part of the plan.",
-        "Wind forecasts then missed a sudden lull. Sian combined better forecasting with flexible generation, batteries, interconnection, and customers who agreed to shift pumps or cold storage briefly. Demand response was not involuntary darkness; contracted loads changed timing within service limits and received compensation. Different resources supplied different products: rapid frequency response, ramping, operating reserve, energy, and longer restoration support.",
-        "Keeping too much reserve running wasted fuel, while keeping too little raised interruption risk. Sian planned for credible outages, forecast uncertainty, maintenance, and rare extremes, then learned from near misses. Markets and control rooms had to align incentives with physical delivery, because a contract promising capacity did not move electrons through a constrained line. Cybersecurity and communication failures also entered contingency drills.",
-        "Vey learned grid balancing: active-power injections and withdrawals, including network losses and storage charging, must remain matched across time so system frequency stays within secure limits. Operators manage voltage and line flows through related but distinct network controls. Forecasting, dispatch, reserves, inertia or fast response, transmission, storage, interconnection, and flexible demand work across different timescales. Daily energy sufficiency is not instantaneous power balance. The dinner bell did not consume too much for the whole day. It asked the system for more power before the system had arranged to answer."
+        "After Cape City built twelve wind turbines, the mayor used the monthly report to announce that the old coal unit could close. The wind farm generated more electricity in a day than the city consumed in a day, and the coal savings would repair the docks. Lin Yue, the system dispatcher, warned that the report merely added twenty-four hours together. The mayor pointed to the final line. 'With this much left over, how could we run short?'",
+        "On the first cold evening, the sea wind stopped just before sunset. At the same moment, households turned on lights and cooked dinner while the shipyard cranes were still working. The frequency needle in the control room began to fall. Spinning machines slowed first, then the bakery's electric ovens tripped. The hospital started its own backup generator, but city hall went dark.",
+        "There truly had been surplus electricity at noon, but the warehouse had no way to keep it unchanged until evening. The retired unit could not return to full output at once. Lin called the cold store and asked it to postpone ice making, delayed one pump at the water works, and requested power from the neighbouring city through the interconnector. Only after half an hour did the needle return to the centre.",
+        "The wind farm remained the main supplier, but the city kept fast-starting reserves and added storage and better wind forecasts. Large users submitted schedules in advance, and equipment that could shift its operation received payment for pausing during tight periods. The control room no longer asked only how much electricity a day would produce. It asked where the next minute and the next hour might run short.",
+        "On another windless evening, a thousand kitchens lit at once. Lin watched the frequency needle tremble and settle between the red lines before folding the noon report marked 'electricity surplus' into a drawer."
       ],
       "storyParagraphsZh": [
-        "维伊岛每天产生的电能总量恰好等于居民消耗量，总督佩拉便宣布系统已经平衡。晚餐钟响后，数千只电炉几分钟内同时开启，发电机仍按下午计划运行。旋转机组减速，系统频率下降，保护装置切断一间作坊。清晨多余风电无法只因同属一日总量，就回答此刻的缺口。",
-        "操作员西安把频率当成即时失配信号。需求超过发电与进口时，旋转储能会短暂填补缺口，频率随之下降；供给过多时，频率上升。快速备用先响应，较慢机组随后跟进，计划调度再替代紧急动作。自动控制在人开口前按秒响应，经济调度按分钟行动，计划则跨小时。西安把电能市场与辅助服务分开，因为卖出足够日总电量的机组，在晚餐钟后频率变化时仍可能缺少爬坡、余量或响应速度。目标是在考虑损耗后，让注入与取出持续匹配，而非只在一个核算周期相等。",
-        "第一项方案把大量备用放在西部电厂。一场风暴损坏输电线，东部需求无法取得那批电力，尽管全岛总量看似足够。西安把网络约束、线路潮流、电压支持与位置纳入。拥塞线后的一个兆瓦，不能与负荷旁的一个兆瓦互换。本地备用与安全输电路径成为计划一部分。",
-        "风力预测随后漏掉一次突然静风。西安结合更好预测、灵活发电、电池、互联，以及同意短时改变水泵或冷库时序的用户。需求响应不是强迫停电，而是签约负荷在服务界限内调整时间并获得补偿。不同资源提供不同产品：快速频率响应、爬坡、运行备用、电能与较长恢复支持。",
-        "保留太多运行备用会浪费燃料，太少又提高中断风险。西安针对可信故障、预测不确定、维护与罕见极端制定计划，再从险情学习。市场与控制室还要让激励对应物理交付，因为承诺容量的合同不能把电子送过受限线路。网络安全与通信故障也进入应急演练。",
-        "维伊学会的是电网平衡：有功功率的注入与取出，包括网络损耗与储能充电，必须跨时间保持匹配，使系统频率留在安全范围。操作员通过相关但不同的网络控制管理电压与线路潮流。预测、调度、备用、惯性或快速响应、输电、储能、互联与灵活需求在不同时标共同工作。全天电能充足不等于瞬时功率平衡。晚餐钟不是让全日用电过多，而是在系统安排好回答前先索取更多功率。"
+        "海岬城建起十二座风机后，市长拿着月报宣布旧燃煤机组可以停掉。风场一天发出的电比全城一天用的还多，省下的煤钱正好修码头。电站调度员林悦提醒，报表只把二十四小时加在一起，市长却指着最后一行说：‘多出来这么多，怎么会不够？’",
+        "第一个寒冷傍晚，海风在日落前忽然停了。与此同时，家家点灯做饭，船坞的起重机还没收工。控制室里的频率指针向下滑，纺纱机先变慢，面包房的电炉随后跳闸。医院启用了自己的备用机，市政厅却陷入黑暗。",
+        "仓库里确实有中午多发的电，却没有办法把它原样留到晚上；停掉的旧机组也来不及立刻升满功率。林悦只得电话通知冷库暂缓制冰，请水厂推迟一台泵，又让邻城通过联络线送来一部分电。半小时后，指针才回到中央。",
+        "此后，风场仍是主力，但城市保留能快速启动的备用机组，并增加储能和更准确的风况预测。耗电大户提前申报计划，可错开时段的设备在紧张时得到补偿而暂缓运行。调度室不再只问一天发了多少，还要知道下一分钟、下一小时在哪里缺多少。",
+        "又一个无风傍晚，千家厨房同时亮灯。林悦看着频率指针轻轻晃了一下，又稳在红线之间，才把午间那张写着‘电力有余’的报表折进抽屉。"
       ],
       "conceptName": "Grid balancing",
       "conceptNameZh": "电网平衡",
       "explanationParagraphs": [
-        "Grid balancing continuously matches active-power injections and withdrawals, including losses and storage charging, so system frequency remains within secure limits; related network controls keep voltage and line flows within constraints.",
-        "Forecasting, dispatch, reserves, fast response, transmission, storage, interconnection, and flexible demand serve different locations and timescales. Enough energy over a day does not guarantee enough power at each moment."
+        "Grid balancing requires generation, imports, and storage discharge to match demand, exports, storage charging, and losses at every moment so frequency remains safe; voltage and network flows must also stay within limits. Enough total energy over a day does not guarantee enough instantaneous power. Forecasting, scheduling, reserves, interconnection, storage, and flexible demand address imbalances across different locations and timescales."
       ],
       "explanationParagraphsZh": [
-        "电网平衡持续匹配有功功率注入与取出，包括损耗和储能充电，使系统频率保持在安全范围；相关网络控制让电压与线路潮流留在约束内。",
-        "预测、调度、备用、快速响应、输电、储能、互联与灵活需求服务于不同地点和时标。全天电能足够，不保证每一刻功率足够。"
+        "电网平衡要求发电、进口与储能放电在每一时刻匹配用电、出口、储能充电和网络损耗，使频率维持安全；电压和线路潮流也必须留在约束内。日总电量充足不代表瞬时功率充足。预测、调度、备用、互联、储能和灵活需求分别应对不同地点与时间尺度的偏差。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0713-energy-efficiency",
@@ -49,39 +50,40 @@
       "fieldCode": "0713",
       "fieldTitle": "Electricity and energy",
       "fieldTitleZh": "电力与能源",
-      "title": "Two Boilers and One Warm House",
-      "titleZh": "两台锅炉与一间暖屋",
-      "summary": "Two boilers burn equal fuel, but only one delivers most of the input as the defined heating service after flue, jacket, pipe, and cycling losses.",
-      "summaryZh": "两台锅炉燃烧相同燃料，只有一台在烟气、外壳、管路与启停损失后，把大部分输入送成定义好的供暖服务。",
+      "title": "The Bathhouse That Heated the Street",
+      "titleZh": "替街道取暖的浴室",
+      "summary": "A bathhouse burns more coal each year, yet its warmest place is not the bathing pool but the snowless street outside its boiler room.",
+      "summaryZh": "澡堂烧掉的煤一年比一年多，最暖的地方却不是浴池，而是锅炉房外那条积不住雪的街。",
       "storyParagraphs": [
-        "Two inns burned the same mass of coal through winter. Innkeeper Arlo boasted that conservation guaranteed equal heating: energy could not disappear. Yet his guests wore coats while the neighbouring rooms stayed warm. Engineer Nera measured fuel energy entering each boiler and useful heat delivered to occupied rooms. Arlo's chimney ran hot, the boiler jacket warmed an empty cellar, uninsulated pipes crossed the yard, and frequent short cycling lost heat before rooms benefited.",
-        "Nera defined the service before calculating a ratio. Useful output meant heat delivered within the occupied comfort range during required hours, not all heat produced anywhere. She divided that output by fuel energy input over the same boundary and period. She reported uncertainty in coal heating value, meter accuracy, room temperature, and occupancy, because a ratio built from inconsistent measurements could reward accounting rather than engineering. Seasonal comparison required normalising weather and service before attributing improvement to the boiler alone with confidence. The neighbouring system transferred a larger fraction to the service. Nothing had violated conservation: Arlo's remainder entered flue gas, walls, soil, pumps, and other unwanted destinations.",
-        "Arlo fitted a condensing exchanger but kept return water too hot for condensation, so catalogue performance never appeared. Nera adjusted controls, lowered return temperature, insulated pipes, sized equipment for typical loads, and maintained burners. Part-load behaviour and climate mattered; one peak rating did not represent a season. She compared like services and included auxiliary electricity rather than shifting losses outside the chosen boundary.",
-        "A second proposal replaced coal with an electric heat pump. Calling it more than 100 percent efficient seemed impossible if output heat exceeded electrical input. Nera distinguished a heat pump's coefficient of performance: it moved environmental heat in addition to work supplied. The measure and boundary differed from a boiler's fuel-to-heat ratio. Primary energy, grid mix, source temperature, and system losses mattered for broader comparison.",
-        "After improvements, Arlo lowered heating cost and began warming unused rooms more often. Part of the expected fuel saving disappeared through changed behaviour and expanded service. Nera measured absolute consumption as well as the ratio and reported rebound without claiming it erased every gain. Better performance per unit service did not guarantee lower total use when service quantity changed.",
-        "Nera was measuring energy efficiency: the ratio or relationship between a defined useful service or output and the energy input required to provide it, under stated boundaries and conditions. Loss reduction, equipment sizing, controls, maintenance, operating point, and system design affect it. Different technologies may require different performance metrics, and efficiency is not the same as conservation or total consumption. Both boilers accounted for every unit of energy. Only one directed most of it toward the warm rooms the inn actually wanted."
+        "The North Street bathhouse was known for hot water. As business improved, owner Uncle Han added two cartloads of coal each day, yet the pools served only thirty per cent more people than before. The fireman said the furnace was already burning fiercely, so Han decided that only a larger furnace would be enough.",
+        "After a heavy snowfall, an apprentice noticed that snow covered the whole street except for the wet black stones outside the bathhouse. Steam escaped from old pipe joints, the hot-water tank had no lid, and thick soot lined the boiler flue. Much of the heat entered the walls, street, and chimney before any customer touched the water.",
+        "Han disliked closing for repairs and allowed only one day. Workers cleaned the flue, sealed the pipe joints, covered the tank, and used outgoing hot water to warm the incoming cold supply. The next day the pools reached the same temperature with about two-thirds of the previous coal. Han did not buy the larger furnace.",
+        "With the coal savings, he stayed open into the night and added a small pool. By the end of the month, the total number of coal carts had almost returned to its former level, but the bathhouse served twice as many people. Only by placing the two months side by side could the bookkeeper separate lower coal use per customer from the bathhouse's total consumption.",
+        "When snow fell again the next year, a white layer finally covered the stones outside the bathhouse. Han swept a narrow path, and no hidden warmth opened it further from below. Inside, the waiting benches were still full."
       ],
       "storyParagraphsZh": [
-        "两家旅店整个冬天燃烧相同质量的煤。老板阿洛夸口，守恒保证供暖相同：能量不会消失。他的客人却穿着外套，邻店房间仍温暖。工程师奈拉测量进入锅炉的燃料能量与送达有人房间的有用热。阿洛烟囱很热，锅炉外壳烘暖空地窖，未保温管道穿过院子，频繁短时启停还在房间受益前损失热量。",
-        "奈拉先定义服务，再计算比率。有用输出指在所需时段把有人区域维持在舒适范围的热，不是任何地方产生的全部热。她用该输出除以同一边界与时期的燃料能量输入。她报告煤热值、仪表精度、室温与入住的不确定性，因为用不一致测量构成的比率会奖励会计而非工程。季节比较还要先校正天气与服务，才可有把握地把改善归给锅炉。邻店把更大比例送成目标服务。没有东西违反守恒：阿洛的剩余部分进入烟气、墙壁、土壤、水泵及其他不想要的去向。",
-        "阿洛安装冷凝换热器，却让回水温度高到无法冷凝，目录性能从未出现。奈拉调整控制、降低回水温度、给管道保温、按典型负荷选设备并维护燃烧器。部分负荷行为与气候都重要，一项峰值额定不能代表整季。她比较相同服务，并计入辅助用电，不把损失移到所选边界之外。",
-        "第二项提议用电热泵替代煤。若输出热大于电输入，把它称为超过百分百似乎违背常理。奈拉区分热泵性能系数：它除输入功外，还搬运环境热。这项度量与边界不同于锅炉燃料到热量的比率。作更广比较时，一次能源、电网结构、热源温度与系统损失都重要。",
-        "改进后，阿洛降低供暖成本，却更常给无人房间加热。预期节煤的一部分因行为改变与服务扩张而消失。奈拉同时测量绝对消耗与比率，报告反弹，却不声称反弹抹去全部收益。单位服务表现改善，不保证服务数量变化后总使用一定下降。",
-        "奈拉测量的是能源效率：在说明边界与条件后，定义有用服务或输出同提供它所需能量输入之间的比率或关系。减少损失、设备选型、控制、维护、运行点与系统设计都会影响效率。不同技术可能需要不同性能指标，效率也不等于守恒或总消耗。两台锅炉每单位能量都有去处，只有一台把大部分送进旅店真正想暖的房间。"
+        "北街澡堂以水热闻名。生意变好后，老板韩叔每天多添两车煤，浴池却只比从前多接待三成人。锅炉工说炉火已经烧到极旺，韩叔便认定再换一只更大的炉子才够。",
+        "一场大雪后，学徒发现整条街都积着雪，唯独澡堂外的石板露出湿黑颜色。蒸汽从旧管接缝往外冒，热水槽没有盖，锅炉烟道里结着厚灰。客人还没碰到热水，许多热已经进了墙、街道和烟囱。",
+        "韩叔舍不得停业检修，只同意闭门一天。工人清了烟道，补好管缝，给水槽加盖，还让排出的热水先预热冷水。第二天，浴池升到同样温度，只用了原来约三分之二的煤。韩叔没有买那只大炉子。",
+        "省下煤钱后，他把营业时间延长到夜里，又开了一个小池。月底煤场送来的总车数几乎回到从前，客人却多了一倍。账房把两个月放在一起看，才分清每位客人所用的煤减少了，而澡堂全部用煤未必同样减少。",
+        "第二年再下雪，澡堂门外终于也铺上了一层白。韩叔扫出一条窄路，雪没有从石缝下面继续融开；门里却仍坐满了等候洗澡的人。"
       ],
       "conceptName": "Energy efficiency",
       "conceptNameZh": "能源效率",
       "explanationParagraphs": [
-        "Energy efficiency relates a defined useful service or output to the energy input required under stated boundaries and operating conditions. Unwanted heat, friction, auxiliary demand, transport, and cycling can reduce it without violating conservation.",
-        "Metrics differ across technologies, such as boiler efficiency and heat-pump coefficient of performance. Higher efficiency can lower energy per service while total consumption still depends on service demand and rebound."
+        "Energy efficiency compares useful service or output with energy input under a defined boundary and set of conditions. Reducing unwanted heat loss, friction, distribution loss, and auxiliary demand can provide the same service with less energy; appropriate metrics differ by technology. Higher efficiency does not guarantee lower total consumption because cheaper service or expansion can produce rebound. In the story, coal per customer falls while longer hours bring total coal use back up."
       ],
       "explanationParagraphsZh": [
-        "能源效率把定义好的有用服务或输出，同规定边界和运行条件下所需能量输入联系起来。不需要的热、摩擦、辅助需求、输送与启停会降低效率，却不违反守恒。",
-        "不同技术使用不同指标，如锅炉效率与热泵性能系数。更高效率可降低单位服务用能，总消耗仍取决于服务需求与反弹。"
+        "能源效率比较明确边界和条件下的有用服务或输出与能量输入。减少无用散热、摩擦、输送损失和辅助耗能，可用更少能量提供同样服务；不同设备需采用适合的指标。效率提高不保证总能耗下降，因为价格降低或服务扩大会带来反弹。故事中单位客人的煤耗下降，但营业扩张使总煤耗重新上升。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0713-energy-storage",
@@ -90,39 +92,40 @@
       "fieldCode": "0713",
       "fieldTitle": "Electricity and energy",
       "fieldTitleZh": "电力与能源",
-      "title": "The Wind That Arrived Before Dinner",
-      "titleZh": "在晚餐前抵达的风",
-      "summary": "An island has abundant wind when demand is low and still air at dinner, revealing that moving energy through time has separate power, duration, loss, and degradation constraints.",
-      "summaryZh": "海岛在低需求时风力充足、晚餐时却无风，由此发现把能量搬过时间受到功率、持续时长、损耗与衰减的不同约束。",
+      "title": "The Full Reservoir That Could Not Light the Town",
+      "titleZh": "装满水却点不亮灯的水库",
+      "summary": "An island reservoir stores a whole night of wind, yet one narrow pipe cannot carry the town through the instant its festival begins.",
+      "summaryZh": "岛上的高水库存够了一夜的风，却因一根太窄的水管，没能撑过庆典开始的那一刻。",
       "storyParagraphs": [
-        "At dawn, Vey's wind towers produced more electricity than the sleeping island could use. Operators curtailed them. At dinner, the wind stopped just as ovens and lights reached their peak, and fuel generators started. Governor Pela pointed to the wasted morning energy and ordered one enormous battery. She spoke as if storing electricity were a single bucket whose size alone solved every mismatch.",
-        "Engineer Sian separated power from energy. The battery's power rating limited how quickly it could charge or discharge; its energy capacity limited how long it could sustain that output. A device able to supply the dinner peak for fifteen minutes could not cover a three-day calm, even if its power was high. A large reservoir with a narrow outlet had the opposite limitation. Both axes had to match the service.",
-        "The first battery charged at dawn and discharged at dinner, but less energy returned than entered. Conversion, resistance, temperature control, and standby consumed part of it. Repeated cycling reduced usable capacity, and holding a full charge accelerated some degradation. Operators reserved part of the battery for contingencies, so its marketable capacity was smaller than its physical maximum. Charging too fast raised heat and curtailed life, while a cold battery could not deliver its nameplate power. Sian compared marginal value by hour and state, preventing one service commitment from promising the same stored unit simultaneously to several competing markets. Sian modelled round-trip efficiency, state of charge, cycle life, calendar ageing, safety limits, and replacement rather than treating the nameplate as permanent usable inventory.",
-        "A week of weak wind exposed the limits of short-duration storage. Sian added interconnection, flexible demand, dispatchable low-carbon supply, better forecasts, and several storage types. Fast batteries handled seconds and evening ramps; a larger reservoir served longer shifts; fuel reserves covered rare extended shortages while alternatives developed. Diversity reduced dependence on one weather pattern and one failure mode.",
-        "Storage could also worsen emissions if charging increased high-emission generation and later discharge displaced cleaner generation; its carbon effect depended on marginal supply at both times and round-trip losses. Location mattered because charging or discharge could relieve or worsen transmission congestion. Prices alone did not always represent carbon, resilience, or network value. Sian defined operating objectives and measured consequences, including materials, land, safety, and end-of-life recovery.",
-        "The island faced energy storage and intermittency: variable resources do not always produce when demand occurs, so systems shift energy through time using devices constrained by power, capacity, duration, efficiency, response speed, degradation, safety, and location. Storage complements rather than replaces transmission, flexible demand, diverse generation, forecasting, and firm capacity. It does not create energy and no single duration solves every timescale. The dawn wind had not failed the island. It had arrived before the island was ready to use it."
+        "Wind Island used strong night winds to pump seawater into a mountaintop reservoir, releasing it through turbines in the evening. Before the Festival of Lamps, the island chief personally saw the water at its highest mark and promised that coloured lights, ovens, and the square's music stage could all start together. At normal demand, the stored water was enough to last until dawn.",
+        "When the festival bell rang, thousands of lamps came on at once. The reservoir remained full, but voltage across the town fell quickly. The pipe leading to the turbines could carry only a fixed flow; extra water could not squeeze through the same narrow opening. The music stage fell silent first, then the ovens went out, while the reservoir level barely moved.",
+        "The engineer started a reserve flywheel to cover the sharpest moment and asked the dock cold store to stop making ice. Once the lights were started district by district, the system recovered. She placed two cups before the chief: one was large with a pinhole in its base; the other was small and could empty at once. 'One decides how long it can serve,' she said. 'The other decides how much it can give now.'",
+        "The following year, the island added fast equipment for brief peaks, widened part of the water outlet, and kept enough stored water for long windless periods. Festival loads were staggered when forecasts were poor, and a subsea cable could call on the neighbouring island. Each measure covered the timescale it handled best.",
+        "When the festival returned, the chief did not look only at the water level. He first put a hand on the gently vibrating valve beside the outlet pipe, then gave the order to light the first row of lamps."
       ],
       "storyParagraphsZh": [
-        "清晨，维伊的风塔发电超过沉睡海岛的需求，操作员只能限发。晚餐时风停，烤炉与灯光恰逢高峰，燃料机组启动。总督佩拉指着浪费的晨电，下令建一只巨大电池。她把储电说成一只只看大小的桶，仿佛容量单独就能解决每种错配。",
-        "工程师西安把功率与能量分开。电池功率额定限制充放有多快，能量容量限制该输出能持续多久。即使功率很高，只够晚餐高峰十五分钟的设备也覆盖不了三日静风；巨大水库若出口狭窄，则有相反限制。两条轴都要匹配服务。",
-        "第一只电池清晨充电、晚餐放电，返回能量却少于输入。转换、电阻、温控与待机消耗一部分。反复循环降低可用容量，长期满电也会加速某些衰减。操作员为应急保留一部分，使可交易容量小于物理上限；充得太快会发热并缩短寿命，寒冷电池也可能给不出铭牌功率。西安按小时与状态比较边际价值，防止一项服务承诺把同一份储能同时许给多个竞争市场。她建模往返效率、荷电状态、循环寿命、日历老化、安全界限与更换，不把铭牌值当成永久可用库存。",
-        "一周弱风暴露短时储能限制。西安加入互联、灵活需求、可调度低碳供给、更好预测与多类储能。快速电池处理秒级和晚间爬坡，较大水库服务更长转移，燃料储备在替代方案发展期间覆盖罕见长时短缺。多样性降低对一种天气格局与故障模式的依赖。",
-        "若充电增加高排放发电，后来放电又挤掉更清洁发电，储能也可能增加排放；其碳影响取决于两个时点的边际供给与往返损耗。位置同样重要，充放电既可能缓解，也可能加剧输电拥塞。价格并不总能代表碳、韧性或网络价值。西安定义运行目标并测量后果，包括材料、土地、安全与终端回收。",
-        "海岛面对的是储能与间歇性：可变资源不一定在需求出现时生产，系统便用受功率、容量、时长、效率、响应速度、衰减、安全与位置约束的装置，把能量穿过时间转移。储能补充而非替代输电、灵活需求、多样发电、预测与可靠容量。它不创造能量，也没有一种时长解决所有尺度。清晨的风没有辜负海岛，只是它抵达时，海岛还没准备好使用。"
+        "风岛用夜里的大风把海水抽进山顶水库，傍晚再放水发电。丰灯节前，岛长亲自看见水位到了最高刻线，便答应全岛可以同时点亮彩灯、烤炉和广场乐台。那一库水按平日用量，足够支撑到天亮。",
+        "庆典钟一响，数千盏灯同时亮起。山顶水库仍然满着，城里的电压却迅速下降。通往水轮机的管道只能送出固定水量，再多的水也挤不过同一只窄口。乐台先没声，烤炉随后熄火，水库水面几乎没有下降。",
+        "工程师打开备用飞轮，让它撑过最急的片刻，又请码头冷库暂停制冰。人群分区点灯后，系统才恢复。她把两只杯子放在岛长面前：一只很大，却只有针眼般的孔；另一只很小，水能一下倒完。‘一个决定能用多久，另一个决定此刻拿得出多少。’",
+        "下一年，岛上为短时高峰增加快速装置，拓宽一部分出水能力，并保留足够水量应付长时间无风。风况不好时，庆典用电会错开，海底电缆也能向邻岛求援。每种办法只承担它擅长的那一段时间。",
+        "丰灯节再来时，岛长没有只去看水位。他先摸了摸出水管旁微微震动的阀门，随后才下令点亮第一排灯。"
       ],
       "conceptName": "Energy storage and intermittency",
       "conceptNameZh": "储能与间歇性",
       "explanationParagraphs": [
-        "Energy storage and intermittency concern the mismatch between variable supply and demand. Storage shifts energy through time but is constrained separately by power, capacity, duration, efficiency, response, degradation, safety, and location.",
-        "Storage complements transmission, interconnection, flexible demand, forecasting, diverse generation, and firm capacity. Its emissions and system value depend on when, where, and from what source it charges and discharges."
+        "Energy storage moves energy from one time to another to address mismatches between variable supply and demand. Energy capacity determines how much can be stored and for how long it can serve, while power determines the rate of charging or discharge. Efficiency, response, degradation, safety, and location also constrain value. Storage works alongside forecasting, transmission, flexible demand, and dependable supply; a large stored quantity alone does not guarantee that a peak can be met."
       ],
       "explanationParagraphsZh": [
-        "储能与间歇性处理可变供给同需求之间的时间错配。储能把能量穿过时间转移，却分别受功率、容量、时长、效率、响应、衰减、安全与位置约束。",
-        "储能补充输电、互联、灵活需求、预测、多样发电与可靠容量。其排放和系统价值取决于何时、何地、从何种来源充放电。"
+        "储能把能量从一个时刻转移到另一个时刻，用来缓解可变供给与需求的错位。容量决定可储存的能量和可支撑时长，功率决定某一时刻可充放多快；效率、响应、衰减、安全与位置也会限制价值。储能通常与预测、输电、灵活需求和可靠电源配合，不能仅凭‘存得很多’判断能否应对峰值。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0714-feedback-control",
@@ -131,39 +134,40 @@
       "fieldCode": "0714",
       "fieldTitle": "Electronics and automation",
       "fieldTitleZh": "电子与自动化",
-      "title": "The Oven That Remembered Yesterday's Fire",
-      "titleZh": "只记得昨天火势的烤炉",
-      "summary": "A baker fixes the fire door at yesterday's perfect position until changing dough, wind, and fuel reveal the need to measure output and correct error continuously.",
-      "summaryZh": "面包师把火门固定在昨日完美位置，直到面团、风与燃料变化迫使系统持续测量输出并修正误差。",
+      "title": "The Sluice That Was Always One Step Late",
+      "titleZh": "总是晚一步的水门",
+      "summary": "An orchard relies on distant messengers to report its water level, and a keeper who always moves the gate fully makes drought and flooding alternate.",
+      "summaryZh": "果园靠远方信使报告水位，管水人每次都把闸门开到尽头，于是干旱和水涝轮流到来。",
       "storyParagraphs": [
-        "Baker Rena found a fire-door position that held her oven at the perfect temperature on a calm day. She marked the hinge and used the same setting thereafter. A cold wind increased chimney draft, damp wood reduced heat, and a larger dough load absorbed more energy. The fixed command remained identical while oven temperature wandered. Rena had controlled the input position without observing whether the desired output survived disturbance.",
-        "Mechanist Ivo installed a temperature sensor, a desired value, a comparator, and a motorised fire door. The difference between measured and desired temperature became an error signal. If the oven cooled, the door opened; as temperature returned, the response diminished. The output now influenced the next input, allowing the loop to correct unmeasured disturbances and moderate differences between the model and the real oven.",
-        "The first loop reacted too strongly. Heat took time to travel from firebox to sensor, so the door kept opening while unseen heat was already on its way. Temperature overshot, the door slammed shut, and the oven oscillated. Ivo reduced gain, accounted for delay, placed the sensor where it represented the bread, and balanced speed, overshoot, disturbance rejection, and stability. More aggressive correction was not always better correction.",
-        "A constant sensor bias made the display read five degrees low. The loop then held the real oven five degrees too hot with impressive precision. Feedback could reject disturbances but could not discover every measurement error. The sensor and controller initially shared a noisy power line, so motor switching appeared as temperature spikes. Ivo separated grounding, shielded wiring, checked sampling and aliasing, and required the control loop to distinguish a plausible process change from an electrical artefact before moving the fire door. Ivo calibrated sensors, added plausibility checks, and used a second independent indication for safety. He also measured incoming dough load, allowing a feedforward action before temperature changed while feedback removed remaining error.",
-        "The motor eventually reached its fully open limit during a fuel shortage. Accumulated commands could not create heat the actuator lacked. Ivo limited integral build-up, raised a capacity alarm, and designed a safe manual mode. Filtering that suppressed noise also added delay, so sampling rate, filter design, actuator wear, and mode transitions entered the stability check. A mathematically stable loop could still be unsafe if its target, sensor, or permitted action was wrong.",
-        "The oven embodied feedback control: measure a system output, compare it with a reference, and adjust an input according to the error so behaviour remains near the target despite disturbances and uncertainty. Loop gain, dynamics, delay, sensing, actuation, saturation, noise, and stability shape performance. Feedforward can anticipate measured disturbances but does not replace correction of residual error. Rena's old hinge mark commanded yesterday's fire. The loop asked what today's oven was actually doing."
+        "The river dam stood half a day's journey from the South Slope orchards. When the orchard ran dry, a rider hurried to tell the keeper at the dam. On hearing 'too low', the keeper opened the gate fully. Water needed another half day to reach the trees, and by the time the next rider returned to say 'enough', the channel was already flooding their roots.",
+        "The keeper then shut the gate completely. That decision also took a long time to show its effect downstream, and the orchard changed from flooded to cracked and dry. Within a month, peach roots first rotted and then the leaves curled. The keeper was diligently correcting the latest report each day, yet each correction pushed the level farther in the other direction.",
+        "A canal builder installed a float beside the orchard. When the water fell, it gradually opened a small local gate; as the level approached its mark, it closed the gate again. The dam's large gate no longer moved fully on a single message. When heavy rain was forecast, the orchard also warned the upstream keeper to release less water in advance.",
+        "At first the keeper disliked how gently the small gate moved and several times wanted to pull it farther himself. The builder asked him to wait through one cycle. The float moved lightly above and below its mark, then settled. No rider galloped away, and no water crossed the tree roots.",
+        "On the day the peaches ripened, the keeper shortened the long bar once used to lock the main gate and turned it into a water-level ruler beside the float."
       ],
       "storyParagraphsZh": [
-        "面包师雷娜在无风日找到一处能维持理想温度的火门位置，便在铰链做标记，今后始终照用。冷风增强烟囱抽力，湿木降低热量，更大面团又吸收更多能量。固定命令没有变化，炉温却四处漂移。雷娜控制了输入位置，却没有观察目标输出能否经受扰动。",
-        "机械师伊沃安装温度传感器、目标值、比较器与电动火门。实测温度同目标的差成为误差信号。烤炉变冷，火门打开；温度回归后，响应减弱。输出开始影响下一次输入，使回路能够修正未测扰动，也缓和模型与真实烤炉之间的差异。",
-        "第一版回路反应太强。热量从火箱传到传感器需要时间，尚未看见的热已在路上，火门仍继续打开。温度越过目标，火门猛然关闭，烤炉来回振荡。伊沃降低增益、计入延迟，把传感器放到能代表面包的位置，并平衡速度、超调、扰动抑制与稳定。更激进的修正不总是更好的修正。",
-        "一项固定传感器偏差让显示始终低五度。回路于是极其精确地把真实炉温维持在高出五度的位置。反馈能拒绝扰动，却不能发现所有测量错误。传感器与控制器起初共用一条嘈杂电源线，电机切换被看成温度尖峰。伊沃分开接地、屏蔽线路，检查采样与混叠，并要求回路在移动火门前区分可信过程变化与电气假象。他校准传感器，增加合理性检查，并为安全加入第二项独立指示。他还测量进炉面团量，在温度变化前做前馈动作，再由反馈清除剩余误差。",
-        "燃料短缺时，电机最终达到全开极限。累积命令无法创造执行器没有的热量。伊沃限制积分累积，发出能力不足警报，并设计安全人工模式。抑制噪声的滤波也会增加延迟，因此采样频率、滤波设计、执行器磨损与模式转换都进入稳定性检查。数学上稳定的回路，若目标、传感器或允许动作错误，仍可能不安全。",
-        "烤炉体现的是反馈控制：测量系统输出，与参考值比较，再按误差调整输入，使行为在扰动与不确定性下保持接近目标。回路增益、动态、延迟、感知、执行、饱和、噪声与稳定性共同塑造表现。前馈可预先处理已测扰动，却不能替代对剩余误差的修正。雷娜的旧标记命令的是昨天火势，回路追问的是今天烤炉实际在做什么。"
+        "河坝离南坡果园有半日路程。果园缺水时，骑手便赶去告诉坝上的管水人；管水人一听‘太低’，就把闸门全开。水走到果园还要半日，等下一名骑手带回‘够了’，渠水已经漫过树根。",
+        "管水人于是把闸门彻底关死。可关闭的消息同样要过很久才在下游显出效果，果园又从积水变成干裂。一个月里，桃树先烂根，后卷叶。管水人每天都在认真纠正上一次的报告，却把水位推得一次比一次更远。",
+        "修渠匠在果园边装了一只浮筒，水低时它缓缓拉开本地小闸，接近刻线时又逐渐关小。河坝上的大闸不再因一句口信开到尽头；暴雨将至，果园还会提前通知上游少放一些水。",
+        "起初管水人嫌小闸动作太轻，几次想替它多拉一把。修渠匠让他等了一个来回。浮筒在刻线上下轻轻摆动，很快停稳；既没有骑手狂奔，也没有水冲过树根。",
+        "桃子成熟那天，管水人把那根曾用来锁死大闸的长杠削短，做成了浮筒旁的一根水位尺。"
       ],
       "conceptName": "Feedback control",
       "conceptNameZh": "反馈控制",
       "explanationParagraphs": [
-        "Feedback control measures an output, compares it with a reference, and adjusts an input from the resulting error to regulate behaviour despite disturbances and model uncertainty.",
-        "Performance depends on system dynamics, gain, delay, sensing, actuation, saturation, noise, stability, targets, and safety constraints. Feedforward and diagnostics complement rather than replace feedback."
+        "Feedback control measures a system's output, compares it with a target, and adjusts the input according to the error. Excessive gain and substantial sensing or actuation delay can make correction produce overshoot and oscillation; suitable adjustment size and timely measurement improve stability. Feedforward can act in advance on measurable disturbances, while model error, noise, actuator limits, and safety constraints still matter."
       ],
       "explanationParagraphsZh": [
-        "反馈控制测量输出、与参考值比较，再依据误差调整输入，使系统在扰动与模型不确定下维持目标行为。",
-        "表现取决于系统动态、增益、延迟、感知、执行、饱和、噪声、稳定、目标与安全约束。前馈与诊断补充反馈，而非取代它。"
+        "反馈控制测量系统输出，与目标比较，再根据误差调整输入。增益过大、测量或执行延迟明显时，纠正可能造成过冲与振荡；较合适的调节幅度和更及时的感知有助于稳定。前馈可依据可测扰动提前动作，但模型误差、噪声、执行器限制与安全边界仍需共同考虑。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0714-signal-to-noise-ratio",
@@ -172,39 +176,40 @@
       "fieldCode": "0714",
       "fieldTitle": "Electronics and automation",
       "fieldTitleZh": "电子与自动化",
-      "title": "The Cry Beneath the Storm",
-      "titleZh": "暴风雨下面的求救声",
-      "summary": "A harbour receiver amplifies a faint distress call and the storm together, learning that detectability depends on signal relative to noise within a chosen bandwidth.",
-      "summaryZh": "港口接收器把微弱求救与风暴一起放大，随后发现可检测性取决于指定带宽内信号相对噪声的强弱。",
+      "title": "The Horn That Amplified the Wind",
+      "titleZh": "把风也放大的号角",
+      "summary": "A harbour builds a larger listening horn to hear distress bells in fog, only to turn every gust of wind into an alarm.",
+      "summaryZh": "港口为听清雾中的求救铃造了一只更大的听筒，结果每一阵风都变成了警报。",
       "storyParagraphs": [
-        "During a storm, receiver Mara heard a faint repeated tone beneath rain, static, and engine sparks. She turned the amplifier to maximum. The tone grew louder, but so did every unwanted fluctuation; the message remained buried and the speaker clipped. More output volume had multiplied signal and noise together without improving their separation.",
-        "Engineer Taro measured average signal power in the relevant band and compared it with noise power there. A ratio greater than one did not automatically guarantee intelligible words, and a ratio below one did not make detection impossible if the signal had known structure and enough observation time. The receiver's own electronics added noise, so antenna signal quality could worsen before digitisation. Taro compared noise figure and dynamic range, because a low-noise front end that saturated on a nearby transmitter still lost the distress call. Expressing the ratio in decibels made multiplication into addition, but the reference bandwidth and measurement method still had to be stated.",
-        "The distress tone repeated a known pattern. Taro used a matched detector that integrated evidence over its duration, allowing random noise partly to cancel while coherent signal accumulated. A narrower filter removed out-of-band storm energy, but too narrow a band distorted the changing message. Averaging improved stationary repeated measurements yet could smear a one-time event. Every improvement assumed something about the signal and noise.",
-        "Engine sparks were not random background; they produced structured interference at the same frequencies. Taro moved the antenna, shielded cables, removed a faulty motor, and used error-detecting codes. Preventing noise at its source achieved more than filtering after corruption. When interference mimicked the known pattern, the detector produced false alarms, so threshold choice traded missed calls against false rescues.",
-        "A second station reported a high ratio by measuring only quiet minutes and excluding bursts. Mara required representative windows, calibrated instruments, and separate reporting of thermal noise, interference, and quantisation effects. Longer integration raised detectability only while the signal remained coherent; drifting frequency or moving vessels required tracking, otherwise useful energy spread outside the detector's assumed pattern over time. Improving transmitter power, antenna gain, receiver noise figure, coding, and bandwidth each changed the link budget differently. Legal power, energy use, congestion, and hardware limits constrained the options.",
-        "The harbour was managing signal-to-noise ratio: the power of a desired signal compared with unwanted noise within a defined bandwidth and measurement context, often expressed in decibels. Amplifying both equally does not improve it. Filtering, averaging, matched detection, coding, better antennas, source suppression, and lower-noise electronics can improve detection, but thresholds trade false alarms against misses. Mara did not need the loudest storm. She needed enough structured evidence for one real call to stand apart from what the storm could imitate."
+        "Fog Harbour required a lost vessel to strike its bronze bell three times, after which the lighthouse would send a pilot boat. Winter brought stronger wind and waves, and the keeper often struggled to hear the bells. The old harbour master ordered a gigantic copper listening horn, believing that if sound became loud enough, no distress call would be missed.",
+        "On the night the horn was installed, bells did become louder. So did wind striking the rocks, chains hitting masts, and rain drumming on copper. The keeper launched the pilot boat four times and found empty sea on three trips. On the fourth call, he feared it was merely wind and waited too long; a returning fishing boat nearly struck the breakwater.",
+        "A young radio operator recorded the pitch of a real bell and the intervals between its three strokes. She placed thin reeds inside the horn that responded to that pitch and required the same timing pattern before the signal lamp was lit. The wind remained loud, but rarely matched both features together.",
+        "She did not tune the reeds to recognize only one perfect bell. A cracked bell could shift in pitch and a wave could swallow one stroke, so the acceptable range and warning threshold were set only after many foggy-night trials. False launches declined without placing genuine calls beyond an impossibly high threshold.",
+        "In spring, the harbour master removed the giant horn. He kept one ring of its copper and made it into three small bells, spaced evenly beside the watch-room door."
       ],
       "storyParagraphsZh": [
-        "暴风雨中，接收员玛拉在雨声、静电与发动机火花下听见微弱重复音。她把放大器开到最大，音调变响，所有无用波动也一起变响，消息仍被埋住，扬声器还发生削顶。提高输出音量同时乘大信号与噪声，没有改善二者分离。",
-        "工程师塔罗测量相关频带里的平均信号功率，再与其中噪声功率比较。比值大于一不自动保证词语可懂，小于一也不表示已知结构、观察时间足够时无法检测。接收器自身电子器件会加入噪声，使天线处的信号质量在数字化前恶化。塔罗比较噪声系数与动态范围，因为即使前端低噪，若被附近发射器压到饱和，仍会丢掉求救。用分贝表示可把乘法变成加法，但参考带宽与测量方法仍要说明。",
-        "求救音重复一段已知模式。塔罗用匹配检测器在整段时间积累证据，使随机噪声部分抵消，一致信号则累积。更窄滤波器可去除带外风暴能量，过窄又会扭曲变化消息。平均能改善平稳重复测量，也可能抹平一次性事件。每项改善都对信号和噪声作出假设。",
-        "发动机火花不是随机背景，而是在相同频率制造结构化干扰。塔罗移动天线、屏蔽电缆、移除故障电机并使用检错编码。在源头防噪比受污染后过滤更有效。干扰模仿已知模式时，检测器会误报，因此阈值选择要在漏掉呼救与错误救援之间取舍。",
-        "第二座站点只测安静时段、排除突发噪声，报告出很高比值。玛拉要求代表性时间窗、校准仪器，并分别报告热噪声、干扰与量化效应。延长积分只有在信号保持相干时才提高检测；频率漂移或船舶移动需要跟踪，否则有用能量会随时间散到检测器假定模式之外。提高发射功率、天线增益，改善接收器噪声系数、编码和带宽，会以不同方式改变链路预算。法定功率、能耗、拥塞与硬件限制约束选择。",
-        "港口处理的是信噪比：在定义好的带宽与测量情境内，目标信号功率与无用噪声功率的比较，常以分贝表示。等比例放大二者不会改善比值。滤波、平均、匹配检测、编码、更好天线、源头抑制与低噪声电子器件可改善检测，阈值却要权衡误报与漏报。玛拉不需要让风暴最响，而要让一份真实呼救拥有足够结构化证据，同风暴能够模仿的东西分开。"
+        "雾港规定，迷航船只要连敲三次铜铃，灯塔就派引航艇。入冬后风浪变大，守塔人常听不清铃声。老港长命人造了一只巨大的铜听筒，觉得声音只要够响，就不会漏掉求救。",
+        "听筒装上那晚，铜铃确实响亮了，风撞礁石、铁链拍桅杆和雨点敲铜皮也一同响亮起来。守塔人一夜放出四次引航艇，三次只找到空海面。第四次他怕又是风声，迟疑了许久，回来的一艘渔船险些撞上防波堤。",
+        "年轻报务员记下真正铜铃的音高和三次敲击间隔。她在听筒里加了会随那种音高振动的薄片，并规定只有固定间隔重复出现才点亮信号灯。风仍很大，却很少同时满足那两样特征。",
+        "她也没有把薄片调得只能认一只完好的铃。断裂的铃会稍稍变音，海浪也可能吞掉一次敲击，因此范围和警戒线经过多次雾夜试验才定下。误派少了，真正的求救也没有因门槛太高被挡住。",
+        "开春后，港长拆下那只巨型听筒。他留下一圈铜边，做成三片相隔相等的小铃，挂在值班室门口。"
       ],
       "conceptName": "Signal-to-noise ratio",
       "conceptNameZh": "信噪比",
       "explanationParagraphs": [
-        "Signal-to-noise ratio compares desired signal power with unwanted noise power within a stated bandwidth and context, often in decibels. Equal amplification of both does not improve the ratio.",
-        "Filtering, matched detection, averaging, coding, antennas, source suppression, and lower-noise hardware can improve detectability, while bandwidth, thresholds, structured interference, false alarms, and missed detections remain trade-offs."
+        "Signal-to-noise ratio compares desired signal power with unwanted noise power within a specified context and bandwidth, often in decibels. Amplifying both equally does not improve detectability. Filtering, matching known features, repeated averaging, coding, and reducing noise at its source can improve recognition. Practical thresholds must trade false alarms against misses, while filtering that is too narrow may reject genuine but altered signals."
       ],
       "explanationParagraphsZh": [
-        "信噪比比较规定带宽与情境内的目标信号功率和无用噪声功率，常以分贝表示。等比例放大二者不会改善比值。",
-        "滤波、匹配检测、平均、编码、天线、源头抑制与低噪声硬件可改善可检测性，带宽、阈值、结构化干扰、误报与漏报仍需取舍。"
+        "信噪比比较规定情境和带宽内的目标信号功率与无用噪声功率，常以分贝表示。等比例放大信号和噪声不会改善可检测性；滤波、匹配已知特征、重复平均、编码与源头降噪可以改善辨识。实际阈值必须权衡误报和漏报，过窄的筛选也可能排除已经变形的真实信号。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0714-fail-safe-design",
@@ -213,39 +218,40 @@
       "fieldCode": "0714",
       "fieldTitle": "Electronics and automation",
       "fieldTitleZh": "电子与自动化",
-      "title": "Which Way Should the Gate Fall?",
-      "titleZh": "断电时水闸该往哪边落",
-      "summary": "Engineers argue whether a powerless sluice should open or close until upstream flood, downstream exposure, navigation, and failure combinations define the safer state.",
-      "summaryZh": "工程师争论水闸断电后应开还是关，直到上游洪水、下游暴露、航行与故障组合共同定义更安全状态。",
+      "title": "The Brake That Fell When the Air Was Lost",
+      "titleZh": "断气以后落下的刹车",
+      "summary": "A mine cage relies on air pressure to apply its brake, until a ruptured pipe reveals which way the machine chooses when it fails.",
+      "summaryZh": "矿场升降笼原本靠气压推住刹车，一根管子破裂后，众人才发现故障发生时机器会选择哪一边。",
       "storyParagraphs": [
-        "The river city automated a sluice gate. One engineer proposed a heavy counterweight that would close the gate whenever power or control signal disappeared. Closing seemed safe because it stopped uncontrolled downstream flow. A flood engineer objected: during heavy rain, closure would trap water above the city and overtop the upstream wall. The same powerless motion protected one hazard scenario and worsened another.",
-        "Engineer Sera listed consequences by operating mode. In normal weather, an unintended opening threatened downstream workers and navigation. During flood release, an unintended closure threatened upstream homes. During maintenance, either movement could crush crews unless energy was isolated and the gate mechanically secured. Risk analysis included severity, exposure, likelihood, and ability to avoid harm, then considered failures of sensors, logic, power, actuators, and communication separately. A safe state had to remain reachable with the resources likely to survive the same event. She defined safe states for each credible context instead of treating open or closed as a universal moral direction.",
-        "The first mechanism used a spring that closed on loss of electricity. A broken position sensor falsely reported closure while the gate remained open. Sera added independent end-position indication, diagnostics, and proof testing. She separated loss of command from loss of motive force: stored hydraulic pressure could move the gate after electrical failure, while a ruptured line could not. Sera calculated transition time and stored-energy sufficiency, because a counterweight that eventually closed the gate could still release a dangerous surge while moving. The destination and the path to it both required explicit limits. Failure behaviour depended on the whole energy path.",
-        "A second design had two controllers but one shared power cable and one software defect. Both channels failed together. Sera separated supplies and sensing where justified, diversified critical logic, and examined common-cause failure. Redundancy improved reliability only when channels were sufficiently independent and disagreement led to a defined action rather than paralysis.",
-        "Some conditions had no single harmless state. Sera chose controlled degradation: move to a bounded opening, alarm staffed stations, halt navigation, and preserve manual hydraulic control. Safety interlocks outranked production commands, yet operators could recover through documented procedures. Emergency drills checked that the supposedly safe transition did not create a new hazard through speed, timing, or human surprise.",
-        "Sera practised fail-safe design: arrange equipment so specified failures drive it toward a state or controlled behaviour that minimises unacceptable harm under a defined hazard analysis. De-energise-to-trip mechanisms, stored energy, diagnostics, independence, proof testing, interlocks, and manual recovery may contribute. Fail-safe is not the same as fault-tolerant continued service, and no state is safe for every context. The question was never simply whether the gate should fall. It was whose harm each possible fall prevented or created."
+        "The mountain mine installed a new lift cage. In the old arrangement, a worker pulled a long lever to press the brake against the winding drum. The owner liked it because releasing the lever let the cage move again immediately. Mechanic Liang Qiu once asked, 'What happens if the air line that pulls the lever breaks?' Looking at the waiting ore carts, the owner merely told her to make the joint stronger.",
+        "On a rainy night, falling stone cut the air line. Pressure vanished, the lever relaxed, and the brake lifted away from the drum. A cage full of ore slid down two levels and stopped only after damaging the loading platform. No one was inside, but the morning shift was halted for three days. The reinforced joint remained intact; the break occurred in a different section no one had expected.",
+        "Liang reversed the brake. Weights and springs now always tried to press it against the drum, and only normal air pressure combined with a valid command could lift it. A broken line, power loss, or failed control wire would first stop the cage. Returning to service required someone to identify the cause and reset the system manually in the machine room.",
+        "The owner worried that false stops would delay production. Liang accepted that stopping had a cost. She examined the different hazards of carrying people, ore, and maintenance crews, then added position detection and regular brake trials. She did not claim every fault should make every machine do the same thing. She required each identified fault to lead first toward the less harmful state.",
+        "Six months later, another air line burst while a cage was between levels. It stopped sharply. The miners inside cursed, then waited forty minutes to be rescued. Liang hung the broken length of pipe above the brake handle and never took it down."
       ],
       "storyParagraphsZh": [
-        "河城把水闸改成自动运行。一名工程师提议用沉重配重，让电源或控制信号消失时闸门自动关闭。关闭看似安全，因为它阻止失控水流冲向下游。防洪工程师却反对：暴雨中关闭会把水困在城上游，越过堤墙。同一种断电动作保护一种危险情景，却加重另一种。",
-        "工程师塞拉按运行模式列出后果。正常天气下，意外开启威胁下游工人与航行；泄洪期间，意外关闭威胁上游住宅；维护时，任一动作都可能压伤工人，除非隔离能量并机械固定。风险分析考虑严重性、暴露、发生可能与避害能力，再分别检查传感器、逻辑、电源、执行器与通信故障。安全状态必须能用同一事故后可能存活的资源抵达。她为每个可信情境定义安全状态，不把开或关当成普遍道德方向。",
-        "第一套机构使用失电关闭弹簧。位置传感器断裂后虚报关闭，闸门实际仍开。塞拉加入独立终点指示、诊断与定期验证测试。她区分命令丢失与动力丢失：储存液压可在断电后移动闸门，液压管破裂则不能。她计算转换时间与储能是否足够，因为最终能关闭的配重，在移动时仍可能释放危险浪涌。终点与到达终点的路径都需要明确限制。故障行为取决于完整能量路径。",
-        "第二版有两台控制器，却共用一条电源线与同一软件缺陷，两个通道同时失效。塞拉在合理处拆分电源与感知，为关键逻辑引入多样性，并检查共因故障。只有通道足够独立，且发生分歧时有明确动作，而非瘫痪，冗余才改善可靠性。",
-        "有些条件没有单一无害状态。塞拉选择受控降级：移动到有限开度，向有人值守站点报警，停止航行，并保留人工液压控制。安全联锁优先于生产命令，操作员仍可按文档程序恢复。应急演练检查所谓安全转换是否因速度、时序或人的惊讶制造新危险。",
-        "塞拉实践的是故障安全设计：根据明确危害分析安排设备，使指定故障把系统推向能降低不可接受伤害的状态或受控行为。失能触发机构、储能、诊断、独立性、验证测试、联锁与人工恢复都可参与。故障安全不等于容错后继续服务，也不存在适合所有情境的安全状态。问题从来不只是闸门该往哪边落，而是每种落法防止或制造了谁的伤害。"
+        "山矿换了新的升降笼。旧设计要工人拉紧长杆，刹车片才会压住卷轮；矿主喜欢它，因为松开手，笼子便能立刻继续运行。修械师梁秋问过一句：‘若拉杆的气管断了呢？’矿主看着赶工的矿车，只让她把接头做牢些。",
+        "一个雨夜，石块擦破气管。压力瞬间消失，长杆松开，刹车也跟着离开卷轮。满载矿石的笼子向下滑了两层，撞坏装卸台才停住。笼内无人，却让早班停了三天。那只接头没有松，破的是没人预料到的另一段管子。",
+        "梁秋把刹车改了方向：重锤和弹簧平时总想把刹车压紧，只有气压正常、操作命令也正确时，刹车才会被提起。若断管、停电或控制线失效，笼子首先停下。恢复运行则要有人查明原因，再到机房手动复位。",
+        "矿主担心误停会耽误出矿。梁秋承认停机有成本，又为载人、载矿和检修分别检查了危险情形，增加了位置检测与定期试刹。她没有说所有故障都该让机器做同一件事，只要求每种故障先去往伤害较小的状态。",
+        "半年后，另一根气管在半空爆裂。升降笼猛地顿住，矿工在里面骂了几句，随后等了四十分钟才获救。梁秋把那段破管挂在刹车手柄上方，一直没有取下。"
       ],
       "conceptName": "Fail-safe design",
       "conceptNameZh": "故障安全设计",
       "explanationParagraphs": [
-        "Fail-safe design makes specified failures lead toward a state or controlled behaviour that minimises unacceptable harm under an explicit hazard analysis. The safe response depends on operating context and failure mode.",
-        "Stored energy, de-energise-to-trip action, diagnostics, independent channels, proof testing, interlocks, degradation, alarms, and manual recovery may be needed. Fail-safe behaviour differs from fault-tolerant continuation of service."
+        "Fail-safe design begins with specific hazards and failure modes, then defines a lower-risk state for loss of energy, broken connections, or erroneous action. In the story, springs apply the brake and air pressure releases it, so loss of energy defaults to stopping. This is not the same as continuing normal service after a fault, which is fault tolerance. Diagnostics, independent channels, interlocks, tests, and manual reset help ensure the intended safe response actually occurs."
       ],
       "explanationParagraphsZh": [
-        "故障安全设计让指定故障根据明确危害分析，导向降低不可接受伤害的状态或受控行为。安全响应取决于运行情境与故障模式。",
-        "储能、失能触发、诊断、独立通道、验证测试、联锁、降级、警报与人工恢复都可能需要。故障安全行为不同于容错后继续服务。"
+        "故障安全设计先依据具体危害和故障模式，规定失能、断线、误动作等情况应进入何种较低风险状态。故事中的弹簧施加制动、气压释放制动，使失去能源时默认停车。它不等于系统在故障后仍正常服务；后者属于容错。诊断、独立通道、联锁、试验与人工复位常用于保证预定安全行为确实发生。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0715-stress-strain",
@@ -254,39 +260,40 @@
       "fieldCode": "0715",
       "fieldTitle": "Mechanics and metal trades",
       "fieldTitleZh": "机械与金属工艺",
-      "title": "Two Cables Under the Same Cart",
-      "titleZh": "同一辆车下的两根桥索",
-      "summary": "Two equal cables carry the same force yet stretch and fail differently, forcing bridge builders to separate load, stress, strain, stiffness, yielding, and strength.",
-      "summaryZh": "两根相同尺寸桥索承受同一载荷却伸长与失效不同，迫使造桥者区分载荷、应力、应变、刚度、屈服与强度。",
+      "title": "The Axle That Refused to Bend",
+      "titleZh": "最不肯弯的车轴",
+      "summary": "A cartwright chooses the axle that stays straightest under load, then learns at the first deep rut that stiffness, strength, and resistance to breaking are not the same.",
+      "summaryZh": "车匠为庆典挑中一根受压时最直的车轴，却在第一处深坑前发现，直、强与不易断并不是一回事。",
       "storyParagraphs": [
-        "Bridge maker Orin hung identical carts from two cables of equal length and area. One cable stretched visibly and returned when unloaded; the other stretched little. He called the second simply stronger. Metallurgist Sena asked for a fuller test. Equal force and equal area gave equal average tensile stress, yet extension relative to original length differed because the materials had different stiffness.",
-        "Sena increased load gradually and plotted stress against strain. In the early region, both behaved approximately elastically: unloading returned them near their original length, and the slope represented elastic modulus. The steeper cable was stiffer, not automatically capable of carrying more stress before failure. She measured lateral contraction and verified the extensometer gauge length, because machine displacement included grip compliance and did not equal specimen strain. A local strain gauge near the notch later revealed what the crosshead average concealed. Geometry controlled structural extension alongside material modulus, so doubling area or shortening length also changed cable response.",
-        "At higher stress, the first metal yielded and accumulated permanent deformation before hardening and eventually fracturing. The second stayed stiff but broke with little plastic warning. Ultimate tensile strength, yield strength, fracture strain, toughness, and stiffness described different properties. Orin's single word stronger had concealed which failure or service limit mattered to the bridge.",
-        "A notch concentrated local stress far above the simple average, and repeated loading introduced another risk not captured by one slow pull. Temperature, loading rate, manufacturing history, residual stress, corrosion, and material direction changed the curve. Loading and unloading also traced hysteresis and permanent set, while repeated tests showed scatter. Sena reported confidence intervals and specimen orientation instead of presenting one curve as an exact identity for every cable from the heat. Material certification was evidence, not destiny for service life. Sena tested representative specimens and examined local geometry rather than treating a handbook value as the complete structure.",
-        "Design limits came before fracture. Excessive elastic stretch could misalign the deck even when the metal remained undamaged; permanent set could make unloading unsafe; brittle fracture demanded defect control. Sena used constitutive data, structural analysis, inspection, and safety factors tied to uncertainty and consequences. A safety factor could not compensate for selecting the wrong property or failure mode.",
-        "The cable tests revealed stress and strain. Stress expresses internal force intensity, commonly force divided by area in simple uniaxial loading; strain expresses relative deformation, such as extension divided by original length. Their relationship describes elastic stiffness, yielding, plastic flow, hardening, and fracture under stated conditions. Engineering and local values can differ when geometry changes or concentrations arise. The two cables carried the same cart, but the same stress did not require the same strain, warning, or route to failure."
+        "The county needed a four-wheeled cart to carry a bronze statue in a festival. Cartwright Shi Yuan supported three candidate axles and loaded each with the same stones. The dark, polished one barely bent, so he chose it immediately. An old blacksmith warned that the steel was extremely hard. 'If it will not even bend,' Shi replied, 'it must be the strongest.'",
+        "On festival morning, one wheel dropped into a deep rut. The loaded side of the axle made a short, sharp sound and broke cleanly. The statue hurt no one, but fell into the mud and lost the tip of its nose. The two axles Shi had called soft remained in the workshop, already straight again after their test loads were removed.",
+        "The old blacksmith made equal strips from several metals. He increased the hanging weight gradually and marked each strip's extension on a board. Under small loads, some returned completely when unloaded. Under more weight, some kept a permanent bend. Pushed further, some snapped suddenly, while others stretched a long way first. For the first time, Shi separated resistance to deformation, the point where recovery ended, and the load and deformation reached before fracture.",
+        "The new axle did not pursue hardness alone. The blacksmith chose its material and diameter for the actual loads, rounded sharp corners where force would gather, and required the crew to inspect notches before heavy journeys. There was no time to recast the statue's nose, so the magistrate ordered its missing tip turned toward the rear.",
+        "On parade day, the cart crossed the same rut. The new axle bent slightly and returned to its position after the wheel climbed out. Shi crouched beside the road, ran a finger across its reference mark, and only then waved the procession onward."
       ],
       "storyParagraphsZh": [
-        "造桥师奥林把相同货车分别挂在两根等长、等截面积桥索上。一根明显伸长，卸载后恢复；另一根伸得很少。他把后者简单称为更强。冶金师塞娜要求更完整测试。相同力作用于相同面积，得到相同平均拉应力，材料刚度不同，伸长相对原长的比例却不同。",
-        "塞娜逐渐加荷，绘出应力对应变的曲线。早期区域里，两者近似弹性：卸载后回到接近原长，曲线斜率代表弹性模量。斜率更陡的索更刚，不自动表示断裂前能承受更高应力。她测量横向收缩并核实引伸计标距，因为机器横梁位移含夹具柔顺性，并不等于试样应变。缺口旁的局部应变计后来显露横梁平均值藏住的东西。结构伸长同时受几何与材料模量控制，因此加倍面积或缩短长度也会改变响应。",
-        "更高应力下，第一种金属先屈服并留下永久变形，随后加工硬化并最终断裂。第二种保持刚硬，却几乎没有塑性警告便断开。极限抗拉强度、屈服强度、断裂应变、韧性与刚度描述不同性质。奥林一个“更强”，藏住了桥真正关心的失效或使用界限。",
-        "一道缺口会使局部应力远高于简单平均，反复载荷又引入一次缓慢拉伸无法捕捉的风险。温度、加载速率、制造历史、残余应力、腐蚀与材料方向都会改变曲线。加载与卸载还能画出滞回和永久变形，重复试验则显示离散。塞娜报告置信区间与试样方向，不把一条曲线当成同炉每根桥索的精确身份；材料证明是证据，不是服役寿命的命运。她测试有代表性的试样并检查局部几何，不把手册数值当成整座结构。",
-        "设计限制早于断裂。过大弹性伸长会让桥面错位，即使金属未受损；永久变形会让卸载后仍不安全；脆性断裂则要求控制缺陷。塞娜结合本构数据、结构分析、检查与对应不确定性和后果的安全系数。若选错性质或失效模式，再大安全系数也无法补偿。",
-        "桥索测试揭示的是应力与应变。应力表达内力强度，在简单单轴加载中常取力除以面积；应变表达相对变形，如伸长除以原长。两者关系描述指定条件下的弹性刚度、屈服、塑性流动、硬化与断裂。几何改变或存在集中时，工程平均值与局部值会不同。两根索承受同一辆车，相同应力却不要求相同应变、警告或失效路径。"
+        "县里要用四轮大车运一尊铜像参加庆典。车匠石原把三根候选车轴架起，各压上同样的石块。黑亮的那根几乎看不出弯曲，他便当场选定。老铁匠提醒这种钢太硬，石原却说：‘连弯都不弯，当然最结实。’",
+        "庆典清晨，大车一侧车轮陷进深坑。车轴受力的一边先发出短促脆响，随后整齐断开。铜像没有伤人，却侧倒在泥里，鼻尖磕掉一块。另两根被石原嫌软的车轴仍放在工棚，压过重物后早已恢复原来的直线。",
+        "老铁匠把几种金属做成同样长短的细条，一边逐渐加重，一边在木板上记下它们伸长多少。卸掉小重量，有的能完全回来；再加重，有的留下永久弯曲；继续加到最后，有的突然断，有的先拉长很远。石原第一次把‘多难变形’‘何时不再复原’和‘断前能受多少’分开看。",
+        "新车轴没有追求一味坚硬。铁匠按实际载荷选择材料和直径，磨圆原本容易聚力的尖角，又让车队在重载前检查缺口。铜像的鼻尖来不及重铸，县令只让人把缺角朝向车后。",
+        "游行那天，大车经过同一处深坑。新车轴微微弯了一下，离开坑口又回到原位。石原蹲在路边，用指尖摸过轴上的基准线，才挥手让车队继续。"
       ],
       "conceptName": "Stress and strain",
       "conceptNameZh": "应力与应变",
       "explanationParagraphs": [
-        "Stress describes internal force intensity, while strain describes relative deformation. Their relationship under stated conditions distinguishes elastic stiffness, yielding, plastic deformation, hardening, and fracture.",
-        "Stiffness, yield strength, ultimate strength, ductility, and toughness are different properties. Geometry, concentrations, temperature, rate, defects, history, corrosion, and cyclic loading affect structural behaviour."
+        "Stress describes internal force per unit area, while strain describes relative deformation. Their relationship reveals elastic stiffness, yielding, plastic deformation, hardening, and fracture. High stiffness means less deformation under a given stress; it does not guarantee high yield strength, ultimate strength, ductility, or toughness. Geometry, notch concentrations, temperature, loading rate, and material history also affect structural behaviour."
       ],
       "explanationParagraphsZh": [
-        "应力描述内力强度，应变描述相对变形。二者在指定条件下的关系区分弹性刚度、屈服、塑性变形、硬化与断裂。",
-        "刚度、屈服强度、极限强度、延性与韧性是不同性质。几何、集中、温度、速率、缺陷、历史、腐蚀与循环加载都会影响结构行为。"
+        "应力表示材料内部单位面积承受的内力，应变表示相对变形；两者关系揭示弹性刚度、屈服、塑性变形、硬化和断裂。刚度高只代表同一应力下变形较小，不等于屈服强度、极限强度、延性或韧性都高。结构行为还受几何、缺口造成的集中、温度、加载速度和材料历史影响。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0715-fatigue",
@@ -295,39 +302,40 @@
       "fieldCode": "0715",
       "fieldTitle": "Mechanics and metal trades",
       "fieldTitleZh": "机械与金属工艺",
-      "title": "The Axle That Was Never Overloaded",
-      "titleZh": "从未超载的车轴",
-      "summary": "A ferry axle breaks after thousands of ordinary turns because cyclic stress initiates and grows a crack long before the final load.",
-      "summaryZh": "渡船车轴在数千次普通转动后断裂，因为循环应力早在最终载荷前就启动并扩展裂纹。",
+      "title": "The Hook That Was Never Overloaded",
+      "titleZh": "从未超载的吊钩",
+      "summary": "A dock hook lifts only half its rated load each time, yet cracks from an old scratch after more than eight thousand lifts.",
+      "summaryZh": "码头吊钩每次都只提额定重量的一半，却在第八千多次起吊时，从一道旧划痕处突然裂开。",
       "storyParagraphs": [
-        "The river ferry's axle broke on its ten-thousandth ordinary crossing. Every cargo record lay below the axle's static proof load. Owner Daro blamed a hidden final overload, but the fracture face showed a small origin near a machining groove, smooth growth markings across most of the section, and a rough final region. The fracture origin was small enough to evade ordinary visual inspection, and the smooth region represented progressive growth rather than a single tear. Beach marks could record changes or interruptions in service, while finer striations required microscopy and did not map one-to-one onto every crossing. The last crossing had completed a process that thousands of earlier stress cycles had advanced.",
-        "Metallurgist Iva explained that rotating bending made each surface point alternate between tension and compression. A microscopic imperfection initiated a crack where local stress was concentrated. With each cycle, the crack advanced a tiny amount; as the remaining section shrank, crack-tip stress intensity rose until ordinary load caused rapid final fracture. Static strength alone had not described life under repeated loading.",
-        "Daro polished the next axle and declared the problem solved. Iva also changed the groove radius, residual surface stress, corrosion protection, alignment, and bearing condition. Mean stress, stress amplitude, material, surface finish, temperature, environment, and load sequence all affected life. A small geometric notch could matter more than a modest reduction in nominal load.",
-        "Laboratory specimens produced a curve relating stress amplitude to cycles to failure under defined conditions. Some materials showed an apparent endurance region; others continued accumulating risk at lower amplitudes. Real ferry loads varied, and simple cumulative-damage rules were approximations. Occasional high cycles could accelerate crack growth and change the effect of later small cycles, so order and spectrum mattered.",
-        "Inspection became part of design. Iva chose intervals based on crack growth, detectability, uncertainty, and consequences, then used methods suited to surface and internal flaws. Iva used non-destructive inspection only where its detection threshold lay below the critical crack size and the expected load spectrum left enough growth time for reliable, safe intervention. Replacing parts on a fixed calendar alone wasted some life and missed unusual damage. She designed damage tolerance so a detectable crack could exist without immediate catastrophe and ensured a second load path where feasible.",
-        "The axle failed through material fatigue: progressive damage and crack growth caused by repeated or fluctuating stresses, often below the stress that would cause immediate static failure. Initiation sites, stress concentrations, mean and alternating stress, surface condition, environment, residual stress, material, cycle count, and load history shape life. Testing, inspection, damage tolerance, and redundancy manage rather than abolish uncertainty. The final crossing did not secretly exceed the limit. It arrived after the axle's limit had been rewritten cycle by cycle."
+        "The river port owned a massive lifting hook. Each year it raised a test weight heavier than any cargo crate, and for five years it passed. Ordinary boxes weighed less than half as much as the test piece. The dock foreman therefore felt secure. When a chain scratched a shallow line into the hook, he simply covered it with paint.",
+        "On roughly the eight-thousand-three-hundredth lift, the hook broke at that scratch just after a crate left the deck. The crate fell back into the hold and smashed a shipment of porcelain. The foreman searched every record and found no overload, so he suspected that the annual test weight had become too light.",
+        "A surveyor removed the paint and applied penetrating dye near the fracture. A fine red line extended inward from the old scratch, and the broken surface showed arcs of different shades. Each lift had advanced the crack a little. Only the small area of metal left at the end had failed suddenly under the ordinary crate.",
+        "The port stopped relying solely on one heavy annual proof. Hooks were retired according to their number of cycles; scratches and sharp features were treated promptly; high-risk areas received regular non-destructive inspection. Important loads gained a secondary catch. The foreman also recorded the sequence of loads, not only the heaviest one.",
+        "After the new hook was installed, the foreman carved a short mark on a wooden board after every hundred lifts. The painted fragment from the old hook was nailed above the first line."
       ],
       "storyParagraphsZh": [
-        "河上渡船车轴在第一万次普通航行中断裂。每次载货记录都低于车轴静态验证载荷。船主达罗指控最后一次有隐藏超载，断口却显示加工槽旁的小起点、覆盖大部分截面的平滑扩展纹，以及粗糙最终区。起裂点小到普通目视无法发现，平滑区代表渐进扩展而非一次撕裂。贝壳纹可能记录运行条件变化或中断，更细条纹要用显微镜观察，也不与每次航行一一对应。最后航行只是完成了数千次早期应力循环不断推进的过程。",
-        "冶金师伊瓦解释，旋转弯曲使表面每一点在拉伸与压缩间交替。微观缺陷在局部应力集中处启动裂纹，每次循环让它前进一点；剩余截面缩小后，裂纹尖端应力强度上升，普通载荷最终造成快速断裂。静态强度从未完整描述反复加载下的寿命。",
-        "达罗抛光下一根轴，宣布问题解决。伊瓦还改变槽口圆角、表面残余应力、防腐、对中与轴承状态。平均应力、应力幅、材料、表面处理、温度、环境与载荷顺序都会影响寿命。一个小几何缺口可能比名义载荷适度降低更重要。",
-        "实验室试样给出指定条件下应力幅与失效循环数的关系曲线。有些材料显示近似耐久区，另一些在更低应力幅下仍持续累积风险。真实渡船载荷不断变化，简单累积损伤规则只是近似。偶发大循环可加速裂纹，并改变后来小循环效果，因此顺序与谱都重要。",
-        "检查成为设计一部分。伊瓦按裂纹增长、可检出性、不确定性与后果选择间隔，再用适合表面和内部缺陷的方法。只有无损检查的检出门槛低于临界裂纹尺寸，并在预期载荷谱下留有足够干预增长时间，检查才真正有效。只按固定日历更换会浪费部分寿命，也会漏掉异常损伤。她采用损伤容限设计，让可检测裂纹存在时不立即灾难，并在可行处设置第二载荷路径。",
-        "车轴经历的是材料疲劳：反复或波动应力造成渐进损伤与裂纹扩展，应力常低于会立即引起静态失效的水平。起裂点、应力集中、平均与交变应力、表面、环境、残余应力、材料、循环数与载荷历史共同塑造寿命。测试、检查、损伤容限与冗余管理而非消灭不确定性。最后航行没有秘密超载，只是在车轴极限被一圈圈改写后到来。"
+        "河港有只巨大的起重吊钩，每年都要吊起一块比货箱更重的试铁。它连续五年通过检验，平日所吊木箱还不到试铁一半。码头领班因此放心，哪怕吊钩表面被铁链划出一道浅痕，也只用油漆盖住。",
+        "第八千三百多次起吊时，木箱刚离开甲板，吊钩便从那道划痕处断开。箱子落回船舱，砸坏一批瓷器。领班翻遍记录，没有找到一次超重，便怀疑验钩的试铁做轻了。",
+        "验船师洗掉油漆，在断口附近涂上渗色液。细细的红线从旧划痕向里伸，断面上还有一圈圈不同颜色的弧纹。每一次起吊都让裂口前进一点，最后剩下的金属才在那一箱普通货物下突然断掉。",
+        "码头此后不再只做一年一次的大载荷检验。吊钩按起吊次数更换，划痕和尖角被及时处理，高风险部位定期用不伤零件的方法查裂纹；重要货物还增加第二道承接。领班也开始记录载荷先后，而不只记最重的一次。",
+        "新吊钩装上后，每完成一百次起吊，领班就在木牌上刻一道短线。旧钩那块涂过漆的断口，被钉在木牌最上方。"
       ],
       "conceptName": "Material fatigue",
       "conceptNameZh": "材料疲劳",
       "explanationParagraphs": [
-        "Material fatigue is progressive damage and crack growth under repeated or fluctuating stresses, often below the level that would cause immediate static failure.",
-        "Life depends on stress amplitude and mean, concentrations, surface, environment, residual stress, material, cycle count, and load sequence. Testing, inspection, damage tolerance, and redundancy manage the resulting uncertainty."
+        "Material fatigue is progressive damage caused by repeated or fluctuating loads. Cracks can initiate and grow at stresses far below those required for a single static failure. Life depends on stress amplitude, mean stress, cycle count, load sequence, surface defects, geometric concentrations, environment, and residual stress. A static proof test cannot replace cyclic testing, inspection, life management, and damage-tolerant design."
       ],
       "explanationParagraphsZh": [
-        "材料疲劳是反复或波动应力下的渐进损伤与裂纹扩展，应力常低于会立即造成静态失效的水平。",
-        "寿命取决于应力幅与平均值、集中、表面、环境、残余应力、材料、循环数和载荷顺序。测试、检查、损伤容限与冗余用于管理不确定性。"
+        "材料疲劳是反复或波动载荷造成的渐进损伤，裂纹可在远低于一次静载破坏水平的应力下萌生并扩展。寿命受应力幅、平均应力、循环次数、载荷顺序、表面缺陷、几何集中、环境与残余应力影响。静态强度试验不能替代循环试验、定期检查、寿命管理和损伤容限设计。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0715-engineering-tolerance",
@@ -336,39 +344,40 @@
       "fieldCode": "0715",
       "fieldTitle": "Mechanics and metal trades",
       "fieldTitleZh": "机械与金属工艺",
-      "title": "Every Gear Passed Inspection",
-      "titleZh": "每只齿轮都通过了检查",
-      "summary": "Every gear lies within its individual drawing limits, yet accumulated variation closes the final clearance and locks the assembled machine.",
-      "summaryZh": "每只齿轮都落在单件图纸范围内，累积变差却吃掉最终间隙，使整台机器锁死。",
+      "title": "The Arch Whose Every Stone Passed",
+      "titleZh": "每一块都合格的拱门",
+      "summary": "Every arch stone from twenty workshops passes its wooden gauge, yet the final stone will not fit when the pieces meet.",
+      "summaryZh": "二十家石坊交来的拱石全都通过木尺检验，合在一起时，最后一块却怎么也放不进去。",
       "storyParagraphs": [
-        "The clockworks assembled six gears and spacers. Inspectors confirmed that every diameter and thickness lay inside its drawing limits, yet the final shaft would not turn. Each spacer happened to be near its maximum thickness and each housing gap near its minimum. No component was individually defective. Their allowed variations had accumulated in the same direction until the assembly's required clearance disappeared.",
-        "Engineer Mira began with function. The shaft needed enough clearance to rotate across temperature and wear, but not so much that gears rattled or lost alignment. She translated that requirement into nominal dimensions and permissible variation across the dimension chain. She wrote an assembly equation showing how each dimension contributed with sign and sensitivity. Datum selection fixed where measurements began; otherwise two suppliers could meet their own references while locating the same feature differently in the machine. A clearance fit, transition fit, or interference fit was chosen according to purpose; tighter was not automatically better.",
-        "The first redesign divided the available assembly variation equally among all parts. One cheap spacer became needlessly expensive to grind, while a bearing seat critical to alignment received too much freedom. Mira allocated limits according to sensitivity, process capability, cost, and consequence. Geometric controls addressed position, form, and orientation because perfect size alone could not guarantee coaxial holes or flat mating surfaces.",
-        "Worst-case analysis assumed every dimension reached its harmful extreme simultaneously and guaranteed assembly within those limits, but produced costly parts. Statistical analysis used process distributions to predict a very small failure rate when extremes were unlikely to coincide. Interchangeability required the specified gauge to represent functional contact, not merely the easiest surface to reach. Mira ran a Monte Carlo study only after validating distributions and correlations, since dimensions cut by one tool were not necessarily independent. She retained worst-case checks for critical hazards. Mira used statistical allocation only when production was stable, measurements reliable, and occasional risk acceptable or screened. Safety-critical interfaces retained stricter assurance.",
-        "A supplier's process remained centred but spread wider after tool wear. Parts still passed occasional inspection while assembly failures rose. Mira tracked capability, control charts, gauge calibration, temperature, and measurement uncertainty. Drawing limits described acceptable product; process-control limits described how manufacturing behaved. Confusing the two allowed drift to hide until finished machines jammed.",
-        "Mira was designing engineering tolerance: permitted variation in dimensions, geometry, material, or performance that preserves required function while allowing economical manufacture and assembly. Tolerance stacks, fits, sensitivity, process capability, measurement uncertainty, thermal change, wear, and risk determine allocation. Too loose can fail function; unnecessarily tight raises cost and may still miss geometric error. Every gear had passed alone. The machine failed because nobody had first assigned how their separate freedoms were allowed to meet."
+        "The new market arch had to stand before the autumn fair. Twenty stone yards each made one block, and the drawing allowed a hairline variation in length. An inspector checked every block with the same wooden gauge. Each fell between its two marks, received an approval stamp, and went directly to the site.",
+        "When the arch met at the top, the final keystone was a full finger too wide and could not be hammered into place. The yard owners all raised their approval stamps. Their old gauges had worn slightly, and the masons tended to leave each stone near the large side of the allowed range. A tiny excess on one block became a large accumulated error across twenty.",
+        "The market official angrily ordered every future dimension to be exact. The old master mason set down the keystone. Stone changed slightly with temperature and moisture, he said, while tools and measurements also carried error. If ornament, back faces, and joints all demanded the same precision, the fair might end before the arch was ready.",
+        "They established a shared reference line, tightened the dimensions that accumulated toward closure, and performed several trial assemblies along the way. Back surfaces and decoration that did not affect fit received wider allowances. Wooden gauges were checked against a metal master, and workshops stopped aiming consistently at one side of the range. The keystone retained enough clearance for assembly without becoming loose.",
+        "Before the fair opened, the final keystone was eased into place. The old mason did not use a hammer. He pulled away the thin wooden shim beneath it, and the stone settled with one line of daylight remaining in the joint."
       ],
       "storyParagraphsZh": [
-        "钟表厂装配六只齿轮与垫片。检查员确认每项直径和厚度都在图纸范围内，最终轴却无法转动。每只垫片恰好接近最大厚度，每处壳体间隙又接近最小。没有零件单独不合格，它们被允许的变差只是朝同一方向累积，直到装配所需间隙消失。",
-        "工程师米拉先从功能出发。轴需要足够间隙，在温度与磨损变化中仍能旋转，又不能松到齿轮振动或失去对中。她把要求转换成尺寸链中的名义尺寸与允许变化，并写出装配方程，显示每项尺寸的符号与敏感度。基准选择固定测量从哪里开始，否则两家供应商都可满足自身参照，却把同一特征放在机器不同位置。间隙配合、过渡配合或过盈配合要按目的选择，更紧不自动更好。",
-        "第一版重设计把可用装配变差平均分给所有部件。一只廉价垫片被迫接受昂贵精磨，影响对中的轴承座却得到过多自由。米拉按敏感度、过程能力、成本与后果分配限制。几何控制还处理位置、形状与方向，因为尺寸完美也不能保证孔同轴或配合面平整。",
-        "最坏情形分析假设每项尺寸同时到达不利极端，只要都在限制内便可保证装配，却造成昂贵零件。统计分析利用过程分布，在极端不太可能同时出现时预测很小失效率。互换性要求指定量规代表功能接触，而非只量最容易触及的表面。米拉只在验证分布与相关性后才做蒙特卡洛研究，因为同一刀具加工的尺寸未必独立；关键危险仍保留最坏情形检查。她只在生产稳定、测量可靠，且偶发风险可接受或可筛除时采用统计分配；安全关键接口仍保留更严格保证。",
-        "供应商过程中心未变，刀具磨损后分布却变宽。抽检零件仍能通过，装配故障却上升。米拉追踪过程能力、控制图、量具校准、温度与测量不确定性。图纸限制描述产品是否可接受，过程控制限描述制造怎样运行；把二者混同，会让漂移藏到整机卡死才显形。",
-        "米拉设计的是工程公差：允许尺寸、几何、材料或性能在一定范围变化，同时保住所需功能，并允许经济制造与装配。公差叠加、配合、敏感度、过程能力、测量不确定性、热变化、磨损与风险共同决定分配。太松会失去功能，无必要地太紧会提高成本，也可能漏掉几何误差。每只齿轮单独都通过，机器失败是因为没人先规定这些独立自由应怎样相遇。"
+        "新市场的拱门要赶在秋集前立起。二十家石坊各做一块拱石，图纸允许长度有一线出入。验收人拿同一把木尺逐块检查，每块都在两道刻痕之间，于是盖上合格印章，直接送往工地。",
+        "拱门合到顶部时，最后的楔石宽了整整一指，怎样敲也进不去。石坊主们纷纷举起自己的合格印。原来他们的旧尺都略有磨损，工匠又习惯把石头留在允许范围偏大的一边；一块只多一点，二十块的偏差却沿拱圈加在了一起。",
+        "市监大怒，命令以后每个尺寸都必须一丝不差。老石匠却把楔石放下说，石头会因温度和湿度稍有变化，工具和测量也有误差。若所有花纹、背面和接缝都追求同样精密，秋集结束也未必做完。",
+        "他们重新找准共同基线，把会累积到闭合处的尺寸管得更严，并在中途设置几次整体样装；不影响配合的背面和装饰则放宽。木尺先与金属母尺核对，石坊也不再总把尺寸做到同一侧。楔石周围还留下足以安装、又不致松动的间隙。",
+        "秋集开门前，最后一块楔石被缓缓推入。老石匠没有用锤，只抽走了底下那片薄木垫。石块落定时，缝里还留着一线日光。"
       ],
       "conceptName": "Engineering tolerance",
       "conceptNameZh": "工程公差",
       "explanationParagraphs": [
-        "Engineering tolerance permits controlled variation in dimensions, geometry, material, or performance while preserving required function and economical manufacture.",
-        "Tolerance stacks, fit type, sensitivity, process capability, measurement uncertainty, temperature, wear, and risk guide allocation. Individual conformance does not guarantee assembly function, and unnecessarily tight limits increase cost."
+        "Engineering tolerance permits controlled variation in dimensions, geometry, or performance while preserving function and manufacturability. Individually conforming parts do not guarantee a successful assembly because deviations can accumulate; process bias, gauge error, and environment also affect outcomes. Tolerances should follow functional sensitivity, fit, process capability, measurement uncertainty, and risk. Critical features may need tighter limits, while unnecessary precision elsewhere only raises cost."
       ],
       "explanationParagraphsZh": [
-        "工程公差允许尺寸、几何、材料或性能受控变化，同时保住所需功能与经济制造。",
-        "公差叠加、配合类型、敏感度、过程能力、测量不确定性、温度、磨损与风险指导分配。单件合格不保证装配功能，无必要的紧限会提高成本。"
+        "工程公差允许尺寸、几何或性能在受控范围内变化，同时保证功能和可制造性。单件都合格，不代表装配一定成功，因为多个偏差可能叠加；过程偏向、量具误差和环境也会改变结果。公差应按功能敏感度、配合、过程能力、测量不确定性与风险分配，关键处收紧、非关键处无谓收紧只会增加成本。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0716-stability-and-control",
@@ -377,39 +386,40 @@
       "fieldCode": "0716",
       "fieldTitle": "Motor vehicles ships and aircraft",
       "fieldTitleZh": "机动车、船舶与航空器",
-      "title": "The Cargo Stacked Above the Sail",
-      "titleZh": "堆到帆顶的货物",
-      "summary": "A narrow ship carries more cargo high above its deck and gains capacity while losing the restoring response and control margin needed after a gust.",
-      "summaryZh": "窄船把更多货物堆在甲板高处，增加运量的同时失去阵风后所需的回复能力与操纵余量。",
+      "title": "The Steadiest Ship Missed the Harbour",
+      "titleZh": "最稳的船错过了港口",
+      "summary": "An owner deepens a ferry's keel and widens its hull until it resists every roll, then finds that it also resists its helmsman.",
+      "summaryZh": "船主为了让渡船再也不倾斜，不断加深龙骨、加宽船身，最后它顶住了侧风，也拒绝听从舵手。",
       "storyParagraphs": [
-        "Captain Oren stacked cargo high on a narrow coastal ship to avoid a second voyage. At the quay it floated upright and passed a simple draft check. Outside the harbour, a side gust heeled the vessel. The elevated load had raised its centre of gravity, reducing the lever that normally produced a restoring moment. The ship returned slowly, then rolled farther when a second wave arrived before the first motion died.",
-        "Naval engineer Mira shifted dense cargo low and secured it against movement. She compared centre of gravity, buoyancy, hull geometry, and how the righting arm changed with heel angle. Mira calculated the metacentric relation only for small angles and did not extrapolate it through the full roll. She used the complete righting-arm curve, downflooding angle, and area under the curve to assess reserve. A positive initial response near upright did not guarantee adequate stability at large angles or after flooding. Free liquid in a half-filled tank shifted as the ship rolled and further reduced margin through a free-surface effect. Cargo securing was part of dynamics because a shifting load changed the mass distribution during the event rather than merely before departure when calculations were signed.",
-        "Oren demanded a vessel that never rolled. Mira warned that very high initial stability could produce a short, harsh roll period and large accelerations, while heavy damping or added appendages could alter resistance and manoeuvrability. Static stability described the tendency to return after displacement; dynamic behaviour included inertia, damping, waves, speed, and time. Stability was not the absence of motion. Comfort, cargo safety, manoeuvrability, and capsize resistance were related but not identical objectives.",
-        "The rudder then proved too small to correct a turn in strong following seas. A stable vessel still required control authority to change heading, speed, and attitude as commanded. Response depended on water flow, actuator limits, delay, and coupling among roll, yaw, and pitch. A powerful control could also destabilise the ship if applied late or too aggressively.",
-        "Mira tested loading cases, damage conditions, wind and wave scenarios, and human response. She posted loading limits and trained crews to recognise shifting cargo, icing, water ingress, and actuator failure. Models and trials covered a domain; they did not promise safety outside it. Reserve margin mattered because uncertainty and emergencies consumed capacity that normal operation seemed not to need.",
-        "The ship revealed stability and control: stability concerns how a vehicle responds to disturbance and whether restoring tendencies, inertia, and damping keep motion bounded or return it toward an operating state; control concerns whether available actuators can command desired changes with adequate authority and response. Geometry, mass distribution, speed, environment, coupling, delay, and operating limits shape both. Oren had increased cargo capacity on paper. He had spent the margin that allowed the ship to answer the sea."
+        "A bay ferry once rolled in cross-seas until its passengers turned pale. Owner Du Cheng swore that his next vessel would be 'as steady as the pier'. He widened the hull, placed weight low, and fitted deep fixed fins. In light waves during trials, the deck stayed level enough for a bowl of tea to remain still on a table.",
+        "On its first passenger voyage, a crosswind pushed the ship toward the edge of the channel. It barely rolled, but the helmsman could not turn the bow. The deep fins and wide hull strongly resisted yaw, while the original small rudder lacked authority at low speed. The harbour entrance slid past to starboard, and the ferry had to enter the outer bay before turning back.",
+        "A gust struck during the second approach. The helmsman applied full rudder early, but the ship delayed; when speed increased, it turned too far and scraped the dock fenders. No one was hurt, but passengers remained aboard for two extra hours. Du saw for the first time that a vessel's tendency to return toward its original motion was not the same as its ability to follow a commanded change in time.",
+        "The shipbuilder adjusted the hull, load position, and fin area, and gave the rudder sufficient authority. Trials covered empty and full loads, low speed, crosswinds, and damaged conditions. The new ship still settled after a disturbance, but no longer sacrificed steering merely to appear perfectly steady.",
+        "On the next entry, the helmsman pressed the tiller gently and the bow crossed the wind toward the harbour. When he released it, the hull gradually settled again. Du lifted the tea bowl from the table; only a small ring remained on the water."
       ],
       "storyParagraphsZh": [
-        "船长奥伦为省去第二趟航行，把货物高高堆在一艘窄海船上。码头上它保持直立，也通过简单吃水检查。出港后，侧风让船倾斜。高位载荷抬高重心，缩短正常产生回复力矩的力臂。船缓慢回正，第一轮运动尚未消退，第二道浪又让它滚得更远。",
-        "船舶工程师米拉把重货移到低处并固定。她比较重心、浮力、船体几何，以及复原力臂怎样随横倾角变化。米拉只在小角度使用初稳性关系，不把它外推到完整横摇；她用完整复原力臂曲线、进水角与曲线下面积评估储备。直立附近的正初始响应，不保证大角度或进水后仍有足够稳性。半满舱中的自由液面会在船滚动时移动，又进一步降低余量。货物固定也是动力学一部分，因为移动货物会在事件中改变质量分布，而不只在签字离港前改变。",
-        "奥伦要求船永不摇晃。米拉提醒，过高的初稳性会造成周期短而猛烈的横摇与较大加速度，重阻尼或附加构件也可能改变阻力与机动性。静态稳性描述偏离后返回的倾向，动态行为还包括惯性、阻尼、波浪、速度与时间。稳性并不等于没有运动。舒适、货物安全、机动性与抗倾覆彼此相关，却不是同一目标。",
-        "随后舵在强顺浪中小到无法修正转向。一艘稳定的船仍需足够控制能力，按命令改变航向、速度与姿态。响应取决于水流、执行器限制、延迟，以及横摇、偏航与纵摇耦合。强力控制若太迟或过猛，也可能使船失稳。",
-        "米拉测试多种装载、损伤、风浪与人的响应情景。她公布装载限制，训练船员识别货物移动、结冰、进水与执行器故障。模型与试验覆盖一个运行域，不承诺域外安全。储备余量很重要，因为不确定与紧急会消耗正常运行看似无需的能力。",
-        "这艘船揭示的是稳定性与操纵性：稳定性关心车辆受扰后怎样响应，回复趋势、惯性与阻尼能否让运动有界或回到运行状态；操纵性关心执行器能否以足够权限和响应命令目标变化。几何、质量分布、速度、环境、耦合、延迟与运行界限共同塑造二者。奥伦在纸面增加了载货能力，却花掉了让船回答大海的余量。"
+        "湾口渡船曾在横浪里晃得乘客脸白。船主杜成发誓下一艘船要‘稳得像码头’，便加宽船身、压低重物，又装上很深的固定鳍。试航遇到小浪时，甲板果然平稳，茶碗放在桌上都没有滑动。",
+        "真正载客那天，侧风把船推向航道边缘。船没有明显倾斜，舵手却发现船头怎样也转不过来。深鳍和宽船身强烈抗拒偏转，原来的小舵在低速时力量不足。渡船眼看着港口入口从右舷滑过去，只能驶到外湾重新掉头。",
+        "第二次靠岸又遇阵风。舵手提前打满舵，船迟迟不转，等速度起来后却突然转得太多，擦坏了码头护木。没有人受伤，乘客却在船上多困了两个时辰。杜成第一次看见，船自己回到原方向的本领，并不等于它能及时去往舵手命令的方向。",
+        "造船师重新调整船身、载重位置和鳍面，给舵留下足够力量，还分别在空载、满载、低速、横风和受损情况下试航。新船仍会在扰动后收住摆动，却不再为了追求绝对平稳而把转向能力一并拿走。",
+        "下一次进湾，舵手轻推舵柄，船头越过风向对准港口；他松开手，船身又慢慢定住。杜成把桌上的茶碗端起来，里面的水只剩一圈小波纹。"
       ],
       "conceptName": "Stability and control",
       "conceptNameZh": "稳定性与操纵性",
       "explanationParagraphs": [
-        "Stability describes a vehicle's response to disturbance and whether motion remains bounded or tends toward an operating state. Control describes the ability of actuators to command desired changes with sufficient authority and response.",
-        "Geometry, mass distribution, inertia, damping, speed, environment, coupling, delays, actuator limits, damage, and operating domain shape both. More static stability is not automatically better manoeuvrability or comfort."
+        "Stability describes whether a vehicle's motion after disturbance remains bounded, decays, or returns toward an operating state. Control describes whether its actuators have enough authority and response to achieve commanded changes. Stronger passive stability can improve disturbance resistance while also increasing resistance to turning or reducing manoeuvrability. Design must examine both recovery behaviour and control authority across speeds, loads, environments, delays, and failures."
       ],
       "explanationParagraphsZh": [
-        "稳定性描述车辆受扰后的响应，以及运动是否有界或趋向运行状态。操纵性描述执行器能否以足够权限与响应命令目标变化。",
-        "几何、质量分布、惯性、阻尼、速度、环境、耦合、延迟、执行器限制、损伤与运行域共同塑造二者。更强静态稳定不自动带来更好机动或舒适。"
+        "稳定性描述车辆或船舶受扰后的运动是否有界、衰减或回到运行状态；操纵性描述执行器能否以足够权限和速度实现命令变化。更强的被动稳定可能提高抗扰，也可能增加转向阻力或降低机动。设计需在不同速度、载荷、环境、延迟和故障下，同时检查恢复特性与控制能力。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0716-drag",
@@ -418,39 +428,40 @@
       "fieldCode": "0716",
       "fieldTitle": "Motor vehicles ships and aircraft",
       "fieldTitleZh": "机动车、船舶与航空器",
-      "title": "The Smaller Engine That Arrived First",
-      "titleZh": "更小发动机先抵达",
-      "summary": "A reshaped vessel with a smaller engine defeats a blunt powerful rival because transport performance depends on resistance, speed, loading, and whole-route energy.",
-      "summaryZh": "重新修形的船以更小发动机击败笨重强力对手，因为运输表现取决于阻力、速度、载荷与全程能量。",
+      "title": "The Cargo Boat That Won the Race",
+      "titleZh": "赢了赛船的货船",
+      "summary": "A new cargo boat outruns every vessel in the harbour while empty, then needs two extra voyages to deliver the same grain.",
+      "summaryZh": "一艘新货船在空载试航中快过全港，却为了送完同一批粮食，多跑了两趟。",
       "storyParagraphs": [
-        "Two couriers raced identical cargo across the bay. Daro installed the largest engine he could buy on a blunt old hull. Lina kept a smaller engine but smoothed the hull, reduced exposed fittings, aligned the shaft, and cleaned marine growth. Lina arrived first using less fuel. Daro had treated speed as an engine property while ignoring the resisting forces the engine had to overcome.",
-        "Engineer Sen separated frictional resistance along wetted surfaces, pressure or form drag from flow separation, and wave-making resistance at the free surface. Air resistance affected tall superstructures. The relative importance changed with speed, size, shape, roughness, and flow regime. Sen used tow tests and scaled models carefully because viscous and wave phenomena could not always be matched simultaneously at model scale. Extrapolation required dimensionless similarity, surface corrections, and uncertainty rather than a painted miniature assumed to behave exactly like the ship. A modification that helped at one operating point could hurt at another, so one dramatic coefficient did not describe every voyage.",
-        "Where density, reference area, and drag coefficient stayed approximately stable, aerodynamic drag force grew roughly with the square of speed, making the power needed to overcome it grow roughly with the cube because power also multiplied force by speed. Ships added wave effects with their own scaling. A small increase in cruising speed could therefore demand a disproportionately large power increase. The final few knots were often the most expensive.",
-        "Lina's narrow trial hull performed well empty but lost stability and trim when loaded. Sen redesigned around the actual payload, sea state, route, manoeuvres, and safety margin. Reducing resistance could not justify insufficient structure, control, cooling, or reserve power. Propeller efficiency and engine operating point also mattered; a clean hull paired with a poorly matched propulsor still wasted energy.",
-        "The couriers compared energy per tonne-kilometre and delivery time rather than fuel per hour alone. Slower speed reduced resistance but could require more crew time, refrigeration, or additional vessels. On the route, hull fouling and rough repairs increased resistance gradually, so the design advantage depended on inspection and cleaning. A one-time speed trial could not represent a season of weather, loading, shallow water, and biofouling. Weather routing, maintenance, loading, and schedule changed the system result. The efficient choice balanced service and constraints instead of minimising one component in isolation.",
-        "The race exposed drag and transport efficiency: drag is the resistance a vehicle experiences while moving through air or water, arising from skin friction, pressure differences, flow separation, lift production, waves, and other effects depending on the vehicle. Shape, surface, speed, fluid properties, payload, propulsion, and operating conditions determine energy per transport service. A larger engine can overpower resistance temporarily. Lina's advantage came from asking how much resistance needed to exist at all."
+        "Merchant Xu An wanted the royal grain contract and commissioned a long, narrow cargo boat. Its bow was sharpened like a knife and its planks polished enough to reflect a face. Empty during sea trials, it easily passed every old vessel in the harbour. Xu painted its fastest time on the sail and declared it the most economical boat for the whole route.",
+        "Under real cargo, the narrow vessel could carry only sixty per cent as many sacks while preserving draft and stability. Xu also ordered the captain to maintain trial speed, making the engine consume much more fuel. In rougher water the bow repeatedly struck the waves and the hold had to be lightened further. By the time the first grain shipment was complete, the new boat had made two extra voyages and used more fuel and crew hours.",
+        "The captain invited Xu aboard an old vessel. It travelled more slowly but carried more grain. A modest reduction in speed sharply reduced the water's resistance, increasing the number of sacks delivered per barrel of fuel. Xu finally put empty trial time, loaded consumption, number of voyages, and weather delays on the same sheet.",
+        "The shipbuilder kept a smooth hull but redesigned its beam, stern, and propeller around the usual load, allowing the engine to run at a suitable speed. The roughened hull was cleaned regularly and voyages avoided the strongest opposing current. The new measure no longer asked which boat was fastest; it asked how much fuel and time one sack required over the complete journey.",
+        "Before the next season's contract, Xu removed the racing record from the sail. A tailor made the cloth into a small flag bearing only the words: one barrel, four hundred and twenty sacks."
       ],
       "storyParagraphsZh": [
-        "两名信使运相同货物横渡海湾。达罗给笨重旧船装上能买到的最大引擎。莉娜保留较小引擎，却修顺船体、减少外露附件、校正轴线并清除附着生物。莉娜更早抵达，燃料还更少。达罗把速度当成发动机属性，忽略发动机必须克服的阻力。",
-        "工程师森区分湿表面的摩擦阻力、流动分离造成的压差或形状阻力，以及自由水面的造波阻力。高大上层建筑还承受空气阻力。各项重要性随速度、尺度、形状、粗糙度与流动状态变化。森谨慎使用拖曳试验与比例模型，因为模型尺度下黏性与波浪现象不一定能同时匹配。外推需要无量纲相似、表面修正与不确定性，不能假定一只涂好颜色的小船会和真船完全相同。一项改动在某运行点有益，在另一处可能有害，因此一个醒目系数不能描述所有航程。",
-        "在密度、参考面积与阻力系数近似不变的范围内，空气阻力大致随速度平方增长，克服它所需功率又因功率等于力乘速度而大致随速度立方增长。船舶还叠加具有自身尺度关系的造波作用。巡航速度小幅提高，也可能要求远超比例的功率增加；最后几节速度往往最昂贵。",
-        "莉娜的窄试验船空载表现很好，装货后却失去稳性与纵倾。森围绕真实载荷、海况、路线、操纵与安全余量重设计。降低阻力不能为结构、控制、冷却或备用功率不足开脱。螺旋桨效率与发动机运行点也重要，干净船体若配错推进器，仍会浪费能量。",
-        "信使比较每吨公里能耗与交付时间，而非只看每小时燃料。减速会降低阻力，却可能增加船员工时、制冷负担或所需船数。航程中，船体污损与粗糙修补会逐渐增加阻力，因此设计优势依赖检查与清洁。一次速度试验无法代表整季天气、装载、浅水与生物附着。气象航线、维护、装载与时刻都会改变系统结果。高效选择要平衡服务与约束，而非孤立最小化一个部件。",
-        "这场比赛揭示的是阻力与运输效率：阻力是车辆穿过空气或水时受到的抵抗，来自表面摩擦、压差、流动分离、升力产生、波浪及其他随车辆而变的作用。形状、表面、速度、流体性质、载荷、推进与运行条件决定单位运输服务能耗。更大引擎可以暂时压过阻力，莉娜的优势却来自追问究竟需要存在多少阻力。"
+        "船商许安要争下王城粮运合约，便请人造了一艘细长新船。船头削得像刀，船板打磨得能照出人影。空载试航时，它轻易超过港里所有旧船。许安把最快用时写在帆上，认为这就是全程最省的船。",
+        "真正装粮时，细船为保持吃水和稳定，只能装旧船六成的袋数。许安又命船长维持试航速度，发动机便吞下更多燃料。浪稍大，船头不断拍水，货舱也必须减载。第一批粮运完，新船多跑两趟，耗油和船员工时反而更高。",
+        "船长请他一起登上旧船。旧船速度慢些，却能装更多粮；把速度降低一小段后，水面对船身的推拒明显减轻，每桶油送到王城的粮袋增加了。许安这才把空船的竞速时间、满载油耗、航次和天气等待写到同一张表上。",
+        "造船师没有放弃流畅船形，而是按常用载荷重新调整船宽、船尾和螺旋桨，让发动机在合适速度工作。粗糙船底定期清理，航线也避开逆流最强的时段。新标准不再问哪艘船最快，而问一袋粮经过完整航程需要多少燃料与时间。",
+        "下一季签约前，许安把帆上那行竞速纪录拆了下来。裁缝用同一块布缝成一面小旗，上面只写着：一桶油，四百二十袋。"
       ],
       "conceptName": "Drag and transport efficiency",
       "conceptNameZh": "阻力与运输效率",
       "explanationParagraphs": [
-        "Drag is resistance to motion through a fluid, arising from friction, pressure differences, separation, lift, waves, and related effects. Its components depend on speed, shape, roughness, scale, and flow regime.",
-        "Transport efficiency must be defined per useful service and whole route. Payload, propulsion, operating point, stability, safety, weather, maintenance, and time costs can change whether a lower-drag design is actually better."
+        "Drag is resistance to motion through a fluid, arising from surface friction, pressure differences, flow separation, wave making, and lift-related effects. It changes with speed, shape, roughness, scale, and flow regime. Transport efficiency must be defined by useful service over a complete journey. Low empty drag or high maximum speed does not guarantee the least energy per unit of cargo because load, propulsion efficiency, stability, safety, weather, and trip count alter the result."
       ],
       "explanationParagraphsZh": [
-        "阻力是穿过流体时受到的运动抵抗，来自摩擦、压差、分离、升力、波浪及相关作用。各分量取决于速度、形状、粗糙度、尺度与流动状态。",
-        "运输效率要按有用服务与全程定义。载荷、推进、运行点、稳定、安全、天气、维护与时间成本都会改变低阻设计是否真正更好。"
+        "阻力是物体穿过流体时受到的运动抵抗，来源包括表面摩擦、压差、流动分离、造波与升力相关作用，并随速度、形状、粗糙度、尺度和流态变化。运输效率必须以有用服务和完整航程定义；低空载阻力或最高速度不保证单位货物最省，因为载荷、推进效率、稳定、安全、天气与航次都会改变结果。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0716-redundancy",
@@ -459,39 +470,40 @@
       "fieldCode": "0716",
       "fieldTitle": "Motor vehicles ships and aircraft",
       "fieldTitleZh": "机动车、船舶与航空器",
-      "title": "The Second Cable in the Sky",
-      "titleZh": "天空中的第二根控制索",
-      "summary": "A mail airship survives one severed control cable only because the backup is independent, detectable, tested, switchable, and sufficient for a degraded return.",
-      "summaryZh": "邮政飞艇在一根控制索断裂后幸存，不只因有备份，还因备份独立、可检测、经测试、能切换并足以降级返航。",
+      "title": "The Two Pumps That Fell Silent Together",
+      "titleZh": "两台一起沉默的水泵",
+      "summary": "A ferry owner installs two bilge pumps and believes leaks are no longer dangerous, overlooking the low-mounted switchboard they share.",
+      "summaryZh": "渡船装了两台排水泵，船主以为漏水不再可怕，却没有注意它们共用同一块低处配电板。",
       "storyParagraphs": [
-        "The northern mail airship carried two steering cables. When ice severed the first, Captain Sela pulled the second and turned home. The owner praised duplication and ordered every critical part copied. Engineer Ivo inspected the system and found both cables ran through the same sharp guide and shared one anchor. The first accident had cut only one by chance; a shifted guide could have severed both.",
-        "Ivo separated routes, anchors, and inspection access. He added a sensor that revealed loss of the primary path and a clear changeover mechanism. A backup that failed silently could remain broken for months, leaving apparent rather than real protection. Maintenance teams initially inspected the primary cable more often because it carried normal loads. Ivo equalised assurance, since an unused backup could deteriorate unnoticed and reveal its failure only after the primary was gone. Crews exercised the alternate system under controlled conditions and recorded latent faults before an emergency demanded it.",
-        "The second cable had less authority and could not support full-speed manoeuvres. Ivo defined a degraded flight envelope: lower speed, limited turns, nearest safe landing, and reduced weather exposure. Backup capacity had to be sufficient for a safe objective, not necessarily normal service. The crew needed procedures that matched what remained possible after failure.",
-        "Adding copies increased weight, maintenance, sensors, software, and opportunities for incorrect switching. One automatic selector oscillated between disagreeing channels. Redundancy management itself became critical because a selector receiving ambiguous evidence could discard the healthy path or oscillate until both became unusable in flight. Ivo specified voting or priority logic, fault detection, and a stable fallback. He used diversity where one design defect could affect identical copies, while recognising that diverse systems introduced different interfaces and training burdens.",
-        "Some hazards called for physical duplication; others favoured structural load paths, reserve control authority, fire separation, or the ability to glide. Common-cause events such as ice, flooding, power loss, or maintenance error crossed nominally separate components. Flight tests deliberately failed one channel at a time and then combined credible faults. They measured detection latency, switch transients, pilot workload, and whether the remaining system retained enough authority in the worst permitted conditions. Ivo used hazard analysis to decide what failures must be tolerated and verified independence instead of counting parts.",
-        "The airship relied on safety redundancy: additional components, paths, information, or capacity that preserve a safe function or controlled degradation after specified failures. Effective redundancy requires independence, fault detection, isolation, switching or voting, sufficient capacity, testing, maintenance, and crew understanding. It adds complexity and can share hidden causes. The second cable saved the ship not because two is a magical number, but because one failure left a genuinely different way to steer toward safety."
+        "During refurbishment, a channel ferry owner deliberately installed two bilge pumps. Whenever the surveyor asked about flooding, he slapped the deck and said, 'If one fails, there is another.' The identical pumps occupied neighbouring compartments and shared one switchboard, making maintenance convenient.",
+        "On a night crossing, driftwood split a cargo-hold seam. Soon after the first pump started, water reached the low switchboard and a short circuit cut power to both pumps. The spare pump was undamaged but equally powerless. The crew formed a bucket line and barely returned to port, with all cargo on the lower level soaked.",
+        "The owner blamed the second pump for failing to do its duty. The surveyor laid the two dead cables beside each other on a table. They were two in number, he said, but had only one fate. If a shared supply, location, cooling system, or maintenance error could defeat every copy, extra equipment offered reassurance mainly before the accident.",
+        "During the refit, one electric pump moved higher and received an independent circuit. Another could run from a diesel engine, and a manual pump remained aboard. High water sounded an alarm, check valves prevented backflow, and the crew regularly disabled one path to verify that the remaining equipment took over automatically with enough capacity. Added weight and inspection work entered the maintenance plan.",
+        "Before the ferry returned to service, the surveyor suddenly pulled the main pump fuse. The engine room went quiet for a moment, then a steady turning sound began elsewhere. The owner did not applaud. He bent down and watched the bilge level begin to fall."
       ],
       "storyParagraphsZh": [
-        "北方邮政飞艇装有两根转向控制索。冰块切断第一根时，船长塞拉拉动第二根，转向返航。船主称赞复制，命令所有关键部件都做双份。工程师伊沃检查后发现，两根索穿过同一处锋利导向件，也共用一个锚点。第一次事故只碰巧切断一根，导向件一旦移位，两根都可能断。",
-        "伊沃分开路线、锚点与检查入口，加入能显示主路径失效的传感器和明确切换机构。静默失效的备份可能坏上数月，只留下表面保护。维护团队起初更常检查承担日常载荷的主索。伊沃让两条路径获得同等保证，因为闲置备份可能悄悄劣化，直到主索消失后才暴露自身故障。机组在受控条件下演练备用系统，在紧急需要前记录潜伏故障。",
-        "第二根索控制权限较小，无法支持全速操纵。伊沃定义降级飞行域：降低速度、限制转弯、降落最近安全点并减少恶劣天气暴露。备用能力要足以完成安全目标，不一定维持正常服务。机组程序必须匹配故障后仍可能做到的事。",
-        "增加副本也增加重量、维护、传感器、软件与错误切换机会。一只自动选择器曾在意见不同的通道间来回振荡。冗余管理本身变成关键，因为收到模糊证据的选择器可能抛弃健康路径，或在飞行中振荡到两边都不可用。伊沃规定投票或优先逻辑、故障检测与稳定后备。在同一设计缺陷可能影响相同副本处，他使用多样性，也承认多样系统会增加接口与培训负担。",
-        "有些危险需要实体复制，另一些更适合多重承载路径、备用控制权限、防火隔离或滑翔能力。结冰、进水、断电与维护错误等共因事件会跨越名义上分开的部件。飞行试验逐一主动失效通道，再组合可信故障；它测量检测延迟、切换瞬态、飞行员负担，以及剩余系统在最坏允许条件下是否仍有足够权限。伊沃用危害分析决定必须容忍哪些故障，并验证独立性，而非只数零件。",
-        "飞艇依赖的是安全冗余：用额外组件、路径、信息或能力，在指定故障后保留安全功能或受控降级。有效冗余需要独立性、故障检测、隔离、切换或投票、足够能力、测试、维护与机组理解。它会增加复杂度，也可能共享隐藏原因。第二根索救下飞艇，不是因为二是魔法数字，而是一次故障后还留下真正不同的方式驶向安全。"
+        "海峡渡船翻修时，船主特意装了两台排水泵。验船官问起进水事故，他总拍着舱板说：‘坏一台，还有一台。’两台泵型号相同，放在相邻舱位，又接到同一块配电板上，维护起来十分省事。",
+        "一次夜航中，货舱接缝被漂木撞开。第一台泵启动不久，水便淹到低处的配电板，短路同时切断两台泵。备用泵毫无损坏，却同样没有电。船员用桶接力排水，渡船勉强返回，底层货物全被泡湿。",
+        "船主责怪第二台泵没有尽责。验船官把两根断电的电缆并排放在桌上：它们数量是两根，命运却只有一条。若共同的电源、位置、冷却或维护错误能同时击中副本，多出来的设备只是在事故前看上去安心。",
+        "改装后，一台电泵移到较高舱位并使用独立电路，另一套可由柴油机驱动，船上还保留人工泵。高水位会报警，止回阀阻止倒灌，船员定期切断其中一路，确认剩余设备能够自动接手并具备足够能力。增加的重量和检查工作也被写进维护计划。",
+        "复航前，验船官突然拔掉主泵保险。机舱安静了一瞬，另一处随即传来稳定的转动声。船主没有鼓掌，只弯腰看着舱底水线开始下降。"
       ],
       "conceptName": "Safety redundancy",
       "conceptNameZh": "安全冗余",
       "explanationParagraphs": [
-        "Safety redundancy adds components, paths, information, or capacity so a system can preserve a safe function or degrade controllably after specified failures.",
-        "Value depends on independence, detection, isolation, switching or voting, capacity, testing, maintenance, and human procedures. Added copies create weight and complexity, while common-cause failures can defeat several at once."
+        "Safety redundancy adds components, paths, information, or capacity so a system retains a critical function or degrades in a controlled way after specified faults. Copies need sufficient capacity and should avoid common supplies, locations, designs, or maintenance that create common-cause failure. Fault detection, isolation, and reliable transfer are also necessary. Redundancy adds weight, cost, and complexity, so regular testing must show that it will actually work when needed."
       ],
       "explanationParagraphsZh": [
-        "安全冗余增加组件、路径、信息或能力，使系统在指定故障后仍保留安全功能或受控降级。",
-        "其价值取决于独立性、检测、隔离、切换或投票、能力、测试、维护与人的程序。副本增加重量与复杂度，共因故障也可能同时击败多个通道。"
+        "安全冗余增加组件、路径、信息或能力，使系统在指定故障后仍保留关键功能或受控降级。副本必须具备足够能力，并尽量避免共同电源、位置、设计或维护造成的共因失效；还需检测故障、隔离问题并可靠切换。冗余会增加重量、成本和复杂度，因此必须通过定期试验证明它在需要时真正可用。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0721-thermal-processing",
@@ -500,39 +512,40 @@
       "fieldCode": "0721",
       "fieldTitle": "Food processing",
       "fieldTitleZh": "食品加工",
-      "title": "Two Batches at the Same Temperature",
-      "titleZh": "同一温度下的两批牛奶",
-      "summary": "Two sealed milk batches reach the same peak temperature yet receive different microbial reduction because time, cold spots, heating history, and cooling differ.",
-      "summaryZh": "两批密封牛奶达到相同峰值温度，微生物降低却不同，因为时间、冷点、升温历史与冷却过程并不相同。",
+      "title": "The Jar That Heated Last",
+      "titleZh": "最慢热的那一罐",
+      "summary": "The cannery's steam gauge passes its target mark, yet a row of lids later swells because the innermost jar never heated through.",
+      "summaryZh": "罐头房的蒸汽表已经越过目标刻线，仓库里却还是鼓起了一排罐盖，因为最里面那罐从未热透。",
       "storyParagraphs": [
-        "Dairy owner Mira heated two sealed batches until both gauges touched the same target temperature. She removed the first immediately and held the second longer. Later tests showed different microbial reduction, while the longer treatment also changed flavour more. Mira had treated a peak reading as the whole process even though lethal effect and quality change accumulated across time and temperature.",
-        "Process specialist Taro mapped the coldest location, not merely the steam chamber. Container size, product viscosity, agitation, filling, and heating mode changed how quickly the centre warmed. A wall sensor could reach target while the slowest point lagged. Cooling also mattered because surviving organisms could grow or heat could continue damaging quality during a slow descent.",
-        "Taro described a decimal reduction time at a stated temperature: under defined conditions, a target population declined by a factor of ten for each such interval. Changing temperature changed that time, often represented through a temperature-sensitivity parameter. The relationship was a model fitted to a specified organism, food, and condition, not a universal kitchen constant. Real survivor curves could show shoulders or tails because cells clustered, heat resistance varied, or the food matrix protected them. Taro therefore used conservative parameters supported by challenge data rather than extending a neat straight line beyond the tested range. Initial load and required reduction determined the designed process.",
-        "The first design delivered the calculated chamber exposure but failed a distribution test because some containers entered late and one rack blocked circulation. Working with the responsible processing authority, Taro established and validated the scheduled process in the actual equipment, monitored critical variables, calibrated instruments, and defined corrective action for deviations. He also checked come-up time, container closure, venting, and cooling water, because a sound heating calculation could still be defeated by trapped air, leakage, or post-process contamination. Any change in formulation, fill weight, package geometry, or equipment triggered documented review and, where necessary, revalidation before release. Product sampling alone could miss rare survivors and could not reconstruct every container's history.",
-        "More heating was not automatically safer in every sense. Excess treatment degraded nutrients, texture, flavour, packaging, and throughput, while underprocessing left hazards. Taro optimised within a validated safety requirement and used hygienic raw handling, sealed packaging, rapid cooling, and prevention of recontamination. Heat was one barrier inside a controlled system, not permission to neglect earlier and later steps.",
-        "The dairy had learned thermal processing: applying a controlled time-temperature history to achieve a specified physical, chemical, or microbial effect while managing quality. Process lethality accumulates over the full profile and depends on the target, product, equipment, cold spot, heat transfer, initial condition, and validated model. Monitoring, calibration, distribution studies, cooling, and deviation procedures are essential. The two gauges had touched the same number. The milk had not lived through the same history."
+        "During the tomato harvest, the Luo cannery cooked ten retort loads a day. The owner watched only the temperature gauge at the top of the steam chamber. As soon as its needle reached the red line, he timed a short hold and unloaded immediately. This saved fifteen minutes per batch, and every lid appeared beautifully sealed.",
+        "Two weeks later, soft pops came from a warehouse corner as a row of lids began to swell. All the jars came from one load that had been packed most densely and had entered colder than usual. The steam gauge had not lied. It had measured heat at the top of the chamber, not the most difficult place to warm inside the tomato product.",
+        "A food technologist placed small recorders inside test jars at different positions and ran trials with full and partial loads and different starting temperatures. Jars near the door heated quickly; the coldest, thickest jar in the centre lagged far behind. She recorded not only the highest point, but the whole path of heating, holding, and cooling.",
+        "The new schedule was based on achieving the required effect at the slowest-heating location, with jar shape, fill amount, and loading pattern fixed. Critical readings were recorded for every batch and gauges were calibrated. If time, temperature, or loading deviated, the whole batch was held and handled according to a defined procedure. The cannery produced fewer loads, but no longer relied on swollen lids in storage to reveal its mistakes.",
+        "On the busiest day of the next season, the top needle had already crossed the red line. The owner's hand rested on the chamber latch until the recorder in the central test jar also lit. Only then did he open it."
       ],
       "storyParagraphsZh": [
-        "乳品店老板米拉给两批密封牛奶加热，直到仪表都触及相同目标温度。第一批立即取出，第二批继续保温。后续检测显示微生物降低程度不同，较长处理也让风味变化更多。米拉把一个峰值读数当成完整过程，实际上致死作用与质量变化会跨时间和温度累积。",
-        "工艺专家塔罗绘制最冷位置，而不只测蒸汽室。容器大小、产品黏度、搅动、灌装与加热方式都会改变中心升温速度。壁面传感器可以已达目标，最慢点仍然滞后。冷却也重要，因为下降缓慢时，存活微生物可能生长，余热也可能继续损害质量。",
-        "塔罗说明指定温度下的十倍降低时间：在定义条件中，每经过这样一段时间，目标群体降低一个数量级。温度变化会改变该时间，常用温度敏感参数表示。这个关系是针对指定微生物、食品与条件拟合的模型，不是普遍厨房常数。真实存活曲线可能因细胞聚集、耐热性差异或食品基质保护而出现肩部或拖尾。塔罗因此采用挑战数据支持的保守参数，而不把整齐直线外推到未经测试的范围。初始负荷与所需降低程度共同决定设计过程。",
-        "第一版设计给出计算好的腔体暴露，分布测试却失败，因为部分容器迟到，一只货架还阻挡循环。塔罗与负责的工艺权威共同在真实设备中建立并验证计划过程，监测关键变量，校准仪器，并为偏差规定纠正行动。他还检查升温时间、容器封口、排气与冷却水，因为正确加热计算仍可能被残留空气、泄漏或加工后污染击败。配方、灌装重量、包装几何或设备一旦变化，都要书面审查，并在必要时重新验证后才能放行。只抽检产品可能漏掉罕见存活者，也无法重建每只容器的历史。",
-        "加热更多并不在所有意义上自动更安全。过度处理会损害营养、质地、风味、包装与产能，处理不足则留下危害。塔罗在经验证的安全要求内优化，并采用卫生原料处理、密封包装、快速冷却与防止再污染。加热只是受控系统中的一道屏障，不是忽略前后步骤的许可。",
-        "乳品店学会的是热加工：施加受控时间—温度历史，以取得指定物理、化学或微生物效果，同时管理质量。过程致死量在完整曲线上累积，并取决于目标、产品、设备、冷点、传热、初始条件与经验证模型。监测、校准、分布研究、冷却与偏差程序都不可缺。两只仪表触碰了同一数字，牛奶经历的却不是同一段历史。"
+        "番茄丰收时，罗家罐头房一天要煮十锅。老板只盯着蒸汽柜顶部的温度表，指针一到红线便开始计一小会儿，随后立刻出柜。这样每锅都能快半刻钟，罐盖也全都封得漂亮。",
+        "两周后，仓库角落传来轻响，一排罐盖慢慢鼓起。那些罐头都来自同一锅，装得最密，入柜前也比平日更凉。蒸汽表没有撒谎；它只是测到柜顶的热，而不是番茄酱最难升温的那一处。",
+        "食品师把细小记录器放进不同位置的试罐，又在满柜、半柜和不同初温下各煮一回。靠近门口的罐很快达到温度，中央最稠、最冷的罐却迟了许久。她没有只记最高点，而是把整段升温、保持和冷却经过都画下来。",
+        "新程序以最慢热位置达到所需效果为准，并固定罐形、装量和摆放方式。每锅记录关键读数，温度表定期校准；若时间、温度或装载偏离，整锅先隔离，再按预先规定的办法处理。罗家少煮了几锅，却不再靠仓库里的鼓盖替自己发现错误。",
+        "下一季最忙的一天，顶部指针早已越过红线。老板的手停在开柜闩上，直到中央试罐的记录器也亮起，才把闩拉开。"
       ],
       "conceptName": "Thermal processing",
       "conceptNameZh": "热加工",
       "explanationParagraphs": [
-        "Thermal processing applies a controlled time-temperature history to achieve specified microbial, physical, or chemical effects. Lethality accumulates across the profile rather than depending on peak temperature alone.",
-        "Targets, product properties, initial load, cold spots, heat transfer, equipment distribution, validated models, monitoring, calibration, cooling, quality, and deviation procedures determine a safe scheduled process."
+        "Thermal processing applies a controlled time-temperature history to achieve a specified microbial, physical, or chemical effect. Lethality accumulates across the full curve rather than depending only on peak temperature. Product viscosity, starting temperature, container, and loading pattern alter heat transfer and the cold spot. A safe schedule requires validation, routine monitoring of critical parameters, calibrated instruments, controlled cooling, and defined handling of deviating batches."
       ],
       "explanationParagraphsZh": [
-        "热加工施加受控时间—温度历史，以取得指定微生物、物理或化学效果。致死作用在完整曲线上累积，而非只取决于峰值温度。",
-        "目标、产品性质、初始负荷、冷点、传热、设备分布、验证模型、监测、校准、冷却、质量与偏差程序共同决定安全计划过程。"
+        "热加工通过受控的时间—温度历程取得规定的微生物、物理或化学效果，致死作用会沿完整曲线累积，并非只看峰值。产品黏度、初温、容器和装载方式会改变传热与冷点。安全程序需经验证，日常还要监测关键参数、校准仪器、控制冷却，并对偏差批次执行隔离和处置。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0721-water-activity",
@@ -541,39 +554,40 @@
       "fieldCode": "0721",
       "fieldTitle": "Food processing",
       "fieldTitleZh": "食品加工",
-      "title": "The Drier Fruit That Spoiled First",
-      "titleZh": "看起来更干却先坏的果脯",
-      "summary": "A fruit preserve with less total water spoils before a moister rival because microbial and chemical behaviour follows available water, not appearance alone.",
-      "summaryZh": "总含水量更低的果脯比更湿润的对手先变坏，因为微生物与化学行为取决于可利用水，而非外观。",
+      "title": "The Box That Looked Drier",
+      "titleZh": "看起来更干的那一盒",
+      "summary": "A confectioner chooses travel goods by total moisture alone; the drier-looking cake moulds while glossy preserve remains sound in its jar.",
+      "summaryZh": "点心商只按总水分挑选远行货物，外表较干的糕先长了霉，亮晶晶的果酱却仍安稳地封在罐里。",
       "storyParagraphs": [
-        "Preserver Nela made two fruit pastes. The first looked drier and contained less total water; the second was softer but held dissolved sugar and salt. Nela expected the drier paste to last longer. It moulded first. Measuring moisture content had counted all water by mass, but it had not revealed how strongly that water was bound or how available it was for microbial growth and reactions.",
-        "Food scientist Ivo sealed samples until the vapour above each reached equilibrium, then compared the food's equilibrium vapour pressure with that of pure water at the same temperature. The resulting ratio ranged from zero to one and equalled equilibrium relative humidity divided by one hundred. The softer paste had more total water but lower availability because solutes and structure reduced water's escaping tendency. Two foods could share moisture content yet differ in this thermodynamic measure, or share the measure with different moisture contents. Ivo also plotted a sorption isotherm for the actual recipe, relating moisture content to the equilibrium ratio at fixed temperature. Its shape revealed regions where a small moisture gain caused a large rise in availability, so a linear conversion would have been misleading.",
-        "Nela added sugar until the target fell, but crystallisation during storage released previously constrained water into the remaining phase. Moisture also migrated from a soft filling into a crisp shell until their values approached equilibrium, ruining texture and possibly changing microbial risk at the interface. Drying and rewetting did not always retrace the same curve, a hysteresis that made product history relevant. Temperature shifts moved equilibrium and sometimes caused condensation inside a package, so Nela could not infer a storage value from room-temperature moisture data alone. Packaging needed to control exchange with humid air, not merely look sealed.",
-        "Different organisms tolerated different ranges, and growth boundaries also depended on temperature, acidity, preservatives, atmosphere, time, and competition. Lowering the measure slowed many microbes but did not sterilise the food or stop every chemical reaction. Some oxidation and browning rates changed non-monotonically. Ivo refused one universal safe number detached from product and hazard validation.",
-        "Measurement required temperature control, calibration, representative sampling, and enough equilibration time. A crust could hide a wetter interior, while volatile compounds could interfere with some instruments. Ivo monitored the process and storage distribution rather than trusting one laboratory point. Formulation changes were checked for flavour, texture, regulatory, and nutritional consequences alongside stability.",
-        "The fruit taught water activity: the ratio describing water's effective availability in a food relative to pure water at the same temperature, commonly linked to equilibrium relative humidity. It differs from moisture content and influences microbial growth, chemical reactions, texture, and moisture migration. Solutes, structure, temperature, packaging, and phase changes affect it, while safety limits remain organism- and product-specific. Nela's eyes had judged how much water seemed present. Spoilage followed how free that water was to participate."
+        "A confectioner needed goods that could cross a humid strait. He touched two samples: fruit preserve was glossy and sticky, while soft cake looked much drier. A laboratory sheet also showed less total moisture in the cake. He kept the preserve in his shop and loaded a ship with cake, certain that less water meant less spoilage.",
+        "By the tenth day, white mould appeared in several cake boxes, while the preserve sample remained sound. The merchant suspected the analysis. A food technologist sealed each food in a small chamber and waited for its air and food to reach equilibrium. Air around the cake became more humid. Sugar in the preserve had not removed its water, but made much of that water less available to microorganisms.",
+        "She opened a layered pastry as well. Water from the fruit filling had moved gradually into the crisp shell, softening it and allowing mould to appear first at the seam. Adding up the moisture in the whole pastry concealed movement between its parts and did not reveal how readily the water could support growth and reactions. Higher temperature accelerated the changes.",
+        "The merchant adjusted formulation and drying, added a thin barrier between shell and filling, and selected packaging that resisted outside humidity. Each product was validated for its own acidity, sugar or salt, temperature, and intended storage period; a number borrowed from another food no longer served as a guarantee.",
+        "Before the next shipment, the merchant still touched the soft cake, but did not stamp the crate from touch alone. He waited for the needle in the small chamber to settle before sealing the first box."
       ],
       "storyParagraphsZh": [
-        "果脯师奈拉制作两种果泥。第一种外观更干，总含水量也更低；第二种更柔软，却含有溶解糖盐。奈拉以为更干的会保存更久，它却先发霉。水分含量按质量统计所有水，却没有说明水被束缚得多强，又有多少可供微生物生长与反应利用。",
-        "食品科学家伊沃把样品密封到上方蒸气达到平衡，再把食品平衡蒸气压与同温纯水的蒸气压比较。所得比值在零到一之间，也等于平衡相对湿度除以一百。软果泥总水更多，可利用程度却更低，因为溶质与结构降低水的逸出倾向。两种食品可有相同含水量而该热力学量不同，也可该量相同而含水量不同。伊沃还为实际配方绘制吸湿等温线，把含水量与固定温度下的平衡比值联系起来。曲线显示，有些区间只增加少量水分，可利用程度便大幅上升，因此线性换算会误导判断。",
-        "奈拉加糖让目标数值下降，储存时糖却结晶，把原先受约束的水释放进剩余相。水分还会从软馅迁入脆壳，直到两边接近平衡，既毁掉口感，也可能改变界面微生物风险。干燥与重新吸湿不总沿同一条曲线返回，这种滞后让产品历史变得重要。温度变化也会移动平衡，有时还让包装内部结露，因此奈拉不能用室温含水数据推断储存值。包装要控制与潮湿空气的交换，而不只是看似密封。",
-        "不同生物能耐受的范围不同，生长边界还受温度、酸度、防腐剂、气氛、时间与竞争影响。降低该量会减慢许多微生物，却不会给食品灭菌，也不会停止所有化学反应。某些氧化与褐变速率还会非单调变化。伊沃拒绝脱离产品和危害验证的一个万能安全数字。",
-        "测量需要控温、校准、代表性采样与足够平衡时间。表面硬壳可能藏住更湿内部，挥发性化合物也会干扰部分仪器。伊沃监测过程与储存分布，不迷信一个实验室点。配方变化除稳定性外，还要检查风味、质地、法规与营养后果。",
-        "果脯教授的是水分活度：描述食品中水相对同温纯水有效可利用程度的比值，通常与平衡相对湿度相联系。它不同于水分含量，会影响微生物生长、化学反应、质地与水分迁移。溶质、结构、温度、包装与相变都会改变它，安全界限则依生物和产品而定。奈拉的眼睛判断有多少水看似存在，腐败跟随的是这些水有多自由地参与过程。"
+        "点心商要把货送过潮湿海峡。他摸过两种样品：果酱黏亮，软糕看起来干得多。化验纸也显示软糕所含总水分较少。于是他把果酱留在店里，装了整船软糕，认定水越少便越不容易坏。",
+        "航行第十天，几盒软糕出现白霉，果酱样品却仍好好的。商人怀疑化验错了。食品师把两种样品分别封进小室，等里面的空气与食物相互平衡。软糕周围的空气更湿；果酱里的糖虽没有让水消失，却使许多水不容易被微生物利用。",
+        "她又拆开一盒夹心酥。水果馅的水慢慢移到酥皮，皮变软，接缝处最先发霉。只把整盒水分相加，既看不见不同部分之间的迁移，也看不出哪些水更容易参与生长和反应。温度升高后，这些变化还会更快。",
+        "商人重新调整配方和干燥程度，在酥皮与馅料之间加了薄层，并选择能隔绝外界湿气的包装。每种产品都按自己的酸度、糖盐、温度和储存期限验证，不再借另一种食物的数字直接作保证。",
+        "下一次装船前，商人仍用手摸了摸软糕，却没有据此落印。他等小室里的指针停稳，才封上第一只箱子。"
       ],
       "conceptName": "Water activity",
       "conceptNameZh": "水分活度",
       "explanationParagraphs": [
-        "Water activity describes water's effective availability relative to pure water at the same temperature and is commonly related to equilibrium relative humidity. It is distinct from total moisture content.",
-        "It influences microbial growth, reactions, texture, and moisture migration, but safety limits depend on organism, product, temperature, acidity, atmosphere, preservatives, packaging, and validated storage conditions."
+        "Water activity expresses how available water in a food is for microbial growth, chemical reaction, and migration relative to pure water at the same temperature, and is related to equilibrium relative humidity. It differs from total moisture content. Sugar, salt, food structure, and temperature change water availability. Practical safety limits also depend on the organism, acidity, preservatives, atmosphere, packaging, and validated storage conditions."
       ],
       "explanationParagraphsZh": [
-        "水分活度描述食品中水相对同温纯水的有效可利用程度，通常与平衡相对湿度相联系。它不同于总水分含量。",
-        "它影响微生物生长、反应、质地与水分迁移，但安全界限取决于生物、产品、温度、酸度、气氛、防腐剂、包装与经验证储存条件。"
+        "水分活度表示食品中的水相对同温纯水有多容易参与微生物生长、化学反应和迁移，常与平衡相对湿度相联系；它不同于总水分含量。糖、盐、食品结构和温度会改变水的可利用程度。实际安全界限还取决于微生物、酸度、防腐剂、气氛、包装与经验证的储存条件。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0721-haccp",
@@ -582,39 +596,40 @@
       "fieldCode": "0721",
       "fieldTitle": "Food processing",
       "fieldTitleZh": "食品加工",
-      "title": "The Loaf Tested After It Was Sold",
-      "titleZh": "卖出以后才检测的面包",
-      "summary": "A bakery depends on final inspection until rare hazards, allergen changeovers, and process drift force prevention at the steps where control is essential.",
-      "summaryZh": "面包坊依赖最终检验，直到罕见危害、过敏原换线与过程漂移迫使它在控制不可缺的步骤预防。",
+      "title": "The Danger the Final Taste Could Not Find",
+      "titleZh": "最后一口尝不出的危险",
+      "summary": "A pie shop entrusts safety to a final taster, until normal-tasting pies from one oven make customers at the spring fair ill.",
+      "summaryZh": "肉饼坊把安全交给出炉后的试吃者，直到一炉味道正常的饼让春集上的客人接连病倒。",
       "storyParagraphs": [
-        "The central bakery inspected finished loaves for appearance and sampled one from each cart. A rare contaminated batch passed because the hazardous loaf was not selected. Another day, an allergen-containing dough followed ordinary dough on shared equipment, while every final loaf looked perfect. Manager Arin realised that end-product inspection could neither test every unit destructively nor prevent a hazard already distributed through production.",
-        "Food safety lead Sera assembled people who understood ingredients, equipment, sanitation, microbiology, allergens, maintenance, and distribution. They described each product and intended use, drew the process flow, and verified it on the floor. At each step they identified biological, chemical, physical, and allergen hazards, then assessed severity and likelihood under the actual operation rather than copying another bakery's checklist.",
-        "Many hazards were controlled by prerequisite programmes such as supplier approval, sanitation, pest control, maintenance, training, and traceability. For hazards requiring control at a particular step, the team identified points where loss of control could make the product unsafe and no later step would adequately correct it. A decision tree helped structure that judgment, but it did not replace evidence or expert reasoning. A step was not critical merely because it was important; the question was whether this specific significant hazard required control there. They set scientifically justified critical limits, not vague instructions to be careful.",
-        "At each such point, monitoring had to detect loss of control in time for action. Records named what was measured, how, how often, by whom, and with which calibrated instrument. A deviation triggered control of affected product, correction of the process, investigation of cause, and measures against recurrence. Simply adjusting a dial without evaluating product disposition was incomplete.",
-        "Verification asked whether the whole system worked: review records, calibrate instruments, observe practice, investigate complaints, and reassess after changes. Before launch, validation established that selected measures and limits were capable of controlling the hazards. During operation, verification checked that the plan was followed and remained effective. A new supplier, recipe, line speed, package, or consumer group triggered change control and reassessment rather than silent editing. The bakery initially declared every step critical, producing impossible paperwork and ignored alarms. Sera narrowed the designation to genuinely essential controls while strengthening prerequisites. The plan remained specific to product, process, facility, and intended consumer.",
-        "The bakery adopted Hazard Analysis and Critical Control Points: a preventive system that identifies significant food-safety hazards, determines where control is essential, establishes validated critical limits, monitors them, defines corrective actions, verifies effectiveness, and keeps records. Prerequisite programmes support the plan, and testing verifies rather than replaces process control. The safest loaf was not the one that happened to look clean at the cart. It was the one whose important hazards had been anticipated before they could travel unseen through every loaf."
+        "Before the spring fair, Chen's pie shop baked thousands of meat pies each day. At the end of the packing table, the owner stationed an experienced taster who sampled one pie from each oven load. If colour, smell, and flavour were normal, the batch received a shipping stamp. He believed anything dangerous would reveal itself in the final bite.",
+        "On one frantic day, the ice in the meat cart melted and one burner in a corner of the oven went out. The taster received a fully cooked pie from beside the oven door and found nothing unusual. Pies in the corner never reached the required centre temperature. After the fair, more than a dozen customers suffered stomach illness and all remaining stock was recalled.",
+        "The food-safety specialist did not begin by increasing the number of samples. She walked from receiving to packing and asked workers where meat could spoil, foreign material could enter, or cooked food could be contaminated again by raw-food equipment. They then identified the points where loss of control could not be reliably corrected by a later step. Cleaning, pest management, and worker hygiene became everyday foundations for the whole shop.",
+        "Receiving temperature, pie centre heating, and cooling time gained explicit limits and shift records. When a reading crossed a limit, product was held immediately and either reworked or discarded after the cause was found. Thermometers were calibrated, supervisors reviewed records, and finished-product sampling helped verify that the system worked. Tasting remained, but no longer carried dangers it could not detect.",
+        "Several months later, the same corner burner failed again. The probe reading stayed below its limit, and the whole cart received a red hold tag before reaching the packing table. The owner put down the tasting spoon and signed his name on the back of the tag."
       ],
       "storyParagraphsZh": [
-        "中央面包坊检查成品外观，每车抽一只面包。一次罕见污染批次因危险面包未被抽中而通过；另一天，含过敏原面团在共用设备上紧跟普通面团，所有成品外观仍完美。经理阿林明白，成品检查既不能破坏性检测每个单位，也无法预防已经散入生产的危害。",
-        "食品安全负责人塞拉召集熟悉原料、设备、卫生、微生物、过敏原、维护与配送的人。他们描述产品与预期用途，画出流程并到现场核实。每一步都识别生物、化学、物理与过敏原危害，再按真实运行评估严重程度和发生可能，而不是照抄另一家面包坊清单。",
-        "许多危害由供应商批准、清洁、虫害控制、维护、培训与追溯等前提方案控制。对必须在特定步骤控制的危害，团队识别失控会使产品不安全、且后续无法充分纠正的位置。决策树帮助他们组织判断，却不能取代证据与专家推理。一个步骤并不因重要就自动成为关键点；真正的问题是，这个特定重大危害是否必须在这里受控。他们设定有科学依据的关键限值，而非含糊要求“多加小心”。",
-        "每个这类点的监测都要及时发现失控，以便行动。记录写明测什么、怎样测、多频繁、由谁、使用哪件已校准仪器。偏差触发受影响产品控制、过程修正、原因调查与防止复发措施。只调旋钮而不评估产品处置并不完整。",
-        "验证要追问整套系统是否工作：审查记录、校准仪器、观察实践、调查投诉并在变化后重新评估。计划启用前，确认要证明所选措施与限值有能力控制危害；运行期间，验证要检查计划是否得到执行并持续有效。新供应商、配方、线速、包装或消费群体都会触发变更控制与重新评估，而不是悄悄改字。面包坊起初把每一步都称为关键，制造无法完成的文书与被忽略的警报。塞拉把称号缩到真正不可缺的控制，同时加强前提方案。计划始终针对产品、过程、设施与预期消费者。",
-        "面包坊采用的是危害分析与关键控制点：一种预防体系，识别重大食品安全危害，确定何处控制不可缺，建立经验证关键限值，进行监测，规定纠正行动，验证有效性并保存记录。前提方案支撑计划，检测用于验证而非替代过程控制。最安全的面包不是碰巧在车上看起来干净的一只，而是重要危害在穿过每只面包前就已被预见。"
+        "春集前，陈记肉饼坊每天出炉几千只饼。老板在包装桌末端安排一名老练试吃者，每炉随机尝一只，只要色香味正常便盖章出货。他相信坏东西总会在最后一口露出破绽。",
+        "忙乱的一天，送肉车的冰融了，烤炉角落又有一只火头熄灭。试吃者拿到的是炉门旁熟透的饼，味道毫无异常；角落那批中心温度却没有达到要求。春集后，十几名客人腹痛，剩下的货全部被召回。",
+        "受邀来的食品安全师没有先增加试吃数量，而是从收料处一路走到包装桌。她让工人指出肉可能变坏、夹入异物或被生熟器具重新污染的地方，再挑出一旦失控就无法由后续步骤可靠补救的关口。清洁、虫害管理和人员卫生则先作为全坊每天都要守的基础。",
+        "收肉温度、肉饼中心加热和冷却时间都有了明确界限与当班记录。读数越界时，产品立即隔离，查明原因后返工或丢弃；温度计定期校准，负责人还会复查记录并抽检成品，确认整套办法有效。试吃仍保留，却不再承担它发现不了的危险。",
+        "数月后，同一只角落火头再次熄灭。探针读数停在界限下方，整车肉饼还没到包装桌就被挂上红牌。老板放下试吃勺，在红牌背面签了自己的名字。"
       ],
       "conceptName": "Hazard Analysis and Critical Control Points",
       "conceptNameZh": "危害分析与关键控制点",
       "explanationParagraphs": [
-        "Hazard Analysis and Critical Control Points is a preventive food-safety system that identifies significant hazards, determines essential control points, sets validated critical limits, monitors them, specifies corrective action, verifies the system, and maintains records.",
-        "Prerequisite programmes support the plan, and product testing verifies rather than replaces process control. The analysis must be specific to the product, process, facility, intended use, and current evidence."
+        "Hazard Analysis and Critical Control Points is a preventive food-safety system. For a specific product and process, it identifies significant hazards, determines points where control is essential, sets validated critical limits, monitors them, and applies corrective action to deviations. Verification, records, and review show whether the system works. Prerequisite programmes such as sanitation support the plan; finished-product sampling can verify performance but cannot replace continuous process control."
       ],
       "explanationParagraphsZh": [
-        "危害分析与关键控制点是一套预防性食品安全体系，识别重大危害，确定关键控制点，设定经验证限值，进行监测，规定纠正行动，验证体系并保存记录。",
-        "前提方案支撑计划，产品检测用于验证而非替代过程控制。分析必须针对具体产品、过程、设施、预期用途与当前证据。"
+        "危害分析与关键控制点是一套预防性食品安全体系：针对具体产品和流程识别重大危害，确定必须控制的关键点，设定经验证的限值并监测，偏离时执行纠正行动，再通过验证、记录和复核确认体系有效。清洁等前提方案支撑整个计划；成品抽检可用于验证，却无法替代过程中的持续控制。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     }
   ]
 }

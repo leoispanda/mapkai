@@ -8,39 +8,40 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Dye Hall That Never Rested",
+      "title": "The Dye Hall That Never Stopped",
       "titleZh": "从未停工的染料厅",
-      "summary": "A dye hall reaches constant proportions while coloured bundles continue forming and breaking at equal rates beneath the still surface.",
-      "summaryZh": "染料厅里的颜色比例保持不变，平静表面之下，有色组合仍以相等速率不断形成与拆开。",
+      "summary": "The contents of two dye rooms remain constant all day, so the manager assumes the carrying has ceased while workers keep passing through the door.",
+      "summaryZh": "两间染料厅的存量整日不变，管事以为搬运已经停止，门后却始终有人来回。",
       "storyParagraphs": [
-        "In Master Sora's sealed dye hall, one red thread and one pale thread could join into a violet bundle. The bundle could also separate into its original threads. At first, loose threads were abundant, so bundles formed rapidly and few existed to split. As violet accumulated, joining became less frequent and splitting more frequent. After an hour, the visible amounts stopped changing. Apprentice Fen declared the work finished and sent the attendants home.",
-        "Sora secretly marked several violet bundles. Later, their marked threads appeared loose, while previously loose threads had entered new bundles. The totals remained constant because formation and separation were occurring at the same rate, not because both processes had ceased. Nor were the amounts equal: the hall could contain many bundles and few loose threads while the two opposing rates matched. The stable composition concealed continuous molecular turnover. A still photograph could not reveal either flux; only tracing marked threads through time did so clearly.",
-        "Fen added a chest of red threads. The old proportions were disturbed, joining briefly exceeded separation, and more violet formed until the opposing rates matched again at a new composition. When Sora removed violet as soon as it appeared, the hall kept making more from loose threads. The response reduced the imposed change but did not necessarily restore the original amounts. Its extent followed concentrations, the reaction relation, and conditions rather than a conscious effort to resist disturbance.",
-        "A heating dispute exposed another mistake. For this dye reaction, warming changed the stable composition because the forward and reverse transformations did not respond identically to temperature; the relevant constant depended on temperature. By contrast, a skilled clasp that lowered the kinetic barriers in both directions brought the hall to its stable proportions faster but did not choose a different final ratio under the same conditions. Rate and final composition answered different questions.",
-        "Opening a window let pale threads escape, so the sealed-hall calculation no longer described the whole process. Several simultaneous reactions could also share threads, and solids or pure liquids entered concentration expressions differently from dissolved or gaseous species. Sora used measured activities when precision mattered and treated simple concentration ratios as approximations. A stable macroscopic state required specified temperature, pressure, composition, and system boundaries.",
-        "The dye hall had reached chemical equilibrium: in a reversible reaction, forward and reverse rates are equal, so macroscopic composition remains constant even while transformations continue. The equilibrium constant relates activities at a given temperature and does not require equal reactant and product amounts. Changing composition, pressure, or temperature can produce a new equilibrium; a catalyst changes how quickly it is approached, not its position. Fen had mistaken an unmoving ledger for an idle hall. Sora showed him motion balanced by motion."
+        "A dyehouse had red and blue rooms. Workers could turn a jar of red liquid into blue and blue back into red. At first, the red room held much more, so far more jars moved toward blue than returned. The blue room quickly grew.",
+        "After a while, the number of jars in each room stopped changing visibly. The manager assumed the work had ended and tied white string around several jars. Half an hour later, the marked jars had changed rooms. Equal numbers were now moving from red to blue and blue to red, making the large-scale counts look still.",
+        "The manager poured more liquid into the red room and disturbed the earlier state. Red-to-blue movement temporarily exceeded the reverse until a new stable composition formed. Stability did not require equal amounts of red and blue, only equal rates in the two directions.",
+        "The dyehouse later opened a smoother inner doorway, speeding workers both ways. The rooms reached stability faster, but the final composition did not change because of the door. Raising the room temperature, however, could change that composition itself.",
+        "At night, the clerk counted unchanged totals in both rooms. The hinge still sounded, and a different group of white-string jars had crossed."
       ],
       "storyParagraphsZh": [
-        "索拉师傅的密封染料厅里，一根红线与一根浅线可以结合成紫色线束，紫色线束也能拆回原来的线。起初散线很多，线束形成很快，可供拆开的线束很少。随着紫色累积，结合变慢，拆分变快。一小时后，可见数量不再变化，学徒芬宣布工作结束，让助手们回家。",
-        "索拉暗中标记几束紫线。后来，带标记的线出现在散线中，原先散开的线则进入新线束。总量恒定，是因为形成与拆分以相同速率进行，不是两个过程都已停止。两边数量也不必相等：厅里可以有许多线束、很少散线，同时保持相反速率一致。稳定组成掩盖着持续的微观周转；一张静态照片看不见两股通量，只有跨时间追踪标记才会显露。",
-        "芬又倒入一箱红线。旧比例被扰动，结合暂时快于拆分，更多紫线形成，直到相反速率在新组成上再次相等。索拉若不断取走刚形成的紫线，厅里就继续用散线制造。响应会削弱外加变化，却不一定恢复原有数量；程度取决于浓度、反应关系与条件，而非系统有意识地抵抗。",
-        "一次加热争论暴露另一项错误。对这项染料反应，升温改变稳定组成，因为正反转化对温度的响应不同，相关常数本身依赖温度。相反，一枚同时降低两个方向动力学能垒的精巧夹具，只让染料厅更快到达稳定比例，在相同条件下却不选择新的最终比例。速率与最终组成回答的是不同问题。",
-        "打开窗户会让浅线逸出，密封大厅的计算便不再描述完整过程。多项同时反应也可能共用线材，固体或纯液体进入表达式的方式又与溶液或气体物种不同。需要精确时，索拉使用测得活度，把简单浓度比视为近似。稳定宏观状态总要说明温度、压力、组成与系统边界。",
-        "染料厅达到的是化学平衡：可逆反应的正向与反向速率相等，因此宏观组成保持不变，微观转化仍持续。平衡常数联系给定温度下的活度，不要求反应物与产物数量相等。改变组成、压力或温度可产生新平衡；催化剂改变到达平衡的快慢，不改变平衡位置。芬把不动的账本误认成停工的大厅，索拉让他看见的是由运动抵消的运动。"
+        "染坊有红、蓝两厅，工人能把一罐红液转成蓝液，也能把蓝液转回红液。开工初期，红厅存量很多，搬向蓝厅的罐子远多于返回的罐子，蓝厅很快增加。",
+        "过了一段时间，两厅的罐数不再明显变化。管事以为工作已经停下，便在几只罐上系白线。半个时辰后，系线罐已经换了房间；只是同一时间从红到蓝与从蓝到红的数量相等，宏观看起来静止。",
+        "管事往红厅又倒入一批染液，双向搬运立刻失去原有平衡。红转蓝暂时更多，直到两边在新组成下重新保持稳定。稳定不要求红蓝数量相等，只要求两个方向的速度相同。",
+        "后来染坊打开一条更顺畅的内门，工人来回都加快了。两厅更快到达稳定状态，最后的组成却没有因这扇门而改变。若升高厅温，最终组成本身则可能变化。",
+        "夜里账房再次点数，两边数字都没有动。门轴仍在轻响，系白线的罐子又换了一批。"
       ],
       "conceptName": "Chemical equilibrium",
       "conceptNameZh": "化学平衡",
       "explanationParagraphs": [
-        "Chemical equilibrium is a dynamic state in a reversible reaction where forward and reverse rates are equal, leaving macroscopic composition constant. Equal rates do not imply equal reactant and product quantities.",
-        "At a specified temperature, the equilibrium constant relates activities. Changes in composition, pressure, or temperature can shift the equilibrium state; catalysts accelerate approach in both directions without changing the equilibrium position."
+        "Chemical equilibrium is a dynamic state in which forward and reverse rates of a reversible reaction are equal, leaving macroscopic composition constant. It does not require equal amounts of reactants and products. Composition, pressure, or temperature can shift equilibrium; a catalyst speeds both directions toward equilibrium without changing its position under fixed conditions."
       ],
       "explanationParagraphsZh": [
-        "化学平衡是可逆反应中正向与反向速率相等、宏观组成因而保持恒定的动态状态。速率相等不表示反应物与产物数量相等。",
-        "在指定温度下，平衡常数联系各物种活度。组成、压力或温度变化可改变平衡状态；催化剂会加快两个方向趋近平衡，却不改变平衡位置。"
+        "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0531-activation-energy",
@@ -49,39 +50,40 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Full Kiln That Would Not Burn",
+      "title": "The Kiln Full of Wood That Would Not Burn",
       "titleZh": "装满木柴却不燃烧的窑",
-      "summary": "A kiln packed with energy-rich fuel remains cold until a small region receives enough energy to enter the difficult transition toward burning.",
-      "summaryZh": "装满高能燃料的窑仍保持冰冷，直到一小片区域获得足够能量，进入通向燃烧的艰难过渡。",
+      "summary": "A potter fills a kiln with dry wood capable of releasing heat, waits all night, and finds no fire has appeared by itself.",
+      "summaryZh": "窑里堆满能够放热的干柴，陶工等了一夜，火却没有自己出现。",
       "storyParagraphs": [
-        "Potter Lio filled a kiln with dry wood and waited. Burning would release heat and leave products at lower chemical free energy under the available conditions, yet the logs remained unchanged through the cold morning. Lio concluded that the wood contained no useful energy. His mentor placed a flame against one corner. Only after a small region grew hot enough did oxidation accelerate, heat neighbouring material, and make the fire self-sustaining.",
-        "The flame had not supplied all the energy later released by the kiln. It helped initial molecular encounters reach a strained transition in which old bonds could begin rearranging. Most low-energy collisions separated without reaction; even energetic encounters could fail if orientation was unsuitable. Once a successful pathway started, the net transformation released more heat than the initiating flame had delivered. The cold wood was metastable, not empty. Thermodynamic favourability described the difference between states, while the intervening barrier governed how quickly the change occurred.",
-        "Lio tried a larger torch and scorched the first pots. The relevant question was not how much fire he could add in total, but how the distribution of molecular energies affected the fraction able to cross the barrier. Raising temperature increased that fraction sharply, so rates often changed strongly even with a modest temperature rise. The exact relation depended on mechanism; a single fitted slope could hide several elementary steps and different controlling barriers.",
-        "A kiln builder then lined the chamber with a surface that allowed fuel and air to react through another sequence of steps. The fire began at a lower temperature. The lining had not made the starting fuel richer or the final products poorer in energy. It stabilised different intermediate arrangements and offered a route with a lower highest barrier. Because the surface returned after a complete cycle, it could assist many transformations, though poisoning or damage could disable it.",
-        "Some reactions still required continuous light, electrical work, or coupling to another process; a first spark alone could not make an unfavourable overall transformation proceed indefinitely. Other reactions had several peaks, and the slowest observable behaviour could change as conditions changed. Lio learned to separate whether a transformation could be favourable from whether it would happen at a useful rate and what route the reacting system actually followed.",
-        "The cold kiln revealed activation energy: the minimum energy barrier associated with reaching a transition state along a reaction pathway. A favourable reaction may remain extremely slow when ordinary encounters rarely cross that barrier. Higher temperature changes the energy distribution, while catalysts provide alternative pathways with lower barriers without changing the reaction's overall thermodynamics or equilibrium. The small flame did not pay for the whole fire. It opened access to energy already available through the transformation."
+        "A potter filled a new kiln with dry wood, knowing that once it burned it would release great heat. He closed the door and waited. Deep into the night, the wood remained cold. A result that released energy did not mean the path would cross its starting barrier by itself.",
+        "He tried lighting a thick log directly, but the flame died. An older worker placed shavings and thin branches below, using a small flame to raise the local temperature before letting fire reach the heavier wood. Once enough material crossed the ignition condition, released heat sustained the kiln.",
+        "For the next firing, they improved the air channel and provided an easier route for burning. The kiln could start with less intense ignition, while the overall energy difference between unburned and burned wood did not disappear.",
+        "At higher temperature, more material could reach the needed energy and burning accelerated. Damp wood or poor oxygen kept the process slow no matter how much wood was present. Whether something can occur and how quickly it occurs are different questions.",
+        "By morning, the kiln mouth glowed red. The potter returned the unused thick torch to the wall, leaving only the ash of the small kindling below."
       ],
       "storyParagraphsZh": [
-        "陶工利奥把窑装满干柴后等待。在现有条件下，燃烧会释放热量，使产物处于更低的化学自由能，木柴却在寒冷清晨毫无变化。利奥认定柴中没有可用能量。师傅把火焰贴近一角，只有一小片区域热到足够程度后，氧化才加速，热量传给相邻材料，让火自行维持。",
-        "火焰并未提供窑后来释放的全部能量。它帮助最初的分子相遇进入一种紧张过渡，使旧键开始重排。多数低能碰撞会无反应分开，即使能量较高，朝向不合适也可能失败。一条成功路径启动后，净转化释放的热量超过起始火焰输入。冷木柴处于亚稳状态，并非空无能量。热力学有利性描述两种状态间差异，中间能垒则支配变化有多快。",
-        "利奥改用更大的火把，结果烧坏第一批陶器。真正相关的不是总共能加多少火，而是分子能量分布如何改变能越过门槛的比例。升高温度会显著增加这部分分子，因此速率常在温度小幅上升时大幅改变。精确关系取决于机制，一条拟合斜率可能掩盖多个基元步骤与不同控制能垒。",
-        "造窑师随后给窑室铺上一种表面，让燃料与空气经另一串步骤反应，炉火在更低温度便启动。内衬没有让初始燃料能量更高，也没有让最终产物能量更低；它稳定了不同中间排列，提供最高能垒较低的路线。完整循环后表面恢复，可协助多次转化，但中毒或损坏仍会使它失效。",
-        "有些反应仍需持续光照、电功或与另一过程耦合，一次火花不能让总体不利的转化无限持续。另一些反应包含多个峰，外界条件改变时，控制可见慢速行为的步骤也可能变化。利奥学会分开三个问题：转化是否有利、是否能以有用速率发生，以及反应系统实际走哪条路线。",
-        "冷窑揭示的是活化能：沿某条反应路径抵达过渡态所需跨越的最低能量门槛。有利反应若在普通相遇中很少越过能垒，仍可能极慢。升温改变能量分布，催化剂则提供能垒更低的替代路径，却不改变总体热力学或平衡。那簇小火没有支付整场燃烧的费用，它只是打开了通往转化中已有可用能量的入口。"
+        "陶工把干柴塞满新窑，知道柴一旦燃烧会放出大量热。他关上窑门等待，直到夜深，木柴仍然冰冷。能够产生更多能量的结果，并不代表过程会自动越过开始时的门槛。",
+        "他先用火把直接点粗木，火苗很快熄灭。老窑工在下面放入细屑和薄枝，先用小火让局部温度升高，再让火焰逐渐爬上粗木。木柴一旦有足够部分跨过起燃条件，后续放热便维持了窑火。",
+        "第二次，他们修出更通畅的风道，让燃烧沿更容易的路径进行。窑能在较低点火强度下启动，柴从燃烧前到燃烧后的总能量差却没有因风道消失。",
+        "气温升高时，更多部分更容易达到所需能量，反应加快；木柴受潮或缺氧时，即使堆得再多也很慢。能否发生与发生多快不是同一个问题。",
+        "清晨，窑口终于发红。陶工把未用完的粗火把放回墙边，只留下底部那撮已经烧成灰的细屑。"
       ],
       "conceptName": "Activation energy",
       "conceptNameZh": "活化能",
       "explanationParagraphs": [
-        "Activation energy describes the energetic barrier to reaching a transition state along a reaction pathway. Thermodynamically favourable reactions can remain slow when few molecular encounters cross that barrier with suitable orientation.",
-        "Temperature changes the distribution of molecular energies, and catalysts provide lower-barrier pathways. Neither action changes the overall free-energy difference between reactants and products, though temperature can also affect equilibrium."
+        "Activation energy is the energy barrier that must be crossed to reach a transition state along a reaction pathway. Even a thermodynamically favourable reaction may be slow if few particles cross with suitable energy and orientation. Higher temperature changes the energy distribution; a catalyst offers a lower-barrier route without changing the net free-energy difference."
       ],
       "explanationParagraphsZh": [
-        "活化能描述沿反应路径到达过渡态所需跨越的能量门槛。即使反应在热力学上有利，若很少有分子以合适朝向跨越门槛，过程仍可能很慢。",
-        "温度改变分子能量分布，催化剂提供能垒更低的路径。两者都不改变反应物与产物之间的总体自由能差，但温度本身也可能影响平衡。"
+        "活化能是反应沿特定路径到达过渡态所需跨越的能量门槛。即使反应总体有利，若很少有粒子以合适能量与方向跨过门槛，速率仍可能很慢。升温改变能量分布，催化剂提供较低能垒路径，但不改变反应物与产物的净自由能差。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0531-stoichiometry",
@@ -90,39 +92,40 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Extra Spoon That Stole the Blue",
+      "title": "The Spoonful That Stole the Blue Light",
       "titleZh": "偷走蓝光的那一勺",
-      "summary": "A firework apprentice adds more of an expensive powder and learns that conserved building units and a limiting ingredient, not generosity, determine possible product.",
-      "summaryZh": "烟火学徒多加昂贵粉末后发现，决定可得产物的是守恒的组成单位与限制原料，而不是慷慨。",
+      "summary": "A lamp workshop adds another spoon of silver powder, but produces no extra blue lamps and accumulates unused silver.",
+      "summaryZh": "灯坊往配方里多添了一勺银粉，蓝灯不但没有增加，仓里还剩下越来越多银粉。",
       "storyParagraphs": [
-        "Firework maker Ada used a fictional blue charge whose particle-count relation paired two red grain units with one silver crystal unit. Apprentice Bor added a second silver unit, believing more of the costly ingredient must make a deeper blue. The flare sputtered, and unused silver remained in the cup. Every finished charge required the same count relationship. Once the red grains were committed, extra silver had no partners with which to form additional product.",
-        "The particles were too small to count directly, and equal masses did not contain equal numbers because the building units had different masses. Ada converted weighed quantities into amounts of substance, then used the balanced reaction relation as a counting rule. Two units of red for every one of silver yielded one specified unit of charge in their model. The coefficients compared entities or moles; they did not say that two grams must combine with one gram.",
-        "Bor brought twelve red units and eight silver units. Red could support six product units, while silver could support eight, so red set the theoretical maximum and two silver units remained in excess. When he doubled only silver again, the maximum did not change. The expensive surplus therefore remained chemically idle and economically costly. When he added four red units instead, both ingredients could support eight charges. The limiting ingredient was identified by comparing each available amount with its required coefficient, not by choosing the smallest mass or volume.",
-        "The next batch produced only seven good charges although the calculation allowed eight. Some powder had spilled, one reagent was impure, and a side reaction formed smoke. Ada distinguished theoretical yield from actual yield and calculated percentage yield only after checking what had truly been measured. She also separated composition accounting from kinetics and equilibrium: a balanced relation constrained possible amounts but did not promise speed, completion, or a single pathway.",
-        "Bor eventually scaled the recipe to a hundred flares. He carried units through every conversion, included solution concentration and purity, and kept measurement uncertainty from pretending to be exact particles. A tiny rounding error repeated at each stage could leave an entire box unmatched. He planned modest process allowance without changing the underlying ratio and recorded excess material for recovery rather than hiding it as waste.",
-        "Ada was teaching stoichiometry: quantitative relations among reactants and products derived from a balanced chemical equation and conservation of atoms, charge, and relevant building units. Mole ratios connect measurable amounts to particle-level counts; the limiting reactant sets the theoretical yield, while excess remains. Actual yield can be lower because of incomplete reaction, side reactions, loss, or impurity. Bor's extra spoon had not created more blue. It had obscured which ingredient had already run out."
+        "The blue-lamp workshop fired one wick crystal from two spoons of green powder and one of silver powder. An apprentice remembered only that silver made the light bright, so he added another spoon to each batch, expecting twice the output. The number of crystals did not rise, while unused silver collected at the bottom.",
+        "The master arranged the spoons in groups. Every two green spoons paired with only one silver. Ten spoons of each could complete no more than five groups because green ran out first, leaving five silver spoons without partners. Extra material could not replace what was missing.",
+        "The apprentice then found that one sack of green powder contained impurities, so total sack weight overstated usable material. He adjusted for purity before applying the recipe. Even exact proportions did not guarantee theoretical output because incomplete firing, competing products, and handling losses could reduce the actual amount.",
+        "The recipe stated conservation relationships, not how long the firing would take. The workshop recorded quantities, purity, theoretical output, and actual output separately rather than confusing amount with speed.",
+        "For the next batch, the apprentice measured ten spoons of green powder and only five of silver. The remaining silver jar stayed closed."
       ],
       "storyParagraphsZh": [
-        "烟火师阿达用一种虚构蓝色药剂，其粒子计数关系是两单位红粒配一单位银晶。学徒博尔又加一单位银晶，以为昂贵原料越多，蓝色必然越深。焰火却只发出断续光，杯底还留着未用银晶。每份成品都要求相同数量关系，红粒全部投入后，多余银晶已找不到伙伴形成更多产物。",
-        "粒子小得无法直接计数，等质量也不包含相等数量，因为组成单位质量不同。阿达先把称得的量转换成物质的量，再把配平反应关系当作计数规则。在他们的模型中，每两单位红粒配一单位银晶，得到一单位指定药剂。系数比较的是实体或摩尔，不是说两克必然与一克结合。",
-        "博尔带来十二单位红粒和八单位银晶。红粒只够形成六单位产物，银晶能支持八单位，因此红粒决定理论上限，剩两单位银晶过量。只把银晶再翻倍，上限仍不改变，昂贵剩余物既没有化学贡献，也增加经济成本。若改为补四单位红粒，两种原料便都能支持八份。限制原料要把每项可用量与所需系数比较，不能按最小质量或体积判断。",
-        "下一批计算可得八份，实际却只有七份合格药剂。部分粉末洒落，一种原料不纯，还有副反应生成烟雾。阿达区分理论产率与实际产率，并在核实真正测量内容后才计算百分产率。她也把组成核算与动力学、平衡分开：配平关系限制可能数量，却不承诺速度、完全反应或只有一条路径。",
-        "博尔最终把配方扩大到一百枚焰火。他在每次换算中保留单位，计入溶液浓度与纯度，也不让测量不确定性伪装成精确粒子数。每一步重复的小舍入误差，最后可能留下整箱无法配对的原料。他设置适度工艺余量，却不改底层比例，并登记多余材料以便回收，而非把它藏成浪费。",
-        "阿达教授的是化学计量：依据配平化学方程式与原子、电荷及相关组成单位守恒，确定反应物和产物之间的定量关系。摩尔比把可测量的量连接到粒子计数，限制反应物决定理论产率，过量部分则会剩余。实际产率还可能因反应不完全、副反应、损失或杂质而降低。博尔多加的一勺没有创造更多蓝光，只是遮住了哪种原料早已用完。"
+        "蓝灯坊用两勺青粉和一勺银粉烧成一枚灯芯晶。学徒只记得银粉让光更亮，便在每炉多加一勺，希望产量翻倍。出炉的晶体数量没有增加，炉底却总剩下未用完的银粉。",
+        "师傅把勺子摆成小组：每两勺青粉只能配一勺银粉。仓里若有十勺青粉与十勺银粉，最多只够完成五组，青粉先用完，剩下五勺银粉无处结合。额外材料不会补出缺少的另一方。",
+        "学徒随后发现一袋青粉含有杂质，按袋重计算会高估可用数量。他先换算纯度，再按配方关系准备各料。即使数量完全合适，实际产量仍可能因烧制不完全、旁路产物和搬运损失低于理论值。",
+        "配方只说明各材料守恒关系，并不告诉炉火需要多久。灯坊于是把用量、纯度、理论产量和实际产量分别记录，不再把反应数量与速度混在一起。",
+        "下一炉开工时，学徒先放下十勺青粉，又只取了五勺银粉。余下银粉的罐盖没有打开。"
       ],
       "conceptName": "Stoichiometry",
       "conceptNameZh": "化学计量",
       "explanationParagraphs": [
-        "Stoichiometry uses balanced chemical equations and conservation to relate quantities of reactants and products. Equation coefficients express particle or mole ratios, which must be combined with molar mass, concentration, purity, and units when using measured material.",
-        "The limiting reactant determines theoretical yield; other reactants may remain in excess. Actual yield can be lower through incomplete conversion, competing reactions, impurity, and process loss, while a balanced equation alone says nothing about rate."
+        "Stoichiometry uses balanced equations and conservation to relate quantities of reactants and products through particle or mole ratios. The limiting reactant determines theoretical yield, while other materials may remain in excess. Real materials require molar mass, concentration, purity, and units, and incomplete reaction, impurities, or loss reduce actual yield."
       ],
       "explanationParagraphsZh": [
-        "化学计量依据配平方程与守恒关系，把反应物和产物数量联系起来。方程系数表达粒子比或摩尔比，处理实测材料时还要结合摩尔质量、浓度、纯度与单位。",
-        "限制反应物决定理论产率，其他反应物可能过量。反应不完全、竞争反应、杂质与过程损失会让实际产率更低，而配平方程本身并不说明反应速率。"
+        "化学计量依据配平方程与守恒关系，把反应物和产物数量按粒子或摩尔比联系起来。限制反应物决定理论产率，其他材料可能过量。处理实物还需考虑摩尔质量、浓度、纯度和单位；不完全反应、杂质与损失会使实际产率更低。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0532-plate-tectonics",
@@ -131,39 +134,40 @@
       "fieldCode": "0532",
       "fieldTitle": "Earth sciences",
       "fieldTitleZh": "地球科学",
-      "title": "The Boundary Stones That Accused Each Other",
+      "title": "Boundary Stones That Accused One Another",
       "titleZh": "彼此指控的界石",
-      "summary": "Two coastal cities each accuse the other of moving until a wider survey reveals that both ride different rigid slabs on a restless planet.",
-      "summaryZh": "两座海岸城市各自指控对方移动，直到更广的测量显示，它们都乘在一颗活动行星的不同刚性板片上。",
+      "summary": "After an earthquake, two islands accuse each other of moving boundary stones until a surveyor finds that the stones were not what moved.",
+      "summaryZh": "地震后，两座海岛都说对方偷移界石，测量员却发现移动的不是石头。",
       "storyParagraphs": [
-        "The cities of Eastmark and Westmark faced each other across a narrow sea. Each year their surveyors measured a lighthouse against local boundary stones. Eastmark found Westmark moving west; Westmark found Eastmark moving east. Both accused the other of shifting the border. Their local stones agreed internally, so each city treated its own ground as the fixed frame and the opposing shore as the wanderer.",
-        "Surveyor Ilya linked instruments across the continent, islands, and ocean floor. Points within broad regions kept nearly constant distances from one another, while distances between regions changed by centimetres each year. Neither city occupied absolute stillness. Each rode a comparatively rigid outer slab moving relative to neighbouring slabs. Near boundaries, motion concentrated in narrow belts marked by earthquakes, volcanoes, mountain building, or sideways faulting, although deformation also occurred within the slabs.",
-        "The seafloor supplied a second clue. Rock near the mid-ocean ridge was young, heat flow was high, and bands of magnetic orientation appeared in roughly symmetric sequences on both sides. New oceanic crust formed as the sides separated. Elsewhere, earthquake foci descended beneath an island arc and old seafloor bent into a trench. At a third boundary, offset river channels and repeated shallow earthquakes showed adjacent slabs sliding sideways without creating or consuming lithosphere along that segment. Surface area was not expanding without limit; creation at ridges was balanced over geological time by recycling into the interior at subduction zones.",
-        "Eastmark's council accepted moving continents but imagined them ploughing alone through a permanent ocean floor. Ilya overlaid the earthquake belts, volcanoes, seafloor ages, and motion vectors. Boundaries cut through ocean and land; the moving units included both oceanic and continental lithosphere. Some boundaries diverged, some converged, and some slid past. Continents were passengers embedded in larger slabs, not solitary ships crossing an unmoving basin.",
-        "No single hidden wheel drove every motion. Dense sinking slabs could pull, elevated ridges could contribute gravitational forces, and mantle flow interacted with the plates. Rates and directions changed over time, and boundary friction stored strain before sudden release. The framework explained where hazards were more likely and how mountains and oceans developed, but it did not predict the exact day of an earthquake from a yearly motion arrow.",
-        "Ilya's network revealed plate tectonics: Earth's lithosphere is divided into moving plates whose interactions at divergent, convergent, and transform boundaries organise much geological activity. Seafloor spreading creates oceanic lithosphere, subduction recycles it, and relative plate motion helps explain earthquakes, volcanism, mountain belts, and changing ocean basins. The asthenosphere permits long-term movement but is not a simple liquid conveyor. Eastmark and Westmark had both measured correctly. Their error was assuming that one local set of stones had to be the unmoving world."
+        "Two neighbouring islands divided fishing water with a row of coastal stones. After an earthquake, the eastern island found the markers closer to its village and accused westerners of moving them at night. The west said its own shore had retreated because the east was taking land.",
+        "A surveyor found no signs of levering at the bases. She combined old positions with seafloor measurements. The large rock masses carrying the islands had long moved relative to one another, while the earthquake released accumulated deformation suddenly. Coast and stone shifted with their own masses.",
+        "Further mapping showed that earthquakes, volcanoes, and trenches were not scattered randomly. They followed edges where the great masses separated, converged, or slid past. New seafloor formed along one line while denser ocean rock descended along another.",
+        "The islands stopped arguing over who had moved stones overnight and negotiated fishing grounds using repeatable coordinates. The surveyor warned that boundary patterns could identify hazardous regions but not predict the exact date of the next earthquake.",
+        "The new marker was not buried deeply in sand. It stood on a survey platform with each annual position engraved beside it."
       ],
       "storyParagraphsZh": [
-        "东界城与西界城隔着狭海相望。每年，两地测量员都用本城界石定位对岸灯塔。东界城发现西界城向西移，西界城则发现东界城向东移，双方都指控对方挪动边界。各自城内的界石彼此一致，于是每座城都把脚下土地当成固定框架，把对岸视为漂移者。",
-        "测量员伊利亚把仪器连接到大陆、岛屿与海底。广阔区域内部的点彼此距离几乎不变，不同区域之间却每年改变数厘米。没有一座城占据绝对静止；它们各自乘在相对刚性的外层板片上，板片又相对邻片移动。边界附近，运动集中于狭窄地带，伴随地震、火山、造山或水平错动，板片内部也并非完全不变形。",
-        "海底给出第二组线索。大洋中脊附近岩石年轻、热流较高，磁性方向条带在两侧大致对称排列。两边分离时，新洋壳在中脊形成；另一处，地震震源沿岛弧下方向深处排列，老海底弯入海沟。第三处边界上，错开的河道与反复浅震显示相邻板片水平滑动，该段既不制造也不消耗岩石圈。地表没有无限扩张，长期看，中脊的创造由俯冲带向内部的回收平衡。",
-        "东界城议会接受大陆会动，却想象大陆独自犁过永久海床。伊利亚把地震带、火山、海底年龄与运动向量叠在一起。边界跨越海洋与陆地，运动单位同时包含洋壳与大陆岩石圈。有些边界张开，有些汇聚，有些彼此滑过。大陆是嵌在更大板片中的乘客，不是驶过静止海盆的孤船。",
-        "没有一只隐藏齿轮独自驱动全部运动。下沉的高密度板片可产生牵引，较高洋脊可贡献重力作用，地幔流动也与板片相互影响。速率与方向会随时间变化，边界摩擦还会在突然释放前积累应变。这套框架能解释危险更可能出现在哪里，以及山脉海洋怎样发展，却不能用年度运动箭头预测某次地震的准确日期。",
-        "伊利亚的网络揭示的是板块构造：地球岩石圈分为移动板块，张裂、汇聚与转换边界上的相互作用组织了大量地质活动。海底扩张制造洋岩石圈，俯冲将其回收，相对运动帮助解释地震、火山、山系与海盆变化。软流圈容许长期运动，却不是简单液体传送带。两座城都测量正确，错误只在于它们以为本地一组界石必有一组代表静止世界。"
+        "相邻两岛以一排海边界石划分渔场。一次地震后，东岛发现界石靠近了自己的村庄，认定西岛人夜里搬过。西岛也说自家海岸线后退，是东岛在侵占。",
+        "测量员检查界石底座，没有撬动痕迹。她把多年位置与海底测量放在一起：两岛所在的大块岩层一直缓慢相对移动，地震只是边界累积变形的一次突然释放。海岸和界石随各自岩块一起改变位置。",
+        "继续绘图后，震动、火山与海沟并非散乱出现，而多沿岩块相遇、分离或擦过的边缘排列。海底一处正在形成新岩层，另一处较重的海洋岩层则向下回收。",
+        "两岛停止争论谁在一夜搬石，改用可重复测量的坐标协商渔场。测量员也提醒他们，边界格局能说明哪些地区更危险，却不能预告下一次地震的准确日期。",
+        "新界标没有再深埋进沙中。它被固定在测量台上，旁边刻着每年复测的位置。"
       ],
       "conceptName": "Plate tectonics",
       "conceptNameZh": "板块构造",
       "explanationParagraphs": [
-        "Plate tectonics describes Earth's lithosphere as moving plates whose relative interactions at divergent, convergent, and transform boundaries organise earthquakes, volcanism, mountain building, and ocean-basin change.",
-        "Oceanic lithosphere forms at spreading ridges and is recycled at subduction zones. Plate motion reflects interacting forces including slab pull, gravity, and mantle flow; the framework identifies patterns of hazard but does not provide exact earthquake timing."
+        "Plate tectonics describes the lithosphere as relatively moving plates whose divergent, convergent, and transform boundaries organise earthquakes, volcanoes, mountain building, and ocean-basin change. Oceanic lithosphere forms at spreading ridges and is recycled at subduction zones. The framework identifies hazard patterns but cannot provide exact earthquake timing."
       ],
       "explanationParagraphsZh": [
-        "板块构造把地球岩石圈描述为相对移动的板块，其张裂、汇聚与转换边界上的相互作用组织了地震、火山、造山和海盆变化。",
-        "洋岩石圈在扩张中脊形成，在俯冲带回收。板块运动来自板片牵引、重力与地幔流动等力量的交互；该框架可识别危险格局，却不能给出地震准确时间。"
+        "板块构造把岩石圈描述为相对运动的板块，其张裂、汇聚与转换边界组织了地震、火山、造山和海盆变化。洋岩石圈在洋中脊形成并在俯冲带回收。该框架能识别危险格局，却不能给出地震的准确时间。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0532-deep-time",
@@ -174,37 +178,38 @@
       "fieldTitleZh": "地球科学",
       "title": "The Canyon Older Than Every Clock",
       "titleZh": "比所有钟更古老的峡谷",
-      "summary": "A canyon keeper tries to explain every layer within a human lifetime until missing intervals, dated minerals, and nested events enlarge the scale of the question.",
-      "summaryZh": "峡谷守门人试图在人的一生内解释所有岩层，直到缺失间隔、定年矿物与嵌套事件扩大了问题尺度。",
+      "summary": "A clockmaker brings a timepiece built to run for a century, but the canyon asks for time no clock has experienced.",
+      "summaryZh": "钟匠带着能走一百年的表来到峡谷，岩壁却要求他计算那些钟从未经历过的时间。",
       "storyParagraphs": [
-        "Keeper Daro guided visitors through a canyon whose walls held hundreds of layers. Because he had watched one flood lay down a finger of mud, he claimed the whole wall came from one ancient flood. A rival guide insisted the river had always cut at today's slow rate and multiplied one season by the canyon depth. Both forced the landscape into a familiar human clock: one dramatic week or one unchanging annual pace.",
-        "Geologist Sena began with order rather than duration. In undisturbed sequences, lower beds had generally formed before those above; a channel cutting several beds was younger than the beds it crossed; fragments inside a rock were older than the rock containing them. Fossil assemblages changed in a repeatable succession across distant valleys. Seasonal lake layers and coral growth bands supplied shorter chronologies that overlapped written history and helped test whether counting assumptions remained sound across sites. These relations built a relative chronology even before anyone assigned a numerical age.",
-        "At one ledge, horizontal sandstone rested on tilted and eroded beds. Daro counted only the visible layers and missed the vanished interval represented by the contact. Deposition had occurred, rocks had been tilted and eroded, and deposition had resumed. The canyon wall was not a complete diary. Gaps could contain more time than the pages that remained, while a thin ash bed might record an eruption lasting days.",
-        "Sena sampled suitable minerals from ash layers and measured parent and daughter isotopes whose decay behaviour had been independently calibrated. She checked for alteration, used appropriate decay systems, reported analytical uncertainty, and compared dates with field relationships. Different clocks agreed within their limits. The method did not date the canyon merely by its appearance; it dated particular mineral-forming events that bracketed parts of the history.",
-        "The new chronology allowed both slow processes and catastrophes. Rivers cut, sediments accumulated, continents moved, and organisms changed across spans far beyond recorded history. Floods, eruptions, impacts, and rapid extinctions punctuated those spans. Present processes helped interpret the past, but their rates and combinations need not have remained constant. The central discipline was to use evidence at the scale each process required rather than stretch one lifetime into a universal ruler.",
-        "The canyon demanded deep time: the immense geological timescale over which Earth's rocks, landscapes, life, and planetary systems developed. Relative dating orders events through stratigraphic relations, while calibrated radiometric methods can assign numerical ages to suitable materials with stated uncertainties. Unconformities preserve missing intervals, and long histories include both gradual change and abrupt events. Daro had asked whether the canyon formed quickly or slowly. Sena showed that its wall contained many clocks, many rates, and more elapsed time than any single story could hold."
+        "A royal clockmaker built a clock that could run for one hundred years and considered himself familiar with long time. A geologist took him to a canyon where layered rock had been cut by a river. If only a little wore away each day, the clockmaker said, no human life could observe it. Perhaps one immense flood had formed everything.",
+        "The wall did contain a thin, disordered flood layer, but also hundreds of layers of slowly deposited mud and sand. A flat surface truncated the lower beds, showing that uplift and erosion had occurred before deposition resumed. One thin line could represent a long missing interval.",
+        "The geologist arranged events through their relative positions and sampled datable minerals from volcanic ash between layers. Decay measurements gave an age with uncertainty far beyond any manufactured clock. The methods did not recover every day; they constrained time within an incomplete record.",
+        "The clockmaker stopped demanding one constant rate and stopped treating immense time as always gradual. Long deposition, sudden flood, ash fall, and missing intervals could all belong to one history.",
+        "Before leaving, he placed his century clock beside the beds. Its hands continued moving, and the canyon did not look any younger."
       ],
       "storyParagraphsZh": [
-        "守门人达罗带游客穿过一座拥有数百层岩壁的峡谷。他曾看见一次洪水铺下一指厚泥沙，便声称整面岩壁来自一场古洪水。另一名向导坚持河流始终按今天的慢速切割，把一季速度乘上峡谷深度。两人都把地景塞进熟悉的人类时钟：一个剧烈星期，或一个永不变化的年度速率。",
-        "地质学者塞娜先判断顺序，而非时长。在未扰动序列里，下层通常早于上层形成；切穿多层的河道晚于被切岩层；岩石内部碎片又早于包裹它的岩石。化石组合在相隔很远的山谷中也按可重复次序变化。季节性湖层与珊瑚生长带提供较短年代序列，与文字历史重叠，也能跨地点检验计数假设。即使尚未赋予数字年龄，这些关系也能建立相对年代。",
-        "一处岩台上，水平砂岩覆盖着倾斜且受侵蚀的旧层。达罗只数可见层，漏掉接触面所代表的消失间隔。沉积先发生，岩石随后倾斜、侵蚀，沉积再重新开始。峡谷岩壁不是完整日记；缺口包含的时间可能比留下的纸页更多，一层薄火山灰却可能只记录持续数日的喷发。",
-        "塞娜从火山灰层选取合适矿物，测量衰变行为已经独立校准的母体与子体同位素。她检查后期改变，选择合适衰变系统，报告分析不确定性，并让日期与野外关系互相检验。不同计时方法在各自限度内一致。方法不是按峡谷外观给整座峡谷定年，而是测定特定矿物形成事件，为部分历史夹定范围。",
-        "新年代允许缓慢过程与灾变同时存在。河流切割、沉积累积、大陆移动和生物变化，跨越远超文字记录的时间；洪水、喷发、撞击与快速灭绝又在长跨度中留下突变。今天的过程帮助解释过去，速率与组合却不必始终相同。真正的纪律，是按每项过程需要的尺度使用证据，而非把一生拉成万能尺。",
-        "峡谷要求的是深时：地球岩石、地景、生命与行星系统发展所经历的巨大地质时间尺度。相对定年借助地层关系排列事件，经校准的放射性方法则可给合适材料赋予带不确定性的数字年龄。不整合面保存缺失间隔，漫长历史也同时包含渐变与突发事件。达罗原本只问峡谷形成得快还是慢，塞娜让他看见岩壁里有许多钟、许多速率，以及任何单一故事都装不下的时间。"
+        "王城钟匠制造了一只能走一百年的钟，便认为自己很懂漫长时间。地质师请他到峡谷，看层层岩石怎样被河流切开。钟匠觉得若每天只磨掉一点，人的一生根本看不出变化，峡谷或许来自一次巨大洪水。",
+        "岩壁里确实有薄而混乱的洪水层，也有数百层缓慢沉积的泥与沙。中间一处平整界面截断了下层，说明那里曾经历抬升与侵蚀，随后才重新沉积。很薄的一条线，可能代表漫长缺失。",
+        "地质师用上下关系排列事件，又从夹在层中的火山灰取得适合测年的矿物。衰变测量给出带不确定范围的年龄，远远超过任何人造钟。不同方法并非把每一天复原，而是在不完整记录中约束时间。",
+        "钟匠不再要求所有变化都保持相同速度，也不再把巨大时间理解成永远缓慢。长期沉积、突然洪水、火山灰和缺失间隔，都能进入同一段历史。",
+        "离开时，他把百年钟放在岩层旁。钟针仍在走，峡谷没有因此显得年轻一点。"
       ],
       "conceptName": "Deep time",
       "conceptNameZh": "深时",
       "explanationParagraphs": [
-        "Deep time is the immense geological timescale required to understand Earth's physical and biological history. Relative dating orders events, while radiometric methods can date suitable mineral-forming events with calibrated decay systems and uncertainty.",
-        "Rock records are incomplete: unconformities can represent long missing intervals, and thin layers may record brief catastrophes. Geological reasoning includes both gradual processes and abrupt events without assuming that all rates were constant."
+        "Deep time is the immense geological scale needed to understand Earth and life history. Relative dating orders events, while radiometric methods can assign uncertain ages to suitable mineral formation. The rock record is incomplete: thin beds may record catastrophes and unconformities long gaps. Geological change need not occur at a constant rate."
       ],
       "explanationParagraphsZh": [
-        "深时是理解地球物理与生物历史所需的巨大地质时间尺度。相对定年排列事件，放射性方法则可用经校准的衰变系统，为合适矿物形成事件赋予带不确定性的年龄。",
-        "岩石记录并不完整：不整合面可能代表漫长缺失间隔，薄层也可能记录短暂灾变。地质推理同时容纳渐进过程与突发事件，并不假定所有速率恒定。"
+        "深时是理解地球和生命历史所需的巨大地质时间尺度。相对定年排列事件，放射性方法可为合适矿物的形成提供带不确定性的年龄。岩石记录不完整，薄层可记录灾变，不整合面也可能代表漫长缺失；地质变化并非都以恒定速率发生。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0532-rock-cycle",
@@ -213,39 +218,40 @@
       "fieldCode": "0532",
       "fieldTitle": "Earth sciences",
       "fieldTitleZh": "地球科学",
-      "title": "The Stone With No Final Name",
+      "title": "The Stone with No Final Name",
       "titleZh": "没有最终名字的石头",
-      "summary": "A marked mineral grain passes through mountain, river, burial, heat, melt, and uplift without following a single compulsory circle.",
-      "summaryZh": "一颗带标记矿物穿过山地、河流、埋藏、热、熔融与抬升，却没有遵循一条强制圆环。",
+      "summary": "A museum wants to carve one permanent name beneath a stone, but a geologist reads several earlier identities within it.",
+      "summaryZh": "博物馆想给一块石头刻下永久名称，地质师却从它身上读出了好几次身份变化。",
       "storyParagraphs": [
-        "Sena marked a hard crystal exposed in a mountain granite and asked her students what it would be forever. They answered granite, as if a rock name were an identity stamped onto every grain. Frost widened cracks, roots pried the surface, and falling fragments entered a river. The crystal survived abrasion while softer minerals altered into clay. Transport sorted the pieces by size and density before depositing them with sand in a coastal basin.",
-        "More sediment buried the layer. Pressure compacted grains, mineral-rich water cemented pores, and loose sand became sedimentary rock without melting. Later burial brought higher temperature and directed stress. Minerals recrystallised, new textures formed, and the rock became metamorphic while remaining mostly solid. The marked crystal changed around its edges but retained evidence of an earlier history inside a younger arrangement.",
-        "As one crustal block descended, temperature eventually became high enough for partial melting. Not every mineral melted at once, so the liquid differed in composition from the residue. The melt rose, cooled slowly underground, and crystallised as a new igneous body. Elsewhere, similar melt could have erupted and cooled rapidly into fine-grained rock. Cooling rate changed texture; composition and crystallisation history shaped which minerals appeared.",
-        "Uplift and erosion exposed the new body millions of years later. Sena's imagined marker could begin another journey, remain buried, be metamorphosed again without melting, or enter melt directly after a different path. Sedimentary rock could weather before deep burial; igneous rock could be metamorphosed; metamorphic rock could erode into sediment. One volcanic fragment weathered and returned to sediment within centuries, while a neighbouring crystal stayed locked in deep crust through several mountain-building episodes. The classroom's neat circle was a map of possible transformations, not a timetable every grain must obey.",
-        "Two broad energy sources drove the network. Solar energy and gravity powered weathering, erosion, transport, and deposition at the surface. Earth's internal heat and gravity powered burial, deformation, metamorphism, melting, uplift, and large-scale circulation of crustal material. Chemical elements could leave one mineral and enter another even when the bulk rock never melted during fluid-driven alteration and recrystallisation. Rates ranged from an eruption lasting days to burial and uplift lasting millions of years. Matter was rearranged, transferred, and sometimes stored for vast intervals.",
-        "The nameless stone belonged to the rock cycle: the interconnected processes that create and transform igneous, sedimentary, and metamorphic rocks through crystallisation, weathering, transport, deposition, lithification, metamorphism, melting, and uplift. It is a branching system rather than one fixed loop, and individual grains need not complete it. Rock names describe present origin and texture, not permanent destiny. The crystal had not changed costumes around a perfect wheel; it had followed one contingent path through a planetary network."
+        "A mountain museum received a dark crystalline rock, and its director wanted the base engraved 'Igneous rock, forever'. A geologist found fragments of older sediment inside. Those grains had once become layers, changed under heat, and partly melted before crystallising again.",
+        "After exposure on a summit, wind and rain would break the same rock into pieces. Rivers could carry them to a lake, where burial might cement them into sedimentary rock. Taken deeper under heat and pressure, they could change again. No route required every rock to follow every name in one order.",
+        "The director asked what the rock would finally become. The geologist could not answer. Uplift, erosion, burial, melting, and crystallisation depended on different energies and conditions, with rates from sudden to immense. One mineral grain could skip stages or remain in one place for a very long time.",
+        "The museum still labelled the specimen igneous, but added its formation evidence and possible paths rather than treating the name as an endpoint. Visitors could see that the category described current origin and features, not a permanent identity.",
+        "Before engraving, the director removed the words 'forever' and left only the collection place and observation date."
       ],
       "storyParagraphsZh": [
-        "塞娜在山地花岗岩露头中标记一颗坚硬晶体，问学生它将永远是什么。学生回答花岗岩，仿佛岩名是盖在每颗矿物上的终身身份。冰冻撑宽裂缝，根系撬动表面，崩落碎块进入河流。晶体经受磨蚀，较软矿物则变成黏土。搬运按大小与密度分选碎片，最后与沙一起沉积在海岸盆地。",
-        "更多沉积物掩埋这一层。压力压实颗粒，富含矿物的水胶结孔隙，松散砂粒无需熔融便成为沉积岩。继续埋藏带来更高温度与定向应力，矿物重新结晶，新的纹理形成，岩石在大体保持固态时变成变质岩。标记晶体边缘发生改变，内部仍在较年轻排列中保存旧历史。",
-        "一块地壳下沉后，温度最终高到发生部分熔融。不同矿物不会同时熔化，因此液体组成与残余物不同。熔体上升，在地下缓慢冷却，结晶成新的火成岩体；别处相似熔体也可能喷出，在地表快速冷却成细粒岩石。冷却速度改变纹理，组成与结晶历史决定出现哪些矿物。",
-        "数百万年后，抬升与侵蚀让新岩体暴露。塞娜想象中的标记可以再次上路，也可继续深埋、未经熔融再次变质，或沿另一条路径直接进入熔体。沉积岩可在深埋前风化，火成岩可变质，变质岩也可侵蚀成沉积物。一块火山碎屑可在数百年内风化并重返沉积物，邻近晶体却可能在深部地壳锁存数次造山期。课堂里的整齐圆环是可能转化图，不是每颗矿物必须遵守的时刻表。",
-        "两类广义能源驱动这张网络。太阳能与重力推动地表风化、侵蚀、搬运和沉积；地球内部热量与重力推动埋藏、变形、变质、熔融、抬升和大尺度地壳物质循环。即使整块岩石没有熔化，化学元素也可在流体作用与重结晶中离开一种矿物、进入另一种。速率从持续数日的喷发到延续数百万年的埋藏抬升不等。物质被重排、转移，有时也储存极漫长间隔。",
-        "这块没有最终名字的石头属于岩石循环：火成岩、沉积岩与变质岩通过结晶、风化、搬运、沉积、成岩、变质、熔融与抬升彼此生成和转化的相连过程。它是一套分支系统，不是固定单环，单颗矿物也不必完成全程。岩名描述当前成因与纹理，不规定永久命运。晶体并非围绕完美圆轮不断换装，而是在行星网络中走过一条偶然路径。"
+        "山城博物馆收到一块带晶体的黑石，馆长要在底座刻下“火成岩，永远如此”。地质师却在石中发现更早沉积物的残片：它们曾被压成岩层，后来受热改变，再有一部分熔融并重新结晶。",
+        "同一块石头出露山顶后，风雨又让它裂成碎屑。碎屑被河流搬到湖底，若继续埋藏，可能胶结成新的沉积岩；若被带到深处受压受热，又会发生别的变化。没有一条路要求它按固定顺序走完所有名称。",
+        "馆长问它最终会成为什么。地质师无法回答，因为抬升、侵蚀、埋藏、熔融与结晶由不同能量和条件驱动，速度也从骤然到漫长不等。一粒矿物可以跳过阶段，也可能在一处停留极久。",
+        "博物馆仍为当前石样标注火成岩，却在旁边增加形成证据和可能路径，而不是把名称当作终点。参观者能看见分类描述的是此刻的形成特征，不是一份永久身份。",
+        "刻字前，馆长删掉了底座上的“永远如此”，只留下采集地点和观察日期。"
       ],
       "conceptName": "Rock cycle",
       "conceptNameZh": "岩石循环",
       "explanationParagraphs": [
-        "The rock cycle links processes that form and transform igneous, sedimentary, and metamorphic rocks, including crystallisation, weathering, transport, deposition, lithification, metamorphism, melting, and uplift.",
-        "It is not a compulsory sequence. Solar energy, gravity, and Earth's internal heat drive branching pathways at very different rates, and individual rocks or mineral grains may skip stages or remain stored for long intervals."
+        "The rock cycle connects formation and transformation among igneous, sedimentary, and metamorphic rocks through crystallisation, weathering, transport, deposition, lithification, metamorphism, melting, and uplift. It is not a fixed sequence or compulsory circle. A rock may follow branches, skip stages, or remain in one state for a very long time."
       ],
       "explanationParagraphsZh": [
-        "岩石循环连接火成岩、沉积岩与变质岩的形成转化过程，包括结晶、风化、搬运、沉积、成岩、变质、熔融与抬升。",
-        "它不是强制顺序。太阳能、重力与地球内部热量以差异巨大的速率驱动分支路径，单块岩石或矿物颗粒可以跳过阶段，也可长期储存。"
+        "岩石循环连接火成岩、沉积岩与变质岩的形成和转化，包括结晶、风化、搬运、沉积、成岩、变质、熔融与抬升。它不是固定顺序或必经圆环；单块岩石可走不同分支、跳过阶段，或在某状态停留很久。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0533-conservation-of-energy",
@@ -256,37 +262,38 @@
       "fieldTitleZh": "物理学",
       "title": "The Missing Entry in the Waterwheel Ledger",
       "titleZh": "水车账本失踪的一项",
-      "summary": "A mill accountant counts only useful shaft work and declares energy lost until heat, sound, motion, storage, and system boundaries complete the ledger.",
-      "summaryZh": "磨坊会计只计算有用轴功，便宣布能量失踪，直到热、声、运动、储存与系统边界补全账本。",
+      "summary": "Water falls from a height, yet the millshaft receives less turning power, so the clerk declares that part of the energy has vanished.",
+      "summaryZh": "水从高处落下，磨坊得到的转动力却少了一截，账房认定那部分能量已经消失。",
       "storyParagraphs": [
-        "A high reservoir drove the Venn mill. Falling water turned a wheel, the wheel turned stones, and the stones ground grain. Accountant Rusk compared the water's descent with the flour produced and found the shaft delivered less mechanical work than his ideal calculation. He wrote the difference as a missing entry. Worn bearings, splashing water, and a warm axle seemed to him merely signs that the machine had destroyed part of what entered.",
-        "Engineer Mira widened the ledger. Water left with residual motion; the wheel and stones vibrated; sound spread through walls; friction raised the internal energy of bearings, grain, and air. She insulated one bearing and measured its temperature rise, then tracked the slowing flywheel after the gate closed. Quantities Rusk had ignored appeared as transferred or stored energy. Measurement remained imperfect, but enlarging the account steadily reduced the unexplained balance.",
-        "Rusk built a polished wheel that briefly delivered more shaft work than the simultaneous water flow seemed to supply. He announced a machine that created energy. Mira began the accounting earlier. Workers had wound a spring and accelerated a heavy flywheel before the demonstration. During the chosen minute, stored energy left those components. Over a full cycle returning the apparatus to its initial state, the apparent surplus vanished. The conclusion depended on system boundary, time interval, and whether every storage change and transfer crossed the ledger.",
-        "The mill then burned fuel to pump water back uphill. Rusk counted only the restored reservoir and ignored exhaust heat and chemical change. Mira included the pump, fuel, air, and surroundings. In ordinary mechanics and thermodynamics, energy moved among gravitational, kinetic, elastic, chemical, internal, and radiative forms. In more complete physics, mass itself contributed to the total through mass-energy, although the mill's mass changes were far too small for its scales to resolve.",
-        "A complete balance did not make the mill perfectly efficient. The same total could become more dispersed as low-temperature heat and therefore less available for producing useful work under given surroundings. The quantity was conserved while its usefulness changed. Open systems could gain and lose it through matter, heat, work, and radiation; only a properly defined isolated total remained constant. Symmetries give the principle a deeper theoretical foundation, but every practical audit still begins by declaring what is inside.",
-        "Mira had applied conservation of energy: energy cannot be created or destroyed in an isolated system, though it can be transferred across boundaries and transformed among forms. For an open system, the change in stored energy equals transfers in minus transfers out, including work, heat, radiation, and energy carried by matter. Conservation does not guarantee high efficiency or unchanged capacity for useful work. The waterwheel had lost no entry from nature's ledger. Rusk had simply drawn his accounting box around the output he wished to see."
+        "When the new waterwheel began work, the engineer calculated the energy available in water falling from above. The millshaft received much less useful turning power, and the clerk entered the difference as 'lost'. He assumed anything not reaching the millstone no longer existed.",
+        "The engineer touched a warm bearing, listened to the wheel striking water, and measured speed remaining in the outflow. Vibration also entered the foundation. If the boundary enclosed only the millstone, heat, sound, moving water, and structural motion all disappeared from the account.",
+        "They redrew the boundary around the whole device and recorded input, output, mechanical work, heat, and temporary storage. The total balanced. What had fallen was the share converted into useful shaft work. The energy remained, but some had become dispersed and difficult to gather again.",
+        "New bearings and channels increased useful output and reduced waste heat, but conservation did not guarantee efficiency. It required every transfer and form to be included, not every part to perform the desired work.",
+        "At month's end, the clerk kept the loss column but divided it into heat, sound, outflow, and friction. The blank space was finally filled."
       ],
       "storyParagraphsZh": [
-        "高处水库驱动维恩磨坊。落水推动水车，水车转动磨石，磨石碾碎谷物。会计拉斯克把水位下降与面粉产出比较，发现轴传出的机械功少于理想计算，便把差额记成账本失踪项。磨损轴承、飞溅水流与发热轮轴在他看来，只是机器毁掉部分输入的迹象。",
-        "工程师米拉扩大账本。出水仍有剩余运动，水车与磨石振动，声音穿过墙壁，摩擦提高轴承、谷物和空气的内能。她给一只轴承隔热并测量温升，又追踪闸门关闭后飞轮怎样减速。拉斯克忽略的量重新成为能量转移或储存。测量仍不完美，扩大核算后，无法解释的差额却不断缩小。",
-        "拉斯克造出一架光滑水车，在短时间内给出的轴功竟超过同时水流看似提供的输入，他宣布机器创造了能量。米拉把核算起点提前：演示前，工人曾上紧弹簧，并让沉重飞轮加速。选定的一分钟里，储存能量从这些部件流出。若观察使装置回到初态的完整循环，表面盈余便消失。结论取决于系统边界、时间区间，以及每项储存变化与跨界转移是否入账。",
-        "磨坊后来燃烧燃料，把水抽回高处。拉斯克只计算恢复的水库，忽略废热与化学变化。米拉把水泵、燃料、空气和周围环境纳入。普通力学与热力学里，能量在重力、动能、弹性、化学、内能与辐射等形式间移动；更完整的物理学中，质量本身也通过质能关系计入总量，只是磨坊的质量变化小到无法用其秤测出。",
-        "完整平衡并不会让磨坊效率完美。相同总量可分散成低温热，在给定环境下更难转成有用功。总量守恒，用途却会改变。开放系统可通过物质、热、功与辐射获得或失去能量，只有定义恰当的孤立总系统保持恒定。对称性为原则提供更深理论基础，但每次实际核算仍要先说明什么被画在框内。",
-        "米拉运用的是能量守恒：孤立系统中的能量不能被创造或消灭，却可跨边界转移并在各种形式间转化。对开放系统，储存能量变化等于流入减流出，包括功、热、辐射和物质携带的能量。守恒不保证高效率，也不保证做有用功的能力不变。水车并未从自然账本中弄丢任何一项，拉斯克只是把核算框画在自己想看见的输出周围。"
+        "新水车开工时，工程师计算了高处水流能够带来的能量。磨轴实际得到的转动力少了许多，账房便在记录里写下“损失”。他以为没有进入磨石的部分已经不复存在。",
+        "工程师摸了摸发热的轴承，听见水轮撞水的声响，又测量流出水渠仍有的速度。磨坊还把一部分振动传进地基。若只把边界画在磨石周围，热、声、剩余水流和结构运动都会从账上消失。",
+        "他们重新划定整个装置的边界，把流入、流出、机械功、热和暂时储存逐项记录。总量能够对上，真正降低的是转成有用磨轴功的份额。能量仍在，却有些变得分散，难以重新集中利用。",
+        "换好轴承与水道后，有用输出增加，废热减少，但效率仍不可能用“守恒”自动保证。守恒只要求所有转移和形式被计入，不承诺每一份都能完成想要的工作。",
+        "月底，账房没有删掉“损失”一栏。他把它拆成热、声、出水与摩擦，空白处终于填满。"
       ],
       "conceptName": "Conservation of energy",
       "conceptNameZh": "能量守恒",
       "explanationParagraphs": [
-        "Conservation of energy states that the total energy of an isolated system remains constant while energy changes form or transfers between parts. Open-system balances must include work, heat, radiation, matter flows, and changes in storage.",
-        "Apparent losses usually reflect omitted transfers, forms, or boundaries. Conservation does not mean perfect efficiency: energy can become more dispersed and less available for useful work even though the total remains unchanged."
+        "Conservation of energy states that total energy in an isolated system remains constant while changing form or moving among parts. Open-system accounting must include work, heat, radiation, material flow, and storage change. Conservation does not imply perfect efficiency; energy can remain while becoming more dispersed and less available for useful work."
       ],
       "explanationParagraphsZh": [
-        "能量守恒指出，孤立系统总能量保持不变，能量可以改变形式或在各部分间转移。开放系统核算须包括功、热、辐射、物质流与储存变化。",
-        "表面损失通常来自遗漏的转移、形式或边界。守恒不表示效率完美：总量虽不变，能量仍可变得更分散、更难转化为有用功。"
+        "能量守恒指出孤立系统总能量不变，能量可改变形式或在部分之间转移。开放系统核算必须包括功、热、辐射、物质流和储存变化。守恒不等于效率完美；能量虽未消失，却可能变得更分散、更难转化为有用功。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0533-entropy",
@@ -295,39 +302,40 @@
       "fieldCode": "0533",
       "fieldTitle": "Physics",
       "fieldTitleZh": "物理学",
-      "title": "The Cold That Would Not Walk Home",
+      "title": "The Cold That Would Not Come Home",
       "titleZh": "不肯自己回家的冷",
-      "summary": "An icehouse owner watches heat spread into a cold room and learns why equal total energy does not make the reverse history equally likely.",
-      "summaryZh": "冰窖主人看着热量进入冷室，随后明白总能量相同，并不让反向历史具有同等可能。",
+      "summary": "An icehouse owner assumes cold has merely escaped into the yard and waits for it to return at night.",
+      "summaryZh": "冰窖主人以为冷气只是跑出了房间，便等着它在夜里自己回来。",
       "storyParagraphs": [
-        "Icehouse owner Elan opened the partition between a warm storeroom and a chamber of ice. Heat passed into the cold side until temperatures approached one another and some ice melted. Total energy had merely moved within the building. Elan therefore expected that, if he waited, the same energy would spontaneously gather back in the warm room and the melted water would refreeze. The building never performed that reverse history.",
-        "Physicist Nera scattered dark and pale beads across a divided tray to represent small parcels of energy. There were very few arrangements in which almost all dark beads occupied one side and pale beads the other, but enormously many mixed arrangements with similar macroscopic balance. Random microscopic motion could in principle fluctuate either way, yet an isolated collection with many particles overwhelmingly moved toward macrostates compatible with more microscopic arrangements. The reverse was not forbidden by the energy ledger; it was fantastically improbable at ordinary scale.",
-        "Elan bought a refrigerator and triumphantly moved heat from the cold chamber to the warmer outdoors. Nera pointed to the power cable and the hot condenser. The device used work and expelled more heat outside than it removed from within. The chamber's measure could decrease locally while the combined device and surroundings increased overall. Moving heat from cold to hot was possible, but not as a costless cyclic process whose only result reversed spontaneous heat flow.",
-        "A second dispute involved two gases separated by a partition. Once mixed, they did not sort themselves back by colour, although a carefully operated membrane could separate them by consuming work and producing effects elsewhere. Friction likewise turned organised motion into dispersed molecular motion. Recovering every microscopic correlation would require impossible control. Macroscopic irreversibility emerged from statistics, lost correlations, and constraints even though underlying microscopic laws could often be reversible.",
-        "Nera refused to define the quantity merely as messiness. A shuffled deck could look disorderly without constituting a thermodynamic system, and crystals still possessed thermal states. In classical thermodynamics, reversible heat transfer divided by temperature helped define changes; in statistical mechanics, the logarithm of compatible microscopic states linked the same quantity to probability. Its increase law applied to isolated systems, while open systems could export it and build local structure by consuming free energy.",
-        "The icehouse displayed entropy: a thermodynamic state function connected to energy dispersal and, statistically, to the number of microscopic configurations compatible with a macrostate. For an isolated macroscopic system in the thermodynamic description, total entropy does not decrease; spontaneous processes tend toward overwhelmingly more probable macrostates, while tiny systems may fluctuate. Local decreases are possible when larger increases occur elsewhere, as in refrigeration or living systems. Energy conservation explained why nothing vanished. Entropy explained why the cold did not simply walk home and restore yesterday's arrangement."
+        "An icehouse owner found that blocks melted quickly after the door was left open. He said the cold had escaped into the yard and should return when night cooled the air. But after temperatures equalised, the meltwater did not gather itself into ordered blocks of ice.",
+        "A mechanic explained that heat spreads from warmer to cooler places and that many microscopic arrangements correspond to the more dispersed condition. The reverse was not a logical impossibility, but it would not sustain itself at macroscopic scale. Making the room cold again required work to move heat out.",
+        "They installed a cooling machine driven by a waterwheel. The inner chamber cooled, but the outdoor coils grew warm and the wheel consumed usable energy from the river. Restoring local cold had not reduced energy dispersal in the whole surroundings; the environment received more heat and dissipation.",
+        "The owner also kept the door shut and added insulation, reducing the heat that had to be moved. Living systems and machines could maintain local order within open boundaries, but only through continuing energy flow and exported cost.",
+        "After the first new ice froze, the owner did not wait for cold to return. He secured the door and checked the warm coils outside."
       ],
       "storyParagraphsZh": [
-        "冰窖主人埃兰打开温暖储藏室与冰室之间的隔板。热量流入冷侧，直到两边温度接近，部分冰也融化。总能量只是在建筑内部移动，埃兰因此期待，只要等待，同一批能量会自行聚回暖室，融水也会重新结冰。建筑始终没有演出这段反向历史。",
-        "物理学者奈拉在分隔托盘上撒开深浅两色珠子，代表微小能量份额。几乎所有深珠集中一侧、浅珠集中另一侧的排列很少，宏观上均匀混合的微观排列却多得惊人。随机微观运动原则上可向任一方向波动，但含大量粒子的孤立集合压倒性地走向兼容更多微观排列的宏观状态。能量账本没有禁止反向，普通尺度下它只是罕见得近乎不会发生。",
-        "埃兰买来制冷机，得意地把热从冷室搬到更暖的室外。奈拉指向电源线与发热冷凝器。机器消耗功，向外排出的热比从室内移走的更多。冷室的该项度量可以局部下降，设备与环境合计却总体上升。热可以从冷处搬向热处，却不能成为无代价循环，其唯一结果只是逆转自发热流。",
-        "第二场争论涉及被隔板分开的两种气体。隔板移除后，它们不会自行按颜色分开，精心操作的膜可以分离，却要消耗功，并在别处产生影响。摩擦也把有序运动变成分散分子运动。恢复每项微观关联需要不可能的控制。即使底层微观定律常可逆，宏观不可逆仍从统计、关联丢失与约束中出现。",
-        "奈拉拒绝只把这个量定义为混乱。一副洗乱的牌看似杂乱，却不因此成为热力学系统，晶体也仍有热状态。经典热力学用可逆热传递除以温度帮助定义变化；统计力学则以兼容微观状态数的对数，把同一量连接到概率。增长定律针对孤立系统，开放系统可以把它输出，并通过消耗自由能建造局部结构。",
-        "冰窖展示的是熵：一种与能量分散相关的热力学状态函数，在统计意义上又联系兼容某宏观状态的微观构型数。宏观孤立系统在热力学描述下总熵不会减少，自发过程趋向压倒性更可能的宏观状态，微小系统则可能出现涨落。若别处出现更大增加，局部下降可以发生，如制冷机与生命系统。能量守恒解释没有任何东西消失，熵则解释冷为何不会自行回家，恢复昨天的排列。"
+        "冰窖主人发现门开以后，冰块融得很快。他说冷气只是逃进了院子，夜里天气转凉时应该自己回到冰窖。可屋内外温度接近后，融化的水没有自行重新结成整齐冰块。",
+        "工匠解释，热量会从较暖处向较冷处扩散，许多微观安排都对应这种更分散的状态；反向聚回并非逻辑上绝无可能，却在宏观上不会自行持续发生。要让冰窖重新变冷，必须做功把热搬出去。",
+        "他们装上由水轮驱动的冷却机。机内空间降温，院外散热片却变热，水轮也消耗河流可用能量。冰窖局部恢复低温，并没有让整个环境的能量分散减少；周围得到的热与耗散更多。",
+        "主人还学会关门、加隔热，减少必须搬走的热。生命与机器都能在开放边界内维持局部有序，但需要持续能量流，并把代价送往环境。",
+        "第一批新冰冻好后，主人没有等冷气自己回来。他先关紧窖门，又去检查院外仍在发热的散热片。"
       ],
       "conceptName": "Entropy",
       "conceptNameZh": "熵",
       "explanationParagraphs": [
-        "Entropy is a thermodynamic state function related to energy dispersal and, in statistical mechanics, to the number of microscopic configurations compatible with a macrostate. In the macroscopic thermodynamic description, total entropy does not decrease in an isolated system.",
-        "The second law is statistical and does not forbid local decreases. Refrigerators, organisms, and other open systems can build local order by using free energy and producing a compensating or larger entropy increase in their surroundings."
+        "Entropy is a state function related to energy dispersal and the number of microscopic arrangements compatible with a macroscopic state; total entropy of an isolated system does not decrease. The second law is statistical and does not forbid local decreases. Refrigerators and living systems use free energy to maintain local order while producing compensating or greater entropy in their environment."
       ],
       "explanationParagraphsZh": [
-        "熵是与能量分散相关的热力学状态函数，在统计力学中又联系兼容某宏观状态的微观构型数。在宏观热力学描述下，孤立系统总熵不会减少。",
-        "热力学第二定律具有统计意义，并不禁止局部下降。制冷机、生命体等开放系统可以利用自由能建立局部有序，同时在环境中产生补偿性或更大的熵增加。"
+        "熵是与能量分散及宏观状态可对应的微观构型数量相关的状态函数；孤立系统总熵不会减少。第二定律具有统计意义，并不禁止局部熵下降。制冷机和生命体可利用自由能维持局部有序，同时向环境产生补偿性或更大的熵增加。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0533-field-concept",
@@ -336,39 +344,40 @@
       "fieldCode": "0533",
       "fieldTitle": "Physics",
       "fieldTitleZh": "物理学",
-      "title": "The Square of Turning Needles",
+      "title": "The Iron Needles That Turned Together",
       "titleZh": "铁针同时转向的广场",
-      "summary": "Compass needles turn without visible contact, leading a surveyor to map a physical quantity assigned to every point rather than invent instantaneous hidden strings.",
-      "summaryZh": "罗盘针在无可见接触时转向，促使测量员绘出分配到空间每一点的物理量，而非想象即时隐藏绳索。",
+      "summary": "Iron needles across a square never touch one another, yet turn toward the fountain at the same time.",
+      "summaryZh": "广场上的铁针没有彼此相碰，却在同一时刻朝向了喷泉。",
       "storyParagraphs": [
-        "Every compass needle in the city square turned when a sealed iron chest arrived. No hook, wind, or visible cord touched them. The mayor imagined invisible strings running directly from chest to needle and ordered workers to search for knots. Surveyor Ivo instead carried one small test needle through the square. At each point he recorded the direction it settled and how strongly it resisted displacement.",
-        "The resulting map assigned an arrow to every location. Near the chest, arrows were stronger; farther away, they weakened and curved. Once the map was known, Ivo could predict how another sufficiently small needle would tend to turn without drawing a new chest-to-object string. The needle did not create the mapped condition, although a large test object could disturb it and therefore had to be treated as part of the system.",
-        "The mayor moved the chest and expected the farthest needles to respond instantly. They did not. Changes propagated through space at a finite speed, and a sufficiently rapid disturbance could travel as a wave even after its source stopped moving. The spatial condition could carry energy and momentum rather than serving only as shorthand for forces between distant objects. A delayed response distinguished propagation from a story of simultaneous command everywhere. What existed between source and response acquired physical significance.",
-        "A second chest complicated the arrows. At ordinary strengths, Ivo added the contributions from both sources vectorially and predicted the new direction. Some mapped quantities would instead assign a single number to each point, while others required vectors or more complex mathematical objects. The force on a particular object depended on both the spatial quantity and the object's charge, mass, orientation, or other coupling property. Map and response were related but not identical.",
-        "Ivo warned that the map was not a mechanical fluid hidden beneath the paving. Coordinates and arrows were representations; measurable predictions did not require a material ether. Electric, magnetic, and gravitational descriptions had different sources and equations, and modern quantum theory extended the idea far beyond the square. Even classically, the useful shift was from instantaneous action at a distance to local quantities whose evolution was governed point by point.",
-        "The square taught the field concept: physics represents a quantity as defined throughout space and time, with scalar, vector, or more complex values at each point, so sources shape local conditions and objects respond according to their coupling. Fields can superpose, store and transfer energy and momentum, and propagate disturbances at finite speed. A force is the response of a particular object; the field exists as the spatial structure used to determine that response. The mayor searched for one string per needle. Ivo found one changing map shared by the whole square."
+        "A craftsperson placed dozens of freely turning iron needles around a square. A large magnet lay beneath the fountain. The needles touched neither it nor one another, yet turned at different angles. Those nearer the fountain generally moved more strongly.",
+        "An apprentice thought the first needle passed an instruction to the rest and removed several. The remaining directions persisted. A surveyor drew an arrow at each position, recording how a suitable test object would respond there. Even an empty point could be assigned an expected direction and strength.",
+        "Different test objects responded differently. The force on a needle depended both on the state at that location and on how the object itself coupled to it. It was not solely a property of the square or the needle.",
+        "When the hidden magnet moved, the pattern across the square changed. More generally, disturbances from a source need not reach arbitrarily distant places instantly. A field can carry energy and momentum rather than merely serving as bookkeeping for action at a distance.",
+        "After every needle was removed at night, the surveyor left the arrow map on the stones. The first needle returned the next morning turned immediately along its arrow."
       ],
       "storyParagraphsZh": [
-        "一只密封铁箱运进城市广场后，所有罗盘针同时转向。没有钩子、风或可见绳索碰到它们。市长想象铁箱与每根针之间都有隐形细线，命工人寻找绳结。测量员伊沃却拿一根小测试针走遍广场，在每个位置记录它稳定后的方向，以及偏转它时感到的强弱。",
-        "所得地图给每个位置分配一支箭头。靠近铁箱时箭头较强，远处逐渐变弱并弯曲。地图一旦得知，伊沃无需为新针另画一根通向铁箱的绳，也能预测足够小的针倾向怎样转动。测试针没有创造被测空间状态，但大型测试物可能扰动它，因此必须成为系统的一部分处理。",
-        "市长移动铁箱，期待最远罗盘立即响应，它们却没有。变化以有限速度穿过空间，足够迅速的扰动还可形成波，即使源停止移动仍继续传播。空间中的状态可以携带能量与动量，而不只是远处物体间作用力的简写。延迟响应把传播与全处同时受令的故事区分开。源与响应之间存在的东西，由此获得物理意义。",
-        "第二只铁箱让箭头复杂起来。在普通强度下，伊沃按向量相加两处来源的贡献，预测新方向。有些空间量会给每点分配一个数字，另一些需要向量或更复杂数学对象。特定物体所受作用取决于空间量，也取决于物体的电荷、质量、朝向或其他耦合性质。地图与响应相关，却不是同一个东西。",
-        "伊沃提醒，地图不是藏在路面下的机械流体。坐标与箭头只是表示，可检验预测不要求存在物质以太。电、磁与引力描述拥有不同来源和方程，现代量子理论又把这套思想扩展到广场之外。即使在经典层面，关键转变也是从即时远距作用，转向按空间每点演化的局部物理量。",
-        "广场教授的是场概念：物理学把某个量定义在整个时空中，每一点可拥有标量、向量或更复杂的值，由源塑造局部条件，物体则按自身耦合方式响应。场可以叠加，储存并传递能量与动量，也能以有限速度传播扰动。力是特定物体的响应，场则是用来确定响应的空间结构。市长为每根针寻找一条绳，伊沃找到的是整座广场共享的一张变化地图。"
+        "工匠在广场不同位置摆下几十枚能自由转动的铁针。喷泉底下藏着一块大磁石，铁针没有碰到它，也没有互相连接，却各自转向不同角度。离喷泉越近，转向通常越明显。",
+        "学徒以为是第一枚铁针把命令传给后面的针，便取走其中几枚。剩下的方向没有消失。测量师在每个位置画出箭头，记录那里若放入合适测试物会受到怎样的作用；没有铁针的位置也能赋予一个预计方向和强度。",
+        "换成不同性质的测试物，响应会不同。铁针的受力同时取决于广场中该处的状态和它自身怎样与之相互作用，不能把测得的力只当作广场或铁针单方面的属性。",
+        "工匠移动底下磁石时，广场各处的图样随之改变。更一般地，源产生的扰动并非必须瞬间传到无限远，场本身还能携带能量和动量，而不只是远距离作用的记账方式。",
+        "夜里收走所有铁针后，测量师仍把箭头图留在地上。第二天第一枚针放回时，立刻沿着图中的方向转了过去。"
       ],
       "conceptName": "Field concept",
       "conceptNameZh": "场概念",
       "explanationParagraphs": [
-        "The field concept assigns a physical quantity to every point in space and time. Fields may be scalar, vector, or more complex; sources shape them, and objects respond according to properties that couple to them.",
-        "Fields are more than bookkeeping for distant forces: they can store and transfer energy and momentum and propagate disturbances at finite speed. A measured force depends on both the field and the particular test object."
+        "A field assigns a physical quantity to every point in space and time and may be scalar, vector, or more complex. Sources shape fields, while objects respond through their coupling, so measured force depends on both. Fields can store and transfer energy and momentum and propagate disturbances at finite speed, not merely record distant action."
       ],
       "explanationParagraphsZh": [
-        "场概念把物理量分配到时空中的每一点。场可以是标量、向量或更复杂对象；源塑造场，物体则按与场耦合的自身性质作出响应。",
-        "场不只是远距作用的记账工具：它可以储存并传递能量与动量，也能以有限速度传播扰动。测得的力同时取决于场与特定测试物体。"
+        "场概念把物理量赋予时空中的每一点，可为标量、向量或更复杂对象。源塑造场，物体按自身耦合性质响应，测得的力同时取决于两者。场能够储存和传递能量、动量，并以有限速度传播扰动，不只是远距作用的数学记账。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0541-invariance",
@@ -377,39 +386,40 @@
       "fieldCode": "0541",
       "fieldTitle": "Mathematics",
       "fieldTitleZh": "数学",
-      "title": "The Stones the Boxes Could Not Hide",
+      "title": "The Pebbles the Box Could Not Hide",
       "titleZh": "盒子藏不住的石子",
-      "summary": "Boxes exchange stones through allowed moves, and a solver ignores their changing arrangement to track the quantity every move must preserve.",
-      "summaryZh": "盒子按允许操作交换石子，解题者越过不断改变的排列，追踪每次操作都必须保留的量。",
+      "summary": "An apprentice flips stones hundreds of times but cannot reach the target because every permitted move preserves one fact.",
+      "summaryZh": "学徒把石子翻了几百次，仍无法得到目标图案，因为每次允许的动作都保留着同一件事。",
       "storyParagraphs": [
-        "At the winter fair, eight closed boxes held forty stones. Gamekeeper Oro repeatedly moved three stones from one box to another and shuffled box positions. He challenged players to reach a display containing forty-one stones without opening the supply chest. Most followed individual boxes, lost track after a dozen moves, and suspected that clever shuffling might conceal an extra stone. Solver Tia wrote one number after every move: the total across all boxes.",
-        "Each allowed move subtracted three from one box and added three to another. Labels and locations changed, but the sum remained forty. No sequence, however long or ingenious, could end at forty-one under those rules. The argument reached across every possible sequence because the sum was preserved step by step. Tia did not need to enumerate every arrangement. She found a property preserved by each legal transformation, then used the mismatch between starting and target states to prove the target unreachable.",
-        "Oro changed the game. A move now removed two stones from the table or returned two from a reserve. The total no longer stayed fixed, but whether the total was even did. A target of forty-one remained impossible, while thirty-eight was no longer ruled out. When a later move allowed removal of one stone, evenness also failed. A useful preserved property belonged to a specified transformation set, not to the boxes by nature.",
-        "Tia tested other candidates: the sum of weighted box positions, the parity of stones in black boxes, and the colouring of a network through which stones travelled. Some survived one move but not another. She checked every permitted move type symbolically, including boundary cases, before trusting a candidate. The art was to discard visual detail while retaining a quantity or structure sensitive enough to separate the desired state from the initial one.",
-        "The method had limits. Sharing the same preserved value did not guarantee that two arrangements were connected; it only removed one obstruction. A complete classification might require several independent properties or a constructive sequence of moves. The chosen quantity could also transform in a predictable way rather than remain literally fixed, allowing a related conserved combination. Symmetry and preserved quantities often travelled together, but the relation had to be proved for the system at hand.",
-        "Tia had used invariance: a property remains unchanged under a specified set of transformations. Invariants compress many possible steps into one constraint and are central to impossibility proofs, classification, geometry, algebra, algorithms, and physical conservation laws. They depend on both the objects and the allowed operations; changing the rules can destroy one and reveal another. Oro made the boxes move so quickly that everyone watched the motion. Tia won by writing down what the motion could never alter."
+        "The mathematics hall had ten pebbles, black on one side and white on the other. Four began black side up. The rules allowed an apprentice to flip any two stones at once. The target was exactly five black stones.",
+        "He tried for a whole day. Flipping two white stones added two black ones; flipping two black removed two; one of each left the count unchanged. Positions and order changed repeatedly, but the number of black faces remained even.",
+        "A companion suggested putting the stones in a box and changing their order unseen. The box could hide the process but not alter the permitted move. Every step changed the black count by zero or two, so a start at four could never reach five.",
+        "They had ruled out the target without listing every sequence. The master noted that parity provided an obstruction: if a target were also even, matching parity alone would not prove reachability. They would still need a construction or further conditions.",
+        "Before closing the hall, the apprentice returned the picture of five black stones to the box. The lid closed over a target whose oddness remained unchanged."
       ],
       "storyParagraphsZh": [
-        "冬季集市上，八只封闭盒子共装四十颗石子。游戏主持奥罗不断从一盒移三颗到另一盒，再打乱盒子位置。他挑战玩家在不打开供应箱的情况下，得到总计四十一颗的展示。多数人追踪单个盒子，十几步后便迷失，怀疑巧妙换位能藏进额外一颗。解题者蒂娅每步只写一个数字：所有盒子的总数。",
-        "每次允许操作都从一盒减三，在另一盒加三。标签与位置改变，总和仍为四十。规则不变时，无论序列多长、多巧妙，都不可能以四十一结束。总和逐步保留，因此论证覆盖每条可能序列。蒂娅无需枚举所有排列；她找到每次合法变换都保留的性质，再利用起点与目标在该性质上的不一致，证明目标不可达。",
-        "奥罗改变游戏：每次可从桌上拿走两颗，或从储备放回两颗。总数不再固定，奇偶性却保持不变。四十一仍不可能，三十八则不再被该条件排除。后来允许拿走一颗时，奇偶性也失效。有用的保留性质属于明确的变换集合，不是盒子天生拥有。",
-        "蒂娅继续测试加权位置和、黑盒石子奇偶性，以及石子经过网络的着色。有些候选能经受一种操作，却败给另一种。她在信任某项性质前，用符号检查每类允许操作，包括边界情况。技巧在于丢掉视觉细节，同时保留足够敏感的量或结构，把目标状态与初态区分开。",
-        "方法也有限制。两个排列拥有相同保留值，并不保证彼此连通，只表示一道障碍不存在。完整分类可能需要多项独立性质，或实际构造出操作序列。所选量也可以按可预测方式变化，而非字面固定，由此形成相关守恒组合。对称性与保留量常相伴，却必须针对具体系统证明。",
-        "蒂娅使用的是不变量：某项性质在指定变换集合下保持不变。不变量把大量可能步骤压缩成一条约束，是不可能性证明、分类、几何、代数、算法与物理守恒律的核心工具。它同时依赖对象和允许操作，规则改变会毁掉一个，也可能显露另一个。奥罗让盒子快得人人只盯着运动，蒂娅却写下运动永远不能改变的东西。"
+        "算术馆摆着十枚石子，一面黑、一面白。开始时黑面向上的石子有四枚。规则允许学徒每次同时翻转任意两枚，目标是让恰好五枚黑面向上。",
+        "学徒尝试了整整一天。有时翻两白，黑石增加两枚；有时翻两黑，减少两枚；一黑一白则总数不变。他不断改变位置和顺序，黑石数量却始终是偶数。",
+        "同伴建议把石子装进盒子，趁别人看不见时换顺序。盒子能够隐藏过程，却不能改变允许动作。无论走多少步，黑石数量只会变化零或两个，从四出发无法抵达五。",
+        "他们因此不必枚举所有翻法，便能排除目标。馆主随后提醒，这个不变的奇偶性只提供不能到达的证据；若目标同为偶数，还需要实际构造步骤或寻找其他条件才能证明可达。",
+        "收馆前，学徒把五枚石子的目标图放回盒中。盒盖合上，外面仍写着一个无法改变的奇数。"
       ],
       "conceptName": "Invariance",
       "conceptNameZh": "不变量",
       "explanationParagraphs": [
-        "Invariance means that a quantity, relation, or structure remains unchanged under specified transformations. Proving preservation for every allowed move can rule out any target with a different invariant value without enumerating all paths.",
-        "An invariant is rule-dependent and usually gives a necessary, not sufficient, condition for reachability. Several invariants or a constructive argument may be required for a complete classification or proof of possibility."
+        "An invariant is a quantity, relation, or structure preserved under specified transformations. Showing that every allowed operation preserves it can rule out targets with a different invariant value without enumerating paths. An invariant depends on the rules and usually supplies only a necessary obstruction; matching values alone need not prove reachability."
       ],
       "explanationParagraphsZh": [
-        "不变量指某个量、关系或结构在指定变换下保持不变。证明每种允许操作都保留它，便可排除不变量取值不同的目标，无需枚举所有路径。",
-        "不变量依赖规则，通常只给出可达性的必要条件，而非充分条件。完整分类或证明可能性，还可能需要多项不变量或构造性论证。"
+        "不变量是在指定变换下保持不变的量、关系或结构。证明所有允许操作都保留它，就能排除不变量取值不同的目标，无需枚举路径。不变量依赖具体规则，通常只给出不可达的必要障碍；相同取值并不自动保证可达。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0541-proof-by-contradiction",
@@ -420,37 +430,38 @@
       "fieldTitleZh": "数学",
       "title": "The Fraction That Could Not Cross the Square",
       "titleZh": "无法穿过正方形的分数",
-      "summary": "A mapmaker temporarily grants that a square's diagonal has an exact whole-number ratio and follows the assumption until the supposedly reduced fraction defeats itself.",
-      "summaryZh": "制图师暂时接受正方形对角线拥有精确整数比，并追随这一假设，直到所谓最简分数自我推翻。",
+      "summary": "A mathematics apprentice seeks a fraction for a square's diagonal and forces both numerator and denominator to lose their claimed simplicity.",
+      "summaryZh": "数学学徒想替正方形对角线找到一个最简分数，最后却让分子和分母同时失去了“最简”。",
       "storyParagraphs": [
-        "Mapmaker Rian drew a square courtyard with side length one unit. Its diagonal measured close to 1.414, and ever finer fractions approached it. He insisted that one fraction must equal it exactly if only the denominator were large enough. Geometer Sela did not search an endless list. She agreed temporarily to Rian's strongest claim: let the diagonal be a ratio p/q of positive whole numbers, written in lowest terms.",
-        "The square relation gave p squared over q squared equal to two, so p squared equalled twice q squared. Therefore p squared was even. A square of an odd whole number is odd, so p itself had to be even. Sela wrote p as two times another whole number, r. None of these steps appealed to a measurement; they followed from the assumed exact fraction and established arithmetic properties.",
-        "Substituting p equal to two r produced four r squared equal to two q squared, hence q squared equalled twice r squared. The same reasoning made q even. The assumption had now forced both p and q to share a factor of two, although they had been chosen in lowest terms. The fraction was simultaneously reduced and not reduced. No larger denominator could escape because reducing any candidate would bring it back to the same conflict again. That logical collision, not the poor fit of any particular decimal, defeated the assumption.",
-        "Rian objected that Sela had merely found a troublesome representation. She answered that every ratio of whole numbers can be reduced before the argument begins. If any exact ratio existed, a lowest-term one would exist, and that one had just produced an impossibility. The conclusion was not that the diagonal lacked a length or could not be approximated. It was that no ratio of whole numbers represented it exactly.",
-        "Sela also warned against manufacturing a collision from an unrelated mistake. The background premises and each inference had to be valid; otherwise the contradiction might condemn the auxiliary error rather than the target assumption. Sometimes assuming the negation of a claim exposed impossibility more cleanly than constructing the claim directly. In classical logic, eliminating the negation supports the original proposition, while constructive settings may demand more care about what existence has actually been produced.",
-        "Sela had completed a proof by contradiction: assume the negation of the desired conclusion, combine it with accepted premises through valid inference, and derive an impossibility, thereby rejecting the assumption. The method is powerful for nonexistence, irrationality, uniqueness, and other claims where direct construction is awkward. It does not license vague paradox or circular reasoning. Rian's imaginary exact fraction crossed the square only long enough to reveal that its numerator and denominator could never have been lowest terms."
+        "The mathematics hall offered a prize for an exact fraction representing the diagonal of a unit square. Apprentice Ningce produced fractions that came ever closer but wanted more than approximation. He temporarily assumed that a reduced fraction p/q represented it exactly, with p and q sharing no factor.",
+        "The square relation gave p² = 2q². The right side was even, so p² was even and p itself had to be even. Ningce wrote p = 2k and substituted back. The result made q² even, so q was even as well.",
+        "The word 'reduced' in the assumption now collapsed. Both p and q were divisible by two. Reducing again would reproduce the same problem; no pair of integers without a common factor could satisfy the relation.",
+        "Ningce checked whether another mistake had entered the argument. The contradiction arose from the original assumption that the length was a ratio of integers. In classical logic, that assumption could not stand, so no exact fraction represented the diagonal.",
+        "He did not erase the close fractions from the board. Above them he wrote, 'Approaching without limit is not the same as being equal.'"
       ],
       "storyParagraphsZh": [
-        "制图师里安画出边长一单位的正方形庭院。对角线接近 1.414，越来越精细的分数也不断逼近。他坚持只要分母足够大，必有一个分数与它完全相等。几何师塞拉没有搜索无尽清单，而是暂时接受里安最强的主张：设对角线可写成正整数 p 与 q 的比，并已经约到最简。",
-        "正方形关系给出 p 的平方除以 q 的平方等于二，因此 p 的平方等于两倍 q 的平方，p 的平方是偶数。奇整数的平方仍为奇数，所以 p 本身必为偶数。塞拉把 p 写成二乘另一个整数 r。所有步骤都不依赖测量，只来自假定的精确分数与已确立的算术性质。",
-        "把 p 等于二 r 代回，得到四倍 r 平方等于两倍 q 平方，于是 q 平方等于两倍 r 平方，同样推理让 q 也成为偶数。假设迫使 p 与 q 共有因子二，尽管它们一开始已被选为最简。这个分数同时最简又不最简。再大的分母也无法逃脱，因为任何候选约分后都会回到同一冲突。击败假设的不是某个小数拟合不佳，而是这次逻辑碰撞。",
-        "里安反驳，塞拉也许只找到一种麻烦写法。塞拉指出，任何整数比都可在论证前约分；若存在精确整数比，就必存在最简形式，而最简形式刚刚导出不可能。结论不是对角线没有长度，也不是不能近似，而是没有任何整数比能精确表示它。",
-        "塞拉还提醒，不能靠无关错误制造冲突。背景前提与每步推理都必须有效，否则矛盾可能否定辅助错误，而非目标假设。有时先假定某命题的否定，比直接构造命题更容易暴露不可能。在经典逻辑里，排除否定可支持原命题；构造性语境则可能更谨慎地追问究竟产生了怎样的存在。",
-        "塞拉完成的是反证法：假定所需结论的否定，把它与公认前提通过有效推理结合，导出不可能，从而拒绝该假设。它适合处理不存在性、无理性、唯一性等难以直接构造的命题，却不允许模糊悖论或循环推理。里安想象的精确分数只短暂穿过正方形，就暴露出其分子分母永远不可能已经最简。"
+        "数学馆悬赏寻找一个精确分数，表示边长为一的正方形对角线。学徒宁策列出越来越接近的分数，却不满足于近似。他暂且假定确有最简分数 p/q 能精确表示，并约定 p 与 q 没有共同因子。",
+        "由正方形关系可得 p² 等于 2q²。右侧是偶数，所以 p² 为偶数，p 也必须是偶数。宁策把 p 写成 2k，再代回原式，得到 q² 也为偶数，因此 q 同样是偶数。",
+        "这时，假定中的“最简”开始崩塌：p 与 q 都能被二整除。若再约分，仍会得到同样问题，不可能存在一对没有共同因子的整数完成这个等式。",
+        "宁策检查推理中是否混入其他错误。矛盾只来自最初假定该长度能写成整数之比。在经典逻辑下，假定无法成立，于是对角线不能由任何精确分数表示。",
+        "他没有把最接近的分数从板上擦掉，只在它们上方写下：“可以无限接近，不等于能够相等。”"
       ],
       "conceptName": "Proof by contradiction",
       "conceptNameZh": "反证法",
       "explanationParagraphs": [
-        "Proof by contradiction assumes the negation of a desired conclusion and derives an impossibility through valid inference from accepted premises. In classical logic, the contradiction rejects the assumption and establishes the conclusion.",
-        "The contradiction must genuinely depend on the target assumption rather than an unrelated error. The method proves exact logical claims; it does not replace checking premises, justify circular reasoning, or turn numerical approximation into equality."
+        "Proof by contradiction assumes the negation of a desired conclusion and derives an impossibility through valid reasoning from accepted premises, thereby rejecting the assumption. The contradiction must genuinely depend on the target assumption rather than an unrelated error or circularity. The method proves logical claims and cannot turn numerical approximation into equality."
       ],
       "explanationParagraphsZh": [
-        "反证法先假定所需结论的否定，再从公认前提出发，以有效推理导出不可能。在经典逻辑中，矛盾排除该假设，从而确立结论。",
-        "矛盾必须真正依赖目标假设，而非无关错误。该方法证明精确逻辑命题，不能替代前提检查、允许循环论证，或把数值近似变成相等。"
+        "反证法先假定目标结论的否定，再从已接受前提出发，以有效推理导出矛盾，从而排除该假定并确立结论。矛盾必须确实依赖目标假设，而非计算错误、循环论证或其他不一致。它证明逻辑命题，不能把近似自动变成相等。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0541-mathematical-induction",
@@ -459,39 +470,40 @@
       "fieldCode": "0541",
       "fieldTitle": "Mathematics",
       "fieldTitleZh": "数学",
-      "title": "The Staircase No Inspector Had to Climb",
+      "title": "The Staircase That Need Not Be Climbed Step by Step",
       "titleZh": "无需逐阶攀登的楼梯",
-      "summary": "A lighthouse keeper proves every stair lamp will light by establishing a starting case and a universal handoff, then discovers why sampled links are not enough.",
-      "summaryZh": "灯塔守望员用起始情形与普遍传递证明每阶灯都会亮，并发现抽查几个相邻连接远远不够。",
+      "summary": "An inspector cannot climb a staircase without end and must instead check the first step and how every step passes on the flame.",
+      "summaryZh": "验楼人不可能走完一座没有尽头的楼梯，只能检查第一阶与每一阶怎样交出钥匙。",
       "storyParagraphs": [
-        "A lighthouse staircase was designed with one lamp on every numbered step. Lighting step n should trigger step n plus one. Keeper Mara wanted to certify that every lamp would light, even as future builders could extend the tower. Inspector Oren proposed testing steps one, two, one hundred, and one thousand. All worked, but Mara noted that untested failures could remain between those samples and at infinitely many positions beyond the highest one.",
-        "She separated the claim into two obligations. First, lamp one had to light from the main switch. Second, for an arbitrary positive whole number n, if lamp n was lit, the wiring rule had to make lamp n plus one light. The second statement was not a test of one convenient pair; electricians proved it from the repeating circuit design without assigning n a particular value.",
-        "Together the obligations formed a chain. The starting case gave lamp one. Applying the universal handoff with n equal to one gave lamp two; applying it again gave lamp three, and so on. Any specified positive step could be reached after finitely many repetitions. This was a finite argument about an arbitrary finite destination step. Mara did not complete an infinite sequence of physical inspections. She proved a rule that covered every finite index in the domain.",
-        "Oren built a demonstration where every lit lamp triggered the next but forgot to connect the main switch to lamp one. The handoff claim was true, yet no lamp lit. In another tower, lamp one worked and several neighbouring pairs worked, but a unique joint at step five hundred failed; sampled transitions did not establish a universal rule. A valid start without a universal step and a universal step without a valid start were both insufficient.",
-        "Some staircases began at zero or at a later integer, so the starting case had to match the claimed domain. Stronger designs allowed the next lamp to depend on all earlier lamps rather than only the previous one; the same logic then assumed the preceding cases collectively. The method applied naturally to well-ordered discrete structures, not to every statement about continuous intervals. It also could not rescue a false handoff hidden behind the phrase assume it works for n.",
-        "Mara had used mathematical induction: prove a base case, then prove that truth at an arbitrary index implies truth at its successor, establishing the proposition for every index reached from the base. Strong induction may assume all earlier cases to prove the next. The argument is not empirical sampling and not circular, because the conditional step is proved generally before it is iterated. Oren wanted to climb enough stairs to feel confident. Mara certified the architecture that made every finite climb repeat the same justified handoff."
+        "A tower builder claimed that one lamp would light every level of an endless staircase. An inspector tested the first hundred and found them all working, so spectators assumed the rest must work. The hundred-and-first lacked a fire channel, and the experience stopped there.",
+        "The builder restated the mechanism. The first level had to be lit from outside. Then, for any level, if its lamp was lit, its channel had to ignite the next. If both claims were proved, the first lit the second, the second the third, and the transfer covered every level reachable from the starting point.",
+        "The inspector checked that outside flame entered the first lamp. Instead of testing each level, he examined the common channel design and proved that any complete numbered level passed fire to its successor. The missing channel showed that no number of early examples could replace a universal transfer step.",
+        "After repair, the builder also stated explicitly that the staircase began at level one. A tower beginning at zero or five required a matching base. Another design in which several previous levels supported the next would require a stronger assumption using all earlier cases.",
+        "At approval, the inspector lit only the first lamp. Fire moved upward beyond the visible tower, and he did not chase it step by step."
       ],
       "storyParagraphsZh": [
-        "一座灯塔楼梯的每个编号台阶都装一盏灯。第 n 阶亮起后，应触发第 n 加一阶。守望员玛拉要证明所有灯都会亮，即使未来建造者继续加高塔楼。检查员奥伦提议测试第一、第二、第一百与第一千阶。它们全部正常，玛拉却指出，样本之间仍可能有未测故障，最高样本以后更有无限多个未测位置。",
-        "她把命题拆成两项义务。第一，主开关必须点亮第一盏。第二，对任意正整数 n，若第 n 盏已经亮起，接线规则必须使第 n 加一盏亮起。第二项不是测试一对方便台阶；电工从重复电路设计出发证明它，不给 n 指定具体数值。",
-        "两项义务合成链条。起始情形给出第一盏；把普遍传递中的 n 取一，得到第二盏，再应用一次得到第三盏，如此继续。任意指定的正整数台阶都能在有限次重复后到达。这是针对任意有限终点的一段有限论证。玛拉没有完成无限次实体检查，她证明的是覆盖定义域中每个有限索引的规则。",
-        "奥伦造出一套演示，每盏亮灯都会触发下一盏，却忘了把主开关接到第一盏。传递命题为真，所有灯仍不亮。另一座塔第一盏正常，几个相邻样本也正常，唯独第五百阶的特殊接头断裂；抽查转移不能证明普遍规则。有起点而无普遍步骤，或有普遍步骤而无有效起点，都不够。",
-        "有些楼梯从零或更晚整数开始，因此起始情形必须匹配所称定义域。更强设计让下一盏依赖此前所有灯，而不只前一盏；相同逻辑便集体假设所有先前情形。该方法自然适用于良序离散结构，不适用于关于连续区间的每项陈述，也不能用一句「假设 n 成立」掩盖尚未证明的传递。",
-        "玛拉使用的是数学归纳法：先证明基础情形，再证明任意索引处的真能推出后继处的真，从而确立从基础出发可到达的所有索引。强归纳可以假设此前全部情形来证明下一项。它不是经验抽样，也不是循环，因为条件步骤在迭代前已被普遍证明。奥伦想多爬几阶来获得信心，玛拉验证的却是让每次有限攀登都重复同一条正当传递的结构。"
+        "塔匠宣称，一盏灯能够沿着没有尽头的楼梯逐层点亮。验楼人试了前一百层，盏盏都亮，旁观者便说后面当然也不会出错。第一百零一层却缺少传火槽，经验到那里便断了。",
+        "塔匠重新说明装置：第一层必须能被外火点亮；并且对任意一层，只要该层亮起，它的传火槽就一定点亮下一层。若这两件事都被证明，第一层点第二层，第二层点第三层，这条传递便覆盖从起点能够到达的每一层。",
+        "验楼人先检查第一层，发现外火确实能进入。随后，他不再逐层试，而是检查统一使用的传火结构，证明任何编号的完整一层都会把火送到后继层。缺槽的一百零一层说明，若传递陈述并非普遍成立，检查再多前例也无用。",
+        "修复后，塔匠还明确写出楼梯从第一层开始。若某座塔从零层或第五层起算，起点也必须随命题改变。另一种设计需要前面多层共同支撑下一层，则要使用更强的先前假设。",
+        "验收时，验楼人只点燃第一盏。火沿槽向上，塔顶仍看不见，他却没有再追着每一层攀爬。"
       ],
       "conceptName": "Mathematical induction",
       "conceptNameZh": "数学归纳法",
       "explanationParagraphs": [
-        "Mathematical induction proves a proposition over a discrete ordered domain by establishing a base case and a universal inductive step from an arbitrary case to its successor. These together cover every index reachable from the base.",
-        "Checking examples is not induction, and neither part can be omitted. Strong induction allows all earlier cases in the hypothesis, while the claimed domain and starting index must be stated correctly."
+        "Mathematical induction proves a base case and a universal step showing that any true case implies its successor, thereby covering every index reachable from the base in a discrete ordered domain. Checking many examples cannot replace the inductive step, and neither part can be omitted. The starting index and domain must be stated accurately."
       ],
       "explanationParagraphsZh": [
-        "数学归纳法通过证明基础情形，并证明任意情形到其后继的普遍传递，在离散有序定义域上确立命题。两者合在一起覆盖从基础可到达的每个索引。",
-        "检查样例不是归纳，两部分也都不能省略。强归纳允许在假设中使用此前所有情形，而命题的定义域与起始索引必须准确说明。"
+        "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0542-sampling-bias",
@@ -500,39 +512,40 @@
       "fieldCode": "0542",
       "fieldTitle": "Statistics",
       "fieldTitleZh": "统计学",
-      "title": "The Tallest Gate in the City",
+      "title": "The Tallest Doors in the City",
       "titleZh": "城里最高的门",
-      "summary": "A clerk measures thousands of people who pass a steep high gate and obtains a precise answer for the wrong population.",
-      "summaryZh": "书记测量数千名穿过陡峭高门的人，得到一个十分精确、却属于错误人群的答案。",
+      "summary": "A carpenter measures height only at a guard recruitment and builds doors whose latches many citizens cannot reach.",
+      "summaryZh": "木匠只在卫兵选拔场测量身高，随后为全城造出了没人够得到门闩的门。",
       "storyParagraphs": [
-        "The council needed the average adult height to rebuild public beds and doorways. Clerk Varo stationed measurers at the High Gate, where traders entered by a steep stair above the floodwall. In one week they measured five thousand adults and calculated the average to the nearest finger-width. The sample was enormous, the arithmetic exact, and the result taller than every innkeeper expected. Precision was real, but population relevance was still missing.",
-        "Surveyor Leni asked who never reached the measuring line. Older residents, many disabled people, workers in riverside districts, and citizens carrying heavy loads preferred the level South Gate. Some shorter traders avoided the High Gate's steps, while travelling guards were overrepresented. Selection into Varo's data was related to the quantity he wished to estimate and to other characteristics. Repeating the same gate survey for a year would shrink random error around the same distorted centre.",
-        "Leni built a list of households across all districts, randomly selected addresses, and sampled adults within each household using a stated rule. She stratified by district to ensure coverage, then weighted observations according to known selection probabilities. When selected residents did not answer, teams returned at different times and compared response patterns. Weighting could repair known unequal inclusion, but it could not magically recover groups absent from the frame or unknown reasons for nonresponse.",
-        "Varo opened a voluntary booth in the central square and obtained another large dataset. Tailors, unusually tall people, and citizens with complaints were especially willing to participate. The booth measured posture differently from household teams, mixing selection problems with measurement error. Leni standardised instruments and separated who entered the data from how each person was measured. A representative design could still produce poor observations, and perfect measurements could still describe an unrepresentative group.",
-        "The council finally stated its target: current adult residents, not visitors, children, or only people able to use public stairs. Leni reported uncertainty from sampling and design, documented exclusions, and tested sensitivity to missing groups. Clustered household observations required different variance calculations from independent draws. No single procedure guaranteed truth, but the path from target population to frame, selection, response, measurement, and estimation became visible enough to criticise.",
-        "The High Gate produced sampling bias: a systematic difference between a sample and the target population caused by the way units enter or remain in the data. Coverage error, convenience selection, self-selection, survivorship, and nonresponse can all create it, especially when inclusion relates to the outcome. Larger samples reduce random variation but do not remove systematic selection. Random or probability-based designs, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias only when their assumptions are examined. Varo had measured five thousand people precisely. He had not measured the city."
+        "The city wanted one standard height for public doors, and carpenter Lin Hao was asked to measure residents. He set up at the guard recruitment ground because thousands passed in one day and the collection was fast and orderly.",
+        "The results showed a tall population, so Lin Hao built high doors and latches. When the new library opened, many older people, children, and citizens who had never attended the recruitment could not reach them. The sample was large and measured precisely, but it came from a place where height affected who appeared.",
+        "Lin Hao then built a city address list, randomly invited residents from each district, followed up nonresponses, and recorded people unable to attend. The new survey still had gaps requiring weighting and sensitivity checks, but no longer covered only aspiring guards.",
+        "The average fell and the range widened. The carpenter did not design from one mean alone. Public latches moved into reach of more users and were tested across different bodies.",
+        "When removing the recruitment ground's high latch, Lin Hao kept it beside the measurement desk. It accurately represented the people who came there, but had never represented the whole city."
       ],
       "storyParagraphsZh": [
-        "议会要知道成年居民平均身高，以重修公共床铺与门框。书记瓦罗把测量员安排在高门，商旅要沿防洪墙陡阶从那里进城。一周内，他们测量五千名成人，把平均值算到最接近的一指宽。样本巨大，算术精确，结果却比所有旅店老板预期的都高。精确是真实的，对目标群体的相关性却仍然缺席。",
-        "调查员莱妮追问，谁从未抵达测量线。年长居民、许多残障者、河岸区工人和背负重物者更愿走平坦南门；部分矮个商人避开高门台阶，旅行卫兵却被过度纳入。进入瓦罗数据的选择与他想估计的量及其他特征相关。即使把同一门口调查延长一年，也只会让随机误差围绕同一个偏斜中心缩小。",
-        "莱妮建立覆盖所有城区的住户清单，随机抽取地址，再按明确规则从户内抽取成人。她按城区分层以确保覆盖，并依已知入选概率给观察加权。选中居民未回应时，团队会在不同时段回访并比较回应模式。加权能修复已知的不等纳入，却不能凭空找回抽样框完全缺失的群体，或未知原因造成的未回应。",
-        "瓦罗又在中央广场开设自愿测量台，获得另一套大数据。裁缝、身高异常者和有意见的市民更愿参与。摊位测量姿势还与住户团队不同，把选择问题和测量误差混在一起。莱妮统一仪器，并区分谁进入数据与每个人怎样被测量。代表性设计仍可产生糟糕观察，完美测量也仍可能只描述无代表性人群。",
-        "议会最终说清目标：当前成年居民，不包括访客、儿童，也不只包括能走公共台阶的人。莱妮报告抽样与设计不确定性，记录排除对象，并测试缺失群体对结果的敏感性。住户内聚类观察的方差计算也不同于独立抽取。没有程序保证真相，但从目标群体、抽样框、选择、回应、测量到估计的路径，已清楚到可以接受批评。",
-        "高门制造的是抽样偏差：单位进入或留在数据的方式，使样本与目标群体之间产生系统性差异。覆盖错误、便利选择、自我选择、幸存者效应与未回应都可能造成偏差，尤其当纳入概率与结果相关时。扩大样本只减少随机波动，不能消除系统选择。随机或概率设计、充分抽样框、回访、加权与敏感性分析能降低偏差，却都要检查假设。瓦罗精确测量了五千人，却没有测量整座城。"
+        "城里要统一公共建筑的门高，木匠林皓负责测量居民。他选择在卫兵选拔场设桌，因为那里一天能见到上千人，收集得又快又整齐。",
+        "测量结果显示居民普遍高大，林皓据此造出高门和高门闩。新图书馆开放后，许多老人、孩子和未参加选拔的人够不到门闩。样本人数很多，测得也很精确，却来自一个身高本就影响能否出现的地方。",
+        "林皓随后按全城住址建立名单，随机邀请各区居民，对未回应者回访，并记录无法到场的人。新测量仍有缺漏，需要权重和敏感性检查，却不再只覆盖想当卫兵的人。",
+        "平均身高降低了，分布范围也比原先宽。木匠没有只按一个平均数做门，而是让公共门闩落在更多人可及位置，并为不同使用者测试。",
+        "拆下选拔场那把高门闩时，林皓把它留在测量桌旁。它准确代表了来过那里的人，却从未代表整座城。"
       ],
       "conceptName": "Sampling bias",
       "conceptNameZh": "抽样偏差",
       "explanationParagraphs": [
-        "Sampling bias is a systematic difference between a sample and its target population caused by coverage, selection, self-selection, survivorship, or nonresponse mechanisms related to the outcome or relevant characteristics.",
-        "A large sample can estimate the wrong population very precisely. Probability sampling, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias, but only under explicit and testable assumptions."
+        "Sampling bias arises when coverage, selection, self-selection, survival, or nonresponse mechanisms are related to the outcome, making a sample systematically unlike the target population. A very large sample can estimate the wrong population precisely. Probability sampling, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias under explicit assumptions."
       ],
       "explanationParagraphsZh": [
-        "抽样偏差是覆盖、选择、自我选择、幸存或未回应机制与结果或相关特征相联系，使样本与目标群体产生的系统性差异。",
-        "大样本可以非常精确地估计错误人群。概率抽样、充分抽样框、回访、加权与敏感性分析能降低偏差，但都依赖明确且可检验的假设。"
+        "抽样偏差发生在覆盖、选择、自愿参与、幸存或未回应机制与研究结果相关，使样本系统性偏离目标群体。样本再大也可能精确估计错误人群。概率抽样、完整抽样框、回访、加权和敏感性分析可缓解，但依赖明确假设。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0542-regression-to-the-mean",
@@ -541,39 +554,40 @@
       "fieldCode": "0542",
       "fieldTitle": "Statistics",
       "fieldTitleZh": "统计学",
-      "title": "The Reward That Ruined the Best Loaf",
+      "title": "The Reward That Ruined the Best Bread",
       "titleZh": "毁掉最佳面包的奖励",
-      "summary": "A guild rewards an exceptional loaf and punishes a disastrous one, then mistakes ordinary movement away from selected extremes for the effects of praise and blame.",
-      "summaryZh": "行会奖励异常出色的一炉、惩罚异常糟糕的一炉，随后把从所选极端自然回移误认成奖惩效果。",
+      "summary": "Whenever a baker rewards the day's best loaf, the next one is worse, so he concludes that praise destroys skill.",
+      "summaryZh": "师傅每次奖励最好的面包，第二天它总会变差，于是他认定赞美会毁掉手艺。",
       "storyParagraphs": [
-        "Each baker in Merin produced one judged loaf every Monday. Guildmaster Tor gave a silver ladle to the baker with the highest score and publicly scolded the lowest. The next week, the winner's loaf was usually less extraordinary, while the punished baker usually improved. Tor concluded that rewards made masters complacent and humiliation improved craft. Selection had manufactured the apparent lesson. He had compared people chosen for extreme outcomes with their own later, more ordinary outcomes.",
-        "Statistician Aya separated persistent skill from temporary influences: oven temperature, flour moisture, judge mood, and countless small accidents. A top score often combined high ability with unusually favourable noise; a bottom score combined lower performance with unusually bad noise. On a second measurement, the stable component might persist, but the temporary component was unlikely to be equally extreme in the same direction. Imperfect correlation between repeated scores pulled expected follow-up values closer to the group average.",
-        "Aya selected bakers at random before Monday's scores were known. Within skill bands, she randomly awarded some, criticised some, and left others unchanged, then compared later outcomes. Only differences between these groups could begin to identify causal effects of the interventions. Tor's before-and-after comparison had no control for the selection rule. Improvement after punishment and decline after reward could appear even if neither treatment changed baking at all.",
-        "A second season brought genuine change. A new flour improved everyone's loaves, and an oven defect harmed one district repeatedly. Aya did not force every movement into one explanation. The pull toward a conditional expectation occurs when observations include random variation and repeated measurements are not perfectly correlated; trends, learning, treatment, changing populations, and persistent shocks can coexist. The relevant centre may be a subgroup expectation, not one universal average.",
-        "During a season with stable scoring conditions, the guild also found the pattern when records were read backward. Bakers selected for extreme second-week scores tended to have less extreme first-week scores. That comparison exposed why a story about Tor's intervention could not be sufficient, although trends or changing variance could break a simple symmetry. Measurement reliability determined the strength: with nearly perfect repeated measurement, little pull remained; with noisy scores and harsh extreme selection, it became pronounced.",
-        "Aya had identified regression to the mean: when units are selected for extreme observed values and repeated measurements are imperfectly correlated, subsequent or prior values are expected to be less extreme, on average, even without a causal intervention. The phenomenon arises from conditional selection and random variation, not a force pushing every individual toward mediocrity. Randomised controls, comparison groups, repeated baselines, and reliability estimates help separate it from real effects. Tor had praised luck mixed with skill and punished misfortune mixed with weakness, then claimed authorship of what the next Monday would often have done anyway."
+        "A bakery named its best and worst batch each day. The master praised the winner and sharply criticised the last place. Strangely, winners often performed worse the next day, while the weakest usually improved. The master concluded that praise made people careless and criticism truly worked.",
+        "An apprentice plotted each baker's results over a month. A winning day combined skill with unusually suitable oven heat, flour moisture, and measurement variation. A worst day often included unusually bad conditions. Because repeated performance was not perfectly identical, an extreme day was usually followed by one nearer the baker's ordinary level.",
+        "They compared similar batches receiving no praise or criticism and collected several baseline measures before any intervention. Winners still fell back and the lowest still rose, so before-and-after movement alone could not establish an effect of praise or blame.",
+        "The master did not conclude that all feedback was useless. He evaluated training over longer performance and with comparison, still correcting errors without treating natural movement after an extreme day as proof of his words.",
+        "When the next winning loaf emerged, he placed the red flower beside it and marked the baker's range across the previous ten batches."
       ],
       "storyParagraphsZh": [
-        "梅林的每名面包师每周一交出一只评分面包。行会长托尔把银勺奖给最高分，当众斥责最低分。下一周，获奖者的面包通常没那么出众，受罚者通常有所改善。托尔据此断定奖励使高手自满，羞辱能改善技艺。选择过程本身制造了这条表面教训。他把因极端结果被选中的人，与他们后来较普通的结果作了比较。",
-        "统计师阿雅把稳定能力与暂时因素分开：炉温、面粉湿度、评委心情及无数小意外。最高分常由高能力与异常有利噪声合成，最低分则由较弱表现与异常坏运气合成。第二次测量里，稳定部分可能延续，暂时部分却不太可能再次同方向极端。重复分数相关性不完美，使后续值的条件期望更靠近群体平均。",
-        "阿雅在周一分数出现前随机选择面包师。她在能力层内随机奖励一组、批评一组、保持一组不变，再比较后来结果。只有组间差异才可能开始识别干预的因果效果。托尔的前后比较没有控制极端选择规则；即使奖惩都不改变烘焙，受罚后改善与获奖后下降仍会出现。",
-        "第二季发生真实变化。新面粉提高所有人的面包，一处炉灶故障又持续伤害某城区。阿雅没有把每次移动硬塞进同一解释。观察含随机变化且重复测量并非完全相关时，结果会向条件期望靠近；趋势、学习、治疗、群体变化与持续冲击仍可同时存在。相关中心也可能是子群期望，而非一个普遍平均数。",
-        "在评分条件稳定的一季里，行会反向阅读记录也看到该模式。若按第二周极端分数选择面包师，他们的第一周分数平均也没那么极端。这项比较说明托尔干预故事并不充分，不过趋势或方差变化会破坏简单对称。测量可靠性决定强弱：重复测量近乎完美时，回移很少；分数噪声大、极端筛选严苛时，现象就明显。",
-        "阿雅识别的是均值回归：按极端观察值选择单位，且重复测量相关性不完美时，后续或先前数值平均而言会较不极端，即使没有因果干预也会如此。它来自条件选择与随机变化，不是把每个人推向平庸的力量。随机对照、比较组、多次基线与可靠性估计有助于把它同真实效果分开。托尔奖励了能力混合的好运，惩罚了弱点混合的厄运，随后把下周一原本常会发生的变化归到自己名下。"
+        "面包坊每天评出最好与最差的一炉。师傅会夸奖冠军，严厉训斥最后一名。奇怪的是，冠军第二天常不如前日，最差者却多半有所改善。师傅因此相信赞美令人松懈，责骂才真正有效。",
+        "学徒把每名面包师一个月的成绩画出来。被选为冠军的那天，除了手艺，还常碰上恰好的炉温、面粉湿度和抽样误差；被选为最差时，也常有偶然不利因素。重复表现并不完全相同，极端一天之后通常更接近个人平常水平。",
+        "他们把同样水平但未受奖罚的炉次作为比较，又在奖励前取得多次基线。冠军回落和末名回升仍然出现，不能仅凭前后变化把效果归给赞美或责骂。",
+        "师傅没有因此断言所有反馈都无效。他改用较长时期的表现和对照检验训练方法，仍会指出错误，却不再把极端一天后的自然回摆当作自己言辞的功劳。",
+        "下一次冠军出炉时，师傅把红花放在面包旁，也在记录上标出那名师傅过去十炉的范围。"
       ],
       "conceptName": "Regression to the mean",
       "conceptNameZh": "均值回归",
       "explanationParagraphs": [
-        "Regression to the mean occurs when observations selected for extreme values are followed or preceded by less extreme values on average because repeated measurements are imperfectly correlated and include random variation.",
-        "It is a conditional statistical pattern, not a causal force or proof that interventions do nothing. Randomised controls, comparison groups, repeated baselines, subgroup structure, and measurement reliability help distinguish it from real change."
+        "Regression to the mean occurs when cases are selected for an extreme observation and repeated measurements are imperfectly correlated and contain random variation; later values tend on average to be less extreme. It is a conditional statistical pattern, not a causal force, and does not prove an intervention ineffective. Controls, repeated baselines, and reliable measurement help distinguish it."
       ],
       "explanationParagraphsZh": [
-        "均值回归发生于按极端观察值选择对象，而重复测量相关性不完美且含随机变化时；其后或此前的数值平均会较不极端。",
-        "它是条件统计模式，不是因果力量，也不证明干预无效。随机对照、比较组、多次基线、子群结构与测量可靠性有助于把它同真实变化区分开。"
+        "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0542-bayesian-updating",
@@ -582,39 +596,40 @@
       "fieldCode": "0542",
       "fieldTitle": "Statistics",
       "fieldTitleZh": "统计学",
-      "title": "The Bell That Was Right Eight Times in Ten",
-      "titleZh": "十次响对八次的警钟",
-      "summary": "A lighthouse keeper learns that an accurate storm bell does not make a storm 80 percent likely until base rates and false alarms enter the same calculation.",
-      "summaryZh": "灯塔守望员发现，一只能八成识别风暴的警钟，并不会直接让风暴概率变成八成，除非基础发生率与误报同时入账。",
+      "title": "The Bell That Rang for Eight Fires in Ten",
+      "titleZh": "十次火警响八次的钟",
+      "summary": "A warning bell detects eight of every ten fires, so the mayor assumes each alarm means an eighty-percent chance of fire.",
+      "summaryZh": "警钟能发现十场火里的八场，市长因此以为每次钟响都有八成可能着火。",
       "storyParagraphs": [
-        "At Grey Cape, severe storms occurred on about one night in ten. A new bell rang on eight of every ten storm nights, and on two of every ten calm nights. When it rang, keeper Lio announced an 80 percent chance of storm because the bell was right eight times in ten during storms. Harbourmaster Nara asked him to imagine one hundred nights before closing the port.",
-        "About ten of those nights would be stormy and ninety calm. The bell would ring on roughly eight storm nights and eighteen calm nights. Among the twenty-six ringing nights, only about eight would contain storms, making the probability near eight divided by twenty-six, or 31 percent. The bell carried useful evidence, but the rarity of storms supplied many more opportunities for false alarms. One sensitive sensor could still generate many false alarms when the underlying event was rare. Sensitivity alone was not the probability Lio wanted.",
-        "Nara rewrote the same calculation as odds. Before hearing the bell, storm odds were one to nine. A ring was four times as likely during storm as during calm, so its likelihood ratio was four. Multiplying gave posterior odds of four to nine, again about 31 percent probability. The old belief was not erased by new evidence; it was transformed according to how differently the evidence was expected under competing possibilities.",
-        "A sharp pressure fall then arrived. Historical records made that reading three times as likely in storms as in calm weather after accounting for the bell. Multiplying the odds again gave twelve to nine, or about 57 percent. But if the pressure sensor and bell both responded to the same gust pattern, treating them as conditionally independent would count evidence twice. Nara estimated their joint behaviour rather than automatically multiplying separate ratios.",
-        "Storm seasons changed the starting rate, and worn equipment changed the likelihoods. Nara updated calibration, stated uncertainty, and compared decisions with their costs: closing unnecessarily harmed trade, while remaining open in a storm risked lives. The probability calculation informed but did not choose the action without a loss function. Evidence order made no difference when the same coherent model and data were used, though model misspecification could produce confident error.",
-        "Nara was using Bayesian updating: begin with prior probabilities or odds, evaluate the likelihood of observed evidence under competing hypotheses, and combine them to obtain posterior probabilities. In odds form, posterior odds equal prior odds multiplied by a likelihood ratio; dependent evidence requires a joint or conditional model. Priors, likelihoods, and decisions should remain distinguishable and open to revision. Lio had treated the bell as a verdict. Nara treated it as one piece of evidence whose meaning depended on what was plausible before it rang."
+        "The city installed a new fire alarm. Test records said that when a real fire occurred, the bell rang eight times out of ten. The mayor announced that whenever the bell rang, fire was therefore eighty percent likely and prepared to evacuate the whole city each time.",
+        "The recorder arranged one thousand nights in a table. Fire occurred on only ten; the bell rang on eight. During the other nine hundred and ninety fire-free nights, steam, smoke, and faults produced twenty alarms. Of twenty-eight total alarms, only eight came with fire.",
+        "The bell still provided important evidence. Hearing it raised the chance of fire substantially above the ordinary low level, but not directly to eighty percent. The prior occurrence rate and the relative chance of an alarm with and without fire both mattered.",
+        "Watchers combined the bell with smell, location, and a second sensor. Two sensors influenced by the same steam could not be counted as independent evidence. Evacuation decisions also compared the harm of a missed fire with the harm of a false evacuation.",
+        "At the next alarm, the watcher immediately ran toward the marked location. He treated the bell as neither the fire itself nor useless noise."
       ],
       "storyParagraphsZh": [
-        "灰角每十个夜晚大约有一夜发生严重风暴。新警钟在十个风暴夜里会响八次，在十个平静夜里也会误响两次。钟一响，守望员利奥便宣布风暴概率为八成，因为风暴发生时警钟十次能对八次。港务长娜拉请他先想象一百个夜晚，再决定是否封港。",
-        "其中约十夜有风暴，九十夜平静。警钟会在约八个风暴夜和十八个平静夜响起。二十六个响钟夜里，只有约八夜真正有风暴，概率接近八除以二十六，即 31%。警钟提供有用证据，但风暴罕见，平静夜给误报留下更多机会。底层事件罕见时，高灵敏度传感器仍可产生大量误报。灵敏度本身并不是利奥想要的概率。",
-        "娜拉把同一计算改写成赔率。听钟前，风暴赔率是一比九。响钟在风暴中出现的可能是平静时的四倍，因此似然比为四。相乘后得到四比九的后验赔率，概率仍约 31%。旧判断没有被新证据抹掉，而是按该证据在竞争可能下出现的差异程度被改写。",
-        "随后气压急降。历史记录显示，在已计入警钟后，这个读数出现在风暴中的可能是平静时的三倍。再次相乘得到十二比九，即约 57%。但若气压计与警钟都响应同一种阵风，把它们视为条件独立就会把证据算两次。娜拉估计二者联合表现，而非自动相乘两个独立比率。",
-        "风暴季会改变起始发生率，设备磨损会改变似然。娜拉更新校准、说明不确定性，并把决定与代价比较：不必要封港伤害贸易，风暴中开放则危及生命。概率能支持行动，却不能在没有损失函数时替人选择。使用同一连贯模型与数据时，证据顺序不改变结果，模型设错却会制造自信错误。",
-        "娜拉使用的是贝叶斯更新：从先验概率或赔率出发，评估观察证据在竞争假设下的似然，再结合成后验概率。赔率形式中，后验赔率等于先验赔率乘似然比；相互依赖的证据需要联合或条件模型。先验、似然与决策应彼此区分，并保持可修订。利奥把警钟当判决，娜拉则把它当成一份证据，其意义取决于钟响以前什么本来更可能。"
+        "城里安装新火警钟。试验记录说，真正起火时，十次有八次会响。市长听后宣布，只要钟响，起火可能便是八成，并准备每次都疏散全城。",
+        "记录员把一千个夜晚摆进表里。真正起火只有十晚，其中八晚响钟；其余九百九十个无火夜里，烟雾、蒸汽和故障也让钟误响二十次。于是总共二十八次响钟里，真正的火只有八次。",
+        "钟声仍然提供重要证据：听见后，起火可能性从平日极低水平明显上升，却不是直接变成八成。原本发生率与有火、无火时钟响的相对可能都必须进入判断。",
+        "守夜人随后把钟声与烟味、位置和第二探头结合。两只探头若受同一蒸汽影响，也不能假装成两份独立证据。最后是否疏散，还要比较漏报火灾与误报疏散的损失。",
+        "下一次钟响时，守夜人立刻赶往标记位置。他没有把警报当成火本身，也没有把它当成无用噪声。"
       ],
       "conceptName": "Bayesian updating",
       "conceptNameZh": "贝叶斯更新",
       "explanationParagraphs": [
-        "Bayesian updating combines prior probabilities with the likelihood of observed evidence under competing hypotheses to produce posterior probabilities. In odds form, posterior odds equal prior odds multiplied by a likelihood ratio.",
-        "Base rates matter, dependent evidence must not be counted as independent, and calibration can change over time. Posterior probabilities inform decisions, but utilities or losses are additionally required to choose actions."
+        "Bayesian updating combines a prior probability with how likely evidence is under competing hypotheses to produce a posterior probability. Base rates cannot be ignored, and dependent evidence cannot be counted repeatedly as independent. The updated probability informs but does not determine action; decisions also require comparing losses from different errors and outcomes."
       ],
       "explanationParagraphsZh": [
-        "贝叶斯更新把先验概率与证据在竞争假设下的似然结合，得到后验概率。以赔率表示时，后验赔率等于先验赔率乘以似然比。",
-        "基础发生率不可忽略，相互依赖的证据不能按独立信息重复计算，校准也会随时间改变。后验概率支持决策，但选择行动还需要效用或损失。"
+        "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     }
   ]
 }

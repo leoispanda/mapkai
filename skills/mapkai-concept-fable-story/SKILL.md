@@ -1,6 +1,6 @@
 ---
 name: mapkai-concept-fable-story
-description: Write developed, serious MapKAI allegorical stories for abstract concepts, theories, and relationship-based knowledge. Use for management theory, organization studies, psychology, education, sociology, philosophy, communication theory, strategy concepts, and abstract social-science ideas when no single historical scene is necessary; create late-reveal concept fables with narrative depth, repeated tension, metaphor mapping, boundaries, and reflection.
+description: Write concise, serious MapKAI allegorical stories for abstract concepts, theories, and relationship-based knowledge. Use when no single historical scene is necessary; create story-first, late-reveal fables followed by a clear concept explanation.
 ---
 
 # MapKAI Concept Fable Story Writer
@@ -9,28 +9,27 @@ Use this skill for abstract concepts, theories, and relationship-based knowledge
 
 ## Purpose
 
-Explain a graduate-level concept through a serious allegorical story. The concept should not be named at the beginning. The reader should first experience the structure of the concept through the story, then recognize the concept near the end.
+Explain a graduate-level concept through a serious allegorical story. Keep the concept name out of the entire story body. The reader should first experience its structure through events, then see the concept named immediately after the story ends.
 
-A concept fable should not feel like a short example with a label at the end. It should feel like a small world where the concept becomes necessary.
+A concept fable should feel like a short, complete story whose events happen to reveal a concept. The people must be dealing with their own lives, not performing a lesson for the reader.
 
 ## Story-First Product Promise
 
 MapKAI concept fables must work as small stories before they work as explanations.
 
-Before finalizing the `寓言故事`, mentally remove the field title, concept name, concept explanation, metaphor mapping, analogy boundary, and reflection question. Ask:
+Before finalizing the `寓言故事`, mentally remove the field title, concept name, and concept explanation. Ask:
 
 ```text
 Would a reader still want to continue because something is happening?
 ```
 
-If no, rewrite the fable. The story body must not be a correct concept summary with allegorical decoration. It must have:
+If no, rewrite the fable. The story body must not be a correct concept summary with allegorical decoration. It should normally have:
 
 1. a concrete opening situation;
 2. an old way of acting that first seems reasonable;
-3. friction through action, object, repetition, rule, material, silence, delay, or decision;
-4. at least one second beat of friction, adjustment, or deepening;
-5. a changed practice or changed question;
-6. a final image that already contains the concept before the concept name appears.
+3. one central friction expressed through action, object, rule, silence, delay, or decision;
+4. one natural turn that changes what the character sees or does;
+5. a concrete closing action.
 
 The story should make the concept necessary, not merely introduce it.
 
@@ -44,7 +43,7 @@ For every paragraph in the story body, apply the camera test:
 If this paragraph were filmed, what would the camera see or hear?
 ```
 
-If the answer is mainly an abstract relation, a structural label, or a writer explanation, rewrite the paragraph before output. Keep abstract analysis for `概念解释`, `隐喻对应`, or `类比边界`.
+If the answer is mainly an abstract relation, a structural label, or a writer explanation, rewrite the paragraph before output. Keep abstract analysis for `概念解释`.
 
 Avoid printed scaffolding inside the story body, especially phrases that expose the outline instead of showing action:
 
@@ -97,61 +96,51 @@ Do not copy examples directly. Use them to calibrate judgment, narrative depth, 
 
 ## Core Structure
 
-1. Fictional but concrete scene
-2. Characters or objects that represent forces in the concept
-3. Old way of acting
-4. Tension created by the concept's core problem
-5. First friction that can still be explained away
-6. Repeated friction in a slightly different form
-7. Character adjustment or changed behavior
-8. A pattern that becomes visible
-9. Late concept reveal
-10. Short afterglow
-11. Concept explanation
-12. Metaphor mapping
-13. Boundary of the analogy
-14. Reflection question
+1. A concrete rule, custom, task, or situation that creates curiosity
+2. A person with a practical motive unrelated to teaching the concept
+3. One choice made under believable pressure
+4. A consequence or piece of evidence that changes the situation
+5. A concrete closing action
+6. Concept name and concise explanation after the story is complete
 
 ## Story Length
 
 The `寓言故事` section should normally be longer than a quick example.
 
-- Chinese: aim for about 700-1100 Chinese characters.
-- English: aim for about 600-900 words.
+- Chinese: aim for about 300-550 Chinese characters.
+- English: aim for about 180-340 words.
 - Do not add length through filler, mood, or abstract explanation.
 - Add length through scene progression, repeated tension, character decisions, visible adjustments, and pattern development.
 
-The concept explanation, metaphor mapping, analogy boundary, and reflection question should stay concise.
+The concept explanation should stay concise. Add metaphor mapping, analogy boundaries, or reflection questions only when the user explicitly requests them.
 
 ## Paragraphing And Web Reading
 
 Do not output the `寓言故事` body as one dense paragraph unless the user explicitly requests a single-block draft.
 
-Use blank lines to divide a normal concept fable into 4-7 short paragraphs. Compact fables still need at least 2 paragraphs when the format allows it.
+Use blank lines to divide a normal concept fable into 4-7 short paragraphs.
 
 Each story paragraph should carry one visible narrative job: scene entry, old rule, first friction, repeated friction, changed action, final image, or late reveal. Do not add headings inside the story body; paragraph breaks should improve reading rhythm without turning the fable into notes.
 
-The concept explanation, analogy boundary, and reflection question should also stay scannable. If an explanatory paragraph grows past about 180-220 Chinese characters, split it unless the sentence logic would be damaged.
+The concept explanation should stay scannable. If it grows past about 180-220 Chinese characters, shorten or split it unless the sentence logic would be damaged.
 
 ## Narrative Development
 
-Build the fable in several beats:
+Build the fable in a few clean beats:
 
 1. Open with a concrete place, group, task, rule, object, or routine.
 2. Show why the old way of acting seems reasonable. Do not make it obviously wrong.
-3. Let a first small problem appear while the old way can still explain it.
-4. Let the same kind of problem appear again in a different form so the deeper structure begins to emerge.
-5. Let someone change behavior: create a rule, avoid tension, connect groups, remove support, hide disagreement, search for another rhythm, or otherwise respond to the pressure.
-6. Let the pattern become visible through action before naming the concept.
-7. Reveal the concept only near the end. The reveal should feel like a click, not a label pasted onto the story.
-8. After the reveal, allow one or two sentences for the central image to settle before moving to concept explanation.
+3. Let one problem or pressure force a believable choice.
+4. Let a consequence, interruption, or overlooked fact change what the character can see.
+5. End through action. Do not have the narrator explain what the character learned.
+6. Name and explain the concept only after the story body.
 
-Avoid rushed endings such as "Then they understood. This concept is X." Let the final image show the concept before naming it.
+Avoid endings such as "Then they understood" or "This concept is X." The public story body must not contain the concept name.
 
 Example ending pattern:
 
 ```text
-Only after the quietest apprentices began correcting the master's measurements did the workshop understand what had changed. It was not that mistakes had disappeared. It was that mistakes could now enter the room before they became disasters. Much later, this kind of room would be called psychological safety.
+The apprentice placed the cracked gear beside the unbroken ones. The master turned the morning bell upside down and left it silent until everyone had read the repair note.
 ```
 
 ## One Scene, Three Beats
@@ -203,7 +192,7 @@ Better:
 The apprentice put the cracked gear on the table before the shift began. No one praised him for courage. They simply opened the repair book to the earlier page where the same crack had been missed.
 ```
 
-Stage features through action. Put feature names in concept explanation or metaphor mapping.
+Stage features through action. Put feature names in the concept explanation.
 
 ## Title And Reveal
 
@@ -219,7 +208,7 @@ The title may use the core metaphor, but it should not reveal the academic conce
 Before finalizing, compare the draft internally against the benchmark levels:
 
 - If it feels like "short example + concept label," rewrite.
-- If it has only one friction point, expand.
+- If the friction never changes the character's action or consequence, revise the middle.
 - If the title gives away the concept, revise the title.
 - If the concept explanation is doing work the story body should have done, rewrite the story body.
 - If the metaphor could fit many concepts, make the key object more concept-specific.
@@ -231,9 +220,9 @@ Run this check internally before output. Do not print the self-check unless the 
 ### L1 Hard Scan
 
 - All required output sections are present.
-- The concept name does not appear in the title or early story.
-- The reveal happens near the end of the `寓言故事`, not in the opening or middle.
-- The story section is long enough to develop a small world, normally 700-1100 Chinese characters or 600-900 English words unless compact output is requested.
+- The concept name does not appear in the title or anywhere in the story body.
+- The reveal appears immediately after the `寓言故事` under `揭示的概念`.
+- The story section is long enough to develop one small conflict, normally 300-550 Chinese characters or 180-340 English words.
 - The story does not use childish tone, fairy-tale morals, cute over-personification, or academic-paper summary language.
 - The story does not add length through abstract filler such as "the structure became visible" or "the group changed its understanding."
 - The story does not list correct keywords or features instead of staging friction.
@@ -258,8 +247,8 @@ If these cannot be answered, do not patch the ending. Add a real middle beat bef
 - The metaphor must express this concept's specific structure, not a generic "people learn/change/coordinate" story.
 - The conflict must come from the concept's core tension, not random drama.
 - The concept explanation must directly match the allegory.
-- The metaphor mapping must identify the main forces in the concept.
-- The analogy boundary must state what the story should not be used to overclaim.
+- The concept explanation must identify the essential story-to-concept correspondence.
+- When the analogy could invite a serious overclaim, state the boundary briefly inside the explanation.
 
 ### L4 Reader Effect
 
@@ -278,18 +267,18 @@ Ask:
 - Is there a more concrete everyday scene, object, practice, or conflict that would carry the concept better?
 - Does the metaphor's central object return at the end with new meaning?
 
-If the metaphor is only adequate, keep the story if it works, but call out the limitation in `编辑评论（供迭代，不属于正文）` and suggest a better metaphor direction for the next version.
+If the metaphor is only adequate, revise it internally. Do not append editorial notes unless the user asks for them.
 
-## Leo CEO Product Lens
+## Product Lens
 
-Before final output, consult `leo-ceo` for the iteration comments. Use it as a product-quality and reader-value lens:
+Before final output, use a product-quality and reader-value lens:
 
 - Is this fable worth a serious reader's time?
 - Does the metaphor help the concept compound in memory, or would a different scene carry more value?
 - Does the story feel like human writing with a real scene, or like safe AI explanation with props?
 - What is the highest-leverage next action: stronger object, fuller middle beat, clearer boundary, sharper reflection, or a different metaphor?
 
-Do not let this lens replace concept accuracy, metaphor mapping, analogy boundary, or the camera test. If the Leo CEO lens identifies that the fable is correct but forgettable, revise before output or name the limitation in `编辑评论（供迭代，不属于正文）`.
+Do not let this lens replace concept accuracy or the camera test. If the fable is correct but forgettable, revise before output.
 
 ## Hard Rules
 
@@ -301,7 +290,7 @@ Do not let this lens replace concept accuracy, metaphor mapping, analogy boundar
 - The story should be understandable to general readers but still meaningful to graduate-level readers.
 - Do not use real historical names unless the user explicitly asks for a historical version.
 - Do not hide the concept so deeply that the explanation feels disconnected from the story.
-- Do not reveal the concept too quickly.
+- Do not name the concept inside the story body.
 - Do not write a one-scene example followed by a concept label.
 - Do not lengthen the story with abstract sentences such as "the hidden structure became visible" or "the group changed its understanding."
 - Do not keep unfilmable sentences in the fable body when their only job is to explain the structure.
@@ -318,30 +307,13 @@ Do not let this lens replace concept accuracy, metaphor mapping, analogy boundar
 {title}
 
 寓言故事
-{A serious, developed allegorical story. Do not name the concept until late in the story. Normally 700-1100 Chinese characters or 600-900 English words. Use 4-7 short paragraphs separated by blank lines. Include old way, first friction, repeated friction, character adjustment, visible pattern, late reveal, and a short afterglow.}
+{A concise, complete allegorical story. Do not name the concept in the story body. Normally 300-550 Chinese characters or 180-340 English words. Use 4-6 short paragraphs separated by blank lines. Keep one believable motive, one central conflict, one natural turn, and a concrete closing action.}
 
 揭示的概念
 {Concept name}
 
 概念解释
-{Explain the concept clearly and simply.}
-
-隐喻对应
-
-* {Story element}: {Concept element}
-* {Story element}: {Concept element}
-* {Story element}: {Concept element}
-
-类比边界
-{Explain what the metaphor should not be used to overclaim.}
-
-反思问题
-{A question that brings the concept back to real thinking.}
-
-编辑评论（供迭代，不属于正文）
-* 比喻清晰度: {Candidly state whether the central metaphor is strong, merely adequate, or weak.}
-* 读者疑惑点: {Name the line, object, or transition that may feel unclear.}
-* 更好的比喻方向: {Suggest one stronger metaphor, scene, object, or everyday case if available.}
-* 下一版优先修改: {Give one concrete rewrite action.}
-* Leo CEO 视角: {Using `leo-ceo`, judge reader value, long-term MapKAI quality, and the highest-leverage next revision.}
+{Explain the concept accurately, clearly, and briefly. Map only the essential story elements.}
 ```
+
+Add `隐喻对应`, `类比边界`, `反思问题`, or editorial comments only when the user explicitly requests those sections.

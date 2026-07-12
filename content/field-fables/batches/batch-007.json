@@ -8,39 +8,40 @@
       "fieldCode": "0421",
       "fieldTitle": "Law",
       "fieldTitleZh": "法律",
-      "title": "The King's Cart at the Weighhouse",
+      "title": "The King's Cart Stops at the Scale",
       "titleZh": "国王的车停在秤前",
-      "summary": "A port inspector stops the king's winter salt at the same public scale used for every merchant, forcing the city to decide whether necessity places power above its own rules.",
-      "summaryZh": "港口检查官把国王的冬盐拦在所有商人共用的公秤前，迫使城市判断紧急需要是否能让权力站到自身规则之上。",
+      "summary": "A king sets a weight limit to protect an old bridge; the next year, the first heavy cart stopped comes from the palace.",
+      "summaryZh": "国王为保护旧桥定下车重上限，第二年，第一辆被拦下的重车来自王宫。",
       "storyParagraphs": [
-        "Every cart entering the port of Ordan stopped at a stone weighhouse. A published table set the levy by weight, and an inspector wrote the figure where the driver could see it. One freezing morning, the king's steward arrived with twenty carts of salt and ordered Inspector Mara to lift the gate. The royal kitchens were supplying mountain villages before the passes closed. Weighing every cart would cost three hours that the villages might not have. Mara kept the bar down.",
-        "The steward called her obedience absurd: rules existed to protect the kingdom, not to delay rescue. Mara offered to weigh a sample, record the departure, and complete the levy review after delivery. He instead presented a sealed note saying royal cargo was exempt whenever the steward declared urgency. By noon, three merchants had tied palace ribbons to private carts and claimed to be carrying royal provisions. The exception had not merely saved time; it had made the gate depend on whose voice the inspector feared.",
-        "The council created a narrow emergency passage. A written declaration had to name the danger, the officer responsible, and the time limit; an independent chamber would review each use within seven days. The salt departed after sampled weighing. At review, the chamber confirmed the delay risk but rejected exemption from the levy. Speed had required temporary discretion, not an invisible privilege. The steward paid from the royal account, and the decision was published beside the merchants' assessments.",
-        "Angered by the embarrassment, the king issued a new decree. Anyone who had obstructed royal provisions during the previous month would lose a season's wages. Mara now appeared guilty under words written after her act. The chamber refused to enforce the backward punishment. It accepted a prospective procedure for future emergencies, but held that citizens could not guide conduct by rules that did not yet exist. The king could change the public table through the prescribed process; he could not change yesterday to defeat a particular opponent.",
-        "A year later, fire destroyed two warehouses. Mara opened the emergency passage before receiving a seal, then documented why waiting would have endangered the town. The chamber approved her action but required faster notice next time. The city had not replaced judgement with rigid ceremony. It had surrounded coercive power with public rules, reasons, equal application, review, and remedies. Even urgent decisions remained answerable to institutions other than the person who benefited from them.",
-        "Ordan had learned the difference between rule by command and the rule of law. Under the latter, public power is exercised through accessible and reasonably stable rules, constrained against arbitrariness, applied without improper privilege, and open to independent adjudication and effective remedy. Emergencies may justify bounded discretion, but not secret exemptions, retroactive punishment, or a ruler who judges his own case. The king's salt crossed the mountains because urgency was recognised; his cart stopped at the scale because urgency did not make him the scale."
+        "After heavy carts cracked the stone bridge, the king issued a rule: every vehicle would be weighed before crossing, and anything above the limit had to unload. The rule appeared at the bridge and instructed guards not to vary inspection by status.",
+        "The following spring, a palace convoy carried stone for a banquet. Its first cart drove the scale beyond the limit. The royal steward ordered passage, saying the king's affairs could not wait. The guard pointed to the posted words but feared losing his office for stopping a royal vehicle.",
+        "An independent reviewer arrived that day. The steward could request an emergency exception, but had to state its legal basis, scope, and duration and leave a record open to review. Banquet stone was not an emergency. The request failed. The king did not remove the guard; he ordered half the stone unloaded and sent across in two journeys.",
+        "Months later, an overweight flood-rescue cart crossed under a published emergency clause and received a later bridge-damage inspection. The exception rested not on one person's command but on a prior rule and later review.",
+        "When the palace convoy next reached the bridge, the steward first handed over the cargo sheet. The king's cart waited at the scale with every other vehicle."
       ],
       "storyParagraphsZh": [
-        "每辆进入奥丹港的货车都要停在石砌秤房前。公开表格按重量规定税额，检查官把数字写在车夫能看见的地方。一个严寒清晨，国王的管事带着二十车盐抵达，命检查官玛拉抬杆放行。王家厨房正为山村准备物资，山口即将封闭，逐车称量会耗去村民可能没有的三个小时。玛拉仍把横杆留在原处。",
-        "管事斥责她把服从变成荒谬：规则本为保护王国，不该拖延救援。玛拉提议抽样称重、登记离港，送达后再核算税额。管事却出示密封手令，称只要他宣布紧急，王家货物就可免检。中午以前，三名商人已给私家货车系上宫廷丝带，声称运送王室物资。例外不只节省了时间，也让城门开始取决于检查官更怕谁的声音。",
-        "议会设立范围狭窄的紧急通道。书面声明必须写明危险、负责人和期限，独立审查庭要在七日内复核每次使用。盐车抽样后启程。复核时，审查庭确认延误风险，却拒绝免除税款。速度需要暂时裁量，而非看不见的特权。管事从王室账户缴税，决定与商人的税单一起公开。",
-        "国王因难堪而震怒，颁布新令：凡上月阻碍王家物资者，扣除一季薪资。玛拉在行为发生后写出的文字下忽然成了罪人。审查庭拒绝执行追溯惩罚。它接受未来紧急事件的新程序，却指出人无法用尚不存在的规则指导行为。国王可以依规定程序修改公开表格，不能改写昨天来击败特定对手。",
-        "一年后，火灾烧毁两座仓库。玛拉未等印章便打开紧急通道，随后记录等待为何会危及全城。审查庭认可她的行动，也要求下次更快通报。城市并未用僵硬仪式取代判断，而是让强制权力受到公开规则、理由、平等适用、审查与救济的包围。即使紧急决定，也要向受益者之外的制度负责。",
-        "奥丹终于懂得命令统治与法治的差别。法治要求公共权力依可获得且相对稳定的规则运行，受约束而不能任意行使，不以不当特权区别适用，并可由独立机构裁判、提供有效救济。紧急状态可以允许有边界的裁量，却不能制造秘密豁免、追溯惩罚，或让统治者审理自己的案件。王家的盐因紧急需要越过山口，国王的车仍停在秤前，因为紧急并没有让他成为那把秤。"
+        "石桥被重车压裂后，国王颁布规则：所有过桥车辆先称重，超过上限必须卸货。规则写在桥头，也规定守桥人的检查不得因身份不同而改变。",
+        "第二年春天，王宫车队运送宴会石材。第一辆车压下秤杆，超过上限。车队总管命守桥人放行，说国王的事务不能等待。守桥人指向桥头的文字，却仍担心因阻拦王车失去职位。",
+        "独立审理官当天赶来。总管可以申请紧急例外，但须说明法律依据、范围和期限，并留下可复核记录。宴会石材并不紧急，申请被驳回。国王得知后没有撤换守桥人，而是让王车卸下一半石料分两次通过。",
+        "几个月后，洪水救援车也超重。它依据公开的紧急条款获准通行，随后接受桥梁损伤检查。例外并非靠某个人一句话，而受事先规则和事后审查约束。",
+        "王宫车队再次来到桥头时，总管先把货单递给守桥人。国王的车与其他车辆一起停在秤前。"
       ],
       "conceptName": "Rule of law",
       "conceptNameZh": "法治",
       "explanationParagraphs": [
-        "The rule of law requires public power to be exercised under accessible, foreseeable, and generally applicable rules, with safeguards against arbitrary action, improper discrimination, and abuse of authority.",
-        "It also depends on independent courts or review bodies, access to justice, and effective remedies. Bounded emergency powers can be compatible with it when their basis, scope, duration, and review are themselves constrained."
+        "The rule of law requires public power to operate through accessible, predictable, and generally applicable rules, supported by independent review, access to justice, and effective remedy against arbitrariness. Emergency power can be compatible with it when grounded in law and constrained by scope, time, records, and review rather than status alone."
       ],
       "explanationParagraphsZh": [
-        "法治要求公共权力依可获得、可预见且普遍适用的规则行使，并以制度防止任意行动、不当歧视与权力滥用。",
-        "它也依赖独立法院或审查机构、司法可及性和有效救济。有依据、范围、期限与复核约束的紧急权力，可以与法治相容。"
+        "法治要求公共权力依照可获得、可预见且普遍适用的规则行使，并以独立审查、司法可及与有效救济抵抗任意权力。紧急权力并非必然违背法治，但应有明确依据、范围、期限、记录和复核，而不能只凭身份决定。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0421-precedent",
@@ -51,37 +52,38 @@
       "fieldTitleZh": "法律",
       "title": "The Sentence Beneath the First Bridge",
       "titleZh": "第一座桥下的那句话",
-      "summary": "A second bridge dispute is nearly decided by a memorable sentence from an earlier judgment until a judge asks what the first court actually had to decide.",
-      "summaryZh": "第二座桥的争议险些被旧裁决中的一句名言决定，直到法官追问第一家法院当时究竟必须裁定什么。",
+      "summary": "An old case leaves five words, 'the bridge opener pays', and years later nearly prevents a rescue.",
+      "summaryZh": "一桩旧案留下“开桥者赔偿”五个字，许多年后，它几乎阻止了一次救援。",
       "storyParagraphs": [
-        "When Ordan's first river bridge shifted after an exceptional flood, the city blamed its builder. Their contract required the builder to repair ordinary wear, but the city had selected the route and withheld an old survey showing a migrating channel. The High Chamber ruled that the city must pay for relocation because the loss arose from a concealed site condition under its control, not ordinary maintenance. In closing, one judge also remarked that a three-arch stone bridge was the safest form for a serious city.",
-        "Ten years later, a rope bridge failed at a mountain crossing. A clerk opened the old judgment, underlined the praise of stone arches, and declared the new builder liable for choosing rope. Merchants liked the certainty of one sentence for every bridge. Judge Sela asked which question the earlier court had needed to answer. The dispute there concerned allocation of a concealed site risk under a particular contract. No party had contested rope, stone, or the number of arches. The memorable sentence had helped explain a preference; it had not decided the case.",
-        "Sela did not simply discard the old ruling. She compared the contracts, who controlled the surveys, the kind of failure, and the authority of the court. Where the material facts and issue matched, the earlier holding constrained later judges in the same hierarchy. Where the mountain bridge differed, the reasoning might still persuade without controlling the result. She required the clerk to state the governing proposition narrowly enough that its force came from what had been adjudicated, not from any attractive line copied from the page.",
-        "A third dispute then matched the first almost exactly. The city again concealed a channel report and argued that a new panel should start afresh. Sela followed the earlier allocation. Builders had priced contracts, insurers had written policies, and citizens had arranged conduct around the court's announced rule. Treating like cases alike limited personal whim and made law more predictable. Consistency was not worship of age; it protected equality, reliance, and the accumulated work of prior reasoning.",
-        "Years later, repeated floods and a new statute made part of the old rule unworkable. A higher chamber did not pretend the earlier words had never existed. It identified the holding, examined reliance, explained the changed legal setting, and openly replaced the rule for future disputes. Lower courts could distinguish genuinely different facts, while only an authorised court could overrule a binding decision. The chain held because each link disclosed whether it was following, distinguishing, criticising, or replacing what came before.",
-        "The bridge records expressed the doctrine of precedent: earlier judicial decisions guide later cases, with binding force depending on jurisdiction, hierarchy, and the issue actually decided, while other reasoning may carry persuasive weight. The related practice of standing by decided matters promotes consistency and reliance but is not an inexorable command. Material differences may justify distinction, and authorised courts may overrule with reasons. The second bridge was not bound by every sentence beneath the first; it was bound, where applicable, by the decision the first dispute had made necessary."
+        "Years earlier, a bridge owner raised a drawbridge at night to collect boat fees and caused a cart to fall into the water. The court ordered compensation, writing: 'A person who knowingly opens a bridge for private gain while travellers are crossing bears the resulting loss.' Later readers shortened this to five words: the bridge opener pays.",
+        "Many years later, a keeper raised the bridge for a fireboat after receiving an alarm. A cargo cart ignored the barrier and struck the gate. Its owner cited the old case and demanded payment from the keeper. If only the five words were read, the cases looked identical.",
+        "The judge obtained the full first decision. What it had needed to resolve was a danger created without warning and for private gain. Opening a bridge was not an act that produced liability without its facts. The new case involved an alarm, barrier, and public rescue.",
+        "The judge explained why the old case did not control the new one rather than pretending it did not exist. The keeper did not pay for the cart, although the bridge office was required to raise its low barrier. The earlier decision remained in force; it had simply not decided this situation.",
+        "When filing the case, the judge unfolded the full page that had been tucked behind the five quoted words."
       ],
       "storyParagraphsZh": [
-        "奥丹第一座河桥在一次异常洪水后移位，城市向建造者追责。合同要求建造者修复正常损耗，但路线由城市选定，城市还隐瞒一份显示河道迁移的旧测绘。最高审查庭裁定，损失来自城市控制并隐瞒的场地条件，而非普通维护，因此迁桥费用由城市承担。结尾时，一名法官还顺带写道，三拱石桥才是严肃城市最安全的样式。",
-        "十年后，山区一座绳桥断裂。书记翻开旧裁决，在赞扬石拱的句子下画线，认定新建造者因采用绳索而负责。商人喜欢用一句话处理所有桥梁的确定感。法官塞拉却问，先前法院当时非回答不可的问题是什么。那场争议关乎特定合同下隐蔽场地风险的分配，没有一方争论绳索、石材或拱数。那句醒目的话解释了偏好，却没有决定案件。",
-        "塞拉并未因此抛弃旧裁决。她比较合同、测绘控制者、故障类型和法院权威。若关键事实与争点相同，同一体系中上级法院先前作出的核心裁断会约束后来法官；若山桥情形不同，旧推理仍可具有说服力，却不控制结果。她要求书记把适用规则写得足够准确，使其力量来自真正经过裁判的事项，而非从纸页上抄下的漂亮句子。",
-        "第三场争议几乎复制了第一场。城市再次隐瞒河道报告，并主张新合议庭应从零开始。塞拉沿用原先的风险分配。建造者据此给合同定价，保险人据此承保，市民也按法院宣布的规则安排事务。相同案件获得相同处理，能够限制个人任性并提高可预见性。一致不是崇拜年代，而是保护平等、信赖与既有推理积累。",
-        "多年后，连续洪灾与新法规让旧规则的一部分无法运作。更高审查庭没有假装旧话从未存在，而是识别原裁断、审视人们的信赖、解释法律环境变化，并公开替换未来规则。下级法院可区分真正不同的事实，只有获授权的法院能够推翻有约束力的决定。链条之所以可靠，是因为每个环节都说明自己在遵循、区分、批评还是替代过去。",
-        "桥梁档案体现的是判例原则：较早的司法决定会指导后来案件，其约束力取决于管辖、法院层级与真正经过裁定的争点，其他推理则可能具有说服力。遵循既决事项有助于一致与信赖，却不是不可摆脱的命令；重大事实差异可以支持区分，有权法院也可说明理由后推翻。第二座桥并不受第一座桥下每句话束缚；在条件适用时，它受约束的是第一场争议迫使法院作出的决定。"
+        "多年前，桥主为收取夜船费，擅自升起吊桥，导致一辆马车落水。法庭判他赔偿，判词里写着：“明知道路有人通行而为私利开桥者，应承担损失。”后来人常把它缩成五个字：开桥者赔偿。",
+        "许多年后，一名守桥人为让救火船通过，在得到警报后升桥。一辆无视拦绳的货车撞上桥门。车主拿出旧案，要求守桥人照样赔偿。若只读那五个字，两案似乎完全相同。",
+        "法官调来第一案全文。旧判决真正需要解决的是桥主在无警示、为私利的情况下制造危险；“开桥”不是脱离事实便自动产生责任的动作。新案有警报、拦绳和公共救援，关键事实不同。",
+        "法官说明旧案为何不直接控制本案，而不是假装它不存在。守桥人不承担货车损失，桥务处却因拦绳过低被要求改进。旧判决仍然有效，只没有被拉到它从未决定的地方。",
+        "归档时，法官把那五个字旁边被折进去的整页判词重新展开。"
       ],
       "conceptName": "Precedent",
       "conceptNameZh": "判例原则",
       "explanationParagraphs": [
-        "Precedent is the use of earlier judicial decisions to guide later cases. Binding effect depends on the court hierarchy, jurisdiction, material facts, and the holding needed to resolve the earlier issue; other statements may be persuasive rather than controlling.",
-        "Following decided cases supports consistency, equality, and justified reliance. Courts may distinguish materially different cases, and courts with authority may overrule prior law through explicit reasoning rather than silently ignoring it. The form and strength of these practices vary across legal systems."
+        "Precedent uses earlier judicial decisions to guide later cases. Binding force depends on court hierarchy, jurisdiction, material facts, and the holding necessary to resolve the original issue; not every sentence carries equal authority. Courts may distinguish materially different cases or, with authority and reasons, overrule an earlier rule."
       ],
       "explanationParagraphsZh": [
-        "判例原则是用较早的司法决定指导后来案件。约束力取决于法院层级、管辖、关键事实，以及解决原争点所必需的核心裁断；其他陈述可能只有说服力。",
-        "遵循既决案件有助于一致、平等与正当信赖。法院可区分事实存在重大差异的案件，有权法院也可通过明确论证推翻旧规则，而非默默忽略。这些实践的形式与效力在不同法律体系中并不相同。"
+        "判例原则以较早司法决定指导后来案件。约束力取决于法院层级、管辖、关键事实和解决原争点所必要的核心裁断，而非每一句话都同等有效。法院可在重大事实不同时区分案件，也可由有权法院明确推翻旧规则。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0421-burden-of-proof",
@@ -90,39 +92,40 @@
       "fieldCode": "0421",
       "fieldTitle": "Law",
       "fieldTitleZh": "法律",
-      "title": "The Missing Sack",
+      "title": "The Missing Sack of Grain",
       "titleZh": "少掉的一袋粮",
-      "summary": "When a granary loses one sack, a magistrate orders the whole town to prove innocence and discovers why uncertainty must be assigned before it is judged.",
-      "summaryZh": "粮仓少掉一袋粮，执政官命全镇证明清白，随后发现审判不确定性以前，必须先决定由谁承担它。",
+      "summary": "One sack disappears from the granary, and the manager orders the last worker to prove he did not take it.",
+      "summaryZh": "仓库少了一袋粮，管事要求最后离开的人证明自己没有拿走它。",
       "storyParagraphs": [
-        "The town granary counted one sack fewer after market day. Magistrate Oren closed the gates and ordered every household to prove where its members had been at sunset. Those with two witnesses would receive a white token; everyone else remained suspect. Baker Nima had worked alone beside her oven. She could show flour on her hands and bread in the racks, but neither could prove she had never crossed the square. By nightfall, the honest and dishonest were separated mainly by their ability to produce companions.",
-        "Recorder Yara placed an empty sack before the bench and asked the granary keeper to establish that a theft had occurred. His tally used a damp mark that might mean sixty-nine or seventy-nine. No one had checked the opening count, and a delivery note lay under the wrong date. When the sacks were counted again, the supposed loss disappeared. The magistrate's procedure had turned an unverified accusation into a townful of impossible negatives. Whoever failed to defeat uncertainty was treated as if uncertainty itself were evidence.",
-        "A month later, a marked sack truly vanished. This time the keeper produced the opening inventory, an intact chain of custody until dusk, a broken seal, and a trail of grain leading toward Nima's cart. The evidence was strong enough to require an answer. Nima produced a signed delivery order showing that her cart had carried a torn sack from another storehouse along the same road. The trail no longer identified a thief. Requiring the accuser to begin did not forbid the accused from answering; it determined what happened when the whole record remained uncertain.",
-        "The council proposed one threshold for every decision. Yara objected. A criminal condemnation that could take liberty demanded far greater confidence than a civil dispute over who should repay the price of a sack. Ordinary civil claims might be resolved by which account was more likely, while especially serious civil matters could require stronger proof under the town's statutes. The required confidence followed the kind of proceeding and its consequences, not the magistrate's mood. Different jurisdictions could draw the lines differently, but the lines had to be known.",
-        "Some facts also lay peculiarly within one party's control. After the granary showed a sealed room and exclusive possession of its key, the keeper might reasonably be required to explain an unexplained opening. Such limited shifts concerned a particular issue and followed an initial showing; they did not erase the prosecution's ultimate responsibility to establish guilt. Presumptions helped courts reason from proved facts, but they too needed a lawful basis and a chance of rebuttal.",
-        "Yara had rebuilt the hearing around the burden of proof: rules assigning who must produce evidence, who must persuade the decision-maker, and how convincing the evidence must be. The allocation matters because facts are often uncertain and failure to prove is not the same as proof of the opposite. Standards vary with legal context and stakes, and some intermediate burdens may shift, yet a criminal accusation generally leaves the ultimate burden on the prosecution. The missing sack had first placed the entire town on trial; the new procedure placed uncertainty where the law said it belonged."
+        "After the night shift, one sack of grain was missing from the public store. The manager suspected porter Zhou Qi because he had left last and was poor. He ordered Zhou Qi to prove within three days that he had not stolen it or repay the value and lose his job.",
+        "Zhou Qi could not prove an act he said he had never performed. He could only say the sack was present when he left, with no witness. The manager produced the empty space and exit record and called the suspicion sufficient.",
+        "The reviewer first asked who made the theft claim and who should bear the loss if both sides had equally insufficient evidence. The granary controlled keys, counts, and gate records and was better placed to preserve evidence. It therefore had to produce material strong enough to support the accusation.",
+        "Further inspection found a skipped line in the count and a rear key shared among three people. Mistake or removal by someone else could not be excluded. The reviewer did not declare Zhou Qi certainly innocent, only that the evidence was insufficient to impose the consequence of theft.",
+        "The sack remained missing during the recount. The manager added two signatures to the new inventory sheet and did not fill the blank with Zhou Qi's name."
       ],
       "storyParagraphsZh": [
-        "集市日后，镇粮仓盘点少了一袋。执政官奥伦关闭城门，命每户证明黄昏时家人身在何处。有两名证人者领取白牌，其余人继续受嫌疑。面包师妮玛独自在炉旁工作，手上的面粉和架上的面包能证明她做过什么，却不能证明她从未穿过广场。入夜时，诚实者与不诚实者主要按能否找到同伴被分开。",
-        "书记雅拉把一只空袋放在审判席前，请粮仓管理员先证明盗窃确实发生。账册上的墨痕受潮，既像六十九，也像七十九；无人核验开仓数量，一张入库单还压在错误日期下面。重新盘点后，所谓损失消失。执政官的程序把未经证实的指控变成全镇都无法完成的否定证明；谁不能消除不确定，谁就被当成不确定本身已经证明了罪。",
-        "一个月后，一只带标记的粮袋真的失踪。管理员这次交出开仓清单、持续到黄昏的保管记录、破损封条，以及通向妮玛货车的粮粒。证据已强到足以要求回应。妮玛拿出签字送货单，证明她的车曾沿同一路线运送另一座仓库的破袋。粮粒不再能识别盗贼。要求指控方先开始，并不禁止被指控者答辩；它决定的是全部记录仍不确定时会发生什么。",
-        "议会提议所有决定采用同一门槛，雅拉反对。可能剥夺自由的刑事定罪，需要远高于民事粮价赔偿的确信。普通民事请求可以判断哪种叙述更可能成立，某些后果严重的民事事项则可依本地法规要求更强证明。确信程度应跟随程序类型与后果，而非执政官心情。各地划线可以不同，但界线必须事先可知。",
-        "有些事实还特别掌握在一方手里。粮仓若先证明房间密封、钥匙由某人独占，便可合理要求持钥者解释异常开启。这类有限转移针对特定问题，并以初步证明为前提；它不抹去刑事指控方最终确立有罪的责任。推定能帮助法院从已证事实推理，却也要有合法基础，并允许反驳。",
-        "雅拉围绕举证责任重建审理：规则要分配谁负责提出证据、谁负责说服裁判者，以及证据需要达到何种程度。事实常有不确定，未能证明并不等于已经证明相反事实，因此分配会改变结果。证明标准随法律情境与利害而变，某些中间责任也可能转移，但刑事指控通常仍由控方承担最终责任。失踪粮袋起初让全镇受审；新程序则把不确定放回法律指定的位置。"
+        "夜班结束后，公仓少了一袋粮。管事认定搬运工周启最可疑，因为他最后离开，又家境贫寒。他命周启在三日内证明自己没有偷，否则照价赔偿并离职。",
+        "周启无法证明一个自己没有做过的动作。他只能说离开时粮袋还在，却没有证人。管事则拿出空位和出门记录，认为怀疑已经足够。",
+        "审理人先问是谁提出偷窃主张，也问如果双方证据一样不足，损失应落在谁身上。公仓掌握钥匙、清点表和守门记录，比搬运工更有能力保存证据，因此必须先拿出足以支持指控的材料。",
+        "进一步检查发现清点表前后差一行，后门锁也曾由三人共用。证据不能排除误记或他人取走。审理人没有宣布周启必然清白，只裁定现有材料不足以让他承担偷窃后果。",
+        "公仓补做盘点时，那一袋粮仍未找到。管事在新表上增加双人签名，没有再把空白处写成周启的名字。"
       ],
       "conceptName": "Burden of proof",
       "conceptNameZh": "举证责任",
       "explanationParagraphs": [
-        "The burden of proof allocates the duties to produce evidence and to persuade the decision-maker, together with the applicable standard of proof. It determines who loses on an issue when the evidence remains insufficient or evenly balanced.",
-        "Standards and possible burden shifts depend on the jurisdiction and proceeding. Criminal guilt generally must be established by the prosecution beyond reasonable doubt, while civil matters commonly use lower standards; specific rebuttable presumptions do not automatically transfer the ultimate criminal burden."
+        "The burden of proof determines who must produce evidence and persuade a decision-maker, and who loses on an issue when evidence is absent or evenly balanced, together with the applicable standard of proof. Allocation varies by proceeding and jurisdiction. Difficulty proving a negative does not automatically transfer the ultimate burden to an accused person."
       ],
       "explanationParagraphsZh": [
-        "举证责任分配提出证据与说服裁判者的义务，并与适用的证明标准共同决定证据不足或势均力敌时，哪一方在该问题上承担不利结果。",
-        "证明标准与可能的责任转移取决于管辖和程序。刑事有罪通常须由控方排除合理怀疑地证明，民事事项常采用较低标准；针对特定事实的可反驳推定，并不当然转移刑事案件的最终责任。"
+        "举证责任决定谁需提出证据、说服裁判者，以及证据不足或势均力敌时谁承担不利结果，并与具体证明标准共同运作。责任分配受程序、事项与管辖影响。不能因为被指控者难以证明否定事实，就自动把最终说服责任转给他。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0511-natural-selection",
@@ -131,39 +134,40 @@
       "fieldCode": "0511",
       "fieldTitle": "Biology",
       "fieldTitleZh": "生物学",
-      "title": "The Moths That Did Not Change",
+      "title": "The Moths That Never Changed Colour",
       "titleZh": "没有变色的蛾",
-      "summary": "When an island's pale trees darken, the moth population changes colour even though no moth changes its own wings.",
-      "summaryZh": "岛上的浅色树干变黑以后，蛾群的颜色随之改变，尽管没有一只蛾改变自己的翅膀。",
+      "summary": "Light moths become rarer after the woods darken, yet a child never sees a single moth change its colour.",
+      "summaryZh": "树林变暗以后，浅色蛾越来越少，孩子却始终没看到任何一只蛾改变颜色。",
       "storyParagraphs": [
-        "On Lume Island, most night moths had ash-pale wings that vanished against lichen-covered trunks. A few were charcoal dark and easy for thrushes to see. Naturalist Iven counted both forms each spring, marked adults with tiny dots, and collected eggs from known mothers. Colour varied among moths, and offspring tended to resemble their parents. For years the pale form was common enough that islanders treated it as the moth's proper colour and the dark form as a mistake.",
-        "Then the glassworks began burning oily fuel. Soot darkened trees near the harbour and killed much of the pale lichen. Thrushes still hunted by sight. Iven released equal numbers of marked pale and dark moths on both clean inland trees and blackened harbour trees. Inland, more pale moths survived to be recaptured; near the works, more dark moths did. The following seasons brought a larger share of dark offspring around the harbour, although no surviving adult had altered the colour of its wings.",
-        "The mayor announced that soot had taught the moths to darken themselves. Iven placed pale adults beside black bark for their entire lives; they remained pale. He raised eggs from pale and dark parents under the same clean conditions, and inherited differences still appeared. The environment had not instructed each body to acquire the useful colour. It had changed which existing heritable variants were more likely to survive and leave descendants. What shifted was the composition of a population across generations.",
-        "Years later, cleaner furnaces returned lichen to the harbour. The mayor expected the dark form to remain because improvement, once achieved, should advance in one direction. Instead, pale moths regained an advantage on restored trunks and their proportion rose. The useful trait was not universally better, and the process had no foresight or destination. Fitness meant relative reproductive success in a particular environment; the same wings could help in one place and hinder in another.",
-        "Iven also warned against explaining every change by birds. A storm might leave a small colony with an unusual colour ratio by chance. Moths arriving from inland could move variants between populations, and mate choice or other pressures could matter. Evidence required heritable variation, differential survival or reproduction associated with that variation, and change across generations. A single dark season or a purposeful tale about what the species needed could not establish the mechanism.",
-        "The islanders had watched natural selection: when individuals differ in heritable traits, environmental conditions make some variants more likely than others to contribute offspring, changing trait frequencies in a population over generations. Individuals are filtered through differential reproductive success; populations evolve. Mutation supplies new variation, while recombination, gene flow, genetic drift, and other processes also shape evolution. The moths did not darken because the island requested it. The island changed which unchanged wings were most often carried into the future."
+        "Tree trunks around Forest Town were once covered in pale lichen. Light moths were difficult to see there, while dark moths stood out. A naturalist recorded both colours each summer. As kilns spread along the town edge, soot gradually darkened the bark.",
+        "A child expected light moths to darken because they needed hiding. He watched for many days and saw none change. Light remained light and dark remained dark. What changed was how easily birds found individuals that contrasted with the bark.",
+        "The naturalist marked moths before returning them to the woods. In sooty areas, more dark moths survived to breed. In distant woodland where lichen remained, more light moths did. Colour could pass from parents to offspring, so the shares of the two colours differed in the next generation.",
+        "Later, cleaner kiln fuel allowed lichen to return. A colour favoured earlier no longer held the advantage everywhere. The forest had not moved toward a planned goal; environmental change altered the reproductive chances of inherited differences.",
+        "The child arranged years of specimens in one case. No pinned moth changed colour, yet the number of each colour shifted from row to row."
       ],
       "storyParagraphsZh": [
-        "卢姆岛多数夜蛾长着灰白翅膀，停在覆满地衣的树干上几乎消失。少数蛾呈炭黑色，很容易被鸫鸟看见。博物学者伊文每年春天统计两种颜色，给成蛾点上微小标记，并收集已知母蛾的卵。蛾群存在颜色差异，后代也常与亲本相似。多年里，浅色蛾数量众多，岛民便把它视为蛾的正常颜色，把深色当成错误。",
-        "后来玻璃厂开始燃烧油性燃料，煤烟熏黑港边树木，也杀死大片浅色地衣。鸫鸟仍靠视觉捕食。伊文把等量有标记的浅色蛾与深色蛾，分别放上内陆洁净树干和港边黑树。内陆重获的浅色蛾更多，工厂附近重获的深色蛾更多。接下来几季，港边深色后代比例上升，却没有一只存活成蛾改变自身翅色。",
-        "市长宣布煤烟教会了蛾让自己变黑。伊文让浅色成蛾终生待在黑树旁，它们依旧浅色；他又在相同洁净环境里培育来自深浅亲本的卵，遗传差异仍然出现。环境并未指导每个身体获得有用颜色，而是改变了现有可遗传变异中，哪些更可能活下来并留下后代。跨越世代改变的是群体构成。",
-        "多年后，清洁炉火让地衣重回港口。市长以为深色会保留，因为已经取得的进步理应单向前进。结果浅色蛾在恢复的树干上重新占优，比例随之上升。有用性并非普遍不变，过程也没有预见或目的地。适合度指特定环境中的相对繁殖成功，同一双翅膀可在一处提供帮助，在另一处造成妨碍。",
-        "伊文也提醒人们，不能把每次变化都归给鸟。一场风暴可能偶然让小群体留下异常颜色比例；从内陆迁入的蛾会在群体间搬运变异，择偶或其他压力也可能作用。确认这种机制需要可遗传变异、与变异相关的生存或繁殖差异，以及跨世代变化。一个变黑的季节，或关于物种需要什么的目的故事，都不足以证明它。",
-        "岛民看见的是自然选择：个体拥有不同的可遗传性状，环境条件让某些变异比其他变异更可能留下后代，于是群体中的性状频率跨世代改变。个体经历差异繁殖成功的筛选，发生演化的是群体。突变提供新变异，重组、基因流动、遗传漂变与其他过程也共同塑造演化。蛾并非因为岛屿提出要求而变黑；岛屿改变的，是哪些并未变色的翅膀更常被带入未来。"
+        "林镇的树干原本覆着浅灰地衣，浅色蛾停在上面很难发现，深色蛾却十分显眼。自然观察员每年夏天记录两种蛾的数量。镇边窑炉增多后，烟尘使树皮逐渐变黑。",
+        "一个孩子以为浅色蛾会因为需要隐藏而慢慢变深。他连续看了许多天，没有一只蛾改变颜色。浅色仍是浅色，深色仍是深色；不同的是，鸟更容易找到与树皮反差大的个体。",
+        "观察员给蛾做上小标记后放回树林。黑树区中，更多深色蛾活到繁殖季；仍有地衣的远林里，浅色蛾保留得更多。蛾色能够由亲代传给后代，下一代的两种颜色所占份额因此不同。",
+        "后来窑炉改用较少烟尘的燃料，地衣慢慢回来。先前有利的颜色不再在所有地方占优。树林没有朝一个预定目标前进，环境改变了不同遗传差异留下后代的机会。",
+        "孩子把多年标本并排放进盒中。没有一只标本在针下变色，盒里颜色的多少却一年年改变。"
       ],
       "conceptName": "Natural selection",
       "conceptNameZh": "自然选择",
       "explanationParagraphs": [
-        "Natural selection changes a population when individuals vary in heritable traits and those differences are associated with unequal survival or reproduction in a particular environment. Trait frequencies then shift across generations.",
-        "Individuals do not evolve because they need a trait, and selection has no predetermined goal. Mutation, recombination, gene flow, genetic drift, mate choice, and changing environments also influence evolutionary outcomes."
+        "Natural selection occurs when individuals differ in heritable traits and those differences produce different survival or reproductive outcomes in a particular environment, changing trait frequencies across generations. Individuals do not evolve because they need to, and selection has no predetermined goal. Mutation, drift, gene flow, and environmental change also shape evolution."
       ],
       "explanationParagraphsZh": [
-        "自然选择发生于个体存在可遗传性状差异，且这些差异在特定环境中对应不同的生存或繁殖成功，因而让群体性状频率跨世代改变。",
-        "个体不会因为需要某种性状而自行演化，选择也没有预定目标。突变、重组、基因流动、遗传漂变、择偶与环境变化同样影响演化结果。"
+        "自然选择发生在个体具有可遗传差异，而这些差异在特定环境中带来不同生存或繁殖结果，使群体中性状频率跨世代改变。个体不会因需要而主动演化，选择也没有预定目标；突变、漂变、基因流动和环境变化等也会影响结果。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0511-homeostasis",
@@ -174,37 +178,38 @@
       "fieldTitleZh": "生物学",
       "title": "The Greenhouse That Never Stood Still",
       "titleZh": "从未静止的温室",
-      "summary": "A keeper tries to preserve one perfect temperature by fixing every valve, then learns that constancy is produced by continuous correction.",
-      "summaryZh": "温室管理员把所有阀门固定在一个完美位置，随后发现恒定并非停止变化，而是持续修正的结果。",
+      "summary": "The greenhouse temperature stays within a narrow range all day, so an apprentice assumes its windows and valves should stop moving.",
+      "summaryZh": "温室里的温度整日保持在窄小范围，学徒因此误以为所有窗和阀门都不该再动。",
       "storyParagraphs": [
-        "The royal greenhouse had to keep frost-fruit seedlings within a narrow temperature range. Keeper Sen found the ideal reading one mild morning and locked the furnace, vent, and water valves in exactly those positions. At noon, sunlight heated the glass and the seedlings wilted. After sunset, the same fixed arrangement let frost form on the inner panes. Sen had preserved the controls perfectly and lost the condition they were meant to preserve.",
-        "Engineer Lysa installed sensors at the shaded and sunny beds, a comparator beside the desired range, and separate mechanisms for heating and ventilation. When temperature fell, the furnace increased output; as the reading returned, that response weakened. When temperature rose, vents opened and heating fell. The opposing responses reduced deviations rather than freezing every component. Stable seedlings now depended on valves moving, fuel burning, heat escaping, and measurements being taken without pause through every day and night.",
-        "The first design still lurched between heat and cold. Sensors reported late, the furnace retained heat after closing, and wide valve movements overcorrected each error. Lysa adjusted gain, placed sensors where they represented the beds, and accounted for delay. She also shaded the roof before the expected noon sun instead of waiting for damage. Correction after deviation worked with anticipation based on a reliable signal; neither strategy alone controlled every disturbance.",
-        "Temperature was not the only quantity. Humidity, water pressure, carbon dioxide, and stored sugar interacted, sometimes with competing demands. Opening vents cooled the room but also dried it. The greenhouse therefore maintained ranges through several linked loops rather than one master dial. During germination, Sen intentionally changed the target range, and during a fungal outbreak some protective responses consumed growth. A regulated condition could shift with state and context; it was not one eternal number.",
-        "One winter the fuel line failed. The controller opened the furnace valve fully, yet no heat arrived. A correct error signal could not compensate for a missing resource or damaged effector. Lysa added reserves and alarms, but she refused the claim that every biological change was a simple negative loop. Some processes amplified a response for a bounded purpose, and neural, hormonal, behavioural, and anticipatory controls could cooperate. The useful model was active regulation, not a universal diagram imposed on every process.",
-        "The greenhouse made homeostasis visible: living systems maintain important internal variables within viable ranges through coordinated sensing, integration, and response despite external and internal disturbances. Negative feedback often opposes deviation, while feedforward, behaviour, redundancy, and changing set points can also contribute; control may be distributed rather than housed in one comparator. Regulation costs energy, includes delays and trade-offs, and can fail when sensors, controllers, effectors, or resources fail. The room looked constant only from outside; inside, its constancy was an achievement renewed every minute."
+        "A hilltop greenhouse raised seedlings that tolerated neither cold nor heat. The thermometer remained between two marks, and apprentice Lin An assumed the old gardener had discovered a perfect setting. Yet the furnace warmed at night, windows released daytime heat, and water valves and shades moved with the weather.",
+        "When the gardener left for a day, Lin An fixed the windows, furnace door, and water valves in their morning positions to 'keep things stable'. Clouds cleared before noon and sunlight intensified. The temperature crossed the upper mark and leaves began to droop. The number had appeared steady only because many parts kept changing.",
+        "Lin An opened the roof window, shaded the sunny wall, and reduced the fire. When the temperature fell too far, he narrowed the opening again. The thermometer showed a departure and action pulled it back toward the useful range; action that was late or excessive produced swings.",
+        "He later adjusted shades before expected weather changes and recorded growth stage, since a range suitable for seedlings did not always suit flowering plants. The greenhouse had no setting that remained correct forever, only continuing sensing, comparison, and response.",
+        "When the old gardener returned, the thermometer still sat between the marks. Lin An was opening the roof window another finger's width."
       ],
       "storyParagraphsZh": [
-        "王家温室必须让霜果幼苗保持在狭窄温度范围内。一个温和清晨，管理员森找到理想读数，便把火炉、通风窗与水阀全部锁在当时位置。正午阳光加热玻璃，幼苗开始萎蔫；日落以后，同一套固定安排又让内窗结霜。森完美保留了控制装置的位置，却失去这些装置本要保存的状态。",
-        "工程师莉莎在阴面与向阳苗床安装传感器，在目标范围旁设置比较装置，并分别连接加热与通风机构。温度下降，火炉增加输出；读数回归后，反应随之减弱。温度升高，通风窗开启，火力下降。相反方向的响应减少偏差，而非冻结所有部件。幼苗的稳定开始依赖阀门移动、燃料燃烧、热量逸出与昼夜不间断测量。",
-        "第一版系统仍在冷热间摇摆。传感器报告迟缓，火炉关闭后仍有余热，阀门大幅动作又会过度修正。莉莎调整响应强度，把传感器移到能代表苗床的位置，并把延迟计入设计。她还根据可靠预报在正午前遮顶，而不是等损伤出现。偏差后的纠正与依据可靠信号的预先行动相互配合，任何一种都不能独自控制所有扰动。",
-        "需要调节的不只温度。湿度、水压、二氧化碳与储存糖分彼此作用，有时要求互相冲突。开窗能降温，也会让空气变干，因此温室靠多个相连回路维持范围，而非一个总旋钮。发芽期里，森会主动改变目标范围；真菌暴发时，一些保护反应则以生长为代价。受调节状态会随情境改变，并非永恒数字。",
-        "一个冬天，燃料管断裂。控制器把炉阀开到最大，热量仍未到来。正确的误差信号无法弥补资源缺失或执行机构损坏。莉莎增加储备与警报，却拒绝把每项生命变化都画成简单的负向回路。有些过程会为有限目的放大反应，神经、激素、行为与预期性控制也能协同。真正有用的模型是主动调节，不是强加给所有过程的一张通用图。",
-        "温室让稳态变得可见：生命系统面对内外扰动，借助协调的感知、整合与响应，把重要内部变量维持在可生存范围。负反馈常用来抵消偏差，前馈、行为、冗余与目标点变化也可参与；控制还可能分散完成，而非集中在一个比较器里。调节消耗能量，具有延迟与取舍；传感器、控制、执行或资源任一环节失灵时都可能失败。房间只有从外面看才像恒定，里面的恒定是每分钟重新完成的成就。"
+        "山顶温室培育怕冷又怕热的幼苗。温度表整日只在两条刻线之间移动，学徒林安以为老园丁已经找到了完美设置。夜里炉火加温，白天窗户放热，水阀和遮帘也随天气不断变化。",
+        "老园丁外出一天，林安为了“保持稳定”，把窗、炉门和水阀固定在清晨的位置。上午云散，阳光突然增强。温度很快越过上限，幼苗叶片开始下垂。数字原先看似不动，正是因为许多部件一直在动。",
+        "林安打开顶窗，遮住向阳面，并减少炉火。温度下降过头时，他又关小窗缝。温度表提供偏差，动作把它拉回适合范围；若动作太迟或太强，也会造成来回摆动。",
+        "此后，他还在天气变化前调整遮帘，并记录幼苗生长阶段，因为适合新苗的范围不一定适合开花植株。温室没有一个永远不变的设置，只有持续感知、比较与回应。",
+        "老园丁回来时，温度表仍在两条刻线之间。林安正把顶窗又推开一指宽。"
       ],
       "conceptName": "Homeostasis",
       "conceptNameZh": "稳态",
       "explanationParagraphs": [
-        "Homeostasis is the active regulation of internal variables within ranges compatible with function and survival despite disturbance. Sensors, integrating processes, and effectors coordinate responses, often through negative feedback.",
-        "It is dynamic rather than static. Set points or acceptable ranges can change, several control systems may interact, and feedforward, behaviour, redundancy, delay, resource limits, and trade-offs shape whether regulation succeeds."
+        "Homeostasis is the active regulation of internal variables within ranges that support function despite disturbance, often through sensing, integration, action, and negative feedback. It is dynamic maintenance rather than stillness. Target ranges, delays, resources, feedforward action, behaviour, and interacting control systems all affect the result."
       ],
       "explanationParagraphsZh": [
-        "稳态是生命系统面对扰动，主动把内部变量调节在支持功能与生存的范围内。传感、整合与执行过程协调响应，其中常见负反馈。",
-        "它是动态维持而非静止不变。目标点或可接受范围可以改变，多套控制系统也会交互；前馈、行为、冗余、延迟、资源限制与取舍都会影响调节能否成功。"
+        "稳态是生命系统在扰动下主动把内部变量维持于支持功能的范围，常依靠传感、整合、执行与负反馈。它是动态调节而非静止不变。目标范围、延迟、资源、前馈、行为与多套控制系统都会影响调节结果。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0511-gene-environment-interaction",
@@ -213,39 +218,40 @@
       "fieldCode": "0511",
       "fieldTitle": "Biology",
       "fieldTitleZh": "生物学",
-      "title": "The Best Seed in the Wrong Valley",
+      "title": "Good Seed in the Wrong Valley",
       "titleZh": "种在错误山谷里的好种子",
-      "summary": "Two seed lines exchange rank between a wet valley and a dry ridge, defeating the search for one universally superior inheritance.",
-      "summaryZh": "两条种子品系在湿谷与旱岭间交换高矮次序，使寻找一种普遍优越遗传的努力落空。",
+      "summary": "The highest-yielding wheat from Gold Valley reaches Mist Valley and loses to a previously ordinary seed.",
+      "summaryZh": "金谷最丰产的麦种被送到雾谷后，第一次输给了原本不起眼的另一袋种子。",
       "storyParagraphs": [
-        "Seedmaster Olan sold a golden barley line as the tallest in the kingdom. In his irrigated valley plots, it stood a hand above the silver line. The ridge farmers bought golden seed at twice the price, but their dry fields produced short stalks and poor grain. They accused Olan of substituting seed. He opened his sealed stores and found no mix-up. The same inheritance that led in one place had fallen behind in another.",
-        "Gardener Reva divided sibling seeds from both lines among replicated plots in the wet valley and the dry ridge. She randomised their positions, kept planting density equal, and recorded soil moisture and temperature. Golden plants again grew taller in the valley. On the ridge, silver plants retained water better and grew taller than golden plants. A chart joining each line's average height across the two sites showed crossing lines. Environment changed not only average growth, but which inherited variant produced the greater height.",
-        "Olan tried to settle the matter by asking whether height came from seed or soil. Reva answered with a second trial. Increasing ridge irrigation improved both lines, but golden plants improved much more; under severe drought, silver plants held the advantage. The contribution associated with one inherited line depended on the conditions under which it developed. Adding a separate seed effect to a separate environment effect would miss the changed difference between the two lines.",
-        "The council then chose golden seed for the whole province because most farms had recently been wet. A three-year drought reversed the expected ranking, and the supposedly inferior silver stores became essential. Reva refused to call either line universally best. She recommended matching lines to plausible conditions, preserving variation, and testing performance across locations and years. A ranking observed in one setting was a statement about that setting, not a permanent essence of the seed.",
-        "She also warned that the crossing chart alone did not identify every cause. Valley and ridge differed in many correlated features, so controlled experiments, replication, and an appropriate population mattered. Results could depend on the measured trait, life stage, range of environments, and genetic backgrounds sampled. The pattern did not mean inheritance was unreal or that surroundings could produce anything; it meant developmental outcomes could not always be predicted from either source in isolation.",
-        "The barley trials revealed gene-environment interaction: the effect of genetic variation on a phenotype changes across environments, or equivalently, environmental effects differ across genotypes. Non-parallel reaction norms display this dependence, with crossing lines producing rank changes. It is distinct from merely saying that genes and environments both matter, and it does not imply destiny or unlimited plasticity. Olan had searched for the best seed. Reva's plots replaced that question with a more precise one: best under which conditions, for which trait, and within which population?"
+        "The Gold Valley growers selected red-awn wheat as their highest-yielding seed and called it the best in the region. Farmers in Mist Valley paid heavily for it, hoping to reproduce the harvest. But Mist Valley was wet and windy. Red-awn wheat lodged easily and yielded less than the ordinary local green-stem variety.",
+        "Gold Valley merchants blamed poor farming, while Mist Valley suspected false seed. An agronomist divided both varieties and planted each in both valleys, keeping density and care as similar as possible.",
+        "At harvest, red-awn still led in dry Gold Valley, while green-stem surpassed it in Mist Valley. Looking at one variety or one environment alone invited claims that one seed was simply better or one valley worse. Seen together, the advantage changed with growing conditions.",
+        "The growers stopped naming one champion for the whole region. Dry slopes kept red-awn, wet fields used more green-stem, and new land received small trials first. Both seeds could be good and both could be placed in conditions that did not suit them.",
+        "At the next distribution, the agronomist wrote both variety and trial valley on every sack and stamped none merely 'superior'."
       ],
       "storyParagraphsZh": [
-        "种子师奥兰把金穗大麦称为王国最高的品系。在有灌溉的山谷试验田里，它比银穗高出一掌。山岭农民用两倍价格买下金穗，干旱田地里却只长出短秆与瘪粒。他们指控奥兰调换种子，奥兰打开密封仓库，没有发现混装。同一份在一处领先的遗传，在另一处落到了后面。",
-        "园艺师蕾瓦把两种品系的同胞种子分进湿谷与旱岭的重复地块，随机安排位置，保持种植密度相同，并记录土壤水分与温度。金穗在山谷里仍然更高；到了山岭，银穗更能保水，株高反而超过金穗。把每个品系在两地的平均高度连起来，两条线发生交叉。环境不只改变平均生长，也改变哪种遗传变异长得更高。",
-        "奥兰想用一个问题结束争论：高度究竟来自种子还是土壤？蕾瓦做了第二次试验。增加山岭灌溉后，两种品系都改善，金穗改善得更多；严重干旱下，银穗依旧占优。与某个品系相关的贡献，取决于它在何种条件中发育。若只把种子效应与环境效应分开相加，就会漏掉两者差距本身发生的变化。",
-        "议会见近年多数农田湿润，便选择全省推广金穗。随后三年干旱颠倒预期排名，曾被称为劣等的银穗储备成了关键。蕾瓦拒绝宣布任何品系普遍最好。她建议按可能条件匹配品系、保存变异，并跨地点与年份测试。一处环境中观察到的排名，只陈述那个环境，不是种子的永久本质。",
-        "她也提醒，交叉曲线本身不能识别全部原因。山谷与山岭还有许多相关差异，因此需要受控实验、重复以及适当的研究群体。结果也可能取决于测量性状、生命阶段、环境范围与被抽样的遗传背景。这种模式并非说明遗传不真实，也不表示环境无所不能；它说明发育结果有时不能从任一来源孤立预测。",
-        "大麦试验揭示的是基因与环境交互：遗传变异对表型的影响会随环境改变，反过来说，不同基因型受到的环境影响也不相同。非平行反应规范会显示这种依赖，曲线交叉时还会交换排名。它不同于笼统地说基因和环境都重要，也不意味着宿命或无限可塑性。奥兰原本寻找最好的种子，蕾瓦的地块把问题改得更精确：在哪种条件、针对哪项性状、在什么群体中最好？"
+        "金谷农会选出最丰产的赤芒麦，称它为全地区最好的种子。雾谷农人花高价买来，希望复制同样收成。可雾谷潮湿多风，赤芒麦容易倒伏，产量反而低于当地普通的青秆麦。",
+        "金谷商人说雾谷不会耕种，雾谷农人则怀疑种子掺假。农师把赤芒与青秆各分成两份，同时种在两座山谷，并让播种密度和照料尽量一致。",
+        "收获时，赤芒仍在干燥金谷领先，青秆却在雾谷超过赤芒。若只比较一种种子或一处环境，人们会说某袋种子更好，或某个山谷更差；两边放在一起，优势会随生长条件改变。",
+        "农会随后不再给全地区只发一个冠军。干坡继续种赤芒，湿地多用青秆，新田则先做小块试种。两种种子都可能很好，也都可能被放进不适合自己的环境。",
+        "第二年分种时，农师在每只种袋上同时写下品种名和试种山谷，没有只盖“优等”印章。"
       ],
       "conceptName": "Gene-environment interaction",
       "conceptNameZh": "基因与环境交互",
       "explanationParagraphs": [
-        "Gene-environment interaction occurs when the phenotypic effect associated with genetic differences depends on the environment, or when an environmental effect differs across genotypes. Non-parallel reaction norms are a common representation.",
-        "It is more specific than saying genes and environments both contribute. Conclusions depend on the genotypes, environments, traits, populations, and measurement scale studied; a statistical interaction is not by itself a molecular mechanism. Controlled designs are needed to separate interaction from correlated differences and confounding."
+        "Gene-environment interaction means that the effect associated with genetic differences depends on environment, or that an environmental effect differs among genotypes. It is more specific than saying both genes and environment matter. Conclusions depend on the genotypes, environments, traits, and populations studied, and statistical interaction does not by itself reveal a molecular mechanism."
       ],
       "explanationParagraphsZh": [
-        "基因与环境交互发生于遗传差异相关的表型效应依赖环境，或环境效应在不同基因型间不同。非平行反应规范是常见表达方式。",
-        "它比笼统地说遗传与环境都有贡献更具体。结论取决于所研究的基因型、环境、性状、群体与测量尺度；统计交互本身也不等于分子机制。需要受控设计把交互与相关差异、混杂因素区分开。"
+        "基因与环境交互指遗传差异对性状的影响会随环境改变，或同一环境对不同基因型产生不同效果。它比“遗传和环境都重要”更具体。结论取决于研究的基因型、环境、性状和群体，观察到统计交互也不自动揭示分子机制。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0512-enzyme-catalysis",
@@ -254,39 +260,40 @@
       "fieldCode": "0512",
       "fieldTitle": "Biochemistry",
       "fieldTitleZh": "生物化学",
-      "title": "The Lockmaker Who Left Every Workshop",
+      "title": "The Locksmith Who Always Left the Workshop",
       "titleZh": "每次都能离开作坊的锁匠",
-      "summary": "A dye guild hires a lockmaker who speeds a difficult joining step by offering another route, yet neither changes the destination nor remains inside the product.",
-      "summaryZh": "染料行会请来锁匠，为艰难的结合步骤提供另一条路径；他加快过程，却不改变终点，也不留在产品里。",
+      "summary": "A locksmith rapidly joins two reluctant parts and still leaves empty-handed after every finished piece.",
+      "summaryZh": "一名锁匠让两件难以扣合的零件迅速相接，完成后却总能空着手离开。",
       "storyParagraphs": [
-        "The blue-dye guild made colour by joining two fragile ingredients. In a warm vat, they collided constantly but usually met at the wrong angle or separated before their old bonds loosened. Strong heating pushed more encounters over that difficult stage, yet it also scorched the cloth. At ordinary temperature, the desired joining happened so slowly that a vat could occupy the workshop for days. The ingredients could reach the product, but the route demanded an energetic climb that few encounters completed.",
-        "Lockmaker Teren built a small reusable clasp. One pocket held the first ingredient, another oriented the second, and flexible jaws stabilised the strained arrangement between old bonds and new. The joining could now follow a route with a lower energetic barrier. Product left the clasp, and Teren recovered the device in its original working form for another cycle. He had not supplied the reaction's net energy or become a permanent ingredient; he had increased how many successful transformations occurred per unit time.",
-        "The guildmaster concluded that the clasp must also create more blue at the final resting point. Teren divided one mixture between sealed vessels, adding clasps to only one. The assisted vessel approached its stable composition much sooner, but after enough time both contained the same equilibrium proportions. When product could convert back, the clasp accelerated that direction as well. It changed the pathway and rates, not the free-energy difference between starting and final states or the location of equilibrium.",
-        "Adding twice as much ingredient first doubled output, then stopped helping. Every clasp pocket was occupied, so the workshop had reached a capacity set by clasp number and cycling speed. A similar-looking ingredient blocked a pocket without completing the join. Another substance attached at a distant hinge and changed the pocket's shape. Heat or acidity bent the clasp itself, while a missing metal pin left it inactive. Speed depended on concentration, affinity, conditions, helpers, and inhibitors, not merely on the device being present.",
-        "Some clasps accepted a family of related ingredients rather than one perfect match, and several transformations required a sequence of specialised devices. Teren's clasp briefly changed shape during work and might carry an intermediate group, yet a complete cycle restored the active form. If damage destroyed more devices than the workshop replaced, production fell. Reusability meant no net consumption in the overall transformation, not immortality or absolute rigidity.",
-        "The dye workshop modelled enzyme catalysis. Enzymes are biological catalysts that increase reaction rates by providing lower-activation-energy pathways, commonly through substrate binding, orientation, transition-state stabilisation, acid-base chemistry, or temporary covalent steps. They are regenerated overall and do not change the reaction's equilibrium or net Gibbs energy. Their rates can show specificity and saturation and depend on temperature, pH, cofactors, regulation, and inhibition. Teren changed how the ingredients crossed the hill; he neither moved the valleys nor became part of the blue cloth."
+        "A riverside workshop needed to fasten two metal pieces into shipping rings. Left near the furnace, pieces occasionally joined through heat and collision, but far too slowly for the shipyard. A locksmith brought a grooved jig that held the parts in the right orientation and lowered the metal catch they had to cross.",
+        "Parts joined quickly inside the jig. Once the finished ring left, neither locksmith nor jig had become part of it. They could process another pair. The locksmith did not change which final state was possible or how much would exist at balance; he made the slow route faster.",
+        "The jig accepted only a particular shape. Another clasp would not enter. As orders increased, every jig became occupied. Sending still more pieces created a queue rather than a proportional rise in speed.",
+        "One day, excessive heat warped the jig and the groove no longer fitted. Work recovered after cooling and repair. Oil blocking the catch also slowed production, showing that the help depended on conditions.",
+        "At closing, the final shipping ring went aboard a vessel. The locksmith placed the empty jig on the table, ready for use the next day."
       ],
       "storyParagraphsZh": [
-        "蓝染行会用两种脆弱原料结合成颜色。温暖染缸里，它们不断碰撞，却常以错误角度相遇，或在旧键松开前再次分离。猛烈加热能让更多相遇越过艰难阶段，也会烧坏布料。普通温度下，目标结合慢得让一口缸占用作坊数日。原料并非不能到达产物，只是路径要求攀过一道很少有相遇能够完成的能量高坎。",
-        "锁匠泰伦造出一枚可重复使用的小夹具。一个凹槽固定第一种原料，另一个让第二种朝向正确，柔性夹口则稳定旧键与新键之间的紧张形态。结合由此走上一条能垒更低的路径。产物离开夹具，泰伦又以原有可用状态收回它，投入下一轮。他没有提供反应的净能量，也没有永久成为原料，只是提高了单位时间内成功转化的次数。",
-        "行会长认定夹具还能让最终产生更多蓝色。泰伦把同一混合物分入两只密封容器，只给其中一只加入夹具。受帮助的容器更快接近稳定组成，时间足够久后，两者却达到相同的平衡比例。若产物可以反向转化，夹具也会加快反向过程。它改变路径与速率，不改变起点和终点间的自由能差，也不移动平衡位置。",
-        "起初把原料加倍会提高产出，继续增加却不再有用。所有夹具凹槽都已被占满，作坊容量受夹具数量与循环速度限制。一种外形相似的原料堵住凹槽却不完成结合；另一种物质附着在远处铰链，改变凹槽形状。高热或酸性会扭曲夹具，缺失金属销也会使它失效。速度取决于浓度、亲和性、条件、辅助物与抑制物，不只是装置是否存在。",
-        "有些夹具接受一族相近原料，而非只认一个完美对象；有些转化则需要多件专门装置依次工作。泰伦的夹具工作时会暂时变形，也可能短暂携带中间基团，但完整循环会恢复活性形态。若损坏速度超过作坊补充速度，生产仍会下降。可重复使用表示在总体转化中没有净消耗，不表示永不损坏或绝对僵硬。",
-        "染坊展示的是酶催化。酶是生物催化剂，通过提供活化能更低的路径提高反应速率，常见方式包括结合并定向底物、稳定过渡态、进行酸碱作用或形成暂时共价步骤。酶在总体反应后再生，不改变反应平衡或吉布斯自由能净变化；其速率可表现特异性与饱和，并受温度、酸碱度、辅因子、调控和抑制影响。泰伦改变的是原料怎样翻过山坎，既没有移动两侧山谷，也没有成为蓝布的一部分。"
+        "河城作坊要把两种金属扣成运输环。零件若单独放在炉边，偶尔也会在高热和碰撞中扣上，却慢得无法供应船厂。锁匠带来一只凹槽模具，把两件零件按正确方向固定，又压低了必须跨过的金属卡口。",
+        "零件在模具里迅速扣合，成品离开后，锁匠与模具都没有成为运输环的一部分。他们能接着处理下一对。锁匠没有改变最终能做出多少种环，只让原本很慢的过程更快到达。",
+        "模具只适合特定形状。换了另一种扣件，零件无法进入。订单不断增加时，每只模具都被占满，再多送零件也只能排队，速度不再成倍上升。",
+        "一天，作坊温度过高，模具边缘变形，凹槽不再贴合。冷却并修复以后，工作恢复。油污堵住卡口时，速度也会下降，说明锁匠的帮助依赖具体条件。",
+        "收工时，最后一个运输环被装上船。锁匠把空模具放回桌面，第二天仍能使用。"
       ],
       "conceptName": "Enzyme catalysis",
       "conceptNameZh": "酶催化",
       "explanationParagraphs": [
-        "Enzyme catalysis accelerates biochemical reactions by providing pathways with lower activation barriers. Binding, orientation, transition-state stabilisation, acid-base chemistry, and temporary covalent intermediates are among the mechanisms enzymes may use.",
-        "Enzymes are regenerated overall and alter reaction rates rather than equilibrium or net Gibbs energy. Their activity can be specific and saturable and is shaped by substrate concentration, temperature, pH, cofactors, inhibitors, and regulation."
+        "Enzyme catalysis accelerates reaction rates by providing a lower-activation-energy pathway through mechanisms such as binding, orientation, transition-state stabilisation, or acid-base action. The enzyme is regenerated and does not alter net free-energy change or equilibrium. Activity can be specific and saturable and depends on temperature, pH, substrate, cofactors, and inhibitors."
       ],
       "explanationParagraphsZh": [
-        "酶催化通过提供活化能垒更低的路径来加速生化反应。结合、定向、稳定过渡态、酸碱作用与暂时共价中间体，都是酶可能采用的机制。",
-        "酶在总体反应后再生，改变的是反应速率，而非平衡位置或吉布斯自由能净变化。其活性可具有特异性和饱和性，并受底物浓度、温度、酸碱度、辅因子、抑制物与调控影响。"
+        "酶催化通过提供活化能垒更低的反应路径来加快速率，可借助结合、定向、过渡态稳定或酸碱等机制。酶在总体反应后再生，不改变反应净自由能或平衡位置。活性还具有特异性、饱和性，并受温度、酸碱度、底物与抑制因素影响。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0512-protein-structure-function",
@@ -295,39 +302,40 @@
       "fieldCode": "0512",
       "fieldTitle": "Biochemistry",
       "fieldTitleZh": "生物化学",
-      "title": "The Ribbon That Opened the Vault",
+      "title": "The Long Band That Opened the Vault",
       "titleZh": "打开金库的长带",
-      "summary": "A vault key is made from a long coded ribbon whose ability appears only after local bends, distant contacts, and assembly create the right moving shape.",
-      "summaryZh": "金库钥匙由一条编码长带制成，只有局部弯折、远端接触与组装形成正确的动态形状后，它的能力才会出现。",
+      "summary": "A soft, apparently useless band reveals the shape that turns a vault only after it folds.",
+      "summaryZh": "一条看似柔软无用的长带折叠以后，才露出能够转动金库的形状。",
       "storyParagraphs": [
-        "The city vault was opened not by a metal key but by a ribbon of linked tiles. Each tile belonged to one of twenty kinds, and their order came from a guarded pattern. Apprentice Nao copied the correct counts but rearranged the sequence to make the colours symmetrical. His ribbon contained the same kinds of pieces and the same total length, yet it tangled in water and could not grip the lock. Composition alone had not preserved what the ordered chain encoded.",
-        "Master Eda let the original ribbon enter a shallow basin. Nearby tiles formed coils and pleats; distant parts met through attractions, repulsions, water avoidance, and small bridges. The chain settled into a three-dimensional form with a pocket complementary to the lock. No separate sculptor carved that pocket. Under suitable conditions, information in the sequence and physical interactions narrowed the available forms until a working ensemble became likely.",
-        "Nao dried the working ribbon beside a hot furnace so it would hold its shape forever. Heat disrupted weak interactions, and the pocket collapsed. In cool water some ribbons recovered; others misfolded or clung together in useless aggregates. Eda used a folding frame that prevented premature tangles without dictating every final contact. The frame left after assisting. Conditions and helpers influenced whether sequence information reached a functional form, even though they did not replace that information.",
-        "A second vault required four folded ribbons assembled together and a metal piece at their centre. One ribbon alone looked intact but could not perform the collective task. On another lock, a small chemical tag changed where a ribbon travelled and how strongly it bound. The useful object could therefore depend on several chains, cofactors, modifications, and location. Its architecture had levels: ordered chain, local patterns, overall fold, and sometimes a multi-chain assembly.",
-        "Eda also rejected the idea that a working ribbon was a frozen statue. It breathed among related conformations, closing around one object and opening to release another. Some ribbon regions remained flexible until a partner arrived, and similar folds could support different tasks when surfaces or motions differed. Conversely, a single substitution might barely matter or might destabilise a crucial contact. Function arose from a dynamic physical context, not from shape viewed as a motionless outline.",
-        "The vault illustrated protein structure and function. A protein's amino-acid sequence constrains local and three-dimensional folding, while the resulting dynamic structure helps determine binding, catalysis, signalling, mechanics, and other activities. Quaternary partners, cofactors, modifications, cellular conditions, and molecular chaperones may be essential, and denaturation or misfolding can disrupt activity. Sequence does not act as a simple picture of one rigid shape, yet structure is not decorative: the ribbon opened the vault only when its ordered chain became the right moving arrangement in the right surroundings."
+        "A vault maker linked many different small pieces into a long band. Laid flat, it resembled no key and had no rigid teeth. Sections attracted or avoided one another and, under suitable conditions, folded into a compact shape. Parts once far apart met to form a hollow surface able to grip the lock.",
+        "An apprentice assumed bands with the same number of pieces were equivalent and replaced one middle section with a stiffer material. The band still folded, but bulged at a corner and its hollow no longer matched the vault. One local change removed the function of the whole tool.",
+        "On another day, excessive heat loosened a properly folded band. After cooling, some recovered alone while others tangled into wrong forms. A folding frame temporarily separated sections and helped them find their positions. It left after the work and did not become part of the key.",
+        "The maker also found that the vault key was not permanently rigid. It shifted slightly near the lock, while partner pieces and surrounding conditions affected whether it could turn. Structure was not one frozen picture but a constrained collection of moving forms.",
+        "On opening day, the apprentice did not pick up the band while it lay flat. He waited for it to fold and pressed the resulting hollow gently into the lock."
       ],
       "storyParagraphsZh": [
-        "城市金库不用金属钥匙，而用一条由小片连接成的长带开启。每片属于二十种类型之一，排列顺序来自严密保管的图样。学徒瑙保留了每种小片的正确数量，却为颜色对称而重新排序。新长带类型相同、总长度相同，在水中却缠成乱团，无法抓住锁芯。仅有相同组成，并未保住有序链条编码的东西。",
-        "师傅埃达让原版长带进入浅水盆。相邻小片形成螺旋与折片，彼此遥远的部分则通过吸引、排斥、避水作用和小桥相遇。链条最终形成三维样式，其中凹槽恰好配合锁芯。没有另一名雕刻师刻出凹槽；在合适条件下，序列信息与物理相互作用缩小可取形态，让可工作的构象集合更可能出现。",
-        "瑙把能用的长带放到热炉旁烘干，想让形状永远固定。高热破坏弱相互作用，凹槽随之塌陷。回到凉水后，一些长带恢复，另一些错误折叠或黏成无用聚集物。埃达使用折叠框架，防止过早纠缠，却不规定每个最终接触，协助后便离开。条件与助手影响序列信息能否抵达功能形态，却不能替代序列。",
-        "第二座金库要求四条折好长带共同组装，中央还需一枚金属件。单条看似完整，却无法执行集体任务。另一把锁上，一个小化学标记会改变长带前往何处以及结合强度。有用对象因此可能依赖多条链、辅因子、修饰与位置。其架构具有层次：有序链、局部样式、整体折叠，有时还有多链组装。",
-        "埃达也拒绝把可工作的长带看成冻结雕像。它会在一组相关构象间呼吸，合拢抓住对象，再打开将其释放。有些区域保持柔性，直到伙伴出现；相似折叠也可能因表面或运动不同执行不同任务。反过来，替换一个小片可能几乎无影响，也可能破坏关键接触。功能来自动态物理情境，而非静止轮廓。",
-        "金库展示的是蛋白质结构与功能。蛋白质的氨基酸序列约束局部与三维折叠，所得动态结构又帮助决定结合、催化、信号、力学等活动。四级结构伙伴、辅因子、修饰、细胞条件与分子伴侣可能不可缺少，变性或错误折叠也会破坏活性。序列不是一幅单一僵硬形状的简单图纸，结构却绝非装饰：只有有序长链在恰当环境中成为恰当的动态排列，才打开了金库。"
+        "金库匠人用许多不同的小节连成一条长带。平放时，它既不像钥匙，也没有坚硬齿口。带上的小节会彼此吸引或避开，在合适环境里逐渐折成紧密形状，几处原本相距很远的位置最终靠在一起，形成能抓住锁芯的凹面。",
+        "学徒以为只要小节数量相同便无差别，偷偷把中间一节换成较硬材料。长带仍能折叠，却在转角处鼓起，凹面无法贴合金库。改变发生在一处，失去的却是整件工具的作用。",
+        "另一次，作坊过热，原本折好的带松开。降温后，有些能自行恢复，有些缠成错误形状，需要折带架暂时隔开各段，帮助它们重新找到位置。折带架完成后离开，并不成为钥匙的一部分。",
+        "匠人还发现，金库钥匙并非永远僵硬。它在接近锁芯时会轻微改变形状，伙伴零件和周围条件也影响能否转动。结构不是一张静止图，而是一组受约束的活动姿态。",
+        "开库那天，学徒没有拿起平放的长带。他等它折好，把形成的凹面轻轻压进锁芯。"
       ],
       "conceptName": "Protein structure and function",
       "conceptNameZh": "蛋白质结构与功能",
       "explanationParagraphs": [
-        "Protein structure and function are linked because amino-acid sequence constrains folding and the resulting dynamic three-dimensional arrangement shapes interactions and activity. Structure may include local motifs, a whole-chain fold, and multi-chain assemblies.",
-        "Folding and function also depend on solvent conditions, partners, cofactors, modifications, location, and sometimes molecular chaperones. Proteins are dynamic ensembles, and denaturation, mutation, or misfolding can alter activity without every change having the same consequence."
+        "Protein structure and function are linked because amino-acid sequence constrains local and overall folding, while the resulting dynamic three-dimensional arrangement shapes interactions and activity. Environment, partners, modifications, cofactors, and chaperones also matter. Mutation, denaturation, or misfolding can alter activity, but different changes need not have the same effect."
       ],
       "explanationParagraphsZh": [
-        "蛋白质结构与功能彼此关联，因为氨基酸序列约束折叠，所得动态三维排列又塑造相互作用与活性。结构可包括局部样式、整条链的折叠以及多链组装。",
-        "折叠与功能还依赖溶剂条件、伙伴、辅因子、修饰、位置，有时也依赖分子伴侣。蛋白质是动态构象集合；变性、突变或错误折叠都可能改变活性，但不同变化的后果并不相同。"
+        "蛋白质结构与功能相连：氨基酸序列约束局部和整体折叠，动态三维排列又决定相互作用与活性。环境、伙伴、修饰、辅因子和分子伴侣都会影响折叠与功能。突变、变性或错误折叠可能改变活性，但不同变化并非必然产生相同后果。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0512-feedback-inhibition",
@@ -336,39 +344,40 @@
       "fieldCode": "0512",
       "fieldTitle": "Biochemistry",
       "fieldTitleZh": "生物化学",
-      "title": "The Loaf That Stopped the First Mill",
+      "title": "The Bread That Stopped the First Mill",
       "titleZh": "让第一座磨坊停下的面包",
-      "summary": "A breadworks stops warehouse overflow by letting its final product restrain the earliest committed step rather than waiting for waste to pile up downstream.",
-      "summaryZh": "面包工坊让最终产品反过来约束最早的专用途径步骤，不再等浪费堆到下游才停工。",
+      "summary": "The bread store is full while the first mill continues turning grain into flour no one needs.",
+      "summaryZh": "面包仓已经堆满，河上第一座磨坊却仍在把谷物磨成无人需要的面粉。",
       "storyParagraphs": [
-        "The hill city turned grain into festival loaves through four workshops: a sorting gate, a flour mill devoted to sweet bread, a mixing house, and an oven. Each foreman was rewarded for keeping his own station busy. When demand fell after the festival, the oven warehouse filled, but the upstream workshops kept moving. Flour absorbed damp, dough soured in queues, and grain unavailable for porridge was consumed by a product the city already had in excess.",
-        "Mechanist Aru ran a cord from the loaf warehouse to a control latch on the sweet-bread mill. As finished loaves accumulated, their weight pulled the cord and changed the mill's first dedicated gear into a slower form. The loaves never entered the grain chute or competed with grain for the cutting teeth; they acted at a separate control point. When stores fell, the cord relaxed, the gear returned, and production resumed. Output began to follow need without a foreman counting every intermediate.",
-        "The oven master demanded that the cord close his oven instead. Aru tried it. Flour and dough immediately piled up behind the final station, wasting work already invested and draining common grain. Restraining the earliest step committed specifically to sweet bread prevented unnecessary intermediates from being made. Closing the general sorting gate would have starved porridge and ordinary bread as well. The useful control point lay early enough to save resources but late enough to be specific to the branch.",
-        "A merchant then hung stones on the cord to imitate a full warehouse and depress bread prices. Production stopped although shelves were empty. The incident showed that a regulator depends on an honest relation between the final product and the control site. Another redesign made the latch too sensitive; small inventory changes produced repeated starts and stops. Aru adjusted affinity and delay so the response was reversible and proportionate rather than a brittle on-off command.",
-        "For longer shortages, the city also changed how many mill gears it built, a slower form of regulation than altering gears already present. Other pathways used several control points, and not every final product restrained the first step directly. Branching demands, transport, compartment boundaries, competing molecules, and energy state could all modify the pattern. The cord was a compact way for downstream abundance to regulate upstream flow, not a complete account of every metabolic pathway.",
-        "The breadworks embodied feedback inhibition: an end product reduces activity of an earlier enzyme in its own biosynthetic pathway, often by binding an allosteric regulatory site and changing enzyme activity. Acting near an early committed step can conserve substrates and prevent intermediate accumulation; falling product concentration can release the inhibition. The response is usually rapid and reversible, while gene expression can provide slower control. The last loaf did not command every kitchen. It told the first dedicated mill that this particular route had made enough."
+        "A riverside production chain began with grain. The first mill made flour, the second workshop mixed dough, and the final ovens baked bread. Each place simply pushed its material onward. After the festival, bread sold slowly and filled the store, while the upstream work continued.",
+        "Bread could no longer enter storage. Dough soured in barrels and flour blocked the path. Stopping only the ovens left the mills consuming grain and making intermediates. The manager ran a float rod back from the bread store. When loaves reached the high mark, the rod closed the grain gate at the first mill.",
+        "As bread sold, the store level fell, the rod released, and grain entered again. Control acted early, at the step after which grain was largely committed to becoming bread, slowing production before more resources were wasted.",
+        "The device responded quickly and reversed automatically. When a pastry branch was later added, the manager included other signals so that a full bread store would not starve the second product line.",
+        "At dusk, the final batch entered storage. As it touched the high mark, the water gate at the distant first mill slowly descended."
       ],
       "storyParagraphsZh": [
-        "山城通过四间作坊把谷物制成节庆甜面包：分选闸、专磨甜面包粉的磨坊、和面屋与烤炉。每位工头都因让自己的工位不停而受奖。节日后需求下降，烤炉仓库已经塞满，上游仍继续运转。面粉受潮，面团在队列中发酸，本可煮粥的谷物也被消耗在城市已有过剩的产品上。",
-        "机械师阿鲁从成品仓库拉出一根绳，连到甜面包磨坊的控制扣。面包堆积时，重量拉紧绳索，使第一枚专用齿轮变成较慢形态。面包没有进入谷物槽，也不与谷粒争夺切齿，而是在另一个控制位置起作用。库存下降，绳子放松，齿轮复位，生产恢复。无需工头逐项清点中间物，产出便开始跟随需要。",
-        "烤炉师傅要求绳子改为关闭他的烤炉，阿鲁照做。面粉与面团立即堆在最后工位之前，浪费已投入劳动，也耗尽公用谷物。约束最早进入甜面包专用途径的步骤，可以阻止无用中间物产生；若关闭通用分选闸，粥与普通面包也会断粮。有效控制点既要足够靠前以节省资源，又要足够靠后以专属于该分支。",
-        "一名商人为压低面包价格，在绳上挂石头冒充满仓。货架明明空着，生产却停止，说明调节依赖最终产品与控制位置间的真实关系。另一版设计又让控制扣过于敏感，库存稍有变化便反复启停。阿鲁调整亲和程度与延迟，让响应可逆且合乎比例，而非脆弱的全开全关命令。",
-        "面对长期短缺，城市还会改变制造多少枚磨坊齿轮，这比调节现有齿轮更慢。其他路径可能使用多个控制点，并非每种终产物都直接约束第一步。分支需求、运输、区室边界、竞争分子与能量状态都可能改变模式。绳索只是让下游丰度调节上游流量的一种紧凑办法，并非所有代谢路径的完整说明。",
-        "面包工坊体现的是反馈抑制：一条生物合成路径的终产物降低该路径较早酶的活性，常通过结合别构调节位点并改变酶活性实现。作用于早期承诺步骤，可节省底物并防止中间物堆积；终产物浓度下降后，抑制可被解除。该反应通常快速且可逆，基因表达则可提供较慢控制。最后一只面包没有命令所有厨房，它只是告诉第一座专用磨坊，这条路线已经生产得足够多。"
+        "河边生产线从谷物开始。第一座磨坊磨成面粉，第二间作坊和面，最后的烤房做成面包。各处只顾把手边材料继续往下送。节庆结束后，面包卖得慢，仓库堆满，前两处却仍不停工作。",
+        "面包无法再入仓，面团在木桶里发酸，面粉也占满通道。若只叫烤房停火，上游仍会继续消耗谷物并制造中间物。管事从面包仓拉回一根浮杆，仓内面包升到高线时，浮杆便关闭第一座磨坊的进粮闸。",
+        "面包售出后，仓位下降，浮杆松开，进粮重新开始。控制发生在路径较早、谷物一旦进入便多半会走向面包的那一步，因此能在浪费更多材料前减速。",
+        "这套装置反应很快，也可以恢复。后来生产线增加糕点支路，管事又加入其他信号，避免只看面包仓便饿住另一条产品线。",
+        "傍晚，最后一批面包入仓。高线被碰到时，远处第一座磨坊的水闸缓缓落下。"
       ],
       "conceptName": "Feedback inhibition",
       "conceptNameZh": "反馈抑制",
       "explanationParagraphs": [
-        "Feedback inhibition occurs when a pathway's end product reduces the activity of an earlier enzyme, often at an allosteric site. Regulation near an early committed step can conserve substrate and limit unnecessary intermediate accumulation.",
-        "The control is commonly rapid, concentration-dependent, and reversible, complementing slower changes in enzyme abundance. Real pathways may branch, use several control points, or integrate product levels with energy state, transport, and other signals."
+        "Feedback inhibition occurs when a pathway's end product reduces activity of an earlier enzyme, often near an early committed step, conserving substrate and limiting intermediate accumulation. It is usually rapid, concentration-dependent, and reversible. Real metabolic pathways may branch and integrate multiple control points, energy state, transport, and other signals."
       ],
       "explanationParagraphsZh": [
-        "反馈抑制发生于路径终产物降低较早酶的活性，常通过别构位点实现。在早期承诺步骤附近调节，可节省底物并限制无用中间物堆积。",
-        "这种控制通常快速、依赖浓度且可逆，并与较慢的酶数量变化互补。真实路径可能分支、使用多个控制点，或把终产物水平与能量状态、运输及其他信号共同整合。"
+        "反馈抑制是路径终产物降低较早酶活性的调节方式，常作用于早期承诺步骤，以节省底物并防止中间物堆积。它通常快速、随浓度变化且可逆。真实代谢路径可能分支并整合多个控制点、能量状态与运输信号。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0521-ecosystem-services",
@@ -377,39 +386,40 @@
       "fieldCode": "0521",
       "fieldTitle": "Environmental sciences",
       "fieldTitleZh": "环境科学",
-      "title": "The Wasteland That Sent an Invoice",
+      "title": "The Wasteland That Sent a Bill",
       "titleZh": "寄来账单的荒地",
-      "summary": "A town drains a marsh that earns no entry in its market ledger and then pays separately for the work the living wetland had performed together.",
-      "summaryZh": "一座城排干在市场账本里没有收入的湿地，随后不得不分别购买那片活湿地曾共同完成的工作。",
+      "summary": "A city fills a wetland it calls useless and begins paying for its unnoticed work the following year.",
+      "summaryZh": "城里填平一片被称作无用的湿地，第二年便开始为它原先默默完成的工作付钱。",
       "storyParagraphs": [
-        "Mayor Rian called the eastern marsh empty land. It paid little tax, carried no buildings, and produced only reeds, small fish, insects, and the winter songs of boat families. His ledger valued grain sold, rooms rented, and stone quarried; the marsh had no column. He approved drainage for a market square and promised that productive ground would replace mud. The first dry season brought neat stalls and a rise in recorded rent.",
-        "Autumn storms then sent water through the gate. The marsh had spread floodwater across shallow pools and released it slowly; the paved square passed it directly into streets. The drinking works found more sediment and nutrients to remove. Downstream fishers lost juvenile fish that had sheltered among reeds, and farms bought pollination after wetland insects declined. The town had not transformed nothing into value. It had removed a connected set of functions and purchased fragments of them back as walls, filters, pumps, hatcheries, and labour.",
-        "Surveyor Mera mapped who received each benefit and when. Reeds and fish were harvested goods; water storage, purification, erosion control, and pollination regulated conditions; seasonal gatherings and knowledge carried cultural value. Underlying ecological processes supported these outcomes, but she warned the treasurer not to count the same benefit twice by pricing nutrient cycling and the crop yield it already enabled as separate final gains. The map connected ecological condition to human well-being without pretending every connection was a market sale.",
-        "A replacement-cost calculation made some losses visible, yet the council tried to turn its estimate into a complete price for destroying the remaining marsh. Mera objected. A seawall was not identical to habitat, and what the town would pay depended on wealth and institutions. Benefits and burdens were distributed unevenly: central merchants gained rent, while downstream fishers, poorer floodplain households, and future residents carried much of the loss. Some values were difficult or inappropriate to monetise, and living systems also mattered beyond their usefulness to people.",
-        "The town reopened part of the floodplain, removed selected embankments, and kept buildings away from high-storage areas. It monitored water, fish, vegetation, and households rather than claiming one restored hectare replaced every lost function. Mosquito risk, land demand, and changing climate still required trade-offs. The new ledger did not decide policy by itself; it exposed work that the old ledger had made invisible and forced beneficiaries, costs, uncertainty, and alternatives into the same discussion.",
-        "The marsh had revealed ecosystem services: the contributions of ecosystems to human well-being, including material provision, regulation of environmental conditions, and cultural benefits, underpinned by ecological processes. Classifications help trace dependencies and compare choices, but analysts must avoid double counting, recognise trade-offs and distribution, and distinguish valuation from a total moral price. The marsh was not valuable only because pumps were expensive. The invoice mattered because it showed that apparent emptiness had been performing work all along."
+        "The estuary wetland was filled with reeds. It could not support buildings or collect rent, so a city officer called it wasteland and approved warehouses on filled ground. The new buildings created taxes and jobs, benefits easily visible in the accounts.",
+        "The following year's storm found no low ground into which floodwater could spread and sent water through downstream streets. The treatment works faced more sediment, and fishers reported fewer young fish. The city paid for higher walls, cleaner water, and hatcheries. Work once without a price returned as separate bills.",
+        "Investigators also recorded lost reed gathering, bird watching, and a river memorial site. These values could not all be converted into coins or simply added against warehouse taxes. Some gained jobs while others received flooding or lost cultural places.",
+        "The city did not remove every warehouse. It restored some tidal channels, protected the remaining wetland, and added flood storage, water quality, and fish change to later decisions. Valuation made hidden dependence visible without deciding justice by itself.",
+        "When the new flood map was complete, the officer redrew reeds in the place formerly labelled 'empty land'."
       ],
       "storyParagraphsZh": [
-        "市长里安把东部沼泽称为空地。那里税收很少，没有建筑，只出产芦苇、小鱼、昆虫和船民冬日的歌。账本记录卖出的谷物、出租的房间与开采的石头，却没有沼泽一栏。他批准排水修建市场，承诺用生产性土地替代泥泞。第一个旱季里，摊位整齐，账面租金上升。",
-        "秋季暴雨随后穿过城门。沼泽原本让洪水铺进浅池，再缓慢释放；硬化广场却把水直接送入街道。饮水厂要去除更多泥沙与营养物，下游渔民失去在芦苇间躲藏的幼鱼，湿地昆虫减少后，农场还要购买授粉。城市不是把无物变成价值，而是拆掉一组相连功能，再以堤墙、滤池、水泵、孵化场与人工分别买回。",
-        "调查员梅拉绘出每项益处由谁、在何时获得。芦苇与鱼是可采收物，蓄洪、净水、控蚀与授粉调节环境，季节聚会与知识具有文化价值。底层生态过程支撑这些结果，但她提醒财政官，不能给营养循环定价后，又把它已支持的作物产量作为另一份最终收益重复计算。这张图把生态状况连接到人的福祉，却不假装每条联系都是市场交易。",
-        "替代成本让部分损失变得可见，议会却想把估值当成摧毁剩余沼泽的完整价格。梅拉反对。海堤并不等同于栖息地，城市愿意支付多少也受财富与制度影响。收益与负担分布不均：中心商人得到租金，下游渔民、较贫穷的洪泛区住户与未来居民承担许多损失。有些价值难以或不宜货币化，生命系统也不只因对人有用才重要。",
-        "城市重新打开部分洪泛地，拆除选定堤埂，并让建筑远离高蓄水区域。它监测水质、鱼群、植被与住户，而不声称恢复一公顷就替代所有失去的功能。蚊虫风险、用地需求与变化气候仍需取舍。新账本不能独自决定政策，却让旧账本隐藏的工作显形，迫使受益者、成本、不确定与替代方案进入同一场讨论。",
-        "沼泽揭示的是生态系统服务：生态系统对人类福祉的贡献，包括物质供给、环境条件调节与文化益处，并由生态过程支撑。分类有助于追踪依赖和比较选择，但分析必须避免重复计算，承认取舍与分配，并区分估值和完整道德价格。沼泽并非只因水泵昂贵才有价值；账单的重要性在于，它证明看似空无的地方一直在工作。"
+        "河口湿地长满芦苇，不能盖房，也不收租。市政官把它称作荒地，批准填土建仓。新仓库带来税收和工作，账上很容易看见这些收益。",
+        "第二年暴雨，洪水失去原先可漫入的低地，冲进下游街区。饮水处理厂发现泥沙更多，渔民也说幼鱼减少。城里开始支付加高堤坝、净化水和补建鱼苗场的费用，过去没有价格的工作一项项变成账单。",
+        "调查者还记录居民采芦、观鸟和纪念河祭的地方已经消失。这些价值无法全部换成银币，也不能简单与仓库税收相加。不同人得到工作、承受洪水或失去文化场所，分配并不相同。",
+        "城市没有拆掉所有仓库，而是恢复部分潮沟，保留剩余湿地，并把蓄洪、水质和鱼类变化列入后续决策。估值让隐藏依赖被看见，却没有单独替城市决定何为正当。",
+        "新堤图完成时，市政官在原本写着“空地”的位置重新画回一片芦苇。"
       ],
       "conceptName": "Ecosystem services",
       "conceptNameZh": "生态系统服务",
       "explanationParagraphs": [
-        "Ecosystem services are ecosystems' contributions to human well-being, including material goods, regulation of environmental conditions, and cultural benefits, supported by ecological structures and processes.",
-        "Assessment can reveal hidden dependencies and trade-offs, but it must avoid double counting, examine who gains and loses, represent uncertainty, and recognise that monetary valuation neither captures every value nor determines the ethically correct decision."
+        "Ecosystem services are contributions ecosystems make to human well-being through material goods, environmental regulation, and cultural meaning. Assessment can reveal hidden dependencies and trade-offs, but should avoid double counting, identify who benefits or loses, and recognise that money cannot capture every value or decide ethical choices by itself."
       ],
       "explanationParagraphsZh": [
-        "生态系统服务是生态系统对人类福祉的贡献，包括物质产品、环境条件调节与文化益处，并由生态结构和过程支撑。",
-        "评估能揭示隐藏依赖与取舍，但必须避免重复计算，检查谁获益、谁受损，表达不确定性，并承认货币估值既不能捕捉所有价值，也不能独自决定伦理上正确的选择。"
+        "生态系统服务是生态系统通过物质产品、环境调节和文化意义等方式对人类福祉作出的贡献。评估能揭示隐藏依赖与取舍，但需避免重复计算，说明受益与受损者，并承认货币无法捕捉全部价值，也不能独自决定伦理选择。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0521-tragedy-of-the-commons",
@@ -420,37 +430,38 @@
       "fieldTitleZh": "环境科学",
       "title": "One More Sheep",
       "titleZh": "再多一只羊",
-      "summary": "Every family gains from adding one sheep to a shared pasture while spreading most of the grazing cost across its neighbours, until common governance changes the calculation.",
-      "summaryZh": "每户在共有牧场多放一只羊都能独享收益，却把大部分啃食成本分给邻居，直到共同治理改变这笔计算。",
+      "summary": "Each household adds only one sheep to the common pasture, and no one can see how their own animal makes the grass disappear.",
+      "summaryZh": "每户只往公共牧场多放一只羊，谁都看不出自己怎样让草消失。",
       "storyParagraphs": [
-        "Thirty families shared the grass basin of Vey. Each spring, a household council named a customary flock size, but no one counted animals at the upper gate. When wool prices rose, shepherd Daro added one ewe. Her lamb and fleece belonged entirely to his family; the extra grazing was spread thinly across a pasture used by everyone. His choice scarcely changed the grass. His neighbour made the same calculation, then the next neighbour did too.",
-        "By midsummer, the basin held forty-seven unrecorded sheep. Each household still gained by keeping its own addition, while the combined hooves stripped stream banks and left too little winter forage. Families hurried to graze early before others consumed what remained, making recovery still less likely. No shepherd had intended to ruin the basin, and removing one family's ewe could not repair it. Individually sensible responses to shared costs had produced a collectively destructive pattern.",
-        "The governor fenced the basin into thirty equal strips and called the problem solved. Upland strips lacked water, drought moved grass across boundaries, and poorer families could not buy enough private fodder during a bad year. Some sold their plots to large owners; migratory herds then entered through an unfenced pass because nobody held authority there. Changing property labels had not automatically matched ecological scale, enforced boundaries, or created legitimate rules.",
-        "The shepherds rebuilt the council around the basin itself. They marked users and boundaries, set a total stocking range tied to rainfall, and let families trade limited grazing days. Monitors chosen from among users counted animals and inspected stream banks. A first excess brought a warning and repayment; repeated violations brought rising penalties and temporary exclusion. A cheap local forum settled disputed counts, and the governor recognised the council's right to make rules while helping exclude outside commercial herds.",
-        "The arrangement was neither effortless nor perfect. Powerful families tried to capture dry-season permits, monitors needed oversight, and climate shifts required repeated revision. Yet participation made rules more informed and legitimate, visible monitoring changed expectations, and graduated sanctions separated mistakes from persistent exploitation. During severe drought, the community reduced all quotas and compensated households that removed animals early. Shared use had become governed rather than open to unbounded appropriation.",
-        "Vey had encountered the tragedy of the commons: when users receive much of the private benefit from additional use of a rival shared resource while dispersing the cost across others, individually rational choices can collectively degrade the resource. The outcome is a risk, not an unavoidable fate of common ownership. Clearly defined users and boundaries, locally fitted rules, participation, monitoring, graduated sanctions, conflict resolution, and recognition of organising rights can support durable commons governance. The dangerous phrase was not our pasture. It was one more sheep whose full cost belonged to everyone else."
+        "River Village shared one pasture. In good years, each household kept ten sheep there. When lamb prices rose, the first family added one more. Its extra income would be private, while the small loss of grass would be spread across every flock.",
+        "Other households saw and added one as well. No family increased by much, but dozens of sheep appeared. By summer, roots could not recover and rain carried away bare soil. Every household said its final sheep could not have damaged the whole pasture.",
+        "The next year, the village neither abolished common ownership nor relied on appeals to restraint. Users and seasons were defined, and herders jointly set numbers. They rotated grass-height checks. Excess first received a warning and then a reduced share the next season, with disputes reviewed publicly.",
+        "The rules still required judgement. A family losing animals to disease requested a temporary adjustment and received one based on current grass. Sheep placed there by outsiders were removed. The pasture remained shared, but private gain could no longer disperse unlimited damage.",
+        "Before spring grazing, each household led out its flock and wrote the number on the entrance board. After the final sheep passed, the keeper lowered the bar."
       ],
       "storyParagraphsZh": [
-        "维伊的三十户家庭共用一片盆地草场。每年春天，家户议会会说出惯常羊群规模，却无人守在上山门计数。羊毛涨价后，牧人达罗多放一只母羊。羊羔与羊毛完全归他家，额外啃食却薄薄分散在人人使用的草地上。他的选择几乎看不出改变，邻居于是做出同样计算，下一户也一样。",
-        "盛夏时，盆地多出四十七只未登记的羊。每家保留自家新增羊只仍有收益，合在一起的羊蹄却踩坏溪岸，冬季饲草也不足。各户赶在别人吃完前提早放牧，又让草地更难恢复。没有牧人企图毁掉盆地，单独赶走一户的母羊也无法修复它。对共享成本作出的个体合理回应，合成了集体破坏。",
-        "总督把盆地用围栏平均分成三十条，宣布问题解决。高处地块缺水，旱季草势跨越边界，贫穷家庭坏年景里买不起私有饲料，只得把地卖给大户。迁徙羊群又从无人围住的山口进入，因为那里没有任何人拥有管理权。改变产权标签，并不会自动匹配生态尺度、执行边界或创造正当规则。",
-        "牧人围绕盆地本身重建议会。他们标明使用者与边界，按降雨设定总载畜范围，并允许家庭交易有限放牧日。由使用者选出的监督员清点羊只、检查溪岸。首次超额先警告并补偿，反复违规则逐级加罚，直至暂时排除。低成本地方论坛处理计数争议，总督承认议会制定规则的权利，也协助阻止外来商业羊群。",
-        "这套安排既不轻松，也不完美。强势家族试图控制旱季许可，监督者本身需要监督，气候变化还迫使规则反复调整。但参与让规则更知情、更正当，可见监督改变预期，渐进惩罚也把失误与持续侵占区分开。严重干旱时，社区统一削减配额，并补偿提前减羊的家庭。共同使用从无边界攫取变成了受治理的共享。",
-        "维伊遭遇的是公地悲剧：当使用者获得竞争性共享资源新增使用的大部分私人收益，却把成本分散给他人时，个体理性选择可能集体性地耗损资源。它是一种风险，不是共有产权不可避免的命运。清晰的使用者与边界、适应本地的规则、参与、监督、渐进惩罚、争议解决和组织权认可，都可支持持久治理。危险的并不是「我们的草场」，而是那句「再多一只羊」，并把全部成本留给其他人。"
+        "河村的牧场归全村使用。草多的年份，每户都能养十只羊。羊羔价格上涨后，第一户多放了一只，觉得新增收入归自己，而少掉的一点草由全村羊群共同承担。",
+        "其他人看见后也各加一只。没有哪一家单独增加很多，牧场上的羊却迅速多出几十只。入夏后，草根来不及恢复，裸土被雨冲走。每户都说自己的最后一只羊不可能造成整片牧场变坏。",
+        "第二年，村里没有简单禁止共有牧场，也没有只劝大家自觉。他们先划清使用者和季节边界，让牧户共同决定数量；轮流检查草高，超量者先警告、再逐步罚减下一季份额，争议可当场复核。",
+        "规则并非毫无冲突。遭遇病羊的一户申请临时补充，牧户根据实际草况调整；外村偷放的羊则被赶出。牧场仍由大家共有，却不再允许收益私拿、退化成本无限分散。",
+        "春天放牧前，每户牵出羊群，在入口木牌上写下数目。最后一只羊经过以后，守牧人落下了门栓。"
       ],
       "conceptName": "Tragedy of the commons",
       "conceptNameZh": "公地悲剧",
       "explanationParagraphs": [
-        "The tragedy of the commons describes a social dilemma in which users capture much of the benefit from additional use of a rival shared resource while distributing much of the degradation cost across the group.",
-        "Depletion is not inevitable and should not be confused with all common ownership. Durable governance can emerge through clear boundaries, locally legitimate rules, user participation, monitoring, graduated sanctions, conflict resolution, and recognition by larger authorities."
+        "The tragedy of the commons is a dilemma in which users receive much of the gain from additional use of a rival shared resource while spreading degradation costs across the group, encouraging overuse. Depletion is not inevitable under common ownership; clear boundaries, user participation, monitoring, graduated sanctions, and dispute resolution can support durable governance."
       ],
       "explanationParagraphsZh": [
-        "公地悲剧描述一种社会困境：使用者从竞争性共享资源的新增使用中取得大部分收益，却把资源退化的大部分成本分散给群体。",
-        "耗竭并非不可避免，也不能与所有共有产权混为一谈。清晰边界、本地正当规则、使用者参与、监督、渐进惩罚、争议解决和上级权威认可，都可支持持久治理。"
+        "公地悲剧是共享且具有竞争性的资源中，个体获得新增使用的大部分收益，却把退化成本分散给群体，导致过度使用的困境。耗竭并非共有产权的必然结果；清晰边界、使用者参与、监督、渐进制裁和争议解决可支持持久治理。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0521-ecological-resilience",
@@ -461,37 +472,38 @@
       "fieldTitleZh": "环境科学",
       "title": "The Summer the Lake Did Not Return",
       "titleZh": "湖没有回来的那个夏天",
-      "summary": "A clear lake repeatedly recovers from storms until gradual pressure and one ordinary hot summer carry it into a different self-reinforcing state.",
-      "summaryZh": "一座清湖屡次从风暴中恢复，直到缓慢压力与一个普通炎夏把它推入另一种自我维持状态。",
+      "summary": "For years a lake absorbs a little more pollution while remaining clear, until one summer it no longer changes back by itself.",
+      "summaryZh": "湖水多年承受着一点点污染，看起来始终清澈，直到某个夏天再也没有自己变回来。",
       "storyParagraphs": [
-        "Lake Sera turned cloudy after every spring storm. Sediment settled, submerged plants stood upright again, and clear water returned within weeks. The town therefore treated recovery as proof that the lake could absorb any disturbance. Farms expanded uphill, reed beds narrowed, and nutrient-rich runoff increased a little each year. After each bad week, the familiar surface came back, encouraging the council to permit one more field and one more drainage ditch.",
-        "Biologist Vela tracked slower changes beneath those recoveries. Plant beds became patchier, bottom-feeding fish increased, and water clarity returned more slowly. Nutrients accumulated in sediment even when surface tests looked acceptable. She proposed wider buffers before the lake looked ruined. The council answered with photographs of every earlier rebound. Because no single addition had caused collapse, each addition seemed too small to refuse.",
-        "Then an ordinary hot summer brought a dense algal bloom. Algae shaded submerged plants; dying plants and algae consumed oxygen; disturbed sediment released more stored nutrients; fish that stirred the bottom prospered while clear-water plants lost ground. Autumn rain removed the heat but not the new pattern. The lake remained turbid through winter. A disturbance no larger than several earlier ones had arrived after the system's internal supports had weakened enough for reinforcing processes to take over.",
-        "The town cut runoff back to the level at which the lake had once remained clear. It did not recover. Conditions sufficient to preserve the former state were insufficient to recreate it after vegetation, food webs, and sediment chemistry had changed. Vela called for deeper nutrient reductions, plant restoration, fish management, and time. The return path differed from the departure path; removing the final push did not undo all the feedbacks it had activated.",
-        "The council wanted a precise number marking the last safe field. Vela could offer ranges, scenarios, and warning indicators, not certainty. Slower recovery, rising variance, or changing correlations might warn of lost stability in some systems, but noisy data and unknown thresholds limited prediction. She also noted that the turbid lake could resist restoration: persistence itself was not always desirable. Management had to ask which state, functions, and communities were being maintained, and for whom.",
-        "Lake Sera revealed ecological resilience and tipping points. Resilience is the capacity of an ecological system to absorb disturbance while retaining its core state, functions, and feedbacks; a tipping point is a threshold beyond which reinforcing changes can shift it into another regime. Multiple stable states and hysteresis can make reversal require more than removing the original pressure. Thresholds are often uncertain, and even degraded regimes may be resilient. The lake's repeated return had not proved unlimited strength. It had spent a margin the town could not see until one summer used the remainder."
+        "Each year, small amounts of nutrient-rich water entered Green Lake from surrounding farms. The water remained clear, with plants and fish apparently intact. Managers therefore allowed the load to rise gradually, assuming that because the lake had coped before, it would continue to do so.",
+        "During one hot summer, algae suddenly spread across the surface. Less light reached underwater plants. As they died, bottom sediment released more nutrients, feeding still more algae. A lake that had absorbed disturbance moved into another state through mutually reinforcing changes.",
+        "Managers reduced inflow to the previous year's level and expected the lake to retrace its path. It remained green because sediment and dead plants now sustained the new cycle. Returning to clear water required stronger reductions than had once maintained it, along with sediment work and plant restoration.",
+        "The lake gradually cleared over several years, but no one could name one exact boundary. Managers monitored transparency, algae, and plant cover and allowed for uncertainty rather than treating 'not yet collapsed' as proof of safety.",
+        "When the first plant reached the surface again, the keeper did not declare the lake recovered. She marked its height on a staff and returned to measure it the following week."
       ],
       "storyParagraphsZh": [
-        "塞拉湖每逢春季风暴都会浑浊。泥沙沉降，水下植物重新挺立，清水数周内回来。小镇于是把恢复当成湖能吸收任何扰动的证明。山坡农田扩张，芦苇带缩窄，富含营养的径流逐年增加。每次糟糕几周后，熟悉湖面又出现，议会便再批准一块田与一条排水沟。",
-        "生物学者维拉追踪这些恢复之下更慢的变化。植物床越来越破碎，搅动湖底的鱼增加，清澈恢复所需时间延长。即使表层检测尚可，营养物仍在沉积物中累积。她提议在湖尚未显得毁坏时拓宽缓冲带，议会却拿出每次反弹的照片。没有哪次新增单独造成崩溃，于是每一次都显得小到不值得拒绝。",
-        "随后，一个普通炎夏带来浓密藻华。藻类遮住水下植物，死亡植物与藻体消耗氧气，受扰沉积物释放更多储存营养，搅底鱼占优，清水植物继续退却。秋雨带走高温，却没有带走新模式，湖水整个冬天仍然浑浊。并不比往年更大的扰动，在内部支撑削弱后到来，让强化过程接管了系统。",
-        "小镇把径流削减到湖过去仍能保持清澈的水平，湖却没有回来。曾足以维持旧状态的条件，在植被、食物网与沉积化学改变后，已不足以重新创造旧状态。维拉要求进一步减排、恢复植物、管理鱼群并等待。返回路径不同于离开路径；移走最后推力，不会自动撤销它启动的全部反馈。",
-        "议会希望得到最后一块安全农田的精确数字。维拉只能提供范围、情景与预警指标，不能承诺确定。恢复变慢、波动增大或相关性变化，在某些系统中可能提示稳定性流失，但噪声数据与未知阈值限制预测。她还指出，浑浊湖本身也会抵抗恢复：持续并不总是好事。管理必须追问维持的是哪种状态、功能与群体，又为谁维持。",
-        "塞拉湖揭示的是生态韧性与临界点。韧性指生态系统吸收扰动，同时保留核心状态、功能与反馈的能力；临界点则是强化变化可把系统推入另一种状态的阈值。多重稳定状态与滞后效应会让恢复所需的不只是移除原压力。阈值常不确定，退化状态也可能很有韧性。湖一次次回来，并未证明力量无限；它只是耗费着小镇看不见的余量，直到某个夏天用完剩余部分。"
+        "青湖周围的农田每年都会带来少量肥水。湖看起来仍然清澈，水草与小鱼也照常生长。管理者因此允许排入量一点点增加，认为只要过去没有出事，湖便能继续承受。",
+        "一个炎热夏天，藻类突然铺满水面。水下光线减少，水草死亡，底泥又释放出更多养分，进一步喂养藻类。原本能吸收扰动的湖，被一组相互加强的变化推向另一种状态。",
+        "管理者把排入量降回上一年，以为湖会沿原路恢复。藻水却仍然存在，因为底泥和死亡水草形成的新循环已经维持着它。要回到清水状态，减排必须比过去维持清水时更强，还要清理部分底泥、恢复水草。",
+        "几年后，湖水逐渐变清，却没有人能指出一个绝对精确的界线。管理者开始监测透明度、藻量与水草覆盖，并为不确定性留下余地，不再把“尚未崩坏”当作安全证明。",
+        "第一片水草重新露出湖面时，守湖人没有宣布湖已经痊愈。他在标尺上记下高度，第二周又来量了一次。"
       ],
       "conceptName": "Ecological resilience and tipping points",
       "conceptNameZh": "生态韧性与临界点",
       "explanationParagraphs": [
-        "Ecological resilience is a system's capacity to absorb disturbance while retaining core state, functions, and feedbacks. A tipping point is a threshold beyond which reinforcing processes can drive a shift to a different regime.",
-        "Alternative stable states and hysteresis can make restoration require stronger intervention than the pressure reduction that once maintained the original state. Thresholds and early warnings are uncertain, and resilience can preserve undesirable as well as desirable regimes."
+        "Ecological resilience is an ecosystem's capacity to absorb disturbance while retaining core state, function, and feedback. Beyond a tipping point, reinforcing processes may move it into another stable state. Because of hysteresis, recovery can require stronger relief than was once needed to maintain the original condition. Thresholds and warnings are often uncertain."
       ],
       "explanationParagraphsZh": [
-        "生态韧性是系统吸收扰动，同时保留核心状态、功能与反馈的能力。临界点则是强化过程可以把系统推向另一种状态的阈值。",
-        "替代稳定状态与滞后效应，会使恢复所需干预强于过去维持原状态所需的减压。阈值与预警具有不确定性，韧性也可能维持不理想状态，而不只维持理想状态。"
+        "生态韧性是生态系统吸收扰动并保持核心状态、功能与反馈的能力。超过临界点后，强化过程可能把系统推入另一稳定状态，且因滞后效应，恢复所需减压常强于原先维持状态的程度。阈值和预警通常具有不确定性。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0522-carrying-capacity",
@@ -502,37 +514,38 @@
       "fieldTitleZh": "自然环境与野生生物",
       "title": "The Island's Most Successful Winter",
       "titleZh": "小岛最成功的冬天",
-      "summary": "An island celebrates its largest deer herd just as delayed crowding, depleted forage, and a dry season turn abundance into an overshoot.",
-      "summaryZh": "小岛在鹿群达到历史最大时庆祝成功，却发现延迟的拥挤效应、枯竭饲草与旱季已把繁盛变成超载。",
+      "summary": "After a warm winter keeps more goats alive, islanders treat that number as the island's permanent limit.",
+      "summaryZh": "岛民因一个温暖冬季养活了更多山羊，第二年便把这个数字当成了岛永远的上限。",
       "storyParagraphs": [
-        "Forty deer were brought to Aven Island after hunting had emptied its valleys. With abundant grass and no large predator, births exceeded deaths each year. Warden Kera displayed the rising count as proof of recovery: eighty, then one hundred and fifty, then nearly three hundred. Visitors saw animals on every hillside and called the final winter the island's greatest success. The herd still carried body reserves built when forage had been plentiful, so the visible animals looked healthier than the vegetation beneath them.",
-        "Spring arrived dry. Deer had eaten young shrubs before they could seed, stripped bark, and compressed feeding into the remaining wet hollows. Pregnant females gave birth because their condition months earlier had been good, adding mouths after food had already declined. Mortality rose only later. By the time thin bodies made scarcity obvious, the herd had passed what the damaged island could support through that season. Population response lagged behind resource depletion, turning growth into overshoot.",
-        "The council declared that three hundred must be the island's permanent limit because the herd had once reached that number. Kera compared years. Rainfall, winter severity, plant recovery, freshwater, disease, and habitat area changed the number of animals that could persist. After drought and browsing damage, even half the peak strained the island; restoration and wetter years might raise support again. The relevant level was not the largest count briefly achieved, but the population that resources and conditions could sustain over time. Even sustain required a stated criterion: deer persistence alone, healthy bodies, or protection of vegetation and other species.",
-        "Merchants delivered hay, and survival improved that winter. They claimed the island could now hold any number if feeding continued. Kera counted the hidden costs: animals crowded around feeding sites, infection spread, migration stopped, and imported food subsidised browsing pressure on native plants. Supplementation had changed available resources and management dependence rather than disproving a limit. A policy that maximised deer this month could reduce future support for deer and other species.",
-        "Kera used a simple density-dependent growth model as a starting point, not an oracle. At low density, food and space allowed rapid increase; as density rose, competition, disease, and reduced reproduction slowed net growth. Real herds also had age structure, immigration, random weather, predators, and time delays, so no single fitted number could govern every decision. Culling, fertility control, habitat repair, corridors, or accepting natural mortality each carried ecological and ethical consequences requiring explicit public judgement.",
-        "Aven had exceeded its carrying capacity: the population size an environment can sustain over a specified period under particular resource conditions, interactions, and management. It is dynamic, scale-dependent, and often estimated with uncertainty, not a fixed ceiling painted onto a landscape. Density dependence may slow growth near it, while delays can permit temporary overshoot and later collapse. The crowded winter was real abundance, but it was not sustainable abundance. The island's apparent success had borrowed forage from seasons the herd had not yet reached."
+        "Stone Island had enjoyed two years of abundant plants, followed by an unusually warm winter. All two hundred goats survived, and many females bore twins. Herders called this proof that the island could support more animals and kept every young goat the next year.",
+        "Spring and summer still looked successful as the flock grew. Pressure appeared only in the following cold season. Pasture had been cropped too short during summer, young and adult goats competed for food, and a supply boat was delayed by storms. The high population had exceeded what that year's resources could sustain, but the consequences arrived late.",
+        "The islanders stopped seeking one permanent maximum. Their estimates included rain, forage, age structure, winter supply, and the vegetation they wished to retain. In abundant years, they left a buffer. If protecting other wild plants was part of the goal, the supported number was lower.",
+        "The safer population changed over the years with weather and pasture recovery. Removal, supplementary feed, and rotation could alter it while sometimes shifting pressure elsewhere. The warm winter remained in the records but no longer decided the future alone.",
+        "When another set of twins was born, the herders measured spring grass before writing the number to keep on the pen board."
       ],
       "storyParagraphsZh": [
-        "狩猎使山谷空寂后，四十只鹿被送上阿文岛。青草丰盛，又没有大型捕食者，每年出生数都超过死亡数。管理员凯拉把不断上升的数字展示为恢复证明：八十、一百五十、接近三百。最后一个冬天，游客在每座山坡都看见鹿，称其为小岛最成功的季节。鹿仍带着饲草丰盛时期积累的身体储备，看起来比脚下植被健康。",
-        "春季转为干旱。鹿在幼灌木结籽前吃掉嫩枝，剥食树皮，并挤进仅存湿洼地。母鹿因数月前身体状况良好仍然产仔，在食物已经下降后增加更多嘴。死亡率到后来才上升。消瘦身体让匮乏显形时，鹿群早已超过受损小岛在该季能支持的数量。种群响应落后于资源耗损，把增长变成超载。",
-        "议会因鹿群曾达到三百，便宣布三百是小岛永久上限。凯拉逐年比较：降雨、冬季严酷程度、植物恢复、淡水、疾病与栖息面积都会改变可长期生存的数量。干旱与啃食破坏后，峰值一半也可能让岛承压；修复与湿润年份又可能提高支持水平。真正相关的不是短暂达到的最大数，而是资源与条件能跨时间维持的种群。就连「维持」也要说明标准：只看鹿群延续、身体健康，还是也保护植被与其他物种。",
-        "商人运来干草，当年冬季存活改善，便宣称只要持续投喂，岛能容纳任何数量。凯拉算出隐藏成本：鹿群挤在饲喂点，感染扩散，迁移停止，进口食物还补贴了对本地植物的啃食压力。补给改变的是可用资源与管理依赖，并未证明限制不存在。让本月鹿数最大化的政策，可能降低未来对鹿和其他物种的支持。",
-        "凯拉把简单的密度制约增长模型当成起点，而非神谕。低密度时，食物与空间允许快速增加；密度升高后，竞争、疾病与繁殖下降会减缓净增长。真实鹿群还有年龄结构、迁入、随机天气、捕食者与时间延迟，因此一个拟合数字不能统治所有决定。捕杀、生育控制、修复栖息地、建设通道或接受自然死亡，都带有需要公开判断的生态与伦理后果。",
-        "阿文岛超过的是环境承载力：在特定资源条件、相互作用与管理下，一个环境于指定时期能够持续支持的种群规模。它动态变化、依赖尺度，也常带有估计不确定性，不是画在地景上的固定天花板。密度制约可在接近它时减缓增长，延迟却允许短暂超载与随后崩落。拥挤冬季确有繁盛，却不是可持续繁盛；小岛看似成功，只是向鹿群尚未抵达的季节借走了饲草。"
+        "石岛连续两年草木丰盛，最后一个冬天又格外温暖。岛上两百只山羊全部存活，许多母羊还生了双羔。牧户称这是岛能养活更多羊的证据，第二年没有卖出幼羊。",
+        "春夏看起来依然成功，羊群继续增长。真正的压力到下一个寒冬才出现：草场已在夏季被啃得过短，幼羊与成羊争食，补给船又因风浪晚到。此前的高数量超过了当年资源能够持续支持的水平，只是后果有延迟。",
+        "岛民不再寻找一个永久不变的“最大数”。他们把降雨、草量、年龄结构、冬季补给和希望保留的植被都放进估计，并在丰年留出缓冲。若管理目标包括其他野生植物，可养数量还要更低。",
+        "几年中，安全数量随天气和草场恢复变化。迁出、补饲和轮牧也能改变它，却可能把压力转到别处。那个温暖冬季的数据仍保留，只不再单独决定未来。",
+        "下一次双羔出生时，牧户先去量了春草高度，才在羊圈木牌上写下保留数量。"
       ],
       "conceptName": "Carrying capacity",
       "conceptNameZh": "环境承载力",
       "explanationParagraphs": [
-        "Carrying capacity is the population size an environment can sustain over a defined period under particular resources, ecological interactions, and management. It is an uncertain, dynamic property rather than a permanent maximum count, and operational estimates depend on the ecological outcome being protected.",
-        "Density-dependent competition, reproduction, disease, and mortality can slow growth, while time lags may produce overshoot. Weather, habitat change, age structure, migration, predators, supplementation, and impacts on other species all affect estimates and decisions."
+        "Carrying capacity is the population an environment can sustain over a specified period under particular resources, ecological relationships, and management. It is dynamic and uncertain, not a permanent maximum, and depends on the ecological outcome being protected. Resource change, density dependence, time delay, migration, and supplementation all affect estimates."
       ],
       "explanationParagraphsZh": [
-        "环境承载力是在特定资源、生态相互作用与管理条件下，一个环境于规定时期能够持续支持的种群规模。它是带不确定性的动态属性，而非永久最大数，操作性估计还取决于要保护的生态结果。",
-        "密度制约的竞争、繁殖、疾病与死亡可减缓增长，时间延迟则可能造成超载。天气、栖息地变化、年龄结构、迁移、捕食者、补给及对其他物种的影响，都会改变估计与决策。"
+        "环境承载力是在特定资源、生态关系与管理条件下，一个环境能在规定时期持续支持的种群规模。它是动态且不确定的，不是永久最大数，并取决于希望保护的生态结果。资源变化、密度制约、时间延迟、迁移和补给都会改变估计。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0522-trophic-cascade",
@@ -541,39 +554,40 @@
       "fieldCode": "0522",
       "fieldTitle": "Natural environments and wildlife",
       "fieldTitleZh": "自然环境与野生生物",
-      "title": "When the River Lost Its Hunters",
+      "title": "After the River Lost Its Hunters",
       "titleZh": "河流失去猎手以后",
-      "summary": "Removing a few ridge predators releases browsers whose changed numbers and behaviour travel through willows, insects, banks, and water.",
-      "summaryZh": "赶走少数山脊捕食者后，食草动物的数量与行为变化一路传过柳树、昆虫、河岸与水体。",
+      "summary": "Fishers remove the large fish that eat smaller ones and expect a greater catch, but the river turns green first.",
+      "summaryZh": "渔民清除了吃小鱼的大鱼，期待收获更多，河水却先变成了绿色。",
       "storyParagraphs": [
-        "Grey ridge hunters occasionally took a shepherd's lamb in the Var valley. The council removed them and expected one clear result: safer flocks. Lamb losses fell, and deer appeared more often in open meadows. Three years later, willow shoots along the river rarely rose above a deer's mouth. The council called the missing shrubs a gardening problem, unrelated to the handful of predators that had once crossed the high slopes. Most villagers accepted that tidy separation without asking what else might move.",
-        "In the years after the hunters disappeared, deer counts rose and the animals lingered longer beside exposed banks. Browsing removed young willow and aspen before stems thickened. Insects that used those plants declined, nesting birds lost cover, and fewer roots held soil during floods. Sediment entered pools and shaded gravel. The river had not been eaten directly by deer, yet the sequence suggested that a change near the top of the food web might be travelling through abundance and behaviour into habitat and physical processes.",
-        "Ecologist Senna fenced small river plots. Willows recovered inside fences that excluded deer but remained cropped outside, supporting the browsing link. She then restored protected passage for a limited number of hunters while improving livestock guards. Deer use shifted away from the riskiest open banks, and some plants recovered before deer numbers changed greatly. The result was consistent with effects transmitted through both consumption and risk-sensitive behaviour, although strength varied across tributaries.",
-        "Success tempted the council to credit hunters for every new bird and every clear pool. Senna compared fenced and unfenced reaches, wet and dry years, beaver activity, fire history, and upstream farming. Drought suppressed willow even where deer were excluded, and a new dam changed sediment independently. Omnivores fed at several levels, outside food entered the valley, and hunters sometimes chose different prey. The food web was not a row of falling tiles with one guaranteed outcome.",
-        "Management therefore focused on testable links rather than a heroic species. The valley monitored predator and herbivore densities, browsing rates, plant recruitment, bank stability, and alternative causes. Reintroducing or protecting predators could create livestock conflict and required participation, compensation, and adaptive limits. In another ecosystem, productivity, spatial refuges, hunting, disease, or prey switching might weaken or redirect the response. Direction and magnitude remained empirical questions.",
-        "Var had experienced a trophic cascade: changes in consumers at one feeding level indirectly alter organisms or processes at lower levels through a chain of ecological interactions. Predators can affect herbivore abundance, distribution, or behaviour, which can then influence vegetation and associated habitats. Such top-down effects may be strong, weak, or context-dependent in complex food webs and can interact with bottom-up resources and disturbance. The hunters did not command the river. Their absence changed who could stay, eat, grow, and hold the bank."
+        "Large predatory fish in Stone River ate smaller fish. Believing the predators were taking their catch, fishers removed them heavily for several years. Small fish initially increased, and the village celebrated a river that now supported only useful fish.",
+        "The small fish also consumed large amounts of zooplankton. With fewer grazers feeding on algae, green growth spread through summer water. Aquatic plants declined under reduced light, changing the shallows. Removing one upper consumer had travelled downward through feeding relationships.",
+        "Researchers did not treat simultaneous change as proof. They compared tributaries without heavy removal, examined small-fish diets and algae, and restored some predators inside enclosed reaches. Several lines supported the indirect pathway, although warmer water and farm nutrients also affected algae.",
+        "The fishery limited harvest of large fish while also reducing nutrient inflow. Small-fish numbers fell, and zooplankton and plants gradually recovered. Water did not become clear immediately or everywhere because the food web had other paths.",
+        "Before opening the next season's nets, a fisher returned one undersized predator. It disappeared among the plants, leaving only a small movement on the green surface."
       ],
       "storyParagraphsZh": [
-        "灰色山脊猎手偶尔叼走瓦尔山谷牧人的羊羔。议会把它们赶走，只期待一个清楚结果：羊群更安全。羊羔损失下降，鹿却更常出现在开阔草地。三年后，河边柳树嫩枝很少长过鹿嘴高度。议会把灌木消失视为园艺问题，认为与过去穿行高坡的少数捕食者无关。多数村民接受了这种整齐切割，没有追问还有什么也会移动。",
-        "猎手消失后的几年里，鹿数上升，也在暴露河岸停留更久。啃食让幼柳与白杨来不及长粗。依赖这些植物的昆虫减少，筑巢鸟失去遮蔽，洪水时固土根系也变少。泥沙进入水潭，遮住砾石。鹿没有直接吃掉河流，但这段次序提示，食物网较高位置的变化可能正经由数量与行为进入栖息地和物理过程。",
-        "生态学者森娜在河边围起小块试验地。排除鹿的围栏内柳树恢复，外面仍被啃矮，支持了啃食这一环。她又改善牲畜防护，同时为少量猎手恢复受保护通道。鹿开始避开风险较高的开阔河岸，一些植物在鹿总数明显变化前就恢复。结果与捕食和风险敏感行为共同传递影响相符，只是不同支流强度不同。",
-        "初步成功诱使议会把每只新鸟与每个清水潭都归功于猎手。森娜比较围栏内外、干湿年份、河狸活动、火灾历史与上游农业。即使排除鹿，干旱也会压低柳树，新水坝则独立改变泥沙。杂食动物横跨多个层级取食，谷外食物会流入，猎手也可能转换猎物。食物网不是一排必然向同一方向倒下的牌。",
-        "管理因此围绕可检验联系，而非英雄物种。山谷监测捕食者与食草动物密度、啃食率、植物更新、河岸稳定和其他原因。重新引入或保护捕食者可能引发牲畜冲突，需要参与、补偿与适应性限制。在另一套生态中，生产力、空间避难所、狩猎、疾病或猎物转换都可能削弱或改向响应。方向与幅度必须由证据回答。",
-        "瓦尔经历的是营养级联：一个营养层级消费者的变化，通过一串生态相互作用，间接改变更低层级的生物或过程。捕食者可改变食草动物的数量、分布或行为，继而影响植被及相关栖息地。在复杂食物网中，这类自上而下效应可强可弱，也依赖情境，并会与资源供给和扰动相互作用。猎手没有命令河流；它们的缺席改变了谁能停留、取食、生长并抓住河岸。"
+        "石河里的大型猎食鱼会捕食小鱼，渔民认为它们抢走了收成，便连续几年大量捕捞。大鱼减少后，小鱼起初确实变多，大家都说河流终于只养有用的鱼。",
+        "小鱼同时大量取食水中的浮游动物。吃藻的浮游动物减少，藻类开始增多，夏季水色变绿。水草因光线不足衰退，浅滩环境也跟着改变。拿走一个上层消费者的影响沿取食关系传到了更低处。",
+        "研究者没有仅凭同时变化便下结论。他们比较未大量捕捞的支流，记录小鱼食物与藻量，又在围隔水域中恢复部分猎食鱼。多条证据都指向这条间接路径，但水温和上游肥水也在影响藻类。",
+        "渔业随后限制大型鱼捕捞，并同时减少肥水输入。小鱼数量下降，浮游动物和水草逐渐恢复，河水并非立刻或处处同样清澈，因为食物网还有其他支路。",
+        "下一季开网前，渔民放回一条过小的猎食鱼。它钻进水草后，绿色水面只轻轻晃了一下。"
       ],
       "conceptName": "Trophic cascade",
       "conceptNameZh": "营养级联",
       "explanationParagraphs": [
-        "A trophic cascade occurs when a change in consumers at one trophic level indirectly alters organisms or ecological processes at lower levels through linked feeding interactions. Effects may travel through prey abundance, distribution, or behaviour.",
-        "Cascades are not automatic chains. Their strength and direction depend on food-web complexity, productivity, omnivory, prey switching, spatial refuges, disturbance, outside subsidies, and simultaneous bottom-up forces, so causal links require evidence."
+        "A trophic cascade occurs when change in consumers at one trophic level indirectly affects organisms or processes lower in the food web through feeding numbers or behaviour. It is not an automatic linear chain. Food-web complexity, omnivory, productivity, refuge, external inputs, and disturbance alter strength and direction, so causal evidence is required."
       ],
       "explanationParagraphsZh": [
-        "营养级联发生于一个营养层级的消费者变化，通过相连的取食关系间接改变较低层级的生物或生态过程。效应可经猎物数量、分布或行为传递。",
-        "级联不是自动发生的简单链条。其强度与方向取决于食物网复杂度、生产力、杂食、猎物转换、空间避难所、扰动、外部补给及同时存在的自下而上力量，因此因果联系需要证据。"
+        "营养级联是某一营养层级消费者的变化，经由取食数量或行为间接影响更低层级生物与生态过程。它并非必然发生的简单直线链条；食物网、杂食、生产力、空间避难、外部输入和其他扰动都会影响强度与方向，因此需要因果证据。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     },
     {
       "id": "0522-habitat-fragmentation",
@@ -582,39 +596,40 @@
       "fieldCode": "0522",
       "fieldTitle": "Natural environments and wildlife",
       "fieldTitleZh": "自然环境与野生生物",
-      "title": "A Forest Measured Only by Trees",
+      "title": "The Forest Counted Only by Trees",
       "titleZh": "只按树木计算的森林",
-      "summary": "A road leaves most trees standing yet divides one living forest into smaller, hotter, riskier pieces that different species can no longer use in the same way.",
-      "summaryZh": "一条道路保留了大多数树木，却把一片活森林分成更小、更热、更危险的区块，使不同物种无法再以同样方式使用它。",
+      "summary": "A road project replaces every felled tree, yet after completion the paths inside the forest no longer connect.",
+      "summaryZh": "修路工程砍一棵补一棵，完工后树木总数没变，林中的道路却再也没有接回去。",
       "storyParagraphs": [
-        "Planner Rell drew a straight timber road through the Arin forest. Only one tree in ten would be removed, so his map still coloured ninety percent of the area green. He promised that almost the whole forest would remain. The road shortened travel to the mill and concentrated cutting along one corridor. From above, the arithmetic looked careful: many trees on both sides, with a narrow pale line between them.",
-        "On the ground, the line became two bright edges. Wind dried soil, sunlight altered undergrowth, invasive plants followed vehicles, and nest predators travelled the verge. A small forest bird avoided the open crossing; pairs remained on both sides but young birds no longer replaced one another after local losses. A wide-ranging mammal crossed and was struck by carts. Interior habitat shrank by more than the road's footprint because edge conditions extended into the remaining trees.",
-        "Rell built one beautiful canopy bridge and declared reconnection complete. Arboreal animals used it, but ground dwellers did not, and a shy species still avoided its exposed approach. Ecologist Mina added vegetated underpasses, slower night traffic, and protected cover leading to crossing points. Movement improved for selected species. She still monitored disease and invasive spread because a corridor could transmit threats as well as genes, individuals, and seasonal access.",
-        "The timber guild proposed compensating with many tiny groves whose total area equalled the removed forest. Mina separated two questions. Losing habitat area was usually a major harm in itself; arranging the remainder into smaller, isolated patches could add effects through edges, barriers, and disrupted movement, but those effects varied by species, scale, and surrounding land. For some organisms, several patches offered useful diversity; for an interior specialist needing a large territory, the same pattern was unusable.",
-        "The council stopped treating green pixels as interchangeable. It measured patch size, shape, isolation, interior area, breeding success, mortality at crossings, and the quality of farms and roads between patches. The best plan first avoided losing high-value intact areas, then narrowed and rerouted the road, improved the surrounding matrix, and connected places where evidence showed connection would help. Tree counts remained necessary, but they could not describe whether a living population could complete its life cycle.",
-        "Arin exposed habitat fragmentation: the division of continuous habitat into smaller and more isolated pieces, often accompanied by habitat loss, edge effects, and a changed surrounding matrix. Its consequences depend on total habitat amount, configuration, connectivity, species traits, scale, and the permeability of land between patches. Corridors and crossings can help but require species-specific design and risk assessment. Rell had preserved most of the forest's trees. Mina showed why preserving trees and preserving a usable, connected habitat were not always the same achievement."
+        "A mountain city promised to plant one roadside tree for every tree removed by a new road. When construction ended, the total number of trees had slightly increased. The mayor declared that no forest had been lost; only a narrow road now crossed it.",
+        "A field observer found that small animals dependent on dark, moist forest would not cross the bright, noisy surface. New edges dried, nests faced wind, and a formerly continuous population separated into smaller patches. Young roadside trees replaced the count but not old interior conditions or connection.",
+        "She recorded separately how much habitat had been removed and how the remainder was arranged. Even with equal area, one block and several islands did not function alike for some species. Animals able to cross open ground might be affected less.",
+        "The city narrowed part of the road, retained one continuous forest strip, and installed a planted crossing where use evidence supported it. Cameras checked whether the structure worked and whether it carried fire or predators to the other side rather than serving as decoration.",
+        "The next spring, the observer found the first tracks in the crossing mud. After measuring their direction and size, she did not treat the tree-count column as the whole result."
       ],
       "storyParagraphsZh": [
-        "规划师雷尔在阿林森林中画出一条笔直木材道路。只需移除十分之一树木，地图上仍有九成面积保持绿色，他承诺几乎整片森林都会留下。道路缩短去木厂的路程，也把砍伐集中到一条走廊。从高处看，算法十分谨慎：两侧树木众多，中间只有一条浅线。",
-        "落到地面，那条线变成两道明亮边缘。风吹干土壤，阳光改变林下植物，入侵种随车辆进入，巢穴捕食者沿路缘移动。一种小型林鸟拒绝穿越空地，两侧仍有配偶，却无法在局部损失后以幼鸟相互补充。一种大范围活动兽类愿意穿越，却被货车撞击。边缘条件深入剩余林木，内部栖息地减少得比道路占地更多。",
-        "雷尔修建一座美丽树冠桥，宣布连接已经恢复。树栖动物会用，地面动物不会，一种谨慎物种仍避开暴露入口。生态学者米娜增加植被覆盖的地下通道、夜间限速与通向过路点的保护带，选定物种的移动有所改善。她仍监测疾病与入侵扩散，因为通道既能传递基因、个体与季节性资源，也能传递威胁。",
-        "木材行会提议用许多小树林补偿，总面积等于失去的森林。米娜把两个问题分开：栖息面积损失本身通常就是重大伤害；把剩余部分安排成更小、更孤立的区块，又可能通过边缘、屏障与移动中断增加影响，但效果随物种、尺度与周边土地而变。对某些生物，多块地提供有益多样性；对需要大片领地的内部专性物种，同样格局却无法使用。",
-        "议会不再把绿色像素视为可以互换。它测量区块大小、形状、隔离、内部面积、繁殖成功、穿越死亡与区块间农田道路的质量。最佳方案先避免失去高价值完整区域，再缩窄并改道，改善周边基质，并在证据表明有益处连接地点。树木计数仍有必要，却无法说明一个活种群能否完成整个生命周期。",
-        "阿林暴露的是栖息地破碎化：连续栖息地被分成更小、更孤立的区块，并常伴随面积损失、边缘效应与周边基质变化。后果取决于栖息地总量、空间配置、连接度、物种特征、尺度，以及区块间土地的可穿透性。通道与过路设施可以帮助，却需要针对物种设计并评估风险。雷尔保留了森林大多数树，米娜则说明保留树木与保留可用且相连的栖息地，并不总是同一项成就。"
+        "山城修建新路时承诺砍一棵树便在路旁补一棵。工程结束后，树木总数甚至略有增加。市长据此宣布森林没有损失，只是中间多了一条窄路。",
+        "林地观察员却发现，依赖林内阴湿环境的小兽不再穿过亮而嘈杂的路面。两侧新边缘变干，巢位受风，原本连续活动的种群被分成较小区块。路旁幼树补回了数量，却没有立即补回老林内部条件和连接。",
+        "她还把“砍掉多少”与“剩余森林怎样排列”分开记录。即使总面积相同，一整片与几块孤岛对某些物种并不相同；对善于穿越开地的物种，影响则可能较小。",
+        "城市先缩窄部分路段，保留一条连续林带，又在确有使用证据的位置设置覆土通道。通道安装相机监测，防止它只是一件好看的工程，也检查是否把火或捕食风险带进另一侧。",
+        "第二年清晨，观察员在通道泥面看到第一串脚印。她量完方向与大小，没有把树木总数那一栏当作全部结果。"
       ],
       "conceptName": "Habitat fragmentation",
       "conceptNameZh": "栖息地破碎化",
       "explanationParagraphs": [
-        "Habitat fragmentation is the division of continuous habitat into smaller, more isolated patches, often together with habitat loss, edge effects, barriers, and changes in the surrounding matrix.",
-        "Effects depend on total habitat amount, spatial configuration, scale, connectivity, matrix quality, and species ecology. Fragmentation per se must be evaluated separately from habitat amount. Avoiding intact-habitat loss is primary; corridors and crossings can improve movement but require targeted design, monitoring, and attention to transmitted risks."
+        "Habitat fragmentation divides continuous habitat into smaller, more isolated patches and often combines with area loss, edge effects, barriers, and changes in surrounding land. Effects depend on total habitat, spatial arrangement, connectivity, and species ecology. Replanting numbers does not restore interior conditions automatically, and corridors require targeted design and monitoring."
       ],
       "explanationParagraphsZh": [
-        "栖息地破碎化是连续栖息地被分割成更小、更孤立的区块，并常与面积损失、边缘效应、屏障及周边基质变化同时发生。",
-        "影响取决于栖息地总量、空间配置、尺度、连接度、基质质量与物种生态。必须把破碎化本身与栖息地总量分开评估。首要任务是避免完整栖息地损失；通道与过路设施可改善移动，却需定向设计、监测并关注同时传递的风险。"
+        "栖息地破碎化是连续栖息地被分成更小、更孤立区块，常伴随面积损失、边缘效应、屏障和周边环境变化。影响取决于总量、空间配置、连接度和物种生态。补种数量不能自动恢复内部条件；通道也需定向设计和监测。"
       ],
       "mode": "concept-fable",
       "status": "approved",
-      "qualityGate": { "reviewRounds": 3, "rewriteRounds": 2, "openCritical": 0, "openMajor": 0 }
+      "qualityGate": {
+        "reviewRounds": 3,
+        "rewriteRounds": 2,
+        "openCritical": 0,
+        "openMajor": 0
+      }
     }
   ]
 }
