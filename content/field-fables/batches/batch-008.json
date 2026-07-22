@@ -13,18 +13,18 @@
       "summary": "The contents of two dye rooms remain constant all day, so the manager assumes the carrying has ceased while workers keep passing through the door.",
       "summaryZh": "两间染料厅的存量整日不变，管事以为搬运已经停止，门后却始终有人来回。",
       "storyParagraphs": [
-        "A dyehouse had red and blue rooms. Workers could turn a jar of red liquid into blue and blue back into red. At first, the red room held much more, so far more jars moved toward blue than returned. The blue room quickly grew.",
-        "After a while, the number of jars in each room stopped changing visibly. The manager assumed the work had ended and tied white string around several jars. Half an hour later, the marked jars had changed rooms. Equal numbers were now moving from red to blue and blue to red, making the large-scale counts look still.",
-        "The manager poured more liquid into the red room and disturbed the earlier state. Red-to-blue movement temporarily exceeded the reverse until a new stable composition formed. Stability did not require equal amounts of red and blue, only equal rates in the two directions.",
-        "The dyehouse later opened a smoother inner doorway, speeding workers both ways. The rooms reached stability faster, but the final composition did not change because of the door. Raising the room temperature, however, could change that composition itself.",
-        "At night, the clerk counted unchanged totals in both rooms. The hinge still sounded, and a different group of white-string jars had crossed."
+        "The dyehouse had promised forty bolts of the same blue for the governor's procession. In the red room, handlers could turn red liquid into blue; in the blue room, others could reverse it. At first the red shelves were crowded, so twenty jars crossed toward blue during a bell while only five returned. Blue stock rose quickly. Manager Qiao took the early gain as proof that the room would soon fill completely and promised the dyers more than the vats could reliably supply. He even sent away a backup supplier before checking a full day's ledger.",
+        "By noon the inventories settled at sixty red jars and forty blue. For three bells the numbers did not change. Wages were due, and Qiao decided the crossings had ended; he could dismiss the night handlers and spend the money on cloth. Clerk Yan asked for one bell before the order was sealed. She tied white string around twelve jars in each room. At the next count, twelve marked jars had crossed each way. The totals looked still because the two rates matched, not because the doorway was idle.",
+        "Qiao still needed more blue before sunset. He poured thirty additional jars into the red room and ordered the clerk to count every bell. The next line read twenty red-to-blue and twelve blue-to-red: blue gained eight. Later the difference narrowed, then vanished at a new composition. Qiao had obtained more product, but not the impossible all-blue room he had sold. If he shipped short, he lost the governor; if he bought more red liquid, the emergency price would erase the month's profit.",
+        "A builder offered a polished double doorway that let handlers pass faster. Qiao almost paid him after hearing that both counts could double, but Yan laid the two ledgers together: faster crossings would reach the same balance sooner under unchanged conditions, not move its final position. Temperature or composition could alter that position, depending on the particular conversion, but a smoother route alone could not. Qiao bought raw liquid instead, kept both shifts, and accepted the loss rather than thinning the dye and hiding it in the shipment.",
+        "The last bolt left the hall after midnight. The contract was filled, but Qiao's profit drawer held only three coins, and the promised bonus had to wait. Before locking up, Yan counted seventy-two jars on one side and fifty-eight on the other for the third time. The figures were unchanged. Behind her, the hinge kept sounding, and the white strings were now tied around jars on the opposite shelves."
       ],
       "storyParagraphsZh": [
-        "染坊有红、蓝两厅，工人能把一罐红液转成蓝液，也能把蓝液转回红液。开工初期，红厅存量很多，搬向蓝厅的罐子远多于返回的罐子，蓝厅很快增加。",
-        "过了一段时间，两厅的罐数不再明显变化。管事以为工作已经停下，便在几只罐上系白线。半个时辰后，系线罐已经换了房间；只是同一时间从红到蓝与从蓝到红的数量相等，宏观看起来静止。",
-        "管事往红厅又倒入一批染液，双向搬运立刻失去原有平衡。红转蓝暂时更多，直到两边在新组成下重新保持稳定。稳定不要求红蓝数量相等，只要求两个方向的速度相同。",
-        "后来染坊打开一条更顺畅的内门，工人来回都加快了。两厅更快到达稳定状态，最后的组成却没有因这扇门而改变。若升高厅温，最终组成本身则可能变化。",
-        "夜里账房再次点数，两边数字都没有动。门轴仍在轻响，系白线的罐子又换了一批。"
+        "染坊答应为巡游染出四十匹颜色完全一致的蓝布。红厅的工人能把红液转成蓝液，蓝厅也有人把它转回去。开工第一刻，红架很满，一响铃有二十罐搬向蓝厅，只有五罐返回，蓝液迅速增加。管事乔叔把这段涨势当成了最终结果，当场答应了远高于平日的交货量，还没看完一整天账目，就退掉了备用供货商。蒸汽把窗纸染成淡蓝，他把那片颜色也当成了好兆头。",
+        "午后，两厅存量停在红六十、蓝四十，连续三次点数都没变。工钱快结了，乔叔认定搬运已经结束，准备撤掉夜班，把钱拿去买布。账房小严请他再等一刻。她在两厅各挑十二只罐系上白线。下一次开门，十二只系线罐恰好各自去了对面。数字静止，是因为两个方向的速度相等，门后并没有停工。",
+        "乔叔仍要在日落前多得蓝液，便往红厅添了三十罐，叫小严每响一次铃就记数。第一行是红转蓝二十、蓝转红十二，蓝厅净增八罐；后来差额逐渐缩小，最后又在新的组成上相等。他得到了更多蓝液，却得不到自己许诺的“全变成蓝”。少交会失去官府订单，加价买红液又会吃掉整月利润。",
+        "木匠来兜售一扇光滑的双开门，说工人来回都能快一倍。乔叔听见“快一倍”便想付钱，小严却把两页账并排放好：在温度与配料不变时，双向都加快，只会更早到达原来的稳定组成，不会凭空多出最终蓝液。温度或组成改变时，稳定位置可能随具体转化改变；单靠更顺的通道不行。乔叔只得高价补买原料，保留两班工人，也没有用兑水遮掩短缺。",
+        "最后一匹布在半夜运走。订单保住了，乔叔的钱匣却只剩三枚铜钱，答应工人的奖金也要延期。被退掉的供货商不肯恢复旧价，染坊下月只敢少接两成订单。屋外的雨还在敲瓦。关门前，小严第三次点到红七十二、蓝五十八，合计仍是一百三十，数目已连续三次不动。她身后的门轴还在轻响，白线已经出现在对面的木架上。"
       ],
       "conceptName": "Chemical equilibrium",
       "conceptNameZh": "化学平衡",
@@ -32,7 +32,7 @@
         "Chemical equilibrium is a dynamic state in which forward and reverse rates of a reversible reaction are equal, leaving macroscopic composition constant. It does not require equal amounts of reactants and products. Composition, pressure, or temperature can shift equilibrium; a catalyst speeds both directions toward equilibrium without changing its position under fixed conditions."
       ],
       "explanationParagraphsZh": [
-        "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。"
+        "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。具体移动方向须结合反应与条件判断。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -55,18 +55,20 @@
       "summary": "A potter fills a kiln with dry wood capable of releasing heat, waits all night, and finds no fire has appeared by itself.",
       "summaryZh": "窑里堆满能够放热的干柴，陶工等了一夜，火却没有自己出现。",
       "storyParagraphs": [
-        "A potter filled a new kiln with dry wood, knowing that once it burned it would release great heat. He closed the door and waited. Deep into the night, the wood remained cold. A result that released energy did not mean the path would cross its starting barrier by itself.",
-        "He tried lighting a thick log directly, but the flame died. An older worker placed shavings and thin branches below, using a small flame to raise the local temperature before letting fire reach the heavier wood. Once enough material crossed the ignition condition, released heat sustained the kiln.",
-        "For the next firing, they improved the air channel and provided an easier route for burning. The kiln could start with less intense ignition, while the overall energy difference between unburned and burned wood did not disappear.",
-        "At higher temperature, more material could reach the needed energy and burning accelerated. Damp wood or poor oxygen kept the process slow no matter how much wood was present. Whether something can occur and how quickly it occurs are different questions.",
-        "By morning, the kiln mouth glowed red. The potter returned the unused thick torch to the wall, leaving only the ash of the small kindling below."
+        "Potter Sen had promised two hundred roof tiles before the first autumn rain. He packed the new kiln with dry oak, shut its iron mouth, and waited because everyone knew burning wood released heat. By midnight the bricks were cold enough to touch. He had mistaken what a burning fire could release for what untouched wood could start on its own. Every quiet hour brought the rain closer and increased the penalty written into his contract.",
+        "Sen thrust a thick torch against the nearest log. Its surface blackened, then the flame shrank. Old burner Mei pulled him back and laid curls of shaving beneath finger-thin twigs. The small pieces warmed quickly; with air between them, enough encounters occurred with suitable energy and contact for flame to spread. Heat released by those first changes then lifted neighbouring wood over the same hurdle. A small beginning did not provide the whole kiln's heat. It opened a path to a process that could sustain itself.",
+        "The first chamber caught, but smoke soon rolled from the inspection hole and the flame weakened again. Sen had filled every gap to maximise fuel, leaving too little oxygen and blocking the flue. He wanted to keep firing—opening the hot kiln would ruin the glazed tiles already stacked near the mouth. Mei placed ten dry splinters in the clear draft and ten inside the smoky corner. Seven caught in the draft; only one smouldered in the corner. Fuel quantity alone was not deciding the rate.",
+        "The weak flame was already gambling the whole order. Sen ordered the kiln opened and pulled out the hot front tiles so the crew could clear an air channel. Thirty-seven pieces split with small sharp sounds in the cooler air as they rebuilt the passage and inserted a porous clay grate. The changed route lowered the difficulty of starting and maintaining combustion; it did not erase the energy difference between wood before and after burning.",
+        "At the second lighting, Mei used the same handful of shavings. This time the flame ran through the open grate and caught three thick logs before Sen finished turning the sandglass. He hung a small board beside the kiln and marked what had changed: warmer kindling, clear air gaps, an open flue, and a route from thin wood to thick. On later cold mornings he checked those four things before adding more fuel. The board saved him from repeating the expensive lesson that a full kiln and a possible fire were not yet a burning kiln.",
+        "The roof tiles reached the builders one morning late. Sen paid for the broken pieces and surrendered half his profit, but the roofs were covered before the rain. When he swept the kiln, the heavy torch he had tried first still leaned against the wall, barely scorched. In the grate below lay a palm-sized patch of grey ash where Mei's thin shavings had been."
       ],
       "storyParagraphsZh": [
-        "陶工把干柴塞满新窑，知道柴一旦燃烧会放出大量热。他关上窑门等待，直到夜深，木柴仍然冰冷。能够产生更多能量的结果，并不代表过程会自动越过开始时的门槛。",
-        "他先用火把直接点粗木，火苗很快熄灭。老窑工在下面放入细屑和薄枝，先用小火让局部温度升高，再让火焰逐渐爬上粗木。木柴一旦有足够部分跨过起燃条件，后续放热便维持了窑火。",
-        "第二次，他们修出更通畅的风道，让燃烧沿更容易的路径进行。窑能在较低点火强度下启动，柴从燃烧前到燃烧后的总能量差却没有因风道消失。",
-        "气温升高时，更多部分更容易达到所需能量，反应加快；木柴受潮或缺氧时，即使堆得再多也很慢。能否发生与发生多快不是同一个问题。",
-        "清晨，窑口终于发红。陶工把未用完的粗火把放回墙边，只留下底部那撮已经烧成灰的细屑。"
+        "陶工阿森答应在秋雨前交出两百片屋瓦。他把干橡木塞满新窑，关上铁门等待，因为谁都知道木柴燃烧会放热。直到半夜，窑砖仍冷得可以伸手触摸。他把“火烧起来以后会放出什么”，错当成了“没有点燃的木柴会不会自己开始”。每安静一刻，雨期和合同罚金便靠近一分。",
+        "阿森把粗火把直接抵住木段，表面只黑了一圈，火苗便缩了回去。老窑工梅婶拉开他，在下面铺刨花和细枝。小料升温快，缝隙又能进风，较多接触便带着足够能量与合适方向发生。最初变化放出的热继续帮助邻近木柴越过同一道门槛。那撮小火没有提供整窑热量，只是让能自我维持的过程终于启动。",
+        "第一格刚烧旺，查看孔里忽然滚出浓烟，火又弱下去。阿森为了多装柴，堵住了进气缝和烟道。他舍不得开窑，因为门口已经码好上釉的瓦，冷热骤变会使它们开裂。梅婶把十根干木条放在通风口，又把十根塞进烟角。前者七根很快着火，后者只有一根冒烟。燃料多，并不保证变化快。",
+        "弱火已经在拿整批订单下注。阿森让人开窑，亲手拖出发热的前排瓦，为工人腾出清理风道的位置。冷风里，三十七片瓦接连发出细脆裂声；他们重铺多孔炉栅，重新接通进气。新的通道让燃烧更容易开始和持续，却没有改变木柴燃烧前后本身的总能量差。",
+        "第二次点火，梅婶仍只用一把刨花。这回火苗穿过敞开的炉栅，沙漏还没走完，三根粗木已经烧着。阿森在窑旁挂起一块小木板，逐项写下改过的地方：先暖细料、留出风缝、清通烟道、让火从细木接到粗木。以后每逢冷晨，他先查这四项，再决定是否加柴。那块板提醒他，满窑木料与一场可能的火，还不是正在燃烧的窑。",
+        "屋瓦迟了一早送到。阿森赔了碎瓦和误期钱，整批利润少了一半，好在秋雨落下前屋顶已经盖好。清灰时，他最先举起的粗火把仍靠在墙边，只焦了一小块；炉栅下方，那把刨花留下了一掌宽的灰。"
       ],
       "conceptName": "Activation energy",
       "conceptNameZh": "活化能",
@@ -97,18 +99,22 @@
       "summary": "A lamp workshop adds another spoon of silver powder, but produces no extra blue lamps and accumulates unused silver.",
       "summaryZh": "灯坊往配方里多添了一勺银粉，蓝灯不但没有增加，仓里还剩下越来越多银粉。",
       "storyParagraphs": [
-        "The blue-lamp workshop fired one wick crystal from two spoons of green powder and one of silver powder. An apprentice remembered only that silver made the light bright, so he added another spoon to each batch, expecting twice the output. The number of crystals did not rise, while unused silver collected at the bottom.",
-        "The master arranged the spoons in groups. Every two green spoons paired with only one silver. Ten spoons of each could complete no more than five groups because green ran out first, leaving five silver spoons without partners. Extra material could not replace what was missing.",
-        "The apprentice then found that one sack of green powder contained impurities, so total sack weight overstated usable material. He adjusted for purity before applying the recipe. Even exact proportions did not guarantee theoretical output because incomplete firing, competing products, and handling losses could reduce the actual amount.",
-        "The recipe stated conservation relationships, not how long the firing would take. The workshop recorded quantities, purity, theoretical output, and actual output separately rather than confusing amount with speed.",
-        "For the next batch, the apprentice measured ten spoons of green powder and only five of silver. The remaining silver jar stayed closed."
+        "The blue-lamp workshop had seven nights to make sixty wick crystals for the harbour. Its rule was carved above the furnace: two measures of green powder combine with one measure of silver powder to make one crystal. Apprentice Luo remembered only that silver supplied the brilliant colour. When the first firing looked pale, he doubled the silver in every bowl. The furnace produced no extra crystals. A costly metallic paste remained at the bottom, and the harbour clerk had already counted the promised lamps.",
+        "Luo hid the residue under fresh powder until the master's scale exposed the added weight. The master did not lecture him. She placed ten green counters and ten silver counters on the bench, then grouped two green with one silver. Five complete groups appeared; five silver counters remained alone. With ten usable measures of green and ten of silver, green was exhausted first and limited the batch to five crystals. Another measure of silver could not stand in for the missing pair of green.",
+        "The workshop ordered more green powder at emergency price. Yet the next firing yielded only four crystals from material planned for five. Luo blamed the ratio until he washed a sample and found pale sand in the sack. The supplier's mark said eighty percent pure. Ten weighed measures therefore contained only eight usable green measures, enough for four groups with four silver measures. To obtain ten usable measures, they would need twelve and a half measured units of that impure stock, assuming the purity claim was itself sound.",
+        "Two nights remained. Luo set the adulterated sack on the master's desk and reported it, though the harbour deadline would now be missed. Past ledgers showed that firing and handling usually recovered nine of every ten predicted crystals; side products and fragments took the rest. Sixty delivered lamps therefore required more than sixty as a theoretical target. Quietly adding powder and hoping every predicted crystal survived would hide both purity and yield. The recipe fixed conserved ratios, while purity set usable input and the process set actual yield. None of those numbers said how quickly the furnace would run.",
+        "The master refused to seal weak crystals into lamp housings. She returned the sack, bought clean green powder, and cancelled the workshop's decorative window order to pay the surcharge. Luo weighed 132 green measures and 66 silver measures for a theoretical sixty-six crystals. At their usual ninety-percent recovery they expected about fifty-nine, so they prepared one additional correctly proportioned bowl rather than pouring in silver blindly. The arithmetic did not guarantee the outcome, but it made the risk visible before the furnace door closed.",
+        "A cracked shelf spoiled two crystals on the sixth night. The master sent word that the last lamps would arrive after the first tide and accepted the harbour's late fee. Luo wanted to add a final scoop of silver to 'make up' the loss. She pointed instead to the intact leftover bowl: two green, one silver. They fired that group, inspected the wick, and delivered the missing lamp at noon.",
+        "When the accounts were settled, the late fee and clean powder consumed the workshop's festival bonus. Luo scraped the earlier silver paste from the cold furnace and returned it to a labelled recovery jar. At the next mixing, he set down two green scoops, then one silver. The second silver jar remained closed, its lid still bearing the blue thumbprint from his first mistake."
       ],
       "storyParagraphsZh": [
-        "蓝灯坊用两勺青粉和一勺银粉烧成一枚灯芯晶。学徒只记得银粉让光更亮，便在每炉多加一勺，希望产量翻倍。出炉的晶体数量没有增加，炉底却总剩下未用完的银粉。",
-        "师傅把勺子摆成小组：每两勺青粉只能配一勺银粉。仓里若有十勺青粉与十勺银粉，最多只够完成五组，青粉先用完，剩下五勺银粉无处结合。额外材料不会补出缺少的另一方。",
-        "学徒随后发现一袋青粉含有杂质，按袋重计算会高估可用数量。他先换算纯度，再按配方关系准备各料。即使数量完全合适，实际产量仍可能因烧制不完全、旁路产物和搬运损失低于理论值。",
-        "配方只说明各材料守恒关系，并不告诉炉火需要多久。灯坊于是把用量、纯度、理论产量和实际产量分别记录，不再把反应数量与速度混在一起。",
-        "下一炉开工时，学徒先放下十勺青粉，又只取了五勺银粉。余下银粉的罐盖没有打开。"
+        "蓝灯坊要在七夜内为港口做出六十枚灯芯晶。炉口刻着配方：两份青粉与一份银粉合成一枚晶体。学徒阿洛只记得银粉带来亮蓝色，第一炉颜色偏淡时，他便把每碗银粉加倍。晶体没有多一枚，炉底却积下一层昂贵银泥；港口书吏已经按六十盏登记了船位。",
+        "阿洛用新粉盖住残渣，还是被师傅从炉重里查出。师傅没有讲大道理，只在桌上摆十枚青筹和十枚银筹，每两青配一银。最后只有五个完整小组，另有五枚银筹孤零零剩着。十份青粉与十份银粉最多做五枚晶体，因为青粉先耗尽；再添银粉，也补不出缺少的两份青粉。",
+        "灯坊高价买来新青粉，下一炉却只得到四枚，原本按五枚配的料少了一枚。阿洛怀疑比例，洗过样品后才发现袋里混着浅色砂粒。供货标记写着纯度八成：称十份，只含八份可用青粉，恰好能配四份银粉、做四组。要得到十份纯料，需称十二点五份这样的存货，还得先相信那枚八成印章。",
+        "只剩两夜。阿洛把杂料袋放到师傅桌上，如实报告，港口期限也因此注定赶不上。旧账显示，每十枚理论晶体通常只能收回九枚，裂片、旁生成分和搬运会吃掉余数。交付六十枚，就不能只准备六十枚理论量；悄悄多倒几勺、赌每枚都成形，只会把纯度与收率一同藏掉。配方决定守恒比例，纯度决定可用原料，工序决定实际收率；这些都不等于炉火需要的时间。",
+        "师傅拒绝把脆弱晶体封进灯壳。她退掉杂料，买下干净青粉，又取消自家橱窗装饰来填差价。两人先配一百三十二份青粉和六十六份银粉，理论上可得六十六枚；按九成收率约为五十九枚，于是再准备一碗比例正确的材料，而不是盲目添银。数字不能保证成品，却在关炉前把风险摆到了桌面。",
+        "第六夜，一块开裂炉板又毁掉两枚。师傅通知港口最后几盏要错过首班潮水，接受误期罚金。阿洛伸手去拿银勺，想把损失“补回来”。师傅指向剩下那碗完整配料：两青、一银。他们烧完这一组，检查灯芯，正午送出了最后一盏。",
+        "结账时，迟交罚金和净料差价吃掉了全坊的节庆奖金。阿洛从冷炉里刮出早先的银泥，装进写明“回收”的罐。下一次配料，他放下两勺青粉，再取一勺银粉。第二只银罐始终没有打开，盖上还留着他第一次多加时按下的蓝色指印。"
       ],
       "conceptName": "Stoichiometry",
       "conceptNameZh": "化学计量",
@@ -139,18 +145,18 @@
       "summary": "After an earthquake, two islands accuse each other of moving boundary stones until a surveyor finds that the stones were not what moved.",
       "summaryZh": "地震后，两座海岛都说对方偷移界石，测量员却发现移动的不是石头。",
       "storyParagraphs": [
-        "Two neighbouring islands divided fishing water with a row of coastal stones. After an earthquake, the eastern island found the markers closer to its village and accused westerners of moving them at night. The west said its own shore had retreated because the east was taking land.",
-        "A surveyor found no signs of levering at the bases. She combined old positions with seafloor measurements. The large rock masses carrying the islands had long moved relative to one another, while the earthquake released accumulated deformation suddenly. Coast and stone shifted with their own masses.",
-        "Further mapping showed that earthquakes, volcanoes, and trenches were not scattered randomly. They followed edges where the great masses separated, converged, or slid past. New seafloor formed along one line while denser ocean rock descended along another.",
-        "The islands stopped arguing over who had moved stones overnight and negotiated fishing grounds using repeatable coordinates. The surveyor warned that boundary patterns could identify hazardous regions but not predict the exact date of the next earthquake.",
-        "The new marker was not buried deeply in sand. It stood on a survey platform with each annual position engraved beside it."
+        "East Hook and West Hook divided their fishing water with black stones along a narrow beach. Three weeks before the tuna season, an earthquake split the customs shed and left the eastern stones nearly two metres closer to the village well. East Hook accused western crews of shifting them at night; West Hook answered by chaining two patrol boats across the inlet. If surveyor Mara could not settle the line by market day, both islands would miss the first shoals and hungry families would pay for the quarrel.",
+        "Mara dug around the nearest stone. Its packed shell bed was unbroken; no lever had entered it. She found an iron survey bolt inland and compared its position with records kept for twenty years. Before the shock, bolts on opposite sides had changed separation by about three centimetres a year—roughly sixty centimetres in two decades—while bolts on the same side kept nearly the same spacing. The slow movement had not been in the stones alone. Each island and its markers rode a much larger moving slab.",
+        "The old records also showed strain accumulating across the narrow boundary. The sudden earthquake released part of that deformation, so the coasts jumped while their stones stayed fixed within their own ground. Mara spread a regional chart beside the bolts. Quakes, volcanoes, ridges, and deep trenches clustered along edges: at some, slabs pulled apart and new ocean floor formed; at others, denser oceanic rock descended beneath another slab; elsewhere, neighbours slid past. The pattern explained where motion and danger concentrated, not which morning the next rupture would occur.",
+        "West Hook's chief demanded the old beach line because his people had built docks from it. East Hook wanted the displaced stones to become the new law. Mara refused both shortcuts. She proposed a coordinate boundary measured from stable reference stations and revised by joint surveys. That meant closing the cracked inlet until aftershocks were checked and surrendering four profitable fishing days. Under pressure from their boat owners, both chiefs signed. The first tuna boats passed beyond them while carpenters repaired the patrol craft on shore.",
+        "A month later, the islands opened the inlet and shared the cost of annual measurements. The old black stone remained on the beach, useless as a solitary judge but valuable as one point in a record. Four families had sold stored nets during the closure, and the council repaid them from the joint harbour fund. Mara fixed a brass plate to the inland platform: the previous coordinates, the post-quake coordinates, and a blank line for next year. Salt gathered in the engraved numbers; neither chief tried to scrape them away."
       ],
       "storyParagraphsZh": [
-        "相邻两岛以一排海边界石划分渔场。一次地震后，东岛发现界石靠近了自己的村庄，认定西岛人夜里搬过。西岛也说自家海岸线后退，是东岛在侵占。",
-        "测量员检查界石底座，没有撬动痕迹。她把多年位置与海底测量放在一起：两岛所在的大块岩层一直缓慢相对移动，地震只是边界累积变形的一次突然释放。海岸和界石随各自岩块一起改变位置。",
-        "继续绘图后，震动、火山与海沟并非散乱出现，而多沿岩块相遇、分离或擦过的边缘排列。海底一处正在形成新岩层，另一处较重的海洋岩层则向下回收。",
-        "两岛停止争论谁在一夜搬石，改用可重复测量的坐标协商渔场。测量员也提醒他们，边界格局能说明哪些地区更危险，却不能预告下一次地震的准确日期。",
-        "新界标没有再深埋进沙中。它被固定在测量台上，旁边刻着每年复测的位置。"
+        "东钩岛与西钩岛用一排黑色海滩石划分渔场。金枪鱼季前三周，一次地震震裂税棚，东侧界石离村井近了将近两米。东岛认定西岛人夜里搬石，西岛随即用两艘巡船封住水道。若测量员玛拉不能在集市日前定线，两岛都会错过第一群鱼，争端的代价将落到缺粮的家庭身上。",
+        "玛拉挖开最近的界石，底部压实的贝壳层完整，没有插过撬杆。她找到内陆铁制测量点，与二十年记录逐项核对。地震前，边界两侧的点每年约多离开三厘米，二十年合计约六十厘米；同一侧的点彼此距离却几乎不变。移动的不只是几块石头，两岛与界石都在随脚下巨大的岩石板片缓慢前行。",
+        "旧记录还显示，狭窄边界两侧的变形逐年积累，地震让其中一部分突然释放，因此海岸发生跳动，界石仍牢牢待在各自地面。玛拉又铺开区域图：地震、火山、海岭和深沟常沿边缘聚集。有些边缘彼此张开，形成新的洋底；有些相向挤压，较密的海洋岩石向下俯冲；还有些从旁擦过。图能指出危险集中在哪里，却不能报出下一次破裂的准确早晨。",
+        "西岛首领坚持沿用旧海滩线，因为码头按它修建；东岛则要把震后的石位直接写成新法。玛拉拒绝两种省事办法，提出用稳定参考点建立坐标，并由双方共同复测。这样一来，开裂水道必须先关闭检查余震，四天鱼汛也会白白流走。船主们在门外拍桌，两名首领仍签了字。第一批鱼船从远处经过时，他们的巡船还搁在岸上修补。",
+        "一个月后，水道重开，两岛共同承担每年测量费。封航期间有四户人家卖掉存网换粮，议事厅只得从联合港口金里补偿。旧黑石仍留在滩上，潮线已经漫过石脚，单独看不能再裁决边界，放进连续记录却仍有用。玛拉在内陆测量台钉上一块铜牌，刻着震前坐标、震后坐标，最下方给明年留了一行空位。盐粒渐渐填进数字，两位首领都没有把它刮掉。"
       ],
       "conceptName": "Plate tectonics",
       "conceptNameZh": "板块构造",
@@ -158,7 +164,7 @@
         "Plate tectonics describes the lithosphere as relatively moving plates whose divergent, convergent, and transform boundaries organise earthquakes, volcanoes, mountain building, and ocean-basin change. Oceanic lithosphere forms at spreading ridges and is recycled at subduction zones. The framework identifies hazard patterns but cannot provide exact earthquake timing."
       ],
       "explanationParagraphsZh": [
-        "板块构造把岩石圈描述为相对运动的板块，其张裂、汇聚与转换边界组织了地震、火山、造山和海盆变化。洋岩石圈在洋中脊形成并在俯冲带回收。该框架能识别危险格局，却不能给出地震的准确时间。"
+        "板块构造把岩石圈描述为相对运动的板块，其张裂、汇聚与转换边界组织了地震、火山、造山和海盆变化。洋岩石圈在洋中脊形成并在俯冲带回收。该框架能识别危险格局，却不能给出地震的准确时间，也不能把每次局部震动归因于同一种边界过程。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -181,18 +187,20 @@
       "summary": "A clockmaker brings a timepiece built to run for a century, but the canyon asks for time no clock has experienced.",
       "summaryZh": "钟匠带着能走一百年的表来到峡谷，岩壁却要求他计算那些钟从未经历过的时间。",
       "storyParagraphs": [
-        "A royal clockmaker built a clock that could run for one hundred years and considered himself familiar with long time. A geologist took him to a canyon where layered rock had been cut by a river. If only a little wore away each day, the clockmaker said, no human life could observe it. Perhaps one immense flood had formed everything.",
-        "The wall did contain a thin, disordered flood layer, but also hundreds of layers of slowly deposited mud and sand. A flat surface truncated the lower beds, showing that uplift and erosion had occurred before deposition resumed. One thin line could represent a long missing interval.",
-        "The geologist arranged events through their relative positions and sampled datable minerals from volcanic ash between layers. Decay measurements gave an age with uncertainty far beyond any manufactured clock. The methods did not recover every day; they constrained time within an incomplete record.",
-        "The clockmaker stopped demanding one constant rate and stopped treating immense time as always gradual. Long deposition, sudden flood, ash fall, and missing intervals could all belong to one history.",
-        "Before leaving, he placed his century clock beside the beds. Its hands continued moving, and the canyon did not look any younger."
+        "Royal clockmaker Iven had built a mechanism guaranteed to run for a century. When the court planned a coronation quarry in Red Canyon, he offered to date the rock by counting the river's yearly wear. A quick answer would win him the stone contract; a slow survey would delay the palace steps. Seeing how little the river removed in a day, he rejected gradual cutting and declared that one ancient flood must have made the whole gorge. His century dial was the longest witness he trusted.",
+        "Geologist Sera led him to the quarry face. A thin bed of jumbled boulders did record violent water, but above it lay hundreds of fine mud and sand layers, some bearing ripple marks and burrows. Farther up, a flat surface sliced across tilted lower beds and was covered by younger horizontal beds. The rock below had been deposited, hardened, tilted, lifted, and eroded before new sediment arrived. The narrow surface was not a brief event on the wall; it marked time the wall no longer contained.",
+        "Iven insisted that order was not age. Sera agreed and took suitable mineral grains from a volcanic ash bed lying between two sediment layers. She explained the comparison without pretending to count individual years: a radioactive parent changes at a known statistical rate into a daughter product. If one half remains after one half-life, one quarter remains after two and one sixteenth after four, subject to assumptions about formation and later disturbance. Their measured ratio constrained an age far beyond any clock, with an uncertainty written beside it.",
+        "Two results now resisted Iven's flood story. The ash was older than the palace dynasty by an immense margin, and the cut surface required a missing interval between two sequences. Yet Sera did not replace one simple tale with 'everything is slow.' Flood beds could form quickly, ash could fall in hours, and faults could move suddenly. Long deposition, abrupt events, erosion, and gaps belonged to the same record. Different processes ran at different rates, and the record preserved only parts of them.",
+        "The quarry foreman had already paid crews to open the straight face. Iven held his seal over the first estimate, then set it down without stamping. He reported that the planned steps crossed weathered beds and the uncertain gap. The court moved the quarry after a longer survey, while Iven forfeited his advance and paid idle wages for six days. No single measurement had replayed the canyon's past; relative order and independent clocks had narrowed a history whose pages were torn.",
+        "On the coronation morning, the new steps held. Iven returned to Red Canyon with his century clock and fixed it beside the unconformity as a survey marker. Its second hand crossed the brass face with perfect confidence. Above it, one pencil-thin boundary separated tilted beds from flat ones, and the missing span still had no tick marks."
       ],
       "storyParagraphsZh": [
-        "王城钟匠制造了一只能走一百年的钟，便认为自己很懂漫长时间。地质师请他到峡谷，看层层岩石怎样被河流切开。钟匠觉得若每天只磨掉一点，人的一生根本看不出变化，峡谷或许来自一次巨大洪水。",
-        "岩壁里确实有薄而混乱的洪水层，也有数百层缓慢沉积的泥与沙。中间一处平整界面截断了下层，说明那里曾经历抬升与侵蚀，随后才重新沉积。很薄的一条线，可能代表漫长缺失。",
-        "地质师用上下关系排列事件，又从夹在层中的火山灰取得适合测年的矿物。衰变测量给出带不确定范围的年龄，远远超过任何人造钟。不同方法并非把每一天复原，而是在不完整记录中约束时间。",
-        "钟匠不再要求所有变化都保持相同速度，也不再把巨大时间理解成永远缓慢。长期沉积、突然洪水、火山灰和缺失间隔，都能进入同一段历史。",
-        "离开时，他把百年钟放在岩层旁。钟针仍在走，峡谷没有因此显得年轻一点。"
+        "王城钟匠伊文造出一只能走百年的钟。宫廷准备在红峡谷开采加冕礼石阶，他提出按河水每年的磨蚀量给岩石计时；快速交出答案，就能拿下石料合同。见河流一天只带走一点粉砂，他反而断言缓慢磨蚀不可能造出峡谷，整条深沟必定来自一次古老洪水。他只信任自己那只能见证一百年的表盘。",
+        "地质师塞拉带他来到采面。岩壁里确有一层混乱巨砾，像是急流留下；上方却叠着数百层细泥和砂，其中还有波纹与生物钻痕。更高处，一道平面切断倾斜下层，上面又铺着较新的水平岩层。下层必须先沉积、固结、倾斜、抬升并受侵蚀，之后才重新被覆盖。墙上极薄的一条界面，记录的恰是岩壁已经丢失的时间。",
+        "伊文说先后顺序不等于年龄。塞拉同意，便从夹在两层沉积物之间的火山灰里取出适合测年的矿粒。她没有假装逐年计数：某种放射性母体会按已知统计速率变成子体；一个半衰期后剩二分之一，两个后剩四分之一，四个后剩十六分之一，还要检查矿物形成与后来扰动的假设。测得比例把年龄约束到任何人造钟都未经历的范围，旁边也写着不确定度。",
+        "两项结果都顶住了伊文的一场洪水说：火山灰远早于王朝，那道切面也要求两段沉积之间有漫长缺页。塞拉并没有改说“一切都很慢”。洪水层可能迅速堆成，火山灰可在短时间落下，断层也会突然移动；长期沉积、急剧事件、侵蚀和空白能出现在同一本记录里。不同过程速度不同，而石壁只保存其中一部分。",
+        "采石工已经领钱打开直线采面。伊文把印章悬在最初判断上方，最后没有盖下去。他报告石阶方案穿过风化层与那段不确定界面。宫廷延长勘测、另移采面，他退还预付款，还承担六天停工钱。没有一种方法重放峡谷的每一天，相对先后与独立时钟只是共同缩小一段残缺历史的范围。",
+        "加冕那天，新石阶稳稳承住人群。伊文回到红峡谷，把百年钟固定在那道不整合面旁，作为测量标记。秒针自信地划过铜盘；表盘上方，一条铅笔般细的边界隔开倾斜与水平岩层，那段缺失岁月仍没有刻度。"
       ],
       "conceptName": "Deep time",
       "conceptNameZh": "深时",
@@ -223,18 +231,22 @@
       "summary": "A museum wants to carve one permanent name beneath a stone, but a geologist reads several earlier identities within it.",
       "summaryZh": "博物馆想给一块石头刻下永久名称，地质师却从它身上读出了好几次身份变化。",
       "storyParagraphs": [
-        "A mountain museum received a dark crystalline rock, and its director wanted the base engraved 'Igneous rock, forever'. A geologist found fragments of older sediment inside. Those grains had once become layers, changed under heat, and partly melted before crystallising again.",
-        "After exposure on a summit, wind and rain would break the same rock into pieces. Rivers could carry them to a lake, where burial might cement them into sedimentary rock. Taken deeper under heat and pressure, they could change again. No route required every rock to follow every name in one order.",
-        "The director asked what the rock would finally become. The geologist could not answer. Uplift, erosion, burial, melting, and crystallisation depended on different energies and conditions, with rates from sudden to immense. One mineral grain could skip stages or remain in one place for a very long time.",
-        "The museum still labelled the specimen igneous, but added its formation evidence and possible paths rather than treating the name as an endpoint. Visitors could see that the category described current origin and features, not a permanent identity.",
-        "Before engraving, the director removed the words 'forever' and left only the collection place and observation date."
+        "The mountain museum received a dark crystalline block from a railway cutting. Its donor demanded a bronze plaque reading, 'First Stone of the Mountain—unchanged forever,' and promised to fund the winter roof if the words appeared at the gala. Director Vale accepted; a permanent name was easier to display than an unfinished history. Geologist An took a thin slice before the plaque was cast and found pale fragments enclosed by later crystals. The block had already contained older material before anyone placed it in a museum.",
+        "Under the microscope, some grains were rounded like transported sediment; others had recrystallised under heat and pressure. Part of that earlier rock had melted, then cooled slowly enough for interlocking crystals to grow around surviving fragments. An labelled the observed specimen by its latest formation as an igneous rock, but she would not call that its first or final identity. The evidence supported one route into its present state, not an unbroken birth certificate for every grain.",
+        "Vale called the distinctions academic until rain entered the railway cutting. Water froze in cracks, loosened chips, and sent them down the slope. A stream rolled the sharp pieces until their edges dulled. If deposited, buried, compacted, and cemented, those fragments could become sedimentary rock. If carried deeper without melting, heat, pressure, and reactive fluids could change minerals and texture into metamorphic rock. If melting occurred, cooling could make another igneous body.",
+        "The museum carpenter drew a neat circle with three boxes and arrows. An crossed out the single compulsory route. A rock could weather without first becoming metamorphic, metamorphose without melting, melt from several starting states, rise and remain exposed, or stay buried for an immense interval. Solar-driven weather, gravity and water transport, burial, Earth's internal heat, pressure, melting, cooling, and uplift supplied different parts of the journey. A cycle meant connected transformations, not a timetable every stone obeyed.",
+        "Then a roof beam leaked above the new gallery. Snow was close, and the donor's promised repair money still depended on the words 'unchanged forever.' Vale carried the bronze plate to him with the thin section, river chips, and crossed-out diagram, and asked that the words be removed. The donor withdrew half the gift. Vale sold two display cases and closed the east room for winter rather than attach a claim the specimen itself contradicted.",
+        "At the gala, the block stood on a plain base. Its label named the current rock type, collection place, visible minerals, and evidence for partial melting and crystallisation. Beside it lay three loose chips from the cutting and a map of possible paths, each arrow tied to a process and condition. Visitors did not have to imagine that the hand specimen would personally complete them all.",
+        "Spring thaw reopened the east room. Vale found the rejected plaque in storage, its polished promise still catching light. He took it to the engraver, ground away 'unchanged forever,' and added the collection date beneath the mountain's name. A shallow bronze hollow remained where the permanent words had been."
       ],
       "storyParagraphsZh": [
-        "山城博物馆收到一块带晶体的黑石，馆长要在底座刻下“火成岩，永远如此”。地质师却在石中发现更早沉积物的残片：它们曾被压成岩层，后来受热改变，再有一部分熔融并重新结晶。",
-        "同一块石头出露山顶后，风雨又让它裂成碎屑。碎屑被河流搬到湖底，若继续埋藏，可能胶结成新的沉积岩；若被带到深处受压受热，又会发生别的变化。没有一条路要求它按固定顺序走完所有名称。",
-        "馆长问它最终会成为什么。地质师无法回答，因为抬升、侵蚀、埋藏、熔融与结晶由不同能量和条件驱动，速度也从骤然到漫长不等。一粒矿物可以跳过阶段，也可能在一处停留极久。",
-        "博物馆仍为当前石样标注火成岩，却在旁边增加形成证据和可能路径，而不是把名称当作终点。参观者能看见分类描述的是此刻的形成特征，不是一份永久身份。",
-        "刻字前，馆长删掉了底座上的“永远如此”，只留下采集地点和观察日期。"
+        "山城博物馆从铁路切坡收到一块深色晶质岩。捐赠人要求铜牌写上“山脉最初之石，永远不变”，只要晚宴上出现这行字，他便出钱修冬季屋顶。馆长维尔答应了；永久名称比残缺历史更好陈列。地质师安在铸牌前切下一片薄片，发现晚期晶体包裹着浅色旧碎片。这块石头进馆以前，内部已经装着别的材料。",
+        "显微镜下，一些颗粒圆润，像被水搬运过的沉积物；另一些在高温高压下重新结晶。更早的岩石曾部分熔融，随后缓慢冷却，交错晶体在未熔碎片周围长成。安按最近一次形成过程把样品标为火成岩，却不肯把它叫作所有矿粒的第一或最终身份。眼前证据支持它怎样来到当前状态，不能替每一粒矿物开出从未改变的出生证明。",
+        "维尔原以为这只是学术争执，直到雨水进入铁路切坡。水在裂缝里结冰，崩下碎块；溪流继续滚动，让尖角变钝。碎屑若沉积、埋藏、压实并胶结，可形成沉积岩；若未熔融便被带往深处，高温、压力和流体能改变矿物与构造，形成变质岩；若发生熔融，冷却后又可能成为新的火成岩。",
+        "木匠画了一个三个方框首尾相接的圆。安把那条唯一必经路线划掉：岩石可不经变质就风化，可在不熔融时变质，也可从多种起点熔化；它还能抬升后长期暴露，或深埋极久。太阳驱动风化，重力与水搬运碎屑，埋藏、高温高压、熔融、冷却和抬升各自推动不同路段。循环表示过程相连，不是一张每块石头必须遵守的时刻表。",
+        "这时新展厅屋梁漏水，降雪已近，捐赠人的修缮费却仍绑在“永远不变”四字上。维尔带着铜牌、薄片、河中碎石和被划改的图去见对方，请他删字。捐赠人撤回一半资助。维尔卖掉两只展柜，冬季关闭东厅，也没有把样品自身反驳的话钉到底座上。",
+        "晚宴上，黑石立在素净石座上。标签写明当前岩类、采集地点、可见矿物，以及部分熔融和结晶的证据。旁边放着切坡崩下的三块碎片和一张分叉路线图，每支箭都注明条件与过程。参观者无需假定手中那一块岩石会亲自走完所有路线。",
+        "春融后，东厅重新开放。维尔在库房找到退回的铜牌，抛光的承诺仍很亮。他请刻字匠磨掉“永远不变”，只在山名下补上采集日期。原来那行永久文字的位置，留下一道浅浅的铜槽。"
       ],
       "conceptName": "Rock cycle",
       "conceptNameZh": "岩石循环",
@@ -242,7 +254,7 @@
         "The rock cycle connects formation and transformation among igneous, sedimentary, and metamorphic rocks through crystallisation, weathering, transport, deposition, lithification, metamorphism, melting, and uplift. It is not a fixed sequence or compulsory circle. A rock may follow branches, skip stages, or remain in one state for a very long time."
       ],
       "explanationParagraphsZh": [
-        "岩石循环连接火成岩、沉积岩与变质岩的形成和转化，包括结晶、风化、搬运、沉积、成岩、变质、熔融与抬升。它不是固定顺序或必经圆环；单块岩石可走不同分支、跳过阶段，或在某状态停留很久。"
+        "岩石循环连接火成岩、沉积岩与变质岩的形成和转化，包括结晶、风化、搬运、沉积、成岩、变质、熔融与抬升。它不是固定顺序或必经圆环；单块岩石可走不同分支、跳过阶段，或在某状态停留很久。分类依据形成过程与证据，不是永久身份。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -265,18 +277,18 @@
       "summary": "Water falls from a height, yet the millshaft receives less turning power, so the clerk declares that part of the energy has vanished.",
       "summaryZh": "水从高处落下，磨坊得到的转动力却少了一截，账房认定那部分能量已经消失。",
       "storyParagraphs": [
-        "When the new waterwheel began work, the engineer calculated the energy available in water falling from above. The millshaft received much less useful turning power, and the clerk entered the difference as 'lost'. He assumed anything not reaching the millstone no longer existed.",
-        "The engineer touched a warm bearing, listened to the wheel striking water, and measured speed remaining in the outflow. Vibration also entered the foundation. If the boundary enclosed only the millstone, heat, sound, moving water, and structural motion all disappeared from the account.",
-        "They redrew the boundary around the whole device and recorded input, output, mechanical work, heat, and temporary storage. The total balanced. What had fallen was the share converted into useful shaft work. The energy remained, but some had become dispersed and difficult to gather again.",
-        "New bearings and channels increased useful output and reduced waste heat, but conservation did not guarantee efficiency. It required every transfer and form to be included, not every part to perform the desired work.",
-        "At month's end, the clerk kept the loss column but divided it into heat, sound, outflow, and friction. The blank space was finally filled."
+        "The river mill had to grind the army's winter flour before the first freeze. Engineer Arda calculated that the falling water delivered one hundred energy units each minute, yet the shaft supplied only sixty-two units of useful turning work. Clerk Bo wrote 'thirty-eight lost' and urged the owner to demand a larger upstream gate. If they admitted the new wheel was inefficient, payment would be withheld; if they opened more water, the lower farms would lose irrigation.",
+        "Arda refused to enlarge the gate until the missing entry was found. She wrapped cloth around the bearing and watched its thermometer rise, listened to the slap of blades, measured fast water leaving the tailrace, and set a cup on the foundation to reveal vibration. During a steady minute, their approximate account read: sixty-two units at the shaft, eighteen in moving outflow, twelve transferred as heat through bearing and turbulent water, and eight in sound and vibration. The categories were imperfect measurements, but together they closed the same hundred-unit boundary.",
+        "Bo objected that heat and noise could not turn a millstone, so they deserved the word vanished. Arda drew one line around the whole mill and another around the shaft. Across the larger boundary, energy entered with water and left as work, motion, and heat; none needed to disappear. Across the smaller boundary, only part arrived as useful work. The distinction saved the physical account but exposed the commercial problem: the machine conserved total energy while delivering a poor fraction in the form they wanted.",
+        "The owner wanted to keep grinding through the night and conceal the warm bearing. Arda made him choose between one day of missed flour and a possible seized axle. He stopped the wheel, paid the army's delay fee, and let her replace the rough bearing and reshape the channel. On restart, useful shaft work rose to seventy-four units from the same measured input; the other twenty-six still appeared in outflow, heat, sound, vibration, and small storage changes. Better efficiency rearranged the transfers. It did not create energy or follow automatically from the accounting rule.",
+        "The flour shipment left a day late, and the owner lost the winter bonus, but the lower farms kept their water. At month's end Bo did not erase his loss column. He split it into measured outflow, heat, sound, vibration, and unaccounted uncertainty, then drew the system boundary in red beside the totals. The page that once held a blank thirty-eight now held numbers adding to one hundred; a brown ring from the hot bearing remained around its corner."
       ],
       "storyParagraphsZh": [
-        "新水车开工时，工程师计算了高处水流能够带来的能量。磨轴实际得到的转动力少了许多，账房便在记录里写下“损失”。他以为没有进入磨石的部分已经不复存在。",
-        "工程师摸了摸发热的轴承，听见水轮撞水的声响，又测量流出水渠仍有的速度。磨坊还把一部分振动传进地基。若只把边界画在磨石周围，热、声、剩余水流和结构运动都会从账上消失。",
-        "他们重新划定整个装置的边界，把流入、流出、机械功、热和暂时储存逐项记录。总量能够对上，真正降低的是转成有用磨轴功的份额。能量仍在，却有些变得分散，难以重新集中利用。",
-        "换好轴承与水道后，有用输出增加，废热减少，但效率仍不可能用“守恒”自动保证。守恒只要求所有转移和形式被计入，不承诺每一份都能完成想要的工作。",
-        "月底，账房没有删掉“损失”一栏。他把它拆成热、声、出水与摩擦，空白处终于填满。"
+        "河边磨坊必须在封冻前磨完军粮。工程师阿妲算出落水每分钟带来一百份能量，磨轴却只给出六十二份有用转动。账房阿波写下“失踪三十八份”，催老板向上游多开水闸。承认新水车低效，尾款会被扣；加大水量，下游农田又会失去灌溉。仓库外，等面粉的军车已经排到石桥。",
+        "阿妲不同意先开闸。她给轴承裹上测温布，听叶片拍水，量出尾水仍有的速度，又把一杯水放在地基上看振纹。稳定运转的一分钟里，账大致是：磨轴六十二份，尾水运动十八份，轴承与乱流带走的热十二份，声响和振动八份。各项测量并不完美，却在同一边界内合成了最初的一百。阿波反复重算三遍，杯中水面仍在细细发颤。",
+        "阿波说热和噪声不能磨面，就该算消失。阿妲在纸上画两条线，一条圈住整座磨坊，一条只圈磨轴。对大边界，能量随水进入，以功、运动和热离开；对小边界，只有一部分成为想要的轴功。物理账对上了，生意问题反而更清楚：总量没有少，能被利用的那一份却不够。",
+        "老板想连夜赶工，叫人把发热轴承藏起来。阿妲让他在一天误期与整根磨轴抱死之间选。他停下水车，缴了延期罚金，让她更换粗糙轴承并重修水槽。停机那晚，二十名短工没有工钱，老板又把自家银餐具押给粮官。重新开机后，同样输入可得到七十四份轴功；其余二十六份仍进入尾水、热、声、振动和少量暂存。效率提高，是传递比例改变，不是凭空造出能量，也不是总量相等自动带来的。",
+        "面粉迟了一天出发，老板失去冬季奖金，下游农田却保住了水。月底，阿波没有删掉“损失”栏，而是拆成尾水、热、声、振动与测量未尽项，并在旁边用红笔圈出核算边界。他还把停机罚金另写在生意账里，不再让物理账替老板遮掩低效。原先空着三十八份的那页，如今各项正好加到一百；纸角仍留着热轴承压出的褐色圆印。"
       ],
       "conceptName": "Conservation of energy",
       "conceptNameZh": "能量守恒",
@@ -284,7 +296,7 @@
         "Conservation of energy states that total energy in an isolated system remains constant while changing form or moving among parts. Open-system accounting must include work, heat, radiation, material flow, and storage change. Conservation does not imply perfect efficiency; energy can remain while becoming more dispersed and less available for useful work."
       ],
       "explanationParagraphsZh": [
-        "能量守恒指出孤立系统总能量不变，能量可改变形式或在部分之间转移。开放系统核算必须包括功、热、辐射、物质流和储存变化。守恒不等于效率完美；能量虽未消失，却可能变得更分散、更难转化为有用功。"
+        "能量守恒指出孤立系统总能量不变，能量可改变形式或在部分之间转移。开放系统核算必须包括功、热、辐射、物质流和储存变化。守恒不等于效率完美；能量虽未消失，却可能变得更分散、更难转化为有用功。判断前必须先说清系统边界与计量时间。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -307,18 +319,20 @@
       "summary": "An icehouse owner assumes cold has merely escaped into the yard and waits for it to return at night.",
       "summaryZh": "冰窖主人以为冷气只是跑出了房间，便等着它在夜里自己回来。",
       "storyParagraphs": [
-        "An icehouse owner found that blocks melted quickly after the door was left open. He said the cold had escaped into the yard and should return when night cooled the air. But after temperatures equalised, the meltwater did not gather itself into ordered blocks of ice.",
-        "A mechanic explained that heat spreads from warmer to cooler places and that many microscopic arrangements correspond to the more dispersed condition. The reverse was not a logical impossibility, but it would not sustain itself at macroscopic scale. Making the room cold again required work to move heat out.",
-        "They installed a cooling machine driven by a waterwheel. The inner chamber cooled, but the outdoor coils grew warm and the wheel consumed usable energy from the river. Restoring local cold had not reduced energy dispersal in the whole surroundings; the environment received more heat and dissipation.",
-        "The owner also kept the door shut and added insulation, reducing the heat that had to be moved. Living systems and machines could maintain local order within open boundaries, but only through continuing energy flow and exported cost.",
-        "After the first new ice froze, the owner did not wait for cold to return. He secured the door and checked the warm coils outside."
+        "Icehouse owner Ren had promised carved ice for the midsummer banquet. Porters left the door open while loading, and by noon the lowest blocks stood in water. Ren said the cold had merely escaped into the yard; the cool night would bring it home, so he kept accepting orders. At dawn the room and yard were nearly the same temperature, yet the puddle had not gathered itself into clear blocks. Six crates were ruined, and the banquet steward threatened to claim Ren's house as compensation.",
+        "Mechanic Isha placed one warm stone and one cold stone together. Heat spread until their temperatures approached each other. At the microscopic level, vastly more arrangements shared energy broadly than concentrated it back into the warmer stone while cooling the other. A spontaneous reverse fluctuation was not forbidden by logic, but for so many particles it was overwhelmingly unlikely and would not provide a dependable business. Ren could not schedule ice by waiting for dispersed energy to collect on command.",
+        "Isha offered a cooling machine driven by the millrace. In a test hour, it removed thirty units of heat from the chamber while consuming ten units of work. The outdoor coil released about forty units: the thirty moved from inside plus the work that ultimately became heat. The chamber grew colder, but the yard near the coil grew warmer and the waterwheel surrendered usable motion. Local reversal required an energy flow and increased the total dispersal outside the chosen cold room.",
+        "Ren ordered the machine run harder, then discovered a second cost. With the door still open, warm humid air continually entered, frost thickened on the coils, and the wheel strained. Three farmers arrived when he reached for the millrace gate. Ren let the gate remain at its mark, cancelled the swans and towers, closed half the room, and paid to repair its felt insulation. The steward kept his deposit while workers sealed the warped door and carried surviving blocks into a smaller chamber.",
+        "With less heat leaking in, the same machine froze new trays before the banquet. Isha warned that a tidy cold room did not violate the direction seen in the larger system. Machines and living things can maintain organised local states when matter and energy cross their boundaries; the bookkeeping must include fuel or work and the heat released elsewhere. The second law described the overwhelmingly favoured statistical direction for an isolated whole, not a ban on every local increase of order.",
+        "Ren delivered plain blocks instead of carved swans and lost the season's profit. That night he walked past the meltwater buckets, slid the repaired bolt into the door, and put his palm near the outside coil. It was hot enough to make him pull back. Inside, the first new sheet of ice hardened around the iron key he had left on its tray."
       ],
       "storyParagraphsZh": [
-        "冰窖主人发现门开以后，冰块融得很快。他说冷气只是逃进了院子，夜里天气转凉时应该自己回到冰窖。可屋内外温度接近后，融化的水没有自行重新结成整齐冰块。",
-        "工匠解释，热量会从较暖处向较冷处扩散，许多微观安排都对应这种更分散的状态；反向聚回并非逻辑上绝无可能，却在宏观上不会自行持续发生。要让冰窖重新变冷，必须做功把热搬出去。",
-        "他们装上由水轮驱动的冷却机。机内空间降温，院外散热片却变热，水轮也消耗河流可用能量。冰窖局部恢复低温，并没有让整个环境的能量分散减少；周围得到的热与耗散更多。",
-        "主人还学会关门、加隔热，减少必须搬走的热。生命与机器都能在开放边界内维持局部有序，但需要持续能量流，并把代价送往环境。",
-        "第一批新冰冻好后，主人没有等冷气自己回来。他先关紧窖门，又去检查院外仍在发热的散热片。"
+        "冰窖主人阿任答应为盛夏宴席雕出一批冰景。搬运工装货时敞着门，正午过后，最下层冰块已经泡在水里。阿任说冷气只是跑进院子，凉夜会把它送回来，仍继续接单。第二天清晨，室内外温度已接近，地上的水却没有自己聚回透明冰块。六箱货报废，宴会管事扬言要拿他的房契抵赔偿。",
+        "工匠伊莎把一块暖石和一块冷石贴在一起，热逐渐扩散，直到温度接近。微观上，把能量分散到许多粒子的排列远多于让能量重新集中、使一块更热而另一块更冷的排列。反向涨落在逻辑上并非绝无可能，但对海量粒子而言概率小得不能拿来排工期。阿任不能靠等待，让分散的能量准时自行聚回。",
+        "伊莎装上一台由水轮驱动的冷却机。试运一小时，机器从窖内搬走三十份热，又消耗十份功，院外散热管大约放出四十份：三十份来自室内，十份功最终也化成热。窖里变冷，散热管旁的院子却更热，水轮还交出了可用转动。局部恢复低温需要能量流，若把整个装置与环境算进去，分散没有因此减少。",
+        "阿任命机器加速，很快遇到第二个麻烦。窖门继续漏风，暖湿空气不断进入，盘管结霜，水轮越转越沉。他伸手要开大磨渠闸时，三户农人已经赶到。阿任让闸门停在原刻度，退掉天鹅与冰塔，关闭半间冰室并出钱修补毡层。宴会管事扣下订金；工人校正变形木门，把剩余冰块搬入较小房间。",
+        "漏入的热减少后，同一台机器终于在宴会前冻好新冰。伊莎提醒他，整洁低温的房间并未违背更大范围里的方向。机器和生命都能在开放边界内维持局部有序，但核算必须包括输入的功、穿过边界的物质与送往别处的热。那条规律描述孤立整体压倒性占优的统计方向，并不禁止任何地方暂时变得更整齐。",
+        "阿任只交出普通冰块，整季利润全部赔掉。夜里，他绕过装满融水的木桶，把修好的门闩推到底，又伸手靠近院外盘管。热气逼得他立刻缩手。冰窖里面，第一张新冰正把他忘在托盘上的铁钥匙冻在中央。"
       ],
       "conceptName": "Entropy",
       "conceptNameZh": "熵",
@@ -349,18 +363,22 @@
       "summary": "Iron needles across a square never touch one another, yet turn toward the fountain at the same time.",
       "summaryZh": "广场上的铁针没有彼此相碰，却在同一时刻朝向了喷泉。",
       "storyParagraphs": [
-        "A craftsperson placed dozens of freely turning iron needles around a square. A large magnet lay beneath the fountain. The needles touched neither it nor one another, yet turned at different angles. Those nearer the fountain generally moved more strongly.",
-        "An apprentice thought the first needle passed an instruction to the rest and removed several. The remaining directions persisted. A surveyor drew an arrow at each position, recording how a suitable test object would respond there. Even an empty point could be assigned an expected direction and strength.",
-        "Different test objects responded differently. The force on a needle depended both on the state at that location and on how the object itself coupled to it. It was not solely a property of the square or the needle.",
-        "When the hidden magnet moved, the pattern across the square changed. More generally, disturbances from a source need not reach arbitrarily distant places instantly. A field can carry energy and momentum rather than merely serving as bookkeeping for action at a distance.",
-        "After every needle was removed at night, the surveyor left the arrow map on the stones. The first needle returned the next morning turned immediately along its arrow."
+        "Before the compass-makers' fair, every needle carried across Fountain Square twisted away from north. Guild master Toma blamed a rival stall and ordered apprentice Ves to find the hidden trick before visitors arrived. Ves placed twenty freely turning iron needles on marked paving stones. None touched another, yet each settled at its own angle; those near the fountain turned more sharply. If the guild cancelled the fair, it would lose a year's orders. If it sold compasses there, customers would call every instrument defective.",
+        "Ves assumed one needle signalled the next like runners in a line. He removed every second needle, then all but one. The survivor still turned. Surveyor Elin asked him to carry the same small compass from mark to mark. At each position she drew an arrow in the direction its north end pointed and wrote a relative strength beside it. The map assigned a value even to paving stones where no test needle remained. It described what a suitable probe would do if placed there, not messages passed among the probes.",
+        "At one mark the compass experienced a strong torque; two paces away it experienced less. Ves replaced it with a copper disk and saw almost no comparable turning. Elin would not call the first reading a property of the needle alone or of the square alone. The source established a spatial condition, while the response depended on the probe's own magnetic moment and orientation. With a different kind of field, a scalar might be assigned instead of an arrow, or a more complicated quantity might be needed.",
+        "They lifted one fountain slab and found an iron chest with a large magnet in its latch. Moving the chest changed the entire arrow map. Ves wanted to say the distant arrows must change in the same instant, but Elin stopped him: their slow survey only compared static patterns and could not measure propagation time. In physical theory, changes and disturbances travel at finite speed, and fields can carry energy and momentum. A still compass map by itself proved none of those timing claims.",
+        "The fair committee demanded that Toma leave the fountain intact and merely mark a 'bad compass zone.' The chest, however, belonged to the treasury, and moving it required breaking the new marble pavement. Toma chose to postpone the fair, paid refunds to travelling sellers, and let masons raise six slabs. The treasury moved the chest into a shielded stone room beyond the square. Three days of income disappeared into the repair bill.",
+        "Elin repeated the measurements after every slab was reset. The arrows now lay close to geographic north within their instruments' uncertainty, though iron nails in one bench still produced a small local deviation. She kept both maps. One recorded the pattern before the source moved; the other recorded the pattern after. Neither map claimed that an arrow was a material thread stretching from fountain to needle.",
+        "The fair reopened under rain-dark awnings. Ves removed all twenty test needles and swept the paving clean, but Toma asked him not to wash away the tiny arrow marks until closing. A customer set a compass on the stone farthest from the fountain. Its needle settled along Elin's newer arrow. Under the glass, the older crossed-out direction was still faintly visible."
       ],
       "storyParagraphsZh": [
-        "工匠在广场不同位置摆下几十枚能自由转动的铁针。喷泉底下藏着一块大磁石，铁针没有碰到它，也没有互相连接，却各自转向不同角度。离喷泉越近，转向通常越明显。",
-        "学徒以为是第一枚铁针把命令传给后面的针，便取走其中几枚。剩下的方向没有消失。测量师在每个位置画出箭头，记录那里若放入合适测试物会受到怎样的作用；没有铁针的位置也能赋予一个预计方向和强度。",
-        "换成不同性质的测试物，响应会不同。铁针的受力同时取决于广场中该处的状态和它自身怎样与之相互作用，不能把测得的力只当作广场或铁针单方面的属性。",
-        "工匠移动底下磁石时，广场各处的图样随之改变。更一般地，源产生的扰动并非必须瞬间传到无限远，场本身还能携带能量和动量，而不只是远距离作用的记账方式。",
-        "夜里收走所有铁针后，测量师仍把箭头图留在地上。第二天第一枚针放回时，立刻沿着图中的方向转了过去。"
+        "罗盘匠集市开幕前，所有经过喷泉广场的指针都会偏离北方。行会师傅托马怀疑对手做了手脚，命学徒维斯在客商到达前查明。他把二十枚可自由转动的铁针摆上标记石，针与针互不接触，却各自停在不同角度，靠近喷泉的偏转通常更强。取消集市会损失全年订单，照常卖货又会让顾客认定罗盘全是坏的。",
+        "维斯以为第一枚针像传话人一样命令后面的针，先撤掉隔一枚的针，后来只留一枚，它仍旧转向。测量员艾琳让他拿同一只小罗盘逐点移动，在每块石上画出北端所指箭头，并记下相对强弱。即使某处没有测试针，也能记录“若放入合适探针，它将怎样响应”。这张图描述空间各处的状态，不是探针之间相互传话。",
+        "同一标点上，罗盘受到明显转矩；移开两步，作用减弱。维斯换上一片铜盘，便看不到相同转向。艾琳不把读数说成铁针或广场单方面的属性：源在空间中建立状态，探针的磁矩和朝向决定它怎样耦合、怎样响应。别的情形可能只需给每点一个数值，也可能需要比箭头更复杂的量；画什么取决于被描述的物理量。",
+        "他们撬起一块喷泉石板，发现国库铁箱的锁扣藏着大磁石。搬动铁箱，整张箭头图都随之改变。维斯正要说远处必在同一瞬间改变，艾琳拦住了他：这次慢速测量只比较两个静态图样，根本没有测传播时间。更完整的物理理论里，扰动以有限速度传播，场也能携带能量与动量；一张静止罗盘图不能单独证明这些时间结论。",
+        "集市委托人要求托马保留喷泉，只挂一块“罗盘失准区”木牌。可铁箱属于国库，搬走它就得拆掉新铺的大理石。托马最终推迟开市，退还外地商贩摊费，让石匠掀开六块地砖，把铁箱移进广场外的屏蔽石室。三天收入全部填进修缮账。",
+        "石板复位后，艾琳重新逐点测量。各箭头在仪器误差内已接近地理北向，只有长椅里的铁钉还造成一小块局部偏差。她保留了前后两张图：一张记录源移动前，一张记录移动后。两张图都没有把箭头说成从喷泉拉到铁针的物质细线。",
+        "雨后的集市终于开张。维斯收走二十枚测试针，正要洗掉地面标记，托马让他等到收市。一名顾客把罗盘放在离喷泉最远的石上，指针沿艾琳的新箭头停稳。玻璃下面，旧方向那道被划掉的细线仍隐约可见。"
       ],
       "conceptName": "Field concept",
       "conceptNameZh": "场概念",
@@ -368,7 +386,7 @@
         "A field assigns a physical quantity to every point in space and time and may be scalar, vector, or more complex. Sources shape fields, while objects respond through their coupling, so measured force depends on both. Fields can store and transfer energy and momentum and propagate disturbances at finite speed, not merely record distant action."
       ],
       "explanationParagraphsZh": [
-        "场概念把物理量赋予时空中的每一点，可为标量、向量或更复杂对象。源塑造场，物体按自身耦合性质响应，测得的力同时取决于两者。场能够储存和传递能量、动量，并以有限速度传播扰动，不只是远距作用的数学记账。"
+        "场概念把物理量赋予时空中的每一点，可为标量、向量或更复杂对象。源塑造场，物体按自身耦合性质响应，测得的力同时取决于两者。场能够储存和传递能量、动量，并以有限速度传播扰动，不只是远距作用的数学记账。静态图样本身不能测出传播速度。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -391,18 +409,18 @@
       "summary": "An apprentice flips stones hundreds of times but cannot reach the target because every permitted move preserves one fact.",
       "summaryZh": "学徒把石子翻了几百次，仍无法得到目标图案，因为每次允许的动作都保留着同一件事。",
       "storyParagraphs": [
-        "The mathematics hall had ten pebbles, black on one side and white on the other. Four began black side up. The rules allowed an apprentice to flip any two stones at once. The target was exactly five black stones.",
-        "He tried for a whole day. Flipping two white stones added two black ones; flipping two black removed two; one of each left the count unchanged. Positions and order changed repeatedly, but the number of black faces remained even.",
-        "A companion suggested putting the stones in a box and changing their order unseen. The box could hide the process but not alter the permitted move. Every step changed the black count by zero or two, so a start at four could never reach five.",
-        "They had ruled out the target without listing every sequence. The master noted that parity provided an obstruction: if a target were also even, matching parity alone would not prove reachability. They would still need a construction or further conditions.",
-        "Before closing the hall, the apprentice returned the picture of five black stones to the box. The lid closed over a target whose oddness remained unchanged."
+        "At the winter games, the mathematics hall offered a silver compass to anyone who could turn ten two-faced pebbles from four black sides showing to exactly five. A move had to flip two pebbles at once, and the judge inspected every hand. Apprentice Jian had won earlier puzzles by trying faster than everyone else, so he paid the entry fee with money meant for new boots and promised his younger brother the compass by dusk.",
+        "Jian began with two white pebbles, raising the black count from four to six. Flipping two black lowered it back to four. Flipping one of each moved the black face from one position to another but left the count at four. He tried hundreds of sequences, made rows, circles, and mirrored patterns, and repeatedly reached zero, two, four, six, eight, or ten black faces—never five. He tore three pages from his notebook to record paths, then began repeating paths without noticing. The crowd thinned while his fingers grew grey from stone dust.",
+        "His friend offered a trick: put the pebbles into a box, shake them, and perform the next move where the judge could not follow the order. Jian nearly agreed; the prize was worth ten times his fee. Then he wrote the effect of every legal move on the lid. Two whites changed the count by plus two, two blacks by minus two, and one of each by zero. Starting from the even number four, every permitted step left the count even. Hidden order could conceal cheating, but no legal sequence could cross to odd five.",
+        "Jian carried the closed box to the judge and said the announced target was unreachable under the posted rule. The judge offered to return his fee if he quietly withdrew; admitting a flawed game would embarrass the hall. Jian instead placed his three-line argument on the public board. He lost the compass and, for breaking the agreement, his fee. The hall cancelled the round. The master later added that matching the preserved parity would only remove this obstacle: an even target might still require a construction or face another restriction.",
+        "Jian walked home through sleet in his old split boots, with meltwater soaking both socks. His brother was waiting for the silver compass, so Jian gave him the only thing he had brought back: the target card with five black circles, and explained why the boot money was gone. They stored it inside the puzzle box. Years later the lid still bore the three possible changes—plus two, minus two, zero—and the odd fifth circle had never been rubbed out."
       ],
       "storyParagraphsZh": [
-        "算术馆摆着十枚石子，一面黑、一面白。开始时黑面向上的石子有四枚。规则允许学徒每次同时翻转任意两枚，目标是让恰好五枚黑面向上。",
-        "学徒尝试了整整一天。有时翻两白，黑石增加两枚；有时翻两黑，减少两枚；一黑一白则总数不变。他不断改变位置和顺序，黑石数量却始终是偶数。",
-        "同伴建议把石子装进盒子，趁别人看不见时换顺序。盒子能够隐藏过程，却不能改变允许动作。无论走多少步，黑石数量只会变化零或两个，从四出发无法抵达五。",
-        "他们因此不必枚举所有翻法，便能排除目标。馆主随后提醒，这个不变的奇偶性只提供不能到达的证据；若目标同为偶数，还需要实际构造步骤或寻找其他条件才能证明可达。",
-        "收馆前，学徒把五枚石子的目标图放回盒中。盒盖合上，外面仍写着一个无法改变的奇数。"
+        "冬季赛会上，算术馆拿出一枚银罗盘：十枚双面石子开始有四枚黑面朝上，谁能按规则翻成恰好五枚，罗盘就归谁。每次必须同时翻两枚，裁判全程盯手。学徒阿简过去总靠快速试法赢题，于是拿买新靴的钱交了报名费，还答应傍晚把罗盘送给弟弟。",
+        "阿简先翻两枚白面，黑面从四变六；再翻两黑，又回到四；一黑一白同时翻，只把黑面换了位置，总数仍是四。他摆直线、围圆圈、做镜像，尝试了几百条路线，反复见到零、二、四、六、八、十，就是没有五。他从笔记本撕下三页记录走法，后来连重复旧路线都没察觉。午饭铃响过两次，围观人渐渐散去，他的指尖沾满灰白石粉。",
+        "同伴递来木盒，叫他把石子装进去摇乱，在裁判看不清的位置继续。罗盘价值是报名费的十倍，阿简差点答应，最后却把每种合法动作写在盒盖上：两白变两黑，总数加二；两黑变两白，减二；一黑一白则加零。从偶数四出发，每一步之后仍是偶数。盒子只能藏住顺序，任何合法路线都跨不到奇数五。",
+        "阿简抱着盒子去见裁判，指出目标在现有规则下无法到达。裁判愿退费，只求他安静退出，免得算术馆承认赛题有错。阿简却把三行推理贴到公示板，罗盘没得到，报名费也因毁约被扣，比赛当场取消。原本等着卖热酒的小贩冲他抱怨，馆主也把他的名字从下一轮名单划掉。后来馆主仍不得不承认：若目标也是偶数，只能说明这一道障碍消失，仍需实际构造路线，或检查是否另有约束。",
+        "阿简穿着裂口旧靴走过雨夹雪，融水从鞋底渗进袜子，每走一步都发出湿响。弟弟正等银罗盘，他只能交出那张画着五个黑圈的目标卡，并把没买成靴子的缘由从头讲完。弟弟沉默了一会儿，把自己的干布塞给他。两人把卡收进木盒。多年后，盒盖上的“加二、减二、加零”仍清晰可见，那第五个黑圈也一直没有被擦掉。"
       ],
       "conceptName": "Invariance",
       "conceptNameZh": "不变量",
@@ -410,7 +428,7 @@
         "An invariant is a quantity, relation, or structure preserved under specified transformations. Showing that every allowed operation preserves it can rule out targets with a different invariant value without enumerating paths. An invariant depends on the rules and usually supplies only a necessary obstruction; matching values alone need not prove reachability."
       ],
       "explanationParagraphsZh": [
-        "不变量是在指定变换下保持不变的量、关系或结构。证明所有允许操作都保留它，就能排除不变量取值不同的目标，无需枚举路径。不变量依赖具体规则，通常只给出不可达的必要障碍；相同取值并不自动保证可达。"
+        "不变量是在指定变换下保持不变的量、关系或结构。证明所有允许操作都保留它，就能排除不变量取值不同的目标，无需枚举路径。不变量依赖具体规则，通常只给出不可达的必要障碍；相同取值并不自动保证可达，还可能需要构造或别的不变量。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -433,18 +451,20 @@
       "summary": "A mathematics apprentice seeks a fraction for a square's diagonal and forces both numerator and denominator to lose their claimed simplicity.",
       "summaryZh": "数学学徒想替正方形对角线找到一个最简分数，最后却让分子和分母同时失去了“最简”。",
       "storyParagraphs": [
-        "The mathematics hall offered a prize for an exact fraction representing the diagonal of a unit square. Apprentice Ningce produced fractions that came ever closer but wanted more than approximation. He temporarily assumed that a reduced fraction p/q represented it exactly, with p and q sharing no factor.",
-        "The square relation gave p² = 2q². The right side was even, so p² was even and p itself had to be even. Ningce wrote p = 2k and substituted back. The result made q² even, so q was even as well.",
-        "The word 'reduced' in the assumption now collapsed. Both p and q were divisible by two. Reducing again would reproduce the same problem; no pair of integers without a common factor could satisfy the relation.",
-        "Ningce checked whether another mistake had entered the argument. The contradiction arose from the original assumption that the length was a ratio of integers. In classical logic, that assumption could not stand, so no exact fraction represented the diagonal.",
-        "He did not erase the close fractions from the board. Above them he wrote, 'Approaching without limit is not the same as being equal.'"
+        "The palace floor required a square mosaic with a bronze strip running exactly from corner to corner. Supplier Ningce could cut only by whole subdivisions of his measuring rod, so he offered a prize for an exact fraction of the side length. He found 7/5, then 99/70, each close enough for ordinary carpentry, but the repeated royal pattern would magnify a tiny mismatch across two hundred tiles. The steward demanded the word exact before releasing payment.",
+        "Ningce assumed, for the sake of testing the claim, that the diagonal equalled a reduced fraction p/q, with p and q positive integers sharing no factor. For a unit square, the side relation required the diagonal squared to equal two, so p²/q² = 2 and therefore p² = 2q². The right-hand side was even. Since an odd integer squared remains odd, p could not be odd; he wrote p = 2k.",
+        "Substitution gave 4k² = 2q², or q² = 2k². The same parity check now forced q to be even. Ningce circled the original word reduced. Both p and q were divisible by two, contrary to the condition that they shared no factor. Reducing the pair and starting again would only repeat the descent. The impossibility came from assuming that an exact ratio of integers existed, provided every intervening step was valid.",
+        "The palace steward seized on the contradiction and accused Ningce's arithmetic rather than the assumption. Ningce spent the night checking the square relation, the parity step, and the cancellation. He also separated two questions the contract had mixed. A rational approximation could cut a strip within a stated tolerance; it could not become exact merely by adding more digits. The proof ruled out an exact fractional representation, not the construction of a useful physical strip.",
+        "At dawn the steward offered full payment if Ningce stamped 99/70 as exact. Refusing meant melting the bronze already cut and losing the palace account. Ningce crossed out the stamp. He specified a tolerance, chose a finer approximation, and replaced every tenth strip joint with an adjustable fitting so errors would not accumulate unseen. The palace withheld his bonus and opened the floor a week late, but no forged equality remained in the plans.",
+        "When the mosaic was finished, the diagonal strip met the far corner within the agreed tolerance. Ningce kept the chalkboard from the workshop. The fractions remained in a rising column, useful and increasingly close. Above them, the circled p and q were both marked even, and the small brass seal bearing the word EXACT lay face down in the chalk tray."
       ],
       "storyParagraphsZh": [
-        "数学馆悬赏寻找一个精确分数，表示边长为一的正方形对角线。学徒宁策列出越来越接近的分数，却不满足于近似。他暂且假定确有最简分数 p/q 能精确表示，并约定 p 与 q 没有共同因子。",
-        "由正方形关系可得 p² 等于 2q²。右侧是偶数，所以 p² 为偶数，p 也必须是偶数。宁策把 p 写成 2k，再代回原式，得到 q² 也为偶数，因此 q 同样是偶数。",
-        "这时，假定中的“最简”开始崩塌：p 与 q 都能被二整除。若再约分，仍会得到同样问题，不可能存在一对没有共同因子的整数完成这个等式。",
-        "宁策检查推理中是否混入其他错误。矛盾只来自最初假定该长度能写成整数之比。在经典逻辑下，假定无法成立，于是对角线不能由任何精确分数表示。",
-        "他没有把最接近的分数从板上擦掉，只在它们上方写下：“可以无限接近，不等于能够相等。”"
+        "宫殿地面要铺正方形拼花，再用铜条精确连接两角。供货人宁策的标尺只能按整格细分，于是他悬赏寻找边长的精确分数。他先算出七分之五，又找到七十分之九十九，日常木工已够用；可同一花纹要连续铺两百块，极小误差也会累积。宫廷管事要求他在付款前盖下“精确”二字。",
+        "宁策暂且假定，对角线确实等于一个最简分数 p/q，其中 p、q 为正整数且没有公因子。单位正方形的边长关系要求对角线平方等于二，所以 p²/q²=2，也就是 p²=2q²。右边是偶数；奇数平方仍是奇数，因此 p 不可能为奇数，只能写成 2k。",
+        "代回以后，4k²=2q²，可化为 q²=2k²，同样的奇偶检查又迫使 q 也是偶数。宁策圈住开头写的“最简”：p 与 q 都能被二整除，和“无公因子”直接冲突。即使继续约分，仍会掉回同样矛盾。只要中间推理无误，不可能来自别处，那项最初的精确分数假定便站不住。",
+        "宫廷管事咬定是宁策算错，不肯怀疑合同。宁策整夜复查正方形关系、奇偶判断和约分步骤，也把两件被合同混在一起的事拆开：有理数近似可以在注明误差时指导切割，却不会因为小数更多就变成精确相等。这段推理排除的是整数之比的精确表达，不是实物铜条无法做到足够合用。",
+        "天亮时，管事提出只要把七十分之九十九盖成“精确”，便照付全款。拒绝就要熔掉已切铜条，失去王宫订单。宁策划掉印章，改写允许误差，选用更细近似，并在每十段设置可调接头，避免偏差悄悄累积。宫廷扣掉他的奖金，开殿也迟了一周，图纸上却没有留下伪造的等号。",
+        "拼花完成后，斜向铜条在约定误差内抵达远角。宁策保留了工坊黑板。那些越来越接近的分数仍排在上面，各有用途；其上方，p 与 q 都被圈成偶数。写着“精确”的小铜印面朝下，躺在粉笔槽里。"
       ],
       "conceptName": "Proof by contradiction",
       "conceptNameZh": "反证法",
@@ -452,7 +472,7 @@
         "Proof by contradiction assumes the negation of a desired conclusion and derives an impossibility through valid reasoning from accepted premises, thereby rejecting the assumption. The contradiction must genuinely depend on the target assumption rather than an unrelated error or circularity. The method proves logical claims and cannot turn numerical approximation into equality."
       ],
       "explanationParagraphsZh": [
-        "反证法先假定目标结论的否定，再从已接受前提出发，以有效推理导出矛盾，从而排除该假定并确立结论。矛盾必须确实依赖目标假设，而非计算错误、循环论证或其他不一致。它证明逻辑命题，不能把近似自动变成相等。"
+        "反证法先假定目标结论的否定，再从已接受前提出发，以有效推理导出矛盾，从而排除该假定并确立结论。矛盾必须确实依赖目标假设，而非计算错误、循环论证或其他不一致。它证明逻辑命题，不能把近似自动变成相等，也不替代对前提的检查。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -475,18 +495,22 @@
       "summary": "An inspector cannot climb a staircase without end and must instead check the first step and how every step passes on the flame.",
       "summaryZh": "验楼人不可能走完一座没有尽头的楼梯，只能检查第一阶与每一阶怎样交出钥匙。",
       "storyParagraphs": [
-        "A tower builder claimed that one lamp would light every level of an endless staircase. An inspector tested the first hundred and found them all working, so spectators assumed the rest must work. The hundred-and-first lacked a fire channel, and the experience stopped there.",
-        "The builder restated the mechanism. The first level had to be lit from outside. Then, for any level, if its lamp was lit, its channel had to ignite the next. If both claims were proved, the first lit the second, the second the third, and the transfer covered every level reachable from the starting point.",
-        "The inspector checked that outside flame entered the first lamp. Instead of testing each level, he examined the common channel design and proved that any complete numbered level passed fire to its successor. The missing channel showed that no number of early examples could replace a universal transfer step.",
-        "After repair, the builder also stated explicitly that the staircase began at level one. A tower beginning at zero or five required a matching base. Another design in which several previous levels supported the next would require a stronger assumption using all earlier cases.",
-        "At approval, the inspector lit only the first lamp. Fire moved upward beyond the visible tower, and he did not chase it step by step."
+        "Architect Bao sold the city a staircase design that could be extended for as many storeys as future builders required. One flame at the entrance was supposed to light a lamp on every numbered landing through a shared channel. The mayor wanted approval before Founding Day and ordered inspector Li to test the first hundred levels of the current tower. All hundred lit. The crowd applauded, and Bao asked for final payment on the infinite plan.",
+        "Li climbed once more after the crowd left. The lamp on level 101 remained dark because its channel had been fitted backwards. A hundred successful examples had not covered the next case, much less every future one. Bao offered to repair that joint and test another hundred. The mayor threatened to replace Li if she delayed the opening over a storey no visitor could yet reach.",
+        "Li asked Bao to state exactly what made the promise continue. Two obligations appeared. The entrance flame had to light the first landing. Then the repeated design had to ensure that for any numbered landing n, if lamp n was lit, its channel lit lamp n+1. The first claim gave the chain somewhere to start; the second carried it onward. Without either, a row of early successes could end at the next untested joint.",
+        "Bao's channels were not actually identical: crews had mirrored every fiftieth fitting to avoid a beam. Li withdrew the permit. The city lost Founding Day tours, Bao lost his final payment, and masons opened finished walls to replace the exceptional joints. The visible cost angered everyone, but it turned a hopeful pattern into a checkable construction rule applying to every numbered fitting in the revised design.",
+        "During repair, the stone supplier raised a second claim: the first n landings required 1+2+...+n slabs, which he said equalled n(n+1)/2. Li accepted the first landing: one slab equalled 1·2/2. She then assumed the formula held at an arbitrary n and added the next landing's n+1 slabs. The total became n(n+1)/2+(n+1)=(n+1)(n+2)/2, exactly the same formula for the successor. The invoice now had a base and a valid transfer, not just checked totals for small towers.",
+        "Bao next tried to reuse the permit on a smaller annex whose stairs began at level five. Li returned it with the old words 'first landing' underlined. He changed the drawing so the outside flame entered level five, then checked the same successor fitting above it. When an apprentice brought a different stair in which one landing rested on several earlier braces, Li put it in a separate folder instead of forcing it through the one-brace proof. By sunset, each permit named its actual starting step and the exact connection being certified.",
+        "The tower opened a month late. Li touched the entrance flame to the first lamp and watched light climb through the repaired channels until mist hid the upper landings. She did not run after it to test each visible floor again. On level 101, the removed backward fitting hung beside the new channel, its soot mark ending on the wrong side."
       ],
       "storyParagraphsZh": [
-        "塔匠宣称，一盏灯能够沿着没有尽头的楼梯逐层点亮。验楼人试了前一百层，盏盏都亮，旁观者便说后面当然也不会出错。第一百零一层却缺少传火槽，经验到那里便断了。",
-        "塔匠重新说明装置：第一层必须能被外火点亮；并且对任意一层，只要该层亮起，它的传火槽就一定点亮下一层。若这两件事都被证明，第一层点第二层，第二层点第三层，这条传递便覆盖从起点能够到达的每一层。",
-        "验楼人先检查第一层，发现外火确实能进入。随后，他不再逐层试，而是检查统一使用的传火结构，证明任何编号的完整一层都会把火送到后继层。缺槽的一百零一层说明，若传递陈述并非普遍成立，检查再多前例也无用。",
-        "修复后，塔匠还明确写出楼梯从第一层开始。若某座塔从零层或第五层起算，起点也必须随命题改变。另一种设计需要前面多层共同支撑下一层，则要使用更强的先前假设。",
-        "验收时，验楼人只点燃第一盏。火沿槽向上，塔顶仍看不见，他却没有再追着每一层攀爬。"
+        "建筑师阿鲍向城里出售一套可无限续建的楼梯图。入口一盏火应沿共用火槽点亮未来每个编号平台。市长要在建城日前验收，只命验楼人阿黎试现有前一百层，结果盏盏都亮。人群欢呼，阿鲍当场索要那套“适用于所有楼层”图纸的尾款。",
+        "散场后，阿黎又往上爬了一次。第一百零一层没有亮，传火槽竟被反装。前一百个成功例子没有覆盖下一层，更没有覆盖所有未来层。阿鲍愿意修这一个接头，再多测一百层；市长则威胁换掉阿黎，因为她竟为游客暂时到不了的楼层推迟开幕。",
+        "阿黎让阿鲍说清承诺怎样延续。事情被拆成两项：入口火必须能点亮第一层；对任意编号 n，只要第 n 层亮起，那里的火槽就一定点亮第 n+1 层。前一项给链条起点，后一项把它向后传。缺任何一项，再多早期成功也可能在下一个未测接头处断掉。",
+        "检查后发现，火槽并非真的统一。工人为绕开横梁，每隔五十层便把接头镜像安装。阿黎撤回许可。城里失去建城日门票，阿鲍拿不到尾款，石匠还得凿开完工墙面更换特殊接头。人人看得见这笔损失，但一条凭经验相信的规律，也终于变成可逐个编号核对的共同结构。",
+        "维修时，石料商又声称前 n 层分别用一、二直到 n 块踏板，总数为 n(n+1)/2。阿黎先验第一层：一块等于 1×2/2；再暂定任意第 n 层公式成立，加上下一层的 n+1 块，得到 n(n+1)/2+(n+1)=(n+1)(n+2)/2，恰好是后继编号的同一形式。账单这次有起点和传递，不只是一串小数值碰巧相符。",
+        "阿鲍随后想把旧许可套到一座从第五层编号的小附楼。阿黎把文件退回去，在“第一层”下划了两道线。他只得改图，让外火从第五层进入，再检查上方使用的同一种后继接头。另有学徒送来一套需要前面多根支架共同托住下一层的楼梯，阿黎把它另装一夹，没有硬塞进单支架证明。日落前，每份许可都写清真正起点与被验明的连接。",
+        "高塔迟了一个月开放。阿黎用入口火点亮第一盏，看着火光沿修好的槽逐层上行，直到高处被雾遮住。她没有再追着每个可见平台攀爬。第一百零一层墙边挂着那只拆下的反向接头，旧烟痕停在错误的一侧。"
       ],
       "conceptName": "Mathematical induction",
       "conceptNameZh": "数学归纳法",
@@ -494,7 +518,7 @@
         "Mathematical induction proves a base case and a universal step showing that any true case implies its successor, thereby covering every index reachable from the base in a discrete ordered domain. Checking many examples cannot replace the inductive step, and neither part can be omitted. The starting index and domain must be stated accurately."
       ],
       "explanationParagraphsZh": [
-        "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确。"
+        "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确；需要多项前提时可用强归纳。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -517,18 +541,18 @@
       "summary": "A carpenter measures height only at a guard recruitment and builds doors whose latches many citizens cannot reach.",
       "summaryZh": "木匠只在卫兵选拔场测量身高，随后为全城造出了没人够得到门闩的门。",
       "storyParagraphs": [
-        "The city wanted one standard height for public doors, and carpenter Lin Hao was asked to measure residents. He set up at the guard recruitment ground because thousands passed in one day and the collection was fast and orderly.",
-        "The results showed a tall population, so Lin Hao built high doors and latches. When the new library opened, many older people, children, and citizens who had never attended the recruitment could not reach them. The sample was large and measured precisely, but it came from a place where height affected who appeared.",
-        "Lin Hao then built a city address list, randomly invited residents from each district, followed up nonresponses, and recorded people unable to attend. The new survey still had gaps requiring weighting and sensitivity checks, but no longer covered only aspiring guards.",
-        "The average fell and the range widened. The carpenter did not design from one mean alone. Public latches moved into reach of more users and were tested across different bodies.",
-        "When removing the recruitment ground's high latch, Lin Hao kept it beside the measurement desk. It accurately represented the people who came there, but had never represented the whole city."
+        "The city ordered carpenter Lin Hao to choose one latch height for every new public building. He had twelve days before three hundred library doors went into production. A household survey would take months, but the guard recruitment ground processed crowds in straight lines, already measured their bodies, and offered him 1,200 records by sunset. The recruits averaged 181 centimetres. Lin treated the large, tidy number as the city's height and placed every latch where a tall adult could reach it comfortably.",
+        "At the library opening, children jumped for the handles, several older residents used umbrellas to hook them, and a wheelchair user waited outside a reading room until a guard came. Lin first blamed the crowd for using doors incorrectly. Then he noticed that the people struggling were precisely those unlikely to appear at a military selection where age, health, interest, and minimum stature affected entry. His measurements were precise for aspiring guards; adding more recruits would only describe that same selected group more precisely.",
+        "The mayor demanded a quiet repair before election week and forbade another long delay. Lin built an address list by district, randomly drew households, and sent measurers to homes rather than inviting only volunteers to the square. Of 600 selected residents, 420 responded at first. The team revisited missing addresses and recorded who remained unreachable. Some groups still responded less often, so Lin used known district and age counts for weighting and checked how conclusions changed under plausible assumptions about the missing people.",
+        "The revised mean was 168 centimetres, but the wider range mattered more than the thirteen-centimetre drop. One average could not represent a child, a tall porter, and a seated reader at once. Lin proposed lower lever handles usable with little grip, then tested prototypes with residents from the frame rather than only city workers. Several designs that fit the new mean still failed the seated test, so he kept the full range on the bench. The mayor made him choose: preserve the finished doors and his reputation, or replace the high latches at his own shop's cost. Lin sold his new timber cart and recalled all three hundred fittings.",
+        "The library reopened after election week. Lin had lost the municipal bonus and still owed two apprentices wages, but visitors could open the rooms without borrowing an umbrella. He mounted one removed latch above the survey desk beside two labels: '1,200 guard recruits, mean 181' and 'not the target population.' The brass was accurately drilled and carefully measured. It was still too high for most hands that reached toward it."
       ],
       "storyParagraphsZh": [
-        "城里要统一公共建筑的门高，木匠林皓负责测量居民。他选择在卫兵选拔场设桌，因为那里一天能见到上千人，收集得又快又整齐。",
-        "测量结果显示居民普遍高大，林皓据此造出高门和高门闩。新图书馆开放后，许多老人、孩子和未参加选拔的人够不到门闩。样本人数很多，测得也很精确，却来自一个身高本就影响能否出现的地方。",
-        "林皓随后按全城住址建立名单，随机邀请各区居民，对未回应者回访，并记录无法到场的人。新测量仍有缺漏，需要权重和敏感性检查，却不再只覆盖想当卫兵的人。",
-        "平均身高降低了，分布范围也比原先宽。木匠没有只按一个平均数做门，而是让公共门闩落在更多人可及位置，并为不同使用者测试。",
-        "拆下选拔场那把高门闩时，林皓把它留在测量桌旁。它准确代表了来过那里的人，却从未代表整座城。"
+        "城里要求木匠林皓为所有新公共建筑确定统一门闩高度。十二天后，三百扇图书馆门就要投产。入户调查要花几个月，卫兵选拔场却把人排成直线，本来就在量身高，一天便能交给他一千二百条记录。应征者平均一百八十一厘米。林皓把这个整齐的大数当成全城身高，按高个成年人伸手舒服的位置钻下所有孔。",
+        "图书馆开门那天，孩子跳着够门把，几位老人用伞柄去勾，一名轮椅使用者在阅览室外等到守卫经过。林皓先怪他们不会用门，随后才看见：遇到困难的，恰好是不太可能出现在军队选拔场的人，年龄、健康、参军意愿与最低身高都影响谁能入场。他的测量对“来应征的卫兵”很精确，再多量几千人，也只会更精确地描述同一批人。",
+        "市长要求在选举周前悄悄修好，又不许长时间停馆。林皓按街区建立住址名单，随机抽取家庭，让测量员上门，而非只在广场等待自愿者。六百名入选居民起初只有四百二十人回应，团队便回访缺失地址，并记录仍找不到的人。某些群体回应率依然较低，他们依据已知街区与年龄人数加权，也检验对未回应者作不同合理假设时，结果会怎样改变。",
+        "新平均数降到一百六十八厘米，更重要的是范围比原样本宽得多。一个均值无法同时代表孩子、高个搬运工和坐姿读者。林皓改用较低、握力要求小的压杆，又邀请抽样名单里的居民试门。几种刚好适合新均值的方案仍没通过坐姿测试，他只得把完整范围一直摆在工作台上。市长让他选择：保住成品与名声，或由自家工坊承担三百套门闩重装费。林皓卖掉刚买的木料车，召回全部配件。",
+        "图书馆在选举周后重新开放。林皓失去市政奖金，还欠两名学徒工钱，来客却不必再借伞开门。他把一只拆下的高门闩钉在调查桌上，旁边写着：“一千二百名卫兵应征者，均值一八一；并非目标人群。”那块黄铜钻孔准确、测量仔细，伸向它的大多数手仍旧够不到。"
       ],
       "conceptName": "Sampling bias",
       "conceptNameZh": "抽样偏差",
@@ -536,7 +560,7 @@
         "Sampling bias arises when coverage, selection, self-selection, survival, or nonresponse mechanisms are related to the outcome, making a sample systematically unlike the target population. A very large sample can estimate the wrong population precisely. Probability sampling, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias under explicit assumptions."
       ],
       "explanationParagraphsZh": [
-        "抽样偏差发生在覆盖、选择、自愿参与、幸存或未回应机制与研究结果相关，使样本系统性偏离目标群体。样本再大也可能精确估计错误人群。概率抽样、完整抽样框、回访、加权和敏感性分析可缓解，但依赖明确假设。"
+        "抽样偏差发生在覆盖、选择、自愿参与、幸存或未回应机制与研究结果相关，使样本系统性偏离目标群体。样本再大也可能精确估计错误人群。概率抽样、完整抽样框、回访、加权和敏感性分析可缓解，但依赖明确假设，无法自动修复未知缺失。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -559,18 +583,20 @@
       "summary": "Whenever a baker rewards the day's best loaf, the next one is worse, so he concludes that praise destroys skill.",
       "summaryZh": "师傅每次奖励最好的面包，第二天它总会变差，于是他认定赞美会毁掉手艺。",
       "storyParagraphs": [
-        "A bakery named its best and worst batch each day. The master praised the winner and sharply criticised the last place. Strangely, winners often performed worse the next day, while the weakest usually improved. The master concluded that praise made people careless and criticism truly worked.",
-        "An apprentice plotted each baker's results over a month. A winning day combined skill with unusually suitable oven heat, flour moisture, and measurement variation. A worst day often included unusually bad conditions. Because repeated performance was not perfectly identical, an extreme day was usually followed by one nearer the baker's ordinary level.",
-        "They compared similar batches receiving no praise or criticism and collected several baseline measures before any intervention. Winners still fell back and the lowest still rose, so before-and-after movement alone could not establish an effect of praise or blame.",
-        "The master did not conclude that all feedback was useless. He evaluated training over longer performance and with comparison, still correcting errors without treating natural movement after an extreme day as proof of his words.",
-        "When the next winning loaf emerged, he placed the red flower beside it and marked the baker's range across the previous ten batches."
+        "Master baker Orun wanted the royal bread contract and began ranking every oven load. The day's highest loaf received a red sugar flower; the lowest baker was scolded before the whole shop. Winners often scored worse the next morning, while last-place bakers usually improved. Orun saw a clean lesson: praise softened workers and humiliation sharpened them. He intensified the rule, certain that the next month's rising average would prove his management.",
+        "One wet Tuesday, baker Mina scored 54 against her usual range near 76 to 84. A leaking oven door and damp flour had joined her own mistake. Orun dismissed her on the spot. The next day, without any scolding, a reserve baker using the repaired oven scored 79. In the same week Jaro's exceptional 97 followed perfect heat and unusually dry flour; after receiving the red flower he scored 83. Orun called both movements evidence for punishment, although each result had been selected because it was extreme.",
+        "Bookkeeper Sali plotted ten prior batches for every baker. Repeated scores shared skill but also varied with moisture, temperature, tasting error, and chance. A person observed at an unusually high or low combination was unlikely to receive the same combination next time. Among twelve unpunished low scores from earlier records, the next batch rose by an average of eleven points. Among ten unrewarded high scores, the next fell by nine. Movement toward ordinary ranges appeared without Orun's words.",
+        "Orun snapped the chalk and said Sali had made all feedback meaningless. She opened two blank ledger pages. On one she wrote 'chosen because yesterday was extreme'; on the other, 'changed routine versus unchanged routine.' Then she ruled spaces for several baseline batches, matched ovens, and blind tasting. The first page already predicted some rebound before anyone spoke. Only the second could help separate a new practice from that background movement. Orun stared at Mina's dismissal mark and signed the trial order with the broken chalk still beside his hand.",
+        "The guild hearing was two days away. Orun stared at Mina's dismissal mark until the broken chalk stained his thumb, then admitted that his strongest example did not isolate the effect of shouting. He rehired her with back pay, forfeited his personal contract bonus, and replaced public rankings with a trial. Half the ovens received a new temperature checklist, half continued the old routine for a month, and evaluators tasted loaves without knowing which group made them. Immediate safety errors were still corrected; spectacle no longer stood in for evidence.",
+        "A month later the checklist group improved beyond its prior range and comparison group, though the shop kept watching. On the next judging day Mina baked a 96. Orun placed the red flower beside the loaf, then wrote her previous ten scores underneath instead of predicting tomorrow. The flower's sugar edge softened in the steam, while the row of numbers remained visible on the slate."
       ],
       "storyParagraphsZh": [
-        "面包坊每天评出最好与最差的一炉。师傅会夸奖冠军，严厉训斥最后一名。奇怪的是，冠军第二天常不如前日，最差者却多半有所改善。师傅因此相信赞美令人松懈，责骂才真正有效。",
-        "学徒把每名面包师一个月的成绩画出来。被选为冠军的那天，除了手艺，还常碰上恰好的炉温、面粉湿度和抽样误差；被选为最差时，也常有偶然不利因素。重复表现并不完全相同，极端一天之后通常更接近个人平常水平。",
-        "他们把同样水平但未受奖罚的炉次作为比较，又在奖励前取得多次基线。冠军回落和末名回升仍然出现，不能仅凭前后变化把效果归给赞美或责骂。",
-        "师傅没有因此断言所有反馈都无效。他改用较长时期的表现和对照检验训练方法，仍会指出错误，却不再把极端一天后的自然回摆当作自己言辞的功劳。",
-        "下一次冠军出炉时，师傅把红花放在面包旁，也在记录上标出那名师傅过去十炉的范围。"
+        "面包师奥伦想拿下王室供货合同，开始给每炉打分。当天最高分可得一朵红糖花，最低分的人要当众挨骂。奇怪的是，冠军次日常变差，末名却往往回升。奥伦认定赞美使人松懈，羞辱才能磨快手艺，于是把奖罚加重，等着下月均分证明自己的管理。",
+        "一个潮湿星期二，米娜只得五十四分，她平日多在七十六至八十四之间。漏风炉门、受潮面粉和她自己的失误碰到一起，奥伦仍当场辞退她。次日，备用师傅使用修好的炉子得七十九分。同周，雅罗遇到恰好炉温与干燥面粉，烤出九十七分，领红花后第二天得八十三。奥伦把两次变化都算成责骂有效，尽管他们正因成绩极端才被挑出来。",
+        "账房萨莉画出每名师傅此前十炉。重复成绩既含手艺，也受湿度、温度、品评分歧和偶然波动影响；某次碰上异常好坏组合，下次很难原样重现。旧账里，十二次没有受罚的低分之后，下一炉平均上升十一分；十次没有受奖的高分之后，下一炉平均下降九分。没有奥伦的话，成绩照样向个人常态靠近。",
+        "奥伦折断粉笔，说萨莉把所有反馈都说成了无用。她摊开两张空白账页，一张写“因昨日极端而入选”，另一张写“改变流程与保持原样相比较”，随后画出多次基线、相似炉位和盲评栏。第一张纸在任何人开口前就会出现部分回摆；第二张才可能把新做法从这种背景变化里分开。奥伦盯着米娜名字后的解雇记号，断粉笔仍搁在手边，最后在试验单上签字。",
+        "工会听证只剩两天。奥伦盯着米娜名字后的解雇记号，直到断粉笔把拇指染白，才承认最有力的例子没有隔离吼叫的作用。他补发工资请回米娜，放弃个人合同奖金，改做一个月试验：一半炉位使用新温度清单，另一半保持旧流程，品评人不知道面包来自哪组。安全错误仍即时纠正，公开羞辱不再冒充证据。",
+        "一个月后，清单组的改善超过自身旧范围和对照组，面包坊仍继续观察。下一次评比，米娜烤出九十六分。奥伦把红糖花放在面包旁，又在下面写出她过去十炉，而没有预言明天。蒸汽让糖花边缘微微发软，石板上的那排数字仍清楚。"
       ],
       "conceptName": "Regression to the mean",
       "conceptNameZh": "均值回归",
@@ -578,7 +604,7 @@
         "Regression to the mean occurs when cases are selected for an extreme observation and repeated measurements are imperfectly correlated and contain random variation; later values tend on average to be less extreme. It is a conditional statistical pattern, not a causal force, and does not prove an intervention ineffective. Controls, repeated baselines, and reliable measurement help distinguish it."
       ],
       "explanationParagraphsZh": [
-        "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分。"
+        "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分，也要避免只挑极端值做前后比较。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -601,18 +627,22 @@
       "summary": "A warning bell detects eight of every ten fires, so the mayor assumes each alarm means an eighty-percent chance of fire.",
       "summaryZh": "警钟能发现十场火里的八场，市长因此以为每次钟响都有八成可能着火。",
       "storyParagraphs": [
-        "The city installed a new fire alarm. Test records said that when a real fire occurred, the bell rang eight times out of ten. The mayor announced that whenever the bell rang, fire was therefore eighty percent likely and prepared to evacuate the whole city each time.",
-        "The recorder arranged one thousand nights in a table. Fire occurred on only ten; the bell rang on eight. During the other nine hundred and ninety fire-free nights, steam, smoke, and faults produced twenty alarms. Of twenty-eight total alarms, only eight came with fire.",
-        "The bell still provided important evidence. Hearing it raised the chance of fire substantially above the ordinary low level, but not directly to eighty percent. The prior occurrence rate and the relative chance of an alarm with and without fire both mattered.",
-        "Watchers combined the bell with smell, location, and a second sensor. Two sensors influenced by the same steam could not be counted as independent evidence. Evacuation decisions also compared the harm of a missed fire with the harm of a false evacuation.",
-        "At the next alarm, the watcher immediately ran toward the marked location. He treated the bell as neither the fire itself nor useless noise."
+        "After a warehouse blaze killed six porters, Mayor Daro bought a warning bell and promised never to hesitate again. The maker said it rang in eight of every ten test fires. Daro announced that any ring therefore meant an eighty-percent chance of fire and ordered the entire city evacuated each time. The first steam-triggered alarm emptied the market, spoiled a day's fish, and injured two people in the crush. Merchants demanded that the bell be silenced; bereaved families demanded that it never be ignored.",
+        "Recorder Nemi laid out one thousand comparable nights. Fire had occurred on ten; the bell rang on eight of those and missed two. Among the 990 fire-free nights, steam, cooking smoke, and faults produced twenty rings. Thus the bell rang twenty-eight times in all, with fire present on eight: 8/28, about twenty-nine percent, not eighty. Before hearing anything, fire occurred on one percent of nights. After a ring, the chance rose sharply, but sensitivity was not the same question as the probability of fire given an alarm.",
+        "Daro accused Nemi of making a good bell look useless. She put one red bean for each fire alarm and one white bean for each false alarm into a bowl. Eight red among twenty-eight was enough to justify urgent checking, especially when missing a fire could kill people. It was not enough to claim certainty or empty every district without considering cost. The starting frequency and how often the evidence appeared with and without fire both changed the updated odds.",
+        "They added a heat probe beside the smoke bell. On the first trial, both devices reacted to the same bathhouse steam. Nemi refused to multiply them as two independent confirmations: shared causes made their errors related. Watchers began recording location, heat, smell, wind, and whether a second signal arose from a genuinely different source. Each item could revise the previous estimate, but none became the event itself.",
+        "A week before the election, the bell rang above the grain quarter during a crowded festival. The heat probe also rose, and a runner smelled burning oil at the marked warehouse. No flames were yet visible. Daro ordered a district evacuation, sent engines immediately, and left the rest of the city open, knowing another false alarm would be charged to him before the vote. Firefighters found a lamp fire behind stacked sacks before it reached the roof.",
+        "The targeted evacuation still cost the grain market a morning's trade, and Daro paid compensation from the celebration fund. The result did not prove that every future ring deserved the same action. Decisions also depended on the changing probability and unequal losses: a missed warehouse fire was far worse than a brief local closure, while evacuating the whole city carried its own dangers. The watch set response thresholds in advance and reviewed them as new records accumulated.",
+        "Nemi kept the old eighty-percent notice rather than burning it. She crossed out the sentence and wrote beneath it: 'eight of twenty-eight alarm nights had fire in this record.' At the next single ring, watchers ran toward the marked district while others checked the second source; no one declared a fire before looking. The bell rope still bore a red knot for each of the eight true alarms and a white knot for each false one."
       ],
       "storyParagraphsZh": [
-        "城里安装新火警钟。试验记录说，真正起火时，十次有八次会响。市长听后宣布，只要钟响，起火可能便是八成，并准备每次都疏散全城。",
-        "记录员把一千个夜晚摆进表里。真正起火只有十晚，其中八晚响钟；其余九百九十个无火夜里，烟雾、蒸汽和故障也让钟误响二十次。于是总共二十八次响钟里，真正的火只有八次。",
-        "钟声仍然提供重要证据：听见后，起火可能性从平日极低水平明显上升，却不是直接变成八成。原本发生率与有火、无火时钟响的相对可能都必须进入判断。",
-        "守夜人随后把钟声与烟味、位置和第二探头结合。两只探头若受同一蒸汽影响，也不能假装成两份独立证据。最后是否疏散，还要比较漏报火灾与误报疏散的损失。",
-        "下一次钟响时，守夜人立刻赶往标记位置。他没有把警报当成火本身，也没有把它当成无用噪声。"
+        "一场仓火夺走六名搬运工后，市长达罗买来新警钟，承诺以后绝不迟疑。制钟人说，十场试验火里它能响八次。达罗立即宣布，凡是钟响，起火可能就是八成，每次都要全城疏散。第一场由蒸汽触发的误报清空集市，鱼货坏了一天，还有两人在拥挤中受伤。商人要求封钟，死者家属则要求任何钟声都不能被轻视。",
+        "记录员内米摆出一千个可比较的夜晚。真正起火十晚，其中八晚响钟，漏掉两晚；其余九百九十个无火夜里，蒸汽、炊烟和故障又让钟响二十次。钟总共响二十八次，只有八次伴随火灾，即 8/28，约为百分之二十九，并非八成。听钟前，起火率仅百分之一；钟响后风险大幅上升，但“有火时会不会响”与“响时是否有火”不是同一问法。",
+        "达罗责怪内米把好警钟算成废物。她把每次真火警放一颗红豆，每次误响放一颗白豆，碗里二十八颗只有八颗红。这个比例足以要求迅速查验，特别是漏掉火灾可能死人；却不足以宣告确定，更不能不计代价地清空每个街区。原有发生率，以及证据在有火和无火时分别多常出现，都要进入更新后的判断。",
+        "他们又在烟钟旁加装热探头。第一次试验，两只装置竟同时受浴室蒸汽影响。内米不准把它们算成两份独立确认，因为共同原因会让错误相关。守夜人开始记录地点、温度、气味、风向，并检查第二个信号是否来自真正不同的来源。每一项都能在旧判断上继续修正，却没有哪一项等于事件本身。",
+        "选举前一周，拥挤节庆中，粮仓区警钟突然响起，热探头也升高，跑去查看的人在标记仓库闻到焦油味，却还看不见火。达罗下令只疏散粮仓区，立刻派水车，其余城区保持开放；若又是误报，投票前所有损失都会记到他头上。消防队在火苗爬上屋梁前，于粮袋后找到了倒下的油灯。",
+        "这次局部疏散仍让粮市损失半天，达罗从庆典预算中赔偿。一次成功不能证明未来每次铃响都该同样行动。决策还要看不断更新的概率与不对称损失：漏掉仓火可能夺命，短时封闭一片街区代价较小；全城撤离也会制造新的危险。守夜人预先设定响应阈值，并随新增记录复查。",
+        "内米没有烧掉旧告示，只划掉“钟响即八成有火”，在下面补写：“这份记录中，二十八个响钟夜有八次起火。”下一次只有一声警钟时，一队人奔向标记区，另一队核对第二来源，没有人先宣布已经着火。钟绳上仍系着八个红结，旁边是一串更多的白结。"
       ],
       "conceptName": "Bayesian updating",
       "conceptNameZh": "贝叶斯更新",
@@ -620,7 +650,7 @@
         "Bayesian updating combines a prior probability with how likely evidence is under competing hypotheses to produce a posterior probability. Base rates cannot be ignored, and dependent evidence cannot be counted repeatedly as independent. The updated probability informs but does not determine action; decisions also require comparing losses from different errors and outcomes."
       ],
       "explanationParagraphsZh": [
-        "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失。"
+        "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失，并设定相应行动阈值。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",

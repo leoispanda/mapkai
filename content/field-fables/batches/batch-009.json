@@ -13,18 +13,22 @@
       "summary": "A new postal terminal has a button marked Save, and every sender assumes a letter that disappears has begun its journey.",
       "summaryZh": "新邮亭里有一个写着“保存”的按钮，寄信人每次按下它，都以为信已经上路。",
       "storyParagraphs": [
-        "The city introduced electronic postal terminals. After composing a letter, users saw one prominent Save button. Pressing it made the letter disappear and returned the screen to a blank page. Many took this to mean the letter had been sent.",
+        "The city introduced electronic postal terminals. After composing a letter, users saw one prominent Save button. Pressing it made the letter disappear and returned the screen to a blank page. Many took this to mean the letter had been sent. The city launched the kiosks before tax day because counter queues filled the square, and the designer's bonus depended on reducing visits. Early users praised how quickly the page cleared.",
         "In reality, Save placed the message in a private drafts folder. Sending required another menu. Designers understood the internal structure and considered the two steps clear. Ordinary users relied on experience with paper mail: once a letter left the desk, the post office had it.",
-        "After a month, birthday letters and payment notices remained in drafts. Instructions had been posted, but few people read them before acting. The explanation users had formed continued to conflict with the machine's behaviour, creating repeated error.",
-        "The designers separated the actions visibly. Saving kept the message on screen with the label 'Visible only to you'. Sending used a paper-plane symbol and then displayed recipient, time, and 'Accepted by post'. Leaving with an unsent message triggered a clear warning.",
-        "The next sender did not walk away after pressing Send. She waited until the recipient's name appeared before taking her hand from the terminal."
+        "After a month, birthday letters and payment notices remained in drafts. Instructions had been posted, but few people read them before acting. The explanation users had formed continued to conflict with the machine's behaviour, creating repeated error. One merchant missed a payment deadline and paid a penalty larger than the kiosk contract. The city first posted a longer manual, but hurried users continued to act from what the disappearing page suggested.",
+        "The designer could blame unread instructions or admit that the interface had taught the wrong prediction.",
+        "She refunded the merchant from her bonus and watched users narrate each step aloud. They expected saving to preserve work in place and sending to produce visible evidence of transfer. Rebuilding the flow delayed the next kiosk launch and cost her the performance award. She replayed the same task with older residents, hurried merchants, and people who had never used paper mail. Their predictions differed in detail but converged on the same mistaken meaning of disappearance.",
+        "The designers separated the actions visibly. Saving kept the message on screen with the label 'Visible only to you'. Sending used a paper-plane symbol and then displayed recipient, time, and 'Accepted by post'. Leaving with an unsent message triggered a clear warning. A draft counter remained visible, and returning to it produced the same state users had last seen. Tests asked what people believed would happen before they clicked, not merely whether they eventually completed the task. Delivery receipts could be opened later, and a failed transfer kept the letter visibly unsent. The city measured repeated errors a week later, not only success inside the training session.",
+        "The next sender did not walk away after pressing Send. She waited until the recipient's name appeared before taking her hand from the terminal. The receipt became the evidence she had expected from the machine, and she folded the printed copy into her purse."
       ],
       "storyParagraphsZh": [
-        "城里启用电子邮亭。写完信后，屏幕上只有一个显眼的“保存”按钮。寄信人按下以后，信件从画面消失，机器又回到空白页。许多人据此相信信已经被送走。",
+        "城里启用电子邮亭。写完信后，屏幕上只有一个显眼的“保存”按钮。寄信人按下以后，信件从画面消失，机器又回到空白页。许多人据此相信信已经被送走。城里赶在缴税日前启用邮亭，因为柜台队伍已排满广场，设计者的奖金取决于来访人数下降。页面迅速清空，头批用户还称赞机器利落。",
         "实际上，“保存”只把信放进私人草稿箱，真正发送还要打开另一层菜单。系统设计者熟悉内部结构，觉得两步十分清楚；普通人却依据纸信经验判断：信一旦离开桌面，就已经交给邮局。",
-        "一个月后，大量生日信和付款通知仍躺在草稿箱。说明书早已张贴，却很少有人在操作前阅读。用户形成的解释与机器真实行为持续错位，错误便一次次重复。",
-        "设计者把两个动作分开呈现：保存后，信仍留在画面并标记“仅自己可见”；发送按钮使用纸飞机图标，按下后显示收件人、时间和“已交付邮局”。离开页面前，未发送的信还会得到明确提醒。",
-        "下一位寄信人按下发送后，没有立即走开。她等到屏幕出现收件人姓名，才把手从机器上移开。"
+        "一个月后，大量生日信和付款通知仍躺在草稿箱。说明书早已张贴，却很少有人在操作前阅读。用户形成的解释与机器真实行为持续错位，错误便一次次重复。一名商人的付款通知因此逾期，罚金甚至高过邮亭月租。市政厅先贴出更长说明书，赶时间的人却仍按页面消失所暗示的结果行动。",
+        "设计者可以责怪市民不读说明，也可以承认界面教会了错误预测。",
+        "她用自己的奖金补偿商人，又请用户边操作边说出以为会发生什么。人们期待“保存”把工作留在原处，“发送”则必须留下交付证据。重做流程推迟下一批邮亭，她也失去绩效奖。她又让老人、赶时间的商人和从未寄过纸信的人重做同一任务。细节虽不同，众人却都把页面消失解释成已经寄出。",
+        "设计者把两个动作分开呈现：保存后，信仍留在画面并标记“仅自己可见”；发送按钮使用纸飞机图标，按下后显示收件人、时间和“已交付邮局”。离开页面前，未发送的信还会得到明确提醒。草稿数量始终可见，重新打开时也保持离开前状态。测试不只看用户最终是否完成，还在点击前询问他们预测下一步会发生什么。交付回执可在日后查看，传送失败则让信继续显示为未发送。城里一周后再测重复错误，不只看培训现场是否成功。",
+        "下一位寄信人按下发送后，没有立即走开。她等到屏幕出现收件人姓名，才把手从机器上移开。回执成了她原本期待机器给出的证据，她把打印件折好收入钱袋。"
       ],
       "conceptName": "Mental models in human-computer interaction",
       "conceptNameZh": "人机交互中的心智模型",
@@ -55,18 +59,18 @@
       "summary": "An archive lays every file across one table; nothing is lost, but no one can tell where anything belongs.",
       "summaryZh": "档案馆把所有文件平铺在一张桌上，东西一件没丢，人们却再也找不到它们属于哪里。",
       "storyParagraphs": [
-        "The new archive had no cabinets, only one enormous table filling the hall. Every file lay on it, and a search clerk could find items by title. While the collection was small, this openness seemed convenient; no one needed to remember a drawer.",
-        "Years later, projects, dates, departments, and drafts mixed together. Dozens of files shared the title 'Budget'. When an old project ended, nobody knew which drawings should expire with it. Permissions were set one item at a time. The growing table resembled a city without streets.",
+        "The new archive had no cabinets, only one enormous table filling the hall. Every file lay on it, and a search clerk could find items by title. While the collection was small, this openness seemed convenient; no one needed to remember a drawer. The arrangement saved the reopening budget, and the mayor demanded that ten years of records be searchable before the winter audit.",
+        "Years later, projects, dates, departments, and drafts mixed together. Dozens of files shared the title 'Budget'. When an old project ended, nobody knew which drawings should expire with it. Permissions were set one item at a time. The growing table resembled a city without streets. A clerk removed an expired festival folder and accidentally discarded the only signed permit for a bridge repair. Another found three final budgets with identical names and paid from the wrong one.",
+        "Before the opening bell, the archivist laid the search-machine quotation beneath the return stamp and suspended intake under the waiting porters' eyes. Two carts of new records went back to their departments, and she lost her opening bonus. Staff mapped which context should be inherited—department, project, year, permissions, retention—and which relationships crossed those boundaries. The archivist first tested the proposed tree with three real departments. A legal hold on one project showed that retention could not simply follow whichever folder happened to sit above it.",
         "Archivists built nested cabinets by organisation, project, and year. A file acquired context through its path, while a parent could pass down permissions and retention rules. Finding 'Year Two Budget for the River Bridge' no longer meant searching every paper called Budget.",
-        "Some records still belonged to several projects. Rather than copying them into two places, the archive used stable identifiers, tags, references, and search to express cross-links. The hierarchy provided a principal address; other tools provided side roads.",
-        "When the last loose sheet entered a cabinet, the table's wood became visible. The archivists kept one small area for new items whose place had not yet been decided."
+        "Some records still belonged to several projects. Rather than copying them into two places, the archive used stable identifiers, tags, references, and search to express cross-links. The hierarchy provided a principal address; other tools provided side roads. Moving a parent folder changed the path, so stable identifiers kept references from breaking. Access rules were tested on a sample branch before inheritance reached thousands of files. Cross-project contracts received one authoritative file and references from each project, avoiding copies that would drift apart after revision. When the last loose sheet entered a cabinet, the table's wood became visible. The archivists kept one small area for new items whose place had not yet been decided. The migration took six weeks, and duplicate paper had to be checked by hand rather than dumped into convenient drawers. New staff could begin from the main path, while specialists still crossed through tags and references. The table stayed clear."
       ],
       "storyParagraphsZh": [
-        "新档案馆没有柜子，只有一张占满大厅的巨大桌面。每份文件都放在上面，搜索员也能按标题找到它。起初资料不多，这种开放看起来方便，谁都不必记住抽屉位置。",
-        "几年后，项目、年份、部门和草稿混在一起。同名的“预算”有几十份，删除一个旧项目时，没人知道哪些图纸与它一同到期。权限也只能逐份设置，文件越多，桌面越像一片没有街道的城市。",
+        "新档案馆没有柜子，只有一张占满大厅的巨大桌面。每份文件都放在上面，搜索员也能按标题找到它。起初资料不多，这种开放看起来方便，谁都不必记住抽屉位置。这种布置省下重开预算，市长又要求十年卷宗必须在冬季审计前全部可查。",
+        "几年后，项目、年份、部门和草稿混在一起。同名的“预算”有几十份，删除一个旧项目时，没人知道哪些图纸与它一同到期。权限也只能逐份设置，文件越多，桌面越像一片没有街道的城市。书记删除过期节庆文件夹时，误丢了桥梁维修唯一签字许可；另一人又在三份同名“最终预算”中付错款。",
+        "开馆钟响前，馆员当着等候搬运工的面，把搜索机报价单压在退件章下，宣布暂停收件。两车新卷宗被送回部门，她的开馆奖金也被扣。众人先画清哪些情境应沿父级继承——部门、项目、年份、权限、保存期限——哪些关系会跨越边界。馆员先用三个真实部门测试拟定树形。一项项目受法律保留约束，提醒保存期不能只跟随碰巧位于上方的文件夹。",
         "馆员按机构、项目和年份建立嵌套柜架，让文件沿路径获得上下文，父级还可传递权限与保存规则。查找“河桥项目的二年预算”不再等同于搜索所有叫预算的纸。",
-        "但有些文件同时关联多个项目。馆员没有强迫它们复制到两处，而是使用稳定编号、标签、引用和搜索连接交叉关系。层级提供主要住址，其他工具提供旁路。",
-        "最后一张散纸归档时，桌面终于露出木纹。馆员仍留下一小块空处，专放尚未确定位置的新文件。"
+        "但有些文件同时关联多个项目。馆员没有强迫它们复制到两处，而是使用稳定编号、标签、引用和搜索连接交叉关系。层级提供主要住址，其他工具提供旁路。移动父文件夹会改变路径，因此稳定编号负责让引用不断裂。权限继承也先在一小支样本上试验，才扩展到数千份文件。跨项目合同只保留一份权威文件，各项目用引用连接，避免多个副本在修订后彼此分叉。最后一张散纸归档时，桌面终于露出木纹。馆员仍留下一小块空处，专放尚未确定位置的新文件。迁移花了六周，重复纸件也得人工核对，不能为省事随便塞进相似抽屉。新人先沿主路径进入，专业人员仍可借标签与引用跨越分支。桌面也继续保持空白。"
       ],
       "conceptName": "Hierarchical information organization",
       "conceptNameZh": "层级化信息组织",
@@ -97,18 +101,20 @@
       "summary": "For convenience, city hall gives one clerk every key until he loses the ring.",
       "summaryZh": "为图方便，市政厅把所有房间的钥匙交给一名书记，直到他丢了一只钥匙环。",
       "storyParagraphs": [
-        "City clerk Gu Yan delivered records among departments. To avoid borrowing keys each time, his supervisor gave him access to the archive, treasury, seal room, and equipment store. Gu Yan worked quickly and never abused it, but the ring could open far more than his daily duties required.",
-        "One day, he lost the ring at the market. Whoever found it wanted only the treasury but gained access to records and official seals as well. The city replaced every lock overnight. The breadth of harm came from the keys' capability, not Gu Yan's intention.",
+        "City clerk Gu Yan delivered records among departments. To avoid borrowing keys each time, his supervisor gave him access to the archive, treasury, seal room, and equipment store. Gu Yan worked quickly and never abused it, but the ring could open far more than his daily duties required. The arrangement cut delivery time in half and helped the office clear a backlog before the governor's visit. After that, anyone proposing separate keys was told not to slow the office before the inspection.",
+        "One day, he lost the ring at the market. Whoever found it wanted only the treasury but gained access to records and official seals as well. The city replaced every lock overnight. The breadth of harm came from the keys' capability, not Gu Yan's intention. The thief used the seal room to authorise a false withdrawal, then opened the archive to remove the matching complaint. One lost ring became several independent-looking failures.",
+        "After the locks were replaced, the director kept the old master keys in their sealed envelope and made every role justify its doors. For two days clerks queued at controlled entrances and citizens waited longer; the office accepted the delay because the previous speed had enlarged the possible loss. It documented which task required which action, resource, and duration. Emergency access required a reason, a short expiry, and review after use. The first real emergency showed that an approver also needed an on-call backup.",
         "After redesign, Gu Yan kept only a card for his delivery route. Treasury access required a finance officer. Temporary tasks received time-limited rights with logs and automatic expiry, while high-risk actions required another identity check.",
-        "At first, restrictions were too narrow and clerks began lending cards. The supervisor redesigned roles around real work instead of accumulating exceptions. Rights were reviewed each season and removed immediately after role changes.",
-        "On his next delivery, Gu Yan carried one card. At the treasury it did not light, so he turned to find the person who was meant to accompany him."
+        "At first, restrictions were too narrow and clerks began lending cards. The supervisor stopped adding one exception after another, walked the delivery routes with them, and rebuilt roles around the work they actually performed. Rights were reviewed each season and removed immediately after role changes. Borrowed cards triggered a review: permissions had been cut below usable work rather than to necessary work. Roles were repaired with bounded access and emergency elevation, never by restoring every door. Quarterly review removed access accumulated through old projects, and logs made unusual use visible without pretending monitoring prevented every misuse.",
+        "On his next delivery, Gu Yan carried one card. At the treasury it did not light, so he turned to find the person who was meant to accompany him. An audit later found three former employees whose old access would otherwise still have worked. The denial was expected behaviour, not a system failure, and the logged request showed how to obtain temporary access. He carried only what the route required."
       ],
       "storyParagraphsZh": [
-        "市政厅的书记顾言常替不同部门送文件。为了免去逐次借钥匙，主管把档案室、金库、印章房和设备间的钥匙全交给他。顾言工作很快，也从未滥用，但那串钥匙始终能打开远超他日常任务的门。",
-        "一天，顾言在集市丢了钥匙环。捡到的人虽只想偷金库，却同时获得档案与印章房入口。市政厅不得不连夜换掉所有门锁，影响范围来自钥匙拥有的能力，而不是顾言本人的意图。",
+        "市政厅的书记顾言常替不同部门送文件。为了免去逐次借钥匙，主管把档案室、金库、印章房和设备间的钥匙全交给他。顾言工作很快，也从未滥用，但那串钥匙始终能打开远超他日常任务的门。这项安排把送件时间缩短一半，让办公室在总督来访前清掉积压。此后谁提出分开保管钥匙，都会被一句“别在检查前拖慢送件”挡回去。",
+        "一天，顾言在集市丢了钥匙环。捡到的人虽只想偷金库，却同时获得档案与印章房入口。市政厅不得不连夜换掉所有门锁，影响范围来自钥匙拥有的能力，而不是顾言本人的意图。窃贼先用印章房批准假提款，再进档案室抽走对应投诉。一只遗失钥匙环，于是变成几项看似彼此无关的失守。",
+        "锁全部换完后，主管没有拆开装着旧万能钥匙的封套，而是让每个岗位逐门说明用途。两天里书记在受控门前排队，市民等待更久；办公室接受延误，因为原来的速度放大了可能损失。各岗位逐项记录任务需要什么动作、资源与时长。紧急权限必须写理由、设短期限，并在使用后复核。第一次真实急务还暴露审批人也需要随时可联系的替补。",
         "重设以后，顾言只保留送件路线需要的门卡。进入金库要由财务人员同行，临时任务可申请限时权限，使用会留下日志，任务结束自动撤销。高风险操作还要求再次确认身份。",
-        "最初限制过紧，书记们开始互借卡片。主管因此按实际工作重新设计角色，而不是不断添加例外。权限每季复核，离职或换岗当天撤回，不让旧能力慢慢堆积。",
-        "顾言再次去送文件时，腰间只有一张门卡。走到金库前，卡片没有亮，他转身去找应当同行的人。"
+        "最初限制过紧，书记们开始互借卡片。主管没再逐项添加例外，而是跟着他们走了一遍送件路线，按实际工作重设岗位权限。权限每季复核，离职或换岗当天撤回，不让旧能力慢慢堆积。互借卡片触发复盘：权限曾被削到无法工作，而不是恰好满足必要工作。岗位改用有边界的常用权限和紧急提升，却不再恢复所有门。季度复核清掉旧项目累积的权限，日志则让异常使用可见，却不假装监控能阻止所有误用。",
+        "顾言再次去送文件时，腰间只有一张门卡。走到金库前，卡片没有亮，他转身去找应当同行的人。随后审计还找出三名离岗者，他们的旧权限原本仍能继续使用。这次拒绝属于预期行为，并非系统故障；记录中的申请路径也说明如何临时取得权限。他只携带这条路线真正需要的能力。"
       ],
       "conceptName": "Principle of least privilege",
       "conceptNameZh": "最小权限原则",
@@ -139,18 +145,20 @@
       "summary": "A shop copies one customer's address into seven books; after she moves, deliveries reach four different places.",
       "summaryZh": "一家商铺把同一位顾客的地址抄进七本账，搬家以后，货物被送到了四个不同地方。",
       "storyParagraphs": [
-        "A cloth shop kept separate registers for orders, returns, membership, debt, delivery, repairs, and festivals. Mrs Lin's name and address appeared in all seven. When she moved, she told only the delivery clerk; six books retained the old address.",
-        "Orders reached the new home, refund letters went to the old street, and a repaired item travelled to an earlier temporary address. Deleting her last order almost removed the only remaining contact details. One fact scattered across many places created contradictions during update, insertion, and deletion.",
-        "The bookkeeper placed customer details in one register identified by customer number. Orders, returns, and repairs stored that number and their own facts. Address was maintained in one proper place and linked when needed. Joining the separated records still reconstructed the original business information.",
-        "Not every value had to be split into the smallest possible piece. Controlled copies could support frequent reports, but their source, refresh rule, and consistency owner had to be explicit. Important constraints could not disappear during decomposition.",
-        "When Mrs Lin moved again, the clerk changed one row. All seven business activities pointed to the new door at their next lookup."
+        "A cloth shop kept separate registers for orders, returns, membership, debt, delivery, repairs, and festivals. Mrs Lin's name and address appeared in all seven. When she moved, she told only the delivery clerk; six books retained the old address. A holiday shipment depended on correct notices, and the owner promised a bonus if the seven ledgers closed without delay.",
+        "Orders reached the new home, refund letters went to the old street, and a repaired item travelled to an earlier temporary address. Deleting her last order almost removed the only remaining contact details. One fact scattered across many places created contradictions during update, insertion, and deletion. A new customer could not be entered into the repair book without inventing an order number, while deleting a cancelled order threatened to erase the only address.",
+        "The accountant listed dependencies before splitting anything: customer number determined name and current contact; order number determined order facts; repair number determined repair facts. Repeating groups were separated so each row described one kind of thing. Trial joins had to reconstruct every old invoice exactly; if a decomposition lost rows or invented combinations, it was rejected. A separate address-history register preserved where past shipments had actually gone. When the clerk corrected the current address, the old delivery slips still showed the doors used at the time.",
+        "The bookkeeper placed customer details in one register identified by customer number. Orders, returns, and repairs stored that number and their own facts. Address was maintained in one proper place and linked when needed. Joining the separated records still reconstructed the original business information. Foreign-key checks prevented orders from pointing to customers that did not exist. A unique rule stopped the same repair ticket from being inserted twice.",
+        "Not every value had to be split into the smallest possible piece. Controlled copies could support frequent reports, but their source, refresh rule, and consistency owner had to be explicit. Important constraints could not disappear during decomposition. During migration, a wooden sign suspending new entries hung at the counter for one full market day, and the promised bonus was lost. Duplicate customer records were reconciled rather than silently merged. Staff reconciled seven books row by row, and Mrs Lin confirmed three disputed addresses before the cutover. The shop closed for a second half-day to verify counts against paper receipts; no source record was destroyed during the check.",
+        "When Mrs Lin moved again, the clerk changed one row. All seven business activities pointed to the new door at their next lookup. A controlled reporting copy refreshed nightly, and its timestamp made clear when it could lag behind the authoritative tables. The next refund and repair queries returned one current contact without erasing the addresses attached to past transactions."
       ],
       "storyParagraphsZh": [
-        "布庄为订单、退货、会员、欠款、送货、维修和节庆各设一本名册。顾客林太太的姓名与地址在七处重复。她搬家时只通知送货员，其他六本仍保留旧址。",
-        "随后，订单送到新家，退款信去了旧街，维修品被送到她更早的临时住处。删除最后一笔订单时，伙计还险些把她唯一的联系方式一并擦掉。同一事实散在多处，更新、插入和删除都会制造新矛盾。",
-        "账房把顾客资料放进一张以顾客编号识别的名册，订单、退货和维修只保存编号与各自事实。地址只在一个合适位置维护，需要时通过编号关联。拆分后重新组合，仍能还原原有业务记录。",
-        "并非所有内容都要切成最小碎片。常用报表为性能可保存受控副本，但来源、刷新规则和一致性责任必须明确。约束也不能因拆表而丢失。",
-        "林太太再次改地址时，伙计只改了一行。七项业务在下次查询时一同指向了新门牌。"
+        "布庄为订单、退货、会员、欠款、送货、维修和节庆各设一本名册。顾客林太太的姓名与地址在七处重复。她搬家时只通知送货员，其他六本仍保留旧址。节日前的大批送货全靠通知无误，老板还答应七本账按时结清便发奖金。",
+        "随后，订单送到新家，退款信去了旧街，维修品被送到她更早的临时住处。删除最后一笔订单时，伙计还险些把她唯一的联系方式一并擦掉。同一事实散在多处，更新、插入和删除都会制造新矛盾。新顾客若没有订单号就无法写入维修册；删除取消订单时，又可能连唯一地址一同抹掉。",
+        "账房拆表前先列依赖：顾客编号决定姓名与当前联系方式，订单编号决定订单事实，维修编号决定维修事实。重复组被分开，让每行只描述一种事物。试连接必须准确还原每张旧单；若拆分丢行或凭空组合，方案就被否决。另设地址历史表保存旧货实际送往何处。伙计改正当前地址后，旧送货单仍写着当时敲过的门牌。",
+        "账房把顾客资料放进一张以顾客编号识别的名册，订单、退货和维修只保存编号与各自事实。地址只在一个合适位置维护，需要时通过编号关联。拆分后重新组合，仍能还原原有业务记录。外键约束阻止订单指向不存在的顾客，唯一规则也防止同一维修单被重复录入。",
+        "并非所有内容都要切成最小碎片。常用报表为性能可保存受控副本，但来源、刷新规则和一致性责任必须明确。约束也不能因拆表而丢失。迁移那天，柜台挂着“暂停新录入”的木牌整整一个集日，老板答应的奖金也没发成。重复顾客记录逐项核对，不能悄悄合并。员工逐行核对七本名册，林太太还在切换前亲自确认三处有争议地址。布庄又停半日，以纸凭据核对总数，任何来源记录都未被贸然销毁。",
+        "林太太再次改地址时，伙计只改了一行。七项业务在下次查询时一同指向了新门牌。常用报表保留受控副本，每夜刷新，并用时间戳说明它何时可能落后于权威数据。随后退款与维修查询只返回一个当前联系方式，过去交易对应的旧地址却仍被保存。"
       ],
       "conceptName": "Database normalization",
       "conceptNameZh": "数据库规范化",
@@ -158,7 +166,7 @@
         "Database normalisation organises facts by keys and functional dependencies so that each belongs in an appropriate relation, reducing insertion, update, and deletion anomalies. Good decomposition should be lossless and preserve important constraints where possible. Normal forms guide design; performance, history, and controlled denormalisation still require explicit trade-offs and maintenance."
       ],
       "explanationParagraphsZh": [
-        "数据库规范化依据键与函数依赖把事实放在恰当关系中，减少插入、更新和删除异常。良好分解应无损，并尽可能保留重要约束。范式是设计指南，不是绝对目标；性能、历史和受控反规范化仍需明确权衡与维护规则。"
+        "数据库规范化依据键与函数依赖把事实放在恰当关系中，减少插入、更新和删除异常。良好分解应无损，并尽可能保留重要约束。范式是设计指南，不是绝对目标；性能、历史和受控反规范化仍需明确权衡与维护规则。也须验证。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -181,26 +189,30 @@
       "summary": "Five signal towers keep a shared sailing log; when the leader falls silent, old and new orders send one ship twice.",
       "summaryZh": "五座信号塔在浓雾中各自保存航令，旧塔失声后，新旧命令让同一艘船出发了两次。",
       "storyParagraphs": [
-        "Five harbour towers jointly recorded ship departures. A lead tower issued an order and the others copied it, allowing work to continue after one failure. In heavy fog, the leader ordered Morning Star to depart and then lost contact. Only two towers received the message.",
-        "The other three could not see that entry. They chose a new leader and approved Morning Star's departure again. When the fog cleared, both versions claimed authority. A delayed old message remained in transit while the new leader had extended its log. Accepting either freely could commit conflicting orders.",
-        "The revised system gave each leader an increasing term. An entry required confirmation from an overlapping majority to commit. A new leader first carried the newest log known by its majority, and messages from older terms were rejected. Any two deciding majorities shared at least one tower carrying prior commitments.",
-        "During complete partition, the minority side stopped issuing new orders rather than risk conflict; progress resumed only after enough towers communicated. Crashes, malicious nodes, and membership change required more specific rules, and 'copied to a majority' was not universally sufficient.",
-        "At the next leader failure, Morning Star accepted only one order bearing a term and commit mark. The delayed alternative went onto the obsolete rack."
+        "Five harbour towers jointly recorded ship departures. A lead tower issued an order and the others copied it, allowing work to continue after one failure. In heavy fog, the leader ordered Morning Star to depart and then lost contact. Only one other tower copied the order before the lead tower's lamp went dark. If the departure was recorded twice, insurers could pay conflicting claims and two rescue crews might search the same route.",
+        "The other three could not see that entry. They chose a new leader and approved Morning Star's departure again. When the fog cleared, both versions claimed authority. A delayed old message remained in transit while the new leader had extended its log. Accepting either freely could commit conflicting orders. The captain received two stamped orders and refused to leave until the towers resolved which log position counted. Perishable cargo spoiled while merchants shouted from the quay.",
+        "The harbourmaster raised a hold signal over the isolated pair and rejected their old order. He kept Morning Star at the quay while the three connected towers compared their pages and stamped the surviving entry. Work stopped at two piers, one history remained, and the port paid compensation for the spoiled cargo.",
+        "After paying the merchants, the harbourmaster brought all five keepers into the signal room. He scratched 8 on the outgoing keeper's brass tag and gave the successor a tag marked 9. They hung the two stamped orders beside the lamp rope. When the former leader returned and reached for it, the east keeper checked the tags, folded the older order, and left the lamp dark. Its seal was genuine, but its number had expired.",
+        "They rehearsed the handover again. Before taking the signal horn, the successor collected logs from three reachable towers. She tried to begin on a fresh page, but the west keeper laid down a page bearing an earlier entry and its black commit mark. He would not add his signature until she copied it. With only two signatures, the departure lamp stayed hooded. She restored the entry, received the third mark, and only then punched the next black circle. A tower missing pages had to catch up before joining a later vote.",
+        "At the next full split, the three connected towers continued while the isolated pair raised the hold flag, despite merchants beating on their doors. A delayed former leader arrived with a lower-numbered tag; the keeper refused to pull the rope. The tower that had missed entries copied the pages before voting. When leadership failed again, Morning Star received one order bearing a term and commit mark. The delayed alternative went onto the obsolete rack. Progress slowed; the log did not fork.",
+        "The captain checked the term, log position, and commitment mark before accepting it, not the authority of the tower's name alone."
       ],
       "storyParagraphsZh": [
-        "港湾由五座信号塔共同记录船只出发。领塔发出航令，其余塔抄入日志；即使一座停电，港口仍希望继续工作。一次浓雾中，领塔发出“晨星号出发”后失去联系，消息只到达两座塔。",
-        "另外三座看不见这条记录，选出新领塔，又批准晨星号出发。雾散后，两个版本都声称有效：旧领塔的延迟消息仍在路上，新领塔则已经继续写日志。若各塔随便接受，港口可能提交冲突顺序。",
-        "新规则给每位领塔一个递增任期。只有获得相互交叠的多数确认，记录才可提交；新领塔必须先带上多数塔已知的最新日志，旧任期消息一到便被拒绝。这样，任何两个作出决定的多数至少共享一座能携带既有记录的塔。",
-        "通信完全分裂时，少数一侧宁可暂时不发新航令，以守住不冲突的记录；恢复推进则取决于足够塔重新通信。崩溃、恶意节点和成员更换还需要更具体规则，简单“复制到多数”并非任何协议都足够。",
-        "下一次领塔失声，晨星号只收到一张带任期与提交章的航令。另一张延迟到达时，被挂进了废止栏。"
+        "港湾由五座信号塔共同记录船只出发。领塔发出航令，其余塔抄入日志；即使一座停电，港口仍希望继续工作。一次浓雾中，领塔发出“晨星号出发”后失去联系，在领塔灯火熄灭前，只有另一座塔抄到航令。若同一次出航被记录两次，保险可能重复赔付，两支救援队也会沿同一路线白跑。",
+        "另外三座看不见这条记录，选出新领塔，又批准晨星号出发。雾散后，两个版本都声称有效：旧领塔的延迟消息仍在路上，新领塔则已经继续写日志。若各塔随便接受，港口可能提交冲突顺序。船长同时拿到两张盖章航令，不肯启航，直到信号塔说清哪条日志有效。易腐货物在等待中变质，商人在码头叫骂。",
+        "港务官在孤立的两座塔上升起暂停旗，拒绝它们手里的旧航令。他让晨星号留在码头，等三座相连塔逐页核对并在保留的记录上盖章。两处泊位就此停工，日志保住唯一顺序，港口则赔偿已经变质的货物。",
+        "赔完商户，港务官把五名守塔人都叫进信号房。他在原领塔人的铜牌上刻下八，又把刻着九的牌子交给继任者，两张盖印航令并排挂在灯绳旁。旧领塔人回来伸手拉绳时，东塔守卫先看铜牌，把旧航令折起，灯仍暗着。印章是真的，号码却已经过期。",
+        "众人重新演练交接。继任者拿起号角前，先收齐三座可通信塔的日志。她想从空白页开始，西塔守卫却摊开一页，上面已有旧记录和黑色提交章；她不抄回去，他就不肯落签。只有两枚签记，出航灯一直罩着。继任者补回那一页，拿到第三枚签记，才在下一条记录上打出黑圈。漏页的塔也必须先抄齐，才能参加下一次选择。",
+        "下一次通信完全分裂时，三座相连塔继续工作，孤立的两座即使被商人拍门，也只挂暂停旗。延迟归来的旧领塔人带着较小号码，守卫没有替他拉绳；漏记的塔先抄齐日志，才参加投票。领塔再次失声时，晨星号只收到一张带号码与提交章的航令，迟来的另一张被挂进废止栏。进度慢了，日志没有分叉。",
+        "船长核对任期、日志位置与提交记号，不再只凭信号塔名号接受命令。"
       ],
       "conceptName": "Distributed consensus",
       "conceptNameZh": "分布式共识",
       "explanationParagraphs": [
-        "Distributed consensus enables multiple nodes to agree on a value or ordered log despite failures and delayed messages. Safety prevents conflicting commitments; liveness seeks progress when communication and fault assumptions permit. Terms, overlapping majorities, replicated logs, and explicit commit rules are common tools, while partitions, Byzantine faults, and membership change require additional design."
+        "Distributed consensus enables multiple nodes to agree on a value or ordered log despite crashes, delayed messages, and network partitions. Safety prevents conflicting commitments; liveness seeks progress only when communication and fault assumptions permit it. Crash-fault protocols commonly use increasing terms or epochs, leader-election rules, overlapping quorums, log repair, and explicit commit conditions; merely receiving or copying an entry does not necessarily commit it. Byzantine faults and membership changes need additional protocol-specific safeguards."
       ],
       "explanationParagraphsZh": [
-        "分布式共识让多个节点在故障和消息延迟下对值或有序日志达成一致。安全性防止冲突提交，活性则在通信与故障假设允许时推进。任期、交叠多数、复制日志和明确提交规则是常见机制；分区、恶意故障与成员变化需要额外设计。"
+        "分布式共识让多个节点在崩溃、消息延迟与网络分区下仍对某个值或有序日志达成一致。安全性要求不出现冲突提交，活性只在通信和故障假设允许时追求推进。常见崩溃容错协议会使用递增任期、选主规则、相交法定人数、日志修复与明确提交条件；收到或复制记录不等于已经提交。恶意节点和成员变更还需额外的协议机制。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -223,17 +235,19 @@
       "summary": "A city stakes the safety of its treasury on one celebrated lock, until a stolen badge makes the lock irrelevant.",
       "summaryZh": "城里的银库把全部安全都押在一把名锁上，直到一枚被盗的腰牌让那把锁变得毫无用处。",
       "storyParagraphs": [
-        "When the city built a new treasury, the keeper gave most of the budget to a locksmith famous across the region. The bronze door had three rows of bolts. An axe could not split it, and fire could not burn through it. On opening day, he invited the townspeople to watch and pulled the door three times with his own hands. It did not move.",
+        "When the city built a new treasury, the keeper gave most of the budget to a locksmith famous across the region. The bronze door had three rows of bolts. An axe could not split it, and fire could not burn through it. On opening day, he invited the townspeople to watch and pulled the door three times with his own hands. It did not move. The treasury had spent so much on the door that the steward cancelled the alarm contract and reduced night staff. The visible barrier impressed the council and concealed the new dependence on one control.",
         "One winter night, a coal carrier arrived wearing a badge stolen from the accounts office. The guard recognized its red seal and let him into the courtyard. The costly bronze door remained securely locked. The carrier entered through the smaller door used by clerks during the day.",
-        "Every room inside used the same kind of key. The carrier took one from a wall hook and opened the accounts office, the weighing room, and the rear store in turn. He did not empty the treasury. He took a little from more than a dozen chests and returned the altered ledger pages to their places. Three days passed before an apprentice noticed a broken line in the dust on one chest and discovered that silver was missing.",
-        "The keeper did not remove the bronze door. He gave the courtyard, the accounts office, and the silver rooms to different custodians. Entering the vault now required two keys turned together. Chest seals were checked each day, unusual movement rang a bell in the inner court, and a second copy of the ledger was locked across the river. When someone asked why so much trouble was needed with such a strong door, the keeper looked at the stolen badge. 'The door stopped only those who had no key,' he said.",
+        "Every room inside used the same kind of key. The carrier took one from a wall hook and opened the accounts office, the weighing room, and the rear store in turn. He did not empty the treasury. He took a little from more than a dozen chests and returned the altered ledger pages to their places. Three days passed before an apprentice noticed a broken line in the dust on one chest and discovered that silver was missing. By changing a total rather than removing a whole line, he stayed below the daily review threshold.",
+        "The steward could buy an even stronger door and preserve the public story, or admit that stolen identity had bypassed it. He cancelled a ceremonial vault opening and spent the fee on segmented access, detection, and recovery. Two-key entry slowed legitimate work; daily seal checks added labour. The council accepted those costs after seeing how one badge had reached every room. They also restricted service accounts, separated the heating system from the ledger network, and tested whether one compromised route could cross into another.",
+        "The keeper did not remove the bronze door. He gave the courtyard, the accounts office, and the silver rooms to different custodians. Entering the vault now required two keys turned together. Chest seals were checked each day, unusual movement rang a bell in the inner court, and a second copy of the ledger was locked across the river. When someone asked why so much trouble was needed with such a strong door, the keeper looked at the stolen badge. 'The door stopped only those who had no key,' he said. A drill then assumed the inner alarm failed, forcing staff to restore balances from the off-site copy. Another assumed the backup was corrupt, exposing the need to test recovery rather than merely own it. An after-action review traced which layer detected, delayed, contained, or restored each simulated breach, replacing a decorative checklist with evidence.",
         "Afterward, he hung the golden sample key given to him by the locksmith on his study wall. It still shone, but it no longer opened a single door in the treasury."
       ],
       "storyParagraphsZh": [
-        "城里新建银库时，司库把大半预算给了远近闻名的锁匠。铜门有三层锁舌，斧头砍不动，火也烧不穿。落成那天，他让百姓排队观看，亲手拉了三次门，门纹丝不动。",
+        "城里新建银库时，司库把大半预算给了远近闻名的锁匠。铜门有三层锁舌，斧头砍不动，火也烧不穿。落成那天，他让百姓排队观看，亲手拉了三次门，门纹丝不动。银库为铜门耗尽预算，司库取消警铃合同，又缩减夜班。看得见的屏障令议会满意，也掩住全库只依赖一层控制。",
         "入冬后的一晚，一名送炭人戴着账房失窃的腰牌来到门前。守卫认得腰牌上的红漆，便放他进了院子。那扇名贵的铜门仍好好锁着，送炭人走的是白天供伙计出入的小门。",
-        "库里所有房间都用同一种钥匙。送炭人从墙钩上取下一把，依次打开账房、称银间和后仓。他没有搬空银库，只从十几个箱子里各取一点，又把改过的账页放回原处。直到三天后，一个学徒发现某只箱子的灰尘断了一线，众人才知道银子少了。",
-        "司库没有拆掉铜门。他把院门、账房和银仓分给不同的人管理；进银仓要两把钥匙同时转动；箱封每天核对，异动会敲响内院的铃；账册另抄一份，锁在河对岸。有人问，铜门已经这样牢，何必再添麻烦。司库看着那枚失窃的腰牌说：‘门只拦住了没有钥匙的人。’",
+        "库里所有房间都用同一种钥匙。送炭人从墙钩上取下一把，依次打开账房、称银间和后仓。他没有搬空银库，只从十几个箱子里各取一点，又把改过的账页放回原处。直到三天后，一个学徒发现某只箱子的灰尘断了一线，众人才知道银子少了。他每次只改总额、不删整行，还始终压在每日复核阈值以下。",
+        "司库可以再买一道更强的门，保住对外说法；也可以承认失窃身份已经绕过铜门。他取消庆典开库，把费用改投分区权限、检测与恢复。双钥匙拖慢正常入库，每日核封也增加人手；议会看到一枚腰牌曾通往所有房间后，接受了这些成本。众人还限制服务账户，把供暖与账册网络隔离，并实测一条路径失守后能否横穿其他区域。",
+        "司库没有拆掉铜门。他把院门、账房和银仓分给不同的人管理；进银仓要两把钥匙同时转动；箱封每天核对，异动会敲响内院的铃；账册另抄一份，锁在河对岸。有人问，铜门已经这样牢，何必再添麻烦。司库看着那枚失窃的腰牌说：‘门只拦住了没有钥匙的人。’演练又假设内院警铃失灵，要求众人从异地副本恢复余额；下一次再假设备份损坏，让“拥有恢复”也必须经过实测。事后复盘逐层记录谁发现、拖延、围堵或恢复了每次模拟入侵，让装饰清单变成可查证据。",
         "后来，他把锁匠赠送的那把金色样钥挂在书房墙上。它仍旧闪亮，却再也打不开银库里的任何一扇门。"
       ],
       "conceptName": "Defense in depth",
@@ -265,17 +279,19 @@
       "summary": "A mechanist drives an entire theatre from one main shaft, saving parts until a single new puppet brings down the whole performance.",
       "summaryZh": "机关师用一根主轴驱动整座剧场，省下许多零件，也让一只新木偶拖垮了整场演出。",
       "storyParagraphs": [
-        "Willow River Theatre was poor enough to own only one set of machinery. Its mechanist connected the curtain, lamp frame, drumstick, and twelve puppets to a single main shaft. When the shaft turned, the curtain rose, the shades opened, and the drum sounded exactly as the puppets began to walk. The manager saved the price of many gears and boasted that the machine contained nothing unnecessary.",
+        "Willow River Theatre was poor enough to own only one set of machinery. Its mechanist connected the curtain, lamp frame, drumstick, and twelve puppets to a single main shaft. When the shaft turned, the curtain rose, the shades opened, and the drum sounded exactly as the puppets began to walk. The manager saved the price of many gears and boasted that the machine contained nothing unnecessary. The savings kept ticket prices low and won the mechanism builder a bonus before the autumn festival.",
         "Before a new play opened, mice ruined the face of the queen puppet. A carpenter hurriedly made another. It was more beautiful and only two pounds heavier. The mechanist hung it in place, watched it walk once, and told the company to admit the audience. The house was full that night, with the county magistrate seated in the first row.",
-        "As the queen reached centre stage, the main shaft slowed for a beat. The drumstick missed, the curtain dropped halfway, and the lamp frame kept turning. An oil lamp struck the edge of the cloth. Actors rushed to put out the flame while all twelve puppets continued bowing in the smoke. The audience fled into the street, and the magistrate's new robe was soaked by a bucket of water.",
-        "During repairs, the mechanist found that replacing one cord on the queen required removing the drum frame first; adjusting a lamp changed the moment when the curtain fell. He cut the main shaft apart. Lamps, drum, curtain, and puppets each received their own mechanism, joined only by hooks of the same size and a few agreed signals from a bronze bell. A role could now be changed by hanging a puppet on the hooks and listening for the bell.",
+        "As the queen reached centre stage, the main shaft slowed for a beat. The drumstick missed, the curtain dropped halfway, and the lamp frame kept turning. An oil lamp struck the edge of the cloth. Actors rushed to put out the flame while all twelve puppets continued bowing in the smoke. The audience fled into the street, and the magistrate's new robe was soaked by a bucket of water. Repairing one effect by tightening the shared shaft worsened another, because every motion depended on hidden timing elsewhere.",
+        "As refunds began for two sold-out nights, the troupe kept the rest of the season on the board and rebuilt around it. The engineer first drew responsibilities—light, sound, curtain, puppet—and exposed the connections among them. He cut only where a stable contract could replace shared internals: standard hooks carried weight limits, bell signals defined timing, and failures stayed behind physical stops. The troupe published interface measurements and assigned one owner to each boundary. Changing a bell code required agreement from every module that consumed it.",
+        "During repairs, the mechanist found that replacing one cord on the queen required removing the drum frame first; adjusting a lamp changed the moment when the curtain fell. He cut the main shaft apart. Lamps, drum, curtain, and puppets each received their own mechanism, joined only by hooks of the same size and a few agreed signals from a bronze bell. A role could now be changed by hanging a puppet on the hooks and listening for the bell. Independent mechanisms cost more gears and sometimes duplicated parts. In return, each could be tested alone, and a puppet change no longer required knowledge of the lamp's axle. A fault in the drum mechanism was then forced during rehearsal; the physical stop kept it from pulling down the curtain.",
         "The following year, the wolf puppet broke a leg just before the opening. An apprentice brought the spare and fastened its two hooks. The first bell had already sounded beyond the curtain, and the manager did not even ask the drummer to stop."
       ],
       "storyParagraphsZh": [
-        "柳河剧场穷得只剩一套机关。机关师把幕布、灯架、鼓槌和十二只木偶都接在同一根主轴上。轴一转，幕布升起，灯罩打开，鼓声和木偶的脚步正好同时响。班主少买了许多齿轮，逢人便夸这台机器没有一处多余。",
+        "柳河剧场穷得只剩一套机关。机关师把幕布、灯架、鼓槌和十二只木偶都接在同一根主轴上。轴一转，幕布升起，灯罩打开，鼓声和木偶的脚步正好同时响。班主少买了许多齿轮，逢人便夸这台机器没有一处多余。省下的零件让票价维持低廉，也让机关师在秋祭前领到奖金。",
         "新戏开演前，王后木偶的脸被老鼠咬坏了。木匠赶做了一只，模样更美，只比旧的重两斤。机关师把它挂上去试了试，木偶能走，便催大家开门迎客。那晚座无虚席，县令也坐在第一排。",
-        "王后走到台中央时，主轴忽然慢了一拍。鼓槌先落空，幕布随后垂下一半，灯架却还在往前转。一盏油灯撞上布边，演员扑上去灭火，十二只木偶则在烟里不停鞠躬。观众逃到街上，县令的新袍被水浇得透湿。",
-        "修理时，机关师发现若要替王后换一根绳，就得先卸下鼓架；要调灯，又会改变幕布落下的时刻。他把主轴锯开，让灯、鼓、幕布和木偶各用自己的机关，只留下尺寸相同的挂钩和几声约定好的铜铃。以后换角色，只需把木偶挂上，听铃行动。",
+        "王后走到台中央时，主轴忽然慢了一拍。鼓槌先落空，幕布随后垂下一半，灯架却还在往前转。一盏油灯撞上布边，演员扑上去灭火，十二只木偶则在烟里不停鞠躬。观众逃到街上，县令的新袍被水浇得透湿。他们每拧紧主轴修好一处，另一处反而更坏，因为每个动作都暗中依赖别处时序。",
+        "两场满座票开始退款时，戏班把余下演期留在木牌上，围着它拆台重建。机关师先画清灯、鼓、幕布、木偶各自职责与连接，只在稳定约定能够替代内部牵连处下锯：标准挂钩注明承重，铜铃规定时序，物理挡块把故障留在局部。戏班公开接口尺寸，并给每条边界指定负责人；更改铜铃编码必须得到所有使用它的机关同意。",
+        "修理时，机关师发现若要替王后换一根绳，就得先卸下鼓架；要调灯，又会改变幕布落下的时刻。他把主轴锯开，让灯、鼓、幕布和木偶各用自己的机关，只留下尺寸相同的挂钩和几声约定好的铜铃。以后换角色，只需把木偶挂上，听铃行动。独立机关需要更多齿轮，偶尔也会重复零件；换来的好处是各自可单独测试，换木偶的人不必再懂灯架主轴。排练中众人故意卡住鼓机，物理挡块使故障没有继续拖落幕布。",
         "第二年，狼木偶在开场前断了一条腿。小学徒抱来备用木偶，扣上两只挂钩。幕外已经响起第一声铜铃，班主甚至没有叫停鼓手。"
       ],
       "conceptName": "Modularity",
@@ -307,18 +323,20 @@
       "summary": "An automated stage is rushed into service before a festival; every mechanism behaves in an empty hall until actors and rain arrive together.",
       "summaryZh": "一座自动舞台赶在庆典前完工，空场时每个机关都很听话，直到演员和暴雨同时登台。",
       "storyParagraphs": [
-        "Before the harvest festival, the theatre built a stage that could change its own scenery. The manager promised the governor that opening night would not contain a single dark pause. Carpenters had raised the curtain, lifted the bridge, and opened the trapdoor separately; each worked smoothly. The stage master asked for one complete run with actors in costume, but the manager would not give up the daytime rehearsals for which he was selling tickets.",
+        "Before the harvest festival, the theatre built a stage that could change its own scenery. The manager promised the governor that opening night would not contain a single dark pause. Carpenters had raised the curtain, lifted the bridge, and opened the trapdoor separately; each worked smoothly. The stage master asked for one complete run with actors in costume, but the manager would not give up the daytime rehearsals for which he was selling tickets. The contract penalty for a delay was large, so every hour spent on a full rehearsal looked like lost revenue.",
         "Heavy rain fell on opening night. The actor playing the knight rushed onto the bridge in a cloak soaked with water just as the backstage bell signalled a change of scene. The bridge moved a moment more slowly than it had when empty, but the curtain fell on time and wrapped itself around the knight's raised lance. Hearing a second bell, the trapdoor operator assumed the first act was over and pulled his lever as well.",
-        "The knight fell into a padded compartment and escaped serious injury. His falling lance struck the scenery, however, and covered the front row in dust. The governor left amid coughing, and tickets for the remaining three performances were refunded. Alone on the empty stage, the manager pulled every mechanism again. Once again, each worked perfectly.",
-        "The actors, carpenters, and stage master all stayed for the repairs. They first loaded each mechanism with the heaviest prop, then tried actions that could occur at the same time. Someone deliberately rang a bell late; someone else soaked the cloak. After reopening, every fault and near miss was written in a small backstage book and addressed before the next day's rehearsal.",
-        "Before the premiere of the next play, the manager poured a bucket of water over the spare cloak himself. When the dripping knight stepped onto the bridge, he did not look to see whether every seat had sold. He watched the white load mark beneath the bridge."
+        "The knight fell into a padded compartment and escaped serious injury. His falling lance struck the scenery, however, and covered the front row in dust. The governor left amid coughing, and tickets for the remaining three performances were refunded. Alone on the empty stage, the manager pulled every mechanism again. Once again, each worked perfectly. The apparent success of isolated checks now became evidence of what had not been tested: load, ordering, timing, and weather together.",
+        "The owner pulled down the sold-out weekend sign, kept the actors on pay, and turned the dark stage over to systematic tests. They wrote expected outcomes before each run, reproduced the wet-cloak failure, and kept a regression set so a repaired bridge could not silently break the trapdoor sequence. A test environment copied the stage configuration closely enough to expose timing, while opening-night monitoring watched conditions no rehearsal could exhaust.",
+        "The actors, carpenters, and stage master all stayed for the repairs. They first loaded each mechanism with the heaviest prop, then tried actions that could occur at the same time. Someone deliberately rang a bell late; someone else soaked the cloak. After reopening, every fault and near miss was written in a small backstage book and addressed before the next day's rehearsal. Unit checks, integrations, full dress runs, and deliberate fault cases found different defects. No passing list was treated as proof of permanent safety. Every escaped defect became a new reproducible case rather than a reason to blame the last operator.",
+        "Before the premiere of the next play, the manager poured a bucket of water over the spare cloak himself. When the dripping knight stepped onto the bridge, he did not look to see whether every seat had sold. He watched the white load mark beneath the bridge. The white line marked the maximum safe deflection under the specified load, and a stagehand logged every crossing after reopening."
       ],
       "storyParagraphsZh": [
-        "丰收节前，剧院造了一座会自己换景的舞台。班主答应总督，开幕夜绝不让观众等一次黑场。木匠分别拉过幕布、升过吊桥、开过活板门，每样都顺利。舞台师请求让演员穿戏服完整走一遍，班主却舍不得停掉白天的卖票彩排。",
+        "丰收节前，剧院造了一座会自己换景的舞台。班主答应总督，开幕夜绝不让观众等一次黑场。木匠分别拉过幕布、升过吊桥、开过活板门，每样都顺利。舞台师请求让演员穿戏服完整走一遍，班主却舍不得停掉白天的卖票彩排。委约对延期开幕罚得很重，因此每用一小时完整排练，看起来都像在丢掉收入。",
         "开幕当晚下起大雨。扮骑士的演员披着吸满水的斗篷冲上吊桥，后台同时敲响换景铃。桥比空载时慢了一瞬，幕布却照旧落下，正好缠住骑士举起的长枪。负责活板门的人听见第二声铃，以为第一幕已经结束，也拉下了手柄。",
-        "骑士跌进铺着软垫的暗格，没受重伤；倒下的长枪却撞翻布景，台下第一排被灰尘盖住。总督在咳嗽声中离席，余下三场演出全部退票。班主站在空台上反复拉动机关，它们又一次次完美运行。",
-        "修台时，演员、木匠和舞台师都留下来。他们先让每件机关单独承受最重的道具，再把会同时发生的动作连起来试；有人故意晚敲一声铃，有人往斗篷上泼水。重开以后，每场故障和险情都记在后台小册上，第二天排演前先处理。",
-        "新戏首演前，班主亲手把一桶水倒在备用斗篷上。湿漉漉的骑士踏上吊桥时，他没有去看座位卖满没有，只盯着桥下那条白色刻线。"
+        "骑士跌进铺着软垫的暗格，没受重伤；倒下的长枪却撞翻布景，台下第一排被灰尘盖住。总督在咳嗽声中离席，余下三场演出全部退票。班主站在空台上反复拉动机关，它们又一次次完美运行。单件检查的成功此时反而指出未被测试之处：负载、先后、时序与天气从未一起出现。",
+        "班主扯下周末售罄的牌子，照付演员工资，把漆黑舞台交给系统测试。众人每次先写预期，再重现湿斗篷故障，并保留回归测试，避免修好吊桥却悄悄破坏活板门时序。测试场景尽量复制真实配置以暴露时序，开幕后的监测则继续观察排练无法穷尽的条件。",
+        "修台时，演员、木匠和舞台师都留下来。他们先让每件机关单独承受最重的道具，再把会同时发生的动作连起来试；有人故意晚敲一声铃，有人往斗篷上泼水。重开以后，每场故障和险情都记在后台小册上，第二天排演前先处理。单件、组合、全流程与故意注入故障的测试各自发现不同问题；任何通过清单都不能证明舞台永远安全。每个漏网故障都变成可复现的新用例，而非责怪最后操作者的理由。",
+        "新戏首演前，班主亲手把一桶水倒在备用斗篷上。湿漉漉的骑士踏上吊桥时，他没有去看座位卖满没有，只盯着桥下那条白色刻线。白线标着规定负载下的最大安全挠度，重开后每次越线都由舞台工记录。"
       ],
       "conceptName": "Software testing and feedback",
       "conceptNameZh": "软件测试与反馈",
@@ -349,17 +367,19 @@
       "summary": "A librarian prides himself on never missing a match, until a new collection makes his reliable method demand four times as many nights.",
       "summaryZh": "一名馆长以从不漏查为荣，直到一批新书让他原本可靠的办法需要四倍长夜。",
       "storyParagraphs": [
-        "Director Zhao had one rule at the county library: every new book had to be compared with every volume already held, both to prevent duplicates and to discover related works. While the collection was small, the method was dependable. Zhao always finished before closing and often said that going slowly was how one avoided missing things.",
-        "In spring, a local landowner donated his entire collection, exactly doubling the number of books in the library. Zhao added two lamps and kept his old rule. He expected twice the work. Within days, however, comparison sheets were piling up faster and faster: the new books had to be checked against the old ones, and also against one another.",
+        "Director Zhao had one rule at the county library: every new book had to be compared with every volume already held, both to prevent duplicates and to discover related works. While the collection was small, the method was dependable. Zhao always finished before closing and often said that going slowly was how one avoided missing things. Each comparison made a pair, so the work grew with possible pairs rather than books alone.",
+        "In spring, a local landowner donated his entire collection, exactly doubling the number of books in the library. Zhao added two lamps and kept his old rule. He expected twice the work. Within days, however, comparison sheets were piling up faster and faster: the new books had to be checked against the old ones, and also against one another. With n books, his method approached n(n-1)/2 comparisons. Doubling n therefore pushed the pair count toward four times, not two.",
         "At the end of the month, the magistrate requested flood records from three generations. Zhao and six copyists worked all night and were still turning through books at dawn. The donated volumes blocked the aisles, and a later cart had to stand outside in the rain. Zhao proposed hiring six more people. A young apprentice instead pushed a small wooden box toward him, with cards divided by title, author, and river name.",
-        "They gave every book a fixed number and placed common clues in separate drawers. To find a duplicate, they no longer introduced each book to the whole library; they checked only the small group likely to match. To find flood records, they followed the cards directly to the relevant shelves. Organizing the box took half a month, but when another cart arrived, the night shift grew by only half an hour.",
+        "The director offered to double staff, but payroll could not keep doubling whenever the collection did. Zhao surrendered his private reading room to house the catalogue and delayed lending for two weeks. The new method paid an upfront cost to build indexes, then narrowed most lookups to a small candidate set. Worst cases still existed, and extra storage now needed maintenance. The catalogue also changed failure costs: if one drawer was damaged, stable book identifiers allowed the index to be rebuilt from the shelves.",
+        "They gave every book a fixed number and placed common clues in separate drawers. To find a duplicate, they no longer introduced each book to the whole library; they checked only the small group likely to match. To find flood records, they followed the cards directly to the relevant shelves. Organizing the box took half a month, but when another cart arrived, the night shift grew by only half an hour. They timed both methods on one shelf, ten shelves, and the full hall, plotting input size against steps. The curve, not one convenient benchmark, determined the decision. They recorded indexing time and update cost beside query speed, since improvement in one operation could burden another.",
         "Zhao did not throw away the old stack of comparison sheets. He cut them into cards and placed them in the emptiest drawer of the box. When he closed the library that evening, the sunset was still visible outside, and neither of the two extra lamps had been lit."
       ],
       "storyParagraphsZh": [
-        "县图书馆的赵馆长有一条规矩：每收一册新书，都要把它同馆内每一册旧书逐一比较，以免重收，也方便找出相近内容。藏书不多时，这办法很稳妥。馆长总能在闭馆前做完，还常说，慢一点才不会漏掉东西。",
-        "春天，一位乡绅把家藏全数捐来，馆里的书恰好翻了一倍。赵馆长添了两盏灯，仍按旧规矩查书。他原以为工作也只会多一倍，几天后却发现桌上的对照纸越来越快地堆高：新来的书要查旧书，也要彼此再查一遍。",
+        "县图书馆的赵馆长有一条规矩：每收一册新书，都要把它同馆内每一册旧书逐一比较，以免重收，也方便找出相近内容。藏书不多时，这办法很稳妥。馆长总能在闭馆前做完，还常说，慢一点才不会漏掉东西。每次核对都组成一对，因此工作量随可能配对增长，而不只随书本数量增长。",
+        "春天，一位乡绅把家藏全数捐来，馆里的书恰好翻了一倍。赵馆长添了两盏灯，仍按旧规矩查书。他原以为工作也只会多一倍，几天后却发现桌上的对照纸越来越快地堆高：新来的书要查旧书，也要彼此再查一遍。若有 n 本书，旧法接近要做 n(n-1)/2 次比较；藏书翻倍时，配对数便趋近四倍，而非两倍。",
         "月底，知县要找三代水患记录。赵馆长和六名抄书人熬了整夜，仍在一册册翻。乡绅的书已挡住过道，后来的书车只好停在雨里。赵馆长想再雇六个人，年轻学徒却把一只小木盒推到他面前，盒里按书名、作者和河流名称分着卡片。",
-        "他们先给书固定编号，再把常用线索写进不同抽屉。查重时不再让每本书与全馆相见，只查看可能相同的那一小组；找水患，也先沿卡片走到对应书架。整理木盒花了半个月，但此后又来一车书，夜班只多了半个时辰。",
+        "知县提议加倍雇人，可馆藏每次扩张，薪资不可能都跟着翻倍。赵馆长交出私人阅览室安放目录，借阅也暂停两周。新法先付建立索引的成本，再把多数查找缩到小候选集；最坏情况仍存在，额外存储也需要维护。目录还改变故障代价：一个抽屉损坏时，稳定书号使索引能由书架重新构建。",
+        "他们先给书固定编号，再把常用线索写进不同抽屉。查重时不再让每本书与全馆相见，只查看可能相同的那一小组；找水患，也先沿卡片走到对应书架。整理木盒花了半个月，但此后又来一车书，夜班只多了半个时辰。众人分别在一架、十架与全馆计时，把输入规模和步骤画成曲线，不再由一次方便的小测试替方法定胜负。众人把建索引和更新成本同查询速度并列记录，因为一种操作变快可能让另一种更重。",
         "赵馆长没有丢掉那叠旧对照纸。他把它裁成卡片，放进木盒最空的抽屉。那天闭馆时，门外还亮着晚霞，两盏加出来的油灯都没有点。"
       ],
       "conceptName": "Computational complexity",
@@ -391,17 +411,19 @@
       "summary": "Three barrels of blue dye go missing from a workshop; its owner locks the gate before realizing he has never looked beyond the vats.",
       "summaryZh": "染坊少了三桶蓝料，老板先锁住院门，随后才发现自己从未认真看过染缸之外。",
       "storyParagraphs": [
-        "At the end of the month, the dye workshop counted enough purchased blue pigment for ten barrels, while the cloth sold accounted for only seven. Owner Shen Tong snapped the beads of his abacus and decided that someone was stealing. He locked the courtyard gate, searched the workers' cupboards, and withheld two days of wages from everyone.",
+        "At the end of the month, the dye workshop counted enough purchased blue pigment for ten barrels, while the cloth sold accounted for only seven. Owner Shen Tong snapped the beads of his abacus and decided that someone was stealing. He locked the courtyard gate, searched the workers' cupboards, and withheld two days of wages from everyone. The missing value threatened a royal order, and accusation was faster than tracing drains, tanks, and changing inventory.",
         "Aman, who washed the cloth, did not argue. She brought him three bowls. One held blue water from the drain, another held blue sludge scraped from the bottom of a vat, and the third contained newly dyed cloth still dripping wet. 'The ledger records only dry cloth,' she said. 'Where are these recorded?'",
-        "Still suspicious, Shen marked the next batch of pigment. They weighed the blue entering the workshop, the dry and wet cloth, the sediment, and the discharged water. They also measured what remained in each vat before and after the work. Instead of finding a worker with a hidden supply, they found several destinations that had never been recorded: some pigment remained in vats and wet cloth, some left with sludge and water, and the old scale consistently overstated what entered.",
-        "Shen returned the withheld wages. He added a settling pond at the drain and sent recoverable blue sludge back to the start of the process. From then on, each batch began with a clear account of where material entered and left, while changes inside the vats appeared on the same page. Any remaining difference prompted a search for leaks, measurement error, or unexpected change.",
+        "Still suspicious, Shen marked the next batch of pigment. They weighed the blue entering the workshop, the dry and wet cloth, the sediment, and the discharged water. They also measured what remained in each vat before and after the work. Instead of finding a worker with a hidden supply, they found several destinations that had never been recorded: some pigment remained in vats and wet cloth, some left with sludge and water, and the old scale consistently overstated what entered. For a fixed day and defined workshop boundary, they wrote input plus internal generation minus product, waste, and consumption as the change stored inside. Dye was not generated by the process, but water and chemical reactions changed what could be measured.",
+        "The marked batch closed most of the gap, but half a bowl remained. Rather than name a thief, Shen repeated the weighing with a calibrated scale and sampled the drain over the whole shift. The old scale's bias and an unmeasured cleaning discharge accounted for the remainder. He returned the withheld wages and paid a late-delivery penalty himself. The calculation was repeated for each dye species where reactions transformed compounds, keeping total relevant atoms consistent even when colour changed.",
+        "Shen returned the withheld wages. He added a settling pond at the drain and sent recoverable blue sludge back to the start of the process. From then on, each batch began with a clear account of where material entered and left, while changes inside the vats appeared on the same page. Any remaining difference prompted a search for leaks, measurement error, or unexpected change. Recovery was evaluated against energy, water, and product quality so that moving dye back did not create a larger hidden loss. A new sampling port made the cleaning stream measurable instead of leaving it outside the drawn boundary by habit.",
         "The next month's account was short by only half a bowl of blue. Shen did not lock the gate. He carried the old scale to a corner of the yard and broke its beam with one hammer blow."
       ],
       "storyParagraphsZh": [
-        "染坊月底盘账，买来的蓝料足有十桶，卖出的布却只用得上七桶。老板沈同把账盘拨得噼啪响，认定有人偷料。他锁住院门，搜了工人的柜子，还扣下所有人的两日工钱。",
+        "染坊月底盘账，买来的蓝料足有十桶，卖出的布却只用得上七桶。老板沈同把账盘拨得噼啪响，认定有人偷料。他锁住院门，搜了工人的柜子，还扣下所有人的两日工钱。缺失染料危及宫廷订单，指控工人比追查水沟、染缸和库存变化快得多。",
         "洗布的阿满没有替自己争辩，只端来三只碗。一只盛着排水沟里的蓝水，一只装着刮自缸底的蓝泥，第三只碗里泡着刚出缸、仍在滴水的布。她问：‘账上只写了干布，那这些算在哪里？’",
-        "沈同仍不放心，便在下一批料上做了记号。他们称过进门的蓝料，也称干布、湿布、缸底沉积和排出的水；开工前后，连缸里剩下多少都量了一遍。最后找到的不是一个藏料的工人，而是几处长期没人记的去向：一部分留在缸和湿布里，一部分随泥与水流走，旧秤还总把进料报得偏多。",
-        "沈同把扣下的工钱退回去，又在排水口加了沉淀池，把还能回收的蓝泥送回前段。此后每批染料都要先画清从哪里进、从哪里出，缸内增减也记在同一张纸上。若仍有差额，才去查泄漏、误差或意外变化。",
+        "沈同仍不放心，便在下一批料上做了记号。他们称过进门的蓝料，也称干布、湿布、缸底沉积和排出的水；开工前后，连缸里剩下多少都量了一遍。最后找到的不是一个藏料的工人，而是几处长期没人记的去向：一部分留在缸和湿布里，一部分随泥与水流走，旧秤还总把进料报得偏多。他们先固定一天和作坊边界，再写下：输入加内部生成，减产品、废物流与消耗，等于系统内积累变化。染料不会凭空生成，但水分与化学反应会改变可测形态。",
+        "标记批次解释了大部分差额，仍剩半碗。沈同没有再找窃贼，而是换校准秤重做，并对整班排水取样。旧秤偏差和一股未记录清洗水解释了余数。他退回扣薪，自己承担迟交罚款。发生反应并改变化合物时，衡算按相关染料组分重复进行，即使颜色变化，相关元素总量仍须一致。",
+        "沈同把扣下的工钱退回去，又在排水口加了沉淀池，把还能回收的蓝泥送回前段。此后每批染料都要先画清从哪里进、从哪里出，缸内增减也记在同一张纸上。若仍有差额，才去查泄漏、误差或意外变化。回收方案还要同能耗、水耗和布料质量一起评价，免得把蓝料送回去，却制造更大的隐藏损失。新取样口让清洗排流可测，不再因习惯被排除在所画边界之外。",
         "第二个月盘账时，账房只差了半碗蓝料。沈同没有锁门。他拿起那只旧秤，走到院角，一锤砸断了秤梁。"
       ],
       "conceptName": "Mass balance",
@@ -433,17 +455,19 @@
       "summary": "Two equal fermenters receive and release liquid at the same rate, yet make different wine until a red thread reveals an unseen shortcut inside one vessel.",
       "summaryZh": "两只同样大小的发酵罐有着相同进出速度，酿出的酒却不同，直到一缕红色显出罐内看不见的近路。",
       "storyParagraphs": [
-        "A winery installed two fermenting vessels of equal size. Each day, the same amount of juice entered each one and the same amount of wine left. By the owner's calculation, the juice should remain inside both vessels for the same length of time. Yet the eastern vessel produced mellow wine, while the western one produced wine that was partly sharp and partly overripe and sour.",
-        "The owner changed the fruit, questioned the vessel keeper, and weighed the yeast three times. Nothing improved. A young winemaker climbed to the top of the western vessel and noticed that its inlet pipe stood close to the outlet, while almost no water could be heard in two lower corners. She asked the owner not to discard the next batch, but to lend her one spoonful of red berry juice.",
-        "Soon after the berry juice entered from above, a red thread appeared at the outlet. Three days later, after clear juice had been used to flush the vessel, pale red liquid was still seeping from the bottom. Some fresh juice had taken a shortcut out before it could ferment, while some had remained trapped in the corners for too long. The average written in the ledger described neither group well.",
-        "They moved the inlet pipe to the far side and placed baffles inside so the liquid travelled through the whole vessel. After the change, red no longer appeared at the outlet immediately or lingered at the bottom for days. Batch after batch from the western vessel finally became consistent.",
+        "A winery installed two fermenting vessels of equal size. Each day, the same amount of juice entered each one and the same amount of wine left. By the owner's calculation, the juice should remain inside both vessels for the same length of time. Yet the eastern vessel produced mellow wine, while the western one produced wine that was partly sharp and partly overripe and sour. A wedding contract required twice the normal output, so the owner increased flow and trusted volume divided by flow as the single answer.",
+        "The owner changed the fruit, questioned the vessel keeper, and weighed the yeast three times. Nothing improved. A young winemaker climbed to the top of the western vessel and noticed that its inlet pipe stood close to the outlet, while almost no water could be heard in two lower corners. She asked the owner not to discard the next batch, but to lend her one spoonful of red berry juice. The owner had already increased flow once to protect margin, so blaming ingredients preserved the decision that made the order appear profitable.",
+        "Soon after the berry juice entered from above, a red thread appeared at the outlet. Three days later, after clear juice had been used to flush the vessel, pale red liquid was still seeping from the bottom. Some fresh juice had taken a shortcut out before it could ferment, while some had remained trapped in the corners for too long. The average written in the ledger described neither group well. They sampled the outlet over time and drew the tracer curve: an early spike exposed short-circuiting, while a long tail exposed stagnant pockets.",
+        "When the wedding jars arrived, the owner returned the deposit instead of filling them and opened the tank for alteration. Baffles redirected flow, the inlet moved away from the outlet, and a mixer reduced stagnant corners. The changes lowered maximum throughput; residence became more consistent. They compared the nominal mean with the full curve and specified a minimum effective contact time for the fermentation they needed.",
+        "They moved the inlet pipe to the far side and placed baffles inside so the liquid travelled through the whole vessel. After the change, red no longer appeared at the outlet immediately or lingered at the bottom for days. Batch after batch from the western vessel finally became consistent. A second tracer test quantified the improvement before sale resumed; taste alone could not locate hidden paths. A slower flow reduced daily barrels, but fewer batches needed disposal and the wedding replacement met specification.",
         "On the day they filled the new wine barrels, the owner poured in another spoonful of berry juice. He crouched beside the outlet and did not hurry to collect the wine. He simply placed an empty cup where the first red thread used to appear."
       ],
       "storyParagraphsZh": [
-        "酒坊添了两只同样大的发酵罐。每天灌入的果汁一样多，流出的酒也一样多，掌柜算过，果汁在两只罐里理应停留同样久。可东罐的酒醇厚，西罐出来的却一半发涩，一半带着过熟的酸味。",
-        "掌柜换过果子，责问过看罐人，还把酵母称了三遍。西罐仍旧如此。年轻酿酒师爬上罐顶，发现进料管和出料口离得很近，而罐底两角几乎没有水声。她请掌柜先别倒掉下一批酒，只借一勺红莓汁。",
-        "红莓汁刚从上方灌入，出口很快就出现一缕红线；可三天后，他们用清水果汁冲洗，罐底仍慢慢渗出淡红。原来一部分新汁抄近路离开，尚未来得及发酵；另一部分困在角落，待得太久。账上那个平均数，两边都没有照顾到。",
-        "他们把进料管移到远端，又在罐里加了几块导流板，让液体绕过整个罐身。改好后，红色不再立即出现在出口，也不再数日留在底部。西罐的酒终于同一批一批地稳定下来。",
+        "酒坊添了两只同样大的发酵罐。每天灌入的果汁一样多，流出的酒也一样多，掌柜算过，果汁在两只罐里理应停留同样久。可东罐的酒醇厚，西罐出来的却一半发涩，一半带着过熟的酸味。婚宴订单要求产量翻倍，掌柜便提高流量，只相信容积除以流量所得的一个答案。",
+        "掌柜换过果子，责问过看罐人，还把酵母称了三遍。西罐仍旧如此。年轻酿酒师爬上罐顶，发现进料管和出料口离得很近，而罐底两角几乎没有水声。她请掌柜先别倒掉下一批酒，只借一勺红莓汁。掌柜已经为保利润提过一次流量，把问题怪给原料，正好可以保住那项让订单显得赚钱的决定。",
+        "红莓汁刚从上方灌入，出口很快就出现一缕红线；可三天后，他们用清水果汁冲洗，罐底仍慢慢渗出淡红。原来一部分新汁抄近路离开，尚未来得及发酵；另一部分困在角落，待得太久。账上那个平均数，两边都没有照顾到。他们连续取样，把示踪浓度画成曲线：过早尖峰暴露短路，拖长尾巴则暴露滞留死区。",
+        "清晨，整整一排婚宴酒坛送到门口时，掌柜没有把坏酒灌进去。他退还订金，打开罐体改造。导流板改变路径，入口远离出口，搅拌器减少死角。改造降低了最大吞吐量，换来更一致的停留经历。众人把名义平均值同整条曲线比较，并为所需发酵规定最低有效接触时间。",
+        "他们把进料管移到远端，又在罐里加了几块导流板，让液体绕过整个罐身。改好后，红色不再立即出现在出口，也不再数日留在底部。西罐的酒终于同一批一批地稳定下来。复售以前，他们用第二次示踪量化改进；味道能够发现问题，却无法定位罐内隐藏路径。降速减少每日桶数，报废批次却更少，补做的婚宴酒也达到要求。",
         "新酒装桶那天，掌柜又倒进一勺红莓汁。他蹲在出口旁，没有急着接酒，只把一只空杯放在第一缕红色原本会出现的地方。"
       ],
       "conceptName": "Residence time",
@@ -475,17 +499,19 @@
       "summary": "A perfume works inspects its still only at sunset; one large, delayed correction turns a small daytime drift into an overnight failure.",
       "summaryZh": "香油坊每天只在日落时检查蒸馏塔，一次迟来的大幅调整，把白天的小偏差推成了整夜的事故。",
       "storyParagraphs": [
-        "A mountain perfume works had a tall distillation tower. At sunset each day, the old owner collected a cup from the top, smelled its fragrance, and adjusted the steam valve by experience. While all the fruit peel came from one orchard, this method rarely failed, and he considered extra inspections a waste of labour.",
+        "A mountain perfume works had a tall distillation tower. At sunset each day, the old owner collected a cup from the top, smelled its fragrance, and adjusted the steam valve by experience. While all the fruit peel came from one orchard, this method rarely failed, and he considered extra inspections a waste of labour. The daily sample was cheap and had worked under stable feed, so the owner rejected continuous instruments as unnecessary expense.",
         "In a poor harvest year, peel began arriving from three places. Some was dry; some still carried rainwater. A cart of wet material arrived at noon. The tower temperature slowly fell and the oil grew weaker, but no one discovered it until sunset. The owner opened the steam valve wide, hoping to recover the fragrance lost during the day. During the night, dry material replaced the wet feed, the temperature surged, and bitter compounds entered the oil.",
-        "The night apprentice heard an unfamiliar knocking in the tower and hurried to close the valve. Half a day of weak oil and half a night of bitter oil could not be sold, leaving only half the orders ready for wedding season. Looking at his sunset sample, the owner admitted for the first time that it told him only what the tower was doing at the instant he filled the cup.",
-        "They installed continuous temperature readings and a level float, allowing a small valve to correct deviations gradually. When wet material entered the yard, the receiving crew warned the tower room in advance. If temperature or pressure crossed a limit, an independent device shut off the steam and rang a bell. The apprentice still smelled the oil each day, but his nose was no longer the tower's only messenger.",
+        "The night apprentice heard an unfamiliar knocking in the tower and hurried to close the valve. Half a day of weak oil and half a night of bitter oil could not be sold, leaving only half the orders ready for wedding season. Looking at his sunset sample, the owner admitted for the first time that it told him only what the tower was doing when he filled the cup. His large correction arrived after a long process delay and remained active after conditions changed, creating the opposite error.",
+        "When the wedding merchant arrived for the sealed jars, the owner showed him the ruined batch and ordered the tower shut for instrumentation and tuning. He lost the payment and sold his reserve oil to cover wages. Operators first measured response time, then set smaller adjustments; overly aggressive settings caused oscillation in trial runs and were reduced. They tested sensor failure and manual control before restart, because automation without a safe fallback would create a new single dependence.",
+        "They installed continuous temperature readings and a level float, allowing a small valve to correct deviations gradually. When wet material entered the yard, the receiving crew warned the tower room in advance. If temperature or pressure crossed a limit, an independent device shut off the steam and rang a bell. The apprentice still smelled the oil each day, but his nose was no longer the tower's only messenger. Feedback corrected measured deviation; feed-moisture information provided an earlier feedforward move. Independent trips acted only at safety limits, not as routine control. Trend displays showed rate of change as well as current value, helping operators distinguish noise from a developing deviation.",
         "When another cart of wet peel arrived, the owner reached by habit for the large valve. The smaller valve was already moving gently, and the reading had returned to its mark. He lowered his hand and walked downstairs to the tower's even ticking."
       ],
       "storyParagraphsZh": [
-        "山城的香油坊有座高蒸馏塔。老坊主每天日落时接一杯塔顶液体，闻过香气，再凭经验转动蒸汽阀。旧果皮来自同一片果园时，这办法很少出错，他便觉得多看几次只是浪费人手。",
+        "山城的香油坊有座高蒸馏塔。老坊主每天日落时接一杯塔顶液体，闻过香气，再凭经验转动蒸汽阀。旧果皮来自同一片果园时，这办法很少出错，他便觉得多看几次只是浪费人手。每日一次取样便宜，在进料稳定时也曾有效，因此坊主把连续仪表视为多余开支。",
         "收成不好的一年，果皮开始从三处运来。有的晒得干，有的还带雨水。中午送来一车湿料，塔温慢慢下降，出来的油越来越淡，直到日落才被发现。坊主一口气把蒸汽开大，想把白天失去的香气补回来。夜里原料换成干料，塔温猛升，苦味也被带进了油里。",
-        "守夜学徒听见塔身发出从未有过的敲击声，赶紧关小阀门。半日的淡油和半夜的苦油都不能出售，婚礼季的订单只交出一半。坊主盯着日落时那杯样品，第一次承认它只告诉他塔在取样那一刻发生了什么。",
-        "他们在塔上装了连续读数的温度计和液位浮子，让小阀门随着偏差一点点调整；湿料进院时，前端便先通知塔房。若温度或压力越过界限，独立装置会关断蒸汽并敲铃。学徒仍每天闻油，但他的鼻子不再是塔唯一的消息。",
+        "守夜学徒听见塔身发出从未有过的敲击声，赶紧关小阀门。半日的淡油和半夜的苦油都不能出售，婚礼季的订单只交出一半。坊主盯着日落时那杯样品，第一次承认它只告诉他取样时塔在做什么。他的大幅修正经过漫长过程延迟才见效，原料变化后仍在起作用，于是制造相反偏差。",
+        "婚宴商人来取封好的油罐时，坊主把坏批次摆给他看，随即下令停塔安装和整定控制。他失去货款，又卖掉储备油支付工资。众人先测响应时间，再设置较小调整；试车中过强参数引起上下振荡，随后被调低。重开前还测试传感器失灵和手动接管，免得自动控制又成为新的单点依赖。",
+        "他们在塔上装了连续读数的温度计和液位浮子，让小阀门随着偏差一点点调整；湿料进院时，前端便先通知塔房。若温度或压力越过界限，独立装置会关断蒸汽并敲铃。学徒仍每天闻油，但他的鼻子不再是塔唯一的消息。反馈依据已测偏差修正，进料含水信息则提供更早的前馈动作；独立联锁只在安全边界触发，不代替日常调节。趋势图同时显示当前值和变化速度，帮助操作者区分噪声与正在发展的偏差。",
         "又一车湿料到达时，坊主习惯性地伸手去转大阀。小阀正在轻轻移动，读数已回到刻线。他把手收回来，听着塔内均匀的滴答声走下楼梯。"
       ],
       "conceptName": "Process control",
@@ -517,17 +543,19 @@
       "summary": "A ruler uses the finest net to make river water clear, then learns that clarity proves only that the mud was caught.",
       "summaryZh": "城主用最细的网把河水滤得清亮，却很快发现，清亮只证明泥沙被拦住了。",
       "storyParagraphs": [
-        "River City always found mud in its drinking water. After seeing a washerwoman strain water through cloth, the ruler ordered a vast net finer than window mesh to be stretched across the intake canal. On the first day, the water beyond it looked clear. People gathered around the basin in praise, and the ruler cancelled the money set aside for a settling pond.",
-        "A storm filled the fine net with branches and clods of mud until the canal nearly stopped. The day after workers cleared it, an upstream dye house spilled a barrel of colourless chemical. The water still looked clear but tasted bitter. Several days later, illness spread through the riverside streets. The physician found that the net caught mud, but not substances dissolved in water or unseen causes of disease.",
+        "River City always found mud in its drinking water. After seeing a washerwoman strain water through cloth, the ruler ordered a vast net finer than window mesh to be stretched across the intake canal. On the first day, the water beyond it looked clear. People gathered around the basin in praise, and the ruler cancelled the money set aside for a settling pond. The single screen saved construction money and let the mayor open the plant before an election.",
+        "A storm filled the fine net with branches and clods of mud until the canal nearly stopped. The day after workers cleared it, an upstream dye house spilled a barrel of colourless chemical. The water still looked clear but tasted bitter. Several days later, illness spread through the riverside streets. The physician found that the net caught mud, but not substances dissolved in water or unseen causes of disease. Closing the channel to clean it also removed the town's only supply, revealing that one step had become both treatment and single point of failure.",
         "The ruler proposed weaving an even tighter net. The water engineer placed stones, a spoonful of salt, and a drop of muddy water into three cups and let him see that the same net helped with only some of them. 'Ask one tool to do every job,' she said, 'and the first thing it may accomplish is blocking itself.'",
-        "The new works began with a coarse screen for branches, followed by a basin where sediment could settle. Separate layers of sand and charcoal addressed colour and odour, and a final disinfection step dealt with pathogens. Each stage had a sampling point, so a failure upstream could be found before the public became ill downstream.",
+        "The mayor took down the river-parade banner and moved its budget into several treatment stages. Engineers characterised particles, dissolved compounds, and microbes, then assigned each a suitable barrier. Jar tests and small pilots checked doses before full-scale work; one device was not accepted merely because it sounded advanced. The design set target water quality and checked how failure of one unit changed the load on the next. Chemical storage and sludge disposal entered the plan too.",
+        "The new works began with a coarse screen for branches, followed by a basin where sediment could settle. Separate layers of sand and charcoal addressed colour and odour, and a final disinfection step dealt with pathogens. Each stage had a sampling point, so a failure upstream could be found before the public became ill downstream. Bypass and reserve capacity allowed maintenance without sending untreated water forward. Samples before and after each unit showed where removal failed. Operators practised responding to high turbidity, disinfectant failure, and exhausted carbon rather than assuming every upset looked the same.",
         "When the works reopened, the ruler filled a cup with transparent water but did not raise it at once. He waited for three small flags at the screen, settling basin, and final reservoir to rise in sequence, and only then took the first drink."
       ],
       "storyParagraphsZh": [
-        "河城的饮水总带泥。城主看见洗衣妇用布滤水，便命人织出一张比窗纱还细的大网，拦在引水渠口。第一天，网后水色清亮，百姓围着水池称赞，城主也撤掉了原本准备修沉淀池的钱。",
-        "一场暴雨下来，树枝和泥团把细网堵得严严实实，水渠几乎断流。工人清完网的第二天，上游染坊又打翻一桶无色药液。水看起来仍旧清澈，喝下去却有苦味。几日后，河边街巷出现腹病，医官发现细网能拦泥，却拦不住溶在水里的东西，也杀不掉看不见的病源。",
+        "河城的饮水总带泥。城主看见洗衣妇用布滤水，便命人织出一张比窗纱还细的大网，拦在引水渠口。第一天，网后水色清亮，百姓围着水池称赞，城主也撤掉了原本准备修沉淀池的钱。单层细网省下建设款，也让城主赶在选举以前为水厂揭幕。",
+        "一场暴雨下来，树枝和泥团把细网堵得严严实实，水渠几乎断流。工人清完网的第二天，上游染坊又打翻一桶无色药液。水看起来仍旧清澈，喝下去却有苦味。几日后，河边街巷出现腹病，医官发现细网能拦泥，却拦不住溶在水里的东西，也杀不掉看不见的病源。停渠洗网同时切断全城唯一供水，暴露这一步既承担全部处理，也成了唯一失效点。",
         "城主想把网再织密一层。管水匠却把一把石子、一勺盐和一滴浑水分别倒进三只杯子，让他亲眼看见同一张网只对其中一些东西有用。‘让一件工具做所有事，’她说，‘它最先做成的往往只是堵住自己。’",
-        "新水渠先用粗栅拦树枝，再让泥沙在池中沉下；后面另有沙炭层处理颜色和异味，最后一道消毒才对付病源。每一处都留下取水口，若前段失常，后段不会等到百姓生病才知道。",
+        "城主当着等候乐队的面摘下河庆巡游横幅，把那笔预算投进多道处理工艺。工程师先辨认颗粒、溶解物与微生物，再给每类风险安排合适屏障；药量经杯试和小规模试验验证，设备不能只因听来先进便入选。设计先定目标水质，再核查一单元失效会给下一段增加多少负荷；药剂储存和污泥处置也被纳入。",
+        "新水渠先用粗栅拦树枝，再让泥沙在池中沉下；后面另有沙炭层处理颜色和异味，最后一道消毒才对付病源。每一处都留下取水口，若前段失常，后段不会等到百姓生病才知道。旁路与备用能力让维修不必把未经处理的水送往下游；每单元前后取样则指出去除究竟在哪一段失效。操作者分别演练高浊度、消毒失效和炭层耗尽，不再假设所有异常都长得一样。",
         "水厂重新开门时，城主接了一杯透明的水，却没有立刻举杯。他等粗栅、沉淀池和末端水池的三面小旗依次升起，才喝下第一口。"
       ],
       "conceptName": "Treatment train",
@@ -559,17 +587,19 @@
       "summary": "A kiln yard answers every smoke complaint by raising its chimney, until soot falling on a distant reservoir returns in the whole city's drinking water.",
       "summaryZh": "窑场每收到一次烟尘投诉就把烟囱加高，直到落在远处水库上的黑灰又被全城喝了回来。",
       "storyParagraphs": [
-        "While the imperial kiln rushed to make roof tiles for a new palace, black smoke settled on nearby washing lines. Stopping the furnaces would miss the deadline, so the kiln master raised the chimney by thirty feet. The air beside the yard became clean, and he pointed to the blue sky and said the problem had travelled away with the wind.",
-        "Two weeks later, orchard growers from the eastern fields arrived with soot-marked pears. The master raised the chimney another thirty feet. Smoke crossed the orchards and fell on villages beyond the hill. Later, a north wind carried fine ash into the reservoir, and the next morning every water jar in the city had a black rim. The chimney was now visible from outside the city; no one could claim the ash belonged elsewhere.",
-        "A young kiln engineer stopped one furnace and opened its feed system and doors. She found damp, smoky coal, cracks drawing unwanted air, and glaze powder swept away whenever material was charged. The master urged her to add one more section to the chimney. Instead, she put three days of delay under her own name, changed to dry coal, sealed the doors, altered the charging chute, and collected the remaining dust at the outlet.",
-        "When firing resumed three days later, the same number of tiles used less coal and produced lighter smoke. The outlet equipment remained because some residue was unavoidable, but it was no longer being asked to handle the dense stream previously created by the process itself.",
+        "While the imperial kiln rushed to make roof tiles for a new palace, black smoke settled on nearby washing lines. Stopping the furnaces would miss the deadline, so the kiln master raised the chimney by thirty feet. The air beside the yard became clean, and he pointed to the blue sky and said the problem had travelled away with the wind. The taller stack let the kiln meet the palace deadline and moved complaints beyond the workers' own street.",
+        "Two weeks later, orchard growers from the eastern fields arrived with soot-marked pears. The master raised the chimney another thirty feet. Smoke crossed the orchards and fell on villages beyond the hill. Later, a north wind carried fine ash into the reservoir, and the next morning every water jar in the city had a black rim. The chimney was now visible from outside the city; no one could claim the ash belonged elsewhere. Each extension reduced local concentration under one wind yet left total emissions unchanged and shifted exposure elsewhere.",
+        "The kiln chief wanted another extension because stopping production would trigger a contract penalty. The young kiln worker accepted responsibility for three lost days and opened the process instead. She measured coal moisture, air leakage, and powder loss at charging. The largest plume coincided with wet fuel and sudden feeding, not with a shortage of chimney height. Trial burns recorded fuel per tile, visible smoke, recovered powder, and stack samples, so a pale plume could not substitute for measured reduction.",
+        "A young kiln engineer stopped one furnace and opened its feed system and doors. She found damp, smoky coal, cracks drawing unwanted air, and glaze powder swept away whenever material was charged. The master urged her to add one more section to the chimney. Instead, she put three days of delay under her own name, changed to dry coal, sealed the doors, altered the charging chute, and collected the remaining dust at the outlet. The kiln missed its bonus, but fuel use and recoverable glaze loss also fell. Workers monitored the remaining stack emissions instead of declaring prevention perfect. Dry-fuel storage and a slower feed gate required capital and reduced peak output, costs the chief had avoided by extending the chimney.",
+        "When firing resumed three days later, the same number of tiles used less coal and produced lighter smoke. The outlet equipment remained because some residue was unavoidable, but it was no longer being asked to handle the dense stream previously created by the process itself. They ranked actions: avoid generation, reduce it, recover material, then treat and safely dispose of what remained.",
         "The master ordered the newest bricks removed from the top of the chimney. They were not discarded. Workers carried them to the furnaces and built them into the door frames that had once leaked air. When the final brick was laid, the mason's palms were still red."
       ],
       "storyParagraphsZh": [
-        "官窑赶制新宫瓦时，黑烟落满附近晾衣绳。停窑会误了限期，窑长便把烟囱加高三丈。窑边的空气果然干净了，他指着蓝天说，问题已经随风走远。",
-        "半个月后，东郊果农带着沾灰的梨来告状。窑长又加高三丈，烟越过果园，落到山后的村子。再后来，一场北风把细灰送进水库，第二天城里的水缸都浮着一圈黑边。烟囱已经高得能从城外看见，谁也不能再说那些灰不属于官窑。",
-        "年轻窑师停下一座窑，拆开进料和炉门。她找到受潮冒烟的煤、漏风的裂缝，以及每次投料时被气流卷走的釉粉。窑长催她先把烟囱再接一段，她却把三天工期写在自己名下，换干煤、封炉门、改投料槽，并在出口收集剩下的粉尘。",
-        "三天后复烧，同样数量的瓦用了更少的煤，烟也淡了。出口装置仍然保留，因为不可能一点残余都没有；可它处理的已不再是原先那股不断被制造出来的浓烟。",
+        "官窑赶制新宫瓦时，黑烟落满附近晾衣绳。停窑会误了限期，窑长便把烟囱加高三丈。窑边的空气果然干净了，他指着蓝天说，问题已经随风走远。高烟囱让窑场按时交宫瓦，也把投诉移出工人自己居住的街区。",
+        "半个月后，东郊果农带着沾灰的梨来告状。窑长又加高三丈，烟越过果园，落到山后的村子。再后来，一场北风把细灰送进水库，第二天城里的水缸都浮着一圈黑边。烟囱已经高得能从城外看见，谁也不能再说那些灰不属于官窑。每次加高只在一种风向下降低近处浓度，总排放不变，暴露地点却继续转移。",
+        "窑长因停产会触发罚款，坚持继续接高。年轻窑师愿承担停工三日，转而打开生产过程。她测煤的含水、炉门漏风和投料粉损，发现最大烟团总同湿煤与突然投料同时出现，并非烟囱还不够高。试烧同时记录每片瓦耗煤、可见烟、回收粉与烟道样本，不能让颜色变淡代替总量测量。",
+        "年轻窑师停下一座窑，拆开进料和炉门。她找到受潮冒烟的煤、漏风的裂缝，以及每次投料时被气流卷走的釉粉。窑长催她先把烟囱再接一段，她却把三天工期写在自己名下，换干煤、封炉门、改投料槽，并在出口收集剩下的粉尘。窑场失去按期奖金，耗煤与可回收釉粉损失也一同下降。工人仍监测烟囱残余排放，不把源头减量说成彻底消失。干煤仓和缓慢投料闸需要投资，也降低峰值产量；这些正是窑长此前靠接高烟囱躲开的成本。",
+        "三天后复烧，同样数量的瓦用了更少的煤，烟也淡了。出口装置仍然保留，因为不可能一点残余都没有；可它处理的已不再是原先那股不断被制造出来的浓烟。众人把行动排成次序：先避免产生，再减量与回收，最后处理并安全处置无法避免的残余。",
         "窑长命人拆下烟囱最上面的新砖。那些砖没有丢掉，而是被运到炉前，砌进了原本漏风的门框。最后一块砖落下时，砌砖人的手掌仍是红的。"
       ],
       "conceptName": "Source control",
@@ -601,18 +631,20 @@
       "summary": "An innkeeper seeks the cleanest cup for serving tea and discovers that a cup's story begins before the tea and continues after the guest leaves.",
       "summaryZh": "客栈老板想选出最清洁的茶杯，却发现一只杯子的故事早在装茶之前开始，也不会在客人喝完时结束。",
       "storyParagraphs": [
-        "After the spring fair, the inn yard was piled with paper cups discarded after one use. The owner, Madam Qin, called them wasteful and immediately ordered five hundred thick ceramic cups from another province, each stamped 'the lasting choice' underneath. Their delivery required three heavy carts, and forty broke on the journey. She had not counted the firing of the cups or the wood and water needed to wash them each day.",
-        "The first month was worse. Travellers carried cups away without thinking, servers broke a batch, and the washroom heated water all day. The paper merchant said ceramic used more resources; the potter pointed to the rubbish pile and said paper had to be remade every day. They argued at the counter, each describing only the part of the journey that favoured his own goods.",
+        "After the spring fair, the inn yard was piled with paper cups discarded after one use. The owner, Madam Qin, called them wasteful and immediately ordered five hundred thick ceramic cups from another province, each stamped 'the lasting choice' underneath. Their delivery required three heavy carts, and forty broke on the journey. She had not counted the firing of the cups or the wood and water needed to wash them each day. The purchase won public praise and a tax rebate, giving the owner little reason to question the label on the base.",
+        "The first month was worse. Travellers carried cups away without thinking, servers broke a batch, and the washroom heated water all day. The paper merchant said ceramic used more resources; the potter pointed to the rubbish pile and said paper had to be remade every day. They argued at the counter, each describing only the part of the journey that favoured his own goods. Washing shifted burdens to water and fuel; breakage and theft shortened the reuse count on which the choice depended.",
         "The bookkeeper placed a pot of tea on the table. 'Are we comparing one cup,' he asked, 'or the serving of one hundred pots of tea?' Beginning with clay digging and tree cutting, he recorded manufacture, transport, use, washing, number of returns, and final destination. He kept fuel, water, breakage, and recovery in separate columns.",
-        "No cup won by its nature alone. If a ceramic cup was used twice, the burden of firing and transport was difficult to recover. With a small deposit, efficient shared washing, and dozens of uses, its cost per serving fell. Madam Qin used ceramic for guests staying at the inn. At the takeaway stall, where returns were uncertain, she kept light paper cups and required the supplier to collect them.",
-        "At the end of summer, a traveller returned a ceramic cup and reclaimed his deposit. Madam Qin turned the cup over, carved one more mark beside the thirty-six fine scratches already on its base, and placed it back in the basin of hot water."
+        "The inn could keep advertising one material as virtuous or fund a comparison across the full service. Qin surrendered the rebate until the claim was checked. The accountant chose a functional unit—serving one hundred pots of tea—then fixed system boundaries and gathered transport distance, kiln fuel, washing, loss rate, and end-of-life data. Missing values were shown as ranges, not convenient zeros. The supplier's data and the inn's measurements used the same units, preventing a light cup from winning only because one stage was omitted.",
+        "No cup won by its nature alone. If a ceramic cup was used twice, the burden of firing and transport was difficult to recover. With a small deposit, efficient shared washing, and dozens of uses, its cost per serving fell. Madam Qin used ceramic for guests staying at the inn. At the takeaway stall, where returns were uncertain, she kept light paper cups and required the supplier to collect them. They compared climate, water use, material demand, and waste rather than collapsing unlike impacts into one flattering score. Sensitivity tests showed the reuse count and washing method changed the result most.",
+        "At the end of summer, a traveller returned a ceramic cup and reclaimed his deposit. Madam Qin turned the cup over, carved one more mark beside the thirty-six fine scratches already on its base, and placed it back in the basin of hot water. The deposit system cost a clerk's time and a new wash rack, a practical price for reaching the reuse level assumed in the comparison."
       ],
       "storyParagraphsZh": [
-        "春市过后，客栈后院堆满用过即丢的纸杯。老板秦娘嫌它们浪费，立刻从外省订来五百只厚陶杯，还在杯底印上‘长久之选’。陶杯运到时用了三辆重车，途中碎了四十只；开窑烧杯和每日洗杯的柴水，她原先都没算。",
-        "头一个月更糟。赶路的客人顺手带走杯子，伙计摔破了一批，洗杯房整日烧水。纸杯商说陶杯反而更费，陶匠则指着垃圾堆说纸杯每天都要重做。两人争到柜台前，谁都只拿对自己有利的一段路说话。",
+        "春市过后，客栈后院堆满用过即丢的纸杯。老板秦娘嫌它们浪费，立刻从外省订来五百只厚陶杯，还在杯底印上‘长久之选’。陶杯运到时用了三辆重车，途中碎了四十只；开窑烧杯和每日洗杯的柴水，她原先都没算。这笔采购赢得称赞和税款减免，杯底标签也让老板几乎没有理由继续追问。",
+        "头一个月更糟。赶路的客人顺手带走杯子，伙计摔破了一批，洗杯房整日烧水。纸杯商说陶杯反而更费，陶匠则指着垃圾堆说纸杯每天都要重做。两人争到柜台前，谁都只拿对自己有利的一段路说话。清洗把负担转向水与柴，破损和带走又缩短了选择所依赖的重复次数。",
         "账房在桌上放了一壶茶，问：‘我们究竟比较一只杯子，还是比较把一百壶茶送到客人手里？’他从取土与伐木开始，依次记下制造、运输、使用、清洗、重复次数和最后去向，还把柴、水、破损与回收分别列开。",
-        "算过以后，没有哪只杯子天然获胜。陶杯若只用两次，前面的烧制和运输很难抵回；若押一枚小钱、集中清洗并用上几十次，每杯茶承担的耗费便会下降。秦娘给堂食客人用陶杯，难以收回杯子的外带摊仍用轻纸杯，并要求供应商回收。",
-        "夏末，一名旅人把陶杯送回柜台，取回押钱。秦娘翻过杯底，在原有的三十六道细划痕旁又刻了一道，然后把它放回热水盆。"
+        "客栈可以继续把一种材料宣传成美德，也可以为整项服务做比较。秦娘在核实前退回减税。账房选定功能单位——供应一百壶茶——再固定系统边界，收集运输距离、窑火、清洗、损耗和最终去向数据；缺失值写成范围，不能方便地当作零。供应商资料与客栈测量统一单位，避免轻杯只因某阶段被漏算而获胜。",
+        "算过以后，没有哪只杯子天然获胜。陶杯若只用两次，前面的烧制和运输很难抵回；若押一枚小钱、集中清洗并用上几十次，每杯茶承担的耗费便会下降。秦娘给堂食客人用陶杯，难以收回杯子的外带摊仍用轻纸杯，并要求供应商回收。他们分别比较气候、水耗、材料需求与废弃物，不把不同影响压成一个讨喜总分。敏感性分析显示，使用次数与清洗方式最能改变结果。",
+        "夏末，一名旅人把陶杯送回柜台，取回押钱。秦娘翻过杯底，在原有的三十六道细划痕旁又刻了一道，然后把它放回热水盆。押金制度耗费一名书记的时间和一座新洗架，却让比较假设的重复次数真正有机会实现。"
       ],
       "conceptName": "Life-cycle assessment",
       "conceptNameZh": "生命周期评价",

@@ -10,29 +10,31 @@
       "fieldTitleZh": "管理与行政",
       "title": "The Mine That Filled the Road",
       "titleZh": "把道路填满的矿井",
-      "summary": "A mine owner rewards the manager for every cart removed; soon the road is full of ore while the furnace receives no more copper.",
-      "summaryZh": "矿主按运出的车数奖励管事，山路很快堆满矿石，熔炉却没有得到更多铜。",
+      "summary": "A distant owner pays for every wagon of ore and watches the road fill while usable copper and safe ground disappear.",
+      "summaryZh": "远方矿主按出矿车数发奖，看见山路越来越满，可用铜和安全矿道却一同减少。",
       "storyParagraphs": [
-        "The copper-mine owner lived in the city and inspected the site only once a month. To encourage production, he paid the manager a bonus for every cart brought down. The manager needed to keep workers employed and wanted his own share, so he posted a target at the entrance: sixty carts each day.",
-        "For several months, cart totals rose. Then the richest seam narrowed, and sorting ore slowed the work. The manager ordered low-grade rock loaded as well. Easy stone near safety supports was also removed. The ledger filled with impressive numbers, but the smelter received no more copper and waste blocked the road.",
-        "The owner accused the manager of deception. The manager produced the bonus rule: every recorded cart had truly left the mine. He had completed the work for which he was paid. The owner wanted usable copper and safe tunnels but had observed and rewarded only the easiest thing to count.",
-        "The new agreement no longer depended on carts alone. Bonuses also used smelter output, sampled ore quality, and support records, while an independent surveyor visited the mine. Workers did not carry all losses caused by changing copper prices, but the manager could no longer profit from waste alone.",
-        "The cart board remained at the entrance. At month's end, the manager added the sampled copper content beside 'sixty carts'."
+        "Mine owner Lu lived three days from Copper Ridge and saw the workings only once a month. A smelter contract required more ore before winter, and Lu feared that a slow season would cost him the lease. He promised steward Zhao a bonus for every wagon crossing the mine mouth. Zhao needed the money to retain workers whose families were already considering another valley. He painted 'sixty wagons' on a tally board where every shift could see it.",
+        "For two months the number rose. The richer seam then narrowed, and sorting low-grade rock slowed loading. Zhao stopped sorting underground and sent everything down the mountain. The tally board looked excellent; the smelter produced no more copper. Lu asked why the contract was still short. Zhao blamed the old furnace, while the growing waste pile forced returning carts into a single muddy lane. A furnace sample from the largest wagon yielded less metal than a smaller, carefully sorted load.",
+        "To recover the count, Zhao opened rock beside the support pillars because it broke easily. A foreman marked two pillars with white chalk and warned that the roof had begun to click after blasting. Zhao postponed reinforcement until the monthly target was met. He had not been ordered to endanger anyone; he had been paid for a result that made time spent on sorting, drainage, and support look like failure.",
+        "Lu arrived during a storm and accused Zhao of cheating. Zhao placed the signed bonus rule beside the wagon log: every recorded cart had crossed the mouth, and the copper price had fallen beyond his control. Lu laid the bonus rule over the wagon log and saw that one visible number had been carrying too many hidden tasks. A fresh roof crack settled the dispute. Lu closed the productive east tunnel for a week and accepted the smelter penalty.",
+        "The new agreement used sampled copper yield, safe-tunnel records, and wagon count together. An independent surveyor visited without relying on Zhao's ledger. Bonuses no longer rose when extra waste diluted the ore, while market-price changes were shared rather than charged entirely to the steward. Zhao lost the large payout he had expected; Lu paid for new pillars and missed the winter premium. Output first fell, then usable copper began to rise.",
+        "The tally board remained at the mine mouth. Zhao planed away the words 'sixty wagons' but kept the rows of old notches. Beside each new group, the assay clerk now wrote copper recovered and pillars inspected. Rain still darkened every mark alike."
       ],
       "storyParagraphsZh": [
-        "铜矿主常年住在城里，只能每月看一次矿场账。为了让管事多出矿，他规定每运下一车便发奖金。管事需要留住工人，也想拿到自己的分成，于是把目标写在矿口：每天六十车。",
-        "头几个月，车数不断上升。后来富矿层变窄，挑选矿石会拖慢速度。管事便让工人把低含量石头也装车，安全支柱旁容易开采的岩块也被挖走。账上全是好看的数字，冶炼厂收到的铜却没有增加，山路还被废石堵住。",
-        "矿主责问管事为何欺骗自己。管事拿出奖金规则：每一车都真实离开矿口，他完成了被付钱去完成的事。矿主想要的是可用铜和安全矿道，却只观察、奖励了最容易数的车。",
-        "新约定不再只看车数。奖金同时参考冶炼产出、矿石抽检和支柱记录，矿主也请独立测量员定期进矿。工人不必承担矿价波动造成的全部损失，管事则不能靠废石独自获利。",
-        "月底，矿口仍挂着计车木板。管事在“六十车”旁边添上了每车抽检后的铜量。"
+        "矿主陆常住城里，离铜岭有三天路程，每月只能看一次矿场。冶炼厂要求入冬前增供矿石，否则他可能失去租约。陆常便答应管事赵勤：每运出一车就发一份奖金。赵勤也急需这笔钱留下准备迁往别谷的工人，于是在矿口木板上刷下“每日六十车”，让每个班次都看得见。",
+        "头两个月，车数不断上升。随后富矿脉变窄，挑掉低含量石头会拖慢装车，赵勤便取消井下分拣，所有石块一起送下山。计车板十分漂亮，冶炼出的铜却没有增加。陆常追问为何仍缺货，赵勤怪旧炉效率低；与此同时，废石堆挤占山路，返程空车只能在一条泥沟里排队。炉工抽验后还发现，最大那车炼出的金属反而少于一车认真分拣的小矿。",
+        "为了补回车数，赵勤又让人开采支柱旁容易敲落的岩块。工头用白粉笔在两根支柱上画记号，提醒每次爆破后，顶板都会发出细碎声响。赵勤把加固推迟到月底目标完成以后。他并未接到伤人的命令，只是现有奖法让分拣、排水和支护所用的时间看起来全像没有产出。",
+        "暴雨中，陆常赶到矿场，责问赵勤为何欺骗自己。赵勤把签过字的奖金条款与车册并排放下：每一车确实越过矿口，铜价下跌也不由他控制。陆常把奖金条款压在车册上，看见一个显眼数字竟替太多隐蔽工作作了主。东洞顶又落下一道新裂纹，陆常最终停洞七天，接受冶炼厂罚款。",
+        "新约定同时参考抽样铜量、安全记录和车数，独立测量员不定期入矿，不再只读赵勤的账。废石稀释矿料时，奖金不会随车数上涨；市场价格变化也由双方分担，而不是全压给管事。赵勤失去原以为稳拿的高额分成，陆常则出钱换支柱，并错过冬季加价。产量先降，随后可用铜才慢慢回升。",
+        "矿口那块木板没有被拆掉。赵勤刨去“六十车”四个字，却保留旧日一排排刻痕。此后每组新刻痕旁，化验员都会添上炼得的铜量和检查过的支柱。下雨时，新旧数字仍被同样的水迹染黑。"
       ],
       "conceptName": "Principal-agent problem",
       "conceptNameZh": "委托代理问题",
       "explanationParagraphs": [
-        "A principal-agent problem arises when a principal delegates work to an agent whose interests are not perfectly aligned and whose information or actions cannot be fully observed. Contracts, monitoring, governance, reputation, and risk sharing can help, but narrow metrics invite goal substitution, while overly strong incentives may transfer uncontrollable risk unfairly."
+        "The principal–agent problem arises when a principal delegates work to an agent whose interests are not identical and whose actions or information cannot be fully observed. Contracts, monitoring, governance, reputation, and risk sharing can reduce the gap, but incomplete measures remain. Narrow incentives may displace the real objective, while excessive risk transfer can punish agents for outcomes beyond their control."
       ],
       "explanationParagraphsZh": [
-        "委托代理问题发生在委托人把工作交给代理人，双方利益并不完全一致，而代理人的信息或行动又难以完整观察。合同、监督、治理、声誉与风险分担可以缓解，但狭窄指标会诱发替代目标，过强激励也可能把不可控风险错误转给代理人。"
+        "委托代理问题发生在委托人把工作交给代理人，而双方目标并不完全一致，代理人的行动或信息又无法被完整观察。合同、监督、治理、声誉与风险分担可以缓解差距，但不完备性仍会存在。狭窄指标可能替代真实目标，过度转移风险也会惩罚代理人无法控制的结果。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -52,29 +54,31 @@
       "fieldTitleZh": "管理与行政",
       "title": "The Gear No One Put on the Table",
       "titleZh": "无人放上桌的齿轮",
-      "summary": "Everyone in the machine shop sees the cracked tooth, but no one wants to be first to place it before the master.",
-      "summaryZh": "机坊里每个人都见过那枚裂齿，却没有人愿意成为第一个把它放到师傅面前的人。",
+      "summary": "A harsh workshop meets every deadline until three apprentices hide the same crack from the morning meeting.",
+      "summaryZh": "一间严厉的作坊总能准时交货，直到三名学徒把同一道裂纹藏过晨会。",
       "storyParagraphs": [
-        "The master of the clock-machine shop was known for severity. An apprentice who asked what he considered an easy question was mocked for 'leaving the brain at home'. When one admitted reversing a spring, the master made him redo the work at the doorway for three days. Finished pieces looked increasingly orderly, while questions disappeared.",
-        "During a rush order for a sluice mechanism, three apprentices separately saw a fine crack on the same gear. The first feared delaying delivery. The second assumed someone earlier had checked it. The third did not want public ridicule. The gear entered the machine, broke during testing, and stopped the entire assembly for two days.",
-        "The master first demanded to know who had known. No one answered. A senior apprentice placed the broken tooth on the table and said the problem was not that nobody had seen it. Everyone could predict what would happen after speaking.",
-        "The shop began reserving time before work for questions, damaged parts, and unfinished judgements. No one could be punished merely for reporting, though concealment, careless work, and repeated mistakes still had consequences. When someone first placed a miscut shaft on the table, the master asked what it would affect before assigning responsibility for rework.",
-        "Before the next batch was packed, a new apprentice pushed one gear into the centre. The room fell quiet for a moment, then three people leaned over the crack."
+        "Master Han's clockworks shop had never missed a delivery. He kept it that way by mocking questions he considered simple and making anyone who admitted a mistake redo work at the doorway where customers could watch. Soon the morning table held flawless parts and silent apprentices. Han read the silence as discipline, and a water-gate contract promised enough money to keep the shop open through winter.",
+        "Three apprentices noticed a hairline crack in the same bronze gear. The first feared stopping the expensive casting line. The second assumed the inspector before him must have accepted it. The third remembered being called brainless for questioning a spring. Each rubbed chalk across the crack, saw the dark line return, then put the gear back because the delivery cart waited outside.",
+        "During full-speed testing, the tooth split. The gear tore two smaller wheels and stopped the entire gate mechanism for two days. No one was hurt, but river barges queued beyond the lock, and the town charged the workshop for delay. Han demanded the name of whoever had known. The room became quieter. At last senior apprentice Mei placed the broken tooth on the table and said, 'Three people saw it. All three also knew what speaking here costs.' Behind them, the damaged mechanism knocked once with every current against the closed gate.",
+        "Han first installed an anonymous warning box. It filled with scraps too vague to act on: 'check the wheels,' 'something sounds wrong.' People still feared that a precise report would identify them. Han stopped blaming the anonymous scraps and changed his own response in front of the apprentices. He halted the next shipment, told the town the missed crack was his shop's failure, and surrendered the winter profit to pay the penalty.",
+        "From then on, the first quarter-hour belonged to doubts, bad parts, and unfinished judgements. A report itself could not earn ridicule or punishment; concealment, careless work, and repeated neglect still received consequences after investigation. When an apprentice placed a ground-off-centre shaft on the table, Han did not praise courage or excuse the machining error. He asked who else had seen it, stopped the batch, then assigned retraining and a second inspection.",
+        "Before the repaired gate wheels were packed, the youngest apprentice pushed another gear into the centre. The room paused. Han turned the lamp toward it, Mei fetched chalk, and three heads bent over the thin dark line. The broken tooth from the first failure remained at the edge of the table, heavy enough to keep the inspection sheet from curling."
       ],
       "storyParagraphsZh": [
-        "钟机坊的师傅以严厉闻名。学徒若问了他认为简单的问题，便会被当众叫作“没带脑子”。一次，有人承认装反弹簧，师傅罚他在门口重做三日。从那以后，桌面上的成品越来越整齐，疑问却消失了。",
-        "赶制水闸机轮时，三名学徒分别看见同一枚齿轮边缘有细裂。第一个怕耽误交货，第二个以为前面的人已经检查，第三个不愿再被嘲笑。齿轮最终装进机器，在试转中断裂，整套机轮停了两天。",
-        "师傅最初追问谁早就知道。没人开口。老学徒把那枚裂齿放到桌上，说问题并不是无人看见，而是每个人都能预料说出来以后会发生什么。",
-        "此后，开工前先留一刻钟放置疑问、坏件和未完成判断。师傅不能因报告本身处罚人，但隐瞒、敷衍和重复失误仍须追查。第一次有人放上磨偏的轴时，师傅先问它会影响哪里，再决定返工责任。",
-        "下一批齿轮尚未装箱，一名新学徒把其中一枚推到桌中央。屋里安静了一下，随后三个人同时凑近裂纹。"
+        "韩师傅的钟机坊从未误过交期。他靠一种严厉办法维持记录：谁问了他认为简单的问题，就会被当众嘲笑；谁承认失误，便在顾客看得见的门口返工。渐渐地，晨会桌上只剩完好零件和沉默学徒。韩师傅把这种安静当作纪律，而一份水闸机轮订单正好能让作坊撑过冬天。",
+        "三名学徒先后看见同一枚铜齿轮边缘有细裂。第一人怕停掉昂贵的铸造线，第二人以为前面的检查者已经认可，第三人还记得自己曾因质疑弹簧而被骂“没带脑子”。他们都用粉笔擦过裂处，看见黑线重新浮出，最后仍把齿轮放回去，因为交货车已经等在门外。",
+        "全速试转时，齿牙突然崩断，又撕坏两枚小轮，整套水闸装置停了两天。无人受伤，河船却堵在闸外，镇里要求作坊赔偿延误。韩师傅追问谁早就知道，屋里比往常更静。老学徒梅姐终于把断齿放上桌：“三个人都看见了，也都知道在这里说出来要付什么代价。”众人沉默时，受损机轮仍被闸外水流一下下撞响。",
+        "韩师傅先挂起匿名警示箱，箱里很快塞满无法行动的纸条：“检查齿轮”“声音不对”。精确报告仍会暴露写信者，恐惧没有消失。韩师傅没有再责怪匿名纸条，而是先在学徒面前改变自己的回应。韩师傅叫停下一批货，向镇里承认漏检属于作坊责任，并拿出原本过冬的利润支付罚款。",
+        "此后，开工前一刻钟专门摆放疑问、坏件和尚未完成的判断。报告本身不能招来羞辱或处罚；隐瞒、敷衍和重复疏忽，在查清后仍要负责。有人把一根磨偏的轴放上桌，韩师傅没有称赞勇气，也没有免掉加工错误。他先问还有谁看见，停下整批，再安排复训与第二人复检。",
+        "修好的闸轮装箱以前，最年轻的学徒又把一枚齿轮推到桌中央。屋里停了一息。韩师傅转过油灯，梅姐拿来粉笔，三个人同时俯向那道细黑线。第一次事故留下的断齿仍压在桌角，沉沉压住卷起的检查表。"
       ],
       "conceptName": "Psychological safety",
       "conceptNameZh": "心理安全感",
       "explanationParagraphs": [
-        "Psychological safety is a shared belief that interpersonal risks such as questions, help-seeking, disagreement, and admitting mistakes will not predictably bring humiliation or punishment. It helps problems surface early but does not mean lower standards, comfort, or freedom from accountability. What leaders actually do after someone speaks determines whether invitations are credible."
+        "Psychological safety is a shared belief that interpersonal risks such as asking questions, seeking help, disagreeing, or admitting error will not predictably bring humiliation or punishment. It helps problems surface early, but does not mean comfort, consensus, low standards, or freedom from accountability. Invitations matter only when leaders' actual responses make speaking useful and reasonably safe."
       ],
       "explanationParagraphsZh": [
-        "心理安全感是团队共同相信，提问、求助、异议和承认错误等人际冒险不会可预期地换来羞辱或惩罚。它支持更早暴露问题，却不等于降低标准、避免冲突或免于问责。领导对发言后的真实回应决定邀请是否可信。"
+        "心理安全感是团队共同相信，提问、求助、异议与承认错误等人际冒险不会可预期地换来羞辱或惩罚。它帮助问题更早出现，却不等于舒适、全体同意、降低标准或免于问责。邀请发言只有得到领导真实回应，才会变成可信且有用的做法。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -94,29 +98,31 @@
       "fieldTitleZh": "管理与行政",
       "title": "The Workshop That Perfected Yesterday",
       "titleZh": "把昨天做到完美的作坊",
-      "summary": "A tailoring shop makes heavy wool coats faster each year while customers outside begin asking for something else.",
-      "summaryZh": "裁衣坊把厚呢外套做得越来越快，顾客却已经开始在门外询问另一种衣服。",
+      "summary": "A winter-coat workshop perfects yesterday's demand while warmer seasons quietly move its customers elsewhere.",
+      "summaryZh": "厚呢作坊把昨天的需求做到极致，暖冬却悄悄把顾客带往别处。",
       "storyParagraphs": [
-        "Ever-Winter Tailors excelled at heavy wool coats. Twelve production steps ran to the minute, and fabric waste fell every year. Owner Cen Mu invested each profit in more of the same cutting tables and storage, believing the business could not leave if coats became faster and cheaper to make.",
-        "After several warm winters, dockworkers began asking for light rainwear. Clerks wrote the requests on the backs of orders, but Cen Mu treated them as a passing fashion and expanded the wool stock. By the following spring, finished coats filled the warehouse while old customers bought breathable rainwear from another city.",
-        "A young cutter made a small trial from waterproof cloth and asked dockworkers to wear it for a month. The first version trapped heat, the second leaked at the seams, and the third received orders. Cen Mu did not dismantle every old machine. He kept the winter line, converted one group of tables for the new cloth, and signed a small short-term contract with another supplier.",
-        "He began reviewing customer notes weekly, reserved money for trials, and trained experienced cutters to seal seams. One later product still failed. The shop closed that small line without stopping all change and retained the technique it had learned.",
-        "When the next warm winter arrived, the warehouse still held wool, but no longer held only wool. Cen Mu personally removed the old words 'Winter Coats Only' from the door."
+        "Everwinter Tailors made the valley's best heavy wool coats. Twelve operations ran by the bell; offcuts shrank every year, and owner Cen Mu reinvested each profit in faster cutters and a larger wool store. The door announced, 'Only winter coats, made without delay.' After two mild winters, dockworkers began asking the counter staff for something light that could shed rain. Cen called it a passing fashion.",
+        "Those questions accumulated on the backs of order slips, but Cen doubled his wool purchase to secure a discount. The decision lowered unit cost and looked wise for one season. By spring, racks were full while old customers bought breathable rain capes from another city. Cen answered by demanding still faster cutting. The workshop produced more perfectly finished coats than the market would take.",
+        "Young cutter Lian used scraps of coated cloth to make six trial jackets and asked dockworkers to wear them for a month. The first trapped sweat, the second leaked at its seams, and the third tore where a heavy rope crossed the shoulder. Each failure cost time while the profitable old line waited. Yet the returned jackets carried salt marks, repair stitches, and notes that revealed what the workshop had never needed to learn from wool.",
+        "Cen walked past the testing table and sold one beloved high-speed cutter instead, committing scarce people and cash to the uncertain line. The cutter's four anchor bolts remained in the floor. The money funded small cloth contracts, seam-heating tools, and a team allowed to test in short runs. He kept the reliable coat line operating; existing skill still paid wages while new work developed. The first public rain jacket failed and was withdrawn. For three weeks the empty space where the cutter had stood reminded the team that the experiment was not spare-time decoration.",
+        "After the loss, Cen did not order a full retreat. Counter questions were reviewed weekly, trial budgets were capped, and experienced tailors learned sealed seams. One new fabric was rejected; its lessons remained in the test book. The next jacket won a harbour order. Reorganising stations cost the workshop its fastest month, and several coat specialists left rather than retrain, but the business no longer depended on one season behaving as before.",
+        "When another warm winter arrived, wool still occupied half the store, not all of it. Cen stood outside with a scraper and removed 'Only winter coats' from the door. The deeper grooves remained visible beneath the fresh line he painted: 'Coats for the weather that comes.' He kept the scraper."
       ],
       "storyParagraphsZh": [
-        "永冬裁衣坊最擅长厚呢外套。十二道工序被排得分秒不差，布料损耗也一年比一年少。老板岑牧把利润继续投入同样的剪床和仓库，深信只要做得更快、更便宜，生意便不会离开。",
-        "连续几个暖冬后，码头工开始询问轻便防雨衣。店员把这些问题记在订单背面，岑牧却把它们当作短暂时尚，继续扩大厚呢库存。第二年春天，仓库堆满成衣，老客户却转向能挡雨又不闷热的外城产品。",
-        "年轻裁工拿几块防水布做了小批试衣，请码头工连续穿一月。第一版不透气，第二版接缝漏水，第三版才得到订单。岑牧没有立刻拆掉全部旧设备，而是保留冬衣线，把一组剪床改成新布专用，并与新的布商签小额短约。",
-        "随后，他把店员的顾客记录改成每周查看，给试做留出预算，也训练老裁工处理胶合接缝。一次新产品仍然失败，作坊没有因此停下所有改变，而是关闭那条小线并保留学到的工艺。",
-        "下一次暖冬到来时，仓库里仍有厚呢，却不再只有厚呢。岑牧亲手擦掉门口“只做冬衣”的旧字。"
+        "永冬裁衣坊做全谷最好的厚呢外套。十二道工序随钟声运转，边角料逐年减少，老板岑牧又把利润投进更快的剪床和更大的羊毛仓。门上写着：“只做冬衣，从不误期。”连续两个暖冬后，码头工开始向店员询问轻便防雨衣，岑牧却把这种要求当成短暂时尚。",
+        "这些问题渐渐写满订单背面，岑牧反而为争取折扣，把厚呢采购加了一倍。单位成本下降，头一个季度看起来十分明智。到了春天，衣架依然塞满，老顾客却去外城购买透气雨披。岑牧只要求剪得更快，结果作坊生产出更多做工完美、却无人带走的外套。",
+        "年轻裁工莲用涂层布边角做了六件试衣，请码头工连续穿一个月。第一版闷汗，第二版接缝漏水，第三版被肩上粗缆磨破。每次失败都占用老生产线的时间，可退回的衣服也留下盐印、补线和工人笔记，让作坊第一次看见厚呢时代不曾要求它解决的问题。",
+        "岑牧没有卖掉试验桌，而是卖掉最珍爱的高速剪床，把稀缺人手和现金真正押进尚不确定的新线；剪床四枚地脚栓仍留在地面。他用钱签小额短期布约，购买压缝工具，并让一组人做小批试验。可靠的冬衣线仍继续发工资，新工作在旁边长出。第一批公开销售的雨衣仍因领口进水被召回。此后三周，剪床留下的空位一直提醒众人：试验并非有空才做的装饰，而是作坊已经付过代价的选择。",
+        "这次亏损后，岑牧没有把所有改变停掉。店员每周汇总顾客问题，试做费用设上限，老裁工也学习封合接缝。一种新布最终被放弃，试验记录却留在册中；下一版拿到港口订单。重排工位让作坊失去最快的一个月，几名只愿做冬衣的师傅也离开了，但生意不再只等季节重复过去。",
+        "又一个暖冬来临，羊毛仍占仓库一半，却不再占满。岑牧提着刮刀站在门外，亲手刮去“只做冬衣”。旧字留下的深痕仍透在新写的一行下面：“为真正到来的天气做衣。”刮刀也被他留在门后。"
       ],
       "conceptName": "Dynamic capabilities",
       "conceptNameZh": "动态能力",
       "explanationParagraphs": [
-        "Dynamic capabilities are higher-order abilities to sense environmental change, seize selected opportunities, and reconfigure resources, processes, and competences. They differ from ordinary capabilities that perform current work efficiently. Sensing, experimentation, and transformation require investment and judgement, remain shaped by existing assets and paths, and do not guarantee every change will succeed."
+        "Dynamic capabilities are higher-order abilities to sense environmental change, seize selected opportunities, and reconfigure resources, routines, and competences. They differ from ordinary capabilities that execute current work efficiently. Sensing, experimenting, and transforming require investment and judgement, remain constrained by existing assets and paths, and do not guarantee that every change or product will succeed."
       ],
       "explanationParagraphsZh": [
-        "动态能力是组织感知环境变化、抓住选定机会，并重组资源、流程与能力的高阶能力。它不同于把现有工作高效完成的普通能力。感知、试验和转型需要投入与判断，也受既有资产和路径限制，不能保证每次改变都成功。"
+        "动态能力是组织感知环境变化、抓住选定机会，并重组资源、流程与能力的高阶能力，区别于高效完成现有工作的普通能力。感知、试验和转型需要投入与判断，也受既有资产和路径约束；它提高适应机会，却不能保证每次改变或每个产品都成功。"
       ],
       "mode": "case-fable",
       "status": "approved",
@@ -136,29 +142,31 @@
       "fieldTitleZh": "市场营销与广告",
       "title": "The Soap That Promised Everything",
       "titleZh": "承诺一切的肥皂",
-      "summary": "A soapmaker fills the wrapper with everyone's wishes until no one knows what the soap is actually for.",
-      "summaryZh": "肥皂匠在包装上写满所有人的愿望，最后谁也不知道这块肥皂究竟适合什么。",
+      "summary": "A soap maker promises everything to everyone until each buyer remembers only the product's compromises.",
+      "summaryZh": "肥皂匠向所有人承诺一切，最后每位顾客只记得产品如何处处妥协。",
       "storyParagraphs": [
-        "Soapmaker Qiao Lan wanted her new bar to serve the entire city. Its wrapper promised the whitest wash, finest scent, gentlest touch, longest use, and lowest price. To pursue all of them, she added expensive fragrance, cut the bars small, and reduced the lye needed for heavy dirt. The shelf carried many claims and few repeat buyers.",
-        "Qiao Lan went to the market. Dockworkers complained about salt stains. Inns cared about the cost of large-volume use. Families with children valued gentleness. People buying the same category were trying to solve different problems, and her small workshop could not serve every group equally well.",
-        "She chose dock soap first because nearby fleets purchased regularly and the workshop already knew how to remove salt residue. The new bar no longer claimed to be most fragrant or most gentle. It promised to lift salt in cold water and last through a voyage.",
-        "Cheaper inn soap and more fragrant household soap remained on the shelf. Qiao Lan's product was not best for everyone, but people washing sea salt could quickly see why to choose it. After a fleet trial showed that the bar sat in water, she changed its shape.",
-        "When replacing the wrapper, Qiao Lan cut away six old promises and left one line: 'For the salt the sea wind leaves behind.'"
+        "Soap maker Qiao Lan borrowed enough money to double her workshop and needed the new bar to sell across the whole city. Its wrapper promised the whitest wash, finest scent, gentlest touch, longest life, lowest price, and richest foam. To approach all six claims, she added costly perfume, reduced the lye that removed heavy grime, and cut each bar smaller. Merchants admired the crowded wrapper and placed a large opening order.",
+        "Returns arrived within a month. Dockworkers said salt and tar remained on their sleeves. Inns used the small bars too quickly. Families found the perfume too strong for children. Qiao added more claims in smaller print and offered one discount to all buyers. Sales briefly rose, then fell harder because no group could tell what problem the soap was meant to solve. The loan payment was due after the next market. Unsold bars came back with six different complaints written across the same wrapper.",
+        "Qiao spent ten mornings watching use rather than counting people by occupation alone. Some dockworkers washed only light cloth, while a few inns handled tarred sail linen. She grouped situations by soil, water temperature, purchase volume, and sensitivity, then checked whether each group was reachable and large enough. The notes described changing needs, not permanent kinds of people, and she refused a merchant's request to label family buyers as weak.",
+        "Her workshop could afford one new mould and one formula. Nearby shipping crews bought steadily and the workers already understood salt stains, so Qiao chose them first. That meant surrendering a lucrative order from the city's family-goods chain. The new bar gave up floral scent and extreme mildness; it promised to remove salt in cold water and last one voyage. Its ridged shape drained in a shipboard box after testers complained that the first sample dissolved.",
+        "The narrower promise sold fewer bars in the opening week but earned repeat orders from three crews. A cheaper inn soap and a milder household bar remained better for other buyers. Qiao did not call her bar universally superior. She placed it beside those alternatives and accepted the cost of changing the production line. One crew rejected it because their work involved oil rather than salt, and its report changed the next survey.",
+        "On the night she made the loan payment, Qiao unfolded the old wrapper. She cut away five of its six promises, then trimmed the remaining words until the paper read: 'For the salt the sea leaves behind.' The offcuts filled her palm; the new wrapper needed only one line."
       ],
       "storyParagraphsZh": [
-        "肥皂匠乔岚想把新作卖给全城。她在包装上写：洗得最白、气味最香、最温和、最耐用、价格最低。为了同时做到这些，肥皂加入许多香油，切得很小，又减少能去重污的碱。货架上的字很多，回购的人很少。",
-        "乔岚到市场观察。码头工抱怨盐渍难洗，旅店在意大批使用的成本，有孩子的家庭更看重温和。三群人买同一件东西时，真正要解决的问题并不相同，也不是每群都值得她用有限作坊同时服务。",
-        "她选择先做码头用皂，因为附近船队稳定采购，而作坊已有处理盐垢的技术。新皂不再承诺最香或最温和，只强调冷水中也能洗掉盐渍，而且一块能用完整个航程。",
-        "货架上仍有更便宜的旅店皂，也有气味更好的家用皂。乔岚的新作不是对所有人最好，却让需要洗盐渍的人很快知道为什么要选它。船队试用后提出皂盒容易积水，她又修改了形状。",
-        "换包装那天，乔岚把旧纸上六句承诺剪掉，只留下“给海风留下的盐”。"
+        "肥皂匠乔岚借钱把作坊扩大一倍，新皂必须卖遍全城才能还债。包装纸一口气承诺：洗得最白、气味最香、触感最温和、最耐用、价格最低、泡沫最多。为了靠近六句话，她加入昂贵香油，减少去重污的碱，又把皂块切小。商人喜欢那张热闹包装，开市便下了一笔大单。",
+        "一个月内，退货陆续回来。码头工说袖口盐渍与焦油洗不掉；旅店嫌小皂用得太快；家庭顾客又觉得香气对孩子太浓。乔岚把更多承诺挤进小字，并向所有人发同一种折扣。销量短暂回升，随后跌得更重，因为谁也说不清这块皂究竟解决什么问题。下一场集市以后，借款便到还期。退回的皂堆在柜台下，同一张包装上写着六种彼此冲突的抱怨。",
+        "乔岚连续十个清晨观察顾客如何使用，不再只按身份粗分。码头工里有人只洗轻布，旅店中也有少数要处理涂焦油的帆布。她按照污渍、水温、采购量与敏感程度整理情境，再检查群体是否能够触达、规模是否足够。笔记写的是会变化的需要，并非天生部落；商人要求把家庭顾客标成“软弱”，她拒绝了。",
+        "作坊只负担得起一副新模具和一种配方。附近船队采购稳定，工人又懂盐垢处理，乔岚决定先服务他们，也因此放弃城里家庭用品行的一笔高利润合同。新皂不再追求花香和极致温和，只承诺冷水除盐、一块用完整段航程。首批试用品因皂盒积水融化，她又把表面改成能排水的棱纹。",
+        "这个较窄的承诺首周卖得更少，却得到三支船队复购。更便宜的旅店皂、更温和的家用皂，仍然更适合另一些买家。乔岚没有宣称自己的产品对所有人最好，而是把它放在替代品旁，也承担转换生产线的费用。一支常洗油污的船队拒绝采购，他们的报告则进入下一轮调查。",
+        "还清当期借款那晚，乔岚展开旧包装，剪掉六句承诺中的五句，又把最后一句裁短，直到纸上只剩：“洗去海风留下的盐。”碎纸堆满掌心，新包装却只需要一行字。"
       ],
       "conceptName": "Segmentation, targeting, and positioning",
       "conceptNameZh": "细分、目标选择与定位",
       "explanationParagraphs": [
-        "Segmentation identifies groups with different needs, behaviours, or likely responses; targeting chooses whom to serve; positioning defines a credible and distinctive value relative to alternatives. Together they connect market understanding to resource allocation. Segments remain revisable models and require attention to reachability, economics, stereotyping, privacy, and exclusion."
+        "Segmentation identifies groups that differ in needs, behaviour, or response; targeting chooses which groups to prioritise; positioning states a credible, distinctive value relative to alternatives. Together they connect market understanding to limited resource allocation. Segments are revisable models rather than natural tribes, and decisions should consider reachability, economics, privacy, stereotyping, exclusion, and ethical consequences."
       ],
       "explanationParagraphsZh": [
-        "细分识别需求、行为或反应不同的群体；目标选择决定优先服务谁；定位则相对替代品说明可信而独特的价值。三者把市场理解连接到资源配置。细分只是可修订模型，还需检查可触达性、经济性、刻板印象、隐私与排斥。"
+        "细分识别需求、行为或反应不同的群体；目标选择决定有限资源优先服务谁；定位则相对替代品说明可信且独特的价值。三者把市场理解连接到资源配置。细分是可修订模型，并非天然部落，还须检查可触达性、经济性、隐私、刻板印象、排斥与伦理后果。"
       ],
       "mode": "case-fable",
       "status": "approved",
@@ -178,29 +186,31 @@
       "fieldTitleZh": "市场营销与广告",
       "title": "Two Jars with Hidden Honey",
       "titleZh": "两罐看不见内部的蜂蜜",
-      "summary": "Two sellers claim their sealed jars contain pure honey, but only one keeps the promise alive through winter.",
-      "summaryZh": "两个卖家都说陶罐里是纯蜜，只有一个愿意让承诺在冬天继续生效。",
+      "summary": "In a market of sealed jars, a costly winter promise separates two identical claims—until inspection tests the promise itself.",
+      "summaryZh": "密封蜜罐的市场里，一份昂贵的冬季承诺区分两句相同保证，直到检验也来审查承诺本身。",
       "storyParagraphs": [
-        "Two sealed honey jars at the market looked identical. An old beekeeper and a new trader each said his honey contained no sugar water. Customers could not see inside or taste the whole jar. Louder assurances did not reveal which seller was reliable.",
-        "The beekeeper tied a contract around the lid. If the honey remained watery in winter or a test found added sugar, he would buy it back at full price and provide another jar. He kept his own hives, and pure honey was unlikely to trigger the promise, so it cost him little to offer.",
-        "The trader considered attaching the same paper, then shortened his guarantee to three days. The more diluted honey he sold, the more jars he would have to buy back in winter. Matching the beekeeper's promise could consume all his immediate profit.",
-        "Customers therefore paid somewhat more for the beekeeper's jars. The contract did not make honey pure, and a seal could still be forged, but the two sellers faced different costs in maintaining the promise. The market later added common testing rather than relying on paper reputation alone.",
-        "After the first winter frost, the beekeeper returned with his scales. He checked the old contracts from the previous season before setting out new jars."
+        "At the harvest market, beekeeper Old He and travelling seller Fan displayed identical sealed honey jars. Both claimed the contents held no sugar water. Buyers could not inspect the whole jar and loud assurances cost either seller nothing. Fan's bright cloth covers attracted the first crowd, and Old He's plain stock remained untouched. He needed the market income to feed his hives through winter.",
+        "Old He tied a stamped contract around every neck: if the honey stayed watery after the first frost or failed the guild test, he would buy it back and provide a second jar. His long-kept hives and careful extraction made that outcome uncommon, so the promise was costly but bearable. Customers began paying slightly more. The contract did not reveal the honey; it gave Old He something to lose if his claim proved false.",
+        "Fan copied the cloth, wording, and stamp. Then he calculated what winter redemption would cost if his diluted stock sold well. He shortened the claim period to three days and hid the change beneath the knot. Sales recovered because few buyers read closely. When one jar fermented after a warm week, Fan blamed storage and left town before frost. Now the market distrusted every paper promise, including Old He's.",
+        "Old He carried both honey and contract records to the guild, leaving the guarantee in force and risking faults in his own batch. He accepted inspection and surrendered the remainder of his stock until testing ended. Two jars from a damp comb exceeded the guild's moisture limit. He bought them back, lost most of the season's profit, and marked their batch number publicly. The visible loss made the winter promise harder for a careless seller to imitate. He displayed the refund coins beside the failed jars for a full market day, even as neighbouring sellers mocked the admission.",
+        "The guild then required traceable seals, random tests, and funds held for refunds. A contract alone still could be forged, and a rich dishonest seller might afford compensation briefly. Buyers learned to inspect who issued the seal, how long the seller would remain reachable, and whether the promised penalty differed across likely sellers. Old He's next price was lower because trust had to be rebuilt rather than assumed. Buyers could now compare a promise, the mechanism behind it, and the record of what happened when it failed.",
+        "After the first frost, Old He returned with a scale and the unsold contracts. Before setting out new jars, he redeemed the two damp-comb papers and cut their seals in half. The surviving contracts hung stiff around the remaining jars, their edges silvered with frost."
       ],
       "storyParagraphsZh": [
-        "集市上有两罐封好的蜂蜜，外表一模一样。老蜂农与新商贩都说自己的蜜没有掺糖水。顾客看不见罐内，也无法当场尝遍整罐，单靠更响亮的保证分不出谁可信。",
-        "老蜂农在罐口系上一张契纸：若入冬后蜂蜜仍稀得像水，或验出掺糖，原价买回并另赔一罐。他常年养蜂，纯蜜出现这种问题的机会很小，这项承诺对他并不昂贵。",
-        "新商贩也想系同样的纸。他算过以后却缩短为三日，因为掺水蜜卖出越多，冬天需要买回的罐子越多。若照抄老蜂农的承诺，他眼前赚的钱可能全用来赔付。",
-        "顾客因此愿意为老蜂农多付一些。契纸没有让蜂蜜自动变纯，也可能有人伪造印章，但它让两种卖家承担承诺的成本不同。后来集市又增加统一检验，防止只靠纸面声誉。",
-        "冬天第一场霜后，老蜂农带着秤回到集市。他先检查自己卖出的旧契纸，才摆上新罐。"
+        "丰收集市上，老何蜂农与行商范七摆出外表相同的密封蜜罐，两人都说里面没有掺糖水。买家无法检查整罐，响亮保证对任何卖家又都不花成本。范七用鲜艳罩布先围来人群，老何朴素的货几乎没人碰。他急需集市收入为蜂群备足越冬饲料。",
+        "老何在每个罐颈系一张盖印契纸：初霜后若蜂蜜仍稀如水，或行会检出掺糖，他按原价买回，再赔一罐。多年稳定的蜂群和谨慎取蜜让这种结果较少发生，因此承诺昂贵，却还能承担。顾客开始愿意多付一些。契纸没有照见罐内，只让老何在说错时真会失去东西。",
+        "范七照抄罩布、文字和印章，算过冬季回购掺水蜜的代价后，却把期限缩成三日，又把小字藏在绳结下面。许多顾客没细看，他的销量重新上升。一罐蜜在暖周后发酵，范七怪顾客保存不当，初霜前便离镇。此后市场不再信任任何纸面承诺，连老何也受牵连。",
+        "老何没有撤下保证，而是把蜂蜜和契纸账一同送进行会，连自家批次的问题也一并暴露在检验下；他检测结束前停卖所有余货。两罐来自潮湿蜂脾的蜜超过含水标准，他照约买回，失去大半季利润，并公开标出批号。看得见的损失，使粗心卖家更难长期模仿这项承诺。他把退款银币和不合格蜜罐并排摆满一个集日，任由邻摊讥笑这场公开承认。",
+        "行会随后要求可追踪封签、随机抽检和预留退款金。契纸仍可能被伪造，资金雄厚的不诚实卖家也可能短期赔得起。买家因而继续检查印章由谁签发、卖家多久仍可找到，以及承诺的惩罚对不同卖家是否真的成本有别。老何下一季还得降价，因为信任只能重建，不能直接继承。顾客此后能同时比较承诺、支撑承诺的办法，以及承诺失效后真正发生过什么。",
+        "第一场霜后，老何带着秤和未兑现契纸回到集市。摆新罐以前，他先收回那两张潮湿蜂脾的契纸，剪断封签。其余契纸硬挺地挂在蜜罐颈上，纸边结着一圈银白霜粒。"
       ],
       "conceptName": "Signaling",
       "conceptNameZh": "信号传递",
       "explanationParagraphs": [
-        "Signaling occurs when a better-informed party takes an observable action to communicate hidden qualities. A signal is credible when different types face different costs or incentives in sustaining it, making imitation unattractive to lower-quality types. Signals change beliefs rather than guarantee truth and may be copied, corrupted, or wasteful, so verification and institutional support often remain necessary."
+        "Signalling occurs when a better-informed party takes an observable action to convey a hidden quality. A signal is credible when different types face different costs or continuing incentives, making imitation harder for low-quality sellers. Signals change beliefs rather than guarantee truth; decoration is cheap, guarantees can be forged, and even costly signals need verification, traceability, and institutional support."
       ],
       "explanationParagraphsZh": [
-        "信号传递发生在信息较多的一方采取可观察行动，以传达隐藏特征。信号可信通常因为不同类型承担它的成本或持续激励不同，使低质量者难以模仿。信号只改变他人信念，不保证真相，也可能被复制、腐化或造成浪费，因此常需检验与制度支持。"
+        "信号传递发生在信息较多的一方采取可观察行动，以传达隐藏特征。可信信号通常让不同类型承担不同成本或持续激励，使低质量者更难模仿。信号改变他人信念，却不保证真相；装饰容易复制，保证也可伪造，因此昂贵信号仍需要检验、追踪与制度支持。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -220,29 +230,33 @@
       "fieldTitleZh": "市场营销与广告",
       "title": "The Regular Guest Who Stayed One Night",
       "titleZh": "只住一晚的常客",
-      "summary": "An innkeeper gives the best room to a high-paying visitor and leaves a monthly traveller beneath a leaking roof.",
-      "summaryZh": "旅店老板把最好房间留给一次付清高价的人，却让一名每月经过的客人睡在漏雨处。",
+      "summary": "A mountain inn trades ten years of returning caravans for one profitable room, then learns that a guest's value is partly made by how the inn behaves.",
+      "summaryZh": "山口旅店用十年回程车队换取一晚高价房，随后发现一段关系的价值也由旅店自己的行为创造。",
       "storyParagraphs": [
-        "A mountain-pass inn had one good room with a stove. On a rainy night, a jeweller offered triple the usual price, so the owner gave it to him and placed a herb carrier in a leaking side room. The jeweller left the next morning and never passed that way again.",
-        "The carrier had stayed two nights each month and often brought other drivers. After that visit, he moved to another inn, and the convoy followed. The owner saw only the extra coins from one night, not future rooms, meals, and referrals, nor the continuing cost of serving those guests.",
-        "The owner began considering return frequency, contribution per visit, likely duration, and service cost together. Some high-paying guests came only once. Some frequent low-paying guests required arrangements that cost more than they brought. The estimates were uncertain and could change with the way the inn treated people.",
-        "When the inn next filled, the owner did not use the figures as a moral ranking. Urgent needs still mattered. He used expected relationship value when deciding how to maintain rooms, offer return benefits, and spend on attracting guests.",
-        "When the carrier passed again, the owner had repaired the leaking room. After recording one night's payment, he also entered the name on a future booking page."
+        "The mountain inn had one dry room with a stove. On a rain night, a jeweller offered owner Mu three times the usual price, while carter An—who stayed twice every month and brought other medicine drivers—had already reserved it. Mu moved An to a leaking shed. The extra silver covered a roof payment due at dawn, and the jeweller praised Mu's practical sense.",
+        "The jeweller left next morning and never crossed that pass again. An shifted to the eastern inn; six drivers followed. Mu noticed empty tables before he connected them to the room decision. He had counted one night's revenue, not later rooms, meals, referrals, and service costs that might follow a continuing relationship.",
+        "Mu began a ledger with four columns: likely visits, contribution after direct cost, chance of return, and time. A generous estimate made every familiar guest look precious, so he compared high, middle, and low cases and discounted distant earnings. Some expensive one-time guests mattered greatly. Some frequent guests demanded credit and special meals that cost more than they paid. The ledger predicted relationships, not virtue.",
+        "To test what he could influence, Mu offered returning drivers reliable dry storage rather than blanket discounts. The change cost less and improved repeat stays. He also marked which returns followed his action instead of crediting himself for journeys already planned. Estimates changed each month with observed behaviour, road closures, competitors, and the way the inn treated people. The dry-storage experiment also revealed that reliability mattered more to the drivers than a free supper.",
+        "When another jeweller offered triple price, Mu kept An's reserved room and lost the windfall. He spent two months' margin repairing the shed as a second dependable room, then created a common service floor for any stranded traveller regardless of predicted value. Long-run estimates guided maintenance, follow-up offers, and acquisition spending; they did not decide who deserved shelter or whose emergency counted.",
+        "An returned after seeing the repaired roof but brought only two companions at first. Trust recovered more slowly than Mu's table had forecast. The innkeeper wrote their room charges in the current page, then pencilled possible future stays in lighter ink so no estimate could masquerade as a debt already owed. He revised the return probability downward rather than inventing a story that made the earlier repair look immediately successful.",
+        "Years later, the jeweller's name still occupied one bright line in the old ledger. An's name appeared across many worn pages, sometimes with profit, sometimes beside repairs and unpaid meals. The paper beyond that first rainy night had become thicker than the night itself."
       ],
       "storyParagraphsZh": [
-        "山口旅店只有一间带火炉的好房。雨夜里，一名珠宝商愿意付三倍房钱，老板便把房间给了他，让常送药材的车夫住进漏雨小屋。珠宝商第二天离开，再也没有经过山口。",
-        "车夫过去每月住两晚，还常带来同行。那次以后，他改去另一家旅店，跟着他的车队也一并离开。老板只看见当晚多收的银币，没有看见未来许多次住宿、饭食和介绍，也没有计算长期服务他们所需的成本。",
-        "老板开始把客人的回访频率、每次贡献、可能留下多久以及额外服务记在一起。他发现有些高价客只来一次，有些低价客虽常来，却需要超过收入的特殊安排。估计并非永远准确，也会因旅店怎样待人而改变。",
-        "后来又遇到满房，老板没有按账表给人排道德高低。他仍照顾紧急需要，只把长期关系的预期价值用于决定房间维护、回访优惠和接客投入。",
-        "车夫再次经过时，老板先修好了漏雨小屋。登记完一晚房钱后，他在未来月份的预订页上也留下了名字。"
+        "山口旅店只有一间带火炉又不漏雨的好房。暴雨夜里，珠宝商愿付三倍房钱，而每月住两晚、常带药材车夫同行的安师傅早已预订。老板穆川把安师傅换去漏雨小屋。多收的银币正好能在天亮前补一笔屋顶欠款，珠宝商还称赞他懂得做生意。",
+        "珠宝商次日离开，此后再没经过山口。安师傅改住东边旅店，六名同行也跟了过去。饭桌空下来以后，穆川才把变化同那间房联系起来。他只数了当晚房钱，没有看以后可能出现的住宿、饭食、介绍和相应服务成本。",
+        "穆川新开一本账，分四栏写预计来访次数、扣掉直接成本后的贡献、继续回来的可能以及时间。若只用乐观数字，所有熟客都显得价值惊人，他便同时算高、中、低三种情形，并把遥远收入折低。有些高价客虽只来一次仍很重要；有些常客要求赊账和特餐，成本反而超过房钱。这本账预测关系，不评判人的高低。",
+        "为了检验旅店能影响什么，穆川不再给所有熟客打折，而是为回程车夫提供可靠的干燥货仓。这项服务成本更低，复住却增加。他还区分哪些回访来自自己新增的安排，哪些行程本就会发生。道路封闭、竞争旅店、客人行为以及本店如何待人，每个月都会让预测改变。干货仓试验还让他看见，对车夫而言，可靠存放比免费晚餐更能影响下一次选择。",
+        "又有珠宝商开出三倍价格时，穆川保留安师傅已订的房，放弃眼前横财。他用两个月利润修好小屋，增加第二间可靠客房，又为任何受困旅客设定同样的基本照顾，不论账上预计价值多少。长期估算只用来决定维修、回访优惠和获客投入，不决定谁配得到遮雨处。",
+        "安师傅看到新屋顶后终于回来，头一次却只带两名同行。信任恢复得比账表预测更慢。穆川把当晚房钱写进本月页，再用淡铅笔记下可能的未来住宿，免得预计数字看起来像客人已经欠下的承诺。他把回访概率调低，没有编一个故事让先前维修显得立刻成功。",
+        "多年后，珠宝商的名字仍在旧账上占着一行鲜亮墨迹；安师傅的名字却跨过许多磨损页，有时旁边是利润，有时是修缮费与赊欠饭钱。最初那个雨夜之后的纸页，已经比雨夜本身厚得多。"
       ],
       "conceptName": "Customer lifetime value",
       "conceptNameZh": "客户终身价值",
       "explanationParagraphs": [
-        "Customer lifetime value estimates the present value of expected future contribution from a customer relationship, considering revenue, margin, retention, time, acquisition, and service cost. It can guide resource allocation but remains uncertain and partly shaped by the firm's own treatment of customers. It should not become a moral ranking and requires privacy, fairness, and sensitivity checks."
+        "Customer lifetime value estimates the present value of expected future contribution from a customer relationship, considering revenue, margin, retention, time, acquisition, and service cost. It is uncertain, scenario-dependent, and partly influenced by the firm's own actions. It supports resource allocation, not moral ranking, and should be used with service floors, privacy protections, fairness review, and feedback from outcomes."
       ],
       "explanationParagraphsZh": [
-        "客户终身价值估计一段客户关系预期未来贡献的现值，通常考虑收入、利润、留存、时间以及获客和服务成本。它能支持资源配置，却是不确定且会受企业行为影响的模型，不应成为人的道德排名，并需要隐私、公平与敏感性检查。"
+        "客户终身价值估计一段客户关系预期未来贡献的现值，通常考虑收入、利润、留存、时间、获客与服务成本。它是不确定、依赖情景且会受企业自身行为影响的预测，可支持资源配置，却不是人的道德排名；使用时还需服务底线、隐私保护、公平审查与结果反馈。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -262,29 +276,31 @@
       "fieldTitleZh": "秘书与办公室工作",
       "title": "A Red Ribbon on Every Letter",
       "titleZh": "每封信都系着红带",
-      "summary": "The mailroom marks urgent letters with red ribbon; within three days, every sender learns how to reach the front.",
-      "summaryZh": "信房规定急件系红带，三天后，所有寄件人都学会了怎样让自己的事排在最前面。",
+      "summary": "When every sender marks every message urgent, a quiet drawing of a leaking embankment disappears beneath the loudest claims.",
+      "summaryZh": "当每个寄件人都把公文标成急件，一张安静的堤坝渗水图消失在最响亮的催促下面。",
       "storyParagraphs": [
-        "The civic mailroom could process only fifty letters a day. Its manager ordered urgent items tied with red ribbon and ordinary mail placed behind. At first, fire reports, broken bridges, and missing-person notices moved quickly. Soon merchants tied red ribbon to overdue invoices, officials used it for banquet seating, and even a request to repair a window was marked urgent to avoid the queue.",
-        "The table became entirely red. Sorters judged by whoever wrote most dramatically. A levee seepage report without ribbon sank to the bottom. Its sender was not skilled at exaggeration and merely listed the water marks. By the time the letter was opened, the crack had grown.",
-        "The manager redesigned the first sorting pass. Staff considered how quickly delay could worsen the problem, the severity of consequences, source credibility, reversibility, and who could act. Red ribbon remained a clue but no longer controlled rank. Uncertain reports with potentially serious safety effects went first to someone able to check them.",
-        "Older letters automatically moved upward each day, and routing mistakes returned to the mailroom as feedback. The banquet letter was downgraded; the seepage report became a training case. Senders still tried to compete for attention, and the rules required checks for quiet people being overlooked.",
-        "When another water-mark sketch arrived without ribbon, the sorter checked its date and location and placed it in the first delivery bag of the day."
+        "The city mailroom could process fifty letters a day. Supervisor Lu tied red ribbon to fire alarms, broken bridges, and missing-person reports so they moved first. The rule worked, and departments soon learned from it. Merchants tied red to debt demands, officials tied red to banquet seating, and a window-repair request warned of 'imminent civic embarrassment.' No sender wanted to wait behind someone else's urgency.",
+        "Within a week, the tables were red. Clerks ranked messages by frightening language and the status of the seal. A levee keeper sent a plain sketch showing a damp line three bricks higher than yesterday. He used no ribbon and no dramatic words. The paper sank beneath ceremonial mail. When it was opened three days later, the leak had widened and two streets needed sandbags. By dawn, water had seeped beneath a warehouse door and stained the lower sacks.",
+        "Lu's first repair was a mandatory urgency form. Skilled writers filled every risk box, while people nearest the work struggled to translate mud, sound, and dates into official phrases. The queue again favoured those best at claiming importance. An anonymous note alleged poison in a fountain; no one dared delay it, yet sending the entire inspection team left the levee without an engineer.",
+        "Lu replaced the single red queue with a revisable first screen: how soon harm could worsen, how severe it might become, how credible and specific the evidence was, whether action remained reversible, and who could verify it. Uncertain high-consequence reports went quickly to a qualified checker instead of directly consuming every resource. Old letters moved upward each day so quiet problems could not wait forever.",
+        "The mayor's secretary objected when banquet seating was downgraded below an unsigned crack photograph. Lu accepted a reprimand and lost her festival bonus rather than restore rank as the hidden rule. She rotated triage authority, audited who used urgent labels, and reviewed mistakes. The mailroom found that low-status field workers were being downgraded more often even when their attachments were precise, so examples and thresholds were revised. Two clerks spent their next rotation with levee and fire crews so the next decision would rest on more than forceful vocabulary.",
+        "A month later, another unadorned levee drawing arrived. The clerk checked its date, location, rising water line, and the cost of waiting. He placed it in the first delivery bag, then clipped a small blue card to the copy: 'priority provisional—engineer to confirm.' The red ribbon remained in the drawer. The engineer returned a confirmation before noon, and the card was updated instead of treated as a permanent verdict."
       ],
       "storyParagraphsZh": [
-        "城务信房每天只能处理五十封信。主管规定，急件系红带，普通信排后。起初火警、断桥和失踪通报很快送达。没过几天，商人给催款信系红带，官员给宴会座次系红带，连请求修窗的人也怕排队而系上红带。",
-        "桌面很快一片红。分信员只能看谁写得最吓人，一封没有红带的堤坝渗水报告被压在底部。寄信的守堤人不擅长夸大，只写了水痕位置。等信被打开，裂缝已经扩大。",
-        "主管重做第一轮分类：先看若不处理会多快恶化、后果多重、信息是否可信、能否挽回以及由谁负责。红带仍作为线索，却不能单独决定顺序。不确定但可能严重的安全信会先转给能核查的人。",
-        "队列里的旧信每天自动上移，分错的结果会反馈给信房。宴会信被降级，渗水报告则成为训练样例。寄件人仍会尝试争先，规则也需要持续检查是否让安静的人更难被看见。",
-        "第二次收到无红带的水痕图时，分信员先看图上的日期和位置，随后把它放进了当天第一只送件袋。"
+        "城务信房每天只能处理五十封信。主管陆宜用红带标记火警、断桥和失踪通报，让它们先走，这个办法起初十分有效。各部门很快学会规则：商人给催款信系红带，官员给宴会座次系红带，连修窗申请也写着“城市体面即将受损”。谁都不愿排在别人的紧急后面。",
+        "一周后，桌面一片红。分信员只好按文字多吓人与印章地位排序。守堤人寄来一张素纸图，画着潮湿水线比昨日高了三块砖。他没有红带，也不会写危急口号，纸张便沉到庆典公文下面。三天后打开时，渗漏已经扩大，两条街都要堆沙袋。天亮时，水已从仓门下渗入，在最底层粮袋上留下深色水印。",
+        "陆宜先设计一张强制紧急表。擅长公文的人把每个风险格填满，最靠近现场的人却很难把泥色、声音和日期翻成官话，队列再次偏向最会宣称重要的人。一封匿名信声称水池有人投毒，谁也不敢延迟；整支检查队因此出动，堤坝反而没有工程师。",
+        "陆宜取消单一红队列，改用可修订的初筛：伤害多久会恶化、后果多重、证据是否具体可信、行动能否挽回、谁有能力核查。高度不确定却可能严重的报告先交给合适的人快速确认，而不是直接吞掉全部资源。旧信每天自动上移，安静问题也不能永远等待。",
+        "市长秘书发现宴会座次排在一张无署名裂缝照片后，要求恢复官阶优先。陆宜宁受记过、失去节庆奖金，也不把身份重新藏进规则。她轮换分诊权限，审计谁滥用急件，并复盘错分。信房发现基层寄件人即使附件具体也更常被降级，于是重写样例与阈值。两名分信员下一轮跟随堤防队和消防队值班，免得日后仍只凭强硬词句判断现场。",
+        "一个月后，又一张没有装饰的堤坝图送到。分信员核对日期、位置、上升水线和等待代价，把它放进当天第一只送件袋，再给留档夹上一张蓝卡：“优先级暂定，待工程师确认。”红带仍留在抽屉里。工程师中午前回传确认，蓝卡随即更新，没有被当成永远不变的裁决。"
       ],
       "conceptName": "Information triage",
       "conceptNameZh": "信息分诊",
       "explanationParagraphs": [
-        "Information triage rapidly and provisionally prioritises and routes incoming information when processing capacity is limited. Urgency, severity, credibility, reversibility, and responsibility may all matter. Triage is not final truth judgement; it needs escalation, review, queue ageing, feedback, and fairness checks to resist label manipulation and the neglect of quiet risks."
+        "Information triage is a rapid, provisional prioritisation and routing process used when processing capacity is limited. Urgency, severity, evidence quality, reversibility, and responsibility may all matter. Triage is not a final judgement of truth or worth; it requires escalation paths, ageing queues, feedback, audits, and fairness checks because labels can be manipulated and quiet or low-status risks can be missed."
       ],
       "explanationParagraphsZh": [
-        "信息分诊是在处理能力有限时，对进入信息作快速、暂时的优先分类和路由。紧迫性、严重性、可信度、可逆性与责任归属都可能相关。分诊不是最终真相判断，还需要升级、复查、队列老化、反馈和公平检查，以防标签操纵或安静风险被漏掉。"
+        "信息分诊是在处理能力有限时，对进入信息进行快速、暂时的优先分类与路由，可能综合紧迫性、严重性、证据质量、可逆性与责任归属。它不是对真伪或价值的最终裁决，还需升级路径、队列老化、反馈、审计与公平检查，防止标签操纵及安静或低地位风险被漏掉。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -304,29 +320,29 @@
       "fieldTitleZh": "秘书与办公室工作",
       "title": "Three Orders for One Bridge",
       "titleZh": "一座桥的三份命令",
-      "summary": "Both ends of a bridge follow a correct drawing and still meet half a metre apart over the river.",
-      "summaryZh": "桥梁两端各按一张正确图纸施工，合到河心时却相差了半丈。",
+      "summary": "Three clear drawings reach one worksite, and each crew builds faithfully toward a different bridge.",
+      "summaryZh": "三份清楚图纸同时抵达工地，每支队伍都忠实地建向一座不同的桥。",
       "storyParagraphs": [
-        "After bridge construction began, the designer issued Drawing One. She then corrected a water-level error and issued Drawing Two. A third draft, not yet approved by the city, was copied by an assistant. All three looked official, with only a small number in one corner.",
-        "The eastern foreman received Drawing Two. The western foreman used the third draft. The stone yard still cut from Drawing One. Everyone believed their copy was newest. When the decks reached midstream, their heights differed by half a metre and the prepared stone no longer fitted.",
-        "The designer could not merely say 'always use the latest', because the newest document was an unapproved draft, while the oldest still needed to remain for investigation. The project introduced unique identifiers, status, and effective dates. Approved drawings came from one register, recipients confirmed receipt, and obsolete copies were stamped rather than destroyed.",
-        "The next change record named the beam affected, the reason, approver, and start time. The stone yard and both banks received the same notice and returned their working copies.",
-        "Before joining the bridge, the two foremen spread their drawings at midstream. Only after number, approval mark, and effective date matched did they lower the final deck board."
+        "The river bridge began from approved Drawing One. After discovering a water-level error, architect Shen raised the piers and issued Drawing Two. A week later she sketched a lighter deck as Drawing Three, but the council had not approved it. An assistant copied the draft before a meeting. All three sheets looked official; their tiny corner numbers were the only visible difference. The bridge had to open before the grain fair or the city would repay a regional construction grant.",
+        "The east-bank foreman received Two, the west-bank foreman received the unapproved Three, and the stone yard still cut from One. Each person believed the newest paper in hand was authoritative. By the time the spans reached midstream, the banks differed by half a metre and prepared stones no longer fit either side. Rain was coming, and reopening the old ferry would consume the remaining contingency fund. One crew had already mortared its pier caps; the other had drilled anchor holes that pointed toward empty air.",
+        "Shen drew the steep joining ramp once, tore it up, and ordered the finished work dismantled, losing a month and the completion bonus. She would not simply order everyone to use 'the latest': Three was newer but not authorised, while One had to remain available to explain purchases and decisions. The problem was identity, state, approval, effective time, and controlled distribution—not freshness alone. Workers chipped away sound masonry under tarpaulins while the finance clerk crossed out the festival bonus line by line.",
+        "The project created one register with unique drawing identifiers, revision status, approval signatures, effect dates, and reasons for change. Only the central register issued working copies; receivers confirmed them, and superseded site copies received a red stamp before being archived. Offline crews got sealed update packets and a named contact. A controlled rollback procedure kept old versions usable without confusing them with current instructions. During the first drill, a sealed packet failed to reach the night quarry, exposing a second distribution gap before stone was cut.",
+        "When a later change moved one beam, the log stated what changed, why, who approved it, and when each crew must switch. The quarry, warehouse, and both banks acknowledged the same notice before cutting resumed. At closure, the two foremen spread their plans across the final gap. Number, approval mark, and effect date matched; only then did they lower the last board.The stone rejected from the mismatch became the abutment steps, but its recutting cost stayed visible in the final account. Both signed across the final update."
       ],
       "storyParagraphsZh": [
-        "新桥开工后，设计师先发出一号图。发现水位计算有误，她又修改桥墩高度，发出二号图；随后市政厅尚未批准的三号草稿也被一名助手拿去复印。三份图都印得清楚，只在角落有很小的编号。",
-        "东岸工头收到二号图，西岸工头拿到三号草稿，仓库仍按一号图切石。每个人都相信自己手里的副本最新。桥面伸到河心时，两边高度相差半丈，石料也已无法直接使用。",
-        "设计师不能只喊“以后都用最新版”，因为三号虽较新却未获批准，一号虽旧仍需要留作追查。工程队建立唯一图号、状态和生效日期；批准图从中央登记处发出，领取人确认收讫，旧图盖上废止印但不销毁。",
-        "下一次修改时，变更记录清楚写出哪根梁、为何改变、谁批准以及从何时执行。仓库、东西岸都收到同一份通知，并交回现场工作副本。",
-        "桥合龙前，两个工头把图纸摊在河心。编号、批准章和生效日期全部相同，他们才放下最后一块桥板。"
+        "跨河新桥按已批准的一号图开工。设计师沈岚发现水位计算有误，抬高桥墩，发出二号图；一周后，她又画出较轻桥面的三号草案，议事会尚未批准，助手却在会前拿去复印。三张纸都印得清楚正式，只有角落里的小编号不同。新桥必须在粮食大集前通行，否则城里还要退回区域建设补助。",
+        "东岸工头收到二号图，西岸工头拿到未批准的三号，石场仍按一号切料。每个人都相信手里最新拿到的副本最有权威。两岸桥面伸到河心时，高度相差半米，备好的石块也不再适合任何一边。雨季将到，若恢复旧渡口，便会耗尽仅余的应急金。一边已经砌死桥墩顶石，另一边的锚孔却朝着半空，连临时木梁也无法平接。",
+        "沈岚画过一次用来遮掩错位的陡坡，随即撕掉图纸，命人拆除已经完成的工程，失去一个月和按期奖金。她没有只喊“以后都用最新版”：三号较新却未获授权，一号虽旧仍须保留，以解释采购与决定。真正缺少的是唯一身份、状态、批准、生效时间和受控分发，而不只是新旧。工人们在雨布下凿掉完好的石砌，财务员同时一行行划去节庆完工奖金。",
+        "工程建立中央登记册，为每张图设置唯一编号、修订状态、批准签名、生效日期和变更理由。现场工作副本只能由登记处发出，领取人确认收讫；废止副本盖红章后归档。离线队伍收到密封更新包和指定联系人，受控回退程序则让旧图可供审计或恢复，却不会冒充当前命令。第一次演练时，一只密封更新包没能送到夜班石场，在真正切料以前又暴露出一道分发缺口。",
+        "后来一根梁再次调整，变更日志写清改了哪里、为什么、谁批准、各队何时切换。石场、仓库和两岸都确认同一份通知，切料才重启。合龙时，两名工头把图纸摊在最后一道缺口两侧；编号、批准章和生效日期完全相同，他们才放下最后一块桥板。错位废下的石料后来改成桥台阶梯，重新切削的费用仍完整留在总账里。两人又在最后更新处共同签名。"
       ],
       "conceptName": "Record version control",
       "conceptNameZh": "记录版本控制",
       "explanationParagraphs": [
-        "Record version control identifies versions, status, and authority; manages distribution, approval, effective dates, and withdrawal; and preserves a traceable history of change. The newest copy may still be a draft, while an old version may be retained for audit or recovery. Reliable control also uses unique identifiers, permissions, receipt confirmation, change logs, and an authoritative source."
+        "Record version control identifies versions, states, and authority while governing approval, distribution, effective dates, supersession, and traceable change history. The newest copy may still be a draft, and an old version may remain necessary for audit or controlled rollback. Reliable control uses unique identifiers, permissions, receipts, change logs, authoritative sources, and explicit rules for offline copies."
       ],
       "explanationParagraphsZh": [
-        "记录版本控制识别版本、状态与权威，管理分发、批准、生效和废止，并保留可追踪的变更历史。最新副本可能仍是草稿，旧版也可能需供审计或回退。可靠控制还包括唯一标识、权限、收讫确认、变更日志和权威来源。"
+        "记录版本控制识别版本、状态与权威，并管理批准、分发、生效、废止及可追踪的变更历史。最新副本可能仍是草稿，旧版也可能需供审计或受控回退。可靠控制还要有唯一标识、权限、收讫确认、变更日志、权威来源和离线副本规则。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -346,29 +362,31 @@
       "fieldTitleZh": "秘书与办公室工作",
       "title": "The Office with No Time to Work",
       "titleZh": "没有时间工作的办公室",
-      "summary": "To prevent any department being surprised, a coordinator invites everyone to every meeting until no one can complete the decisions.",
-      "summaryZh": "为了不让任何部门意外，协调员把所有人请进每场会议，直到没人有时间完成会议里的决定。",
+      "summary": "An office invites every department to every decision until a perfectly coordinated drain is completed after the rain.",
+      "summaryZh": "办公室让每个部门参加每项决定，直到一条协调得极其周全的排水沟建成在暴雨之后。",
       "storyParagraphs": [
-        "The city works office managed roads, drains, trees, and markets. Afraid that one decision might affect someone else, new coordinator Luyi required all twelve departments to attend every change. Replacing a road sign needed a meeting; moving one tree waited for every reply.",
-        "At first, omissions fell. Then meetings consumed mornings and confirmation messages consumed afternoons. Most people had an interest in only one or two items but sat through the whole discussion. Decisions with genuine interdependence disappeared in the noise. One drain improvement waited three weeks until the rainy season arrived.",
-        "Luyi mapped a month of decisions and identified work that truly shared place, time, or resources. Drainage and roads needed joint decisions. The tree office joined only within excavation areas. Markets received notice through one representative. Small changes inside agreed standards proceeded directly; only exceptions escalated.",
-        "Communication did not disappear. Cross-department projects used one shared map and fixed review days, and each task named its decision owner. When tree roots unexpectedly met an old pipe, the group revised the conditions requiring escalation.",
-        "The next Tuesday morning, only four of the twelve meeting chairs were occupied. For the first time, people were working at all the other desks at once."
+        "The city works office managed roads, drains, trees, and markets. New coordinator Lu Yi feared overlooking anyone affected, so every change required twelve departments at the table. At first the rule caught useful conflicts: a road crew nearly cut a market cable, and the tree team saved roots beneath a planned trench. Lu called the crowded meetings proof that more coordination was always safer.",
+        "Soon a sign repair waited for parks, sanitation, and festival staff to reply. Meetings filled mornings; summaries and confirmation mail filled afternoons. Most participants mattered to only one item but had to sit through all ten. After each interruption, engineers needed time to recover their calculations. Meanwhile a drain redesign waited three weeks for unanimous attendance. The first storm reached the street before the approved plan did.",
+        "Lu responded with a daily coordination meeting. Omitted risks fell slightly, but actual work nearly stopped. One engineer quietly built from an old drawing to meet a deadline, causing the rework the meetings were meant to prevent. Lu finally counted not only meeting hours, but waiting, interruption recovery, duplicated review, and repair caused by missing a genuinely affected group. Both too much and too little contact had costs. The office had mistaken attendance for alignment and messages sent for decisions understood.",
+        "She mapped which tasks shared location, timing, resources, or irreversible consequences. Roads and drains decided together; trees joined only inside excavation zones; markets named one representative. Small changes inside published limits proceeded directly. Uncertain, high-impact, or boundary-crossing work escalated to a named decision owner. Shared maps and fixed check days replaced constant requests for confirmation. Each item now named who decided, who supplied evidence, who must be consulted, and who only needed the final notice.",
+        "The council president objected when his office no longer received every invitation. Lu accepted losing her private office rather than return ceremonial attendance to the workflow. Coordination did not disappear: a tree root later exposed an unmapped pipe, and the team expanded the escalation boundary. The repair was recorded so the rule could learn rather than pretend every dependency was knowable in advance. The recorded exception named its scope and owner.",
+        "On the next Tuesday morning, twelve chairs remained in the room, but only four were occupied. A road engineer, drain engineer, tree representative, and decision owner bent over one map. At the other desks, eight people worked through an uninterrupted hour while rainwater moved through the finished channel outside. The meeting ended when the decision was made, not when every possible observer had spoken."
       ],
       "storyParagraphsZh": [
-        "城建办公室负责道路、排水、树木和市集。新协调员陆宜害怕一个决定影响别人，便要求每次改动都让十二个部门参加。修一块路牌要开会，移动一棵树也要等待所有人回复。",
-        "起初，遗漏确实减少。后来会议占满上午，确认邮件占满下午。多数人只与其中一两项有关，却必须听完整场；真正相互依赖的决定反而被淹没。一个排水改造等了三周，雨季已经到来。",
-        "陆宜把近月决定画在墙上，找出哪些工作真正共享地点、时间或资源。排水与道路需要共同决定，树木只在挖掘范围内参与，市集则由一名代表接收通知。小改动按既定标准直接执行，超出边界才升级。",
-        "会议减少后，并非所有沟通都消失。跨部门项目使用同一张图和固定检查日，决策人也清楚写在任务旁。一次树根意外碰到旧管线，团队便调整了需要升级的条件。",
-        "下一个星期二上午，十二把会议椅只坐了四个人。其余桌上第一次同时有人在工作。"
+        "城建办公室负责道路、排水、树木与市集。新协调员陆宜害怕漏掉任何受影响者，便规定每项改动都让十二个部门坐到桌边。起初，规则确实发现不少冲突：道路队差点切断市集电缆，树木组也救下一条壕沟下的老根。陆宜把拥挤会议当成证明，认定协调越多越安全。",
+        "很快，修一块路牌也要等待公园、卫生和节庆部门回复。会议占满上午，摘要和确认邮件占满下午。多数人只与其中一项有关，却要听完整场；工程师每次被打断后，还要重新找回计算。排水改造为等十二人齐到搁了三周，第一场暴雨已经漫进街道，批准图才送出办公室。",
+        "陆宜的补救是每日开协调会。遗漏略少，实际工作却几乎停住。一名工程师为赶期限，暗中照旧图施工，反而制造了会议本想避免的返工。陆宜终于不只数开会时长，也数等待、打断后恢复、重复复核，以及漏掉真正相关者造成的修理。联系过多与过少都在收取代价。办公室曾把到场误当成一致，把发出消息误当成对方真正理解。",
+        "她把近期任务画在墙上，标出哪些工作共享地点、时序、资源或不可逆后果。道路与排水共同决定；树木只在挖掘范围内加入；市集派一名代表。符合公开标准的小改动可直接执行，影响大、边界不清或跨区的事项才升级给指定决策人。共享地图和固定检查日取代不断索要确认。每项任务还写明谁决定、谁供证、谁必须商议，以及谁只需收到结果通知。",
+        "议长发现自己的办公室不再收到每份邀请，要求恢复“礼节性知情”。陆宜宁可失去独立办公室，也不把仪式重新塞回流程。协调并未消失：一次树根暴露未标水管，团队便扩大升级边界，把处理结果写进规则，让它能学习，而不是假装所有依赖都可提前知道。新增例外也注明适用范围与负责人。",
+        "下个星期二上午，会议室仍有十二把椅子，却只坐四人：道路工程师、排水工程师、树木代表与决策负责人共同俯在一张图上。其余八张办公桌第一次拥有完整的一小时，窗外雨水正顺着完工沟渠流走。决定形成后会议便结束，不再等每个可能的旁听者依次发言。"
       ],
       "conceptName": "Coordination cost",
       "conceptNameZh": "协调成本",
       "explanationParagraphs": [
-        "Coordination cost is the time, attention, communication, negotiation, monitoring, and delay required to align interdependent activity. Coordination prevents incompatibility but grows with connections, ambiguity, and uncertainty. Clear boundaries, decision rights, standards, shared information, selective participation, and suitable rhythms balance compatibility against burden."
+        "Coordination cost is the time, attention, communication, negotiation, monitoring, interruption, and waiting required to align interdependent work. Coordination prevents conflicts and creates value, but its burden grows with connectivity, ambiguity, and uncertainty. Clear boundaries, decision rights, shared information, selective participation, and an appropriate rhythm balance compatibility against overhead; the goal is not zero coordination."
       ],
       "explanationParagraphsZh": [
-        "协调成本是让相互依赖活动一致所需的时间、注意、沟通、协商、监督和等待。协调能防止冲突，却会随连接、含混和不确定增加。清楚边界、决策权、标准、共享信息、选择性参与和合适节奏，可以在兼容性与负担之间取得平衡。"
+        "协调成本是使相互依赖活动保持一致所需的时间、注意、沟通、协商、监督、中断与等待。协调能避免冲突并创造价值，负担却会随连接、含混和不确定增加。清楚边界、决策权、共享信息、选择性参与和合适节奏，可在兼容性与负担间平衡；目标不是零协调。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -388,29 +406,29 @@
       "fieldTitleZh": "批发与零售销售",
       "title": "The Fruit Shop with the Fullest Shelves",
       "titleZh": "货架最满的水果店",
-      "summary": "A fruit seller fills every shelf to look prosperous while spoiled produce leaves through the back door each day.",
-      "summaryZh": "水果店老板把货架塞得最满，顾客称赞它富足，后门却每天运出腐烂的果子。",
+      "summary": "A fruit seller first fills every shelf, then empties them too far, before learning that speed matters only beside service and spoilage.",
+      "summaryZh": "果商先把每层货架塞满，又让它们空得过头，才发现速度必须同缺货与腐损一起判断。",
       "storyParagraphs": [
-        "Fruit seller Yao Feng loved full shelves. At every delivery, he bought a month's supply, believing empty space would make customers doubt the business. The shop looked abundant, but soft fruit left through the rear door each day, while storage and cooling costs rose.",
-        "After hearing that faster sales were better, he suddenly cut inventory to one day. Rain blocked the road in the second week. Apples and pears sold out before noon, and many customers left empty-handed. Waste had fallen, but lost sales and trust did not appear in the spoiled-fruit basket.",
-        "Yao Feng began examining how much each variety sold over time, how long it remained, its shelf life, delivery route, and festival demand. Berries arrived often in small amounts. Durable apples held a larger reserve. Before rainy weeks, he ordered earlier.",
-        "The shelves were no longer always full or often empty. Slow products were reduced, while high-margin varieties that customers expected remained even when they moved more slowly. The number made sense only beside the product and service goal.",
-        "At month's end, Yao Feng counted the final apple crate and wrote the next delivery date on the order board instead of 'more is better'."
+        "Fruit seller Yao Feng believed empty space frightened customers. He ordered a month's supply at once, and the shop glowed with pyramids of apples, pears, and berries. The display drew crowds during opening week. Behind the shop, however, workers carried out soft fruit each morning, while cold storage, rent, and tied-up cash consumed the apparent profit. The first week's abundance brought praise, and Yao used the cash to order an even larger second delivery.",
+        "After hearing that faster turnover was better, Yao cut stock to one day. Spoilage fell immediately and his ledger looked clean. Then rain blocked the mountain road. Apples and pears sold out before noon for three days, regular customers went elsewhere, and missed sales never appeared in the waste basket. A high speed created by chronic emptiness was not the success he had imagined. A mother who had promised apples for a school meal stopped asking after the second empty afternoon.",
+        "He began measuring each category over a period: cost of goods sold relative to average inventory, then the days inventory remained. Berries moved quickly but expired quickly; apples lasted longer and faced a three-day replenishment route. Festival demand and rain changed both. He wrote stockouts, discarded fruit, margin, and service complaints beside the ratio instead of letting one number judge the shop. He used beginning and ending stock to estimate the average, then checked whether a sale had been recorded at cost rather than retail price. The same turnover value could therefore describe a healthy berry trade or an apple shelf that failed customers.",
+        "Yao chose smaller, more frequent berry deliveries, a higher apple buffer before storms, and less space for a slow decorative melon. The change meant giving up the abundant display that had built his reputation. He removed one front pyramid and used a simple card to show the next delivery date. Some passers-by called the shop poor; cash stopped rotting in the back room. The revised ordering schedule required him to renegotiate the wholesaler's volume discount and accept a slightly higher price per crate. He reviewed the schedule weekly rather than treating the first calculation as a permanent optimum.",
+        "At month's end, the shelves were neither always full nor often bare. A profitable specialty pear stayed despite slower movement, while cheap fruit with repeated waste was reduced. Yao lifted the last apple from one crate, checked tomorrow's rain mark, and wrote the next arrival on the wooden stock tag rather than ordering another month. Beside the tag stood the old waste basket, scrubbed clean but kept where staff could still count what did not sell."
       ],
       "storyParagraphsZh": [
-        "果商姚丰喜欢满货架。每逢进货，他总买够一个月，觉得空位会让顾客怀疑生意不好。店面看起来丰盛，后门却每天抬出软烂水果，仓租和冷藏费也越来越高。",
-        "他听说货卖得越快越好，便突然把库存降到一天。第二周道路被雨阻断，苹果和梨在中午前售罄，许多顾客空手离开。腐烂少了，失去的销售和信任却没有写在废果筐里。",
-        "姚丰开始按品种查看一段时间内卖出多少、平均留在店里多久，又考虑保鲜期、补货路程和节庆需求。浆果少量多进，耐放的苹果保留更高安全量，雨季前则提前备货。",
-        "货架不再永远满，也不再常常空。某些慢销品被缩减，利润高且顾客常找的品种则即使周转稍慢也继续保留。数字只有放进商品和服务目标里才有意义。",
-        "月底，姚丰清点最后一筐苹果，在进货木牌上写下下一次到货日，而不是再写“越多越好”。"
+        "果商姚丰相信空货架会吓跑顾客，因此每次一进就是一个月的量，苹果、梨与浆果堆成发亮的金字塔。开店头一周，丰盛陈列确实引来人群。可在后门，伙计每天抬走软烂水果，冷藏费、仓租和压住的现金也一点点吃掉看似漂亮的利润。头一周的丰盛确实换来称赞，姚丰又用当期现金订下更大一批货，使短期好处迅速变成更重承诺。",
+        "听说“卖得越快越好”，姚丰又把库存猛降到一天。腐烂立刻减少，账面干净许多。随后山路被雨阻断，苹果和梨连续三天中午前售罄，熟客转去别店；失去的销售从不会出现在废果筐里。由长期空架制造出的高速度，并不是他想象的成功。一位答应给学校午餐买苹果的母亲，第二个空架下午以后便不再来问。",
+        "他开始分品种看一段时期：售出商品成本相对平均库存有多大，再换算水果在店里停留多少天。浆果卖得快也坏得快；苹果能久放，补货路却要三天。节庆和降雨又会同时改变需求与到货。他把缺货、弃果、利润和顾客抱怨都写在比率旁，不让一个数字独自裁决。他用期初与期末库存估算平均量，还核对售出商品是否按成本而非零售价记录，免得比率被账法扭曲。同一个周转数字，可能是健康的浆果生意，也可能是让顾客失望的苹果空架。",
+        "姚丰改成浆果少量多进，暴雨前提高苹果缓冲量，又缩掉长期慢销的装饰甜瓜。这样做意味着放弃让他成名的丰盛外观。他撤掉门口一座果塔，改用小牌写明下一次到货日。有人路过时笑店铺寒酸，后仓的现金却不再随水果一起腐烂。新的进货节奏迫使他放弃批发商的整批折扣，每箱多付一些，也要承认满架并不等于稳健。他每周复核进货节奏，不把第一次计算当成永久最优答案。",
+        "月底，货架不再永远满，也不再经常空。利润高的特种梨即使慢一些仍被保留，便宜却反复报损的水果则继续缩减。姚丰从木箱取出最后一只苹果，看一眼明日雨记，在库存木牌上写下到货时辰，没有再订整整一个月。木牌旁仍放着洗净的旧废果筐，伙计每天也在那里记录没有卖掉的东西。"
       ],
       "conceptName": "Inventory turnover",
       "conceptNameZh": "库存周转",
       "explanationParagraphs": [
-        "Inventory turnover measures how quickly average inventory is sold or used and must be interpreted with shelf life, season, lead time, margin, and service goals. Low turnover may indicate excess, obsolescence, and holding cost; extremely high turnover may signal stockouts, underinvestment, and lost sales. The aim is not simply the highest value."
+        "Inventory turnover measures how often average inventory is sold or used, commonly as cost of goods sold divided by average inventory; days inventory is its time-based counterpart. Low turnover may indicate excess, obsolescence, or holding cost, while very high turnover may reflect stockouts and underinvestment. Interpretation requires shelf life, replenishment time, margin, seasonality, and service goals."
       ],
       "explanationParagraphsZh": [
-        "库存周转衡量平均库存被售出或使用的速度，需结合保质期、季节、补货时间、利润和服务目标解释。周转过低可能表示积压、过时和持有成本；过高也可能意味着缺货、投入不足和流失销售。目标不是单纯追求最大数值。"
+        "库存周转常用销售成本除以平均库存，衡量库存被售出或使用的速度，库存天数则从时间角度表达。低周转可能意味着积压、过时与持有成本，过高也可能来自缺货和投入不足。解释时还须结合保质期、补货时间、利润、季节与服务目标。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -430,29 +448,31 @@
       "fieldTitleZh": "批发与零售销售",
       "title": "The Rain That Grew Upstream",
       "titleZh": "逆流变大的那场雨",
-      "summary": "A town sells only a few dozen extra umbrellas while the mountain frame workshop prepares for a flood of orders.",
-      "summaryZh": "小镇只多卖了几十把雨伞，山上的伞骨工坊却以为洪水般的订单已经来了。",
+      "summary": "Thirty extra umbrellas sold in one town become four hundred frames ordered in the mountains.",
+      "summaryZh": "小镇多卖三十把伞的消息逆流而上，最后变成山里四百套伞骨的订单。",
       "storyParagraphs": [
-        "Spring rain arrived two days early, and the town umbrella shop sold thirty more umbrellas than usual. Fearing continued rain and a shortage at the wholesaler, the owner raised her replenishment order from one hundred to one hundred and fifty. The order moved more than customer sales had.",
-        "The wholesaler could not see daily purchases, only the shop's sudden increase. Expecting other towns to compete for stock and needing to fill a cart for each shipment, he ordered two hundred and fifty umbrellas from the warehouse. The warehouse added its own reserve and requested four hundred frame sets from the mountain workshop.",
-        "The workshop hired night labour, bought bamboo, and stopped other products. The rain ended quickly; the shop's total increase remained the original thirty umbrellas. Stock accumulated at every stage, and the following month everyone cancelled orders together. A small shower downstream became first a production surge and then a collapse upstream.",
-        "The next year, shops shared actual sales and stock with the wholesaler. Orders became smaller and more frequent, and transport no longer waited for a full cart. Promotion and shortage-allocation rules were stated in advance, reducing the need to exaggerate orders to secure supply.",
-        "When rain returned, the mountain workshop still increased output. Its owner checked the sales sheet, added one shift, and did not ring the village bell for night work."
+        "Spring rain arrived two days early, and the town shop sold thirty more umbrellas than usual. Shopkeeper Fen feared a long wet season and suspected the wholesaler might run out. Instead of replacing the extra thirty, she raised her weekly order from one hundred to one hundred and fifty. The order represented sales, worry, and a private safety margin, but upstream it looked like customer demand. Fen also ran a three-day promotion, so neither she nor the wholesaler could tell how much of the rise would persist at normal prices.",
+        "The wholesaler could not see Fen's daily sales. He saw a sudden fifty-unit increase, guessed that neighbouring towns would soon compete, and rounded his purchase up because freight was cheapest by a full cart. He ordered two hundred and fifty from the regional warehouse. Hearing that suppliers might ration stock, he also exaggerated his request so any proportional cut would still leave enough.",
+        "The warehouse combined that order with similar guesses, updated its forecast, and asked the mountain workshop for four hundred frames. The workshop hired night labour, bought green bamboo at a premium, and stopped making baskets. Each decision seemed prudent from one desk. Together, forecast revisions, batch sizes, lead time, and fear of shortage turned a small retail change into a production surge. Bamboo prices rose for every village workshop, including those that had never received an umbrella order.",
+        "The rain ended after four days. Fen's true increase remained thirty umbrellas. Unsold stock filled her storeroom; the wholesaler cancelled the next cart; the warehouse froze purchases. The mountain workshop now faced both surplus frames and a sudden empty order book. It dismissed the night crew and sold wet bamboo cheaply. The sharp fall was created by the same chain that had created the rise. The temporary workers had turned down other harvest work and now carried home only four nights' wages.",
+        "Before the next season, Fen shared actual daily sales and on-hand stock. Orders became smaller and more frequent; freight schedules stopped requiring a full cart; promotions and rationing rules were announced in advance so nobody benefited from inflated requests. When another early shower came, the mountain workshop still increased production, but only after comparing sell-through, inventory, and genuine replenishment needs. The wholesaler accepted a steadier transport contract, giving up some full-cart savings in exchange for less distorted ordering.",
+        "Workshop owner Shi stood beside the night-work bell with the new sales sheet. The town line rose by thirty. The shop order, wholesale order, and frame plan now rose by nearby amounts instead of climbing like a staircase. Shi added one shift, then left the bell rope hanging still."
       ],
       "storyParagraphsZh": [
-        "春雨比往年早了两天，镇上伞店多卖出三十把伞。店主担心继续下雨，也怕批发商缺货，便把补货量从一百提高到一百五十。订单看起来比顾客实际增加得更多。",
-        "批发商看不见每日销售，只看见伞店突然加单。他猜其他镇也将抢货，又因每次运输必须装满一车，便向仓库订了两百五十把。仓库再加上安全余量，向山上工坊要四百套伞骨。",
-        "工坊连夜招人、买竹、停掉其他产品。雨却很快结束，伞店卖出的增量只有最初那三十把。各层库存随后一起积压，下一月又同时取消订单。下游一场小雨，传到山上变成先猛增、再骤停的生产。",
-        "第二年，伞店把实际销量与库存直接共享给批发商，订货改为小批多次，运输也不再必须凑整车。促销和缺货时的分配规则提前说清，没人需要靠夸大订单争抢份额。",
-        "下一场雨来时，山上仍增加了产量。工坊主看着销量表，只添了一班工，没有再敲响全村的夜工钟。"
+        "春雨比往年早来两天，小镇伞店多卖出三十把伞。店主芬娘怕雨季延长，又担心批发商断货，没有只补三十把，而把每周订单从一百提高到一百五十。这个数字混合了实际销售、担忧和她自己的安全余量，传到上游却像全是顾客需求。芬娘那三天还在打折，因此连她自己也说不清销量增加有多少会在恢复原价后留下。",
+        "批发商看不见芬娘每天卖多少，只看见订单突然增加五十，便猜邻镇也会争抢。货车装满最省运费，他又把采购凑成二百五十把。听说供应商可能限量，他还故意把需求报大，好让按比例削减以后仍能拿够。每一步单独看来都像谨慎。",
+        "仓库把这张单同其他猜测相加，更新预测，向山里工坊要四百套伞骨。工坊连夜招人，高价买青竹，还停掉原来编篮的生产。预测修订、整批订货、漫长运输和缺货恐惧叠在一起，把零售端很小的变化放大成山里的生产浪潮。青竹价格随之上涨，连从未接到伞单的邻村作坊也被迫多付材料钱。",
+        "四天后雨停了，芬娘真正多卖的仍只有三十把。她的后仓塞满余货，批发商取消下一车，仓库也冻结采购。山上工坊同时面对多余伞骨和骤然空掉的订单，只得辞退夜工，把潮竹低价卖出。急跌并非新的意外，正是先前那条放大链的另一面。临时工为夜班推掉了别处收割活，如今只拿着四夜工钱回家。",
+        "下一季以前，芬娘开始共享每日实际销量与手头库存。订单改成小批多次，货运不再强求整车；促销与限量规则提前公布，夸大需求也换不来更多份额。又一场早雨到来，山上仍增加产量，却先比较真实售出、现有库存和补货需要。批发商也接受较稳定的小车运输约，放弃部分整车优惠，换取不必为了凑车而扭曲订单。",
+        "工坊主石成站在夜工钟旁看新表。小镇销量线升了三十，伞店订单、批发采购与伞骨计划也只在附近上升，不再一级级爬成陡梯。石成只添一班人，钟绳始终垂着，没有敲响全村。"
       ],
       "conceptName": "Bullwhip effect",
       "conceptNameZh": "牛鞭效应",
       "explanationParagraphs": [
-        "The bullwhip effect occurs when small changes in final demand become amplified upstream through local forecasting, order batching, lead times, promotions, and strategic ordering under shortage. Sharing point-of-sale demand, shortening lead times, stabilising prices, ordering in smaller batches, and coordinating allocation can reduce amplification, though not remove all variability."
+        "The bullwhip effect occurs when small changes in end-customer demand become amplified in upstream orders. Forecast updating, batch ordering, long lead times, promotions, and rationing games can compound local, individually reasonable decisions. Sharing actual sales and inventory, shortening lead times, stabilising prices, using smaller replenishment batches, and coordinating allocation rules can reduce—but not eliminate—variation."
       ],
       "explanationParagraphsZh": [
-        "牛鞭效应是终端需求的小幅变化沿供应链向上游传递时，被预测更新、批量订货、提前期、促销、限量博弈等局部决定逐级放大。共享真实销售、缩短提前期、稳定价格、小批补货和协调规则可以缓解，但不能消除所有波动。"
+        "牛鞭效应是终端需求的小幅变化沿供应链向上游传递时，被预测更新、批量订货、提前期、促销与限量博弈等局部决定逐级放大。共享真实销量和库存、缩短提前期、稳定价格、小批补货及协调分配规则可以缓解，却不能消除所有波动。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -472,29 +492,33 @@
       "fieldTitleZh": "批发与零售销售",
       "title": "Three Fares on the Same Tide",
       "titleZh": "同一班潮水的三种船票",
-      "summary": "Three passengers cross the same water in the same boat after paying different fares.",
-      "summaryZh": "三名乘客坐上同一条船、经过同一片水，却为船票付了不同的钱。",
+      "summary": "A one-sailing ferry fills its seats with three prices, then discovers who cannot reach the cheap choices.",
+      "summaryZh": "每日一班的渡船用三种价格坐满舱位，随后才看见谁根本够不到便宜选择。",
       "storyParagraphs": [
-        "The tide ferry sailed once each day when the water allowed. Every seat and crossing was the same, but the clerk sold three fares: the lowest for purchase seven days ahead, the highest for a ticket changeable on the day, and another low fare for island residents.",
-        "A visiting merchant discovered that the resident beside him had paid half as much and became angry. The owner explained that advance tickets revealed whether a sailing was worthwhile; expensive flexible tickets served people who needed to change plans; resident fares kept frequent travel accessible to people with lower incomes. Passengers valued time and flexibility differently.",
-        "The system filled boats in quiet months but was not always fair. The clerk found that older passengers unable to use advance booking often paid the costly same-day fare. Traders also resold cheap tickets. The ferry added in-person advance purchase and attached names to discounted tickets to limit resale.",
-        "The three prices were not fully explained by the additional cost of carrying each person. They relied on purchase timing, status, and contract terms. This could widen access while also charging more to urgent travellers, so accessibility and power required continued review.",
-        "Before departure, the clerk tore three colours of ticket stub and placed them in the same wooden box."
+        "The tide ferry could sail only once each day. Every seat crossed the same water, yet ticket clerk Rui sold three colours: green for purchases seven days ahead, red for refundable travel on the day, and blue for island residents. The system filled quiet-season boats and gave the owner enough revenue to maintain the engine.",
+        "A travelling merchant saw an islander beside him pay half his fare and accused Rui of cheating. The owner explained that advance buyers surrendered flexibility and helped reveal whether sailing was worthwhile; refundable buyers paid to preserve options; frequent residents received access the island depended on. The added cost of carrying each passenger was nearly the same. The prices followed different willingness to pay and conditions.",
+        "The arrangement soon exposed a crack. Older residents who could not use the advance office arrived on sailing day and paid the highest fare. Agents bought green tickets and resold them. During a storm warning, urgent travellers had no alternative and red prices rose sharply. A menu that looked voluntary on paper was not equally reachable in practice.",
+        "The owner crossed out part of the peak revenue before rewriting the profitable rule. He capped emergency-day fares, opened a staffed advance window, and made discounted tickets transferable only under stated household rules rather than through a hidden resale market. The changes reduced revenue enough to delay repainting the ferry. They also made the cheap option usable by people who had previously seen it only on a poster. Rui spent evenings teaching residents to use the window and posted the cap where storm travellers could see it before joining the queue.",
+        "Not every price difference was treated alike. Extra cargo handling and private cabins reflected different costs; the three ordinary-seat fares did not. The owner checked whether groups could be separated, whether resale undermined the scheme, whether market power left travellers trapped, and whether local law permitted the categories. Some variation expanded access; some merely extracted more from urgency. The review included disabled travellers and workers paid only after the day's crossing, whose constraints did not fit the original categories.",
+        "On the first day of the new rules, a merchant still paid more than the island teacher beside him, but both could point to the conditions printed in large type. Rui recorded complaints and which options buyers actually used, because a price menu could change behaviour as well as reveal it.",
+        "Before departure, Rui tore green, red, and blue stubs from the passengers' hands. She dropped all three colours into the same wooden box. When the ferry rose with the tide, the scraps shifted together across its bottom."
       ],
       "storyParagraphsZh": [
-        "潮汐渡船每天只在水位合适时开一班。船上座位相同，渡程也相同，售票员却卖三种票：提前七日购买最便宜，当天可退改的最贵，岛上常住者另有低价。",
-        "外地商人发现邻座岛民只付自己一半，十分生气。船主解释，提前票让他更早知道是否值得开船；高价票卖给必须保留改期选择的人；居民票则让收入较低、必须经常往返的人能够使用渡船。每位乘客对时间和灵活性的需要不同。",
-        "这种做法让淡季也能坐满，却不总是公平。售票员后来发现，有些不会使用预售柜台的老人只能买高价当天票；商人也会替别人转卖便宜票。船主增加线下预订，并让低价票实名，避免转售破坏安排。",
-        "三种价格并非由运送某位乘客的额外成本完全造成，而建立在购买时机、身份和条款差异上。它既能扩大使用，也能从急需者身上收取更多，因而需要持续检查可及性和权力。",
-        "开船前，售票员撕下三种颜色的票根，把它们放进同一个木盒。"
+        "潮汐渡船每天只能开一班，每个座位穿过的水面完全相同，售票员瑞娘却卖三种颜色的票：提前七日购买是绿票，当天可退改是红票，岛上常住者另用蓝票。这个办法让淡季船舱也能坐满，收入足够维护发动机。",
+        "外地商人看见邻座岛民只付自己一半，指责瑞娘欺骗。船主解释，提前购票者放弃灵活，也帮助判断是否值得开船；可退票的乘客花钱保留选择；居民低价则维持岛上日常往返。多载一名普通乘客的额外成本几乎相同，价格差主要来自支付意愿与购买条件。",
+        "裂缝很快出现。不会使用预售柜台的老人只能当天来，反而付最高价；票贩买走绿票再转售；风暴预警时，急着过海的人没有别的选择，红票价格骤升。纸面上看似人人可选的菜单，现实中并非所有人都能同样够到。",
+        "船主先从账上划掉一部分高峰收入，随后重写那套盈利规则。他给紧急天气票设上限，增开有人值守的预售窗，并让折扣票只按公开家庭规则转让，不再留给隐蔽倒卖。收入下降，渡船重新刷漆被推迟；从前只能在海报上看见便宜票的人，终于能真正买到。瑞娘连续几晚教居民使用预售窗，还把上限贴在排队以前就能看见的位置。",
+        "不同价格差异也不能混为一谈。额外搬货与独立舱位来自不同成本，三种普通座票却不是。船主逐项检查能否区分乘客、转售是否破坏安排、市场力量是否让旅客无处可去，以及当地法律是否允许这些类别。有些差异扩大使用，有些只从急需中拿走更多。复核还纳入行动不便者与过海后才领日薪的工人，他们的限制原本不属于任何票类。",
+        "新规第一天，商人仍比邻座岛上教师付得多，两人却都能指向大字印出的条件。瑞娘还记录投诉和顾客真正使用了哪些选项，因为价格菜单不仅辨认需求，也会改变人的行为。",
+        "开船以前，瑞娘从乘客手里撕下绿、红、蓝三色票根，全部投入同一个木盒。渡船随潮水抬起时，三种纸片在盒底一起滑向船尾。"
       ],
       "conceptName": "Price discrimination",
       "conceptNameZh": "价格歧视",
       "explanationParagraphs": [
-        "Price discrimination charges different effective prices for comparable goods or services for reasons not fully explained by cost, using group, timing, quantity, willingness to pay, or self-selected terms. It generally requires market power and limits on resale. It may expand access or extract more surplus and create unfairness, and should be distinguished from cost-based pricing."
+        "Price discrimination charges different effective prices for comparable goods or services when cost differences do not fully explain the gap, using group, timing, quantity, willingness to pay, or self-selection terms. It usually requires market power and limits on resale. It may expand access and output or extract more surplus and create unfairness, so it must be distinguished from cost-based pricing and reviewed for legality, privacy, and accessibility."
       ],
       "explanationParagraphsZh": [
-        "价格歧视是在成本差异不足以解释时，对可比商品或服务按群体、时机、数量、支付意愿或自选条款收取不同有效价格。它通常需要市场力量和限制转售。结果可能扩大服务，也可能抽取更多剩余或造成不公，需与成本定价区分。"
+        "价格歧视是在成本差异不足以解释时，对可比商品或服务按群体、时机、数量、支付意愿或自选条款收取不同有效价格，通常需要市场力量与转售限制。它可能扩大使用与产出，也可能抽取更多剩余或造成不公，因此须同成本定价区分，并检查法律、隐私与可及性。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -514,29 +538,31 @@
       "fieldTitleZh": "工作技能",
       "title": "The Bench That Repaired More Than Machines",
       "titleZh": "修理机器的长凳",
-      "summary": "The textile mill's real repair lessons happen on an oil-darkened bench during lunch rather than inside its manuals.",
-      "summaryZh": "纺织厂真正的维修课不在手册里，而在午休时总被油污弄黑的那张长凳上。",
+      "summary": "A trainee learns repairs on a lunch bench, then saves the group by bringing in evidence its shared language cannot see.",
+      "summaryZh": "新人从午间长凳学会修理，后来却靠引入共同语言看不见的证据救下整组人。",
       "storyParagraphs": [
-        "Every new repairer at the textile mill received a thick manual. Adian could recite gear numbers, but when a machine made what workers called a 'wet wood sound', he did not know where to look. At lunch, experienced repairers sat on a yard bench and told stories of last year's vibrations or the oil smell that preceded an overheated bearing.",
-        "At first, Adian only fetched tools and barely understood their shorthand. Months later, he joined simple inspections and learned to tell a failure as a story others could question. The older workers did not merely give answers; they asked him to connect sound, temperature, and changes in the cloth.",
-        "One day, a new machine repeatedly snapped thread. The bench group blamed an over-tight tension wheel from past experience, but repeated adjustments failed. Adian suggested consulting another mill and invited the manufacturer's technician. The new fibre was expanding under heat; familiar language had nearly carried everyone toward the same mistake.",
-        "The bench continued preserving experience but added failure records, newcomer questions, and outside contacts. Adian moved from listener to repairer and began giving the next newcomer low-risk tasks rather than leaving them at the edge.",
-        "Years later, the bench received new boards. The workers kept the oldest oil-stained plank and fixed it to the repair-room wall."
+        "The textile mill gave every new mechanic a thick manual. Adian could recite gear numbers but froze when a loom made what older workers called a 'wet-wood sound.' At lunch, veteran mechanics gathered on an oil-darkened bench behind the boiler room. They discussed how a particular loom shook last winter, what hot bearing grease smelled like, and which cloth marks appeared before a shaft failed.",
+        "At first Adian carried tools and understood little of their shorthand. Later he performed low-risk checks while someone watched, then told one repair story each Friday so others could question the sequence. The veterans did not merely hand him answers; they made him connect sound, heat, vibration, and fabric. His place changed from listener to contributor through repeated participation, not a certificate alone. A place at the bench also carried identity: being asked for an opinion meant others would trust your hands near a stopped loom.",
+        "When a new model repeatedly snapped thread, the bench agreed that its tension wheel was too tight. Three adjustments failed, damaging a day's cloth. Adian had found a manufacturer note about the new fibre lengthening under heat, but interrupting the veterans risked losing the acceptance he had earned. He placed the note beside the oil can and proposed one measured test. Temperature, not wheel pressure, tracked the breaks.",
+        "The group invited the manufacturer's technician and rewrote its repair card. Doing so cost a production shift and embarrassed the most respected mechanic, who had already promised a quick fix. He nevertheless opened the meeting by showing his failed adjustments. The bench's shared language had made fast cooperation possible; the same language had also narrowed what counted as a plausible cause. Adian paid for the trial cloth from his training allowance, making the challenge more than a safe suggestion.",
+        "Afterward, lunch talk continued, but fault records, newcomer questions, and outside contacts joined it. Entry remained gradual: novices began with real, limited tasks and gained access as skill and trust grew. A rotating member checked whether nicknames and invitations excluded night-shift workers. Manuals did not disappear; they preserved steps the bench might forget, while practice gave the words usable judgement. When one repair contradicted the manual, they documented the condition rather than quietly treating paper or memory as always superior.",
+        "Years later, the bench received new boards. The mechanics kept the oldest oil-black plank and mounted it on the repair-room wall. Adian set the heat-damaged thread card beneath it, then moved along the bench to make space for a trainee carrying the newest manual."
       ],
       "storyParagraphsZh": [
-        "纺织厂给新维修工每人一本厚手册。阿典背得出齿轮型号，却遇到机器发出“湿木声”时不知道该查哪里。午休时，老维修工总坐在后院长凳上，说起某台机器去年怎样抖、哪种油味意味着轴承过热。",
-        "阿典起初只替他们拿工具，听不懂那些简称。几个月后，他能参与简单检查，也学会把一次故障讲成别人可以接着追问的故事。老工人不只传答案，还会让他指出声响、温度和布面变化之间的关系。",
-        "一天，新机型反复断线。长凳上的人凭旧经验认定张力轮太紧，调整数次都无效。阿典提出查看外厂资料，并请制造商技师参加一次讨论。问题最后来自新材料遇热伸长，旧行话差点把所有人带向同一错误。",
-        "此后，长凳仍然保存经验，却增加故障记录、新人提问和外部联系。阿典从旁听者变成能修机器的人，也开始负责让下一位新人先做低风险工作，而不是只坐在一旁。",
-        "多年后，长凳换了木板。大家保留了最旧那块沾油的板，钉在维修间墙上。"
+        "纺织厂给每名新维修工一本厚手册。阿典背得出齿轮型号，织机发出老工人所谓“湿木声”时却不知从哪里查。午休时，老师傅总坐在锅炉房后的长凳，谈某台机器去年怎样抖、轴承油过热是什么气味、布面出现哪种痕迹以后转轴会坏。木板早被机油染黑。",
+        "阿典起初只替人拿工具，听不懂那些简称。后来，他在旁人看护下做低风险检查，每周五再讲一次维修经过，让大家追问顺序。老师傅不只给答案，还逼他把声音、温度、振动和布面连起来。他从旁听者变成参与者，靠的是不断进入共同工作，而不是一张证书。长凳上的位置也带着身份：别人开始询问你的看法，便表示他们愿意让你的手伸进停下的织机。",
+        "新机型反复断线时，长凳上的人一致认定张力轮太紧，连续调整三次仍失败，还毁掉一天布料。阿典找到制造商关于新纤维受热伸长的说明，可此时打断老师傅，可能失去刚得到的接纳。他把说明放在油壶旁，提议只做一次有测量的试验。结果随断线一起变化的是温度，而非轮压。",
+        "小组请来制造商技师，重写维修卡。这一决定让生产再停一班，也使最受尊重的师傅十分难堪，因为他早已承诺迅速修好。那位师傅仍在讨论开始时亲手摆出三次失败记录。长凳上的共同语言曾让合作变快，也曾让大家只看见同一种可能原因。阿典还用自己的培训津贴支付试验布料，让这次质疑不只是一句没有成本的建议。",
+        "此后午间谈话仍继续，却加入故障记录、新人提问与外部联系。新人仍从真实但有限的任务开始，随能力和信任增加而扩大参与。一名轮值成员专门检查行话与邀请是否把夜班挡在外面。手册也没有消失：它保存长凳可能忘记的步骤，实际参与则让纸上的词获得判断。实际维修若与手册矛盾，他们会记录具体条件，不再悄悄认定纸面或记忆必有一方永远正确。",
+        "多年后，长凳换上新木板。大家保留最旧那块油黑木板，钉到维修间墙上。阿典把受热纤维的故障卡放在下面，又向旁边挪开一点，给抱着新版手册的新学徒留出座位。"
       ],
       "conceptName": "Community of practice",
       "conceptNameZh": "实践共同体",
       "explanationParagraphs": [
-        "A community of practice is a group sharing a domain who develop knowledge and identity through sustained participation in common activity, relationships, tools, language, and problem-solving. Learning includes movement from limited toward fuller participation. Such communities transmit tacit judgement but can exclude newcomers or reproduce error, making access, questioning, records, and outside links important."
+        "A community of practice is a group connected by a shared domain that develops knowledge and identity through sustained participation in common activities, relationships, tools, language, and problem solving. Learning often moves from legitimate limited participation toward fuller contribution. Such communities transmit tacit judgement but can exclude newcomers or reproduce error, so documentation, open entry, questioning, external evidence, and boundary connections matter."
       ],
       "explanationParagraphsZh": [
-        "实践共同体是一群共享领域的人，通过持续参与共同活动、关系、工具、语言和问题解决来发展知识与身份。学习包括从有限参与走向更充分参与。共同体能传递默会判断，也可能排斥新人或复制错误，因此需要开放进入、质疑、记录和外部联系。"
+        "实践共同体是一群共享领域的人，通过持续参与共同活动、关系、工具、语言与问题解决来发展知识和身份，学习常从正当的有限参与走向更充分贡献。它能传递默会判断，也可能排斥新人或复制错误，因此还需要记录、开放进入、质疑、外部证据与跨边界联系。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -556,29 +582,29 @@
       "fieldTitleZh": "工作技能",
       "title": "The Fire Everyone Was Responsible For",
       "titleZh": "那场人人负责的火",
-      "summary": "A theatre sign says fire safety belongs to everyone; when smoke appears, each person assumes someone else is ringing the bell.",
-      "summaryZh": "剧院墙上写着“消防人人有责”，烟冒出来时，每个人都以为别人正在敲钟。",
+      "summary": "A theatre declares fire safety everyone's duty, then watches everyone run toward the manager while smoke fills the stage.",
+      "summaryZh": "剧院宣布消防人人有责，烟雾升起时，所有人却一同跑去寻找经理。",
       "storyParagraphs": [
-        "A sign in the riverside theatre said FIRE SAFETY IS EVERYONE'S RESPONSIBILITY. The manager considered that clear enough and never assigned who rang the alarm, led the audience, or shut the lamp oil. When scenery began smoking backstage, three people ran to find him and no one first rang the bell.",
-        "Two others both fetched water and collided on the narrow stairs. The doorkeeper assumed the stage manager had opened the side exits; the stage manager assumed the doorkeeper was doing it. The fire was contained with little damage, but confusion crowded the audience at the main entrance.",
-        "The theatre did not replace the sign with a longer slogan. The first person seeing smoke rang the bell. The stage manager stopped the performance and led backstage action. The doorkeeper opened exits and checked areas. The lamp keeper shut the oil line. Each duty named a backup and a handover signal.",
-        "Clear roles did not forbid help. If the water carrier became trapped, the nearest person still took over, and anyone seeing a new danger could act without waiting for the highest rank. Drills exposed a gap between exit checks and backstage reports, so the arrangement changed.",
-        "At the second smoke drill, the first bell sent four people in four directions. No one ran to the manager to ask what to do."
+        "The riverside theatre painted 'Fire Safety Is Everyone's Duty' above the stage door. Manager Zhou believed the sentence created shared responsibility, so he never assigned who rang the bell, opened exits, shut lamp oil, or led the audience. During a crowded rehearsal, canvas scenery began smoking. Three people reached Zhou from different directions, each assuming someone else had sounded the alarm. Zhou had preferred the slogan because it sounded generous and spared him the uncomfortable task of assigning authority before danger arrived.",
+        "Two stagehands fetched water and collided on the narrow stair. The porter thought the stage manager had opened the side door; the stage manager thought the porter had. Musicians began directing spectators in opposite directions. The fire was contained, but the front entrance jammed and the painted moon backdrop burned through. Everyone had cared; no one had known which action was theirs first. A child dropped a shoe in the crowd, and both ushers knelt to help while no one guarded the narrowing doorway.",
+        "The theatre cancelled two performances and refunded wages it could barely afford. Zhou took the universal slogan off the backstage door and admitted that it had hidden missing interfaces. He named a first action and decision boundary for each role: the discoverer rang the bell; the stage manager stopped performance and commanded backstage; the porter opened exits and cleared zones; the lamp keeper shut oil. Every task had a backup and a handover signal. On the first draft, three names still filled the audience-count box. Zhou erased two and assigned one official count, with reports feeding it from named zones.",
+        "Clarity did not mean waiting rigidly. Anyone could report new danger; if the water lead was trapped, the nearest backup acted without seeking the highest title. Drills exposed conflict between audience counting and backstage reports, so the roles were revised. Zhou also resolved incompatible instructions: during evacuation the porter answered the safety lead, not the ticket supervisor guarding receipts. The backup rule specified when authority transferred and when it returned, so one helper at each end could not pull the crew in opposite directions.",
+        "At the next smoke drill, the first bell sent four people in four directions. One substitute took the water line when its owner pretended injury; another reported a blocked door and exercised limited authority to open the courtyard gate. No one searched for Zhou. Beneath the slogan, a board now showed names, backups, signals, and the few choices left to judgement. Afterward, each person wrote one uncertainty beside the duty board, and Zhou used those notes for the next drill."
       ],
       "storyParagraphsZh": [
-        "河岸剧院的墙上写着“消防人人有责”。经理认为这句话足够清楚，从未规定谁敲警钟、谁带观众离场、谁关灯油。一次后台布景冒烟，三个人同时跑去找经理，却没有人先敲钟。",
-        "另有两人各自去提水，撞在狭窄楼梯上；门房以为舞台主管已经开侧门，舞台主管又以为门房在做。火最终被扑灭，损失不大，混乱却让观众在正门挤成一团。",
-        "事后，剧院没有把责任缩成一句更长的标语。第一个发现烟的人立即敲钟；舞台主管决定是否停演并指挥后台；门房打开出口、清点区域；灯工关闭油路。每项还指定替补和交接信号。",
-        "清楚分工并不禁止互相帮助。若负责提水的人被困，最近者仍应接手；发现新危险也无需等职位最高的人批准。大家通过演练找出出口清点与后台报告之间的空隙，再修改安排。",
-        "第二次演练起烟时，第一声钟响后，四个人朝四个不同方向跑去，没有一个人去找经理问该做什么。"
+        "河岸剧院在后台门上写着“消防人人有责”。经理周远以为这句话已经建立共同责任，从未规定谁敲钟、谁开出口、谁关灯油、谁带观众离开。满场排练时，帆布布景开始冒烟，三个人从不同方向撞到周远身边，都以为别人已经拉响警钟。周远喜欢这句标语，因为它听来宽厚，也让他不必在危险来临前做出分配权力的棘手决定。",
+        "两名舞台工各自提水，在狭窄楼梯上撞倒；门房以为舞台主管已开侧门，舞台主管又以为门房在做。乐手们从相反方向指挥观众。火最终被控制，正门却挤成一团，画着月亮的布景也烧穿了。每个人都在意安全，却没人知道自己第一步该做什么。一个孩子在人群中掉了鞋，两名引座员都蹲下帮忙，狭窄门口反而无人维持通行。",
+        "剧院取消两场演出，退回本就难以负担的票钱。周远把那句普遍口号从后台门上揭下，承认它一直遮住了接口缺口。他为每个角色写明首要动作和决定边界：发现者敲钟，舞台主管停演并指挥后台，门房开出口和清区，灯工关闭油路。每项都有替补与交接信号。第一版安排里，观众人数那一格竟填着三个名字。周远擦掉两个，只保留一个正式总数，再由指定区域逐级回报。",
+        "清楚分工并不等于僵硬等待。任何人都可报告新危险；提水负责人受困时，最近替补无须请示最高职位。演练发现出口清点与后台报告冲突，职责便继续修改。周远还解决互不相容的命令：疏散期间，门房听安全负责人，而不是要求保护票款的售票主管。替补规则还注明权力何时转移、何时归还，免得一左一右两个帮忙者把队伍往相反方向拉。",
+        "下一次烟雾演练，第一声钟让四个人奔向四个方向。提水人假装受伤，替补立即接管；另一人发现门堵，便在有限授权内开启院门。没人再去寻找周远。旧标语下面多了一块木板，写着名字、替补、信号，以及少数必须现场判断的选择。演练结束后，每个人都在职责板旁写下一处仍不确定的地方，周远据此安排下一次测试。"
       ],
       "conceptName": "Role clarity",
       "conceptNameZh": "角色清晰度",
       "explanationParagraphs": [
-        "Role clarity is shared understanding of a role's purpose, responsibilities, authority, priorities, interfaces, and expected results. It reduces duplication, gaps, and delay without requiring rigidity; judgement, backup, adaptation, and mutual help remain necessary. Conflicting expectations from different sources must be resolved rather than merely described."
+        "Role clarity is shared understanding of a role's purpose, responsibilities, authority, priorities, interfaces, and expected results. It reduces duplication, gaps, waiting, and conflicting assumptions. Clarity is not a rigid job box: effective roles include discretion, backups, handovers, adaptation, and mutual help. Incompatible expectations from different authorities must also be identified and resolved."
       ],
       "explanationParagraphsZh": [
-        "角色清晰度是成员对角色目的、责任、权力、优先级、接口和预期结果的共同理解，可减少重复、缺口与等待。清晰不等于僵硬；仍需判断、替补、适应和互助。若不同来源提出不相容期待，还必须解决角色冲突。"
+        "角色清晰度是成员对角色目的、责任、权力、优先级、接口与预期结果的共同理解，可减少重复、缺口、等待和冲突假设。清晰不等于僵硬岗位框，还需裁量、替补、交接、适应与互助；若不同权威提出不相容期待，也必须被识别并解决。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -598,29 +624,31 @@
       "fieldTitleZh": "工作技能",
       "title": "The Recipe That Obeyed Only Old Flour",
       "titleZh": "只服从旧面粉的配方",
-      "summary": "A baker can perform an inherited recipe with closed eyes until a new wheat harvest turns every dough into paste.",
-      "summaryZh": "面包师能闭眼完成祖传配方，新收的小麦却让每一团面都变成了稀泥。",
+      "summary": "A baker who can repeat one recipe blindfolded meets flour that refuses every familiar motion.",
+      "summaryZh": "闭眼也能复刻旧配方的面包师，遇见一批拒绝所有熟悉动作的新面粉。",
       "storyParagraphs": [
-        "Baker Gu Qi had made the same loaf for twenty years. He never missed the amount of water, number of kneads, or moment for the oven, even with his eyes closed. The workshop supplied the town through this speed, and apprentices only had to follow the recipe.",
-        "After floods reduced the old harvest, the mill delivered wheat from the northern slope. Gu Qi added the usual water. The dough clung to the table and the loaves emerged flat and wet. He blamed defective flour and repeated the same failure for three batches.",
-        "Apprentice Xiaoning weighed both flours, varied the water, and observed absorption and formation time. The new wheat could make bread, but its protein and moisture differed. She tested small portions and adjusted kneading and fermentation instead of covering the problem with random extra flour.",
-        "Gu Qi first complained that testing was slow. As town orders ran short, he kept the familiar process for remaining old wheat and reserved one small table for trials on each new batch. Within days, the new recipe stabilised and speed gradually returned.",
-        "When the next flour cart arrived, Gu Qi did not immediately recite the water quantity. He rubbed a handful between his fingers and left one small bowl for a test dough."
+        "Baker Gu Qi had made the same town loaf for twenty years. He knew the scoops of water, kneading strokes, proofing time, and oven heat without looking. That speed supplied every household before noon, and apprentices were rewarded for matching the routine. The recipe board above the table had darkened around the edges but had never needed correction.",
+        "After a flood ruined the old wheat fields, the mill delivered grain from the northern slope. Gu used the same water and motions. Dough clung to the table; the loaves emerged flat and wet. He blamed poor flour and repeated the recipe three times because past failures had usually come from apprentices departing from it. By evening, failed bread filled two baskets and the school order remained unbaked. Gu sold the failed loaves cheaply as animal feed, but the proceeds did not cover fuel or the promised school meal.",
+        "Apprentice Xiao Ning weighed old and new flour into small bowls, varied water in measured amounts, and recorded absorption, dough strength, and proofing. She predicted that the wetter new flour needed less added water and a different rest, then tested one small loaf. She did not scatter flour at random until the dough looked familiar. The trial explained which assumption in the old routine no longer held. She repeated the test with a second sack before changing the public recipe, because one sample could reflect a single damp bag.",
+        "Gu called the bowls wasteful while customers waited. Instead of buying costly old wheat to protect his reputation for speed, he cleared one table for the junior's experiments. When the school threatened to change bakers, he surrendered the morning market order, losing a week's margin, and gave one table to controlled trials. The main table still used the efficient routine for the last old sacks.",
+        "The first adjusted loaf held its shape but dried too quickly; the second tore during shaping. Xiao Ning compared them, revised one condition at a time, and asked Gu to explain why folding created strength. His long practice supplied distinctions her measurements missed. Within four days they had a stable recipe, then trained the rest of the shop until speed returned. Neither repetition alone nor unsupported improvisation had solved the new flour. Gu predicted the next result before opening the oven, then compared his prediction with the crumb rather than explaining every surprise afterward.",
+        "When the next cart arrived, Gu did not recite a water quantity. He crushed a pinch, checked the mill note, and asked an apprentice for a test bowl. The old recipe stayed above the main table. Beneath it, a smaller board now listed what to examine before deciding whether the familiar numbers applied."
       ],
       "storyParagraphsZh": [
-        "面包师顾齐做同一种面包二十年。几勺水、揉多少下、何时进炉，他闭着眼也不会错。作坊靠这种速度供应全镇，学徒只需照配方执行。",
-        "洪水过后，旧麦田歉收，磨坊送来北坡新麦。顾齐仍按原量加水，面团却黏在桌上，烤出的面包扁而湿。他责怪面粉不合格，又连续做了三批同样的失败品。",
-        "学徒小宁把两种面粉分别称量，加不同水量，观察吸水和成团时间。新麦不是不能做面包，只是蛋白和含水不同。她先做小份试验，再调整揉制与发酵，而不是随意多撒面粉遮住问题。",
-        "顾齐起初嫌试验太慢。镇上订单将断时，他同意保留熟悉流程处理旧麦，同时让一张小桌专门测试新批次。几天后，新配方稳定下来，速度也逐渐恢复。",
-        "下一车面粉到坊时，顾齐没有立刻背出水量。他先抓起一把面粉捻了捻，留出一小碗做试团。"
+        "面包师顾齐做同一种镇面包二十年。几勺水、揉多少下、发酵多久、炉温多高，他不用看也不会错。这种速度让全镇午前都有面包，学徒只需准确复刻。桌上方的配方板边缘早被烟熏黑，内容却从未需要改动。",
+        "洪水毁掉旧麦田后，磨坊送来北坡粮。顾齐照原水量与动作操作，面团却黏在桌上，烤出的面包扁而湿。他怪面粉不合格，又连续照旧配方做三次，因为过去失败通常都来自学徒偏离步骤。傍晚，两筐坏面包堆在墙边，学校订单仍没烤出。顾齐把失败面包低价卖作饲料，所得仍补不回柴火，更填不上学校午餐的承诺。",
+        "学徒小宁把新旧面粉分别称进小碗，按测量改变水量，记录吸水、成团与发酵。她预测新粉自身含水高，所需添水更少，静置方式也应不同，然后只烤一只小面包验证。她没有随手乱撒干粉，直到面团看起来熟悉，而是找出旧流程中哪项假设不再成立。她又换第二袋重复试验，才考虑改公开配方，以免一只受潮布袋被误当成整批面粉规律。",
+        "顾齐嫌这些小碗浪费，门外顾客又在等待。他没有高价买外地旧麦来保住速度名声，而是腾出一张桌，让年轻学徒的试验拖慢作坊。学校表示将换供应者时，他放弃清晨市集订单，损失一周利润，把一张桌交给受控试做；主桌仍用最后几袋旧麦维持熟练生产。",
+        "第一只调整面包能站住，却很快变干；第二只在整形时裂开。小宁逐个比较，每次只改一项，又请顾齐说明折叠为何能增加筋力。顾齐多年的手感补上测量没看见的差别。四天后，新配方稳定，众人再共同练到恢复速度。机械重复与无依据即兴都没能独自解决新面粉。开炉以前，顾齐还必须先写下结果预测，再拿面包内部验证，不能等意外发生后才为每个结果找说法。",
+        "下一车面粉抵达时，顾齐没有先背水量。他捻碎一撮，核对磨坊批注，又叫学徒留一小碗试团。旧配方仍挂在主桌上方，下面却多了一块小板，写着在决定熟悉数字是否适用以前，先要检查哪些东西。"
       ],
       "conceptName": "Adaptive expertise",
       "conceptNameZh": "适应性专长",
       "explanationParagraphs": [
-        "Adaptive expertise combines efficient, accurate performance in familiar settings with conceptual understanding, flexible adjustment, and responsible experimentation in unfamiliar ones. It requires strong routines and the ability to recognise when their assumptions fail. Varied cases, prediction, feedback, and reflection support it; unconstrained improvisation does not."
+        "Adaptive expertise combines efficient, accurate performance in familiar conditions with conceptual understanding, flexible adjustment, and responsible experimentation in unfamiliar ones. It requires strong routines and the ability to recognise when their assumptions fail. Varied cases, prediction, mechanism-based explanation, controlled tests, feedback, and reflection support adaptation; it is neither repetitive fluency alone nor unconstrained improvisation."
       ],
       "explanationParagraphsZh": [
-        "适应性专长结合熟悉情境中的高效准确与陌生情境中的概念理解、灵活调整和负责任试验。它要求扎实惯例，也要求识别惯例假设何时失效。多样案例、预测、反馈与反思有助于形成这种能力，而非无约束即兴。"
+        "适应性专长结合熟悉情境中的高效准确，以及陌生情境中的概念理解、灵活调整与负责任试验。它既需要扎实惯例，也要识别惯例假设何时失效。多样案例、预测、机制解释、受控测试、反馈与反思有助于适应；它既非单纯重复熟练，也不是无约束即兴。"
       ],
       "mode": "concept-fable",
       "status": "approved",

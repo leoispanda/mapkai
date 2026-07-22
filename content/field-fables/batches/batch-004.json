@@ -10,29 +10,31 @@
       "fieldTitleZh": "语言习得",
       "title": "Bread Before Grammar",
       "titleZh": "语法以前的面包",
-      "summary": "A new apprentice can recite the grammar of the northern city but cannot understand a customer holding up two fingers.",
-      "summaryZh": "一名新学徒背得出外城语法，却在面包店里听不懂顾客伸出的两根手指。",
+      "summary": "A new baker can recite the city's grammar but cannot fill an order until words arrive with loaves, gestures, and a date she can see.",
+      "summaryZh": "一名新面包师背得出全城语法，却要等词语与面包、手势和日期一同出现，才真正接住订单。",
       "storyParagraphs": [
-        "Alan came to North City and found work as an apprentice in a bakery. Every morning she memorised grammar tables and could explain how verbs changed, yet the customers' short, rapid orders escaped her. During her first week, she packed round loaves instead of long ones and mistook a collection for tomorrow as an order to take away immediately.",
-        "The baker did not give her another book. He placed Alan beside the counter and let her watch him take orders. As customers spoke, he pointed to the bread, raised the quantity on his fingers, and wrote the collection day on the bag. Every unfamiliar sentence contained some words Alan knew; the rest could be inferred from gestures and objects in front of her.",
-        "After several days, the baker repeated only when necessary and stopped translating every word. Alan first caught 'two', 'rye', and 'evening', then noticed how they moved through different orders. She began confirming with short sentences, and customers nodded or corrected her.",
-        "At the end of the month, a traveller requested a filled bread the shop had never sold. He used a word Alan did not know, but pointed to a hollow ring loaf and mimed putting jam inside. Alan picked up a knife and cut one open. The traveller smiled at once.",
-        "After closing, she put the morning's grammar sheet back into her book and first wrote the new order on a paper bag."
+        "Aran came to North City with enough money for six nights and found a trial job in a bakery. Before dawn she recited verb endings from a borrowed grammar book, believing correct rules would keep her behind the counter. Yet customers cut sentences short, swallowed sounds, and spoke while pointing through the glass. On her first morning she wrapped a round rye loaf instead of a long white one. On the second, she heard 'tomorrow' as 'now' and baked an order a day early. The owner marked both losses on a brown paper bag.",
+        "The owner did not hand her another book. He placed Aran beside him during the noon rush. When a customer spoke, he touched the requested loaf, raised two fingers, and wrote the collection day on the bag. He repeated only the part Aran still missed. She rarely understood every word, but familiar words, the visible bread, the customer's hands, and the written date held enough of the sentence together for her to act. By closing time she had filled eight simple orders without translating them word by word.",
+        "The help then became lighter. The owner stopped pointing when Aran could follow, and customers used different word orders for the same request. She began confirming with short phrases: two rye loaves, evening, collect here. A nod let her continue; a correction changed the mark on the bag. During a crowded Saturday she guessed at an unfamiliar adjective and chose the larger loaf. The customer shook her head. Aran had understood the event, not yet that piece of language.",
+        "Her final trial came with an order for a wedding breakfast. The traveller used a word Aran had never heard, named a filling she knew, and shaped a hollow circle with both hands. A queue pressed toward the door. Pretending to understand would keep it moving; stopping might cost the bakery the order. Aran took one unsold roll, cut a pocket into it, spooned in jam, and held it up. The traveller corrected the shape, repeated the new word, and ordered forty. The demonstration loaf came out of Aran's day's pay.",
+        "For the next two hours, the new word returned beside trays, numbers, and gestures. By the tenth order Aran no longer needed the model loaf, though she still asked customers to repeat an unfamiliar detail. She kept the job. That evening she opened her grammar book and found the rule governing one sentence she had heard all week. This time the rule had voices and paper bags attached to it.",
+        "Before locking the shop, Aran copied the wedding order onto a fresh bag: forty hollow rolls, jam, sunrise collection. She placed the stained trial bag beneath it rather than throwing it away. The two mistaken marks were still visible through the paper."
       ],
       "storyParagraphsZh": [
-        "阿岚来到北城，在面包店找到一份学徒工作。她每天清晨背语法表，能说出动词怎样变化，却听不懂顾客说得又快又短的订单。第一周，她把圆面包装成长条，把明天取货听成当场带走。",
-        "店主没有再给她一本书。他让阿岚站在柜台旁，看自己接单。顾客说话时，店主会指向面包、举起数量，再把取货日期写在纸袋上。陌生句子里总有一些阿岚认识的词，剩下的意思能从手势和眼前的东西猜到。",
-        "几天后，店主只在必要时重复一句，不再把每个词翻译出来。阿岚先听懂“两个”“黑麦”和“傍晚”，随后注意到它们在不同订单里怎样换位置。她开始用短句确认，顾客也会点头或改正。",
-        "月底，一名旅人要一种店里从未卖过的夹馅面包。他用了阿岚不认识的词，却指了指空心圆饼，又做出放入果酱的动作。阿岚拿出刀，切开一只面包，旅人立刻笑了。",
-        "收店后，她把早晨的语法表夹回书里，先在纸袋上写下了第二天的新订单。"
+        "阿岚带着只够住六晚的钱来到北城，在一家面包店得到试工机会。每天清晨，她都背借来语法书里的动词词尾，以为规则说得准，就能留在柜台后。可顾客会截短句子、吞掉声音，还隔着玻璃边说边指。第一天，她把圆黑麦包成了长白面包；第二天，又把“明日取”听成“现在取”，提前烤坏一份订单。店主把两次损失记在一个牛皮纸袋上。",
+        "店主没有再递给她一本书，只让阿岚在午间高峰站在身边。顾客开口时，他会碰一碰所要的面包，举起数量，再把取货日期写在袋上；阿岚仍没懂的那一小段，他才重复。她很少听清每个词，可熟悉词语、眼前的面包、顾客的手和写出的日期，已经足够把一句话托住。打烊前，她没有逐词翻译，也正确装完了八份简单订单。",
+        "此后，帮助渐渐变轻。阿岚能跟上时，店主不再伸手指；顾客也会用不同顺序说同一件事。她开始用短句确认：“两个黑麦，傍晚，在这里取？”点头便继续，改口就重写袋上的记号。一个拥挤的星期六，她猜错了陌生形容词，拿起较大的面包。顾客摇头。阿岚已经明白整件事，却还没有接住那一个新词。",
+        "试工最后一天，一名旅人来订婚宴早餐。他用了阿岚从未听过的词，说出她认识的果酱，又用双手比成空心圆。队伍一直挤到门边。装懂可以让人群继续移动，停下来却可能丢掉整笔订单。阿岚拿起一只当天卖不出的面包，切出夹层，填入果酱，举给对方看。旅人纠正了形状，重复那个新词，订下四十只。被切开的面包从阿岚当天工钱里扣。",
+        "接下来的两个时辰，新词一次次和烤盘、数字、手势一起出现。到第十份订单时，阿岚已不必再拿样品，却仍会请顾客重复不清楚的细节。她保住了工作。晚上翻开语法书，她找到一条能解释本周某个句子的规则；这一次，规则后面已经连着顾客的声音和一只只纸袋。",
+        "锁门前，阿岚把婚宴订单抄在新袋上：空心面包四十只，果酱馅，日出取货。她没有扔掉那只沾了果酱的试工纸袋，而是把它压在下面。最早两笔错误仍从薄纸后透出来。"
       ],
       "conceptName": "Comprehensible input",
       "conceptNameZh": "可理解输入",
       "explanationParagraphs": [
-        "Comprehensible input is language whose overall meaning a learner can understand while it still contains unfamiliar forms or words. Context, known language, visual clues, repetition, and interaction make meaning accessible. It is widely considered important for acquisition, but not sufficient on its own; attention, output, feedback, memory, identity, and motivation also shape learning."
+        "Comprehensible input is language whose overall meaning a learner can grasp even though it contains unfamiliar forms. Known words, objects, gestures, shared context, repetition, and interaction can make new language interpretable. It is an important condition for acquisition, not the only one: attention, output, feedback, memory, motivation, and opportunities to participate also matter."
       ],
       "explanationParagraphsZh": [
-        "可理解输入是学习者能够把握整体意义、同时仍包含部分新语言的输入。情境、已知词语、视觉线索、重复与互动能让意义进入。它被广泛视为语言习得的重要条件，但并非唯一条件；注意、输出、反馈、记忆、身份与动机也会影响学习。"
+        "可理解输入是学习者能把握整体意义、同时仍含有陌生形式的语言。已知词语、实物、手势、共同情境、重复和互动，都能让新语言变得可解释。它是语言习得的重要条件，却不是唯一条件；注意、输出、反馈、记忆、动机和参与机会也会影响学习。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -52,29 +54,33 @@
       "fieldTitleZh": "语言习得",
       "title": "The Error That Kept Moving",
       "titleZh": "不断搬家的错误",
-      "summary": "An apprentice's errors do not disappear; every few weeks they move to a different part of the sentence.",
-      "summaryZh": "一名学徒的错误没有消失，只是每隔几周便换到句子的另一处。",
+      "summary": "A trade apprentice's mistakes keep changing form, while her customers understand more of what she is trying to do.",
+      "summaryZh": "一名贸易学徒的错误不断变换形状，可顾客却越来越能听懂她要完成什么。",
       "storyParagraphs": [
-        "When Mia came to the harbour city to learn trade, she could only replace the words of her home language one by one with harbour words. Her sentence order sounded strange, but people could usually understand. The shopkeeper restated every sentence for her and expected the mistakes to disappear quickly.",
-        "Several weeks later, Mia learned where the action word belonged. Her earlier errors declined, but she began adding the same past ending to every verb. The rule worked for most and failed on several exceptions. The shopkeeper thought her speech had become worse because these new mistakes had not appeared before.",
-        "Mia took responsibility for more orders. When rushed, she returned to shorter sentences; when prepared, she used recently learned forms. She was not simply knowing something one day and forgetting it the next. Different pressures brought different parts of her developing system forward.",
-        "The elderly bookkeeper kept three months of her orders and arranged them by date. The earliest copied the order of her home language. The middle pages showed one new rule applied too widely. The latest began separating a few exceptions. Her errors were not scattered; they moved as her rules changed.",
-        "The next time Mia wrote one of the exceptional verbs, she added the usual ending, paused, and rubbed it away."
+        "Mia arrived in the harbour city to learn the cloth trade. At first she built every sentence by replacing hometown words with harbour words and keeping the old order. The result sounded strange, but merchants usually understood prices and colours. Her master rewrote each sentence perfectly before letting it leave the shop. That protected the business and made Mia's copies look clean; it also left no record of what she could produce on her own.",
+        "After several weeks, Mia moved action words into the expected place. The old disorder faded, but a new error appeared: she attached the same past ending to every verb. The rule worked on most of the order forms she had seen, so she also applied it to a small group of exceptions. Her master looked at the fresh mistakes and said she was going backwards. Mia began hiding her drafts beneath the blotting paper.",
+        "The mistakes shifted again. In careful letters she sometimes used an exception correctly. During the morning rush, with three buyers waiting, she returned to shorter sentences or her earlier word order. She was not simply knowing on Monday and forgetting on Tuesday. Different demands brought different parts of her current language into use. The shop's finished letters concealed that movement because every line ended in the master's hand.",
+        "Old Clerk Sen began keeping Mia's carbon copies by date. The first month showed hometown order with harbour words. The second showed the broad past rule. In the third, two exceptions separated from it, while another remained stubbornly regular. Beside each letter he wrote the conditions: copied slowly, spoken at the counter, or dictated during a rush. Mia could see a system under construction rather than a heap of unrelated failures.",
+        "At the autumn fair, the master fell ill and Mia had to confirm a large wool order herself. Mia kept the form, wrote with the language she actually controlled, and stopped being the shop's silent assistant. She wrote slowly, checked the buyer's meaning, and used one exception incorrectly. The correction delayed loading, and the shop paid a late-cart fee. The buyer nevertheless received the right cloth, quantity, destination, and date.",
+        "The master wanted to copy the whole form again. Mia asked to keep the corrected version. Over the next month she compared that ending with new examples and began using it accurately in calm conversations. Under pressure it still sometimes returned to the broad rule. Sen did not erase the recurrence; he marked when it happened. Improvement now meant that the errors became more informative and less costly, not that every new mistake vanished at once.",
+        "On the next wool order, Mia wrote the overused ending, paused, and scraped it away. The paper kept a pale rough patch where the old form had been. She filed it between the first carbon copy and the late-cart receipt."
       ],
       "storyParagraphsZh": [
-        "米娅到港城学做生意时，只会把家乡语逐词换成港城词。她说出的句子顺序奇怪，却勉强能被听懂。掌柜每次都替她重说一遍，希望那些错误很快消失。",
-        "几周后，米娅学会把动作词放到正确位置，旧错误少了，却开始给所有过去的动作加同一个词尾。规则适用于大多数词，也被她用在几个例外上。掌柜以为她学得更差，因为从前没有犯过这些新错。",
-        "米娅负责的订单越来越多。忙时，她又会退回短句；准备充分时，则能使用新学到的形式。她不是今天会、明天忘，而是在不同压力下调用不同做法。",
-        "老账房把她三个月的订单留了下来，按日期排开。最早的句子照搬家乡语，中间的句子出现一条过宽的新规则，最近的句子开始把少数例外分开。错误并非散乱地堆着，而是在随着她的规则移动。",
-        "下一次写到那个例外词时，米娅先添上常用词尾，停了一下，又把它擦掉。"
+        "米娅来到港城学习布匹生意。最初，她只会把家乡词逐个换成港城词，句子顺序仍照旧。听起来很奇怪，商人却通常能懂价格和颜色。掌柜会把她的每句话改成无误版本，才准送出。这样既保护了生意，也让所有抄件看起来整齐，却没有留下米娅究竟能独立写出什么的记录。",
+        "几周后，米娅学会把动作词移到合适的位置，旧错误少了，另一种错误却出现：她给所有过去动作加上同一个词尾。这条规则适用于多数订单，她便也用在少数例外上。掌柜看见以前没有的新错，认定她退步了。此后，米娅把自己的草稿藏在吸墨纸下面。",
+        "错误还在继续换地方。慢慢写信时，她偶尔能用对一个例外；清晨三名买家同时催促，她又退回短句或早先的词序。她并非星期一学会、星期二忘记，而是在不同压力下调用了眼下语言中的不同部分。店里的成稿看不出这种移动，因为最后每一行都由掌柜重写。",
+        "老账房森叔开始按日期保留米娅的复写件。第一月是家乡词序配港城词，第二月出现一条过宽的过去式规则，第三月已有两个例外从中分开，另一个仍被当成普通词。每封旁边，他还写明条件：慢抄、柜台口述，或高峰听写。米娅第一次看见，自己搭建的是一套尚未完成的做法，不是一堆彼此无关的失败。",
+        "秋季集市上，掌柜病倒，米娅必须独自确认一笔大宗羊毛订单。米娅没有把表递给别的文书，而是用自己真正掌握的形式慢慢写下去，不再做不出错的沉默助手。她写得很慢，逐项确认买家意思，仍把一个例外写错。修改耽误装车，店里赔了迟车费；布料、数量、目的地和日期却都没有送错。",
+        "掌柜想把整张表重抄，米娅请求留下改过的版本。接下来一个月，她把那个词尾与新例子反复比较，平静交谈时渐渐用对；压力一大，旧的宽规则仍偶尔回来。森叔没有把复发痕迹擦掉，只标出它出现的场合。变化不再等于立刻没有错误，而是错误越来越能指出她正在使用哪条规则，代价也越来越小。",
+        "下一份羊毛单上，米娅先写出那个常用词尾，停了一下，又用小刀刮掉。纸面留下浅浅的毛边。她把它夹在第一张复写件和那张迟车收据之间。"
       ],
       "conceptName": "Interlanguage",
       "conceptNameZh": "中介语",
       "explanationParagraphs": [
-        "Interlanguage is the developing language system constructed by a learner from prior language, target-language input, internally generated rules, and communication strategies. Errors often reveal the current system rather than random failure. The system reorganises and varies with task, attention, and pressure, while some forms may stabilise before reaching target use."
+        "Interlanguage is the developing language system a learner constructs from prior languages, target-language input, inferred rules, and communication strategies. Its errors are often systematic evidence of current hypotheses rather than random failure. The system reorganises and varies with task, attention, and pressure; some forms may also stabilise before reaching target-language norms."
       ],
       "explanationParagraphsZh": [
-        "中介语是语言学习者在发展中建构的语言系统，受既有语言、目标语输入、内部规则与交流策略共同影响。错误常是当前规则的证据，而非随机失败。该系统会重组，也会随任务、注意和压力变化；部分形式还可能在未达目标语前稳定下来。"
+        "中介语是学习者依据既有语言、目标语输入、自行归纳的规则和交流策略建构的发展中语言系统。错误常是当前假设的系统性证据，并非随机失败。它会重组，也会随任务、注意和压力变化；部分形式还可能在尚未达到目标语规范时稳定下来。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -94,29 +100,29 @@
       "fieldTitleZh": "语言习得",
       "title": "The Red Line Beneath the Ending",
       "titleZh": "词尾上的红线",
-      "summary": "A tailoring apprentice understands what customers want but writes 'delivered yesterday' and 'deliver tomorrow' as the same sentence.",
-      "summaryZh": "一名裁缝能听懂顾客要什么，却总把“昨天送”和“明天送”写成同一句话。",
+      "summary": "A tailoring apprentice understands whole orders yet keeps missing the quiet ending that separates work already done from work still promised.",
+      "summaryZh": "一名裁缝学徒听得懂整份订单，却总漏掉那个区分已经送达和仍待交付的轻词尾。",
       "storyParagraphs": [
-        "Tailoring apprentice Isha understood most orders. She rarely confused fabric, size, or colour. Delivery dates were different. In the harbour language, a very soft sound at the end of the action word marked something already completed. Isha understood the sentence as a whole but never registered that small sound.",
-        "Once, she wrote 'deliver tomorrow' for an order that had already been delivered yesterday, and the shopkeeper searched for the parcel for hours. He did not repeat the entire sentence more loudly. He placed the two orders side by side, drew a red line beneath the only different ending, and read them aloud.",
-        "After that, Isha still listened first for meaning, but paused when dates appeared. She marked whenever a customer used the ending and compared her own sentences with corrected ones. At first, she could see the feature without using it reliably.",
-        "Several weeks later, a customer spoke quickly. Isha was about to write tomorrow when her pencil stopped. She asked the customer to repeat the sentence, heard the soft ending, and turned to the previous day's page to find the completed order.",
-        "That evening, she removed the red thread from the old slips and wound it around the end of her pencil."
+        "Isa could understand nearly every tailoring order in the harbour language. Cloth, cut, size, and colour rarely troubled her, so the master trusted her with the delivery book before festival week. The extra ledger duty paid for her room; another delivery error would return her to unpaid sweeping. One quiet verb ending remained outside her attention: it distinguished work already completed from work still promised. Because the rest of the sentence carried enough meaning, Isa never felt the missing sound. She copied an entry for coats delivered yesterday onto tomorrow's work list, and the cutters stayed late reproducing three garments that were already hanging in the customer's house.",
+        "The master first repeated the whole sentence more loudly. Isa heard the same overall message and made the same omission. He then laid the completed order beside the new one, drew a red thread beneath the only different ending, and read the pair at normal speed. The small sound did not become easy, but it became visible as something to listen for. Isa began marking the delivery column whenever she heard it. For a week she often noticed it only after the customer had gone, and sometimes added it where it did not belong.",
+        "During the festival rush, a merchant dictated an expensive silk order at the door. Isa understood the fabric and quantity and prepared to write 'deliver tomorrow'. Her pencil touched the page, then stopped: the merchant's verb had carried the light ending. Asking him to repeat would hold up a queue and forfeit the shop's rush fee. Guessing could send a second set of silk clothes to a completed order. Isa called him back. He repeated the phrase and pointed to yesterday's receipt. The shop lost the rush fee, but no silk was cut twice.",
+        "After that, Isa compared what she had expected to hear with the corrected forms in the ledger. She circled the ending in fast speech, whispered speech, and questions, and began hearing it without a drawn line. Noticing did not make her use it perfectly; tired at closing, she still dropped it from her own sentences. Yet the error now left a place she could inspect. A customer could correct one small form instead of discovering an entire delivery on the wrong day.",
+        "At month's end, Isa removed the red thread from the first pair of orders and wound it around the end of her pencil. The duplicated coats remained crossed out in the book. When the next customer spoke quickly, the pencil paused beside the delivery column before it wrote."
       ],
       "storyParagraphsZh": [
-        "裁缝学徒伊莎已经能听懂大部分订单。顾客说布料、尺寸和颜色，她几乎从不弄错。只有交货日期常出问题：港城语会在动作词尾加一个很轻的音，表示事情已经发生，伊莎听见整句话的意思，却从未留意那个小音。",
-        "一次，她把“昨天已经送到”记成“明天送到”，掌柜找了半天货。掌柜没有再大声重复整句，而是把两张订单并排放下，用红线划出唯一不同的词尾，再读给她听。",
-        "此后，伊莎在接单时仍先听意思，但遇到日期便会停一下。她开始在顾客说过那个词尾时做一个小记号，也会比较自己说的句子与对方改过的句子。起初她只是看得见，还常常用错。",
-        "几周后，一名顾客说得很快。伊莎已经准备写下明日，笔尖却停住了。她请对方再说一遍，这次听见那个轻音，翻到前一天的送货页，找到了已经完成的订单。",
-        "当晚，她把红线从旧订单上拆下来，绕在自己的铅笔末端。"
+        "伊莎已经能听懂大多数港城裁缝订单，布料、式样、尺寸和颜色几乎不再出错，因此节庆周前，掌柜把送货簿交给她。管理账簿的补贴正好够付房租；再错一次，她就会回去做没有工钱的扫地学徒。只有一个很轻的动词词尾始终没有进入她的注意：它把已经完成的事与仍在承诺的事分开。整句话的其余部分足够清楚，伊莎从未觉得自己漏听。她把“昨日已送”的外套抄进明日任务，裁衣人加班重做了三件早已挂在顾客家里的衣服。",
+        "掌柜先把整句话说得更响，伊莎听见的整体意思没变，遗漏也没变。他随后把已完成订单和新订单并排放下，用一根红线标出唯一不同的词尾，再以平常速度读给她听。那个声音没有立刻变容易，却第一次成了值得寻找的东西。此后伊莎听见它，就在交货栏做记号。整整一周，她常在顾客离开后才察觉，有时还把它添到不该出现的句子里。",
+        "节庆最忙那天，一名商人在门口口述昂贵的丝料订单。伊莎已听懂布料和数量，正要写“明日送达”，笔尖却停住：对方的动词似乎带着那个轻音。请他重说，会堵住门口队伍，也拿不到加急费；直接猜测，可能把已经完成的丝衣再裁一套。伊莎追出门叫回商人。对方重说一遍，又指向昨日收据。店里失去加急费，却没有多剪一寸丝料。",
+        "此后，伊莎会把自己原先预计听见的形式，与账簿中被改过的形式并排比较。快说、低声说和问句里的词尾，都被她圈出来。渐渐地，没有红线时她也能听见。察觉并不等于立刻会用；打烊疲倦时，她自己的句子仍会漏掉它。可错误已经有了可以检查的位置，顾客只需纠正一个小词尾，不必等整批货送错日期。",
+        "月底，伊莎把最初订单上的红线拆下，绕在铅笔末端。重复制作的三件外套仍在账上被划着叉。下一位顾客说得飞快时，那支铅笔先在交货栏旁停了一下，才落到纸上。"
       ],
       "conceptName": "Noticing hypothesis",
       "conceptNameZh": "注意假说",
       "explanationParagraphs": [
-        "The noticing hypothesis proposes that a learner must consciously register a language feature in input for it to become available for acquisition. Attention may concern a form, its link to meaning, or a gap between current and target use. Noticing does not guarantee immediate mastery, but salience, task demands, feedback, and interaction influence what enters learning."
+        "The noticing hypothesis proposes that a language feature must be consciously registered in input before it can become material for learning. A learner may notice a form, its link to meaning, or a gap between their output and a target form. Noticing does not guarantee mastery, but salience, task need, feedback, comparison, and interaction influence what becomes available for learning."
       ],
       "explanationParagraphsZh": [
-        "注意假说主张，学习者需要在输入中有意识地登记某个语言特征，它才可能成为习得材料。被注意的可以是形式、形式与意义的联系，或自身表达与目标形式的差距。注意并不保证立即掌握，但显著提示、任务需要、反馈与互动会影响什么进入学习。"
+        "注意假说主张，语言特征需要在输入中被有意识地登记，才可能成为习得材料。学习者可以注意形式、形式与意义的联系，或自身表达与目标形式的差距。注意并不保证立即掌握，但显著提示、任务需要、反馈、比较与互动会影响哪些内容进入学习。"
       ],
       "mode": "lens-fable",
       "status": "approved",
@@ -136,29 +142,31 @@
       "fieldTitleZh": "文学与语言学",
       "title": "The Blue That Changed Name Across the Bridge",
       "titleZh": "过桥以后改名的蓝",
-      "summary": "A dye apprentice believes one shade of blue can have only one name until the same barrel crosses a bridge.",
-      "summaryZh": "染坊学徒确信一种蓝色只能有一个名字，直到同一桶染料被推过了桥。",
+      "summary": "A dye apprentice insists one colour has one proper name until the same sealed vat crosses a bridge between two speech communities.",
+      "summaryZh": "染坊学徒确信一种颜色只有一个正确名字，直到同一桶封好的蓝染料跨过两种语言共同体之间的桥。",
       "storyParagraphs": [
-        "The eastern dyehouse called one deep blue 'wulan'. Apprentice Afu had heard the word since childhood and felt that its sound naturally belonged to night-coloured cloth. On his first delivery west of the river, the customer said she had ordered 'solan', not wulan.",
-        "Afu opened the barrel. The colour matched the sample exactly, yet the customer insisted that the name was wrong. As the argument sharpened, an old western dyer brought out his colour book. The same cloth appeared beside solan, while wulan did not appear anywhere.",
-        "Afu pushed the barrel back onto the bridge and met an eastern merchant. One glance was enough for the man to say, 'Isn't that wulan?' The colour had not changed in the middle of the bridge. What changed was the name each side had long used.",
-        "Before the next delivery, Afu did not invent a private compromise word. He wrote the eastern and western names on opposite sides of one wooden label and fixed the same sample between them. Customers on either bank could verify the order.",
-        "In time, dye soaked the label and blurred both words, while the blue cloth in the centre remained firmly attached."
+        "The eastern dye houses called their deepest blue wulan. Awu had heard the word since childhood and thought its sound naturally belonged to night-coloured cloth. His master entrusted him with a sealed vat for a western wedding order; delivery before noon would earn Awu his first trade mark. At the bridge tollhouse, he copied WULAN onto the tag in his best hand and did not attach the sample square because the name seemed sufficient.",
+        "The western buyer opened the delivery book and refused the vat. She had ordered sol blue, not wulan. Awu broke the seal enough to show the liquid. Its colour matched the wedding sample exactly, yet the buyer pointed to the wrong word and sent him back. The vat spent a night in bridge storage, costing Awu half his delivery wage. On the eastern bank, every merchant who saw it called the colour wulan without hesitation.",
+        "Awu returned west with a new idea. He had joined the two names into wulan-sol, believing a compromise must be clearer. The western clerk searched his colour ledger and found no such entry; the eastern carrier who was to collect leftover dye also refused to sign for an unknown shade. Awu's invented label belonged to neither set of shared orders. The colour had not changed, but a private name could not make two communities recognise the same contract.",
+        "An old western dyer brought her sample book. Beside sol sat cloth cut from the same dye lot; wulan appeared nowhere. Awu placed his eastern book beside hers and found the reverse. Before a second storage fee was charged, he spent the rest of his delivery wage replacing every tag and paid the bridge clerk for a second night. On one side of a wooden board he wrote the eastern name, on the other the western name, and between them he nailed the original sample square. Both parties signed beside the cloth they could inspect.",
+        "The wedding order arrived a day late, and Awu lost the trade mark for that season. He delivered the remaining cloth himself and listened as western workers used sol without once confusing the shade. The double-sided board, however, began travelling with cross-river shipments. It did not allow anyone to invent labels alone: each name still worked because a group had learned and repeated it. The shared sample merely helped the groups coordinate which dye their different words referred to.",
+        "Years of splashes darkened the board. The letters on both faces softened under blue stains, while the sample square remained fixed through the centre by four small nails. Couriers still turned the board at the bridge, reading one side before they crossed and the other after."
       ],
       "storyParagraphsZh": [
-        "河东染坊把一种深蓝叫作“乌岚”。学徒阿伏从小听惯这个词，觉得它听起来本来就像夜色。第一次替师傅去河西交货时，顾客却说自己订的是“索蓝”，不是乌岚。",
-        "阿伏打开桶盖。颜色与样布完全一样，顾客仍坚持名称写错了。两边越争越急，最后河西老染工拿来自己的色册。“索蓝”旁边贴着同样的布，而“乌岚”在他的册子上根本不存在。",
-        "阿伏把染料推回桥上，又遇见河东商人。商人看了一眼便说：“这不是乌岚吗？”桶里的颜色没有在桥中央改变，改变的是两边人长期使用的叫法。",
-        "第二次送货前，阿伏没有自己发明一个折中的新词。他在木牌两面分别写上河东与河西的名称，并把同一块样布钉在中间。两边顾客都能据此确认订单。",
-        "后来木牌被染料浸湿，两个词渐渐模糊，中央那块蓝布仍牢牢钉着。"
+        "河东染坊把最深的一种蓝叫作“乌岚”。阿伏从小听惯这个词，总觉得它的声音天生就该属于夜色般的布。师傅让他送一桶封好的染料去河西婚宴，只要正午前交到，便授给他第一枚商标。经过桥头时，阿伏用最工整的字在标签上写下“乌岚”，没有附样布——名称已经足够清楚。",
+        "河西买家翻开订单，当场拒收。她订的是“索蓝”，不是乌岚。阿伏撬开封口让她看，桶中颜色与婚宴样布完全相同，买家仍指着错误名称，要他退回。染桶在桥头仓过了一夜，保管费扣掉阿伏一半送货工钱。回到东岸，所有商人看见那桶颜色，都毫不犹豫地叫它乌岚。",
+        "阿伏第二次过桥，自作主张把两个词拼成“乌岚索”，以为折中名称总会更清楚。河西文书查遍色册，没有这一项；负责收回余料的河东车夫也不肯为陌生颜色签字。阿伏发明的标签不属于任何一边共同使用的订单。染料没有改变，一个人的新名字却无法让两个群体认出同一份契约。",
+        "河西老染工带来自己的色册，“索蓝”旁贴着同批染出的布，册中根本没有乌岚。阿伏把河东色册并排放下，情况恰好相反。第二笔保管费到来前，他花光余下送货工钱换掉所有标签，还向桥头文书补交一夜费用。木牌一面写河东名称，一面写河西名称，中间钉上原来的样布。双方都在自己能检查的布片旁签了字。",
+        "婚宴订单晚了一日，阿伏也失去当季商标。他亲自送完余下布料，听见河西工人一直使用“索蓝”，却没有一次认错颜色。那块双面牌开始跟着跨河货物往返。它并没有准许任何人独自任意命名：每个词仍要靠一个群体长期学习和重复才有效；中央样布只是帮助两边确认，各自的词究竟指向哪桶染料。",
+        "多年泼溅使木牌越染越深，两面的字在蓝斑下渐渐发虚，中间的样布仍由四枚小钉固定。送货人走到桥头，总会在过桥前读一面，过桥后再把木牌翻过来。"
       ],
       "conceptName": "Arbitrariness of the sign",
       "conceptNameZh": "符号任意性",
       "explanationParagraphs": [
-        "Arbitrariness of the sign means that most linguistic forms have no necessary natural bond with what they signify, allowing communities to use different sounds or words for similar experience. Arbitrary does not mean individually changeable at will: social convention, contrast, history, and repeated use stabilise signs. Some iconicity and sound symbolism remain partly motivated."
+        "Arbitrariness of the sign means that most linguistic forms have no necessary natural bond with what they refer to, allowing communities to organise similar experience with different words. Arbitrary does not mean individually optional: convention, contrast with other signs, history, and repeated social use stabilise meaning. Iconicity and sound symbolism provide partial, not universal, exceptions."
       ],
       "explanationParagraphsZh": [
-        "符号任意性指多数语言形式与其所指之间不存在必然自然联系，因此不同共同体可以用不同声音或词语组织相近经验。任意不等于个人可以随意命名；社会约定、对比关系、历史与反复使用会让符号稳定。部分象似与语音象征则具有一定动因。"
+        "符号任意性指多数语言形式与其所指之间不存在必然的自然联系，因此不同共同体可以用不同词语组织相近经验。任意并不等于个人可以随意命名；社会约定、与其他符号的对比、历史和反复使用会稳定意义。象似性与语音象征只构成部分例外。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -178,29 +186,33 @@
       "fieldTitleZh": "文学与语言学",
       "title": "Three Windows in the Burning Lighthouse",
       "titleZh": "燃烧灯塔的三扇窗",
-      "summary": "A writer interviews three witnesses to a fire and finds that each believes they saw the whole night.",
-      "summaryZh": "作家采访了三名火灾见证者，发现每个人都确信自己看到的是完整的一夜。",
+      "summary": "A writer makes a lighthouse fire perfectly clear by combining three witnesses, then discovers she has created a view no one possessed.",
+      "summaryZh": "一名作家把三位见证者合成清楚无比的灯塔火灾，却发现自己造出了一双当夜并不存在的眼睛。",
       "storyParagraphs": [
-        "Writer Wen Xue set out to tell the story of a lighthouse fire. The keeper said flames rose from below the stairs, trapping him at the top with smoke and a window that would not open. A child on shore said the keeper stood motionless in the light, as if refusing to escape. The rescue captain said he could not see the top at all as his boat avoided falling timber.",
-        "Wen Xue combined the three accounts so that readers knew at once where the fire began, when the boat arrived, and what the keeper thought. The story was clear, but no one had experienced such clarity. After reading it, the keeper asked, 'How could I know in the smoke that the boat had already passed the rocks?'",
-        "She began again. The first chapter contained only what the keeper could hear and see; the rescue boat entered his world only when it answered the bell. The second followed the captain, for whom the person above was only a blurred shape. In the child's chapter, neither the staircase nor the reason for the boat's delay was visible.",
-        "The fire remained the same, but the order of information changed. The keeper's chapter carried fear, the captain's demanded decisions, and the child's made the waiting long.",
-        "In the final manuscript, Wen Xue drew a window facing a different direction at the start of each chapter. She drew no window that could see the whole lighthouse at once."
+        "Wenxue promised the harbour newspaper a serial about the lighthouse fire before the winter memorial. She interviewed the keeper trapped above the stair, a child watching from the shore, and the captain of the rescue boat. Each witness gave her only a portion. The keeper remembered smoke and a jammed window; the child saw a bright figure that did not move; the captain watched falling timber and the reef. Wenxue feared readers would become lost, so she braided every fact into one smooth account.",
+        "In her first draft, the keeper saw the rescue boat turn behind the reef, knew why it delayed, and noticed the child on shore. The chapter was tense and wonderfully clear. The keeper read it and placed his finger on the boat: through smoke and a stone wall, he could not have known it was there. Wenxue removed the sentence, but left him thinking about the captain's decision because readers already knew it.",
+        "The captain objected next. From the boat, the tower top had disappeared behind smoke; he had never seen the keeper struggle with the window. The child, meanwhile, did not know the stair was burning and mistook the keeper's stillness for refusal to flee. When Wenxue merged the accounts, every detail might be supported somewhere, yet the mind receiving them belonged to no one inside the night.",
+        "She tried a detached report that described only visible movements. It avoided impossible knowledge but flattened the experience: the jammed window became merely 'a pause', and the captain's dangerous turn became a line on the water. Wenxue then separated the material. The keeper's chapter admitted only what entered the smoke: heat, the window latch, and a distant answering bell. In the captain's chapter, the keeper remained a blurred figure. From the child's window, neither the stair nor the reef existed.",
+        "Information now arrived at different times. Readers waited with the child, calculated with the captain, and discovered the rescue bell with the keeper. The narrator's voice could remain steady across chapters; what changed was whose perception and knowledge controlled each moment. Wenxue pinned three paper windows above her desk so that facts from one account did not leak into another too early.",
+        "The rewrite missed the first serial date. The newspaper gave the opening page to another writer and reduced Wenxue's advance. She kept revising rather than restore the impossible all-seeing version. When the witnesses read the finished story, none claimed it contained the whole night. Each could recognise the limits of the section that belonged near their eyes.",
+        "On the final manuscript, Wenxue drew a small window at the start of every chapter: one facing the stair, one the sea, one the shore. She left the page for a fourth window blank. No wall of the lighthouse could have held a window that looked in all three directions at once."
       ],
       "storyParagraphsZh": [
-        "作家闻雪要写灯塔失火的故事。守塔人说，火从楼梯下方升起，他被困在顶层，只看见烟和一扇打不开的窗。岸边孩子说，守塔人一直站在亮处不动，像是没有逃跑。救援船长却说，自己靠近时始终看不见塔顶，只顾躲开落下的燃木。",
-        "闻雪把三段证词揉成一篇，让读者同时知道火从哪来、船何时到、守塔人在想什么。故事十分清楚，却没有人真正经历过这样的清楚。守塔人读后问：“我在烟里怎么会知道船已经转过礁石？”",
-        "她重新落笔。第一章只写守塔人能够听见和看见的事，远处的救援船直到钟声回应时才进入他的世界。第二章转到船长，塔顶的人只剩一道模糊影子。孩子那一章则看不见楼梯，也不知道船为何迟迟不靠岸。",
-        "同一场火没有改变，读者得到消息的先后却完全不同。守塔人那一章令人恐惧，船长那一章充满判断，孩子那一章则让等待显得漫长。",
-        "定稿时，闻雪在每一章开头画了一扇不同方向的窗。她没有画一扇能同时看见全部灯塔的窗。"
+        "作家闻雪答应在冬季纪念日前，为港口报纸连载灯塔失火的故事。她采访了困在楼梯上方的守塔人、岸边目击的孩子和驾驶救援船的船长。每个人只给她一部分：守塔人记得烟与打不开的窗，孩子看见亮处有个人迟迟不动，船长只顾避开燃木和礁石。闻雪怕读者迷路，便把所有材料编成一段顺滑叙述。",
+        "第一稿里，守塔人看见救援船在礁石后转向，知道它为什么迟到，还注意到岸边的孩子。这一章紧张而清楚。守塔人读后，把手指按在船上：隔着烟和石墙，他当夜根本不知道它在那里。闻雪删掉那句，却仍让他猜测船长的决定，因为读者已经提前知道。",
+        "船长接着提出异议。靠近时，浓烟遮住塔顶，他从未看见守塔人怎样扳窗；孩子则不知道楼梯着火，把那个人的静止误认为不愿逃生。闻雪合并的每个细节或许都能在某份证词中找到，可接收全部细节的那颗头脑，当夜从未存在。",
+        "她又试着写一份只记录可见动作的冷静报告。不存在越界信息了，经历却被压平：卡死的窗只剩“一次停顿”，船长冒险转向也只剩水面的一条线。闻雪于是拆开材料。守塔人的章节只准烟里能到达他的东西进入：热、窗扣和远处回应的钟声；船长那一章，塔顶的人只是一道模糊影子；到了孩子的窗口，楼梯和礁石都不存在。",
+        "同一条消息开始在不同时间抵达。读者会陪孩子等待，跟船长计算航向，再同守塔人一起听见救援钟。叙述者的声音可以保持不变，变化的是每个时刻由谁的感知和知识决定边界。闻雪在桌前钉了三扇纸窗，免得一份证词里的信息过早漏进另一份。",
+        "重写使她错过首期连载，报社把开篇版面给了别人，还扣掉部分预付款。闻雪没有恢复那个无所不知的版本。定稿给三名见证者看时，没有谁声称它写全了整夜，但每个人都能认出靠近自己眼睛的那一段，也认得其中看不见的地方。",
+        "最终稿每章开头都有一扇小窗：一扇朝楼梯，一扇朝海，一扇朝岸。闻雪把第四扇窗的位置留成空白。灯塔的任何一面墙上，都不可能开出同时看见三个方向的窗口。"
       ],
       "conceptName": "Focalization",
       "conceptNameZh": "叙事聚焦",
       "explanationParagraphs": [
-        "Focalization concerns the perspective or consciousness through which narrative information is selected: who can perceive, know, and understand what. It differs from who narrates. Internal, external, shifting, or multiple focalization changes information order, uncertainty, sympathy, and surprise. No single perspective automatically equals an objective whole."
+        "Focalization concerns through whose perception or knowledge narrative information is selected: who can see, know, infer, or misunderstand what. It differs from who narrates. Internal, external, fixed, shifting, or multiple focalization changes information order, uncertainty, sympathy, and surprise; no single perspective automatically equals an objective whole."
       ],
       "explanationParagraphsZh": [
-        "叙事聚焦关注故事信息通过谁的感知或认知被选择，也就是谁能看见、知道和理解什么。它不同于谁负责讲述。内部、外部、切换或多重聚焦会改变信息顺序、不确定性、同情与惊奇，并不存在自动等同于客观全貌的单一视角。"
+        "叙事聚焦关注故事信息通过谁的感知或知识被选择，也就是谁能看见、知道、推断或误解什么；它不同于谁负责讲述。内部、外部、固定、切换或多重聚焦会改变信息顺序、不确定性、同情与惊奇，任何单一视角都不会自动等于客观全貌。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -220,29 +232,29 @@
       "fieldTitleZh": "文学与语言学",
       "title": "That Door Is Still Open",
       "titleZh": "那扇门还开着",
-      "summary": "An innkeeper says something perfectly true, but the new waiter fails to hear the request inside it.",
-      "summaryZh": "客栈老板说了一句完全正确的话，新伙计却没有听见其中的请求。",
+      "summary": "A new inn worker obeys only literal meanings, then learns why the same plain statement can ask, warn, complain, or merely describe.",
+      "summaryZh": "一名客栈伙计只按字面办事，后来才看见同一句陈述怎样在不同现场成为请求、警告、抱怨或单纯描述。",
       "storyParagraphs": [
-        "Afraid of misunderstanding the northern language, new waiter A-Luo promised himself that he would follow words exactly. One evening, as he carried plates past the counter, the innkeeper looked toward the cold wind outside and said, 'That door is still open.' A-Luo looked too and answered, 'Yes,' before continuing to the dining room.",
-        "The wind scattered account papers and weakened the fire. While closing the door, the innkeeper asked why A-Luo had done nothing. A-Luo replied that he had heard only a statement of fact. The innkeeper frowned. 'Both my hands were carrying a wine cask, and I kept looking at the door.'",
-        "The next day, a guest stared at an empty cup and said, 'Tea arrives very slowly here.' A-Luo was about to explain that the pot was nearby when he noticed the guest's hand waiting beside the cup. He poured tea first, then asked whether more hot water was needed. The guest's expression softened.",
-        "A-Luo did not begin treating every sentence as an order. When someone said, 'The window is open,' he checked the wind, the speaker's actions, and the current task. If a wrong guess could matter, he asked directly, 'Would you like me to close it?'",
-        "That night, the innkeeper passed with another wine cask. Before he spoke, A-Luo reached out and lowered the door bar."
+        "Aro wanted a permanent place at the North Gate Inn and feared that guessing at the city language would expose him. He therefore promised himself to act only on words stated directly. One winter evening the owner, carrying two wine casks, looked toward the courtyard and said, 'The door is still open.' Aro checked and answered, 'Yes.' He continued serving. Wind scattered the account sheets, lowered the stove flame, and chilled the stew. The owner deducted the spoiled food from Aro's trial wage. Aro insisted that he had confirmed a true fact.",
+        "The next day a traveller rested one hand beside an empty cup and said, 'Tea arrives slowly here.' Aro began explaining that the kettle was only six steps away, then noticed the untouched cup, the traveller's gaze, and the busy server behind him. He poured tea before asking whether more hot water was wanted. Later, however, he overcorrected. When the herbalist remarked that a storeroom window was open to dry leaves, Aro shut it at once. Moisture ruined a tray, and he paid for that too. A statement could invite an action, but not every statement concealed the same action.",
+        "Aro began looking at what speakers and listeners could both see: occupied hands, an empty cup, cold air, a task already underway, rank, and the cost of delay. He also learned to ask. During a debt hearing held in the inn, the clerk said, 'This account remains open.' Aro nearly closed the ledger because supper was coming. The creditor was still waiting for payment, so he stopped and asked what 'open' referred to. The brief question drew a laugh and delayed one table's meal, costing Aro its tip, yet it prevented him from carrying away the evidence.",
+        "At the final trial banquet, the owner passed with hot soup and again said, 'The side door is still open.' Aro saw guests holding their coats, loose menus lifting on the tables, and both of the owner's hands under the tray. He closed and latched the door. Later a guest beside an open inner door used the same sentence while waiting for a missing companion; Aro left that door alone. He had not memorised a secret translation. He was using the words together with the public circumstances, and checking when those circumstances did not decide enough.",
+        "Aro earned the permanent place, though his first wage still carried deductions for stew and herbs. On the next cold night, the owner approached with two wine casks. Before he spoke, Aro lowered the wooden latch. The old account sheets had been gathered and stitched into a new ledger; their wind-folded corners remained inside, along with a brown mark from the stove that was still clearly visible."
       ],
       "storyParagraphsZh": [
-        "新伙计阿罗害怕听错北城话，便发誓只按字面办事。一天夜里，他端着盘子经过柜台，老板看了看外面的冷风，说：“那扇门还开着。”阿罗也看了一眼，回答：“是的。”随后继续送菜。",
-        "风把账纸吹落满地，炉火也暗了。老板关门时问阿罗为什么不动，他说自己听见的只是一个事实。老板皱着眉：“我两只手都在搬酒桶，眼睛还一直看着门。”",
-        "第二天，一名客人望着空杯说：“这里的茶来得很慢。”阿罗正要解释茶壶离得并不远，忽然看见客人的手仍放在杯边。他先添了茶，再确认是否还需要热水。客人的眉头松开了。",
-        "阿罗没有从此把每句话都猜成命令。有人在仓库说“窗户开着”时，他会看看风、说话人的动作和当时的任务；若一项误解可能造成损失，他就直接问：“您是要我关上吗？”",
-        "那晚老板再次抱着酒桶经过。还没等他说话，阿罗已经伸手把门闩落下。"
+        "阿罗想在北门客栈得到正式差事，又怕猜错城里人的话显得无能，于是发誓只按明说的字面行动。一个冬夜，老板双手抱着酒桶，望向院子说：“那扇门还开着。”阿罗看了一眼，回答“是的”，继续送菜。冷风吹散账纸，压低炉火，锅里的炖肉也凉了。老板从试工钱里扣掉损失，阿罗却坚持自己确认的是一句真话。",
+        "第二天，旅人把手放在空杯旁，说：“这里的茶来得很慢。”阿罗正要解释水壶只有六步远，忽然看见没动过的杯子、客人的目光和忙不过来的侍者。他先添茶，再问是否还要热水。可随后他又矫枉过正。药草商说库房窗户开着，正让叶子通风，阿罗却立刻关窗。潮气毁掉一盘药草，这笔也从他工钱里扣。陈述句有时要求行动，却不是每句都藏着同一种行动。",
+        "阿罗开始留意说话双方都看得到的东西：被占住的双手、空杯、冷风、正在进行的任务、身份和耽误的后果；他也学会直接问。客栈承办一次欠账听证，文书说“这笔账还开着”。阿罗见晚饭将到，差点合上账簿搬走。债主仍等着付款，他停下来确认“开着”指什么。问题引来一阵笑，也让一桌饭菜晚了片刻，阿罗没拿到那桌小费，却没有把证物收走。",
+        "最后考核的宴席上，老板端着热汤经过，再次说：“侧门还开着。”阿罗看见客人拢紧外衣，桌上菜单被吹起，老板两只手都托着盘，便关门落闩。稍后，另一位客人守在内门旁等同伴，也说同一句话，阿罗却没有去关。他并非背会了隐藏译文，而是把话与公开可见的现场一起使用；现场仍不足以决定时，他就询问。",
+        "阿罗拿到了正式差事，第一个月工钱仍扣着炖肉和药草的钱。下一个冷夜，老板又抱着两只酒桶走来。还没等他说话，阿罗已经放下木门闩。那些被风吹折的旧账纸已缝成新簿，卷起的纸角仍留在里面，纸边还清楚带着当晚炉火熏出的褐斑。"
       ],
       "conceptName": "Pragmatics",
       "conceptNameZh": "语用学",
       "explanationParagraphs": [
-        "Pragmatics studies how utterance meaning depends on context, speaker intention, shared knowledge, social relations, and listener inference. A declarative sentence can also perform a request, warning, or criticism. Inference is constrained by words and public cues rather than free guessing; when consequences are serious or evidence is weak, clarification is safer."
+        "Pragmatics studies how utterance meaning depends on context, speaker intention, shared knowledge, social relations, and listener inference. A statement may also perform a request, warning, complaint, or invitation. Inference is constrained by linguistic form and public evidence, not free guessing; when cues are insufficient or consequences are serious, clarification is more reliable than confidence."
       ],
       "explanationParagraphsZh": [
-        "语用学研究话语意义如何依赖语境、说话者意图、共同知识、社会关系和听者推断。陈述句可以同时承担请求、提醒或批评等行动。推断并非任意猜测，而要依据语言形式与公开线索；当后果重大或线索不足时，澄清比自信猜测更可靠。"
+        "语用学研究话语意义怎样依赖语境、说话者意图、共同知识、社会关系和听者推断。陈述句也可能实施请求、警告、抱怨或邀请。推断必须受语言形式与公开线索约束，并非任意猜测；当线索不足或后果重大时，澄清通常比自信猜测更可靠。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -262,29 +274,31 @@
       "fieldTitleZh": "经济学",
       "title": "Water That Could Flow Only Once",
       "titleZh": "只能流一次的水",
-      "summary": "One night of canal water can save newly planted trees or pay for a repaired roof, but cannot do both.",
-      "summaryZh": "一夜渠水可以救活新栽的果树，也可以换来修屋顶的钱，却不能同时做两件事。",
+      "summary": "One night of canal water can save a young orchard or buy a sound roof, but its price is not written on the water permit.",
+      "summaryZh": "一夜渠水可以救一片幼果园，也能换来一座不漏雨的屋顶，可它的代价并没有写在用水凭证上。",
       "storyParagraphs": [
-        "During the dry season, each household received canal water for one night. Meilin's newly planted peach trees had begun curling at the leaves. A melon grower from the next village offered twelve silver pieces for her turn, enough to repair the roof that leaked whenever it rained.",
-        "Meilin asked the water keeper what she would have to pay if she used her own share. He said the old agreement charged nothing. For a moment, she thought sending water into the orchard would cost nothing, until the melon grower placed twelve coins on the table and asked one final time before sunset.",
-        "She turned the gate toward the peach trees. Water entered the furrows and soaked the roots, while bowls would still be needed beneath the roof during the next rain. A neighbour remarked that at least the water had been free. Meilin placed the grower's written offer inside her account book.",
-        "The trees survived into autumn but were not yet bearing fruit. When someone asked whether the night had been worthwhile, Meilin did not add together everything else she might have done. She compared the future orchard with the roof repair that had actually been available.",
-        "Before the next year's water turn, Meilin placed the old twelve-coin offer beside the gate and only then moved the wooden handle."
+        "During the drought, every farm received the canal for one night. Melin's young peach trees had begun curling at the leaves, while rain still entered her kitchen through three holes in the roof. A melon grower from the next village offered twelve silver coins for her water turn, exactly what the roofer had quoted. The miller offered eight. Melin could also send a small share to her vegetable bed, though those plants were worth less than either offer. At sunset she laid the three offers beside the wooden gate handle.",
+        "Melin asked the water keeper what she would pay if she used the canal herself. 'Nothing,' he said; her family already held the night by agreement. For an hour, directing water to the peaches felt like the costless choice. She had bought the saplings months ago, dug the channels herself, and could not bear to watch them dry. The melon grower returned before dusk and set twelve coins on the wall, reminding her that his offer ended when the gate opened.",
+        "Melin did not add every road she would leave untaken. The miller's eight coins and the smaller vegetable harvest could not both have been gained once the same water was sold elsewhere. The strongest available alternative was the melon grower's twelve—enough to repair the roof. If she turned the gate toward the orchard, that was what the night would prevent her from taking. The permit's zero price did not give the water two destinations.",
+        "She returned the coins and opened the orchard channel. Water darkened the dust around each peach root. By midnight the leaves had stopped folding inward. The next rain came before the family found another roofer; basins stood across the kitchen, and one damp patch spoiled a sack of beans. A ceiling lath also had to be replaced for three coins, so the physical consequences of leaving the roof unrepaired continued after the offer expired. Neighbours said the trees had been saved with free water. Melin placed the unused repair estimate inside her farm book.",
+        "The trees survived but bore no fruit that year. That outcome did not prove the earlier choice wise or foolish by itself; at the gate, Melin had chosen between uncertain future peaches and a roof repair she could obtain then. When she reviewed the decision, she compared the best available alternative she had actually forgone, not every imaginable use of water added together.",
+        "Before the next dry season, the first peach buds appeared. Melin carried the old twelve-coin estimate to the gate and pinned it beneath the new water permit. The basin from the leaking kitchen still stood under the eaves, with a dark rust ring around its bottom. Only after reading both papers did she put her hand on the wooden handle."
       ],
       "storyParagraphsZh": [
-        "旱季里，每户只有一夜用渠水。梅林刚栽下的桃树开始卷叶，邻村瓜农却愿意出十二枚银币买下她的水时。那笔钱正够修补漏雨的屋顶。",
-        "梅林问水官用了自家的水要交多少钱。水官说渠水按旧约不收费。她一度觉得把水引进桃园便没有成本，直到瓜农把十二枚银币摆在桌上，又在日落前最后问了一次。",
-        "她最终把闸门转向桃园。水沿土沟慢慢浸进树根，屋顶仍要在下一场雨中接盆。邻居说幸好这水是免费的，梅林却把瓜农留下的报价纸收进账本。",
-        "秋天，桃树活了下来，却还不能结果。有人问她这一夜值不值得，她没有把所有没做的事加在一起，只比较那片未来的桃园与当时真正能够换到的修屋钱。",
-        "第二年分水前，梅林把那张十二枚银币的旧报价放在闸门旁，然后才转动木柄。"
+        "旱季里，每户只有一夜渠水。梅林新栽的桃树开始卷叶，厨房屋顶却也有三处漏雨。邻村瓜农愿出十二枚银币买她的用水时段，恰好等于泥瓦匠的修屋报价；磨坊主只出八枚。她也能分一点水给菜畦，可那批蔬菜的价值低于前两项。日落前，梅林把三种选择都放在木闸柄旁。",
+        "梅林问水官，若把渠水留给自己，要付多少钱。水官说按旧约不收费。那一刻，把水引进桃园像是不花代价的决定。树苗是几个月前买的，沟也是她亲手挖的，她不愿看它们枯死。瓜农在黄昏前最后回来，把十二枚银币摆上矮墙，提醒她闸门一开，报价便作废。",
+        "梅林没有把所有未走的路相加。磨坊主的八枚钱与菜畦收成，不可能在同一份水已卖给别人后同时获得。眼前最好的可行替代，是瓜农的十二枚银币，足够修好屋顶。若她把闸门转向桃园，这便是那一夜阻止她得到的东西。凭证上的零价格，并不能让水流向两个地方。",
+        "她退回银币，打开桃园水道。水一点点浸黑每棵树根的浮土，午夜前，卷起的叶片不再继续收紧。下一场雨到来时，家里仍没凑出别处的修屋钱，厨房摆满接水盆，一块湿处泡坏一袋豆，一根天花板木条也要另花三枚钱更换。瓜农报价虽已失效，没有修屋的后果仍在继续。邻居说这些树是靠免费水救活的，梅林却把没有兑现的修屋报价夹进农事账。",
+        "桃树活了下来，当年仍没有结果。这个结局本身不能证明先前选择聪明或愚蠢；站在闸门前，梅林比较的是尚不确定的未来桃园，与当时确实能够换到的屋顶修理。她复盘时，只记下真正放弃的最好方案，没有把所有想象中的用途堆成一笔。",
+        "第二个旱季前，枝头冒出第一批桃花芽。梅林把十二枚银币的旧报价带到水闸，钉在新凭证下面。漏雨时用过的接水盆仍摆在厨房屋檐下，盆底留着一圈暗锈。她把两张纸都读过一遍，才握住木柄。"
       ],
       "conceptName": "Opportunity cost",
       "conceptNameZh": "机会成本",
       "explanationParagraphs": [
-        "Opportunity cost is the value of the next-best feasible alternative forgone when a choice is made. It can involve money, time, output, experience, or risk. Even a resource that is free to use has an opportunity cost when it is scarce and can serve only one purpose. It is not the sum of every unchosen possibility."
+        "Opportunity cost is the value of the best feasible alternative forgone when a choice is made. It may involve money, time, output, experience, or risk, and it exists even when a resource has no cash price if that resource is scarce and has competing uses. It is not the sum of every rejected possibility, nor can hindsight alone determine the earlier trade-off."
       ],
       "explanationParagraphsZh": [
-        "机会成本是一项选择所放弃的次佳可行方案的价值。它不只包括支付的钱，也可能是时间、产出、体验或风险；即使资源免费使用，只要它稀缺且只能用于一处，选择仍有成本。机会成本不是所有未选方案的总和。"
+        "机会成本是一项选择所放弃的最佳可行替代方案的价值，可能表现为金钱、时间、产出、体验或风险。即使资源没有现金价格，只要它稀缺且用途互斥，选择仍有成本。机会成本不是所有未选方案的总和，也不能只凭事后结果判断当时的取舍。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -304,29 +318,33 @@
       "fieldTitleZh": "经济学",
       "title": "The Tenth Boat",
       "titleZh": "第十艘船",
-      "summary": "The first nine ferries earn money, so their owner assumes the tenth should not remain on shore.",
-      "summaryZh": "前九艘渡船都赚了钱，船主便认定第十艘也不该留在岸边。",
+      "summary": "Nine full boats make a festival profitable, but none of their earnings can decide whether one more boat should leave.",
+      "summaryZh": "九艘满载渡船让灯节大赚，可它们的收益没有一枚能够替第十艘船作决定。",
       "storyParagraphs": [
-        "For three nights of the Lantern Festival, the ferry landing overflowed with travellers. Owner Lusen sent out nine boats, each full and earning far more than on an ordinary evening. One old vessel remained at the bank. He wanted all ten boats carrying lanterns so that this would be remembered as the ferry's busiest year.",
-        "The tenth boat had no regular crew. Lusen would have to pay people who had already worked all day. The tide was turning faster, while only scattered passengers remained. His bookkeeper reminded him that the excellent earnings of the first nine boats would not pay the extra crew, lamp oil, and night risk of the next one.",
-        "Lusen still ordered the old boat pulled to the water. The crew named their overtime price, and the repairer found a mooring line that had to be replaced. Half the waiting passengers decided to travel in the morning. The money from this one trip had fallen below the cost of sending it safely.",
-        "Looking at nine strings of lights moving across the river, Lusen removed the lantern just hung on the old boat. On the second evening, when more passengers arrived, he compared what one additional trip could carry with what it would require and then launched the tenth boat.",
-        "After the festival, the accounts of the first nine vessels were not used to prove that every trip was worthwhile. The old boat's lantern hung beside a page of its own."
+        "On the first night of the Lantern Festival, Lusen's ferry landing filled before dark. He launched nine boats, each carrying twelve passengers at two coins apiece. For a regularly crewed boat, the extra crew share and lamp oil for one crossing cost ten coins. Every one of the nine brought in twenty-four and cost ten to send, so Lusen hung a gold tassel beside each completed line in the ledger. He wanted ten tassels before midnight.",
+        "The tenth boat was older and had no scheduled crew. Seven travellers remained on the bank. Their fares would bring fourteen coins. To make that particular crossing, Lusen had to pay eight coins in overtime, two for oil, and five to replace a worn mooring rope before departure: fifteen coins in all. The nine earlier boats had earned a handsome total, but their receipts would not change the seven fares or the safety work required now.",
+        "Lusen counted the average profit across all ten planned boats and found that the festival would still look excellent. He ordered the old boat pulled forward. Then two waiting travellers decided to stay overnight, reducing possible fares to ten coins. The crew's overtime did not fall, and the rope did not become less worn. The next crossing, considered on its own, had grown worse even while the day's total remained good.",
+        "A town official urged him to launch anyway so no visitor could say the harbour lacked capacity. Lusen took the tenth lantern down and stopped the festival record at nine boats. He removed the tenth lantern, paid for beds at a dockside inn, and left the old boat tied up. The refunds and complaints were real costs, but smaller than sending an underfilled boat whose additional receipts did not cover the additional safe operating cost.",
+        "On the second night, twelve travellers were waiting when the same decision returned. Fares now offered twenty-four coins. Overtime, oil, and the required rope still totalled fifteen. Lusen replaced the rope and launched. The boat itself had not become inherently worthwhile; the added trip was worthwhile under a different number of passengers. When a late thirteenth traveller arrived, capacity prevented another fare from being added to that crossing.",
+        "The festival closed with ten boats used, though not on the night Lusen had planned. He entered each crossing on a separate line: added passengers and fares on the left, added crew, oil, and required repair on the right. Total revenue remained at the bottom of the page, useful for judging the whole festival but not as proof that every possible trip should run.",
+        "The tenth lantern hung beside the two dated lines. On the first, its tassel lay crossed out above fourteen and fifteen. On the second, it was fastened beside twenty-four and fifteen. The same lantern had waited for a different comparison."
       ],
       "storyParagraphsZh": [
-        "灯节三日，渡口挤满旅客。船主陆森先后开出九艘船，每艘都坐满，赚来的钱远高于平日。岸边还有一条旧船，他想把十艘船全部挂上灯，好让今年成为渡口最兴旺的一年。",
-        "第十艘船没有固定船员，需要从已经工作整天的人里加钱请人。潮水也开始转急，只剩零散旅客等候。账房提醒他，前九艘的总收益再好，也不会替第十艘支付额外船员、灯油和夜航风险。",
-        "陆森仍让人把旧船拖到水边。船员报出加班价，修船匠又发现一根缆绳必须更换。等候的旅客中，一半决定明早再走。第十艘可能收到的钱，已经少于让它安全开出的花费。",
-        "陆森看着河面上九串移动的灯，解下旧船刚挂好的灯笼。第二晚旅客增多时，他重新比较这一趟能多带多少人、需要多付什么，才让第十艘离岸。",
-        "灯节结束后，九艘船的账没有被拿来证明任何一趟都值得开。旧船的那只灯笼单独挂在最后一页旁。"
+        "灯节第一夜，陆森的渡口天黑前便挤满旅客。他先后开出九艘船，每艘载十二人，每人船资两枚。正常排班下，一艘船多跑一趟所需的船员分成和灯油共十枚。九艘船每艘收入二十四、支出十枚，陆森便在账簿每条完成记录旁挂一根金穗。他想在午夜前凑齐十根。",
+        "第十艘船较旧，也没有排班船员。岸边只剩七名旅客，船资共十四枚。若让这一趟安全开出，陆森要付八枚加班钱、两枚灯油钱，还必须花五枚换掉磨损的系船绳，合计十五枚。前九艘已经赚下可观总数，可那些收入不会改变眼下七人的船资，也不会替旧船完成必要修理。",
+        "陆森把计划中的十艘平均利润算了一遍，整个灯节仍然很好看，于是叫人把旧船拖向水边。就在这时，两名旅客决定住一晚，可能收入降到十枚；船员加班价没有下降，旧绳也没有变结实。新增这一趟变得更不划算，全天总账却依旧漂亮。",
+        "镇官催他照常开船，免得外地人说港口运力不足。陆森摘下第十盏灯，让节庆记录停在九艘，也开始退还余下旅客的订金。他摘下第十盏灯，为他们付了码头旅店费用，把旧船继续系在岸边。退款与抱怨都是代价，却仍小于一次新增收入无法覆盖新增安全支出的航行。",
+        "第二夜，同一个问题又回来了，这次有十二人在等。船资是二十四枚，加班、灯油和换绳仍合计十五枚。陆森换掉旧绳，让船离岸。并非这艘船本身忽然值得开，而是新增一趟在新的乘客数量下值得。第十三名旅客迟来一步，船已满载，无法再给这一趟增加船资。",
+        "灯节结束时，第十艘船确实开过，却不是陆森原定的那一晚。他把每次航行单列一行：左边写新增乘客和船资，右边写新增船员、灯油与必要修理。总收入仍保留在页底，可以评价整个灯节，却不能拿来证明每一趟可能的航行都该发生。",
+        "第十盏灯挂在两条日期旁。第一条上，十四与十五的上方压着一道叉；第二条上，它系在二十四与十五旁边。同一盏灯，等到的是另一组比较。"
       ],
       "conceptName": "Marginal analysis",
       "conceptNameZh": "边际分析",
       "explanationParagraphs": [
-        "Marginal analysis compares the additional benefit and additional cost of increasing or reducing an activity by one unit from its current level. The relevant decision concerns the next unit, not past totals or averages. As capacity, timing, risk, and demand change, the value and cost of one more unit change as well."
+        "Marginal analysis compares the additional benefit and additional cost of one more or one fewer unit at the current level. Past totals and averages cannot decide the next unit when demand, capacity, time, or risk differs. Continue while the relevant marginal benefit exceeds marginal cost, subject to constraints and effects that prices may not fully capture."
       ],
       "explanationParagraphsZh": [
-        "边际分析比较在当前水平上再增加或减少一个单位所带来的额外收益与额外成本。决策取决于“下一单位”而非过去总量或平均表现。随着容量、时间、风险与需求变化，新增一单位的价值和成本也会改变。"
+        "边际分析比较在当前水平上再增加或减少一个单位带来的额外收益与额外成本。若需求、容量、时间或风险变化，过去总量和平均表现不能替下一单位作决定。通常在相关边际收益高于边际成本时继续，同时还要考虑价格未充分反映的约束与影响。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -346,29 +364,29 @@
       "fieldTitleZh": "经济学",
       "title": "The Price That Travelled Downstream",
       "titleZh": "顺流而下的价格",
-      "summary": "An upstream dyehouse offers the lowest prices in town while people downstream begin paying for the same dye.",
-      "summaryZh": "上游染坊把布价降到全镇最低，下游的人却开始为同一桶染料付账。",
+      "summary": "An upstream dyer saves thirty coins by removing a settling pit, while the river sends a larger bill to people outside his contract.",
+      "summaryZh": "上游染坊拆掉沉淀池省下三十枚钱，河水却把更大的账单送给了契约之外的人。",
       "storyParagraphs": [
-        "Mr He owned an upstream dyehouse. After removing its settling pond, he could finish cloth faster and charge less than his rivals. Orders increased, workers kept their jobs, and customers praised the business. Dark water left through a rear ditch and entered the river without appearing on any invoice.",
-        "Downstream launderers found grey marks on white cloth and bought more clean water. Vegetable growers paid workers to clear dye residue from irrigation channels. Mr He said that he had already paid for dye, fuel, and wages. The downstream losses were not purchases he made and did not reduce his orders.",
-        "One day, the town council placed three account books together: the dyehouse's savings, the launderers' higher water costs, and the growers' clearing bills. The low price had not removed those expenses. It had sent them downriver to people who had taken no part in the dyeing.",
-        "The council required the settling pond to be restored and charged for discharged dye water. Cloth prices rose slightly. Mr He feared losing business, but every dyehouse faced the same rule. The number of downstream clearings began to fall each month.",
-        "At month's end, Mr He added a new line between dye and fuel in his ledger: river treatment."
+        "He owned an upstream dye house that was one missed contract away from dismissing six workers. To win a large black-cloth order, he bypassed the settling pit, which normally held rinse water while residue sank. The change saved thirty coins a month and finished each batch a day sooner. The price fell, orders returned, and wages were paid. Workers could leave before dark instead of emptying the pit. Dark rinse water left through the rear channel. In his ledger, dye, wood, and labour each had a line; the water carried no invoice back through his door.",
+        "Downstream, laundry owner Sanni began buying extra clean water because white sheets dried with grey marks. Her receipts added eighteen coins in one month, and two customers withheld payment until she washed their linen again. Farmer Du paid sixteen to clear dye sediment from his irrigation screen and lost half a morning whenever the channel stopped. They carried a stained sheet, a clogged screen, and both sums upstream. He showed them his own book: he had purchased no laundry service and hired no ditch worker. Restoring the pit would lose the fast contract, so he treated their costs as troubles beside his business rather than costs produced by it.",
+        "The town council placed three ledgers on one table. The dye house had saved thirty coins; Sanni and Du had paid thirty-four between them, not counting work they performed themselves. Low cloth prices had not erased the expense. The process had shifted part of it along the river to people who neither ordered the cloth nor agreed to the discharge. Voluntary promises failed twice: during rush weeks the rear gate reopened and downstream receipts rose again.",
+        "A new rule charged for untreated discharge and required each dye house to use a working pit. He led his delivery cart to market and sold it to pay for rebuilding the pit. He sold the cart, lost the fastest buyer, and kept four of the six workers while the other two found places at compliant shops. For a month, finished cloth travelled by hired wagon and arrived later. Each evening the rented driver waited at the door and charged extra for every quarter hour, so the workers stopped their machines early to load. Cloth prices rose. Sanni's clean-water purchases and Du's clearing bills then fell month by month. Measurement remained imperfect, and the town kept a process for disputing charges rather than pretending every harm had one obvious price.",
+        "At the next closing of accounts, He wrote a new line between dye and wood: water treatment. Beside it he pasted one of Sanni's old grey-stained receipts. The paper no longer arrived by accident from downstream; it had a place in the cost of making the cloth."
       ],
       "storyParagraphsZh": [
-        "何老板的染坊在上游。他省去沉淀池后，染布更快，价格也比别家低。订单增加，工人保住了饭碗，顾客都说他经营得好。染完的黑水从后沟流进河里，没有出现在任何一张账单上。",
-        "下游洗衣人发现白布总带灰斑，只得多买清水。菜农的灌溉沟堵满染渣，每月都要雇人清理。何老板说自己已经支付染料、柴火和工钱，下游的损失并不由他购买，也没有减少他的订单。",
-        "一天，镇议会把三本账摆在一起：染坊节省的钱、洗衣人增加的水费、菜农清沟的工钱。低价并没有消除那些花费，只是把它们沿河送给了没有参与染布的人。",
-        "议会要求染坊修回沉淀池，并按排出的染水缴纳清理费。布价上涨了一些，何老板担心订单流失，却很快发现其他染坊也受同样规则约束。下游的清沟次数逐月减少。",
-        "月底结账时，何老板第一次在染料与柴火之间添上了一行：河水处理。"
+        "何老板的上游染坊再丢一份订单，就得辞退六名工人。为了拿下大宗黑布，他绕开原本让染渣沉底的水池，每月省三十枚钱，每批还能早一天交货。布价下降，订单回来，工钱也按时发出；工人不必天黑后再清池。染后的黑水从后沟进入河里。何老板的账上，染料、柴火和人工各占一行，河水却从未把账单送回门内。",
+        "下游洗衣人三娘开始额外买清水，因为白床单晒干后总带灰印，一个月收据增加十八枚，还有两名顾客等她重洗后才肯付钱。菜农杜叔花十六枚清理灌溉滤网，每次水沟停流又损失半个上午。他们带着染灰的床单、堵塞的滤网和两笔账来到上游。何老板翻开自己的账本：他没有购买洗衣，也没雇人清沟。修回沉淀池会丢掉快单，于是他把那些损失看成生意旁边的麻烦，而非这门生意制造的成本。",
+        "镇议会把三本账摆上同一张桌。染坊省下三十枚，三娘和杜叔已支付三十四枚，还不含他们亲手多做的活。低布价并没有消除费用，只把其中一部分顺流推给了没有订布、也没有同意排水的人。两次自愿承诺都失败了：赶工周一到，后沟闸门又会打开，下游收据随即增厚。",
+        "新规要求染坊使用有效沉淀池，未经处理的排水另缴清理费。何老板把送货车牵到市场卖掉，用所得重建沉淀池。他卖了车，失去最快的买家，六名工人留下四名，另两人转去已经合规的作坊。整整一个月，成布要雇车运送，总比从前晚到。每天黄昏，雇来的车夫在门口等装货，多等一刻便另加钱，工人只得提前停机搬布。布价上涨；三娘买水和杜叔清沟的费用则逐月下降。损害仍难精确计价，镇里保留了申诉程序，没有假装每项影响都有唯一价格。",
+        "下一次结账，何老板在染料与柴火之间添了一行：水处理。旁边贴着三娘从前一张染灰的收据。那张纸不再从下游偶然漂来，而是被放进了制作黑布的成本里。"
       ],
       "conceptName": "Negative externality",
       "conceptNameZh": "负外部性",
       "explanationParagraphs": [
-        "A negative externality occurs when an activity imposes costs on third parties who did not take part in the decision, and those losses are not fully reflected in the producer's price. Private cost then falls below total cost, encouraging too much harmful activity. Regulation, charges, liability, technology, and collective governance can respond, though measurement, enforcement, fairness, and irreversible harm remain important."
+        "A negative externality arises when an activity imposes costs on third parties who did not choose it and those losses are not fully included in the decision-maker's price. Private cost then understates social cost, so activity may be excessive. Regulation, charges, liability, bargaining, technology, or collective governance may help, each with measurement, enforcement, distributional, and irreversibility limits."
       ],
       "explanationParagraphsZh": [
-        "负外部性发生在一项活动把成本施加给未参与决定的第三方，而这些损失没有充分进入制造者面对的价格。此时私人成本低于整体成本，活动可能过量。监管、收费、责任安排、技术与共同治理都可回应，但还需考虑测量、执行、公平和不可逆伤害。"
+        "负外部性发生在一项活动把成本施加给未参与决定的第三方，而这些损失没有充分进入决策者面对的价格。此时私人成本低于社会成本，活动可能过量。监管、收费、责任、协商、技术或共同治理都可回应，但各自受测量、执行、分配公平和不可逆损害限制。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -388,29 +406,31 @@
       "fieldTitleZh": "政治科学与公民学",
       "title": "The Last Section of the Sea Wall",
       "titleZh": "海堤最后一段",
-      "summary": "Four villages all want the completed sea wall but leave its final section to whoever is most likely to begin.",
-      "summaryZh": "四个村庄都愿意享受完整海堤，却把最后一段留给了最可能先动手的人。",
+      "summary": "Four villages all need the final reach of a sea wall, yet each has a sound reason to let another village lift the stones.",
+      "summaryZh": "四个村庄都需要海堤最后一段，可每个村都能说出让别人先搬石头的合理理由。",
       "storyParagraphs": [
-        "Four villages around the bay repaired the sea wall in front of their own land. Only one section at the river mouth remained open. It belonged to no village but protected every field. The eastern village said it had already moved the most stone. The western village said it lay farthest from the gap. North and south waited to see who would send workers first.",
-        "Every village agreed that a complete wall would help, and each feared that if it contributed, others would benefit for nothing. Several meetings produced promises but little work. Before the next high tide, a few stones lay beside the gap, with too few people to raise them.",
-        "A smaller tide entered the rice fields, though the damage remained limited. The villages then placed their work records on one shared board. Stone and labour days were assigned according to protected land and available workers. Anyone absent supplied grain instead, and completion was posted each evening.",
-        "Some still tried to work half a day less, while others challenged the shares as unfair. The recorder adjusted one household that truly had no available worker; every other missing day remained visible on the board. By the sixth day, the final section needed one capstone.",
-        "Representatives of all four villages lifted it together. After the stone settled, they did not erase the names from the board. They hung it inside the shared wall house."
+        "Four villages around the bay had repaired the wall in front of their own fields. Only the river-mouth reach remained open. It belonged to no village, yet if the spring tide entered there, water would spread behind every repaired section. East Village said it had already hauled the most stone. West lay farthest from the gap. North needed its boats for fishing, and South was short of adults after harvest. Every village wanted a closed wall before the equinox; none wanted to supply the labour that neighbours could enjoy without paying for.",
+        "At three meetings, representatives promised to send 'whoever was free'. The promise sounded cooperative and required no household to commit first. On work mornings, a few carts left stone beside the gap, but crews waited to see whether the other villages had arrived. By noon they took their tools home. A small tide then crossed the opening and salted two rice fields. The damage was limited enough for each village to say the next one might still do more.",
+        "The fourth meeting produced a wooden board rather than another promise. Contribution shares were based on protected acreage and available labour: stone, workdays, or grain to hire substitutes. Each delivery and completed half-day would be marked publicly. Missing shares became grain owed to the common store. East Village still paid the largest share, but it could now see what the others were bound to provide and what happened if they did not.",
+        "The board did not end conflict. A northern boat crew skipped a day when fish appeared offshore; two households tried to mark a full day after leaving at noon. A southern widow had no adult worker and objected to a share calculated from her land alone. The recorder reduced her labour duty after neighbours confirmed the constraint and replaced it with a smaller grain amount. The boat crew's missing day remained visible. Flexibility answered real differences without turning every excuse into an invisible exemption.",
+        "On the fifth day, East Village's leader threatened to withdraw because his carts had again carried the heaviest blocks. Walking away would save his people three days of work, while any completed wall would protect them whether they returned or not. He read the marked board, saw that West's grain had already hired two extra hauliers and North's debt was due after the fish run, and kept the carts moving. The village gave the three days. North later paid its missing share in rope and labour.",
+        "At the end, one capstone required people from all four sides to guide it into place. When it settled, they did not erase the columns. The board was hung inside the common wall house beside a jar of salt taken from the flooded field. At the next repair season, each household wrote a name beneath the old marks before taking a coil of rope."
       ],
       "storyParagraphsZh": [
-        "海湾四村各自修好了门前的海堤，只剩河口一段没有合拢。那一段不属于任何村，却保护所有田地。东村说自己已经搬石最多，西村说离缺口最远，南北两村都等着看别人是否先出人。",
-        "每个村都同意完整海堤有好处，也都担心自己出工后，其他村会白白受益。几次议事只留下口头承诺。涨潮前，缺口旁堆着少量石头，却没有足够的人把它们垒起来。",
-        "一次小潮灌进稻田，损失还不算大。四村这才把各自出工记录摆在同一块木板上，按受保护田地和可用劳力分配石料与工日；缺席者要用粮食补足，完成情况每天公开。",
-        "仍有人想少做半天，也有人争论分配不公。记录员当场调整了一户确实无人可出的份额，其余欠工则清楚留在木板上。到第六天，最后一段只差一块封顶石。",
-        "四村代表一起抬起那块石头。石头落下后，他们没有擦掉木板上的名字，而是把它挂进了共同的堤屋。"
+        "海湾四村各自修好了门前的海堤，只剩河口一段没有合拢。那一段不属于任何村，可春潮若从那里进入，海水会绕到所有已修堤段背后。东村说自己已经搬石最多，西村离缺口最远，北村要留船捕鱼，南村秋收后又缺壮劳力。四村都希望春分前封住海堤，却都不愿承担一份邻村可以不付代价享用的劳动。",
+        "连续三次议事，代表都承诺“有空便来”。这句话听着合作，却不要求任何一户先作具体承诺。开工清晨，几辆车把石头卸在缺口旁，工人又等着看别村是否出现，午前便各自收工具回家。一次小潮越过缺口，盐水泡坏两块稻田。损失还不够大，每个村仍能说下一回该由别人多做。",
+        "第四次议事没有再留下口头保证，而是立起一块木板。各村按受保护田地和可用劳力分担，可以交石、出工日，或交粮雇替工；每车材料和每半日劳动都当众标记，缺额则成为欠共同粮仓的粮。东村份额仍最大，可它终于能看见其他村必须交什么，以及不交会留下怎样的欠账。",
+        "木板没有消除争执。北村船队遇上鱼群，少来一天；两户人家中午离开，却想记满工。南村一名寡妇家中没有成年劳力，反对只按土地算份额。记录人经邻里确认后减去她的工日，改成较少粮食；北村缺的那天却仍清楚挂着。规则能够照顾真实差异，却不把每个借口都变成看不见的豁免。",
+        "第五天，东村首领眼看自家车队再次搬来最重的石头，威胁退出。离开可以省下三天劳力；别人若最终修好海堤，东村照样受保护。他翻看木板，发现西村交的粮已雇来两名搬运工，北村欠项也定在鱼汛后补，便让车继续走。东村付出那三天，北村后来用绳索和工时还清缺额。",
+        "封顶石需要四面的人同时牵绳，才落进缺口。石头稳住后，谁也没有擦掉木板上的栏。它被挂进共同堤屋，旁边放着一小罐从受淹稻田取来的盐。下一次修堤季到来时，各户先在旧标记下写上名字，再领走一卷绳索。"
       ],
       "conceptName": "Collective action problem",
       "conceptNameZh": "集体行动困境",
       "explanationParagraphs": [
-        "A collective action problem occurs when everyone can benefit from a shared outcome, yet individual incentives, uncertainty, coordination costs, or opportunities to free ride prevent sufficient contribution. Solutions usually change information, monitoring, trust, contribution rules, and enforcement rather than merely appealing for cooperation. Fair, adaptable arrangements also matter for durability."
+        "A collective action problem arises when people can share the benefit of a common outcome, yet individual incentives, uncertainty, coordination costs, or free-riding prevent sufficient contribution. Solutions often change information, monitoring, trust, contribution rules, sanctions, and repeated interaction rather than merely urging goodwill. Perceived fairness and adjustment for genuine differences affect whether rules endure."
       ],
       "explanationParagraphsZh": [
-        "集体行动困境发生在人人都能从共同结果受益，但个体激励、协调成本、不确定性或搭便车机会阻止足够贡献。解决通常需要改变信息、监督、信任、贡献规则与执行方式，而非只呼吁合作。公平且可调整的安排也会影响规则能否维持。"
+        "集体行动困境发生在人人都能分享共同结果的收益，但个体动机、不确定性、协调成本或搭便车机会阻止足够贡献。解决通常要改变信息、监督、信任、贡献规则、制裁和重复互动，而非只呼吁善意。规则是否公平，并能否照顾真实差异，也影响合作能否持续。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -430,29 +450,33 @@
       "fieldTitleZh": "政治科学与公民学",
       "title": "Three Keys to the Granary",
       "titleZh": "三把钥匙的粮仓",
-      "summary": "The city's public grain is secured by three keys, and drought makes people resent how slowly they open the door.",
-      "summaryZh": "城里的公粮被三把钥匙锁住，旱年到来时，人们第一次嫌它们开门太慢。",
+      "summary": "A drought makes three locks feel intolerably slow, until one list shows what speed without an independent key would release.",
+      "summaryZh": "旱灾让三道锁显得慢得难以忍受，直到一份名单显出失去独立钥匙的速度会放出什么。",
       "storyParagraphs": [
-        "An earlier grain officer had once set levies, opened the store, and punished objections by himself. He eventually fled with half the grain. The city then fitted the public granary with three locks. The council decided when grain could be released, an officer carried out distribution, and the court reviewed disputes. No one could open the door alone.",
-        "In ordinary years, few complained. During a drought, the southern district requested an early release, but each body checked the case separately. The queue outside the granary grew. The mayor demanded all three keys and promised to open the store that day.",
-        "The grain officer also wanted speed, but found several shops belonging to the mayor's supporters on the list. The court paused distribution while the council published the damage records and removed ineligible names. The delay lasted another day, after which the granary opened under a corrected list.",
-        "The three bodies then created a time-limited emergency process. Two council representatives could authorise a small initial release, the officer had to record it immediately, and the court reviewed it the next day. The keys remained separate, but the steps could no longer drift without limit.",
-        "When the procedure was first used, the three keys turned in order. For every lock, a recorder wrote a name and time beside the door."
+        "The old grain officer had once set collection rules, opened the public store, and punished anyone who challenged his account. He eventually fled with half the reserve. The city rebuilt the granary with three locks. The elected council set eligibility and quantities; the granary steward issued sacks and kept inventory; an independent tribunal heard complaints and checked whether rules had been followed. Each office held one key. No official could hold the rulebook, the store key, and the appeal bench alone.",
+        "In ordinary years, the locks caused little trouble. During a severe drought, families queued before dawn while the council verified damaged districts, the steward checked stock, and the tribunal reviewed disputed names. The first release took an extra day. Market grain rose in price before the public sacks arrived. The mayor stood before the queue and demanded all three keys for one week, promising to open the doors before sunset.",
+        "The steward wanted speed too. While preparing the mayor's list, she found five prosperous shops owned by campaign supporters among the drought households. The mayor called them essential suppliers. Without a separate rule-maker or reviewer, his explanation could have served as permission and judgement. The steward refused to turn her key. The tribunal ordered the list posted, and residents identified two more names that did not meet the published conditions.",
+        "The pause cost another morning. People in line were angry, and the council could not pretend delay was harmless. It removed the ineligible shops and released the first grain that afternoon. Then the three offices built a limited emergency route instead of choosing between paralysis and one-handed control. Two council delegates could authorise a small, capped release; the steward had to record each recipient immediately; the tribunal reviewed the log the next day and could halt further use.",
+        "The first test came when a southern well failed. Under the emergency route, one cart of grain left within hours. The steward wrote quantities beside household marks, and the tribunal found one duplicate entry the next morning. That household did not lose its first ration, but the second claim was cancelled and the clerk's correction remained public. Fast action had a boundary, a record, and someone outside the execution office able to stop it.",
+        "The mayor disliked surrendering the week of unrestricted authority. He read the visible limits on his emergency role twice, then signed the new procedure. The city paid compensation from the council fund to the poorest households charged the higher market price during the first delay, making the cost of institutional slowness part of the public account rather than asking the queue to absorb it silently.",
+        "At the next release, the three keys turned at different moments. Beside each lock, the recorder wrote an office, a name, and a time. The writing did not hurry the three locks into one turn. It showed which hand had done what before the grain crossed the threshold."
       ],
       "storyParagraphsZh": [
-        "旧粮官曾独自决定征粮、开仓和处罚异议者，最后带着半仓粮逃走。此后，城里给公仓换了三把锁：议事会决定何时放粮，粮官负责发放，法庭审查争议。任何一人都不能单独开门。",
-        "平年里，这套办法很少有人抱怨。旱年到来后，南区请求提前放粮，三方却要分别核对。队伍在仓外越排越长，市长要求把三把钥匙都交给自己，保证当天开仓。",
-        "粮官也想快一点，却发现市长提交的名单里混入几家支持者的商铺。法庭暂停发放，议事会公开受灾记录，删掉不合条件的名字。等待多了一日，仓门最终按修正名单打开。",
-        "三方随后为紧急情况增加一套限时程序：议事会两名代表可以先批准少量放粮，粮官当场登记，法庭在次日复核。钥匙仍分开，步骤却不再无限拖延。",
-        "第一次使用新程序时，三把钥匙依次转动。每开一把锁，记录员就在门边写下一个名字和时间。"
+        "旧粮官曾独自制定征粮规则、开启公仓，还处罚质疑账目的人，最后带着半仓储粮逃走。城里重修粮仓，装上三把锁：民选议事会决定资格与数量，粮仓署负责发粮和库存，独立审理庭处理申诉并检查程序。三个机构各持一把钥匙。任何官员都不能一手拿规则簿，一手拿仓钥匙，还坐上申诉席。",
+        "平年里，很少有人抱怨这三道锁。严重旱灾到来后，家庭天未亮便排队，议事会仍在核实受灾区，粮仓署清点库存，审理庭检查争议名单。第一批粮晚了一日才出仓，公粮尚未送到，市价已上涨。市长站到队伍前，要求三把钥匙暂交自己一周，保证日落前开门。",
+        "粮仓署长也想快些。她整理市长名单时，却发现五家富裕商铺混在受灾家庭中，店主都是竞选支持者。市长说它们属于必要供应者。若没有独立的规则制定与审查，他的一句解释便既是许可，又是判决。署长拒绝转钥匙。审理庭要求公开名单，居民又指出两个不符合已公布条件的名字。",
+        "暂停又花掉一上午，队伍里的愤怒并非无理，议事会不能假装延迟没有代价。删去不合资格者后，第一批粮在当日下午发出。随后三方没有在瘫痪与独断之间二选一，而是另设限量紧急程序：两名议事代表可批准少量发放，粮仓署必须当场记录，审理庭次日复核，并能停止后续使用。",
+        "南区水井突然干涸，紧急程序第一次启用。一车粮数小时内出仓，署长把数量写在每户记号旁。第二天，审理庭发现一笔重复申领：该户第一份没有被追回，第二份却被取消，文书的改动也公开保留。快速行动有了上限、有记录，也有人能从执行机构之外按下停止。",
+        "市长不愿放弃一周不受限制的权力，把紧急角色受到的明确限制读了两遍，最后仍在新程序上签字。城里还从议事会经费中补偿最贫困家庭在首日延迟中多付的粮价，让制度变慢的成本进入公共账目，而不是由队伍悄悄吞下。",
+        "下一次放粮，三把钥匙先后转动。每道锁旁，记录人都写下机构、姓名和时间。那些字没有催着三道锁一齐转动，却把粮食跨过门槛以前每只手做过什么留了下来。"
       ],
       "conceptName": "Separation of powers",
       "conceptNameZh": "权力分立",
       "explanationParagraphs": [
-        "Separation of powers allocates rule-making, execution, and review of disputes to different institutions and uses checks to resist concentrated authority. It requires real independence, information, resources, and accountability. Separation is not complete isolation and can cause delay, so transparent, supervised coordination and emergency procedures also matter."
+        "Separation of powers allocates rule-making, execution, and adjudication among distinct institutions and uses checks to limit concentrated authority. It requires meaningful independence, information, resources, accountability, and defined coordination. Separation is not total isolation and may cause delay, so emergency powers need narrow scope, records, time limits, review, and remedies rather than unchecked consolidation."
       ],
       "explanationParagraphsZh": [
-        "权力分立把制定规则、执行决定与审查争议等职能配置给不同机构，并通过制衡限制权力集中。它需要真实独立、信息、资源与问责程序。分立并非完全隔绝，也可能造成延迟，因此还需设计透明而受监督的协作和紧急机制。"
+        "权力分立把规则制定、执行和争议裁判配置给不同机构，并以制衡限制权力集中。它需要真实独立、信息、资源、问责和明确协作。分立并非完全隔绝，也可能造成延迟，因此紧急权力仍需限定范围、留下记录、设置期限、接受复核并提供救济。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -472,29 +496,29 @@
       "fieldTitleZh": "政治科学与公民学",
       "title": "The Same Two Coins",
       "titleZh": "同样的两枚钱",
-      "summary": "Two collectors stand at the bridge and demand the same amount, but people hand over the coins with different expressions.",
-      "summaryZh": "桥口先后来了两名收税人，索要的数目相同，人们交钱时的神情却完全不同。",
+      "summary": "Two toll collectors demand the same amount for the same bridge, but only one can answer who authorised the box and how it will leave.",
+      "summaryZh": "两名收费人为了同一座桥索取同样数目，却只有一人能回答木箱由谁授权，又将在何时撤走。",
       "storyParagraphs": [
-        "After a flood damaged the stone bridge, its temporary keeper began charging two coins at the entrance on his own authority. He said the money would pay for repairs and barred anyone who refused. No one knew how long the charge would continue or saw an account book. Merchants paid because delay would cost them business.",
-        "A month later, the keeper had bought stone and the bridge was passable. He believed the result proved his right to keep collecting. Yet townspeople still took longer routes at night, and some paid only because guards with sticks stood behind him.",
-        "The council removed the private sign, published the repair budget, and asked elected district representatives to debate it. Some wanted three coins per cart; others wanted wealthy traders to pay more. The final rule still charged two coins, but only for six months. Accounts appeared each week, and overcharging could be appealed to an independent reviewer.",
-        "On the first day of the new rule, the same merchant again placed two coins at the bridge. He did not enjoy paying, but checked the date on his receipt and knew where a challenge could be made. The collector still exercised power, but its source had changed.",
-        "After six months, the box was removed as promised. Its final two coins were poured publicly into the repair account."
+        "After a flood damaged the stone bridge, its temporary guard set a box at the entrance and demanded two coins from every cart. He promised to buy repair stone and barred anyone who refused. Traders paid because the alternative was a half-day detour and two armed guards stood behind him. He marked paid axles in charcoal but issued no receipt, so the same cart could be charged again after rain erased the mark. No notice said who had authorised the toll, how long it would last, or where complaints could go. The guard did purchase stone, and within a month the bridge was safer: wheels no longer sank into loose holes, and market carts crossed faster. He took the useful result as proof that he had acquired a right to continue commanding payment.",
+        "Yet carts began crossing at night or using a muddy ford. Some traders paid while cursing; others paid because the sticks behind the box made refusal expensive. Actual obedience showed that the guard could obtain coins, not that people accepted his authority as rightful. When he raised the toll to three without explanation, a crowd pulled down the sign. The council removed the private box, but the unfinished parapet still needed money.",
+        "Rather than install another collector immediately, elected district delegates published the repair estimate and held an open meeting. One group proposed three coins per cart; another wanted landowners to pay; small traders demanded a fixed end date. A widow who crossed on foot asked whether her basket should be treated like a merchant's wagon. Deliberation delayed construction through one market day, costing merchants business. The final rule returned to two coins, lasted six months, posted weekly accounts, protected foot travellers, and allowed challenges before an independent reviewer. Not everyone supported the choice, but everyone could identify its source, limits, reasons, and route of contest.",
+        "On the first morning, the same vegetable merchant again placed two coins in a box. She still disliked the charge. This time she checked the date on her receipt and pointed out that one axle had been counted twice; the collector corrected it rather than calling the guards. A good outcome, a vote, a fair procedure, consent, and protected rights did not become one simple test, but together they changed the kind of claim the toll made on those who crossed.",
+        "At the end of six months, the collector locked the box and removed it as the rule required. The last two coins were poured into the published repair account in front of the delegates. The old private sign lay underneath the table; its amount was the same, but it carried no date on which anyone had promised to stop."
       ],
       "storyParagraphsZh": [
-        "洪水冲坏石桥后，临时守桥人擅自在桥头收两枚钱。他说钱会拿去修桥，拒绝交钱的人不能通过。没人知道收费要持续多久，也没人见过账本。商贩怕耽误生意，只得照付。",
-        "一个月后，守桥人果然买了石料，桥也能走了。他认为成果已经证明自己有权继续收费。可镇民仍在夜里绕远路，有人付钱只是因为他身后站着持棍的守卫。",
-        "镇议会撤掉私设木牌，公开桥梁预算，让各区选出的代表讨论。有人主张每车三枚，有人要求富商多付。最终通过的仍是每车两枚，期限六个月，账目每周张贴，超收可向独立审理人申诉。",
-        "新规第一天，同一名商贩又把两枚钱放在桥口。他并不喜欢缴费，却停下来核对收据上的日期，也知道自己能去哪里质疑。守桥人手中仍有权力，权力的来处却已经不同。",
-        "六个月后，收费员按规定拆下木箱。箱底最后两枚钱被当众倒进修桥账袋。"
+        "洪水冲坏石桥后，临时守桥人在入口摆了一只木箱，向每辆车索取两枚钱，说要购买修桥石料，拒绝者不得通行。商贩绕路要多花半日，木箱后又站着两名持棍守卫，只得照付。守桥人只用炭笔在车轴上做已付记号，不给收据；下雨抹掉黑痕后，同一辆车还会再被收费。没有告示说明收费由谁授权、持续多久或去哪里申诉。守桥人确实买来石头，一个月后桥也更安全：车轮不再陷进碎坑，赶集的货车过桥时也确实快了一些。他便把有用结果当成了继续命令所有人付钱的权利。",
+        "车夫却开始夜里过桥，或冒险走泥泞浅滩。有人交钱时咒骂，有人只是因为拒绝的代价是守卫手里的棍。服从只能证明守桥人收得到钱，不能证明人们承认他的权威正当。后来他未经解释把费用涨到三枚，人群推倒木牌。议事会撤走私设箱子，可未修完的桥栏仍需要钱。",
+        "各区民选代表没有立刻换一名收费人，而是公布修桥预算，召开公开会议。有人主张每车三枚，有人要求地主承担，小商贩坚持写明期限，一名步行过桥的寡妇还问，自己的菜篮为何要按货车计算。讨论让工程迟了一个集市日，商人确实少做了一天生意。最终规则仍收两枚，限期六个月，每周张贴账目，步行者免收，争议可交独立审理人。不是所有人都赞成，但权力的来源、边界、理由和质疑入口都能被指出。",
+        "新规第一天，同一名菜贩又把两枚钱放进木箱。她仍不喜欢缴费，却先核对收据日期，又指出一根车轴被重复计算；收费人改了记录，没有叫守卫。有用结果、表决、程序公平、同意和权利保护并不能化成唯一尺度，可它们共同改变了这项收费向过桥人提出的服从理由。",
+        "六个月结束，收费人按规则锁箱、拆台。箱底最后两枚钱在代表面前倒入公开修桥账。旧木牌躺在桌下，数目同样是二，却没有写着任何人承诺停止的日期。"
       ],
       "conceptName": "Political legitimacy",
       "conceptNameZh": "政治合法性",
       "explanationParagraphs": [
-        "Political legitimacy asks what gives authority a justified right to issue binding decisions and what might ground a duty to comply. Consent, fair procedure, public reason, rights protection, and effective provision may all matter. People's actual belief in legitimacy and an authority's normative justification overlap but are not identical; legitimacy is also distinct from force or popularity."
+        "Political legitimacy asks why an authority has a rightful claim to make binding decisions and why people may owe compliance. Consent, fair procedure, public reasons, effective outcomes, and rights protection may all matter. Belief that rule is rightful and its normative justification are related but distinct; legitimacy is not identical to popularity, effectiveness, legality, or coercive capacity."
       ],
       "explanationParagraphsZh": [
-        "政治合法性追问权威凭什么拥有作出有约束力决定的正当权利，以及服从义务可能来自何处。有效成果、同意、公平程序、公共理由、权利保护等都可能相关。人们实际相信权威正当，与它在规范上是否真正正当，是相连但不同的问题；合法性也不等于单纯强制或受欢迎。"
+        "政治合法性追问权威凭什么拥有作出有约束力决定的正当权利，以及人们为何可能负有服从义务。同意、公平程序、公共理由、有效结果和权利保护都可能相关。人们事实上相信权威正当，与其规范上是否有充分理由既相关又不同；合法性也不等于受欢迎、有效、合法或有强制力。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -514,29 +538,31 @@
       "fieldTitleZh": "心理学",
       "title": "The Bridge That Improved Only in the Record",
       "titleZh": "只在记录里变好的桥",
-      "summary": "After an engineer signs the approval, the cracks do not shrink, but the words describing them become gentler each week.",
-      "summaryZh": "工程师签下验收单后，桥上的裂缝没有缩小，记录里的形容词却一天比一天温和。",
+      "summary": "After a careful engineer signs a doubtful bridge open, the cracks keep widening while his descriptions grow gentler.",
+      "summaryZh": "一名素以谨慎著称的工程师签字开放一座可疑桥梁，此后裂缝不断变宽，记录里的形容却越来越温和。",
       "storyParagraphs": [
-        "Engineer Wei Cen was known for caution. If the new bridge opened by month's end, his bonus would repay a workshop loan. Before approval, he found three fine cracks in a pier and still signed 'fit for passage', telling himself they were only surface shrinkage.",
-        "After opening, an apprentice measured the cracks each week. The numbers increased slowly. Wei Cen changed 'widening' in the record to 'seasonal movement' and removed the words 'immediate inspection required'. He did not want to become a careless person. Each altered phrase made his signature and his view of himself easier to hold together.",
-        "Before the rainy season, a small corner of stone fell into the river. No one was hurt, but the mayor requested the original records. The apprentice produced the first measurement sheet she had kept. In Wei Cen's own hand it said, 'If widening continues, close the bridge.'",
-        "Wei Cen remained in his office until dark. He could argue that the fallen stone was unrelated, or admit that he had spent the weeks after approval finding reasons for his earlier decision. The next morning, he closed the bridge himself, returned the bonus, and restored every softened phrase.",
-        "When repairs began, the first measurement sheet was pinned beside the bridge. Wei Cen did not cut away his signature."
+        "Engineer Weicen had built his reputation on refusing unsafe shortcuts. His newest bridge carried a bonus large enough to repay the workshop loan if it opened before month's end. During final inspection he found three hairline cracks at one pier. Closing the site would cancel the bonus and expose how little cash remained. The cracks might be harmless surface shrinkage. Weicen signed 'open with monitoring', collected the bonus, and placed the first measurement sheet in the bridge ledger.",
+        "Each week an apprentice measured the lines. One widened from two marks on the gauge to three, then four. Weicen first wrote 'expansion', crossed it out, and replaced it with 'seasonal movement'. He compared the widest crack with a different bridge built from other stone and removed the sentence 'reinspect immediately'. Every edit had a plausible fragment behind it. Each also made his signature sit more comfortably beside the cautious engineer he believed himself to be.",
+        "When the apprentice brought a fifth measurement, Weicen asked him to use the driest part of the pier as the reference. The new page looked steadier. He began reading reports that supported surface shrinkage before opening the ones that warned about load. He also crossed the bridge at dusk, when fewer loaded carts made the stone feel quiet beneath him. He was not merely hiding evidence from others; the altered description and selected visits reduced the conflict he felt each time the original decision and the growing line appeared together.",
+        "Before the rainy season, a small stone corner broke away and fell into the river. No one was hurt, but the mayor requested the original records. The apprentice had kept a carbon copy of the first sheet. Under Weicen's signature it still read: 'If widening continues, close the bridge.' Weicen opened his mouth with the familiar explanations—the stone was unrelated, the copy only early caution—then saw that he had rehearsed them for weeks to protect the bonus already paid.",
+        "He spent the night restoring every crossed-out term in the ledger. The next morning he closed the bridge himself, returned the bonus, and told the lenders that repayment would be late. The first cart stopped before the wooden barrier he had set across the road. The workshop lost a municipal contract, and Weicen's name appeared in the public inquiry. Repairs later showed that water had entered one joint; the earlier cracks had warranted the caution he had progressively softened.",
+        "At the worksite, the first measurement sheet was nailed beside the pier so every new reading could be compared with it. Weicen did not trim away the lower corner carrying his original signature. Rain curled the paper around the nail, but the words 'close the bridge' remained uncovered."
       ],
       "storyParagraphsZh": [
-        "工程师魏岑一直以谨慎闻名。新桥若在月底开放，他能拿到足够偿还作坊贷款的奖金。验收前，他在桥墩上发现三道细裂纹，仍签下了“可以通行”，告诉自己裂纹只是表面收缩。",
-        "开放后，学徒每周量一次裂纹。数字缓慢增加，魏岑却把记录从“扩展”改成“季节变化”，又删去“需立即复查”。他不是想成为不负责的人；每一次改词，都让签字与他对自己的看法不再那么冲突。",
-        "雨季前，一小块石角落进河里。没人受伤，市长要求看原始记录。学徒拿出自己保留的第一张测量纸，上面仍有魏岑亲手写的“若继续增宽，应封桥”。",
-        "魏岑在办公室坐到天黑。他可以说石角与裂纹无关，也可以承认验收后一直在替原决定寻找理由。第二天，他主动封桥，退回奖金，并把后来改过的词逐一恢复。",
-        "维修开始时，那张最早的测量纸被钉在桥边。魏岑没有把自己的签名裁掉。"
+        "工程师魏岑素以拒绝危险捷径闻名。新桥若在月底前开放，奖金正好能还清作坊贷款。最后验收时，他在一座桥墩上发现三道发丝般的裂纹。封闭工地会取消奖金，也会暴露账上所剩无几。裂纹或许只是表面收缩。魏岑签下“开放并持续监测”，领走奖金，把第一张测量纸夹进桥梁记录。",
+        "此后学徒每周测量。最宽的一道从刻尺两格变成三格，再到四格。魏岑先写“扩展”，又划掉，改成“季节变化”；他拿另一座使用不同石料的桥作比较，还删去“立即复检”。每次修改都能找到一小段说得过去的理由，也让他的签字与“谨慎工程师”这个自我印象不再抵得那么难受。",
+        "学徒带来第五次读数时，魏岑要求改用桥墩最干燥的位置作基准，新页看起来稳定了一些。他开始先读支持表面收缩的报告，再打开那些提醒承重问题的材料；自己过桥时，也改选载重车较少的黄昏，让脚下石面显得安静。他不只是在向别人藏证据；每次改词与选择观察时刻，都让原决定和增长裂纹同时出现时，心里的冲突减轻一点。",
+        "雨季前，一小块石角落进河里，没有人受伤，市长却要求查看原始记录。学徒保留了第一张复写件，魏岑签名下仍写着：“若继续增宽，应封桥。”魏岑张口便要说石角与裂纹无关、复写件只是过度谨慎，忽然听出这些解释早已排练数周，只为保住领到手的奖金。",
+        "魏岑在办公室坐了一夜，把账上每个被改软的词恢复。第二天，他亲自封桥、退回奖金，又告诉债主还款将延期；第一辆车停在他横放的木栏前。作坊失去一份市政合同，他的名字也进入公开调查。维修后来发现，一处接缝确有进水；早先裂纹足以要求他认真对待那句警告。",
+        "开工修桥时，第一张测量纸被钉在桥墩旁，供所有新读数对照。魏岑没有裁去下角自己的原签名。雨水使纸沿铁钉卷起，“应封桥”三个字却一直露在外面。"
       ],
       "conceptName": "Cognitive dissonance",
       "conceptNameZh": "认知失调",
       "explanationParagraphs": [
-        "Cognitive dissonance is the discomfort created when important beliefs, commitments, actions, and evidence conflict. People may reduce it by changing behaviour or belief, adding justifications, selecting information, or minimising the inconsistency. It is not the same as ordinary uncertainty or deliberate hypocrisy; it often arises while protecting a self-image or prior decision."
+        "Cognitive dissonance is discomfort produced by inconsistency among important beliefs, commitments, actions, or evidence. People may reduce it by changing behaviour or belief, adding justifications, selecting information, or minimising the conflict. It is not identical to ordinary uncertainty or deliberate hypocrisy; it often operates while a person protects a valued self-image and prior decision."
       ],
       "explanationParagraphsZh": [
-        "认知失调是重要信念、承诺、行动与证据不一致时产生的心理不适。人们可能通过改变行为或信念、增加理由、选择信息或淡化冲突来减轻它。这个过程不等于普通不确定或故意虚伪；它常在维护自我形象与既有决定时发生。"
+        "认知失调是重要信念、承诺、行动或证据彼此不一致时产生的心理不适。人可能通过改变行为或信念、增加理由、选择信息或淡化冲突来减轻它。它不等于普通不确定或故意虚伪，常在人维护珍视的自我形象与既有决定时运作。"
       ],
       "mode": "concept-fable",
       "status": "approved",
@@ -556,29 +582,33 @@
       "fieldTitleZh": "心理学",
       "title": "One Grain on the Blue Board",
       "titleZh": "蓝木片上的一粒谷",
-      "summary": "A pigeon learns to land on a blue platform not because the colour commands it, but because one grain follows each landing.",
-      "summaryZh": "信鸽学会落在蓝木片上，不是因为认得颜色，而是因为每次落下后都有一粒谷。",
+      "summary": "A pigeon keeper scatters grain to make birds stay, then learns that where and when the grain arrives changes what they do next.",
+      "summaryZh": "信鸽管理员用满院谷粒留住鸟群，后来才看见谷粒在何处、何时出现，会改变鸟下一次落在哪里。",
       "storyParagraphs": [
-        "Postal apprentice Qinghe had to teach a group of new pigeons to land on a blue receiving platform. At first, they settled on the roof, window frames, and water barrel. One bird happened to step across the blue board, and Qinghe immediately placed a grain there.",
-        "On the next attempt, she rewarded the bird for coming near the board. Later, grain appeared only after it landed fully. Within days, it flew to the blue platform upon entering the yard. Other pigeons received grain after the same action, while stopping elsewhere produced nothing.",
-        "A fellow apprentice decided the colour itself must be magical and scattered grain across the yard in advance. Once full, the birds returned to the roof and the blue platform lost its importance. Qinghe removed the scattered food and again made grain follow a landing. The behaviour gradually returned.",
-        "After the station opened, Qinghe reduced how often food appeared, though correct landings were still rewarded from time to time. When some pigeons returned to the old roof after a long period without grain, she briefly restored the immediate reward.",
-        "At dusk, the final carrier landed on the blue board. Qinghe waited until both feet were steady before taking one grain from her pouch."
+        "Qinghe had ten days to teach a new flock of messenger pigeons to land on the blue receiving platform. If the demonstration failed, the postal contract would go to another loft. He began by scattering grain across the courtyard. The birds stayed nearby and ate eagerly, which looked like progress, but they perched afterward on the roof, window frames, buckets, and sometimes the blue board. Food followed being in the yard, not any particular landing place.",
+        "One pigeon happened to step near the platform. Qinghe placed a grain beside it at once. On later flights he first rewarded approaching the board, then touching its edge, then standing with one foot, and eventually only landing with both feet. Movements closer to the required action were followed by food while the requirement gradually narrowed. Within several days, that pigeon flew toward the platform soon after entering the courtyard.",
+        "Qinghe used the same sequence with the flock and placed an unpainted board nearby. Grain arrived after a correct blue-platform landing, not after settling on the roof or the other board. The birds did not receive an explanation about colour. Repeated consequences made one visible place a more reliable cue for where landing would pay. The response strengthened, though some pigeons learned faster than others.",
+        "A helper decided generosity would speed training and scattered grain before the morning flight. The pigeons ate from the ground, then filled the roofline again. Qinghe removed the loose food and restored the close sequence: feet on blue wood, then grain. The helper next tried shouting at birds on the roof. They startled from every surface, including the platform. Adding fear reduced roof perching in that moment but also disrupted the landing Qinghe needed.",
+        "With two days left, Qinghe cut rewards too quickly. After several correct landings received nothing, some pigeons returned to old perches. Qinghe postponed the shaky demonstration and carried the postal office's delay penalty into his ledger. For two days he rewarded every stable landing again, then reduced food gradually rather than all at once, while still occasionally following the required action with a grain.",
+        "The demonstration cost Qinghe half a month's wage in penalties, but the flock landed reliably. Weeks later, when rewards had become intermittent, a few birds tested the roof again after a long unrewarded stretch. Qinghe restored several immediate consequences, checked that no one had scattered food elsewhere, and thinned the schedule only after the landing returned. The behaviour was maintained, not permanently installed.",
+        "At sunset, the final pigeon circled the loft and touched the blue board with one foot. Qinghe kept his hand inside the grain bag. Only when both feet settled on the wood did he take out a single grain and place it between them."
       ],
       "storyParagraphsZh": [
-        "邮站学徒青禾要教一群新信鸽落在蓝色接信台上。起初，鸽子停在屋檐、窗框和水桶上，只有一只偶然踩过蓝木片。青禾立刻在木片上放下一粒谷。",
-        "下一次，那只鸽子靠近木片时，青禾便给谷；后来只有真正落上去才给。几天后，它一进院子就飞向蓝台。其他鸽子也在相同行动之后得到谷，停错地方则什么也没有。",
-        "同伴以为蓝色本身有魔力，把谷提前撒满院子。鸽子吃饱后重新停满屋檐，蓝台不再特别。青禾收起散谷，让食物再次紧跟在落上木片之后，行为才慢慢回来。",
-        "邮站正式启用时，青禾逐渐减少给谷的次数，却仍偶尔在正确落台后留下食物。没有回报很久以后，有几只鸽子又开始停向旧屋檐，她便恢复几次及时奖励。",
-        "傍晚，最后一只信鸽落在蓝木片上。青禾等它双脚站稳，才从袋里取出一粒谷。"
+        "青禾只有十天，要教一群新信鸽落在蓝色接信台上。展示若失败，邮站合同就会交给别家鸽舍。他起初把谷粒撒满院子。鸽群愿意留下，也吃得很快，看上去像有进展；吃完后，它们仍停满屋檐、窗框、水桶，偶尔才落上蓝木台。食物跟随的是“待在院里”，没有跟随某一种落点。",
+        "一只鸽子偶然走近木台，青禾立刻把一粒谷放到旁边。以后放飞，他先奖励靠近，再奖励碰到边缘，然后是一只脚站上去，最后只在双脚都落稳时给谷。接近目标的动作获得食物，要求则逐步收紧。几天后，那只鸽子一进院便会朝蓝台飞。",
+        "青禾用同样顺序训练整群，还在旁边放了一块未上色木板。谷粒只跟在正确落上蓝台之后，不跟在屋顶或另一块板之后。鸽子没有听见关于颜色的解释，反复发生的后果却让一个可见位置逐渐成为“落在那里更可能得到食物”的线索。行为增强了，每只鸽子的速度并不相同。",
+        "帮工以为大方些会学得更快，清晨放飞前便撒了一地谷。鸽子吃饱，又排满屋脊。青禾收起散粮，恢复紧密顺序：双脚落上蓝木，谷粒才出现。帮工随后对屋顶的鸟大喊，鸽群从各处惊起，连蓝台也不敢停。恐吓当时减少了屋顶停留，却也破坏了所需落台。",
+        "还剩两天，青禾又把奖励减得太快。连续几次正确落台没有结果后，一些鸽子回到旧屋檐。青禾推迟那场不稳的展示，把邮站违约金记进自己的账。两天里，他重新奖励每次稳定落台，随后逐步减少，而非突然停止；即使间隔拉长，正确动作之后仍会偶尔出现谷粒。",
+        "延期罚掉青禾半个月工钱，鸽群却在展示中稳定落台。几周后，奖励已经变得间歇，有些鸟在连续多次没有谷粒时又试探屋顶。青禾恢复几次及时结果，检查是否有人在别处撒粮，等落台重新稳定才再次拉长间隔。这个行为需要维持，并非一次装进鸟身便永远不变。",
+        "黄昏，最后一只信鸽绕过鸽舍，一只脚先碰到蓝木。青禾仍把手留在粮袋里。直到两只脚都站稳，他才取出一粒谷，放在它们之间。"
       ],
       "conceptName": "Operant conditioning",
       "conceptNameZh": "操作性条件作用",
       "explanationParagraphs": [
-        "Operant conditioning describes how behaviour changes with its consequences. Reinforcement makes a behaviour more likely in the future, while punishment makes it less likely; learning depends on the consequence following and depending on the action. Rewarding successive approximations can shape behaviour, while withholding the consequence can weaken it. Positive and negative mean adding or removing a stimulus, not good and bad."
+        "Operant conditioning describes how the future probability of behaviour changes with its consequences. Reinforcement increases behaviour; punishment decreases it, depending on contingency and timing. Successive approximations can shape a new response, while withholding a maintaining consequence can weaken it. Positive and negative mean adding or removing a stimulus, not good and bad."
       ],
       "explanationParagraphsZh": [
-        "操作性条件作用描述行为如何随其后果改变。强化使行为未来更可能出现，惩罚使其更少；学习取决于后果是否紧随并取决于该行为。逐步奖励接近目标的动作可以塑造行为，而不再提供后果会使行为减弱。正负指增加或移除刺激，不代表好坏。"
+        "操作性条件作用描述行为未来出现的概率怎样随其后果改变。强化使行为增加，惩罚使行为减少，关键在后果是否依该行为发生并及时出现。逐步强化接近目标的动作可以塑造新行为，停止维持性后果则会使其减弱；正负只表示增加或移除刺激，不等于好坏。"
       ],
       "mode": "mechanism-fable",
       "status": "approved",
@@ -598,29 +628,29 @@
       "fieldTitleZh": "心理学",
       "title": "The Lazy Man Beside the Raised Bridge",
       "titleZh": "落闸桥边的懒人",
-      "summary": "A warehouse owner decides that a new porter is always late until she waits forty minutes at the same bridge.",
-      "summaryZh": "仓主认定新搬运工总是迟到，直到自己在同一座桥前等了四十分钟。",
+      "summary": "A warehouse owner sees a worker arrive late three times and judges his character before she ever sees the bridge on his route.",
+      "summaryZh": "仓主看见一名工人连续迟到三次，在亲眼看见他路上的升降桥以前，便已经判完了他的性格。",
       "storyParagraphs": [
-        "New porter Shiye arrived late three days in a row. Warehouse owner Luo Niang was rushing to complete rainy-season orders. Seeing him enter out of breath, she decided that the young man was lazy and did not take work seriously. Shiye explained that the river bridge opened for cargo boats each morning. Luo Niang replied that a punctual person would leave earlier.",
-        "On the fourth day, she deducted his pay. Shiye began leaving before dawn. Sometimes he arrived on time; sometimes an extra vessel kept the bridge raised. At the warehouse, people saw only the moment he entered, not the changing queue beside the river.",
-        "A week later, Luo Niang crossed to the southern bank to collect an account. She allowed an extra half hour, but a salt boat became stuck and the bridge remained raised. She arrived forty minutes late. The bookkeeper asked jokingly whether she did not care about the business. Luo Niang did not answer.",
-        "The next day, she did not simply abandon every attendance rule. She examined a month of bridge records and compared arrival times for workers from different streets. Shiye had never been late on a morning when the bridge stayed down. She moved his shift by half an hour while still requiring reasons for any delay.",
-        "Luo Niang tore up the penalty slip marked 'lazy', kept the date, and wrote instead, 'Delayed by bridge opening.'"
+        "New porter Shiye arrived late three mornings in a row while warehouse owner Luo was racing to fill a rainy-season order. She saw him push through the door breathless after everyone else had lifted the first crates. The delay was vivid; the route before it was not. When Shiye said the river bridge rose for cargo ships at dawn, Luo answered that a serious worker would simply leave earlier. She wrote 'lazy and careless' on a penalty slip and deducted three days' meal allowance.",
+        "Shiye began walking before sunrise. On mornings with no ship, he reached the warehouse first. When an unscheduled vessel arrived, he still waited behind the raised bridge with bakers, clerks, and carts. Luo saw only the time he crossed her threshold. A fourth late arrival confirmed the label already on her paper more readily than the punctual days challenged it. She doubled the penalty and gave the front-loading work to someone else. The lost allowance forced Shiye to give up his rented bed for two nights and sleep in the warehouse loft.",
+        "The following week Luo went south to collect payment and allowed half an hour for the same crossing. A salt barge jammed beneath the raised span. She stood forty minutes among workers who had also left early and watched the clock above the tollhouse. Reaching her appointment late did not prove that her own character had changed. Back at the warehouse, she closed production for half a day to examine a month of bridge logs, home districts, and arrival records. She marked raised-bridge mornings in blue and ordinary mornings in black. The blue marks clustered beside late arrivals; the black marks did not. Shiye had never been late on a morning when the bridge stayed down; workers from other routes showed no such pattern.",
+        "Luo opened Shiye's punishment record beside her own delay slip and revised the judgement made from only the visible arrival time. The paper edge was still wet. She refunded the meal allowance, restored the front-loading assignment he had lost, moved his shift thirty minutes later, and required everyone to record causes of delay rather than accept any excuse without evidence. The half-day review made the rainy-season order miss one cart, and Luo paid the surcharge. Two later delays came from Shiye himself; those remained on his record. The bridge explained a pattern, not every future action.",
+        "Luo tore the words 'lazy and careless' from the old penalty slip but kept its dates. On the blank half she wrote 'bridge raised—verify log' and clipped it beside the tollhouse schedule. The bridge bell sounded once. A rust-coloured line from the original ink still crossed the fold."
       ],
       "storyParagraphsZh": [
-        "新搬运工石野连续三天迟到。仓主罗娘正赶一批雨季订单，看见他喘着气进门，便认定这个年轻人懒散、不把工作当回事。石野解释河桥每天清晨会为货船升闸，罗娘只觉得守时的人应当更早出门。",
-        "第四天，罗娘扣了他的工钱。石野此后天不亮便出发，有时准时，有时仍被临时增加的货船挡住。仓里只看见他推门的时刻，看不见桥边长短不定的队伍。",
-        "一周后，罗娘要去南岸收账，亲自走了同一条路。她预留了半个时辰，桥闸却因一艘卡住的盐船迟迟不落。到达时，她也晚了四十分钟。账房笑问她是不是不重视生意，罗娘没有回答。",
-        "第二天，她没有直接撤销所有要求，而是查看一个月的升闸记录，又比较住在不同街区的工人到岗时间。石野在桥不升起的日子从未迟到。她把他的班次推迟半个时辰，同时要求迟到仍须登记原因。",
-        "罗娘把原来写着“懒散”的罚单撕掉，留下日期，重新写成“因升闸延误”。"
+        "新搬运工石野连续三天迟到，仓主罗娘正赶雨季订单，每次都看见他在别人搬完第一批箱子后喘着气进门。迟到清楚可见，抵达前的路线却看不见。石野解释清晨有货船时，河桥会升起，罗娘只说认真工作的人应该更早出门。她在罚单上写“懒散、不上心”，扣掉他三天饭钱。",
+        "石野开始天未亮便上路。没有船的清晨，他总是最早到仓；临时货船出现时，他仍会和面包师、文书及车队一起等在升起的桥前。罗娘只看得见他跨过仓门的时刻。第四次迟到比那些准时日子更容易印证纸上已有的评价。她加倍罚钱，还把最前面的装货工作交给别人。被扣的饭钱让石野两晚付不起床位，只能睡在仓库阁楼。",
+        "一周后，罗娘去南岸收账，为同一条路预留了半个时辰。一艘盐船卡在升起的桥下，她与许多已经早出门的人一起等了四十分钟，只能看着收费亭上的钟。她迟到，并不表示性格忽然改变。回仓后，她停工半日，核对一个月的升桥记录、工人住处和到岗时间。她把升桥日涂蓝、普通日涂黑；蓝记号总挨着迟到，黑记号旁却没有同样聚集。桥不升的日子，石野从未迟到；来自其他方向的人也没有相同规律。",
+        "罗娘把石野的处罚记录同自己的迟到条并排摊开，纸边还湿着。她改掉了那个只根据到达时刻作出的判断，退回饭钱，把此前撤掉的头班装货任务还给石野，将他的班次推迟半个时辰，同时要求所有人登记迟到原因，不让任何借口自动过关。停工调查使雨季订单错过一辆货车，附加运费由罗娘支付。后来石野另有两次因自己耽误而迟到，那两笔仍留在记录里。桥能解释一种规律，不能替以后每次行为负责。",
+        "罗娘从旧罚单上撕掉“懒散、不上心”，却保留日期，在空出的半张纸上写：“升桥——核对记录。”罚单被夹到收费亭时刻表旁，桥钟响了一次，原来墨迹仍留下一道锈色折痕。"
       ],
       "conceptName": "Fundamental attribution error",
       "conceptNameZh": "基本归因错误",
       "explanationParagraphs": [
-        "The fundamental attribution error is the tendency to overemphasise personal traits or attitudes when explaining another person's behaviour and to underweight less visible situational influences. It does not mean traits never matter. Better judgement compares behaviour across times and settings and seeks evidence that distinguishes disposition from external constraint."
+        "Fundamental attribution error is the tendency to overemphasise personal traits or attitudes when explaining others' behaviour while underweighting less visible situational influences. It does not mean dispositions never matter. Better judgement compares behaviour across times and contexts and seeks evidence that can distinguish a stable personal tendency from an external constraint. The bias is especially tempting when another person's circumstances remain hidden."
       ],
       "explanationParagraphsZh": [
-        "基本归因错误是解释他人行为时过度强调性格、态度等个人特质，而低估不易看见的情境影响。它不表示特质永远无关。更可靠的判断会比较不同时间与情境，并寻找能区分个人倾向和外部约束的证据。"
+        "基本归因错误是解释他人行为时过度强调性格、态度等个人因素，而低估较难看见的情境影响。它不表示个人特质永远无关。更可靠的判断会比较不同时间和情境中的行为，并寻找能够区分稳定个人倾向与外部约束的证据。这种偏差在他人处境不透明时尤其容易出现。"
       ],
       "mode": "lens-fable",
       "status": "approved",

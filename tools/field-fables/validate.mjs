@@ -79,6 +79,46 @@ function englishWordCount(text) {
   return String(text || "").trim().split(/\s+/).filter(Boolean).length;
 }
 
+function containsAny(text, phrases) {
+  return phrases.find((phrase) => String(text || "").includes(phrase));
+}
+
+function normalizeFingerprint(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[\s，。！？：；、‘’“”（）—…,.!?:;'"()\-]/g, "");
+}
+
+function validateGlobalDiversity(articles, errors) {
+  const uniqueChecks = [
+    ["English title", (article) => article.title],
+    ["Chinese title", (article) => article.titleZh],
+    ["Chinese opening", (article) => normalizeFingerprint((article.storyParagraphsZh || []).join(" ")).slice(0, 16)],
+    ["Chinese ending", (article) => normalizeFingerprint((article.storyParagraphsZh || []).join(" ")).slice(-16)],
+  ];
+
+  uniqueChecks.forEach(([label, getValue]) => {
+    const seen = new Map();
+    articles.forEach((article) => {
+      const value = getValue(article);
+      if (!value) return;
+      const priorId = seen.get(value);
+      if (priorId) errors.push(`${article.id} repeats ${label.toLowerCase()} used by ${priorId}`);
+      else seen.set(value, article.id);
+    });
+  });
+
+  const explicitBinaryChoices = articles.filter((article) =>
+    /(?:可以|可)[^。]{0,140}(?:；|，|、)?(?:也可以|也可)/.test((article.storyParagraphsZh || []).join(""))
+  );
+  const binaryChoiceLimit = Math.floor(articles.length * 0.2);
+  if (explicitBinaryChoices.length > binaryChoiceLimit) {
+    errors.push(
+      `${explicitBinaryChoices.length} stories use the same explicit 可以……也可以…… choice formula; maximum is ${binaryChoiceLimit}`
+    );
+  }
+}
+
 function assertNonEmptyString(value, label, errors) {
   if (typeof value !== "string" || !value.trim()) errors.push(`${label} must be a non-empty string`);
 }
@@ -184,18 +224,41 @@ function validateArticle(article, planned, errors, warnings) {
 
   const zhParagraphs = article.storyParagraphsZh?.length || 0;
   const enParagraphs = article.storyParagraphs?.length || 0;
-  if (zhParagraphs < 4 || zhParagraphs > 8) errors.push(`${article.id} Chinese story has ${zhParagraphs} paragraphs; expected 4-8`);
+  if (zhParagraphs < 5 || zhParagraphs > 7) errors.push(`${article.id} Chinese story has ${zhParagraphs} paragraphs; expected 5-7`);
   if (enParagraphs !== zhParagraphs) errors.push(`${article.id} paragraph mismatch: zh=${zhParagraphs}, en=${enParagraphs}`);
   if ((article.explanationParagraphsZh?.length || 0) !== (article.explanationParagraphs?.length || 0)) {
     errors.push(`${article.id} explanation paragraph mismatch`);
   }
   const storyBodyZh = (article.storyParagraphsZh || []).join("\n\n");
   const storyBody = (article.storyParagraphs || []).join("\n\n");
-  if (storyBodyZh.length < 280 || storyBodyZh.length > 600) {
-    warnings.push(`${article.id} Chinese story length is ${storyBodyZh.length}`);
+  if (storyBodyZh.length < 650 || storyBodyZh.length > 1100) {
+    errors.push(`${article.id} Chinese story length is ${storyBodyZh.length}; expected publishable range 650-1100`);
+  } else if (storyBodyZh.length < 700 || storyBodyZh.length > 1000) {
+    warnings.push(`${article.id} Chinese story length is ${storyBodyZh.length}; preferred range 700-1000`);
   }
   const enWords = englishWordCount(storyBody);
-  if (enWords < 170 || enWords > 360) warnings.push(`${article.id} English story word count is ${enWords}`);
+  if (enWords < 360 || enWords > 700) {
+    errors.push(`${article.id} English story word count is ${enWords}; expected publishable range 360-700`);
+  } else if (enWords < 420 || enWords > 620) {
+    warnings.push(`${article.id} English story word count is ${enWords}; preferred range 420-620`);
+  }
+
+  const explanationBodyZh = (article.explanationParagraphsZh || []).join("");
+  const explanationBody = (article.explanationParagraphs || []).join(" ");
+  if (explanationBodyZh.length < 80 || explanationBodyZh.length > 220) {
+    errors.push(`${article.id} Chinese explanation length is ${explanationBodyZh.length}; expected publishable range 80-220`);
+  } else if (explanationBodyZh.length < 100 || explanationBodyZh.length > 180) {
+    warnings.push(`${article.id} Chinese explanation length is ${explanationBodyZh.length}; preferred range 100-180`);
+  }
+  const explanationWords = englishWordCount(explanationBody);
+  if (explanationWords < 45 || explanationWords > 150) {
+    warnings.push(`${article.id} English explanation word count is ${explanationWords}; preferred range 55-130`);
+  }
+
+  const forbiddenZh = containsAny(storyBodyZh, ["这说明", "这体现", "他终于明白", "她终于明白", "他们终于明白", "真正重要的是", "真正失去的不是", "答案从来不在答案里"]);
+  if (forbiddenZh) errors.push(`${article.id} Chinese story contains banned explanatory or fake-deep phrase: ${forbiddenZh}`);
+  const forbiddenEn = containsAny(storyBody.toLowerCase(), ["this showed that", "this proved that", "finally understood", "what truly mattered was", "the real lesson was"]);
+  if (forbiddenEn) errors.push(`${article.id} English story contains banned explanatory or moralising phrase: ${forbiddenEn}`);
 
   const zhRevealIndex = storyBodyZh.indexOf(article.conceptNameZh);
   const enRevealIndex = storyBody.toLowerCase().indexOf(article.conceptName.toLowerCase());
@@ -219,6 +282,7 @@ function validateBatches(rows, errors, warnings) {
     ? fs.readdirSync(batchesDir).filter((file) => /^batch-\d{3}\.json$/.test(file)).sort()
     : [];
   const articleIds = new Set();
+  const articles = [];
 
   files.forEach((file) => {
     const payload = JSON.parse(fs.readFileSync(path.join(batchesDir, file), "utf8"));
@@ -231,11 +295,12 @@ function validateBatches(rows, errors, warnings) {
     payload.articles.forEach((article) => {
       if (articleIds.has(article.id)) errors.push(`duplicate article id across batches: ${article.id}`);
       articleIds.add(article.id);
+      articles.push(article);
       validateArticle(article, planById.get(article.id), errors, warnings);
     });
   });
 
-  return { files, articleIds };
+  return { files, articleIds, articles };
 }
 
 const progress = JSON.parse(fs.readFileSync(progressPath, "utf8"));
@@ -245,6 +310,7 @@ const warnings = [];
 
 validatePlan(rows, progress, errors);
 const batchResult = validateBatches(rows, errors, warnings);
+validateGlobalDiversity(batchResult.articles, errors);
 
 const integratedRows = rows.filter((row) => row.status === "integrated");
 const approvedRows = rows.filter((row) => row.status === "approved" || row.status === "integrated");
