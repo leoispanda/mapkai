@@ -140,6 +140,52 @@ At the bottom were three lines:
 **The danger is not travelling north; it is when every ship can travel only north.**`,
     todayJudgement: "财务管理不是依次背诵 NPV、债务和对冲工具，而是把四件事放在同一个决定里：项目是否创造 incremental cash flow 并在合理的 discount rate 下仍有正 NPV；公司能否用足够的 liquidity、financing capacity 和 covenant headroom 撑到价值兑现；哪些 exposure 应该 hedge、哪些 core risk 必须自己承担；以及项目放进整个 portfolio 后，是否会让所有业务更依赖同一场风。最后才回答：在什么假设下值得做，怎样融资才能活到价值兑现，坏到什么程度必须改变决定。",
     todayJudgementEn: "Financial management is not a sequence of NPV, debt, and hedging tools. It is one decision that holds four questions together: does the project create incremental cash flow and a positive NPV at a reasonable discount rate; can the company survive until value arrives with sufficient liquidity, financing capacity, and covenant headroom; which exposures should be hedged and which core risks must be carried; and does the project make the whole portfolio more dependent on the same wind? Only then ask: under which assumptions is it worth doing, how should it be financed, and how bad must conditions become before the decision changes?",
+    knowledgeChainContent: `五步知识链｜我怎样带你把一个项目读成公司决定
+
+先看项目改变了什么 → 再判断这些改变值不值得 → 然后确认公司撑不撑得到回款 → 再处理会打断这条路的风险 → 最后才给投资建议。
+
+#### 01｜只留下“因为项目才发生”的现金
+
+比较不做与做项目的两种情形，差额才是 **incremental cash flow**。已经花掉且无法收回的调研费不该继续影响决定；被项目占用的厂房、放弃的租金、为交付压进去的库存和应收账款，都必须进入现金时间表。
+
+#### 02｜把不同日期的现金放到同一张桌上
+
+今天的一欧元和五年后的一欧元不能直接相加。用与风险相称的 **discount rate** 将未来现金流折回今天；只有在合理的 required return 下 NPV 仍为正，才说明项目在当前假设下创造价值。不要为了让项目通过而调低尺子。
+
+#### 03｜价值成立后，确认公司能否活到价值兑现
+
+正 NPV 不等于不会断现金。把设备、备货、工资、利息和客户回款排进时间轴，查看最低现金余额、covenant headroom 和再融资时点。Debt 带来固定偿付和约束，equity 缓冲更大但分享收益与控制权；分阶段投资、延后扩张和退出权，是在不确定时购买下一次更明智决定的 **real option**。
+
+#### 04｜保护资金路径，而不是抹平所有波动
+
+风险管理要防止坏情景在关键时点切断现金与融资能力。客户、产品、技术和运营通常是创造回报的 **core risk**，需要自己经营；利率、汇率、商品价格等没有特别判断优势的 **non-core exposure**，可在成本合理时对冲。没有明确真实 exposure 的“对冲”，很容易变成市场押注。
+
+#### 05｜把项目放回公司全盘，再决定 invest、stage、delay 或 reject
+
+单独看好的项目，放回 portfolio 后可能与现有业务依赖同一客户、币种、供应商或融资渠道。建议必须同时带上价值依据、融资路径、剩余风险和改变结论的 threshold，才是管理层能执行的决定。`,
+    knowledgeChainContentEn: `Five-step knowledge chain | Reading a project as a company decision
+
+See what the project changes → decide whether those changes create value → check whether the company can survive until cash arrives → manage risks that can break that path → only then recommend invest, stage, delay, or reject.
+
+#### 01 | Keep only cash that happens because of the project
+
+Compare the future with and without the project. The difference is **incremental cash flow**. Unrecoverable research spending is sunk; but occupied facilities, lost rental income, inventory, and receivables required for delivery belong on the cash timetable.
+
+#### 02 | Put cash from different dates on one table
+
+Today’s euro and an euro five years from now cannot simply be added. Discount future cash at a risk-appropriate required return. A positive NPV under that rate says the project creates value under current assumptions; lowering the rate merely to pass the project changes the ruler, not the project.
+
+#### 03 | Once value exists, ask whether the company survives to realise it
+
+A positive NPV does not prevent a cash shortfall. Put equipment, inventory, wages, interest, and customer payment on one timeline; examine minimum cash, covenant headroom, and refinancing. Debt brings fixed payments and constraints; equity brings more buffer but shares return and control. Staging, delaying expansion, or keeping exit rights retain a **real option** for a wiser later decision.
+
+#### 04 | Protect the funding path, not every fluctuation
+
+Risk management prevents a bad scenario from cutting cash and financing at the critical point. Customer, product, technology, and operating risk are often **core risks** that create return and must be managed internally. Interest rate, currency, or commodity exposures without special advantage may be hedged at reasonable cost. A hedge without a real exposure is speculation.
+
+#### 05 | Put the project back into the whole portfolio
+
+A good standalone project may share a customer, currency, supplier, or financing channel with existing business. A recommendation must state its value basis, funding path, residual risk, and the threshold that changes the decision before it can be executed by management.`,
   },
   "day-2-trust-and-license": {
     storyTitle: "知识寓言｜《那张干净的检查表》",
@@ -300,6 +346,52 @@ Later, Anan called this capability **Compliance**. Connecting ingredient batches
 A truly reliable small restaurant is not a restaurant that never has red lights. It is a restaurant that knows where to stop, what to check, who is responsible, and when it can open again when a red light appears.`,
     todayJudgement: "政策存在、报告发布和系统上线都不是最终证据。今天要学习的是一条完整的可信经营链：先把法律、监管、伦理和公开承诺变成不可含混的边界；再沿着 pressure、行为、例外、信息和损害追溯失效；随后验证控制是否真的运行；把每项 ESG 声明连回数据、方法、责任人与复验；最后让越界信息拥有改变预算、速度和资源分配的权力。真实的报告不是永远绿色的报告，而是红灯出现时，组织仍然知道谁该做什么、何时完成、谁来验证。",
     todayJudgementEn: "A policy, a published report, and a live system are not final proof. Learn one complete chain of credible operation: turn law, regulation, ethics, and public promises into unambiguous boundaries; trace failure through pressure, behaviour, exceptions, information, and harm; test whether controls truly operate; connect every ESG claim back to data, method, owner, and review; and give boundary-crossing information the power to change budget, speed, and resource allocation. A real report is not permanently green. It is one in which, when a red light appears, the organisation still knows who must do what, by when, and who verifies it.",
+    knowledgeChainContent: `五步知识链｜我怎样带你拆开一份“全绿报告”
+
+先弄清公司承诺了什么 → 再追溯错误怎样形成 → 然后验证控制有没有真的工作 → 再追到每一项公开数据的来源 → 最后让坏消息改变决定。
+
+#### 01｜把承诺和必须守住的线摆到桌面上
+
+法律、监管和对客户、员工、社区或环境的公开承诺，都必须被翻成可观察的边界。也要看交付、降本、奖金和增长压力会不会把人推到只能绕过边界的位置。
+
+#### 02｜异常发生后，沿着行为链往回走
+
+不要只问谁做错了。追问当时的 pressure、behaviour、被绕过的 control、被美化或延迟的信息，以及最终怎样形成损害。成熟复盘要找到最早本可阻止伤害、却没有发挥作用的环节。
+
+#### 03｜检查控制是在“存在”，还是在现实中有效
+
+Policy、培训或软件上线只能证明控制被设计过。**Design effectiveness** 看设计理论上能否发现并处理问题；**operating effectiveness** 看它是否持续执行、例外是否被记录、调查、升级并关闭。
+
+#### 04｜让每一句 ESG 声明回到证据链
+
+披露必须能追到议题的重要性、价值链位置、数据口径和基准、记录人、复核人、目标与变化解释。**Double materiality** 同时看企业如何影响人和环境，以及这些影响如何反过来影响现金、融资、声誉和持续经营。
+
+#### 05｜坏消息有没有资格改变业务节奏
+
+暂停高风险客户、重新检测或修复问题会伤害短期业绩。可信的 leadership 要预先说明什么 threshold 必须升级、谁能 stop 或减速、何时完成纠正、谁验证关闭；若风险承受能力不够，增长速度也必须能够调整。`,
+    knowledgeChainContentEn: `Five-step knowledge chain | Taking apart an “all-green” report
+
+Clarify what the company promised → trace how failure formed → test whether controls truly worked → trace every public data point to its source → let bad news change decisions.
+
+#### 01 | Put promises and non-negotiable boundaries on the table
+
+Law, regulation, and public commitments to customers, employees, communities, or the environment must become observable boundaries. Also examine whether delivery, cost, bonus, or growth pressure pushes people into bypassing them.
+
+#### 02 | Trace an exception backwards through the behaviour chain
+
+Do not stop at who made a mistake. Trace pressure, behaviour, bypassed controls, delayed or beautified information, and resulting harm. A mature review finds the earliest point where harm could have been stopped.
+
+#### 03 | Test whether a control exists or operates
+
+A policy, training, or a live system proves only that a control was designed. **Design effectiveness** asks whether it could detect and handle the problem; **operating effectiveness** asks whether it is consistently performed and exceptions are recorded, investigated, escalated, and closed.
+
+#### 04 | Return every ESG claim to its evidence chain
+
+A disclosure must trace to materiality, value-chain location, data definition and baseline, recorder, reviewer, target, and explanation of change. **Double materiality** asks both how the company affects people and environment, and how those effects return to cash, financing, reputation, and continuity.
+
+#### 05 | Give bad news the right to change the operating pace
+
+Pausing a high-risk customer, retesting, or fixing harm can hurt short-term results. Credible leadership specifies which threshold escalates, who can stop or slow business, when remediation is due, and who verifies closure. If risk capacity is exhausted, growth speed must be adjustable.`,
   },
   "day-4-strategy-and-action": {
     storyTitle: "知识寓言｜《第三勺红油》",
@@ -412,6 +504,52 @@ The first spoon gives a dish colour. The second releases its aroma. The third de
 Management is the same. Numbers keep people from confusion and controls keep them from drifting, but good control does not cook every dish into the same flavour. It knows what should be stable, what should be tried, and what no high score may cross: the taste that truly matters.`,
     todayJudgement: "Management accounting 提供成本、预算和绩效信息；management control 决定这些信息怎样影响注意力、资源和行为。今天不是学习“更多 KPI”，而是学习：什么信息适合当前决定，它会诱导什么行为，以及不确定性变化时控制应怎样改变。",
     todayJudgementEn: "Management accounting provides cost, budget, and performance information; management control decides how that information shapes attention, resources, and behaviour. This is not a lesson in ‘more KPIs’. It asks which information fits the current decision, what behaviour it will induce, and how control should change when uncertainty changes.",
+    knowledgeChainContent: `五步知识链｜我怎样带你把战略意图变成不伤人的控制
+
+先弄清要作什么决定 → 再挑真正有用的信息 → 再预演指标会怎样改变行为 → 再按不确定性选择控制方式 → 最后让价值取舍进入资源决定。
+
+#### 01｜先说清要作什么决定
+
+定价、压缩成本、项目资源分配和探索新机会，都需要不同的信息、时间范围与允许的失误。先明确战略目标、decision owner、决定期限和希望团队采取的行动；控制从定义问题开始，而不是从列 KPI 开始。
+
+#### 02｜挑会改变选择的信息，而不是最容易算的数字
+
+信息有用不在于多精确，而在于会不会改变这次选择。区分随方案改变的成本与已经承诺的成本，也看容量、客户价值、时间和数据口径。Decision support 与 performance evaluation 不能混用；方便统计却不能推动更好选择的指标，只是 false precision。
+
+#### 03｜指标连到奖励前，预演人们会怎样追逐它
+
+奖金、晋升、预算和排名会把指标变成行为规则。问：如果所有人认真把它做高，组织真正想要的结果会不会更差？检查 controllability、gaming、短期主义、重复计量，以及未被衡量但重要的后果。分数应帮助讨论，不能自动取代判断。
+
+#### 04｜成熟业务用纠偏，探索业务用学习
+
+因果清楚、执行稳定的成熟业务适合 **diagnostic control**：设目标、看偏差、纠正执行。面对新技术、新客户或新模式，适合 **interactive control**：小额分阶段投入、设里程碑、反复测试关键假设。失败只有留下可迁移证据并改变 continue、expand、pivot 或 stop 的选择，才是 valuable learning。
+
+#### 05｜让 purpose 进入门槛、预算与例外记录
+
+先写清不能交换的 minimum gates，例如 safety、ethics、合规和核心 customer value；过不了门槛，分数再高也不能继续。门槛之上可以作有证据的例外判断，但要记录理由、owner、复盘时间和结果。这样 purpose 才会进入资源分配，management judgment 才能被回看与学习。`,
+    knowledgeChainContentEn: `Five-step knowledge chain | Turning strategic intent into control without harm
+
+Clarify the decision → choose information that changes it → predict how metrics change behaviour → match control to uncertainty → put value trade-offs into resource decisions.
+
+#### 01 | State the decision first
+
+Pricing, cost reduction, resource allocation, and exploration need different information, horizons, and tolerances for error. Clarify the strategic aim, decision owner, deadline, and desired action. Control starts with defining the problem, not listing KPIs.
+
+#### 02 | Choose information that changes a choice
+
+Information is useful when it changes this decision, not merely when it is precise. Separate costs that change with the option from committed costs, and test capacity, customer value, time, and definitions. Decision support and performance evaluation are not interchangeable; an easy-to-count metric that does not improve a choice is false precision.
+
+#### 03 | Before rewards attach, predict how people will chase the metric
+
+Bonuses, promotion, budgets, and rankings turn a metric into a behaviour rule. Ask whether everyone maximising it could worsen the real outcome. Check controllability, gaming, short-termism, double counting, and important unmeasured effects. Scores should support discussion, never automatically replace judgement.
+
+#### 04 | Use correction for mature work and learning for exploration
+
+Stable work with known cause and effect suits **diagnostic control**: set targets, observe variance, correct execution. New technology, customers, and business models suit **interactive control**: small staged investment, milestones, and repeated tests of key assumptions. Failure becomes valuable learning only when it leaves transferable evidence and changes a continue, expand, pivot, or stop decision.
+
+#### 05 | Put purpose into gates, budgets, and exceptions
+
+Define non-negotiable minimum gates such as safety, ethics, compliance, and core customer value. A project that fails a gate cannot continue regardless of its score. Above the gate, evidence-based exceptions may be approved, but reason, owner, review date, and result must be recorded.`,
   },
   "day-5-evidence-and-recommendation": {
     storyTitle: "生活故事｜《通过率最高的驾校》",
@@ -600,6 +738,52 @@ The colleague laughed. “I only asked which one has the highest pass rate.”
 Xiaolin replied, “Of course the rate matters. But you also need to know who took the test, who did not, how much they paid, and whether they were learners like you.”`,
     todayJudgement: "Historical return 是已经发生的结果，但它不是 manager skill 的直接证明。就像驾校的高通过率可能受到学员基础、考试筛选、课程强度和统计方式影响，一只基金过去表现较好，也可能来自更有利的市场环境、更高的风险暴露、特定的投资风格、汇率变化、较高集中度、样本选择，或真正的 manager skill。因此，今天的任务不是根据历史排名直接选出冠军，而是先判断：比较对象是否真正可比；样本是否完整；回报是否经过风险和费用调整；差异是否来自结构、市场或经理能力；产品是否适合具体投资者。只有完成这些判断，历史表现才能被转化为专业建议。",
     todayJudgementEn: "Historical return is an outcome that has already happened; it is not direct proof of manager skill. Just as a driving school’s high pass rate may reflect student starting points, exam selection, course intensity, and the method of counting, a fund’s past performance may reflect a favourable market, higher risk exposure, a particular style, currency moves, concentration, sample selection, or genuine manager skill. The task is therefore not to crown a winner from a historical ranking. First ask whether comparison groups are truly comparable, the sample is complete, returns are risk- and fee-adjusted, differences come from structure, market, or skill, and the product fits a particular investor. Only then can past performance become professional advice.",
+    knowledgeChainContent: `五步知识链｜从“最高通过率”走到专业建议
+
+先确定谁会根据比较作决定 → 再检查哪些样本没有进入结果 → 再统一比较对象和计算口径 → 再解释扣除成本与风险后的差异 → 最后判断产品适合谁。
+
+#### 01｜先确定比较是替谁作的
+
+基金不会脱离投资者而自动成为最好。先放入 investment objective、holding period、investor currency、liquidity need、risk tolerance、实际可购买范围及税务限制；随后才统一 asset class、fund category、share class、active/passive、地区和策略。Decision set 不同，“哪只最好”就没有意义。
+
+#### 02｜比较表现前，检查哪些样本没有被看见
+
+关闭、合并、改名、停售或从数据库移除的基金，可能让留下来的平均表现显得更好，这就是 survivorship bias。检查样本来源、纳入与排除规则、关闭基金是否保留、backfill、起始时间和期间是否避开困难年份。先修复比较地基，统计才有意义。
+
+#### 03｜把回报放到同一把风险尺子上
+
+更高回报可能来自 equity 或 interest-rate risk、地区、style、factor、currency、concentration 或 liquidity exposure，而不只是经理能力。Benchmark 应匹配 asset class、地区、style、factor 和可投资范围；period 要公平，跨币种还必须说明 local、investor 或 hedged return。统一后才能分辨能力、环境、风格或汇率。
+
+#### 04｜看投资者真正拿到的净结果并拆开来源
+
+考虑 expense ratio、sales load、transaction cost、tax、liquidity cost 和 turnover，也看 volatility、drawdown、concentration、capacity constraint。小规模策略的成功不一定能随资产扩大复制。行业结构、distribution channel、pension system、监管和投资习惯能帮助解释费用和竞争，但相关不等于因果。
+
+#### 05｜把分析翻译成有边界的 suitability 建议
+
+Recommendation 不宣布永久冠军，而是说明为什么适合这位投资者、哪些证据支持、要承担什么风险、哪些 assumptions 未验证、数据有哪些 limitations，以及什么变化触发重新评估。最终推荐的是产品风险、回报和限制与投资者目标、期限、承受能力之间的匹配。`,
+    knowledgeChainContentEn: `Five-step knowledge chain | From “highest pass rate” to professional advice
+
+Identify who will decide from the comparison → check which samples are absent → standardise comparison and calculation → explain differences after cost and risk → judge who the product suits.
+
+#### 01 | Decide whom the comparison serves
+
+A fund is not automatically best outside an investor. Start with objective, holding period, investor currency, liquidity need, risk tolerance, available products, and real constraints. Then align asset class, fund category, share class, active or passive status, geography, and strategy. If the decision set differs, “which is best?” has no meaning.
+
+#### 02 | Before comparing results, inspect missing samples
+
+Funds that closed, merged, changed name, stopped selling, or disappeared from a database can make surviving averages look better: **survivorship bias**. Check source, inclusion and exclusion rules, whether closed funds remain, backfill, start dates, and whether the period avoids difficult years. Repair the comparison foundation before using statistics.
+
+#### 03 | Put returns on one risk ruler
+
+Higher return can come from equity or interest-rate risk, geography, style, factors, currency, concentration, or liquidity—not only skill. Match benchmarks to asset class, geography, style, factors, and investable universe; use fair periods and state local, investor-currency, or hedged returns. Only then can skill be separated from environment, style, and currency.
+
+#### 04 | Inspect the investor’s net result and its sources
+
+Consider expense ratio, sales load, transaction cost, tax, liquidity cost, and turnover, as well as volatility, drawdown, concentration, and capacity. Small-scale success may not scale as assets grow. Industry structure, distribution, pension systems, regulation, and investor habits can explain cost and competition, but correlation is not causation.
+
+#### 05 | Translate analysis into bounded suitability advice
+
+A recommendation does not announce a permanent champion. It says why a product fits this investor, what evidence supports that view, which risks remain, what assumptions are untested, what limitations apply, and what change triggers review. The recommendation is a match between the product’s risk, return, and limits and the investor’s goals, horizon, and capacity.`,
   },
   "day-3-risk-and-governance": {
     storyTitleEn: "Knowledge Fable | Three Whiteboards in a Pizza Kitchen",
@@ -641,5 +825,75 @@ Later Amin learned that the three whiteboards have formal names in larger organi
 
 Amin did not put those English words on the menu. Beneath the three boards he wrote only one sentence: “Take good news in the accounts back into the shop to see it; when bad news appears on the wall, someone must take the next action.”`,
     todayJudgementEn: "Financial Accounting, ERM, and Governance are not three disconnected topics. They form one management process: see clearly what has happened; understand why the numbers look as they do; identify what may affect the goal; set the point at which action is required; and specify who decides, challenges, and checks. Start with three questions: do the numbers reflect operational reality; what could affect the organisation’s objectives; and when a problem appears, who has both the responsibility and the authority to act?",
+    knowledgeChainContent: `五步知识链｜我怎样带你把一条数字走到治理行动
+
+先看清已经发生了什么 → 再理解数字背后的原因 → 再识别什么事情可能影响目标 → 再设定什么时候必须行动 → 最后说明谁负责决定、质疑和检查。
+
+#### 01｜一笔生意怎样进入三张报表
+
+三张报表不是三份互不相关的文件，而是从不同角度记录同一家公司的经营活动。**Income statement（利润表）**记录一段时间内确认的收入、成本和利润；**Balance sheet（资产负债表）**记录某个时间点公司拥有什么、欠什么，以及股东留下的权益；**Cash flow statement（现金流量表）**记录现金实际怎样流入和流出。
+
+例如，披萨店通过外卖平台卖出一张 20 欧元的披萨，使用了 8 欧元的原料，但平台要到下个月才付款。利润表会记录 20 欧元收入和 8 欧元成本，因此产生 12 欧元利润；资产负债表会增加 20 欧元应收款，同时库存减少 8 欧元；现金流量表暂时不会显示收到 20 欧元，因为平台还没有付款。
+
+所以利润和现金不同并不一定说明账目有问题。利润回答的是“这笔生意是否已经发生”，现金流回答的是“钱是否已经收到或付出”，资产负债表则保留两者之间尚未完成的部分，例如应收款、应付款和库存。
+
+#### 02｜数字正确，不代表解释只有一种
+
+会计数字可以记录正确，但管理者仍然需要理解数字背后的原因。公司利润增加，可能是产品卖得更多，也可能是卖掉了一块土地、一栋楼或一辆旧车；应收账款增加，可能是业务增长，也可能是客户付款越来越慢；库存增加，可能是在为旺季准备，也可能是产品卖不出去。
+
+设备仍然出现在资产负债表上，也不代表它仍然值原来的价格或仍然能够正常工作。看到数字变化时，先问：这是日常经营带来的变化，还是一次性项目？这个变化以后还能持续吗？账上的价值和实际情况是否一致？还有什么证据可以支持这个解释？EBITDA、margin、working capital、provision 和 impairment 都能帮助我们提出问题，但不能替我们得出结论。
+
+#### 03｜ERM 从目标开始，不从风险清单开始
+
+ERM 是 Enterprise Risk Management，中文是企业风险管理。它不是财务部门替所有部门管理风险，也不是 Risk 部门单独维护一张表格。食品安全和产品质量由业务与 Quality 负责，设备、人员和交付由 Operations 负责，现金、预算和融资由 Finance 负责，系统和数据由 IT 负责，合规问题由业务和 Compliance 共同管理。
+
+ERM 的作用，是先明确组织想实现什么目标，再识别哪些不确定性可能影响这些目标。披萨店的目标可以是：在保证食品质量的情况下，按时完成订单，并保持顾客信任。烤炉故障、员工缺班、原料不足、平台故障和订单突然增加都可能影响它。只把这些写进风险清单还不够；组织还需要说明谁负责、怎样监控，以及什么时候必须行动。
+
+#### 04｜给风险设置信号、界线和动作
+
+风险管理不能停在红黄绿颜色上。**Risk appetite** 是为了实现目标，组织愿意承担多少风险；**KRI（Key Risk Indicator）** 是提前显示风险正在变大的指标；**threshold** 是达到什么程度以后必须采取行动；**risk owner** 是谁负责监控和处理这个风险。
+
+例如，待完成订单数量是 KRI，四十单是 threshold，暂停一个外卖平台是 response，值班店长是 risk owner。这样，风险管理才从“我们知道可能出问题”，变成“问题达到什么程度时，谁必须做什么”。
+
+#### 05｜治理说明谁负责、谁质疑、谁检查
+
+即使数字正确、风险也被识别，如果没有清楚的权力与责任，问题仍然可能停在会议纪要或表格里。**第一线**是实际经营业务的人：他们负责完成目标，也负责处理日常风险。**第二线**提供专业规则、建议和挑战，例如 Risk、Compliance、Finance 或 Quality；通常不替业务做决定，但会提醒、监督和提出质疑。**第三线**通常是 Internal Audit，独立检查前两层的制度是否设计合理、是否真正执行。
+
+Board 或监督机构不负责每一个日常决定，但要确认主要目标和风险是否清楚、管理层是否设定了合理边界、重大问题是否被及时升级、问题发生后是否真的采取了行动。这套逻辑同样适用于 non-profit 和公共组织：目标可能不是利润最大化，而是安全、公平、响应速度和公众信任；但公共使命不代表可以忽视预算、证据和问责。`,
+    knowledgeChainContentEn: `Five-step knowledge chain | Turning a number into governance action
+
+See clearly what has happened → understand why the numbers look as they do → identify what may affect the objective → set the point at which action is required → specify who decides, challenges, and checks.
+
+#### 01 | How one transaction enters three financial statements
+
+The three statements are not unrelated documents. They record the same company from different angles. The **income statement** records revenue, cost, and profit recognised over a period; the **balance sheet** records what the company owns, owes, and the equity left to shareholders at a point in time; the **cash flow statement** records actual cash inflows and outflows.
+
+If the pizza shop sells a €20 pizza through a delivery platform and uses €8 of ingredients, but the platform pays next month, the income statement records €20 of revenue and €8 of cost, producing €12 of profit. The balance sheet adds a €20 receivable and reduces inventory by €8. The cash flow statement does not yet show the €20 received, because cash has not arrived.
+
+Profit and cash being different does not automatically mean the accounts are wrong. Profit asks whether the business happened; cash flow asks whether money was received or paid; the balance sheet holds the unfinished links between them, such as receivables, payables, and inventory.
+
+#### 02 | Correct numbers do not have only one explanation
+
+Accounting numbers may be recorded correctly, while managers still need to understand their cause. Higher profit can come from more products sold or from selling land, a building, or an old vehicle. Higher receivables can mean growth or slower-paying customers. Higher inventory can prepare for a peak season or reveal products that will not sell.
+
+An asset remaining on the balance sheet does not prove it still has its old value or works normally. Ask whether a change comes from ordinary operations or a one-off item; whether it can continue; whether book value and reality agree; and what other evidence supports the explanation. EBITDA, margin, working capital, provisions, and impairment help us ask questions; they do not answer them for us.
+
+#### 03 | ERM starts from objectives, not a risk list
+
+Enterprise Risk Management is not Finance managing every risk for every department, and it is not a Risk team maintaining a separate table. Food safety and quality belong with the business and Quality; equipment, people, and delivery with Operations; cash, budget, and financing with Finance; systems and data with IT; and compliance with the business and Compliance together.
+
+ERM first makes the objective clear and then identifies uncertainty that could affect it. A pizza shop may aim to complete orders on time while protecting food quality and customer trust. Oven failure, staff absence, ingredient shortages, platform failure, and a sudden order surge can all affect that goal. Listing them is not enough: the organisation must state who owns them, how they are monitored, and when action becomes mandatory.
+
+#### 04 | Give risks signals, thresholds, and actions
+
+Risk management cannot stop at red, amber, and green. **Risk appetite** is how much risk an organisation is willing to accept to achieve an objective. A **KRI** is an early indicator that risk is increasing. A **threshold** defines when action is mandatory. A **risk owner** monitors and handles the risk.
+
+For example, unfinished orders may be the KRI; forty orders the threshold; pausing one delivery platform the response; and the duty manager the risk owner. Risk management then changes from “we know something could go wrong” into “when it reaches this point, this person must do this.”
+
+#### 05 | Governance says who is responsible, who challenges, and who checks
+
+Even with correct numbers and identified risks, problems can remain trapped in minutes or spreadsheets when authority and responsibility are unclear. The **first line** runs the operation and handles daily risk. The **second line** provides specialist rules, advice, and challenge—such as Risk, Compliance, Finance, or Quality—without normally making the business decision. The **third line**, usually Internal Audit, independently checks whether the first two lines are well designed and actually operating.
+
+A board or oversight body does not make every daily decision. It ensures that major objectives and risks are clear, boundaries are reasonable, serious matters are escalated in time, and action really follows. The same logic applies to non-profits and public bodies: their aim may be safety, fairness, response speed, and public trust rather than maximum profit, but public purpose does not remove the need for budget discipline, evidence, and accountability.`,
   },
 };

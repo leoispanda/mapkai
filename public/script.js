@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.160";
+const appVersion = "0.1.161";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15193,6 +15193,7 @@ const managementUiCopy = {
     pathTitle: "五天，五个人人都用得上的经营问题",
     pathCopy: "这条路径借鉴 EMBA 的 Day 1–Day 5 学习顺序，但不要求商业或财务背景。先理解每一天在解决什么问题，再把它用回自己的工作、项目或一人公司。",
     judgement: "今天真正要学会的判断",
+    knowledgeChain: "五步知识链",
     soloPractice: "一人公司练习",
     podcast: "本期播客",
     remember: "今天先记住",
@@ -15213,6 +15214,7 @@ const managementUiCopy = {
     pathTitle: "Five days, five operating questions anyone can use",
     pathCopy: "This path borrows the Day 1–Day 5 sequence of an EMBA, but requires no business or finance background. First understand what each day solves, then apply it to your work, project, or solo company.",
     judgement: "The judgement to learn today",
+    knowledgeChain: "Five-step knowledge chain",
     soloPractice: "Solo-company practice",
     podcast: "Episode",
     remember: "Remember this first",
@@ -15243,6 +15245,21 @@ function managementStoryParagraphs(lesson) {
 function formatManagementStoryParagraph(paragraph) {
   return escapeHtml(paragraph)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
+function renderManagementKnowledgeChain(content) {
+  if (!content) return "";
+  return content.trim().split(/\n\s*\n/).map((block) => {
+    const trimmed = block.trim();
+    if (!trimmed || trimmed === "---") return "";
+    if (trimmed.startsWith("#### ")) return `<h3>${formatManagementStoryParagraph(trimmed.slice(5))}</h3>`;
+    if (trimmed.startsWith("> ")) return `<p class="management-knowledge-chain-summary">${formatManagementStoryParagraph(trimmed.slice(2))}</p>`;
+    if (trimmed.startsWith("- ")) {
+      const items = trimmed.split("\n").filter((line) => line.startsWith("- "));
+      return `<ul>${items.map((item) => `<li>${formatManagementStoryParagraph(item.slice(2))}</li>`).join("")}</ul>`;
+    }
+    return `<p>${formatManagementStoryParagraph(trimmed).replace(/\n/g, "<br>")}</p>`;
+  }).join("");
 }
 
 function renderManagementColumn() {
@@ -15301,6 +15318,10 @@ function renderManagementArticle(articleId) {
       ${managementValue(lesson, "todayJudgement") ? `<section class="management-lesson-judgement">
         <strong>${escapeHtml(managementText("judgement"))}</strong>
         <p>${escapeHtml(managementValue(lesson, "todayJudgement"))}</p>
+      </section>` : ""}
+      ${managementValue(lesson, "knowledgeChainContent") ? `<section class="management-lesson-story management-knowledge-chain">
+        <p class="eyebrow">${escapeHtml(managementText("knowledgeChain"))}</p>
+        ${renderManagementKnowledgeChain(managementValue(lesson, "knowledgeChainContent"))}
       </section>` : ""}
       <section class="management-opening-note management-lesson-use">
         <strong>${escapeHtml(managementText("soloPractice"))}</strong>
