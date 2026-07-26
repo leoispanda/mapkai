@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.153";
+const appVersion = "0.1.156";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -33,6 +33,8 @@ let storyRatingStatus = "";
 const publicContentVisibility = {
   articles: false,
 };
+
+const managementColumn = globalThis.MAPKAI_MANAGEMENT_COLUMN || { articles: [] };
 
 const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07", "08"]);
 
@@ -102,6 +104,10 @@ const routeMeta = {
     description: "Use a structured AI council to think through decisions with trade-offs, disagreement, uncertainty, and timing pressure.",
     robots: "noindex, nofollow",
   },
+  "/management": {
+    title: "MapKAI 管理学专栏 — 面向创业者与管理者的企业经营知识",
+    description: "MapKAI 管理学专栏：为 EMBA 学习者、创业者与管理者整理战略、组织、经营与金融管理的通用判断。",
+  },
   "/map": {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
     description: "Explore MapKAI's knowledge lenses and see which fields are unknown, emerging, familiar, or active in a learning map.",
@@ -152,6 +158,7 @@ const uiText = {
     navExplore: "Explore",
     navMap: "Knowledge Map",
     navPdc: "PDC",
+    navManagement: "Management",
     navCategories: "Fields",
     navLearning: "Learning",
     navAbout: "About",
@@ -547,6 +554,7 @@ const uiText = {
     navExplore: "探索",
     navMap: "知识地图",
     navPdc: "PDC",
+    navManagement: "管理学专栏",
     navCategories: "知识镜头",
     navLearning: "学习路径",
     navAbout: "关于",
@@ -14760,6 +14768,7 @@ function applyLanguage() {
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
+  setText('.nav-links a[data-route="/management"]', t("navManagement"));
   setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText('.nav-links a[data-route="/learning"]', t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
@@ -14918,6 +14927,9 @@ function applyLanguage() {
   if (activeConceptFable) renderConceptFableDetail(activeConceptFable[1]);
   const activeLensStory = normalizeRoute(window.location.pathname).match(/^\/lens-stories\/([a-z0-9-]+)$/);
   if (activeLensStory) renderLensStoryDetail(activeLensStory[1]);
+  const activeManagementArticle = normalizeRoute(window.location.pathname).match(/^\/management\/([a-z0-9-]+)$/);
+  if (activeManagementArticle) renderManagementArticle(activeManagementArticle[1]);
+  renderManagementColumn();
   renderStoryMap();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
     const match = normalizeRoute(window.location.pathname).match(/^\/categories\/(\d{2})$/);
@@ -14975,11 +14987,13 @@ function goToRoute(route, replace = false) {
   const storyMatch = visibleTarget.match(/^\/stories\/([a-z0-9-]+)$/);
   const conceptFableMatch = visibleTarget.match(/^\/concept-fables\/([a-z0-9-]+)$/);
   const lensStoryMatch = visibleTarget.match(/^\/lens-stories\/([a-z0-9-]+)$/);
+  const managementArticleMatch = visibleTarget.match(/^\/management\/([a-z0-9-]+)$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   if (storyMatch) renderStoryDetail(storyMatch[1]);
   if (conceptFableMatch) renderConceptFableDetail(conceptFableMatch[1]);
   if (lensStoryMatch) renderLensStoryDetail(lensStoryMatch[1]);
+  if (managementArticleMatch) renderManagementArticle(managementArticleMatch[1]);
   const activePage = categoryMatch
     ? "/categories/detail"
     : fieldMatch
@@ -14990,7 +15004,9 @@ function goToRoute(route, replace = false) {
           ? "/concept-fables/detail"
           : lensStoryMatch
             ? "/lens-stories/detail"
-            : visibleTarget;
+            : managementArticleMatch
+              ? "/management/article"
+              : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -15003,6 +15019,7 @@ function goToRoute(route, replace = false) {
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
+      (linkRoute === "/management" && visibleTarget.startsWith("/management")) ||
       (linkRoute === "/categories" && (
         visibleTarget.startsWith("/categories") ||
         visibleTarget.startsWith("/fields/") ||
@@ -15036,9 +15053,11 @@ function updateRouteMeta(route) {
       ? "/concept-fables"
     : route.startsWith("/fields/")
       ? "/map"
-      : route.startsWith("/lens-stories/")
-        ? "/lens-stories"
-        : route.startsWith("/categories/")
+        : route.startsWith("/lens-stories/")
+          ? "/lens-stories"
+          : route.startsWith("/management/")
+            ? "/management"
+          : route.startsWith("/categories/")
           ? "/categories"
           : route.startsWith("/learning/")
             ? "/learning"
@@ -15143,6 +15162,96 @@ function renderStories() {
   if (!target) return;
   target.classList.remove("is-lens-story-grid");
   target.innerHTML = "";
+}
+
+function getManagementArticle(articleId) {
+  return (managementColumn.articles || []).find((article) => article.id === articleId) || null;
+}
+
+function renderManagementColumn() {
+  const target = document.getElementById("managementColumn");
+  if (!target) return;
+  const learningModules = managementColumn.learningModules || [];
+  const audience = (managementColumn.audiences || []).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+  const moduleCards = learningModules.map((module) => {
+    const cardContent = `
+      <div class="management-module-topline"><span>${escapeHtml(module.day || "")}</span><span>AI 时代通识</span></div>
+      <h3>${escapeHtml(module.title || "")}</h3>
+      <p>${escapeHtml(module.summary || "")}</p>
+      <p class="management-module-use"><strong>一人公司练习：</strong>${escapeHtml(module.soloCompanyUse || "")}</p>
+      <div class="management-tag-row">${(module.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
+    return `<article class="management-module-card">${cardContent}</article>`;
+  }).join("");
+  target.innerHTML = `
+    <section class="management-hero">
+      <p class="eyebrow">MapKAI · Management Column</p>
+      <h1>${escapeHtml(managementColumn.title || "管理学专栏")}</h1>
+      <p class="management-hero-lede">${escapeHtml(managementColumn.subtitle || "")}</p>
+      <p class="management-hero-copy">${escapeHtml(managementColumn.description || "")}</p>
+      <div class="management-audience">${audience}</div>
+    </section>
+    <section class="management-start-here" aria-label="专栏定位">
+      <div><span>从真实问题开始</span><p>不把管理学拆成术语清单；先从一项正在发生的经营选择进入。</p></div>
+      <div><span>再看清楚取舍</span><p>识别价值、现金、组织、风险与时机之间真正需要判断的关系。</p></div>
+      <div><span>带走下一步框架</span><p>让每一篇内容都能回到你的项目、团队或公司里继续使用。</p></div>
+    </section>
+    ${moduleCards ? `<section class="management-foundations">
+      <div class="management-section-heading">
+        <p class="eyebrow">今天讲什么</p>
+        <h2>五天，五个人人都用得上的经营问题</h2>
+        <p>这条路径借鉴 EMBA 的 Day 1–Day 5 学习顺序，但不要求商业或财务背景。先理解每一天在解决什么问题，再把它用回自己的工作、项目或一人公司。</p>
+      </div>
+      <div class="management-module-grid">${moduleCards}</div>
+    </section>` : ""}`;
+}
+
+function renderManagementArticle(articleId) {
+  const target = document.getElementById("managementArticleReader");
+  if (!target) return;
+  const article = getManagementArticle(articleId);
+  if (!article) {
+    target.innerHTML = `<h1>文章暂不可用</h1><p>这篇管理学文章还没有准备好。</p>`;
+    return;
+  }
+  const story = (article.storySections || []).map((section, index) => `
+    <section class="management-story-section">
+      <div class="management-story-section-number">${String(index + 1).padStart(2, "0")}</div>
+      <div>
+        <h2>${escapeHtml(section.heading)}</h2>
+        ${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+      </div>
+    </section>`).join("");
+  const concepts = (article.conceptRows || []).map(([scene, concept, explanation]) => `
+    <tr><th scope="row">${escapeHtml(scene)}</th><td><strong>${escapeHtml(concept)}</strong></td><td>${escapeHtml(explanation)}</td></tr>`).join("");
+  const questions = (article.coreQuestions || []).map((question, index) => `
+    <li><span>${index + 1}</span><p>${escapeHtml(question)}</p></li>`).join("");
+  target.innerHTML = `
+    <header class="management-article-header">
+      <p class="eyebrow">${escapeHtml(article.sessionLabel || "Session")} · ${escapeHtml(article.session || "")}</p>
+      <h1>${escapeHtml(article.title)}</h1>
+      <p>${escapeHtml(article.summary)}</p>
+      <div class="management-article-meta"><span>${escapeHtml(article.readTime || "")}</span>${(article.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+    </header>
+    <section class="management-opening-note">
+      <strong>阅读前的问题</strong>
+      <p>当一项计划看上去会带来增长时，你是在判断它的故事，还是在判断它创造的现金、能承受的融资结构与会暴露出来的风险？</p>
+    </section>
+    <section class="management-story" aria-label="寓言故事">${story}</section>
+    <section class="management-concept-section">
+      <div class="management-section-heading">
+        <p class="eyebrow">寓言对应</p>
+        <h2>这篇故事在讲什么</h2>
+        <p>航海表不是比喻的装饰；每一个场景对应一个企业金融管理中的判断动作。</p>
+      </div>
+      <div class="management-table-wrap"><table><thead><tr><th>故事里的动作</th><th>金融管理概念</th><th>白话解释</th></tr></thead><tbody>${concepts}</tbody></table></div>
+    </section>
+    <section class="management-core-logic">
+      <p class="eyebrow">核心逻辑</p>
+      <h2>成熟的金融管理，要同时回答四个问题</h2>
+      <ol>${questions}</ol>
+      <p class="management-core-closing">${escapeHtml(article.closing || "")}</p>
+    </section>
+    <aside class="management-disclaimer">${escapeHtml(article.disclaimer || "")}</aside>`;
 }
 
 function renderConceptFables() {
@@ -17041,6 +17150,13 @@ function renderCategoryTree(category) {
     })
     .join("");
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
+  const managementCourseCard = category.code === "00" ? `
+    <a class="ai-learning-course-card" href="/management" data-route="/management">
+      <span>AI 时代通用课程</span>
+      <h2>管理学通识：一人公司的五个经营问题</h2>
+      <p>从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。</p>
+      <strong>进入管理学通识 <span aria-hidden="true">→</span></strong>
+    </a>` : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
     ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
@@ -17051,6 +17167,7 @@ function renderCategoryTree(category) {
         </div>
       </div>
     </div>` : ""}
+    ${managementCourseCard}
     ${storyArticle}
     </div>`;
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
@@ -17720,6 +17837,7 @@ window.addEventListener("hashchange", () => goToRoute(normalizeRoute(window.loca
 renderCategories();
 renderStories();
 renderConceptFables();
+renderManagementColumn();
 renderTopRatedStories();
 renderStoryMap();
 renderContactSections();

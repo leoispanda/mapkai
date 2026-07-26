@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.155" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.156" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -75,6 +75,7 @@
         <a href="/explore" data-route="/explore">Explore</a>
         <a href="/map" data-route="/map">Knowledge Map</a>
         <a href="/categories" data-route="/categories">Fields</a>
+        <a class="nav-utility" href="/management" data-route="/management">Management</a>
         <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
         <a href="/about" data-route="/about">About</a>
       </nav>
@@ -386,6 +387,17 @@
         </div>
       </section>
 
+      <section class="page management-page" id="management" data-page="/management">
+        <div class="management-shell" id="managementColumn" aria-live="polite"></div>
+      </section>
+
+      <section class="page management-article-page" id="managementArticle" data-page="/management/article">
+        <div class="management-article-shell">
+          <a class="management-back-link" href="/management" data-route="/management">← 返回管理学专栏</a>
+          <article class="management-article-reader" id="managementArticleReader" aria-live="polite"></article>
+        </div>
+      </section>
+
       <section class="page pdc-page" id="pdcPilot" data-page="/pdc-pilot">
         <div class="pdc-shell" data-pdc-root>
           <section class="pdc-card" aria-live="polite">
@@ -593,7 +605,8 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.155"></script>
-    <script src="/script.js?v=0.1.155"></script>
+    <script src="/content/field-fables.js?v=0.1.156"></script>
+    <script src="/content/management-column.js?v=0.1.156"></script>
+    <script src="/script.js?v=0.1.156"></script>
   </body>
 </html>
