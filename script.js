@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.161";
+const appVersion = "0.1.162";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -105,8 +105,8 @@ const routeMeta = {
     robots: "noindex, nofollow",
   },
   "/management": {
-    title: "MapKAI 管理学专栏 — 面向创业者与管理者的企业经营知识",
-    description: "MapKAI 管理学专栏：为 EMBA 学习者、创业者与管理者整理战略、组织、经营与金融管理的通用判断。",
+    title: "MapKAI 公司金融通识 — 面向创业者与经营者的公司金融知识",
+    description: "MapKAI 公司金融通识：用价值、现金、风险、治理与控制，帮助学习者理解真实的公司决定。",
   },
   "/map": {
     title: "MapKAI Knowledge Map — Explore 11 Knowledge Lenses",
@@ -158,8 +158,8 @@ const uiText = {
     navExplore: "Explore",
     navMap: "Knowledge Map",
     navPdc: "PDC",
-    navManagement: "Management",
-    managementBack: "← Back to Management",
+    navManagement: "Corporate Finance",
+    managementBack: "← Back to Corporate Finance Essentials",
     navCategories: "Fields",
     navLearning: "Learning",
     navAbout: "About",
@@ -555,8 +555,8 @@ const uiText = {
     navExplore: "探索",
     navMap: "知识地图",
     navPdc: "PDC",
-    navManagement: "管理学专栏",
-    managementBack: "← 返回管理学专栏",
+    navManagement: "公司金融",
+    managementBack: "← 返回公司金融通识",
     navCategories: "知识镜头",
     navLearning: "学习路径",
     navAbout: "关于",
@@ -15278,8 +15278,8 @@ function renderManagementColumn() {
   }).join("");
   target.innerHTML = `
     <section class="management-hero">
-      <p class="eyebrow">MapKAI · Management Column</p>
-      <h1>${escapeHtml(managementValue(managementColumn, "title") || "Management Essentials")}</h1>
+      <p class="eyebrow">MapKAI · Corporate Finance</p>
+      <h1>${escapeHtml(managementValue(managementColumn, "title") || "Corporate Finance Essentials")}</h1>
       <p class="management-hero-lede">${escapeHtml(managementValue(managementColumn, "subtitle"))}</p>
       <p class="management-hero-copy">${escapeHtml(managementValue(managementColumn, "description"))}</p>
       <div class="management-audience">${audience}</div>
@@ -17283,15 +17283,15 @@ function renderCategoryTree(category) {
   const managementCourseCardCopy = currentLanguage === "en"
     ? {
       label: "AI-era essential course",
-      title: "Management Essentials: five operating questions for a solo company",
+      title: "Corporate Finance Essentials: five company decisions for a solo company",
       description: "From value and cash, trust and compliance, risk and governance, and strategic control to evidence and advice: Day 1–Day 5 learning from Turnpo, made practical for sustained operation.",
-      action: "Enter Management Essentials",
+      action: "Enter Corporate Finance Essentials",
     }
     : {
       label: "AI 时代通用课程",
-      title: "管理学通识：一人公司的五个经营问题",
+      title: "公司金融通识：一人公司的五个公司决定",
       description: "从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。",
-      action: "进入管理学通识",
+      action: "进入公司金融通识",
     };
   const managementCourseCard = category.code === "00" ? `
     <a class="ai-learning-course-card" href="/management" data-route="/management">

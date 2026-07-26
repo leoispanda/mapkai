@@ -1,11 +1,11 @@
 // Public, general-audience management learning overview.
 globalThis.MAPKAI_MANAGEMENT_COLUMN = {
-  title: "管理学通识",
-  titleEn: "Management Essentials",
-  subtitle: "给每一个想把学习用在真实经营问题上的人。",
-  subtitleEn: "For anyone who wants to use learning in real operating decisions.",
-  description: "不需要管理学背景。每天从一个经营问题开始，用通俗语言看见概念、取舍与下一步行动。",
-  descriptionEn: "No management background required. Each day starts with an operating question and uses plain language to reveal concepts, trade-offs, and a practical next move.",
+  title: "公司金融通识",
+  titleEn: "Corporate Finance Essentials",
+  subtitle: "给每一个想理解公司如何使用资金、承担风险与作出长期选择的人。",
+  subtitleEn: "For anyone who wants to understand how companies use capital, carry risk, and make long-term choices.",
+  description: "不需要金融背景。每天从一个真实的公司决定开始，用通俗语言看见价值、现金、风险、治理与下一步行动。",
+  descriptionEn: "No finance background required. Each day starts with a real company decision and uses plain language to reveal value, cash, risk, governance, and a practical next move.",
   audiences: ["独立经营者", "职场学习者", "好奇的行动者"],
   audiencesEn: ["Independent operators", "Working learners", "Curious doers"],
   learningModules: [
