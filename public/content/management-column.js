@@ -6,6 +6,7 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
   audiences: ["独立经营者", "职场学习者", "好奇的行动者"],
   learningModules: [
     {
+      id: "day-1-value-and-capital",
       day: "Day 1",
       title: "价值与资本配置",
       summary: "一个看似有前景的计划，真的创造价值吗？它需要多少投入、何时回本、最坏会发生什么？",
@@ -13,6 +14,7 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       tags: ["现金流", "投入", "风险"],
     },
     {
+      id: "day-2-trust-and-license",
       day: "Day 2",
       title: "信任与经营资格",
       summary: "规则、承诺和透明度如何让客户、伙伴与市场愿意继续相信你？",
@@ -20,6 +22,7 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       tags: ["合规", "文化", "信任"],
     },
     {
+      id: "day-3-risk-and-governance",
       day: "Day 3",
       title: "事实、风险与治理",
       summary: "怎样让关键事实和早期风险及时被看见，并在问题变大前有人行动？",
@@ -27,6 +30,7 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       tags: ["证据", "风险", "责任"],
     },
     {
+      id: "day-4-strategy-and-action",
       day: "Day 4",
       title: "战略如何变成行为",
       summary: "指标、预算和奖励会怎样改变人的注意力？又怎样避免数字反过来绑架真正的目标？",
@@ -34,6 +38,7 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       tags: ["KPI", "激励", "战略"],
     },
     {
+      id: "day-5-evidence-and-recommendation",
       day: "Day 5",
       title: "比较证据，形成建议",
       summary: "面对不完整的信息和看似漂亮的比较，怎样给出清楚、诚实、可质疑的建议？",

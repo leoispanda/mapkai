@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.156";
+const appVersion = "0.1.157";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15168,6 +15168,10 @@ function getManagementArticle(articleId) {
   return (managementColumn.articles || []).find((article) => article.id === articleId) || null;
 }
 
+function getManagementLesson(lessonId) {
+  return (managementColumn.learningModules || []).find((lesson) => lesson.id === lessonId) || null;
+}
+
 function renderManagementColumn() {
   const target = document.getElementById("managementColumn");
   if (!target) return;
@@ -15180,7 +15184,7 @@ function renderManagementColumn() {
       <p>${escapeHtml(module.summary || "")}</p>
       <p class="management-module-use"><strong>一人公司练习：</strong>${escapeHtml(module.soloCompanyUse || "")}</p>
       <div class="management-tag-row">${(module.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
-    return `<article class="management-module-card">${cardContent}</article>`;
+    return `<a class="management-module-card is-ready" href="/management/${escapeHtml(module.id)}" data-route="/management/${escapeHtml(module.id)}">${cardContent}<strong>查看今天讲什么 <span aria-hidden="true">→</span></strong></a>`;
   }).join("");
   target.innerHTML = `
     <section class="management-hero">
@@ -15208,6 +15212,24 @@ function renderManagementColumn() {
 function renderManagementArticle(articleId) {
   const target = document.getElementById("managementArticleReader");
   if (!target) return;
+  const lesson = getManagementLesson(articleId);
+  if (lesson) {
+    target.innerHTML = `
+      <header class="management-article-header management-lesson-header">
+        <p class="eyebrow">${escapeHtml(lesson.day)} · 今天讲什么</p>
+        <h1>${escapeHtml(lesson.title)}</h1>
+        <p>${escapeHtml(lesson.summary)}</p>
+      </header>
+      <section class="management-opening-note management-lesson-use">
+        <strong>一人公司练习</strong>
+        <p>${escapeHtml(lesson.soloCompanyUse)}</p>
+      </section>
+      <section class="management-lesson-keywords">
+        <p class="eyebrow">今天先记住</p>
+        <div class="management-tag-row">${(lesson.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+      </section>`;
+    return;
+  }
   const article = getManagementArticle(articleId);
   if (!article) {
     target.innerHTML = `<h1>文章暂不可用</h1><p>这篇管理学文章还没有准备好。</p>`;
