@@ -12,6 +12,8 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       summary: "一个看似有前景的计划，真的创造价值吗？它需要多少投入、何时回本、最坏会发生什么？",
       soloCompanyUse: "先判断一个新产品、渠道或 AI 工具是否真的创造价值，再决定投入、试行、等待或放弃。",
       tags: ["现金流", "投入", "风险"],
+      audioTitle: "《第二张航海表》",
+      audioUrl: "https://media.turnpo.com/%E5%88%A9%E6%B6%A6%E8%83%8C%E5%90%8E%E7%9A%84%E7%94%9F%E6%AD%BB%E5%B1%80.m4a",
     },
     {
       id: "day-2-trust-and-license",
@@ -20,6 +22,8 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       summary: "规则、承诺和透明度如何让客户、伙伴与市场愿意继续相信你？",
       soloCompanyUse: "把承诺、数据来源、客户沟通与 AI 使用边界写清楚，避免增长建立在难以兑现的信任上。",
       tags: ["合规", "文化", "信任"],
+      audioTitle: "《那张干净的检查表》",
+      audioUrl: "https://media.turnpo.com/%E9%82%A3%E5%BC%A0%E5%B9%B2%E5%87%80%E7%9A%84%E6%A3%80%E6%9F%A5%E8%A1%A8.m4a",
     },
     {
       id: "day-3-risk-and-governance",
@@ -28,6 +32,8 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       summary: "怎样让关键事实和早期风险及时被看见，并在问题变大前有人行动？",
       soloCompanyUse: "为现金、交付、客户满意度和平台依赖设置少量可行动的信号；触线后有明确的下一步。",
       tags: ["证据", "风险", "责任"],
+      audioTitle: "《披萨店后厨的三块白板》",
+      audioUrl: "https://media.turnpo.com/day-3-three-whiteboards.m4a",
     },
     {
       id: "day-4-strategy-and-action",
@@ -36,6 +42,8 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       summary: "指标、预算和奖励会怎样改变人的注意力？又怎样避免数字反过来绑架真正的目标？",
       soloCompanyUse: "用 AI 自动化之后，仍要保留对客户价值、学习质量与长期选择权的判断，而不只追逐效率数字。",
       tags: ["KPI", "激励", "战略"],
+      audioTitle: "《第三勺红油》",
+      audioUrl: "https://media.turnpo.com/day-4-data-all-green.m4a",
     },
     {
       id: "day-5-evidence-and-recommendation",
@@ -44,6 +52,8 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       summary: "面对不完整的信息和看似漂亮的比较，怎样给出清楚、诚实、可质疑的建议？",
       soloCompanyUse: "把 AI 给出的结论退回到证据、比较基准与适用条件，再决定是否采纳和如何行动。",
       tags: ["比较", "判断", "建议"],
+      audioTitle: "《通过率最高的驾校》",
+      audioUrl: "https://media.turnpo.com/%E4%B8%9A%E7%BB%A9%E6%A6%9C%E5%8D%95%E7%9A%84%E7%8C%AB%E8%85%BB.m4a",
     },
   ],
   articles: [],

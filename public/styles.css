@@ -6285,6 +6285,35 @@ dd,
   text-transform: uppercase;
 }
 
+.management-lesson-audio {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.75rem 0;
+  padding: 1.2rem;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 9px;
+  background: rgba(239, 246, 255, 0.64);
+}
+
+.management-lesson-audio .eyebrow {
+  margin: 0;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 840;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.management-lesson-audio h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.12rem;
+}
+
+.management-lesson-audio audio {
+  width: 100%;
+}
+
 .management-opening-note p,
 .management-disclaimer {
   margin: 0;

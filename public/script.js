@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.157";
+const appVersion = "0.1.158";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15224,6 +15224,11 @@ function renderManagementArticle(articleId) {
         <strong>一人公司练习</strong>
         <p>${escapeHtml(lesson.soloCompanyUse)}</p>
       </section>
+      ${lesson.audioUrl ? `<section class="management-lesson-audio">
+        <p class="eyebrow">本期播客</p>
+        <h2>${escapeHtml(lesson.audioTitle || "听这一课")}</h2>
+        <audio controls preload="metadata" src="${escapeHtml(lesson.audioUrl)}">你的浏览器暂不支持音频播放。</audio>
+      </section>` : ""}
       <section class="management-lesson-keywords">
         <p class="eyebrow">今天先记住</p>
         <div class="management-tag-row">${(lesson.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>

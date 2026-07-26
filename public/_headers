@@ -1,6 +1,6 @@
 /*
   Cache-Control: public, max-age=60
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-0/End7daaslQWP3gj2EE2mW98db7Z5OZ4ojLJkIgxZs='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-0/End7daaslQWP3gj2EE2mW98db7Z5OZ4ojLJkIgxZs='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; media-src 'self' https://media.turnpo.com; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
