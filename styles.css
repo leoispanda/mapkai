@@ -6314,6 +6314,52 @@ dd,
   width: 100%;
 }
 
+.management-lesson-story {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.management-lesson-story .eyebrow {
+  margin: 0 0 0.2rem;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 840;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.management-lesson-story p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0;
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.management-lesson-judgement {
+  display: grid;
+  gap: 0.65rem;
+  margin: 2rem 0;
+  padding: clamp(1.25rem, 3vw, 1.7rem);
+  border-radius: 9px;
+  background: #0f2345;
+}
+
+.management-lesson-judgement strong,
+.management-lesson-judgement p {
+  margin: 0;
+  color: #eff6ff;
+}
+
+.management-lesson-judgement strong {
+  color: #93c5fd;
+}
+
+.management-lesson-judgement p {
+  line-height: 1.8;
+}
+
 .management-opening-note p,
 .management-disclaimer {
   margin: 0;

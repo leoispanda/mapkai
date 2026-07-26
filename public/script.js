@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.158";
+const appVersion = "0.1.159";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15220,6 +15220,14 @@ function renderManagementArticle(articleId) {
         <h1>${escapeHtml(lesson.title)}</h1>
         <p>${escapeHtml(lesson.summary)}</p>
       </header>
+      ${lesson.storyParagraphs?.length ? `<section class="management-lesson-story">
+        <p class="eyebrow">${escapeHtml(lesson.storyTitle || "知识寓言")}</p>
+        ${lesson.storyParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+      </section>` : ""}
+      ${lesson.todayJudgement ? `<section class="management-lesson-judgement">
+        <strong>今天真正要学会的判断</strong>
+        <p>${escapeHtml(lesson.todayJudgement)}</p>
+      </section>` : ""}
       <section class="management-opening-note management-lesson-use">
         <strong>一人公司练习</strong>
         <p>${escapeHtml(lesson.soloCompanyUse)}</p>
