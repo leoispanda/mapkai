@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.162";
+const appVersion = "0.1.163";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15174,7 +15174,8 @@ function getManagementLesson(lessonId) {
   const lesson = (managementColumn.learningModules || []).find((item) => item.id === lessonId) || null;
   if (!lesson) return null;
   const story = (globalThis.MAPKAI_MANAGEMENT_STORIES || {})[lessonId] || {};
-  return { ...lesson, ...story };
+  const references = (globalThis.MAPKAI_MANAGEMENT_REFERENCES || {})[lessonId] || {};
+  return { ...lesson, ...story, ...references };
 }
 
 const managementUiCopy = {
@@ -15194,6 +15195,9 @@ const managementUiCopy = {
     pathCopy: "这条路径借鉴 EMBA 的 Day 1–Day 5 学习顺序，但不要求商业或财务背景。先理解每一天在解决什么问题，再把它用回自己的工作、项目或一人公司。",
     judgement: "今天真正要学会的判断",
     knowledgeChain: "五步知识链",
+    references: "本课引用与延伸阅读",
+    referencesCopy: "以下资料为本课的指定阅读或案例来源；每条均说明它支撑的学习判断。",
+    referenceUse: "本课用途：",
     soloPractice: "一人公司练习",
     podcast: "本期播客",
     remember: "今天先记住",
@@ -15215,6 +15219,9 @@ const managementUiCopy = {
     pathCopy: "This path borrows the Day 1–Day 5 sequence of an EMBA, but requires no business or finance background. First understand what each day solves, then apply it to your work, project, or solo company.",
     judgement: "The judgement to learn today",
     knowledgeChain: "Five-step knowledge chain",
+    references: "References and further reading",
+    referencesCopy: "These are the assigned readings or case sources for this lesson. Each entry states the judgement it supports.",
+    referenceUse: "Used in this lesson:",
     soloPractice: "Solo-company practice",
     podcast: "Episode",
     remember: "Remember this first",
@@ -15335,7 +15342,16 @@ function renderManagementArticle(articleId) {
       <section class="management-lesson-keywords">
         <p class="eyebrow">${escapeHtml(managementText("remember"))}</p>
         <div class="management-tag-row">${managementList(lesson, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
-      </section>`;
+      </section>
+      ${managementList(lesson, "references").length ? `<section class="management-lesson-references">
+        <p class="eyebrow">${escapeHtml(managementText("references"))}</p>
+        <p class="management-references-intro">${escapeHtml(managementText("referencesCopy"))}</p>
+        <ol>${managementList(lesson, "references").map((reference) => `<li>
+          <strong>${escapeHtml(reference.citation || "")}</strong>
+          ${reference.detail ? `<p>${escapeHtml(reference.detail)}</p>` : ""}
+          ${reference.use ? `<p><span>${escapeHtml(managementText("referenceUse"))}</span>${escapeHtml(reference.use)}</p>` : ""}
+        </li>`).join("")}</ol>
+      </section>` : ""}`;
     return;
   }
   const article = getManagementArticle(articleId);

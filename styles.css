@@ -6314,6 +6314,49 @@ dd,
   width: 100%;
 }
 
+.management-lesson-references {
+  display: grid;
+  gap: 0.9rem;
+  margin: 2.5rem 0 0;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid rgba(30, 64, 175, 0.17);
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.78);
+}
+
+.management-lesson-references .eyebrow,
+.management-references-intro {
+  margin: 0;
+}
+
+.management-lesson-references ol {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.management-lesson-references li {
+  padding-left: 0.25rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.management-lesson-references li strong,
+.management-lesson-references li p {
+  display: block;
+}
+
+.management-lesson-references li p {
+  margin: 0.3rem 0 0;
+}
+
+.management-lesson-references li span {
+  margin-right: 0.35rem;
+  color: #1e3a8a;
+  font-weight: 740;
+}
+
 .management-lesson-story {
   display: grid;
   gap: 1rem;
