@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.159";
+const appVersion = "0.1.160";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -159,6 +159,7 @@ const uiText = {
     navMap: "Knowledge Map",
     navPdc: "PDC",
     navManagement: "Management",
+    managementBack: "← Back to Management",
     navCategories: "Fields",
     navLearning: "Learning",
     navAbout: "About",
@@ -555,6 +556,7 @@ const uiText = {
     navMap: "知识地图",
     navPdc: "PDC",
     navManagement: "管理学专栏",
+    managementBack: "← 返回管理学专栏",
     navCategories: "知识镜头",
     navLearning: "学习路径",
     navAbout: "关于",
@@ -15169,41 +15171,112 @@ function getManagementArticle(articleId) {
 }
 
 function getManagementLesson(lessonId) {
-  return (managementColumn.learningModules || []).find((lesson) => lesson.id === lessonId) || null;
+  const lesson = (managementColumn.learningModules || []).find((item) => item.id === lessonId) || null;
+  if (!lesson) return null;
+  const story = (globalThis.MAPKAI_MANAGEMENT_STORIES || {})[lessonId] || {};
+  return { ...lesson, ...story };
+}
+
+const managementUiCopy = {
+  zh: {
+    courseType: "AI 时代通识",
+    practice: "一人公司练习：",
+    openLesson: "查看今天讲什么",
+    positioning: "专栏定位",
+    startOne: "从真实问题开始",
+    startOneCopy: "不把管理学拆成术语清单；先从一项正在发生的经营选择进入。",
+    startTwo: "再看清楚取舍",
+    startTwoCopy: "识别价值、现金、组织、风险与时机之间真正需要判断的关系。",
+    startThree: "带走下一步框架",
+    startThreeCopy: "让每一篇内容都能回到你的项目、团队或公司里继续使用。",
+    today: "今天讲什么",
+    pathTitle: "五天，五个人人都用得上的经营问题",
+    pathCopy: "这条路径借鉴 EMBA 的 Day 1–Day 5 学习顺序，但不要求商业或财务背景。先理解每一天在解决什么问题，再把它用回自己的工作、项目或一人公司。",
+    judgement: "今天真正要学会的判断",
+    soloPractice: "一人公司练习",
+    podcast: "本期播客",
+    remember: "今天先记住",
+    audioFallback: "听这一课",
+  },
+  en: {
+    courseType: "AI-era essentials",
+    practice: "Solo-company practice:",
+    openLesson: "Open today’s lesson",
+    positioning: "Column orientation",
+    startOne: "Start with a real problem",
+    startOneCopy: "Do not turn management into a glossary; begin with an operating choice that is happening now.",
+    startTwo: "See the trade-offs",
+    startTwoCopy: "Identify the real relationships among value, cash, organisation, risk, and timing.",
+    startThree: "Leave with a next-step framework",
+    startThreeCopy: "Let each lesson return to your project, team, or company for continued use.",
+    today: "Today’s focus",
+    pathTitle: "Five days, five operating questions anyone can use",
+    pathCopy: "This path borrows the Day 1–Day 5 sequence of an EMBA, but requires no business or finance background. First understand what each day solves, then apply it to your work, project, or solo company.",
+    judgement: "The judgement to learn today",
+    soloPractice: "Solo-company practice",
+    podcast: "Episode",
+    remember: "Remember this first",
+    audioFallback: "Listen to this lesson",
+  },
+};
+
+function managementText(key) {
+  return managementUiCopy[currentLanguage === "en" ? "en" : "zh"][key];
+}
+
+function managementValue(item, key) {
+  if (currentLanguage === "en" && item?.[`${key}En`]) return item[`${key}En`];
+  return item?.[key] || "";
+}
+
+function managementList(item, key) {
+  if (currentLanguage === "en" && Array.isArray(item?.[`${key}En`])) return item[`${key}En`];
+  return Array.isArray(item?.[key]) ? item[key] : [];
+}
+
+function managementStoryParagraphs(lesson) {
+  const content = managementValue(lesson, "storyContent");
+  if (content) return content.trim().split(/\n\s*\n/).filter(Boolean);
+  return managementList(lesson, "storyParagraphs");
+}
+
+function formatManagementStoryParagraph(paragraph) {
+  return escapeHtml(paragraph)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 }
 
 function renderManagementColumn() {
   const target = document.getElementById("managementColumn");
   if (!target) return;
   const learningModules = managementColumn.learningModules || [];
-  const audience = (managementColumn.audiences || []).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+  const audience = managementList(managementColumn, "audiences").map((item) => `<span>${escapeHtml(item)}</span>`).join("");
   const moduleCards = learningModules.map((module) => {
     const cardContent = `
-      <div class="management-module-topline"><span>${escapeHtml(module.day || "")}</span><span>AI 时代通识</span></div>
-      <h3>${escapeHtml(module.title || "")}</h3>
-      <p>${escapeHtml(module.summary || "")}</p>
-      <p class="management-module-use"><strong>一人公司练习：</strong>${escapeHtml(module.soloCompanyUse || "")}</p>
-      <div class="management-tag-row">${(module.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
-    return `<a class="management-module-card is-ready" href="/management/${escapeHtml(module.id)}" data-route="/management/${escapeHtml(module.id)}">${cardContent}<strong>查看今天讲什么 <span aria-hidden="true">→</span></strong></a>`;
+      <div class="management-module-topline"><span>${escapeHtml(module.day || "")}</span><span>${escapeHtml(managementText("courseType"))}</span></div>
+      <h3>${escapeHtml(managementValue(module, "title"))}</h3>
+      <p>${escapeHtml(managementValue(module, "summary"))}</p>
+      <p class="management-module-use"><strong>${escapeHtml(managementText("practice"))}</strong>${escapeHtml(managementValue(module, "soloCompanyUse"))}</p>
+      <div class="management-tag-row">${managementList(module, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
+    return `<a class="management-module-card is-ready" href="/management/${escapeHtml(module.id)}" data-route="/management/${escapeHtml(module.id)}">${cardContent}<strong>${escapeHtml(managementText("openLesson"))} <span aria-hidden="true">→</span></strong></a>`;
   }).join("");
   target.innerHTML = `
     <section class="management-hero">
       <p class="eyebrow">MapKAI · Management Column</p>
-      <h1>${escapeHtml(managementColumn.title || "管理学专栏")}</h1>
-      <p class="management-hero-lede">${escapeHtml(managementColumn.subtitle || "")}</p>
-      <p class="management-hero-copy">${escapeHtml(managementColumn.description || "")}</p>
+      <h1>${escapeHtml(managementValue(managementColumn, "title") || "Management Essentials")}</h1>
+      <p class="management-hero-lede">${escapeHtml(managementValue(managementColumn, "subtitle"))}</p>
+      <p class="management-hero-copy">${escapeHtml(managementValue(managementColumn, "description"))}</p>
       <div class="management-audience">${audience}</div>
     </section>
-    <section class="management-start-here" aria-label="专栏定位">
-      <div><span>从真实问题开始</span><p>不把管理学拆成术语清单；先从一项正在发生的经营选择进入。</p></div>
-      <div><span>再看清楚取舍</span><p>识别价值、现金、组织、风险与时机之间真正需要判断的关系。</p></div>
-      <div><span>带走下一步框架</span><p>让每一篇内容都能回到你的项目、团队或公司里继续使用。</p></div>
+    <section class="management-start-here" aria-label="${escapeHtml(managementText("positioning"))}">
+      <div><span>${escapeHtml(managementText("startOne"))}</span><p>${escapeHtml(managementText("startOneCopy"))}</p></div>
+      <div><span>${escapeHtml(managementText("startTwo"))}</span><p>${escapeHtml(managementText("startTwoCopy"))}</p></div>
+      <div><span>${escapeHtml(managementText("startThree"))}</span><p>${escapeHtml(managementText("startThreeCopy"))}</p></div>
     </section>
     ${moduleCards ? `<section class="management-foundations">
       <div class="management-section-heading">
-        <p class="eyebrow">今天讲什么</p>
-        <h2>五天，五个人人都用得上的经营问题</h2>
-        <p>这条路径借鉴 EMBA 的 Day 1–Day 5 学习顺序，但不要求商业或财务背景。先理解每一天在解决什么问题，再把它用回自己的工作、项目或一人公司。</p>
+        <p class="eyebrow">${escapeHtml(managementText("today"))}</p>
+        <h2>${escapeHtml(managementText("pathTitle"))}</h2>
+        <p>${escapeHtml(managementText("pathCopy"))}</p>
       </div>
       <div class="management-module-grid">${moduleCards}</div>
     </section>` : ""}`;
@@ -15214,32 +15287,33 @@ function renderManagementArticle(articleId) {
   if (!target) return;
   const lesson = getManagementLesson(articleId);
   if (lesson) {
+    const storyParagraphs = managementStoryParagraphs(lesson);
     target.innerHTML = `
       <header class="management-article-header management-lesson-header">
-        <p class="eyebrow">${escapeHtml(lesson.day)} · 今天讲什么</p>
-        <h1>${escapeHtml(lesson.title)}</h1>
-        <p>${escapeHtml(lesson.summary)}</p>
+        <p class="eyebrow">${escapeHtml(lesson.day)} · ${escapeHtml(managementText("today"))}</p>
+        <h1>${escapeHtml(managementValue(lesson, "title"))}</h1>
+        <p>${escapeHtml(managementValue(lesson, "summary"))}</p>
       </header>
-      ${lesson.storyParagraphs?.length ? `<section class="management-lesson-story">
-        <p class="eyebrow">${escapeHtml(lesson.storyTitle || "知识寓言")}</p>
-        ${lesson.storyParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+      ${storyParagraphs.length ? `<section class="management-lesson-story">
+        <p class="eyebrow">${escapeHtml(managementValue(lesson, "storyTitle") || managementText("today"))}</p>
+        ${storyParagraphs.map((paragraph) => `<p>${formatManagementStoryParagraph(paragraph)}</p>`).join("")}
       </section>` : ""}
-      ${lesson.todayJudgement ? `<section class="management-lesson-judgement">
-        <strong>今天真正要学会的判断</strong>
-        <p>${escapeHtml(lesson.todayJudgement)}</p>
+      ${managementValue(lesson, "todayJudgement") ? `<section class="management-lesson-judgement">
+        <strong>${escapeHtml(managementText("judgement"))}</strong>
+        <p>${escapeHtml(managementValue(lesson, "todayJudgement"))}</p>
       </section>` : ""}
       <section class="management-opening-note management-lesson-use">
-        <strong>一人公司练习</strong>
-        <p>${escapeHtml(lesson.soloCompanyUse)}</p>
+        <strong>${escapeHtml(managementText("soloPractice"))}</strong>
+        <p>${escapeHtml(managementValue(lesson, "soloCompanyUse"))}</p>
       </section>
       ${lesson.audioUrl ? `<section class="management-lesson-audio">
-        <p class="eyebrow">本期播客</p>
-        <h2>${escapeHtml(lesson.audioTitle || "听这一课")}</h2>
-        <audio controls preload="metadata" src="${escapeHtml(lesson.audioUrl)}">你的浏览器暂不支持音频播放。</audio>
+        <p class="eyebrow">${escapeHtml(managementText("podcast"))}</p>
+        <h2>${escapeHtml(managementValue(lesson, "audioTitle") || managementText("audioFallback"))}</h2>
+        <audio controls preload="metadata" src="${escapeHtml(lesson.audioUrl)}">Your browser does not support audio playback.</audio>
       </section>` : ""}
       <section class="management-lesson-keywords">
-        <p class="eyebrow">今天先记住</p>
-        <div class="management-tag-row">${(lesson.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+        <p class="eyebrow">${escapeHtml(managementText("remember"))}</p>
+        <div class="management-tag-row">${managementList(lesson, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
       </section>`;
     return;
   }
@@ -17185,12 +17259,25 @@ function renderCategoryTree(category) {
     })
     .join("");
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
+  const managementCourseCardCopy = currentLanguage === "en"
+    ? {
+      label: "AI-era essential course",
+      title: "Management Essentials: five operating questions for a solo company",
+      description: "From value and cash, trust and compliance, risk and governance, and strategic control to evidence and advice: Day 1–Day 5 learning from Turnpo, made practical for sustained operation.",
+      action: "Enter Management Essentials",
+    }
+    : {
+      label: "AI 时代通用课程",
+      title: "管理学通识：一人公司的五个经营问题",
+      description: "从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。",
+      action: "进入管理学通识",
+    };
   const managementCourseCard = category.code === "00" ? `
     <a class="ai-learning-course-card" href="/management" data-route="/management">
-      <span>AI 时代通用课程</span>
-      <h2>管理学通识：一人公司的五个经营问题</h2>
-      <p>从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。</p>
-      <strong>进入管理学通识 <span aria-hidden="true">→</span></strong>
+      <span>${escapeHtml(managementCourseCardCopy.label)}</span>
+      <h2>${escapeHtml(managementCourseCardCopy.title)}</h2>
+      <p>${escapeHtml(managementCourseCardCopy.description)}</p>
+      <strong>${escapeHtml(managementCourseCardCopy.action)} <span aria-hidden="true">→</span></strong>
     </a>` : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
