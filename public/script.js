@@ -1522,8 +1522,8 @@ const publicCategoryCardDisplay = {
   en: {
     "00": {
       originalTitle: "Generic Learning",
-      displayTitle: "Where Growth Begins",
-      displayDescription: "A person’s true beginning is not knowing many answers, but learning how to search for them.",
+      displayTitle: "AI-Era General Knowledge Learning",
+      displayDescription: "Learn to work with AI through questioning, judgment, expression, systems thinking, and execution—so one person can run a sustainable company with greater agency.",
     },
     "01": {
       originalTitle: "Education",
@@ -1579,8 +1579,8 @@ const publicCategoryCardDisplay = {
   zh: {
     "00": {
       originalTitle: "通用学习",
-      displayTitle: "成长的起点",
-      displayDescription: "一个人真正的起点，不是知道多少答案，而是开始知道如何寻找答案。",
+      displayTitle: "AI 时代的通用知识学习",
+      displayDescription: "学习如何与 AI 协作，把提问、判断、表达、系统思维和行动组织起来，更好地驾驭自己的一人公司。",
     },
     "01": {
       originalTitle: "教育",
