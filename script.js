@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.163";
+const appVersion = "0.1.164";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15312,6 +15312,7 @@ function renderManagementArticle(articleId) {
   const lesson = getManagementLesson(articleId);
   if (lesson) {
     const storyParagraphs = managementStoryParagraphs(lesson);
+    const audioUrl = managementValue(lesson, "audioUrl");
     target.innerHTML = `
       <header class="management-article-header management-lesson-header">
         <p class="eyebrow">${escapeHtml(lesson.day)} · ${escapeHtml(managementText("today"))}</p>
@@ -15334,10 +15335,10 @@ function renderManagementArticle(articleId) {
         <strong>${escapeHtml(managementText("soloPractice"))}</strong>
         <p>${escapeHtml(managementValue(lesson, "soloCompanyUse"))}</p>
       </section>
-      ${lesson.audioUrl ? `<section class="management-lesson-audio">
+      ${audioUrl ? `<section class="management-lesson-audio">
         <p class="eyebrow">${escapeHtml(managementText("podcast"))}</p>
         <h2>${escapeHtml(managementValue(lesson, "audioTitle") || managementText("audioFallback"))}</h2>
-        <audio controls preload="metadata" src="${escapeHtml(lesson.audioUrl)}">Your browser does not support audio playback.</audio>
+        <audio controls preload="metadata" src="${escapeHtml(audioUrl)}">Your browser does not support audio playback.</audio>
       </section>` : ""}
       <section class="management-lesson-keywords">
         <p class="eyebrow">${escapeHtml(managementText("remember"))}</p>
