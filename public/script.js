@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.165";
+const appVersion = "0.1.166";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -219,6 +219,10 @@ const uiText = {
     topRatedCopy: "The five highest average scores rise here automatically.",
     topRatedOpen: "Open story",
     topRatedAverage: (average, count) => `${average}/5 · ${count} ${count === 1 ? "person rated" : "people rated"}`,
+    homeFeaturedEyebrow: "Recently recommended",
+    homeFeaturedTitle: "Corporate Finance Essentials",
+    homeFeaturedCopy: "A five-day, plain-language path for understanding value, cash, risk, and the choices behind a company.",
+    homeFeaturedAction: "Start the five-day path →",
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
@@ -616,6 +620,10 @@ const uiText = {
     topRatedCopy: "平均分最高的 5 篇文章会自动出现在这里。",
     topRatedOpen: "打开故事",
     topRatedAverage: (average, count) => `${average}/5 · ${count} 人评分`,
+    homeFeaturedEyebrow: "近期推荐",
+    homeFeaturedTitle: "公司金融通识",
+    homeFeaturedCopy: "五天、通俗易懂地看见价值、现金、风险，以及公司每一个选择背后的判断。",
+    homeFeaturedAction: "开始五天学习 →",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
