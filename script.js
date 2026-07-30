@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.164";
+const appVersion = "0.1.165";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15319,6 +15319,11 @@ function renderManagementArticle(articleId) {
         <h1>${escapeHtml(managementValue(lesson, "title"))}</h1>
         <p>${escapeHtml(managementValue(lesson, "summary"))}</p>
       </header>
+      ${audioUrl ? `<section class="management-lesson-audio">
+        <p class="eyebrow">${escapeHtml(managementText("podcast"))}</p>
+        <h2>${escapeHtml(managementValue(lesson, "audioTitle") || managementText("audioFallback"))}</h2>
+        <audio controls preload="metadata" src="${escapeHtml(audioUrl)}">Your browser does not support audio playback.</audio>
+      </section>` : ""}
       ${storyParagraphs.length ? `<section class="management-lesson-story">
         <p class="eyebrow">${escapeHtml(managementValue(lesson, "storyTitle") || managementText("today"))}</p>
         ${storyParagraphs.map((paragraph) => `<p>${formatManagementStoryParagraph(paragraph)}</p>`).join("")}
@@ -15335,11 +15340,6 @@ function renderManagementArticle(articleId) {
         <strong>${escapeHtml(managementText("soloPractice"))}</strong>
         <p>${escapeHtml(managementValue(lesson, "soloCompanyUse"))}</p>
       </section>
-      ${audioUrl ? `<section class="management-lesson-audio">
-        <p class="eyebrow">${escapeHtml(managementText("podcast"))}</p>
-        <h2>${escapeHtml(managementValue(lesson, "audioTitle") || managementText("audioFallback"))}</h2>
-        <audio controls preload="metadata" src="${escapeHtml(audioUrl)}">Your browser does not support audio playback.</audio>
-      </section>` : ""}
       <section class="management-lesson-keywords">
         <p class="eyebrow">${escapeHtml(managementText("remember"))}</p>
         <div class="management-tag-row">${managementList(lesson, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>

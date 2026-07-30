@@ -6312,6 +6312,13 @@ dd,
 
 .management-lesson-audio audio {
   width: 100%;
+  min-height: 64px;
+  accent-color: #2563eb;
+}
+
+.management-lesson-audio audio::-webkit-media-controls-play-button {
+  transform: scale(1.3);
+  transform-origin: center;
 }
 
 .management-lesson-references {
