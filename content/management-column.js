@@ -8,6 +8,16 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
   descriptionEn: "No finance background required. Each day starts with a real company decision and uses plain language to reveal value, cash, risk, governance, and a practical next move.",
   audiences: ["独立经营者", "职场学习者", "好奇的行动者"],
   audiencesEn: ["Independent operators", "Working learners", "Curious doers"],
+  courseMedia: {
+    videoTitle: "《财务领导力》课程总览",
+    videoTitleEn: "Financial Leadership · Course Overview",
+    videoDescription: "先用这一段总览认识这条路径：财务领导力不只关乎报表，而是关于价值、现金、风险、治理与经营判断如何连在一起。",
+    videoDescriptionEn: "Start here for the course orientation: financial leadership is not only about spreadsheets, but about how value, cash, risk, governance, and operating judgement connect.",
+    videoUrl: "/assets/management-media/financial-leadership-overview.mp4",
+    podcastTitle: "《财务领导力：不止于报表》",
+    podcastTitleEn: "Financial Leadership: Beyond the Spreadsheet",
+    podcastUrl: "/assets/management-media/financial-leadership-beyond-the-spreadsheet.m4a",
+  },
   learningModules: [
     {
       id: "day-1-value-and-capital",
@@ -24,6 +34,22 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       audioTitleEn: "The Second Navigation Table",
       audioUrl: "https://media.turnpo.com/%E5%88%A9%E6%B6%A6%E8%83%8C%E5%90%8E%E7%9A%84%E7%94%9F%E6%AD%BB%E5%B1%80.m4a",
       audioUrlEn: "https://media.turnpo.com/day1-en.m4a",
+      videos: [
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《灰港账本：一则财务寓言》",
+          titleEn: "Grey Harbor Ledger: A Finance Fable",
+          url: "/assets/management-media/day-1-zh-grey-harbor-ledger.mp4",
+        },
+        {
+          language: "English",
+          languageEn: "English",
+          title: "True Cost of Capital",
+          titleEn: "True Cost of Capital",
+          url: "/assets/management-media/day-1-en-true-cost-of-capital.mp4",
+        },
+      ],
     },
     {
       id: "day-2-trust-and-license",
@@ -40,6 +66,22 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       audioTitleEn: "The Clean Checklist",
       audioUrl: "https://media.turnpo.com/%E9%82%A3%E5%BC%A0%E5%B9%B2%E5%87%80%E7%9A%84%E6%A3%80%E6%9F%A5%E8%A1%A8.m4a",
       audioUrlEn: "https://media.turnpo.com/day2-en.m4a",
+      videos: [
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《全绿的幻象：重新思考合规与可持续性》",
+          titleEn: "The All-Green Illusion: Rethinking Compliance and Sustainability",
+          url: "/assets/management-media/day-2-zh-all-green-illusion.mp4",
+        },
+        {
+          language: "English",
+          languageEn: "English",
+          title: "Credible Management",
+          titleEn: "Credible Management",
+          url: "/assets/management-media/day-2-en-credible-management.mp4",
+        },
+      ],
     },
     {
       id: "day-3-risk-and-governance",
@@ -56,6 +98,29 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       audioTitleEn: "Three Whiteboards in a Pizza Kitchen",
       audioUrl: "https://media.turnpo.com/day-3-three-whiteboards.m4a",
       audioUrlEn: "https://media.turnpo.com/day3-en.m4a",
+      videos: [
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《三块白板：财务、ERM 与治理》",
+          titleEn: "Three Whiteboards: Finance, ERM, and Governance",
+          url: "/assets/management-media/day-3-zh-finance-erm-governance.mp4",
+        },
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《披萨店的三块白板》",
+          titleEn: "Three Whiteboards at the Pizza Shop",
+          url: "/assets/management-media/day-3-zh-pizza-kitchen-whiteboards.mp4",
+        },
+        {
+          language: "English",
+          languageEn: "English",
+          title: "The Corner Bistro",
+          titleEn: "The Corner Bistro",
+          url: "/assets/management-media/day-3-en-corner-bistro.mp4",
+        },
+      ],
       storyTitle: "知识寓言｜《披萨店后厨的三块白板》",
       storyParagraphs: [
         "大学城旁边有一家小披萨店，叫“街角一块”。店里只有六张桌子，外卖却占了一半生意。每到周五晚上，订单打印机不停往外吐单子，老板阿明就觉得生意很好。",
@@ -95,6 +160,22 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       audioTitleEn: "Why Accurate Metrics Sabotage Your Strategy",
       audioUrl: "https://media.turnpo.com/day-4-data-all-green.m4a",
       audioUrlEn: "https://media.turnpo.com/day4-en.m4a",
+      videos: [
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《第三勺红油：管理控制系统的寓言》",
+          titleEn: "The Third Spoon of Chili Oil: A Management Control Systems Fable",
+          url: "/assets/management-media/day-4-zh-third-spoon-chili-oil.mp4",
+        },
+        {
+          language: "English",
+          languageEn: "English",
+          title: "Beyond the KPI Trap",
+          titleEn: "Beyond the KPI Trap",
+          url: "/assets/management-media/day-4-en-beyond-kpi-trap.mp4",
+        },
+      ],
     },
     {
       id: "day-5-evidence-and-recommendation",
@@ -111,6 +192,22 @@ globalThis.MAPKAI_MANAGEMENT_COLUMN = {
       audioTitleEn: "The Driving School with the Highest Pass Rate",
       audioUrl: "https://media.turnpo.com/%E4%B8%9A%E7%BB%A9%E6%A6%9C%E5%8D%95%E7%9A%84%E7%8C%AB%E8%85%BB.m4a",
       audioUrlEn: "https://media.turnpo.com/day5-en.m4a",
+      videos: [
+        {
+          language: "中文",
+          languageEn: "Chinese",
+          title: "《揭开高业绩的幻觉》",
+          titleEn: "Unmasking the High-Performance Illusion",
+          url: "/assets/management-media/day-5-zh-performance-illusion.mp4",
+        },
+        {
+          language: "English",
+          languageEn: "English",
+          title: "The 92 Percent Illusion",
+          titleEn: "The 92 Percent Illusion",
+          url: "/assets/management-media/day-5-en-92-percent-illusion.mp4",
+        },
+      ],
     },
   ],
   articles: [],

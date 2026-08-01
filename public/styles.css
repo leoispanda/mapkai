@@ -6420,6 +6420,100 @@ dd,
   transform-origin: center;
 }
 
+.management-course-media,
+.management-lesson-videos {
+  display: grid;
+  gap: 1rem;
+  margin: 1.6rem 0;
+  padding: clamp(1.2rem, 3vw, 1.7rem);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 10px;
+  background: rgba(239, 246, 255, 0.48);
+}
+
+.management-course-media-heading {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 760px;
+}
+
+.management-course-media .eyebrow,
+.management-lesson-videos .eyebrow,
+.management-media-label,
+.management-video-card-header span {
+  margin: 0;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 840;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.management-course-media h2,
+.management-course-media h3,
+.management-video-card h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.management-course-media h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.management-course-media-heading > p:not(.eyebrow) {
+  margin: 0;
+  color: #475569;
+  line-height: 1.72;
+}
+
+.management-course-media-players,
+.management-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.management-course-media-players > section,
+.management-video-card {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.management-course-media audio,
+.management-course-media video,
+.management-video-card video {
+  width: 100%;
+  max-height: 440px;
+  border-radius: 6px;
+  background: #0f172a;
+}
+
+.management-video-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.management-video-card-header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.management-video-card h2 {
+  font-size: 1.03rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .management-course-media-players,
+  .management-video-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .management-lesson-references {
   display: grid;
   gap: 0.9rem;

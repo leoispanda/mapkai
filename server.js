@@ -37,6 +37,8 @@ const mimeTypes = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
+  ".mp4": "video/mp4",
+  ".m4a": "audio/mp4",
   ".ico": "image/x-icon",
 };
 
@@ -207,6 +209,17 @@ async function serveStatic(pathname, response) {
     });
     response.end(content);
   } catch {
+    const publicFilePath = join(root, "public", safePath);
+    try {
+      const content = await readFile(publicFilePath);
+      response.writeHead(200, {
+        "Content-Type": mimeTypes[extname(publicFilePath)] || "application/octet-stream",
+      });
+      response.end(content);
+      return;
+    } catch {
+      // Static source and deploy output both lack this file; continue to the SPA fallback.
+    }
     if (!extname(filePath)) {
       const content = await readFile(join(root, "index.html"));
       response.writeHead(200, { "Content-Type": mimeTypes[".html"] });

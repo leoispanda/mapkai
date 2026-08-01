@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.167";
+const appVersion = "0.1.169";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -15208,8 +15208,13 @@ const managementUiCopy = {
     referenceUse: "本课用途：",
     soloPractice: "一人公司练习",
     podcast: "本期播客",
+    overview: "课程总览",
+    overviewVideo: "总览视频",
+    overviewPodcast: "总览播客",
+    lessonVideos: "本课视频",
     remember: "今天先记住",
     audioFallback: "听这一课",
+    videoFallback: "观看这一课",
   },
   en: {
     courseType: "AI-era essentials",
@@ -15232,8 +15237,13 @@ const managementUiCopy = {
     referenceUse: "Used in this lesson:",
     soloPractice: "Solo-company practice",
     podcast: "Episode",
+    overview: "Course overview",
+    overviewVideo: "Overview video",
+    overviewPodcast: "Overview podcast",
+    lessonVideos: "Lesson videos",
     remember: "Remember this first",
     audioFallback: "Listen to this lesson",
+    videoFallback: "Watch this lesson",
   },
 };
 
@@ -15277,11 +15287,27 @@ function renderManagementKnowledgeChain(content) {
   }).join("");
 }
 
+function renderManagementVideos(videos) {
+  if (!Array.isArray(videos) || !videos.length) return "";
+  return `<section class="management-lesson-videos">
+    <p class="eyebrow">${escapeHtml(managementText("lessonVideos"))}</p>
+    <div class="management-video-grid">${videos.map((video) => `
+      <article class="management-video-card">
+        <div class="management-video-card-header">
+          <span>${escapeHtml(managementValue(video, "language"))}</span>
+          <h2>${escapeHtml(managementValue(video, "title") || managementText("videoFallback"))}</h2>
+        </div>
+        <video controls preload="metadata" src="${escapeHtml(video.url || "")}">Your browser does not support video playback.</video>
+      </article>`).join("")}</div>
+  </section>`;
+}
+
 function renderManagementColumn() {
   const target = document.getElementById("managementColumn");
   if (!target) return;
   const learningModules = managementColumn.learningModules || [];
   const audience = managementList(managementColumn, "audiences").map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+  const courseMedia = managementColumn.courseMedia || {};
   const moduleCards = learningModules.map((module) => {
     const cardContent = `
       <div class="management-module-topline"><span>${escapeHtml(module.day || "")}</span><span>${escapeHtml(managementText("courseType"))}</span></div>
@@ -15299,6 +15325,17 @@ function renderManagementColumn() {
       <p class="management-hero-copy">${escapeHtml(managementValue(managementColumn, "description"))}</p>
       <div class="management-audience">${audience}</div>
     </section>
+    ${courseMedia.videoUrl || courseMedia.podcastUrl ? `<section class="management-course-media" aria-label="${escapeHtml(managementText("overview"))}">
+      <div class="management-course-media-heading">
+        <p class="eyebrow">${escapeHtml(managementText("overview"))}</p>
+        <h2>${escapeHtml(managementValue(courseMedia, "videoTitle") || managementText("overview"))}</h2>
+        <p>${escapeHtml(managementValue(courseMedia, "videoDescription"))}</p>
+      </div>
+      <div class="management-course-media-players">
+        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">Your browser does not support video playback.</video></section>` : ""}
+        ${courseMedia.podcastUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewPodcast"))}</p><h3>${escapeHtml(managementValue(courseMedia, "podcastTitle"))}</h3><audio controls preload="metadata" src="${escapeHtml(courseMedia.podcastUrl)}">Your browser does not support audio playback.</audio></section>` : ""}
+      </div>
+    </section>` : ""}
     <section class="management-start-here" aria-label="${escapeHtml(managementText("positioning"))}">
       <div><span>${escapeHtml(managementText("startOne"))}</span><p>${escapeHtml(managementText("startOneCopy"))}</p></div>
       <div><span>${escapeHtml(managementText("startTwo"))}</span><p>${escapeHtml(managementText("startTwoCopy"))}</p></div>
@@ -15332,6 +15369,7 @@ function renderManagementArticle(articleId) {
         <h2>${escapeHtml(managementValue(lesson, "audioTitle") || managementText("audioFallback"))}</h2>
         <audio controls preload="metadata" src="${escapeHtml(audioUrl)}">Your browser does not support audio playback.</audio>
       </section>` : ""}
+      ${renderManagementVideos(lesson.videos)}
       ${storyParagraphs.length ? `<section class="management-lesson-story">
         <p class="eyebrow">${escapeHtml(managementValue(lesson, "storyTitle") || managementText("today"))}</p>
         ${storyParagraphs.map((paragraph) => `<p>${formatManagementStoryParagraph(paragraph)}</p>`).join("")}
