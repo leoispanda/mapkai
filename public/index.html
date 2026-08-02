@@ -63,31 +63,43 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.171" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.178" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
       <a class="brand" href="/" data-route="/">
         <img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" />
       </a>
-      <nav class="nav-links" aria-label="Site">
-        <a href="/" data-route="/">Home</a>
-        <a href="/explore" data-route="/explore">Explore</a>
-        <a href="/map" data-route="/map">Knowledge Map</a>
-        <a href="/categories" data-route="/categories">Fields</a>
-        <a class="nav-utility" href="/management" data-route="/management">Corporate Finance</a>
-        <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
-        <a href="/about" data-route="/about">About</a>
-      </nav>
-      <div class="language-switch" aria-label="Language">
-        <button type="button" data-language="en" aria-pressed="true">English</button>
-        <span>|</span>
-        <button type="button" data-language="zh" aria-pressed="false">中文</button>
-      </div>
-      <div class="theme-switch" aria-label="Theme">
-        <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
-        <span>|</span>
-        <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-panel" id="primary-nav-panel">
+        <nav class="nav-links" aria-label="Site">
+          <a href="/" data-route="/">Home</a>
+          <a href="/explore" data-route="/explore">Explore</a>
+          <a href="/map" data-route="/map">Knowledge Map</a>
+          <div class="nav-learning">
+            <a class="nav-learning-trigger" href="/learning/corporate-finance" data-i18n="navLearning">Learning</a>
+            <div class="nav-learning-menu" aria-label="Learning paths">
+              <a href="/learning/corporate-finance" data-i18n="navFinanceCourse">Corporate Finance Essentials</a>
+              <span data-i18n="navLearningSoon">More learning paths coming soon</span>
+            </div>
+          </div>
+          <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
+          <a href="/about" data-route="/about">About</a>
+        </nav>
+        <div class="nav-preferences">
+          <div class="language-switch" aria-label="Language">
+            <button type="button" data-language="en" aria-pressed="true">English</button>
+            <span>|</span>
+            <button type="button" data-language="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="theme-switch" aria-label="Theme">
+            <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
+            <span>|</span>
+            <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
       </div>
     </header>
     <div class="founder-indicator" aria-live="polite" hidden></div>
@@ -95,22 +107,66 @@
     <main id="app">
       <section class="page home-page is-active" id="home" data-page="/">
         <div class="hero home-minimal">
-          <p class="eyebrow">MapKAI</p>
-          <h1>Map your knowledge with AI</h1>
-          <p class="hero-copy">
-            Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.
-          </p>
-          <p class="hero-microcopy">No login. No account. Just a quiet starting point.</p>
+          <p class="eyebrow" data-i18n="homeEyebrow">A knowledge compass for the AI era</p>
+          <h1 data-i18n="homeTitle">Discover how you think. Learn what matters next.</h1>
+          <p class="hero-copy" data-i18n="homeCopy">MapKAI helps you explore your knowledge patterns, follow structured learning paths, and think through complex decisions with greater clarity.</p>
+          <p class="hero-microcopy" data-i18n="homeQuickMirrorHint">No account required. Free to explore. Low-data by design.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/explore" data-route="/explore" data-i18n="homePrimary">Explore Your Knowledge</a>
+            <a class="button secondary" href="/learning/corporate-finance" data-i18n="homeFinanceAction" data-home-finance-entry>Start the Finance Course</a>
+          </div>
         </div>
-        <section class="home-section home-featured-learning" aria-label="Recently recommended learning">
-          <a class="home-featured-learning-card" href="/management" data-route="/management">
-            <div>
-              <p class="home-featured-learning-kicker" data-i18n="homeFeaturedEyebrow">Recently recommended</p>
-              <h2><strong data-i18n="homeFeaturedTitle">Corporate Finance Essentials</strong></h2>
-              <p data-i18n="homeFeaturedCopy">A five-day, plain-language path for understanding value, cash, risk, and the choices behind a company.</p>
+        <section class="home-section home-product-system" aria-labelledby="home-system-title">
+          <div class="home-section-heading">
+            <p class="eyebrow" data-i18n="homeSystemEyebrow">One system, three steps</p>
+            <h2 id="home-system-title" data-i18n="homeSystemTitle">From knowledge awareness to better decisions</h2>
+          </div>
+          <div class="home-stage-grid">
+            <article class="home-stage-card">
+              <span data-i18n="homeDiscoverLabel">01 · Discover</span>
+              <h3 data-i18n="homeDiscoverTitle">See your knowledge patterns</h3>
+              <p data-i18n="homeDiscoverCopy">Answer everyday questions and notice which knowledge lenses are already active in your thinking.</p>
+              <a href="/explore" data-route="/explore" data-i18n="homePrimary">Explore Your Knowledge</a>
+            </article>
+            <article class="home-stage-card">
+              <span data-i18n="homeLearnLabel">02 · Learn</span>
+              <h3 data-i18n="homeLearnTitle">Build understanding through structured paths</h3>
+              <p data-i18n="homeLearnCopy">Follow practical learning paths that connect concepts, stories, and real business decisions.</p>
+              <a href="/learning/corporate-finance" data-i18n="homeLearningPathsAction">View Learning Paths</a>
+            </article>
+            <article class="home-stage-card">
+              <span data-i18n="homeDecideLabel">03 · Decide</span>
+              <h3 data-i18n="homeDecideTitle">Examine difficult decisions from multiple perspectives</h3>
+              <p data-i18n="homeDecideCopy">Use PDC to challenge assumptions, compare trade-offs, and prepare a clearer decision memo.</p>
+              <a href="/pdc" data-route="/pdc" data-i18n="homePdcAction">Explore PDC</a>
+            </article>
+          </div>
+        </section>
+        <section class="home-section home-featured-learning" aria-labelledby="home-finance-title">
+          <div class="home-finance-copy">
+            <p class="eyebrow" data-i18n="homeFeaturedEyebrow">Featured Learning Path</p>
+            <h2 id="home-finance-title" data-i18n="homeFeaturedTitle">Corporate Finance Essentials</h2>
+            <p class="home-finance-subtitle" data-i18n="homeFeaturedSubtitle">Understand how companies create value, manage cash, evaluate risk, and make decisions under uncertainty.</p>
+            <p data-i18n="homeFeaturedCopy">A practical five-day learning path for managers, engineers, project leaders, founders, and business professionals without a finance background.</p>
+            <p class="home-finance-meta" data-i18n="homeFeaturedMeta">5 days · 20–30 minutes per day · Free · No finance background required</p>
+            <ul class="home-finance-outcomes">
+              <li data-i18n="homeFinanceOutcomeOne">Understand the difference between profit, cash, and value.</li>
+              <li data-i18n="homeFinanceOutcomeTwo">Evaluate whether an investment creates long-term value.</li>
+              <li data-i18n="homeFinanceOutcomeThree">Recognize liquidity, risk, governance, and control issues.</li>
+              <li data-i18n="homeFinanceOutcomeFour">Ask better questions when reviewing business proposals.</li>
+            </ul>
+            <div class="home-finance-actions">
+              <a class="button primary" href="/learning/corporate-finance/day-1" data-i18n="homeFeaturedAction" data-home-finance-entry>Start Day 1 — Free</a>
+              <a class="button secondary" href="/learning/corporate-finance" data-i18n="homeCourseOutlineAction">View Course Outline</a>
             </div>
-            <span class="home-featured-learning-action" data-i18n="homeFeaturedAction">Start the five-day path →</span>
-          </a>
+          </div>
+          <ol class="home-finance-timeline" aria-label="Five-day learning path">
+            <li><span>Day 1</span><strong data-i18n="financeDayOneTitle">Value and Capital Allocation</strong><small data-i18n="financeDayOneTime">25 minutes</small></li>
+            <li><span>Day 2</span><strong data-i18n="financeDayTwoTitle">Trust and the Licence to Operate</strong><small data-i18n="financeDayTwoTime">25 minutes</small></li>
+            <li><span>Day 3</span><strong data-i18n="financeDayThreeTitle">Facts, Risk, and Governance</strong><small data-i18n="financeDayThreeTime">25 minutes</small></li>
+            <li><span>Day 4</span><strong data-i18n="financeDayFourTitle">How Strategy Becomes Behaviour</strong><small data-i18n="financeDayFourTime">25 minutes</small></li>
+            <li><span>Day 5</span><strong data-i18n="financeDayFiveTitle">Compare Evidence, Form Advice</strong><small data-i18n="financeDayFiveTime">25 minutes</small></li>
+          </ol>
         </section>
         <section class="home-section top-rated-story-section" id="topRatedStories" aria-live="polite" hidden></section>
         <section class="home-section" hidden>
@@ -185,6 +241,7 @@
           <section class="about-opening">
             <p class="eyebrow">About MapKAI</p>
             <h1>A quiet compass for learning in the AI era.</h1>
+            <p class="about-product-promise" data-i18n="productPromise">Discover how you think. Learn across fields. Make better decisions.</p>
           </section>
           <section class="about-block">
             <h2>What MapKAI Is</h2>
@@ -403,7 +460,7 @@
 
       <section class="page management-article-page" id="managementArticle" data-page="/management/article">
         <div class="management-article-shell">
-          <a class="management-back-link" href="/management" data-route="/management" data-i18n="managementBack">← 返回公司金融通识</a>
+          <a class="management-back-link" href="/learning/corporate-finance" data-i18n="managementBack">← 返回公司金融通识</a>
           <article class="management-article-reader" id="managementArticleReader" aria-live="polite"></article>
         </div>
       </section>
@@ -615,10 +672,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.171"></script>
-    <script src="/content/management-column.js?v=0.1.171"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.171"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.171"></script>
-    <script src="/script.js?v=0.1.171"></script>
+    <script src="/content/field-fables.js?v=0.1.178"></script>
+    <script src="/content/management-column.js?v=0.1.178"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.178"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.178"></script>
+    <script src="/script.js?v=0.1.178"></script>
   </body>
 </html>

@@ -19,12 +19,22 @@ const localFunctionRoutes = {
   "/api/contact-message": "functions/api/contact-message.js",
   "/api/contact-messages": "functions/api/contact-messages.js",
   "/api/story-ratings": "functions/api/story-ratings.js",
+  "/api/course-event": "functions/api/course-event.js",
   "/api/pdc/start": "functions/api/pdc/start.js",
   "/api/pdc/validate-pass": "functions/api/pdc/validate-pass.js",
   "/api/pdc/feedback": "functions/api/pdc/feedback.js",
   "/api/pdc/founder-summary": "functions/api/pdc/founder-summary.js",
   "/api/pdc/generate-passes": "functions/api/pdc/generate-passes.js",
   "/api/pdc/latency-diagnostic": "functions/api/pdc/latency-diagnostic.js",
+};
+
+const legacyRedirects = {
+  "/management": "/learning/corporate-finance",
+  "/management/day-1-value-and-capital": "/learning/corporate-finance/day-1",
+  "/management/day-2-trust-and-license": "/learning/corporate-finance/day-2",
+  "/management/day-3-risk-and-governance": "/learning/corporate-finance/day-3",
+  "/management/day-4-strategy-and-action": "/learning/corporate-finance/day-4",
+  "/management/day-5-evidence-and-recommendation": "/learning/corporate-finance/day-5",
 };
 
 const mimeTypes = {
@@ -39,6 +49,7 @@ const mimeTypes = {
   ".webp": "image/webp",
   ".mp4": "video/mp4",
   ".m4a": "audio/mp4",
+  ".pdf": "application/pdf",
   ".ico": "image/x-icon",
 };
 
@@ -58,6 +69,12 @@ const server = createServer(async (request, response) => {
 
     if (request.method === "GET" && url.pathname === "/api/health") {
       sendJson(response, 200, { ok: true });
+      return;
+    }
+
+    if ((request.method === "GET" || request.method === "HEAD") && legacyRedirects[url.pathname]) {
+      response.writeHead(301, { Location: legacyRedirects[url.pathname] });
+      response.end();
       return;
     }
 
@@ -209,6 +226,19 @@ async function serveStatic(pathname, response) {
     });
     response.end(content);
   } catch {
+    if (!extname(filePath)) {
+      const directoryIndexCandidates = [join(root, safePath, "index.html"), join(root, "public", safePath, "index.html")];
+      for (const candidate of directoryIndexCandidates) {
+        try {
+          const content = await readFile(candidate);
+          response.writeHead(200, { "Content-Type": mimeTypes[".html"] });
+          response.end(content);
+          return;
+        } catch {
+          // Continue to the standard public-file and SPA fallbacks.
+        }
+      }
+    }
     const publicFilePath = join(root, "public", safePath);
     try {
       const content = await readFile(publicFilePath);
