@@ -10,11 +10,10 @@ function readProgress() {
       visitedDays: Array.isArray(value.visitedDays) ? value.visitedDays : [],
       completedDays: Array.isArray(value.completedDays) ? value.completedDays : [],
       lastVisitedDay: Number(value.lastVisitedDay || 0),
-      reflectionDrafts: value.reflectionDrafts && typeof value.reflectionDrafts === "object" ? value.reflectionDrafts : {},
       updatedAt: value.updatedAt || "",
     };
   } catch {
-    return { visitedDays: [], completedDays: [], lastVisitedDay: 0, reflectionDrafts: {}, updatedAt: "" };
+    return { visitedDays: [], completedDays: [], lastVisitedDay: 0, updatedAt: "" };
   }
 }
 
@@ -76,18 +75,6 @@ function initDay() {
   progress.lastVisitedDay = day;
   saveProgress(progress);
   track("finance_day_started");
-  document.querySelectorAll("[data-reflection-id]").forEach((input) => {
-    const id = input.dataset.reflectionId;
-    input.value = progress.reflectionDrafts[id] || "";
-    input.addEventListener("input", () => {
-      window.clearTimeout(input.saveTimer);
-      input.saveTimer = window.setTimeout(() => {
-        const next = readProgress();
-        next.reflectionDrafts[id] = input.value.slice(0, 4000);
-        saveProgress(next);
-      }, 250);
-    });
-  });
   const button = document.querySelector("[data-mark-complete]");
   if (progress.completedDays.includes(day)) {
     button.textContent = language === "zh" ? "已完成" : "Completed";

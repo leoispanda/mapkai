@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.182";
+const appVersion = "0.1.184";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -233,14 +233,14 @@ const uiText = {
     homeFeaturedMeta: "5 days · 20–30 minutes per day · Free · No finance background required",
     homeFeaturedAction: "Start Day 1 — Free",
     homeCourseOutlineAction: "View Course Outline",
-    homeEyebrow: "A knowledge compass for the AI era",
-    homeTitle: "Discover how you think. Learn what matters next.",
-    homeCopy: "MapKAI helps you explore your knowledge patterns, follow structured learning paths, and think through complex decisions with greater clarity.",
-    homePrimary: "Explore Your Knowledge",
+    homeEyebrow: "MapKAI",
+    homeTitle: "Map your knowledge with AI",
+    homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
+    homePrimary: "Start exploration",
     homeFinanceAction: "Start the Finance Course",
     homeMapAction: "View Knowledge Map",
     homePdcAction: "Explore PDC",
-    homeQuickMirrorHint: "No account required. Free to explore. Low-data by design.",
+    homeQuickMirrorHint: "No login. No account. Just a quiet starting point.",
     homeSystemEyebrow: "One system, three steps",
     homeSystemTitle: "From knowledge awareness to better decisions",
     homeDiscoverLabel: "01 · Discover",
@@ -669,14 +669,14 @@ const uiText = {
     homeFeaturedMeta: "5天 · 每天20–30分钟 · 免费 · 无需金融背景",
     homeFeaturedAction: "免费开始第一天",
     homeCourseOutlineAction: "查看课程大纲",
-    homeEyebrow: "AI时代的个人知识指南针",
-    homeTitle: "发现你如何思考，找到下一步值得学习的方向。",
-    homeCopy: "MapKAI帮助你认识自己的知识结构，通过系统化学习路径建立理解，并更清晰地分析复杂决定。",
-    homePrimary: "探索我的知识",
+    homeEyebrow: "MapKAI",
+    homeTitle: "用 AI 映射你的知识",
+    homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
+    homePrimary: "开始探索",
     homeFinanceAction: "开始公司金融课程",
     homeMapAction: "查看知识地图",
     homePdcAction: "探索 PDC",
-    homeQuickMirrorHint: "无需注册，免费探索，低数据设计。",
+    homeQuickMirrorHint: "无需登录，无需账号。只是一个安静的起点。",
     homeSystemEyebrow: "一个系统，三个步骤",
     homeSystemTitle: "从认识知识结构，到做出更清晰的决定",
     homeDiscoverLabel: "01 · 发现",
@@ -14858,22 +14858,6 @@ function closeNavMenu() {
   setNavMenu(false);
 }
 
-function renderHomeFinanceProgress() {
-  let progress = {};
-  try { progress = JSON.parse(localStorage.getItem("mapkaiFinanceProgress") || "{}"); } catch { progress = {}; }
-  const completed = Array.isArray(progress.completedDays) ? [...new Set(progress.completedDays)].filter((day) => day >= 1 && day <= 5) : [];
-  const nextDay = [1, 2, 3, 4, 5].find((day) => !completed.includes(day));
-  document.querySelectorAll("[data-home-finance-entry]").forEach((link) => {
-    if (completed.length === 5) {
-      link.href = "/learning/corporate-finance";
-      link.textContent = currentLanguage === "zh" ? "回顾课程" : "Review the Course";
-    } else if (Number(progress.lastVisitedDay || 0) && nextDay) {
-      link.href = `/learning/corporate-finance/day-${nextDay}`;
-      link.textContent = currentLanguage === "zh" ? `继续第 ${nextDay} 天` : `Continue Day ${nextDay}`;
-    }
-  });
-}
-
 function sendCourseEvent(eventName) {
   fetch("/api/course-event", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event: eventName, language: currentLanguage }), keepalive: true }).catch(() => {});
 }
@@ -14900,10 +14884,9 @@ function applyLanguage() {
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
-  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homeFinanceAction")]);
+  setAllText(".home-page .hero-actions .button", [t("homePrimary")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
   updateNavMenuState();
-  renderHomeFinanceProgress();
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
   setText("#core-modules-title", t("coreTitle"));
@@ -18175,7 +18158,6 @@ if (navToggle) {
 }
 document.addEventListener("click", (event) => {
   if (navPanel?.classList.contains("is-open") && !event.target.closest(".topbar")) closeNavMenu();
-  if (event.target.closest("[data-home-finance-entry]")) sendCourseEvent("homepage_finance_clicked");
   if (event.target.closest('.home-page a[href="/explore"]')) sendCourseEvent("homepage_explore_clicked");
 });
 

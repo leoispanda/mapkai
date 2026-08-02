@@ -32,12 +32,12 @@ const copy = {
     creator: "Created by the MapKAI editorial team for professionals who need practical financial judgment across functions.",
     reviewed: "Last reviewed: August 2026", references: "View course references", referencesTitle: "Course references",
     finalTitle: "Start with one business question", finalCopy: "You do not need to master finance in one day. Begin by learning how value is created and how investment choices should be examined.",
-    privacy: "Your learning progress and reflection drafts are stored only on this device. No account is required.",
+    privacy: "Your learning progress is stored only on this device. No account is required.",
     completed: (n) => `${n} of 5 days completed`, startDay: (n) => `Start Day ${n}`, continueDay: (n) => `Continue Day ${n}`,
     dayOf: (n) => `Day ${n} of 5`, estimated: "Estimated time: 25 minutes", today: "Today you will learn to", startLesson: "Start Lesson",
     overview: "Course Overview", previous: "Previous Day", next: "Next Day", completeCourse: "Complete the Course",
-    opening: "Opening story or business situation", problem: "The decision problem", concepts: "Core concepts", framework: "Visual framework", example: "Practical example", mistake: "Common misunderstanding", reflection: "Reflection questions", takeaways: "Key takeaways", check: "Knowledge check", nextLesson: "Next lesson",
-    decisionQuestion: "Decision question", commonMistake: "Common mistake", whyMatters: "Why it matters", businessExample: "Business example", yourReflection: "Write your reflection", savedLocal: "Saved on this device",
+    opening: "Opening story or business situation", problem: "The decision problem", concepts: "Core concepts", framework: "Visual framework", example: "Practical example", mistake: "Common misunderstanding", takeaways: "Key takeaways", check: "Knowledge check", nextLesson: "Next lesson",
+    decisionQuestion: "Decision question", commonMistake: "Common mistake", whyMatters: "Why it matters", businessExample: "Business example",
     markComplete: "Mark as complete", dayComplete: (n) => `Day ${n} completed. Your progress is saved on this device.`, back: "Back to course overview",
     read: "Read the lesson", watch: "Watch the lesson", listen: "Listen to the podcast", subtitles: "Subtitles available where provided", referenceNotes: "Reference notes",
     completionTitle: "You completed Corporate Finance Essentials", completionCopy: "You have explored how value, cash, risk, governance, control, and strategic judgment come together in company decisions.",
@@ -62,12 +62,12 @@ const copy = {
     creator: "由 MapKAI 编辑团队为需要跨职能金融判断的专业人士开发。",
     reviewed: "最近复核：2026年8月", references: "查看课程参考资料", referencesTitle: "课程参考资料",
     finalTitle: "从一个商业问题开始", finalCopy: "你不需要在一天内掌握金融。先从价值如何创造，以及投资选择应如何被审视开始。",
-    privacy: "学习进度和反思草稿仅保存在当前设备，无需注册账户。",
+    privacy: "学习进度仅保存在当前设备，无需注册账户。",
     completed: (n) => `已完成 ${n}/5 天`, startDay: (n) => `开始第 ${n} 天`, continueDay: (n) => `继续第 ${n} 天`,
     dayOf: (n) => `第 ${n} 天，共 5 天`, estimated: "预计学习时间：25分钟", today: "今天你将学会", startLesson: "开始本课",
     overview: "课程总览", previous: "上一天", next: "下一天", completeCourse: "完成课程",
-    opening: "开场故事或商业情境", problem: "决策问题", concepts: "核心概念", framework: "视觉框架", example: "实用案例", mistake: "常见误解", reflection: "反思问题", takeaways: "关键要点", check: "知识检查", nextLesson: "下一课",
-    decisionQuestion: "决策问题", commonMistake: "常见错误", whyMatters: "为什么重要", businessExample: "商业例子", yourReflection: "写下你的反思", savedLocal: "已保存在当前设备",
+    opening: "开场故事或商业情境", problem: "决策问题", concepts: "核心概念", framework: "视觉框架", example: "实用案例", mistake: "常见误解", takeaways: "关键要点", check: "知识检查", nextLesson: "下一课",
+    decisionQuestion: "决策问题", commonMistake: "常见错误", whyMatters: "为什么重要", businessExample: "商业例子",
     markComplete: "标记为完成", dayComplete: (n) => `第 ${n} 天已完成，进度已保存在当前设备。`, back: "返回课程总览",
     read: "阅读课程", watch: "观看课程", listen: "收听播客", subtitles: "如素材提供，可使用字幕", referenceNotes: "参考资料说明",
     completionTitle: "你已完成公司金融核心课程", completionCopy: "你已经探索了价值、现金、风险、治理、控制和战略判断如何汇入公司决定。",
@@ -130,6 +130,20 @@ function localized(item, key, lang) {
 
 function paragraphs(value = "") {
   return String(value).trim().split(/\n\s*\n/).filter(Boolean).map((p) => `<p>${rich(p)}</p>`).join("");
+}
+
+function knowledgeBlocks(value = "") {
+  return String(value).trim().split(/\n\s*\n/).filter(Boolean).map((block, index) => {
+    const content = block.trim().replace(/\n+/g, " ");
+    const heading = content.match(/^#{1,6}\s+(.+)$/);
+    if (heading) {
+      const label = heading[1].match(/^(\d{2})\s*[｜|]\s*(.+)$/);
+      return `<section class="finance-chain-step"><h3>${label ? `<span>${esc(label[1])}</span>${rich(label[2])}` : rich(heading[1])}</h3></section>`;
+    }
+    if (index === 0) return `<header class="finance-chain-intro"><h3>${rich(content)}</h3></header>`;
+    if (content.includes("→")) return `<p class="finance-chain-flow">${rich(content)}</p>`;
+    return `<p>${rich(content)}</p>`;
+  }).join("");
 }
 
 function pathFor(lang, suffix = "") {
@@ -264,13 +278,12 @@ function renderDay(lang, dayIndex) {
       <section><p class="finance-section-number">01</p><h2>${esc(c.opening)}</h2><div class="finance-story-content">${paragraphs(storyContent)}</div></section>
       <section><p class="finance-section-number">02</p><h2>${esc(c.problem)}</h2><aside class="finance-decision-question"><span>${esc(c.decisionQuestion)}</span><strong>${esc(d.question[lang])}</strong><p>${esc(judgment)}</p></aside></section>
       <section><p class="finance-section-number">03</p><h2>${esc(c.concepts)}</h2><div class="finance-concept-grid">${concepts}</div></section>
-      <section><p class="finance-section-number">04</p><h2>${esc(c.framework)}</h2><div class="finance-framework">${c.how.map((item, i) => `<div><span>0${i + 1}</span><strong>${esc(item)}</strong></div>`).join("")}</div><div class="finance-knowledge-chain">${paragraphs(knowledge)}</div></section>
+      <section><p class="finance-section-number">04</p><h2>${esc(c.framework)}</h2><div class="finance-framework">${c.how.map((item, i) => `<div><span>0${i + 1}</span><strong>${esc(item)}</strong></div>`).join("")}</div><div class="finance-knowledge-chain">${knowledgeBlocks(knowledge)}</div></section>
       <section><p class="finance-section-number">05</p><h2>${esc(c.example)}</h2><div class="finance-practical-example"><strong>${esc(c.businessExample)}</strong><p>${esc(localized(module, "soloCompanyUse", lang))}</p></div></section>
       <section><p class="finance-section-number">06</p><h2>${esc(c.mistake)}</h2><aside class="finance-common-mistake"><span>${esc(c.commonMistake)}</span><strong>${esc(d.mistake[lang])}</strong></aside></section>
-      <section><p class="finance-section-number">07</p><h2>${esc(c.reflection)}</h2>${d.reflections[lang].map((question, i) => `<label class="finance-reflection-box"><strong>${esc(question)}</strong><textarea rows="5" data-reflection-id="day-${n}-${i + 1}" placeholder="${esc(c.yourReflection)}"></textarea><span>${esc(c.savedLocal)}</span></label>`).join("")}</section>
-      <section><p class="finance-section-number">08</p><h2>${esc(c.takeaways)}</h2><ul class="finance-key-takeaways">${d.outcomes[lang].map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
-      <section><p class="finance-section-number">09</p><h2>${esc(c.check)}</h2><div class="finance-knowledge-check"><p>${esc(d.question[lang])}</p><button type="button" data-check-answer="true">${esc(d.outcomes[lang][0])}</button><button type="button" data-check-answer="false">${esc(d.mistake[lang])}</button><p data-check-result hidden>${lang === "en" ? "Use the decision question to connect evidence with action, not merely to repeat a term." : "用决策问题把证据与行动连接起来，而不是只重复术语。"}</p></div></section>
-      <section id="lesson-references"><p class="finance-section-number">10</p><h2>${esc(c.referenceNotes)}</h2><ol class="finance-reference-list">${refs.map((ref) => `<li><strong>${esc(ref.citation)}</strong>${ref.detail ? `<p>${esc(ref.detail)}</p>` : ""}${ref.use ? `<p>${esc(ref.use)}</p>` : ""}</li>`).join("")}</ol></section>
+      <section><p class="finance-section-number">07</p><h2>${esc(c.takeaways)}</h2><ul class="finance-key-takeaways">${d.outcomes[lang].map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+      <section><p class="finance-section-number">08</p><h2>${esc(c.check)}</h2><div class="finance-knowledge-check"><p>${esc(d.question[lang])}</p><button type="button" data-check-answer="true">${esc(d.outcomes[lang][0])}</button><button type="button" data-check-answer="false">${esc(d.mistake[lang])}</button><p data-check-result hidden>${lang === "en" ? "Use the decision question to connect evidence with action, not merely to repeat a term." : "用决策问题把证据与行动连接起来，而不是只重复术语。"}</p></div></section>
+      <section id="lesson-references"><p class="finance-section-number">09</p><h2>${esc(c.referenceNotes)}</h2><ol class="finance-reference-list">${refs.map((ref) => `<li><strong>${esc(ref.citation)}</strong>${ref.detail ? `<p>${esc(ref.detail)}</p>` : ""}${ref.use ? `<p>${esc(ref.use)}</p>` : ""}</li>`).join("")}</ol></section>
     </article>
     <nav class="finance-day-bottom"><button class="button primary" type="button" data-mark-complete>${esc(c.markComplete)}</button>${prevHref ? `<a class="button secondary" href="${prevHref}">${esc(c.previous)}</a>` : ""}<a class="button secondary" href="${nextHref}">${esc(n === 5 ? c.completeCourse : c.next)}</a><a href="${pathFor(lang)}">${esc(c.back)}</a></nav>
   </main>`;

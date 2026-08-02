@@ -8614,12 +8614,14 @@ body[data-theme="dark"] .home-finance-timeline span {
 .finance-framework div { display: grid; min-height: 120px; align-content: space-between; border-radius: 10px; padding: 16px; background: #0f172a; color: white; }
 .finance-framework span { color: #93c5fd; font-size: 0.74rem; }
 .finance-framework strong { font-size: 0.88rem; }
-.finance-knowledge-chain { margin-top: 24px; }
-.finance-knowledge-chain p { color: #334155; }
-
-.finance-reflection-box { display: grid; gap: 10px; margin-bottom: 16px; border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--surface); }
-.finance-reflection-box textarea { width: 100%; resize: vertical; border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: var(--paper); color: var(--ink); font: inherit; line-height: 1.6; }
-.finance-reflection-box span { color: var(--muted); font-size: 0.78rem; }
+.finance-knowledge-chain { display: grid; gap: 18px; margin-top: 28px; }
+.finance-knowledge-chain p { margin: 0; color: #334155; line-height: 1.72; }
+.finance-chain-intro { padding: 4px 0 16px; border-bottom: 1px solid var(--line); }
+.finance-chain-intro h3 { margin: 0; font-size: 1.08rem; line-height: 1.45; }
+.finance-chain-flow { color: var(--blue-dark) !important; font-weight: 720; }
+.finance-chain-step { display: grid; gap: 10px; padding: 18px 0 2px; border-top: 1px solid var(--line); }
+.finance-chain-step h3 { display: flex; align-items: baseline; gap: 10px; margin: 0; color: var(--ink); font-size: 1.1rem; line-height: 1.45; }
+.finance-chain-step h3 span { color: var(--blue-dark); font-size: 0.78rem; font-weight: 860; letter-spacing: 0.08em; }
 .finance-knowledge-check { display: grid; gap: 10px; border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: var(--surface); }
 .finance-knowledge-check button { text-align: left; }
 .finance-knowledge-check button.is-correct { border-color: #16a34a; background: #f0fdf4; color: #166534; }
@@ -8649,14 +8651,12 @@ body[data-theme="dark"] .finance-media-panel,
 body[data-theme="dark"] .finance-video-grid article,
 body[data-theme="dark"] .finance-concept-card,
 body[data-theme="dark"] .finance-practical-example,
-body[data-theme="dark"] .finance-reflection-box,
 body[data-theme="dark"] .finance-knowledge-check { border-color: rgba(255, 255, 255, 0.09); background: rgba(18, 18, 16, 0.9); color: #f4efe4; }
 body[data-theme="dark"] .finance-story-content p,
 body[data-theme="dark"] .finance-knowledge-chain p { color: #cfc7bc; }
 body[data-theme="dark"] .finance-decision-question { background: rgba(216, 177, 95, 0.08); border-left-color: #d8b15f; }
 body[data-theme="dark"] .finance-common-mistake { background: rgba(180, 83, 9, 0.12); }
 body[data-theme="dark"] .finance-framework div { background: #171714; }
-body[data-theme="dark"] .finance-reflection-box textarea { background: #11110f; color: #f4efe4; }
 body[data-theme="dark"] .finance-course-final { background: #11110f; border: 1px solid rgba(216, 177, 95, 0.18); }
 
 @media (max-width: 900px) {
