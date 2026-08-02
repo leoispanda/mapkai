@@ -40,10 +40,8 @@ const copy = {
     decisionQuestion: "Decision question", commonMistake: "Common mistake", whyMatters: "Why it matters", businessExample: "Business example", yourReflection: "Write your reflection", savedLocal: "Saved on this device",
     markComplete: "Mark as complete", dayComplete: (n) => `Day ${n} completed. Your progress is saved on this device.`, back: "Back to course overview",
     read: "Read the lesson", watch: "Watch the lesson", listen: "Listen to the podcast", subtitles: "Subtitles available where provided", referenceNotes: "Reference notes",
-    share: "Share this lesson", copyLink: "Copy link", linkedin: "LinkedIn", x: "X", whatsapp: "WhatsApp", useful: "Was this lesson useful?", feedbackOptions: ["Yes", "Partly", "Not yet"], unclear: "What was unclear?", sendFeedback: "Save feedback",
     completionTitle: "You completed Corporate Finance Essentials", completionCopy: "You have explored how value, cash, risk, governance, control, and strategic judgment come together in company decisions.",
-    reviewMap: "Review Your Learning Map", usePdc: "Use PDC for a Business Decision", shareCourse: "Share the Course", completedItems: ["Value and capital allocation", "Financing and risk", "Accounting and governance", "Performance and control", "Integrated decision-making"],
-    shareText: "I completed MapKAI’s five-day Corporate Finance Essentials learning path, covering value, cash flow, risk, governance, and strategic decision-making.", copyText: "Copy completion text",
+    reviewMap: "Review Your Learning Map", usePdc: "Use PDC for a Business Decision", completedItems: ["Value and capital allocation", "Financing and risk", "Accounting and governance", "Performance and control", "Integrated decision-making"],
     footer: "Discover how you think. Learn across fields. Make better decisions.", lowData: "Free · No account · Low-data by design",
   },
   zh: {
@@ -72,10 +70,8 @@ const copy = {
     decisionQuestion: "决策问题", commonMistake: "常见错误", whyMatters: "为什么重要", businessExample: "商业例子", yourReflection: "写下你的反思", savedLocal: "已保存在当前设备",
     markComplete: "标记为完成", dayComplete: (n) => `第 ${n} 天已完成，进度已保存在当前设备。`, back: "返回课程总览",
     read: "阅读课程", watch: "观看课程", listen: "收听播客", subtitles: "如素材提供，可使用字幕", referenceNotes: "参考资料说明",
-    share: "分享本课", copyLink: "复制链接", linkedin: "LinkedIn", x: "X", whatsapp: "WhatsApp", useful: "这节课有用吗？", feedbackOptions: ["有用", "部分有用", "还没有"], unclear: "哪里不够清楚？", sendFeedback: "保存反馈",
     completionTitle: "你已完成公司金融核心课程", completionCopy: "你已经探索了价值、现金、风险、治理、控制和战略判断如何汇入公司决定。",
-    reviewMap: "回顾我的知识地图", usePdc: "用 PDC 分析一个商业决定", shareCourse: "分享课程", completedItems: ["价值与资本配置", "融资与风险", "会计与治理", "绩效与控制", "综合决策"],
-    shareText: "我完成了 MapKAI 五天公司金融核心课程，学习了价值、现金流、风险、治理和战略决策。", copyText: "复制完成文案",
+    reviewMap: "回顾我的知识地图", usePdc: "用 PDC 分析一个商业决定", completedItems: ["价值与资本配置", "融资与风险", "会计与治理", "绩效与控制", "综合决策"],
     footer: "发现你的思考方式，建立跨领域知识，做出更清晰的决定。", lowData: "免费 · 无需账户 · 低数据设计",
   },
 };
@@ -254,12 +250,11 @@ function renderDay(lang, dayIndex) {
   const refs = localized(story, "references", lang);
   const concepts = d.topics[lang].map((topic, i) => `<article class="finance-concept-card"><span>${esc(topic)}</span><p>${esc(d.outcomes[lang][i] || d.outcomes[lang][0])}</p><strong>${esc(c.whyMatters)}</strong><p>${esc(d.reflections[lang][i % d.reflections[lang].length])}</p></article>`).join("");
   const videoMarkup = (module.videos || []).map((video) => `<article><span>${esc(localized(video, "language", lang))}</span><h3>${esc(localized(video, "title", lang))}</h3><video controls preload="metadata" src="${esc(video.url)}"></video></article>`).join("");
-  const shareText = `${d.question.en} I explored ${d.topics.en.join(", ")} through MapKAI’s Corporate Finance Essentials course.`;
   const nextHref = n === 5 ? pathFor(lang, "/completed") : pathFor(lang, `/day-${n + 1}`);
   const prevHref = n === 1 ? "" : pathFor(lang, `/day-${n - 1}`);
   const breadcrumb = { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: c.nav[0], item: `${site}/` }, { "@type": "ListItem", position: 2, name: c.courseTitle, item: `${site}${pathFor(lang)}` }, { "@type": "ListItem", position: 3, name: title, item: `${site}${canonicalPath}` }] };
   const schema = { "@context": "https://schema.org", "@graph": [{ "@type": "CourseInstance", name: `${c.courseTitle} - Day ${n}: ${title}`, courseMode: "online", isAccessibleForFree: true, inLanguage: c.locale, url: `${site}${canonicalPath}` }, breadcrumb] };
-  const body = `<main class="finance-day-main" data-course-day="${n}" data-share-text="${esc(shareText)}">
+  const body = `<main class="finance-day-main" data-course-day="${n}">
     <nav class="finance-course-nav" aria-label="Course navigation"><a href="${pathFor(lang)}">${esc(c.courseTitle)}</a><span>${esc(c.dayOf(n))}</span><div class="finance-progress-track" aria-label="${n * 20}%"><i style="width:${n * 20}%"></i></div><div class="finance-course-nav-actions"><a href="${pathFor(lang)}">${esc(c.overview)}</a>${prevHref ? `<a href="${prevHref}">${esc(c.previous)}</a>` : ""}<a href="${nextHref}">${esc(n === 5 ? c.completeCourse : c.next)}</a></div></nav>
     <header class="finance-day-hero"><p class="eyebrow">${esc(c.dayOf(n))}</p><h1>${esc(title)}</h1><p class="finance-day-question">${esc(d.question[lang])}</p><p>${esc(c.estimated)}</p><div><strong>${esc(c.today)}</strong><ul>${d.outcomes[lang].map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div><a class="button primary" href="#lesson-content" data-start-lesson>${esc(c.startLesson)}</a></header>
     <section class="finance-content-modes" aria-label="Content formats"><button class="is-active" type="button" data-content-mode="read">${esc(c.read)}</button><button type="button" data-content-mode="watch">${esc(c.watch)}</button><button type="button" data-content-mode="listen">${esc(c.listen)}</button></section>
@@ -277,8 +272,6 @@ function renderDay(lang, dayIndex) {
       <section><p class="finance-section-number">09</p><h2>${esc(c.check)}</h2><div class="finance-knowledge-check"><p>${esc(d.question[lang])}</p><button type="button" data-check-answer="true">${esc(d.outcomes[lang][0])}</button><button type="button" data-check-answer="false">${esc(d.mistake[lang])}</button><p data-check-result hidden>${lang === "en" ? "Use the decision question to connect evidence with action, not merely to repeat a term." : "用决策问题把证据与行动连接起来，而不是只重复术语。"}</p></div></section>
       <section id="lesson-references"><p class="finance-section-number">10</p><h2>${esc(c.referenceNotes)}</h2><ol class="finance-reference-list">${refs.map((ref) => `<li><strong>${esc(ref.citation)}</strong>${ref.detail ? `<p>${esc(ref.detail)}</p>` : ""}${ref.use ? `<p>${esc(ref.use)}</p>` : ""}</li>`).join("")}</ol></section>
     </article>
-    <section class="finance-share-panel"><h2>${esc(c.share)}</h2><div><button type="button" data-share="copy">${esc(c.copyLink)}</button><button type="button" data-share="linkedin">${esc(c.linkedin)}</button><button type="button" data-share="x">${esc(c.x)}</button><button type="button" data-share="whatsapp">${esc(c.whatsapp)}</button></div></section>
-    <form class="finance-feedback" data-course-feedback><h2>${esc(c.useful)}</h2><div>${c.feedbackOptions.map((item, i) => `<label><input type="radio" name="useful" value="${i}" />${esc(item)}</label>`).join("")}</div><label>${esc(c.unclear)}<textarea name="unclear" rows="3"></textarea></label><button class="button secondary" type="submit">${esc(c.sendFeedback)}</button></form>
     <nav class="finance-day-bottom"><button class="button primary" type="button" data-mark-complete>${esc(c.markComplete)}</button>${prevHref ? `<a class="button secondary" href="${prevHref}">${esc(c.previous)}</a>` : ""}<a class="button secondary" href="${nextHref}">${esc(n === 5 ? c.completeCourse : c.next)}</a><a href="${pathFor(lang)}">${esc(c.back)}</a></nav>
   </main>`;
   const metaDescription = lang === "en" ? `Learn how ${d.topics.en.join(", ")} shape real company decisions in Day ${n} of Corporate Finance Essentials.` : `在公司金融核心课程第 ${n} 天，理解${d.topics.zh.join("、")}如何影响真实公司决定。`;
@@ -288,7 +281,7 @@ function renderDay(lang, dayIndex) {
 function renderCompleted(lang) {
   const c = copy[lang];
   const canonicalPath = pathFor(lang, "/completed");
-  const body = `<main class="finance-completion-main" data-course-completed><section class="finance-completion-card"><p class="eyebrow">MapKAI · ${esc(c.courseTitle)}</p><h1>${esc(c.completionTitle)}</h1><p>${esc(c.completionCopy)}</p><ul>${c.completedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="hero-actions"><a class="button primary" href="/map">${esc(c.reviewMap)}</a><a class="button secondary" href="/pdc" data-course-event="pdc_clicked_after_course">${esc(c.usePdc)}</a><button class="button secondary" type="button" data-share="copy">${esc(c.shareCourse)}</button></div><div class="finance-completion-share"><p data-completion-text>${esc(c.shareText)}</p><button type="button" data-copy-completion>${esc(c.copyText)}</button></div></section></main>`;
+  const body = `<main class="finance-completion-main" data-course-completed><section class="finance-completion-card"><p class="eyebrow">MapKAI · ${esc(c.courseTitle)}</p><h1>${esc(c.completionTitle)}</h1><p>${esc(c.completionCopy)}</p><ul>${c.completedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="hero-actions"><a class="button primary" href="/map">${esc(c.reviewMap)}</a><a class="button secondary" href="/pdc" data-course-event="pdc_clicked_after_course">${esc(c.usePdc)}</a></div></section></main>`;
   return layout({ lang, title: `${c.completionTitle} | MapKAI`, description: c.completionCopy, canonicalPath, body, robots: "noindex, follow", structuredData: { "@context": "https://schema.org", "@type": "WebPage", name: c.completionTitle, url: `${site}${canonicalPath}` } });
 }
 

@@ -11,11 +11,10 @@ function readProgress() {
       completedDays: Array.isArray(value.completedDays) ? value.completedDays : [],
       lastVisitedDay: Number(value.lastVisitedDay || 0),
       reflectionDrafts: value.reflectionDrafts && typeof value.reflectionDrafts === "object" ? value.reflectionDrafts : {},
-      feedback: value.feedback && typeof value.feedback === "object" ? value.feedback : {},
       updatedAt: value.updatedAt || "",
     };
   } catch {
-    return { visitedDays: [], completedDays: [], lastVisitedDay: 0, reflectionDrafts: {}, feedback: {}, updatedAt: "" };
+    return { visitedDays: [], completedDays: [], lastVisitedDay: 0, reflectionDrafts: {}, updatedAt: "" };
   }
 }
 
@@ -33,7 +32,7 @@ function notify(message) {
 }
 
 function track(event, detail = {}) {
-  const allowed = new Set(["finance_course_viewed", "finance_day_started", "finance_day_completed", "finance_course_completed", "finance_content_shared", "pdc_clicked_after_course"]);
+  const allowed = new Set(["finance_course_viewed", "finance_day_started", "finance_day_completed", "finance_course_completed", "pdc_clicked_after_course"]);
   if (!allowed.has(event)) return;
   const body = JSON.stringify({ event, day: day || undefined, language, ...detail });
   if (navigator.sendBeacon) navigator.sendBeacon("/api/course-event", new Blob([body], { type: "application/json" }));
@@ -124,48 +123,6 @@ function initChecks() {
   }));
 }
 
-function initSharing() {
-  const shareText = document.querySelector("[data-course-day]")?.dataset.shareText || document.querySelector("[data-completion-text]")?.textContent || document.title;
-  document.querySelectorAll("[data-share]").forEach((button) => button.addEventListener("click", async () => {
-    const type = button.dataset.share;
-    const url = window.location.href;
-    if (type === "copy") {
-      await navigator.clipboard.writeText(`${shareText}\n${url}`);
-      notify(language === "zh" ? "链接已复制" : "Link copied");
-    } else {
-      const targets = {
-        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-        x: `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`,
-        whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`,
-      };
-      if (targets[type]) window.open(targets[type], "_blank", "noopener,noreferrer");
-    }
-    track("finance_content_shared", { channel: type });
-  }));
-  document.querySelector("[data-copy-completion]")?.addEventListener("click", async () => {
-    await navigator.clipboard.writeText(document.querySelector("[data-completion-text]")?.textContent || "");
-    notify(language === "zh" ? "完成文案已复制" : "Completion text copied");
-  });
-}
-
-function initFeedback() {
-  const form = document.querySelector("[data-course-feedback]");
-  if (!form || !day) return;
-  const saved = readProgress().feedback[`day-${day}`];
-  if (saved) {
-    const option = form.querySelector(`[name="useful"][value="${saved.useful}"]`);
-    if (option) option.checked = true;
-    form.elements.unclear.value = saved.unclear || "";
-  }
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const progress = readProgress();
-    progress.feedback[`day-${day}`] = { useful: form.elements.useful.value, unclear: form.elements.unclear.value.slice(0, 1000) };
-    saveProgress(progress);
-    notify(language === "zh" ? "反馈已保存在当前设备" : "Feedback saved on this device");
-  });
-}
-
 function initChrome() {
   localStorage.setItem("mapkaiLanguageV2", language);
   const menuButton = document.querySelector(".nav-toggle");
@@ -193,5 +150,3 @@ initOverview();
 initDay();
 initModes();
 initChecks();
-initSharing();
-initFeedback();
