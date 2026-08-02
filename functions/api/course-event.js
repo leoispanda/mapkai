@@ -5,7 +5,6 @@ const allowedEvents = new Set([
   "finance_day_started",
   "finance_day_completed",
   "finance_course_completed",
-  "finance_checklist_downloaded",
   "finance_content_shared",
   "pdc_clicked_after_course",
 ]);

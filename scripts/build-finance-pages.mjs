@@ -33,7 +33,7 @@ const copy = {
     reviewed: "Last reviewed: August 2026", references: "View course references", referencesTitle: "Course references",
     finalTitle: "Start with one business question", finalCopy: "You do not need to master finance in one day. Begin by learning how value is created and how investment choices should be examined.",
     privacy: "Your learning progress and reflection drafts are stored only on this device. No account is required.",
-    checklist: "Download the Finance Decision Checklist", completed: (n) => `${n} of 5 days completed`, startDay: (n) => `Start Day ${n}`, continueDay: (n) => `Continue Day ${n}`,
+    completed: (n) => `${n} of 5 days completed`, startDay: (n) => `Start Day ${n}`, continueDay: (n) => `Continue Day ${n}`,
     dayOf: (n) => `Day ${n} of 5`, estimated: "Estimated time: 25 minutes", today: "Today you will learn to", startLesson: "Start Lesson",
     overview: "Course Overview", previous: "Previous Day", next: "Next Day", completeCourse: "Complete the Course",
     opening: "Opening story or business situation", problem: "The decision problem", concepts: "Core concepts", framework: "Visual framework", example: "Practical example", mistake: "Common misunderstanding", reflection: "Reflection questions", takeaways: "Key takeaways", check: "Knowledge check", nextLesson: "Next lesson",
@@ -65,7 +65,7 @@ const copy = {
     reviewed: "最近复核：2026年8月", references: "查看课程参考资料", referencesTitle: "课程参考资料",
     finalTitle: "从一个商业问题开始", finalCopy: "你不需要在一天内掌握金融。先从价值如何创造，以及投资选择应如何被审视开始。",
     privacy: "学习进度和反思草稿仅保存在当前设备，无需注册账户。",
-    checklist: "下载非金融经理决策清单", completed: (n) => `已完成 ${n}/5 天`, startDay: (n) => `开始第 ${n} 天`, continueDay: (n) => `继续第 ${n} 天`,
+    completed: (n) => `已完成 ${n}/5 天`, startDay: (n) => `开始第 ${n} 天`, continueDay: (n) => `继续第 ${n} 天`,
     dayOf: (n) => `第 ${n} 天，共 5 天`, estimated: "预计学习时间：25分钟", today: "今天你将学会", startLesson: "开始本课",
     overview: "课程总览", previous: "上一天", next: "下一天", completeCourse: "完成课程",
     opening: "开场故事或商业情境", problem: "决策问题", concepts: "核心概念", framework: "视觉框架", example: "实用案例", mistake: "常见误解", reflection: "反思问题", takeaways: "关键要点", check: "知识检查", nextLesson: "下一课",
@@ -234,7 +234,6 @@ function renderOverview(lang) {
     <section class="finance-course-section" id="course-outline"><h2>${esc(c.outline)}</h2><div class="finance-outline-grid">${cards}</div></section>
     <section class="finance-course-section"><h2>${esc(c.howTitle)}</h2><ol class="finance-method-grid">${c.how.map((item, i) => `<li><span>0${i + 1}</span><strong>${esc(item)}</strong></li>`).join("")}</ol><p>${esc(c.method)}</p></section>
     <section class="finance-course-section finance-creator"><h2>${esc(c.whyTitle)}</h2><p>${esc(c.whyCopy)}</p><p>${esc(c.creator)}</p><p><strong>${esc(c.reviewed)}</strong></p><a href="#course-references">${esc(c.references)}</a></section>
-    <section class="finance-course-section finance-download"><div><p class="eyebrow">PDF</p><h2>Finance Decision Checklist for Non-Finance Managers</h2><p>${lang === "en" ? "Ten questions to test value, cash, assumptions, downside, reversibility, liquidity, ownership, and evidence before approving a decision." : "用十个问题检查价值、现金、假设、下行情景、可逆性、流动性、责任和证据。"}</p></div><a class="button primary" href="/downloads/finance-decision-checklist.pdf" download data-course-event="finance_checklist_downloaded">${esc(c.checklist)}</a></section>
     <section class="finance-course-section" id="course-references"><h2>${esc(c.referencesTitle)}</h2><ol class="finance-reference-list">${refs.map((ref) => `<li><strong>${esc(ref.citation)}</strong>${ref.detail ? `<p>${esc(ref.detail)}</p>` : ""}</li>`).join("")}</ol></section>
     <section class="finance-course-final"><h2>${esc(c.finalTitle)}</h2><p>${esc(c.finalCopy)}</p><a class="button primary" href="${pathFor(lang, "/day-1")}">${esc(c.start)} — ${esc(localized(course.learningModules[0], "title", lang))}</a></section>
   </main>`;

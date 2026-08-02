@@ -8552,9 +8552,6 @@ body[data-theme="dark"] .home-finance-timeline span {
 .finance-creator { border-left: 3px solid var(--blue); padding-left: clamp(22px, 4vw, 44px); }
 .finance-creator p { max-width: 820px; }
 .finance-creator a { color: var(--blue-dark); font-weight: 800; }
-.finance-download { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; border: 1px solid rgba(37, 99, 235, 0.18); border-radius: 16px; padding: clamp(24px, 4vw, 38px); background: rgba(239, 246, 255, 0.65); }
-.finance-download h2 { margin-bottom: 10px; }
-.finance-download p { margin: 0; }
 .finance-reference-list { display: grid; gap: 14px; padding-left: 22px; }
 .finance-reference-list li { padding-left: 8px; color: var(--muted); }
 .finance-reference-list p { margin: 5px 0 0; }
@@ -8702,8 +8699,6 @@ body[data-theme="dark"] .finance-course-final { background: #11110f; border: 1px
   .finance-concept-grid,
   .finance-video-grid { grid-template-columns: 1fr; }
   .finance-outline-card:first-child { grid-column: auto; }
-  .finance-download { grid-template-columns: 1fr; }
-  .finance-download .button { width: 100%; }
   .finance-course-nav { grid-template-columns: 1fr; }
   .finance-course-nav > span { grid-column: 1; }
   .finance-course-nav-actions { display: grid; grid-template-columns: 1fr; }

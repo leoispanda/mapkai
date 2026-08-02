@@ -33,7 +33,7 @@ function notify(message) {
 }
 
 function track(event, detail = {}) {
-  const allowed = new Set(["finance_course_viewed", "finance_day_started", "finance_day_completed", "finance_course_completed", "finance_checklist_downloaded", "finance_content_shared", "pdc_clicked_after_course"]);
+  const allowed = new Set(["finance_course_viewed", "finance_day_started", "finance_day_completed", "finance_course_completed", "finance_content_shared", "pdc_clicked_after_course"]);
   if (!allowed.has(event)) return;
   const body = JSON.stringify({ event, day: day || undefined, language, ...detail });
   if (navigator.sendBeacon) navigator.sendBeacon("/api/course-event", new Blob([body], { type: "application/json" }));
