@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.184";
+const appVersion = "0.1.193";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -164,8 +164,9 @@ const uiText = {
     managementBack: "← Back to Corporate Finance Essentials",
     navCategories: "Fields",
     navLearning: "Learning",
+    navEmba: "EMBA",
     navFinanceCourse: "Corporate Finance Essentials",
-    navLearningSoon: "More learning paths coming soon",
+    navQuickPickups: "General Knowledge Quick Pickups",
     navMenuOpen: "Open menu",
     navMenuClose: "Close menu",
     navAbout: "About",
@@ -505,9 +506,9 @@ const uiText = {
     groups: "subfields",
     detailedFields: "formal subfields",
     subjectStoryCount: (count) => count === 1 ? "1 story" : `${count} stories`,
-    learningEyebrow: "Cognitive Expansion",
-    learningTitle: "Learning is a direction for expanding how you think.",
-    learningCopy: "MapKAI learning is not a course list. It suggests cognitive directions after exploration reveals a pattern.",
+    learningEyebrow: "Learning",
+    learningTitle: "Choose a focused course or pick up something new.",
+    learningCopy: "Go deeper with a structured learning path, or make a quick pickup from the wider knowledge map.",
     learningBandEyebrow: "Suggested expansion",
     learningBandTitle: "Return to Explore before choosing a direction",
     learningBandCopy: "The clearest learning path begins with a visible pattern.",
@@ -600,8 +601,9 @@ const uiText = {
     managementBack: "← 返回公司金融通识",
     navCategories: "知识镜头",
     navLearning: "学习路径",
+    navEmba: "EMBA",
     navFinanceCourse: "公司金融核心课程",
-    navLearningSoon: "更多学习路径即将推出",
+    navQuickPickups: "通识知识快速拾取",
     navMenuOpen: "打开菜单",
     navMenuClose: "关闭菜单",
     navAbout: "关于",
@@ -939,9 +941,9 @@ const uiText = {
     groups: "个小学科",
     detailedFields: "个正式小学科",
     subjectStoryCount: (count) => `${count} 张故事卡片`,
-    learningEyebrow: "认知扩展",
-    learningTitle: "学习是扩展思考方式的方向。",
-    learningCopy: "MapKAI 的学习不是课程列表，而是在探索显现模式后，给出认知扩展方向。",
+    learningEyebrow: "学习",
+    learningTitle: "选择一门聚焦课程，或快速拾取一个新知识。",
+    learningCopy: "通过结构化学习路径深入学习，也可以从更广阔的知识地图中快速拾取通识知识。",
     learningBandEyebrow: "建议扩展",
     learningBandTitle: "先回到 Explore，再选择方向",
     learningBandCopy: "最清晰的学习路径，来自已经显现的模式。",
@@ -8421,21 +8423,13 @@ const field0412 = {
 };
 
 const pathTypes = [
-  ["Systems expansion", "For explorers who over-index toward structure and optimization."],
-  ["Ambiguity expansion", "Arts and humanities can train interpretation, meaning, and unresolved tension."],
-  ["Human-context expansion", "Social and health domains reveal behavior, care, risk, and limits."],
-  ["Reality-contact expansion", "Services, agriculture, and engineering pull thinking back into constraints."],
-  ["Evidence expansion", "Science and statistics sharpen uncertainty without turning it into certainty."],
-  ["Reflection expansion", "Return to Explore before choosing what to deepen next."],
+  ["Quick pickup", "General Knowledge Quick Pickups", "Browse practical fields and pick up a useful idea whenever you want a fast, broader learning moment.", "/categories", "Browse quick pickups"],
+  ["Learning programme", "EMBA", "A growing EMBA learning hub. Start with Corporate Finance, with more subjects to be added over time.", "/learning/emba", "Open EMBA"],
 ];
 
 const pathTypesZh = [
-  ["系统扩展", "适合过度偏向结构、优化和框架的探索者。"],
-  ["模糊性扩展", "艺术与人文训练解释、意义和未解决的张力。"],
-  ["人类语境扩展", "社会与健康领域显现行为、照护、风险和边界。"],
-  ["现实接触扩展", "服务、农业和工程把思考拉回约束现场。"],
-  ["证据扩展", "科学与统计帮助你面对不确定性，而不是把它过早变成确定性。"],
-  ["反思扩展", "先回到 Explore，再选择下一步深入方向。"],
+  ["快速拾取", "通识知识快速拾取", "浏览实用知识领域，在想快速拓宽认知时，随手拾取一个有用的新知识。", "/categories", "浏览通识知识"],
+  ["学习项目", "EMBA", "一个持续扩展的 EMBA 学习空间。先从公司金融开始，之后会逐步加入其他科目。", "/learning/emba", "打开 EMBA"],
 ];
 
 const foundationPath = [
@@ -14872,7 +14866,6 @@ function applyLanguage() {
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
-  setText('.nav-links a[data-route="/categories"]', t("navCategories"));
   setText(".nav-learning-trigger", t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
   setText(".stories-page .stories-hero .eyebrow", t("storiesEyebrow"));
@@ -14986,13 +14979,13 @@ function applyLanguage() {
   setText(".categories-page .section-heading h1", t("categoriesTitle"));
   setText(".categories-page .section-heading p:not(.eyebrow)", t("categoriesCopy"));
 
-  setText(".learning-page .section-heading .eyebrow", t("learningEyebrow"));
-  setText(".learning-page .section-heading h1", t("learningTitle"));
-  setText(".learning-page .section-heading p:not(.eyebrow)", t("learningCopy"));
-  setText(".learning-page .preview-band .eyebrow", t("learningBandEyebrow"));
-  setText(".learning-page .preview-band h2", t("learningBandTitle"));
-  setText(".learning-page .preview-band p:not(.eyebrow)", t("learningBandCopy"));
-  setText(".learning-page .preview-band .button", t("startExploring"));
+  setText("#learning .section-heading .eyebrow", t("learningEyebrow"));
+  setText("#learning .section-heading h1", t("learningTitle"));
+  setText("#learning .section-heading p:not(.eyebrow)", t("learningCopy"));
+  setText("#learning .preview-band .eyebrow", t("learningBandEyebrow"));
+  setText("#learning .preview-band h2", t("learningBandTitle"));
+  setText("#learning .preview-band p:not(.eyebrow)", t("learningBandCopy"));
+  setText("#learning .preview-band .button", t("startExploring"));
 
   document.querySelectorAll('.route-cta .button.primary[href="/explore"]').forEach((target) => {
     target.textContent = t("startExploring");
@@ -15105,6 +15098,7 @@ function goToRoute(route, replace = false) {
   const conceptFableMatch = visibleTarget.match(/^\/concept-fables\/([a-z0-9-]+)$/);
   const lensStoryMatch = visibleTarget.match(/^\/lens-stories\/([a-z0-9-]+)$/);
   const managementArticleMatch = visibleTarget.match(/^\/management\/([a-z0-9-]+)$/);
+  const embaMatch = visibleTarget === "/learning/emba";
   const financeCourseMatch = visibleTarget === "/learning/corporate-finance";
   const financeDayMatch = visibleTarget.match(/^\/learning\/corporate-finance\/day-([1-5])$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
@@ -15129,7 +15123,9 @@ function goToRoute(route, replace = false) {
               ? "/management/article"
               : financeCourseMatch
                 ? "/management"
-                : visibleTarget;
+                : embaMatch
+                  ? "/learning/emba"
+                  : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -15151,7 +15147,13 @@ function goToRoute(route, replace = false) {
         visibleTarget.startsWith("/concept-fables")
       )) ||
       (linkRoute === "/map" && visibleTarget === "/map-challenge") ||
-      (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
+      (linkRoute === "/learning" && (
+        visibleTarget.startsWith("/learning") ||
+        visibleTarget.startsWith("/categories") ||
+        visibleTarget.startsWith("/fields/") ||
+        visibleTarget.startsWith("/lens-stories/") ||
+        visibleTarget.startsWith("/concept-fables")
+      )) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
       (linkRoute === "/responsible-use" && visibleTarget === "/responsible-use") ||
@@ -15412,9 +15414,26 @@ function renderManagementVideos(videos) {
           <span>${escapeHtml(managementValue(video, "language"))}</span>
           <h2>${escapeHtml(managementValue(video, "title") || managementText("videoFallback"))}</h2>
         </div>
-        <video controls preload="metadata" src="${escapeHtml(video.url || "")}">Your browser does not support video playback.</video>
+        <div class="finance-video-player" data-caption-player>${video.subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(video.url || "")}">${video.subtitleSrc ? `<track kind="subtitles" src="${escapeHtml(video.subtitleSrc)}" srclang="${escapeHtml(video.subtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(video, "subtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${video.subtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div>
       </article>`).join("")}</div>
   </section>`;
+}
+
+function initCaptionPlayers() {
+  document.querySelectorAll("[data-caption-player]").forEach((player) => {
+    const video = player.querySelector("video");
+    const track = video?.textTracks?.[0];
+    const toggle = player.querySelector("[data-caption-toggle]");
+    if (!video || !track || !toggle) return;
+    const setCaptionState = (visible) => {
+      track.mode = visible ? "showing" : "disabled";
+      toggle.classList.toggle("is-active", visible);
+      toggle.setAttribute("aria-pressed", String(visible));
+      toggle.setAttribute("aria-label", visible ? toggle.dataset.captionOnLabel : toggle.dataset.captionOffLabel);
+    };
+    setCaptionState(true);
+    toggle.addEventListener("click", () => setCaptionState(track.mode !== "showing"));
+  });
 }
 
 function renderManagementColumn() {
@@ -15448,7 +15467,7 @@ function renderManagementColumn() {
         <p>${escapeHtml(managementValue(courseMedia, "videoDescription"))}</p>
       </div>
       <div class="management-course-media-players">
-        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">Your browser does not support video playback.</video></section>` : ""}
+        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><div class="finance-video-player" data-caption-player>${courseMedia.videoSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">${courseMedia.videoSubtitleSrc ? `<track kind="subtitles" src="${escapeHtml(courseMedia.videoSubtitleSrc)}" srclang="${escapeHtml(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(courseMedia, "videoSubtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div></section>` : ""}
         ${courseMedia.podcastUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewPodcast"))}</p><h3>${escapeHtml(managementValue(courseMedia, "podcastTitle"))}</h3><audio controls preload="metadata" src="${escapeHtml(courseMedia.podcastUrl)}">Your browser does not support audio playback.</audio></section>` : ""}
       </div>
     </section>` : ""}
@@ -15465,6 +15484,7 @@ function renderManagementColumn() {
       </div>
       <div class="management-module-grid">${moduleCards}</div>
     </section>` : ""}`;
+  initCaptionPlayers();
 }
 
 function renderManagementArticle(articleId) {
@@ -15515,6 +15535,7 @@ function renderManagementArticle(articleId) {
           ${reference.use ? `<p><span>${escapeHtml(managementText("referenceUse"))}</span>${escapeHtml(reference.use)}</p>` : ""}
         </li>`).join("")}</ol>
       </section>` : ""}`;
+    initCaptionPlayers();
     return;
   }
   const article = getManagementArticle(articleId);
@@ -17459,26 +17480,6 @@ function renderCategoryTree(category) {
     })
     .join("");
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
-  const managementCourseCardCopy = currentLanguage === "en"
-    ? {
-      label: "AI-era essential course",
-      title: "Corporate Finance Essentials: five company decisions for a solo company",
-      description: "From value and cash, trust and compliance, risk and governance, and strategic control to evidence and advice: Day 1–Day 5 learning from Turnpo, made practical for sustained operation.",
-      action: "Enter Corporate Finance Essentials",
-    }
-    : {
-      label: "AI 时代通用课程",
-      title: "公司金融通识：一人公司的五个公司决定",
-      description: "从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。",
-      action: "进入公司金融通识",
-    };
-  const managementCourseCard = category.code === "00" ? `
-    <a class="ai-learning-course-card" href="/management" data-route="/management">
-      <span>${escapeHtml(managementCourseCardCopy.label)}</span>
-      <h2>${escapeHtml(managementCourseCardCopy.title)}</h2>
-      <p>${escapeHtml(managementCourseCardCopy.description)}</p>
-      <strong>${escapeHtml(managementCourseCardCopy.action)} <span aria-hidden="true">→</span></strong>
-    </a>` : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
     ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
@@ -17489,7 +17490,6 @@ function renderCategoryTree(category) {
         </div>
       </div>
     </div>` : ""}
-    ${managementCourseCard}
     ${storyArticle}
     </div>`;
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
@@ -17569,11 +17569,32 @@ function renderField() {
 
 function renderLearning() {
   const pathGrid = document.getElementById("pathTypeGrid");
+  const embaCourseGrid = document.getElementById("embaCourseGrid");
   const timeline = document.getElementById("foundationTimeline");
   const activePathTypes = currentLanguage === "zh" ? pathTypesZh : pathTypes;
   const activeFoundationPath = currentLanguage === "zh" ? foundationPathZh : foundationPath;
   if (pathGrid) {
-    pathGrid.innerHTML = activePathTypes.map(([title, text]) => `<article class="module-card"><h3>${title}</h3><p>${text}</p></article>`).join("");
+    pathGrid.innerHTML = activePathTypes.map(([eyebrow, title, text, href, action]) => `
+      <article class="module-card learning-option-card">
+        <p class="eyebrow">${eyebrow}</p>
+        <h3>${title}</h3>
+        <p>${text}</p>
+        <a class="button secondary" href="${href}">${action}</a>
+      </article>`).join("");
+  }
+  if (embaCourseGrid) {
+    const embaCourse = currentLanguage === "zh"
+      ? ["课程 01", "公司金融核心课程", "用五天理解价值、现金、风险、治理，以及真实公司决定背后的金融逻辑。", "打开公司金融课程"]
+      : ["Course 01", "Corporate Finance Essentials", "A five-day course through value, cash, risk, governance, and real company decisions.", "Open Corporate Finance"];
+    document.querySelector("#emba .section-heading .eyebrow").textContent = "EMBA";
+    document.querySelector("#emba .section-heading h1").textContent = currentLanguage === "zh" ? "EMBA 学习" : "EMBA learning";
+    document.querySelector("#emba .section-heading p:not(.eyebrow)").textContent = currentLanguage === "zh" ? "从公司金融开始，之后会逐步加入其他科目。" : "Start with Corporate Finance, with more subjects to be added over time.";
+    embaCourseGrid.innerHTML = `<article class="module-card learning-option-card">
+      <p class="eyebrow">${embaCourse[0]}</p>
+      <h3>${embaCourse[1]}</h3>
+      <p>${embaCourse[2]}</p>
+      <a class="button secondary" href="/learning/corporate-finance">${embaCourse[3]}</a>
+    </article>`;
   }
   if (timeline) {
     timeline.innerHTML = activeFoundationPath

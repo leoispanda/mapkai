@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.184" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.193" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -79,10 +79,10 @@
           <a href="/explore" data-route="/explore">Explore</a>
           <a href="/map" data-route="/map">Knowledge Map</a>
           <div class="nav-learning">
-            <a class="nav-learning-trigger" href="/learning/corporate-finance" data-i18n="navLearning">Learning</a>
+            <a class="nav-learning-trigger" href="/learning" data-route="/learning" data-i18n="navLearning">Learning</a>
             <div class="nav-learning-menu" aria-label="Learning paths">
-              <a href="/learning/corporate-finance" data-i18n="navFinanceCourse">Corporate Finance Essentials</a>
-              <span data-i18n="navLearningSoon">More learning paths coming soon</span>
+              <a href="/learning/emba" data-route="/learning/emba" data-i18n="navEmba">EMBA</a>
+              <a href="/categories" data-route="/categories" data-i18n="navQuickPickups">General Knowledge Quick Pickups</a>
             </div>
           </div>
           <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
@@ -588,22 +588,20 @@
 
       <section class="page learning-page" id="learning" data-page="/learning">
         <div class="section-heading">
-          <p class="eyebrow">Customized Learning Path</p>
-          <h1>Learning paths connect fields into a usable order.</h1>
-          <p>
-            Start with a learning goal, choose a knowledge area, and follow a practical path
-            through connected fields.
-          </p>
+          <p class="eyebrow">Learning</p>
+          <h1>Choose a focused course or pick up something new.</h1>
+          <p>Go deeper with a structured learning path, or make a quick pickup from the wider knowledge map.</p>
         </div>
         <div class="path-type-grid" id="pathTypeGrid"></div>
-        <section class="preview-band">
-          <div>
-            <p class="eyebrow">Learning paths</p>
-            <h2>Choose a path after choosing a field</h2>
-            <p>MapKAI connects categories, fields, and practical next steps as each area becomes ready.</p>
-          </div>
-          <a class="button primary" href="/explore" data-route="/explore">Start Exploring</a>
-        </section>
+      </section>
+
+      <section class="page learning-page emba-page" id="emba" data-page="/learning/emba">
+        <div class="section-heading">
+          <p class="eyebrow">EMBA</p>
+          <h1>EMBA learning</h1>
+          <p>Start with Corporate Finance, with more subjects to be added over time.</p>
+        </div>
+        <div class="emba-course-grid" id="embaCourseGrid"></div>
       </section>
 
       <section class="page path-page" id="foundationPath" data-page="/learning/foundation">
@@ -619,10 +617,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.184"></script>
-    <script src="/content/management-column.js?v=0.1.184"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.184"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.184"></script>
-    <script src="/script.js?v=0.1.184"></script>
+    <script src="/content/field-fables.js?v=0.1.193"></script>
+    <script src="/content/management-column.js?v=0.1.193"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.193"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.193"></script>
+    <script src="/script.js?v=0.1.193"></script>
   </body>
 </html>

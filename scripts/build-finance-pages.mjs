@@ -12,6 +12,7 @@ const stories = globalThis.MAPKAI_MANAGEMENT_STORIES || {};
 const references = globalThis.MAPKAI_MANAGEMENT_REFERENCES || {};
 const site = "https://www.mapkai.com";
 const ogImage = `${site}/assets/finance-course-og.png`;
+const appVersion = "0.1.192";
 
 const copy = {
   en: {
@@ -114,7 +115,7 @@ const dayDetails = [
   },
 ];
 
-const routes = ["/", "/explore", "/map", "/learning/corporate-finance", "/pdc", "/about"];
+const routes = ["/", "/explore", "/map", "/learning", "/pdc", "/about"];
 
 function esc(value = "") {
   return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
@@ -126,6 +127,114 @@ function rich(value = "") {
 
 function localized(item, key, lang) {
   return lang === "en" ? item?.[`${key}En`] || item?.[key] || "" : item?.[key] || item?.[`${key}En`] || "";
+}
+
+function subtitleText(value = "") {
+  return String(value)
+    .replace(/\*\*/g, "")
+    .replace(/[`*_]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function splitSubtitleText(value, maxLength = 28) {
+  const sentences = String(value).match(/[^.!?;。！？；]+[.!?;。！？；]?/gu)?.map((part) => subtitleText(part)).filter(Boolean) || [];
+  const chunks = [];
+  for (const sentence of sentences) {
+    if (sentence.includes(" ")) {
+      const words = sentence.split(/\s+/).filter(Boolean);
+      let current = "";
+      for (const word of words) {
+        const next = current ? `${current} ${word}` : word;
+        if (current && next.length > 42) {
+          chunks.push(current.trim());
+          current = word;
+        } else {
+          current = next;
+        }
+      }
+      if (current.trim()) chunks.push(current.trim());
+      continue;
+    }
+    const characters = [...sentence];
+    if (characters.length <= maxLength) {
+      chunks.push(sentence);
+      continue;
+    }
+    let current = "";
+    for (const character of characters) {
+      current += character;
+      if (current.length >= maxLength && /[，、：,:；;。！？!?]$/.test(current)) {
+        chunks.push(current.trim());
+        current = "";
+      }
+    }
+    if (current.trim()) chunks.push(current.trim());
+  }
+  return chunks;
+}
+
+function vttTime(seconds) {
+  const milliseconds = Math.max(0, Math.round(seconds * 1000));
+  const hours = Math.floor(milliseconds / 3600000);
+  const minutes = Math.floor((milliseconds % 3600000) / 60000);
+  const remaining = milliseconds % 60000;
+  const wholeSeconds = Math.floor(remaining / 1000);
+  const millis = remaining % 1000;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(wholeSeconds).padStart(2, "0")}.${String(millis).padStart(3, "0")}`;
+}
+
+function subtitleDisplay(value) {
+  if (value.includes(" ")) {
+    const words = value.split(/\s+/).filter(Boolean);
+    const lines = [];
+    let current = "";
+    for (const word of words) {
+      const next = current ? `${current} ${word}` : word;
+      if (current && next.length > 42) {
+        lines.push(current);
+        current = word;
+      } else {
+        current = next;
+      }
+    }
+    if (current) lines.push(current);
+    return lines.join("\n");
+  }
+  const characters = [...value];
+  if (characters.length <= 16) return value;
+  const midpoint = Math.ceil(characters.length / 2);
+  return `${characters.slice(0, midpoint).join("")}\n${characters.slice(midpoint).join("")}`;
+}
+
+function buildVtt(text, durationSeconds) {
+  const cues = splitSubtitleText(text);
+  const totalWeight = cues.reduce((sum, cue) => sum + cue.replace(/\s/g, "").length, 0) || 1;
+  let elapsed = 0;
+  const lines = ["WEBVTT", "", "NOTE Generated from the Day 1 lesson manuscript for the first subtitle prototype.", ""];
+  cues.forEach((cue, index) => {
+    const weight = cue.replace(/\s/g, "").length;
+    const cueDuration = index === cues.length - 1 ? Math.max(0, durationSeconds - elapsed) : durationSeconds * (weight / totalWeight);
+    const start = elapsed;
+    elapsed += cueDuration;
+    const display = subtitleDisplay(cue);
+    lines.push(String(index + 1), `${vttTime(start)} --> ${vttTime(Math.min(durationSeconds, elapsed))}`, display, "");
+  });
+  return lines.join("\n");
+}
+
+async function writeSubtitleFiles() {
+  const videos = course.learningModules.flatMap((module) => module.videos || []);
+  for (const video of videos) {
+    if (!video.subtitleSrc || !video.subtitleStoryId || video.subtitleSource === "speech-recognition") continue;
+    const story = stories[video.subtitleStoryId];
+    const text = localized(story, "storyContent", video.subtitleTextLanguage || "zh");
+    if (!text) continue;
+    const relativePath = video.subtitleSrc.replace(/^\//, "");
+    const target = resolve(outRoot, relativePath);
+    await mkdir(resolve(target, ".."), { recursive: true });
+    await writeFile(target, buildVtt(text, Number(video.subtitleDurationSeconds) || 1), "utf8");
+  }
 }
 
 function paragraphs(value = "") {
@@ -157,9 +266,8 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
   const enPath = lang === "en" ? canonicalPath : alternatePath;
   const zhPath = lang === "zh" ? canonicalPath : `/zh${canonicalPath}`;
   const navLinks = routes.map((route, index) => {
-    const href = route === "/learning/corporate-finance" ? pathFor(lang) : route;
     const active = index === 3 ? " is-current" : "";
-    return `<a class="${active.trim()}" href="${href}">${esc(c.nav[index])}</a>`;
+    return `<a class="${active.trim()}" href="${route}">${esc(c.nav[index])}</a>`;
   }).join("");
   return `<!doctype html>
 <html lang="${c.locale}">
@@ -185,7 +293,7 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
   <meta name="twitter:image" content="${ogImage}" />
   <script type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, "\\u003c")}</script>
   <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=${appVersion}" />
 </head>
 <body class="finance-static-page" data-language="${lang}">
   <header class="topbar finance-topbar">
@@ -202,7 +310,7 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
   ${body}
   <footer class="site-footer finance-footer"><p class="footer-product-promise">${esc(c.footer)}</p><p>${esc(c.lowData)}</p><nav class="footer-links"><a href="/privacy">Privacy</a><a href="/responsible-use">Responsible Use</a><a href="/terms">Terms</a></nav></footer>
   <div class="finance-toast" role="status" aria-live="polite" hidden></div>
-  <script src="/finance-course.js"></script>
+  <script src="/finance-course.js?v=${appVersion}"></script>
 </body>
 </html>`;
 }
@@ -220,18 +328,30 @@ function courseSchema(lang, canonicalPath) {
 function renderOverview(lang) {
   const c = copy[lang];
   const canonicalPath = pathFor(lang);
+  const courseMedia = course.courseMedia || {};
+  const overviewVideoLabel = lang === "en" ? "Overview video" : "总览视频";
+  const overviewPodcastLabel = lang === "en" ? "Overview podcast" : "总览播客";
+  const overviewSubtitleSrc = courseMedia.videoSubtitleSrc || "";
+  const overviewSubtitleLabel = localized(courseMedia, "videoSubtitleLabel", lang) || (lang === "zh" ? "字幕" : "Subtitles");
+  const overviewCaptionButtonLabel = lang === "zh" ? "隐藏字幕" : "Hide subtitles";
+  const overviewCaptionButtonShowLabel = lang === "zh" ? "显示字幕" : "Show subtitles";
+  const overviewTrack = overviewSubtitleSrc ? `<track kind="subtitles" src="${esc(overviewSubtitleSrc)}" srclang="${esc(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${esc(overviewSubtitleLabel)}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : "";
+  const overviewPlayer = courseMedia.videoUrl ? `<div class="finance-video-player" data-caption-player>${overviewSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${esc(overviewCaptionButtonLabel)}" data-caption-on-label="${esc(overviewCaptionButtonLabel)}" data-caption-off-label="${esc(overviewCaptionButtonShowLabel)}">CC</button>` : ""}<video controls preload="metadata" src="${esc(courseMedia.videoUrl)}">${overviewTrack}</video></div>` : "";
+  const overviewMedia = courseMedia.videoUrl || courseMedia.podcastUrl ? `<section class="finance-media-panel finance-video-panel" aria-labelledby="course-overview-media">
+    <h2 id="course-overview-media">${esc(c.overview)}</h2>
+    <p>${esc(localized(courseMedia, "videoDescription", lang))}</p>
+    <div class="finance-video-grid">
+      ${courseMedia.videoUrl ? `<article><span>${esc(overviewVideoLabel)}</span><h3>${esc(localized(courseMedia, "videoTitle", lang) || c.overview)}</h3>${overviewPlayer}</article>` : ""}
+      ${courseMedia.podcastUrl ? `<article><span>${esc(overviewPodcastLabel)}</span><h3>${esc(localized(courseMedia, "podcastTitle", lang) || c.overview)}</h3><audio controls preload="metadata" src="${esc(courseMedia.podcastUrl)}"></audio></article>` : ""}
+    </div>
+  </section>` : "";
   const cards = course.learningModules.map((module, index) => {
-    const d = dayDetails[index];
     return `<article class="finance-outline-card" data-course-day-card="${index + 1}">
       <div><span>Day ${index + 1}</span><span data-day-status>${esc(c.startDay(index + 1))}</span></div>
       <h3>${esc(localized(module, "title", lang))}</h3>
-      <p class="finance-outline-question">${esc(d.question[lang])}</p>
-      <p>${d.topics[lang].map(esc).join(" · ")}</p>
-      <small>25 ${lang === "en" ? "minutes" : "分钟"}</small>
       <a class="button secondary" href="${pathFor(lang, `/day-${index + 1}`)}">${esc(c.startDay(index + 1))}</a>
     </article>`;
   }).join("");
-  const refs = course.learningModules.flatMap((module) => localized(references[module.id] || {}, "references", lang)).slice(0, 8);
   const body = `<main class="finance-course-main" data-course-overview>
     <section class="finance-course-hero">
       <p class="eyebrow">${esc(c.original)}</p><h1>${esc(c.courseTitle)}</h1><p class="finance-course-subtitle">${esc(c.subtitle)}</p><p>${esc(c.description)}</p>
@@ -239,13 +359,8 @@ function renderOverview(lang) {
       <div class="hero-actions"><a class="button primary" href="${pathFor(lang, "/day-1")}" data-course-start>${esc(c.start)}</a><a class="button secondary" href="#course-outline" data-course-continue hidden>${esc(c.continue)}</a></div>
       <p class="finance-privacy-note">${esc(c.privacy)}</p><p class="finance-progress-copy" data-course-progress>${esc(c.completed(0))}</p>
     </section>
-    <section class="finance-course-section"><h2>${esc(c.who)}</h2><div class="finance-audience-grid">${c.audiences.map((item) => `<article>${esc(item)}</article>`).join("")}</div><p class="finance-emphasis">${esc(c.noBackground)}</p></section>
-    <section class="finance-course-section"><h2>${esc(c.abilitiesTitle)}</h2><ul class="finance-check-list">${c.abilities.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></section>
+    ${overviewMedia}
     <section class="finance-course-section" id="course-outline"><h2>${esc(c.outline)}</h2><div class="finance-outline-grid">${cards}</div></section>
-    <section class="finance-course-section"><h2>${esc(c.howTitle)}</h2><ol class="finance-method-grid">${c.how.map((item, i) => `<li><span>0${i + 1}</span><strong>${esc(item)}</strong></li>`).join("")}</ol><p>${esc(c.method)}</p></section>
-    <section class="finance-course-section finance-creator"><h2>${esc(c.whyTitle)}</h2><p>${esc(c.whyCopy)}</p><p>${esc(c.creator)}</p><p><strong>${esc(c.reviewed)}</strong></p><a href="#course-references">${esc(c.references)}</a></section>
-    <section class="finance-course-section" id="course-references"><h2>${esc(c.referencesTitle)}</h2><ol class="finance-reference-list">${refs.map((ref) => `<li><strong>${esc(ref.citation)}</strong>${ref.detail ? `<p>${esc(ref.detail)}</p>` : ""}</li>`).join("")}</ol></section>
-    <section class="finance-course-final"><h2>${esc(c.finalTitle)}</h2><p>${esc(c.finalCopy)}</p><a class="button primary" href="${pathFor(lang, "/day-1")}">${esc(c.start)} — ${esc(localized(course.learningModules[0], "title", lang))}</a></section>
   </main>`;
   return layout({ lang, title: lang === "en" ? "Corporate Finance Essentials | Free 5-Day Course | MapKAI" : "公司金融核心课程｜免费五天课程｜MapKAI", description: lang === "en" ? "Learn how companies create value, manage cash, evaluate risk, and make financial decisions in this free five-day course for non-finance professionals." : "面向非金融专业人士的免费五天课程，学习企业如何创造价值、管理现金、评估风险并做出金融决定。", canonicalPath, body, structuredData: courseSchema(lang, canonicalPath) });
 }
@@ -263,7 +378,15 @@ function renderDay(lang, dayIndex) {
   const knowledge = localized(story, "knowledgeChainContent", lang);
   const refs = localized(story, "references", lang);
   const concepts = d.topics[lang].map((topic, i) => `<article class="finance-concept-card"><span>${esc(topic)}</span><p>${esc(d.outcomes[lang][i] || d.outcomes[lang][0])}</p><strong>${esc(c.whyMatters)}</strong><p>${esc(d.reflections[lang][i % d.reflections[lang].length])}</p></article>`).join("");
-  const videoMarkup = (module.videos || []).map((video) => `<article><span>${esc(localized(video, "language", lang))}</span><h3>${esc(localized(video, "title", lang))}</h3><video controls preload="metadata" src="${esc(video.url)}"></video></article>`).join("");
+  const videoMarkup = (module.videos || []).map((video) => {
+    const subtitleSrc = video.subtitleSrc || "";
+    const subtitleLabel = localized(video, "subtitleLabel", lang) || (lang === "zh" ? "字幕" : "Subtitles");
+    const captionButtonLabel = lang === "zh" ? "隐藏字幕" : "Hide subtitles";
+    const captionButtonShowLabel = lang === "zh" ? "显示字幕" : "Show subtitles";
+    const track = subtitleSrc ? `<track kind="subtitles" src="${esc(subtitleSrc)}" srclang="${esc(video.subtitleSrclang || "zh-CN")}" label="${esc(subtitleLabel)}"${video.subtitleDefault ? " default" : ""} />` : "";
+    const player = `<div class="finance-video-player" data-caption-player>${subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${esc(captionButtonLabel)}" data-caption-on-label="${esc(captionButtonLabel)}" data-caption-off-label="${esc(captionButtonShowLabel)}">CC</button>` : ""}<video controls preload="metadata" src="${esc(video.url)}">${track}</video></div>`;
+    return `<article><span>${esc(localized(video, "language", lang))}</span><h3>${esc(localized(video, "title", lang))}</h3>${player}</article>`;
+  }).join("");
   const nextHref = n === 5 ? pathFor(lang, "/completed") : pathFor(lang, `/day-${n + 1}`);
   const prevHref = n === 1 ? "" : pathFor(lang, `/day-${n - 1}`);
   const breadcrumb = { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: c.nav[0], item: `${site}/` }, { "@type": "ListItem", position: 2, name: c.courseTitle, item: `${site}${pathFor(lang)}` }, { "@type": "ListItem", position: 3, name: title, item: `${site}${canonicalPath}` }] };
@@ -271,10 +394,9 @@ function renderDay(lang, dayIndex) {
   const body = `<main class="finance-day-main" data-course-day="${n}">
     <nav class="finance-course-nav" aria-label="Course navigation"><a href="${pathFor(lang)}">${esc(c.courseTitle)}</a><span>${esc(c.dayOf(n))}</span><div class="finance-progress-track" aria-label="${n * 20}%"><i style="width:${n * 20}%"></i></div><div class="finance-course-nav-actions"><a href="${pathFor(lang)}">${esc(c.overview)}</a>${prevHref ? `<a href="${prevHref}">${esc(c.previous)}</a>` : ""}<a href="${nextHref}">${esc(n === 5 ? c.completeCourse : c.next)}</a></div></nav>
     <header class="finance-day-hero"><p class="eyebrow">${esc(c.dayOf(n))}</p><h1>${esc(title)}</h1><p class="finance-day-question">${esc(d.question[lang])}</p><p>${esc(c.estimated)}</p><div><strong>${esc(c.today)}</strong><ul>${d.outcomes[lang].map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div><a class="button primary" href="#lesson-content" data-start-lesson>${esc(c.startLesson)}</a></header>
-    <section class="finance-content-modes" aria-label="Content formats"><button class="is-active" type="button" data-content-mode="read">${esc(c.read)}</button><button type="button" data-content-mode="watch">${esc(c.watch)}</button><button type="button" data-content-mode="listen">${esc(c.listen)}</button></section>
-    <section class="finance-media-panel" data-mode-panel="watch" hidden><p>${esc(c.subtitles)}</p><div class="finance-video-grid">${videoMarkup || `<p>${esc(c.watch)} — coming soon</p>`}</div></section>
-    <section class="finance-media-panel" data-mode-panel="listen" hidden><h2>${esc(localized(module, "audioTitle", lang) || c.listen)}</h2>${localized(module, "audioUrl", lang) ? `<audio controls preload="metadata" src="${esc(localized(module, "audioUrl", lang))}"></audio>` : `<p>${esc(c.listen)} — coming soon</p>`}</section>
-    <article class="finance-lesson-reader" id="lesson-content" data-mode-panel="read">
+    <section class="finance-media-panel finance-video-panel" aria-labelledby="watch-lesson"><h2 id="watch-lesson">${esc(c.watch)}</h2><p>${esc(c.subtitles)}</p><div class="finance-video-grid">${videoMarkup || `<p>${esc(c.watch)} — coming soon</p>`}</div></section>
+    <section class="finance-media-panel finance-audio-panel" aria-labelledby="listen-lesson"><h2 id="listen-lesson">${esc(c.listen)}</h2>${localized(module, "audioTitle", lang) ? `<p>${esc(localized(module, "audioTitle", lang))}</p>` : ""}${localized(module, "audioUrl", lang) ? `<audio controls preload="metadata" src="${esc(localized(module, "audioUrl", lang))}"></audio>` : `<p>${esc(c.listen)} — coming soon</p>`}</section>
+    <article class="finance-lesson-reader" id="lesson-content">
       <section><p class="finance-section-number">01</p><h2>${esc(c.opening)}</h2><div class="finance-story-content">${paragraphs(storyContent)}</div></section>
       <section><p class="finance-section-number">02</p><h2>${esc(c.problem)}</h2><aside class="finance-decision-question"><span>${esc(c.decisionQuestion)}</span><strong>${esc(d.question[lang])}</strong><p>${esc(judgment)}</p></aside></section>
       <section><p class="finance-section-number">03</p><h2>${esc(c.concepts)}</h2><div class="finance-concept-grid">${concepts}</div></section>
@@ -309,5 +431,7 @@ for (const lang of ["en", "zh"]) {
   for (let index = 0; index < 5; index += 1) await writeRoute(pathFor(lang, `/day-${index + 1}`), renderDay(lang, index));
   await writeRoute(pathFor(lang, "/completed"), renderCompleted(lang));
 }
+
+await writeSubtitleFiles();
 
 console.log("Generated Finance course pages in public/learning and public/zh/learning.");

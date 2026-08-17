@@ -93,14 +93,6 @@ function initDay() {
   });
 }
 
-function initModes() {
-  document.querySelectorAll("[data-content-mode]").forEach((button) => button.addEventListener("click", () => {
-    const mode = button.dataset.contentMode;
-    document.querySelectorAll("[data-content-mode]").forEach((item) => item.classList.toggle("is-active", item === button));
-    document.querySelectorAll("[data-mode-panel]").forEach((panel) => { panel.hidden = panel.dataset.modePanel !== mode; });
-  }));
-}
-
 function initChecks() {
   document.querySelectorAll("[data-check-answer]").forEach((button) => button.addEventListener("click", () => {
     const panel = button.closest(".finance-knowledge-check");
@@ -108,6 +100,23 @@ function initChecks() {
     button.classList.add(button.dataset.checkAnswer === "true" ? "is-correct" : "is-wrong");
     panel.querySelector("[data-check-result]").hidden = false;
   }));
+}
+
+function initCaptions() {
+  document.querySelectorAll("[data-caption-player]").forEach((player) => {
+    const video = player.querySelector("video");
+    const track = video?.textTracks?.[0];
+    const toggle = player.querySelector("[data-caption-toggle]");
+    if (!video || !track || !toggle) return;
+    const setCaptionState = (visible) => {
+      track.mode = visible ? "showing" : "disabled";
+      toggle.classList.toggle("is-active", visible);
+      toggle.setAttribute("aria-pressed", String(visible));
+      toggle.setAttribute("aria-label", visible ? toggle.dataset.captionOnLabel : toggle.dataset.captionOffLabel);
+    };
+    setCaptionState(true);
+    toggle.addEventListener("click", () => setCaptionState(track.mode !== "showing"));
+  });
 }
 
 function initChrome() {
@@ -135,5 +144,5 @@ document.querySelectorAll("[data-course-event]").forEach((target) => target.addE
 initChrome();
 initOverview();
 initDay();
-initModes();
 initChecks();
+initCaptions();

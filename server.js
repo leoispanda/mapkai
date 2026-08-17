@@ -49,6 +49,7 @@ const mimeTypes = {
   ".webp": "image/webp",
   ".mp4": "video/mp4",
   ".m4a": "audio/mp4",
+  ".vtt": "text/vtt; charset=utf-8",
   ".pdf": "application/pdf",
   ".ico": "image/x-icon",
 };
