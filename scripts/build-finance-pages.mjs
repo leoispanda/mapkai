@@ -12,7 +12,7 @@ const stories = globalThis.MAPKAI_MANAGEMENT_STORIES || {};
 const references = globalThis.MAPKAI_MANAGEMENT_REFERENCES || {};
 const site = "https://www.mapkai.com";
 const ogImage = `${site}/assets/finance-course-og.png`;
-const appVersion = "0.1.192";
+const appVersion = "0.1.193";
 
 const copy = {
   en: {
