@@ -12,7 +12,8 @@ const stories = globalThis.MAPKAI_MANAGEMENT_STORIES || {};
 const references = globalThis.MAPKAI_MANAGEMENT_REFERENCES || {};
 const site = "https://www.mapkai.com";
 const ogImage = `${site}/assets/finance-course-og.png`;
-const appVersion = "0.1.193";
+const appVersion = "0.1.194";
+const versionedSubtitleSrc = (src) => src ? `${src}${src.includes("?") ? "&" : "?"}v=${encodeURIComponent(appVersion)}` : "";
 
 const copy = {
   en: {
@@ -332,10 +333,11 @@ function renderOverview(lang) {
   const overviewVideoLabel = lang === "en" ? "Overview video" : "总览视频";
   const overviewPodcastLabel = lang === "en" ? "Overview podcast" : "总览播客";
   const overviewSubtitleSrc = courseMedia.videoSubtitleSrc || "";
+  const overviewTrackSrc = versionedSubtitleSrc(overviewSubtitleSrc);
   const overviewSubtitleLabel = localized(courseMedia, "videoSubtitleLabel", lang) || (lang === "zh" ? "字幕" : "Subtitles");
   const overviewCaptionButtonLabel = lang === "zh" ? "隐藏字幕" : "Hide subtitles";
   const overviewCaptionButtonShowLabel = lang === "zh" ? "显示字幕" : "Show subtitles";
-  const overviewTrack = overviewSubtitleSrc ? `<track kind="subtitles" src="${esc(overviewSubtitleSrc)}" srclang="${esc(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${esc(overviewSubtitleLabel)}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : "";
+  const overviewTrack = overviewSubtitleSrc ? `<track kind="subtitles" src="${esc(overviewTrackSrc)}" srclang="${esc(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${esc(overviewSubtitleLabel)}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : "";
   const overviewPlayer = courseMedia.videoUrl ? `<div class="finance-video-player" data-caption-player>${overviewSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${esc(overviewCaptionButtonLabel)}" data-caption-on-label="${esc(overviewCaptionButtonLabel)}" data-caption-off-label="${esc(overviewCaptionButtonShowLabel)}">CC</button>` : ""}<video controls preload="metadata" src="${esc(courseMedia.videoUrl)}">${overviewTrack}</video></div>` : "";
   const overviewMedia = courseMedia.videoUrl || courseMedia.podcastUrl ? `<section class="finance-media-panel finance-video-panel" aria-labelledby="course-overview-media">
     <h2 id="course-overview-media">${esc(c.overview)}</h2>
@@ -380,10 +382,11 @@ function renderDay(lang, dayIndex) {
   const concepts = d.topics[lang].map((topic, i) => `<article class="finance-concept-card"><span>${esc(topic)}</span><p>${esc(d.outcomes[lang][i] || d.outcomes[lang][0])}</p><strong>${esc(c.whyMatters)}</strong><p>${esc(d.reflections[lang][i % d.reflections[lang].length])}</p></article>`).join("");
   const videoMarkup = (module.videos || []).map((video) => {
     const subtitleSrc = video.subtitleSrc || "";
+    const trackSrc = versionedSubtitleSrc(subtitleSrc);
     const subtitleLabel = localized(video, "subtitleLabel", lang) || (lang === "zh" ? "字幕" : "Subtitles");
     const captionButtonLabel = lang === "zh" ? "隐藏字幕" : "Hide subtitles";
     const captionButtonShowLabel = lang === "zh" ? "显示字幕" : "Show subtitles";
-    const track = subtitleSrc ? `<track kind="subtitles" src="${esc(subtitleSrc)}" srclang="${esc(video.subtitleSrclang || "zh-CN")}" label="${esc(subtitleLabel)}"${video.subtitleDefault ? " default" : ""} />` : "";
+    const track = subtitleSrc ? `<track kind="subtitles" src="${esc(trackSrc)}" srclang="${esc(video.subtitleSrclang || "zh-CN")}" label="${esc(subtitleLabel)}"${video.subtitleDefault ? " default" : ""} />` : "";
     const player = `<div class="finance-video-player" data-caption-player>${subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${esc(captionButtonLabel)}" data-caption-on-label="${esc(captionButtonLabel)}" data-caption-off-label="${esc(captionButtonShowLabel)}">CC</button>` : ""}<video controls preload="metadata" src="${esc(video.url)}">${track}</video></div>`;
     return `<article><span>${esc(localized(video, "language", lang))}</span><h3>${esc(localized(video, "title", lang))}</h3>${player}</article>`;
   }).join("");

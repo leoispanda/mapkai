@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.194";
+const appVersion = "0.1.195";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -14786,6 +14786,11 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function versionedSubtitleSrc(src) {
+  if (!src) return "";
+  return `${src}${src.includes("?") ? "&" : "?"}v=${encodeURIComponent(appVersion)}`;
+}
+
 function renderEscapedParagraphs(value) {
   return String(value || "")
     .split(/\n{2,}|\r?\n/)
@@ -15414,7 +15419,7 @@ function renderManagementVideos(videos) {
           <span>${escapeHtml(managementValue(video, "language"))}</span>
           <h2>${escapeHtml(managementValue(video, "title") || managementText("videoFallback"))}</h2>
         </div>
-        <div class="finance-video-player" data-caption-player>${video.subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(video.url || "")}">${video.subtitleSrc ? `<track kind="subtitles" src="${escapeHtml(video.subtitleSrc)}" srclang="${escapeHtml(video.subtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(video, "subtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${video.subtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div>
+        <div class="finance-video-player" data-caption-player>${video.subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(video.url || "")}">${video.subtitleSrc ? `<track kind="subtitles" src="${escapeHtml(versionedSubtitleSrc(video.subtitleSrc))}" srclang="${escapeHtml(video.subtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(video, "subtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${video.subtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div>
       </article>`).join("")}</div>
   </section>`;
 }
@@ -15467,7 +15472,7 @@ function renderManagementColumn() {
         <p>${escapeHtml(managementValue(courseMedia, "videoDescription"))}</p>
       </div>
       <div class="management-course-media-players">
-        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><div class="finance-video-player" data-caption-player>${courseMedia.videoSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">${courseMedia.videoSubtitleSrc ? `<track kind="subtitles" src="${escapeHtml(courseMedia.videoSubtitleSrc)}" srclang="${escapeHtml(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(courseMedia, "videoSubtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div></section>` : ""}
+        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><div class="finance-video-player" data-caption-player>${courseMedia.videoSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">${courseMedia.videoSubtitleSrc ? `<track kind="subtitles" src="${escapeHtml(versionedSubtitleSrc(courseMedia.videoSubtitleSrc))}" srclang="${escapeHtml(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(courseMedia, "videoSubtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div></section>` : ""}
         ${courseMedia.podcastUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewPodcast"))}</p><h3>${escapeHtml(managementValue(courseMedia, "podcastTitle"))}</h3><audio controls preload="metadata" src="${escapeHtml(courseMedia.podcastUrl)}">Your browser does not support audio playback.</audio></section>` : ""}
       </div>
     </section>` : ""}
