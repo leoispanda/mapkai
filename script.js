@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.171";
+const appVersion = "0.1.176";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -14,6 +14,7 @@ const themeKey = "mapkaiTheme";
 const founderModeKey = "mapkaiFounderMode";
 const founderStoriesKey = "mapkaiFounderStories";
 const founderConsoleTabKey = "mapkaiFounderConsoleTab";
+const mapChallengeKey = "mapkaiMapChallengeV1";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
 const supportedLanguages = ["en", "zh"];
@@ -69,10 +70,10 @@ const masteryLabels = {
     green: "Active",
   },
   zh: {
-    ocean: "未探索的知识海洋",
-    snow: "初步理解的雪山",
-    land: "能够解释的陆地",
-    green: "更熟练掌握的绿地",
+    ocean: "未探索的知识汪洋",
+    snow: "刚浮出水面的荒沙",
+    land: "长出草木的陆地",
+    green: "水草丰茂的绿洲",
   },
 };
 
@@ -298,11 +299,12 @@ const uiText = {
     whyP4: "MapKAI is about transforming scattered knowledge into a structured learning journey, from unknown ocean to explored land.",
     mapEyebrow: "Knowledge Map",
     mapTitle: "Your knowledge map.",
-    mapCopy: "Answer questions. Watch unknown ocean turn into land.",
+    mapCopy: "Answer questions. Watch open water turn into islands, then into oases.",
     mapStatesTitle: "Map states",
-    mapStateOcean: "Ocean Unknown",
-    mapStateSnow: "Snow Emerging",
-    mapStateLand: "Land Active",
+    mapStateOcean: "Water Unknown",
+    mapStateSnow: "Sand Emerging",
+    mapStateLand: "Trees Familiar",
+    mapStateGreen: "Oasis Active",
     goCategories: "Continue Exploring",
     goLearning: "Browse Fields",
     quickMirrorTitle: "Quick Mirror",
@@ -699,11 +701,12 @@ const uiText = {
     whyP4: "MapKAI 不只是收集信息，而是把零散知识整理成一段结构清楚的学习旅程，从未探索的知识海洋走向能够解释的陆地。",
     mapEyebrow: "知识地图",
     mapTitle: "你的知识地图。",
-    mapCopy: "回答问题，看未知海洋逐渐变成陆地。",
+    mapCopy: "回答问题，看汪洋浮出岛屿，再长成绿洲。",
     mapStatesTitle: "地图状态",
-    mapStateOcean: "海洋 未知",
-    mapStateSnow: "雪山 初现",
-    mapStateLand: "陆地 激活",
+    mapStateOcean: "汪洋 未知",
+    mapStateSnow: "荒沙 初现",
+    mapStateLand: "草木 熟悉",
+    mapStateGreen: "绿洲 激活",
     goCategories: "继续探索",
     goLearning: "浏览领域",
     quickMirrorTitle: "30秒思维镜像",
@@ -1066,70 +1069,69 @@ let quickMirrorState = {
   answers: [],
 };
 
-const mapBaseAssetPath = "/assets/map-v3/";
-const mapComponentAssetPath = "/assets/map-v2/";
-const mapComponentSets = {
-  snow: ["snow_01.png", "snow_02.png", "snow_03.png", "snow_04.png"],
-  land: ["land_01.png", "land_02.png", "land_03.png", "land_04.png"],
-  green: ["oasis_01.png", "oasis_02.png", "oasis_03.png", "oasis_04.png"],
+// The knowledge map is drawn procedurally — no raster assets. Each island keeps a
+// fixed seed, so a subject always has the same coastline for every visitor.
+const mapDesignWidth = 1100;
+const mapDesignHeight = 619;
+const mapIslandPlacements = {
+  "00": { x: 150, y: 150, r: 72, seed: 9107 },
+  "01": { x: 340, y: 120, r: 62, seed: 2264 },
+  "02": { x: 520, y: 165, r: 70, seed: 5518 },
+  "03": { x: 700, y: 120, r: 64, seed: 7731 },
+  "04": { x: 900, y: 175, r: 72, seed: 3390 },
+  "05": { x: 185, y: 335, r: 68, seed: 8842 },
+  "06": { x: 390, y: 355, r: 72, seed: 1476 },
+  "07": { x: 600, y: 330, r: 66, seed: 6053 },
+  "08": { x: 170, y: 495, r: 68, seed: 4287 },
+  "09": { x: 390, y: 510, r: 62, seed: 9964 },
+  "10": { x: 600, y: 490, r: 66, seed: 3115 },
 };
-const mapStateVisuals = {
-  ocean: {
-    alpha: 0,
-    filter: "saturate(0.72) hue-rotate(138deg) brightness(0.9) contrast(0.92)",
-    shadow: "rgba(16, 84, 108, 0.08)",
-    rim: "rgba(235, 252, 255, 0.18)",
-    veil: "rgba(218, 245, 247, 0.12)",
+// mastery level -> what the island looks like
+//   ocean  open water, a buoy marks the unsurveyed position
+//   snow   bare sand, dunes, nothing growing
+//   land   grass and the first trees
+//   green  oasis: pool, palms, somewhere to live
+// Short enough to sit on a name plate without colliding with its neighbours;
+// the full subject title stays available on hover and in the field pages.
+const mapIslandLabels = {
+  "00": { en: "Generic", zh: "通识" },
+  "01": { en: "Education", zh: "教育" },
+  "02": { en: "Arts", zh: "艺术人文" },
+  "03": { en: "Society", zh: "社会科学" },
+  "04": { en: "Business", zh: "商业法律" },
+  "05": { en: "Sciences", zh: "自然科学" },
+  "06": { en: "Technology", zh: "信息技术" },
+  "07": { en: "Engineering", zh: "工程制造" },
+  "08": { en: "Agriculture", zh: "农林渔牧" },
+  "09": { en: "Health", zh: "健康福利" },
+  "10": { en: "Services", zh: "服务" },
+};
+const mapPalettes = {
+  light: {
+    seaDeep: "#0E6E8C", seaMid: "#2A9DB8", seaShallow: "#6FCADB", seaShore: "#A9E6EE",
+    foam: "#FCFFFE", sun: "#FFD98A",
+    sandLit: "#F7E2B4", sand: "#EBCB8E", sandShade: "#D3A96C",
+    grassLit: "#90C971", grass: "#63A755", canopy: "#2F6739", canopyLit: "#8ACB6C",
+    pool: "#58D6C8", poolLit: "#A8F2E7", bloomA: "#F7A072", bloomB: "#FFD371",
+    roof: "#D9714E", wall: "#FBEBCE",
+    plate: "#FFFBF2", plateEdge: "rgba(120, 88, 48, 0.18)",
+    ink: "#3A2E20", inkSoft: "rgba(58, 46, 32, 0.42)",
+    shade: "rgba(41, 60, 62, 0.22)", accent: "#E08A3C",
+    vignette: "rgba(20, 60, 70, 0.22)", grain: 0.03, grainTone: 60,
   },
-  snow: {
-    alpha: 0.86,
-    filter: "saturate(0.72) brightness(1.02) contrast(0.94)",
-    shadow: "rgba(45, 91, 118, 0.16)",
-    rim: "rgba(245, 254, 255, 0.5)",
-    veil: "rgba(241, 252, 255, 0.16)",
-  },
-  land: {
-    alpha: 0.9,
-    filter: "saturate(0.82) brightness(0.99) contrast(0.96)",
-    shadow: "rgba(88, 91, 48, 0.16)",
-    rim: "rgba(255, 246, 204, 0.45)",
-    veil: "rgba(255, 248, 218, 0.08)",
-  },
-  green: {
-    alpha: 0.94,
-    filter: "saturate(0.9) brightness(1.01) contrast(0.98)",
-    shadow: "rgba(33, 103, 74, 0.18)",
-    rim: "rgba(232, 255, 214, 0.48)",
-    veil: "rgba(232, 255, 214, 0.1)",
+  dark: {
+    seaDeep: "#0A3348", seaMid: "#14506A", seaShallow: "#257F9B", seaShore: "#3AA3BC",
+    foam: "#BFE9F2", sun: "#F2D89B",
+    sandLit: "#CDA870", sand: "#B08F5E", sandShade: "#7A6440",
+    grassLit: "#6BA45E", grass: "#4A8449", canopy: "#1E3D2A", canopyLit: "#69A25B",
+    pool: "#45C4B8", poolLit: "#8CE6DC", bloomA: "#E08A6A", bloomB: "#EBC069",
+    roof: "#A9503A", wall: "#D8BE92",
+    plate: "#182636", plateEdge: "rgba(180, 205, 230, 0.18)",
+    ink: "#EFE3CE", inkSoft: "rgba(239, 227, 206, 0.40)",
+    shade: "rgba(0, 12, 20, 0.42)", accent: "#F0B45E",
+    vignette: "rgba(3, 18, 30, 0.34)", grain: 0.045, grainTone: 255,
   },
 };
-const mapComponentPlacements = {
-  "00": { x: 104, y: 92, width: 212, variant: 0 },
-  "01": { x: 342, y: 82, width: 212, variant: 1 },
-  "02": { x: 582, y: 88, width: 214, variant: 2 },
-  "03": { x: 802, y: 86, width: 230, variant: 1 },
-  "04": { x: 92, y: 270, width: 224, variant: 0 },
-  "05": { x: 344, y: 278, width: 222, variant: 2 },
-  "06": { x: 588, y: 272, width: 220, variant: 1 },
-  "07": { x: 812, y: 278, width: 218, variant: 3 },
-  "08": { x: 172, y: 440, width: 230, variant: 1 },
-  "09": { x: 452, y: 438, width: 218, variant: 0 },
-  "10": { x: 706, y: 436, width: 230, variant: 2 },
-};
-const mapFounderLabelPositions = {
-  "00": [210, 166],
-  "01": [448, 162],
-  "02": [690, 166],
-  "03": [918, 168],
-  "04": [204, 346],
-  "05": [456, 352],
-  "06": [698, 348],
-  "07": [922, 354],
-  "08": [287, 516],
-  "09": [561, 514],
-  "10": [821, 512],
-};
-const mapAssetCache = {};
 
 const categories = [
   {
@@ -14752,6 +14754,7 @@ function applyTheme() {
     button.setAttribute("aria-pressed", String(button.dataset.themeOption === currentTheme));
   });
   document.querySelector('meta[name="theme-color"]')?.setAttribute("content", currentTheme === "dark" ? "#03050a" : "#f8fafc");
+  drawKnowledgeMap();
 }
 
 function setTheme(theme) {
@@ -14868,9 +14871,10 @@ function applyLanguage() {
     t("mapStateOcean"),
     t("mapStateSnow"),
     t("mapStateLand"),
+    t("mapStateGreen"),
   ];
   mapStateItems.forEach((item, index) => {
-    const [label, ...rest] = mapStateLabels[index].split(" ");
+    const [label, ...rest] = (mapStateLabels[index] || "").split(" ");
     item.innerHTML = `<strong>${escapeHtml(label || "")}</strong> ${escapeHtml(rest.join(" "))}`;
   });
   setAllText(".map-page .intro-copy .button", [t("mapChallengeAction"), t("mapLensAction"), t("goLearning")]);
@@ -15047,6 +15051,7 @@ function goToRoute(route, replace = false) {
   });
 
   if (visibleTarget === "/pdc-pilot") initPdcPilotPage();
+  if (visibleTarget === "/map") drawKnowledgeMap();
   updateRouteMeta(visibleTarget);
   if (replace) return;
   if (window.location.protocol === "file:") {
@@ -17046,6 +17051,49 @@ function setRandomMapChallengeQuestion() {
   return nextItem;
 }
 
+function saveMapChallengeProgress() {
+  try {
+    const payload = {
+      subjects: Object.fromEntries(challengeSubjects.map((code) => [code, {
+        correct: mapChallengeState[code].correct,
+        answered: mapChallengeState[code].answered,
+      }])),
+      history: mapChallengeHistory,
+    };
+    localStorage.setItem(mapChallengeKey, JSON.stringify(payload));
+  } catch (error) {
+    // A full or locked storage must not break the map.
+  }
+}
+
+function loadMapChallengeProgress() {
+  let saved = null;
+  try {
+    saved = JSON.parse(localStorage.getItem(mapChallengeKey) || "null");
+  } catch (error) {
+    saved = null;
+  }
+  if (!saved || typeof saved !== "object") return;
+  const subjects = saved.subjects && typeof saved.subjects === "object" ? saved.subjects : {};
+  challengeSubjects.forEach((code) => {
+    const entry = subjects[code];
+    if (!entry || typeof entry !== "object") return;
+    const pool = questionBank[code]?.questions || [];
+    const validIds = new Set(pool.map((question) => question.id));
+    const answered = Array.isArray(entry.answered) ? entry.answered.filter((id) => validIds.has(id)) : [];
+    const correct = Number(entry.correct);
+    mapChallengeState[code].answered = answered;
+    // clamp, so an edited or stale record can never unlock more than was answered
+    mapChallengeState[code].correct = Number.isFinite(correct)
+      ? Math.max(0, Math.min(Math.floor(correct), answered.length))
+      : 0;
+  });
+  if (Array.isArray(saved.history)) {
+    mapChallengeHistory = saved.history.filter((item) => item && challengeSubjects.includes(item.subjectCode));
+  }
+  syncMapChallengeProgress();
+}
+
 function resetMapChallenge() {
   challengeSubjects.forEach((code) => {
     mapChallengeState[code].correct = 0;
@@ -17059,6 +17107,7 @@ function resetMapChallenge() {
   mapChallengeQuestionPool = [];
   mapChallengePoolIndex = 0;
   mapChallengeComplete = false;
+  saveMapChallengeProgress();
   setRandomMapChallengeQuestion();
   renderMapChallenge();
   drawKnowledgeMap();
@@ -17134,6 +17183,7 @@ function answerMapChallenge(optionIndex) {
   syncMapChallengeProgress(subjectCode);
   currentMapChallengeResult = { selectedIndex: optionIndex, correct: isCorrect };
   mapChallengeHistory.push({ subjectCode, questionId: question.id, selectedOption, correct: isCorrect });
+  saveMapChallengeProgress();
   renderMapChallenge();
   drawKnowledgeMap();
 }
@@ -17473,237 +17523,784 @@ function renderLearning() {
   }
 }
 
+/* ============================================================================
+   Knowledge map — painted procedurally on canvas.
+
+   Every island is generated from a fixed seed, so a subject keeps the same
+   coastline forever. Four mastery levels read as four stages of an island:
+   open water -> bare sand -> grass and trees -> an oasis with somewhere to live.
+   Stage is carried by the drawing itself, not by colour alone, so the map stays
+   readable in greyscale and for every kind of colour vision.
+   ========================================================================== */
+
+const mapSamples = 60;
+const mapShapeCache = {};
+const mapPointerState = { hover: null };
+let mapBaseCanvas = null;
+let mapBaseCtx = null;
+let mapBaseStale = true;
+let mapScale = 1;
+let mapLoopRunning = false;
+let mapListenersBound = false;
+let mapGrainPattern = null;
+let mapGrainTheme = null;
+let mapResizeObserver = null;
+
+function mapPalette() {
+  return mapPalettes[currentTheme === "dark" ? "dark" : "light"];
+}
+
+function mapReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function mapRandom(seed) {
+  let a = seed | 0;
+  return function next() {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// A closed radial signal: low frequencies with generous amplitude give the
+// rounded, hand-drawn silhouette a survey coastline would not have.
+function mapBlob(seed, radius, squash, harmonicCount) {
+  const random = mapRandom(seed);
+  const harmonics = [];
+  for (let index = 0; index < harmonicCount; index += 1) {
+    harmonics.push({
+      frequency: 2 + index + Math.floor(random() * 2),
+      amplitude: (0.19 / (index + 1)) * (0.7 + random() * 0.6),
+      phase: random() * Math.PI * 2,
+    });
+  }
+  const points = [];
+  for (let index = 0; index < mapSamples; index += 1) {
+    const theta = (index / mapSamples) * Math.PI * 2;
+    let magnitude = 1;
+    for (const harmonic of harmonics) {
+      magnitude += harmonic.amplitude * Math.sin(harmonic.frequency * theta + harmonic.phase);
+    }
+    magnitude = Math.max(0.58, magnitude);
+    points.push([
+      Math.cos(theta) * radius * magnitude,
+      Math.sin(theta) * radius * magnitude * squash,
+    ]);
+  }
+  return points;
+}
+
+function mapShape(code) {
+  if (mapShapeCache[code]) return mapShapeCache[code];
+  const placement = mapIslandPlacements[code];
+  if (!placement) return null;
+  const random = mapRandom(placement.seed ^ 0x77);
+  const squash = 0.74 + random() * 0.16;
+  const scatter = (count, maxRadius, seed) => {
+    const pick = mapRandom(seed);
+    const points = [];
+    for (let index = 0; index < count; index += 1) {
+      const theta = pick() * Math.PI * 2;
+      const radius = Math.sqrt(pick()) * maxRadius;
+      points.push([
+        Math.cos(theta) * placement.r * radius,
+        Math.sin(theta) * placement.r * radius * squash,
+      ]);
+    }
+    return points;
+  };
+  const poolRandom = mapRandom(placement.seed ^ 0x5f);
+  const poolTheta = poolRandom() * Math.PI * 2;
+  const hutRandom = mapRandom(placement.seed ^ 0x6a);
+  const hutTheta = hutRandom() * Math.PI * 2;
+
+  mapShapeCache[code] = {
+    squash,
+    coast: mapBlob(placement.seed, placement.r, squash, 3),
+    green: mapBlob(placement.seed ^ 0xa5, placement.r * 0.8, squash * 1.02, 3),
+    trees: scatter(9, 0.52, placement.seed ^ 0x1b),
+    palms: scatter(4, 0.6, placement.seed ^ 0x2c),
+    blooms: scatter(16, 0.58, placement.seed ^ 0x3d),
+    dunes: scatter(5, 0.55, placement.seed ^ 0x4e),
+    pool: [
+      Math.cos(poolTheta) * placement.r * 0.3,
+      Math.sin(poolTheta) * placement.r * 0.24,
+      placement.r * (0.2 + poolRandom() * 0.07),
+    ],
+    hut: [
+      Math.cos(hutTheta) * placement.r * 0.4,
+      Math.sin(hutTheta) * placement.r * 0.34,
+    ],
+  };
+  return mapShapeCache[code];
+}
+
+function mapCurve(context, centerX, centerY, points, scale) {
+  context.beginPath();
+  const at = (index) => {
+    const point = points[(index + points.length) % points.length];
+    return [centerX + point[0] * scale, centerY + point[1] * scale];
+  };
+  const first = at(0);
+  const second = at(1);
+  context.moveTo((first[0] + second[0]) / 2, (first[1] + second[1]) / 2);
+  for (let index = 1; index <= points.length; index += 1) {
+    const current = at(index);
+    const next = at(index + 1);
+    context.quadraticCurveTo(current[0], current[1], (current[0] + next[0]) / 2, (current[1] + next[1]) / 2);
+  }
+  context.closePath();
+}
+
+function mapHitTest(code, pointerX, pointerY) {
+  const placement = mapIslandPlacements[code];
+  const shape = mapShape(code);
+  if (!placement || !shape) return false;
+  const pad = (mapChallengeProgress[code] || "ocean") === "ocean" ? 0.95 : 1.16;
+  const points = shape.coast;
+  let inside = false;
+  for (let i = 0, j = points.length - 1; i < points.length; j = i += 1) {
+    const xi = placement.x + points[i][0] * pad;
+    const yi = placement.y + points[i][1] * pad;
+    const xj = placement.x + points[j][0] * pad;
+    const yj = placement.y + points[j][1] * pad;
+    if ((yi > pointerY) !== (yj > pointerY) && pointerX < ((xj - xi) * (pointerY - yi)) / (yj - yi) + xi) {
+      inside = !inside;
+    }
+  }
+  return inside;
+}
+
+function mapSubjectAt(event) {
+  if (!canvas) return null;
+  const rect = canvas.getBoundingClientRect();
+  if (!rect.width || !rect.height) return null;
+  const pointerX = ((event.clientX - rect.left) / rect.width) * mapDesignWidth;
+  const pointerY = ((event.clientY - rect.top) / rect.height) * mapDesignHeight;
+  const codes = categories.map((category) => category.code).filter((code) => mapIslandPlacements[code]);
+  for (let index = codes.length - 1; index >= 0; index -= 1) {
+    if (mapHitTest(codes[index], pointerX, pointerY)) return codes[index];
+  }
+  return null;
+}
+
+/* ---------- painterly primitives ---------- */
+
+function mapSoftShadow(context, blur, offsetY, color) {
+  context.shadowColor = color;
+  context.shadowBlur = blur;
+  context.shadowOffsetY = offsetY;
+}
+
+function mapClearShadow(context) {
+  context.shadowColor = "transparent";
+  context.shadowBlur = 0;
+  context.shadowOffsetY = 0;
+}
+
+function mapPuff(context, x, y, radius, dark, lit) {
+  context.fillStyle = dark;
+  context.beginPath();
+  context.arc(x, y, radius, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = lit;
+  context.beginPath();
+  context.arc(x - radius * 0.24, y - radius * 0.28, radius * 0.68, 0, Math.PI * 2);
+  context.fill();
+}
+
+function mapTree(context, x, y, size, palette) {
+  context.fillStyle = palette.sandShade;
+  context.globalAlpha = 0.28;
+  context.beginPath();
+  context.ellipse(x + size * 0.5, y + size * 0.75, size * 1.05, size * 0.34, 0, 0, Math.PI * 2);
+  context.fill();
+  context.globalAlpha = 1;
+  context.strokeStyle = palette.canopy;
+  context.lineWidth = size * 0.3;
+  context.lineCap = "round";
+  context.beginPath();
+  context.moveTo(x, y + size * 0.7);
+  context.lineTo(x, y + size * 0.05);
+  context.stroke();
+  mapPuff(context, x, y - size * 0.35, size * 0.95, palette.canopy, palette.canopyLit);
+  mapPuff(context, x - size * 0.62, y + size * 0.05, size * 0.62, palette.canopy, palette.canopyLit);
+  mapPuff(context, x + size * 0.6, y - size * 0.02, size * 0.58, palette.canopy, palette.canopyLit);
+}
+
+function mapPalm(context, x, y, size, palette) {
+  context.fillStyle = palette.sandShade;
+  context.globalAlpha = 0.26;
+  context.beginPath();
+  context.ellipse(x + size * 0.4, y + size * 0.9, size * 0.9, size * 0.3, 0, 0, Math.PI * 2);
+  context.fill();
+  context.globalAlpha = 1;
+  context.strokeStyle = palette.sandShade;
+  context.lineWidth = size * 0.22;
+  context.lineCap = "round";
+  context.beginPath();
+  context.moveTo(x, y + size * 0.85);
+  context.quadraticCurveTo(x + size * 0.22, y + size * 0.1, x + size * 0.1, y - size * 0.5);
+  context.stroke();
+  const tipX = x + size * 0.1;
+  const tipY = y - size * 0.5;
+  for (let index = 0; index < 5; index += 1) {
+    const angle = -2.6 + index * 0.85;
+    context.fillStyle = index % 2 ? palette.canopy : palette.canopyLit;
+    context.beginPath();
+    context.ellipse(
+      tipX + Math.cos(angle) * size * 0.62,
+      tipY + Math.sin(angle) * size * 0.4,
+      size * 0.66, size * 0.22, angle, 0, Math.PI * 2,
+    );
+    context.fill();
+  }
+}
+
+function mapHut(context, x, y, size, palette) {
+  context.fillStyle = palette.sandShade;
+  context.globalAlpha = 0.3;
+  context.beginPath();
+  context.ellipse(x + size * 0.3, y + size * 0.85, size * 1.1, size * 0.32, 0, 0, Math.PI * 2);
+  context.fill();
+  context.globalAlpha = 1;
+  context.fillStyle = palette.wall;
+  roundRect(context, x - size * 0.62, y - size * 0.1, size * 1.24, size * 0.92, size * 0.16);
+  context.fill();
+  context.fillStyle = palette.roof;
+  context.beginPath();
+  context.moveTo(x - size * 0.92, y - size * 0.06);
+  context.quadraticCurveTo(x, y - size * 1.15, x + size * 0.92, y - size * 0.06);
+  context.closePath();
+  context.fill();
+  context.fillStyle = palette.sandShade;
+  context.beginPath();
+  context.arc(x, y + size * 0.42, size * 0.17, 0, Math.PI * 2);
+  context.fill();
+}
+
+/* ---------- water ---------- */
+
+function mapSea(context, palette) {
+  const water = context.createLinearGradient(0, 0, mapDesignWidth * 0.35, mapDesignHeight);
+  water.addColorStop(0, palette.seaMid);
+  water.addColorStop(0.55, palette.seaDeep);
+  water.addColorStop(1, palette.seaDeep);
+  context.fillStyle = water;
+  context.fillRect(0, 0, mapDesignWidth, mapDesignHeight);
+
+  const glow = context.createRadialGradient(220, 80, 20, 220, 80, mapDesignWidth * 0.72);
+  glow.addColorStop(0, palette.sun);
+  glow.addColorStop(1, "transparent");
+  context.globalAlpha = currentTheme === "dark" ? 0.16 : 0.3;
+  context.fillStyle = glow;
+  context.fillRect(0, 0, mapDesignWidth, mapDesignHeight);
+  context.globalAlpha = 1;
+}
+
+function mapShallows(context, code, palette) {
+  const placement = mapIslandPlacements[code];
+  const shape = mapShape(code);
+  if (!placement || !shape) return;
+  const rings = [[1.52, 0.2], [1.32, 0.3], [1.15, 0.46]];
+  for (const [scale, alpha] of rings) {
+    context.globalAlpha = alpha;
+    context.fillStyle = palette.seaShallow;
+    mapCurve(context, placement.x, placement.y, shape.coast, scale);
+    context.fill();
+  }
+  context.globalAlpha = 0.6;
+  context.fillStyle = palette.seaShore;
+  mapCurve(context, placement.x, placement.y, shape.coast, 1.06);
+  context.fill();
+  context.globalAlpha = 1;
+}
+
+function mapRipples(context, palette, time) {
+  context.save();
+  context.strokeStyle = palette.foam;
+  context.globalAlpha = currentTheme === "dark" ? 0.13 : 0.2;
+  context.lineWidth = 2.2;
+  context.lineCap = "round";
+  const random = mapRandom(8181);
+  for (let index = 0; index < 30; index += 1) {
+    const x = random() * mapDesignWidth;
+    const y = random() * mapDesignHeight;
+    const length = 14 + random() * 26;
+    const phase = random() * Math.PI * 2;
+    const drift = Math.sin(time * 0.0009 + phase) * 4;
+    context.beginPath();
+    context.moveTo(x + drift, y);
+    context.quadraticCurveTo(x + length / 2 + drift, y - 3, x + length + drift, y);
+    context.stroke();
+  }
+  context.restore();
+}
+
+const mapClouds = (() => {
+  const random = mapRandom(31337);
+  const clouds = [];
+  for (let index = 0; index < 6; index += 1) {
+    clouds.push({
+      x: random() * 1100,
+      y: 44 + random() * 380,
+      size: 26 + random() * 28,
+      speed: 0.004 + random() * 0.006,
+      opacity: 0.42 + random() * 0.28,
+    });
+  }
+  return clouds;
+})();
+
+function mapDrawClouds(context, palette, time) {
+  for (const cloud of mapClouds) {
+    const x = ((cloud.x + time * cloud.speed) % (mapDesignWidth + 340)) - 170;
+    const puffs = [
+      [x, cloud.y, cloud.size * 0.7],
+      [x + cloud.size * 0.66, cloud.y - cloud.size * 0.26, cloud.size * 0.88],
+      [x + cloud.size * 1.42, cloud.y + cloud.size * 0.04, cloud.size * 0.64],
+      [x + cloud.size * 0.72, cloud.y + cloud.size * 0.38, cloud.size * 0.72],
+    ];
+    context.save();
+    context.globalAlpha = cloud.opacity * (currentTheme === "dark" ? 0.3 : 0.78);
+    for (const [puffX, puffY, puffRadius] of puffs) {
+      // a radial falloff gives the soft painted edge a flat disc never has
+      const gradient = context.createRadialGradient(puffX, puffY - puffRadius * 0.18, puffRadius * 0.15, puffX, puffY, puffRadius);
+      gradient.addColorStop(0, palette.foam);
+      gradient.addColorStop(0.62, palette.foam);
+      gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+      context.fillStyle = gradient;
+      context.beginPath();
+      context.arc(puffX, puffY, puffRadius, 0, Math.PI * 2);
+      context.fill();
+    }
+    context.restore();
+  }
+}
+
+function mapBoat(context, palette, time) {
+  // tacks back and forth across open water, so it never jumps on wrap
+  const phase = time * 0.00022;
+  const x = 880 + Math.sin(phase) * 120;
+  const y = 470 + Math.sin(time * 0.0016) * 5;
+  const facing = Math.cos(phase) >= 0 ? 1 : -1;
+  const size = 17;
+  context.save();
+  context.translate(x, y);
+  context.scale(facing, 1);
+  context.rotate(Math.sin(time * 0.0016) * 0.05);
+
+  context.strokeStyle = palette.foam;
+  context.globalAlpha = 0.4;
+  context.lineWidth = 2;
+  context.lineCap = "round";
+  for (let index = 1; index <= 2; index += 1) {
+    context.beginPath();
+    context.moveTo(-size * (0.9 + index * 0.7), size * 0.34);
+    context.quadraticCurveTo(-size * (0.6 + index * 0.7), size * 0.16, -size * (0.3 + index * 0.7), size * 0.34);
+    context.stroke();
+  }
+  context.globalAlpha = 1;
+
+  context.fillStyle = palette.foam;
+  context.beginPath();
+  context.moveTo(0, -size * 1.9);
+  context.quadraticCurveTo(size * 0.75, -size * 0.6, size * 0.86, size * 0.06);
+  context.lineTo(0, size * 0.06);
+  context.closePath();
+  context.fill();
+  context.fillStyle = palette.accent;
+  context.beginPath();
+  context.moveTo(-size * 0.1, -size * 1.6);
+  context.quadraticCurveTo(-size * 0.66, -size * 0.5, -size * 0.72, size * 0.06);
+  context.lineTo(-size * 0.1, size * 0.06);
+  context.closePath();
+  context.fill();
+  context.fillStyle = palette.roof;
+  context.beginPath();
+  context.moveTo(-size, size * 0.1);
+  context.quadraticCurveTo(0, size * 0.86, size, size * 0.1);
+  context.closePath();
+  context.fill();
+  context.restore();
+}
+
+/* ---------- one island, in four stages ---------- */
+
+function drawMapIsland(context, code, level, palette) {
+  const placement = mapIslandPlacements[code];
+  const shape = mapShape(code);
+  if (!placement || !shape) return;
+
+  if (level === "ocean") {
+    // an unsurveyed position still shows something, so the subject stays clickable
+    context.globalAlpha = 0.3;
+    context.fillStyle = palette.seaDeep;
+    mapCurve(context, placement.x, placement.y + 5, shape.coast, 0.88);
+    context.fill();
+    context.globalAlpha = 0.2;
+    context.fillStyle = palette.seaShallow;
+    mapCurve(context, placement.x, placement.y, shape.coast, 0.72);
+    context.fill();
+    context.globalAlpha = 1;
+
+    const buoyY = placement.y - 4;
+    context.fillStyle = palette.foam;
+    context.globalAlpha = 0.5;
+    context.beginPath();
+    context.ellipse(placement.x, buoyY + 11, 13, 4.5, 0, 0, Math.PI * 2);
+    context.fill();
+    context.globalAlpha = 1;
+    context.fillStyle = palette.accent;
+    context.beginPath();
+    context.moveTo(placement.x, buoyY - 13);
+    context.lineTo(placement.x + 7, buoyY + 7);
+    context.lineTo(placement.x - 7, buoyY + 7);
+    context.closePath();
+    context.fill();
+    context.fillStyle = palette.foam;
+    context.beginPath();
+    context.arc(placement.x, buoyY - 14, 3.6, 0, Math.PI * 2);
+    context.fill();
+    return;
+  }
+
+  context.save();
+  context.translate(placement.x, placement.y);
+
+  mapSoftShadow(context, 24, 12, palette.shade);
+  context.fillStyle = palette.sand;
+  mapCurve(context, 0, 0, shape.coast, 1);
+  context.fill();
+  mapClearShadow(context);
+
+  context.fillStyle = palette.sandLit;
+  mapCurve(context, -2.5, -3, shape.coast, 0.965);
+  context.fill();
+  context.fillStyle = palette.sand;
+  mapCurve(context, 1, 2, shape.coast, 0.9);
+  context.fill();
+
+  if (level === "snow") {
+    context.strokeStyle = palette.sandShade;
+    context.globalAlpha = 0.55;
+    context.lineWidth = 3.2;
+    context.lineCap = "round";
+    for (const [duneX, duneY] of shape.dunes) {
+      context.beginPath();
+      context.moveTo(duneX - 14, duneY);
+      context.quadraticCurveTo(duneX, duneY - 7, duneX + 14, duneY);
+      context.stroke();
+    }
+    context.globalAlpha = 1;
+    const [shrubX, shrubY] = shape.dunes[0];
+    context.lineWidth = 2.2;
+    for (let index = -1; index <= 1; index += 1) {
+      context.beginPath();
+      context.moveTo(shrubX, shrubY + 6);
+      context.quadraticCurveTo(shrubX + index * 5, shrubY - 2, shrubX + index * 9, shrubY - 11);
+      context.stroke();
+    }
+    context.restore();
+    return;
+  }
+
+  // grass sits inside the sand, so a beach always shows around it
+  context.fillStyle = palette.grass;
+  mapCurve(context, 0, 0, shape.green, 1);
+  context.fill();
+  context.fillStyle = palette.grassLit;
+  mapCurve(context, -3, -4, shape.green, 0.86);
+  context.fill();
+
+  if (level === "green") {
+    const [poolX, poolY, poolRadius] = shape.pool;
+    const water = context.createRadialGradient(poolX - poolRadius * 0.3, poolY - poolRadius * 0.3, poolRadius * 0.1, poolX, poolY, poolRadius);
+    water.addColorStop(0, palette.poolLit);
+    water.addColorStop(1, palette.pool);
+    context.fillStyle = water;
+    context.beginPath();
+    context.ellipse(poolX, poolY, poolRadius, poolRadius * 0.72, 0, 0, Math.PI * 2);
+    context.fill();
+    context.strokeStyle = palette.foam;
+    context.globalAlpha = 0.65;
+    context.lineWidth = 1.8;
+    context.beginPath();
+    context.ellipse(poolX - poolRadius * 0.25, poolY - poolRadius * 0.22, poolRadius * 0.4, poolRadius * 0.16, -0.4, 0.6, 2.4);
+    context.stroke();
+    context.globalAlpha = 1;
+
+    for (const [bloomX, bloomY] of shape.blooms) {
+      context.fillStyle = (bloomX + bloomY) % 2 > 0 ? palette.bloomA : palette.bloomB;
+      context.beginPath();
+      context.arc(bloomX, bloomY, 2.3, 0, Math.PI * 2);
+      context.fill();
+    }
+  }
+
+  const canopy = level === "green" ? shape.trees : shape.trees.slice(0, 5);
+  const items = canopy.map((point) => ({ point, kind: "tree" }));
+  if (level === "green") shape.palms.forEach((point) => items.push({ point, kind: "palm" }));
+  items.sort((left, right) => left.point[1] - right.point[1]);
+  for (const item of items) {
+    const size = placement.r * (item.kind === "palm" ? 0.2 : 0.155);
+    if (item.kind === "palm") mapPalm(context, item.point[0], item.point[1], size, palette);
+    else mapTree(context, item.point[0], item.point[1], size, palette);
+  }
+
+  if (level === "green") mapHut(context, shape.hut[0], shape.hut[1], placement.r * 0.15, palette);
+  context.restore();
+}
+
+function drawMapPlate(context, code, level, palette) {
+  const placement = mapIslandPlacements[code];
+  if (!placement) return;
+  const labels = mapIslandLabels[code];
+  const label = labels ? labels[currentLanguage === "zh" ? "zh" : "en"] : getSubjectTitle(code);
+  if (!label) return;
+  context.save();
+  context.font = `600 ${currentLanguage === "zh" ? 15 : 14}px "Inter", "PingFang SC", system-ui, sans-serif`;
+  const textWidth = context.measureText(label).width;
+  const plateX = placement.x;
+  const plateY = placement.y + placement.r * (level === "ocean" ? 0.8 : 0.98) + 18;
+  const plateWidth = textWidth + 22;
+  const plateHeight = 26;
+
+  mapSoftShadow(context, 10, 4, palette.shade);
+  context.fillStyle = palette.plate;
+  roundRect(context, plateX - plateWidth / 2, plateY - plateHeight / 2, plateWidth, plateHeight, 13);
+  context.fill();
+  mapClearShadow(context);
+  context.strokeStyle = palette.plateEdge;
+  context.lineWidth = 1;
+  context.stroke();
+
+  context.fillStyle = level === "ocean" ? palette.inkSoft : palette.ink;
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(label, plateX, plateY + 1);
+  context.restore();
+}
+
+function drawFounderMapLabels(context, palette) {
+  context.save();
+  context.font = '600 10px "Inter", system-ui, sans-serif';
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  for (const category of categories) {
+    const placement = mapIslandPlacements[category.code];
+    if (!placement) continue;
+    context.fillStyle = palette.plate;
+    roundRect(context, placement.x - 17, placement.y - 11, 34, 22, 7);
+    context.fill();
+    context.strokeStyle = palette.plateEdge;
+    context.lineWidth = 1;
+    context.stroke();
+    context.fillStyle = palette.ink;
+    context.fillText(category.code, placement.x, placement.y + 1);
+  }
+  context.restore();
+}
+
+/* ---------- canvas plumbing ---------- */
+
+function mapGrain(palette) {
+  const themeKeyForGrain = currentTheme === "dark" ? "dark" : "light";
+  if (mapGrainPattern && mapGrainTheme === themeKeyForGrain) return mapGrainPattern;
+  const tile = document.createElement("canvas");
+  tile.width = 128;
+  tile.height = 128;
+  const tileCtx = tile.getContext("2d");
+  const image = tileCtx.createImageData(128, 128);
+  const random = mapRandom(424242);
+  for (let index = 0; index < image.data.length; index += 4) {
+    image.data[index] = palette.grainTone;
+    image.data[index + 1] = palette.grainTone;
+    image.data[index + 2] = palette.grainTone;
+    image.data[index + 3] = random() * 255 * palette.grain;
+  }
+  tileCtx.putImageData(image, 0, 0);
+  mapGrainPattern = ctx.createPattern(tile, "repeat");
+  mapGrainTheme = themeKeyForGrain;
+  return mapGrainPattern;
+}
+
+function fitKnowledgeCanvas() {
+  if (!canvas || !ctx) return false;
+  const cssWidth = canvas.clientWidth;
+  if (!cssWidth) return false; // the map page is hidden; nothing to size yet
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  const nextWidth = Math.round(cssWidth * ratio);
+  const nextHeight = Math.round(cssWidth * (mapDesignHeight / mapDesignWidth) * ratio);
+  if (canvas.width !== nextWidth || canvas.height !== nextHeight) {
+    canvas.width = nextWidth;
+    canvas.height = nextHeight;
+    if (!mapBaseCanvas) {
+      mapBaseCanvas = document.createElement("canvas");
+      mapBaseCtx = mapBaseCanvas.getContext("2d");
+    }
+    mapBaseCanvas.width = nextWidth;
+    mapBaseCanvas.height = nextHeight;
+    mapBaseStale = true;
+  }
+  mapScale = canvas.width / mapDesignWidth;
+  return true;
+}
+
+function renderKnowledgeMapBase() {
+  const palette = mapPalette();
+  const context = mapBaseCtx;
+  context.setTransform(1, 0, 0, 1, 0, 0);
+  context.clearRect(0, 0, mapBaseCanvas.width, mapBaseCanvas.height);
+  context.scale(mapScale, mapScale);
+  context.imageSmoothingQuality = "high";
+
+  mapSea(context, palette);
+  const placed = categories.map((category) => category.code).filter((code) => mapIslandPlacements[code]);
+  placed.forEach((code) => mapShallows(context, code, palette));
+
+  const painted = placed.slice().sort((left, right) => mapIslandPlacements[left].y - mapIslandPlacements[right].y);
+  painted.forEach((code) => drawMapIsland(context, code, mapChallengeProgress[code] || "ocean", palette));
+  painted.forEach((code) => drawMapPlate(context, code, mapChallengeProgress[code] || "ocean", palette));
+
+  if (document.body.classList.contains("founder-mode")) drawFounderMapLabels(context, palette);
+
+  const vignette = context.createRadialGradient(
+    mapDesignWidth / 2, mapDesignHeight / 2, mapDesignHeight * 0.34,
+    mapDesignWidth / 2, mapDesignHeight / 2, mapDesignHeight * 0.95,
+  );
+  vignette.addColorStop(0, "transparent");
+  vignette.addColorStop(1, palette.vignette);
+  context.fillStyle = vignette;
+  context.fillRect(0, 0, mapDesignWidth, mapDesignHeight);
+  mapBaseStale = false;
+}
+
+function knowledgeMapVisible() {
+  return Boolean(canvas && canvas.offsetParent !== null && canvas.clientWidth);
+}
+
+function paintKnowledgeMap(time) {
+  const palette = mapPalette();
+  if (mapBaseStale) renderKnowledgeMapBase();
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(mapBaseCanvas, 0, 0);
+
+  ctx.save();
+  ctx.scale(mapScale, mapScale);
+  mapRipples(ctx, palette, time);
+  mapBoat(ctx, palette, time);
+  mapDrawClouds(ctx, palette, time);
+
+  const focus = mapPointerState.hover || activeMapChallengeSubject;
+  const placement = focus ? mapIslandPlacements[focus] : null;
+  if (placement) {
+    const shape = mapShape(focus);
+    const reduced = mapReducedMotion();
+    ctx.save();
+    ctx.strokeStyle = palette.accent;
+    ctx.globalAlpha = mapPointerState.hover === focus ? 0.95 : 0.55;
+    ctx.lineWidth = 3;
+    ctx.lineCap = "round";
+    ctx.setLineDash([12, 10]);
+    ctx.lineDashOffset = reduced ? 0 : -time * 0.02;
+    const beat = reduced ? 1 : 1 + Math.sin(time * 0.004) * 0.012;
+    mapCurve(ctx, placement.x, placement.y, shape.coast, 1.3 * beat);
+    ctx.stroke();
+    ctx.restore();
+  }
+  ctx.restore();
+
+  const grain = mapGrain(palette);
+  if (grain) {
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = grain;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
+  }
+}
+
+function knowledgeMapFrame(time) {
+  if (!knowledgeMapVisible()) {
+    mapLoopRunning = false; // stop burning frames while the map page is hidden
+    return;
+  }
+  paintKnowledgeMap(time);
+  if (mapReducedMotion()) {
+    mapLoopRunning = false;
+    return;
+  }
+  requestAnimationFrame(knowledgeMapFrame);
+}
+
+// hover only affects the overlay, so it must never invalidate the cached base layer
+function requestKnowledgeMapFrame() {
+  if (mapLoopRunning || !knowledgeMapVisible()) return;
+  mapLoopRunning = true;
+  requestAnimationFrame(knowledgeMapFrame);
+}
+
+function bindKnowledgeMapPointer() {
+  if (mapListenersBound || !canvas) return;
+  mapListenersBound = true;
+
+  canvas.addEventListener("mousemove", (event) => {
+    const code = mapSubjectAt(event);
+    canvas.style.cursor = code ? "pointer" : "";
+    if (code === mapPointerState.hover) return;
+    mapPointerState.hover = code;
+    canvas.title = code ? getSubjectTitle(code) : "";
+    requestKnowledgeMapFrame();
+  });
+
+  canvas.addEventListener("mouseleave", () => {
+    mapPointerState.hover = null;
+    canvas.style.cursor = "";
+    requestKnowledgeMapFrame();
+  });
+
+  // clicking an island opens its subject, so the map is a way in, not a picture
+  canvas.addEventListener("click", (event) => {
+    const code = mapSubjectAt(event);
+    if (!code) return;
+    activeMapChallengeSubject = code;
+    goToRoute(`/categories/${code}`);
+  });
+
+  if (typeof ResizeObserver === "function") {
+    mapResizeObserver = new ResizeObserver(() => {
+      if (fitKnowledgeCanvas()) {
+        mapBaseStale = true;
+        drawKnowledgeMap();
+      }
+    });
+    mapResizeObserver.observe(canvas);
+  }
+  // Belt and braces: some environments deliver ResizeObserver callbacks
+  // unreliably, and a window resize is the case users actually hit.
+  window.addEventListener("resize", () => {
+    if (fitKnowledgeCanvas()) {
+      mapBaseStale = true;
+      drawKnowledgeMap();
+    }
+  });
+}
+
 function drawKnowledgeMap() {
   if (!ctx || !canvas) return;
   syncMapChallengeProgress();
-  const width = canvas.width;
-  const height = canvas.height;
-  ctx.imageSmoothingEnabled = true;
-  ctx.imageSmoothingQuality = "high";
-  ctx.clearRect(0, 0, width, height);
-  drawMapFallback(width, height);
-  drawMapLayer("00_base_ocean_background.png", width, height, mapBaseAssetPath);
-  drawMapAtmosphere(width, height);
-  drawMapRouteOverlay(width, height);
-
-  const founderMode = document.body.classList.contains("founder-mode");
-
-  categories.forEach((category) => {
-    const level = mapChallengeProgress[category.code] || "ocean";
-    drawMapComponent(category.code, level, width, height);
-  });
-
-  drawActiveMapMarker(width, height);
-  if (founderMode) drawFounderMapLabels(width, height);
-}
-
-function loadMapAsset(fileName, assetPath = mapComponentAssetPath) {
-  const cacheKey = `${assetPath}${fileName}`;
-  if (!mapAssetCache[cacheKey]) {
-    const image = new Image();
-    image.addEventListener("load", drawKnowledgeMap);
-    image.src = assetPath + fileName;
-    mapAssetCache[cacheKey] = image;
-  }
-  return mapAssetCache[cacheKey];
-}
-
-function drawMapLayer(fileName, width, height, assetPath = mapComponentAssetPath) {
-  const image = loadMapAsset(fileName, assetPath);
-  if (!image.complete || !image.naturalWidth) return false;
-  ctx.drawImage(image, 0, 0, width, height);
-  return true;
-}
-
-function drawMapComponent(categoryCode, level, width, height) {
-  const placement = mapComponentPlacements[categoryCode];
-  if (!placement) return false;
-  const isUnknown = level === "ocean";
-  if (isUnknown) return true;
-  const componentLevel = level === "green" ? "green" : level;
-  const visual = mapStateVisuals[level] || mapStateVisuals.land;
-  const files = mapComponentSets[componentLevel] || mapComponentSets.land;
-  const fileName = files[placement.variant % files.length];
-  const image = loadMapAsset(fileName);
-  if (!image.complete || !image.naturalWidth) return false;
-
-  const scaleX = width / 1100;
-  const scaleY = height / 619;
-  const targetWidth = placement.width * scaleX;
-  const targetHeight = image.height * (targetWidth / image.width);
-  const x = placement.x * scaleX;
-  const y = placement.y * scaleY;
-
-  drawMapIslandShadow(x, y, targetWidth, targetHeight, visual);
-  drawMapIslandRim(x, y, targetWidth, targetHeight, visual);
-
-  ctx.save();
-  ctx.globalAlpha = visual.alpha;
-  ctx.filter = visual.filter;
-  ctx.drawImage(image, x, y, targetWidth, targetHeight);
-  ctx.restore();
-
-  drawMapIslandSheen(x, y, targetWidth, targetHeight, visual);
-  return true;
-}
-
-function drawMapAtmosphere(width, height) {
-  ctx.save();
-  const wash = ctx.createLinearGradient(0, 0, width, height);
-  wash.addColorStop(0, "rgba(255, 255, 255, 0.16)");
-  wash.addColorStop(0.48, "rgba(255, 255, 255, 0)");
-  wash.addColorStop(1, "rgba(13, 93, 122, 0.1)");
-  ctx.fillStyle = wash;
-  roundRect(ctx, 0, 0, width, height, 28);
-  ctx.fill();
-  ctx.restore();
-}
-
-function drawMapIslandShadow(x, y, width, height, visual) {
-  const centerX = x + width / 2;
-  const centerY = y + height * 0.78;
-  const radiusX = width * 0.48;
-  const radiusY = Math.max(8, height * 0.13);
-  const shadow = ctx.createRadialGradient(centerX, centerY, 1, centerX, centerY, radiusX);
-  shadow.addColorStop(0, visual.shadow);
-  shadow.addColorStop(0.64, "rgba(20, 82, 102, 0.08)");
-  shadow.addColorStop(1, "rgba(20, 82, 102, 0)");
-  ctx.save();
-  ctx.fillStyle = shadow;
-  ctx.beginPath();
-  ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-function drawMapIslandRim(x, y, width, height, visual) {
-  const centerX = x + width / 2;
-  const centerY = y + height * 0.78;
-  const radiusX = width * 0.48;
-  const radiusY = Math.max(8, height * 0.13);
-  ctx.save();
-  ctx.strokeStyle = visual.rim;
-  ctx.lineWidth = Math.max(1.1, width / 155);
-  ctx.beginPath();
-  ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
-  ctx.stroke();
-  ctx.globalAlpha = 0.46;
-  ctx.lineWidth = Math.max(0.8, width / 260);
-  ctx.beginPath();
-  ctx.ellipse(centerX, centerY + radiusY * 0.1, radiusX * 1.12, radiusY * 1.45, 0, 0, Math.PI * 2);
-  ctx.stroke();
-  ctx.restore();
-}
-
-function drawMapIslandSheen(x, y, width, height, visual) {
-  const centerX = x + width / 2;
-  const centerY = y + height * 0.34;
-  const sheen = ctx.createRadialGradient(centerX, centerY, width * 0.04, centerX, centerY, width * 0.45);
-  sheen.addColorStop(0, visual.veil);
-  sheen.addColorStop(1, "rgba(255, 255, 255, 0)");
-  ctx.save();
-  ctx.globalCompositeOperation = "screen";
-  ctx.fillStyle = sheen;
-  ctx.beginPath();
-  ctx.ellipse(centerX, centerY, width * 0.42, height * 0.33, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-function drawMapRouteOverlay(width, height) {
-  const routes = [
-    ["00", "01", "02", "03"],
-    ["04", "05", "06", "07"],
-    ["08", "09", "10"],
-    ["00", "04", "08"],
-    ["01", "05", "09"],
-    ["02", "06", "10"],
-    ["03", "07"],
-  ];
-  const scaleX = width / 1100;
-  const scaleY = height / 619;
-  ctx.save();
-  ctx.strokeStyle = "rgba(255, 250, 224, 0.28)";
-  ctx.lineWidth = Math.max(1.1, width / 950);
-  ctx.shadowColor = "rgba(23, 83, 106, 0.1)";
-  ctx.shadowBlur = 3 * scaleX;
-  ctx.setLineDash([7 * scaleX, 15 * scaleX]);
-  ctx.lineCap = "round";
-  routes.forEach((route) => {
-    const points = route
-      .map((code) => mapFounderLabelPositions[code])
-      .filter(Boolean)
-      .map(([x, y]) => [x * scaleX, y * scaleY]);
-    if (points.length < 2) return;
-    ctx.beginPath();
-    ctx.moveTo(points[0][0], points[0][1]);
-    for (let index = 1; index < points.length; index += 1) {
-      const previous = points[index - 1];
-      const current = points[index];
-      const controlX = (previous[0] + current[0]) / 2;
-      const controlY = (previous[1] + current[1]) / 2 - 18 * scaleY;
-      ctx.quadraticCurveTo(controlX, controlY, current[0], current[1]);
-    }
-    ctx.stroke();
-  });
-  ctx.restore();
-}
-
-function drawMapFallback(width, height) {
-  const ocean = ctx.createLinearGradient(0, 0, width, height);
-  ocean.addColorStop(0, "#d9f2f2");
-  ocean.addColorStop(0.55, "#acd8df");
-  ocean.addColorStop(1, "#f9edcf");
-  ctx.fillStyle = ocean;
-  roundRect(ctx, 0, 0, width, height, 28);
-  ctx.fill();
-}
-
-function drawActiveMapMarker(width, height) {
-  const position = mapFounderLabelPositions[activeMapChallengeSubject];
-  if (!position) return;
-  const [sourceX, sourceY] = position;
-  const x = sourceX * (width / 1100);
-  const y = sourceY * (height / 619);
-  const scale = width / 1100;
-  const glow = ctx.createRadialGradient(x, y, 6 * scale, x, y, 46 * scale);
-  glow.addColorStop(0, "rgba(255, 246, 170, 0.78)");
-  glow.addColorStop(0.58, "rgba(255, 220, 112, 0.28)");
-  glow.addColorStop(1, "rgba(255, 245, 166, 0)");
-  ctx.save();
-  ctx.fillStyle = glow;
-  ctx.beginPath();
-  ctx.arc(x, y, 46 * scale, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.strokeStyle = "rgba(255, 255, 245, 0.78)";
-  ctx.lineWidth = Math.max(1.2, 2.2 * scale);
-  ctx.beginPath();
-  ctx.arc(x, y, 12 * scale, 0, Math.PI * 2);
-  ctx.stroke();
-  ctx.fillStyle = "rgba(215, 152, 44, 0.92)";
-  ctx.beginPath();
-  ctx.arc(x, y, 4.2 * scale, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-}
-
-function drawFounderMapLabels(width, height) {
-  ctx.save();
-  ctx.font = "800 16px Inter, sans-serif";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  categories.forEach((category) => {
-    const position = mapFounderLabelPositions[category.code];
-    if (!position) return;
-    const x = position[0] * (width / 1100);
-    const y = position[1] * (height / 619);
-    ctx.fillStyle = "rgba(255, 250, 240, 0.84)";
-    roundRect(ctx, x - 18, y - 13, 36, 26, 8);
-    ctx.fill();
-    ctx.fillStyle = "#173026";
-    ctx.fillText(category.code, x, y + 1);
-  });
-  ctx.restore();
+  bindKnowledgeMapPointer();
+  mapGrainPattern = mapGrainTheme === (currentTheme === "dark" ? "dark" : "light") ? mapGrainPattern : null;
+  if (!fitKnowledgeCanvas()) return;
+  mapBaseStale = true;
+  if (mapLoopRunning) return;
+  mapLoopRunning = true;
+  requestAnimationFrame(knowledgeMapFrame);
 }
 
 function roundRect(context, x, y, width, height, radius) {
@@ -18055,6 +18652,7 @@ renderLearning();
 renderChallenge();
 renderMapChallenge();
 renderReflectionPanel();
+loadMapChallengeProgress();
 drawKnowledgeMap();
 applyTheme();
 applyLanguage();

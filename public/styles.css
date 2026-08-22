@@ -3421,20 +3421,20 @@ canvas {
 }
 
 .map-legend .ocean {
-  background: var(--ocean);
+  background: #2a9db8;
 }
 
 .map-legend .snow {
-  background: #e8f6f7;
+  background: #ebcb8e;
   border: 1px solid rgba(24, 82, 101, 0.22);
 }
 
 .map-legend .pilot {
-  background: var(--gold);
+  background: #63a755;
 }
 
 .map-legend .ready {
-  background: #7fc76f;
+  background: #58d6c8;
 }
 
 .map-challenge {
@@ -5265,7 +5265,7 @@ dd,
 }
 
 .map-legend .ready {
-  background: #22c55e;
+  background: #58d6c8;
 }
 
 .contact-form label,
@@ -7855,18 +7855,21 @@ body[data-theme="dark"] .map-legend i {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.035);
 }
 
-body[data-theme="dark"] .map-legend .ocean,
+body[data-theme="dark"] .map-legend .ocean {
+  background: #14506a;
+}
+
 body[data-theme="dark"] .map-legend .pilot {
-  background: #d8b15f;
+  background: #4a8449;
 }
 
 body[data-theme="dark"] .map-legend .snow {
-  background: #e5fbff;
-  border-color: rgba(229, 251, 255, 0.5);
+  background: #b08f5e;
+  border-color: rgba(229, 251, 255, 0.35);
 }
 
 body[data-theme="dark"] .map-legend .ready {
-  background: #22c55e;
+  background: #45c4b8;
 }
 
 body[data-theme="dark"] .quick-mirror-card.is-question,
