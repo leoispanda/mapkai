@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.176";
+const appVersion = "0.1.177";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -10442,10 +10442,27 @@ const zhQuestionOptions = {
   ]
 };
 
-function getOptionOrder(index) {
-  if (index % 3 === 0) return [0, 1, 2];
-  if (index % 3 === 1) return [1, 0, 2];
-  return [2, 1, 0];
+// Shuffle seeded by the question id. It must stay deterministic — the same
+// question has to look the same on every visit — but the old three-pattern
+// cycle put the answer at option 1, 2, 3, 1, 2, 3 ... for every visitor, so a
+// learner could score full marks without reading a single question.
+function getOptionOrder(seed, length = 3) {
+  const key = String(seed);
+  let hash = 0x811c9dc5;
+  for (let index = 0; index < key.length; index += 1) {
+    hash ^= key.charCodeAt(index);
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  const order = Array.from({ length }, (_, index) => index);
+  for (let index = order.length - 1; index > 0; index -= 1) {
+    hash = (Math.imul(hash, 1664525) + 1013904223) >>> 0;
+    // take the high bits: an LCG's low bits cycle far too regularly to shuffle with
+    const swap = Math.floor((hash / 4294967296) * (index + 1));
+    const held = order[index];
+    order[index] = order[swap];
+    order[swap] = held;
+  }
+  return order;
 }
 
 function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
@@ -10456,9 +10473,10 @@ function makeQuestion(code, prompt, difficulty, unlocksToward, index) {
   const zhAnswer = zhOptionSet[0];
   const explanation = subjectQuestionSeeds[code].explanations?.[index] || answer + ". This answer turns the everyday scene into a practical knowledge pattern.";
   const zhExplanation = zhSubjectQuestionSeeds[code].explanations?.[index] || zhAnswer + "。这个答案把日常场景变成了一个可以理解的知识模式。";
-  const optionOrder = getOptionOrder(index);
+  const id = code + "-q" + (index + 1);
+  const optionOrder = getOptionOrder(id, optionSet.length);
   return {
-    id: code + "-q" + (index + 1),
+    id,
     subject: code,
     difficulty,
     unlocksToward,
