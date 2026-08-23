@@ -35,9 +35,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 16% 0%, rgba(56, 189, 248, 0.14), transparent 30%),
-    radial-gradient(circle at 86% 8%, rgba(99, 102, 241, 0.12), transparent 28%),
-    linear-gradient(180deg, #f8fafc 0%, #ffffff 46%, #f6f8fb 100%);
+    radial-gradient(circle at 16% 0%, rgba(37, 99, 235, 0.07), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(214, 158, 74, 0.07), transparent 30%),
+    linear-gradient(180deg, #fbf8f1 0%, #fffdf8 46%, #faf5ec 100%);
   background-size: 42px 42px;
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -246,9 +246,9 @@ body:not(.founder-mode) .founder-public-entry {
   --pdc-border: rgba(15, 23, 42, 0.08);
   --pdc-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
   background:
-    radial-gradient(circle at 18% 2%, rgba(56, 189, 248, 0.14), transparent 30%),
-    radial-gradient(circle at 88% 8%, rgba(99, 102, 241, 0.12), transparent 28%),
-    linear-gradient(180deg, #f8fbff 0%, #ffffff 52%, #f6f8fb 100%);
+    radial-gradient(circle at 18% 2%, rgba(37, 99, 235, 0.06), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(214, 158, 74, 0.06), transparent 30%),
+    linear-gradient(180deg, #fbf8f1 0%, #fffdf8 52%, #faf5ec 100%);
   color: var(--pdc-ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -357,7 +357,7 @@ body:not(.founder-mode) .founder-public-entry {
   place-items: center;
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 999px;
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: var(--pdc-blue-dark);
   font-size: 0.78rem;
   font-weight: 850;
@@ -452,9 +452,9 @@ body:not(.founder-mode) .founder-public-entry {
   display: none;
   align-items: center;
   background:
-    radial-gradient(circle at 18% 2%, rgba(56, 189, 248, 0.14), transparent 30%),
-    radial-gradient(circle at 88% 8%, rgba(99, 102, 241, 0.12), transparent 28%),
-    linear-gradient(180deg, #f8fbff 0%, #ffffff 52%, #f6f8fb 100%);
+    radial-gradient(circle at 18% 2%, rgba(37, 99, 235, 0.06), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(214, 158, 74, 0.06), transparent 30%),
+    linear-gradient(180deg, #fbf8f1 0%, #fffdf8 52%, #faf5ec 100%);
   color: var(--pdc-ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -2023,7 +2023,7 @@ body:not(.founder-mode) .founder-public-entry {
 .pdc-page .pdc-relation-label,
 .pdc-page .pdc-stopped-label {
   border-color: rgba(37, 99, 235, 0.14);
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: var(--pdc-blue-dark);
 }
 
@@ -4371,7 +4371,7 @@ canvas {
 }
 
 .category-subject-story-layout .public-field-card:hover {
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
 }
 
 .category-subject-story-layout .public-field-card small {
@@ -4629,7 +4629,7 @@ canvas {
 .submodule-story-button.is-intro {
   min-height: 64px;
   border-color: rgba(37, 99, 235, 0.2);
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
 }
 
 .submodule-story-button.is-field {
@@ -4939,9 +4939,9 @@ body,
 
 .page {
   background:
-    radial-gradient(circle at 12% 0%, rgba(56, 189, 248, 0.12), transparent 30%),
-    radial-gradient(circle at 92% 6%, rgba(99, 102, 241, 0.1), transparent 28%),
-    linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.92) 46%, rgba(246, 248, 251, 0.98));
+    radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.06), transparent 32%),
+    radial-gradient(circle at 92% 6%, rgba(214, 158, 74, 0.06), transparent 30%),
+    linear-gradient(180deg, rgba(251, 248, 241, 0.96), rgba(255, 253, 248, 0.92) 46%, rgba(250, 245, 236, 0.98));
 }
 
 .topbar {
@@ -4988,7 +4988,7 @@ body,
 .founder-toggle[aria-pressed="true"],
 .founder-mode .founder-indicator {
   border-color: rgba(37, 99, 235, 0.18);
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: var(--blue-dark);
 }
 
@@ -5205,7 +5205,7 @@ dd,
 .detailed-field-button.is-active,
 .submodule-story-button:hover {
   border-color: rgba(37, 99, 235, 0.28);
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: var(--ink);
   box-shadow: 0 20px 45px rgba(37, 99, 235, 0.1);
 }
@@ -5409,7 +5409,7 @@ dd,
 
 .pdc-page .pdc-audit-judgment {
   border-color: rgba(37, 99, 235, 0.16);
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
 }
 
 .pdc-page .pdc-founder-preview-tools,
@@ -5642,7 +5642,7 @@ dd,
   border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 999px;
   padding: 0 0.65rem;
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: #1d4ed8;
   font-size: 0.78rem;
   font-weight: 760;
@@ -7000,7 +7000,7 @@ dd,
   padding: 0.35rem 0.55rem;
   border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 999px;
-  background: rgba(239, 246, 255, 0.82);
+  background: rgba(255, 253, 246, 0.96);
   color: #1d4ed8;
   font-size: 0.78rem;
   font-weight: 700;
@@ -8244,7 +8244,7 @@ body[data-theme="dark"] .pdc-page .pdc-round-summary {
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 18px;
   padding: clamp(28px, 5vw, 64px);
-  background: radial-gradient(circle at 100% 0%, rgba(56, 189, 248, 0.12), transparent 32%), rgba(255, 255, 255, 0.84);
+  background: radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.06), transparent 34%), rgba(255, 252, 245, 0.9);
   box-shadow: 0 24px 64px rgba(15, 23, 42, 0.07);
 }
 
@@ -8552,7 +8552,7 @@ body[data-theme="dark"] .home-finance-timeline span {
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: clamp(30px, 6vw, 72px);
-  background: radial-gradient(circle at 94% 4%, rgba(56, 189, 248, 0.14), transparent 30%), rgba(255, 255, 255, 0.88);
+  background: radial-gradient(circle at 94% 4%, rgba(37, 99, 235, 0.06), transparent 32%), rgba(255, 252, 245, 0.92);
   box-shadow: var(--shadow);
 }
 
