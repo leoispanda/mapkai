@@ -260,7 +260,7 @@ function pathFor(lang, suffix = "") {
   return `${copy[lang].prefix}/learning/corporate-finance${suffix}` || "/learning/corporate-finance";
 }
 
-function layout({ lang, title, description, canonicalPath, body, structuredData, robots = "index, follow" }) {
+function layout({ lang, title, description, canonicalPath, body, structuredData, robots = "noindex, follow" }) {
   const c = copy[lang];
   const alternateLang = lang === "en" ? "zh" : "en";
   const alternatePath = canonicalPath.replace(/^\/zh/, "");
@@ -320,7 +320,7 @@ function courseSchema(lang, canonicalPath) {
   const c = copy[lang];
   return {
     "@context": "https://schema.org", "@graph": [
-      { "@type": "Course", name: c.courseTitle, description: c.description, url: `${site}${canonicalPath}`, provider: { "@type": "Organization", name: "MapKAI", sameAs: site }, isAccessibleForFree: true, inLanguage: c.locale, timeRequired: "P5D", educationalLevel: "Beginner" },
+      { "@type": "Course", name: c.courseTitle, description: c.description, url: `${site}${canonicalPath}`, provider: { "@type": "Organization", name: "MapKAI", sameAs: site }, isAccessibleForFree: false, inLanguage: c.locale, timeRequired: "P5D", educationalLevel: "Beginner" },
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: c.nav[0], item: `${site}/` }, { "@type": "ListItem", position: 2, name: c.nav[3], item: `${site}${pathFor(lang)}` }] },
     ],
   };
@@ -393,7 +393,7 @@ function renderDay(lang, dayIndex) {
   const nextHref = n === 5 ? pathFor(lang, "/completed") : pathFor(lang, `/day-${n + 1}`);
   const prevHref = n === 1 ? "" : pathFor(lang, `/day-${n - 1}`);
   const breadcrumb = { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: c.nav[0], item: `${site}/` }, { "@type": "ListItem", position: 2, name: c.courseTitle, item: `${site}${pathFor(lang)}` }, { "@type": "ListItem", position: 3, name: title, item: `${site}${canonicalPath}` }] };
-  const schema = { "@context": "https://schema.org", "@graph": [{ "@type": "CourseInstance", name: `${c.courseTitle} - Day ${n}: ${title}`, courseMode: "online", isAccessibleForFree: true, inLanguage: c.locale, url: `${site}${canonicalPath}` }, breadcrumb] };
+  const schema = { "@context": "https://schema.org", "@graph": [{ "@type": "CourseInstance", name: `${c.courseTitle} - Day ${n}: ${title}`, courseMode: "online", isAccessibleForFree: false, inLanguage: c.locale, url: `${site}${canonicalPath}` }, breadcrumb] };
   const body = `<main class="finance-day-main" data-course-day="${n}">
     <nav class="finance-course-nav" aria-label="Course navigation"><a href="${pathFor(lang)}">${esc(c.courseTitle)}</a><span>${esc(c.dayOf(n))}</span><div class="finance-progress-track" aria-label="${n * 20}%"><i style="width:${n * 20}%"></i></div><div class="finance-course-nav-actions"><a href="${pathFor(lang)}">${esc(c.overview)}</a>${prevHref ? `<a href="${prevHref}">${esc(c.previous)}</a>` : ""}<a href="${nextHref}">${esc(n === 5 ? c.completeCourse : c.next)}</a></div></nav>
     <header class="finance-day-hero"><p class="eyebrow">${esc(c.dayOf(n))}</p><h1>${esc(title)}</h1><p class="finance-day-question">${esc(d.question[lang])}</p><p>${esc(c.estimated)}</p><div><strong>${esc(c.today)}</strong><ul>${d.outcomes[lang].map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div><a class="button primary" href="#lesson-content" data-start-lesson>${esc(c.startLesson)}</a></header>

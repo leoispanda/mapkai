@@ -1,9 +1,21 @@
+import { checkRateLimit, getClientIp } from "./api/_shared/rate-limit.js";
+
 const coursePrefix = "/learning/corporate-finance";
 const protectedCoursePrefixes = [coursePrefix, "/zh/learning/corporate-finance", "/learning/emba"];
 const unlockPath = `${coursePrefix}/unlock`;
 const cookieName = "mapkai_course_session";
 const legacyCookieName = "mapkai_course_access";
 const encoder = new TextEncoder();
+// A signed cookie with no expiry stays valid for as long as the password does.
+const sessionSeconds = 60 * 60 * 24 * 30;
+// Generous for a person typing a password they were given; hostile to a script.
+const unlockAttemptLimit = 10;
+const unlockWindowSeconds = 60 * 15;
+const courseNames = {
+  "/learning/emba": "EMBA learning",
+  [coursePrefix]: "Corporate Finance Essentials",
+  "/zh/learning/corporate-finance": "Corporate Finance Essentials",
+};
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
@@ -18,7 +30,7 @@ export async function onRequest(context) {
   }
 
   if (url.pathname === unlockPath) {
-    return handleUnlock(context.request, url, password);
+    return handleUnlock(context, url, password);
   }
 
   if (await hasValidAccessCookie(context.request, password)) return context.next();
@@ -31,13 +43,27 @@ function isProtectedCoursePath(pathname) {
   );
 }
 
-async function handleUnlock(request, url, password) {
+async function handleUnlock(context, url, password) {
+  const request = context.request;
   const returnTo = safeReturnTo(url.searchParams.get("returnTo"));
   if (request.method !== "POST") return passwordPage(url);
 
+  // One shared password with unlimited guesses is a password in name only.
+  const attempts = await checkRateLimit(context.env.MAPKAI_DB, `course-unlock:${getClientIp(request)}`, {
+    limit: unlockAttemptLimit,
+    windowSeconds: unlockWindowSeconds,
+  });
+  if (!attempts.ok) {
+    return passwordPage(url, false, {
+      status: 429,
+      retryAfter: attempts.retryAfter,
+      notice: "Too many attempts. Please wait a few minutes and try again.",
+    });
+  }
+
   const form = await request.formData().catch(() => null);
   const submittedPassword = String(form?.get("password") || "");
-  if (!safeEqual(submittedPassword, password)) return passwordPage(url, true);
+  if (!(await secretsMatch(submittedPassword, password))) return passwordPage(url, true);
 
   return new Response(null, {
     status: 303,
@@ -49,10 +75,14 @@ async function handleUnlock(request, url, password) {
   });
 }
 
-function passwordPage(url, isInvalid = false) {
+function passwordPage(url, isInvalid = false, options = {}) {
   const returnTo = safeReturnTo(url.searchParams.get("returnTo") || `${url.pathname}${url.search}`);
   const action = `${unlockPath}?returnTo=${encodeURIComponent(returnTo)}`;
-  const error = isInvalid ? `<p class="error">That password is not correct. Please try again.</p>` : "";
+  const message = options.notice
+    || (isInvalid ? "That password is not correct. Please try again." : "");
+  const error = message ? `<p class="error">${escapeHtml(message)}</p>` : "";
+  // The EMBA area shares this gate, so the heading follows the path.
+  const courseName = courseNames[matchedCoursePrefix(returnTo)] || "Private course";
   return new Response(`<!doctype html>
 <html lang="en">
   <head>
@@ -77,7 +107,7 @@ function passwordPage(url, isInvalid = false) {
   <body>
     <main>
       <p class="eyebrow">Private course</p>
-      <h1>Corporate Finance Essentials</h1>
+      <h1>${escapeHtml(courseName)}</h1>
       <p>This course is password protected. Enter the course password to continue.</p>
       ${error}
       <form method="post" action="${action}">
@@ -90,10 +120,11 @@ function passwordPage(url, isInvalid = false) {
     </main>
   </body>
 </html>`, {
-    status: isInvalid ? 401 : 200,
+    status: options.status || (isInvalid ? 401 : 200),
     headers: {
       "Content-Type": "text/html; charset=utf-8",
       "Cache-Control": "no-store",
+      ...(options.retryAfter ? { "Retry-After": String(options.retryAfter) } : {}),
       "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'",
       "Referrer-Policy": "no-referrer",
       "X-Frame-Options": "DENY",
@@ -106,7 +137,7 @@ async function createAccessCookie(request, password) {
   const issuedAt = Math.floor(Date.now() / 1000);
   const signature = await signCookie(password, issuedAt);
   const isSecureRequest = new URL(request.url).protocol === "https:";
-  return `${cookieName}=${issuedAt}.${signature}; Path=/; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+  return `${cookieName}=${issuedAt}.${signature}; Path=/; Max-Age=${sessionSeconds}; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
 }
 
 async function hasValidAccessCookie(request, password) {
@@ -114,6 +145,9 @@ async function hasValidAccessCookie(request, password) {
   const [issuedAtRaw, signature] = value.split(".");
   const issuedAt = Number(issuedAtRaw);
   if (!issuedAt || !signature) return false;
+  // The client controls its own cookie, so the age is checked here as well.
+  const age = Math.floor(Date.now() / 1000) - issuedAt;
+  if (age < 0 || age > sessionSeconds) return false;
   return safeEqual(signature, await signCookie(password, issuedAt));
 }
 
@@ -137,9 +171,33 @@ function getCookie(request, name) {
     ?.slice(name.length + 1) || "";
 }
 
+function matchedCoursePrefix(pathname) {
+  return protectedCoursePrefixes.find(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  ) || coursePrefix;
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]
+  ));
+}
+
 function safeReturnTo(value) {
   const route = String(value || "");
   return isProtectedCoursePath(route) && !route.startsWith("//") ? route : coursePrefix;
+}
+
+// Compare digests, not the secrets themselves: the length check below would
+// otherwise reveal how long the real password is.
+async function secretsMatch(left, right) {
+  const [a, b] = await Promise.all([digestHex(left), digestHex(right)]);
+  return safeEqual(a, b);
+}
+
+async function digestHex(value) {
+  const digest = await crypto.subtle.digest("SHA-256", encoder.encode(String(value)));
+  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
 function safeEqual(left, right) {

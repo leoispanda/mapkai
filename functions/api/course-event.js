@@ -1,3 +1,5 @@
+import { checkRateLimit, getClientIp } from "./_shared/rate-limit.js";
+
 const allowedEvents = new Set([
   "homepage_explore_clicked",
   "homepage_finance_clicked",
@@ -21,6 +23,14 @@ export async function onRequestPost({ request, env }) {
 
   if (!allowedEvents.has(event) || (day && (day < 1 || day > 5))) return json({ error: "Invalid course event." }, 400);
   if (!env.MAPKAI_DB) return json({ ok: true, stored: false }, 202);
+
+  // The endpoint is unauthenticated by design, so without a cap anyone can
+  // inflate the counters and run up D1 writes indefinitely.
+  const rateLimit = await checkRateLimit(env.MAPKAI_DB, `course-event:${getClientIp(request)}`, {
+    limit: 120,
+    windowSeconds: 60 * 60,
+  });
+  if (!rateLimit.ok) return json({ error: "Too many course events." }, 429);
 
   const eventDate = new Date().toISOString().slice(0, 10);
   await env.MAPKAI_DB.prepare(
