@@ -63,31 +63,43 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.177" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.200" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
       <a class="brand" href="/" data-route="/">
         <img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" />
       </a>
-      <nav class="nav-links" aria-label="Site">
-        <a href="/" data-route="/">Home</a>
-        <a href="/explore" data-route="/explore">Explore</a>
-        <a href="/map" data-route="/map">Knowledge Map</a>
-        <a href="/categories" data-route="/categories">Fields</a>
-        <a class="nav-utility" href="/management" data-route="/management">Corporate Finance</a>
-        <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
-        <a href="/about" data-route="/about">About</a>
-      </nav>
-      <div class="language-switch" aria-label="Language">
-        <button type="button" data-language="en" aria-pressed="true">English</button>
-        <span>|</span>
-        <button type="button" data-language="zh" aria-pressed="false">中文</button>
-      </div>
-      <div class="theme-switch" aria-label="Theme">
-        <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
-        <span>|</span>
-        <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-panel" id="primary-nav-panel">
+        <nav class="nav-links" aria-label="Site">
+          <a href="/" data-route="/">Home</a>
+          <a href="/explore" data-route="/explore">Explore</a>
+          <a href="/map" data-route="/map">Knowledge Map</a>
+          <div class="nav-learning">
+            <a class="nav-learning-trigger" href="/learning" data-route="/learning" data-i18n="navLearning">Learning</a>
+            <div class="nav-learning-menu" aria-label="Learning paths">
+              <a href="/learning/emba" data-i18n="navEmba">EMBA</a>
+              <a href="/categories" data-route="/categories" data-i18n="navQuickPickups">General Knowledge Quick Pickups</a>
+            </div>
+          </div>
+          <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
+          <a href="/about" data-route="/about">About</a>
+        </nav>
+        <div class="nav-preferences">
+          <div class="language-switch" aria-label="Language">
+            <button type="button" data-language="en" aria-pressed="true">English</button>
+            <span>|</span>
+            <button type="button" data-language="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="theme-switch" aria-label="Theme">
+            <button type="button" data-theme-option="light" aria-pressed="true">Light</button>
+            <span>|</span>
+            <button type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+          </div>
+        </div>
       </div>
     </header>
     <div class="founder-indicator" aria-live="polite" hidden></div>
@@ -95,23 +107,14 @@
     <main id="app">
       <section class="page home-page is-active" id="home" data-page="/">
         <div class="hero home-minimal">
-          <p class="eyebrow">MapKAI</p>
-          <h1>Map your knowledge with AI</h1>
-          <p class="hero-copy">
-            Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.
-          </p>
-          <p class="hero-microcopy">No login. No account. Just a quiet starting point.</p>
+          <p class="eyebrow" data-i18n="homeEyebrow">MapKAI</p>
+          <h1 data-i18n="homeTitle">Map your knowledge with AI</h1>
+          <p class="hero-copy" data-i18n="homeCopy">Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.</p>
+          <p class="hero-microcopy" data-i18n="homeQuickMirrorHint">No login. No account. Just a quiet starting point.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/explore" data-route="/explore" data-i18n="homePrimary">Start exploration</a>
+          </div>
         </div>
-        <section class="home-section home-featured-learning" aria-label="Recently recommended learning">
-          <a class="home-featured-learning-card" href="/management" data-route="/management">
-            <div>
-              <p class="home-featured-learning-kicker" data-i18n="homeFeaturedEyebrow">Recently recommended</p>
-              <h2><strong data-i18n="homeFeaturedTitle">Corporate Finance Essentials</strong></h2>
-              <p data-i18n="homeFeaturedCopy">A five-day, plain-language path for understanding value, cash, risk, and the choices behind a company.</p>
-            </div>
-            <span class="home-featured-learning-action" data-i18n="homeFeaturedAction">Start the five-day path →</span>
-          </a>
-        </section>
         <section class="home-section top-rated-story-section" id="topRatedStories" aria-live="polite" hidden></section>
         <section class="home-section" hidden>
           <div class="section-heading compact">
@@ -185,6 +188,7 @@
           <section class="about-opening">
             <p class="eyebrow">About MapKAI</p>
             <h1>A quiet compass for learning in the AI era.</h1>
+            <p class="about-product-promise" data-i18n="productPromise">Discover how you think. Learn across fields. Make better decisions.</p>
           </section>
           <section class="about-block">
             <h2>What MapKAI Is</h2>
@@ -403,7 +407,7 @@
 
       <section class="page management-article-page" id="managementArticle" data-page="/management/article">
         <div class="management-article-shell">
-          <a class="management-back-link" href="/management" data-route="/management" data-i18n="managementBack">← 返回公司金融通识</a>
+          <a class="management-back-link" href="/learning/corporate-finance" data-i18n="managementBack">← 返回公司金融通识</a>
           <article class="management-article-reader" id="managementArticleReader" aria-live="polite"></article>
         </div>
       </section>
@@ -585,22 +589,20 @@
 
       <section class="page learning-page" id="learning" data-page="/learning">
         <div class="section-heading">
-          <p class="eyebrow">Customized Learning Path</p>
-          <h1>Learning paths connect fields into a usable order.</h1>
-          <p>
-            Start with a learning goal, choose a knowledge area, and follow a practical path
-            through connected fields.
-          </p>
+          <p class="eyebrow">Learning</p>
+          <h1>Choose a focused course or pick up something new.</h1>
+          <p>Go deeper with a structured learning path, or make a quick pickup from the wider knowledge map.</p>
         </div>
         <div class="path-type-grid" id="pathTypeGrid"></div>
-        <section class="preview-band">
-          <div>
-            <p class="eyebrow">Learning paths</p>
-            <h2>Choose a path after choosing a field</h2>
-            <p>MapKAI connects categories, fields, and practical next steps as each area becomes ready.</p>
-          </div>
-          <a class="button primary" href="/explore" data-route="/explore">Start Exploring</a>
-        </section>
+      </section>
+
+      <section class="page learning-page emba-page" id="emba" data-page="/learning/emba">
+        <div class="section-heading">
+          <p class="eyebrow">EMBA</p>
+          <h1>EMBA learning</h1>
+          <p>Start with Corporate Finance, with more subjects to be added over time.</p>
+        </div>
+        <div class="emba-course-grid" id="embaCourseGrid"></div>
       </section>
 
       <section class="page path-page" id="foundationPath" data-page="/learning/foundation">
@@ -616,10 +618,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.177"></script>
-    <script src="/content/management-column.js?v=0.1.177"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.177"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.177"></script>
-    <script src="/script.js?v=0.1.177"></script>
+    <script src="/content/field-fables.js?v=0.1.200"></script>
+    <script src="/content/management-column.js?v=0.1.200"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.200"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.200"></script>
+    <script src="/script.js?v=0.1.200"></script>
   </body>
 </html>

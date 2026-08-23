@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.177";
+const appVersion = "0.1.200";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -17,6 +17,8 @@ const founderConsoleTabKey = "mapkaiFounderConsoleTab";
 const mapChallengeKey = "mapkaiMapChallengeV1";
 const languageButtons = Array.from(document.querySelectorAll("[data-language]"));
 const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
+const navToggle = document.querySelector(".nav-toggle");
+const navPanel = document.querySelector(".nav-panel");
 const supportedLanguages = ["en", "zh"];
 const supportedThemes = ["light", "dark"];
 let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
@@ -163,6 +165,11 @@ const uiText = {
     managementBack: "← Back to Corporate Finance Essentials",
     navCategories: "Fields",
     navLearning: "Learning",
+    navEmba: "EMBA",
+    navFinanceCourse: "Corporate Finance Essentials",
+    navQuickPickups: "General Knowledge Quick Pickups",
+    navMenuOpen: "Open menu",
+    navMenuClose: "Close menu",
     navAbout: "About",
     storiesEyebrow: "Stories",
     storiesTitle: "Each lens begins in a life scene.",
@@ -220,17 +227,48 @@ const uiText = {
     topRatedCopy: "The five highest average scores rise here automatically.",
     topRatedOpen: "Open story",
     topRatedAverage: (average, count) => `${average}/5 · ${count} ${count === 1 ? "person rated" : "people rated"}`,
-    homeFeaturedEyebrow: "Recently recommended",
+    productPromise: "Discover how you think. Learn across fields. Make better decisions.",
+    homeFeaturedEyebrow: "Featured Learning Path",
     homeFeaturedTitle: "Corporate Finance Essentials",
-    homeFeaturedCopy: "A five-day, plain-language path for understanding value, cash, risk, and the choices behind a company.",
-    homeFeaturedAction: "Start the five-day path →",
+    homeFeaturedSubtitle: "Understand how companies create value, manage cash, evaluate risk, and make decisions under uncertainty.",
+    homeFeaturedCopy: "A practical five-day learning path for managers, engineers, project leaders, founders, and business professionals without a finance background.",
+    homeFeaturedMeta: "5 days · 20–30 minutes per day · Free · No finance background required",
+    homeFeaturedAction: "Start Day 1 — Free",
+    homeCourseOutlineAction: "View Course Outline",
     homeEyebrow: "MapKAI",
     homeTitle: "Map your knowledge with AI",
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
     homePrimary: "Start exploration",
+    homeFinanceAction: "Start the Finance Course",
     homeMapAction: "View Knowledge Map",
-    homePdcAction: "Try PDC",
+    homePdcAction: "Explore PDC",
     homeQuickMirrorHint: "No login. No account. Just a quiet starting point.",
+    homeSystemEyebrow: "One system, three steps",
+    homeSystemTitle: "From knowledge awareness to better decisions",
+    homeDiscoverLabel: "01 · Discover",
+    homeDiscoverTitle: "See your knowledge patterns",
+    homeDiscoverCopy: "Answer everyday questions and notice which knowledge lenses are already active in your thinking.",
+    homeLearnLabel: "02 · Learn",
+    homeLearnTitle: "Build understanding through structured paths",
+    homeLearnCopy: "Follow practical learning paths that connect concepts, stories, and real business decisions.",
+    homeLearningPathsAction: "View Learning Paths",
+    homeDecideLabel: "03 · Decide",
+    homeDecideTitle: "Examine difficult decisions from multiple perspectives",
+    homeDecideCopy: "Use PDC to challenge assumptions, compare trade-offs, and prepare a clearer decision memo.",
+    homeFinanceOutcomeOne: "Understand the difference between profit, cash, and value.",
+    homeFinanceOutcomeTwo: "Evaluate whether an investment creates long-term value.",
+    homeFinanceOutcomeThree: "Recognize liquidity, risk, governance, and control issues.",
+    homeFinanceOutcomeFour: "Ask better questions when reviewing business proposals.",
+    financeDayOneTitle: "Value and Capital Allocation",
+    financeDayOneTime: "25 minutes",
+    financeDayTwoTitle: "Trust and the Licence to Operate",
+    financeDayTwoTime: "25 minutes",
+    financeDayThreeTitle: "Facts, Risk, and Governance",
+    financeDayThreeTime: "25 minutes",
+    financeDayFourTitle: "How Strategy Becomes Behaviour",
+    financeDayFourTime: "25 minutes",
+    financeDayFiveTitle: "Compare Evidence, Form Advice",
+    financeDayFiveTime: "25 minutes",
     homeQuickMirrorSupport: "Includes a 30-sec Quick Mirror for first-time explorers.",
     mapStartTrust: "Explore freely. No account, name, or email required. Your quiz progress is not linked to a personal profile.",
     contactTrust: "Contact is optional. Please avoid sharing highly sensitive personal information. If you send us a message, we use it only to respond to you.",
@@ -470,9 +508,9 @@ const uiText = {
     groups: "subfields",
     detailedFields: "formal subfields",
     subjectStoryCount: (count) => count === 1 ? "1 story" : `${count} stories`,
-    learningEyebrow: "Cognitive Expansion",
-    learningTitle: "Learning is a direction for expanding how you think.",
-    learningCopy: "MapKAI learning is not a course list. It suggests cognitive directions after exploration reveals a pattern.",
+    learningEyebrow: "Learning",
+    learningTitle: "Choose a focused course or pick up something new.",
+    learningCopy: "Go deeper with a structured learning path, or make a quick pickup from the wider knowledge map.",
     learningBandEyebrow: "Suggested expansion",
     learningBandTitle: "Return to Explore before choosing a direction",
     learningBandCopy: "The clearest learning path begins with a visible pattern.",
@@ -565,6 +603,11 @@ const uiText = {
     managementBack: "← 返回公司金融通识",
     navCategories: "知识镜头",
     navLearning: "学习路径",
+    navEmba: "EMBA",
+    navFinanceCourse: "公司金融核心课程",
+    navQuickPickups: "通识知识快速拾取",
+    navMenuOpen: "打开菜单",
+    navMenuClose: "关闭菜单",
     navAbout: "关于",
     storiesEyebrow: "故事",
     storiesTitle: "每个 Lens，都从一个生活场景开始。",
@@ -622,17 +665,48 @@ const uiText = {
     topRatedCopy: "平均分最高的 5 篇文章会自动出现在这里。",
     topRatedOpen: "打开故事",
     topRatedAverage: (average, count) => `${average}/5 · ${count} 人评分`,
-    homeFeaturedEyebrow: "近期推荐",
+    productPromise: "发现你的思考方式，建立跨领域知识，做出更清晰的决定。",
+    homeFeaturedEyebrow: "精选学习路径",
     homeFeaturedTitle: "公司金融通识",
-    homeFeaturedCopy: "五天、通俗易懂地看见价值、现金、风险，以及公司每一个选择背后的判断。",
-    homeFeaturedAction: "开始五天学习 →",
+    homeFeaturedSubtitle: "理解企业如何创造价值、管理现金、评估风险，并在不确定性中做出决定。",
+    homeFeaturedCopy: "为非金融背景的管理者、工程师、项目负责人、创业者和商业专业人士设计的五天实用课程。",
+    homeFeaturedMeta: "5天 · 每天20–30分钟 · 免费 · 无需金融背景",
+    homeFeaturedAction: "免费开始第一天",
+    homeCourseOutlineAction: "查看课程大纲",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
     homePrimary: "开始探索",
+    homeFinanceAction: "开始公司金融课程",
     homeMapAction: "查看知识地图",
-    homePdcAction: "试试 PDC",
+    homePdcAction: "探索 PDC",
     homeQuickMirrorHint: "无需登录，无需账号。只是一个安静的起点。",
+    homeSystemEyebrow: "一个系统，三个步骤",
+    homeSystemTitle: "从认识知识结构，到做出更清晰的决定",
+    homeDiscoverLabel: "01 · 发现",
+    homeDiscoverTitle: "看见你的知识模式",
+    homeDiscoverCopy: "回答日常问题，发现哪些知识视角已经自然地参与了你的思考。",
+    homeLearnLabel: "02 · 学习",
+    homeLearnTitle: "通过结构化路径建立理解",
+    homeLearnCopy: "沿着实用的学习路径，把概念、故事与真实商业决定连接起来。",
+    homeLearningPathsAction: "查看学习路径",
+    homeDecideLabel: "03 · 决策",
+    homeDecideTitle: "从多个角度审视困难决定",
+    homeDecideCopy: "使用 PDC 挑战假设、比较取舍，并形成更清晰的决策备忘录。",
+    homeFinanceOutcomeOne: "理解利润、现金与价值之间的差别。",
+    homeFinanceOutcomeTwo: "评估一项投资是否创造长期价值。",
+    homeFinanceOutcomeThree: "识别流动性、风险、治理与控制问题。",
+    homeFinanceOutcomeFour: "审阅商业提案时提出更好的问题。",
+    financeDayOneTitle: "价值与资本配置",
+    financeDayOneTime: "25分钟",
+    financeDayTwoTitle: "信任与经营资格",
+    financeDayTwoTime: "25分钟",
+    financeDayThreeTitle: "事实、风险与治理",
+    financeDayThreeTime: "25分钟",
+    financeDayFourTitle: "战略如何变成行为",
+    financeDayFourTime: "25分钟",
+    financeDayFiveTitle: "比较证据，形成建议",
+    financeDayFiveTime: "25分钟",
     homeQuickMirrorSupport: "包含一个适合第一次体验的 30秒思维镜像。",
     mapStartTrust: "自由探索。无需账户、姓名或邮箱。你的答题进度不会绑定到个人档案。",
     contactTrust: "联系是可选的。请避免提交高度敏感的个人信息。如果你发送留言，我们只会用它来回复你。",
@@ -870,9 +944,9 @@ const uiText = {
     groups: "个小学科",
     detailedFields: "个正式小学科",
     subjectStoryCount: (count) => `${count} 张故事卡片`,
-    learningEyebrow: "认知扩展",
-    learningTitle: "学习是扩展思考方式的方向。",
-    learningCopy: "MapKAI 的学习不是课程列表，而是在探索显现模式后，给出认知扩展方向。",
+    learningEyebrow: "学习",
+    learningTitle: "选择一门聚焦课程，或快速拾取一个新知识。",
+    learningCopy: "通过结构化学习路径深入学习，也可以从更广阔的知识地图中快速拾取通识知识。",
     learningBandEyebrow: "建议扩展",
     learningBandTitle: "先回到 Explore，再选择方向",
     learningBandCopy: "最清晰的学习路径，来自已经显现的模式。",
@@ -8351,21 +8425,13 @@ const field0412 = {
 };
 
 const pathTypes = [
-  ["Systems expansion", "For explorers who over-index toward structure and optimization."],
-  ["Ambiguity expansion", "Arts and humanities can train interpretation, meaning, and unresolved tension."],
-  ["Human-context expansion", "Social and health domains reveal behavior, care, risk, and limits."],
-  ["Reality-contact expansion", "Services, agriculture, and engineering pull thinking back into constraints."],
-  ["Evidence expansion", "Science and statistics sharpen uncertainty without turning it into certainty."],
-  ["Reflection expansion", "Return to Explore before choosing what to deepen next."],
+  ["Quick pickup", "General Knowledge Quick Pickups", "Browse practical fields and pick up a useful idea whenever you want a fast, broader learning moment.", "/categories", "Browse quick pickups"],
+  ["Learning programme", "EMBA", "A growing EMBA learning hub. Start with Corporate Finance, with more subjects to be added over time.", "/learning/emba", "Open EMBA"],
 ];
 
 const pathTypesZh = [
-  ["系统扩展", "适合过度偏向结构、优化和框架的探索者。"],
-  ["模糊性扩展", "艺术与人文训练解释、意义和未解决的张力。"],
-  ["人类语境扩展", "社会与健康领域显现行为、照护、风险和边界。"],
-  ["现实接触扩展", "服务、农业和工程把思考拉回约束现场。"],
-  ["证据扩展", "科学与统计帮助你面对不确定性，而不是把它过早变成确定性。"],
-  ["反思扩展", "先回到 Explore，再选择下一步深入方向。"],
+  ["快速拾取", "通识知识快速拾取", "浏览实用知识领域，在想快速拓宽认知时，随手拾取一个有用的新知识。", "/categories", "浏览通识知识"],
+  ["学习项目", "EMBA", "一个持续扩展的 EMBA 学习空间。先从公司金融开始，之后会逐步加入其他科目。", "/learning/emba", "打开 EMBA"],
 ];
 
 const foundationPath = [
@@ -11532,6 +11598,7 @@ function renderContactSections() {
 function siteFooterTemplate() {
   return `
     <footer class="site-footer" aria-label="Copyright">
+      <p class="footer-product-promise" data-i18n="productPromise">${t("productPromise")}</p>
       <p class="visitor-count" data-visitor-count>${t("viewedMany")}</p>
       <p class="visitor-count founder-only" data-founder-visitor-count></p>
       <p data-footer-rights>${t("footerRights")}</p>
@@ -14739,6 +14806,11 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function versionedSubtitleSrc(src) {
+  if (!src) return "";
+  return `${src}${src.includes("?") ? "&" : "?"}v=${encodeURIComponent(appVersion)}`;
+}
+
 function renderEscapedParagraphs(value) {
   return String(value || "")
     .split(/\n{2,}|\r?\n/)
@@ -14789,6 +14861,27 @@ function setLanguage(language) {
   applyLanguage();
 }
 
+function updateNavMenuState() {
+  if (!navToggle || !navPanel) return;
+  const isOpen = navPanel.classList.contains("is-open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", t(isOpen ? "navMenuClose" : "navMenuOpen"));
+}
+
+function setNavMenu(open) {
+  if (!navPanel) return;
+  navPanel.classList.toggle("is-open", Boolean(open));
+  updateNavMenuState();
+}
+
+function closeNavMenu() {
+  setNavMenu(false);
+}
+
+function sendCourseEvent(eventName) {
+  fetch("/api/course-event", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event: eventName, language: currentLanguage }), keepalive: true }).catch(() => {});
+}
+
 function applyLanguage() {
   updateLanguageButtons();
   document.querySelectorAll("[data-i18n]").forEach((target) => {
@@ -14799,9 +14892,7 @@ function applyLanguage() {
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
   setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
-  setText('.nav-links a[data-route="/management"]', t("navManagement"));
-  setText('.nav-links a[data-route="/categories"]', t("navCategories"));
-  setText('.nav-links a[data-route="/learning"]', t("navLearning"));
+  setText(".nav-learning-trigger", t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
   setText(".stories-page .stories-hero .eyebrow", t("storiesEyebrow"));
   setText(".stories-page .stories-hero h1", t("storiesTitle"));
@@ -14812,8 +14903,9 @@ function applyLanguage() {
   setText(".home-page .hero .eyebrow", t("homeEyebrow"));
   setText(".home-page .hero h1", t("homeTitle"));
   setText(".home-page .hero-copy", t("homeCopy"));
-  setAllText(".home-page .hero-actions .button", [t("homePrimary"), t("homeMapAction")]);
+  setAllText(".home-page .hero-actions .button", [t("homePrimary")]);
   setText(".home-page .hero-microcopy", t("homeQuickMirrorHint"));
+  updateNavMenuState();
 
   setText(".module-strip .section-heading .eyebrow", t("coreEyebrow"));
   setText("#core-modules-title", t("coreTitle"));
@@ -14914,13 +15006,13 @@ function applyLanguage() {
   setText(".categories-page .section-heading h1", t("categoriesTitle"));
   setText(".categories-page .section-heading p:not(.eyebrow)", t("categoriesCopy"));
 
-  setText(".learning-page .section-heading .eyebrow", t("learningEyebrow"));
-  setText(".learning-page .section-heading h1", t("learningTitle"));
-  setText(".learning-page .section-heading p:not(.eyebrow)", t("learningCopy"));
-  setText(".learning-page .preview-band .eyebrow", t("learningBandEyebrow"));
-  setText(".learning-page .preview-band h2", t("learningBandTitle"));
-  setText(".learning-page .preview-band p:not(.eyebrow)", t("learningBandCopy"));
-  setText(".learning-page .preview-band .button", t("startExploring"));
+  setText("#learning .section-heading .eyebrow", t("learningEyebrow"));
+  setText("#learning .section-heading h1", t("learningTitle"));
+  setText("#learning .section-heading p:not(.eyebrow)", t("learningCopy"));
+  setText("#learning .preview-band .eyebrow", t("learningBandEyebrow"));
+  setText("#learning .preview-band h2", t("learningBandTitle"));
+  setText("#learning .preview-band p:not(.eyebrow)", t("learningBandCopy"));
+  setText("#learning .preview-band .button", t("startExploring"));
 
   document.querySelectorAll('.route-cta .button.primary[href="/explore"]').forEach((target) => {
     target.textContent = t("startExploring");
@@ -14961,6 +15053,8 @@ function applyLanguage() {
   if (activeLensStory) renderLensStoryDetail(activeLensStory[1]);
   const activeManagementArticle = normalizeRoute(window.location.pathname).match(/^\/management\/([a-z0-9-]+)$/);
   if (activeManagementArticle) renderManagementArticle(activeManagementArticle[1]);
+  const activeFinanceDay = normalizeRoute(window.location.pathname).match(/^\/learning\/corporate-finance\/day-([1-5])$/);
+  if (activeFinanceDay) renderManagementArticle(getFinanceLessonId(activeFinanceDay[1]));
   renderManagementColumn();
   renderStoryMap();
   if (document.getElementById("categoryDetail")?.classList.contains("is-active")) {
@@ -14985,6 +15079,17 @@ function normalizeRoute(path) {
     return window.location.hash.replace("#", "") || "/";
   }
   return path || "/";
+}
+
+function getFinanceLessonId(dayNumber) {
+  const ids = {
+    "1": "day-1-value-and-capital",
+    "2": "day-2-trust-and-license",
+    "3": "day-3-risk-and-governance",
+    "4": "day-4-strategy-and-action",
+    "5": "day-5-evidence-and-recommendation",
+  };
+  return ids[String(dayNumber || "")] || "";
 }
 
 function goToRoute(route, replace = false) {
@@ -15020,12 +15125,17 @@ function goToRoute(route, replace = false) {
   const conceptFableMatch = visibleTarget.match(/^\/concept-fables\/([a-z0-9-]+)$/);
   const lensStoryMatch = visibleTarget.match(/^\/lens-stories\/([a-z0-9-]+)$/);
   const managementArticleMatch = visibleTarget.match(/^\/management\/([a-z0-9-]+)$/);
+  const embaMatch = visibleTarget === "/learning/emba";
+  const financeCourseMatch = visibleTarget === "/learning/corporate-finance";
+  const financeDayMatch = visibleTarget.match(/^\/learning\/corporate-finance\/day-([1-5])$/);
   if (categoryMatch) renderCategoryDetail(categoryMatch[1]);
   if (fieldMatch) renderFieldDetail(fieldMatch[1]);
   if (storyMatch) renderStoryDetail(storyMatch[1]);
   if (conceptFableMatch) renderConceptFableDetail(conceptFableMatch[1]);
   if (lensStoryMatch) renderLensStoryDetail(lensStoryMatch[1]);
   if (managementArticleMatch) renderManagementArticle(managementArticleMatch[1]);
+  if (financeCourseMatch) renderManagementColumn();
+  if (financeDayMatch) renderManagementArticle(getFinanceLessonId(financeDayMatch[1]));
   const activePage = categoryMatch
     ? "/categories/detail"
     : fieldMatch
@@ -15036,9 +15146,13 @@ function goToRoute(route, replace = false) {
           ? "/concept-fables/detail"
           : lensStoryMatch
             ? "/lens-stories/detail"
-            : managementArticleMatch
+            : managementArticleMatch || financeDayMatch
               ? "/management/article"
-              : visibleTarget;
+              : financeCourseMatch
+                ? "/management"
+                : embaMatch
+                  ? "/learning/emba"
+                  : visibleTarget;
 
   pages.forEach((page) => {
     const active = page.dataset.page === activePage;
@@ -15052,6 +15166,7 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
       (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
       (linkRoute === "/management" && visibleTarget.startsWith("/management")) ||
+      (linkRoute === "/learning/corporate-finance" && visibleTarget.startsWith("/learning/corporate-finance")) ||
       (linkRoute === "/categories" && (
         visibleTarget.startsWith("/categories") ||
         visibleTarget.startsWith("/fields/") ||
@@ -15059,7 +15174,13 @@ function goToRoute(route, replace = false) {
         visibleTarget.startsWith("/concept-fables")
       )) ||
       (linkRoute === "/map" && visibleTarget === "/map-challenge") ||
-      (linkRoute === "/learning" && visibleTarget.startsWith("/learning")) ||
+      (linkRoute === "/learning" && (
+        visibleTarget.startsWith("/learning") ||
+        visibleTarget.startsWith("/categories") ||
+        visibleTarget.startsWith("/fields/") ||
+        visibleTarget.startsWith("/lens-stories/") ||
+        visibleTarget.startsWith("/concept-fables")
+      )) ||
       (linkRoute === "/about" && visibleTarget === "/about") ||
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
       (linkRoute === "/responsible-use" && visibleTarget === "/responsible-use") ||
@@ -15069,6 +15190,7 @@ function goToRoute(route, replace = false) {
   });
 
   if (visibleTarget === "/pdc-pilot") initPdcPilotPage();
+  closeNavMenu();
   if (visibleTarget === "/map") drawKnowledgeMap();
   updateRouteMeta(visibleTarget);
   if (replace) return;
@@ -15088,7 +15210,7 @@ function updateRouteMeta(route) {
       ? "/map"
         : route.startsWith("/lens-stories/")
           ? "/lens-stories"
-          : route.startsWith("/management/")
+          : route.startsWith("/management/") || route.startsWith("/learning/corporate-finance")
             ? "/management"
           : route.startsWith("/categories/")
           ? "/categories"
@@ -15320,9 +15442,26 @@ function renderManagementVideos(videos) {
           <span>${escapeHtml(managementValue(video, "language"))}</span>
           <h2>${escapeHtml(managementValue(video, "title") || managementText("videoFallback"))}</h2>
         </div>
-        <video controls preload="metadata" src="${escapeHtml(video.url || "")}">Your browser does not support video playback.</video>
+        <div class="finance-video-player" data-caption-player>${video.subtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(video.url || "")}">${video.subtitleSrc ? `<track kind="subtitles" src="${escapeHtml(versionedSubtitleSrc(video.subtitleSrc))}" srclang="${escapeHtml(video.subtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(video, "subtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${video.subtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div>
       </article>`).join("")}</div>
   </section>`;
+}
+
+function initCaptionPlayers() {
+  document.querySelectorAll("[data-caption-player]").forEach((player) => {
+    const video = player.querySelector("video");
+    const track = video?.textTracks?.[0];
+    const toggle = player.querySelector("[data-caption-toggle]");
+    if (!video || !track || !toggle) return;
+    const setCaptionState = (visible) => {
+      track.mode = visible ? "showing" : "disabled";
+      toggle.classList.toggle("is-active", visible);
+      toggle.setAttribute("aria-pressed", String(visible));
+      toggle.setAttribute("aria-label", visible ? toggle.dataset.captionOnLabel : toggle.dataset.captionOffLabel);
+    };
+    setCaptionState(true);
+    toggle.addEventListener("click", () => setCaptionState(track.mode !== "showing"));
+  });
 }
 
 function renderManagementColumn() {
@@ -15338,7 +15477,8 @@ function renderManagementColumn() {
       <p>${escapeHtml(managementValue(module, "summary"))}</p>
       <p class="management-module-use"><strong>${escapeHtml(managementText("practice"))}</strong>${escapeHtml(managementValue(module, "soloCompanyUse"))}</p>
       <div class="management-tag-row">${managementList(module, "tags").map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
-    return `<a class="management-module-card is-ready" href="/management/${escapeHtml(module.id)}" data-route="/management/${escapeHtml(module.id)}">${cardContent}<strong>${escapeHtml(managementText("openLesson"))} <span aria-hidden="true">→</span></strong></a>`;
+    const dayNumber = String(module.day || "").match(/\d+/)?.[0] || "1";
+    return `<a class="management-module-card is-ready" href="/learning/corporate-finance/day-${dayNumber}" data-route="/learning/corporate-finance/day-${dayNumber}">${cardContent}<strong>${escapeHtml(managementText("openLesson"))} <span aria-hidden="true">→</span></strong></a>`;
   }).join("");
   target.innerHTML = `
     <section class="management-hero">
@@ -15355,7 +15495,7 @@ function renderManagementColumn() {
         <p>${escapeHtml(managementValue(courseMedia, "videoDescription"))}</p>
       </div>
       <div class="management-course-media-players">
-        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">Your browser does not support video playback.</video></section>` : ""}
+        ${courseMedia.videoUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewVideo"))}</p><div class="finance-video-player" data-caption-player>${courseMedia.videoSubtitleSrc ? `<button class="finance-caption-toggle is-active" type="button" data-caption-toggle aria-pressed="true" aria-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-on-label="${escapeHtml(currentLanguage === "zh" ? "隐藏字幕" : "Hide subtitles")}" data-caption-off-label="${escapeHtml(currentLanguage === "zh" ? "显示字幕" : "Show subtitles")}">CC</button>` : ""}<video controls preload="metadata" src="${escapeHtml(courseMedia.videoUrl)}">${courseMedia.videoSubtitleSrc ? `<track kind="subtitles" src="${escapeHtml(versionedSubtitleSrc(courseMedia.videoSubtitleSrc))}" srclang="${escapeHtml(courseMedia.videoSubtitleSrclang || "zh-CN")}" label="${escapeHtml(managementValue(courseMedia, "videoSubtitleLabel") || (currentLanguage === "zh" ? "字幕" : "Subtitles"))}"${courseMedia.videoSubtitleDefault ? " default" : ""} />` : ""}Your browser does not support video playback.</video></div></section>` : ""}
         ${courseMedia.podcastUrl ? `<section><p class="management-media-label">${escapeHtml(managementText("overviewPodcast"))}</p><h3>${escapeHtml(managementValue(courseMedia, "podcastTitle"))}</h3><audio controls preload="metadata" src="${escapeHtml(courseMedia.podcastUrl)}">Your browser does not support audio playback.</audio></section>` : ""}
       </div>
     </section>` : ""}
@@ -15372,6 +15512,7 @@ function renderManagementColumn() {
       </div>
       <div class="management-module-grid">${moduleCards}</div>
     </section>` : ""}`;
+  initCaptionPlayers();
 }
 
 function renderManagementArticle(articleId) {
@@ -15422,6 +15563,7 @@ function renderManagementArticle(articleId) {
           ${reference.use ? `<p><span>${escapeHtml(managementText("referenceUse"))}</span>${escapeHtml(reference.use)}</p>` : ""}
         </li>`).join("")}</ol>
       </section>` : ""}`;
+    initCaptionPlayers();
     return;
   }
   const article = getManagementArticle(articleId);
@@ -17411,26 +17553,6 @@ function renderCategoryTree(category) {
     })
     .join("");
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
-  const managementCourseCardCopy = currentLanguage === "en"
-    ? {
-      label: "AI-era essential course",
-      title: "Corporate Finance Essentials: five company decisions for a solo company",
-      description: "From value and cash, trust and compliance, risk and governance, and strategic control to evidence and advice: Day 1–Day 5 learning from Turnpo, made practical for sustained operation.",
-      action: "Enter Corporate Finance Essentials",
-    }
-    : {
-      label: "AI 时代通用课程",
-      title: "公司金融通识：一人公司的五个公司决定",
-      description: "从价值与现金、信任与合规、风险与治理、战略控制，到证据与建议；借鉴 Turnpo 的 Day 1–Day 5，把 EMBA 学习转化为可持续经营的判断能力。",
-      action: "进入公司金融通识",
-    };
-  const managementCourseCard = category.code === "00" ? `
-    <a class="ai-learning-course-card" href="/management" data-route="/management">
-      <span>${escapeHtml(managementCourseCardCopy.label)}</span>
-      <h2>${escapeHtml(managementCourseCardCopy.title)}</h2>
-      <p>${escapeHtml(managementCourseCardCopy.description)}</p>
-      <strong>${escapeHtml(managementCourseCardCopy.action)} <span aria-hidden="true">→</span></strong>
-    </a>` : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
     ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
@@ -17441,7 +17563,6 @@ function renderCategoryTree(category) {
         </div>
       </div>
     </div>` : ""}
-    ${managementCourseCard}
     ${storyArticle}
     </div>`;
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
@@ -17521,11 +17642,32 @@ function renderField() {
 
 function renderLearning() {
   const pathGrid = document.getElementById("pathTypeGrid");
+  const embaCourseGrid = document.getElementById("embaCourseGrid");
   const timeline = document.getElementById("foundationTimeline");
   const activePathTypes = currentLanguage === "zh" ? pathTypesZh : pathTypes;
   const activeFoundationPath = currentLanguage === "zh" ? foundationPathZh : foundationPath;
   if (pathGrid) {
-    pathGrid.innerHTML = activePathTypes.map(([title, text]) => `<article class="module-card"><h3>${title}</h3><p>${text}</p></article>`).join("");
+    pathGrid.innerHTML = activePathTypes.map(([eyebrow, title, text, href, action]) => `
+      <article class="module-card learning-option-card">
+        <p class="eyebrow">${eyebrow}</p>
+        <h3>${title}</h3>
+        <p>${text}</p>
+        <a class="button secondary" href="${href}">${action}</a>
+      </article>`).join("");
+  }
+  if (embaCourseGrid) {
+    const embaCourse = currentLanguage === "zh"
+      ? ["课程 01", "公司金融核心课程", "用五天理解价值、现金、风险、治理，以及真实公司决定背后的金融逻辑。", "打开公司金融课程"]
+      : ["Course 01", "Corporate Finance Essentials", "A five-day course through value, cash, risk, governance, and real company decisions.", "Open Corporate Finance"];
+    document.querySelector("#emba .section-heading .eyebrow").textContent = "EMBA";
+    document.querySelector("#emba .section-heading h1").textContent = currentLanguage === "zh" ? "EMBA 学习" : "EMBA learning";
+    document.querySelector("#emba .section-heading p:not(.eyebrow)").textContent = currentLanguage === "zh" ? "从公司金融开始，之后会逐步加入其他科目。" : "Start with Corporate Finance, with more subjects to be added over time.";
+    embaCourseGrid.innerHTML = `<article class="module-card learning-option-card">
+      <p class="eyebrow">${embaCourse[0]}</p>
+      <h3>${embaCourse[1]}</h3>
+      <p>${embaCourse[2]}</p>
+      <a class="button secondary" href="/learning/corporate-finance">${embaCourse[3]}</a>
+    </article>`;
   }
   if (timeline) {
     timeline.innerHTML = activeFoundationPath
@@ -18616,6 +18758,7 @@ document.addEventListener("submit", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeNavMenu();
   if (event.key === "Escape" && activeTitleModalStats) {
     closeKnowledgeTitleModal();
   }
@@ -18650,6 +18793,13 @@ languageButtons.forEach((button) => {
 });
 themeButtons.forEach((button) => {
   button.addEventListener("click", () => setTheme(button.dataset.themeOption));
+});
+if (navToggle) {
+  navToggle.addEventListener("click", () => setNavMenu(!navPanel?.classList.contains("is-open")));
+}
+document.addEventListener("click", (event) => {
+  if (navPanel?.classList.contains("is-open") && !event.target.closest(".topbar")) closeNavMenu();
+  if (event.target.closest('.home-page a[href="/explore"]')) sendCourseEvent("homepage_explore_clicked");
 });
 
 window.addEventListener("popstate", () => goToRoute(normalizeRoute(window.location.pathname), true));

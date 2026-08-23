@@ -3,6 +3,22 @@ import { resolve } from "node:path";
 
 const repoRoot = resolve(new URL("..", import.meta.url).pathname);
 const htmlFiles = ["index.html", "public/index.html"].map((file) => resolve(repoRoot, file));
+const courseHtmlFiles = [
+  "public/learning/corporate-finance/index.html",
+  "public/learning/corporate-finance/day-1/index.html",
+  "public/learning/corporate-finance/day-2/index.html",
+  "public/learning/corporate-finance/day-3/index.html",
+  "public/learning/corporate-finance/day-4/index.html",
+  "public/learning/corporate-finance/day-5/index.html",
+  "public/learning/corporate-finance/completed/index.html",
+  "public/zh/learning/corporate-finance/index.html",
+  "public/zh/learning/corporate-finance/day-1/index.html",
+  "public/zh/learning/corporate-finance/day-2/index.html",
+  "public/zh/learning/corporate-finance/day-3/index.html",
+  "public/zh/learning/corporate-finance/day-4/index.html",
+  "public/zh/learning/corporate-finance/day-5/index.html",
+  "public/zh/learning/corporate-finance/completed/index.html",
+].map((file) => resolve(repoRoot, file));
 const scriptFiles = ["script.js", "public/script.js"].map((file) => resolve(repoRoot, file));
 const versionPath = resolve(repoRoot, "version.json");
 
@@ -20,7 +36,7 @@ function getNextVersion() {
 
 function updateAssetReferences(html, version) {
   return html.replace(
-    /\b(href|src)=(["'])(\/?)(styles\.css|script\.js|content\/(?:field-fables|management-column|management-lesson-stories|management-lesson-references)\.js)(?:\?v=[^"']*)?\2/g,
+    /\b(href|src)=(["'])(\/?)(styles\.css|script\.js|finance-course\.js|content\/(?:field-fables|management-column|management-lesson-stories|management-lesson-references)\.js)(?:\?v=[^"']*)?\2/g,
     (_match, attribute, quote, slash, asset) => `${attribute}=${quote}${slash}${asset}?v=${version}${quote}`,
   );
 }
@@ -35,6 +51,10 @@ const updatedHtml = updateAssetReferences(sourceHtml, version);
 
 for (const file of htmlFiles) {
   writeFileSync(file, updatedHtml);
+}
+
+for (const file of courseHtmlFiles) {
+  writeFileSync(file, updateAssetReferences(readFileSync(file, "utf8"), version));
 }
 
 for (const file of scriptFiles) {
