@@ -2152,7 +2152,7 @@ main {
 
 .home-minimal {
   display: grid;
-  min-height: min(500px, calc(100svh - 176px));
+  min-height: max(500px, calc(100svh - 176px));
   align-content: center;
   padding-block: clamp(34px, 7vw, 74px);
 }
