@@ -2533,7 +2533,6 @@ body[data-theme="dark"] .home-featured-learning-card p:not(.home-featured-learni
 
 .category-button {
   display: grid;
-  min-height: 184px;
   align-content: start;
   gap: 10px;
   border: 1px solid rgba(37, 99, 235, 0.14);
@@ -2565,12 +2564,11 @@ body[data-theme="dark"] .home-featured-learning-card p:not(.home-featured-learni
   line-height: 1.45;
 }
 
+/* No line clamp: it cuts at the overflow point, which lands mid-word
+   ("a sustainab…"). These blurbs are one or two sentences, so letting them
+   run costs a line at most and never breaks a word. */
 .category-display-description {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  overflow-wrap: break-word;
 }
 
 .category-button small {
@@ -5124,16 +5122,25 @@ dd,
 .button.primary,
 .pdc-page .button.primary,
 .pdc-entry-page .button.primary {
-  border: 1px solid rgba(37, 99, 235, 0.18);
-  background: linear-gradient(135deg, var(--blue), var(--violet));
+  border: 1px solid transparent;
+  background: var(--blue);
   color: #ffffff;
-  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.22);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.18);
 }
 
 .button.primary:hover,
 .pdc-page .button.primary:hover,
 .pdc-entry-page .button.primary:hover {
-  box-shadow: 0 20px 42px rgba(37, 99, 235, 0.28);
+  background: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.26);
+}
+
+.button.primary:active,
+.pdc-page .button.primary:active,
+.pdc-entry-page .button.primary:active {
+  background: #1a43b8;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.22);
 }
 
 .button.secondary,
@@ -7468,11 +7475,26 @@ body[data-theme="dark"] .nav-links a.is-current {
 body[data-theme="dark"] .button.primary,
 body[data-theme="dark"] .pdc-page .button.primary,
 body[data-theme="dark"] .pdc-entry-page .button.primary {
-  border-color: rgba(216, 177, 95, 0.48);
+  border-color: rgba(216, 177, 95, 0.42);
   border-radius: 8px;
-  background: linear-gradient(180deg, #e2be72 0%, #a77b33 100%);
-  color: #090806;
-  box-shadow: 0 12px 30px rgba(216, 177, 95, 0.16);
+  background: #d8b15f;
+  color: #14100a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+body[data-theme="dark"] .button.primary:hover,
+body[data-theme="dark"] .pdc-page .button.primary:hover,
+body[data-theme="dark"] .pdc-entry-page .button.primary:hover {
+  background: #e8c680;
+  box-shadow: 0 6px 16px rgba(216, 177, 95, 0.24);
+}
+
+body[data-theme="dark"] .button.primary:active,
+body[data-theme="dark"] .pdc-page .button.primary:active,
+body[data-theme="dark"] .pdc-entry-page .button.primary:active {
+  background: #c29a48;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 body[data-theme="dark"] .button.secondary,
