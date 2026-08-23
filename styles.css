@@ -8530,7 +8530,7 @@ body[data-theme="dark"] .home-finance-timeline span {
 /* Corporate Finance static learning experience. */
 .finance-static-page {
   min-width: 320px;
-  background: linear-gradient(180deg, #f8fafc, #ffffff 30%, #f6f8fb);
+  background: linear-gradient(180deg, #fbf8f1, #fffdf8 30%, #faf5ec);
 }
 
 .finance-topbar .nav-links { gap: clamp(14px, 2.4vw, 32px); }
