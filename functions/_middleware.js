@@ -1,9 +1,23 @@
 import { checkRateLimit, getClientIp } from "./api/_shared/rate-limit.js";
 
-const coursePrefix = "/learning/corporate-finance";
-const protectedCoursePrefixes = [coursePrefix, "/zh/learning/corporate-finance", "/learning/emba"];
-const unlockPath = `${coursePrefix}/unlock`;
-const cookieName = "mapkai_course_session";
+// EMBA is the programme; Corporate Finance is what sits inside it. So there is
+// one door, on EMBA, and unlocking it opens everything within. This is a filter,
+// not a vault -- the lesson text still ships in the public bundle.
+const areas = [
+  {
+    id: "emba",
+    name: "EMBA learning",
+    prefixes: [
+      "/learning/emba",
+      "/learning/corporate-finance",
+      "/zh/learning/corporate-finance",
+    ],
+    secretKey: "EMBA_ACCESS_PASSWORD",
+    // keeps working on the secret that is already configured
+    fallbackSecretKey: "COURSE_ACCESS_PASSWORD",
+    cookieName: "mapkai_course_session",
+  },
+];
 const legacyCookieName = "mapkai_course_access";
 const encoder = new TextEncoder();
 // A signed cookie with no expiry stays valid for as long as the password does.
@@ -11,17 +25,13 @@ const sessionSeconds = 60 * 60 * 24 * 30;
 // Generous for a person typing a password they were given; hostile to a script.
 const unlockAttemptLimit = 10;
 const unlockWindowSeconds = 60 * 15;
-const courseNames = {
-  "/learning/emba": "EMBA learning",
-  [coursePrefix]: "Corporate Finance Essentials",
-  "/zh/learning/corporate-finance": "Corporate Finance Essentials",
-};
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  if (!isProtectedCoursePath(url.pathname)) return context.next();
+  const area = areaFor(url.pathname);
+  if (!area) return context.next();
 
-  const password = String(context.env.COURSE_ACCESS_PASSWORD || "").trim();
+  const password = secretFor(context.env, area);
   if (!password) {
     return new Response("Course access is not configured.", {
       status: 503,
@@ -29,32 +39,42 @@ export async function onRequest(context) {
     });
   }
 
-  if (url.pathname === unlockPath) {
-    return handleUnlock(context, url, password);
+  if (url.pathname === unlockPathFor(area)) {
+    return handleUnlock(context, url, area, password);
   }
 
-  if (await hasValidAccessCookie(context.request, password)) return context.next();
-  return passwordPage(url);
+  if (await hasValidAccessCookie(context.request, area, password)) return context.next();
+  return passwordPage(url, area);
 }
 
-function isProtectedCoursePath(pathname) {
-  return protectedCoursePrefixes.some(
+function areaFor(pathname) {
+  return areas.find((entry) => entry.prefixes.some(
     (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
-  );
+  )) || null;
 }
 
-async function handleUnlock(context, url, password) {
+function secretFor(env, area) {
+  const primary = String(env[area.secretKey] || "").trim();
+  if (primary) return primary;
+  return area.fallbackSecretKey ? String(env[area.fallbackSecretKey] || "").trim() : "";
+}
+
+function unlockPathFor(area) {
+  return `${area.prefixes[0]}/unlock`;
+}
+
+async function handleUnlock(context, url, area, password) {
   const request = context.request;
-  const returnTo = safeReturnTo(url.searchParams.get("returnTo"));
-  if (request.method !== "POST") return passwordPage(url);
+  const returnTo = safeReturnTo(url.searchParams.get("returnTo"), area);
+  if (request.method !== "POST") return passwordPage(url, area);
 
   // One shared password with unlimited guesses is a password in name only.
-  const attempts = await checkRateLimit(context.env.MAPKAI_DB, `course-unlock:${getClientIp(request)}`, {
+  const attempts = await checkRateLimit(context.env.MAPKAI_DB, `course-unlock:${area.id}:${getClientIp(request)}`, {
     limit: unlockAttemptLimit,
     windowSeconds: unlockWindowSeconds,
   });
   if (!attempts.ok) {
-    return passwordPage(url, false, {
+    return passwordPage(url, area, false, {
       status: 429,
       retryAfter: attempts.retryAfter,
       notice: "Too many attempts. Please wait a few minutes and try again.",
@@ -63,26 +83,25 @@ async function handleUnlock(context, url, password) {
 
   const form = await request.formData().catch(() => null);
   const submittedPassword = String(form?.get("password") || "");
-  if (!(await secretsMatch(submittedPassword, password))) return passwordPage(url, true);
+  if (!(await secretsMatch(submittedPassword, password))) return passwordPage(url, area, true);
 
   return new Response(null, {
     status: 303,
     headers: {
       Location: new URL(returnTo, url.origin).toString(),
       "Cache-Control": "no-store",
-      "Set-Cookie": await createAccessCookie(request, password),
+      "Set-Cookie": await createAccessCookie(request, area, password),
     },
   });
 }
 
-function passwordPage(url, isInvalid = false, options = {}) {
-  const returnTo = safeReturnTo(url.searchParams.get("returnTo") || `${url.pathname}${url.search}`);
-  const action = `${unlockPath}?returnTo=${encodeURIComponent(returnTo)}`;
+function passwordPage(url, area, isInvalid = false, options = {}) {
+  const returnTo = safeReturnTo(url.searchParams.get("returnTo") || `${url.pathname}${url.search}`, area);
+  const action = `${unlockPathFor(area)}?returnTo=${encodeURIComponent(returnTo)}`;
   const message = options.notice
     || (isInvalid ? "That password is not correct. Please try again." : "");
   const error = message ? `<p class="error">${escapeHtml(message)}</p>` : "";
-  // The EMBA area shares this gate, so the heading follows the path.
-  const courseName = courseNames[matchedCoursePrefix(returnTo)] || "Private course";
+  const courseName = area.name;
   return new Response(`<!doctype html>
 <html lang="en">
   <head>
@@ -133,25 +152,25 @@ function passwordPage(url, isInvalid = false, options = {}) {
   });
 }
 
-async function createAccessCookie(request, password) {
+async function createAccessCookie(request, area, password) {
   const issuedAt = Math.floor(Date.now() / 1000);
-  const signature = await signCookie(password, issuedAt);
+  const signature = await signCookie(area, password, issuedAt);
   const isSecureRequest = new URL(request.url).protocol === "https:";
-  return `${cookieName}=${issuedAt}.${signature}; Path=/; Max-Age=${sessionSeconds}; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
+  return `${area.cookieName}=${issuedAt}.${signature}; Path=/; Max-Age=${sessionSeconds}; HttpOnly; SameSite=Lax${isSecureRequest ? "; Secure" : ""}`;
 }
 
-async function hasValidAccessCookie(request, password) {
-  const value = getCookie(request, cookieName);
+async function hasValidAccessCookie(request, area, password) {
+  const value = getCookie(request, area.cookieName);
   const [issuedAtRaw, signature] = value.split(".");
   const issuedAt = Number(issuedAtRaw);
   if (!issuedAt || !signature) return false;
   // The client controls its own cookie, so the age is checked here as well.
   const age = Math.floor(Date.now() / 1000) - issuedAt;
   if (age < 0 || age > sessionSeconds) return false;
-  return safeEqual(signature, await signCookie(password, issuedAt));
+  return safeEqual(signature, await signCookie(area, password, issuedAt));
 }
 
-async function signCookie(password, issuedAt) {
+async function signCookie(area, password, issuedAt) {
   const key = await crypto.subtle.importKey(
     "raw",
     encoder.encode(password),
@@ -159,7 +178,7 @@ async function signCookie(password, issuedAt) {
     false,
     ["sign"],
   );
-  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(`mapkai-course-access:${issuedAt}`));
+  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(`mapkai-course-access:${area.id}:${issuedAt}`));
   return Array.from(new Uint8Array(signature), (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
@@ -171,21 +190,18 @@ function getCookie(request, name) {
     ?.slice(name.length + 1) || "";
 }
 
-function matchedCoursePrefix(pathname) {
-  return protectedCoursePrefixes.find(
-    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
-  ) || coursePrefix;
-}
-
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]
   ));
 }
 
-function safeReturnTo(value) {
+function safeReturnTo(value, area) {
   const route = String(value || "");
-  return isProtectedCoursePath(route) && !route.startsWith("//") ? route : coursePrefix;
+  const withinArea = area.prefixes.some(
+    (prefix) => route === prefix || route.startsWith(`${prefix}/`),
+  );
+  return withinArea && !route.startsWith("//") ? route : area.prefixes[0];
 }
 
 // Compare digests, not the secrets themselves: the length check below would
