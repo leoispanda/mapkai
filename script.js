@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.207";
+const appVersion = "0.1.213";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -151,6 +151,10 @@ const routeMeta = {
   "/terms": {
     title: "MapKAI Terms — Free Knowledge Initiative",
     description: "Review the basic terms for using MapKAI as a free knowledge and reflection initiative.",
+  },
+  "/ai-transparency": {
+    title: "MapKAI AI Transparency — How AI Is Used",
+    description: "See where MapKAI uses fixed rules, prepared content, and configured AI services, and how to read its content labels.",
   },
 };
 
@@ -546,6 +550,35 @@ const uiText = {
     footerResponsibleUse: "Responsible Use",
     footerCookies: "Cookies",
     footerTerms: "Terms",
+    footerAiTransparency: "AI Transparency",
+    footerAiDisclosure: "AI-generated & AI-assisted · For learning purposes · Verify important information",
+    embaNotice: "EMBA is a MapKAI learning-path label for executive and business learning. It is not a university degree, accreditation, or claim of affiliation.",
+    embaPrivateLearningTitle: "Private Learning Space",
+    embaPrivateLearningCopy: "A private learning space for Leo and his EMBA friends, created to support course preparation, study, and discussion. Content may be generated or assisted by AI and should not be considered an official course resource.",
+    exploreAiDisclosure: "Explore calculates this result in your browser from your answers and MapKAI's rules. It is not an AI-generated diagnosis. If you copy the optional prompt below into your own AI tool, that separate service receives what you choose to paste.",
+    pdcAiDisclosure: "Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses stored content. Review outputs before acting.",
+    aiTransparencyEyebrow: "AI Transparency",
+    aiTransparencyTitle: "How AI is used at MapKAI",
+    aiTransparencyLead: "MapKAI combines fixed rules, prepared material, and AI services. This page shows where a model may be involved, where it is not, and how to read the labels.",
+    aiTransparencyWhereTitle: "Where AI may be involved",
+    aiTransparencyPdc: "Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses content stored in advance.",
+    aiTransparencyFallback: "If a live provider is unavailable, PDC can show fallback or prepared text. The PDC interface alone does not mean every line was generated live.",
+    aiTransparencyExploreTitle: "Where the current Explore result is not model-generated",
+    aiTransparencyExplore: "The current Explore map and Knowledge Lens result are calculated in your browser from your answers, the question bank, and fixed MapKAI rules. The public result does not call an AI model.",
+    aiTransparencyCopiedPrompt: "If you copy the optional prompt into your own AI tool, that separate service receives whatever you choose to paste. MapKAI does not send that copied prompt automatically.",
+    aiTransparencyLabelsTitle: "Content labels",
+    contentLabelLocal: "Local pattern summary",
+    contentLabelLocalDescription: "Calculated in your browser from your answers and MapKAI rules; not a model output.",
+    contentLabelAiAssisted: "AI-assisted output",
+    contentLabelAiAssistedDescription: "Dialogue or summaries drafted with a configured AI service; they may be incomplete or wrong.",
+    contentLabelPrepared: "Prepared content",
+    contentLabelPreparedDescription: "Written or stored ahead of time for a demo, course, or other site experience; not generated live for this interaction.",
+    contentLabelFallback: "Fallback output",
+    provenanceAiGenerated: "AI-generated",
+    provenanceAiAssisted: "AI-assisted",
+    provenanceAiAssistedHumanReviewed: "AI-assisted · Human reviewed",
+    aiTransparencyJudgmentTitle: "Human judgment remains necessary",
+    aiTransparencyJudgment: "Labels describe how a piece of content was produced, not whether it is correct. Check important claims, context, and recommendations yourself. MapKAI outputs are prompts for learning and reflection, not professional advice.",
     privacyEyebrow: "Privacy",
     privacyTitle: "Privacy at MapKAI",
     privacyLead: "MapKAI is low-data by design. For the current experience, you do not need to create an account or provide your name or email. Quiz progress is not linked to a personal profile, and contact is optional.",
@@ -993,6 +1026,35 @@ const uiText = {
     footerResponsibleUse: "负责任使用",
     footerCookies: "Cookies",
     footerTerms: "使用条款",
+    footerAiTransparency: "AI 透明度",
+    footerAiDisclosure: "AI 生成与 AI 辅助 · 仅供学习 · 请核实重要信息",
+    embaNotice: "EMBA 是 MapKAI 对高管与商业学习路径的称呼，不是大学学位、认证或机构关联声明。",
+    embaPrivateLearningTitle: "私人学习空间",
+    embaPrivateLearningCopy: "为 Leo 及其 EMBA 朋友提供的私人学习空间，旨在支持课程准备、学习和讨论。内容可能由 AI 生成或辅助，不应被视为正式课程资源。",
+    exploreAiDisclosure: "Explore 会根据你的回答和 MapKAI 规则在浏览器中计算结果。这不是 AI 生成的诊断。如果你把下方可选 Prompt 复制到自己的 AI 工具，那个独立服务会接收你主动粘贴的内容。",
+    pdcAiDisclosure: "私人 PDC 体验可能使用已配置的 AI 服务起草委员会对话和总结。准备好的 Demo 使用预先存储的内容。请在行动前核对输出。",
+    aiTransparencyEyebrow: "AI 透明度",
+    aiTransparencyTitle: "MapKAI 如何使用 AI",
+    aiTransparencyLead: "MapKAI 将固定规则、预先准备的内容和 AI 服务结合起来。本页说明哪些地方可能使用模型、哪些地方没有使用模型，以及如何理解内容标签。",
+    aiTransparencyWhereTitle: "可能使用 AI 的地方",
+    aiTransparencyPdc: "私人 PDC 体验可能使用已配置的 AI 服务生成委员会对话草稿和总结。准备好的 Demo 内容会提前存储。",
+    aiTransparencyFallback: "如果实时服务不可用，PDC 可能展示备用或预先准备的文字。看到 PDC 界面，并不代表每一行都是实时生成的。",
+    aiTransparencyExploreTitle: "当前 Explore 结果不由模型生成",
+    aiTransparencyExplore: "当前 Explore 地图和 Knowledge Lens 结果，会根据你的回答、题库和固定的 MapKAI 规则在浏览器中计算。公开结果不会调用 AI 模型。",
+    aiTransparencyCopiedPrompt: "如果你把可选 Prompt 复制到自己的 AI 工具中，那个独立服务会接收你主动粘贴的内容。MapKAI 不会自动发送这段 Prompt。",
+    aiTransparencyLabelsTitle: "内容标签",
+    contentLabelLocal: "本地模式总结",
+    contentLabelLocalDescription: "在浏览器中根据你的回答和 MapKAI 规则计算；不是模型输出。",
+    contentLabelAiAssisted: "AI 辅助输出",
+    contentLabelAiAssistedDescription: "由已配置的 AI 服务起草对话或总结；内容可能不完整或不准确。",
+    contentLabelPrepared: "预先准备内容",
+    contentLabelPreparedDescription: "为 Demo、课程或其他网站体验提前写好或保存；不会针对这次互动实时生成。",
+    contentLabelFallback: "备用输出",
+    provenanceAiGenerated: "AI 生成",
+    provenanceAiAssisted: "AI 辅助",
+    provenanceAiAssistedHumanReviewed: "AI 辅助 · 人工复核",
+    aiTransparencyJudgmentTitle: "仍需人的判断",
+    aiTransparencyJudgment: "标签说明内容如何产生，并不代表内容一定正确。重要的事实、背景和建议，请自行核对。MapKAI 的输出用于学习和反思提示，不是专业建议。",
     privacyEyebrow: "隐私",
     privacyTitle: "MapKAI 隐私说明",
     privacyLead: "MapKAI 以低数据为设计原则。在当前体验中，你不需要创建账户，也不需要提供姓名或邮箱。答题进度不会绑定到个人档案，联系也是可选的。",
@@ -11636,12 +11698,14 @@ function siteFooterTemplate() {
       <p class="visitor-count founder-only" data-founder-visitor-count></p>
       <p data-footer-rights>${t("footerRights")}</p>
       <p data-footer-notice>${t("footerNotice")}</p>
+      <p class="footer-ai-disclosure" data-i18n="footerAiDisclosure">${t("footerAiDisclosure")}</p>
       <p class="site-version">Version v${appVersion}</p>
       <nav class="footer-links" aria-label="Trust and legal">
         <a href="/privacy" data-route="/privacy" data-i18n="footerPrivacy">${t("footerPrivacy")}</a>
         <a href="/responsible-use" data-route="/responsible-use" data-i18n="footerResponsibleUse">${t("footerResponsibleUse")}</a>
         <a href="/cookies" data-route="/cookies" data-i18n="footerCookies">${t("footerCookies")}</a>
         <a href="/terms" data-route="/terms" data-i18n="footerTerms">${t("footerTerms")}</a>
+        <a href="/ai-transparency" data-route="/ai-transparency" data-i18n="footerAiTransparency">${t("footerAiTransparency")}</a>
       </nav>
     </footer>`;
 }
@@ -11977,6 +12041,7 @@ function renderPdcPublicEntry() {
     <div class="pdc-entry-grid">
       <section class="pdc-entry-option">
         <p class="eyebrow">Public Demo / Demo 模式</p>
+        <p class="content-label">${escapeHtml(t("contentLabelPrepared"))}</p>
         <h2>Demo Mode</h2>
         <p>Explore a prepared PDC case before entering your own question.</p>
         <p class="pdc-demo-note">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
@@ -12056,6 +12121,7 @@ function pdcShellTemplate(innerHtml) {
       ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Preview mode</p>` : ""}
       <p class="pdc-subtitle">A structured council debate for clearer decisions.</p>
       <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
+      <p class="interaction-disclosure">${escapeHtml(t("pdcAiDisclosure"))}</p>
       ${innerHtml}
       <details class="pdc-responsible-use">
         <summary>Responsible use &amp; privacy</summary>
@@ -12098,6 +12164,23 @@ function getPdcVisibleRecap() {
   return pdcState.warmup?.recap || pdcState.recap;
 }
 
+function getPdcContentLabel(recap) {
+  if (pdcState.demoMode) return t("contentLabelPrepared");
+  const provider = String(recap?.dialogueProvider || recap?.finalRecapProvider || recap?.provider || "").toLowerCase();
+  const fallback = recap?.fallbackUsed === true || recap?.finalRecapFallbackUsed === true || provider === "placeholder";
+  if (fallback) return t("contentLabelFallback");
+  const genericProvenance = getGenericPdcProvenanceLabel(recap);
+  return genericProvenance || t("contentLabelAiAssisted");
+}
+
+function getGenericPdcProvenanceLabel(recap) {
+  const state = String(recap?.provenanceState || "").trim().toLowerCase();
+  if (state === "ai-assisted-human-reviewed" && recap?.humanReviewConfirmed === true) return t("provenanceAiAssistedHumanReviewed");
+  if (state === "ai-generated") return t("provenanceAiGenerated");
+  if (state === "ai-assisted") return t("provenanceAiAssisted");
+  return "";
+}
+
 function renderPdcCouncilRoom(recap) {
   const room = recap.councilRoom;
   if (!room) return "";
@@ -12125,6 +12208,8 @@ function renderPdcCouncilRoom(recap) {
         <p class="eyebrow">Council Preview</p>
         <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
         <p>${pdcState.demoMode ? "Prepared PDC case. / PDC 案例演示。" : "The council reviews your decision in structured rounds."}</p>
+        ${!room.isWarmupRoom ? `<p class="content-label pdc-content-label">${escapeHtml(getPdcContentLabel(recap))}</p>` : ""}
+        ${!room.isWarmupRoom ? `<p class="interaction-disclosure pdc-interaction-disclosure">${escapeHtml(t("pdcAiDisclosure"))}</p>` : ""}
       </div>
       <div class="pdc-live-room ${selectedPersona ? "has-selected-profile" : ""}">
         <aside class="pdc-roster-panel ${selectedPersona ? "has-selected-profile" : ""}" aria-label="Council Members">
@@ -13888,6 +13973,7 @@ function renderPdcRecap(recap) {
           <p class="eyebrow">${escapeHtml(recap.modeLabel || "PDC")}</p>
           <h1>Council Recap</h1>
           <p class="pdc-memo-subtitle">A polished decision memo distilled from the council discussion.</p>
+          <p class="content-label pdc-content-label">${escapeHtml(getPdcContentLabel(recap))}</p>
         </div>
         ${renderPdcStatusChips([
           recap.finalRecapProvider ? recap.finalRecapProvider.replace(/^openai$/i, "OpenAI") : "",
@@ -15230,7 +15316,8 @@ function goToRoute(route, replace = false) {
       (linkRoute === "/privacy" && visibleTarget === "/privacy") ||
       (linkRoute === "/responsible-use" && visibleTarget === "/responsible-use") ||
       (linkRoute === "/cookies" && visibleTarget === "/cookies") ||
-      (linkRoute === "/terms" && visibleTarget === "/terms");
+      (linkRoute === "/terms" && visibleTarget === "/terms") ||
+      (linkRoute === "/ai-transparency" && visibleTarget === "/ai-transparency");
     link.classList.toggle("is-current", isCurrent);
   });
 
@@ -16870,6 +16957,7 @@ function renderReflectionPanel() {
       ${unlocked && !result ? `<button class="button primary" type="button" data-generate-lens-result>${t("generateLensMap")}</button>` : ""}
     </div>
     ${result ? `<div class="reflection-output lens-result-output">
+      <p class="content-label">${escapeHtml(t("contentLabelLocal"))}</p>
       <div class="lens-chart">
         ${renderLensBucket(t("strongestLenses"), result.strongest, maxCount, "strongest")}
         ${renderLensBucket(t("supportingLenses"), result.supporting, maxCount, "supporting")}
@@ -17050,6 +17138,7 @@ function renderQuickMirrorResult(target) {
   target.innerHTML = `
     <div class="quick-mirror-card is-result">
       <p class="eyebrow">${t("quickMirrorFirstSignal")}</p>
+      <p class="content-label">${escapeHtml(t("contentLabelLocal"))}</p>
       <h2>${escapeHtml(result.name)}</h2>
       <p class="quick-mirror-sentence">${escapeHtml(result.mirror)}</p>
       <p class="quick-mirror-boundary">${t("quickMirrorBoundary")}</p>

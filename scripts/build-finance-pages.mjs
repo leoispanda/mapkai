@@ -45,6 +45,8 @@ const copy = {
     completionTitle: "You completed Corporate Finance Essentials", completionCopy: "You have explored how value, cash, risk, governance, control, and strategic judgment come together in company decisions.",
     reviewMap: "Review Your Learning Map", usePdc: "Use PDC for a Business Decision", completedItems: ["Value and capital allocation", "Financing and risk", "Accounting and governance", "Performance and control", "Integrated decision-making"],
     footer: "Discover how you think. Learn across fields. Make better decisions.", lowData: "Free · No account · Low-data by design",
+    footerPrivacy: "Privacy", footerResponsibleUse: "Responsible Use", footerCookies: "Cookies", footerTerms: "Terms", footerAiTransparency: "AI Transparency", footerAiDisclosure: "AI-generated & AI-assisted · For learning purposes · Verify important information",
+    embaNotice: "EMBA is a MapKAI learning-path label for executive and business learning. It is not a university degree, accreditation, or claim of affiliation.",
   },
   zh: {
     locale: "zh-CN", prefix: "/zh", languageName: "中文", alternateName: "English", themeLight: "浅色", themeDark: "深色",
@@ -75,6 +77,8 @@ const copy = {
     completionTitle: "你已完成公司金融核心课程", completionCopy: "你已经探索了价值、现金、风险、治理、控制和战略判断如何汇入公司决定。",
     reviewMap: "回顾我的知识地图", usePdc: "用 PDC 分析一个商业决定", completedItems: ["价值与资本配置", "融资与风险", "会计与治理", "绩效与控制", "综合决策"],
     footer: "发现你的思考方式，建立跨领域知识，做出更清晰的决定。", lowData: "免费 · 无需账户 · 低数据设计",
+    footerPrivacy: "隐私", footerResponsibleUse: "负责任使用", footerCookies: "Cookies", footerTerms: "使用条款", footerAiTransparency: "AI 透明度", footerAiDisclosure: "AI 生成与 AI 辅助 · 仅供学习 · 请核实重要信息",
+    embaNotice: "EMBA 是 MapKAI 对高管与商业学习路径的称呼，不是大学学位、认证或机构关联声明。",
   },
 };
 
@@ -309,7 +313,7 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
     </div>
   </header>
   ${body}
-  <footer class="site-footer finance-footer"><p class="footer-product-promise">${esc(c.footer)}</p><p>${esc(c.lowData)}</p><nav class="footer-links"><a href="/privacy">Privacy</a><a href="/responsible-use">Responsible Use</a><a href="/terms">Terms</a></nav></footer>
+  <footer class="site-footer finance-footer"><p class="footer-product-promise">${esc(c.footer)}</p><p>${esc(c.lowData)}</p><p class="footer-ai-disclosure">${esc(c.footerAiDisclosure)}</p><p class="transparency-notice emba-notice">${esc(c.embaNotice)}</p><nav class="footer-links" aria-label="Trust and legal"><a href="/privacy">${esc(c.footerPrivacy)}</a><a href="/responsible-use">${esc(c.footerResponsibleUse)}</a><a href="/cookies">${esc(c.footerCookies)}</a><a href="/terms">${esc(c.footerTerms)}</a><a href="/ai-transparency">${esc(c.footerAiTransparency)}</a></nav></footer>
   <div class="finance-toast" role="status" aria-live="polite" hidden></div>
   <script src="/finance-course.js?v=${appVersion}"></script>
 </body>

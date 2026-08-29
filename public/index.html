@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.207" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.213" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -346,6 +346,47 @@
         </div>
       </section>
 
+      <section class="page legal-page transparency-page" id="aiTransparency" data-page="/ai-transparency">
+        <div class="legal-shell">
+          <section class="legal-hero">
+            <p class="eyebrow" data-i18n="aiTransparencyEyebrow">AI transparency</p>
+            <h1 data-i18n="aiTransparencyTitle">How AI is used at MapKAI</h1>
+            <p data-i18n="aiTransparencyLead">MapKAI combines fixed rules, prepared material, and AI services. This page shows where a model may be involved, where it is not, and how to read the labels.</p>
+          </section>
+          <section class="legal-block">
+            <h2 data-i18n="aiTransparencyWhereTitle">Where AI may be involved</h2>
+            <p data-i18n="aiTransparencyPdc">Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses content stored in advance.</p>
+            <p data-i18n="aiTransparencyFallback">If a live provider is unavailable, PDC can show fallback or prepared text. The PDC interface alone does not mean every line was generated live.</p>
+          </section>
+          <section class="legal-block">
+            <h2 data-i18n="aiTransparencyExploreTitle">Where the current Explore result is not model-generated</h2>
+            <p data-i18n="aiTransparencyExplore">The current Explore map and Knowledge Lens result are calculated in your browser from your answers, the question bank, and fixed MapKAI rules. The public result does not call an AI model.</p>
+            <p data-i18n="aiTransparencyCopiedPrompt">If you copy the optional prompt into your own AI tool, that separate service receives whatever you choose to paste. MapKAI does not send that copied prompt automatically.</p>
+          </section>
+          <section class="legal-block">
+            <h2 data-i18n="aiTransparencyLabelsTitle">Content labels</h2>
+            <div class="transparency-label-grid">
+              <article class="transparency-label-card">
+                <span class="content-label" data-i18n="contentLabelLocal">Local pattern summary</span>
+                <p data-i18n="contentLabelLocalDescription">Calculated in your browser from your answers and MapKAI rules; not a model output.</p>
+              </article>
+              <article class="transparency-label-card">
+                <span class="content-label" data-i18n="contentLabelAiAssisted">AI-assisted output</span>
+                <p data-i18n="contentLabelAiAssistedDescription">Dialogue or summaries drafted with a configured AI service; they may be incomplete or wrong.</p>
+              </article>
+              <article class="transparency-label-card">
+                <span class="content-label" data-i18n="contentLabelPrepared">Prepared content</span>
+                <p data-i18n="contentLabelPreparedDescription">Written or stored ahead of time for a demo, course, or other site experience; not generated live for this interaction.</p>
+              </article>
+            </div>
+          </section>
+          <section class="legal-block">
+            <h2 data-i18n="aiTransparencyJudgmentTitle">Human judgment remains necessary</h2>
+            <p data-i18n="aiTransparencyJudgment">Labels describe how a piece of content was produced, not whether it is correct. Check important claims, context, and recommendations yourself. MapKAI outputs are prompts for learning and reflection, not professional advice.</p>
+          </section>
+        </div>
+      </section>
+
       <section class="page pdc-entry-page" id="pdcEntry" data-page="/pdc">
         <div class="pdc-entry-shell">
           <section class="pdc-entry-hero">
@@ -359,6 +400,7 @@
           <section class="pdc-access-card" aria-labelledby="pdc-access-title">
             <div>
               <p class="eyebrow">Public Demo</p>
+              <p class="content-label" data-i18n="contentLabelPrepared">Prepared content</p>
               <h2>Demo Mode</h2>
               <p>Explore a prepared PDC case before entering your own question.</p>
               <p class="pdc-demo-note">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
@@ -377,6 +419,7 @@
               </form>
             </div>
           </section>
+          <p class="interaction-disclosure" data-i18n="pdcAiDisclosure">Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses stored content. Review outputs before acting.</p>
           <section class="pdc-entry-demo" aria-labelledby="pdc-how-title">
             <div class="pdc-entry-section-head">
               <p class="eyebrow" data-i18n="pdcHowEyebrow">How it works</p>
@@ -431,6 +474,7 @@
           </div>
         </section>
         <section class="reflection-panel" id="reflectionPanel" aria-live="polite"></section>
+        <p class="interaction-disclosure" data-i18n="exploreAiDisclosure">Explore calculates this result in your browser from your answers and MapKAI's rules. It is not an AI-generated diagnosis. If you copy the optional prompt below into your own AI tool, that separate service receives what you choose to paste.</p>
       </section>
 
       <section class="page stories-page" id="stories" data-page="/stories">
@@ -621,6 +665,9 @@
           <p class="eyebrow">EMBA</p>
           <h1>EMBA learning</h1>
           <p>Start with Corporate Finance, with more subjects to be added over time.</p>
+          <h2 class="emba-private-learning-title" data-i18n="embaPrivateLearningTitle">Private Learning Space</h2>
+          <p class="transparency-notice emba-private-learning-copy" data-i18n="embaPrivateLearningCopy">A private learning space for Leo and his EMBA friends, created to support course preparation, study, and discussion. Content may be generated or assisted by AI and should not be considered an official course resource.</p>
+          <p class="transparency-notice emba-notice" data-i18n="embaNotice">EMBA is a MapKAI learning-path label for executive and business learning. It is not a university degree, accreditation, or claim of affiliation.</p>
         </div>
         <div class="emba-course-grid" id="embaCourseGrid"></div>
       </section>
@@ -638,10 +685,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.207"></script>
-    <script src="/content/management-column.js?v=0.1.207"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.207"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.207"></script>
-    <script src="/script.js?v=0.1.207"></script>
+    <script src="/content/field-fables.js?v=0.1.213"></script>
+    <script src="/content/management-column.js?v=0.1.213"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.213"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.213"></script>
+    <script src="/script.js?v=0.1.213"></script>
   </body>
 </html>
