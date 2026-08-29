@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.205";
+const appVersion = "0.1.207";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -343,6 +343,17 @@ const uiText = {
     mapStateSnow: "Sand Emerging",
     mapStateLand: "Trees Familiar",
     mapStateGreen: "Oasis Active",
+    mapOpenField: "Open this field",
+    mapCardClose: "Close",
+    mapZoomIn: "Zoom in",
+    mapZoomOut: "Zoom out",
+    mapResetView: "Whole map",
+    mapCanvasLabel: "Knowledge map. Arrow keys move between islands, Enter opens one.",
+    mapScrollHint: "Hold \u2318 or Ctrl and scroll to zoom",
+    mapHint: "Click an island \u00b7 drag to pan \u00b7 scroll to zoom",
+    mapPreviewShow: "Show the finished map",
+    mapPreviewHide: "Show my map",
+    mapPreviewNote: "Preview \u2014 this is the map fully explored. Your own starts at open water.",
     goCategories: "Continue Exploring",
     goLearning: "Browse Fields",
     quickMirrorTitle: "Quick Mirror",
@@ -781,6 +792,17 @@ const uiText = {
     mapStateSnow: "荒沙 初现",
     mapStateLand: "草木 熟悉",
     mapStateGreen: "绿洲 激活",
+    mapOpenField: "进入这个领域",
+    mapCardClose: "关闭",
+    mapZoomIn: "放大",
+    mapZoomOut: "缩小",
+    mapResetView: "回到全图",
+    mapCanvasLabel: "知识地图。方向键在岛屿之间移动，回车进入。",
+    mapScrollHint: "按住 \u2318 或 Ctrl 滚动即可缩放",
+    mapHint: "点击岛屿 \u00b7 拖动平移 \u00b7 滚轮缩放",
+    mapPreviewShow: "看完整绿洲的样子",
+    mapPreviewHide: "回到我的地图",
+    mapPreviewNote: "预览 \u2014 这是完全探索后的样子。你自己的地图从汪洋开始。",
     goCategories: "继续探索",
     goLearning: "浏览领域",
     quickMirrorTitle: "30秒思维镜像",
@@ -1147,18 +1169,21 @@ let quickMirrorState = {
 // fixed seed, so a subject always has the same coastline for every visitor.
 const mapDesignWidth = 1100;
 const mapDesignHeight = 619;
+// `r` is the marker radius the name plates, rings and bursts hang off.
+// `lobe` is how far this field's share of the continent reaches — much wider,
+// because neighbouring lobes have to overlap into one landmass.
 const mapIslandPlacements = {
-  "00": { x: 150, y: 150, r: 72, seed: 9107 },
-  "01": { x: 340, y: 120, r: 62, seed: 2264 },
-  "02": { x: 520, y: 165, r: 70, seed: 5518 },
-  "03": { x: 700, y: 120, r: 64, seed: 7731 },
-  "04": { x: 900, y: 175, r: 72, seed: 3390 },
-  "05": { x: 185, y: 335, r: 68, seed: 8842 },
-  "06": { x: 390, y: 355, r: 72, seed: 1476 },
-  "07": { x: 600, y: 330, r: 66, seed: 6053 },
-  "08": { x: 170, y: 495, r: 68, seed: 4287 },
-  "09": { x: 390, y: 510, r: 62, seed: 9964 },
-  "10": { x: 600, y: 490, r: 66, seed: 3115 },
+  "00": { x: 150, y: 150, r: 72, lobe: 122, seed: 9107 },
+  "01": { x: 340, y: 120, r: 62, lobe: 114, seed: 2264 },
+  "02": { x: 520, y: 165, r: 70, lobe: 118, seed: 5518 },
+  "03": { x: 700, y: 120, r: 64, lobe: 114, seed: 7731 },
+  "04": { x: 900, y: 175, r: 72, lobe: 122, seed: 3390 },
+  "05": { x: 185, y: 335, r: 68, lobe: 118, seed: 8842 },
+  "06": { x: 390, y: 355, r: 72, lobe: 124, seed: 1476 },
+  "07": { x: 600, y: 330, r: 66, lobe: 118, seed: 6053 },
+  "08": { x: 170, y: 495, r: 68, lobe: 116, seed: 4287 },
+  "09": { x: 390, y: 510, r: 62, lobe: 114, seed: 9964 },
+  "10": { x: 600, y: 490, r: 66, lobe: 118, seed: 3115 },
 };
 // mastery level -> what the island looks like
 //   ocean  open water, a buoy marks the unsurveyed position
@@ -1192,6 +1217,10 @@ const mapPalettes = {
     ink: "#3A2E20", inkSoft: "rgba(58, 46, 32, 0.42)",
     shade: "rgba(41, 60, 62, 0.22)", accent: "#E08A3C",
     vignette: "rgba(20, 60, 70, 0.22)", grain: 0.03, grainTone: 60,
+    shoal: "#CFEDDF", wetSand: "#DCBB84", scrub: "#B8C583",
+    forest: "#3C7A45", forestDeep: "#255536",
+    rock: "#A79781", rockLit: "#C6B79E", peak: "#F2EFE6",
+    contour: "#4A3A24", coastLine: "#33463F",
   },
   dark: {
     seaDeep: "#0A3348", seaMid: "#14506A", seaShallow: "#257F9B", seaShore: "#3AA3BC",
@@ -1204,6 +1233,10 @@ const mapPalettes = {
     ink: "#EFE3CE", inkSoft: "rgba(239, 227, 206, 0.40)",
     shade: "rgba(0, 12, 20, 0.42)", accent: "#F0B45E",
     vignette: "rgba(3, 18, 30, 0.34)", grain: 0.045, grainTone: 255,
+    shoal: "#5E9FA6", wetSand: "#9A7C51", scrub: "#8A9663",
+    forest: "#2C5A36", forestDeep: "#16351F",
+    rock: "#786B59", rockLit: "#9A8B74", peak: "#D6D2C6",
+    contour: "#0A1412", coastLine: "#07171C",
   },
 };
 
@@ -15002,6 +15035,18 @@ function applyLanguage() {
     const [className, label] = legendItems[index];
     target.innerHTML = `<i class="${className}"></i> ${label}`;
   });
+  if (canvas) canvas.setAttribute("aria-label", t("mapCanvasLabel"));
+  setText(".map-scroll-hint", t("mapScrollHint"));
+  setText(".map-hint", t("mapHint"));
+  const mapZoomLabels = { in: "mapZoomIn", out: "mapZoomOut", reset: "mapResetView" };
+  document.querySelectorAll("[data-map-zoom]").forEach((button) => {
+    const key = mapZoomLabels[button.dataset.mapZoom];
+    if (!key) return;
+    button.setAttribute("aria-label", t(key));
+    button.setAttribute("title", t(key));
+  });
+  if (mapSelected) mapShowCard(mapSelected);
+  mapUpdatePreviewControl();
   setText(".categories-page .section-heading .eyebrow", t("categoriesEyebrow"));
   setText(".categories-page .section-heading h1", t("categoriesTitle"));
   setText(".categories-page .section-heading p:not(.eyebrow)", t("categoriesCopy"));
@@ -17693,7 +17738,6 @@ function renderLearning() {
    readable in greyscale and for every kind of colour vision.
    ========================================================================== */
 
-const mapSamples = 60;
 const mapShapeCache = {};
 const mapPointerState = { hover: null };
 let mapBaseCanvas = null;
@@ -17705,6 +17749,35 @@ let mapListenersBound = false;
 let mapGrainPattern = null;
 let mapGrainTheme = null;
 let mapResizeObserver = null;
+
+/* The map is a camera over a fixed 1100x619 design space. Everything the user
+   does — wheel, drag, pinch, arrow keys — moves the camera target; the frame
+   loop eases the live camera toward it, so no interaction ever snaps. */
+const mapMinZoom = 1;
+const mapMaxZoom = 2.9;
+const mapCamera = {
+  x: mapDesignWidth / 2, y: mapDesignHeight / 2, zoom: 1,
+  tx: mapDesignWidth / 2, ty: mapDesignHeight / 2, tz: 1,
+};
+const mapLevelRank = { ocean: 0, snow: 1, land: 2, green: 3 };
+// One entry per island: its own hover lift, entrance, level-up pop and bob phase,
+// so islands animate independently instead of the whole map redrawing as a unit.
+const mapIslandFx = {};
+const mapBursts = [];
+const mapSpriteCache = new Map();
+const mapDrag = { id: null, panning: false, travel: 0, lastX: 0, lastY: 0 };
+const mapPinch = { active: false, distance: 0, zoom: 1 };
+const mapParallax = { x: 0, y: 0, tx: 0, ty: 0 };
+let mapSpriteSignature = "";
+let mapEntranceAt = 0;
+let mapLastFrame = 0;
+let mapWasVisible = false;
+let mapSelected = null;
+let mapTipEl = null;
+let mapCardEl = null;
+let mapControlsEl = null;
+let mapTipSize = { width: 0, height: 0 };
+let mapKeyIndex = -1;
 
 function mapPalette() {
   return mapPalettes[currentTheme === "dark" ? "dark" : "light"];
@@ -17724,221 +17797,47 @@ function mapRandom(seed) {
   };
 }
 
-// A closed radial signal: low frequencies with generous amplitude give the
-// rounded, hand-drawn silhouette a survey coastline would not have.
-function mapBlob(seed, radius, squash, harmonicCount) {
-  const random = mapRandom(seed);
-  const harmonics = [];
-  for (let index = 0; index < harmonicCount; index += 1) {
-    harmonics.push({
-      frequency: 2 + index + Math.floor(random() * 2),
-      amplitude: (0.19 / (index + 1)) * (0.7 + random() * 0.6),
-      phase: random() * Math.PI * 2,
-    });
-  }
-  const points = [];
-  for (let index = 0; index < mapSamples; index += 1) {
-    const theta = (index / mapSamples) * Math.PI * 2;
-    let magnitude = 1;
-    for (const harmonic of harmonics) {
-      magnitude += harmonic.amplitude * Math.sin(harmonic.frequency * theta + harmonic.phase);
-    }
-    magnitude = Math.max(0.58, magnitude);
-    points.push([
-      Math.cos(theta) * radius * magnitude,
-      Math.sin(theta) * radius * magnitude * squash,
-    ]);
-  }
-  return points;
-}
-
+// What survives of the old hand-drawn shapes: how squat the island sits in
+// plan, and where its inland basin is. The coastline itself now comes out of
+// the elevation model instead of being described here.
 function mapShape(code) {
   if (mapShapeCache[code]) return mapShapeCache[code];
   const placement = mapIslandPlacements[code];
   if (!placement) return null;
   const random = mapRandom(placement.seed ^ 0x77);
   const squash = 0.74 + random() * 0.16;
-  const scatter = (count, maxRadius, seed) => {
-    const pick = mapRandom(seed);
-    const points = [];
-    for (let index = 0; index < count; index += 1) {
-      const theta = pick() * Math.PI * 2;
-      const radius = Math.sqrt(pick()) * maxRadius;
-      points.push([
-        Math.cos(theta) * placement.r * radius,
-        Math.sin(theta) * placement.r * radius * squash,
-      ]);
-    }
-    return points;
-  };
   const poolRandom = mapRandom(placement.seed ^ 0x5f);
   const poolTheta = poolRandom() * Math.PI * 2;
-  const hutRandom = mapRandom(placement.seed ^ 0x6a);
-  const hutTheta = hutRandom() * Math.PI * 2;
 
   mapShapeCache[code] = {
     squash,
-    coast: mapBlob(placement.seed, placement.r, squash, 3),
-    green: mapBlob(placement.seed ^ 0xa5, placement.r * 0.8, squash * 1.02, 3),
-    trees: scatter(9, 0.52, placement.seed ^ 0x1b),
-    palms: scatter(4, 0.6, placement.seed ^ 0x2c),
-    blooms: scatter(16, 0.58, placement.seed ^ 0x3d),
-    dunes: scatter(5, 0.55, placement.seed ^ 0x4e),
     pool: [
       Math.cos(poolTheta) * placement.r * 0.3,
       Math.sin(poolTheta) * placement.r * 0.24,
       placement.r * (0.2 + poolRandom() * 0.07),
     ],
-    hut: [
-      Math.cos(hutTheta) * placement.r * 0.4,
-      Math.sin(hutTheta) * placement.r * 0.34,
-    ],
   };
   return mapShapeCache[code];
 }
 
-function mapCurve(context, centerX, centerY, points, scale) {
-  context.beginPath();
-  const at = (index) => {
-    const point = points[(index + points.length) % points.length];
-    return [centerX + point[0] * scale, centerY + point[1] * scale];
-  };
-  const first = at(0);
-  const second = at(1);
-  context.moveTo((first[0] + second[0]) / 2, (first[1] + second[1]) / 2);
-  for (let index = 1; index <= points.length; index += 1) {
-    const current = at(index);
-    const next = at(index + 1);
-    context.quadraticCurveTo(current[0], current[1], (current[0] + next[0]) / 2, (current[1] + next[1]) / 2);
-  }
-  context.closePath();
-}
-
 function mapHitTest(code, pointerX, pointerY) {
-  const placement = mapIslandPlacements[code];
-  const shape = mapShape(code);
-  if (!placement || !shape) return false;
-  const pad = (mapChallengeProgress[code] || "ocean") === "ocean" ? 0.95 : 1.16;
-  const points = shape.coast;
-  let inside = false;
-  for (let i = 0, j = points.length - 1; i < points.length; j = i += 1) {
-    const xi = placement.x + points[i][0] * pad;
-    const yi = placement.y + points[i][1] * pad;
-    const xj = placement.x + points[j][0] * pad;
-    const yj = placement.y + points[j][1] * pad;
-    if ((yi > pointerY) !== (yj > pointerY) && pointerX < ((xj - xi) * (pointerY - yi)) / (yj - yi) + xi) {
-      inside = !inside;
-    }
-  }
-  return inside;
-}
-
-function mapSubjectAt(event) {
-  if (!canvas) return null;
-  const rect = canvas.getBoundingClientRect();
-  if (!rect.width || !rect.height) return null;
-  const pointerX = ((event.clientX - rect.left) / rect.width) * mapDesignWidth;
-  const pointerY = ((event.clientY - rect.top) / rect.height) * mapDesignHeight;
-  const codes = categories.map((category) => category.code).filter((code) => mapIslandPlacements[code]);
-  for (let index = codes.length - 1; index >= 0; index -= 1) {
-    if (mapHitTest(codes[index], pointerX, pointerY)) return codes[index];
-  }
-  return null;
+  return mapTerrainHit(code, pointerX, pointerY);
 }
 
 /* ---------- painterly primitives ---------- */
 
-function mapSoftShadow(context, blur, offsetY, color) {
+function mapSoftShadow(context, blur, offsetY, color, offsetX) {
   context.shadowColor = color;
   context.shadowBlur = blur;
   context.shadowOffsetY = offsetY;
+  context.shadowOffsetX = offsetX || 0;
 }
 
 function mapClearShadow(context) {
   context.shadowColor = "transparent";
   context.shadowBlur = 0;
   context.shadowOffsetY = 0;
-}
-
-function mapPuff(context, x, y, radius, dark, lit) {
-  context.fillStyle = dark;
-  context.beginPath();
-  context.arc(x, y, radius, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = lit;
-  context.beginPath();
-  context.arc(x - radius * 0.24, y - radius * 0.28, radius * 0.68, 0, Math.PI * 2);
-  context.fill();
-}
-
-function mapTree(context, x, y, size, palette) {
-  context.fillStyle = palette.sandShade;
-  context.globalAlpha = 0.28;
-  context.beginPath();
-  context.ellipse(x + size * 0.5, y + size * 0.75, size * 1.05, size * 0.34, 0, 0, Math.PI * 2);
-  context.fill();
-  context.globalAlpha = 1;
-  context.strokeStyle = palette.canopy;
-  context.lineWidth = size * 0.3;
-  context.lineCap = "round";
-  context.beginPath();
-  context.moveTo(x, y + size * 0.7);
-  context.lineTo(x, y + size * 0.05);
-  context.stroke();
-  mapPuff(context, x, y - size * 0.35, size * 0.95, palette.canopy, palette.canopyLit);
-  mapPuff(context, x - size * 0.62, y + size * 0.05, size * 0.62, palette.canopy, palette.canopyLit);
-  mapPuff(context, x + size * 0.6, y - size * 0.02, size * 0.58, palette.canopy, palette.canopyLit);
-}
-
-function mapPalm(context, x, y, size, palette) {
-  context.fillStyle = palette.sandShade;
-  context.globalAlpha = 0.26;
-  context.beginPath();
-  context.ellipse(x + size * 0.4, y + size * 0.9, size * 0.9, size * 0.3, 0, 0, Math.PI * 2);
-  context.fill();
-  context.globalAlpha = 1;
-  context.strokeStyle = palette.sandShade;
-  context.lineWidth = size * 0.22;
-  context.lineCap = "round";
-  context.beginPath();
-  context.moveTo(x, y + size * 0.85);
-  context.quadraticCurveTo(x + size * 0.22, y + size * 0.1, x + size * 0.1, y - size * 0.5);
-  context.stroke();
-  const tipX = x + size * 0.1;
-  const tipY = y - size * 0.5;
-  for (let index = 0; index < 5; index += 1) {
-    const angle = -2.6 + index * 0.85;
-    context.fillStyle = index % 2 ? palette.canopy : palette.canopyLit;
-    context.beginPath();
-    context.ellipse(
-      tipX + Math.cos(angle) * size * 0.62,
-      tipY + Math.sin(angle) * size * 0.4,
-      size * 0.66, size * 0.22, angle, 0, Math.PI * 2,
-    );
-    context.fill();
-  }
-}
-
-function mapHut(context, x, y, size, palette) {
-  context.fillStyle = palette.sandShade;
-  context.globalAlpha = 0.3;
-  context.beginPath();
-  context.ellipse(x + size * 0.3, y + size * 0.85, size * 1.1, size * 0.32, 0, 0, Math.PI * 2);
-  context.fill();
-  context.globalAlpha = 1;
-  context.fillStyle = palette.wall;
-  roundRect(context, x - size * 0.62, y - size * 0.1, size * 1.24, size * 0.92, size * 0.16);
-  context.fill();
-  context.fillStyle = palette.roof;
-  context.beginPath();
-  context.moveTo(x - size * 0.92, y - size * 0.06);
-  context.quadraticCurveTo(x, y - size * 1.15, x + size * 0.92, y - size * 0.06);
-  context.closePath();
-  context.fill();
-  context.fillStyle = palette.sandShade;
-  context.beginPath();
-  context.arc(x, y + size * 0.42, size * 0.17, 0, Math.PI * 2);
-  context.fill();
+  context.shadowOffsetX = 0;
 }
 
 /* ---------- water ---------- */
@@ -17960,21 +17859,20 @@ function mapSea(context, palette) {
   context.globalAlpha = 1;
 }
 
+// Only reached when WebGL is unavailable: a plain shelf under each island,
+// since the shader that would have shaped it from the terrain is not running.
 function mapShallows(context, code, palette) {
   const placement = mapIslandPlacements[code];
   const shape = mapShape(code);
   if (!placement || !shape) return;
-  const rings = [[1.52, 0.2], [1.32, 0.3], [1.15, 0.46]];
+  const rings = [[1.5, 0.2], [1.3, 0.3], [1.12, 0.46], [0.96, 0.6]];
   for (const [scale, alpha] of rings) {
     context.globalAlpha = alpha;
-    context.fillStyle = palette.seaShallow;
-    mapCurve(context, placement.x, placement.y, shape.coast, scale);
+    context.fillStyle = scale > 1 ? palette.seaShallow : palette.seaShore;
+    context.beginPath();
+    context.ellipse(placement.x, placement.y, placement.r * scale, placement.r * scale * shape.squash, 0, 0, Math.PI * 2);
     context.fill();
   }
-  context.globalAlpha = 0.6;
-  context.fillStyle = palette.seaShore;
-  mapCurve(context, placement.x, placement.y, shape.coast, 1.06);
-  context.fill();
   context.globalAlpha = 1;
 }
 
@@ -18040,29 +17938,34 @@ function mapDrawClouds(context, palette, time) {
   }
 }
 
+// The clouds already drift; dropping their shadows onto the map is what makes
+// the light feel like it is moving over something, not just over a picture.
+function mapDrawCloudShadows(context, palette, time) {
+  context.save();
+  for (const cloud of mapClouds) {
+    const drift = ((cloud.x + time * cloud.speed) % (mapDesignWidth + 340)) - 170;
+    const x = drift + cloud.size * 1.5;
+    const y = cloud.y + cloud.size * 2.6;
+    const radius = cloud.size * 2.5;
+    const shadow = context.createRadialGradient(x, y, radius * 0.15, x, y, radius);
+    shadow.addColorStop(0, palette.shade);
+    shadow.addColorStop(1, "transparent");
+    context.globalAlpha = cloud.opacity * (currentTheme === "dark" ? 0.22 : 0.4);
+    context.fillStyle = shadow;
+    context.beginPath();
+    context.ellipse(x, y, radius, radius * 0.62, 0, 0, Math.PI * 2);
+    context.fill();
+  }
+  context.restore();
+}
+
 function mapBoat(context, palette, time) {
-  // tacks back and forth across open water, so it never jumps on wrap
-  const phase = time * 0.00022;
-  const x = 880 + Math.sin(phase) * 120;
-  const y = 470 + Math.sin(time * 0.0016) * 5;
-  const facing = Math.cos(phase) >= 0 ? 1 : -1;
+  const boat = mapBoatAt(time);
   const size = 17;
   context.save();
-  context.translate(x, y);
-  context.scale(facing, 1);
+  context.translate(boat.x, boat.y);
+  context.scale(boat.facing, 1);
   context.rotate(Math.sin(time * 0.0016) * 0.05);
-
-  context.strokeStyle = palette.foam;
-  context.globalAlpha = 0.4;
-  context.lineWidth = 2;
-  context.lineCap = "round";
-  for (let index = 1; index <= 2; index += 1) {
-    context.beginPath();
-    context.moveTo(-size * (0.9 + index * 0.7), size * 0.34);
-    context.quadraticCurveTo(-size * (0.6 + index * 0.7), size * 0.16, -size * (0.3 + index * 0.7), size * 0.34);
-    context.stroke();
-  }
-  context.globalAlpha = 1;
 
   context.fillStyle = palette.foam;
   context.beginPath();
@@ -18089,158 +17992,43 @@ function mapBoat(context, palette, time) {
 
 /* ---------- one island, in four stages ---------- */
 
-function drawMapIsland(context, code, level, palette) {
-  const placement = mapIslandPlacements[code];
-  const shape = mapShape(code);
-  if (!placement || !shape) return;
-
-  if (level === "ocean") {
-    // an unsurveyed position still shows something, so the subject stays clickable
-    context.globalAlpha = 0.3;
-    context.fillStyle = palette.seaDeep;
-    mapCurve(context, placement.x, placement.y + 5, shape.coast, 0.88);
-    context.fill();
-    context.globalAlpha = 0.2;
-    context.fillStyle = palette.seaShallow;
-    mapCurve(context, placement.x, placement.y, shape.coast, 0.72);
-    context.fill();
-    context.globalAlpha = 1;
-
-    const buoyY = placement.y - 4;
-    context.fillStyle = palette.foam;
-    context.globalAlpha = 0.5;
-    context.beginPath();
-    context.ellipse(placement.x, buoyY + 11, 13, 4.5, 0, 0, Math.PI * 2);
-    context.fill();
-    context.globalAlpha = 1;
-    context.fillStyle = palette.accent;
-    context.beginPath();
-    context.moveTo(placement.x, buoyY - 13);
-    context.lineTo(placement.x + 7, buoyY + 7);
-    context.lineTo(placement.x - 7, buoyY + 7);
-    context.closePath();
-    context.fill();
-    context.fillStyle = palette.foam;
-    context.beginPath();
-    context.arc(placement.x, buoyY - 14, 3.6, 0, Math.PI * 2);
-    context.fill();
-    return;
-  }
-
-  context.save();
-  context.translate(placement.x, placement.y);
-
-  mapSoftShadow(context, 24, 12, palette.shade);
-  context.fillStyle = palette.sand;
-  mapCurve(context, 0, 0, shape.coast, 1);
-  context.fill();
-  mapClearShadow(context);
-
-  context.fillStyle = palette.sandLit;
-  mapCurve(context, -2.5, -3, shape.coast, 0.965);
-  context.fill();
-  context.fillStyle = palette.sand;
-  mapCurve(context, 1, 2, shape.coast, 0.9);
-  context.fill();
-
-  if (level === "snow") {
-    context.strokeStyle = palette.sandShade;
-    context.globalAlpha = 0.55;
-    context.lineWidth = 3.2;
-    context.lineCap = "round";
-    for (const [duneX, duneY] of shape.dunes) {
-      context.beginPath();
-      context.moveTo(duneX - 14, duneY);
-      context.quadraticCurveTo(duneX, duneY - 7, duneX + 14, duneY);
-      context.stroke();
-    }
-    context.globalAlpha = 1;
-    const [shrubX, shrubY] = shape.dunes[0];
-    context.lineWidth = 2.2;
-    for (let index = -1; index <= 1; index += 1) {
-      context.beginPath();
-      context.moveTo(shrubX, shrubY + 6);
-      context.quadraticCurveTo(shrubX + index * 5, shrubY - 2, shrubX + index * 9, shrubY - 11);
-      context.stroke();
-    }
-    context.restore();
-    return;
-  }
-
-  // grass sits inside the sand, so a beach always shows around it
-  context.fillStyle = palette.grass;
-  mapCurve(context, 0, 0, shape.green, 1);
-  context.fill();
-  context.fillStyle = palette.grassLit;
-  mapCurve(context, -3, -4, shape.green, 0.86);
-  context.fill();
-
-  if (level === "green") {
-    const [poolX, poolY, poolRadius] = shape.pool;
-    const water = context.createRadialGradient(poolX - poolRadius * 0.3, poolY - poolRadius * 0.3, poolRadius * 0.1, poolX, poolY, poolRadius);
-    water.addColorStop(0, palette.poolLit);
-    water.addColorStop(1, palette.pool);
-    context.fillStyle = water;
-    context.beginPath();
-    context.ellipse(poolX, poolY, poolRadius, poolRadius * 0.72, 0, 0, Math.PI * 2);
-    context.fill();
-    context.strokeStyle = palette.foam;
-    context.globalAlpha = 0.65;
-    context.lineWidth = 1.8;
-    context.beginPath();
-    context.ellipse(poolX - poolRadius * 0.25, poolY - poolRadius * 0.22, poolRadius * 0.4, poolRadius * 0.16, -0.4, 0.6, 2.4);
-    context.stroke();
-    context.globalAlpha = 1;
-
-    for (const [bloomX, bloomY] of shape.blooms) {
-      context.fillStyle = (bloomX + bloomY) % 2 > 0 ? palette.bloomA : palette.bloomB;
-      context.beginPath();
-      context.arc(bloomX, bloomY, 2.3, 0, Math.PI * 2);
-      context.fill();
-    }
-  }
-
-  const canopy = level === "green" ? shape.trees : shape.trees.slice(0, 5);
-  const items = canopy.map((point) => ({ point, kind: "tree" }));
-  if (level === "green") shape.palms.forEach((point) => items.push({ point, kind: "palm" }));
-  items.sort((left, right) => left.point[1] - right.point[1]);
-  for (const item of items) {
-    const size = placement.r * (item.kind === "palm" ? 0.2 : 0.155);
-    if (item.kind === "palm") mapPalm(context, item.point[0], item.point[1], size, palette);
-    else mapTree(context, item.point[0], item.point[1], size, palette);
-  }
-
-  if (level === "green") mapHut(context, shape.hut[0], shape.hut[1], placement.r * 0.15, palette);
-  context.restore();
-}
-
-function drawMapPlate(context, code, level, palette) {
+function drawMapPlate(context, code, level, palette, fx, offsetY) {
   const placement = mapIslandPlacements[code];
   if (!placement) return;
   const labels = mapIslandLabels[code];
   const label = labels ? labels[currentLanguage === "zh" ? "zh" : "en"] : getSubjectTitle(code);
   if (!label) return;
+  const appear = fx ? mapClamp(fx.appear * 1.4, 0, 1) : 1;
+  if (appear <= 0.02) return;
+  const focus = fx ? Math.max(fx.lift, fx.focus) : 0;
+  const anchorY = placement.y + placement.r * (level === "ocean" ? 0.8 : 0.98) + 18 + (offsetY || 0) * 0.55;
+
   context.save();
+  context.globalAlpha = appear;
+  context.translate(placement.x, anchorY);
+  // a name plate is a label, not scenery: it keeps one size however far you zoom
+  context.scale(1 / mapCamera.zoom, 1 / mapCamera.zoom);
+  context.translate(0, -focus * 3);
   context.font = `600 ${currentLanguage === "zh" ? 15 : 14}px "Inter", "PingFang SC", system-ui, sans-serif`;
   const textWidth = context.measureText(label).width;
-  const plateX = placement.x;
-  const plateY = placement.y + placement.r * (level === "ocean" ? 0.8 : 0.98) + 18;
   const plateWidth = textWidth + 22;
   const plateHeight = 26;
 
-  mapSoftShadow(context, 10, 4, palette.shade);
+  mapSoftShadow(context, 10 + focus * 10, 4 + focus * 3, palette.shade);
   context.fillStyle = palette.plate;
-  roundRect(context, plateX - plateWidth / 2, plateY - plateHeight / 2, plateWidth, plateHeight, 13);
+  roundRect(context, -plateWidth / 2, -plateHeight / 2, plateWidth, plateHeight, 13);
   context.fill();
   mapClearShadow(context);
-  context.strokeStyle = palette.plateEdge;
-  context.lineWidth = 1;
+  context.strokeStyle = focus > 0.03 ? palette.accent : palette.plateEdge;
+  context.lineWidth = 1 + focus * 0.6;
+  context.globalAlpha = appear * (focus > 0.03 ? 0.3 + focus * 0.7 : 1);
   context.stroke();
 
-  context.fillStyle = level === "ocean" ? palette.inkSoft : palette.ink;
+  context.globalAlpha = appear;
+  context.fillStyle = level === "ocean" && focus < 0.35 ? palette.inkSoft : palette.ink;
   context.textAlign = "center";
   context.textBaseline = "middle";
-  context.fillText(label, plateX, plateY + 1);
+  context.fillText(label, 0, 1);
   context.restore();
 }
 
@@ -18262,6 +18050,1449 @@ function drawFounderMapLabels(context, palette) {
     context.fillText(category.code, placement.x, placement.y + 1);
   }
   context.restore();
+}
+
+/* ==========================================================================
+   The continent
+   --------------------------------------------------------------------------
+   Eleven lobes of one landmass, and the isthmuses between them. How much of a
+   lobe stands above water is decided by how far this reader has explored that
+   subject, so the map is not a picture of the taxonomy — it is a record of
+   what has been surveyed. An unexplored field is a shoal visible under the
+   water; a mastered one is high ground with a lake on it.
+
+   The isthmus between two fields only surfaces once BOTH are above water,
+   which turns a cross-disciplinary link into something earned rather than
+   something the design asserts.
+
+   Three grids do the work. The noise grid is the shape of the ground and never
+   changes. The mask and lushness grids say how much of it is above water and
+   how green, and are the only things a level-up has to recompute — which is
+   why a subject can be unlocked without rebuilding the world from scratch.
+   ========================================================================== */
+
+const mapSeaLevel = 0.3;
+const mapTerrainRamps = new Map();
+
+// The real mechanic, unchanged: an unexplored field is open water, and answering
+// questions raises it through bare sand and woodland into settled country.
+const mapLobeRise = { ocean: 0.16, snow: 0.62, land: 0.84, green: 1 };
+const mapLobeLush = { ocean: 0, snow: 0.1, land: 0.62, green: 1 };
+
+/**
+ * Showcase mode draws the world as it looks fully explored, without touching a
+ * single answer. It is what you hand someone who has never seen MapKAI — an
+ * empty sea is a poor introduction to a knowledge map — while the reader's own
+ * map still begins, as it should, at open water.
+ */
+let mapPreviewMode = false;
+
+/** The level the renderer should draw. Progress itself is never rewritten. */
+function mapRenderLevel(code) {
+  return mapPreviewMode ? "green" : mapLevelOf(code);
+}
+
+/** True when nothing has been answered yet, which is when the preview earns its keep. */
+function mapNothingExplored() {
+  return mapCodes().every((code) => mapLevelOf(code) === "ocean");
+}
+
+// Once the reader has an opinion about the preview, stop having one for them.
+let mapPreviewTouched = false;
+
+function mapSyncPreviewDefault() {
+  if (mapPreviewTouched) return;
+  mapPreviewMode = mapNothingExplored();
+}
+
+function mapSetPreview(enabled) {
+  if (mapPreviewMode === enabled) return;
+  mapPreviewMode = enabled;
+  mapPreviewTouched = true;
+  mapInvalidateContinent();
+  mapUpdatePreviewControl();
+  requestKnowledgeMapFrame();
+}
+
+function mapUpdatePreviewControl() {
+  const button = document.getElementById("mapPreview");
+  const note = document.getElementById("mapPreviewNote");
+  if (button) button.textContent = mapPreviewMode ? t("mapPreviewHide") : t("mapPreviewShow");
+  if (note) {
+    note.textContent = t("mapPreviewNote");
+    note.hidden = !mapPreviewMode;
+  }
+}
+
+/** Which fields touch. Each becomes a land bridge once both ends are explored. */
+const mapContinentLinks = [
+  ["00", "01"], ["00", "02"], ["00", "05"], ["00", "06"],
+  ["01", "02"], ["01", "09"],
+  ["02", "03"],
+  ["03", "04"], ["03", "09"],
+  ["04", "07"], ["04", "10"],
+  ["05", "06"], ["05", "08"],
+  ["06", "07"],
+  ["07", "10"],
+  ["08", "09"],
+  ["09", "10"],
+];
+
+const mapLinkWidth = 46;
+const mapNoiseCols = 440;
+const mapNoiseRows = 248;
+const mapMaskCols = 220;
+const mapMaskRows = 124;
+
+let mapNoiseGrid = null;
+let mapMaskGrid = null;
+let mapLushGrid = null;
+let mapContinentStale = true;
+let mapContinentSignature = "";
+
+function mapHash2(x, y, seed) {
+  let h = Math.imul(x, 374761393) + Math.imul(y, 668265263) + Math.imul(seed, 1442695041);
+  h = Math.imul(h ^ (h >>> 13), 1274126177);
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+}
+
+function mapValueNoise(x, y, seed) {
+  const ix = Math.floor(x);
+  const iy = Math.floor(y);
+  const fx = x - ix;
+  const fy = y - iy;
+  const ux = fx * fx * (3 - 2 * fx);
+  const uy = fy * fy * (3 - 2 * fy);
+  const a = mapHash2(ix, iy, seed);
+  const b = mapHash2(ix + 1, iy, seed);
+  const c = mapHash2(ix, iy + 1, seed);
+  const d = mapHash2(ix + 1, iy + 1, seed);
+  const top = a + (b - a) * ux;
+  const bottom = c + (d - c) * ux;
+  return top + (bottom - top) * uy;
+}
+
+function mapFbm2(x, y, seed, octaves) {
+  let value = 0;
+  let amplitude = 0.5;
+  let total = 0;
+  for (let octave = 0; octave < octaves; octave += 1) {
+    value += amplitude * mapValueNoise(x, y, seed + octave * 131);
+    total += amplitude;
+    x *= 2.03;
+    y *= 2.03;
+    amplitude *= 0.5;
+  }
+  return value / total;
+}
+
+// ridged noise stacks into crests rather than lumps, which is what makes an
+// interior read as mountains instead of as a bumpy pillow
+function mapRidged(x, y, seed, octaves) {
+  let value = 0;
+  let amplitude = 0.5;
+  let total = 0;
+  for (let octave = 0; octave < octaves; octave += 1) {
+    const n = 1 - Math.abs(mapValueNoise(x, y, seed + octave * 977) * 2 - 1);
+    value += amplitude * n * n;
+    total += amplitude;
+    x *= 2.11;
+    y *= 2.11;
+    amplitude *= 0.5;
+  }
+  return value / total;
+}
+
+function mapSmoothStep(edge0, edge1, value) {
+  const t = mapClamp((value - edge0) / (edge1 - edge0), 0, 1);
+  return t * t * (3 - 2 * t);
+}
+
+function mapSegmentDistance(px, py, ax, ay, bx, by) {
+  const dx = bx - ax;
+  const dy = by - ay;
+  const lengthSquared = dx * dx + dy * dy;
+  const t = lengthSquared === 0 ? 0 : mapClamp(((px - ax) * dx + (py - ay) * dy) / lengthSquared, 0, 1);
+  return Math.hypot(px - (ax + dx * t), py - (ay + dy * t));
+}
+
+/* ---------- the grids ---------- */
+
+function mapBuildNoiseGrid() {
+  if (mapNoiseGrid) return;
+  mapNoiseGrid = new Float32Array(mapNoiseCols * mapNoiseRows);
+  for (let row = 0; row < mapNoiseRows; row += 1) {
+    const y = ((row + 0.5) / mapNoiseRows) * mapDesignHeight;
+    for (let column = 0; column < mapNoiseCols; column += 1) {
+      const x = ((column + 0.5) / mapNoiseCols) * mapDesignWidth;
+      const nx = x * 0.0075;
+      const ny = y * 0.0075;
+      const warp = mapFbm2(nx * 1.6 + 3.1, ny * 1.6 + 7.7, 17, 2) - 0.5;
+      const rolling = mapFbm2(nx + warp * 1.1, ny + warp * 1.1, 5, 4);
+      const peaks = mapRidged(nx * 0.85 + 4.4, ny * 0.85 - 2.2, 91, 3);
+      mapNoiseGrid[row * mapNoiseCols + column] = rolling * 0.55 + peaks * 0.45;
+    }
+  }
+}
+
+/** Rebuilt whenever a subject changes level; everything else is reused. */
+function mapBuildMaskGrid() {
+  if (!mapMaskGrid) {
+    mapMaskGrid = new Float32Array(mapMaskCols * mapMaskRows);
+    mapLushGrid = new Float32Array(mapMaskCols * mapMaskRows);
+  }
+  const codes = mapCodes();
+  const links = mapContinentLinks.filter(([a, b]) => {
+    const levelA = mapRenderLevel(a);
+    const levelB = mapRenderLevel(b);
+    return levelA !== "ocean" && levelB !== "ocean" && mapIslandPlacements[a] && mapIslandPlacements[b];
+  });
+
+  for (let row = 0; row < mapMaskRows; row += 1) {
+    const y = ((row + 0.5) / mapMaskRows) * mapDesignHeight;
+    for (let column = 0; column < mapMaskCols; column += 1) {
+      const x = ((column + 0.5) / mapMaskCols) * mapDesignWidth;
+      // Distances are measured from a warped point, not the real one. Taking
+      // the max of eleven circular falloffs otherwise leaves eleven visible
+      // arcs; displacing the sample first turns them into one ragged coast.
+      const warpX = x + (mapFbm2(x * 0.011 + 3.1, y * 0.011 + 7.7, 41, 3) - 0.5) * 62;
+      const warpY = y + (mapFbm2(x * 0.011 + 9.2, y * 0.011 + 1.3, 67, 3) - 0.5) * 62;
+      let mask = 0;
+      let lushWeight = 0;
+      let lushTotal = 0;
+
+      for (const code of codes) {
+        const placement = mapIslandPlacements[code];
+        const level = mapRenderLevel(code);
+        const distance = Math.hypot(warpX - placement.x, warpY - placement.y) / placement.lobe;
+        if (distance > 1.08) continue;
+        const shape = 1 - mapSmoothStep(0.35, 1.08, distance);
+        if (shape <= 0) continue;
+        const rise = shape * mapLobeRise[level];
+        if (rise > mask) mask = rise;
+        const weight = shape * shape;
+        lushWeight += mapLobeLush[level] * weight;
+        lushTotal += weight;
+      }
+
+      for (const [a, b] of links) {
+        const first = mapIslandPlacements[a];
+        const second = mapIslandPlacements[b];
+        const distance = mapSegmentDistance(warpX, warpY, first.x, first.y, second.x, second.y) / mapLinkWidth;
+        if (distance > 1.05) continue;
+        const shape = 1 - mapSmoothStep(0.4, 1.05, distance);
+        if (shape <= 0) continue;
+        // an isthmus never stands higher than the lower of the two shores
+        const rise = shape * Math.min(mapLobeRise[mapRenderLevel(a)], mapLobeRise[mapRenderLevel(b)]) * 0.86;
+        if (rise > mask) mask = rise;
+        const weight = shape * shape * 0.6;
+        lushWeight += ((mapLobeLush[mapRenderLevel(a)] + mapLobeLush[mapRenderLevel(b)]) / 2) * weight;
+        lushTotal += weight;
+      }
+
+      const index = row * mapMaskCols + column;
+      mapMaskGrid[index] = mask;
+      mapLushGrid[index] = lushTotal > 0 ? lushWeight / lushTotal : 0;
+    }
+  }
+  mapContinentStale = false;
+}
+
+function mapSampleGrid(grid, cols, rows, x, y) {
+  const u = (x / mapDesignWidth) * cols - 0.5;
+  const v = (y / mapDesignHeight) * rows - 0.5;
+  const x0 = mapClamp(Math.floor(u), 0, cols - 1);
+  const y0 = mapClamp(Math.floor(v), 0, rows - 1);
+  const x1 = Math.min(x0 + 1, cols - 1);
+  const y1 = Math.min(y0 + 1, rows - 1);
+  const fx = mapClamp(u - x0, 0, 1);
+  const fy = mapClamp(v - y0, 0, 1);
+  const top = grid[y0 * cols + x0] + (grid[y0 * cols + x1] - grid[y0 * cols + x0]) * fx;
+  const bottom = grid[y1 * cols + x0] + (grid[y1 * cols + x1] - grid[y1 * cols + x0]) * fx;
+  return top + (bottom - top) * fy;
+}
+
+function mapEnsureContinent() {
+  mapBuildNoiseGrid();
+  const signature = `${mapPreviewMode ? "preview" : "live"}|${mapCodes().map((code) => mapLevelOf(code)).join("")}`;
+  if (mapContinentStale || signature !== mapContinentSignature) {
+    mapBuildMaskGrid();
+    mapContinentSignature = signature;
+    return true;
+  }
+  return false;
+}
+
+/** Ground height in design space. Below mapSeaLevel is under water. */
+function mapContinentHeight(x, y) {
+  // the water shader bakes its shore field during start-up, before anything
+  // has asked for the ground, so the grids have to build themselves on demand
+  if (!mapMaskGrid) mapEnsureContinent();
+  const mask = mapSampleGrid(mapMaskGrid, mapMaskCols, mapMaskRows, x, y);
+  if (mask <= 0.001) return 0;
+  const noise = mapSampleGrid(mapNoiseGrid, mapNoiseCols, mapNoiseRows, x, y);
+  const base = (noise * 1.15 + 0.2) * Math.pow(mask, 1.15) * 1.35;
+  // carved before anything reads the field, so the valleys are real valleys
+  return base - mapRiverCarve(x, y);
+}
+
+function mapContinentLushAt(x, y) {
+  if (!mapLushGrid) mapEnsureContinent();
+  return mapSampleGrid(mapLushGrid, mapMaskCols, mapMaskRows, x, y);
+}
+
+/* ---------- land cover ---------- */
+
+function mapMixColor(a, b, amount) {
+  return [
+    a[0] + (b[0] - a[0]) * amount,
+    a[1] + (b[1] - a[1]) * amount,
+    a[2] + (b[2] - a[2]) * amount,
+  ];
+}
+
+function mapRgb(hex) {
+  const rgb = mapHexToRgb(hex);
+  return [rgb[0] * 255, rgb[1] * 255, rgb[2] * 255];
+}
+
+/**
+ * Three ramps — bare, wooded, lush — blended per pixel by how explored the
+ * ground is. Blending rather than switching is what lets an isthmus fade from
+ * sand into forest as the subject on the far side is opened up.
+ */
+function mapTerrainRamp(kind, palette) {
+  const key = `${kind}|${currentTheme === "dark" ? "dark" : "light"}`;
+  const cached = mapTerrainRamps.get(key);
+  if (cached) return cached;
+  const stops = kind === "lush"
+    ? [
+      [0.0, palette.wetSand], [0.05, palette.sandLit], [0.13, palette.scrub],
+      [0.26, palette.grassLit], [0.42, palette.grass], [0.6, palette.forest],
+      [0.78, palette.forestDeep], [0.9, palette.rock], [1.0, palette.peak],
+    ]
+    : kind === "wooded"
+      ? [
+        [0.0, palette.wetSand], [0.06, palette.sandLit], [0.18, palette.sand],
+        [0.32, palette.scrub], [0.52, palette.grass], [0.74, palette.forest],
+        [0.9, palette.rock], [1.0, palette.rockLit],
+      ]
+      : [
+        [0.0, palette.wetSand], [0.08, palette.sandLit], [0.3, palette.sand],
+        [0.55, palette.sandShade], [0.8, palette.rock], [1.0, palette.rockLit],
+      ];
+  const colors = stops.map((stop) => [stop[0], mapRgb(stop[1])]);
+  const ramp = new Uint8ClampedArray(256 * 3);
+  let index = 0;
+  for (let step = 0; step < 256; step += 1) {
+    const t = step / 255;
+    while (index < colors.length - 2 && t > colors[index + 1][0]) index += 1;
+    const [t0, c0] = colors[index];
+    const [t1, c1] = colors[index + 1];
+    const amount = mapClamp((t - t0) / Math.max(t1 - t0, 0.0001), 0, 1);
+    const color = mapMixColor(c0, c1, amount);
+    ramp[step * 3] = color[0];
+    ramp[step * 3 + 1] = color[1];
+    ramp[step * 3 + 2] = color[2];
+  }
+  mapTerrainRamps.set(key, ramp);
+  return ramp;
+}
+
+/** A lake sits in the basin of a fully explored field. */
+function mapLakeFor(code) {
+  if (mapRenderLevel(code) !== "green") return null;
+  const shape = mapShape(code);
+  const placement = mapIslandPlacements[code];
+  if (!shape || !placement) return null;
+  const [x, y, radius] = shape.pool;
+  return { x: placement.x + x * 1.5, y: placement.y + y * 1.5, radius: radius * 2.2 };
+}
+
+function mapTerrainHit(code, designX, designY) {
+  const placement = mapIslandPlacements[code];
+  if (!placement) return false;
+  // the nearest lobe owns the click, so an unsurveyed shoal is still selectable
+  let nearest = null;
+  let best = Infinity;
+  for (const other of mapCodes()) {
+    const spot = mapIslandPlacements[other];
+    const distance = Math.hypot(designX - spot.x, designY - spot.y) / spot.lobe;
+    if (distance < best) {
+      best = distance;
+      nearest = other;
+    }
+  }
+  return nearest === code && best <= 0.98;
+}
+
+/* ---------- baking the continent ---------- */
+
+// the map draws at about 1.15 device pixels per design unit, so baking much
+// beyond that buys softness nobody sees and costs milliseconds everybody does
+const mapContinentPixelsPerUnit = 1.25;
+let mapContinentCanvas = null;
+let mapContinentCtx = null;
+let mapContinentScratch = null;
+const mapContinentBands = 9;
+
+function mapContinentDetail(x, y, height) {
+  if (height <= 0.02) return height;
+  const grain = mapFbm2(x * 0.075 + 2.3, y * 0.075 + 6.1, 0x2f5d, 2) - 0.5;
+  return height + grain * 0.055 * mapSmoothStep(0, 0.22, height);
+}
+
+/**
+ * Paints the continent into one bitmap. A dirty rectangle can be passed so a
+ * level-up repaints only the lobe that changed — the alternative is rebuilding
+ * nine hundred thousand pixels every time a question is answered.
+ */
+function mapRenderContinent(palette, dirty) {
+  const width = Math.ceil(mapDesignWidth * mapContinentPixelsPerUnit);
+  const height = Math.ceil(mapDesignHeight * mapContinentPixelsPerUnit);
+  if (!mapContinentCanvas || mapContinentCanvas.width !== width) {
+    mapContinentCanvas = document.createElement("canvas");
+    mapContinentCanvas.width = width;
+    mapContinentCanvas.height = height;
+    mapContinentCtx = mapContinentCanvas.getContext("2d");
+    mapContinentScratch = null;
+    dirty = null;
+  }
+
+  const left = dirty ? mapClamp(Math.floor(dirty.left * mapContinentPixelsPerUnit), 0, width) : 0;
+  const right = dirty ? mapClamp(Math.ceil(dirty.right * mapContinentPixelsPerUnit), 0, width) : width;
+  const top = dirty ? mapClamp(Math.floor(dirty.top * mapContinentPixelsPerUnit), 0, height) : 0;
+  const bottom = dirty ? mapClamp(Math.ceil(dirty.bottom * mapContinentPixelsPerUnit), 0, height) : height;
+  const spanX = right - left;
+  const spanY = bottom - top;
+  if (spanX <= 0 || spanY <= 0) return mapContinentCanvas;
+
+  const image = mapContinentCtx.createImageData(spanX, spanY);
+  const data = image.data;
+  const bare = mapTerrainRamp("bare", palette);
+  const wooded = mapTerrainRamp("wooded", palette);
+  const lushRamp = mapTerrainRamp("lush", palette);
+  const contour = mapRgb(palette.contour);
+  const contourAlpha = currentTheme === "dark" ? 0.34 : 0.32;
+  const coastInk = mapRgb(palette.coastLine);
+  const lakeDeep = mapRgb(palette.pool);
+  const lakeLit = mapRgb(palette.poolLit);
+  // normalise against a headroom above the tallest ground, not against it: at
+  // the true maximum most of a lush region lands in the rock bands and an
+  // oasis comes out looking like a quarry
+  const span = 1.55 - mapSeaLevel;
+  const step = 1 / mapContinentPixelsPerUnit;
+  const shadeSpan = Math.max(1, Math.round(1.6 / step));
+  const lakes = mapCodes().map((code) => mapLakeFor(code)).filter(Boolean);
+
+  if (!mapContinentScratch || mapContinentScratch.length < spanX * spanY * 2) {
+    mapContinentScratch = new Float32Array(spanX * spanY * 2);
+  }
+  const detailed = mapContinentScratch;
+  const smoothed = mapContinentScratch;
+  const smoothOffset = spanX * spanY;
+
+  for (let row = 0; row < spanY; row += 1) {
+    const y = (top + row + 0.5) * step;
+    for (let column = 0; column < spanX; column += 1) {
+      const x = (left + column + 0.5) * step;
+      const base = mapContinentHeight(x, y);
+      const index = row * spanX + column;
+      smoothed[smoothOffset + index] = base;
+      detailed[index] = mapContinentDetail(x, y, base);
+    }
+  }
+  const at = (buffer, offset, column, row) =>
+    buffer[offset + mapClamp(row, 0, spanY - 1) * spanX + mapClamp(column, 0, spanX - 1)];
+
+  for (let row = 0; row < spanY; row += 1) {
+    const y = (top + row + 0.5) * step;
+    for (let column = 0; column < spanX; column += 1) {
+      const x = (left + column + 0.5) * step;
+      const index = row * spanX + column;
+      const elevation = detailed[index];
+      const coverage = mapSmoothStep(mapSeaLevel - 0.012, mapSeaLevel + 0.006, elevation);
+      const offset = index * 4;
+      if (coverage <= 0.003) {
+        data[offset + 3] = 0;
+        continue;
+      }
+
+      const t = mapClamp((elevation - mapSeaLevel) / span, 0, 1);
+      const slot = (t * 255) | 0;
+      const lush = mapContinentLushAt(x, y);
+      // bare -> wooded -> lush, so exploring a field greens it continuously
+      const low = lush < 0.5 ? bare : wooded;
+      const high = lush < 0.5 ? wooded : lushRamp;
+      const blend = lush < 0.5 ? lush * 2 : (lush - 0.5) * 2;
+      let red = low[slot * 3] + (high[slot * 3] - low[slot * 3]) * blend;
+      let green = low[slot * 3 + 1] + (high[slot * 3 + 1] - low[slot * 3 + 1]) * blend;
+      let blue = low[slot * 3 + 2] + (high[slot * 3 + 2] - low[slot * 3 + 2]) * blend;
+
+      let lakeHere = 0;
+      for (const lake of lakes) {
+        const lakeX = (x - lake.x) / lake.radius;
+        const lakeY = (y - lake.y) / (lake.radius * 0.82);
+        const basin = Math.exp(-(lakeX * lakeX + lakeY * lakeY) * 1.3) * 0.1;
+        const carved = elevation - basin;
+        const surface = mapSeaLevel + 0.02;
+        if (carved >= surface) continue;
+        const depth = mapClamp((surface - carved) / 0.055, 0, 1);
+        const water = mapMixColor(lakeLit, lakeDeep, depth);
+        const edge = mapSmoothStep(0, 0.012, surface - carved);
+        red += (water[0] - red) * edge;
+        green += (water[1] - green) * edge;
+        blue += (water[2] - blue) * edge;
+        lakeHere = Math.max(lakeHere, edge);
+      }
+
+      const slopeX = (at(detailed, 0, column + shadeSpan, row) - at(detailed, 0, column - shadeSpan, row))
+        / (2 * shadeSpan * step);
+      const slopeY = (at(detailed, 0, column, row + shadeSpan) - at(detailed, 0, column, row - shadeSpan))
+        / (2 * shadeSpan * step);
+      const normalX = -slopeX * 62;
+      const normalY = -slopeY * 62;
+      const length = Math.sqrt(normalX * normalX + normalY * normalY + 1);
+      const lambert = (normalX * -0.62 + normalY * -0.62 + 0.48) / length;
+      const shade = mapClamp(0.62 + lambert * 0.72, 0.42, 1.32);
+      const lit = 1 + (shade - 1) * (1 - lakeHere * 0.85);
+      red *= lit;
+      green *= lit;
+      blue *= lit;
+
+      // contours come off the smooth field, or the grain breaks every line
+      const smooth = smoothed[smoothOffset + index];
+      const smoothT = mapClamp((smooth - mapSeaLevel) / span, 0, 1);
+      const level = smoothT * mapContinentBands;
+      const fraction = Math.abs(level - Math.round(level));
+      const gradientX = at(smoothed, smoothOffset, column + 1, row) - at(smoothed, smoothOffset, column - 1, row);
+      const gradientY = at(smoothed, smoothOffset, column, row + 1) - at(smoothed, smoothOffset, column, row - 1);
+      const gradient = (Math.hypot(gradientX, gradientY) / span) * mapContinentBands * 0.5;
+      const distance = fraction / Math.max(gradient, 0.0001);
+      if (distance < 1.15 && smoothT > 0.015 && lakeHere < 0.5) {
+        const weight = Math.round(level) % 3 === 0 ? 1.5 : 1;
+        const strength = mapClamp((1 - distance / 1.15) * contourAlpha * weight, 0, 0.75);
+        red += (contour[0] - red) * strength;
+        green += (contour[1] - green) * strength;
+        blue += (contour[2] - blue) * strength;
+      }
+
+      const shoreInk = 1 - mapSmoothStep(0, 0.016, elevation - mapSeaLevel);
+      if (shoreInk > 0) {
+        const strength = shoreInk * 0.5;
+        red += (coastInk[0] - red) * strength;
+        green += (coastInk[1] - green) * strength;
+        blue += (coastInk[2] - blue) * strength;
+      }
+
+      data[offset] = red;
+      data[offset + 1] = green;
+      data[offset + 2] = blue;
+      data[offset + 3] = coverage * 255;
+    }
+  }
+  mapContinentCtx.putImageData(image, left, top);
+
+  // rivers, roads, woods and towns live on the land rather than being it, so
+  // they go on afterwards in design space, clipped to the strip just repainted
+  mapContinentCtx.save();
+  mapContinentCtx.scale(mapContinentPixelsPerUnit, mapContinentPixelsPerUnit);
+  mapDrawGeography(mapContinentCtx, palette, {
+    left: left / mapContinentPixelsPerUnit,
+    right: right / mapContinentPixelsPerUnit,
+    top: top / mapContinentPixelsPerUnit,
+    bottom: bottom / mapContinentPixelsPerUnit,
+  });
+  mapContinentCtx.restore();
+  return mapContinentCanvas;
+}
+
+/* ==========================================================================
+   Geography
+   --------------------------------------------------------------------------
+   The land is always there. What exploring a subject changes is not whether
+   its ground exists but what has been made of it: bare upland becomes wooded,
+   wooded becomes settled, and the roads between two fields appear once both
+   have something worth travelling between.
+
+   Rivers are carved into the height field before anything reads it, so their
+   valleys are real. Roads follow the isthmuses. Woodland is scattered by
+   rejection sampling against the same field, which is why a treeline appears
+   without anyone drawing one.
+   ========================================================================== */
+
+/** Courses run from high ground to the sea; carved first, drawn after. */
+const mapRiverCourses = [
+  [[150, 150], [210, 230], [230, 330], [205, 430], [175, 545], [160, 640]],
+  [[700, 130], [742, 215], [800, 275], [880, 315], [960, 355], [1050, 400]],
+  [[390, 355], [430, 430], [430, 520], [400, 600], [380, 680]],
+];
+
+const mapRiverWidth = 15;
+
+function mapRiverCarve(x, y) {
+  let deepest = 0;
+  for (const course of mapRiverCourses) {
+    for (let index = 1; index < course.length; index += 1) {
+      const distance = mapSegmentDistance(x, y, course[index - 1][0], course[index - 1][1], course[index][0], course[index][1]);
+      if (distance > mapRiverWidth * 2.6) continue;
+      const depth = Math.exp(-((distance / mapRiverWidth) ** 2)) * 0.34;
+      if (depth > deepest) deepest = depth;
+    }
+  }
+  return deepest;
+}
+
+/** A road wanders; a straight line between capitals reads as a diagram. */
+function mapWindingPath(ax, ay, bx, by, seed) {
+  const points = [];
+  const steps = 22;
+  const dx = bx - ax;
+  const dy = by - ay;
+  const length = Math.hypot(dx, dy) || 1;
+  const nx = -dy / length;
+  const ny = dx / length;
+  for (let step = 0; step <= steps; step += 1) {
+    const t = step / steps;
+    // the sway dies at both ends, so a road meets its town square on
+    const sway = Math.sin(t * Math.PI) * (mapFbm2(t * 3 + seed, seed * 0.7, seed, 2) - 0.5) * length * 0.3;
+    points.push([ax + dx * t + nx * sway, ay + dy * t + ny * sway]);
+  }
+  return points;
+}
+
+const mapRoadPaths = mapContinentLinks.map(([a, b], index) => {
+  const first = mapIslandPlacements[a];
+  const second = mapIslandPlacements[b];
+  return { a, b, points: mapWindingPath(first.x, first.y, second.x, second.y, index * 13 + 5) };
+});
+
+/** A road exists once there is something at both ends worth reaching. */
+function mapRoadOpen(link) {
+  return mapLevelRank[mapRenderLevel(link.a)] >= 1 && mapLevelRank[mapRenderLevel(link.b)] >= 1;
+}
+
+function mapStrokePath(context, points, width, color, alpha) {
+  context.save();
+  context.globalAlpha = alpha;
+  context.strokeStyle = color;
+  context.lineWidth = width;
+  context.lineCap = "round";
+  context.lineJoin = "round";
+  context.beginPath();
+  context.moveTo(points[0][0], points[0][1]);
+  for (let index = 1; index < points.length - 1; index += 1) {
+    const current = points[index];
+    const next = points[index + 1];
+    context.quadraticCurveTo(current[0], current[1], (current[0] + next[0]) / 2, (current[1] + next[1]) / 2);
+  }
+  context.lineTo(points[points.length - 1][0], points[points.length - 1][1]);
+  context.stroke();
+  context.restore();
+}
+
+/* ---------- settlements ---------- */
+
+const mapSettlementCache = new Map();
+
+/**
+ * Building plots for one subject, chosen by scoring the ground rather than by
+ * scattering: flat, dry, above the shoreline. The count grows with mastery, so
+ * a field that has been worked reads as a town and one that has not reads as a
+ * single outpost.
+ */
+function mapSettlementPlots(code) {
+  const cached = mapSettlementCache.get(code);
+  if (cached) return cached;
+  const placement = mapIslandPlacements[code];
+  const random = mapRandom(placement.seed ^ 0x5eed);
+  const scored = [];
+  for (let attempt = 0; attempt < 420; attempt += 1) {
+    const angle = random() * Math.PI * 2;
+    const distance = Math.sqrt(random()) * placement.lobe * 0.68;
+    const x = placement.x + Math.cos(angle) * distance;
+    const y = placement.y + Math.sin(angle) * distance * 0.9;
+    const height = mapContinentHeight(x, y);
+    if (height < mapSeaLevel + 0.09 || height > mapSeaLevel + 0.62) continue;
+    const slope = Math.hypot(
+      mapContinentHeight(x + 6, y) - mapContinentHeight(x - 6, y),
+      mapContinentHeight(x, y + 6) - mapContinentHeight(x, y - 6),
+    ) / 12;
+    if (slope > 0.014) continue;
+    scored.push({ x, y, slope, seed: Math.floor(random() * 1000) });
+  }
+  scored.sort((left, right) => left.slope - right.slope);
+  const plots = [];
+  for (const candidate of scored) {
+    if (plots.length >= 9) break;
+    if (plots.some((plot) => Math.hypot(plot.x - candidate.x, plot.y - candidate.y) < 26)) continue;
+    plots.push(candidate);
+  }
+  mapSettlementCache.set(code, plots);
+  return plots;
+}
+
+const mapSettlementCount = { ocean: 0, snow: 2, land: 5, green: 9 };
+
+/** A little building: a footprint, a wall in light, a roof toward the sun. */
+function mapDrawBuilding(context, x, y, size, palette, seed) {
+  const width = size * (0.9 + (seed % 5) * 0.06);
+  const depth = size * 0.66;
+  const height = size * (0.72 + ((seed >> 3) % 4) * 0.1);
+
+  context.save();
+  context.globalAlpha = 0.22;
+  context.fillStyle = palette.shade;
+  context.beginPath();
+  context.ellipse(x + width * 0.22, y + depth * 0.3, width * 0.78, depth * 0.42, 0, 0, Math.PI * 2);
+  context.fill();
+  context.globalAlpha = 1;
+
+  // the sun is up-left everywhere on this map, so the lit face is too
+  context.fillStyle = palette.wall;
+  context.beginPath();
+  context.moveTo(x - width / 2, y);
+  context.lineTo(x - width / 2, y - height);
+  context.lineTo(x + width / 2, y - height);
+  context.lineTo(x + width / 2, y);
+  context.closePath();
+  context.fill();
+
+  context.fillStyle = palette.sandShade;
+  context.globalAlpha = 0.45;
+  context.beginPath();
+  context.moveTo(x + width * 0.18, y);
+  context.lineTo(x + width * 0.18, y - height);
+  context.lineTo(x + width / 2, y - height);
+  context.lineTo(x + width / 2, y);
+  context.closePath();
+  context.fill();
+  context.globalAlpha = 1;
+
+  context.fillStyle = palette.roof;
+  context.beginPath();
+  context.moveTo(x - width * 0.62, y - height);
+  context.lineTo(x, y - height - size * 0.5);
+  context.lineTo(x + width * 0.62, y - height);
+  context.closePath();
+  context.fill();
+  context.restore();
+}
+
+/** The one landmark that says what kind of field this is. */
+function mapDrawLandmark(context, code, x, y, size, palette) {
+  context.save();
+  const kind = Number(code) % 6;
+  context.fillStyle = palette.wall;
+  if (kind === 0 || kind === 3) {
+    // a tower
+    context.fillRect(x - size * 0.26, y - size * 1.7, size * 0.52, size * 1.7);
+    context.fillStyle = palette.roof;
+    context.beginPath();
+    context.moveTo(x - size * 0.42, y - size * 1.7);
+    context.lineTo(x, y - size * 2.35);
+    context.lineTo(x + size * 0.42, y - size * 1.7);
+    context.closePath();
+    context.fill();
+  } else if (kind === 1 || kind === 4) {
+    // a dome
+    context.beginPath();
+    context.arc(x, y - size * 0.62, size * 0.62, Math.PI, 0);
+    context.closePath();
+    context.fill();
+    context.fillStyle = palette.pool;
+    context.beginPath();
+    context.arc(x, y - size * 0.62, size * 0.44, Math.PI, 0);
+    context.closePath();
+    context.fill();
+    context.fillStyle = palette.wall;
+    context.fillRect(x - size * 0.68, y - size * 0.62, size * 1.36, size * 0.62);
+  } else {
+    // a colonnade
+    context.fillRect(x - size * 0.85, y - size * 0.18, size * 1.7, size * 0.18);
+    for (let index = 0; index < 4; index += 1) {
+      context.fillRect(x - size * 0.68 + index * size * 0.44, y - size * 1.1, size * 0.16, size * 0.92);
+    }
+    context.fillStyle = palette.roof;
+    context.beginPath();
+    context.moveTo(x - size * 0.95, y - size * 1.1);
+    context.lineTo(x, y - size * 1.62);
+    context.lineTo(x + size * 0.95, y - size * 1.1);
+    context.closePath();
+    context.fill();
+  }
+  context.restore();
+}
+
+/* ---------- woodland ---------- */
+
+const mapWoodCache = { trees: null, signature: "" };
+
+/** Rejection sampling against the height field; thins as the ground rises. */
+function mapWoodland() {
+  const signature = `${mapPreviewMode}|${mapCodes().map((code) => mapRenderLevel(code)).join("")}`;
+  if (mapWoodCache.trees && mapWoodCache.signature === signature) return mapWoodCache.trees;
+  const random = mapRandom(0x1eaf);
+  const trees = [];
+  let attempts = 0;
+  while (trees.length < 1500 && attempts < 42000) {
+    attempts += 1;
+    const x = random() * mapDesignWidth;
+    const y = random() * mapDesignHeight;
+    const height = mapContinentHeight(x, y);
+    if (height < mapSeaLevel + 0.12 || height > mapSeaLevel + 0.85) continue;
+    const lush = mapContinentLushAt(x, y);
+    if (lush < 0.32) continue;
+    // denser where the field is well explored, thinner as the ground rises
+    if (random() > lush * (1 - (height - mapSeaLevel) / 1.1)) continue;
+    trees.push({ x, y, size: 3.8 + random() * 3, tone: random() });
+  }
+  mapWoodCache.trees = trees;
+  mapWoodCache.signature = signature;
+  return trees;
+}
+
+function mapDrawTree(context, tree, palette) {
+  context.fillStyle = palette.shade;
+  context.globalAlpha = 0.2;
+  context.beginPath();
+  context.ellipse(tree.x + tree.size * 0.4, tree.y + tree.size * 0.28, tree.size * 0.8, tree.size * 0.34, 0, 0, Math.PI * 2);
+  context.fill();
+  context.globalAlpha = 1;
+  context.fillStyle = tree.tone > 0.5 ? palette.forestDeep : palette.forest;
+  context.beginPath();
+  context.moveTo(tree.x - tree.size * 0.62, tree.y);
+  context.lineTo(tree.x, tree.y - tree.size * 1.7);
+  context.lineTo(tree.x + tree.size * 0.62, tree.y);
+  context.closePath();
+  context.fill();
+  context.fillStyle = palette.canopyLit;
+  context.globalAlpha = 0.5;
+  context.beginPath();
+  context.moveTo(tree.x - tree.size * 0.5, tree.y - tree.size * 0.12);
+  context.lineTo(tree.x - tree.size * 0.08, tree.y - tree.size * 1.55);
+  context.lineTo(tree.x + tree.size * 0.06, tree.y - tree.size * 0.12);
+  context.closePath();
+  context.fill();
+  context.globalAlpha = 1;
+}
+
+/* ---------- the whole overlay ---------- */
+
+/**
+ * Everything that sits on the land rather than being the land. Painted into
+ * the same bitmap as the terrain, clipped to whatever region is being rebaked.
+ */
+function mapDrawGeography(context, palette, bounds) {
+  context.save();
+  // the sea is transparent in this bitmap, so compositing on top of what is
+  // already there keeps every river, road and rooftop on dry land for free
+  context.globalCompositeOperation = "source-atop";
+  if (bounds) {
+    context.beginPath();
+    context.rect(bounds.left, bounds.top, bounds.right - bounds.left, bounds.bottom - bounds.top);
+    context.clip();
+  }
+
+  for (const course of mapRiverCourses) {
+    mapStrokePath(context, course, mapRiverWidth * 1.5, palette.sandWet, 0.45);
+    mapStrokePath(context, course, mapRiverWidth * 0.8, palette.seaShallow, 0.8);
+  }
+
+  for (const road of mapRoadPaths) {
+    if (!mapRoadOpen(road)) continue;
+    mapStrokePath(context, road.points, 7.5, palette.sandShade, 0.55);
+    mapStrokePath(context, road.points, 4.2, palette.sandLit, 0.95);
+  }
+
+  // the overlay is re-entered once per baked strip, so anything that is a long
+  // list gets filtered to the strip first — nine hundred trees times thirty
+  // five strips is the difference between a smooth bake and a stalled one
+  const margin = 22;
+  const inBand = (y) => !bounds || (y > bounds.top - margin && y < bounds.bottom + margin);
+  for (const tree of mapWoodland()) {
+    if (inBand(tree.y)) mapDrawTree(context, tree, palette);
+  }
+
+  for (const code of mapCodes()) {
+    const level = mapRenderLevel(code);
+    const count = mapSettlementCount[level];
+    if (!count) continue;
+    const plots = mapSettlementPlots(code).slice(0, count);
+    plots.forEach((plot, index) => {
+      if (!inBand(plot.y)) return;
+      if (index === 0 && mapLevelRank[level] >= 2) mapDrawLandmark(context, code, plot.x, plot.y, 12, palette);
+      else mapDrawBuilding(context, plot.x, plot.y, 9, palette, plot.seed);
+    });
+  }
+
+  context.restore();
+}
+
+/** The area a subject's lobe can possibly touch, used for partial repaints. */
+function mapLobeBounds(code) {
+  const placement = mapIslandPlacements[code];
+  if (!placement) return null;
+  let left = placement.x - placement.lobe * 1.12;
+  let right = placement.x + placement.lobe * 1.12;
+  let top = placement.y - placement.lobe * 1.12;
+  let bottom = placement.y + placement.lobe * 1.12;
+  // an isthmus reaching this lobe changes with it
+  for (const [a, b] of mapContinentLinks) {
+    if (a !== code && b !== code) continue;
+    const other = mapIslandPlacements[a === code ? b : a];
+    if (!other) continue;
+    left = Math.min(left, other.x - mapLinkWidth * 1.1);
+    right = Math.max(right, other.x + mapLinkWidth * 1.1);
+    top = Math.min(top, other.y - mapLinkWidth * 1.1);
+    bottom = Math.max(bottom, other.y + mapLinkWidth * 1.1);
+  }
+  return {
+    left: mapClamp(left, 0, mapDesignWidth),
+    right: mapClamp(right, 0, mapDesignWidth),
+    top: mapClamp(top, 0, mapDesignHeight),
+    bottom: mapClamp(bottom, 0, mapDesignHeight),
+  };
+}
+
+/* ---------- bake bookkeeping ---------- */
+
+let mapTerrainBudget = 0;
+let mapSpritesPending = false;
+let mapContinentReady = false;
+let mapContinentDirty = [];
+
+function mapInvalidateContinent() {
+  mapContinentReady = false;
+  mapContinentDirty = [];
+  mapTerrainRamps.clear();
+}
+
+/* ==========================================================================
+   The sea, on the GPU
+   --------------------------------------------------------------------------
+   The islands stay hand-drawn Canvas 2D sprites. Only the water moves to a
+   fragment shader, on its own canvas underneath: a shader can afford to
+   evaluate swell, caustics and a lapping shoreline per pixel per frame, which
+   is what makes water read as water instead of as a painted texture.
+
+   A "shore field" is baked once from the same coastlines the islands use —
+   1 on land, falling off to 0 in deep water. The shader reads it for depth
+   colour, for where caustics belong, and for the foam line that laps in and
+   out. Camera pan and zoom arrive as uniforms, so the sea tracks the islands
+   exactly. If WebGL is missing or the program fails to build, the flag stays
+   false and the original 2D sea is drawn instead — nothing else changes.
+   ========================================================================== */
+
+let waterCanvas = null;
+let waterGl = null;
+let waterProgram = null;
+let waterUniforms = null;
+let waterTexture = null;
+let waterActive = false;
+let waterFailed = false;
+let waterStart = 0;
+let waterListenersBound = false;
+
+const mapWaterVertexSource = `
+attribute vec2 aPosition;
+void main() {
+  gl_Position = vec4(aPosition, 0.0, 1.0);
+}`;
+
+const mapWaterFragmentSource = `
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+
+uniform vec2 uViewport;
+uniform vec2 uDesign;
+uniform vec2 uCamera;
+uniform float uScale;
+uniform float uTime;
+uniform float uDark;
+uniform float uZoom;
+uniform sampler2D uShore;
+uniform vec3 uDeep;
+uniform vec3 uMid;
+uniform vec3 uShallow;
+uniform vec3 uShoreTone;
+uniform vec3 uFoam;
+uniform vec3 uSun;
+
+float hash(vec2 p) {
+  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+}
+
+float noise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  return mix(
+    mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
+    mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x),
+    u.y);
+}
+
+float fbm(vec2 p) {
+  float value = 0.0;
+  float amplitude = 0.5;
+  for (int index = 0; index < 4; index += 1) {
+    value += amplitude * noise(p);
+    p *= 2.03;
+    amplitude *= 0.5;
+  }
+  return value;
+}
+
+void main() {
+  // GL counts y from the bottom; the map's design space counts from the top
+  vec2 device = vec2(gl_FragCoord.x, uViewport.y - gl_FragCoord.y);
+  vec2 design = (device - uViewport * 0.5) / uScale + uCamera;
+  // the bake is a soft accumulation; the curve is what makes it read as depth
+  float land = pow(texture2D(uShore, design / uDesign).r, 1.7);
+
+  vec2 p = design * 0.011;
+  // warping the sample point by another noise field is what stops the swell
+  // from looking like a texture sliding under glass
+  vec2 warp = vec2(fbm(p + vec2(uTime * 0.05, 0.0)), fbm(p + vec2(0.0, uTime * -0.043)));
+  float swell = fbm(p * 1.55 + warp * 1.35 + vec2(uTime * 0.055, uTime * 0.021));
+
+  float shelf = land + swell * 0.035;
+  vec3 water = mix(uDeep, uMid, smoothstep(0.08, 0.42, shelf));
+  water = mix(water, uShallow, smoothstep(0.44, 0.74, shelf));
+  water = mix(water, uShoreTone, smoothstep(0.76, 0.94, shelf));
+
+  // caustics are quantised into a couple of bands: this is a storybook sea,
+  // not a render, so they read as drawn light rather than as a simulation
+  float ripple = fbm(p * 3.05 + warp * 1.9 + vec2(uTime * 0.105, uTime * -0.068));
+  float caustic = smoothstep(0.54, 0.68, ripple) * 0.6 + smoothstep(0.68, 0.79, ripple) * 0.4;
+  float openness = smoothstep(0.1, 0.62, land);
+  water += uFoam * caustic * 0.15 * openness * (1.0 - uDark * 0.45);
+
+  // the swell above lives in map space and so flattens out as you zoom in;
+  // this second layer keeps its frequency near the screen, so close-up water
+  // still has surface rather than turning into a gradient
+  vec2 fine = p * (2.2 + uZoom * 1.5);
+  float chop = fbm(fine + vec2(uTime * 0.19, uTime * -0.13));
+  water += uFoam * smoothstep(0.58, 0.78, chop) * 0.055 * (0.35 + 0.65 * openness) * (1.0 - uDark * 0.5);
+
+  // the foam line is a moving threshold on the shore field, so the whole
+  // coast laps in and out instead of sitting still
+  float tide = 0.83 + sin(uTime * 0.85 + swell * 2.6) * 0.022 + chop * 0.02;
+  float foam = smoothstep(tide - 0.075, tide, land) - smoothstep(tide, tide + 0.055, land);
+  water = mix(water, uFoam, clamp(foam, 0.0, 1.0) * 0.62);
+
+  vec2 glintOffset = (design - vec2(215.0, 70.0)) / vec2(540.0, 320.0);
+  float glint = exp(-dot(glintOffset, glintOffset) * 1.25) * (0.3 + 0.7 * smoothstep(0.5, 0.86, ripple));
+  water += uSun * glint * 0.16 * (1.0 - smoothstep(0.05, 0.6, land));
+
+  gl_FragColor = vec4(water, 1.0);
+}`;
+
+function mapHexToRgb(hex) {
+  const value = String(hex).replace("#", "");
+  const full = value.length === 3 ? value.split("").map((part) => part + part).join("") : value;
+  const number = parseInt(full, 16);
+  return [((number >> 16) & 255) / 255, ((number >> 8) & 255) / 255, (number & 255) / 255];
+}
+
+// The shore field the shader reads is the elevation model itself, rescaled so
+// that 1 is the waterline and 0 is where the seabed has fallen away. Because
+// both come from the same source, foam breaks on the real coastline rather
+// than on a ring drawn near it.
+function mapBakeShoreField() {
+  mapEnsureContinent();
+  const width = 512;
+  const height = Math.round(width * (mapDesignHeight / mapDesignWidth));
+  const field = document.createElement("canvas");
+  field.width = width;
+  field.height = height;
+  const context = field.getContext("2d");
+  const image = context.createImageData(width, height);
+  const data = image.data;
+
+  for (let row = 0; row < height; row += 1) {
+    const y = ((row + 0.5) / height) * mapDesignHeight;
+    for (let column = 0; column < width; column += 1) {
+      const x = ((column + 0.5) / width) * mapDesignWidth;
+      const elevation = mapContinentHeight(x, y);
+      if (elevation <= 0) continue;
+      // an unexplored lobe never breaks the surface, so it reads as a shoal:
+      // the water lightens over it and says something is down there
+      const shore = elevation >= mapSeaLevel ? 255 : Math.round((elevation / mapSeaLevel) * 224);
+      data[(row * width + column) * 4] = shore;
+    }
+  }
+  for (let offset = 0; offset < data.length; offset += 4) data[offset + 3] = 255;
+  context.putImageData(image, 0, 0);
+  return field;
+}
+
+/**
+ * The shader's shore field is baked from the same ground the land is, so it
+ * has to be rebuilt whenever a subject rises out of the water.
+ */
+function mapRefreshShoreField() {
+  if (!waterActive || !waterGl || !waterTexture) return;
+  waterGl.bindTexture(waterGl.TEXTURE_2D, waterTexture);
+  waterGl.texImage2D(waterGl.TEXTURE_2D, 0, waterGl.RGBA, waterGl.RGBA, waterGl.UNSIGNED_BYTE, mapBakeShoreField());
+}
+
+function mapCompileShader(gl, type, source) {
+  const shader = gl.createShader(type);
+  gl.shaderSource(shader, source);
+  gl.compileShader(shader);
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    gl.deleteShader(shader);
+    return null;
+  }
+  return shader;
+}
+
+function mapWaterViewport() {
+  return canvas ? canvas.closest(".map-viewport") : null;
+}
+
+// Browsers do drop GL contexts — a backgrounded tab, a GPU reset. When that
+// happens the shader canvas goes blank, so the 2D sea has to come back rather
+// than leaving a hole where the water was.
+function mapWaterBindContextEvents() {
+  if (waterListenersBound || !waterCanvas) return;
+  waterListenersBound = true;
+  waterCanvas.addEventListener("webglcontextlost", (event) => {
+    event.preventDefault();
+    waterActive = false;
+    waterGl = null;
+    const viewport = mapWaterViewport();
+    if (viewport) viewport.classList.remove("has-water");
+    mapBaseStale = true;
+    requestKnowledgeMapFrame();
+  });
+  waterCanvas.addEventListener("webglcontextrestored", () => {
+    waterActive = false;
+    waterFailed = false;
+    waterGl = null;
+    if (mapWaterInit()) {
+      mapBaseStale = true;
+      requestKnowledgeMapFrame();
+    }
+  });
+}
+
+function mapWaterInit() {
+  if (waterActive || waterFailed) return waterActive;
+  waterCanvas = document.getElementById("knowledgeWater");
+  if (!waterCanvas) {
+    waterFailed = true;
+    return false;
+  }
+  mapWaterBindContextEvents();
+  const gl = waterCanvas.getContext("webgl", { alpha: false, antialias: false, depth: false, stencil: false })
+    || waterCanvas.getContext("experimental-webgl", { alpha: false, antialias: false, depth: false, stencil: false });
+  if (!gl) {
+    waterFailed = true;
+    return false;
+  }
+  const vertex = mapCompileShader(gl, gl.VERTEX_SHADER, mapWaterVertexSource);
+  const fragment = mapCompileShader(gl, gl.FRAGMENT_SHADER, mapWaterFragmentSource);
+  if (!vertex || !fragment) {
+    waterFailed = true;
+    return false;
+  }
+  const program = gl.createProgram();
+  gl.attachShader(program, vertex);
+  gl.attachShader(program, fragment);
+  gl.linkProgram(program);
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    waterFailed = true;
+    return false;
+  }
+  gl.useProgram(program);
+
+  // one oversized triangle covers the viewport with no clipping seam
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const position = gl.getAttribLocation(program, "aPosition");
+  gl.enableVertexAttribArray(position);
+  gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+
+  waterTexture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, waterTexture);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, mapBakeShoreField());
+
+  waterGl = gl;
+  waterProgram = program;
+  waterUniforms = {};
+  for (const name of ["uViewport", "uDesign", "uCamera", "uScale", "uTime", "uDark", "uShore",
+    "uDeep", "uMid", "uShallow", "uShoreTone", "uFoam", "uSun", "uZoom"]) {
+    waterUniforms[name] = gl.getUniformLocation(program, name);
+  }
+  gl.uniform1i(waterUniforms.uShore, 0);
+  gl.uniform2f(waterUniforms.uDesign, mapDesignWidth, mapDesignHeight);
+  waterStart = performance.now();
+  waterActive = true;
+  const viewport = mapWaterViewport();
+  if (viewport) viewport.classList.add("has-water");
+  return true;
+}
+
+function mapWaterResize() {
+  if (!waterActive || !canvas) return;
+  if (waterCanvas.width !== canvas.width || waterCanvas.height !== canvas.height) {
+    waterCanvas.width = canvas.width;
+    waterCanvas.height = canvas.height;
+  }
+}
+
+function mapWaterPaint(time) {
+  if (!waterActive) return;
+  const gl = waterGl;
+  const palette = mapPalette();
+  mapWaterResize();
+  gl.viewport(0, 0, waterCanvas.width, waterCanvas.height);
+  gl.useProgram(waterProgram);
+  gl.activeTexture(gl.TEXTURE0);
+  gl.bindTexture(gl.TEXTURE_2D, waterTexture);
+  gl.uniform2f(waterUniforms.uViewport, waterCanvas.width, waterCanvas.height);
+  gl.uniform2f(waterUniforms.uCamera, mapCamera.x, mapCamera.y);
+  gl.uniform1f(waterUniforms.uScale, mapViewScale());
+  // frozen at a chosen moment when the reader asked for less motion
+  gl.uniform1f(waterUniforms.uTime, mapReducedMotion() ? 12.5 : (time - waterStart) / 1000);
+  gl.uniform1f(waterUniforms.uDark, currentTheme === "dark" ? 1 : 0);
+  gl.uniform1f(waterUniforms.uZoom, mapCamera.zoom);
+  gl.uniform3fv(waterUniforms.uDeep, mapHexToRgb(palette.seaDeep));
+  gl.uniform3fv(waterUniforms.uMid, mapHexToRgb(palette.seaMid));
+  gl.uniform3fv(waterUniforms.uShallow, mapHexToRgb(palette.seaShallow));
+  gl.uniform3fv(waterUniforms.uShoreTone, mapHexToRgb(palette.seaShore));
+  gl.uniform3fv(waterUniforms.uFoam, mapHexToRgb(palette.foam));
+  gl.uniform3fv(waterUniforms.uSun, mapHexToRgb(palette.sun));
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+}
+
+/* ---------- foliage that leans, and a wake that lasts ---------- */
+
+// Each kind of plant is baked once at a reference size with its trunk base at
+// a known point, so a frame only has to blit and rotate it.
+
+
+/* ---------- the boat's wake ---------- */
+
+const mapWake = [];
+const mapWakeLife = 3400;
+
+function mapBoatAt(time) {
+  // tacks back and forth across open water, so it never jumps on wrap
+  const phase = time * 0.00022;
+  return {
+    x: 880 + Math.sin(phase) * 120,
+    y: 470 + Math.sin(time * 0.0016) * 5,
+    facing: Math.cos(phase) >= 0 ? 1 : -1,
+  };
+}
+
+// The trail is the boat's own past positions; offsetting it to both sides by an
+// amount that grows with age is what opens it into a V behind the hull.
+function mapDrawWake(context, palette, time) {
+  if (mapReducedMotion()) return;
+  const boat = mapBoatAt(time);
+  const newest = mapWake[mapWake.length - 1];
+  if (!newest || time - newest.at > 85) mapWake.push({ x: boat.x, y: boat.y + 5, at: time });
+  while (mapWake.length && time - mapWake[0].at > mapWakeLife) mapWake.shift();
+  if (mapWake.length < 2) return;
+
+  context.save();
+  context.strokeStyle = palette.foam;
+  context.lineCap = "round";
+  for (let index = 1; index < mapWake.length; index += 1) {
+    const older = mapWake[index - 1];
+    const newer = mapWake[index];
+    const ageOld = (time - older.at) / mapWakeLife;
+    const ageNew = (time - newer.at) / mapWakeLife;
+    const deltaX = newer.x - older.x;
+    const deltaY = newer.y - older.y;
+    const length = Math.hypot(deltaX, deltaY);
+    if (length < 0.01) continue;
+    const normalX = -deltaY / length;
+    const normalY = deltaX / length;
+    const spreadOld = 1.6 + ageOld * 15;
+    const spreadNew = 1.6 + ageNew * 15;
+    context.globalAlpha = (1 - ageOld) * (1 - ageOld) * 0.5;
+    context.lineWidth = 1.8 * (1 - ageOld * 0.55);
+    for (const side of [1, -1]) {
+      context.beginPath();
+      context.moveTo(older.x + normalX * spreadOld * side, older.y + normalY * spreadOld * side);
+      context.lineTo(newer.x + normalX * spreadNew * side, newer.y + normalY * spreadNew * side);
+      context.stroke();
+    }
+  }
+  context.restore();
+}
+
+/* ---------- camera plumbing ---------- */
+
+function mapClamp(value, low, high) {
+  return value < low ? low : value > high ? high : value;
+}
+
+function mapEaseOut(progress) {
+  return 1 - Math.pow(1 - progress, 3);
+}
+
+// a little overshoot on the way in: islands settle rather than stop dead
+function mapEaseBack(progress) {
+  const pull = 1.42;
+  const shifted = progress - 1;
+  return 1 + (pull + 1) * shifted * shifted * shifted + pull * shifted * shifted;
+}
+
+function mapCodes() {
+  return categories.map((category) => category.code).filter((code) => mapIslandPlacements[code]);
+}
+
+function mapLevelOf(code) {
+  return mapChallengeProgress[code] || "ocean";
+}
+
+function mapFx(code) {
+  let fx = mapIslandFx[code];
+  if (!fx) {
+    const placement = mapIslandPlacements[code];
+    const seed = placement ? placement.seed : 1;
+    fx = { lift: 0, focus: 0, appear: 1, pop: 0, bob: ((seed % 617) / 617) * Math.PI * 2, level: null };
+    mapIslandFx[code] = fx;
+  }
+  return fx;
+}
+
+function mapViewScale() {
+  return mapScale * mapCamera.zoom;
+}
+
+function mapApplyView(context) {
+  context.setTransform(1, 0, 0, 1, 0, 0);
+  context.translate(canvas.width / 2, canvas.height / 2);
+  const scale = mapViewScale();
+  context.scale(scale, scale);
+  context.translate(-mapCamera.x, -mapCamera.y);
+}
+
+// the sea has edges, so the camera never shows past them
+function mapClampCamera(useTarget) {
+  const zoom = useTarget ? mapCamera.tz : mapCamera.zoom;
+  const halfWidth = mapDesignWidth / (2 * zoom);
+  const halfHeight = mapDesignHeight / (2 * zoom);
+  if (useTarget) {
+    mapCamera.tx = mapClamp(mapCamera.tx, halfWidth, mapDesignWidth - halfWidth);
+    mapCamera.ty = mapClamp(mapCamera.ty, halfHeight, mapDesignHeight - halfHeight);
+    return;
+  }
+  mapCamera.x = mapClamp(mapCamera.x, halfWidth, mapDesignWidth - halfWidth);
+  mapCamera.y = mapClamp(mapCamera.y, halfHeight, mapDesignHeight - halfHeight);
+}
+
+// zooming keeps the design point under the cursor pinned to the cursor
+function mapZoomAt(nextZoom, designX, designY) {
+  const from = mapCamera.tz;
+  const to = mapClamp(nextZoom, mapMinZoom, mapMaxZoom);
+  if (Math.abs(to - from) < 0.0005) return false;
+  const shift = 1 - from / to;
+  mapCamera.tx += (designX - mapCamera.tx) * shift;
+  mapCamera.ty += (designY - mapCamera.ty) * shift;
+  mapCamera.tz = to;
+  mapClampCamera(true);
+  return true;
+}
+
+function mapFlyTo(code, zoom) {
+  const placement = mapIslandPlacements[code];
+  if (!placement) return;
+  mapCamera.tz = mapClamp(zoom || Math.max(mapCamera.tz, 1.85), mapMinZoom, mapMaxZoom);
+  mapCamera.tx = placement.x;
+  mapCamera.ty = placement.y;
+  mapClampCamera(true);
+  requestKnowledgeMapFrame();
+}
+
+function mapResetView() {
+  mapCamera.tz = 1;
+  mapCamera.tx = mapDesignWidth / 2;
+  mapCamera.ty = mapDesignHeight / 2;
+  requestKnowledgeMapFrame();
+}
+
+function mapPointerDesign(clientX, clientY) {
+  if (!canvas) return null;
+  const rect = canvas.getBoundingClientRect();
+  if (!rect.width || !rect.height) return null;
+  const scale = mapViewScale();
+  const deviceX = ((clientX - rect.left) / rect.width) * canvas.width;
+  const deviceY = ((clientY - rect.top) / rect.height) * canvas.height;
+  return {
+    x: (deviceX - canvas.width / 2) / scale + mapCamera.x,
+    y: (deviceY - canvas.height / 2) / scale + mapCamera.y,
+  };
+}
+
+function mapDesignToStage(x, y) {
+  const scale = mapViewScale();
+  const ratio = canvas.width / (canvas.clientWidth || 1);
+  return {
+    x: ((x - mapCamera.x) * scale + canvas.width / 2) / ratio,
+    y: ((y - mapCamera.y) * scale + canvas.height / 2) / ratio,
+  };
+}
+
+/* ---------- keeping the continent painted ---------- */
+
+const mapBandHeight = 18;
+const mapBakeBudgetMs = 9;
+
+/** Splits a region into strips so no single frame owns the whole repaint. */
+function mapQueueBands(bounds) {
+  for (let top = bounds.top; top < bounds.bottom; top += mapBandHeight) {
+    mapContinentDirty.push({
+      left: bounds.left,
+      right: bounds.right,
+      top,
+      bottom: Math.min(top + mapBandHeight, bounds.bottom),
+    });
+  }
+}
+
+/**
+ * Repaints stale ground a few strips at a time. A full bake is a quarter of a
+ * second; spread across frames at nine milliseconds each it never shows, and
+ * the land appears to surface in bands, which is what it is doing.
+ */
+function mapSyncContinent(palette) {
+  const rebuilt = mapEnsureContinent();
+  if (!mapContinentReady) {
+    mapContinentDirty = [];
+    mapQueueBands({ left: 0, right: mapDesignWidth, top: 0, bottom: mapDesignHeight });
+    mapContinentReady = true;
+  } else if (rebuilt && mapContinentDirty.length === 0) {
+    mapQueueBands({ left: 0, right: mapDesignWidth, top: 0, bottom: mapDesignHeight });
+  }
+  if (mapContinentDirty.length === 0) return;
+
+  const started = performance.now();
+  while (mapContinentDirty.length && performance.now() - started < mapBakeBudgetMs) {
+    mapRenderContinent(palette, mapContinentDirty.shift());
+  }
+  if (mapContinentDirty.length) {
+    mapSpritesPending = true; // keep the loop alive until the land is finished
+  } else {
+    mapRefreshShoreField();
+  }
 }
 
 /* ---------- canvas plumbing ---------- */
@@ -18306,9 +19537,18 @@ function fitKnowledgeCanvas() {
     mapBaseStale = true;
   }
   mapScale = canvas.width / mapDesignWidth;
+  mapWaterResize();
+  const signature = `${currentTheme}|${Math.round(mapScale * 100)}`;
+  if (signature !== mapSpriteSignature) {
+    mapSpriteCache.clear();
+    mapInvalidateContinent();
+    mapSpriteSignature = signature;
+  }
   return true;
 }
 
+// Only the water lives in the cached base layer now — the islands moved to the
+// frame loop, so hovering or levelling one up never repaints the whole map.
 function renderKnowledgeMapBase() {
   const palette = mapPalette();
   const context = mapBaseCtx;
@@ -18316,25 +19556,10 @@ function renderKnowledgeMapBase() {
   context.clearRect(0, 0, mapBaseCanvas.width, mapBaseCanvas.height);
   context.scale(mapScale, mapScale);
   context.imageSmoothingQuality = "high";
-
-  mapSea(context, palette);
-  const placed = categories.map((category) => category.code).filter((code) => mapIslandPlacements[code]);
-  placed.forEach((code) => mapShallows(context, code, palette));
-
-  const painted = placed.slice().sort((left, right) => mapIslandPlacements[left].y - mapIslandPlacements[right].y);
-  painted.forEach((code) => drawMapIsland(context, code, mapChallengeProgress[code] || "ocean", palette));
-  painted.forEach((code) => drawMapPlate(context, code, mapChallengeProgress[code] || "ocean", palette));
-
-  if (document.body.classList.contains("founder-mode")) drawFounderMapLabels(context, palette);
-
-  const vignette = context.createRadialGradient(
-    mapDesignWidth / 2, mapDesignHeight / 2, mapDesignHeight * 0.34,
-    mapDesignWidth / 2, mapDesignHeight / 2, mapDesignHeight * 0.95,
-  );
-  vignette.addColorStop(0, "transparent");
-  vignette.addColorStop(1, palette.vignette);
-  context.fillStyle = vignette;
-  context.fillRect(0, 0, mapDesignWidth, mapDesignHeight);
+  if (!waterActive) {
+    mapSea(context, palette);
+    mapCodes().forEach((code) => mapShallows(context, code, palette));
+  }
   mapBaseStale = false;
 }
 
@@ -18342,101 +19567,655 @@ function knowledgeMapVisible() {
   return Boolean(canvas && canvas.offsetParent !== null && canvas.clientWidth);
 }
 
-function paintKnowledgeMap(time) {
+/* ---------- per-frame state ---------- */
+
+function mapStepCamera(dt) {
+  const reduced = mapReducedMotion();
+  if (reduced) {
+    const settled = Math.abs(mapCamera.zoom - mapCamera.tz) < 0.0005
+      && Math.abs(mapCamera.x - mapCamera.tx) < 0.05
+      && Math.abs(mapCamera.y - mapCamera.ty) < 0.05;
+    mapCamera.zoom = mapCamera.tz;
+    mapCamera.x = mapCamera.tx;
+    mapCamera.y = mapCamera.ty;
+    mapClampCamera(false);
+    return !settled;
+  }
+  const ease = 1 - Math.exp(-dt / 88);
+  mapCamera.zoom += (mapCamera.tz - mapCamera.zoom) * ease;
+  mapCamera.x += (mapCamera.tx - mapCamera.x) * ease;
+  mapCamera.y += (mapCamera.ty - mapCamera.y) * ease;
+  const moving = Math.abs(mapCamera.zoom - mapCamera.tz) > 0.0004
+    || Math.abs(mapCamera.x - mapCamera.tx) > 0.04
+    || Math.abs(mapCamera.y - mapCamera.ty) > 0.04;
+  if (!moving) {
+    mapCamera.zoom = mapCamera.tz;
+    mapCamera.x = mapCamera.tx;
+    mapCamera.y = mapCamera.ty;
+  }
+  mapClampCamera(false);
+  return moving;
+}
+
+function mapStepIslands(time, dt) {
+  const reduced = mapReducedMotion();
+  const codes = mapCodes();
+  const ease = 1 - Math.exp(-dt / 105);
+  let busy = false;
+  codes.forEach((code, index) => {
+    const fx = mapFx(code);
+    const level = mapLevelOf(code);
+    // a subject that climbed a level gets a burst; the first read just adopts it
+    if (fx.level !== level) {
+      if (fx.level !== null && mapLevelRank[level] > mapLevelRank[fx.level] && !reduced) {
+        fx.pop = 1;
+        mapBursts.push({ code, at: time });
+      }
+      // the ground this subject owns has changed, so only that ground repaints
+      const bounds = mapLobeBounds(code);
+      if (bounds && fx.level !== null) mapQueueBands(bounds);
+      fx.level = level;
+    }
+    const wantLift = mapPointerState.hover === code ? 1 : 0;
+    const wantFocus = mapSelected === code ? 1 : 0;
+    if (reduced) {
+      fx.lift = wantLift;
+      fx.focus = wantFocus;
+      fx.appear = 1;
+      fx.pop = 0;
+    } else {
+      fx.lift += (wantLift - fx.lift) * ease;
+      fx.focus += (wantFocus - fx.focus) * ease;
+      fx.pop *= Math.exp(-dt / 190);
+      if (fx.pop < 0.004) fx.pop = 0;
+      const entrance = mapEntranceAt
+        ? mapClamp((time - mapEntranceAt - index * 52) / 520, 0, 1)
+        : 1;
+      fx.appear = entrance;
+      if (entrance < 1 || fx.pop > 0) busy = true;
+      if (Math.abs(wantLift - fx.lift) > 0.003 || Math.abs(wantFocus - fx.focus) > 0.003) busy = true;
+    }
+  });
+  if (!reduced) {
+    const drift = 1 - Math.exp(-dt / 220);
+    mapParallax.x += (mapParallax.tx - mapParallax.x) * drift;
+    mapParallax.y += (mapParallax.ty - mapParallax.y) * drift;
+  }
+  return busy;
+}
+
+/* ---------- overlays drawn each frame ---------- */
+
+/**
+ * One bitmap for the whole landmass, then the name plates on top. A continent
+ * cannot lift a piece of itself when you hover it, so emphasis moved to the
+ * ring, the plate and the tooltip — which is the honest reading anyway.
+ */
+function mapDrawIslands(context, palette, time) {
+  const reduced = mapReducedMotion();
+  mapSyncContinent(palette);
+  if (!mapContinentCanvas) return;
+
+  let reveal = 0;
+  for (const code of mapCodes()) reveal = Math.max(reveal, mapFx(code).appear);
+  const alpha = reduced ? 1 : mapClamp(reveal * 1.25, 0, 1);
+  if (alpha > 0.004) {
+    context.save();
+    context.globalAlpha = alpha;
+    context.imageSmoothingQuality = "high";
+    context.drawImage(mapContinentCanvas, 0, 0, mapDesignWidth, mapDesignHeight);
+    context.restore();
+  }
+
+  const codes = mapCodes().slice().sort((left, right) => mapIslandPlacements[left].y - mapIslandPlacements[right].y);
+  for (const code of codes) {
+    const fx = mapFx(code);
+    const bob = reduced ? 0 : Math.sin(time * 0.00105 + fx.bob) * 1.2;
+    drawMapPlate(context, code, mapRenderLevel(code), palette, fx, bob - fx.lift * 5);
+  }
+}
+
+function mapDrawFocusRing(context, palette, time) {
+  const reduced = mapReducedMotion();
+  for (const code of mapCodes()) {
+    const fx = mapFx(code);
+    const strength = Math.max(fx.lift, fx.focus);
+    if (strength < 0.02) continue;
+    const placement = mapIslandPlacements[code];
+    const shape = mapShape(code);
+    const squash = shape ? shape.squash : 0.8;
+    const bob = reduced ? 0 : Math.sin(time * 0.00105 + fx.bob) * 1.5;
+    const radiusX = placement.r * 1.34;
+    const radiusY = radiusX * squash;
+
+    context.save();
+    context.translate(placement.x, placement.y + bob - fx.lift * 7);
+
+    // a soft pool of light first, so the ring reads as a highlight not a sticker
+    const glow = context.createRadialGradient(0, 0, placement.r * 0.5, 0, 0, radiusX * 1.3);
+    glow.addColorStop(0, palette.accent);
+    glow.addColorStop(1, "transparent");
+    context.globalAlpha = strength * (currentTheme === "dark" ? 0.22 : 0.17);
+    context.fillStyle = glow;
+    context.beginPath();
+    context.ellipse(0, 0, radiusX * 1.3, radiusY * 1.3, 0, 0, Math.PI * 2);
+    context.fill();
+
+    context.globalAlpha = strength * 0.9;
+    context.strokeStyle = palette.accent;
+    context.lineWidth = 2.6 / mapCamera.zoom;
+    context.lineCap = "round";
+    context.setLineDash([13 / mapCamera.zoom, 11 / mapCamera.zoom]);
+    context.lineDashOffset = reduced ? 0 : -time * 0.022 / mapCamera.zoom;
+    context.beginPath();
+    context.ellipse(0, 0, radiusX, radiusY, 0, 0, Math.PI * 2);
+    context.stroke();
+    context.restore();
+  }
+}
+
+function mapDrawBursts(context, palette, time) {
+  for (let index = mapBursts.length - 1; index >= 0; index -= 1) {
+    const burst = mapBursts[index];
+    const progress = (time - burst.at) / 1150;
+    const placement = mapIslandPlacements[burst.code];
+    if (progress >= 1 || !placement) {
+      mapBursts.splice(index, 1);
+      continue;
+    }
+    const eased = mapEaseOut(progress);
+    const fade = 1 - progress;
+    context.save();
+    const shape = mapShape(burst.code);
+    const squash = shape ? shape.squash : 0.8;
+    context.globalAlpha = fade * 0.7;
+    context.strokeStyle = palette.foam;
+    context.lineWidth = 3.2 / mapCamera.zoom;
+    for (const offset of [0, 0.22]) {
+      const ring = mapClamp(progress - offset, 0, 1);
+      if (ring <= 0) continue;
+      const radiusX = placement.r * (1.1 + mapEaseOut(ring) * 0.85);
+      context.beginPath();
+      context.ellipse(placement.x, placement.y, radiusX, radiusX * squash, 0, 0, Math.PI * 2);
+      context.stroke();
+    }
+    const random = mapRandom(placement.seed ^ 0x9e);
+    context.fillStyle = palette.sun;
+    context.globalAlpha = fade * 0.85;
+    for (let spark = 0; spark < 12; spark += 1) {
+      const theta = random() * Math.PI * 2;
+      const reach = placement.r * (0.95 + eased * 0.95) * (0.72 + random() * 0.5);
+      const x = placement.x + Math.cos(theta) * reach;
+      const y = placement.y + Math.sin(theta) * reach * 0.78 - eased * 12;
+      context.beginPath();
+      context.arc(x, y, 2.4 * fade + 0.6, 0, Math.PI * 2);
+      context.fill();
+    }
+    context.restore();
+  }
+}
+
+function paintKnowledgeMap(time, dt) {
   const palette = mapPalette();
+  mapTerrainBudget = 1;
+  mapSpritesPending = false;
   if (mapBaseStale) renderKnowledgeMapBase();
+  const cameraBusy = mapStepCamera(dt);
+  const islandsBusy = mapStepIslands(time, dt);
 
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(mapBaseCanvas, 0, 0);
+
+  mapWaterPaint(time);
 
   ctx.save();
-  ctx.scale(mapScale, mapScale);
-  mapRipples(ctx, palette, time);
-  mapBoat(ctx, palette, time);
-  mapDrawClouds(ctx, palette, time);
-
-  const focus = mapPointerState.hover || activeMapChallengeSubject;
-  const placement = focus ? mapIslandPlacements[focus] : null;
-  if (placement) {
-    const shape = mapShape(focus);
-    const reduced = mapReducedMotion();
-    ctx.save();
-    ctx.strokeStyle = palette.accent;
-    ctx.globalAlpha = mapPointerState.hover === focus ? 0.95 : 0.55;
-    ctx.lineWidth = 3;
-    ctx.lineCap = "round";
-    ctx.setLineDash([12, 10]);
-    ctx.lineDashOffset = reduced ? 0 : -time * 0.02;
-    const beat = reduced ? 1 : 1 + Math.sin(time * 0.004) * 0.012;
-    mapCurve(ctx, placement.x, placement.y, shape.coast, 1.3 * beat);
-    ctx.stroke();
-    ctx.restore();
+  mapApplyView(ctx);
+  ctx.imageSmoothingQuality = "high";
+  if (!waterActive) {
+    ctx.drawImage(mapBaseCanvas, 0, 0, mapDesignWidth, mapDesignHeight);
+    mapRipples(ctx, palette, time);
   }
+  mapDrawWake(ctx, palette, time);
+  mapBoat(ctx, palette, time);
+  mapDrawIslands(ctx, palette, time);
+  if (!mapReducedMotion()) mapDrawCloudShadows(ctx, palette, time);
+  mapDrawBursts(ctx, palette, time);
+  mapDrawFocusRing(ctx, palette, time);
+  ctx.save();
+  ctx.translate(mapParallax.x * 14, mapParallax.y * 8);
+  mapDrawClouds(ctx, palette, time);
   ctx.restore();
+  if (document.body.classList.contains("founder-mode")) drawFounderMapLabels(ctx, palette);
+  ctx.restore();
+
+  // the vignette belongs to the viewport, not the world, so it stays in screen space
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  const vignette = ctx.createRadialGradient(
+    canvas.width / 2, canvas.height / 2, canvas.height * 0.34,
+    canvas.width / 2, canvas.height / 2, canvas.height * 0.95,
+  );
+  vignette.addColorStop(0, "transparent");
+  vignette.addColorStop(1, palette.vignette);
+  ctx.fillStyle = vignette;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   const grain = mapGrain(palette);
   if (grain) {
-    ctx.save();
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = grain;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.restore();
   }
+
+  mapPositionTip();
+  mapSyncControls();
+  return cameraBusy || islandsBusy || mapSpritesPending || mapBursts.length > 0;
 }
 
 function knowledgeMapFrame(time) {
   if (!knowledgeMapVisible()) {
     mapLoopRunning = false; // stop burning frames while the map page is hidden
+    mapWasVisible = false;
+    mapLastFrame = 0;
     return;
   }
-  paintKnowledgeMap(time);
-  if (mapReducedMotion()) {
+  const dt = mapLastFrame ? Math.min(Math.max(time - mapLastFrame, 1), 64) : 16;
+  mapLastFrame = time;
+  const busy = paintKnowledgeMap(time, dt);
+  if (mapEntranceAt && time - mapEntranceAt > 1400) mapEntranceAt = 0;
+  if (mapReducedMotion() && !busy) {
     mapLoopRunning = false;
+    mapLastFrame = 0;
     return;
   }
   requestAnimationFrame(knowledgeMapFrame);
 }
 
-// hover only affects the overlay, so it must never invalidate the cached base layer
 function requestKnowledgeMapFrame() {
   if (mapLoopRunning || !knowledgeMapVisible()) return;
   mapLoopRunning = true;
+  mapLastFrame = 0;
   requestAnimationFrame(knowledgeMapFrame);
+}
+
+/* ---------- the HUD that sits over the canvas ---------- */
+
+function mapSubjectName(code) {
+  const category = getCategory(code);
+  if (category) return getPublicCategoryTitle(category);
+  return getSubjectTitle(code);
+}
+
+function mapHudElements() {
+  if (!mapTipEl) mapTipEl = document.getElementById("mapTip");
+  if (!mapCardEl) mapCardEl = document.getElementById("mapFocusCard");
+  if (!mapControlsEl) mapControlsEl = document.getElementById("mapControls");
+}
+
+const mapLevelClass = { ocean: "ocean", snow: "snow", land: "pilot", green: "ready" };
+
+function mapUpdateTip() {
+  mapHudElements();
+  if (!mapTipEl) return;
+  const code = mapPointerState.hover;
+  if (!code || mapDrag.panning) {
+    mapTipEl.classList.remove("is-visible");
+    return;
+  }
+  const level = mapLevelOf(code);
+  mapTipEl.innerHTML = `<span class="map-tip-name">${escapeHtml(mapSubjectName(code))}</span>`
+    + `<span class="map-tip-state"><i class="${mapLevelClass[level]}"></i>${escapeHtml(getMasteryLabel(level))}</span>`;
+  mapTipEl.classList.add("is-visible");
+  // measured once per label, so the per-frame repositioning never reads layout
+  mapTipSize = { width: mapTipEl.offsetWidth, height: mapTipEl.offsetHeight };
+  mapPositionTip();
+}
+
+function mapPositionTip() {
+  if (!mapTipEl || !mapTipEl.classList.contains("is-visible")) return;
+  const code = mapPointerState.hover;
+  const placement = code ? mapIslandPlacements[code] : null;
+  if (!placement) return;
+  const above = mapDesignToStage(placement.x, placement.y - placement.r * 0.95);
+  // the stage clips its overflow, so a top-row island gets its label underneath
+  const flip = above.y - 8 - mapTipSize.height < 0;
+  const anchor = flip ? mapDesignToStage(placement.x, placement.y + placement.r * 0.95) : above;
+  const y = flip ? anchor.y + 8 : anchor.y - 8;
+  const edge = mapTipSize.width / 2 + 6;
+  const limit = Math.max(edge, (canvas.clientWidth || 0) - edge);
+  const x = mapClamp(anchor.x, edge, limit);
+  mapTipEl.style.transform = `translate(-50%, ${flip ? "0" : "-100%"}) translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+}
+
+function mapShowCard(code) {
+  mapHudElements();
+  if (!mapCardEl) return;
+  const level = mapLevelOf(code);
+  mapCardEl.innerHTML = `
+    <button type="button" class="map-focus-close" data-map-card="close" aria-label="${escapeHtml(t("mapCardClose"))}">&times;</button>
+    <p class="map-focus-name">${escapeHtml(mapSubjectName(code))}</p>
+    <p class="map-focus-thinking">${escapeHtml(getCategoryThinking(code))}</p>
+    <p class="map-focus-state"><i class="${mapLevelClass[level]}"></i>${escapeHtml(getMasteryLabel(level))}</p>
+    <button type="button" class="map-focus-open" data-map-card="open">${escapeHtml(t("mapOpenField"))}</button>`;
+  mapCardEl.hidden = false;
+  requestAnimationFrame(() => mapCardEl.classList.add("is-visible"));
+}
+
+function mapHideCard() {
+  mapHudElements();
+  if (!mapCardEl) return;
+  mapCardEl.classList.remove("is-visible");
+}
+
+function mapFlashHint() {
+  mapHudElements();
+  const stage = canvas ? canvas.closest(".map-viewport") : null;
+  if (!stage) return;
+  stage.classList.add("show-scroll-hint");
+  window.clearTimeout(mapFlashHint.timer);
+  mapFlashHint.timer = window.setTimeout(() => stage.classList.remove("show-scroll-hint"), 1400);
+}
+
+let mapControlsZoomed = null;
+function mapSyncControls() {
+  mapHudElements();
+  const zoomed = mapCamera.tz > 1.02;
+  if (zoomed === mapControlsZoomed) return;
+  mapControlsZoomed = zoomed;
+  if (mapControlsEl) mapControlsEl.classList.toggle("is-zoomed", zoomed);
+  // while zoomed out, one finger still scrolls the page instead of panning the map
+  if (canvas) canvas.style.touchAction = zoomed ? "none" : "pan-y";
+}
+
+/* ---------- selection ---------- */
+
+function mapOpenSubject(code) {
+  if (!code) return;
+  activeMapChallengeSubject = code;
+  goToRoute(`/categories/${code}`);
+}
+
+function mapSelectSubject(code, options = {}) {
+  if (!code) {
+    if (!mapSelected) return;
+    mapSelected = null;
+    mapHideCard();
+    requestKnowledgeMapFrame();
+    return;
+  }
+  if (mapSelected === code && options.toggleOpens) {
+    mapOpenSubject(code);
+    return;
+  }
+  mapSelected = code;
+  activeMapChallengeSubject = code;
+  mapKeyIndex = mapCodes().indexOf(code);
+  mapShowCard(code);
+  if (options.fly !== false) mapFlyTo(code);
+  else requestKnowledgeMapFrame();
+}
+
+function mapStepSelection(direction) {
+  const codes = mapCodes();
+  if (!codes.length) return;
+  const current = mapSelected ? codes.indexOf(mapSelected) : -1;
+  const next = (current + direction + codes.length) % codes.length;
+  mapSelectSubject(codes[next], { fly: mapCamera.tz > 1.02 });
+}
+
+/* ---------- input ---------- */
+
+function mapHitTestAtDesign(x, y) {
+  const codes = mapCodes();
+  for (let index = codes.length - 1; index >= 0; index -= 1) {
+    if (mapHitTest(codes[index], x, y)) return codes[index];
+  }
+  return null;
+}
+
+function mapSetHover(code) {
+  if (code === mapPointerState.hover) return;
+  mapPointerState.hover = code;
+  mapUpdateTip();
+  requestKnowledgeMapFrame();
+}
+
+function mapUpdateCursor(code) {
+  if (!canvas) return;
+  if (mapDrag.panning) canvas.style.cursor = "grabbing";
+  else if (code) canvas.style.cursor = "pointer";
+  else canvas.style.cursor = mapCamera.tz > 1.02 ? "grab" : "";
 }
 
 function bindKnowledgeMapPointer() {
   if (mapListenersBound || !canvas) return;
   mapListenersBound = true;
+  mapHudElements();
+  canvas.style.touchAction = "pan-y";
 
-  canvas.addEventListener("mousemove", (event) => {
-    const code = mapSubjectAt(event);
-    canvas.style.cursor = code ? "pointer" : "";
-    if (code === mapPointerState.hover) return;
-    mapPointerState.hover = code;
-    canvas.title = code ? getSubjectTitle(code) : "";
+  const pointers = new Map();
+  const pinchMidpoint = () => {
+    const [first, second] = [...pointers.values()];
+    return { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2, distance: Math.hypot(first.x - second.x, first.y - second.y) || 1 };
+  };
+
+  canvas.addEventListener("pointerdown", (event) => {
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size === 2) {
+      const pinch = pinchMidpoint();
+      mapPinch.active = true;
+      mapPinch.distance = pinch.distance;
+      mapPinch.zoom = mapCamera.tz;
+      mapDrag.panning = false;
+      mapDrag.id = null;
+      return;
+    }
+    if (pointers.size > 2) return;
+    mapDrag.id = event.pointerId;
+    mapDrag.lastX = event.clientX;
+    mapDrag.lastY = event.clientY;
+    mapDrag.travel = 0;
+    // a finger only pans once the map is zoomed in, so the page still scrolls
+    mapDrag.panning = event.pointerType !== "touch" || mapCamera.tz > 1.02;
+    if (mapDrag.panning) {
+      try { canvas.setPointerCapture(event.pointerId); } catch (error) { /* capture is a nicety */ }
+    }
+    mapUpdateCursor(mapPointerState.hover);
+  });
+
+  canvas.addEventListener("pointermove", (event) => {
+    if (pointers.has(event.pointerId)) pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+    if (mapPinch.active && pointers.size === 2) {
+      const pinch = pinchMidpoint();
+      const point = mapPointerDesign(pinch.x, pinch.y);
+      if (point) mapZoomAt(mapPinch.zoom * (pinch.distance / mapPinch.distance), point.x, point.y);
+      mapCamera.zoom = mapCamera.tz;
+      mapCamera.x = mapCamera.tx;
+      mapCamera.y = mapCamera.ty;
+      mapSyncControls();
+      requestKnowledgeMapFrame();
+      return;
+    }
+
+    if (mapDrag.panning && event.pointerId === mapDrag.id) {
+      const deltaX = event.clientX - mapDrag.lastX;
+      const deltaY = event.clientY - mapDrag.lastY;
+      mapDrag.lastX = event.clientX;
+      mapDrag.lastY = event.clientY;
+      mapDrag.travel += Math.abs(deltaX) + Math.abs(deltaY);
+      const ratio = canvas.width / (canvas.clientWidth || 1);
+      const perPixel = ratio / mapViewScale();
+      // dragging is direct manipulation: the camera tracks the finger 1:1, no easing
+      mapCamera.tx -= deltaX * perPixel;
+      mapCamera.ty -= deltaY * perPixel;
+      mapClampCamera(true);
+      mapCamera.x = mapCamera.tx;
+      mapCamera.y = mapCamera.ty;
+      if (mapDrag.travel > 6) mapUpdateTip();
+      requestKnowledgeMapFrame();
+      return;
+    }
+
+    if (event.pointerType === "touch") {
+      // not panning, but a swipe still has to be told apart from a tap
+      if (event.pointerId === mapDrag.id) {
+        mapDrag.travel += Math.abs(event.clientX - mapDrag.lastX) + Math.abs(event.clientY - mapDrag.lastY);
+        mapDrag.lastX = event.clientX;
+        mapDrag.lastY = event.clientY;
+      }
+      return;
+    }
+    const point = mapPointerDesign(event.clientX, event.clientY);
+    const code = point ? mapHitTestAtDesign(point.x, point.y) : null;
+    mapSetHover(code);
+    mapUpdateCursor(code);
+    if (!mapReducedMotion()) {
+      const rect = canvas.getBoundingClientRect();
+      mapParallax.tx = mapClamp(((event.clientX - rect.left) / rect.width - 0.5) * 2, -1, 1);
+      mapParallax.ty = mapClamp(((event.clientY - rect.top) / rect.height - 0.5) * 2, -1, 1);
+      requestKnowledgeMapFrame();
+    }
+  });
+
+  const endPointer = (event) => {
+    // a pinch clears mapDrag.id, so lifting out of one never counts as a tap
+    const wasTracked = event.pointerId === mapDrag.id;
+    const travel = mapDrag.travel;
+    pointers.delete(event.pointerId);
+    if (pointers.size < 2) mapPinch.active = false;
+    if (wasTracked) {
+      mapDrag.panning = false;
+      mapDrag.id = null;
+      try { canvas.releasePointerCapture(event.pointerId); } catch (error) { /* already gone */ }
+    }
+    if (event.type !== "pointerup" || !wasTracked || travel > 6) {
+      mapUpdateCursor(mapPointerState.hover);
+      return; // cancelled, part of a pinch, or a drag rather than a tap
+    }
+    const point = mapPointerDesign(event.clientX, event.clientY);
+    const code = point ? mapHitTestAtDesign(point.x, point.y) : null;
+    if (event.pointerType === "touch") mapSetHover(null); // a tap gets the card, not a tooltip it cannot dismiss
+    canvas.focus({ preventScroll: true });
+    mapSelectSubject(code, { toggleOpens: true });
+    mapUpdateCursor(code);
+  };
+
+  canvas.addEventListener("pointerup", endPointer);
+  canvas.addEventListener("pointercancel", endPointer);
+
+  canvas.addEventListener("pointerleave", () => {
+    mapSetHover(null);
+    mapParallax.tx = 0;
+    mapParallax.ty = 0;
+    mapUpdateCursor(null);
     requestKnowledgeMapFrame();
   });
 
-  canvas.addEventListener("mouseleave", () => {
-    mapPointerState.hover = null;
-    canvas.style.cursor = "";
-    requestKnowledgeMapFrame();
+  canvas.addEventListener("wheel", (event) => {
+    const zoomed = mapCamera.tz > 1.02;
+    const modifier = event.ctrlKey || event.metaKey;
+    if (!zoomed && !modifier) {
+      mapFlashHint(); // the page keeps its scroll; the hint says how to zoom
+      return;
+    }
+    const factor = Math.exp(-event.deltaY * 0.0016);
+    if (zoomed && !modifier && factor < 1 && mapCamera.tz * factor <= mapMinZoom + 0.001) {
+      // zooming all the way out hands the wheel back to the page
+      mapResetView();
+      mapSyncControls();
+      return;
+    }
+    event.preventDefault();
+    const point = mapPointerDesign(event.clientX, event.clientY);
+    if (point && mapZoomAt(mapCamera.tz * factor, point.x, point.y)) {
+      mapSyncControls();
+      requestKnowledgeMapFrame();
+    }
+  }, { passive: false });
+
+  canvas.addEventListener("keydown", (event) => {
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+        event.preventDefault();
+        mapStepSelection(1);
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        event.preventDefault();
+        mapStepSelection(-1);
+        break;
+      case "Enter":
+      case " ":
+        if (!mapSelected) return;
+        event.preventDefault();
+        mapOpenSubject(mapSelected);
+        break;
+      case "Escape":
+        mapSelectSubject(null);
+        mapResetView();
+        mapSyncControls();
+        break;
+      case "+":
+      case "=":
+        event.preventDefault();
+        mapZoomAt(mapCamera.tz * 1.35, mapCamera.tx, mapCamera.ty);
+        mapSyncControls();
+        requestKnowledgeMapFrame();
+        break;
+      case "-":
+      case "_":
+        event.preventDefault();
+        mapZoomAt(mapCamera.tz / 1.35, mapCamera.tx, mapCamera.ty);
+        mapSyncControls();
+        requestKnowledgeMapFrame();
+        break;
+      default:
+        break;
+    }
   });
 
-  // clicking an island opens its subject, so the map is a way in, not a picture
-  canvas.addEventListener("click", (event) => {
-    const code = mapSubjectAt(event);
-    if (!code) return;
-    activeMapChallengeSubject = code;
-    goToRoute(`/categories/${code}`);
+  canvas.addEventListener("blur", () => {
+    mapSetHover(null);
   });
+
+  const previewButton = document.getElementById("mapPreview");
+  if (previewButton) {
+    previewButton.addEventListener("click", () => mapSetPreview(!mapPreviewMode));
+  }
+
+  if (mapControlsEl) {
+    mapControlsEl.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-map-zoom]");
+      if (!button) return;
+      const action = button.dataset.mapZoom;
+      if (action === "reset") {
+        mapSelectSubject(null);
+        mapResetView();
+      } else {
+        mapZoomAt(action === "in" ? mapCamera.tz * 1.4 : mapCamera.tz / 1.4, mapCamera.tx, mapCamera.ty);
+      }
+      mapSyncControls();
+      requestKnowledgeMapFrame();
+    });
+  }
+
+  if (mapCardEl) {
+    mapCardEl.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-map-card]");
+      if (!button) return;
+      if (button.dataset.mapCard === "open") mapOpenSubject(mapSelected);
+      else mapSelectSubject(null);
+    });
+    mapCardEl.addEventListener("transitionend", (event) => {
+      if (event.propertyName === "opacity" && !mapCardEl.classList.contains("is-visible")) mapCardEl.hidden = true;
+    });
+  }
 
   if (typeof ResizeObserver === "function") {
     mapResizeObserver = new ResizeObserver(() => {
       if (fitKnowledgeCanvas()) {
         mapBaseStale = true;
-        drawKnowledgeMap();
+        requestKnowledgeMapFrame();
       }
     });
     mapResizeObserver.observe(canvas);
@@ -18446,21 +20225,53 @@ function bindKnowledgeMapPointer() {
   window.addEventListener("resize", () => {
     if (fitKnowledgeCanvas()) {
       mapBaseStale = true;
-      drawKnowledgeMap();
+      requestKnowledgeMapFrame();
     }
   });
+}
+
+/* ---------- entry point ---------- */
+
+function mapStartEntrance() {
+  mapSelectSubject(null);
+  mapPointerState.hover = null;
+  mapUpdateTip();
+  mapCamera.tz = 1;
+  mapCamera.tx = mapDesignWidth / 2;
+  mapCamera.ty = mapDesignHeight / 2;
+  mapCamera.zoom = 1;
+  mapCamera.x = mapCamera.tx;
+  mapCamera.y = mapCamera.ty;
+  mapSyncControls();
+  if (mapReducedMotion()) {
+    mapEntranceAt = 0;
+    mapCodes().forEach((code) => { mapFx(code).appear = 1; });
+    return;
+  }
+  mapEntranceAt = performance.now();
+  mapCodes().forEach((code) => { mapFx(code).appear = 0; });
 }
 
 function drawKnowledgeMap() {
   if (!ctx || !canvas) return;
   syncMapChallengeProgress();
+  const wasPreview = mapPreviewMode;
+  mapSyncPreviewDefault();
+  if (wasPreview !== mapPreviewMode) mapInvalidateContinent();
   bindKnowledgeMapPointer();
+  mapWaterInit();
+  mapUpdatePreviewControl();
   mapGrainPattern = mapGrainTheme === (currentTheme === "dark" ? "dark" : "light") ? mapGrainPattern : null;
-  if (!fitKnowledgeCanvas()) return;
+  if (!fitKnowledgeCanvas()) {
+    mapWasVisible = false;
+    return;
+  }
   mapBaseStale = true;
-  if (mapLoopRunning) return;
-  mapLoopRunning = true;
-  requestAnimationFrame(knowledgeMapFrame);
+  if (!mapWasVisible) {
+    mapWasVisible = true;
+    mapStartEntrance();
+  }
+  requestKnowledgeMapFrame();
 }
 
 function roundRect(context, x, y, width, height, radius) {

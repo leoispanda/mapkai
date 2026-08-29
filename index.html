@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.205" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.207" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -496,13 +496,33 @@
             </div>
           </section>
           <section class="map-stage" aria-label="Cartoon knowledge map">
-            <canvas id="knowledgeCanvas" width="1100" height="619"></canvas>
+            <div class="map-viewport" id="mapViewport">
+              <canvas id="knowledgeWater" width="1100" height="619" aria-hidden="true"></canvas>
+              <canvas id="knowledgeCanvas" width="1100" height="619" tabindex="0" role="application" aria-label="Knowledge map. Arrow keys move between islands, Enter opens one."></canvas>
+              <div class="map-controls" id="mapControls">
+                <button type="button" class="map-control" data-map-zoom="in" aria-label="Zoom in" title="Zoom in">
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 4.6v10.8M4.6 10h10.8"/></svg>
+                </button>
+                <button type="button" class="map-control" data-map-zoom="out" aria-label="Zoom out" title="Zoom out">
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4.6 10h10.8"/></svg>
+                </button>
+                <button type="button" class="map-control map-control-reset" data-map-zoom="reset" aria-label="Whole map" title="Whole map">
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M7.4 4.4H4.4v3M12.6 4.4h3v3M12.6 15.6h3v-3M7.4 15.6h-3v-3"/></svg>
+                </button>
+              </div>
+              <button type="button" class="map-preview" id="mapPreview">Show the finished map</button>
+              <p class="map-preview-note" id="mapPreviewNote" hidden>Preview &mdash; this is the map fully explored. Your own starts at open water.</p>
+              <div class="map-tip" id="mapTip" aria-hidden="true"></div>
+              <p class="map-scroll-hint" aria-hidden="true">Hold &#8984; or Ctrl and scroll to zoom</p>
+              <div class="map-focus-card" id="mapFocusCard" aria-live="polite" hidden></div>
+            </div>
             <div class="map-legend">
               <span><i class="ocean"></i> Unknown</span>
               <span><i class="snow"></i> Emerging</span>
               <span><i class="pilot"></i> Familiar</span>
               <span><i class="ready"></i> Active</span>
             </div>
+            <p class="map-hint" id="mapHint">Click an island &middot; drag to pan &middot; scroll to zoom</p>
           </section>
         </div>
       </section>
@@ -618,10 +638,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.205"></script>
-    <script src="/content/management-column.js?v=0.1.205"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.205"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.205"></script>
-    <script src="/script.js?v=0.1.205"></script>
+    <script src="/content/field-fables.js?v=0.1.207"></script>
+    <script src="/content/management-column.js?v=0.1.207"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.207"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.207"></script>
+    <script src="/script.js?v=0.1.207"></script>
   </body>
 </html>
