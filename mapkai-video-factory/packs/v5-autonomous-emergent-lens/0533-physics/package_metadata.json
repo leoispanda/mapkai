@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "fieldId": "0533",
+  "fieldName": "Physics",
+  "type": "FIELD",
+  "contentVersion": "v5-autonomous-emergent-lens",
+  "editorialFrameworkVersion": "autonomous-emergent-lens-1.0",
+  "narrativeEngine": "mystery",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "taxonomySource": "script.js",
+  "generatedAt": "2026-08-29T21:21:43.309Z",
+  "runId": "autonomous-20260830150120-5ad8e387-164e-4dfa-8274-86af45ec40ed",
+  "artifactType": "FIELD_OVERVIEW_VIDEO",
+  "policyBinding": {
+    "schemaVersion": "policy-binding.v1",
+    "creatingPolicy": {
+      "version": "v1.1",
+      "path": "policy/mapkai-creating-policy-v1.1.md",
+      "sha256": "ea27858cd695f20c06b4e85b2eac3e1dfc4442cb36e6eccf596fab609cb0af4b"
+    },
+    "reviewPolicy": {
+      "version": "v1.0",
+      "path": "policy/mapkai-review-policy-v1.0.md",
+      "sha256": "2f56f3e2c46a00e2fbfc5314a3a57009e020839ebf933838a329b48ee0ea0f8c"
+    },
+    "verifiedAt": "2026-08-30T15:01:20.245Z"
+  },
+  "activePromptVersions": {
+    "editorialConversation": {
+      "version": "editorial-conversation.v1",
+      "path": "prompts/editorial-conversation.md",
+      "sha256": "e93cfaa5a6035336674ea079a342d3590b731d0a7ed8479d82408a2b1755c819",
+      "present": true
+    },
+    "editorialDirector": {
+      "version": "editorial-director.v1",
+      "path": "prompts/editorial-director.md",
+      "sha256": "a267cbca475a264edcd070f798d744dac84c82c83c20dc7dabc679c8f8066e67",
+      "present": true
+    },
+    "editorialCritic": {
+      "version": "editorial-critic.v1",
+      "path": "prompts/editorial-critic.md",
+      "sha256": "2be765c7cc8ad8551ebafeca9b6ebe9d981e534727f04ac0e8948bee53a98f63",
+      "present": true
+    },
+    "editorialReviser": {
+      "version": "editorial-reviser.v1",
+      "path": "prompts/editorial-reviser.md",
+      "sha256": "fa6c3bb495298be9d7f997172b22414784208aa804df4645e43498174301af2e",
+      "present": true
+    },
+    "knowledgeExpander": {
+      "version": "knowledge-expander.v1",
+      "path": "prompts/knowledge-expander.md",
+      "sha256": "5313f6df43ece1261be599fbaa92d9bd0bb88a770ec486a193df4e0d6c1a7636",
+      "present": true
+    },
+    "narrativeCompiler": {
+      "version": "narrative-compiler.v1",
+      "path": "prompts/narrative-compiler.md",
+      "sha256": "4768c5415ded51198467dacde0b256822ff76499da1f8b0eab29b8e1e562a131",
+      "present": true
+    },
+    "notebookDirector": {
+      "version": "notebook-director.v1",
+      "path": "prompts/notebook-director.md",
+      "sha256": "52938e1351bc0e256fa2a4cfe9c10e9f0a12bc34f0a8fba5d593350fde477b55",
+      "present": true
+    },
+    "videoReviewer": {
+      "version": "video-reviewer.v1",
+      "path": "prompts/video-reviewer.md",
+      "sha256": "a6ff75439807cb5edae971905fe8cb147db90afadfbd152eb2cdb9d53942496b",
+      "present": true
+    },
+    "failureDiagnoser": {
+      "version": "failure-diagnoser.v1",
+      "path": "prompts/failure-diagnoser.md",
+      "sha256": "8a72cecd4ec21ced10025aca932287f5ee06ecfaf18d77e45fe0c3b991b1adb5",
+      "present": true
+    }
+  },
+  "creatorOutputPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0533-physics/overview.md",
+  "creatorSelfCheckPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0533-physics/editorial_critique.json",
+  "independentReviewPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0533-physics/independent_review.json",
+  "finalDecisionPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0533-physics/final_review_decision.json",
+  "sensitiveContent": {
+    "status": "CLEAR",
+    "signals": [],
+    "evidence": [],
+    "leastSensitiveExampleRule": "Use the least sensitive example that explains the idea equally well."
+  },
+  "updatedAt": "2026-08-30T15:21:46.117Z"
+}

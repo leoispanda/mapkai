@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/policy-binding/v1",
+  "title": "MapKAI Policy Binding",
+  "type": "object",
+  "required": ["schemaVersion", "creatingPolicy", "reviewPolicy", "activePromptVersions", "artifactType", "fieldId", "runId", "timestamp"],
+  "properties": {
+    "schemaVersion": {"const": "run-record.v1"},
+    "runId": {"type": ["string", "null"]},
+    "fieldId": {"type": ["string", "null"]},
+    "artifactType": {"type": ["string", "null"]},
+    "timestamp": {"type": "string"},
+    "creatingPolicy": {"$ref": "#/$defs/policy"},
+    "reviewPolicy": {"$ref": "#/$defs/policy"},
+    "activePromptVersions": {"type": "object"}
+  },
+  "$defs": {
+    "policy": {
+      "type": "object",
+      "required": ["version", "path", "sha256"],
+      "properties": {
+        "version": {"type": "string"},
+        "path": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.ai-era-overlay.1",
+  "origin": "curated_overlay_seed",
+  "productionEligible": false,
+  "field": {
+    "id": "AI-ERA-GENERAL-LITERACY-EDITORIAL-OVERLAY",
+    "name": "AI-Era General Literacy",
+    "nameZh": "AI 时代通识",
+    "slug": "ai-era-general-literacy-editorial-overlay",
+    "type": "AI_ERA_GENERAL_LITERACY"
+  },
+  "centralHumanQuestion": "What must a broadly educated person learn to notice, verify, delegate, and decide when AI systems mediate knowledge work?",
+  "fieldBecomesNecessaryWhen": "People must decide what to delegate to generative and agentic systems while the social norms, evidence practices, and job boundaries around those systems are still forming.",
+  "coreThesis": "AI-era general literacy is a MapKAI-curated contemporary overlay for human–AI collaboration, verification, judgement, synthetic media, learning, work, and creative practice; it is not a claim that a universally standardised academic discipline already exists.",
+  "narrativeEngine": "tool changes observability",
+  "parallelCivilization": {
+    "enabled": false,
+    "entryPoint": "We are living through the transition in our own civilisation.",
+    "existingKnowledge": [
+      "ordinary digital literacy",
+      "human judgement",
+      "professional practice"
+    ],
+    "trigger": "AI systems begin producing plausible work faster than people can inspect its provenance.",
+    "ordinaryIntuition": "A fluent answer is probably a reliable answer.",
+    "failedIntuition": "Fluency can hide uncertainty, missing context, synthetic evidence, and responsibility gaps.",
+    "emergentProblem": "How do people build trustworthy human–AI workflows while new boundaries are being negotiated?"
+  },
+  "openingHook": "This time there is no need to imagine a parallel world: the transition is happening in our own offices, studios, classrooms, and decisions.",
+  "centralTension": "How can a person gain leverage from an AI system without outsourcing the judgement that makes the work meaningful or accountable?",
+  "primaryAha": "The scarce skill in an AI-mediated workflow is not producing more text; it is specifying the task, inspecting the evidence, preserving provenance, and deciding what must remain human judgement.",
+  "secondaryTurns": [
+    "A model can compress knowledge without knowing whether the source is current or true.",
+    "An agent can act across tools, so delegation becomes a question of scope and accountability.",
+    "Synthetic media changes what counts as an observable trace.",
+    "The right home for an AI question depends on whether its substance is computing, economics, psychology, ethics, media, education, or law."
+  ],
+  "emergencePath": [
+    "AI tools become commonplace",
+    "fluency outruns verification",
+    "new workflows expose provenance and responsibility gaps",
+    "cross-field practices for delegation and checking form",
+    "MapKAI curates a general literacy overlay while mature disciplines retain their own questions"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Computer science",
+      "reasonItExists": "Computer science: systems and models"
+    },
+    {
+      "name": "Economics",
+      "reasonItExists": "Economics: incentives and labour"
+    },
+    {
+      "name": "Psychology",
+      "reasonItExists": "Psychology: judgement and cognition"
+    },
+    {
+      "name": "Management",
+      "reasonItExists": "Management: workflows and responsibility"
+    },
+    {
+      "name": "Ethics and philosophy",
+      "reasonItExists": "Ethics and philosophy: values and agency"
+    },
+    {
+      "name": "Media",
+      "reasonItExists": "Media: synthetic evidence and provenance"
+    },
+    {
+      "name": "Education",
+      "reasonItExists": "Education: learning and assessment"
+    },
+    {
+      "name": "Law",
+      "reasonItExists": "Law: rights, liability, and governance"
+    }
+  ],
+  "mandatoryConcepts": [
+    "human–AI collaboration",
+    "agent literacy",
+    "hallucination and verification",
+    "synthetic media literacy",
+    "model literacy for general users",
+    "AI-assisted thinking and learning",
+    "judgement in AI-mediated work",
+    "personal AI systems",
+    "AI-native creative practice"
+  ],
+  "optionalConcepts": [
+    "model cards",
+    "provenance",
+    "human-in-the-loop",
+    "agent boundaries"
+  ],
+  "methodsToRepresent": [
+    "task specification",
+    "source verification",
+    "provenance checks",
+    "scenario testing",
+    "human review and escalation"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Computer science",
+      "connection": "Computer science: systems and models",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Economics",
+      "connection": "Economics: incentives and labour",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Psychology",
+      "connection": "Psychology: judgement and cognition",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Management",
+      "connection": "Management: workflows and responsibility",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Ethics and philosophy",
+      "connection": "Ethics and philosophy: values and agency",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Media",
+      "connection": "Media: synthetic evidence and provenance",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Education",
+      "connection": "Education: learning and assessment",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    },
+    {
+      "field": "Law",
+      "connection": "Law: rights, liability, and governance",
+      "difference": "This overlay routes the question to the mature field that owns its underlying mechanism or norm."
+    }
+  ],
+  "visualOpportunities": [
+    "a fluent answer whose citations branch into verified and unverified paths",
+    "a human–AI workflow with delegation boundaries",
+    "synthetic media and provenance layers",
+    "the same problem routed to computing, economics, psychology, law, media, or education"
+  ],
+  "endingReturn": "We are watching a new literacy boundary form in our own civilisation; MapKAI can name the practice without pretending the academic field is finished.",
+  "finalMentalModel": "Treat AI as a powerful, fallible participant in a larger human system: specify the task, inspect provenance, verify consequential claims, preserve judgement, and know which mature field owns the underlying question.",
+  "avoid": [
+    "do not create a duplicate formal taxonomy field",
+    "do not imply all AI questions belong here",
+    "do not claim universal academic standardisation",
+    "do not make product promises or fear-based marketing"
+  ]
+}

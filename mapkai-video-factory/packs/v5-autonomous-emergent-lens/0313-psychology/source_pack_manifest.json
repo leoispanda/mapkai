@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0313-psychology/overview.md",
+  "sourceSha256": "63828cdc6bdd0b7ea1e8239c994d73cdd847803e38b18e0c956a36579b3311e4",
+  "directorPrompt": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0313-psychology/video_prompt.md",
+  "directorPromptSha256": "e10209983a82edc89829e83ad7b672ab8f9c740bf2ed434a96386d37bddb8117",
+  "guidance": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0313-psychology/editorial_guidance.json",
+  "guidanceSha256": "e33e5c47c2311db4d5159070dffe7f407f7957537a2e8fccded52420786c5ef7",
+  "factualSourceAndGuidanceSeparate": true,
+  "generatedAt": "2026-08-29T21:21:43.319Z",
+  "refreshedAt": "2026-08-30T15:21:46.119Z"
+}

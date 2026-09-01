@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "final-review-decision.v1",
+  "runId": "autonomous-20260830150120-5ad8e387-164e-4dfa-8274-86af45ec40ed",
+  "fieldId": "GENERAL",
+  "artifactType": "FIELD_OVERVIEW_VIDEO",
+  "policyBinding": {
+    "schemaVersion": "policy-binding.v1",
+    "creatingPolicy": {
+      "version": "v1.1",
+      "path": "policy/mapkai-creating-policy-v1.1.md",
+      "sha256": "ea27858cd695f20c06b4e85b2eac3e1dfc4442cb36e6eccf596fab609cb0af4b"
+    },
+    "reviewPolicy": {
+      "version": "v1.0",
+      "path": "policy/mapkai-review-policy-v1.0.md",
+      "sha256": "2f56f3e2c46a00e2fbfc5314a3a57009e020839ebf933838a329b48ee0ea0f8c"
+    },
+    "verifiedAt": "2026-08-30T15:01:20.245Z"
+  },
+  "reviewerRole": "independent_reviewer",
+  "decision": "BLOCKED",
+  "evidenceSufficient": false,
+  "reasonCodes": [
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "hardGates": {
+    "factualEpistemicIntegrity": "NOT_REVIEWED",
+    "realWorldFieldFidelity": "NOT_REVIEWED",
+    "artifactIntegrity": "NOT_REVIEWED",
+    "sensitiveContentGovernance": "NOT_REVIEWED"
+  },
+  "findings": [],
+  "summary": "Independent semantic review has not produced sufficient evidence.",
+  "reviewedAt": null,
+  "creatorOutputPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/overview.md",
+  "creatorSelfCheckPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/editorial_critique.json",
+  "independentReviewPath": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/independent_review.json",
+  "decisionImpact": "No release or next-stage promotion is permitted."
+}

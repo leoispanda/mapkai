@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.1",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "field": {
+    "id": "MAPKAI-GENERAL-OVERVIEW",
+    "name": "MapKAI General Overview",
+    "nameZh": "MapKAI 知识地图总览",
+    "slug": "general-overview",
+    "type": "GENERAL_OVERVIEW"
+  },
+  "centralHumanQuestion": "If reality is continuous, why did human knowledge become organised into disciplines?",
+  "fieldBecomesNecessaryWhen": "A capable community encounters recurring problems that cannot be solved by local memory or one person's intuition, and needs ways of noticing, comparing, recording, testing, and teaching that can travel across generations.",
+  "coreThesis": "Reality contains phenomena, not academic departments. Disciplines are organised ways human beings learned to investigate recurring kinds of questions; MapKAI maps those ways of seeing without pretending the map is the world.",
+  "narrativeEngine": "journey",
+  "candidateNarrativeEngines": [
+    "journey",
+    "thought experiment",
+    "discovery"
+  ],
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "Imagine another Earth with familiar physical laws and human minds, but no inherited textbooks, universities, or names for subjects. Nothing is labelled; a falling object, a failed harvest, a disagreement, a fever, and a moving star simply happen.",
+    "existingKnowledge": [
+      "practical memory",
+      "customs and stories",
+      "informal observation",
+      "cooperation and argument",
+      "tools made for immediate use"
+    ],
+    "trigger": "The same pattern returns across different people and settings, and local explanations no longer coordinate action.",
+    "ordinaryIntuition": "If a person has seen a phenomenon before, a confident story about it should be enough to guide the next decision.",
+    "failedIntuition": "Memory and custom work locally but cannot reliably compare cases, expose hidden variables, preserve a method, or settle disagreement at scale.",
+    "emergentProblem": "A community keeps solving the same kinds of problems locally, yet the solutions disappear when the observer, season, or generation changes. The problem is not a lack of intelligence; it is the absence of portable ways to know."
+  },
+  "openingHook": "Imagine another Earth with familiar physical laws and human minds, but no inherited textbooks, universities, or names for subjects. Nothing is labelled; a falling object, a failed harvest, a disagreement, a fever, and a moving star simply happen.",
+  "centralTension": "How can a continuous world become intelligible without carving it into arbitrary boxes?",
+  "primaryAha": "Disciplines are not pieces of reality waiting to be found. They are durable agreements about which recurring questions deserve specialised concepts, evidence, methods, and boundaries.",
+  "secondaryTurns": [
+    "A repeated practical problem becomes a pattern only when someone records differences instead of merely remembering outcomes.",
+    "A useful concept makes a hidden relationship portable: people can teach it, challenge it, and apply it beyond the original case.",
+    "A boundary is a tool for attention, not a wall around reality; difficult problems cross several fields at once.",
+    "A map becomes valuable when it helps a learner choose a next question without confusing the map with the territory."
+  ],
+  "emergencePath": [
+    "phenomena are encountered",
+    "recurring problems resist local intuition",
+    "comparisons and records make patterns portable",
+    "concepts and methods stabilise what can be asked",
+    "bodies of knowledge become teachable traditions",
+    "disciplines and institutions preserve, contest, and extend those traditions"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Natural sciences, mathematics and statistics",
+      "reasonItExists": "Recurring questions about matter, change, measurement, and uncertainty need models that can be checked against the world."
+    },
+    {
+      "name": "Social sciences, journalism and information",
+      "reasonItExists": "Choices become patterned when people coordinate, conflict, communicate, and build institutions."
+    },
+    {
+      "name": "Arts and humanities",
+      "reasonItExists": "Meaning, memory, language, interpretation, and value cannot be exhausted by measurement alone."
+    },
+    {
+      "name": "Business, administration and law",
+      "reasonItExists": "Cooperation at scale needs records, exchange, governance, and enforceable expectations."
+    },
+    {
+      "name": "Computing, engineering, health, ecology and services",
+      "reasonItExists": "Knowledge becomes an instrument when systems, bodies, environments, and journeys must be designed, repaired, and cared for."
+    }
+  ],
+  "mandatoryConcepts": [
+    "phenomenon versus question",
+    "portable concepts",
+    "measurement and comparison",
+    "models and evidence",
+    "disciplinary boundary as a tool",
+    "connected knowledge map"
+  ],
+  "optionalConcepts": [
+    "institutions of inquiry",
+    "translation across scales",
+    "epistemic humility"
+  ],
+  "methodsToRepresent": [
+    "observation and recording",
+    "comparison and classification",
+    "measurement and modelling",
+    "experiment, interpretation, and argument",
+    "teaching, criticism, and revision"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "All MapKAI fields",
+      "connection": "Every field is a response to a recurring class of questions in the same continuous world.",
+      "difference": "The map preserves different objects, methods, and standards rather than flattening them into one method."
+    },
+    {
+      "field": "AI-era General Literacy",
+      "connection": "People now need to organise knowledge while new human–AI practices are still forming.",
+      "difference": "It is a curated contemporary overlay, not a replacement for mature disciplines."
+    },
+    {
+      "field": "Education",
+      "connection": "A map becomes useful only when it can be learned and passed on.",
+      "difference": "Education studies the transmission of knowledge; the overview explains the landscape being transmitted."
+    }
+  ],
+  "visualOpportunities": [
+    "an unlabeled landscape of falling objects, crops, conversations, bodies, stars, and signals",
+    "a single practical notebook becoming a shared record",
+    "patterns linking observation to concept to method",
+    "continents of the existing MapKAI map lighting up without becoming a new taxonomy",
+    "a final zoom from one learner's question to the real knowledge landscape"
+  ],
+  "endingReturn": "The parallel civilization was a lens, not our history. Our civilization has already built this vast, revisable landscape. MapKAI is the existing map through which a learner can enter it.",
+  "finalMentalModel": "After the overview, a learner should be able to ask: what recurring problem is this field built to clarify, what evidence does it trust, what territory does it cover, what neighbours does it need, and what question should I explore next?",
+  "avoid": [
+    "no fake academic field called World K",
+    "no new taxonomy or future department",
+    "no product advertisement",
+    "no mechanical list of subjects",
+    "no claim that the fictional civilization is historical",
+    "no childish characters or classroom dialogue"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0542-statistics/overview.md",
+  "sourceSha256": "8cf67b38bb04cd61f8b147ec60b11ee2e8bbee3cc2773dc99d0d327390c8069b",
+  "directorPrompt": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0542-statistics/video_prompt.md",
+  "directorPromptSha256": "cf6f5513f5148a964182619996fef8c5bc9c4f6e7ff60228448b1e1290d66023",
+  "guidance": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0542-statistics/editorial_guidance.json",
+  "guidanceSha256": "2e5f8899f387129b9684f9db52688406dfeb0161df2c2cdaa978a268cedf250f",
+  "factualSourceAndGuidanceSeparate": true,
+  "generatedAt": "2026-08-29T21:21:43.322Z",
+  "refreshedAt": "2026-08-30T15:21:46.121Z"
+}

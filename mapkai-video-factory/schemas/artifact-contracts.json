@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/artifact-contracts/v1",
+  "schemaVersion": "artifact-contract.v1",
+  "status": "PLACEHOLDER",
+  "principle": "Artifact-specific contracts must define the cognitive job of each artifact; a universal review rubric must not be substituted.",
+  "contracts": {
+    "GENERAL_OVERVIEW": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "OVERVIEW": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "FIELD_OVERVIEW": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "CURRICULUM": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "SUBJECT": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "LESSON": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "DEEP_DIVE": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []},
+    "FIELD_OVERVIEW_VIDEO": {"contractStatus": "PLACEHOLDER", "cognitiveJob": null, "requiredEvidence": [], "requiredOutputs": []}
+  }
+}

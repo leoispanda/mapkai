@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.1",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "field": {
+    "id": "0533",
+    "name": "Physics",
+    "nameZh": "物理学",
+    "slug": "0533-physics",
+    "type": "FIELD"
+  },
+  "centralHumanQuestion": "How can a few deep principles explain both a falling stone and the behaviour of stars, atoms, light, and time?",
+  "fieldBecomesNecessaryWhen": "Local descriptions of motion, heat, light, and matter repeatedly disagree, and reliable prediction requires relationships that hold beyond one place, object, or observer.",
+  "coreThesis": "Physics searches for invariant structure beneath changing phenomena by isolating systems, measuring them, modelling relationships, and testing where a model succeeds or breaks.",
+  "narrativeEngine": "mystery",
+  "candidateNarrativeEngines": [
+    "mystery",
+    "scale shift",
+    "tool changes observability"
+  ],
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "A stone leaves a hand and falls. The Moon remains overhead. They look like opposite motions—but what if the Moon is falling too?",
+    "existingKnowledge": [
+      "measuring length and time for craft",
+      "watching shadows and seasons",
+      "practical balance and lever knowledge",
+      "informal experiments with heat and light",
+      "navigation by visible stars"
+    ],
+    "trigger": "The same apparent event behaves differently when distance, speed, temperature, or observer changes, exposing the limits of everyday categories.",
+    "ordinaryIntuition": "Earthly falling and celestial motion belong to separate kinds of nature, and time and distance are the same for every observer.",
+    "failedIntuition": "A single local frame can hide a common law; at extreme speed, gravity, small scale, or low temperature, inherited pictures of space, time, matter, and certainty stop working.",
+    "emergentProblem": "A community can describe nearby motion by habit, yet the same rules must guide a bridge, a projectile, a lamp, and a planet. Local appearances do not reveal which quantities remain stable across scale."
+  },
+  "openingHook": "A stone leaves a hand and falls. The Moon remains overhead. They look like opposite motions—but what if the Moon is falling too?",
+  "centralTension": "What can remain true when everything we see seems to change with scale, motion, and measurement?",
+  "primaryAha": "The Moon is also falling: its sideways motion continually misses Earth. The first unification is not a new object but an invariant relationship beneath two different appearances.",
+  "secondaryTurns": [
+    "Conservation laws show that change can be constrained even when motion looks complicated.",
+    "Fields replace the idea of isolated pushes with structured conditions spread through space.",
+    "Thermodynamics reveals that energy can be conserved while useful transformations still have direction and limits.",
+    "Relativity and quantum theory make the observer, measurement, scale, and probability part of the model rather than footnotes."
+  ],
+  "emergencePath": [
+    "practical motion and shadows are recorded",
+    "repeated measurements reveal regularities",
+    "mathematical laws unify terrestrial and celestial cases",
+    "fields and energy describe interactions beyond contact",
+    "relativity revises space and time",
+    "quantum theory revises what prediction and measurement mean"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Classical mechanics",
+      "reasonItExists": "Motion, force, momentum, and gravity need a transferable framework at ordinary scales."
+    },
+    {
+      "name": "Electromagnetism and optics",
+      "reasonItExists": "Light, charge, and fields cannot be explained as only contact between solid objects."
+    },
+    {
+      "name": "Thermodynamics and statistical physics",
+      "reasonItExists": "Heat and many-particle systems introduce energy direction, probability, and macroscopic order."
+    },
+    {
+      "name": "Quantum physics",
+      "reasonItExists": "Atomic-scale matter and radiation force a probabilistic account tied to measurement."
+    },
+    {
+      "name": "Relativity and cosmology",
+      "reasonItExists": "High speed, strong gravity, and the universe require a geometry of spacetime rather than fixed absolute backgrounds."
+    }
+  ],
+  "mandatoryConcepts": [
+    "measurement and model",
+    "conservation laws",
+    "fields",
+    "energy and entropy",
+    "relativity",
+    "quantum probability"
+  ],
+  "optionalConcepts": [
+    "symmetry",
+    "standard model",
+    "statistical ensembles",
+    "cosmological expansion"
+  ],
+  "methodsToRepresent": [
+    "controlled experiment",
+    "mathematical modelling",
+    "instrument calibration",
+    "dimensional and scale analysis",
+    "prediction, replication, and anomaly hunting"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Mathematics (0541)",
+      "connection": "Equations, geometry, probability, and symmetry make physical relationships precise.",
+      "difference": "Mathematics explores formal possibility; physics constrains models through measurement of the world."
+    },
+    {
+      "field": "Chemistry (0531)",
+      "connection": "Physical laws explain the structure and transformation of matter.",
+      "difference": "Chemistry organises reactive substances and emergent properties; physics seeks more general underlying relations."
+    },
+    {
+      "field": "Statistics (0542)",
+      "connection": "Measurement noise, uncertainty, and model comparison are unavoidable in experiments.",
+      "difference": "Statistics formalises inference under uncertainty; physics supplies hypotheses about natural mechanisms."
+    },
+    {
+      "field": "Engineering and construction (07)",
+      "connection": "Physical models become designs that must survive material and safety constraints.",
+      "difference": "Engineering optimises artefacts under constraints; physics tests general laws and limits."
+    }
+  ],
+  "visualOpportunities": [
+    "stone trajectory becoming an orbital curve",
+    "force, momentum, and energy diagrams",
+    "heat moving through a machine",
+    "field lines and pulses of light",
+    "spacetime grids and quantum probability",
+    "a scale transition from atom to galaxy"
+  ],
+  "endingReturn": "The falling stone and Moon were an editorial thought experiment, not a newly discovered event. Our real field is the expanding, testable map of laws and models that now reaches from atoms to galaxies.",
+  "finalMentalModel": "Think of physics as a search for invariants: identify what changes, what is conserved, what can be measured, and which model is adequate at this scale.",
+  "avoid": [
+    "do not stop at Newton",
+    "do not portray equations as decoration",
+    "do not claim quantum ideas are mystical proof",
+    "do not collapse physics into engineering",
+    "do not present the parallel observer as a historical witness"
+  ]
+}

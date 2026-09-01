@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="same-origin">
+  <title>MapKAI · Video Review</title>
+  <style>
+    :root{color-scheme:light;--ink:#182f2b;--muted:#64746c;--line:#dde4dc;--paper:#f4f5ef;--green:#21664e}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,-apple-system,sans-serif}
+    header{padding:24px clamp(20px,5vw,72px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}
+    a{color:var(--green);text-underline-offset:4px}.brand{text-decoration:none;letter-spacing:.14em;font-weight:750}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+    main{max-width:1420px;margin:0 auto;padding:38px clamp(20px,4vw,64px)}h1{font-family:Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.15;font-weight:500;margin:6px 0 12px}h2{font-size:23px;line-height:1.3;margin:0 0 10px}
+    p{margin:8px 0 20px}.intro{max-width:810px;color:var(--muted)}.badge{border:1px solid #c4d5c6;color:var(--green);border-radius:30px;padding:4px 12px;font-size:12px;white-space:nowrap}
+    .login{max-width:460px;background:white;border:1px solid var(--line);border-radius:18px;padding:28px;margin:30px 0}.login label{display:block;margin-bottom:8px}
+    button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid #c8d5c9;border-radius:8px;background:white;color:var(--ink);padding:9px 15px}button:hover{border-color:var(--green)}button:disabled{opacity:.5;cursor:wait}button.primary{background:var(--green);color:white;border-color:var(--green)}
+    input,textarea,select{border:1px solid #c8d5c9;border-radius:7px;padding:8px;background:white;color:var(--ink);max-width:100%}input[type=password]{width:100%;margin-bottom:16px}textarea{width:100%;resize:vertical}input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+    .status{min-height:24px;color:var(--muted)}.error{color:#953d2d}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:26px;margin-top:26px}
+    nav{display:flex;flex-direction:column;gap:8px}nav button{text-align:left;background:transparent;padding:13px 14px;line-height:1.35;border-color:transparent}nav button[aria-current=true]{background:#e2ebe0;border-color:#bacdbb}
+    nav small{display:block;font-size:11px;color:var(--muted);margin-top:6px}.viewer{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;min-width:0}video{width:100%;background:#122821;border-radius:11px;max-height:65vh;margin:18px 0 12px;aspect-ratio:16/9}
+    .meta{color:var(--muted);font-size:13px}.links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;margin:14px 0 24px}.review{border-top:1px solid var(--line);padding-top:22px;margin-top:22px}.review h3{font-size:18px;margin:0}.scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin:20px 0}.scores label{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px}.scores input{width:68px}
+    .notes{display:grid;gap:14px}.notes label{display:block;font-size:13px}.notes textarea,.notes select{display:block;margin-top:6px}.choices{display:flex;gap:24px;flex-wrap:wrap}.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}.notice{padding:12px 16px;background:#f3f6ef;border-radius:8px;font-size:13px;color:var(--muted);margin-top:18px}
+    [hidden]{display:none!important}@media(max-width:800px){.layout{grid-template-columns:1fr}nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.viewer{padding:18px}.scores{grid-template-columns:1fr}header{padding:18px 20px}}
+  </style>
+  <script src="/factory-review.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="/">MapKAI</a><span class="badge">Private · Founder review</span></header>
+<main>
+  <div class="eyebrow">Content Factory / Raw video library</div>
+  <h1>Watch before we publish.</h1>
+  <p class="intro">Original generated videos, matched to the exact source pack and policy versions used at submission. Source-pack approval does not approve the resulting video. Nothing on this page is published to learners.</p>
+  <p id="status" class="status" role="status">Checking access…</p>
+  <form id="login" class="login" hidden>
+    <h2>Founder access</h2>
+    <p class="meta">Use your existing MapKAI founder access code. It is not stored in the browser.</p>
+    <label for="access-code">Access code</label><input id="access-code" type="password" autocomplete="current-password" required>
+    <button class="primary" type="submit">Open private library</button>
+  </form>
+  <section id="library" hidden>
+    <div class="notice" id="summary"></div>
+    <div class="layout">
+      <nav id="video-list" aria-label="Uploaded videos"></nav>
+      <article id="viewer" class="viewer" hidden>
+        <div class="eyebrow">Unbranded original · Human review pending</div>
+        <h2 id="field-title"></h2><div class="meta" id="video-meta"></div>
+        <video id="player" controls playsinline preload="none" aria-label="Raw generated video"></video>
+        <div id="links" class="links"></div>
+        <details><summary>Submission provenance</summary><p id="provenance" class="meta"></p></details>
+        <form id="review" class="review">
+          <h3>Your review</h3>
+          <p class="meta">No automatic scores. Notes are saved only on this device until you export them. Accepting a draft review here does not publish or regenerate anything.</p>
+          <div id="scores" class="scores"></div>
+          <div class="notes">
+            <label>Key strengths<textarea name="strengths" rows="2"></textarea></label>
+            <label>Key weaknesses<textarea name="weaknesses" rows="2"></textarea></label>
+            <label>Missing knowledge<textarea name="missingKnowledge" rows="2"></textarea></label>
+            <label>Opening approach / first 60 seconds<textarea name="openingApproach" rows="2"></textarea></label>
+            <div class="choices">
+              <label>Generic AI feeling<select name="genericAiFeeling"><option value="">Not reviewed</option><option>None</option><option>Low</option><option>Medium</option><option>High</option></select></label>
+              <label>Would I keep watching?<select name="keepWatching"><option value="">Not reviewed</option><option>Yes</option><option>Maybe</option><option>No</option></select></label>
+              <label>Final decision<select name="decision"><option>Undecided</option><option>Accept</option><option>Regenerate</option></select></label>
+            </div>
+          </div>
+          <div class="actions"><button class="primary" type="submit">Save review on this device</button><button id="export-review" type="button">Export review</button></div>
+          <p id="review-status" class="meta" role="status"></p>
+        </form>
+      </article>
+    </div>
+  </section>
+</main>
+</body></html>
+

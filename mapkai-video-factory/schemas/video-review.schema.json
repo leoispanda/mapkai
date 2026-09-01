@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/video-review/v1",
+  "type": "object",
+  "required": ["schemaVersion", "scores", "keepWatching", "memorableTomorrow", "strengths", "weaknesses", "missingKnowledge", "genericMoments", "factualConcerns", "decision"],
+  "properties": {
+    "schemaVersion": {"type": "string"},
+    "scores": {"type": "object", "additionalProperties": {"type": ["number", "string", "null"]}},
+    "keepWatching": {"enum": ["YES", "MAYBE", "NO", "UNKNOWN"]},
+    "memorableTomorrow": {"enum": ["YES", "MAYBE", "NO", "UNKNOWN"]},
+    "strengths": {"type": "array", "items": {"type": "string"}},
+    "weaknesses": {"type": "array", "items": {"type": "string"}},
+    "missingKnowledge": {"type": "array", "items": {"type": "string"}},
+    "genericMoments": {"type": "array", "items": {"type": "string"}},
+    "factualConcerns": {"type": "array", "items": {"type": "string"}},
+    "decision": {"enum": ["PASS", "FAIL", "UNKNOWN"]}
+  }
+}

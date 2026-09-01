@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/editorial-critique/v1",
+  "type": "object",
+  "required": ["schemaVersion", "scores", "strongestElement", "weakestElement", "whyThisCouldStillBecomeGeneric", "recommendedChanges", "decision", "genericityTests"],
+  "properties": {
+    "schemaVersion": {"type": "string"},
+    "scores": {"type": "object", "required": ["intellectualDepth", "fieldSpecificity", "narrativeNecessity", "primaryAhaStrength", "adultTone", "modernFieldMapQuality", "openingStrength", "originality", "genericAiRisk", "knowledgeLeakRisk"], "additionalProperties": {"type": ["number", "null"], "minimum": 0, "maximum": 10}},
+    "strongestElement": {"type": "string"},
+    "weakestElement": {"type": "string"},
+    "whyThisCouldStillBecomeGeneric": {"type": "string"},
+    "recommendedChanges": {"type": "array", "items": {"type": "string"}},
+    "decision": {"enum": ["PASS", "REVISE", "NOT_RUN"]},
+    "genericityTests": {"type": "object", "required": ["replaceThreeNouns", "deleteStory", "whyNeeded", "modernFieldReal"], "properties": {"replaceThreeNouns": {"type": ["boolean", "null"]}, "deleteStory": {"type": ["boolean", "null"]}, "whyNeeded": {"type": ["boolean", "null"]}, "modernFieldReal": {"type": ["boolean", "null"]}}}
+  }
+}

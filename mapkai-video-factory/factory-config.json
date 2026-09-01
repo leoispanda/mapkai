@@ -1,0 +1,71 @@
+{
+  "policyBinding": {
+    "creating": {
+      "version": "v1.3",
+      "path": "policy/mapkai-creating-policy-v1.3.md",
+      "sha256": "5f0967c72bbf224aac87aae2fa3145dc3fde030cb21b5bf185efa2fe57b9d71e"
+    },
+    "review": {
+      "version": "v1.2",
+      "path": "policy/mapkai-review-policy-v1.2.md",
+      "sha256": "6df981e71d08c9e5b325aeb93a183f0352408f20120266233f8968360d3b2454"
+    }
+  },
+  "maxVideoPerDay": 18,
+  "maxConcurrentGenerations": 4,
+  "retryLimit": 3,
+  "retryBackoffMinutes": 30,
+  "chromeCdpUrl": "http://127.0.0.1:9222",
+  "notebookHomeUrl": "https://notebook.google.com/",
+  "branding": {
+    "logoPath": null,
+    "tagline": "Explore the map of human knowledge.",
+    "holdSeconds": 3
+  },
+  "editorial": {
+    "preferredProvider": "chatgpt-browser",
+    "interactionModel": "persistent_field_conversation",
+    "conversationPolicy": "one_persistent_chat_per_field",
+    "conversationGovernance": {
+      "default": "REUSE_EXISTING",
+      "maxEffectiveInteractionCyclesBeforeConsideration": 20,
+      "effectiveInteractionDefinition": "A completed user↔assistant work cycle for the same field and fixed role; health checks, empty requests, failed sends, duplicate retries, and system-only events are excluded.",
+      "newConversationReasons": [
+        "CONTEXT_LENGTH_THRESHOLD",
+        "CONTEXT_DEGRADATION",
+        "ROLE_CONTAMINATION",
+        "PROVIDER_RECOVERY_REQUIRES_NEW_CONTEXT",
+        "CONVERSATION_UNAVAILABLE"
+      ],
+      "roleSlots": {
+        "creator": "<field>:creator",
+        "independent_reviewer": "<field>:independent_reviewer"
+      },
+      "continuationRequires": [
+        "field_identity",
+        "current_production_stage",
+        "policy_versions_and_hashes",
+        "current_approved_artifact_state",
+        "unresolved_findings_and_decision_state"
+      ],
+      "noStageBasedRotation": true
+    },
+    "browserSession": "reuse_existing_signed_in_session",
+    "minRequestIntervalMs": 30000,
+    "healthCacheMs": 300000,
+    "rateLimitBackoffMinutes": [5, 10, 20],
+    "providerEnv": "EDITORIAL_PROVIDER",
+    "modelEnv": "EDITORIAL_MODEL",
+    "reasoningModelEnv": "EDITORIAL_REASONING_MODEL",
+    "reviewModelEnv": "EDITORIAL_REVIEW_MODEL",
+    "maxGuidanceRevisions": 3,
+    "maxKnowledgeRevisions": 2,
+    "maxVideoPromptRevisions": 2,
+    "maxSamePayloadRegenerations": 1,
+    "maxTotalVideoAttemptsPerField": 3,
+    "maxDailyNotebookSubmissions": 18,
+    "maxFailureRateBeforePause": 0.5,
+    "phaseOneFields": ["GENERAL", "0311"],
+    "phaseTwoRequiresHumanToneApproval": true
+  }
+}

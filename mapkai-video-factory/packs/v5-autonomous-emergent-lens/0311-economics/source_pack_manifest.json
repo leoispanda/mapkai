@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "source": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0311-economics/overview.md",
+  "sourceSha256": "091132fe99ca27d5033714d913ff593a298084d1045a743cccf06d8092019638",
+  "directorPrompt": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0311-economics/video_prompt.md",
+  "directorPromptSha256": "56b523e79af6dec99780adc2ac9cd248d728529b14221413bb210a38026ab33d",
+  "guidance": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0311-economics/editorial_guidance.json",
+  "guidanceSha256": "31e2fe636743fb562aa9ebe854d968936480ac65051d2cb458202f2f2789cbe7",
+  "critique": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0311-economics/editorial_critique.json",
+  "critiqueSha256": "b6a8c76b8d3e931ba62dd277130d6314826410adb3fe329e529139e864cf875f",
+  "factualSourceAndGuidanceSeparate": true,
+  "generatedAt": "2026-08-30T07:48:07.820Z",
+  "refreshedAt": "2026-08-30T15:21:46.111Z"
+}

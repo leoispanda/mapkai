@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/field-representation/v1",
+  "title": "MapKAI Field Representation Boundary",
+  "type": "object",
+  "required": ["schemaVersion", "fieldId", "realWorldKnowledgeRepresentation", "learnerFacingRepresentation", "boundary"],
+  "properties": {
+    "schemaVersion": {"const": "field-representation.v1"},
+    "fieldId": {"type": ["string", "null"]},
+    "fieldName": {"type": ["string", "null"]},
+    "realWorldKnowledgeRepresentation": {"type": "object", "required": ["status", "branches", "subjects", "concepts", "methods", "applications", "crossFieldRelationships"]},
+    "learnerFacingRepresentation": {"type": "object", "required": ["status", "entryPoint", "narrativeOrder", "discoveryRoute", "cognitiveRevealSequence"]},
+    "boundary": {"const": "MapKAI does not redesign human knowledge; it redesigns the learner's path into human knowledge."}
+  }
+}

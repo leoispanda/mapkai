@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.213";
+const appVersion = "0.1.215";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -31,6 +31,8 @@ let storyRatingSummaries = {};
 let storyRatingTopList = [];
 let storyRatingsLoaded = false;
 let storyRatingStatus = "";
+let publicPreviewCatalogPromise = null;
+let categoryVideoRenderToken = 0;
 
 // Keep existing story data in place while the public article rebuild is underway.
 const publicContentVisibility = {
@@ -17506,6 +17508,55 @@ function renderPassport(targetId, passport) {
     </div>`;
 }
 
+function loadPublicPreviewCatalog() {
+  if (!publicPreviewCatalogPromise) {
+    publicPreviewCatalogPromise = fetch('/api/factory/public-videos', { headers: { Accept: 'application/json' } })
+      .then(response => response.ok ? response.json() : Promise.reject(new Error('Preview catalog unavailable')))
+      .then(data => Array.isArray(data?.items) ? data.items : [])
+      .catch(() => []);
+  }
+  return publicPreviewCatalogPromise;
+}
+
+function publicPreviewSlugForCategory(category) {
+  return String(category?.title || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function renderCategoryVideoPreview(category) {
+  const preview = document.getElementById('categoryVideoPreview');
+  const player = document.getElementById('categoryVideoPreviewPlayer');
+  const meta = document.getElementById('categoryVideoPreviewMeta');
+  if (!preview || !player) return;
+  const token = ++categoryVideoRenderToken;
+  preview.hidden = true;
+  player.pause();
+  player.removeAttribute('src');
+  player.removeAttribute('aria-label');
+  player.load();
+  if (meta) meta.textContent = '';
+  const slug = publicPreviewSlugForCategory(category);
+  if (!slug) return;
+  loadPublicPreviewCatalog().then(items => {
+    if (token !== categoryVideoRenderToken) return;
+    const item = items.find(candidate => candidate?.slug === slug && typeof candidate.videoUrl === 'string');
+    if (!item) return;
+    const displayName = typeof item.fieldName === 'string' && item.fieldName ? item.fieldName : category.title;
+    player.src = item.videoUrl;
+    player.setAttribute('aria-label', `${displayName} learning preview video`);
+    if (meta && Number.isFinite(item.duration) && item.duration > 0) {
+      const minutes = Math.max(1, Math.round(item.duration / 60));
+      meta.textContent = `Approx. ${minutes} minute learning preview`;
+    }
+    preview.hidden = false;
+  });
+}
+
 function renderCategoryDetail(code) {
   const category = categories.find((item) => item.code === code) || categories[0];
   const eyebrow = document.getElementById("categoryDetailEyebrow");
@@ -17522,6 +17573,8 @@ function renderCategoryDetail(code) {
     copy.innerHTML = `
       <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>`;
   }
+
+  renderCategoryVideoPreview(category);
 
   renderPassport("categoryPassport", {
     name: `${category.code} ${category.title}`,

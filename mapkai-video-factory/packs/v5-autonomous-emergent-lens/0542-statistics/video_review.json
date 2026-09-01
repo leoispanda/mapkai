@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "video-review.v1",
+  "status": "NOT_RUN",
+  "scores": {},
+  "keepWatching": "UNKNOWN",
+  "memorableTomorrow": "UNKNOWN",
+  "strengths": [],
+  "weaknesses": [],
+  "missingKnowledge": [],
+  "genericMoments": [],
+  "factualConcerns": [],
+  "decision": "UNKNOWN"
+}

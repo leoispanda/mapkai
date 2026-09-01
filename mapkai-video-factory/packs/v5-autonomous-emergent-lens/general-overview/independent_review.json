@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "video-review.v1",
+  "authority": "INDEPENDENT_REVIEW_PENDING",
+  "reviewerRole": "independent_reviewer",
+  "status": "NOT_RUN",
+  "scores": {},
+  "keepWatching": "UNKNOWN",
+  "memorableTomorrow": "UNKNOWN",
+  "strengths": [],
+  "weaknesses": [],
+  "missingKnowledge": [],
+  "genericMoments": [],
+  "factualConcerns": [],
+  "findings": [],
+  "hardGates": {
+    "factualEpistemicIntegrity": "NOT_REVIEWED",
+    "realWorldFieldFidelity": "NOT_REVIEWED",
+    "artifactIntegrity": "NOT_REVIEWED",
+    "sensitiveContentGovernance": "NOT_REVIEWED"
+  },
+  "decision": "UNKNOWN",
+  "policyBinding": {
+    "schemaVersion": "policy-binding.v1",
+    "creatingPolicy": {
+      "version": "v1.1",
+      "path": "policy/mapkai-creating-policy-v1.1.md",
+      "sha256": "ea27858cd695f20c06b4e85b2eac3e1dfc4442cb36e6eccf596fab609cb0af4b"
+    },
+    "reviewPolicy": {
+      "version": "v1.0",
+      "path": "policy/mapkai-review-policy-v1.0.md",
+      "sha256": "2f56f3e2c46a00e2fbfc5314a3a57009e020839ebf933838a329b48ee0ea0f8c"
+    },
+    "verifiedAt": "2026-08-30T15:01:20.245Z"
+  },
+  "note": "Independent semantic review has not run."
+}

@@ -9,9 +9,40 @@
     "version-assets": "node scripts/update-asset-version.js",
     "build": "node scripts/build-finance-pages.mjs && npm run version-assets",
     "dev:cloudflare": "wrangler pages dev public",
-    "deploy": "npm run version-assets && wrangler pages deploy public"
+    "deploy": "npm run version-assets && wrangler pages deploy public",
+    "video:bootstrap": "node mapkai-video-factory/runner.ts bootstrap",
+    "video:plan": "node mapkai-video-factory/runner.ts plan",
+    "video:dashboard": "node mapkai-video-factory/runner.ts dashboard",
+    "video:prepare-review": "node mapkai-video-factory/runner.ts prepare-review",
+    "video:monitor-pilots": "node mapkai-video-factory/runner.ts monitor-pilots --execute",
+    "video:submit": "node mapkai-video-factory/runner.ts submit --execute",
+    "video:check": "node mapkai-video-factory/runner.ts check --execute",
+    "video:brand": "node mapkai-video-factory/runner.ts brand --execute",
+    "video:factory": "node mapkai-video-factory/autonomous/factory.mjs",
+    "video:factory:plan": "node mapkai-video-factory/autonomous/factory.mjs --plan",
+    "video:factory:test": "node mapkai-video-factory/autonomous/factory.mjs --test",
+    "video:factory:governance-test": "node mapkai-video-factory/autonomous/governance.test.mjs",
+    "video:factory:provider-check": "node mapkai-video-factory/autonomous/factory.mjs --provider-check",
+    "video:factory:provider-test": "node mapkai-video-factory/autonomous/chatgpt-browser-provider.test.mjs",
+    "video:factory:seed-preview": "node mapkai-video-factory/autonomous/factory.mjs --seed-preview",
+    "video:factory:editorial": "node mapkai-video-factory/autonomous/factory.mjs --editorial-only",
+    "video:factory:execute": "node mapkai-video-factory/autonomous/factory.mjs --execute",
+    "video:factory:monitor": "node mapkai-video-factory/autonomous/factory.mjs --monitor --execute",
+    "video:factory:review": "node mapkai-video-factory/autonomous/factory.mjs --review",
+    "video:factory:repair": "node mapkai-video-factory/autonomous/factory.mjs --repair",
+    "video:factory:major-fields": "node mapkai-video-factory/major-fields-run.mjs",
+    "video:delivery:import": "node mapkai-video-factory/review-channel.mjs import",
+    "video:delivery:upload": "node mapkai-video-factory/review-channel.mjs upload",
+    "video:delivery:prepare-public-preview": "node mapkai-video-factory/review-channel.mjs prepare-public-preview",
+    "video:delivery:upload-public-preview": "node mapkai-video-factory/review-channel.mjs upload-public-preview",
+    "video:delivery:test": "node --test mapkai-video-factory/review-channel.test.mjs",
+    "video:delivery:public-preview-test": "node --test mapkai-video-factory/public-preview.test.mjs",
+    "video:delivery:preview": "node mapkai-video-factory/review-preview.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.6"
   }
 }

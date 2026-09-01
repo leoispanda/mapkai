@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.1",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "field": {
+    "id": "0313",
+    "name": "Psychology",
+    "nameZh": "心理学",
+    "slug": "0313-psychology",
+    "type": "FIELD"
+  },
+  "centralHumanQuestion": "Why can the same person sincerely think, feel, and act differently when attention, memory, biology, relationships, and situation change?",
+  "fieldBecomesNecessaryWhen": "Introspection and moral judgement cannot reliably explain patterned behaviour, yet decisions about learning, care, work, and relationships depend on mechanisms that people cannot fully observe from inside themselves.",
+  "coreThesis": "Psychology studies minds in bodies and situations by treating experience as meaningful evidence while testing confidence, mechanism, development, and context with methods stronger than introspection alone.",
+  "narrativeEngine": "intellectual conflict",
+  "candidateNarrativeEngines": [
+    "intellectual conflict",
+    "mystery",
+    "discovery"
+  ],
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "Several witnesses remember the same event with complete sincerity. Then one small change in the question alters a detail they were certain they saw. Is the mind a recorder—or an active constructor?",
+    "existingKnowledge": [
+      "first-person experience",
+      "stories about character",
+      "customs for teaching and care",
+      "observation of habits",
+      "informal knowledge of emotion and relationships"
+    ],
+    "trigger": "Sincere reports, repeated behaviour patterns, and failed predictions show that subjective certainty is not a complete window into mental mechanisms.",
+    "ordinaryIntuition": "People know why they acted and memories replay what happened; behaviour is mainly a stable expression of character.",
+    "failedIntuition": "Memory is reconstructed, attention is selective, behaviour is situational, and biological and social processes can influence a person without becoming conscious explanations.",
+    "emergentProblem": "A person can explain their own action convincingly after the fact, but the same behaviour changes with attention, reward, sleep, social pressure, bodily state, and the way a choice is framed."
+  },
+  "openingHook": "Several witnesses remember the same event with complete sincerity. Then one small change in the question alters a detail they were certain they saw. Is the mind a recorder—or an active constructor?",
+  "centralTension": "How can a mind scientifically study a mind that does not fully understand itself?",
+  "primaryAha": "The reversal is not that people are irrational or dishonest. It is that an adaptive, predictive mind can be sincere while its confidence is produced by mechanisms that still need independent evidence.",
+  "secondaryTurns": [
+    "A useful mental shortcut can produce a systematic bias when the environment changes.",
+    "Learning is not only storage; consequences and predictions reshape future behaviour.",
+    "Development changes what a person can perceive, regulate, and remember across a life.",
+    "A situation can make a disposition visible, mute it, or create behaviour no trait label predicted."
+  ],
+  "emergencePath": [
+    "people notice experience and behaviour",
+    "stories and character explanations meet recurring anomalies",
+    "measurement separates report, behaviour, and mechanism",
+    "learning and cognition become experimental objects",
+    "social and biological levels are integrated",
+    "clinical practice links explanation to care and accountability"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Cognitive psychology",
+      "reasonItExists": "Attention, perception, memory, language, and reasoning need models of information processing."
+    },
+    {
+      "name": "Developmental psychology",
+      "reasonItExists": "Change across the lifespan cannot be explained by a static adult mind."
+    },
+    {
+      "name": "Social psychology",
+      "reasonItExists": "Influence, identity, groups, and situations alter behaviour beyond individual traits."
+    },
+    {
+      "name": "Biological and neuropsychology",
+      "reasonItExists": "Brains, bodies, emotion, and behaviour constrain and enable mental processes."
+    },
+    {
+      "name": "Clinical and counselling psychology",
+      "reasonItExists": "Distress, assessment, intervention, and recovery test how explanation becomes care."
+    }
+  ],
+  "mandatoryConcepts": [
+    "attention and perception",
+    "learning and conditioning",
+    "memory reconstruction",
+    "schemas and biases",
+    "person–situation interaction",
+    "development and attachment"
+  ],
+  "optionalConcepts": [
+    "neuroplasticity",
+    "measurement reliability",
+    "replication",
+    "psychometrics"
+  ],
+  "methodsToRepresent": [
+    "controlled experiments",
+    "behavioural measurement",
+    "longitudinal and developmental studies",
+    "clinical evidence and case formulation",
+    "statistical modelling and replication"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Education science (0111)",
+      "connection": "Learning, development, attention, and motivation shape how knowledge is taught.",
+      "difference": "Psychology studies mechanisms; education designs social practices and institutions around learning."
+    },
+    {
+      "field": "Medicine and health (09)",
+      "connection": "Mental and bodily health influence each other and require integrated care.",
+      "difference": "Medicine diagnoses and treats bodily conditions; psychology explains mental and behavioural mechanisms and interventions."
+    },
+    {
+      "field": "Sociology and cultural studies (0314)",
+      "connection": "Individuals develop inside norms, institutions, identities, and unequal structures.",
+      "difference": "Psychology focuses on person-level mechanisms; sociology traces patterned relations and institutions."
+    },
+    {
+      "field": "Statistics (0542)",
+      "connection": "Measurement reliability, uncertainty, and replication determine what psychological evidence can support.",
+      "difference": "Statistics provides inference tools; psychology supplies theories and measures of mind and behaviour."
+    }
+  ],
+  "visualOpportunities": [
+    "ambiguous images and selective attention",
+    "a memory timeline being revised",
+    "prediction and consequence loops",
+    "a developmental sequence across life",
+    "individual and group influence diagrams",
+    "evidence and replication graphics"
+  ],
+  "endingReturn": "The witnesses were an editorial thought experiment. Our psychology is the real, imperfect, evidence-seeking field that studies minds as biological, developmental, social, and clinical processes.",
+  "finalMentalModel": "Treat experience as important evidence but never the whole explanation; ask what mechanism, comparison, context, and independent measure could support a psychological claim.",
+  "avoid": [
+    "do not reduce psychology to personality labels",
+    "do not diagnose fictional witnesses",
+    "do not present introspection as proof",
+    "do not make the field a list of branches",
+    "do not use childish therapy dialogue"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "artifact-contract.v1",
+  "artifactType": "FIELD_OVERVIEW_VIDEO",
+  "contractStatus": "PLACEHOLDER",
+  "cognitiveJob": null,
+  "requiredEvidence": [],
+  "requiredOutputs": [],
+  "note": "Artifact-specific review criteria are intentionally not defined in this architecture phase; do not substitute a universal rubric."
+}

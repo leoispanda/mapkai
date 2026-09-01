@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.213" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.215" />
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -618,6 +618,20 @@
           <h1 id="categoryDetailTitle">Knowledge category</h1>
           <p id="categoryDetailCopy"></p>
         </div>
+        <section class="mapkai-video-preview" id="categoryVideoPreview" hidden aria-labelledby="categoryVideoPreviewTitle">
+          <div class="mapkai-video-preview-intro">
+            <div>
+              <p class="eyebrow">Learning preview</p>
+              <h2 id="categoryVideoPreviewTitle">See this field in motion</h2>
+            </div>
+            <span class="mapkai-video-preview-status">Video content under review · Not yet approved for formal publication</span>
+          </div>
+          <p class="mapkai-video-preview-disclosure">This AI-generated video is currently under content review. It is available as an experimental learning preview and has not yet been formally approved by MapKAI.</p>
+          <div class="mapkai-video-preview-player">
+            <video id="categoryVideoPreviewPlayer" controls preload="metadata" playsinline></video>
+          </div>
+          <p class="mapkai-video-preview-meta" id="categoryVideoPreviewMeta"></p>
+        </section>
         <div class="passport-panel founder-only" id="categoryPassport"></div>
         <div class="tree-panel" id="categoryTree"></div>
         <div class="route-cta">
@@ -685,10 +699,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.213"></script>
-    <script src="/content/management-column.js?v=0.1.213"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.213"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.213"></script>
-    <script src="/script.js?v=0.1.213"></script>
+    <script src="/content/field-fables.js?v=0.1.215"></script>
+    <script src="/content/management-column.js?v=0.1.215"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.215"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.215"></script>
+    <script src="/script.js?v=0.1.215"></script>
   </body>
 </html>

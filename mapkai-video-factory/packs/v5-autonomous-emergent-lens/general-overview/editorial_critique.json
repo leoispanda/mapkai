@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "editorial-critique.v1",
+  "status": "NOT_RUN",
+  "providerStatus": "EDITORIAL_PROVIDER_UNAVAILABLE",
+  "scores": {
+    "intellectualDepth": null,
+    "fieldSpecificity": null,
+    "narrativeNecessity": null,
+    "primaryAhaStrength": null,
+    "adultTone": null,
+    "modernFieldMapQuality": null,
+    "openingStrength": null,
+    "genericAiRisk": null,
+    "knowledgeLeakRisk": null
+  },
+  "strongestElement": "UNKNOWN — second-model Editorial Critic has not run.",
+  "weakestElement": "UNKNOWN — second-model Editorial Critic has not run.",
+  "whyThisCouldStillBecomeGeneric": "UNKNOWN — no automatic editorial PASS is claimed.",
+  "recommendedChanges": [],
+  "decision": "NOT_RUN",
+  "genericityTests": {
+    "replaceThreeNouns": null,
+    "deleteStory": null,
+    "whyNeeded": null,
+    "modernFieldReal": null
+  }
+}

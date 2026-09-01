@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "deterministic-validation.v1",
+  "authority": "DETERMINISTIC_VALIDATOR",
+  "generatedAt": "2026-08-30T15:21:46.122Z",
+  "artifactType": "FIELD_OVERVIEW_VIDEO",
+  "fieldId": "0542",
+  "status": "FAIL",
+  "productionEligible": false,
+  "checks": {
+    "policyBinding": "PASS",
+    "fieldId": "PASS",
+    "artifactType": "PASS",
+    "requiredFiles": "PASS",
+    "evidenceFields": "PASS",
+    "forbiddenStatus": "PASS",
+    "sensitiveContent": "HOLD",
+    "structuralShape": "PASS"
+  },
+  "errors": [
+    "sensitive governance hold: SENSITIVE_TOPIC_REVIEW_REQUIRED"
+  ],
+  "semanticReviewRequired": true,
+  "note": "Deterministic validation does not judge Aha, discovery, depth, naturalness, specificity, or mental-model usefulness."
+}

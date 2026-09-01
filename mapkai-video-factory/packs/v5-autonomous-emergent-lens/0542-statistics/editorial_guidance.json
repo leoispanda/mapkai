@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.1",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "field": {
+    "id": "0542",
+    "name": "Statistics",
+    "nameZh": "统计学",
+    "slug": "0542-statistics",
+    "type": "FIELD"
+  },
+  "centralHumanQuestion": "How can we infer reliable patterns about a population or process from noisy, incomplete, and potentially biased observations?",
+  "fieldBecomesNecessaryWhen": "Variation becomes too large for anecdote and intuition, decisions concern groups rather than only observed cases, and evidence must carry uncertainty instead of hiding it.",
+  "coreThesis": "Statistics is the disciplined design and analysis of evidence under variation: it makes uncertainty, sampling, comparison, prediction, and decision visible rather than pretending noise is a nuisance that can be ignored.",
+  "narrativeEngine": "discovery",
+  "candidateNarrativeEngines": [
+    "discovery",
+    "paradox",
+    "tool changes observability"
+  ],
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "A town announces a miraculous improvement: the average recovery time has fallen by half. Then the denominator changes. The miracle was not entirely false—but the comparison was answering a different question.",
+    "existingKnowledge": [
+      "counting harvests and births",
+      "keeping ledgers",
+      "comparing repeated measurements",
+      "practical judgement about unusual cases",
+      "probabilistic games and risk intuition"
+    ],
+    "trigger": "Institutions must act on populations and uncertain futures, while the available observations are partial, dependent, or collected by different rules.",
+    "ordinaryIntuition": "A larger number of observations automatically gives a truer answer, and a striking difference must have a meaningful cause.",
+    "failedIntuition": "More data can reproduce a biased sample; random variation can look like a pattern; measurement and comparison choices determine what an estimate means.",
+    "emergentProblem": "A small sample contains real signals mixed with measurement error, selection, missing cases, and chance. People must decide whether a pattern will travel beyond the observations that first revealed it."
+  },
+  "openingHook": "A town announces a miraculous improvement: the average recovery time has fallen by half. Then the denominator changes. The miracle was not entirely false—but the comparison was answering a different question.",
+  "centralTension": "What does the data justify when the world never hands us a noiseless, complete view?",
+  "primaryAha": "Statistical reliability is not a property of a pile of numbers. It is a relationship among a question, a sampling process, a comparison, a model, and the uncertainty each introduces.",
+  "secondaryTurns": [
+    "Averages can compress meaningful variation and conceal who bears a risk or benefit.",
+    "Randomisation creates a comparison that can make causal differences more visible than clever storytelling.",
+    "A confidence interval is not a probability that one fixed hypothesis is true; it is a calibrated statement about a procedure and repeated samples.",
+    "Prediction and explanation can need different models, even when they use the same data."
+  ],
+  "emergencePath": [
+    "counts and records reveal variability",
+    "samples stand in for inaccessible populations",
+    "probability formalises repeated uncertainty",
+    "experimental design protects comparisons",
+    "inference and models separate signal from noise",
+    "computing expands scale while making bias and reproducibility more visible"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Descriptive statistics",
+      "reasonItExists": "Distributions, summaries, and visualisations make variation visible before explanation."
+    },
+    {
+      "name": "Probability and statistical inference",
+      "reasonItExists": "Uncertainty about samples and populations needs a formal language."
+    },
+    {
+      "name": "Regression and causal inference",
+      "reasonItExists": "Relationships, confounding, and interventions require explicit comparisons and assumptions."
+    },
+    {
+      "name": "Survey and sampling methodology",
+      "reasonItExists": "Who is observed, who is missing, and how units are selected determine what can generalise."
+    },
+    {
+      "name": "Bayesian, computational, and decision statistics",
+      "reasonItExists": "Complex models and decisions update beliefs while keeping loss, prior information, and computation visible."
+    }
+  ],
+  "mandatoryConcepts": [
+    "variation and distribution",
+    "sampling and representativeness",
+    "probability",
+    "randomisation",
+    "estimation and uncertainty",
+    "confounding and causality"
+  ],
+  "optionalConcepts": [
+    "Bayes' theorem",
+    "likelihood",
+    "regularisation",
+    "reproducibility"
+  ],
+  "methodsToRepresent": [
+    "measurement design",
+    "random and stratified sampling",
+    "experiments and quasi-experiments",
+    "regression and probabilistic models",
+    "sensitivity, calibration, and robustness checks"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Mathematics (0541)",
+      "connection": "Probability and inference rely on formal structures and proofs.",
+      "difference": "Mathematics studies abstract relationships; statistics asks what uncertain data can justify in a context."
+    },
+    {
+      "field": "Economics (0311)",
+      "connection": "Economic claims need causal and distributional evidence under uncertainty.",
+      "difference": "Statistics supplies evidence design and inference; economics supplies theories of allocation and incentives."
+    },
+    {
+      "field": "Psychology (0313)",
+      "connection": "Psychological constructs need reliable measurement and replication.",
+      "difference": "Statistics tests patterns and uncertainty; psychology defines the mechanisms and measures."
+    },
+    {
+      "field": "Computer science and AI (06)",
+      "connection": "Algorithms learn patterns from data and must be evaluated under shift and bias.",
+      "difference": "Statistics foregrounds sampling, uncertainty, and inference; computing foregrounds representation, algorithms, and systems."
+    }
+  ],
+  "visualOpportunities": [
+    "a distribution widening as hidden cases appear",
+    "the same average with different underlying populations",
+    "randomisation reshuffling comparison groups",
+    "a causal diagram with confounders",
+    "uncertainty intervals widening and narrowing with design choices",
+    "a dashboard revealing missingness rather than hiding it"
+  ],
+  "endingReturn": "The town's miracle was a thought experiment. Our statistics is the developed practice of designing and analysing evidence when variation and incomplete information make certainty impossible.",
+  "finalMentalModel": "Ask what was measured, who or what was observed, what comparison was made, what uncertainty remains, and which decision the analysis is meant to support.",
+  "avoid": [
+    "do not equate statistics with dashboards",
+    "do not imply more data cures bias",
+    "do not present p-values as truth probabilities",
+    "do not use a fake election or medical result as evidence",
+    "do not reduce the field to formulas without decisions"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/deterministic-validation/v1",
+  "title": "MapKAI Deterministic Validation",
+  "type": "object",
+  "required": ["schemaVersion", "authority", "generatedAt", "artifactType", "fieldId", "status", "productionEligible", "checks", "errors", "semanticReviewRequired"],
+  "properties": {
+    "schemaVersion": {"const": "deterministic-validation.v1"},
+    "authority": {"const": "DETERMINISTIC_VALIDATOR"},
+    "generatedAt": {"type": "string"},
+    "artifactType": {"type": ["string", "null"]},
+    "fieldId": {"type": ["string", "null"]},
+    "status": {"enum": ["PASS", "FAIL", "NOT_RUN"]},
+    "productionEligible": {"const": false},
+    "checks": {"type": "object", "additionalProperties": {"enum": ["PASS", "FAIL", "HOLD", "NOT_RUN"]}},
+    "errors": {"type": "array", "items": {"type": "string"}},
+    "semanticReviewRequired": {"const": true},
+    "note": {"type": "string"}
+  }
+}

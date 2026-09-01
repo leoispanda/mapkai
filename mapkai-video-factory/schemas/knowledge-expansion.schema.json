@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/knowledge-expansion/v1",
+  "type": "object",
+  "required": ["overviewMarkdown"],
+  "properties": {
+    "overviewMarkdown": {"type": "string", "minLength": 1200},
+    "sources": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

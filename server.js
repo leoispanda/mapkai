@@ -1,8 +1,10 @@
 import { createServer } from "node:http";
-import { readFile } from "node:fs/promises";
+import { createReadStream } from "node:fs";
+import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { createHash, randomInt, randomUUID, timingSafeEqual } from "node:crypto";
 import { pathToFileURL } from "node:url";
+import { Readable } from "node:stream";
 
 const root = process.cwd();
 const port = Number(process.env.PORT || 3000);
@@ -26,6 +28,8 @@ const localFunctionRoutes = {
   "/api/pdc/founder-summary": "functions/api/pdc/founder-summary.js",
   "/api/pdc/generate-passes": "functions/api/pdc/generate-passes.js",
   "/api/pdc/latency-diagnostic": "functions/api/pdc/latency-diagnostic.js",
+  "/api/factory/public-videos": "functions/api/factory/public-videos.js",
+  "/api/factory/public-video": "functions/api/factory/public-video.js",
 };
 
 const legacyRedirects = {
@@ -90,6 +94,43 @@ const server = createServer(async (request, response) => {
   }
 });
 
+let localPublicPreviewBinding;
+
+async function getLocalPublicPreviewBinding() {
+  if (localPublicPreviewBinding) return localPublicPreviewBinding;
+  const deliveryRoot = join(root, "mapkai-video-factory/runtime/delivery");
+  const publicCatalogPath = join(deliveryRoot, "public-preview-catalog.json");
+  const privateCatalogPath = join(deliveryRoot, "review-catalog.json");
+  const readCatalogFile = async file => JSON.parse(await readFile(file, "utf8"));
+  const publicCatalog = await readCatalogFile(publicCatalogPath);
+  const privateCatalog = await readCatalogFile(privateCatalogPath);
+  const itemForKey = key => privateCatalog.items.find(item => item.objectKey === key);
+  const localPathForItem = item => {
+    const filePath = join(root, item.rawVideoPath);
+    if (!filePath.startsWith(`${root}/`)) throw new Error("Local preview path escapes workspace");
+    return filePath;
+  };
+  localPublicPreviewBinding = {
+    get: async (key, options) => {
+      if (key === "catalog/public-preview-v1.json") return { json: async () => publicCatalog };
+      const item = itemForKey(key);
+      if (!item) return null;
+      const filePath = localPathForItem(item);
+      const info = await stat(filePath);
+      const range = options?.range;
+      const streamOptions = range ? { start: range.offset, end: range.offset + range.length - 1 } : undefined;
+      return { body: Readable.toWeb(createReadStream(filePath, streamOptions)), size: info.size };
+    },
+    head: async key => {
+      const item = itemForKey(key);
+      if (!item) return null;
+      const info = await stat(localPathForItem(item));
+      return { size: info.size };
+    },
+  };
+  return localPublicPreviewBinding;
+}
+
 async function handleLocalFunctionRoute(request, response, url) {
   const routePath = localFunctionRoutes[url.pathname];
   const modulePath = pathToFileURL(join(root, routePath)).href;
@@ -118,9 +159,14 @@ async function handleLocalFunctionRoute(request, response, url) {
     return;
   }
 
+  const localPreviewEnabled = process.env.MAPKAI_PUBLIC_PREVIEW_LOCAL === "1"
+    && url.pathname.startsWith("/api/factory/public-");
+  const env = localPreviewEnabled
+    ? { ...process.env, MAPKAI_REVIEW_MEDIA: await getLocalPublicPreviewBinding() }
+    : process.env;
   const functionResponse = await routeHandler({
     request: new Request(url.href, requestInit),
-    env: process.env,
+    env,
   });
   const body = Buffer.from(await functionResponse.arrayBuffer());
   const responseHeaders = {};
@@ -211,6 +257,14 @@ async function sendLoginEmail(email, code) {
 }
 
 async function serveStatic(pathname, response) {
+  // Factory source, catalogs and receipts are not part of the public site.
+  // Keep the local convenience server from turning those backend files into
+  // a second, unauthenticated delivery channel.
+  if (pathname === "/functions" || pathname.startsWith("/functions/")
+    || pathname === "/mapkai-video-factory" || pathname.startsWith("/mapkai-video-factory/")) {
+    sendJson(response, 404, { error: "Not found" });
+    return;
+  }
   const requested = pathname === "/" ? "/index.html" : pathname;
   const safePath = normalize(requested).replace(/^(\.\.[/\\])+/, "");
   const filePath = join(root, safePath);

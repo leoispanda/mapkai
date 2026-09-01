@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0421-law/overview.md",
+  "sourceSha256": "58bfeef3977ce931df853d96868926b31f4cbe2fbc10569fc5f08864394954e7",
+  "directorPrompt": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0421-law/video_prompt.md",
+  "directorPromptSha256": "2ef01e42dcee59ddd44be5e63cbcddc081ef0376a1c17513765e6ffde8b7d639",
+  "guidance": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/0421-law/editorial_guidance.json",
+  "guidanceSha256": "93d529267883e8f34df6532117cf66e7a6ab8fdf07c67b8d12ae40e74f234810",
+  "factualSourceAndGuidanceSeparate": true,
+  "generatedAt": "2026-08-29T21:21:43.325Z",
+  "refreshedAt": "2026-08-30T15:21:46.125Z"
+}

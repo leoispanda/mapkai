@@ -29,3 +29,7 @@
 
 /internal/*
   X-Robots-Tag: noindex, nofollow
+
+/factory-review*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

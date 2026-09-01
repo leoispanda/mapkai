@@ -1,0 +1,15 @@
+{
+  "contentVersion": "v2-intellectual-journey",
+  "generatedAt": "2026-08-29T15:28:00.462Z",
+  "narrativeEngineCounts": {
+    "mystery": 15,
+    "paradox": 7,
+    "dilemma": 18,
+    "journey": 12,
+    "discovery": 15,
+    "thought experiment": 4,
+    "intellectual conflict": 9
+  },
+  "warnings": [],
+  "note": "This is a diversity signal, not a requirement for equal distribution."
+}

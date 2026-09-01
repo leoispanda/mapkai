@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/editorial-guidance/v1",
+  "type": "object",
+  "required": ["schemaVersion", "field", "centralHumanQuestion", "fieldBecomesNecessaryWhen", "coreThesis", "narrativeEngine", "parallelCivilization", "openingHook", "centralTension", "primaryAha", "secondaryTurns", "emergencePath", "modernFieldMap", "mandatoryConcepts", "methodsToRepresent", "crossFieldConnections", "visualOpportunities", "endingReturn", "finalMentalModel", "avoid"],
+  "properties": {
+    "schemaVersion": {"type": "string"},
+    "field": {"type": "object", "required": ["id", "name", "slug", "type"], "properties": {"id": {"type": "string"}, "name": {"type": "string"}, "nameZh": {"type": "string"}, "slug": {"type": "string"}, "type": {"enum": ["FIELD", "GENERAL_OVERVIEW", "AI_ERA_GENERAL_LITERACY"]}}},
+    "centralHumanQuestion": {"type": "string", "minLength": 20},
+    "fieldBecomesNecessaryWhen": {"type": "string", "minLength": 20},
+    "coreThesis": {"type": "string", "minLength": 20},
+    "narrativeEngine": {"type": "string"},
+    "parallelCivilization": {"type": "object", "required": ["enabled", "entryPoint", "existingKnowledge", "trigger", "ordinaryIntuition", "failedIntuition", "emergentProblem"], "properties": {"enabled": {"type": "boolean"}, "entryPoint": {"type": "string"}, "existingKnowledge": {"type": "array", "items": {"type": "string"}}, "trigger": {"type": "string"}, "ordinaryIntuition": {"type": "string"}, "failedIntuition": {"type": "string"}, "emergentProblem": {"type": "string"}}},
+    "openingHook": {"type": "string"},
+    "centralTension": {"type": "string"},
+    "primaryAha": {"type": "string"},
+    "secondaryTurns": {"type": "array", "minItems": 2, "maxItems": 5, "items": {"type": "string"}},
+    "emergencePath": {"type": "array", "minItems": 5, "items": {"type": "string"}},
+    "modernFieldMap": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["name", "reasonItExists"], "properties": {"name": {"type": "string"}, "reasonItExists": {"type": "string"}}}},
+    "mandatoryConcepts": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "optionalConcepts": {"type": "array", "items": {"type": "string"}},
+    "methodsToRepresent": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+    "crossFieldConnections": {"type": "array", "minItems": 2, "items": {"type": "object", "required": ["field", "connection", "difference"], "properties": {"field": {"type": "string"}, "connection": {"type": "string"}, "difference": {"type": "string"}}}},
+    "visualOpportunities": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "endingReturn": {"type": "string"},
+    "finalMentalModel": {"type": "string"},
+    "avoid": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "field-representation.v1",
+  "fieldId": "0533",
+  "fieldName": "Physics",
+  "realWorldKnowledgeRepresentation": {
+    "status": "INTERFACE_ONLY",
+    "source": "script.js taxonomy — interface only",
+    "branches": [],
+    "subjects": [],
+    "concepts": [],
+    "methods": [],
+    "applications": [],
+    "crossFieldRelationships": []
+  },
+  "learnerFacingRepresentation": {
+    "status": "EDITORIAL_PATH_SEPARATE",
+    "entryPoint": null,
+    "narrativeOrder": [],
+    "discoveryRoute": [],
+    "cognitiveRevealSequence": []
+  },
+  "boundary": "MapKAI does not redesign human knowledge; it redesigns the learner's path into human knowledge."
+}

@@ -1,0 +1,14 @@
+downloads/*.mp4
+downloads/*.webm
+downloads/*.mov
+*.mp4
+*.mp4.partial
+*.webm
+*.mov
+playwright-downloads/
+browser-profile/
+runtime/
+review/pilots/
+dashboard.html
+autonomous-dashboard.html
+video-manifest.json

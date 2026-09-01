@@ -1,0 +1,33 @@
+{
+  "contentVersion": "v2-intellectual-journey",
+  "fieldCode": "0732",
+  "narrativeEngine": "journey",
+  "knowledgeCoverage": {
+    "status": "PASS",
+    "score": 10
+  },
+  "narrativeQuality": {
+    "status": "PASS",
+    "score": 9
+  },
+  "intellectualInsight": {
+    "status": "PASS",
+    "score": 9
+  },
+  "adultTone": {
+    "status": "PASS",
+    "score": 9
+  },
+  "fieldMapClarity": {
+    "status": "PASS",
+    "score": 9
+  },
+  "genericNarrativeWarning": false,
+  "notes": [],
+  "editorialNote": "Internal editorial QA, not an objective scientific metric.",
+  "wordCounts": {
+    "overview": 2715,
+    "narrativeBlueprint": 856,
+    "videoPrompt": 1039
+  }
+}

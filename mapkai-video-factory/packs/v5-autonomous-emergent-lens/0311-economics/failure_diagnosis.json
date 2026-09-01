@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "failure-diagnosis.v1",
+  "status": "NOT_RUN",
+  "failureType": "UNKNOWN",
+  "confidence": 0,
+  "evidence": [],
+  "rootCause": "",
+  "repairTarget": "",
+  "repairInstructions": [],
+  "regenerateSamePayload": false
+}

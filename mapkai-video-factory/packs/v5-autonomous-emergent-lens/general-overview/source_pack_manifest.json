@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "source": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/overview.md",
+  "sourceSha256": "5cb42f79401845e83d27fddc44448cf626cc3c0f0845e5226315e6488f5ee24f",
+  "directorPrompt": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/video_prompt.md",
+  "directorPromptSha256": "21912c399bbd2d3ea76f73a30db0c459e977ad62c075012ea79747be37a95e06",
+  "guidance": "mapkai-video-factory/packs/v5-autonomous-emergent-lens/general-overview/editorial_guidance.json",
+  "guidanceSha256": "aff6ca92629dd6c03224eaab6f0d963643cc0806cbdb3953ebd2d0a437437c7b",
+  "factualSourceAndGuidanceSeparate": true,
+  "generatedAt": "2026-08-29T21:21:43.304Z",
+  "refreshedAt": "2026-08-30T15:21:46.106Z"
+}

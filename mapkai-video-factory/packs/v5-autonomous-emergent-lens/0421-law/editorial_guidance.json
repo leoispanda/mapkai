@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "editorial-guidance.v1",
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.1",
+  "origin": "directional_seed_preview",
+  "productionEligible": false,
+  "field": {
+    "id": "0421",
+    "name": "Law",
+    "nameZh": "法律",
+    "slug": "0421-law",
+    "type": "FIELD"
+  },
+  "centralHumanQuestion": "How can a community turn conflict into rules that are publicly knowable, contestable, and enforceable even when the people involved disagree?",
+  "fieldBecomesNecessaryWhen": "Custom, personal wisdom, and informal power no longer provide predictable coordination among strangers, repeated disputes, property, harm, authority, and responsibility.",
+  "coreThesis": "Law is an institutional technology for making claims, duties, procedures, and remedies more predictable and contestable; it orders power without eliminating interpretation, disagreement, or injustice.",
+  "narrativeEngine": "dilemma",
+  "candidateNarrativeEngines": [
+    "dilemma",
+    "competing explanations",
+    "journey"
+  ],
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "Two people bring the same injury before two equally wise judges. One judge values intention, the other consequence. Both are sincere. Can a community call the result stable law if the rule changes with the person who happens to decide?",
+    "existingKnowledge": [
+      "custom and reputation",
+      "restorative negotiation",
+      "oaths and promises",
+      "shared prohibitions",
+      "practical ideas of harm and repair"
+    ],
+    "trigger": "The same dispute recurs across strangers and institutions, and personal judgement alone cannot make expectations public, reviewable, or consistent.",
+    "ordinaryIntuition": "A wise decision is enough; if the outcome seems fair to the current authority, a stable rule has been created.",
+    "failedIntuition": "Without public rules, procedure, evidence, and review, authority becomes unpredictable and unequal; a fair outcome today cannot be relied on tomorrow.",
+    "emergentProblem": "A small group can rely on memory, reputation, and a respected elder. As scale grows, strangers need to know what counts as a promise, an offence, evidence, a remedy, and a fair process before conflict occurs."
+  },
+  "openingHook": "Two people bring the same injury before two equally wise judges. One judge values intention, the other consequence. Both are sincere. Can a community call the result stable law if the rule changes with the person who happens to decide?",
+  "centralTension": "How can rules constrain power while still leaving room to interpret facts, context, and changing values?",
+  "primaryAha": "A rule becomes institutional when people can know it before the dispute, challenge how it was applied, and seek a remedy beyond the private will of the decision-maker.",
+  "secondaryTurns": [
+    "Procedure is not decorative delay; it is how a claim becomes auditable by people who were not present at the original conflict.",
+    "Rights and contracts make future action predictable, but they also distribute power and risk rather than merely recording neutral facts.",
+    "Precedent connects one decision to later cases while interpretation keeps rules responsive to new facts.",
+    "Public law and regulation arise when private agreements cannot govern collective power, safety, or shared resources."
+  ],
+  "emergencePath": [
+    "custom handles familiar conflicts",
+    "repeated disputes demand public memory",
+    "rules classify claims, harms, and duties",
+    "procedure and evidence make decisions reviewable",
+    "institutions separate authority, adjudication, and enforcement",
+    "rights and regulation adapt law to complex societies"
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Constitutional and public law",
+      "reasonItExists": "Authority itself needs limits, allocation, and review."
+    },
+    {
+      "name": "Private and civil law",
+      "reasonItExists": "Promises, property, liability, and remedies coordinate relationships among people and organisations."
+    },
+    {
+      "name": "Criminal law",
+      "reasonItExists": "A community defines public wrongs, state power, proof, and proportionate punishment."
+    },
+    {
+      "name": "Administrative and regulatory law",
+      "reasonItExists": "Modern institutions need accountable rules for delegated power, safety, markets, and public services."
+    },
+    {
+      "name": "International and human-rights law",
+      "reasonItExists": "Cross-border relations and universal claims exceed one sovereign's ordinary jurisdiction."
+    }
+  ],
+  "mandatoryConcepts": [
+    "rule of law",
+    "due process and evidence",
+    "rights and duties",
+    "precedent and interpretation",
+    "contract and legal personality",
+    "remedy and enforcement"
+  ],
+  "optionalConcepts": [
+    "jurisdiction",
+    "proportionality",
+    "legal pluralism",
+    "regulatory governance"
+  ],
+  "methodsToRepresent": [
+    "textual and purposive interpretation",
+    "precedent and analogy",
+    "fact-finding and evidence rules",
+    "adversarial and inquisitorial procedure",
+    "institutional and comparative analysis"
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Political sciences and civics (0312)",
+      "connection": "Law allocates authority and turns political choices into institutions.",
+      "difference": "Politics studies power and collective choice; law studies the valid forms, procedures, and remedies that structure them."
+    },
+    {
+      "field": "Economics (0311)",
+      "connection": "Property, contract, liability, and regulation alter incentives and distribution.",
+      "difference": "Economics models behavioural and welfare consequences; law determines claims, duties, and enforceability."
+    },
+    {
+      "field": "Psychology (0313)",
+      "connection": "Witness memory, judgement, deterrence, and rehabilitation depend on human behaviour.",
+      "difference": "Psychology studies mechanisms and evidence; law must make an institutional decision under procedural constraints."
+    },
+    {
+      "field": "Computing and information (06)",
+      "connection": "Digital systems create new evidence, privacy, identity, and liability problems.",
+      "difference": "Computing builds and analyses systems; law decides which rights and responsibilities attach to their use."
+    }
+  ],
+  "visualOpportunities": [
+    "a dispute branching under two private judgements",
+    "custom becoming a public record",
+    "a rule, evidence, hearing, decision, and appeal loop",
+    "rights and duties connecting strangers",
+    "a regulatory network spanning markets, bodies, and data",
+    "a final zoom from one dispute to legal institutions"
+  ],
+  "endingReturn": "The two judges were a constructed dilemma. Our law is the real, historically layered system of rules, institutions, interpretation, procedure, and remedies through which societies try—imperfectly—to make conflict governable.",
+  "finalMentalModel": "When facing a legal claim, ask what rule applies, who has standing, what evidence and procedure make it reviewable, which institution can remedy it, and whose power the rule distributes.",
+  "avoid": [
+    "do not present law as morality with penalties",
+    "do not treat statutes as self-executing code",
+    "do not invent a real court case",
+    "do not make fairness identical to consistency",
+    "do not reduce the map to criminal law"
+  ]
+}

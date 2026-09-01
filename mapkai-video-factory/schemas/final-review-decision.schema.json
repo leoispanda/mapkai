@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/final-review-decision/v1",
+  "title": "MapKAI Final Review Decision",
+  "type": "object",
+  "required": ["schemaVersion", "runId", "fieldId", "artifactType", "policyBinding", "reviewerRole", "decision", "evidenceSufficient", "reasonCodes", "hardGates", "findings"],
+  "properties": {
+    "schemaVersion": {"const": "final-review-decision.v1"},
+    "runId": {"type": ["string", "null"]},
+    "fieldId": {"type": ["string", "null"]},
+    "artifactType": {"type": ["string", "null"]},
+    "policyBinding": {"type": ["object", "null"]},
+    "reviewerRole": {"enum": ["independent_reviewer", "human_reviewer", "creator_self_check"]},
+    "decision": {"enum": ["PASS", "REVISE", "REBUILD", "BLOCKED"]},
+    "evidenceSufficient": {"type": "boolean"},
+    "reasonCodes": {"type": "array", "items": {"type": "string"}},
+    "hardGates": {"type": "object", "additionalProperties": {"enum": ["PASS", "FAIL", "NOT_REVIEWED", "HOLD"]}},
+    "findings": {"type": "array", "items": {"$ref": "review-finding.schema.json"}},
+    "summary": {"type": "string"},
+    "reviewedAt": {"type": ["string", "null"]},
+    "creatorOutputPath": {"type": ["string", "null"]},
+    "creatorSelfCheckPath": {"type": ["string", "null"]},
+    "independentReviewPath": {"type": ["string", "null"]},
+    "decisionImpact": {"type": "string"},
+    "sensitiveContentAssessment": {
+      "type": "object",
+      "description": "Required for PASS under Review Policy v1.2 onward. Independent semantic evidence, not keyword clearance.",
+      "required": ["scope", "summary", "evidence"],
+      "properties": {
+        "scope": {"enum": ["NO_MATERIAL_SENSITIVE_CONTENT", "NECESSARY_NEUTRAL_COVERAGE", "UNNECESSARY_SENSITIVE_EXAMPLE", "HIGH_RISK_CENTRAL_TOPIC", "UNCERTAIN"]},
+        "summary": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "items": {
+          "type": "object", "required": ["artifactLocation", "excerpt", "necessity", "neutrality", "factualStatus", "sourceRefs"],
+          "properties": {
+            "artifactLocation": {"type": "string", "minLength": 1},
+            "excerpt": {"type": "string", "minLength": 1},
+            "necessity": {"type": "string", "minLength": 1},
+            "neutrality": {"type": "string", "minLength": 1},
+            "factualStatus": {"type": "string", "minLength": 1},
+            "sourceRefs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+          }
+        }}
+      },
+      "allOf": [{"if": {"properties": {"scope": {"const": "NECESSARY_NEUTRAL_COVERAGE"}}}, "then": {"properties": {"evidence": {"minItems": 1}}}}]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"decision": {"const": "PASS"}}},
+      "then": {"properties": {"evidenceSufficient": {"const": true}}}
+    }
+  ]
+}

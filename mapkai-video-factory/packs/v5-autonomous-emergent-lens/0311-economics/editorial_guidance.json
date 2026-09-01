@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0",
+  "field": {
+    "id": "0311",
+    "name": "Economics",
+    "nameZh": "经济学",
+    "slug": "economics",
+    "type": "FIELD"
+  },
+  "centralHumanQuestion": "How can a society coordinate countless competing uses of scarce resources when every choice closes off other possible futures, and when the consequences of those choices spread through prices, institutions, power, and distribution?",
+  "fieldBecomesNecessaryWhen": "Economics becomes necessary when scarcity can no longer be managed by custom, direct command, or isolated household judgment because many interdependent people are choosing among rival uses of time, labour, land, capital, knowledge, and attention.",
+  "coreThesis": "Economics is best introduced not as a theory of money or markets, but as the intellectual machinery societies developed for understanding coordination under scarcity: how local choices create signals, incentives, distributions, feedback loops, and unintended collective outcomes.",
+  "narrativeEngine": "A paradox that becomes a system cascade: a society can possess more money without possessing more wealth, because claims on resources and the resources themselves are different things; once this distinction is seen, prices, production, exchange, inflation, institutions, inequality, and policy emerge as connected problems of coordination.",
+  "parallelCivilization": {
+    "enabled": true,
+    "entryPoint": "Begin with a functioning settlement whose people already farm, build, trade favours, specialise, save stores, lend tools, negotiate obligations, and understand that time and materials are limited, but who possess no formal economic vocabulary.",
+    "existingKnowledge": [
+      "People know that choosing one task means neglecting another.",
+      "They recognise that some skills, tools, locations, and materials are more valuable in certain situations than others.",
+      "They bargain, cooperate, compete, store surpluses, incur obligations, and compare alternatives.",
+      "They understand practical scarcity but have not yet separated physical resources, claims on resources, prices, incentives, and aggregate outcomes into distinct analytical concepts."
+    ],
+    "trigger": "A mysterious event doubles every household's stock of exchange tokens overnight while leaving the number of houses, meals, doctors, tools, workers, machines, and hours unchanged.",
+    "ordinaryIntuition": "Most people initially feel richer because everyone can now offer more tokens for what they want.",
+    "failedIntuition": "When everyone attempts to convert additional claims into the same unchanged stock of goods and services, the extra tokens do not create corresponding productive capacity; bids rise, relative scarcities reappear, and the settlement discovers that nominal abundance cannot abolish real constraints.",
+    "emergentProblem": "The settlement now needs to distinguish wealth from money, prices from value, individual choices from aggregate consequences, exchange from production, and private incentives from social outcomes. What looked like a simple windfall becomes a problem of system-wide coordination."
+  },
+  "openingHook": "At dawn, every household opens its chest and finds twice as many tokens as the night before. No new bread has been baked. No extra house has appeared. No doctor has gained another hour. No field has become larger. Yet everyone can now offer twice as much. By evening, has the settlement become richer, or have its people merely changed the numbers attached to scarcity?",
+  "centralTension": "The central tension is between individual rationality and collective outcome. A choice can make perfect sense for one household, worker, firm, lender, or government while producing very different consequences once thousands of others respond to the same incentives, prices, expectations, and constraints.",
+  "primaryAha": "The deepest economic problem is not that resources are scarce. People have always known scarcity. The reversal is that scarcity becomes difficult when choices interact: what one person can afford, produce, earn, save, or consume depends on what others do in response. Economics begins when we stop asking only which choice is best and start asking how choices become a system.",
+  "secondaryTurns": [
+    "A price is not merely a number attached to an object; it is a compressed signal emerging from competing claims, constraints, expectations, institutions, and bargaining power.",
+    "Exchange does not eliminate scarcity. It reorganises who uses scarce resources, for what purpose, and under which incentives.",
+    "What is sensible individually can become unstable collectively: saving can reduce spending, wage cuts can reduce demand, panic can create the shortage people fear, and attempts to buy protection can move prices for everyone.",
+    "Efficiency and distribution are not the same question. A system may allocate resources productively while still producing outcomes that societies judge unequal, insecure, or politically unacceptable.",
+    "Markets are not the absence of institutions. Property rights, contracts, money, firms, regulation, taxation, norms, and enforcement are among the structures that make particular forms of market coordination possible."
+  ],
+  "emergencePath": [
+    "Start with unavoidable trade-offs: land can grow one crop instead of another, labour can build houses instead of tools, and time spent today cannot also be spent elsewhere.",
+    "Show that repeated trade-offs encourage specialisation and exchange, because people differ in skills, resources, location, preferences, and opportunity costs.",
+    "Let exchange create the need for comparable terms: recurring bargains generate prices, but those prices change as scarcity, demand, expectations, and available alternatives change.",
+    "Introduce the windfall paradox to separate nominal claims from real productive capacity and reveal why money cannot be understood independently of production and scarcity.",
+    "Expand from isolated bargains to interacting markets, where one price changes another, wages affect consumption, interest rates affect investment, and expectations alter present behaviour.",
+    "Show that aggregate outcomes cannot always be inferred from individual transactions: inflation, unemployment, financial crises, recessions, and growth emerge from feedback across the whole system.",
+    "Introduce institutions because coordination requires rules about ownership, contracts, money, taxation, public goods, competition, risk, and enforcement.",
+    "Introduce distribution because the same productive system determines not only what is produced, but also who receives income, wealth, security, bargaining power, and access to opportunity.",
+    "Arrive at modern economics as a family of methods for analysing choices, interactions, institutions, aggregate dynamics, and policy under conditions where no single viewpoint can see the whole system."
+  ],
+  "modernFieldMap": [
+    {
+      "name": "Microeconomics",
+      "reasonItExists": "Once individual choices interact through prices, contracts, firms, bargaining, and strategic behaviour, societies need models explaining how households and organisations respond to incentives and constraints."
+    },
+    {
+      "name": "Macroeconomics",
+      "reasonItExists": "Inflation, unemployment, growth, money, credit, expectations, and crises arise from feedback across entire economies and cannot be understood by examining one transaction at a time."
+    },
+    {
+      "name": "Public economics",
+      "reasonItExists": "Private exchange does not automatically provide public goods, price external harms, insure all risks, or settle distributional conflicts, creating questions about taxation, spending, welfare, and state intervention."
+    },
+    {
+      "name": "Labour economics",
+      "reasonItExists": "Human work is simultaneously a productive input, a source of income, a career choice, a bargaining relationship, and a major determinant of inequality, making labour markets unlike ordinary commodity markets."
+    },
+    {
+      "name": "Development economics",
+      "reasonItExists": "Large and persistent differences in productivity, health, education, institutions, infrastructure, state capacity, and opportunity require explanations of why some societies escape low-productivity equilibria while others do not."
+    },
+    {
+      "name": "Behavioural economics",
+      "reasonItExists": "Actual human decisions systematically depart from frictionless calculation because attention, framing, habits, social influence, uncertainty, and bounded reasoning shape choice."
+    },
+    {
+      "name": "Institutional and political economy",
+      "reasonItExists": "Economic outcomes depend on the rules governing property, authority, enforcement, bargaining, collective action, and political power, so incentives cannot be separated from the institutions that create them."
+    }
+  ],
+  "mandatoryConcepts": [
+    "Scarcity and opportunity cost",
+    "Incentives and constrained choice",
+    "Specialisation, exchange, and comparative advantage",
+    "Supply, demand, and price formation",
+    "Marginal reasoning",
+    "Money versus real resources",
+    "Market equilibrium and adjustment",
+    "Externalities and public goods",
+    "Productivity and economic growth",
+    "Inflation, unemployment, and aggregate demand",
+    "Distribution of income and wealth",
+    "Institutions, property rights, and rules of exchange"
+  ],
+  "optionalConcepts": [
+    "Game theory and strategic interaction",
+    "Information asymmetry",
+    "Transaction costs",
+    "Credit and interest rates",
+    "Business cycles",
+    "Human capital",
+    "Market power",
+    "Behavioural biases",
+    "Risk and insurance",
+    "International trade and exchange rates"
+  ],
+  "methodsToRepresent": [
+    "Use counterfactual comparison: hold most conditions fixed, change one constraint or incentive, and ask how behaviour and outcomes respond.",
+    "Represent interacting choices with simplified models, curves, constraints, payoff structures, and equilibrium conditions that deliberately omit detail to expose causal mechanisms.",
+    "Use empirical comparison across individuals, firms, places, policies, and time to test whether predicted relationships appear in real data.",
+    "Represent causal inference carefully, distinguishing correlation from effects identified through experiments, natural experiments, quasi-experimental designs, or credible statistical strategies.",
+    "Move repeatedly between micro-level behaviour and aggregate outcomes, showing where aggregation preserves intuition and where feedback produces a different result."
+  ],
+  "crossFieldConnections": [
+    {
+      "field": "Psychology",
+      "connection": "Both fields investigate human choice, judgment, motivation, expectations, and responses to incentives.",
+      "difference": "Psychology often asks how minds actually perceive and decide, while economics is especially concerned with how those decisions interact through constraints, prices, institutions, and aggregate systems."
+    },
+    {
+      "field": "Political Science",
+      "connection": "Taxes, regulation, redistribution, property rights, public goods, institutions, and collective decisions are simultaneously economic and political.",
+      "difference": "Political science centres more directly on power, authority, representation, conflict, and governance, while economics typically isolates incentives, trade-offs, resource allocation, and behavioural responses within those structures."
+    },
+    {
+      "field": "Sociology",
+      "connection": "Markets and economic behaviour are embedded in norms, social networks, class structures, organisations, and institutions.",
+      "difference": "Sociology more often foregrounds social relations, identities, structures, and meaning, while economics more often formalises constrained choice, exchange, incentives, and system-level allocation."
+    },
+    {
+      "field": "History",
+      "connection": "Economic institutions, technologies, crises, trade systems, industrialisation, and inequality develop through historical sequences that shape present possibilities.",
+      "difference": "History reconstructs particular change through time, while economics seeks portable mechanisms and models that can be compared across different historical settings."
+    },
+    {
+      "field": "Mathematics and Statistics",
+      "connection": "Economic reasoning relies on optimisation, probability, modelling, measurement, estimation, and causal analysis.",
+      "difference": "Mathematics and statistics provide formal tools; economics supplies the substantive questions about scarcity, incentives, coordination, production, distribution, and institutions to which those tools are applied."
+    }
+  ],
+  "visualOpportunities": [
+    "Animate the opening settlement as token balances double while the physical inventory of homes, bread, labour hours, tools, and medical capacity remains visually fixed; then let bids and prices begin to rise.",
+    "Show one scarce plot of land branching into alternative futures—food, housing, factory, conservation—to make opportunity cost visible as sacrificed possibilities rather than a monetary expense.",
+    "Visualise a price as the meeting point of many moving forces: households entering and leaving, production expanding, shortages appearing, substitutes becoming available, expectations shifting, and regulations changing.",
+    "Create a cascading network in which a single change in interest rates travels through borrowing, investment, employment, income, spending, housing, exchange rates, and expectations.",
+    "Contrast an individual action with its aggregate counterpart: one household saving more versus every household saving more at once.",
+    "Use two layers over the same economy: a physical layer of people, machines, land, goods, and time, and a nominal layer of money, prices, wages, debt, and financial claims.",
+    "Show identical market exchanges under different institutional rules—different property rights, bargaining power, taxes, or external costs—to demonstrate that markets always operate inside a rule system.",
+    "End with a zoom from one ordinary purchase outward into supply chains, wages, financing, energy, regulation, trade, environmental effects, and income distribution."
+  ],
+  "endingReturn": "Return to the settlement after the token windfall. Its people are no longer asking whether twice as many tokens made them twice as rich. They now ask a more powerful set of questions: what real resources exist, what prevents their expansion, how competing claims are coordinated, who gains access to them, what signals guide production, and which rules shape the outcome. The mystery of the doubled tokens has become a window into the architecture of an economy.",
+  "finalMentalModel": "See an economy as a continuously adapting coordination system built on real scarcity. People and organisations choose under constraints; their choices interact; prices and institutions transmit information and incentives; production changes the feasible set; money and finance organise claims across time; distribution determines who can command resources; and feedback can produce outcomes no participant intended. Economics is the toolkit for tracing that chain from trade-off to choice, from choice to interaction, and from interaction to collective consequence.",
+  "avoid": [
+    "Do not open with 'economics is the study of scarcity' or any equivalent dictionary definition.",
+    "Do not make money the central subject of the field; use money as a revealing layer over deeper constraints involving production, resources, time, and coordination.",
+    "Do not present supply and demand as the field's foundational revelation before the learner understands why interacting choices require a coordination mechanism.",
+    "Do not treat markets as natural spaces without institutions, law, norms, political authority, property rights, enforcement, and bargaining structures.",
+    "Do not imply that individually rational behaviour necessarily produces socially desirable or stable outcomes.",
+    "Do not reduce economics to efficiency while neglecting distribution, power, insecurity, externalities, and institutional design.",
+    "Do not anthropomorphise 'the economy' as a single actor that wants, decides, rewards, or punishes.",
+    "Do not turn the Parallel Civilization into fake history or a whimsical fable; it should function only as a controlled thought experiment that reveals why economic concepts become necessary.",
+    "Do not mechanically enumerate subfields as separate branches; each modern area should emerge from a distinct failure of simpler reasoning.",
+    "Do not imply that economic models are literal descriptions of reality; present them as selective representations designed to isolate mechanisms and test consequences."
+  ],
+  "guidanceVersion": "v5-autonomous-emergent-lens.guidance.model.1",
+  "productionEligible": true,
+  "origin": "editorial_model_provider"
+}

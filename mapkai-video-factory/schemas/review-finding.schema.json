@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapkai://video-factory/review-finding/v1",
+  "title": "MapKAI Evidence-Bound Review Finding",
+  "type": "object",
+  "required": ["findingCode", "severity", "reviewDimension", "artifactLocation", "evidence", "whyItMatters", "requiredChange", "decisionImpact"],
+  "properties": {
+    "findingCode": {"type": "string", "minLength": 1},
+    "severity": {"enum": ["INFO", "LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+    "reviewDimension": {"type": "string", "minLength": 1},
+    "artifactLocation": {"type": ["string", "object"], "minLength": 1},
+    "evidence": {"type": ["string", "object"], "minLength": 1},
+    "whyItMatters": {"type": "string", "minLength": 1},
+    "requiredChange": {"type": "string", "minLength": 1},
+    "decisionImpact": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

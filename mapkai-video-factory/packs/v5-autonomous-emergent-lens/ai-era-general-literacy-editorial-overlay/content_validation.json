@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "content-validation.v2",
+  "generatedAt": "2026-08-29T21:21:43.299Z",
+  "status": "EDITORIAL_OVERLAY_ONLY",
+  "productionEligible": false,
+  "taxonomyStatus": "NOT_FOUND_AS_A_DISTINCT_FORMAL_FIELD_IN_CURRENT_SCRIPT_JS",
+  "duplicateCreated": false,
+  "scopeChecks": {
+    "humanAiCollaboration": true,
+    "verification": true,
+    "syntheticMedia": true,
+    "judgement": true,
+    "crossFieldRouting": true
+  },
+  "errors": []
+}
