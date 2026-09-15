@@ -63,8 +63,8 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.222" />
-    <link rel="stylesheet" href="/map3d.css?v=0.1.222" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.223" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.223" />
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
   <body>
@@ -520,25 +520,22 @@
 
       <section class="page map-page spatial-atlas" id="map" data-page="/map">
         <div id="spatialAtlas" class="spatial-shell">
-          <aside class="spatial-sidebar" aria-label="Knowledge fields">
-            <div class="spatial-side-heading"><h1 data-spatial-text="title">Knowledge map</h1><p data-spatial-text="sideCopy">A new perspective starts here.</p></div>
-            <div class="spatial-modes" aria-label="Map view">
-              <button type="button" data-spatial-mode="atlas" aria-pressed="true" data-spatial-text="full">Full atlas</button>
-              <button type="button" data-spatial-mode="journey" aria-pressed="false" data-spatial-text="journey">My journey</button>
-            </div>
-            <nav class="spatial-fields" id="spatialFields" aria-label="Select a knowledge island"></nav>
-            <div class="spatial-side-bottom"><p id="spatialProgress"></p><a class="spatial-primary" href="/map-challenge" data-route="/map-challenge"><span data-spatial-text="start">Start exploring</span><span aria-hidden="true">↗</span></a></div>
-          </aside>
           <div class="spatial-world" id="spatialWorld">
             <div class="spatial-scene" id="spatialScene"></div>
             <div class="spatial-labels" id="spatialLabels"></div>
-            <div class="spatial-headline"><h2 data-spatial-text="headline">A world of knowledge.</h2><p data-spatial-text="subhead">Follow your curiosity. Find your next island.</p></div>
-            <button class="spatial-reset" type="button" id="spatialReset"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.9 7a6.3 6.3 0 1 0 .1 5M16 3.5V7h-3.5"/></svg><span data-spatial-text="reset">Reset view</span></button>
+            <div class="spatial-toolbar">
+              <h1 data-spatial-text="title">Knowledge map</h1>
+              <div class="spatial-modes" aria-label="Map view">
+                <button type="button" data-spatial-mode="atlas" aria-pressed="true" data-spatial-text="full">Full atlas</button>
+                <button type="button" data-spatial-mode="journey" aria-pressed="false" data-spatial-text="journey">My journey</button>
+              </div>
+              <a class="spatial-primary" href="/map-challenge" data-route="/map-challenge"><span data-spatial-text="start">Start exploring</span><span aria-hidden="true">↗</span></a>
+            </div>
             <div class="spatial-loading" id="spatialLoading" role="status"><span></span><p data-spatial-text="loading">Preparing your world…</p></div>
             <div class="spatial-detail" id="spatialDetail" hidden aria-live="polite"></div>
             <div class="spatial-orientation" aria-hidden="true"><span>N</span><svg id="spatialCompass" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/><path d="M30 12L39 43L30 35L21 43Z"/></svg></div>
-            <div class="spatial-zoom"><button type="button" id="spatialZoomIn" aria-label="Zoom in">+</button><button type="button" id="spatialZoomOut" aria-label="Zoom out">−</button></div>
-            <div class="spatial-caption"><span id="spatialModeNote" data-spatial-text="preview">Full atlas preview</span><button type="button" id="spatialRotation" class="spatial-rotation" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4v8M10 4v8"/></svg><span>Auto-rotate</span></button><p data-spatial-text="help">Drag to orbit · Scroll to zoom · Select an island</p></div>
+            <div class="spatial-zoom"><button type="button" id="spatialZoomIn" aria-label="Zoom in">+</button><button type="button" id="spatialZoomOut" aria-label="Zoom out">−</button><button type="button" id="spatialReset" aria-label="Reset view" title="Reset view"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.9 7a6.3 6.3 0 1 0 .1 5M16 3.5V7h-3.5"/></svg></button></div>
+            <div class="spatial-caption"><span id="spatialProgress" hidden></span><button type="button" id="spatialRotation" class="spatial-rotation" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4v8M10 4v8"/></svg><span>Auto-rotate</span></button><p data-spatial-text="help">Drag to orbit · Scroll to zoom · Select an island</p></div>
           </div>
         </div>
         <div id="legacyAtlas" hidden>
@@ -725,10 +722,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.222"></script>
-    <script src="/content/management-column.js?v=0.1.222"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.222"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.222"></script>
-    <script src="/script.js?v=0.1.222"></script>
+    <script src="/content/field-fables.js?v=0.1.223"></script>
+    <script src="/content/management-column.js?v=0.1.223"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.223"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.223"></script>
+    <script src="/script.js?v=0.1.223"></script>
   </body>
 </html>

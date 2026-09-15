@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.222';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.223';
 
 const COPY = {
   en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
@@ -17,7 +17,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   let preview = initialState.fields.every(f => f.level === 'ocean'), selected = null, hovering = null, frame = 0, lastTime = 0, disposed = false, contextLost = false;
   let cameraFlight = null, running = false, terrainSignature = '', narrowLayout = null;
   const page = root.closest('#map'), world = root.querySelector('#spatialWorld'), sceneHost = root.querySelector('#spatialScene');
-  const labelsHost = root.querySelector('#spatialLabels'), directory = root.querySelector('#spatialFields'), detail = root.querySelector('#spatialDetail');
+  const labelsHost = root.querySelector('#spatialLabels'), detail = root.querySelector('#spatialDetail');
   const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
   let rotationEnabled = !reducedQuery.matches, interacting = false, resumeRotationAt = 0;
   const rotationButton = root.querySelector('#spatialRotation');
@@ -59,15 +59,12 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   const islands = ISLANDS.map(spec => createIsland(spec, mobile)); islands.forEach(island => scene.add(island.group));
   const pickables = islands.map(island => island.terrain);
   const raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2(), projection = new THREE.Vector3();
-  const buttons = new Map(), labels = new Map();
+  const labels = new Map();
   for (const [i, island] of islands.entries()) {
     const code = island.spec.code;
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'spatial-field'; button.dataset.spatialField = code; button.setAttribute('aria-pressed', 'false');
-    button.innerHTML = `<span class="spatial-field-number">${i + 1}</span><span class="spatial-field-name"></span>`; directory.append(button); buttons.set(code, button);
     const label = document.createElement('button'); label.type = 'button'; label.className = 'spatial-island-label'; label.dataset.spatialIsland = code; label.setAttribute('aria-pressed', 'false'); labelsHost.append(label); labels.set(code, label);
-    button.addEventListener('click', () => select(code, true));
     label.addEventListener('click', () => select(code, true));
-    for (const el of [button, label]) {
+    for (const el of [label]) {
       el.addEventListener('mouseenter', () => { hovering = code; invalidate(); });
       el.addEventListener('mouseleave', () => { hovering = null; invalidate(); });
     }
@@ -116,7 +113,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       projection.set(island.group.position.x, y, island.group.position.z).project(camera);
       let x = (projection.x * .5 + .5) * w, sy = (-projection.y * .5 + .5) * h;
       const width = label.offsetWidth, height = label.offsetHeight;
-      const visible = projection.z > -1 && projection.z < 1 && x > -width && x < w + width && sy > 65 && sy < h - 60;
+      const visible = projection.z > -1 && projection.z < 1 && x > -width && x < w + width && sy > root.querySelector('.spatial-toolbar').offsetHeight + 36 && sy < h - 80;
       if (!visible) { label.style.visibility = 'hidden'; continue; }
       label.style.visibility = 'visible';
       x = THREE.MathUtils.clamp(x, width / 2 + 8, w - width / 2 - 8);
@@ -138,7 +135,6 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   }
   function select(code, fly = true) {
     selected = code;
-    for (const [id, el] of buttons) el.setAttribute('aria-pressed', String(code === id));
     for (const [id, el] of labels) el.setAttribute('aria-pressed', String(code === id));
     root.dataset.selectedField = code || '';
     paintDetails();
@@ -155,7 +151,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   root.querySelector('#spatialReset').addEventListener('click', reset);
   root.querySelector('#spatialZoomIn').addEventListener('click', () => zoom(1.25));
   root.querySelector('#spatialZoomOut').addEventListener('click', () => zoom(.8));
-  detail.addEventListener('click', e => { if (e.target.closest('[data-spatial-close]')) { const previous = selected; select(null, false); buttons.get(previous)?.focus(); } if (e.target.closest('[data-spatial-open]') && selected) onOpen(selected); });
+  detail.addEventListener('click', e => { if (e.target.closest('[data-spatial-close]')) { select(null, false); renderer.domElement.focus(); } if (e.target.closest('[data-spatial-open]') && selected) onOpen(selected); });
   for (const button of root.querySelectorAll('[data-spatial-mode]')) button.addEventListener('click', () => { preview = button.dataset.spatialMode === 'atlas'; update(state); });
   let pointerDown = null;
   renderer.domElement.addEventListener('pointerdown', e => { pointerDown = { x: e.clientX, y: e.clientY }; });
@@ -200,7 +196,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   controls.addEventListener('change', invalidate);
   renderer.domElement.addEventListener('webglcontextlost', e => {
     e.preventDefault(); contextLost = true; stop(); const loading = root.querySelector('#spatialLoading'); loading.hidden = false;
-    loading.querySelector('p').textContent = lang === 'zh' ? '3D 画面已暂停，仍可从左侧选择领域。刷新页面可重试。' : '3D view paused. Use the field list, or reload to retry.';
+    loading.querySelector('p').textContent = lang === 'zh' ? '3D 画面已暂停，仍可点击领域名称。刷新页面可重试。' : '3D view paused. Select a field label, or reload to retry.';
     loading.style.pointerEvents = 'none'; loading.style.zIndex = '1';
   });
 
@@ -214,14 +210,15 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     state = nextState; lang = state.language === 'zh' ? 'zh' : 'en'; const c = COPY[lang];
     for (const element of root.querySelectorAll('[data-spatial-text]')) element.textContent = c[element.dataset.spatialText] || '';
     if (world.clientWidth < 600) root.querySelector('[data-spatial-text="help"]').textContent = lang === 'zh' ? '拖动旋转 · 双指缩放 · 点击岛屿探索' : 'Drag to orbit · Pinch to zoom · Select an island';
-    root.querySelector('#spatialModeNote').textContent = preview ? c.preview : c.journey;
+    root.querySelector('#spatialProgress').hidden = preview;
+    root.querySelector('#spatialReset').setAttribute('aria-label', c.reset);
+    root.querySelector('#spatialReset').title = c.reset;
     const explored = state.fields.filter(f => f.level !== 'ocean').length;
     root.querySelector('#spatialProgress').textContent = lang === 'zh' ? `已探索 ${explored} / 11 个领域` : `${explored} of 11 fields explored`;
     renderer.domElement.setAttribute('aria-label', c.canvas);
     root.querySelector('#spatialZoomIn').setAttribute('aria-label', c.in); root.querySelector('#spatialZoomOut').setAttribute('aria-label', c.out);
     for (const [index, island] of islands.entries()) {
       const code = island.spec.code, name = NAMES[lang][index], label = labels.get(code);
-      buttons.get(code).querySelector('.spatial-field-name').textContent = name;
       label.textContent = name; label.dataset.level = preview ? 'green' : field(code)?.level || 'ocean';
       label.setAttribute('aria-label', name);
     }
