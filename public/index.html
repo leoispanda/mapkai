@@ -63,8 +63,8 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.223" />
-    <link rel="stylesheet" href="/map3d.css?v=0.1.223" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.224" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.224" />
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
   <body>
@@ -520,9 +520,6 @@
 
       <section class="page map-page spatial-atlas" id="map" data-page="/map">
         <div id="spatialAtlas" class="spatial-shell">
-          <div class="spatial-world" id="spatialWorld">
-            <div class="spatial-scene" id="spatialScene"></div>
-            <div class="spatial-labels" id="spatialLabels"></div>
             <div class="spatial-toolbar">
               <h1 data-spatial-text="title">Knowledge map</h1>
               <div class="spatial-modes" aria-label="Map view">
@@ -531,6 +528,9 @@
               </div>
               <a class="spatial-primary" href="/map-challenge" data-route="/map-challenge"><span data-spatial-text="start">Start exploring</span><span aria-hidden="true">↗</span></a>
             </div>
+          <div class="spatial-world" id="spatialWorld">
+            <div class="spatial-scene" id="spatialScene"></div>
+            <div class="spatial-labels" id="spatialLabels"></div>
             <div class="spatial-loading" id="spatialLoading" role="status"><span></span><p data-spatial-text="loading">Preparing your world…</p></div>
             <div class="spatial-detail" id="spatialDetail" hidden aria-live="polite"></div>
             <div class="spatial-orientation" aria-hidden="true"><span>N</span><svg id="spatialCompass" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/><path d="M30 12L39 43L30 35L21 43Z"/></svg></div>
@@ -722,10 +722,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.223"></script>
-    <script src="/content/management-column.js?v=0.1.223"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.223"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.223"></script>
-    <script src="/script.js?v=0.1.223"></script>
+    <script src="/content/field-fables.js?v=0.1.224"></script>
+    <script src="/content/management-column.js?v=0.1.224"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.224"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.224"></script>
+    <script src="/script.js?v=0.1.224"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.223';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.224';
 
 const COPY = {
   en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
@@ -22,15 +22,15 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   let rotationEnabled = !reducedQuery.matches, interacting = false, resumeRotationAt = 0;
   const rotationButton = root.querySelector('#spatialRotation');
   const mobile = matchMedia('(max-width: 760px)').matches;
-  const scene = new THREE.Scene(); scene.background = new THREE.Color('#8edfdc'); scene.fog = new THREE.FogExp2('#8edfdc', .004);
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#b2cedb'); scene.fog = new THREE.FogExp2('#b2cedb', .004);
   const camera = new THREE.OrthographicCamera(-18, 18, 13, -13, .1, 180);
-  const homePosition = new THREE.Vector3(0, 23, 29), homeTarget = new THREE.Vector3(0, 0, 1.0);
+  const homePosition = new THREE.Vector3(0, 26, 29), homeTarget = new THREE.Vector3(0, 0, 1.0);
   camera.position.copy(homePosition);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, mobile ? 1.5 : 1.7));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.23;
+  renderer.toneMappingExposure = 1.08;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.domElement.tabIndex = 0;
@@ -47,14 +47,14 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
   controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
   controls.update();
-  scene.add(new THREE.HemisphereLight('#e6fbff', '#5d7650', 1.9));
-  const sun = new THREE.DirectionalLight('#fff2d5', 2.9);
+  scene.add(new THREE.HemisphereLight('#e1eff8', '#6e7460', 1.25));
+  const sun = new THREE.DirectionalLight('#fff2dc', 2.75);
   sun.position.set(-18, 28, -35); sun.castShadow = true;
   sun.shadow.mapSize.set(mobile ? 1024 : 2048, mobile ? 1024 : 2048);
   Object.assign(sun.shadow.camera, { left: -19, right: 19, top: 19, bottom: -19, near: .5, far: 65 });
-  sun.shadow.intensity = .32; sun.shadow.bias = -.00018; sun.shadow.normalBias = .035; sun.shadow.radius = 2;
+  sun.shadow.intensity = .40; sun.shadow.bias = -.00018; sun.shadow.normalBias = .035; sun.shadow.radius = 2;
   scene.add(sun);
-  const fill = new THREE.DirectionalLight('#72b9f4', .8); fill.position.set(10, 8, 12); scene.add(fill);
+  const fill = new THREE.DirectionalLight('#b3d2e8', .45); fill.position.set(10, 8, 12); scene.add(fill);
   const ocean = createOcean(); scene.add(ocean.mesh);
   const islands = ISLANDS.map(spec => createIsland(spec, mobile)); islands.forEach(island => scene.add(island.group));
   const pickables = islands.map(island => island.terrain);
@@ -84,15 +84,15 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     let halfHeight = narrow ? Math.max(17.4, 9.7 / aspect) : Math.max(10.8, 12.8 / aspect);
     for (const [index, island] of islands.entries()) {
       const scale = narrow ? .74 : 1;
-      island.group.position.x = island.spec.x * (narrow ? .57 : 1);
-      island.group.position.z = island.spec.z * (narrow ? 1.22 : 1);
+      island.group.position.x = island.spec.x * (narrow ? .67 : 1);
+      island.group.position.z = island.spec.z * (narrow ? .86 : 1);
       island.group.scale.x = island.group.scale.z = scale;
       ocean.uniforms.uAtlasIslands.value[index].set(island.group.position.x, island.group.position.z, island.spec.radius * scale, island.spec.seed);
     }
     // Reserve enough room for the outermost island throughout a full orbit.
     const orbitRadius = Math.max(...islands.map(island =>
       Math.hypot(island.group.position.x - homeTarget.x, island.group.position.z - homeTarget.z)
-      + island.spec.radius * island.group.scale.x * 1.15));
+      + island.spec.radius * Math.max(island.spec.sx, island.spec.sz) * island.group.scale.x * 1.15));
     halfHeight = Math.max(halfHeight, (orbitRadius + 1) / aspect);
     camera.left = -halfHeight * aspect; camera.right = halfHeight * aspect; camera.top = halfHeight; camera.bottom = -halfHeight;
     camera.updateProjectionMatrix();
@@ -104,26 +104,32 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   const headerObserver = new ResizeObserver(resize); if (document.querySelector('.topbar')) headerObserver.observe(document.querySelector('.topbar'));
 
   function fitLabels() {
-    const w = world.clientWidth, h = world.clientHeight;
-    const placed = [];
-    const ordered = islands.slice().sort((a, b) => a.spec.code === selected ? -1 : b.spec.code === selected ? 1 : a.spec.z - b.spec.z);
+    const w = world.clientWidth, h = world.clientHeight, placed = [];
+    const front = camera.position.clone().sub(controls.target); front.y = 0; front.normalize();
+    const ordered = islands.slice().sort((a, b) => a.spec.code === selected ? -1 : b.spec.code === selected ? 1 : a.group.position.distanceTo(camera.position) - b.group.position.distanceTo(camera.position));
     for (const island of ordered) {
       const code = island.spec.code, label = labels.get(code);
-      const y = preview || field(code)?.level !== 'ocean' ? island.peakHeight * island.group.scale.y + island.group.position.y + .34 : .35;
-      projection.set(island.group.position.x, y, island.group.position.z).project(camera);
-      let x = (projection.x * .5 + .5) * w, sy = (-projection.y * .5 + .5) * h;
+      const scale = island.group.scale.x;
+      const raised = preview || field(code)?.level !== 'ocean';
+      // Anchor each name at the camera-facing beach, keeping the terrain visible.
+      projection.set(island.group.position.x + front.x * island.spec.radius * island.spec.sx * scale * .76,
+        raised ? .06 : .02,
+        island.group.position.z + front.z * island.spec.radius * island.spec.sz * scale * .76).project(camera);
+      let x = (projection.x * .5 + .5) * w, y = (-projection.y * .5 + .5) * h + 14;
       const width = label.offsetWidth, height = label.offsetHeight;
-      const visible = projection.z > -1 && projection.z < 1 && x > -width && x < w + width && sy > root.querySelector('.spatial-toolbar').offsetHeight + 36 && sy < h - 80;
-      if (!visible) { label.style.visibility = 'hidden'; continue; }
-      label.style.visibility = 'visible';
-      x = THREE.MathUtils.clamp(x, width / 2 + 8, w - width / 2 - 8);
-      for (let attempt = 0; attempt < 4; attempt++) {
-        if (!placed.some(r => Math.abs(r.x - x) < (r.width + width) / 2 + 5 && Math.abs(r.y - sy) < height + 4)) break;
-        sy += height + 7;
+      if (projection.z < -1 || projection.z > 1 || x < -width || x > w + width || y < -height || y > h + height) { label.style.visibility = 'hidden'; continue; }
+      x = THREE.MathUtils.clamp(x, width / 2 + 12, w - width / 2 - 12);
+      y = THREE.MathUtils.clamp(y, height / 2 + 16, h - 78);
+      const base = y;
+      for (let attempt = 0; attempt < 10; attempt++) {
+        if (!placed.some(r => Math.abs(r.x - x) < (r.width + width) / 2 + 7 && Math.abs(r.y - y) < (r.height + height) / 2 + 6)) break;
+        const step = Math.ceil((attempt + 1) / 2) * (height + 8);
+        y = THREE.MathUtils.clamp(base + (attempt % 2 ? -step : step), height / 2 + 16, h - 78);
       }
-      placed.push({ x, y: sy, width });
-      label.style.transform = `translate3d(${(x - width / 2).toFixed(1)}px,${(sy - height / 2).toFixed(1)}px,0)`;
-      label.style.zIndex = code === selected ? '5' : String(Math.round(100 - projection.z * 100));
+      placed.push({ x, y, width, height });
+      label.style.visibility = 'visible';
+      label.style.transform = `translate3d(${(x - width / 2).toFixed(1)}px,${(y - height / 2).toFixed(1)}px,0)`;
+      label.style.zIndex = code === selected ? '20' : String(12 - placed.length);
     }
   }
   function field(code) { return state.fields.find(f => f.code === code); }
@@ -237,12 +243,12 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       terrainSignature = signature;
     }
     const dark = state.theme === 'dark';
-    scene.background.set(dark ? '#142d3d' : '#8edfdc');
+    scene.background.set(dark ? '#142d3d' : '#b2cedb');
     scene.fog.color.copy(scene.background);
-    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#159cbd');
-    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#31c6cf');
-    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#a1efdb');
-    renderer.toneMappingExposure = dark ? 1.02 : 1.23;
+    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#75a4c4');
+    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#a9cbde');
+    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#c7ded7');
+    renderer.toneMappingExposure = dark ? 1.0 : 1.08;
     paintDetails(); paintRotation(); root.dataset.mode = preview ? 'atlas' : 'journey';
     invalidate();
   }
