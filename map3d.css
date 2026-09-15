@@ -1,11 +1,11 @@
 /* Daylight atlas: inherit the site typography, surfaces and blue accent. */
 #map.spatial-atlas {
-  --spatial-sea: #b9e4f1;
+  --spatial-sea: #8edfdc;
   --spatial-ink: #213d52;
   --spatial-muted: #496c7f;
   --spatial-line: #517e9833;
   --spatial-glass: #ffffffed;
-  --spatial-hover: #e1effa;
+  --spatial-hover: #e4f5ef;
   --spatial-shadow: #25577818;
 }
 body[data-theme="dark"] #map.spatial-atlas {
@@ -120,3 +120,8 @@ body[data-theme="dark"] #map.spatial-atlas {
 #map.spatial-atlas .spatial-headline p, #map.spatial-atlas .spatial-caption p, #map.spatial-atlas .spatial-detail p { color: var(--spatial-muted); }
 
 .spatial-caption, .spatial-zoom, .spatial-orientation { z-index: 2; }
+
+/* A restrained coral selection accent balances the lagoon and foliage. */
+#map.spatial-atlas .spatial-island-label[aria-pressed="true"] { border-color: #de806a; background: #fff4e8; color: #573d32; }
+#map.spatial-atlas .spatial-island-label[aria-pressed="true"]::before { background: #ed917c; border-color: #c36e58; }
+body[data-theme="dark"] #map.spatial-atlas .spatial-island-label[aria-pressed="true"] { background: #453c36; color: #fff1df; }

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.221';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.222';
 
 const COPY = {
   en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
@@ -22,7 +22,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   let rotationEnabled = !reducedQuery.matches, interacting = false, resumeRotationAt = 0;
   const rotationButton = root.querySelector('#spatialRotation');
   const mobile = matchMedia('(max-width: 760px)').matches;
-  const scene = new THREE.Scene(); scene.background = new THREE.Color('#b9e4f1'); scene.fog = new THREE.FogExp2('#b9e4f1', .004);
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#8edfdc'); scene.fog = new THREE.FogExp2('#8edfdc', .004);
   const camera = new THREE.OrthographicCamera(-18, 18, 13, -13, .1, 180);
   const homePosition = new THREE.Vector3(0, 23, 29), homeTarget = new THREE.Vector3(0, 0, 1.0);
   camera.position.copy(homePosition);
@@ -47,12 +47,12 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
   controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
   controls.update();
-  scene.add(new THREE.HemisphereLight('#c1dff8', '#36564a', 2.1));
-  const sun = new THREE.DirectionalLight('#ffedc5', 3.25);
+  scene.add(new THREE.HemisphereLight('#e6fbff', '#5d7650', 1.9));
+  const sun = new THREE.DirectionalLight('#fff2d5', 2.9);
   sun.position.set(-18, 28, -35); sun.castShadow = true;
   sun.shadow.mapSize.set(mobile ? 1024 : 2048, mobile ? 1024 : 2048);
   Object.assign(sun.shadow.camera, { left: -19, right: 19, top: 19, bottom: -19, near: .5, far: 65 });
-  sun.shadow.intensity = .48; sun.shadow.bias = -.00018; sun.shadow.normalBias = .035; sun.shadow.radius = 2;
+  sun.shadow.intensity = .32; sun.shadow.bias = -.00018; sun.shadow.normalBias = .035; sun.shadow.radius = 2;
   scene.add(sun);
   const fill = new THREE.DirectionalLight('#72b9f4', .8); fill.position.set(10, 8, 12); scene.add(fill);
   const ocean = createOcean(); scene.add(ocean.mesh);
@@ -240,11 +240,11 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       terrainSignature = signature;
     }
     const dark = state.theme === 'dark';
-    scene.background.set(dark ? '#142d3d' : '#b9e4f1');
+    scene.background.set(dark ? '#142d3d' : '#8edfdc');
     scene.fog.color.copy(scene.background);
-    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#78bddb');
-    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#9acfe3');
-    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#bcebe5');
+    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#159cbd');
+    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#31c6cf');
+    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#a1efdb');
     renderer.toneMappingExposure = dark ? 1.02 : 1.23;
     paintDetails(); paintRotation(); root.dataset.mode = preview ? 'atlas' : 'journey';
     invalidate();

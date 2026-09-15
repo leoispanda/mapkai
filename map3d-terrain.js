@@ -29,7 +29,7 @@ export function terrainHeight(x, z, spec) {
   const nx = lx * Math.cos(rotation) - lz * Math.sin(rotation), nz = lx * Math.sin(rotation) + lz * Math.cos(rotation);
   const d = Math.hypot(lx, lz) / shoreRadius(Math.atan2(lz, lx), spec.seed);
   if (d > 1.025) return -.16;
-  const edge = smooth(0, .20, 1 - d);
+  const edge = smooth(0, .27, 1 - d);
   const n = fbm(nx * 5.4 + spec.seed, nz * 5.4, spec.seed);
   const ridge = 1 - Math.abs(n * 2 - 1);
   const peaks = Math.max(
@@ -37,7 +37,7 @@ export function terrainHeight(x, z, spec) {
     Math.exp(-((nx - .23) ** 2 * 14 + (nz - .13) ** 2 * 16)) * .78,
     Math.exp(-((nx + .32) ** 2 * 18 + (nz - .33) ** 2 * 17)) * .57,
   );
-  const stratum = .16 + smooth(.98, .69, d) * .69 + n * .12;
+  const stratum = .09 + smooth(.91, .57, d) * .55 + n * .09;
   const ridgeDetail = 1 - Math.abs(noise(nx * 17.5, nz * 17.5, spec.seed) * 2 - 1);
   const mountain = peaks * spec.height * (.24 + .57 * ridge ** 2 + .19 * ridgeDetail);
   const detail = (noise(nx * 32, nz * 32, spec.seed) - .5) * .21 * peaks;
@@ -48,13 +48,12 @@ export function terrainHeight(x, z, spec) {
   return THREE.MathUtils.lerp(geological, terraces, .48) * edge - .035;
 }
 
-const sand = new THREE.Color('#d6c695');
-const grass = new THREE.Color('#688843');
-const grassLight = new THREE.Color('#9da858');
-const rock = new THREE.Color('#869395');
-const rockWarm = new THREE.Color('#a1a498');
-const snow = new THREE.Color('#d6e5e5');
-const dirt = new THREE.Color('#666648');
+const sand = new THREE.Color('#f8e6be');
+const grass = new THREE.Color('#359a62');
+const grassLight = new THREE.Color('#8abe65');
+const rock = new THREE.Color('#708c75');
+const rockWarm = new THREE.Color('#a6aa83');
+const dirt = new THREE.Color('#8b9462');
 
 export function createIsland(spec, mobile) {
   const group = new THREE.Group(); group.position.set(spec.x, 0, spec.z); group.userData.code = spec.code;
@@ -86,13 +85,12 @@ export function createIsland(spec, mobile) {
     const x = positions.getX(i), z = positions.getZ(i), slope = normals.getY(i);
     const n = noise(x * 2, z * 2, spec.seed), color = new THREE.Color();
     peakHeight = Math.max(peakHeight, h);
-    if (h < .14) color.copy(sand).multiplyScalar(.92 + n * .13);
+    if (h < .23) color.copy(sand).multiplyScalar(.92 + n * .13);
     else {
       color.copy(grass).lerp(grassLight, n * .75);
-      const stone = clamp((.78 - slope) * 1.95, 0, 1) * smooth(.30, .70, h);
-      color.lerp(rock.clone().lerp(rockWarm, n * .6), Math.max(stone, smooth(spec.height * .67, spec.height * .95, h)));
+      const stone = clamp((.55 - slope) * 1.6, 0, .64) * smooth(.45, 1.15, h);
+      color.lerp(rock.clone().lerp(rockWarm, n * .6), Math.max(stone, smooth(spec.height * .95, spec.height * 1.22, h) * .48));
       color.lerp(dirt, smooth(.1, .3, h) * (1 - smooth(.3, .5, h)) * .15);
-      if (spec.height > 2.65) color.lerp(snow, smooth(spec.height * .92, spec.height * 1.08, h));
       color.multiplyScalar(.82 + n * .25 + noise(x * 22, z * 22, spec.seed) * .12);
     }
     for (let j = 0; j < 3; j++) colors.push(color.r, color.g, color.b);
@@ -124,36 +122,61 @@ export function createIsland(spec, mobile) {
   const stones = createRocks(spec); group.add(stones);
   const ringPoints = [];
   for (let i = 0; i <= 128; i++) { const a = i / 128 * Math.PI * 2, r = shoreRadius(a, spec.seed) * spec.radius + .27; ringPoints.push(new THREE.Vector3(Math.cos(a) * r, .04, Math.sin(a) * r)); }
-  const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPoints), new THREE.LineBasicMaterial({ color: '#79d6ff', transparent: true, opacity: .8, depthWrite: false }));
+  const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPoints), new THREE.LineBasicMaterial({ color: '#f38b78', transparent: true, opacity: .8, depthWrite: false }));
   ring.visible = false; group.add(ring);
   return { spec, group, terrain, trees, stones, ring, stageUniform, peakHeight, scaleTarget: 1, positionTarget: 0 };
 }
+// A shared frond mesh keeps the shoreline palms lightweight and visibly tropical.
+function palmFronds() {
+  const points = [];
+  for (let leaf = 0; leaf < 7; leaf++) {
+    const angle = leaf / 7 * Math.PI * 2;
+    function point(t, side) {
+      const distance = t * 1.18;
+      const width = Math.sin(Math.PI * t) * .14 * side;
+      const y = 1.28 + Math.sin(Math.PI * t) * .26 - t * t * .32 - Math.abs(width) * .35;
+      return [Math.cos(angle) * distance - Math.sin(angle) * width, y, Math.sin(angle) * distance + Math.cos(angle) * width];
+    }
+    for (let j = 0; j < 8; j++) {
+      const t = j / 8, next = (j + 1) / 8;
+      for (const side of [-1, 1]) {
+        points.push(...point(t, 0), ...point(next, 0), ...point(t, side));
+        points.push(...point(t, side), ...point(next, 0), ...point(next, side));
+      }
+    }
+  }
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+  geometry.computeVertexNormals();
+  return geometry;
+}
 function createTrees(spec, mobile) {
   const trees = new THREE.Group();
-  const count = spec.code === '05' ? (mobile ? 230 : 420) : (mobile ? 85 : 165);
-  const trunk = new THREE.InstancedMesh(new THREE.CylinderGeometry(.045, .07, .9, 5), new THREE.MeshStandardMaterial({ color: '#62523d', roughness: 1 }), count);
-  const crowns = new THREE.InstancedMesh(new THREE.ConeGeometry(.5, 1.7, 6), new THREE.MeshStandardMaterial({ color: '#326442', roughness: 1, flatShading: true }), count);
-  const round = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(.6, 1), new THREE.MeshStandardMaterial({ color: '#628440', roughness: 1, flatShading: true }), count);
+  const count = spec.code === '05' ? (mobile ? 180 : 320) : (mobile ? 65 : 120);
+  const trunk = new THREE.InstancedMesh(new THREE.CylinderGeometry(.04, .065, 1.3, 5), new THREE.MeshStandardMaterial({ color: '#ae8d60', roughness: 1 }), count);
+  const palms = new THREE.InstancedMesh(palmFronds(), new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .8, side: THREE.DoubleSide }), count);
+  const canopy = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(.66, 1), new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .9, flatShading: true }), count);
   const dummy = new THREE.Object3D(); let used = 0;
-  for (let attempt = 0; attempt < count * 30 && used < count; attempt++) {
+  for (let attempt = 0; attempt < count * 35 && used < count; attempt++) {
     const x = (hash(attempt, 3, spec.seed) * 2 - 1) * spec.radius, z = (hash(8, attempt, spec.seed) * 2 - 1) * spec.radius;
     const y = terrainHeight(x, z, spec);
-    if (y < .28 || y > Math.max(1.12, spec.height * .62)) continue;
+    if (y < .22 || y > Math.max(1.25, spec.height * .73)) continue;
     const slope = Math.hypot(terrainHeight(x + .07, z, spec) - y, terrainHeight(x, z + .07, spec) - y) / .07;
-    if (slope > .75) continue;
-    const size = .10 + hash(attempt, 2, spec.seed) * .11;
-    dummy.position.set(x, y + size * .34, z); dummy.scale.set(size, size, size); dummy.rotation.set(0, hash(attempt, 5, spec.seed) * 6.28, 0); dummy.updateMatrix(); trunk.setMatrixAt(used, dummy.matrix);
-    const pine = hash(attempt, 4, spec.seed) > .45;
-    dummy.position.y = y + size * 1.02; dummy.scale.setScalar(pine ? size : 0); dummy.updateMatrix(); crowns.setMatrixAt(used, dummy.matrix);
-    dummy.position.y = y + size * .89; dummy.scale.set(size * (pine ? 0 : 1), size * (pine ? 0 : 1.18), size * (pine ? 0 : 1)); dummy.updateMatrix(); round.setMatrixAt(used, dummy.matrix);
-    const color = new THREE.Color().setHSL(.22 + hash(attempt, 6, spec.seed) * .08, .29 + hash(attempt, 7, spec.seed) * .18, .20 + hash(attempt, 8, spec.seed) * .12);
-    crowns.setColorAt(used, color); round.setColorAt(used, color.clone().multiplyScalar(1.23)); used++;
+    if (slope > 1.2) continue;
+    const palm = y < .63 || hash(attempt, 4, spec.seed) > .78;
+    const size = palm ? .24 + hash(attempt, 2, spec.seed) * .13 : .16 + hash(attempt, 2, spec.seed) * .16;
+    dummy.rotation.set(0, hash(attempt, 5, spec.seed) * 6.28, 0);
+    dummy.position.set(x, y + size * .65, z); dummy.scale.setScalar(size); dummy.updateMatrix(); trunk.setMatrixAt(used, dummy.matrix);
+    dummy.position.y = y; dummy.scale.setScalar(palm ? size : 0); dummy.updateMatrix(); palms.setMatrixAt(used, dummy.matrix);
+    dummy.position.y = y + size * 1.06; dummy.scale.set(size * (palm ? 0 : 1.15), size * (palm ? 0 : 1.0), size * (palm ? 0 : 1.15)); dummy.updateMatrix(); canopy.setMatrixAt(used, dummy.matrix);
+    const color = new THREE.Color().setHSL(.32 + hash(attempt, 6, spec.seed) * .09, .48 + hash(attempt, 7, spec.seed) * .17, .27 + hash(attempt, 8, spec.seed) * .12);
+    palms.setColorAt(used, color.clone().lerp(new THREE.Color('#83bd52'), .3)); canopy.setColorAt(used, color); used++;
   }
-  for (const mesh of [trunk, crowns, round]) { mesh.count = used; mesh.castShadow = true; mesh.receiveShadow = true; mesh.instanceMatrix.needsUpdate = true; trees.add(mesh); }
+  for (const mesh of [trunk, palms, canopy]) { mesh.count = used; mesh.castShadow = true; mesh.receiveShadow = true; mesh.instanceMatrix.needsUpdate = true; trees.add(mesh); }
   return trees;
 }
 function createRocks(spec) {
-  const rocks = new THREE.InstancedMesh(new THREE.DodecahedronGeometry(1, 0), new THREE.MeshStandardMaterial({ color: '#819291', roughness: .85, flatShading: true }), 20);
+  const rocks = new THREE.InstancedMesh(new THREE.DodecahedronGeometry(1, 0), new THREE.MeshStandardMaterial({ color: '#c1b898', roughness: .85, flatShading: true }), 20);
   const dummy = new THREE.Object3D();
   for (let i = 0; i < 20; i++) {
     const angle = hash(i, 20, spec.seed) * Math.PI * 2, r = (shoreRadius(angle, spec.seed) + .03 + hash(i, 21, spec.seed) * .1) * spec.radius;
@@ -166,9 +189,9 @@ function createRocks(spec) {
 export function createOcean() {
   const uniforms = {
     uAtlasTime: { value: 0 },
-    uAtlasDeep: { value: new THREE.Color('#78bddb') },
-    uAtlasMiddle: { value: new THREE.Color('#9acfe3') },
-    uAtlasShallow: { value: new THREE.Color('#bcebe5') },
+    uAtlasDeep: { value: new THREE.Color('#159cbd') },
+    uAtlasMiddle: { value: new THREE.Color('#31c6cf') },
+    uAtlasShallow: { value: new THREE.Color('#a1efdb') },
     uAtlasIslands: { value: ISLANDS.map(s => new THREE.Vector4(s.x, s.z, s.radius, s.seed)) },
     uAtlasLevels: { value: ISLANDS.map(() => 1) },
   };
@@ -192,22 +215,23 @@ export function createOcean() {
     shader.fragmentShader = shader.fragmentShader.replace('#include <color_fragment>', `
       #include <color_fragment>
       vec2 seaP = vAtlasWorld.xz;
-      float shelf = 0.; float shore = 100.;
+      float shelf = 0.; float lagoon = 0.; float shore = 100.;
       for (int i=0; i<11; i++) {
         vec4 island = uAtlasIslands[i]; vec2 delta = seaP - island.xy; float a = atan(delta.y, delta.x);
         float radius = (.88 + .13*sin(a*3.+island.w)+.09*sin(a*5.-island.w*2.)+.045*cos(a*9.+island.w))*island.z;
         float d = length(delta)-radius;
-        shelf = max(shelf, exp(-max(d,0.)*3.0)*uAtlasLevels[i]);
+        shelf = max(shelf, exp(-max(d,0.)*1.9)*uAtlasLevels[i]);
+        lagoon = max(lagoon, exp(-pow(max(d,0.)/(.9+island.z*.19),2.))*uAtlasLevels[i]);
         if(uAtlasLevels[i]>.5) shore=min(shore,abs(d));
       }
       float swell = atlasFbm(seaP*1.3 + vec2(uAtlasTime*.019, -uAtlasTime*.015));
       float caustic = atlasFbm(seaP*9. + vec2(uAtlasTime*.08,uAtlasTime*.06));
       vec3 deep = uAtlasDeep, middle = uAtlasMiddle, shallow = uAtlasShallow;
-      diffuseColor.rgb = mix(deep,middle,swell*.4);
-      diffuseColor.rgb = mix(diffuseColor.rgb,shallow,shelf*.69);
+      diffuseColor.rgb = mix(deep,middle,.12+swell*.27+lagoon*.43);
+      diffuseColor.rgb = mix(diffuseColor.rgb,shallow,shelf*.82);
       float foam = (1.-smoothstep(.025,.17 + sin(uAtlasTime*.8+swell*3.)*.035,shore)) * (.40+.60*caustic);
-      diffuseColor.rgb = mix(diffuseColor.rgb,vec3(.54,.80,.78),foam*.48);
-      diffuseColor.rgb += vec3(.018,.04,.04)*smoothstep(.58,.82,caustic)*shelf;
+      diffuseColor.rgb = mix(diffuseColor.rgb,vec3(.91,.98,.91),foam*.58);
+      diffuseColor.rgb += vec3(.025,.075,.05)*smoothstep(.54,.76,caustic)*lagoon;
       vec2 sunspot = (seaP - vec2(-13.,-11.)) / vec2(9.,15.);
       float glint = pow(.5+.5*sin(seaP.x*43.+seaP.y*21.+atlasFbm(seaP*1.3)*5.+uAtlasTime*.5),12.)*smoothstep(.52,.75,atlasNoise(seaP*15.));
       diffuseColor.rgb += vec3(.4,.36,.24)*exp(-dot(sunspot,sunspot))*glint*.07;
