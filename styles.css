@@ -9554,10 +9554,6 @@ body[data-theme="dark"] #map .map-tip-name { color: var(--atlas-ink); }
 @media (prefers-reduced-motion: reduce) { #map *, #map *::before, #map *::after { scroll-behavior: auto; transition: none !important; } }
 /* The water layer covers only the drawing, even when a mobile field card opens. */
 #map #knowledgeWater { height: auto; aspect-ratio: 1100 / 619; }
-body:has(#map.is-active) .topbar { background: #fbfaf5f5; box-shadow: none; border-bottom-color: #36504016; }
-body[data-theme="dark"]:has(#map.is-active) .topbar { background: #15272bf5; border-bottom-color: #b5c6b522; }
-body[data-theme="dark"]:has(#map.is-active) .topbar .brand-mark { filter: brightness(2.5) saturate(.45); }
-body[data-theme="dark"]:has(#map.is-active) .nav-links { color: #b8c3ba; }
 @media (max-width: 720px) { #map .map-control + .map-control { border-top: 0; border-left: 1px solid var(--atlas-line); } }
 #map .map-viewport { container-type: inline-size; }
 @media (max-width: 600px) { #map .map-controls { bottom: auto; top: calc(56.2727cqw - 42px); } }

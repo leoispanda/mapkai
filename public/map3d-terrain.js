@@ -166,10 +166,13 @@ function createRocks(spec) {
 export function createOcean() {
   const uniforms = {
     uAtlasTime: { value: 0 },
+    uAtlasDeep: { value: new THREE.Color('#78bddb') },
+    uAtlasMiddle: { value: new THREE.Color('#9acfe3') },
+    uAtlasShallow: { value: new THREE.Color('#bcebe5') },
     uAtlasIslands: { value: ISLANDS.map(s => new THREE.Vector4(s.x, s.z, s.radius, s.seed)) },
     uAtlasLevels: { value: ISLANDS.map(() => 1) },
   };
-  const material = new THREE.MeshStandardMaterial({ color: '#0a3c55', metalness: .38, roughness: .24 });
+  const material = new THREE.MeshStandardMaterial({ color: '#ffffff', metalness: .06, roughness: .48 });
   material.onBeforeCompile = shader => {
     Object.assign(shader.uniforms, uniforms);
     shader.vertexShader = 'varying vec3 vAtlasWorld;\n' + shader.vertexShader;
@@ -177,6 +180,9 @@ export function createOcean() {
     shader.fragmentShader = `
       varying vec3 vAtlasWorld;
       uniform float uAtlasTime;
+      uniform vec3 uAtlasDeep;
+      uniform vec3 uAtlasMiddle;
+      uniform vec3 uAtlasShallow;
       uniform vec4 uAtlasIslands[11];
       uniform float uAtlasLevels[11];
       float atlasHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
@@ -196,7 +202,7 @@ export function createOcean() {
       }
       float swell = atlasFbm(seaP*1.3 + vec2(uAtlasTime*.019, -uAtlasTime*.015));
       float caustic = atlasFbm(seaP*9. + vec2(uAtlasTime*.08,uAtlasTime*.06));
-      vec3 deep = vec3(.006,.027,.052), middle=vec3(.008,.035,.062), shallow=vec3(.025,.30,.32);
+      vec3 deep = uAtlasDeep, middle = uAtlasMiddle, shallow = uAtlasShallow;
       diffuseColor.rgb = mix(deep,middle,swell*.4);
       diffuseColor.rgb = mix(diffuseColor.rgb,shallow,shelf*.69);
       float foam = (1.-smoothstep(.025,.17 + sin(uAtlasTime*.8+swell*3.)*.035,shore)) * (.40+.60*caustic);
@@ -204,7 +210,7 @@ export function createOcean() {
       diffuseColor.rgb += vec3(.018,.04,.04)*smoothstep(.58,.82,caustic)*shelf;
       vec2 sunspot = (seaP - vec2(-13.,-11.)) / vec2(9.,15.);
       float glint = pow(.5+.5*sin(seaP.x*43.+seaP.y*21.+atlasFbm(seaP*1.3)*5.+uAtlasTime*.5),12.)*smoothstep(.52,.75,atlasNoise(seaP*15.));
-      diffuseColor.rgb += vec3(.4,.36,.24)*exp(-dot(sunspot,sunspot))*glint*.24;
+      diffuseColor.rgb += vec3(.4,.36,.24)*exp(-dot(sunspot,sunspot))*glint*.07;
     `);
     shader.fragmentShader = shader.fragmentShader.replace('#include <normal_fragment_maps>', `
       #include <normal_fragment_maps>

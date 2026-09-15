@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.220';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.221';
 
 const COPY = {
   en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
@@ -22,7 +22,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   let rotationEnabled = !reducedQuery.matches, interacting = false, resumeRotationAt = 0;
   const rotationButton = root.querySelector('#spatialRotation');
   const mobile = matchMedia('(max-width: 760px)').matches;
-  const scene = new THREE.Scene(); scene.background = new THREE.Color('#061926'); scene.fog = new THREE.FogExp2('#071b2b', .010);
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#b9e4f1'); scene.fog = new THREE.FogExp2('#b9e4f1', .004);
   const camera = new THREE.OrthographicCamera(-18, 18, 13, -13, .1, 180);
   const homePosition = new THREE.Vector3(0, 23, 29), homeTarget = new THREE.Vector3(0, 0, 1.0);
   camera.position.copy(homePosition);
@@ -239,7 +239,13 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       }
       terrainSignature = signature;
     }
-    renderer.toneMappingExposure = state.theme === 'dark' ? 1.02 : 1.23;
+    const dark = state.theme === 'dark';
+    scene.background.set(dark ? '#142d3d' : '#b9e4f1');
+    scene.fog.color.copy(scene.background);
+    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#78bddb');
+    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#9acfe3');
+    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#bcebe5');
+    renderer.toneMappingExposure = dark ? 1.02 : 1.23;
     paintDetails(); paintRotation(); root.dataset.mode = preview ? 'atlas' : 'journey';
     invalidate();
   }
