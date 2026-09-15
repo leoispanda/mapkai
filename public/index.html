@@ -63,7 +63,9 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.215" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.219" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.219" />
+    <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
   <body>
     <header class="topbar" aria-label="Primary navigation">
@@ -516,7 +518,30 @@
         </div>
       </section>
 
-      <section class="page map-page" id="map" data-page="/map">
+      <section class="page map-page spatial-atlas" id="map" data-page="/map">
+        <div id="spatialAtlas" class="spatial-shell">
+          <aside class="spatial-sidebar" aria-label="Knowledge fields">
+            <div class="spatial-side-heading"><h1 data-spatial-text="title">Knowledge map</h1><p data-spatial-text="sideCopy">A new perspective starts here.</p></div>
+            <div class="spatial-modes" aria-label="Map view">
+              <button type="button" data-spatial-mode="atlas" aria-pressed="true" data-spatial-text="full">Full atlas</button>
+              <button type="button" data-spatial-mode="journey" aria-pressed="false" data-spatial-text="journey">My journey</button>
+            </div>
+            <nav class="spatial-fields" id="spatialFields" aria-label="Select a knowledge island"></nav>
+            <div class="spatial-side-bottom"><p id="spatialProgress"></p><a class="spatial-primary" href="/map-challenge" data-route="/map-challenge"><span data-spatial-text="start">Start exploring</span><span aria-hidden="true">↗</span></a></div>
+          </aside>
+          <div class="spatial-world" id="spatialWorld">
+            <div class="spatial-scene" id="spatialScene"></div>
+            <div class="spatial-labels" id="spatialLabels"></div>
+            <div class="spatial-headline"><h2 data-spatial-text="headline">A world of knowledge.</h2><p data-spatial-text="subhead">Follow your curiosity. Find your next island.</p></div>
+            <button class="spatial-reset" type="button" id="spatialReset"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.9 7a6.3 6.3 0 1 0 .1 5M16 3.5V7h-3.5"/></svg><span data-spatial-text="reset">Reset view</span></button>
+            <div class="spatial-loading" id="spatialLoading" role="status"><span></span><p data-spatial-text="loading">Preparing your world…</p></div>
+            <div class="spatial-detail" id="spatialDetail" hidden aria-live="polite"></div>
+            <div class="spatial-orientation" aria-hidden="true"><span>N</span><svg id="spatialCompass" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25"/><path d="M30 12L39 43L30 35L21 43Z"/></svg></div>
+            <div class="spatial-zoom"><button type="button" id="spatialZoomIn" aria-label="Zoom in">+</button><button type="button" id="spatialZoomOut" aria-label="Zoom out">−</button></div>
+            <div class="spatial-caption"><span id="spatialModeNote" data-spatial-text="preview">Full atlas preview</span><button type="button" id="spatialRotation" class="spatial-rotation" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4v8M10 4v8"/></svg><span>Auto-rotate</span></button><p data-spatial-text="help">Drag to orbit · Scroll to zoom · Select an island</p></div>
+          </div>
+        </div>
+        <div id="legacyAtlas" hidden>
         <div class="split-layout">
           <section class="intro-copy">
             <p class="eyebrow">Knowledge Map</p>
@@ -524,22 +549,17 @@
             <p>
               Answer questions. Watch open water turn into islands, then into oases.
             </p>
-            <div class="map-how-panel" aria-label="Map states">
-              <h2>Map states</h2>
-              <ol>
-                <li><strong>Open water</strong> Unknown</li>
-                <li><strong>Bare sand</strong> Emerging</li>
-                <li><strong>Grass and trees</strong> Familiar</li>
-                <li><strong>Oasis</strong> Active</li>
-              </ol>
-            </div>
             <div class="hero-actions">
               <a class="button primary" href="/map-challenge" data-route="/map-challenge">Start Map Challenge</a>
               <a class="button secondary" href="/explore" data-route="/explore">Try Lens Explore</a>
               <a class="button secondary" href="/categories" data-route="/categories">Browse Fields</a>
             </div>
           </section>
-          <section class="map-stage" aria-label="Cartoon knowledge map">
+          <section class="map-stage" aria-label="Knowledge atlas">
+            <div class="atlas-toolbar">
+              <div class="atlas-edition"><span class="atlas-symbol" aria-hidden="true">✳</span><span data-i18n="atlasEdition">THE KNOWLEDGE ATLAS</span><span class="atlas-edition-number">/ 01</span></div>
+              <div class="atlas-view"><span id="atlasMode"></span><button type="button" class="map-preview" id="mapPreview">Show my map</button></div>
+            </div>
             <div class="map-viewport" id="mapViewport">
               <canvas id="knowledgeWater" width="1100" height="619" aria-hidden="true"></canvas>
               <canvas id="knowledgeCanvas" width="1100" height="619" tabindex="0" role="application" aria-label="Knowledge map. Arrow keys move between islands, Enter opens one."></canvas>
@@ -554,20 +574,26 @@
                   <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M7.4 4.4H4.4v3M12.6 4.4h3v3M12.6 15.6h3v-3M7.4 15.6h-3v-3"/></svg>
                 </button>
               </div>
-              <button type="button" class="map-preview" id="mapPreview">Show the finished map</button>
-              <p class="map-preview-note" id="mapPreviewNote" hidden>Preview &mdash; this is the map fully explored. Your own starts at open water.</p>
               <div class="map-tip" id="mapTip" aria-hidden="true"></div>
               <p class="map-scroll-hint" aria-hidden="true">Hold &#8984; or Ctrl and scroll to zoom</p>
               <div class="map-focus-card" id="mapFocusCard" aria-live="polite" hidden></div>
             </div>
+            <div class="atlas-map-footer">
             <div class="map-legend">
               <span><i class="ocean"></i> Unknown</span>
               <span><i class="snow"></i> Emerging</span>
               <span><i class="pilot"></i> Familiar</span>
               <span><i class="ready"></i> Active</span>
             </div>
-            <p class="map-hint" id="mapHint">Click an island &middot; drag to pan &middot; scroll to zoom</p>
+            <p class="map-hint" id="mapHint">Click an island · drag to pan · ⌘ / Ctrl + scroll to zoom</p>
+            </div>
+            <p class="map-preview-note" id="mapPreviewNote" hidden></p>
           </section>
+          <section class="atlas-directory" aria-labelledby="atlasDirectoryTitle">
+            <div class="atlas-directory-heading"><h2 id="atlasDirectoryTitle" data-i18n="atlasDirectory">Find your next horizon</h2><p id="atlasProgress"></p></div>
+            <div class="atlas-fields" id="atlasFields"></div>
+          </section>
+        </div>
         </div>
       </section>
 
@@ -699,10 +725,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.215"></script>
-    <script src="/content/management-column.js?v=0.1.215"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.215"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.215"></script>
-    <script src="/script.js?v=0.1.215"></script>
+    <script src="/content/field-fables.js?v=0.1.219"></script>
+    <script src="/content/management-column.js?v=0.1.219"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.219"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.219"></script>
+    <script src="/script.js?v=0.1.219"></script>
   </body>
 </html>

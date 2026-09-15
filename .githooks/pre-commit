@@ -2,4 +2,4 @@
 set -eu
 
 node scripts/update-asset-version.js
-git add version.json index.html public/index.html script.js public/script.js public/learning/corporate-finance public/zh/learning/corporate-finance
+git add version.json index.html public/index.html script.js public/script.js map3d.js public/map3d.js public/learning/corporate-finance public/zh/learning/corporate-finance

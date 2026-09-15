@@ -1,7 +1,8 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const repoRoot = resolve(new URL("..", import.meta.url).pathname);
+const repoRoot = fileURLToPath(new URL("..", import.meta.url));
 const htmlFiles = ["index.html", "public/index.html"].map((file) => resolve(repoRoot, file));
 const courseHtmlFiles = [
   "public/learning/corporate-finance/index.html",
@@ -19,7 +20,7 @@ const courseHtmlFiles = [
   "public/zh/learning/corporate-finance/day-5/index.html",
   "public/zh/learning/corporate-finance/completed/index.html",
 ].map((file) => resolve(repoRoot, file));
-const scriptFiles = ["script.js", "public/script.js"].map((file) => resolve(repoRoot, file));
+const scriptFiles = ["script.js", "public/script.js", "map3d.js", "public/map3d.js"].map((file) => resolve(repoRoot, file));
 const versionPath = resolve(repoRoot, "version.json");
 
 function getNextVersion() {
@@ -36,13 +37,14 @@ function getNextVersion() {
 
 function updateAssetReferences(html, version) {
   return html.replace(
-    /\b(href|src)=(["'])(\/?)(styles\.css|script\.js|finance-course\.js|content\/(?:field-fables|management-column|management-lesson-stories|management-lesson-references)\.js)(?:\?v=[^"']*)?\2/g,
+    /\b(href|src)=(["'])(\/?)(styles\.css|map3d\.css|script\.js|finance-course\.js|content\/(?:field-fables|management-column|management-lesson-stories|management-lesson-references)\.js)(?:\?v=[^"']*)?\2/g,
     (_match, attribute, quote, slash, asset) => `${attribute}=${quote}${slash}${asset}?v=${version}${quote}`,
   );
 }
 
 function updateScriptVersion(script, version) {
-  return script.replace(/\bconst appVersion = ["'][^"']*["'];/, `const appVersion = "${version}";`);
+  return script.replace(/\bconst appVersion = ["'][^"']*["'];/, `const appVersion = "${version}";`)
+    .replace(/((?:\/|\.\/)map3d(?:-terrain)?\.js)\?v=[^"']*/g, `$1?v=${version}`);
 }
 
 const version = getNextVersion();

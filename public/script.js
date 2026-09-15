@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.215";
+const appVersion = "0.1.219";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -341,9 +341,11 @@ const uiText = {
     whyK: "for knowledge.",
     whyAI: "as a tool to organize, connect, and expand what we learn.",
     whyP4: "MapKAI is about transforming scattered knowledge into a structured learning journey, from unknown ocean to explored land.",
-    mapEyebrow: "Knowledge Map",
-    mapTitle: "Your knowledge map.",
-    mapCopy: "Answer questions. Watch open water turn into islands, then into oases.",
+    mapEyebrow: "A living atlas of knowledge",
+    atlasEdition: "THE KNOWLEDGE ATLAS",
+    atlasDirectory: "Find your next horizon",
+    mapTitle: "A world worth exploring.",
+    mapCopy: "Every question reveals new ground. Discover the connections across eleven fields of knowledge.",
     mapStatesTitle: "Map states",
     mapStateOcean: "Water Unknown",
     mapStateSnow: "Sand Emerging",
@@ -356,10 +358,10 @@ const uiText = {
     mapResetView: "Whole map",
     mapCanvasLabel: "Knowledge map. Arrow keys move between islands, Enter opens one.",
     mapScrollHint: "Hold \u2318 or Ctrl and scroll to zoom",
-    mapHint: "Click an island \u00b7 drag to pan \u00b7 scroll to zoom",
-    mapPreviewShow: "Show the finished map",
-    mapPreviewHide: "Show my map",
-    mapPreviewNote: "Preview \u2014 this is the map fully explored. Your own starts at open water.",
+    mapHint: "Drag to explore · ⌘ / Ctrl + scroll to zoom",
+    mapPreviewShow: "View full atlas",
+    mapPreviewHide: "View my journey",
+    mapPreviewNote: "Full atlas preview · Your personal progress is shown in My journey.",
     goCategories: "Continue Exploring",
     goLearning: "Browse Fields",
     quickMirrorTitle: "Quick Mirror",
@@ -819,9 +821,11 @@ const uiText = {
     whyK: "代表 knowledge，知识。",
     whyAI: "作为工具，帮助我们整理、连接并扩展所学。",
     whyP4: "MapKAI 不只是收集信息，而是把零散知识整理成一段结构清楚的学习旅程，从未探索的知识海洋走向能够解释的陆地。",
-    mapEyebrow: "知识地图",
-    mapTitle: "你的知识地图。",
-    mapCopy: "回答问题，看汪洋浮出岛屿，再长成绿洲。",
+    mapEyebrow: "MAPKAI · 生长中的知识图景",
+    atlasEdition: "知识典藏地图",
+    atlasDirectory: "下一站，从好奇开始",
+    mapTitle: "让知识，自成天地。",
+    mapCopy: "每一个问题，都让未知成为新的陆地。在十一片知识领域之间，发现理解世界的新路径。",
     mapStatesTitle: "地图状态",
     mapStateOcean: "汪洋 未知",
     mapStateSnow: "荒沙 初现",
@@ -834,10 +838,10 @@ const uiText = {
     mapResetView: "回到全图",
     mapCanvasLabel: "知识地图。方向键在岛屿之间移动，回车进入。",
     mapScrollHint: "按住 \u2318 或 Ctrl 滚动即可缩放",
-    mapHint: "点击岛屿 \u00b7 拖动平移 \u00b7 滚轮缩放",
-    mapPreviewShow: "看完整绿洲的样子",
-    mapPreviewHide: "回到我的地图",
-    mapPreviewNote: "预览 \u2014 这是完全探索后的样子。你自己的地图从汪洋开始。",
+    mapHint: "拖动探索 · ⌘ / Ctrl + 滚轮缩放",
+    mapPreviewShow: "浏览完整地图",
+    mapPreviewHide: "查看我的探索",
+    mapPreviewNote: "完整地图预览 · 个人探索进度请切换至「我的探索」查看。",
     goCategories: "继续探索",
     goLearning: "浏览领域",
     quickMirrorTitle: "30秒思维镜像",
@@ -1271,36 +1275,36 @@ const mapIslandLabels = {
 };
 const mapPalettes = {
   light: {
-    seaDeep: "#0E6E8C", seaMid: "#2A9DB8", seaShallow: "#6FCADB", seaShore: "#A9E6EE",
-    foam: "#FCFFFE", sun: "#FFD98A",
-    sandLit: "#F7E2B4", sand: "#EBCB8E", sandShade: "#D3A96C",
-    grassLit: "#90C971", grass: "#63A755", canopy: "#2F6739", canopyLit: "#8ACB6C",
-    pool: "#58D6C8", poolLit: "#A8F2E7", bloomA: "#F7A072", bloomB: "#FFD371",
-    roof: "#D9714E", wall: "#FBEBCE",
-    plate: "#FFFBF2", plateEdge: "rgba(120, 88, 48, 0.18)",
-    ink: "#3A2E20", inkSoft: "rgba(58, 46, 32, 0.42)",
-    shade: "rgba(41, 60, 62, 0.22)", accent: "#E08A3C",
-    vignette: "rgba(20, 60, 70, 0.22)", grain: 0.03, grainTone: 60,
-    shoal: "#CFEDDF", wetSand: "#DCBB84", scrub: "#B8C583",
-    forest: "#3C7A45", forestDeep: "#255536",
-    rock: "#A79781", rockLit: "#C6B79E", peak: "#F2EFE6",
-    contour: "#4A3A24", coastLine: "#33463F",
+    seaDeep: "#BCD1CE", seaMid: "#C9DCDA", seaShallow: "#D9E5DC", seaShore: "#EDF0DC",
+    foam: "#F8F5E9", sun: "#F3E9D0",
+    sandLit: "#EFE8CF", sand: "#DDD1AA", sandShade: "#B9AD86",
+    grassLit: "#CCD2AE", grass: "#A8BB98", canopy: "#546F5C", canopyLit: "#AFC49C",
+    pool: "#7FAFAB", poolLit: "#CADFD4", bloomA: "#BA8D69", bloomB: "#DCC28B",
+    roof: "#9B7657", wall: "#F0E7CF",
+    plate: "#F8F5E9", plateEdge: "rgba(54, 80, 69, 0.2)",
+    ink: "#263F38", inkSoft: "#536E68",
+    shade: "rgba(32, 57, 45, 0.15)", accent: "#987347",
+    vignette: "rgba(57, 87, 77, 0.07)", grain: 0.022, grainTone: 68,
+    shoal: "#D8E5DA", wetSand: "#C9C6A0", scrub: "#D2D4AF",
+    forest: "#899F80", forestDeep: "#6C876E",
+    rock: "#B5B49C", rockLit: "#D8D3BC", peak: "#F4EFDF",
+    contour: "#586B52", coastLine: "#7A927B",
   },
   dark: {
-    seaDeep: "#0A3348", seaMid: "#14506A", seaShallow: "#257F9B", seaShore: "#3AA3BC",
-    foam: "#BFE9F2", sun: "#F2D89B",
-    sandLit: "#CDA870", sand: "#B08F5E", sandShade: "#7A6440",
-    grassLit: "#6BA45E", grass: "#4A8449", canopy: "#1E3D2A", canopyLit: "#69A25B",
-    pool: "#45C4B8", poolLit: "#8CE6DC", bloomA: "#E08A6A", bloomB: "#EBC069",
-    roof: "#A9503A", wall: "#D8BE92",
-    plate: "#182636", plateEdge: "rgba(180, 205, 230, 0.18)",
-    ink: "#EFE3CE", inkSoft: "rgba(239, 227, 206, 0.40)",
-    shade: "rgba(0, 12, 20, 0.42)", accent: "#F0B45E",
-    vignette: "rgba(3, 18, 30, 0.34)", grain: 0.045, grainTone: 255,
-    shoal: "#5E9FA6", wetSand: "#9A7C51", scrub: "#8A9663",
-    forest: "#2C5A36", forestDeep: "#16351F",
-    rock: "#786B59", rockLit: "#9A8B74", peak: "#D6D2C6",
-    contour: "#0A1412", coastLine: "#07171C",
+    seaDeep: "#142D36", seaMid: "#1D3D46", seaShallow: "#365B5D", seaShore: "#6D8980",
+    foam: "#AEC1B0", sun: "#D1B583",
+    sandLit: "#B7AA83", sand: "#998F6D", sandShade: "#746E52",
+    grassLit: "#8E9F82", grass: "#6B866F", canopy: "#344F45", canopyLit: "#95A888",
+    pool: "#547F7A", poolLit: "#93B3A4", bloomA: "#B59373", bloomB: "#C5AD77",
+    roof: "#9E7D58", wall: "#CEBD94",
+    plate: "#172F35", plateEdge: "rgba(191, 200, 164, 0.2)",
+    ink: "#EEE5CD", inkSoft: "#ABBDB4",
+    shade: "rgba(3, 17, 20, 0.25)", accent: "#D2B47C",
+    vignette: "rgba(5, 19, 25, 0.2)", grain: 0.025, grainTone: 220,
+    shoal: "#527B75", wetSand: "#8E9679", scrub: "#9DAB89",
+    forest: "#506D59", forestDeep: "#3B574B",
+    rock: "#8C8D7B", rockLit: "#B3AE97", peak: "#DAD6BF",
+    contour: "#253C33", coastLine: "#728C76",
   },
 };
 
@@ -14980,6 +14984,7 @@ function setLanguage(language) {
   currentLanguage = language;
   localStorage.setItem(languageKey, language);
   applyLanguage();
+  drawKnowledgeMap();
 }
 
 function updateNavMenuState() {
@@ -15113,12 +15118,8 @@ function applyLanguage() {
   setText("#mapChallenge .stories-hero h1", t("mapChallengeTitle"));
   setText("#mapChallenge .stories-hero p:not(.eyebrow)", t("mapChallengeCopy"));
   setAllText("#mapChallenge .stories-hero .button", [t("mapChallengeViewMap"), t("mapLensAction")]);
-  const legendItems = [
-    ["ocean", getMasteryLabel("ocean")],
-    ["snow", getMasteryLabel("snow")],
-    ["pilot", getMasteryLabel("land")],
-    ["ready", getMasteryLabel("green")],
-  ];
+  const legendNames = currentLanguage === "zh" ? ["未探索", "初现", "熟悉", "活跃"] : ["Unexplored", "Emerging", "Familiar", "Active"];
+  const legendItems = ["ocean", "snow", "pilot", "ready"].map((state, index) => [state, legendNames[index]]);
   document.querySelectorAll(".map-legend span").forEach((target, index) => {
     const [className, label] = legendItems[index];
     target.innerHTML = `<i class="${className}"></i> ${label}`;
@@ -18137,40 +18138,77 @@ function mapBoat(context, palette, time) {
 function drawMapPlate(context, code, level, palette, fx, offsetY) {
   const placement = mapIslandPlacements[code];
   if (!placement) return;
-  const labels = mapIslandLabels[code];
-  const label = labels ? labels[currentLanguage === "zh" ? "zh" : "en"] : getSubjectTitle(code);
+  const label = mapIslandLabels[code]?.[currentLanguage === "zh" ? "zh" : "en"];
   if (!label) return;
   const appear = fx ? mapClamp(fx.appear * 1.4, 0, 1) : 1;
-  if (appear <= 0.02) return;
   const focus = fx ? Math.max(fx.lift, fx.focus) : 0;
-  const anchorY = placement.y + placement.r * (level === "ocean" ? 0.8 : 0.98) + 18 + (offsetY || 0) * 0.55;
-
   context.save();
   context.globalAlpha = appear;
-  context.translate(placement.x, anchorY);
-  // a name plate is a label, not scenery: it keeps one size however far you zoom
+  context.translate(placement.x, placement.y + 27);
   context.scale(1 / mapCamera.zoom, 1 / mapCamera.zoom);
-  context.translate(0, -focus * 3);
-  context.font = `600 ${currentLanguage === "zh" ? 15 : 14}px "Inter", "PingFang SC", system-ui, sans-serif`;
-  const textWidth = context.measureText(label).width;
-  const plateWidth = textWidth + 22;
-  const plateHeight = 26;
-
-  mapSoftShadow(context, 10 + focus * 10, 4 + focus * 3, palette.shade);
-  context.fillStyle = palette.plate;
-  roundRect(context, -plateWidth / 2, -plateHeight / 2, plateWidth, plateHeight, 13);
-  context.fill();
-  mapClearShadow(context);
-  context.strokeStyle = focus > 0.03 ? palette.accent : palette.plateEdge;
-  context.lineWidth = 1 + focus * 0.6;
-  context.globalAlpha = appear * (focus > 0.03 ? 0.3 + focus * 0.7 : 1);
-  context.stroke();
-
-  context.globalAlpha = appear;
-  context.fillStyle = level === "ocean" && focus < 0.35 ? palette.inkSoft : palette.ink;
   context.textAlign = "center";
   context.textBaseline = "middle";
-  context.fillText(label, 0, 1);
+  context.font = `500 ${currentLanguage === "zh" ? 18 : 19}px Georgia, "Songti SC", "Noto Serif CJK SC", serif`;
+  context.lineJoin = "round";
+  context.strokeStyle = palette.plate;
+  context.lineWidth = 5;
+  context.strokeText(label, 0, 0);
+  context.fillStyle = palette.ink;
+  context.fillText(label, 0, 0);
+  context.beginPath();
+  context.arc(0, -22, focus > 0.1 ? 5 : 3.5, 0, Math.PI * 2);
+  context.fillStyle = focus > 0.1 ? palette.accent : palette.ink;
+  context.fill();
+  context.strokeStyle = palette.plate;
+  context.lineWidth = 1.8;
+  context.stroke();
+  // An outlined marker represents unexplored water, independently of colour.
+  if (level === "ocean") {
+    context.beginPath(); context.arc(0, -22, 1.8, 0, Math.PI * 2);
+    context.fillStyle = palette.plate; context.fill();
+  }
+  context.restore();
+}
+
+// Survey grid and compass belong to the map's design space and follow its camera.
+function mapDrawAtlasGrid(context, palette) {
+  context.save();
+  context.strokeStyle = palette.ink;
+  context.globalAlpha = 0.07;
+  context.lineWidth = 0.65;
+  for (let x = 50; x < mapDesignWidth; x += 100) {
+    context.beginPath(); context.moveTo(x, 0); context.lineTo(x, mapDesignHeight); context.stroke();
+  }
+  for (let y = 50; y < mapDesignHeight; y += 100) {
+    context.beginPath(); context.moveTo(0, y); context.lineTo(mapDesignWidth, y); context.stroke();
+  }
+  context.restore();
+}
+
+function mapDrawAtlasMarginalia(context, palette) {
+  context.save();
+  context.fillStyle = palette.ink;
+  context.globalAlpha = 0.52;
+  context.textAlign = "center";
+  context.font = 'italic 21px Georgia, "Songti SC", serif';
+  context.fillText(currentLanguage === "zh" ? "未知之海" : "The Uncharted Sea", 882, 390);
+  context.font = '10px system-ui, sans-serif';
+  context.fillText(currentLanguage === "zh" ? "让好奇心，指引下一段旅程" : "LET CURIOSITY BE YOUR COMPASS", 882, 417);
+  context.translate(895, 505);
+  context.strokeStyle = palette.ink;
+  context.lineWidth = 0.7;
+  for (const radius of [26, 31]) {
+    context.beginPath(); context.arc(0, 0, radius, 0, Math.PI * 2); context.stroke();
+  }
+  for (let i = 0; i < 8; i++) {
+    context.save(); context.rotate(i * Math.PI / 4);
+    context.beginPath(); context.moveTo(0, -38); context.lineTo(5, 0); context.lineTo(0, 8); context.lineTo(-5, 0); context.closePath();
+    if (i % 2 === 0) context.fill(); else context.stroke();
+    context.restore();
+  }
+  context.font = '10px Georgia, serif';
+  context.fillText("N", 0, -47); context.fillText("S", 0, 56);
+  context.fillText("W", -48, 4); context.fillText("E", 48, 4);
   context.restore();
 }
 
@@ -18259,7 +18297,18 @@ function mapSetPreview(enabled) {
 function mapUpdatePreviewControl() {
   const button = document.getElementById("mapPreview");
   const note = document.getElementById("mapPreviewNote");
-  if (button) button.textContent = mapPreviewMode ? t("mapPreviewHide") : t("mapPreviewShow");
+  if (button) {
+    button.textContent = mapPreviewMode ? t("mapPreviewHide") : t("mapPreviewShow");
+    button.setAttribute("aria-pressed", String(mapPreviewMode));
+  }
+  const zh = currentLanguage === "zh";
+  const mode = document.getElementById("atlasMode");
+  if (mode) mode.textContent = mapPreviewMode ? (zh ? "完整图景" : "FULL ATLAS") : (zh ? "我的探索" : "MY JOURNEY");
+  const progress = document.getElementById("atlasProgress");
+  const explored = mapCodes().filter((code) => mapLevelOf(code) !== "ocean").length;
+  if (progress) progress.textContent = zh ? `已探索 ${explored} / ${mapCodes().length} 个领域` : `${explored} of ${mapCodes().length} fields explored`;
+  const directory = document.getElementById("atlasFields");
+  if (directory) directory.innerHTML = mapCodes().map((code) => `<button type="button" data-atlas-field="${code}" aria-pressed="${mapSelected === code}"><span>${code}</span>${escapeHtml(mapIslandLabels[code][zh ? "zh" : "en"])}<span aria-hidden="true">↗</span></button>`).join("");
   if (note) {
     note.textContent = t("mapPreviewNote");
     note.hidden = !mapPreviewMode;
@@ -18576,12 +18625,12 @@ const mapContinentPixelsPerUnit = 1.25;
 let mapContinentCanvas = null;
 let mapContinentCtx = null;
 let mapContinentScratch = null;
-const mapContinentBands = 9;
+const mapContinentBands = 14;
 
 function mapContinentDetail(x, y, height) {
   if (height <= 0.02) return height;
   const grain = mapFbm2(x * 0.075 + 2.3, y * 0.075 + 6.1, 0x2f5d, 2) - 0.5;
-  return height + grain * 0.055 * mapSmoothStep(0, 0.22, height);
+  return height + grain * 0.016 * mapSmoothStep(0, 0.22, height);
 }
 
 /**
@@ -18615,7 +18664,7 @@ function mapRenderContinent(palette, dirty) {
   const wooded = mapTerrainRamp("wooded", palette);
   const lushRamp = mapTerrainRamp("lush", palette);
   const contour = mapRgb(palette.contour);
-  const contourAlpha = currentTheme === "dark" ? 0.34 : 0.32;
+  const contourAlpha = currentTheme === "dark" ? 0.22 : 0.19;
   const coastInk = mapRgb(palette.coastLine);
   const lakeDeep = mapRgb(palette.pool);
   const lakeLit = mapRgb(palette.poolLit);
@@ -18696,7 +18745,7 @@ function mapRenderContinent(palette, dirty) {
       const normalY = -slopeY * 62;
       const length = Math.sqrt(normalX * normalX + normalY * normalY + 1);
       const lambert = (normalX * -0.62 + normalY * -0.62 + 0.48) / length;
-      const shade = mapClamp(0.62 + lambert * 0.72, 0.42, 1.32);
+      const shade = mapClamp(0.89 + lambert * 0.24, 0.78, 1.10);
       const lit = 1 + (shade - 1) * (1 - lakeHere * 0.85);
       red *= lit;
       green *= lit;
@@ -18874,7 +18923,7 @@ function mapSettlementPlots(code) {
   return plots;
 }
 
-const mapSettlementCount = { ocean: 0, snow: 2, land: 5, green: 9 };
+const mapSettlementCount = { ocean: 0, snow: 1, land: 2, green: 3 };
 
 /** A little building: a footprint, a wall in light, a roof toward the sun. */
 function mapDrawBuilding(context, x, y, size, palette, seed) {
@@ -18977,7 +19026,7 @@ function mapWoodland() {
   const random = mapRandom(0x1eaf);
   const trees = [];
   let attempts = 0;
-  while (trees.length < 1500 && attempts < 42000) {
+  while (trees.length < 340 && attempts < 16000) {
     attempts += 1;
     const x = random() * mapDesignWidth;
     const y = random() * mapDesignHeight;
@@ -18987,7 +19036,7 @@ function mapWoodland() {
     if (lush < 0.32) continue;
     // denser where the field is well explored, thinner as the ground rises
     if (random() > lush * (1 - (height - mapSeaLevel) / 1.1)) continue;
-    trees.push({ x, y, size: 3.8 + random() * 3, tone: random() });
+    trees.push({ x, y, size: 2.4 + random() * 1.8, tone: random() });
   }
   mapWoodCache.trees = trees;
   mapWoodCache.signature = signature;
@@ -19037,14 +19086,14 @@ function mapDrawGeography(context, palette, bounds) {
   }
 
   for (const course of mapRiverCourses) {
-    mapStrokePath(context, course, mapRiverWidth * 1.5, palette.sandWet, 0.45);
+    mapStrokePath(context, course, mapRiverWidth * 1.5, palette.wetSand, 0.45);
     mapStrokePath(context, course, mapRiverWidth * 0.8, palette.seaShallow, 0.8);
   }
 
   for (const road of mapRoadPaths) {
     if (!mapRoadOpen(road)) continue;
-    mapStrokePath(context, road.points, 7.5, palette.sandShade, 0.55);
-    mapStrokePath(context, road.points, 4.2, palette.sandLit, 0.95);
+    mapStrokePath(context, road.points, 3.4, palette.sandShade, 0.35);
+    mapStrokePath(context, road.points, 1.7, palette.sandLit, 0.9);
   }
 
   // the overlay is re-entered once per baked strip, so anything that is a long
@@ -19212,14 +19261,14 @@ void main() {
   float ripple = fbm(p * 3.05 + warp * 1.9 + vec2(uTime * 0.105, uTime * -0.068));
   float caustic = smoothstep(0.54, 0.68, ripple) * 0.6 + smoothstep(0.68, 0.79, ripple) * 0.4;
   float openness = smoothstep(0.1, 0.62, land);
-  water += uFoam * caustic * 0.15 * openness * (1.0 - uDark * 0.45);
+  water += uFoam * caustic * 0.035 * openness * (1.0 - uDark * 0.45);
 
   // the swell above lives in map space and so flattens out as you zoom in;
   // this second layer keeps its frequency near the screen, so close-up water
   // still has surface rather than turning into a gradient
   vec2 fine = p * (2.2 + uZoom * 1.5);
   float chop = fbm(fine + vec2(uTime * 0.19, uTime * -0.13));
-  water += uFoam * smoothstep(0.58, 0.78, chop) * 0.055 * (0.35 + 0.65 * openness) * (1.0 - uDark * 0.5);
+  water += uFoam * smoothstep(0.58, 0.78, chop) * 0.015 * (0.35 + 0.65 * openness) * (1.0 - uDark * 0.5);
 
   // the foam line is a moving threshold on the shore field, so the whole
   // coast laps in and out instead of sitting still
@@ -19229,7 +19278,7 @@ void main() {
 
   vec2 glintOffset = (design - vec2(215.0, 70.0)) / vec2(540.0, 320.0);
   float glint = exp(-dot(glintOffset, glintOffset) * 1.25) * (0.3 + 0.7 * smoothstep(0.5, 0.86, ripple));
-  water += uSun * glint * 0.16 * (1.0 - smoothstep(0.05, 0.6, land));
+  water += uSun * glint * 0.035 * (1.0 - smoothstep(0.05, 0.6, land));
 
   gl_FragColor = vec4(water, 1.0);
 }`;
@@ -19812,7 +19861,7 @@ function mapDrawIslands(context, palette, time) {
   const codes = mapCodes().slice().sort((left, right) => mapIslandPlacements[left].y - mapIslandPlacements[right].y);
   for (const code of codes) {
     const fx = mapFx(code);
-    const bob = reduced ? 0 : Math.sin(time * 0.00105 + fx.bob) * 1.2;
+    const bob = 0;
     drawMapPlate(context, code, mapRenderLevel(code), palette, fx, bob - fx.lift * 5);
   }
 }
@@ -19845,9 +19894,9 @@ function mapDrawFocusRing(context, palette, time) {
 
     context.globalAlpha = strength * 0.9;
     context.strokeStyle = palette.accent;
-    context.lineWidth = 2.6 / mapCamera.zoom;
+    context.lineWidth = 1.2 / mapCamera.zoom;
     context.lineCap = "round";
-    context.setLineDash([13 / mapCamera.zoom, 11 / mapCamera.zoom]);
+    context.setLineDash([]);
     context.lineDashOffset = reduced ? 0 : -time * 0.022 / mapCamera.zoom;
     context.beginPath();
     context.ellipse(0, 0, radiusX, radiusY, 0, 0, Math.PI * 2);
@@ -19917,15 +19966,15 @@ function paintKnowledgeMap(time, dt) {
     ctx.drawImage(mapBaseCanvas, 0, 0, mapDesignWidth, mapDesignHeight);
     mapRipples(ctx, palette, time);
   }
-  mapDrawWake(ctx, palette, time);
-  mapBoat(ctx, palette, time);
+  mapDrawAtlasGrid(ctx, palette);
+  mapDrawAtlasMarginalia(ctx, palette);
   mapDrawIslands(ctx, palette, time);
-  if (!mapReducedMotion()) mapDrawCloudShadows(ctx, palette, time);
+
   mapDrawBursts(ctx, palette, time);
   mapDrawFocusRing(ctx, palette, time);
   ctx.save();
   ctx.translate(mapParallax.x * 14, mapParallax.y * 8);
-  mapDrawClouds(ctx, palette, time);
+
   ctx.restore();
   if (document.body.classList.contains("founder-mode")) drawFounderMapLabels(ctx, palette);
   ctx.restore();
@@ -20076,6 +20125,7 @@ function mapOpenSubject(code) {
 }
 
 function mapSelectSubject(code, options = {}) {
+  document.querySelectorAll("[data-atlas-field]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.atlasField === code)));
   if (!code) {
     if (!mapSelected) return;
     mapSelected = null;
@@ -20320,6 +20370,14 @@ function bindKnowledgeMapPointer() {
     mapSetHover(null);
   });
 
+  const directory = document.getElementById("atlasFields");
+  if (directory) directory.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-atlas-field]");
+    if (!button) return;
+    mapSelectSubject(button.dataset.atlasField);
+    document.querySelector("#mapFocusCard .map-focus-open")?.focus({ preventScroll: true });
+    document.getElementById("mapViewport")?.scrollIntoView({ behavior: mapReducedMotion() ? "instant" : "smooth", block: "center" });
+  });
   const previewButton = document.getElementById("mapPreview");
   if (previewButton) {
     previewButton.addEventListener("click", () => mapSetPreview(!mapPreviewMode));
@@ -20394,7 +20452,42 @@ function mapStartEntrance() {
   mapCodes().forEach((code) => { mapFx(code).appear = 0; });
 }
 
+// The spatial atlas is isolated from the existing exploration/progression model.
+let spatialAtlasInstance = null;
+let spatialAtlasImport = null;
+let spatialAtlasFailed = false;
+function spatialAtlasState() {
+  return {
+    language: currentLanguage,
+    theme: currentTheme,
+    fields: mapCodes().map((code) => ({
+      code, name: mapSubjectName(code), shortName: mapIslandLabels[code][currentLanguage === "zh" ? "zh" : "en"],
+      thinking: getCategoryThinking(code), level: mapLevelOf(code), stateLabel: getMasteryLabel(mapLevelOf(code)),
+    })),
+  };
+}
 function drawKnowledgeMap() {
+  if (!document.getElementById("map")?.classList.contains("is-active")) return;
+  syncMapChallengeProgress();
+  if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
+  if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
+  if (spatialAtlasImport) return;
+  spatialAtlasImport = import("/map3d.js?v=0.1.219").then(({ createSpatialAtlas }) => {
+    spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
+      state: spatialAtlasState(),
+      onOpen(code) { mapOpenSubject(code); },
+    });
+  }).catch((error) => {
+    console.warn("Spatial atlas unavailable; using the accessible 2D map.", error);
+    spatialAtlasFailed = true;
+    document.getElementById("spatialAtlas").hidden = true;
+    document.getElementById("legacyAtlas").hidden = false;
+    document.getElementById("map").classList.remove("spatial-atlas");
+    drawLegacyKnowledgeMap();
+  });
+}
+
+function drawLegacyKnowledgeMap() {
   if (!ctx || !canvas) return;
   syncMapChallengeProgress();
   const wasPreview = mapPreviewMode;
