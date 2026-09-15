@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { readFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
+
+const root = fileURLToPath(new URL('..', import.meta.url));
+const html = readFileSync(resolve(root, 'index.html'), 'utf8');
+assert.equal(html, readFileSync(resolve(root, 'public/index.html'), 'utf8'), 'Source and deployed HTML must match');
+const maps = [...html.matchAll(/<script\b[^>]*type=["']importmap["'][^>]*>([\s\S]*?)<\/script>/g)];
+assert.equal(maps.length, 1, 'The 3D map needs one import map');
+const source = maps[0][1];
+const hash = `sha256-${createHash('sha256').update(source).digest('base64')}`;
+const headers = readFileSync(resolve(root, 'public/_headers'), 'utf8');
+const scriptPolicy = headers.match(/\bscript-src\s+([^;\n]+)/)?.[1] || '';
+assert(scriptPolicy.includes(`'${hash}'`), `Production CSP blocks the Three.js import map: missing '${hash}'`);
+assert(!scriptPolicy.includes("'unsafe-inline'"), 'Keep inline script execution restricted');
+const three = JSON.parse(source).imports.three;
+assert(three.startsWith('/assets/vendor/three/'), 'Three.js must be served locally');
+assert(existsSync(resolve(root, `public${three}`)), 'The deployed Three.js module must exist');
+console.log('Map import map is allowed by production CSP; local Three.js module exists.');
