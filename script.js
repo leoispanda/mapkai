@@ -5,7 +5,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.224";
+const appVersion = "0.1.225";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -7315,9 +7315,12 @@ function getPublicCategoryCardDisplay(category) {
   const originalTitle = getPublicCategoryTitle(category);
   const display = publicCategoryCardDisplay[currentLanguage]?.[category?.code] || null;
   if (display) {
+    const subjectTitle = display.originalTitle || originalTitle;
+    const renamedTitle = display.displayTitle || subjectTitle;
+    const separator = currentLanguage === "zh" ? "｜" : " · ";
     return {
-      originalTitle: display.originalTitle || originalTitle,
-      displayTitle: display.displayTitle || originalTitle,
+      originalTitle: subjectTitle,
+      displayTitle: renamedTitle === subjectTitle ? subjectTitle : `${subjectTitle}${separator}${renamedTitle}`,
       displayDescription: display.displayDescription || getCategoryThinking(category.code),
     };
   }
@@ -16083,15 +16086,11 @@ function renderCategories() {
       const href = `/categories/${category.code}`;
       const stats = getPublicCategoryStats(category);
       const cardDisplay = getPublicCategoryCardDisplay(category);
-      const originalMeta = currentLanguage === "zh" && cardDisplay.originalTitle !== cardDisplay.displayTitle
-        ? `<span>原分类：${escapeHtml(cardDisplay.originalTitle)}</span>`
-        : "";
       return `
         <a class="category-button" href="${href}" data-route="${href}" aria-label="${escapeHtml(t("openCategory"))} ${escapeHtml(cardDisplay.displayTitle)}">
           <strong>${escapeHtml(cardDisplay.displayTitle)}</strong>
           <span class="category-display-description">${escapeHtml(cardDisplay.displayDescription)}</span>
           <small class="category-card-meta">
-            ${originalMeta}
             <span>${stats.practicalCount} ${escapeHtml(t("detailedFields"))}</span>
           </small>
         </a>`;
@@ -20472,7 +20471,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.224").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.225").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
