@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>Running Metronome · MapKAI Toolbox</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/metronome/styles.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/toolbox/metronome/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="toolbox">
+  <audio id="background-audio" preload="metadata" loop></audio>
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="Main navigation"><a href="/toolbox/en/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/metronome/en/" lang="en" aria-current="true">EN</a><span>/</span><a href="/toolbox/metronome/" lang="zh">中文</a></div></header>
+  <main class="metronome-page">
+    <a class="back-link" href="/toolbox/en/">← Back to Toolbox</a>
+    <div class="page-heading"><div><p class="eyebrow">TOOLBOX / RUNNING</p><h1>Running Metronome</h1><p class="intro">Find your rhythm. One step at a time.</p></div><span class="heading-tag">One click, one step · Left, right</span></div>
+    <div class="metronome-layout">
+      <section class="rhythm-card" aria-label="Cadence and playback">
+        <div class="rhythm-top"><span class="session-status" id="session-status" role="status">Ready when you are</span><span class="live-mark" aria-hidden="true"><i></i> RUN YOUR RHYTHM</span></div>
+        <div class="cadence-display"><p class="cadence-label">TARGET CADENCE</p><div class="cadence-controls"><button id="decrease" class="step-button" type="button" aria-label="Decrease cadence by 1">−</button><div><output id="cadence-value" for="cadence">180</output><span class="cadence-unit">steps / minute</span></div><button id="increase" class="step-button" type="button" aria-label="Increase cadence by 1">＋</button></div><p id="cadence-description" class="cadence-description">3 steps / second · one click every 0.333 s</p></div>
+        <div class="beat-track" aria-hidden="true"><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span></div>
+        <div class="range-wrap"><label class="sr-only" for="cadence">Adjust cadence</label><input id="cadence" type="range" min="120" max="220" step="1" value="180"><div class="range-labels"><span>120</span><span>220</span></div></div>
+        <div class="presets" role="group" aria-label="Cadence presets"><button data-cadence="160" aria-pressed="false">160</button><button data-cadence="170" aria-pressed="false">170</button><button data-cadence="180" aria-pressed="true">180<span>default</span></button><button data-cadence="190" aria-pressed="false">190</button></div>
+        <button id="play" class="play-button" type="button" aria-pressed="false"><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 13 8-13 8Z"/></svg><svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg><span id="play-label">Start running</span></button>
+        <p class="play-hint" id="play-hint">Start playback, then lock your iPhone. Use its volume buttons.</p>
+        <div class="session-summary"><div><span>PLAYING TIME</span><output id="elapsed" aria-live="off">00:00</output></div><div><span>CLICKS PLAYED</span><output id="beat-count" aria-live="off">0</output></div><button id="reset" type="button" disabled>Reset</button></div>
+      </section>
+      <aside class="settings-column">
+        <section class="settings-card" aria-labelledby="sound-title"><div class="section-heading"><span class="section-number">01</span><h2 id="sound-title">Hear your rhythm</h2></div><div id="volume-controls" hidden><div class="volume-heading"><label for="volume">Volume</label><output id="volume-value" for="volume">60%</output></div><input id="volume" type="range" min="0" max="100" step="1" value="60"><p id="mute-note" class="mute-note" hidden>Sound is muted</p></div><p id="hardware-volume" class="setting-note">Use your phone’s volume buttons in lock-screen mode.</p><fieldset class="tone-field"><legend>Click sound</legend><div class="tone-options"><label><input type="radio" name="tone" value="wood" checked><span>Woodblock</span></label><label><input type="radio" name="tone" value="beep"><span>Electronic</span></label></div></fieldset></section>
+        <section class="settings-card" aria-labelledby="run-title"><div class="section-heading"><span class="section-number">02</span><h2 id="run-title">Playback mode</h2></div>
+          <fieldset class="mode-field"><legend class="sr-only">Choose playback mode</legend><label><input type="radio" name="play-mode" value="lock" checked><span><strong>Run with screen locked</strong><small>Start playback, then turn off the screen</small></span></label><label><input type="radio" name="play-mode" value="mix"><span><strong>Alongside music</strong><small>Keep other music playing; keep this page on screen</small></span></label></fieldset>
+          <p id="lock-note" class="screen-note">Lock-screen mode may pause other music apps. Open in Safari, start playback, then lock your screen. Use the lock-screen play/pause controls.</p>
+          <div id="wake-controls" hidden><label class="wake-option"><span>Keep screen on while running</span><input id="keep-awake" type="checkbox" role="switch" checked></label><p id="wake-status" class="setting-note" role="status">Will try to keep the screen on when you start</p></div><p id="mix-note" class="screen-note" hidden>When playing alongside music, locking the screen or switching apps may pause the clicks.</p>
+        </section>
+        <div class="running-note"><span class="note-line" aria-hidden="true"></span><p>Take one step with each click, alternating feet.<br>Start at 180 and adjust to your own rhythm.</p><p class="count-note">Clicks played are not measured footsteps.</p></div>
+      </aside>
+    </div>
+    <p id="error" class="metronome-error" role="alert" hidden></p>
+    <noscript><p class="metronome-error">Please enable JavaScript to use the metronome.</p></noscript>
+    <footer><span>MapKAI Toolbox / Running Metronome</span><span>Find your rhythm. Focus on the next step.</span></footer>
+  </main>
+</body>
+</html>

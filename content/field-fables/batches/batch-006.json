@@ -8,41 +8,134 @@
       "fieldCode": "0413",
       "fieldTitle": "Management and administration",
       "fieldTitleZh": "管理与行政",
-      "title": "The Mine That Filled the Road",
-      "titleZh": "把道路填满的矿井",
-      "summary": "A distant owner pays for every wagon of ore and watches the road fill while usable copper and safe ground disappear.",
-      "summaryZh": "远方矿主按出矿车数发奖，看见山路越来越满，可用铜和安全矿道却一同减少。",
-      "storyParagraphs": [
-        "Mine owner Lu lived three days from Copper Ridge and saw the workings only once a month. A smelter contract required more ore before winter, and Lu feared that a slow season would cost him the lease. He promised steward Zhao a bonus for every wagon crossing the mine mouth. Zhao needed the money to retain workers whose families were already considering another valley. He painted 'sixty wagons' on a tally board where every shift could see it.",
-        "For two months the number rose. The richer seam then narrowed, and sorting low-grade rock slowed loading. Zhao stopped sorting underground and sent everything down the mountain. The tally board looked excellent; the smelter produced no more copper. Lu asked why the contract was still short. Zhao blamed the old furnace, while the growing waste pile forced returning carts into a single muddy lane. A furnace sample from the largest wagon yielded less metal than a smaller, carefully sorted load.",
-        "To recover the count, Zhao opened rock beside the support pillars because it broke easily. A foreman marked two pillars with white chalk and warned that the roof had begun to click after blasting. Zhao postponed reinforcement until the monthly target was met. He had not been ordered to endanger anyone; he had been paid for a result that made time spent on sorting, drainage, and support look like failure.",
-        "Lu arrived during a storm and accused Zhao of cheating. Zhao placed the signed bonus rule beside the wagon log: every recorded cart had crossed the mouth, and the copper price had fallen beyond his control. Lu laid the bonus rule over the wagon log and saw that one visible number had been carrying too many hidden tasks. A fresh roof crack settled the dispute. Lu closed the productive east tunnel for a week and accepted the smelter penalty.",
-        "The new agreement used sampled copper yield, safe-tunnel records, and wagon count together. An independent surveyor visited without relying on Zhao's ledger. Bonuses no longer rose when extra waste diluted the ore, while market-price changes were shared rather than charged entirely to the steward. Zhao lost the large payout he had expected; Lu paid for new pillars and missed the winter premium. Output first fell, then usable copper began to rise.",
-        "The tally board remained at the mine mouth. Zhao planed away the words 'sixty wagons' but kept the rows of old notches. Beside each new group, the assay clerk now wrote copper recovered and pillars inspected. Rain still darkened every mark alike."
-      ],
-      "storyParagraphsZh": [
-        "矿主陆常住城里，离铜岭有三天路程，每月只能看一次矿场。冶炼厂要求入冬前增供矿石，否则他可能失去租约。陆常便答应管事赵勤：每运出一车就发一份奖金。赵勤也急需这笔钱留下准备迁往别谷的工人，于是在矿口木板上刷下“每日六十车”，让每个班次都看得见。",
-        "头两个月，车数不断上升。随后富矿脉变窄，挑掉低含量石头会拖慢装车，赵勤便取消井下分拣，所有石块一起送下山。计车板十分漂亮，冶炼出的铜却没有增加。陆常追问为何仍缺货，赵勤怪旧炉效率低；与此同时，废石堆挤占山路，返程空车只能在一条泥沟里排队。炉工抽验后还发现，最大那车炼出的金属反而少于一车认真分拣的小矿。",
-        "为了补回车数，赵勤又让人开采支柱旁容易敲落的岩块。工头用白粉笔在两根支柱上画记号，提醒每次爆破后，顶板都会发出细碎声响。赵勤把加固推迟到月底目标完成以后。他并未接到伤人的命令，只是现有奖法让分拣、排水和支护所用的时间看起来全像没有产出。",
-        "暴雨中，陆常赶到矿场，责问赵勤为何欺骗自己。赵勤把签过字的奖金条款与车册并排放下：每一车确实越过矿口，铜价下跌也不由他控制。陆常把奖金条款压在车册上，看见一个显眼数字竟替太多隐蔽工作作了主。东洞顶又落下一道新裂纹，陆常最终停洞七天，接受冶炼厂罚款。",
-        "新约定同时参考抽样铜量、安全记录和车数，独立测量员不定期入矿，不再只读赵勤的账。废石稀释矿料时，奖金不会随车数上涨；市场价格变化也由双方分担，而不是全压给管事。赵勤失去原以为稳拿的高额分成，陆常则出钱换支柱，并错过冬季加价。产量先降，随后可用铜才慢慢回升。",
-        "矿口那块木板没有被拆掉。赵勤刨去“六十车”四个字，却保留旧日一排排刻痕。此后每组新刻痕旁，化验员都会添上炼得的铜量和检查过的支柱。下雨时，新旧数字仍被同样的水迹染黑。"
-      ],
-      "conceptName": "Principal-agent problem",
-      "conceptNameZh": "委托代理问题",
-      "explanationParagraphs": [
-        "The principal–agent problem arises when a principal delegates work to an agent whose interests are not identical and whose actions or information cannot be fully observed. Contracts, monitoring, governance, reputation, and risk sharing can reduce the gap, but incomplete measures remain. Narrow incentives may displace the real objective, while excessive risk transfer can punish agents for outcomes beyond their control."
-      ],
-      "explanationParagraphsZh": [
-        "委托代理问题发生在委托人把工作交给代理人，而双方目标并不完全一致，代理人的行动或信息又无法被完整观察。合同、监督、治理、声誉与风险分担可以缓解差距，但不完备性仍会存在。狭窄指标可能替代真实目标，过度转移风险也会惩罚代理人无法控制的结果。"
-      ],
       "mode": "concept-fable",
+      "title": "The Order Has to Be Locked by Friday",
+      "summary": "The anniversary market is two weeks away. The canvas sample on Lin Yu’s desk must return to the print room on Friday; a second cannot arrive before Saturday.",
+      "storyParagraphs": [
+        "An independent bookstore plans to hand out 500 washable canvas bags at its anniversary market in two weeks. Owner Qiao Ning delegates the purchase to outside coordinator Lin Yu. The task lists budget, delivery, artwork, and washing according to the care label. Qiao Ning says to call if testing cannot fit: existing paper bags could cover the market, with canvas bags distributed later. Lin Yu’s final payment is due on delivery acceptance. Her fixed quote includes routine follow-up until then; postponement adds no payment for that work. It also includes two hours of post-delivery coordination.",
+        "Samples from three suppliers arrive on Thursday afternoon. Lin Yu prefers one whose color and stitching look right. The supplier needs it returned unchanged to the print room on Friday morning, together with a signed color sheet, for production comparison. Its arrival has left no wash-and-dry window. A second blank sample from the same batch cannot arrive before Saturday. Waiting for the test would lose the print slot, extend her scheduling work, and postpone final payment until the later delivery.",
+        "She brings Qiao Ning’s contact onto the screen, then returns to the supplier’s confirmation box. The label says washable, the sample shows no obvious problem, and approving it now will let her close the project on schedule. She confirms the order and packs the sample with its signed color sheet for return. The purchasing table Qiao Ning receives lists material, price, and expected arrival date, all within the original requirements. It has no field asking whether a sample was washed.",
+        "All 500 bags arrive on time, and the quantity, printing, and color are accepted, so Lin Yu’s final project payment is settled. Three days after the market, a regular customer brings back a washed bag: the body has shrunk enough that a large-format art book no longer fits. Qiao Ning takes an unused bag from the same batch out of storage, washes it according to the care label, lets it dry, and measures it. It shows a similar amount of shrinkage, so she pauses further distribution.",
+        "The bookstore begins arranging replacement bags and temporary paper bags, while Qiao Ning handles customer explanations. Lin Yu uses the two hours of post-delivery coordination included in the project to organize supplier correspondence, replacement addresses, and quantities; any further assistance would require newly scheduled work. The next purchasing sheet is revised so that washable fabric products require paying for a second same-batch test sample and reserving at least two days for the specified wash, drying, and dimension check before the bulk order is locked.",
+        "A month later, the new supplier sends two samples from the same batch. Lin Yu keeps one for color approval and washes and dries the other, writing the before-and-after dimensions side by side in the record. Qiao Ning signs the next order only after reviewing that dimension sheet. In the stockroom, the box of first-batch bags remains in one bay with a label reading “First batch / distribution paused.”"
+      ],
+      "overall": "The principal-agent problem arises after a task is delegated: the principal and agent may not bear the same benefits, costs, or risks, while actions that affect the outcome can be difficult for the principal to observe directly.",
+      "conceptName": "Principal-agent problem",
+      "explanationParagraphs": [
+        "Qiao Ning is willing to use paper bags while awaiting testing and values the canvas bags’ longer-term use. Original-date acceptance ends Lin Yu’s fixed-fee follow-up and releases her payment. She relies on the label without raising postponement with the owner; on-time delivery does not reveal that inspection choice.",
+        "Adding a second same-batch sample, a sample fee, and a two-day test window makes the check more verifiable, but it costs time and money and still cannot guarantee detection of every quality problem."
+      ],
+      "module": {
+        "intro": "Identify the delegated goal, the agent’s actual rewards and work costs, and which key choices cannot easily be inferred from the final delivery.",
+        "diagramTitle": "From Friday Order Lock to Post-Wash Shrinkage",
+        "diagramSteps": [
+          "Put washability, budget, and deadline into the delegated task",
+          "Let the agent choose between the print-lock deadline and a second test sample",
+          "Complete on-time acceptance while the inspection choice remains unobservable",
+          "Let the post-wash problem place different follow-up costs on the two sides",
+          "Turn the key test into a verifiable but costly step for the next order"
+        ],
+        "diagramStepNotes": [
+          "The task sheet explicitly requires the bags to be suitable for washing according to the care label.",
+          "The owner permits temporary paper bags and later canvas-bag distribution; waiting for Saturday’s test sample delays the agent’s order lock, end of follow-up, and payment milestone.",
+          "Quantity, printing, color, and delivery all pass acceptance, so the final payment is settled as agreed.",
+          "The bookstore bears replacement and customer-communication costs; Lin Yu covers only the agreed post-delivery coordination before additional work must be rescheduled.",
+          "The next order pays for a separate test sample and reserves two days for washing, drying, and measurement."
+        ],
+        "mapping": [
+          "Friday order lock → the schedule and workload pressure faced directly by the agent.",
+          "Second same-batch sample → an inspection choice allowed by the assignment but difficult to infer from the finished goods.",
+          "Acceptance-based final payment → the agent’s reward point.",
+          "Post-wash shrinkage and replacement bags → later operating costs borne mainly by the principal.",
+          "Before/after dimension sheet → a verifiable control with real time and sample costs."
+        ],
+        "boundary": "The principal-agent problem does not require fraud or bad intent, and it does not imply that principals should make every decision themselves. The risk becomes more important when delegated goals or costs differ and key actions are hard to observe. More monitoring and contract detail can reduce the problem but also consume resources and cannot specify every possible quality outcome in advance.",
+        "reflection": "When an agent has discretion to protect a deadline while long-term use costs fall mainly on the principal, which checks are worth turning into verifiable conditions, and which decisions should remain flexible?"
+      },
+      "references": [
+        {
+          "id": "jensen-meckling-1976",
+          "citation": "Jensen, M. C., & Meckling, W. H. (1976). Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure. Journal of Financial Economics, 3(4), 305–360.",
+          "url": "https://doi.org/10.1016/0304-405X(76)90026-X",
+          "use": "Supports the classic research framework on agency relationships, differing interests, and agency costs; it is not used to claim a single inventor of the concept."
+        },
+        {
+          "id": "nobel-contracts-2016",
+          "citation": "The Royal Swedish Academy of Sciences (2016). Oliver Hart and Bengt Holmström: Contract Theory. Scientific Background on the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2016.",
+          "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2016.pdf",
+          "use": "Supports the official scientific background on unobserved actions, differing interests, incentive design, and limits of risk sharing."
+        }
+      ],
+      "titleZh": "周五之前要锁单",
+      "summaryZh": "周年市集还剩两周。林屿桌上的帆布样要在周五送回印刷间，第二只样品却最快周六才能到。",
+      "storyParagraphsZh": [
+        "独立书店两周后办周年市集，要发五百只可重复清洗的帆布袋。店主乔宁把采购交给外包协调员林屿，任务单列了预算、交货日期、图案和按标签清洗的要求。她还说，测试赶不及就先打电话，市集可以暂用现有纸袋，布袋稍后补发。林屿的项目尾款按物料到货验收结清；验收前的常规跟进都含在固定报价里，延期不会增加这部分报酬，交货后另含两小时协调。",
+        "周四下午，三家供应商的样品到了。林屿选中的那只布色合适，车线也整齐。供应商要她周五早上把这只原样送回印刷间，连同签过的色样单留作生产比对；寄来的时候还没留出洗涤、晾干的时间。再要一只同批空白样，最快周六到。等测试就会错过印刷位，林屿得继续协调新的交期，尾款也要等新一批到货。",
+        "她把乔宁的联系方式翻到屏幕上，又回到供应商的确认框。标签写着可洗，手里这只也没有明显问题，按现有样锁单能让项目如期收尾。她发出确认，把样品和色样单装进回寄袋。乔宁收到的采购表列着材质、价格和预计到货日，三项都在原要求里；洗过没有，这张表没问。",
+        "五百只袋子准时到仓，数量、印刷和颜色都对，林屿的尾款随验收结清。市集后三天，一位常客带回洗过的袋子：袋身缩短，大开本画册塞不进去。乔宁从仓库另取一只未发出的同批袋，按标签程序洗涤、晾干并量尺寸，也出现相近缩幅，于是暂停继续发放。",
+        "书店开始安排替换袋和临时纸袋，乔宁处理顾客说明；林屿在约定的两小时内帮忙整理供应商往来、补发地址和数量，之后若继续协助需另排工作。下一批采购单被改成：可清洗布制品锁大货前另付一只同批测试样费用，并至少预留两天完成规定洗涤、晾干和尺寸记录。",
+        "一个月后，新供应商寄来两只同批样品。林屿把一只留作颜色确认，另一只洗完晾干，在记录上并排写下洗前、洗后尺寸。乔宁看完尺寸表才签下一批确认单；旧袋箱子仍留在仓库一格，贴着“首批／暂停发放”。"
+      ],
+      "overallZh": "委托代理问题出现在任务被授权给代理人后：委托人和代理人承担的收益、成本或风险并不完全一致，而影响结果的关键行动又难以被委托人直接观察。",
+      "conceptNameZh": "委托代理问题",
+      "explanationParagraphsZh": [
+        "乔宁愿先用纸袋等待测试，更看重可清洗布袋的长期使用；林屿按原期验收可结束固定报价内的跟进并拿尾款。她依标签判断、未向店主提出延期，而这一检查选择难从准时到货中看出。",
+        "增加第二只同批样品、样品费和两天测试窗口能使检查更可验证，但会牺牲时间与费用，也不能保证发现所有质量问题。"
+      ],
+      "moduleZh": {
+        "intro": "明确委托目标、代理人的实际收益与工作成本，以及哪些关键选择事后难从交付结果反推。",
+        "diagramTitle": "从周五锁单到洗后缩幅",
+        "diagramSteps": [
+          "把可清洗要求、预算与期限写进委托任务",
+          "代理人在锁单期限与第二只测试样之间选择",
+          "准时验收结清但检查选择仍不可见",
+          "洗后问题使双方承担不同后续代价",
+          "下一批把关键测试变成有成本的可验证步骤"
+        ],
+        "diagramStepNotes": [
+          "任务单明确要求袋子适合按标签方法清洗。",
+          "店主允许市集先用纸袋、布袋稍后补发；等周六测试样会推迟代理人的锁单、跟进结束和尾款节点。",
+          "首批数量、印刷、颜色和交期都合格，因此尾款按约定结清。",
+          "书店承担替换与顾客说明；林屿只承担约定范围内的售后协调。",
+          "下一批另付测试样费用，并预留两天洗涤、晾干和量尺寸。"
+        ],
+        "mapping": [
+          "周五锁单 → 代理人直接面对的项目工期与工作量。",
+          "第二只同批样 → 授权中可选择但难由成品反推的检查行动。",
+          "验收后结清尾款 → 代理人的收益节点。",
+          "洗后缩幅与替换袋 → 主要落在委托人一侧的后续代价。",
+          "洗前/洗后尺寸表 → 可验证但有费用和时间成本的控制。"
+        ],
+        "boundary": "委托代理问题不要求代理人造假或恶意，也不意味着店主应亲自做所有决定。关键是委托关系中的目标或代价差异与难观察行动；更多监督和合同细节能缓解问题，但本身有成本且无法预先覆盖所有质量结果。",
+        "reflection": "当代理人可以为了守住交期自行作取舍，而长期使用代价主要由委托人承担时，哪些检查值得提前写成可验证条件，哪些又应保留授权弹性？"
+      },
+      "referencesZh": [
+        {
+          "id": "jensen-meckling-1976",
+          "citation": "Jensen, M. C., & Meckling, W. H. (1976). Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure. Journal of Financial Economics, 3(4), 305–360.",
+          "url": "https://doi.org/10.1016/0304-405X(76)90026-X",
+          "use": "支持委托关系、利益差异与代理成本的经典研究框架；不宣称该文为单一概念发明来源。"
+        },
+        {
+          "id": "nobel-contracts-2016",
+          "citation": "The Royal Swedish Academy of Sciences (2016). Oliver Hart and Bengt Holmström: Contract Theory. Scientific Background on the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2016.",
+          "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2016.pdf",
+          "use": "支持未观察行动、利益差异、激励设计与风险分担限制的官方科学背景。"
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "review": "business-office-mixed-11-pdc-review.md",
+        "edits": [
+          "business-office-mixed-11-edit-pass1.json",
+          "business-office-mixed-11-edit-pass2.json",
+          "business-office-mixed-11-edit-pass3.json"
+        ]
       }
     },
     {
@@ -52,41 +145,132 @@
       "fieldCode": "0413",
       "fieldTitle": "Management and administration",
       "fieldTitleZh": "管理与行政",
-      "title": "The Gear No One Put on the Table",
-      "titleZh": "无人放上桌的齿轮",
-      "summary": "A harsh workshop meets every deadline until three apprentices hide the same crack from the morning meeting.",
-      "summaryZh": "一间严厉的作坊总能准时交货，直到三名学徒把同一道裂纹藏过晨会。",
-      "storyParagraphs": [
-        "Master Han's clockworks shop had never missed a delivery. He kept it that way by mocking questions he considered simple and making anyone who admitted a mistake redo work at the doorway where customers could watch. Soon the morning table held flawless parts and silent apprentices. Han read the silence as discipline, and a water-gate contract promised enough money to keep the shop open through winter.",
-        "Three apprentices noticed a hairline crack in the same bronze gear. The first feared stopping the expensive casting line. The second assumed the inspector before him must have accepted it. The third remembered being called brainless for questioning a spring. Each rubbed chalk across the crack, saw the dark line return, then put the gear back because the delivery cart waited outside.",
-        "During full-speed testing, the tooth split. The gear tore two smaller wheels and stopped the entire gate mechanism for two days. No one was hurt, but river barges queued beyond the lock, and the town charged the workshop for delay. Han demanded the name of whoever had known. The room became quieter. At last senior apprentice Mei placed the broken tooth on the table and said, 'Three people saw it. All three also knew what speaking here costs.' Behind them, the damaged mechanism knocked once with every current against the closed gate.",
-        "Han first installed an anonymous warning box. It filled with scraps too vague to act on: 'check the wheels,' 'something sounds wrong.' People still feared that a precise report would identify them. Han stopped blaming the anonymous scraps and changed his own response in front of the apprentices. He halted the next shipment, told the town the missed crack was his shop's failure, and surrendered the winter profit to pay the penalty.",
-        "From then on, the first quarter-hour belonged to doubts, bad parts, and unfinished judgements. A report itself could not earn ridicule or punishment; concealment, careless work, and repeated neglect still received consequences after investigation. When an apprentice placed a ground-off-centre shaft on the table, Han did not praise courage or excuse the machining error. He asked who else had seen it, stopped the batch, then assigned retraining and a second inspection.",
-        "Before the repaired gate wheels were packed, the youngest apprentice pushed another gear into the centre. The room paused. Han turned the lamp toward it, Mei fetched chalk, and three heads bent over the thin dark line. The broken tooth from the first failure remained at the edge of the table, heavy enough to keep the inspection sheet from curling."
-      ],
-      "storyParagraphsZh": [
-        "韩师傅的钟机坊从未误过交期。他靠一种严厉办法维持记录：谁问了他认为简单的问题，就会被当众嘲笑；谁承认失误，便在顾客看得见的门口返工。渐渐地，晨会桌上只剩完好零件和沉默学徒。韩师傅把这种安静当作纪律，而一份水闸机轮订单正好能让作坊撑过冬天。",
-        "三名学徒先后看见同一枚铜齿轮边缘有细裂。第一人怕停掉昂贵的铸造线，第二人以为前面的检查者已经认可，第三人还记得自己曾因质疑弹簧而被骂“没带脑子”。他们都用粉笔擦过裂处，看见黑线重新浮出，最后仍把齿轮放回去，因为交货车已经等在门外。",
-        "全速试转时，齿牙突然崩断，又撕坏两枚小轮，整套水闸装置停了两天。无人受伤，河船却堵在闸外，镇里要求作坊赔偿延误。韩师傅追问谁早就知道，屋里比往常更静。老学徒梅姐终于把断齿放上桌：“三个人都看见了，也都知道在这里说出来要付什么代价。”众人沉默时，受损机轮仍被闸外水流一下下撞响。",
-        "韩师傅先挂起匿名警示箱，箱里很快塞满无法行动的纸条：“检查齿轮”“声音不对”。精确报告仍会暴露写信者，恐惧没有消失。韩师傅没有再责怪匿名纸条，而是先在学徒面前改变自己的回应。韩师傅叫停下一批货，向镇里承认漏检属于作坊责任，并拿出原本过冬的利润支付罚款。",
-        "此后，开工前一刻钟专门摆放疑问、坏件和尚未完成的判断。报告本身不能招来羞辱或处罚；隐瞒、敷衍和重复疏忽，在查清后仍要负责。有人把一根磨偏的轴放上桌，韩师傅没有称赞勇气，也没有免掉加工错误。他先问还有谁看见，停下整批，再安排复训与第二人复检。",
-        "修好的闸轮装箱以前，最年轻的学徒又把一枚齿轮推到桌中央。屋里停了一息。韩师傅转过油灯，梅姐拿来粉笔，三个人同时俯向那道细黑线。第一次事故留下的断齿仍压在桌角，沉沉压住卷起的检查表。"
-      ],
-      "conceptName": "Psychological safety",
-      "conceptNameZh": "心理安全感",
-      "explanationParagraphs": [
-        "Psychological safety is a shared belief that interpersonal risks such as asking questions, seeking help, disagreeing, or admitting error will not predictably bring humiliation or punishment. It helps problems surface early, but does not mean comfort, consensus, low standards, or freedom from accountability. Invitations matter only when leaders' actual responses make speaking useful and reasonably safe."
-      ],
-      "explanationParagraphsZh": [
-        "心理安全感是团队共同相信，提问、求助、异议与承认错误等人际冒险不会可预期地换来羞辱或惩罚。它帮助问题更早出现，却不等于舒适、全体同意、降低标准或免于问责。邀请发言只有得到领导真实回应，才会变成可信且有用的做法。"
-      ],
       "mode": "concept-fable",
+      "title": "Leave the Yellow Cell Until It Is Checked",
+      "summary": "The catalog locks on Friday, but the side-table carton has two heights: 78 and 82. A-Heng keeps both files in his notes while the designer continues using the earlier figure.",
+      "storyParagraphs": [
+        "A home-goods company is updating its spring catalog, and five people need to hand dimensions, prices, and packaging information to the design team by Friday. Two weeks earlier, Xiao Cen said in a meeting that one lamp’s package height might still be old data. Manager Liang Xue was already leading the team through more than twenty fields, so everyone stopped to search the email trail. After more than ten minutes there was still no answer, and the designer was waiting to continue that page. As the meeting ended, a colleague said, “For something unverified like this, next time let’s check it first before bringing it in.” Liang Xue replied, “Right—let’s not take everyone’s time until we know.”",
+        "After that, uncertain items tended to stay on individual computers until someone had checked them. By version six, A-Heng sees two outer-carton heights for the same side table: an older PDF says 78 cm and a newer email attachment says 82 cm. Remembering the earlier meeting, he saves links to both files in his personal notes and plans to update the shared sheet only after purchasing responds. Xiao Cen later sees the same 82 cm attachment and privately messages him, “Did you confirm it?” She does not flag the shared sheet either.",
+        "The dimension directly affects the pallet diagram. Logistics has a net height allowance of 240 cm for the cartons themselves, with six units per layer. At 78 cm, three layers total 234 cm, so the catalog can show 18 units. At 82 cm, three layers total 246 cm, exceeding the net allowance, so only two layers and 12 units fit. Design continues using 18 units from the shared sheet, while logistics prepares a 12-unit shipping template. When the two files meet on Thursday afternoon, the pallet diagram, quantity, and related notes all need rework.",
+        "Liang Xue puts both dimension files on screen and asks when A-Heng saw the new attachment. Tuesday, he says; Xiao Cen says she saw it too. Liang Xue closes the rework list. “Last time I told you not to take everyone’s time. We’ve gone the long way around. Put both sources up, even before we have the answer.” A-Heng adds a yellow pending-verification cell beside 78, assigning Purchasing and 14:00. The designer moves to other pages rather than asking him to take the question away until it is resolved.",
+        "Xiao Cen adds the new email link to the yellow cell and asks Purchasing which packing sheet it needs. This time, her question remains where everyone can see it. At 13:30, Purchasing obtains the supplier’s formal document and confirms 82 cm. A-Heng updates the height. Another colleague checks the model and original document before clearing yellow. Design changes three layers and 18 units to two layers and 12; Logistics updates its template to match.",
+        "Before the catalog is locked on Friday, the source sheet contains only white, verified fields. When the printer produces the proof, the side-table entry reads “12 units per pallet.” The supplier packing-sheet link remains beside the 82 cm field, and the reviewer’s name appears in the final column."
+      ],
+      "overall": "Psychological safety is the shared expectation within a team about the interpersonal consequences of asking questions, admitting uncertainty, or raising disagreement. That expectation can affect whether concerns enter shared work early, while still coexisting with verification and high standards.",
+      "conceptName": "Psychological safety",
+      "explanationParagraphs": [
+        "No one is humiliated, but the accepted precedent that unverified questions consume everyone’s time makes the social cost visible. Both A-Heng and Xiao Cen later keep the same 78/82 discrepancy in private channels until rework appears.",
+        "The later response allows unresolved issues to be exposed early while preserving sources, ownership, deadlines, and a second-person check. Psychological safety changes expectations around speaking up; it does not turn unverified data into final answers."
+      ],
+      "module": {
+        "intro": "Observe the team’s shared expectation about what will happen when someone raises an early uncertainty, and whether that expectation changes when information enters shared work.",
+        "diagramTitle": "How 78/82 cm Moves from Private Notes into the Shared Sheet",
+        "diagramSteps": [
+          "Create a speaking-up precedent that the team collectively notices",
+          "Have multiple members keep a new concern in private channels",
+          "Let different functions continue with different numbers and incur rework",
+          "Change the manager’s response to early uncertainty",
+          "Publish the same dimension conflict while still requiring source confirmation and review"
+        ],
+        "diagramStepNotes": [
+          "Liang Xue endorses “check it first,” creating a perceivable social cost for bringing unverified concerns.",
+          "A-Heng keeps the 78/82 cm conflict in personal notes, while Xiao Cen uses only a private message.",
+          "With 240 cm of net carton height, 78×3 = 234 allows 18 units; 82×3 = 246 exceeds the limit, so only two layers and 12 units fit.",
+          "The manager explicitly permits pending-verification flags while still requiring sources, an owner, and a deadline.",
+          "At 13:30, Purchasing confirms 82 cm from the formal packing sheet; another person checks the model and source before clearing yellow."
+        ],
+        "mapping": [
+          "Personal notes and private messages → key uncertainty remains outside shared visibility.",
+          "240 cm net carton height → directly checkable basis for the 18-versus-12-unit difference.",
+          "Yellow pending-verification cell → permission to expose information that is not yet final.",
+          "Packing sheet + reviewer → evidence and responsibility remain after speaking up."
+        ],
+        "boundary": "Psychological safety is not the claim that every idea is correct, nor is it the same as general friendliness or a manager simply saying “please speak up.” The rework in this story establishes only this local behavior chain; professional standards, evidence, and task accountability remain separate requirements.",
+        "reflection": "If several team members keep the same kind of uncertainty in private channels, what response would help it enter shared work earlier without allowing unverified data to flow directly into final output?"
+      },
+      "references": [
+        {
+          "id": "edmondson-1999",
+          "citation": "Edmondson, A. (1999). Psychological Safety and Learning Behavior in Work Teams. Administrative Science Quarterly, 44(2), 350–383.",
+          "url": "https://doi.org/10.2307/2666999",
+          "use": "Supports the original team-level research framework linking shared interpersonal-risk beliefs with learning behavior; the association is not treated as universally deterministic."
+        },
+        {
+          "id": "edmondson-hbs-2022",
+          "citation": "Harvard Business School (2022, November 22). Leading in Tough Times: HBS Faculty member Amy C. Edmondson on Psychological Safety.",
+          "url": "https://www.hbs.edu/recruiting/guides-and-stories/leading-in-tough-times",
+          "use": "Supports the researcher’s discussion of fear of speaking up, invitation and response, and the distinction between psychological safety and accountability."
+        }
+      ],
+      "titleZh": "黄色格先别清掉",
+      "summaryZh": "目录周五锁版，边桌的外箱高度却有78和82两个数。阿衡把两份文件留在便签里，设计师那页还按原来的数字往下做。",
+      "storyParagraphsZh": [
+        "家居公司准备更新春季目录，五个人要在周五前把尺寸、价格和包装信息交给设计部。两周前，小岑在例会上说一款灯具的包装高度可能还是旧数据。经理梁雪正带大家核二十多个字段，便停下来找邮件；十几分钟后仍没答案，设计师也等着那页。散会时同事说“这种没证实的先查清再带来”，梁雪回了一句“对，先别占大家时间”。",
+        "那以后，未确定的问题通常先在个人电脑里查。到了第六版，阿衡在同一张边桌资料里看到两个外箱高度：旧PDF写78厘米，新邮件附件写82厘米。他想起上次会议，把两个文件都存到自己的便签链接里，准备等采购回复后再改共享表。小岑后来也看见82厘米附件，只私信阿衡“你查到了吗”，没有在公共表里加标记。",
+        "这张边桌每层在托盘上排6件，物流给箱体本身留的净高度是240厘米。按共享表78厘米算，三层是234厘米，可写18件；按82厘米算，三层是246厘米，超过净高度，只能排两层12件。设计部继续沿用18件做目录图，物流则按12件准备出货模板。周四下午两份文件对上时，托盘图、件数和相关说明都要返工。",
+        "梁雪把两份尺寸文件投到屏幕上，问阿衡何时见过新附件。他说周二，小岑也说自己看过。梁雪合上返工清单：“上次我让你们先别占大家时间，这回反倒绕远了。两份先一起贴上，没答案也标出来。”阿衡在78旁加了黄色待核格，填采购和14:00。设计师先挪去做别的页面，没有再让他把问题收回去查清。",
+        "小岑把新邮件链接贴进黄色格，问采购需要的是哪张装箱单。这一次，她的问题留在大家都看得见的表里。十三点三十分，采购拿到供应商正式文件，确认箱高82厘米。阿衡更新尺寸，另一位同事逐项核对型号和原文件，才清掉黄色。设计师把三层18件改成两层12件，物流也用同一数值更新模板。",
+        "周五锁版前，目录源表只剩白色已核字段。打印机吐出校样时，那张边桌旁写着“每托盘12件”；阿衡把供应商装箱单的链接留在82厘米字段旁，复核人姓名显示在最后一列。"
+      ],
+      "overallZh": "心理安全感指团队成员对提问、承认不确定或提出异议会带来什么人际后果的共同预期。共同预期会影响疑问能否尽早进入团队视野，同时可以与核验责任和高标准并存。",
+      "conceptNameZh": "心理安全感",
+      "explanationParagraphsZh": [
+        "经理和同事没有羞辱任何人，但“未证实问题会占用大家时间”的先例被共同接受，阿衡和小岑后来都把78/82差异留在私下渠道，直到返工出现。",
+        "后续回应允许先公开待核状态，同时保留来源、负责人、截止时间和第二人复核。心理安全改变发言预期，并不把未证实数据当成最终答案。"
+      ],
+      "moduleZh": {
+        "intro": "观察成员对早期疑问的共同预期，以及这种预期是否改变了信息何时进入共享工作。",
+        "diagramTitle": "78/82厘米怎样从私下便签进入共享表",
+        "diagramSteps": [
+          "形成一次团队共同接受的发言先例",
+          "多名成员把新疑问留在私下渠道",
+          "不同部门据不同数值继续工作并产生返工",
+          "经理改变对早期不确定的实际回应",
+          "同一尺寸冲突公开后仍完成来源确认与复核"
+        ],
+        "diagramStepNotes": [
+          "梁雪认可“未证实的先查清”，形成可感知的社会成本。",
+          "阿衡留个人便签，小岑只私信，没有在共享表标记。",
+          "净高度240厘米下，78×3＝234可放18件；82×3＝246超限，只能两层12件。",
+          "经理明确允许先标待核，并要求来源、负责人和截止时间。",
+          "13:30采购用正式装箱单确认82厘米；另一人核对型号和来源后才清除黄色状态。"
+        ],
+        "mapping": [
+          "个人便签和私信 → 关键不确定没有进入共同视野。",
+          "240厘米净箱体高度 → 可直接核对18件与12件的差异。",
+          "黄色待核格 → 允许公开尚未确定的信息。",
+          "装箱单＋复核人 → 发言后仍保留证据与责任。"
+        ],
+        "boundary": "心理安全不是“任何想法都正确”，也不等于单纯友好或一句邀请发言。故事中的返工只能说明这一情境下的行为链；团队标准、专业核验和任务问责仍需独立存在。",
+        "reflection": "如果多名成员都把同一类未确定信息留在私下渠道，哪些回应方式能让问题更早进入共享视野，同时避免把未经核验的数据直接用于最终输出？"
+      },
+      "referencesZh": [
+        {
+          "id": "edmondson-1999",
+          "citation": "Edmondson, A. (1999). Psychological Safety and Learning Behavior in Work Teams. Administrative Science Quarterly, 44(2), 350–383.",
+          "url": "https://doi.org/10.2307/2666999",
+          "use": "支持团队层面共同人际风险信念与学习行为关联的原始研究框架；不把关联写成普遍必然因果。"
+        },
+        {
+          "id": "edmondson-hbs-2022",
+          "citation": "Harvard Business School (2022, November 22). Leading in Tough Times: HBS Faculty member Amy C. Edmondson on Psychological Safety.",
+          "url": "https://www.hbs.edu/recruiting/guides-and-stories/leading-in-tough-times",
+          "use": "支持发言恐惧、邀请与回应，以及心理安全与问责并非同一维度的研究者访谈说明。"
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "review": "business-office-mixed-11-pdc-review.md",
+        "edits": [
+          "business-office-mixed-11-edit-pass1.json",
+          "business-office-mixed-11-edit-pass2.json",
+          "business-office-mixed-11-edit-pass3.json"
+        ]
       }
     },
     {
@@ -184,41 +368,132 @@
       "fieldCode": "0414",
       "fieldTitle": "Marketing and advertising",
       "fieldTitleZh": "市场营销与广告",
-      "title": "Two Jars with Hidden Honey",
-      "titleZh": "两罐看不见内部的蜂蜜",
-      "summary": "In a market of sealed jars, a costly winter promise separates two identical claims—until inspection tests the promise itself.",
-      "summaryZh": "密封蜜罐的市场里，一份昂贵的冬季承诺区分两句相同保证，直到检验也来审查承诺本身。",
-      "storyParagraphs": [
-        "At the harvest market, beekeeper Old He and travelling seller Fan displayed identical sealed honey jars. Both claimed the contents held no sugar water. Buyers could not inspect the whole jar and loud assurances cost either seller nothing. Fan's bright cloth covers attracted the first crowd, and Old He's plain stock remained untouched. He needed the market income to feed his hives through winter.",
-        "Old He tied a stamped contract around every neck: if the honey stayed watery after the first frost or failed the guild test, he would buy it back and provide a second jar. His long-kept hives and careful extraction made that outcome uncommon, so the promise was costly but bearable. Customers began paying slightly more. The contract did not reveal the honey; it gave Old He something to lose if his claim proved false.",
-        "Fan copied the cloth, wording, and stamp. Then he calculated what winter redemption would cost if his diluted stock sold well. He shortened the claim period to three days and hid the change beneath the knot. Sales recovered because few buyers read closely. When one jar fermented after a warm week, Fan blamed storage and left town before frost. Now the market distrusted every paper promise, including Old He's.",
-        "Old He carried both honey and contract records to the guild, leaving the guarantee in force and risking faults in his own batch. He accepted inspection and surrendered the remainder of his stock until testing ended. Two jars from a damp comb exceeded the guild's moisture limit. He bought them back, lost most of the season's profit, and marked their batch number publicly. The visible loss made the winter promise harder for a careless seller to imitate. He displayed the refund coins beside the failed jars for a full market day, even as neighbouring sellers mocked the admission.",
-        "The guild then required traceable seals, random tests, and funds held for refunds. A contract alone still could be forged, and a rich dishonest seller might afford compensation briefly. Buyers learned to inspect who issued the seal, how long the seller would remain reachable, and whether the promised penalty differed across likely sellers. Old He's next price was lower because trust had to be rebuilt rather than assumed. Buyers could now compare a promise, the mechanism behind it, and the record of what happened when it failed.",
-        "After the first frost, Old He returned with a scale and the unsold contracts. Before setting out new jars, he redeemed the two damp-comb papers and cut their seals in half. The surviving contracts hung stiff around the remaining jars, their edges silvered with frost."
-      ],
-      "storyParagraphsZh": [
-        "丰收集市上，老何蜂农与行商范七摆出外表相同的密封蜜罐，两人都说里面没有掺糖水。买家无法检查整罐，响亮保证对任何卖家又都不花成本。范七用鲜艳罩布先围来人群，老何朴素的货几乎没人碰。他急需集市收入为蜂群备足越冬饲料。",
-        "老何在每个罐颈系一张盖印契纸：初霜后若蜂蜜仍稀如水，或行会检出掺糖，他按原价买回，再赔一罐。多年稳定的蜂群和谨慎取蜜让这种结果较少发生，因此承诺昂贵，却还能承担。顾客开始愿意多付一些。契纸没有照见罐内，只让老何在说错时真会失去东西。",
-        "范七照抄罩布、文字和印章，算过冬季回购掺水蜜的代价后，却把期限缩成三日，又把小字藏在绳结下面。许多顾客没细看，他的销量重新上升。一罐蜜在暖周后发酵，范七怪顾客保存不当，初霜前便离镇。此后市场不再信任任何纸面承诺，连老何也受牵连。",
-        "老何没有撤下保证，而是把蜂蜜和契纸账一同送进行会，连自家批次的问题也一并暴露在检验下；他检测结束前停卖所有余货。两罐来自潮湿蜂脾的蜜超过含水标准，他照约买回，失去大半季利润，并公开标出批号。看得见的损失，使粗心卖家更难长期模仿这项承诺。他把退款银币和不合格蜜罐并排摆满一个集日，任由邻摊讥笑这场公开承认。",
-        "行会随后要求可追踪封签、随机抽检和预留退款金。契纸仍可能被伪造，资金雄厚的不诚实卖家也可能短期赔得起。买家因而继续检查印章由谁签发、卖家多久仍可找到，以及承诺的惩罚对不同卖家是否真的成本有别。老何下一季还得降价，因为信任只能重建，不能直接继承。顾客此后能同时比较承诺、支撑承诺的办法，以及承诺失效后真正发生过什么。",
-        "第一场霜后，老何带着秤和未兑现契纸回到集市。摆新罐以前，他先收回那两张潮湿蜂脾的契纸，剪断封签。其余契纸硬挺地挂在蜜罐颈上，纸边结着一圈银白霜粒。"
-      ],
-      "conceptName": "Signaling",
-      "conceptNameZh": "信号传递",
-      "explanationParagraphs": [
-        "Signalling occurs when a better-informed party takes an observable action to convey a hidden quality. A signal is credible when different types face different costs or continuing incentives, making imitation harder for low-quality sellers. Signals change beliefs rather than guarantee truth; decoration is cheap, guarantees can be forged, and even costly signals need verification, traceability, and institutional support."
-      ],
-      "explanationParagraphsZh": [
-        "信号传递发生在信息较多的一方采取可观察行动，以传达隐藏特征。可信信号通常让不同类型承担不同成本或持续激励，使低质量者更难模仿。信号改变他人信念，却不保证真相；装饰容易复制，保证也可伪造，因此昂贵信号仍需要检验、追踪与制度支持。"
-      ],
       "mode": "concept-fable",
+      "title": "The Sixty-Day Card Behind the Invoice",
+      "summary": "Cheng Mo worries that a rebuilt wheel may send him back to the workshop a few weeks later. The quotes differ by €6, and one comes with a sixty-day service card.",
+      "storyParagraphs": [
+        "Cheng Mo’s commuter-bike rear wheel starts wobbling again. He pushes it to two neighboring workshops for rebuilding quotes: €78 at Shop A, €72 at Shop B. Either can finish before Monday’s commute. The freshly adjusted wheels on their stands look straight. What worries him is taking time off to return a few weeks later, and he cannot tell at purchase which wheel will stay steadier.",
+        "When writing the quote, Shop A’s technician takes a sixty-day service card from a drawer: one free re-truing if needed under normal commuting use. Cheng Mo asks whether it costs extra. It is included in the €78 and redeemed under those commuting terms. The technician fills in an order identifier, expiry date, and booking number, leaving the wheel number until collection. A duplicate stays at the shop, so a return visit will not require explaining the arrangement again to a different person.",
+        "After closing, Shop A’s owner circles a return slot in next week’s booking sheet. Its full rebuilding process allows an extra half-day for rechecking, and its internal schedule budgets one return per ten orders. Adjustment uses no replacement parts, and wages are already paid by the shift. With bookings currently full, a free half-hour displaces an €18 paid adjustment. The owner crosses out that saleable slot and clips ten service-card duplicates behind the sheet.",
+        "Next door, Shop B is considering the same promise. Its urgent rebuilding process leaves out one later recheck, and its internal scheduling budget allows five returns per ten orders. Both shops are busy; Shop B also uses no additional adjustment parts and pays wages by the shift. An extra €6 per order would require giving up five €18 slots. The owner keeps the €72 quote and attaches a booking sheet for separately paid aftercare.",
+        "Cheng Mo knows neither shop’s planning budget. Returning the next day, he asks Shop A whether it will still honor the card if the wheel needs adjustment within sixty days. The technician shows him the duplicate and confirms that the shop will arrange the slot. Cheng Mo initially treated it as a service extra. Now the willingness to carry return work on the shop’s own account seems a clue worth considering. He chooses Shop A and saves its number.",
+        "On Saturday, the technician adds the wheel number to the card and has Cheng Mo sign its duplicate, then staples his copy behind the €78 invoice. Cheng Mo saves the booking number, puts the invoice in his bike bag, and pushes the bike over the threshold. The technician files the matching duplicate in the clear pocket behind next week’s booking sheet. The return slot that could have been sold is still circled."
+      ],
+      "overall": "Signaling occurs under information asymmetry when an informed party voluntarily chooses an observable, enforceable action that leads the other side to update a judgment about hidden quality. The action can be informative when its expected cost or net benefit differs across potential types.",
+      "conceptName": "Signaling",
+      "explanationParagraphs": [
+        "The scheduling figures are assumed: with the same extra €6 per order, one or five returns per ten orders displace €18 or €90 in paid slots. The two hidden processes therefore carry different expected slot costs for the same promise.",
+        "The buyer cannot see those budgets, but can observe a numbered commitment and how to redeem it, using them to make a limited update about expected return work. The promise also has service value and can be imitated; buying is not proof of quality. This is not a complete profit or equilibrium model."
+      ],
+      "module": {
+        "intro": "A credible signal must be observable and enforceable, and its expected cost or net benefit must differ across possible hidden types.",
+        "diagramTitle": "How a €6 Service Difference Can Carry a Future Workshop-Slot Commitment",
+        "diagramSteps": [
+          "Start with wheel stability that the buyer cannot directly observe at purchase",
+          "Have the seller voluntarily add a sixty-day free-adjustment commitment",
+          "Map that commitment to a real paid workshop slot",
+          "Compare expected commitment cost under different return frequencies",
+          "Let the buyer update the decision while preserving other preferences and uncertainty"
+        ],
+        "diagramStepNotes": [
+          "A newly rebuilt wheel does not reveal whether it will loosen again after several weeks.",
+          "Shop A writes one free adjustment within 60 days, plus the wheel number, expiry, and booking path, into the order.",
+          "The story assumes full bookings, no extra adjustment parts, and wages fixed by the shift; each free half-hour displaces an €18 paid adjustment.",
+          "For ten orders, the same €6 premium adds €60; one return displaces €18, five displace €90. This compares only the promise’s expected slot cost.",
+          "After checking the promise and duplicate, Cheng Mo treats the shop’s willingness to carry return work as a clue. It also has service value and is not proof of quality."
+        ],
+        "mapping": [
+          "Sixty-day service card → a voluntary observable commitment by the seller.",
+          "€18 adjustment slot → the real opportunity cost when the promise is redeemed.",
+          "€6 price difference → added revenue toward the promise, without calculating all rebuilding costs or total profit.",
+          "Different wheel-building processes → hidden differences related to expected short-term return work."
+        ],
+        "boundary": "Return budgets, full bookings, and fixed wages are story assumptions, not measured craft data. The figures compare only expected slot costs, not all costs or profits. Other types can imitate the card or offer it for reasons such as reputation; high-quality shops can decline it. Buyers must also consider whether it can be honored, and cannot infer certain quality or a market equilibrium from one card.",
+        "reflection": "If the same free commitment only occasionally consumes a slot for one process but frequently consumes a slot for another, why might it carry information? Under what conditions would that information be weak?"
+      },
+      "references": [
+        {
+          "id": "spence-1973",
+          "citation": "Spence, M. (1973). Job Market Signaling. The Quarterly Journal of Economics, 87(3), 355–374.",
+          "url": "https://doi.org/10.2307/1882010",
+          "use": "Supports the signaling-model framework linking observable actions to hidden traits under information asymmetry; the story transfers the mechanism to a different everyday setting and does not reproduce the labor-market model."
+        },
+        {
+          "id": "spence-2001",
+          "citation": "Spence, A. M. (2001). Signaling in Retrospect and the Informational Structure of Markets. Nobel Prize Lecture, December 8, 2001.",
+          "url": "https://www.nobelprize.org/uploads/2018/06/spence-lecture.pdf",
+          "use": "Supports the author’s retrospective discussion of unobservable traits, observable actions, type-related differences in cost or net benefit, and the limits of signaling."
+        }
+      ],
+      "titleZh": "发票后面的六十天卡",
+      "summaryZh": "程墨怕重编的车轮过几周又得返店。两份报价差6欧元，一张发票后面还订着六十天服务卡。",
+      "storyParagraphsZh": [
+        "程墨的通勤车后轮又开始轻轻摆动。他把车推到两家相邻的工作室，都问了重新编轮的价钱：甲店78欧元，乙店72欧元，两家都能赶上周一通勤。维修架上的轮子刚调完，看着都直。他担心的是骑几周后又得请假回来，偏偏下单时看不出哪只会更稳。",
+        "甲店技师开报价单时，从抽屉拿出六十天服务卡，写下正常通勤中需要重新校正可免费一次。程墨问是否要另外买卡，技师说已经在78欧元里，按正常通勤条款兑现。订单号、到期日和预约电话一起填上，轮组号留到交车时补，副联归店里；回来时不必换个人就重新讲一遍。",
+        "当天打烊后，甲店老板在下周预约表里圈了一个回调位置。店里做完整编轮时多留半天复查，内部排期按十单留一次回调估算。校正不用添零件，工资已按班付；最近预约满，一个免费半小时就会挤掉一笔18欧元的付费校正。老板划掉那个可售时段，把十张服务卡副联夹在表后。",
+        "隔壁乙店也在算能不能包这项服务。它给急修用的编轮流程少留一次后续复查，内部排期按十单可能回调五次来留位。两家都忙，乙店校正也不添零件，工资同样按班付。若每单只多收6欧元，却要让出五个18欧元时段，这笔服务不好承接。老板保留72欧元报价，另夹一张按次付费的售后预约单。",
+        "程墨不知道两家的排期预算。他第二天回来问甲店，六十天内需要再调，是不是仍认订单上的卡。技师把预约副联拿给他核对，回答还是自己安排工位。程墨原先只把它当赠送售后，此时才觉得：愿意先把回调时段算在自己账里，至少是一条值得考虑的线索。他选了甲店，也把电话存进手机。",
+        "周六取车，技师把轮组号补到服务卡上，让程墨在副联上签收，再把正联订在78欧元发票后。程墨存好预约电话，把发票塞进车包，推车越过门槛。技师收回同号副联，放进下周预约表后的透明夹袋；那一个原可收费的回调时段，还圈在表上。"
+      ],
+      "overallZh": "信号传递发生在信息不对称下：知情一方主动选择可观察、可兑现的行动，使另一方更新对不可见品质的判断。行动是否有信息量取决于不同潜在类型承担它的预期成本或净收益是否不同。",
+      "conceptNameZh": "信号传递",
+      "explanationParagraphsZh": [
+        "这里的排期数字是假设：同样每单增加6欧元，十单回调一次或五次，分别占用18或90欧元付费时段。两种隐藏流程承担同一承诺的预计工位代价不同。",
+        "顾客看不到这些预算，但可观察编号承诺和兑现入口，并据此有限地更新对回调负担的判断。承诺也有服务价值，可被模仿，购买不是质量证明；这不是完整利润或均衡模型。"
+      ],
+      "moduleZh": {
+        "intro": "可信信号要是可观察、可兑现的行动，并因隐藏类型不同而具有不同的预期成本或净收益。",
+        "diagramTitle": "6欧元服务价差怎样对应未来回调工位",
+        "diagramSteps": [
+          "顾客面对短期内无法直接观察的轮组稳定度",
+          "卖方主动写入60天免费校正承诺",
+          "把承诺对应到真实可收费工位",
+          "比较不同回调频率下的预期承担成本",
+          "顾客据此更新判断但保留其他偏好与不确定性"
+        ],
+        "diagramStepNotes": [
+          "刚编好的轮子外观看不出几周后是否容易重新松动。",
+          "甲店把一次免费校正、编号、到期日和预约入口写进订单。",
+          "故事设定预约已满、校正无新增零件且工资按班固定；每次免费半小时挤掉一笔18欧元付费校正。",
+          "同样十单各增价6欧元共60；回调一次占18，回调五次占90，仅比较承诺的预计工位代价。",
+          "程墨核对承诺及副联后，把店家愿意承担回调作为线索；它仍有服务价值且不是质量证明。"
+        ],
+        "mapping": [
+          "六十天服务卡 → 卖方主动选择的可观察承诺。",
+          "18欧元工位 → 承诺兑现时的现实机会成本。",
+          "6欧元价差 → 用于承担承诺的额外收入，未计算完整编轮成本或总利润。",
+          "不同编轮流程 → 与短期回调工作量相关的隐藏差异。"
+        ],
+        "boundary": "回调预算、满额预约和固定工资都是故事假设，不是实际工艺数据。数字只比较承诺的预计工位代价，未计算完整成本和利润。其他类型也可模仿或因声誉等原因提供，高品质店也可不提供；消费者只能结合兑现能力等信息更新判断，不能凭一张卡确定质量或市场均衡。",
+        "reflection": "如果同一份免费承诺对一种工艺只偶尔占用工位、对另一种工艺却经常占用工位，为什么它可能传递信息？在哪些情况下这种信息会很弱？"
+      },
+      "referencesZh": [
+        {
+          "id": "spence-1973",
+          "citation": "Spence, M. (1973). Job Market Signaling. The Quarterly Journal of Economics, 87(3), 355–374.",
+          "url": "https://doi.org/10.2307/1882010",
+          "use": "支持信息不对称下可观察行动与隐藏特质之间的信号模型框架；故事迁移到其他生活场景，不复现劳动力市场例子。"
+        },
+        {
+          "id": "spence-2001",
+          "citation": "Spence, A. M. (2001). Signaling in Retrospect and the Informational Structure of Markets. Nobel Prize Lecture, December 8, 2001.",
+          "url": "https://www.nobelprize.org/uploads/2018/06/spence-lecture.pdf",
+          "use": "支持不可观察特质、可观察行动、类型相关成本或净收益差异及信号局限的作者回顾。"
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "review": "business-office-mixed-11-pdc-review.md",
+        "edits": [
+          "business-office-mixed-11-edit-pass1.json",
+          "business-office-mixed-11-edit-pass2.json",
+          "business-office-mixed-11-edit-pass3.json"
+        ]
       }
     },
     {
@@ -228,38 +503,110 @@
       "fieldCode": "0414",
       "fieldTitle": "Marketing and advertising",
       "fieldTitleZh": "市场营销与广告",
-      "title": "The Regular Guest Who Stayed One Night",
-      "titleZh": "只住一晚的常客",
-      "summary": "A mountain inn trades ten years of returning caravans for one profitable room, then learns that a guest's value is partly made by how the inn behaves.",
-      "summaryZh": "山口旅店用十年回程车队换取一晚高价房，随后发现一段关系的价值也由旅店自己的行为创造。",
+      "title": "Whether to Spend Those Eighteen Euros",
+      "titleZh": "那十八欧元要不要花",
+      "summary": "Joanne has until the afternoon shipment to decide: should the two sample-roast bags go out with an extra gift box?",
+      "summaryZh": "乔安要在下午发车前决定：客户包裹里寄两包试烘豆，是否还要加上那个礼盒？",
       "storyParagraphs": [
-        "The mountain inn had one dry room with a stove. On a rain night, a jeweller offered owner Mu three times the usual price, while carter An—who stayed twice every month and brought other medicine drivers—had already reserved it. Mu moved An to a leaking shed. The extra silver covered a roof payment due at dawn, and the jeweller praised Mu's practical sense.",
-        "The jeweller left next morning and never crossed that pass again. An shifted to the eastern inn; six drivers followed. Mu noticed empty tables before he connected them to the room decision. He had counted one night's revenue, not later rooms, meals, referrals, and service costs that might follow a continuing relationship.",
-        "Mu began a ledger with four columns: likely visits, contribution after direct cost, chance of return, and time. A generous estimate made every familiar guest look precious, so he compared high, middle, and low cases and discounted distant earnings. Some expensive one-time guests mattered greatly. Some frequent guests demanded credit and special meals that cost more than they paid. The ledger predicted relationships, not virtue.",
-        "To test what he could influence, Mu offered returning drivers reliable dry storage rather than blanket discounts. The change cost less and improved repeat stays. He also marked which returns followed his action instead of crediting himself for journeys already planned. Estimates changed each month with observed behaviour, road closures, competitors, and the way the inn treated people. The dry-storage experiment also revealed that reliability mattered more to the drivers than a free supper.",
-        "When another jeweller offered triple price, Mu kept An's reserved room and lost the windfall. He spent two months' margin repairing the shed as a second dependable room, then created a common service floor for any stranded traveller regardless of predicted value. Long-run estimates guided maintenance, follow-up offers, and acquisition spending; they did not decide who deserved shelter or whose emergency counted.",
-        "An returned after seeing the repaired roof but brought only two companions at first. Trust recovered more slowly than Mu's table had forecast. The innkeeper wrote their room charges in the current page, then pencilled possible future stays in lighter ink so no estimate could masquerade as a debt already owed. He revised the return probability downward rather than inventing a story that made the earlier repair look immediately successful.",
-        "Years later, the jeweller's name still occupied one bright line in the old ledger. An's name appeared across many worn pages, sometimes with profit, sometimes beside repairs and unpaid meals. The paper beyond that first rainy night had become thicker than the night itself."
+        "On Tuesday morning, Joanne, who runs a coffee-bean roasting supplier, had to decide before the afternoon shipment whether to approve a retention package for one partner café. Two bags of sample-roast beans were already on the warehouse table, the salesperson had reserved time for a follow-up call, and an application for an extra gift box was sitting beside them. The café had placed large orders the previous year, so the salesperson reasonably leaned toward doing a little more for it. Joanne did not dismiss that history, but limited the decision to the next two years and asked whether the €18 service package was worth ordering.",
+        "The customer card showed that, if the café was still buying in a given year, its expected net contribution at that year-end would be €100. That amount already excluded ordinary fulfillment and service costs. Under the baseline forecast, the probability of retention through year one was 80%; conditional on still being retained after year one, the probability of remaining through year two was 60%. The probability of actually reaching the second year was therefore 80% × 60% = 48%. Joanne turned the note about last year’s large purchases face down. The parcel remained unsealed.",
+        "At a 10% annual discount rate, the €80 expected contribution at the end of year one was worth about €72.73 today, and the €48 at the end of year two about €39.67. Together, the two-year baseline present value was about €112.40. The salesperson pulled the gift-box request away from the parcel and set it beside the customer card, then asked how much the €18 package was expected to increase the chances of continued purchasing over the next two years. Joanne asked the finance colleague to calculate again, this time using the post-service retention assumptions.",
+        "The team provisionally assumed 90% retention in year one and 70% conditional retention in year two, giving a year-two arrival probability of 90% × 70% = 63%. Using the same €100 net contribution at each year-end and 10% annual discount rate, expected future contribution had a present value of about €133.88. The €18 would be paid once today and was non-refundable, covering the call, the beans, and the menu-test arrangement; subtracting it left about €115.88. The finance colleague calculated the difference before rounding and wrote the roughly €3.49 increment beside the request. The form still had no estimate of any additional uplift from the gift box.",
+        "Joanne approved only the €18 service package and crossed the gift box off the form. The salesperson completed the follow-up call that day, and the warehouse packed the two sample-roast bags. The menu test had only been scheduled and still had to be carried out later, although its cost was already included in the €18 package paid today. Joanne did not write the €3.49 down as profit that would definitely occur, and she did not treat next year’s retention forecast as an accomplished result.",
+        "Before the afternoon truck left, the carton was sealed with tape. Inside were only the two sample-roast bags and the menu-test confirmation, with no extra gift box. The customer card was moved to the section marked “Investment made — observe,” while last year’s larger purchase figure remained on the back."
       ],
       "storyParagraphsZh": [
-        "山口旅店只有一间带火炉又不漏雨的好房。暴雨夜里，珠宝商愿付三倍房钱，而每月住两晚、常带药材车夫同行的安师傅早已预订。老板穆川把安师傅换去漏雨小屋。多收的银币正好能在天亮前补一笔屋顶欠款，珠宝商还称赞他懂得做生意。",
-        "珠宝商次日离开，此后再没经过山口。安师傅改住东边旅店，六名同行也跟了过去。饭桌空下来以后，穆川才把变化同那间房联系起来。他只数了当晚房钱，没有看以后可能出现的住宿、饭食、介绍和相应服务成本。",
-        "穆川新开一本账，分四栏写预计来访次数、扣掉直接成本后的贡献、继续回来的可能以及时间。若只用乐观数字，所有熟客都显得价值惊人，他便同时算高、中、低三种情形，并把遥远收入折低。有些高价客虽只来一次仍很重要；有些常客要求赊账和特餐，成本反而超过房钱。这本账预测关系，不评判人的高低。",
-        "为了检验旅店能影响什么，穆川不再给所有熟客打折，而是为回程车夫提供可靠的干燥货仓。这项服务成本更低，复住却增加。他还区分哪些回访来自自己新增的安排，哪些行程本就会发生。道路封闭、竞争旅店、客人行为以及本店如何待人，每个月都会让预测改变。干货仓试验还让他看见，对车夫而言，可靠存放比免费晚餐更能影响下一次选择。",
-        "又有珠宝商开出三倍价格时，穆川保留安师傅已订的房，放弃眼前横财。他用两个月利润修好小屋，增加第二间可靠客房，又为任何受困旅客设定同样的基本照顾，不论账上预计价值多少。长期估算只用来决定维修、回访优惠和获客投入，不决定谁配得到遮雨处。",
-        "安师傅看到新屋顶后终于回来，头一次却只带两名同行。信任恢复得比账表预测更慢。穆川把当晚房钱写进本月页，再用淡铅笔记下可能的未来住宿，免得预计数字看起来像客人已经欠下的承诺。他把回访概率调低，没有编一个故事让先前维修显得立刻成功。",
-        "多年后，珠宝商的名字仍在旧账上占着一行鲜亮墨迹；安师傅的名字却跨过许多磨损页，有时旁边是利润，有时是修缮费与赊欠饭钱。最初那个雨夜之后的纸页，已经比雨夜本身厚得多。"
+        "周二上午，咖啡豆烘焙供货商店主乔安要在下午发车前决定一家合作咖啡馆的留存方案。仓库桌上已经放好两包试烘豆，销售同事留出了回访时间，旁边还压着一个额外礼盒申请。那家店去年采购额很高，销售同事因此倾向多做一点；乔安没有否定这层经验，只把决定窗口限定为未来两年，先看这18欧元服务包是否值得下单。",
+        "客户卡上写着：若某一年仍继续合作，该年年末预计带来100欧元净贡献，这个数已扣除常规履约和服务成本。基准情况下，第一年留存概率80%；在第一年仍合作的前提下，第二年条件留存60%，所以第二年真正到达的概率是80%×60%=48%。乔安把去年采购额那张便签翻到背面，包裹仍没有封口。",
+        "按10%年折现率，第一年年末的期望贡献80欧元折回今天约72.73，第二年年末的48欧元折回今天约39.67，两年基准现值合计约112.40欧元。销售同事把礼盒申请从包裹旁抽出来，放到客户卡边，改问那项18欧元服务预计能把未来两年继续采购的机会提高多少。乔安请财务同事再算一遍，这次用做完服务后的留存假设。",
+        "团队暂按第一年留存90%、第二年条件留存70%演算，第二年到达概率便是90%×70%=63%。用同样的年末100欧元净贡献和10%年折现率，未来贡献现值约133.88欧元。18欧元今天一次性支付且不可撤回，覆盖电话、寄豆和菜单测试安排；扣除后约115.88欧元。财务同事先用未四舍五入的数求差，再把约3.49欧元的增量写到申请旁。额外礼盒能带来多少提升，单子上仍没有估计。",
+        "乔安只批准这项18欧元服务，把礼盒从单子上划掉。销售同事当天完成回访，仓库把两包试烘豆装箱；菜单测试只约好了日期，仍待以后履行，但其成本已经包含在今天支付的18欧元服务包里。乔安没有把3.49写成会实现的收益，也没有把明年的留存预测当成已经发生的事实。",
+        "下午装车前，纸箱被胶带封好，里面只有两包试烘豆和菜单测试确认单，没有额外礼盒。客户卡被移到“已投入、待观察”一栏，去年那串更大的采购数字仍留在卡片背面。"
       ],
       "conceptName": "Customer lifetime value",
       "conceptNameZh": "客户终身价值",
       "explanationParagraphs": [
-        "Customer lifetime value estimates the present value of expected future contribution from a customer relationship, considering revenue, margin, retention, time, acquisition, and service cost. It is uncertain, scenario-dependent, and partly influenced by the firm's own actions. It supports resource allocation, not moral ranking, and should be used with service floors, privacy protections, fairness review, and feedback from outcomes."
+        "Customer lifetime value focuses on the present value of expected future net contribution, not revenue, past loyalty, or a person’s worth. This example uses only a two-year window: if the customer is still active at a year-end, that year’s net contribution is €100, and the year-two arrival probability depends on year-one retention and year-two conditional retention.",
+        "The two-year baseline present value is about €112.40. With the program, future contribution is worth about €133.88; subtracting the one-time €18 paid today leaves about €115.88. Subtracting the complete expressions before rounding gives an increment of about €3.49. This is a finite-horizon CLV estimate and excludes contributions beyond the two-year window."
       ],
       "explanationParagraphsZh": [
-        "客户终身价值估计一段客户关系预期未来贡献的现值，通常考虑收入、利润、留存、时间、获客与服务成本。它是不确定、依赖情景且会受企业自身行为影响的预测，可支持资源配置，却不是人的道德排名；使用时还需服务底线、隐私保护、公平审查与结果反馈。"
+        "客户终身价值关注未来预期净贡献的现值，不等于收入、过去忠诚或人的价值。本例只取两年窗口：每年年末若客户仍合作，该年净贡献100欧元；第二年概率由前一年留存与条件留存共同决定。",
+        "两年基准现值约112.40欧元；投入后的未来贡献现值约133.88，扣今天一次性的18欧元后约115.88。先用完整算式求差，再四舍五入，增量约3.49欧元。两年窗口只是有限期CLV估计，未涵盖窗口以后的贡献。"
       ],
-      "mode": "mechanism-fable",
+      "overall": "A retention investment depends on future net contribution, the probability of continued business, and when costs are paid. Discounting those amounts to the same date and comparing the increment shows whether the €18 is worthwhile under these assumptions.",
+      "overallZh": "评估一次留存投入，要看客户未来可能带来的净贡献、继续合作的概率和成本发生的时间。把这些金额折到同一天，再比较投入前后的增量，才能判断18欧元在这组假设下是否值得花。",
+      "module": {
+        "intro": "Here, CLV is a present-value estimate of future net contribution over a limited two-year window, used to compare the baseline path with the incremental effect of one new retention investment.",
+        "diagramTitle": "How to assess an €18 retention investment over a two-year window",
+        "diagramSteps": [
+          "Set the two-year window and the conditional net contribution at each year-end",
+          "Set baseline year-one retention and year-two conditional retention",
+          "Calculate baseline arrival probabilities and discount the contributions",
+          "Estimate future contribution after the retention program using the same basis",
+          "Compare only the incremental expected present value with the new cost"
+        ],
+        "diagramStepNotes": [
+          "If the customer is still active at a year-end, that year’s net contribution is €100 after ordinary fulfillment and service costs; the window covers only two years.",
+          "Baseline retention is 80% in year one and 60% conditionally in year two, so the year-two arrival probability is 0.8 × 0.6 = 48%.",
+          "€80/1.1 + €48/1.1² ≈ €112.40. Displayed values are rounded; use the complete expressions when calculating the increment.",
+          "The program assumes 90% retention in year one and 70% conditional retention in year two: €90/1.1 + €63/1.1² ≈ €133.88. The uplift is only a forecast assumption.",
+          "Deduct the additional €18 once today. Increment = (€90/1.1 + €63/1.1² − €18) − (€80/1.1 + €48/1.1²) ≈ €3.49. No incremental effect is assumed for the gift box, so it is left out."
+        ],
+        "mapping": [
+          "€100 annual net contribution → conditional year-end contribution if the customer remains active.",
+          "80%/60% and 90%/70% → baseline and post-program retention-path assumptions.",
+          "€18 service package → one-time, non-refundable incremental cost paid today.",
+          "€3.49 → two-year incremental expected present value calculated from unrounded values.",
+          "Gift box left out of the parcel → an extra investment with no incremental basis is rejected."
+        ],
+        "boundary": "The two-year window is not the customer’s complete lifetime. Retention probabilities, net contribution, and the 10% discount rate are model inputs. The assumed uplift from the service package is a forecast, not a causal effect already proved by the customer record, and the customer may still leave. Historical acquisition cost for an existing customer is a past item and is not deducted again for this incremental retention decision.",
+        "reflection": "If the same €18 program increased only year-one retention but did not change year-two conditional retention, how would you recalculate the incremental expected present value?"
+      },
+      "moduleZh": {
+        "intro": "CLV在这里是一个有限两年窗口的未来净贡献现值估计，用来比较基准路径与一次新增留存投入后的增量变化。",
+        "diagramTitle": "两年窗口下怎样判断一次18欧元留存投入",
+        "diagramSteps": [
+          "限定两年窗口并确定每年年末条件净贡献",
+          "设定基准第一年留存与第二年条件留存",
+          "计算基准各年到达概率并折现",
+          "用同一口径估计投入后的未来贡献",
+          "只比较投入带来的增量期望现值与新增成本"
+        ],
+        "diagramStepNotes": [
+          "每年年末若仍合作，该年净贡献为100欧元，已扣常规履约与服务成本；窗口仅两年。",
+          "基准第一年80%，第二年条件60%，所以第二年到达概率为0.8×0.6=48%。",
+          "80/1.1＋48/1.1²≈112.40欧元；展示值已四舍五入，求增量时继续使用完整算式。",
+          "投入后第一年90%、第二年条件70%，所以90/1.1＋63/1.1²≈133.88欧元；概率提升只是预测假设。",
+          "新增成本18欧元今天扣一次。增量＝(90/1.1＋63/1.1²－18)－(80/1.1＋48/1.1²)≈3.49欧元；额外礼盒没有增量依据，未被加入。"
+        ],
+        "mapping": [
+          "每年100欧元净贡献 → 客户仍在时的年末条件贡献。",
+          "80%／60%与90%／70% → 基准与投入后的留存路径假设。",
+          "18欧元服务包 → 今天一次性、不可撤回的新增成本。",
+          "3.49欧元 → 依据未四舍五入值计算的两年增量期望现值。",
+          "未装入的礼盒 → 没有增量依据的额外投入被放弃。"
+        ],
+        "boundary": "两年窗口不等于完整客户终身，留存概率、净贡献和10%折现率也都是模型输入。服务带来的概率提升只是演算预测，并非客户记录已经证明的因果效果；实际客户可能不留下。既有客户过去的获客成本属于历史事项，不应为了本次新增留存决定再重复扣除。",
+        "reflection": "如果同样18欧元投入只能把第一年留存提高、却不改变第二年条件留存，你会怎样重算增量期望现值？"
+      },
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "references": [
+        {
+          "id": "fader-hardie-lee-2006",
+          "citation": "Fader, P. S., Hardie, B. G. S., & Lee, K. L. (2006). More Than Meets the Eye. Marketing Research, Summer, 9–14.",
+          "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/fader_et_al_mr_06.pdf",
+          "use": "Supports valuing expected future cash flows in present-value terms and recognizing uncertainty in customer-behavior forecasts."
+        }
+      ],
+      "referencesZh": [
+        {
+          "id": "fader-hardie-lee-2006",
+          "citation": "Fader, P. S., Hardie, B. G. S., & Lee, K. L. (2006). More Than Meets the Eye. Marketing Research, Summer, 9–14.",
+          "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2013/08/fader_et_al_mr_06.pdf",
+          "use": "支持未来现金流现值与客户行为预测的不确定性。"
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
@@ -274,41 +621,132 @@
       "fieldCode": "0415",
       "fieldTitle": "Secretarial and office work",
       "fieldTitleZh": "秘书与办公室工作",
-      "title": "A Red Ribbon on Every Letter",
-      "titleZh": "每封信都系着红带",
-      "summary": "When every sender marks every message urgent, a quiet drawing of a leaking embankment disappears beneath the loudest claims.",
-      "summaryZh": "当每个寄件人都把公文标成急件，一张安静的堤坝渗水图消失在最响亮的催促下面。",
+      "mode": "mechanism-explainer",
+      "title": "Four Messages Before the Doors Open at Nine",
+      "summary": "The workshop opens at 9:00 with two front-desk staff. Four messages concern the side door, registrations, a receipt, and a title. Chen Shan keeps a backup sign-in sheet under the desk.",
       "storyParagraphs": [
-        "The city mailroom could process fifty letters a day. Supervisor Lu tied red ribbon to fire alarms, broken bridges, and missing-person reports so they moved first. The rule worked, and departments soon learned from it. Merchants tied red to debt demands, officials tied red to banquet seating, and a window-repair request warned of 'imminent civic embarrassment.' No sender wanted to wait behind someone else's urgency.",
-        "Within a week, the tables were red. Clerks ranked messages by frightening language and the status of the seal. A levee keeper sent a plain sketch showing a damp line three bricks higher than yesterday. He used no ribbon and no dramatic words. The paper sank beneath ceremonial mail. When it was opened three days later, the leak had widened and two streets needed sandbags. By dawn, water had seeped beneath a warehouse door and stained the lower sacks.",
-        "Lu's first repair was a mandatory urgency form. Skilled writers filled every risk box, while people nearest the work struggled to translate mud, sound, and dates into official phrases. The queue again favoured those best at claiming importance. An anonymous note alleged poison in a fountain; no one dared delay it, yet sending the entire inspection team left the levee without an engineer.",
-        "Lu replaced the single red queue with a revisable first screen: how soon harm could worsen, how severe it might become, how credible and specific the evidence was, whether action remained reversible, and who could verify it. Uncertain high-consequence reports went quickly to a qualified checker instead of directly consuming every resource. Old letters moved upward each day so quiet problems could not wait forever.",
-        "The mayor's secretary objected when banquet seating was downgraded below an unsigned crack photograph. Lu accepted a reprimand and lost her festival bonus rather than restore rank as the hidden rule. She rotated triage authority, audited who used urgent labels, and reviewed mistakes. The mailroom found that low-status field workers were being downgraded more often even when their attachments were precise, so examples and thresholds were revised. Two clerks spent their next rotation with levee and fire crews so the next decision would rest on more than forceful vocabulary.",
-        "A month later, another unadorned levee drawing arrived. The clerk checked its date, location, rising water line, and the cost of waiting. He placed it in the first delivery bag, then clipped a small blue card to the copy: 'priority provisional—engineer to confirm.' The red ribbon remained in the drawer. The engineer returned a confirmation before noon, and the card was updated instead of treated as a permanent verdict."
+        "At 8:20, a public workshop at a coworking space is due to open at 9:00, and the front desk has only Chen Shan and part-time colleague A-Yuan. Four messages arrive in the shared inbox at once: a wheelchair user says the automatic side door did not open during a trial visit the night before; an unfamiliar address sends a screenshot claiming that “all registration records are gone”; another participant asks for a payment receipt needed for reimbursement in three days; and the speaker asks whether two words on the title slide can be changed.",
+        "Chen Shan logs all four messages. The side-door issue could affect arrival within forty minutes and can be tested immediately, so she sends A-Yuan with an access card and mechanical key while she stays at the front desk to prepare check-in. If the registration message really reflects a system-wide failure, its impact would be larger, but the screenshot’s scope is unknown. She forwards it in parallel to the remote system administrator for verification. A paper backup sign-in sheet stays under the desk rather than replacing the normal process immediately.",
+        "At 8:28, A-Yuan reports that the access card works, the automatic sensor does not, and mechanical opening works normally. Chen Shan calls the building facilities duty line and receives the temporary procedure for that location: while the fault remains, staff may open the door manually from inside when someone is present, and the call bell outside the side door rings at the front desk. A-Yuan will watch the side door from 8:50 to 9:05 and then return to the main entrance; late arrivals can ring the bell and one of the two staff members can go over to open it.",
+        "At 8:32, the system administrator sees 186 registrations still in the backend and successfully creates and reads one test record. There is currently no evidence that all registration data have disappeared. Chen Shan leaves the backup paper sheet under the desk and sends the screenshot sender an alternative login route. Two minutes later, that person replies that their registration is visible again. The status changes to “individual access restored / continue monitoring,” so A-Yuan no longer needs to prepare for a full manual check-in process.",
+        "The speaker confirms that the title change does not affect the opening and chooses to make it on their own laptop. The receipt needed in three days is queued for completion before 14:00 that afternoon, with a reminder set. At 9:00, the participant who had flagged the accessibility need arrives at the side door, and A-Yuan opens it from inside using the procedure confirmed by facilities. At 9:05 he returns to the main entrance to help with check-in, while the side-door call bell remains available.",
+        "At 13:40, Chen Shan sends the receipt and clears the 14:00 reminder. With no further registration reports by the afternoon, she records the scope of this check and ends that monitoring round. Facilities says the part will be replaced tomorrow; she leaves the side-door ticket open. As she prepares the handover, the side-door bell rings again. A-Yuan sets down the sign-in folder and goes to open it."
       ],
-      "storyParagraphsZh": [
-        "城务信房每天只能处理五十封信。主管陆宜用红带标记火警、断桥和失踪通报，让它们先走，这个办法起初十分有效。各部门很快学会规则：商人给催款信系红带，官员给宴会座次系红带，连修窗申请也写着“城市体面即将受损”。谁都不愿排在别人的紧急后面。",
-        "一周后，桌面一片红。分信员只好按文字多吓人与印章地位排序。守堤人寄来一张素纸图，画着潮湿水线比昨日高了三块砖。他没有红带，也不会写危急口号，纸张便沉到庆典公文下面。三天后打开时，渗漏已经扩大，两条街都要堆沙袋。天亮时，水已从仓门下渗入，在最底层粮袋上留下深色水印。",
-        "陆宜先设计一张强制紧急表。擅长公文的人把每个风险格填满，最靠近现场的人却很难把泥色、声音和日期翻成官话，队列再次偏向最会宣称重要的人。一封匿名信声称水池有人投毒，谁也不敢延迟；整支检查队因此出动，堤坝反而没有工程师。",
-        "陆宜取消单一红队列，改用可修订的初筛：伤害多久会恶化、后果多重、证据是否具体可信、行动能否挽回、谁有能力核查。高度不确定却可能严重的报告先交给合适的人快速确认，而不是直接吞掉全部资源。旧信每天自动上移，安静问题也不能永远等待。",
-        "市长秘书发现宴会座次排在一张无署名裂缝照片后，要求恢复官阶优先。陆宜宁受记过、失去节庆奖金，也不把身份重新藏进规则。她轮换分诊权限，审计谁滥用急件，并复盘错分。信房发现基层寄件人即使附件具体也更常被降级，于是重写样例与阈值。两名分信员下一轮跟随堤防队和消防队值班，免得日后仍只凭强硬词句判断现场。",
-        "一个月后，又一张没有装饰的堤坝图送到。分信员核对日期、位置、上升水线和等待代价，把它放进当天第一只送件袋，再给留档夹上一张蓝卡：“优先级暂定，待工程师确认。”红带仍留在抽屉里。工程师中午前回传确认，蓝卡随即更新，没有被当成永远不变的裁决。"
-      ],
+      "overall": "Information triage temporarily routes inputs for checking, handoff, or queuing when capacity is limited, using time sensitivity, potential impact, verifiability, and responsible roles. New evidence then updates priority, staffing, and follow-up.",
       "conceptName": "Information triage",
-      "conceptNameZh": "信息分诊",
       "explanationParagraphs": [
-        "Information triage is a rapid, provisional prioritisation and routing process used when processing capacity is limited. Urgency, severity, evidence quality, reversibility, and responsibility may all matter. Triage is not a final judgement of truth or worth; it requires escalation paths, ageing queues, feedback, audits, and fairness checks because labels can be manipulated and quiet or low-status risks can be missed."
+        "The side-door issue directly affects arrival before 9:00 and can be checked quickly, so it receives immediate attention. The registration report has potentially wider impact and is verified in parallel. The 186 backend records, successful test write/read, and the original sender’s recovery support only the narrower conclusion that no system-wide failure is currently evident.",
+        "The receipt is queued against a clear 14:00 follow-up point, while the facilities ticket remains open. The story adapts incident-response triage ideas to office work; it does not claim a universal office standard."
       ],
+      "module": {
+        "intro": "Triage decides what to check immediately, what to route in parallel, and what can wait, while allowing new evidence to release or reoccupy limited capacity.",
+        "diagramTitle": "How Four Inputs Are Reprioritized Before 9:00",
+        "diagramSteps": [
+          "Log every input and preserve its original content",
+          "Route each item by time sensitivity, potential impact, and verifiability",
+          "Send items needing specialist confirmation to the appropriate role",
+          "Use new evidence to update scope and release staff capacity",
+          "Follow up queued and still-open items against explicit deadlines"
+        ],
+        "diagramStepNotes": [
+          "All four messages first enter the shared tracker.",
+          "A-Yuan checks the side door on site while the system administrator verifies the registration backend in parallel.",
+          "Facilities confirms the temporary manual-opening procedure for this site.",
+          "With 186 backend records, a successful test record, and the sender’s recovered access, the team no longer prepares for full manual registration.",
+          "The receipt is sent at 13:40. That afternoon’s registration monitoring ends with its verification scope recorded; the door ticket remains open and its bell remains in use."
+        ],
+        "mapping": [
+          "Side-door message → time-sensitive and quickly verifiable high-priority input.",
+          "Registration screenshot → potentially broad impact with unknown scope, requiring parallel verification.",
+          "14:00 receipt reminder → lower urgency but a defined follow-up point.",
+          "Side-door call bell + open facilities ticket → temporary workaround and unresolved repair coexist."
+        ],
+        "boundary": "Triage is temporary classification and routing, not a final truth judgment, and it does not require waiting for serious harm before acting. A currently healthy backend and one user’s restored access do not prove that all future access will be problem-free. NIST and FIRST sources come from cybersecurity incident response; this story uses them only as an office-work analogy.",
+        "reflection": "When one issue could have very broad impact but its scope is unknown, while another smaller issue will block someone within forty minutes, how can parallel verification avoid both shutting down the whole process unnecessarily and neglecting the immediate problem?"
+      },
+      "references": [
+        {
+          "id": "nist-triage-2025",
+          "citation": "Nelson, A., Rekhi, S., Souppaya, M., & Scarfone, K. (2025). Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile. NIST SP 800-61 Revision 3, RS.MA-02–04.",
+          "url": "https://doi.org/10.6028/NIST.SP.800-61r3",
+          "use": "Supports cybersecurity incident-response practices involving initial verification, scope and impact assessment, resource prioritization, continuing status checks, and escalation; the office setting is an analogical application."
+        },
+        {
+          "id": "first-triage-2-1",
+          "citation": "FIRST (2019). CSIRT Services Framework, Version 2.1, §§6.1.2 and 6.2.1.",
+          "url": "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1",
+          "use": "Supports professional incident-response practices involving initial classification, prioritization, supplementary information, verification, and handoff; it is not treated as the single historical origin of information triage."
+        }
+      ],
+      "titleZh": "九点开门前的四条消息",
+      "summaryZh": "工作坊九点开场，前台只有两个人。侧门、报名、收据和标题的四条消息同时进来，陈杉把备用签到表放在桌下。",
+      "storyParagraphsZh": [
+        "八点二十分，联合办公空间的公开工作坊九点开场，前台只有陈杉和兼职同事阿沅。邮箱同时进来四条消息：一位使用轮椅的参与者说昨晚试走时侧门自动门打不开；陌生地址发来截图称“所有报名记录都没了”；另一位参与者催三天后报销要用的付款收据；主讲人问首页幻灯片标题能不能改两个字。",
+        "陈杉把四条都登记。侧门会在四十分钟内影响到场，又能马上现场试，她让阿沅带门卡和机械钥匙去看，自己留在前台准备签到。报名消息若属全体故障影响更大，但截图来源不明，她同时转给远程系统管理员核查；备用纸签到表先放在桌下，没有立即切换流程。",
+        "八点二十八分，阿沅回报门卡有效、自动感应不动作、机械开启正常。陈杉打给楼宇设施值班，得到这处场地故障期间的临时安排：工作人员在场时可从内侧手动开启，侧门外的呼叫铃会响到前台。阿沅八点五十分去侧门守到九点零五，之后回正门；迟到者可按铃，由两人中一人过去开门。",
+        "八点三十二分，系统管理员看到后台仍有186条报名，又用测试账号成功新建并读取一条记录；当前没有发现全体数据消失。陈杉把应急纸签到继续留作备用，并给截图发送者发另一个登录入口。对方两分钟后回复已能看到自己的报名。该项状态改成“个别访问已恢复／继续观察”，没有再占用阿沅去准备全体手工签到。",
+        "主讲人确认标题改动不影响开场，决定自己在本机处理。三天后才报销的收据被排到当天14:00前并设提醒。九点，那位提前说明无障碍需求的参与者从侧门到达，阿沅按设施值班确认的方式从内侧开门；九点零五后，他回到正门协助签到，侧门呼叫铃保持可用。",
+        "十三点四十分，陈杉发出收据，把14:00提醒划掉。报名项观察到午后，没有新增同类报告，她记下这次核验范围，结束本轮监测。设施值班回复零件明天换，陈杉把侧门工单留在开放栏。她准备交班时，侧门呼叫铃又响了一声，阿沅放下手里的签到夹过去开门。"
+      ],
+      "overallZh": "信息分诊是在处理能力有限时，按时间敏感度、潜在影响、可核验性与负责角色，暂定先查、转交或排队的路径。新证据出现后，再调整优先级、人员和回访安排。",
+      "conceptNameZh": "信息分诊",
       "explanationParagraphsZh": [
-        "信息分诊是在处理能力有限时，对进入信息进行快速、暂时的优先分类与路由，可能综合紧迫性、严重性、证据质量、可逆性与责任归属。它不是对真伪或价值的最终裁决，还需升级路径、队列老化、反馈、审计与公平检查，防止标签操纵及安静或低地位风险被漏掉。"
+        "侧门问题在九点前直接影响到场且可快速验证，因此优先现场处理；报名异常潜在影响大，则并行核验范围。186条记录、测试写入和原发件人恢复只支持当前未见全体故障。",
+        "收据按14:00截止点排队，设施工单继续跟踪。这里借用网络事件响应的分诊思想做办公室类比，不构成通用办公室标准。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "分诊先决定什么要立刻核查、什么并行转交、什么可以排队，并让新证据释放或重新占用有限处理能力。",
+        "diagramTitle": "四条输入怎样在九点前重新排序",
+        "diagramSteps": [
+          "登记全部输入并保留原始内容",
+          "按时间、潜在影响和可核验性决定并行路径",
+          "把需要专业确认的事项转给对应角色",
+          "用新证据更新范围判断并释放人员",
+          "按截止点回访排队项与仍开放事项"
+        ],
+        "diagramStepNotes": [
+          "四条消息先全部进入共享表。",
+          "阿沅现场查侧门；系统管理员并行核验报名后台。",
+          "设施值班确认本场地的临时手动开门安排。",
+          "后台186条、测试记录成功和原发件人恢复后，不再准备全体手工签到。",
+          "收据13:40发出；午后结束本轮报名监测并保留核验范围，侧门工单仍开放、呼叫铃仍用于接待。"
+        ],
+        "mapping": [
+          "侧门消息 → 时间近且可现场核验的高优先输入。",
+          "报名截图 → 潜在影响大但范围未明，需要并行核查。",
+          "14:00收据提醒 → 可排队但有明确回访点。",
+          "侧门呼叫铃＋开放工单 → 临时绕行与未解决维修并存。"
+        ],
+        "boundary": "分诊是暂时分类和路由，不是真伪终判，也不要求等待严重损失后才行动。后台当前正常和单个用户恢复不能证明所有未来访问都无问题；NIST与FIRST资料来自网络事件响应领域，本故事仅作日常办公室类比。",
+        "reflection": "当一个问题潜在影响很大但范围未明，另一个问题影响较小却将在四十分钟内阻碍到场时，怎样并行核查才能既不误停整个流程，也不耽误眼前可处理事项？"
+      },
+      "referencesZh": [
+        {
+          "id": "nist-triage-2025",
+          "citation": "Nelson, A., Rekhi, S., Souppaya, M., & Scarfone, K. (2025). Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile. NIST SP 800-61 Revision 3, RS.MA-02–04.",
+          "url": "https://doi.org/10.6028/NIST.SP.800-61r3",
+          "use": "支持网络事件响应中的初筛核验、范围与影响判断、资源优先级、持续状态核验和升级实践；日常办公室场景为类比应用。"
+        },
+        {
+          "id": "first-triage-2-1",
+          "citation": "FIRST (2019). CSIRT Services Framework, Version 2.1, §§6.1.2 and 6.2.1.",
+          "url": "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1",
+          "use": "支持专业事件响应中的初步分类、优先级、补充信息、核查与转交；不作为信息分诊的单一历史起源。"
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "review": "business-office-mixed-11-pdc-review.md",
+        "edits": [
+          "business-office-mixed-11-edit-pass1.json",
+          "business-office-mixed-11-edit-pass2.json",
+          "business-office-mixed-11-edit-pass3.json"
+        ]
       }
     },
     {
@@ -318,39 +756,132 @@
       "fieldCode": "0415",
       "fieldTitle": "Secretarial and office work",
       "fieldTitleZh": "秘书与办公室工作",
-      "title": "Three Orders for One Bridge",
-      "titleZh": "一座桥的三份命令",
-      "summary": "Three clear drawings reach one worksite, and each crew builds faithfully toward a different bridge.",
-      "summaryZh": "三份清楚图纸同时抵达工地，每支队伍都忠实地建向一座不同的桥。",
+      "mode": "mechanism-explainer",
+      "title": "Which Version Applies on Sunday?",
+      "summary": "The first three Sunday visitors complete their forms, but the QR code will not open. Xiao Luo returns to the shared drive and finds v2, v3, and the v4 she printed last night.",
       "storyParagraphs": [
-        "The river bridge began from approved Drawing One. After discovering a water-level error, architect Shen raised the piers and issued Drawing Two. A week later she sketched a lighter deck as Drawing Three, but the council had not approved it. An assistant copied the draft before a meeting. All three sheets looked official; their tiny corner numbers were the only visible difference. The bridge had to open before the grain fair or the city would repay a regional construction grant.",
-        "The east-bank foreman received Two, the west-bank foreman received the unapproved Three, and the stone yard still cut from One. Each person believed the newest paper in hand was authoritative. By the time the spans reached midstream, the banks differed by half a metre and prepared stones no longer fit either side. Rain was coming, and reopening the old ferry would consume the remaining contingency fund. One crew had already mortared its pier caps; the other had drilled anchor holes that pointed toward empty air.",
-        "Shen drew the steep joining ramp once, tore it up, and ordered the finished work dismantled, losing a month and the completion bonus. She would not simply order everyone to use 'the latest': Three was newer but not authorised, while One had to remain available to explain purchases and decisions. The problem was identity, state, approval, effective time, and controlled distribution—not freshness alone. Workers chipped away sound masonry under tarpaulins while the finance clerk crossed out the festival bonus line by line.",
-        "The project created one register with unique drawing identifiers, revision status, approval signatures, effect dates, and reasons for change. Only the central register issued working copies; receivers confirmed them, and superseded site copies received a red stamp before being archived. Offline crews got sealed update packets and a named contact. A controlled rollback procedure kept old versions usable without confusing them with current instructions. During the first drill, a sealed packet failed to reach the night quarry, exposing a second distribution gap before stone was cut.",
-        "When a later change moved one beam, the log stated what changed, why, who approved it, and when each crew must switch. The quarry, warehouse, and both banks acknowledged the same notice before cutting resumed. At closure, the two foremen spread their plans across the final gap. Number, approval mark, and effect date matched; only then did they lower the last board.The stone rejected from the mismatch became the abutment steps, but its recutting cost stayed visible in the final account. Both signed across the final update."
+        "A coworking building is hosting a small reading group on Sunday. On Saturday evening, Xiao Luo searches the shared drive for “visitor registration.” The search mixes the controlled-release folder with collaboration drafts for which she has read-only access, then sorts everything by modification time. v4 appears first. It inherits the QR field from v3 and changes only a few instruction lines, so the first page looks complete; the word “Draft” sits in file properties and the footer on page two. Following her usual habit of opening the most recently modified file, she prints twenty copies.",
+        "On Sunday morning, the first three visitors complete v4 under identifiers A17, A18, and A19, but the QR code does not open. Xiao Luo goes into the controlled-release folder and sees the actual status: v2 is still marked “Current” and has no QR code; v3 was approved on Friday, but its header says “Effective Monday 09:00,” when the new QR registration page will also go live; v4 is only a draft based on v3 with revised instructions.",
+        "She removes v4 and sets the three completed sheets aside. Using the current v2 template, she transfers the necessary visit information for A17, A18, and A19 into valid records. A correction note links those identifiers, the wrong version, and the completed transfer to the day’s records. The original sheets are stored separately for this correction. Xiao Luo restores v2 to the clipboard; later visitors no longer have to try a QR code that is not yet usable.",
+        "At 08:45 on Monday, the operations lead sends controlled v3 to both front desks. Each prints a copy and puts it in a pending-release envelope marked “Use from 09:00,” separate from the live clipboard, then acknowledges receipt. At 09:00, the page goes live. Both desks take v3 from its envelope, remove v2 from their clipboards, and confirm “v3 now in use” after switching. The release directory also moves v2 to historical status while retaining its approval record.",
+        "The collaboration draft v4 remains in the editing area. After the administrator finishes revising the instructions, any future use will still require a new approval submission and a future effective point. To reduce the chance that front-desk staff retrieve forms from mixed search results again, both front-desk accounts receive a read-only “Current controlled forms” entry page that points directly to the release folder. Drafts remain searchable in the collaboration area, but no longer serve as the default front-desk path.",
+        "At 09:05 on Monday, the first visitor reaches the first-floor desk. Xiao Luo hands over the newly active v3; the QR page opens, and the visitor starts filling it in. She puts the removed v2 into its history envelope and notes the replacement time on it. The correction links and original sheets for A17, A18, and A19 remain in the locked Sunday error file."
       ],
-      "storyParagraphsZh": [
-        "跨河新桥按已批准的一号图开工。设计师沈岚发现水位计算有误，抬高桥墩，发出二号图；一周后，她又画出较轻桥面的三号草案，议事会尚未批准，助手却在会前拿去复印。三张纸都印得清楚正式，只有角落里的小编号不同。新桥必须在粮食大集前通行，否则城里还要退回区域建设补助。",
-        "东岸工头收到二号图，西岸工头拿到未批准的三号，石场仍按一号切料。每个人都相信手里最新拿到的副本最有权威。两岸桥面伸到河心时，高度相差半米，备好的石块也不再适合任何一边。雨季将到，若恢复旧渡口，便会耗尽仅余的应急金。一边已经砌死桥墩顶石，另一边的锚孔却朝着半空，连临时木梁也无法平接。",
-        "沈岚画过一次用来遮掩错位的陡坡，随即撕掉图纸，命人拆除已经完成的工程，失去一个月和按期奖金。她没有只喊“以后都用最新版”：三号较新却未获授权，一号虽旧仍须保留，以解释采购与决定。真正缺少的是唯一身份、状态、批准、生效时间和受控分发，而不只是新旧。工人们在雨布下凿掉完好的石砌，财务员同时一行行划去节庆完工奖金。",
-        "工程建立中央登记册，为每张图设置唯一编号、修订状态、批准签名、生效日期和变更理由。现场工作副本只能由登记处发出，领取人确认收讫；废止副本盖红章后归档。离线队伍收到密封更新包和指定联系人，受控回退程序则让旧图可供审计或恢复，却不会冒充当前命令。第一次演练时，一只密封更新包没能送到夜班石场，在真正切料以前又暴露出一道分发缺口。",
-        "后来一根梁再次调整，变更日志写清改了哪里、为什么、谁批准、各队何时切换。石场、仓库和两岸都确认同一份通知，切料才重启。合龙时，两名工头把图纸摊在最后一道缺口两侧；编号、批准章和生效日期完全相同，他们才放下最后一块桥板。错位废下的石料后来改成桥台阶梯，重新切削的费用仍完整留在总账里。两人又在最后更新处共同签名。"
-      ],
+      "overall": "Record version control keeps version identity, draft or approved status, effective time, controlled distribution, on-site adoption, and superseded history traceably linked. The newest modification timestamp is not the same as the currently executable version.",
       "conceptName": "Record version control",
-      "conceptNameZh": "记录版本控制",
       "explanationParagraphs": [
-        "Record version control identifies versions, states, and authority while governing approval, distribution, effective dates, supersession, and traceable change history. The newest copy may still be a draft, and an old version may remain necessary for audit or controlled rollback. Reliable control uses unique identifiers, permissions, receipts, change logs, authoritative sources, and explicit rules for offline copies."
+        "On Sunday, the current version is v2 and it has no QR code. v3 is approved but does not become effective until Monday at 09:00, when the QR page also goes live. v4 inherits the QR field from v3 but remains only a later instruction draft.",
+        "On Monday, v3 is distributed and kept separately until 09:00; actual use is confirmed after switching the clipboards. v2 retains historical status, and mistaken v4 records are linked to necessary corrections. The controlled entry improves retrieval but cannot replace approval and effective-state checks."
       ],
+      "module": {
+        "intro": "Version control should make version identity, approval status, effective point, controlled distribution, on-site adoption, and historical status independently verifiable.",
+        "diagramTitle": "How v2, v3, and v4 Separate from Sunday to Monday 09:05",
+        "diagramSteps": [
+          "Identify current, approved, and draft versions from the controlled release source",
+          "Use current v2 to correct the necessary records created through mistaken v4 use",
+          "Distribute and prepare v3 paper copies before the effective time",
+          "Switch to v3 on site at 09:00 and confirm execution status",
+          "Move v2 and the necessary correction links into traceable history"
+        ],
+        "diagramStepNotes": [
+          "v2 is current on Sunday and has no QR code; v3 is approved pending 09:00; v4 inherits the QR field but remains a draft.",
+          "The necessary A17–A19 visit information is transferred into v2, while the mistaken version is retained only as a correction link.",
+          "At 08:45, both desks print v3 and place it in separate pending-release envelopes; the live clipboards still contain only current v2.",
+          "At 09:00, both desks switch clipboards and then reply “v3 now in use.”",
+          "v2 retains its approval and superseded history, while the correction record keeps only the necessary identifiers and version relationship."
+        ],
+        "mapping": [
+          "Mixed search results → a recently modified draft can appear ahead of the current release.",
+          "v3 approved Friday, effective Monday 09:00 → approval and effective use are checked separately; the QR page becomes usable at the effective time.",
+          "Front-desk “received” versus “now in use” confirmations → distribution status and execution status are separately traceable.",
+          "Read-only current-controlled-forms entry page → improves retrieval without replacing version-state control."
+        ],
+        "boundary": "Record version control is not accomplished simply by renaming files, sorting by time, or using a shared drive, nor does every office need to copy engineering configuration-management systems. The NASA source is an engineering configuration-management reference; the TNA 2007 document is historical conceptual material and is no longer current, so it is not treated as present-day regulation or certification guidance.",
+        "reflection": "If a draft inherits the next version’s appearance and QR field and also appears first in search results, which approval, effective, distribution, and on-site-use states would you rely on to determine what can actually be executed today?"
+      },
+      "references": [
+        {
+          "id": "nasa-cm",
+          "citation": "NASA. NASA Systems Engineering Handbook, §6.5: Configuration Management.",
+          "url": "https://www.nasa.gov/reference/6-5-configuration-management/",
+          "use": "Supports engineering configuration-management practices involving unique identity, approved changes, controlled release, and traceability of current and historical status; it is not treated as a mandatory office standard."
+        },
+        {
+          "id": "tna-records-2007",
+          "citation": "The National Archives (2007, July revision). Requirements for Electronic Records Management Systems, 3: Reference Document.",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/revised-reference-document-v2.pdf",
+          "use": "Supports conceptual reference on superseded status, version relationships, and historical traceability; the document is historical and no longer current, so it is not treated as present-day law or certification requirements."
+        }
+      ],
+      "titleZh": "周日该用哪一版",
+      "summaryZh": "周日读书会的前三位访客填完表，二维码却打不开。小罗回到共享盘，找到了v2、v3和昨晚打印的v4。",
+      "storyParagraphsZh": [
+        "共享办公楼周日要接待一场小型读书会。周六晚，小罗在共享盘搜索“访客登记”，搜索把受控发布目录和她有只读权限的协作草稿一起按修改时间列出。最上面是v4：它从v3继承了二维码栏，只改了几句填写说明，第一页看起来完整；“草稿”状态藏在文件属性和第二页页脚。她按修改时间打开v4，打印了二十份。",
+        "周日早上，前三位访客以A17、A18、A19编号填了v4，扫码却打不开。小罗进入受控发布目录后才看到：v2仍标“当前有效”，表上没有二维码；v3周五已经批准，但页眉写着“周一09:00生效”，新的二维码登记页面也在那个时间上线；v4只是基于v3继续改说明的草稿。",
+        "她撤下v4，把三张误用表单单独夹起，用当前v2模板把A17、A18、A19的必要到访信息转录到有效记录。更正单记下三个编号、误用版本和转录完成标记，与当天记录关联；原表按这次更正的需要单独收好。小罗把v2放回夹板，后面的访客不用再拿手机试那张尚未能用的二维码。",
+        "周一八点四十五，运营负责人把受控v3发给一楼、二楼前台。两处各打印好一份，装进标着“09:00起用”的待发布文件袋，放在夹板之外，并回复收到。九点整，页面上线，两处从袋中取出v3，撤下夹板上的v2，完成后各回“v3已换用”。执行目录的v2也转为历史状态，批准记录继续留着。",
+        "协作草稿v4继续留在编辑区，管理员改完说明后若要采用，还需重新提交批准并设置未来生效点。为避免前台再从混合搜索结果取表，两个前台账号的首页增加了只读“当前受控表单”入口，直接指向发布目录；草稿仍可在协作区查阅，但不再作为前台默认入口。",
+        "周一九点零五，第一位访客来到一楼前台。小罗递出刚换上的v3，对方扫二维码后页面正常出现，再开始填写。小罗把撤下的v2收进历史文件袋，在袋口写下换用时间。A17、A18、A19的更正关联和原表，仍收在锁柜里的周日差错夹中。"
+      ],
+      "overallZh": "记录版本控制处理版本身份、草稿或批准状态、生效时间、受控分发、现场换用和被取代历史之间的可追溯关系。最新时间戳不等于当前有效版本。",
+      "conceptNameZh": "记录版本控制",
       "explanationParagraphsZh": [
-        "记录版本控制识别版本、状态与权威，并管理批准、分发、生效、废止及可追踪的变更历史。最新副本可能仍是草稿，旧版也可能需供审计或受控回退。可靠控制还要有唯一标识、权限、收讫确认、变更日志、权威来源和离线副本规则。"
+        "周日当前版是无二维码的v2；v3虽已批准，但要到周一09:00与二维码页面同时生效；v4继承v3二维码栏但仅是后续说明草稿。",
+        "周一先分发并另存待用v3，09:00现场换夹板后才确认换用。v2保留历史状态，误用v4记录与必要更正关联；受控入口改善取用路径，不能替代批准和生效判断。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "版本控制要让人能核对版本身份、批准状态、生效点、受控分发、现场换用和历史状态。",
+        "diagramTitle": "v2、v3、v4从周日到周一09:05的状态变化",
+        "diagramSteps": [
+          "从受控发布目录识别当前、已批准与草稿版本",
+          "用当前v2纠正周日误用v4的必要记录",
+          "在生效前分发并准备v3纸副本",
+          "09:00现场换用v3并确认执行状态",
+          "把v2与必要更正记录转入可追溯历史"
+        ],
+        "diagramStepNotes": [
+          "v2周日当前有效且无二维码；v3已批准待09:00；v4继承二维码栏但仍是草稿。",
+          "A17–A19必要到访信息转录到v2，有误版本仅作更正关联。",
+          "08:45两处打印v3，放入独立待发布袋；夹板上仍只有当前v2。",
+          "09:00两处同时换夹板，并回复“v3已换用”。",
+          "v2保留批准与已取代状态，更正记录保留必要编号和版本关系。"
+        ],
+        "mapping": [
+          "混合搜索结果 → 修改时间最新可能把草稿排在最前。",
+          "v3周五批准、周一09:00起用 → 批准与生效分开判断，二维码页面到生效时才可用。",
+          "两处前台的“已收到”与“已换用” → 分发状态和执行状态分开可追踪。",
+          "只读当前受控表单入口 → 改善取用路径但不替代状态控制。"
+        ],
+        "boundary": "版本控制不是改名、按时间排序或共享盘本身即可完成，也不要求所有办公室照搬工程配置管理制度。NASA资料是工程配置管理参照；TNA 2007材料仅作历史概念参考，已不现行，不能当作今日法规或认证要求。",
+        "reflection": "如果草稿继承了下一版的外观和二维码字段，又在搜索结果里排最前，你会怎样用批准、生效、分发和现场换用状态判断今天真正该执行哪一份？"
+      },
+      "referencesZh": [
+        {
+          "id": "nasa-cm",
+          "citation": "NASA. NASA Systems Engineering Handbook, §6.5: Configuration Management.",
+          "url": "https://www.nasa.gov/reference/6-5-configuration-management/",
+          "use": "支持唯一身份、批准变更、受控发布以及当前与历史状态追溯等工程配置管理实践；不宣称为通用办公室强制标准。"
+        },
+        {
+          "id": "tna-records-2007",
+          "citation": "The National Archives (2007, July revision). Requirements for Electronic Records Management Systems, 3: Reference Document.",
+          "url": "https://cdn.nationalarchives.gov.uk/documents/revised-reference-document-v2.pdf",
+          "use": "支持被取代状态、版本关系与历史追溯等概念参考；该材料为历史文件且已不现行，不作为今日法规或认证要求。"
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "review": "business-office-mixed-11-pdc-review.md",
+        "edits": [
+          "business-office-mixed-11-edit-pass1.json",
+          "business-office-mixed-11-edit-pass2.json",
+          "business-office-mixed-11-edit-pass3.json"
+        ]
       }
     },
     {
@@ -404,34 +935,110 @@
       "fieldCode": "0416",
       "fieldTitle": "Wholesale and retail sales",
       "fieldTitleZh": "批发与零售销售",
-      "title": "The Fruit Shop with the Fullest Shelves",
-      "titleZh": "货架最满的水果店",
-      "summary": "A fruit seller first fills every shelf, then empties them too far, before learning that speed matters only beside service and spoilage.",
-      "summaryZh": "果商先把每层货架塞满，又让它们空得过头，才发现速度必须同缺货与腐损一起判断。",
+      "title": "The Brake Rotors on the Shelf",
+      "titleZh": "架子上的刹车碟",
+      "summary": "After switching to deliveries every two weeks, Mira hears that three repair shops are waiting for stock. The next purchase order is still unsent.",
+      "summaryZh": "补货单改成两周一批后，米拉收到了三家维修店等货的消息，下一张采购单还没发出。",
       "storyParagraphs": [
-        "Fruit seller Yao Feng believed empty space frightened customers. He ordered a month's supply at once, and the shop glowed with pyramids of apples, pears, and berries. The display drew crowds during opening week. Behind the shop, however, workers carried out soft fruit each morning, while cold storage, rent, and tied-up cash consumed the apparent profit. The first week's abundance brought praise, and Yao used the cash to order an even larger second delivery.",
-        "After hearing that faster turnover was better, Yao cut stock to one day. Spoilage fell immediately and his ledger looked clean. Then rain blocked the mountain road. Apples and pears sold out before noon for three days, regular customers went elsewhere, and missed sales never appeared in the waste basket. A high speed created by chronic emptiness was not the success he had imagined. A mother who had promised apples for a school meal stopped asking after the second empty afternoon.",
-        "He began measuring each category over a period: cost of goods sold relative to average inventory, then the days inventory remained. Berries moved quickly but expired quickly; apples lasted longer and faced a three-day replenishment route. Festival demand and rain changed both. He wrote stockouts, discarded fruit, margin, and service complaints beside the ratio instead of letting one number judge the shop. He used beginning and ending stock to estimate the average, then checked whether a sale had been recorded at cost rather than retail price. The same turnover value could therefore describe a healthy berry trade or an apple shelf that failed customers.",
-        "Yao chose smaller, more frequent berry deliveries, a higher apple buffer before storms, and less space for a slow decorative melon. The change meant giving up the abundant display that had built his reputation. He removed one front pyramid and used a simple card to show the next delivery date. Some passers-by called the shop poor; cash stopped rotting in the back room. The revised ordering schedule required him to renegotiate the wholesaler's volume discount and accept a slightly higher price per crate. He reviewed the schedule weekly rather than treating the first calculation as a permanent optimum.",
-        "At month's end, the shelves were neither always full nor often bare. A profitable specialty pear stayed despite slower movement, while cheap fruit with repeated waste was reduced. Yao lifted the last apple from one crate, checked tomorrow's rain mark, and wrote the next arrival on the wooden stock tag rather than ordering another month. Beside the tag stood the old waste basket, scrubbed clean but kept where staff could still count what did not sell."
+        "In the first week of April, Mira spread the replenishment order for the current quarter for the e-bike brake-rotor category across the warehouse desk. For that same category and using the same cost basis, first-quarter opening inventory was €15,000, closing inventory was €9,000, and cost of goods sold for the quarter was €48,000. She wanted to reduce the amount of cash tied up in stock, so she used a simple opening-and-closing average as an approximation: average inventory €12,000, giving first-quarter inventory turnover of €48,000 ÷ €12,000 = 4 times.",
+        "Mira wrote 90 ÷ 4 ≈ 22.5 days in the corner of the first-quarter report, using 90 days for this calculation. She placed the supplier’s normal lead time and everyday demand for the common sizes beside the replenishment order, selecting this category for a limited trial. The large monthly batch on the original order became a delivery every two weeks; slow-moving sizes were reduced first, and fast-moving sizes were also trimmed by one layer. She sent out the April trial order and left the first-quarter turnover of 4 on the old report.",
+        "After two weeks of the trial, warehouse occupancy was indeed lower, but the two most common sizes each went out of stock for two days. An urgent order from the repair shop North Bridge Cycles had to wait that day, and two other repair shops also faced delays. One of them bought elsewhere rather than risk postponing a customer handover. Mira had been about to cut the next order again, but stopped her pen when she saw the lost purchase and the three waiting orders.",
+        "She kept the two-week cycle but raised the minimum stock level for the two fast-moving sizes, while leaving the slower sizes at the lower quantities. Using the same cost basis, she re-totaled the revised purchase order and estimated that the inventory investment would still be lower than under the old monthly-batch plan, but she no longer reduced every size by the same proportion. Supplier lead time stayed as written on the order, but she added stock back for the two fast-moving sizes.",
+        "At month-end review, Mira still kept the Q1 turnover of 4 and the 22.5-day figure on the first page. Beside them she recorded that each of the two sizes had been out of stock for two days, three repair shops had waited, one had bought elsewhere, along with margins by size and supplier lead time. She also reviewed several in-week inventory snapshots because the €12,000 average based only on €15,000 opening and €9,000 closing inventory could not show the movement in between. The write-off field was still blank; she left it to be completed after the stock check.",
+        "Before placing the next order, Mira rewrote the minimum stock levels for the two fast-moving brake rotors on their shelf cards. The purchase order still said “every two weeks,” but one fast-moving quantity she had previously cut was added back by one layer."
       ],
       "storyParagraphsZh": [
-        "果商姚丰相信空货架会吓跑顾客，因此每次一进就是一个月的量，苹果、梨与浆果堆成发亮的金字塔。开店头一周，丰盛陈列确实引来人群。可在后门，伙计每天抬走软烂水果，冷藏费、仓租和压住的现金也一点点吃掉看似漂亮的利润。头一周的丰盛确实换来称赞，姚丰又用当期现金订下更大一批货，使短期好处迅速变成更重承诺。",
-        "听说“卖得越快越好”，姚丰又把库存猛降到一天。腐烂立刻减少，账面干净许多。随后山路被雨阻断，苹果和梨连续三天中午前售罄，熟客转去别店；失去的销售从不会出现在废果筐里。由长期空架制造出的高速度，并不是他想象的成功。一位答应给学校午餐买苹果的母亲，第二个空架下午以后便不再来问。",
-        "他开始分品种看一段时期：售出商品成本相对平均库存有多大，再换算水果在店里停留多少天。浆果卖得快也坏得快；苹果能久放，补货路却要三天。节庆和降雨又会同时改变需求与到货。他把缺货、弃果、利润和顾客抱怨都写在比率旁，不让一个数字独自裁决。他用期初与期末库存估算平均量，还核对售出商品是否按成本而非零售价记录，免得比率被账法扭曲。同一个周转数字，可能是健康的浆果生意，也可能是让顾客失望的苹果空架。",
-        "姚丰改成浆果少量多进，暴雨前提高苹果缓冲量，又缩掉长期慢销的装饰甜瓜。这样做意味着放弃让他成名的丰盛外观。他撤掉门口一座果塔，改用小牌写明下一次到货日。有人路过时笑店铺寒酸，后仓的现金却不再随水果一起腐烂。新的进货节奏迫使他放弃批发商的整批折扣，每箱多付一些，也要承认满架并不等于稳健。他每周复核进货节奏，不把第一次计算当成永久最优答案。",
-        "月底，货架不再永远满，也不再经常空。利润高的特种梨即使慢一些仍被保留，便宜却反复报损的水果则继续缩减。姚丰从木箱取出最后一只苹果，看一眼明日雨记，在库存木牌上写下到货时辰，没有再订整整一个月。木牌旁仍放着洗净的旧废果筐，伙计每天也在那里记录没有卖掉的东西。"
+        "四月第一周，米拉把电助力车刹车碟这一品类的这一季度补货单摊在仓库桌上。第一季度同一品类、同一成本口径下，期初库存15,000欧元、期末9,000欧元，同期销售成本48,000欧元。她想少压一些库存资金，于是先用期初期末简单平均作近似：平均12,000，第一季度周转48,000÷12,000=4次。",
+        "米拉在第一季度报表页角写下90÷4≈22.5天，暂按90天作这次换算。她又把供应商正常交期和常用规格的日常需求放到补货单旁，选出这一品类作小范围试行。原单上每月一次的大批量被改成两周一批，慢动规格先减量，快销规格也暂时压低一层。她发出了这张四月试行单，把第一季度的4次周转留在旧报表上。",
+        "试行两周后，仓库占用确实下降，但两个最常用规格分别各断货两天。维修店“北桥车房”的急单当天只能等，另外两家维修店也遇到延迟，其中一家为了不耽误交车，临时转去别家采购。米拉原本正准备继续减少下一批数量，看到转购记录和三个等待订单后，把笔停在采购单上。",
+        "她保留两周一批，却把两个快销规格的最低库存线往上调，慢动规格仍维持较低数量。她按同一成本口径重新汇总新版采购单，预计占用库存资金仍低于原来的月批量方案，但不再让所有规格按同一幅度下降。供应商交期仍照旧写在单上，两个快销规格的数量却被她加了回来。",
+        "月底复盘时，米拉仍把第一季度4次周转和22.5天留在首页，同时并列记录两个规格各两天缺货、三家维修店等待、一家转购、各规格毛利和供应交期。她又补看了几次周内库存快照，因为只用期初15,000和期末9,000得到的12,000平均数看不到中间波动。报废一栏还空着，她留待清点确认后再填。",
+        "下一次下单前，米拉把两个快销刹车碟的最低库存线重新写到货架卡上。采购单仍标着“两周一批”，其中一个原本被删减的快销数量被加回一层。"
       ],
       "conceptName": "Inventory turnover",
       "conceptNameZh": "库存周转",
       "explanationParagraphs": [
-        "Inventory turnover measures how often average inventory is sold or used, commonly as cost of goods sold divided by average inventory; days inventory is its time-based counterpart. Low turnover may indicate excess, obsolescence, or holding cost, while very high turnover may reflect stockouts and underinvestment. Interpretation requires shelf life, replenishment time, margin, seasonality, and service goals."
+        "Inventory turnover is commonly calculated as cost of goods sold for a period divided by average inventory measured at cost for the same period. Here, only the Q1 e-bike brake-rotor category is used: €48,000 ÷ [(€15,000 + €9,000)/2] = 4 times. Using 90 days for the calculation, inventory days are about 90 ÷ 4 = 22.5 days.",
+        "An opening-and-closing average is only an approximation. It does not prove actual turnover after the April trial and cannot determine replenishment frequency on its own. Turnover changes must be viewed alongside stockouts, lead time, margin, write-offs, and service levels."
       ],
       "explanationParagraphsZh": [
-        "库存周转常用销售成本除以平均库存，衡量库存被售出或使用的速度，库存天数则从时间角度表达。低周转可能意味着积压、过时与持有成本，过高也可能来自缺货和投入不足。解释时还须结合保质期、补货时间、利润、季节与服务目标。"
+        "库存周转通常用同期间销售成本÷成本计价平均库存。本例只看Q1电助力车刹车碟品类：48,000÷[(15,000＋9,000)/2]＝4次；按演算90天计算，库存天数约90÷4＝22.5天。",
+        "期初期末平均只是近似，不能证明四月试行后的真实周转，也不能单独决定补货频率。周转变化必须和缺货、交期、毛利、报废及服务水平一起观察。"
       ],
-      "mode": "mechanism-fable",
+      "overall": "Inventory turnover relates cost of goods sold to average inventory over the same period. It helps assess cash tied up, while replenishment decisions also depend on size-level demand, lead time, and stockouts: one less layer of stock may mean another day of waiting for a customer.",
+      "overallZh": "库存周转把同期间销售成本与平均库存放在一起。它能帮助检查资金占用，补货决定还要结合规格需求、交期和缺货：少留一层货，可能也意味着让客户多等一天。",
+      "module": {
+        "intro": "Inventory turnover should be calculated with data from the same period, category, and cost basis. A historical ratio can help motivate a replenishment trial, but it cannot by itself prove that a new plan is faster or better.",
+        "diagramTitle": "How Q1 turnover feeds into a limited replenishment trial",
+        "diagramSteps": [
+          "Fix the same category, period, and cost basis",
+          "Approximate average inventory from opening and closing inventory",
+          "Calculate Q1 turnover and approximate inventory days",
+          "Use cash tied up, lead time, and demand to run a limited trial",
+          "Use stockouts and service outcomes to revise the next purchase order"
+        ],
+        "diagramStepNotes": [
+          "Q1 covers only the e-bike brake-rotor category: cost of goods sold €48,000, opening inventory €15,000, and closing inventory €9,000, all measured at cost.",
+          "Average inventory ≈ (€15,000 + €9,000)/2 = €12,000; the two-point average is only a simplified approximation.",
+          "€48,000/€12,000 = 4 times; using 90 days, 90/4 = 22.5 days. This describes Q1 only.",
+          "Mira combines that figure with cash tied up, normal lead time, and size-level demand to trial two-week replenishment rather than translating turnover of 4 directly into an “optimal two weeks.”",
+          "After the two fast-moving sizes are each out of stock for two days, she raises their minimum levels and continues tracking stockouts, lead time, margins, write-offs, and inventory snapshots."
+        ],
+        "mapping": [
+          "€48,000 cost of goods sold → Q1 turnover numerator for the brake-rotor category.",
+          "€15,000 and €9,000 → opening and closing inventory for the same category at cost.",
+          "4 times and 22.5 days → approximate Q1 historical turnover and inventory days, not April trial results.",
+          "Each of two sizes out of stock for two days → visible service cost of the small-batch trial.",
+          "Higher minimum level for fast movers → restored buffer while keeping the two-week cycle."
+        ],
+        "boundary": "Inventory turnover should not substitute sales revenue for cost of goods sold, and a low inventory figure on one day should not stand for an entire period. Opening-and-closing average inventory is only an approximation; when inventory fluctuates materially, more observation points are needed. Higher turnover can coincide with stockouts, expediting costs, or margin changes. Write-offs should also be tracked, but when no actual write-off result exists it should not be assumed to be zero or treated as evidence of improvement.",
+        "reflection": "If next quarter’s turnover rises but stockouts of fast-moving sizes and customer purchases elsewhere also increase, which inventory buffers would you keep?"
+      },
+      "moduleZh": {
+        "intro": "库存周转要用同一期间、同一品类、同一成本口径的数据计算；得到的历史比率可以帮助提出补货试验，但不能直接证明新方案更快或更优。",
+        "diagramTitle": "Q1周转率怎样进入一次小范围补货试行",
+        "diagramSteps": [
+          "锁定同一品类、期间和成本口径",
+          "用期初期末库存近似平均库存",
+          "计算Q1周转率和演算库存天数",
+          "结合资金占用、交期与需求做小范围试行",
+          "用缺货与服务结果修正下一张采购单"
+        ],
+        "diagramStepNotes": [
+          "Q1仅看电助力车刹车碟：销售成本48,000，期初15,000、期末9,000，均按成本计价。",
+          "平均库存≈(15,000＋9,000)/2＝12,000；两端平均只是简化近似。",
+          "48,000/12,000＝4次；按90天演算，90/4＝22.5天，这只描述Q1。",
+          "米拉据此结合资金占用、正常交期与规格需求，试行两周一批，而非把4次直接转换成“最优两周”。",
+          "两个快销规格分别各断货两天后，她提高最低库存线，并继续跟踪缺货、交期、毛利、报废和库存快照。"
+        ],
+        "mapping": [
+          "48,000欧元销售成本 → Q1该刹车碟品类的周转分子。",
+          "15,000与9,000欧元 → 同品类期初期末成本库存。",
+          "4次与22.5天 → Q1历史周转近似，不是四月试行结果。",
+          "两个规格各断货两天 → 小批量试行的可见服务代价。",
+          "提高快销最低线 → 在保留两周补货的同时恢复缓冲。"
+        ],
+        "boundary": "库存周转不能用销售收入替代销售成本，也不能用某一日低库存代表整个期间。期初期末平均只是近似，波动明显时需要更多观察点。更高周转可能伴随缺货、加急成本或毛利变化；报废也应跟踪，但没有实绩时不能假定为零或当作改善证据。",
+        "reflection": "如果下一季度周转率升高，但快销规格的缺货和客户转购也增加，你会保留哪些库存缓冲？"
+      },
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "references": [
+        {
+          "id": "openstax-accounting-10-5",
+          "citation": "OpenStax. Principles of Accounting, Volume 1: Financial Accounting, §10.5, Examine the Efficiency of Inventory Management Using Financial Ratios.",
+          "url": "https://openstax.org/books/principles-financial-accounting/pages/10-5-examine-the-efficiency-of-inventory-management-using-financial-ratios",
+          "use": "Supports calculating inventory turnover as cost of goods sold divided by average inventory and the trade-off between holding too much and too little inventory."
+        }
+      ],
+      "referencesZh": [
+        {
+          "id": "openstax-accounting-10-5",
+          "citation": "OpenStax. Principles of Accounting, Volume 1: Financial Accounting, §10.5, Examine the Efficiency of Inventory Management Using Financial Ratios.",
+          "url": "https://openstax.org/books/principles-financial-accounting/pages/10-5-examine-the-efficiency-of-inventory-management-using-financial-ratios",
+          "use": "支持销售成本除平均库存与过多、过少库存的取舍。"
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
@@ -490,38 +1097,110 @@
       "fieldCode": "0416",
       "fieldTitle": "Wholesale and retail sales",
       "fieldTitleZh": "批发与零售销售",
-      "title": "Three Fares on the Same Tide",
-      "titleZh": "同一班潮水的三种船票",
-      "summary": "A one-sailing ferry fills its seats with three prices, then discovers who cannot reach the cheap choices.",
-      "summaryZh": "每日一班的渡船用三种价格坐满舱位，随后才看见谁根本够不到便宜选择。",
+      "title": "The Same Saturday Pass",
+      "titleZh": "同一张周六通行证",
+      "summary": "The front desk is waiting to print the sign: should the same Saturday pass stay at €10 for everyone, or become €12 standard and €7 for students?",
+      "summaryZh": "前台等着印价牌：同一张周六通行证，要继续统一10欧元，还是改成标准12、学生7欧元？",
       "storyParagraphs": [
-        "The tide ferry could sail only once each day. Every seat crossed the same water, yet ticket clerk Rui sold three colours: green for purchases seven days ahead, red for refundable travel on the day, and blue for island residents. The system filled quiet-season boats and gave the owner enough revenue to maintain the engine.",
-        "A travelling merchant saw an islander beside him pay half his fare and accused Rui of cheating. The owner explained that advance buyers surrendered flexibility and helped reveal whether sailing was worthwhile; refundable buyers paid to preserve options; frequent residents received access the island depended on. The added cost of carrying each passenger was nearly the same. The prices followed different willingness to pay and conditions.",
-        "The arrangement soon exposed a crack. Older residents who could not use the advance office arrived on sailing day and paid the highest fare. Agents bought green tickets and resold them. During a storm warning, urgent travellers had no alternative and red prices rose sharply. A menu that looked voluntary on paper was not equally reachable in practice.",
-        "The owner crossed out part of the peak revenue before rewriting the profitable rule. He capped emergency-day fares, opened a staffed advance window, and made discounted tickets transferable only under stated household rules rather than through a hidden resale market. The changes reduced revenue enough to delay repainting the ferry. They also made the cheap option usable by people who had previously seen it only on a poster. Rui spent evenings teaching residents to use the window and posted the cap where storm travellers could see it before joining the queue.",
-        "Not every price difference was treated alike. Extra cargo handling and private cabins reflected different costs; the three ordinary-seat fares did not. The owner checked whether groups could be separated, whether resale undermined the scheme, whether market power left travellers trapped, and whether local law permitted the categories. Some variation expanded access; some merely extracted more from urgency. The review included disabled travellers and workers paid only after the day's crossing, whose constraints did not fit the original categories.",
-        "On the first day of the new rules, a merchant still paid more than the island teacher beside him, but both could point to the conditions printed in large type. Rui recorded complaints and which options buyers actually used, because a price menu could change behaviour as well as reveal it.",
-        "Before departure, Rui tore green, red, and blue stubs from the passengers' hands. She dropped all three colours into the same wooden box. When the ferry rose with the tide, the scraps shifted together across its bottom."
+        "On Wednesday afternoon, Irene had to send the day-pass page for the next two Saturdays live by Thursday, while the front desk was also waiting to print the new price sign. The space had 90 places, and every day pass included the same opening hours, workbench, and basic tools. Nearby substitutes were limited, giving the space some pricing discretion. Everyone had previously paid a uniform €10, and she did not want to lower the price for everyone simply to fill empty places when some visitors were already willing to pay €10.",
+        "She and a colleague used the same scenario demand relationship to forecast both pricing options. If the uniform €10 price stayed, they predicted 45 regular visitors and 25 students, for 70 passes and €700 of revenue. The listed variable cost was €2 per entrant for both groups, so forecast contribution was €700 - 70 × €2 = €560. The 70 passes and €560 were forecast baseline figures, not sales that had already occurred.",
+        "The second page showed a standard price of €12 and a student price of €7. Under the same demand relationship, changing prices was forecast to reduce regular visitors to 40 and raise students to 35, for 75 passes in total. Revenue would be 40 × €12 + 35 × €7 = €725; subtracting the listed €150 of variable cost, 75 × €2, gave forecast contribution of €575. Irene circled the €15 difference and noted beside it that both columns deducted only €2 per person; fixed facility costs and any additional verification time had not been included.",
+        "Irene selected the segmented-price option and entered a trial period of just two Saturdays. The existing ticketing process already had named QR codes and student-status checks; after checking it, she kept transfer disabled so lower-priced passes could not simply be resold to someone else. She stated on the page that both passes included the same workbench, tools, and opening hours, then handed the €12 standard / €7 student sign to the front desk. The old €10 sign was set aside.",
+        "On the first Saturday morning, a regular visitor who had always bought the €10 pass chose not to enter after seeing €12. He asked at the desk, “If the workbench and tools are the same, why am I paying 12 while students pay 7?” At the same time, student-pass sales were higher than before. Irene recorded his decision not to buy, the fairness concern, and actual ticket sales in the day’s operating record instead of substituting the forecast €575 for the real outcome.",
+        "After closing, Irene did not permanently laminate the new price sign. She slipped it back into the front-desk folder and wrote “test one more Saturday” in the upper-right corner. The old uniform €10 sign was still lying on the desk, and the transfer button on the named-ticket page remained disabled."
       ],
       "storyParagraphsZh": [
-        "潮汐渡船每天只能开一班，每个座位穿过的水面完全相同，售票员瑞娘却卖三种颜色的票：提前七日购买是绿票，当天可退改是红票，岛上常住者另用蓝票。这个办法让淡季船舱也能坐满，收入足够维护发动机。",
-        "外地商人看见邻座岛民只付自己一半，指责瑞娘欺骗。船主解释，提前购票者放弃灵活，也帮助判断是否值得开船；可退票的乘客花钱保留选择；居民低价则维持岛上日常往返。多载一名普通乘客的额外成本几乎相同，价格差主要来自支付意愿与购买条件。",
-        "裂缝很快出现。不会使用预售柜台的老人只能当天来，反而付最高价；票贩买走绿票再转售；风暴预警时，急着过海的人没有别的选择，红票价格骤升。纸面上看似人人可选的菜单，现实中并非所有人都能同样够到。",
-        "船主先从账上划掉一部分高峰收入，随后重写那套盈利规则。他给紧急天气票设上限，增开有人值守的预售窗，并让折扣票只按公开家庭规则转让，不再留给隐蔽倒卖。收入下降，渡船重新刷漆被推迟；从前只能在海报上看见便宜票的人，终于能真正买到。瑞娘连续几晚教居民使用预售窗，还把上限贴在排队以前就能看见的位置。",
-        "不同价格差异也不能混为一谈。额外搬货与独立舱位来自不同成本，三种普通座票却不是。船主逐项检查能否区分乘客、转售是否破坏安排、市场力量是否让旅客无处可去，以及当地法律是否允许这些类别。有些差异扩大使用，有些只从急需中拿走更多。复核还纳入行动不便者与过海后才领日薪的工人，他们的限制原本不属于任何票类。",
-        "新规第一天，商人仍比邻座岛上教师付得多，两人却都能指向大字印出的条件。瑞娘还记录投诉和顾客真正使用了哪些选项，因为价格菜单不仅辨认需求，也会改变人的行为。",
-        "开船以前，瑞娘从乘客手里撕下绿、红、蓝三色票根，全部投入同一个木盒。渡船随潮水抬起时，三种纸片在盒底一起滑向船尾。"
+        "周三下午，艾琳要在周四前把接下来两个周六的创客空间日票页面送去上线，前台也等着打印新价牌。空间有90个位置，所有日票使用相同开放时间、工作台和基础工具；附近替代选择有限，因此空间有一定定价余地。过去所有人统一10欧元，她不想为了填空位就把原本愿意付10欧元的人全部一起降价。",
+        "她和同事用同一套场景需求关系分别预测两个价格方案。若仍统一10欧元，预计普通访客45人、学生25人，共70张，收入700欧元；每位入场列出的可变成本都是2欧元，因此演算贡献为700－70×2＝560欧元。这些70张和560欧元都是预测基准，不是已经发生的售票结果。",
+        "另一版页面写成标准12欧元、学生7欧元。价格改变后，同一需求关系预测普通访客降到40人、学生升到35人，共75张；收入40×12＋35×7＝725欧元，扣列出的75×2＝150欧元可变成本后，演算贡献575欧元。艾琳圈出15欧元差额，又在旁边注明：两栏都只扣每人2欧元，场地固定费用和可能增加的核验工时尚未计入。",
+        "艾琳选了分组方案，试行期限只填两个周六。原有票务流程已有实名二维码和学生资格核对，她核查过后保留了关闭的转让按钮，低价票不能直接转给别人。她在页面上写明两种票使用相同工作台、工具和开放时间，将标准12欧元、学生7欧元的价牌交给前台，旧的10欧元牌子被放到一旁。",
+        "第一个周六上午，一位过去一直买10欧元日票的普通访客看到12欧元后没有进场。他问前台：“工位和工具都一样，为什么我现在12，学生是7？”与此同时，学生票销量比过去高。艾琳把他的放弃购买、这条价格公平质疑和当天实际售票一起记下，没有拿预测的575欧元替代真实结果。",
+        "关门后，艾琳没有把新价牌永久塑封，只把它夹回前台文件夹，右上角写着“再测一个周六”。旧的统一10欧元价牌仍放在桌上，实名票页面的转让按钮继续保持关闭。"
       ],
       "conceptName": "Price discrimination",
       "conceptNameZh": "价格歧视",
       "explanationParagraphs": [
-        "Price discrimination charges different effective prices for comparable goods or services when cost differences do not fully explain the gap, using group, timing, quantity, willingness to pay, or self-selection terms. It usually requires market power and limits on resale. It may expand access and output or extract more surplus and create unfairness, so it must be distinguished from cost-based pricing and reviewed for legality, privacy, and accessibility."
+        "Price discrimination means charging different prices for comparable products or services when the difference cannot be fully explained by cost differences. It usually requires some pricing power and limits on resale between the differently priced groups.",
+        "In this example, the uniform €10 option has forecast contribution of €560, while the €12/€7 segmented option has forecast contribution of €575. Both subtract only the listed €2 variable cost per entrant, so neither is complete profit; the demand numbers are scenario forecasts rather than observed results."
       ],
       "explanationParagraphsZh": [
-        "价格歧视是在成本差异不足以解释时，对可比商品或服务按群体、时机、数量、支付意愿或自选条款收取不同有效价格，通常需要市场力量与转售限制。它可能扩大使用与产出，也可能抽取更多剩余或造成不公，因此须同成本定价区分，并检查法律、隐私与可及性。"
+        "价格歧视指对可比产品或服务收取不同价格，而价格差不能由成本差充分解释。它通常需要一定定价空间，并要求不同价格之间的转售受到限制。",
+        "本例统一10欧元方案预测贡献560；12/7欧元分组方案预测贡献575。两者只扣列出的每人2欧元可变成本，并非完整利润；需求数字也只是场景演算，不是实测。"
       ],
-      "mode": "mechanism-fable",
+      "overall": "When identifiable groups pay different prices for the same service, examine whether costs explain the difference and whether lower-priced access can be resold. Forecast sales and contribution for two options are only estimates; the decision also needs additional costs, customer feedback, and accessibility.",
+      "overallZh": "同一服务按可识别群体收取不同价格时，需要看价格差是否由成本解释，以及低价能否转售。两种方案的销量和贡献只是预测，实际决定还要查看额外费用、顾客反馈和可及性。",
+      "module": {
+        "intro": "Segmented pricing requires comparable service, a price difference not fully explained by cost, some pricing discretion, and a way to limit simple resale from the lower-priced group to the higher-priced group. Actual demand still has to validate the business result.",
+        "diagramTitle": "How uniform and segmented prices are compared under the same demand relationship",
+        "diagramSteps": [
+          "Confirm that both groups receive the same comparable service",
+          "Hold the listed unit variable cost equal across groups",
+          "Forecast group volumes and contribution under the uniform price",
+          "Forecast new volumes and contribution under segmented prices",
+          "Run the two-Saturday test and observe actual sales, resale limits, and fairness feedback"
+        ],
+        "diagramStepNotes": [
+          "Every pass includes the same opening hours, workbench, and basic tools, with 90 places available.",
+          "The listed variable cost is €2 per entrant for both groups, so that cost does not explain the €12 versus €7 price difference.",
+          "At a uniform €10, the forecast is 45 regular visitors and 25 students, 70 passes total; revenue €700 and contribution €700 - €140 = €560.",
+          "At €12/€7, the forecast is 40 regular visitors and 35 students, 75 passes total; revenue €725 and contribution €725 - €150 = €575. Fixed costs and any extra verification labor are excluded.",
+          "Named QR codes and status checks limit resale; on the first Saturday a regular visitor declines to buy and raises a fairness concern, so the second Saturday still has to be tested."
+        ],
+        "mapping": [
+          "Old uniform €10 sign → forecast baseline pricing option.",
+          "€12 standard / €7 student page → segmented prices for the same service.",
+          "€2 variable cost per entrant → same listed variable cost for both groups.",
+          "€560 and €575 → forecast contribution under the two scenarios, not full profit or observed results.",
+          "New sign left unlaminated → the two-Saturday test is still incomplete."
+        ],
+        "boundary": "Student status is only an identifiable grouping variable; it does not prove identical willingness to pay within the group. The demand figures are scenario assumptions, and actual sales may differ. The €560 and €575 figures subtract only the listed unit variable cost, so fixed costs and any incremental verification cost require separate consideration. Real-world use also depends on actual market power, resale conditions, fairness and accessibility, and applicable rules; this story does not claim that a particular practice is necessarily legal or illegal. Only two options are compared here; no optimal price has been established.",
+        "reflection": "If actual contribution on the second Saturday still falls short of the forecast €575 but seat utilization rises, which additional costs and customer reactions would you examine before keeping the segmented prices?"
+      },
+      "moduleZh": {
+        "intro": "分组定价需要同时满足可比服务、价格差不能由成本充分解释、存在一定定价空间，并能限制低价票向高价群体简单转售；经营结果仍要用实际需求验证。",
+        "diagramTitle": "统一价格与分组价格怎样在同一需求关系下比较",
+        "diagramSteps": [
+          "确认两组购买的是同一可比服务",
+          "锁定两组相同的列出单位可变成本",
+          "预测统一价格下的分组销量与贡献",
+          "预测分组价格下的新销量与贡献",
+          "上线两周测试并观察真实销量、转售与公平反馈"
+        ],
+        "diagramStepNotes": [
+          "所有人使用相同开放时间、工作台和基础工具，共90个位置。",
+          "两组列出的每位可变成本都是2欧元，因此12与7欧元差异不能由该成本解释。",
+          "统一10欧元预测普通45、学生25，共70张；收入700，贡献700－140＝560。",
+          "分组12／7欧元预测普通40、学生35，共75张；收入725，贡献725－150＝575；固定费用及可能新增核验工时未计入。",
+          "实名二维码和资格核验限制转售；首日普通访客放弃并提出公平质疑，第二个周六仍需继续测试。"
+        ],
+        "mapping": [
+          "统一10欧元旧价牌 → 预测基准方案。",
+          "标准12欧元／学生7欧元 → 同一服务的分组价格。",
+          "每人2欧元可变成本 → 两组相同、仅用于列出贡献计算。",
+          "560与575欧元 → 两种预测方案的贡献，不是完整利润或实测结果。",
+          "未永久塑封的新价牌 → 两周测试尚未完成。"
+        ],
+        "boundary": "学生身份只是可识别分组变量，不能证明组内每个人的支付意愿。演算需求只是场景假设，实际销量可能不同；560和575只扣列出的单位可变成本，固定费用和任何额外核验成本需另看。现实采用前还要结合市场力量、转售条件、公平与可及性以及适用规则，本故事不宣称某种做法当然合法或非法。这里只比较两个方案，并未求出最优价格。",
+        "reflection": "如果第二个周六的实际贡献没有达到预测575，但席位利用率提高，你还需要看哪些成本与顾客反应再决定是否保留分组价？"
+      },
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "references": [
+        {
+          "id": "mit-ellison-2022-lecture-3",
+          "citation": "Ellison, G. (2022). Industrial Organization I, Lecture 03: Price Discrimination, Part 1. MIT OpenCourseWare.",
+          "url": "https://ocw.mit.edu/courses/14-271-industrial-organization-i-fall-2022/resources/14271-f22-lecture-3-version-2_mp4/",
+          "use": "Supports charging different unit prices, grouping consumers, the role of market power, and constraints on resale."
+        }
+      ],
+      "referencesZh": [
+        {
+          "id": "mit-ellison-2022-lecture-3",
+          "citation": "Ellison, G. (2022). Industrial Organization I, Lecture 03: Price Discrimination, Part 1. MIT OpenCourseWare.",
+          "url": "https://ocw.mit.edu/courses/14-271-industrial-organization-i-fall-2022/resources/14271-f22-lecture-3-version-2_mp4/",
+          "use": "支持不同单位价格、消费者分组、市场力量与转售约束。"
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,

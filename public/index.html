@@ -63,11 +63,13 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.225" />
-    <link rel="stylesheet" href="/map3d.css?v=0.1.225" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.291" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.291" />
+    <link rel="stylesheet" href="/site-shell.css?v=0.1.291" />
+    <script src="/site-shell.js?v=0.1.291" defer></script>
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
-  <body>
+  <body data-mapkai-page="main">
     <header class="topbar" aria-label="Primary navigation">
       <a class="brand" href="/" data-route="/">
         <img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" />
@@ -81,13 +83,13 @@
           <a href="/explore" data-route="/explore">Explore</a>
           <a href="/map" data-route="/map">Knowledge Map</a>
           <div class="nav-learning">
-            <a class="nav-learning-trigger" href="/learning" data-route="/learning" data-i18n="navLearning">Learning</a>
+            <a class="nav-learning-trigger" href="/categories" data-route="/categories" data-i18n="navLearning">Learning</a>
             <div class="nav-learning-menu" aria-label="Learning paths">
-              <a href="/learning/emba" data-i18n="navEmba">EMBA</a>
+              <!-- EMBA public navigation is paused; course content is retained. -->
               <a href="/categories" data-route="/categories" data-i18n="navQuickPickups">General Knowledge Quick Pickups</a>
             </div>
           </div>
-          <a class="nav-utility" href="/pdc" data-route="/pdc">PDC</a>
+          <a class="nav-toolbox" href="/toolbox">MapKAI Toolbox</a>
           <a href="/about" data-route="/about">About</a>
         </nav>
         <div class="nav-preferences">
@@ -117,6 +119,18 @@
             <a class="button primary" href="/explore" data-route="/explore" data-i18n="homePrimary">Start exploration</a>
           </div>
         </div>
+        <section class="home-section speaking-recommendation" aria-labelledby="speaking-recommend-title">
+          <div class="recommend-orb" aria-hidden="true"></div>
+          <div class="recommend-copy">
+            <p class="eyebrow" data-i18n="speakingRecommendEyebrow">RECOMMENDED · SPEAKING STUDIO</p>
+            <h2 id="speaking-recommend-title" data-i18n="speakingRecommendTitle">Your stories. A conversation in English.</h2>
+            <p data-i18n="speakingRecommendCopy">Bring a little background, or jump into a spontaneous chat. Practise speaking with an AI host, follow the transcript, and reflect together when you finish.</p>
+            <div class="recommend-actions">
+              <a class="button primary" data-speaking-recommend href="/speaking/en/" data-i18n="speakingRecommendStart">Start a conversation ↗</a>
+              <a class="button secondary" data-toolbox-recommend href="/toolbox/en/" data-i18n="speakingRecommendTools">Explore Toolbox ↗</a>
+            </div>
+          </div>
+        </section>
         <section class="home-section top-rated-story-section" id="topRatedStories" aria-live="polite" hidden></section>
         <section class="home-section" hidden>
           <div class="section-heading compact">
@@ -177,7 +191,7 @@
               <h2>Need a structured decision room?</h2>
               <p>PDC is a separate council-style thinking tool for decisions with trade-offs, disagreement, or timing pressure.</p>
             </div>
-            <a class="button secondary" href="/pdc" data-route="/pdc">Open PDC</a>
+            <a class="button secondary" href="/toolbox/pdc" data-route="/toolbox/pdc">Open PDC</a>
           </article>
         </section>
         <section class="home-section home-trust-line" hidden>
@@ -357,7 +371,7 @@
           </section>
           <section class="legal-block">
             <h2 data-i18n="aiTransparencyWhereTitle">Where AI may be involved</h2>
-            <p data-i18n="aiTransparencyPdc">Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses content stored in advance.</p>
+            <p data-i18n="aiTransparencyPdc">Public PDC uses AI to draft council discussion and summaries. The optional example uses prepared content.</p>
             <p data-i18n="aiTransparencyFallback">If a live provider is unavailable, PDC can show fallback or prepared text. The PDC interface alone does not mean every line was generated live.</p>
           </section>
           <section class="legal-block">
@@ -389,8 +403,9 @@
         </div>
       </section>
 
-      <section class="page pdc-entry-page" id="pdcEntry" data-page="/pdc">
+      <section class="page pdc-entry-page" id="pdcEntry" data-page="/toolbox/pdc">
         <div class="pdc-entry-shell">
+          <nav class="toolbox-breadcrumb" aria-label="Toolbox"><a href="/toolbox/" data-toolbox-return>← MapKAI Toolbox</a><span>/</span><span data-i18n="pdcRoomLabel">PDC Decision Room</span></nav>
           <section class="pdc-entry-hero">
             <p class="eyebrow" data-i18n="pdcEntryEyebrow">PDC Experience</p>
             <h1 data-i18n="pdcEntryTitle">Navigate Your Thinking with a Structured Council</h1>
@@ -399,29 +414,23 @@
               PDC helps you examine one real decision through structured disagreement, then turn the discussion into a clearer decision memo.
             </p>
           </section>
-          <section class="pdc-access-card" aria-labelledby="pdc-access-title">
+          <section class="pdc-access-card" aria-labelledby="pdc-start-title">
             <div>
-              <p class="eyebrow">Public Demo</p>
-              <p class="content-label" data-i18n="contentLabelPrepared">Prepared content</p>
-              <h2>Demo Mode</h2>
-              <p>Explore a prepared PDC case before entering your own question.</p>
-              <p class="pdc-demo-note">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
-              <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo</button>
+              <h2 id="pdc-start-title" data-i18n="pdcOpenCouncil">Discuss my question</h2>
+              <p data-i18n="pdcOpenCopy">Bring a real decision. Start now, continue as needed, and ask for a summary when you are ready.</p>
+              <button class="button primary" type="button" data-pdc-open-council data-i18n="pdcOpenCouncil">Discuss my question</button>
+              <p class="trust-note" data-i18n="pdcSessionTrust">Free and open to everyone. No account or access code required. Please avoid sensitive or confidential information.</p>
             </div>
             <div>
-              <p class="eyebrow">Access Code / 访问码</p>
-              <h2 id="pdc-access-title">Enter PDC</h2>
-              <form class="pdc-access-form" data-pdc-access-form>
-                <label>
-                  <span>Access code</span>
-                  <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
-                </label>
-                <button class="button primary" type="submit">Enter PDC / 进入 PDC</button>
-                <p class="pdc-access-status" aria-live="polite"></p>
-              </form>
+              <p class="eyebrow" data-i18n="pdcPublicDemo">Public Demo</p>
+              <p class="content-label" data-i18n="contentLabelPrepared">Prepared content</p>
+              <h2 data-i18n="pdcDemoMode">Demo Mode</h2>
+              <p data-i18n="pdcDemoIntro">Explore a prepared PDC case before entering your own question.</p>
+              <p class="pdc-demo-note" data-i18n="pdcDemoHint">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
+              <button class="button secondary" type="button" data-pdc-watch-demo data-i18n="pdcWatchDemo">Watch Demo</button>
             </div>
           </section>
-          <p class="interaction-disclosure" data-i18n="pdcAiDisclosure">Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses stored content. Review outputs before acting.</p>
+          <p class="interaction-disclosure" data-i18n="pdcAiDisclosure">AI drafts the council discussion and summary. The optional example uses prepared content. Review outputs before acting.</p>
           <section class="pdc-entry-demo" aria-labelledby="pdc-how-title">
             <div class="pdc-entry-section-head">
               <p class="eyebrow" data-i18n="pdcHowEyebrow">How it works</p>
@@ -457,13 +466,14 @@
         </div>
       </section>
 
-      <section class="page pdc-page" id="pdcPilot" data-page="/pdc-pilot">
+      <section class="page pdc-page" id="pdcPilot" data-page="/toolbox/pdc/session">
+        <nav class="toolbox-breadcrumb session-breadcrumb" aria-label="Toolbox"><a href="/toolbox/" data-toolbox-return>← MapKAI Toolbox</a><span>/</span><a href="/toolbox/pdc" data-route="/toolbox/pdc" data-i18n="pdcRoomLabel">PDC Decision Room</a></nav>
         <div class="pdc-shell" data-pdc-root>
           <section class="pdc-card" aria-live="polite">
-            <p class="eyebrow">Private Pilot</p>
+            <p class="eyebrow" data-i18n="pdcSessionEyebrow">PDC Council</p>
             <h1>MapKAI PDC</h1>
-            <p class="pdc-subtitle">A private AI decision council for structured reflection.</p>
-            <p class="trust-note">Checking your private access link...</p>
+            <p class="pdc-subtitle" data-i18n="pdcSessionSubtitle">A structured council debate for clearer decisions.</p>
+            <p class="trust-note" data-i18n="pdcSessionTrust">Free and open to everyone. No account or access code required. Please avoid sensitive or confidential information.</p>
           </section>
         </div>
       </section>
@@ -722,10 +732,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.225"></script>
-    <script src="/content/management-column.js?v=0.1.225"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.225"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.225"></script>
-    <script src="/script.js?v=0.1.225"></script>
+    <script src="/content/field-fables.js?v=0.1.291"></script>
+    <script src="/content/management-column.js?v=0.1.291"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.291"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.291"></script>
+    <script src="/script.js?v=0.1.291"></script>
   </body>
 </html>

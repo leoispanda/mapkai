@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from './assets/vendor/three/OrbitControls.js';
-import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.225';
+import { ISLANDS, createIsland, createOcean } from './map3d-terrain.js?v=0.1.291';
 
 const COPY = {
   en: { title: 'Knowledge map', sideCopy: 'A new perspective starts here.', full: 'Full atlas', journey: 'My journey', start: 'Start exploring', headline: 'A world of knowledge.', subhead: 'Follow your curiosity. Find your next island.', reset: 'Reset view', loading: 'Preparing your world…', preview: 'Full atlas preview', help: 'Drag to orbit · Scroll to zoom · Select an island', open: 'Explore this field', close: 'Close field details', rotation: 'Auto-rotate', personal: 'Your progress', in: 'Zoom in', out: 'Zoom out', canvas: 'Interactive 3D knowledge islands. Arrow keys select fields, Enter opens a field, plus and minus zoom, Escape resets the view.' },
@@ -15,16 +15,19 @@ const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', 
 export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   let state = initialState, lang = state.language === 'zh' ? 'zh' : 'en';
   let preview = initialState.fields.every(f => f.level === 'ocean'), selected = null, hovering = null, frame = 0, lastTime = 0, disposed = false, contextLost = false;
-  let cameraFlight = null, running = false, terrainSignature = '', narrowLayout = null;
+  let cameraFlight = null, running = false, terrainSignature = '', narrowLayout = null, oceanTime = 0;
+  let orbitStrength = 0, orbitPhase = 0, orbitCenter = null, interactionView = null;
+  const orbitAmplitude = Math.PI / 10, orbitPeriod = 100; // A quiet ±18° sweep keeps the composition intact.
+  const labelOffsets = new Map();
   const page = root.closest('#map'), world = root.querySelector('#spatialWorld'), sceneHost = root.querySelector('#spatialScene');
   const labelsHost = root.querySelector('#spatialLabels'), detail = root.querySelector('#spatialDetail');
   const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
   let rotationEnabled = !reducedQuery.matches, interacting = false, resumeRotationAt = 0;
   const rotationButton = root.querySelector('#spatialRotation');
   const mobile = matchMedia('(max-width: 760px)').matches;
-  const scene = new THREE.Scene(); scene.background = new THREE.Color('#b2cedb'); scene.fog = new THREE.FogExp2('#b2cedb', .004);
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#b9deea'); scene.fog = new THREE.FogExp2('#b9deea', .004);
   const camera = new THREE.OrthographicCamera(-18, 18, 13, -13, .1, 180);
-  const homePosition = new THREE.Vector3(0, 26, 29), homeTarget = new THREE.Vector3(0, 0, 1.0);
+  const homePosition = new THREE.Vector3(0, 32, 32), homeTarget = new THREE.Vector3(0, 0, 1.0);
   camera.position.copy(homePosition);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, mobile ? 1.5 : 1.7));
@@ -33,6 +36,9 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   renderer.toneMappingExposure = 1.08;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // Island lighting is static during camera motion; redraw shadows only when the land changes.
+  renderer.shadowMap.autoUpdate = false;
+  renderer.shadowMap.needsUpdate = true;
   renderer.domElement.tabIndex = 0;
   renderer.domElement.setAttribute('role', 'application');
   renderer.domElement.id = 'spatialCanvas';
@@ -42,20 +48,20 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   controls.enableDamping = true; controls.dampingFactor = .085;
   controls.minPolarAngle = .28; controls.maxPolarAngle = Math.PI * .42;
   controls.minZoom = .72; controls.maxZoom = 3.8; controls.zoomSpeed = .65; controls.rotateSpeed = .42;
-  controls.autoRotateSpeed = .55; // One calm orbit in about 109 seconds, independent of frame rate.
+  controls.autoRotateSpeed = 0;
   controls.enablePan = true; controls.screenSpacePanning = true;
   controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
   controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
   controls.update();
-  scene.add(new THREE.HemisphereLight('#e1eff8', '#6e7460', 1.25));
-  const sun = new THREE.DirectionalLight('#fff2dc', 2.75);
-  sun.position.set(-18, 28, -35); sun.castShadow = true;
+  scene.add(new THREE.HemisphereLight('#f4fbff', '#b3c8bd', .95));
+  const sun = new THREE.DirectionalLight('#fff8e9', 2.9);
+  sun.position.set(-16, 26, 14); sun.castShadow = true;
   sun.shadow.mapSize.set(mobile ? 1024 : 2048, mobile ? 1024 : 2048);
   Object.assign(sun.shadow.camera, { left: -19, right: 19, top: 19, bottom: -19, near: .5, far: 65 });
-  sun.shadow.intensity = .40; sun.shadow.bias = -.00018; sun.shadow.normalBias = .035; sun.shadow.radius = 2;
+  sun.shadow.intensity = .52; sun.shadow.bias = -.00012; sun.shadow.normalBias = .024; sun.shadow.radius = 2.5;
   scene.add(sun);
-  const fill = new THREE.DirectionalLight('#b3d2e8', .45); fill.position.set(10, 8, 12); scene.add(fill);
-  const ocean = createOcean(); scene.add(ocean.mesh);
+  const fill = new THREE.DirectionalLight('#c8e8fa', .38); fill.position.set(10, 8, 12); scene.add(fill);
+  const ocean = createOcean(); scene.add(ocean.mesh, ocean.shadow);
   const islands = ISLANDS.map(spec => createIsland(spec, mobile)); islands.forEach(island => scene.add(island.group));
   const pickables = islands.map(island => island.terrain);
   const raycaster = new THREE.Raycaster(), pointer = new THREE.Vector2(), projection = new THREE.Vector3();
@@ -81,22 +87,22 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     const narrow = width < 600;
     const layoutChanged = narrowLayout !== null && narrowLayout !== narrow;
     narrowLayout = narrow;
-    let halfHeight = narrow ? Math.max(17.4, 9.7 / aspect) : Math.max(10.8, 12.8 / aspect);
+    let halfHeight = narrow ? Math.max(13.0, 7.0 / aspect) : Math.max(8.2, 15.5 / aspect);
+    const phonePositions = [[-3.5,-11.5],[3.5,-11.5],[-3.5,-6.2],[3.5,-6.0],[3.9,-.5],[-1.2,.3],[-3.5,5.7],[3.5,5.1],[-3.5,9.9],[3.5,9.7],[.4,13.5]];
     for (const [index, island] of islands.entries()) {
-      const scale = narrow ? .74 : 1;
-      island.group.position.x = island.spec.x * (narrow ? .67 : 1);
-      island.group.position.z = island.spec.z * (narrow ? .86 : 1);
+      const scale = narrow ? .60 : 1;
+      island.group.position.x = narrow ? phonePositions[index][0] : island.spec.x;
+      island.group.position.z = narrow ? phonePositions[index][1] : island.spec.z;
       island.group.scale.x = island.group.scale.z = scale;
       ocean.uniforms.uAtlasIslands.value[index].set(island.group.position.x, island.group.position.z, island.spec.radius * scale, island.spec.seed);
     }
-    // Reserve enough room for the outermost island throughout a full orbit.
-    const orbitRadius = Math.max(...islands.map(island =>
-      Math.hypot(island.group.position.x - homeTarget.x, island.group.position.z - homeTarget.z)
-      + island.spec.radius * Math.max(island.spec.sx, island.spec.sz) * island.group.scale.x * 1.15));
-    halfHeight = Math.max(halfHeight, (orbitRadius + 1) / aspect);
+    // The bounded automatic sweep keeps the wider composition readable; manual orbit remains free.
     camera.left = -halfHeight * aspect; camera.right = halfHeight * aspect; camera.top = halfHeight; camera.bottom = -halfHeight;
     camera.updateProjectionMatrix();
+    renderer.shadowMap.needsUpdate = true;
+    labelOffsets.clear();
     if (layoutChanged && selected) select(selected, true);
+    else if (layoutChanged) { cameraFlight = null; camera.position.copy(homePosition); controls.target.copy(homeTarget); camera.zoom = 1; camera.updateProjectionMatrix(); controls.update(); orbitStrength = 0; orbitCenter = null; }
     page.dataset.spatialSize = `${width}x${height}`;
     invalidate();
   }
@@ -106,7 +112,8 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   function fitLabels() {
     const w = world.clientWidth, h = world.clientHeight, placed = [];
     const front = camera.position.clone().sub(controls.target); front.y = 0; front.normalize();
-    const ordered = islands.slice().sort((a, b) => a.spec.code === selected ? -1 : b.spec.code === selected ? 1 : a.group.position.distanceTo(camera.position) - b.group.position.distanceTo(camera.position));
+    // Keep label priority stable as the camera turns; only the selected field takes precedence.
+    const ordered = selected ? [...islands.filter(i => i.spec.code === selected), ...islands.filter(i => i.spec.code !== selected)] : islands;
     for (const island of ordered) {
       const code = island.spec.code, label = labels.get(code);
       const scale = island.group.scale.x;
@@ -120,12 +127,18 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       if (projection.z < -1 || projection.z > 1 || x < -width || x > w + width || y < -height || y > h + height) { label.style.visibility = 'hidden'; continue; }
       x = THREE.MathUtils.clamp(x, width / 2 + 12, w - width / 2 - 12);
       y = THREE.MathUtils.clamp(y, height / 2 + 16, h - 78);
-      const base = y;
-      for (let attempt = 0; attempt < 10; attempt++) {
-        if (!placed.some(r => Math.abs(r.x - x) < (r.width + width) / 2 + 7 && Math.abs(r.y - y) < (r.height + height) / 2 + 6)) break;
-        const step = Math.ceil((attempt + 1) / 2) * (height + 8);
-        y = THREE.MathUtils.clamp(base + (attempt % 2 ? -step : step), height / 2 + 16, h - 78);
+      const base = y, step = height + 8;
+      const fits = (candidate, gap = 6) => !placed.some(r => Math.abs(r.x - x) < (r.width + width) / 2 + 7 && Math.abs(r.y - candidate) < (r.height + height) / 2 + gap);
+      const remembered = labelOffsets.get(code) || 0;
+      const previousY = THREE.MathUtils.clamp(base + remembered * step, height / 2 + 16, h - 78);
+      // A little hysteresis prevents adjacent labels from swapping rows at a shared edge.
+      let offset = remembered && !fits(base, 14) && fits(previousY) ? remembered : 0;
+      y = THREE.MathUtils.clamp(base + offset * step, height / 2 + 16, h - 78);
+      for (let attempt = 0; attempt < 10 && !fits(y); attempt++) {
+        offset = Math.ceil((attempt + 1) / 2) * (attempt % 2 ? -1 : 1);
+        y = THREE.MathUtils.clamp(base + offset * step, height / 2 + 16, h - 78);
       }
+      labelOffsets.set(code, offset);
       placed.push({ x, y, width, height });
       label.style.visibility = 'visible';
       label.style.transform = `translate3d(${(x - width / 2).toFixed(1)}px,${(y - height / 2).toFixed(1)}px,0)`;
@@ -139,8 +152,19 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     detail.innerHTML = `<button class="spatial-detail-close" type="button" aria-label="${c.close}" data-spatial-close>×</button><h3>${escape(f.name)}</h3><p>${escape(f.thinking)}</p><p class="spatial-personal-state">${c.personal} · ${escape(f.stateLabel)}</p><button type="button" data-spatial-open>${c.open} <span aria-hidden="true">↗</span></button>`;
     detail.hidden = false;
   }
+  function flyTo(target, position, zoom) {
+    const fromOrbit = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target));
+    const toOrbit = new THREE.Spherical().setFromVector3(position.clone().sub(target));
+    // Reset follows the shortest arc around the islands instead of cutting through them.
+    toOrbit.theta = fromOrbit.theta + Math.atan2(Math.sin(toOrbit.theta - fromOrbit.theta), Math.cos(toOrbit.theta - fromOrbit.theta));
+    cameraFlight = { target, fromTarget: controls.target.clone(), fromOrbit, toOrbit, fromZoom: camera.zoom, zoom, elapsed: 0, duration: 1.3 };
+    orbitStrength = 0; orbitCenter = null;
+    controls.autoRotate = false;
+  }
   function select(code, fly = true) {
     selected = code;
+    if (!fly) cameraFlight = null;
+    if (code) { orbitStrength = 0; controls.autoRotate = false; }
     for (const [id, el] of labels) el.setAttribute('aria-pressed', String(code === id));
     root.dataset.selectedField = code || '';
     paintDetails();
@@ -148,12 +172,17 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
       const island = islands.find(i => i.spec.code === code);
       const target = new THREE.Vector3(island.group.position.x, .5, island.group.position.z);
       const delta = camera.position.clone().sub(controls.target);
-      cameraFlight = { target, position: target.clone().add(delta), zoom: world.clientWidth < 600 ? 2.1 : 1.65 };
+      flyTo(target, target.clone().add(delta), world.clientWidth < 600 ? 2.1 : 1.65);
     }
     invalidate();
   }
-  function reset() { select(null, false); cameraFlight = { target: homeTarget.clone(), position: homePosition.clone(), zoom: 1 }; invalidate(); }
-  function zoom(factor) { cameraFlight = null; camera.zoom = THREE.MathUtils.clamp(camera.zoom * factor, controls.minZoom, controls.maxZoom); camera.updateProjectionMatrix(); invalidate(); }
+  function reset() { select(null, false); flyTo(homeTarget.clone(), homePosition.clone(), 1); invalidate(); }
+  function zoom(factor) {
+    const targetZoom = THREE.MathUtils.clamp((cameraFlight?.zoom ?? camera.zoom) * factor, controls.minZoom, controls.maxZoom);
+    flyTo(controls.target.clone(), camera.position.clone(), targetZoom);
+    cameraFlight.duration = .45;
+    invalidate();
+  }
   root.querySelector('#spatialReset').addEventListener('click', reset);
   root.querySelector('#spatialZoomIn').addEventListener('click', () => zoom(1.25));
   root.querySelector('#spatialZoomOut').addEventListener('click', () => zoom(.8));
@@ -182,7 +211,8 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     else if (e.key === '-' || e.key === '_') { e.preventDefault(); zoom(1 / 1.2); }
   });
   function deferRotation() {
-    resumeRotationAt = performance.now() + 4000;
+    resumeRotationAt = performance.now() + 5000;
+    orbitStrength = 0; // Pause the existing sweep; ordinary UI actions must not move its center.
     controls.autoRotate = false;
     invalidate();
   }
@@ -192,13 +222,25 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
   }
   rotationButton.addEventListener('click', () => {
     rotationEnabled = !rotationEnabled;
+    orbitStrength = 0;
     resumeRotationAt = 0;
     paintRotation(); invalidate();
   });
   root.addEventListener('pointerdown', deferRotation, true);
   root.addEventListener('keydown', deferRotation, true);
-  controls.addEventListener('start', () => { cameraFlight = null; interacting = true; deferRotation(); });
-  controls.addEventListener('end', () => { interacting = false; deferRotation(); });
+  controls.addEventListener('start', () => {
+    interactionView = { position: camera.position.clone(), target: controls.target.clone(), zoom: camera.zoom };
+    cameraFlight = null; interacting = true; deferRotation();
+  });
+  controls.addEventListener('end', () => {
+    // OrbitControls also emits start/end for a click; only a changed view establishes a new sweep.
+    if (interactionView && (camera.position.distanceToSquared(interactionView.position) > 1e-8
+      || controls.target.distanceToSquared(interactionView.target) > 1e-8
+      || Math.abs(camera.zoom - interactionView.zoom) > 1e-6)) {
+      orbitCenter = null; orbitPhase = 0;
+    }
+    interactionView = null; interacting = false; deferRotation();
+  });
   controls.addEventListener('change', invalidate);
   renderer.domElement.addEventListener('webglcontextlost', e => {
     e.preventDefault(); contextLost = true; stop(); const loading = root.querySelector('#spatialLoading'); loading.hidden = false;
@@ -208,6 +250,7 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
 
   renderer.domElement.addEventListener('webglcontextrestored', () => {
     contextLost = false;
+    renderer.shadowMap.needsUpdate = true;
     root.querySelector('#spatialLoading').hidden = true;
     invalidate();
   });
@@ -241,19 +284,21 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
         ocean.uniforms.uAtlasLevels.value[index] = level === 'ocean' ? .10 : 1;
       }
       terrainSignature = signature;
+      renderer.shadowMap.needsUpdate = true;
     }
     const dark = state.theme === 'dark';
-    scene.background.set(dark ? '#142d3d' : '#b2cedb');
+    scene.background.set(dark ? '#142d3d' : '#b9deea');
     scene.fog.color.copy(scene.background);
-    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#75a4c4');
-    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#a9cbde');
-    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#c7ded7');
+    ocean.uniforms.uAtlasDeep.value.set(dark ? '#22475d' : '#91c9df');
+    ocean.uniforms.uAtlasMiddle.value.set(dark ? '#305e74' : '#b5deea');
+    ocean.uniforms.uAtlasShallow.value.set(dark ? '#438c9a' : '#d6eee8');
+    ocean.uniforms.uAtlasSunlight.value = dark ? .18 : 1;
     renderer.toneMappingExposure = dark ? 1.0 : 1.08;
     paintDetails(); paintRotation(); root.dataset.mode = preview ? 'atlas' : 'journey';
     invalidate();
   }
   function active() { return !disposed && !contextLost && page.classList.contains('is-active') && !document.hidden; }
-  function stop() { root.dataset.rendering = 'paused'; root.dataset.autoRotating = 'false'; cancelAnimationFrame(frame); running = false; frame = 0; lastTime = 0; }
+  function stop() { root.dataset.rendering = 'paused'; root.dataset.autoRotating = 'false'; cancelAnimationFrame(frame); running = false; frame = 0; lastTime = 0; orbitStrength = 0; }
   function invalidate() { if (active() && !running) { root.dataset.rendering = 'active'; running = true; frame = requestAnimationFrame(render); } }
   function render(time) {
     if (!active()) { stop(); return; }
@@ -261,26 +306,51 @@ export function createSpatialAtlas(root, { state: initialState, onOpen }) {
     const reduced = reducedQuery.matches, ease = reduced ? 1 : 1 - Math.exp(-dt * 5.5);
     let animating = false;
     if (cameraFlight) {
-      controls.target.lerp(cameraFlight.target, ease); camera.position.lerp(cameraFlight.position, ease); camera.zoom = THREE.MathUtils.lerp(camera.zoom, cameraFlight.zoom, ease); camera.updateProjectionMatrix();
-      animating = true;
-      if (camera.position.distanceTo(cameraFlight.position) < .006 && Math.abs(camera.zoom - cameraFlight.zoom) < .001) cameraFlight = null;
+      const flight = cameraFlight;
+      flight.elapsed += dt;
+      const t = reduced ? 1 : Math.min(flight.elapsed / flight.duration, 1);
+      const progress = t * t * t * (t * (t * 6 - 15) + 10); // Ease both ends without overshoot.
+      controls.target.lerpVectors(flight.fromTarget, flight.target, progress);
+      const orbit = new THREE.Spherical(
+        THREE.MathUtils.lerp(flight.fromOrbit.radius, flight.toOrbit.radius, progress),
+        THREE.MathUtils.lerp(flight.fromOrbit.phi, flight.toOrbit.phi, progress),
+        THREE.MathUtils.lerp(flight.fromOrbit.theta, flight.toOrbit.theta, progress));
+      camera.position.setFromSpherical(orbit).add(controls.target);
+      camera.zoom = THREE.MathUtils.lerp(flight.fromZoom, flight.zoom, progress);
+      camera.updateProjectionMatrix();
+      animating = t < 1;
+      if (t === 1) { cameraFlight = null; resumeRotationAt = time + 3500; }
     }
     for (const island of islands) {
+      const terrainMoving = Math.abs(island.group.scale.y - island.scaleTarget) > .001 || Math.abs(island.group.position.y - island.positionTarget) > .001;
       island.group.scale.y = THREE.MathUtils.lerp(island.group.scale.y, island.scaleTarget, ease);
       island.group.position.y = THREE.MathUtils.lerp(island.group.position.y, island.positionTarget, ease);
+      if (terrainMoving) renderer.shadowMap.needsUpdate = true;
       if (Math.abs(island.group.scale.y - island.scaleTarget) > .001 || Math.abs(island.group.position.y - island.positionTarget) > .001) animating = true;
       island.ring.visible = (selected === island.spec.code || hovering === island.spec.code) && island.scaleTarget > .05;
     }
-    // Hold the camera while dragging, flying to an island, or reading its details.
-    controls.autoRotate = rotationEnabled && !interacting && !cameraFlight && !selected && time >= resumeRotationAt;
-    root.dataset.autoRotating = String(controls.autoRotate);
+    // Preserve the same center and phase through pauses, controls, and hidden-page intervals.
+    const orbitAllowed = rotationEnabled && !interacting && !cameraFlight && !selected && time >= resumeRotationAt;
+    if (orbitAllowed && orbitCenter === null) { orbitCenter = controls.getAzimuthalAngle(); orbitPhase = 0; }
+    orbitStrength = orbitAllowed ? THREE.MathUtils.lerp(orbitStrength, 1, reduced ? 1 : 1 - Math.exp(-dt * 1.4)) : 0;
+    const sweeping = orbitAllowed && orbitCenter !== null && orbitStrength > .001;
+    if (sweeping) {
+      orbitPhase = (orbitPhase + dt * orbitStrength * Math.PI * 2 / orbitPeriod) % (Math.PI * 2);
+      const orbit = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target));
+      orbit.theta = orbitCenter - Math.sin(orbitPhase) * (narrowLayout ? .10 : orbitAmplitude);
+      camera.position.setFromSpherical(orbit).add(controls.target);
+    }
+    controls.autoRotate = false;
+    controls.enableDamping = !reduced;
+    controls.dampingFactor = 1 - Math.exp(-dt * 6.4);
+    root.dataset.autoRotating = String(sweeping);
     const controlsChanged = controls.update(dt);
-    if (!reduced) ocean.uniforms.uAtlasTime.value = time / 1000;
+    if (!reduced) { oceanTime += dt; ocean.uniforms.uAtlasTime.value = oceanTime; }
     renderer.render(scene, camera); fitLabels();
     root.querySelector('#spatialCompass').style.transform = `rotate(${controls.getAzimuthalAngle() * 180 / Math.PI}deg)`;
     root.dataset.zoom = camera.zoom.toFixed(2); root.dataset.azimuth = controls.getAzimuthalAngle().toFixed(3);
     if (!root.dataset.ready) { root.dataset.ready = 'true'; root.querySelector('#spatialLoading').hidden = true; }
-    if (!reduced || animating || controlsChanged) frame = requestAnimationFrame(render);
+    if (!reduced || animating || controlsChanged || (rotationEnabled && !selected && !interacting)) frame = requestAnimationFrame(render);
     else { running = false; frame = 0; }
   }
   const visibilityChanged = () => { if (active()) { resize(); invalidate(); } else stop(); };

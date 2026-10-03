@@ -120,22 +120,41 @@ function initCaptions() {
 }
 
 function initChrome() {
-  localStorage.setItem("mapkaiLanguageV2", language);
+  // A course's explicit language route also becomes the preference on return to the main site.
+  try { localStorage.setItem("mapkaiLanguageV2", language); } catch {}
   const menuButton = document.querySelector(".nav-toggle");
   const panel = document.querySelector(".nav-panel");
+  const setMenu = (open) => {
+    panel?.classList.toggle("is-open", open);
+    menuButton?.setAttribute("aria-expanded", String(open));
+    menuButton?.setAttribute("aria-label", language === "zh" ? (open ? "关闭菜单" : "打开菜单") : (open ? "Close menu" : "Open menu"));
+  };
   menuButton?.addEventListener("click", () => {
-    const open = !panel.classList.contains("is-open");
-    panel.classList.toggle("is-open", open);
-    menuButton.setAttribute("aria-expanded", String(open));
+    setMenu(!panel?.classList.contains("is-open"));
   });
-  const currentTheme = localStorage.getItem("mapkaiTheme") === "dark" ? "dark" : "light";
-  document.body.dataset.theme = currentTheme;
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !panel?.classList.contains("is-open")) return;
+    setMenu(false);
+    menuButton?.focus();
+  });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".finance-topbar")) setMenu(false);
+  });
+  panel?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+
+  const applyTheme = (theme) => {
+    document.body.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#0f172a" : "#f8fafc");
+    document.querySelectorAll("[data-theme-option]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.themeOption === theme)));
+  };
+  let currentTheme = "light";
+  try { currentTheme = localStorage.getItem("mapkaiTheme") === "dark" ? "dark" : "light"; } catch {}
+  applyTheme(currentTheme);
   document.querySelectorAll("[data-theme-option]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.themeOption === currentTheme));
     button.addEventListener("click", () => {
-      localStorage.setItem("mapkaiTheme", button.dataset.themeOption);
-      document.body.dataset.theme = button.dataset.themeOption;
-      document.querySelectorAll("[data-theme-option]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+      const theme = button.dataset.themeOption;
+      try { localStorage.setItem("mapkaiTheme", theme); } catch {}
+      applyTheme(theme);
     });
   });
 }

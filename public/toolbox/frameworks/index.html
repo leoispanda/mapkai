@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>思维框架 · MapKAI</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/frameworks/styles.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/toolbox/frameworks/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="toolbox">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/frameworks/en/" lang="en">EN</a><span>/</span><a href="/toolbox/frameworks/" lang="zh" aria-current="true">中文</a></div></header>
+  <main class="frameworks-main">
+    <a class="back-link" href="/toolbox/">← 返回 Toolbox</a>
+    <section class="frameworks-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">MAPKAI / FRAMEWORK ATLAS</p><h1 id="page-title">思维框架</h1><p class="frameworks-intro">用一张图看清问题，用一个框架组织思考。<br>从原始研究与经典著作出发，理解结构、选择方法、付诸行动。</p><a class="references-jump" href="#references">查看底部参考文献 ↓</a></div>
+      <div class="collection-mark" aria-hidden="true"><span class="mark-orbit"><i></i><i></i><i></i><i></i><b></b></span><span>SEE · CONNECT · APPLY</span></div>
+    </section>
+    <section aria-labelledby="collection-title">
+      <div class="frameworks-toolbar"><div><h2 id="collection-title">框架图谱</h2><p id="framework-count" role="status" aria-live="polite">正在整理…</p></div><div class="framework-search"><label class="sr-only" for="framework-search">搜索思维框架</label><input id="framework-search" type="search" placeholder="搜索名称、关键词或使用场景…" autocomplete="off" aria-controls="framework-list"><span aria-hidden="true">⌕</span></div></div>
+      <div id="category-filters" class="category-filters" role="group" aria-label="按用途筛选"></div>
+      <p class="atlas-hint">每类先读一个故事，再用图理解框架。选择上方分类开始，也可以直接搜索。</p>
+      <details class="coverage-note"><summary>如何使用这份框架库</summary><p>先说清要解决的问题，再按用途选择框架。读图时留意组件之间的关系，用“什么时候用”判断它是否适合当前情境。</p><p>图下标注原作者或发布机构，并链接至底部文献。“简图”保留模型的主要结构；“MapKAI 综合图解”或“机制图解”是依据文献绘制的解释性图形。</p><p>使用时补充自己的事实、假设与证据。文献列明作者、年份和采用版本，便于进一步阅读与核对。</p></details>
+      <div id="framework-list" class="framework-groups"></div>
+      <div id="framework-empty" class="framework-empty" hidden><h3>还没有找到这个框架</h3><p>换个名称、英文缩写或使用场景试试。</p><button id="clear-search" class="button secondary" type="button">查看全部框架</button></div>
+      <noscript><p>请启用 JavaScript 查看框架图谱。</p></noscript>
+    </section>
+    <aside class="growing-note"><span class="growing-plus" aria-hidden="true">＋</span><div><h2>持续完善的思维工具</h2><p>每个框架都有结构图、使用场景与参考文献，帮助你从理解走向应用。</p></div></aside>
+    <section id="references" class="bibliography" aria-labelledby="references-title"><p class="eyebrow">SOURCES / TRACE THE IDEAS</p><h2 id="references-title">源头与参考文献</h2><p class="references-intro">图中编号对应原始论文、经典著作及官方框架。以下列明作者、年份、采用版本和与图形的关系；综合图解同时注明所依据的研究。来源核对日期：2026 年 9 月 27 日。</p><ol id="reference-list" class="reference-list"></ol></section>
+    <footer><span>MapKAI Toolbox · 思维框架</span><span>追溯源头 · 用图思考</span></footer>
+  </main>
+  <dialog id="diagram-dialog" class="diagram-dialog" aria-labelledby="diagram-title" aria-describedby="diagram-reading">
+    <div class="diagram-dialog-inner">
+      <div class="diagram-dialog-heading"><div><p class="eyebrow">FRAMEWORK / EXPLORE</p><h2 id="diagram-title"></h2></div><button id="diagram-close" type="button" aria-label="关闭框架图" autofocus>×</button></div>
+      <p id="diagram-basis" class="diagram-basis"></p>
+      <p id="diagram-reading" class="diagram-reading"></p>
+      <p class="diagram-interaction-hint">点击组件查看说明；也可用 Tab 选中，再按回车。</p>
+      <p class="diagram-mobile-hint">左右滑动查看完整图形。</p>
+      <div id="diagram-canvas" class="diagram-canvas" tabindex="0" role="region" aria-label="可交互框架图"></div>
+      <div class="diagram-detail" aria-live="polite" aria-atomic="true"><h3 id="diagram-part-title"></h3><p id="diagram-part-body"></p></div>
+      <div id="diagram-references" class="diagram-references"></div>
+    </div>
+  </dialog>
+  <dialog id="story-dialog" class="story-dialog" aria-labelledby="story-title">
+    <article class="story-dialog-inner">
+      <header class="story-dialog-heading"><div><p id="story-label" class="story-label"></p><p id="story-framework-name" class="story-framework-name"></p><h2 id="story-title"></h2></div><button id="story-close" type="button" aria-label="关闭故事" autofocus>×</button></header>
+      <div id="story-narrative" class="story-dialog-narrative"></div>
+      <details id="story-insight" class="story-insight">
+        <summary class="story-next">读完，再看框架</summary>
+        <div class="story-explanation">
+          <h3 id="story-concept"></h3>
+          <p id="story-explanation"></p>
+          <div id="story-calculation" hidden></div>
+          <h4>故事与框架</h4>
+          <ul id="story-mapping" class="story-mapping"></ul>
+          <h4>这个比喻的边界</h4>
+          <p id="story-boundary"></p>
+          <h4>留一个问题</h4>
+          <p id="story-reflection" class="story-reflection"></p>
+        </div>
+      </details>
+      <a id="story-diagram-link" class="story-diagram-link" href="#framework-list"></a>
+      <div id="story-references" class="story-sources"></div>
+    </article>
+  </dialog>
+</body>
+</html>

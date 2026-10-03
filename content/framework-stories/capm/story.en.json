@@ -1,0 +1,32 @@
+{
+  "framework": "capm",
+  "title": "Red Circles on Market Down Days",
+  "teaser": "A and B had been almost equally volatile over the previous three years, and A also carried the higher forecast return, so Lin Lan initially placed A on the new-allocation sheet. Once she circled only the days when the whole market fell, both stocks still looked risky, but they no longer required the same return threshold.",
+  "paragraphs": [
+    "On the first Monday in September, fund manager Lin Lan had to choose between A and B for a small new allocation in the long-term endowment fund. The scholarships due to forty-seven students on December 15 had already been fully set aside in cash, so this decision would not touch that money. A and B had both passed the same basic review, and their future return forecasts had been prepared on the same basis: about 10% for A and 8% for B. Their total volatility over the past three years was almost identical, and their worst months were both unpleasant. Looking only at those materials, Lin Lan wrote A on the first line of the allocation sheet.",
+    "That afternoon, Xiao Zhou traced the two stocks’ three-year price lines onto transparent sheets. Lin Lan first laid A directly over B. The peaks, troughs, and overall swings still looked much the same; if “risk” meant only how violently a stock moved on its own, there was no reason to change the morning’s order. Xiao Zhou offered no explanation. He simply placed a chart of the market index underneath and aligned all three sheets by date.",
+    "Lin Lan took a red pen and circled only the periods when the market fell sharply. A dropped with the market almost every time, sometimes by even more, and it often amplified the market’s rise as well. Soon the red circles formed a chain along A’s line. B also had large falls, but several occurred while the broader market was relatively calm; the notes beside those dates referred to a delayed product approval, a supplier disruption, and the announcement of a large order. Lin Lan turned back to the total-volatility table. A and B were still close. What had changed was not which one was more “stable,” but how much of each stock’s movement occurred together with the market.",
+    "The fund already held bonds, index funds, and several individual stocks. Lin Lan did not delete B’s company-specific events or label B “safe.” The supply-chain, product, and operating-risk notes remained attached to both files. She simply continued by checking each stock’s historical co-movement with the market. In the month-end update, A’s beta was about 1.5 and B’s about 0.5. On the same date, the short-term risk-free rate used by the fund was 3%, and its market risk premium was 6%.",
+    "Along the edge of the transparent sheets, she wrote two lines. A’s required return was 3% plus 1.5 times 6%, or about 12%. B’s was 3% plus 0.5 times 6%, or about 6%. Then she laid the original forecasts beside them again: A’s 10% was below its own 12% threshold, while B’s 8% was above its 6% threshold. A’s forecast was still numerically higher than B’s, and its total volatility had not suddenly increased. What changed the order was that the two stocks carried different exposure to market risk and therefore faced different required returns. Lin Lan moved A back to the watch page and left B on the current allocation sheet.",
+    "At the bottom of the record, she kept the note “beta is a historical estimate” and left both companies’ risk comments intact. She did not write 8% as a promise. The forty-seven scholarship payments for that year remained in their separate cash account. The two transparent sheets were stapled behind the allocation page. In the lower-right corner, only two lines of figures remained: A—1.5, 12%, 10%; B—0.5, 6%, 8%. Lin Lan drew a circle around the B line."
+  ],
+  "concept": "The Capital Asset Pricing Model (CAPM) expresses required return as the risk-free rate plus beta multiplied by the market risk premium. Beta describes an asset’s exposure to movements in the overall market; within the logic of a diversified portfolio, compensation is required for this systematic risk rather than for every piece of asset-specific volatility.",
+  "explanation": "Similar total volatility does not mean that A and B should have the same required return. A moves more strongly with the market and therefore has a higher beta and a higher return threshold. Under the forecasts in the story, A’s 10% falls short of 12%, while B’s 8% exceeds 6%.",
+  "mapping": [
+    "A and B have similar total volatility over the past three years → the size of each stock’s own fluctuations does not by itself identify systematic risk.",
+    "The transparent sheets are aligned by date with the market index, and only market-down periods are circled → attention shifts to how strongly each asset moves with the market.",
+    "A beta 1.5 and B beta 0.5 → different market-risk exposures create different required returns of 12% and 6%.",
+    "Company-specific risk notes remain in the files → CAPM does not claim that firm-specific risk disappears, nor does it replace other investment analysis."
+  ],
+  "boundary": "Beta is estimated from historical data and can change over time; the risk-free rate, market risk premium, and expected return are not certain either. CAPM rests on simplifying assumptions and is useful for explaining the relationship between systematic risk and required return, but a single calculation is neither a guarantee of realised return nor a complete investment conclusion.",
+  "reflection": "Why does Lin Lan not keep A ahead simply because its forecast return of 10% is higher than B’s 8%?",
+  "refs": [
+    "sharpe"
+  ],
+  "mode": "mechanism-explainer",
+  "calculation": {
+    "formula": "Required return = risk-free rate + beta × market risk premium",
+    "A": "3% + 1.5 × 6% = 12%; forecast 10%, below the required return",
+    "B": "3% + 0.5 × 6% = 6%; forecast 8%, above the required return"
+  }
+}

@@ -7,9 +7,9 @@
     "start": "node server.js",
     "dev": "node server.js",
     "version-assets": "node scripts/update-asset-version.js",
-    "build": "node scripts/build-finance-pages.mjs && npm run version-assets",
+    "build": "node scripts/build-public-ui.mjs",
     "dev:cloudflare": "wrangler pages dev public",
-    "deploy": "npm run version-assets && wrangler pages deploy public",
+    "deploy": "npm run build && wrangler pages deploy public",
     "video:bootstrap": "node mapkai-video-factory/runner.ts bootstrap",
     "video:plan": "node mapkai-video-factory/runner.ts plan",
     "video:dashboard": "node mapkai-video-factory/runner.ts dashboard",
@@ -37,7 +37,9 @@
     "video:delivery:upload-public-preview": "node mapkai-video-factory/review-channel.mjs upload-public-preview",
     "video:delivery:test": "node --test mapkai-video-factory/review-channel.test.mjs",
     "video:delivery:public-preview-test": "node --test mapkai-video-factory/public-preview.test.mjs",
-    "video:delivery:preview": "node mapkai-video-factory/review-preview.mjs"
+    "video:delivery:preview": "node mapkai-video-factory/review-preview.mjs",
+    "build:speaking": "node scripts/build-speaking.mjs",
+    "build:toolbox": "node scripts/build-toolbox.mjs"
   },
   "dependencies": {
     "playwright": "^1.55.0"

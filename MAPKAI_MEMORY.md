@@ -2731,3 +2731,14 @@ Follow-up:
 - Candidate creation and Git delivery do not activate the candidate on the website. Existing runtime data, map behavior and historical progress remain outside this delivery.
 - Preserve the unrelated video-factory and package changes already present in this checkout. The frontend version hook must not add runtime files to this documentation/data commit; validate the delivery scope and CSP separately.
 - Generation Git flags are historical metadata. Current commit and push status are verified against Git history and the remote branch and reported in the final delivery response.
+
+## 2026-10-04 - Restore the latest approved site after an old Git snapshot redeployed
+
+- Confirmed the 2026-10-03 question-bank-only commit `1a57f547bbe41f8af18dae89f77f55717e5031cf` triggered Cloudflare Git deployment `5d57712e-4fc7-4db4-9131-25fdebf8af7f`. Its v0.1.225 public snapshot was older than the directly uploaded v0.1.291 production site. Clean runtime files in Git did not mean Git represented current production.
+- Restored production to the verified v0.1.291 deployment `2d8054fa-aa85-4006-adce-7154abba9d7f`. Both www.mapkai.com and mapkai.pages.dev serve the expected index, script, styles and field-fables bytes. Browser verification shows the updated navigation, version footer and Education origin story “半小时的棉花”.
+- Synchronized the complete approved public snapshot and corresponding editable/API/build inputs into the actual archive1 Git repository. Preserved all 240 concept-story IDs, including 83 updated bilingual Modules, and all 11 new Subject Origins. No stories were regenerated.
+- Moved 33 framework stories in two languages into canonical `content/framework-stories/` inputs derived from the already published final export, without copying raw editorial review records. An isolated full UI build succeeded; story objects and source/public mirrors stayed intact. The isolated validation build generated v0.1.292; the restored production snapshot remains v0.1.291.
+- Updated only the four frontend build/deploy package scripts. Unrelated video-factory scripts, dependencies and pending changes remain outside the recovery commit.
+- Cloudflare build-watch now excludes docs/*, review/*, question-banks/*, README.md, MAPKAI_MEMORY.md and MAPKAI_QUESTION_BANK_FOR_GPT.txt. Documentation or candidate-only pushes therefore skip the site build. Other source settings and the current exit-0/public deployment configuration are unchanged.
+- The v2 candidate question bank remains separate and is not activated by this recovery. Deployment policy and complete public hash evidence are under docs/. Before any website push, compare the Git snapshot with the current production release and synchronize approved direct-upload changes first.
+- Commit and remote publication are verified separately in the final recovery report.

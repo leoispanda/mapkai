@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>跑步节拍器 · MapKAI Toolbox</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/metronome/styles.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/toolbox/metronome/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="toolbox">
+  <audio id="background-audio" preload="metadata" loop></audio>
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/metronome/en/" lang="en">EN</a><span>/</span><a href="/toolbox/metronome/" lang="zh" aria-current="true">中文</a></div></header>
+  <main class="metronome-page">
+    <a class="back-link" href="/toolbox/">← 返回 Toolbox</a>
+    <div class="page-heading"><div><p class="eyebrow">TOOLBOX / RUNNING</p><h1>跑步节拍器</h1><p class="intro">跟着节奏，一步一步跑。</p></div><span class="heading-tag">一声一步 · 左右交替</span></div>
+    <div class="metronome-layout">
+      <section class="rhythm-card" aria-label="步频与播放">
+        <div class="rhythm-top"><span class="session-status" id="session-status" role="status">准备开始</span><span class="live-mark" aria-hidden="true"><i></i> RUN YOUR RHYTHM</span></div>
+        <div class="cadence-display"><p class="cadence-label">目标步频</p><div class="cadence-controls"><button id="decrease" class="step-button" type="button" aria-label="步频减少 1">−</button><div><output id="cadence-value" for="cadence">180</output><span class="cadence-unit">步 / 分钟</span></div><button id="increase" class="step-button" type="button" aria-label="步频增加 1">＋</button></div><p id="cadence-description" class="cadence-description">每秒 3 步 · 每 0.333 秒一声</p></div>
+        <div class="beat-track" aria-hidden="true"><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span><span class="beat-dot"></span></div>
+        <div class="range-wrap"><label class="sr-only" for="cadence">调整步频</label><input id="cadence" type="range" min="120" max="220" step="1" value="180"><div class="range-labels"><span>120</span><span>220</span></div></div>
+        <div class="presets" role="group" aria-label="常用步频"><button data-cadence="160" aria-pressed="false">160</button><button data-cadence="170" aria-pressed="false">170</button><button data-cadence="180" aria-pressed="true">180<span>默认</span></button><button data-cadence="190" aria-pressed="false">190</button></div>
+        <button id="play" class="play-button" type="button" aria-pressed="false"><svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 13 8-13 8Z"/></svg><svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg><span id="play-label">开始跑步</span></button>
+        <p class="play-hint" id="play-hint">开始播放后再锁屏；用 iPhone 音量键调节声音。</p>
+        <div class="session-summary"><div><span>播放时长</span><output id="elapsed" aria-live="off">00:00</output></div><div><span>已播放节拍</span><output id="beat-count" aria-live="off">0</output></div><button id="reset" type="button" disabled>重置</button></div>
+      </section>
+      <aside class="settings-column">
+        <section class="settings-card" aria-labelledby="sound-title"><div class="section-heading"><span class="section-number">01</span><h2 id="sound-title">听见你的节奏</h2></div><div id="volume-controls" hidden><div class="volume-heading"><label for="volume">音量</label><output id="volume-value" for="volume">60%</output></div><input id="volume" type="range" min="0" max="100" step="1" value="60"><p id="mute-note" class="mute-note" hidden>当前已静音</p></div><p id="hardware-volume" class="setting-note">锁屏模式请用手机音量键调节声音。</p><fieldset class="tone-field"><legend>节拍音色</legend><div class="tone-options"><label><input type="radio" name="tone" value="wood" checked><span>木鱼</span></label><label><input type="radio" name="tone" value="beep"><span>电子音</span></label></div></fieldset></section>
+        <section class="settings-card" aria-labelledby="run-title"><div class="section-heading"><span class="section-number">02</span><h2 id="run-title">播放方式</h2></div>
+          <fieldset class="mode-field"><legend class="sr-only">选择播放方式</legend><label><input type="radio" name="play-mode" value="lock" checked><span><strong>锁屏跑步</strong><small>开始播放后，可以关闭屏幕</small></span></label><label><input type="radio" name="play-mode" value="mix"><span><strong>配合音乐</strong><small>保留其他音乐，需保持页面亮屏</small></span></label></fieldset>
+          <p id="lock-note" class="screen-note">锁屏模式可能暂停其他音乐 App。请在 Safari 中打开，先播放再锁屏；锁屏后可用播放／暂停按钮控制。</p>
+          <div id="wake-controls" hidden><label class="wake-option"><span>跑步时保持亮屏</span><input id="keep-awake" type="checkbox" role="switch" checked></label><p id="wake-status" class="setting-note" role="status">开始后尝试保持亮屏</p></div><p id="mix-note" class="screen-note" hidden>配合音乐时，锁屏或切换应用可能使节拍暂停。</p>
+        </section>
+        <div class="running-note"><span class="note-line" aria-hidden="true"></span><p>每一声对应一步，左右脚交替。<br>180 是起始设置，可按自己的节奏调整。</p><p class="count-note">节拍数为播放计数，不是实际步数。</p></div>
+      </aside>
+    </div>
+    <p id="error" class="metronome-error" role="alert" hidden></p>
+    <noscript><p class="metronome-error">请启用 JavaScript 后使用节拍器。</p></noscript>
+    <footer><span>MapKAI Toolbox / Running Metronome</span><span>找到节奏，专注脚下。</span></footer>
+  </main>
+</body>
+</html>

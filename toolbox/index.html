@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>Toolbox · MapKAI</title>
+  <link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <script type="module" src="/toolbox/app.js?v=0.1.291"></script>
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+</head>
+<body class="toolbox-home" data-mapkai-page="toolbox">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/map">知识地图</a><a href="/toolbox" aria-current="page">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/en/" lang="en">EN</a><span>/</span><a href="/toolbox/" lang="zh" aria-current="true">中文</a></div></header>
+  <main class="toolbox-main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-title"><h1 id="page-title">Toolbox</h1><p class="description">练习表达，探索知识，梳理决定。</p></div>
+      <div class="tool-controls"><label class="search"><span class="sr-only">搜索工具</span><input id="search" type="search" placeholder="搜索工具…" maxlength="150"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></label><button class="button secondary" id="add-tool">＋ 添加工具</button></div>
+    </section>
+    <section class="collection" aria-labelledby="collection-title">
+      <h2 id="collection-title" class="sr-only">工具</h2>
+      <div class="filter-row"><div class="filters" role="group" aria-label="筛选工具"><button data-filter="all" aria-pressed="true">全部</button><button data-filter="favorites" aria-pressed="false">★ 常用</button><button data-filter="speak" aria-pressed="false">表达</button><button data-filter="learn" aria-pressed="false">学习</button><button data-filter="think" aria-pressed="false">思考</button><button data-filter="other" aria-pressed="false">其他</button></div><span id="tool-count" class="tool-count" aria-live="polite"></span></div>
+      <div id="tools" class="tool-grid"></div>
+      <div id="empty" class="empty" hidden><h3>这里还没有找到工具。</h3><p id="empty-copy">换个关键词，或收进一个你喜欢的工具。</p><button id="reset-filter" class="button secondary">查看全部工具</button></div>
+      <p class="collection-note">工具在新标签页打开。常用与自定义工具仅保存在此浏览器。</p>
+    </section>
+    <footer><span>MapKAI Toolbox</span><a href="/">回到 MapKAI ↗</a></footer>
+  </main>
+  <div id="notice" class="toast" role="status" hidden><span id="notice-text"></span><button id="undo" hidden>撤销</button></div>
+  <dialog id="tool-dialog" aria-labelledby="dialog-title"><form id="tool-form"><div class="dialog-heading"><div><h2 id="dialog-title">添加工具</h2></div><button type="button" id="close-dialog" class="close" aria-label="关闭">×</button></div><p class="muted">放一个常用网站，或你自己做的小工具。</p><label for="tool-name">它叫什么？</label><input id="tool-name" maxlength="60" required placeholder="比如：我的灵感笔记"><label for="tool-url">打开它的网址</label><input id="tool-url" type="url" maxlength="2000" required placeholder="https://…" autocomplete="off"><p class="form-hint">填写普通访问链接，不要放入密钥或私人登录链接。</p><label for="tool-description">什么时候会用到它？</label><input id="tool-description" maxlength="160" placeholder="一句话，提醒未来的自己"><label for="tool-category">放在哪一格？</label><select id="tool-category"><option value="other">其他工具</option><option value="speak">表达与对话</option><option value="learn">学习与探索</option><option value="think">思考与创作</option></select><p id="form-error" class="error" role="alert"></p><button type="submit" class="button primary" id="save-tool">添加工具 ↗</button></form></dialog>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Speaking Studio · MapKAI</title>
+  <link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/speaking/styles.css?v=0.1.291"><link rel="stylesheet" href="/site-shell.css?v=0.1.291"><link rel="stylesheet" href="/speaking/studio.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/speaking/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="speaking">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="导航"><a class="toolbox-link" href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button><button type="button" data-language="zh" lang="zh" aria-pressed="true">中文</button></div></header>
+  <main id="studio">
+    <div class="intro"><div><p class="eyebrow">MAPKAI / SPEAKING STUDIO</p><h1>从一句话，聊到一个新想法。</h1><p class="subtitle">带一点背景，或什么都不准备。和 Kai 聊聊，结束后一起回看。</p></div><button id="open-setup" class="button secondary">语音设置</button></div>
+    <div id="notice" class="notice" role="status">正在连接语音服务…</div>
+    <section class="panel background-panel" aria-labelledby="background-heading">
+      <div id="background-details"><h2 id="background-heading">想聊什么？</h2>
+        <p id="practice-notice" class="practice-notice"><strong>使用提醒</strong><span>这只是一个英语口语练习小工具。请勿在聊天、粘贴内容或上传文件中分享自己或他人的隐私与敏感信息，例如真实姓名、联系方式、住址、证件号码、财务或健康信息。可以使用化名或虚构情境来练习。</span></p>
+        <label for="story" class="sr-only">背景信息或想聊的话题</label><textarea aria-describedby="practice-notice" id="story" maxlength="30000" rows="6" placeholder="粘贴背景信息，或者写一句你想聊的话题…"></textarea>
+        <details class="background-upload"><summary>上传背景文件</summary><input id="story-files" type="file" accept=".txt,.md,.docx,.pdf" multiple aria-label="上传背景文件"><p class="microcopy">TXT / Markdown / Word / 文字型 PDF · 每份 5 MB 内</p></details>
+        <p id="import-status" class="microcopy" role="status"></p><p id="material-status" class="microcopy" role="status">确认输入后开始聊，也可以直接跳过。</p>
+      </div>
+      <div class="start-actions"><button id="start" class="button primary">确认输入并 Process</button><button id="skip" class="button secondary">跳过，随便聊聊</button></div>
+      <p class="privacy">开始后，背景和语音会发送给 Google Gemini；结束后，对话文字会经 MapKAI 发送给 Gemini 生成总结。记录仅留在当前页面，可导出保存。</p>
+    </section>
+    <div class="live-workspace">
+    <section class="conversation-panel panel" aria-labelledby="conversation-heading">
+      <div class="section-label"><span>LET’S TALK</span><span id="timer" class="timer">00:00</span></div>
+      <div class="call-stage"><div id="orb" class="orb" aria-hidden="true"><div class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div></div><h2 id="conversation-heading">随时可以开口。</h2><p id="call-status" class="muted" aria-live="polite">确认输入并 Process，或跳过，随便聊聊。</p><div id="mic-monitor" hidden><p id="mic-device" class="microcopy"></p><meter id="mic-level" min="0" max="1" value="0" aria-label="麦克风收音音量"></meter><p id="mic-status" class="microcopy">等待收音…</p></div><div class="call-buttons"><button id="stop" class="button danger" hidden>结束聊天</button><button id="new-chat" class="button secondary" hidden>开始新聊天</button><button id="mute" class="button secondary" hidden aria-pressed="false">静音</button></div></div>
+      <div id="live-settings" class="live-settings" hidden><div><label for="live-level">聊天难度</label><select id="live-level"><option value="A2">简单一点 · A2</option><option value="B1" selected>日常交流 · B1</option><option value="B2">自然深入 · B2</option><option value="C1">细腻表达 · C1</option></select></div><div><label for="live-voice">声音特点</label><select id="live-voice"><option value="Kore">清晰女声</option><option value="Aoede">轻快女声</option><option value="Sulafat">温暖女声</option><option value="Puck">活泼男声</option><option value="Orus">沉稳男声</option><option value="Algenib">沙哑男声</option></select></div><p id="live-settings-status" role="status"></p></div>
+      <div class="assist-actions" aria-label="对话辅助"><button data-message="Ask one thoughtful follow-up about what I just said. Help me explore a concrete example or why it matters." disabled>聊深一点</button><button data-message="Let us change the topic. Choose a fresh open-ended question unrelated to our previous topic. Do not assume personal facts about me." disabled>换个话题</button><button data-message="Could you speak a little more slowly, please?" disabled>说慢一点</button></div>
+
+    </section>
+    <section class="panel transcript-panel" aria-labelledby="transcript-heading"><div class="transcript-head"><h2 id="transcript-heading">对话记录</h2><button id="download" class="text-button" disabled>导出记录与总结 ↗</button></div><p class="microcopy">按发言顺序逐条记录；语音转写可能有误，总结以文字记录为依据。</p><div id="transcript" class="transcript" role="log" aria-label="对话文字记录"><p class="empty">你们的对话会出现在这里。</p></div>      <form id="message-form" class="message-form"><label for="message" class="sr-only">文字补充</label><input id="message" maxlength="1500" placeholder="也可以打字，补充你的想法…" disabled><button class="button secondary" id="send" disabled>发送</button></form></section>
+    </div>
+    <section id="summary-panel" class="panel summary-panel" aria-labelledby="summary-heading" hidden><div class="transcript-head"><h2 id="summary-heading">这次聊得怎么样？</h2><button id="retry-summary" class="text-button" hidden>重新生成总结</button></div><p id="summary-status" role="status" class="muted"></p><div id="summary-content"></div><p class="microcopy">只分析本次对话中的表达和观点，不根据文字判断发音或个人能力。</p></section>
+    <details id="session-history" class="panel session-history" hidden><summary>本页之前的对话</summary><div id="history-content"></div></details>
+    <footer>MapKAI · A little conversation, a new perspective.<span>刷新页面即清除，可自行导出保存。</span></footer>
+  </main>
+  <dialog id="setup-dialog" aria-labelledby="setup-title"><div class="dialog-heading"><div><p class="eyebrow">语音设置</p><h2 id="setup-title">找到舒服的对话节奏</h2></div><button id="close-setup" class="close-button" aria-label="关闭设置">×</button></div>
+    <div class="two-fields"><div><label for="voice">声音</label><select id="voice"><option value="Kore">清晰女声</option><option value="Aoede">轻快女声</option><option value="Sulafat">温暖女声</option><option value="Puck">活泼男声</option><option value="Orus">沉稳男声</option><option value="Algenib">沙哑男声</option></select></div><div><label for="patience">接话节奏</label><select id="patience"><option value="800">自然接话</option><option value="1200">多给我一点思考时间</option></select></div></div>
+    <label for="microphone-select">麦克风</label><select id="microphone-select"><option value="">自动选择实体麦克风</option></select>
+    <div class="two-fields"><div><label for="learner-name">怎么称呼你</label><input id="learner-name" maxlength="40" placeholder="你的名字（可选）"></div><div><label for="level">表达难度</label><select id="level"><option value="A2">简单一点 · A2</option><option value="B1" selected>日常交流 · B1</option><option value="B2">自然深入 · B2</option><option value="C1">细腻表达 · C1</option></select></div></div>
+    <label for="boundaries">暂时不想聊的话题（可选）</label><input id="boundaries" maxlength="300" placeholder="比如：具体收入、家庭隐私">
+    <p class="microcopy">更改会在下一次对话生效。开始后允许浏览器使用麦克风，即可直接说话。</p><div class="dialog-actions"><button id="save-agent" class="button primary">保存设置</button></div>
+  </dialog>
+</body>
+</html>

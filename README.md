@@ -44,3 +44,9 @@ Build settings in Cloudflare Pages:
 - Framework preset: None
 - Build command: leave empty
 - Build output directory: `public`
+
+## Publishing without regressions
+
+The current production website and its editable sources are synchronized to the approved v0.1.291 release. Follow the [deployment policy](docs/mapkai-deployment-policy.md) before publishing; a newer direct-upload production release must be synchronized into Git before a website push.
+
+Question-bank candidates and documentation-only pushes now skip the Cloudflare website build. The canonical bilingual framework story inputs are in `content/framework-stories/`; `npm run build` works without raw review directories. See the [restoration evidence](docs/releases/mapkai-restoration-2026-10-04.json).

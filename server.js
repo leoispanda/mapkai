@@ -15,8 +15,15 @@ const appOrigin = process.env.APP_ORIGIN || `http://${host}:${port}`;
 
 const codes = new Map();
 const sessions = new Map();
+// This experiment is opt-in locally and is never included in the Pages output.
+const speakingLocal = process.env.MAPKAI_SPEAKING_LOCAL === "1"
+  ? (await import("./tools/speaking-local/handler.mjs")).handleSpeakingLocal
+  : null;
 
 const localFunctionRoutes = {
+  "/api/dishkai/analyze-menu-text": "functions/api/dishkai/analyze-menu-text.js",
+  "/api/dishkai/analyze-menu-image": "functions/api/dishkai/analyze-menu-image.js",
+  "/api/dishkai/image": "functions/api/dishkai/image.js",
   "/api/visit": "functions/api/visit.js",
   "/api/contact-message": "functions/api/contact-message.js",
   "/api/contact-messages": "functions/api/contact-messages.js",
@@ -61,6 +68,7 @@ const mimeTypes = {
 const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url, appOrigin);
+    if (speakingLocal && await speakingLocal(request, response, url)) return;
 
     if (request.method === "POST" && url.pathname === "/api/auth/start") {
       await startAuth(request, response);

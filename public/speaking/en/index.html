@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>Speaking Studio · MapKAI</title>
+  <link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/speaking/styles.css?v=0.1.291"><link rel="stylesheet" href="/site-shell.css?v=0.1.291"><link rel="stylesheet" href="/speaking/studio.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/speaking/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="speaking">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="Navigation"><a class="toolbox-link" href="/toolbox/en/">MapKAI Toolbox</a></nav><div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><button type="button" data-language="zh" lang="zh" aria-pressed="false">中文</button></div></header>
+  <main id="studio">
+    <div class="intro"><div><p class="eyebrow">MAPKAI / SPEAKING STUDIO</p><h1>One conversation. A new perspective.</h1><p class="subtitle">Bring a little background, or just show up. Talk with Kai, then reflect on the conversation.</p></div><button id="open-setup" class="button secondary">Voice settings</button></div>
+    <div id="notice" class="notice" role="status">Checking voice availability…</div>
+    <section class="panel background-panel" aria-labelledby="background-heading">
+      <div id="background-details"><h2 id="background-heading">What’s on your mind?</h2>
+        <p id="practice-notice" class="practice-notice"><strong>Before you start</strong><span>This is a small tool for practising spoken English. Please do not share private or sensitive information about yourself or others in conversation, pasted text, or uploaded files, such as real names, contact details, addresses, ID numbers, financial details, or health information. Use made-up names or fictional situations to practise.</span></p>
+        <label for="story" class="sr-only">Background or a topic to explore</label><textarea aria-describedby="practice-notice" id="story" maxlength="30000" rows="6" placeholder="Paste some background, or a topic you’d like to explore…"></textarea>
+        <details class="background-upload"><summary>Upload background</summary><input id="story-files" type="file" accept=".txt,.md,.docx,.pdf" multiple aria-label="Upload background"><p class="microcopy">TXT / Markdown / Word / text-based PDF · up to 5 MB each</p></details>
+        <p id="import-status" class="microcopy" role="status"></p><p id="material-status" class="microcopy" role="status">Confirm your background to start, or skip it.</p>
+      </div>
+      <div class="start-actions"><button id="start" class="button primary">Confirm & Process</button><button id="skip" class="button secondary">Skip, let’s chat</button></div>
+      <p class="privacy">When you start, your background and audio go to Google Gemini. Afterward, your transcript is sent through MapKAI to Gemini for a review. Records stay in this page; export them to keep a copy.</p>
+    </section>
+    <div class="live-workspace">
+    <section class="conversation-panel panel" aria-labelledby="conversation-heading">
+      <div class="section-label"><span>LET’S TALK</span><span id="timer" class="timer">00:00</span></div>
+      <div class="call-stage"><div id="orb" class="orb" aria-hidden="true"><div class="wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div></div><h2 id="conversation-heading">You can start anywhere.</h2><p id="call-status" class="muted" aria-live="polite">Confirm & Process your background, or skip and start chatting.</p><div id="mic-monitor" hidden><p id="mic-device" class="microcopy"></p><meter id="mic-level" min="0" max="1" value="0" aria-label="Microphone input level"></meter><p id="mic-status" class="microcopy">Waiting for audio…</p></div><div class="call-buttons"><button id="stop" class="button danger" hidden>End chat</button><button id="new-chat" class="button secondary" hidden>New conversation</button><button id="mute" class="button secondary" hidden aria-pressed="false">Mute</button></div></div>
+      <div id="live-settings" class="live-settings" hidden><div><label for="live-level">Difficulty</label><select id="live-level"><option value="A2">Keep it simple · A2</option><option value="B1" selected>Everyday conversation · B1</option><option value="B2">Go a little deeper · B2</option><option value="C1">Nuanced expression · C1</option></select></div><div><label for="live-voice">Voice style</label><select id="live-voice"><option value="Kore">Clear female voice</option><option value="Aoede">Breezy female voice</option><option value="Sulafat">Warm female voice</option><option value="Puck">Upbeat male voice</option><option value="Orus">Firm male voice</option><option value="Algenib">Gravelly male voice</option></select></div><p id="live-settings-status" role="status"></p></div>
+      <div class="assist-actions" aria-label="Conversation help"><button data-message="Ask one thoughtful follow-up about what I just said. Help me explore a concrete example or why it matters." disabled>Go deeper</button><button data-message="Let us change the topic. Choose a fresh open-ended question unrelated to our previous topic. Do not assume personal facts about me." disabled>New topic</button><button data-message="Could you speak a little more slowly, please?" disabled>Speak slower</button></div>
+
+    </section>
+    <section class="panel transcript-panel" aria-labelledby="transcript-heading"><div class="transcript-head"><h2 id="transcript-heading">Transcript</h2><button id="download" class="text-button" disabled>Export transcript & review ↗</button></div><p class="microcopy">Each turn is recorded in order. Transcription may contain errors; the review is based on this text.</p><div id="transcript" class="transcript" role="log" aria-label="Conversation transcript"><p class="empty">Your conversation will appear here.</p></div>      <form id="message-form" class="message-form"><label for="message" class="sr-only">Type a message</label><input id="message" maxlength="1500" placeholder="You can also type your thoughts…" disabled><button class="button secondary" id="send" disabled>Send</button></form></section>
+    </div>
+    <section id="summary-panel" class="panel summary-panel" aria-labelledby="summary-heading" hidden><div class="transcript-head"><h2 id="summary-heading">How did this conversation go?</h2><button id="retry-summary" class="text-button" hidden>Try review again</button></div><p id="summary-status" role="status" class="muted"></p><div id="summary-content"></div><p class="microcopy">A reflection on this conversation’s expression and ideas, not a judgment of pronunciation or overall ability.</p></section>
+    <details id="session-history" class="panel session-history" hidden><summary>Earlier conversations in this page</summary><div id="history-content"></div></details>
+    <footer>MapKAI · A little conversation, a new perspective.<span>Cleared on refresh. Export it if you’d like to keep a copy.</span></footer>
+  </main>
+  <dialog id="setup-dialog" aria-labelledby="setup-title"><div class="dialog-heading"><div><p class="eyebrow">Voice settings</p><h2 id="setup-title">Find your rhythm</h2></div><button id="close-setup" class="close-button" aria-label="Close settings">×</button></div>
+    <div class="two-fields"><div><label for="voice">Voice</label><select id="voice"><option value="Kore">Clear female voice</option><option value="Aoede">Breezy female voice</option><option value="Sulafat">Warm female voice</option><option value="Puck">Upbeat male voice</option><option value="Orus">Firm male voice</option><option value="Algenib">Gravelly male voice</option></select></div><div><label for="patience">Response pace</label><select id="patience"><option value="800">Natural pauses</option><option value="1200">More time to think</option></select></div></div>
+    <label for="microphone-select">Microphone</label><select id="microphone-select"><option value="">Auto-select a microphone</option></select>
+    <div class="two-fields"><div><label for="learner-name">What should Kai call you?</label><input id="learner-name" maxlength="40" placeholder="Your name (optional)"></div><div><label for="level">English level</label><select id="level"><option value="A2">Keep it simple · A2</option><option value="B1" selected>Everyday conversation · B1</option><option value="B2">Go a little deeper · B2</option><option value="C1">Nuanced expression · C1</option></select></div></div>
+    <label for="boundaries">Topics to avoid (optional)</label><input id="boundaries" maxlength="300" placeholder="For example: Income or private family matters">
+    <p class="microcopy">Changes apply to your next conversation. Allow microphone access when prompted, then speak naturally.</p><div class="dialog-actions"><button id="save-agent" class="button primary">Save settings</button></div>
+  </dialog>
+</body>
+</html>

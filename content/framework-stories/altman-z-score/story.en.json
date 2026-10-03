@@ -1,0 +1,32 @@
+{
+  "framework": "altman-z-score",
+  "title": "Five Tags Beside “90 Days”",
+  "teaser": "Both loads could leave at seven the next morning, and both customers were still profitable, but the receivables limit allowed only one of them to keep ninety-day terms. Lin Lan let no single ugly figure decide the outcome; the change came only after five tags were combined with fixed weights into two scores.",
+  "paragraphs": [
+    "On Thursday evening, two loads of board material stood side by side on the warehouse dock. The first truck would leave at seven the next morning. Company A and Company B were both publicly listed furniture manufacturers. Their orders had been confirmed, the amounts were similar, and both companies were profitable in the current period. There was no quality or delivery problem with the goods. The company could release both shipments that week, but its receivables limit allowed only one customer to continue on ninety-day terms; the other had to receive shorter terms. Credit manager Lin Lan had to write the final payment term on both pallet slips before the night was over.",
+    "Both slips already had “90 days” printed on them. When the warehouse supervisor came by the first time, Lin Lan did not decide from order size, sales volume, or the simple fact that both firms were making money this year. She took five blank cargo tags and used figures from the same set of annual reports. On the first she wrote “working capital / total assets”: A 0.20, B 0.05. On the second she wrote “retained earnings / total assets”: A 0.25, B 0.02. Even after the differences appeared, she did not touch the pallet slips, because the screening rule did not allow any one tag to exclude a customer by itself.",
+    "The third tag read “EBIT / total assets”: A 0.10, B 0.09. The two figures almost touched, making it clear that B was not being treated differently because its current operating profit had suddenly collapsed. The fourth tag read “market value of equity / book value of debt”: A 1.50, B 0.50. The fifth read “sales / total assets”: A 1.30, B 0.90. Lin Lan went back to the statements and checked the definitions item by item. When all five tags were hanging in place, the “90 days” printed on both pallet slips was still untouched.",
+    "Only then did she enter the five sets of figures into the original screening form used for publicly listed manufacturing companies. The fixed weights were already printed on the form and were not hers to adjust: 1.2, 1.4, 3.3, 0.6, and 1.0. When the calculation was complete, A scored about 3.12 and B about 1.59. Lin Lan looked again at the third tag, where the two firms were closest, and then at the two still-valid orders. There had been no new accident and no customer had suddenly stopped paying. What changed was that, once all five dimensions were combined under the same rule, B no longer fit the conditions for automatically receiving another ninety days.",
+    "She did not cancel B’s order, and she did not type “will go bankrupt” into the system. B was moved to manual review so finance could check its latest cash balance, bank facilities, and near-term maturities. To keep the warehouse from stopping simply because a screening score had appeared, she also left a workable temporary condition: if B accepted thirty-day terms, the truck would still load at seven the next morning; if it insisted on ninety days, the goods would stay in the review area. A kept its ninety-day terms. The score changed the credit condition and the next review step, not a verdict on the company’s fate.",
+    "Before the night shift ended, the warehouse supervisor came back for the third time. Lin Lan handed over A’s release slip first. “90 days” was still there. B’s boards remained neatly strapped beside it and had not been returned to the racks. Lin Lan picked up B’s pallet slip, drew a line through the pre-printed “90 days,” and wrote beside it: “30 days.”"
+  ],
+  "concept": "Altman Z-score combines five financial ratios using fixed weights derived from discriminant analysis to produce a screening score for financial distress risk in publicly listed manufacturing firms. It brings liquidity, accumulated profitability, operating earnings, capital structure, and asset turnover into one rule, but it is not the probability that a particular company will inevitably fail.",
+  "explanation": "Both companies in the story are profitable in the current period, and their EBIT-to-total-assets ratios are close. Lin Lan does not allow any single ratio to determine the credit term. The behavioural change occurs only after the five ratios are combined with fixed weights into scores of 3.12 and 1.59, which are then used to trigger different credit terms and further review.",
+  "mapping": [
+    "Both pallet slips originally say “90 days” → normal current operations and positive current-period earnings are not enough to distinguish the firms’ underlying financial condition.",
+    "The five cargo tags → five financial ratios enter the same financial-distress screening rule.",
+    "Fixed weights combine A into 3.12 and B into 1.59 → the model neither counts bad news nor lets the credit manager improvise the weight of one item.",
+    "B moves to 30-day terms and manual review → Z-score is used to screen and adjust the credit process, not to declare that the company will fail."
+  ],
+  "boundary": "The story uses the original Altman 1968 form developed for publicly listed U.S. manufacturing firms. The same version and thresholds should not be applied mechanically to different countries, industries, periods, or private firms; an appropriate model should be selected and revalidated. Z-score is a classification and warning score, not a default probability, and changes in accounting definitions or market values can also change the result.",
+  "reflection": "If Company B is still profitable and its most direct operating-earnings ratio is close to Company A’s, why are its credit terms changed only after the five tags are combined?",
+  "refs": [
+    "altman"
+  ],
+  "mode": "mechanism-explainer",
+  "calculation": {
+    "formula": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+    "甲": "X1=0.20, X2=0.25, X3=0.10, X4=1.50, X5=1.30, Z≈3.12",
+    "乙": "X1=0.05, X2=0.02, X3=0.09, X4=0.50, X5=0.90, Z≈1.59"
+  }
+}

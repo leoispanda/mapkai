@@ -9,6 +9,8 @@ const scoreLabels = [
   ['differentiation', 'MapKAI Differentiation'],
 ];
 let selected = null;
+let saving = false;
+const pendingCommands = new Map();
 const duration = seconds => Number.isFinite(seconds) ? Math.floor(seconds / 60) + ':' + String(Math.floor(seconds) % 60).padStart(2, '0') : 'Unknown duration';
 function message(text, error = false) { byId('status').textContent = text; byId('status').classList.toggle('error', error); }
 function draftKey(item) { return 'mapkai:raw-video-review:' + item.id + ':' + item.sha256; }
@@ -42,10 +44,12 @@ function selectVideo(item, button) {
   const p = item.policyBinding;
   byId('provenance').textContent = 'Submitted ' + item.submittedAt + '. Creating ' + p.creatingPolicy.version + ' / Review ' + p.reviewPolicy.version + '. Raw SHA-256: ' + item.sha256 + '. Backend completion time was not exposed; generation duration remains UNKNOWN. Historical policy bindings are preserved.';
   byId('review').reset();
-  const draft = readDraft(item);
+  const local = readDraft(item);
+  const draft = local.recordedAt ? local : item.humanReview?.review || {};
+  selected.listButton = button;
   for (const [key] of scoreLabels) byId('review').elements.namedItem(key).value = draft.scores?.[key] ?? '';
   for (const key of ['strengths','weaknesses','missingKnowledge','openingApproach','genericAiFeeling','keepWatching','decision']) if (draft[key] !== undefined) byId('review').elements.namedItem(key).value = draft[key];
-  byId('review-status').textContent = draft.recordedAt ? 'Saved draft from ' + new Date(draft.recordedAt).toLocaleString() : 'Not reviewed yet.';
+  byId('review-status').textContent = local.recordedAt ? 'Local draft from ' + new Date(local.recordedAt).toLocaleString() : item.humanReview ? 'Saved · ' + item.humanReview.status + ' · revision ' + item.humanReview.revision : 'Not reviewed yet.';
   byId('viewer').hidden = false;
 }
 async function loadLibrary() {
@@ -55,11 +59,11 @@ async function loadLibrary() {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || 'Video library unavailable.');
     byId('login').hidden = true; byId('library').hidden = false; byId('video-list').replaceChildren();
-    byId('summary').textContent = data.items.length + ' verified original videos uploaded · Human review pending · 0 published by this channel';
+    byId('summary').textContent = data.items.length + ' original videos · ' + data.items.filter(item => !item.humanReview).length + ' awaiting review';
     message('Private library ready. Choose a video to review.');
     for (const item of data.items) {
       const button = document.createElement('button'); button.type = 'button'; button.textContent = item.fieldName; button.setAttribute('aria-current', 'false');
-      const meta = document.createElement('small'); meta.textContent = duration(item.videoDuration) + ' · Review pending'; button.append(meta);
+      const meta = document.createElement('small'); meta.textContent = duration(item.videoDuration) + ' · ' + (item.humanReview?.status || 'Review pending'); button.append(meta);
       button.addEventListener('click', () => selectVideo(item, button)); byId('video-list').append(button);
     }
     if (data.items.length) selectVideo(data.items[0], byId('video-list').firstElementChild);
@@ -76,11 +80,44 @@ byId('login').addEventListener('submit', async event => {
   } catch (error) { message(error.message, true); }
   finally { button.disabled = false; }
 });
-byId('review').addEventListener('submit', event => {
+byId('save-draft').addEventListener('click', () => {
+  if (!selected) return;
+  try { localStorage.setItem(draftKey(selected), JSON.stringify(reviewData())); byId('review-status').textContent = 'Draft saved on this device.'; }
+  catch { byId('review-status').textContent = 'Browser storage unavailable. Export your draft.'; }
+});
+byId('review').addEventListener('submit', async event => {
   event.preventDefault();
-  if (!selected || !byId('review').reportValidity()) return;
-  try { const draft = reviewData(); localStorage.setItem(draftKey(selected), JSON.stringify(draft)); byId('review-status').textContent = 'Saved on this device. No publication or regeneration was triggered.'; }
-  catch { byId('review-status').textContent = 'Browser storage is unavailable. Export the review instead.'; }
+  if (!selected || saving || !byId('review').reportValidity()) return;
+  const item = selected, draft = reviewData();
+  if (draft.decision === 'Undecided') { byId('review-status').textContent = 'Choose Accept or Regenerate, or save a draft.'; return; }
+  saving = true;
+  const button = event.submitter; button.disabled = true;
+  try {
+    try { localStorage.setItem(draftKey(item), JSON.stringify(draft)); } catch {}
+    const canonical = { ...draft }; delete canonical.recordedAt;
+    const signature = JSON.stringify(canonical);
+    let command = pendingCommands.get(item.id);
+    if (!command || command.signature !== signature) {
+      command = { signature, commandId: crypto.randomUUID(), expectedRevision: item.humanReview?.revision || 0 };
+      pendingCommands.set(item.id, command);
+    }
+    const response = await fetch('/api/factory/review?id=' + encodeURIComponent(item.id), { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ commandId: command.commandId, expectedRevision: command.expectedRevision, review: draft }) });
+    const data = await response.json();
+    if (!response.ok) {
+      if (response.status === 409) {
+        const latestResponse = await fetch('/api/factory/review?id=' + encodeURIComponent(item.id), { credentials: 'same-origin', cache: 'no-store' });
+        if (latestResponse.ok) item.humanReview = (await latestResponse.json()).record;
+        pendingCommands.delete(item.id);
+      }
+      throw new Error(data.error || 'Review could not be saved.');
+    }
+    item.humanReview = data.record;
+    pendingCommands.delete(item.id);
+    try { localStorage.removeItem(draftKey(item)); } catch {}
+    item.listButton.querySelector('small').textContent = duration(item.videoDuration) + ' · ' + data.record.status;
+    if (selected.id === item.id) byId('review-status').textContent = 'Saved · ' + data.record.status + ' · revision ' + data.revision;
+  } catch (error) { if (selected?.id === item.id) byId('review-status').textContent = error.message; }
+  finally { saving = false; button.disabled = false; }
 });
 byId('export-review').addEventListener('click', () => {
   if (!selected || !byId('review').reportValidity()) return;

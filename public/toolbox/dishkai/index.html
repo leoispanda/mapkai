@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>菜单助手 · MapKAI</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/toolbox/dishkai/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="toolbox">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/dishkai/en/" lang="en">EN</a><span>/</span><a href="/toolbox/dishkai/" lang="zh" aria-current="true">中文</a></div></header>
+  <main class="dishkai-main">
+    <a class="back-link" href="/toolbox/">← 返回 Toolbox</a>
+    <section class="menu-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">MAPKAI / EVERYDAY DISCOVERY</p><h1 id="page-title">看懂菜单，<br>再点喜欢的。</h1><p class="hero-copy">从陌生的菜名，到看得懂的味道。<br>贴上菜单，了解食材、口味和点餐时要留意的事。</p><p class="powered">菜单助手 <span>·</span> Powered by DishKAI</p></div>
+      <aside class="hero-note"><span class="note-number">01 — 03</span><h2>让好奇心，也上餐桌。</h2><ol><li><span>01</span>贴上菜单或上传照片</li><li><span>02</span>用熟悉的语言看懂菜名</li><li><span>03</span>点开详情，找到想吃的</li></ol></aside>
+    </section>
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="input-title">
+        <div class="panel-heading"><h2 id="input-title">你的菜单</h2><span class="small-label">DishKAI × MapKAI</span></div>
+        <form id="menu-form">
+          <fieldset id="menu-fields">
+            <legend class="sr-only">菜单输入</legend>
+            <div class="mode-switch" aria-label="输入方式"><button type="button" id="text-mode" aria-pressed="true" aria-controls="text-panel">粘贴文字</button><button type="button" id="photo-mode" aria-pressed="false" aria-controls="photo-panel">上传照片</button></div>
+            <div id="text-panel"><label class="sr-only" for="menu-text">菜单文字</label><textarea id="menu-text" maxlength="12000" rows="7" placeholder="例如：&#10;Boeuf Bourguignon&#10;Pad Thai&#10;Carbonara" aria-describedby="text-hint"></textarea><div class="text-meta"><span id="text-hint">每行一道菜，保留菜单原文即可。</span><span id="text-count">0 / 12000</span></div></div>
+            <div id="photo-panel" hidden><label class="upload-box" for="menu-image"><span class="upload-symbol" aria-hidden="true">＋</span><strong>选择菜单照片</strong><span>JPG、PNG、WebP 或 GIF · 最大 8 MB</span><input id="menu-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" aria-describedby="file-status"></label><p id="file-status" class="form-hint">拍清菜名与价格，尽量让菜单铺满画面。</p></div>
+            <div class="language-row"><label for="output-language">用什么语言解读？</label><select id="output-language"><option value="zh">中文</option><option value="en">English</option><option value="nl">Nederlands</option></select></div>
+            <button class="button primary analyze-button" id="analyze" type="submit">看懂这份菜单 <span aria-hidden="true">↗</span></button>
+            <button type="button" class="sample-button" id="sample">先试一份示例菜单</button>
+          </fieldset>
+        </form>
+        <button class="cancel-button" id="cancel" type="button" hidden>停止等待</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <p class="input-note">点击分析后，菜单将交由 DishKAI 及其 AI 服务处理。请只上传菜单内容，避开人脸和个人信息。</p>
+      </section>
+      <section class="results-panel" id="results" aria-labelledby="results-title" aria-busy="false">
+        <div class="panel-heading"><h2 id="results-title" tabindex="-1">菜单解读</h2><span id="result-count" class="small-label">按原菜单顺序</span></div>
+        <div id="empty-state" class="result-empty"><div class="plate-mark" aria-hidden="true"><span>✦</span></div><h3>每一道菜，都有自己的故事。</h3><p>分析后，菜名会出现在这里。<br>点开一道，看看它是什么、什么味道。</p></div>
+        <div id="result-list"></div>
+        <p id="result-note" class="result-note" hidden>菜品说明仅供点餐参考。实际做法可能不同，过敏原和饮食要求请向餐厅确认。</p>
+      </section>
+    </div>
+    <footer><span>MapKAI Toolbox · 菜单助手</span><a href="https://dishkai.com" target="_blank" rel="noopener noreferrer">由 DishKAI 提供识别与菜品资料 ↗</a></footer>
+  </main>
+</body>
+</html>

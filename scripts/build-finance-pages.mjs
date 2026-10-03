@@ -18,7 +18,7 @@ const versionedSubtitleSrc = (src) => src ? `${src}${src.includes("?") ? "&" : "
 const copy = {
   en: {
     locale: "en", prefix: "", languageName: "English", alternateName: "中文", themeLight: "Light", themeDark: "Dark",
-    nav: ["Home", "Explore", "Knowledge Map", "Learning", "PDC", "About"],
+    nav: ["Home", "Explore", "Knowledge Map", "Learning", "MapKAI Toolbox", "About"],
     original: "MapKAI Original Learning Path", courseTitle: "Corporate Finance Essentials",
     subtitle: "Learn how value, cash, risk, governance, and performance come together in real company decisions.",
     description: "This five-day course explains corporate finance through business situations, stories, decision questions, and practical frameworks. It is designed for learners who need financial understanding, not financial jargon.",
@@ -50,7 +50,7 @@ const copy = {
   },
   zh: {
     locale: "zh-CN", prefix: "/zh", languageName: "中文", alternateName: "English", themeLight: "浅色", themeDark: "深色",
-    nav: ["首页", "探索", "知识地图", "学习路径", "PDC", "关于"],
+    nav: ["首页", "探索", "知识地图", "学习路径", "MapKAI Toolbox", "关于"],
     original: "MapKAI 原创学习路径", courseTitle: "公司金融核心课程",
     subtitle: "理解价值、现金、风险、治理与绩效如何汇入真实的公司决定。",
     description: "这门五天课程通过商业情境、故事、决策问题和实用框架解释公司金融。它面向需要金融理解、而不是金融术语的学习者。",
@@ -120,7 +120,7 @@ const dayDetails = [
   },
 ];
 
-const routes = ["/", "/explore", "/map", "/learning", "/pdc", "/about"];
+const routes = ["/", "/explore", "/map", "/learning", "/toolbox", "/about"];
 
 function esc(value = "") {
   return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
@@ -266,19 +266,20 @@ function pathFor(lang, suffix = "") {
 
 function layout({ lang, title, description, canonicalPath, body, structuredData, robots = "noindex, follow" }) {
   const c = copy[lang];
-  const alternateLang = lang === "en" ? "zh" : "en";
   const alternatePath = canonicalPath.replace(/^\/zh/, "");
   const enPath = lang === "en" ? canonicalPath : alternatePath;
   const zhPath = lang === "zh" ? canonicalPath : `/zh${canonicalPath}`;
   const navLinks = routes.map((route, index) => {
     const active = index === 3 ? " is-current" : "";
-    return `<a class="${active.trim()}" href="${route}">${esc(c.nav[index])}</a>`;
+    const href = route === "/toolbox" ? (lang === "en" ? "/toolbox/en/" : "/toolbox/") : route;
+    return `<a class="${active.trim()}" href="${href}"${active ? ' aria-current="page"' : ""}>${esc(c.nav[index])}</a>`;
   }).join("");
   return `<!doctype html>
 <html lang="${c.locale}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
   <meta name="robots" content="${robots}" />
@@ -299,16 +300,18 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
   <script type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, "\\u003c")}</script>
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/styles.css?v=${appVersion}" />
+  <link rel="stylesheet" href="/site-shell.css?v=${appVersion}" />
+  <script src="/site-shell.js?v=${appVersion}" defer></script>
 </head>
-<body class="finance-static-page" data-language="${lang}">
-  <header class="topbar finance-topbar">
-    <a class="brand" href="/"><img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" /></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="finance-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+<body class="finance-static-page" data-language="${lang}" data-mapkai-page="finance">
+  <header class="topbar finance-topbar" aria-label="${lang === "zh" ? "主导航" : "Primary navigation"}">
+    <a class="brand" href="/" aria-label="${lang === "zh" ? "MapKAI 首页" : "MapKAI home"}"><img class="brand-mark" src="/mapkai-logo-transparent.png" alt="MapKAI" /></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="finance-nav" aria-label="${lang === "zh" ? "打开菜单" : "Open menu"}"><span></span><span></span><span></span></button>
     <div class="nav-panel" id="finance-nav">
-      <nav class="nav-links" aria-label="Site">${navLinks}</nav>
+      <nav class="nav-links" aria-label="${lang === "zh" ? "网站" : "Site"}">${navLinks}</nav>
       <div class="nav-preferences">
-        <a class="finance-language-link" href="${alternateLang === "zh" ? zhPath : enPath}">${esc(c.alternateName)}</a>
-        <div class="theme-switch" aria-label="Theme"><button type="button" data-theme-option="light">${esc(c.themeLight)}</button><span>|</span><button type="button" data-theme-option="dark">${esc(c.themeDark)}</button></div>
+        <nav class="language-switch" aria-label="${lang === "zh" ? "语言" : "Language"}"><a href="${enPath}" lang="en" hreflang="en"${lang === "en" ? ' aria-current="page"' : ""}>English</a><span aria-hidden="true">|</span><a href="${zhPath}" lang="zh-CN" hreflang="zh-Hans"${lang === "zh" ? ' aria-current="page"' : ""}>中文</a></nav>
+        <div class="theme-switch" aria-label="${lang === "zh" ? "外观" : "Theme"}"><button type="button" data-theme-option="light" aria-pressed="true">${esc(c.themeLight)}</button><span aria-hidden="true">|</span><button type="button" data-theme-option="dark" aria-pressed="false">${esc(c.themeDark)}</button></div>
       </div>
     </div>
   </header>
@@ -423,7 +426,7 @@ function renderDay(lang, dayIndex) {
 function renderCompleted(lang) {
   const c = copy[lang];
   const canonicalPath = pathFor(lang, "/completed");
-  const body = `<main class="finance-completion-main" data-course-completed><section class="finance-completion-card"><p class="eyebrow">MapKAI · ${esc(c.courseTitle)}</p><h1>${esc(c.completionTitle)}</h1><p>${esc(c.completionCopy)}</p><ul>${c.completedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="hero-actions"><a class="button primary" href="/map">${esc(c.reviewMap)}</a><a class="button secondary" href="/pdc" data-course-event="pdc_clicked_after_course">${esc(c.usePdc)}</a></div></section></main>`;
+  const body = `<main class="finance-completion-main" data-course-completed><section class="finance-completion-card"><p class="eyebrow">MapKAI · ${esc(c.courseTitle)}</p><h1>${esc(c.completionTitle)}</h1><p>${esc(c.completionCopy)}</p><ul>${c.completedItems.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="hero-actions"><a class="button primary" href="/map">${esc(c.reviewMap)}</a><a class="button secondary" href="/toolbox/pdc" data-course-event="pdc_clicked_after_course">${esc(c.usePdc)}</a></div></section></main>`;
   return layout({ lang, title: `${c.completionTitle} | MapKAI`, description: c.completionCopy, canonicalPath, body, robots: "noindex, follow", structuredData: { "@context": "https://schema.org", "@type": "WebPage", name: c.completionTitle, url: `${site}${canonicalPath}` } });
 }
 

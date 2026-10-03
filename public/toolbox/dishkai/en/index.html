@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'">
+  <title>Menu Reader · MapKAI</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=0.1.291">
+  <script src="/site-shell.js?v=0.1.291" defer></script>
+  <script type="module" src="/toolbox/dishkai/app.js?v=0.1.291"></script>
+</head>
+<body data-mapkai-page="toolbox">
+  <header class="topbar"><a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="Main navigation"><a href="/toolbox/en/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/dishkai/en/" lang="en" aria-current="true">EN</a><span>/</span><a href="/toolbox/dishkai/" lang="zh">中文</a></div></header>
+  <main class="dishkai-main">
+    <a class="back-link" href="/toolbox/en/">← Back to Toolbox</a>
+    <section class="menu-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">MAPKAI / EVERYDAY DISCOVERY</p><h1 id="page-title">Read the menu.<br>Find your favorite.</h1><p class="hero-copy">Turn unfamiliar names into familiar flavors.<br>Explore the ingredients, tastes and things to know before you order.</p><p class="powered">Menu Reader <span>·</span> Powered by DishKAI</p></div>
+      <aside class="hero-note"><span class="note-number">01 — 03</span><h2>Bring curiosity to the table.</h2><ol><li><span>01</span>Paste a menu or upload a photo</li><li><span>02</span>Read dishes in your own language</li><li><span>03</span>Open the details. Find your favorite.</li></ol></aside>
+    </section>
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="input-title">
+        <div class="panel-heading"><h2 id="input-title">Your menu</h2><span class="small-label">DishKAI × MapKAI</span></div>
+        <form id="menu-form">
+          <fieldset id="menu-fields">
+            <legend class="sr-only">Menu input</legend>
+            <div class="mode-switch" aria-label="Input method"><button type="button" id="text-mode" aria-pressed="true" aria-controls="text-panel">Paste text</button><button type="button" id="photo-mode" aria-pressed="false" aria-controls="photo-panel">Upload photo</button></div>
+            <div id="text-panel"><label class="sr-only" for="menu-text">Menu text</label><textarea id="menu-text" maxlength="12000" rows="7" placeholder="For example:&#10;Boeuf Bourguignon&#10;Pad Thai&#10;Carbonara" aria-describedby="text-hint"></textarea><div class="text-meta"><span id="text-hint">One dish per line, in the original language.</span><span id="text-count">0 / 12000</span></div></div>
+            <div id="photo-panel" hidden><label class="upload-box" for="menu-image"><span class="upload-symbol" aria-hidden="true">＋</span><strong>Choose a menu photo</strong><span>JPG, PNG, WebP or GIF · Up to 8 MB</span><input id="menu-image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" aria-describedby="file-status"></label><p id="file-status" class="form-hint">Keep names and prices sharp. Fill the frame with the menu.</p></div>
+            <div class="language-row"><label for="output-language">Read it in</label><select id="output-language"><option value="zh">中文</option><option value="en">English</option><option value="nl">Nederlands</option></select></div>
+            <button class="button primary analyze-button" id="analyze" type="submit">Understand this menu <span aria-hidden="true">↗</span></button>
+            <button type="button" class="sample-button" id="sample">Try a sample menu</button>
+          </fieldset>
+        </form>
+        <button class="cancel-button" id="cancel" type="button" hidden>Stop waiting</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <p class="input-note">Your menu is sent to DishKAI and its AI services when you analyze it. Upload menu content only, without faces or personal details.</p>
+      </section>
+      <section class="results-panel" id="results" aria-labelledby="results-title" aria-busy="false">
+        <div class="panel-heading"><h2 id="results-title" tabindex="-1">Your menu, explained</h2><span id="result-count" class="small-label">In original menu order</span></div>
+        <div id="empty-state" class="result-empty"><div class="plate-mark" aria-hidden="true"><span>✦</span></div><h3>Every dish has a story.</h3><p>Your dishes will appear here.<br>Open one to discover what it is and how it tastes.</p></div>
+        <div id="result-list"></div>
+        <p id="result-note" class="result-note" hidden>Dish descriptions are a guide. Recipes vary; confirm allergens and dietary requirements with the restaurant.</p>
+      </section>
+    </div>
+    <footer><span>MapKAI Toolbox · Menu Reader</span><a href="https://dishkai.com" target="_blank" rel="noopener noreferrer">Menu recognition & dish knowledge by DishKAI ↗</a></footer>
+  </main>
+</body>
+</html>

@@ -22,7 +22,7 @@ batch-002	01	0114	Teacher training with subject specialisation	学科专项教�
 batch-002	01	0114	Teacher training with subject specialisation	学科专项教师培养	3	0114-disciplinary-literacy	Disciplinary literacy	学科读写能力	concept-fable	同一页文字在史官和药剂师手里变成不同证据	integrated
 batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	1	0211-montage	Montage	蒙太奇	concept-fable	剪辑师调换两个镜头后让同一张脸显得有罪	integrated
 batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	2	0211-diegetic-sound	Diegetic and non-diegetic sound	叙事内声与叙事外声	concept-fable	剧场里一声看不见来源的钟改变整场追逐	integrated
-batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	3	0211-framing	Framing	取景与框架	lens-fable	庆典影片边缘被裁掉的抗议队伍	integrated
+batch-002	02	0211	Audio-visual techniques and media production	视听技术与媒体制作	3	0211-framing	Framing	取景与框架	lens-story	庆典影片边缘被裁掉的抗议队伍	integrated
 batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	1	0212-affordance	Affordance	可供性	concept-fable	所有人都会推错方向的华丽门把手	integrated
 batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	2	0212-ergonomics	Ergonomics	人体工学	concept-fable	让每位工匠都疼痛的获奖工作台	integrated
 batch-002	02	0212	Fashion interior and industrial design	时尚、室内与工业设计	3	0212-design-constraints	Design constraints	设计约束	concept-fable	只能用三种材料完成的暴风灯竞赛	integrated
@@ -32,60 +32,60 @@ batch-002	02	0213	Fine arts	美术	3	0213-medium-specificity	Medium specificity	
 batch-003	02	0214	Handicrafts	手工艺	1	0214-tacit-knowledge	Tacit knowledge	默会知识	concept-fable	能做出完美陶碗却说不出手腕角度的老匠人	integrated
 batch-003	02	0214	Handicrafts	手工艺	2	0214-material-affordance	Material affordance	材料可供性	concept-fable	坚持逆着木纹雕刻的订单与裂开的椅背	integrated
 batch-003	02	0214	Handicrafts	手工艺	3	0214-iterative-craftsmanship	Iterative craftsmanship	迭代式工艺	concept-fable	每一只失败篮子都留下一根不同颜色的藤条	integrated
-batch-003	02	0215	Music and performing arts	音乐与表演艺术	1	0215-entrainment	Entrainment	节律同步	mechanism-fable	没有共同口令却逐渐同桨的夜航船队	integrated
+batch-003	02	0215	Music and performing arts	音乐与表演艺术	1	0215-entrainment	Entrainment	节律同步	mechanism-explainer	没有共同口令却逐渐同桨的夜航船队	integrated
 batch-003	02	0215	Music and performing arts	音乐与表演艺术	2	0215-tension-and-resolution	Tension and resolution	张力与解决	concept-fable	拒绝回到主音的宫廷乐曲让舞会无法散场	integrated
 batch-003	02	0215	Music and performing arts	音乐与表演艺术	3	0215-ensemble-coordination	Ensemble coordination	合奏协调	concept-fable	指挥失声后才开始真正互相聆听的乐团	integrated
 batch-003	02	0221	Religion and theology	宗教与神学	1	0221-sacred-and-profane	Sacred and profane	神圣与世俗	concept-fable	同一口井在集市日与纪念日拥有两套规则	integrated
 batch-003	02	0221	Religion and theology	宗教与神学	2	0221-theological-hermeneutics	Theological hermeneutics	神学诠释	concept-fable	三代抄经人面对同一句关于门的古文	integrated
 batch-003	02	0221	Religion and theology	宗教与神学	3	0221-theodicy	Theodicy	神义论	concept-fable	风暴之后仍要回答祈祷与苦难关系的小镇	integrated
-batch-003	02	0222	History and archaeology	历史与考古	1	0222-source-criticism	Source criticism	史料批判	lens-fable	凯旋碑、军粮账和士兵家书讲出三个版本	integrated
-batch-003	02	0222	History and archaeology	历史与考古	2	0222-stratigraphy	Stratigraphy	地层学	mechanism-fable	新广场下层层叠着旧市场与火灾灰烬	integrated
+batch-003	02	0222	History and archaeology	历史与考古	1	0222-source-criticism	Source criticism	史料批判	lens-story	凯旋碑、军粮账和士兵家书讲出三个版本	integrated
+batch-003	02	0222	History and archaeology	历史与考古	2	0222-stratigraphy	Stratigraphy	地层学	mechanism-explainer	新广场下层层叠着旧市场与火灾灰烬	integrated
 batch-003	02	0222	History and archaeology	历史与考古	3	0222-historical-contingency	Historical contingency	历史偶然性	concept-fable	一封迟到的命令让后来人误以为结局注定	integrated
 batch-003	02	0223	Philosophy and ethics	哲学与伦理	1	0223-reflective-equilibrium	Reflective equilibrium	反思平衡	concept-fable	法官在普遍规则与三个刺手案件之间往返	integrated
 batch-003	02	0223	Philosophy and ethics	哲学与伦理	2	0223-moral-luck	Moral luck	道德运气	concept-fable	作出同一决定却因风向不同受到相反审判的船长	integrated
-batch-003	02	0223	Philosophy and ethics	哲学与伦理	3	0223-validity-and-soundness	Validity and soundness	有效性与可靠性	mechanism-fable	把蓝色道路误当成高程证据的议会	integrated
+batch-003	02	0223	Philosophy and ethics	哲学与伦理	3	0223-validity-and-soundness	Validity and soundness	有效性与可靠性	mechanism-explainer	把蓝色道路误当成高程证据的议会	integrated
 batch-004	02	0231	Language acquisition	语言习得	1	0231-comprehensible-input	Comprehensible input	可理解输入	concept-fable	不懂当地话的面包师从动作和半句提示开始听懂	integrated
 batch-004	02	0231	Language acquisition	语言习得	2	0231-interlanguage	Interlanguage	中介语	concept-fable	每月都换一套错误却越来越能被理解的学徒	integrated
-batch-004	02	0231	Language acquisition	语言习得	3	0231-noticing-hypothesis	Noticing hypothesis	注意假说	lens-fable	总漏掉词尾的译员终于在订单颜色中看见差别	integrated
+batch-004	02	0231	Language acquisition	语言习得	3	0231-noticing-hypothesis	Noticing hypothesis	注意假说	concept-fable	总漏掉词尾的译员终于在订单颜色中看见差别	integrated
 batch-004	02	0232	Literature and linguistics	文学与语言学	1	0232-arbitrariness-of-the-sign	Arbitrariness of the sign	符号任意性	concept-fable	河两岸用相反词语称呼同一种蓝色	integrated
 batch-004	02	0232	Literature and linguistics	文学与语言学	2	0232-focalization	Focalization	叙事聚焦	concept-fable	灯塔失火被三个窗口讲成三种故事	integrated
 batch-004	02	0232	Literature and linguistics	文学与语言学	3	0232-pragmatics	Pragmatics	语用学	concept-fable	一句门还开着在宴会、审讯和病房里意思不同	integrated
 batch-004	03	0311	Economics	经济学	1	0311-opportunity-cost	Opportunity cost	机会成本	concept-fable	只能把水引向磨坊或果园的村庄	integrated
-batch-004	03	0311	Economics	经济学	2	0311-marginal-analysis	Marginal analysis	边际分析	mechanism-fable	港主发现第十艘船与第一艘船价值不同	integrated
+batch-004	03	0311	Economics	经济学	2	0311-marginal-analysis	Marginal analysis	边际分析	mechanism-explainer	港主发现第十艘船与第一艘船价值不同	integrated
 batch-004	03	0311	Economics	经济学	3	0311-negative-externality	Negative externality	负外部性	concept-fable	皮革坊的利润顺流变成下游人的成本	integrated
 batch-004	03	0312	Political sciences and civics	政治科学与公民学	1	0312-collective-action-problem	Collective action problem	集体行动困境	concept-fable	人人都等别人修最后一段海堤的港镇	integrated
 batch-004	03	0312	Political sciences and civics	政治科学与公民学	2	0312-separation-of-powers	Separation of powers	权力分立	concept-fable	开启粮仓必须由三把钥匙共同转动	integrated
 batch-004	03	0312	Political sciences and civics	政治科学与公民学	3	0312-political-legitimacy	Political legitimacy	政治合法性	concept-fable	同一项港税在强令与共同议定下得到不同回应	integrated
 batch-004	03	0313	Psychology	心理学	1	0313-cognitive-dissonance	Cognitive dissonance	认知失调	concept-fable	桥梁失败后不断重写记录来维护自尊的设计师	integrated
-batch-004	03	0313	Psychology	心理学	2	0313-operant-conditioning	Operant conditioning	操作性条件作用	mechanism-fable	奖励铃声让鸽舍管理员得到意外行为	integrated
-batch-004	03	0313	Psychology	心理学	3	0313-fundamental-attribution-error	Fundamental attribution error	基本归因错误	lens-fable	总被骂懒惰的车夫背后有一座每天落闸的桥	integrated
+batch-004	03	0313	Psychology	心理学	2	0313-operant-conditioning	Operant conditioning	操作性条件作用	concept-fable	奖励铃声让鸽舍管理员得到意外行为	integrated
+batch-004	03	0313	Psychology	心理学	3	0313-fundamental-attribution-error	Fundamental attribution error	基本归因错误	lens-story	总被骂懒惰的车夫背后有一座每天落闸的桥	integrated
 batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	1	0314-social-construction	Social construction	社会建构	concept-fable	临时颜色徽章逐渐变成不可质疑的身份等级	integrated
 batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	2	0314-habitus	Habitus	惯习	concept-fable	新生不经提醒就暴露出来自哪一张餐桌	integrated
 batch-005	03	0314	Sociology and cultural studies	社会学与文化研究	3	0314-norm-enforcement	Norm enforcement	规范执行	concept-fable	没有告示却始终空着的渡船长椅	integrated
 batch-005	03	0321	Journalism and reporting	新闻与报道	1	0321-verification	Verification	新闻核实	concept-fable	大坝将塌的消息跑得比任何证人更快	integrated
-batch-005	03	0321	Journalism and reporting	新闻与报道	2	0321-agenda-setting	Agenda-setting	议程设置	lens-fable	城里并非只有公告板头条上的三件事	integrated
+batch-005	03	0321	Journalism and reporting	新闻与报道	2	0321-agenda-setting	Agenda-setting	议程设置	concept-fable	城里并非只有公告板头条上的三件事	integrated
 batch-005	03	0321	Journalism and reporting	新闻与报道	3	0321-source-triangulation	Source triangulation	来源三角验证	concept-fable	三名目击者各自只看见失火仓库的一面墙	integrated
 batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	1	0322-provenance	Provenance	来源原则	concept-fable	一封没有流转记录的密信改变了王室展览	integrated
 batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	2	0322-metadata	Metadata	元数据	concept-fable	仓库拥有全部箱子却再也找不到任何东西	integrated
 batch-005	03	0322	Library information and archival studies	图书馆、信息与档案研究	3	0322-archival-silence	Archival silence	档案沉默	concept-fable	港口史里没有留下搬运整座城市的女人们	integrated
-batch-005	04	0411	Accounting and taxation	会计与税务	1	0411-double-entry-bookkeeping	Double-entry bookkeeping	复式记账	mechanism-fable	每枚离开金库的硬币都必须在另一页出现	integrated
-batch-005	04	0411	Accounting and taxation	会计与税务	2	0411-accrual-accounting	Accrual accounting	权责发生制	mechanism-fable	冬季订单与春季收款让账本讲出两种繁荣	integrated
-batch-005	04	0411	Accounting and taxation	会计与税务	3	0411-tax-incidence	Tax incidence	税负归宿	concept-fable	城门税从商人票据一路走到面包价格里	integrated
-batch-005	04	0412	Finance banking and insurance	金融、银行与保险	1	0412-time-value-of-money	Time value of money	货币时间价值	mechanism-fable	今天的一袋种子与十年后的同一袋种子	integrated
-batch-005	04	0412	Finance banking and insurance	金融、银行与保险	2	0412-diversification	Diversification	分散化	concept-fable	把全部香料装上最快一艘船的商人	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	1	0411-double-entry-bookkeeping	Double-entry bookkeeping	复式记账	mechanism-explainer	每枚离开金库的硬币都必须在另一页出现	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	2	0411-accrual-accounting	Accrual accounting	权责发生制	mechanism-explainer	冬季订单与春季收款让账本讲出两种繁荣	integrated
+batch-005	04	0411	Accounting and taxation	会计与税务	3	0411-tax-incidence	Tax incidence	税负归宿	mechanism-explainer	城门税从商人票据一路走到面包价格里	integrated
+batch-005	04	0412	Finance banking and insurance	金融、银行与保险	1	0412-time-value-of-money	Time value of money	货币时间价值	mechanism-explainer	今天的一袋种子与十年后的同一袋种子	integrated
+batch-005	04	0412	Finance banking and insurance	金融、银行与保险	2	0412-diversification	Diversification	分散化	mechanism-explainer	把全部香料装上最快一艘船的商人	integrated
 batch-005	04	0412	Finance banking and insurance	金融、银行与保险	3	0412-moral-hazard	Moral hazard	道德风险	concept-fable	投保后不再巡夜的仓库主人	integrated
 batch-006	04	0413	Management and administration	管理与行政	1	0413-principal-agent-problem	Principal-agent problem	委托代理问题	concept-fable	远方矿主只按车数奖励看守人	integrated
 batch-006	04	0413	Management and administration	管理与行政	2	0413-psychological-safety	Psychological safety	心理安全感	concept-fable	没人敢把裂纹齿轮放上晨会桌的铸造坊	integrated
 batch-006	04	0413	Management and administration	管理与行政	3	0413-dynamic-capabilities	Dynamic capabilities	动态能力	case-fable	帆布需求消失后重新学习测风的老作坊	integrated
 batch-006	04	0414	Marketing and advertising	市场营销与广告	1	0414-segmentation-targeting-positioning	Segmentation, targeting, and positioning	细分、目标选择与定位	case-fable	一块肥皂向所有人说同一句话却无人记住	integrated
 batch-006	04	0414	Marketing and advertising	市场营销与广告	2	0414-signaling	Signaling	信号传递	concept-fable	陌生市场里两罐看不见内部的蜂蜜	integrated
-batch-006	04	0414	Marketing and advertising	市场营销与广告	3	0414-customer-lifetime-value	Customer lifetime value	客户终身价值	mechanism-fable	旅店为一次豪客赶走十年常客	integrated
-batch-006	04	0415	Secretarial and office work	秘书与办公室工作	1	0415-information-triage	Information triage	信息分诊	concept-fable	所有公文都系红带后真正紧急的信件消失了	integrated
-batch-006	04	0415	Secretarial and office work	秘书与办公室工作	2	0415-record-version-control	Record version control	记录版本控制	concept-fable	三份略有不同的命令同时抵达工地	integrated
+batch-006	04	0414	Marketing and advertising	市场营销与广告	3	0414-customer-lifetime-value	Customer lifetime value	客户终身价值	mechanism-explainer	旅店为一次豪客赶走十年常客	integrated
+batch-006	04	0415	Secretarial and office work	秘书与办公室工作	1	0415-information-triage	Information triage	信息分诊	mechanism-explainer	所有公文都系红带后真正紧急的信件消失了	integrated
+batch-006	04	0415	Secretarial and office work	秘书与办公室工作	2	0415-record-version-control	Record version control	记录版本控制	mechanism-explainer	三份略有不同的命令同时抵达工地	integrated
 batch-006	04	0415	Secretarial and office work	秘书与办公室工作	3	0415-coordination-cost	Coordination cost	协调成本	concept-fable	为了让每个人知情而再也没有时间工作的办公室	integrated
-batch-006	04	0416	Wholesale and retail sales	批发与零售销售	1	0416-inventory-turnover	Inventory turnover	库存周转	mechanism-fable	货架最满的水果店每天扔掉最多果子	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	1	0416-inventory-turnover	Inventory turnover	库存周转	mechanism-explainer	货架最满的水果店每天扔掉最多果子	integrated
 batch-006	04	0416	Wholesale and retail sales	批发与零售销售	2	0416-bullwhip-effect	Bullwhip effect	牛鞭效应	concept-fable	一场小雨在供应链上变成十倍雨伞订单	integrated
-batch-006	04	0416	Wholesale and retail sales	批发与零售销售	3	0416-price-discrimination	Price discrimination	价格歧视	mechanism-fable	同一班渡船为何卖出三种票价	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	3	0416-price-discrimination	Price discrimination	价格歧视	mechanism-explainer	同一班渡船为何卖出三种票价	integrated
 batch-006	04	0417	Work skills	工作技能	1	0417-community-of-practice	Community of practice	实践共同体	concept-fable	修理知识总出现在午间长凳而不在手册里	integrated
 batch-006	04	0417	Work skills	工作技能	2	0417-role-clarity	Role clarity	角色清晰度	concept-fable	所有人都负责灭火却没人带水桶的仓库	integrated
 batch-006	04	0417	Work skills	工作技能	3	0417-adaptive-expertise	Adaptive expertise	适应性专长	concept-fable	完美复刻旧配方却无法处理新面粉的师傅	integrated

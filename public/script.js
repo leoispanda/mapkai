@@ -1,3 +1,9 @@
+// Keep existing PDC bookmarks and invitation parameters when moving into Toolbox.
+const legacyPdcRoutes = { '/pdc': '/toolbox/pdc', '/pdc-pilot': '/toolbox/pdc/session' };
+const legacyPdcTarget = legacyPdcRoutes[window.location.pathname.replace(/\/$/, '')];
+if (legacyPdcTarget && window.location.protocol !== 'file:') {
+  history.replaceState(history.state, '', legacyPdcTarget + window.location.search + window.location.hash);
+}
 const pages = Array.from(document.querySelectorAll("[data-page]"));
 const routeLinks = Array.from(document.querySelectorAll("[data-route]"));
 const founderToggle = document.getElementById("founderToggle");
@@ -5,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.225";
+const appVersion = "0.1.291";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -21,7 +27,9 @@ const navToggle = document.querySelector(".nav-toggle");
 const navPanel = document.querySelector(".nav-panel");
 const supportedLanguages = ["en", "zh"];
 const supportedThemes = ["light", "dark"];
-let currentLanguage = supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let currentLanguage = supportedLanguages.includes(requestedLanguage) ? requestedLanguage : supportedLanguages.includes(localStorage.getItem(languageKey)) ? localStorage.getItem(languageKey) : "en";
+if (supportedLanguages.includes(requestedLanguage)) localStorage.setItem(languageKey, requestedLanguage);
 let currentTheme = supportedThemes.includes(localStorage.getItem(themeKey)) ? localStorage.getItem(themeKey) : "light";
 let lastVisitStats = null;
 const activeCategorySubmodules = {};
@@ -41,7 +49,7 @@ const publicContentVisibility = {
 
 const managementColumn = globalThis.MAPKAI_MANAGEMENT_COLUMN || { articles: [] };
 
-const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07", "08"]);
+const rebuiltSubjectIntroCategoryCodes = new Set(["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]);
 
 function arePublicArticlesVisible() {
   return Boolean(publicContentVisibility.articles);
@@ -100,11 +108,11 @@ const routeMeta = {
     title: "MapKAI Explore — Start an AI-Native Knowledge Map",
     description: "Answer a few everyday questions and reveal early active, quiet, and unexplored areas in your personal knowledge map.",
   },
-  "/pdc": {
+  "/toolbox/pdc": {
     title: "MapKAI PDC — AI Decision Council for Structured Reflection",
     description: "Use a structured AI council to think through decisions with trade-offs, disagreement, uncertainty, and timing pressure.",
   },
-  "/pdc-pilot": {
+  "/toolbox/pdc/session": {
     title: "MapKAI PDC — AI Decision Council for Structured Reflection",
     description: "Use a structured AI council to think through decisions with trade-offs, disagreement, uncertainty, and timing pressure.",
     robots: "noindex, nofollow",
@@ -242,7 +250,124 @@ const uiText = {
     homeFeaturedAction: "Start Day 1 — Free",
     homeCourseOutlineAction: "View Course Outline",
     homeEyebrow: "MapKAI",
+    pdcRoomLabel: "PDC Decision Room",
+    pdcPublicDemo: "Public demo",
+    pdcDemoMode: "Try a prepared case",
+    pdcDemoIntro: "Explore a prepared PDC case before entering your own question.",
+    pdcDemoHint: "For decisions with trade-offs, competing priorities, or disagreement.",
+    pdcWatchDemo: "Watch demo",
+    pdcEnterLabel: "Enter PDC",
+    pdcSessionEyebrow: "PDC Council",
+    pdcSessionSubtitle: "A structured council debate for clearer decisions.",
+    pdcSessionTrust: "Free and open to everyone. No account or access code required. Please avoid sensitive or confidential information.",
+    pdcResponsibleTitle: "Responsible use & privacy",
+    pdcResponsibleFree: "MapKAI is currently a free knowledge initiative.",
+    pdcResponsibleAccount: "You can explore it without creating an account or providing your name or email.",
+    pdcResponsibleJudgment: "The final judgment remains yours.",
+    pdcResponsibleSensitive: "Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.",
+    pdcQuestionLabel: "Question",
+    pdcQuestionPlaceholder: "Write one question you want to examine.",
+    pdcCharactersRemaining: (count) => `${count} characters left`,
+    pdcStartStandard: "Start council",
+    pdcBackToOptions: "Back to PDC",
+    pdcCheckingAccess: "Preparing your question...",
+    pdcCheckingCode: "Checking access code...",
+    pdcEnterCode: "Enter your PDC access code.",
+    pdcCodeUnavailable: "This PDC access code is no longer available.",
+    pdcQuestionRequired: "Please enter a question of at least 8 characters before starting.",
+    pdcPreparingRecap: "Preparing Council Recap...",
+    pdcGeneratingRecap: "Generating Council Recap...",
+    pdcPreparingFirstRound: "Council is preparing Round 1A...",
+    pdcPreparingPhase: "Preparing this phase...",
+    pdcRetryRecap: "Retry Council Recap",
+    pdcCancelGeneration: "Cancel generation",
+    pdcGenerationTimeout: "PDC took too long to respond. Your question and discussion are saved. Please retry.",
+    pdcGenerationCancelled: "Generation cancelled. Your question and discussion are saved.",
+    pdcDiscussionSaved: "Your discussion is saved. Retry the recap when you are ready.",
+    pdcOpenCouncil: "Discuss my question",
+    pdcOpenCopy: "Bring a real decision. Start now, continue as needed, and ask for a summary when you are ready.",
+    pdcNewQuestion: "Start a new question",
+    pdcContinue: "Continue discussion",
+    pdcSummarize: "Summarize discussion",
+    pdcRecapReady: "Your discussion summary is ready.",
+    pdcCouncilSpeaking: "The council is still speaking...",
+    pdcSummarySuggestion: "You have enough discussion to ask for a summary. You can also continue exploring.",
+    pdcRoundLabel: (round, phase) => `Round ${round}${phase} — ${phase === "A" ? "Views" : "Challenges & votes"}`,
+    pdcGuideLabel: "Guide the next round",
+    pdcGuidePlaceholder: "Optional: what should the council focus on next?",
+    pdcGuideCopy: "The next round builds on the discussion and your guidance.",
+    pdcCouncilMembers: "Council members",
+    pdcActiveMembers: "Speaking members",
+    pdcObservers: "Observers",
+    pdcFacilitator: "Facilitator",
+    pdcCouncilThinking: "The council is thinking...",
+    pdcStatementCount: (count) => `${count} council statements`,
+    pdcNoDialogue: "No discussion is available yet.",
+    pdcRecapTitle: "Discussion summary",
+    pdcRecapCopy: "The strongest views and practical next steps from your discussion.",
+    pdcDecisionFrame: "Decision frame",
+    pdcCoreTension: "Core tension",
+    pdcHighlights: "Strongest views",
+    pdcDebateSnapshot: "Points of disagreement",
+    pdcCondensedReview: "What the discussion clarified",
+    pdcRecommendation: "Recommendation",
+    pdcNextActions: "Next steps",
+    pdcWhatNotToDo: "What to avoid",
+    pdcReflectionNote: "Reflection note",
+    pdcDemoPlaying: "The prepared example is playing...",
+    pdcDemoPrevious: "Previous example round",
+    pdcDemoNext: "Next example round",
+    pdcDemoRecap: "Example summary",
+    pdcDemoNotice: "Prepared example. These views were written in advance, rather than generated for your question.",
+    pdcRoundSummaryTitle: "Blue Whale's summary",
+    pdcPhaseComplete: "This round is complete.",
+    pdcSpeakingTurns: "Council members are speaking in turn.",
+    pdcContributionVote: "Contribution vote",
+    pdcConcernVote: "Concern vote",
+    pdcContributionReason: "Reason for support",
+    pdcConcernReason: "Reason for concern",
+    pdcVoteRecorded: "Recorded in the round's votes.",
+    pdcVotingSnapshot: "Council votes",
+    pdcStrongestContribution: "Most supported contribution",
+    pdcMostChallenged: "Most challenged view",
+    pdcWhaleInterpretation: "Blue Whale's interpretation",
+    pdcNoConsensus: "The discussion is still open.",
+    pdcSupportCount: (count) => `${count} support votes`,
+    pdcConcernCount: (count) => `${count} concern votes`,
+    pdcChallengeCount: (count) => `${count} challenges`,
+    pdcRoundOutcome: "What changed this round",
+    pdcChallengeFocus: "Focus of the challenges",
+    pdcNoChallenges: "No direct challenge was recorded.",
+    pdcObserverMoved: "Moved to observation",
+    pdcReintroduced: "A perspective returns",
+    pdcLiveUnavailable: "The council could not generate a live response. Please retry.",
+    pdcServiceUnavailable: "The council is temporarily unavailable. Your question and discussion are kept here; please try again later.",
+    pdcServiceBusy: "The AI service is busy. Your question and discussion are kept here; please try again shortly.",
+    pdcUnreadableResponse: "The council's response could not be read. Your discussion is kept here; please retry.",
+    pdcQuestionBlocked: "The council could not respond to this question. Try phrasing it differently.",
+    pdcMemberProfile: "Member profile",
+    pdcProfileName: "Name",
+    pdcProfileRole: "Perspective",
+    pdcProfileResponsibility: "What this member checks",
+    pdcCurrentStance: "Current view",
+    pdcPerspectiveTrail: "How the view changed",
+    pdcTrailEmpty: "This member's views will appear as the discussion develops.",
+    pdcObserverReflection: "Blue Whale returns to a previously archived view before summarizing.",
+    pdcObserverReturnReason: "Why this view returns",
+    pdcCouncilPreview: "Decision council",
+    pdcCouncilRoomLabel: "PDC Council Room",
+    pdcCouncilRoundsCopy: "The council reviews your decision in structured rounds.",
+    pdcCurrentRoundLabel: "Current round",
+    pdcLiveDialogueLabel: "Live council dialogue",
+    pdcDecisionLabel: "Decision on the table",
+
     homeTitle: "Map your knowledge with AI",
+    speakingRecommendEyebrow: "RECOMMENDED · SPEAKING STUDIO",
+    speakingRecommendTitle: "Your stories. A conversation in English.",
+    speakingRecommendCopy: "Bring a little background, or jump into a spontaneous chat. Practise speaking with an AI host, follow the transcript, and reflect together when you finish.",
+    speakingRecommendStart: "Start a conversation ↗",
+    speakingRecommendTools: "Explore Toolbox ↗",
+
     homeCopy: "Answer three everyday questions. See which areas feel active, quiet, or worth exploring next.",
     homePrimary: "Start exploration",
     homeFinanceAction: "Start the Finance Course",
@@ -477,7 +602,7 @@ const uiText = {
     aboutBoundaryP2: "MapKAI creates the map. Your personal AI helps you explore it more deeply.",
     aboutClosing: "Not everything meaningful can be fully measured. But some things become clearer once they are finally visible.",
     pdcEntryEyebrow: "PDC Experience",
-    pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
+    pdcEntryTitle: "Think through a decision with different perspectives",
     pdcEntrySubtitle: "Think through a decision before you act.",
     pdcEntryDescription: "PDC helps you examine one real decision through structured disagreement, then turn the discussion into a clearer decision memo.",
     pdcHowEyebrow: "How it works",
@@ -560,13 +685,13 @@ const uiText = {
     embaPrivateLearningTitle: "Private Learning Space",
     embaPrivateLearningCopy: "A private learning space for Leo and his EMBA friends, created to support course preparation, study, and discussion. Content may be generated or assisted by AI and should not be considered an official course resource.",
     exploreAiDisclosure: "Explore calculates this result in your browser from your answers and MapKAI's rules. It is not an AI-generated diagnosis. If you copy the optional prompt below into your own AI tool, that separate service receives what you choose to paste.",
-    pdcAiDisclosure: "Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses stored content. Review outputs before acting.",
+    pdcAiDisclosure: "AI drafts the council discussion and summary. The optional example uses prepared content. Review outputs before acting.",
     aiTransparencyEyebrow: "AI Transparency",
     aiTransparencyTitle: "How AI is used at MapKAI",
     aiTransparencyLead: "MapKAI combines fixed rules, prepared material, and AI services. This page shows where a model may be involved, where it is not, and how to read the labels.",
     aiTransparencyWhereTitle: "Where AI may be involved",
-    aiTransparencyPdc: "Private PDC sessions may use a configured AI service to draft council dialogue and summaries. The prepared demo uses content stored in advance.",
-    aiTransparencyFallback: "If a live provider is unavailable, PDC can show fallback or prepared text. The PDC interface alone does not mean every line was generated live.",
+    aiTransparencyPdc: "PDC is free and open to everyone. AI drafts its council discussions and summaries. The optional example uses content stored in advance.",
+    aiTransparencyFallback: "If live PDC generation fails, the interface reports the error and lets you retry. Prepared PDC content is used only in the demo.",
     aiTransparencyExploreTitle: "Where the current Explore result is not model-generated",
     aiTransparencyExplore: "The current Explore map and Knowledge Lens result are calculated in your browser from your answers, the question bank, and fixed MapKAI rules. The public result does not call an AI model.",
     aiTransparencyCopiedPrompt: "If you copy the optional prompt into your own AI tool, that separate service receives whatever you choose to paste. MapKAI does not send that copied prompt automatically.",
@@ -723,6 +848,123 @@ const uiText = {
     homeCourseOutlineAction: "查看课程大纲",
     homeEyebrow: "MapKAI",
     homeTitle: "用 AI 映射你的知识",
+    pdcRoomLabel: "PDC 决策室",
+    pdcPublicDemo: "公开演示",
+    pdcDemoMode: "先看一个案例",
+    pdcDemoIntro: "先了解一个准备好的 PDC 案例，再进入你自己的问题。",
+    pdcDemoHint: "适合需要权衡、协调不同优先级，或存在分歧的决定。",
+    pdcWatchDemo: "观看演示",
+    pdcEnterLabel: "进入 PDC",
+    pdcSessionEyebrow: "PDC 讨论室",
+    pdcSessionSubtitle: "通过有序讨论和不同观点，把决定想得更清楚。",
+    pdcSessionTrust: "免费向所有人开放，无需注册或访问码。请勿分享敏感或保密信息。",
+    pdcResponsibleTitle: "负责任使用与隐私",
+    pdcResponsibleFree: "MapKAI 目前是一个免费的知识探索项目。",
+    pdcResponsibleAccount: "无需创建账户，也无需提供姓名或邮箱，即可探索。",
+    pdcResponsibleJudgment: "最终判断仍由你自己做出。",
+    pdcResponsibleSensitive: "请勿分享个人隐私、医疗、法律、财务等敏感信息，或保密的商业信息。",
+    pdcQuestionLabel: "你的问题",
+    pdcQuestionPlaceholder: "写下一个你想认真思考的问题。",
+    pdcCharactersRemaining: (count) => `还可以输入 ${count} 个字符`,
+    pdcStartStandard: "开始讨论",
+    pdcBackToOptions: "返回 PDC 选项",
+    pdcCheckingAccess: "正在准备问题输入……",
+    pdcCheckingCode: "正在检查访问码……",
+    pdcEnterCode: "请输入你的 PDC 访问码。",
+    pdcCodeUnavailable: "此 PDC 访问码已不可用。",
+    pdcQuestionRequired: "请先输入至少 8 个字符的问题，再开始讨论。",
+    pdcPreparingRecap: "正在准备讨论总结……",
+    pdcGeneratingRecap: "正在生成讨论总结……",
+    pdcPreparingFirstRound: "正在准备第 1A 轮讨论……",
+    pdcPreparingPhase: "正在准备本轮讨论……",
+    pdcRetryRecap: "重试讨论总结",
+    pdcCancelGeneration: "取消生成",
+    pdcGenerationTimeout: "PDC 响应超时。你的问题和讨论记录已保留，请重试。",
+    pdcGenerationCancelled: "已取消生成。你的问题和讨论记录已保留。",
+    pdcDiscussionSaved: "讨论记录已保留，你可以重新生成总结。",
+    pdcOpenCouncil: "讨论我的问题",
+    pdcOpenCopy: "带来一个真实决定，现在就开始。按需继续讨论，准备好时再生成总结。",
+    pdcNewQuestion: "开始一个新问题",
+    pdcContinue: "继续讨论",
+    pdcSummarize: "总结讨论",
+    pdcRecapReady: "讨论总结已准备好。",
+    pdcCouncilSpeaking: "委员会还在发言……",
+    pdcSummarySuggestion: "讨论已经积累了一些观点，你可以生成总结，也可以继续深入。",
+    pdcRoundLabel: (round, phase) => `第 ${round} 轮 ${phase} — ${phase === "A" ? "观点" : "挑战与投票"}`,
+    pdcGuideLabel: "引导下一轮",
+    pdcGuidePlaceholder: "选填：下一轮希望重点讨论什么？",
+    pdcGuideCopy: "下一轮会结合已有讨论和你的引导继续深入。",
+    pdcCouncilMembers: "委员会成员",
+    pdcActiveMembers: "发言成员",
+    pdcObservers: "观察成员",
+    pdcFacilitator: "主持人",
+    pdcCouncilThinking: "委员会正在思考……",
+    pdcStatementCount: (count) => `${count} 条委员发言`,
+    pdcNoDialogue: "暂时还没有讨论内容。",
+    pdcRecapTitle: "讨论总结",
+    pdcRecapCopy: "整理讨论中最有力的观点，以及可以采取的下一步。",
+    pdcDecisionFrame: "决策框架",
+    pdcCoreTension: "核心张力",
+    pdcHighlights: "关键观点",
+    pdcDebateSnapshot: "主要分歧",
+    pdcCondensedReview: "讨论澄清了什么",
+    pdcRecommendation: "建议",
+    pdcNextActions: "下一步",
+    pdcWhatNotToDo: "需要避免的事",
+    pdcReflectionNote: "反思提示",
+    pdcDemoPlaying: "准备好的案例正在播放……",
+    pdcDemoPrevious: "上一轮案例",
+    pdcDemoNext: "下一轮案例",
+    pdcDemoRecap: "案例总结",
+    pdcDemoNotice: "这是准备好的案例，其中的观点提前写好，并非针对你的问题实时生成。",
+    pdcRoundSummaryTitle: "蓝鲸的小结",
+    pdcPhaseComplete: "本轮讨论已完成。",
+    pdcSpeakingTurns: "委员正在依次发言。",
+    pdcContributionVote: "贡献票",
+    pdcConcernVote: "顾虑票",
+    pdcContributionReason: "支持理由",
+    pdcConcernReason: "顾虑理由",
+    pdcVoteRecorded: "已记录在本轮投票中。",
+    pdcVotingSnapshot: "委员会投票",
+    pdcStrongestContribution: "最受支持的贡献",
+    pdcMostChallenged: "受到最多挑战的观点",
+    pdcWhaleInterpretation: "蓝鲸的解读",
+    pdcNoConsensus: "讨论还没有收敛。",
+    pdcSupportCount: (count) => `${count} 票支持`,
+    pdcConcernCount: (count) => `${count} 票顾虑`,
+    pdcChallengeCount: (count) => `${count} 次挑战`,
+    pdcRoundOutcome: "本轮发生了什么变化",
+    pdcChallengeFocus: "挑战的焦点",
+    pdcNoChallenges: "本轮没有记录直接挑战。",
+    pdcObserverMoved: "转为观察",
+    pdcReintroduced: "重新听取一个观点",
+    pdcLiveUnavailable: "委员会未能生成实时回答，请重试。",
+    pdcServiceUnavailable: "讨论服务暂时不可用。你的问题和讨论记录仍保留在这里，请稍后重试。",
+    pdcServiceBusy: "AI 服务正忙。你的问题和讨论记录已保留，请稍后重试。",
+    pdcUnreadableResponse: "委员会返回的回答未能读取。讨论记录已保留，请重试。",
+    pdcQuestionBlocked: "委员会暂时无法回答这个问题，可以换一种表达方式再试。",
+    pdcMemberProfile: "委员介绍",
+    pdcProfileName: "姓名",
+    pdcProfileRole: "视角",
+    pdcProfileResponsibility: "这位委员关注什么",
+    pdcCurrentStance: "当前观点",
+    pdcPerspectiveTrail: "观点如何变化",
+    pdcTrailEmpty: "讨论展开后，这里会显示这位委员的观点变化。",
+    pdcObserverReflection: "在总结前，蓝鲸重新听取一个先前归档的观点。",
+    pdcObserverReturnReason: "为什么重新听取这个观点",
+    pdcCouncilPreview: "决策委员会",
+    pdcCouncilRoomLabel: "PDC 讨论室",
+    pdcCouncilRoundsCopy: "通过有序的多轮讨论，审视你的决定。",
+    pdcCurrentRoundLabel: "当前轮次",
+    pdcLiveDialogueLabel: "讨论记录",
+    pdcDecisionLabel: "正在讨论的决定",
+
+    speakingRecommendEyebrow: "为你推荐 · 语音对话",
+    speakingRecommendTitle: "用英语，聊聊你的故事。",
+    speakingRecommendCopy: "带上一点背景，或直接随便聊聊。和 AI 主持人练习表达，随时查看对话记录，结束后再一起回顾内容与表达。",
+    speakingRecommendStart: "开始对话 ↗",
+    speakingRecommendTools: "打开工具箱 ↗",
+
     homeCopy: "回答三个日常问题，看看哪些区域活跃、安静，或值得继续探索。",
     homePrimary: "开始探索",
     homeFinanceAction: "开始公司金融课程",
@@ -957,7 +1199,7 @@ const uiText = {
     aboutBoundaryP2: "MapKAI 创建地图。你的个人 AI 帮你更深入地探索它。",
     aboutClosing: "不是所有有意义的东西都能被完全测量。但有些东西一旦变得可见，就会更清楚。",
     pdcEntryEyebrow: "PDC 体验",
-    pdcEntryTitle: "Navigate Your Thinking with a Structured Council",
+    pdcEntryTitle: "从不同角度，把一个决定想清楚",
     pdcEntrySubtitle: "在行动之前，先把一个决定想清楚。",
     pdcEntryDescription: "PDC 帮你通过结构化分歧审视一个真实决定，并把讨论整理成更清晰的决策备忘录。",
     pdcHowEyebrow: "它如何运作",
@@ -1038,13 +1280,13 @@ const uiText = {
     embaPrivateLearningTitle: "私人学习空间",
     embaPrivateLearningCopy: "为 Leo 及其 EMBA 朋友提供的私人学习空间，旨在支持课程准备、学习和讨论。内容可能由 AI 生成或辅助，不应被视为正式课程资源。",
     exploreAiDisclosure: "Explore 会根据你的回答和 MapKAI 规则在浏览器中计算结果。这不是 AI 生成的诊断。如果你把下方可选 Prompt 复制到自己的 AI 工具，那个独立服务会接收你主动粘贴的内容。",
-    pdcAiDisclosure: "私人 PDC 体验可能使用已配置的 AI 服务起草委员会对话和总结。准备好的 Demo 使用预先存储的内容。请在行动前核对输出。",
+    pdcAiDisclosure: "AI 会起草委员会讨论和总结。可选的案例使用提前准备的内容。请在行动前核对输出。",
     aiTransparencyEyebrow: "AI 透明度",
     aiTransparencyTitle: "MapKAI 如何使用 AI",
     aiTransparencyLead: "MapKAI 将固定规则、预先准备的内容和 AI 服务结合起来。本页说明哪些地方可能使用模型、哪些地方没有使用模型，以及如何理解内容标签。",
     aiTransparencyWhereTitle: "可能使用 AI 的地方",
-    aiTransparencyPdc: "私人 PDC 体验可能使用已配置的 AI 服务生成委员会对话草稿和总结。准备好的 Demo 内容会提前存储。",
-    aiTransparencyFallback: "如果实时服务不可用，PDC 可能展示备用或预先准备的文字。看到 PDC 界面，并不代表每一行都是实时生成的。",
+    aiTransparencyPdc: "PDC 免费向所有人开放。AI 会生成委员会讨论和总结草稿，可选的案例使用提前准备的内容。",
+    aiTransparencyFallback: "如果实时 PDC 生成失败，界面会说明错误并支持重试。预先准备的 PDC 内容只用于演示。",
     aiTransparencyExploreTitle: "当前 Explore 结果不由模型生成",
     aiTransparencyExplore: "当前 Explore 地图和 Knowledge Lens 结果，会根据你的回答、题库和固定的 MapKAI 规则在浏览器中计算。公开结果不会调用 AI 模型。",
     aiTransparencyCopiedPrompt: "如果你把可选 Prompt 复制到自己的 AI 工具中，那个独立服务会接收你主动粘贴的内容。MapKAI 不会自动发送这段 Prompt。",
@@ -2406,823 +2648,1396 @@ const fieldStoryDetailsZh = {};
 
 const subjectIntroStoriesZh20260628 = [
   {
-    code: "00",
-    subjectTitle: "Generic Learning",
-    subjectTitleZh: "通用学习",
-    title: "The Beginning of Growth",
-    titleZh: "成长的起点",
-    summary: "Eli is good at remembering answers, until one open-ended route-planning task teaches him that real learning begins with asking, checking, and revising.",
-    summaryZh: "艾利很会背答案，直到一次没有标准格式的路线规划任务，让他开始学习如何提问、检查和修改。",
-    scene: "A middle school classroom where a student who is good at prepared answers faces a practical task without a standard form.",
-    sceneZh: "一间中学教室里，一个很会背答案的学生，第一次遇到没有标准格式的真实任务。",
-    storyBody: `When Eli first entered middle school, he was very good at remembering answers.
-
-In language class, he could recite the last paragraph of the text. In math class, he could remember the formulas the teacher had explained. In history class, whenever the teacher asked about a year, he was often the first student to raise his hand. His family also often said that he was a child who “knew how to study.”
-
-But one day, the teacher did not give them a question from the textbook.
-
-In that lesson, the teacher gave each group a bus route map and a task. Before three o’clock the next afternoon, they had to leave school and go to a library on the other side of the city for an activity. Each group had to find the route by themselves, arrange the time by themselves, and explain what they would do if the bus was late.
-
-At first, Eli thought it was very easy. He opened the map, found one route, and wrote it down. But a classmate sitting next to him asked, “Does this route need a transfer? If the first bus is late, can we still arrive on time? Which entrance of the library should we meet at? Should we arrive ten minutes earlier?”
-
-Eli suddenly did not know how to answer.
-
-He realized that he was usually good at answering questions that had already been clearly prepared. But when a problem did not have a standard form, he did not know where to look first, or what questions he should ask.
-
-The next day, his group almost arrived late. It was not because the route was completely wrong. It was because they had not included the time needed to walk to the bus stop, and they had not noticed that the weekend bus schedule was different from the weekday schedule. The teacher did not criticize them. She only asked each student to write down: What went wrong in this plan? How can you check it next time?
-
-Eli wrote very slowly. For the first time, he was not writing an answer. He was thinking about why he had made a mistake.
-
-After that, the teacher often gave them similar tasks. Sometimes, they read a news article and had to decide which parts were facts and which parts were only the writer’s opinion. Sometimes, they received a set of numbers and had to make a simple table to explain what the numbers could show and what they could not show. Sometimes, they interviewed someone in their family, organized the information into a clear paragraph, and then explained it to their classmates.
-
-These tasks did not look like one formal subject. They were not only language, not only math, and not exactly history or science. But Eli slowly found that these exercises changed the way he learned all subjects.
-
-He began to understand that when reading an article, he should not only look for the final conclusion. He also needed to see how the writer built the idea step by step. When solving a math problem, he should not only use a formula. He first needed to understand what the question was really asking. When working with others, he could not only say, “I think this is right.” He also needed to explain his reasons and understand why others might disagree.
-
-Later, Eli no longer saw learning as “remembering more answers.” He cared more about whether he could find information, ask questions, check mistakes, and divide a complex task into smaller steps. When he met something unfamiliar, he still felt nervous, but he no longer felt that he had no way to begin.
-
-He knew that he could first observe, then ask questions; first organize, then make judgments; first try once, then revise.`,
-    storyBodyZh: `艾利刚上中学时，很会背答案。
-
-语文课上，他能背出课文最后一段。数学课上，他能记住老师讲过的公式。历史课上，只要老师问年份，他总能第一个举手。家里人也常说，他是个“会学习”的孩子。
-
-可是有一天，老师没有出书上的题。
-
-那节课，老师把一张公交线路图发给全班，又给了他们一个任务：明天下午三点以前，要从学校出发，去城市另一边的图书馆参加活动。每组自己查路线，自己安排时间，还要说明如果公交晚点，应该怎么办。
-
-艾利一开始觉得这很简单。他打开地图，看到一条路线，就把它写了下来。可是旁边的同学问他：“这条路线要不要换乘？如果第一班车晚了，还来得及吗？图书馆哪个入口集合？我们要不要提前十分钟到？”
-
-艾利突然答不上来。
-
-他发现，自己平时很擅长回答已经整理好的问题。可是当问题没有标准格式时，他不知道该先看哪里，也不知道该问什么。
-
-第二天，他们小组差点迟到。不是因为路线完全错了，而是因为他们没有考虑走到公交站的时间，也没有注意周末班次和平日不同。老师没有批评他们，只让每个人写下：这次计划哪里出了问题？下次可以怎样检查？
-
-艾利写得很慢。他第一次不是在写答案，而是在想自己为什么会错。
-
-后来，老师经常给他们类似的任务。有时是读一篇新闻，让他们判断哪些是事实，哪些只是作者的看法。有时是给一组数字，让他们做一个简单表格，说明这些数字能说明什么、不能说明什么。有时是让他们采访家里人，整理成一段清楚的文字，再向同学解释。
-
-这些任务看起来不像某一门正式学科。它们不是单纯的语文，也不是单纯的数学，更不是历史或科学。可是艾利慢慢发现，这些练习会影响他学习所有课程的方式。
-
-他开始知道，读文章时不能只找最后一句结论，还要看作者怎样一步一步说出来。做数学题时不能只套公式，还要先理解题目到底问什么。和别人合作时，不能只说“我觉得这样”，还要说明理由，也要听懂别人为什么不同意。
-
-到后来，艾利不再把学习看成“记住更多答案”。他更关心自己会不会找到信息，会不会提出问题，会不会检查错误，会不会把一个复杂任务拆成几个简单步骤。遇到不熟悉的事情时，他还是会紧张，但不再觉得自己完全没有办法。
-
-他知道，可以先观察，再提问；先整理，再判断；先试一次，再修改。`,
-    formalExplanation: "This is what “generic learning” is mainly concerned with. It does not lead people directly into one specific professional field. Instead, it first develops the most basic abilities for learning, understanding, and personal development. It teaches people how to read information, use numbers, express ideas, reflect on their own learning process, and transfer existing knowledge to new situations. In modern educational classification, it corresponds to Generic programmes and qualifications. It is not a field that developed directly from an ancient profession, such as medicine, law, or engineering. Rather, it is inspired by basic courses, general education, and learning-skill development in the modern formal education system. It helps us understand learning areas that do not have one clear professional direction, but still provide the foundation for further study. Its source is closer to the earliest goal of education: before a person enters a more specific field, they first need to develop the ability to learn other kinds of knowledge.",
-    formalExplanationZh: "这就是“通用学习”真正关心的内容。它不急着把人带进某一个专业领域，而是先训练最基本的学习能力、理解能力和自我发展能力。它教人如何读懂信息，如何使用数字，如何表达想法，如何反思自己的学习过程，也如何把已有知识迁移到新的情境中。在现代教育分类中，它对应的是 Generic programmes and qualifications（通用课程与资格）。它不是像医学、法律或工程那样从某个古代职业直接发展出来的学科，而是受到现代正式教育体系中基础课程、通识教育和学习能力培养的启发，用来理解那些没有明显单一专业方向、但为继续学习打基础的内容。它的来源更接近人类教育最早的目标：先让一个人具备学习其他知识的能力，再让他走向更具体的世界。",
-    coreInsight: "Generic learning is not about memorizing more answers. It is about building the basic ability to find information, ask questions, check mistakes, organize thought, and move knowledge into new situations.",
-    coreInsightZh: "通用学习关心的不是记住更多答案，而是建立寻找信息、提出问题、检查错误、组织思路，并把知识迁移到新情境中的基础能力。",
-    analogyBoundary: "This story emphasizes learning ability and transfer, but generic learning should not be treated as vague or easy. It also involves literacy, numeracy, learning strategy, communication, self-management, and the qualifications that support further study.",
-    analogyBoundaryZh: "这个故事强调学习能力和迁移能力，但不能把通用学习理解成模糊或简单的学习。它还涉及读写、计算、学习策略、沟通、自我管理，以及支持继续学习的资格体系。",
-    sourceBatchId: "subject-intro-00-generic-learning-20260630",
+    "code": "00",
+    "subjectTitle": "General Learning",
+    "subjectTitleZh": "通用学习",
+    "title": "Classes Beyond the Workshop",
+    "titleZh": "工坊之外的课",
+    "summary": "Birkbeck entered workshops looking for teaching equipment, then opened Saturday evening classes. Where would people with work experience begin learning again?",
+    "summaryZh": "为课堂寻找机器的伯克贝克走进工坊，随后开放周六晚课。已有工作经验的人，会从哪里开始新的学习？",
+    "scene": "In 1799, George Birkbeck taught natural philosophy and chemistry at the Andersonian Institution in Glasgow. Looking for machines and examples he could use in class, he visited local mechanical workshops. The people there were already making, installing, and operating equipment. These mechanics brought practical experience, although they did not necessarily have access to the same formal classes.",
+    "sceneZh": "1799年，乔治·伯克贝克在格拉斯哥的Andersonian Institution教授自然哲学和化学。为了给课堂寻找机器和实例，他走进当地机械工坊。那里的人已经在制造、安装和操作设备，伯克贝克接触到的不是从零开始的学生，而是已经带着生产经验工作、却未必能进入同一种正式课堂的机械工。",
+    "storyBody": "In 1799, George Birkbeck taught natural philosophy and chemistry at the Andersonian Institution in Glasgow. Looking for machines and examples he could use in class, he visited local mechanical workshops. The people there were already making, installing, and operating equipment. These mechanics brought practical experience, although they did not necessarily have access to the same formal classes.\n\nHe then scheduled natural philosophy, chemistry, and mechanical knowledge for Saturday evenings and opened the classes to mechanics. That timing gave adults who worked during the day a chance to attend. By the fourth lecture, the audience numbered about 500. Practical workshop experience was not left outside the door; it was brought into the same learning process as classroom explanation, demonstration, and scientific knowledge.\n\nIn 1823, a new institutional effort took shape in London. J. C. Robertson, Thomas Hodgskin, Francis Place, and others promoted the creation of the London Mechanics’ Institution, with George Birkbeck proposed as its president. What had begun as a teacher opening evening lectures started to take the form of an institution with a name, scheduled courses, and ongoing enrolment.\n\nLater, learners at mechanics’ institutes were no longer only mechanics; clerks, shopkeepers, and teachers increasingly appeared as well. Courses also expanded beyond science and technology to include foreign languages, history, and art. For people who already had work experience, entering a classroom could now lead in several directions rather than funneling everyone toward the same kind of occupational training.\n\nCurricula still differed from place to place. Ancoats emphasized basic literacy, while some institutes in Newcastle, Nottingham, and Sheffield offered more advanced science. Institutions bearing the same name could have very different course lists: beginning with literacy, continuing into science, or turning toward history and art. Places for learning beyond the workshop gradually also welcomed learners from beyond the workshop.",
+    "storyBodyZh": "1799年，乔治·伯克贝克在格拉斯哥的Andersonian Institution教授自然哲学和化学。为了给课堂寻找机器和实例，他走进当地机械工坊。那里的人已经在制造、安装和操作设备，伯克贝克接触到的不是从零开始的学生，而是已经带着生产经验工作、却未必能进入同一种正式课堂的机械工。\n\n随后，他把自然哲学、化学和机械知识安排到周六晚间，向机械工开放。这样的时间让白天工作的成年人也有机会进课堂。到第四次课时，听众约有500人。工坊里的实际经验没有被丢在门外，而是和课堂里的解释、演示与科学知识放到同一学习过程中。\n\n1823年，伦敦又出现了新的组织行动。J. C. Robertson、Thomas Hodgskin和Francis Place等人推动建立London Mechanics’ Institution，George Birkbeck被推为主席人选。原先由教师开放晚课的做法，开始进入有机构名称、课程安排和持续招收学习者的组织形式。\n\n后来，机械工学院里的学习者不再只有机械工，还逐渐出现文员、店主和教师。课程也从科学技术向外扩展，加入外语、历史和艺术。对已经有工作经验的人来说，进入课堂之后可以继续往不同方向学习，而不必把所有人都导向同一种职业训练。\n\n各地学院的课程仍很不一样。Ancoats更重基础读写，纽卡斯尔、诺丁汉和谢菲尔德的一些机构则开设较高阶科学。相同的机构名称下面，可以摆出很不一样的课表：先读写，继续学科学，或转向历史与艺术。工坊之外出现的学习场所，也逐渐接纳了工坊之外的学习者。",
+    "formalExplanation": "Someone who can repair machinery may still need help reading course information, calculating material quantities, or entering the next stage of study. General learning addresses preparation that crosses specializations: literacy makes written material accessible, numeracy enables comparison of quantities, and basic programmes and qualifications provide broad preparation for further learning. Existing work experience and foundational skills can be recognized separately, and gaps in either can be addressed.\n\nEarly mechanics’ institutes enabled some adults to study beyond the workshop, offering basic literacy as well as science, languages and art. Choosing an entry point today still means asking what the learner wants to do and which foundations are missing, then distinguishing general preparation from specialized training. Age, occupation and class times alone do not determine a programme’s field.",
+    "formalExplanationZh": "一个人已经会修机器，并不一定能读懂课程说明、计算材料用量或进入下一阶段的学习。通用学习处理这些跨专业的准备：读写让材料能够被理解，算术让数量可以被比较，基础课程与资格则为继续学习提供广泛准备。已有工作经验和基础能力，可以分别得到承认，也可以分别需要补足。\n\n早期机械工学院让部分成人在工坊之外继续学习，课程有基础读写，也有科学、语言和艺术。今天选择学习入口，仍要先问目标是什么、基础缺在哪里，再区分通用准备与具体专业训练；年龄、职业和上课时间，不能单独决定课程属于哪一类。",
+    "coreInsight": "Skilled work in a workshop can provide a starting point for classroom study without supplying every foundation needed for further learning. The question shifts from what someone can already do to what they need to read, calculate and practise next. Different mechanics’ institutes offered different curricula, making the distinctions among existing experience, foundational preparation and specialized learning visible.\n\nGeneral learning today requires the same distinctions. Children and young people may prepare through basic programmes, adults may develop literacy and numeracy, and other learners may develop personal skills. Specialized courses then lead into particular fields. A programme’s main content says more about its classification than the learner’s age or the time of the class.",
+    "coreInsightZh": "工坊里的熟练操作，可以成为进入课堂的起点，却不能替代所有后续学习的基础。问题从“已经会做什么”，转向“要继续学，还需要读懂什么、计算什么、怎样练习”。不同地区的机械工学院提供不同课表，让已有经验、基础补足和专业学习之间的差别变得可见。\n\n今天的通用学习也要作这项区分。儿童和青年可以通过基础课程为后续学习作准备，成年人可以补足读写与算术，其他学习者可以发展个人技能；进入专业课程之后，则要沿具体领域继续。课程的主要内容，比学习者的年龄或上课时间更能说明它属于哪一类。",
+    "analogyBoundary": "This piece uses the Glasgow evening lectures of 1799, the London institution of 1823, and later curricular expansion as a historical window for understanding access to general learning. It does not treat Birkbeck or the mechanics’ institutes as the birthplace of field 00. Courses and participants differed greatly across locations, and early learning opportunities were also strongly constrained by gender, class, and practical circumstances.",
+    "analogyBoundaryZh": "本篇用1799年格拉斯哥晚课、1823年伦敦机构及后续课程扩展作为理解通用学习入口的历史窗口，不把Birkbeck或机械工学院视为00领域的诞生点。不同地区的课程和参与者差异很大，早期学习机会也受到明显的性别、阶层和现实条件限制。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If an adult already has rich work experience but has gaps in literacy, numeracy, or the foundations needed for further study, how would you use that person’s existing experience, foundational gaps, and learning goals to choose the most suitable entry point into study?",
+    "reflectionQuestionZh": "如果一位成年人已经有丰富工作经验，但识字、算术或继续学习的基础存在缺口，你会怎样根据已有经验、基础缺口和学习目标，为他安排最合适的课程入口？",
+    "subjectOrigin": {
+      "id": "subject-origin-00-generic-learning",
+      "categoryCode": "00",
+      "subjectTitleZh": "通用学习",
+      "titleZh": "工坊之外的课",
+      "summaryZh": "为课堂寻找机器的伯克贝克走进工坊，随后开放周六晚课。已有工作经验的人，会从哪里开始新的学习？",
+      "originStoryParagraphsZh": [
+        "1799年，乔治·伯克贝克在格拉斯哥的Andersonian Institution教授自然哲学和化学。为了给课堂寻找机器和实例，他走进当地机械工坊。那里的人已经在制造、安装和操作设备，伯克贝克接触到的不是从零开始的学生，而是已经带着生产经验工作、却未必能进入同一种正式课堂的机械工。",
+        "随后，他把自然哲学、化学和机械知识安排到周六晚间，向机械工开放。这样的时间让白天工作的成年人也有机会进课堂。到第四次课时，听众约有500人。工坊里的实际经验没有被丢在门外，而是和课堂里的解释、演示与科学知识放到同一学习过程中。",
+        "1823年，伦敦又出现了新的组织行动。J. C. Robertson、Thomas Hodgskin和Francis Place等人推动建立London Mechanics’ Institution，George Birkbeck被推为主席人选。原先由教师开放晚课的做法，开始进入有机构名称、课程安排和持续招收学习者的组织形式。",
+        "后来，机械工学院里的学习者不再只有机械工，还逐渐出现文员、店主和教师。课程也从科学技术向外扩展，加入外语、历史和艺术。对已经有工作经验的人来说，进入课堂之后可以继续往不同方向学习，而不必把所有人都导向同一种职业训练。",
+        "各地学院的课程仍很不一样。Ancoats更重基础读写，纽卡斯尔、诺丁汉和谢菲尔德的一些机构则开设较高阶科学。相同的机构名称下面，可以摆出很不一样的课表：先读写，继续学科学，或转向历史与艺术。工坊之外出现的学习场所，也逐渐接纳了工坊之外的学习者。"
+      ],
+      "whyNeededParagraphsZh": [
+        "一个人已经会修机器，并不一定能读懂课程说明、计算材料用量或进入下一阶段的学习。通用学习处理这些跨专业的准备：读写让材料能够被理解，算术让数量可以被比较，基础课程与资格则为继续学习提供广泛准备。已有工作经验和基础能力，可以分别得到承认，也可以分别需要补足。",
+        "早期机械工学院让部分成人在工坊之外继续学习，课程有基础读写，也有科学、语言和艺术。今天选择学习入口，仍要先问目标是什么、基础缺在哪里，再区分通用准备与具体专业训练；年龄、职业和上课时间，不能单独决定课程属于哪一类。"
+      ],
+      "coreTurnParagraphsZh": [
+        "工坊里的熟练操作，可以成为进入课堂的起点，却不能替代所有后续学习的基础。问题从“已经会做什么”，转向“要继续学，还需要读懂什么、计算什么、怎样练习”。不同地区的机械工学院提供不同课表，让已有经验、基础补足和专业学习之间的差别变得可见。",
+        "今天的通用学习也要作这项区分。儿童和青年可以通过基础课程为后续学习作准备，成年人可以补足读写与算术，其他学习者可以发展个人技能；进入专业课程之后，则要沿具体领域继续。课程的主要内容，比学习者的年龄或上课时间更能说明它属于哪一类。"
+      ],
+      "anchorsParagraphsZh": [
+        "1799年的格拉斯哥周六晚课与第四次课约500名听众，是成人学习入口变化的早期节点；1823年的London Mechanics’ Institution则由Robertson、Hodgskin、Place等人共同推动，Birkbeck成为重要机构人物。",
+        "随后不同地区机械工学院在学习者和课程上出现明显差异：有的重基础识字，有的重高阶科学，也有课程加入语言、历史和艺术。"
+      ],
+      "branchesParagraphsZh": [
+        "00通用课程与资格分为三类：基础课程与资格，为进一步学习提供广泛准备；识字与算术，侧重基本读写和数量能力；个人技能与发展，关注个人能力的培养。",
+        "基础课程可以出现在不同教育阶段，成人课程也可以属于具体专业。课程归类取决于主要学习内容；教师教育、科学、语言和艺术训练分别有自己的领域。先判断需要的是广泛基础、基本读写算术，还是个人技能，才能选择合适的下一步课程。"
+      ],
+      "reflectionZh": "如果一位成年人已经有丰富工作经验，但识字、算术或继续学习的基础存在缺口，你会怎样根据已有经验、基础缺口和学习目标，为他安排最合适的课程入口？",
+      "boundaryZh": "本篇用1799年格拉斯哥晚课、1823年伦敦机构及后续课程扩展作为理解通用学习入口的历史窗口，不把Birkbeck或机械工学院视为00领域的诞生点。不同地区的课程和参与者差异很大，早期学习机会也受到明显的性别、阶层和现实条件限制。",
+      "tagsZh": [
+        "通用学习",
+        "成人学习",
+        "识字与算术",
+        "个人发展",
+        "机械工学院",
+        "学习机会"
+      ],
+      "references": [
+        {
+          "id": "birkbeck-mechanics-history",
+          "citation": "Bourke, J. (2023). A Brief History of the Mechanics’ Institutes. Birkbeck Perspectives.",
+          "url": "https://perspectives.blogs.bbk.ac.uk/2023/10/24/a-brief-history-of-the-mechanics-institutes/",
+          "useZh": "1799晚课、1823伦敦机构、课程和参与者差异；历史窗口非00共同起源。",
+          "useEn": "Supports the 1799 evening lectures, the 1823 London institution, and differences in courses and participants; this historical window is not a common origin for field 00."
+        },
+        {
+          "id": "birkbeck-history",
+          "citation": "Birkbeck, University of London. History of Birkbeck.",
+          "url": "https://www.bbk.ac.uk/about-us/history-of-birkbeck",
+          "useZh": "1823 London Mechanics Institute的机构史。",
+          "useEn": "Supports the institutional history of the London Mechanics Institute in 1823."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "教育分类00/01/02及正式分支；不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 00, 01, and 02; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "General Learning",
+      "titleEn": "Classes Beyond the Workshop",
+      "summaryEn": "Birkbeck entered workshops looking for teaching equipment, then opened Saturday evening classes. Where would people with work experience begin learning again?",
+      "originStoryParagraphsEn": [
+        "In 1799, George Birkbeck taught natural philosophy and chemistry at the Andersonian Institution in Glasgow. Looking for machines and examples he could use in class, he visited local mechanical workshops. The people there were already making, installing, and operating equipment. These mechanics brought practical experience, although they did not necessarily have access to the same formal classes.",
+        "He then scheduled natural philosophy, chemistry, and mechanical knowledge for Saturday evenings and opened the classes to mechanics. That timing gave adults who worked during the day a chance to attend. By the fourth lecture, the audience numbered about 500. Practical workshop experience was not left outside the door; it was brought into the same learning process as classroom explanation, demonstration, and scientific knowledge.",
+        "In 1823, a new institutional effort took shape in London. J. C. Robertson, Thomas Hodgskin, Francis Place, and others promoted the creation of the London Mechanics’ Institution, with George Birkbeck proposed as its president. What had begun as a teacher opening evening lectures started to take the form of an institution with a name, scheduled courses, and ongoing enrolment.",
+        "Later, learners at mechanics’ institutes were no longer only mechanics; clerks, shopkeepers, and teachers increasingly appeared as well. Courses also expanded beyond science and technology to include foreign languages, history, and art. For people who already had work experience, entering a classroom could now lead in several directions rather than funneling everyone toward the same kind of occupational training.",
+        "Curricula still differed from place to place. Ancoats emphasized basic literacy, while some institutes in Newcastle, Nottingham, and Sheffield offered more advanced science. Institutions bearing the same name could have very different course lists: beginning with literacy, continuing into science, or turning toward history and art. Places for learning beyond the workshop gradually also welcomed learners from beyond the workshop."
+      ],
+      "whyNeededParagraphsEn": [
+        "Someone who can repair machinery may still need help reading course information, calculating material quantities, or entering the next stage of study. General learning addresses preparation that crosses specializations: literacy makes written material accessible, numeracy enables comparison of quantities, and basic programmes and qualifications provide broad preparation for further learning. Existing work experience and foundational skills can be recognized separately, and gaps in either can be addressed.",
+        "Early mechanics’ institutes enabled some adults to study beyond the workshop, offering basic literacy as well as science, languages and art. Choosing an entry point today still means asking what the learner wants to do and which foundations are missing, then distinguishing general preparation from specialized training. Age, occupation and class times alone do not determine a programme’s field."
+      ],
+      "coreTurnParagraphsEn": [
+        "Skilled work in a workshop can provide a starting point for classroom study without supplying every foundation needed for further learning. The question shifts from what someone can already do to what they need to read, calculate and practise next. Different mechanics’ institutes offered different curricula, making the distinctions among existing experience, foundational preparation and specialized learning visible.",
+        "General learning today requires the same distinctions. Children and young people may prepare through basic programmes, adults may develop literacy and numeracy, and other learners may develop personal skills. Specialized courses then lead into particular fields. A programme’s main content says more about its classification than the learner’s age or the time of the class."
+      ],
+      "anchorsParagraphsEn": [
+        "The Saturday evening lectures in Glasgow in 1799, with about 500 people attending the fourth lecture, were an early marker of changing access to adult learning. The London Mechanics’ Institution in 1823 was promoted jointly by Robertson, Hodgskin, Place, and others, with Birkbeck becoming an important institutional figure.",
+        "Mechanics’ institutes in different places later showed clear differences in both learners and curricula: some emphasized basic literacy, some advanced science, and some added languages, history, and art."
+      ],
+      "branchesParagraphsEn": [
+        "Field 00 General Programmes and Qualifications has three groups: basic programmes and qualifications that prepare learners broadly for further study; literacy and numeracy focused on basic reading, writing, and quantitative abilities; and personal skills and development.",
+        "Basic programmes can appear at different educational stages, and adult courses can belong to particular specializations. Classification depends on the main content of study; teacher education, science, languages, and the arts have their own fields. Choosing the next course begins by distinguishing broad preparation, basic literacy and numeracy, and personal skills."
+      ],
+      "reflectionEn": "If an adult already has rich work experience but has gaps in literacy, numeracy, or the foundations needed for further study, how would you use that person’s existing experience, foundational gaps, and learning goals to choose the most suitable entry point into study?",
+      "boundaryEn": "This piece uses the Glasgow evening lectures of 1799, the London institution of 1823, and later curricular expansion as a historical window for understanding access to general learning. It does not treat Birkbeck or the mechanics’ institutes as the birthplace of field 00. Courses and participants differed greatly across locations, and early learning opportunities were also strongly constrained by gender, class, and practical circumstances.",
+      "tagsEn": [
+        "General Learning",
+        "Adult Learning",
+        "Literacy and Numeracy",
+        "Personal Development",
+        "Mechanics' Institutes",
+        "Access to Learning"
+      ]
+    }
   },
   {
-    code: "01",
-    subjectTitle: "Education",
-    subjectTitleZh: "教育",
-    title: "The Relay of Civilization",
-    titleZh: "文明的接力",
-    summary: "Xiaoyu learns, from packing her schoolbag to tutoring a child, that education is conscious support that helps people truly learn.",
-    summaryZh: "小雨从整理书包、修改作文到辅导小朋友，慢慢明白教育不是替人走路，而是帮助人真正学会。",
-    scene: "Xiaoyu first learns to prepare her schoolbag with a checklist, then later recognizes the same educational pattern in classrooms and tutoring.",
-    sceneZh: "小雨从每天检查书包开始，后来在课堂和社区辅导里，看见教育怎样把人往前带一点。",
-    storyBody: `When Xiaoyu was a child, she often felt that her mother talked too much.
-
-Every morning, her mother reminded her to check her schoolbag: whether she had packed her textbooks, filled her water bottle, and put her homework into the folder. Xiaoyu thought these things were very simple. She did not understand why adults had to repeat them every day.
-
-Once, her mother had to go on a business trip. For the first time, Xiaoyu prepared for school by herself. She felt that she was already old enough and did not need reminders. But when she arrived at school, she found that her math homework was still on her desk at home, and her lunch card was also missing. That noon, she had to borrow a card from a classmate. In the afternoon, her teacher wrote down her name because she did not hand in the homework.
-
-When she went home, her mother did not blame her. She took out a piece of paper and asked Xiaoyu to list the things she needed to bring the next day. At first, Xiaoyu thought it was troublesome. Her mother said, “It is not because you cannot do it. It is because people easily forget. A person who knows how to learn does not never make mistakes. A person who knows how to learn prepares methods for herself.”
-
-Later, Xiaoyu slowly got used to making lists. She no longer waited for her mother to remind her, but checked by herself. She found that many things were not learned by remembering them once. They were learned through repeated practice, until they became her own habit.
-
-In middle school, Xiaoyu met a language teacher. This teacher did not only give them standard answers. Every time they read a text, the teacher first asked, “Why do you think the writer wrote it in this way?” After a student answered, the teacher asked again, “Where can you see that in the text?” If someone gave a wrong answer, the teacher did not immediately say “No.” Instead, she asked the student to go back to the text and look for evidence again.
-
-At the beginning, Xiaoyu was not used to this. She was used to waiting for the teacher to give the answer and then writing it down. But this teacher always asked them to think first, discuss, and then revise. Xiaoyu felt that this was very slow.
-
-Until one writing class, she wrote a very ordinary essay. The teacher did not rewrite it for her. Instead, she wrote several questions in the margin: Why is this event important? What do you want the reader to remember most? Which paragraph can be more specific?
-
-Xiaoyu looked at the essay for a long time. For the first time, she felt that the teacher was not writing for her. The teacher was teaching her how to make her own ideas clear.
-
-Later, Xiaoyu went to university and joined a volunteer activity. She needed to help children in a community with their homework. On the first day, she prepared carefully and brought many exercises. She thought that as long as she explained clearly, the children would understand.
-
-But she soon found that it was not that simple.
-
-One child always confused multiplication with addition. Xiaoyu explained it three times, but he still made mistakes. Xiaoyu became a little impatient and almost said, “This is very easy.” But she remembered how her teacher had treated her before, so she stopped. She did not continue to explain the answer. Instead, she took out several pencils and asked the child to place them in groups. Two pencils in three groups, and three pencils in two groups, looked different, but the total number was the same.
-
-The child looked at them for a while and suddenly said, “Oh, I understand.”
-
-At that moment, Xiaoyu realized that teaching others is not simply pouring what one knows into another person. To teach someone, one first needs to understand where that person is, where they are stuck, and then use a way they can understand to help them move a little further.
-
-Later, she understood the work of teachers more and more. A teacher is not only a person who gives lessons, and not only a person who prepares students for exams. A teacher observes students, designs questions, arranges practice, gives feedback, and judges when to give a hint and when to wait, especially when students have not fully understood something yet.
-
-She also found that education does not only happen in school. Parents teach children how to prepare their schoolbags. Masters teach new workers how to use tools. Coaches teach students how to adjust their movements. Friends explain new ideas to each other. All these situations contain something educational. When one person passes on what they have understood in a suitable way and helps another person truly learn it, education is already taking place.
-
-When Xiaoyu was little, she thought learning was only her own task, and teachers were people who gave answers. After she grew up, she understood that education is more like a conscious form of support. It does not walk for another person. It gives support when someone cannot yet walk steadily, and slowly lets go when that person can move forward alone.`,
-    storyBodyZh: `小雨小时候，总觉得妈妈很啰嗦。
-
-每天早上，妈妈都会提醒她检查书包：课本有没有带，水杯有没有装，作业有没有放进文件夹。小雨觉得这些事情很简单，不明白为什么大人要每天重复。
-
-有一次，妈妈临时出差。小雨第一次自己准备上学。她觉得自己已经长大了，不需要别人提醒。可是到了学校，她才发现数学作业放在了书桌上，午餐卡也忘在家里。那天中午，她只能向同学借卡，下午还因为没有交作业被老师记了名字。
-
-回家后，妈妈没有责怪她，只拿出一张纸，让她把第二天要带的东西列出来。小雨一开始觉得这很麻烦。妈妈说：“不是因为你不会，而是因为人很容易忘。会学习的人，不是永远不犯错，而是会给自己准备方法。”
-
-后来，小雨慢慢习惯了写清单。她不再等妈妈提醒，而是自己检查。她发现，原来很多事情不是靠一次记住，而是靠一次一次练习，最后变成自己的习惯。
-
-上中学后，小雨遇到了一位语文老师。老师不像以前那样只告诉他们标准答案。每次读文章，老师都会先问：“你觉得作者为什么这样写？”学生回答后，老师又问：“你从哪里看出来的？”如果有人答错了，老师不会马上说“不对”，而是让他回到原文里再找证据。
-
-刚开始，小雨很不适应。她习惯了等老师给答案，然后把答案记下来。可是这位老师总是让他们自己先想，再讨论，再修改。小雨觉得这样很慢。
-
-直到有一次作文课，她写了一篇很普通的文章。老师没有直接改完，而是在旁边写了几个问题：这件事为什么重要？你最想让读者记住什么？哪一段可以写得更具体？
-
-小雨拿着作文看了很久。她第一次感觉到，老师不是在替她写，而是在教她怎样把自己的想法写清楚。
-
-后来，小雨上了大学，参加了一个志愿活动。她要给社区里的小朋友辅导功课。第一天，她准备得很认真，带了很多练习题。她以为只要自己讲得清楚，小朋友就会学会。
-
-可是她很快发现，并不是这样。
-
-有个孩子总是把乘法和加法弄混。小雨讲了三遍，他还是错。小雨有点着急，差点说：“这个很简单啊。”但她想起以前老师对她的方式，就停了下来。她没有继续讲答案，而是拿出几支铅笔，让孩子一组一组地摆。两支铅笔摆三组，和三支铅笔摆两组，看起来不一样，但总数一样。
-
-孩子看了一会儿，突然说：“哦，我懂了。”
-
-那一刻，小雨才明白，教别人不是把自己知道的东西倒给对方。教别人要先知道对方现在在哪里，哪里卡住了，然后用对方能理解的方式，把他往前带一点。
-
-后来，她越来越能理解老师这份工作。老师不是只会讲课的人，也不是只负责考试的人。老师要观察学生，设计问题，安排练习，给出反馈，也要在学生还没有完全理解时，判断什么时候该提醒，什么时候该等待。
-
-她也发现，教育不只发生在学校。父母教孩子整理书包，师傅教新人使用工具，教练教学生调整动作，朋友之间互相解释一个新想法，这些都带有教育的影子。只要一个人把已经理解的东西，用合适的方式传给另一个人，并帮助对方真正掌握，教育就已经发生了。
-
-小雨小时候以为，学习是自己的事，老师只是给答案的人。长大后她才明白，教育更像是一种有意识的陪伴。它不是替人走路，而是在一个人还不会走稳时，先扶一把；等他能自己走了，再慢慢松手。`,
-    formalExplanation: "This is what “education” is mainly concerned with. It studies and practices how people learn, and how people can help others learn better. It focuses on teaching, curriculum, learning processes, student development, assessment, and educational environments. It also cares about how knowledge is passed from one generation to the next. As a formal field of study, it corresponds to Education. Its roots are very old and are connected with family upbringing, apprenticeship, school systems, religious teaching, and social life. Later, with the development of modern schools and teacher training systems, education gradually became a formal academic field. It studies how learning happens, how teaching can be designed, and how a society continues its knowledge, abilities, and values through education.",
-    formalExplanationZh: "这就是“教育”真正关心的内容。它研究和实践的是人如何学习，以及人如何帮助别人更好地学习。它关注教学、课程、学习过程、学生发展、评价方式和教育环境，也关心知识如何从一代人传到下一代人。在正式学科中，它对应的是 Education（教育）。它的来源很早，和家庭养育、师徒传授、学校制度、宗教教学和社会共同生活都有关系。后来，随着现代学校和教师培养体系的发展，教育逐渐成为一个正式学科，用来研究学习怎样发生、教学怎样设计，以及一个社会如何通过教育延续知识、能力和价值。",
-    coreInsight: "Education is not only giving answers. It is the careful design of support, practice, feedback, and environments so that people can gradually understand and move forward on their own.",
-    coreInsightZh: "教育不只是给答案，而是通过支持、练习、反馈和环境设计，帮助人逐步理解，并能自己往前走。",
-    analogyBoundary: "This story uses family reminders, classroom questions, and tutoring to show education as support, but education also includes systems, equity, curriculum, assessment, policy, technology, and culture.",
-    analogyBoundaryZh: "这个故事用家庭提醒、课堂提问和辅导功课说明教育中的支持，但教育还包括制度、公平、课程、评价、政策、技术和文化等问题。",
-    sourceBatchId: "subject-intro-01-education-civilization-relay-20260630",
+    "code": "01",
+    "subjectTitle": "Education",
+    "subjectTitleZh": "教育",
+    "title": "Half an Hour of Cotton",
+    "titleZh": "半小时的棉花",
+    "summary": "The children spent half an hour separating less than an ounce of cotton fiber. How would teachers turn the material in their hands into a continuing path of learning?",
+    "summaryZh": "孩子们花了半小时，从棉籽上分出的纤维还不到一盎司。接下来，教师会怎样把手中的材料变成连续的学习？",
+    "scene": "In Dewey’s classroom account, a group of children were given raw cotton and separated the fibers from the seeds. After about half an hour, they had obtained less than an ounce. The book places this slow handwork at the beginning of textile activities: material for clothing must first be obtained from plants or animals, with a sequence of processing still to follow. The small amount of cotton fiber in their hands was still a long way from cloth.",
+    "sceneZh": "在杜威留下的课堂记录里，一组孩子拿到原棉，把纤维从棉籽上分离。约半小时过去，得到的纤维还不到一盎司。书里把这段缓慢的手工劳动放在纺织活动的开头：一件衣服所需的材料，首先得从植物或动物身上取得，之后还有一连串加工。孩子们手中这点棉纤维，距离成布仍有很长一段路。",
+    "storyBody": "In Dewey’s classroom account, a group of children were given raw cotton and separated the fibers from the seeds. After about half an hour, they had obtained less than an ounce. The book places this slow handwork at the beginning of textile activities: material for clothing must first be obtained from plants or animals, with a sequence of processing still to follow. The small amount of cotton fiber in their hands was still a long way from cloth.\n\nThey compared cotton fibers with wool, aided by teachers’ questions and suggestions, then followed the processes that turn fibers into cloth. For carding wool, they reconstructed a simple carding frame: two boards fitted with sharp pins to comb it out. The tool’s purpose was connected to the material in their hands, and carding became a stage they could try before spinning.\n\nThe material being spun was still wool. The children tried passing it through a pierced stone or another weight, whose rotation drew out the fiber. The account then describes another method: a top spun on the floor while the children held the wool in their hands, allowing it to be drawn out gradually and wound onto the top.\n\nFrom a pierced weight to a top on the floor, the same spinning task took different forms. Later tools were introduced in historical order so that the children could examine their purposes and effects through practical trials, working toward the complete loom. Raw material, carding, spinning, and weaving formed a connected sequence rather than separate crafts.\n\nDewey also linked these activities to the geographical conditions in which materials grow, physical principles in machinery, and historical changes in production. The thread in their hands could lead to these questions through a curriculum organized and guided by teachers. The small quantity of cotton obtained in half an hour remained a starting point to revisit and compare.",
+    "storyBodyZh": "在杜威留下的课堂记录里，一组孩子拿到原棉，把纤维从棉籽上分离。约半小时过去，得到的纤维还不到一盎司。书里把这段缓慢的手工劳动放在纺织活动的开头：一件衣服所需的材料，首先得从植物或动物身上取得，之后还有一连串加工。孩子们手中这点棉纤维，距离成布仍有很长一段路。\n\n他们把棉纤维与羊毛作比较，教师用提问和建议帮助他们观察材料，再沿着纤维加工成布的过程继续。梳理羊毛时，孩子们重做了简单的梳理架：两块装有尖针的板，用来把羊毛梳开。工具的用途与手中的材料连在一起，梳理成为纺纱之前可以实际试验的一道工序。\n\n接下来加工的仍是羊毛。孩子们尝试用带孔的石块或其他重物，让羊毛穿过，在重物旋转时把纤维拉出。书中随后记述了另一种做法：一个在地板上旋转的陀螺，孩子们把羊毛留在手中，让它逐渐被拉出，再缠到陀螺上。\n\n从带孔重物到地上的陀螺，同样的纺线工作有了不同的操作方式。课程再按历史顺序引入后来的工具，让孩子们在试验中考察它们的用途与影响，逐步走向完整的织机。原料、梳理、纺纱和织布于是有了连续的次序，而不是几项彼此分开的手工。\n\n杜威同时把这些工作连向材料生长的地理条件、机器中的物理原理和生产方式的历史变化。课堂中的纱线可以通向这些问题，但方向仍由课程组织和教师指导来建立。半小时得到的少量棉纤维，是这条学习路径上可以重新拿来比较的起点。",
+    "formalExplanation": "Once pupils have separated cotton fibers from seeds, a teacher still has to ask whether they have merely completed a craft task or can explain why the material is processed that way and how tools change production. Education studies how learning happens and how content, questions, practice and feedback can be organized. Classroom observations and actions supply material for further understanding; organizing that material is professional work in its own right.\n\nThat work includes noticing where pupils get stuck, choosing the next comparison, checking whether an explanation is understood, and preparing teachers for different stages and subjects. Hands-on activities, lectures, reading, memory and practice each have uses. Curriculum design combines them according to learning goals, rather than treating participation in an activity as proof of understanding.",
+    "formalExplanationZh": "学生已经把棉籽和纤维分开，教师仍要判断：他们只是完成了一项手工，还是能够解释材料为什么这样处理、工具怎样改变生产？教育需要研究学习怎样发生，也需要安排内容、问题、练习与反馈。课堂里的观察和操作，可以成为进一步理解的材料；怎样把这些材料组织起来，是另一项专业工作。\n\n这项工作还包括观察学生在哪里卡住、选择下一步比较、检验解释能否被理解，以及准备教师承担不同阶段和科目的教学。动手、讲授、阅读、记忆和练习各有用途；课程设计要根据学习目标把它们配合起来，而不是把参加过活动直接当成已经掌握知识。",
+    "coreInsight": "The key change in this curriculum is from completing a craft task to explaining its materials, tools and subsequent stages. Teachers did not stop at the quantity of cotton separated. They arranged comparisons with wool, carding and spinning, then connected those actions to questions about machinery, geography and history. Earlier experience supplied a basis for the next question.\n\nLearning can be checked along the same path: can pupils explain why carding precedes spinning, or compare how two tools perform the same task? Teachers can use their answers to choose further explanation, practice or discussion. The case illustrates how experience and knowledge can be organized, without requiring the same hands-on curriculum for every learning goal.",
+    "coreInsightZh": "完成一项手工，转向能够解释它的材料、工具和后续工序，是这段课程里的关键变化。教师没有停在孩子分出了多少棉花，而是安排棉花与羊毛比较、梳理和纺线，再把这些操作连向机器、地理与历史的问题。前面的经验，成为提出下一项问题的依据。\n\n检验学习时，也需要沿这条线回查：学生能否说清为什么先梳理，再纺线？能否比较两种工具怎样完成同一任务？教师据此继续选择解释、练习或讨论。这个案例展示的是怎样组织经验与知识，并不要求每个学习目标都采用同样的动手课程。",
+    "analogyBoundary": "This piece uses the University of Chicago Laboratory School and Dewey’s classroom account as a historical window for understanding questions in education. It does not present Dewey or the Laboratory School as the origin of education as a field. The historical classroom record illustrates one way teachers organized experience and knowledge; it does not reject the value of lectures, memory, practice, or systematic knowledge.",
+    "analogyBoundaryZh": "本篇用芝加哥大学实验学校及Dewey的课堂记述作为理解教育问题的历史窗口，不把Dewey或实验学校写成教育学的起点。历史课堂记录展示了教师组织经验与知识的一种方式，并不否定讲授、记忆、练习或系统知识的价值。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If students have completed a hands-on activity, what follow-up questions, comparisons, or explanations would you use to judge whether they truly understand the relationship between materials, tools, and knowledge?",
+    "reflectionQuestionZh": "如果学生已经完成了一项动手活动，你会通过哪些后续提问、比较或解释，判断他们是否真正理解了材料、工具和知识之间的关系？",
+    "subjectOrigin": {
+      "id": "subject-origin-01-education",
+      "categoryCode": "01",
+      "subjectTitleZh": "教育",
+      "titleZh": "半小时的棉花",
+      "summaryZh": "孩子们花了半小时，从棉籽上分出的纤维还不到一盎司。接下来，教师会怎样把手中的材料变成连续的学习？",
+      "originStoryParagraphsZh": [
+        "在杜威留下的课堂记录里，一组孩子拿到原棉，把纤维从棉籽上分离。约半小时过去，得到的纤维还不到一盎司。书里把这段缓慢的手工劳动放在纺织活动的开头：一件衣服所需的材料，首先得从植物或动物身上取得，之后还有一连串加工。孩子们手中这点棉纤维，距离成布仍有很长一段路。",
+        "他们把棉纤维与羊毛作比较，教师用提问和建议帮助他们观察材料，再沿着纤维加工成布的过程继续。梳理羊毛时，孩子们重做了简单的梳理架：两块装有尖针的板，用来把羊毛梳开。工具的用途与手中的材料连在一起，梳理成为纺纱之前可以实际试验的一道工序。",
+        "接下来加工的仍是羊毛。孩子们尝试用带孔的石块或其他重物，让羊毛穿过，在重物旋转时把纤维拉出。书中随后记述了另一种做法：一个在地板上旋转的陀螺，孩子们把羊毛留在手中，让它逐渐被拉出，再缠到陀螺上。",
+        "从带孔重物到地上的陀螺，同样的纺线工作有了不同的操作方式。课程再按历史顺序引入后来的工具，让孩子们在试验中考察它们的用途与影响，逐步走向完整的织机。原料、梳理、纺纱和织布于是有了连续的次序，而不是几项彼此分开的手工。",
+        "杜威同时把这些工作连向材料生长的地理条件、机器中的物理原理和生产方式的历史变化。课堂中的纱线可以通向这些问题，但方向仍由课程组织和教师指导来建立。半小时得到的少量棉纤维，是这条学习路径上可以重新拿来比较的起点。"
+      ],
+      "whyNeededParagraphsZh": [
+        "学生已经把棉籽和纤维分开，教师仍要判断：他们只是完成了一项手工，还是能够解释材料为什么这样处理、工具怎样改变生产？教育需要研究学习怎样发生，也需要安排内容、问题、练习与反馈。课堂里的观察和操作，可以成为进一步理解的材料；怎样把这些材料组织起来，是另一项专业工作。",
+        "这项工作还包括观察学生在哪里卡住、选择下一步比较、检验解释能否被理解，以及准备教师承担不同阶段和科目的教学。动手、讲授、阅读、记忆和练习各有用途；课程设计要根据学习目标把它们配合起来，而不是把参加过活动直接当成已经掌握知识。"
+      ],
+      "coreTurnParagraphsZh": [
+        "完成一项手工，转向能够解释它的材料、工具和后续工序，是这段课程里的关键变化。教师没有停在孩子分出了多少棉花，而是安排棉花与羊毛比较、梳理和纺线，再把这些操作连向机器、地理与历史的问题。前面的经验，成为提出下一项问题的依据。",
+        "检验学习时，也需要沿这条线回查：学生能否说清为什么先梳理，再纺线？能否比较两种工具怎样完成同一任务？教师据此继续选择解释、练习或讨论。这个案例展示的是怎样组织经验与知识，并不要求每个学习目标都采用同样的动手课程。"
+      ],
+      "anchorsParagraphsZh": [
+        "芝加哥大学实验学校于1896年创立，教师共同参与课程设计与观察。Dewey在1899年出版、1915年修订的《The School and Society》中记录了棉花半小时不足一盎司、棉花与羊毛比较、梳理、纺纱以及教师提问和建议等课堂活动。",
+        "这类历史记录提供了一个可观察的课堂案例，展示教师与儿童怎样共同推进学习；它不构成某一种教学法在所有情境中普遍有效的实验结论。"
+      ],
+      "branchesParagraphsZh": [
+        "01教育包括教育科学和教师培训。教育科学研究学习、课程、教学和教育制度；教师培训则把这些知识与专业实践结合，准备教师承担不同阶段、不同科目的教学工作。",
+        "教师培训分为学前教师培训、不含专业科目教师培训、含专业科目教师培训。心理学与教育研究密切相关，但在这套分类中归入03；教育政策则可以成为教育科学的研究议题。"
+      ],
+      "reflectionZh": "如果学生已经完成了一项动手活动，你会通过哪些后续提问、比较或解释，判断他们是否真正理解了材料、工具和知识之间的关系？",
+      "boundaryZh": "本篇用芝加哥大学实验学校及Dewey的课堂记述作为理解教育问题的历史窗口，不把Dewey或实验学校写成教育学的起点。历史课堂记录展示了教师组织经验与知识的一种方式，并不否定讲授、记忆、练习或系统知识的价值。",
+      "tagsZh": [
+        "教育",
+        "课程",
+        "实验学校",
+        "教师教育",
+        "学习活动",
+        "John Dewey"
+      ],
+      "references": [
+        {
+          "id": "dewey-school-society",
+          "citation": "Dewey, J. (1899; revised edition 1915). The School and Society, Chapter I.",
+          "url": "https://www.gutenberg.org/files/53910/53910-h/53910-h.htm",
+          "useZh": "棉花半小时不足一盎司、材料比较、梳理纺纱、教师提问；作者的课堂记述不是对任何教学法的普遍实验验证。",
+          "useEn": "Supports the account of less than an ounce of cotton processed in half an hour, comparison of materials, carding and spinning, and teacher questioning; the author’s classroom account is not general experimental validation of any teaching method."
+        },
+        {
+          "id": "chicago-lab-history",
+          "citation": "University of Chicago Library. Education for Life: 100 Years of the Laboratory Schools.",
+          "url": "https://www.lib.uchicago.edu/collex/exhibits/exefl/",
+          "useZh": "1896学校成立、教师共同参与的实验学校背景。",
+          "useEn": "Supports the school’s founding in 1896 and the background of teachers jointly participating in the Laboratory School."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "教育分类00/01/02及正式分支；不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 00, 01, and 02; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Education",
+      "titleEn": "Half an Hour of Cotton",
+      "summaryEn": "The children spent half an hour separating less than an ounce of cotton fiber. How would teachers turn the material in their hands into a continuing path of learning?",
+      "originStoryParagraphsEn": [
+        "In Dewey’s classroom account, a group of children were given raw cotton and separated the fibers from the seeds. After about half an hour, they had obtained less than an ounce. The book places this slow handwork at the beginning of textile activities: material for clothing must first be obtained from plants or animals, with a sequence of processing still to follow. The small amount of cotton fiber in their hands was still a long way from cloth.",
+        "They compared cotton fibers with wool, aided by teachers’ questions and suggestions, then followed the processes that turn fibers into cloth. For carding wool, they reconstructed a simple carding frame: two boards fitted with sharp pins to comb it out. The tool’s purpose was connected to the material in their hands, and carding became a stage they could try before spinning.",
+        "The material being spun was still wool. The children tried passing it through a pierced stone or another weight, whose rotation drew out the fiber. The account then describes another method: a top spun on the floor while the children held the wool in their hands, allowing it to be drawn out gradually and wound onto the top.",
+        "From a pierced weight to a top on the floor, the same spinning task took different forms. Later tools were introduced in historical order so that the children could examine their purposes and effects through practical trials, working toward the complete loom. Raw material, carding, spinning, and weaving formed a connected sequence rather than separate crafts.",
+        "Dewey also linked these activities to the geographical conditions in which materials grow, physical principles in machinery, and historical changes in production. The thread in their hands could lead to these questions through a curriculum organized and guided by teachers. The small quantity of cotton obtained in half an hour remained a starting point to revisit and compare."
+      ],
+      "whyNeededParagraphsEn": [
+        "Once pupils have separated cotton fibers from seeds, a teacher still has to ask whether they have merely completed a craft task or can explain why the material is processed that way and how tools change production. Education studies how learning happens and how content, questions, practice and feedback can be organized. Classroom observations and actions supply material for further understanding; organizing that material is professional work in its own right.",
+        "That work includes noticing where pupils get stuck, choosing the next comparison, checking whether an explanation is understood, and preparing teachers for different stages and subjects. Hands-on activities, lectures, reading, memory and practice each have uses. Curriculum design combines them according to learning goals, rather than treating participation in an activity as proof of understanding."
+      ],
+      "coreTurnParagraphsEn": [
+        "The key change in this curriculum is from completing a craft task to explaining its materials, tools and subsequent stages. Teachers did not stop at the quantity of cotton separated. They arranged comparisons with wool, carding and spinning, then connected those actions to questions about machinery, geography and history. Earlier experience supplied a basis for the next question.",
+        "Learning can be checked along the same path: can pupils explain why carding precedes spinning, or compare how two tools perform the same task? Teachers can use their answers to choose further explanation, practice or discussion. The case illustrates how experience and knowledge can be organized, without requiring the same hands-on curriculum for every learning goal."
+      ],
+      "anchorsParagraphsEn": [
+        "The University of Chicago Laboratory School was founded in 1896, with teachers jointly participating in curriculum design and observation. In The School and Society, published in 1899 and revised in 1915, Dewey recorded the cotton exercise in which less than an ounce was processed in half an hour, comparisons between cotton and wool, carding, spinning, and the use of teacher questions and suggestions.",
+        "Such historical records provide an observable classroom case showing how teachers and children can advance learning together; they do not constitute experimental proof that one teaching method works universally in every context."
+      ],
+      "branchesParagraphsEn": [
+        "Field 01 Education includes education science and teacher training. Education science studies learning, curricula, teaching, and educational institutions; teacher training combines knowledge and professional practice to prepare teachers for different stages and subjects.",
+        "Teacher training is divided into training for pre-school teachers, training without subject specialization, and training with subject specialization. Psychology is closely related to education research but is classified in field 03; education policy can be a research topic within education science."
+      ],
+      "reflectionEn": "If students have completed a hands-on activity, what follow-up questions, comparisons, or explanations would you use to judge whether they truly understand the relationship between materials, tools, and knowledge?",
+      "boundaryEn": "This piece uses the University of Chicago Laboratory School and Dewey’s classroom account as a historical window for understanding questions in education. It does not present Dewey or the Laboratory School as the origin of education as a field. The historical classroom record illustrates one way teachers organized experience and knowledge; it does not reject the value of lectures, memory, practice, or systematic knowledge.",
+      "tagsEn": [
+        "Education",
+        "Curriculum",
+        "Laboratory School",
+        "Teacher Education",
+        "Learning Activities",
+        "John Dewey"
+      ]
+    }
   },
   {
-    code: "02",
-    subjectTitle: "Arts and humanities",
-    subjectTitleZh: "艺术与人文",
-    title: "Arts and humanities",
-    titleZh: "文明的灵魂",
-    summary: "Anning learns, through an old coat, a difficult novel, and a community video project, that culture is an entrance into human experience.",
-    summaryZh: "阿宁从一件旧外套、一篇小说和一条老街的影像项目里，慢慢看见艺术与人文如何让人理解人的经验。",
-    scene: "Anning once hurried through museums, until an ordinary repaired coat made her stop and see the person behind the object.",
-    sceneZh: "阿宁小时候总想快点离开博物馆，直到一件被反复修补的旧外套让她停下来，看见物品背后的人。",
-    storyBody: `When Anning was a child, she did not like going to museums.
-
-She thought museums were too quiet, the lights were too dim, and the paintings on the walls felt far away from her life. Adults could stand in front of one painting for a long time, but she only wanted to leave quickly. She did not understand why an old painting, a broken bowl, or a yellowed book had to be carefully kept behind glass.
-
-Once, her school organized a visit to a small exhibition. There were no very expensive objects there. There were only old things from ordinary people: a letter that had never been sent, a black-and-white photo, a coat that had been repaired many times, and an old book full of notes.
-
-At first, Anning was still not interested. Then she stopped in front of the coat.
-
-The sleeves of the coat were worn out, and a piece of cloth in a different color had been sewn inside. The note beside it said that the coat had belonged to a mother when she was young. Later, when the family did not have much money, she made it smaller so that her daughter could wear it. Years later, when the daughter left home to study in another city, she also took the coat with her.
-
-Anning looked at it for a long time. She suddenly thought of an old sweater in her grandmother’s wardrobe. Her grandmother always said that the sweater could still be worn and did not want to throw it away. Before, Anning thought this was only about saving money. Now, for the first time, she felt that a piece of clothing might not only be clothing. It might also carry a person’s life, memory, and feelings.
-
-After they returned to school, the teacher asked them to write about the visit. Anning did not write sentences like “this exhibition was meaningful.” She wrote about the coat. She wrote why it had been repaired, why it had been kept, and why an old piece of cloth could make someone stop and look.
-
-After reading it, the teacher only wrote one sentence beside her text: “You are beginning to see the people behind the objects.”
-
-Later, Anning entered middle school and started reading literary works. At first, she always wanted to know the “standard answer”: What is the main idea of this text? What does this character represent? What rhetorical device is used in this sentence?
-
-But one novel confused her. In the novel, the father rarely spoke and was always silent. At first, Anning thought he was cold. But as she continued reading, she found that he left home very early and returned very late every day. He only did not know how to express care. He did not say love, but he always prepared what his daughter needed in advance.
-
-In the class discussion, one student said the father was repressed. Another said he was gentle. Someone else said he was shaped by his time and family environment. The teacher did not ask them to choose one final answer. Instead, she asked them to return to the text and find evidence. She also asked them to think about why different people could read different feelings from the same story.
-
-Anning then realized that reading is not turning words into one standard answer. Reading is a way to practice understanding the complexity of people through other people’s stories. A person’s silence may be coldness, but it may also be a difficulty in expression. A period of history may be something in the past, but it may still shape people in the present.
-
-At university, Anning joined a community video project. The project asked students to interview old residents and record the changes of an old street. She was responsible for interviewing an auntie who had run a small shop there for thirty years.
-
-The auntie said that young people often thought the street was old and the shop was small, not as convenient as a new shopping mall. But she remembered many people buying their first daily supplies there when they first came to the city. Many children waited for their parents at the shop door after school. Many neighbors had argued there, but they had also helped each other.
-
-At first, Anning only wanted to take a few street photos and write a short description. Later, she found that if she only photographed the buildings, the voices of people would be missing. If she only wrote about change, the reasons why some things remained would be missing. So she put photos, interviews, old maps, and residents’ stories together. She wanted others to see that this street was not only an area in urban planning. It was also a place where many people had lived.
-
-On the day of the project exhibition, someone said after watching it, “I passed by this street every day, but I never really looked at it.”
-
-When Anning heard this, she suddenly remembered herself as a child in the museum. At that time, she had also passed by many things without really seeing them.
-
-Slowly, she understood that some learning is not meant to solve an immediate practical problem, and it is not meant to produce a result that can be calculated. It teaches people how to look, how to listen, how to express, how to understand the past, and how to understand the feelings of others. It cares about what people leave behind, and also why people choose to leave these things behind. It makes a painting, a poem, a language, a period of history, a building, or a performance not only a “work” or a “source,” but also an entrance to understanding human experience.`,
-    storyBodyZh: `阿宁小时候不喜欢去博物馆。
-
-她觉得那里太安静，灯光太暗，墙上的画也离她很远。大人站在一幅画前看很久，她却只想快点走出去。她不明白，一张旧画、一只破碗、一本发黄的书，为什么要被小心地放在玻璃柜里。
-
-有一次，学校组织参观一个小型展览。展览里没有很贵重的东西，只有一些普通人的旧物：一封没有寄出的信，一张黑白照片，一件补过很多次的外套，还有一本写满批注的旧书。
-
-阿宁一开始还是不感兴趣。直到她停在那件外套前。
-
-外套的袖口已经磨破，里面缝着一块颜色不同的布。旁边的说明写着：这是一位母亲年轻时穿过的外套。后来家里条件不好，她把外套改小，给女儿继续穿。再后来，女儿离开家去外地读书，也把这件外套带走了。
-
-阿宁看了很久。她突然想到自己奶奶衣柜里也有一件旧毛衣。奶奶总说那件毛衣还能穿，不舍得扔。以前阿宁觉得那只是节省。现在她第一次觉得，一件衣服可能不只是衣服。它也可能装着一个人的生活、记忆和感情。
-
-回到学校后，老师让他们写一段参观感受。阿宁没有写“这个展览很有意义”这种句子。她写的是那件外套。她写它为什么被修补，为什么被留下，为什么一块旧布也能让人停下来。
-
-老师看完后，只在旁边写了一句话：“你开始看见物品背后的人了。”
-
-后来，阿宁上了中学。她开始读一些文学作品。刚开始，她总想知道“标准答案”是什么：这篇文章表达了什么中心思想？这个人物代表什么？这句话用了什么修辞？
-
-可是有一篇小说让她很困惑。小说里的父亲很少说话，总是沉默。阿宁一开始觉得这个父亲冷漠。可读到后面，她发现父亲每天很早出门，很晚回家，只是不知道怎样表达关心。他不说爱，却总是把女儿需要的东西提前准备好。
-
-课堂讨论时，有同学说这个父亲压抑，有同学说他温柔，也有人说他受时代和家庭环境影响。老师没有要求他们选一个唯一答案，而是让他们回到文本里找证据，也让他们想一想：为什么不同的人会读出不同的感受？
-
-阿宁这才发现，阅读不是把文字翻译成一个标准答案。阅读是在别人的故事里练习理解人的复杂性。一个人的沉默，可能是冷淡，也可能是不善表达；一段历史，可能是过去的事实，也可能还影响着现在的人。
-
-大学时，阿宁参加了一个社区影像项目。项目要求他们采访老居民，记录一条旧街的变化。她负责采访一位开了三十年小店的阿姨。
-
-阿姨说，年轻人总觉得这条街旧，店也小，不如新商场方便。可是她记得很多人第一次来城市时，就在这里买过生活用品；很多孩子放学后在门口等父母；很多邻居吵过架，也互相帮过忙。
-
-阿宁原本只想拍几张街景，写一段介绍。后来她发现，如果只拍建筑，就少了人的声音；如果只写变化，就少了留下来的理由。于是她把照片、访谈、旧地图和居民的故事放在一起。她想让别人看到，这条街不只是城市规划里的一个区域，也是一群人生活过的地方。
-
-项目展示那天，有人看完后说：“我以前每天路过这里，但从来没有认真看过。”
-
-阿宁听到这句话，突然想起自己小时候在博物馆里的样子。她那时也只是路过很多东西，却没有真正看见它们。
-
-慢慢地，她明白，有些学习不是为了马上解决一个实际问题，也不是为了做出一个可以计算的结果。它让人学习怎样观看，怎样倾听，怎样表达，怎样理解过去，也怎样理解他人的感受。它关心人留下了什么，也关心人为什么要留下这些东西。它让一幅画、一首诗、一种语言、一段历史、一座建筑、一场表演，不只是“作品”或“资料”，而成为理解人类经验的入口。`,
-    formalExplanation: "This is what Arts and humanities are mainly concerned with. This field studies how people express feelings, preserve memory, create meaning, and understand themselves and others. It includes art, literature, language, history, philosophy, religion, and cultural studies. It does not only focus on works themselves, but also on the time, society, values, and human experience behind them. Its roots are very old and are connected with storytelling, painting, ritual, historical recording, reflection on the meaning of life, and the learning of language and writing. Later, with the development of schools, libraries, museums, universities, and modern research methods, Arts and humanities gradually became a formal academic field. It studies how people create culture, and how people understand themselves through culture.",
-    formalExplanationZh: "这就是“艺术与人文”真正关心的内容。它研究人如何表达感受、保存记忆、创造意义，并理解自己和他人。它包括艺术、文学、语言、历史、哲学、宗教、文化研究等方向。它不只关注作品本身，也关注作品背后的时代、社会、价值观和人的经验。在正式学科中，它对应的是 Arts and humanities（艺术与人文）。它的来源很早，和人类讲故事、绘画、祭祀、记录历史、思考生命意义和学习语言文字都有关系。后来，随着学校、图书馆、博物馆、大学和现代研究方法的发展，艺术与人文逐渐成为正式的学科领域，用来研究人如何创造文化，也如何通过文化理解自身。",
-    coreInsight: "Arts and humanities are not only about appreciating works. They train people to see, listen, interpret, preserve memory, and understand human experience through culture.",
-    coreInsightZh: "艺术与人文不只是欣赏作品，而是训练人观看、倾听、表达、解释、保存记忆，并通过文化理解人的经验。",
-    analogyBoundary: "This story emphasizes museums, literature, and community memory, but Arts and humanities also include contemporary art, language, philosophy, history, religion, cultural studies, criticism, and new media.",
-    analogyBoundaryZh: "这个故事强调博物馆、文学和社区记忆，但艺术与人文还包括当代表达、语言、哲学、历史、宗教、文化研究、批评方法和新的媒介形式。",
-    sourceBatchId: "subject-intro-02-arts-humanities-civilization-soul-20260630",
+    "code": "02",
+    "subjectTitle": "Arts and Humanities",
+    "subjectTitleZh": "艺术与人文",
+    "title": "Three Scripts on the Same Stone",
+    "titleZh": "同一块石上的三种文字",
+    "summary": "An ancient decree survives in three scripts, and the Greek section can be read. How could researchers use limited clues to enter the other two scripts?",
+    "summaryZh": "同一份古代诏令留下三种文字，希腊部分已经能够阅读。研究者怎样借有限的线索，继续读懂另外两种书写？",
+    "scene": "The Rosetta Stone records a priestly decree from 196 BCE. The same content appears in Egyptian hieroglyphs, Egyptian Demotic script, and Greek script: the first two record Egyptian, while the third records Greek. Researchers could read the Greek section, but the three scripts did not correspond word for word or sign for sign. Reading one section provided a point of comparison, not a grid for replacing the other two line by line.",
+    "sceneZh": "罗塞塔石碑记录着公元前196年的一份神职会议诏令。同一内容以埃及象形文字、埃及世俗体文字和希腊文字书写：前两种书写埃及语，第三种书写希腊语。研究者可以阅读希腊部分，但三种书写并不是逐字逐符号一一对应；读懂一栏，只能提供比较入口，不能把另外两栏逐格替换出来。",
+    "storyBody": "The Rosetta Stone records a priestly decree from 196 BCE. The same content appears in Egyptian hieroglyphs, Egyptian Demotic script, and Greek script: the first two record Egyptian, while the third records Greek. Researchers could read the Greek section, but the three scripts did not correspond word for word or sign for sign. Reading one section provided a point of comparison, not a grid for replacing the other two line by line.\n\nOnce copies and impressions circulated, researchers in different places could repeatedly compare the scripts. Thomas Young found a limited clue around the royal name Ptolemy: some hieroglyphic signs could record sounds. A royal name was useful as a point of comparison because the same name could be sought across different scripts. But one name was not enough to explain the whole writing system, because signs in the same system could perform other functions as well.\n\nJean-François Champollion compared these clues with his knowledge of Coptic, the Rosetta Stone, and other Egyptian inscriptions and texts. Coptic offered another route into the ancient Egyptian language, while other materials allowed the same reading to be tested beyond the Rosetta Stone. A sound value that worked only in a single name could not yet support broader reading.\n\nIn 1822, Champollion identified phonetic elements in the names of Egyptian pharaohs such as Ramesses and Thutmose. The clues were no longer confined to foreign rulers’ names. On September 27 he publicly presented related research in Paris. Decipherment continued after this presentation through further inscriptions and linguistic material; it did not make every ancient Egyptian text readable at once.\n\nA reader who had once seen only unfamiliar shapes could begin to follow sounds through royal names and then test those readings in other texts. But being able to pronounce a sound was still not the same as understanding the content; historical, religious, and political context still determined what those words meant in their original world.",
+    "storyBodyZh": "罗塞塔石碑记录着公元前196年的一份神职会议诏令。同一内容以埃及象形文字、埃及世俗体文字和希腊文字书写：前两种书写埃及语，第三种书写希腊语。研究者可以阅读希腊部分，但三种书写并不是逐字逐符号一一对应；读懂一栏，只能提供比较入口，不能把另外两栏逐格替换出来。\n\n复制品和拓印传播后，不同地点的研究者能够反复比较这些书写。Thomas Young从托勒密王名周围得到一条有限线索：部分象形符号可以记录声音。王名适合作为对照入口，因为同一个名字能在不同书写中被寻找；但一个王名仍不足以解释整套文字，同一系统中的符号还可能承担其他功能。\n\nJean-François Champollion把这些线索与科普特语知识、罗塞塔石碑以及其他埃及碑文和文本放在一起比较。科普特语提供了理解古埃及语言的另一条路径，其他材料则让同一个读法离开罗塞塔石碑后继续接受检验：一个声音线索若只在单个名字里成立，还不能支撑更广的阅读。\n\n1822年，Champollion在拉美西斯和图特摩斯等埃及法老的名字中识别出表音成分。线索不再只限于外国统治者的王名。9月27日，他在巴黎公开宣读相关研究；这次发表之后，破译仍需借助更多碑文与语言材料继续推进，并没有一举读通所有古埃及文本。\n\n原先只看见陌生图形的读者，开始能沿着王名追踪声音，再把这种读法拿到别的文本中检查。但能读出声音仍不等于已经理解内容；历史、宗教和政治语境仍决定这些词在原来的世界里究竟意味着什么。",
+    "formalExplanation": "Seeing a text, hearing a melody or picking up an artifact is not enough to understand how it was made, what it expresses or how different people interpret it. Arts and humanities address those questions. Creators work with form, color, sound, movement and materials; researchers identify forms, languages and uses, then examine works within their historical and social settings. The same object can prompt more than one kind of inquiry.\n\nThe Rosetta Stone offers an entry into linguistic interpretation: identifying sounds still leaves word meanings, other texts and historical context to investigate. Artistic creation and performance also involve making, rehearsal, viewing or listening. The field therefore includes both creating and interpreting; decipherment illuminates one path without replacing the work of the others.",
+    "formalExplanationZh": "看见一段文字、听见一段旋律或拿起一件器物，还不足以知道它怎样制作、表达什么、又怎样被不同的人理解。艺术与人文需要处理这些问题：创作者用形状、色彩、声音、动作和材料做出作品；研究者辨认形式、语言与用途，再把作品放回它所处的历史和社会。对象可以相同，提出的问题却不止一种。\n\n罗塞塔石碑提供了语言解释的入口：能读出声音之后，还需要词义、其他文本和历史背景。艺术创作与表演则还要经过制作、排练、观看或聆听等实践。这个领域因此既包括怎样创作，也包括怎样解释；一种破译方法可以帮助理解其中一条路径，无法包办其他工作。",
+    "coreInsight": "A key step in decipherment was the move from a sound clue in one royal name to readings that could be tested in other texts. Young provided a limited phonetic entry point; Champollion compared those clues with Coptic and other Egyptian material to examine whether they worked for more names and signs. A single comparison became a starting point for further checks.\n\nAfter identifying sounds, the question changes again: what was the sentence intended to do, how were its words used, and whom did it address? Language, history and religion help explain the content. Reading is therefore more than replacing signs with answers: both readings and interpretations are constrained by further evidence. Artistic creation and performance follow other practical paths.",
+    "coreInsightZh": "王名里的声音线索，转向在其他文本里也能接受检验的读法，是破译工作的关键一步。Young提供了有限的表音入口；Champollion把这些线索与科普特语及其他埃及材料比较，检验它们是否能用于更多名字和文字。单个对照因此成为需要继续核查的起点。\n\n读出声音之后，问题还要再变一次：这句话在当时要做什么，词语怎样使用，作者面对谁？语言、历史和宗教背景帮助解释内容。这样的阅读不是把符号换成答案，而是让读法和解释都接受更多材料的约束；艺术创作与表演则另有实践路径。",
+    "analogyBoundary": "This piece does not treat the Rosetta Stone as the origin of field 02 Arts and Humanities, nor does it portray decipherment as Europe single-handedly “giving” meaning to Egyptian civilization. The stone’s discovery and transfer took place within colonial and military contexts; its three scripts represent two languages. Young’s and Champollion’s achievements belong to a long, multi-text process of decipherment rather than a single complete breakthrough.",
+    "analogyBoundaryZh": "本篇不把罗塞塔石碑视为02艺术与人文的起点，也不把破译写成欧洲单方面“赐予”埃及文明意义。石碑的发现与流转处在殖民和军事环境中；三种文字对应两种语言。Young与Champollion的成果属于长期、多文本的破译过程，而非一次性的完整破解。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If an ancient sign can already be given an approximate sound, what other texts, linguistic knowledge, and historical context would you use to test that reading and avoid confusing “being able to read it” with “having understood it”?",
+    "reflectionQuestionZh": "如果一个古代符号已经能够读出大致声音，你还会用哪些其他文本、语言知识和历史背景去检验这个读法，避免把“能读”误当成“已经理解”？",
+    "subjectOrigin": {
+      "id": "subject-origin-02-arts-humanities",
+      "categoryCode": "02",
+      "subjectTitleZh": "艺术与人文",
+      "titleZh": "同一块石上的三种文字",
+      "summaryZh": "同一份古代诏令留下三种文字，希腊部分已经能够阅读。研究者怎样借有限的线索，继续读懂另外两种书写？",
+      "originStoryParagraphsZh": [
+        "罗塞塔石碑记录着公元前196年的一份神职会议诏令。同一内容以埃及象形文字、埃及世俗体文字和希腊文字书写：前两种书写埃及语，第三种书写希腊语。研究者可以阅读希腊部分，但三种书写并不是逐字逐符号一一对应；读懂一栏，只能提供比较入口，不能把另外两栏逐格替换出来。",
+        "复制品和拓印传播后，不同地点的研究者能够反复比较这些书写。Thomas Young从托勒密王名周围得到一条有限线索：部分象形符号可以记录声音。王名适合作为对照入口，因为同一个名字能在不同书写中被寻找；但一个王名仍不足以解释整套文字，同一系统中的符号还可能承担其他功能。",
+        "Jean-François Champollion把这些线索与科普特语知识、罗塞塔石碑以及其他埃及碑文和文本放在一起比较。科普特语提供了理解古埃及语言的另一条路径，其他材料则让同一个读法离开罗塞塔石碑后继续接受检验：一个声音线索若只在单个名字里成立，还不能支撑更广的阅读。",
+        "1822年，Champollion在拉美西斯和图特摩斯等埃及法老的名字中识别出表音成分。线索不再只限于外国统治者的王名。9月27日，他在巴黎公开宣读相关研究；这次发表之后，破译仍需借助更多碑文与语言材料继续推进，并没有一举读通所有古埃及文本。",
+        "原先只看见陌生图形的读者，开始能沿着王名追踪声音，再把这种读法拿到别的文本中检查。但能读出声音仍不等于已经理解内容；历史、宗教和政治语境仍决定这些词在原来的世界里究竟意味着什么。"
+      ],
+      "whyNeededParagraphsZh": [
+        "看见一段文字、听见一段旋律或拿起一件器物，还不足以知道它怎样制作、表达什么、又怎样被不同的人理解。艺术与人文需要处理这些问题：创作者用形状、色彩、声音、动作和材料做出作品；研究者辨认形式、语言与用途，再把作品放回它所处的历史和社会。对象可以相同，提出的问题却不止一种。",
+        "罗塞塔石碑提供了语言解释的入口：能读出声音之后，还需要词义、其他文本和历史背景。艺术创作与表演则还要经过制作、排练、观看或聆听等实践。这个领域因此既包括怎样创作，也包括怎样解释；一种破译方法可以帮助理解其中一条路径，无法包办其他工作。"
+      ],
+      "coreTurnParagraphsZh": [
+        "王名里的声音线索，转向在其他文本里也能接受检验的读法，是破译工作的关键一步。Young提供了有限的表音入口；Champollion把这些线索与科普特语及其他埃及材料比较，检验它们是否能用于更多名字和文字。单个对照因此成为需要继续核查的起点。",
+        "读出声音之后，问题还要再变一次：这句话在当时要做什么，词语怎样使用，作者面对谁？语言、历史和宗教背景帮助解释内容。这样的阅读不是把符号换成答案，而是让读法和解释都接受更多材料的约束；艺术创作与表演则另有实践路径。"
+      ],
+      "anchorsParagraphsZh": [
+        "石碑刻于公元前196年，1799年在Rashid被发现，1802年进入大英博物馆；复制品与拓印随后支持异地研究。Young提出王名中的表音线索，Champollion于1822年9月27日在巴黎公开相关研究，并继续借助科普特语和其他文本推进破译。",
+        "这些节点依赖的不只是石碑原件，还包括复制材料、王名对照、科普特语知识以及其他埃及碑文和文本。"
+      ],
+      "branchesParagraphsZh": [
+        "02分为艺术、人文和语言三组。艺术包括视听技术与媒体制作，时装、室内与工业设计，美术、工艺、音乐与表演艺术，关注作品的形式、材料与创作实践。",
+        "人文包括宗教与神学、历史与考古、哲学与伦理；语言包括语言习得、文学与语言学。罗塞塔石碑可以引向语言、历史和考古，其他分支也有各自的对象、方法与历史。选择下一步学习，可以看自己更想制作作品、解释材料，还是理解语言怎样使用。"
+      ],
+      "reflectionZh": "如果一个古代符号已经能够读出大致声音，你还会用哪些其他文本、语言知识和历史背景去检验这个读法，避免把“能读”误当成“已经理解”？",
+      "boundaryZh": "本篇不把罗塞塔石碑视为02艺术与人文的起点，也不把破译写成欧洲单方面“赐予”埃及文明意义。石碑的发现与流转处在殖民和军事环境中；三种文字对应两种语言。Young与Champollion的成果属于长期、多文本的破译过程，而非一次性的完整破解。",
+      "tagsZh": [
+        "艺术与人文",
+        "罗塞塔石碑",
+        "语言",
+        "历史",
+        "考古",
+        "文字破译"
+      ],
+      "references": [
+        {
+          "id": "bm-rosetta",
+          "citation": "British Museum. The Rosetta Stone: everything you need to know.",
+          "url": "https://www.britishmuseum.org/blog/everything-you-ever-wanted-know-about-rosetta-stone",
+          "useZh": "三种文字、Young与Champollion、科普特语和其他文本、1822研究，非单夜完全破译。",
+          "useEn": "Supports the three scripts, Young and Champollion, the use of Coptic and other texts, and the 1822 research; the decipherment was not completed in a single night."
+        },
+        {
+          "id": "bm-decipherment",
+          "citation": "British Museum. How Egyptian hieroglyphs were decoded: a timeline to decipherment.",
+          "url": "https://www.britishmuseum.org/exhibitions/hieroglyphs-unlocking-ancient-egypt/egyptian-hieroglyphs-decipherment-timeline",
+          "useZh": "复制品传播与长期破译；不要虚构当日对白或晕倒。",
+          "useEn": "Supports the circulation of copies and the long process of decipherment; it does not support invented same-day dialogue or a fainting episode."
+        },
+        {
+          "id": "bm-eureka",
+          "citation": "British Museum (2022). Eureka! Finding the key to ancient Egypt.",
+          "url": "https://www.britishmuseum.org/blog/eureka-finding-key-ancient-egypt",
+          "useZh": "1822年埃及法老王名的表音识别，早于9月27日公开宣读；不使用带传说色彩的惊叫场景。",
+          "useEn": "Supports phonetic readings of Egyptian royal names in 1822 before the September 27 presentation; the legendary exclamation is not reconstructed."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "教育分类00/01/02及正式分支；不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 00, 01, and 02; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Arts and Humanities",
+      "titleEn": "Three Scripts on the Same Stone",
+      "summaryEn": "An ancient decree survives in three scripts, and the Greek section can be read. How could researchers use limited clues to enter the other two scripts?",
+      "originStoryParagraphsEn": [
+        "The Rosetta Stone records a priestly decree from 196 BCE. The same content appears in Egyptian hieroglyphs, Egyptian Demotic script, and Greek script: the first two record Egyptian, while the third records Greek. Researchers could read the Greek section, but the three scripts did not correspond word for word or sign for sign. Reading one section provided a point of comparison, not a grid for replacing the other two line by line.",
+        "Once copies and impressions circulated, researchers in different places could repeatedly compare the scripts. Thomas Young found a limited clue around the royal name Ptolemy: some hieroglyphic signs could record sounds. A royal name was useful as a point of comparison because the same name could be sought across different scripts. But one name was not enough to explain the whole writing system, because signs in the same system could perform other functions as well.",
+        "Jean-François Champollion compared these clues with his knowledge of Coptic, the Rosetta Stone, and other Egyptian inscriptions and texts. Coptic offered another route into the ancient Egyptian language, while other materials allowed the same reading to be tested beyond the Rosetta Stone. A sound value that worked only in a single name could not yet support broader reading.",
+        "In 1822, Champollion identified phonetic elements in the names of Egyptian pharaohs such as Ramesses and Thutmose. The clues were no longer confined to foreign rulers’ names. On September 27 he publicly presented related research in Paris. Decipherment continued after this presentation through further inscriptions and linguistic material; it did not make every ancient Egyptian text readable at once.",
+        "A reader who had once seen only unfamiliar shapes could begin to follow sounds through royal names and then test those readings in other texts. But being able to pronounce a sound was still not the same as understanding the content; historical, religious, and political context still determined what those words meant in their original world."
+      ],
+      "whyNeededParagraphsEn": [
+        "Seeing a text, hearing a melody or picking up an artifact is not enough to understand how it was made, what it expresses or how different people interpret it. Arts and humanities address those questions. Creators work with form, color, sound, movement and materials; researchers identify forms, languages and uses, then examine works within their historical and social settings. The same object can prompt more than one kind of inquiry.",
+        "The Rosetta Stone offers an entry into linguistic interpretation: identifying sounds still leaves word meanings, other texts and historical context to investigate. Artistic creation and performance also involve making, rehearsal, viewing or listening. The field therefore includes both creating and interpreting; decipherment illuminates one path without replacing the work of the others."
+      ],
+      "coreTurnParagraphsEn": [
+        "A key step in decipherment was the move from a sound clue in one royal name to readings that could be tested in other texts. Young provided a limited phonetic entry point; Champollion compared those clues with Coptic and other Egyptian material to examine whether they worked for more names and signs. A single comparison became a starting point for further checks.",
+        "After identifying sounds, the question changes again: what was the sentence intended to do, how were its words used, and whom did it address? Language, history and religion help explain the content. Reading is therefore more than replacing signs with answers: both readings and interpretations are constrained by further evidence. Artistic creation and performance follow other practical paths."
+      ],
+      "anchorsParagraphsEn": [
+        "The stone was inscribed in 196 BCE, discovered at Rashid in 1799, and entered the British Museum in 1802; copies and impressions subsequently supported research in different locations. Young proposed phonetic clues from a royal name, while Champollion publicly presented related research in Paris on September 27, 1822 and continued advancing the decipherment with Coptic and other texts.",
+        "These developments depended not only on the original stone, but also on copies, comparison of royal names, knowledge of Coptic, and other Egyptian inscriptions and texts."
+      ],
+      "branchesParagraphsEn": [
+        "Field 02 has three groups: arts, humanities, and languages. The arts include audio-visual techniques and media production; fashion, interior, and industrial design; fine arts; handicrafts; and music and performing arts, with attention to forms, materials, and creative practice.",
+        "The humanities include religion and theology, history and archaeology, and philosophy and ethics. Languages include language acquisition, literature, and linguistics. The Rosetta Stone offers an entry into language, history, and archaeology; other branches have their own objects, methods, and histories. A next step can focus on making works, interpreting material, or understanding how language is used."
+      ],
+      "reflectionEn": "If an ancient sign can already be given an approximate sound, what other texts, linguistic knowledge, and historical context would you use to test that reading and avoid confusing “being able to read it” with “having understood it”?",
+      "boundaryEn": "This piece does not treat the Rosetta Stone as the origin of field 02 Arts and Humanities, nor does it portray decipherment as Europe single-handedly “giving” meaning to Egyptian civilization. The stone’s discovery and transfer took place within colonial and military contexts; its three scripts represent two languages. Young’s and Champollion’s achievements belong to a long, multi-text process of decipherment rather than a single complete breakthrough.",
+      "tagsEn": [
+        "Arts and Humanities",
+        "Rosetta Stone",
+        "Language",
+        "History",
+        "Archaeology",
+        "Decipherment"
+      ]
+    }
   },
   {
-    code: "03",
-    subjectTitle: "Social sciences",
-    subjectTitleZh: "社会科学",
-    title: "Social sciences",
-    titleZh: "秩序与冲突",
-    summary: "Zhou learns, through a blocked sidewalk, a class election, and city-work choices, how society works through rules, resources, cooperation, and conflict.",
-    summaryZh: "小周从被堵住的人行道、班级投票和城市去留选择里，慢慢看见社会如何在规则、资源和冲突中运行。",
-    scene: "Zhou first notices rules beside a narrow sidewalk blocked by electric bikes at the entrance of his residential community.",
-    sceneZh: "小周第一次认真看见规则，是在小区门口一条被电动车堵住的人行道旁。",
-    storyBody: `Zhou first became aware of “rules” at the entrance of his residential community.
-
-When he was young, he passed a small shop every day after school. There was a narrow sidewalk in front of the shop, and several electric bikes were often parked beside it. During the morning rush hour, parents sending children to school, people buying breakfast, and people riding to work were all crowded together.
-
-One day, an old man pushing a wheelchair tried to pass by. The wheelchair was blocked by an electric bike and had to move onto the road. The old man became angry. The owner of the bike was also unhappy and said he had only parked there for a few minutes. They started arguing. Some people nearby supported the old man, while others felt that the bike owner also had difficulties, because there was really no proper place to park nearby.
-
-Zhou stood there and watched. At first, he thought the matter was very simple: electric bikes should not block the sidewalk.
-
-But the next day, the same thing happened again. On the third day, someone still parked there. Later, the property office put up a notice asking residents not to block the sidewalk. The situation improved for a few days, but soon it returned to the same as before.
-
-Zhou began to feel puzzled. Why was something that seemed so clear still so difficult to solve?
-
-Later, the school asked them to do a community observation assignment. Each student had to choose a small problem around them, record why it happened, who was involved, and whether it could be improved. Zhou immediately thought of the sidewalk in front of the small shop.
-
-He observed it for a full week.
-
-He found that the place was most crowded between 7:30 and 8:30 in the morning. Parents sending children to school parked in a hurry because they were afraid of being late. People buying breakfast parked for a short time, but there were many of them. The shop owner did not want to interfere, because more customers meant better business. The property office sometimes reminded people, but no one was always there. Older people, children, and people pushing baby strollers were affected the most, but they were usually not the ones with the strongest voice.
-
-At first, Zhou thought it was only a problem of public manners. After observing it, he found that it was not only that. It was also related to space, time pressure, business interests, management, and residents' habits.
-
-He wrote these points in his assignment. After reading it, the teacher asked him, "If you were the property manager, what would you do?"
-
-Zhou said, "Put up more notices."
-
-The teacher asked again, "If notices worked, why was the problem not solved before?"
-
-Zhou thought for a while and said, "Maybe there should be a temporary parking area. The shop owner also needs to cooperate. During the morning rush hour, someone could guide people. And we need to hear what residents think."
-
-The teacher nodded and said, "You are beginning to see the relationship between people and systems."
-
-In middle school, Zhou encountered another situation. The class needed to elect a class monitor. The teacher said that this time, the teacher would not appoint anyone directly. The students would vote. Several classmates began to ask for support. Some promised to fight for more activity time. Some said they would make the class more organized. Some received many votes simply because they had more friends.
-
-After the vote, one student who was serious but quiet was not elected. He felt upset and said, "I could also do this well. Why didn't they choose me?"
-
-At first, Zhou did not know how to answer. Later, he slowly realized that a classroom was also a small society. Ability was important, but relationships, expression, trust, impression, and group atmosphere could also shape the result. Whether a person is chosen does not only depend on whether they are “good enough.” It also depends on how others understand and evaluate them, and what the group feels it needs at that moment.
-
-Later, at university, Zhou joined a research project. The project studied why young people choose to stay in big cities or return to their hometowns for work. Zhou first thought that the answer would mainly be about salary. But after the interviews, he found that each person had different reasons.
-
-Some people stayed in big cities because there were more opportunities. Some returned home because their parents needed care. Some wanted to stay, but the rent was too high. Some wanted to return, but worried that smaller cities had fewer development opportunities. Some were not making a fully free choice at all. They were trying to find an acceptable result between family expectations, economic pressure, and personal goals.
-
-When Zhou organized the interviews, he suddenly thought of the blocked sidewalk in front of the small shop when he was young. At that time, he thought the problem was only that someone had done something wrong. Now he slowly understood that many social problems are not caused by one person alone. Individuals do have responsibility, but individuals always act within families, organizations, markets, rules, culture, and the distribution of resources.
-
-He also began to understand that society is not a completely orderly whole. It operates every day between cooperation and conflict. People need rules, but rules are not equally convenient for everyone. People pursue their own interests, but interests often conflict. People say they are making free choices, but behind those choices there are often conditions that are not easy to see.
-
-Later, when he saw news about employment, education, cities, families, gender, inequality, migration, and public policy, he no longer rushed to ask who was right and who was wrong. He first asked: Which groups are involved in this issue? Who has more resources? Who makes the rules? Who benefits? Who carries the cost? Why do people make these choices?
-
-These questions did not make the world simpler. Instead, they made the world look more complex. But Zhou felt that this complexity was not confusion. It was a way of understanding life more closely.`,
-    storyBodyZh: `小周第一次意识到“规则”这件事，是在小区门口。
-
-那时候，他每天放学都会经过一个小卖部。小卖部门口有一条不宽的人行道，旁边停着几辆电动车。早高峰时，送孩子上学的家长、买早餐的人、骑车上班的人都会挤在一起。
-
-有一天，一个老人推着轮椅经过。轮椅被一辆电动车挡住了，只能绕到机动车道上。老人很生气，骑车的人也不高兴，说自己只是停几分钟。两个人吵了起来，旁边的人有人帮老人说话，有人觉得骑车的人也不容易，因为附近确实没有地方停车。
-
-小周站在旁边看着，觉得这件事很简单：电动车不应该挡路。
-
-可是第二天，他发现同样的事情又发生了。第三天，还是有人把车停在那里。后来，小区物业贴了通知，要求大家不要占用人行道。通知贴了几天，情况好了一点，但很快又变回原样。
-
-小周开始觉得奇怪。为什么一件看起来很清楚的事情，大家却一直做不好？
-
-后来，学校让他们做一个社区观察作业。每个人要选择一个身边的小问题，记录它为什么会出现，涉及哪些人，以及有没有可能改善。小周马上想到了小卖部门口的人行道。
-
-他连续观察了一个星期。
-
-他发现，早上七点半到八点半最拥挤。送孩子的家长停得最急，因为他们怕迟到。买早餐的人停得最短，但人数最多。小卖部老板不愿意管，因为来买东西的人多，对生意有好处。物业有时会提醒，但没有人一直在现场。老人、孩子和推婴儿车的人受到影响最大，但他们通常不是最有力量表达意见的人。
-
-小周原本以为，这是“有没有公德心”的问题。观察之后，他发现事情不只是这样。它还和空间安排、时间压力、商铺利益、管理方式、居民习惯有关。
-
-他把这些写进作业里。老师看完后问他：“如果你是物业，你会怎么做？”
-
-小周说：“贴更多通知。”
-
-老师又问：“如果贴通知有用，为什么之前没有解决？”
-
-小周想了想，说：“可能还要安排临时停车区，也要让小卖部老板配合。早高峰时可以有人引导。还要听听居民怎么想。”
-
-老师点点头，说：“你开始看到人和制度之间的关系了。”
-
-上中学后，小周又遇到一件事。班里要选班长。老师说，这次不由老师直接指定，而是让大家投票。几个同学开始拉票。有的人承诺会帮大家争取更多活动时间，有的人说自己会让班级更有秩序，还有人只是因为朋友多，得到了很多支持。
-
-投票结束后，一个平时很认真但不太爱说话的同学落选了。他很难过，说：“我明明也能做好，为什么大家不选我？”
-
-小周一开始不知道怎么回答。后来他慢慢发现，班级里也有一种小社会。能力很重要，但关系、表达、信任、印象和群体气氛也会影响结果。一个人是否被选择，并不只取决于他“好不好”，还取决于别人怎样理解他、评价他，以及这个群体当时需要什么。
-
-再后来，小周在大学参加了一个调研项目。项目研究年轻人为什么选择留在大城市，或者回到家乡工作。小周原以为，答案应该主要和工资有关。可是访谈之后，他发现每个人的理由都不一样。
-
-有人留在大城市，是因为机会多；有人回家乡，是因为父母需要照顾；有人想留下，但房租太高；有人想回去，却担心小地方没有发展空间；也有人根本不是在“自由选择”，而是在家庭期待、经济压力和个人理想之间找一个还能接受的结果。
-
-小周整理访谈时，突然想起小时候小卖部门口那条被堵住的人行道。那时，他以为问题只是某个人做错了。现在他慢慢明白，很多社会问题都不是单独由某一个人造成的。个人当然有责任，但个人总是在家庭、组织、市场、规则、文化和资源分配中行动。
-
-他也开始明白，社会并不是一个完全有秩序的整体。它每天都在合作和冲突之间运转。人们需要规则，但规则不一定对所有人一样方便；人们追求利益，但利益之间常常会冲突；人们说自己是自由选择，但选择背后往往有看不见的条件。
-
-后来，他再看到新闻里的就业、教育、城市、家庭、性别、贫富差距、移民和公共政策问题时，不再急着问“谁对谁错”。他会先问：这个问题涉及哪些群体？谁拥有更多资源？规则是谁制定的？谁从中受益？谁承担成本？人们为什么会做出这样的选择？
-
-这些问题没有让世界变简单。相反，它让世界看起来更复杂。但小周觉得，这种复杂不是混乱，而是一种更接近真实生活的理解。`,
-    formalExplanation: "This is what Social sciences are mainly concerned with. This field studies how people live in society, and how people cooperate, compete, conflict, and form order. It focuses on families, organizations, markets, states, culture, group behavior, social inequality, power relations, and public policy. It does not only describe individual behavior, but also tries to understand the social structures and institutional environments behind individual actions. Its roots are connected with human reflection on social order, political life, economic exchange, group relations, and public governance. Later, with the development of modern states, cities, markets, statistical methods, and social surveys, Social sciences gradually became a formal academic field. It studies how society works, and why people act in the ways they do within society.",
-    formalExplanationZh: "这就是“社会科学”真正关心的内容。它研究人如何在社会中生活，人与人之间如何合作、竞争、冲突和形成秩序。它关注家庭、组织、市场、国家、文化、群体行为、社会不平等、权力关系和公共政策等问题。它不只是描述个人行为，也试图理解个人行为背后的社会结构和制度环境。在正式学科中，它对应的是 Social sciences（社会科学）。它的来源与人类对社会秩序、政治生活、经济交换、群体关系和公共治理的思考有关。后来，随着现代国家、城市、市场、统计方法和社会调查的发展，社会科学逐渐成为正式学科，用来研究社会如何运行，以及人在社会中为什么会这样行动。",
-    coreInsight: "Social sciences do not only ask who is right or wrong. They ask how groups, rules, resources, institutions, and culture shape human action.",
-    coreInsightZh: "社会科学不只问谁对谁错，而是追问群体、规则、资源、制度和文化如何共同塑造人的行动。",
-    analogyBoundary: "This story uses a community, a classroom, and work choices to show social relations, but Social sciences also include politics, economics, psychology, communication, data, policy, and inequality.",
-    analogyBoundaryZh: "这个故事用社区、班级和就业选择说明社会关系，但社会科学还包括政治、经济、心理、传播、数据、政策和社会不平等等更广的问题。",
-    sourceBatchId: "subject-intro-03-social-sciences-order-conflict-20260630",
+    "code": "03",
+    "subjectTitle": "Social Sciences",
+    "subjectTitleZh": "社会科学",
+    "title": "Why Did the Street Change Color?",
+    "titleZh": "街道为什么换了颜色",
+    "summary": "London’s poverty map had already colored its streets. Years later, investigators returned with new notebooks. Could the judgments behind the old colors still stand?",
+    "summaryZh": "伦敦贫困地图已经给街道着了色。几年后，调查者带着新笔记重走街区，旧颜色背后的判断还能否保留？",
+    "scene": "From 1886 to 1903, Charles Booth’s team conducted a sustained investigation of poverty in London. The main sources for the first East End map in 1889 were records and interviews produced through the everyday household visits of School Board Visitors. The survey team transferred these scattered materials into specially printed notebooks and then assigned street segments to seven income-and-class color categories.",
+    "sceneZh": "1886年至1903年间，Charles Booth团队持续调查伦敦贫困。1889年第一张East End地图的主要资料，来自School Board Visitors日常走访家庭留下的记录和访谈。调查团队把这些分散材料转写进专门印制的笔记，再把街段归入七种收入与阶层颜色。",
+    "storyBody": "From 1886 to 1903, Charles Booth’s team conducted a sustained investigation of poverty in London. The main sources for the first East End map in 1889 were records and interviews produced through the everyday household visits of School Board Visitors. The survey team transferred these scattered materials into specially printed notebooks and then assigned street segments to seven income-and-class color categories.\n\nColors made many street segments comparable on one map, while the notebooks preserved descriptions used in classification. Some segments combined colors to show that they contained more than one kind of circumstance. The limited map legend and the longer notebooks retained different levels of detail; looking back from a colored segment could lead to the survey material used to assign its colors.\n\nAs the inquiry continued, investigators walked streets with police officers, recording their own impressions and the officers’ comments in street-walk notebooks. This new material was used to revise the classifications of 1889. London’s streets remained the object of study, while the people gathering evidence, the way they visited and the dates had changed. The same area could be classified again in a new set of records.\n\nThe colored map now had later material to read alongside it. Information from the earlier household visits, colors on the old map, and descriptions written during later walks left records of different stages. The revised maps reconsidered street colors. Comparing the notebooks and editions today allows readers to examine how the same street was described at different times, rather than looking only at a finished map.\n\nThe mapping of 1898–99 produced twelve maps, published in 1902–03. LSE’s archive now preserves material including the earlier Poverty Notebooks and later Police Notebooks, while the digital map can be enlarged to inspect adjacent street colors. The map puts classifications into one view; the notebooks take readers back to the written evidence gathered before those classifications.",
+    "storyBodyZh": "1886年至1903年间，Charles Booth团队持续调查伦敦贫困。1889年第一张East End地图的主要资料，来自School Board Visitors日常走访家庭留下的记录和访谈。调查团队把这些分散材料转写进专门印制的笔记，再把街段归入七种收入与阶层颜色。\n\n颜色让大量街段可以在同一张图上比较，笔记则保存了分类时参考的描述。地图有时在同一街段混用不同颜色，表示其中并非只有一种生活状况。有限的图例和更长的笔记各自留下了不同层次的细节；从一段着色街道往回看，还能追到用来决定颜色的调查材料。\n\n调查继续后，研究人员又跟随警员步行巡街，把自己对街道的印象和警员的评论记入巡街笔记。这些新材料后来被用于修订1889年的街段分类。研究对象仍是伦敦街道，取得材料的人、走访方式和时间却已经变化；同一片街区，可以在新的记录中接受再一次分类。\n\n原先的着色图于是有了可以并排阅读的后续材料。早期家庭走访提供的信息、旧地图上的颜色，以及后来巡街写下的描述，留下了不同阶段的痕迹。新版制图会重新处理街段颜色；今天沿着笔记和两版地图回看，还可以比较同一街段前后被怎样描述，而不是只看一张已经印好的图。\n\n1898至1899年的新一轮制图形成12张地图，并在1902至1903年出版。LSE档案今天保存着早期Poverty Notebooks与后来Police Notebooks等材料，数字地图也能放大查看相邻街段的颜色。地图把分类放在同一个画面上，笔记则让读者回到分类前留下的文字记录。",
+    "formalExplanation": "Once a street has been given a color, questions remain: who supplied the evidence, what rules determined the category, and which differences disappeared from the legend? Social science turns such questions into research by defining an object of study, collecting interviews, observations, statistics or archives, and comparing what those materials support. Sources and judgment rules belong to the conclusion; a clear-looking map cannot replace them.\n\nThe same evidence can serve different questions. Economics examines resources and exchange, political science power and institutions, psychology mind and behavior, and sociology groups and social life. Researchers need to explain how evidence supports a judgment and leave room for revision. A map may show a distribution without, by itself, explaining the causes of poverty.",
+    "formalExplanationZh": "一条街被涂上某种颜色之后，仍有问题需要追问：谁提供了材料，分类依据是什么，街上哪些差异没有被图例保留？社会科学把这样的问题变成可研究的工作，界定对象，收集访谈、观察、统计或档案，再比较这些材料能够支持什么。资料的来源和判断规则，是结论的一部分，不能只剩下一张看似清楚的图。\n\n同一份材料还可能服务不同问题：经济学考察资源与交换，政治学考察权力和制度，心理学考察心理与行为，社会学考察群体与社会生活。研究者需要说明怎样从材料走到判断，也要给新证据留下修订空间；地图能够显示分布，却不能单独说明贫困的原因。",
+    "coreInsight": "An already colored street became a classification that could be reconsidered. School Board Visitors’ material supported the first maps; later investigators’ impressions and police officers’ comments were used to revise those classifications. The color was not the end of the inquiry: behind it were dates of evidence gathering, people making records and judgments.\n\nA researcher comparing the editions and notebooks today can ask which changes concern the neighborhood and which concern sources or classification practices. That requires further investigation; a new color does not answer it by itself. Comparing sources and examining bias is a method readers can learn from the archive, rather than a guarantee that every historical judgment had already eliminated bias.",
+    "coreInsightZh": "已经着色的街道，转向可以重新检查的街段分类，是这套地图里可见的变化。早期School Board Visitors资料支持第一版制图，后来调查者的巡街印象与警员评论又被用来修订旧分类。颜色不是调查的终点；它背后还有材料的取得时间、记录者和判断。\n\n今天研究者回看两版地图与不同笔记，可以继续问：哪些变化来自街区，哪些与资料来源或分类方式有关？这是一项需要另行研究的问题，不能从换色直接读出答案。比较来源并检查偏差，是读者可以从档案中学习的方法，而不是假定当年的每一次判断都已排除偏差。",
+    "analogyBoundary": "This piece does not treat Booth’s seven-color scheme as an objective present-day judgment about residents, nor does it reuse the class-moral labels of that period as current evaluation. Street colors were classifications of street segments within that historical survey, not individual attributes; the later street-walk notebooks were not automatically a more truthful corrective. The maps cannot by themselves prove the causes of poverty, and the branches of field 03 did not develop from this survey.",
+    "analogyBoundaryZh": "本篇不把Booth七色分类当作今天对居民的客观评价，也不沿用其中带有阶层道德判断的历史标签作为现实判断。街道颜色是当时调查中的街段分类，不等于个人属性；巡街笔记也不是天然更真实的“纠错答案”。地图不能单独证明贫困成因，03各分支也并非由这套调查发展而来。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If a street segment’s classification on an old map conflicts with later street-walk notes, which source materials, observational positions, and judgment rules would you examine before deciding whether to keep or change the classification?",
+    "reflectionQuestionZh": "如果旧地图的一种街段分类与后来的巡街笔记不一致，你会分别检查哪些资料来源、观察位置和判断规则，再决定是否调整分类？",
+    "subjectOrigin": {
+      "id": "subject-origin-03-social-sciences",
+      "categoryCode": "03",
+      "subjectTitleZh": "社会科学",
+      "titleZh": "街道为什么换了颜色",
+      "summaryZh": "伦敦贫困地图已经给街道着了色。几年后，调查者带着新笔记重走街区，旧颜色背后的判断还能否保留？",
+      "originStoryParagraphsZh": [
+        "1886年至1903年间，Charles Booth团队持续调查伦敦贫困。1889年第一张East End地图的主要资料，来自School Board Visitors日常走访家庭留下的记录和访谈。调查团队把这些分散材料转写进专门印制的笔记，再把街段归入七种收入与阶层颜色。",
+        "颜色让大量街段可以在同一张图上比较，笔记则保存了分类时参考的描述。地图有时在同一街段混用不同颜色，表示其中并非只有一种生活状况。有限的图例和更长的笔记各自留下了不同层次的细节；从一段着色街道往回看，还能追到用来决定颜色的调查材料。",
+        "调查继续后，研究人员又跟随警员步行巡街，把自己对街道的印象和警员的评论记入巡街笔记。这些新材料后来被用于修订1889年的街段分类。研究对象仍是伦敦街道，取得材料的人、走访方式和时间却已经变化；同一片街区，可以在新的记录中接受再一次分类。",
+        "原先的着色图于是有了可以并排阅读的后续材料。早期家庭走访提供的信息、旧地图上的颜色，以及后来巡街写下的描述，留下了不同阶段的痕迹。新版制图会重新处理街段颜色；今天沿着笔记和两版地图回看，还可以比较同一街段前后被怎样描述，而不是只看一张已经印好的图。",
+        "1898至1899年的新一轮制图形成12张地图，并在1902至1903年出版。LSE档案今天保存着早期Poverty Notebooks与后来Police Notebooks等材料，数字地图也能放大查看相邻街段的颜色。地图把分类放在同一个画面上，笔记则让读者回到分类前留下的文字记录。"
+      ],
+      "whyNeededParagraphsZh": [
+        "一条街被涂上某种颜色之后，仍有问题需要追问：谁提供了材料，分类依据是什么，街上哪些差异没有被图例保留？社会科学把这样的问题变成可研究的工作，界定对象，收集访谈、观察、统计或档案，再比较这些材料能够支持什么。资料的来源和判断规则，是结论的一部分，不能只剩下一张看似清楚的图。",
+        "同一份材料还可能服务不同问题：经济学考察资源与交换，政治学考察权力和制度，心理学考察心理与行为，社会学考察群体与社会生活。研究者需要说明怎样从材料走到判断，也要给新证据留下修订空间；地图能够显示分布，却不能单独说明贫困的原因。"
+      ],
+      "coreTurnParagraphsZh": [
+        "已经着色的街道，转向可以重新检查的街段分类，是这套地图里可见的变化。早期School Board Visitors资料支持第一版制图，后来调查者的巡街印象与警员评论又被用来修订旧分类。颜色不是调查的终点；它背后还有材料的取得时间、记录者和判断。",
+        "今天研究者回看两版地图与不同笔记，可以继续问：哪些变化来自街区，哪些与资料来源或分类方式有关？这是一项需要另行研究的问题，不能从换色直接读出答案。比较来源并检查偏差，是读者可以从档案中学习的方法，而不是假定当年的每一次判断都已排除偏差。"
+      ],
+      "anchorsParagraphsZh": [
+        "两组笔记需要分开阅读：早期Poverty Notebooks整理School Board Visitors的记录与访谈，后来Police Notebooks记录调查者随警员巡街时的印象与评论。它们不是同一套走访材料。",
+        "1889年East End地图与1898至1899年的新版制图提供两个比较节点；后者12张地图在1902至1903年出版。阅读时要区分收集资料、形成笔记、制图与出版，并把街段颜色与相应阶段的记录对照。"
+      ],
+      "branchesParagraphsZh": [
+        "03包括社会与行为科学，以及新闻与信息。社会与行为科学涵盖经济学、政治学与公民教育、心理学、社会学与文化研究，分别考察资源配置、权力与制度、心理与行为、群体与文化等问题。",
+        "新闻与信息包括新闻与报道，以及图书馆、信息与档案研究。这些方向关心公共信息怎样被调查、核实、组织、保存和提供。贫困地图可以通向调查与档案的方法，但各分支都有独立的专业历史。"
+      ],
+      "reflectionZh": "如果旧地图的一种街段分类与后来的巡街笔记不一致，你会分别检查哪些资料来源、观察位置和判断规则，再决定是否调整分类？",
+      "boundaryZh": "本篇不把Booth七色分类当作今天对居民的客观评价，也不沿用其中带有阶层道德判断的历史标签作为现实判断。街道颜色是当时调查中的街段分类，不等于个人属性；巡街笔记也不是天然更真实的“纠错答案”。地图不能单独证明贫困成因，03各分支也并非由这套调查发展而来。",
+      "tagsZh": [
+        "社会科学",
+        "社会调查",
+        "贫困地图",
+        "分类",
+        "证据比较",
+        "Charles Booth"
+      ],
+      "references": [
+        {
+          "id": "booth-poverty-maps",
+          "citation": "London School of Economics and Political Science. What were the poverty maps? Charles Booth’s London.",
+          "url": "https://booth.lse.ac.uk/learn-more/what-were-the-poverty-maps",
+          "useZh": "支持资料来源、两版地图与七色分类的历史判断边界。",
+          "useEn": "Supports the source materials, the two map editions, and the historical judgment boundaries of the seven-color classification."
+        },
+        {
+          "id": "booth-poverty-notebooks",
+          "citation": "London School of Economics and Political Science. Poverty notebooks. Charles Booth’s London.",
+          "url": "https://booth.lse.ac.uk/notebooks/poverty-notebooks",
+          "useZh": "支持调查笔记、随警员巡街、观察与评论等材料。",
+          "useEn": "Supports the survey notebooks, street walks with police officers, observations, and commentary."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持正式03/04/05及分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 03, 04, and 05; the education classification does not establish a shared historical origin."
+        },
+        {
+          "id": "lse-police-notebooks",
+          "citation": "London School of Economics and Political Science. Police notebooks. Charles Booth’s London.",
+          "url": "https://booth.lse.ac.uk/notebooks/police-notebooks",
+          "useZh": "后来巡街笔记与早期Poverty Notebooks属于不同档案集合。",
+          "useEn": "Distinguishes later street-walk Police Notebooks from the earlier Poverty Notebooks."
+        }
+      ],
+      "subjectTitleEn": "Social Sciences",
+      "titleEn": "Why Did the Street Change Color?",
+      "summaryEn": "London’s poverty map had already colored its streets. Years later, investigators returned with new notebooks. Could the judgments behind the old colors still stand?",
+      "originStoryParagraphsEn": [
+        "From 1886 to 1903, Charles Booth’s team conducted a sustained investigation of poverty in London. The main sources for the first East End map in 1889 were records and interviews produced through the everyday household visits of School Board Visitors. The survey team transferred these scattered materials into specially printed notebooks and then assigned street segments to seven income-and-class color categories.",
+        "Colors made many street segments comparable on one map, while the notebooks preserved descriptions used in classification. Some segments combined colors to show that they contained more than one kind of circumstance. The limited map legend and the longer notebooks retained different levels of detail; looking back from a colored segment could lead to the survey material used to assign its colors.",
+        "As the inquiry continued, investigators walked streets with police officers, recording their own impressions and the officers’ comments in street-walk notebooks. This new material was used to revise the classifications of 1889. London’s streets remained the object of study, while the people gathering evidence, the way they visited and the dates had changed. The same area could be classified again in a new set of records.",
+        "The colored map now had later material to read alongside it. Information from the earlier household visits, colors on the old map, and descriptions written during later walks left records of different stages. The revised maps reconsidered street colors. Comparing the notebooks and editions today allows readers to examine how the same street was described at different times, rather than looking only at a finished map.",
+        "The mapping of 1898–99 produced twelve maps, published in 1902–03. LSE’s archive now preserves material including the earlier Poverty Notebooks and later Police Notebooks, while the digital map can be enlarged to inspect adjacent street colors. The map puts classifications into one view; the notebooks take readers back to the written evidence gathered before those classifications."
+      ],
+      "whyNeededParagraphsEn": [
+        "Once a street has been given a color, questions remain: who supplied the evidence, what rules determined the category, and which differences disappeared from the legend? Social science turns such questions into research by defining an object of study, collecting interviews, observations, statistics or archives, and comparing what those materials support. Sources and judgment rules belong to the conclusion; a clear-looking map cannot replace them.",
+        "The same evidence can serve different questions. Economics examines resources and exchange, political science power and institutions, psychology mind and behavior, and sociology groups and social life. Researchers need to explain how evidence supports a judgment and leave room for revision. A map may show a distribution without, by itself, explaining the causes of poverty."
+      ],
+      "coreTurnParagraphsEn": [
+        "An already colored street became a classification that could be reconsidered. School Board Visitors’ material supported the first maps; later investigators’ impressions and police officers’ comments were used to revise those classifications. The color was not the end of the inquiry: behind it were dates of evidence gathering, people making records and judgments.",
+        "A researcher comparing the editions and notebooks today can ask which changes concern the neighborhood and which concern sources or classification practices. That requires further investigation; a new color does not answer it by itself. Comparing sources and examining bias is a method readers can learn from the archive, rather than a guarantee that every historical judgment had already eliminated bias."
+      ],
+      "anchorsParagraphsEn": [
+        "The notebook collections should be read separately. The earlier Poverty Notebooks organize School Board Visitors’ records and interviews; the later Police Notebooks record investigators’ impressions and police commentary during street walks. They are different bodies of evidence.",
+        "The East End map of 1889 and revised mapping of 1898–99 provide two points of comparison; the twelve revised sheets were published in 1902–03. Evidence gathering, notebook preparation, mapping and publication have distinct dates. Street colors should be compared with the records from the corresponding stage."
+      ],
+      "branchesParagraphsEn": [
+        "Field 03 includes social and behavioral sciences, and journalism and information. The former covers economics, political science and civics, psychology, and sociology and cultural studies, examining questions of resources, power and institutions, mind and behavior, and groups and cultures.",
+        "Journalism and information includes journalism and reporting, and library, information, and archival studies. These areas address how public information is investigated, checked, organized, preserved, and made available. Poverty maps can lead toward survey and archival methods, while each branch has its own professional history."
+      ],
+      "reflectionEn": "If a street segment’s classification on an old map conflicts with later street-walk notes, which source materials, observational positions, and judgment rules would you examine before deciding whether to keep or change the classification?",
+      "boundaryEn": "This piece does not treat Booth’s seven-color scheme as an objective present-day judgment about residents, nor does it reuse the class-moral labels of that period as current evaluation. Street colors were classifications of street segments within that historical survey, not individual attributes; the later street-walk notebooks were not automatically a more truthful corrective. The maps cannot by themselves prove the causes of poverty, and the branches of field 03 did not develop from this survey.",
+      "tagsEn": [
+        "Social Sciences",
+        "Social Investigation",
+        "Poverty Maps",
+        "Classification",
+        "Evidence Comparison",
+        "Charles Booth"
+      ]
+    }
   },
   {
-    code: "04",
-    subjectTitle: "Business, administration and law",
-    subjectTitleZh: "商业、管理与法律",
-    title: "Business, administration and law",
-    titleZh: "欲望与责任",
-    summary: "Yaya learns through a bakery price increase, a charity sale, and a company internship how business and law organize desire, resources, rules, and responsibility.",
-    summaryZh: "小雅从面包涨价、义卖饼干和公司实习里，看见商业如何在欲望、资源、规则和责任之间组织合作。",
-    scene: "Yaya first realizes buying is not simple in a small bakery near her home after her favorite bread becomes more expensive.",
-    sceneZh: "小雅第一次觉得买东西并不简单，是在家附近一家涨价的小面包店。",
-    storyBody: `Yaya first felt that “buying something” was not so simple at a small bakery near her home.
-
-The bakery was small, but there was always a line in the morning. Her favorite item was the red bean bread. It was not expensive, and the taste was always the same. Before, she only thought that customers paid money, the owner sold bread, and the matter ended there.
-
-One day, when she went to buy bread, she found that the price had increased. The red bean bread, which used to cost five yuan, now cost six yuan. People in the line began to complain. Some said the owner was too greedy. Some said they would not come again. The owner stood behind the counter and explained that flour, butter, and labor costs had all increased. If he did not raise the price, it would be difficult for the shop to continue.
-
-After hearing this, Yaya felt a little conflicted. As a customer, of course she wanted the price to be lower. But if the owner really lost money, the shop might close. Then she would not be able to buy this bread anymore.
-
-For the first time, she realized that behind a very ordinary purchase, there were many relationships. Customers wanted lower prices. The owner wanted the shop to survive. Employees needed wages. Suppliers also needed to make money. Everyone had their own needs, but these needs did not always fit together.
-
-Later, the school organized a small charity sale. Each group had to design a product, calculate the cost, set the price, and donate the income to a public project. Yaya's group decided to sell handmade cookies.
-
-At first, they only thought about making the cookies tasty and the packaging attractive. But soon, problems appeared one after another. How much would the ingredients cost? Did they need to buy packaging boxes? If the price was too high, would classmates still buy them? If the price was too low, there might be no money left to donate. Who would make the cookies? Who would collect the money? What if someone had an allergy? What if many cookies were left unsold after the event?
-
-Yaya used to think that doing business meant “selling things.” Now she found that selling was only the result. Before that, there were planning, costs, division of work, risks, communication, and responsibility.
-
-On the day of the event, their cookies sold well. But near the end, one classmate came back and said that one cookie was missing from the bag he had bought. Yaya's group became nervous. Someone said, “It is only one cookie. We do not need to deal with it.” But Yaya felt that this was not right. In the end, they gave the classmate a new bag and wrote a note beside the table: if the number is wrong, please come back and exchange it.
-
-It was a small matter, but Yaya remembered it clearly. She found that trust is not built by slogans. It is built by how people handle problems when they appear.
-
-At university, Yaya did an internship in the marketing department of a company. She joined a promotion project for a new product. In the meeting, the team discussed the advertising message, price, sales channels, and target users. Someone suggested making the product effect sound more attractive, because this could increase sales.
-
-Yaya asked, “But can we really guarantee this effect?”
-
-The meeting room became quiet for a moment. The manager said, “If we cannot guarantee something, we cannot write it as a guarantee. We can emphasize advantages, but we cannot mislead consumers.”
-
-Later, colleagues from the legal department also joined the discussion. They checked whether the advertising content met the rules, how responsibilities should be written in the contract, whether user data could be collected in this way, and what would happen if a partner failed to deliver on time. Before this, Yaya had thought that law was far from business, something used only after problems appeared. That time, she realized that many legal issues already exist before things begin.
-
-If a contract is not clear, cooperation may turn into conflict.
-If advertising is exaggerated, sales may lead to complaints.
-If data is used improperly, growth may harm user rights.
-If a company only looks at profit, it may lose trust.
-
-Before the internship ended, the company faced a supply problem. One partner factory wanted to change to a cheaper material because of cost pressure. The material could be used, but its quality was less stable than the original one. The purchasing department wanted to reduce costs. The sales department worried about reputation. The legal department reminded everyone of the contract terms. The branding department worried about consumer trust.
-
-Yaya sat in the meeting room and listened to different departments arguing. She suddenly thought of the bakery from her childhood. At that time, she had only seen the price of one bread increase. Now she saw that in an organization, similar problems happened every day, only on a larger scale, with more people involved and more complex consequences.
-
-She slowly understood that business is not simply about pursuing profit, and law is not simply about limiting behavior. Business allows people to exchange resources, organize production, and create value. Law makes these exchanges and forms of cooperation depend not only on personal promises, but also on clearer rules and responsibilities. Without business, many ideas would be difficult to turn into products and services. Without law, cooperation could easily become a game in which the stronger side has more advantage.
-
-Later, when Yaya saw a shop opening, a contract being signed, a brand promotion, a company hiring people, or a consumer complaint, she no longer looked only at the surface transaction. She would think: Who is creating value? Who is taking the risk? Are the rules clear? Who carries the responsibility? Are the benefits distributed fairly? If a conflict happens, how should it be solved?
-
-These questions helped her see that desire itself is not frightening. People want to earn money, develop, and receive better products and services. These are normal needs. What matters is whether, when desire and resources meet, people can use suitable forms of organization and rules to turn personal interests into actions that can be cooperative, limited, and responsible.`,
-    storyBodyZh: `小雅第一次觉得“买东西”没有那么简单，是在家附近的一家面包店。
-
-那家店很小，早上总是排队。她最喜欢里面的红豆面包。面包不贵，味道也稳定。她以前只觉得，顾客付钱，老板卖面包，这件事就结束了。
-
-有一天，她去买面包时，发现价格涨了。原来五块钱一个的红豆面包，变成了六块。排队的人开始抱怨。有人说老板太贪心，有人说以后不来了。老板站在柜台后面，只是解释说，面粉、黄油和人工都涨价了，如果不涨价，店就很难继续开下去。
-
-小雅听了以后，心里有点矛盾。作为顾客，她当然希望价格低一点。可是如果老板真的亏钱，店可能就关门了。那样她以后也买不到这个面包。
-
-她第一次发现，一次很普通的购买背后，其实有很多关系：顾客想要便宜，老板想要生存，员工需要工资，供应商也要赚钱。每个人都有自己的需求，但这些需求不一定总是合得上。
-
-后来，学校组织了一次小型义卖活动。每个小组要自己设计产品，计算成本，定价格，最后把收入捐给公益项目。小雅的小组决定卖手工饼干。
-
-一开始，他们只想着饼干要好吃、包装要好看。可是很快，问题一个接一个出现。原材料要多少钱？包装盒要不要买？如果价格太高，同学会不会不买？如果价格太低，最后可能根本没有剩余可以捐。谁负责制作？谁负责收钱？如果有人吃了过敏怎么办？如果活动结束后还有很多饼干卖不出去，又该怎么办？
-
-小雅原来以为，做生意就是“把东西卖出去”。现在她发现，卖出去只是结果。前面还有计划、成本、分工、风险、沟通和责任。
-
-活动当天，他们的饼干卖得不错。但快结束时，一个同学回来，说自己买到的一袋饼干少了一块。小雅的小组很紧张。有人说：“就一块饼干，不用管吧。”但小雅觉得不对。最后，他们重新给了那位同学一袋，并在摊位旁边写清楚：如果数量不对，可以回来更换。
-
-这件事很小，却让小雅印象很深。她发现，信任不是靠口号建立的，而是在出现问题时看你怎么处理。
-
-大学时，小雅去一家公司的市场部实习。她参与一个新产品的推广项目。会议上，团队讨论广告语、价格、销售渠道和目标用户。有人提出，可以把产品效果写得更吸引人一点，这样销量会更好。
-
-小雅问：“可是这个效果真的能保证吗？”
-
-会议室里安静了一下。经理说：“不能保证的东西，就不能写成保证。可以强调优势，但不能误导消费者。”
-
-后来，法务同事也加入了讨论。他们检查广告内容是否符合规定，合同里责任怎么写，用户数据能不能这样收集，合作方如果没有按时交付应该怎么办。小雅以前觉得法律离商业很远，是出了问题以后才会用到的东西。那次她才发现，很多法律问题其实在事情开始之前就已经存在了。
-
-如果合同不清楚，合作可能会变成争吵。
-如果广告夸大，销售可能会带来投诉。
-如果数据使用不当，增长可能会伤害用户权益。
-如果只看利润，企业可能会失去信任。
-
-实习结束前，公司遇到了一次供应问题。一个合作工厂因为成本压力，想换一种更便宜的材料。那种材料不是不能用，但质量不如原来的稳定。采购部门想降低成本，销售部门担心影响口碑，法务部门提醒合同条款，品牌部门担心消费者信任。
-
-小雅坐在会议室里，听不同部门争论。她突然想到小时候那家面包店。那时她只看到一个面包涨价。现在她看到，在一个组织里，类似的问题每天都在发生，只是规模更大，牵涉的人更多，后果也更复杂。
-
-她慢慢明白，商业不是单纯地追求利润，法律也不是单纯地限制行为。商业让人们可以交换资源、组织生产、创造价值；法律让这些交换和合作不完全依赖个人承诺，而有更清楚的规则和责任。没有商业，很多想法很难变成产品和服务；没有法律，合作又很容易变成强者占优势的游戏。
-
-后来，小雅再看到一家店开张、一份合同签署、一个品牌宣传、一家公司招聘或一次消费者投诉时，不会只看表面的交易。她会想到：谁在创造价值？谁承担风险？规则是否清楚？责任由谁承担？利益有没有被公平地分配？如果发生争议，应该怎样解决？
-
-这些问题让她看到，欲望本身并不可怕。人想赚钱，想发展，想得到更好的产品和服务，这些都很正常。真正重要的是，当欲望和资源相遇时，人们是否能用合适的组织方式和规则，把个人利益变成可以合作、可以约束、也可以负责的行动。`,
-    formalExplanation: "This is what Business, administration and law are mainly concerned with. This field studies how people and organizations create, exchange, and manage resources. It also studies how rules protect cooperation, limit risks, and distribute responsibility. It focuses on management, accounting, finance, marketing, organizational behavior, contracts, rights, obligations, compliance, and governance. Its roots are connected with early human exchange, bookkeeping, markets, agreements, governance, and dispute resolution. Later, with the development of companies, banks, trade, national legal systems, and modern management practice, Business, administration and law gradually became a formal academic field. It studies how organizations operate, how value is created and distributed, and how rules make cooperation more stable and fair.",
-    formalExplanationZh: "这就是“商业与法律”真正关心的内容。它研究人和组织如何创造、交换和管理资源，也研究规则如何保护合作、限制风险和分配责任。它关注管理、会计、金融、市场营销、组织行为、合同、权利、义务、合规和治理等问题。在正式学科中，它对应的是 Business, administration and law（商业、管理与法律）。它的来源与人类早期的交换、记账、市场、契约、治理和纠纷解决有关。后来，随着公司、银行、贸易、国家法律制度和现代管理实践的发展，商业与法律逐渐成为正式学科领域，用来研究组织如何运行、价值如何被创造和分配，以及规则如何让合作更稳定、更公平。",
-    coreInsight: "Business, administration and law are not only about profit and limits. They study how organizations create value, distribute risk, and use rules to make cooperation sustainable and accountable.",
-    coreInsightZh: "商业与法律不只是赚钱和限制，而是研究组织如何创造价值、分配风险，并用规则把合作变得可持续、可负责。",
-    analogyBoundary: "This story uses a bakery, a charity sale, and a company internship to show the basic tension of business and law, but the field also includes accounting, finance, management, marketing, organizational behavior, compliance, governance, and legal systems.",
-    analogyBoundaryZh: "这个故事用面包店、义卖和公司实习说明商业与法律的基本张力，但该领域还包括会计、金融、管理、营销、组织行为、合规、治理和法律制度等更广问题。",
-    sourceBatchId: "subject-intro-04-business-administration-law-desire-responsibility-20260630",
+    "code": "04",
+    "subjectTitle": "Business, Administration and Law",
+    "subjectTitleZh": "商业、管理与法律",
+    "title": "Bookkeeping in Print",
+    "titleZh": "写在书里的记账法",
+    "summary": "An arithmetic book printed in Venice in 1494 described merchants’ bookkeeping practices. How did methods used within firms enter books in other places?",
+    "summaryZh": "1494年威尼斯的一部算术书写下商人的记账惯例。这些原本在商号中使用的方法，怎样进入别处的书页？",
+    "scene": "In 1494, the Venetian printer Paganino de Paganini printed Luca Pacioli’s Summa de arithmetica. The arithmetic work included commercial calculation, money, measures, and bookkeeping methods. Merchants had to deal at the same time with cash, goods, credit transactions, receivables, and payables, so their accounts had to keep these different relationships traceable across continuing transactions.",
+    "sceneZh": "1494年，威尼斯印刷商Paganino de Paganini印制Luca Pacioli的《Summa de arithmetica》。这部算术著作包含商业计算、钱币、度量衡和记账方法。商人日常要同时处理现金、货物、赊欠、应收与应付，账目必须让这些不同关系在持续交易中保持可追查。",
+    "storyBody": "In 1494, the Venetian printer Paganino de Paganini printed Luca Pacioli’s Summa de arithmetica. The arithmetic work included commercial calculation, money, measures, and bookkeeping methods. Merchants had to deal at the same time with cash, goods, credit transactions, receivables, and payables, so their accounts had to keep these different relationships traceable across continuing transactions.\n\nThe double-entry method described in the book was not newly invented by Pacioli. Merchants and banks had already used related practices in the fourteenth century, and Genoa’s public accounts from 1340 provide an earlier example. Pacioli organized practices already used by Venetian merchants into the first systematic printed explanation, giving existing commercial rules a written form that was easier to reproduce, preserve, and circulate.\n\nThe Summa explained commercial arithmetic and bookkeeping in the Italian vernacular, allowing these methods to enter a broader practical learning setting. Printing did not make ledgers inspectable for the first time; what changed was the reach of explanations about how accounts were organized. The same terms and steps could be reread, taught, and compared by learners, bookkeepers, and authors in different places.\n\nIn 1543, Jan Ympyn Christoffels published Nieuwe Instructie in Antwerp. It closely followed Pacioli’s bookkeeping text while adding amendments and examples. A method already set down in a Venetian printed book became teaching material in another city and language; later authors could follow the earlier book while adapting its explanations for their readers.\n\nNearly half a century separates the two books. For readers examining these printed works today, the explanation of 1494 and the amendments of 1543 provide pages to compare: which methods were retained, which examples were rearranged, and how merchant practice was explained to new learners. Knowledge about accounts is present both in transaction records and in the pages explaining how to keep them.",
+    "storyBodyZh": "1494年，威尼斯印刷商Paganino de Paganini印制Luca Pacioli的《Summa de arithmetica》。这部算术著作包含商业计算、钱币、度量衡和记账方法。商人日常要同时处理现金、货物、赊欠、应收与应付，账目必须让这些不同关系在持续交易中保持可追查。\n\n书中记下的复式方法并不是Pacioli新发明的。14世纪商人与银行已经使用相关惯例，1340年的Genoa公共账簿也留下更早案例。Pacioli把威尼斯商人已在使用的做法整理成首个印刷的系统说明，让既有商业规则有了更容易复制、保存和传播的文字版本。\n\n《Summa》以意大利俗语讲解商业算术和记账，使这些方法能进入更广的实际学习场景。印刷本没有让账本第一次变得可检查；它改变的是方法说明的传播范围，同一套术语和步骤可以被不同地点的学习者、账房和作者重新阅读、教授和比较。\n\n1543年，安特卫普的Jan Ympyn Christoffels出版《Nieuwe Instructie》。这部书紧随Pacioli的记账文本，同时作了修订并加入例子。已经写在威尼斯印刷本里的方法，在新的城市和语言中重新成为教学材料；后来的作者既能沿用前书，也能把说明改得更适合自己的读者。\n\n两部书之间隔着近半个世纪。对今天翻查这些印刷本的人，1494年的说明与1543年的修订提供了可以对照的页面：哪些方法被保留，哪些例子被重新安排，怎样把商人的实践讲给新的学习者。关于账目的知识不仅存在于交易记录里，也存在于这些解释记录方法的书页中。",
+    "formalExplanation": "Merchants need to know not only how much cash they hold, but also how goods, credit and future payments are changing. Watching cash alone can miss transactions without immediate payment; an accounts table alone cannot organize purchasing, staffing and business decisions. Business and management organize transactions, resources and commitments. Accounting records and reports them, finance addresses funding and risk, management coordinates people, and marketing, retail and office work handle other exchanges and support tasks.\n\nLaw asks another set of questions: who has which rights and duties, and what rules and evidence apply to a dispute? Accounts can help establish facts, but cannot replace contracts, supporting documents or legal reasoning. This broad field groups these professions so readers can distinguish recording, decision-making and arguments about rights, rather than treating them as one universal technique.",
+    "formalExplanationZh": "商人既要知道手里还有多少钱，也要知道货物、赊欠和未来付款怎样变化。只盯现金，很容易漏掉没有立刻收付的钱；只看一张账表，又无法完成采购、人员安排和经营决定。商业与管理需要把交易、资源和承诺组织起来：会计记录和报告，金融处理资金与风险，管理协调人员，营销、零售和办公室工作处理其他交换与支持任务。\n\n法律还要回答另一组问题：谁享有什么权利，承担什么义务，发生争议时应依据哪些规则和证据。账目可以帮助查明事实，却不能替代合同、凭证和法律判断。这个大领域把这些专业并列，让读者继续区分记录、决策与权利论证，而不是把它们合成一种通用技巧。",
+    "coreInsight": "Double-entry bookkeeping moves beyond cash receipts and payments to record two related changes in the same transaction. Consider a purchase of 100 units: a cash purchase reduces cash by 100 and increases inventory by 100; a credit purchase increases inventory by 100 and accounts payable by 100. These are alternative cases, not two consecutive transactions. Debit and credit cannot simply mean money coming in and going out.\n\nPaired entries help reconcile resources and obligations, but internal balance only addresses whether the entries correspond. Supporting documents, contracts and other evidence are still needed to establish whether a transaction is real, a business is profitable or a party has legal responsibility. Bookkeeping supplies material for those judgments without making all of them itself.",
+    "coreInsightZh": "只盯现金收付，转向把同一交易的两项关联变化一起记录，可以看见复式方法处理了什么。以100单位进货为例：现金购买时，现金减少100、存货增加100；赊购时，存货增加100、应付增加100。这是两个备选情形，不是连续发生的两笔交易，借贷也不能直接等同于钱的流入与流出。\n\n双边记录便于核对资源和责任，但账内平衡仍只回答记录能否相互对应。判断交易是否真实、企业是否盈利或谁承担法律责任，还需要凭证、合同和其他资料。记账方法给下一步判断提供材料，不能替它直接作出所有结论。",
+    "analogyBoundary": "This window concerns the Summa of 1494 and the circulation of later bookkeeping manuals. Double-entry practice predates Pacioli, and business, management, and law have their own histories. The 100-unit example omits tax, expenses, valuation, and subsequent sales to show two related entries in one purchase; it does not establish a change in profit.",
+    "analogyBoundaryZh": "这个窗口关注1494年《Summa》及后续记账说明书的传播。复式实践早于Pacioli，商业、管理与法律也各有自己的历史。100单位例子省略税、费用、估值和后续销售，只展示一次购买中两项记录的关系；它不表示企业利润已经改变。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If a set of accounts balances perfectly, which supporting documents, contracts, transaction context, and operating results would you still examine before deciding whether the records are real, reasonable, and sufficient for the next business decision?",
+    "reflectionQuestionZh": "如果一套账借贷完全平衡，你还会检查哪些凭证、合同、交易背景和经营结果，才能判断这些记录是否真实、合理并足以支持下一步决定？",
+    "subjectOrigin": {
+      "id": "subject-origin-04-business-law",
+      "categoryCode": "04",
+      "subjectTitleZh": "商业、管理与法律",
+      "titleZh": "写在书里的记账法",
+      "summaryZh": "1494年威尼斯的一部算术书写下商人的记账惯例。这些原本在商号中使用的方法，怎样进入别处的书页？",
+      "originStoryParagraphsZh": [
+        "1494年，威尼斯印刷商Paganino de Paganini印制Luca Pacioli的《Summa de arithmetica》。这部算术著作包含商业计算、钱币、度量衡和记账方法。商人日常要同时处理现金、货物、赊欠、应收与应付，账目必须让这些不同关系在持续交易中保持可追查。",
+        "书中记下的复式方法并不是Pacioli新发明的。14世纪商人与银行已经使用相关惯例，1340年的Genoa公共账簿也留下更早案例。Pacioli把威尼斯商人已在使用的做法整理成首个印刷的系统说明，让既有商业规则有了更容易复制、保存和传播的文字版本。",
+        "《Summa》以意大利俗语讲解商业算术和记账，使这些方法能进入更广的实际学习场景。印刷本没有让账本第一次变得可检查；它改变的是方法说明的传播范围，同一套术语和步骤可以被不同地点的学习者、账房和作者重新阅读、教授和比较。",
+        "1543年，安特卫普的Jan Ympyn Christoffels出版《Nieuwe Instructie》。这部书紧随Pacioli的记账文本，同时作了修订并加入例子。已经写在威尼斯印刷本里的方法，在新的城市和语言中重新成为教学材料；后来的作者既能沿用前书，也能把说明改得更适合自己的读者。",
+        "两部书之间隔着近半个世纪。对今天翻查这些印刷本的人，1494年的说明与1543年的修订提供了可以对照的页面：哪些方法被保留，哪些例子被重新安排，怎样把商人的实践讲给新的学习者。关于账目的知识不仅存在于交易记录里，也存在于这些解释记录方法的书页中。"
+      ],
+      "whyNeededParagraphsZh": [
+        "商人既要知道手里还有多少钱，也要知道货物、赊欠和未来付款怎样变化。只盯现金，很容易漏掉没有立刻收付的钱；只看一张账表，又无法完成采购、人员安排和经营决定。商业与管理需要把交易、资源和承诺组织起来：会计记录和报告，金融处理资金与风险，管理协调人员，营销、零售和办公室工作处理其他交换与支持任务。",
+        "法律还要回答另一组问题：谁享有什么权利，承担什么义务，发生争议时应依据哪些规则和证据。账目可以帮助查明事实，却不能替代合同、凭证和法律判断。这个大领域把这些专业并列，让读者继续区分记录、决策与权利论证，而不是把它们合成一种通用技巧。"
+      ],
+      "coreTurnParagraphsZh": [
+        "只盯现金收付，转向把同一交易的两项关联变化一起记录，可以看见复式方法处理了什么。以100单位进货为例：现金购买时，现金减少100、存货增加100；赊购时，存货增加100、应付增加100。这是两个备选情形，不是连续发生的两笔交易，借贷也不能直接等同于钱的流入与流出。",
+        "双边记录便于核对资源和责任，但账内平衡仍只回答记录能否相互对应。判断交易是否真实、企业是否盈利或谁承担法律责任，还需要凭证、合同和其他资料。记账方法给下一步判断提供材料，不能替它直接作出所有结论。"
+      ],
+      "anchorsParagraphsZh": [
+        "1494年威尼斯出版的《Summa》是复式记账首个印刷的系统说明；14世纪商人与银行实践以及1340年Genoa公共账簿表明复式方法此前已经存在。",
+        "1543年安特卫普Jan Ympyn Christoffels的记账说明是后续传播节点，显示相似方法继续在不同城市和语言中被重新整理。前书保存方法的系统说明，后书显示作者怎样沿用、修订并补充例子。比较两部书，能够区分既有实践与印刷传播这两件事。"
+      ],
+      "branchesParagraphsZh": [
+        "04分为商务与行政、法律两组。商务与行政包括会计与税务、金融银行保险、管理与行政、市场营销与广告、秘书与办公室工作、批发零售及工作技能，分别处理记录、资金、协调、交换和组织支持等任务。",
+        "法律研究权利、义务、责任、规则的解释与争端处理。它与商业管理有共同议题，也有独立的制度和论证方法。理解一套账怎样记录交易，可以作为进入这个领域的一个入口，之后仍需沿具体专业继续学习。"
+      ],
+      "reflectionZh": "如果一套账借贷完全平衡，你还会检查哪些凭证、合同、交易背景和经营结果，才能判断这些记录是否真实、合理并足以支持下一步决定？",
+      "boundaryZh": "这个窗口关注1494年《Summa》及后续记账说明书的传播。复式实践早于Pacioli，商业、管理与法律也各有自己的历史。100单位例子省略税、费用、估值和后续销售，只展示一次购买中两项记录的关系；它不表示企业利润已经改变。",
+      "tagsZh": [
+        "商业",
+        "管理",
+        "法律",
+        "复式记账",
+        "印刷传播",
+        "Luca Pacioli"
+      ],
+      "references": [
+        {
+          "id": "icaew-pacioli",
+          "citation": "ICAEW Library. Luca Pacioli: The 'Father of Accounting'.",
+          "url": "https://www.icaew.com/library/library-collection/historical-accounting-literature/pacioli",
+          "useZh": "支持1494首个印刷的系统说明以及更早已存在的复式实践。",
+          "useEn": "Supports the first systematic printed explanation in 1494 and the existence of earlier double-entry practice."
+        },
+        {
+          "id": "icaew-summa",
+          "citation": "ICAEW Library. Summa de arithmetica, geometria, proportioni et proportionalita.",
+          "url": "https://www.icaew.com/library/library-collection/historical-accounting-literature/highlights-of-the-collection/summa-di-arithmetica",
+          "useZh": "支持威尼斯出版、《Summa》内容与印刷本传播。",
+          "useEn": "Supports the Venetian publication, the contents of the Summa, and the printed edition."
+        },
+        {
+          "id": "icaew-accounting-timeline",
+          "citation": "ICAEW Library. Timeline of the history of ICAEW and the accountancy profession.",
+          "url": "https://www.icaew.com/library/historical-resources/timeline",
+          "useZh": "支持较早复式实践、1340年Genoa案例及后续记账说明书。",
+          "useEn": "Supports earlier double-entry practice, the 1340 Genoa example, and later bookkeeping manuals."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持正式03/04/05及分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 03, 04, and 05; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Business, Administration and Law",
+      "titleEn": "Bookkeeping in Print",
+      "summaryEn": "An arithmetic book printed in Venice in 1494 described merchants’ bookkeeping practices. How did methods used within firms enter books in other places?",
+      "originStoryParagraphsEn": [
+        "In 1494, the Venetian printer Paganino de Paganini printed Luca Pacioli’s Summa de arithmetica. The arithmetic work included commercial calculation, money, measures, and bookkeeping methods. Merchants had to deal at the same time with cash, goods, credit transactions, receivables, and payables, so their accounts had to keep these different relationships traceable across continuing transactions.",
+        "The double-entry method described in the book was not newly invented by Pacioli. Merchants and banks had already used related practices in the fourteenth century, and Genoa’s public accounts from 1340 provide an earlier example. Pacioli organized practices already used by Venetian merchants into the first systematic printed explanation, giving existing commercial rules a written form that was easier to reproduce, preserve, and circulate.",
+        "The Summa explained commercial arithmetic and bookkeeping in the Italian vernacular, allowing these methods to enter a broader practical learning setting. Printing did not make ledgers inspectable for the first time; what changed was the reach of explanations about how accounts were organized. The same terms and steps could be reread, taught, and compared by learners, bookkeepers, and authors in different places.",
+        "In 1543, Jan Ympyn Christoffels published Nieuwe Instructie in Antwerp. It closely followed Pacioli’s bookkeeping text while adding amendments and examples. A method already set down in a Venetian printed book became teaching material in another city and language; later authors could follow the earlier book while adapting its explanations for their readers.",
+        "Nearly half a century separates the two books. For readers examining these printed works today, the explanation of 1494 and the amendments of 1543 provide pages to compare: which methods were retained, which examples were rearranged, and how merchant practice was explained to new learners. Knowledge about accounts is present both in transaction records and in the pages explaining how to keep them."
+      ],
+      "whyNeededParagraphsEn": [
+        "Merchants need to know not only how much cash they hold, but also how goods, credit and future payments are changing. Watching cash alone can miss transactions without immediate payment; an accounts table alone cannot organize purchasing, staffing and business decisions. Business and management organize transactions, resources and commitments. Accounting records and reports them, finance addresses funding and risk, management coordinates people, and marketing, retail and office work handle other exchanges and support tasks.",
+        "Law asks another set of questions: who has which rights and duties, and what rules and evidence apply to a dispute? Accounts can help establish facts, but cannot replace contracts, supporting documents or legal reasoning. This broad field groups these professions so readers can distinguish recording, decision-making and arguments about rights, rather than treating them as one universal technique."
+      ],
+      "coreTurnParagraphsEn": [
+        "Double-entry bookkeeping moves beyond cash receipts and payments to record two related changes in the same transaction. Consider a purchase of 100 units: a cash purchase reduces cash by 100 and increases inventory by 100; a credit purchase increases inventory by 100 and accounts payable by 100. These are alternative cases, not two consecutive transactions. Debit and credit cannot simply mean money coming in and going out.",
+        "Paired entries help reconcile resources and obligations, but internal balance only addresses whether the entries correspond. Supporting documents, contracts and other evidence are still needed to establish whether a transaction is real, a business is profitable or a party has legal responsibility. Bookkeeping supplies material for those judgments without making all of them itself."
+      ],
+      "anchorsParagraphsEn": [
+        "The Summa, published in Venice in 1494, was the first systematic printed explanation of double-entry bookkeeping. Fourteenth-century merchant and banking practice, along with Genoa’s public accounts from 1340, show that double-entry methods already existed before it.",
+        "Jan Ympyn Christoffels’s bookkeeping instructions published in Antwerp in 1543 provide a later point in the spread of such methods, showing similar practices being reorganized in different cities and languages. The earlier book preserves a systematic explanation, while the later one shows how an author adopted, amended and supplemented it. Comparing them distinguishes established practice from its circulation in print."
+      ],
+      "branchesParagraphsEn": [
+        "Field 04 has two groups: business and administration, and law. Business and administration includes accounting and taxation; finance, banking and insurance; management and administration; marketing and advertising; secretarial and office work; wholesale and retail sales; and work skills, addressing records, funding, coordination, exchange, and organizational support.",
+        "Law studies rights, obligations, responsibility, interpretation of rules, and dispute resolution. It shares questions with business and management but has its own institutions and methods of argument. Learning how accounts record a transaction offers one entry into this broad field; further study follows the particular profession."
+      ],
+      "reflectionEn": "If a set of accounts balances perfectly, which supporting documents, contracts, transaction context, and operating results would you still examine before deciding whether the records are real, reasonable, and sufficient for the next business decision?",
+      "boundaryEn": "This window concerns the Summa of 1494 and the circulation of later bookkeeping manuals. Double-entry practice predates Pacioli, and business, management, and law have their own histories. The 100-unit example omits tax, expenses, valuation, and subsequent sales to show two related entries in one purchase; it does not establish a change in profit.",
+      "tagsEn": [
+        "Business",
+        "Management",
+        "Law",
+        "Double-Entry Bookkeeping",
+        "Print Circulation",
+        "Luca Pacioli"
+      ]
+    }
   },
   {
-    code: "05",
-    subjectTitle: "Natural sciences, mathematics and statistics",
-    subjectTitleZh: "自然科学、数学与统计",
-    title: "Natural sciences, mathematics and statistics",
-    titleZh: "向宇宙提问",
-    summary: "Hang learns through ice, mung beans, heat tests, online claims, and temperature data that science asks questions through observation, comparison, evidence, mathematics, and statistics.",
-    summaryZh: "小航从冰、水、绿豆、保温实验、网络说法和气温数据里，学会用观察、比较、证据、数学和统计向世界提问。",
-    scene: "Hang's habit of asking why begins with rain, melting ice, moonlight during a power outage, and a cup of water placed in the refrigerator.",
-    sceneZh: "小航的为什么，从下雨、冰棍融化、停电后的月光和一杯放进冰箱的水开始。",
-    storyBody: `When Hang was a child, he liked asking “why.”
-
-When it rained, he asked why clouds could drop water.
-When he ate an ice pop, he asked why ice slowly turned into water.
-When the electricity went out at night, he asked why the moon could still shine.
-Sometimes his mother answered him. Sometimes she said, “You will know when you grow older.”
-
-But Hang did not want to wait.
-
-Once, he put a cup of water into the refrigerator and took it out a few hours later. The water had become ice. Then he put the ice on the table and watched it slowly melt. That day, he did not learn any very complex knowledge. But for the first time, he found that some questions did not have to be answered only by other people. He could also observe them by himself.
-
-Later, in science class, the teacher asked them to grow mung beans. Each group had two cups. One cup was placed under sunlight, and the other was placed inside a cabinet. Both cups received the same amount of water. A few days later, the beans under sunlight became greener. The beans in the cabinet also grew taller, but they were yellow and thin.
-
-At first, Hang said, “Because they are not happy.”
-
-The teacher smiled. She did not say he was wrong. She only asked, “If we do not talk about whether they are happy or not, and only look at what we can observe, how can we describe it?”
-
-Hang looked down at the record sheet and said, “It did not have sunlight, so its color and growth were different.”
-
-The teacher asked again, “How do you know it was because of sunlight, not because of water?”
-
-This time, Hang thought for a while before he understood. The two cups received the same amount of water, and the soil was almost the same. The only clear difference was where they were placed. If the results were different, sunlight was more likely to be related to the change.
-
-For the first time, he understood that asking questions was not enough. People also needed to design a fair way to compare things. They could not only say “I think so” based on feeling. They needed to let the phenomenon speak through evidence.
-
-In middle school, Hang joined a school interest group. In one activity, the teacher asked them to test how well different materials kept heat. Each group received several cups. Some cups were wrapped with paper, some with cloth, some with foam, and one cup was not wrapped. Then they poured hot water of the same temperature into each cup and recorded the temperature every five minutes.
-
-Hang thought the experiment was simple. But when he started doing it, he found that many details could affect the result. Was the amount of water the same? Did the thermometer touch the bottom of the cup? Was the reading taken by the same person each time? Was there any mistake in recording? If they tested only once, could the result be trusted?
-
-He used to think that science meant knowing many conclusions, such as the Earth moving around the Sun, water freezing under certain conditions, and plants needing light. Later, he slowly found that science also cares about how these conclusions are reached. Behind a reliable conclusion, there are often observation, measurement, comparison, repetition, and revision.
-
-Once, Hang saw a message online saying that a certain food “could clearly improve memory.” Many people shared it, and many comments said they felt more awake after eating it.
-
-Hang almost believed it. But he remembered what the teacher had said in experiment class: feeling is not the same as evidence, and a single example is not the same as a general rule.
-
-So he began to search for more information. He found that, to judge whether such a claim was trustworthy, he needed to look at how many people were included in the experiment, whether there was a comparison group, whether the result could be repeated, whether the study had been checked by other researchers, and whether the conclusion had been exaggerated. That time, he first felt that science was not only something in laboratories. It was also related to judgment in everyday life.
-
-At university, Hang studied statistics and basic research methods. They analyzed a set of city temperature data to see whether temperatures had changed over the past decades. At first, he only saw many numbers and found them boring. But when the teacher guided them to draw charts, calculate averages, and compare different years, the numbers began to have meaning.
-
-He saw that some years were especially hot. He also saw that long-term trends were different from short-term changes. The weather on one day might become colder, but the long-term climate could still be warming. One data point might be very noticeable, but it could not represent everything. To understand the world, people cannot only look at one day in front of them, and they cannot only choose examples they like.
-
-Later, when Hang saw the sky, rivers, plants, the human body, medicines, weather forecasts, or data in the news, he would think one step further: How does this phenomenon happen? Is there a pattern? How do we know? Is the evidence enough? Is there another explanation? If the conditions change, will the result also change?
-
-These questions did not make the world less interesting. Instead, they made it more worth approaching. Hang found that many things look ordinary, but behind them there are patterns that can be questioned and studied. Why a cup of water freezes, why a seed grows, why a medicine works, and why a set of numbers changes are not only “common sense.” They are understandings built slowly through long-term observation, experiments, and reasoning.
-
-He also knew that science does not mean people already know everything. On the contrary, science often begins with “we do not know.” It allows people to ask questions, but it also asks people to check their answers carefully. It does not like easy conclusions, but it is not afraid to change old conclusions. When evidence changes, understanding can continue to be updated.`,
-    storyBodyZh: `小航小时候，很喜欢问“为什么”。
-
-下雨的时候，他问为什么云会掉水。
-吃冰棍的时候，他问为什么冰会慢慢变成水。
-晚上停电时，他问为什么月亮还能亮。
-妈妈有时会回答他，有时也会说：“等你长大一点就知道了。”
-
-可是小航等不及。
-
-有一次，他把一杯水放进冰箱，过几个小时再拿出来看。水变成了冰。他又把冰放在桌上，看它慢慢融化。那天他没有学到很复杂的知识，只是第一次发现，有些问题可以不靠别人直接告诉他，也可以自己观察。
-
-后来，学校上科学课。老师让他们种绿豆。每个小组有两个杯子，一杯放在阳光下，一杯放在柜子里；两杯都浇一样多的水。几天后，阳光下的绿豆长得更绿，柜子里的绿豆虽然也长高了，却发黄、很细。
-
-小航一开始说：“因为它不开心。”
-
-老师笑了笑，没有说他错，只问：“如果我们不说它开心不开心，只看我们能观察到的东西，可以怎么说？”
-
-小航低头看了看记录表，说：“它没有阳光，所以颜色不一样，长得也不一样。”
-
-老师又问：“那你怎么知道是阳光的原因，而不是水的原因？”
-
-这次，小航想了一会儿才明白。因为两杯水浇得一样多，土也差不多，只有放的位置不同。如果结果不同，就更可能和阳光有关。
-
-他第一次知道，提问还不够，还要设计一种比较公平的方法。不能只凭感觉说“我觉得是这样”，而要想办法让现象自己说话。
-
-上中学后，小航加入了学校的兴趣小组。一次活动中，老师让他们测量不同材料的保温效果。每组拿到几个杯子，分别用纸、布、泡沫和没有包裹的方式处理，再倒入同样温度的热水，每隔五分钟记录一次水温。
-
-小航觉得这个实验很简单。但做起来以后，他发现很多细节都会影响结果。水是不是一样多？温度计有没有碰到杯底？每次读数是不是同一个人？记录时有没有看错？如果只测一次，结果能不能相信？
-
-他原来以为科学就是知道很多结论，比如地球绕太阳转，水在一定条件下会结冰，植物需要光。后来他慢慢发现，科学也关心这些结论是怎样来的。一个可靠的结论，背后常常有观察、测量、比较、重复和修正。
-
-有一次，小航在网上看到一条消息，说某种食物“可以明显提高记忆力”。很多人转发，也有很多评论说自己吃了以后确实感觉更清醒。
-
-小航差点相信。可是他想起实验课上老师说过的话：感觉不等于证据，个别例子也不等于规律。
-
-于是他开始查更多信息。他发现，要判断这种说法是否可信，需要看实验人数有多少，有没有对照组，结果是否可以重复，研究有没有被同行检查，结论是不是被夸大了。那一次，他第一次觉得，科学不只是实验室里的事情，也和日常生活中的判断有关。
-
-大学时，小航学习统计和基础研究方法。他们分析一组城市气温数据，研究过去几十年里温度是否发生变化。刚开始，他只看到一堆数字，觉得很枯燥。可是当老师带他们画出图表、计算平均值、比较不同年份时，那些数字开始变得有意义。
-
-他看到某些年份特别热，也看到长期趋势和短期波动不一样。一天的天气可能会变冷，但长期气候仍可能变暖。一个数据点可能很突出，但不能代表全部。要理解世界，不能只看自己眼前的一天，也不能只挑选自己喜欢的例子。
-
-后来，小航再看见天空、河流、植物、身体、药物、天气预报和新闻里的数据时，都会多想一步：这个现象是怎样发生的？有没有规律？我们怎么知道？证据够不够？有没有别的解释？如果换一种条件，结果会不会不同？
-
-这些问题让世界没有变得更神秘，反而更值得靠近。小航发现，很多事情看起来平常，其实背后都有可以被追问的规律。一杯水为什么会结冰，一颗种子为什么会发芽，一种药为什么有效，一组数字为什么会变化，这些都不是简单的“常识”，而是人们长期观察、实验和推理后，慢慢建立起来的理解。
-
-他也知道，科学并不意味着人已经知道一切。相反，科学常常从“不知道”开始。它允许人提出问题，也要求人认真检查自己的答案。它不喜欢轻易下结论，但也不害怕推翻旧结论。只要证据改变，理解就可以继续更新。`,
-    formalExplanation: "This is what Natural sciences, mathematics and statistics are mainly concerned with. This field studies phenomena, patterns, and relationships in the natural world. It also studies how people understand these patterns through observation, experiments, measurement, mathematics, and statistics. It focuses on matter, life, Earth, the universe, quantity, change, and evidence. Its roots are connected with early human observation of seasons, the sky, illness, plants, animals, numbers, and space. Later, with the development of experimental methods, mathematical tools, instruments, and modern university research systems, Natural sciences, mathematics and statistics gradually became a formal academic field. It helps people understand nature more systematically and answer questions about the world more carefully.",
-    formalExplanationZh: "这就是“自然科学”真正关心的内容。它研究自然世界中的现象、规律和关系，也研究人如何通过观察、实验、测量、数学和统计来理解这些规律。它关注物质、生命、地球、宇宙、数量、变化和证据。在正式学科中，它对应的是 Natural sciences, mathematics and statistics（自然科学、数学与统计）。它的来源与人类很早以前对季节、天象、疾病、植物、动物、数量和空间的观察有关。后来，随着实验方法、数学工具、仪器设备和现代大学研究体系的发展，自然科学逐渐成为正式学科领域，用来帮助人类更系统地理解自然，也更谨慎地回答关于世界的问题。",
-    coreInsight: "Natural sciences, mathematics and statistics are not only collections of conclusions. They are disciplined ways of asking, observing, measuring, comparing, testing, and revising what we think we know.",
-    coreInsightZh: "自然科学、数学与统计不只是结论集合，而是一套认真提问、观察、测量、比较、检验并修正理解的方法。",
-    analogyBoundary: "This story uses everyday experiments and simple data to show the field's basic habit of mind, but Natural sciences, mathematics and statistics also include physics, chemistry, biology, Earth science, astronomy, mathematics, statistics, instruments, models, peer review, and advanced research methods.",
-    analogyBoundaryZh: "这个故事用日常实验和简单数据说明该领域的基本思维习惯，但自然科学、数学与统计还包括物理、化学、生物、地球科学、天文学、数学、统计、仪器、模型、同行检验和更高级的研究方法。",
-    sourceBatchId: "subject-intro-05-natural-sciences-mathematics-statistics-questioning-universe-20260630",
+    "code": "05",
+    "subjectTitle": "Natural Sciences, Mathematics and Statistics",
+    "subjectTitleZh": "自然科学、数学与统计",
+    "title": "The Bright Points Beside Jupiter",
+    "titleZh": "木星旁边的亮点",
+    "summary": "Three bright points beside Jupiter were first treated as fixed stars, but their positions changed the next night. What more would Galileo need to record to explain that change?",
+    "summaryZh": "木星旁的三个亮点起初被当作恒星，第二晚位置却变了。伽利略还要留下哪些记录，才能解释这种变化？",
+    "scene": "On January 7, 1610, Galileo Galilei observed Jupiter through a telescope and recorded three bright points: two east of Jupiter and one west. He provisionally treated them as fixed stars and drew their relative positions. That night’s record showed only that three bright points lay near Jupiter; it could not yet distinguish between background stars and bodies more directly associated with Jupiter.",
+    "sceneZh": "1610年1月7日，伽利略（Galileo Galilei）用望远镜观察木星，记录三个亮点：两个在木星东侧，一个在西侧。他把它们暂时看作固定的恒星，并画下相对位置。当天的记录只说明木星旁有三个亮点，还不能区分它们是背景恒星，还是与木星存在更直接关系的天体。",
+    "storyBody": "On January 7, 1610, Galileo Galilei observed Jupiter through a telescope and recorded three bright points: two east of Jupiter and one west. He provisionally treated them as fixed stars and drew their relative positions. That night’s record showed only that three bright points lay near Jupiter; it could not yet distinguish between background stars and bodies more directly associated with Jupiter.\n\nWhen Galileo observed again on January 8, all three bright points were west of Jupiter and closer together than on the previous night. Their changed positions still allowed another explanation: fixed stars would appear to shift relative to Jupiter as the planet moved across the star field. Galileo first considered whether Jupiter’s motion agreed with existing calculations, then continued observing this region of the sky.\n\nClouds prevented a usable observation on January 9. On January 10, he saw two bright points east of Jupiter; for the third point that was not visible, he proposed that it might be hidden by Jupiter. The two eastern points were observed; the occultation of the third was an interpretation at that time. Later nights continued to show changes in east-west position, visible number, and spacing between the points.\n\nAs these records accumulated, an explanation based only on background stars plus Jupiter’s own motion became increasingly difficult to make fit the full pattern of points repeatedly appearing on both sides of Jupiter, remaining close to it, and showing continuous positional changes. Galileo later concluded that four bodies moved with Jupiter and revolved around it. That conclusion came from the multi-night sequence, not from any single night.\n\nIn March 1610, Sidereus Nuncius printed these observations and nightly drawings. A reader could begin with the three-point sketch of January 7, then follow the positional rearrangement of January 8, the observational gap caused by clouds on January 9, the two visible points and occultation hypothesis of January 10, and the later records of changing positions. The pages preserve a trace of how an explanation changed as observations accumulated.",
+    "storyBodyZh": "1610年1月7日，伽利略（Galileo Galilei）用望远镜观察木星，记录三个亮点：两个在木星东侧，一个在西侧。他把它们暂时看作固定的恒星，并画下相对位置。当天的记录只说明木星旁有三个亮点，还不能区分它们是背景恒星，还是与木星存在更直接关系的天体。\n\n1月8日再次观察时，三个亮点都在木星西侧，而且三个亮点彼此比前一晚更靠近。这个变化起初仍可以有别的解释：如果它们是固定恒星，而木星自身相对星空移动，位置关系也会改变。伽利略因此先考虑木星的运动是否与已有计算相符，接着继续观察这个天区。\n\n1月9日因云遮挡没有可用观测。1月10日，他看到两个亮点位于木星东侧；对于没有看见的第三个亮点，他推测它可能被木星遮住。两点在东侧是实际观测，第三点被遮住只是当时解释。后续夜晚又继续出现东西位置、可见数量和彼此间距的变化。\n\n随着这些记录累积，仅用“背景恒星加木星自身运动”越来越难同时解释亮点反复出现在木星两侧、保持在木星附近并呈现连续位置变化的模式。伽利略后来确认有四个天体随木星运动，并围绕木星运行；这一结论来自多夜序列，而不是某一晚单独完成。\n\n1610年3月，《Sidereus Nuncius》把这些观察和夜间绘图印出。读者可以从1月7日三点草图出发，依次看到1月8日的位置重排、1月9日的观测空白、1月10日的两点与遮挡推测，以及后来更多亮点位置记录。纸页保存的是解释如何随连续观测逐步改变的轨迹。",
+    "formalExplanation": "A few bright points seen through a telescope can prompt an explanation. To judge it, an observer still needs to record positions, compare nights and check whether another model fits the same phenomena. Natural science tests claims about nature through observation, measurement or experiment. New data may support an explanation or require it to change. Missing a record because of clouds must be distinguished from actually observing an absence.\n\nMathematics and statistics contribute to many such investigations, with different tasks. Mathematics uses definitions, deduction and proof to study quantities, structures and relations. Statistics examines how data were obtained, how much they vary and what can be inferred. They can help investigate nature together while retaining their own objects and standards of judgment; they need not depend on the same kind of experiment.",
+    "formalExplanationZh": "望远镜旁出现几个亮点时，人可以先给出一个解释；要判断这个解释是否可靠，还需要记录位置、比较不同夜晚，并检查其他模型能否解释同一现象。自然科学让关于自然的说法接受观察、测量或实验的检验。新增数据可能支持一种解释，也可能迫使人修改它；因云遮挡没有记录，与实际观察到某物不在，必须分开处理。\n\n数学和统计参与许多这样的研究，但各有工作重点。数学用定义、推演与证明研究数量、结构和关系；统计考察数据怎样取得、变异有多大、可以作出哪些推断。它们可以一起帮助研究自然，也分别拥有自己的对象和判断标准，不必都依赖同一种实验。",
+    "coreInsight": "The explanation changes as one night’s positions become a sequence of positions, spacings and visible counts. On the second night, fixed stars and a moving Jupiter remained a possible explanation. Continued observation required a model to account for the sequence, rather than a convenient single night. Bodies orbiting Jupiter increasingly explained why the points stayed nearby while repeatedly changing sides.\n\nThe record also separates what was seen, which night had no data because of clouds, and which proposed obstruction remained a hypothesis. Those distinctions preserve the evidence needed to compare models. The eventual identification of four satellites depended on a longer sequence; an early conjecture should not be rewritten as a discovery already completed at that moment.",
+    "coreInsightZh": "某一晚的亮点位置，转向多夜的位置、间距与可见数量，是解释改变的依据。第二晚仍可以考虑“恒星固定、木星移动”；继续观察后，一个模型要解释整串变化，而不只是挑中其中一晚。围绕木星运行的天体，逐渐能解释这些亮点为什么总在附近又反复换边。\n\n记录还需要分栏看待：实际看见什么，哪一晚因云没有数据，哪一种遮挡只是推测。这样的区分保留了比较模型所需的材料。后来判断四颗卫星，依靠更长的观测序列；不能把早期的一次猜测改写成当时已经完成的发现。",
+    "analogyBoundary": "This piece uses Galileo’s 1610 observations of Jupiter’s satellites only to examine how continuing evidence can distinguish competing explanations; it does not present Galileo as the origin of field 05. The January 10 claim that the third point was hidden by Jupiter was a hypothesis at the time. Jupiter’s satellites show that not all celestial bodies orbit Earth, but models that do not require Earth to orbit the Sun can also accommodate satellites around Jupiter, so these observations alone do not prove the complete heliocentric model.",
+    "analogyBoundaryZh": "本篇只用1610年木星卫星观测理解连续证据如何区分竞争解释，不把伽利略写成整个05领域的起点。1月10日第三点被木星遮住只是当时推测。木星卫星证明并非所有天体都围绕地球运行，但某些不要求地球绕太阳的宇宙模型同样可以容纳木星卫星，因此这些数据不能单独证明完整日心模型。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If the second night’s positional change could still be explained by Jupiter itself moving, which relative positions, spacings, and missing observations would you continue to record in order to compare a background-star model with a model of bodies orbiting Jupiter?",
+    "reflectionQuestionZh": "如果第二晚的位置变化仍可用“木星自己在移动”解释，你会继续记录哪些相对位置、间距和缺失观测，才能比较“背景恒星”和“绕木星天体”两个模型？",
+    "subjectOrigin": {
+      "id": "subject-origin-05-natural-sciences",
+      "categoryCode": "05",
+      "subjectTitleZh": "自然科学、数学与统计",
+      "titleZh": "木星旁边的亮点",
+      "summaryZh": "木星旁的三个亮点起初被当作恒星，第二晚位置却变了。伽利略还要留下哪些记录，才能解释这种变化？",
+      "originStoryParagraphsZh": [
+        "1610年1月7日，伽利略（Galileo Galilei）用望远镜观察木星，记录三个亮点：两个在木星东侧，一个在西侧。他把它们暂时看作固定的恒星，并画下相对位置。当天的记录只说明木星旁有三个亮点，还不能区分它们是背景恒星，还是与木星存在更直接关系的天体。",
+        "1月8日再次观察时，三个亮点都在木星西侧，而且三个亮点彼此比前一晚更靠近。这个变化起初仍可以有别的解释：如果它们是固定恒星，而木星自身相对星空移动，位置关系也会改变。伽利略因此先考虑木星的运动是否与已有计算相符，接着继续观察这个天区。",
+        "1月9日因云遮挡没有可用观测。1月10日，他看到两个亮点位于木星东侧；对于没有看见的第三个亮点，他推测它可能被木星遮住。两点在东侧是实际观测，第三点被遮住只是当时解释。后续夜晚又继续出现东西位置、可见数量和彼此间距的变化。",
+        "随着这些记录累积，仅用“背景恒星加木星自身运动”越来越难同时解释亮点反复出现在木星两侧、保持在木星附近并呈现连续位置变化的模式。伽利略后来确认有四个天体随木星运动，并围绕木星运行；这一结论来自多夜序列，而不是某一晚单独完成。",
+        "1610年3月，《Sidereus Nuncius》把这些观察和夜间绘图印出。读者可以从1月7日三点草图出发，依次看到1月8日的位置重排、1月9日的观测空白、1月10日的两点与遮挡推测，以及后来更多亮点位置记录。纸页保存的是解释如何随连续观测逐步改变的轨迹。"
+      ],
+      "whyNeededParagraphsZh": [
+        "望远镜旁出现几个亮点时，人可以先给出一个解释；要判断这个解释是否可靠，还需要记录位置、比较不同夜晚，并检查其他模型能否解释同一现象。自然科学让关于自然的说法接受观察、测量或实验的检验。新增数据可能支持一种解释，也可能迫使人修改它；因云遮挡没有记录，与实际观察到某物不在，必须分开处理。",
+        "数学和统计参与许多这样的研究，但各有工作重点。数学用定义、推演与证明研究数量、结构和关系；统计考察数据怎样取得、变异有多大、可以作出哪些推断。它们可以一起帮助研究自然，也分别拥有自己的对象和判断标准，不必都依赖同一种实验。"
+      ],
+      "coreTurnParagraphsZh": [
+        "某一晚的亮点位置，转向多夜的位置、间距与可见数量，是解释改变的依据。第二晚仍可以考虑“恒星固定、木星移动”；继续观察后，一个模型要解释整串变化，而不只是挑中其中一晚。围绕木星运行的天体，逐渐能解释这些亮点为什么总在附近又反复换边。",
+        "记录还需要分栏看待：实际看见什么，哪一晚因云没有数据，哪一种遮挡只是推测。这样的区分保留了比较模型所需的材料。后来判断四颗卫星，依靠更长的观测序列；不能把早期的一次猜测改写成当时已经完成的发现。"
+      ],
+      "anchorsParagraphsZh": [
+        "1610年1月7日记录三个亮点；1月8日三点都在木星西侧且彼此比前夜更近；1月9日因云无记录；1月10日看到两个东侧亮点，并推测另一个被木星遮住。随后多夜记录最终支持四颗木星卫星的判断。",
+        "1610年3月出版的《Sidereus Nuncius》保存了这组逐夜观察和绘图，使观测顺序、空白和解释变化都能够被回看。"
+      ],
+      "branchesParagraphsZh": [
+        "05包括生物及相关科学、环境、物理科学、数学与统计。生物及相关科学研究生命过程；环境方向研究环境系统及自然环境与野生生物；物理科学涵盖化学、地球科学和物理学，天文学也在这一组。",
+        "数学关注结构、数量与关系，通过定义和证明建立结论；统计则研究如何从有变异的数据中形成可靠推断。它们能共同参与一个研究，也保留各自的判断标准。选择下一步学习方向，要看你更想理解自然对象、抽象结构，还是数据中的不确定性。"
+      ],
+      "reflectionZh": "如果第二晚的位置变化仍可用“木星自己在移动”解释，你会继续记录哪些相对位置、间距和缺失观测，才能比较“背景恒星”和“绕木星天体”两个模型？",
+      "boundaryZh": "本篇只用1610年木星卫星观测理解连续证据如何区分竞争解释，不把伽利略写成整个05领域的起点。1月10日第三点被木星遮住只是当时推测。木星卫星证明并非所有天体都围绕地球运行，但某些不要求地球绕太阳的宇宙模型同样可以容纳木星卫星，因此这些数据不能单独证明完整日心模型。",
+      "tagsZh": [
+        "自然科学",
+        "数学与统计",
+        "天文学",
+        "连续观测",
+        "证据",
+        "Galileo Galilei"
+      ],
+      "references": [
+        {
+          "id": "galileo-sidereal-messenger",
+          "citation": "Galilei, G. (1610). Sidereus Nuncius. English translation by Edward Stafford Carlos (1880), The Sidereal Messenger.",
+          "url": "https://www.gutenberg.org/cache/epub/46036/pg46036-images.html",
+          "useZh": "支持逐夜原始记录：1月7日三个亮点、1月8日位置改变及后续反复观察。",
+          "useEn": "Supports the original nightly record: three bright points on January 7, positional changes on January 8, and the subsequent repeated observations."
+        },
+        {
+          "id": "jpl-galileo",
+          "citation": "NASA Jet Propulsion Laboratory (2010). 400th Anniversary of Galileo’s Discovery.",
+          "url": "https://www.jpl.nasa.gov/blog/2010/1/400th-anniversary-of-galileos-discovery",
+          "useZh": "支持历史背景与原始观察说明；不据现代简介改写1月7日为四个亮点。",
+          "useEn": "Supports the historical background and discussion of the original observations; the modern summary is not used to rewrite January 7 as four points."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持正式03/04/05及分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal fields and branches for 03, 04, and 05; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Natural Sciences, Mathematics and Statistics",
+      "titleEn": "The Bright Points Beside Jupiter",
+      "summaryEn": "Three bright points beside Jupiter were first treated as fixed stars, but their positions changed the next night. What more would Galileo need to record to explain that change?",
+      "originStoryParagraphsEn": [
+        "On January 7, 1610, Galileo Galilei observed Jupiter through a telescope and recorded three bright points: two east of Jupiter and one west. He provisionally treated them as fixed stars and drew their relative positions. That night’s record showed only that three bright points lay near Jupiter; it could not yet distinguish between background stars and bodies more directly associated with Jupiter.",
+        "When Galileo observed again on January 8, all three bright points were west of Jupiter and closer together than on the previous night. Their changed positions still allowed another explanation: fixed stars would appear to shift relative to Jupiter as the planet moved across the star field. Galileo first considered whether Jupiter’s motion agreed with existing calculations, then continued observing this region of the sky.",
+        "Clouds prevented a usable observation on January 9. On January 10, he saw two bright points east of Jupiter; for the third point that was not visible, he proposed that it might be hidden by Jupiter. The two eastern points were observed; the occultation of the third was an interpretation at that time. Later nights continued to show changes in east-west position, visible number, and spacing between the points.",
+        "As these records accumulated, an explanation based only on background stars plus Jupiter’s own motion became increasingly difficult to make fit the full pattern of points repeatedly appearing on both sides of Jupiter, remaining close to it, and showing continuous positional changes. Galileo later concluded that four bodies moved with Jupiter and revolved around it. That conclusion came from the multi-night sequence, not from any single night.",
+        "In March 1610, Sidereus Nuncius printed these observations and nightly drawings. A reader could begin with the three-point sketch of January 7, then follow the positional rearrangement of January 8, the observational gap caused by clouds on January 9, the two visible points and occultation hypothesis of January 10, and the later records of changing positions. The pages preserve a trace of how an explanation changed as observations accumulated."
+      ],
+      "whyNeededParagraphsEn": [
+        "A few bright points seen through a telescope can prompt an explanation. To judge it, an observer still needs to record positions, compare nights and check whether another model fits the same phenomena. Natural science tests claims about nature through observation, measurement or experiment. New data may support an explanation or require it to change. Missing a record because of clouds must be distinguished from actually observing an absence.",
+        "Mathematics and statistics contribute to many such investigations, with different tasks. Mathematics uses definitions, deduction and proof to study quantities, structures and relations. Statistics examines how data were obtained, how much they vary and what can be inferred. They can help investigate nature together while retaining their own objects and standards of judgment; they need not depend on the same kind of experiment."
+      ],
+      "coreTurnParagraphsEn": [
+        "The explanation changes as one night’s positions become a sequence of positions, spacings and visible counts. On the second night, fixed stars and a moving Jupiter remained a possible explanation. Continued observation required a model to account for the sequence, rather than a convenient single night. Bodies orbiting Jupiter increasingly explained why the points stayed nearby while repeatedly changing sides.",
+        "The record also separates what was seen, which night had no data because of clouds, and which proposed obstruction remained a hypothesis. Those distinctions preserve the evidence needed to compare models. The eventual identification of four satellites depended on a longer sequence; an early conjecture should not be rewritten as a discovery already completed at that moment."
+      ],
+      "anchorsParagraphsEn": [
+        "On January 7, 1610, three bright points were recorded. On January 8, all three were west of Jupiter and closer together than the night before. Clouds prevented observation on January 9. On January 10, two points were seen east of Jupiter and another was hypothesized to be hidden by Jupiter. Later nights eventually supported the identification of four Jovian satellites.",
+        "Sidereus Nuncius, published in March 1610, preserved this sequence of nightly observations and drawings, allowing the order of observations, gaps, and changing interpretations to be reviewed."
+      ],
+      "branchesParagraphsEn": [
+        "Field 05 includes biological and related sciences, environment, physical sciences, and mathematics and statistics. Biological and related sciences examine life processes; environment concerns environmental systems, natural environments, and wildlife. Physical sciences include chemistry, earth sciences, and physics, with astronomy also in this group.",
+        "Mathematics studies structures, quantities, and relations through definitions and proof; statistics studies how to draw reliable inferences from variable data. They can contribute to one investigation while retaining their own standards of judgment. A next study path may focus on natural objects, abstract structures, or uncertainty in data."
+      ],
+      "reflectionEn": "If the second night’s positional change could still be explained by Jupiter itself moving, which relative positions, spacings, and missing observations would you continue to record in order to compare a background-star model with a model of bodies orbiting Jupiter?",
+      "boundaryEn": "This piece uses Galileo’s 1610 observations of Jupiter’s satellites only to examine how continuing evidence can distinguish competing explanations; it does not present Galileo as the origin of field 05. The January 10 claim that the third point was hidden by Jupiter was a hypothesis at the time. Jupiter’s satellites show that not all celestial bodies orbit Earth, but models that do not require Earth to orbit the Sun can also accommodate satellites around Jupiter, so these observations alone do not prove the complete heliocentric model.",
+      "tagsEn": [
+        "Natural Sciences",
+        "Mathematics and Statistics",
+        "Astronomy",
+        "Continuous Observation",
+        "Evidence",
+        "Galileo Galilei"
+      ]
+    }
   },
   {
-    code: "06",
-    subjectTitle: "Information and Communication Technologies",
-    subjectTitleZh: "信息与通信技术",
-    title: "Information and Communication Technologies",
-    titleZh: "第二个大脑",
-    summary: "Chen learns through photo search, a school presentation, programming, and a logistics error that technology works only when people design information, rules, checks, and responsibility clearly.",
-    summaryZh: "小辰从找照片、做展示、写程序和物流系统错误中，明白技术不是替人判断，而是把信息、规则和责任设计成可用的系统。",
-    scene: "Chen first feels the power of computers when he helps his mother find an old seaside photo among thousands of mixed pictures.",
-    sceneZh: "小辰第一次觉得电脑很厉害，是帮妈妈从几千张照片里找到一张旧海边照片。",
-    storyBody: `Chen first felt that computers were powerful when he helped his mother find a photo.
-
-There were thousands of photos on her phone: travel photos, food photos, screenshots, and many others mixed together. She wanted to find a photo taken by the sea several years ago, but she searched for a long time and still could not find it. Chen filtered the photos by time, place, and people, and soon found it in an old album.
-
-His mother smiled and said, “You are smarter than me.”
-
-Chen felt a little proud. He did not think he was really smarter. He only felt that he knew better how to use the phone.
-
-Later, the school asked them to make a group presentation about “changes in the city.” Chen volunteered to organize the materials. He used the computer to download pictures, copy text, and make slides. He worked very fast, and his group members all thought he was good at it.
-
-But the day before the presentation, problems appeared. Someone found that two pictures were not from their city at all. Another part of the text contradicted something written earlier. One chart had no clear source, so if the teacher asked about it, no one could explain it.
-
-Chen felt wronged. He had clearly done a lot of work. But after checking the file again, he saw that the problems were real. He had only put information together. He had not judged whether the information was correct, reliable, or suitable to use.
-
-The next day, the teacher did not criticize him. She only said one sentence: “Tools can help you work faster, but they cannot judge for you what is correct.”
-
-Later, Chen began to learn programming. The teacher asked them to write a simple program: enter two numbers, and the computer gives their sum. He thought it was easy, but the program was wrong the first time he ran it. After checking for a long time, he found that he had written one symbol incorrectly.
-
-He was not convinced. “It is only one symbol. Why is the whole program wrong?”
-
-The teacher said, “A computer does not guess what you mean. It does exactly what you write.”
-
-This sentence stayed with Chen. He slowly found that technology is not simply about “letting machines help people.” Before a machine can work, people must first make the problem clear: where the information comes from, how the rules should be written, how errors should be handled, who will read the result, and whether other people may use it in the wrong way.
-
-At university, Chen had an internship at a logistics company. One day, the system recognized the address of a group of goods incorrectly. The warehouse had already packed the goods, and the driver had already left, but the customer still did not receive the package. One small error affected customer service, the warehouse, the driver, and the customer.
-
-Later, the team found that the problem was not caused by one careless person. The address input format was not consistent, the system rules were too simple, and the manual check did not cover this type of situation. So they changed the input rules, added reminders, and set up exception checks.
-
-Chen then understood that an information system is not only something on a screen. It affects real time, cost, work, and trust. Technology can remember more, calculate faster, and connect farther, but it can also make errors bigger. What matters most is not how smart the machine is, but whether people can turn a problem into a form that machines can process and people can understand and use.`,
-    storyBodyZh: `小辰第一次觉得电脑很厉害，是在帮妈妈找照片的时候。
-
-妈妈手机里有几千张照片，旅游的、吃饭的、截图的，全都混在一起。她想找一张几年前在海边拍的照片，翻了很久也找不到。小辰按时间、地点和人物慢慢筛选，很快就在旧相册里找到了。
-
-妈妈笑着说：“你比我聪明多了。”
-
-小辰有点得意。他觉得自己不是更聪明，只是更会用手机。
-
-后来，学校让他们做一个关于“城市变化”的小组展示。小辰主动负责资料整理。他用电脑下载图片、复制文字、做幻灯片，速度很快。组员都觉得他很厉害。
-
-可是展示前一天，问题来了。有人发现两张图片根本不是他们的城市；有一段文字前后说法不一致；还有一张图没有来源，老师如果问起来，没人能解释。
-
-小辰很委屈。他明明做了很多。可是重新检查后，他发现问题确实存在。他只是把信息放在一起，却没有判断这些信息是否正确、是否可靠、是否适合使用。
-
-第二天，老师没有批评他，只说了一句话：“工具可以帮你做得快，但不能替你判断什么是对的。”
-
-后来，小辰开始学编程。老师让他们写一个简单程序：输入两个数字，电脑输出它们的和。他以为这很容易，可程序第一次运行就错了。检查很久后，他发现只是一个符号写错了。
-
-他很不服气：“就一个符号，为什么整个程序都不对？”
-
-老师说：“电脑不会猜你的意思。你怎么写，它就怎么执行。”
-
-这句话让小辰印象很深。他慢慢发现，技术不是简单地“让机器帮人做事”。在机器工作之前，人必须先把问题想清楚：信息从哪里来，规则怎么写，错误怎么处理，结果给谁看，别人会不会用错。
-
-大学时，小辰去物流公司实习。有一天，系统把一批货的地址识别错了。仓库已经打包，司机已经出发，客户却收不到货。一个小错误影响了客服、仓库、司机和客户。
-
-团队后来发现，问题不是某个人粗心，而是地址输入格式不统一，系统规则太简单，人工检查也没有覆盖到这种情况。于是他们修改了输入规则，增加了提示和异常检查。
-
-小辰这才明白，信息系统不是屏幕里的东西。它会影响真实的时间、成本、工作和信任。技术能记得更多、算得更快、连接得更远，但它也会放大错误。真正重要的不是机器有多聪明，而是人能不能把问题转化成机器可以处理、也能被人理解和使用的形式。`,
-    formalExplanation: "This is what Information and Communication Technologies are mainly concerned with. This field studies how information is represented, processed, stored, transmitted, and applied. It also studies how people design systems, software, networks, and digital tools to solve problems. It focuses on computational thinking, programming, data, algorithms, networks, security, human-computer interaction, and information systems. Its roots are connected with the long human need for calculation, recording, communication, and automation tools. Later, with the development of computers, the internet, software engineering, databases, artificial intelligence, and digital platforms, Information and Communication Technologies gradually became a formal academic field. It studies how people turn information into forms that machines can process, and how these technologies change work, life, and social connection.",
-    formalExplanationZh: "这就是“计算与技术”真正关心的内容。它研究信息如何被表示、处理、存储、传输和应用，也研究人如何设计系统、软件、网络和数字工具来解决问题。它关注计算思维、程序设计、数据、算法、网络、安全、人机交互和信息系统等内容。在正式学科中，它对应的是 Information and Communication Technologies（信息与通信技术）。它的来源与人类长期以来对计算、记录、通信和自动化工具的需求有关。后来，随着计算机、互联网、软件工程、数据库、人工智能和数字平台的发展，计算与技术逐渐成为正式学科领域，用来研究人如何把信息变成可以被机器处理的形式，也研究这些技术如何改变人的工作、生活和社会连接。",
-    coreInsight: "Information and Communication Technologies are not only about using smart tools. They ask how information, rules, systems, checks, and interfaces can be designed so machines help people without replacing judgment.",
-    coreInsightZh: "计算与技术不只是使用聪明工具，而是追问信息、规则、系统、检查和界面如何被设计，才能让机器帮助人而不替代人的判断。",
-    analogyBoundary: "This story uses phone search, slides, programming, and logistics systems to show the field's basic logic, but Information and Communication Technologies also include databases, networks, cybersecurity, software engineering, algorithms, artificial intelligence, human-computer interaction, and digital platforms.",
-    analogyBoundaryZh: "这个故事用手机搜索、幻灯片、编程和物流系统说明该领域的基本逻辑，但信息与通信技术还包括数据库、网络、安全、软件工程、算法、人工智能、人机交互和数字平台等更广问题。",
-    sourceBatchId: "subject-intro-06-information-communication-technologies-second-mind-20260630",
+    "code": "06",
+    "subjectTitle": "Information and Communication Technologies",
+    "subjectTitleZh": "信息与通信技术",
+    "title": "The Cards Passing Through the Loom",
+    "titleZh": "卡片经过织机",
+    "summary": "A chain of punched cards passes through a teaching loom. How does the machine turn holes and solid spaces into weaving choices, row after row?",
+    "summaryZh": "一串打孔卡从教学织机上逐张经过。机器怎样把卡上的孔与无孔，转成一行又一行的织造选择？",
+    "scene": "To weave a pattern, a loom cannot lift the warp threads in the same way on every row. On the Jacquard teaching loom preserved by the Science Museum Group, the selections are arranged in a chain of punched cards. W. Archer made this surviving loom in Bolton around 1910 for teaching in Manchester. Its card chain, control needles, lengthwise warp threads, crosswise weft and treadle can be examined together.",
+    "sceneZh": "一台织机要织出纹样，经线不能每一行都以相同方式抬起。在Science Museum Group保存的Jacquard教学织机上，选择被安排在一串相连的打孔卡里。这台约1910年的实物由W. Archer在Bolton制造，供曼彻斯特教学使用；卡链、控制针、纵向经线、横穿其间的纬线和脚踏，可以一起被观察。",
+    "storyBody": "To weave a pattern, a loom cannot lift the warp threads in the same way on every row. On the Jacquard teaching loom preserved by the Science Museum Group, the selections are arranged in a chain of punched cards. W. Archer made this surviving loom in Bolton around 1910 for teaching in Manchester. Its card chain, control needles, lengthwise warp threads, crosswise weft and treadle can be examined together.\n\nDuring weaving, a card reaches the control needles. Holes let the corresponding needles pass through; solid areas stop them. The mechanism uses these states to influence which warp threads rise, leaving an opening for the weft. With each weft pass, the chain advances and another card presents another set of selections. The same needles and threads follow different arrangements, row by row.\n\nThe operator still uses a foot lever to drive the Jacquard mechanism and performs the other weaving actions. The cards do not take over the whole loom. Their task is to fix selections in advance: the hole positions have already been prepared before that row is woven. Changing the pattern means returning to the preparation that takes place before the cards enter the machine.\n\nAnother museum object preserves that preparation stage: a hole punch made by James Heywood in Coventry in 1870, belonging to a model for making Jacquard cards. The punch and teaching loom are different objects, preserving card preparation and execution respectively. Selections for a pattern are first put into cards, then delivered to the needles in sequence as the woven pattern progresses.\n\nThe control principle predates both objects: Jacquard developed the system around 1804–05. The surviving tool and teaching loom make it possible to trace how prepared selections enter the mechanism. A different card chain can change the sequence and selections presented to the needles. Warp and weft still cross on the same machine, but the pattern’s arrangement has been prepared on the cards.",
+    "storyBodyZh": "一台织机要织出纹样，经线不能每一行都以相同方式抬起。在Science Museum Group保存的Jacquard教学织机上，选择被安排在一串相连的打孔卡里。这台约1910年的实物由W. Archer在Bolton制造，供曼彻斯特教学使用；卡链、控制针、纵向经线、横穿其间的纬线和脚踏，可以一起被观察。\n\n织造进行时，一张卡来到控制针前。有孔的位置让相应的针通过，无孔的位置挡住针；机构依据这些状态影响经线的提升，为纬线留下穿过的开口。纬线通过，卡链继续推进，下一张卡又送来另一组选择。同一套针和线，要按卡片逐行执行不同安排。\n\n操作者仍用脚踏杠杆带动提花机构，也要完成其他织造动作。卡片没有接管整台织机，它承担的是预先固定选择的工作：到了这一行，机构收到的孔位已经准备好，而不是等纬线穿过时再临时决定。要改变纹样，就要回到进入机器之前的那道工序。\n\n另一件馆藏把这道工序留了下来：James Heywood于1870年在Coventry制作的打孔器，属于提花制卡模型。打孔器与教学织机并不是同一件设备，却分别保存了制卡和执行的环节。先把纹样所需的选择做进卡片，再让卡链把它们依次送到针前，织物上的图案才有了逐行推进的安排。\n\n这套控制原理比两件实物都早：Jacquard约在1804至1805年发展出相关系统。后来保存的工具和教学机，让准备好的选择怎样进入机构变得可见。换一串卡片，送入针前的次序和选择就可以改变；经线与纬线仍在同一台设备里交织，纹样的安排却已经先写在了卡上。",
+    "formalExplanation": "Cards on a loom still need an agreed relationship between holes and selections, an order of advancement, and a mechanism that receives them. Information and communication technologies address comparable connections: information to be saved or acted on is encoded so it can be stored, transmitted and processed. Rules have to remain consistent across stages for the receiving end to use what was prepared earlier; a machine’s speed cannot replace those conventions.\n\nModern tasks extend to files, programs, databases and networks: how information is organized, who can access it, how it reaches another endpoint, and how software processes it according to rules. Jacquard cards provide a physical entry into encoding and sequence by repeatedly presenting prearranged selections to a mechanism. Modern ICT branches have their own histories and much more complex technologies.",
+    "formalExplanationZh": "织机有了卡片，仍需要约定孔与无孔怎样对应选择、卡链按什么次序推进，以及控制机构怎样接收它们。信息与通信技术处理的也是这类衔接：把需要保存或执行的信息编码，让它能够被存储、传递和处理。规则必须在不同环节中保持一致，接收端才能使用前面准备的信息；一台设备的运转速度，并不能替代这些约定。\n\n现代任务会进一步涉及文件、程序、数据库和网络：信息怎样组织，谁可以访问，怎样传到另一端，软件怎样依规则处理结果。提花卡让预先安排的选择能够反复送入机构，为理解编码与顺序提供一个物理入口；现代ICT各分支仍有自己的发展历史和更复杂的技术。",
+    "coreInsight": "Putting selections into cards before delivering them in sequence distinguishes changing the machine from changing its instructions. To examine order, label two different rows of warp selections A and B. An A card followed by a B card presents them in that order; exchanging the cards changes the order received. A and B are teaching labels, not reconstructions of particular museum cards.\n\nThe example concerns how selections and sequence are preserved, delivered and executed. A new pattern still requires people to design it, punch cards, load the chain and operate the equipment. The cards do not understand an image. Repeatedly receiving prepared selections differs from deciding what ought to be woven.",
+    "coreInsightZh": "选择先写进卡片，再按次序送入同一套机构，让“换设备”和“换指令”成为可以区分的两件事。为理解顺序，可以把两行不同的经线选择标作A和B：先放A卡，再放B卡，机构按这个顺序接收；交换两张卡，接收的顺序也改变。A、B只是教学标记，并非对某张馆藏卡片的复原。\n\n这个例子检查的是选择和顺序怎样被保存、送达与执行。新纹样仍要由人设计、制卡、装入卡链并操作设备；卡片不能理解图像。让机器重复接收准备好的选择，与让机器自己决定应该织什么，是不同的问题。",
+    "analogyBoundary": "This piece uses the Jacquard control principle of around 1804–05, the 1870 card-punch model, and the teaching loom of around 1910 to examine information encoding and sequential execution. The cards participate only in Jacquard control and do not drive every action of the loom; the mechanical relationship among card holes, needles, and warp threads is also more complex than the simplified example. Modern ICT branches developed along independent paths, and related hardware-engineering training may fall under field 07 depending on the main learning focus.",
+    "analogyBoundaryZh": "本篇用1804至1805年前后的Jacquard控制原理、1870制卡模型和约1910教学织机理解信息编码与顺序执行。卡片只参与提花控制，不驱动整台织机的全部动作；卡孔、针和经线之间的机械关系也比简化例复杂。现代ICT各分支有独立发展路线，相关硬件工程训练可因学习重点归入07。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If the same machine has to execute a different pattern, how would you check each layer—from pattern selection, to card punching, to card-chain order, to actual execution—to make sure the information was not altered along the way?",
+    "reflectionQuestionZh": "如果同一台设备要执行另一种纹样，你会怎样检查从纹样选择、制卡、卡链顺序到实际执行的每一层，确认信息没有在中间被改错？",
+    "subjectOrigin": {
+      "id": "subject-origin-06-ict",
+      "categoryCode": "06",
+      "subjectTitleZh": "信息与通信技术",
+      "titleZh": "卡片经过织机",
+      "summaryZh": "一串打孔卡从教学织机上逐张经过。机器怎样把卡上的孔与无孔，转成一行又一行的织造选择？",
+      "originStoryParagraphsZh": [
+        "一台织机要织出纹样，经线不能每一行都以相同方式抬起。在Science Museum Group保存的Jacquard教学织机上，选择被安排在一串相连的打孔卡里。这台约1910年的实物由W. Archer在Bolton制造，供曼彻斯特教学使用；卡链、控制针、纵向经线、横穿其间的纬线和脚踏，可以一起被观察。",
+        "织造进行时，一张卡来到控制针前。有孔的位置让相应的针通过，无孔的位置挡住针；机构依据这些状态影响经线的提升，为纬线留下穿过的开口。纬线通过，卡链继续推进，下一张卡又送来另一组选择。同一套针和线，要按卡片逐行执行不同安排。",
+        "操作者仍用脚踏杠杆带动提花机构，也要完成其他织造动作。卡片没有接管整台织机，它承担的是预先固定选择的工作：到了这一行，机构收到的孔位已经准备好，而不是等纬线穿过时再临时决定。要改变纹样，就要回到进入机器之前的那道工序。",
+        "另一件馆藏把这道工序留了下来：James Heywood于1870年在Coventry制作的打孔器，属于提花制卡模型。打孔器与教学织机并不是同一件设备，却分别保存了制卡和执行的环节。先把纹样所需的选择做进卡片，再让卡链把它们依次送到针前，织物上的图案才有了逐行推进的安排。",
+        "这套控制原理比两件实物都早：Jacquard约在1804至1805年发展出相关系统。后来保存的工具和教学机，让准备好的选择怎样进入机构变得可见。换一串卡片，送入针前的次序和选择就可以改变；经线与纬线仍在同一台设备里交织，纹样的安排却已经先写在了卡上。"
+      ],
+      "whyNeededParagraphsZh": [
+        "织机有了卡片，仍需要约定孔与无孔怎样对应选择、卡链按什么次序推进，以及控制机构怎样接收它们。信息与通信技术处理的也是这类衔接：把需要保存或执行的信息编码，让它能够被存储、传递和处理。规则必须在不同环节中保持一致，接收端才能使用前面准备的信息；一台设备的运转速度，并不能替代这些约定。",
+        "现代任务会进一步涉及文件、程序、数据库和网络：信息怎样组织，谁可以访问，怎样传到另一端，软件怎样依规则处理结果。提花卡让预先安排的选择能够反复送入机构，为理解编码与顺序提供一个物理入口；现代ICT各分支仍有自己的发展历史和更复杂的技术。"
+      ],
+      "coreTurnParagraphsZh": [
+        "选择先写进卡片，再按次序送入同一套机构，让“换设备”和“换指令”成为可以区分的两件事。为理解顺序，可以把两行不同的经线选择标作A和B：先放A卡，再放B卡，机构按这个顺序接收；交换两张卡，接收的顺序也改变。A、B只是教学标记，并非对某张馆藏卡片的复原。",
+        "这个例子检查的是选择和顺序怎样被保存、送达与执行。新纹样仍要由人设计、制卡、装入卡链并操作设备；卡片不能理解图像。让机器重复接收准备好的选择，与让机器自己决定应该织什么，是不同的问题。"
+      ],
+      "anchorsParagraphsZh": [
+        "Jacquard控制系统约在1804至1805年发展；James Heywood于1870年在Coventry制作的馆藏打孔器，是制卡模型的一部分。",
+        "约1910年的Jacquard教学织机由W. Archer在Bolton制造，用于曼彻斯特教学。博物馆把年代更晚的教学机与早期系统的历史联系起来，原理年代与实物制造年代需要分别阅读。"
+      ],
+      "branchesParagraphsZh": [
+        "06包括计算机使用、数据库与网络设计和管理、软件与应用开发和分析。计算机使用侧重借助现有工具完成任务；数据库与网络方向安排信息的存放、访问和连接；软件方向则把任务转成程序，分析、开发和维护应用。",
+        "这些方向都要处理信息、规则与执行之间的关系。通信网络中的信息组织与管理属于这里的相关学习；若重点是电子器件、制造或传输设施的工程设计，则需沿07的相应分支继续探索。"
+      ],
+      "reflectionZh": "如果同一台设备要执行另一种纹样，你会怎样检查从纹样选择、制卡、卡链顺序到实际执行的每一层，确认信息没有在中间被改错？",
+      "boundaryZh": "本篇用1804至1805年前后的Jacquard控制原理、1870制卡模型和约1910教学织机理解信息编码与顺序执行。卡片只参与提花控制，不驱动整台织机的全部动作；卡孔、针和经线之间的机械关系也比简化例复杂。现代ICT各分支有独立发展路线，相关硬件工程训练可因学习重点归入07。",
+      "tagsZh": [
+        "信息与通信技术",
+        "Jacquard织机",
+        "编码",
+        "指令",
+        "卡片",
+        "信息处理"
+      ],
+      "references": [
+        {
+          "id": "smg-jacquard-loom",
+          "citation": "Science Museum Group. Jacquard Hand Loom, circa 1910 (Y1973.43).",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8405056/jacquard-hand-loom-loom",
+          "useZh": "支持馆藏教学机制造背景、卡链、针、经线、纬线、脚踏控制及早期Jacquard系统年代。",
+          "useEn": "Supports the manufacturing background of the preserved teaching loom, its card chain, needles, warp, weft, treadle control, and the dating of the early Jacquard system."
+        },
+        {
+          "id": "smg-jacquard-punch",
+          "citation": "Science Museum Group. Hole punch for making Jacquard cards, 1870.",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co537200/hole-punch-for-making-jacquard-cards",
+          "useZh": "支持1870年制卡打孔模型、手工制卡与选择线的历史背景。",
+          "useEn": "Supports the 1870 card-punch model, manual card making, and the historical background of selecting warp threads."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持06/07/08正式分类与分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal classifications and branches for fields 06, 07, and 08; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Information and Communication Technologies",
+      "titleEn": "The Cards Passing Through the Loom",
+      "summaryEn": "A chain of punched cards passes through a teaching loom. How does the machine turn holes and solid spaces into weaving choices, row after row?",
+      "originStoryParagraphsEn": [
+        "To weave a pattern, a loom cannot lift the warp threads in the same way on every row. On the Jacquard teaching loom preserved by the Science Museum Group, the selections are arranged in a chain of punched cards. W. Archer made this surviving loom in Bolton around 1910 for teaching in Manchester. Its card chain, control needles, lengthwise warp threads, crosswise weft and treadle can be examined together.",
+        "During weaving, a card reaches the control needles. Holes let the corresponding needles pass through; solid areas stop them. The mechanism uses these states to influence which warp threads rise, leaving an opening for the weft. With each weft pass, the chain advances and another card presents another set of selections. The same needles and threads follow different arrangements, row by row.",
+        "The operator still uses a foot lever to drive the Jacquard mechanism and performs the other weaving actions. The cards do not take over the whole loom. Their task is to fix selections in advance: the hole positions have already been prepared before that row is woven. Changing the pattern means returning to the preparation that takes place before the cards enter the machine.",
+        "Another museum object preserves that preparation stage: a hole punch made by James Heywood in Coventry in 1870, belonging to a model for making Jacquard cards. The punch and teaching loom are different objects, preserving card preparation and execution respectively. Selections for a pattern are first put into cards, then delivered to the needles in sequence as the woven pattern progresses.",
+        "The control principle predates both objects: Jacquard developed the system around 1804–05. The surviving tool and teaching loom make it possible to trace how prepared selections enter the mechanism. A different card chain can change the sequence and selections presented to the needles. Warp and weft still cross on the same machine, but the pattern’s arrangement has been prepared on the cards."
+      ],
+      "whyNeededParagraphsEn": [
+        "Cards on a loom still need an agreed relationship between holes and selections, an order of advancement, and a mechanism that receives them. Information and communication technologies address comparable connections: information to be saved or acted on is encoded so it can be stored, transmitted and processed. Rules have to remain consistent across stages for the receiving end to use what was prepared earlier; a machine’s speed cannot replace those conventions.",
+        "Modern tasks extend to files, programs, databases and networks: how information is organized, who can access it, how it reaches another endpoint, and how software processes it according to rules. Jacquard cards provide a physical entry into encoding and sequence by repeatedly presenting prearranged selections to a mechanism. Modern ICT branches have their own histories and much more complex technologies."
+      ],
+      "coreTurnParagraphsEn": [
+        "Putting selections into cards before delivering them in sequence distinguishes changing the machine from changing its instructions. To examine order, label two different rows of warp selections A and B. An A card followed by a B card presents them in that order; exchanging the cards changes the order received. A and B are teaching labels, not reconstructions of particular museum cards.",
+        "The example concerns how selections and sequence are preserved, delivered and executed. A new pattern still requires people to design it, punch cards, load the chain and operate the equipment. The cards do not understand an image. Repeatedly receiving prepared selections differs from deciding what ought to be woven."
+      ],
+      "anchorsParagraphsEn": [
+        "The Jacquard control system developed around 1804–05. The preserved hole punch made by James Heywood in Coventry in 1870 belongs to a card-making model.",
+        "The Jacquard teaching loom dates to around 1910 and was made by W. Archer in Bolton for teaching in Manchester. The museum connects this later teaching machine with the earlier system; the principle’s date and the object’s manufacture date are distinct."
+      ],
+      "branchesParagraphsEn": [
+        "Field 06 includes computer use, database and network design and administration, and software and applications development and analysis. Computer use focuses on tasks performed with existing tools; databases and networks organize storage, access, and connections; software translates tasks into programs and analyzes, develops, and maintains applications.",
+        "These paths all address relationships among information, rules, and execution. Information organization and management in communication networks belong to related study here; a focus on electronic components, manufacturing, or the engineering design of transmission infrastructure leads toward relevant branches in field 07."
+      ],
+      "reflectionEn": "If the same machine has to execute a different pattern, how would you check each layer—from pattern selection, to card punching, to card-chain order, to actual execution—to make sure the information was not altered along the way?",
+      "boundaryEn": "This piece uses the Jacquard control principle of around 1804–05, the 1870 card-punch model, and the teaching loom of around 1910 to examine information encoding and sequential execution. The cards participate only in Jacquard control and do not drive every action of the loom; the mechanical relationship among card holes, needles, and warp threads is also more complex than the simplified example. Modern ICT branches developed along independent paths, and related hardware-engineering training may fall under field 07 depending on the main learning focus.",
+      "tagsEn": [
+        "Information and Communication Technologies",
+        "Jacquard Loom",
+        "Encoding",
+        "Instructions",
+        "Punched Cards",
+        "Information Processing"
+      ]
+    }
   },
   {
-    code: "07",
-    subjectTitle: "Engineering, manufacturing and construction",
-    subjectTitleZh: "工程、制造与建筑",
-    title: "Engineering, manufacturing and construction",
-    titleZh: "人类的手",
-    summary: "Chuan learns through repair, a cardboard bridge, campus seating, and factory testing that engineering turns ideas into reliable things under real constraints.",
-    summaryZh: "小川从修东西、纸板桥、校园座椅和工厂测试中，明白工程与建造是在真实限制下把想法变成可靠可用的成果。",
-    scene: "Chuan first admires making and repair while watching his father tighten chairs, fix taps, and turn loose parts back into useful objects.",
-    sceneZh: "小川最早被工程吸引，是看爸爸把松动的椅子、滴水的龙头和零散零件重新修好。",
-    storyBody: `When Chuan was a child, he liked watching his father repair things.
-
-When a chair at home became loose, his father took out a screwdriver and tightened each joint again. When the tap leaked, his father opened it and checked the small washer inside. Chuan found these things amazing. A few pieces of wood, some screws, and several pipes could become useful again in his father's hands.
-
-Once, the school gave them a craft assignment: use cardboard and glue to make a small bridge, and see which group's bridge could hold the most books.
-
-Chuan was excited. He thought that a bridge would be stronger if it was bigger and thicker. So he stacked many pieces of cardboard together and glued them into a heavy bridge. At first, it looked stable. But when the third book was placed on it, the middle suddenly collapsed.
-
-Another classmate's bridge looked much lighter, but it could hold more books. Chuan felt unconvinced. He looked at it carefully and found that the classmate had not simply made the cardboard thicker. Instead, he had folded the cardboard into triangular supports. The bridge was not large, but its structure handled the weight better.
-
-The teacher said, “Strength is not only about using more material. It also depends on whether the structure is right.”
-
-This was the first time Chuan understood that making things is not just putting materials together. For an idea to become something that truly works, it needs design, calculation, testing, and adjustment.
-
-Later, in middle school, Chuan joined a campus improvement project. The school wanted to add a row of seats beside the playground so that students could rest during breaks. At first, Chuan and his classmates only thought about whether the seats looked nice. But the teacher asked them to observe: Which place gets the strongest sun? Where does water collect after rain? From which direction do students usually walk over? Will the seats be uncomfortable if they are too high or too low? Will the material be damaged by rain?
-
-They made the first plan, but the logistics teacher rejected it. The reason was simple: the seats blocked the path of the cleaning vehicle.
-
-Chuan felt embarrassed. They had drawn the plan carefully, but they had forgotten that the school still needed to clean, maintain, and use the space every day. Later, they measured the area again, moved the seats to the side, and chose a material that was easier to clean. The second plan was not as beautiful as the first one, but it was more suitable for real use.
-
-At university, Chuan had an internship at a manufacturing company. For the first time, he saw how a product moved from a drawing to a real object. The design department created the structure, engineers checked the dimensions, the workshop produced the parts, and the quality team tested strength and safety. If one part was only a few millimeters different, the later assembly could have problems.
-
-One day, a batch of products failed the test. Chuan first thought they could simply produce them again. But the engineers did not act immediately. They first checked the reason together: Was it a material problem, or a processing error? Was the design too ideal, or was the usage situation more complex than expected? If only one part was changed, would it affect other parts?
-
-Chuan found that engineering is not about something being “almost right.” It must face the real world: weight, temperature, friction, cost, time, and safety. A design can look perfect on a computer, but on site, it may meet many limits. What truly matters is whether an idea can still be reliable under real conditions.
-
-Later, when Chuan saw bridges, elevators, phone cases, factory production lines, city roads, or buildings, he no longer looked only at their appearance. He would think: What must this thing carry? Who will use it? How is it made? How will it be maintained? If something goes wrong, what will happen? How do people balance cost, quality, safety, and efficiency?
-
-These questions helped him understand that engineering and construction are not simply about “making things.” They turn human needs into objects and spaces that can be used, produced, maintained, and kept relatively safe. They allow an invisible idea to go through design and testing, and finally stand in the real world.`,
-    storyBodyZh: `小川小时候，最喜欢看爸爸修东西。
-
-家里的椅子松了，爸爸会拿出螺丝刀，把每个连接处重新拧紧。水龙头滴水，爸爸会拆开检查里面的小垫圈。小川觉得这些事情很神奇。明明只是几块木板、几颗螺丝、几根管子，到了爸爸手里，就能重新变得好用。
-
-有一次，学校布置了一个手工作业：用纸板和胶水做一座小桥，看哪一组能承受最多的书本重量。
-
-小川很兴奋。他觉得桥只要做得大一点、厚一点，就一定更结实。于是他把很多纸板叠在一起，用胶水粘成一座很重的桥。刚开始，桥看起来确实很稳。可是放到第三本书时，中间突然塌了。
-
-旁边一个同学做的桥看起来很轻，却能承受更多书。小川有点不服气。他仔细看了看，发现那个同学没有一味加厚纸板，而是把纸板折成三角形支撑。桥不大，但受力更合理。
-
-老师说：“结实不只是材料多，也要看结构对不对。”
-
-这句话让小川第一次明白，做东西不是把材料堆起来。一个想法要变成真正能用的东西，中间需要设计、计算、测试和调整。
-
-后来，小川上中学，参加了一个校园改造项目。学校想在操场边增加一排座椅，让学生课间可以休息。小川和同学们一开始只考虑座椅好不好看。可是老师让他们去观察：哪里阳光最晒？哪里容易积水？学生一般从哪个方向走过来？座椅太高或太低会不会不舒服？如果下雨，材料会不会坏？
-
-他们做了第一版方案，结果被后勤老师退了回来。原因很简单：座椅挡住了清洁车的通道。
-
-小川觉得很尴尬。他们画得很认真，却忘了学校每天还要打扫、维护和使用这个空间。后来他们重新测量，把座椅位置往旁边移，又选择了更容易清洁的材料。第二版没有第一版那么漂亮，但更适合实际使用。
-
-大学时，小川去一家制造企业实习。他第一次看到一件产品从图纸变成实物。设计部门画出结构，工程师检查尺寸，车间负责生产，质量部门测试强度和安全性。一个零件如果差了几毫米，后面的组装就可能出问题。
-
-有一天，一批产品在测试时没有通过。小川原以为只要重新生产就可以。可是工程师们没有马上动手，而是先一起查原因：是材料问题，还是加工误差？是设计太理想，还是使用场景比预期更复杂？如果只改一个部件，会不会影响其他部分？
-
-小川发现，工程不是追求“看起来差不多”。它要面对真实世界的重量、温度、摩擦、成本、时间和安全。一个设计在电脑里可以很完美，但到了现场，可能会受到很多限制。真正重要的，是让想法在现实条件下仍然可靠。
-
-后来，小川再看到桥梁、电梯、手机外壳、工厂生产线、城市道路和一栋楼时，不再只看它们的外观。他会想到：这个东西要承受什么？谁来使用？怎样制造？怎样维护？如果出错，会造成什么后果？怎样在成本、质量、安全和效率之间做取舍？
-
-这些问题让他明白，工程与建造并不是简单地“做东西”。它是把人的需要变成可以使用、可以生产、可以维护、也相对安全的现实物品和空间。它让一个看不见的想法，经过设计和试验，最后真正站在地面上。`,
-    formalExplanation: "This is what Engineering, manufacturing and construction are mainly concerned with. This field studies how people design, make, build, and improve objects, machines, systems, and environments. It focuses on structure, materials, energy, production, quality, safety, efficiency, maintenance, and life cycle. Its roots are connected with early human practices of making tools, building shelters, constructing roads and bridges, using machines, and organizing production. Later, with the development of industrialization, modern architecture, mechanical manufacturing, engineering education, and technical standards, Engineering, manufacturing and construction gradually became a formal academic field. It studies how ideas can be turned into reliable, safe, and usable real-world outcomes.",
-    formalExplanationZh: "这就是“工程与建造”真正关心的内容。它研究人如何设计、制造、建造和改进物品、机器、系统和环境。它关注结构、材料、能源、生产、质量、安全、效率、维护和生命周期等问题。在正式学科中，它对应的是 Engineering, manufacturing and construction（工程、制造与建筑）。它的来源与人类早期制作工具、建造住所、修路造桥、使用机械和组织生产的实践有关。后来，随着工业化、现代建筑、机械制造、工程教育和技术标准的发展，工程与建造逐渐成为正式学科领域，用来研究如何把想法转化为可靠、安全、可用的现实成果。",
-    coreInsight: "Engineering, manufacturing and construction turn needs and ideas into usable reality by balancing structure, material, production, maintenance, cost, safety, and real-world constraints.",
-    coreInsightZh: "工程、制造与建筑把人的需要和想法变成可用现实，同时平衡结构、材料、生产、维护、成本、安全和真实条件。",
-    analogyBoundary: "This story uses repair, a cardboard bridge, campus seating, and factory testing to show the field's basic logic, but Engineering, manufacturing and construction also include energy systems, manufacturing processes, architecture, civil engineering, materials, automation, standards, and lifecycle management.",
-    analogyBoundaryZh: "这个故事用修东西、纸板桥、校园座椅和工厂测试说明该领域的基本逻辑，但工程、制造与建筑还包括能源系统、制造流程、建筑、土木工程、材料、自动化、标准和生命周期管理等更广问题。",
-    sourceBatchId: "subject-intro-07-engineering-manufacturing-construction-human-hand-20260630",
+    "code": "07",
+    "subjectTitle": "Engineering, Manufacturing and Construction",
+    "subjectTitleZh": "工程、制造与建筑",
+    "title": "Connections on the Reef",
+    "titleZh": "礁石上的连接",
+    "summary": "A wooden lighthouse burned down, but the offshore rocks still needed a navigational aid. How would stone, joints, and construction work together to light a new tower?",
+    "summaryZh": "木制灯塔毁于火灾，海上的礁石仍需要航标。石材、接缝与施工安排，要怎样配合才能让新塔点亮？",
+    "scene": "In 1755, the previous wooden lighthouse on the Eddystone Rocks was destroyed by fire. Trinity House used a lightvessel to maintain a navigational aid during rebuilding. In 1756, John Smeaton accepted the task of constructing another tower on the offshore rocks. Many of the workers were Cornish tin miners; the stone tower they would build had to guide mariners again.",
+    "sceneZh": "1755年，Eddystone礁石上的前代木制灯塔在火灾后毁坏。Trinity House用灯船在重建期间维持这一海域的航标。1756年，John Smeaton接受重建任务，新结构仍要落在海中的礁石上。参与施工的劳力中有许多康沃尔锡矿矿工，要建出的却是一座继续为航行者指路的石塔。",
+    "storyBody": "In 1755, the previous wooden lighthouse on the Eddystone Rocks was destroyed by fire. Trinity House used a lightvessel to maintain a navigational aid during rebuilding. In 1756, John Smeaton accepted the task of constructing another tower on the offshore rocks. Many of the workers were Cornish tin miners; the stone tower they would build had to guide mariners again.\n\nSmeaton used a profile that widened toward the base, often compared with an oak tree, and used granite as an important material for the base and exterior. Adjacent stones were shaped to form dovetail joints and were connected with marble dowels. The stones had to be cut, positioned, and joined in mutually compatible forms so that the tower could become continuous masonry rather than remain a collection of separate pieces.\n\nHe also tested hydraulic lime that could harden in damp conditions and underwater. Stone had to travel from ships to the reef, be lifted into place, connected, and have its joints filled. Shaped blocks, a binder usable in wet conditions, and lifting arrangements had to work together at the site to turn separate parts into a tower.\n\nOn October 16, 1759, the new lighthouse was lit, and Trinity House records that its light used 24 candles. More than a century later, inspections in the 1870s found cracking in the rock beneath the tower. The tower itself remained stable, but its support conditions had changed, so maintaining the navigational function required consideration of a new site and structural arrangement.\n\nIn 1882, a new lighthouse replaced Smeaton’s tower. The upper part of the old tower was later moved to Plymouth Hoe for preservation, while the lower remains of the original tower were left at Eddystone. Today, the two locations preserve different parts of the same engineering work: one section is displayed away from the original site, while another remains on the reef.",
+    "storyBodyZh": "1755年，Eddystone礁石上的前代木制灯塔在火灾后毁坏。Trinity House用灯船在重建期间维持这一海域的航标。1756年，John Smeaton接受重建任务，新结构仍要落在海中的礁石上。参与施工的劳力中有许多康沃尔锡矿矿工，要建出的却是一座继续为航行者指路的石塔。\n\nSmeaton采用下宽上窄、类似橡树的轮廓，并使用花岗岩作为基底和外表的重要材料。相邻石块加工成能够燕尾接合的形状，并用大理石销连接。石块必须按相互配合的形状加工、定位和连接，塔体才能从单件石材逐步成为连续砌体。\n\n他还测试能在潮湿和水下硬化的水硬性石灰。石材要从船上运到礁石，再吊装到位、连接并填实接缝。加工好的石块、湿环境中可用的胶结材料和吊装安排，必须在同一处施工中配合，才能把分散的部件逐步砌成塔身。\n\n1759年10月16日，新灯塔点灯，Trinity House记录其照明使用24支蜡烛。一个多世纪后，1870年代的检查发现塔下岩石出现裂缝。塔身仍然稳固，但支撑条件已经变化，于是继续维持航标需要考虑新的塔址与结构安排。\n\n1882年，新灯塔接替Smeaton塔。旧塔上半部后来迁到Plymouth Hoe保存，而Eddystone海上仍留有原塔的下部遗存。今天两处遗存分别保存了同一工程不同部分：一部分离开原址展示，另一部分仍留在礁石上。",
+    "formalExplanation": "A lighthouse must guide ships, but drawing its shape does not make it stand offshore. Cutting stones, joining adjacent parts, using a binder in wet conditions, and moving components by ship and lifting equipment all require workable arrangements. Engineering turns needs and physical constraints into systems that can be manufactured, built, operated and maintained. Inspection continues to check whether conditions have changed, including the rock outside the tower itself.\n\nManufacturing addresses consistent processing of materials and products, control of processes, dimensions and quality, and repeatable production. Architecture and construction also address spatial use, structures and work on site. These areas often collaborate on one project, but none can perform all the others’ tasks. A design that works on paper still needs fabrication, installation and maintenance before and during use.",
+    "formalExplanationZh": "一座灯塔需要指路，但画出塔形还不能让它站在海上。石块怎样加工、相邻部分怎样连接、胶结材料怎样在潮湿中使用、船和吊装怎样把部件送到位置，都要成为能够执行的安排。工程把需求与物理限制转成可制造、建造、运行和维护的系统，并在检查中继续确认条件是否变化；塔身之外的岩石也属于需要考虑的条件。\n\n制造关注材料和产品怎样稳定加工，怎样控制流程、尺寸与质量，并实现重复生产；建筑与建造还要处理空间用途、结构和现场施工。三者常在同一工程里合作，却不能只靠其中一项完成其他工作。一个设计可以在图上成立，真正投入使用仍要经过加工、安装和后续维护。",
+    "coreInsight": "A buildable lighthouse required a move from the tower’s outline to stones, joints, materials and construction arrangements that worked together. Blocks had to fit one another, the binder had to suit wet conditions, and transport and lifting had to place components correctly. A solution that worked only on a drawing could not complete the other stages.\n\nAfter construction, inspection extended the question from the tower to its supporting rock. Cracking beneath it in the 1870s showed that a stable structure still depended on a changing environment. Design, construction and maintenance address different stages of the same facility. Continued use, reinforcement or replacement requires checking the conditions that apply then.",
+    "coreInsightZh": "从一座塔的外形，转向能够共同工作的石块、接缝、材料和施工安排，灯塔才成为可以建出的工程。石块要加工成相互配合的形状，胶结材料要适应潮湿条件，运输和吊装要把部件送到位置。任何一项只在图纸上成立，都不能替其他环节完成工作。\n\n使用之后，检查又把问题从塔身扩展到支撑岩石。1870年代塔下岩石开裂，说明稳固的塔体仍依赖会变化的环境。设计、施工和维护面对同一设施的不同阶段；决定继续使用、加固或替换，需要重新核对当时的条件。",
+    "analogyBoundary": "This is one historical window onto how structures, materials, construction, and foundations work together; engineering, manufacturing, and architecture have broader independent histories. Smeaton’s hydraulic lime is distinct from later Portland cement. The lightvessel, lighting of the tower, changing support rock, and replacement tower belong to different stages of the navigational arrangements.",
+    "analogyBoundaryZh": "这是理解结构、材料、施工与地基如何配合的一个历史窗口，工程、制造与建筑都有更广的独立历史。Smeaton使用的水硬性石灰需要与后来发展的Portland水泥区分。灯船维持航标、塔身点灯、支撑岩石变化与新塔接替，属于不同阶段的设施安排。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If a tower itself remains stable but the rock supporting it begins to crack, which foundation, joint, material, and maintenance records would you re-examine before deciding whether to keep using, strengthen, or replace it?",
+    "reflectionQuestionZh": "如果一座塔身仍稳定，但支撑它的岩石开始开裂，你会重新检查哪些地基、连接、材料和维护资料，再决定继续使用、加固还是替换？",
+    "subjectOrigin": {
+      "id": "subject-origin-07-engineering",
+      "categoryCode": "07",
+      "subjectTitleZh": "工程、制造与建筑",
+      "titleZh": "礁石上的连接",
+      "summaryZh": "木制灯塔毁于火灾，海上的礁石仍需要航标。石材、接缝与施工安排，要怎样配合才能让新塔点亮？",
+      "originStoryParagraphsZh": [
+        "1755年，Eddystone礁石上的前代木制灯塔在火灾后毁坏。Trinity House用灯船在重建期间维持这一海域的航标。1756年，John Smeaton接受重建任务，新结构仍要落在海中的礁石上。参与施工的劳力中有许多康沃尔锡矿矿工，要建出的却是一座继续为航行者指路的石塔。",
+        "Smeaton采用下宽上窄、类似橡树的轮廓，并使用花岗岩作为基底和外表的重要材料。相邻石块加工成能够燕尾接合的形状，并用大理石销连接。石块必须按相互配合的形状加工、定位和连接，塔体才能从单件石材逐步成为连续砌体。",
+        "他还测试能在潮湿和水下硬化的水硬性石灰。石材要从船上运到礁石，再吊装到位、连接并填实接缝。加工好的石块、湿环境中可用的胶结材料和吊装安排，必须在同一处施工中配合，才能把分散的部件逐步砌成塔身。",
+        "1759年10月16日，新灯塔点灯，Trinity House记录其照明使用24支蜡烛。一个多世纪后，1870年代的检查发现塔下岩石出现裂缝。塔身仍然稳固，但支撑条件已经变化，于是继续维持航标需要考虑新的塔址与结构安排。",
+        "1882年，新灯塔接替Smeaton塔。旧塔上半部后来迁到Plymouth Hoe保存，而Eddystone海上仍留有原塔的下部遗存。今天两处遗存分别保存了同一工程不同部分：一部分离开原址展示，另一部分仍留在礁石上。"
+      ],
+      "whyNeededParagraphsZh": [
+        "一座灯塔需要指路，但画出塔形还不能让它站在海上。石块怎样加工、相邻部分怎样连接、胶结材料怎样在潮湿中使用、船和吊装怎样把部件送到位置，都要成为能够执行的安排。工程把需求与物理限制转成可制造、建造、运行和维护的系统，并在检查中继续确认条件是否变化；塔身之外的岩石也属于需要考虑的条件。",
+        "制造关注材料和产品怎样稳定加工，怎样控制流程、尺寸与质量，并实现重复生产；建筑与建造还要处理空间用途、结构和现场施工。三者常在同一工程里合作，却不能只靠其中一项完成其他工作。一个设计可以在图上成立，真正投入使用仍要经过加工、安装和后续维护。"
+      ],
+      "coreTurnParagraphsZh": [
+        "从一座塔的外形，转向能够共同工作的石块、接缝、材料和施工安排，灯塔才成为可以建出的工程。石块要加工成相互配合的形状，胶结材料要适应潮湿条件，运输和吊装要把部件送到位置。任何一项只在图纸上成立，都不能替其他环节完成工作。",
+        "使用之后，检查又把问题从塔身扩展到支撑岩石。1870年代塔下岩石开裂，说明稳固的塔体仍依赖会变化的环境。设计、施工和维护面对同一设施的不同阶段；决定继续使用、加固或替换，需要重新核对当时的条件。"
+      ],
+      "anchorsParagraphsZh": [
+        "1755年前代木塔毁于火灾，建设间隙由灯船维持航标；1756年Smeaton接受重建，1759年10月16日新塔点灯并使用24支蜡烛。",
+        "1870年代塔下岩石出现裂缝，1882年新灯塔接替。旧塔上半部后来迁至Plymouth Hoe，海上仍保留原塔下部遗存。灯船、石塔、支撑岩石和迁移后的遗存需要分别辨认，它们承担的航标或保存任务并不相同。"
+      ],
+      "branchesParagraphsZh": [
+        "07分为工程与工程行业、制造与加工、建筑与建造。工程方向包括化学工程、环境保护技术、电力能源、电子自动化、机械金属、机动车船舶飞机等，关注各类设备与系统怎样设计、运行和维护。",
+        "制造与加工包括食品加工、纺织、材料、采矿与开采，关注生产过程、加工条件与质量。建筑与建造包括建筑设计与城镇规划、建造与土木工程，关注空间、设施和实际建设。",
+        "领域相邻并不表示方法相同。环境科学通常在05研究环境对象和过程；07的环境保护技术则更侧重设计与实施保护系统。分类取决于主要学习内容。"
+      ],
+      "reflectionZh": "如果一座塔身仍稳定，但支撑它的岩石开始开裂，你会重新检查哪些地基、连接、材料和维护资料，再决定继续使用、加固还是替换？",
+      "boundaryZh": "这是理解结构、材料、施工与地基如何配合的一个历史窗口，工程、制造与建筑都有更广的独立历史。Smeaton使用的水硬性石灰需要与后来发展的Portland水泥区分。灯船维持航标、塔身点灯、支撑岩石变化与新塔接替，属于不同阶段的设施安排。",
+      "tagsZh": [
+        "工程",
+        "制造",
+        "建筑",
+        "Eddystone灯塔",
+        "John Smeaton",
+        "结构与材料"
+      ],
+      "references": [
+        {
+          "id": "trinity-eddystone",
+          "citation": "Trinity House. Eddystone Lighthouse.",
+          "url": "https://www.trinityhouse.co.uk/lighthouses-and-lightvessels/eddystone-lighthouse",
+          "useZh": "支持1755、1756、1759、1870年代岩石问题、1882替换及塔结构背景。",
+          "useEn": "Supports the 1755, 1756, and 1759 dates, the rock problems of the 1870s, the 1882 replacement, and the structural background of the tower."
+        },
+        {
+          "id": "ice-smeaton",
+          "citation": "Institution of Civil Engineers. Bell Rock Lighthouse and Smeaton’s Tower.",
+          "url": "https://ice.org.uk/what-is-civil-engineering/infrastructure-projects/bell-rock-lighthouse-and-smeatons-tower",
+          "useZh": "支持石块连接、湿环境硬化材料和海上施工等工程方法。",
+          "useEn": "Supports the stone connections, materials that harden in wet conditions, and offshore construction methods."
+        },
+        {
+          "id": "ice-smeaton-letters",
+          "citation": "Institution of Civil Engineers. Things we can learn about Smeaton from his letters.",
+          "url": "https://www.ice.org.uk/news-views-insights/inside-infrastructure/things-we-can-learn-about-smeaton-from-his-letters",
+          "useZh": "支持施工组织、材料和接缝相关指令的历史背景。",
+          "useEn": "Supports the historical background of construction organization and instructions concerning materials and joints."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持06/07/08正式分类与分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal classifications and branches for fields 06, 07, and 08; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Engineering, Manufacturing and Construction",
+      "titleEn": "Connections on the Reef",
+      "summaryEn": "A wooden lighthouse burned down, but the offshore rocks still needed a navigational aid. How would stone, joints, and construction work together to light a new tower?",
+      "originStoryParagraphsEn": [
+        "In 1755, the previous wooden lighthouse on the Eddystone Rocks was destroyed by fire. Trinity House used a lightvessel to maintain a navigational aid during rebuilding. In 1756, John Smeaton accepted the task of constructing another tower on the offshore rocks. Many of the workers were Cornish tin miners; the stone tower they would build had to guide mariners again.",
+        "Smeaton used a profile that widened toward the base, often compared with an oak tree, and used granite as an important material for the base and exterior. Adjacent stones were shaped to form dovetail joints and were connected with marble dowels. The stones had to be cut, positioned, and joined in mutually compatible forms so that the tower could become continuous masonry rather than remain a collection of separate pieces.",
+        "He also tested hydraulic lime that could harden in damp conditions and underwater. Stone had to travel from ships to the reef, be lifted into place, connected, and have its joints filled. Shaped blocks, a binder usable in wet conditions, and lifting arrangements had to work together at the site to turn separate parts into a tower.",
+        "On October 16, 1759, the new lighthouse was lit, and Trinity House records that its light used 24 candles. More than a century later, inspections in the 1870s found cracking in the rock beneath the tower. The tower itself remained stable, but its support conditions had changed, so maintaining the navigational function required consideration of a new site and structural arrangement.",
+        "In 1882, a new lighthouse replaced Smeaton’s tower. The upper part of the old tower was later moved to Plymouth Hoe for preservation, while the lower remains of the original tower were left at Eddystone. Today, the two locations preserve different parts of the same engineering work: one section is displayed away from the original site, while another remains on the reef."
+      ],
+      "whyNeededParagraphsEn": [
+        "A lighthouse must guide ships, but drawing its shape does not make it stand offshore. Cutting stones, joining adjacent parts, using a binder in wet conditions, and moving components by ship and lifting equipment all require workable arrangements. Engineering turns needs and physical constraints into systems that can be manufactured, built, operated and maintained. Inspection continues to check whether conditions have changed, including the rock outside the tower itself.",
+        "Manufacturing addresses consistent processing of materials and products, control of processes, dimensions and quality, and repeatable production. Architecture and construction also address spatial use, structures and work on site. These areas often collaborate on one project, but none can perform all the others’ tasks. A design that works on paper still needs fabrication, installation and maintenance before and during use."
+      ],
+      "coreTurnParagraphsEn": [
+        "A buildable lighthouse required a move from the tower’s outline to stones, joints, materials and construction arrangements that worked together. Blocks had to fit one another, the binder had to suit wet conditions, and transport and lifting had to place components correctly. A solution that worked only on a drawing could not complete the other stages.",
+        "After construction, inspection extended the question from the tower to its supporting rock. Cracking beneath it in the 1870s showed that a stable structure still depended on a changing environment. Design, construction and maintenance address different stages of the same facility. Continued use, reinforcement or replacement requires checking the conditions that apply then."
+      ],
+      "anchorsParagraphsEn": [
+        "The previous wooden lighthouse burned down in 1755, and a light vessel maintained the navigational aid during the construction interval. Smeaton accepted the rebuilding task in 1756, and the new tower was lit on October 16, 1759, using 24 candles.",
+        "Cracking appeared in the rock beneath the tower in the 1870s, and a new lighthouse replaced it in 1882. The upper part of the old tower was later moved to Plymouth Hoe, while lower remains of the original tower were left at sea. The lightvessel, stone tower, supporting rock and relocated remains should be identified separately: their navigational or preservation functions differ."
+      ],
+      "branchesParagraphsEn": [
+        "Field 07 has three groups: engineering and engineering trades, manufacturing and processing, and architecture and construction. Engineering includes chemical engineering, environmental protection technology, electricity and energy, electronics and automation, mechanics and metal trades, and motor vehicles, ships and aircraft, focusing on designing, operating, and maintaining equipment and systems.",
+        "Manufacturing and processing includes food processing, textiles, materials, and mining and extraction, with attention to production processes, processing conditions, and quality. Architecture and construction includes architecture and town planning, and building and civil engineering, addressing spaces, infrastructure, and actual construction.",
+        "Neighboring fields need not use identical methods. Environmental science in field 05 generally examines environmental objects and processes; environmental protection technology in field 07 puts more emphasis on designing and implementing protection systems. Classification follows the main study content."
+      ],
+      "reflectionEn": "If a tower itself remains stable but the rock supporting it begins to crack, which foundation, joint, material, and maintenance records would you re-examine before deciding whether to keep using, strengthen, or replace it?",
+      "boundaryEn": "This is one historical window onto how structures, materials, construction, and foundations work together; engineering, manufacturing, and architecture have broader independent histories. Smeaton’s hydraulic lime is distinct from later Portland cement. The lightvessel, lighting of the tower, changing support rock, and replacement tower belong to different stages of the navigational arrangements.",
+      "tagsEn": [
+        "Engineering",
+        "Manufacturing",
+        "Construction",
+        "Eddystone Lighthouse",
+        "John Smeaton",
+        "Structures and Materials"
+      ]
+    }
   },
   {
-    code: "08",
-    subjectTitle: "Agriculture, forestry, fisheries and veterinary",
-    subjectTitleZh: "农业、林业、渔业与兽医",
-    title: "Agriculture, forestry, fisheries and veterinary",
-    titleZh: "古老的约定",
-    summary: "Xiaohe learns through tomatoes, pests, farmers, and livestock that agriculture is a long relationship among land, water, animals, people, production, and responsibility.",
-    summaryZh: "小禾从番茄、虫害、农户和养殖场里，明白农业与生态是一种关于土地、水、动物、人、生产和责任的长期关系。",
-    scene: "Xiaohe first dislikes the hot, muddy vegetable field, until her grandmother shows her that plants need care that is suitable rather than simply abundant.",
-    sceneZh: "小禾一开始不喜欢炎热又泥泞的菜地，直到外婆让她看见植物需要的不是越多越好，而是刚刚合适。",
-    storyBody: `When Xiaohe was a child, she did not like going to her grandmother's vegetable field.
-
-It was too hot in summer. Mud stuck to her shoes, and there were many mosquitoes. But her grandmother went to the field every day to check the vegetables: whether there were insects, whether the soil was too dry, whether the cucumbers needed support, and whether the leafy vegetables were damaged by the sun.
-
-Xiaohe thought it was troublesome. She asked her grandmother, “Don't vegetables just grow after you plant them?”
-
-Her grandmother smiled and said, “They may grow, but they may not grow well.”
-
-One summer holiday, Xiaohe wanted to grow a pot of tomatoes by herself. She put the seeds into a flowerpot, watered them a lot every day, and placed the pot in the sunniest place on the balcony. At first, the tomato seedlings grew quickly, and she was happy. But after a few days, the leaves began to turn yellow, and the soil was always wet. In the end, the small seedlings fell down.
-
-Xiaohe was very disappointed. She felt that she had worked hard, so why did she still fail?
-
-Her grandmother did not say she was foolish. She only showed her the soil in the pot. The soil was too wet, so the roots could not breathe. The sunlight was too strong for the young seedlings. Several seedlings were too close to each other, so they competed for space. Her grandmother said, “Taking care of plants does not mean giving them more and more. Water, light, soil, and temperature all need to be suitable.”
-
-For the first time, Xiaohe realized that growing something is not simply “letting it grow.” People first need to understand what it needs, and also what it can bear.
-
-Later, the village had an insect problem. Many vegetable leaves had holes. Some people suggested using more pesticide immediately, because that would be the fastest solution. But her grandmother did not agree at once. She first checked how many insects there were, which vegetables were most affected, and whether nearby families had the same problem.
-
-Xiaohe did not understand. “Why not just spray pesticide?”
-
-Her grandmother said, “Pesticide can kill insects, but it may also harm other things. If we use too much, the soil may be affected, and people may worry about eating the vegetables. If we can use less, we should not use it carelessly.”
-
-In the end, her grandmother first cut off the most damaged leaves, covered some vegetables with a net, and asked neighbors to deal with the problem together. The insects did not disappear immediately, but the problem was slowly controlled.
-
-Only then did Xiaohe understand that land is not only a place that produces food. There are plants, insects, water, soil, weather, and people's daily choices. One decision may seem to affect only a few leaves, but it can actually affect the whole field.
-
-At university, Xiaohe joined a rural research project. She interviewed several farmers to understand why they were not willing to move quickly to more environmentally friendly farming methods. At first, she thought they simply “did not care enough about the environment.” But after the interviews, she found that the situation was more complex.
-
-Some farmers worried that their harvest would decrease.
-Some lacked technical guidance.
-Some knew that land should be protected in the long term, but they still had to repay loans, pay workers, and secure their income.
-Some had tried new methods, but the market did not give them a higher price.
-
-Xiaohe slowly understood that agriculture is not as relaxed as it looks in beautiful countryside photos. Every day, it has to make choices between natural conditions, market prices, family income, food safety, and environmental protection. People live from the land, but they also change the land. People want a harvest, but they also have responsibility for the land.
-
-Later, she visited a livestock farm. The staff told her that animal health was not only about giving animals enough food. Space, disease prevention, medicine use, and cleaning conditions all affected animals. They also affected food safety and human health. For the first time, Xiaohe connected animals, food, the environment, and people together.
-
-After that, when she saw a bowl of rice, a fish, a wooden table, or a box of eggs, she no longer looked only at whether it was cheap, tasty, or useful. She would think: Where does it come from? Has the land been overused? Is the water polluted? Are the animals healthy? Can the people who produce it make a living? Can this way of production continue?
-
-These questions helped her understand that agriculture and ecology are not simply about taking things from nature. They are more like a long-term relationship. Humans obtain food and materials from land, water, forests, and animals, but they also need to control how much they take. A real harvest is not only high production today. It also means that after years, or even decades, the land can still grow, the water can still flow, and people and other living things can still live together.`,
-    storyBodyZh: `小禾小时候，最不喜欢去外婆家的菜地。
-
-夏天太热，泥土会粘在鞋底，蚊子也多。外婆却每天都要去地里看看：今天有没有虫，土是不是太干，黄瓜是不是该搭架，青菜有没有被晒坏。
-
-小禾觉得很麻烦。她问外婆：“菜不是种下去就会长吗？”
-
-外婆笑了笑，说：“会长，但不一定长得好。”
-
-有一年暑假，小禾想自己种一盆番茄。她把种子撒进花盆里，每天浇很多水，还把花盆放在阳台最晒的地方。刚开始，番茄苗长得很快，她很高兴。可过了几天，叶子开始发黄，土也总是湿湿的。最后，几棵小苗都倒了。
-
-小禾很失望。她觉得自己明明很用心，为什么还是失败了。
-
-外婆没有说她笨，只带她看了看花盆里的土。土太湿，根透不过气；阳光太强，小苗还承受不了；几棵苗挤在一起，也会互相抢空间。外婆说：“照顾植物，不是给得越多越好。水、光、土、温度，都要合适。”
-
-小禾第一次发现，种东西不是简单地“让它长”。人要先理解它需要什么，也要理解它能承受什么。
-
-后来，村里遇到了一次虫害。很多菜叶被咬出洞。有人建议马上多喷药，这样最快。外婆却没有立刻同意。她先看虫子多不多，哪些菜受影响最严重，又问隔壁几家是不是也有同样情况。
-
-小禾不理解：“直接喷药不就好了？”
-
-外婆说：“药能杀虫，也可能伤到别的东西。喷多了，土会受影响，吃菜的人也会担心。能少用，就不要乱用。”
-
-最后，外婆先剪掉受害最重的叶子，又用纱网盖住一部分菜，还请邻居一起处理。虫害没有马上消失，但慢慢被控制住了。
-
-小禾那时才明白，土地不是一个只负责生产的地方。它里面有植物、虫子、水、土、天气，也有人每天的选择。一个决定看起来只影响一片菜叶，实际上可能影响整块地。
-
-大学时，小禾参加了一个乡村调研项目。她访问了几位种植户，想了解他们为什么不愿意马上转向更环保的种植方式。她原来以为，大家只是“不够重视环境”。但访谈后，她发现事情没那么简单。
-
-有的农户担心产量下降。
-有的农户缺少技术指导。
-有的人知道长期来看应该保护土地，但眼前还要还贷款、付人工、保证收入。
-也有人试过新方法，可市场并没有给更高的价格。
-
-小禾慢慢明白，农业不是田园照片里那么轻松。它每天都在自然条件、市场价格、家庭生计、食品安全和环境保护之间做选择。人靠土地生活，也会改变土地；人希望获得收成，也必须承担对土地的责任。
-
-后来，她去参观一个养殖场。工作人员告诉她，动物健康不只是给它们吃饱。饲养空间、疫病预防、用药管理、清洁条件，都会影响动物，也会影响食品安全和人的健康。小禾第一次把“动物”“食物”“环境”和“人”放在一起看。
-
-从那以后，她再看到一碗米饭、一条鱼、一件木制家具、一盒鸡蛋时，不再只看它们是不是便宜、好吃或好用。她会想到：它从哪里来？土地是否被过度使用？水源有没有被污染？动物是否健康？生产的人能不能维持生活？这种方式还能不能持续下去？
-
-这些问题让她理解，农业与生态并不是简单地从自然中拿东西。它更像一种长期关系。人类从土地、水域、森林和动物那里获得食物与材料，也必须学会控制自己的索取。真正的丰收，不只是眼前产量高，而是几年以后、几十年以后，土地仍然能生长，水仍然能流动，人和其他生命仍然可以一起活下去。`,
-    formalExplanation: "This is what Agriculture, forestry, fisheries and veterinary are mainly concerned with. This field studies how people grow crops, raise animals, use forests and waters, care for animals, protect resources, and maintain the balance between food production and the natural environment. It focuses on crops, soil, water, climate, forests, fisheries, animal health, food safety, and sustainable production. Its roots are connected with early human practices of farming, herding, fishing, domesticating animals, using forests, and caring for livestock. Later, with the development of agricultural science, ecological protection, food safety, veterinary medicine, and sustainable development, Agriculture, forestry, fisheries and veterinary gradually became a formal academic field. It studies how people obtain what they need from nature, and how they can keep a longer-lasting relationship with nature.",
-    formalExplanationZh: "这就是“农业与生态”真正关心的内容。它研究人如何种植、养殖、利用森林和水域，也研究人如何照顾动物、保护资源，并维持食物生产与自然环境之间的平衡。它关注作物、土壤、水、气候、森林、渔业、动物健康、食品安全和可持续生产等问题。在正式学科中，它对应的是 Agriculture, forestry, fisheries and veterinary（农业、林业、渔业与兽医）。它的来源与人类最早的耕种、放牧、捕鱼、驯养动物、使用森林和照顾牲畜的实践有关。后来，随着农业科学、生态保护、食品安全、动物医学和可持续发展理念的形成，农业与生态逐渐成为正式学科领域，用来研究人如何从自然中获得生活所需，也如何与自然保持更长久的关系。",
-    coreInsight: "Agriculture, forestry, fisheries and veterinary are not only about producing food and materials. They ask how people can live from land, water, forests, and animals without exhausting the relationships that sustain life.",
-    coreInsightZh: "农业、林业、渔业与兽医不只是生产食物和材料，而是追问人如何依靠土地、水域、森林和动物生活，同时不耗尽支撑生命的关系。",
-    analogyBoundary: "This story uses vegetable fields, tomatoes, pests, farmers, and a livestock farm to show the field's core relationship, but Agriculture, forestry, fisheries and veterinary also include forestry, fisheries, veterinary medicine, food systems, resource management, ecology, public health, and sustainable development.",
-    analogyBoundaryZh: "这个故事用菜地、番茄、虫害、农户和养殖场说明该领域的核心关系，但农业、林业、渔业与兽医还包括林业、渔业、动物医学、食物系统、资源管理、生态、公共健康和可持续发展等更广问题。",
-    sourceBatchId: "subject-intro-08-agriculture-forestry-fisheries-veterinary-ancient-promise-20260630",
+    "code": "08",
+    "subjectTitle": "Agriculture, Forestry, Fisheries and Veterinary",
+    "subjectTitleZh": "农业、林业、渔业与兽医",
+    "title": "The Long Record of the Same Field",
+    "titleZh": "同一块田的长记录",
+    "summary": "After the winter wheat harvest, grain, straw, and figures remained. Years later, how could researchers connect that evidence back to the plots of its time?",
+    "summaryZh": "冬小麦收获之后，谷粒、秸秆与数字分别留下。多年以后，人们怎样把这些证据重新对应到当年的田块？",
+    "scene": "In autumn 1843, John Bennet Lawes and Joseph Henry Gilbert sowed winter wheat on Broadbalk at Rothamsted, with the first harvest following in summer 1844. Early plots received farmyard manure, different mineral-nutrient combinations, or no fertilizer. The scheme continued to change in its first years as plots and treatments formed the basis for later comparisons.",
+    "sceneZh": "1843年秋，John Bennet Lawes和Joseph Henry Gilbert在Rothamsted的Broadbalk播下冬小麦，1844年夏获得第一次收获。早期田块采用农家肥、不同矿质养分组合和不施肥等不同处理。试验方案在最初几年继续调整，不同处理与田块逐渐形成了后续比较的基础。",
+    "storyBody": "In autumn 1843, John Bennet Lawes and Joseph Henry Gilbert sowed winter wheat on Broadbalk at Rothamsted, with the first harvest following in summer 1844. Early plots received farmyard manure, different mineral-nutrient combinations, or no fertilizer. The scheme continued to change in its first years as plots and treatments formed the basis for later comparisons.\n\nThe long-term experiment guide describes early harvesting: wheat was cut with sickles, sheaves were taken to a barn, and the grain was threshed. Grain and straw yields were measured separately, and samples were kept by plot, treatment, and year. The harvest left different forms of evidence: yields entered the records, while retained grain and straw could be analyzed later. A harvest thus left numbers and physical material beyond the barn.\n\nAs harvest followed harvest, each plot accumulated grain and straw data associated with different treatment periods, while preserved samples left material for later analysis. The value of the record came from keeping treatment, plot, year, and harvest results linked, rather than simply identifying which plot produced the most in any one year.\n\nMost Broadbalk treatments were relatively stable from 1852 to 1968; later, different sections and periods saw changes in varieties, rotations, pesticides, lime, and other management. Plot plans, treatment descriptions, and yield tables need to be read together: the variety and treatment behind a stretch of data, and the conditions that changed between years, all affect later comparison.\n\nBroadbalk today preserves more than the field itself: it also retains long-term yield tables, records of treatment changes, and preserved samples. Later researchers can follow the years back through grain, straw, plot treatments, and sample records, then place new analysis back into the management context of the time. The preserved evidence itself also has gaps; not every early sample survives intact.",
+    "storyBodyZh": "1843年秋，John Bennet Lawes和Joseph Henry Gilbert在Rothamsted的Broadbalk播下冬小麦，1844年夏获得第一次收获。早期田块采用农家肥、不同矿质养分组合和不施肥等不同处理。试验方案在最初几年继续调整，不同处理与田块逐渐形成了后续比较的基础。\n\n长期试验指南记述了早期的收获方式：小麦用镰刀收割，禾束运到谷仓后脱粒。谷粒和秸秆产量分别计量，样品按田块、处理和年份保存。收获物分成了不同的证据：产量写入记录，留下的谷粒与秸秆则能在后来接受分析。田间的一次收成，因而在谷仓之外继续留下数字和实物。\n\n随着一年又一年收获，同一田块逐渐积累起对应不同处理时期的谷粒与秸秆数据，保存样品也给后来的分析留下材料。记录的价值来自处理、田块、年份和收获结果彼此能够对应，而不是只看某一年哪块地收得最多。\n\n1852至1968年间，大部分Broadbalk处理相对稳定；后来不同部分和时期又出现品种、轮作、农药、石灰等管理调整。田块图、处理说明和产量表需要一起阅读：一段数据对应什么品种、什么处理，哪些条件在前后年份发生了改变，都会影响后续比较。\n\n今天Broadbalk留下的不只是田地，还有长期产量表、处理变更记录和保存样品。后继研究者能够沿年份回查谷粒、秸秆、田块处理和样品资料，再把新的分析放回当时的管理背景；保存资料本身也有缺口，并非所有早期样品都完整无损。",
+    "formalExplanation": "A high yield this year does not by itself tell a farmer how to fertilize next year. Weather, soil, varieties and management all contribute to a harvest, while crops grow again in the following season. Agriculture records treatments, compares results and examines the conditions in which they apply, considering current yields alongside production over time. Keeping grain, straw and management records lets later researchers reanalyse a completed harvest rather than simply inherit its original conclusion.\n\nForestry deals with forests that grow over longer periods, fisheries with aquatic populations and production, and veterinary practice with animal health, disease and care. Each examines how living systems respond to their environments and interventions, but uses different scales, goals and professional methods. A field experiment illustrates the need for continued comparison without replacing training in those other areas or prescribing a universal practice.",
+    "formalExplanationZh": "一块地今年收得多，仍不能直接回答明年该怎样施肥。天气、土壤、品种和人的管理都参与了这次收成，作物还会在下一季继续生长。农业需要记录处理、比较结果并检查适用条件，把眼前产量和长期生产放在一起考虑。保存谷粒、秸秆和管理记录，让后来的人能重新分析一次已经结束的收获，而不只沿用当时的结论。\n\n林业面对生长更久的森林，渔业面对水域种群与生产，兽医面对动物健康、疾病与照护。它们同样需要了解活体系统对环境和干预的反应，但观察尺度、目标和专业方法各不相同。农业试验可以帮助理解持续比较的必要，不能代替其他方向的训练或直接给出通用做法。",
+    "coreInsight": "Long-term comparison changes the question from which plot yielded most in one year to how that plot changes over time under different conditions. Fertilized and unmanured treatments leave different harvest records. Plots, years, grain, straw and samples must remain linked, and changes in varieties, rotation or management must be assigned to the periods in which they occurred.\n\nLater researchers can then return to those conditions before interpreting differences. Continuous records expand the evidence available for comparison without controlling weather, removing soil variation or turning the early design into a modern randomized replicated trial. Results for winter wheat at one site still need testing elsewhere and with other crops before their range of application is established.",
+    "coreInsightZh": "从某一年哪块地收得多，转向这块地在不同条件下怎样连续变化，是长期比较提供的新问题。施肥与不施肥处理留下不同收获记录，田块、年份、谷粒、秸秆和样品要彼此对应；品种、轮作或管理改变时，也必须记清发生在哪一段。\n\n后来研究者因此可以回到具体条件，再决定怎样解释差异。连续记录扩大了可比较的材料，却不会自动控制天气、消除土壤差异或把早期设计变成现代随机化重复试验。某地冬小麦的结果，还要在其他地点和作物条件下检验，才能判断可以应用到哪里。",
+    "analogyBoundary": "Broadbalk is a long-term winter wheat experiment at a particular site and cannot control the weather. Its early design differs from commonly used modern randomized replicated trials, and treatments and management have changed. The sample archive records early losses through damaged containers; material can be revisited, but its completeness must be checked item by item.",
+    "analogyBoundaryZh": "Broadbalk是特定地点的长期冬小麦试验，无法控制天气。它的早期设计与现代常用随机化重复试验不同，处理和管理也曾调整。样品档案记载，一些早期样品因容器损坏而丢失；资料可供回查，但完整程度需要逐项判断。",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "reflectionQuestion": "If a long-term field experiment changes treatments, varieties, or rotations in different years, how would you keep plots, years, management changes, and samples linked so that later researchers can judge which phases of the data can still be compared?",
+    "reflectionQuestionZh": "如果一项长期田间试验在不同年份更换了处理、品种或轮作，你会怎样把田块、年份、管理变更和样品对应起来，判断哪些阶段的数据仍可以比较？",
+    "subjectOrigin": {
+      "id": "subject-origin-08-agriculture",
+      "categoryCode": "08",
+      "subjectTitleZh": "农业、林业、渔业与兽医",
+      "titleZh": "同一块田的长记录",
+      "summaryZh": "冬小麦收获之后，谷粒、秸秆与数字分别留下。多年以后，人们怎样把这些证据重新对应到当年的田块？",
+      "originStoryParagraphsZh": [
+        "1843年秋，John Bennet Lawes和Joseph Henry Gilbert在Rothamsted的Broadbalk播下冬小麦，1844年夏获得第一次收获。早期田块采用农家肥、不同矿质养分组合和不施肥等不同处理。试验方案在最初几年继续调整，不同处理与田块逐渐形成了后续比较的基础。",
+        "长期试验指南记述了早期的收获方式：小麦用镰刀收割，禾束运到谷仓后脱粒。谷粒和秸秆产量分别计量，样品按田块、处理和年份保存。收获物分成了不同的证据：产量写入记录，留下的谷粒与秸秆则能在后来接受分析。田间的一次收成，因而在谷仓之外继续留下数字和实物。",
+        "随着一年又一年收获，同一田块逐渐积累起对应不同处理时期的谷粒与秸秆数据，保存样品也给后来的分析留下材料。记录的价值来自处理、田块、年份和收获结果彼此能够对应，而不是只看某一年哪块地收得最多。",
+        "1852至1968年间，大部分Broadbalk处理相对稳定；后来不同部分和时期又出现品种、轮作、农药、石灰等管理调整。田块图、处理说明和产量表需要一起阅读：一段数据对应什么品种、什么处理，哪些条件在前后年份发生了改变，都会影响后续比较。",
+        "今天Broadbalk留下的不只是田地，还有长期产量表、处理变更记录和保存样品。后继研究者能够沿年份回查谷粒、秸秆、田块处理和样品资料，再把新的分析放回当时的管理背景；保存资料本身也有缺口，并非所有早期样品都完整无损。"
+      ],
+      "whyNeededParagraphsZh": [
+        "一块地今年收得多，仍不能直接回答明年该怎样施肥。天气、土壤、品种和人的管理都参与了这次收成，作物还会在下一季继续生长。农业需要记录处理、比较结果并检查适用条件，把眼前产量和长期生产放在一起考虑。保存谷粒、秸秆和管理记录，让后来的人能重新分析一次已经结束的收获，而不只沿用当时的结论。",
+        "林业面对生长更久的森林，渔业面对水域种群与生产，兽医面对动物健康、疾病与照护。它们同样需要了解活体系统对环境和干预的反应，但观察尺度、目标和专业方法各不相同。农业试验可以帮助理解持续比较的必要，不能代替其他方向的训练或直接给出通用做法。"
+      ],
+      "coreTurnParagraphsZh": [
+        "从某一年哪块地收得多，转向这块地在不同条件下怎样连续变化，是长期比较提供的新问题。施肥与不施肥处理留下不同收获记录，田块、年份、谷粒、秸秆和样品要彼此对应；品种、轮作或管理改变时，也必须记清发生在哪一段。",
+        "后来研究者因此可以回到具体条件，再决定怎样解释差异。连续记录扩大了可比较的材料，却不会自动控制天气、消除土壤差异或把早期设计变成现代随机化重复试验。某地冬小麦的结果，还要在其他地点和作物条件下检验，才能判断可以应用到哪里。"
+      ],
+      "anchorsParagraphsZh": [
+        "Broadbalk于1843年秋播种冬小麦，1844年夏首次收获。Lawes与Gilbert长期合作，形成不同处理、谷粒与秸秆分开记录以及样品保存的研究传统。",
+        "1852至1968年大部分处理较稳定；后来不同部分和时期继续调整品种、轮作、农药、石灰等管理。长期试验档案同时保存这些变更。读取一段产量数据时，应同时查相应年份的田块图和处理说明，避免把不同阶段当作完全相同的条件。"
+      ],
+      "branchesParagraphsZh": [
+        "08包括农业、林业、渔业和兽医。农业中的作物与畜牧生产、园艺，关心怎样栽培、繁育并管理生产；林业处理森林和林地的长期经营；渔业研究并管理水域生物与生产。",
+        "兽医关注动物健康、疾病与照护。各方向会使用不同的观察、试验和专业判断，时间尺度也不同。长期小麦记录可以作为农业研究的入口，动物健康、森林经营或渔业生产则应沿各自分支继续学习。",
+        "生态与环境科学通常归05；08侧重栽培、养殖、资源经营或动物健康等实践对象。两类研究可以协作，课程归类仍取决于主要学习内容。"
+      ],
+      "reflectionZh": "如果一项长期田间试验在不同年份更换了处理、品种或轮作，你会怎样把田块、年份、管理变更和样品对应起来，判断哪些阶段的数据仍可以比较？",
+      "boundaryZh": "Broadbalk是特定地点的长期冬小麦试验，无法控制天气。它的早期设计与现代常用随机化重复试验不同，处理和管理也曾调整。样品档案记载，一些早期样品因容器损坏而丢失；资料可供回查，但完整程度需要逐项判断。",
+      "tagsZh": [
+        "农业",
+        "林业",
+        "渔业",
+        "兽医",
+        "Broadbalk",
+        "长期试验"
+      ],
+      "references": [
+        {
+          "id": "era-broadbalk",
+          "citation": "Rothamsted Research, Electronic Rothamsted Archive. Broadbalk Winter Wheat Experiment.",
+          "url": "https://www.era.rothamsted.ac.uk/experiment/rbk1",
+          "useZh": "支持1843播种、1844首次收获、不同处理以及谷粒与秸秆记录。",
+          "useEn": "Supports the autumn 1843 sowing, the first harvest in 1844, the different treatments, and the separate grain and straw records."
+        },
+        {
+          "id": "rothamsted-history",
+          "citation": "Rothamsted Research. History of Rothamsted Research.",
+          "url": "https://www.rothamsted.ac.uk/history-rothamsted-research",
+          "useZh": "支持Lawes与Gilbert长期合作及Rothamsted机构背景。",
+          "useEn": "Supports the long collaboration between Lawes and Gilbert and the institutional background of Rothamsted."
+        },
+        {
+          "id": "rothamsted-lte-guide",
+          "citation": "Rothamsted Research (2019). Long-Term Experiments Guidebook.",
+          "url": "https://www.rothamsted.ac.uk/sites/default/files/national-capability/long-term-experiments/Web_LTE%20Guidebook_2019%20Final2.pdf",
+          "useZh": "支持历史收割、脱粒、谷粒与秸秆产量、样品保存及处理变化。",
+          "useEn": "Supports the historical harvesting and threshing methods, grain and straw yields, sample preservation, and treatment changes."
+        },
+        {
+          "id": "era-broadbalk-nutrients",
+          "citation": "Rothamsted Research, Electronic Rothamsted Archive. Broadbalk Crop Nutrient Content.",
+          "url": "https://www.era.rothamsted.ac.uk/info/rbk1/nutrients",
+          "useZh": "从试验开始保存谷粒和秸秆样品；部分早期样品因容器损坏丢失，后期取样范围也曾改变。",
+          "useEn": "Supports grain/straw samples kept from the start, early losses through damaged containers, and later changes in sampling scope."
+        },
+        {
+          "id": "rothamsted-experiment-changes",
+          "citation": "Rothamsted Research (2024). Why do we make changes to long-term experiments at Rothamsted?",
+          "url": "https://www.rothamsted.ac.uk/news/why-do-we-make-changes-long-term-experiments-rothamsted",
+          "useZh": "支持长期试验会随管理和研究问题调整，需要追查变更记录。",
+          "useEn": "Supports the fact that long-term experiments change with management and research questions and that those changes need to be traceable."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "支持06/07/08正式分类与分支；教育分类不证明共同历史起源。",
+          "useEn": "Supports the formal classifications and branches for fields 06, 07, and 08; the education classification does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Agriculture, Forestry, Fisheries and Veterinary",
+      "titleEn": "The Long Record of the Same Field",
+      "summaryEn": "After the winter wheat harvest, grain, straw, and figures remained. Years later, how could researchers connect that evidence back to the plots of its time?",
+      "originStoryParagraphsEn": [
+        "In autumn 1843, John Bennet Lawes and Joseph Henry Gilbert sowed winter wheat on Broadbalk at Rothamsted, with the first harvest following in summer 1844. Early plots received farmyard manure, different mineral-nutrient combinations, or no fertilizer. The scheme continued to change in its first years as plots and treatments formed the basis for later comparisons.",
+        "The long-term experiment guide describes early harvesting: wheat was cut with sickles, sheaves were taken to a barn, and the grain was threshed. Grain and straw yields were measured separately, and samples were kept by plot, treatment, and year. The harvest left different forms of evidence: yields entered the records, while retained grain and straw could be analyzed later. A harvest thus left numbers and physical material beyond the barn.",
+        "As harvest followed harvest, each plot accumulated grain and straw data associated with different treatment periods, while preserved samples left material for later analysis. The value of the record came from keeping treatment, plot, year, and harvest results linked, rather than simply identifying which plot produced the most in any one year.",
+        "Most Broadbalk treatments were relatively stable from 1852 to 1968; later, different sections and periods saw changes in varieties, rotations, pesticides, lime, and other management. Plot plans, treatment descriptions, and yield tables need to be read together: the variety and treatment behind a stretch of data, and the conditions that changed between years, all affect later comparison.",
+        "Broadbalk today preserves more than the field itself: it also retains long-term yield tables, records of treatment changes, and preserved samples. Later researchers can follow the years back through grain, straw, plot treatments, and sample records, then place new analysis back into the management context of the time. The preserved evidence itself also has gaps; not every early sample survives intact."
+      ],
+      "whyNeededParagraphsEn": [
+        "A high yield this year does not by itself tell a farmer how to fertilize next year. Weather, soil, varieties and management all contribute to a harvest, while crops grow again in the following season. Agriculture records treatments, compares results and examines the conditions in which they apply, considering current yields alongside production over time. Keeping grain, straw and management records lets later researchers reanalyse a completed harvest rather than simply inherit its original conclusion.",
+        "Forestry deals with forests that grow over longer periods, fisheries with aquatic populations and production, and veterinary practice with animal health, disease and care. Each examines how living systems respond to their environments and interventions, but uses different scales, goals and professional methods. A field experiment illustrates the need for continued comparison without replacing training in those other areas or prescribing a universal practice."
+      ],
+      "coreTurnParagraphsEn": [
+        "Long-term comparison changes the question from which plot yielded most in one year to how that plot changes over time under different conditions. Fertilized and unmanured treatments leave different harvest records. Plots, years, grain, straw and samples must remain linked, and changes in varieties, rotation or management must be assigned to the periods in which they occurred.",
+        "Later researchers can then return to those conditions before interpreting differences. Continuous records expand the evidence available for comparison without controlling weather, removing soil variation or turning the early design into a modern randomized replicated trial. Results for winter wheat at one site still need testing elsewhere and with other crops before their range of application is established."
+      ],
+      "anchorsParagraphsEn": [
+        "Broadbalk was sown with winter wheat in autumn 1843 and produced its first harvest in summer 1844. Through the long collaboration of Lawes and Gilbert, the experiment developed a tradition of different treatments, separate records for grain and straw, and preservation of samples.",
+        "Most treatments were relatively stable from 1852 to 1968; later, different parts and periods continued to change varieties, rotations, pesticides, lime, and other management. The long-term experiment archive records these changes as well. A stretch of yield data should be read with the plot plan and treatment description for those years, rather than treating every period as identical."
+      ],
+      "branchesParagraphsEn": [
+        "Field 08 includes agriculture, forestry, fisheries, and veterinary studies. Crop and livestock production and horticulture concern cultivation, breeding, and production management; forestry addresses long-term management of forests and woodlands; fisheries study and manage aquatic organisms and production.",
+        "Veterinary studies concern animal health, disease, and care. Each area uses its own observations, trials, and professional judgments, often on different timescales. Long-term wheat records offer an entry into agricultural research; animal health, forest management, and fisheries production lead toward their respective branches.",
+        "Ecology and environmental science generally fall under field 05, while field 08 emphasizes practical objects such as cultivation, animal production, resource management, and animal health. The two can collaborate; classification still follows the main content of study."
+      ],
+      "reflectionEn": "If a long-term field experiment changes treatments, varieties, or rotations in different years, how would you keep plots, years, management changes, and samples linked so that later researchers can judge which phases of the data can still be compared?",
+      "boundaryEn": "Broadbalk is a long-term winter wheat experiment at a particular site and cannot control the weather. Its early design differs from commonly used modern randomized replicated trials, and treatments and management have changed. The sample archive records early losses through damaged containers; material can be revisited, but its completeness must be checked item by item.",
+      "tagsEn": [
+        "Agriculture",
+        "Forestry",
+        "Fisheries",
+        "Veterinary",
+        "Broadbalk",
+        "Long-Term Experiments"
+      ]
+    }
   },
+  {
+    "code": "09",
+    "subjectTitle": "Health and Welfare",
+    "subjectTitleZh": "健康与福利",
+    "title": "The Child Outside the School Gate",
+    "titleZh": "校门外的孩子",
+    "summary": "Twelve-year-old Louis had visited a clinic several times, yet he still could not enter school. What else did he need to enter a classroom for the first time?",
+    "summaryZh": "十二岁的路易斯已经多次去过诊所，却仍进不了学校。他第一次走进课堂，还缺哪一步？",
+    "scene": "On New York’s Lower East Side in the 1890s, Lillian Wald visited Louis’s home. She later recalled his mother holding a baby in one arm while washing butchers’ aprons for a living. Twelve-year-old Louis could not read street signs. He had visited a free clinic several times for eczema on his head, yet remained excluded from school.",
+    "sceneZh": "19世纪90年代的纽约下东区，莉莲·沃尔德来到路易斯家。她后来回忆，男孩的母亲一只手抱着婴儿，还在清洗屠夫围裙谋生。十二岁的路易斯不认识街道路牌上的字。他已多次去免费诊所处理头部湿疹，却仍被挡在学校之外。",
+    "storyBody": "On New York’s Lower East Side in the 1890s, Lillian Wald visited Louis’s home. She later recalled his mother holding a baby in one arm while washing butchers’ aprons for a living. Twelve-year-old Louis could not read street signs. He had visited a free clinic several times for eczema on his head, yet remained excluded from school.\n\nThe clinic had provided care instructions. His mother had an infant to look after and work to support the household; the care had to be carried out amid these daily demands. Wald helped with the prescribed care and with school admission. Her account connects these tasks: after addressing the problem on his head, the child still needed help entering school for the first time.\n\nIn September, Louis entered school. At lunchtime the following day, he ran up five flights to Wald’s residence and spelled out the words he had just learned. The child who could not read street signs now brought back words he could read.\n\nLouis entered school before the school-nursing trial. From 1893, Henry Street nurses visited Lower East Side homes; Wald and Mary Brewster also encountered other children excluded for medical reasons. Clinic, home, and school were different places: identifying a problem in one did not complete the work in the next. Helping one child enter school did not automatically provide that support for others.\n\nIn 1897, school doctors began examining children in schools. In October 1902, Lina Rogers participated in a school-nursing trial. Nurses followed up the care after inspection and visited families. Medical examinations identified problems; nursing carried the follow-up into schools and homes. From Louis’s individual case to more regular school-nursing arrangements, help after a clinical encounter increasingly became continuing work assigned to someone.",
+    "storyBodyZh": "19世纪90年代的纽约下东区，莉莲·沃尔德来到路易斯家。她后来回忆，男孩的母亲一只手抱着婴儿，还在清洗屠夫围裙谋生。十二岁的路易斯不认识街道路牌上的字。他已多次去免费诊所处理头部湿疹，却仍被挡在学校之外。\n\n诊所已经给出护理要求。母亲要照看婴儿，也要完成维持家计的工作；孩子的护理必须在这样的日常里落实。沃尔德帮助落实诊所的护理，也帮助处理入学。她的回忆把这两件工作连在一起：处理孩子头上的问题之后，还要让他进入课堂。\n\n九月，路易斯终于入学。第二天午休，他跑上五层楼，来到沃尔德的住所，把刚在学校学到的字拼读给她听。此前读不出路牌的孩子，现在带回了自己学会的字。\n\n路易斯的入学发生在学校护理试行以前。1893年起，亨利街的护士走进下东区的家庭，沃尔德与玛丽·布鲁斯特也遇到其他因医疗原因不能上学的孩子。诊所、家和学校是三个不同的地点：在一处发现问题之后，下一处仍需要有人接着处理。一个孩子得以入学，不会自动使其他孩子也得到这样的帮助。\n\n1897年，学校医生开始到学校检查儿童。1902年10月，莉娜·罗杰斯参与学校护理试行，护士继续处理检查之后的照护，也到家庭跟进。医疗检查发现了问题；随后的护理把工作带进学校与孩子家中。从路易斯的个案，到更稳定的学校护理安排，诊疗之后的帮助逐渐成为有人持续承担的工作。",
+    "formalExplanation": "A child may have a treatment plan from a clinic and still be unable to attend school. Work remains: who helps the family carry out care, who understands admission arrangements, and who follows up? Health and welfare connect physical and mental conditions, professional care and participation in daily life. Medicine, nursing, treatment technologies and rehabilitation have distinct tasks; welfare practice addresses care relationships, social support and access to learning, work and everyday activities.\n\nThese needs may occur together in one person while the work takes place in a clinic, home and school. An examination can identify a problem without completing the care that follows; social support does not remove the need for professional treatment. This historical window makes those handoffs concrete and prompts readers to check whether support actually reaches the person who needs it.",
+    "formalExplanationZh": "诊所已经给出治疗安排，一个孩子却仍不能上学，说明诊疗之后还有工作需要落实：谁协助家庭护理，谁了解学校接纳情况，下一步由谁跟进？健康与福利处理身心状况、专业照护与生活参与之间的衔接。医学、护理、诊疗技术和康复各有专业任务，福利实践则关注照护关系、社会支持，以及人能否继续学习、工作和生活。\n\n这些工作可能同时落在一个人身上，也可能分别在诊所、家和学校开展。一次检查能够识别问题，却不能自动完成后续照护；有了社会支持，也不代表可以省略专业治疗。这个历史窗口让不同环节的接力变得具体，提醒读者继续检查支持是否真正到达需要它的人。",
+    "coreInsight": "In Louis’s case, the shift was from prescribing care to helping the family carry it out and helping him enter school. Clinical work had begun, but care still had to fit around his mother’s infant and paid work; admission required another institution to accept him. Connecting those tasks enabled him to bring his newly learned words back to Wald.\n\nLater school nursing made follow-up after inspection part of a more regular arrangement: schools identified problems, and nurses contacted families and continued care. Health, social support and everyday participation meet in one person, while each task retains its own professional knowledge and responsibility. Completing one does not mean the others have been completed.",
+    "coreInsightZh": "从给出一次治疗安排，转向协助家庭落实护理并让孩子进入学校，是路易斯个案中可见的变化。诊所的工作已经开始，护理还要在母亲照看婴儿和维持家计的日常中完成；入学则需要另一处机构接纳。两项工作相接，孩子才能把新学的字带回给沃尔德听。\n\n后来学校护理把检查之后的跟进放进更稳定的工作安排：学校识别问题，护士联系家庭并继续照护。身心健康、社会支持和生活参与在一个人身上相遇，但各环节仍需要自己的专业知识和责任。完成其中一项，并不等于其他任务也已完成。",
+    "analogyBoundary": "This history offers a window into collaboration between health and welfare, rather than a shared origin of the whole field. Louis’s experience comes from Wald’s 1915 recollection; the development of school inspection and nursing belongs to the later institutional context. The inclusion of traditional and complementary medicine in an education classification does not establish its effectiveness.",
+    "analogyBoundaryZh": "这是一段理解健康与福利协作的历史，不是整个领域的共同起源。路易斯的经历来自沃尔德1915年的回忆；学校检查与校护的发展属于其后的制度背景。教育分类收录传统与补充医学，也不代表对其疗效作出判断。",
+    "reflectionQuestion": "A child has a treatment plan from a clinic but still cannot enter class. What else needs to be understood about care at home and admission to school to find where support has broken down? How can health professionals, the family, and the school examine this together without treating clinical care and social support as substitutes?",
+    "reflectionQuestionZh": "一个孩子已经得到诊所的治疗安排，却仍不能进入课堂。要判断支持断在哪里，还需要了解哪些家庭照护和学校接纳情况？医护人员、家庭与学校应怎样共同核查，而不把治疗和社会支持当作互相替代的办法？",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "subjectOrigin": {
+      "id": "subject-origin-09-health-welfare",
+      "categoryCode": "09",
+      "subjectTitleZh": "健康与福利",
+      "titleZh": "校门外的孩子",
+      "summaryZh": "十二岁的路易斯已经多次去过诊所，却仍进不了学校。他第一次走进课堂，还缺哪一步？",
+      "originStoryParagraphsZh": [
+        "19世纪90年代的纽约下东区，莉莲·沃尔德来到路易斯家。她后来回忆，男孩的母亲一只手抱着婴儿，还在清洗屠夫围裙谋生。十二岁的路易斯不认识街道路牌上的字。他已多次去免费诊所处理头部湿疹，却仍被挡在学校之外。",
+        "诊所已经给出护理要求。母亲要照看婴儿，也要完成维持家计的工作；孩子的护理必须在这样的日常里落实。沃尔德帮助落实诊所的护理，也帮助处理入学。她的回忆把这两件工作连在一起：处理孩子头上的问题之后，还要让他进入课堂。",
+        "九月，路易斯终于入学。第二天午休，他跑上五层楼，来到沃尔德的住所，把刚在学校学到的字拼读给她听。此前读不出路牌的孩子，现在带回了自己学会的字。",
+        "路易斯的入学发生在学校护理试行以前。1893年起，亨利街的护士走进下东区的家庭，沃尔德与玛丽·布鲁斯特也遇到其他因医疗原因不能上学的孩子。诊所、家和学校是三个不同的地点：在一处发现问题之后，下一处仍需要有人接着处理。一个孩子得以入学，不会自动使其他孩子也得到这样的帮助。",
+        "1897年，学校医生开始到学校检查儿童。1902年10月，莉娜·罗杰斯参与学校护理试行，护士继续处理检查之后的照护，也到家庭跟进。医疗检查发现了问题；随后的护理把工作带进学校与孩子家中。从路易斯的个案，到更稳定的学校护理安排，诊疗之后的帮助逐渐成为有人持续承担的工作。"
+      ],
+      "whyNeededParagraphsZh": [
+        "诊所已经给出治疗安排，一个孩子却仍不能上学，说明诊疗之后还有工作需要落实：谁协助家庭护理，谁了解学校接纳情况，下一步由谁跟进？健康与福利处理身心状况、专业照护与生活参与之间的衔接。医学、护理、诊疗技术和康复各有专业任务，福利实践则关注照护关系、社会支持，以及人能否继续学习、工作和生活。",
+        "这些工作可能同时落在一个人身上，也可能分别在诊所、家和学校开展。一次检查能够识别问题，却不能自动完成后续照护；有了社会支持，也不代表可以省略专业治疗。这个历史窗口让不同环节的接力变得具体，提醒读者继续检查支持是否真正到达需要它的人。"
+      ],
+      "coreTurnParagraphsZh": [
+        "从给出一次治疗安排，转向协助家庭落实护理并让孩子进入学校，是路易斯个案中可见的变化。诊所的工作已经开始，护理还要在母亲照看婴儿和维持家计的日常中完成；入学则需要另一处机构接纳。两项工作相接，孩子才能把新学的字带回给沃尔德听。",
+        "后来学校护理把检查之后的跟进放进更稳定的工作安排：学校识别问题，护士联系家庭并继续照护。身心健康、社会支持和生活参与在一个人身上相遇，但各环节仍需要自己的专业知识和责任。完成其中一项，并不等于其他任务也已完成。"
+      ],
+      "anchorsParagraphsZh": [
+        "1893年开始的亨利街上门护理与社会支持提供了这一协作窗口。沃尔德与玛丽·布鲁斯特后来还记录了更多因医疗原因被排除在学校之外的儿童。",
+        "1897年，学校医生开始进入学校开展检查；1902年10月，校护试行启动，莉娜·罗杰斯参与其中。前者是学校医疗检查的发展阶段，后者进一步把护士的后续照护连接到学校与家庭之间。"
+      ],
+      "branchesParagraphsZh": [
+        "今天的教育与训练分类ISCED-F 2013，把09健康与福利分成两组。健康方向包括口腔医学、医学、护理与助产、诊疗技术、治疗与康复、药学，以及传统与补充医学。",
+        "福利方向包括老人和残障成人照护、儿童与青少年服务、社会工作与咨询。这些分支各有独立历史；亨利街和学校护理，是理解其中协作关系的一个窗口。选择方向时，需要区分诊疗、护理、康复与社会支持各自承担的任务。"
+      ],
+      "reflectionZh": "一个孩子已经得到诊所的治疗安排，却仍不能进入课堂。要判断支持断在哪里，还需要了解哪些家庭照护和学校接纳情况？医护人员、家庭与学校应怎样共同核查，而不把治疗和社会支持当作互相替代的办法？",
+      "boundaryZh": "这是一段理解健康与福利协作的历史，不是整个领域的共同起源。路易斯的经历来自沃尔德1915年的回忆；学校检查与校护的发展属于其后的制度背景。教育分类收录传统与补充医学，也不代表对其疗效作出判断。",
+      "tagsZh": [
+        "健康与福利",
+        "护理",
+        "学校护理",
+        "社会支持",
+        "连续照护",
+        "亨利街"
+      ],
+      "references": [
+        {
+          "id": "wald-1915",
+          "citation": "Wald, L. D. (1915). The House on Henry Street, Chapter III, pp. 46–53.",
+          "url": "https://www.gutenberg.org/files/68546/68546-h/68546-h.htm",
+          "useZh": "当事人事后回忆中的路易斯与学校、家庭、护理衔接；历史回忆非现代病历或临床证据。",
+          "useEn": "Supports Louis’s connection with school, family, and nursing in Wald’s retrospective account; this historical recollection is not a modern medical record or clinical evidence."
+        },
+        {
+          "id": "henry-school-nursing-2022",
+          "citation": "Smith, M. (2022). School Nursing Celebrates 120th Anniversary. Henry Street Settlement.",
+          "url": "https://www.henrystreet.org/news/latest-news/school-nursing-120th-anniversary/",
+          "useZh": "1902年校护试行、护士与学校家庭的协作。",
+          "useEn": "Supports the 1902 school-nursing trial and collaboration among nurses, schools, and families."
+        },
+        {
+          "id": "nps-lillian-wald",
+          "citation": "National Park Service (2025). Lillian Wald House.",
+          "url": "https://www.nps.gov/places/lillian-wald-house.htm",
+          "useZh": "1893年起亨利街上门护理、社会支持的机构背景。",
+          "useEn": "Supports the institutional background of visiting nursing and social support at Henry Street beginning in 1893."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "大领域09/10与对应分支；教育分类表不证明共同历史起源。",
+          "useEn": "Supports fields 09 and 10 and their corresponding branches; the education classification table does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Health and Welfare",
+      "titleEn": "The Child Outside the School Gate",
+      "summaryEn": "Twelve-year-old Louis had visited a clinic several times, yet he still could not enter school. What else did he need to enter a classroom for the first time?",
+      "originStoryParagraphsEn": [
+        "On New York’s Lower East Side in the 1890s, Lillian Wald visited Louis’s home. She later recalled his mother holding a baby in one arm while washing butchers’ aprons for a living. Twelve-year-old Louis could not read street signs. He had visited a free clinic several times for eczema on his head, yet remained excluded from school.",
+        "The clinic had provided care instructions. His mother had an infant to look after and work to support the household; the care had to be carried out amid these daily demands. Wald helped with the prescribed care and with school admission. Her account connects these tasks: after addressing the problem on his head, the child still needed help entering school for the first time.",
+        "In September, Louis entered school. At lunchtime the following day, he ran up five flights to Wald’s residence and spelled out the words he had just learned. The child who could not read street signs now brought back words he could read.",
+        "Louis entered school before the school-nursing trial. From 1893, Henry Street nurses visited Lower East Side homes; Wald and Mary Brewster also encountered other children excluded for medical reasons. Clinic, home, and school were different places: identifying a problem in one did not complete the work in the next. Helping one child enter school did not automatically provide that support for others.",
+        "In 1897, school doctors began examining children in schools. In October 1902, Lina Rogers participated in a school-nursing trial. Nurses followed up the care after inspection and visited families. Medical examinations identified problems; nursing carried the follow-up into schools and homes. From Louis’s individual case to more regular school-nursing arrangements, help after a clinical encounter increasingly became continuing work assigned to someone."
+      ],
+      "whyNeededParagraphsEn": [
+        "A child may have a treatment plan from a clinic and still be unable to attend school. Work remains: who helps the family carry out care, who understands admission arrangements, and who follows up? Health and welfare connect physical and mental conditions, professional care and participation in daily life. Medicine, nursing, treatment technologies and rehabilitation have distinct tasks; welfare practice addresses care relationships, social support and access to learning, work and everyday activities.",
+        "These needs may occur together in one person while the work takes place in a clinic, home and school. An examination can identify a problem without completing the care that follows; social support does not remove the need for professional treatment. This historical window makes those handoffs concrete and prompts readers to check whether support actually reaches the person who needs it."
+      ],
+      "coreTurnParagraphsEn": [
+        "In Louis’s case, the shift was from prescribing care to helping the family carry it out and helping him enter school. Clinical work had begun, but care still had to fit around his mother’s infant and paid work; admission required another institution to accept him. Connecting those tasks enabled him to bring his newly learned words back to Wald.",
+        "Later school nursing made follow-up after inspection part of a more regular arrangement: schools identified problems, and nurses contacted families and continued care. Health, social support and everyday participation meet in one person, while each task retains its own professional knowledge and responsibility. Completing one does not mean the others have been completed."
+      ],
+      "anchorsParagraphsEn": [
+        "Henry Street’s visiting nursing and social support, beginning in 1893, provide the institutional setting for this form of collaboration. Lillian Wald and Mary Brewster later also recorded more children who were excluded from school for medical reasons.",
+        "In 1897, school doctors began conducting examinations in schools. In October 1902, a school-nursing trial began, with Lina Rogers participating. The former marked a stage in the development of school medical inspection; the latter more directly connected nurses’ follow-up care with schools and families."
+      ],
+      "branchesParagraphsEn": [
+        "The present-day education and training classification ISCED-F 2013 divides field 09 Health and Welfare into two groups. Health includes dental studies, medicine, nursing and midwifery, medical diagnostic and treatment technology, therapy and rehabilitation, pharmacy, and traditional and complementary medicine.",
+        "Welfare includes care of elderly and disabled adults, child care and youth services, and social work and counselling. These branches have independent histories; Henry Street and school nursing offer one window into collaboration among them. Choosing a path requires distinguishing the tasks of treatment, nursing, rehabilitation and social support."
+      ],
+      "reflectionEn": "A child has a treatment plan from a clinic but still cannot enter class. What else needs to be understood about care at home and admission to school to find where support has broken down? How can health professionals, the family, and the school examine this together without treating clinical care and social support as substitutes?",
+      "boundaryEn": "This history offers a window into collaboration between health and welfare, rather than a shared origin of the whole field. Louis’s experience comes from Wald’s 1915 recollection; the development of school inspection and nursing belongs to the later institutional context. The inclusion of traditional and complementary medicine in an education classification does not establish its effectiveness.",
+      "tagsEn": [
+        "Health and Welfare",
+        "Nursing",
+        "School Nursing",
+        "Social Support",
+        "Continuity of Care",
+        "Henry Street"
+      ]
+    }
+  },
+  {
+    "code": "10",
+    "subjectTitle": "Services",
+    "subjectTitleZh": "服务",
+    "title": "Beyond the Ticket",
+    "titleZh": "车票之外",
+    "summary": "485 people needed to take a train to the same event. Could a ticket alone organize their journey?",
+    "summaryZh": "485人要一起乘火车参加活动。一张车票能把这趟旅行安排好吗？",
+    "scene": "On July 5, 1841, 485 members of a temperance group needed to travel from Leicester to Loughborough for the same event. Thomas Cook organized a chartered group excursion at one shilling per person. Railways could already carry passengers; this journey also required the group’s common destination, its numbers, and train arrangements to come together in a single trip.",
+    "sceneZh": "1841年7月5日，485名禁酒团体成员要从莱斯特前往拉夫堡，参加同一次活动。托马斯·库克组织了团体包车，每人费用1先令。铁路已经可以运送旅客，这次还需要把一个团体的共同目的地、参加人数和列车安排落实在同一趟出行中。",
+    "storyBody": "On July 5, 1841, 485 members of a temperance group needed to travel from Leicester to Loughborough for the same event. Thomas Cook organized a chartered group excursion at one shilling per person. Railways could already carry passengers; this journey also required the group’s common destination, its numbers, and train arrangements to come together in a single trip.\n\nIn 1845, Cook organized his first commercial excursion, with a route involving Liverpool, Caernarfon, and Mount Snowdon. With several destinations, the organizer faced more than one group’s single rail journey: travelers also needed to know where to go next and how to continue.\n\nLater tours on the European continent took travelers among unfamiliar languages and places. Transport could bring someone to one destination, but they still needed to understand the next connection. Unfamiliar language and arrangements could also affect their confidence in setting out. Organized travel offered help with these practical difficulties.\n\nToday, The National Archives’ introduction to a Cook conducted-tour poster describes the practical help this later form of travel organization offered: buying tickets, finding the right train, and getting advice on meals and sightseeing. After the ticket had been bought, travelers still had help arranging and finding their next train, a place to eat, and something to visit.\n\nWhen tickets, trains and advice along the way are organized within one itinerary, travelers encounter more than a point of sale: they receive guidance on what to do next. The archive’s account identifies these later tasks while keeping the group charter of 1841 distinct from more complex conducted tours. The railway already exists, but someone still has to connect one stage with the next. A ticket permits travel; an organized journey addresses the questions it leaves unanswered.",
+    "storyBodyZh": "1841年7月5日，485名禁酒团体成员要从莱斯特前往拉夫堡，参加同一次活动。托马斯·库克组织了团体包车，每人费用1先令。铁路已经可以运送旅客，这次还需要把一个团体的共同目的地、参加人数和列车安排落实在同一趟出行中。\n\n1845年，库克组织首次营利旅行，路线涉及利物浦、卡那封和斯诺登山。面对多个目的地，组织者要处理的已不只是一个团体的一段铁路行程，还包括接下来去哪里、怎样继续出行。\n\n后来欧洲大陆的游程，把旅行带到了陌生的语言和地点之间。交通工具可以把人送到一处，旅客仍需要知道下一段如何衔接；不熟悉语言和途中安排，也会影响一个人是否愿意出发。旅行组织为这些实际困难提供帮助。\n\n在今天英国国家档案馆对一份库克随团游海报的介绍里，能够看到后来这类旅行组织提供的具体帮助：买票、找到正确列车、获得饮食和游览建议。买到票以后，旅客接下来要找哪班车，在哪里吃饭，又去看什么，仍有人帮助安排和指引。\n\n当票务、列车和途中建议被放进同一趟行程，旅客面对的就不只是一个售票地点，而是接下来怎样行动的指引。国家档案馆的介绍让这些后期工作可以被逐项辨认，也让1841年的团体包车与后来更复杂的随团游保持区别。铁路已经铺在那里，旅程却仍要有人把一段接到下一段；车票标出运输的资格，旅行组织继续处理车票没有回答的问题。",
+    "formalExplanation": "After buying a ticket, a traveler may still need to find the right train, make the next connection and locate a place to eat on arrival. Facilities can carry or accommodate people; service organizations arrange ticketing, timing, routes and information into a process people can actually use. That work requires professional skills, reliable handoffs and judgments about risk, not simply a pleasant attitude. One person may need help at several successive stages.\n\nHospitality, personal care, transport and security have different tasks and responsibilities. Some steps can be standardized; others require judgment in a particular situation. Field 10 Services in ISCED-F groups occupations within education and training rather than the whole tertiary sector: finance belongs elsewhere and nursing is in field 09. The occupations also have different histories that cannot all be explained through organized tourism.",
+    "formalExplanationZh": "买到一张车票之后，旅客仍可能不知道该找哪班车、下一段怎样衔接、抵达后去哪里吃饭。设施能够运送或接待人，服务组织则要把票务、时间、路线和途中信息安排成可以实际使用的过程。服务需要专业技能、可靠交接和对风险的判断，不能只用态度好坏来解释；同一位使用者可能在不同环节接连需要帮助。\n\n酒店餐饮、个人护理、交通和安全工作各有不同任务与责任，有些步骤可以标准化，有些仍需要根据具体情况判断。ISCED-F中的10服务是教育与训练中的一组职业领域，并不等于整个第三产业：金融属于其他领域，护理归09。同属10的职业也有不同历史，不能都从旅游组织中解释。",
+    "coreInsight": "Cook’s travel business shows a shift from arranging one rail journey to organizing the stages that follow. In 1841, one group was traveling to one event on one rail leg. The 1845 excursion and later tours involved several destinations; later conducted-tour material also lists tickets, finding trains, and advice on meals and sightseeing. A ticket left a sequence of connections to complete.\n\nTravelers can arrive as arranged, read directions and explain their needs, while providers retain responsibility for organization and professional safety. Which information belongs in a standard procedure, and which handoffs need judgment on the spot, depends on the task. Organizing those forms of help makes existing transport and facilities into an itinerary people can complete.",
+    "coreInsightZh": "安排一段铁路运输，转向组织旅客接下来的整段行程，是库克旅行业务中可见的变化。1841年面对同一团体、同一活动与一段铁路；1845年及后来的游程要处理多个目的地，后来随团游材料还列出票务、找车、饮食与游览指导。车票之外，有一连串衔接需要完成。\n\n旅客可以按安排到达、阅读指引并说明需要，服务提供者则继续承担组织与专业安全责任。哪些信息可写成固定流程，哪些交接需要现场判断，要按具体任务区分。把帮助组织在一起，才能让已有交通和设施成为旅客能够完成的行程。",
+    "analogyBoundary": "Cook’s travel organization offers one historical window into service work. The 1841 excursion was a group trip; his first commercial excursion followed in 1845. The work described in later conducted-tour material belongs to subsequent developments. Other occupations within Services have earlier or different histories.",
+    "analogyBoundaryZh": "库克的旅行组织是理解服务工作的一个历史窗口。1841年是团体出行，1845年才是他的首次营利旅行；后来随团游的工作内容，属于后期发展的材料。服务领域中的其他职业有更早或不同的历史。",
+    "reflectionQuestion": "When transport, hotels, or other facilities already exist, what work still has to be done by service organizations? Which parts can be written into standard procedures, and which still require professional judgment and safety responsibility?",
+    "reflectionQuestionZh": "当交通工具、酒店或其他设施已经存在时，什么工作仍必须由服务组织来完成？哪些环节可以写成标准流程，哪些又必须保留专业判断与安全责任？",
+    "sourceBatchId": "subject-origins-rereview-20261001",
+    "subjectOrigin": {
+      "id": "subject-origin-10-services",
+      "categoryCode": "10",
+      "subjectTitleZh": "服务",
+      "titleZh": "车票之外",
+      "summaryZh": "485人要一起乘火车参加活动。一张车票能把这趟旅行安排好吗？",
+      "originStoryParagraphsZh": [
+        "1841年7月5日，485名禁酒团体成员要从莱斯特前往拉夫堡，参加同一次活动。托马斯·库克组织了团体包车，每人费用1先令。铁路已经可以运送旅客，这次还需要把一个团体的共同目的地、参加人数和列车安排落实在同一趟出行中。",
+        "1845年，库克组织首次营利旅行，路线涉及利物浦、卡那封和斯诺登山。面对多个目的地，组织者要处理的已不只是一个团体的一段铁路行程，还包括接下来去哪里、怎样继续出行。",
+        "后来欧洲大陆的游程，把旅行带到了陌生的语言和地点之间。交通工具可以把人送到一处，旅客仍需要知道下一段如何衔接；不熟悉语言和途中安排，也会影响一个人是否愿意出发。旅行组织为这些实际困难提供帮助。",
+        "在今天英国国家档案馆对一份库克随团游海报的介绍里，能够看到后来这类旅行组织提供的具体帮助：买票、找到正确列车、获得饮食和游览建议。买到票以后，旅客接下来要找哪班车，在哪里吃饭，又去看什么，仍有人帮助安排和指引。",
+        "当票务、列车和途中建议被放进同一趟行程，旅客面对的就不只是一个售票地点，而是接下来怎样行动的指引。国家档案馆的介绍让这些后期工作可以被逐项辨认，也让1841年的团体包车与后来更复杂的随团游保持区别。铁路已经铺在那里，旅程却仍要有人把一段接到下一段；车票标出运输的资格，旅行组织继续处理车票没有回答的问题。"
+      ],
+      "whyNeededParagraphsZh": [
+        "买到一张车票之后，旅客仍可能不知道该找哪班车、下一段怎样衔接、抵达后去哪里吃饭。设施能够运送或接待人，服务组织则要把票务、时间、路线和途中信息安排成可以实际使用的过程。服务需要专业技能、可靠交接和对风险的判断，不能只用态度好坏来解释；同一位使用者可能在不同环节接连需要帮助。",
+        "酒店餐饮、个人护理、交通和安全工作各有不同任务与责任，有些步骤可以标准化，有些仍需要根据具体情况判断。ISCED-F中的10服务是教育与训练中的一组职业领域，并不等于整个第三产业：金融属于其他领域，护理归09。同属10的职业也有不同历史，不能都从旅游组织中解释。"
+      ],
+      "coreTurnParagraphsZh": [
+        "安排一段铁路运输，转向组织旅客接下来的整段行程，是库克旅行业务中可见的变化。1841年面对同一团体、同一活动与一段铁路；1845年及后来的游程要处理多个目的地，后来随团游材料还列出票务、找车、饮食与游览指导。车票之外，有一连串衔接需要完成。",
+        "旅客可以按安排到达、阅读指引并说明需要，服务提供者则继续承担组织与专业安全责任。哪些信息可写成固定流程，哪些交接需要现场判断，要按具体任务区分。把帮助组织在一起，才能让已有交通和设施成为旅客能够完成的行程。"
+      ],
+      "anchorsParagraphsZh": [
+        "1841年7月5日的莱斯特—拉夫堡包车把485人、1先令和一次团体出行放在同一个安排中；1845年的利物浦、卡那封和斯诺登山路线则标志着首次营利旅行，并进入更复杂的多地点组织。",
+        "国家档案馆对留存的库克随团游海报的介绍，补充了后来旅行组织的工作内容：买票、找正确列车、饮食和游览指导。它让人看到一次出行中，运输之外还需要提供哪些帮助。"
+      ],
+      "branchesParagraphsZh": [
+        "ISCED-F 2013的10服务有四组分支。个人服务包括家政、美发美容、酒店餐饮、体育、旅游与休闲；卫生与职业健康包括社区环境卫生、职业健康与安全。",
+        "另外两组是安全服务——军事与国防、人身与财产保护——以及交通服务。这些职业在教育分类中并列，各有自己的历史、技能和责任，并非都从库克的旅游组织中发展而来。"
+      ],
+      "reflectionZh": "当交通工具、酒店或其他设施已经存在时，什么工作仍必须由服务组织来完成？哪些环节可以写成标准流程，哪些又必须保留专业判断与安全责任？",
+      "boundaryZh": "库克的旅行组织是理解服务工作的一个历史窗口。1841年是团体出行，1845年才是他的首次营利旅行；后来随团游的工作内容，属于后期发展的材料。服务领域中的其他职业有更早或不同的历史。",
+      "tagsZh": [
+        "服务",
+        "旅游",
+        "交通",
+        "服务组织",
+        "行程协调",
+        "职业实践"
+      ],
+      "references": [
+        {
+          "id": "tna-travel-guide",
+          "citation": "The National Archives. The birth of the travel guide.",
+          "url": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-birth-of-the-travel-guide/",
+          "useZh": "1841团体包车485人、1先令；1845首次营利出行；后来多段旅行组织。",
+          "useEn": "Supports the 1841 chartered group journey for 485 people at one shilling each, the first commercial excursion in 1845, and later organization of multi-stage travel."
+        },
+        {
+          "id": "tna-conducted-tours",
+          "citation": "The National Archives. Cook’s Conducted Tours, COPY 1/221 (247).",
+          "url": "https://www.nationalarchives.gov.uk/education/families/holidays-through-history/grand-tour/copy-1-221-247-cooks-conducted-tours/",
+          "useZh": "车票、正确列车、饮食和游览指导。",
+          "useEn": "Supports ticketing, finding the correct train, and guidance on meals and sightseeing."
+        },
+        {
+          "id": "unesco-isced-f-2013",
+          "citation": "UNESCO Institute for Statistics (2014). ISCED Fields of Education and Training 2013, classification table.",
+          "url": "https://unesdoc.unesco.org/ark:/48223/pf0000228085_eng",
+          "useZh": "大领域09/10与对应分支；教育分类表不证明共同历史起源。",
+          "useEn": "Supports fields 09 and 10 and their corresponding branches; the education classification table does not establish a shared historical origin."
+        }
+      ],
+      "subjectTitleEn": "Services",
+      "titleEn": "Beyond the Ticket",
+      "summaryEn": "485 people needed to take a train to the same event. Could a ticket alone organize their journey?",
+      "originStoryParagraphsEn": [
+        "On July 5, 1841, 485 members of a temperance group needed to travel from Leicester to Loughborough for the same event. Thomas Cook organized a chartered group excursion at one shilling per person. Railways could already carry passengers; this journey also required the group’s common destination, its numbers, and train arrangements to come together in a single trip.",
+        "In 1845, Cook organized his first commercial excursion, with a route involving Liverpool, Caernarfon, and Mount Snowdon. With several destinations, the organizer faced more than one group’s single rail journey: travelers also needed to know where to go next and how to continue.",
+        "Later tours on the European continent took travelers among unfamiliar languages and places. Transport could bring someone to one destination, but they still needed to understand the next connection. Unfamiliar language and arrangements could also affect their confidence in setting out. Organized travel offered help with these practical difficulties.",
+        "Today, The National Archives’ introduction to a Cook conducted-tour poster describes the practical help this later form of travel organization offered: buying tickets, finding the right train, and getting advice on meals and sightseeing. After the ticket had been bought, travelers still had help arranging and finding their next train, a place to eat, and something to visit.",
+        "When tickets, trains and advice along the way are organized within one itinerary, travelers encounter more than a point of sale: they receive guidance on what to do next. The archive’s account identifies these later tasks while keeping the group charter of 1841 distinct from more complex conducted tours. The railway already exists, but someone still has to connect one stage with the next. A ticket permits travel; an organized journey addresses the questions it leaves unanswered."
+      ],
+      "whyNeededParagraphsEn": [
+        "After buying a ticket, a traveler may still need to find the right train, make the next connection and locate a place to eat on arrival. Facilities can carry or accommodate people; service organizations arrange ticketing, timing, routes and information into a process people can actually use. That work requires professional skills, reliable handoffs and judgments about risk, not simply a pleasant attitude. One person may need help at several successive stages.",
+        "Hospitality, personal care, transport and security have different tasks and responsibilities. Some steps can be standardized; others require judgment in a particular situation. Field 10 Services in ISCED-F groups occupations within education and training rather than the whole tertiary sector: finance belongs elsewhere and nursing is in field 09. The occupations also have different histories that cannot all be explained through organized tourism."
+      ],
+      "coreTurnParagraphsEn": [
+        "Cook’s travel business shows a shift from arranging one rail journey to organizing the stages that follow. In 1841, one group was traveling to one event on one rail leg. The 1845 excursion and later tours involved several destinations; later conducted-tour material also lists tickets, finding trains, and advice on meals and sightseeing. A ticket left a sequence of connections to complete.",
+        "Travelers can arrive as arranged, read directions and explain their needs, while providers retain responsibility for organization and professional safety. Which information belongs in a standard procedure, and which handoffs need judgment on the spot, depends on the task. Organizing those forms of help makes existing transport and facilities into an itinerary people can complete."
+      ],
+      "anchorsParagraphsEn": [
+        "The Leicester–Loughborough charter on July 5, 1841 brought 485 people, a one-shilling price, and one group journey into a single arrangement. The 1845 route involving Liverpool, Caernarfon, and Mount Snowdon marked Cook’s first commercial excursion and moved into more complex multi-destination organization.",
+        "The National Archives’ introduction to a surviving Cook conducted-tour poster adds the work involved in later organized travel: tickets, the right train, and guidance on meals and sightseeing. It shows what help a journey can require alongside transport itself."
+      ],
+      "branchesParagraphsEn": [
+        "ISCED-F 2013 field 10 Services has four groups of branches. Personal services include domestic services, hair and beauty services, hotel, restaurant and catering, sports, and travel, tourism and leisure. Hygiene and occupational health includes community sanitation and occupational health and safety.",
+        "The other two groups are security services—military and defence, and protection of persons and property—and transport services. These occupations sit alongside one another in an education classification, with their own histories, skills, and responsibilities; they did not all develop from Cook’s travel organization."
+      ],
+      "reflectionEn": "When transport, hotels, or other facilities already exist, what work still has to be done by service organizations? Which parts can be written into standard procedures, and which still require professional judgment and safety responsibility?",
+      "boundaryEn": "Cook’s travel organization offers one historical window into service work. The 1841 excursion was a group trip; his first commercial excursion followed in 1845. The work described in later conducted-tour material belongs to subsequent developments. Other occupations within Services have earlier or different histories.",
+      "tagsEn": [
+        "Services",
+        "Tourism",
+        "Transport",
+        "Service Organization",
+        "Itinerary Coordination",
+        "Occupational Practice"
+      ]
+    }
+  }
 ];
 
 function makeSublensStory(draft) {
@@ -3336,11 +4151,12 @@ function makeSubjectIntroLensStory(draft) {
     supportZh: "",
     knowledgePoint: draft.coreInsight || draft.coreInsightZh || "",
     knowledgePointZh: draft.coreInsightZh || draft.coreInsight || "",
-    reflectionQuestion: "",
-    reflectionQuestionZh: "",
+    reflectionQuestion: draft.reflectionQuestion || "",
+    reflectionQuestionZh: draft.reflectionQuestionZh || "",
     tags: [fallbackTitle, "subject overview"],
     tagsZh: [fallbackTitleZh, "学科总览"],
     sourceBatchId: draft.sourceBatchId || "subject-intro-00-03",
+    subjectOrigin: draft.subjectOrigin || null,
   };
 }
 
@@ -8035,6 +8851,11 @@ function getConceptFableList(fable, key) {
   return fable[key] || [];
 }
 
+function getConceptFableModule(fable) {
+  if (!fable) return null;
+  return currentLanguage === "zh" ? fable.moduleZh || fable.module || null : fable.module || null;
+}
+
 function getConceptFableCategoryTitle(fable) {
   const category = categories.find((item) => item.code === fable.categoryCode);
   if (!category) return fable.categoryCode || "";
@@ -8528,6 +9349,8 @@ const field0412 = {
   },
 };
 
+// Hide public EMBA discovery while retaining the programme and its course URLs.
+const embaPublicEntryEnabled = false;
 const pathTypes = [
   ["Quick pickup", "General Knowledge Quick Pickups", "Browse practical fields and pick up a useful idea whenever you want a fast, broader learning moment.", "/categories", "Browse quick pickups"],
   ["Learning programme", "EMBA", "A growing EMBA learning hub. Start with Corporate Finance, with more subjects to be added over time.", "/learning/emba", "Open EMBA"],
@@ -11069,12 +11892,13 @@ let founderConsoleTab = localStorage.getItem(founderConsoleTabKey) || "messages"
 let storyStudioInput = "";
 let storyStudioValidation = null;
 let pdcState = createPdcBaseState();
-const pdcMaxNormalRound = 5;
+const pdcRecapSuggestedRound = 3;
 let pdcPlaybackTimer = null;
 let pdcWarmupTimer = null;
+let pdcGenerationRequest = null;
+const pdcGenerationTimeoutMs = 75000;
 let pdcFounderSummary = null;
 let pdcFounderStatus = { state: "idle", detail: "" };
-const pdcAccessSessionKey = "mapkaiPdcAccessValidated";
 const pdcFounderAccessSessionKey = "mapkaiPdcFounderAccessValidated";
 
 function createPdcBaseState(overrides = {}) {
@@ -11109,6 +11933,7 @@ function createPdcBaseState(overrides = {}) {
     finalRoundPreviewSelection: "",
     finalReenableSkippedReason: "",
     finalRecapLoading: false,
+    finalRecapError: "",
     advancedAuditLoading: false,
     advancedAudit: null,
     advancedAuditError: "",
@@ -11120,6 +11945,7 @@ function createPdcBaseState(overrides = {}) {
     discussionStopped: false,
     phaseLoading: false,
     phaseMessage: "",
+    pendingPhaseGuidance: "",
     playback: null,
     warmup: null,
     warmupDiagnostics: null,
@@ -11166,14 +11992,25 @@ function hasPdcSessionStateToClear() {
 }
 
 function resetPdcSessionState({ question = "", status = "ready", message = "" } = {}) {
+  cancelPdcGenerationRequest();
   clearPdcPlaybackTimer();
   clearPdcWarmupTimer();
   const previousSessionCleared = hasPdcSessionStateToClear() || pdcState.sessionResetApplied === true;
   Object.assign(pdcState, {
+    pass: "",
+    valid: true,
+    accessSessionReady: false,
+    founderPreview: false,
+    councilTier: "standard",
+    requestedTier: "standard",
+    effectiveTier: "standard",
+    founderOnlyFullFunction: false,
+    phaseModel: "",
+    finalModel: "",
     status,
     message,
     question,
-    entryView: "standard",
+    entryView: "question",
     recap: null,
     demoMode: false,
     demoFinalVisible: false,
@@ -11193,6 +12030,7 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     reEnabledObserverWasActiveMemberBlocked: false,
     reEnabledObserverCandidateInvalidReason: "",
     finalRecapLoading: false,
+    finalRecapError: "",
     advancedAuditLoading: false,
     advancedAudit: null,
     advancedAuditError: "",
@@ -11204,6 +12042,7 @@ function resetPdcSessionState({ question = "", status = "ready", message = "" } 
     discussionStopped: false,
     phaseLoading: false,
     phaseMessage: "",
+    pendingPhaseGuidance: "",
     playback: null,
     warmup: null,
     warmupDiagnostics: null,
@@ -11634,6 +12473,7 @@ async function loadPdcDemoScript() {
 }
 
 async function startPdcDemoMode() {
+  cancelPdcGenerationRequest();
   await loadPdcDemoScript();
   const demoScript = activePdcDemoScript || PDC_DEMO_SCRIPT;
   clearPdcPlaybackTimer();
@@ -11789,68 +12629,13 @@ function renderMessageBoards() {
   renderPdcFounderPanel();
 }
 
-function handlePdcAccessSubmit(event) {
-  const form = event.target.closest("[data-pdc-access-form]");
-  if (!form) return false;
-  event.preventDefault();
-  validatePdcAccessForm(form);
-  return true;
-}
-
-async function validatePdcAccessForm(form) {
-  const input = form.elements.pdc_access_code;
-  const status = form.querySelector(".pdc-access-status");
-  const code = String(input?.value || "").trim();
-  if (!code) {
-    if (status) status.textContent = "Enter your PDC access code.";
-    return;
-  }
-  const normalizedCode = code.replace(/\s+/g, "");
-  if (status) status.textContent = "Checking access code...";
-  try {
-    const data = await validatePdcPassForSession(normalizedCode);
-    if (data.founder_preview === true) {
-      sessionStorage.setItem(pdcFounderAccessSessionKey, "true");
-      sessionStorage.removeItem(pdcAccessSessionKey);
-      localStorage.setItem(founderModeKey, "true");
-      window.location.href = "/pdc-pilot?founderPreview=1";
-      return;
-    }
-    sessionStorage.removeItem(pdcFounderAccessSessionKey);
-    sessionStorage.setItem(pdcAccessSessionKey, "true");
-    window.location.href = "/pdc-pilot";
-  } catch (error) {
-    if (status) status.textContent = error.message || "This PDC access code is no longer available.";
-  }
-}
-
-async function validatePdcPassForSession(pass) {
-  const response = await fetch("/api/pdc/validate-pass", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ pass }),
-  });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok || data.valid !== true) {
-    throw new Error(data.message || "This PDC access code is no longer available.");
-  }
-  return data;
-}
-
-async function validatePdcFounderPreviewSession() {
-  const response = await fetch("/api/pdc/validate-pass?founderPreview=1", { cache: "no-store" });
-  const data = await response.json().catch(() => ({}));
-  return response.ok && data.valid === true && data.founder_preview === true;
-}
-
-function hasPdcAccessSession() {
-  return sessionStorage.getItem(pdcAccessSessionKey) === "true";
-}
-
 function replacePdcPilotUrl() {
-  if (window.location.pathname === "/pdc-pilot" && window.location.search) {
-    window.history.replaceState({}, "", "/pdc-pilot");
-  }
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("pass") && !params.has("founderPreview")) return;
+  params.delete("pass");
+  params.delete("founderPreview");
+  const query = params.toString();
+  window.history.replaceState({}, "", `/toolbox/pdc/session${query ? `?${query}` : ""}${window.location.hash || ""}`);
 }
 
 async function loadFounderMessages() {
@@ -11878,244 +12663,110 @@ async function loadFounderMessages() {
   }
 }
 
-function getCurrentPdcPass() {
-  return new URLSearchParams(window.location.search).get("pass") || "";
-}
-
 async function initPdcPilotPage() {
-  if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") return;
-  clearPdcPlaybackTimer();
-  clearPdcWarmupTimer();
-  const pass = getCurrentPdcPass();
-  const params = new URLSearchParams(window.location.search);
-  const founderPreviewRequested = params.get("founderPreview") === "1" && !pass;
-  const founderPreviewAllowed = founderPreviewRequested ? await validatePdcFounderPreviewSession() : false;
-  const accessSessionReady = !pass && !founderPreviewRequested && hasPdcAccessSession();
-  if (
-    pdcState.pass === pass
-    && pdcState.founderPreview === founderPreviewAllowed
-    && pdcState.accessSessionReady === accessSessionReady
-    && pdcState.status !== "idle"
-  ) {
-    if (!pass && !founderPreviewAllowed && !accessSessionReady && pdcState.status === "ready") {
-      pdcState.status = "public";
-      pdcState.entryView = "landing";
-    }
-    renderPdcPilot();
-    return;
+  if (normalizeRoute(window.location.pathname) !== "/toolbox/pdc/session") return;
+  replacePdcPilotUrl();
+  if (pdcState.status === "idle" || !pdcState.valid) {
+    resetPdcSessionState({ question: "", status: "ready", message: "" });
   }
-  pdcState = createPdcBaseState({
-    pass,
-    status: "validating",
-    founderPreview: founderPreviewAllowed,
-    accessSessionReady,
-  });
   renderPdcPilot();
-  if (founderPreviewAllowed) {
-    pdcState.valid = true;
-    pdcState.status = "public";
-    pdcState.entryView = "founder-options";
-    pdcState.founderPreview = true;
-    pdcState.councilTier = "standard";
-    pdcState.requestedTier = "standard";
-    pdcState.effectiveTier = "standard";
-    pdcState.founderOnlyFullFunction = false;
-    pdcState.message = "";
-    renderPdcPilot();
-    return;
-  }
-  if (accessSessionReady) {
-    pdcState.valid = true;
-    pdcState.status = "ready";
-    pdcState.entryView = "standard";
-    pdcState.message = "";
-    renderPdcPilot();
-    return;
-  }
-  if (!pass && !founderPreviewRequested) {
-    pdcState.valid = true;
-    pdcState.status = "public";
-    pdcState.entryView = "landing";
-    pdcState.message = "";
-    renderPdcPilot();
-    return;
-  }
-  if (founderPreviewRequested) {
-    sessionStorage.removeItem(pdcFounderAccessSessionKey);
-    pdcState.valid = true;
-    pdcState.founderPreview = false;
-    pdcState.status = "public";
-    pdcState.entryView = "landing";
-    pdcState.message = "Enter the Founder access code to open Full Function mode.";
-    renderPdcPilot();
-    return;
-  }
-  if (!pass) {
-    pdcState.status = "invalid";
-    pdcState.message = "A valid PDC access link is required.";
-    renderPdcPilot();
-    return;
-  }
-  try {
-    await validatePdcPassForSession(pass);
-    sessionStorage.setItem(pdcAccessSessionKey, "true");
-    sessionStorage.removeItem(pdcFounderAccessSessionKey);
-    replacePdcPilotUrl();
-    pdcState.pass = "";
-    pdcState.accessSessionReady = true;
-    pdcState.valid = true;
-    pdcState.status = "ready";
-    pdcState.entryView = "standard";
-    pdcState.message = "";
-    renderPdcPilot();
-  } catch (error) {
-    sessionStorage.removeItem(pdcAccessSessionKey);
-    pdcState.valid = false;
-    pdcState.status = "invalid";
-    pdcState.message = error.message || "This PDC access link is no longer available. It may have already been used or expired.";
-    renderPdcPilot();
-  }
 }
 
 function renderPdcPilot() {
   const root = document.querySelector("[data-pdc-root]");
   if (!root) return;
-  if (pdcState.status === "validating" || pdcState.status === "idle") {
-    root.innerHTML = pdcShellTemplate(`<p class="trust-note">Checking your private access link...</p>`);
-    return;
-  }
-  if (pdcState.status === "invalid") {
-    root.innerHTML = pdcShellTemplate(`<p class="pdc-invalid">${escapeHtml(pdcState.message)}</p>`);
-    return;
-  }
-  if (pdcState.status === "public" && pdcState.entryView === "landing") {
-    root.innerHTML = pdcShellTemplate(renderPdcPublicEntry());
-    return;
-  }
-  if (pdcState.status === "public" && pdcState.entryView === "founder-options") {
-    root.innerHTML = pdcShellTemplate(renderPdcFounderEntry());
-    return;
-  }
-  const visibleRecap = getPdcVisibleRecap();
+  const visibleRecap = pdcState.recap;
   if (visibleRecap) {
     root.innerHTML = `
       ${renderPdcCouncilRoom(visibleRecap)}
       ${pdcState.demoMode ? renderPdcDemoNotice() : ""}
-      ${pdcState.finalRecapLoading && !pdcState.warmup ? `<section class="pdc-result"><p class="trust-note">Generating Council Recap...</p></section>` : ""}
+      ${pdcState.finalRecapLoading && !pdcState.warmup ? `<section class="pdc-result"><p class="trust-note">${escapeHtml(t("pdcGeneratingRecap"))}</p></section>` : ""}
+      ${pdcState.finalRecapError ? `<section class="pdc-result" role="status"><p class="pdc-status">${escapeHtml(pdcState.finalRecapError)}</p><p class="trust-note">${escapeHtml(t("pdcDiscussionSaved"))}</p></section>` : ""}
+      ${pdcState.phaseMessage && !pdcState.phaseLoading && !pdcState.warmup ? `<section class="pdc-result" role="status"><p class="pdc-status">${escapeHtml(pdcState.phaseMessage)}</p></section>` : ""}
       ${renderPdcReintroducedPerspective()}
       ${(pdcState.discussionStopped || pdcState.demoFinalVisible) && !pdcState.warmup ? renderPdcRecap(pdcState.recap) : ""}
-      ${pdcState.discussionStopped && !pdcState.warmup ? renderPdcAdvancedFinalAudit() : ""}
-      ${renderPdcProviderDiagnostics()}
-      ${renderPdcFounderPreviewActions()}
-      ${pdcState.discussionStopped && !pdcState.warmup && !pdcState.demoMode ? renderPdcFeedbackForm() : ""}
+      ${(pdcState.discussionStopped || pdcState.demoFinalVisible) && !pdcState.warmup ? `<section class="pdc-result"><button class="button primary" type="button" data-pdc-new-question>${escapeHtml(t("pdcNewQuestion"))}</button></section>` : ""}
     `;
     return;
   }
-
   if (pdcState.status === "generating") {
-    root.innerHTML = renderPdcPreparingShell("Council is preparing Round 1A...");
+    root.innerHTML = renderPdcPreparingShell(t("pdcPreparingFirstRound"));
     return;
   }
-
   const remaining = 1200 - pdcState.question.length;
-  const isFullFunction = pdcState.founderPreview && pdcState.councilTier === "full_function";
-  const showPdcBackOption = !pdcState.pass && !pdcState.founderPreview && !pdcState.accessSessionReady;
   root.innerHTML = pdcShellTemplate(`
-    ${isFullFunction ? `
-      <section class="pdc-entry-option">
-        <p class="eyebrow">Founder Full Function / Founder 完整高质量版本</p>
-        <h2>Founder Full Function</h2>
-        <p>Run the full high-quality council with 5.5 for all rounds.</p>
-        <p>全部轮次使用 5.5，用于重要展示和内部验证。</p>
-        <p class="trust-note">phaseModel = gpt-5.5 · finalModel = gpt-5.5</p>
-      </section>` : ""}
-    ${!pdcState.pass && !pdcState.founderPreview && !pdcState.accessSessionReady ? `
-      <label class="pdc-question-label">
-        <span>PDC access code</span>
-        <input data-pdc-start-pass type="text" autocomplete="off" maxlength="80" placeholder="Enter access code">
-      </label>` : ""}
     <label class="pdc-question-label">
-      <span>Question</span>
-      <textarea data-pdc-question maxlength="1200" rows="7" placeholder="Write one question you want to examine.">${escapeHtml(pdcState.question)}</textarea>
+      <span>${escapeHtml(t("pdcQuestionLabel"))}</span>
+      <textarea data-pdc-question maxlength="1200" rows="6" placeholder="${escapeHtml(t("pdcQuestionPlaceholder"))}">${escapeHtml(pdcState.question)}</textarea>
     </label>
-    <p class="pdc-count">${remaining} characters left</p>
-    <button class="button primary" type="button" data-pdc-start ${pdcState.status === "generating" ? "disabled" : ""}>${pdcState.status === "generating" ? "Preparing Council Recap..." : isFullFunction ? "Start Founder Full Function" : "Start Standard Council"}</button>
-    ${showPdcBackOption ? `<button class="button secondary" type="button" data-pdc-back-landing>Back to PDC options</button>` : ""}
-    ${pdcState.message ? `<p class="pdc-status">${escapeHtml(pdcState.message)}</p>` : ""}
+    <p class="pdc-count">${escapeHtml(t("pdcCharactersRemaining", remaining))}</p>
+    <button class="button primary" type="button" data-pdc-start>${escapeHtml(t("pdcStartStandard"))}</button>
+    <button class="button secondary" type="button" data-pdc-watch-demo>${escapeHtml(t("pdcWatchDemo"))}</button>
+    ${pdcState.message ? `<p class="pdc-status" role="status">${escapeHtml(pdcState.message)}</p>` : ""}
   `);
 }
 
 function renderPdcPublicEntry() {
-  return `
-    <div class="pdc-entry-grid">
-      <section class="pdc-entry-option">
-        <p class="eyebrow">Public Demo / Demo 模式</p>
-        <p class="content-label">${escapeHtml(t("contentLabelPrepared"))}</p>
-        <h2>Demo Mode</h2>
-        <p>Explore a prepared PDC case before entering your own question.</p>
-        <p class="pdc-demo-note">Best for decisions with trade-offs, competing priorities, or visible disagreement.</p>
-        <p>先看一个 PDC 案例，再进入你自己的问题。</p>
-        <button class="button secondary" type="button" data-pdc-watch-demo>Watch Demo / 观看 Demo</button>
-      </section>
-      <section class="pdc-entry-option">
-        <p class="eyebrow">Access Code / 访问码</p>
-        <h2>Enter PDC</h2>
-        <form class="pdc-access-form" data-pdc-access-form>
-          <label>
-            <span>Access code</span>
-            <input name="pdc_access_code" type="text" inputmode="text" autocomplete="off" placeholder="Paste your access code" required />
-          </label>
-          <button class="button primary" type="submit">Enter PDC / 进入 PDC</button>
-          <p class="pdc-access-status" aria-live="polite"></p>
-        </form>
-      </section>
-      ${pdcState.message ? `<p class="pdc-status pdc-entry-status">${escapeHtml(pdcState.message)}</p>` : ""}
-    </div>`;
+  return `<div class="pdc-entry-grid">
+    <section class="pdc-entry-option">
+      <h2>${escapeHtml(t("pdcOpenCouncil"))}</h2>
+      <p>${escapeHtml(t("pdcOpenCopy"))}</p>
+      <button class="button primary" type="button" data-pdc-open-council>${escapeHtml(t("pdcOpenCouncil"))}</button>
+    </section>
+    <section class="pdc-entry-option">
+      <p class="content-label">${escapeHtml(t("contentLabelPrepared"))}</p>
+      <h2>${escapeHtml(t("pdcDemoMode"))}</h2>
+      <p>${escapeHtml(t("pdcDemoIntro"))}</p>
+      <button class="button secondary" type="button" data-pdc-watch-demo>${escapeHtml(t("pdcWatchDemo"))}</button>
+    </section>
+  </div>`;
 }
 
-function renderPdcFounderEntry() {
-  return `
-    <div class="pdc-entry-grid">
-      <section class="pdc-entry-option">
-        <p class="eyebrow">Standard Council</p>
-        <h2>Standard Council</h2>
-        <p>Run the standard experience: mini rounds with a 5.5 final recap.</p>
-        <button class="button primary" type="button" data-pdc-founder-standard>Open Standard Council</button>
-      </section>
-      <section class="pdc-entry-option">
-        <p class="eyebrow">Founder Full Function</p>
-        <h2>Full Function</h2>
-        <p>Run the full high-quality council with 5.5 for all rounds.</p>
-        <button class="button primary" type="button" data-pdc-founder-full>Open Full Function</button>
-      </section>
-    </div>`;
+function openPdcQuestionForm() {
+  resetPdcSessionState({ question: "", status: "ready", message: "" });
+  if (normalizeRoute(window.location.pathname) !== "/toolbox/pdc/session") goToRoute("/toolbox/pdc/session");
+  else renderPdcPilot();
+  const sessionId = pdcState.pdcSessionId;
+  requestAnimationFrame(() => {
+    if (pdcState.pdcSessionId === sessionId) scrollPdcQuestionFormIntoView();
+  });
+}
+
+function scrollPdcQuestionFormIntoView() {
+  const card = document.querySelector("[data-pdc-root] .pdc-card");
+  if (!card || pdcState.status !== "ready" || pdcState.recap) return;
+  const headerHeight = document.querySelector(".topbar")?.getBoundingClientRect().height || 0;
+  const top = Math.max(0, window.scrollY + card.getBoundingClientRect().top - headerHeight - 16);
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top, behavior: reducedMotion ? "instant" : "smooth" });
 }
 
 function renderPdcDemoNotice() {
-  return `<section class="pdc-result"><p class="pdc-placeholder-notice">Prepared PDC case. / PDC 案例演示。</p></section>`;
+  return `<section class="pdc-result"><p class="pdc-placeholder-notice">${escapeHtml(t("pdcDemoNotice"))}</p></section>`;
 }
 
-function renderPdcPreparingShell(message = "Preparing this phase...") {
+function renderPdcPreparingShell(message = t("pdcPreparingPhase")) {
   return `
     ${pdcShellTemplate(`
       <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
         <div class="pdc-room-heading">
-          <p class="eyebrow">Council Preview</p>
-          <h1 id="pdc-council-room-title">PDC Council Room</h1>
-          <p>The council reviews your decision in structured rounds.</p>
+          <p class="eyebrow">${escapeHtml(t("pdcCouncilPreview"))}</p>
+          <h1 id="pdc-council-room-title">${escapeHtml(t("pdcCouncilRoomLabel"))}</h1>
+          <p>${escapeHtml(t("pdcCouncilRoundsCopy"))}</p>
         </div>
         <div class="pdc-dialogue-panel">
           <div class="pdc-dialogue-panel-head">
             <div>
-              <p class="eyebrow">Current Round</p>
-              <h2>Live Council Dialogue</h2>
+              <p class="eyebrow">${escapeHtml(t("pdcCurrentRoundLabel"))}</p>
+              <h2>${escapeHtml(t("pdcLiveDialogueLabel"))}</h2>
             </div>
           </div>
           <div class="pdc-table-topic">
-            <span>Decision on the table</span>
-            <p>${escapeHtml(pdcState.question || "Question")}</p>
+            <span>${escapeHtml(t("pdcDecisionLabel"))}</span>
+            <p>${escapeHtml(pdcState.question || t("pdcQuestionLabel"))}</p>
           </div>
           <p class="pdc-status">${escapeHtml(message)}</p>
+          <button class="button secondary" type="button" data-pdc-cancel-generation>${escapeHtml(t("pdcCancelGeneration"))}</button>
         </div>
       </section>
     `)}
@@ -12125,31 +12776,21 @@ function renderPdcPreparingShell(message = "Preparing this phase...") {
 function pdcShellTemplate(innerHtml) {
   return `
     <section class="pdc-card" aria-live="polite">
-      <p class="eyebrow">PDC Council Rhythm</p>
+      <p class="eyebrow">${escapeHtml(t("pdcSessionEyebrow"))}</p>
       <h1>MapKAI PDC</h1>
-      ${pdcState.founderPreview ? `<p class="pdc-founder-preview-label">Preview mode</p>` : ""}
-      <p class="pdc-subtitle">A structured council debate for clearer decisions.</p>
-      <p class="pdc-trust-line">No account required. One-time access only. Please avoid sensitive or confidential information.</p>
+      <p class="pdc-subtitle">${escapeHtml(t("pdcSessionSubtitle"))}</p>
+      <p class="pdc-trust-line">${escapeHtml(t("pdcSessionTrust"))}</p>
       <p class="interaction-disclosure">${escapeHtml(t("pdcAiDisclosure"))}</p>
       ${innerHtml}
       <details class="pdc-responsible-use">
-        <summary>Responsible use &amp; privacy</summary>
+        <summary>${escapeHtml(t("pdcResponsibleTitle"))}</summary>
         <div>
-          <p>MapKAI is currently a free knowledge initiative.</p>
-          <p>You can explore it without creating an account or providing your name or email.</p>
-          <p>The final judgment remains yours.</p>
-          <p>Please avoid sharing sensitive personal, medical, legal, financial, or confidential business information.</p>
+          <p>${escapeHtml(t("pdcResponsibleFree"))}</p>
+          <p>${escapeHtml(t("pdcResponsibleAccount"))}</p>
+          <p>${escapeHtml(t("pdcResponsibleJudgment"))}</p>
+          <p>${escapeHtml(t("pdcResponsibleSensitive"))}</p>
         </div>
       </details>
-    </section>`;
-}
-
-function renderPdcFounderPreviewActions() {
-  if (!pdcState.founderPreview) return "";
-  return `
-    <section class="pdc-founder-preview-tools">
-      <p>Preview mode</p>
-      <button class="button secondary" type="button" data-pdc-founder-reset>Start another preview</button>
     </section>`;
 }
 
@@ -12160,7 +12801,7 @@ function renderPdcStatusChips(items = []) {
 
 function getPdcProviderChips({ provider = "", model = "", strict = false, fallbackUsed = false, founderOnly = false, manualAudit = false } = {}) {
   return [
-    provider ? provider.replace(/^openai$/i, "OpenAI") : "",
+    provider ? provider.replace(/^openai$/i, "OpenAI").replace(/^gemini$/i, "Gemini") : "",
     model,
     strict ? "Strict" : "",
     fallbackUsed ? "Fallback" : "No fallback",
@@ -12214,9 +12855,9 @@ function renderPdcCouncilRoom(recap) {
   return `
     <section class="pdc-council-room" aria-labelledby="pdc-council-room-title">
       <div class="pdc-room-heading">
-        <p class="eyebrow">Council Preview</p>
-        <h1 id="pdc-council-room-title">${escapeHtml(room.title || "PDC Council Room")}</h1>
-        <p>${pdcState.demoMode ? "Prepared PDC case. / PDC 案例演示。" : "The council reviews your decision in structured rounds."}</p>
+        <p class="eyebrow">MapKAI PDC</p>
+        <h1 id="pdc-council-room-title">${escapeHtml(t("pdcCouncilRoomLabel"))}</h1>
+        <p>${escapeHtml(t(pdcState.demoMode ? "pdcDemoIntro" : "pdcCouncilRoundsCopy"))}</p>
         ${!room.isWarmupRoom ? `<p class="content-label pdc-content-label">${escapeHtml(getPdcContentLabel(recap))}</p>` : ""}
         ${!room.isWarmupRoom ? `<p class="interaction-disclosure pdc-interaction-disclosure">${escapeHtml(t("pdcAiDisclosure"))}</p>` : ""}
       </div>
@@ -12225,19 +12866,19 @@ function renderPdcCouncilRoom(recap) {
           <div class="pdc-facilitator-row">
             <span class="pdc-avatar" aria-hidden="true">${escapeHtml(getPersonaInitials(facilitator))}</span>
             <div>
-              <small>Facilitator</small>
+              <small>${escapeHtml(t("pdcFacilitator"))}</small>
               <strong>${escapeHtml(facilitator.englishName || "Blue Whale")}${facilitator.name ? ` / ${escapeHtml(facilitator.name)}` : ""}</strong>
             </div>
           </div>
           <div class="pdc-roster-layout">
             <div class="pdc-roster-main">
-              <h2>Council Members</h2>
-              <h3>Active Council Members</h3>
+              <h2>${escapeHtml(t("pdcCouncilMembers"))}</h2>
+              <h3>${escapeHtml(t("pdcActiveMembers"))}</h3>
               <div class="pdc-roster-list">
                 ${activePersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, false, isWarmupPhase, selectedPersona)).join("")}
               </div>
               ${observerPersonas.length ? `
-                <h3>Observers</h3>
+                <h3>${escapeHtml(t("pdcObservers"))}</h3>
                 <div class="pdc-roster-list pdc-observer-list">
                   ${observerPersonas.map((persona) => renderPdcRosterRow(persona, activeSpeakerId, true, false, selectedPersona)).join("")}
                 </div>` : ""}
@@ -12247,24 +12888,17 @@ function renderPdcCouncilRoom(recap) {
         <section class="pdc-dialogue-panel" aria-label="Live Council Dialogue">
           <div class="pdc-dialogue-panel-head">
             <div>
-              <p class="eyebrow">Current Round</p>
-              <h2>Live Council Dialogue</h2>
+              <p class="eyebrow">${escapeHtml(t("pdcCurrentRoundLabel"))}</p>
+              <h2>${escapeHtml(t("pdcLiveDialogueLabel"))}</h2>
             </div>
-            ${pdcState.founderPreview && !isWarmupPhase ? renderPdcStatusChips(getPdcProviderChips({
-              provider: recap.dialogueProvider,
-              model: pdcState.providerDiagnostics?.modelName || "",
-              strict: pdcState.providerDiagnostics?.strict === true,
-              fallbackUsed: pdcState.providerDiagnostics?.fallbackUsed === true,
-              founderOnly: true,
-            })) : ""}
           </div>
           <div class="pdc-table-topic">
-            <span>Decision on the table</span>
+            <span>${escapeHtml(t("pdcDecisionLabel"))}</span>
             <p>${escapeHtml(room.decisionOnTable || pdcState.question || "Question")}</p>
           </div>
           <div class="pdc-round-status">
-            <strong>${escapeHtml(isWarmupPhase ? "Preparing the council" : currentRound.label || "Round 1 — Opening Views")}</strong>
-            <span>${isWarmupPhase ? "Council is thinking · Local warm-up" : fullDialogue.length ? `${fullDialogue.length} active council statements` : "No dialogue lines available"}</span>
+            <strong>${escapeHtml(isWarmupPhase ? t("pdcCouncilThinking") : getPdcPhaseLabel(currentRound.roundNumber || 1, currentRound.phaseType || "A"))}</strong>
+            <span>${escapeHtml(isWarmupPhase ? t("pdcCouncilThinking") : fullDialogue.length ? t("pdcStatementCount", fullDialogue.length) : t("pdcNoDialogue"))}</span>
           </div>
           ${renderPdcPlaybackStatus(currentRound, playback, thinkingLine)}
           ${renderPdcDialogue(dialogue, activeSpeakerId, thinkingLine, showPhaseAfterPlayback, isWarmupPhase, currentRound)}
@@ -12272,9 +12906,7 @@ function renderPdcCouncilRoom(recap) {
           ${showPhaseAfterPlayback ? renderPdcVotingSnapshot(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcRoundOutcome(currentRound) : ""}
           ${showPhaseAfterPlayback ? renderPdcPhaseGuidance(currentRound) : ""}
-          ${showPhaseAfterPlayback ? renderPdcFinalRoundPreview(currentRound) : ""}
-          ${renderPdcFounderPhaseDebug(currentRound)}
-          ${pdcState.demoMode ? renderPdcDemoRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying), currentIndex: roundIndex, total: rounds.length }) : (!isWarmupPhase ? renderPdcRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying) }) : `<div class="pdc-round-controls"><span class="pdc-stopped-label">Waiting for OpenAI structured phase...</span></div>`)}
+          ${pdcState.demoMode ? renderPdcDemoRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying), currentIndex: roundIndex, total: rounds.length }) : (!isWarmupPhase ? renderPdcRoundControls({ hasDialogue: fullDialogue.length > 0, playbackActive: Boolean(playback?.isPlaying) }) : `<div class="pdc-round-controls"><span class="pdc-stopped-label">${escapeHtml(t("pdcPreparingPhase"))}</span><button class="button secondary" type="button" data-pdc-cancel-generation>${escapeHtml(t("pdcCancelGeneration"))}</button></div>`)}
         </section>
       </div>
     </section>`;
@@ -12371,14 +13003,30 @@ function normalizePdcPhase(phase, index, room) {
 }
 
 function getPdcPhaseLabel(roundNumber, phaseType) {
-  const prefix = Number(roundNumber) >= pdcMaxNormalRound ? "Final Round" : `Round ${roundNumber}${phaseType}`;
-  return `${prefix} — ${phaseType === "A" ? "Position Update" : "Voting & Pressure Check"}`;
+  return t("pdcRoundLabel", roundNumber, phaseType);
 }
 
 function clampPdcIndex(value, length) {
   const index = Number.isFinite(Number(value)) ? Number(value) : 0;
   if (length <= 0) return 0;
   return Math.max(0, Math.min(index, length - 1));
+}
+
+function getPdcRoleLabel(role) {
+  if (currentLanguage !== "zh") return role || t("pdcCouncilMembers");
+  const labels = {
+    "Facts & Evidence": "事实与证据",
+    "Emotion & Inner Desire": "情绪与内心愿望",
+    "Risk & Downside": "风险与代价",
+    "Opportunity & Long View": "机会与长期视角",
+    "Creativity & Third Path": "创意与第三条路",
+    "Blind Spots & Self-Deception": "盲点与自我欺骗",
+    "Relationships & Social Impact": "关系与社会影响",
+    "Time, Energy & Sustainability": "时间、精力与可持续性",
+    "Timing & Momentum": "时机与势头",
+    Facilitator: "主持人",
+  };
+  return labels[role] || role || t("pdcCouncilMembers");
 }
 
 function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarmupThinking = false, selectedPersona = null) {
@@ -12392,7 +13040,7 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
         <span class="pdc-roster-copy">
           <strong>${escapeHtml(persona.englishName || persona.name || "Council member")}</strong>
           ${persona.name && persona.name !== persona.englishName ? `<small>/ ${escapeHtml(persona.name)}</small>` : ""}
-          <em>${escapeHtml(persona.role || "Council Member")}</em>
+          <em>${escapeHtml(getPdcRoleLabel(persona.role))}</em>
         </span>
       </button>
     </div>
@@ -12400,20 +13048,8 @@ function renderPdcRosterRow(persona, activeSpeakerId, isObserver = false, isWarm
 }
 
 function renderPdcPlaybackStatus(round, playback, thinkingLine) {
-  if (round?.isWarmup) {
-    const debug = getPdcWarmupDebug();
-    return `
-      <div class="pdc-playback-status is-warmup">
-        <p>Local warm-up · Stage ${Number(debug.warmupStage || 1)} of 8</p>
-      </div>`;
-  }
   if (!playback?.isPlaying) return "";
-  const speakerName = thinkingLine?.speakerName || "Council member";
-  return `
-    <div class="pdc-playback-status">
-      <p>${escapeHtml(playback.thinkingSpeakerId ? `${speakerName} is thinking...` : "Preparing this phase...")}</p>
-      ${pdcState.founderPreview ? `<button class="button secondary" type="button" data-pdc-show-all-now>Show all now</button>` : ""}
-    </div>`;
+  return `<div class="pdc-playback-status"><p>${escapeHtml(t("pdcCouncilSpeaking"))}</p></div>`;
 }
 
 function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, phaseComplete = true, isWarmupPhase = false, round = null) {
@@ -12424,18 +13060,18 @@ function renderPdcDialogue(dialogue, activeSpeakerId = "", thinkingLine = null, 
       <ol>
         ${lines.map((line) => `
           <li class="${isWarmupPhase ? "is-warmup" : ""} ${line.speakerId === activeSpeakerId ? "is-current" : ""}">
-            <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(line.role)}</small>` : ""}</span>
+            <span>${escapeHtml(line.speakerName || "Council Member")} ${line.role ? `<small>/ ${escapeHtml(getPdcRoleLabel(line.role))}</small>` : ""}</span>
             ${renderPdcRelationLabel(line)}
             ${isBPhase ? renderPdcVotingLine(line) : `<p>${escapeHtml(line.text || "")}</p>`}
           </li>`).join("")}
         ${thinkingLine ? `
           <li class="is-current is-thinking">
-            <span>${escapeHtml(thinkingLine.speakerName || "Council Member")} ${thinkingLine.role ? `<small>/ ${escapeHtml(thinkingLine.role)}</small>` : ""}</span>
+            <span>${escapeHtml(thinkingLine.speakerName || "Council Member")} ${thinkingLine.role ? `<small>/ ${escapeHtml(getPdcRoleLabel(thinkingLine.role))}</small>` : ""}</span>
             ${renderPdcRelationLabel(thinkingLine)}
-            <p>${escapeHtml(`${thinkingLine.speakerName || "Council member"} is thinking...`)}</p>
+            <p>${escapeHtml(t("pdcCouncilThinking"))}</p>
           </li>` : ""}
       </ol>
-      <p class="pdc-dialogue-note">${isWarmupPhase ? "Warm-up lines are local preparation cues, not final council statements." : phaseComplete ? "This phase is complete." : "Council members are speaking one at a time."}</p>
+      <p class="pdc-dialogue-note">${escapeHtml(t(isWarmupPhase ? "pdcCouncilThinking" : phaseComplete ? "pdcPhaseComplete" : "pdcSpeakingTurns"))}</p>
     </div>`;
 }
 
@@ -12445,15 +13081,15 @@ function renderPdcVotingLine(line) {
   const shouldShowVoteDetails = hasContributionVote || hasConcernVote;
   return `
     <div class="pdc-voting-line">
-      <p>${escapeHtml(line.text || "Voting rationale recorded.")}</p>
+      <p>${escapeHtml(line.text || t("pdcVoteRecorded"))}</p>
       ${shouldShowVoteDetails ? `
         <div class="pdc-vote-chip-row">
-          ${hasContributionVote ? `<span>Contribution: ${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || "Recorded")}</span>` : ""}
-          ${hasConcernVote ? `<span>Concern: ${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || "Recorded")}</span>` : ""}
+          ${hasContributionVote ? `<span>${escapeHtml(t("pdcContributionVote"))}: ${escapeHtml(line.contributionVote?.targetSpeakerName || line.contributionVote?.targetSpeakerId || t("pdcVoteRecorded"))}</span>` : ""}
+          ${hasConcernVote ? `<span>${escapeHtml(t("pdcConcernVote"))}: ${escapeHtml(line.concernVote?.targetSpeakerName || line.concernVote?.targetSpeakerId || t("pdcVoteRecorded"))}</span>` : ""}
         </div>
         <dl>
-          ${hasContributionVote ? `<dt>Contribution reason</dt><dd>${escapeHtml(line.contributionVote?.reason || "Recorded in round vote summary.")}</dd>` : ""}
-          ${hasConcernVote ? `<dt>Concern reason</dt><dd>${escapeHtml(line.concernVote?.reason || "Recorded in round vote summary.")}</dd>` : ""}
+          ${hasContributionVote ? `<dt>${escapeHtml(t("pdcContributionReason"))}</dt><dd>${escapeHtml(line.contributionVote?.reason || t("pdcVoteRecorded"))}</dd>` : ""}
+          ${hasConcernVote ? `<dt>${escapeHtml(t("pdcConcernReason"))}</dt><dd>${escapeHtml(line.concernVote?.reason || t("pdcVoteRecorded"))}</dd>` : ""}
         </dl>` : ""}
     </div>`;
 }
@@ -12462,32 +13098,21 @@ function renderPdcRelationLabel(line) {
   const stanceType = String(line.stanceType || "").toLowerCase();
   const targetName = line.targetSpeakerName || "";
   if (!targetName) return "";
-  const labelByType = {
-    support: "Supports",
-    challenge: "Challenges",
-    clarify: "Clarifies",
-    build: "Builds on",
-  };
-  const label = labelByType[stanceType] || "Challenges";
-  return `<em class="pdc-relation-label">${label} ${escapeHtml(targetName)}</em>`;
+  const labels = currentLanguage === "zh"
+    ? { support: "支持", challenge: "挑战", clarify: "澄清", build: "推进" }
+    : { support: "Supports", challenge: "Challenges", clarify: "Clarifies", build: "Builds on" };
+  return `<em class="pdc-relation-label">${escapeHtml(labels[stanceType] || labels.challenge)} ${escapeHtml(targetName)}</em>`;
 }
 
 function renderPdcRoundSummary(round, facilitator) {
   const summary = round.blueWhaleSummary?.text || facilitator.summary || "";
   if (!summary) return "";
-  const convergenceLevel = round.blueWhaleSummary?.convergenceLevel || "low";
-  const shouldSuggestStop = round.blueWhaleSummary?.shouldConsiderStopping === true || convergenceLevel === "high";
-  const stopReason = round.blueWhaleSummary?.suggestedReasonToStop || "Blue Whale suggests the discussion is converging. You may stop and summarize now, or continue for another round.";
-  return `
-    <aside class="pdc-round-summary">
-      <strong>Blue Whale Summary</strong>
-      <p>${escapeHtml(summary)}</p>
-      <div class="pdc-convergence-line">
-        <span>Convergence: ${escapeHtml(convergenceLevel)}</span>
-      </div>
-      ${round.rosterUpdate?.shouldArchivePerspective ? `<p class="pdc-stop-suggestion">Blue Whale moves ${escapeHtml(round.rosterUpdate.archivedSpeakerName || "one perspective")} into Observer status for now because ${escapeHtml(round.rosterUpdate.reason || "the council signaled this perspective needs more pressure")}. Their perspective remains available for final reflection.</p>` : ""}
-      ${shouldSuggestStop ? `<p class="pdc-stop-suggestion">${escapeHtml(stopReason)}</p>` : ""}
-    </aside>`;
+  const shouldSuggestStop = round.blueWhaleSummary?.shouldConsiderStopping === true || round.blueWhaleSummary?.convergenceLevel === "high";
+  return `<aside class="pdc-round-summary">
+    <strong>${escapeHtml(t("pdcRoundSummaryTitle"))}</strong>
+    <p>${escapeHtml(summary)}</p>
+    ${shouldSuggestStop ? `<p class="pdc-stop-suggestion">${escapeHtml(t("pdcSummarySuggestion"))}</p>` : ""}
+  </aside>`;
 }
 
 function renderPdcVotingSnapshot(round) {
@@ -12497,20 +13122,20 @@ function renderPdcVotingSnapshot(round) {
   const pressured = summary.mostPressuredPerspective;
   return `
     <section class="pdc-vote-snapshot">
-      <h3>Council Voting Snapshot</h3>
+      <h3>${escapeHtml(t("pdcVotingSnapshot"))}</h3>
       <div>
-        <strong>Most Supported Contribution</strong>
-        <p>${escapeHtml(supported?.speakerName || "-")}${supported?.count ? ` (${Number(supported.count)} support votes)` : ""}</p>
+        <strong>${escapeHtml(t("pdcStrongestContribution"))}</strong>
+        <p>${escapeHtml(supported?.speakerName || "-")}${supported?.count ? ` (${escapeHtml(t("pdcSupportCount", Number(supported.count)))})` : ""}</p>
         ${supported?.reasonSummary ? `<small>${escapeHtml(supported.reasonSummary)}</small>` : ""}
       </div>
       <div>
-        <strong>Most Pressured Perspective</strong>
-        <p>${escapeHtml(pressured?.speakerName || "-")}${pressured?.count ? ` (${Number(pressured.count)} concern votes)` : ""}</p>
+        <strong>${escapeHtml(t("pdcMostChallenged"))}</strong>
+        <p>${escapeHtml(pressured?.speakerName || "-")}${pressured?.count ? ` (${escapeHtml(t("pdcConcernCount", Number(pressured.count)))})` : ""}</p>
         ${pressured?.reasonSummary ? `<small>${escapeHtml(pressured.reasonSummary)}</small>` : ""}
       </div>
       <div>
-        <strong>Blue Whale Interpretation</strong>
-        <p>${escapeHtml(round.rosterUpdate?.reason || "No clear narrowing consensus yet.")}</p>
+        <strong>${escapeHtml(t("pdcWhaleInterpretation"))}</strong>
+        <p>${escapeHtml(round.rosterUpdate?.reason || t("pdcNoConsensus"))}</p>
       </div>
     </section>`;
 }
@@ -12526,25 +13151,25 @@ function renderPdcRoundOutcome(round) {
   if (!hasOutcome) return "";
   return `
     <section class="pdc-round-outcome" aria-label="Round outcome">
-      <h3>Round Outcome</h3>
+      <h3>${escapeHtml(t("pdcRoundOutcome"))}</h3>
       <div class="pdc-outcome-grid">
         <div>
-          <strong>Attack / Defense Focus</strong>
-          ${pressureRows.length ? `<ul>${pressureRows.map((row) => `<li><span>${escapeHtml(row.name)}</span><small>${Number(row.count)} challenge${row.count === 1 ? "" : "s"}</small></li>`).join("")}</ul>` : `<p>No direct challenge target recorded.</p>`}
+          <strong>${escapeHtml(t("pdcChallengeFocus"))}</strong>
+          ${pressureRows.length ? `<ul>${pressureRows.map((row) => `<li><span>${escapeHtml(row.name)}</span><small>${escapeHtml(t("pdcChallengeCount", Number(row.count)))}</small></li>`).join("")}</ul>` : `<p>${escapeHtml(t("pdcNoChallenges"))}</p>`}
         </div>
         <div>
-          <strong>Promoted Contribution</strong>
-          <p>${escapeHtml(promoted?.speakerName || promoted?.targetSpeakerName || "-")}${promoted?.count ? ` · ${Number(promoted.count)} support votes` : ""}</p>
+          <strong>${escapeHtml(t("pdcStrongestContribution"))}</strong>
+          <p>${escapeHtml(promoted?.speakerName || promoted?.targetSpeakerName || "-")}${promoted?.count ? ` · ${escapeHtml(t("pdcSupportCount", Number(promoted.count)))}` : ""}</p>
           ${promoted?.reasonSummary || promoted?.reason ? `<small>${escapeHtml(promoted.reasonSummary || promoted.reason)}</small>` : ""}
         </div>
         <div>
-          <strong>Moved to Observer</strong>
+          <strong>${escapeHtml(t("pdcObserverMoved"))}</strong>
           <p>${escapeHtml(observerMove?.archivedSpeakerName || "-")}</p>
           ${observerMove?.archivedStance || observerMove?.reason ? `<small>${escapeHtml(observerMove.archivedStance || observerMove.reason)}</small>` : ""}
         </div>
         ${reintroduced ? `
           <div>
-            <strong>Reintroduced Perspective</strong>
+            <strong>${escapeHtml(t("pdcReintroduced"))}</strong>
             <p>${escapeHtml(reintroduced.speakerName || "-")}${reintroduced.chosenBySpeakerName ? ` · chosen by ${escapeHtml(reintroduced.chosenBySpeakerName)}` : ""}</p>
             ${reintroduced.reason ? `<small>${escapeHtml(reintroduced.reason)}</small>` : ""}
           </div>` : ""}
@@ -12570,128 +13195,40 @@ function getPdcRoundPressureRows(round) {
 function renderPdcRoundControls({ hasDialogue, playbackActive = false }) {
   if (!hasDialogue) return "";
   if (playbackActive || pdcState.phaseLoading || pdcState.finalRecapLoading) {
-    return `<div class="pdc-round-controls"><span class="pdc-stopped-label">${playbackActive ? "Council is still speaking..." : "Preparing..."}</span></div>`;
+    return `<div class="pdc-round-controls"><span class="pdc-stopped-label">${escapeHtml(t(playbackActive ? "pdcCouncilSpeaking" : "pdcPreparingPhase"))}</span>${!playbackActive ? `<button class="button secondary" type="button" data-pdc-cancel-generation>${escapeHtml(t("pdcCancelGeneration"))}</button>` : ""}</div>`;
   }
   if (pdcState.discussionStopped) {
-    return `<div class="pdc-round-controls"><span class="pdc-stopped-label">Discussion stopped. Council Recap is ready.</span></div>`;
+    return `<div class="pdc-round-controls"><span class="pdc-stopped-label">${escapeHtml(t("pdcRecapReady"))}</span></div>`;
   }
   const currentPhase = pdcState.pdcPhases[clampPdcIndex(pdcState.activeRoundIndex, pdcState.pdcPhases.length)] || null;
-  if (shouldShowPdcFinalRoundPreview(currentPhase)) {
-    return `<div class="pdc-round-controls"><button class="button primary" type="button" data-pdc-enter-final-round>Continue to Final Round</button><button class="button secondary" type="button" data-pdc-stop-summarize>Generate Council Recap</button></div>`;
-  }
-  if (isPdcFinalPhaseComplete(currentPhase)) {
-    return `<div class="pdc-round-controls"><button class="button primary" type="button" data-pdc-stop-summarize>Generate Council Recap</button>${pdcState.founderPreview ? `<button class="button secondary" type="button" data-pdc-continue-phase>Founder: continue beyond final</button>` : ""}</div>`;
-  }
-  return `
+  const suggestSummary = currentPhase && Number(currentPhase.roundNumber) >= pdcRecapSuggestedRound && currentPhase.phaseType === "B";
+  return `${suggestSummary ? `<p class="trust-note">${escapeHtml(t("pdcSummarySuggestion"))}</p>` : ""}
     <div class="pdc-round-controls">
-      <button class="button secondary" type="button" data-pdc-continue-phase ${pdcState.phaseLoading ? "disabled" : ""}>${pdcState.phaseLoading ? "Continuing discussion..." : "Continue to next phase"}</button>
-      <button class="button primary" type="button" data-pdc-stop-summarize>Stop &amp; Summarize</button>
+      <button class="button secondary" type="button" data-pdc-continue-phase>${escapeHtml(t("pdcContinue"))}</button>
+      <button class="button primary" type="button" data-pdc-stop-summarize>${escapeHtml(t(pdcState.finalRecapError ? "pdcRetryRecap" : "pdcSummarize"))}</button>
     </div>`;
 }
 
 function renderPdcDemoRoundControls({ hasDialogue, playbackActive = false, currentIndex = 0, total = 0 }) {
   if (!hasDialogue) return "";
-  if (playbackActive) return `<div class="pdc-round-controls"><span class="pdc-stopped-label">Demo round is playing...</span></div>`;
+  if (playbackActive) return `<div class="pdc-round-controls"><span class="pdc-stopped-label">${escapeHtml(t("pdcDemoPlaying"))}</span></div>`;
   const isLast = currentIndex >= total - 1;
-  return `
-    <div class="pdc-round-controls">
-      ${currentIndex > 0 ? `<button class="button secondary" type="button" data-pdc-demo-prev>Previous demo round</button>` : ""}
-      ${isLast
-        ? `<button class="button primary" type="button" data-pdc-demo-final>Final Demo Recap</button>`
-        : `<button class="button primary" type="button" data-pdc-demo-next>Next demo round</button>`}
-    </div>`;
+  return `<div class="pdc-round-controls">
+    ${currentIndex > 0 ? `<button class="button secondary" type="button" data-pdc-demo-prev>${escapeHtml(t("pdcDemoPrevious"))}</button>` : ""}
+    ${isLast
+      ? `<button class="button primary" type="button" data-pdc-demo-final>${escapeHtml(t("pdcDemoRecap"))}</button>`
+      : `<button class="button primary" type="button" data-pdc-demo-next>${escapeHtml(t("pdcDemoNext"))}</button>`}
+  </div>`;
 }
 
 function renderPdcPhaseGuidance(currentRound) {
-  if (pdcState.discussionStopped) return "";
-  if (shouldShowPdcFinalRoundPreview(currentRound) || isPdcFinalPhaseComplete(currentRound)) return "";
-  return `
-    <div class="pdc-phase-guidance">
-      <label>
-        <span>Guide the next phase</span>
-        <textarea data-pdc-phase-guidance maxlength="500" rows="3" placeholder="Optional: tell the council what to focus on next."></textarea>
-      </label>
-      <p>The next phase will use Blue Whale's summary, compact meeting memory, and your optional guidance.</p>
-      <ul>
-        <li>Focus more on physical-world impact.</li>
-        <li>Challenge the optimistic view.</li>
-        <li>Be more concrete.</li>
-        <li>Discuss what happens to ordinary workers.</li>
-      </ul>
-      ${pdcState.phaseMessage ? `<p class="pdc-status">${escapeHtml(pdcState.phaseMessage)}</p>` : ""}
-    </div>`;
-}
-
-function shouldShowPdcFinalRoundPreview(phase) {
-  return phase && Number(phase.roundNumber) === pdcMaxNormalRound - 1 && String(phase.phaseType).toUpperCase() === "B" && !pdcState.finalRoundPreviewAccepted;
-}
-
-function isPdcFinalPhaseComplete(phase) {
-  return phase && Number(phase.roundNumber) >= pdcMaxNormalRound && String(phase.phaseType).toUpperCase() === "B";
-}
-
-function renderPdcFinalRoundPreview(currentRound) {
-  if (!shouldShowPdcFinalRoundPreview(currentRound)) return "";
-  const rewarded = getPdcMostRewardedContributor();
-  const observers = getPdcFrozenObserverSummaries();
-  const existingReenabled = pdcState.finalReenabledObserverMeta;
-  const existingStillValid = existingReenabled?.speakerId
-    && pdcState.observerRosterIds.includes(existingReenabled.speakerId)
-    && !pdcState.activeRosterIds.includes(existingReenabled.speakerId);
-  const reenabled = existingStillValid ? existingReenabled : selectPdcFinalReenabledObserver(rewarded, observers, currentRound);
-  pdcState.finalRoundPreviewShown = true;
-  pdcState.finalReenableSkippedReason = reenabled.skippedReason || "";
-  pdcState.reEnabledObserverSelectionSource = reenabled.selectionSource || "observerRoster";
-  pdcState.reEnabledObserverWasActiveMemberBlocked = reenabled.activeMemberBlocked === true;
-  pdcState.reEnabledObserverCandidateInvalidReason = reenabled.candidateInvalidReason || "";
-  pdcState.finalRoundPreviewSelection = reenabled.speakerId || "";
-  pdcState.finalReenabledObserverMeta = reenabled.speakerId ? reenabled : null;
-  return `
-    <section class="pdc-final-preview" aria-label="Final Round Preview">
-      <p class="eyebrow">Final Round Preview</p>
-      <h2>Next round is the final council round</h2>
-      <p>Round ${pdcMaxNormalRound}A and ${pdcMaxNormalRound}B will close the council before the Council Recap.</p>
-      <div class="pdc-final-preview-grid">
-        <div>
-          <strong>Most Rewarded Contributor</strong>
-          <p>${escapeHtml(rewarded.name || "No clear leader yet")}${rewarded.count ? ` (${Number(rewarded.count)} contribution votes)` : ""}</p>
-          ${rewarded.tie ? `<small>Tie resolved by ${escapeHtml(rewarded.tieResolution || "latest B-phase contribution votes")}.</small>` : ""}
-        </div>
-        <div>
-          <strong>Re-enabled Archived Perspective</strong>
-          ${reenabled.speakerId ? `
-            <p>${escapeHtml(reenabled.name || reenabled.speakerId)} · ${escapeHtml(reenabled.role || "Archived Perspective")}</p>
-            <small>Selected by ${escapeHtml(reenabled.selectedByName || rewarded.name || "Most Rewarded Contributor")}: ${escapeHtml(reenabled.selectionReason || "This archived perspective can improve the final decision.")}</small>
-          ` : `<p>${escapeHtml(reenabled.skippedReason || "No archived perspective is available.")}</p>`}
-        </div>
-      </div>
-    </section>`;
-}
-
-function renderPdcFounderPhaseDebug(currentRound) {
-  if (!pdcState.founderPreview) return "";
-  const previousSummary = currentRound.previousSummary || "";
-  const diagnostics = currentRound.contentDiagnostics || pdcState.providerDiagnostics?.contentDiagnostics || null;
-  const playbackDebug = getPdcPlaybackDebug(currentRound);
-  const summary = `Tier: ${pdcState.effectiveTier || pdcState.councilTier || "standard"} · Provider: ${pdcState.recap?.dialogueProvider || currentRound.provider || "placeholder"} · Phase model: ${pdcState.phaseModel || pdcState.providerDiagnostics?.phaseModel || pdcState.providerDiagnostics?.modelName || "-"} · Final model: ${pdcState.finalModel || pdcState.providerDiagnostics?.finalModel || "-"} · Fallback: ${pdcState.providerDiagnostics?.fallbackUsed ? "yes" : "no"} · Strict: ${pdcState.providerDiagnostics?.strict ? "true" : "false"} · Duration: ${Number(diagnostics?.phaseTotalDurationMs || diagnostics?.totalPhaseDurationMs || diagnostics?.phaseOpenAiDurationMs || diagnostics?.openAiDurationMs || 0)}ms · Prompt chars: ${Number(diagnostics?.promptCharLength || 0)}`;
-  return `
-    <details class="pdc-founder-phase-debug">
-      <summary>
-        <span>${escapeHtml(summary)}</span>
-        <em>Show debug details</em>
-      </summary>
-      <div class="pdc-debug-details">
-        <p>Previous summary: ${previousSummary ? "available" : "missing"} · User intervention: ${currentRound.userIntervention ? "included" : "empty"} · playbackMode: ${playbackDebug.playbackMode} · playbackStatus: ${playbackDebug.playbackStatus} · visibleStatementCount: ${playbackDebug.visibleStatementCount} · totalStatementCount: ${playbackDebug.totalStatementCount} · activeSpeakerId: ${escapeHtml(playbackDebug.activeSpeakerId || "-")}</p>
-        <p>councilTier: ${escapeHtml(pdcState.councilTier || "standard")} · requestedTier: ${escapeHtml(pdcState.requestedTier || "standard")} · effectiveTier: ${escapeHtml(pdcState.effectiveTier || "standard")} · phaseModel: ${escapeHtml(pdcState.phaseModel || "-")} · finalModel: ${escapeHtml(pdcState.finalModel || "-")} · founderOnlyFullFunction: ${pdcState.founderOnlyFullFunction ? "true" : "false"}</p>
-        <p>warmupMode: ${escapeHtml(playbackDebug.warmupMode || "-")} · warmupStatus: ${escapeHtml(playbackDebug.warmupStatus || "-")} · warmupStage: ${Number(playbackDebug.warmupStage || 0)} · warmupStartedAt: ${escapeHtml(playbackDebug.warmupStartedAt || "-")} · warmupDurationMs: ${Number(playbackDebug.warmupDurationMs || 0)} · sessionResetApplied: ${pdcState.sessionResetApplied ? "true" : "false"} · pdcSessionId: ${escapeHtml(pdcState.pdcSessionId || "-")} · initialRoundNumber: ${Number(pdcState.initialRoundNumber || 0)} · initialMeetingMemoryItemCount: ${Number(pdcState.initialMeetingMemoryItemCount || 0)} · previousSessionCleared: ${pdcState.previousSessionCleared ? "true" : "false"}</p>
-        ${diagnostics ? `<p>OpenAI returned: ${Number(diagnostics.modelStatementCount || 0)} · Normalized: ${Number(diagnostics.normalizedStatementCount || 0)} · Defaults injected: ${diagnostics.defaultStatementsInjected ? `yes (${escapeHtml((diagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${diagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((diagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""}${diagnostics.retryUsed ? " · Retry: yes" : ""}</p>` : ""}
-        ${diagnostics ? `<p>duplicateSpeakerIds: ${escapeHtml((diagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted: ${diagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded: ${diagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed: ${diagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason: ${escapeHtml(pdcState.providerDiagnostics?.fallbackReason || "-")}</p>` : ""}
-        ${diagnostics ? `<p>bPhaseVotingOnlyMode: ${diagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength: ${Number(diagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage: ${Number(diagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount: ${Number(diagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount: ${Number(diagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected: ${diagnostics.aPhaseVoteLeakDetected ? "true" : "false"}</p>` : ""}
-        ${diagnostics ? `<p>phaseOpenAiDurationMs: ${Number(diagnostics.phaseOpenAiDurationMs || diagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs: ${Number(diagnostics.phaseRetryDurationMs || diagnostics.retryDurationMs || 0)} · phaseTotalDurationMs: ${Number(diagnostics.phaseTotalDurationMs || diagnostics.totalPhaseDurationMs || 0)} · promptCharLength: ${Number(diagnostics.promptCharLength || 0)} · approximateInputTokenEstimate: ${Number(diagnostics.approximateInputTokenEstimate || 0)} · outputCharLength: ${Number(diagnostics.outputCharLength || 0)} · activeRosterCount: ${Number(diagnostics.activeRosterCount || 0)} · observerCount: ${Number(diagnostics.observerCount || 0)} · meetingMemoryItemCount: ${Number(diagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens: ${Number(diagnostics.phaseMaxOutputTokens || diagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens: ${Number(diagnostics.retryMaxOutputTokens || 0)}</p>` : ""}
-        ${diagnostics ? `<p>activeRosterPromptCount: ${Number(diagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount: ${Number(diagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt: ${diagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded: ${diagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction: ${Number(diagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied: ${diagnostics.costOptimizationApplied ? "true" : "false"}</p>` : ""}
-        ${diagnostics ? `<p>Template content detected: ${diagnostics.templateContentDetected ? "true" : "false"}${diagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(diagnostics.templateMatchedPhrases.join(", "))})` : ""} · Content retry: ${diagnostics.contentQualityRetryUsed ? "true" : "false"}</p>` : ""}
-      </div>
-    </details>`;
+  if (pdcState.discussionStopped || pdcState.demoMode) return "";
+  return `<div class="pdc-phase-guidance">
+    <label><span>${escapeHtml(t("pdcGuideLabel"))}</span>
+      <textarea data-pdc-phase-guidance maxlength="500" rows="3" placeholder="${escapeHtml(t("pdcGuidePlaceholder"))}">${escapeHtml(pdcState.pendingPhaseGuidance || "")}</textarea>
+    </label>
+    <p>${escapeHtml(t("pdcGuideCopy"))}</p>
+  </div>`;
 }
 
 function getPdcPlaybackForRound(round) {
@@ -13013,19 +13550,78 @@ function rebuildPdcDemoObserverState(phases = []) {
   pdcState.activeRosterIds = allIds.filter((id) => !pdcState.observerRosterIds.includes(id));
 }
 
+function isCurrentPdcGeneration(sessionState, sessionId) {
+  return pdcState === sessionState && pdcState.pdcSessionId === sessionId;
+}
+
+function cancelPdcGenerationRequest() {
+  if (pdcGenerationRequest) pdcGenerationRequest.controller.abort();
+}
+
+async function fetchPdcGeneration(options) {
+  const sessionState = pdcState;
+  const sessionId = pdcState.pdcSessionId;
+  const request = { controller: new AbortController(), timedOut: false };
+  cancelPdcGenerationRequest();
+  pdcGenerationRequest = request;
+  const timer = setTimeout(() => {
+    request.timedOut = true;
+    request.controller.abort();
+  }, pdcGenerationTimeoutMs);
+  try {
+    const response = await fetch("/api/pdc/start", { ...options, credentials: "omit", signal: request.controller.signal });
+    const data = await response.json().catch((error) => {
+      if (request.controller.signal.aborted) throw error;
+      return {};
+    });
+    if (request.controller.signal.aborted || !isCurrentPdcGeneration(sessionState, sessionId)) {
+      throw new Error(t("pdcGenerationCancelled"));
+    }
+    return { response, data };
+  } catch (error) {
+    if (request.timedOut) throw new Error(t("pdcGenerationTimeout"));
+    if (request.controller.signal.aborted) throw new Error(t("pdcGenerationCancelled"));
+    if (error.name === "TypeError") throw new Error(t("pdcLiveUnavailable"));
+    throw error;
+  } finally {
+    clearTimeout(timer);
+    if (pdcGenerationRequest === request) pdcGenerationRequest = null;
+  }
+}
+
+function isPdcPreparedResponse(result) {
+  return result?.fallbackUsed === true || result?.isPlaceholder === true
+    || [result?.actualProvider, result?.provider, result?.dialogueProvider].some((provider) => ["placeholder", "demo"].includes(String(provider || "").toLowerCase()));
+}
+
+function getPdcRequestErrorMessage(data, fallback = t("pdcLiveUnavailable")) {
+  const messages = {
+    MODEL_NOT_CONFIGURED: "pdcServiceUnavailable",
+    MODEL_TIMEOUT: "pdcGenerationTimeout",
+    MODEL_RATE_LIMITED: "pdcServiceBusy",
+    MODEL_UNAVAILABLE: "pdcServiceUnavailable",
+    MODEL_INVALID_RESPONSE: "pdcUnreadableResponse",
+    MODEL_BLOCKED: "pdcQuestionBlocked",
+    INVALID_QUESTION: "pdcQuestionRequired",
+  };
+  const key = messages[data?.code || data?.error];
+  return key ? t(key) : data?.message || fallback;
+}
+
 async function continuePdcPhase() {
   const room = pdcState.recap?.councilRoom;
   if (!room || pdcState.discussionStopped || pdcState.phaseLoading || pdcState.finalRecapLoading || isPdcPlaybackActive()) return;
   const phases = getPdcPhases(room);
   const phaseIndex = clampPdcIndex(pdcState.activeRoundIndex, phases.length);
   const currentPhase = phases[phaseIndex];
-  if (isPdcFinalPhaseComplete(currentPhase) && !pdcState.founderPreview) return;
-  if (shouldShowPdcFinalRoundPreview(currentPhase) && !pdcState.finalRoundPreviewAccepted) return;
   const dialogueLength = Array.isArray(currentPhase?.dialogue) ? currentPhase.dialogue.length : 0;
   if (!dialogueLength) return;
   const nextIndex = phaseIndex + 1;
-  const userIntervention = (document.querySelector("[data-pdc-phase-guidance]")?.value || "").trim().slice(0, 500);
-  if (userIntervention) pdcState.userInterventions.push(userIntervention);
+  const guidanceInput = document.querySelector("[data-pdc-phase-guidance]");
+  const userIntervention = (guidanceInput ? guidanceInput.value : pdcState.pendingPhaseGuidance || "").trim().slice(0, 500);
+  pdcState.pendingPhaseGuidance = userIntervention;
+  const sessionState = pdcState;
+  const sessionId = pdcState.pdcSessionId;
   pdcState.phaseLoading = true;
   pdcState.phaseMessage = "Preparing this phase...";
   const nextSpec = getNextPdcPhaseSpec(currentPhase);
@@ -13035,9 +13631,13 @@ async function continuePdcPhase() {
     if (!phases[nextIndex]) {
       phases.push(await requestNextPdcPhase({ previousPhase: currentPhase, room, userIntervention }));
     }
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
     const warmupDiagnostics = finishPdcWarmup();
     pdcState.activeRoundIndex = nextIndex;
     pdcState.phaseMessage = "";
+    pdcState.finalRecapError = "";
+    if (userIntervention) pdcState.userInterventions.push(userIntervention);
+    pdcState.pendingPhaseGuidance = "";
     if (warmupDiagnostics) {
       if (pdcState.providerDiagnostics?.contentDiagnostics) {
         pdcState.providerDiagnostics.contentDiagnostics = { ...pdcState.providerDiagnostics.contentDiagnostics, ...warmupDiagnostics };
@@ -13045,29 +13645,29 @@ async function continuePdcPhase() {
     }
     beginPdcPhasePlayback(nextIndex);
   } catch (error) {
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
     cancelPdcWarmup();
     pdcState.playback = null;
     pdcState.phaseMessage = error.message || "The next PDC phase could not be generated. Please try again.";
   } finally {
-    pdcState.phaseLoading = false;
-    renderPdcPilot();
+    if (isCurrentPdcGeneration(sessionState, sessionId)) {
+      pdcState.phaseLoading = false;
+      renderPdcPilot();
+    }
   }
 }
 
 async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
   const nextSpec = getNextPdcPhaseSpec(previousPhase);
   const headers = { "Content-Type": "application/json" };
-  if (pdcState.founderPreview) headers["X-MapKAI-Founder"] = "true";
-  const response = await fetch("/api/pdc/start", {
+  const { response, data } = await fetchPdcGeneration({
     method: "POST",
     headers,
     body: JSON.stringify({
       continue_phase: true,
-      pass: pdcState.pass,
       mode_id: "personal",
       user_question: pdcState.question || room.decisionOnTable || "",
-      founder_preview: pdcState.founderPreview,
-      council_tier: pdcState.councilTier || "standard",
+      council_tier: "standard",
       active_roster_ids: pdcState.activeRosterIds,
       observer_roster_ids: pdcState.observerRosterIds,
       observer_roster_context: (pdcState.observerRosterIds || []).map((speakerId) => {
@@ -13089,8 +13689,8 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
       user_intervention: userIntervention,
     }),
   });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok || data.ok !== true || !data.phase) throw new Error(data.message || "Could not continue PDC phase.");
+  if (!response.ok || data.ok !== true || !data.phase) throw new Error(getPdcRequestErrorMessage(data));
+  if (isPdcPreparedResponse(data) || isPdcPreparedResponse(data.phase)) throw new Error(t("pdcLiveUnavailable"));
   pdcState.recap.dialogueProvider = data.provider || pdcState.recap.dialogueProvider;
   pdcState.councilTier = data.effectiveTier || data.councilTier || pdcState.councilTier || "standard";
   pdcState.requestedTier = data.requestedTier || pdcState.requestedTier || "standard";
@@ -13124,7 +13724,6 @@ async function requestNextPdcPhase({ previousPhase, room, userIntervention }) {
     } : null,
   };
   const phase = normalizePdcPhase({ ...data.phase, provider: data.provider, userIntervention, contentDiagnostics: data.contentDiagnostics || null }, pdcState.pdcPhases.length, room);
-  maybeAddPdcFinalReintroducedPerspective(phase);
   appendPdcMemberHistoryFromPhase(phase, pdcState.pdcPhases.length);
   applyPdcRosterUpdate(phase);
   return phase;
@@ -13213,20 +13812,21 @@ function getNextPdcPhaseSpec(previousPhase) {
   const previousPhaseType = String(previousPhase?.phaseType || "A").toUpperCase() === "B" ? "B" : "A";
   const phaseType = previousPhaseType === "A" ? "B" : "A";
   const roundNumber = previousPhaseType === "A" ? previousRoundNumber : previousRoundNumber + 1;
-  if (roundNumber > pdcMaxNormalRound && !pdcState.founderPreview) {
-    return { roundNumber: pdcMaxNormalRound, phaseType: "B", phaseLabel: getPdcPhaseLabel(pdcMaxNormalRound, "B") };
-  }
-  const phaseLabel = getPdcPhaseLabel(roundNumber, phaseType);
-  return { roundNumber, phaseType, phaseLabel };
+  return { roundNumber, phaseType, phaseLabel: getPdcPhaseLabel(roundNumber, phaseType) };
 }
 
 async function stopAndSummarizePdc() {
-  if (!pdcState.recap) return;
+  if (!pdcState.recap || pdcState.demoMode || pdcState.discussionStopped) return;
   if (pdcState.finalRecapLoading || pdcState.phaseLoading || isPdcPlaybackActive()) return;
+  const sessionState = pdcState;
+  const sessionId = pdcState.pdcSessionId;
   pdcState.finalRecapLoading = true;
+  pdcState.finalRecapError = "";
   renderPdcPilot();
   try {
     const result = await requestPdcFinalRecap();
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
+    if (!result.recap || isPdcPreparedResponse(result)) throw new Error(t("pdcLiveUnavailable"));
     pdcState.councilTier = result.effectiveTier || result.councilTier || pdcState.councilTier || "standard";
     pdcState.requestedTier = result.requestedTier || pdcState.requestedTier || "standard";
     pdcState.effectiveTier = result.effectiveTier || pdcState.councilTier || "standard";
@@ -13235,24 +13835,32 @@ async function stopAndSummarizePdc() {
     pdcState.founderOnlyFullFunction = result.founderOnlyFullFunction === true || pdcState.founderOnlyFullFunction === true;
     pdcState.recap.recap = normalizePdcRecapSectionsForDisplay(result.recap || pdcState.recap.recap);
     pdcState.recap.finalRecapProvider = result.actualProvider || result.provider || "";
-    pdcState.recap.finalRecapFallbackUsed = result.fallbackUsed === true;
-    pdcState.recap.placeholderNotice = result.fallbackUsed ? "Placeholder fallback recap — live final recap was unavailable." : "Generated Council Recap";
+    pdcState.recap.finalRecapModelName = result.modelName || result.finalModel || pdcState.finalModel || "";
+    pdcState.recap.finalRecapStrict = result.strict === true;
+    pdcState.recap.finalRecapFallbackUsed = false;
+    pdcState.recap.placeholderNotice = "Generated Council Recap";
     pdcState.finalReintroducedPerspective = normalizePdcReintroducedForDisplay(result.finalReintroducedPerspective) || null;
     pdcState.advancedAudit = null;
     pdcState.advancedAuditError = "";
     pdcState.providerDiagnostics = {
-      phase: pdcState.providerDiagnostics,
+      phase: pdcState.providerDiagnostics?.phase || pdcState.providerDiagnostics,
       final: result,
       advancedAudit: null,
     };
-  } catch (error) {
-    pdcState.recap = applyPdcFinalMemoryToRecap(pdcState.recap);
-    pdcState.providerDiagnostics = { fallbackUsed: true, fallbackReason: error.message || "Final recap request failed." };
-    pdcState.phaseMessage = error.message || "Final recap request failed.";
-  } finally {
-    pdcState.finalRecapLoading = false;
     pdcState.discussionStopped = true;
-    renderPdcPilot();
+  } catch (error) {
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
+    pdcState.finalRecapError = error.message || "Final recap request failed. Please retry.";
+    pdcState.providerDiagnostics = {
+      phase: pdcState.providerDiagnostics?.phase || pdcState.providerDiagnostics,
+      final: { generationFailed: true, providerErrorShort: pdcState.finalRecapError, fallbackUsed: false },
+      advancedAudit: pdcState.providerDiagnostics?.advancedAudit || null,
+    };
+  } finally {
+    if (isCurrentPdcGeneration(sessionState, sessionId)) {
+      pdcState.finalRecapLoading = false;
+      renderPdcPilot();
+    }
   }
 }
 
@@ -13261,17 +13869,14 @@ async function requestPdcFinalRecap() {
   const phases = getPdcPhases(room);
   const latestPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || phases[phases.length - 1] || null;
   const headers = { "Content-Type": "application/json" };
-  if (pdcState.founderPreview) headers["X-MapKAI-Founder"] = "true";
-  const response = await fetch("/api/pdc/start", {
+  const { response, data } = await fetchPdcGeneration({
     method: "POST",
     headers,
     body: JSON.stringify({
       final_recap: true,
-      pass: pdcState.pass,
       mode_id: "personal",
       user_question: pdcState.question || room.decisionOnTable || "",
-      founder_preview: pdcState.founderPreview,
-      council_tier: pdcState.councilTier || "standard",
+      council_tier: "standard",
       latest_phase: latestPhase,
       meeting_memory: latestPhase?.meetingMemory || null,
       vote_summary: latestPhase?.voteSummary || null,
@@ -13292,123 +13897,7 @@ async function requestPdcFinalRecap() {
       user_interventions: pdcState.userInterventions,
     }),
   });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok || data.ok !== true) throw new Error(data.message || "Final recap could not be generated.");
-  return data;
-}
-
-async function runPdcAdvancedFinalAudit() {
-  if (!pdcState.founderPreview || !pdcState.recap || pdcState.advancedAuditLoading) return;
-  pdcState.advancedAuditManualTrigger = true;
-  if (pdcState.advancedAudit?.audit && pdcState.advancedAuditCompletedSessionId === pdcState.pdcSessionId) {
-    pdcState.advancedAuditDuplicateCallBlocked = true;
-    pdcState.providerDiagnostics = {
-      ...(pdcState.providerDiagnostics || {}),
-      advancedAudit: {
-        ...pdcState.advancedAudit,
-        contentDiagnostics: {
-          ...(pdcState.advancedAudit.contentDiagnostics || {}),
-          advancedAuditAlreadyExists: true,
-          advancedAuditDuplicateCallBlocked: true,
-          advancedAuditAutoRun: false,
-          advancedAuditManualTrigger: true,
-          advancedAuditSessionId: pdcState.pdcSessionId || "",
-          advancedAuditInFlight: false,
-        },
-      },
-    };
-    renderPdcPilot();
-    return;
-  }
-  pdcState.advancedAuditLoading = true;
-  pdcState.advancedAuditError = "";
-  pdcState.advancedAuditDuplicateCallBlocked = false;
-  renderPdcPilot();
-  try {
-    const result = await requestPdcAdvancedFinalAudit();
-    pdcState.advancedAudit = result;
-    pdcState.advancedAuditCompletedSessionId = pdcState.pdcSessionId || "";
-    pdcState.providerDiagnostics = {
-      ...(pdcState.providerDiagnostics || {}),
-      advancedAudit: result,
-    };
-  } catch (error) {
-    pdcState.advancedAuditError = error.message || "Advanced Final Audit could not run.";
-    pdcState.providerDiagnostics = {
-      ...(pdcState.providerDiagnostics || {}),
-      advancedAudit: {
-        fallbackUsed: true,
-        fallbackReason: pdcState.advancedAuditError,
-        contentDiagnostics: {
-          ...(error.contentDiagnostics || {}),
-          advancedAuditAutoRun: false,
-          advancedAuditManualTrigger: true,
-          advancedAuditSessionId: pdcState.pdcSessionId || "",
-          advancedAuditInFlight: false,
-        },
-      },
-    };
-  } finally {
-    pdcState.advancedAuditLoading = false;
-    renderPdcPilot();
-  }
-}
-
-async function requestPdcAdvancedFinalAudit() {
-  const room = pdcState.recap?.councilRoom || {};
-  const phases = getPdcPhases(room);
-  const latestPhase = phases[clampPdcIndex(pdcState.activeRoundIndex, phases.length)] || phases[phases.length - 1] || null;
-  const finalDiagnostics = pdcState.providerDiagnostics?.final || null;
-  const phaseDiagnostics = pdcState.providerDiagnostics?.phase || null;
-  const headers = { "Content-Type": "application/json", "X-MapKAI-Founder": "true" };
-  const response = await fetch("/api/pdc/start", {
-    method: "POST",
-    headers,
-    body: JSON.stringify({
-      advanced_final_audit: true,
-      advanced_audit_manual_trigger: true,
-      pdc_session_id: pdcState.pdcSessionId || "",
-      pass: pdcState.pass,
-      mode_id: "personal",
-      user_question: pdcState.question || room.decisionOnTable || "",
-      founder_preview: true,
-      council_tier: pdcState.councilTier || "standard",
-      final_recap_payload: pdcState.recap?.recap || null,
-      phases: phases.map((phase) => ({
-        label: phase.label || phase.phaseLabel || "",
-        roundNumber: phase.roundNumber,
-        phaseType: phase.phaseType,
-        blueWhaleSummary: phase.blueWhaleSummary || null,
-        voteSummary: phase.voteSummary || null,
-        rosterUpdate: phase.rosterUpdate || null,
-      })),
-      latest_phase: latestPhase,
-      meeting_memory: latestPhase?.meetingMemory || null,
-      vote_summary: latestPhase?.voteSummary || null,
-      active_roster_ids: pdcState.activeRosterIds.length ? pdcState.activeRosterIds : getPdcRosterPersonas(room, phases).map((persona) => persona.id),
-      observer_roster_ids: pdcState.observerRosterIds || [],
-      observer_roster_context: (pdcState.observerRosterIds || []).map((speakerId) => {
-        const info = getPdcObserverArchiveInfo(speakerId) || {};
-        return {
-          speakerId,
-          archivedStance: info.archivedStance || info.archivedPerspective || "",
-          archivedReason: info?.reason || "",
-          lastContribution: info?.lastContribution || "",
-          archivedAtPhaseLabel: info.archivedAtPhaseLabel || "",
-          archivedAtRoundNumber: info.archivedAtRoundNumber || 0,
-        };
-      }),
-      final_reintroduced_perspective: pdcState.finalReintroducedPerspective,
-      phase_diagnostics: phaseDiagnostics,
-      final_diagnostics: finalDiagnostics,
-    }),
-  });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok || data.ok !== true) {
-    const error = new Error(data.message || data.fallbackReason || "Advanced Final Audit could not run.");
-    error.contentDiagnostics = data.contentDiagnostics || null;
-    throw error;
-  }
+  if (!response.ok || data.ok !== true) throw new Error(getPdcRequestErrorMessage(data));
   return data;
 }
 
@@ -13421,7 +13910,7 @@ function createNextPdcPlaceholderPhase({ previousPhase, room, userIntervention =
   const convergenceLevel = roundNumber >= 3 && phaseType === "B" ? "high" : roundNumber >= 2 ? "medium" : "low";
   const shouldConsiderStopping = convergenceLevel === "high";
   const voteSummary = phaseType === "B" ? createClientPdcVoteSummary(dialogue, personas) : null;
-  const rosterUpdate = phaseType === "B" && roundNumber < pdcMaxNormalRound ? createClientPdcRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: phaseType === "B" ? "Final voting phase closes without another observer transition." : "Position update phase only." };
+  const rosterUpdate = phaseType === "B" && roundNumber < pdcRecapSuggestedRound ? createClientPdcRosterUpdate(voteSummary) : { shouldArchivePerspective: false, reason: phaseType === "B" ? "Final voting phase closes without another observer transition." : "Position update phase only." };
   return {
     id: `round-${roundNumber}${phaseType.toLowerCase()}`,
     label: getPdcPhaseLabel(roundNumber, phaseType),
@@ -13580,17 +14069,17 @@ function renderPdcPersonaProfile(persona) {
   const currentStance = getPdcCurrentMemberStance(persona.id, history);
   return `
     <aside class="pdc-profile-panel pdc-profile-inline is-open" aria-live="polite">
-      <h2>Member Profile</h2>
+      <h2>${escapeHtml(t("pdcMemberProfile"))}</h2>
       <dl>
-        <dt>Name</dt><dd>${escapeHtml(persona.englishName || persona.name || "-")}${persona.name && persona.name !== persona.englishName ? ` / ${escapeHtml(persona.name)}` : ""}</dd>
-        <dt>Role</dt><dd>${escapeHtml(persona.role || "-")}</dd>
-        <dt>Responsibility</dt><dd>${escapeHtml(persona.responsibility || "-")}</dd>
-        ${currentStance ? `<dt>Current stance</dt><dd>${escapeHtml(currentStance)}</dd>` : ""}
+        <dt>${escapeHtml(t("pdcProfileName"))}</dt><dd>${escapeHtml(persona.englishName || persona.name || "-")}${persona.name && persona.name !== persona.englishName ? ` / ${escapeHtml(persona.name)}` : ""}</dd>
+        <dt>${escapeHtml(t("pdcProfileRole"))}</dt><dd>${escapeHtml(getPdcRoleLabel(persona.role))}</dd>
+        <dt>${escapeHtml(t("pdcProfileResponsibility"))}</dt><dd>${escapeHtml(persona.responsibility || "-")}</dd>
+        ${currentStance ? `<dt>${escapeHtml(t("pdcCurrentStance"))}</dt><dd>${escapeHtml(currentStance)}</dd>` : ""}
         ${observerInfo ? `
-          <dt>Archived Perspective</dt><dd>${escapeHtml(observerInfo.archivedPerspective || persona.role || "-")}</dd>
-          <dt>Reason moved to Observer</dt><dd>${escapeHtml(observerInfo.reason || persona.responsibility || "-")}</dd>
-          <dt>Last contribution</dt><dd>${escapeHtml(observerInfo.lastContribution || persona.responsibility || "-")}</dd>
-          <dt>Archived phase</dt><dd>${escapeHtml(observerInfo.archivedAtPhaseLabel || "-")}</dd>
+          <dt>${escapeHtml(t("pdcObservers"))}</dt><dd>${escapeHtml(observerInfo.archivedPerspective || persona.role || "-")}</dd>
+          <dt>${escapeHtml(t("pdcObserverMoved"))}</dt><dd>${escapeHtml(observerInfo.reason || persona.responsibility || "-")}</dd>
+          <dt>${escapeHtml(t("pdcHighlights"))}</dt><dd>${escapeHtml(observerInfo.lastContribution || persona.responsibility || "-")}</dd>
+          <dt>${escapeHtml(t("pdcCurrentRoundLabel"))}</dt><dd>${escapeHtml(observerInfo.archivedAtPhaseLabel || "-")}</dd>
         ` : ""}
       </dl>
       ${renderPdcPerspectiveTrail(history)}
@@ -13602,8 +14091,8 @@ function renderPdcPerspectiveTrail(history) {
   if (!entries.length) {
     return `
       <div class="pdc-perspective-trail">
-        <h3>Perspective Trail / 观点轨迹</h3>
-        <p>This member's perspective trail will appear after the council starts.</p>
+        <h3>${escapeHtml(t("pdcPerspectiveTrail"))}</h3>
+        <p>${escapeHtml(t("pdcTrailEmpty"))}</p>
       </div>`;
   }
   const groups = [];
@@ -13618,7 +14107,7 @@ function renderPdcPerspectiveTrail(history) {
   });
   return `
     <div class="pdc-perspective-trail">
-      <h3>Perspective Trail / 观点轨迹</h3>
+      <h3>${escapeHtml(t("pdcPerspectiveTrail"))}</h3>
       <div class="pdc-trail-list">
         ${groups.map((group) => `
           <section class="pdc-trail-group">
@@ -13639,8 +14128,8 @@ function renderPdcPerspectiveTrailEntry(entry) {
     entry.targetSpeakerName ? `Targets ${entry.targetSpeakerName}` : "",
   ].filter(Boolean).join(" · ");
   const voteBits = [
-    entry.contributionVoteGiven ? `Contribution vote: ${entry.contributionVoteGiven}` : "",
-    entry.concernVoteGiven ? `Concern vote: ${entry.concernVoteGiven}` : "",
+    entry.contributionVoteGiven ? `${t("pdcContributionVote")}: ${entry.contributionVoteGiven}` : "",
+    entry.concernVoteGiven ? `${t("pdcConcernVote")}: ${entry.concernVoteGiven}` : "",
   ].filter(Boolean);
   return `
     <article class="pdc-trail-entry">
@@ -13648,9 +14137,9 @@ function renderPdcPerspectiveTrailEntry(entry) {
       <p>${escapeHtml(entry.text || "")}</p>
       ${shouldShowStance || shouldShowShift || shouldShowNote ? `
         <dl>
-          ${shouldShowStance ? `<dt>Stance</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
-          ${shouldShowShift ? `<dt>Shift / 推进</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
-          ${shouldShowNote ? `<dt>Note</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
+          ${shouldShowStance ? `<dt>${escapeHtml(t("pdcCurrentStance"))}</dt><dd>${escapeHtml(entry.stance)}</dd>` : ""}
+          ${shouldShowShift ? `<dt>${escapeHtml(t("pdcPerspectiveTrail"))}</dt><dd>${escapeHtml(entry.stanceShift)}</dd>` : ""}
+          ${shouldShowNote ? `<dt>${escapeHtml(t("pdcReflectionNote"))}</dt><dd>${escapeHtml(entry.historyNote)}</dd>` : ""}
         </dl>` : ""}
       ${voteBits.length ? `<p class="pdc-trail-votes">${escapeHtml(voteBits.join(" · "))}</p>` : ""}
     </article>`;
@@ -13906,7 +14395,7 @@ function selectPdcFinalReenabledObserver(rewarded, observers, currentRound) {
 }
 
 function maybeAddPdcFinalReintroducedPerspective(phase) {
-  if (!phase || Number(phase.roundNumber) !== pdcMaxNormalRound || String(phase.phaseType).toUpperCase() !== "A" || pdcState.finalReintroducedPerspective?.added) return;
+  if (!phase || Number(phase.roundNumber) !== pdcRecapSuggestedRound || String(phase.phaseType).toUpperCase() !== "A" || pdcState.finalReintroducedPerspective?.added) return;
   const selectedId = pdcState.finalRoundPreviewSelection;
   if (!selectedId) {
     pdcState.finalReenableSkippedReason ||= "no_reintroduced_perspective_selected";
@@ -13965,33 +14454,27 @@ function getPersonaInitials(persona) {
 function renderPdcRecap(recap) {
   const recapSections = normalizePdcRecapSectionsForDisplay(recap.recap || recap.sections || {});
   const sections = [
-    ["Decision Frame", recapSections.decisionFrame, "frame"],
-    ["Core Tension", recapSections.coreTension, "tension"],
-    ["Council Highlights", recapSections.councilHighlights, "highlights"],
-    ["Debate Snapshot", recapSections.debateSnapshot, "snapshot"],
-    ["Condensed Review", recapSections.condensedReview, "review"],
-    ["Final Recommendation", recapSections.finalRecommendation, "recommendation"],
-    ["Next Actions", recapSections.nextActions, "actions"],
-    ["What Not To Do", recapSections.whatNotToDo, "warning"],
-    ["Reflection Note", recapSections.reflectionNote, "note"],
+    [t("pdcDecisionFrame"), recapSections.decisionFrame, "frame"],
+    [t("pdcCoreTension"), recapSections.coreTension, "tension"],
+    [t("pdcHighlights"), recapSections.councilHighlights, "highlights"],
+    [t("pdcDebateSnapshot"), recapSections.debateSnapshot, "snapshot"],
+    [t("pdcCondensedReview"), recapSections.condensedReview, "review"],
+    [t("pdcRecommendation"), recapSections.finalRecommendation, "recommendation"],
+    [t("pdcNextActions"), recapSections.nextActions, "actions"],
+    [t("pdcWhatNotToDo"), recapSections.whatNotToDo, "warning"],
+    [t("pdcReflectionNote"), recapSections.reflectionNote, "note"],
   ];
   return `
     <section class="pdc-result pdc-decision-memo">
       <div class="pdc-memo-head">
         <div>
-          <p class="eyebrow">${escapeHtml(recap.modeLabel || "PDC")}</p>
-          <h1>Council Recap</h1>
-          <p class="pdc-memo-subtitle">A polished decision memo distilled from the council discussion.</p>
+          <p class="eyebrow">${"MapKAI PDC"}</p>
+          <h1>${escapeHtml(t("pdcRecapTitle"))}</h1>
+          <p class="pdc-memo-subtitle">${escapeHtml(t("pdcRecapCopy"))}</p>
           <p class="content-label pdc-content-label">${escapeHtml(getPdcContentLabel(recap))}</p>
         </div>
-        ${renderPdcStatusChips([
-          recap.finalRecapProvider ? recap.finalRecapProvider.replace(/^openai$/i, "OpenAI") : "",
-          recap.modelName || "",
-          recap.finalRecapStrict || recap.strict ? "Strict" : "",
-          recap.finalRecapFallbackUsed ? "Fallback" : "No fallback",
-        ])}
       </div>
-      ${renderPdcRecapNotice(recap)}
+      ${pdcState.demoMode ? renderPdcDemoNotice() : ""}
       ${recap.rosterSummary ? `<p class="pdc-roster-note">${escapeHtml(recap.rosterSummary)}</p>` : ""}
       <div class="pdc-recap-sections">
         ${sections.map(([title, value, kind]) => `
@@ -14006,101 +14489,12 @@ function renderPdcRecap(recap) {
 function renderPdcRecapNotice(recap) {
   const provider = recap.finalRecapProvider || "";
   const notice = recap.placeholderNotice || "";
-  if ((provider === "cloudflare" || provider === "openai") && !recap.finalRecapFallbackUsed) {
+  if (["cloudflare", "openai", "gemini"].includes(provider) && !recap.finalRecapFallbackUsed) {
     return `<p class="pdc-placeholder-notice">Generated Council Recap</p>`;
   }
   if (recap.finalRecapFallbackUsed && notice) return `<p class="pdc-placeholder-notice">${escapeHtml(notice)}</p>`;
   if (recap.isPlaceholder) return `<p class="pdc-placeholder-notice">Development placeholder output — live PDC API is not connected yet.</p>`;
   return "";
-}
-
-function renderPdcAdvancedFinalAudit() {
-  if (!pdcState.founderPreview) return "";
-  const audit = pdcState.advancedAudit?.audit || null;
-  const diagnostics = pdcState.providerDiagnostics?.advancedAudit?.contentDiagnostics || {};
-  const advancedInfo = pdcState.providerDiagnostics?.advancedAudit || {};
-  return `
-    <section class="pdc-advanced-audit">
-      <div class="pdc-audit-head">
-        <div>
-          <p class="eyebrow">Founder Insight Report</p>
-          <h2>Adaptive Final Decision Layer</h2>
-          <p>A manually triggered Founder-only layer that chooses the right final answer shape for this decision.</p>
-        </div>
-        ${renderPdcStatusChips(getPdcProviderChips({
-          provider: diagnostics.advancedAuditProvider || advancedInfo.actualProvider || advancedInfo.provider || "OpenAI",
-          model: diagnostics.advancedAuditActualModel || advancedInfo.actualModel || advancedInfo.modelName || "GPT-5.5",
-          strict: diagnostics.advancedAuditStrict === true || advancedInfo.strict === true,
-          fallbackUsed: diagnostics.advancedAuditFallbackUsed === true || advancedInfo.fallbackUsed === true,
-          founderOnly: true,
-          manualAudit: true,
-        }))}
-      </div>
-      ${audit ? renderPdcAdvancedAuditResult(audit) : `
-        <button class="button secondary pdc-audit-button" type="button" data-pdc-run-advanced-audit ${pdcState.advancedAuditLoading ? "disabled" : ""}>${pdcState.advancedAuditLoading ? "Running Advanced Final Audit..." : "Run Advanced Final Audit"}</button>
-      `}
-      ${pdcState.advancedAuditError ? `<p class="pdc-status">${escapeHtml(pdcState.advancedAuditError)}</p>` : ""}
-    </section>`;
-}
-
-function renderPdcAdvancedAuditResult(audit) {
-  const diagnosis = audit.adaptiveDiagnosis || {};
-  const bias = audit.biasAudit || {};
-  const judgment = audit.improvedFinalJudgment || {};
-  const adaptivePackage = audit.adaptiveFinalPackage || {};
-  const display = audit.finalDisplay || {};
-  return `
-    <div class="pdc-advanced-audit-grid">
-      ${display.objectiveConclusion ? `
-        <article class="pdc-audit-highlight">
-          <h3>Objective Conclusion</h3>
-          <p>${escapeHtml(display.objectiveConclusion)}</p>
-        </article>` : ""}
-      <article>
-        <h3>Decision Context</h3>
-        <p>${escapeHtml(diagnosis.decisionContext || display.summary || "-")}</p>
-      </article>
-      <article>
-        <h3>Decision Nature</h3>
-        <p>${escapeHtml(diagnosis.decisionNature || "-")}</p>
-      </article>
-      <article>
-        <h3>User Real Need</h3>
-        <p>${escapeHtml(diagnosis.userRealNeed || "-")}</p>
-      </article>
-      <article>
-        <h3>Main Weakness of Council Recap</h3>
-        <p>${escapeHtml(diagnosis.recapMainWeakness || "-")}</p>
-      </article>
-      <article>
-        <h3>Recommended Output Shape</h3>
-        <p>${escapeHtml(diagnosis.recommendedOutputShape || adaptivePackage.title || "-")}</p>
-      </article>
-      <article>
-        <h3>Why This Shape Fits</h3>
-        <p>${escapeHtml(diagnosis.whyThisShapeFits || "-")}</p>
-      </article>
-      <article>
-        <h3>Bias & Stage Fit</h3>
-        <p>${escapeHtml(bias.mainBias || "-")}</p>
-        ${bias.stageMismatch ? `<p>${escapeHtml(bias.stageMismatch)}</p>` : ""}
-        ${renderPdcAuditList([...normalizePdcDisplayList(bias.overcomplicatedParts), ...normalizePdcDisplayList(bias.falsePrecisionRisks)])}
-      </article>
-      <article class="pdc-audit-judgment">
-        <h3>Improved Final Judgment</h3>
-        <p>${escapeHtml(judgment.oneSentenceConclusion || display.objectiveConclusion || "-")}</p>
-        ${judgment.why ? `<p>${escapeHtml(judgment.why)}</p>` : ""}
-        ${judgment.bestFirstStep ? `<p><strong>Best first step:</strong> ${escapeHtml(judgment.bestFirstStep)}</p>` : ""}
-      </article>
-      <article class="pdc-advanced-package">
-        <h3>Adaptive Final Package</h3>
-        ${renderPdcAdaptiveFinalPackage(adaptivePackage)}
-      </article>
-      <article class="pdc-audit-highlight">
-        <h3>Recommended Next Step</h3>
-        <p>${escapeHtml(display.recommendedNextStep || judgment.bestFirstStep || "-")}</p>
-      </article>
-    </div>`;
 }
 
 function renderPdcAdaptiveFinalPackage(adaptivePackage) {
@@ -14196,11 +14590,11 @@ function renderPdcReintroducedPerspective() {
   if (!item) return "";
   return `
     <section class="pdc-reintroduced">
-      <p class="eyebrow">Reintroduced Perspective</p>
+      <p class="eyebrow">${escapeHtml(t("pdcReintroduced"))}</p>
       <h2>${escapeHtml(item.speakerName || "Archived perspective")}${item.speakerChineseName ? ` / ${escapeHtml(item.speakerChineseName)}` : ""}</h2>
       <p class="pdc-role-line">${escapeHtml(item.role || "")}</p>
-      <p>Blue Whale reintroduces one archived perspective for a final reflection before summarizing.</p>
-      ${item.reasonForReintroduction ? `<p><strong>Why this perspective returns:</strong> ${escapeHtml(item.reasonForReintroduction)}</p>` : ""}
+      <p>${escapeHtml(t("pdcObserverReflection"))}</p>
+      ${item.reasonForReintroduction ? `<p><strong>${escapeHtml(t("pdcObserverReturnReason"))}:</strong> ${escapeHtml(item.reasonForReintroduction)}</p>` : ""}
       ${item.finalReflection ? `<blockquote>${escapeHtml(item.finalReflection)}</blockquote>` : ""}
     </section>`;
 }
@@ -14232,50 +14626,6 @@ function findPdcPersonaByName(name) {
   return getPdcRosterPersonas(room, getPdcPhases(room)).find((persona) => [persona.englishName, persona.name].filter(Boolean).some((value) => value.toLowerCase() === normalizedName)) || null;
 }
 
-function renderPdcProviderDiagnostics() {
-  if (!pdcState.founderPreview || !pdcState.providerDiagnostics) return "";
-  const info = pdcState.providerDiagnostics;
-  const phase = info.phase || (!info.final ? info : null);
-  const final = info.final || (info.finalReintroducedPerspective || info.recap ? info : null);
-  const advancedAudit = info.advancedAudit || null;
-  const phaseDiagnostics = phase?.contentDiagnostics || null;
-  const finalDiagnostics = final?.contentDiagnostics || null;
-  const auditDiagnostics = advancedAudit?.contentDiagnostics || null;
-  const lifecycleDiagnostics = getPdcLifecycleDiagnostics(phaseDiagnostics);
-  const summary = [
-    `councilTier: ${pdcState.effectiveTier || pdcState.councilTier || "standard"}`,
-    `phaseModel: ${pdcState.phaseModel || phase?.phaseModel || phase?.modelName || "-"}`,
-    `finalModel: ${pdcState.finalModel || final?.finalModel || final?.modelName || "-"}`,
-    `Provider: ${phase?.actualProvider || phase?.provider || final?.actualProvider || final?.provider || "-"}`,
-    `Fallback: ${(phase?.fallbackUsed || final?.fallbackUsed) ? "yes" : "no"}`,
-    `Strict: ${(phase?.strict || phaseDiagnostics?.strict || final?.strict || finalDiagnostics?.finalRecapStrict) ? "true" : "false"}`,
-    `Duration: ${Number(phaseDiagnostics?.phaseTotalDurationMs || phaseDiagnostics?.totalPhaseDurationMs || finalDiagnostics?.finalRecapTotalDurationMs || 0)}ms`,
-    `Prompt chars: ${Number(phaseDiagnostics?.promptCharLength || finalDiagnostics?.finalRecapPromptCharLength || 0)}`,
-  ].join(" · ");
-  return `
-    <details class="pdc-founder-phase-debug pdc-provider-debug">
-      <summary>
-        <span>${escapeHtml(summary)}</span>
-        <em>Show debug details</em>
-      </summary>
-      <div class="pdc-debug-details">
-      <p>councilTier: ${escapeHtml(pdcState.councilTier || "standard")} · requestedTier: ${escapeHtml(pdcState.requestedTier || "standard")} · effectiveTier: ${escapeHtml(pdcState.effectiveTier || "standard")} · phaseModel: ${escapeHtml(pdcState.phaseModel || phase?.phaseModel || "-")} · finalModel: ${escapeHtml(pdcState.finalModel || final?.finalModel || "-")} · founderOnlyFullFunction: ${pdcState.founderOnlyFullFunction ? "true" : "false"}</p>
-      ${phase ? `<p>Phase dialogue provider: ${escapeHtml(phase.actualProvider || phase.provider || "-")} · Requested: ${escapeHtml(phase.requestedProvider || "-")} · Fallback: ${phase.fallbackUsed ? "yes" : "no"}${phase.fallbackReason ? ` · ${escapeHtml(phase.fallbackReason)}` : ""}</p>` : ""}
-      ${final ? `<p>Final recap provider: ${escapeHtml(final.actualProvider || final.provider || "-")} · Requested: ${escapeHtml(final.requestedProvider || "-")} · Fallback: ${final.fallbackUsed ? "yes" : "no"}${final.fallbackReason ? ` · ${escapeHtml(final.fallbackReason)}` : ""}</p>` : ""}
-      ${phase ? `<p>Phase model: ${escapeHtml(phase.modelName || "-")} · Phase JSON parse failed: ${phase.jsonParseFailed ? "yes" : "no"} · Phase schema: ${escapeHtml(phase.schemaName || phaseDiagnostics?.schemaName || "-")} · Phase strict: ${(phase.strict || phaseDiagnostics?.strict) ? "true" : "false"}${phase.providerErrorShort ? ` · Phase error: ${escapeHtml(phase.providerErrorShort)}` : ""}</p>` : ""}
-      ${final ? `<p>Final recap model: ${escapeHtml(final.modelName || "-")} · Final recap JSON parse failed: ${final.jsonParseFailed ? "yes" : "no"} · Final recap schema: ${escapeHtml(final.schemaName || finalDiagnostics?.finalRecapSchemaName || "-")} · Final recap strict: ${(final.strict || finalDiagnostics?.finalRecapStrict) ? "true" : "false"}${final.providerErrorShort ? ` · Final recap error: ${escapeHtml(final.providerErrorShort)}` : ""}</p>` : ""}
-      ${phaseDiagnostics ? `<p>Phase speed: phaseOpenAiDurationMs=${Number(phaseDiagnostics.phaseOpenAiDurationMs || phaseDiagnostics.openAiDurationMs || 0)} · phaseRetryDurationMs=${Number(phaseDiagnostics.phaseRetryDurationMs || phaseDiagnostics.retryDurationMs || 0)} · phaseTotalDurationMs=${Number(phaseDiagnostics.phaseTotalDurationMs || phaseDiagnostics.totalPhaseDurationMs || 0)} · promptCharLength=${Number(phaseDiagnostics.promptCharLength || 0)} · approximateInputTokenEstimate=${Number(phaseDiagnostics.approximateInputTokenEstimate || 0)} · outputCharLength=${Number(phaseDiagnostics.outputCharLength || 0)} · activeRosterCount=${Number(phaseDiagnostics.activeRosterCount || 0)} · observerCount=${Number(phaseDiagnostics.observerCount || 0)} · meetingMemoryItemCount=${Number(phaseDiagnostics.meetingMemoryItemCount || 0)} · phaseMaxOutputTokens=${Number(phaseDiagnostics.phaseMaxOutputTokens || phaseDiagnostics.maxOutputTokens || 0)} · retryMaxOutputTokens=${Number(phaseDiagnostics.retryMaxOutputTokens || 0)}</p>` : ""}
-      ${phaseDiagnostics ? `<p>Session reset: sessionResetApplied=${phaseDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(phaseDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(phaseDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(phaseDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${phaseDiagnostics.previousSessionCleared ? "true" : "false"}</p>` : ""}
-      ${phaseDiagnostics ? `<p>Phase cost optimization: activeRosterPromptCount=${Number(phaseDiagnostics.activeRosterPromptCount || 0)} · observerRosterPromptCount=${Number(phaseDiagnostics.observerRosterPromptCount || 0)} · observerProfilesOmittedFromPrompt=${phaseDiagnostics.observerProfilesOmittedFromPrompt ? "true" : "false"} · archivedSummaryIncluded=${phaseDiagnostics.archivedSummaryIncluded ? "true" : "false"} · estimatedPromptTokenReduction=${Number(phaseDiagnostics.estimatedPromptTokenReduction || 0)} · costOptimizationApplied=${phaseDiagnostics.costOptimizationApplied ? "true" : "false"} · allowedSpeakerIdsForPhase=${escapeHtml((phaseDiagnostics.allowedSpeakerIdsForPhase || []).join(", ") || "-")} · generatedSpeakerIds=${escapeHtml((phaseDiagnostics.generatedSpeakerIds || []).join(", ") || "-")}</p>` : ""}
-      ${phaseDiagnostics ? `<p>Phase quality: OpenAI returned statement count=${Number(phaseDiagnostics.modelStatementCount || 0)} · Normalized statement count=${Number(phaseDiagnostics.normalizedStatementCount || 0)} · visibleStatementCount=${Number(phaseDiagnostics.visibleStatementCount || 0)} · totalStatementCount=${Number(phaseDiagnostics.totalStatementCount || 0)} · retryUsed=${phaseDiagnostics.retryUsed ? "true" : "false"} · duplicateSpeakerIds=${escapeHtml((phaseDiagnostics.duplicateSpeakerIds || []).join(", ") || "-")} · structuredOutputRepairAttempted=${phaseDiagnostics.structuredOutputRepairAttempted ? "true" : "false"} · structuredOutputRepairSucceeded=${phaseDiagnostics.structuredOutputRepairSucceeded ? "true" : "false"} · duplicateSpeakerRecoveryUsed=${phaseDiagnostics.duplicateSpeakerRecoveryUsed ? "true" : "false"} · fallbackReason=${escapeHtml(phase?.fallbackReason || pdcState.providerDiagnostics?.fallbackReason || "-")} · Default statements injected=${phaseDiagnostics.defaultStatementsInjected ? `yes (${escapeHtml((phaseDiagnostics.defaultStatementSpeakerIds || []).join(", "))})` : "no"}${phaseDiagnostics.defaultTemplateMatched ? ` · OpenAI output matched default template (${escapeHtml((phaseDiagnostics.defaultTemplateMatchedSpeakerIds || []).join(", "))})` : ""} · templateContentDetected=${phaseDiagnostics.templateContentDetected ? "true" : "false"}${phaseDiagnostics.templateMatchedPhrases?.length ? ` (${escapeHtml(phaseDiagnostics.templateMatchedPhrases.join(", "))})` : ""} · contentQualityRetryUsed=${phaseDiagnostics.contentQualityRetryUsed ? "true" : "false"}</p>` : ""}
-      ${phaseDiagnostics ? `<p>Phase rhythm: bPhaseVotingOnlyMode=${phaseDiagnostics.bPhaseVotingOnlyMode ? "true" : "false"} · bPhaseAverageTextLength=${Number(phaseDiagnostics.bPhaseAverageTextLength || 0)} · bPhaseVoteReasonCoverage=${Number(phaseDiagnostics.bPhaseVoteReasonCoverage || 0)} · bPhaseLongStatementFilteredCount=${Number(phaseDiagnostics.bPhaseLongStatementFilteredCount || 0)} · bPhaseMissingVoteCount=${Number(phaseDiagnostics.bPhaseMissingVoteCount || 0)} · aPhaseVoteLeakDetected=${phaseDiagnostics.aPhaseVoteLeakDetected ? "true" : "false"}</p>` : ""}
-      <p>Lifecycle: frozenObserverCount=${Number(lifecycleDiagnostics.frozenObserverCount || 0)} · observerHistoryUpdateBlockedCount=${Number(lifecycleDiagnostics.observerHistoryUpdateBlockedCount || 0)} · observerCurrentStanceUpdateBlockedCount=${Number(lifecycleDiagnostics.observerCurrentStanceUpdateBlockedCount || 0)} · archivedObserverSummaryCharLength=${Number(lifecycleDiagnostics.archivedObserverSummaryCharLength || 0)} · activeMemberSummaryCount=${Number(lifecycleDiagnostics.activeMemberSummaryCount || 0)} · observerFullTrailIncludedInPrompt=${lifecycleDiagnostics.observerFullTrailIncludedInPrompt ? "true" : "false"} · maxNormalRound=${Number(lifecycleDiagnostics.maxNormalRound || 0)} · currentRoundNumber=${Number(lifecycleDiagnostics.currentRoundNumber || 0)} · currentPhaseType=${escapeHtml(lifecycleDiagnostics.currentPhaseType || "-")} · sessionResetApplied=${lifecycleDiagnostics.sessionResetApplied ? "true" : "false"} · pdcSessionId=${escapeHtml(lifecycleDiagnostics.pdcSessionId || "-")} · initialRoundNumber=${Number(lifecycleDiagnostics.initialRoundNumber || 0)} · initialMeetingMemoryItemCount=${Number(lifecycleDiagnostics.initialMeetingMemoryItemCount || 0)} · previousSessionCleared=${lifecycleDiagnostics.previousSessionCleared ? "true" : "false"} · isFinalRound=${lifecycleDiagnostics.isFinalRound ? "true" : "false"} · finalRoundPreviewShown=${lifecycleDiagnostics.finalRoundPreviewShown ? "true" : "false"} · cumulativeContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.cumulativeContributionVoteCounts || {}))} · latestBPhaseContributionVoteCounts=${escapeHtml(JSON.stringify(lifecycleDiagnostics.latestBPhaseContributionVoteCounts || {}))} · mostRewardedTieDetected=${lifecycleDiagnostics.mostRewardedTieDetected ? "true" : "false"} · mostRewardedTieResolution=${escapeHtml(lifecycleDiagnostics.mostRewardedTieResolution || "-")} · mostRewardedContributorId=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorId || "-")} · mostRewardedContributorName=${escapeHtml(lifecycleDiagnostics.mostRewardedContributorName || "-")} · mostRewardedContributionVoteCount=${Number(lifecycleDiagnostics.mostRewardedContributionVoteCount || 0)} · autoReenableApplied=${lifecycleDiagnostics.autoReenableApplied ? "true" : "false"} · reEnabledObserverId=${escapeHtml(lifecycleDiagnostics.reEnabledObserverId || "-")} · reEnabledObserverName=${escapeHtml(lifecycleDiagnostics.reEnabledObserverName || "-")} · reEnabledObserverSelectedBy=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectedBy || "-")} · reEnabledObserverSelectionReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionReason || "-")} · reEnabledObserverSelectionSource=${escapeHtml(lifecycleDiagnostics.reEnabledObserverSelectionSource || "-")} · reEnabledObserverWasActiveMemberBlocked=${lifecycleDiagnostics.reEnabledObserverWasActiveMemberBlocked ? "true" : "false"} · reEnabledObserverCandidateInvalidReason=${escapeHtml(lifecycleDiagnostics.reEnabledObserverCandidateInvalidReason || "-")} · finalReenableSkippedReason=${escapeHtml(lifecycleDiagnostics.finalReenableSkippedReason || "-")} · continueBeyondFinalAllowed=${lifecycleDiagnostics.continueBeyondFinalAllowed ? "true" : "false"}</p>
-      ${final ? `<p>Final recap debug: finalRecapProvider=${escapeHtml(final.actualProvider || final.provider || "-")} · finalRecapOpenAiDurationMs=${Number(finalDiagnostics?.finalRecapOpenAiDurationMs || 0)} · finalRecapTotalDurationMs=${Number(finalDiagnostics?.finalRecapTotalDurationMs || 0)} · finalRecapPromptCharLength=${Number(finalDiagnostics?.finalRecapPromptCharLength || 0)} · finalRecapOutputCharLength=${Number(finalDiagnostics?.finalRecapOutputCharLength || 0)} · finalRecapSchemaName=${escapeHtml(finalDiagnostics?.finalRecapSchemaName || final.schemaName || "-")} · finalRecapStrict=${(finalDiagnostics?.finalRecapStrict || final.strict) ? "true" : "false"} · finalRecapActiveRosterPromptCount=${Number(finalDiagnostics?.finalRecapActiveRosterPromptCount || 0)} · finalRecapObserverSummaryPromptCount=${Number(finalDiagnostics?.finalRecapObserverSummaryPromptCount || 0)} · archivedSummaryIncluded=${finalDiagnostics?.archivedSummaryIncluded ? "true" : "false"}</p>` : ""}
-      ${advancedAudit ? `<p>Advanced audit debug: advancedAuditEnabled=${auditDiagnostics?.advancedAuditEnabled ? "true" : "false"} · advancedAuditFounderOnly=${auditDiagnostics?.advancedAuditFounderOnly ? "true" : "false"} · advancedAuditProvider=${escapeHtml(auditDiagnostics?.advancedAuditProvider || advancedAudit.actualProvider || advancedAudit.provider || "-")} · advancedAuditRequestedModel=${escapeHtml(auditDiagnostics?.advancedAuditRequestedModel || advancedAudit.requestedModel || advancedAudit.modelName || "-")} · advancedAuditActualModel=${escapeHtml(auditDiagnostics?.advancedAuditActualModel || advancedAudit.actualModel || advancedAudit.modelName || "-")} · advancedAuditFallbackUsed=${(auditDiagnostics?.advancedAuditFallbackUsed || advancedAudit.fallbackUsed) ? "true" : "false"} · advancedAuditFallbackReason=${escapeHtml(auditDiagnostics?.advancedAuditFallbackReason || advancedAudit.fallbackReason || "-")} · advancedAuditJsonParseFailed=${(auditDiagnostics?.advancedAuditJsonParseFailed || advancedAudit.jsonParseFailed) ? "true" : "false"} · advancedAuditSchemaName=${escapeHtml(auditDiagnostics?.advancedAuditSchemaName || advancedAudit.schemaName || "-")} · advancedAuditStrict=${(auditDiagnostics?.advancedAuditStrict || advancedAudit.strict) ? "true" : "false"} · advancedAuditDurationMs=${Number(auditDiagnostics?.advancedAuditDurationMs || 0)} · advancedAuditPromptCharLength=${Number(auditDiagnostics?.advancedAuditPromptCharLength || 0)} · advancedAuditOutputCharLength=${Number(auditDiagnostics?.advancedAuditOutputCharLength || 0)} · advancedAuditContextCompressed=${auditDiagnostics?.advancedAuditContextCompressed ? "true" : "false"} · advancedAuditAdaptivePackageIncluded=${auditDiagnostics?.advancedAuditAdaptivePackageIncluded ? "true" : "false"} · advancedAuditAutoRun=${auditDiagnostics?.advancedAuditAutoRun ? "true" : "false"} · advancedAuditManualTrigger=${auditDiagnostics?.advancedAuditManualTrigger ? "true" : "false"} · advancedAuditAlreadyExists=${auditDiagnostics?.advancedAuditAlreadyExists ? "true" : "false"} · advancedAuditDuplicateCallBlocked=${auditDiagnostics?.advancedAuditDuplicateCallBlocked ? "true" : "false"} · advancedAuditSessionId=${escapeHtml(auditDiagnostics?.advancedAuditSessionId || pdcState.pdcSessionId || "-")} · advancedAuditInFlight=${(auditDiagnostics?.advancedAuditInFlight || pdcState.advancedAuditLoading) ? "true" : "false"} · advancedAuditDecisionContext=${escapeHtml(auditDiagnostics?.advancedAuditDecisionContext || "-")} · advancedAuditDecisionNature=${escapeHtml(auditDiagnostics?.advancedAuditDecisionNature || "-")} · advancedAuditRecommendedOutputShape=${escapeHtml(auditDiagnostics?.advancedAuditRecommendedOutputShape || "-")} · advancedAuditRecapMainWeakness=${escapeHtml(auditDiagnostics?.advancedAuditRecapMainWeakness || "-")} · advancedAuditCostOptimizationApplied=${auditDiagnostics?.advancedAuditCostOptimizationApplied ? "true" : "false"}</p>` : ""}
-      </div>
-    </details>`;
-}
-
 function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
   const room = pdcState.recap?.councilRoom || {};
   const phases = getPdcPhases(room);
@@ -14290,7 +14640,7 @@ function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
     archivedObserverSummaryCharLength: JSON.stringify(frozenSummaries).length,
     activeMemberSummaryCount: buildPdcMemberStateSummaries().length,
     observerFullTrailIncludedInPrompt: false,
-    maxNormalRound: pdcMaxNormalRound,
+    maxNormalRound: pdcRecapSuggestedRound,
     currentRoundNumber: Number(currentPhase?.roundNumber || 0),
     currentPhaseType: currentPhase?.phaseType || "",
     sessionResetApplied: pdcState.sessionResetApplied === true,
@@ -14298,7 +14648,7 @@ function getPdcLifecycleDiagnostics(phaseDiagnostics = null) {
     initialRoundNumber: pdcState.initialRoundNumber || 0,
     initialMeetingMemoryItemCount: pdcState.initialMeetingMemoryItemCount || 0,
     previousSessionCleared: pdcState.previousSessionCleared === true,
-    isFinalRound: Number(currentPhase?.roundNumber || 0) >= pdcMaxNormalRound,
+    isFinalRound: Number(currentPhase?.roundNumber || 0) >= pdcRecapSuggestedRound,
     finalRoundPreviewShown: pdcState.finalRoundPreviewShown,
     cumulativeContributionVoteCounts: rewarded.cumulativeCounts || {},
     latestBPhaseContributionVoteCounts: rewarded.latestBPhaseCounts || {},
@@ -14360,44 +14710,32 @@ function renderPdcRadioGroup(label, name, options) {
 
 async function startPdcExperience() {
   if (!pdcState.valid || pdcState.status === "generating" || pdcState.phaseLoading || pdcState.finalRecapLoading || isPdcPlaybackActive()) return;
-  const inlinePass = (document.querySelector("[data-pdc-start-pass]")?.value || "").trim().replace(/\s+/g, "");
   const question = document.querySelector("[data-pdc-question]")?.value.trim() || "";
   const nextQuestion = question.slice(0, 1200);
-  if (!pdcState.founderPreview && !pdcState.pass && !inlinePass && !pdcState.accessSessionReady) {
-    pdcState.message = "Please enter your PDC access code.";
-    renderPdcPilot();
-    return;
-  }
   if (nextQuestion.length < 8) {
-    pdcState.message = "Please enter a question before starting.";
+    pdcState.message = t("pdcQuestionRequired");
     renderPdcPilot();
     return;
   }
-  if (inlinePass) pdcState.pass = inlinePass;
   resetPdcSessionState({ question: nextQuestion, status: "generating", message: "" });
-  beginPdcWarmup({ phaseLabel: "Round 1A — Position Update", roundNumber: 1, phaseType: "A" });
+  const sessionState = pdcState;
+  const sessionId = pdcState.pdcSessionId;
+  beginPdcWarmup({ phaseLabel: getPdcPhaseLabel(1, "A"), roundNumber: 1, phaseType: "A" });
   try {
     const headers = { "Content-Type": "application/json" };
-    if (pdcState.founderPreview) headers["X-MapKAI-Founder"] = "true";
-    const response = await fetch("/api/pdc/start", {
+    const { response, data } = await fetchPdcGeneration({
       method: "POST",
       headers,
       body: JSON.stringify({
-        pass: pdcState.pass,
         mode_id: "personal",
         user_question: pdcState.question,
-        founder_preview: pdcState.founderPreview,
-        council_tier: pdcState.councilTier || "standard",
+        council_tier: "standard",
       }),
     });
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok || data.ok !== true) throw new Error(data.message || "The PDC experience could not be generated. Please try again later.");
+    if (!response.ok || data.ok !== true) throw new Error(getPdcRequestErrorMessage(data));
+    if (!data.recap || isPdcPreparedResponse(data) || isPdcPreparedResponse(data.recap)) throw new Error(t("pdcLiveUnavailable"));
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
     const warmupDiagnostics = finishPdcWarmup();
-    if (!pdcState.founderPreview) {
-      sessionStorage.setItem(pdcAccessSessionKey, "true");
-      pdcState.accessSessionReady = true;
-      pdcState.pass = "";
-    }
     pdcState.recap = data.recap;
     pdcState.councilTier = data.effectiveTier || data.councilTier || data.recap?.councilTier || pdcState.councilTier || "standard";
     pdcState.requestedTier = data.requestedTier || data.recap?.requestedTier || pdcState.requestedTier || "standard";
@@ -14444,6 +14782,7 @@ async function startPdcExperience() {
     pdcState.discussionStopped = false;
     beginPdcPhasePlayback(0);
   } catch (error) {
+    if (!isCurrentPdcGeneration(sessionState, sessionId)) return;
     clearPdcPlaybackTimer();
     cancelPdcWarmup();
     pdcState.playback = null;
@@ -14508,15 +14847,11 @@ function renderPdcFounderPanel() {
   panels.forEach((panel) => {
     const summary = pdcFounderSummary;
     const passes = summary?.passes || [];
-    const unusedLinks = passes.filter((pass) => pass.status === "unused").map((pass) => makePdcLink(pass.pass_code));
-    const allLinks = passes.map((pass) => makePdcLink(pass.pass_code));
     panel.innerHTML = `
-      <h3>PDC Access Panel</h3>
+      <h3>PDC History / PDC 历史记录</h3>
+      <p>PDC is now open to everyone. These are records from the former invitation period. / PDC 现已公开开放，以下为原先邀请制的历史记录。</p>
       <div class="pdc-founder-actions">
-        <button class="button primary" type="button" data-pdc-generate>Generate 20 PDC Access Links</button>
-        <a class="button secondary" href="/pdc-pilot">Open PDC Entry</a>
-        <button class="button secondary" type="button" data-pdc-copy-unused ${unusedLinks.length ? "" : "disabled"}>Copy all unused links</button>
-        <button class="button secondary" type="button" data-pdc-copy-all ${allLinks.length ? "" : "disabled"}>Copy all links</button>
+        <a class="button secondary" href="/toolbox/pdc/session">Open PDC Entry</a>
       </div>
       <p class="founder-contact-debug">Batch: ${escapeHtml(summary?.batch_id || "current week")} · Status: ${escapeHtml(pdcFounderStatus.state)}</p>
       ${pdcFounderStatus.detail ? `<p>${escapeHtml(pdcFounderStatus.detail)}</p>` : ""}
@@ -14596,7 +14931,7 @@ async function generatePdcPasses() {
 }
 
 function makePdcLink(passCode) {
-  return `https://www.mapkai.com/pdc-pilot?pass=${passCode}`;
+  return `${window.location.origin}/toolbox/pdc/session?pass=${encodeURIComponent(passCode)}`;
 }
 
 async function copyPdcLinks(kind) {
@@ -15012,7 +15347,10 @@ function sendCourseEvent(eventName) {
 }
 
 function applyLanguage() {
+  document.querySelectorAll('.nav-toolbox, [data-toolbox-recommend], [data-toolbox-return]').forEach(link => { link.href = currentLanguage === 'en' ? '/toolbox/en/' : '/toolbox/'; });
+  document.querySelectorAll('[data-speaking-recommend]').forEach(link => { link.href = currentLanguage === 'en' ? '/speaking/en/' : '/speaking/'; });
   updateLanguageButtons();
+  document.querySelectorAll('[data-theme-option]').forEach(button => { button.textContent = button.dataset.themeOption === 'light' ? (currentLanguage === 'zh' ? '浅色' : 'Light') : (currentLanguage === 'zh' ? '深色' : 'Dark'); });
   document.querySelectorAll("[data-i18n]").forEach((target) => {
     const key = target.dataset.i18n;
     if (key) target.textContent = t(key);
@@ -15020,7 +15358,7 @@ function applyLanguage() {
   setText('.nav-links a[data-route="/"]', t("navHome"));
   setText('.nav-links a[data-route="/explore"]', t("navExplore"));
   setText('.nav-links a[data-route="/map"]', t("navMap"));
-  setText('.nav-links a[data-route="/pdc"]', t("navPdc"));
+  setText('.nav-links a[data-route="/toolbox/pdc"]', t("navPdc"));
   setText(".nav-learning-trigger", t("navLearning"));
   setText('.nav-links a[data-route="/about"]', t("navAbout"));
   setText(".stories-page .stories-hero .eyebrow", t("storiesEyebrow"));
@@ -15215,7 +15553,8 @@ function normalizeRoute(path) {
   if (window.location.protocol === "file:") {
     return window.location.hash.replace("#", "") || "/";
   }
-  return path || "/";
+  const clean = (path || "/").replace(/\/$/, "") || "/";
+  return legacyPdcRoutes[clean] || clean;
 }
 
 function getFinanceLessonId(dayNumber) {
@@ -15230,7 +15569,14 @@ function getFinanceLessonId(dayNumber) {
 }
 
 function goToRoute(route, replace = false) {
-  let target = route || "/";
+  let target = legacyPdcRoutes[route] || route || "/";
+  // Open the only public learning path without an extra landing-page click.
+  if (target === "/learning" && !embaPublicEntryEnabled) {
+    target = "/categories";
+    if (replace && window.location.protocol !== "file:") {
+      history.replaceState({ route: target }, "", target + window.location.search + window.location.hash);
+    }
+  }
   if (target === "/leoyangandxinli") {
     target = "/";
     replace = true;
@@ -15254,7 +15600,15 @@ function goToRoute(route, replace = false) {
     }
   }
   const visibleTarget = target;
-  document.body.classList.toggle("pdc-public-route", visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot");
+  if (visibleTarget !== "/toolbox/pdc/session" && typeof cancelPdcGenerationRequest === "function") cancelPdcGenerationRequest();
+  document.body.classList.toggle("pdc-public-route", visibleTarget === "/toolbox/pdc" || visibleTarget === "/toolbox/pdc/session");
+  const toolboxNav = document.querySelector('.nav-toolbox');
+  if (toolboxNav) {
+    const inToolbox = visibleTarget.startsWith('/toolbox/');
+    toolboxNav.classList.toggle('is-current', inToolbox);
+    if (inToolbox) toolboxNav.setAttribute('aria-current', 'page');
+    else toolboxNav.removeAttribute('aria-current');
+  }
   setFounderMode(isFounderMode());
   const categoryMatch = visibleTarget.match(/^\/categories\/(\d{2})$/);
   const fieldMatch = visibleTarget.match(/^\/fields\/([a-z0-9-]+)$/);
@@ -15301,7 +15655,7 @@ function goToRoute(route, replace = false) {
     const isCurrent =
       linkRoute === visibleTarget ||
       (linkRoute === "/explore" && visibleTarget === "/explore") ||
-      (linkRoute === "/pdc" && (visibleTarget === "/pdc" || visibleTarget === "/pdc-pilot")) ||
+      (linkRoute === "/toolbox/pdc" && (visibleTarget === "/toolbox/pdc" || visibleTarget === "/toolbox/pdc/session")) ||
       (linkRoute === "/management" && visibleTarget.startsWith("/management")) ||
       (linkRoute === "/learning/corporate-finance" && visibleTarget.startsWith("/learning/corporate-finance")) ||
       (linkRoute === "/categories" && (
@@ -15327,7 +15681,7 @@ function goToRoute(route, replace = false) {
     link.classList.toggle("is-current", isCurrent);
   });
 
-  if (visibleTarget === "/pdc-pilot") initPdcPilotPage();
+  if (visibleTarget === "/toolbox/pdc/session") initPdcPilotPage();
   closeNavMenu();
   if (visibleTarget === "/map") drawKnowledgeMap();
   updateRouteMeta(visibleTarget);
@@ -15828,6 +16182,79 @@ function renderStoryDetail(storyId) {
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
 
+function renderConceptFableModule(fable) {
+  const module = getConceptFableModule(fable);
+  if (!module) return "";
+  const steps = Array.isArray(module.diagramSteps) ? module.diagramSteps : [];
+  const notes = Array.isArray(module.diagramStepNotes) ? module.diagramStepNotes : [];
+  const mapping = Array.isArray(module.mapping) ? module.mapping : [];
+  const references = currentLanguage === "zh" && Array.isArray(fable.referencesZh)
+    ? fable.referencesZh
+    : Array.isArray(fable.references) ? fable.references : [];
+  const labels = currentLanguage === "zh"
+    ? {
+      eyebrow: "通识知识模块",
+      framework: "机制图",
+      mapping: "故事里的机制",
+      boundary: "适用边界",
+      reflection: "带走一个问题",
+      references: "参考文献",
+      feedback: "结果会反过来修正你对原理和条件的判断"
+    }
+    : {
+      eyebrow: "General knowledge module",
+      framework: "Mechanism map",
+      mapping: "The mechanism inside the story",
+      boundary: "Boundary conditions",
+      reflection: "A question to take with you",
+      references: "References",
+      feedback: "Outcomes revise how you understand the principle and the conditions"
+    };
+  const stepMarkup = steps.map((step, index) => `
+    <li class="concept-module-step${index === 1 ? " is-principle" : ""}${index === 2 ? " is-pivot" : ""}">
+      <span class="concept-module-step-number">${String(index + 1).padStart(2, "0")}</span>
+      <strong>${escapeHtml(step)}</strong>
+      ${notes[index] ? `<p>${escapeHtml(notes[index])}</p>` : ""}
+    </li>`).join("");
+  const referenceMarkup = references.map((reference) => `
+    <li>
+      <a href="${escapeHtml(reference.url || "#")}" target="_blank" rel="noreferrer">${escapeHtml(reference.citation || reference.title || "")}</a>
+      ${reference.use ? `<p>${escapeHtml(reference.use)}</p>` : ""}
+    </li>`).join("");
+  return `
+    <section class="concept-module" aria-label="${escapeHtml(labels.eyebrow)}">
+      <header class="concept-module-intro">
+        <span>${escapeHtml(labels.eyebrow)}</span>
+        <p>${escapeHtml(module.intro || "")}</p>
+      </header>
+      <section class="concept-module-diagram" aria-label="${escapeHtml(module.diagramTitle || labels.framework)}">
+        <div class="concept-module-heading">
+          <span>${escapeHtml(labels.framework)}</span>
+          <h2>${escapeHtml(module.diagramTitle || "")}</h2>
+        </div>
+        <ol class="concept-module-flow">${stepMarkup}</ol>
+        <div class="concept-module-feedback" aria-label="${escapeHtml(labels.feedback)}">
+          <span aria-hidden="true">↶</span>
+          <p>${escapeHtml(labels.feedback)}</p>
+        </div>
+      </section>
+      ${mapping.length ? `
+        <section class="concept-module-mapping">
+          <span>${escapeHtml(labels.mapping)}</span>
+          <ul>${mapping.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        </section>` : ""}
+      <div class="concept-module-boundary-grid">
+        ${module.boundary ? `<section><span>${escapeHtml(labels.boundary)}</span><p>${escapeHtml(module.boundary)}</p></section>` : ""}
+        ${module.reflection ? `<aside><span>${escapeHtml(labels.reflection)}</span><p>${escapeHtml(module.reflection)}</p></aside>` : ""}
+      </div>
+      ${referenceMarkup ? `
+        <section class="concept-module-references">
+          <span>${escapeHtml(labels.references)}</span>
+          <ol>${referenceMarkup}</ol>
+        </section>` : ""}
+    </section>`;
+}
+
 function renderConceptFableDetail(fableId) {
   const target = document.getElementById("conceptFableReader");
   if (!target) return;
@@ -15855,6 +16282,9 @@ function renderConceptFableDetail(fableId) {
   }
   const storyParagraphs = getConceptFableList(fable, "storyParagraphs");
   const explanationParagraphs = getConceptFableList(fable, "explanationParagraphs");
+  const overall = getConceptFableValue(fable, "overall")
+    .replace(/^这篇在讲什么[：:]\s*/, "")
+    .replace(/^What this story is about:\s*/i, "");
   const storyMarkup = storyParagraphs.length
     ? storyParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
     : renderEscapedParagraphs(getConceptFableValue(fable, "storyBody"));
@@ -15867,6 +16297,11 @@ function renderConceptFableDetail(fableId) {
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
       <div class="concept-fable-story-body">${storyMarkup}</div>
     </section>
+    ${overall ? `
+      <aside class="story-insight concept-fable-overall">
+        <span>${escapeHtml(currentLanguage === "zh" ? "这篇在讲什么" : "What this story is about")}</span>
+        <p>${escapeHtml(overall)}</p>
+      </aside>` : ""}
     <aside class="story-insight lens-story-insight concept-fable-reveal concept-fable-knowledge-box">
       <span>${escapeHtml(t("conceptFableRevealLabel"))}</span>
       <h2>${escapeHtml(getConceptFableValue(fable, "conceptName"))}</h2>
@@ -15875,6 +16310,7 @@ function renderConceptFableDetail(fableId) {
         ${explanationMarkup}
       </div>
     </aside>
+    ${renderConceptFableModule(fable)}
     ${renderStoryRatingPanel(ratingArticle)}
     ${renderStoryNavigation(ratingArticle)}`;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
@@ -17696,6 +18132,33 @@ function getFeaturedCategoryFieldEntries(fieldEntries) {
   return practicalEntries.length ? practicalEntries : fieldEntries;
 }
 
+// Approved broad-field guides retain their sections in both existing reader views.
+function renderSubjectOriginContent(story) {
+  const article = story.subjectOrigin;
+  if (!article || story.storyLevel !== "subject-intro") return "";
+  const suffix = currentLanguage === "zh" ? "Zh" : "En";
+  const zh = currentLanguage === "zh";
+  const sections = [
+    ["originStoryParagraphs", "历史入口", "Historical window"],
+    ["whyNeededParagraphs", "为什么需要这个领域", "Why this field matters"],
+    ["coreTurnParagraphs", "核心转向", "The central shift"],
+    ["anchorsParagraphs", "人物、事件与工具", "People, events and tools"],
+    ["branchesParagraphs", "领域分支", "Branches of the field"],
+  ];
+  const sectionHtml = sections.map(([key, titleZh, titleEn]) => 
+    '<section class="lens-story-section"><h2>' + escapeHtml(zh ? titleZh : titleEn) + '</h2>' +
+    renderEscapedParagraphs(article[key + suffix].join("\n\n")) + '</section>'
+  ).join("");
+  const references = article.references.map(ref => '<li><a href="' + escapeHtml(ref.url) +
+    '" target="_blank" rel="noopener noreferrer">' + escapeHtml(ref.citation) + '</a></li>').join("");
+  return '<p class="lens-story-summary">' + escapeHtml(article["summary" + suffix]) + '</p>' + sectionHtml +
+    '<section class="lens-story-section"><h2>' + (zh ? "思考问题" : "A question to carry forward") + '</h2><p>' +
+    escapeHtml(article["reflection" + suffix]) + '</p></section>' +
+    '<section class="lens-story-section"><h2>' + (zh ? "理解的边界" : "Scope and limits") + '</h2><p>' +
+    escapeHtml(article["boundary" + suffix]) + '</p></section>' +
+    '<section class="lens-story-section"><h2>' + (zh ? "参考来源" : "References") + '</h2><ol>' + references + '</ol></section>';
+}
+
 function renderInlineLensStoryArticle(story) {
   const formalExplanation = getLensStoryValue(story, "formalExplanation");
   const analogyBoundary = getLensStoryValue(story, "analogyBoundary");
@@ -17703,6 +18166,14 @@ function renderInlineLensStoryArticle(story) {
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
+  if (story.subjectOrigin) {
+    return `<article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
+      ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+      ${renderSubjectOriginContent(story)}
+      ${renderStoryRatingPanel(ratingArticle)}
+      ${renderStoryNavigation(ratingArticle)}
+    </article>`;
+  }
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
       ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
@@ -17781,6 +18252,12 @@ function renderLensStoryDetail(storyId) {
   const reflectionQuestion = getLensStoryValue(story, "reflectionQuestion");
   const ratingArticle = getRatingArticleForLensStory(story);
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
+  if (story.subjectOrigin) {
+    target.innerHTML = renderStoryDetailHeader(getLensStoryValue(story, "title")) +
+      renderSubjectOriginContent(story) + renderStoryRatingPanel(ratingArticle) + renderStoryNavigation(ratingArticle);
+    if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
+    return;
+  }
   target.innerHTML = `
     ${shouldShowFigure ? `
     <figure class="lens-story-figure">
@@ -17834,13 +18311,13 @@ function renderLearning() {
   const activePathTypes = currentLanguage === "zh" ? pathTypesZh : pathTypes;
   const activeFoundationPath = currentLanguage === "zh" ? foundationPathZh : foundationPath;
   if (pathGrid) {
-    pathGrid.innerHTML = activePathTypes.map(([eyebrow, title, text, href, action]) => `
-      <article class="module-card learning-option-card">
+    pathGrid.innerHTML = activePathTypes.filter((entry) => embaPublicEntryEnabled || entry[3] !== "/learning/emba").map(([eyebrow, title, text, href, action]) => `
+      <a class="module-card learning-option-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
         <p class="eyebrow">${eyebrow}</p>
         <h3>${title}</h3>
         <p>${text}</p>
-        <a class="button secondary" href="${href}">${action}</a>
-      </article>`).join("");
+        <span class="button secondary">${action}</span>
+      </a>`).join("");
   }
   if (embaCourseGrid) {
     const embaCourse = currentLanguage === "zh"
@@ -20471,7 +20948,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.225").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.291").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
@@ -20594,81 +21071,23 @@ document.addEventListener("click", (event) => {
     continuePdcPhase();
     return;
   }
-  if (event.target.closest("[data-pdc-enter-final-round]")) {
-    pdcState.finalRoundPreviewAccepted = true;
-    continuePdcPhase();
-    return;
-  }
   if (event.target.closest("[data-pdc-stop-summarize]")) {
     stopAndSummarizePdc();
     return;
   }
-  if (event.target.closest("[data-pdc-run-advanced-audit]")) {
-    runPdcAdvancedFinalAudit();
+  if (event.target.closest("[data-pdc-cancel-generation]")) {
+    cancelPdcGenerationRequest();
+    return;
+  }
+  if (event.target.closest("[data-pdc-open-council]") || event.target.closest("[data-pdc-new-question]")) {
+    openPdcQuestionForm();
     return;
   }
   if (event.target.closest("[data-pdc-watch-demo]")) {
-    if (normalizeRoute(window.location.pathname) !== "/pdc-pilot") {
-      goToRoute("/pdc-pilot");
+    if (normalizeRoute(window.location.pathname) !== "/toolbox/pdc/session") {
+      goToRoute("/toolbox/pdc/session");
     }
     startPdcDemoMode();
-    return;
-  }
-  if (event.target.closest("[data-pdc-standard-entry]")) {
-    Object.assign(pdcState, {
-      valid: true,
-      status: "public",
-      entryView: "standard",
-      founderPreview: false,
-      councilTier: "standard",
-      requestedTier: "standard",
-      effectiveTier: "standard",
-      founderOnlyFullFunction: false,
-      message: "",
-    });
-    renderPdcPilot();
-    return;
-  }
-  if (event.target.closest("[data-pdc-founder-standard]")) {
-    Object.assign(pdcState, {
-      valid: true,
-      status: "public",
-      entryView: "standard",
-      founderPreview: true,
-      selectedMode: "personal",
-      councilTier: "standard",
-      requestedTier: "standard",
-      effectiveTier: "standard",
-      founderOnlyFullFunction: false,
-      message: "",
-    });
-    renderPdcPilot();
-    return;
-  }
-  if (event.target.closest("[data-pdc-founder-full]")) {
-    pdcState = createPdcBaseState({
-      valid: true,
-      status: "public",
-      entryView: "full",
-      founderPreview: true,
-      selectedMode: "personal",
-      councilTier: "full_function",
-      requestedTier: "full_function",
-      effectiveTier: "full_function",
-      founderOnlyFullFunction: true,
-    });
-    renderPdcPilot();
-    return;
-  }
-  if (event.target.closest("[data-pdc-back-landing]")) {
-    clearPdcPlaybackTimer();
-    clearPdcWarmupTimer();
-    pdcState = createPdcBaseState({
-      valid: true,
-      status: "public",
-      entryView: "landing",
-    });
-    renderPdcPilot();
     return;
   }
   if (event.target.closest("[data-pdc-demo-next]")) {
@@ -20689,11 +21108,6 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-pdc-show-all-now]")) {
     completePdcPlaybackNow();
-    return;
-  }
-  if (event.target.closest("[data-pdc-founder-reset]")) {
-    resetPdcSessionState({ question: "", status: "ready", message: "" });
-    renderPdcPilot();
     return;
   }
   if (event.target.closest("[data-pdc-generate]")) {
@@ -20799,7 +21213,6 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("submit", (event) => {
-  if (handlePdcAccessSubmit(event)) return;
 });
 
 document.addEventListener("keydown", (event) => {
@@ -20812,7 +21225,7 @@ document.addEventListener("input", (event) => {
   if (event.target.matches("[data-pdc-question]")) {
     pdcState.question = event.target.value.slice(0, 1200);
     const count = document.querySelector(".pdc-count");
-    if (count) count.textContent = `${1200 - pdcState.question.length} characters left`;
+    if (count) count.textContent = t("pdcCharactersRemaining", 1200 - pdcState.question.length);
   }
   if (event.target.matches("[name='pdc-final-observer']")) {
     pdcState.finalRoundPreviewSelection = event.target.value || "";
@@ -20894,7 +21307,7 @@ function setFounderMode(enabled) {
   renderMessageBoards();
   if (enabled && !document.body.classList.contains("pdc-public-route")) {
     loadFounderMessages();
-    if (normalizeRoute(window.location.pathname).startsWith("/pdc")) loadPdcFounderSummary();
+    if (normalizeRoute(window.location.pathname).startsWith("/toolbox/pdc")) loadPdcFounderSummary();
   } else {
     pdcFounderSummary = null;
     pdcFounderStatus = { state: "idle", detail: "" };
@@ -20904,7 +21317,7 @@ function setFounderMode(enabled) {
   renderStoryMap();
   renderChallenge();
   renderMapChallenge();
-  if (normalizeRoute(window.location.pathname) === "/pdc-pilot") {
+  if (normalizeRoute(window.location.pathname) === "/toolbox/pdc/session") {
     initPdcPilotPage();
   }
 }

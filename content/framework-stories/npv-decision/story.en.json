@@ -1,0 +1,35 @@
+{
+  "framework": "npv-decision",
+  "title": "Four Envelopes Before Five",
+  "teaser": "By five o’clock on Wednesday, Old Zhou had to decide whether to sign for an 110,000-yuan heating system. It was expected to save 130,000 yuan over the next four years, and the hotel could afford it. What made him move his pen away from the signature line was that the 130,000 yuan would not all come back today.",
+  "paragraphs": [
+    "On Monday morning, a contract for a new heating system lay on the hotel reception desk. The installer would hold Old Zhou’s slot only until five o’clock on Wednesday; after that, it would go to the next customer. The old system could still last for a while, and there was enough cash in the hotel’s account. The new system cost 110,000 yuan. Based on the hotel’s usage over the past several years, it was expected to save 30,000 yuan in the first year, 30,000 in the second, 30,000 in the third, and 40,000 in the fourth, including a residual value of 10,000 yuan. On the back of a receipt, Old Zhou wrote “110,000” and “130,000.” Looking at the extra 20,000, he set his pen beside the signature line.",
+    "That afternoon, while sorting old accounts, he found four brown paper envelopes at the bottom of a cabinet. His daughter Xiaoyu had once used them to store receipts by year. Without much thought, Old Zhou wrote one year’s amount on each envelope and placed them in a row from Year One to Year Four. Not one yuan had disappeared from the 130,000, but the single total had become four amounts that would arrive at different times. He still thought the heating system was worth replacing. He simply did not sign on the spot. Instead, he left the contract on the reception desk beside the four envelopes.",
+    "Xiaoyu came in the next day to help close the month’s accounts. Old Zhou asked her not to change the savings forecast. He only wanted her to find the funding standard the hotel had consistently used when assessing projects with a similar duration and risk. The old files and the most recent comparable record both showed 8 percent. Using that rate, they discounted the four future benefits back to today. The calculator stopped at about 106,700 yuan. Old Zhou checked the historical usage, the residual value, and the installation list once more. Nothing new had appeared, and the price was still 110,000. He placed a note reading “106,700” beside the quotation. For the first time, he put the pen he had prepared for signing back into the drawer.",
+    "The installer, Master Lin, came that afternoon to collect the contract. Old Zhou did not say that cash was tight, and he did not ask for a smaller system. He only asked whether the full amount had to be paid immediately. Master Lin explained that the equipment supplier required most of the purchase price up front and that installation labour also had to be scheduled, so there was little room to reduce the total price. But if Old Zhou truly would not sign under the original terms, he could go back and rearrange his own collection schedule. Together they confirmed again that the savings estimate, residual value, and installation scope would remain unchanged. Master Lin took the original payment page with him. The four envelopes stayed on the desk.",
+    "At noon on Wednesday, Master Lin returned with a new payment schedule. The total price was still 110,000 yuan: 60,000 now, 30,000 one year later, and another 20,000 two years later. Old Zhou did not agree simply because the word “instalments” appeared on the page. He discounted the three payments back to today using the same 8 percent rate. Their present value was about 104,900 yuan. The present value of the benefits was still about 106,700; nothing about the equipment or the forecast had changed. Only the distance of the payments from today was different. Under the original terms, the project was short by about 3,300 yuan. Under the new schedule, it was ahead by about 1,800. Old Zhou slipped the new payment page into the contract and set the old one aside.",
+    "At twenty minutes to five, Master Lin was again sitting across the reception desk. He had not reduced the price, and he had added no new savings figure. Old Zhou read through the contract from the first page to the installation scope, looked once more at the two present-value notes, and signed the last page. After the door closed behind Master Lin, the old quotation still lay under one corner of the desk. The four brown envelopes remained in their row by year. The farthest one leaned against the desk lamp. On its front was a single line: “Year Four, 40,000.”"
+  ],
+  "concept": "Net present value (NPV) compares benefits and costs that occur at different times by discounting them to the same point in time using an opportunity cost appropriate to the project’s duration and risk. When the present value of benefits minus the present value of costs is positive, the project creates positive NPV under those cash-flow and discount-rate assumptions; when it is negative, the opposite applies.",
+  "explanation": "The equipment, savings forecast, residual value, and total price of 110,000 yuan never change in the story. With full payment today, the present value of future benefits is below the current cost. Once part of the payment is delayed, the present value of the cost falls, turning the same project from negative NPV to positive NPV.",
+  "mapping": [
+    "The four year-labelled envelopes → the 130,000 yuan is not received today as one amount; it is spread across four future years.",
+    "The existing 8% funding standard → cash flows occurring at different times are converted to a common value today.",
+    "An immediate payment of 110,000 yuan versus benefits with a present value of about 106,700 yuan → a larger nominal return can still correspond to negative NPV.",
+    "The total price stays the same while payments become 60,000, 30,000, and 20,000 → the payment present value falls to about 104,900 yuan, so the decision changes with the timing structure."
+  ],
+  "boundary": "NPV depends on whether the cash-flow forecasts, payment timing, and discount rate are reasonable. If the estimated savings, residual value, or opportunity cost appropriate to the risk is wrong, the sign and size of NPV can change as well. NPV also does not automatically account for strategic options, financing constraints, or how benefits and costs are distributed among different parties.",
+  "reflection": "If the total price remains 110,000 yuan and the total benefits remain 130,000 yuan, why can changing only the payment timing be enough to move Old Zhou from not signing to signing?",
+  "refs": [
+    "finance-text"
+  ],
+  "mode": "mechanism-explainer",
+  "calculation": {
+    "discountRate": "8%",
+    "benefitPresentValue": "about 106,700 yuan",
+    "originalPaymentPresentValue": "110,000 yuan",
+    "originalNpv": "about -3,300 yuan",
+    "stagedPaymentPresentValue": "about 104,900 yuan",
+    "stagedNpv": "about +1,800 yuan"
+  }
+}

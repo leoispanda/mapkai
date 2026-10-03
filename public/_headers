@@ -33,3 +33,7 @@
 /factory-review*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
+
+/toolbox*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache

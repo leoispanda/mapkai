@@ -28,6 +28,15 @@ const unlockWindowSeconds = 60 * 15;
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
+  if (url.pathname === '/speaking' || url.pathname.startsWith('/speaking/')) {
+    const upstream = await context.next();
+    const response = new Response(upstream.body, upstream);
+    response.headers.set('Permissions-Policy', 'microphone=(self), camera=(), geolocation=(), payment=()');
+    response.headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://generativelanguage.googleapis.com wss://generativelanguage.googleapis.com; media-src 'self' blob:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'");
+    response.headers.set('Cache-Control', 'no-cache');
+    response.headers.set('Referrer-Policy', 'no-referrer');
+    return response;
+  }
   const area = areaFor(url.pathname);
   if (!area) return context.next();
 

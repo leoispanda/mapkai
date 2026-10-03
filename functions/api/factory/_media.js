@@ -23,7 +23,7 @@ export async function readCatalog(env) {
   return data;
 }
 export function safeItem(item) {
-  if (!/^[a-zA-Z0-9_-]{1,180}$/.test(item?.id || '') || !/^\d{2}$/.test(item?.fieldId || '') || !/^[a-f0-9]{64}$/.test(item?.sha256 || '')) return false;
+  if (!/^[a-zA-Z0-9_-]{1,180}$/.test(item?.id || '') || !/^(?:\d{2}|\d{4}|GENERAL)$/.test(item?.fieldId || '') || !/^[a-f0-9]{64}$/.test(item?.sha256 || '')) return false;
   return item.objectKey === `raw/${item.fieldId}/${item.id}/${item.sha256}.mp4` && Number.isSafeInteger(item.fileSize) && item.fileSize > 0;
 }
 // Explicit single byte-range support for seeking. An invalid/multiple range never fetches the full file.
