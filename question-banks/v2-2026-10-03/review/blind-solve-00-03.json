@@ -1,0 +1,599 @@
+[
+  {
+    "id": "00-q1",
+    "zhChosenOptionId": "00-q1-o2",
+    "enChosenOptionId": "00-q1-o2",
+    "reasonZh": "三包每公斤分别8、7、7.6欧元，750克最便宜。",
+    "reasonEn": "Per-kg prices are 8, 7 and 7.6 euros; the 750 g pack is cheapest.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-v2-q02",
+    "zhChosenOptionId": "00-v2-q02-o3",
+    "enChosenOptionId": "00-v2-q02-o3",
+    "reasonZh": "150÷2×5=375克。",
+    "reasonEn": "150÷2×5 = 375 g.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q3",
+    "zhChosenOptionId": "00-q3-o2",
+    "enChosenOptionId": "00-q3-o2",
+    "reasonZh": "含A17、漏水和安排检修三个要素。",
+    "reasonEn": "It includes A17, the leak and the requested repair visit.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q4",
+    "zhChosenOptionId": "00-q4-o2",
+    "enChosenOptionId": "00-q4-o2",
+    "reasonZh": "80×(1−25%)=60元。",
+    "reasonEn": "80×0.75 = 60.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q5",
+    "zhChosenOptionId": "00-q5-o2",
+    "enChosenOptionId": "00-q5-o2",
+    "reasonZh": "在两软件都执行筛未完成事项，直接练同原理跨软件。",
+    "reasonEn": "Executing the same filtering task in both apps directly practices the stated transfer.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-v2-q06",
+    "zhChosenOptionId": "00-v2-q06-o1",
+    "enChosenOptionId": "00-v2-q06-o1",
+    "reasonZh": "240−160−40=40元可再消费。",
+    "reasonEn": "240 − 160 − 40 = 40 left for other purchases.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q7",
+    "zhChosenOptionId": "00-q7-o2",
+    "enChosenOptionId": "00-q7-o2",
+    "reasonZh": "按月份分组才能打开一个月文件夹看到该月各种消费凭证。",
+    "reasonEn": "Month grouping puts all categories for the selected month together.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q8",
+    "zhChosenOptionId": "00-q8-o1",
+    "enChosenOptionId": "00-q8-o1",
+    "reasonZh": "先导入再公式用30分钟，下次图表；其他方案都跳过前置步骤。",
+    "reasonEn": "Importing then formulas takes 30 minutes and respects the prerequisites.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-v2-q09",
+    "zhChosenOptionId": "00-v2-q09-o1",
+    "enChosenOptionId": "00-v2-q09-o1",
+    "reasonZh": "三个场景都把有限资源分给多个用途。",
+    "reasonEn": "All three allocate a scarce resource among uses.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-v2-q10",
+    "zhChosenOptionId": "00-v2-q10-o2",
+    "enChosenOptionId": "00-v2-q10-o2",
+    "reasonZh": "按类别分组后分别求和才能获得分类总额；仅排序没计算分类合计。",
+    "reasonEn": "Grouping and summing each category produces separate totals; sorting alone does not.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q11",
+    "zhChosenOptionId": "00-q11-o1",
+    "enChosenOptionId": "00-q11-o1",
+    "reasonZh": "20+20+20=60且三项均达到下限；另一份65超时、另一份休息10不足。",
+    "reasonEn": "20+20+20 fits 60 and each minimum; alternatives exceed 60 or miss the rest minimum.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "00-q12",
+    "zhChosenOptionId": "00-q12-o3",
+    "enChosenOptionId": "00-q12-o3",
+    "reasonZh": "两份批准件中9月25比9月20更新，9月28是草稿应排除。",
+    "reasonEn": "25 September is the latest approved version; 28 September is a draft.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q1",
+    "zhChosenOptionId": "01-q1-o2",
+    "enChosenOptionId": "01-q1-o2",
+    "reasonZh": "重说名字核对发音并在提问用名字同时满足目标。",
+    "reasonEn": "Repeating checks pronunciation and using it in a question fulfills the second goal.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q2",
+    "zhChosenOptionId": "01-q2-o3",
+    "enChosenOptionId": "01-q2-o3",
+    "reasonZh": "删一步提示并保同任务才是逐步减辅助。",
+    "reasonEn": "Remove one prompt on the same task to fade support.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q3",
+    "zhChosenOptionId": "01-q3-o1",
+    "enChosenOptionId": "01-q3-o1",
+    "reasonZh": "闭卷自行写要点再核漏才测试回忆而非看熟。",
+    "reasonEn": "Closed-notes recall followed by comparison tests retrieval rather than familiarity.",
+    "ambiguity": [
+      "朗读后检查速度、标要点后检查颜色是较弱的错误项；建议改成常见重读/照抄与熟悉感误当回忆。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q4",
+    "zhChosenOptionId": "01-q4-o2",
+    "enChosenOptionId": "01-q4-o2",
+    "reasonZh": "1、3、6、10四个不同日各10分是跨日期分布。",
+    "reasonEn": "Four 10-minute sessions on different dates meet the explicit spacing criterion.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q5",
+    "zhChosenOptionId": "01-q5-o2",
+    "enChosenOptionId": "01-q5-o2",
+    "reasonZh": "先自己判断，再逐项看自己的错误反馈。",
+    "reasonEn": "Independent judgments precede feedback on those judgments.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          20,
+          19,
+          19
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q6",
+    "zhChosenOptionId": "01-q6-o2",
+    "enChosenOptionId": "01-q6-o2",
+    "reasonZh": "批注范例提供结构且第二段可自己写，是最接近方案；但题干又要求独立写两段，存在任务数量冲突。",
+    "reasonEn": "An annotated model plus writing the second paragraph is closest, but independent writing of two paragraphs conflicts with writing only the second.",
+    "ambiguity": [
+      "题干要求独立写两段，但最接近选项只由学员写第二段，需改目标或选项以一致。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q7",
+    "zhChosenOptionId": "01-q7-o2",
+    "enChosenOptionId": "01-q7-o2",
+    "reasonZh": "流量每GB与食品跨领域，最接近作者可能要的迁移；然而新麦片也可称新情境，第二个可辩护答案没有被排除。",
+    "reasonEn": "Data-plan unit prices provide a stronger domain change, but two new cereals are also a new context under the unspecified wording.",
+    "ambiguity": [
+      "未定义新情境是否跨领域；新麦片与流量套餐都能用价格÷数量应用到新任务，存在第二答案。"
+    ],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          14,
+          14,
+          15
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q8",
+    "zhChosenOptionId": "01-q8-o2",
+    "enChosenOptionId": "01-q8-o2",
+    "reasonZh": "能正确演示排除未懂流程，奖金与催跳检查明示环境奖励偏速度。",
+    "reasonEn": "Correct demonstration shows the process is known; bonuses and manager requests favor speed.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-v2-q09",
+    "zhChosenOptionId": "01-v2-q09-o3",
+    "enChosenOptionId": "01-v2-q09-o3",
+    "reasonZh": "目标明示一周后无资料解释，应收集对应延迟闭卷表现。",
+    "reasonEn": "Collect delayed unaided explanation matching the stated target.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-q10",
+    "zhChosenOptionId": "01-q10-o2",
+    "enChosenOptionId": "01-q10-o2",
+    "reasonZh": "错误集中5、6小节，重复这两小节配核错直中目标。",
+    "reasonEn": "Practice and check bars 5–6 where the recorded errors occur.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-v2-q11",
+    "zhChosenOptionId": "01-v2-q11-o3",
+    "enChosenOptionId": "01-v2-q11-o3",
+    "reasonZh": "指出缺证据、让学生选一句解释联系，留修订给学生。",
+    "reasonEn": "Identify missing evidence and have the student choose and link a line.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "01-v2-q12",
+    "zhChosenOptionId": "01-v2-q12-o1",
+    "enChosenOptionId": "01-v2-q12-o1",
+    "reasonZh": "同样新案例同标准比较对新情境的方法应用。",
+    "reasonEn": "The same new case and criteria directly test application in a new situation.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q1",
+    "zhChosenOptionId": "02-q1-o1",
+    "enChosenOptionId": "02-q1-o1",
+    "reasonZh": "光音乐变而动作台词不变，改变情绪呈现层。",
+    "reasonEn": "Lighting and music change mood presentation while sequence and dialogue remain fixed.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-v2-q02",
+    "zhChosenOptionId": "02-v2-q02-o2",
+    "enChosenOptionId": "02-v2-q02-o2",
+    "reasonZh": "菜名独占18号粗体，说明价格均12常规，呈现首层。",
+    "reasonEn": "The dish name alone has 18-point bold emphasis.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q3",
+    "zhChosenOptionId": "02-q3-o1",
+    "enChosenOptionId": "02-q3-o1",
+    "reasonZh": "同量蓝色4褐色1，蓝颜料更贵；付款人和真实衣着未记录。",
+    "reasonEn": "Four coins for blue versus one for equal brown supports the cost comparison only.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q4",
+    "zhChosenOptionId": "02-q4-o1",
+    "enChosenOptionId": "02-q4-o1",
+    "reasonZh": "门口仍握出行票说下一班，最支持暂缓而非已经出发或母亲曾要求。",
+    "reasonEn": "At the doorway with a ticket, saying the next train supports delaying, not completed departure or an unstated maternal request.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q5",
+    "zhChosenOptionId": "02-q5-o1",
+    "enChosenOptionId": "02-q5-o1",
+    "reasonZh": "方案A30≤40且0.08≤0.10；B太占地、C超预算。",
+    "reasonEn": "A meets both price and storage limits; B is too large and C too costly.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q6",
+    "zhChosenOptionId": "02-q6-o2",
+    "enChosenOptionId": "02-q6-o2",
+    "reasonZh": "真实采访原段未改，原话相同；位置与配乐明确变化。",
+    "reasonEn": "The unaltered segment retains its spoken words; position and music explicitly change.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q7",
+    "zhChosenOptionId": "02-q7-o1",
+    "enChosenOptionId": "02-q7-o1",
+    "reasonZh": "建筑形态保留，居民活动停办即社区实践中断。",
+    "reasonEn": "Building form is retained while former community activities stop.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-v2-q08",
+    "zhChosenOptionId": "02-v2-q08-o3",
+    "enChosenOptionId": "02-v2-q08-o3",
+    "reasonZh": "删去房主搬走，转用回收盒的原因缺了；但接收人身份也只在删去句首次出现，应明示原先要交房主才排除该项。",
+    "reasonEn": "Removing the move-away news removes the reason for switching, but the intended recipient is not explicitly identified in the retained first event.",
+    "ambiguity": [
+      "删去房主搬走前，保留场景未明示归还对象是谁；原作也可能只通过被删除场景提供房主身份，导致“交给谁”也缺失。"
+    ],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          11,
+          12,
+          11
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-v2-q09",
+    "zhChosenOptionId": "02-v2-q09-o2",
+    "enChosenOptionId": "02-v2-q09-o2",
+    "reasonZh": "最直接把眼前物品写成1950复制品；中文“1690原作，复制1950”也可能作先写原作年份的准确标签，需消除指称歧义。",
+    "reasonEn": "The displayed item is the 1950 replica; the Chinese alternative can read as an accurate original-first date description instead of calling the displayed object an original.",
+    "ambiguity": [
+      "中文选项“1690年原作，复制品制于1950年”可能是两个正确日期的先后排列，未明确说眼前物品就是原作；标签任务存在指称歧义，英文强得多。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q10",
+    "zhChosenOptionId": "02-q10-o2",
+    "enChosenOptionId": "02-q10-o2",
+    "reasonZh": "邀请与藏仅一票同时表现独行准备；两张票或买第二张都回应邀请。",
+    "reasonEn": "Inviting while hiding the only ticket presents the specified mismatch; two tickets or buying a second aligns with the invitation.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q11",
+    "zhChosenOptionId": "02-q11-o1",
+    "enChosenOptionId": "02-q11-o1",
+    "reasonZh": "独立自重支架不接触墙，不需钻孔或挖洞，符合原墙保留与拆除目标。",
+    "reasonEn": "The freestanding support avoids wall alterations required by drilling or embedding.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "02-q12",
+    "zhChosenOptionId": "02-q12-o1",
+    "enChosenOptionId": "02-q12-o1",
+    "reasonZh": "已给中央空白围成人形，识别人形的线索在负空间轮廓。",
+    "reasonEn": "The enclosed person-shaped gap supplies the figure through negative space.",
+    "ambiguity": [
+      "作画日期不是可信人形辨认错误来源，容易只凭词语相关性排除；建议靠实际图像或相邻视觉概念设置错项。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q1",
+    "zhChosenOptionId": "03-q1-o1",
+    "enChosenOptionId": "03-q1-o1",
+    "reasonZh": "主办方原页明确包含原始发布和活动日期；其他选项缺日期。",
+    "reasonEn": "The organizer’s original page contains the needed checkable dates.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-v2-q02",
+    "zhChosenOptionId": "03-v2-q02-o2",
+    "enChosenOptionId": "03-v2-q02-o2",
+    "reasonZh": "仍信4却怕排斥报5，是求接纳的公开顺从，不是新证据或报酬。",
+    "reasonEn": "The person retains the private judgment but conforms publicly to avoid exclusion.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          45,
+          38,
+          44
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q3",
+    "zhChosenOptionId": "03-q3-o3",
+    "enChosenOptionId": "03-q3-o3",
+    "reasonZh": "怎样减少一半明确留出方法/原因的未答问句；另两条是陈述消息。",
+    "reasonEn": "The how question explicitly leaves the mechanism unanswered.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q4",
+    "zhChosenOptionId": "03-q4-o1",
+    "enChosenOptionId": "03-q4-o1",
+    "reasonZh": "70%他人已做行为是描述规范，优惠为激励、请自带为要求。",
+    "reasonEn": "A percentage of others’ behavior is descriptive, unlike incentive or request.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q5",
+    "zhChosenOptionId": "03-q5-o1",
+    "enChosenOptionId": "03-q5-o1",
+    "reasonZh": "B问题加儿童安全价值暗示，随机同抽样单次计数排除两种其他问题。",
+    "reasonEn": "B adds a value cue; shared random sampling and once-only counts exclude the other proposed mechanisms.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q6",
+    "zhChosenOptionId": "03-q6-o2",
+    "enChosenOptionId": "03-q6-o2",
+    "reasonZh": "仅按评论数量，80最大，选B帖。",
+    "reasonEn": "80 comments is the highest under the stated ranking rule.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          26,
+          28,
+          26
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-v2-q07",
+    "zhChosenOptionId": "03-v2-q07-o2",
+    "enChosenOptionId": "03-v2-q07-o2",
+    "reasonZh": "收消息不同人是乙丙丁戊己共5，丁重复只算一次。",
+    "reasonEn": "Bo, Cy, Dee, Eli and Fay are five distinct recipients; Dee is counted once.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q8",
+    "zhChosenOptionId": "03-q8-o1",
+    "enChosenOptionId": "03-q8-o1",
+    "reasonZh": "完整发言把支持关闭放在别人可能说的引语内，实际明示反对。",
+    "reasonEn": "The supportive statement is quoted as a view the speaker opposes.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q9",
+    "zhChosenOptionId": "03-q9-o1",
+    "enChosenOptionId": "03-q9-o1",
+    "reasonZh": "90%来自本次受访仍付费100人，非全部曾用者或已退出人。",
+    "reasonEn": "The 90% describes the surveyed paying users, not all past users.",
+    "ambiguity": [
+      "跨组重复提醒：与05-q9的“只采部分用户→结果直接属于哪些参与者”几乎同一知识操作，只有活跃/付费场景名变化。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q10",
+    "zhChosenOptionId": "03-q10-o1",
+    "enChosenOptionId": "03-q10-o1",
+    "reasonZh": "案件率题设为独立案件100除人口10000，不用新闻篇数。",
+    "reasonEn": "Use 100 cases divided by 10,000 residents, not the count of articles.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-q11",
+    "zhChosenOptionId": "03-q11-o1",
+    "enChosenOptionId": "03-q11-o1",
+    "reasonZh": "100中70反对为多数，公开10人反对为少数。",
+    "reasonEn": "70 of 100 is a majority; 10 publicly opposing is a minority.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  },
+  {
+    "id": "03-v2-q12",
+    "zhChosenOptionId": "03-v2-q12-o3",
+    "enChosenOptionId": "03-v2-q12-o3",
+    "reasonZh": "原帖注明周五改周六同时显示更正发生和具体变化。",
+    "reasonEn": "An explicit Friday-to-Saturday correction on the original post shows both correction and change.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "58a2cad4f5e86fe72b77a4e15315f501ef34f97d6c026e3ecb262be01d377811"
+  }
+]

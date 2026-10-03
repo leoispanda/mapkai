@@ -1,0 +1,2941 @@
+[
+  {
+    "id": "00-q1",
+    "sourceId": "00-q1",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "单位价格",
+    "objective": "把不同包装换成同一单位后比较价格",
+    "cognitiveOperation": "计算",
+    "context": "超市麦片包装",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "两次简单除法并比较同一单位",
+    "optionIds": [
+      "00-q1-o1",
+      "00-q1-o2",
+      "00-q1-o3"
+    ],
+    "answerOptionId": "00-q1-o2",
+    "distractors": [
+      {
+        "optionId": "00-q1-o1",
+        "error": "只比整包标价",
+        "whyNot": "3.20欧元最低，但400克折合每公斤8欧元。"
+      },
+      {
+        "optionId": "00-q1-o3",
+        "error": "把最大包装当成单位价最低",
+        "whyNot": "1千克包装7.60欧元高于750克包装的每公斤7欧元。"
+      }
+    ],
+    "answerEvidence": "3.20÷0.4=8；5.25÷0.75=7；7.60÷1=7.60。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            6,
+            6,
+            5
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            11,
+            11,
+            10
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-v2-q02",
+    "sourceId": "00-q2",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "按比例调整数量",
+    "objective": "按人数比例缩放菜谱用量",
+    "cognitiveOperation": "计算",
+    "context": "两人菜谱改为五人",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "识别5/2比例并乘用量",
+    "optionIds": [
+      "00-v2-q02-o1",
+      "00-v2-q02-o2",
+      "00-v2-q02-o3"
+    ],
+    "answerOptionId": "00-v2-q02-o3",
+    "distractors": [
+      {
+        "optionId": "00-v2-q02-o1",
+        "error": "把新增3人与原2人之比当成总比例",
+        "whyNot": "150×(3÷2)=225只对应新增部分；总人数是5。"
+      },
+      {
+        "optionId": "00-v2-q02-o2",
+        "error": "把五人份近似为两倍",
+        "whyNot": "两倍150克只够按原用量做4人份。"
+      }
+    ],
+    "answerEvidence": "150÷2=75克/人；75×5=375克。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            4,
+            4,
+            4
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            4,
+            4,
+            4
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q3",
+    "sourceId": "00-q3",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "功能性书面表达",
+    "objective": "核对服务请求是否包含识别信息、问题和所需动作",
+    "cognitiveOperation": "比较",
+    "context": "按明示要求提交维修邮件",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "同时检查三条必要信息",
+    "optionIds": [
+      "00-q3-o1",
+      "00-q3-o2",
+      "00-q3-o3"
+    ],
+    "answerOptionId": "00-q3-o2",
+    "distractors": [
+      {
+        "optionId": "00-q3-o1",
+        "error": "用情绪表达代替明确请求",
+        "whyNot": "写了订单和故障，但没有希望对方采取的动作。"
+      },
+      {
+        "optionId": "00-q3-o3",
+        "error": "默认对方知道是哪笔订单",
+        "whyNot": "故障与请求有了，但缺少题干要求的订单号。"
+      }
+    ],
+    "answerEvidence": "依题干三条必填要求逐项核对，仅第二项同时满足。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            18,
+            18,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            43,
+            51,
+            52
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q4",
+    "sourceId": "00-q4",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "百分比基数",
+    "objective": "区分折扣金额与折后应付金额",
+    "cognitiveOperation": "计算",
+    "context": "一件商品打七五折",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "求折扣后剩余比例",
+    "optionIds": [
+      "00-q4-o1",
+      "00-q4-o2",
+      "00-q4-o3"
+    ],
+    "answerOptionId": "00-q4-o2",
+    "distractors": [
+      {
+        "optionId": "00-q4-o1",
+        "error": "把折扣金额当作应付金额",
+        "whyNot": "20元是减掉的金额，不是折后金额。"
+      },
+      {
+        "optionId": "00-q4-o3",
+        "error": "把25%折扣误当作20%折扣",
+        "whyNot": "64元对应80的80%，与降价25%不符。"
+      }
+    ],
+    "answerEvidence": "80×(1－0.25)=60。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            3,
+            3,
+            3
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            7,
+            7,
+            7
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q5",
+    "sourceId": "00-q5",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "通用技能与工具细节",
+    "objective": "选择直接练习跨工具共同操作的计划",
+    "cognitiveOperation": "应用",
+    "context": "学习两款未知清单软件",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "把跨工具目标与练习内容对齐",
+    "optionIds": [
+      "00-q5-o1",
+      "00-q5-o2",
+      "00-q5-o3"
+    ],
+    "answerOptionId": "00-q5-o2",
+    "distractors": [
+      {
+        "optionId": "00-q5-o1",
+        "error": "把界面位置记忆等同于跨工具能力",
+        "whyNot": "只练一个软件的按钮位置，没有跨工具应用。"
+      },
+      {
+        "optionId": "00-q5-o3",
+        "error": "把看过功能等同于能用功能",
+        "whyNot": "观看介绍没有直接要求完成指定筛选任务。"
+      }
+    ],
+    "answerEvidence": "题干目标是不同软件中的同一筛选操作；第二项唯一直接安排两种界面上的操作。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            17,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            55,
+            47,
+            44
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-v2-q06",
+    "sourceId": "00-q6",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "收支预算",
+    "objective": "在固定支出和储蓄目标后计算可用余额",
+    "cognitiveOperation": "计算",
+    "context": "月度零用预算",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "从收入减去两个已知项目",
+    "optionIds": [
+      "00-v2-q06-o1",
+      "00-v2-q06-o2",
+      "00-v2-q06-o3"
+    ],
+    "answerOptionId": "00-v2-q06-o1",
+    "distractors": [
+      {
+        "optionId": "00-v2-q06-o2",
+        "error": "忽略储蓄目标",
+        "whyNot": "240－160=80，但尚未扣除40元储蓄。"
+      },
+      {
+        "optionId": "00-v2-q06-o3",
+        "error": "把储蓄误当成额外收入",
+        "whyNot": "240－160＋40=120把预留款加进可消费款。"
+      }
+    ],
+    "answerEvidence": "240－160－40=40。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            3,
+            3,
+            4
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            7,
+            7,
+            8
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q7",
+    "sourceId": "00-q7",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "信息分类与检索",
+    "objective": "按指定检索目的选择分类键",
+    "cognitiveOperation": "应用",
+    "context": "寻找某月所有消费凭证",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分主题、日期与格式等分类用途",
+    "optionIds": [
+      "00-q7-o1",
+      "00-q7-o2",
+      "00-q7-o3"
+    ],
+    "answerOptionId": "00-q7-o2",
+    "distractors": [
+      {
+        "optionId": "00-q7-o1",
+        "error": "按主题组织但忽略当前检索任务",
+        "whyNot": "一个月的凭证会分散到不同类别文件夹。"
+      },
+      {
+        "optionId": "00-q7-o3",
+        "error": "按文件外观代替内容检索键",
+        "whyNot": "图片格式不能把某月所有凭证聚在一起。"
+      }
+    ],
+    "answerEvidence": "问法明确要求一个文件夹含某月各类凭证，月份是直接满足该目的的分组键。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            10,
+            10,
+            10
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            31,
+            27,
+            26
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q8",
+    "sourceId": "00-q8",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "先决技能与计划",
+    "objective": "按依赖关系和时间约束安排学习",
+    "cognitiveOperation": "应用",
+    "context": "制作图表前先导入数据与写公式",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "检查先后关系与累计时间",
+    "optionIds": [
+      "00-q8-o1",
+      "00-q8-o2",
+      "00-q8-o3"
+    ],
+    "answerOptionId": "00-q8-o1",
+    "distractors": [
+      {
+        "optionId": "00-q8-o2",
+        "error": "把图表看作能越过公式直接学习",
+        "whyNot": "时间虽为25分钟，但图表依赖公式。"
+      },
+      {
+        "optionId": "00-q8-o3",
+        "error": "只看20分钟是否够而忽略前置技能",
+        "whyNot": "公式依赖尚未学习的导入步骤。"
+      }
+    ],
+    "answerEvidence": "10＋20=30，完成导入后学公式；其余两计划违反依赖。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            15,
+            15,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            51,
+            51,
+            55
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-v2-q09",
+    "sourceId": "00-q9",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "跨领域资源约束",
+    "objective": "从三个领域材料识别共同的数量约束",
+    "cognitiveOperation": "迁移",
+    "context": "用水、设备电量与存储空间",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "抽取不同表面材料的共同结构",
+    "optionIds": [
+      "00-v2-q09-o1",
+      "00-v2-q09-o2",
+      "00-v2-q09-o3"
+    ],
+    "answerOptionId": "00-v2-q09-o1",
+    "distractors": [
+      {
+        "optionId": "00-v2-q09-o2",
+        "error": "把资源不足当成关注不足",
+        "whyNot": "水、电量、空间是明示的资源总量，关注并非材料共同约束。"
+      },
+      {
+        "optionId": "00-v2-q09-o3",
+        "error": "把分配问题误当成所有用途必须同一价值标准",
+        "whyNot": "三段没有指定同一评价尺度，也不要求跨单位比较价值。"
+      }
+    ],
+    "answerEvidence": "共同出现的是有限资源与多个用途；其他两项没有在三段中同时出现。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            16,
+            16,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            43,
+            45,
+            39
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-v2-q10",
+    "sourceId": "00-q10",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "任务分解",
+    "objective": "根据作品目标定位未完成的关键操作",
+    "cognitiveOperation": "应用",
+    "context": "做按类别汇总的支出表",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "从现有步骤推断缺失技能",
+    "optionIds": [
+      "00-v2-q10-o1",
+      "00-v2-q10-o2",
+      "00-v2-q10-o3"
+    ],
+    "answerOptionId": "00-v2-q10-o2",
+    "distractors": [
+      {
+        "optionId": "00-v2-q10-o1",
+        "error": "把金额排序当成分类汇总",
+        "whyNot": "排序后不同类别仍混在同一列，未获得各类合计。"
+      },
+      {
+        "optionId": "00-v2-q10-o3",
+        "error": "把时间顺序当成目标分类",
+        "whyNot": "录入顺序不是消费类别，也没有分组求和。"
+      }
+    ],
+    "answerEvidence": "题干目标是每类合计，第二项包含必要的类别分组及逐组求和。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            12,
+            12,
+            12
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            48,
+            38,
+            46
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q11",
+    "sourceId": "00-q11",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "多约束时间安排",
+    "objective": "找到同时满足时间上限和最低休息的安排",
+    "cognitiveOperation": "比较",
+    "context": "音乐、数学和休息的60分钟安排",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "累计时间并核对最低要求",
+    "optionIds": [
+      "00-q11-o1",
+      "00-q11-o2",
+      "00-q11-o3"
+    ],
+    "answerOptionId": "00-q11-o1",
+    "distractors": [
+      {
+        "optionId": "00-q11-o2",
+        "error": "只检查每项最低时长，不检查总量",
+        "whyNot": "25＋25＋15=65，超过60分钟。"
+      },
+      {
+        "optionId": "00-q11-o3",
+        "error": "只检查总量，不检查休息最低要求",
+        "whyNot": "休息10分钟低于至少15分钟。"
+      }
+    ],
+    "answerEvidence": "第一项20＋20＋20=60且休息≥15；其他一项超时、一项休息不足。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            17,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            32,
+            32,
+            32
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "00-q12",
+    "sourceId": "00-q12",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "文档版本检索",
+    "objective": "按状态与日期找到最新已批准文档",
+    "cognitiveOperation": "辨认",
+    "context": "按统一文件名找可使用的手册",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "检查批准状态再比较日期",
+    "optionIds": [
+      "00-q12-o1",
+      "00-q12-o2",
+      "00-q12-o3"
+    ],
+    "answerOptionId": "00-q12-o3",
+    "distractors": [
+      {
+        "optionId": "00-q12-o1",
+        "error": "找到批准版本就停止比较日期",
+        "whyNot": "还有9月25日的更新批准版。"
+      },
+      {
+        "optionId": "00-q12-o2",
+        "error": "只看最新日期，忽略批准状态",
+        "whyNot": "9月28日文件仍是草稿，题干明确不能使用。"
+      }
+    ],
+    "answerEvidence": "批准文件只有9月20日和25日，后者日期更晚。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            16,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            28,
+            25,
+            28
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-q1",
+    "sourceId": "01-q1",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "主动使用新信息",
+    "objective": "辨认同时核对发音并使用新名字的动作",
+    "cognitiveOperation": "辨认",
+    "context": "初次交流后正确称呼对方",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分实际使用与被动接收",
+    "optionIds": [
+      "01-q1-o1",
+      "01-q1-o2",
+      "01-q1-o3"
+    ],
+    "answerOptionId": "01-q1-o2",
+    "distractors": [
+      {
+        "optionId": "01-q1-o1",
+        "error": "核对后仍保持被动接收",
+        "whyNot": "没有安排实际使用名字。"
+      },
+      {
+        "optionId": "01-q1-o3",
+        "error": "把书面记录等同于发音核对和口头使用",
+        "whyNot": "胸牌提供拼写，没有听到核对的发音或使用名字。"
+      }
+    ],
+    "answerEvidence": "第二项明确包含再听名字与按名字称呼两项动作；其他各缺一项或两项。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            19,
+            19,
+            18
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            54,
+            46,
+            54
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-q2",
+    "sourceId": "01-q2",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "支架渐撤",
+    "objective": "辨认保持目标而逐步减少提示的安排",
+    "cognitiveOperation": "辨认",
+    "context": "学员已能完成带提示的任务",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "识别变化的是提示而非任务难度",
+    "optionIds": [
+      "01-q2-o1",
+      "01-q2-o2",
+      "01-q2-o3"
+    ],
+    "answerOptionId": "01-q2-o3",
+    "distractors": [
+      {
+        "optionId": "01-q2-o1",
+        "error": "把多练习当作撤除支撑",
+        "whyNot": "原有提示全部保留。"
+      },
+      {
+        "optionId": "01-q2-o2",
+        "error": "把提高任务难度当作减少帮助",
+        "whyNot": "题干要求同一任务，且该项没有减少提示。"
+      }
+    ],
+    "answerEvidence": "第三项唯一在保持任务的同时减少步骤帮助。",
+    "factSources": [
+      {
+        "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+        "title": "IES WWC — Organizing Instruction and Study to Improve Student Learning",
+        "checkedAt": "2026-10-03",
+        "supports": "指南建议随能力增长减少已解范例、增加独立解题；本题仅辨认减少支持的安排，不宣称任意撤提示都有效。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            18,
+            18,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            48,
+            42,
+            45
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-q3",
+    "sourceId": "01-q3",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：使用可信的抄写、标记朗读学习方式作干扰，删除颜色与朗读速度凑项。",
+    "concept": "提取与自我监测",
+    "objective": "选择直接检查能否不看资料回忆的活动",
+    "cognitiveOperation": "应用",
+    "context": "复习一页笔记后检查遗漏",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "把检查目标与回忆行为对齐",
+    "optionIds": [
+      "01-q3-o1",
+      "01-q3-o2",
+      "01-q3-o3"
+    ],
+    "answerOptionId": "01-q3-o1",
+    "distractors": [
+      {
+        "optionId": "01-q3-o2",
+        "error": "把抄写熟悉感当成无提示回忆",
+        "whyNot": "抄写时保留原文，不检验无法回忆的内容。"
+      },
+      {
+        "optionId": "01-q3-o3",
+        "error": "把看原文的识别流畅性当成提取",
+        "whyNot": "标记朗读仍由原文提示，不能直接检验离开资料后的回忆。"
+      }
+    ],
+    "answerEvidence": "唯一要求先撤去笔记再输出要点的是第一项。",
+    "factSources": [
+      {
+        "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+        "title": "IES WWC — Organizing Instruction and Study to Improve Student Learning",
+        "checkedAt": "2026-10-03",
+        "supports": "推荐5b主动提取，6b用测验辨认待学习内容；本题不声称人人都更快。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            17,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            63,
+            66,
+            63
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "01-q4",
+    "sourceId": "01-q4",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "间隔练习",
+    "objective": "识别总时长相同但跨日分散的复习计划",
+    "cognitiveOperation": "比较",
+    "context": "40分钟复习的三种安排",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "比较时间分布而非总分钟数",
+    "optionIds": [
+      "01-q4-o1",
+      "01-q4-o2",
+      "01-q4-o3"
+    ],
+    "answerOptionId": "01-q4-o2",
+    "distractors": [
+      {
+        "optionId": "01-q4-o1",
+        "error": "把同日短休息等同于跨日分布",
+        "whyNot": "四轮全在第1天。"
+      },
+      {
+        "optionId": "01-q4-o3",
+        "error": "把延后一次集中复习等同于分散复习",
+        "whyNot": "四轮全在第10天，并未跨日期。"
+      }
+    ],
+    "answerEvidence": "三份都是4×10=40分钟；只有第二项含四个日期。",
+    "factSources": [
+      {
+        "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+        "title": "IES WWC — Organizing Instruction and Study to Improve Student Learning",
+        "checkedAt": "2026-10-03",
+        "supports": "推荐1将学习分散到不同时间；只支持原则，不支持本题日期是普遍最优方案。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            20,
+            20,
+            21
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            58,
+            41,
+            59
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-q5",
+    "sourceId": "01-q5",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "实践与具体反馈",
+    "objective": "辨认亲自判断后按错误获得反馈的设计",
+    "cognitiveOperation": "比较",
+    "context": "识别钓鱼邮件的培训形式",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "同时检查学习者动作与反馈内容",
+    "optionIds": [
+      "01-q5-o1",
+      "01-q5-o2",
+      "01-q5-o3"
+    ],
+    "answerOptionId": "01-q5-o2",
+    "distractors": [
+      {
+        "optionId": "01-q5-o1",
+        "error": "把复述讲解当作实际决策",
+        "whyNot": "没有独立判定邮件，也没有针对个人误判的反馈。"
+      },
+      {
+        "optionId": "01-q5-o3",
+        "error": "把看示范抄步骤当作做判断",
+        "whyNot": "没有学员自己的答案可供针对性检查。"
+      }
+    ],
+    "answerEvidence": "第二项既包含学员判断又包含针对该判断的反馈；题干不声称某种时长或频率必然更有效。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            19,
+            20,
+            19
+          ],
+          "correctOnlyLongest": true,
+          "review": "已逐项核对：当前多出的少量字符来自任务动作或相同句式中的词长，不含独占的解释、限定条件或专门术语；保留内容，不补废话。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            54,
+            54,
+            47
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-q6",
+    "sourceId": "01-q6",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：独立任务改为一段并明确范例与另题练习，消除两段要求未被满足的问题。",
+    "concept": "范例与主动练习",
+    "objective": "选择既提供可用范例又留独立步骤的材料",
+    "cognitiveOperation": "比较",
+    "context": "初学者写两段说明文",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分步骤支撑、代做和无关资料",
+    "optionIds": [
+      "01-q6-o1",
+      "01-q6-o2",
+      "01-q6-o3"
+    ],
+    "answerOptionId": "01-q6-o2",
+    "distractors": [
+      {
+        "optionId": "01-q6-o1",
+        "error": "把完整代写当成支撑独立写作",
+        "whyNot": "复制提交没有留下自己完成的练习。"
+      },
+      {
+        "optionId": "01-q6-o3",
+        "error": "把题材资料当成结构范例",
+        "whyNot": "背景资料没有给出题干要求的结构参考。"
+      }
+    ],
+    "answerEvidence": "一个带批注的结构范例加一个独立练习题，分别满足提供参考与保留独立任务。",
+    "factSources": [
+      {
+        "url": "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+        "title": "IES WWC — Organizing Instruction and Study to Improve Student Learning",
+        "checkedAt": "2026-10-03",
+        "supports": "推荐2交替使用范例与独立练习；本题没有对所有写作情境给出普遍效果大小。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            18,
+            19,
+            19
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            55,
+            57,
+            64
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "01-q7",
+    "sourceId": "01-q7",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：明确跨食品领域迁移，不把新麦片也可解释为新情境的第二答案留在题干里。",
+    "concept": "学习迁移",
+    "objective": "选择新情境中使用同一比较原理的任务",
+    "cognitiveOperation": "迁移",
+    "context": "从食品单位价迁移到数据套餐",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分新情境应用与同情境复做或背诵",
+    "optionIds": [
+      "01-q7-o1",
+      "01-q7-o2",
+      "01-q7-o3"
+    ],
+    "answerOptionId": "01-q7-o2",
+    "distractors": [
+      {
+        "optionId": "01-q7-o1",
+        "error": "把换商品误当成换应用情境",
+        "whyNot": "仍是食品的每公斤价格，表面对象更换而情境未变。"
+      },
+      {
+        "optionId": "01-q7-o3",
+        "error": "把记住公式等同于迁移应用",
+        "whyNot": "没有要求把原理用在新的实际数量上。"
+      }
+    ],
+    "answerEvidence": "第二项保持价÷量结构，却更换为数据套餐；其他两项缺新情境应用。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            14,
+            15,
+            14
+          ],
+          "correctOnlyLongest": true,
+          "review": "已逐项核对：当前多出的少量字符来自任务动作或相同句式中的词长，不含独占的解释、限定条件或专门术语；保留内容，不补废话。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            42,
+            35,
+            43
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "01-q8",
+    "sourceId": "01-q8",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "学习环境与激励",
+    "objective": "从明示工作考核中找直接阻碍新流程的条件",
+    "cognitiveOperation": "判断证据",
+    "context": "学习检查流程后仍被催快结案",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "结合会做与考核两条证据",
+    "optionIds": [
+      "01-q8-o1",
+      "01-q8-o2",
+      "01-q8-o3"
+    ],
+    "answerOptionId": "01-q8-o2",
+    "distractors": [
+      {
+        "optionId": "01-q8-o1",
+        "error": "只把应用失败归因于教材遗漏",
+        "whyNot": "能正确演示与教材没讲步骤的推断不相符，题干未提供该事实。"
+      },
+      {
+        "optionId": "01-q8-o3",
+        "error": "把没有执行等同于不会操作",
+        "whyNot": "题干明确能正确演示，另有奖金与催促的直接环境证据。"
+      }
+    ],
+    "answerEvidence": "按结案速度奖励与催跳过检查都是明示事实，直接与检查流程冲突。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            16,
+            16,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            49,
+            40,
+            51
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-v2-q09",
+    "sourceId": "01-q9",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。 独立复审或主编辑复查后：英文统一成表现指标名词短语，中文也明确解释而不是仅复述。",
+    "concept": "延后独立表现",
+    "objective": "辨认检验一周后独立解释能力的证据",
+    "cognitiveOperation": "判断证据",
+    "context": "看完视频后自信很高",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分主观熟悉、跟读与延后提取",
+    "optionIds": [
+      "01-v2-q09-o1",
+      "01-v2-q09-o2",
+      "01-v2-q09-o3"
+    ],
+    "answerOptionId": "01-v2-q09-o3",
+    "distractors": [
+      {
+        "optionId": "01-v2-q09-o1",
+        "error": "用当下自信替代延后能力",
+        "whyNot": "时点和输出任务都与目标不同。"
+      },
+      {
+        "optionId": "01-v2-q09-o2",
+        "error": "用有字幕支持的跟读替代独立解释",
+        "whyNot": "没有延后，也没有撤去资料支持。"
+      }
+    ],
+    "answerEvidence": "第三项逐一满足题干时间、资料条件和输出任务；不把倍速当作遗忘原因。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            18,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            49,
+            48,
+            49
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "01-q10",
+    "sourceId": "01-q10",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "针对性练习",
+    "objective": "用错误位置记录选择针对目标的练习范围",
+    "cognitiveOperation": "应用",
+    "context": "八小节曲目第五六小节失误",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "把练习与已记录弱点对齐",
+    "optionIds": [
+      "01-q10-o1",
+      "01-q10-o2",
+      "01-q10-o3"
+    ],
+    "answerOptionId": "01-q10-o2",
+    "distractors": [
+      {
+        "optionId": "01-q10-o1",
+        "error": "选择已经熟练的部分来追求顺利感",
+        "whyNot": "第1、2小节不是记录中的错误位置。"
+      },
+      {
+        "optionId": "01-q10-o3",
+        "error": "只看方法有反馈而忽略练习对象",
+        "whyNot": "第7、8小节已稳定正确，与本轮目标不对应。"
+      }
+    ],
+    "answerEvidence": "错误位置明示为5与6，第二项唯一针对这两小节并核查错误。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            19,
+            19,
+            19
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            49,
+            49,
+            49
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-v2-q11",
+    "sourceId": "01-q11",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "可行动反馈",
+    "objective": "选择指出具体缺口而让学习者自行修订的反馈",
+    "cognitiveOperation": "应用",
+    "context": "说明文缺少材料中的证据",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分具体反馈、总评与代写",
+    "optionIds": [
+      "01-v2-q11-o1",
+      "01-v2-q11-o2",
+      "01-v2-q11-o3"
+    ],
+    "answerOptionId": "01-v2-q11-o3",
+    "distractors": [
+      {
+        "optionId": "01-v2-q11-o1",
+        "error": "把笼统总评当成具体反馈",
+        "whyNot": "未指出缺口是材料证据，无法直接指导这项修订。"
+      },
+      {
+        "optionId": "01-v2-q11-o2",
+        "error": "把教师代改当成学生修订",
+        "whyNot": "给了完成答案，没有把所需判断留给学生。"
+      }
+    ],
+    "answerEvidence": "第三项含明确缺口与学员自己执行的修订动作，其他各缺一项。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            19,
+            19,
+            17
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            58,
+            52,
+            52
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "01-v2-q12",
+    "sourceId": "01-q12",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。 独立复审或主编辑复查后：增加不同难度新案例的实质干扰项，检验迁移评估条件而非仅辨认迁移。",
+    "concept": "迁移评估的可比性",
+    "objective": "选择两名学员都在相同新情境完成的评估",
+    "cognitiveOperation": "判断证据",
+    "context": "公平比较同课后的新情境应用",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "匹配待测目标并统一任务条件",
+    "optionIds": [
+      "01-v2-q12-o1",
+      "01-v2-q12-o2",
+      "01-v2-q12-o3"
+    ],
+    "answerOptionId": "01-v2-q12-o1",
+    "distractors": [
+      {
+        "optionId": "01-v2-q12-o2",
+        "error": "把统一评分当成统一任务条件",
+        "whyNot": "案例难度不同，不满足同等任务难度。"
+      },
+      {
+        "optionId": "01-v2-q12-o3",
+        "error": "把熟悉案例复述当成迁移",
+        "whyNot": "同一旧案例没有新情境应用。"
+      }
+    ],
+    "answerEvidence": "两个条件是新情境应用、同样任务难度与评分标准，只有同一新案例同时满足。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            20,
+            21,
+            21
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            52,
+            55,
+            58
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "02-q1",
+    "sourceId": "02-q1",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "艺术呈现与事件内容",
+    "objective": "区分情绪呈现手法与没有改变的情节事实",
+    "cognitiveOperation": "比较",
+    "context": "同一电影片段更换灯光和配乐",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "分清表达层与事件层",
+    "optionIds": [
+      "02-q1-o1",
+      "02-q1-o2",
+      "02-q1-o3"
+    ],
+    "answerOptionId": "02-q1-o1",
+    "distractors": [
+      {
+        "optionId": "02-q1-o2",
+        "error": "把呈现手法改动当成叙事事件改动",
+        "whyNot": "动作顺序被明确保留。"
+      },
+      {
+        "optionId": "02-q1-o3",
+        "error": "把声音环境改动当成对白改动",
+        "whyNot": "配乐变了，但题干明确台词相同。"
+      }
+    ],
+    "answerEvidence": "明示仅灯光与配乐改变，动作顺序和台词不变。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            8,
+            8,
+            8
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            19,
+            22,
+            27
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-v2-q02",
+    "sourceId": "02-q2",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "视觉信息层级",
+    "objective": "选择将菜名而非说明或价格设为视觉首层的排版",
+    "cognitiveOperation": "应用",
+    "context": "菜单字体大小与粗细",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "对照同一排版变量的三种布局",
+    "optionIds": [
+      "02-v2-q02-o1",
+      "02-v2-q02-o2",
+      "02-v2-q02-o3"
+    ],
+    "answerOptionId": "02-v2-q02-o2",
+    "distractors": [
+      {
+        "optionId": "02-v2-q02-o1",
+        "error": "把辅助说明设成主层",
+        "whyNot": "18号粗体用于说明，不用于菜名。"
+      },
+      {
+        "optionId": "02-v2-q02-o3",
+        "error": "把价格突出当成菜名突出",
+        "whyNot": "18号粗体用于价格，与指定首层不同。"
+      }
+    ],
+    "answerEvidence": "三个位置相同；第二项唯一让菜名字号和粗细都高于另外两元素。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            24,
+            24,
+            24
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            54,
+            54,
+            54
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q3",
+    "sourceId": "02-q3",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "材料与历史解读",
+    "objective": "区分材料成本记录支持的判断与无证据推断",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构画作账本中的蓝色颜料",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "从成本证据限定解释范围",
+    "optionIds": [
+      "02-q3-o1",
+      "02-q3-o2",
+      "02-q3-o3"
+    ],
+    "answerOptionId": "02-q3-o1",
+    "distractors": [
+      {
+        "optionId": "02-q3-o2",
+        "error": "把画面中的衣物当成现实衣着记录",
+        "whyNot": "题干明确账本没有记录真实衣物；图像也不能单独证明日常穿着。"
+      },
+      {
+        "optionId": "02-q3-o3",
+        "error": "把材料价格等同于支付者身份",
+        "whyNot": "账本没有记付款人。"
+      }
+    ],
+    "answerEvidence": "同量蓝4币、褐1币直接支持第一项；题干明确另两类信息缺失。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            14,
+            15,
+            15
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            48,
+            54,
+            53
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q4",
+    "sourceId": "02-q4",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "文本证据与解读",
+    "objective": "从短叙事的动作与对白选择有依据的解释",
+    "cognitiveOperation": "判断证据",
+    "context": "人物在门口推迟出发",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "从一句明示对白区分可支持事件与未出现的事实。",
+    "optionIds": [
+      "02-q4-o1",
+      "02-q4-o2",
+      "02-q4-o3"
+    ],
+    "answerOptionId": "02-q4-o1",
+    "distractors": [
+      {
+        "optionId": "02-q4-o2",
+        "error": "忽略未来安排的对白而当作已经出发",
+        "whyNot": "人物仍在门口并说改下一班。"
+      },
+      {
+        "optionId": "02-q4-o3",
+        "error": "把一次回望补写成母亲提出请求",
+        "whyNot": "母亲请求这一事实没有出现。"
+      }
+    ],
+    "answerEvidence": "下一班表示不是眼下这一班；不存在已经完成出发或母亲提出请求的文本证据。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            11,
+            13,
+            13
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            29,
+            36,
+            39
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q5",
+    "sourceId": "02-q5",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "设计与使用约束",
+    "objective": "按收纳空间与预算选家具方案",
+    "cognitiveOperation": "应用",
+    "context": "虚构小厨房椅子设计任务",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "同时比较形态尺寸和成本",
+    "optionIds": [
+      "02-q5-o1",
+      "02-q5-o2",
+      "02-q5-o3"
+    ],
+    "answerOptionId": "02-q5-o1",
+    "distractors": [
+      {
+        "optionId": "02-q5-o2",
+        "error": "只看预算而遗漏收纳占地",
+        "whyNot": "0.30平方米高于0.10。"
+      },
+      {
+        "optionId": "02-q5-o3",
+        "error": "只看收纳空间而遗漏成本",
+        "whyNot": "60元高于40元。"
+      }
+    ],
+    "answerEvidence": "方案A的30≤40且0.08≤0.10，其他各违反一项限制。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            20,
+            20,
+            20
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            33,
+            33,
+            33
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q6",
+    "sourceId": "02-q6",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "纪录片的叙事组织",
+    "objective": "区分保持不变的采访原话与改变的叙事编排",
+    "cognitiveOperation": "比较",
+    "context": "真实访谈通过排序和配乐呈现",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "不把真实性与中立性混为一谈",
+    "optionIds": [
+      "02-q6-o1",
+      "02-q6-o2",
+      "02-q6-o3"
+    ],
+    "answerOptionId": "02-q6-o2",
+    "distractors": [
+      {
+        "optionId": "02-q6-o1",
+        "error": "把原素材相同理解成编排也相同",
+        "whyNot": "题干明确从开头移到结尾。"
+      },
+      {
+        "optionId": "02-q6-o3",
+        "error": "把采访真实性当成配乐不变",
+        "whyNot": "题干明确换了配乐。"
+      }
+    ],
+    "answerEvidence": "同一采访未经改动，原话相同；叙事位置与配乐在题干明确改变。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            10,
+            9,
+            10
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            35,
+            36,
+            39
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q7",
+    "sourceId": "02-q7",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "物质形态与活态文化",
+    "objective": "区分建筑延续和社区文化实践中断",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构老街保留建筑但集市与合唱停办",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "分别阅读形态与实践证据",
+    "optionIds": [
+      "02-q7-o1",
+      "02-q7-o2",
+      "02-q7-o3"
+    ],
+    "answerOptionId": "02-q7-o1",
+    "distractors": [
+      {
+        "optionId": "02-q7-o2",
+        "error": "把两组证据对应关系反转",
+        "whyNot": "外形未变、活动停办，正好与该项相反。"
+      },
+      {
+        "optionId": "02-q7-o3",
+        "error": "把保留建筑等同于保留所有日常文化",
+        "whyNot": "集市和合唱已明示停办。"
+      }
+    ],
+    "answerEvidence": "记录分别明示建筑保持外形和原有活动停止。",
+    "factSources": [
+      {
+        "url": "https://ich.unesco.org/en/what-is-intangible-heritage-00003?lang=en",
+        "title": "UNESCO — What is Intangible Cultural Heritage?",
+        "checkedAt": "2026-10-03",
+        "supports": "文化遗产包含实践、表演等活态表达而不只建筑；本题街区资料为虚构，不据此认定正式遗产身份。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            16,
+            16,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            55,
+            57,
+            52
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-v2-q08",
+    "sourceId": "02-q8",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。 独立复审或主编辑复查后：保留幕明确接收对象，删除搬走幕只移除改用回收盒的原因，不同时丢失归还对象。",
+    "concept": "叙事因果信息",
+    "objective": "辨认剪辑删除的动机信息而非仍保留的动作",
+    "cognitiveOperation": "判断证据",
+    "context": "还钥匙的片段删掉一项发现",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "对照两个版本中出现的信息",
+    "optionIds": [
+      "02-v2-q08-o1",
+      "02-v2-q08-o2",
+      "02-v2-q08-o3"
+    ],
+    "answerOptionId": "02-v2-q08-o3",
+    "distractors": [
+      {
+        "optionId": "02-v2-q08-o1",
+        "error": "把删去原因当成删去起初目标",
+        "whyNot": "想亲手归还的部分仍保留。"
+      },
+      {
+        "optionId": "02-v2-q08-o2",
+        "error": "把原因与最终结果混同",
+        "whyNot": "投入指定回收盒的动作仍保留。"
+      }
+    ],
+    "answerEvidence": "原版第二步解释第一步到第三步为何改变，只有这一解释被删。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            11,
+            11,
+            12
+          ],
+          "correctOnlyLongest": true,
+          "review": "已逐项核对：当前多出的少量字符来自任务动作或相同句式中的词长，不含独占的解释、限定条件或专门术语；保留内容，不补废话。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            33,
+            26,
+            29
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "02-v2-q09",
+    "sourceId": "02-q9",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。 独立复审或主编辑复查后：所有选项明确指称眼前物件，排除第三项被读成只先介绍原作的另一个准确标签。",
+    "concept": "展签的来源准确性",
+    "objective": "在简短标签中保持原作与复制品年代的区别",
+    "cognitiveOperation": "应用",
+    "context": "虚构1690年原作的1950年复制品",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "对应对象身份和两组年代",
+    "optionIds": [
+      "02-v2-q09-o1",
+      "02-v2-q09-o2",
+      "02-v2-q09-o3"
+    ],
+    "answerOptionId": "02-v2-q09-o2",
+    "distractors": [
+      {
+        "optionId": "02-v2-q09-o1",
+        "error": "把原作与复制品的年代反转",
+        "whyNot": "复制品1950、原作1690，非该项对应。"
+      },
+      {
+        "optionId": "02-v2-q09-o3",
+        "error": "记住年份却忽略眼前物件身份",
+        "whyNot": "眼前是复制品，不是1690年的原作。"
+      }
+    ],
+    "answerEvidence": "档案明确眼前复制品1950，原作1690；仅第二项都对应。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            19,
+            19,
+            19
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            38,
+            38,
+            38
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "02-q10",
+    "sourceId": "02-q10",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "跨媒介表达",
+    "objective": "以可见动作表达对白与内心准备的矛盾",
+    "cognitiveOperation": "迁移",
+    "context": "把小说内心独白改成电影动作",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "用动作保留指定的叙事信息",
+    "optionIds": [
+      "02-q10-o1",
+      "02-q10-o2",
+      "02-q10-o3"
+    ],
+    "answerOptionId": "02-q10-o2",
+    "distractors": [
+      {
+        "optionId": "02-q10-o1",
+        "error": "把同行准备当成独行准备的矛盾",
+        "whyNot": "递两张票支持两人同行。"
+      },
+      {
+        "optionId": "02-q10-o3",
+        "error": "只保留邀请而改掉独行准备",
+        "whyNot": "补买第二票是在落实同行，不是保留指定矛盾。"
+      }
+    ],
+    "answerEvidence": "题干明确需要呈现邀请与单张票独行准备的矛盾，第二项同时有这两层动作。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            18,
+            19,
+            19
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            38,
+            46,
+            49
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q11",
+    "sourceId": "02-q11",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "保留与可逆改变",
+    "objective": "根据明示保留条件辨认可拆卸的新设施",
+    "cognitiveOperation": "应用",
+    "context": "虚构老剧院改造委托",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "核对墙面与可拆除两条限制",
+    "optionIds": [
+      "02-q11-o1",
+      "02-q11-o2",
+      "02-q11-o3"
+    ],
+    "answerOptionId": "02-q11-o1",
+    "distractors": [
+      {
+        "optionId": "02-q11-o2",
+        "error": "把稳固当成符合可逆保留要求",
+        "whyNot": "新挖墙洞和填水泥改变原墙且留下痕迹。"
+      },
+      {
+        "optionId": "02-q11-o3",
+        "error": "只看设备能取下，忽略安装痕迹",
+        "whyNot": "钻孔螺栓改变墙面，拆除后仍有孔。"
+      }
+    ],
+    "answerEvidence": "第一项无墙面接触、可移除；其他均明确挖洞或钻孔。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            23,
+            22,
+            24
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            69,
+            63,
+            73
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "02-q12",
+    "sourceId": "02-q12",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：用同属视觉构图的线索作干扰，删除作画日期无关项。",
+    "concept": "负空间与构图",
+    "objective": "辨认没有画出的形状由周边线条构成",
+    "cognitiveOperation": "辨认",
+    "context": "庭院画中的人形空白",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "从轮廓关系识别空白的构图作用",
+    "optionIds": [
+      "02-q12-o1",
+      "02-q12-o2",
+      "02-q12-o3"
+    ],
+    "answerOptionId": "02-q12-o1",
+    "distractors": [
+      {
+        "optionId": "02-q12-o2",
+        "error": "把正形内部的塑造细节当成线索",
+        "whyNot": "人形空白没有上色或细节，不靠内部明暗塑形。"
+      },
+      {
+        "optionId": "02-q12-o3",
+        "error": "把植物的颜色当成人形轮廓来源",
+        "whyNot": "题干的直接人形线索是周边线条围成的空白。"
+      }
+    ],
+    "answerEvidence": "题干直接给出周边线条围成人形，未给颜料或日期构成人形的证据。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            12,
+            12,
+            12
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            35,
+            38,
+            34
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "03-q1",
+    "sourceId": "03-q1",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "来源与时效核实",
+    "objective": "选择包含可核查日期的活动原始资料",
+    "cognitiveOperation": "应用",
+    "context": "今天是否仍有免费咖啡活动",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分原页日期与被截掉的日期",
+    "optionIds": [
+      "03-q1-o1",
+      "03-q1-o2",
+      "03-q1-o3"
+    ],
+    "answerOptionId": "03-q1-o1",
+    "distractors": [
+      {
+        "optionId": "03-q1-o2",
+        "error": "把熟人转发当成日期证据",
+        "whyNot": "截图的日期已被裁去。"
+      },
+      {
+        "optionId": "03-q1-o3",
+        "error": "把传播量当成内容时效",
+        "whyNot": "转发和点赞数字没有活动日期。"
+      }
+    ],
+    "answerEvidence": "第一项提供问法所需原始日期，其他明确未提供活动日期。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            20,
+            21,
+            20
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            55,
+            58,
+            48
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-v2-q02",
+    "sourceId": "03-q2",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "规范性群体影响",
+    "objective": "从明确陈述的担忧识别为接纳而公开顺从",
+    "cognitiveOperation": "判断证据",
+    "context": "私下数得四个却跟随群体报五个",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "根据陈述区分压力与新证据",
+    "optionIds": [
+      "03-v2-q02-o1",
+      "03-v2-q02-o2",
+      "03-v2-q02-o3"
+    ],
+    "answerOptionId": "03-v2-q02-o2",
+    "distractors": [
+      {
+        "optionId": "03-v2-q02-o1",
+        "error": "把公开顺从当成私下信念被信息改变",
+        "whyNot": "本人明确仍认为4个，未提供新证据。"
+      },
+      {
+        "optionId": "03-v2-q02-o3",
+        "error": "把所有外在动机都归为物质奖励",
+        "whyNot": "没有奖励金额的信息，明确原因是担心排斥。"
+      }
+    ],
+    "answerEvidence": "私下仍认为4且陈述担心被排斥，直接支持接纳压力而非证据或金额。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            14,
+            13,
+            15
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            38,
+            45,
+            44
+          ],
+          "correctOnlyLongest": true,
+          "review": "已逐项核对：当前多出的少量字符来自任务动作或相同句式中的词长，不含独占的解释、限定条件或专门术语；保留内容，不补废话。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q3",
+    "sourceId": "03-q3",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "标题的信息缺口",
+    "objective": "辨认隐去原因而邀请读者点击的标题",
+    "cognitiveOperation": "辨认",
+    "context": "三种关于商店退货的标题",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "比较标题给出的事实与留下的疑问",
+    "optionIds": [
+      "03-q3-o1",
+      "03-q3-o2",
+      "03-q3-o3"
+    ],
+    "answerOptionId": "03-q3-o3",
+    "distractors": [
+      {
+        "optionId": "03-q3-o1",
+        "error": "把已陈述原因当成未填信息缺口",
+        "whyNot": "标题已经给出补充尺码说明这个原因。"
+      },
+      {
+        "optionId": "03-q3-o2",
+        "error": "把普通数值报告当成追问原因",
+        "whyNot": "该标题陈述未变化的比率，没有提出待点击补全的原因问题。"
+      }
+    ],
+    "answerEvidence": "第三项有明确怎样提问且未给原因；第一项已给原因，第二项是数值报告。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            18,
+            15
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            44,
+            46,
+            34
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q4",
+    "sourceId": "03-q4",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "描述性规范",
+    "objective": "区分他人做法信息、规则要求与价格奖励",
+    "cognitiveOperation": "辨认",
+    "context": "三条自带水杯告示",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "识别说明多数人行为的消息",
+    "optionIds": [
+      "03-q4-o1",
+      "03-q4-o2",
+      "03-q4-o3"
+    ],
+    "answerOptionId": "03-q4-o1",
+    "distractors": [
+      {
+        "optionId": "03-q4-o2",
+        "error": "把应该如何做与别人如何做混同",
+        "whyNot": "请每位提出要求，没有报告其他人的实际做法。"
+      },
+      {
+        "optionId": "03-q4-o3",
+        "error": "把行为激励当成行为普遍性信息",
+        "whyNot": "优惠是个人收益，不是群体已有做法。"
+      }
+    ],
+    "answerEvidence": "第一项描述已观察的群体行为比例；另外两项分别要求与奖励。",
+    "factSources": [
+      {
+        "url": "https://sparq.stanford.edu/sites/g/files/sbiybj19021/files/media/file/schultz_et_al._2007_-_power_of_social_norms.pdf",
+        "title": "Schultz et al. (2007) — The Constructive, Destructive, and Reconstructive Power of Social Norms",
+        "checkedAt": "2026-10-03",
+        "supports": "原论文区分描述性规范（常见做法）与指令性规范（认可或不认可）；本题只辨认描述性信息，不推出普遍效果。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            14,
+            15,
+            14
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            42,
+            42,
+            50
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q5",
+    "sourceId": "03-q5",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "调查措辞",
+    "objective": "从同设计不同提问中辨认价值暗示",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构公园预算调查随机两组",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "排除未发生的抽样和计数问题",
+    "optionIds": [
+      "03-q5-o1",
+      "03-q5-o2",
+      "03-q5-o3"
+    ],
+    "answerOptionId": "03-q5-o1",
+    "distractors": [
+      {
+        "optionId": "03-q5-o2",
+        "error": "把措辞差异误归因于未给出的抽样差异",
+        "whyNot": "题干是同一抽样后随机分组，没有只包括常客的说明。"
+      },
+      {
+        "optionId": "03-q5-o3",
+        "error": "把调查偏差泛化为任何计数错误",
+        "whyNot": "明确每人只计一次。"
+      }
+    ],
+    "answerEvidence": "B的问法额外包含守护孩子安全，其他两项与明示抽样与计数条件不符。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            15,
+            15,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            38,
+            46,
+            49
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q6",
+    "sourceId": "03-q6",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "指标与传播排序",
+    "objective": "按明示互动排序规则选择先推送的信息",
+    "cognitiveOperation": "应用",
+    "context": "三个事实质量和评论数不同的帖子",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "按单一排序规则比较三个数值",
+    "optionIds": [
+      "03-q6-o1",
+      "03-q6-o2",
+      "03-q6-o3"
+    ],
+    "answerOptionId": "03-q6-o2",
+    "distractors": [
+      {
+        "optionId": "03-q6-o1",
+        "error": "把已核实状态加入题干明确不用的规则",
+        "whyNot": "排序只比较评论数，A的20小于B的80。"
+      },
+      {
+        "optionId": "03-q6-o3",
+        "error": "把真实性或较少争议当成平台目标",
+        "whyNot": "C评论数10最低，规则未把真实性加入。"
+      }
+    ],
+    "answerEvidence": "给定排序函数仅取评论数，80>20>10。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            13,
+            13,
+            13
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            26,
+            28,
+            26
+          ],
+          "correctOnlyLongest": true,
+          "review": "已逐项核对：当前多出的少量字符来自任务动作或相同句式中的词长，不含独占的解释、限定条件或专门术语；保留内容，不补废话。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-v2-q07",
+    "sourceId": "03-q7",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "网络传播的独立到达人数",
+    "objective": "在转发重叠中去重计算受众",
+    "cognitiveOperation": "计算",
+    "context": "两轮口头消息传播",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分发送次数和不同接收者",
+    "optionIds": [
+      "03-v2-q07-o1",
+      "03-v2-q07-o2",
+      "03-v2-q07-o3"
+    ],
+    "answerOptionId": "03-v2-q07-o2",
+    "distractors": [
+      {
+        "optionId": "03-v2-q07-o1",
+        "error": "只计第二轮独立接收者，遗漏第一轮",
+        "whyNot": "第二轮丁戊己3人，但乙丙也收到。"
+      },
+      {
+        "optionId": "03-v2-q07-o3",
+        "error": "把发送次数当成不同人数",
+        "whyNot": "共有6次发送，但丁收两次，应去重一次。"
+      }
+    ],
+    "answerEvidence": "接收者集合{乙,丙,丁,戊,己}大小5。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            2,
+            2,
+            2
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            7,
+            7,
+            7
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q8",
+    "sourceId": "03-q8",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "引述与语境",
+    "objective": "从完整发言区分举例的观点与说话者立场",
+    "cognitiveOperation": "判断证据",
+    "context": "被截短的图书馆发言",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "识别引语层次和紧接的反对语句",
+    "optionIds": [
+      "03-q8-o1",
+      "03-q8-o2",
+      "03-q8-o3"
+    ],
+    "answerOptionId": "03-q8-o1",
+    "distractors": [
+      {
+        "optionId": "03-q8-o2",
+        "error": "把同一句中的举例与反对当成时间上的改口",
+        "whyNot": "题干没有过去支持的证据，前句是引用假想说法。"
+      },
+      {
+        "optionId": "03-q8-o3",
+        "error": "把截出的引语当成说话者立场",
+        "whyNot": "完整句明确反对，没有支持暂时关闭。"
+      }
+    ],
+    "answerEvidence": "可能会说引出假想观点，但我反对明确本人立场。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            15,
+            14,
+            15
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            45,
+            50,
+            49
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-q9",
+    "sourceId": "03-q9",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：改为抽样框改进，区别于05-q9界定已记录群体的任务。",
+    "concept": "样本与总体",
+    "objective": "选择同时覆盖当前与已离开用户的抽样框",
+    "cognitiveOperation": "应用",
+    "context": "仅调查仍付费的用户",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分受访样本与曾经使用的总体",
+    "optionIds": [
+      "03-q9-o1",
+      "03-q9-o2",
+      "03-q9-o3"
+    ],
+    "answerOptionId": "03-q9-o1",
+    "distractors": [
+      {
+        "optionId": "03-q9-o2",
+        "error": "用增大方便群体样本代替补齐总体覆盖",
+        "whyNot": "更多仍付费者仍不能提供已离开者的抽样机会。"
+      },
+      {
+        "optionId": "03-q9-o3",
+        "error": "用全部缺失群体代替完整目标总体",
+        "whyNot": "只抽已离开者又排除仍付费者。"
+      }
+    ],
+    "answerEvidence": "目标总体包括仍付费和已离开，全部曾付费名单覆盖这两类。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            11,
+            11,
+            12
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            23,
+            33,
+            41
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "03-q10",
+    "sourceId": "03-q10",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。 独立复审或主编辑复查后：明确事件率单位，避免将案件数率误解为居民遇案比例。",
+    "concept": "发生率与报道量",
+    "objective": "选择用独立案件数和人口计算发生率的比率",
+    "cognitiveOperation": "计算",
+    "context": "人口案件不变而新闻报道增加",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分事件、文章与曝光倍数",
+    "optionIds": [
+      "03-q10-o1",
+      "03-q10-o2",
+      "03-q10-o3"
+    ],
+    "answerOptionId": "03-q10-o1",
+    "distractors": [
+      {
+        "optionId": "03-q10-o2",
+        "error": "把报道次数当成独立事件数",
+        "whyNot": "200是文章数量，案件仍100起。"
+      },
+      {
+        "optionId": "03-q10-o3",
+        "error": "把报道曝光增长倍数当成总体发生率",
+        "whyNot": "200÷20=10倍只是报道数量比较，没有用案件和人口。"
+      }
+    ],
+    "answerEvidence": "题干定义为独立案件数/人口：100/10000，一年每万人100起，未记录独立受影响人数。",
+    "factSources": [
+      {
+        "url": "https://www.sciencedirect.com/science/article/pii/0010028573900339",
+        "title": "Tversky & Kahneman (1973) — Availability: A heuristic for judging frequency and probability",
+        "checkedAt": "2026-10-03",
+        "supports": "原论文摘要讨论实例易想到程度影响频率判断；本题计算依给定数据完成，不以此诊断个体心理或断言新闻必然造成偏差。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            9,
+            9,
+            6
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            9,
+            9,
+            6
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json",
+    "recheckReference": "review/recheck-00-03.json"
+  },
+  {
+    "id": "03-q11",
+    "sourceId": "03-q11",
+    "changeType": "revise",
+    "revisionReason": "保留有价值的主要目标，以明确条件、有效任务和可信干扰项修订。",
+    "concept": "公开意见与私人意见",
+    "objective": "用匿名与公开资料判断两类意见数量的差异",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构社区新规匿名反对70%、公开反对10%",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "不把表面发言一致当作私人共识",
+    "optionIds": [
+      "03-q11-o1",
+      "03-q11-o2",
+      "03-q11-o3"
+    ],
+    "answerOptionId": "03-q11-o1",
+    "distractors": [
+      {
+        "optionId": "03-q11-o2",
+        "error": "把两组人数关系倒置",
+        "whyNot": "匿名70为多数，公开10为少数。"
+      },
+      {
+        "optionId": "03-q11-o3",
+        "error": "把私下多数反对直接当成公开多数表达",
+        "whyNot": "公开只有10人表达反对。"
+      }
+    ],
+    "answerEvidence": "100人中70>50，10<50；不从数量差异补出未给的恐惧原因。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            20,
+            20,
+            20
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            62,
+            62,
+            62
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  },
+  {
+    "id": "03-v2-q12",
+    "sourceId": "03-q12",
+    "changeType": "replace",
+    "revisionReason": "旧题目标依赖口号、未给出的原因或与其他条目重复；改为新的可操作目标。",
+    "concept": "更正的可追溯性",
+    "objective": "选择让原读者发现修改并知道内容变化的更新",
+    "cognitiveOperation": "应用",
+    "context": "活动日期报道从周五更正为周六",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "同时检查原帖提示与修改说明",
+    "optionIds": [
+      "03-v2-q12-o1",
+      "03-v2-q12-o2",
+      "03-v2-q12-o3"
+    ],
+    "answerOptionId": "03-v2-q12-o3",
+    "distractors": [
+      {
+        "optionId": "03-v2-q12-o1",
+        "error": "把新信息更新当成标记了更正过程",
+        "whyNot": "原帖日期变了，但未说明日期已更正及旧新改动。"
+      },
+      {
+        "optionId": "03-v2-q12-o2",
+        "error": "把另发消息当成修正原信息入口",
+        "whyNot": "重开原帖仍看见错误的周五。"
+      }
+    ],
+    "answerEvidence": "第三项在原帖提供更正标记与旧新日期；另外两项缺标记或缺原帖更新。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "writerChecks": {
+      "uniqueAnswer": "两种语言分别按题干条件核对，并为两错误项尝试辩护；排除依据见distractors，不以解析补决定性条件。",
+      "bilingual": "条件、选项含义和答案稳定标识逐项对应；改写保持相同任务。",
+      "formCues": {
+        "zh": {
+          "optionLengthsNoWhitespace": [
+            17,
+            16,
+            16
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        },
+        "en": {
+          "optionLengthsNoWhitespace": [
+            64,
+            63,
+            61
+          ],
+          "correctOnlyLongest": false,
+          "review": "已核对同层级选项与相近详略，无正确项独占完整理由的提示。"
+        }
+      },
+      "trialStatus": "未进行真实用户试答。"
+    },
+    "independentReviewReference": "review/independent-00-03.json"
+  }
+]

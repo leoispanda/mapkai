@@ -1,0 +1,522 @@
+[
+  {
+    "id": "04-q9",
+    "reason": "定义低额包含500，明确其他订单可等待经理，消除边界与时间解释。",
+    "before": {
+      "id": "04-q9",
+      "subject": "04",
+      "zh": {
+        "question": "某公司的虚构审批要求：不超过 500 元的标准用品订单要在当天通过；超过 500 元或非标准用品必须经理审批。经理当天无法处理。哪项规则同时满足要求？",
+        "options": [
+          "员工不处理订单，全部交经理审批",
+          "员工处理全部标准订单，其余交经理",
+          "员工处理低额标准订单，其余交经理"
+        ],
+        "answer": "员工处理低额标准订单，其余交经理",
+        "explanation": "“员工处理低额标准订单，其余交经理”按金额与类型分级：低额标准订单当天处理，其他订单保留经理审批。全部交经理会拖慢应当天通过的订单；全部标准订单交员工又漏掉高额标准订单的审批要求。分级的依据必须来自明示规则。"
+      },
+      "en": {
+        "question": "A fictional approval policy requires standard-supply orders of at most 500 units to pass the same day. Orders above 500 units or for nonstandard supplies require a manager. The manager cannot process orders that day. Which rule meets both requirements?",
+        "options": [
+          "Staff approve no orders; all go to the manager",
+          "Staff approve all standard orders; others go to the manager",
+          "Staff approve small standard orders; others go to the manager"
+        ],
+        "answer": "Staff approve small standard orders; others go to the manager",
+        "explanation": "Approving small standard orders with staff and sending others to the manager separates orders by both amount and type. Sending everything to the manager delays eligible orders; approving all standard orders with staff incorrectly includes expensive ones. The categories come from the stated policy."
+      }
+    },
+    "after": {
+      "id": "04-q9",
+      "subject": "04",
+      "zh": {
+        "question": "某公司的虚构审批要求把“不超过500元”称为低额：低额标准用品订单要当天通过；高额或非标准用品必须经理审批，允许等待经理处理。经理当天无法处理。哪项规则同时满足要求？",
+        "options": [
+          "员工不处理订单，全部交经理审批",
+          "员工处理全部标准订单，其余交经理",
+          "员工处理低额标准订单，其余交经理"
+        ],
+        "answer": "员工处理低额标准订单，其余交经理",
+        "explanation": "“员工处理低额标准订单，其余交经理”按金额与类型分级：低额标准订单当天处理，其他订单保留经理审批。全部交经理会拖慢应当天通过的订单；全部标准订单交员工又漏掉高额标准订单的审批要求。分级的依据必须来自明示规则。"
+      },
+      "en": {
+        "question": "A fictional policy defines small orders as no more than 500 yuan. Small standard-supply orders must be approved that day; larger or nonstandard orders require the manager and may wait for that review. The manager is unavailable today. Which rule meets both requirements?",
+        "options": [
+          "Staff approve no orders; all go to the manager",
+          "Staff approve all standard orders; others go to the manager",
+          "Staff approve small standard orders; others go to the manager"
+        ],
+        "answer": "Staff approve small standard orders; others go to the manager",
+        "explanation": "Approving small standard orders with staff and sending others to the manager separates orders by both amount and type. Sending everything to the manager delays eligible orders; approving all standard orders with staff incorrectly includes expensive ones. The categories come from the stated policy."
+      }
+    }
+  },
+  {
+    "id": "05-v2-q07",
+    "reason": "明示初始两侧压力相同，不用同液面代替决定渗透方向的压力条件。",
+    "before": {
+      "id": "05-v2-q07",
+      "subject": "05",
+      "zh": {
+        "question": "两室用一张“水能通过、糖不能通过”的膜隔开，温度和初始液面高度相同。一侧是 1% 糖溶液，另一侧是 5% 同种糖溶液。刚开始时，水的净移动方向是什么？",
+        "options": [
+          "从 1% 一侧流向 5% 一侧",
+          "从 5% 一侧流向 1% 一侧",
+          "两侧之间没有水的净移动"
+        ],
+        "answer": "从 1% 一侧流向 5% 一侧",
+        "explanation": "在这些初始条件下，渗透使水净移向溶质浓度较高的一侧。糖被膜挡住，水的移动会改变两侧浓度和液面；后续形成的压强差可能抵消渗透驱动力，所以题目特意问刚开始。"
+      },
+      "en": {
+        "question": "Two chambers are separated by a membrane that lets water pass but not sugar. Temperature and initial liquid levels are equal. One side has a 1% sugar solution and the other a 5% solution of the same sugar. What is the initial net direction of water movement?",
+        "options": [
+          "From the 1% side toward the 5% side",
+          "From the 5% side toward the 1% side",
+          "There is no net water movement between the sides"
+        ],
+        "answer": "From the 1% side toward the 5% side",
+        "explanation": "Under these initial conditions, osmosis moves water toward the side with more dissolved sugar. Sugar cannot cross, while water movement changes concentrations and liquid levels. A later pressure difference can oppose the osmotic drive, which is why the question asks about the beginning."
+      }
+    },
+    "after": {
+      "id": "05-v2-q07",
+      "subject": "05",
+      "zh": {
+        "question": "两室用一张“水能通过、糖不能通过”的膜隔开，温度相同，膜两侧初始压力相同。一侧是1%糖溶液，另一侧是5%同种糖溶液。刚开始时，水的净移动方向是什么？",
+        "options": [
+          "从 1% 一侧流向 5% 一侧",
+          "从 5% 一侧流向 1% 一侧",
+          "两侧之间没有水的净移动"
+        ],
+        "answer": "从 1% 一侧流向 5% 一侧",
+        "explanation": "在这些初始条件下，渗透使水净移向溶质浓度较高的一侧。糖被膜挡住，水的移动会改变两侧浓度和液面；后续形成的压强差可能抵消渗透驱动力，所以题目特意问刚开始。"
+      },
+      "en": {
+        "question": "Two chambers are separated by a membrane that lets water through but not sugar. Temperature and initial pressure at both sides of the membrane are equal. One side contains 1% sugar and the other 5% of the same sugar. What is the initial net direction of water movement?",
+        "options": [
+          "From the 1% side toward the 5% side",
+          "From the 5% side toward the 1% side",
+          "There is no net water movement between the sides"
+        ],
+        "answer": "From the 1% side toward the 5% side",
+        "explanation": "Under these initial conditions, osmosis moves water toward the side with more dissolved sugar. Sugar cannot cross, while water movement changes concentrations and liquid levels. A later pressure difference can oppose the osmotic drive, which is why the question asks about the beginning."
+      }
+    }
+  },
+  {
+    "id": "06-q5",
+    "reason": "共同的订单关联更新放入题干，三项只比较同层级顾客表修改，取消正确项双操作详长提示。",
+    "before": {
+      "id": "06-q5",
+      "subject": "06",
+      "zh": {
+        "question": "虚构顾客表有两行：顾客 ID 7，姓名林；顾客 ID 7，姓名陈。订单表的一笔订单只记录“顾客 ID 7”。系统用顾客 ID 关联订单与顾客。哪项修改能让这笔订单只对应其中一名顾客？",
+        "options": [
+          "给两人分配不同 ID，并记录订单所属的 ID",
+          "把两人的姓名改成相同，但保留原来的 ID",
+          "把顾客表按姓名排序，但保留原来的 ID"
+        ],
+        "answer": "给两人分配不同 ID，并记录订单所属的 ID",
+        "explanation": "订单通过 ID 找顾客，而同一个 ID 当前对应两人。不同 ID 加上订单的正确关联，才把关系变成一对一的明确指向。改显示名称或行顺序，都不会消除关联键重复。"
+      },
+      "en": {
+        "question": "A fictional customer table has two rows: customer ID 7, name Lin; customer ID 7, name Chen. An order records only \"customer ID 7\". The system joins orders to customers using that ID. Which change makes this order identify just one customer?",
+        "options": [
+          "Give the customers distinct IDs and record the order’s correct ID",
+          "Give both customers the same name but keep the existing IDs",
+          "Sort the customer table by name but keep the existing IDs"
+        ],
+        "answer": "Give the customers distinct IDs and record the order’s correct ID",
+        "explanation": "The order looks up the ID, which currently identifies two people. Distinct IDs plus the order’s correct link produce an unambiguous reference. Changing display names or row order does not remove the duplicate key."
+      }
+    },
+    "after": {
+      "id": "06-q5",
+      "subject": "06",
+      "zh": {
+        "question": "虚构顾客表有两行：顾客ID7、姓名林；顾客ID7、姓名陈。订单按顾客ID关联，当前ID7不能唯一指向一人。若修改顾客ID，订单也会同步写成实际所属顾客的新ID。哪项顾客表修改能消除重复指向？",
+        "options": [
+          "给两名顾客分配不同的ID",
+          "给两名顾客设置相同的姓名",
+          "把两名顾客按姓名顺序排列"
+        ],
+        "answer": "给两名顾客分配不同的ID",
+        "explanation": "订单通过 ID 找顾客，而同一个 ID 当前对应两人。不同 ID 加上订单的正确关联，才把关系变成一对一的明确指向。改显示名称或行顺序，都不会消除关联键重复。"
+      },
+      "en": {
+        "question": "A fictional customer table has two rows: ID 7, name Lin; ID 7, name Chen. Orders link by customer ID, so ID 7 points to two people. If IDs change, each order will also be updated to its actual customer’s new ID. Which customer-table change removes the duplicate link?",
+        "options": [
+          "Assign different IDs to the two customers",
+          "Assign the same name to the two customers",
+          "Arrange the two customers in name order"
+        ],
+        "answer": "Assign different IDs to the two customers",
+        "explanation": "The order looks up the ID, which currently identifies two people. Distinct IDs plus the order’s correct link produce an unambiguous reference. Changing display names or row order does not remove the duplicate key."
+      }
+    }
+  },
+  {
+    "id": "06-q6",
+    "reason": "明确充分且必要及完全等价，排除仅满足必要限制的<500也可成立的解释。",
+    "before": {
+      "id": "06-q6",
+      "subject": "06",
+      "zh": {
+        "question": "虚构发票规则要求：金额不超过 500 元，并且系统已记录收货，才能自动批准。哪个条件与要求一致？",
+        "options": [
+          "金额 ≤ 500，或者已记录收货",
+          "金额 < 500，并且已记录收货",
+          "金额 ≤ 500，并且已记录收货"
+        ],
+        "answer": "金额 ≤ 500，并且已记录收货",
+        "explanation": "两个条件必须同时为真，使用“并且”；“不超过”还包含恰好 500。用“或者”会让高额已收货或低额未收货也通过，用小于则会错误排除 500 元的合格发票。"
+      },
+      "en": {
+        "question": "A fictional invoice rule allows automatic approval only when the amount is at most 500 units and receipt of goods is recorded. Which condition matches it?",
+        "options": [
+          "Amount ≤ 500 OR receipt is recorded",
+          "Amount < 500 AND receipt is recorded",
+          "Amount ≤ 500 AND receipt is recorded"
+        ],
+        "answer": "Amount ≤ 500 AND receipt is recorded",
+        "explanation": "Both conditions must be true, so use AND. “At most” includes exactly 500. OR would allow expensive received invoices or small unreceived invoices. A strict less-than check would incorrectly exclude eligible invoices of exactly 500."
+      }
+    },
+    "after": {
+      "id": "06-q6",
+      "subject": "06",
+      "zh": {
+        "question": "虚构发票程序恰好在“金额不超过500元，并且已记录收货”两项同时满足时自动批准，没有其他条件。哪项逻辑条件与这个程序完全等价？",
+        "options": [
+          "金额 ≤ 500，或者已记录收货",
+          "金额 < 500，并且已记录收货",
+          "金额 ≤ 500，并且已记录收货"
+        ],
+        "answer": "金额 ≤ 500，并且已记录收货",
+        "explanation": "两个条件必须同时为真，使用“并且”；“不超过”还包含恰好 500。用“或者”会让高额已收货或低额未收货也通过，用小于则会错误排除 500 元的合格发票。"
+      },
+      "en": {
+        "question": "A fictional invoice program automatically approves exactly when both conditions hold: the amount is no more than 500 yuan and receipt is recorded. There are no other conditions. Which logical condition is fully equivalent to this program?",
+        "options": [
+          "Amount ≤ 500 OR receipt is recorded",
+          "Amount < 500 AND receipt is recorded",
+          "Amount ≤ 500 AND receipt is recorded"
+        ],
+        "answer": "Amount ≤ 500 AND receipt is recorded",
+        "explanation": "Both conditions must be true, so use AND. “At most” includes exactly 500. OR would allow expensive received invoices or small unreceived invoices. A strict less-than check would incorrectly exclude eligible invoices of exactly 500."
+      }
+    }
+  },
+  {
+    "id": "04-q6",
+    "reason": "三项都用指标名称，不给正确项追加奖金动作及长因果句。",
+    "before": {
+      "id": "04-q6",
+      "subject": "04",
+      "zh": {
+        "question": "客服中心想奖励“问题解决后 7 天内不因同一问题再次来电”，所有记录都能核查。以下哪种奖金规则直接依据这个结果？",
+        "options": [
+          "按每通电话少于三分钟的次数计奖",
+          "按结束后满足七天无重复来电的件数计奖",
+          "按每天接听电话的总次数计奖"
+        ],
+        "answer": "按结束后满足七天无重复来电的件数计奖",
+        "explanation": "七天内没有同一问题再次来电，是题干定义的结果，所以按达到该条件的件数计奖最直接。短通话和高接听量是过程指标，可能改善，也可能伴随问题未解决。本题只按给定目标选指标。"
+      },
+      "en": {
+        "question": "A call centre wants to reward cases resolved with no repeat call about the same issue within seven days. All records can be checked. Which bonus rule directly uses this outcome?",
+        "options": [
+          "Pay per call completed in under three minutes",
+          "Pay per case meeting the seven-day no-repeat condition",
+          "Pay per call answered during the day"
+        ],
+        "answer": "Pay per case meeting the seven-day no-repeat condition",
+        "explanation": "The stated outcome is no repeat call about the same issue within seven days, so rewarding cases meeting that condition directly tracks it. Call duration and calls handled are process measures; either can improve without resolving the issue. The answer follows the target specified here."
+      }
+    },
+    "after": {
+      "id": "04-q6",
+      "subject": "04",
+      "zh": {
+        "question": "客服中心想奖励“问题解决后 7 天内不因同一问题再次来电”，所有记录都能核查。以下哪种奖金规则直接依据这个结果？",
+        "options": [
+          "通话少于三分钟的件数",
+          "七天内无同问题再来电的件数",
+          "每天接听全部电话的件数"
+        ],
+        "answer": "七天内无同问题再来电的件数",
+        "explanation": "七天内没有同一问题再次来电，是题干定义的结果，所以按达到该条件的件数计奖最直接。短通话和高接听量是过程指标，可能改善，也可能伴随问题未解决。本题只按给定目标选指标。"
+      },
+      "en": {
+        "question": "A call centre wants to reward cases resolved with no repeat call about the same issue within seven days. All records can be checked. Which bonus rule directly uses this outcome?",
+        "options": [
+          "The count of calls lasting under three minutes",
+          "The count of cases with no same-issue repeat call in seven days",
+          "The count of all calls answered each day"
+        ],
+        "answer": "The count of cases with no same-issue repeat call in seven days",
+        "explanation": "The stated outcome is no repeat call about the same issue within seven days, so rewarding cases meeting that condition directly tracks it. Call duration and calls handled are process measures; either can improve without resolving the issue. The answer follows the target specified here."
+      }
+    }
+  },
+  {
+    "id": "05-q3",
+    "reason": "英文第二干扰项也保留两种变化均记录的推理，与中文等义。",
+    "before": {
+      "id": "05-q3",
+      "subject": "05",
+      "zh": {
+        "question": "某人同一天开始喝果昔，也把睡眠从六小时改成九小时，随后觉得更有精神。没有其他对照记录。仅凭这些信息，能否单独确定果昔的作用？",
+        "options": [
+          "能，因为喝果昔发生在感觉改善之前",
+          "能，因为果昔和睡眠的变化都已记录",
+          "不能，因为果昔和睡眠在同一时间改变"
+        ],
+        "answer": "不能，因为果昔和睡眠在同一时间改变",
+        "explanation": "先发生并不等于单独造成结果：果昔和睡眠同时变化，这段记录无法分开它们的影响。需要让其他条件可比的额外比较，才可能检验果昔自身的效果；本题也没有否定果昔可能有效。"
+      },
+      "en": {
+        "question": "A person starts drinking smoothies on the same day that sleep increases from six to nine hours, then feels more energetic. There are no comparison records. Can these observations isolate the smoothie’s effect?",
+        "options": [
+          "Yes, because drinking the smoothie came before the improvement",
+          "Yes, because the sleep change was included in the observation",
+          "No, because the smoothie and sleep changed at the same time"
+        ],
+        "answer": "No, because the smoothie and sleep changed at the same time",
+        "explanation": "Coming first does not establish a separate cause. The smoothie and sleep changed together, so this record cannot separate their effects. Additional comparisons with other conditions made comparable would be needed. This does not rule out a possible smoothie effect."
+      }
+    },
+    "after": {
+      "id": "05-q3",
+      "subject": "05",
+      "zh": {
+        "question": "某人同一天开始喝果昔，也把睡眠从六小时改成九小时，随后觉得更有精神。没有其他对照记录。仅凭这些信息，能否单独确定果昔的作用？",
+        "options": [
+          "能，因为喝果昔发生在感觉改善之前",
+          "能，因为果昔和睡眠的变化都已记录",
+          "不能，因为果昔和睡眠在同一时间改变"
+        ],
+        "answer": "不能，因为果昔和睡眠在同一时间改变",
+        "explanation": "先发生并不等于单独造成结果：果昔和睡眠同时变化，这段记录无法分开它们的影响。需要让其他条件可比的额外比较，才可能检验果昔自身的效果；本题也没有否定果昔可能有效。"
+      },
+      "en": {
+        "question": "A person starts drinking smoothies on the same day that sleep increases from six to nine hours, then feels more energetic. There are no comparison records. Can these observations isolate the smoothie’s effect?",
+        "options": [
+          "Yes, because drinking the smoothie came before the improvement",
+          "Yes, because both the smoothie and sleep changes were recorded",
+          "No, because the smoothie and sleep changed at the same time"
+        ],
+        "answer": "No, because the smoothie and sleep changed at the same time",
+        "explanation": "Coming first does not establish a separate cause. The smoothie and sleep changed together, so this record cannot separate their effects. Additional comparisons with other conditions made comparable would be needed. This does not rule out a possible smoothie effect."
+      }
+    }
+  },
+  {
+    "id": "06-q1",
+    "reason": "消除修补会让未授权读取的句法误读。",
+    "before": {
+      "id": "06-q1",
+      "subject": "06",
+      "zh": {
+        "question": "某软件更新说明写道：“修补会让未授权账户读取文件的访问检查漏洞。”只根据这条说明，这次更新直接改进了哪项保护？",
+        "options": [
+          "限制未授权账户读取文件",
+          "保留删除前文件的备份副本",
+          "阻止用户重复使用账户密码"
+        ],
+        "answer": "限制未授权账户读取文件",
+        "explanation": "说明针对的是软件访问检查中的漏洞，所以直接改进的是文件访问控制。备份保护恢复能力，避免密码复用保护凭据，这两项不是此说明承诺的改动。并非每次更新都只含安全补丁。"
+      },
+      "en": {
+        "question": "A software update note says: \"Fixes an access-check flaw that lets unauthorised accounts read files.\" Based only on this note, which protection does the update directly improve?",
+        "options": [
+          "Restricting file reads by unauthorised accounts",
+          "Keeping a backup copy from before file deletion",
+          "Preventing users from reusing account passwords"
+        ],
+        "answer": "Restricting file reads by unauthorised accounts",
+        "explanation": "The note identifies a flaw in software access checks, so it directly concerns file access control. Backups support recovery, while avoiding password reuse protects credentials; neither is promised by this note. Not every update contains only security fixes."
+      }
+    },
+    "after": {
+      "id": "06-q1",
+      "subject": "06",
+      "zh": {
+        "question": "某软件更新说明写道：“修补一个允许未授权账户读取文件的访问检查漏洞。”只根据这条说明，这次更新直接改进了哪项保护？",
+        "options": [
+          "限制未授权账户读取文件",
+          "保留删除前文件的备份副本",
+          "阻止用户重复使用账户密码"
+        ],
+        "answer": "限制未授权账户读取文件",
+        "explanation": "说明针对的是软件访问检查中的漏洞，所以直接改进的是文件访问控制。备份保护恢复能力，避免密码复用保护凭据，这两项不是此说明承诺的改动。并非每次更新都只含安全补丁。"
+      },
+      "en": {
+        "question": "A software update note says: \"Fixes an access-check flaw that lets unauthorised accounts read files.\" Based only on this note, which protection does the update directly improve?",
+        "options": [
+          "Restricting file reads by unauthorised accounts",
+          "Keeping a backup copy from before file deletion",
+          "Preventing users from reusing account passwords"
+        ],
+        "answer": "Restricting file reads by unauthorised accounts",
+        "explanation": "The note identifies a flaw in software access checks, so it directly concerns file access control. Backups support recovery, while avoiding password reuse protects credentials; neither is promised by this note. Not every update contains only security fixes."
+      }
+    }
+  },
+  {
+    "id": "06-q3",
+    "reason": "选项使用同层级简明操作，不让正确项独占多步说明。",
+    "before": {
+      "id": "06-q3",
+      "subject": "06",
+      "zh": {
+        "question": "表格里每行是一名顾客的“姓名、地址”。现在要按姓名排序，并保持每个人的地址仍与本人配对。哪项操作符合要求？",
+        "options": [
+          "只排序姓名列，地址列留在原位置",
+          "选择两列，把每一行一起按姓名排序",
+          "只过滤姓名列，隐藏部分原有行"
+        ],
+        "answer": "选择两列，把每一行一起按姓名排序",
+        "explanation": "一行是一条完整记录，姓名和地址必须一起移动。只排序姓名列会改变配对；过滤隐藏行并没有完成按姓名重排。记录不是两份互不相关的名单。"
+      },
+      "en": {
+        "question": "Each spreadsheet row contains one customer’s name and address. You want to sort by name while keeping every address paired with its owner. Which operation meets the requirement?",
+        "options": [
+          "Sort only the name column, leaving addresses in place",
+          "Select both columns and move whole rows when sorting by name",
+          "Filter the name column to hide some existing rows"
+        ],
+        "answer": "Select both columns and move whole rows when sorting by name",
+        "explanation": "A row is a complete record, so the name and address must move together. Sorting names alone changes the pairings. Filtering hides rows without performing the requested name sort. The columns are not independent lists."
+      }
+    },
+    "after": {
+      "id": "06-q3",
+      "subject": "06",
+      "zh": {
+        "question": "表格里每行是一名顾客的“姓名、地址”。现在要按姓名排序，并保持每个人的地址仍与本人配对。哪项操作符合要求？",
+        "options": [
+          "只按姓名排序姓名列",
+          "按姓名排序整行记录",
+          "只按姓名过滤部分行"
+        ],
+        "answer": "按姓名排序整行记录",
+        "explanation": "一行是一条完整记录，姓名和地址必须一起移动。只排序姓名列会改变配对；过滤隐藏行并没有完成按姓名重排。记录不是两份互不相关的名单。"
+      },
+      "en": {
+        "question": "Each spreadsheet row contains one customer’s name and address. You want to sort by name while keeping every address paired with its owner. Which operation meets the requirement?",
+        "options": [
+          "Sort only the name column by name",
+          "Sort whole records by name",
+          "Filter some rows by name"
+        ],
+        "answer": "Sort whole records by name",
+        "explanation": "A row is a complete record, so the name and address must move together. Sorting names alone changes the pairings. Filtering hides rows without performing the requested name sort. The columns are not independent lists."
+      }
+    }
+  },
+  {
+    "id": "07-v2-q05",
+    "reason": "用三种实际窗户方案比较辐射路径，移除风扇和墙画凑项。",
+    "before": {
+      "id": "07-v2-q05",
+      "subject": "07",
+      "zh": {
+        "question": "某固定玻璃窗受到夏季直射阳光。只以“让直射太阳辐射在穿过玻璃之前被挡住”为目标，哪项设计直接满足这个条件？",
+        "options": [
+          "把遮阳板装在窗外，覆盖受直射的玻璃",
+          "在室内桌旁装风扇，增加空气流动",
+          "在室内墙上挂画，遮住墙面装饰"
+        ],
+        "answer": "把遮阳板装在窗外，覆盖受直射的玻璃",
+        "explanation": "窗外遮阳在太阳辐射进入玻璃前形成遮挡，直接减少这部分太阳得热。风扇影响气流，墙画不遮挡入射窗口。本题只比较这条辐射路径，完整建筑设计还需考虑季节、采光及通风等条件。"
+      },
+      "en": {
+        "question": "A fixed glass window receives direct summer sunlight. The sole objective is to intercept direct solar radiation before it passes through the glass. Which design directly meets that condition?",
+        "options": [
+          "Fit an exterior shade over the sunlit glass",
+          "Place a fan beside an indoor desk to move air",
+          "Hang artwork over the interior wall surface"
+        ],
+        "answer": "Fit an exterior shade over the sunlit glass",
+        "explanation": "An exterior shade intercepts the incoming radiation before it enters the glass, reducing that part of solar heat gain. A fan changes airflow, and wall artwork does not intercept the window’s incoming sunlight. This compares one radiation path; complete building design also considers seasons, daylight and ventilation."
+      }
+    },
+    "after": {
+      "id": "07-v2-q05",
+      "subject": "07",
+      "zh": {
+        "question": "某固定玻璃窗受到夏季直射阳光。只以“让直射太阳辐射在穿过玻璃之前被挡住”为目标，哪项设计直接满足这个条件？",
+        "options": [
+          "在玻璃外侧设置覆盖它的遮阳板",
+          "在玻璃内侧设置覆盖它的遮阳帘",
+          "用透明双层玻璃替换原来的玻璃"
+        ],
+        "answer": "在玻璃外侧设置覆盖它的遮阳板",
+        "explanation": "外侧遮阳在太阳辐射到达玻璃前就形成遮挡；内侧帘遮挡的是已穿过玻璃的部分。透明双层玻璃可影响传热，却不是在玻璃前遮住直射阳光。本题只比较这条辐射路径，完整设计还需考虑采光、季节和通风。"
+      },
+      "en": {
+        "question": "A fixed glass window receives direct summer sunlight. The sole objective is to intercept direct solar radiation before it passes through the glass. Which design directly meets that condition?",
+        "options": [
+          "An exterior shade covering the glass",
+          "An interior blind covering the glass",
+          "Clear double glazing replacing the glass"
+        ],
+        "answer": "An exterior shade covering the glass",
+        "explanation": "Exterior shading blocks direct sunlight before it reaches the glass. An interior blind acts after sunlight has passed through the glass. Clear double glazing can alter heat transfer but is not a shade in front of the glass. The question concerns this radiation path; a complete design also considers daylight, seasons and ventilation."
+      }
+    }
+  },
+  {
+    "id": "06-v2-q11",
+    "reason": "从复述缺少哪项改为比较不同因素的组合，区别于条件程序题。",
+    "before": {
+      "id": "06-v2-q11",
+      "subject": "06",
+      "zh": {
+        "question": "虚构账户原来只检查密码，现在同时要求密码和手机验证器生成的一次性码。某人只拿到了密码，拿不到一次性码。按新规则，他缺少哪项？",
+        "options": [
+          "再次输入同一固定密码",
+          "手机验证器的一次性码",
+          "另一个不同的固定口令"
+        ],
+        "answer": "手机验证器的一次性码",
+        "explanation": "新规则同时要求密码和验证器码，所以仅有密码不足。重复同一密码或换用另一个固定口令，仍属于“知道某个秘密”的验证方式，不能提供题干要求的手机验证器码。这个简化例子不保证抵挡所有攻击。"
+      },
+      "en": {
+        "question": "A fictional account formerly checked only a password. It now requires both the password and a one-time code from a phone authenticator. A person has the password but cannot obtain the code. What is missing under the new rule?",
+        "options": [
+          "Another entry of the same fixed password",
+          "The phone authenticator’s one-time code",
+          "A different additional fixed passphrase"
+        ],
+        "answer": "The phone authenticator’s one-time code",
+        "explanation": "The new rule requires both password and authenticator code. Repeating a password or using another fixed passphrase still uses knowledge of a secret; neither supplies the required phone authenticator code. This simplified example does not promise protection from every attack."
+      }
+    },
+    "after": {
+      "id": "06-v2-q11",
+      "subject": "06",
+      "zh": {
+        "question": "某账户要同时验证“知道的秘密”和“持有的验证器”两种不同因素。固定密码属于前者；只有已登记的手机验证器能生成该账户的一次性码，属于后者。哪项登录规则符合要求？",
+        "options": [
+          "固定密码加再次输入同一密码",
+          "固定密码加手机验证器的一次性码",
+          "固定密码加另一个不同的固定口令"
+        ],
+        "answer": "固定密码加手机验证器的一次性码",
+        "explanation": "密码验证知道的秘密，手机验证器码验证对已登记验证器的持有，二者属于不同因素。两个固定口令或重复同一密码都仍只验证知道的秘密。多因素认证要区分因素种类，不只是增加输入次数；这个简化例子不保证抵挡所有攻击。"
+      },
+      "en": {
+        "question": "An account requires two distinct factors: a secret the user knows and an authenticator the user possesses. A fixed password is the first kind; a one-time code generated only by the registered phone authenticator is the second. Which login rule meets this requirement?",
+        "options": [
+          "A fixed password plus entering the same password again",
+          "A fixed password plus a code from the phone authenticator",
+          "A fixed password plus a different fixed passphrase"
+        ],
+        "answer": "A fixed password plus a code from the phone authenticator",
+        "explanation": "The password verifies a known secret; the registered authenticator code verifies possession of that authenticator. Repeating a password or adding another fixed passphrase still tests only known secrets. Multifactor authentication concerns distinct factors, not merely extra entries. This simplified example does not guarantee protection against every attack."
+      }
+    }
+  }
+]

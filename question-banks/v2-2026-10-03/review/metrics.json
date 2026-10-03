@@ -1,0 +1,2820 @@
+{
+  "version": "v2-2026-10-03",
+  "lengthMethod": "Unicode characters with whitespace removed",
+  "tieMethod": "first option in displayed order",
+  "structure": {
+    "knowledgeCount": 132,
+    "exploreCount": 20,
+    "subjects": {
+      "00": 12,
+      "01": 12,
+      "02": 12,
+      "03": 12,
+      "04": 12,
+      "05": 12,
+      "06": 12,
+      "07": 12,
+      "08": 12,
+      "09": 12,
+      "10": 12
+    },
+    "bilingualAnswerIndexAgreement": 132,
+    "sourceSlotsCovered": 132
+  },
+  "knowledge": {
+    "zh": {
+      "answerPositions": {
+        "A": 51,
+        "C": 34,
+        "B": 47
+      },
+      "uniqueLongestCorrect": 12,
+      "uniqueShortestCorrect": 19,
+      "longestTies": 91,
+      "shortestTies": 86,
+      "chooseLongestFirstDisplayTie": 42,
+      "chooseShortestFirstDisplayTie": 49,
+      "correctUniqueLongestItems": [
+        {
+          "id": "01-q3",
+          "lengths": [
+            14,
+            13,
+            15
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "01-q5",
+          "lengths": [
+            20,
+            19,
+            19
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "01-q7",
+          "lengths": [
+            14,
+            14,
+            15
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "02-v2-q08",
+          "lengths": [
+            11,
+            12,
+            11
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "04-q6",
+          "lengths": [
+            10,
+            10,
+            11
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "05-q3",
+          "lengths": [
+            16,
+            17,
+            16
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "06-q4",
+          "lengths": [
+            7,
+            8,
+            5
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "07-q1",
+          "lengths": [
+            16,
+            15,
+            17
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "07-q2",
+          "lengths": [
+            16,
+            17,
+            16
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "08-q1",
+          "lengths": [
+            14,
+            13,
+            13
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "09-q3",
+          "lengths": [
+            15,
+            14,
+            14
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "09-q4",
+          "lengths": [
+            12,
+            11,
+            11
+          ],
+          "gapToSecondLongest": 1
+        }
+      ],
+      "bySubject": {
+        "00": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        },
+        "01": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 6
+        },
+        "02": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        },
+        "03": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 1
+        },
+        "04": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 4
+        },
+        "05": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 5
+        },
+        "06": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 2
+        },
+        "07": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 6
+        },
+        "08": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        },
+        "09": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 5
+        },
+        "10": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 4
+        }
+      }
+    },
+    "en": {
+      "answerPositions": {
+        "A": 51,
+        "C": 34,
+        "B": 47
+      },
+      "uniqueLongestCorrect": 24,
+      "uniqueShortestCorrect": 26,
+      "longestTies": 42,
+      "shortestTies": 48,
+      "chooseLongestFirstDisplayTie": 44,
+      "chooseShortestFirstDisplayTie": 46,
+      "correctUniqueLongestItems": [
+        {
+          "id": "01-q6",
+          "lengths": [
+            56,
+            67,
+            55
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "02-q12",
+          "lengths": [
+            51,
+            49,
+            48
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "03-v2-q02",
+          "lengths": [
+            45,
+            38,
+            44
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "03-q6",
+          "lengths": [
+            26,
+            28,
+            26
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "03-q9",
+          "lengths": [
+            47,
+            50,
+            44
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "04-q9",
+          "lengths": [
+            38,
+            50,
+            52
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q1",
+          "lengths": [
+            42,
+            40,
+            35
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q2",
+          "lengths": [
+            40,
+            36,
+            44
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "06-q5",
+          "lengths": [
+            34,
+            33,
+            35
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "06-q8",
+          "lengths": [
+            24,
+            24,
+            26
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "06-v2-q11",
+          "lengths": [
+            43,
+            48,
+            46
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q2",
+          "lengths": [
+            52,
+            57,
+            41
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "07-q10",
+          "lengths": [
+            56,
+            55,
+            53
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "07-q12",
+          "lengths": [
+            44,
+            42,
+            56
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "08-q1",
+          "lengths": [
+            59,
+            56,
+            56
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "08-q4",
+          "lengths": [
+            36,
+            47,
+            36
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "08-q5",
+          "lengths": [
+            44,
+            40,
+            38
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "08-q6",
+          "lengths": [
+            42,
+            41,
+            45
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "08-q9",
+          "lengths": [
+            33,
+            30,
+            31
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "09-q4",
+          "lengths": [
+            47,
+            33,
+            41
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "09-v2-q05",
+          "lengths": [
+            47,
+            45,
+            44
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "09-q12",
+          "lengths": [
+            35,
+            43,
+            48
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "10-q4",
+          "lengths": [
+            50,
+            47,
+            47
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "10-q12",
+          "lengths": [
+            44,
+            50,
+            42
+          ],
+          "gapToSecondLongest": 6
+        }
+      ],
+      "bySubject": {
+        "00": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 2
+        },
+        "01": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        },
+        "02": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 2
+        },
+        "03": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        },
+        "04": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 5
+        },
+        "05": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 4
+        },
+        "06": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 5
+        },
+        "07": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 5
+        },
+        "08": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 6
+        },
+        "09": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 6
+        },
+        "10": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 3
+        }
+      }
+    }
+  },
+  "explore": {
+    "knowledge_lens_probe": {
+      "questions": 8,
+      "opportunities": {
+        "10": 3,
+        "09": 3,
+        "06": 3,
+        "05": 3,
+        "03": 3,
+        "04": 3,
+        "08": 3,
+        "07": 3,
+        "02": 3,
+        "00": 2,
+        "01": 3
+      },
+      "positionsBySubject": {
+        "00": {
+          "B": 1,
+          "D": 1
+        },
+        "01": {
+          "C": 1,
+          "B": 1,
+          "A": 1
+        },
+        "02": {
+          "A": 1,
+          "D": 1,
+          "C": 1
+        },
+        "03": {
+          "A": 1,
+          "D": 1,
+          "B": 1
+        },
+        "04": {
+          "B": 1,
+          "A": 1,
+          "C": 1
+        },
+        "05": {
+          "D": 1,
+          "B": 1,
+          "A": 1
+        },
+        "06": {
+          "C": 1,
+          "B": 1,
+          "D": 1
+        },
+        "07": {
+          "D": 1,
+          "C": 1,
+          "A": 1
+        },
+        "08": {
+          "C": 1,
+          "A": 1,
+          "B": 1
+        },
+        "09": {
+          "B": 1,
+          "D": 1,
+          "C": 1
+        },
+        "10": {
+          "A": 1,
+          "D": 1,
+          "C": 1
+        }
+      },
+      "fixedLetterChoiceRecords": {
+        "A": {
+          "10": 1,
+          "03": 1,
+          "02": 1,
+          "04": 1,
+          "08": 1,
+          "07": 1,
+          "05": 1,
+          "01": 1
+        },
+        "B": {
+          "09": 1,
+          "04": 1,
+          "00": 1,
+          "06": 1,
+          "05": 1,
+          "08": 1,
+          "01": 1,
+          "03": 1
+        },
+        "C": {
+          "06": 1,
+          "08": 1,
+          "01": 1,
+          "07": 1,
+          "04": 1,
+          "10": 1,
+          "02": 1,
+          "09": 1
+        },
+        "D": {
+          "05": 1,
+          "07": 1,
+          "10": 1,
+          "09": 1,
+          "02": 1,
+          "03": 1,
+          "06": 1,
+          "00": 1
+        }
+      },
+      "longestOptionChoiceRecordsFirstDisplayTie": {
+        "zh": {
+          "10": 1,
+          "03": 1,
+          "02": 2,
+          "06": 1,
+          "08": 1,
+          "01": 2
+        },
+        "en": {
+          "10": 1,
+          "03": 1,
+          "01": 2,
+          "06": 1,
+          "05": 2,
+          "08": 1
+        }
+      }
+    },
+    "task_preference_probe": {
+      "questions": 12,
+      "opportunities": {
+        "01": 4,
+        "10": 5,
+        "00": 5,
+        "02": 4,
+        "04": 4,
+        "08": 5,
+        "03": 4,
+        "07": 4,
+        "06": 5,
+        "05": 4,
+        "09": 4
+      },
+      "positionsBySubject": {
+        "00": {
+          "C": 2,
+          "B": 1,
+          "A": 1,
+          "D": 1
+        },
+        "01": {
+          "A": 1,
+          "D": 1,
+          "C": 1,
+          "B": 1
+        },
+        "02": {
+          "D": 1,
+          "A": 1,
+          "C": 1,
+          "B": 1
+        },
+        "03": {
+          "C": 1,
+          "B": 1,
+          "A": 1,
+          "D": 1
+        },
+        "04": {
+          "A": 1,
+          "C": 1,
+          "D": 1,
+          "B": 1
+        },
+        "05": {
+          "C": 1,
+          "B": 1,
+          "A": 1,
+          "D": 1
+        },
+        "06": {
+          "A": 2,
+          "D": 1,
+          "B": 1,
+          "C": 1
+        },
+        "07": {
+          "D": 1,
+          "C": 1,
+          "A": 1,
+          "B": 1
+        },
+        "08": {
+          "B": 1,
+          "D": 2,
+          "A": 1,
+          "C": 1
+        },
+        "09": {
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "A": 1
+        },
+        "10": {
+          "B": 2,
+          "D": 1,
+          "A": 1,
+          "C": 1
+        }
+      },
+      "fixedLetterChoiceRecords": {
+        "A": {
+          "01": 1,
+          "04": 1,
+          "06": 2,
+          "02": 1,
+          "10": 1,
+          "00": 1,
+          "07": 1,
+          "05": 1,
+          "08": 1,
+          "03": 1,
+          "09": 1
+        },
+        "B": {
+          "10": 2,
+          "08": 1,
+          "00": 1,
+          "09": 1,
+          "03": 1,
+          "05": 1,
+          "06": 1,
+          "02": 1,
+          "01": 1,
+          "07": 1,
+          "04": 1
+        },
+        "C": {
+          "00": 2,
+          "03": 1,
+          "05": 1,
+          "07": 1,
+          "09": 1,
+          "02": 1,
+          "04": 1,
+          "01": 1,
+          "06": 1,
+          "10": 1,
+          "08": 1
+        },
+        "D": {
+          "02": 1,
+          "07": 1,
+          "10": 1,
+          "01": 1,
+          "08": 2,
+          "06": 1,
+          "00": 1,
+          "09": 1,
+          "04": 1,
+          "05": 1,
+          "03": 1
+        }
+      },
+      "longestOptionChoiceRecordsFirstDisplayTie": {
+        "zh": {
+          "01": 3,
+          "04": 1,
+          "06": 2,
+          "08": 1,
+          "00": 2,
+          "05": 1,
+          "10": 1,
+          "03": 1
+        },
+        "en": {
+          "01": 3,
+          "07": 1,
+          "06": 1,
+          "08": 1,
+          "00": 3,
+          "05": 1,
+          "09": 1,
+          "04": 1
+        }
+      }
+    },
+    "totalOpportunities": {
+      "10": 8,
+      "09": 7,
+      "06": 8,
+      "05": 7,
+      "03": 7,
+      "04": 7,
+      "08": 8,
+      "07": 7,
+      "02": 7,
+      "00": 7,
+      "01": 7
+    }
+  },
+  "baselineKnowledge": {
+    "zh": {
+      "answerPositions": {
+        "B": 40,
+        "C": 48,
+        "A": 44
+      },
+      "uniqueLongestCorrect": 113,
+      "uniqueShortestCorrect": 2,
+      "longestTies": 10,
+      "shortestTies": 34,
+      "chooseLongestFirstDisplayTie": 119,
+      "chooseShortestFirstDisplayTie": 3,
+      "correctUniqueLongestItems": [
+        {
+          "id": "10-q1",
+          "lengths": [
+            8,
+            15,
+            13
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "10-q2",
+          "lengths": [
+            7,
+            10,
+            13
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "10-q3",
+          "lengths": [
+            17,
+            11,
+            12
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "10-q4",
+          "lengths": [
+            12,
+            7,
+            9
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "10-q5",
+          "lengths": [
+            10,
+            8,
+            18
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "10-q6",
+          "lengths": [
+            17,
+            12,
+            11
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "10-q7",
+          "lengths": [
+            22,
+            11,
+            11
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "10-q8",
+          "lengths": [
+            15,
+            12,
+            19
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "10-q9",
+          "lengths": [
+            7,
+            9,
+            17
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "10-q10",
+          "lengths": [
+            14,
+            18,
+            15
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "10-q11",
+          "lengths": [
+            13,
+            15,
+            21
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "10-q12",
+          "lengths": [
+            16,
+            17,
+            12
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "00-q1",
+          "lengths": [
+            16,
+            4,
+            6
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "00-q2",
+          "lengths": [
+            9,
+            8,
+            11
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "00-q3",
+          "lengths": [
+            8,
+            8,
+            12
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "00-q4",
+          "lengths": [
+            11,
+            10,
+            9
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "00-q5",
+          "lengths": [
+            8,
+            14,
+            8
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "00-q6",
+          "lengths": [
+            10,
+            9,
+            14
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "00-q7",
+          "lengths": [
+            17,
+            11,
+            9
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "00-q9",
+          "lengths": [
+            10,
+            10,
+            14
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "00-q10",
+          "lengths": [
+            10,
+            9,
+            14
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "00-q11",
+          "lengths": [
+            12,
+            12,
+            14
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "01-q1",
+          "lengths": [
+            7,
+            14,
+            6
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "01-q2",
+          "lengths": [
+            10,
+            7,
+            16
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "01-q4",
+          "lengths": [
+            10,
+            11,
+            10
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "01-q5",
+          "lengths": [
+            10,
+            14,
+            10
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "01-q6",
+          "lengths": [
+            10,
+            8,
+            23
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "01-q7",
+          "lengths": [
+            18,
+            14,
+            12
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "01-q9",
+          "lengths": [
+            11,
+            13,
+            18
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "01-q10",
+          "lengths": [
+            11,
+            16,
+            13
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "01-q11",
+          "lengths": [
+            11,
+            13,
+            11
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "01-q12",
+          "lengths": [
+            21,
+            15,
+            15
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "02-q1",
+          "lengths": [
+            5,
+            11,
+            9
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "02-q2",
+          "lengths": [
+            9,
+            8,
+            15
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "02-q3",
+          "lengths": [
+            13,
+            10,
+            9
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "02-q4",
+          "lengths": [
+            15,
+            10,
+            10
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "02-q5",
+          "lengths": [
+            17,
+            7,
+            10
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "02-q6",
+          "lengths": [
+            9,
+            8,
+            15
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "02-q7",
+          "lengths": [
+            19,
+            15,
+            15
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "02-q8",
+          "lengths": [
+            14,
+            11,
+            10
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "02-q10",
+          "lengths": [
+            10,
+            18,
+            11
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "02-q11",
+          "lengths": [
+            21,
+            14,
+            16
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "03-q2",
+          "lengths": [
+            11,
+            10,
+            9
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "03-q5",
+          "lengths": [
+            10,
+            9,
+            11
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "03-q8",
+          "lengths": [
+            11,
+            11,
+            13
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "03-q9",
+          "lengths": [
+            17,
+            14,
+            11
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "03-q10",
+          "lengths": [
+            16,
+            15,
+            15
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "03-q12",
+          "lengths": [
+            16,
+            19,
+            18
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "04-q1",
+          "lengths": [
+            8,
+            9,
+            13
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "04-q3",
+          "lengths": [
+            12,
+            6,
+            9
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "04-q4",
+          "lengths": [
+            12,
+            9,
+            9
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "04-q7",
+          "lengths": [
+            16,
+            13,
+            13
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "04-q8",
+          "lengths": [
+            15,
+            10,
+            10
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "04-q9",
+          "lengths": [
+            14,
+            10,
+            8
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "04-q10",
+          "lengths": [
+            10,
+            13,
+            17
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "04-q11",
+          "lengths": [
+            12,
+            13,
+            20
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "04-q12",
+          "lengths": [
+            16,
+            12,
+            14
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q1",
+          "lengths": [
+            6,
+            8,
+            12
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "05-q2",
+          "lengths": [
+            15,
+            14,
+            12
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "05-q3",
+          "lengths": [
+            10,
+            12,
+            7
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q5",
+          "lengths": [
+            9,
+            10,
+            16
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "05-q6",
+          "lengths": [
+            10,
+            8,
+            11
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "05-q7",
+          "lengths": [
+            13,
+            9,
+            9
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "05-q8",
+          "lengths": [
+            13,
+            14,
+            24
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "05-q9",
+          "lengths": [
+            11,
+            15,
+            10
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "05-q10",
+          "lengths": [
+            13,
+            11,
+            11
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q11",
+          "lengths": [
+            11,
+            14,
+            17
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "05-q12",
+          "lengths": [
+            15,
+            19,
+            15
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "06-q1",
+          "lengths": [
+            8,
+            14,
+            7
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "06-q2",
+          "lengths": [
+            10,
+            7,
+            14
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "06-q3",
+          "lengths": [
+            13,
+            9,
+            11
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "06-q4",
+          "lengths": [
+            6,
+            7,
+            6
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "06-q5",
+          "lengths": [
+            10,
+            14,
+            7
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "06-q6",
+          "lengths": [
+            11,
+            13,
+            15
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "06-q7",
+          "lengths": [
+            13,
+            10,
+            10
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "06-q8",
+          "lengths": [
+            13,
+            10,
+            19
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "06-q11",
+          "lengths": [
+            14,
+            19,
+            12
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "06-q12",
+          "lengths": [
+            13,
+            19,
+            12
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "07-q1",
+          "lengths": [
+            7,
+            12,
+            7
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "07-q2",
+          "lengths": [
+            8,
+            12,
+            14
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q3",
+          "lengths": [
+            10,
+            8,
+            7
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q4",
+          "lengths": [
+            9,
+            15,
+            11
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "07-q5",
+          "lengths": [
+            10,
+            15,
+            10
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "07-q6",
+          "lengths": [
+            10,
+            7,
+            17
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "07-q7",
+          "lengths": [
+            16,
+            11,
+            13
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "07-q8",
+          "lengths": [
+            13,
+            15,
+            18
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "07-q9",
+          "lengths": [
+            9,
+            12,
+            16
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "07-q11",
+          "lengths": [
+            15,
+            10,
+            17
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q12",
+          "lengths": [
+            16,
+            12,
+            12
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "08-q1",
+          "lengths": [
+            9,
+            9,
+            11
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "08-q2",
+          "lengths": [
+            9,
+            12,
+            10
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "08-q3",
+          "lengths": [
+            10,
+            16,
+            9
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "08-q4",
+          "lengths": [
+            6,
+            9,
+            19
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "08-q5",
+          "lengths": [
+            7,
+            13,
+            10
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "08-q6",
+          "lengths": [
+            8,
+            14,
+            9
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "08-q7",
+          "lengths": [
+            14,
+            19,
+            10
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "08-q8",
+          "lengths": [
+            13,
+            20,
+            12
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "08-q9",
+          "lengths": [
+            14,
+            12,
+            10
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "08-q10",
+          "lengths": [
+            12,
+            12,
+            21
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "08-q11",
+          "lengths": [
+            14,
+            17,
+            13
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "08-q12",
+          "lengths": [
+            17,
+            11,
+            14
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "09-q1",
+          "lengths": [
+            12,
+            8,
+            8
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "09-q2",
+          "lengths": [
+            18,
+            8,
+            9
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "09-q3",
+          "lengths": [
+            10,
+            8,
+            12
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "09-q4",
+          "lengths": [
+            12,
+            16,
+            10
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "09-q5",
+          "lengths": [
+            17,
+            11,
+            10
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "09-q6",
+          "lengths": [
+            7,
+            9,
+            13
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "09-q7",
+          "lengths": [
+            10,
+            10,
+            20
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "09-q8",
+          "lengths": [
+            12,
+            12,
+            18
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "09-q9",
+          "lengths": [
+            13,
+            20,
+            13
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "09-q10",
+          "lengths": [
+            12,
+            11,
+            17
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "09-q11",
+          "lengths": [
+            14,
+            13,
+            20
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "09-q12",
+          "lengths": [
+            16,
+            12,
+            14
+          ],
+          "gapToSecondLongest": 2
+        }
+      ],
+      "bySubject": {
+        "00": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 12
+        },
+        "01": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 10
+        },
+        "02": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 10
+        },
+        "03": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 8
+        },
+        "04": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 9
+        },
+        "05": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 11
+        },
+        "06": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 11
+        },
+        "07": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 12
+        },
+        "08": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 12
+        },
+        "09": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 12
+        },
+        "10": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 12
+        }
+      }
+    },
+    "en": {
+      "answerPositions": {
+        "B": 40,
+        "C": 48,
+        "A": 44
+      },
+      "uniqueLongestCorrect": 100,
+      "uniqueShortestCorrect": 5,
+      "longestTies": 10,
+      "shortestTies": 10,
+      "chooseLongestFirstDisplayTie": 104,
+      "chooseShortestFirstDisplayTie": 6,
+      "correctUniqueLongestItems": [
+        {
+          "id": "10-q1",
+          "lengths": [
+            35,
+            45,
+            36
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "10-q2",
+          "lengths": [
+            25,
+            31,
+            39
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "10-q3",
+          "lengths": [
+            44,
+            39,
+            33
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "10-q4",
+          "lengths": [
+            51,
+            19,
+            30
+          ],
+          "gapToSecondLongest": 21
+        },
+        {
+          "id": "10-q5",
+          "lengths": [
+            43,
+            32,
+            57
+          ],
+          "gapToSecondLongest": 14
+        },
+        {
+          "id": "10-q6",
+          "lengths": [
+            57,
+            39,
+            39
+          ],
+          "gapToSecondLongest": 18
+        },
+        {
+          "id": "10-q7",
+          "lengths": [
+            64,
+            40,
+            47
+          ],
+          "gapToSecondLongest": 17
+        },
+        {
+          "id": "10-q8",
+          "lengths": [
+            47,
+            46,
+            56
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "10-q9",
+          "lengths": [
+            30,
+            38,
+            43
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "10-q11",
+          "lengths": [
+            48,
+            47,
+            50
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "10-q12",
+          "lengths": [
+            43,
+            54,
+            52
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "00-q1",
+          "lengths": [
+            35,
+            12,
+            31
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "00-q2",
+          "lengths": [
+            27,
+            24,
+            35
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "00-q3",
+          "lengths": [
+            36,
+            31,
+            46
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "00-q4",
+          "lengths": [
+            40,
+            34,
+            31
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "00-q5",
+          "lengths": [
+            35,
+            47,
+            33
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "00-q6",
+          "lengths": [
+            36,
+            35,
+            57
+          ],
+          "gapToSecondLongest": 21
+        },
+        {
+          "id": "00-q8",
+          "lengths": [
+            23,
+            27,
+            26
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "00-q9",
+          "lengths": [
+            31,
+            26,
+            36
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "00-q10",
+          "lengths": [
+            33,
+            33,
+            43
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "00-q11",
+          "lengths": [
+            35,
+            39,
+            44
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "00-q12",
+          "lengths": [
+            31,
+            34,
+            31
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "01-q1",
+          "lengths": [
+            24,
+            37,
+            31
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "01-q2",
+          "lengths": [
+            29,
+            25,
+            44
+          ],
+          "gapToSecondLongest": 15
+        },
+        {
+          "id": "01-q5",
+          "lengths": [
+            31,
+            48,
+            38
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "01-q6",
+          "lengths": [
+            45,
+            31,
+            50
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "01-q7",
+          "lengths": [
+            69,
+            52,
+            55
+          ],
+          "gapToSecondLongest": 14
+        },
+        {
+          "id": "01-q8",
+          "lengths": [
+            50,
+            63,
+            47
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "01-q9",
+          "lengths": [
+            44,
+            51,
+            59
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "01-q10",
+          "lengths": [
+            41,
+            47,
+            43
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "01-q11",
+          "lengths": [
+            41,
+            48,
+            44
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "01-q12",
+          "lengths": [
+            57,
+            51,
+            54
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "02-q1",
+          "lengths": [
+            17,
+            41,
+            27
+          ],
+          "gapToSecondLongest": 14
+        },
+        {
+          "id": "02-q2",
+          "lengths": [
+            33,
+            30,
+            41
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "02-q3",
+          "lengths": [
+            43,
+            30,
+            25
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "02-q4",
+          "lengths": [
+            48,
+            31,
+            42
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "02-q5",
+          "lengths": [
+            48,
+            35,
+            24
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "02-q6",
+          "lengths": [
+            36,
+            26,
+            54
+          ],
+          "gapToSecondLongest": 18
+        },
+        {
+          "id": "02-q7",
+          "lengths": [
+            72,
+            48,
+            41
+          ],
+          "gapToSecondLongest": 24
+        },
+        {
+          "id": "02-q8",
+          "lengths": [
+            55,
+            48,
+            39
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "02-q10",
+          "lengths": [
+            41,
+            56,
+            44
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "02-q12",
+          "lengths": [
+            54,
+            41,
+            44
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "03-q1",
+          "lengths": [
+            32,
+            29,
+            39
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "03-q2",
+          "lengths": [
+            36,
+            26,
+            32
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "03-q3",
+          "lengths": [
+            33,
+            28,
+            30
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "03-q5",
+          "lengths": [
+            34,
+            30,
+            40
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "03-q6",
+          "lengths": [
+            53,
+            46,
+            47
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "03-q9",
+          "lengths": [
+            51,
+            49,
+            46
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "03-q12",
+          "lengths": [
+            52,
+            64,
+            55
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "04-q2",
+          "lengths": [
+            24,
+            27,
+            26
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "04-q3",
+          "lengths": [
+            43,
+            27,
+            36
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "04-q5",
+          "lengths": [
+            24,
+            26,
+            37
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "04-q8",
+          "lengths": [
+            47,
+            45,
+            38
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "04-q11",
+          "lengths": [
+            41,
+            51,
+            56
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "04-q12",
+          "lengths": [
+            57,
+            42,
+            42
+          ],
+          "gapToSecondLongest": 15
+        },
+        {
+          "id": "05-q2",
+          "lengths": [
+            53,
+            38,
+            31
+          ],
+          "gapToSecondLongest": 15
+        },
+        {
+          "id": "05-q3",
+          "lengths": [
+            25,
+            39,
+            22
+          ],
+          "gapToSecondLongest": 14
+        },
+        {
+          "id": "05-q5",
+          "lengths": [
+            26,
+            31,
+            61
+          ],
+          "gapToSecondLongest": 30
+        },
+        {
+          "id": "05-q6",
+          "lengths": [
+            29,
+            23,
+            38
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "05-q7",
+          "lengths": [
+            45,
+            37,
+            43
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "05-q8",
+          "lengths": [
+            47,
+            58,
+            70
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "05-q9",
+          "lengths": [
+            49,
+            50,
+            38
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "05-q10",
+          "lengths": [
+            53,
+            42,
+            45
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "06-q1",
+          "lengths": [
+            30,
+            42,
+            26
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "06-q2",
+          "lengths": [
+            32,
+            32,
+            38
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "06-q3",
+          "lengths": [
+            44,
+            28,
+            32
+          ],
+          "gapToSecondLongest": 12
+        },
+        {
+          "id": "06-q4",
+          "lengths": [
+            15,
+            27,
+            24
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "06-q5",
+          "lengths": [
+            30,
+            40,
+            26
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "06-q7",
+          "lengths": [
+            50,
+            44,
+            39
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "06-q8",
+          "lengths": [
+            39,
+            41,
+            52
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "06-q9",
+          "lengths": [
+            47,
+            43,
+            44
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "06-q10",
+          "lengths": [
+            52,
+            39,
+            60
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "06-q12",
+          "lengths": [
+            43,
+            53,
+            51
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q2",
+          "lengths": [
+            34,
+            36,
+            43
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "07-q3",
+          "lengths": [
+            38,
+            34,
+            23
+          ],
+          "gapToSecondLongest": 4
+        },
+        {
+          "id": "07-q4",
+          "lengths": [
+            34,
+            48,
+            38
+          ],
+          "gapToSecondLongest": 10
+        },
+        {
+          "id": "07-q5",
+          "lengths": [
+            37,
+            55,
+            31
+          ],
+          "gapToSecondLongest": 18
+        },
+        {
+          "id": "07-q6",
+          "lengths": [
+            31,
+            29,
+            57
+          ],
+          "gapToSecondLongest": 26
+        },
+        {
+          "id": "07-q7",
+          "lengths": [
+            53,
+            48,
+            51
+          ],
+          "gapToSecondLongest": 2
+        },
+        {
+          "id": "07-q8",
+          "lengths": [
+            37,
+            47,
+            62
+          ],
+          "gapToSecondLongest": 15
+        },
+        {
+          "id": "07-q10",
+          "lengths": [
+            49,
+            50,
+            47
+          ],
+          "gapToSecondLongest": 1
+        },
+        {
+          "id": "07-q12",
+          "lengths": [
+            52,
+            43,
+            45
+          ],
+          "gapToSecondLongest": 7
+        },
+        {
+          "id": "08-q1",
+          "lengths": [
+            26,
+            31,
+            40
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "08-q2",
+          "lengths": [
+            28,
+            40,
+            32
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "08-q3",
+          "lengths": [
+            33,
+            50,
+            30
+          ],
+          "gapToSecondLongest": 17
+        },
+        {
+          "id": "08-q4",
+          "lengths": [
+            29,
+            27,
+            49
+          ],
+          "gapToSecondLongest": 20
+        },
+        {
+          "id": "08-q5",
+          "lengths": [
+            28,
+            47,
+            39
+          ],
+          "gapToSecondLongest": 8
+        },
+        {
+          "id": "08-q6",
+          "lengths": [
+            37,
+            50,
+            36
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "08-q9",
+          "lengths": [
+            51,
+            48,
+            37
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "08-q10",
+          "lengths": [
+            42,
+            43,
+            54
+          ],
+          "gapToSecondLongest": 11
+        },
+        {
+          "id": "08-q12",
+          "lengths": [
+            48,
+            42,
+            45
+          ],
+          "gapToSecondLongest": 3
+        },
+        {
+          "id": "09-q1",
+          "lengths": [
+            42,
+            37,
+            25
+          ],
+          "gapToSecondLongest": 5
+        },
+        {
+          "id": "09-q2",
+          "lengths": [
+            48,
+            31,
+            33
+          ],
+          "gapToSecondLongest": 15
+        },
+        {
+          "id": "09-q4",
+          "lengths": [
+            44,
+            50,
+            41
+          ],
+          "gapToSecondLongest": 6
+        },
+        {
+          "id": "09-q5",
+          "lengths": [
+            60,
+            38,
+            38
+          ],
+          "gapToSecondLongest": 22
+        },
+        {
+          "id": "09-q6",
+          "lengths": [
+            35,
+            33,
+            44
+          ],
+          "gapToSecondLongest": 9
+        },
+        {
+          "id": "09-q7",
+          "lengths": [
+            37,
+            37,
+            51
+          ],
+          "gapToSecondLongest": 14
+        },
+        {
+          "id": "09-q9",
+          "lengths": [
+            34,
+            70,
+            46
+          ],
+          "gapToSecondLongest": 24
+        },
+        {
+          "id": "09-q10",
+          "lengths": [
+            42,
+            43,
+            56
+          ],
+          "gapToSecondLongest": 13
+        },
+        {
+          "id": "09-q11",
+          "lengths": [
+            42,
+            46,
+            66
+          ],
+          "gapToSecondLongest": 20
+        }
+      ],
+      "bySubject": {
+        "00": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 11
+        },
+        "01": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 10
+        },
+        "02": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 10
+        },
+        "03": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 8
+        },
+        "04": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 9
+        },
+        "05": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 8
+        },
+        "06": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 10
+        },
+        "07": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 9
+        },
+        "08": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 9
+        },
+        "09": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 9
+        },
+        "10": {
+          "count": 12,
+          "chooseLongestFirstDisplayTie": 11
+        }
+      }
+    }
+  }
+}

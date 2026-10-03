@@ -1,0 +1,1378 @@
+[
+  {
+    "id": "08-q1",
+    "sourceId": "08-q1",
+    "changeType": "revise",
+    "revisionReason": "保留氮供应与营养生长的目标，用对照条件限定推断，替换荒谬干扰项。",
+    "concept": "营养生长与结果",
+    "objective": "根据对照试验辨认氮供应与果实表现的关系",
+    "cognitiveOperation": "判断证据",
+    "context": "番茄温室对照",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需区分叶片生长与结果，并保留试验范围",
+    "optionIds": [
+      "08-q1-a",
+      "08-q1-b",
+      "08-q1-c"
+    ],
+    "answerOptionId": "08-q1-a",
+    "distractors": [
+      {
+        "optionId": "08-q1-b",
+        "error": "把更多氮等同于更多开花结果",
+        "whyNot": "结果明示高氮组形成的果实更少。"
+      },
+      {
+        "optionId": "08-q1-c",
+        "error": "把高氮理解为抑制枝叶",
+        "whyNot": "结果明示高氮组枝叶更旺。"
+      }
+    ],
+    "answerEvidence": "随机两组其他给定条件相同；高氮组枝叶增加而全期形成的果实减少。",
+    "factSources": [
+      {
+        "url": "https://www.extension.umd.edu/resource/key-common-problems-tomatoes",
+        "title": "University of Maryland Extension — Key to Common Problems of Tomatoes",
+        "checkedAt": "2026-10-03",
+        "supports": "过量氮可与枝叶旺盛、开花或结果不足有关；阳光不足也是可能原因，故题干控制其他条件。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q2",
+    "sourceId": "08-q2",
+    "changeType": "revise",
+    "revisionReason": "保留湿土压实入口，改为有观察依据的孔隙机制，去除直接伤根的必然断言。 独立复审或主编辑复查后：移除题干直接给出的大孔隙答案，保留压实与入渗条件，要求使用机制。",
+    "concept": "土壤压实与孔隙",
+    "objective": "用入渗与孔隙观察判断轮压影响",
+    "cognitiveOperation": "解释机制",
+    "context": "湿地轮迹",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "从减少的大孔隙解释入渗",
+    "optionIds": [
+      "08-q2-a",
+      "08-q2-b",
+      "08-q2-c"
+    ],
+    "answerOptionId": "08-q2-b",
+    "distractors": [
+      {
+        "optionId": "08-q2-a",
+        "error": "把压实当作增加通气孔隙",
+        "whyNot": "大孔隙增加与观察相反，也不能解释通道减少。"
+      },
+      {
+        "optionId": "08-q2-c",
+        "error": "把孔隙变化当成土粒缩小",
+        "whyNot": "压实主要改变颗粒排列与孔隙，而非土粒体积。"
+      }
+    ],
+    "answerEvidence": "拖拉机碾压后湿土更密实、入渗更慢；依据土壤压实机制，推断大孔隙通道减少。题干未直接给出孔隙变化。",
+    "factSources": [
+      {
+        "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-compaction",
+        "title": "University of Minnesota Extension — Soil compaction",
+        "checkedAt": "2026-10-03",
+        "supports": "压实减少大孔隙与总孔隙体积，降低入渗及排水；湿土容易受压实。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "08-q3",
+    "sourceId": "08-q3",
+    "changeType": "revise",
+    "revisionReason": "保留轮作目标，明示寄主和迁移条件，不把轮作写成对所有害虫的保证。 独立复审或主编辑复查后：明确候选番茄品种仍是寄主，排除未说明的抗性品种解释。",
+    "concept": "寄主范围与轮作",
+    "objective": "依据寄主范围选择中断害虫繁殖的作物",
+    "cognitiveOperation": "应用",
+    "context": "有明确寄主的菜田害虫",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "须核对轮作作物是否仍是寄主",
+    "optionIds": [
+      "08-q3-a",
+      "08-q3-b",
+      "08-q3-c"
+    ],
+    "answerOptionId": "08-q3-c",
+    "distractors": [
+      {
+        "optionId": "08-q3-a",
+        "error": "认为换品种就换掉了寄主",
+        "whyNot": "给定寄主范围包含番茄，没有给新品种抗性证据。"
+      },
+      {
+        "optionId": "08-q3-b",
+        "error": "只看作物名称不同",
+        "whyNot": "给定寄主范围也包含马铃薯。"
+      }
+    ],
+    "answerEvidence": "本例害虫可用番茄和马铃薯、不可用豆类，且本地越冬和移动受限。",
+    "factSources": [
+      {
+        "url": "https://rvs.umn.edu/Uploads/EducationalMaterials/0bd76328-c109-440b-86a6-d87d87654c24.pdf",
+        "title": "USDA SARE — Crop Rotation on Organic Farms: A Planning Manual, chapter 3, p. 41 (UMN-hosted copy)",
+        "checkedAt": "2026-10-03",
+        "supports": "轮作效果取决于害虫寄主范围与迁移能力，不是换任何作物都有效。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "08-q4",
+    "sourceId": "08-q4",
+    "changeType": "revise",
+    "revisionReason": "保留共同渔业资源情境，改成可判总量约束，去掉鱼开会等无效项。",
+    "concept": "共同渔业资源与总量",
+    "objective": "识别单船限额如何累积为总捕捞压力",
+    "cognitiveOperation": "比较",
+    "context": "十艘船的共享渔场",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "要比较总量而非只看单船约束",
+    "optionIds": [
+      "08-q4-a",
+      "08-q4-b",
+      "08-q4-c"
+    ],
+    "answerOptionId": "08-q4-b",
+    "distractors": [
+      {
+        "optionId": "08-q4-a",
+        "error": "把个体限额误当总量上限",
+        "whyNot": "每船15吨乘10船可达150吨。"
+      },
+      {
+        "optionId": "08-q4-c",
+        "error": "把努力量减少等同于确定捕捞总量",
+        "whyNot": "缺每船每天捕捞量，无法保证合计不超100。"
+      }
+    ],
+    "answerEvidence": "10×15=150；天数没有对应捕捞量；全场累计达到100即停止直接保证题设上限。",
+    "factSources": [
+      {
+        "url": "https://www.fao.org/4/Y3427E/y3427e06.htm",
+        "title": "FAO — Input and output controls in responsible fisheries",
+        "checkedAt": "2026-10-03",
+        "supports": "捕捞总量控制是渔业管理的一种手段；单独控制个体不等于已限制总压力。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q5",
+    "sourceId": "08-q5",
+    "changeType": "revise",
+    "revisionReason": "保留热应激，但把热浪后的猜测改为对照依据；不把饲料或天气当唯一因素。",
+    "concept": "奶牛热应激",
+    "objective": "根据对照饲养条件解释降温组差异",
+    "cognitiveOperation": "判断证据",
+    "context": "热浪中的奶牛群",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需避免把饲料量视为唯一产量因素",
+    "optionIds": [
+      "08-q5-a",
+      "08-q5-b",
+      "08-q5-c"
+    ],
+    "answerOptionId": "08-q5-c",
+    "distractors": [
+      {
+        "optionId": "08-q5-a",
+        "error": "忽略已控制的饲料供应",
+        "whyNot": "题干说明饲料相同，未支持配方差异。"
+      },
+      {
+        "optionId": "08-q5-b",
+        "error": "提出未给出的挤奶记录差异",
+        "whyNot": "题干明示挤奶安排相同，不支持频率变化造成记录差异。"
+      }
+    ],
+    "answerEvidence": "随机两组的饲料、饮水和挤奶安排相同，唯一管理差别是遮阴降温；呼吸和产奶结果支持热负荷机制。",
+    "factSources": [
+      {
+        "url": "https://www.extension.umd.edu/resource/are-your-cattle-cool-tips-managing-summer-heat",
+        "title": "University of Maryland Extension — Are Your Cattle Cool?",
+        "checkedAt": "2026-10-03",
+        "supports": "热应激可降低奶牛产奶，并出现呼吸加快、寻找阴凉等表现；程度随条件变化。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q6",
+    "sourceId": "08-q6",
+    "changeType": "revise",
+    "revisionReason": "保留间伐目标与实际机制，明示林型和保留目标，避免小树无用断言。 独立复审或主编辑复查后：把遗传和降雨凑项换成同属光水获取机制的常见混淆，并不在题干先写出竞争答案。",
+    "concept": "间伐与资源竞争",
+    "objective": "在保留林分的目标下辨认间伐的作用",
+    "cognitiveOperation": "解释机制",
+    "context": "拥挤人工林",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "依据保留树木与减少竞争判断",
+    "optionIds": [
+      "08-q6-a",
+      "08-q6-b",
+      "08-q6-c"
+    ],
+    "answerOptionId": "08-q6-a",
+    "distractors": [
+      {
+        "optionId": "08-q6-b",
+        "error": "把资源可得性改善混同为生理需求降低",
+        "whyNot": "题干改变邻树密度，未改变保留树本身的需求。"
+      },
+      {
+        "optionId": "08-q6-c",
+        "error": "把间伐与林冠遮阴增加混同",
+        "whyNot": "移除邻树减少相关竞争和遮挡，不是增加遮阴。"
+      }
+    ],
+    "answerEvidence": "天气、土壤和保留树不变，改变的是相邻竞争者数量。",
+    "factSources": [
+      {
+        "url": "https://www.nps.gov/yose/learn/nature/forestrestoration.htm",
+        "title": "National Park Service — Forest Restoration",
+        "checkedAt": "2026-10-03",
+        "supports": "过密林分会增加对水等资源的竞争；疏伐目标和保留对象需因林型而定。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "08-q7",
+    "sourceId": "08-q7",
+    "changeType": "revise",
+    "revisionReason": "保留共享易感性与品种组合目标，用明示教学数据比较最差损失，不混淆物种和遗传型。",
+    "concept": "作物易感性与品种组合",
+    "objective": "依据病害损失数据比较种植组合",
+    "cognitiveOperation": "应用",
+    "context": "两个等产量作物品种",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "比较两种病害情景中的最差损失",
+    "optionIds": [
+      "08-q7-a",
+      "08-q7-b",
+      "08-q7-c"
+    ],
+    "answerOptionId": "08-q7-c",
+    "distractors": [
+      {
+        "optionId": "08-q7-a",
+        "error": "只考虑一种病害下的优势",
+        "whyNot": "A在Y下较好，但X下损失60%。"
+      },
+      {
+        "optionId": "08-q7-b",
+        "error": "只考虑另一种病害下的优势",
+        "whyNot": "B在X下较好，但Y下损失60%。"
+      }
+    ],
+    "answerEvidence": "A和B单种的最差损失皆60%，各半混种两情景皆35%，按指定目标唯一最优。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-v2-q08",
+    "sourceId": "08-q8",
+    "changeType": "replace",
+    "revisionReason": "原题答案复述恢复速度且与共同资源题重复；替换为可核算的鱼群收支目标并使用新ID。",
+    "concept": "鱼群补充与捕捞收支",
+    "objective": "计算简化鱼群模型的年度变化",
+    "cognitiveOperation": "计算",
+    "context": "给定净补充量的鱼群",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "一次加减计算，不当作真实捕捞配额",
+    "optionIds": [
+      "08-v2-q08-a",
+      "08-v2-q08-b",
+      "08-v2-q08-c"
+    ],
+    "answerOptionId": "08-v2-q08-a",
+    "distractors": [
+      {
+        "optionId": "08-v2-q08-b",
+        "error": "把净增量与捕捞量当作正好抵消",
+        "whyNot": "两者差100吨，不是抵消。"
+      },
+      {
+        "optionId": "08-v2-q08-c",
+        "error": "把捕捞较多误当鱼群净增长",
+        "whyNot": "库存变化是增加减捕捞，为−100而非+100。"
+      }
+    ],
+    "answerEvidence": "1000+200−300=900，题干排除了迁移并明示净增量已扣自然死亡。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q9",
+    "sourceId": "08-q9",
+    "changeType": "revise",
+    "revisionReason": "保留授粉与生态联系，使用补充授粉对照判证据，撤掉未经证实的喷药因果。",
+    "concept": "虫媒授粉限制",
+    "objective": "用补充授粉对照判断结果受限环节",
+    "cognitiveOperation": "判断证据",
+    "context": "果园授粉对照",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "从对照干预辨认限制因素而非猜喷药因果",
+    "optionIds": [
+      "08-q9-a",
+      "08-q9-b",
+      "08-q9-c"
+    ],
+    "answerOptionId": "08-q9-a",
+    "distractors": [
+      {
+        "optionId": "08-q9-b",
+        "error": "把结果少直接归因根部缺水",
+        "whyNot": "本试验没有增加水，却观察到补花粉后的改善。"
+      },
+      {
+        "optionId": "08-q9-c",
+        "error": "把结果少直接归因叶部缺光",
+        "whyNot": "本试验没有改变光照，干预针对花粉。"
+      }
+    ],
+    "answerEvidence": "随机对照只增加合适花粉，其他条件相近，结果率增加直接支持授粉限制。",
+    "factSources": [
+      {
+        "url": "https://research.fs.usda.gov/pnw/nwch/ecosystem-services/forests",
+        "title": "US Forest Service — Forest Ecosystem Services in the Northwest",
+        "checkedAt": "2026-10-03",
+        "supports": "动物搬运花粉可支持果实与种子形成，传粉者活动与花期不匹配可降低授粉。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q10",
+    "sourceId": "08-q10",
+    "changeType": "revise",
+    "revisionReason": "保留整体动物照护，改为缺失维度辨认而非猜测行为病因。",
+    "concept": "动物正常行为需要",
+    "objective": "区分营养照护和正常行为机会",
+    "cognitiveOperation": "辨认",
+    "context": "犬只照护记录",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "用明确记录辨认尚未覆盖的福利维度",
+    "optionIds": [
+      "08-q10-a",
+      "08-q10-b",
+      "08-q10-c"
+    ],
+    "answerOptionId": "08-q10-c",
+    "distractors": [
+      {
+        "optionId": "08-q10-a",
+        "error": "把高级营养当作整个福利",
+        "whyNot": "食物已给充足，不能补偿行为机会缺失。"
+      },
+      {
+        "optionId": "08-q10-b",
+        "error": "只从住所设施评估福利",
+        "whyNot": "住所舒适已给定，直接缺口是无法活动互动。"
+      }
+    ],
+    "answerEvidence": "题干已给营养、住所和体检情况，同时明确限制正常活动互动。",
+    "factSources": [
+      {
+        "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-welfare/",
+        "title": "WOAH — Animal Welfare",
+        "checkedAt": "2026-10-03",
+        "supports": "动物福利不仅包括营养和疾病照护，也包括正常行为表达的机会。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-q11",
+    "sourceId": "08-q11",
+    "changeType": "revise",
+    "revisionReason": "保留火生态主题，明示火适应林型和梯状燃料，替换抽象释放压力说法。",
+    "concept": "火适应森林与梯状燃料",
+    "objective": "解释地表燃料连接树冠的火行为机制",
+    "cognitiveOperation": "解释机制",
+    "context": "干燥混交针叶林",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需保持林型范围，不推出放任火灾",
+    "optionIds": [
+      "08-q11-a",
+      "08-q11-b",
+      "08-q11-c"
+    ],
+    "answerOptionId": "08-q11-a",
+    "distractors": [
+      {
+        "optionId": "08-q11-b",
+        "error": "把增密燃料理解为增大间距",
+        "whyNot": "题干的变化是燃料增多并连接树冠，未给间距增大。"
+      },
+      {
+        "optionId": "08-q11-c",
+        "error": "把植被燃料变化理解成土壤变湿",
+        "whyNot": "天气地形保持相同，题干没有土壤湿度增加。"
+      }
+    ],
+    "answerEvidence": "连续可燃植被连接地面与树冠，天气地形控制相同；NPS明确描述这种蔓延机制。",
+    "factSources": [
+      {
+        "url": "https://www.nps.gov/yose/learn/nature/fireecology.htm",
+        "title": "National Park Service — Fire Ecology and Monitoring",
+        "checkedAt": "2026-10-03",
+        "supports": "特定混交针叶林的长期抑火可改变燃料和林分结构；火制度依生态类型而异。"
+      },
+      {
+        "url": "https://home.nps.gov/articles/wildland-fire-spread-and-suppression.htm",
+        "title": "National Park Service — Wildland Fire Spread and Suppression",
+        "checkedAt": "2026-10-03",
+        "supports": "地表到树冠之间相连的植被构成梯状燃料，可让地表火转入树冠；火行为也受天气和地形影响。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "08-v2-q12",
+    "sourceId": "08-q12",
+    "changeType": "replace",
+    "revisionReason": "原题由出口与涨价猜外部依赖，证据不足；替换为明确进口份额与支出传导并用新ID。",
+    "concept": "粮食进口与价格传导",
+    "objective": "计算进口价格变化对购粮支出的直接影响",
+    "cognitiveOperation": "计算",
+    "context": "固定购粮篮子",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "依据份额加权，排除供给量变化",
+    "optionIds": [
+      "08-v2-q12-a",
+      "08-v2-q12-b",
+      "08-v2-q12-c"
+    ],
+    "answerOptionId": "08-v2-q12-b",
+    "distractors": [
+      {
+        "optionId": "08-v2-q12-a",
+        "error": "机械对半分配价格上涨影响",
+        "whyNot": "进口占原支出70%，不是50%。"
+      },
+      {
+        "optionId": "08-v2-q12-c",
+        "error": "将进口涨幅套给全部粮食",
+        "whyNot": "本地粮价格不变，不能将总支出直接乘1.2。"
+      }
+    ],
+    "answerEvidence": "70×1.20+30=114万元，所有购买数量和本地价格明示不变。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q1",
+    "sourceId": "09-q1",
+    "changeType": "revise",
+    "revisionReason": "保留轻柔清洁目标，撤掉根据出血推定原因，错误项采用过力和覆盖不足两种误解。 独立复审或主编辑复查后：删除刷到出血的明显凑项，让三项分别比较力度和牙面覆盖。",
+    "concept": "清洁力度与口腔照护",
+    "objective": "区分轻柔清洁与加力清洁的机制",
+    "cognitiveOperation": "辨认",
+    "context": "口腔卫生宣传页",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "基础清洁原理，不诊断牙龈出血",
+    "optionIds": [
+      "09-q1-a",
+      "09-q1-b",
+      "09-q1-c"
+    ],
+    "answerOptionId": "09-q1-b",
+    "distractors": [
+      {
+        "optionId": "09-q1-a",
+        "error": "把看得见的前牙当成全部牙面",
+        "whyNot": "只清洁前牙不满足完整覆盖。"
+      },
+      {
+        "optionId": "09-q1-c",
+        "error": "把增加力度当成提高清洁质量",
+        "whyNot": "题干要求轻柔清洁，不能用加强力度替代。"
+      }
+    ],
+    "answerEvidence": "给定原则同时要求轻柔和完整；只有轻柔且各牙面清洁同时满足。",
+    "factSources": [
+      {
+        "url": "https://www.nhs.uk/symptoms/bad-breath/",
+        "title": "NHS — Bad breath",
+        "checkedAt": "2026-10-03",
+        "supports": "轻柔清洁牙齿牙龈；不能用刷到出血表示清洁完成。"
+      },
+      {
+        "url": "https://www.nhs.uk/conditions/gum-disease/",
+        "title": "NHS — Gum disease",
+        "checkedAt": "2026-10-03",
+        "supports": "牙龈出血可为牙龈疾病表现，应由牙科评估，不能仅归因用力。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "09-q2",
+    "sourceId": "09-q2",
+    "changeType": "revise",
+    "revisionReason": "保留咖啡因与睡眠目标，提供同人对照而非由疲劳猜原因，避免唯一温和选项对两条绝对断言。",
+    "concept": "咖啡因与睡眠时间",
+    "objective": "用同人对照记录辨认睡眠受影响的证据",
+    "cognitiveOperation": "判断证据",
+    "context": "睡前咖啡因记录",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需要限定其他条件，不诊断疲劳原因",
+    "optionIds": [
+      "09-q2-a",
+      "09-q2-b",
+      "09-q2-c"
+    ],
+    "answerOptionId": "09-q2-a",
+    "distractors": [
+      {
+        "optionId": "09-q2-b",
+        "error": "把结果方向看反",
+        "whyNot": "给定含咖啡因夜晚平均入睡较慢。"
+      },
+      {
+        "optionId": "09-q2-c",
+        "error": "把提高清醒等同减少生理睡眠需要",
+        "whyNot": "试验只比较入睡时间，没有测睡眠需要。"
+      }
+    ],
+    "answerEvidence": "随机交替饮品，其他条件相近；含咖啡因夜晚入睡较慢，只测睡眠起始未测所需睡眠。",
+    "factSources": [
+      {
+        "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits",
+        "title": "NHLBI — Healthy Sleep Habits",
+        "checkedAt": "2026-10-03",
+        "supports": "咖啡因是兴奋剂，可干扰睡眠，影响持续时间与人和情境有关。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q3",
+    "sourceId": "09-q3",
+    "changeType": "revise",
+    "revisionReason": "保留渐进负荷和恢复，限定未受伤起步情境，不给膝伤后计划。",
+    "concept": "渐进运动负荷",
+    "objective": "比较包含恢复与增量的训练计划",
+    "cognitiveOperation": "应用",
+    "context": "健康初学者的运动计划",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "比较起点与变化量，不给伤后训练建议",
+    "optionIds": [
+      "09-q3-a",
+      "09-q3-b",
+      "09-q3-c"
+    ],
+    "answerOptionId": "09-q3-b",
+    "distractors": [
+      {
+        "optionId": "09-q3-a",
+        "error": "同时猛增两项负荷",
+        "whyNot": "时长翻倍又加速，与先从少量逐步增加相反。"
+      },
+      {
+        "optionId": "09-q3-c",
+        "error": "把高强度放在适应过程之前",
+        "whyNot": "先切高强度再补休息不符合给定起步原则。"
+      }
+    ],
+    "answerEvidence": "给定目标从少量低强度开始；少量增加时长并观察适应符合，另外两项在起点猛增负荷。",
+    "factSources": [
+      {
+        "url": "https://www.cdc.gov/physical-activity/features/getting-more-active-minutes.html",
+        "title": "CDC — Tips for Getting More Physically Active Minutes",
+        "checkedAt": "2026-10-03",
+        "supports": "从少量活动开始，逐步增加时长和强度；本题不是伤后训练处方。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q4",
+    "sourceId": "09-q4",
+    "changeType": "revise",
+    "revisionReason": "保留群体传播目标，改为具体空气传播环节，不根据多人先后咳嗽断定感染源。",
+    "concept": "呼吸道传播与共享空气",
+    "objective": "辨认通风所改变的传播环节",
+    "cognitiveOperation": "解释机制",
+    "context": "室内空气中的呼吸道病毒",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分共享空气、接触和症状监测",
+    "optionIds": [
+      "09-q4-a",
+      "09-q4-b",
+      "09-q4-c"
+    ],
+    "answerOptionId": "09-q4-b",
+    "distractors": [
+      {
+        "optionId": "09-q4-a",
+        "error": "把通风混同接触预防",
+        "whyNot": "新风交换本身不改变手触桌面的次数。"
+      },
+      {
+        "optionId": "09-q4-c",
+        "error": "把环境干预混同症状监测",
+        "whyNot": "通风不直接缩短症状识别时间。"
+      }
+    ],
+    "answerEvidence": "题干限定传播材料为共享空气中的颗粒，新风交换直接改变空气中积聚。",
+    "factSources": [
+      {
+        "url": "https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19-ventilation-and-air-conditioning",
+        "title": "WHO — Ventilation and air conditioning",
+        "checkedAt": "2026-10-03",
+        "supports": "改善室内通风可降低空气中感染性呼吸颗粒带来的传播风险，但不是清除所有风险。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-v2-q05",
+    "sourceId": "09-q5",
+    "changeType": "replace",
+    "revisionReason": "原题将早停抗生素与耐药写成普遍因果，替换为耐药对象的基础概念，用新ID且不引导个人用药。",
+    "concept": "抗生素耐药",
+    "objective": "根据敏感性结果辨认耐药针对的对象",
+    "cognitiveOperation": "解释机制",
+    "context": "实验室细菌培养报告",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分细菌耐药与人体对药物习惯",
+    "optionIds": [
+      "09-v2-q05-a",
+      "09-v2-q05-b",
+      "09-v2-q05-c"
+    ],
+    "answerOptionId": "09-v2-q05-a",
+    "distractors": [
+      {
+        "optionId": "09-v2-q05-b",
+        "error": "把微生物耐药混成人体药物耐受",
+        "whyNot": "报告说培养出的细菌耐药，不是人体对药物作用习惯；两者不同。"
+      },
+      {
+        "optionId": "09-v2-q05-c",
+        "error": "忽略培养对象，混同细菌和病毒",
+        "whyNot": "题干对象是细菌；抗生素不是针对病毒的治疗药物。"
+      }
+    ],
+    "answerEvidence": "报告明示对象为培养出的细菌，对应抗生素A；CDC定义耐药针对微生物而非人体。",
+    "factSources": [
+      {
+        "url": "https://www.cdc.gov/antimicrobial-resistance/about/index.html",
+        "title": "CDC — About Antimicrobial Resistance",
+        "checkedAt": "2026-10-03",
+        "supports": "抗微生物耐药指病原微生物抵抗药物作用，不是人体习惯了药物。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q6",
+    "sourceId": "09-q6",
+    "changeType": "revise",
+    "revisionReason": "保留交通与医疗可及性，给可核对的时刻和限制，把泛化社会因素改为实际服务操作。",
+    "concept": "医疗可及性",
+    "objective": "从时间表选择解决交通障碍的服务调整",
+    "cognitiveOperation": "应用",
+    "context": "复诊公交与门诊时间",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "核对服务与交通可达时间的交集",
+    "optionIds": [
+      "09-q6-a",
+      "09-q6-b",
+      "09-q6-c"
+    ],
+    "answerOptionId": "09-q6-b",
+    "distractors": [
+      {
+        "optionId": "09-q6-a",
+        "error": "只改变预约却向错误方向移动",
+        "whyNot": "8:30仍在公交到达之前。"
+      },
+      {
+        "optionId": "09-q6-c",
+        "error": "用提醒代替可达时段",
+        "whyNot": "提醒不改变9:00预约比公交到达早的事实。"
+      }
+    ],
+    "answerEvidence": "公交9:20到，9:40预约提前10分钟为9:30；8:30和9:00均早于能到达的时间。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-v2-q07",
+    "sourceId": "09-q7",
+    "changeType": "replace",
+    "revisionReason": "原题与咖啡因睡眠题重叠且偏健康口号；替换为具体病原转移机制，拓展预防覆盖并用新ID。",
+    "concept": "手部卫生与病原转移",
+    "objective": "辨认手卫生打断的传播路径",
+    "cognitiveOperation": "解释机制",
+    "context": "公共触点与进食前的手卫生",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "围绕明确的接触传播链，不重复睡眠题",
+    "optionIds": [
+      "09-v2-q07-a",
+      "09-v2-q07-b",
+      "09-v2-q07-c"
+    ],
+    "answerOptionId": "09-v2-q07-c",
+    "distractors": [
+      {
+        "optionId": "09-v2-q07-a",
+        "error": "把所有传播路径混为一种",
+        "whyNot": "清洁双手不直接改变空气进入呼吸道这段路径。"
+      },
+      {
+        "optionId": "09-v2-q07-b",
+        "error": "把个人手卫生当水系统处理",
+        "whyNot": "清洁双手不改变饮水源和管道的污染。"
+      }
+    ],
+    "answerEvidence": "题干传播链为门把手→手→口，进食前清洁手直接影响手→口这一环节。",
+    "factSources": [
+      {
+        "url": "https://www.cdc.gov/handwashing",
+        "title": "CDC — About Handwashing",
+        "checkedAt": "2026-10-03",
+        "supports": "病原可经受污染物体和未清洁的手进入口鼻眼；手卫生能减少这种转移。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-v2-q08",
+    "sourceId": "09-q8",
+    "changeType": "replace",
+    "revisionReason": "原题以排班效率猜职业倦怠，与多科余量题重复；换为健康服务中的具体交接操作，用新ID。",
+    "concept": "临床交接中的未完成任务",
+    "objective": "依据交接内容识别遗漏的责任与状态",
+    "cognitiveOperation": "判断证据",
+    "context": "待回报检查的交接清单",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "分辨摘要与可追踪行动，不涉及治疗决策",
+    "optionIds": [
+      "09-v2-q08-a",
+      "09-v2-q08-b",
+      "09-v2-q08-c"
+    ],
+    "answerOptionId": "09-v2-q08-a",
+    "distractors": [
+      {
+        "optionId": "09-v2-q08-b",
+        "error": "用已有身份摘要替代行动责任",
+        "whyNot": "日期房号不说明待回报检查的负责人或时限。"
+      },
+      {
+        "optionId": "09-v2-q08-c",
+        "error": "把临床背景当行动归属",
+        "whyNot": "检查背景有价值，但未回答这项待回报结果由谁何时核对。"
+      }
+    ],
+    "answerEvidence": "概况和状态已有，未完成检查缺责任与核对时限；AHRQ行动列表要求任务、时限和归属。",
+    "factSources": [
+      {
+        "url": "https://www.ahrq.gov/teamstepps-program/curriculum/communication/tools/ipass.html",
+        "title": "AHRQ — Tool: I-PASS",
+        "checkedAt": "2026-10-03",
+        "supports": "交接行动列表要包含任务、时限与责任；不只给患者摘要。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q9",
+    "sourceId": "09-q9",
+    "changeType": "revise",
+    "revisionReason": "保留指标激励随情境改变的目标，明确双目标与暂停情境，避免技术天然成瘾断言。 独立复审或主编辑复查后：把删除全部历史凑项换成合理的保留历史但中断计数规则，并明确连续照护的产品目标。",
+    "concept": "健康目标与异常反馈",
+    "objective": "选择不会惩罚遵循健康建议的应用规则",
+    "cognitiveOperation": "比较",
+    "context": "活动追踪应用的暂停功能",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "用题干给定目标评价奖励规则",
+    "optionIds": [
+      "09-q9-a",
+      "09-q9-b",
+      "09-q9-c"
+    ],
+    "answerOptionId": "09-q9-b",
+    "distractors": [
+      {
+        "optionId": "09-q9-a",
+        "error": "用同一运动量要求维持照护连续性",
+        "whyNot": "这会诱导违反已有休息建议。"
+      },
+      {
+        "optionId": "09-q9-c",
+        "error": "把保留历史与持续照护计数等同",
+        "whyNot": "保留历史但中断计数，未满足题干对两种照护行为的连续记录目标。"
+      }
+    ],
+    "answerEvidence": "两个目标明示为保留连续照护记录，以及遵守已有休息建议。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "09-v2-q10",
+    "sourceId": "09-q10",
+    "changeType": "replace",
+    "revisionReason": "原题从费用增加断定预防不足，因果与成本结论越界；替换为健康预防数据的基数判读，用新ID。",
+    "concept": "预防与绝对风险",
+    "objective": "从同规模假设数据计算预防效果",
+    "cognitiveOperation": "计算",
+    "context": "预防项目示例数据",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "基数固定，区分人数差与百分比降幅",
+    "optionIds": [
+      "09-v2-q10-a",
+      "09-v2-q10-b",
+      "09-v2-q10-c"
+    ],
+    "answerOptionId": "09-v2-q10-a",
+    "distractors": [
+      {
+        "optionId": "09-v2-q10-b",
+        "error": "把参加组病例数当减少数",
+        "whyNot": "30是参加组病例数，减少数须用50减30。"
+      },
+      {
+        "optionId": "09-v2-q10-c",
+        "error": "混同相对百分比与人数",
+        "whyNot": "40%相对降幅不能写成40例。"
+      }
+    ],
+    "answerEvidence": "同样1000人，题目只问人数差，50−30=20；40是相对百分比而非人数。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q11",
+    "sourceId": "09-q11",
+    "changeType": "revise",
+    "revisionReason": "保留微小健康数据变化与判断边界，改成明示误差模型，去除对焦虑的诊断暗示。",
+    "concept": "健康测量与重复数据",
+    "objective": "在给定测量范围内判断一次读数的证据限制",
+    "cognitiveOperation": "判断证据",
+    "context": "教学用测量设备对照记录",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分测量波动与确定身体变化，不作诊断",
+    "optionIds": [
+      "09-q11-a",
+      "09-q11-b",
+      "09-q11-c"
+    ],
+    "answerOptionId": "09-q11-b",
+    "distractors": [
+      {
+        "optionId": "09-q11-a",
+        "error": "只看较低读数的许可范围",
+        "whyNot": "75–76不在第二读数80的77–83范围内。"
+      },
+      {
+        "optionId": "09-q11-c",
+        "error": "只看较高读数的许可范围",
+        "whyNot": "82–83不在第一读数78的75–81范围内。"
+      }
+    ],
+    "answerEvidence": "[78−3,78+3]∩[80−3,80+3]=[77,81]，两侧区间分别不属于另一读数许可范围。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "09-q12",
+    "sourceId": "09-q12",
+    "changeType": "revise",
+    "revisionReason": "保留社会支持与孤独感的有效目标，按记录区分三类支持，不把倾诉等同解决全部问题。",
+    "concept": "情感支持与实际援助",
+    "objective": "从互助记录辨认已经发生的支持类型",
+    "cognitiveOperation": "辨认",
+    "context": "社区互助小组",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分被理解、实物援助与治疗结果",
+    "optionIds": [
+      "09-q12-a",
+      "09-q12-b",
+      "09-q12-c"
+    ],
+    "answerOptionId": "09-q12-c",
+    "distractors": [
+      {
+        "optionId": "09-q12-a",
+        "error": "把情感改善当成钱物援助",
+        "whyNot": "题干排除提供金钱实物，不能称实际援助。"
+      },
+      {
+        "optionId": "09-q12-b",
+        "error": "把互助倾听当成专业诊疗",
+        "whyNot": "题干排除专业治疗，互助记录不证明诊疗。"
+      }
+    ],
+    "answerEvidence": "直接记录倾听、理解和主观孤独感变化；未发生钱物援助或诊疗。",
+    "factSources": [
+      {
+        "url": "https://www.who.int/news-room/questions-and-answers/item/social-connection",
+        "title": "WHO — Social connection",
+        "checkedAt": "2026-10-03",
+        "supports": "社会连接有支持功能与关系质量；主观孤独不同于客观问题是否已经解决。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-v2-q01",
+    "sourceId": "10-q1",
+    "changeType": "replace",
+    "revisionReason": "原题是服务关怀口号，替换为明确到达任务与信息设计目标并用新ID。",
+    "concept": "服务信息与到达任务",
+    "objective": "为陌生住客选择解决当前寻路需求的信息",
+    "cognitiveOperation": "应用",
+    "context": "酒店到达与入住指引",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "目标和所缺信息明确，不评判关怀口号",
+    "optionIds": [
+      "10-v2-q01-a",
+      "10-v2-q01-b",
+      "10-v2-q01-c"
+    ],
+    "answerOptionId": "10-v2-q01-b",
+    "distractors": [
+      {
+        "optionId": "10-v2-q01-a",
+        "error": "提供有用资料却未回应当前任务",
+        "whyNot": "营业时间不说明如何到前台和电梯。"
+      },
+      {
+        "optionId": "10-v2-q01-c",
+        "error": "用完整说明覆盖所有服务需求",
+        "whyNot": "电器说明针对房内操作，不能解决酒店寻路。"
+      }
+    ],
+    "answerEvidence": "明示当前缺口为前台与电梯位置，纸质路线图直接提供，另外两项不提供位置路线。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q2",
+    "sourceId": "10-q2",
+    "changeType": "revise",
+    "revisionReason": "保留清洁不等于安全的基础目标，比较三种真实工作检查而非装饰项。",
+    "concept": "清洁与湿滑风险",
+    "objective": "辨认撤除湿滑警示需要的风险证据",
+    "cognitiveOperation": "辨认",
+    "context": "湿地板检查",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分清洁完成和滑倒风险消除",
+    "optionIds": [
+      "10-q2-a",
+      "10-q2-b",
+      "10-q2-c"
+    ],
+    "answerOptionId": "10-q2-c",
+    "distractors": [
+      {
+        "optionId": "10-q2-a",
+        "error": "把行政完成状态当风险消除",
+        "whyNot": "登记完成不能说明是否残留水膜。"
+      },
+      {
+        "optionId": "10-q2-b",
+        "error": "把警示措施当风险源消除",
+        "whyNot": "标牌仍在原处不说明实际湿滑状态。"
+      }
+    ],
+    "answerEvidence": "当前风险源明示为光滑地面水膜，只有地面状态直接检查它是否仍存在。",
+    "factSources": [
+      {
+        "url": "https://www.hse.gov.uk/cleaning/topics/slips.htm",
+        "title": "UK HSE — Slips and trips in cleaning",
+        "checkedAt": "2026-10-03",
+        "supports": "清洁后的光滑湿地面仍有滑倒风险；标牌提示风险但不消除风险。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q3",
+    "sourceId": "10-q3",
+    "changeType": "revise",
+    "revisionReason": "保留套餐协调场景，用客人明示承诺和可实现时间表限定唯一安排，不暗示普遍上菜顺序。",
+    "concept": "服务承诺与时间协调",
+    "objective": "根据同步套餐承诺选择调度安排",
+    "cognitiveOperation": "应用",
+    "context": "同桌约定套餐",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "核对时间窗和同桌同步条件",
+    "optionIds": [
+      "10-q3-a",
+      "10-q3-b",
+      "10-q3-c"
+    ],
+    "answerOptionId": "10-q3-a",
+    "distractors": [
+      {
+        "optionId": "10-q3-b",
+        "error": "只顾同步，忽略课程顺序与时间窗",
+        "whyNot": "汤18:55主菜18:35违反顺序和各自时间窗。"
+      },
+      {
+        "optionId": "10-q3-c",
+        "error": "只顾部分时间正确，忽略同桌同步",
+        "whyNot": "18:45汤超出指定窗且与另一人不同步。"
+      }
+    ],
+    "answerEvidence": "正确项汤18:35与主菜18:55分别落在时间窗且同桌同步；另外两项分别倒序和不同步。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q4",
+    "sourceId": "10-q4",
+    "changeType": "revise",
+    "revisionReason": "保留瓶颈前准备信息，补处理时间与可前移条件，不涉及实际机场安检规则。 独立复审或主编辑复查后：中文也明确出口外，与英文条件对齐；各项同为直接流程动作。",
+    "concept": "瓶颈前的信息准备",
+    "objective": "依据处理时间构成选择减等待措施",
+    "cognitiveOperation": "应用",
+    "context": "检查站托盘准备",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "比较真实节省的瓶颈时间",
+    "optionIds": [
+      "10-q4-a",
+      "10-q4-b",
+      "10-q4-c"
+    ],
+    "answerOptionId": "10-q4-a",
+    "distractors": [
+      {
+        "optionId": "10-q4-b",
+        "error": "只改变位置却假定增加并行能力",
+        "whyNot": "即使把20秒检查完整移出，也只移出20秒，准备仍占40秒；前移准备可移出40秒。"
+      },
+      {
+        "optionId": "10-q4-c",
+        "error": "把等候舒适度当处理速度",
+        "whyNot": "加座椅不改变每人的通道占用。"
+      }
+    ],
+    "answerEvidence": "前移准备能移出40秒，使占用变20秒；移动检查即使完整移出也至多节省20秒，加座椅不节省。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  },
+  {
+    "id": "10-v2-q05",
+    "sourceId": "10-q5",
+    "changeType": "replace",
+    "revisionReason": "原题声称售快速票让所有人变慢，条件不足；替换为明示容量与队列计算，并用新ID。",
+    "concept": "优先权与服务容量",
+    "objective": "计算固定容量下尚未处理的排队人数",
+    "cognitiveOperation": "计算",
+    "context": "游乐设施优先队与普通队",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "总人数减容量，优先次序不创造座位",
+    "optionIds": [
+      "10-v2-q05-a",
+      "10-v2-q05-b",
+      "10-v2-q05-c"
+    ],
+    "answerOptionId": "10-v2-q05-b",
+    "distractors": [
+      {
+        "optionId": "10-v2-q05-a",
+        "error": "只看优先队或错误相减",
+        "whyNot": "两队合计45人，减30不是10。"
+      },
+      {
+        "optionId": "10-v2-q05-c",
+        "error": "只看普通队人数",
+        "whyNot": "一轮可服务30人，不能把普通队25人全当必然留下。"
+      }
+    ],
+    "answerEvidence": "20+25−30=15人，题干明确没有新加入、每人一座。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-v2-q06",
+    "sourceId": "10-q6",
+    "changeType": "replace",
+    "revisionReason": "原题与其他科只奖速度题重复；替换为配送的双维服务水平比较，并用新ID。",
+    "concept": "配送服务水平",
+    "objective": "按准时率与完好率双条件选择方案",
+    "cognitiveOperation": "比较",
+    "context": "包裹配送数据",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "两项条件须同时满足",
+    "optionIds": [
+      "10-v2-q06-a",
+      "10-v2-q06-b",
+      "10-v2-q06-c"
+    ],
+    "answerOptionId": "10-v2-q06-b",
+    "distractors": [
+      {
+        "optionId": "10-v2-q06-a",
+        "error": "只看准时率",
+        "whyNot": "东线损坏4件超过最多2件。"
+      },
+      {
+        "optionId": "10-v2-q06-c",
+        "error": "只看低损坏率",
+        "whyNot": "南线只有93件准时，低于95件门槛。"
+      }
+    ],
+    "answerEvidence": "东线:4>2失败；西线:95≥95且2≤2；南线:93<95失败。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q7",
+    "sourceId": "10-q7",
+    "changeType": "revise",
+    "revisionReason": "保留自动化与例外处理，限定已有条款和卡住节点，不将人工本身视为优越。",
+    "concept": "标准服务与例外升级",
+    "objective": "辨认现有流程未覆盖的人工升级节点",
+    "cognitiveOperation": "应用",
+    "context": "酒店自动退款流程",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "按给定规则判断无路径的例外",
+    "optionIds": [
+      "10-q7-a",
+      "10-q7-b",
+      "10-q7-c"
+    ],
+    "answerOptionId": "10-q7-c",
+    "distractors": [
+      {
+        "optionId": "10-q7-a",
+        "error": "重复标准路径来处理路径例外",
+        "whyNot": "相同完整记录要求仍阻止提交。"
+      },
+      {
+        "optionId": "10-q7-b",
+        "error": "优化能成功的普通订单",
+        "whyNot": "完整记录订单不是本例缺口，不能让缺记录订单进入核验。"
+      }
+    ],
+    "answerEvidence": "允许人工核验却没有入口，材料提交通道直接连接允许的例外，其他方案仍限完整记录。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q8",
+    "sourceId": "10-q8",
+    "changeType": "revise",
+    "revisionReason": "保留飞机衔接与缓冲，用同一资源、必需周转和时刻计算，不作航空操作指令。",
+    "concept": "同一飞机衔接与缓冲",
+    "objective": "计算到达延误经过周转缓冲后的影响",
+    "cognitiveOperation": "计算",
+    "context": "明确周转规则的航班示例",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "比较最早可用时间与计划出发时间",
+    "optionIds": [
+      "10-q8-a",
+      "10-q8-b",
+      "10-q8-c"
+    ],
+    "answerOptionId": "10-q8-b",
+    "distractors": [
+      {
+        "optionId": "10-q8-a",
+        "error": "把原有缓冲当最终延误",
+        "whyNot": "10分钟是计划余量，实际超出余量后仍晚15分钟。"
+      },
+      {
+        "optionId": "10-q8-c",
+        "error": "把到达延误全部传给起飞",
+        "whyNot": "原来10分钟余量可以吸收一部分到达延误。"
+      }
+    ],
+    "answerEvidence": "10:25+00:30=10:55；10:55−10:40=15分钟。",
+    "factSources": [
+      {
+        "url": "https://www.eurocontrol.int/news/delays-three-questions-and-many-answers",
+        "title": "EUROCONTROL — Delays: three questions and many answers",
+        "checkedAt": "2026-10-03",
+        "supports": "前序飞机、机组等晚到可造成反应性延误；周转余量可以吸收部分延误。题中分钟数是教学示例。"
+      }
+    ],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q9",
+    "sourceId": "10-q9",
+    "changeType": "revise",
+    "revisionReason": "保留标准化与适应性，给明确沟通需求，避免把个性化语气等同服务能力。",
+    "concept": "服务标准与需求适应",
+    "objective": "辨认在守住服务标准下的合理调整",
+    "cognitiveOperation": "应用",
+    "context": "需要文字沟通的访客",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "同一信息目标，沟通渠道可以调整",
+    "optionIds": [
+      "10-q9-a",
+      "10-q9-b",
+      "10-q9-c"
+    ],
+    "answerOptionId": "10-q9-a",
+    "distractors": [
+      {
+        "optionId": "10-q9-b",
+        "error": "用重复次数代替合适沟通渠道",
+        "whyNot": "访客已明确无法听清，重复相同口头方式未回应需求。"
+      },
+      {
+        "optionId": "10-q9-c",
+        "error": "为简化而删掉标准要求",
+        "whyNot": "材料和时限仍是标准明确必传内容。"
+      }
+    ],
+    "answerEvidence": "文字可读且保留地点、材料、时限三项，另外两项分别仍用不可听渠道或遗漏内容。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-v2-q10",
+    "sourceId": "10-q10",
+    "changeType": "replace",
+    "revisionReason": "原题由车辆增加猜拥堵机制且跨科重复；替换为空驶和替代行程的具体净量计算，用新ID。",
+    "concept": "道路行驶与空驶",
+    "objective": "根据车辆公里数据识别交通负荷变化",
+    "cognitiveOperation": "计算",
+    "context": "示例网约车调查",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "客运里程与空驶里程相加再比较替代里程",
+    "optionIds": [
+      "10-v2-q10-a",
+      "10-v2-q10-b",
+      "10-v2-q10-c"
+    ],
+    "answerOptionId": "10-v2-q10-b",
+    "distractors": [
+      {
+        "optionId": "10-v2-q10-a",
+        "error": "只算载客增加，遗漏空驶",
+        "whyNot": "800−600=200但未加200公里空驶。"
+      },
+      {
+        "optionId": "10-v2-q10-c",
+        "error": "只算新增总量，未扣替代",
+        "whyNot": "1000是网约车总行驶，不是全道路净增加。"
+      }
+    ],
+    "answerEvidence": "800+200−600=400公里；其余行驶不变，不推断速度或拥堵。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q11",
+    "sourceId": "10-q11",
+    "changeType": "revise",
+    "revisionReason": "保留应急准备目标，纠正旧题把响应训练当成灾害不发生，使用可观察演练证据。",
+    "concept": "应急演练与响应证据",
+    "objective": "用演练结果判断响应流程改善而非灾害减少",
+    "cognitiveOperation": "判断证据",
+    "context": "场馆演练前后记录",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "将演练指标与真实事件发生率区分",
+    "optionIds": [
+      "10-q11-a",
+      "10-q11-b",
+      "10-q11-c"
+    ],
+    "answerOptionId": "10-q11-c",
+    "distractors": [
+      {
+        "optionId": "10-q11-a",
+        "error": "把响应能力当事件发生率",
+        "whyNot": "演练数据未测真实灾害出现次数。"
+      },
+      {
+        "optionId": "10-q11-b",
+        "error": "把一种情景外推到所有突发情况",
+        "whyNot": "题干只测同一个模拟情景。"
+      }
+    ],
+    "answerEvidence": "8→5分钟、6→1项直接对应演练响应和交接；无真实发生率或其他情景数据。",
+    "factSources": [
+      {
+        "url": "https://preptoolkit.fema.gov/web/hseep-resources",
+        "title": "FEMA — Homeland Security Exercise and Evaluation Program",
+        "checkedAt": "2026-10-03",
+        "supports": "演练用于检验能力、发现问题和改进响应；不把演练表现当成灾难发生概率。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "writer-reviewed / awaiting-independent-review"
+  },
+  {
+    "id": "10-q12",
+    "sourceId": "10-q12",
+    "changeType": "revise",
+    "revisionReason": "保留多触点协调目标，改成可定位的冲突，不用体验共同塑造的重复口号。 独立复审或主编辑复查后：用同一到达任务中的内容、书面清晰和播音清晰作比较，删除价格与音乐无关凑项。",
+    "concept": "跨触点服务一致性",
+    "objective": "定位到达过程中相互矛盾的服务信息",
+    "cognitiveOperation": "应用",
+    "context": "活动路线与广播冲突",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "识别共同影响寻路的两个触点",
+    "optionIds": [
+      "10-q12-a",
+      "10-q12-b",
+      "10-q12-c"
+    ],
+    "answerOptionId": "10-q12-a",
+    "distractors": [
+      {
+        "optionId": "10-q12-b",
+        "error": "把书面信息更清晰当成内容一致",
+        "whyNot": "两处已各自清楚，字号和排版不能修正方向矛盾。"
+      },
+      {
+        "optionId": "10-q12-c",
+        "error": "把广播更易听清当成内容一致",
+        "whyNot": "提高可听清程度不能让东侧与西侧两条方向相同。"
+      }
+    ],
+    "answerEvidence": "东西大厅矛盾分别来自书面路线和位置广播，只有联合核对这一对直接消除指定冲突。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "independent-review-completed / revisions-awaiting-recheck"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-03",
+  "reviewer": "write_map_a — independent Explore recheck",
+  "scope": "Final changes in lens-v2-001, lens-v2-003, task-v2-007 and task-v2-008; closure of required and optional concerns in explore-final-recheck.json",
+  "sourceHashes": {
+    "parts/explore-20.json": "bb22a61ae61bade68aaa625459e5945a9b2f4bc37b4efc50f43db5ec6bc4285e",
+    "parts/editorial-explore.json": "a0279a7f2eade1aefb47d076e0ee0b55733b3b8cd6cac1dd1688b0481bccc8c0",
+    "review/explore-revisions.json": "ec5fbfcf5dc89ab378000a1e9e8d38c507b19a63efbbf22daa006c87a0089a9a"
+  },
+  "summary": {
+    "reviewedChanges": 4,
+    "pass": 4,
+    "requiredResiduals": 0,
+    "status": "Reviewed changes acceptable for editorial candidate; not user tested"
+  },
+  "entries": [
+    {
+      "id": "lens-v2-001",
+      "judgement": "pass",
+      "closedIssue": "题干明确调整休闲安排并了解附近线下活动，休闲设施开放与使用记录与目标自然关联。",
+      "mapping": "06自动连播、05时长分布、09疲惫休息、10休闲设施分别有真实动作；不把线下活动定义成更正确或更健康。",
+      "bilingual": "线上超时与附近线下活动条件在两语对应。",
+      "form": "10项虽含服务时段与使用记录，详略差来自调查对象，不独占价值评价或专业解释。",
+      "residuals": []
+    },
+    {
+      "id": "lens-v2-003",
+      "judgement": "pass",
+      "closedIssue": "英文unaided补回中文独立完成条件，reflectionEn同步。",
+      "mapping": "01讲解后独立完成与00读懂指引并复述步骤的区别保留。",
+      "bilingual": "after instruction与讲解后、unaided与独立对应。",
+      "form": "英文该项较长来自必要时间与独立条件，不含额外专家标签；不靠给其他项补字使长度一致。",
+      "residuals": []
+    },
+    {
+      "id": "task-v2-007",
+      "judgement": "pass",
+      "closedIssue": "英语answers to common questions明确包括回答，与中文问答对齐。",
+      "mapping": "00功能表达保持，工程07短表述保留真实图纸和装配对象。",
+      "bilingual": "步骤与问答两类输出在两语对应。",
+      "form": "未增加正确偏好、道德评价或新的紧迫责任。",
+      "residuals": []
+    },
+    {
+      "id": "task-v2-008",
+      "judgement": "pass",
+      "closedIssue": "统计项明确同类视频的匿名使用记录，并聚焦分布图，避免不明对象和双输出堆叠。",
+      "mapping": "05数值分布是实际统计操作，与01教学、02视听、09健康核查分开。",
+      "bilingual": "同类视频、匿名记录、分布图三层在两语一致。",
+      "form": "健康项不被加长为更严谨选项，统计项清楚且不需新增个人追踪。",
+      "residuals": []
+    }
+  ],
+  "limitations": [
+    "本文件复核四处改动，连同explore-final-recheck.json的其余逐题判断使用；不构成真实用户试答或稳定偏好量表验证。",
+    "09方向操作范围仍较窄的已记录限制继续保留，不因本次closure或曝光分布合格而取消。"
+  ]
+}

@@ -1,0 +1,786 @@
+[
+  {
+    "id": "08-q1",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q1-a",
+    "enChosenOptionId": "08-q1-a",
+    "keyedAnswerOptionId": "08-q1-a",
+    "answerAgreement": true,
+    "reasonZh": "高氮组叶旺但果少，只有该项同时保留两条观察。",
+    "reasonEn": "The higher-N group has more foliage but fewer fruits; only this statement fits both observations.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          14,
+          13,
+          13
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      },
+      {
+        "language": "en",
+        "lengths": [
+          59,
+          56,
+          56
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q2",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q2-b",
+    "enChosenOptionId": "08-q2-b",
+    "keyedAnswerOptionId": "08-q2-b",
+    "answerAgreement": true,
+    "reasonZh": "已给孔隙减少；较少的大孔隙使水通过土壤的通道受限。",
+    "reasonEn": "Fewer large pore spaces restrict pathways for infiltrating water.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q3",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q3-c",
+    "enChosenOptionId": "08-q3-c",
+    "keyedAnswerOptionId": "08-q3-c",
+    "answerAgreement": true,
+    "reasonZh": "害虫不能在豆类繁殖，因此豆类中断给定寄主供应。",
+    "reasonEn": "Beans are the specified nonhost, unlike tomatoes and potatoes.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [
+      {
+        "severity": "optional",
+        "type": "condition-clarification",
+        "problem": "“换一个番茄品种”若被理解成特定抗虫品种，需新增题干没有给的抗性条件才可能变为第二答案。现有给定寄主范围支持豆类，但可把候选番茄也可繁殖明示得更稳。",
+        "suggestion": "说明两个候选番茄品种均是该虫寄主；不用讲所有真实番茄品种都一样。"
+      }
+    ],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q4",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q4-b",
+    "enChosenOptionId": "08-q4-b",
+    "keyedAnswerOptionId": "08-q4-b",
+    "answerAgreement": true,
+    "reasonZh": "总量达到100吨即停止直接限定总额；10船各15最多150，天数不限定吨数。",
+    "reasonEn": "Stopping at a combined 100 tonnes caps the total; 10×15 allows 150 and days alone do not cap catch.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          36,
+          47,
+          36
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q5",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q5-c",
+    "enChosenOptionId": "08-q5-c",
+    "keyedAnswerOptionId": "08-q5-c",
+    "answerAgreement": true,
+    "reasonZh": "饲料和挤奶相同、仅遮阴降温不同；热浪与呼吸及产奶变化最对应散热热应激。",
+    "reasonEn": "Only cooling differs; unchanged feed and milking exclude the other stated mechanisms.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          44,
+          40,
+          38
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q6",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q6-a",
+    "enChosenOptionId": "08-q6-a",
+    "keyedAnswerOptionId": "08-q6-a",
+    "answerAgreement": true,
+    "reasonZh": "移除相邻树降低保留树的资源竞争，不改变区域降雨或遗传特征。",
+    "reasonEn": "Removing neighbours reduces resource competition, not inherited traits or regional rainfall.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          33,
+          39,
+          41
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "other-listed-issue-requires-revision"
+      }
+    ],
+    "issues": [
+      {
+        "severity": "revise",
+        "type": "distractor-plausibility",
+        "problem": "遗传根系改变是欠缺可信误解来源的强排除项；地区年降雨与局部资源竞争也隔得较远。题干本身重复了资源竞争目标，读者很容易只靠领域标签选答案。",
+        "requiredChange": "保留间伐/邻木竞争目标，换为相近林分效应的可信选项，或给简单资源/密度模型做具体预测；不要只给遗传错误项补长句。"
+      }
+    ],
+    "status": "revision-required"
+  },
+  {
+    "id": "08-q7",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q7-c",
+    "enChosenOptionId": "08-q7-c",
+    "keyedAnswerOptionId": "08-q7-c",
+    "answerAgreement": true,
+    "reasonZh": "混种任一病害损失0.5×60%+0.5×10%=35%，单一种植最坏60%。",
+    "reasonEn": "Half-and-half loses 35% under either disease; either monoculture has a 60% worst case.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-v2-q08",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-v2-q08-a",
+    "enChosenOptionId": "08-v2-q08-a",
+    "keyedAnswerOptionId": "08-v2-q08-a",
+    "answerAgreement": true,
+    "reasonZh": "1000+200−300=900吨。",
+    "reasonEn": "1,000 + 200 − 300 = 900 tonnes.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q9",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q9-a",
+    "enChosenOptionId": "08-q9-a",
+    "keyedAnswerOptionId": "08-q9-a",
+    "answerAgreement": true,
+    "reasonZh": "随机补花粉使结果率上升，直接支持原先到花的花粉不足。",
+    "reasonEn": "Adding pollen to randomly assigned flowers improves fruit set, supporting pollen limitation.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          33,
+          30,
+          31
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q10",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q10-c",
+    "enChosenOptionId": "08-q10-c",
+    "keyedAnswerOptionId": "08-q10-c",
+    "answerAgreement": true,
+    "reasonZh": "已给营养住房健康满足，但明确缺走动嗅闻互动，指向行为机会。",
+    "reasonEn": "Food, housing and checks are adequate, while movement, sniffing and interaction are restricted.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-q11",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-q11-a",
+    "enChosenOptionId": "08-q11-a",
+    "keyedAnswerOptionId": "08-q11-a",
+    "answerAgreement": true,
+    "reasonZh": "地面到树冠的连续燃料让火可能向上蔓延；未给树距增加或土湿变化。",
+    "reasonEn": "A continuous fuel path supports upward spread into crowns, with no changed spacing or soil moisture stated.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "08-v2-q12",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "08-v2-q12-b",
+    "enChosenOptionId": "08-v2-q12-b",
+    "keyedAnswerOptionId": "08-v2-q12-b",
+    "answerAgreement": true,
+    "reasonZh": "70×1.2+30=114万元。",
+    "reasonEn": "700,000×1.2 + 300,000 = 1.14 million yuan.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q1",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q1-b",
+    "enChosenOptionId": "09-q1-b",
+    "keyedAnswerOptionId": "09-q1-b",
+    "answerAgreement": true,
+    "reasonZh": "轻柔并清洁各牙面同时满足轻柔与完整条件。",
+    "reasonEn": "Gentle pressure on every surface meets both stated conditions.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q2",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q2-a",
+    "enChosenOptionId": "09-q2-a",
+    "keyedAnswerOptionId": "09-q2-a",
+    "answerAgreement": true,
+    "reasonZh": "同组随机交替条件下，观察是含咖啡因入睡更慢；未测睡眠需要。",
+    "reasonEn": "The observed direction is slower sleep onset in this group, with sleep need unmeasured.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q3",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q3-b",
+    "enChosenOptionId": "09-q3-b",
+    "keyedAnswerOptionId": "09-q3-b",
+    "answerAgreement": true,
+    "reasonZh": "少量增加时长并观察适应对应逐步增加；其余同时加大强度或时长。",
+    "reasonEn": "Small added duration with a tolerance check fits gradual progression.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          15,
+          14,
+          14
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q4",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q4-b",
+    "enChosenOptionId": "09-q4-b",
+    "keyedAnswerOptionId": "09-q4-b",
+    "answerAgreement": true,
+    "reasonZh": "新风交换直接稀释或带走共享空气颗粒，不作用于手桌接触或识别症状。",
+    "reasonEn": "Fresh-air exchange directly changes particle accumulation, rather than desk contact or symptom recognition.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          12,
+          11,
+          11
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      },
+      {
+        "language": "en",
+        "lengths": [
+          47,
+          33,
+          41
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [
+      {
+        "severity": "optional",
+        "type": "longest-option-review",
+        "problem": "英文正确项47个去空白字符，错误项33和41；最长但没有独占限定词或两层论证，从只看选项并不能可靠判断哪个正确，不据长度自动退回。",
+        "suggestion": "可精简为相近名词短语如“Particle buildup in shared air”，与接触频率、症状识别时间并列；不加废话。"
+      }
+    ],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-v2-q05",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-v2-q05-a",
+    "enChosenOptionId": "09-v2-q05-a",
+    "keyedAnswerOptionId": "09-v2-q05-a",
+    "answerAgreement": true,
+    "reasonZh": "报告对象明示细菌耐抗生素A，不是人体耐受或病毒。",
+    "reasonEn": "The report names bacteria resisting antibiotic A, not patient tolerance or viruses.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          47,
+          45,
+          44
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q6",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q6-b",
+    "enChosenOptionId": "09-q6-b",
+    "keyedAnswerOptionId": "09-q6-b",
+    "answerAgreement": true,
+    "reasonZh": "9:40预约须9:30签到，9:20抵达可做到；8:30和9:00太早。",
+    "reasonEn": "A 09:40 appointment requires 09:30 check-in, reachable after 09:20 arrival.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-v2-q07",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-v2-q07-c",
+    "enChosenOptionId": "09-v2-q07-c",
+    "keyedAnswerOptionId": "09-v2-q07-c",
+    "answerAgreement": true,
+    "reasonZh": "进食前清洁手打断手上病原到口的路径。",
+    "reasonEn": "Cleaning hands before eating interrupts the hand-to-mouth transfer.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-v2-q08",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-v2-q08-a",
+    "enChosenOptionId": "09-v2-q08-a",
+    "keyedAnswerOptionId": "09-v2-q08-a",
+    "answerAgreement": true,
+    "reasonZh": "谁核对及何时核对是让未完成任务可追踪的缺项。",
+    "reasonEn": "Named responsibility and a checking deadline make the pending task traceable.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q9",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q9-b",
+    "enChosenOptionId": "09-q9-b",
+    "keyedAnswerOptionId": "09-q9-b",
+    "answerAgreement": true,
+    "reasonZh": "记录休息照护可保连续且不要求违背建议运动；另两项制造运动压力或抹历史。",
+    "reasonEn": "Logging advised rest keeps care continuity without requiring exercise against advice.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [
+      {
+        "severity": "revise",
+        "type": "moral-and-plausibility-cue",
+        "problem": "“删除全部历史”是惩罚性极强的凑数方案，与正确项的支持性语气形成高低；它的删除行为也不是通常的连续计数规则。",
+        "requiredChange": "换成真实且可比较的连续记录/暂停规则，例如保留历史但中断连续计数；若这样产生第二答案，明确本题希望“按建议休息不失去连续照护记录”，再保持选项平行。"
+      }
+    ],
+    "status": "revision-required"
+  },
+  {
+    "id": "09-v2-q10",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-v2-q10-a",
+    "enChosenOptionId": "09-v2-q10-a",
+    "keyedAnswerOptionId": "09-v2-q10-a",
+    "answerAgreement": true,
+    "reasonZh": "50−30=20个，问人数差而非相对风险。",
+    "reasonEn": "50 − 30 = 20 fewer cases, not a relative-risk calculation.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q11",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q11-b",
+    "enChosenOptionId": "09-q11-b",
+    "keyedAnswerOptionId": "09-q11-b",
+    "answerAgreement": true,
+    "reasonZh": "78±3与80±3分别为75–81和77–83，交集77–81。",
+    "reasonEn": "The intervals 75–81 and 77–83 intersect at 77–81.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "09-q12",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "09-q12-c",
+    "enChosenOptionId": "09-q12-c",
+    "keyedAnswerOptionId": "09-q12-c",
+    "answerAgreement": true,
+    "reasonZh": "倾听被理解直接体现情感支持，未记录财物或诊疗。",
+    "reasonEn": "Listening and feeling understood directly demonstrate emotional support.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          35,
+          43,
+          48
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-v2-q01",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-v2-q01-b",
+    "enChosenOptionId": "10-v2-q01-b",
+    "keyedAnswerOptionId": "10-v2-q01-b",
+    "answerAgreement": true,
+    "reasonZh": "困难在找前台电梯，路线图直接给空间引导。",
+    "reasonEn": "A route map directly addresses finding reception and lifts.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q2",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q2-c",
+    "enChosenOptionId": "10-q2-c",
+    "keyedAnswerOptionId": "10-q2-c",
+    "answerAgreement": true,
+    "reasonZh": "所述滑倒风险源为表面水膜，应直接核对水膜仍否存在。",
+    "reasonEn": "Check the water film itself to assess the stated hazard source.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q3",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q3-a",
+    "enChosenOptionId": "10-q3-a",
+    "keyedAnswerOptionId": "10-q3-a",
+    "answerAgreement": true,
+    "reasonZh": "两人汤18:35主菜18:55都在对应窗口且同步顺序正确。",
+    "reasonEn": "Soup at 18:35 and mains at 18:55 meet the windows, order and simultaneous-service rule.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q4",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q4-a",
+    "enChosenOptionId": "10-q4-a",
+    "keyedAnswerOptionId": "10-q4-a",
+    "answerAgreement": true,
+    "reasonZh": "提前40秒准备可把通道占用60减到20；移走检查最多减20，座椅不改占用。",
+    "reasonEn": "Moving preparation removes 40 of 60 seconds; moving the check removes only 20, and seats do not change lane occupation.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "distractor-location-needs-alignment",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          50,
+          47,
+          47
+        ],
+        "assessment": "逐项比较为同类短语或同粒度数据，差异不含独占长机制、双重理由或限定强弱；不是仅因最长而通过。",
+        "result": "other-listed-issue-requires-revision"
+      }
+    ],
+    "issues": [
+      {
+        "severity": "revise",
+        "type": "bilingual-condition",
+        "problem": "中文错误项是把检查移到通道出口，英文是明确移到出口之外。位置会改变该项是否仍占通道；正确项虽仍节省最多，但两语言条件不等量。",
+        "requiredChange": "中文同样写“把20秒检查完整移到通道出口之外”，或让英文保持同样未明的出口位置。前者更清楚；保留解析40秒优于20秒的比较。"
+      }
+    ],
+    "status": "revision-required"
+  },
+  {
+    "id": "10-v2-q05",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-v2-q05-b",
+    "enChosenOptionId": "10-v2-q05-b",
+    "keyedAnswerOptionId": "10-v2-q05-b",
+    "answerAgreement": true,
+    "reasonZh": "总45人、30座，一轮最少剩15。",
+    "reasonEn": "45 guests minus 30 seats leaves at least 15.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-v2-q06",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-v2-q06-b",
+    "enChosenOptionId": "10-v2-q06-b",
+    "keyedAnswerOptionId": "10-v2-q06-b",
+    "answerAgreement": true,
+    "reasonZh": "西线95准时满足下限，2损坏满足上限；东线4损坏，南线93准时各失败。",
+    "reasonEn": "West meets 95 on-time and at most 2 damaged; East and South each fail one limit.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q7",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q7-c",
+    "enChosenOptionId": "10-q7-c",
+    "keyedAnswerOptionId": "10-q7-c",
+    "answerAgreement": true,
+    "reasonZh": "已有允许人工核验的规则，但缺提交途径；开通人工通道解决该缺口。",
+    "reasonEn": "A manual-evidence route makes the already permitted exception usable.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q8",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q8-b",
+    "enChosenOptionId": "10-q8-b",
+    "keyedAnswerOptionId": "10-q8-b",
+    "answerAgreement": true,
+    "reasonZh": "10:25+30=10:55，较10:40晚15分钟。",
+    "reasonEn": "10:25 + 30 minutes = 10:55, which is 15 minutes late.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q9",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q9-a",
+    "enChosenOptionId": "10-q9-a",
+    "keyedAnswerOptionId": "10-q9-a",
+    "answerAgreement": true,
+    "reasonZh": "提供相同三项文字信息既满足内容标准又匹配阅读能力。",
+    "reasonEn": "The same three details in writing meet both the content standard and stated access need.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-v2-q10",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-v2-q10-b",
+    "enChosenOptionId": "10-v2-q10-b",
+    "keyedAnswerOptionId": "10-v2-q10-b",
+    "answerAgreement": true,
+    "reasonZh": "新增行驶800+200减被替代600=400公里。",
+    "reasonEn": "800 + 200 − 600 = 400 additional kilometres.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q11",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q11-c",
+    "enChosenOptionId": "10-q11-c",
+    "keyedAnswerOptionId": "10-q11-c",
+    "answerAgreement": true,
+    "reasonZh": "同情景演练8到5、漏传6到1直接改善，未测真实发生率和未演练情景。",
+    "reasonEn": "Measured drill response and handoffs improve; real incidence and untested scenarios are unmeasured.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "10-q12",
+    "reviewer": "write_map_b; did not author 08–10",
+    "zhChosenOptionId": "10-q12-a",
+    "enChosenOptionId": "10-q12-a",
+    "keyedAnswerOptionId": "10-q12-a",
+    "answerAgreement": true,
+    "reasonZh": "矛盾发生于书面东大厅与广播西大厅，应校核两处位置指引。",
+    "reasonEn": "The inconsistency is between written and spoken location directions.",
+    "uniqueAnswerAssessment": "未找到不新增或改变条件的第二个完整答案。",
+    "bilingualAssessment": "matched",
+    "explanationAssessment": "答案机制和证据相符，未用解析补足决定答案的隐藏条件；未发现选项序号依赖。",
+    "sourceAssessment": "已核对作者所记来源范围与当前主张的对应；来源由原作者检索核查，本复审不声称重新打开全部来源。虚构数值题已独立核算。",
+    "longestOptionReview": [],
+    "issues": [
+      {
+        "severity": "optional",
+        "type": "easy-goal-fit",
+        "problem": "答案是直接针对东西大厅矛盾的信息触点，另两项是其他服务触点，适合入门辨认但知识操作较浅。无额外道德或形式线索。",
+        "suggestion": "如后续试答几乎无人考虑错误项，可将干扰触点改成也提供位置但不是这次矛盾来源的指引；目前不强制复杂化。"
+      }
+    ],
+    "status": "independent-editorial-pass / awaiting-user-tryout"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "lens-v2-001",
+    "optionId": "lens-v2-001-opt-10",
+    "before": {
+      "zh": "记录当时可选的休息活动与实际选择。",
+      "en": "Record available ways to rest and the activity chosen."
+    },
+    "after": {
+      "zh": "记录附近休闲设施的开放时间和使用情况。",
+      "en": "Record opening hours and use of nearby leisure facilities."
+    }
+  },
+  {
+    "id": "task-v2-004",
+    "optionId": "task-v2-004-opt-09",
+    "before": {
+      "zh": "查阅健康资料，拟定桌面活动的休息提示。",
+      "en": "Use health information to prepare rest-break guidance."
+    },
+    "after": {
+      "zh": "根据健康资料，整理活动中的休息提示。",
+      "en": "Use health information to prepare rest-break guidance."
+    }
+  },
+  {
+    "id": "task-v2-005",
+    "optionId": "task-v2-005-opt-09",
+    "before": {
+      "zh": "核对活动中的饮水和身体不适提醒所依据的资料。",
+      "en": "Check sources for hydration and physical-discomfort guidance."
+    },
+    "after": {
+      "zh": "核对饮水与身体不适提醒的资料。",
+      "en": "Check sources for hydration and physical-discomfort guidance."
+    }
+  },
+  {
+    "id": "task-v2-008",
+    "optionId": "task-v2-008-opt-09",
+    "before": {
+      "zh": "核对视频中的疲惫和休息提示所引的健康资料。",
+      "en": "Check health sources behind guidance on tiredness and rest."
+    },
+    "after": {
+      "zh": "核对疲惫与休息提示的健康资料。",
+      "en": "Check health sources behind guidance on tiredness and rest."
+    }
+  },
+  {
+    "id": "task-v2-011",
+    "optionId": "task-v2-011-opt-09",
+    "before": {
+      "zh": "核对手部卫生与食物接触提示的健康依据。",
+      "en": "Check health guidance on hand hygiene and food contact."
+    },
+    "after": {
+      "zh": "根据资料，整理进餐前的手卫生提示。",
+      "en": "Use supplied guidance to prepare hand-hygiene reminders before eating."
+    }
+  },
+  {
+    "id": "task-v2-007",
+    "optionId": "task-v2-007-opt-07",
+    "before": {
+      "zh": "根据样件和图纸检查零件尺寸与装配位置。",
+      "en": "Check component dimensions and assembly positions against samples and drawings."
+    },
+    "after": {
+      "zh": "根据图纸检查零件尺寸与装配位置。",
+      "en": "Check part sizes and assembly positions using drawings."
+    }
+  },
+  {
+    "id": "task-v2-010",
+    "optionId": "task-v2-010-opt-03",
+    "before": {
+      "zh": "检查哪些居民被纳入调查，哪些人可能被遗漏。",
+      "en": "Check which residents were surveyed and who may have been missed."
+    },
+    "after": {
+      "zh": "核对调查覆盖和遗漏的居民群体。",
+      "en": "Check which resident groups the survey includes or misses."
+    }
+  },
+  {
+    "id": "task-v2-012",
+    "optionId": "task-v2-012-opt-06",
+    "before": {
+      "zh": "设置预约系统与设备使用记录的权限。",
+      "en": "Set up booking-system permissions and device-use records."
+    },
+    "after": {
+      "zh": "设置预约时段冲突的自动检查。",
+      "en": "Set up automatic checks for conflicting booking times."
+    }
+  },
+  {
+    "id": "task-v2-012",
+    "optionId": "task-v2-012-opt-08",
+    "before": {
+      "zh": "整理设备使用中涉及的材料来源与生态影响资料。",
+      "en": "Gather information on material origins and ecological impacts of device use."
+    },
+    "after": {
+      "zh": "整理工具使用对土壤和植物的影响。",
+      "en": "Summarise how tool use affects soil and plants."
+    }
+  }
+]

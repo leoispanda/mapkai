@@ -1,0 +1,540 @@
+[
+  {
+    "id": "08-q1",
+    "zhChosenOptionId": "08-q1-a",
+    "enChosenOptionId": "08-q1-a",
+    "reasonZh": "高氮组叶旺但果少，只有该项同时保留两条观察。",
+    "reasonEn": "The higher-N group has more foliage but fewer fruits; only this statement fits both observations.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          14,
+          13,
+          13
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      },
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          59,
+          56,
+          56
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q2",
+    "zhChosenOptionId": "08-q2-b",
+    "enChosenOptionId": "08-q2-b",
+    "reasonZh": "已给孔隙减少；较少的大孔隙使水通过土壤的通道受限。",
+    "reasonEn": "Fewer large pore spaces restrict pathways for infiltrating water.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q3",
+    "zhChosenOptionId": "08-q3-c",
+    "enChosenOptionId": "08-q3-c",
+    "reasonZh": "害虫不能在豆类繁殖，因此豆类中断给定寄主供应。",
+    "reasonEn": "Beans are the specified nonhost, unlike tomatoes and potatoes.",
+    "ambiguity": [
+      "轻微条件疑点：不同番茄品种可能具特定抗性；建议明示候选番茄品种也可供该虫繁殖。此疑点需添加假设才产生另一答案，暂不视为现有第二答案。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q4",
+    "zhChosenOptionId": "08-q4-b",
+    "enChosenOptionId": "08-q4-b",
+    "reasonZh": "总量达到100吨即停止直接限定总额；10船各15最多150，天数不限定吨数。",
+    "reasonEn": "Stopping at a combined 100 tonnes caps the total; 10×15 allows 150 and days alone do not cap catch.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          36,
+          47,
+          36
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q5",
+    "zhChosenOptionId": "08-q5-c",
+    "enChosenOptionId": "08-q5-c",
+    "reasonZh": "饲料和挤奶相同、仅遮阴降温不同；热浪与呼吸及产奶变化最对应散热热应激。",
+    "reasonEn": "Only cooling differs; unchanged feed and milking exclude the other stated mechanisms.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          44,
+          40,
+          38
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q6",
+    "zhChosenOptionId": "08-q6-a",
+    "enChosenOptionId": "08-q6-a",
+    "reasonZh": "移除相邻树降低保留树的资源竞争，不改变区域降雨或遗传特征。",
+    "reasonEn": "Removing neighbours reduces resource competition, not inherited traits or regional rainfall.",
+    "ambiguity": [
+      "需改干扰项：遗传特征和地区年度降雨量与选择性移除邻树的直接动作相距太远，尤其遗传项欠缺可信错误来源；可不懂间伐也靠排除选中。"
+    ],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          33,
+          39,
+          41
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q7",
+    "zhChosenOptionId": "08-q7-c",
+    "enChosenOptionId": "08-q7-c",
+    "reasonZh": "混种任一病害损失0.5×60%+0.5×10%=35%，单一种植最坏60%。",
+    "reasonEn": "Half-and-half loses 35% under either disease; either monoculture has a 60% worst case.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-v2-q08",
+    "zhChosenOptionId": "08-v2-q08-a",
+    "enChosenOptionId": "08-v2-q08-a",
+    "reasonZh": "1000+200−300=900吨。",
+    "reasonEn": "1,000 + 200 − 300 = 900 tonnes.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q9",
+    "zhChosenOptionId": "08-q9-a",
+    "enChosenOptionId": "08-q9-a",
+    "reasonZh": "随机补花粉使结果率上升，直接支持原先到花的花粉不足。",
+    "reasonEn": "Adding pollen to randomly assigned flowers improves fruit set, supporting pollen limitation.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          33,
+          30,
+          31
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q10",
+    "zhChosenOptionId": "08-q10-c",
+    "enChosenOptionId": "08-q10-c",
+    "reasonZh": "已给营养住房健康满足，但明确缺走动嗅闻互动，指向行为机会。",
+    "reasonEn": "Food, housing and checks are adequate, while movement, sniffing and interaction are restricted.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-q11",
+    "zhChosenOptionId": "08-q11-a",
+    "enChosenOptionId": "08-q11-a",
+    "reasonZh": "地面到树冠的连续燃料让火可能向上蔓延；未给树距增加或土湿变化。",
+    "reasonEn": "A continuous fuel path supports upward spread into crowns, with no changed spacing or soil moisture stated.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "08-v2-q12",
+    "zhChosenOptionId": "08-v2-q12-b",
+    "enChosenOptionId": "08-v2-q12-b",
+    "reasonZh": "70×1.2+30=114万元。",
+    "reasonEn": "700,000×1.2 + 300,000 = 1.14 million yuan.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q1",
+    "zhChosenOptionId": "09-q1-b",
+    "enChosenOptionId": "09-q1-b",
+    "reasonZh": "轻柔并清洁各牙面同时满足轻柔与完整条件。",
+    "reasonEn": "Gentle pressure on every surface meets both stated conditions.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q2",
+    "zhChosenOptionId": "09-q2-a",
+    "enChosenOptionId": "09-q2-a",
+    "reasonZh": "同组随机交替条件下，观察是含咖啡因入睡更慢；未测睡眠需要。",
+    "reasonEn": "The observed direction is slower sleep onset in this group, with sleep need unmeasured.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q3",
+    "zhChosenOptionId": "09-q3-b",
+    "enChosenOptionId": "09-q3-b",
+    "reasonZh": "少量增加时长并观察适应对应逐步增加；其余同时加大强度或时长。",
+    "reasonEn": "Small added duration with a tolerance check fits gradual progression.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          15,
+          14,
+          14
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q4",
+    "zhChosenOptionId": "09-q4-b",
+    "enChosenOptionId": "09-q4-b",
+    "reasonZh": "新风交换直接稀释或带走共享空气颗粒，不作用于手桌接触或识别症状。",
+    "reasonEn": "Fresh-air exchange directly changes particle accumulation, rather than desk contact or symptom recognition.",
+    "ambiguity": [
+      "英文正确项篇幅与详略突出：直接写完整空气传播机制，另两项更短；应精简为平行名词短语后复查。"
+    ],
+    "formatConcerns": [
+      {
+        "language": "zh",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          12,
+          11,
+          11
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      },
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          47,
+          33,
+          41
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-v2-q05",
+    "zhChosenOptionId": "09-v2-q05-a",
+    "enChosenOptionId": "09-v2-q05-a",
+    "reasonZh": "报告对象明示细菌耐抗生素A，不是人体耐受或病毒。",
+    "reasonEn": "The report names bacteria resisting antibiotic A, not patient tolerance or viruses.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          47,
+          45,
+          44
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q6",
+    "zhChosenOptionId": "09-q6-b",
+    "enChosenOptionId": "09-q6-b",
+    "reasonZh": "9:40预约须9:30签到，9:20抵达可做到；8:30和9:00太早。",
+    "reasonEn": "A 09:40 appointment requires 09:30 check-in, reachable after 09:20 arrival.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-v2-q07",
+    "zhChosenOptionId": "09-v2-q07-c",
+    "enChosenOptionId": "09-v2-q07-c",
+    "reasonZh": "进食前清洁手打断手上病原到口的路径。",
+    "reasonEn": "Cleaning hands before eating interrupts the hand-to-mouth transfer.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-v2-q08",
+    "zhChosenOptionId": "09-v2-q08-a",
+    "enChosenOptionId": "09-v2-q08-a",
+    "reasonZh": "谁核对及何时核对是让未完成任务可追踪的缺项。",
+    "reasonEn": "Named responsibility and a checking deadline make the pending task traceable.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q9",
+    "zhChosenOptionId": "09-q9-b",
+    "enChosenOptionId": "09-q9-b",
+    "reasonZh": "记录休息照护可保连续且不要求违背建议运动；另两项制造运动压力或抹历史。",
+    "reasonEn": "Logging advised rest keeps care continuity without requiring exercise against advice.",
+    "ambiguity": [
+      "需改干扰项：删除全部历史是非常惩罚性的凑数规则，未形成可信的目标取舍；用保留历史但中断连续记录等真实计数方案比较，避免道德高低猜题。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-v2-q10",
+    "zhChosenOptionId": "09-v2-q10-a",
+    "enChosenOptionId": "09-v2-q10-a",
+    "reasonZh": "50−30=20个，问人数差而非相对风险。",
+    "reasonEn": "50 − 30 = 20 fewer cases, not a relative-risk calculation.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q11",
+    "zhChosenOptionId": "09-q11-b",
+    "enChosenOptionId": "09-q11-b",
+    "reasonZh": "78±3与80±3分别为75–81和77–83，交集77–81。",
+    "reasonEn": "The intervals 75–81 and 77–83 intersect at 77–81.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "09-q12",
+    "zhChosenOptionId": "09-q12-c",
+    "enChosenOptionId": "09-q12-c",
+    "reasonZh": "倾听被理解直接体现情感支持，未记录财物或诊疗。",
+    "reasonEn": "Listening and feeling understood directly demonstrate emotional support.",
+    "ambiguity": [],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          35,
+          43,
+          48
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-v2-q01",
+    "zhChosenOptionId": "10-v2-q01-b",
+    "enChosenOptionId": "10-v2-q01-b",
+    "reasonZh": "困难在找前台电梯，路线图直接给空间引导。",
+    "reasonEn": "A route map directly addresses finding reception and lifts.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q2",
+    "zhChosenOptionId": "10-q2-c",
+    "enChosenOptionId": "10-q2-c",
+    "reasonZh": "所述滑倒风险源为表面水膜，应直接核对水膜仍否存在。",
+    "reasonEn": "Check the water film itself to assess the stated hazard source.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q3",
+    "zhChosenOptionId": "10-q3-a",
+    "enChosenOptionId": "10-q3-a",
+    "reasonZh": "两人汤18:35主菜18:55都在对应窗口且同步顺序正确。",
+    "reasonEn": "Soup at 18:35 and mains at 18:55 meet the windows, order and simultaneous-service rule.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q4",
+    "zhChosenOptionId": "10-q4-a",
+    "enChosenOptionId": "10-q4-a",
+    "reasonZh": "提前40秒准备可把通道占用60减到20；移走检查最多减20，座椅不改占用。",
+    "reasonEn": "Moving preparation removes 40 of 60 seconds; moving the check removes only 20, and seats do not change lane occupation.",
+    "ambiguity": [
+      "中英文在错误项“检查移至出口”的位置不同：中文在通道出口，英文 just beyond出口明确在通道之外；会改变节省20秒是否成立。正确项仍唯一，但条件应等量。"
+    ],
+    "formatConcerns": [
+      {
+        "language": "en",
+        "type": "chosen-option-unique-longest",
+        "lengths": [
+          50,
+          47,
+          47
+        ],
+        "decision": "requires-keyed-review; length alone does not prove cueing"
+      }
+    ],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-v2-q05",
+    "zhChosenOptionId": "10-v2-q05-b",
+    "enChosenOptionId": "10-v2-q05-b",
+    "reasonZh": "总45人、30座，一轮最少剩15。",
+    "reasonEn": "45 guests minus 30 seats leaves at least 15.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-v2-q06",
+    "zhChosenOptionId": "10-v2-q06-b",
+    "enChosenOptionId": "10-v2-q06-b",
+    "reasonZh": "西线95准时满足下限，2损坏满足上限；东线4损坏，南线93准时各失败。",
+    "reasonEn": "West meets 95 on-time and at most 2 damaged; East and South each fail one limit.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q7",
+    "zhChosenOptionId": "10-q7-c",
+    "enChosenOptionId": "10-q7-c",
+    "reasonZh": "已有允许人工核验的规则，但缺提交途径；开通人工通道解决该缺口。",
+    "reasonEn": "A manual-evidence route makes the already permitted exception usable.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q8",
+    "zhChosenOptionId": "10-q8-b",
+    "enChosenOptionId": "10-q8-b",
+    "reasonZh": "10:25+30=10:55，较10:40晚15分钟。",
+    "reasonEn": "10:25 + 30 minutes = 10:55, which is 15 minutes late.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q9",
+    "zhChosenOptionId": "10-q9-a",
+    "enChosenOptionId": "10-q9-a",
+    "reasonZh": "提供相同三项文字信息既满足内容标准又匹配阅读能力。",
+    "reasonEn": "The same three details in writing meet both the content standard and stated access need.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-v2-q10",
+    "zhChosenOptionId": "10-v2-q10-b",
+    "enChosenOptionId": "10-v2-q10-b",
+    "reasonZh": "新增行驶800+200减被替代600=400公里。",
+    "reasonEn": "800 + 200 − 600 = 400 additional kilometres.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q11",
+    "zhChosenOptionId": "10-q11-c",
+    "enChosenOptionId": "10-q11-c",
+    "reasonZh": "同情景演练8到5、漏传6到1直接改善，未测真实发生率和未演练情景。",
+    "reasonEn": "Measured drill response and handoffs improve; real incidence and untested scenarios are unmeasured.",
+    "ambiguity": [],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  },
+  {
+    "id": "10-q12",
+    "zhChosenOptionId": "10-q12-a",
+    "enChosenOptionId": "10-q12-a",
+    "reasonZh": "矛盾发生于书面东大厅与广播西大厅，应校核两处位置指引。",
+    "reasonEn": "The inconsistency is between written and spoken location directions.",
+    "ambiguity": [
+      "英文正确项是唯一直接写出书面/口头指引的项目，其他两项相关度很低；中文各项长度接近，英文需要复查是否内容标签即可猜中。可接受入门识别，建议使用更接近位置导引的触点作干扰。"
+    ],
+    "formatConcerns": [],
+    "status": "blind-solved-before-answer-key",
+    "blindFileSha256": "24ad89d956aea7951f21b5dbe882cf9e33c536da2f33e680dc25735a0e820cc6"
+  }
+]

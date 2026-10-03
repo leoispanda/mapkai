@@ -1,0 +1,1830 @@
+[
+  {
+    "id": "04-v2-q01",
+    "sourceId": "04-q1",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "单位价格",
+    "objective": "根据两种包装计算单位价格",
+    "cognitiveOperation": "计算",
+    "context": "面包店单买与套餐",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "一次除法即可比較",
+    "optionIds": [
+      "04-v2-q01-o1",
+      "04-v2-q01-o2",
+      "04-v2-q01-o3"
+    ],
+    "answerOptionId": "04-v2-q01-o1",
+    "distractors": [
+      {
+        "optionId": "04-v2-q01-o2",
+        "error": "把整包节省额当单位节省额",
+        "whyNot": "两个单买是6元，整包省1元；每个只省0.5元。"
+      },
+      {
+        "optionId": "04-v2-q01-o3",
+        "error": "把单价和套餐总价直接相减",
+        "whyNot": "3与5不是相同数量的价格，不能直接比较。"
+      }
+    ],
+    "answerEvidence": "3 − 5/2 = 0.50；题干明示相同规格，只比较单位价格。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q2",
+    "sourceId": "04-q2",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "营收与利润",
+    "objective": "计算扣除已给成本后的利润",
+    "cognitiveOperation": "计算",
+    "context": "小店月度记录",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "一次减法并分清收入与支出",
+    "optionIds": [
+      "04-q2-o1",
+      "04-q2-o2",
+      "04-q2-o3"
+    ],
+    "answerOptionId": "04-q2-o1",
+    "distractors": [
+      {
+        "optionId": "04-q2-o2",
+        "error": "把成本当利润",
+        "whyNot": "9,000是已给费用，尚未从收入扣除。"
+      },
+      {
+        "optionId": "04-q2-o3",
+        "error": "把营收当利润",
+        "whyNot": "12,000尚未扣除9,000的费用。"
+      }
+    ],
+    "answerEvidence": "12,000 − 9,000 = 3,000；税款和其他费用已排除。",
+    "factSources": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements",
+        "title": "SEC — Beginners' Guide to Financial Statements",
+        "checkedAt": "2026-10-03",
+        "supports": "营收减费用得到利润；利润和现金流反映不同信息。本题数字及简化账务假设为虚构。"
+      }
+    ],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q3",
+    "sourceId": "04-q3",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "退出摩擦",
+    "objective": "识别增加取消流程成本的改动",
+    "cognitiveOperation": "比较",
+    "context": "订阅退出步骤",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "比较三个具体服务改动",
+    "optionIds": [
+      "04-q3-o1",
+      "04-q3-o2",
+      "04-q3-o3"
+    ],
+    "answerOptionId": "04-q3-o1",
+    "distractors": [
+      {
+        "optionId": "04-q3-o2",
+        "error": "混同价格和流程成本",
+        "whyNot": "降价改变续费价，不改变取消步骤。"
+      },
+      {
+        "optionId": "04-q3-o3",
+        "error": "混同产品价值和退出摩擦",
+        "whyNot": "加课程改变内容，不是增加退出动作。"
+      }
+    ],
+    "answerEvidence": "题干只要求辨认取消操作成本；电话时间限制直接增加取消步骤。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-v2-q04",
+    "sourceId": "04-q4",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "同预算订单产出与转化率",
+    "objective": "比较每份预算带来的订单数",
+    "cognitiveOperation": "比较",
+    "context": "虚构广告试验",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分同额预算订单产出与触达后转化率，计算不复杂。",
+    "optionIds": [
+      "04-v2-q04-o1",
+      "04-v2-q04-o2",
+      "04-v2-q04-o3"
+    ],
+    "answerOptionId": "04-v2-q04-o1",
+    "distractors": [
+      {
+        "optionId": "04-v2-q04-o2",
+        "error": "用触达后转化率替代每预算订单数",
+        "whyNot": "B转化率高但相同花费下只有8单。"
+      },
+      {
+        "optionId": "04-v2-q04-o3",
+        "error": "把相同预算当相同产出",
+        "whyNot": "相同预算仍可带来10单与8单的不同产出。"
+      }
+    ],
+    "answerEvidence": "预算相等且订单计数为10和8；10 > 8。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q5",
+    "sourceId": "04-q5",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "交付条款",
+    "objective": "按明示合同条款判定是否满足约定",
+    "cognitiveOperation": "应用",
+    "context": "虚构采购合同",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需同时检查日期、数量和验收条件",
+    "optionIds": [
+      "04-q5-o1",
+      "04-q5-o2",
+      "04-q5-o3"
+    ],
+    "answerOptionId": "04-q5-o1",
+    "distractors": [
+      {
+        "optionId": "04-q5-o2",
+        "error": "只看准时而忽略验收标准",
+        "whyNot": "96少于要求的98。"
+      },
+      {
+        "optionId": "04-q5-o3",
+        "error": "只看全部合格而忽略期限",
+        "whyNot": "6月11日已晚于6月10日17:00。"
+      }
+    ],
+    "answerEvidence": "条款要求两个条件同时成立；第一项日期及合格件数都满足。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q6",
+    "sourceId": "04-q6",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：三项都用指标名称，不给正确项追加奖金动作及长因果句。",
+    "concept": "代理指标与激励",
+    "objective": "找出按实际解决结果计奖的规则",
+    "cognitiveOperation": "应用",
+    "context": "客服奖金方案",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分通话时长与客户问题解决",
+    "optionIds": [
+      "04-q6-o1",
+      "04-q6-o2",
+      "04-q6-o3"
+    ],
+    "answerOptionId": "04-q6-o2",
+    "distractors": [
+      {
+        "optionId": "04-q6-o1",
+        "error": "把短时长当解决结果",
+        "whyNot": "三分钟内挂电话不能证明七天内问题不再来电。"
+      },
+      {
+        "optionId": "04-q6-o3",
+        "error": "把工作量当解决结果",
+        "whyNot": "接听总数不能区分解决和重复求助。"
+      }
+    ],
+    "answerEvidence": "题干已将重复来电定义为结案后7天内同问题来电；无重复来电的结案件数直接对应结果。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "04-v2-q07",
+    "sourceId": "04-q7",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "现金流与应收款",
+    "objective": "分开计算本月利润和现金变化",
+    "cognitiveOperation": "计算",
+    "context": "赊销服务的虚构月度账",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需分开确认收入与收到现金",
+    "optionIds": [
+      "04-v2-q07-o1",
+      "04-v2-q07-o2",
+      "04-v2-q07-o3"
+    ],
+    "answerOptionId": "04-v2-q07-o1",
+    "distractors": [
+      {
+        "optionId": "04-v2-q07-o2",
+        "error": "把利润等同现金增加",
+        "whyNot": "客户5月付款，本月没有10,000的现金流入。"
+      },
+      {
+        "optionId": "04-v2-q07-o3",
+        "error": "把现金收付规则套在利润上",
+        "whyNot": "题干规定已完成的服务4月确认10,000收入。"
+      }
+    ],
+    "answerEvidence": "利润10,000−6,000=4,000；现金0−6,000=−6,000。",
+    "factSources": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements",
+        "title": "SEC — Beginners' Guide to Financial Statements",
+        "checkedAt": "2026-10-03",
+        "supports": "营收减费用得到利润；利润和现金流反映不同信息。本题数字及简化账务假设为虚构。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-v2-q08",
+    "sourceId": "04-q8",
+    "changeType": "rewrite",
+    "revisionReason": "旧题从优惠撤回后的减速推断长期需求，证据不足；本题保留订阅背景，改考明示数据下的单位贡献，学习目标改变并使用新ID。",
+    "concept": "单位贡献",
+    "objective": "计算扣除可变成本后的用户贡献",
+    "cognitiveOperation": "计算",
+    "context": "虚构撤优惠后订阅数据",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "结合付费人数和每用户收入成本",
+    "optionIds": [
+      "04-v2-q08-o1",
+      "04-v2-q08-o2",
+      "04-v2-q08-o3"
+    ],
+    "answerOptionId": "04-v2-q08-o1",
+    "distractors": [
+      {
+        "optionId": "04-v2-q08-o2",
+        "error": "把可变成本当贡献",
+        "whyNot": "20×20=400是成本。"
+      },
+      {
+        "optionId": "04-v2-q08-o3",
+        "error": "把营收当贡献",
+        "whyNot": "20×30=600尚未扣400成本。"
+      }
+    ],
+    "answerEvidence": "20 × (30−20) = 200；固定成本明确不在本题扣除。",
+    "factSources": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements",
+        "title": "SEC — Beginners' Guide to Financial Statements",
+        "checkedAt": "2026-10-03",
+        "supports": "营收减费用得到利润；利润和现金流反映不同信息。本题数字及简化账务假设为虚构。"
+      }
+    ],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q9",
+    "sourceId": "04-q9",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：定义低额包含500，明确其他订单可等待经理，消除边界与时间解释。",
+    "concept": "风险分级审批",
+    "objective": "选择满足明示风险和时限要求的规则",
+    "cognitiveOperation": "应用",
+    "context": "虚构采购审批规则",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需同时满足两类订单条件",
+    "optionIds": [
+      "04-q9-o1",
+      "04-q9-o2",
+      "04-q9-o3"
+    ],
+    "answerOptionId": "04-q9-o3",
+    "distractors": [
+      {
+        "optionId": "04-q9-o1",
+        "error": "忽略低风险订单的时限",
+        "whyNot": "经理当天无法处理，标准低额订单不能当天通过。"
+      },
+      {
+        "optionId": "04-q9-o2",
+        "error": "只按类型分级而漏金额",
+        "whyNot": "超过500的标准订单也必须经理审批。"
+      }
+    ],
+    "answerEvidence": "第三项同时实现低额标准订单当天通过及高额或非标准由经理审批。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "04-q10",
+    "sourceId": "04-q10",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "多议题谈判",
+    "objective": "选出满足双方明确底线的组合",
+    "cognitiveOperation": "应用",
+    "context": "虚构工作安排谈判",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "逐项核对双方约束",
+    "optionIds": [
+      "04-q10-o1",
+      "04-q10-o2",
+      "04-q10-o3"
+    ],
+    "answerOptionId": "04-q10-o2",
+    "distractors": [
+      {
+        "optionId": "04-q10-o1",
+        "error": "只看远程天数",
+        "whyNot": "4,800低于员工5,000底线。"
+      },
+      {
+        "optionId": "04-q10-o3",
+        "error": "忽略双方相反限制",
+        "whyNot": "5,300超过公司5,200上限，零远程也低于员工要求。"
+      }
+    ],
+    "answerEvidence": "5,000≤5,100≤5,200；1≤1≤2。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-q11",
+    "sourceId": "04-q11",
+    "changeType": "revise",
+    "revisionReason": "保留正式口号与实际激励目标；给出规范实验条件及明确奖金概率，避免猜员工心理。",
+    "concept": "实际激励",
+    "objective": "从已给奖金规则判断哪种行为受奖励",
+    "cognitiveOperation": "应用",
+    "context": "规范实验与晋升考核",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "只需比较行为的明确后果",
+    "optionIds": [
+      "04-q11-o1",
+      "04-q11-o2",
+      "04-q11-o3"
+    ],
+    "answerOptionId": "04-q11-o1",
+    "distractors": [
+      {
+        "optionId": "04-q11-o2",
+        "error": "只看到成功奖励而漏失败扣分",
+        "whyNot": "失败概率同为50%，平均分为0而非常规的10。"
+      },
+      {
+        "optionId": "04-q11-o3",
+        "error": "把相同成功奖励当相同期望值",
+        "whyNot": "实验存在失败扣分，常规项目给定固定10分。"
+      }
+    ],
+    "answerEvidence": "常规项目10分；实验期望分0分；10>0。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "04-v2-q12",
+    "sourceId": "04-q12",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "重复数据与行政成本",
+    "objective": "计算一次录入替代重复录入可节省的时间",
+    "cognitiveOperation": "计算",
+    "context": "虚构报表流程",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "相同字段的重复时间相减",
+    "optionIds": [
+      "04-v2-q12-o1",
+      "04-v2-q12-o2",
+      "04-v2-q12-o3"
+    ],
+    "answerOptionId": "04-v2-q12-o1",
+    "distractors": [
+      {
+        "optionId": "04-v2-q12-o2",
+        "error": "漏掉新增核对时间",
+        "whyNot": "省两次录入20分钟，还要减5分钟核对。"
+      },
+      {
+        "optionId": "04-v2-q12-o3",
+        "error": "漏掉仍需第一次录入",
+        "whyNot": "新流程不是只剩5分钟核对，还有10分钟录入。"
+      }
+    ],
+    "answerEvidence": "30−(10+5)=15分钟。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q1",
+    "sourceId": "05-q1",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "热传导",
+    "objective": "区分相同温度与不同传热速度",
+    "cognitiveOperation": "解释机制",
+    "context": "同温金属与木块",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "需要把触感与温度分开",
+    "optionIds": [
+      "05-q1-o1",
+      "05-q1-o2",
+      "05-q1-o3"
+    ],
+    "answerOptionId": "05-q1-o2",
+    "distractors": [
+      {
+        "optionId": "05-q1-o1",
+        "error": "把触感等同物体温度",
+        "whyNot": "题干测量显示两者均为20°C。"
+      },
+      {
+        "optionId": "05-q1-o3",
+        "error": "误认净热流方向",
+        "whyNot": "木块低于手温，初始净热量不是从木块流向手。"
+      }
+    ],
+    "answerEvidence": "两物体温度相同且低于手温；材料不同造成接触传热速率差异。",
+    "factSources": [
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/14-5-conduction",
+        "title": "OpenStax — College Physics 2e, 14.5 Conduction",
+        "checkedAt": "2026-10-03",
+        "supports": "同温材料可因不同传热速率产生不同触感；净热流从较热物体流向较冷物体。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q2",
+    "sourceId": "05-q2",
+    "changeType": "revise",
+    "revisionReason": "保留概率不是确定保证的目标；直接声明本题预报定义，不假定所有天气服务采用同一时空口径。",
+    "concept": "事件概率",
+    "objective": "解释明示点位及时段的降雨概率",
+    "cognitiveOperation": "应用",
+    "context": "明确概率定义的预报",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分发生概率与时长雨量",
+    "optionIds": [
+      "05-q2-o1",
+      "05-q2-o2",
+      "05-q2-o3"
+    ],
+    "answerOptionId": "05-q2-o3",
+    "distractors": [
+      {
+        "optionId": "05-q2-o1",
+        "error": "把概率当作时段占比",
+        "whyNot": "事件定义是累计雨量达阈值，不是下雨时间比例。"
+      },
+      {
+        "optionId": "05-q2-o2",
+        "error": "把百分数当毫米数",
+        "whyNot": "70%是无量纲事件概率，不是70毫米。"
+      }
+    ],
+    "answerEvidence": "题干提供事件定义，只有第三项保持同一个概率对象。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q3",
+    "sourceId": "05-q3",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：英文第二干扰项也保留两种变化均记录的推理，与中文等义。",
+    "concept": "混杂因素",
+    "objective": "识别同时变化的两个因素不能各自归因",
+    "cognitiveOperation": "判断证据",
+    "context": "果昔和睡眠同时改变",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "只需发现两个因素一起变化",
+    "optionIds": [
+      "05-q3-o1",
+      "05-q3-o2",
+      "05-q3-o3"
+    ],
+    "answerOptionId": "05-q3-o3",
+    "distractors": [
+      {
+        "optionId": "05-q3-o1",
+        "error": "把先后顺序当因果识别",
+        "whyNot": "睡眠也在结果前改变，先后顺序未分离两个因素。"
+      },
+      {
+        "optionId": "05-q3-o2",
+        "error": "把观察到混杂当已经控制混杂",
+        "whyNot": "包含睡眠记录不等于能估计它和果昔各自影响。"
+      }
+    ],
+    "answerEvidence": "两因素同时变化且无对照，单凭现有记录不能分离果昔作用。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "05-q4",
+    "sourceId": "05-q4",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "小样本的均值敏感性",
+    "objective": "比较增加一个评分对均值的影响",
+    "cognitiveOperation": "计算",
+    "context": "虚构店铺评分",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "两次加权平均计算",
+    "optionIds": [
+      "05-q4-o1",
+      "05-q4-o2",
+      "05-q4-o3"
+    ],
+    "answerOptionId": "05-q4-o1",
+    "distractors": [
+      {
+        "optionId": "05-q4-o2",
+        "error": "把评价总量与单个影响混同",
+        "whyNot": "B中新增1条只占1/101，A中占1/3。"
+      },
+      {
+        "optionId": "05-q4-o3",
+        "error": "忽略原样本大小",
+        "whyNot": "同样新增1星评价，在两个平均数中所占权重不同。"
+      }
+    ],
+    "answerEvidence": "A下降4/3；B下降4/101；4/3>4/101。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-v2-q05",
+    "sourceId": "05-q5",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "对照实验",
+    "objective": "从明示随机同期设计选择可比较方案",
+    "cognitiveOperation": "比较",
+    "context": "虚构机器性能试验",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "控制多个非目标条件",
+    "optionIds": [
+      "05-v2-q05-o1",
+      "05-v2-q05-o2",
+      "05-v2-q05-o3"
+    ],
+    "answerOptionId": "05-v2-q05-o2",
+    "distractors": [
+      {
+        "optionId": "05-v2-q05-o1",
+        "error": "同时改变多个因素",
+        "whyNot": "产量变化可能来自材料或工人技能而非机器。"
+      },
+      {
+        "optionId": "05-v2-q05-o3",
+        "error": "历史前后对照混入时段差异",
+        "whyNot": "去年旺季与本月环境不一致，不能分离机器作用。"
+      }
+    ],
+    "answerEvidence": "第二方案明示同批原料、同期且工人随机轮换；其他两方案含与型号系统绑定的差异。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q6",
+    "sourceId": "05-q6",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "空间抽样",
+    "objective": "选择覆盖明示总体的抽样计划",
+    "cognitiveOperation": "应用",
+    "context": "虚构城市污染测量",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分精确测一点与覆盖总体",
+    "optionIds": [
+      "05-q6-o1",
+      "05-q6-o2",
+      "05-q6-o3"
+    ],
+    "answerOptionId": "05-q6-o2",
+    "distractors": [
+      {
+        "optionId": "05-q6-o1",
+        "error": "便利样本代替空间总体",
+        "whyNot": "工业园门口没有住宅及公园代表点。"
+      },
+      {
+        "optionId": "05-q6-o3",
+        "error": "重复测一点代替覆盖多地区",
+        "whyNot": "同一广场的九点无法覆盖题干定义的三类总体。"
+      }
+    ],
+    "answerEvidence": "总体由等面积三类构成；第二方案覆盖三类并在类内随机，其他方案系统漏掉地区。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-v2-q07",
+    "sourceId": "05-q7",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。 独立复审或主编辑复查后：明示初始两侧压力相同，不用同液面代替决定渗透方向的压力条件。",
+    "concept": "渗透",
+    "objective": "预测选择透过膜两侧初始水的净移动",
+    "cognitiveOperation": "预测",
+    "context": "不同糖浓度的两室模型",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需用膜通透性与浓度差",
+    "optionIds": [
+      "05-v2-q07-o1",
+      "05-v2-q07-o2",
+      "05-v2-q07-o3"
+    ],
+    "answerOptionId": "05-v2-q07-o1",
+    "distractors": [
+      {
+        "optionId": "05-v2-q07-o2",
+        "error": "把水的渗透方向误作糖的扩散方向",
+        "whyNot": "糖不能过膜，初始水净移向5%侧。"
+      },
+      {
+        "optionId": "05-v2-q07-o3",
+        "error": "把初始压力相同当成渗透已平衡",
+        "whyNot": "压力相同仍存在糖浓度差，膜只让水通过，因此初始有向5%一侧的净移动。"
+      }
+    ],
+    "answerEvidence": "同温、膜两侧初始压力相等，且糖不能通过膜，水初始净移向5%一侧。",
+    "factSources": [
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "title": "OpenStax — Biology 2e, 5.2 Passive Transport",
+        "checkedAt": "2026-10-03",
+        "supports": "水可通过而糖不能通过的膜、初始压强相同条件下，水的初始净移动朝较高溶质浓度侧。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "05-v2-q08",
+    "sourceId": "05-q8",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "面积缩放",
+    "objective": "计算长度按比例变化后的面积",
+    "cognitiveOperation": "计算",
+    "context": "矩形照片缩放",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "两条边都要缩放",
+    "optionIds": [
+      "05-v2-q08-o1",
+      "05-v2-q08-o2",
+      "05-v2-q08-o3"
+    ],
+    "answerOptionId": "05-v2-q08-o1",
+    "distractors": [
+      {
+        "optionId": "05-v2-q08-o2",
+        "error": "把线性比例直接当面积比例",
+        "whyNot": "长宽两个维度均需乘0.5。"
+      },
+      {
+        "optionId": "05-v2-q08-o3",
+        "error": "把缩放当只减少四分之一",
+        "whyNot": "两边都减半，面积减少75%，剩下25%。"
+      }
+    ],
+    "answerEvidence": "(0.5L × 0.5W)/(L×W)=0.25。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q9",
+    "sourceId": "05-q9",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "选择偏差",
+    "objective": "根据抽样方式限定结果推广范围",
+    "cognitiveOperation": "判断证据",
+    "context": "只邀请高频用户试用",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分被试与目标用户总体",
+    "optionIds": [
+      "05-q9-o1",
+      "05-q9-o2",
+      "05-q9-o3"
+    ],
+    "answerOptionId": "05-q9-o1",
+    "distractors": [
+      {
+        "optionId": "05-q9-o2",
+        "error": "把受邀者推广到全部注册者",
+        "whyNot": "每周每月用户明确未邀请。"
+      },
+      {
+        "optionId": "05-q9-o3",
+        "error": "把已观察样本推广到未注册者",
+        "whyNot": "未注册人群没有进入试用记录。"
+      }
+    ],
+    "answerEvidence": "采样仅含每日用户中参加者；唯一被直接观察的人群是第一项。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-v2-q10",
+    "sourceId": "05-q10",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "化学中的质量守恒",
+    "objective": "计算封闭容器反应后整体质量",
+    "cognitiveOperation": "应用",
+    "context": "无物质进出的虚构反应",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "需把气体仍留在系统内纳入",
+    "optionIds": [
+      "05-v2-q10-o1",
+      "05-v2-q10-o2",
+      "05-v2-q10-o3"
+    ],
+    "answerOptionId": "05-v2-q10-o2",
+    "distractors": [
+      {
+        "optionId": "05-v2-q10-o1",
+        "error": "把产生气体当作物质消失",
+        "whyNot": "气体仍留在称量的整体中。"
+      },
+      {
+        "optionId": "05-v2-q10-o3",
+        "error": "把新产物当新增物质",
+        "whyNot": "产物由已有原子组成，没有外部物质进入。"
+      }
+    ],
+    "answerEvidence": "无物质进出；普通化学质量守恒下整体120克不变。",
+    "factSources": [
+      {
+        "url": "https://openstax.org/books/chemistry-atoms-first/pages/7-1-writing-and-balancing-chemical-equations",
+        "title": "OpenStax — Chemistry: Atoms First, 7.1 Writing and Balancing Chemical Equations",
+        "checkedAt": "2026-10-03",
+        "supports": "普通化学反应中原子守恒；无物质进出的整体质量在常规化学精度下守恒。"
+      }
+    ],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-v2-q11",
+    "sourceId": "05-q11",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "生物能量与呼吸",
+    "objective": "按已给模型计算可用于生长的能量",
+    "cognitiveOperation": "计算",
+    "context": "虚构生产者能量收支",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "从总输入中扣除呼吸支出",
+    "optionIds": [
+      "05-v2-q11-o1",
+      "05-v2-q11-o2",
+      "05-v2-q11-o3"
+    ],
+    "answerOptionId": "05-v2-q11-o1",
+    "distractors": [
+      {
+        "optionId": "05-v2-q11-o2",
+        "error": "把呼吸支出当净生产量",
+        "whyNot": "600已被用于呼吸。"
+      },
+      {
+        "optionId": "05-v2-q11-o3",
+        "error": "把总生产量当净生产量",
+        "whyNot": "1,000包含后来用于呼吸的600。"
+      }
+    ],
+    "answerEvidence": "1,000−600=400；题干明确其余全部进入新生物量。",
+    "factSources": [
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/46-2-energy-flow-through-ecosystems",
+        "title": "OpenStax — Biology 2e, 46.2 Energy Flow through Ecosystems",
+        "checkedAt": "2026-10-03",
+        "supports": "生产者净生产量由总生产量扣除呼吸消耗得到；题中能量数字为虚构模型。"
+      }
+    ],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "05-q12",
+    "sourceId": "05-q12",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "百分比与图轴",
+    "objective": "分清柱长倍数与真实相对增长",
+    "cognitiveOperation": "计算",
+    "context": "虚构截断轴柱形图",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需以原值为分母而非截轴基点",
+    "optionIds": [
+      "05-q12-o1",
+      "05-q12-o2",
+      "05-q12-o3"
+    ],
+    "answerOptionId": "05-q12-o1",
+    "distractors": [
+      {
+        "optionId": "05-q12-o2",
+        "error": "用新柱高当增长率",
+        "whyNot": "10格是图上长度，不是增长百分数。"
+      },
+      {
+        "optionId": "05-q12-o3",
+        "error": "把截轴柱长翻倍当数据翻倍",
+        "whyNot": "翻倍的是105−95相对100−95，不是105相对100。"
+      }
+    ],
+    "answerEvidence": "(105−100)/100=0.05；柱高10/5不能用作原数值比。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-q1",
+    "sourceId": "06-q1",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：消除修补会让未授权读取的句法误读。",
+    "concept": "安全补丁",
+    "objective": "根据更新说明辨别补丁解决的问题",
+    "cognitiveOperation": "辨认",
+    "context": "明确漏洞的更新说明",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分修补漏洞、备份与认证",
+    "optionIds": [
+      "06-q1-o1",
+      "06-q1-o2",
+      "06-q1-o3"
+    ],
+    "answerOptionId": "06-q1-o1",
+    "distractors": [
+      {
+        "optionId": "06-q1-o2",
+        "error": "把安全修补与备份恢复混同",
+        "whyNot": "说明没有创建或保留文件副本。"
+      },
+      {
+        "optionId": "06-q1-o3",
+        "error": "把软件访问检查与用户密码习惯混同",
+        "whyNot": "说明没有改变各账户密码复用政策。"
+      }
+    ],
+    "answerEvidence": "更新说明唯一明确修补的机制是未授权读取文件的访问检查。",
+    "factSources": [
+      {
+        "url": "https://www.cisa.gov/secure-our-world",
+        "title": "CISA — Secure Our World",
+        "checkedAt": "2026-10-03",
+        "supports": "软件补丁可修补漏洞；各账号使用不同密码可降低复用泄露影响。网页标为归档，只用于稳定基础机制，不作为现行政策证明。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "06-q2",
+    "sourceId": "06-q2",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "密码复用",
+    "objective": "判断泄露凭据对哪个账号构成相同凭据威胁",
+    "cognitiveOperation": "应用",
+    "context": "虚构三个账号",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "比较各账号的用户名密码是否复用",
+    "optionIds": [
+      "06-q2-o1",
+      "06-q2-o2",
+      "06-q2-o3"
+    ],
+    "answerOptionId": "06-q2-o1",
+    "distractors": [
+      {
+        "optionId": "06-q2-o2",
+        "error": "把相同用户名当相同完整凭据",
+        "whyNot": "C密码不同，泄露资料没有C密码。"
+      },
+      {
+        "optionId": "06-q2-o3",
+        "error": "忽略密码必须匹配",
+        "whyNot": "资料只有B所用的完整用户名密码组合。"
+      }
+    ],
+    "answerEvidence": "B完全复用已泄露组合；C明确使用不同密码。",
+    "factSources": [
+      {
+        "url": "https://www.cisa.gov/secure-our-world",
+        "title": "CISA — Secure Our World",
+        "checkedAt": "2026-10-03",
+        "supports": "软件补丁可修补漏洞；各账号使用不同密码可降低复用泄露影响。网页标为归档，只用于稳定基础机制，不作为现行政策证明。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-q3",
+    "sourceId": "06-q3",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：选项使用同层级简明操作，不让正确项独占多步说明。",
+    "concept": "记录行关系",
+    "objective": "选择保持姓名地址配对的排序方法",
+    "cognitiveOperation": "应用",
+    "context": "两字段表格",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "需要整体移动一条记录",
+    "optionIds": [
+      "06-q3-o1",
+      "06-q3-o2",
+      "06-q3-o3"
+    ],
+    "answerOptionId": "06-q3-o2",
+    "distractors": [
+      {
+        "optionId": "06-q3-o1",
+        "error": "把字段列当独立名单",
+        "whyNot": "姓名移动但地址不动会破坏同行配对。"
+      },
+      {
+        "optionId": "06-q3-o3",
+        "error": "把过滤与排序混同",
+        "whyNot": "隐藏部分行没有实现按姓名重排。"
+      }
+    ],
+    "answerEvidence": "同一条记录的两个字段一起移动才能保留对应关系；第二项同时完成排序。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "06-q4",
+    "sourceId": "06-q4",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "条件逻辑",
+    "objective": "根据条件真假预测指令执行",
+    "cognitiveOperation": "预测",
+    "context": "咖啡机的明示伪代码",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "执行单一条件分支",
+    "optionIds": [
+      "06-q4-o1",
+      "06-q4-o2",
+      "06-q4-o3"
+    ],
+    "answerOptionId": "06-q4-o2",
+    "distractors": [
+      {
+        "optionId": "06-q4-o1",
+        "error": "忽略条件真假",
+        "whyNot": "出咖啡仅在有杯子条件为真时执行。"
+      },
+      {
+        "optionId": "06-q4-o3",
+        "error": "把条件选择当循环",
+        "whyNot": "程序既没有重复规则，出咖啡条件也未成立。"
+      }
+    ],
+    "answerEvidence": "无杯子=>条件为假=>执行否则分支。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-q5",
+    "sourceId": "06-q5",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：共同的订单关联更新放入题干，三项只比较同层级顾客表修改，取消正确项双操作详长提示。",
+    "concept": "主键唯一性",
+    "objective": "定位造成订单关联不唯一的字段问题",
+    "cognitiveOperation": "辨认",
+    "context": "虚构顾客和订单表",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需辨认关联键而非名字重复",
+    "optionIds": [
+      "06-q5-o1",
+      "06-q5-o2",
+      "06-q5-o3"
+    ],
+    "answerOptionId": "06-q5-o1",
+    "distractors": [
+      {
+        "optionId": "06-q5-o2",
+        "error": "误认为显示名决定订单关联",
+        "whyNot": "订单按ID关联，不按姓名。"
+      },
+      {
+        "optionId": "06-q5-o3",
+        "error": "误认为排序能消除重复键",
+        "whyNot": "重新排列两条ID7的记录仍有两个匹配对象。"
+      }
+    ],
+    "answerEvidence": "题干共同给定订单随ID同步修正；顾客ID各不相同，使每笔订单只关联一名顾客。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "06-q6",
+    "sourceId": "06-q6",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。 独立复审或主编辑复查后：明确充分且必要及完全等价，排除仅满足必要限制的<500也可成立的解释。",
+    "concept": "布尔逻辑",
+    "objective": "选择同时满足两项审批条件的规则",
+    "cognitiveOperation": "应用",
+    "context": "虚构发票自动审核",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需分清 AND 与 OR 及边界",
+    "optionIds": [
+      "06-q6-o1",
+      "06-q6-o2",
+      "06-q6-o3"
+    ],
+    "answerOptionId": "06-q6-o3",
+    "distractors": [
+      {
+        "optionId": "06-q6-o1",
+        "error": "把同时条件写成任选条件",
+        "whyNot": "OR允许只有一个条件成立，未达到题干两条件要求。"
+      },
+      {
+        "optionId": "06-q6-o2",
+        "error": "忽略边界的等于情况",
+        "whyNot": "500元且已收货应通过，<500却拒绝。"
+      }
+    ],
+    "answerEvidence": "恰好批准金额≤500且已收货的集合；<500遗漏500，或者则包含不符合者。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "06-v2-q07",
+    "sourceId": "06-q7",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "二分查找",
+    "objective": "按明示算法定位下一次检查的元素",
+    "cognitiveOperation": "应用",
+    "context": "有序号码表",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "根据中点比较缩小范围",
+    "optionIds": [
+      "06-v2-q07-o1",
+      "06-v2-q07-o2",
+      "06-v2-q07-o3"
+    ],
+    "answerOptionId": "06-v2-q07-o2",
+    "distractors": [
+      {
+        "optionId": "06-v2-q07-o1",
+        "error": "把二分查找当顺序扫描",
+        "whyNot": "14是右侧第一个，但新范围的中间项为17。"
+      },
+      {
+        "optionId": "06-v2-q07-o3",
+        "error": "把缩小范围误作直接检查上界",
+        "whyNot": "新范围上界为20，中间项为17。"
+      }
+    ],
+    "answerEvidence": "11右侧保留[14,17,20]，中间唯一为17。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-q8",
+    "sourceId": "06-q8",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "最少权限",
+    "objective": "选出完成给定本地功能所需的最少授权",
+    "cognitiveOperation": "应用",
+    "context": "手动选图的照片编辑器",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "题干给清功能和平台授权能力",
+    "optionIds": [
+      "06-q8-o1",
+      "06-q8-o2",
+      "06-q8-o3"
+    ],
+    "answerOptionId": "06-q8-o2",
+    "distractors": [
+      {
+        "optionId": "06-q8-o1",
+        "error": "习惯全量授权",
+        "whyNot": "整图库比任务所需的一张照片更广。"
+      },
+      {
+        "optionId": "06-q8-o3",
+        "error": "把拍摄权限当现有文件读取权限",
+        "whyNot": "题干不需要拍摄，相机权限不提供所选照片读取。"
+      }
+    ],
+    "answerEvidence": "题干明示单张授权能力且任务仅用所选照片，第二项足够且范围最小。",
+    "factSources": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/least_privilege?91ec3696_page=1",
+        "title": "NIST CSRC — Least Privilege",
+        "checkedAt": "2026-10-03",
+        "supports": "完成任务所需的最低权限；题中照片选择器能力为明示虚构平台条件，不推定某操作系统行为。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-q9",
+    "sourceId": "06-q9",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "推荐反馈",
+    "objective": "根据给定更新规则预测次日推荐",
+    "cognitiveOperation": "预测",
+    "context": "虚构两类内容推荐器",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需连接点击反馈和下一轮分配",
+    "optionIds": [
+      "06-q9-o1",
+      "06-q9-o2",
+      "06-q9-o3"
+    ],
+    "answerOptionId": "06-q9-o2",
+    "distractors": [
+      {
+        "optionId": "06-q9-o1",
+        "error": "把赢者全得规则当按比例分配",
+        "whyNot": "题干全部给点击更多类别，不是按次数比例分配。"
+      },
+      {
+        "optionId": "06-q9-o3",
+        "error": "把推荐设为补少数类别",
+        "whyNot": "本题没有多样性补偿规则，体育点击更多。"
+      }
+    ],
+    "answerEvidence": "6>4；按全分配规则，十个位置均为体育。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-v2-q10",
+    "sourceId": "06-q10",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "备份与同步",
+    "objective": "选择保留误删前文件的恢复来源",
+    "cognitiveOperation": "比较",
+    "context": "虚构同步文件及备份时间线",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需比较删除传播和独立快照",
+    "optionIds": [
+      "06-v2-q10-o1",
+      "06-v2-q10-o2",
+      "06-v2-q10-o3"
+    ],
+    "answerOptionId": "06-v2-q10-o3",
+    "distractors": [
+      {
+        "optionId": "06-v2-q10-o1",
+        "error": "把同步副本当历史备份",
+        "whyNot": "题干删除立即同步且无版本历史。"
+      },
+      {
+        "optionId": "06-v2-q10-o2",
+        "error": "把多设备数量当可恢复性",
+        "whyNot": "另一台电脑也已同步删除，没有旧版本。"
+      }
+    ],
+    "answerEvidence": "X在9:00快照中且不受10:00同步影响；其他两处明确已删除。",
+    "factSources": [
+      {
+        "url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+        "title": "CISA — #StopRansomware Guide",
+        "checkedAt": "2026-10-03",
+        "supports": "独立保留、可恢复的备份与即时同步的当前副本有不同恢复作用；实际软件版本历史能力须另查。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "06-v2-q11",
+    "sourceId": "06-q11",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。 独立复审或主编辑复查后：从复述缺少哪项改为比较不同因素的组合，区别于条件程序题。",
+    "concept": "多因素认证",
+    "objective": "按因素类型比较双因素与重复秘密的登录规则",
+    "cognitiveOperation": "应用",
+    "context": "虚构账号验证过程",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "需区分两个口令与两个验证因素",
+    "optionIds": [
+      "06-v2-q11-o1",
+      "06-v2-q11-o2",
+      "06-v2-q11-o3"
+    ],
+    "answerOptionId": "06-v2-q11-o2",
+    "distractors": [
+      {
+        "optionId": "06-v2-q11-o1",
+        "error": "把重复输入当成独立因素",
+        "whyNot": "同一密码仍只属于知道的秘密。"
+      },
+      {
+        "optionId": "06-v2-q11-o3",
+        "error": "把两个秘密当成两类因素",
+        "whyNot": "两个固定口令都属于知道的秘密，没有验证持有的设备。"
+      }
+    ],
+    "answerEvidence": "题干给出两个不同因素的定义；密码与已登记手机验证器码分别属于一类。",
+    "factSources": [
+      {
+        "url": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication",
+        "title": "CISA — Require Multifactor Authentication",
+        "checkedAt": "2026-10-03",
+        "supports": "多因素认证要求两种或更多身份验证方式；两个相同类别的口令不等于两个不同验证因素。"
+      },
+      {
+        "url": "https://pages.nist.gov/800-63-4/sp800-63/model/",
+        "title": "NIST SP 800-63-4 — Digital Identity Model, Authentication and Authenticator Management",
+        "checkedAt": "2026-10-03",
+        "supports": "同类秘密重复仍属单因素；多因素需要不同种类，设备认证器中的密钥可验证持有。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "06-v2-q12",
+    "sourceId": "06-q12",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "AI 输出的数据核验",
+    "objective": "用来源表核对自动生成报告的计算",
+    "cognitiveOperation": "计算",
+    "context": "虚构收入表与生成摘要",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "独立计算变化值再核对摘要",
+    "optionIds": [
+      "06-v2-q12-o1",
+      "06-v2-q12-o2",
+      "06-v2-q12-o3"
+    ],
+    "answerOptionId": "06-v2-q12-o2",
+    "distractors": [
+      {
+        "optionId": "06-v2-q12-o1",
+        "error": "用终值作增长分母",
+        "whyNot": "相对周一增长应以200而非250为基数。"
+      },
+      {
+        "optionId": "06-v2-q12-o3",
+        "error": "把金额差当百分数",
+        "whyNot": "50元需除以原值200才得25%。"
+      }
+    ],
+    "answerEvidence": "(250−200)/200=25%；摘要所述基准是周一。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q1",
+    "sourceId": "07-q1",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "受力方向与结构变形",
+    "objective": "根据测试结果判断变化的是哪项条件",
+    "cognitiveOperation": "判断证据",
+    "context": "同一纸筒不同受力测试",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "排除材料及载荷不变项",
+    "optionIds": [
+      "07-q1-o1",
+      "07-q1-o2",
+      "07-q1-o3"
+    ],
+    "answerOptionId": "07-q1-o1",
+    "distractors": [
+      {
+        "optionId": "07-q1-o2",
+        "error": "把较大变形误当较大外力",
+        "whyNot": "两次施力都明确为20牛顿。"
+      },
+      {
+        "optionId": "07-q1-o3",
+        "error": "把材料相同当结构表现必相同",
+        "whyNot": "已给测试观察到不同变形。"
+      }
+    ],
+    "answerEvidence": "相同材料、尺寸及20牛顿，在两种受力方向表现不同；结论只限所给测试。",
+    "factSources": [
+      {
+        "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/resources/gm12_13notes/",
+        "title": "MIT OpenCourseWare — Buckling of Simple Columns",
+        "checkedAt": "2026-10-03",
+        "supports": "结构的形状、受力方式与边界条件影响变形与稳定性；本题只解读所给两种测试，不计算纸筒极限或提供实际承载建议。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q2",
+    "sourceId": "07-q2",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "三角形的几何刚性",
+    "objective": "识别铰接杆框改变形状的条件",
+    "cognitiveOperation": "解释机制",
+    "context": "杆长固定的三角框",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需区分转角与杆长约束",
+    "optionIds": [
+      "07-q2-o1",
+      "07-q2-o2",
+      "07-q2-o3"
+    ],
+    "answerOptionId": "07-q2-o1",
+    "distractors": [
+      {
+        "optionId": "07-q2-o2",
+        "error": "把几何约束当节点锁死",
+        "whyNot": "题干节点可转动，框仍可整体转动，约束来自边长。"
+      },
+      {
+        "optionId": "07-q2-o3",
+        "error": "把结构刚性当材料硬度变化",
+        "whyNot": "几何不改变杆件材料本身的局部硬度。"
+      }
+    ],
+    "answerEvidence": "刚杆边长固定的三角形由三边定形，内部角度不能独立改变。",
+    "factSources": [
+      {
+        "url": "https://www.teachengineering.org/lessons/cub_trusses_lesson01",
+        "title": "University of Colorado Boulder TeachEngineering — Triangles & Trusses",
+        "checkedAt": "2026-10-03",
+        "supports": "在刚杆长度固定和铰接节点模型中，三角形不能仅靠改变角度变为另一形状；不证明所有实际三角结构安全。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q3",
+    "sourceId": "07-q3",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "硬度与韧性",
+    "objective": "比较抗划痕和吸收破坏能量两种测试",
+    "cognitiveOperation": "辨认",
+    "context": "虚构两种材料测试",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "需区分两种材料指标",
+    "optionIds": [
+      "07-q3-o1",
+      "07-q3-o2",
+      "07-q3-o3"
+    ],
+    "answerOptionId": "07-q3-o1",
+    "distractors": [
+      {
+        "optionId": "07-q3-o2",
+        "error": "把两类指标方向全颠倒",
+        "whyNot": "已给A硬度高，吸收能量低。"
+      },
+      {
+        "optionId": "07-q3-o3",
+        "error": "把硬度优势推广到韧性",
+        "whyNot": "A吸收10焦耳小于B的40，韧性指标不是更高。"
+      }
+    ],
+    "answerEvidence": "A硬度值高；A冲击吸收能量10<40，冲击韧性指标较低。",
+    "factSources": [
+      {
+        "url": "https://www.nist.gov/publications/modeling-simulation-and-prediction-rockwell-hardness-indentation",
+        "title": "NIST — Modeling, Simulation and Prediction of Rockwell Hardness Indentation",
+        "checkedAt": "2026-10-03",
+        "supports": "硬度测试测量材料抵抗局部塑性压入的表现，不等于冲击断裂能量。"
+      },
+      {
+        "url": "https://www.nist.gov/programs-projects/charpy-machine-verification-program",
+        "title": "NIST — Charpy Machine Verification Program",
+        "checkedAt": "2026-10-03",
+        "supports": "冲击断裂试验的吸收能量是冲击韧性的间接指标；题中同条件试件与数值为虚构，不能据此替代实际设计评估。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q4",
+    "sourceId": "07-q4",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "换工成本",
+    "objective": "计算分工后减少的工具切换时间",
+    "cognitiveOperation": "计算",
+    "context": "虚构椅子生产批次",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "一次乘法和时间差",
+    "optionIds": [
+      "07-q4-o1",
+      "07-q4-o2",
+      "07-q4-o3"
+    ],
+    "answerOptionId": "07-q4-o2",
+    "distractors": [
+      {
+        "optionId": "07-q4-o1",
+        "error": "把新流程耗时当节省值",
+        "whyNot": "4分钟是还需要的切换时间。"
+      },
+      {
+        "optionId": "07-q4-o3",
+        "error": "把旧流程耗时当全部节省",
+        "whyNot": "新流程仍有4分钟切换，并非省下全部40分钟。"
+      }
+    ],
+    "answerEvidence": "(20−2)×2=36分钟；其他时间明确不变。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-v2-q05",
+    "sourceId": "07-q5",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。 独立复审或主编辑复查后：用三种实际窗户方案比较辐射路径，移除风扇和墙画凑项。",
+    "concept": "太阳得热",
+    "objective": "选择在玻璃前截断直射太阳辐射的构件位置",
+    "cognitiveOperation": "解释机制",
+    "context": "固定窗的夏季设计模型",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "区分玻璃外侧遮挡、内侧遮挡与透明隔热玻璃的辐射路径。",
+    "optionIds": [
+      "07-v2-q05-o1",
+      "07-v2-q05-o2",
+      "07-v2-q05-o3"
+    ],
+    "answerOptionId": "07-v2-q05-o1",
+    "distractors": [
+      {
+        "optionId": "07-v2-q05-o2",
+        "error": "把室内遮阳等同于窗前阻挡",
+        "whyNot": "室内帘位于玻璃之后，不满足穿过玻璃前的目标。"
+      },
+      {
+        "optionId": "07-v2-q05-o3",
+        "error": "把隔热玻璃等同于外侧遮阳",
+        "whyNot": "透明玻璃不是在入射玻璃前截断直射路径的遮挡设施。"
+      }
+    ],
+    "answerEvidence": "明示目标是在直射辐射穿过玻璃之前形成遮挡。",
+    "factSources": [
+      {
+        "url": "https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/measure_guide_windows.pdf",
+        "title": "US Department of Energy — Energy-Efficient Window Performance and Selection",
+        "checkedAt": "2026-10-03",
+        "supports": "外遮阳能够减少透过窗的太阳辐射得热；题干只问截断直射辐射，不推断总制冷性能。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json",
+    "recheckReference": "review/recheck-04-07.json"
+  },
+  {
+    "id": "07-v2-q06",
+    "sourceId": "07-q6",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "约束设计",
+    "objective": "选择同时满足重量、承载和预算的方案",
+    "cognitiveOperation": "应用",
+    "context": "虚构零件方案表",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需逐项检验三个明确约束",
+    "optionIds": [
+      "07-v2-q06-o1",
+      "07-v2-q06-o2",
+      "07-v2-q06-o3"
+    ],
+    "answerOptionId": "07-v2-q06-o2",
+    "distractors": [
+      {
+        "optionId": "07-v2-q06-o1",
+        "error": "只优化承载和成本",
+        "whyNot": "A重量3千克超过2千克上限。"
+      },
+      {
+        "optionId": "07-v2-q06-o3",
+        "error": "只优化重量和成本",
+        "whyNot": "C承载250牛顿低于300要求。"
+      }
+    ],
+    "answerEvidence": "B满足350≥300、1.5≤2、55≤60；A/C各一条件失败。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-v2-q07",
+    "sourceId": "07-q7",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "流水线瓶颈",
+    "objective": "计算串联工序升级后的最大稳定产能",
+    "cognitiveOperation": "计算",
+    "context": "虚构三工序生产线",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需找升级后最小处理速率",
+    "optionIds": [
+      "07-v2-q07-o1",
+      "07-v2-q07-o2",
+      "07-v2-q07-o3"
+    ],
+    "answerOptionId": "07-v2-q07-o1",
+    "distractors": [
+      {
+        "optionId": "07-v2-q07-o2",
+        "error": "只看最后工序能力",
+        "whyNot": "组装能处理10，但抛光只能供应8件。"
+      },
+      {
+        "optionId": "07-v2-q07-o3",
+        "error": "只看升级设备能力",
+        "whyNot": "切割20不改变抛光8的瓶颈。"
+      }
+    ],
+    "answerEvidence": "串联稳定流量不超过min(20,8,10)=8，缓冲及无损耗条件使8可达到。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-v2-q08",
+    "sourceId": "07-q8",
+    "changeType": "rewrite",
+    "revisionReason": "旧题目标过泛、重复或无法唯一判定；以此蓝图的具体知识操作替换。",
+    "concept": "金属疲劳",
+    "objective": "识别反复荷载下的裂纹机制",
+    "cognitiveOperation": "解释机制",
+    "context": "受控金属件循环试验",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分累积循环与单次过载",
+    "optionIds": [
+      "07-v2-q08-o1",
+      "07-v2-q08-o2",
+      "07-v2-q08-o3"
+    ],
+    "answerOptionId": "07-v2-q08-o1",
+    "distractors": [
+      {
+        "optionId": "07-v2-q08-o2",
+        "error": "把重复疲劳当单次超载",
+        "whyNot": "每次最大应力明确低于单次拉断应力。"
+      },
+      {
+        "optionId": "07-v2-q08-o3",
+        "error": "把所有裂纹归于腐蚀",
+        "whyNot": "试验排除了腐蚀且裂纹随荷载循环增长。"
+      }
+    ],
+    "answerEvidence": "反复应力、循环裂纹增长、无单次拉断应力和无腐蚀，支持疲劳而非两个干扰机制。",
+    "factSources": [
+      {
+        "url": "https://infotechnology.fhwa.dot.gov/term/fatigue-cracks/",
+        "title": "FHWA InfoTechnology — Fatigue Cracks",
+        "checkedAt": "2026-10-03",
+        "supports": "重复应力可形成疲劳裂纹，即使每次应力不达到单次材料极限；不能仅由交通平均量推断桥梁疲劳。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q9",
+    "sourceId": "07-q9",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "生命周期成本",
+    "objective": "计算相同寿命下购置及维护总成本",
+    "cognitiveOperation": "计算",
+    "context": "虚构两种内墙材料",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需合并初始费用和多年维护",
+    "optionIds": [
+      "07-q9-o1",
+      "07-q9-o2",
+      "07-q9-o3"
+    ],
+    "answerOptionId": "07-q9-o2",
+    "distractors": [
+      {
+        "optionId": "07-q9-o1",
+        "error": "只看购置价格",
+        "whyNot": "A虽少付400，但五年多维护750，总成本反高350。"
+      },
+      {
+        "optionId": "07-q9-o3",
+        "error": "只看维护差额",
+        "whyNot": "B省750维护，但购置多400，净省350。"
+      }
+    ],
+    "answerEvidence": "(1,000+5×200)−(1,400+5×50)=350，B较低。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q10",
+    "sourceId": "07-q10",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "检查与隐蔽缺陷",
+    "objective": "从已给检测结果判断移除检查的后果",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构接头质量检测",
+    "difficultyEstimate": "easy",
+    "difficultyReason": "已给每项检查能发现的缺陷范围",
+    "optionIds": [
+      "07-q10-o1",
+      "07-q10-o2",
+      "07-q10-o3"
+    ],
+    "answerOptionId": "07-q10-o2",
+    "distractors": [
+      {
+        "optionId": "07-q10-o1",
+        "error": "假设两检查完全重复",
+        "whyNot": "题干范围不重叠，甲不能代替乙检出内部缺陷。"
+      },
+      {
+        "optionId": "07-q10-o3",
+        "error": "混淆被保留与被删除检查",
+        "whyNot": "甲保留，因此外观缺陷检出仍在。"
+      }
+    ],
+    "answerEvidence": "甲只能外观且保留，乙只能内部且删去；无替代=>失去内部检出并省乙时间。",
+    "factSources": [],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q11",
+    "sourceId": "07-q11",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "串联系统可靠性",
+    "objective": "计算全部部件必须工作时的可靠性",
+    "cognitiveOperation": "计算",
+    "context": "明确独立性和串联作用的模型",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "需相乘而非平均或相加",
+    "optionIds": [
+      "07-q11-o1",
+      "07-q11-o2",
+      "07-q11-o3"
+    ],
+    "answerOptionId": "07-q11-o1",
+    "distractors": [
+      {
+        "optionId": "07-q11-o2",
+        "error": "用单件可靠性或平均代替全部正常概率",
+        "whyNot": "两件都必须正常且独立，应相乘。"
+      },
+      {
+        "optionId": "07-q11-o3",
+        "error": "把串联要求错作冗余并联",
+        "whyNot": "1−0.01²=99.99%对应至少一个正常，不是两个都正常。"
+      }
+    ],
+    "answerEvidence": "P(A且B)=0.99²=0.9801，独立及两者都必须正常均明示。",
+    "factSources": [],
+    "keepLogicalOrder": true,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  },
+  {
+    "id": "07-q12",
+    "sourceId": "07-q12",
+    "changeType": "revise",
+    "revisionReason": "保留原学习目标，补充分辨条件、真实错误项和逐题推理。",
+    "concept": "诱发需求",
+    "objective": "根据出行变化分辨新增交通来源",
+    "cognitiveOperation": "判断证据",
+    "context": "虚构扩路前后交通调查",
+    "difficultyEstimate": "medium",
+    "difficultyReason": "区分人口、交通转移和新增出行",
+    "optionIds": [
+      "07-q12-o1",
+      "07-q12-o2",
+      "07-q12-o3"
+    ],
+    "answerOptionId": "07-q12-o3",
+    "distractors": [
+      {
+        "optionId": "07-q12-o1",
+        "error": "把新增驾驶当既有车流转移",
+        "whyNot": "新增记录来自原公交或步行，不是其他道路驾车者。"
+      },
+      {
+        "optionId": "07-q12-o2",
+        "error": "把增量归于人口增长",
+        "whyNot": "题干人口明确不变。"
+      }
+    ],
+    "answerEvidence": "人口及其他道路车流不变；原非驾车者因通行变快改驾车，直接对应诱发的新增驾车需求。",
+    "factSources": [
+      {
+        "url": "https://www.gov.uk/government/publications/how-additional-road-capacity-affects-travel-demand",
+        "title": "UK Department for Transport — How additional road capacity affects travel demand",
+        "checkedAt": "2026-10-03",
+        "supports": "改善通行条件可能生成额外出行；是否、何时及程度依场景而定，不能把再次拥堵本身当唯一证明。"
+      }
+    ],
+    "keepLogicalOrder": false,
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/independent-04-07.json"
+  }
+]

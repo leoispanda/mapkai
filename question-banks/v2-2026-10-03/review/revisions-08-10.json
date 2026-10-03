@@ -1,0 +1,366 @@
+[
+  {
+    "id": "08-q2",
+    "reason": "移除题干直接给出的大孔隙答案，保留压实与入渗条件，要求使用机制。",
+    "before": {
+      "id": "08-q2",
+      "subject": "08",
+      "en": {
+        "question": "Heavy tractor traffic leaves wet soil denser, with fewer large pores and slower rainwater infiltration. Which change most directly explains the slower infiltration?",
+        "options": [
+          "The large spaces between soil particles increased",
+          "The large spaces between soil particles decreased",
+          "The soil particles themselves shrank in volume"
+        ],
+        "answer": "The large spaces between soil particles decreased",
+        "explanation": "Water moves through spaces between soil particles. Compaction reduces large channels, slowing infiltration and drainage. It presses particles closer together rather than shrinking the particles themselves."
+      },
+      "zh": {
+        "question": "一块湿地被重型拖拉机碾过。轮迹里的土更密实，大孔隙更少，雨水渗入也更慢。哪个变化最直接解释入渗变慢？",
+        "options": [
+          "土粒间的大孔隙增加了",
+          "土粒间的大孔隙减少了",
+          "土粒本身的体积缩小了"
+        ],
+        "answer": "土粒间的大孔隙减少了",
+        "explanation": "水通过土粒之间的孔隙流动。压实会挤掉一部分较大的通道，使入渗和排水变慢；不是把土粒本身压成更小颗粒。"
+      }
+    },
+    "after": {
+      "id": "08-q2",
+      "subject": "08",
+      "en": {
+        "question": "Heavy tractor traffic leaves wet soil denser, and rainwater infiltrates more slowly. Which change most directly explains the slower infiltration?",
+        "options": [
+          "The large spaces between soil particles increased",
+          "The large spaces between soil particles decreased",
+          "The soil particles themselves shrank in volume"
+        ],
+        "answer": "The large spaces between soil particles decreased",
+        "explanation": "Water moves through spaces between soil particles. Compaction reduces large channels, slowing infiltration and drainage. It presses particles closer together rather than shrinking the particles themselves."
+      },
+      "zh": {
+        "question": "一块湿土被重型拖拉机碾过，轮迹里的土更密实，雨水渗入也更慢。哪个变化最直接解释入渗变慢？",
+        "options": [
+          "土粒间的大孔隙增加了",
+          "土粒间的大孔隙减少了",
+          "土粒本身的体积缩小了"
+        ],
+        "answer": "土粒间的大孔隙减少了",
+        "explanation": "水通过土粒之间的孔隙流动。压实会挤掉一部分较大的通道，使入渗和排水变慢；不是把土粒本身压成更小颗粒。"
+      }
+    }
+  },
+  {
+    "id": "08-q3",
+    "reason": "明确候选番茄品种仍是寄主，排除未说明的抗性品种解释。",
+    "before": {
+      "id": "08-q3",
+      "subject": "08",
+      "en": {
+        "question": "A teaching case specifies that a pest overwinters locally and travels only short distances. It reproduces on tomatoes and potatoes, but not on beans. After tomatoes last year, which crop best interrupts its host supply in this field?",
+        "options": [
+          "A different tomato variety",
+          "A crop of potatoes",
+          "A crop of beans"
+        ],
+        "answer": "A crop of beans",
+        "explanation": "The rotation must remove hosts that this pest can use. Another tomato variety or potatoes still provide a host. Rotation alone may work poorly against pests with many hosts or strong long-distance movement."
+      },
+      "zh": {
+        "question": "教学案例给定：某害虫在本地土中越冬，移动距离有限；它能在番茄、马铃薯上繁殖，不能在豆类上繁殖。去年种番茄的田，今年种哪项最能中断它在这块田里的寄主供应？",
+        "options": [
+          "换一个番茄品种",
+          "改种马铃薯",
+          "改种豆类作物"
+        ],
+        "answer": "改种豆类作物",
+        "explanation": "轮作要换到这种害虫不能利用的寄主之外。换番茄品种或改种马铃薯，仍然给它繁殖场所。寄主多、能远距离迁入的害虫，不能仅靠这一做法控制。"
+      }
+    },
+    "after": {
+      "id": "08-q3",
+      "subject": "08",
+      "en": {
+        "question": "A teaching case specifies that a pest overwinters locally and travels only short distances. It reproduces on every tomato variety offered here and on potatoes, but not on beans. After tomatoes last year, which crop best interrupts its host supply in this field?",
+        "options": [
+          "A different tomato variety",
+          "A crop of potatoes",
+          "A crop of beans"
+        ],
+        "answer": "A crop of beans",
+        "explanation": "The rotation must remove hosts that this pest can use. Another tomato variety or potatoes still provide a host. Rotation alone may work poorly against pests with many hosts or strong long-distance movement."
+      },
+      "zh": {
+        "question": "教学案例给定：某害虫在本地土中越冬，移动距离有限；它能在本题给出的各番茄品种及马铃薯上繁殖，不能在豆类上繁殖。去年种番茄的田，今年种哪项最能中断它在这块田里的寄主供应？",
+        "options": [
+          "换一个番茄品种",
+          "改种马铃薯",
+          "改种豆类作物"
+        ],
+        "answer": "改种豆类作物",
+        "explanation": "轮作要换到这种害虫不能利用的寄主之外。换番茄品种或改种马铃薯，仍然给它繁殖场所。寄主多、能远距离迁入的害虫，不能仅靠这一做法控制。"
+      }
+    }
+  },
+  {
+    "id": "08-q6",
+    "reason": "把遗传和降雨凑项换成同属光水获取机制的常见混淆，并不在题干先写出竞争答案。",
+    "before": {
+      "id": "08-q6",
+      "subject": "08",
+      "en": {
+        "question": "A crowded plantation aims to retain its main trees while reducing their competition for light and water. Managers selectively remove some neighboring trees, with other conditions unchanged. What does this action change most directly?",
+        "options": [
+          "Resource competition around the retained trees",
+          "The inherited root traits of every tree",
+          "The total annual rainfall reaching the region"
+        ],
+        "answer": "Resource competition around the retained trees",
+        "explanation": "Thinning changes tree density and neighboring competition, potentially improving access to light and water for retained trees. It does not directly change inherited traits or regional rainfall. This plantation goal does not imply that small trees should always be removed."
+      },
+      "zh": {
+        "question": "一个拥挤的人工林要保留主要树木，同时减少它们对光和水的竞争。管理者选择性移除部分相邻树木，其他条件暂不变。这个动作最直接改变了什么？",
+        "options": [
+          "保留树木周围的资源竞争",
+          "所有树木的根系遗传特征",
+          "林地每年的降雨供应总量"
+        ],
+        "answer": "保留树木周围的资源竞争",
+        "explanation": "间伐改变树木密度与邻近竞争，可能让保留树木获得更多光和水。它不直接改变遗传特征或地区降雨。这里限定人工林的管理目标，不能推出所有小树都应移除。"
+      }
+    },
+    "after": {
+      "id": "08-q6",
+      "subject": "08",
+      "en": {
+        "question": "In a crowded plantation, the main trees have many neighbors. Managers retain the main trees and selectively remove some neighbors, with weather and soil conditions unchanged. Which mechanism most directly improves the retained trees’ access to light and water?",
+        "options": [
+          "Reducing neighbors’ competition for light and water",
+          "Reducing retained trees’ need for light and water",
+          "Increasing canopy shade over the retained trees"
+        ],
+        "answer": "Reducing neighbors’ competition for light and water",
+        "explanation": "Fewer neighboring trees compete for the same light and water, improving access for retained trees. Better access does not mean those trees need less of these resources, and removing neighbors does not increase canopy shade. This plantation goal does not imply that small trees should always be removed."
+      },
+      "zh": {
+        "question": "一片拥挤的人工林中，主要树木周围有许多邻树。管理者保留主要树木，选择性移除部分邻树，天气和土壤条件暂不变。这最直接通过哪种机制改善保留树对光和水的获取？",
+        "options": [
+          "减少邻树对光和水的竞争",
+          "减少保留树对光和水的需求",
+          "增加保留树所受的林冠遮阴"
+        ],
+        "answer": "减少邻树对光和水的竞争",
+        "explanation": "邻树减少，共同争夺光和水的树木也减少，保留树可获得更多资源。获取条件改善不等于它们自身的需求下降；移除邻树也不是增加林冠遮阴。这里限定人工林目标，不能推出所有小树都应移除。"
+      }
+    }
+  },
+  {
+    "id": "09-q1",
+    "reason": "删除刷到出血的明显凑项，让三项分别比较力度和牙面覆盖。",
+    "before": {
+      "id": "09-q1",
+      "subject": "09",
+      "en": {
+        "question": "An oral-hygiene leaflet emphasizes gentle, thorough cleaning of tooth surfaces rather than using bleeding as a sign of success. Which approach fits this principle?",
+        "options": [
+          "Increase brushing pressure until the gums bleed",
+          "Use gentle pressure and clean each tooth surface",
+          "Shorten brushing time and clean only visible surfaces"
+        ],
+        "answer": "Use gentle pressure and clean each tooth surface",
+        "explanation": "Effective cleaning concerns coverage and appropriate technique, not pressure or bleeding. Bleeding gums can also indicate gum disease and should be assessed by a dental professional rather than attributed only to forceful brushing."
+      },
+      "zh": {
+        "question": "口腔卫生宣传页强调“轻柔而完整地清洁牙面”，而不是用出血表示刷干净。哪种做法与这项原则一致？",
+        "options": [
+          "增加刷牙力度，直到牙龈出血",
+          "保持轻柔力度，清洁各个牙面",
+          "缩短清洁时间，只刷看得见处"
+        ],
+        "answer": "保持轻柔力度，清洁各个牙面",
+        "explanation": "清洁效果要看牙面是否得到适当清洁，不能以力度或出血来衡量。牙龈出血也可能与牙龈疾病有关，不能仅归因于刷得太重；出现出血需要牙科评估。"
+      }
+    },
+    "after": {
+      "id": "09-q1",
+      "subject": "09",
+      "en": {
+        "question": "An oral-hygiene leaflet emphasizes gentle, thorough cleaning of tooth surfaces rather than using bleeding as a sign of success. Which approach fits this principle?",
+        "options": [
+          "Use gentle pressure and clean only front-tooth surfaces",
+          "Use gentle pressure and clean each tooth surface",
+          "Use stronger pressure and clean each tooth surface"
+        ],
+        "answer": "Use gentle pressure and clean each tooth surface",
+        "explanation": "Effective cleaning concerns coverage and appropriate technique, not pressure or bleeding. Bleeding gums can also indicate gum disease and should be assessed by a dental professional rather than attributed only to forceful brushing."
+      },
+      "zh": {
+        "question": "口腔卫生宣传页强调“轻柔而完整地清洁牙面”，而不是用出血表示刷干净。哪种做法与这项原则一致？",
+        "options": [
+          "保持轻柔力度，只清洁前牙牙面",
+          "保持轻柔力度，清洁各个牙面",
+          "增加刷牙力度，清洁各个牙面"
+        ],
+        "answer": "保持轻柔力度，清洁各个牙面",
+        "explanation": "清洁效果要看牙面是否得到适当清洁，不能以力度或出血来衡量。牙龈出血也可能与牙龈疾病有关，不能仅归因于刷得太重；出现出血需要牙科评估。"
+      }
+    }
+  },
+  {
+    "id": "09-q9",
+    "reason": "把删除全部历史凑项换成合理的保留历史但中断计数规则，并明确连续照护的产品目标。",
+    "before": {
+      "id": "09-q9",
+      "subject": "09",
+      "en": {
+        "question": "An activity app wants to reward regular activity without encouraging users to disregard advice they have received to rest. A user can mark “pause as professionally advised.” Which rule best serves both goals?",
+        "options": [
+          "Require the usual activity target on pause days to keep the streak",
+          "Allow the rest plan to be logged on pause days to keep a care streak",
+          "Delete the full history on pause days so tracking must restart"
+        ],
+        "answer": "Allow the rest plan to be logged on pause days to keep a care streak",
+        "explanation": "The reward can track following an appropriate care plan rather than meeting the same activity volume every day. Logging advised rest preserves continuity without requiring activity against that advice. The app does not determine what activity is suitable for an individual."
+      },
+      "zh": {
+        "question": "活动应用希望奖励规律活动，同时不让用户为了连续记录而违反已获得的休息建议。用户可标记“按专业建议暂停”。哪个规则最符合这两个目标？",
+        "options": [
+          "暂停日仍须完成运动量，才能保留连续记录",
+          "暂停日可登记休息安排，保留连续照护记录",
+          "暂停日删除全部历史，让用户重新开始记录"
+        ],
+        "answer": "暂停日可登记休息安排，保留连续照护记录",
+        "explanation": "奖励的对象可以从“每天做同样运动量”改成“持续执行合适的照护安排”。登记休息既保留连续记录，也不要求违反已有建议。应用不应代替专业判断什么活动适合某人。"
+      }
+    },
+    "after": {
+      "id": "09-q9",
+      "subject": "09",
+      "en": {
+        "question": "An activity app encourages regular activity and allows rest based on professional advice a user has already received. It wants both situations to count toward a continuous care record. A user can mark “pause as professionally advised.” Which rule preserves that care streak without encouraging activity against the advice?",
+        "options": [
+          "Require the usual activity target on pause days to keep the streak",
+          "Log advised rest on pause days and keep the care streak",
+          "Keep the history on pause days but break the care streak"
+        ],
+        "answer": "Log advised rest on pause days and keep the care streak",
+        "explanation": "The reward can track following an appropriate care plan rather than meeting the same activity volume every day. Logging advised rest preserves continuity without requiring activity against that advice. The app does not determine what activity is suitable for an individual."
+      },
+      "zh": {
+        "question": "活动应用要鼓励规律活动，也允许用户按已获得的专业建议休息。产品希望这两种情况都能继续积累“连续照护”记录。用户可标记“按专业建议暂停”。哪个规则同时保留这类连续记录，并避免诱导用户违反休息建议？",
+        "options": [
+          "暂停日仍须完成运动量，才能保留连续记录",
+          "暂停日可登记休息安排，保留连续照护记录",
+          "暂停日保留历史记录，但中断连续照护计数"
+        ],
+        "answer": "暂停日可登记休息安排，保留连续照护记录",
+        "explanation": "奖励的对象可以从“每天做同样运动量”改成“持续执行合适的照护安排”。登记休息既保留连续记录，也不要求违反已有建议。应用不应代替专业判断什么活动适合某人。"
+      }
+    }
+  },
+  {
+    "id": "10-q4",
+    "reason": "中文也明确出口外，与英文条件对齐；各项同为直接流程动作。",
+    "before": {
+      "id": "10-q4",
+      "subject": "10",
+      "en": {
+        "question": "A checkpoint has one processing lane that is continuously busy. Each person occupies it for 60 seconds: 40 preparing items from instructions and 20 for the check. Preparation can be fully completed in the waiting area without slowing the check. Which change most reduces time occupying the lane?",
+        "options": [
+          "Complete preparation before entering the processing lane",
+          "Complete the check just beyond the processing lane exit",
+          "Provide extra waiting seats before the processing lane"
+        ],
+        "answer": "Complete preparation before entering the processing lane",
+        "explanation": "Completing preparation before entry removes 40 seconds and leaves 20 seconds in the lane. Even if moving the check frees all of its 20 seconds, preparation still occupies 40. Extra seats do not shorten processing. The opportunity is to move preparable work out of the bottleneck."
+      },
+      "zh": {
+        "question": "一个检查站只有一条处理通道，已持续满负荷。每人占用通道60秒，其中40秒用于按说明准备物品、20秒用于检查。若准备可完整移到排队区且不减慢检查，哪项最能减少通道占用时间？",
+        "options": [
+          "把40秒准备环节提前到排队区",
+          "把20秒检查环节移到通道出口",
+          "把等候区座椅数量增加一倍"
+        ],
+        "answer": "把40秒准备环节提前到排队区",
+        "explanation": "把40秒准备移到通道前，每人占用可从60秒降为20秒。即使检查移到出口后不占通道，也只移走20秒，准备仍占40秒；加座椅不改变处理时间。关键是把可提前做的工作移出瓶颈。"
+      }
+    },
+    "after": {
+      "id": "10-q4",
+      "subject": "10",
+      "en": {
+        "question": "A checkpoint has one processing lane that is continuously busy. Each person occupies it for 60 seconds: 40 preparing items from instructions and 20 for the check. Preparation can be fully completed in the waiting area without slowing the check. Which change most reduces time occupying the lane?",
+        "options": [
+          "Complete preparation before entering the processing lane",
+          "Complete the check just beyond the processing lane exit",
+          "Provide extra waiting seats before the processing lane"
+        ],
+        "answer": "Complete preparation before entering the processing lane",
+        "explanation": "Completing preparation before entry removes 40 seconds and leaves 20 seconds in the lane. Even if moving the check frees all of its 20 seconds, preparation still occupies 40. Extra seats do not shorten processing. The opportunity is to move preparable work out of the bottleneck."
+      },
+      "zh": {
+        "question": "一个检查站只有一条处理通道，已持续满负荷。每人占用通道60秒，其中40秒用于按说明准备物品、20秒用于检查。若准备可完整移到排队区且不减慢检查，哪项最能减少通道占用时间？",
+        "options": [
+          "在进入处理通道前完成准备",
+          "在处理通道出口外完成检查",
+          "在处理通道入口前增加座椅"
+        ],
+        "answer": "在进入处理通道前完成准备",
+        "explanation": "把40秒准备移到通道前，每人占用可从60秒降为20秒。即使检查移到出口后不占通道，也只移走20秒，准备仍占40秒；加座椅不改变处理时间。关键是把可提前做的工作移出瓶颈。"
+      }
+    }
+  },
+  {
+    "id": "10-q12",
+    "reason": "用同一到达任务中的内容、书面清晰和播音清晰作比较，删除价格与音乐无关凑项。",
+    "before": {
+      "id": "10-q12",
+      "subject": "10",
+      "en": {
+        "question": "An event’s written entrance directions send visitors to the east hall, while the announcement says the event is in the west hall. Each is individually clear, but visitors keep turning back. Which two service touchpoints should be checked together to resolve this conflict?",
+        "options": [
+          "Written directions and spoken venue directions",
+          "The ticket-pricing display and discount announcements",
+          "The background music and entrance lighting"
+        ],
+        "answer": "Written directions and spoken venue directions",
+        "explanation": "Visitors use information across touchpoints, so two clear but contradictory messages still cause confusion. The relevant pair is the route and announcement for the same arrival task, rather than improving one touchpoint in isolation."
+      },
+      "zh": {
+        "question": "活动入口的书面路线把访客引向东侧大厅，广播却说活动在西侧大厅；两处各自清楚，但访客不断折返。为了消除这项矛盾，最应联合核对哪两个服务触点？",
+        "options": [
+          "书面路线与位置广播",
+          "门票价格与优惠规则",
+          "背景音乐与灯光颜色"
+        ],
+        "answer": "书面路线与位置广播",
+        "explanation": "访客跨触点使用信息，所以两条清楚但互相矛盾的消息仍会制造混乱。这里要核对同一到达任务的路线与广播，而不是单独提高某个触点的满意度。"
+      }
+    },
+    "after": {
+      "id": "10-q12",
+      "subject": "10",
+      "en": {
+        "question": "An event’s written entrance directions send visitors to the east hall, while the announcement says the event is in the west hall. Each is individually clear, but visitors keep turning back. Which pair of aspects should be checked together to resolve this conflict?",
+        "options": [
+          "The content of written directions and venue announcements",
+          "The text size and layout of the written directions",
+          "The volume and speaking pace of venue announcements"
+        ],
+        "answer": "The content of written directions and venue announcements",
+        "explanation": "Visitors use information across touchpoints, so two clear but contradictory messages still cause confusion. The relevant pair is the route and announcement for the same arrival task, rather than improving one touchpoint in isolation."
+      },
+      "zh": {
+        "question": "活动入口的书面路线把访客引向东侧大厅，广播却说活动在西侧大厅；两处各自清楚，但访客不断折返。为了消除这项矛盾，最应联合核对哪一组内容？",
+        "options": [
+          "书面路线与位置广播的内容",
+          "书面路线的文字字号和排版",
+          "位置广播的播音音量和速度"
+        ],
+        "answer": "书面路线与位置广播的内容",
+        "explanation": "访客跨触点使用信息，所以两条清楚但互相矛盾的消息仍会制造混乱。这里要核对同一到达任务的路线与广播，而不是单独提高某个触点的满意度。"
+      }
+    }
+  }
+]

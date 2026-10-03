@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "00-q1",
+    "subject": "00",
+    "en": {
+      "question": "Three packs of the same-quality cereal cost: 400 g for €3.20, 750 g for €5.25 and 1 kg for €7.60. Which has the lowest price per kilogram?",
+      "options": [
+        "The 400 g pack",
+        "The 750 g pack",
+        "The 1 kg pack"
+      ],
+      "answer": "The 750 g pack",
+      "explanation": "The prices per kilogram of the 400 g, 750 g and 1 kg packs are €8.00, €7.00 and €7.60. The 750 g pack is not the cheapest at the checkout, but it is cheapest for an equal weight."
+    },
+    "zh": {
+      "question": "三包同品质麦片的规格与价格是：400克／3.20欧元，750克／5.25欧元，1千克／7.60欧元。只比较每公斤价格，哪包最便宜？",
+      "options": [
+        "400克包装",
+        "750克包装",
+        "1千克包装"
+      ],
+      "answer": "750克包装",
+      "explanation": "400克、750克和1千克包装的每公斤价格分别为8.00、7.00和7.60欧元。750克包装的标价不是最低，但换成相同重量后最便宜。"
+    }
+  },
+  {
+    "id": "00-v2-q02",
+    "subject": "00",
+    "en": {
+      "question": "A recipe uses 150 g of rice for two people. Keeping the amount per person the same, how much rice is needed for five people?",
+      "options": [
+        "225 g",
+        "300 g",
+        "375 g"
+      ],
+      "answer": "375 g",
+      "explanation": "Five people need 2.5 times the amount for two people, so 150 × 2.5 = 375 g. Scale the quantity with the number of servings."
+    },
+    "zh": {
+      "question": "菜谱给两人用150克米。每人用量不变，改做五人份需要多少米？",
+      "options": [
+        "225 克",
+        "300 克",
+        "375 克"
+      ],
+      "answer": "375 克",
+      "explanation": "人数从2人变成5人，是原来的2.5倍，所以米量也是150×2.5＝375克。增加人数要按比例缩放，不能只加一个固定数量。"
+    }
+  },
+  {
+    "id": "00-q3",
+    "subject": "00",
+    "en": {
+      "question": "A repair request must include the order number, the fault and the action requested. Your order is A17, the washing machine leaks and you want a repair visit. Which short email includes all three?",
+      "options": [
+        "The washer in order A17 leaks. This is frustrating.",
+        "The washer in order A17 leaks. Please arrange a repair visit.",
+        "My washing machine leaks. Please arrange a repair visit soon."
+      ],
+      "answer": "The washer in order A17 leaks. Please arrange a repair visit.",
+      "explanation": "'The washer in order A17 leaks. Please arrange a repair visit' gives the order number, fault and requested action. Clear writing lets the recipient locate the issue and act on it."
+    },
+    "zh": {
+      "question": "维修申请必须包含订单号、故障和希望对方采取的动作。订单号是A17，洗衣机漏水，你希望安排检修。哪封短邮件信息齐全？",
+      "options": [
+        "A17订单的洗衣机漏水，我感到困扰。",
+        "A17订单的洗衣机漏水，请安排检修。",
+        "我的洗衣机漏水，请尽快安排检修。"
+      ],
+      "answer": "A17订单的洗衣机漏水，请安排检修。",
+      "explanation": "“A17订单的洗衣机漏水，请安排检修”同时给出订单号、故障和请求。表达清楚的关键是让接收者能定位事项并知道下一步，而不只是写出不满。"
+    }
+  },
+  {
+    "id": "00-q4",
+    "subject": "00",
+    "en": {
+      "question": "An item originally costs 80 units of money. Its price is reduced by 25%, with no other fees. What is the new price?",
+      "options": [
+        "20 units",
+        "60 units",
+        "64 units"
+      ],
+      "answer": "60 units",
+      "explanation": "The reduction is 80 × 25% = 20 units, so the new price is 80 − 20 = 60. The 25% is the part removed, not the part paid."
+    },
+    "zh": {
+      "question": "一件商品原价80元，降价25%，没有其他费用。现在应付多少钱？",
+      "options": [
+        "20 元",
+        "60 元",
+        "64 元"
+      ],
+      "answer": "60 元",
+      "explanation": "折扣金额是80×25%＝20元，应付80－20＝60元。25%是减掉的部分，剩下的75%才是要支付的部分。"
+    }
+  },
+  {
+    "id": "00-q5",
+    "subject": "00",
+    "en": {
+      "question": "You want to filter unfinished tasks in different list apps, rather than memorize one app's buttons. Which practice directly matches this goal?",
+      "options": [
+        "Repeatedly memorize the filter button's position in the old app.",
+        "Complete the same filtering task in two different apps.",
+        "Watch introductions to every feature in the new app."
+      ],
+      "answer": "Complete the same filtering task in two different apps.",
+      "explanation": "Doing the same task in two interfaces requires applying the idea of filtering by completion status across tools. Memorizing a button or watching an overview does not by itself demonstrate that transfer."
+    },
+    "zh": {
+      "question": "你要学会在不同清单软件中筛出未完成事项，而不只记住某个软件的按钮。哪项练习直接符合这个目标？",
+      "options": [
+        "在旧软件中反复记忆筛选按钮的位置。",
+        "在两款软件中分别完成相同筛选任务。",
+        "在新软件中依次观看所有功能的介绍。"
+      ],
+      "answer": "在两款软件中分别完成相同筛选任务。",
+      "explanation": "在两个界面中完成同一任务，要求把“按完成状态筛选”这一操作迁移过去。记住按钮或看完介绍，不能单独证明跨工具应用。"
+    }
+  },
+  {
+    "id": "00-v2-q06",
+    "subject": "00",
+    "en": {
+      "question": "You have 240 units of income this month, fixed expenses of 160 and a savings target of 40. With no other income or expenses, how much can you spend on other purchases?",
+      "options": [
+        "40 units",
+        "80 units",
+        "120 units"
+      ],
+      "answer": "40 units",
+      "explanation": "The remaining spending budget is 240 − 160 − 40 = 40 units. The 80 left after fixed expenses still includes the 40 reserved for savings."
+    },
+    "zh": {
+      "question": "本月可用收入240元，固定支出160元，并要留下40元储蓄。没有其他收支，最多还能用于其他消费多少钱？",
+      "options": [
+        "40 元",
+        "80 元",
+        "120 元"
+      ],
+      "answer": "40 元",
+      "explanation": "可消费余额为240－160－40＝40元。收入减去固定支出后还有80元，但其中40元已留给储蓄。"
+    }
+  },
+  {
+    "id": "00-q7",
+    "subject": "00",
+    "en": {
+      "question": "You have food, transport and stationery receipts from three months. You want to open one folder and see all categories of receipts for a particular month. What should the folders be grouped by?",
+      "options": [
+        "Group folders by spending category.",
+        "Group folders by receipt month.",
+        "Group folders by image format."
+      ],
+      "answer": "Group folders by receipt month.",
+      "explanation": "Grouping by month puts that month's different categories together, matching the retrieval task. Categories can be useful for another purpose, but they split a month's receipts across folders."
+    },
+    "zh": {
+      "question": "你有食物、交通和文具的消费凭证，跨了三个月。目标是打开一个文件夹就看到某月所有类别的凭证。按什么分文件夹最直接？",
+      "options": [
+        "按消费类别分文件夹。",
+        "按凭证月份分文件夹。",
+        "按图片格式分文件夹。"
+      ],
+      "answer": "按凭证月份分文件夹。",
+      "explanation": "按月份分组，把同一月的不同消费类别放在一起，正好对应检索目标。按类别分也有用途，但会把一个月的资料分散到多个文件夹。"
+    }
+  },
+  {
+    "id": "00-q8",
+    "subject": "00",
+    "en": {
+      "question": "Making a chart requires learning these steps in order: importing data, 10 minutes; formulas, 20 minutes; charts, 15 minutes. Each step requires the preceding one. You have 30 minutes today. Which plan respects both time and order?",
+      "options": [
+        "Learn importing and formulas today; learn charts next time.",
+        "Learn importing and charts today; learn formulas next time.",
+        "Learn only formulas today; learn importing and charts next time."
+      ],
+      "answer": "Learn importing and formulas today; learn charts next time.",
+      "explanation": "Importing and formulas take 30 minutes in total and follow the required order. The other plans start a step before its prerequisite has been learned."
+    },
+    "zh": {
+      "question": "制作图表依次需要：学导入数据10分钟、学公式20分钟、学图表15分钟；每步都依赖前一步。今天只有30分钟。哪项计划满足时间和先后要求？",
+      "options": [
+        "今天学导入和公式；下次学图表。",
+        "今天学导入和图表；下次学公式。",
+        "今天只学公式；下次学导入和图表。"
+      ],
+      "answer": "今天学导入和公式；下次学图表。",
+      "explanation": "导入与公式共30分钟，且先后顺序成立。跳过公式直接学图表，或尚未学导入就学公式，都违反题干给出的依赖关系。"
+    }
+  },
+  {
+    "id": "00-v2-q09",
+    "subject": "00",
+    "en": {
+      "question": "A garden must divide a limited water supply among beds; a tablet must divide limited battery power among tasks; an archive must divide limited storage among records. What problem do all three share?",
+      "options": [
+        "Allocating a limited resource among several uses.",
+        "Increasing the attention given to each separate use.",
+        "Judging every use by the same measure of value."
+      ],
+      "answer": "Allocating a limited resource among several uses.",
+      "explanation": "Each example supplies a limited total and several uses. That shared structure is resource allocation. The examples do not require more attention or a common measure of value."
+    },
+    "zh": {
+      "question": "花园要把有限的水分给不同花坛；平板要把有限电量分给不同任务；档案馆要把有限空间分给不同资料。三者共同面对什么问题？",
+      "options": [
+        "如何在多个用途之间分配有限资源。",
+        "如何让每个用途分别获得更多关注。",
+        "如何用同一标准评判每个用途价值。"
+      ],
+      "answer": "如何在多个用途之间分配有限资源。",
+      "explanation": "三段材料都给出了一个有限总量以及多个用途，共同结构是资源分配。它们没有要求关注度增加，也没有说明各用途能用同一个价值标准比较。"
+    }
+  },
+  {
+    "id": "00-v2-q10",
+    "subject": "00",
+    "en": {
+      "question": "You need a table of total spending for each category. Every amount and category has been entered, and you can sum the entire amount column. What operation is still needed to obtain separate food, transport and other totals?",
+      "options": [
+        "Sort all records from the smallest amount to the largest.",
+        "Group records by category and sum each group.",
+        "Sort all records from the earliest entry to the latest."
+      ],
+      "answer": "Group records by category and sum each group.",
+      "explanation": "Summing the whole column gives total spending. Grouping by category and summing within each group gives category totals. Sorting changes order, but does not perform that aggregation."
+    },
+    "zh": {
+      "question": "你要做一张“每类消费合计”的表。已经录入每笔金额和类别，也会把一整列金额相加。现在还需要哪项操作，才能分别得到食物、交通等类别的合计？",
+      "options": [
+        "按金额大小排列所有记录。",
+        "按类别分组，再分别求和。",
+        "按录入先后排列所有记录。"
+      ],
+      "answer": "按类别分组，再分别求和。",
+      "explanation": "整列求和给的是总支出；按类别分组后求和，才得到每类合计。排序能改变显示顺序，却不等于完成分类汇总。"
+    }
+  },
+  {
+    "id": "00-q11",
+    "subject": "00",
+    "en": {
+      "question": "There are 60 minutes available after school. Music and maths each need at least 20 minutes, and rest needs at least 15. Which schedule meets all these requirements?",
+      "options": [
+        "Music 20, maths 20 and rest 20 minutes.",
+        "Music 25, maths 25 and rest 15 minutes.",
+        "Music 25, maths 25 and rest 10 minutes."
+      ],
+      "answer": "Music 20, maths 20 and rest 20 minutes.",
+      "explanation": "20 + 20 + 20 totals 60 minutes and meets all minimums. 25 + 25 + 15 totals 65 minutes; 25 + 25 + 10 totals 60 but gives five minutes too little rest."
+    },
+    "zh": {
+      "question": "放学后共有60分钟。音乐和数学至少各20分钟，休息至少15分钟。下面哪份安排同时满足这些要求？",
+      "options": [
+        "音乐20、数学20、休息20分钟。",
+        "音乐25、数学25、休息15分钟。",
+        "音乐25、数学25、休息10分钟。"
+      ],
+      "answer": "音乐20、数学20、休息20分钟。",
+      "explanation": "20＋20＋20共60分钟，三项最低要求都满足。25＋25＋15共65分钟超时；25＋25＋10虽共60分钟，休息却少了5分钟。"
+    }
+  },
+  {
+    "id": "00-q12",
+    "subject": "00",
+    "en": {
+      "question": "Files are named topic_date_status. You need the latest approved handbook, not a draft. Which file meets that requirement?",
+      "options": [
+        "handbook_2026-09-20_approved",
+        "handbook_2026-09-28_draft",
+        "handbook_2026-09-25_approved"
+      ],
+      "answer": "handbook_2026-09-25_approved",
+      "explanation": "First filter for approved files, then compare dates. September 25 is later than September 20. September 28 is newer, but its draft status excludes it from this task."
+    },
+    "zh": {
+      "question": "文件名按“主题_日期_状态”保存。你要使用最新的已批准手册，而不能用草稿。以下哪个文件符合要求？",
+      "options": [
+        "手册_2026-09-20_已批准",
+        "手册_2026-09-28_草稿",
+        "手册_2026-09-25_已批准"
+      ],
+      "answer": "手册_2026-09-25_已批准",
+      "explanation": "先按“已批准”筛选，再比较日期：9月25日比9月20日新。9月28日虽然最新，却仍是草稿，不能用于这项任务。"
+    }
+  },
+  {
+    "id": "01-q1",
+    "subject": "01",
+    "en": {
+      "question": "You have just met a classmate. You want to check the pronunciation of their name and actually use it during this conversation. Which action does both?",
+      "options": [
+        "Ask them to repeat their name, then continue the previous topic.",
+        "Ask them to repeat their name, then use it in a question.",
+        "Copy their name from the badge, then introduce yourself to them."
+      ],
+      "answer": "Ask them to repeat their name, then use it in a question.",
+      "explanation": "Repetition lets you check the pronunciation, and addressing them by name uses the new information. Copying the badge records spelling but does not complete both spoken tasks."
+    },
+    "zh": {
+      "question": "刚认识一位同学，你想确认名字的发音，并在这次交流中实际使用它。哪项动作同时做到这两点？",
+      "options": [
+        "请他再说一次名字，随后继续原来的话题。",
+        "请他再说一次名字，随后用名字向他提问。",
+        "看着胸牌抄下名字，随后向他介绍自己。"
+      ],
+      "answer": "请他再说一次名字，随后用名字向他提问。",
+      "explanation": "先听对方再说一遍可以核对发音，随后以名字称呼他则实际使用了新信息。抄写胸牌能记录拼写，却没有完成这两项口头任务。"
+    }
+  },
+  {
+    "id": "01-q2",
+    "subject": "01",
+    "en": {
+      "question": "A learner can complete a task using step-by-step prompts. The teacher wants to keep the same task while gradually reducing help. Which arrangement follows that approach?",
+      "options": [
+        "Keep the prompts and increase the number of repetitions.",
+        "Keep the prompts and move to a more difficult task.",
+        "Remove one prompt so the learner completes that step."
+      ],
+      "answer": "Remove one prompt so the learner completes that step.",
+      "explanation": "Fading support reduces the amount of help so the learner takes over part of the work. Repetition or harder tasks can serve other teaching goals, but neither reduces the prompts."
+    },
+    "zh": {
+      "question": "学员已经能按步骤提示完成任务。老师想保持同一个任务，逐步减少提示，让学员独立完成。哪项安排符合这一做法？",
+      "options": [
+        "保留原有提示，再增加相同任务的次数。",
+        "保留原有提示，再换成难度更高的任务。",
+        "减少一步提示，让学员自己完成这步。"
+      ],
+      "answer": "减少一步提示，让学员自己完成这步。",
+      "explanation": "逐步撤除支撑改变的是帮助量：让学员接过原由提示承担的一部分工作。增加重复或提高难度也可能用于教学，但不是这里要辨认的做法。"
+    }
+  },
+  {
+    "id": "01-q3",
+    "subject": "01",
+    "en": {
+      "question": "After reading a page of notes, you want to find what you cannot recall yourself, rather than what looks familiar. Which activity directly checks that?",
+      "options": [
+        "Close the notes, write the key points, then reopen them to check omissions.",
+        "Mark the key points while viewing the notes, then check the highlight colours.",
+        "Read the key points while viewing the notes, then check your reading speed."
+      ],
+      "answer": "Close the notes, write the key points, then reopen them to check omissions.",
+      "explanation": "Writing with the notes closed requires retrieval; comparison reveals omissions. Highlighting or reading while looking at the text still supplies the information being checked."
+    },
+    "zh": {
+      "question": "你看完一页笔记，想检查哪些内容自己无法回忆，而不是哪些句子看着眼熟。哪项活动直接检查这个目标？",
+      "options": [
+        "合上笔记写出要点，再打开对照遗漏。",
+        "看着笔记标出要点，再检查标记颜色。",
+        "看着笔记朗读要点，再检查朗读速度。"
+      ],
+      "answer": "合上笔记写出要点，再打开对照遗漏。",
+      "explanation": "合上笔记后写要点，需要从记忆中提取；对照后能看见遗漏。看着资料划线或朗读仍有原文支持，不能直接检查离开资料后的回忆。"
+    }
+  },
+  {
+    "id": "01-q4",
+    "subject": "01",
+    "en": {
+      "question": "The same vocabulary set gets 40 minutes of review in total. Which plan distributes review across different dates rather than concentrating it on one day?",
+      "options": [
+        "Four 10-minute reviews on day 1, with 10-minute breaks between them.",
+        "One 10-minute review on each of days 1, 3, 6 and 10.",
+        "Four 10-minute reviews on day 10, with 10-minute breaks between them."
+      ],
+      "answer": "One 10-minute review on each of days 1, 3, 6 and 10.",
+      "explanation": "One 10-minute review on each of four dates distributes the same 40 minutes across days. The plans with short breaks still remain within one day. This does not establish that these particular dates are optimal."
+    },
+    "zh": {
+      "question": "同一组词汇总共复习40分钟。哪份计划把复习分散在不同日期，而不是集中在某一天？",
+      "options": [
+        "第1天四轮10分钟，中间各休息10分钟。",
+        "第1、3、6、10天，每天复习10分钟。",
+        "第10天四轮10分钟，中间各休息10分钟。"
+      ],
+      "answer": "第1、3、6、10天，每天复习10分钟。",
+      "explanation": "跨四个日期、每天10分钟的计划把相同40分钟分散开，是跨日的间隔练习。同一天内的多轮复习虽有短暂休息，仍集中在一天；这题没有证明所列日期是最佳间隔。"
+    }
+  },
+  {
+    "id": "01-q5",
+    "subject": "01",
+    "en": {
+      "question": "A training activity must include two steps: learners judge emails themselves, then receive specific feedback on their own errors. Which design includes both?",
+      "options": [
+        "Watch four case explanations, then repeat their main cautions.",
+        "Judge four emails yourself, then review feedback on each error.",
+        "Watch four demonstrations, then copy their main steps."
+      ],
+      "answer": "Judge four emails yourself, then review feedback on each error.",
+      "explanation": "Making a judgment produces an answer that can be checked, and feedback can then locate the errors. Cases and demonstrations provide information, but these options do not include the required personal judgments."
+    },
+    "zh": {
+      "question": "培训要包含两步：学员自己判断邮件是否可疑，然后根据自己的错误获得具体反馈。下面哪项设计包含这两步？",
+      "options": [
+        "先看四封案例讲解，再复述其中的注意点。",
+        "先自己判断四封邮件，再逐项查看错误反馈。",
+        "先观看四次操作示范，再抄写其中的步骤。"
+      ],
+      "answer": "先自己判断四封邮件，再逐项查看错误反馈。",
+      "explanation": "自己做判断会产生可检查的回答；随后针对这些回答反馈，才能指出误判在哪里。看案例或示范也能提供知识，但没有题干要求的亲自判断过程。"
+    }
+  },
+  {
+    "id": "01-q6",
+    "subject": "01",
+    "en": {
+      "question": "A beginner must independently write a two-paragraph explanation. The teacher wants to provide a usable structural model while leaving some writing to the learner. Which material does both?",
+      "options": [
+        "A complete two-paragraph text for the learner to copy and submit.",
+        "An annotated model paragraph, with the learner writing the second.",
+        "Two pages of background information, with the learner finding a structure."
+      ],
+      "answer": "An annotated model paragraph, with the learner writing the second.",
+      "explanation": "The annotated paragraph shows how the writing is organized, while the second still requires the learner's work. A completed text replaces that work, and background alone lacks the requested structural model."
+    },
+    "zh": {
+      "question": "初学者要独立写两段说明文。教师既要给他可用的结构参考，又要留下自己写作的部分。哪份材料同时符合要求？",
+      "options": [
+        "两段已完成的全文，供他直接复制提交。",
+        "一段带结构批注的范例，第二段由他撰写。",
+        "两页题材背景的资料，供他自行寻找结构。"
+      ],
+      "answer": "一段带结构批注的范例，第二段由他撰写。",
+      "explanation": "带批注的范例呈现“怎样组织”，第二段仍需要学员自己完成。全文代写撤走了独立任务；只有背景资料则没有提供指定的结构支撑。"
+    }
+  },
+  {
+    "id": "01-q7",
+    "subject": "01",
+    "en": {
+      "question": "A learner can use price ÷ quantity to compare unit prices of food. Which task checks use of the same principle in a new context?",
+      "options": [
+        "Compare the price per kilogram of two new cereals.",
+        "Compare the price per GB of two data plans.",
+        "Write the formula for food unit prices from memory."
+      ],
+      "answer": "Compare the price per GB of two data plans.",
+      "explanation": "Price per GB still divides price by quantity, but moves from food to data plans. New cereals remain in the familiar context, and recalling a formula does not require applying it."
+    },
+    "zh": {
+      "question": "学员会用“价格÷数量”比较食品单位价。要检查他能否在新情境应用同一原理，下面哪项任务最符合目标？",
+      "options": [
+        "比较两种新麦片的每公斤价格。",
+        "比较两种流量套餐的每GB价格。",
+        "默写食品单位价格的计算公式。"
+      ],
+      "answer": "比较两种流量套餐的每GB价格。",
+      "explanation": "每GB价格仍是价格除以数量，却把食品情境换成了数据套餐。换一款麦片仍在熟悉情境中；默写公式不要求实际应用。"
+    }
+  },
+  {
+    "id": "01-q8",
+    "subject": "01",
+    "en": {
+      "question": "Employees can correctly demonstrate the quality-check procedure they learned. Their manager still awards bonuses by cases closed per hour and often urges them to skip checks. Which workplace barrier is directly shown?",
+      "options": [
+        "The training material did not explain the checking steps.",
+        "Rewards and requests favour speed over checks.",
+        "Employees have not yet understood how to perform the checks."
+      ],
+      "answer": "Rewards and requests favour speed over checks.",
+      "explanation": "The demonstration shows they can perform the steps, while bonuses and requests encourage skipping them. The evidence identifies a mismatch in the application environment, not proof that training is generally ineffective."
+    },
+    "zh": {
+      "question": "员工能正确演示新学的质量检查流程，但主管仍按每小时结案数发奖金，并经常催他们跳过检查。题干直接显示了哪项工作环境阻力？",
+      "options": [
+        "培训教材没有讲解质量检查的步骤。",
+        "绩效奖励与主管要求偏向快速结案。",
+        "员工尚未理解质量检查的操作方法。"
+      ],
+      "answer": "绩效奖励与主管要求偏向快速结案。",
+      "explanation": "能演示流程说明他们至少会按步骤操作；奖金和催促却鼓励跳过它。这里的证据指向应用环境与所学行为不一致，不能据此断言所有培训都无效。"
+    }
+  },
+  {
+    "id": "01-v2-q09",
+    "subject": "01",
+    "en": {
+      "question": "After watching a video, the material feels familiar. You want to check whether you can explain its key points a week later without viewing the material. Which performance should you collect?",
+      "options": [
+        "Your confidence rating immediately after the video ends.",
+        "The proportion of subtitles you repeat during the video.",
+        "Explain the key points a week later without the materials."
+      ],
+      "answer": "Explain the key points a week later without the materials.",
+      "explanation": "The target includes both a one-week delay and no access to the material. Delayed recall with the material closed includes both. Confidence and repetition can be recorded, but do not replace the specified independent performance."
+    },
+    "zh": {
+      "question": "看完视频后，你觉得内容很熟。现在要检验的是“一周后能否不看资料解释要点”。应收集哪项表现？",
+      "options": [
+        "播放结束时，对自己掌握程度的评分。",
+        "播放过程中，跟读视频字幕的完成比例。",
+        "一周之后，合上资料复述要点的结果。"
+      ],
+      "answer": "一周之后，合上资料复述要点的结果。",
+      "explanation": "待检查目标同时包含“一周后”和“不看资料”，延后合上资料复述才按这两个条件测量。自信和跟读可以记录，但不能代替所要求的独立表现。"
+    }
+  },
+  {
+    "id": "01-q10",
+    "subject": "01",
+    "en": {
+      "question": "A piece has eight bars. Records show that all bars are consistently correct except bars 5 and 6. The next session's goal is to reduce errors in those two bars. Which practice directly targets the recorded problem?",
+      "options": [
+        "Repeat bars 1 and 2, checking wrong notes after each round.",
+        "Repeat bars 5 and 6, checking wrong notes after each round.",
+        "Repeat bars 7 and 8, checking wrong notes after each round."
+      ],
+      "answer": "Repeat bars 5 and 6, checking wrong notes after each round.",
+      "explanation": "All plans provide error checks; they differ in where practice is directed. Bars 5 and 6 contain the recorded errors, so practising them directly targets this goal. Whole-piece practice may serve other goals."
+    },
+    "zh": {
+      "question": "一首曲子有8小节，记录显示其他小节已稳定正确，错误都出现在第5、6小节。下一轮目标是减少这两小节的错误。哪份练习直接针对记录中的问题？",
+      "options": [
+        "重复第1、2小节，并在每轮后核对错音。",
+        "重复第5、6小节，并在每轮后核对错音。",
+        "重复第7、8小节，并在每轮后核对错音。"
+      ],
+      "answer": "重复第5、6小节，并在每轮后核对错音。",
+      "explanation": "三份方法都有核对反馈，差别在练习范围。第5、6小节正是记录的错误位置，针对它们才能直接练习本轮目标；这不否定整曲练习的其他用途。"
+    }
+  },
+  {
+    "id": "01-v2-q11",
+    "subject": "01",
+    "en": {
+      "question": "A student's claim lacks evidence from the reading. The teacher wants to identify the specific gap while leaving revision to the student. Which feedback does both?",
+      "options": [
+        "This is good overall; read it once more and make your own adjustments.",
+        "I have rewritten the paragraph; copy this new version neatly.",
+        "This claim needs evidence; choose a line and explain its link."
+      ],
+      "answer": "This claim needs evidence; choose a line and explain its link.",
+      "explanation": "Identifying the missing evidence and asking the student to find and link it specifies the gap while leaving revision to the learner. General praise lacks a specific direction, while rewriting for the student removes that work."
+    },
+    "zh": {
+      "question": "学生的论点缺少材料证据。老师想指出具体缺口，同时让学生自己修订。哪条反馈同时做到这两点？",
+      "options": [
+        "这段总体写得不错，再读一次后自行调整。",
+        "我已替你重写这段，请照新版本重新誊写。",
+        "论点缺证据，请选一句材料解释联系。"
+      ],
+      "answer": "论点缺证据，请选一句材料解释联系。",
+      "explanation": "指出“论点缺证据”，再请学生找证据并解释联系，既说明了缺口，也留下修订任务。笼统评价缺少修订方向；代写则让学生失去这一步判断和改写机会。"
+    }
+  },
+  {
+    "id": "01-v2-q12",
+    "subject": "01",
+    "en": {
+      "question": "Two people took the same course. You want to compare their ability to use its method in a new situation, rather than recall classroom examples. Which assessment best matches that target?",
+      "options": [
+        "Have both solve the same new case, scored by the same criteria.",
+        "Have both recount their class notes, scored by the same criteria.",
+        "Have both rate what they gained from the course, using the same scale."
+      ],
+      "answer": "Have both solve the same new case, scored by the same criteria.",
+      "explanation": "The same new case requires transfer under comparable tasks and scoring. Recounting notes checks recall, while self-ratings record perceptions; neither directly checks application to the new situation."
+    },
+    "zh": {
+      "question": "两人上了同一个课程。要比较他们把方法用在新情境的能力，而不是记住课堂案例的能力，哪项评估最符合目标？",
+      "options": [
+        "让两人解决同样的新案例，用同一标准评分。",
+        "让两人复述自己的课堂笔记，用同一标准评分。",
+        "让两人评价自己的课程收获，用同一量表评分。"
+      ],
+      "answer": "让两人解决同样的新案例，用同一标准评分。",
+      "explanation": "相同的新案例直接要求迁移，而且两人面对同样任务和评分标准。复述笔记偏向记忆，自评偏向感受，都没有直接检验新情境应用。"
+    }
+  },
+  {
+    "id": "02-q1",
+    "subject": "02",
+    "en": {
+      "question": "A new version of a film scene changes warm lighting to cool lighting and lively music to a low, slow score. The action sequence and dialogue remain the same. Which layer has definitely changed?",
+      "options": [
+        "How mood is presented.",
+        "The order of story events.",
+        "The words spoken by characters."
+      ],
+      "answer": "How mood is presented.",
+      "explanation": "Lighting and music are presentation choices that can alter atmosphere. The question explicitly keeps the action sequence and dialogue unchanged. Different presentation does not mean different story facts or an identical response from every viewer."
+    },
+    "zh": {
+      "question": "同一电影片段的新版把暖光改成冷光，把轻快音乐改成低沉慢调。动作顺序和台词与旧版相同。根据这些描述，能确认哪一层发生了改变？",
+      "options": [
+        "情绪的呈现方式。",
+        "故事事件的顺序。",
+        "人物说出的台词。"
+      ],
+      "answer": "情绪的呈现方式。",
+      "explanation": "灯光和配乐属于呈现手法，可以改变场景的氛围；题干明确事件顺序和台词没有变。表达方式变化不等于故事事实变化，也不保证每位观众情绪相同。"
+    }
+  },
+  {
+    "id": "02-v2-q02",
+    "subject": "02",
+    "en": {
+      "question": "A menu should draw attention to dish names before descriptions and prices. Positions are identical. Which size-and-weight setting makes the dish name the first visual level?",
+      "options": [
+        "Dish name: 12 regular; description: 18 bold; price: 12 regular.",
+        "Dish name: 18 bold; description: 12 regular; price: 12 regular.",
+        "Dish name: 12 regular; description: 12 regular; price: 18 bold."
+      ],
+      "answer": "Dish name: 18 bold; description: 12 regular; price: 12 regular.",
+      "explanation": "The larger, bolder dish name stands out from the other two elements, creating the requested hierarchy. The other layouts emphasize the description or price instead."
+    },
+    "zh": {
+      "question": "菜单要让人先注意菜名，再读说明和价格。三个元素的位置相同，下面哪种字号与粗细设置把菜名设为视觉首层？",
+      "options": [
+        "菜名12号常规；说明18号粗体；价格12号常规。",
+        "菜名18号粗体；说明12号常规；价格12号常规。",
+        "菜名12号常规；说明12号常规；价格18号粗体。"
+      ],
+      "answer": "菜名18号粗体；说明12号常规；价格12号常规。",
+      "explanation": "更大且更粗的菜名比另外两项更突出，形成菜名先、细节后的信息层级。另两种把说明或价格设为突出项，服务的是不同阅读顺序。"
+    }
+  },
+  {
+    "id": "02-q3",
+    "subject": "02",
+    "en": {
+      "question": "A fictional painting ledger records blue pigment at four coins and brown pigment at one coin for equal quantities. The painted robe uses blue. The ledger does not identify the payer or the sitter's real clothes. Which interpretation is supported?",
+      "options": [
+        "The blue pigment costs more than the same amount of brown.",
+        "The sitter also wore this particular blue robe in everyday life.",
+        "The painter personally paid for this purchase of blue pigment."
+      ],
+      "answer": "The blue pigment costs more than the same amount of brown.",
+      "explanation": "The ledger supports a difference in material cost: blue costs four times as much for an equal quantity. It does not establish everyday clothing or who paid. Historical interpretation must separate recorded evidence from added assumptions."
+    },
+    "zh": {
+      "question": "虚构画作账本写着：同量蓝色颜料4枚币、褐色颜料1枚币，画中长袍使用蓝色。账本没有记付款人或画中人的真实衣物。哪项解读有材料支持？",
+      "options": [
+        "蓝色长袍的颜料比同量褐色贵。",
+        "画中人平日也穿着这件蓝色长袍。",
+        "画家本人支付了这批蓝色的费用。"
+      ],
+      "answer": "蓝色长袍的颜料比同量褐色贵。",
+      "explanation": "账本支持的是材料成本差异：同量蓝色的费用是褐色的四倍。它没有证明人物日常穿着或资金来源；历史解读要区分记录说了什么和我们补了什么。"
+    }
+  },
+  {
+    "id": "02-q4",
+    "subject": "02",
+    "en": {
+      "question": "Read this fictional passage: 'At the doorway she glanced at her mother, then touched her ticket to a distant place. “The next train,” she said.' Which reading has the strongest support in the passage?",
+      "options": [
+        "She has postponed this departure.",
+        "She has already completed this departure.",
+        "She has rejected her mother's request to stay."
+      ],
+      "answer": "She has postponed this departure.",
+      "explanation": "'The next train' supports postponement. Her glance and ticket may invite discussion of different motives, but no request from the mother or completed departure is stated. An interpretation of motive is not a recorded fact."
+    },
+    "zh": {
+      "question": "读这段虚构短文：“她在门口看了母亲一眼，又摸了摸去远方的车票。‘下一班吧’，她说。”哪项解读最有这段文字的支持？",
+      "options": [
+        "她暂缓了这一次的出发。",
+        "她已经完成了这一次的出发。",
+        "她拒绝了母亲留下来的请求。"
+      ],
+      "answer": "她暂缓了这一次的出发。",
+      "explanation": "“下一班吧”支持推迟这次出发。看母亲和摸车票可以引出不同动机的讨论，但文字没有写母亲提出请求，也没有写她已经离开；不能把一种动机猜测当成事实。"
+    }
+  },
+  {
+    "id": "02-q5",
+    "subject": "02",
+    "en": {
+      "question": "A fictional small-kitchen brief requires each chair to cost no more than 40 units and occupy no more than 0.10 m² when stored. All three meet seating needs. Which design meets both storage and budget requirements?",
+      "options": [
+        "Design A: 30 units; 0.08 m² when stored.",
+        "Design B: 30 units; 0.30 m² when stored.",
+        "Design C: 60 units; 0.08 m² when stored."
+      ],
+      "answer": "Design A: 30 units; 0.08 m² when stored.",
+      "explanation": "A is below both limits. B meets the budget but occupies too much storage space; C fits the space but exceeds the budget. Evaluating a design requires matching its form to the conditions of use."
+    },
+    "zh": {
+      "question": "虚构小厨房设计任务要求：椅子收起后占地不超过0.10平方米，每把价格不超过40元。三种方案坐起来都满足需求。哪种同时符合空间与预算要求？",
+      "options": [
+        "方案A：30元；收起后占0.08平方米。",
+        "方案B：30元；收起后占0.30平方米。",
+        "方案C：60元；收起后占0.08平方米。"
+      ],
+      "answer": "方案A：30元；收起后占0.08平方米。",
+      "explanation": "A 同时低于40元和0.10平方米。B 符合预算却占地过大；C 收纳合适却超预算。设计评价需要把形态与使用条件放在一起。"
+    }
+  },
+  {
+    "id": "02-q6",
+    "subject": "02",
+    "en": {
+      "question": "Two documentary versions use the same unaltered, genuine interview segment. Version B moves it from the beginning to the end and changes the music. Which feature is guaranteed to be the same?",
+      "options": [
+        "The segment's position in the narrative.",
+        "The words spoken in the interview segment.",
+        "The music surrounding the interview segment."
+      ],
+      "answer": "The words spoken in the interview segment.",
+      "explanation": "The same unaltered interview preserves the spoken words, while position and music explicitly change. Genuine source material and its arrangement are separate layers; arrangement can shape how genuine material is presented."
+    },
+    "zh": {
+      "question": "两版纪录片使用同一段未改动的真实采访。B版把它从开头移到结尾，并换了配乐。根据题干，哪项由条件保证两版相同？",
+      "options": [
+        "这段采访的叙事位置。",
+        "这段采访中的原话。",
+        "这段采访周围的配乐。"
+      ],
+      "answer": "这段采访中的原话。",
+      "explanation": "未改动的同一采访保证原话相同，但位置与配乐已明确不同。真实素材与如何编排是两个层面；素材真实，仍可以通过组织方式形成不同表达。"
+    }
+  },
+  {
+    "id": "02-q7",
+    "subject": "02",
+    "en": {
+      "question": "A fictional old-street renovation record says that streets and building exteriors remain as before, but residents have moved away and their long-running market and choir activities have stopped. Which distinction is supported?",
+      "options": [
+        "The buildings remain; former community practices have stopped.",
+        "The buildings have changed; former community practices continue.",
+        "The buildings remain; former community practices continue."
+      ],
+      "answer": "The buildings remain; former community practices have stopped.",
+      "explanation": "The building exteriors remain, but the residents' recurring activities have stopped. Cultural continuity also involves people practising and passing things on. The record does not show that every cultural form has disappeared."
+    },
+    "zh": {
+      "question": "虚构老街改造记录：街道和建筑外形保留原样，但当地居民陆续搬离，长期由居民举办的集市和合唱活动都已停办。记录支持哪种区分？",
+      "options": [
+        "建筑形态延续，原有社区实践中断。",
+        "建筑形态中断，原有社区实践延续。",
+        "建筑形态与原有社区实践都在延续。"
+      ],
+      "answer": "建筑形态延续，原有社区实践中断。",
+      "explanation": "建筑外形仍在，居民持续开展的活动却停了。文化延续不只看建筑：也要看人们是否仍在实践、传承；记录不代表所有文化形式都已消失。"
+    }
+  },
+  {
+    "id": "02-v2-q08",
+    "subject": "02",
+    "en": {
+      "question": "The original fictional short film shows: she wants to return a key in person; she learns the owner has moved away; she puts the key in the designated return box. The new version removes only the news that the owner moved away. What information is lost?",
+      "options": [
+        "Whom she first wanted to give the key to.",
+        "Where she finally left the key.",
+        "Why she switched to the return box."
+      ],
+      "answer": "Why she switched to the return box.",
+      "explanation": "The intended recipient and final action remain. What is removed is the new circumstance explaining the change of plan. Editing can remove a causal link as well as reduce running time."
+    },
+    "zh": {
+      "question": "虚构短片原版依次出现：她想亲手归还钥匙；听说房主已经搬走；于是把钥匙投入指定回收盒。新版只删去“听说房主搬走”。哪项信息因此缺失？",
+      "options": [
+        "她起初想把钥匙交给谁。",
+        "她最后把钥匙放在哪里。",
+        "她为什么改用回收盒归还。"
+      ],
+      "answer": "她为什么改用回收盒归还。",
+      "explanation": "起初的对象和最后的动作仍保留，删掉的是导致方式改变的新情况。剪辑不只改变长短，也可能删去观众理解因果所需的信息。"
+    }
+  },
+  {
+    "id": "02-v2-q09",
+    "subject": "02",
+    "en": {
+      "question": "A fictional museum record says the object on display is a replica made in 1950; the original was made in 1690. Which concise label is accurate for the displayed object?",
+      "options": [
+        "A 1690 replica; the original was made in 1950.",
+        "A 1950 replica; the original was made in 1690.",
+        "A 1690 original; the replica was made in 1950."
+      ],
+      "answer": "A 1950 replica; the original was made in 1690.",
+      "explanation": "'A 1950 replica; the original was made in 1690' matches the displayed object's identity and both dates. Labelling the displayed object as a 1690 original confuses its identity. Brevity should not blur provenance."
+    },
+    "zh": {
+      "question": "虚构博物馆档案说：眼前展品是1950年制作的复制品，原作制于1690年。要写一条简短而准确的展签，应选哪句？",
+      "options": [
+        "1690年复制品，原作制于1950年。",
+        "1950年复制品，原作制于1690年。",
+        "1690年原作，复制品制于1950年。"
+      ],
+      "answer": "1950年复制品，原作制于1690年。",
+      "explanation": "“1950年复制品，原作制于1690年”把眼前展品的身份与两个年代对应正确。把眼前物件标成1690年原作，仍会混淆身份；简短不能以混淆来源为代价。"
+    }
+  },
+  {
+    "id": "02-q10",
+    "subject": "02",
+    "en": {
+      "question": "A fictional novel says: 'I invited him to leave with me, but hoped he would refuse; I had prepared only one ticket.' Without inner narration, which film action most directly presents the specified conflict between an invitation and preparation to leave alone?",
+      "options": [
+        "Say 'Come with me,' then hand him two tickets.",
+        "Say 'Come with me,' but hide the only ticket in a pocket.",
+        "Say 'Come with me,' then buy a second ticket at the counter."
+      ],
+      "answer": "Say 'Come with me,' but hide the only ticket in a pocket.",
+      "explanation": "The invitation is public speech, while hiding the only ticket retains preparation to leave alone. Together they show the specified conflict. The other actions prepare for travelling together."
+    },
+    "zh": {
+      "question": "虚构小说写：“我嘴上邀他一起走，却希望他拒绝；我只准备了一张离开的车票。”改成没有内心旁白的电影，要用动作呈现“邀请与独行准备的矛盾”，哪种最直接？",
+      "options": [
+        "说“一起走”，随后把两张车票递给他。",
+        "说“一起走”，却把仅有的车票藏进口袋。",
+        "说“一起走”，随后去窗口买第二张车票。"
+      ],
+      "answer": "说“一起走”，却把仅有的车票藏进口袋。",
+      "explanation": "邀请是公开言语，藏起仅有的一张票则保留了独自出发的准备，两者形成题目指定的矛盾。另两种动作是在为同行准备，表达的是另一种关系。"
+    }
+  },
+  {
+    "id": "02-q11",
+    "subject": "02",
+    "en": {
+      "question": "A fictional theatre-renovation brief requires original walls to remain unchanged and new equipment to be removable without traces. Which proposed mounting meets both requirements?",
+      "options": [
+        "Equipment on a self-weighted freestanding support that does not touch the walls.",
+        "Equipment embedded in a new wall opening, with its support fixed in cement.",
+        "Equipment hung against the original wall, with its support bolted into drilled holes."
+      ],
+      "answer": "Equipment on a self-weighted freestanding support that does not touch the walls.",
+      "explanation": "The freestanding support leaves the wall unchanged and can be removed without wall traces. Bolted equipment may be removable, but drilling still changes the wall. This applies the stated brief; it is not an engineering specification."
+    },
+    "zh": {
+      "question": "虚构老剧院改造委托要求：保留原墙面，新增设备能拆除而不留下痕迹。下面三种通风设备安装方案，哪种符合这两条要求？",
+      "options": [
+        "设备放独立支架上，支架靠自重固定，不接触墙面。",
+        "设备嵌入新挖墙洞，支架用水泥填实，不易松动。",
+        "设备贴原墙面悬挂，支架用钻孔螺栓固定，便于取下。"
+      ],
+      "answer": "设备放独立支架上，支架靠自重固定，不接触墙面。",
+      "explanation": "独立支架不改变墙面，拆走设备和支架也不留下墙面痕迹。螺栓安装虽然设备能取下，钻孔仍改变墙面。此题按委托条件判断，不代替实际工程设计。"
+    }
+  },
+  {
+    "id": "02-q12",
+    "subject": "02",
+    "en": {
+      "question": "In a fictional garden painting, plant and wall lines enclose a clear human-shaped area at the centre, but that area has no colour or detail. What directly allows viewers to recognize a person?",
+      "options": [
+        "The person-shaped gap between the lines.",
+        "The green pigment used for the garden plants.",
+        "The painting date written in the corner."
+      ],
+      "answer": "The person-shaped gap between the lines.",
+      "explanation": "The surrounding lines give the unpainted area a shape: empty space can participate in composition. Recognizing the figure does not establish why the painter left it empty; intention requires further evidence."
+    },
+    "zh": {
+      "question": "一幅虚构庭院画里，植物和围墙的线条在中央围出清楚的人形，但这块人形区域没有上色或画细节。观众辨认出“人”的直接线索是什么？",
+      "options": [
+        "周围线条围成的人形空白。",
+        "庭院植物使用的绿色颜料。",
+        "画面角落标出的作画日期。"
+      ],
+      "answer": "周围线条围成的人形空白。",
+      "explanation": "未画出的区域仍被周边线条赋予形状，这就是空白也能参与构图的例子。能认出人形并不等于知道画家为什么留白；动机还需要其他证据。"
+    }
+  },
+  {
+    "id": "03-q1",
+    "subject": "03",
+    "en": {
+      "question": "You see a shared claim that free coffee is available today and want to check the event date. Which material most directly supplies a checkable original date?",
+      "options": [
+        "The organizer's event page showing publication and event dates.",
+        "A friend's screenshot with publication and event dates cropped out.",
+        "A community post showing its numbers of shares and likes."
+      ],
+      "answer": "The organizer's event page showing publication and event dates.",
+      "explanation": "The original page retains dates that can be checked against today. Being the organizer does not remove the need to check timing and conditions. Share or like counts cannot supply a missing date."
+    },
+    "zh": {
+      "question": "你看到“今天有免费咖啡”的转发，想核对活动日期。下面哪份资料最直接提供可核查的原始日期？",
+      "options": [
+        "主办方活动原页，显示发布日期和活动日期。",
+        "朋友转发的截图，裁掉了发布日期和活动日期。",
+        "社区讨论的帖子，显示转发次数和点赞次数。"
+      ],
+      "answer": "主办方活动原页，显示发布日期和活动日期。",
+      "explanation": "原页保留日期，能对照活动是否适用于今天。主办方身份不是免检保证，仍要核对时间和条件；转发与点赞数量不能补上被删掉的日期。"
+    }
+  },
+  {
+    "id": "03-v2-q02",
+    "subject": "03",
+    "en": {
+      "question": "In a fictional discussion, a participant privately counts four objects but publicly joins the others in saying five. They say, 'I still think it is four, but I worry a different answer will get me excluded.' Which influence is directly supported?",
+      "options": [
+        "Revising a judgment because of new evidence.",
+        "Publicly conforming to gain acceptance by the group.",
+        "Changing an answer because of the amount of a reward."
+      ],
+      "answer": "Publicly conforming to gain acceptance by the group.",
+      "explanation": "The participant retains their private judgment and explicitly mentions fear of exclusion. That supports pressure to conform publicly, not a discovery of new evidence. The inference uses the stated reason rather than guessing from a changed answer."
+    },
+    "zh": {
+      "question": "虚构讨论中，一位参与者私下数到4个物体，公开却跟着其他人报5个。他说：“我仍觉得是4，但担心不同答案让我被排斥。”哪种影响有这句话的直接支持？",
+      "options": [
+        "根据新证据而修正自己的判断。",
+        "为了被群体接纳而公开顺从。",
+        "根据奖励金额而改变自己的答案。"
+      ],
+      "answer": "为了被群体接纳而公开顺从。",
+      "explanation": "他保留私下判断，却说明自己担心排斥，因此证据支持公开顺从压力，而非发现了新证据。这里依据的是题干中的明确陈述，不是仅凭答案变化猜心理。"
+    }
+  },
+  {
+    "id": "03-q3",
+    "subject": "03",
+    "en": {
+      "question": "Which headline leaves the cause as an information gap to be filled after clicking, rather than directly supplying it?",
+      "options": [
+        "The shop added size information, reducing returns.",
+        "The shop's return rate is 8%, unchanged from last week.",
+        "How did this shop cut its returns in half?"
+      ],
+      "answer": "How did this shop cut its returns in half?",
+      "explanation": "'How' supplies an outcome but leaves its cause unanswered. This creates a question to fill, although an information gap does not by itself make a headline false."
+    },
+    "zh": {
+      "question": "哪条标题把“原因”留作信息缺口，让读者点击后才知道原因，而不是直接给出它？",
+      "options": [
+        "店铺补充尺码说明，退货量因此减少。",
+        "店铺本周退货率8%，与上周保持相同。",
+        "这家店怎样把退货量减少了一半？"
+      ],
+      "answer": "这家店怎样把退货量减少了一半？",
+      "explanation": "“怎样”指出结果却不告诉原因，留下一个等待补全的问题。它能形成点击动机，但标题有信息缺口并不自动意味着内容虚假。"
+    }
+  },
+  {
+    "id": "03-q4",
+    "subject": "03",
+    "en": {
+      "question": "A descriptive norm tells people what others usually do. Which notice uses that kind of information rather than a rule or a price incentive?",
+      "options": [
+        "This week, 70% of visitors brought their own cups.",
+        "Every visitor is asked to bring a cup to this event.",
+        "This week, bringing your own cup earns a one-unit discount."
+      ],
+      "answer": "This week, 70% of visitors brought their own cups.",
+      "explanation": "The 70% figure describes others' behaviour. The request states a rule, while the discount offers a reward. Identifying a message type does not show that it will necessarily change behaviour."
+    },
+    "zh": {
+      "question": "“描述性规范”是告诉人们别人通常怎么做。下面哪条告示使用了这类信息，而不是规则要求或价格奖励？",
+      "options": [
+        "本周70%的来访者自带水杯。",
+        "本场活动请每位来访者自带水杯。",
+        "本周自带水杯可获得1元优惠。"
+      ],
+      "answer": "本周70%的来访者自带水杯。",
+      "explanation": "70%来访者的做法描述了他人的行为；“请每位”提出要求，1元优惠提供奖励。辨认信息类型，不等于证明告示一定改变行为。"
+    }
+  },
+  {
+    "id": "03-q5",
+    "subject": "03",
+    "en": {
+      "question": "A fictional survey randomly divides the same sample of 200 people into two groups and counts each answer once. Group A is asked, 'Do you support a 10% increase in the park budget?' Group B is asked, 'Do you support a 10% increase in the park budget to protect children's safety?' Which possible influence is actually present?",
+      "options": [
+        "One group's question adds a value-laden cue.",
+        "One group's sample includes only frequent park users.",
+        "One group's identical answers are counted more than once."
+      ],
+      "answer": "One group's question adds a value-laden cue.",
+      "explanation": "Group B additionally links the proposal to children's safety, adding a value cue. The question provides no evidence of a park-users-only sample or double counting. This identifies a design feature, not the size of any effect on answers."
+    },
+    "zh": {
+      "question": "虚构调查把同一抽样所得的200人随机分成两组，均只计一次回答。A组问“支持公园预算增加10%吗？”B组问“支持公园预算增加10%，守护孩子的安全吗？”哪项潜在影响在题干中确实出现？",
+      "options": [
+        "其中一组的提问加入了价值暗示。",
+        "其中一组的抽样只包括公园常客。",
+        "其中一组的同一回答被多计算一次。"
+      ],
+      "answer": "其中一组的提问加入了价值暗示。",
+      "explanation": "B组额外把提案与孩子安全联系起来，加入了价值暗示。题干没有提供只抽常客或重复计数的证据；也没有仅凭设计就证明回答变化的大小。"
+    }
+  },
+  {
+    "id": "03-q6",
+    "subject": "03",
+    "en": {
+      "question": "A fictional platform promotes posts by comment count only, highest first, and does not use verification status in ranking. Post A is verified with 20 comments; B is unverified with 80; C is verified with 10. Which is promoted first?",
+      "options": [
+        "Post A: verified, 20 comments.",
+        "Post B: unverified, 80 comments.",
+        "Post C: verified, 10 comments."
+      ],
+      "answer": "Post B: unverified, 80 comments.",
+      "explanation": "B has the highest comment count, so the stated rule puts it first. Comments measure interaction, not truth. The ranking criterion separates being heavily promoted from having stronger evidence."
+    },
+    "zh": {
+      "question": "虚构平台只按评论数从高到低推送，不把核实情况用于排序。A帖已核实、20条评论；B帖未核实、80条评论；C帖已核实、10条评论。平台会先推哪帖？",
+      "options": [
+        "A帖：已核实，20条评论。",
+        "B帖：未核实，80条评论。",
+        "C帖：已核实，10条评论。"
+      ],
+      "answer": "B帖：未核实，80条评论。",
+      "explanation": "80条评论最高，所以按给定规则会先推B。评论多衡量的是互动，不能替代真实性；理解排序指标能帮助分清“被推得多”和“证据更好”。"
+    }
+  },
+  {
+    "id": "03-v2-q07",
+    "subject": "03",
+    "en": {
+      "question": "A message spreads in two rounds: Alex tells Bo and Cy; Bo tells Dee and Eli; Cy tells Dee and Fay. There are no other transmissions. Excluding Alex, how many different people receive it?",
+      "options": [
+        "3 people",
+        "5 people",
+        "6 people"
+      ],
+      "answer": "5 people",
+      "explanation": "The distinct recipients are Bo, Cy, Dee, Eli and Fay: five people. Dee receives it twice but counts as one recipient. Transmissions and unique reach are different measures."
+    },
+    "zh": {
+      "question": "消息传递两轮：甲告诉乙和丙；乙告诉丁和戊；丙告诉丁和己。没有其他传递。不计甲，共有多少个不同的人收到消息？",
+      "options": [
+        "3 人",
+        "5 人",
+        "6 人"
+      ],
+      "answer": "5 人",
+      "explanation": "不同接收者是乙、丙、丁、戊、己，共5人。丁收到两次仍只算一个人；发送次数与独立到达人数不是同一个量。"
+    }
+  },
+  {
+    "id": "03-q8",
+    "subject": "03",
+    "en": {
+      "question": "A clip retains only 'I support closing the library.' The full statement is: 'If you ignore students' needs, you might say “I support closing the library,” but I oppose that approach.' What does the full context support?",
+      "options": [
+        "The speaker is giving an example of a view they oppose.",
+        "The speaker has changed a previously supportive position.",
+        "The speaker supports a temporary closure of this library."
+      ],
+      "answer": "The speaker is giving an example of a view they oppose.",
+      "explanation": "The retained words are a quoted example followed by explicit opposition. Removing the quotation context and following sentence reverses the apparent position, but does not establish the editor's intention."
+    },
+    "zh": {
+      "question": "短片只保留“我赞成关闭图书馆”。完整发言是：“不考虑学生需要时，你可能会说‘我赞成关闭图书馆’，但我反对这种做法。”完整语境支持哪项判断？",
+      "options": [
+        "说话者举了一个自己反对的观点。",
+        "说话者改变了先前支持的立场。",
+        "说话者支持暂时关闭这间图书馆。"
+      ],
+      "answer": "说话者举了一个自己反对的观点。",
+      "explanation": "那句话在完整发言里是被举出的观点，随后说话者明确反对。截掉引语边界与后句会颠倒立场；但这段材料还不能证明截取者的主观意图。"
+    }
+  },
+  {
+    "id": "03-q9",
+    "subject": "03",
+    "en": {
+      "question": "A survey invites only current paying users. Of 100 respondents, 90 report satisfaction; former users are not surveyed. Which group does the 90% most directly describe?",
+      "options": [
+        "The paying users surveyed.",
+        "Everyone who has ever used the service.",
+        "Everyone who has stopped paying for the service."
+      ],
+      "answer": "The paying users surveyed.",
+      "explanation": "The 90% is 90 divided by 100 respondents, all still paying. Extending it to everyone who ever used the service includes an unobserved group. A larger sample alone does not remove that coverage gap."
+    },
+    "zh": {
+      "question": "调查只邀请仍在付费的用户，受访100人中90人表示满意；没有调查已经离开的用户。这个90%最直接描述哪组人？",
+      "options": [
+        "本次受访的仍付费用户。",
+        "所有曾经使用过的用户。",
+        "所有已经取消付费的用户。"
+      ],
+      "answer": "本次受访的仍付费用户。",
+      "explanation": "90%是90÷100，分母是本次受访的仍付费用户。扩大到所有曾用者会跨过未调查的人群；即使样本更多，也不能仅靠人数补上这个覆盖缺口。"
+    }
+  },
+  {
+    "id": "03-q10",
+    "subject": "03",
+    "en": {
+      "question": "In each of two years, a place has 10,000 residents and 100 separately recorded cases. News coverage rises from 20 articles to 200. Using cases ÷ population, which ratio gives this year's case rate?",
+      "options": [
+        "100 ÷ 10000",
+        "200 ÷ 10000",
+        "200 ÷ 20"
+      ],
+      "answer": "100 ÷ 10000",
+      "explanation": "The case rate is 100 cases divided by 10,000 residents, or 1%. The 200 articles are not 200 separate cases; 200 ÷ 20 measures the increase in article count, not the case rate."
+    },
+    "zh": {
+      "question": "某地两年人口都为1万人，每年独立记录的案件都为100起；新闻报道却从20篇增至200篇。按“独立案件数÷人口”计算，今年的案件率应使用哪一比率？",
+      "options": [
+        "100 ÷ 10000",
+        "200 ÷ 10000",
+        "200 ÷ 20"
+      ],
+      "answer": "100 ÷ 10000",
+      "explanation": "案件率用案件数100除以人口10000，得到1%。200篇是报道量，不是200起独立案件；200÷20是报道量的倍数，不能当成案件率。"
+    }
+  },
+  {
+    "id": "03-q11",
+    "subject": "03",
+    "en": {
+      "question": "A fictional community has 100 members. All complete an anonymous questionnaire, where 70 oppose a new rule. At the public meeting, only 10 voice opposition. Which description matches both records?",
+      "options": [
+        "A majority oppose it anonymously; a minority voice opposition publicly.",
+        "A minority oppose it anonymously; a majority voice opposition publicly.",
+        "A majority oppose it anonymously; a majority voice opposition publicly."
+      ],
+      "answer": "A majority oppose it anonymously; a minority voice opposition publicly.",
+      "explanation": "Seventy is more than half, while ten is less. Public statements are not a direct substitute for private opinion counts. These numbers show an expression gap, but not why the others remained silent."
+    },
+    "zh": {
+      "question": "虚构社区有100名成员，全部参加匿名问卷，70人反对新规；公开会议中只有10人表达反对。哪项描述符合这两组记录？",
+      "options": [
+        "多数在匿名问卷中反对，少数公开表达反对。",
+        "少数在匿名问卷中反对，多数公开表达反对。",
+        "多数在匿名问卷中反对，多数公开表达反对。"
+      ],
+      "answer": "多数在匿名问卷中反对，少数公开表达反对。",
+      "explanation": "70超过半数，10少于半数。公开发言不能直接当成私下意见分布；这两组数字显示表达差异，但未说明沉默者为何沉默。"
+    }
+  },
+  {
+    "id": "03-v2-q12",
+    "subject": "03",
+    "en": {
+      "question": "You wrongly posted Friday as an event date; checking confirms Saturday. The goal is for readers reopening the original post to see that the date was corrected and exactly what changed. Which update meets it?",
+      "options": [
+        "Silently change the original post to Saturday, retaining its posting time.",
+        "Publish a new Saturday announcement, leaving Friday in the original post.",
+        "Mark the original post: 'Date correction: Friday changed to Saturday.'"
+      ],
+      "answer": "Mark the original post: 'Date correction: Friday changed to Saturday.'",
+      "explanation": "An explicit correction on the original post shows both the old date and the new one. Silent editing does not mark the correction, and a separate announcement does not fix the reopened original post."
+    },
+    "zh": {
+      "question": "你把活动日期误写为周五，核实后应是周六。目标是读者重开原帖，就能看见“日期已更正”及具体改动。哪种更新符合要求？",
+      "options": [
+        "原帖静默改成周六，保留原发布时间。",
+        "另发周六活动公告，原帖仍写周五。",
+        "原帖注明日期更正：周五改为周六。"
+      ],
+      "answer": "原帖注明日期更正：周五改为周六。",
+      "explanation": "在原帖明确写出旧日期和新日期，读者能看见发生了什么改动。静默修改不给出更正标记，另发公告也没有修复读者重新打开的原帖。"
+    }
+  }
+]

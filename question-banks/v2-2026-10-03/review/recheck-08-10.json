@@ -1,0 +1,170 @@
+{
+  "checkedAt": "2026-10-03",
+  "reviewer": "write_map_a — not a map-08-10 author",
+  "method": "Before exposing answers/explanations, separately selected answers from Chinese and English question/option content; predictions were recorded in session storage. Then compared keys, explanations, editorial records and revisions.",
+  "sourceHashes": {
+    "parts/map-08-10.json": "858d212f97d63e73cd5957228bf5150eb0a4ac10b31261cfb1664c2ecd4dfb13",
+    "parts/editorial-08-10.json": "017420ba107c724f943193a81b6e353cf93183613fc6409dc782d4b1a7a48cd4",
+    "review/revisions-08-10.json": "a60c8dc0300111c50004cf807d11be67a4a8d2d372efdd4fb7fdb162ccb62b85"
+  },
+  "summary": {
+    "reviewed": 7,
+    "bilingualBlindKeysMatched": 7,
+    "secondAnswerFound": 0,
+    "requiredQuestionOrOptionRevision": 0,
+    "requiredExplanationRevision": 0,
+    "requiredEditorialRecordRevision": 0,
+    "identifiedIssuesClosed": 2,
+    "finalPass": 7
+  },
+  "entries": [
+    {
+      "id": "08-q2",
+      "zhChoice": 1,
+      "enChoice": 1,
+      "reason": "湿土被车辆压密减少土粒间的大孔隙，直接使水更难进入；不是把固体颗粒压成更小体积。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "大孔隙增加与湿土压密和慢入渗不符；颗粒缩小把排列孔隙与固体颗粒混同，均为可解释错误。",
+      "bilingual": "孔隙、密度与慢入渗等义。",
+      "forms": "两语选项句式同类，中文等长、英文答案与另一项并列最长，无长度独占提示。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested",
+      "initialJudgement": "pass-content / revise-metadata",
+      "closedIssues": [
+        {
+          "severity": "required-editorial-record",
+          "field": "editorial.answerEvidence",
+          "issue": "记录还写题干直接观察到大孔隙减少；新题干没有这一直接答案，只给密实与入渗。",
+          "recommendation": "改为：轮压湿土、密度增加和入渗减慢是观察条件；依据压实减少大孔隙的机制解释。并同步difficultyReason中观察与推断的关系。"
+        }
+      ],
+      "closure": "主编辑已修，复核后无此项残留。"
+    },
+    {
+      "id": "08-q3",
+      "zhChoice": 2,
+      "enChoice": 2,
+      "reason": "题干明确豆类不能供害虫繁殖，而所有可选番茄品种和马铃薯都可；轮作的寄主条件充分。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "题干明确每个可选番茄品种仍为寄主，避免抗性品种的第二答案；马铃薯也可繁殖，豆类不可。",
+      "bilingual": "作物选择与本地越冬、有限迁移等条件对应；答案两语一致。",
+      "forms": "正确项不是最长，三项都为作物选择而无品牌或绝对词提示。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested",
+      "initialJudgement": "revise-explanation",
+      "closedIssues": [
+        {
+          "severity": "required-explanation",
+          "field": "zh.explanation",
+          "issue": "首句“轮作要换到这种害虫不能利用的寄主之外”形成双重方向错误/歧义；不能利用的寄主也是不合适术语。",
+          "recommendation": "改为“轮作应改种这种害虫不能利用的作物”，或“轮作应离开这种害虫可利用的寄主范围”。"
+        }
+      ],
+      "closure": "主编辑已修，复核后无此项残留。"
+    },
+    {
+      "id": "08-q6",
+      "zhChoice": 0,
+      "enChoice": 0,
+      "reason": "移除邻树直接减少光水竞争，不是改变保留树的需求；增加遮阴不支持给定的光获取改善。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "保留树需求下降与增加遮阴均是真实概念混淆，同属光水机制；没有遗传或降雨无关凑项。",
+      "bilingual": "邻树、保留树和天气土壤条件一致。",
+      "forms": "中文正确项较短，英文多3至4字符来自competition词长及neighbor关系，未独占完整机制理由。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested"
+    },
+    {
+      "id": "09-q1",
+      "zhChoice": 1,
+      "enChoice": 1,
+      "reason": "给定宣传原则同时要求轻柔和完整，轻柔清洁各牙面满足两项；其他各遗漏一项。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "轻柔但覆盖不足、完整但加力分别遗漏一个明示要求；没有“刷到出血”的荒谬答案。",
+      "bilingual": "两语轻柔与各牙面对应。",
+      "forms": "正确项并非最长；三个操作保持相同维度，简单题有明确学习价值。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested"
+    },
+    {
+      "id": "09-q9",
+      "zhChoice": 1,
+      "enChoice": 1,
+      "reason": "产品明确要把按专业建议休息纳入连续照护；登记休息并保持记录满足两个条件。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "必须完成运动量违背休息建议，保留历史但断连续计数则不满足明示产品目标；两种是不同实际规则。",
+      "bilingual": "已有专业建议、暂停、历史与连续记录的区别相同。",
+      "forms": "中文三项等长，英文正确项不是最长；尊重建议是明示要求，不是作者自行加的道德优先。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested"
+    },
+    {
+      "id": "10-q4",
+      "zhChoice": 0,
+      "enChoice": 0,
+      "reason": "按每项提出的一项变更分析，准备移出通道可移掉40秒；检查移出只能移掉20秒，座椅不改通道内时长。题问通道占用而非承诺整系统吞吐。",
+      "potentialIssue": "解析若把通道变成20秒直接等同于整体接待能力三倍，需要额外上游准备能力条件；待对照解析。",
+      "judgement": "pass",
+      "distractors": "移动20秒检查与移动40秒准备都是相关流程变更，比较节省40与20有唯一答案；座椅只改善等候。",
+      "bilingual": "中文“出口外”已和英文beyond exit对齐，两语问通道占用。",
+      "forms": "中文等长，英文正确项只多3字符，没有独占数值或完整理由。",
+      "residuals": [],
+      "scopeCheck": "解析只推断通道占用60到20秒，没有额外声称整系统吞吐一定三倍；不依赖未给上游准备能力。",
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested"
+    },
+    {
+      "id": "10-q12",
+      "zhChoice": 0,
+      "enChoice": 0,
+      "reason": "两处内容明确互相矛盾，联合核对东/西地点才解决该内容冲突，字号与音量不是目标。",
+      "potentialIssue": null,
+      "judgement": "pass",
+      "distractors": "字号排版和音量速度都属真实服务信息改善方法，但不能解决明确的地点内容矛盾，且两处已各自清楚。",
+      "bilingual": "东、西目的地矛盾及联合检查相同。",
+      "forms": "中文等长，英文正确项多6至8字符主要来自同时命名两种消息渠道，不含额外证据或更专业评价；后续可精简成两处消息所指的目的地而无需补长错项。",
+      "residuals": [],
+      "answerMatchedAfterReveal": true,
+      "status": "independent-revision-recheck / required-issues-closed / not-user-tested"
+    }
+  ],
+  "independentlyCheckedSources": [
+    {
+      "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/soil-compaction",
+      "checkedAt": "2026-10-03",
+      "supports": "压实减少大孔隙并降低入渗，颗粒排列与孔隙机制支持08-q2。"
+    },
+    {
+      "url": "https://www.nps.gov/yose/learn/nature/forestrestoration.htm",
+      "checkedAt": "2026-10-03",
+      "supports": "小树疏除可减少与保留树的水和养分竞争，目标因林型而异，支持08-q6的条件范围。"
+    },
+    {
+      "url": "https://www.nhs.uk/symptoms/bad-breath/",
+      "checkedAt": "2026-10-03",
+      "supports": "轻柔清洁、不刷到牙龈出血；支持09-q1的原则。"
+    },
+    {
+      "url": "https://www.nhs.uk/conditions/gum-disease/",
+      "checkedAt": "2026-10-03",
+      "supports": "出血可与牙龈疾病有关，出血时牙科评估边界与解析一致。"
+    }
+  ],
+  "factBoundary": "没有把教学虫例当成真实物种寄主范围；没有提供个人用药、工程施工或实际安检操作。09-q9是已给健康建议下的产品规则比较，应用不自行决定个体活动。",
+  "originalSourceHashes": {
+    "parts/map-08-10.json": "e586f52689cc9f5ff607c944729bd0c4dbd42e16e0677f3235e6890b1181e4d5",
+    "parts/editorial-08-10.json": "4cf3798e50827596c56ceeb04334f4a1876e3005147dff4ac0563720eabf70ac",
+    "review/revisions-08-10.json": "a60c8dc0300111c50004cf807d11be67a4a8d2d372efdd4fb7fdb162ccb62b85"
+  },
+  "closureMethod": "After the main editor repaired the two identified residues, reread the updated 08-q2 editorial evidence and 08-q3 bilingual explanation; questions, options and chosen answers remain the same."
+}

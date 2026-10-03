@@ -1,0 +1,522 @@
+[
+  {
+    "id": "01-q3",
+    "reason": "使用可信的抄写、标记朗读学习方式作干扰，删除颜色与朗读速度凑项。",
+    "before": {
+      "id": "01-q3",
+      "subject": "01",
+      "en": {
+        "question": "After reading a page of notes, you want to find what you cannot recall yourself, rather than what looks familiar. Which activity directly checks that?",
+        "options": [
+          "Close the notes, write the key points, then reopen them to check omissions.",
+          "Mark the key points while viewing the notes, then check the highlight colours.",
+          "Read the key points while viewing the notes, then check your reading speed."
+        ],
+        "answer": "Close the notes, write the key points, then reopen them to check omissions.",
+        "explanation": "Writing with the notes closed requires retrieval; comparison reveals omissions. Highlighting or reading while looking at the text still supplies the information being checked."
+      },
+      "zh": {
+        "question": "你看完一页笔记，想检查哪些内容自己无法回忆，而不是哪些句子看着眼熟。哪项活动直接检查这个目标？",
+        "options": [
+          "合上笔记写出要点，再打开对照遗漏。",
+          "看着笔记标出要点，再检查标记颜色。",
+          "看着笔记朗读要点，再检查朗读速度。"
+        ],
+        "answer": "合上笔记写出要点，再打开对照遗漏。",
+        "explanation": "合上笔记后写要点，需要从记忆中提取；对照后能看见遗漏。看着资料划线或朗读仍有原文支持，不能直接检查离开资料后的回忆。"
+      }
+    },
+    "after": {
+      "id": "01-q3",
+      "subject": "01",
+      "en": {
+        "question": "After reading a page of notes, you want to find what you cannot recall yourself, rather than what looks familiar. Which activity directly checks that?",
+        "options": [
+          "Write the key points with the notes closed, then compare.",
+          "Copy the key points again while looking at the notes.",
+          "Mark and read key points aloud while looking at the notes."
+        ],
+        "answer": "Write the key points with the notes closed, then compare.",
+        "explanation": "Writing with the notes closed requires retrieval; comparison reveals omissions. Highlighting or reading while looking at the text still supplies the information being checked."
+      },
+      "zh": {
+        "question": "你看完一页笔记，想检查哪些内容自己无法回忆，而不是哪些句子看着眼熟。哪项活动直接检查这个目标？",
+        "options": [
+          "合上笔记写出要点，再对照原文。",
+          "看着笔记把要点再抄写一遍。",
+          "看着笔记给要点做标记并朗读。"
+        ],
+        "answer": "合上笔记写出要点，再对照原文。",
+        "explanation": "合上笔记后写要点，需要从记忆中提取；对照后能看见遗漏。看着资料划线或朗读仍有原文支持，不能直接检查离开资料后的回忆。"
+      }
+    }
+  },
+  {
+    "id": "01-q6",
+    "reason": "独立任务改为一段并明确范例与另题练习，消除两段要求未被满足的问题。",
+    "before": {
+      "id": "01-q6",
+      "subject": "01",
+      "en": {
+        "question": "A beginner must independently write a two-paragraph explanation. The teacher wants to provide a usable structural model while leaving some writing to the learner. Which material does both?",
+        "options": [
+          "A complete two-paragraph text for the learner to copy and submit.",
+          "An annotated model paragraph, with the learner writing the second.",
+          "Two pages of background information, with the learner finding a structure."
+        ],
+        "answer": "An annotated model paragraph, with the learner writing the second.",
+        "explanation": "The annotated paragraph shows how the writing is organized, while the second still requires the learner's work. A completed text replaces that work, and background alone lacks the requested structural model."
+      },
+      "zh": {
+        "question": "初学者要独立写两段说明文。教师既要给他可用的结构参考，又要留下自己写作的部分。哪份材料同时符合要求？",
+        "options": [
+          "两段已完成的全文，供他直接复制提交。",
+          "一段带结构批注的范例，第二段由他撰写。",
+          "两页题材背景的资料，供他自行寻找结构。"
+        ],
+        "answer": "一段带结构批注的范例，第二段由他撰写。",
+        "explanation": "带批注的范例呈现“怎样组织”，第二段仍需要学员自己完成。全文代写撤走了独立任务；只有背景资料则没有提供指定的结构支撑。"
+      }
+    },
+    "after": {
+      "id": "01-q6",
+      "subject": "01",
+      "en": {
+        "question": "A beginner must write an explanatory paragraph independently. The teacher wants to provide a usable structural reference without writing this practice response for the learner. Which material meets both requirements?",
+        "options": [
+          "The full response to this task, for the learner to copy and submit.",
+          "An annotated structural example and a separate prompt to write independently.",
+          "Two pages of topic background, for the learner to find a structure."
+        ],
+        "answer": "An annotated structural example and a separate prompt to write independently.",
+        "explanation": "The annotated example shows the structure, while the separate prompt remains an independent writing task. Copying a complete response removes that task; topic background alone does not supply the requested structural reference. The example and practice serve different roles."
+      },
+      "zh": {
+        "question": "初学者要自己写一段说明文。教师想提供可用的结构参考，但不代写这次练习。哪份材料同时符合要求？",
+        "options": [
+          "这次练习的完整全文，供他直接复制提交。",
+          "带结构批注的范例，另给题目由他自己写。",
+          "两页题材背景资料，供他自行寻找结构。"
+        ],
+        "answer": "带结构批注的范例，另给题目由他自己写。",
+        "explanation": "批注范例展示组织结构，另一题仍由学员独立写作。直接复制全文不留下独立任务；只给背景资料则没有提供指定的结构参考。范例和练习承担不同作用。"
+      }
+    }
+  },
+  {
+    "id": "01-q7",
+    "reason": "明确跨食品领域迁移，不把新麦片也可解释为新情境的第二答案留在题干里。",
+    "before": {
+      "id": "01-q7",
+      "subject": "01",
+      "en": {
+        "question": "A learner can use price ÷ quantity to compare unit prices of food. Which task checks use of the same principle in a new context?",
+        "options": [
+          "Compare the price per kilogram of two new cereals.",
+          "Compare the price per GB of two data plans.",
+          "Write the formula for food unit prices from memory."
+        ],
+        "answer": "Compare the price per GB of two data plans.",
+        "explanation": "Price per GB still divides price by quantity, but moves from food to data plans. New cereals remain in the familiar context, and recalling a formula does not require applying it."
+      },
+      "zh": {
+        "question": "学员会用“价格÷数量”比较食品单位价。要检查他能否在新情境应用同一原理，下面哪项任务最符合目标？",
+        "options": [
+          "比较两种新麦片的每公斤价格。",
+          "比较两种流量套餐的每GB价格。",
+          "默写食品单位价格的计算公式。"
+        ],
+        "answer": "比较两种流量套餐的每GB价格。",
+        "explanation": "每GB价格仍是价格除以数量，却把食品情境换成了数据套餐。换一款麦片仍在熟悉情境中；默写公式不要求实际应用。"
+      }
+    },
+    "after": {
+      "id": "01-q7",
+      "subject": "01",
+      "en": {
+        "question": "A learner can use price divided by quantity to compare food unit prices. To check whether they can apply the same principle outside the food domain, which task best meets the goal?",
+        "options": [
+          "Compare the price per kilogram of two new cereals.",
+          "Compare the price per GB of two data plans.",
+          "Write the formula for food unit prices from memory."
+        ],
+        "answer": "Compare the price per GB of two data plans.",
+        "explanation": "Price per GB still divides price by quantity, but moves from food to data plans. New cereals remain in the familiar context, and recalling a formula does not require applying it."
+      },
+      "zh": {
+        "question": "学员会用“价格÷数量”比较食品单位价。要检查他能否把同一原理用于食品之外的领域，下面哪项任务最符合目标？",
+        "options": [
+          "比较两种新麦片的每公斤价格。",
+          "比较两种流量套餐的每GB价格。",
+          "默写食品单位价格的计算公式。"
+        ],
+        "answer": "比较两种流量套餐的每GB价格。",
+        "explanation": "每GB价格仍是价格除以数量，却把食品情境换成了数据套餐。换一款麦片仍在熟悉情境中；默写公式不要求实际应用。"
+      }
+    }
+  },
+  {
+    "id": "01-v2-q09",
+    "reason": "英文统一成表现指标名词短语，中文也明确解释而不是仅复述。",
+    "before": {
+      "id": "01-v2-q09",
+      "subject": "01",
+      "en": {
+        "question": "After watching a video, the material feels familiar. You want to check whether you can explain its key points a week later without viewing the material. Which performance should you collect?",
+        "options": [
+          "Your confidence rating immediately after the video ends.",
+          "The proportion of subtitles you repeat during the video.",
+          "Explain the key points a week later without the materials."
+        ],
+        "answer": "Explain the key points a week later without the materials.",
+        "explanation": "The target includes both a one-week delay and no access to the material. Delayed recall with the material closed includes both. Confidence and repetition can be recorded, but do not replace the specified independent performance."
+      },
+      "zh": {
+        "question": "看完视频后，你觉得内容很熟。现在要检验的是“一周后能否不看资料解释要点”。应收集哪项表现？",
+        "options": [
+          "播放结束时，对自己掌握程度的评分。",
+          "播放过程中，跟读视频字幕的完成比例。",
+          "一周之后，合上资料复述要点的结果。"
+        ],
+        "answer": "一周之后，合上资料复述要点的结果。",
+        "explanation": "待检查目标同时包含“一周后”和“不看资料”，延后合上资料复述才按这两个条件测量。自信和跟读可以记录，但不能代替所要求的独立表现。"
+      }
+    },
+    "after": {
+      "id": "01-v2-q09",
+      "subject": "01",
+      "en": {
+        "question": "After watching a video, the material feels familiar. You want to check whether you can explain its key points a week later without viewing the material. Which performance should you collect?",
+        "options": [
+          "A self-rating of mastery immediately after the video.",
+          "Subtitle-following completion during the video.",
+          "An unaided explanation of key points one week later."
+        ],
+        "answer": "An unaided explanation of key points one week later.",
+        "explanation": "The target includes both a one-week delay and an explanation without notes. A delayed unaided explanation measures those conditions. Confidence and subtitle-following can be recorded but do not replace the required independent performance."
+      },
+      "zh": {
+        "question": "看完视频后，你觉得内容很熟。现在要检验的是“一周后能否不看资料解释要点”。应收集哪项表现？",
+        "options": [
+          "播放结束时，对自己掌握程度的评分。",
+          "播放过程中，跟读视频字幕的完成比例。",
+          "一周之后，不看资料解释要点的结果。"
+        ],
+        "answer": "一周之后，不看资料解释要点的结果。",
+        "explanation": "目标同时包含“一周后”和“不看资料解释”，延后独立解释才按这两个条件测量。自信和跟读可以记录，但不能代替指定的独立表现。"
+      }
+    }
+  },
+  {
+    "id": "02-v2-q08",
+    "reason": "保留幕明确接收对象，删除搬走幕只移除改用回收盒的原因，不同时丢失归还对象。",
+    "before": {
+      "id": "02-v2-q08",
+      "subject": "02",
+      "en": {
+        "question": "The original fictional short film shows: she wants to return a key in person; she learns the owner has moved away; she puts the key in the designated return box. The new version removes only the news that the owner moved away. What information is lost?",
+        "options": [
+          "Whom she first wanted to give the key to.",
+          "Where she finally left the key.",
+          "Why she switched to the return box."
+        ],
+        "answer": "Why she switched to the return box.",
+        "explanation": "The intended recipient and final action remain. What is removed is the new circumstance explaining the change of plan. Editing can remove a causal link as well as reduce running time."
+      },
+      "zh": {
+        "question": "虚构短片原版依次出现：她想亲手归还钥匙；听说房主已经搬走；于是把钥匙投入指定回收盒。新版只删去“听说房主搬走”。哪项信息因此缺失？",
+        "options": [
+          "她起初想把钥匙交给谁。",
+          "她最后把钥匙放在哪里。",
+          "她为什么改用回收盒归还。"
+        ],
+        "answer": "她为什么改用回收盒归还。",
+        "explanation": "起初的对象和最后的动作仍保留，删掉的是导致方式改变的新情况。剪辑不只改变长短，也可能删去观众理解因果所需的信息。"
+      }
+    },
+    "after": {
+      "id": "02-v2-q08",
+      "subject": "02",
+      "en": {
+        "question": "The original fictional short film shows: she wants to return a key in person; she learns the owner has moved away; she puts the key in the designated return box. The new version removes only the news that the owner moved away. What information is lost?",
+        "options": [
+          "Whom she first wanted to give the key to.",
+          "Where she finally left the key.",
+          "Why she switched to the return box."
+        ],
+        "answer": "Why she switched to the return box.",
+        "explanation": "The intended recipient and final action remain. What is removed is the new circumstance explaining the change of plan. Editing can remove a causal link as well as reduce running time."
+      },
+      "zh": {
+        "question": "虚构短片原版依次出现：她想亲手把钥匙还给房主；听说房主已经搬走；于是把钥匙投入指定回收盒。新版只删去“听说房主搬走”。哪项信息因此缺失？",
+        "options": [
+          "她起初想把钥匙交给谁。",
+          "她最后把钥匙放在哪里。",
+          "她为什么改用回收盒归还。"
+        ],
+        "answer": "她为什么改用回收盒归还。",
+        "explanation": "起初的对象和最后的动作仍保留，删掉的是导致方式改变的新情况。剪辑不只改变长短，也可能删去观众理解因果所需的信息。"
+      }
+    }
+  },
+  {
+    "id": "02-v2-q09",
+    "reason": "所有选项明确指称眼前物件，排除第三项被读成只先介绍原作的另一个准确标签。",
+    "before": {
+      "id": "02-v2-q09",
+      "subject": "02",
+      "en": {
+        "question": "A fictional museum record says the object on display is a replica made in 1950; the original was made in 1690. Which concise label is accurate for the displayed object?",
+        "options": [
+          "A 1690 replica; the original was made in 1950.",
+          "A 1950 replica; the original was made in 1690.",
+          "A 1690 original; the replica was made in 1950."
+        ],
+        "answer": "A 1950 replica; the original was made in 1690.",
+        "explanation": "'A 1950 replica; the original was made in 1690' matches the displayed object's identity and both dates. Labelling the displayed object as a 1690 original confuses its identity. Brevity should not blur provenance."
+      },
+      "zh": {
+        "question": "虚构博物馆档案说：眼前展品是1950年制作的复制品，原作制于1690年。要写一条简短而准确的展签，应选哪句？",
+        "options": [
+          "1690年复制品，原作制于1950年。",
+          "1950年复制品，原作制于1690年。",
+          "1690年原作，复制品制于1950年。"
+        ],
+        "answer": "1950年复制品，原作制于1690年。",
+        "explanation": "“1950年复制品，原作制于1690年”把眼前展品的身份与两个年代对应正确。把眼前物件标成1690年原作，仍会混淆身份；简短不能以混淆来源为代价。"
+      }
+    },
+    "after": {
+      "id": "02-v2-q09",
+      "subject": "02",
+      "en": {
+        "question": "A fictional museum record says the object on display is a replica made in 1950; the original was made in 1690. Which concise label is accurate for the displayed object?",
+        "options": [
+          "This object is a 1690 copy of a 1950 original.",
+          "This object is a 1950 copy of a 1690 original.",
+          "This object is the 1690 original; a copy was made in 1950."
+        ],
+        "answer": "This object is a 1950 copy of a 1690 original.",
+        "explanation": "'A 1950 replica; the original was made in 1690' matches the displayed object's identity and both dates. Labelling the displayed object as a 1690 original confuses its identity. Brevity should not blur provenance."
+      },
+      "zh": {
+        "question": "虚构博物馆档案说：眼前展品是1950年制作的复制品，原作制于1690年。要写一条简短而准确的展签，应选哪句？",
+        "options": [
+          "眼前是1690年复制品，原作制于1950年。",
+          "眼前是1950年复制品，原作制于1690年。",
+          "眼前是1690年原作，1950年制有复制品。"
+        ],
+        "answer": "眼前是1950年复制品，原作制于1690年。",
+        "explanation": "“1950年复制品，原作制于1690年”把眼前展品的身份与两个年代对应正确。把眼前物件标成1690年原作，仍会混淆身份；简短不能以混淆来源为代价。"
+      }
+    }
+  },
+  {
+    "id": "01-v2-q12",
+    "reason": "增加不同难度新案例的实质干扰项，检验迁移评估条件而非仅辨认迁移。",
+    "before": {
+      "id": "01-v2-q12",
+      "subject": "01",
+      "en": {
+        "question": "Two people took the same course. You want to compare their ability to use its method in a new situation, rather than recall classroom examples. Which assessment best matches that target?",
+        "options": [
+          "Have both solve the same new case, scored by the same criteria.",
+          "Have both recount their class notes, scored by the same criteria.",
+          "Have both rate what they gained from the course, using the same scale."
+        ],
+        "answer": "Have both solve the same new case, scored by the same criteria.",
+        "explanation": "The same new case requires transfer under comparable tasks and scoring. Recounting notes checks recall, while self-ratings record perceptions; neither directly checks application to the new situation."
+      },
+      "zh": {
+        "question": "两人上了同一个课程。要比较他们把方法用在新情境的能力，而不是记住课堂案例的能力，哪项评估最符合目标？",
+        "options": [
+          "让两人解决同样的新案例，用同一标准评分。",
+          "让两人复述自己的课堂笔记，用同一标准评分。",
+          "让两人评价自己的课程收获，用同一量表评分。"
+        ],
+        "answer": "让两人解决同样的新案例，用同一标准评分。",
+        "explanation": "相同的新案例直接要求迁移，而且两人面对同样任务和评分标准。复述笔记偏向记忆，自评偏向感受，都没有直接检验新情境应用。"
+      }
+    },
+    "after": {
+      "id": "01-v2-q12",
+      "subject": "01",
+      "en": {
+        "question": "Two people took the same course. You want to compare their use of the method in a new context, giving them the same task difficulty and scoring criteria. Which assessment best meets this goal?",
+        "options": [
+          "Give both the same new case and use the same scoring criteria.",
+          "Give them new cases of different difficulty and use the same scoring criteria.",
+          "Ask both to retell the same old classroom case and use the same scoring criteria."
+        ],
+        "answer": "Give both the same new case and use the same scoring criteria.",
+        "explanation": "The same new case tests transfer under matching task and scoring conditions. Different-difficulty cases do not meet the stated comparison requirement. Retelling an old case keeps conditions matched but does not test application in a new context."
+      },
+      "zh": {
+        "question": "两人上了同一个课程。要比较他们把方法用在新情境的表现，并让两人面对同样任务难度和评分标准，哪项评估最符合目标？",
+        "options": [
+          "两人解决同样的新案例，用同一标准评分。",
+          "两人解决难度不同的新案例，用同一标准评分。",
+          "两人复述同样的课堂旧案例，用同一标准评分。"
+        ],
+        "answer": "两人解决同样的新案例，用同一标准评分。",
+        "explanation": "相同新案例要求迁移，且两人面对同样任务和评分条件。难度不同的新案例不能按本题要求直接比较；复述旧案例虽条件相同，却没有检验新情境应用。"
+      }
+    }
+  },
+  {
+    "id": "02-q12",
+    "reason": "用同属视觉构图的线索作干扰，删除作画日期无关项。",
+    "before": {
+      "id": "02-q12",
+      "subject": "02",
+      "en": {
+        "question": "In a fictional garden painting, plant and wall lines enclose a clear human-shaped area at the centre, but that area has no colour or detail. What directly allows viewers to recognize a person?",
+        "options": [
+          "The person-shaped gap between the lines.",
+          "The green pigment used for the garden plants.",
+          "The painting date written in the corner."
+        ],
+        "answer": "The person-shaped gap between the lines.",
+        "explanation": "The surrounding lines give the unpainted area a shape: empty space can participate in composition. Recognizing the figure does not establish why the painter left it empty; intention requires further evidence."
+      },
+      "zh": {
+        "question": "一幅虚构庭院画里，植物和围墙的线条在中央围出清楚的人形，但这块人形区域没有上色或画细节。观众辨认出“人”的直接线索是什么？",
+        "options": [
+          "周围线条围成的人形空白。",
+          "庭院植物使用的绿色颜料。",
+          "画面角落标出的作画日期。"
+        ],
+        "answer": "周围线条围成的人形空白。",
+        "explanation": "未画出的区域仍被周边线条赋予形状，这就是空白也能参与构图的例子。能认出人形并不等于知道画家为什么留白；动机还需要其他证据。"
+      }
+    },
+    "after": {
+      "id": "02-q12",
+      "subject": "02",
+      "en": {
+        "question": "In a fictional garden painting, plant and wall lines enclose a clear human-shaped area at the centre, but that area has no colour or detail. What directly allows viewers to recognize a person?",
+        "options": [
+          "The human-shaped empty space bounded by surrounding lines.",
+          "The light-and-dark details inside the figure’s outline.",
+          "The colour changes within the garden plants themselves."
+        ],
+        "answer": "The human-shaped empty space bounded by surrounding lines.",
+        "explanation": "The surrounding lines give the unpainted area a shape: empty space can participate in composition. Recognizing the figure does not establish why the painter left it empty; intention requires further evidence."
+      },
+      "zh": {
+        "question": "一幅虚构庭院画里，植物和围墙的线条在中央围出清楚的人形，但这块人形区域没有上色或画细节。观众辨认出“人”的直接线索是什么？",
+        "options": [
+          "周围线条围成的人形空白。",
+          "人物轮廓内部的明暗细节。",
+          "庭院植物本身的颜色变化。"
+        ],
+        "answer": "周围线条围成的人形空白。",
+        "explanation": "未画出的区域仍被周边线条赋予形状，这就是空白也能参与构图的例子。能认出人形并不等于知道画家为什么留白；动机还需要其他证据。"
+      }
+    }
+  },
+  {
+    "id": "03-q9",
+    "reason": "改为抽样框改进，区别于05-q9界定已记录群体的任务。",
+    "before": {
+      "id": "03-q9",
+      "subject": "03",
+      "en": {
+        "question": "A survey invites only current paying users. Of 100 respondents, 90 report satisfaction; former users are not surveyed. Which group does the 90% most directly describe?",
+        "options": [
+          "The paying users surveyed.",
+          "Everyone who has ever used the service.",
+          "Everyone who has stopped paying for the service."
+        ],
+        "answer": "The paying users surveyed.",
+        "explanation": "The 90% is 90 divided by 100 respondents, all still paying. Extending it to everyone who ever used the service includes an unobserved group. A larger sample alone does not remove that coverage gap."
+      },
+      "zh": {
+        "question": "调查只邀请仍在付费的用户，受访100人中90人表示满意；没有调查已经离开的用户。这个90%最直接描述哪组人？",
+        "options": [
+          "本次受访的仍付费用户。",
+          "所有曾经使用过的用户。",
+          "所有已经取消付费的用户。"
+        ],
+        "answer": "本次受访的仍付费用户。",
+        "explanation": "90%是90÷100，分母是本次受访的仍付费用户。扩大到所有曾用者会跨过未调查的人群；即使样本更多，也不能仅靠人数补上这个覆盖缺口。"
+      }
+    },
+    "after": {
+      "id": "03-q9",
+      "subject": "03",
+      "en": {
+        "question": "A survey aims to understand all former or current paying users, including those still paying and those who left. It currently samples only the still-paying list; complete lists of both groups are available. Which change gives both target groups a chance of selection?",
+        "options": [
+          "Sample randomly from the full list of everyone who has paid.",
+          "Increase the random sample from the still-paying list.",
+          "Sample randomly only from the list of users who left."
+        ],
+        "answer": "Sample randomly from the full list of everyone who has paid.",
+        "explanation": "The full ever-paid list includes both groups and gives each a chance of selection. A larger still-paying sample leaves departed users out; a departed-only sample leaves current users out. A complete sampling frame does not ensure everyone responds, so nonresponse still needs checking."
+      },
+      "zh": {
+        "question": "一项调查要了解所有曾经付费用户的体验，包括仍付费和已离开者。目前只从仍付费名单抽样；两类完整名单都可使用。哪项抽样调整把目标人群的两类人都纳入抽样机会？",
+        "options": [
+          "从全部曾付费名单中随机抽样。",
+          "从仍付费名单中增加随机样本。",
+          "只从已经离开名单中随机抽样。"
+        ],
+        "answer": "从全部曾付费名单中随机抽样。",
+        "explanation": "全部曾付费名单同时包含仍付费与已离开者，使两类人都有抽样机会。扩大仍付费样本不能补上已离开者；只抽已离开者又漏掉仍付费者。完整抽样框不保证人人回应，还需另查未回应偏差。"
+      }
+    }
+  },
+  {
+    "id": "03-q10",
+    "reason": "明确事件率单位，避免将案件数率误解为居民遇案比例。",
+    "before": {
+      "id": "03-q10",
+      "subject": "03",
+      "en": {
+        "question": "In each of two years, a place has 10,000 residents and 100 separately recorded cases. News coverage rises from 20 articles to 200. Using cases ÷ population, which ratio gives this year's case rate?",
+        "options": [
+          "100 ÷ 10000",
+          "200 ÷ 10000",
+          "200 ÷ 20"
+        ],
+        "answer": "100 ÷ 10000",
+        "explanation": "The case rate is 100 cases divided by 10,000 residents, or 1%. The 200 articles are not 200 separate cases; 200 ÷ 20 measures the increase in article count, not the case rate."
+      },
+      "zh": {
+        "question": "某地两年人口都为1万人，每年独立记录的案件都为100起；新闻报道却从20篇增至200篇。按“独立案件数÷人口”计算，今年的案件率应使用哪一比率？",
+        "options": [
+          "100 ÷ 10000",
+          "200 ÷ 10000",
+          "200 ÷ 20"
+        ],
+        "answer": "100 ÷ 10000",
+        "explanation": "案件率用案件数100除以人口10000，得到1%。200篇是报道量，不是200起独立案件；200÷20是报道量的倍数，不能当成案件率。"
+      }
+    },
+    "after": {
+      "id": "03-q10",
+      "subject": "03",
+      "en": {
+        "question": "In each of two years, a place has 10,000 residents and 100 separately recorded cases. News coverage rises from 20 articles to 200. Using cases ÷ population, which ratio gives this year's case rate?",
+        "options": [
+          "100 ÷ 10000",
+          "200 ÷ 10000",
+          "200 ÷ 20"
+        ],
+        "answer": "100 ÷ 10000",
+        "explanation": "The numerator is 100 cases and the population is 10,000: 100 cases per 10,000 residents that year, or one per 100. Repeated cases may involve the same person, so this is not the percentage of residents affected. The 200 reports and their tenfold increase are different quantities."
+      },
+      "zh": {
+        "question": "某地两年人口都为1万人，每年独立记录的案件都为100起；新闻报道却从20篇增至200篇。按“独立案件数÷人口”计算，今年的案件率应使用哪一比率？",
+        "options": [
+          "100 ÷ 10000",
+          "200 ÷ 10000",
+          "200 ÷ 20"
+        ],
+        "answer": "100 ÷ 10000",
+        "explanation": "案件数100除以人口10000，对应一年每万人100起，或每100人1起。案件可能涉及同一人多次，不能把这个事件率直接说成1%居民遇案。200篇是报道量；200÷20是报道量倍数，都不是给定定义的案件率。"
+      }
+    }
+  }
+]

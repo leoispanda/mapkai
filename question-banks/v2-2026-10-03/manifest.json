@@ -1,0 +1,79 @@
+{
+  "version": "v2-2026-10-03",
+  "generatedAt": "2026-10-03",
+  "principles": "Principles v3 (2026-10-02)",
+  "status": "editorial-reviewed / awaiting-user-tryout",
+  "counts": {
+    "knowledge": 132,
+    "explore": 20,
+    "bilingualItems": 152,
+    "stableOptionIds": 476
+  },
+  "knowledgeLineage": {
+    "sameObjectiveRetainedId": 91,
+    "changedObjectiveNewId": 41
+  },
+  "realUserTryoutPerformed": false,
+  "runtimeActivated": false,
+  "files": {
+    "README.zh.md": {
+      "sha256": "72db13855d47ee67784761d87281bd2cf68e2955c9ce680a981244f0d000af38",
+      "bytes": 1762
+    },
+    "explore-20.zh-en.md": {
+      "sha256": "6e6796835e180067efe8c884d755091468b9cac0a54e89bfb2a12541b2bcb7b8",
+      "bytes": 25976
+    },
+    "map-132.zh-en.md": {
+      "sha256": "53d84756f50b35bda2e4a7ba94058d19d72bc2bad253c4241c33657b77388694",
+      "bytes": 165468
+    },
+    "blueprint.zh.md": {
+      "sha256": "e0ffa49d5fa920c9cb5e86cb9f1b97de08b9e203411c217825564cf2f2bbfc78",
+      "bytes": 19827
+    },
+    "quality-review.zh.md": {
+      "sha256": "0f1e0d40a8af913bcccbf4e61c83c131418475f2efd88d548c299b48f274de48",
+      "bytes": 3705
+    },
+    "sources.zh.md": {
+      "sha256": "9e3c80c2233ba0a3009528e2735a640715178148248d0e7704067cba1fcd5bb8",
+      "bytes": 13293
+    },
+    "integration-notes.zh.md": {
+      "sha256": "74c9e06af3b122851aabfee50d4dccc2fd04e781f4e2134306ba2e2ac2083d9b",
+      "bytes": 3438
+    },
+    "explore-20.json": {
+      "sha256": "dede5158b830ffcec5726bd7e1c91253d114acb49ecc6b764b9580248ef826c9",
+      "bytes": 51973
+    },
+    "map-132.json": {
+      "sha256": "5890f4a7f1e1cc124e507f4cc9dbf4c1bd4fcba99900f83174f3bf528318b024",
+      "bytes": 197744
+    },
+    "editorial-explore.json": {
+      "sha256": "b3a97128468a6189edced0b3df14ce84129f3471bd76d538241d5ff0ac2cd5b9",
+      "bytes": 26053
+    },
+    "editorial-knowledge.json": {
+      "sha256": "4055645611c1a70c0fb473ab70d838dfdccea8f5f544aa2d5e9ba3c5bad2cbcd",
+      "bytes": 246913
+    }
+  },
+  "verificationFile": "review/verification.json",
+  "reviewMetricsFile": "review/metrics.json",
+  "sourceRuntimeHashes": {
+    "script.js": "eaedcef34db7c5c5b89e99d99ba7e16d71a02d7e9df1d8602cdd08cd404fbb17",
+    "index.html": "c7466860ae30a67d549264f59226f0dbb925c6e9a3f6066312037993b467fd53",
+    "styles.css": "a7f06a8d9be7f9161f03b6343505b136b2983ad71606af9645acf1712002597a"
+  },
+  "generationGit": {
+    "available": false,
+    "committed": false,
+    "pushed": false
+  },
+  "repository": "https://github.com/leoispanda/mapkai",
+  "publicationStatusSource": "Git commit history and remote branch, not generation metadata",
+  "sourceRuntimeHashScope": "Original generation copy; not the repository publication checkout"
+}

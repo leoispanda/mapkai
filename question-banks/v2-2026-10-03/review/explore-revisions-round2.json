@@ -1,0 +1,466 @@
+[
+  {
+    "id": "lens-v2-001",
+    "reason": "让短视频与线下休闲设施调查共同服务明示的休闲安排目标。",
+    "before": {
+      "id": "lens-v2-001",
+      "questionMode": "knowledge_lens_probe",
+      "scenarioType": "phone_use",
+      "optionIds": [
+        "lens-v2-001-opt-06",
+        "lens-v2-001-opt-05",
+        "lens-v2-001-opt-09",
+        "lens-v2-001-opt-10"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "朋友看短视频时常常超过原定时间。你们想先收集一种记录；四项都可能有帮助。你最想从哪项开始？",
+        "options": [
+          "记录自动连播开关与每次使用时长。",
+          "记录每次使用时长，查看它们如何分布。",
+          "记录使用前的疲惫程度和近期休息情况。",
+          "记录附近休闲设施的开放时间和使用情况。"
+        ]
+      },
+      "en": {
+        "question": "A friend often watches short videos longer than planned. You want to start with one kind of record; all four may help. Which would you most like to collect first?",
+        "options": [
+          "Record autoplay settings and session lengths.",
+          "Record session lengths and examine their distribution.",
+          "Record tiredness before use and recent rest.",
+          "Record opening hours and use of nearby leisure facilities."
+        ]
+      },
+      "optionProfiles": {
+        "lens-v2-001-opt-06": {
+          "subject": "06",
+          "lens": "autoplay_design",
+          "reflectionZh": "这次你选择了：记录自动连播开关与每次使用时长。",
+          "reflectionEn": "This time, you chose to record autoplay settings and session lengths."
+        },
+        "lens-v2-001-opt-05": {
+          "subject": "05",
+          "lens": "duration_distribution",
+          "reflectionZh": "这次你选择了：记录每次使用时长，查看它们如何分布。",
+          "reflectionEn": "This time, you chose to record session lengths and examine their distribution."
+        },
+        "lens-v2-001-opt-09": {
+          "subject": "09",
+          "lens": "fatigue_rest",
+          "reflectionZh": "这次你选择了：记录使用前的疲惫程度和近期休息情况。",
+          "reflectionEn": "This time, you chose to record tiredness before use and recent rest."
+        },
+        "lens-v2-001-opt-10": {
+          "subject": "10",
+          "lens": "leisure_facility_use",
+          "reflectionZh": "这次你选择了：记录附近休闲设施的开放时间和使用情况。",
+          "reflectionEn": "This time, you chose to record opening hours and use of nearby leisure facilities."
+        }
+      }
+    },
+    "after": {
+      "id": "lens-v2-001",
+      "questionMode": "knowledge_lens_probe",
+      "scenarioType": "phone_use",
+      "optionIds": [
+        "lens-v2-001-opt-06",
+        "lens-v2-001-opt-05",
+        "lens-v2-001-opt-09",
+        "lens-v2-001-opt-10"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "朋友想调整休闲安排。他常常看短视频超时，也想了解附近的线下活动。四类信息都能收集，你最想先从哪项开始？",
+        "options": [
+          "记录自动连播开关与每次使用时长。",
+          "记录每次使用时长，查看它们如何分布。",
+          "记录使用前的疲惫程度和近期休息情况。",
+          "记录附近休闲设施的开放时间和使用情况。"
+        ]
+      },
+      "en": {
+        "question": "A friend wants to rethink their leisure time. They often watch short videos longer than planned and also want to explore nearby offline activities. All four kinds of information can be collected. Which would you most like to investigate first?",
+        "options": [
+          "Record autoplay settings and session lengths.",
+          "Record session lengths and examine their distribution.",
+          "Record tiredness before use and recent rest.",
+          "Record opening hours and use of nearby leisure facilities."
+        ]
+      },
+      "optionProfiles": {
+        "lens-v2-001-opt-06": {
+          "subject": "06",
+          "lens": "autoplay_design",
+          "reflectionZh": "这次你选择了：记录自动连播开关与每次使用时长。",
+          "reflectionEn": "This time, you chose to record autoplay settings and session lengths."
+        },
+        "lens-v2-001-opt-05": {
+          "subject": "05",
+          "lens": "duration_distribution",
+          "reflectionZh": "这次你选择了：记录每次使用时长，查看它们如何分布。",
+          "reflectionEn": "This time, you chose to record session lengths and examine their distribution."
+        },
+        "lens-v2-001-opt-09": {
+          "subject": "09",
+          "lens": "fatigue_rest",
+          "reflectionZh": "这次你选择了：记录使用前的疲惫程度和近期休息情况。",
+          "reflectionEn": "This time, you chose to record tiredness before use and recent rest."
+        },
+        "lens-v2-001-opt-10": {
+          "subject": "10",
+          "lens": "leisure_facility_use",
+          "reflectionZh": "这次你选择了：记录附近休闲设施的开放时间和使用情况。",
+          "reflectionEn": "This time, you chose to record opening hours and use of nearby leisure facilities."
+        }
+      }
+    }
+  },
+  {
+    "id": "lens-v2-003",
+    "reason": "补齐英文独立完成条件。",
+    "before": {
+      "id": "lens-v2-003",
+      "questionMode": "knowledge_lens_probe",
+      "scenarioType": "interactive_exhibition",
+      "optionIds": [
+        "lens-v2-003-opt-02",
+        "lens-v2-003-opt-01",
+        "lens-v2-003-opt-00",
+        "lens-v2-003-opt-10"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "图书馆准备改进一个小型互动展览。你可以先研究其中一方面，四项资料都可获得。你最想了解哪项？",
+        "options": [
+          "查看展品、图像与故事怎样共同表达主题。",
+          "观察讲解后，访客能否独立完成互动练习。",
+          "请访客读一段指引，再说出下一步怎么做。",
+          "观察访客如何进入、等候和寻求现场帮助。"
+        ]
+      },
+      "en": {
+        "question": "A library is improving a small interactive exhibition. Information is available for each of these areas. Which would you most like to investigate first?",
+        "options": [
+          "Examine how objects, images and stories express the theme.",
+          "Observe whether visitors can do an activity after instruction.",
+          "Ask visitors to read instructions and describe the next step.",
+          "Observe how visitors enter, wait and request on-site help."
+        ]
+      },
+      "optionProfiles": {
+        "lens-v2-003-opt-02": {
+          "subject": "02",
+          "lens": "exhibition_meaning",
+          "reflectionZh": "这次你选择了：查看展品、图像与故事怎样共同表达主题。",
+          "reflectionEn": "This time, you chose to examine how objects, images and stories express the theme."
+        },
+        "lens-v2-003-opt-01": {
+          "subject": "01",
+          "lens": "instruction_learning",
+          "reflectionZh": "这次你选择了：观察讲解后，访客能否独立完成互动练习。",
+          "reflectionEn": "This time, you chose to observe whether visitors can do an activity after instruction."
+        },
+        "lens-v2-003-opt-00": {
+          "subject": "00",
+          "lens": "instruction_comprehension",
+          "reflectionZh": "这次你选择了：请访客读一段指引，再说出下一步怎么做。",
+          "reflectionEn": "This time, you chose to ask visitors to read instructions and describe the next step."
+        },
+        "lens-v2-003-opt-10": {
+          "subject": "10",
+          "lens": "visitor_service",
+          "reflectionZh": "这次你选择了：观察访客如何进入、等候和寻求现场帮助。",
+          "reflectionEn": "This time, you chose to observe how visitors enter, wait and request on-site help."
+        }
+      }
+    },
+    "after": {
+      "id": "lens-v2-003",
+      "questionMode": "knowledge_lens_probe",
+      "scenarioType": "interactive_exhibition",
+      "optionIds": [
+        "lens-v2-003-opt-02",
+        "lens-v2-003-opt-01",
+        "lens-v2-003-opt-00",
+        "lens-v2-003-opt-10"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "图书馆准备改进一个小型互动展览。你可以先研究其中一方面，四项资料都可获得。你最想了解哪项？",
+        "options": [
+          "查看展品、图像与故事怎样共同表达主题。",
+          "观察讲解后，访客能否独立完成互动练习。",
+          "请访客读一段指引，再说出下一步怎么做。",
+          "观察访客如何进入、等候和寻求现场帮助。"
+        ]
+      },
+      "en": {
+        "question": "A library is improving a small interactive exhibition. Information is available for each of these areas. Which would you most like to investigate first?",
+        "options": [
+          "Examine how objects, images and stories express the theme.",
+          "Observe whether visitors can complete an activity unaided after instruction.",
+          "Ask visitors to read instructions and describe the next step.",
+          "Observe how visitors enter, wait and request on-site help."
+        ]
+      },
+      "optionProfiles": {
+        "lens-v2-003-opt-02": {
+          "subject": "02",
+          "lens": "exhibition_meaning",
+          "reflectionZh": "这次你选择了：查看展品、图像与故事怎样共同表达主题。",
+          "reflectionEn": "This time, you chose to examine how objects, images and stories express the theme."
+        },
+        "lens-v2-003-opt-01": {
+          "subject": "01",
+          "lens": "instruction_learning",
+          "reflectionZh": "这次你选择了：观察讲解后，访客能否独立完成互动练习。",
+          "reflectionEn": "This time, you chose to observe whether visitors can complete an activity unaided after instruction."
+        },
+        "lens-v2-003-opt-00": {
+          "subject": "00",
+          "lens": "instruction_comprehension",
+          "reflectionZh": "这次你选择了：请访客读一段指引，再说出下一步怎么做。",
+          "reflectionEn": "This time, you chose to ask visitors to read instructions and describe the next step."
+        },
+        "lens-v2-003-opt-10": {
+          "subject": "10",
+          "lens": "visitor_service",
+          "reflectionZh": "这次你选择了：观察访客如何进入、等候和寻求现场帮助。",
+          "reflectionEn": "This time, you chose to observe how visitors enter, wait and request on-site help."
+        }
+      }
+    }
+  },
+  {
+    "id": "task-v2-007",
+    "reason": "英文问答也包含答案。",
+    "before": {
+      "id": "task-v2-007",
+      "questionMode": "task_preference_probe",
+      "scenarioType": "repair_demo",
+      "optionIds": [
+        "task-v2-007-opt-07",
+        "task-v2-007-opt-00",
+        "task-v2-007-opt-04",
+        "task-v2-007-opt-06"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "社区准备一个物品维修示范台。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+        "options": [
+          "根据图纸检查零件尺寸与装配位置。",
+          "把使用说明改成清楚的步骤和常见问答。",
+          "比较供货报价，整理材料和耗材成本。",
+          "设置查询记录的数据库字段和访问权限。"
+        ]
+      },
+      "en": {
+        "question": "A community is preparing an object-repair demonstration station. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+        "options": [
+          "Check part sizes and assembly positions using drawings.",
+          "Rewrite instructions as clear steps and common questions.",
+          "Compare supplier quotes and organise material costs.",
+          "Set up database fields and permissions for record searches."
+        ]
+      },
+      "optionProfiles": {
+        "task-v2-007-opt-07": {
+          "subject": "07",
+          "lens": "repair_fit",
+          "reflectionZh": "这次你选择了：根据图纸检查零件尺寸与装配位置。",
+          "reflectionEn": "This time, you chose to check part sizes and assembly positions using drawings."
+        },
+        "task-v2-007-opt-00": {
+          "subject": "00",
+          "lens": "repair_instructions",
+          "reflectionZh": "这次你选择了：把使用说明改成清楚的步骤和常见问答。",
+          "reflectionEn": "This time, you chose to rewrite instructions as clear steps and common questions."
+        },
+        "task-v2-007-opt-04": {
+          "subject": "04",
+          "lens": "repair_costing",
+          "reflectionZh": "这次你选择了：比较供货报价，整理材料和耗材成本。",
+          "reflectionEn": "This time, you chose to compare supplier quotes and organise material costs."
+        },
+        "task-v2-007-opt-06": {
+          "subject": "06",
+          "lens": "repair_database",
+          "reflectionZh": "这次你选择了：设置查询记录的数据库字段和访问权限。",
+          "reflectionEn": "This time, you chose to set up database fields and permissions for record searches."
+        }
+      }
+    },
+    "after": {
+      "id": "task-v2-007",
+      "questionMode": "task_preference_probe",
+      "scenarioType": "repair_demo",
+      "optionIds": [
+        "task-v2-007-opt-07",
+        "task-v2-007-opt-00",
+        "task-v2-007-opt-04",
+        "task-v2-007-opt-06"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "社区准备一个物品维修示范台。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+        "options": [
+          "根据图纸检查零件尺寸与装配位置。",
+          "把使用说明改成清楚的步骤和常见问答。",
+          "比较供货报价，整理材料和耗材成本。",
+          "设置查询记录的数据库字段和访问权限。"
+        ]
+      },
+      "en": {
+        "question": "A community is preparing an object-repair demonstration station. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+        "options": [
+          "Check part sizes and assembly positions using drawings.",
+          "Turn instructions into clear steps and answers to common questions.",
+          "Compare supplier quotes and organise material costs.",
+          "Set up database fields and permissions for record searches."
+        ]
+      },
+      "optionProfiles": {
+        "task-v2-007-opt-07": {
+          "subject": "07",
+          "lens": "repair_fit",
+          "reflectionZh": "这次你选择了：根据图纸检查零件尺寸与装配位置。",
+          "reflectionEn": "This time, you chose to check part sizes and assembly positions using drawings."
+        },
+        "task-v2-007-opt-00": {
+          "subject": "00",
+          "lens": "repair_instructions",
+          "reflectionZh": "这次你选择了：把使用说明改成清楚的步骤和常见问答。",
+          "reflectionEn": "This time, you chose to turn instructions into clear steps and answers to common questions."
+        },
+        "task-v2-007-opt-04": {
+          "subject": "04",
+          "lens": "repair_costing",
+          "reflectionZh": "这次你选择了：比较供货报价，整理材料和耗材成本。",
+          "reflectionEn": "This time, you chose to compare supplier quotes and organise material costs."
+        },
+        "task-v2-007-opt-06": {
+          "subject": "06",
+          "lens": "repair_database",
+          "reflectionZh": "这次你选择了：设置查询记录的数据库字段和访问权限。",
+          "reflectionEn": "This time, you chose to set up database fields and permissions for record searches."
+        }
+      }
+    }
+  },
+  {
+    "id": "task-v2-008",
+    "reason": "明确匿名记录对象为同类视频。",
+    "before": {
+      "id": "task-v2-008",
+      "questionMode": "task_preference_probe",
+      "scenarioType": "study_video",
+      "optionIds": [
+        "task-v2-008-opt-01",
+        "task-v2-008-opt-02",
+        "task-v2-008-opt-05",
+        "task-v2-008-opt-09"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "朋友们准备一段关于学习时休息的短视频。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+        "options": [
+          "设计一个观看后能独立完成的学习练习。",
+          "调整画面、配音和节奏，让内容表达清楚。",
+          "把匿名使用记录整理成分布图和比较表。",
+          "核对疲惫与休息提示的健康资料。"
+        ]
+      },
+      "en": {
+        "question": "Friends are preparing a short video about rest during study. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+        "options": [
+          "Design an activity viewers can complete independently after watching.",
+          "Adjust images, narration and rhythm to convey the content clearly.",
+          "Summarise anonymous usage records in distribution charts and comparisons.",
+          "Check health sources behind guidance on tiredness and rest."
+        ]
+      },
+      "optionProfiles": {
+        "task-v2-008-opt-01": {
+          "subject": "01",
+          "lens": "video_learning",
+          "reflectionZh": "这次你选择了：设计一个观看后能独立完成的学习练习。",
+          "reflectionEn": "This time, you chose to design an activity viewers can complete independently after watching."
+        },
+        "task-v2-008-opt-02": {
+          "subject": "02",
+          "lens": "video_expression",
+          "reflectionZh": "这次你选择了：调整画面、配音和节奏，让内容表达清楚。",
+          "reflectionEn": "This time, you chose to adjust images, narration and rhythm to convey the content clearly."
+        },
+        "task-v2-008-opt-05": {
+          "subject": "05",
+          "lens": "video_statistics",
+          "reflectionZh": "这次你选择了：把匿名使用记录整理成分布图和比较表。",
+          "reflectionEn": "This time, you chose to summarise anonymous usage records in distribution charts and comparisons."
+        },
+        "task-v2-008-opt-09": {
+          "subject": "09",
+          "lens": "video_health",
+          "reflectionZh": "这次你选择了：核对疲惫与休息提示的健康资料。",
+          "reflectionEn": "This time, you chose to check health sources behind guidance on tiredness and rest."
+        }
+      }
+    },
+    "after": {
+      "id": "task-v2-008",
+      "questionMode": "task_preference_probe",
+      "scenarioType": "study_video",
+      "optionIds": [
+        "task-v2-008-opt-01",
+        "task-v2-008-opt-02",
+        "task-v2-008-opt-05",
+        "task-v2-008-opt-09"
+      ],
+      "skipAllowed": true,
+      "zh": {
+        "question": "朋友们准备一段关于学习时休息的短视频。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+        "options": [
+          "设计一个观看后能独立完成的学习练习。",
+          "调整画面、配音和节奏，让内容表达清楚。",
+          "把同类视频的匿名使用记录整理成分布图。",
+          "核对疲惫与休息提示的健康资料。"
+        ]
+      },
+      "en": {
+        "question": "Friends are preparing a short video about rest during study. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+        "options": [
+          "Design an activity viewers can complete independently after watching.",
+          "Adjust images, narration and rhythm to convey the content clearly.",
+          "Chart the distribution of anonymous usage records from similar videos.",
+          "Check health sources behind guidance on tiredness and rest."
+        ]
+      },
+      "optionProfiles": {
+        "task-v2-008-opt-01": {
+          "subject": "01",
+          "lens": "video_learning",
+          "reflectionZh": "这次你选择了：设计一个观看后能独立完成的学习练习。",
+          "reflectionEn": "This time, you chose to design an activity viewers can complete independently after watching."
+        },
+        "task-v2-008-opt-02": {
+          "subject": "02",
+          "lens": "video_expression",
+          "reflectionZh": "这次你选择了：调整画面、配音和节奏，让内容表达清楚。",
+          "reflectionEn": "This time, you chose to adjust images, narration and rhythm to convey the content clearly."
+        },
+        "task-v2-008-opt-05": {
+          "subject": "05",
+          "lens": "video_statistics",
+          "reflectionZh": "这次你选择了：把同类视频的匿名使用记录整理成分布图。",
+          "reflectionEn": "This time, you chose to chart the distribution of anonymous usage records from similar videos."
+        },
+        "task-v2-008-opt-09": {
+          "subject": "09",
+          "lens": "video_health",
+          "reflectionZh": "这次你选择了：核对疲惫与休息提示的健康资料。",
+          "reflectionEn": "This time, you chose to check health sources behind guidance on tiredness and rest."
+        }
+      }
+    }
+  }
+]

@@ -2,14 +2,51 @@ MapKAI Existing Question Bank Reference for GPT
 Generated from current local script.js.
 Total existing questions: 132
 
+Authoring instructions updated: 2026-10-02, Principles v3.
+This reference is for the Map knowledge-question bank. The old questions below are deduplication material, not approved examples under the revised principles. Their displayed option order and template explanations must not be treated as current presentation rules or copied as a writing style.
+
 How to use this file in GPT Chat:
-- Generate only NEW questions.
-- Avoid repeating the same life scenario, hidden pattern, answer idea, or wording from existing questions below.
-- Keep the MapKAI structure: id, subject, en, zh.
-- Do not include difficulty, unlocksToward, or Powered by MapKAI brand sentence.
-- Each question must have exactly 3 options.
-- answer must exactly match one option.
-- Chinese should be natural, not mechanical translation.
+- Use this reference together with the full docs/mapkai-question-bank-principles.zh.md. If GPT cannot access the local file, provide its contents in the same conversation; a filename alone is not sufficient. The principles file is the governing authoring standard.
+- Generate NEW questions by default. If explicitly asked to revise existing questions, use the requested IDs as revision references. Preserve an ID only when its learning objective is preserved; a changed objective needs a new ID and an old-question retirement record before integration.
+- The q13 next-ID list below is an append-only starting point for this unchanged 132-question reference, not an instruction to renumber revisions.
+- Avoid repeating a life scenario, hidden pattern, answer idea, or wording without a distinct learning or transfer purpose.
+
+Before writing:
+- State the batch scope and outline a blueprint: primary subject, core concept, main knowledge operation, context, new/revised item, and estimated difficulty with a reason.
+- Use operations such as recognition, comparison, calculation/application, evidence judgment, or transfer. Do not confuse operation type with empirical difficulty, or force equal counts and difficulty ratios.
+- Address meaningful gaps in the existing bank. Twelve questions in a subject do not establish full subject coverage.
+
+Required item rules:
+- Test one main learning objective through a clear, useful question. Provide all conditions needed to decide the answer in the stem.
+- Under the stated conditions and criterion, there must be one answer that uniquely meets the question. Another option may be true elsewhere or partly true, but must not equally satisfy this question. Adding "best answer" cannot fix missing evidence.
+- Write three plausible, comparable options. Record the misconception, calculation error, omitted condition, or misapplied method behind each distractor.
+- Keep option language, detail, units and precision comparable. Remove clues from length, explanatory detail, grammar, keyword repetition, absolute wording, tone, and answer position. Do not pad distractors to equalize length.
+- Numeric, date or stage options may keep a meaningful order; do not create a predictable correct-position pattern across the batch.
+- Explain how the given evidence supports the answer and why alternatives do not meet the question. Do not introduce hidden deciding facts or repeat a generic brand sentence.
+- Chinese and English must carry the same conditions, task, option logic and answer, using natural language. Check each language independently for ambiguity and clues.
+- Do not require unrelated country-specific, sports, consumption or workplace knowledge; supply necessary context unless that background is the explicit learning target. Avoid stereotypes and unnecessary reading difficulty.
+- Verify facts that are disputed, consequential, location-dependent or time-sensitive against appropriate primary sources, and record scope and date.
+- Current MapKAI exploration and knowledge practice are not speed tests. Do not introduce a time limit or score speed as knowledge.
+
+Deliver three parts:
+1. Batch blueprint and scope.
+2. Bilingual questions plus separate editorial records: objective, operation, domain reason, answer evidence, distractor errors, estimated difficulty/reason, necessary references, revision reasons and review status.
+3. Batch self-check: coverage, repetition, answer uniqueness, option clues, bilingual equivalence, background barriers and unresolved issues.
+
+Import compatibility:
+- Keep the MapKAI structure: id, subject, en, zh. Include question, options, answer and an individual explanation for each language.
+- Each knowledge question has exactly 3 options; answer must exactly match one option.
+- Keep difficulty estimates and review notes in separate editorial records. Do not include difficulty, unlocksToward, or a Powered by MapKAI brand sentence in the import data.
+- This three-option format is not for Explore's 20 preference questions. Explore uses its own question modes, four reasonable mapped choices and a skip exit, with no knowledge-correct answer.
+
+Review and trial use:
+- Check each item and both languages, then the whole batch. Unresolved ambiguity, hidden conditions or format clues require revision, not an average passing score.
+- Editorially reviewed candidates may proceed to user trial; without real user data label them "editorially reviewed / awaiting user trial", not empirically validated.
+- During a small target-user trial, ask how the reader understood the task and chose the answer before revealing feedback. Then ask what the explanation clarified. Do not add compulsory follow-up questions to the production quiz.
+- Later inspect first-response accuracy and option choices alongside reasons. An unused distractor or knowledgeable readers choosing another answer is a review signal, not an automatic deletion rule.
+- Do not treat the whole cross-subject bank's total score as a single ability for item discrimination. Do not apply knowledge accuracy or distractor metrics to Explore preferences.
+- Keep first attempts separate from post-feedback practice and changed versions. Use minimal anonymous trial notes within the existing data boundaries; do not add accounts or personal profiles.
+- Generating candidates does not automatically authorize replacing live questions or publishing the website.
 
 Current next IDs:
 - subject 00: currently 12 questions, next id 00-q13

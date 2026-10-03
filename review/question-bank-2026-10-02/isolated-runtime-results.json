@@ -1,0 +1,1115 @@
+{
+  "description": "Run selected original pure/runtime functions in isolated VM; no whole-site startup, live DOM, network, real browser storage, or website modifications.",
+  "fixedPosition": {
+    "A": {
+      "counts": {
+        "10": 0,
+        "00": 0,
+        "01": 1,
+        "02": 0,
+        "03": 0,
+        "04": 14,
+        "05": 2,
+        "06": 1,
+        "07": 0,
+        "08": 0,
+        "09": 2
+      },
+      "ranked": [
+        {
+          "code": "04",
+          "count": 14,
+          "label": "04"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        },
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "07",
+          "count": 0,
+          "label": "07"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "10",
+          "count": 0,
+          "label": "10"
+        }
+      ],
+      "strongest": [
+        {
+          "code": "04",
+          "count": 14,
+          "label": "04"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        }
+      ],
+      "supporting": [
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        }
+      ],
+      "quiet": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "07",
+          "count": 0,
+          "label": "07"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "10",
+          "count": 0,
+          "label": "10"
+        }
+      ],
+      "mostActivated": [
+        {
+          "code": "04",
+          "count": 14,
+          "label": "04"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        }
+      ],
+      "occasionallyActivated": [
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        }
+      ],
+      "underused": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "07",
+          "count": 0,
+          "label": "07"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "10",
+          "count": 0,
+          "label": "10"
+        }
+      ],
+      "knowledgeLensTop": [
+        {
+          "code": "04",
+          "count": 4,
+          "label": "04"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "05",
+          "count": 1,
+          "label": "05"
+        }
+      ],
+      "actionEnergyTop": [
+        {
+          "code": "04",
+          "count": 10,
+          "label": "04"
+        },
+        {
+          "code": "05",
+          "count": 1,
+          "label": "05"
+        },
+        {
+          "code": "09",
+          "count": 1,
+          "label": "09"
+        }
+      ],
+      "knowledgeLensSummary": {
+        "items": [
+          {
+            "code": "04",
+            "count": 4,
+            "label": "04"
+          },
+          {
+            "code": "01",
+            "count": 1,
+            "label": "01"
+          },
+          {
+            "code": "05",
+            "count": 1,
+            "label": "05"
+          }
+        ],
+        "type": "knowledge"
+      },
+      "actionEnergySummary": {
+        "items": [
+          {
+            "code": "04",
+            "count": 10,
+            "label": "04"
+          },
+          {
+            "code": "05",
+            "count": 1,
+            "label": "05"
+          },
+          {
+            "code": "09",
+            "count": 1,
+            "label": "09"
+          }
+        ],
+        "type": "action"
+      }
+    },
+    "B": {
+      "counts": {
+        "10": 1,
+        "00": 0,
+        "01": 2,
+        "02": 0,
+        "03": 0,
+        "04": 1,
+        "05": 3,
+        "06": 1,
+        "07": 12,
+        "08": 0,
+        "09": 0
+      },
+      "ranked": [
+        {
+          "code": "07",
+          "count": 12,
+          "label": "07"
+        },
+        {
+          "code": "05",
+          "count": 3,
+          "label": "05"
+        },
+        {
+          "code": "01",
+          "count": 2,
+          "label": "01"
+        },
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        },
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 0,
+          "label": "09"
+        }
+      ],
+      "strongest": [
+        {
+          "code": "07",
+          "count": 12,
+          "label": "07"
+        },
+        {
+          "code": "05",
+          "count": 3,
+          "label": "05"
+        },
+        {
+          "code": "01",
+          "count": 2,
+          "label": "01"
+        }
+      ],
+      "supporting": [
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        }
+      ],
+      "quiet": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 0,
+          "label": "09"
+        }
+      ],
+      "mostActivated": [
+        {
+          "code": "07",
+          "count": 12,
+          "label": "07"
+        },
+        {
+          "code": "05",
+          "count": 3,
+          "label": "05"
+        },
+        {
+          "code": "01",
+          "count": 2,
+          "label": "01"
+        }
+      ],
+      "occasionallyActivated": [
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        }
+      ],
+      "underused": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "02",
+          "count": 0,
+          "label": "02"
+        },
+        {
+          "code": "03",
+          "count": 0,
+          "label": "03"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 0,
+          "label": "09"
+        }
+      ],
+      "knowledgeLensTop": [
+        {
+          "code": "05",
+          "count": 3,
+          "label": "05"
+        },
+        {
+          "code": "07",
+          "count": 3,
+          "label": "07"
+        },
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        }
+      ],
+      "actionEnergyTop": [
+        {
+          "code": "07",
+          "count": 9,
+          "label": "07"
+        },
+        {
+          "code": "01",
+          "count": 2,
+          "label": "01"
+        },
+        {
+          "code": "06",
+          "count": 1,
+          "label": "06"
+        }
+      ],
+      "knowledgeLensSummary": {
+        "items": [
+          {
+            "code": "05",
+            "count": 3,
+            "label": "05"
+          },
+          {
+            "code": "07",
+            "count": 3,
+            "label": "07"
+          },
+          {
+            "code": "04",
+            "count": 1,
+            "label": "04"
+          }
+        ],
+        "type": "knowledge"
+      },
+      "actionEnergySummary": {
+        "items": [
+          {
+            "code": "07",
+            "count": 9,
+            "label": "07"
+          },
+          {
+            "code": "01",
+            "count": 2,
+            "label": "01"
+          },
+          {
+            "code": "06",
+            "count": 1,
+            "label": "06"
+          }
+        ],
+        "type": "action"
+      }
+    },
+    "C": {
+      "counts": {
+        "10": 1,
+        "00": 1,
+        "01": 1,
+        "02": 9,
+        "03": 1,
+        "04": 1,
+        "05": 2,
+        "06": 0,
+        "07": 1,
+        "08": 0,
+        "09": 3
+      },
+      "ranked": [
+        {
+          "code": "02",
+          "count": 9,
+          "label": "02"
+        },
+        {
+          "code": "09",
+          "count": 3,
+          "label": "09"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        },
+        {
+          "code": "00",
+          "count": 1,
+          "label": "00"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "03",
+          "count": 1,
+          "label": "03"
+        },
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        },
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        }
+      ],
+      "strongest": [
+        {
+          "code": "02",
+          "count": 9,
+          "label": "02"
+        },
+        {
+          "code": "09",
+          "count": 3,
+          "label": "09"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        }
+      ],
+      "supporting": [
+        {
+          "code": "00",
+          "count": 1,
+          "label": "00"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "03",
+          "count": 1,
+          "label": "03"
+        },
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        }
+      ],
+      "quiet": [
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        }
+      ],
+      "mostActivated": [
+        {
+          "code": "02",
+          "count": 9,
+          "label": "02"
+        },
+        {
+          "code": "09",
+          "count": 3,
+          "label": "09"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        }
+      ],
+      "occasionallyActivated": [
+        {
+          "code": "00",
+          "count": 1,
+          "label": "00"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "03",
+          "count": 1,
+          "label": "03"
+        },
+        {
+          "code": "04",
+          "count": 1,
+          "label": "04"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        },
+        {
+          "code": "10",
+          "count": 1,
+          "label": "10"
+        }
+      ],
+      "underused": [
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        },
+        {
+          "code": "08",
+          "count": 0,
+          "label": "08"
+        }
+      ],
+      "knowledgeLensTop": [
+        {
+          "code": "02",
+          "count": 2,
+          "label": "02"
+        },
+        {
+          "code": "05",
+          "count": 2,
+          "label": "05"
+        },
+        {
+          "code": "00",
+          "count": 1,
+          "label": "00"
+        }
+      ],
+      "actionEnergyTop": [
+        {
+          "code": "02",
+          "count": 7,
+          "label": "02"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        }
+      ],
+      "knowledgeLensSummary": {
+        "items": [
+          {
+            "code": "02",
+            "count": 2,
+            "label": "02"
+          },
+          {
+            "code": "05",
+            "count": 2,
+            "label": "05"
+          },
+          {
+            "code": "00",
+            "count": 1,
+            "label": "00"
+          }
+        ],
+        "type": "knowledge"
+      },
+      "actionEnergySummary": {
+        "items": [
+          {
+            "code": "02",
+            "count": 7,
+            "label": "02"
+          },
+          {
+            "code": "09",
+            "count": 2,
+            "label": "09"
+          },
+          {
+            "code": "01",
+            "count": 1,
+            "label": "01"
+          }
+        ],
+        "type": "action"
+      }
+    },
+    "D": {
+      "counts": {
+        "10": 5,
+        "00": 0,
+        "01": 1,
+        "02": 2,
+        "03": 6,
+        "04": 0,
+        "05": 1,
+        "06": 0,
+        "07": 1,
+        "08": 2,
+        "09": 2
+      },
+      "ranked": [
+        {
+          "code": "03",
+          "count": 6,
+          "label": "03"
+        },
+        {
+          "code": "10",
+          "count": 5,
+          "label": "10"
+        },
+        {
+          "code": "02",
+          "count": 2,
+          "label": "02"
+        },
+        {
+          "code": "08",
+          "count": 2,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "05",
+          "count": 1,
+          "label": "05"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        },
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "04",
+          "count": 0,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        }
+      ],
+      "strongest": [
+        {
+          "code": "03",
+          "count": 6,
+          "label": "03"
+        },
+        {
+          "code": "10",
+          "count": 5,
+          "label": "10"
+        },
+        {
+          "code": "02",
+          "count": 2,
+          "label": "02"
+        }
+      ],
+      "supporting": [
+        {
+          "code": "08",
+          "count": 2,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "05",
+          "count": 1,
+          "label": "05"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        }
+      ],
+      "quiet": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "04",
+          "count": 0,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        }
+      ],
+      "mostActivated": [
+        {
+          "code": "03",
+          "count": 6,
+          "label": "03"
+        },
+        {
+          "code": "10",
+          "count": 5,
+          "label": "10"
+        },
+        {
+          "code": "02",
+          "count": 2,
+          "label": "02"
+        }
+      ],
+      "occasionallyActivated": [
+        {
+          "code": "08",
+          "count": 2,
+          "label": "08"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "05",
+          "count": 1,
+          "label": "05"
+        },
+        {
+          "code": "07",
+          "count": 1,
+          "label": "07"
+        }
+      ],
+      "underused": [
+        {
+          "code": "00",
+          "count": 0,
+          "label": "00"
+        },
+        {
+          "code": "04",
+          "count": 0,
+          "label": "04"
+        },
+        {
+          "code": "06",
+          "count": 0,
+          "label": "06"
+        }
+      ],
+      "knowledgeLensTop": [
+        {
+          "code": "03",
+          "count": 3,
+          "label": "03"
+        },
+        {
+          "code": "01",
+          "count": 1,
+          "label": "01"
+        },
+        {
+          "code": "02",
+          "count": 1,
+          "label": "02"
+        }
+      ],
+      "actionEnergyTop": [
+        {
+          "code": "10",
+          "count": 4,
+          "label": "10"
+        },
+        {
+          "code": "03",
+          "count": 3,
+          "label": "03"
+        },
+        {
+          "code": "09",
+          "count": 2,
+          "label": "09"
+        }
+      ],
+      "knowledgeLensSummary": {
+        "items": [
+          {
+            "code": "03",
+            "count": 3,
+            "label": "03"
+          },
+          {
+            "code": "01",
+            "count": 1,
+            "label": "01"
+          },
+          {
+            "code": "02",
+            "count": 1,
+            "label": "02"
+          }
+        ],
+        "type": "knowledge"
+      },
+      "actionEnergySummary": {
+        "items": [
+          {
+            "code": "10",
+            "count": 4,
+            "label": "10"
+          },
+          {
+            "code": "03",
+            "count": 3,
+            "label": "03"
+          },
+          {
+            "code": "09",
+            "count": 2,
+            "label": "09"
+          }
+        ],
+        "type": "action"
+      }
+    }
+  },
+  "reloadDuplicateCounterexample": {
+    "shuffle": "identity permutation, chosen to make a saved old question be first; the production shuffle can also generate this order",
+    "saved": {
+      "subjects": {
+        "10": {
+          "correct": 1,
+          "answered": [
+            "10-q1"
+          ]
+        }
+      },
+      "history": [
+        {
+          "subjectCode": "10",
+          "questionId": "10-q1",
+          "correct": true
+        }
+      ]
+    },
+    "before": {
+      "activeQuestion": "10-q1",
+      "correct": 1,
+      "answered": [
+        "10-q1"
+      ],
+      "historyCount": 1,
+      "poolSize": 132
+    },
+    "after": {
+      "correct": 2,
+      "answered": [
+        "10-q1",
+        "10-q1"
+      ],
+      "historyCount": 2,
+      "level": "snow"
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "sourceSha256": "a0dd5cac681e8c4b5a07f65d7bc8dfc19aa4f1c2a3e1c1359e337b30ba938663",
+  "reviewedAt": "2026-10-03",
+  "reviewer": "independent author of Map 08–10; not author of Explore",
+  "scope": "20 Explore questions, four options and mappings, Chinese and English",
+  "summary": {
+    "questionsReviewed": 20,
+    "requiredMappingRevisions": [
+      "lens-v2-001",
+      "task-v2-012"
+    ],
+    "requiredEditorialPolish": [
+      "task-v2-005",
+      "task-v2-008"
+    ],
+    "importantBatchNote": "09任务有4次机会，均偏健康资料核对；中文4项均达到最长或并列最长，不能只以长度数值判失败，但应修嵌套表达和操作重复。",
+    "resultBoundary": "合理选择记录仍不是稳定偏好、学科能力或职业适配的验证。"
+  },
+  "items": [
+    {
+      "id": "lens-v2-001",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "revise",
+      "comparability": "四项都是调查记录且不判真实原因；改04项应继续保持记录行为，不能变成直接替朋友安排活动。",
+      "mappingAssessment": "前三项分别查功能、数值分布和恢复状态，04项仅比较个人休息活动，缺少休闲服务、设施或服务过程对象，映射10过宽。",
+      "bilingualAssessment": "中英文等义；服务映射问题两种语言相同。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "required",
+          "optionId": "lens-v2-001-opt-10",
+          "issue": "个人可选休息活动本身不等于服务学科视角；与09恢复或03行为研究均可重合。",
+          "recommendation": "将调查对象改为可用休闲设施、活动服务或使用障碍。示例：记录附近休闲设施的开放时间和使用情况；同步英文、映射和反思句。"
+        },
+        {
+          "severity": "polish",
+          "optionId": "lens-v2-001-opt-06",
+          "issue": "刷手机不一定涉及自动连播，某些阅读情境不存在这一功能。",
+          "recommendation": "题干可限定短视频使用，或使06项包含可在本情境实际记录的停留提示与功能设置。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-002",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "调查投入仅假设资料均可获得，未把因果判定当兴趣。",
+      "mappingAssessment": "栽培条件、灌溉设施、预算、共同规范分别有具体对象。",
+      "bilingualAssessment": "中文养护对应英文care，预算和共享规则含义一致。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-003",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "四项研究相近改进目标，无必然先后或正确道德选项。",
+      "mappingAssessment": "02主题表达、01教学后独立练习、00功能阅读、10参观服务都能解释。00与01临近，但任务分别是读说明和观察教学后表现。",
+      "bilingualAssessment": "两语独立活动含义一致；英文activity比中文互动练习稍宽，但不改变选择任务。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-004",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "身体不适不被预设为真实原因；四项都可能帮助工作室使用。",
+      "mappingAssessment": "实际布局、健康自述、设备权限网络、成本分摊分别有对象。",
+      "bilingualAssessment": "两语对应一致，无诊断或能力暗示。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-005",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "四项调查而非选择正确经营原因；准备展示与经营调查均为已计划工作。",
+      "mappingAssessment": "定价收益、产后生产、文化视觉表达、客流统计都有实际领域操作。",
+      "bilingualAssessment": "产地特色与local identity相近，未增加不同事实。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-006",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "没有直接要求选最先建设项目。",
+      "mappingAssessment": "植物土壤、群体使用、基础设施、路标服务分别清楚；生态与排水交叉但主要对象不同。",
+      "bilingualAssessment": "两语同义，访客问路与asking for directions对齐。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-007",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "统计前后变化没有被直接判成课程因果。",
+      "mappingAssessment": "练习反馈、软件功能、分布统计、表达分别明确；题干不要求专业经验。",
+      "bilingualAssessment": "中英任务一致，先研究与prefer to explore差异不改变调查意愿。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "lens-v2-008",
+      "questionMode": "knowledge_lens_probe",
+      "judgement": "pass",
+      "comparability": "调查活动适用性仍可跳过，不把身体限制当能力强弱。",
+      "mappingAssessment": "表格基础理解、示范学习、居民参与条件、路线身体要求分别有具体学习视角。",
+      "bilingualAssessment": "两语信息等量；physical demands/limitations与中文对应。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-001",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass",
+      "comparability": "统一能力、资料、时间和无先后假设支持比较；未把公共礼貌设为正确偏好。",
+      "mappingAssessment": "艺术表达、基础书面沟通、教学设计、接待服务均有可观察动作。",
+      "bilingualAssessment": "两语一致。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-002",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass",
+      "comparability": "与lens002复用花园主题，但调查与承担任务目标不同，可保留并分开解读。",
+      "mappingAssessment": "栽培、工程连接、经营预算、居民约定均合理。",
+      "bilingualAssessment": "两语对应，不要求实际专业施工。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-003",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass",
+      "comparability": "各项在试办中均有价值；不要求安全专业资质。",
+      "mappingAssessment": "表单权限、数量图表、说明步骤、服务交接对应明确。",
+      "bilingualAssessment": "两语对应。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-004",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass-with-editorial-note",
+      "comparability": "均可由资料帮助，不作为医学能力测量；健康项与教育项中文并列最长而非独占。",
+      "mappingAssessment": "教育、视觉艺术、部件尺寸、休息健康资料都有主题。健康项与其他三题的“核对资料”操作趋同。",
+      "bilingualAssessment": "两语相同，但工程和教育英文比健康项更长，说明中文的结构性详略差不是实际任务更复杂。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-004-opt-09",
+          "issue": "健康方向四项任务几乎都落在核查资料，代表的健康兴趣操作较窄。",
+          "recommendation": "保留健康依据，可把一项改为依据已给资料整理休息安排或预防提示，避免四项全部重复同一种操作。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-005",
+      "questionMode": "task_preference_probe",
+      "judgement": "revise-polish",
+      "comparability": "健康提醒可能显得更负责任，但题干已排除紧迫和先后；问题主要在持续形式突出而非第二项不合理。",
+      "mappingAssessment": "四项均有主题；09健康资料核查的映射成立。",
+      "bilingualAssessment": "中文健康项22字符，其他18/18/19；英文没有同样突出。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "required-editorial",
+          "optionId": "task-v2-005-opt-09",
+          "issue": "中文将“提醒所依据的资料”嵌套进任务，造成独占最长、专业严谨感突出；与其他健康题的句式累计偏差。",
+          "recommendation": "精简为直接动作，如“核对饮水与身体不适提醒的资料。”；英中文条件保持等量，不通过给别项补字解决。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-006",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass",
+      "comparability": "四项实际可执行且无唯一先手。",
+      "mappingAssessment": "00单位价格基础算术与04经营利润区分；06计算工具、02表达、05统计分别可解释。",
+      "bilingualAssessment": "英文单位价格与中文单位价格等义。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-007",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass-with-editorial-note",
+      "comparability": "预计时间与帮助相同已经明示，工程任务不被解释为实际技能。",
+      "mappingAssessment": "具体装配、日常说明、采购成本、数据库权限有领域对象。",
+      "bilingualAssessment": "工程英文70字符、其他50/46/51，形式负担较重。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-007-opt-07",
+          "issue": "英文against samples and drawings与component dimensions and assembly positions堆叠，使工程项持续更专业。",
+          "recommendation": "可简化为“Check part sizes and assembly positions using drawings.”，保留真实工程对象而不额外增加条件。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-008",
+      "questionMode": "task_preference_probe",
+      "judgement": "revise-polish",
+      "comparability": "匿名记录不产生个人诊断；健康项不是唯一关键责任。",
+      "mappingAssessment": "01教学、02视听、05分布、09疲惫休息依据成立。",
+      "bilingualAssessment": "中文09项21字符，比其他18/19/18长；英文09反而较短，嵌套来自翻译。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "required-editorial",
+          "optionId": "task-v2-008-opt-09",
+          "issue": "“提示所引的健康资料”是较重嵌套，延续健康项中文最长模式。",
+          "recommendation": "可写“核对疲惫与休息提示的健康资料。”；建议与其他健康任务一起检查操作重复。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-009",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass",
+      "comparability": "小活动不假设高消费经验；四项准备任务可比较。",
+      "mappingAssessment": "农业、服务、经营、基础说明阅读对应可解释；04预算与00清晰说明不混同。",
+      "bilingualAssessment": "两语一致。",
+      "formatAndDuplicationConcerns": [],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-010",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass-with-editorial-note",
+      "comparability": "社会代表性核查与统计数值核查邻近但目标不同，不把某项当高道德选择。",
+      "mappingAssessment": "社会调查覆盖、软件工具、统计表示、教学练习分别明确。",
+      "bilingualAssessment": "中文03项21字符、06项14字符，英文差小。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-010-opt-03",
+          "issue": "“哪些…哪些…”的中文重复句式相比技术项更长，可能提高专业感。",
+          "recommendation": "可精简为“核对调查覆盖和遗漏的居民群体。”；这不是硬性字数门槛。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-011",
+      "questionMode": "task_preference_probe",
+      "judgement": "pass-with-editorial-note",
+      "comparability": "来源核查与其他任务均有资料帮助；食品卫生不可据此推断医学胜任。",
+      "mappingAssessment": "卫生、农业来源、物理布局、服务交接有主题。",
+      "bilingualAssessment": "中文09项19字符，比其他17/17/18略长，单题差距不足以判严重提示。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-011-opt-09",
+          "issue": "与其他三个健康任务重复“核对健康依据”，累积偏好可能反映资料核查而非健康方向。",
+          "recommendation": "可考虑“整理进餐前的手卫生提示。”等由已给材料完成的预防信息任务；若仍核查，可直接精简。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    },
+    {
+      "id": "task-v2-012",
+      "questionMode": "task_preference_probe",
+      "judgement": "revise",
+      "comparability": "与task003同为共享借用服务，同一06权限操作重复；需要加强情境独立价值。",
+      "mappingAssessment": "04预算、06权限、03共享需求明确；08材料来源与设备生态影响过宽，不含植物、土壤、生境或农业生态操作，可能是环境科学或制造生命周期。",
+      "bilingualAssessment": "08项中文22字符、英文66字符，均最长且抽象对象较多。",
+      "formatAndDuplicationConcerns": [
+        {
+          "severity": "required",
+          "optionId": "task-v2-012-opt-08",
+          "issue": "以“生态影响”一词把设备材料来源映射08，缺少实际农业或生境对象；形式上也最长。",
+          "recommendation": "可将场景限定共享园艺设备，把08项改为核对工具使用对土壤与植物的影响；或选择有具体生物生态对象的可比任务。保留任务而非改为调查。"
+        },
+        {
+          "severity": "polish",
+          "optionId": null,
+          "issue": "泛共享设备与图书馆工具柜的06操作重复，其他方向仍是常见分工模板。",
+          "recommendation": "在修08映射时一并使场景和任务有可说明的新学习入口，不仅换场所名称。"
+        }
+      ],
+      "status": "independent-editorial-review / not-user-tested"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "version": "v2-2026-10-03",
+  "reviewer": "write_map_a — not an Explore author",
+  "reviewType": "independent second editorial recheck of revised Explore candidates",
+  "checkedAt": "2026-10-03",
+  "status": "18 entries acceptable for candidate editing; 2 required revisions; not user tested",
+  "sourceHashes": {
+    "parts/explore-20.json": "1b7b7a89361aefcb868951e0f08d23d37032524345de44b90709a3c1fbe39899",
+    "parts/editorial-explore.json": "df9555dc0c14414dc1c48ce8193951608e11a120ad5142eb260051a25777d381",
+    "review/explore-independent-review.json": "d3ab4377156180b40ad8d8ba0fd67ceeec1ebcc35ac4b97411395c3bf6a99861",
+    "review/explore-revisions.json": "ec5fbfcf5dc89ab378000a1e9e8d38c507b19a63efbbf22daa006c87a0089a9a"
+  },
+  "method": "Read Chinese and English question/option content and infer the selection operation before examining the stated mapping reasons. Then compare with prior independent concerns and revisions. This is a review of preference comparability, not a search for a correct preference.",
+  "summary": {
+    "reviewed": 20,
+    "pass": 16,
+    "passWithNote": 2,
+    "reviseRequired": 2,
+    "requiredIds": [
+      "lens-v2-001",
+      "lens-v2-003"
+    ],
+    "keyRevisionsResolved": [
+      "task-v2-012-08 agricultural mapping",
+      "task-v2-012-06 distinct booking-conflict operation",
+      "09 Chinese length nesting",
+      "09 all-source-checking operation repetition"
+    ]
+  },
+  "remainingLimitations": [
+    "09 task choices now cover two source-checking tasks and two preparation-of-guidance tasks, across rest, hydration and hygiene. This is a real improvement over four identical checks, but still samples general health information work rather than all health/welfare activities.",
+    "Task stems repeat the same comparability assumptions across community projects. They make the scope explicit, but the twenty responses do not establish stable field preferences or psychometric validity.",
+    "Opportunity counts support editorial coverage only. They do not justify an otherwise unnatural mapping, the required lens001 contextual repair, or a personality result."
+  ],
+  "entries": [
+    {
+      "id": "lens-v2-001",
+      "judgement": "revise-required",
+      "comparability": "四项都在收集记录，没有把原因选择当兴趣；但前三项直接关联本次短视频使用，附近设施一项需读者自行补出替代活动的联系。",
+      "mappingAssessment": "06功能设计、05分布描述、09疲惫恢复均具体；10已经有设施与服务时段对象，领域映射成立。",
+      "bilingualAssessment": "两语条件与四项相同。",
+      "formAssessment": "四项都为记录动作，无道德优先项；10项表述较长并非唯一主要问题。",
+      "duplicationAssessment": "服务映射旧问题已修，情境关联仍需补。",
+      "concerns": [
+        {
+          "severity": "required",
+          "optionId": "lens-v2-001-opt-10",
+          "issue": "题干只给短视频超时，未说明朋友正在比较休闲方式，收集附近休闲设施的开放与使用记录显得外加。不能只靠“四项都可能有帮助”弥合。",
+          "recommendation": "让题干明确朋友想重新安排休闲时间、比较线上与线下休闲选择；或将设施记录绑定原定结束时可用的替代休闲服务。保持调查意愿，不把哪种活动规定成更健康的正确选项。"
+        }
+      ],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-002",
+      "judgement": "pass",
+      "comparability": "四类资料都可查，选择先了解的对象，不宣称某项就是长势差的原因。",
+      "mappingAssessment": "植物栽培、灌溉设施、预算、居民共同规则四个对象可区分。",
+      "bilingualAssessment": "条件与资料范围等义。",
+      "formAssessment": "无唯一较体面或必要先手；各项为可取得信息。",
+      "duplicationAssessment": "调查与任务题的花园复用具有不同动作，可保留。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-003",
+      "judgement": "revise-required",
+      "comparability": "四个展览改进入口合理；00读懂指引与01教学后独立表现只有保留独立条件才清楚。",
+      "mappingAssessment": "主题表达、教学结果、功能阅读、访客服务分别有具体依据。",
+      "bilingualAssessment": "01项中文是独立完成互动练习，英文仅can do an activity after instruction，少了独立条件。",
+      "formAssessment": "各项层级相近，无固定正确偏好。",
+      "duplicationAssessment": "未发现与其他题完全相同的调查操作。",
+      "concerns": [
+        {
+          "severity": "required-bilingual",
+          "optionId": "lens-v2-003-opt-01",
+          "issue": "英文没有保留中文独立完成的条件，可包含继续受指导的活动表现，改变了调查对象。",
+          "recommendation": "改为Observe visitors trying the activity unaided after instruction，或另一条等义且简短的表述；同步reflectionEn。"
+        }
+      ],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-004",
+      "judgement": "pass",
+      "comparability": "空间、身体、技术和成本调查均能改善共享使用；身体不适没有被指定为原因。",
+      "mappingAssessment": "07物理布局、09自述状态、06设备权限网络、04资源成本分摊成立。",
+      "bilingualAssessment": "两语信息相当。",
+      "formAssessment": "无要求医疗判断，身体项不比其他项更道德。",
+      "duplicationAssessment": "09在此观察状态，不是又一次核查健康资料。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-005",
+      "judgement": "pass",
+      "comparability": "四方向已列入计划，可以先了解，不是判定经营原因。",
+      "mappingAssessment": "成本收益、农业生产、艺术产地表达、数量分布各有对象。",
+      "bilingualAssessment": "产地特色与local identity范围近似，不改变当前选择维度。",
+      "formAssessment": "选项均含具体对象，无明显专家措辞独占。",
+      "duplicationAssessment": "食品生产与后续食材活动虽相关，动作和问题场景不同。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-006",
+      "judgement": "pass",
+      "comparability": "各类资料有助讨论步道方案，不要求选唯一施工先后。",
+      "mappingAssessment": "生态、群体使用、结构、访客导航四个主对象成立；生态积水与工程排水交叉是合理相邻关系。",
+      "bilingualAssessment": "两语一致。",
+      "formAssessment": "工程项不是实际施工责任，未用安全紧迫性诱导。",
+      "duplicationAssessment": "公园服务与室内展览服务覆盖不同情境。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-007",
+      "judgement": "pass",
+      "comparability": "选择调查学习体验的一面，题干明确无需既有专业经验。",
+      "mappingAssessment": "教学支持、软件功能、得分分布、视听表达均是清楚动作；05没有被当作因果效果认证。",
+      "bilingualAssessment": "条件和动作等义。",
+      "formAssessment": "分布描述略有术语但目标可理解，不构成能力测量。",
+      "duplicationAssessment": "与其他教育题的课程情境提供不同问题对象。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "lens-v2-008",
+      "judgement": "pass",
+      "comparability": "报名理解、学操作、参与条件和体力限制均合理；有跳过出口。",
+      "mappingAssessment": "00功能阅读、01示范再尝试、03群体参与、09健康活动限制能分开解释。",
+      "bilingualAssessment": "英语retry registration与中文再尝试对齐；自述身体限制保留。",
+      "formAssessment": "09并未声称身体条件更正确，不要求透露本人病史。",
+      "duplicationAssessment": "与task005分开观察调查意愿和承担任务，不合成结果。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-001",
+      "judgement": "pass",
+      "comparability": "支持、胜任、预计用时与无必然先后都明示，四项确实属于展览准备。",
+      "mappingAssessment": "02视听主题、00易读指引、01教学活动、10接待导航成立。",
+      "bilingualAssessment": "双语等义。",
+      "formAssessment": "表达与服务均有价值，无布置表面工作对比重要责任的问题。",
+      "duplicationAssessment": "图书馆调查与社区任务的用途不同。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-002",
+      "judgement": "pass",
+      "comparability": "四项都是共享花园的准备工作；工程检查依据图纸和支持，不要求用户会施工。",
+      "mappingAssessment": "08栽培、07尺寸连接、04采购成本、03集体约定具体。",
+      "bilingualAssessment": "英文maintenance budget与中文费用和维护预算高度接近，未造成另一个任务目标。",
+      "formAssessment": "没有把生态选项写成更负责的选择。",
+      "duplicationAssessment": "与lens002分离统计；重复主题有不同动作。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-003",
+      "judgement": "pass",
+      "comparability": "工具借用的表单、统计、说明、服务四项都真实需要，题干排除先后。",
+      "mappingAssessment": "06配置表单权限、05数量分析、00步骤表达、10交接服务成立。",
+      "bilingualAssessment": "双语一致。",
+      "formAssessment": "各项是具体动作，无正确字母或责任层级暗示。",
+      "duplicationAssessment": "与task012技术操作已区别为表单权限及预约冲突。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-004",
+      "judgement": "pass",
+      "comparability": "新手教学、造型表达、部件配合和休息指导都适用于桌面制作；已给支持降低技能门槛。",
+      "mappingAssessment": "四方向有明确对象；09现在从健康资料形成活动休息提示，不再仅核查来源。",
+      "bilingualAssessment": "健康提示任务两语对应。",
+      "formAssessment": "09中文已精简，不再持续独占最长，其他任务也有实际目标。",
+      "duplicationAssessment": "09的操作已由核查改为应用性整理，与005、008有区别。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-005",
+      "judgement": "pass",
+      "comparability": "服务、健康资料、居民意见、植物生境均属于导览准备；无迫切安全事件要求先选健康。",
+      "mappingAssessment": "10现场安排、09健康依据、03群体参与、08生境成立。",
+      "bilingualAssessment": "核对饮水与不适提醒的资料在两语等义。",
+      "formAssessment": "中文嵌套已删除，健康项不再明显最长或最严谨。",
+      "duplicationAssessment": "仍与008共有来源核对动作，但健康主题不同；记录为该方向覆盖较窄的限制。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-006",
+      "judgement": "pass",
+      "comparability": "单位价表、库存功能、展示表达、客流数量均属于摊位准备；没有先做预算的隐藏顺序。",
+      "mappingAssessment": "00基础单位换算与04利润经营区分合理；06表单、02表达、05统计各有具体动作。",
+      "bilingualAssessment": "双语等义。",
+      "formAssessment": "四项详略接近，无道德评价暗示。",
+      "duplicationAssessment": "没有与其他题完全同一场景和四动作。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-007",
+      "judgement": "pass-with-note",
+      "comparability": "工程、说明、报价和查询记录均可执行，资料与帮助被明确提供。",
+      "mappingAssessment": "07尺寸装配、00基础表达、04采购成本、06数据库功能合理。",
+      "bilingualAssessment": "英语common questions比中文常见问答略少回答之意，方向不变但可以对齐。",
+      "formAssessment": "工程英语已精简，额外专业堆叠问题改善。",
+      "duplicationAssessment": "与003均含权限，但这里数据库搜索而非借还表单；不宜解释成整个06偏好。",
+      "concerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-007-opt-00",
+          "issue": "中文常见问答包含回答，英文common questions只明说问题。",
+          "recommendation": "英语可用frequently asked questions and answers或清楚表达FAQ；同时注意不使该项详略突出。"
+        }
+      ],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-008",
+      "judgement": "pass-with-note",
+      "comparability": "观看后练习、视听表达、数据图表、健康核查可分工；但统计项的使用记录对象不够具体。",
+      "mappingAssessment": "01教学、02视听、05分布、09健康主题核查成立。",
+      "bilingualAssessment": "09双语现在直接对应，中文嵌套已解决。",
+      "formAssessment": "健康项不再固定最长；统计项英文本身较长来自两个输出，不作正确偏好。",
+      "duplicationAssessment": "09来源核查与005相似，但004及011已加入不同操作。",
+      "concerns": [
+        {
+          "severity": "polish",
+          "optionId": "task-v2-008-opt-05",
+          "issue": "匿名使用记录未说明是谁使用什么，读者需要补出它与学习时休息的视频的联系。",
+          "recommendation": "可明示已提供匿名的学习与休息时长记录，再整理分布和比较；不为此新增个人信息收集或追踪。"
+        }
+      ],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-009",
+      "judgement": "pass",
+      "comparability": "当季食材活动四种准备都有意义，低消费情境与支持条件可进入。",
+      "mappingAssessment": "08生长时节、10服务、04预算、00易读报名材料明确。",
+      "bilingualAssessment": "双语等义。",
+      "formAssessment": "服务和卫生责任没有被拿来道德排序。",
+      "duplicationAssessment": "与005农业调查保持不同对象和用途。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-010",
+      "judgement": "pass",
+      "comparability": "代表范围、技术功能、统计准确性、读图教学都对应资料展示，且无唯一先手。",
+      "mappingAssessment": "03调查对象范围、06检索导出、05计数尺度、01教学练习可分开。",
+      "bilingualAssessment": "03精简后两语覆盖与遗漏群体相同。",
+      "formAssessment": "中文重复哪些句式已消除，详略更可比。",
+      "duplicationAssessment": "03与05的邻近性是社会抽样与统计表达的差别，并非双重计分。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-011",
+      "judgement": "pass",
+      "comparability": "卫生提醒、食材说明、布局检查、服务交接均与午餐活动有关；不宣称选择卫生才负责任。",
+      "mappingAssessment": "09预防信息整理、08种植来源、07尺寸布局、10流程四方向具体。",
+      "bilingualAssessment": "进餐前手卫生与before eating条件一致。",
+      "formAssessment": "英文09相对较长来自before eating这一必要对象边界，未堆独占理由；中文不再独占最长。",
+      "duplicationAssessment": "09已从核查改为按资料形成提示，操作重复得到改善。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    },
+    {
+      "id": "task-v2-012",
+      "judgement": "pass",
+      "comparability": "共享园艺工具服务自然需要预算、预约、对土壤植物的使用说明和居民规则意见；四项任务与支持条件可比。",
+      "mappingAssessment": "08已有真正的土壤植物对象，06是冲突检查逻辑，04收费维护、03集体规则清楚。",
+      "bilingualAssessment": "双语土壤与植物、时段冲突等条件对应。",
+      "formAssessment": "08已精简且不再借抽象生态影响撑专业感；技术与健康责任没有唯一正确偏好。",
+      "duplicationAssessment": "与003的共享服务主题仍相邻，但园艺影响与自动冲突检查构成新入口，非仅换地点。",
+      "concerns": [],
+      "status": "independent-editorial-recheck / not-user-tested"
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "lens-v2-001",
+    "sourceId": "lens-001",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。 二次核对后澄清调查情境与双语条件。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "phone_use",
+    "optionMappingReasons": {
+      "lens-v2-001-opt-06": "关注应用功能与交互机制，归计算与技术。",
+      "lens-v2-001-opt-05": "关注数值分布与变异，归统计描述，而非把所有观察都归科学。",
+      "lens-v2-001-opt-09": "关注自述健康与恢复状态，不作诊断。",
+      "lens-v2-001-opt-10": "关注休闲设施提供服务的时段与实际使用，归休闲服务；不把个人休息行为直接等同于服务视角。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-002",
+    "sourceId": "lens-002",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "community_garden",
+    "optionMappingReasons": {
+      "lens-v2-002-opt-08": "直接查看植物和栽培条件，归农业与生态。",
+      "lens-v2-002-opt-07": "关注具体物理设施设计，归工程。",
+      "lens-v2-002-opt-04": "关注经营资源与预算配置，归商业管理。",
+      "lens-v2-002-opt-03": "关注参与及集体规范，归社会科学。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-003",
+    "sourceId": "lens-003",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 二次核对后澄清调查情境与双语条件。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "interactive_exhibition",
+    "optionMappingReasons": {
+      "lens-v2-003-opt-02": "关注艺术和叙事意义，归艺术人文。",
+      "lens-v2-003-opt-01": "关注教学后能否独立完成任务，归教育。",
+      "lens-v2-003-opt-00": "关注基础阅读和日常信息理解，归通用学习。",
+      "lens-v2-003-opt-10": "关注参观服务过程，归服务。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-004",
+    "sourceId": "lens-004",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "shared_workspace",
+    "optionMappingReasons": {
+      "lens-v2-004-opt-07": "关注物理空间尺寸与布局，归工程建造。",
+      "lens-v2-004-opt-09": "关注自述身体状态与休息，归健康；不诊断原因。",
+      "lens-v2-004-opt-06": "关注设备、权限和网络，归计算技术。",
+      "lens-v2-004-opt-04": "关注费用和使用资源分配，归商业管理。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-005",
+    "sourceId": "lens-005",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "market_stall",
+    "optionMappingReasons": {
+      "lens-v2-005-opt-04": "关注交易与成本收益，归商业。",
+      "lens-v2-005-opt-08": "关注农业生产和产后保存，归农业。",
+      "lens-v2-005-opt-02": "关注视觉及文化表达，归艺术人文。",
+      "lens-v2-005-opt-05": "关注计数与数值变异，归数学统计。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-006",
+    "sourceId": "lens-006",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "park_path",
+    "optionMappingReasons": {
+      "lens-v2-006-opt-08": "关注沿线生态与土壤环境，归农业生态。",
+      "lens-v2-006-opt-03": "关注群体使用模式，归社会科学。",
+      "lens-v2-006-opt-07": "关注基础设施构造，归工程。",
+      "lens-v2-006-opt-10": "关注导航和游览体验，归服务运输。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-007",
+    "sourceId": "lens-007",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "online_course",
+    "optionMappingReasons": {
+      "lens-v2-007-opt-01": "关注练习支持与教学反馈，归教育。",
+      "lens-v2-007-opt-06": "关注软件功能及交互，归计算技术。",
+      "lens-v2-007-opt-05": "关注测量结果的分布，归数学统计；不据此直接证明课程因果效果。",
+      "lens-v2-007-opt-02": "关注语言和视听表达的意义，归艺术人文。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "lens-v2-008",
+    "sourceId": "lens-008",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮优先调查的信息",
+    "context": "community_walk",
+    "optionMappingReasons": {
+      "lens-v2-008-opt-00": "关注日常表格阅读与信息理解，归通用学习。",
+      "lens-v2-008-opt-01": "关注示范和独立练习，归教育。",
+      "lens-v2-008-opt-03": "关注居民群体参与条件，归社会科学。",
+      "lens-v2-008-opt-09": "关注身体活动与健康条件，不做能力或疾病诊断。"
+    },
+    "comparability": "调查选项均为可取得的资料或观察，不预设真实原因。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-001",
+    "sourceId": "task-001",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "small_exhibition",
+    "optionMappingReasons": {
+      "task-v2-001-opt-02": "明确视觉与声音表达，归艺术人文。",
+      "task-v2-001-opt-00": "基础阅读和书面沟通，归通用学习。",
+      "task-v2-001-opt-01": "设计教学练习，归教育。",
+      "task-v2-001-opt-10": "具体参观服务，归服务。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-002",
+    "sourceId": "task-002",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "garden_plan",
+    "optionMappingReasons": {
+      "task-v2-002-opt-08": "栽培与植物养护，归农业生态。",
+      "task-v2-002-opt-07": "物理尺寸与连接检查，归工程。",
+      "task-v2-002-opt-04": "采购成本与运营预算，归商业管理。",
+      "task-v2-002-opt-03": "集体协商和社区规则，归社会科学。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-003",
+    "sourceId": "task-003",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "lending_cabinet",
+    "optionMappingReasons": {
+      "task-v2-003-opt-06": "软件表单与权限，归计算技术。",
+      "task-v2-003-opt-05": "数量分析与统计图，归数学统计。",
+      "task-v2-003-opt-00": "基础沟通与信息组织，归通用学习。",
+      "task-v2-003-opt-10": "交接与服务流程，归服务运输。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-004",
+    "sourceId": "task-004",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "making_workshop",
+    "optionMappingReasons": {
+      "task-v2-004-opt-01": "新手教学与支持渐撤，归教育。",
+      "task-v2-004-opt-02": "视觉艺术表达，归艺术人文。",
+      "task-v2-004-opt-07": "部件尺寸与配合，归工程。",
+      "task-v2-004-opt-09": "把已给健康资料转成活动中的休息提示，归健康；不是核查所有资料或提出个人处方。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-005",
+    "sourceId": "task-005",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "guided_walk",
+    "optionMappingReasons": {
+      "task-v2-005-opt-10": "导览接待和运输导航，归服务。",
+      "task-v2-005-opt-09": "健康提示的事实判断，归健康；不进行个体治疗。",
+      "task-v2-005-opt-03": "群体意见与参与条件，归社会科学。",
+      "task-v2-005-opt-08": "植物生境认识，归农业生态。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-006",
+    "sourceId": "task-006",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "market_pop_up",
+    "optionMappingReasons": {
+      "task-v2-006-opt-00": "基础数值换算与日常比较，归通用学习；不是利润或运营决策。",
+      "task-v2-006-opt-06": "计算工具配置与数据输入规则，归计算技术。",
+      "task-v2-006-opt-02": "图文表达与设计，归艺术人文。",
+      "task-v2-006-opt-05": "统计数量差异，归数学统计。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-007",
+    "sourceId": "task-007",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。 二次核对后澄清调查情境与双语条件。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "repair_demo",
+    "optionMappingReasons": {
+      "task-v2-007-opt-07": "具体构件配合与装配，归工程。",
+      "task-v2-007-opt-00": "日常信息理解与写作，归通用学习。",
+      "task-v2-007-opt-04": "采购和成本管理，归商业。",
+      "task-v2-007-opt-06": "数据库组织与权限，归计算技术。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-008",
+    "sourceId": "task-008",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。 二次核对后澄清调查情境与双语条件。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "study_video",
+    "optionMappingReasons": {
+      "task-v2-008-opt-01": "教学练习与独立应用，归教育。",
+      "task-v2-008-opt-02": "视听表达，归艺术人文。",
+      "task-v2-008-opt-05": "数量分布和比较，归数学统计。",
+      "task-v2-008-opt-09": "明确健康主题的证据核查，归健康医学。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-009",
+    "sourceId": "task-009",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "seasonal_food",
+    "optionMappingReasons": {
+      "task-v2-009-opt-08": "农业栽培条件与季节，归农业。",
+      "task-v2-009-opt-10": "现场服务流程，归服务。",
+      "task-v2-009-opt-04": "采购成本与预算，归商业管理。",
+      "task-v2-009-opt-00": "基础表格与说明阅读，归通用学习。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-010",
+    "sourceId": "task-010",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "community_data",
+    "optionMappingReasons": {
+      "task-v2-010-opt-03": "关注社会调查代表范围，归社会科学。",
+      "task-v2-010-opt-06": "数据工具功能，归计算技术。",
+      "task-v2-010-opt-05": "数学统计表示与尺度，归数学统计。",
+      "task-v2-010-opt-01": "教读者读图的学习活动，归教育。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-011",
+    "sourceId": "task-011",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "community_lunch",
+    "optionMappingReasons": {
+      "task-v2-011-opt-09": "根据已给资料整理进餐前的卫生预防提示，归健康；不把该偏好解释为医学能力。",
+      "task-v2-011-opt-08": "农业来源与生产，归农业生态。",
+      "task-v2-011-opt-07": "物理布局与尺寸检查，归工程；不提供施工安全指令。",
+      "task-v2-011-opt-10": "具体服务交接流程，归服务。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  },
+  {
+    "id": "task-v2-012",
+    "sourceId": "task-012",
+    "changeType": "REPLACE",
+    "revisionReason": "重新建立具体且可比较的选择任务，收紧方向映射；使用新题目标识隔离旧版选择证据。 独立复审后收紧映射、精简表述或增加操作差异，见修订记录。",
+    "objective": "记录本轮愿意承担的任务",
+    "context": "shared_gardening_tools",
+    "optionMappingReasons": {
+      "task-v2-012-opt-04": "收费与成本核算，归商业管理。",
+      "task-v2-012-opt-06": "配置预约系统中的冲突检查逻辑，归计算技术；与工具柜的表单权限任务不同。",
+      "task-v2-012-opt-08": "实际对象是园艺工具对土壤与植物的影响，归农业生态；不再仅凭泛化的生态影响一词归类。",
+      "task-v2-012-opt-03": "参与需求与共同规则，归社会科学。"
+    },
+    "comparability": "各项按题干给定的相近时间、支持和责任条件比较，不作为必须先做的顺序。",
+    "resultBoundary": "只描述本次具体选择；不推断知识能力、稳定人格、职业适配或未选领域的长期盲区。",
+    "factSources": [],
+    "status": "editorial-reviewed / awaiting-user-tryout",
+    "independentReviewReference": "review/explore-independent-review.json",
+    "recheckReference": "review/explore-closure.json"
+  }
+]

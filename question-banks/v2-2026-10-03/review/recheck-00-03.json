@@ -1,0 +1,317 @@
+[
+  {
+    "id": "01-q3",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "01-q3-o1",
+    "enChosenOptionId": "01-q3-o1",
+    "zhJudgment": "不看原文写要点需要提取；抄写和标读都有原文提示，不能直接检测离开资料后的回忆。",
+    "enJudgment": "Writing with the notes closed requires recall; copying or marking and reading still supply the source text.",
+    "keyedAnswerOptionId": "01-q3-o1",
+    "answerAgreement": true,
+    "previousIssueResolution": "颜色和速度凑项已改为真实学习活动，原干扰可信度问题解决。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          15,
+          13,
+          14
+        ],
+        "assessment": "已比较同类短语、同粒度方案与限定强度；长度小差异没有提供独立可猜出的答案线索。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [
+      {
+        "severity": "optional",
+        "type": "explanation-specificity",
+        "note": "正文解析仍列划线/朗读而未直接点名新抄写选项；一般原文提示机制覆盖了抄写，非唯一性或答案问题。若润色可补“抄写/copying”。"
+      }
+    ],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "01-q6",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "01-q6-o2",
+    "enChosenOptionId": "01-q6-o2",
+    "zhJudgment": "另一题的一段由学员独立撰写，带批注范例只供结构参考；复制本题撤去独立练习，背景材料又没有结构范例。",
+    "enJudgment": "A separate response is written independently while an annotated example supplies structure. Copying this response removes independent practice; background alone is not a structural model.",
+    "keyedAnswerOptionId": "01-q6-o2",
+    "answerAgreement": true,
+    "previousIssueResolution": "独立一段任务与范例明确分开，两段目标不匹配问题解决。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          55,
+          67,
+          56
+        ],
+        "assessment": "三个选项为同类材料，均包含其功能；正确项在英文较长但不存在独占谨慎词或额外无关理由，完整满足目标需靠结构参考加独立任务两条件判断。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "01-q7",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "01-q7-o2",
+    "enChosenOptionId": "01-q7-o2",
+    "zhJudgment": "目标现在明确跨出食品领域，流量每GB价适用同一除法且满足领域变化；新麦片仍是食品，默写不应用。",
+    "enJudgment": "The goal expressly requires transfer outside food. Per-GB pricing applies the same ratio outside that domain; new cereals remain food and recalling a formula does not apply it.",
+    "keyedAnswerOptionId": "01-q7-o2",
+    "answerAgreement": true,
+    "previousIssueResolution": "中英文均明确食品之外，原第二答案消除。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          14,
+          15,
+          14
+        ],
+        "assessment": "已比较同类短语、同粒度方案与限定强度；长度小差异没有提供独立可猜出的答案线索。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [
+      {
+        "severity": "optional",
+        "type": "explanation-scope-wording",
+        "note": "解析把新麦片称为熟悉情境；现在真正排除条件是仍在食品领域。可把“熟悉情境/familiar context”换为“食品领域/food domain”，更精准，当前无第二答案。"
+      }
+    ],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "01-v2-q09",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "01-v2-q09-o3",
+    "enChosenOptionId": "01-v2-q09-o3",
+    "zhJudgment": "只有一周后不看资料解释同时满足延迟时点、无资料和解释任务，自评和跟读缺这些条件。",
+    "enJudgment": "Only an unaided explanation a week later matches the delay, lack of materials and explanation task. Confidence and subtitle-following do not.",
+    "keyedAnswerOptionId": "01-v2-q09-o3",
+    "answerAgreement": true,
+    "previousIssueResolution": "三项英文均为名词短语表现指标，中文也从复述对齐到解释。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "01-v2-q12",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "01-v2-q12-o1",
+    "enChosenOptionId": "01-v2-q12-o1",
+    "zhJudgment": "同一个新案例与同评分标准满足迁移及可比条件；不同难度新案例缺可比难度，复述旧案例缺新情境应用。",
+    "enJudgment": "The same new case and criteria meet transfer and comparison requirements. Different difficulty fails the task condition; retelling an old case fails transfer.",
+    "keyedAnswerOptionId": "01-v2-q12-o1",
+    "answerAgreement": true,
+    "previousIssueResolution": "错误项现在各缺一个实质条件，保持相近评估方案；两语言均为相同条件。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "02-v2-q08",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "02-v2-q08-o3",
+    "enChosenOptionId": "02-v2-q08-o3",
+    "zhJudgment": "保留第一幕已经明确还给房主，末幕仍给回收盒动作。删除搬走消息只失去改用盒的因果联系。",
+    "enJudgment": "The retained first scene explicitly identifies the owner, and the final scene retains the box. Removing the news deletes why the method changed.",
+    "keyedAnswerOptionId": "02-v2-q08-o3",
+    "answerAgreement": true,
+    "previousIssueResolution": "保留幕在中英文都写出接收对象，原第二答案消除。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "zh",
+        "lengths": [
+          11,
+          11,
+          12
+        ],
+        "assessment": "已比较同类短语、同粒度方案与限定强度；长度小差异没有提供独立可猜出的答案线索。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [
+      {
+        "severity": "optional-audit-sync",
+        "type": "revision-log-lags-current-source",
+        "note": "revisions-00-03.json 的02-v2-q08 after.en.question仍未写to the owner；当前实际作者文件已写出。建议日志after同步当前题面，本复审以当前源文件与SHA为准。"
+      }
+    ],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "02-v2-q09",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "02-v2-q09-o2",
+    "enChosenOptionId": "02-v2-q09-o2",
+    "zhJudgment": "眼前物件明确1950复制品且原作1690；另两项分别反转年代、把眼前物件误称原作。",
+    "enJudgment": "The displayed object is explicitly a 1950 copy of the 1690 original; alternatives reverse dates or misidentify the displayed object as the original.",
+    "keyedAnswerOptionId": "02-v2-q09-o2",
+    "answerAgreement": true,
+    "previousIssueResolution": "三个标签均明确指眼前展品/this object，中文原指称歧义消除。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "02-q12",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "02-q12-o1",
+    "enChosenOptionId": "02-q12-o1",
+    "zhJudgment": "内部没有明暗细节，植物色变化不提供题干所述人形边界；周边线条围成的空白直接形成负空间轮廓。",
+    "enJudgment": "No interior shading is present; garden colour variation is not the described figure boundary. The bounded empty region directly supplies the human shape.",
+    "keyedAnswerOptionId": "02-q12-o1",
+    "answerAgreement": true,
+    "previousIssueResolution": "作画日期已删，两错项都来自视觉构图层；题目保留入门机制识别，不需要读者猜画家动机。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          51,
+          49,
+          48
+        ],
+        "assessment": "已比较同类短语、同粒度方案与限定强度；长度小差异没有提供独立可猜出的答案线索。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "03-q9",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "03-q9-o1",
+    "enChosenOptionId": "03-q9-o1",
+    "zhJudgment": "完整曾付费抽样框包括仍付费和已离开两群，扩大当前样本或只抽离开者都会遗漏一群。",
+    "enJudgment": "The full ever-paid sampling frame covers both groups; enlarging the current-only sample or sampling departures alone leaves one target group out.",
+    "keyedAnswerOptionId": "03-q9-o1",
+    "answerAgreement": true,
+    "previousIssueResolution": "现考如何修复抽样框覆盖，而05-q9考已记录比例直接描述哪个群体，认知操作已区分。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [
+      {
+        "language": "en",
+        "lengths": [
+          50,
+          47,
+          44
+        ],
+        "assessment": "已比较同类短语、同粒度方案与限定强度；长度小差异没有提供独立可猜出的答案线索。",
+        "result": "reviewed-no-decisive-form-cue"
+      }
+    ],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "03-q10",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "03-q10-o1",
+    "enChosenOptionId": "03-q10-o1",
+    "zhJudgment": "题设定义案件数除以人口；分子是100起，非200篇文章，单位为一年每万人100起而非1%居民遇案。",
+    "enJudgment": "The stipulated numerator is 100 cases and denominator 10,000 residents. This is a case-to-population rate for the year, not the percentage of people affected.",
+    "keyedAnswerOptionId": "03-q10-o1",
+    "answerAgreement": true,
+    "previousIssueResolution": "两语言解析已给事件率单位并防止事件人数混淆。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  },
+  {
+    "id": "02-q6",
+    "reviewer": "write_map_b; independent recheck of author revisions",
+    "checkedAt": "2026-10-03",
+    "finalQuestionFileSha256": "38981e485f3b0f3778c7447adeb97ac70dfb378f017290a5a388f4aa799f000f",
+    "finalEditorialFileSha256": "d83f846721d7109ce3a4e38b42418098c2dbed80c89ae88f844ef3f81e9b64ba",
+    "zhChosenOptionId": "02-q6-o2",
+    "enChosenOptionId": "02-q6-o2",
+    "zhJudgment": "未改动的同一段采访保证原话相同，而位置和配乐明确改变，与收敛后的目标一致。",
+    "enJudgment": "The same unaltered interview guarantees unchanged spoken words; placement and music expressly change, matching the revised objective.",
+    "keyedAnswerOptionId": "02-q6-o2",
+    "answerAgreement": true,
+    "previousIssueResolution": "编辑目标已收敛为原话与编排对照，不再声称本题完整测量中立性或表达立场。",
+    "bilingualAssessment": "equivalent stated scope and options",
+    "explanationAssessment": "matches current evidence and selected content; does not depend on source option order",
+    "editorialAssessment": "objective, stable option IDs, exact answer mapping and distractor reasoning align",
+    "longestOptionReview": [],
+    "residualIssues": [],
+    "requiredRemainingChanges": [],
+    "status": "independent-editorial-recheck-pass / awaiting-user-tryout"
+  }
+]

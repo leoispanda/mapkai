@@ -1,0 +1,3302 @@
+[
+  {
+    "id": "00-q1",
+    "subject": "00",
+    "optionIds": [
+      "00-q1-o2",
+      "00-q1-o3",
+      "00-q1-o1"
+    ],
+    "zh": {
+      "question": "三包同品质麦片的规格与价格是：400克／3.20欧元，750克／5.25欧元，1千克／7.60欧元。只比较每公斤价格，哪包最便宜？",
+      "options": [
+        "750克包装",
+        "1千克包装",
+        "400克包装"
+      ]
+    },
+    "en": {
+      "question": "Three packs of the same-quality cereal cost: 400 g for €3.20, 750 g for €5.25 and 1 kg for €7.60. Which has the lowest price per kilogram?",
+      "options": [
+        "The 750 g pack",
+        "The 1 kg pack",
+        "The 400 g pack"
+      ]
+    }
+  },
+  {
+    "id": "00-v2-q02",
+    "subject": "00",
+    "optionIds": [
+      "00-v2-q02-o1",
+      "00-v2-q02-o2",
+      "00-v2-q02-o3"
+    ],
+    "zh": {
+      "question": "菜谱给两人用150克米。每人用量不变，改做五人份需要多少米？",
+      "options": [
+        "225 克",
+        "300 克",
+        "375 克"
+      ]
+    },
+    "en": {
+      "question": "A recipe uses 150 g of rice for two people. Keeping the amount per person the same, how much rice is needed for five people?",
+      "options": [
+        "225 g",
+        "300 g",
+        "375 g"
+      ]
+    }
+  },
+  {
+    "id": "00-q3",
+    "subject": "00",
+    "optionIds": [
+      "00-q3-o1",
+      "00-q3-o3",
+      "00-q3-o2"
+    ],
+    "zh": {
+      "question": "维修申请必须包含订单号、故障和希望对方采取的动作。订单号是A17，洗衣机漏水，你希望安排检修。哪封短邮件信息齐全？",
+      "options": [
+        "A17订单的洗衣机漏水，我感到困扰。",
+        "我的洗衣机漏水，请尽快安排检修。",
+        "A17订单的洗衣机漏水，请安排检修。"
+      ]
+    },
+    "en": {
+      "question": "A repair request must include the order number, the fault and the action requested. Your order is A17, the washing machine leaks and you want a repair visit. Which short email includes all three?",
+      "options": [
+        "The washer in order A17 leaks. This is frustrating.",
+        "My washing machine leaks. Please arrange a repair visit soon.",
+        "The washer in order A17 leaks. Please arrange a repair visit."
+      ]
+    }
+  },
+  {
+    "id": "00-q4",
+    "subject": "00",
+    "optionIds": [
+      "00-q4-o1",
+      "00-q4-o2",
+      "00-q4-o3"
+    ],
+    "zh": {
+      "question": "一件商品原价80元，降价25%，没有其他费用。现在应付多少钱？",
+      "options": [
+        "20 元",
+        "60 元",
+        "64 元"
+      ]
+    },
+    "en": {
+      "question": "An item originally costs 80 units of money. Its price is reduced by 25%, with no other fees. What is the new price?",
+      "options": [
+        "20 units",
+        "60 units",
+        "64 units"
+      ]
+    }
+  },
+  {
+    "id": "00-q5",
+    "subject": "00",
+    "optionIds": [
+      "00-q5-o1",
+      "00-q5-o2",
+      "00-q5-o3"
+    ],
+    "zh": {
+      "question": "你要学会在不同清单软件中筛出未完成事项，而不只记住某个软件的按钮。哪项练习直接符合这个目标？",
+      "options": [
+        "在旧软件中反复记忆筛选按钮的位置。",
+        "在两款软件中分别完成相同筛选任务。",
+        "在新软件中依次观看所有功能的介绍。"
+      ]
+    },
+    "en": {
+      "question": "You want to filter unfinished tasks in different list apps, rather than memorize one app's buttons. Which practice directly matches this goal?",
+      "options": [
+        "Repeatedly memorize the filter button's position in the old app.",
+        "Complete the same filtering task in two different apps.",
+        "Watch introductions to every feature in the new app."
+      ]
+    }
+  },
+  {
+    "id": "00-v2-q06",
+    "subject": "00",
+    "optionIds": [
+      "00-v2-q06-o1",
+      "00-v2-q06-o2",
+      "00-v2-q06-o3"
+    ],
+    "zh": {
+      "question": "本月可用收入240元，固定支出160元，并要留下40元储蓄。没有其他收支，最多还能用于其他消费多少钱？",
+      "options": [
+        "40 元",
+        "80 元",
+        "120 元"
+      ]
+    },
+    "en": {
+      "question": "You have 240 units of income this month, fixed expenses of 160 and a savings target of 40. With no other income or expenses, how much can you spend on other purchases?",
+      "options": [
+        "40 units",
+        "80 units",
+        "120 units"
+      ]
+    }
+  },
+  {
+    "id": "00-q7",
+    "subject": "00",
+    "optionIds": [
+      "00-q7-o3",
+      "00-q7-o2",
+      "00-q7-o1"
+    ],
+    "zh": {
+      "question": "你有食物、交通和文具的消费凭证，跨了三个月。目标是打开一个文件夹就看到某月所有类别的凭证。按什么分文件夹最直接？",
+      "options": [
+        "按图片格式分文件夹。",
+        "按凭证月份分文件夹。",
+        "按消费类别分文件夹。"
+      ]
+    },
+    "en": {
+      "question": "You have food, transport and stationery receipts from three months. You want to open one folder and see all categories of receipts for a particular month. What should the folders be grouped by?",
+      "options": [
+        "Group folders by image format.",
+        "Group folders by receipt month.",
+        "Group folders by spending category."
+      ]
+    }
+  },
+  {
+    "id": "00-q8",
+    "subject": "00",
+    "optionIds": [
+      "00-q8-o2",
+      "00-q8-o1",
+      "00-q8-o3"
+    ],
+    "zh": {
+      "question": "制作图表依次需要：学导入数据10分钟、学公式20分钟、学图表15分钟；每步都依赖前一步。今天只有30分钟。哪项计划满足时间和先后要求？",
+      "options": [
+        "今天学导入和图表；下次学公式。",
+        "今天学导入和公式；下次学图表。",
+        "今天只学公式；下次学导入和图表。"
+      ]
+    },
+    "en": {
+      "question": "Making a chart requires learning these steps in order: importing data, 10 minutes; formulas, 20 minutes; charts, 15 minutes. Each step requires the preceding one. You have 30 minutes today. Which plan respects both time and order?",
+      "options": [
+        "Learn importing and charts today; learn formulas next time.",
+        "Learn importing and formulas today; learn charts next time.",
+        "Learn only formulas today; learn importing and charts next time."
+      ]
+    }
+  },
+  {
+    "id": "00-v2-q09",
+    "subject": "00",
+    "optionIds": [
+      "00-v2-q09-o1",
+      "00-v2-q09-o2",
+      "00-v2-q09-o3"
+    ],
+    "zh": {
+      "question": "花园要把有限的水分给不同花坛；平板要把有限电量分给不同任务；档案馆要把有限空间分给不同资料。三者共同面对什么问题？",
+      "options": [
+        "如何在多个用途之间分配有限资源。",
+        "如何让每个用途分别获得更多关注。",
+        "如何用同一标准评判每个用途价值。"
+      ]
+    },
+    "en": {
+      "question": "A garden must divide a limited water supply among beds; a tablet must divide limited battery power among tasks; an archive must divide limited storage among records. What problem do all three share?",
+      "options": [
+        "Allocating a limited resource among several uses.",
+        "Increasing the attention given to each separate use.",
+        "Judging every use by the same measure of value."
+      ]
+    }
+  },
+  {
+    "id": "00-v2-q10",
+    "subject": "00",
+    "optionIds": [
+      "00-v2-q10-o1",
+      "00-v2-q10-o3",
+      "00-v2-q10-o2"
+    ],
+    "zh": {
+      "question": "你要做一张“每类消费合计”的表。已经录入每笔金额和类别，也会把一整列金额相加。现在还需要哪项操作，才能分别得到食物、交通等类别的合计？",
+      "options": [
+        "按金额大小排列所有记录。",
+        "按录入先后排列所有记录。",
+        "按类别分组，再分别求和。"
+      ]
+    },
+    "en": {
+      "question": "You need a table of total spending for each category. Every amount and category has been entered, and you can sum the entire amount column. What operation is still needed to obtain separate food, transport and other totals?",
+      "options": [
+        "Sort all records from the smallest amount to the largest.",
+        "Sort all records from the earliest entry to the latest.",
+        "Group records by category and sum each group."
+      ]
+    }
+  },
+  {
+    "id": "00-q11",
+    "subject": "00",
+    "optionIds": [
+      "00-q11-o1",
+      "00-q11-o2",
+      "00-q11-o3"
+    ],
+    "zh": {
+      "question": "放学后共有60分钟。音乐和数学至少各20分钟，休息至少15分钟。下面哪份安排同时满足这些要求？",
+      "options": [
+        "音乐20、数学20、休息20分钟。",
+        "音乐25、数学25、休息15分钟。",
+        "音乐25、数学25、休息10分钟。"
+      ]
+    },
+    "en": {
+      "question": "There are 60 minutes available after school. Music and maths each need at least 20 minutes, and rest needs at least 15. Which schedule meets all these requirements?",
+      "options": [
+        "Music 20, maths 20 and rest 20 minutes.",
+        "Music 25, maths 25 and rest 15 minutes.",
+        "Music 25, maths 25 and rest 10 minutes."
+      ]
+    }
+  },
+  {
+    "id": "00-q12",
+    "subject": "00",
+    "optionIds": [
+      "00-q12-o2",
+      "00-q12-o1",
+      "00-q12-o3"
+    ],
+    "zh": {
+      "question": "文件名按“主题_日期_状态”保存。你要使用最新的已批准手册，而不能用草稿。以下哪个文件符合要求？",
+      "options": [
+        "手册_2026-09-28_草稿",
+        "手册_2026-09-20_已批准",
+        "手册_2026-09-25_已批准"
+      ]
+    },
+    "en": {
+      "question": "Files are named topic_date_status. You need the latest approved handbook, not a draft. Which file meets that requirement?",
+      "options": [
+        "handbook_2026-09-28_draft",
+        "handbook_2026-09-20_approved",
+        "handbook_2026-09-25_approved"
+      ]
+    }
+  },
+  {
+    "id": "01-q1",
+    "subject": "01",
+    "optionIds": [
+      "01-q1-o2",
+      "01-q1-o3",
+      "01-q1-o1"
+    ],
+    "zh": {
+      "question": "刚认识一位同学，你想确认名字的发音，并在这次交流中实际使用它。哪项动作同时做到这两点？",
+      "options": [
+        "请他再说一次名字，随后用名字向他提问。",
+        "看着胸牌抄下名字，随后向他介绍自己。",
+        "请他再说一次名字，随后继续原来的话题。"
+      ]
+    },
+    "en": {
+      "question": "You have just met a classmate. You want to check the pronunciation of their name and actually use it during this conversation. Which action does both?",
+      "options": [
+        "Ask them to repeat their name, then use it in a question.",
+        "Copy their name from the badge, then introduce yourself to them.",
+        "Ask them to repeat their name, then continue the previous topic."
+      ]
+    }
+  },
+  {
+    "id": "01-q2",
+    "subject": "01",
+    "optionIds": [
+      "01-q2-o1",
+      "01-q2-o3",
+      "01-q2-o2"
+    ],
+    "zh": {
+      "question": "学员已经能按步骤提示完成任务。老师想保持同一个任务，逐步减少提示，让学员独立完成。哪项安排符合这一做法？",
+      "options": [
+        "保留原有提示，再增加相同任务的次数。",
+        "减少一步提示，让学员自己完成这步。",
+        "保留原有提示，再换成难度更高的任务。"
+      ]
+    },
+    "en": {
+      "question": "A learner can complete a task using step-by-step prompts. The teacher wants to keep the same task while gradually reducing help. Which arrangement follows that approach?",
+      "options": [
+        "Keep the prompts and increase the number of repetitions.",
+        "Remove one prompt so the learner completes that step.",
+        "Keep the prompts and move to a more difficult task."
+      ]
+    }
+  },
+  {
+    "id": "01-q3",
+    "subject": "01",
+    "optionIds": [
+      "01-q3-o3",
+      "01-q3-o2",
+      "01-q3-o1"
+    ],
+    "zh": {
+      "question": "你看完一页笔记，想检查哪些内容自己无法回忆，而不是哪些句子看着眼熟。哪项活动直接检查这个目标？",
+      "options": [
+        "看着笔记朗读要点，再检查朗读速度。",
+        "看着笔记标出要点，再检查标记颜色。",
+        "合上笔记写出要点，再打开对照遗漏。"
+      ]
+    },
+    "en": {
+      "question": "After reading a page of notes, you want to find what you cannot recall yourself, rather than what looks familiar. Which activity directly checks that?",
+      "options": [
+        "Read the key points while viewing the notes, then check your reading speed.",
+        "Mark the key points while viewing the notes, then check the highlight colours.",
+        "Close the notes, write the key points, then reopen them to check omissions."
+      ]
+    }
+  },
+  {
+    "id": "01-q4",
+    "subject": "01",
+    "optionIds": [
+      "01-q4-o1",
+      "01-q4-o2",
+      "01-q4-o3"
+    ],
+    "zh": {
+      "question": "同一组词汇总共复习40分钟。哪份计划把复习分散在不同日期，而不是集中在某一天？",
+      "options": [
+        "第1天四轮10分钟，中间各休息10分钟。",
+        "第1、3、6、10天，每天复习10分钟。",
+        "第10天四轮10分钟，中间各休息10分钟。"
+      ]
+    },
+    "en": {
+      "question": "The same vocabulary set gets 40 minutes of review in total. Which plan distributes review across different dates rather than concentrating it on one day?",
+      "options": [
+        "Four 10-minute reviews on day 1, with 10-minute breaks between them.",
+        "One 10-minute review on each of days 1, 3, 6 and 10.",
+        "Four 10-minute reviews on day 10, with 10-minute breaks between them."
+      ]
+    }
+  },
+  {
+    "id": "01-q5",
+    "subject": "01",
+    "optionIds": [
+      "01-q5-o2",
+      "01-q5-o1",
+      "01-q5-o3"
+    ],
+    "zh": {
+      "question": "培训要包含两步：学员自己判断邮件是否可疑，然后根据自己的错误获得具体反馈。下面哪项设计包含这两步？",
+      "options": [
+        "先自己判断四封邮件，再逐项查看错误反馈。",
+        "先看四封案例讲解，再复述其中的注意点。",
+        "先观看四次操作示范，再抄写其中的步骤。"
+      ]
+    },
+    "en": {
+      "question": "A training activity must include two steps: learners judge emails themselves, then receive specific feedback on their own errors. Which design includes both?",
+      "options": [
+        "Judge four emails yourself, then review feedback on each error.",
+        "Watch four case explanations, then repeat their main cautions.",
+        "Watch four demonstrations, then copy their main steps."
+      ]
+    }
+  },
+  {
+    "id": "01-q6",
+    "subject": "01",
+    "optionIds": [
+      "01-q6-o3",
+      "01-q6-o2",
+      "01-q6-o1"
+    ],
+    "zh": {
+      "question": "初学者要独立写两段说明文。教师既要给他可用的结构参考，又要留下自己写作的部分。哪份材料同时符合要求？",
+      "options": [
+        "两页题材背景的资料，供他自行寻找结构。",
+        "一段带结构批注的范例，第二段由他撰写。",
+        "两段已完成的全文，供他直接复制提交。"
+      ]
+    },
+    "en": {
+      "question": "A beginner must independently write a two-paragraph explanation. The teacher wants to provide a usable structural model while leaving some writing to the learner. Which material does both?",
+      "options": [
+        "Two pages of background information, with the learner finding a structure.",
+        "An annotated model paragraph, with the learner writing the second.",
+        "A complete two-paragraph text for the learner to copy and submit."
+      ]
+    }
+  },
+  {
+    "id": "01-q7",
+    "subject": "01",
+    "optionIds": [
+      "01-q7-o3",
+      "01-q7-o1",
+      "01-q7-o2"
+    ],
+    "zh": {
+      "question": "学员会用“价格÷数量”比较食品单位价。要检查他能否在新情境应用同一原理，下面哪项任务最符合目标？",
+      "options": [
+        "默写食品单位价格的计算公式。",
+        "比较两种新麦片的每公斤价格。",
+        "比较两种流量套餐的每GB价格。"
+      ]
+    },
+    "en": {
+      "question": "A learner can use price ÷ quantity to compare unit prices of food. Which task checks use of the same principle in a new context?",
+      "options": [
+        "Write the formula for food unit prices from memory.",
+        "Compare the price per kilogram of two new cereals.",
+        "Compare the price per GB of two data plans."
+      ]
+    }
+  },
+  {
+    "id": "01-q8",
+    "subject": "01",
+    "optionIds": [
+      "01-q8-o1",
+      "01-q8-o3",
+      "01-q8-o2"
+    ],
+    "zh": {
+      "question": "员工能正确演示新学的质量检查流程，但主管仍按每小时结案数发奖金，并经常催他们跳过检查。题干直接显示了哪项工作环境阻力？",
+      "options": [
+        "培训教材没有讲解质量检查的步骤。",
+        "员工尚未理解质量检查的操作方法。",
+        "绩效奖励与主管要求偏向快速结案。"
+      ]
+    },
+    "en": {
+      "question": "Employees can correctly demonstrate the quality-check procedure they learned. Their manager still awards bonuses by cases closed per hour and often urges them to skip checks. Which workplace barrier is directly shown?",
+      "options": [
+        "The training material did not explain the checking steps.",
+        "Employees have not yet understood how to perform the checks.",
+        "Rewards and requests favour speed over checks."
+      ]
+    }
+  },
+  {
+    "id": "01-v2-q09",
+    "subject": "01",
+    "optionIds": [
+      "01-v2-q09-o1",
+      "01-v2-q09-o2",
+      "01-v2-q09-o3"
+    ],
+    "zh": {
+      "question": "看完视频后，你觉得内容很熟。现在要检验的是“一周后能否不看资料解释要点”。应收集哪项表现？",
+      "options": [
+        "播放结束时，对自己掌握程度的评分。",
+        "播放过程中，跟读视频字幕的完成比例。",
+        "一周之后，合上资料复述要点的结果。"
+      ]
+    },
+    "en": {
+      "question": "After watching a video, the material feels familiar. You want to check whether you can explain its key points a week later without viewing the material. Which performance should you collect?",
+      "options": [
+        "Your confidence rating immediately after the video ends.",
+        "The proportion of subtitles you repeat during the video.",
+        "Explain the key points a week later without the materials."
+      ]
+    }
+  },
+  {
+    "id": "01-q10",
+    "subject": "01",
+    "optionIds": [
+      "01-q10-o2",
+      "01-q10-o1",
+      "01-q10-o3"
+    ],
+    "zh": {
+      "question": "一首曲子有8小节，记录显示其他小节已稳定正确，错误都出现在第5、6小节。下一轮目标是减少这两小节的错误。哪份练习直接针对记录中的问题？",
+      "options": [
+        "重复第5、6小节，并在每轮后核对错音。",
+        "重复第1、2小节，并在每轮后核对错音。",
+        "重复第7、8小节，并在每轮后核对错音。"
+      ]
+    },
+    "en": {
+      "question": "A piece has eight bars. Records show that all bars are consistently correct except bars 5 and 6. The next session's goal is to reduce errors in those two bars. Which practice directly targets the recorded problem?",
+      "options": [
+        "Repeat bars 5 and 6, checking wrong notes after each round.",
+        "Repeat bars 1 and 2, checking wrong notes after each round.",
+        "Repeat bars 7 and 8, checking wrong notes after each round."
+      ]
+    }
+  },
+  {
+    "id": "01-v2-q11",
+    "subject": "01",
+    "optionIds": [
+      "01-v2-q11-o3",
+      "01-v2-q11-o1",
+      "01-v2-q11-o2"
+    ],
+    "zh": {
+      "question": "学生的论点缺少材料证据。老师想指出具体缺口，同时让学生自己修订。哪条反馈同时做到这两点？",
+      "options": [
+        "论点缺证据，请选一句材料解释联系。",
+        "这段总体写得不错，再读一次后自行调整。",
+        "我已替你重写这段，请照新版本重新誊写。"
+      ]
+    },
+    "en": {
+      "question": "A student's claim lacks evidence from the reading. The teacher wants to identify the specific gap while leaving revision to the student. Which feedback does both?",
+      "options": [
+        "This claim needs evidence; choose a line and explain its link.",
+        "This is good overall; read it once more and make your own adjustments.",
+        "I have rewritten the paragraph; copy this new version neatly."
+      ]
+    }
+  },
+  {
+    "id": "01-v2-q12",
+    "subject": "01",
+    "optionIds": [
+      "01-v2-q12-o2",
+      "01-v2-q12-o3",
+      "01-v2-q12-o1"
+    ],
+    "zh": {
+      "question": "两人上了同一个课程。要比较他们把方法用在新情境的能力，而不是记住课堂案例的能力，哪项评估最符合目标？",
+      "options": [
+        "让两人复述自己的课堂笔记，用同一标准评分。",
+        "让两人评价自己的课程收获，用同一量表评分。",
+        "让两人解决同样的新案例，用同一标准评分。"
+      ]
+    },
+    "en": {
+      "question": "Two people took the same course. You want to compare their ability to use its method in a new situation, rather than recall classroom examples. Which assessment best matches that target?",
+      "options": [
+        "Have both recount their class notes, scored by the same criteria.",
+        "Have both rate what they gained from the course, using the same scale.",
+        "Have both solve the same new case, scored by the same criteria."
+      ]
+    }
+  },
+  {
+    "id": "02-q1",
+    "subject": "02",
+    "optionIds": [
+      "02-q1-o2",
+      "02-q1-o1",
+      "02-q1-o3"
+    ],
+    "zh": {
+      "question": "同一电影片段的新版把暖光改成冷光，把轻快音乐改成低沉慢调。动作顺序和台词与旧版相同。根据这些描述，能确认哪一层发生了改变？",
+      "options": [
+        "故事事件的顺序。",
+        "情绪的呈现方式。",
+        "人物说出的台词。"
+      ]
+    },
+    "en": {
+      "question": "A new version of a film scene changes warm lighting to cool lighting and lively music to a low, slow score. The action sequence and dialogue remain the same. Which layer has definitely changed?",
+      "options": [
+        "The order of story events.",
+        "How mood is presented.",
+        "The words spoken by characters."
+      ]
+    }
+  },
+  {
+    "id": "02-v2-q02",
+    "subject": "02",
+    "optionIds": [
+      "02-v2-q02-o2",
+      "02-v2-q02-o3",
+      "02-v2-q02-o1"
+    ],
+    "zh": {
+      "question": "菜单要让人先注意菜名，再读说明和价格。三个元素的位置相同，下面哪种字号与粗细设置把菜名设为视觉首层？",
+      "options": [
+        "菜名18号粗体；说明12号常规；价格12号常规。",
+        "菜名12号常规；说明12号常规；价格18号粗体。",
+        "菜名12号常规；说明18号粗体；价格12号常规。"
+      ]
+    },
+    "en": {
+      "question": "A menu should draw attention to dish names before descriptions and prices. Positions are identical. Which size-and-weight setting makes the dish name the first visual level?",
+      "options": [
+        "Dish name: 18 bold; description: 12 regular; price: 12 regular.",
+        "Dish name: 12 regular; description: 12 regular; price: 18 bold.",
+        "Dish name: 12 regular; description: 18 bold; price: 12 regular."
+      ]
+    }
+  },
+  {
+    "id": "02-q3",
+    "subject": "02",
+    "optionIds": [
+      "02-q3-o2",
+      "02-q3-o3",
+      "02-q3-o1"
+    ],
+    "zh": {
+      "question": "虚构画作账本写着：同量蓝色颜料4枚币、褐色颜料1枚币，画中长袍使用蓝色。账本没有记付款人或画中人的真实衣物。哪项解读有材料支持？",
+      "options": [
+        "画中人平日也穿着这件蓝色长袍。",
+        "画家本人支付了这批蓝色的费用。",
+        "蓝色长袍的颜料比同量褐色贵。"
+      ]
+    },
+    "en": {
+      "question": "A fictional painting ledger records blue pigment at four coins and brown pigment at one coin for equal quantities. The painted robe uses blue. The ledger does not identify the payer or the sitter's real clothes. Which interpretation is supported?",
+      "options": [
+        "The sitter also wore this particular blue robe in everyday life.",
+        "The painter personally paid for this purchase of blue pigment.",
+        "The blue pigment costs more than the same amount of brown."
+      ]
+    }
+  },
+  {
+    "id": "02-q4",
+    "subject": "02",
+    "optionIds": [
+      "02-q4-o1",
+      "02-q4-o3",
+      "02-q4-o2"
+    ],
+    "zh": {
+      "question": "读这段虚构短文：“她在门口看了母亲一眼，又摸了摸去远方的车票。‘下一班吧’，她说。”哪项解读最有这段文字的支持？",
+      "options": [
+        "她暂缓了这一次的出发。",
+        "她拒绝了母亲留下来的请求。",
+        "她已经完成了这一次的出发。"
+      ]
+    },
+    "en": {
+      "question": "Read this fictional passage: 'At the doorway she glanced at her mother, then touched her ticket to a distant place. “The next train,” she said.' Which reading has the strongest support in the passage?",
+      "options": [
+        "She has postponed this departure.",
+        "She has rejected her mother's request to stay.",
+        "She has already completed this departure."
+      ]
+    }
+  },
+  {
+    "id": "02-q5",
+    "subject": "02",
+    "optionIds": [
+      "02-q5-o2",
+      "02-q5-o3",
+      "02-q5-o1"
+    ],
+    "zh": {
+      "question": "虚构小厨房设计任务要求：椅子收起后占地不超过0.10平方米，每把价格不超过40元。三种方案坐起来都满足需求。哪种同时符合空间与预算要求？",
+      "options": [
+        "方案B：30元；收起后占0.30平方米。",
+        "方案C：60元；收起后占0.08平方米。",
+        "方案A：30元；收起后占0.08平方米。"
+      ]
+    },
+    "en": {
+      "question": "A fictional small-kitchen brief requires each chair to cost no more than 40 units and occupy no more than 0.10 m² when stored. All three meet seating needs. Which design meets both storage and budget requirements?",
+      "options": [
+        "Design B: 30 units; 0.30 m² when stored.",
+        "Design C: 60 units; 0.08 m² when stored.",
+        "Design A: 30 units; 0.08 m² when stored."
+      ]
+    }
+  },
+  {
+    "id": "02-q6",
+    "subject": "02",
+    "optionIds": [
+      "02-q6-o1",
+      "02-q6-o3",
+      "02-q6-o2"
+    ],
+    "zh": {
+      "question": "两版纪录片使用同一段未改动的真实采访。B版把它从开头移到结尾，并换了配乐。根据题干，哪项由条件保证两版相同？",
+      "options": [
+        "这段采访的叙事位置。",
+        "这段采访周围的配乐。",
+        "这段采访中的原话。"
+      ]
+    },
+    "en": {
+      "question": "Two documentary versions use the same unaltered, genuine interview segment. Version B moves it from the beginning to the end and changes the music. Which feature is guaranteed to be the same?",
+      "options": [
+        "The segment's position in the narrative.",
+        "The music surrounding the interview segment.",
+        "The words spoken in the interview segment."
+      ]
+    }
+  },
+  {
+    "id": "02-q7",
+    "subject": "02",
+    "optionIds": [
+      "02-q7-o2",
+      "02-q7-o3",
+      "02-q7-o1"
+    ],
+    "zh": {
+      "question": "虚构老街改造记录：街道和建筑外形保留原样，但当地居民陆续搬离，长期由居民举办的集市和合唱活动都已停办。记录支持哪种区分？",
+      "options": [
+        "建筑形态中断，原有社区实践延续。",
+        "建筑形态与原有社区实践都在延续。",
+        "建筑形态延续，原有社区实践中断。"
+      ]
+    },
+    "en": {
+      "question": "A fictional old-street renovation record says that streets and building exteriors remain as before, but residents have moved away and their long-running market and choir activities have stopped. Which distinction is supported?",
+      "options": [
+        "The buildings have changed; former community practices continue.",
+        "The buildings remain; former community practices continue.",
+        "The buildings remain; former community practices have stopped."
+      ]
+    }
+  },
+  {
+    "id": "02-v2-q08",
+    "subject": "02",
+    "optionIds": [
+      "02-v2-q08-o1",
+      "02-v2-q08-o3",
+      "02-v2-q08-o2"
+    ],
+    "zh": {
+      "question": "虚构短片原版依次出现：她想亲手归还钥匙；听说房主已经搬走；于是把钥匙投入指定回收盒。新版只删去“听说房主搬走”。哪项信息因此缺失？",
+      "options": [
+        "她起初想把钥匙交给谁。",
+        "她为什么改用回收盒归还。",
+        "她最后把钥匙放在哪里。"
+      ]
+    },
+    "en": {
+      "question": "The original fictional short film shows: she wants to return a key in person; she learns the owner has moved away; she puts the key in the designated return box. The new version removes only the news that the owner moved away. What information is lost?",
+      "options": [
+        "Whom she first wanted to give the key to.",
+        "Why she switched to the return box.",
+        "Where she finally left the key."
+      ]
+    }
+  },
+  {
+    "id": "02-v2-q09",
+    "subject": "02",
+    "optionIds": [
+      "02-v2-q09-o3",
+      "02-v2-q09-o2",
+      "02-v2-q09-o1"
+    ],
+    "zh": {
+      "question": "虚构博物馆档案说：眼前展品是1950年制作的复制品，原作制于1690年。要写一条简短而准确的展签，应选哪句？",
+      "options": [
+        "1690年原作，复制品制于1950年。",
+        "1950年复制品，原作制于1690年。",
+        "1690年复制品，原作制于1950年。"
+      ]
+    },
+    "en": {
+      "question": "A fictional museum record says the object on display is a replica made in 1950; the original was made in 1690. Which concise label is accurate for the displayed object?",
+      "options": [
+        "A 1690 original; the replica was made in 1950.",
+        "A 1950 replica; the original was made in 1690.",
+        "A 1690 replica; the original was made in 1950."
+      ]
+    }
+  },
+  {
+    "id": "02-q10",
+    "subject": "02",
+    "optionIds": [
+      "02-q10-o1",
+      "02-q10-o3",
+      "02-q10-o2"
+    ],
+    "zh": {
+      "question": "虚构小说写：“我嘴上邀他一起走，却希望他拒绝；我只准备了一张离开的车票。”改成没有内心旁白的电影，要用动作呈现“邀请与独行准备的矛盾”，哪种最直接？",
+      "options": [
+        "说“一起走”，随后把两张车票递给他。",
+        "说“一起走”，随后去窗口买第二张车票。",
+        "说“一起走”，却把仅有的车票藏进口袋。"
+      ]
+    },
+    "en": {
+      "question": "A fictional novel says: 'I invited him to leave with me, but hoped he would refuse; I had prepared only one ticket.' Without inner narration, which film action most directly presents the specified conflict between an invitation and preparation to leave alone?",
+      "options": [
+        "Say 'Come with me,' then hand him two tickets.",
+        "Say 'Come with me,' then buy a second ticket at the counter.",
+        "Say 'Come with me,' but hide the only ticket in a pocket."
+      ]
+    }
+  },
+  {
+    "id": "02-q11",
+    "subject": "02",
+    "optionIds": [
+      "02-q11-o1",
+      "02-q11-o3",
+      "02-q11-o2"
+    ],
+    "zh": {
+      "question": "虚构老剧院改造委托要求：保留原墙面，新增设备能拆除而不留下痕迹。下面三种通风设备安装方案，哪种符合这两条要求？",
+      "options": [
+        "设备放独立支架上，支架靠自重固定，不接触墙面。",
+        "设备贴原墙面悬挂，支架用钻孔螺栓固定，便于取下。",
+        "设备嵌入新挖墙洞，支架用水泥填实，不易松动。"
+      ]
+    },
+    "en": {
+      "question": "A fictional theatre-renovation brief requires original walls to remain unchanged and new equipment to be removable without traces. Which proposed mounting meets both requirements?",
+      "options": [
+        "Equipment on a self-weighted freestanding support that does not touch the walls.",
+        "Equipment hung against the original wall, with its support bolted into drilled holes.",
+        "Equipment embedded in a new wall opening, with its support fixed in cement."
+      ]
+    }
+  },
+  {
+    "id": "02-q12",
+    "subject": "02",
+    "optionIds": [
+      "02-q12-o1",
+      "02-q12-o2",
+      "02-q12-o3"
+    ],
+    "zh": {
+      "question": "一幅虚构庭院画里，植物和围墙的线条在中央围出清楚的人形，但这块人形区域没有上色或画细节。观众辨认出“人”的直接线索是什么？",
+      "options": [
+        "周围线条围成的人形空白。",
+        "庭院植物使用的绿色颜料。",
+        "画面角落标出的作画日期。"
+      ]
+    },
+    "en": {
+      "question": "In a fictional garden painting, plant and wall lines enclose a clear human-shaped area at the centre, but that area has no colour or detail. What directly allows viewers to recognize a person?",
+      "options": [
+        "The person-shaped gap between the lines.",
+        "The green pigment used for the garden plants.",
+        "The painting date written in the corner."
+      ]
+    }
+  },
+  {
+    "id": "03-q1",
+    "subject": "03",
+    "optionIds": [
+      "03-q1-o2",
+      "03-q1-o3",
+      "03-q1-o1"
+    ],
+    "zh": {
+      "question": "你看到“今天有免费咖啡”的转发，想核对活动日期。下面哪份资料最直接提供可核查的原始日期？",
+      "options": [
+        "朋友转发的截图，裁掉了发布日期和活动日期。",
+        "社区讨论的帖子，显示转发次数和点赞次数。",
+        "主办方活动原页，显示发布日期和活动日期。"
+      ]
+    },
+    "en": {
+      "question": "You see a shared claim that free coffee is available today and want to check the event date. Which material most directly supplies a checkable original date?",
+      "options": [
+        "A friend's screenshot with publication and event dates cropped out.",
+        "A community post showing its numbers of shares and likes.",
+        "The organizer's event page showing publication and event dates."
+      ]
+    }
+  },
+  {
+    "id": "03-v2-q02",
+    "subject": "03",
+    "optionIds": [
+      "03-v2-q02-o2",
+      "03-v2-q02-o1",
+      "03-v2-q02-o3"
+    ],
+    "zh": {
+      "question": "虚构讨论中，一位参与者私下数到4个物体，公开却跟着其他人报5个。他说：“我仍觉得是4，但担心不同答案让我被排斥。”哪种影响有这句话的直接支持？",
+      "options": [
+        "为了被群体接纳而公开顺从。",
+        "根据新证据而修正自己的判断。",
+        "根据奖励金额而改变自己的答案。"
+      ]
+    },
+    "en": {
+      "question": "In a fictional discussion, a participant privately counts four objects but publicly joins the others in saying five. They say, 'I still think it is four, but I worry a different answer will get me excluded.' Which influence is directly supported?",
+      "options": [
+        "Publicly conforming to gain acceptance by the group.",
+        "Revising a judgment because of new evidence.",
+        "Changing an answer because of the amount of a reward."
+      ]
+    }
+  },
+  {
+    "id": "03-q3",
+    "subject": "03",
+    "optionIds": [
+      "03-q3-o2",
+      "03-q3-o3",
+      "03-q3-o1"
+    ],
+    "zh": {
+      "question": "哪条标题把“原因”留作信息缺口，让读者点击后才知道原因，而不是直接给出它？",
+      "options": [
+        "店铺本周退货率8%，与上周保持相同。",
+        "这家店怎样把退货量减少了一半？",
+        "店铺补充尺码说明，退货量因此减少。"
+      ]
+    },
+    "en": {
+      "question": "Which headline leaves the cause as an information gap to be filled after clicking, rather than directly supplying it?",
+      "options": [
+        "The shop's return rate is 8%, unchanged from last week.",
+        "How did this shop cut its returns in half?",
+        "The shop added size information, reducing returns."
+      ]
+    }
+  },
+  {
+    "id": "03-q4",
+    "subject": "03",
+    "optionIds": [
+      "03-q4-o1",
+      "03-q4-o3",
+      "03-q4-o2"
+    ],
+    "zh": {
+      "question": "“描述性规范”是告诉人们别人通常怎么做。下面哪条告示使用了这类信息，而不是规则要求或价格奖励？",
+      "options": [
+        "本周70%的来访者自带水杯。",
+        "本周自带水杯可获得1元优惠。",
+        "本场活动请每位来访者自带水杯。"
+      ]
+    },
+    "en": {
+      "question": "A descriptive norm tells people what others usually do. Which notice uses that kind of information rather than a rule or a price incentive?",
+      "options": [
+        "This week, 70% of visitors brought their own cups.",
+        "This week, bringing your own cup earns a one-unit discount.",
+        "Every visitor is asked to bring a cup to this event."
+      ]
+    }
+  },
+  {
+    "id": "03-q5",
+    "subject": "03",
+    "optionIds": [
+      "03-q5-o1",
+      "03-q5-o3",
+      "03-q5-o2"
+    ],
+    "zh": {
+      "question": "虚构调查把同一抽样所得的200人随机分成两组，均只计一次回答。A组问“支持公园预算增加10%吗？”B组问“支持公园预算增加10%，守护孩子的安全吗？”哪项潜在影响在题干中确实出现？",
+      "options": [
+        "其中一组的提问加入了价值暗示。",
+        "其中一组的同一回答被多计算一次。",
+        "其中一组的抽样只包括公园常客。"
+      ]
+    },
+    "en": {
+      "question": "A fictional survey randomly divides the same sample of 200 people into two groups and counts each answer once. Group A is asked, 'Do you support a 10% increase in the park budget?' Group B is asked, 'Do you support a 10% increase in the park budget to protect children's safety?' Which possible influence is actually present?",
+      "options": [
+        "One group's question adds a value-laden cue.",
+        "One group's identical answers are counted more than once.",
+        "One group's sample includes only frequent park users."
+      ]
+    }
+  },
+  {
+    "id": "03-q6",
+    "subject": "03",
+    "optionIds": [
+      "03-q6-o3",
+      "03-q6-o2",
+      "03-q6-o1"
+    ],
+    "zh": {
+      "question": "虚构平台只按评论数从高到低推送，不把核实情况用于排序。A帖已核实、20条评论；B帖未核实、80条评论；C帖已核实、10条评论。平台会先推哪帖？",
+      "options": [
+        "C帖：已核实，10条评论。",
+        "B帖：未核实，80条评论。",
+        "A帖：已核实，20条评论。"
+      ]
+    },
+    "en": {
+      "question": "A fictional platform promotes posts by comment count only, highest first, and does not use verification status in ranking. Post A is verified with 20 comments; B is unverified with 80; C is verified with 10. Which is promoted first?",
+      "options": [
+        "Post C: verified, 10 comments.",
+        "Post B: unverified, 80 comments.",
+        "Post A: verified, 20 comments."
+      ]
+    }
+  },
+  {
+    "id": "03-v2-q07",
+    "subject": "03",
+    "optionIds": [
+      "03-v2-q07-o1",
+      "03-v2-q07-o2",
+      "03-v2-q07-o3"
+    ],
+    "zh": {
+      "question": "消息传递两轮：甲告诉乙和丙；乙告诉丁和戊；丙告诉丁和己。没有其他传递。不计甲，共有多少个不同的人收到消息？",
+      "options": [
+        "3 人",
+        "5 人",
+        "6 人"
+      ]
+    },
+    "en": {
+      "question": "A message spreads in two rounds: Alex tells Bo and Cy; Bo tells Dee and Eli; Cy tells Dee and Fay. There are no other transmissions. Excluding Alex, how many different people receive it?",
+      "options": [
+        "3 people",
+        "5 people",
+        "6 people"
+      ]
+    }
+  },
+  {
+    "id": "03-q8",
+    "subject": "03",
+    "optionIds": [
+      "03-q8-o1",
+      "03-q8-o2",
+      "03-q8-o3"
+    ],
+    "zh": {
+      "question": "短片只保留“我赞成关闭图书馆”。完整发言是：“不考虑学生需要时，你可能会说‘我赞成关闭图书馆’，但我反对这种做法。”完整语境支持哪项判断？",
+      "options": [
+        "说话者举了一个自己反对的观点。",
+        "说话者改变了先前支持的立场。",
+        "说话者支持暂时关闭这间图书馆。"
+      ]
+    },
+    "en": {
+      "question": "A clip retains only 'I support closing the library.' The full statement is: 'If you ignore students' needs, you might say “I support closing the library,” but I oppose that approach.' What does the full context support?",
+      "options": [
+        "The speaker is giving an example of a view they oppose.",
+        "The speaker has changed a previously supportive position.",
+        "The speaker supports a temporary closure of this library."
+      ]
+    }
+  },
+  {
+    "id": "03-q9",
+    "subject": "03",
+    "optionIds": [
+      "03-q9-o2",
+      "03-q9-o1",
+      "03-q9-o3"
+    ],
+    "zh": {
+      "question": "调查只邀请仍在付费的用户，受访100人中90人表示满意；没有调查已经离开的用户。这个90%最直接描述哪组人？",
+      "options": [
+        "所有曾经使用过的用户。",
+        "本次受访的仍付费用户。",
+        "所有已经取消付费的用户。"
+      ]
+    },
+    "en": {
+      "question": "A survey invites only current paying users. Of 100 respondents, 90 report satisfaction; former users are not surveyed. Which group does the 90% most directly describe?",
+      "options": [
+        "Everyone who has ever used the service.",
+        "The paying users surveyed.",
+        "Everyone who has stopped paying for the service."
+      ]
+    }
+  },
+  {
+    "id": "03-q10",
+    "subject": "03",
+    "optionIds": [
+      "03-q10-o2",
+      "03-q10-o1",
+      "03-q10-o3"
+    ],
+    "zh": {
+      "question": "某地两年人口都为1万人，每年独立记录的案件都为100起；新闻报道却从20篇增至200篇。按“独立案件数÷人口”计算，今年的案件率应使用哪一比率？",
+      "options": [
+        "200 ÷ 10000",
+        "100 ÷ 10000",
+        "200 ÷ 20"
+      ]
+    },
+    "en": {
+      "question": "In each of two years, a place has 10,000 residents and 100 separately recorded cases. News coverage rises from 20 articles to 200. Using cases ÷ population, which ratio gives this year's case rate?",
+      "options": [
+        "200 ÷ 10000",
+        "100 ÷ 10000",
+        "200 ÷ 20"
+      ]
+    }
+  },
+  {
+    "id": "03-q11",
+    "subject": "03",
+    "optionIds": [
+      "03-q11-o2",
+      "03-q11-o1",
+      "03-q11-o3"
+    ],
+    "zh": {
+      "question": "虚构社区有100名成员，全部参加匿名问卷，70人反对新规；公开会议中只有10人表达反对。哪项描述符合这两组记录？",
+      "options": [
+        "少数在匿名问卷中反对，多数公开表达反对。",
+        "多数在匿名问卷中反对，少数公开表达反对。",
+        "多数在匿名问卷中反对，多数公开表达反对。"
+      ]
+    },
+    "en": {
+      "question": "A fictional community has 100 members. All complete an anonymous questionnaire, where 70 oppose a new rule. At the public meeting, only 10 voice opposition. Which description matches both records?",
+      "options": [
+        "A minority oppose it anonymously; a majority voice opposition publicly.",
+        "A majority oppose it anonymously; a minority voice opposition publicly.",
+        "A majority oppose it anonymously; a majority voice opposition publicly."
+      ]
+    }
+  },
+  {
+    "id": "03-v2-q12",
+    "subject": "03",
+    "optionIds": [
+      "03-v2-q12-o2",
+      "03-v2-q12-o1",
+      "03-v2-q12-o3"
+    ],
+    "zh": {
+      "question": "你把活动日期误写为周五，核实后应是周六。目标是读者重开原帖，就能看见“日期已更正”及具体改动。哪种更新符合要求？",
+      "options": [
+        "另发周六活动公告，原帖仍写周五。",
+        "原帖静默改成周六，保留原发布时间。",
+        "原帖注明日期更正：周五改为周六。"
+      ]
+    },
+    "en": {
+      "question": "You wrongly posted Friday as an event date; checking confirms Saturday. The goal is for readers reopening the original post to see that the date was corrected and exactly what changed. Which update meets it?",
+      "options": [
+        "Publish a new Saturday announcement, leaving Friday in the original post.",
+        "Silently change the original post to Saturday, retaining its posting time.",
+        "Mark the original post: 'Date correction: Friday changed to Saturday.'"
+      ]
+    }
+  },
+  {
+    "id": "04-v2-q01",
+    "subject": "04",
+    "optionIds": [
+      "04-v2-q01-o1",
+      "04-v2-q01-o2",
+      "04-v2-q01-o3"
+    ],
+    "zh": {
+      "question": "一家面包店标价：单买一个可颂 3 元，两个装套餐 5 元，大小相同。只比较每个可颂的价格，套餐比单买便宜多少？",
+      "options": [
+        "每个便宜 0.50 元",
+        "每个便宜 1.00 元",
+        "每个便宜 2.00 元"
+      ]
+    },
+    "en": {
+      "question": "A bakery charges 3 units for one croissant and 5 units for a pack of two of the same size. Comparing price per croissant only, how much cheaper is the pack?",
+      "options": [
+        "0.50 units cheaper per croissant",
+        "1.00 unit cheaper per croissant",
+        "2.00 units cheaper per croissant"
+      ]
+    }
+  },
+  {
+    "id": "04-q2",
+    "subject": "04",
+    "optionIds": [
+      "04-q2-o1",
+      "04-q2-o2",
+      "04-q2-o3"
+    ],
+    "zh": {
+      "question": "某小店的虚构月度账：销售收入 12,000 元，本月所有相关成本及费用合计 9,000 元，不考虑税款。按“收入减成本及费用”计算，本月利润是多少？",
+      "options": [
+        "3,000 元",
+        "9,000 元",
+        "12,000 元"
+      ]
+    },
+    "en": {
+      "question": "A shop has fictional monthly sales revenue of 12,000 units and total related costs and expenses of 9,000 units. Ignore taxes. Using revenue minus costs and expenses, what is its monthly profit?",
+      "options": [
+        "3,000 units",
+        "9,000 units",
+        "12,000 units"
+      ]
+    }
+  },
+  {
+    "id": "04-q3",
+    "subject": "04",
+    "optionIds": [
+      "04-q3-o3",
+      "04-q3-o2",
+      "04-q3-o1"
+    ],
+    "zh": {
+      "question": "订阅服务目前可以在网页上点击取消。以下改动中，哪一项增加的是退出流程本身的操作成本，而不是改变服务价格或内容？",
+      "options": [
+        "续费套餐每月增加一节在线课",
+        "续费价格从每月 30 元降到 25 元",
+        "取消必须改为工作日电话申请"
+      ]
+    },
+    "en": {
+      "question": "A subscription can currently be cancelled with a click on its website. Which change increases the effort of leaving, rather than changing the service price or content?",
+      "options": [
+        "The renewal plan adds one online class a month",
+        "The renewal price drops from 30 to 25 units",
+        "Cancellation requires a weekday phone call"
+      ]
+    }
+  },
+  {
+    "id": "04-v2-q04",
+    "subject": "04",
+    "optionIds": [
+      "04-v2-q04-o3",
+      "04-v2-q04-o1",
+      "04-v2-q04-o2"
+    ],
+    "zh": {
+      "question": "某餐厅做了两次虚构广告试验，各花 100 元。A 渠道触达 200 人，其中 10 人下单；B 渠道触达 100 人，其中 8 人下单。只按已记录的“每 100 元带来的订单数”比较，哪个渠道更高？",
+      "options": [
+        "两个渠道，订单数相同",
+        "A 渠道，带来 10 单",
+        "B 渠道，带来 8 单"
+      ]
+    },
+    "en": {
+      "question": "A restaurant runs two fictional ad trials costing 100 units each. Channel A reaches 200 people and generates 10 orders. Channel B reaches 100 people and generates 8 orders. Comparing recorded orders per 100 units spent only, which performs better?",
+      "options": [
+        "Both channels, with equal order counts",
+        "Channel A, with 10 orders",
+        "Channel B, with 8 orders"
+      ]
+    }
+  },
+  {
+    "id": "04-q5",
+    "subject": "04",
+    "optionIds": [
+      "04-q5-o2",
+      "04-q5-o3",
+      "04-q5-o1"
+    ],
+    "zh": {
+      "question": "只按下面的虚构合同条款判断，不讨论实际法律责任：“6 月 10 日 17:00 前到货 100 件；其中至少 98 件通过约定的尺寸检查。”哪次交付同时满足这两项条件？",
+      "options": [
+        "6 月 10 日 16:00，到货 100 件，96 件合格",
+        "6 月 11 日 16:00，到货 100 件，100 件合格",
+        "6 月 10 日 16:00，到货 100 件，98 件合格"
+      ]
+    },
+    "en": {
+      "question": "Use only these fictional contract terms, without deciding real legal liability: \"100 items must arrive by 17:00 on 10 June; at least 98 must pass the agreed size check.\" Which delivery meets both conditions?",
+      "options": [
+        "10 June at 16:00: 100 delivered, 96 pass",
+        "11 June at 16:00: 100 delivered, 100 pass",
+        "10 June at 16:00: 100 delivered, 98 pass"
+      ]
+    }
+  },
+  {
+    "id": "04-q6",
+    "subject": "04",
+    "optionIds": [
+      "04-q6-o1",
+      "04-q6-o3",
+      "04-q6-o2"
+    ],
+    "zh": {
+      "question": "客服中心想奖励“问题解决后 7 天内不因同一问题再次来电”，所有记录都能核查。以下哪种奖金规则直接依据这个结果？",
+      "options": [
+        "按每通电话少于三分钟的次数计奖",
+        "按每天接听电话的总次数计奖",
+        "按结束后满足七天无重复来电的件数计奖"
+      ]
+    },
+    "en": {
+      "question": "A call centre wants to reward cases resolved with no repeat call about the same issue within seven days. All records can be checked. Which bonus rule directly uses this outcome?",
+      "options": [
+        "Pay per call completed in under three minutes",
+        "Pay per call answered during the day",
+        "Pay per case meeting the seven-day no-repeat condition"
+      ]
+    }
+  },
+  {
+    "id": "04-v2-q07",
+    "subject": "04",
+    "optionIds": [
+      "04-v2-q07-o1",
+      "04-v2-q07-o2",
+      "04-v2-q07-o3"
+    ],
+    "zh": {
+      "question": "虚构服务公司在 4 月完成并确认收入 10,000 元，客户约定 5 月付款；4 月发生并付清费用 6,000 元，无其他收支。按收入减费用算利润，按实际收付算现金变化，4 月结果是哪一组？",
+      "options": [
+        "利润 4,000 元；现金减少 6,000 元",
+        "利润 4,000 元；现金增加 4,000 元",
+        "利润亏损 6,000 元；现金减少 6,000 元"
+      ]
+    },
+    "en": {
+      "question": "A fictional service company completes work and recognises 10,000 units of revenue in April; the customer will pay in May. April expenses of 6,000 units are incurred and paid, with no other transactions. Use revenue minus expenses for profit and actual receipts and payments for cash change. Which describes April?",
+      "options": [
+        "Profit of 4,000; cash decreases by 6,000",
+        "Profit of 4,000; cash increases by 4,000",
+        "Loss of 6,000; cash decreases by 6,000"
+      ]
+    }
+  },
+  {
+    "id": "04-v2-q08",
+    "subject": "04",
+    "optionIds": [
+      "04-v2-q08-o1",
+      "04-v2-q08-o2",
+      "04-v2-q08-o3"
+    ],
+    "zh": {
+      "question": "以下为虚构数据：优惠结束后，100 名试用者中 20 人仍按每月 30 元付费。服务每名付费者的本月可变成本为 20 元。暂不计固定成本，只看这 20 人，本月合计贡献多少用于覆盖固定成本和利润？",
+      "options": [
+        "200 元",
+        "400 元",
+        "600 元"
+      ]
+    },
+    "en": {
+      "question": "Fictional data: after a promotion ends, 20 of 100 trial users keep paying 30 units per month. Variable service cost is 20 units per paying user this month. Ignore fixed costs. How much do these 20 users contribute in total toward fixed costs and profit?",
+      "options": [
+        "200 units",
+        "400 units",
+        "600 units"
+      ]
+    }
+  },
+  {
+    "id": "04-q9",
+    "subject": "04",
+    "optionIds": [
+      "04-q9-o1",
+      "04-q9-o2",
+      "04-q9-o3"
+    ],
+    "zh": {
+      "question": "某公司的虚构审批要求：不超过 500 元的标准用品订单要在当天通过；超过 500 元或非标准用品必须经理审批。经理当天无法处理。哪项规则同时满足要求？",
+      "options": [
+        "员工不处理订单，全部交经理审批",
+        "员工处理全部标准订单，其余交经理",
+        "员工处理低额标准订单，其余交经理"
+      ]
+    },
+    "en": {
+      "question": "A fictional approval policy requires standard-supply orders of at most 500 units to pass the same day. Orders above 500 units or for nonstandard supplies require a manager. The manager cannot process orders that day. Which rule meets both requirements?",
+      "options": [
+        "Staff approve no orders; all go to the manager",
+        "Staff approve all standard orders; others go to the manager",
+        "Staff approve small standard orders; others go to the manager"
+      ]
+    }
+  },
+  {
+    "id": "04-q10",
+    "subject": "04",
+    "optionIds": [
+      "04-q10-o3",
+      "04-q10-o1",
+      "04-q10-o2"
+    ],
+    "zh": {
+      "question": "虚构工作安排谈判：员工接受月薪至少 5,000 元且每周至少一天远程；公司接受月薪不超过 5,200 元且每周远程不超过两天。哪组方案同时满足双方底线？",
+      "options": [
+        "月薪 5,300 元，每周远程零天",
+        "月薪 4,800 元，每周远程两天",
+        "月薪 5,100 元，每周远程一天"
+      ]
+    },
+    "en": {
+      "question": "In a fictional work-arrangement negotiation, an employee requires at least 5,000 units of monthly pay and at least one remote day per week. The company allows at most 5,200 units and at most two remote days. Which package meets both sets of limits?",
+      "options": [
+        "Pay of 5,300; no remote days per week",
+        "Pay of 4,800; two remote days per week",
+        "Pay of 5,100; one remote day per week"
+      ]
+    }
+  },
+  {
+    "id": "04-q11",
+    "subject": "04",
+    "optionIds": [
+      "04-q11-o2",
+      "04-q11-o1",
+      "04-q11-o3"
+    ],
+    "zh": {
+      "question": "公司公开鼓励实验，但虚构奖金规则是：完成常规项目加 10 分；按规范完成的实验，成功加 10 分、失败减 10 分。成功概率为 50%，其他条件相同。只按平均奖金分数选择，哪种行为更受奖励？",
+      "options": [
+        "开展规范实验",
+        "完成常规项目",
+        "两种行为得分相同"
+      ]
+    },
+    "en": {
+      "question": "A company publicly encourages experiments, but its fictional bonus rule gives 10 points for a routine project. A properly conducted experiment earns 10 points if successful and loses 10 if unsuccessful. Success probability is 50%, and other conditions are equal. Based only on average bonus points, which behaviour is rewarded more?",
+      "options": [
+        "Running a properly conducted experiment",
+        "Completing a routine project",
+        "Both behaviours earn the same average points"
+      ]
+    }
+  },
+  {
+    "id": "04-v2-q12",
+    "subject": "04",
+    "optionIds": [
+      "04-v2-q12-o1",
+      "04-v2-q12-o2",
+      "04-v2-q12-o3"
+    ],
+    "zh": {
+      "question": "虚构流程中，每周同一组数据要分别录入三个报表，每次 10 分钟。新方案录入一次用 10 分钟，另外两份自动生成且内容不变；每周核对自动结果另用 5 分钟。每周净节省多少时间？",
+      "options": [
+        "15 分钟",
+        "20 分钟",
+        "25 分钟"
+      ]
+    },
+    "en": {
+      "question": "In a fictional reporting process, the same data is entered into three reports each week, taking 10 minutes per report. A new process takes 10 minutes for one entry and generates the other two reports automatically with unchanged content. Checking the generated reports takes another 5 minutes weekly. How much time is saved each week?",
+      "options": [
+        "15 minutes",
+        "20 minutes",
+        "25 minutes"
+      ]
+    }
+  },
+  {
+    "id": "05-q1",
+    "subject": "05",
+    "optionIds": [
+      "05-q1-o2",
+      "05-q1-o3",
+      "05-q1-o1"
+    ],
+    "zh": {
+      "question": "金属块和木块在室内放了一夜，测得都为 20°C，低于手温。短暂接触时金属更冷。哪种解释与这些条件相符？",
+      "options": [
+        "金属使手的热量传出得更快",
+        "木块在接触时向手持续供热",
+        "金属的实际温度比木块低"
+      ]
+    },
+    "en": {
+      "question": "A metal block and a wooden block have been indoors overnight. Both measure 20°C, below hand temperature. The metal feels colder during brief contact. Which explanation fits these conditions?",
+      "options": [
+        "The metal transfers heat away from the hand faster",
+        "The wood continuously supplies heat to the hand",
+        "The metal is actually colder than the wood"
+      ]
+    }
+  },
+  {
+    "id": "05-q2",
+    "subject": "05",
+    "optionIds": [
+      "05-q2-o2",
+      "05-q2-o1",
+      "05-q2-o3"
+    ],
+    "zh": {
+      "question": "预报明确定义：“明天 9:00–18:00，你指定地点累计降雨至少 1 毫米的概率为 70%。”这个 70% 表示什么？",
+      "options": [
+        "这个地点预计会收到 70 毫米的雨",
+        "这个时段预计有 70% 的时间在下雨",
+        "满足所述降雨条件的可能性为 70%"
+      ]
+    },
+    "en": {
+      "question": "A forecast explicitly defines this event: \"Between 09:00 and 18:00 tomorrow, there is a 70% probability that your specified location receives at least 1 mm of rain.\" What does 70% mean?",
+      "options": [
+        "The location is expected to receive 70 mm of rain",
+        "Rain is expected for 70% of that time period",
+        "The stated rainfall condition has a 70% probability"
+      ]
+    }
+  },
+  {
+    "id": "05-q3",
+    "subject": "05",
+    "optionIds": [
+      "05-q3-o1",
+      "05-q3-o3",
+      "05-q3-o2"
+    ],
+    "zh": {
+      "question": "某人同一天开始喝果昔，也把睡眠从六小时改成九小时，随后觉得更有精神。没有其他对照记录。仅凭这些信息，能否单独确定果昔的作用？",
+      "options": [
+        "能，因为喝果昔发生在感觉改善之前",
+        "不能，因为果昔和睡眠在同一时间改变",
+        "能，因为果昔和睡眠的变化都已记录"
+      ]
+    },
+    "en": {
+      "question": "A person starts drinking smoothies on the same day that sleep increases from six to nine hours, then feels more energetic. There are no comparison records. Can these observations isolate the smoothie’s effect?",
+      "options": [
+        "Yes, because drinking the smoothie came before the improvement",
+        "No, because the smoothie and sleep changed at the same time",
+        "Yes, because the sleep change was included in the observation"
+      ]
+    }
+  },
+  {
+    "id": "05-q4",
+    "subject": "05",
+    "optionIds": [
+      "05-q4-o1",
+      "05-q4-o2",
+      "05-q4-o3"
+    ],
+    "zh": {
+      "question": "虚构评分：A 店已有两条评价，都是 5 星；B 店已有 100 条评价，也都是 5 星。两店各新增一条 1 星评价后，哪家的平均分下降更多？",
+      "options": [
+        "A 店下降更多",
+        "B 店下降更多",
+        "两店下降相同"
+      ]
+    },
+    "en": {
+      "question": "Fictional ratings: Shop A has two reviews, both 5 stars. Shop B has 100 reviews, all 5 stars. Each receives one new 1-star review. Which shop’s average falls more?",
+      "options": [
+        "Shop A’s average falls more",
+        "Shop B’s average falls more",
+        "Both averages fall equally"
+      ]
+    }
+  },
+  {
+    "id": "05-v2-q05",
+    "subject": "05",
+    "optionIds": [
+      "05-v2-q05-o1",
+      "05-v2-q05-o2",
+      "05-v2-q05-o3"
+    ],
+    "zh": {
+      "question": "工厂要比较新旧机器本身的单位时间产量。哪项虚构试验最能把机器型号与原料、工人和时段的影响分开？",
+      "options": [
+        "新机用新原料和熟练工，旧机用旧原料和新手",
+        "新旧机同期用同批原料，工人随机轮换操作",
+        "新机本月的产量，与旧机去年旺季的产量相比"
+      ]
+    },
+    "en": {
+      "question": "A factory wants to compare the production rates attributable to two machine models. Which fictional trial best separates model effects from materials, workers and timing?",
+      "options": [
+        "New materials and skilled staff on the new model; old materials and novices on the old",
+        "Both models run at the same time with one material batch and randomly rotating staff",
+        "Compare this month on the new model with last year’s peak season on the old"
+      ]
+    }
+  },
+  {
+    "id": "05-q6",
+    "subject": "05",
+    "optionIds": [
+      "05-q6-o2",
+      "05-q6-o1",
+      "05-q6-o3"
+    ],
+    "zh": {
+      "question": "一个虚构城市等面积分为住宅、工业和公园三类地区，要估计全城某污染物的空间平均浓度。每类内部浓度也可能不同。只能设九个测点，哪种计划更贴合这个总体？",
+      "options": [
+        "每类随机选三个不同位置设点",
+        "九点都设在最近的工业园门口",
+        "九点都设在市中心同一广场"
+      ]
+    },
+    "en": {
+      "question": "A fictional city has three equal-area region types: residential, industrial and parkland. The aim is to estimate the citywide spatial mean of one pollutant; concentrations may also vary within each type. Only nine sites are available. Which plan best matches this population?",
+      "options": [
+        "Randomly select three different locations within each type",
+        "Place all nine sites at the nearest industrial-park entrance",
+        "Place all nine sites in one central square"
+      ]
+    }
+  },
+  {
+    "id": "05-v2-q07",
+    "subject": "05",
+    "optionIds": [
+      "05-v2-q07-o2",
+      "05-v2-q07-o1",
+      "05-v2-q07-o3"
+    ],
+    "zh": {
+      "question": "两室用一张“水能通过、糖不能通过”的膜隔开，温度和初始液面高度相同。一侧是 1% 糖溶液，另一侧是 5% 同种糖溶液。刚开始时，水的净移动方向是什么？",
+      "options": [
+        "从 5% 一侧流向 1% 一侧",
+        "从 1% 一侧流向 5% 一侧",
+        "两侧之间没有水的净移动"
+      ]
+    },
+    "en": {
+      "question": "Two chambers are separated by a membrane that lets water pass but not sugar. Temperature and initial liquid levels are equal. One side has a 1% sugar solution and the other a 5% solution of the same sugar. What is the initial net direction of water movement?",
+      "options": [
+        "From the 5% side toward the 1% side",
+        "From the 1% side toward the 5% side",
+        "There is no net water movement between the sides"
+      ]
+    }
+  },
+  {
+    "id": "05-v2-q08",
+    "subject": "05",
+    "optionIds": [
+      "05-v2-q08-o1",
+      "05-v2-q08-o2",
+      "05-v2-q08-o3"
+    ],
+    "zh": {
+      "question": "一张长方形照片的长和宽都缩为原来的 50%，没有裁剪。新照片的面积是原来的多少？",
+      "options": [
+        "25%",
+        "50%",
+        "75%"
+      ]
+    },
+    "en": {
+      "question": "A rectangular photograph is resized to 50% of its original length and 50% of its original width, without cropping. What fraction of the original area remains?",
+      "options": [
+        "25%",
+        "50%",
+        "75%"
+      ]
+    }
+  },
+  {
+    "id": "05-q9",
+    "subject": "05",
+    "optionIds": [
+      "05-q9-o1",
+      "05-q9-o2",
+      "05-q9-o3"
+    ],
+    "zh": {
+      "question": "某应用只邀请每天使用它的人试用新功能，没有邀请每周或每月才用的人。虚构试用结果显示多数受邀者喜欢新功能。仅据这次结果，哪个人群的反应被直接记录了？",
+      "options": [
+        "每天使用且参加试用的人",
+        "所有已经注册这个应用的人",
+        "尚未注册但可能会使用的人"
+      ]
+    },
+    "en": {
+      "question": "An app invites only daily users to try a new feature, excluding weekly and monthly users. Fictional results show most participants like it. Whose responses are directly recorded by this trial?",
+      "options": [
+        "Daily users who participated in the trial",
+        "Everyone already registered with the app",
+        "Unregistered people who might later use the app"
+      ]
+    }
+  },
+  {
+    "id": "05-v2-q10",
+    "subject": "05",
+    "optionIds": [
+      "05-v2-q10-o1",
+      "05-v2-q10-o2",
+      "05-v2-q10-o3"
+    ],
+    "zh": {
+      "question": "虚构化学演示：密封容器及里面所有物质一共 120 克。反应产生气体，但没有任何物质进出容器。按普通化学反应的质量守恒模型，反应后的整体质量是多少？",
+      "options": [
+        "小于 120 克",
+        "等于 120 克",
+        "大于 120 克"
+      ]
+    },
+    "en": {
+      "question": "A fictional chemistry demonstration starts with a sealed container and all its contents weighing 120 g. A reaction produces gas, but no matter enters or leaves. Under ordinary chemical mass conservation, what is the total mass after the reaction?",
+      "options": [
+        "Less than 120 g",
+        "Equal to 120 g",
+        "More than 120 g"
+      ]
+    }
+  },
+  {
+    "id": "05-v2-q11",
+    "subject": "05",
+    "optionIds": [
+      "05-v2-q11-o1",
+      "05-v2-q11-o2",
+      "05-v2-q11-o3"
+    ],
+    "zh": {
+      "question": "在一个简化的虚构植物能量模型中，一天通过光合作用储存了 1,000 焦耳化学能，其中 600 焦耳用于自身呼吸，其余全部留在新形成的生物量中。新生物量储存多少能量？",
+      "options": [
+        "400 焦耳",
+        "600 焦耳",
+        "1,000 焦耳"
+      ]
+    },
+    "en": {
+      "question": "In a simplified fictional plant-energy model, photosynthesis stores 1,000 joules of chemical energy in one day. The plant uses 600 joules for its own respiration, and all the remainder stays in newly formed biomass. How much energy is stored in that new biomass?",
+      "options": [
+        "400 joules",
+        "600 joules",
+        "1,000 joules"
+      ]
+    }
+  },
+  {
+    "id": "05-q12",
+    "subject": "05",
+    "optionIds": [
+      "05-q12-o1",
+      "05-q12-o2",
+      "05-q12-o3"
+    ],
+    "zh": {
+      "question": "虚构数据从 100 增到 105。某柱形图的纵轴从 95 起，所以两根柱在图上高 5 格和 10 格。数据本身的相对增长率是多少？",
+      "options": [
+        "5%",
+        "10%",
+        "100%"
+      ]
+    },
+    "en": {
+      "question": "Fictional data rises from 100 to 105. A bar chart starts its vertical axis at 95, so the bars appear 5 and 10 grid units tall. What is the relative increase in the underlying data?",
+      "options": [
+        "5%",
+        "10%",
+        "100%"
+      ]
+    }
+  },
+  {
+    "id": "06-q1",
+    "subject": "06",
+    "optionIds": [
+      "06-q1-o1",
+      "06-q1-o3",
+      "06-q1-o2"
+    ],
+    "zh": {
+      "question": "某软件更新说明写道：“修补会让未授权账户读取文件的访问检查漏洞。”只根据这条说明，这次更新直接改进了哪项保护？",
+      "options": [
+        "限制未授权账户读取文件",
+        "阻止用户重复使用账户密码",
+        "保留删除前文件的备份副本"
+      ]
+    },
+    "en": {
+      "question": "A software update note says: \"Fixes an access-check flaw that lets unauthorised accounts read files.\" Based only on this note, which protection does the update directly improve?",
+      "options": [
+        "Restricting file reads by unauthorised accounts",
+        "Preventing users from reusing account passwords",
+        "Keeping a backup copy from before file deletion"
+      ]
+    }
+  },
+  {
+    "id": "06-q2",
+    "subject": "06",
+    "optionIds": [
+      "06-q2-o3",
+      "06-q2-o2",
+      "06-q2-o1"
+    ],
+    "zh": {
+      "question": "在这个虚构账号例子中，A 网站的用户名和密码泄露了。B 网站使用完全相同的用户名和密码；C 网站用户名相同，但密码不同。B、C 都只用密码登录。仅凭泄露的这一组凭据，哪个账户也具有同一组可用登录凭据？",
+      "options": [
+        "B 和 C 的账户",
+        "C 网站账户",
+        "B 网站账户"
+      ]
+    },
+    "en": {
+      "question": "In a fictional account example, Site A’s username and password are leaked. Site B uses exactly the same username and password. Site C uses the same username but a different password. B and C use password-only login. Which other account has a usable login pair in this leaked information?",
+      "options": [
+        "The accounts on both B and C",
+        "The account on Site C",
+        "The account on Site B"
+      ]
+    }
+  },
+  {
+    "id": "06-q3",
+    "subject": "06",
+    "optionIds": [
+      "06-q3-o3",
+      "06-q3-o1",
+      "06-q3-o2"
+    ],
+    "zh": {
+      "question": "表格里每行是一名顾客的“姓名、地址”。现在要按姓名排序，并保持每个人的地址仍与本人配对。哪项操作符合要求？",
+      "options": [
+        "只过滤姓名列，隐藏部分原有行",
+        "只排序姓名列，地址列留在原位置",
+        "选择两列，把每一行一起按姓名排序"
+      ]
+    },
+    "en": {
+      "question": "Each spreadsheet row contains one customer’s name and address. You want to sort by name while keeping every address paired with its owner. Which operation meets the requirement?",
+      "options": [
+        "Filter the name column to hide some existing rows",
+        "Sort only the name column, leaving addresses in place",
+        "Select both columns and move whole rows when sorting by name"
+      ]
+    }
+  },
+  {
+    "id": "06-q4",
+    "subject": "06",
+    "optionIds": [
+      "06-q4-o3",
+      "06-q4-o2",
+      "06-q4-o1"
+    ],
+    "zh": {
+      "question": "咖啡机的简化程序是：“如果检测到杯子，就执行出咖啡；否则显示‘请放杯子’。”这次传感器返回“没有杯子”。程序接下来执行什么？",
+      "options": [
+        "重复执行出咖啡",
+        "显示“请放杯子”",
+        "执行出咖啡"
+      ]
+    },
+    "en": {
+      "question": "A simplified coffee-machine program says: \"If a cup is detected, dispense coffee; otherwise display ‘Place a cup’.\" The sensor now returns \"no cup\". What does the program do next?",
+      "options": [
+        "Repeatedly dispense coffee",
+        "Display “Place a cup”",
+        "Dispense coffee"
+      ]
+    }
+  },
+  {
+    "id": "06-q5",
+    "subject": "06",
+    "optionIds": [
+      "06-q5-o2",
+      "06-q5-o3",
+      "06-q5-o1"
+    ],
+    "zh": {
+      "question": "虚构顾客表有两行：顾客 ID 7，姓名林；顾客 ID 7，姓名陈。订单表的一笔订单只记录“顾客 ID 7”。系统用顾客 ID 关联订单与顾客。哪项修改能让这笔订单只对应其中一名顾客？",
+      "options": [
+        "把两人的姓名改成相同，但保留原来的 ID",
+        "把顾客表按姓名排序，但保留原来的 ID",
+        "给两人分配不同 ID，并记录订单所属的 ID"
+      ]
+    },
+    "en": {
+      "question": "A fictional customer table has two rows: customer ID 7, name Lin; customer ID 7, name Chen. An order records only \"customer ID 7\". The system joins orders to customers using that ID. Which change makes this order identify just one customer?",
+      "options": [
+        "Give both customers the same name but keep the existing IDs",
+        "Sort the customer table by name but keep the existing IDs",
+        "Give the customers distinct IDs and record the order’s correct ID"
+      ]
+    }
+  },
+  {
+    "id": "06-q6",
+    "subject": "06",
+    "optionIds": [
+      "06-q6-o3",
+      "06-q6-o2",
+      "06-q6-o1"
+    ],
+    "zh": {
+      "question": "虚构发票规则要求：金额不超过 500 元，并且系统已记录收货，才能自动批准。哪个条件与要求一致？",
+      "options": [
+        "金额 ≤ 500，并且已记录收货",
+        "金额 < 500，并且已记录收货",
+        "金额 ≤ 500，或者已记录收货"
+      ]
+    },
+    "en": {
+      "question": "A fictional invoice rule allows automatic approval only when the amount is at most 500 units and receipt of goods is recorded. Which condition matches it?",
+      "options": [
+        "Amount ≤ 500 AND receipt is recorded",
+        "Amount < 500 AND receipt is recorded",
+        "Amount ≤ 500 OR receipt is recorded"
+      ]
+    }
+  },
+  {
+    "id": "06-v2-q07",
+    "subject": "06",
+    "optionIds": [
+      "06-v2-q07-o1",
+      "06-v2-q07-o2",
+      "06-v2-q07-o3"
+    ],
+    "zh": {
+      "question": "有序号码表为 2、5、8、11、14、17、20。算法先检查当前范围的中间项；若目标较大，就只保留中间项右边的号码，再检查新范围的中间项。寻找 17，第一次检查 11 后，第二次检查哪个号码？",
+      "options": [
+        "14",
+        "17",
+        "20"
+      ]
+    },
+    "en": {
+      "question": "A sorted list is 2, 5, 8, 11, 14, 17, 20. An algorithm checks the middle of the current range. If the target is larger, it keeps only numbers to the right and checks the middle of the new range. Searching for 17, it checks 11 first. Which number does it check second?",
+      "options": [
+        "14",
+        "17",
+        "20"
+      ]
+    }
+  },
+  {
+    "id": "06-q8",
+    "subject": "06",
+    "optionIds": [
+      "06-q8-o1",
+      "06-q8-o3",
+      "06-q8-o2"
+    ],
+    "zh": {
+      "question": "虚构平台允许应用只读取用户通过选择器挑中的一张照片。某编辑器只要编辑这张现有照片，不拍照、不联网。为了完成这个功能，哪种授权范围最小？",
+      "options": [
+        "读取整个照片库",
+        "使用相机拍摄照片",
+        "读取这张所选照片"
+      ]
+    },
+    "en": {
+      "question": "A fictional platform lets an app read only the single photo a user picks through a selector. An editor only edits this existing photo; it does not take pictures or use the internet. Which permission scope is the minimum needed?",
+      "options": [
+        "Read the whole photo library",
+        "Use the camera to take photos",
+        "Read the selected single photo"
+      ]
+    }
+  },
+  {
+    "id": "06-q9",
+    "subject": "06",
+    "optionIds": [
+      "06-q9-o3",
+      "06-q9-o1",
+      "06-q9-o2"
+    ],
+    "zh": {
+      "question": "虚构推荐器只有体育和音乐两类内容，次日十个推荐位都分给“今天点击次数较多”的类别。今天点击体育六次、音乐四次。按这个规则，明天会推荐什么？",
+      "options": [
+        "体育零条、音乐十条",
+        "体育六条、音乐四条",
+        "体育十条、音乐零条"
+      ]
+    },
+    "en": {
+      "question": "A fictional recommender has only sport and music. All ten slots tomorrow go to whichever category received more clicks today. Today there were six sport clicks and four music clicks. Under this rule, what appears tomorrow?",
+      "options": [
+        "No sport items and ten music items",
+        "Six sport items and four music items",
+        "Ten sport items and no music items"
+      ]
+    }
+  },
+  {
+    "id": "06-v2-q10",
+    "subject": "06",
+    "optionIds": [
+      "06-v2-q10-o1",
+      "06-v2-q10-o2",
+      "06-v2-q10-o3"
+    ],
+    "zh": {
+      "question": "虚构文件系统：9:00 保存了独立快照，里面有文件 X；10:00 误删 X，删除立即同步到云端和另一台电脑；系统不保留回收站或版本历史，9:00 快照不受同步影响。哪处仍能找到误删前的 X？",
+      "options": [
+        "10:00 已同步的云端当前文件",
+        "10:00 已同步的另一台电脑",
+        "9:00 未受同步影响的独立快照"
+      ]
+    },
+    "en": {
+      "question": "A fictional file system saves an independent snapshot containing file X at 09:00. X is accidentally deleted at 10:00, and deletion immediately syncs to the cloud and another computer. There is no trash or version history; syncing does not affect the 09:00 snapshot. Where can the pre-deletion X still be found?",
+      "options": [
+        "The cloud’s current files after the 10:00 sync",
+        "The other computer after the 10:00 sync",
+        "The independent snapshot saved at 09:00"
+      ]
+    }
+  },
+  {
+    "id": "06-v2-q11",
+    "subject": "06",
+    "optionIds": [
+      "06-v2-q11-o3",
+      "06-v2-q11-o2",
+      "06-v2-q11-o1"
+    ],
+    "zh": {
+      "question": "虚构账户原来只检查密码，现在同时要求密码和手机验证器生成的一次性码。某人只拿到了密码，拿不到一次性码。按新规则，他缺少哪项？",
+      "options": [
+        "另一个不同的固定口令",
+        "手机验证器的一次性码",
+        "再次输入同一固定密码"
+      ]
+    },
+    "en": {
+      "question": "A fictional account formerly checked only a password. It now requires both the password and a one-time code from a phone authenticator. A person has the password but cannot obtain the code. What is missing under the new rule?",
+      "options": [
+        "A different additional fixed passphrase",
+        "The phone authenticator’s one-time code",
+        "Another entry of the same fixed password"
+      ]
+    }
+  },
+  {
+    "id": "06-v2-q12",
+    "subject": "06",
+    "optionIds": [
+      "06-v2-q12-o1",
+      "06-v2-q12-o2",
+      "06-v2-q12-o3"
+    ],
+    "zh": {
+      "question": "虚构来源表显示：周一收入 200 元，周二收入 250 元。AI 摘要写“周二收入比周一增加 50%”。按来源表核对，应把百分比改成多少？",
+      "options": [
+        "20%",
+        "25%",
+        "50%"
+      ]
+    },
+    "en": {
+      "question": "A fictional source table shows revenue of 200 units on Monday and 250 on Tuesday. An AI summary says, \"Tuesday revenue increased by 50% from Monday.\" After checking the table, what percentage should replace 50%?",
+      "options": [
+        "20%",
+        "25%",
+        "50%"
+      ]
+    }
+  },
+  {
+    "id": "07-q1",
+    "subject": "07",
+    "optionIds": [
+      "07-q1-o3",
+      "07-q1-o2",
+      "07-q1-o1"
+    ],
+    "zh": {
+      "question": "同一批相同纸筒的虚构测试：沿筒轴方向加压 20 牛顿时未明显变形；从筒侧面径向挤压 20 牛顿时明显压扁。材料、尺寸和施力大小相同。哪项结论与这些结果一致？",
+      "options": [
+        "只要材料相同，各方向的变形就相同",
+        "径向测试承受的总力大于轴向测试",
+        "相同材料的承载表现还与受力方向有关"
+      ]
+    },
+    "en": {
+      "question": "Fictional tests use identical paper tubes from one batch. An axial force of 20 N causes no noticeable deformation; a radial squeeze of 20 N visibly flattens the tube. Material, dimensions and force magnitude are the same. Which conclusion fits these results?",
+      "options": [
+        "The same material must deform equally in every direction",
+        "The radial test applied a greater total force",
+        "Load-bearing behaviour also depends on force direction"
+      ]
+    }
+  },
+  {
+    "id": "07-q2",
+    "subject": "07",
+    "optionIds": [
+      "07-q2-o3",
+      "07-q2-o1",
+      "07-q2-o2"
+    ],
+    "zh": {
+      "question": "在二维模型中，三根不弯曲、长度固定的杆通过可转动的铰接点组成三角框。为什么它不能只靠转动节点，就像四边框那样变成另一种形状？",
+      "options": [
+        "三角形会让各杆材料本身的硬度增加",
+        "三个固定边长已限定三角形的内部角度",
+        "可转动节点会阻止所有杆件发生转动"
+      ]
+    },
+    "en": {
+      "question": "In a two-dimensional model, three straight, fixed-length rods form a triangle with rotating pin joints. Why can it not change shape by rotating its joints the way a four-sided frame can?",
+      "options": [
+        "A triangular shape increases the hardness of the rod material",
+        "Three fixed side lengths determine the triangle’s internal angles",
+        "Rotating joints prevent every rod from rotating"
+      ]
+    }
+  },
+  {
+    "id": "07-q3",
+    "subject": "07",
+    "optionIds": [
+      "07-q3-o2",
+      "07-q3-o1",
+      "07-q3-o3"
+    ],
+    "zh": {
+      "question": "虚构材料测试用相同条件：A 的压痕硬度数值比 B 高；但相同尺寸试件冲击断裂时，A 吸收 10 焦耳，B 吸收 40 焦耳。以下哪项正确区分了这两类性能？",
+      "options": [
+        "A 的硬度更低，冲击韧性指标更高",
+        "A 的硬度更高，冲击韧性指标更低",
+        "A 的硬度更高，冲击韧性指标也更高"
+      ]
+    },
+    "en": {
+      "question": "Fictional material tests use comparable conditions. A has a higher indentation-hardness value than B. In impact fracture tests on equally sized specimens, A absorbs 10 J and B absorbs 40 J. Which statement correctly separates these properties?",
+      "options": [
+        "A has lower hardness but a higher impact-toughness indicator",
+        "A has higher hardness but a lower impact-toughness indicator",
+        "A has higher hardness and a higher impact-toughness indicator"
+      ]
+    }
+  },
+  {
+    "id": "07-q4",
+    "subject": "07",
+    "optionIds": [
+      "07-q4-o1",
+      "07-q4-o2",
+      "07-q4-o3"
+    ],
+    "zh": {
+      "question": "虚构椅子生产中，原流程每批需切换工具 20 次；分工后的流程每批只切换 2 次。每次切换都用 2 分钟，其他加工和协调时间不变。每批因切换减少而节省多少时间？",
+      "options": [
+        "4 分钟",
+        "36 分钟",
+        "40 分钟"
+      ]
+    },
+    "en": {
+      "question": "In fictional chair production, the old process changes tools 20 times per batch; a specialised process changes them twice. Every change takes 2 minutes, and all other processing and coordination times remain unchanged. How much time is saved per batch by fewer changes?",
+      "options": [
+        "4 minutes",
+        "36 minutes",
+        "40 minutes"
+      ]
+    }
+  },
+  {
+    "id": "07-v2-q05",
+    "subject": "07",
+    "optionIds": [
+      "07-v2-q05-o1",
+      "07-v2-q05-o2",
+      "07-v2-q05-o3"
+    ],
+    "zh": {
+      "question": "某固定玻璃窗受到夏季直射阳光。只以“让直射太阳辐射在穿过玻璃之前被挡住”为目标，哪项设计直接满足这个条件？",
+      "options": [
+        "把遮阳板装在窗外，覆盖受直射的玻璃",
+        "在室内桌旁装风扇，增加空气流动",
+        "在室内墙上挂画，遮住墙面装饰"
+      ]
+    },
+    "en": {
+      "question": "A fixed glass window receives direct summer sunlight. The sole objective is to intercept direct solar radiation before it passes through the glass. Which design directly meets that condition?",
+      "options": [
+        "Fit an exterior shade over the sunlit glass",
+        "Place a fan beside an indoor desk to move air",
+        "Hang artwork over the interior wall surface"
+      ]
+    }
+  },
+  {
+    "id": "07-v2-q06",
+    "subject": "07",
+    "optionIds": [
+      "07-v2-q06-o3",
+      "07-v2-q06-o2",
+      "07-v2-q06-o1"
+    ],
+    "zh": {
+      "question": "虚构零件必须同时满足：测试承载至少 300 牛顿、重量不超过 2 千克、价格不超过 60 元。A：400 牛顿、3 千克、40 元；B：350 牛顿、1.5 千克、55 元；C：250 牛顿、1 千克、30 元。哪个方案满足全部条件？",
+      "options": [
+        "方案 C",
+        "方案 B",
+        "方案 A"
+      ]
+    },
+    "en": {
+      "question": "A fictional part must meet all three limits: tested load capacity of at least 300 N, mass of at most 2 kg, and price of at most 60 units. A: 400 N, 3 kg, 40 units. B: 350 N, 1.5 kg, 55 units. C: 250 N, 1 kg, 30 units. Which meets every limit?",
+      "options": [
+        "Design C",
+        "Design B",
+        "Design A"
+      ]
+    }
+  },
+  {
+    "id": "07-v2-q07",
+    "subject": "07",
+    "optionIds": [
+      "07-v2-q07-o1",
+      "07-v2-q07-o2",
+      "07-v2-q07-o3"
+    ],
+    "zh": {
+      "question": "虚构生产线依次切割、抛光、组装，每件产品都经过三步。三步最大处理量原为每小时 12、8、10 件。切割升级到 20 件，另外两步不变。原料足够、工序间可等待且无损耗，稳定运行后的最大成品产量是多少？",
+      "options": [
+        "每小时 8 件",
+        "每小时 10 件",
+        "每小时 20 件"
+      ]
+    },
+    "en": {
+      "question": "A fictional line cuts, polishes and assembles every product in sequence. The stages originally process at most 12, 8 and 10 items per hour. Cutting is upgraded to 20; the others stay unchanged. Input is sufficient, items may wait between stages, and nothing is lost. What is the maximum steady finished output?",
+      "options": [
+        "8 items per hour",
+        "10 items per hour",
+        "20 items per hour"
+      ]
+    }
+  },
+  {
+    "id": "07-v2-q08",
+    "subject": "07",
+    "optionIds": [
+      "07-v2-q08-o2",
+      "07-v2-q08-o1",
+      "07-v2-q08-o3"
+    ],
+    "zh": {
+      "question": "受控金属件试验中，每次加载的最大应力都低于单次拉断所需的应力；反复加载后，裂纹随循环次数增长。试验排除了腐蚀和高温。哪种机制与这个过程相符？",
+      "options": [
+        "一次应力超过极限的过载损伤",
+        "反复荷载造成的疲劳损伤",
+        "化学腐蚀造成的表面损伤"
+      ]
+    },
+    "en": {
+      "question": "In a controlled metal-component test, every peak stress is below the stress needed to break it in one loading. Cracks grow over repeated load cycles. Corrosion and high temperature are excluded. Which mechanism fits this process?",
+      "options": [
+        "Overload damage from one stress above the limit",
+        "Fatigue damage from repeated loading",
+        "Surface damage from chemical corrosion"
+      ]
+    }
+  },
+  {
+    "id": "07-q9",
+    "subject": "07",
+    "optionIds": [
+      "07-q9-o3",
+      "07-q9-o2",
+      "07-q9-o1"
+    ],
+    "zh": {
+      "question": "两种虚构内墙材料寿命及使用效果相同，都用五年后更换。A 购置 1,000 元，每年维护 200 元；B 购置 1,400 元，每年维护 50 元。忽略折现及其他费用，五年总成本哪个更低，低多少？",
+      "options": [
+        "B 更低，低 750 元",
+        "B 更低，低 350 元",
+        "A 更低，低 400 元"
+      ]
+    },
+    "en": {
+      "question": "Two fictional wall materials have the same lifespan and performance and are replaced after five years. A costs 1,000 units initially plus 200 a year to maintain. B costs 1,400 plus 50 a year. Ignore discounting and other costs. Which has the lower five-year total, and by how much?",
+      "options": [
+        "B is lower by 750 units",
+        "B is lower by 350 units",
+        "A is lower by 400 units"
+      ]
+    }
+  },
+  {
+    "id": "07-q10",
+    "subject": "07",
+    "optionIds": [
+      "07-q10-o2",
+      "07-q10-o3",
+      "07-q10-o1"
+    ],
+    "zh": {
+      "question": "虚构接头质检中，检查甲只发现外观缺陷，检查乙只发现内部缺陷，两者范围不重叠且都用时间。若删掉乙而保留甲，也不加其他检查，会出现哪项变化？",
+      "options": [
+        "检查时间减少，内部缺陷不再由该流程检出",
+        "检查时间减少，外观缺陷不再由该流程检出",
+        "检查时间减少，原有两类缺陷仍都能检出"
+      ]
+    },
+    "en": {
+      "question": "In fictional joint inspection, Check A detects only visible defects and Check B only internal defects. Their scopes do not overlap and both take time. If B is removed while A stays, with no replacement check, what changes?",
+      "options": [
+        "Inspection takes less time and no longer detects internal defects",
+        "Inspection takes less time and no longer detects visible defects",
+        "Inspection takes less time and still detects both defect types"
+      ]
+    }
+  },
+  {
+    "id": "07-q11",
+    "subject": "07",
+    "optionIds": [
+      "07-q11-o1",
+      "07-q11-o2",
+      "07-q11-o3"
+    ],
+    "zh": {
+      "question": "简化设备只有两个独立部件，整个设备要运行，两个都必须正常。每个部件在同一时段正常的概率都是 99%。设备在这个时段正常的概率是多少？",
+      "options": [
+        "98.01%",
+        "99.00%",
+        "99.99%"
+      ]
+    },
+    "en": {
+      "question": "A simplified device has two independent components. Both must work for the device to function. Each has a 99% probability of working during the same period. What is the device’s probability of working during that period?",
+      "options": [
+        "98.01%",
+        "99.00%",
+        "99.99%"
+      ]
+    }
+  },
+  {
+    "id": "07-q12",
+    "subject": "07",
+    "optionIds": [
+      "07-q12-o1",
+      "07-q12-o2",
+      "07-q12-o3"
+    ],
+    "zh": {
+      "question": "虚构扩路调查中，人口和其他道路车流不变。新增的 200 次驾车出行来自原先乘公交或步行的人；他们记录的改乘原因是道路通行更快。哪种解释直接对应这些记录？",
+      "options": [
+        "道路间改道把原有车辆移到这里",
+        "新居民增加带来了更多驾车需求",
+        "通行条件改善增加了驾车需求"
+      ]
+    },
+    "en": {
+      "question": "In a fictional road-widening survey, population and traffic on other roads stay unchanged. The additional 200 car trips come from people who previously took transit or walked; they record faster road travel as their reason for switching. Which explanation directly matches these records?",
+      "options": [
+        "Rerouting moved existing car trips from other roads",
+        "New residents created additional driving demand",
+        "Improved travel conditions generated additional driving demand"
+      ]
+    }
+  },
+  {
+    "id": "08-q1",
+    "subject": "08",
+    "optionIds": [
+      "08-q1-a",
+      "08-q1-c",
+      "08-q1-b"
+    ],
+    "zh": {
+      "question": "教学试验中，温室把同一品种番茄随机分成两组，光照、水、温度和授粉条件相同。高氮组枝叶更旺，但整个试验期形成的果实更少。哪种解释与这组结果及氮的作用相符？",
+      "options": [
+        "高氮更促进枝叶，没有提高结果",
+        "高氮更限制枝叶，降低了结果",
+        "高氮更促进开花，提高了结果"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial, a greenhouse randomly assigns the same tomato variety to two groups with equal light, water, temperature and pollination. The higher-nitrogen group grows more foliage but forms fewer fruits over the whole trial. Which explanation fits the results and nitrogen’s role?",
+      "options": [
+        "Higher nitrogen favored foliage without improving fruit production",
+        "Higher nitrogen restricted foliage and reduced fruit production",
+        "Higher nitrogen favored flowering and improved fruit production"
+      ]
+    }
+  },
+  {
+    "id": "08-q2",
+    "subject": "08",
+    "optionIds": [
+      "08-q2-a",
+      "08-q2-b",
+      "08-q2-c"
+    ],
+    "zh": {
+      "question": "一块湿地被重型拖拉机碾过。轮迹里的土更密实，大孔隙更少，雨水渗入也更慢。哪个变化最直接解释入渗变慢？",
+      "options": [
+        "土粒间的大孔隙增加了",
+        "土粒间的大孔隙减少了",
+        "土粒本身的体积缩小了"
+      ]
+    },
+    "en": {
+      "question": "Heavy tractor traffic leaves wet soil denser, with fewer large pores and slower rainwater infiltration. Which change most directly explains the slower infiltration?",
+      "options": [
+        "The large spaces between soil particles increased",
+        "The large spaces between soil particles decreased",
+        "The soil particles themselves shrank in volume"
+      ]
+    }
+  },
+  {
+    "id": "08-q3",
+    "subject": "08",
+    "optionIds": [
+      "08-q3-a",
+      "08-q3-c",
+      "08-q3-b"
+    ],
+    "zh": {
+      "question": "教学案例给定：某害虫在本地土中越冬，移动距离有限；它能在番茄、马铃薯上繁殖，不能在豆类上繁殖。去年种番茄的田，今年种哪项最能中断它在这块田里的寄主供应？",
+      "options": [
+        "换一个番茄品种",
+        "改种豆类作物",
+        "改种马铃薯"
+      ]
+    },
+    "en": {
+      "question": "A teaching case specifies that a pest overwinters locally and travels only short distances. It reproduces on tomatoes and potatoes, but not on beans. After tomatoes last year, which crop best interrupts its host supply in this field?",
+      "options": [
+        "A different tomato variety",
+        "A crop of beans",
+        "A crop of potatoes"
+      ]
+    }
+  },
+  {
+    "id": "08-q4",
+    "subject": "08",
+    "optionIds": [
+      "08-q4-a",
+      "08-q4-b",
+      "08-q4-c"
+    ],
+    "zh": {
+      "question": "一个共享渔场有10艘船。教学案例规定，这一年总捕捞量不得超过100吨。以下三项都能执行且都有可靠记录，哪项能保证总量不越过100吨？",
+      "options": [
+        "每船全年分别最多捕15吨",
+        "全场合计达100吨即停捕",
+        "每船全年捕捞天数减半"
+      ]
+    },
+    "en": {
+      "question": "Ten boats share a fishery. In this teaching case, total catch must stay at or below 100 tonnes for the year. Each rule below is enforceable and recorded reliably. Which guarantees that total catch stays within 100 tonnes?",
+      "options": [
+        "Limit each boat’s annual catch to 15 tonnes",
+        "Stop all fishing at a combined annual catch of 100 tonnes",
+        "Cut each boat’s annual fishing days in half"
+      ]
+    }
+  },
+  {
+    "id": "08-q5",
+    "subject": "08",
+    "optionIds": [
+      "08-q5-c",
+      "08-q5-b",
+      "08-q5-a"
+    ],
+    "zh": {
+      "question": "教学试验中，牧场在热浪期间随机把条件相近的奶牛分为两组，饲料配方、充足饮水和挤奶安排相同。唯一管理差别是一组有遮阴和降温设施，另一组没有；降温组呼吸较平稳、产奶下降较少。这最支持核查哪种机制？",
+      "options": [
+        "散热受限带来的热应激差异",
+        "挤奶减少带来的记录数量差异",
+        "配方改变带来的营养摄入差异"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial during a heatwave, a farm randomly divides comparable cows into two groups with the same feed formula, ample water and milking schedule. The only management difference is that one group has shade and cooling. The cooled group breathes more steadily and has a smaller drop in milk production. Which mechanism do these results support investigating?",
+      "options": [
+        "A heat-stress difference from restricted heat loss",
+        "A recording gap from changed milking frequency",
+        "A nutritional gap from changed feed formulas"
+      ]
+    }
+  },
+  {
+    "id": "08-q6",
+    "subject": "08",
+    "optionIds": [
+      "08-q6-b",
+      "08-q6-c",
+      "08-q6-a"
+    ],
+    "zh": {
+      "question": "一个拥挤的人工林要保留主要树木，同时减少它们对光和水的竞争。管理者选择性移除部分相邻树木，其他条件暂不变。这个动作最直接改变了什么？",
+      "options": [
+        "所有树木的根系遗传特征",
+        "林地每年的降雨供应总量",
+        "保留树木周围的资源竞争"
+      ]
+    },
+    "en": {
+      "question": "A crowded plantation aims to retain its main trees while reducing their competition for light and water. Managers selectively remove some neighboring trees, with other conditions unchanged. What does this action change most directly?",
+      "options": [
+        "The inherited root traits of every tree",
+        "The total annual rainfall reaching the region",
+        "Resource competition around the retained trees"
+      ]
+    }
+  },
+  {
+    "id": "08-q7",
+    "subject": "08",
+    "optionIds": [
+      "08-q7-c",
+      "08-q7-b",
+      "08-q7-a"
+    ],
+    "zh": {
+      "question": "教学案例中，两个作物品种正常年亩产相同。病害X使品种A减产60%、B减产10%；病害Y恰好相反。混种时两品种各占一半，损失按面积相加，病害传播不因混种改变。若只防范这两种病害中的较大损失，哪个方案更合适？",
+      "options": [
+        "A占50%，B占50%",
+        "A占0%，B占100%",
+        "A占100%，B占0%"
+      ]
+    },
+    "en": {
+      "question": "In a teaching case, two crop varieties have the same normal yield per hectare. Disease X reduces A’s yield by 60% and B’s by 10%; disease Y reverses those losses. A mixture allocates half the area to each, losses add by area, and mixing does not alter disease spread. Which plan minimizes the larger loss across these two diseases?",
+      "options": [
+        "A: 50%; B: 50%",
+        "A: 0%; B: 100%",
+        "A: 100%; B: 0%"
+      ]
+    }
+  },
+  {
+    "id": "08-v2-q08",
+    "subject": "08",
+    "optionIds": [
+      "08-v2-q08-a",
+      "08-v2-q08-b",
+      "08-v2-q08-c"
+    ],
+    "zh": {
+      "question": "一个简化鱼群模型从1000吨开始。假定这一年出生和生长减去自然死亡后净增加200吨，捕捞300吨，没有迁入迁出。模型中的年末鱼群是多少？",
+      "options": [
+        "900吨",
+        "1000吨",
+        "1100吨"
+      ]
+    },
+    "en": {
+      "question": "A simplified fish-stock model starts with 1,000 tonnes. For this year, births and growth minus natural deaths add a net 200 tonnes; fishing removes 300 tonnes, with no migration. What is the year-end stock in the model?",
+      "options": [
+        "900 tonnes",
+        "1,000 tonnes",
+        "1,100 tonnes"
+      ]
+    }
+  },
+  {
+    "id": "08-q9",
+    "subject": "08",
+    "optionIds": [
+      "08-q9-a",
+      "08-q9-b",
+      "08-q9-c"
+    ],
+    "zh": {
+      "question": "一种果树需要花粉转移才能正常结果。果园发现昆虫访花变少。教学试验将条件相近的花随机分组，只给一组补充合适花粉；该组结果率明显高于未补充组。哪一环节受限最获这项试验支持？",
+      "options": [
+        "花朵接收到的花粉不足",
+        "树根吸收的水分不足",
+        "树叶接收到的光照不足"
+      ]
+    },
+    "en": {
+      "question": "A fruit tree needs pollen transfer for normal fruit set. An orchard notices fewer insect visits. In a teaching trial, comparable flowers are randomly assigned to groups; only one group receives extra suitable pollen, and it sets more fruit. Which limitation is most supported by this trial?",
+      "options": [
+        "Too little pollen reaching the flowers",
+        "Too little water reaching the roots",
+        "Too little light reaching the leaves"
+      ]
+    }
+  },
+  {
+    "id": "08-q10",
+    "subject": "08",
+    "optionIds": [
+      "08-q10-a",
+      "08-q10-c",
+      "08-q10-b"
+    ],
+    "zh": {
+      "question": "犬只照护记录显示：食物和饮水充足，住所舒适，体检正常，但全天关在小空间，无法走动、嗅闻或与人互动。按动物福利的多维标准，哪项需要最直接的补充评估？",
+      "options": [
+        "食物营养是否满足",
+        "正常行为是否受限",
+        "住所温度是否适宜"
+      ]
+    },
+    "en": {
+      "question": "A dog-care record shows adequate food and water, comfortable housing and normal veterinary checks. However, the dog spends all day confined without opportunities to move, sniff or interact. Under a multidimensional view of welfare, which area most directly needs further assessment?",
+      "options": [
+        "Whether food meets nutritional needs",
+        "Whether normal behavior is restricted",
+        "Whether housing provides thermal comfort"
+      ]
+    }
+  },
+  {
+    "id": "08-q11",
+    "subject": "08",
+    "optionIds": [
+      "08-q11-a",
+      "08-q11-b",
+      "08-q11-c"
+    ],
+    "zh": {
+      "question": "在一类历史上有频繁地表火的干燥混交针叶林中，长期抑火后，枯枝、灌木和低矮枝条增多。它们从地面连续连接到树冠。保持天气和地形相同时，这种“梯状燃料”最直接增加哪种可能？",
+      "options": [
+        "地表火向树冠蔓延",
+        "树冠火因间距增大而减弱",
+        "地下火因土壤变湿而停止"
+      ]
+    },
+    "en": {
+      "question": "In a dry mixed-conifer forest historically shaped by frequent surface fires, long fire suppression is followed by more dead branches, shrubs and low branches. These form a continuous path from the ground to the canopy. With weather and terrain unchanged, what do these “ladder fuels” most directly make more likely?",
+      "options": [
+        "A surface fire spreading into tree crowns",
+        "A crown fire weakening because tree spacing increases",
+        "A ground fire stopping because soil becomes wetter"
+      ]
+    }
+  },
+  {
+    "id": "08-v2-q12",
+    "subject": "08",
+    "optionIds": [
+      "08-v2-q12-a",
+      "08-v2-q12-b",
+      "08-v2-q12-c"
+    ],
+    "zh": {
+      "question": "一个地区按固定数量购买粮食，原来总支出100万元，其中70万元用于进口粮、30万元用于本地粮。教学案例中，进口粮价格上涨20%，本地粮价格和购买数量不变。新总支出是多少？",
+      "options": [
+        "110万元",
+        "114万元",
+        "120万元"
+      ]
+    },
+    "en": {
+      "question": "A region buys a fixed quantity of grain. Its original bill is 1 million yuan: 700,000 for imports and 300,000 for local grain. In this teaching case, import prices rise 20%, while local prices and all quantities stay unchanged. What is the new total bill?",
+      "options": [
+        "1.10 million yuan",
+        "1.14 million yuan",
+        "1.20 million yuan"
+      ]
+    }
+  },
+  {
+    "id": "09-q1",
+    "subject": "09",
+    "optionIds": [
+      "09-q1-b",
+      "09-q1-a",
+      "09-q1-c"
+    ],
+    "zh": {
+      "question": "口腔卫生宣传页强调“轻柔而完整地清洁牙面”，而不是用出血表示刷干净。哪种做法与这项原则一致？",
+      "options": [
+        "保持轻柔力度，清洁各个牙面",
+        "增加刷牙力度，直到牙龈出血",
+        "缩短清洁时间，只刷看得见处"
+      ]
+    },
+    "en": {
+      "question": "An oral-hygiene leaflet emphasizes gentle, thorough cleaning of tooth surfaces rather than using bleeding as a sign of success. Which approach fits this principle?",
+      "options": [
+        "Use gentle pressure and clean each tooth surface",
+        "Increase brushing pressure until the gums bleed",
+        "Shorten brushing time and clean only visible surfaces"
+      ]
+    }
+  },
+  {
+    "id": "09-q2",
+    "subject": "09",
+    "optionIds": [
+      "09-q2-a",
+      "09-q2-c",
+      "09-q2-b"
+    ],
+    "zh": {
+      "question": "一个教学试验中，同一组成年人随机交替在睡前喝含咖啡因或不含咖啡因的相同饮品，睡眠时间和其他条件相近。含咖啡因的夜晚平均入睡较慢。哪项结论最符合试验范围？",
+      "options": [
+        "这组人在这些条件下，咖啡因与入睡变慢有关",
+        "这组人的入睡差异证明，咖啡因减少了所需睡眠",
+        "这组人在这些条件下，咖啡因与入睡变快有关"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial, the same adults drink otherwise identical caffeinated or caffeine-free drinks before bed in a randomly varied order, with similar sleep schedules and other conditions. They take longer to fall asleep on caffeinated nights on average. Which conclusion fits the trial’s scope?",
+      "options": [
+        "Under these conditions, caffeine was linked to slower sleep onset in this group",
+        "The difference shows that caffeine reduced this group’s need for sleep",
+        "Under these conditions, caffeine was linked to faster sleep onset in this group"
+      ]
+    }
+  },
+  {
+    "id": "09-q3",
+    "subject": "09",
+    "optionIds": [
+      "09-q3-b",
+      "09-q3-a",
+      "09-q3-c"
+    ],
+    "zh": {
+      "question": "一位没有伤病、久未运动的成年人想从轻松步行开始。以下哪个安排体现“先从少量开始，再逐步增加”的原则？",
+      "options": [
+        "先增加少量时长，再观察是否适应",
+        "先把时长加倍，再同步加快步速",
+        "先改为高强度运动，再补上休息"
+      ]
+    },
+    "en": {
+      "question": "An adult with no injury or illness has been inactive for a long time and wants to begin with easy walking. Which plan follows the principle of starting with a small amount and increasing gradually?",
+      "options": [
+        "Add a little duration first and check how well it is tolerated",
+        "Double the duration first and increase speed at the same time",
+        "Switch to vigorous activity first and add rest afterward"
+      ]
+    }
+  },
+  {
+    "id": "09-q4",
+    "subject": "09",
+    "optionIds": [
+      "09-q4-b",
+      "09-q4-a",
+      "09-q4-c"
+    ],
+    "zh": {
+      "question": "一份呼吸道病毒教学材料指出：感染性颗粒可在室内共享空气中传播。增加合适的新风交换，最直接作用于哪一环节？",
+      "options": [
+        "减少共享空气中的颗粒积聚",
+        "减少手与桌面的接触次数",
+        "减少人们识别症状的时间"
+      ]
+    },
+    "en": {
+      "question": "A teaching note on respiratory viruses explains that infectious particles can spread through shared indoor air. Increasing suitable fresh-air exchange most directly affects which part of this pathway?",
+      "options": [
+        "How much infectious material accumulates in shared air",
+        "How often hands make contact with desks",
+        "How long people take to recognize their symptoms"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q05",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q05-a",
+      "09-v2-q05-c",
+      "09-v2-q05-b"
+    ],
+    "zh": {
+      "question": "实验室报告说“从样本中培养出的细菌对抗生素A耐药”。这里的“耐药”描述的是谁对什么的抵抗能力？",
+      "options": [
+        "细菌对抗生素A作用的抵抗",
+        "病毒对抗生素A作用的抵抗",
+        "人体对抗生素A作用的耐受"
+      ]
+    },
+    "en": {
+      "question": "A laboratory report says, “The bacteria cultured from the sample are resistant to antibiotic A.” Whose resistance to what does this describe?",
+      "options": [
+        "The bacteria’s resistance to the action of antibiotic A",
+        "The viruses’ resistance to the action of antibiotic A",
+        "The person’s tolerance to the action of antibiotic A"
+      ]
+    }
+  },
+  {
+    "id": "09-q6",
+    "subject": "09",
+    "optionIds": [
+      "09-q6-c",
+      "09-q6-b",
+      "09-q6-a"
+    ],
+    "zh": {
+      "question": "一位居民需要定期复诊，家到门诊只有一班公交，9:20到达；必须提前10分钟签到。门诊目前只给9:00预约，居民无法换交通方式。哪项服务调整直接消除这个时间障碍？",
+      "options": [
+        "把9:00预约提前一天提醒",
+        "把预约改到当天9:40",
+        "把预约改到当天8:30"
+      ]
+    },
+    "en": {
+      "question": "A resident needs regular follow-up visits. The only bus from home reaches the clinic at 9:20, and check-in is required 10 minutes before the appointment. The clinic currently offers only 9:00 slots, and the resident cannot change transport. Which service change directly removes this timing barrier?",
+      "options": [
+        "Send a reminder a day before the 9:00 appointment",
+        "Move the appointment to 9:40 that day",
+        "Move the appointment to 8:30 that day"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q07",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q07-c",
+      "09-v2-q07-a",
+      "09-v2-q07-b"
+    ],
+    "zh": {
+      "question": "某种病原可从受污染的门把手转移到手，再通过进食进入口中。进食前清洁双手，最直接打断哪一段转移？",
+      "options": [
+        "病原从手转移到口中",
+        "病原从空气进入呼吸道",
+        "病原从饮水源进入管道"
+      ]
+    },
+    "en": {
+      "question": "A pathogen can pass from a contaminated door handle to a hand and then enter the mouth during eating. Cleaning hands before eating most directly interrupts which transfer?",
+      "options": [
+        "The pathogen moving from the hand into the mouth",
+        "The pathogen moving from air into the airway",
+        "The pathogen moving from a water source into pipes"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q08",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q08-c",
+      "09-v2-q08-a",
+      "09-v2-q08-b"
+    ],
+    "zh": {
+      "question": "交接单已写明患者概况和当前状态，还写着“今天有一项检查结果待回报”，却没写谁接收、何时核对。为使这项未完成任务可追踪，最应补充哪类信息？",
+      "options": [
+        "检查的申请理由与既往结果",
+        "检查的负责人员与核对时限",
+        "患者的住院日期与病房号码"
+      ]
+    },
+    "en": {
+      "question": "A handoff already includes the patient summary and current condition. It says, “A test result is still pending today,” but does not identify who will receive it or when it will be checked. What information is needed to make this unfinished task traceable?",
+      "options": [
+        "The reason for requesting the test and previous results",
+        "The responsible person and the deadline for checking",
+        "The admission date and the patient’s room number"
+      ]
+    }
+  },
+  {
+    "id": "09-q9",
+    "subject": "09",
+    "optionIds": [
+      "09-q9-b",
+      "09-q9-a",
+      "09-q9-c"
+    ],
+    "zh": {
+      "question": "活动应用希望奖励规律活动，同时不让用户为了连续记录而违反已获得的休息建议。用户可标记“按专业建议暂停”。哪个规则最符合这两个目标？",
+      "options": [
+        "暂停日可登记休息安排，保留连续照护记录",
+        "暂停日仍须完成运动量，才能保留连续记录",
+        "暂停日删除全部历史，让用户重新开始记录"
+      ]
+    },
+    "en": {
+      "question": "An activity app wants to reward regular activity without encouraging users to disregard advice they have received to rest. A user can mark “pause as professionally advised.” Which rule best serves both goals?",
+      "options": [
+        "Allow the rest plan to be logged on pause days to keep a care streak",
+        "Require the usual activity target on pause days to keep the streak",
+        "Delete the full history on pause days so tracking must restart"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q10",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q10-a",
+      "09-v2-q10-b",
+      "09-v2-q10-c"
+    ],
+    "zh": {
+      "question": "一个预防项目的教学数据中，两组各1000人，观察一年：参加组有30个新病例，对照组有50个。这里只比较这份记录中的新病例人数，参加组少了多少？",
+      "options": [
+        "20个",
+        "30个",
+        "40个"
+      ]
+    },
+    "en": {
+      "question": "Teaching data for a prevention program follow two groups of 1,000 people for one year. There are 30 new cases in the program group and 50 in the comparison group. Comparing only the recorded case counts, how many fewer cases are in the program group?",
+      "options": [
+        "20 cases",
+        "30 cases",
+        "40 cases"
+      ]
+    }
+  },
+  {
+    "id": "09-q11",
+    "subject": "09",
+    "optionIds": [
+      "09-q11-a",
+      "09-q11-b",
+      "09-q11-c"
+    ],
+    "zh": {
+      "question": "教学用心率设备规定：每次真实值最多比读数高或低3次/分。两次读数是78和80次/分。只依据这一规定，两次真实值若相同，这个共同值可能落在哪一段？",
+      "options": [
+        "75–76次/分",
+        "77–81次/分",
+        "82–83次/分"
+      ]
+    },
+    "en": {
+      "question": "A teaching heart-rate device specifies that each true value can be at most 3 beats/min above or below its reading. Two readings are 78 and 80 beats/min. Based only on this rule, if both true values were the same, where could that shared value lie?",
+      "options": [
+        "75–76 beats/min",
+        "77–81 beats/min",
+        "82–83 beats/min"
+      ]
+    }
+  },
+  {
+    "id": "09-q12",
+    "subject": "09",
+    "optionIds": [
+      "09-q12-a",
+      "09-q12-b",
+      "09-q12-c"
+    ],
+    "zh": {
+      "question": "互助小组的成员说：“大家认真听我讲困难，我感觉被理解、没那么孤独了。”记录没有提供金钱、实物援助或专业治疗。哪类支持已由这段记录直接体现？",
+      "options": [
+        "提供钱物的实际支持",
+        "提供诊疗的医疗支持",
+        "倾听理解的情感支持"
+      ]
+    },
+    "en": {
+      "question": "A support-group member says, “People listened carefully to my difficulties, and I felt understood and less lonely.” The record shows no money, material help or professional treatment. Which type of support is directly demonstrated?",
+      "options": [
+        "Practical support through money or goods",
+        "Clinical support through assessment or treatment",
+        "Emotional support through listening and understanding"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q01",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q01-c",
+      "10-v2-q01-b",
+      "10-v2-q01-a"
+    ],
+    "zh": {
+      "question": "疲惫的住客第一次到酒店，主要困难是找不到前台和电梯，需要反复问路。酒店只能先提供一张纸质指引。哪种内容最直接解决这项需求？",
+      "options": [
+        "房间电器的完整使用说明",
+        "前台与电梯的简明路线图",
+        "酒店设施和各自营业时间表"
+      ]
+    },
+    "en": {
+      "question": "Tired guests arrive at a hotel for the first time. Their main difficulty is locating reception and the lifts, so they repeatedly ask for directions. The hotel can initially provide one paper guide. Which content most directly addresses this need?",
+      "options": [
+        "A complete manual for the room appliances",
+        "A simple route map to reception and the lifts",
+        "A list of hotel facilities and opening hours"
+      ]
+    }
+  },
+  {
+    "id": "10-q2",
+    "subject": "10",
+    "optionIds": [
+      "10-q2-a",
+      "10-q2-c",
+      "10-q2-b"
+    ],
+    "zh": {
+      "question": "大厅的光滑地板已经清洁，但刚才仍有一层水膜，区域已隔离并放了湿滑警示。管理者要复查湿滑风险源是否已经消除，哪项检查最直接？",
+      "options": [
+        "清洁作业是否登记完成",
+        "地板表面是否仍有水膜",
+        "湿滑警示是否摆在原处"
+      ]
+    },
+    "en": {
+      "question": "A smooth lobby floor has been cleaned, but it recently still had a film of water. The area is closed off and marked with wet-floor signs. To check whether the slip hazard itself has been removed, which observation is most direct?",
+      "options": [
+        "Whether the cleaning job is logged as completed",
+        "Whether a film of water remains on the floor",
+        "Whether the warning sign is still in its original position"
+      ]
+    }
+  },
+  {
+    "id": "10-q3",
+    "subject": "10",
+    "optionIds": [
+      "10-q3-b",
+      "10-q3-c",
+      "10-q3-a"
+    ],
+    "zh": {
+      "question": "两位客人约定套餐先上汤、再上主菜，同一道菜必须同桌同步；汤应在18:30–18:40、主菜在18:50–19:00上桌。以下时间均能由厨房实现。哪项安排符合承诺？",
+      "options": [
+        "两人汤18:55，主菜18:35",
+        "一人汤18:35，另一人汤18:45；两人主菜18:55",
+        "两人汤18:35，主菜18:55"
+      ]
+    },
+    "en": {
+      "question": "Two guests have agreed that soup comes before the main course and that each course is served to both guests together. Soup must arrive at 18:30–18:40 and the main at 18:50–19:00. The kitchen can achieve all the schedules below. Which meets the agreement?",
+      "options": [
+        "Soup for both at 18:55; mains for both at 18:35",
+        "Soup at 18:35 for one and 18:45 for the other; mains for both at 18:55",
+        "Soup for both at 18:35; mains for both at 18:55"
+      ]
+    }
+  },
+  {
+    "id": "10-q4",
+    "subject": "10",
+    "optionIds": [
+      "10-q4-a",
+      "10-q4-b",
+      "10-q4-c"
+    ],
+    "zh": {
+      "question": "一个检查站只有一条处理通道，已持续满负荷。每人占用通道60秒，其中40秒用于按说明准备物品、20秒用于检查。若准备可完整移到排队区且不减慢检查，哪项最能减少通道占用时间？",
+      "options": [
+        "把40秒准备环节提前到排队区",
+        "把20秒检查环节移到通道出口",
+        "把等候区座椅数量增加一倍"
+      ]
+    },
+    "en": {
+      "question": "A checkpoint has one processing lane that is continuously busy. Each person occupies it for 60 seconds: 40 preparing items from instructions and 20 for the check. Preparation can be fully completed in the waiting area without slowing the check. Which change most reduces time occupying the lane?",
+      "options": [
+        "Complete preparation before entering the processing lane",
+        "Complete the check just beyond the processing lane exit",
+        "Provide extra waiting seats before the processing lane"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q05",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q05-a",
+      "10-v2-q05-b",
+      "10-v2-q05-c"
+    ],
+    "zh": {
+      "question": "游乐设施下一轮固定有30个座位。开门前已有20位优先票客人、25位普通票客人等待，此后无人加入；每人用一个座位，都愿意乘坐。无论先放哪队，一轮后至少还有几人等待？",
+      "options": [
+        "10人",
+        "15人",
+        "25人"
+      ]
+    },
+    "en": {
+      "question": "An attraction has exactly 30 seats for its next round. Before boarding, 20 priority-ticket guests and 25 regular-ticket guests are waiting. No one else joins; each uses one seat and wants to ride. Regardless of which queue boards first, at least how many remain after one round?",
+      "options": [
+        "10 people",
+        "15 people",
+        "25 people"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q06",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q06-b",
+      "10-v2-q06-a",
+      "10-v2-q06-c"
+    ],
+    "zh": {
+      "question": "配送试点各运100件包裹。承诺至少95件准时，且最多2件受损：东线为97件准时、4件受损；西线为95件准时、2件受损；南线为93件准时、1件受损。哪条线路同时达标？",
+      "options": [
+        "西线",
+        "东线",
+        "南线"
+      ]
+    },
+    "en": {
+      "question": "Each delivery route handles 100 parcels. The promise is at least 95 on time and no more than 2 damaged. The East route delivers 97 on time with 4 damaged; West delivers 95 on time with 2 damaged; South delivers 93 on time with 1 damaged. Which route meets both requirements?",
+      "options": [
+        "West route",
+        "East route",
+        "South route"
+      ]
+    }
+  },
+  {
+    "id": "10-q7",
+    "subject": "10",
+    "optionIds": [
+      "10-q7-a",
+      "10-q7-b",
+      "10-q7-c"
+    ],
+    "zh": {
+      "question": "酒店自动退款系统只接受已退房且付款记录齐全的订单。客人符合退款条件，但付款记录因故缺失，表单不能提交；条款允许人工核验，却没有入口。要使现有例外规则能执行，流程缺哪个环节？",
+      "options": [
+        "增加一个重复填写的自动表单",
+        "增加付款记录齐全时的即时退款",
+        "增加提交材料给人工核验的通道"
+      ]
+    },
+    "en": {
+      "question": "A hotel’s automated refund form accepts only checked-out bookings with complete payment records. A guest is eligible, but a missing payment record blocks submission. The terms allow manual verification, yet there is no route to request it. Which missing step would make the existing exception rule usable?",
+      "options": [
+        "A second automated form requiring the same complete record",
+        "An instant refund for bookings with complete payment records",
+        "A route to submit evidence for manual verification"
+      ]
+    }
+  },
+  {
+    "id": "10-q8",
+    "subject": "10",
+    "optionIds": [
+      "10-q8-a",
+      "10-q8-b",
+      "10-q8-c"
+    ],
+    "zh": {
+      "question": "教学航班表中，同一架飞机原定10:00到达、10:40再起飞，必要周转固定30分钟。它实际10:25到达，其他条件都准备好且不能换飞机。下一班最早比计划晚几分钟？",
+      "options": [
+        "10分钟",
+        "15分钟",
+        "25分钟"
+      ]
+    },
+    "en": {
+      "question": "In a teaching flight schedule, the same aircraft is due to arrive at 10:00 and depart again at 10:40. Required turnaround is fixed at 30 minutes. It actually arrives at 10:25; everything else is ready, and no replacement aircraft is available. What is the earliest departure delay relative to the plan?",
+      "options": [
+        "10 minutes",
+        "15 minutes",
+        "25 minutes"
+      ]
+    }
+  },
+  {
+    "id": "10-q9",
+    "subject": "10",
+    "optionIds": [
+      "10-q9-b",
+      "10-q9-a",
+      "10-q9-c"
+    ],
+    "zh": {
+      "question": "访客明确说无法听清口头说明，但能阅读文字。服务标准要求把领取地点、所需材料和截止时间全部说明。哪种调整既保留标准，又回应这位访客的需要？",
+      "options": [
+        "用同一句口头说明反复朗读",
+        "把相同三项信息写在纸上提供",
+        "只写领取地点，省去另外两项"
+      ]
+    },
+    "en": {
+      "question": "A visitor says they cannot hear spoken instructions clearly but can read text. The service standard requires the collection location, required documents and deadline to be explained. Which adjustment preserves the standard and addresses this visitor’s need?",
+      "options": [
+        "Repeat the same spoken instructions several times",
+        "Provide the same three pieces of information in writing",
+        "Write only the collection location and omit the other details"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q10",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q10-a",
+      "10-v2-q10-b",
+      "10-v2-q10-c"
+    ],
+    "zh": {
+      "question": "一份教学出行记录中，网约车当天载客行驶800公里、空驶200公里；这些行程恰好替代原本600公里的私家车行驶，其余道路行驶不变。相比没有这些网约车行程，道路车辆行驶增加多少？",
+      "options": [
+        "200公里",
+        "400公里",
+        "1000公里"
+      ]
+    },
+    "en": {
+      "question": "In a teaching travel record, ride-hailing vehicles drive 800 km with passengers and 200 km empty in one day. These trips replace exactly 600 km of private-car driving; all other road travel stays unchanged. How much additional vehicle distance is traveled compared with having none of these ride-hailing trips?",
+      "options": [
+        "200 km",
+        "400 km",
+        "1,000 km"
+      ]
+    }
+  },
+  {
+    "id": "10-q11",
+    "subject": "10",
+    "optionIds": [
+      "10-q11-c",
+      "10-q11-a",
+      "10-q11-b"
+    ],
+    "zh": {
+      "question": "同一场馆进行了两次相同人数、相同情景的教学应急演练。改进交接流程后，模拟响应时间从8分钟变为5分钟，漏传信息从6项变为1项。哪项结论被这些记录直接支持？",
+      "options": [
+        "该演练响应更快、漏传更少",
+        "该场馆真实灾害发生率下降",
+        "未测过的应急情景响应变快"
+      ]
+    },
+    "en": {
+      "question": "The same venue runs two teaching emergency exercises with the same number of participants and the same scenario. After revising its handoff process, simulated response time falls from 8 to 5 minutes and missed information items from 6 to 1. Which conclusion is directly supported by these records?",
+      "options": [
+        "Recorded response and handoffs improved in this drill",
+        "Real disasters became less frequent at this venue",
+        "Responses became faster in untested emergency scenarios"
+      ]
+    }
+  },
+  {
+    "id": "10-q12",
+    "subject": "10",
+    "optionIds": [
+      "10-q12-c",
+      "10-q12-a",
+      "10-q12-b"
+    ],
+    "zh": {
+      "question": "活动入口的书面路线把访客引向东侧大厅，广播却说活动在西侧大厅；两处各自清楚，但访客不断折返。为了消除这项矛盾，最应联合核对哪两个服务触点？",
+      "options": [
+        "背景音乐与灯光颜色",
+        "书面路线与位置广播",
+        "门票价格与优惠规则"
+      ]
+    },
+    "en": {
+      "question": "An event’s written entrance directions send visitors to the east hall, while the announcement says the event is in the west hall. Each is individually clear, but visitors keep turning back. Which two service touchpoints should be checked together to resolve this conflict?",
+      "options": [
+        "The background music and entrance lighting",
+        "Written directions and spoken venue directions",
+        "The ticket-pricing display and discount announcements"
+      ]
+    }
+  }
+]

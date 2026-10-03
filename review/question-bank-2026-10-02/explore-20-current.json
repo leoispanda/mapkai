@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "lens-001",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "digital_life",
+    "zh": {
+      "question": "为什么很多人知道要少刷手机，却还是停不下来？",
+      "options": {
+        "A": "信息流不断降低继续看的阻力。",
+        "B": "短内容不断制造即时反馈。",
+        "C": "疲惫时更容易选择低成本刺激。",
+        "D": "缺少更好的替代休息方式。"
+      }
+    },
+    "en": {
+      "question": "Why do many people keep scrolling even when they know they should stop?",
+      "options": {
+        "A": "Feeds keep reducing the friction to continue.",
+        "B": "Short content creates instant feedback loops.",
+        "C": "Tired brains prefer low-effort stimulation.",
+        "D": "There are not enough better ways to rest."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "06_digital_systems_ai",
+        "lens": "feed_friction_design",
+        "reflectionZh": "倾向于从信息流、平台机制和数字环境理解行为。",
+        "reflectionEn": "Tends to understand behavior through feeds, platform mechanisms, and digital environments."
+      },
+      "B": {
+        "subject": "05_evidence_patterns",
+        "lens": "feedback_loop",
+        "reflectionZh": "倾向于从反馈循环、行为规律和刺激机制理解问题。",
+        "reflectionEn": "Tends to understand issues through feedback loops, behavior patterns, and stimulus mechanisms."
+      },
+      "C": {
+        "subject": "09_health_recovery",
+        "lens": "fatigue_low_effort_stimulation",
+        "reflectionZh": "倾向于从疲惫、注意力和恢复状态理解行为。",
+        "reflectionEn": "Tends to understand behavior through fatigue, attention, and recovery state."
+      },
+      "D": {
+        "subject": "10_services_experience",
+        "lens": "alternative_rest_experience",
+        "reflectionZh": "倾向于从替代体验、休息方式和用户需求理解问题。",
+        "reflectionEn": "Tends to understand issues through alternative experiences, rest options, and user needs."
+      }
+    }
+  },
+  {
+    "id": "lens-002",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "health_energy",
+    "zh": {
+      "question": "为什么有人睡够 8 小时，白天还是累？",
+      "options": {
+        "A": "睡眠质量和生物节律可能不好。",
+        "B": "白天小决策和切换太多。",
+        "C": "工作和休息边界不清。",
+        "D": "环境没有帮助身体恢复。"
+      }
+    },
+    "en": {
+      "question": "Why can someone sleep 8 hours and still feel tired?",
+      "options": {
+        "A": "Sleep quality and body rhythm may be poor.",
+        "B": "Too many small decisions and switches happen daily.",
+        "C": "Work and rest boundaries are unclear.",
+        "D": "The environment does not support recovery."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "09_health_recovery",
+        "lens": "sleep_quality_body_rhythm",
+        "reflectionZh": "倾向于从睡眠质量、生物节律和身体恢复理解问题。",
+        "reflectionEn": "Tends to understand issues through sleep quality, body rhythm, and physical recovery."
+      },
+      "B": {
+        "subject": "05_evidence_patterns",
+        "lens": "cognitive_load_hidden_variables",
+        "reflectionZh": "倾向于从隐藏变量、认知负荷和消耗机制理解问题。",
+        "reflectionEn": "Tends to understand issues through hidden variables, cognitive load, and energy-drain mechanisms."
+      },
+      "C": {
+        "subject": "04_business_management",
+        "lens": "boundary_resource_management",
+        "reflectionZh": "倾向于从边界、资源分配和时间管理理解问题。",
+        "reflectionEn": "Tends to understand issues through boundaries, resource allocation, and time management."
+      },
+      "D": {
+        "subject": "07_engineering_systems",
+        "lens": "environment_recovery_design",
+        "reflectionZh": "倾向于从环境设计、流程和系统条件理解恢复。",
+        "reflectionEn": "Tends to understand recovery through environmental design, routines, and system conditions."
+      }
+    }
+  },
+  {
+    "id": "lens-003",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "ai_work",
+    "zh": {
+      "question": "为什么团队用了 AI，产出更多了，决策却没变好？",
+      "options": {
+        "A": "问题定义没有变清楚。",
+        "B": "证据标准没有提高。",
+        "C": "输出没有进入评审流程。",
+        "D": "团队没有沉淀共同方法。"
+      }
+    },
+    "en": {
+      "question": "Why can AI increase output but not improve decisions?",
+      "options": {
+        "A": "Problem framing did not become clearer.",
+        "B": "Evidence standards did not improve.",
+        "C": "Outputs were not built into review processes.",
+        "D": "The team did not capture shared methods."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "problem_framing_decision_quality",
+        "reflectionZh": "倾向于从问题定义、决策质量和价值判断理解 AI 使用。",
+        "reflectionEn": "Tends to understand AI usage through problem framing, decision quality, and value judgment."
+      },
+      "B": {
+        "subject": "05_evidence_patterns",
+        "lens": "evidence_standard",
+        "reflectionZh": "倾向于从证据标准、信息噪音和判断可靠性理解问题。",
+        "reflectionEn": "Tends to understand issues through evidence standards, information noise, and judgment reliability."
+      },
+      "C": {
+        "subject": "07_engineering_systems",
+        "lens": "review_workflow",
+        "reflectionZh": "倾向于从评审流程、责任结构和系统嵌入理解工具价值。",
+        "reflectionEn": "Tends to understand tool value through review workflows, responsibility structures, and system integration."
+      },
+      "D": {
+        "subject": "01_learning_growth",
+        "lens": "shared_learning_methods",
+        "reflectionZh": "倾向于从共同学习、经验沉淀和方法复用理解团队成长。",
+        "reflectionEn": "Tends to understand team growth through shared learning, experience capture, and reusable methods."
+      }
+    }
+  },
+  {
+    "id": "lens-004",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "learning",
+    "zh": {
+      "question": "为什么很多人学了很多，却判断力没明显提升？",
+      "options": {
+        "A": "知识没有形成结构。",
+        "B": "观点没有经过真实验证。",
+        "C": "只记结论，没看证据。",
+        "D": "没有变成自己的表达语言。"
+      }
+    },
+    "en": {
+      "question": "Why do many people learn a lot but not improve their judgment?",
+      "options": {
+        "A": "Knowledge has not formed a structure.",
+        "B": "Ideas have not been tested in reality.",
+        "C": "They remember conclusions, not evidence.",
+        "D": "They have not turned it into their own language."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "01_learning_growth",
+        "lens": "knowledge_structure",
+        "reflectionZh": "倾向于从知识结构、概念连接和学习迁移理解成长。",
+        "reflectionEn": "Tends to understand growth through knowledge structure, concept connection, and learning transfer."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "real_world_testing_loop",
+        "reflectionZh": "倾向于从真实应用、反馈闭环和实践转化理解知识价值。",
+        "reflectionEn": "Tends to understand knowledge value through real-world application, feedback loops, and practice transfer."
+      },
+      "C": {
+        "subject": "05_evidence_patterns",
+        "lens": "evidence_reasoning_quality",
+        "reflectionZh": "倾向于从证据、假设和论证质量理解知识。",
+        "reflectionEn": "Tends to understand knowledge through evidence, assumptions, and reasoning quality."
+      },
+      "D": {
+        "subject": "02_meaning_expression",
+        "lens": "language_expression",
+        "reflectionZh": "倾向于从语言、表达和意义组织理解知识内化。",
+        "reflectionEn": "Tends to understand knowledge internalization through language, expression, and meaning organization."
+      }
+    }
+  },
+  {
+    "id": "lens-005",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "restaurant_service",
+    "zh": {
+      "question": "为什么餐厅好吃，却让人不想再去？",
+      "options": {
+        "A": "复购场景不清楚。",
+        "B": "服务触点不连贯。",
+        "C": "缺少可传播的记忆点。",
+        "D": "没有进入社交生活场景。"
+      }
+    },
+    "en": {
+      "question": "Why can a good restaurant still fail to make people return?",
+      "options": {
+        "A": "The repeat-use scenario is unclear.",
+        "B": "Service touchpoints feel disconnected.",
+        "C": "There is no memorable story to share.",
+        "D": "It does not fit social life contexts."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "repeat_use_scenario",
+        "reflectionZh": "倾向于从定位、复购场景和商业匹配理解问题。",
+        "reflectionEn": "Tends to understand issues through positioning, repeat-use scenarios, and business fit."
+      },
+      "B": {
+        "subject": "10_services_experience",
+        "lens": "service_touchpoints",
+        "reflectionZh": "倾向于从服务触点、用户旅程和体验完整性理解问题。",
+        "reflectionEn": "Tends to understand issues through service touchpoints, user journeys, and experience completeness."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "memory_symbol_expression",
+        "reflectionZh": "倾向于从记忆点、表达符号和叙事理解体验价值。",
+        "reflectionEn": "Tends to understand experiential value through memory points, expressive symbols, and narrative."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "social_context_fit",
+        "reflectionZh": "倾向于从社交场景、关系需求和群体行为理解消费体验。",
+        "reflectionEn": "Tends to understand consumption experiences through social context, relational needs, and group behavior."
+      }
+    }
+  },
+  {
+    "id": "lens-006",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "choice",
+    "zh": {
+      "question": "为什么选择越多，有时反而越难满意？",
+      "options": {
+        "A": "比较变量太多。",
+        "B": "机会成本变高。",
+        "C": "真实需求不清楚。",
+        "D": "期待被外界放大。"
+      }
+    },
+    "en": {
+      "question": "Why can more choices make people less satisfied?",
+      "options": {
+        "A": "There are too many variables to compare.",
+        "B": "Opportunity cost becomes more visible.",
+        "C": "Real needs are not clear.",
+        "D": "Expectations are amplified by the outside world."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "05_evidence_patterns",
+        "lens": "variable_comparison",
+        "reflectionZh": "倾向于从变量、比较和判断复杂度理解选择困难。",
+        "reflectionEn": "Tends to understand choice difficulty through variables, comparison, and judgment complexity."
+      },
+      "B": {
+        "subject": "04_business_management",
+        "lens": "opportunity_cost",
+        "reflectionZh": "倾向于从机会成本、资源取舍和价值判断理解选择。",
+        "reflectionEn": "Tends to understand choices through opportunity cost, trade-offs, and value judgment."
+      },
+      "C": {
+        "subject": "00_general_thinking",
+        "lens": "real_need_clarity",
+        "reflectionZh": "倾向于从真实需求、整体判断和情境匹配理解问题。",
+        "reflectionEn": "Tends to understand issues through real needs, overall judgment, and context fit."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "social_expectation",
+        "reflectionZh": "倾向于从社会期待、比较压力和群体影响理解满意感。",
+        "reflectionEn": "Tends to understand satisfaction through social expectations, comparison pressure, and group influence."
+      }
+    }
+  },
+  {
+    "id": "lens-007",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "consumption",
+    "zh": {
+      "question": "为什么有些贵东西，长期看反而更省钱？",
+      "options": {
+        "A": "单次使用成本更低。",
+        "B": "更容易进入日常使用。",
+        "C": "长期看不容易厌倦。",
+        "D": "减少重复购买和浪费。"
+      }
+    },
+    "en": {
+      "question": "Why can expensive things cost less over time?",
+      "options": {
+        "A": "Lower cost per use.",
+        "B": "Fits daily routines better.",
+        "C": "Stays satisfying for longer.",
+        "D": "Reduces repeat buying and waste."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "cost_per_use",
+        "reflectionZh": "倾向于从长期成本、使用频率和资源分配理解选择。",
+        "reflectionEn": "Tends to understand choices through long-term cost, usage frequency, and resource allocation."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "routine_fit",
+        "reflectionZh": "倾向于从使用场景、流程适配和系统稳定性理解价值。",
+        "reflectionEn": "Tends to understand value through use-case fit, routine integration, and system stability."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "lasting_taste",
+        "reflectionZh": "倾向于从审美、身份和长期生活状态理解价值。",
+        "reflectionEn": "Tends to understand value through taste, identity, and long-term life state."
+      },
+      "D": {
+        "subject": "08_natural_systems_sustainability",
+        "lens": "waste_reduction",
+        "reflectionZh": "倾向于从资源节约、重复消费和长期可持续理解选择。",
+        "reflectionEn": "Tends to understand choices through resource saving, repeat consumption, and sustainability."
+      }
+    }
+  },
+  {
+    "id": "lens-008",
+    "subject": "00",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "work",
+    "zh": {
+      "question": "为什么一个人很忙，却让人觉得不可靠？",
+      "options": {
+        "A": "响应很多，交付不清。",
+        "B": "工作闭环不稳定。",
+        "C": "优先级判断不清。",
+        "D": "团队期待没有对齐。"
+      }
+    },
+    "en": {
+      "question": "Why can a busy person still feel unreliable to others?",
+      "options": {
+        "A": "They respond often, but deliver unclearly.",
+        "B": "Their work loop is unstable.",
+        "C": "Their priority judgment is unclear.",
+        "D": "Team expectations are not aligned."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "delivery_clarity",
+        "reflectionZh": "倾向于从交付、责任和结果可见性理解可靠性。",
+        "reflectionEn": "Tends to understand reliability through delivery, ownership, and visible outcomes."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "work_loop_stability",
+        "reflectionZh": "倾向于从流程闭环、节奏和系统稳定性理解问题。",
+        "reflectionEn": "Tends to understand issues through workflow loops, rhythm, and system stability."
+      },
+      "C": {
+        "subject": "05_evidence_patterns",
+        "lens": "priority_signal",
+        "reflectionZh": "倾向于从信息信号、优先级和判断依据理解问题。",
+        "reflectionEn": "Tends to understand issues through signals, priorities, and judgment basis."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "team_expectation_alignment",
+        "reflectionZh": "倾向于从团队期待、关系结构和协作规范理解问题。",
+        "reflectionEn": "Tends to understand issues through team expectations, relationship structures, and collaboration norms."
+      }
+    }
+  },
+  {
+    "id": "task-001",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "travel",
+    "zh": {
+      "question": "你和朋友策划周末短途旅行。你最想负责哪件事？",
+      "options": {
+        "A": "控制预算，判断哪些钱花得最值。",
+        "B": "设计路线，让时间和交通更顺。",
+        "C": "找到真正有记忆点的地方和体验。",
+        "D": "照顾大家的节奏、体力和舒适度。"
+      }
+    },
+    "en": {
+      "question": "You and your friends plan a weekend trip. What would you like to handle?",
+      "options": {
+        "A": "Manage the budget and judge what is worth it.",
+        "B": "Design the route and make transport smoother.",
+        "C": "Find memorable places and experiences.",
+        "D": "Care for everyone’s pace, energy, and comfort."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "budget_value_judgment",
+        "reflectionZh": "更愿意负责预算、价值判断和资源分配。",
+        "reflectionEn": "More willing to handle budget, value judgment, and resource allocation."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "route_process_optimization",
+        "reflectionZh": "更愿意负责路线、流程和系统优化。",
+        "reflectionEn": "More willing to handle routes, processes, and system optimization."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "memory_experience_design",
+        "reflectionZh": "更愿意负责体验、记忆点和意义感设计。",
+        "reflectionEn": "More willing to design experiences, memory points, and meaning."
+      },
+      "D": {
+        "subject": "09_health_recovery",
+        "lens": "energy_comfort_care",
+        "reflectionZh": "更愿意负责节奏、体力、舒适度和恢复感。",
+        "reflectionEn": "More willing to care for pace, energy, comfort, and recovery."
+      }
+    }
+  },
+  {
+    "id": "task-002",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "restaurant",
+    "zh": {
+      "question": "朋友聚餐要选餐厅。你最想负责哪件事？",
+      "options": {
+        "A": "比较价格、人均和菜品是否值得。",
+        "B": "确认订位、交通、时间是否顺畅。",
+        "C": "挑一家有氛围、适合聊天的店。",
+        "D": "照顾大家口味、限制和舒适度。"
+      }
+    },
+    "en": {
+      "question": "Your friends are choosing a restaurant. What would you like to handle?",
+      "options": {
+        "A": "Compare price, cost per person, and value.",
+        "B": "Check booking, transport, and timing.",
+        "C": "Find a place with atmosphere and conversation.",
+        "D": "Care for everyone’s tastes, limits, and comfort."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "price_value_fit",
+        "reflectionZh": "更愿意从价格、价值和匹配度判断选择。",
+        "reflectionEn": "More willing to judge choices through price, value, and fit."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "logistics_flow",
+        "reflectionZh": "更愿意负责安排流程、时间和执行细节。",
+        "reflectionEn": "More willing to manage flow, timing, and execution details."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "atmosphere_memory",
+        "reflectionZh": "更愿意负责氛围、表达和记忆感。",
+        "reflectionEn": "More willing to handle atmosphere, expression, and memory."
+      },
+      "D": {
+        "subject": "10_services_experience",
+        "lens": "guest_experience",
+        "reflectionZh": "更愿意关注每个人的体验、需求和舒适度。",
+        "reflectionEn": "More willing to care about people’s experience, needs, and comfort."
+      }
+    }
+  },
+  {
+    "id": "task-003",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "work",
+    "zh": {
+      "question": "团队要准备重要汇报。你最想负责哪部分？",
+      "options": {
+        "A": "明确目标，让内容服务决策。",
+        "B": "搭建结构，让逻辑更顺。",
+        "C": "打磨表达，让听众记住。",
+        "D": "检查数据和结论是否可靠。"
+      }
+    },
+    "en": {
+      "question": "Your team is preparing an important presentation. What would you handle?",
+      "options": {
+        "A": "Clarify the goal and support decisions.",
+        "B": "Build the structure and improve logic.",
+        "C": "Polish the message for memory.",
+        "D": "Check data and conclusion reliability."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "goal_decision_value",
+        "reflectionZh": "更愿意负责目标、决策价值和业务重点。",
+        "reflectionEn": "More willing to handle goals, decision value, and business priorities."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "structure_logic",
+        "reflectionZh": "更愿意负责结构、逻辑和系统组织。",
+        "reflectionEn": "More willing to handle structure, logic, and system organization."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "message_expression",
+        "reflectionZh": "更愿意负责表达、叙事和记忆点。",
+        "reflectionEn": "More willing to handle expression, narrative, and memory points."
+      },
+      "D": {
+        "subject": "05_evidence_patterns",
+        "lens": "evidence_validation",
+        "reflectionZh": "更愿意负责证据、数据和结论验证。",
+        "reflectionEn": "More willing to handle evidence, data, and conclusion validation."
+      }
+    }
+  },
+  {
+    "id": "task-004",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "learning",
+    "zh": {
+      "question": "你和朋友一起学新技能。你最想负责哪件事？",
+      "options": {
+        "A": "制定目标和阶段成果。",
+        "B": "设计练习和反馈节奏。",
+        "C": "整理资料，形成知识结构。",
+        "D": "找到真实场景，把技能用起来。"
+      }
+    },
+    "en": {
+      "question": "You and a friend learn a new skill. What would you handle?",
+      "options": {
+        "A": "Set goals and milestone outcomes.",
+        "B": "Design practice and feedback rhythm.",
+        "C": "Organize materials into knowledge structure.",
+        "D": "Find real situations to use the skill."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "goal_milestone",
+        "reflectionZh": "更愿意负责目标、里程碑和结果管理。",
+        "reflectionEn": "More willing to handle goals, milestones, and outcome management."
+      },
+      "B": {
+        "subject": "01_learning_growth",
+        "lens": "practice_feedback",
+        "reflectionZh": "更愿意负责练习、反馈和能力成长。",
+        "reflectionEn": "More willing to handle practice, feedback, and skill growth."
+      },
+      "C": {
+        "subject": "01_learning_growth",
+        "lens": "knowledge_structure",
+        "reflectionZh": "更愿意负责资料整理、结构化和理解框架。",
+        "reflectionEn": "More willing to organize materials, structure, and understanding frameworks."
+      },
+      "D": {
+        "subject": "10_services_experience",
+        "lens": "real_use_context",
+        "reflectionZh": "更愿意负责真实使用场景和实践体验。",
+        "reflectionEn": "More willing to create real-use situations and practical experiences."
+      }
+    }
+  },
+  {
+    "id": "task-005",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "digital_life",
+    "zh": {
+      "question": "你想减少无意识刷手机。你最想先做什么？",
+      "options": {
+        "A": "分析哪些 App 最消耗时间。",
+        "B": "重新设计手机界面和使用流程。",
+        "C": "找到更舒服的替代休息方式。",
+        "D": "理解自己什么时候最容易刷。"
+      }
+    },
+    "en": {
+      "question": "You want to reduce mindless phone scrolling. What would you start with?",
+      "options": {
+        "A": "Analyze which apps consume most time.",
+        "B": "Redesign the phone interface and flow.",
+        "C": "Find better alternative ways to rest.",
+        "D": "Understand when scrolling is most likely."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "05_evidence_patterns",
+        "lens": "usage_data_pattern",
+        "reflectionZh": "更愿意从数据、规律和使用模式入手。",
+        "reflectionEn": "More willing to start from data, patterns, and usage behavior."
+      },
+      "B": {
+        "subject": "06_digital_systems_ai",
+        "lens": "interface_information_flow",
+        "reflectionZh": "更愿意从界面、信息流和数字系统入手。",
+        "reflectionEn": "More willing to start from interface, information flow, and digital systems."
+      },
+      "C": {
+        "subject": "09_health_recovery",
+        "lens": "rest_replacement",
+        "reflectionZh": "更愿意从休息、恢复和替代行为入手。",
+        "reflectionEn": "More willing to start from rest, recovery, and replacement behavior."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "behavior_context",
+        "reflectionZh": "更愿意从行为情境、压力触发和生活关系入手。",
+        "reflectionEn": "More willing to start from behavior context, stress triggers, and life relationships."
+      }
+    }
+  },
+  {
+    "id": "task-006",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "home",
+    "zh": {
+      "question": "你想让家里住起来更舒服。你最想先改哪里？",
+      "options": {
+        "A": "调整光线、声音和休息区域。",
+        "B": "重新规划收纳和动线。",
+        "C": "换掉不符合当下状态的物品。",
+        "D": "减少每天重复的小麻烦。"
+      }
+    },
+    "en": {
+      "question": "You want your home to feel more comfortable. What would you improve first?",
+      "options": {
+        "A": "Adjust light, sound, and rest areas.",
+        "B": "Redesign storage and movement flow.",
+        "C": "Remove items that no longer fit.",
+        "D": "Reduce repeated daily frictions."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "09_health_recovery",
+        "lens": "restorative_environment",
+        "reflectionZh": "更愿意从恢复、身体感受和休息环境入手。",
+        "reflectionEn": "More willing to start from recovery, body feeling, and rest environment."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "space_flow",
+        "reflectionZh": "更愿意从空间结构、动线和系统整理入手。",
+        "reflectionEn": "More willing to start from spatial structure, flow, and system organization."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "identity_space",
+        "reflectionZh": "更愿意从身份感、审美和生活阶段入手。",
+        "reflectionEn": "More willing to start from identity, taste, and life stage."
+      },
+      "D": {
+        "subject": "10_services_experience",
+        "lens": "daily_friction",
+        "reflectionZh": "更愿意从日常触点、体验摩擦和生活便利入手。",
+        "reflectionEn": "More willing to start from daily touchpoints, experience friction, and convenience."
+      }
+    }
+  },
+  {
+    "id": "task-007",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "career",
+    "zh": {
+      "question": "你要帮朋友梳理职业方向。你最想先做什么？",
+      "options": {
+        "A": "分析技能、机会和市场需求。",
+        "B": "梳理经历，找到成长主线。",
+        "C": "帮他表达清楚优势故事。",
+        "D": "了解压力、节奏和生活限制。"
+      }
+    },
+    "en": {
+      "question": "You help a friend think through career direction. What would you do first?",
+      "options": {
+        "A": "Analyze skills, opportunities, and market demand.",
+        "B": "Organize experience and find a growth path.",
+        "C": "Help express a clear strengths story.",
+        "D": "Understand stress, rhythm, and life limits."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "market_opportunity_fit",
+        "reflectionZh": "更愿意从能力、机会和市场匹配入手。",
+        "reflectionEn": "More willing to start from skills, opportunities, and market fit."
+      },
+      "B": {
+        "subject": "01_learning_growth",
+        "lens": "growth_path",
+        "reflectionZh": "更愿意从成长路径、经验沉淀和发展阶段入手。",
+        "reflectionEn": "More willing to start from growth path, experience capture, and development stage."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "personal_narrative",
+        "reflectionZh": "更愿意从表达、叙事和个人品牌入手。",
+        "reflectionEn": "More willing to start from expression, narrative, and personal branding."
+      },
+      "D": {
+        "subject": "09_health_recovery",
+        "lens": "life_sustainability",
+        "reflectionZh": "更愿意从压力、节奏和长期可持续状态入手。",
+        "reflectionEn": "More willing to start from stress, rhythm, and long-term sustainability."
+      }
+    }
+  },
+  {
+    "id": "task-008",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "shopping",
+    "zh": {
+      "question": "家里要买一件耐用大件。你最想负责哪部分？",
+      "options": {
+        "A": "比较价格、保修和长期成本。",
+        "B": "研究材料、结构和可靠性。",
+        "C": "确认是否适合真实使用习惯。",
+        "D": "考虑资源浪费和长期可持续。"
+      }
+    },
+    "en": {
+      "question": "Your family needs a durable household item. What would you handle?",
+      "options": {
+        "A": "Compare price, warranty, and long-term cost.",
+        "B": "Research materials, structure, and reliability.",
+        "C": "Check fit with real usage habits.",
+        "D": "Consider waste and long-term sustainability."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "total_cost",
+        "reflectionZh": "更愿意负责价格、保修和长期成本判断。",
+        "reflectionEn": "More willing to handle price, warranty, and long-term cost judgment."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "material_reliability",
+        "reflectionZh": "更愿意负责材料、结构和可靠性判断。",
+        "reflectionEn": "More willing to handle material, structure, and reliability judgment."
+      },
+      "C": {
+        "subject": "10_services_experience",
+        "lens": "usage_fit",
+        "reflectionZh": "更愿意负责真实使用习惯和体验适配。",
+        "reflectionEn": "More willing to handle real usage habits and experience fit."
+      },
+      "D": {
+        "subject": "08_natural_systems_sustainability",
+        "lens": "resource_sustainability",
+        "reflectionZh": "更愿意负责资源、浪费和长期可持续性。",
+        "reflectionEn": "More willing to handle resources, waste, and long-term sustainability."
+      }
+    }
+  },
+  {
+    "id": "task-009",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "event",
+    "zh": {
+      "question": "你们要办一个小型分享活动。你最想负责哪件事？",
+      "options": {
+        "A": "明确主题和目标人群。",
+        "B": "安排流程、时间和现场动线。",
+        "C": "设计海报、文案和氛围。",
+        "D": "照顾参与者体验和互动。"
+      }
+    },
+    "en": {
+      "question": "You are organizing a small sharing event. What would you handle?",
+      "options": {
+        "A": "Clarify theme and target audience.",
+        "B": "Plan agenda, timing, and movement flow.",
+        "C": "Design posters, copy, and atmosphere.",
+        "D": "Care for participant experience and interaction."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "audience_goal_positioning",
+        "reflectionZh": "更愿意负责目标、人群定位和价值判断。",
+        "reflectionEn": "More willing to handle goals, audience positioning, and value judgment."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "event_flow_design",
+        "reflectionZh": "更愿意负责流程、时间和现场系统安排。",
+        "reflectionEn": "More willing to handle flow, timing, and on-site system arrangement."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "visual_message_atmosphere",
+        "reflectionZh": "更愿意负责视觉、文案和氛围表达。",
+        "reflectionEn": "More willing to handle visuals, copy, and atmosphere."
+      },
+      "D": {
+        "subject": "10_services_experience",
+        "lens": "participant_experience",
+        "reflectionZh": "更愿意负责参与者体验、互动和服务细节。",
+        "reflectionEn": "More willing to handle participant experience, interaction, and service details."
+      }
+    }
+  },
+  {
+    "id": "task-010",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "personal_project",
+    "zh": {
+      "question": "你要启动一个个人项目。你最想先做哪件事？",
+      "options": {
+        "A": "确认它解决什么真实问题。",
+        "B": "搭出最小可行结构。",
+        "C": "想清楚它的名字和表达。",
+        "D": "找到第一批真实反馈。"
+      }
+    },
+    "en": {
+      "question": "You are starting a personal project. What would you do first?",
+      "options": {
+        "A": "Clarify what real problem it solves.",
+        "B": "Build the smallest workable structure.",
+        "C": "Clarify its name and expression.",
+        "D": "Find the first real feedback."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "problem_value_fit",
+        "reflectionZh": "更愿意从真实问题、价值和方向判断入手。",
+        "reflectionEn": "More willing to start from real problems, value, and direction judgment."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "minimum_viable_structure",
+        "reflectionZh": "更愿意从最小结构、系统搭建和落地路径入手。",
+        "reflectionEn": "More willing to start from minimum structure, system building, and implementation path."
+      },
+      "C": {
+        "subject": "02_meaning_expression",
+        "lens": "naming_expression_identity",
+        "reflectionZh": "更愿意从命名、表达和身份感入手。",
+        "reflectionEn": "More willing to start from naming, expression, and identity."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "real_feedback_people",
+        "reflectionZh": "更愿意从真实反馈、人群反应和关系连接入手。",
+        "reflectionEn": "More willing to start from real feedback, people’s reactions, and relationship connection."
+      }
+    }
+  },
+  {
+    "id": "task-011",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "health",
+    "zh": {
+      "question": "你想建立稳定运动习惯。你最想先处理哪件事？",
+      "options": {
+        "A": "设定清楚目标和进度。",
+        "B": "设计低门槛训练流程。",
+        "C": "跟踪身体反馈和恢复。",
+        "D": "找到能一起坚持的人。"
+      }
+    },
+    "en": {
+      "question": "You want to build a stable exercise habit. What would you handle first?",
+      "options": {
+        "A": "Set clear goals and progress.",
+        "B": "Design a low-friction training routine.",
+        "C": "Track body feedback and recovery.",
+        "D": "Find people to stay consistent with."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "goal_progress_management",
+        "reflectionZh": "更愿意从目标、进度和结果管理入手。",
+        "reflectionEn": "More willing to start from goals, progress, and outcome management."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "low_friction_routine",
+        "reflectionZh": "更愿意从低阻力流程和习惯系统入手。",
+        "reflectionEn": "More willing to start from low-friction routines and habit systems."
+      },
+      "C": {
+        "subject": "09_health_recovery",
+        "lens": "body_feedback_recovery",
+        "reflectionZh": "更愿意从身体反馈、恢复和长期状态入手。",
+        "reflectionEn": "More willing to start from body feedback, recovery, and long-term condition."
+      },
+      "D": {
+        "subject": "03_society_relationships",
+        "lens": "social_support_consistency",
+        "reflectionZh": "更愿意从社交支持、陪伴和群体影响入手。",
+        "reflectionEn": "More willing to start from social support, companionship, and group influence."
+      }
+    }
+  },
+  {
+    "id": "task-012",
+    "subject": "00",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "community",
+    "zh": {
+      "question": "你要帮助一个小社群变得更活跃。你最想负责哪部分？",
+      "options": {
+        "A": "明确社群定位和成员价值。",
+        "B": "设计固定活动和参与机制。",
+        "C": "观察成员关系和互动习惯。",
+        "D": "打磨社群语言和共同记忆。"
+      }
+    },
+    "en": {
+      "question": "You want to make a small community more active. What would you handle?",
+      "options": {
+        "A": "Clarify positioning and member value.",
+        "B": "Design regular activities and participation mechanisms.",
+        "C": "Observe relationships and interaction habits.",
+        "D": "Shape community language and shared memory."
+      }
+    },
+    "optionProfiles": {
+      "A": {
+        "subject": "04_business_management",
+        "lens": "community_value_positioning",
+        "reflectionZh": "更愿意负责定位、成员价值和资源判断。",
+        "reflectionEn": "More willing to handle positioning, member value, and resource judgment."
+      },
+      "B": {
+        "subject": "07_engineering_systems",
+        "lens": "participation_mechanism",
+        "reflectionZh": "更愿意负责机制、流程和持续参与设计。",
+        "reflectionEn": "More willing to handle mechanisms, processes, and sustained participation design."
+      },
+      "C": {
+        "subject": "03_society_relationships",
+        "lens": "relationship_interaction_pattern",
+        "reflectionZh": "更愿意负责关系结构、互动习惯和群体行为观察。",
+        "reflectionEn": "More willing to handle relationship structures, interaction habits, and group behavior."
+      },
+      "D": {
+        "subject": "02_meaning_expression",
+        "lens": "shared_language_memory",
+        "reflectionZh": "更愿意负责共同语言、故事和记忆感。",
+        "reflectionEn": "More willing to handle shared language, stories, and memory."
+      }
+    }
+  }
+]

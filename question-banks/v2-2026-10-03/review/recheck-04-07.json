@@ -1,0 +1,203 @@
+{
+  "reviewer": "write_map_c",
+  "reviewedAt": "2026-10-03",
+  "scope": "revisions-04-07.json中10道实际题目改动及04-v2-q04编辑记录",
+  "method": "按中英文分别重新判答、复核当前题干和编辑记录；额外直接核查NIST与OpenStax来源。仅写审阅结果，未修改源文件。",
+  "sourceFiles": {
+    "questions": {
+      "path": "parts/map-04-07.json",
+      "sha256": "d3b1a8dd69d739c6cdecb27c94de3d7656802a23f18bf0b22b130662b6b1a972"
+    },
+    "editorial": {
+      "path": "parts/editorial-04-07.json",
+      "sha256": "91449b42f44c3790a18430b6d827deecad2e91d751475d1b1436d1e53825f68d"
+    },
+    "revisions": {
+      "path": "review/revisions-04-07.json",
+      "sha256": "fd4fe16dc3ba568d468e51938f39fdb925c857c8781e4e3dffa3c0dcc9014aa0"
+    }
+  },
+  "snapshotNote": "04-q6在首次二次审读后由主编辑继续将重复来电定义移入题干；此文件对应该继续修订后的实际源SHA，不把初次发现的已解决问题列为残留。",
+  "summary": {
+    "actualQuestionRevisions": 10,
+    "editorialOnlyRechecks": 1,
+    "uniqueAnswerPass": 10,
+    "bilingualPass": 10,
+    "semanticBlockers": 0,
+    "editorialSyncRequired": 0,
+    "optionalLanguagePolish": 0,
+    "formatBlockers": 0,
+    "factSourceMismatch": 0
+  },
+  "items": [
+    {
+      "id": "04-q9",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "04-q9-o3",
+      "enChosenOptionId": "04-q9-o3",
+      "uniqueAnswerCheck": "低额明确为≤500；仅低额标准用品交员工、其余交经理同时满足时限与审批等级要求。经理不可处理时，其他类订单可等待已明示。",
+      "bilingualCheck": "低额边界、当天时限及其他类可等待两语等义。",
+      "formatCheck": "三项同为人员审批分配规则，正确项与其他项详略接近。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "05-v2-q07",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "05-v2-q07-o1",
+      "enChosenOptionId": "05-v2-q07-o1",
+      "uniqueAnswerCheck": "同种糖、同温、初始膜两侧压力相等且糖不能过膜，初始水净移向5%侧；相反方向和无净移动均排除。",
+      "bilingualCheck": "初始压力相同与刚开始时间点两语均明确；后续压差可能抵消渗透的解释一致。",
+      "formatCheck": "相反方向项结构对称，另一项为无净移动；正确项无额外条件。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "primary-source-recheck",
+        "url": "https://openstax.org/books/biology-2e/pages/5-2-passive-transport",
+        "title": "OpenStax Biology 2e — 5.2 Passive Transport, Osmosis",
+        "checkedAt": "2026-10-03",
+        "supports": "半透膜阻止溶质而允许水通过时，水朝较高溶质浓度侧净移动；静水压力可与渗透压力平衡。"
+      }
+    },
+    {
+      "id": "06-q5",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "06-q5-o1",
+      "enChosenOptionId": "06-q5-o1",
+      "uniqueAnswerCheck": "订单随顾客ID按真实顾客同步已作为共同行为前置；不同ID才消除重复关联键。改名与排序不改变ID重复。",
+      "bilingualCheck": "两人同ID、订单同步及消除重复关联两语一致。",
+      "formatCheck": "三项各为一个顾客表修改，正确项不再多带第二个操作。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "06-q6",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "06-q6-o3",
+      "enChosenOptionId": "06-q6-o3",
+      "uniqueAnswerCheck": "恰好当两项同时成立且没有其他条件，将程序定义为充分且必要；AND ≤500唯一完全等价。500且已收货排除<500，高额已收货或低额未收货排除OR。",
+      "bilingualCheck": "exactly when、both、no other conditions与恰好、同时、没有其他条件一致；完全等价排除仅是必要条件的更窄集合。",
+      "formatCheck": "三项平行逻辑表达式，没有附加详略优势。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "04-q6",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "04-q6-o2",
+      "enChosenOptionId": "04-q6-o2",
+      "uniqueAnswerCheck": "重复来电先被定义为结案后7天内同一问题再次来电，奖励其反面的结案件数直接对应目标；短通话次数与每日接听总量不直接计数此结果。",
+      "bilingualCheck": "同一问题与七天窗口共同定义前置，两语答案均继承该定义；解析不保证指标本身证明现实中的问题解决。",
+      "formatCheck": "中文10/11/10字符；英文33/26/27字符。英文正确项不再最长；中文仅比两项多一字，三项均为可计数的指标短语，显著长度线索已解决。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "05-q3",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "05-q3-o3",
+      "enChosenOptionId": "05-q3-o3",
+      "uniqueAnswerCheck": "果昔与睡眠同日改变、无比较记录，不能单独分离果昔效果；先后顺序或记录完整不能排除混杂。",
+      "bilingualCheck": "错误项现在均明确两项变化都已记录；旧英文只记录睡眠的差异消除。",
+      "formatCheck": "三个原因句式并行；干扰项对应先后归因及记录即证据误区。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "06-q1",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "06-q1-o1",
+      "enChosenOptionId": "06-q1-o1",
+      "uniqueAnswerCheck": "修补允许未授权读取的访问检查漏洞，直接改进访问控制；不能据此推断备份或密码复用规则。",
+      "bilingualCheck": "中文不再可误读成修补导致读取；两语皆指修补原有访问检查漏洞。",
+      "formatCheck": "三项均为具体保护动作，详略相近。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "06-q3",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "06-q3-o2",
+      "enChosenOptionId": "06-q3-o2",
+      "uniqueAnswerCheck": "按姓名排序完整记录才保持姓名和地址配对；只排序姓名列改变关联，过滤不完成要求的排序。",
+      "bilingualCheck": "Sort whole records by name与按姓名排序整行记录一致。",
+      "formatCheck": "正确项已压缩为一个操作，短于错误项，没有独带完整流程的提示。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "explicit-premises-and-direct-logic",
+        "factBoundary": "按题干给定条件判断，不外推现实效果。"
+      }
+    },
+    {
+      "id": "07-v2-q05",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "07-v2-q05-o1",
+      "enChosenOptionId": "07-v2-q05-o1",
+      "uniqueAnswerCheck": "目标在辐射穿过玻璃前形成遮挡；外遮阳唯一满足，内帘位于玻璃后，透明双层玻璃无玻璃前遮挡。",
+      "bilingualCheck": "外侧遮阳、内侧帘、透明双层替换两语一致；解析只比较辐射路径，不外推总制冷性能。",
+      "formatCheck": "三项均为真实窗户方案；正确项不最长，凑项干扰已消除。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "existing-primary-source-and-explicit-geometric-condition",
+        "url": "https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/measure_guide_windows.pdf",
+        "title": "US Department of Energy — Energy-Efficient Window Performance and Selection",
+        "checkedAt": "2026-10-03",
+        "supports": "构件替换不改变外遮阳在玻璃前阻挡直射辐射的机制，已有官方来源与最终限定目标仍匹配。"
+      }
+    },
+    {
+      "id": "06-v2-q11",
+      "scope": "question-and-editorial",
+      "status": "pass",
+      "zhChosenOptionId": "06-v2-q11-o2",
+      "enChosenOptionId": "06-v2-q11-o2",
+      "uniqueAnswerCheck": "知识因素与持有因素先定义；密码加登记手机验证器码唯一跨两因素。两个固定口令或重复密码仍为同类知识因素。",
+      "bilingualCheck": "只有已登记验证器生成该账户码的前提一致；解析均区分因素种类和输入次数，不保证抵挡全部攻击。",
+      "formatCheck": "三项均为固定密码加第二输入；正确项仅略长，不存在明显详略线索。",
+      "issues": [],
+      "sourceCheck": {
+        "method": "primary-source-recheck",
+        "url": "https://pages.nist.gov/800-63-4/sp800-63/model/",
+        "title": "NIST SP 800-63-4 — Digital Identity Model, Authenticators",
+        "checkedAt": "2026-10-03",
+        "supports": "NIST区分知识、持有与生物因素；同类因素重复仍属单因素；设备认证器可包含密钥或OTP种子。本题仅判断这种因素分类，不主张OTP抗钓鱼。"
+      }
+    },
+    {
+      "id": "04-v2-q04",
+      "scope": "editorial-concept-update",
+      "status": "pass",
+      "concept": "同预算订单产出与转化率",
+      "check": "同预算订单产出与转化率、比较每份预算带来的订单数及认知操作比较均与题目一致。预算同为100，10单大于8单；8%大于5%只作为另一指标辨析。两语均限定记录数据、选定指标和不保证未来结果。",
+      "issues": []
+    }
+  ],
+  "remainingIssues": [],
+  "conclusion": "10道最终题目均有唯一答案，中英文边界一致；必要/充分等价、渗透初始压力、顾客关联共同前提和04-q6长度线索已解决。残留只按实际最终记录列出。"
+}

@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "lens-v2-001",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "phone_use",
+    "optionIds": [
+      "lens-v2-001-opt-10",
+      "lens-v2-001-opt-09",
+      "lens-v2-001-opt-06",
+      "lens-v2-001-opt-05"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "朋友想调整休闲安排。他常常看短视频超时，也想了解附近的线下活动。四类信息都能收集，你最想先从哪项开始？",
+      "options": [
+        "记录附近休闲设施的开放时间和使用情况。",
+        "记录使用前的疲惫程度和近期休息情况。",
+        "记录自动连播开关与每次使用时长。",
+        "记录每次使用时长，查看它们如何分布。"
+      ]
+    },
+    "en": {
+      "question": "A friend wants to rethink their leisure time. They often watch short videos longer than planned and also want to explore nearby offline activities. All four kinds of information can be collected. Which would you most like to investigate first?",
+      "options": [
+        "Record opening hours and use of nearby leisure facilities.",
+        "Record tiredness before use and recent rest.",
+        "Record autoplay settings and session lengths.",
+        "Record session lengths and examine their distribution."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-001-opt-06": {
+        "subject": "06",
+        "lens": "autoplay_design",
+        "reflectionZh": "这次你选择了：记录自动连播开关与每次使用时长。",
+        "reflectionEn": "This time, you chose to record autoplay settings and session lengths."
+      },
+      "lens-v2-001-opt-05": {
+        "subject": "05",
+        "lens": "duration_distribution",
+        "reflectionZh": "这次你选择了：记录每次使用时长，查看它们如何分布。",
+        "reflectionEn": "This time, you chose to record session lengths and examine their distribution."
+      },
+      "lens-v2-001-opt-09": {
+        "subject": "09",
+        "lens": "fatigue_rest",
+        "reflectionZh": "这次你选择了：记录使用前的疲惫程度和近期休息情况。",
+        "reflectionEn": "This time, you chose to record tiredness before use and recent rest."
+      },
+      "lens-v2-001-opt-10": {
+        "subject": "10",
+        "lens": "leisure_facility_use",
+        "reflectionZh": "这次你选择了：记录附近休闲设施的开放时间和使用情况。",
+        "reflectionEn": "This time, you chose to record opening hours and use of nearby leisure facilities."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-002",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "community_garden",
+    "optionIds": [
+      "lens-v2-002-opt-03",
+      "lens-v2-002-opt-04",
+      "lens-v2-002-opt-08",
+      "lens-v2-002-opt-07"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区花园的几个种植区长势不同。你想多了解这件事，四类资料都能查到。你最想先看哪类？",
+      "options": [
+        "了解居民怎样参与、分工和约定共享规则。",
+        "查看种苗采购和日常维护的预算分配。",
+        "比较各区的土壤、植物种类和养护记录。",
+        "查看灌溉管路的布置与出水位置。"
+      ]
+    },
+    "en": {
+      "question": "Several areas of a community garden are growing differently. All four kinds of information are available. Which would you most like to examine first?",
+      "options": [
+        "Ask how residents participate, share work and agree on rules.",
+        "Examine budgets for seedlings and routine maintenance.",
+        "Compare soil, plant species and care records across areas.",
+        "Examine irrigation pipe layouts and outlet positions."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-002-opt-08": {
+        "subject": "08",
+        "lens": "growing_conditions",
+        "reflectionZh": "这次你选择了：比较各区的土壤、植物种类和养护记录。",
+        "reflectionEn": "This time, you chose to compare soil, plant species and care records across areas."
+      },
+      "lens-v2-002-opt-07": {
+        "subject": "07",
+        "lens": "irrigation_layout",
+        "reflectionZh": "这次你选择了：查看灌溉管路的布置与出水位置。",
+        "reflectionEn": "This time, you chose to examine irrigation pipe layouts and outlet positions."
+      },
+      "lens-v2-002-opt-04": {
+        "subject": "04",
+        "lens": "garden_budget",
+        "reflectionZh": "这次你选择了：查看种苗采购和日常维护的预算分配。",
+        "reflectionEn": "This time, you chose to examine budgets for seedlings and routine maintenance."
+      },
+      "lens-v2-002-opt-03": {
+        "subject": "03",
+        "lens": "collective_rules",
+        "reflectionZh": "这次你选择了：了解居民怎样参与、分工和约定共享规则。",
+        "reflectionEn": "This time, you chose to ask how residents participate, share work and agree on rules."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-003",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "interactive_exhibition",
+    "optionIds": [
+      "lens-v2-003-opt-02",
+      "lens-v2-003-opt-00",
+      "lens-v2-003-opt-01",
+      "lens-v2-003-opt-10"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "图书馆准备改进一个小型互动展览。你可以先研究其中一方面，四项资料都可获得。你最想了解哪项？",
+      "options": [
+        "查看展品、图像与故事怎样共同表达主题。",
+        "请访客读一段指引，再说出下一步怎么做。",
+        "观察讲解后，访客能否独立完成互动练习。",
+        "观察访客如何进入、等候和寻求现场帮助。"
+      ]
+    },
+    "en": {
+      "question": "A library is improving a small interactive exhibition. Information is available for each of these areas. Which would you most like to investigate first?",
+      "options": [
+        "Examine how objects, images and stories express the theme.",
+        "Ask visitors to read instructions and describe the next step.",
+        "Observe whether visitors can complete an activity unaided after instruction.",
+        "Observe how visitors enter, wait and request on-site help."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-003-opt-02": {
+        "subject": "02",
+        "lens": "exhibition_meaning",
+        "reflectionZh": "这次你选择了：查看展品、图像与故事怎样共同表达主题。",
+        "reflectionEn": "This time, you chose to examine how objects, images and stories express the theme."
+      },
+      "lens-v2-003-opt-01": {
+        "subject": "01",
+        "lens": "instruction_learning",
+        "reflectionZh": "这次你选择了：观察讲解后，访客能否独立完成互动练习。",
+        "reflectionEn": "This time, you chose to observe whether visitors can complete an activity unaided after instruction."
+      },
+      "lens-v2-003-opt-00": {
+        "subject": "00",
+        "lens": "instruction_comprehension",
+        "reflectionZh": "这次你选择了：请访客读一段指引，再说出下一步怎么做。",
+        "reflectionEn": "This time, you chose to ask visitors to read instructions and describe the next step."
+      },
+      "lens-v2-003-opt-10": {
+        "subject": "10",
+        "lens": "visitor_service",
+        "reflectionZh": "这次你选择了：观察访客如何进入、等候和寻求现场帮助。",
+        "reflectionEn": "This time, you chose to observe how visitors enter, wait and request on-site help."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-004",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "shared_workspace",
+    "optionIds": [
+      "lens-v2-004-opt-04",
+      "lens-v2-004-opt-06",
+      "lens-v2-004-opt-07",
+      "lens-v2-004-opt-09"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "几位朋友使用同一间工作室，想让它更适合大家使用。你可以先收集一种信息。你最想看哪项？",
+      "options": [
+        "查看场地成本与使用时段如何分摊。",
+        "查看共享设备、文件权限与网络连接设置。",
+        "测量桌面、灯具和通道的空间位置。",
+        "了解大家工作时的身体不适和休息情况。"
+      ]
+    },
+    "en": {
+      "question": "Friends share a workspace and want it to work better for everyone. Which kind of information would you most like to collect first?",
+      "options": [
+        "Examine how space costs and usage periods are shared.",
+        "Examine shared devices, file permissions and network settings.",
+        "Measure the positions of desks, lights and walkways.",
+        "Ask about physical discomfort during work and rest breaks."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-004-opt-07": {
+        "subject": "07",
+        "lens": "physical_layout",
+        "reflectionZh": "这次你选择了：测量桌面、灯具和通道的空间位置。",
+        "reflectionEn": "This time, you chose to measure the positions of desks, lights and walkways."
+      },
+      "lens-v2-004-opt-09": {
+        "subject": "09",
+        "lens": "work_comfort",
+        "reflectionZh": "这次你选择了：了解大家工作时的身体不适和休息情况。",
+        "reflectionEn": "This time, you chose to ask about physical discomfort during work and rest breaks."
+      },
+      "lens-v2-004-opt-06": {
+        "subject": "06",
+        "lens": "shared_technology",
+        "reflectionZh": "这次你选择了：查看共享设备、文件权限与网络连接设置。",
+        "reflectionEn": "This time, you chose to examine shared devices, file permissions and network settings."
+      },
+      "lens-v2-004-opt-04": {
+        "subject": "04",
+        "lens": "space_costs",
+        "reflectionZh": "这次你选择了：查看场地成本与使用时段如何分摊。",
+        "reflectionEn": "This time, you chose to examine how space costs and usage periods are shared."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-005",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "market_stall",
+    "optionIds": [
+      "lens-v2-005-opt-08",
+      "lens-v2-005-opt-05",
+      "lens-v2-005-opt-04",
+      "lens-v2-005-opt-02"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "街区市场准备调整一个食品摊位的展示。四个调查方向都已列入计划，你最想先了解哪项？",
+      "options": [
+        "了解食材怎样种植、收获和保存。",
+        "比较不同时段的客流数量与变化范围。",
+        "查看定价、成本与每笔销售的收益。",
+        "研究颜色、图案和故事如何表达产地特色。"
+      ]
+    },
+    "en": {
+      "question": "A neighbourhood market is updating a food stall display. All four investigations are planned. Which would you most like to explore first?",
+      "options": [
+        "Find out how ingredients are grown, harvested and stored.",
+        "Compare visitor counts and their variation across time periods.",
+        "Examine pricing, costs and returns from each sale.",
+        "Study how colours, patterns and stories express local identity."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-005-opt-04": {
+        "subject": "04",
+        "lens": "stall_economics",
+        "reflectionZh": "这次你选择了：查看定价、成本与每笔销售的收益。",
+        "reflectionEn": "This time, you chose to examine pricing, costs and returns from each sale."
+      },
+      "lens-v2-005-opt-08": {
+        "subject": "08",
+        "lens": "ingredient_production",
+        "reflectionZh": "这次你选择了：了解食材怎样种植、收获和保存。",
+        "reflectionEn": "This time, you chose to find out how ingredients are grown, harvested and stored."
+      },
+      "lens-v2-005-opt-02": {
+        "subject": "02",
+        "lens": "visual_identity",
+        "reflectionZh": "这次你选择了：研究颜色、图案和故事如何表达产地特色。",
+        "reflectionEn": "This time, you chose to study how colours, patterns and stories express local identity."
+      },
+      "lens-v2-005-opt-05": {
+        "subject": "05",
+        "lens": "visitor_counts",
+        "reflectionZh": "这次你选择了：比较不同时段的客流数量与变化范围。",
+        "reflectionEn": "This time, you chose to compare visitor counts and their variation across time periods."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-006",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "park_path",
+    "optionIds": [
+      "lens-v2-006-opt-07",
+      "lens-v2-006-opt-08",
+      "lens-v2-006-opt-10",
+      "lens-v2-006-opt-03"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "公园准备改进一条步道。四类资料都能帮助讨论方案，你最想先研究哪类？",
+      "options": [
+        "查看坡度、路面材料和排水结构。",
+        "查看沿线植物、土壤与雨后积水的记录。",
+        "观察路标、休息点与访客问路的情况。",
+        "了解不同居民群体怎样使用这条步道。"
+      ]
+    },
+    "en": {
+      "question": "A park is improving a path. Each kind of information can inform the discussion. Which would you most like to examine first?",
+      "options": [
+        "Examine slopes, surface materials and drainage structures.",
+        "Examine records of plants, soil and standing water after rain.",
+        "Observe signs, rest stops and visitors asking for directions.",
+        "Ask how different resident groups use the path."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-006-opt-08": {
+        "subject": "08",
+        "lens": "path_ecology",
+        "reflectionZh": "这次你选择了：查看沿线植物、土壤与雨后积水的记录。",
+        "reflectionEn": "This time, you chose to examine records of plants, soil and standing water after rain."
+      },
+      "lens-v2-006-opt-03": {
+        "subject": "03",
+        "lens": "community_use",
+        "reflectionZh": "这次你选择了：了解不同居民群体怎样使用这条步道。",
+        "reflectionEn": "This time, you chose to ask how different resident groups use the path."
+      },
+      "lens-v2-006-opt-07": {
+        "subject": "07",
+        "lens": "path_structure",
+        "reflectionZh": "这次你选择了：查看坡度、路面材料和排水结构。",
+        "reflectionEn": "This time, you chose to examine slopes, surface materials and drainage structures."
+      },
+      "lens-v2-006-opt-10": {
+        "subject": "10",
+        "lens": "wayfinding_service",
+        "reflectionZh": "这次你选择了：观察路标、休息点与访客问路的情况。",
+        "reflectionEn": "This time, you chose to observe signs, rest stops and visitors asking for directions."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-007",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "online_course",
+    "optionIds": [
+      "lens-v2-007-opt-05",
+      "lens-v2-007-opt-01",
+      "lens-v2-007-opt-02",
+      "lens-v2-007-opt-06"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "一个线上短课想改进学习体验。你可以先了解其中一个方面，四项都不要求你已有专业经验。你最想研究哪项？",
+      "options": [
+        "比较练习得分的分布与前后变化。",
+        "观察学习者练习时需要哪些提示和反馈。",
+        "研究措辞、比喻和画面怎样传达内容。",
+        "查看播放、检索和保存进度的功能设计。"
+      ]
+    },
+    "en": {
+      "question": "A short online course is improving its learning experience. You can investigate any area without prior specialist experience. Which would you prefer to explore first?",
+      "options": [
+        "Compare the distribution of practice scores and changes over time.",
+        "Observe what prompts and feedback learners need during practice.",
+        "Study how wording, metaphors and images convey the content.",
+        "Examine playback, search and progress-saving functions."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-007-opt-01": {
+        "subject": "01",
+        "lens": "practice_feedback",
+        "reflectionZh": "这次你选择了：观察学习者练习时需要哪些提示和反馈。",
+        "reflectionEn": "This time, you chose to observe what prompts and feedback learners need during practice."
+      },
+      "lens-v2-007-opt-06": {
+        "subject": "06",
+        "lens": "course_software",
+        "reflectionZh": "这次你选择了：查看播放、检索和保存进度的功能设计。",
+        "reflectionEn": "This time, you chose to examine playback, search and progress-saving functions."
+      },
+      "lens-v2-007-opt-05": {
+        "subject": "05",
+        "lens": "score_distribution",
+        "reflectionZh": "这次你选择了：比较练习得分的分布与前后变化。",
+        "reflectionEn": "This time, you chose to compare the distribution of practice scores and changes over time."
+      },
+      "lens-v2-007-opt-02": {
+        "subject": "02",
+        "lens": "course_expression",
+        "reflectionZh": "这次你选择了：研究措辞、比喻和画面怎样传达内容。",
+        "reflectionEn": "This time, you chose to study how wording, metaphors and images convey the content."
+      }
+    }
+  },
+  {
+    "id": "lens-v2-008",
+    "questionMode": "knowledge_lens_probe",
+    "scenarioType": "community_walk",
+    "optionIds": [
+      "lens-v2-008-opt-01",
+      "lens-v2-008-opt-03",
+      "lens-v2-008-opt-09",
+      "lens-v2-008-opt-00"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区组织免费步行导览，想让报名和参与更顺畅。四类信息都能收集。你最想先了解哪类？",
+      "options": [
+        "观察示范一次报名后，新参与者如何再尝试。",
+        "了解不同居民的可参与时段和出行条件。",
+        "了解路线体力要求与参加者自述的身体限制。",
+        "查看报名者怎样理解表格里的词语和要求。"
+      ]
+    },
+    "en": {
+      "question": "A community is organising a free guided walk and wants registration and participation to go smoothly. Which information would you most like to collect first?",
+      "options": [
+        "Observe how new participants retry registration after a demonstration.",
+        "Ask about residents’ available times and travel circumstances.",
+        "Examine physical demands and participants’ reported limitations.",
+        "Examine how applicants understand form wording and requirements."
+      ]
+    },
+    "optionProfiles": {
+      "lens-v2-008-opt-00": {
+        "subject": "00",
+        "lens": "form_literacy",
+        "reflectionZh": "这次你选择了：查看报名者怎样理解表格里的词语和要求。",
+        "reflectionEn": "This time, you chose to examine how applicants understand form wording and requirements."
+      },
+      "lens-v2-008-opt-01": {
+        "subject": "01",
+        "lens": "demonstration_learning",
+        "reflectionZh": "这次你选择了：观察示范一次报名后，新参与者如何再尝试。",
+        "reflectionEn": "This time, you chose to observe how new participants retry registration after a demonstration."
+      },
+      "lens-v2-008-opt-03": {
+        "subject": "03",
+        "lens": "participation_access",
+        "reflectionZh": "这次你选择了：了解不同居民的可参与时段和出行条件。",
+        "reflectionEn": "This time, you chose to ask about residents’ available times and travel circumstances."
+      },
+      "lens-v2-008-opt-09": {
+        "subject": "09",
+        "lens": "activity_health",
+        "reflectionZh": "这次你选择了：了解路线体力要求与参加者自述的身体限制。",
+        "reflectionEn": "This time, you chose to examine physical demands and participants’ reported limitations."
+      }
+    }
+  },
+  {
+    "id": "task-v2-001",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "small_exhibition",
+    "optionIds": [
+      "task-v2-001-opt-01",
+      "task-v2-001-opt-10",
+      "task-v2-001-opt-00",
+      "task-v2-001-opt-02"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "朋友们一起准备小型社区展览。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "设计一段练习，帮助访客理解一个展览概念。",
+        "设计接待和问路方式，让参观过程顺畅。",
+        "把参观指引改写成容易读懂的日常语言。",
+        "选择图像与声音，让展览主题有清楚的表达。"
+      ]
+    },
+    "en": {
+      "question": "Friends are preparing a small community exhibition. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Design an activity to help visitors learn one exhibition concept.",
+        "Design reception and wayfinding for a smooth visit.",
+        "Rewrite visitor instructions in clear everyday language.",
+        "Choose images and sounds that clearly express the theme."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-001-opt-02": {
+        "subject": "02",
+        "lens": "exhibition_art",
+        "reflectionZh": "这次你选择了：选择图像与声音，让展览主题有清楚的表达。",
+        "reflectionEn": "This time, you chose to choose images and sounds that clearly express the theme."
+      },
+      "task-v2-001-opt-00": {
+        "subject": "00",
+        "lens": "plain_instructions",
+        "reflectionZh": "这次你选择了：把参观指引改写成容易读懂的日常语言。",
+        "reflectionEn": "This time, you chose to rewrite visitor instructions in clear everyday language."
+      },
+      "task-v2-001-opt-01": {
+        "subject": "01",
+        "lens": "visitor_learning",
+        "reflectionZh": "这次你选择了：设计一段练习，帮助访客理解一个展览概念。",
+        "reflectionEn": "This time, you chose to design an activity to help visitors learn one exhibition concept."
+      },
+      "task-v2-001-opt-10": {
+        "subject": "10",
+        "lens": "visitor_operations",
+        "reflectionZh": "这次你选择了：设计接待和问路方式，让参观过程顺畅。",
+        "reflectionEn": "This time, you chose to design reception and wayfinding for a smooth visit."
+      }
+    }
+  },
+  {
+    "id": "task-v2-002",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "garden_plan",
+    "optionIds": [
+      "task-v2-002-opt-04",
+      "task-v2-002-opt-08",
+      "task-v2-002-opt-03",
+      "task-v2-002-opt-07"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区准备一个小型共享花园。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "比较采购方案，整理费用和维护预算。",
+        "根据种植资料选择植物和养护安排。",
+        "整理居民意见，拟定共同使用的约定。",
+        "根据图纸检查花箱尺寸和灌溉连接。"
+      ]
+    },
+    "en": {
+      "question": "A community is preparing a small shared garden. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Compare purchases and prepare a maintenance budget.",
+        "Use growing information to choose plants and care routines.",
+        "Gather residents’ views and draft shared-use agreements.",
+        "Use drawings to check planter dimensions and irrigation connections."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-002-opt-08": {
+        "subject": "08",
+        "lens": "plant_care",
+        "reflectionZh": "这次你选择了：根据种植资料选择植物和养护安排。",
+        "reflectionEn": "This time, you chose to use growing information to choose plants and care routines."
+      },
+      "task-v2-002-opt-07": {
+        "subject": "07",
+        "lens": "garden_build",
+        "reflectionZh": "这次你选择了：根据图纸检查花箱尺寸和灌溉连接。",
+        "reflectionEn": "This time, you chose to use drawings to check planter dimensions and irrigation connections."
+      },
+      "task-v2-002-opt-04": {
+        "subject": "04",
+        "lens": "garden_finance",
+        "reflectionZh": "这次你选择了：比较采购方案，整理费用和维护预算。",
+        "reflectionEn": "This time, you chose to compare purchases and prepare a maintenance budget."
+      },
+      "task-v2-002-opt-03": {
+        "subject": "03",
+        "lens": "garden_governance",
+        "reflectionZh": "这次你选择了：整理居民意见，拟定共同使用的约定。",
+        "reflectionEn": "This time, you chose to gather residents’ views and draft shared-use agreements."
+      }
+    }
+  },
+  {
+    "id": "task-v2-003",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "lending_cabinet",
+    "optionIds": [
+      "task-v2-003-opt-06",
+      "task-v2-003-opt-00",
+      "task-v2-003-opt-05",
+      "task-v2-003-opt-10"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "图书馆试办一个工具借用柜。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "配置借还记录表单和不同使用者的访问权限。",
+        "把借还说明整理成清楚的步骤和检查清单。",
+        "分析借用数量，画出需求随时间变化的图。",
+        "设计取还交接和排队等候的服务流程。"
+      ]
+    },
+    "en": {
+      "question": "A library is piloting a tool-lending cabinet. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Configure loan forms and access permissions for different users.",
+        "Turn lending instructions into clear steps and a checklist.",
+        "Analyse loan counts and chart how demand changes over time.",
+        "Design handovers and queueing for collection and return."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-003-opt-06": {
+        "subject": "06",
+        "lens": "lending_software",
+        "reflectionZh": "这次你选择了：配置借还记录表单和不同使用者的访问权限。",
+        "reflectionEn": "This time, you chose to configure loan forms and access permissions for different users."
+      },
+      "task-v2-003-opt-05": {
+        "subject": "05",
+        "lens": "loan_statistics",
+        "reflectionZh": "这次你选择了：分析借用数量，画出需求随时间变化的图。",
+        "reflectionEn": "This time, you chose to analyse loan counts and chart how demand changes over time."
+      },
+      "task-v2-003-opt-00": {
+        "subject": "00",
+        "lens": "instruction_writing",
+        "reflectionZh": "这次你选择了：把借还说明整理成清楚的步骤和检查清单。",
+        "reflectionEn": "This time, you chose to turn lending instructions into clear steps and a checklist."
+      },
+      "task-v2-003-opt-10": {
+        "subject": "10",
+        "lens": "lending_service",
+        "reflectionZh": "这次你选择了：设计取还交接和排队等候的服务流程。",
+        "reflectionEn": "This time, you chose to design handovers and queueing for collection and return."
+      }
+    }
+  },
+  {
+    "id": "task-v2-004",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "making_workshop",
+    "optionIds": [
+      "task-v2-004-opt-02",
+      "task-v2-004-opt-09",
+      "task-v2-004-opt-07",
+      "task-v2-004-opt-01"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "朋友们准备一次桌面制作活动。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "选择作品的色彩和图形，表达活动主题。",
+        "根据健康资料，整理活动中的休息提示。",
+        "用尺寸资料检查底座与零件是否匹配。",
+        "设计示范和练习，帮助新手逐步独立制作。"
+      ]
+    },
+    "en": {
+      "question": "Friends are preparing a tabletop making workshop. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Choose colours and shapes that express the workshop theme.",
+        "Use health information to prepare rest-break guidance.",
+        "Use measurements to check that bases and parts fit.",
+        "Design demonstrations and practice so beginners can work independently."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-004-opt-01": {
+        "subject": "01",
+        "lens": "making_instruction",
+        "reflectionZh": "这次你选择了：设计示范和练习，帮助新手逐步独立制作。",
+        "reflectionEn": "This time, you chose to design demonstrations and practice so beginners can work independently."
+      },
+      "task-v2-004-opt-02": {
+        "subject": "02",
+        "lens": "making_expression",
+        "reflectionZh": "这次你选择了：选择作品的色彩和图形，表达活动主题。",
+        "reflectionEn": "This time, you chose to choose colours and shapes that express the workshop theme."
+      },
+      "task-v2-004-opt-07": {
+        "subject": "07",
+        "lens": "component_fit",
+        "reflectionZh": "这次你选择了：用尺寸资料检查底座与零件是否匹配。",
+        "reflectionEn": "This time, you chose to use measurements to check that bases and parts fit."
+      },
+      "task-v2-004-opt-09": {
+        "subject": "09",
+        "lens": "workshop_rest",
+        "reflectionZh": "这次你选择了：根据健康资料，整理活动中的休息提示。",
+        "reflectionEn": "This time, you chose to use health information to prepare rest-break guidance."
+      }
+    }
+  },
+  {
+    "id": "task-v2-005",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "guided_walk",
+    "optionIds": [
+      "task-v2-005-opt-10",
+      "task-v2-005-opt-03",
+      "task-v2-005-opt-09",
+      "task-v2-005-opt-08"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区准备一次短距离步行导览。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "整理集合、路线指引和散场的服务安排。",
+        "整理不同居民对路线和参与方式的意见。",
+        "核对饮水与身体不适提醒的资料。",
+        "根据观察资料，准备沿线植物与生境介绍。"
+      ]
+    },
+    "en": {
+      "question": "A community is preparing a short guided walk. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Plan meeting points, route guidance and departure arrangements.",
+        "Gather different residents’ views on routes and participation.",
+        "Check sources for hydration and physical-discomfort guidance.",
+        "Use observations to prepare notes on plants and habitats along the route."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-005-opt-10": {
+        "subject": "10",
+        "lens": "walk_operations",
+        "reflectionZh": "这次你选择了：整理集合、路线指引和散场的服务安排。",
+        "reflectionEn": "This time, you chose to plan meeting points, route guidance and departure arrangements."
+      },
+      "task-v2-005-opt-09": {
+        "subject": "09",
+        "lens": "walk_health",
+        "reflectionZh": "这次你选择了：核对饮水与身体不适提醒的资料。",
+        "reflectionEn": "This time, you chose to check sources for hydration and physical-discomfort guidance."
+      },
+      "task-v2-005-opt-03": {
+        "subject": "03",
+        "lens": "walk_participation",
+        "reflectionZh": "这次你选择了：整理不同居民对路线和参与方式的意见。",
+        "reflectionEn": "This time, you chose to gather different residents’ views on routes and participation."
+      },
+      "task-v2-005-opt-08": {
+        "subject": "08",
+        "lens": "walk_ecology",
+        "reflectionZh": "这次你选择了：根据观察资料，准备沿线植物与生境介绍。",
+        "reflectionEn": "This time, you chose to use observations to prepare notes on plants and habitats along the route."
+      }
+    }
+  },
+  {
+    "id": "task-v2-006",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "market_pop_up",
+    "optionIds": [
+      "task-v2-006-opt-00",
+      "task-v2-006-opt-05",
+      "task-v2-006-opt-02",
+      "task-v2-006-opt-06"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "朋友准备试办一天的小型集市摊位。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "换算不同包装材料的单位价格，整理比较表。",
+        "分析已有客流记录，比较时段间的数量差异。",
+        "设计展示的图像和文字，让主题有一致表达。",
+        "设置库存表单的输入检查和自动汇总。"
+      ]
+    },
+    "en": {
+      "question": "Friends are preparing a one-day market stall. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Convert packaging prices to unit prices and make a comparison table.",
+        "Analyse visitor records and compare counts across time periods.",
+        "Design display images and wording that express a consistent theme.",
+        "Set up input checks and automatic totals in an inventory form."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-006-opt-00": {
+        "subject": "00",
+        "lens": "unit_price_comparison",
+        "reflectionZh": "这次你选择了：换算不同包装材料的单位价格，整理比较表。",
+        "reflectionEn": "This time, you chose to convert packaging prices to unit prices and make a comparison table."
+      },
+      "task-v2-006-opt-06": {
+        "subject": "06",
+        "lens": "inventory_automation",
+        "reflectionZh": "这次你选择了：设置库存表单的输入检查和自动汇总。",
+        "reflectionEn": "This time, you chose to set up input checks and automatic totals in an inventory form."
+      },
+      "task-v2-006-opt-02": {
+        "subject": "02",
+        "lens": "stall_visuals",
+        "reflectionZh": "这次你选择了：设计展示的图像和文字，让主题有一致表达。",
+        "reflectionEn": "This time, you chose to design display images and wording that express a consistent theme."
+      },
+      "task-v2-006-opt-05": {
+        "subject": "05",
+        "lens": "stall_statistics",
+        "reflectionZh": "这次你选择了：分析已有客流记录，比较时段间的数量差异。",
+        "reflectionEn": "This time, you chose to analyse visitor records and compare counts across time periods."
+      }
+    }
+  },
+  {
+    "id": "task-v2-007",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "repair_demo",
+    "optionIds": [
+      "task-v2-007-opt-07",
+      "task-v2-007-opt-06",
+      "task-v2-007-opt-04",
+      "task-v2-007-opt-00"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区准备一个物品维修示范台。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "根据图纸检查零件尺寸与装配位置。",
+        "设置查询记录的数据库字段和访问权限。",
+        "比较供货报价，整理材料和耗材成本。",
+        "把使用说明改成清楚的步骤和常见问答。"
+      ]
+    },
+    "en": {
+      "question": "A community is preparing an object-repair demonstration station. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Check part sizes and assembly positions using drawings.",
+        "Set up database fields and permissions for record searches.",
+        "Compare supplier quotes and organise material costs.",
+        "Turn instructions into clear steps and answers to common questions."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-007-opt-07": {
+        "subject": "07",
+        "lens": "repair_fit",
+        "reflectionZh": "这次你选择了：根据图纸检查零件尺寸与装配位置。",
+        "reflectionEn": "This time, you chose to check part sizes and assembly positions using drawings."
+      },
+      "task-v2-007-opt-00": {
+        "subject": "00",
+        "lens": "repair_instructions",
+        "reflectionZh": "这次你选择了：把使用说明改成清楚的步骤和常见问答。",
+        "reflectionEn": "This time, you chose to turn instructions into clear steps and answers to common questions."
+      },
+      "task-v2-007-opt-04": {
+        "subject": "04",
+        "lens": "repair_costing",
+        "reflectionZh": "这次你选择了：比较供货报价，整理材料和耗材成本。",
+        "reflectionEn": "This time, you chose to compare supplier quotes and organise material costs."
+      },
+      "task-v2-007-opt-06": {
+        "subject": "06",
+        "lens": "repair_database",
+        "reflectionZh": "这次你选择了：设置查询记录的数据库字段和访问权限。",
+        "reflectionEn": "This time, you chose to set up database fields and permissions for record searches."
+      }
+    }
+  },
+  {
+    "id": "task-v2-008",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "study_video",
+    "optionIds": [
+      "task-v2-008-opt-05",
+      "task-v2-008-opt-02",
+      "task-v2-008-opt-01",
+      "task-v2-008-opt-09"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "朋友们准备一段关于学习时休息的短视频。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "把同类视频的匿名使用记录整理成分布图。",
+        "调整画面、配音和节奏，让内容表达清楚。",
+        "设计一个观看后能独立完成的学习练习。",
+        "核对疲惫与休息提示的健康资料。"
+      ]
+    },
+    "en": {
+      "question": "Friends are preparing a short video about rest during study. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Chart the distribution of anonymous usage records from similar videos.",
+        "Adjust images, narration and rhythm to convey the content clearly.",
+        "Design an activity viewers can complete independently after watching.",
+        "Check health sources behind guidance on tiredness and rest."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-008-opt-01": {
+        "subject": "01",
+        "lens": "video_learning",
+        "reflectionZh": "这次你选择了：设计一个观看后能独立完成的学习练习。",
+        "reflectionEn": "This time, you chose to design an activity viewers can complete independently after watching."
+      },
+      "task-v2-008-opt-02": {
+        "subject": "02",
+        "lens": "video_expression",
+        "reflectionZh": "这次你选择了：调整画面、配音和节奏，让内容表达清楚。",
+        "reflectionEn": "This time, you chose to adjust images, narration and rhythm to convey the content clearly."
+      },
+      "task-v2-008-opt-05": {
+        "subject": "05",
+        "lens": "video_statistics",
+        "reflectionZh": "这次你选择了：把同类视频的匿名使用记录整理成分布图。",
+        "reflectionEn": "This time, you chose to chart the distribution of anonymous usage records from similar videos."
+      },
+      "task-v2-008-opt-09": {
+        "subject": "09",
+        "lens": "video_health",
+        "reflectionZh": "这次你选择了：核对疲惫与休息提示的健康资料。",
+        "reflectionEn": "This time, you chose to check health sources behind guidance on tiredness and rest."
+      }
+    }
+  },
+  {
+    "id": "task-v2-009",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "seasonal_food",
+    "optionIds": [
+      "task-v2-009-opt-08",
+      "task-v2-009-opt-10",
+      "task-v2-009-opt-00",
+      "task-v2-009-opt-04"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区准备介绍当季食材的小活动。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "整理食材的生长条件和收获时节资料。",
+        "设计接待、展示和领取材料的服务安排。",
+        "把报名表和活动说明改成容易读懂的语言。",
+        "比较采购数量与成本，制定活动预算。"
+      ]
+    },
+    "en": {
+      "question": "A community is preparing a small event about seasonal ingredients. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Gather information on growing conditions and harvest seasons.",
+        "Plan reception, displays and material collection.",
+        "Rewrite registration forms and event instructions in accessible language.",
+        "Compare purchase quantities and costs to prepare the event budget."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-009-opt-08": {
+        "subject": "08",
+        "lens": "seasonal_growing",
+        "reflectionZh": "这次你选择了：整理食材的生长条件和收获时节资料。",
+        "reflectionEn": "This time, you chose to gather information on growing conditions and harvest seasons."
+      },
+      "task-v2-009-opt-10": {
+        "subject": "10",
+        "lens": "food_event_service",
+        "reflectionZh": "这次你选择了：设计接待、展示和领取材料的服务安排。",
+        "reflectionEn": "This time, you chose to plan reception, displays and material collection."
+      },
+      "task-v2-009-opt-04": {
+        "subject": "04",
+        "lens": "food_event_budget",
+        "reflectionZh": "这次你选择了：比较采购数量与成本，制定活动预算。",
+        "reflectionEn": "This time, you chose to compare purchase quantities and costs to prepare the event budget."
+      },
+      "task-v2-009-opt-00": {
+        "subject": "00",
+        "lens": "food_event_literacy",
+        "reflectionZh": "这次你选择了：把报名表和活动说明改成容易读懂的语言。",
+        "reflectionEn": "This time, you chose to rewrite registration forms and event instructions in accessible language."
+      }
+    }
+  },
+  {
+    "id": "task-v2-010",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "community_data",
+    "optionIds": [
+      "task-v2-010-opt-03",
+      "task-v2-010-opt-01",
+      "task-v2-010-opt-06",
+      "task-v2-010-opt-05"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "居民想展示一份关于社区设施使用的资料。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "核对调查覆盖和遗漏的居民群体。",
+        "设计一段练习，帮助读者学会读这张图。",
+        "配置数据表的检索和导出功能。",
+        "比较计数、比例和图表尺度是否准确。"
+      ]
+    },
+    "en": {
+      "question": "Residents want to present information about local facility use. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Check which resident groups the survey includes or misses.",
+        "Design an activity that teaches readers how to read the chart.",
+        "Configure searching and exporting in the data table.",
+        "Check counts, proportions and chart scales for accuracy."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-010-opt-03": {
+        "subject": "03",
+        "lens": "survey_population",
+        "reflectionZh": "这次你选择了：核对调查覆盖和遗漏的居民群体。",
+        "reflectionEn": "This time, you chose to check which resident groups the survey includes or misses."
+      },
+      "task-v2-010-opt-06": {
+        "subject": "06",
+        "lens": "data_tools",
+        "reflectionZh": "这次你选择了：配置数据表的检索和导出功能。",
+        "reflectionEn": "This time, you chose to configure searching and exporting in the data table."
+      },
+      "task-v2-010-opt-05": {
+        "subject": "05",
+        "lens": "data_measurement",
+        "reflectionZh": "这次你选择了：比较计数、比例和图表尺度是否准确。",
+        "reflectionEn": "This time, you chose to check counts, proportions and chart scales for accuracy."
+      },
+      "task-v2-010-opt-01": {
+        "subject": "01",
+        "lens": "chart_teaching",
+        "reflectionZh": "这次你选择了：设计一段练习，帮助读者学会读这张图。",
+        "reflectionEn": "This time, you chose to design an activity that teaches readers how to read the chart."
+      }
+    }
+  },
+  {
+    "id": "task-v2-011",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "community_lunch",
+    "optionIds": [
+      "task-v2-011-opt-09",
+      "task-v2-011-opt-07",
+      "task-v2-011-opt-10",
+      "task-v2-011-opt-08"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区准备一场小型午餐活动。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "根据资料，整理进餐前的手卫生提示。",
+        "根据场地图检查通道宽度和设施摆放。",
+        "设计到场、领餐和收拾交接的服务流程。",
+        "整理食材产地和种植方式的说明资料。"
+      ]
+    },
+    "en": {
+      "question": "A community is preparing a small lunch event. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Use supplied guidance to prepare hand-hygiene reminders before eating.",
+        "Use the site plan to check walkway widths and fixture positions.",
+        "Design arrival, meal collection and cleanup handovers.",
+        "Gather information on ingredient origins and growing methods."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-011-opt-09": {
+        "subject": "09",
+        "lens": "lunch_hygiene",
+        "reflectionZh": "这次你选择了：根据资料，整理进餐前的手卫生提示。",
+        "reflectionEn": "This time, you chose to use supplied guidance to prepare hand-hygiene reminders before eating."
+      },
+      "task-v2-011-opt-08": {
+        "subject": "08",
+        "lens": "lunch_agriculture",
+        "reflectionZh": "这次你选择了：整理食材产地和种植方式的说明资料。",
+        "reflectionEn": "This time, you chose to gather information on ingredient origins and growing methods."
+      },
+      "task-v2-011-opt-07": {
+        "subject": "07",
+        "lens": "lunch_layout",
+        "reflectionZh": "这次你选择了：根据场地图检查通道宽度和设施摆放。",
+        "reflectionEn": "This time, you chose to use the site plan to check walkway widths and fixture positions."
+      },
+      "task-v2-011-opt-10": {
+        "subject": "10",
+        "lens": "lunch_service",
+        "reflectionZh": "这次你选择了：设计到场、领餐和收拾交接的服务流程。",
+        "reflectionEn": "This time, you chose to design arrival, meal collection and cleanup handovers."
+      }
+    }
+  },
+  {
+    "id": "task-v2-012",
+    "questionMode": "task_preference_probe",
+    "scenarioType": "shared_gardening_tools",
+    "optionIds": [
+      "task-v2-012-opt-06",
+      "task-v2-012-opt-04",
+      "task-v2-012-opt-08",
+      "task-v2-012-opt-03"
+    ],
+    "skipAllowed": true,
+    "zh": {
+      "question": "社区想试办一套共享园艺工具借用服务。假设每项任务都有资料或协助，你都能完成，预计用时相近，也没有必须先做哪项的要求。你更愿意负责哪项？",
+      "options": [
+        "设置预约时段冲突的自动检查。",
+        "比较收费和维护支出，整理运营预算。",
+        "整理工具使用对土壤和植物的影响。",
+        "收集不同居民的借用需求和共享规则意见。"
+      ]
+    },
+    "en": {
+      "question": "A community wants to pilot a shared gardening-tool lending service. Assume you have information or help for each task, can complete any of them, and they take similar time. None has to come first. Which would you prefer to take on?",
+      "options": [
+        "Set up automatic checks for conflicting booking times.",
+        "Compare fees and maintenance costs to prepare an operating budget.",
+        "Summarise how tool use affects soil and plants.",
+        "Collect residents’ lending needs and views on shared-use rules."
+      ]
+    },
+    "optionProfiles": {
+      "task-v2-012-opt-04": {
+        "subject": "04",
+        "lens": "device_finance",
+        "reflectionZh": "这次你选择了：比较收费和维护支出，整理运营预算。",
+        "reflectionEn": "This time, you chose to compare fees and maintenance costs to prepare an operating budget."
+      },
+      "task-v2-012-opt-06": {
+        "subject": "06",
+        "lens": "booking_conflict_checks",
+        "reflectionZh": "这次你选择了：设置预约时段冲突的自动检查。",
+        "reflectionEn": "This time, you chose to set up automatic checks for conflicting booking times."
+      },
+      "task-v2-012-opt-08": {
+        "subject": "08",
+        "lens": "soil_plant_effects",
+        "reflectionZh": "这次你选择了：整理工具使用对土壤和植物的影响。",
+        "reflectionEn": "This time, you chose to summarise how tool use affects soil and plants."
+      },
+      "task-v2-012-opt-03": {
+        "subject": "03",
+        "lens": "device_governance",
+        "reflectionZh": "这次你选择了：收集不同居民的借用需求和共享规则意见。",
+        "reflectionEn": "This time, you chose to collect residents’ lending needs and views on shared-use rules."
+      }
+    }
+  }
+]

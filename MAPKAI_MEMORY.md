@@ -7,7 +7,7 @@ This file is the portable working memory for continuing MapKAI development in a 
 Current local repository:
 
 ```text
-/Users/leoyang/Documents/mapkai
+/Users/leoyang/iCloud Drive (Archive) - 1/Documents/mapkai
 ```
 
 Important files:
@@ -2696,3 +2696,38 @@ Follow-up:
 - Bumped the public asset version to `0.1.128`.
 - Verification: bundled Node `--check` passed for `script.js` and `public/script.js`; desktop/mobile/dark map screenshots were checked with local Chrome headless after in-app browser control became unstable; new map resources loaded correctly. Local `/api/visit` still returns 500 without local analytics config, but this is unrelated to map assets.
 - Push status: direct-push rule is active; final pushed commit hash is reported in the Codex final response.
+
+## 2026-10-02 - Embed practical question generation and review standards
+
+- Upgraded `docs/mapkai-question-bank-principles.zh.md` to Principles v3 as the default standard for question generation, revision and review.
+- Preserved the established everyday-situation, pattern-recognition and useful-understanding direction; Explore's 20 investigation/task choices remain distinct from Map's 132 scored knowledge questions.
+- Embedded a content and task blueprint, sufficient conditions and unique knowledge answers, removal of option clues, plausible distractors, bilingual equivalence, context fairness and no speed scoring for the current learning purpose.
+- Separated editorial review from real user trials: candidates can proceed after editorial checks, while empirical difficulty and option performance require appropriate first-response data. The cross-subject bank is not assumed to measure one ability; Explore has no knowledge-correctness metrics.
+- Added generation delivery requirements: batch blueprint, bilingual items with separate editorial records, and batch self-check. No new accounts, backend, personal profiles or compulsory per-item user follow-up are required.
+- Synchronized the authoring instructions in `MAPKAI_QUESTION_BANK_FOR_GPT.txt` and linked both inputs from README. The existing 132-question reference remains deduplication material and is not reclassified as approved content.
+- This revision changes authoring documents only; it does not replace runtime questions, modify map thresholds or publish the website.
+- Verified: independent review of the two question types, generation instructions and trial boundaries; local document links resolve; the existing 132-question reference body is preserved byte for byte.
+- Generation context: these files were prepared in the non-Git `/Users/leoyang/Documents/mapkai/atlas-redesign` copy. The actual repository was located on 2026-10-03; see the repository delivery record below. The default direct-push preference remains active.
+
+## 2026-10-03 - Generate complete bilingual question-bank v2 candidates
+
+- Saved `question-banks/v2-2026-10-03/`: Explore 20 (8 investigation choices and 12 task choices) and Map 132 (11 domains with 12 questions each), following Principles v3.
+- Delivered readable bilingual question files, JSON content, separate editorial records, a coverage blueprint, factual sources, integration notes, review evidence and a version manifest. README links the new candidate for future deduplication.
+- Knowledge lineage: 91 retained main objectives and stable IDs, 41 changed objectives and new IDs. The 20 Explore choices use new IDs and only describe current choices, with four reasonable mapped options and skip support.
+- Independent reviewers solved all 132 knowledge questions in both languages before reading keys; matching the key did not count as sufficient quality. Initial ambiguity, distractor, format and duplication findings led to 27 question revisions, followed by independent rechecks. All 20 Explore questions were independently reviewed and mapping/language revisions closed. Required editorial issues remaining: 0.
+- Kept immutable original blind-review inputs and separate final unanswered exports. Final review records are bound to actual source hashes; editorial status was updated only after those hashes matched.
+- Mechanical longest-option strategy on saved displayed order, with first display option breaking ties: Chinese 42/132 (old119/132), English44/132 (old104/132). This is editorial evidence only, not a validated user difficulty or ability measure.
+- Explore opportunities: each direction has 2–3 investigation choices, 4–5 task choices, 7–8 total. Positions are dispersed with bilingual content and mappings moving together. Exposure counts do not establish preference validity.
+- 45 knowledge questions carry necessary factual references, using 43 different primary-source URLs; other items rely on stated fictional data, rules, materials or direct calculations. No personal medical treatment, real-world legal decision or investment recommendation is generated.
+- Status: editorially reviewed / awaiting real user trials. Website runtime data, map meaning, 2/4/6 thresholds and historical progress were not changed. The old duplicate-first-response counting issue remains for integration work; candidate generation does not fix it.
+- Verification: 152 unique bilingual items, 476 unique stable option IDs, exact answer strings and bilingual indices, all 132 old knowledge source slots, final deliverable hashes and readable item counts. Existing script.js, index.html and styles.css match the before-generation hashes.
+- Generation context: this candidate was initially prepared in a non-Git copy. Repository delivery is recorded below; generation metadata describes that historical environment and does not determine current remote status.
+
+## 2026-10-03 - Locate the actual repository and deliver the reviewed question bank
+
+- Verified repository: `/Users/leoyang/iCloud Drive (Archive) - 1/Documents/mapkai`, branch `main`, origin `git@github.com:leoispanda/mapkai.git`. `/Users/leoyang/Documents/mapkai/atlas-redesign` is a separate non-Git generation copy.
+- The existing 132-question reference and runtime question-bank fragment match the generation copy. There is no intervening question-content conflict.
+- Repository delivery includes Principles v3, the GPT authoring instructions with unchanged original reference questions, the 2026-10-02 review evidence and the complete bilingual v2 candidate. README gains only the question-authoring links.
+- Candidate creation and Git delivery do not activate the candidate on the website. Existing runtime data, map behavior and historical progress remain outside this delivery.
+- Preserve the unrelated video-factory and package changes already present in this checkout. The frontend version hook must not add runtime files to this documentation/data commit; validate the delivery scope and CSP separately.
+- Generation Git flags are historical metadata. Current commit and push status are verified against Git history and the remote branch and reported in the final delivery response.

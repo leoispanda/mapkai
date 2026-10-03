@@ -1,0 +1,572 @@
+{
+  "reviewedAt": "2026-10-03",
+  "method": "逐项比较实际文字，结合独立复审；字符数不充当自动通过线。",
+  "sourceSha256": "5890f4a7f1e1cc124e507f4cc9dbf4c1bd4fcba99900f83174f3bf528318b024",
+  "items": [
+    {
+      "id": "01-q3",
+      "lengths": [
+        14,
+        13,
+        15
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为具体学习动作，长度只差一字；是否关上资料与提取回忆是任务区别，不是详略提示。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "01-q5",
+      "lengths": [
+        20,
+        19,
+        19
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为先做一项活动、再做一项活动的平行句，没有正确项独占第二层理由。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "01-q7",
+      "lengths": [
+        14,
+        14,
+        15
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为具体任务，GB与公斤单位不同是跨食品领域目标，中文一字差没有独立猜题价值。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "02-v2-q08",
+      "lengths": [
+        11,
+        12,
+        11
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三个选项分别问接收对象、归还地点、改变方式的原因，处于同一叙事信息层级。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "04-q6",
+      "lengths": [
+        10,
+        10,
+        11
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "重复来电的共同定义已移入题干，三项是计数指标；英文正确项现在更短，中文只差一字。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "05-q3",
+      "lengths": [
+        16,
+        17,
+        16
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均包含能否及一条理由，正确项没有双重解释。不同判断来自同时改变两个变量这一证据。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "06-q4",
+      "lengths": [
+        7,
+        8,
+        5
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均是程序动作，提示文字是规则给定的输出内容；一字差不构成更专业的机制句。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "07-q1",
+      "lengths": [
+        16,
+        15,
+        17
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为材料与方向对受力表现的判断，正确项没有追加边界和解释。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "07-q2",
+      "lengths": [
+        16,
+        17,
+        16
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为一条结构解释，正确项使用三边与角度关系；词长小差异不含第二机制。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q1",
+      "lengths": [
+        14,
+        13,
+        13
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均包含生长与结果两个表现，正确项没有比其他项多一个维度。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "09-q3",
+      "lengths": [
+        15,
+        14,
+        14
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为先改变一个安排再做另一个安排，正确项没有新增理由，中文一字差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "09-q4",
+      "lengths": [
+        12,
+        11,
+        11
+      ],
+      "gapToSecondLongest": 1,
+      "language": "zh",
+      "wordCounts": null,
+      "assessment": "三项均为传播路径中一个量或过程，英文正确项11词，另外8和11词，未独占条件限定或因果链；三类机制按明确空气传播材料比较。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "01-q6",
+      "lengths": [
+        56,
+        67,
+        55
+      ],
+      "gapToSecondLongest": 11,
+      "language": "en",
+      "wordCounts": [
+        12,
+        11,
+        13
+      ],
+      "assessment": "三个选项都描述材料及用法；正确项英文11词，其他约12词，字符差来自词长。范例与独立任务是题干要求的两个角色，未靠额外因果或限定救答案。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "02-q12",
+      "lengths": [
+        51,
+        49,
+        48
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        8,
+        7,
+        8
+      ],
+      "assessment": "三个选项都为视觉线索，正确项没有附加解释；英文仅两字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "03-v2-q02",
+      "lengths": [
+        45,
+        38,
+        44
+      ],
+      "gapToSecondLongest": 1,
+      "language": "en",
+      "wordCounts": [
+        8,
+        7,
+        10
+      ],
+      "assessment": "三个选项均为依据某来源改变公开回答的影响类型，无正确项独占因果链。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "03-q6",
+      "lengths": [
+        26,
+        28,
+        26
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        5,
+        5,
+        5
+      ],
+      "assessment": "三项均保留帖子、核实状态、评论数相同格式，unverified词长造成两字符差；排序必须用评论数。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "03-q9",
+      "lengths": [
+        47,
+        50,
+        44
+      ],
+      "gapToSecondLongest": 3,
+      "language": "en",
+      "wordCounts": [
+        8,
+        11,
+        10
+      ],
+      "assessment": "三项均为抽样框操作，正确项的完整名单与两类总体是考点，英文仅三字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "04-q9",
+      "lengths": [
+        38,
+        50,
+        52
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        9,
+        10,
+        10
+      ],
+      "assessment": "低额在题干明确定义，三项均为员工和经理分配规则，英文正确项仅两字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "05-q1",
+      "lengths": [
+        42,
+        40,
+        35
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        9,
+        8,
+        8
+      ],
+      "assessment": "三项均为热感觉的机制句，正确项没有多一层解释，英文仅两字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "05-q2",
+      "lengths": [
+        40,
+        36,
+        44
+      ],
+      "gapToSecondLongest": 4,
+      "language": "en",
+      "wordCounts": [
+        10,
+        9,
+        8
+      ],
+      "assessment": "三项均解释70%的意义，限定地点和时段已在题干；没有正确项独占条件。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "06-q5",
+      "lengths": [
+        34,
+        33,
+        35
+      ],
+      "gapToSecondLongest": 1,
+      "language": "en",
+      "wordCounts": [
+        8,
+        7,
+        7
+      ],
+      "assessment": "订单同步更新已前置，三项各只描述一种顾客表改动，英文一字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "06-q8",
+      "lengths": [
+        24,
+        24,
+        26
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        5,
+        6,
+        5
+      ],
+      "assessment": "三项均为权限范围或功能，选择单张照片不是靠额外条件限定；英文两字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "06-v2-q11",
+      "lengths": [
+        43,
+        48,
+        46
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        8,
+        10,
+        9
+      ],
+      "assessment": "三个选项均为固定密码加另一验证步骤，因素定义在题干，英文两字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "07-q2",
+      "lengths": [
+        52,
+        57,
+        41
+      ],
+      "gapToSecondLongest": 5,
+      "language": "en",
+      "wordCounts": [
+        10,
+        9,
+        7
+      ],
+      "assessment": "三项均为一条结构解释，正确项使用三边与角度关系；词长小差异不含第二机制。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "07-q10",
+      "lengths": [
+        56,
+        55,
+        53
+      ],
+      "gapToSecondLongest": 1,
+      "language": "en",
+      "wordCounts": [
+        10,
+        10,
+        10
+      ],
+      "assessment": "三项均为检查时间减少加一种检出范围判断，只比较内部、外观和两类，英文一字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "07-q12",
+      "lengths": [
+        44,
+        42,
+        56
+      ],
+      "gapToSecondLongest": 12,
+      "language": "en",
+      "wordCounts": [
+        8,
+        6,
+        7
+      ],
+      "assessment": "三项均为出行来源加驾车需求变化的一条机制；正确项7个英语词，另外8和6词，字符差来自同层级词长，无额外因果链或条件句。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q1",
+      "lengths": [
+        59,
+        56,
+        56
+      ],
+      "gapToSecondLongest": 3,
+      "language": "en",
+      "wordCounts": [
+        8,
+        8,
+        8
+      ],
+      "assessment": "三项均包含生长与结果两个表现，正确项没有比其他项多一个维度。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q4",
+      "lengths": [
+        36,
+        47,
+        36
+      ],
+      "gapToSecondLongest": 11,
+      "language": "en",
+      "wordCounts": [
+        8,
+        11,
+        8
+      ],
+      "assessment": "三项均为一种捕捞限制规则；合计上限是共同资源题的目标维度，不在正确项额外补可靠执行条件，执行条件已由题干共同给出。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q5",
+      "lengths": [
+        44,
+        40,
+        38
+      ],
+      "gapToSecondLongest": 4,
+      "language": "en",
+      "wordCounts": [
+        7,
+        7,
+        7
+      ],
+      "assessment": "三项均为一种差异及来源，散热机制由随机对照条件支持，英文仅四字符差。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q6",
+      "lengths": [
+        42,
+        41,
+        45
+      ],
+      "gapToSecondLongest": 3,
+      "language": "en",
+      "wordCounts": [
+        8,
+        7,
+        7
+      ],
+      "assessment": "三项均为一种光水获取机制，不以长篇遗传或气候说明作干扰。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "08-q9",
+      "lengths": [
+        33,
+        30,
+        31
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        6,
+        6,
+        6
+      ],
+      "assessment": "三项均为资源不足到达一个植物部位，pollen一词造成小差异，题干干预决定答案。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "09-q4",
+      "lengths": [
+        47,
+        33,
+        41
+      ],
+      "gapToSecondLongest": 6,
+      "language": "en",
+      "wordCounts": [
+        8,
+        7,
+        8
+      ],
+      "assessment": "三项均为传播路径中一个量或过程，英文正确项11词，另外8和11词，未独占条件限定或因果链；三类机制按明确空气传播材料比较。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "09-v2-q05",
+      "lengths": [
+        47,
+        45,
+        44
+      ],
+      "gapToSecondLongest": 2,
+      "language": "en",
+      "wordCounts": [
+        9,
+        9,
+        9
+      ],
+      "assessment": "三项均为对象对抗生素A作用的关系，英文两字符差，不能靠更长的耐药定义选答案。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "09-q12",
+      "lengths": [
+        35,
+        43,
+        48
+      ],
+      "gapToSecondLongest": 5,
+      "language": "en",
+      "wordCounts": [
+        6,
+        6,
+        6
+      ],
+      "assessment": "三项均为支持类型加两个动作或内容，并非正确项独占两种说明；用题干实际提供的支持判断。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "10-q4",
+      "lengths": [
+        50,
+        47,
+        47
+      ],
+      "gapToSecondLongest": 3,
+      "language": "en",
+      "wordCounts": [
+        7,
+        9,
+        8
+      ],
+      "assessment": "三项均为通道附近的一种流程动作，英文三字符差，最大移走时长由题干数字比较。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    },
+    {
+      "id": "10-q12",
+      "lengths": [
+        44,
+        50,
+        42
+      ],
+      "gapToSecondLongest": 6,
+      "language": "en",
+      "wordCounts": [
+        8,
+        8,
+        9
+      ],
+      "assessment": "三项均为一组内容或呈现属性，正确项没有追加理由；题干已排除单点不清楚，要求查内容矛盾。",
+      "decision": "editorial-acceptable / user-tryout-pending"
+    }
+  ],
+  "limitation": "编辑判断未替代目标读者的实际作答；任何新增可猜规律需按反馈再修订。"
+}

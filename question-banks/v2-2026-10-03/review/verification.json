@@ -1,0 +1,30 @@
+{
+  "version": "v2-2026-10-03",
+  "date": "2026-10-03",
+  "counts": {
+    "knowledge": 132,
+    "explore": 20,
+    "bilingualItems": 152,
+    "stableOptionIds": 476
+  },
+  "sourceSlots": 132,
+  "bilingualAnswerMappingChecked": 132,
+  "independentKnowledgeReview": 132,
+  "independentExploreReview": 20,
+  "knowledgeQuestionsRevisedAfterReview": 27,
+  "unresolvedRequiredEditorialIssues": 0,
+  "realUserTryoutPerformed": false,
+  "runtimeActivated": false,
+  "runtimeHashesUnchanged": {
+    "script.js": "eaedcef34db7c5c5b89e99d99ba7e16d71a02d7e9df1d8602cdd08cd404fbb17",
+    "index.html": "c7466860ae30a67d549264f59226f0dbb925c6e9a3f6066312037993b467fd53",
+    "styles.css": "a7f06a8d9be7f9161f03b6343505b136b2983ad71606af9645acf1712002597a"
+  },
+  "optionOrder": "中英文与稳定标识同步；24道数值关系题保留自然顺序，其他知识题按标识打散；探索题方向机会在字母位置分散。",
+  "generationGit": {
+    "available": false,
+    "committed": false,
+    "pushed": false
+  },
+  "generationEnvironmentNote": "Historical verification from the original non-Git generation copy; repository delivery is verified separately in Git."
+}

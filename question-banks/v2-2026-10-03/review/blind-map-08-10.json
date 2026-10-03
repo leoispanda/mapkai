@@ -1,0 +1,902 @@
+[
+  {
+    "id": "08-q1",
+    "subject": "08",
+    "optionIds": [
+      "08-q1-a",
+      "08-q1-c",
+      "08-q1-b"
+    ],
+    "zh": {
+      "question": "教学试验中，温室把同一品种番茄随机分成两组，光照、水、温度和授粉条件相同。高氮组枝叶更旺，但整个试验期形成的果实更少。哪种解释与这组结果及氮的作用相符？",
+      "options": [
+        "高氮更促进枝叶，没有提高结果",
+        "高氮更限制枝叶，降低了结果",
+        "高氮更促进开花，提高了结果"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial, a greenhouse randomly assigns the same tomato variety to two groups with equal light, water, temperature and pollination. The higher-nitrogen group grows more foliage but forms fewer fruits over the whole trial. Which explanation fits the results and nitrogen’s role?",
+      "options": [
+        "Higher nitrogen favored foliage without improving fruit production",
+        "Higher nitrogen restricted foliage and reduced fruit production",
+        "Higher nitrogen favored flowering and improved fruit production"
+      ]
+    }
+  },
+  {
+    "id": "08-q2",
+    "subject": "08",
+    "optionIds": [
+      "08-q2-a",
+      "08-q2-b",
+      "08-q2-c"
+    ],
+    "zh": {
+      "question": "一块湿地被重型拖拉机碾过。轮迹里的土更密实，大孔隙更少，雨水渗入也更慢。哪个变化最直接解释入渗变慢？",
+      "options": [
+        "土粒间的大孔隙增加了",
+        "土粒间的大孔隙减少了",
+        "土粒本身的体积缩小了"
+      ]
+    },
+    "en": {
+      "question": "Heavy tractor traffic leaves wet soil denser, with fewer large pores and slower rainwater infiltration. Which change most directly explains the slower infiltration?",
+      "options": [
+        "The large spaces between soil particles increased",
+        "The large spaces between soil particles decreased",
+        "The soil particles themselves shrank in volume"
+      ]
+    }
+  },
+  {
+    "id": "08-q3",
+    "subject": "08",
+    "optionIds": [
+      "08-q3-a",
+      "08-q3-c",
+      "08-q3-b"
+    ],
+    "zh": {
+      "question": "教学案例给定：某害虫在本地土中越冬，移动距离有限；它能在番茄、马铃薯上繁殖，不能在豆类上繁殖。去年种番茄的田，今年种哪项最能中断它在这块田里的寄主供应？",
+      "options": [
+        "换一个番茄品种",
+        "改种豆类作物",
+        "改种马铃薯"
+      ]
+    },
+    "en": {
+      "question": "A teaching case specifies that a pest overwinters locally and travels only short distances. It reproduces on tomatoes and potatoes, but not on beans. After tomatoes last year, which crop best interrupts its host supply in this field?",
+      "options": [
+        "A different tomato variety",
+        "A crop of beans",
+        "A crop of potatoes"
+      ]
+    }
+  },
+  {
+    "id": "08-q4",
+    "subject": "08",
+    "optionIds": [
+      "08-q4-a",
+      "08-q4-b",
+      "08-q4-c"
+    ],
+    "zh": {
+      "question": "一个共享渔场有10艘船。教学案例规定，这一年总捕捞量不得超过100吨。以下三项都能执行且都有可靠记录，哪项能保证总量不越过100吨？",
+      "options": [
+        "每船全年分别最多捕15吨",
+        "全场合计达100吨即停捕",
+        "每船全年捕捞天数减半"
+      ]
+    },
+    "en": {
+      "question": "Ten boats share a fishery. In this teaching case, total catch must stay at or below 100 tonnes for the year. Each rule below is enforceable and recorded reliably. Which guarantees that total catch stays within 100 tonnes?",
+      "options": [
+        "Limit each boat’s annual catch to 15 tonnes",
+        "Stop all fishing at a combined annual catch of 100 tonnes",
+        "Cut each boat’s annual fishing days in half"
+      ]
+    }
+  },
+  {
+    "id": "08-q5",
+    "subject": "08",
+    "optionIds": [
+      "08-q5-c",
+      "08-q5-b",
+      "08-q5-a"
+    ],
+    "zh": {
+      "question": "教学试验中，牧场在热浪期间随机把条件相近的奶牛分为两组，饲料配方、充足饮水和挤奶安排相同。唯一管理差别是一组有遮阴和降温设施，另一组没有；降温组呼吸较平稳、产奶下降较少。这最支持核查哪种机制？",
+      "options": [
+        "散热受限带来的热应激差异",
+        "挤奶减少带来的记录数量差异",
+        "配方改变带来的营养摄入差异"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial during a heatwave, a farm randomly divides comparable cows into two groups with the same feed formula, ample water and milking schedule. The only management difference is that one group has shade and cooling. The cooled group breathes more steadily and has a smaller drop in milk production. Which mechanism do these results support investigating?",
+      "options": [
+        "A heat-stress difference from restricted heat loss",
+        "A recording gap from changed milking frequency",
+        "A nutritional gap from changed feed formulas"
+      ]
+    }
+  },
+  {
+    "id": "08-q6",
+    "subject": "08",
+    "optionIds": [
+      "08-q6-b",
+      "08-q6-c",
+      "08-q6-a"
+    ],
+    "zh": {
+      "question": "一个拥挤的人工林要保留主要树木，同时减少它们对光和水的竞争。管理者选择性移除部分相邻树木，其他条件暂不变。这个动作最直接改变了什么？",
+      "options": [
+        "所有树木的根系遗传特征",
+        "林地每年的降雨供应总量",
+        "保留树木周围的资源竞争"
+      ]
+    },
+    "en": {
+      "question": "A crowded plantation aims to retain its main trees while reducing their competition for light and water. Managers selectively remove some neighboring trees, with other conditions unchanged. What does this action change most directly?",
+      "options": [
+        "The inherited root traits of every tree",
+        "The total annual rainfall reaching the region",
+        "Resource competition around the retained trees"
+      ]
+    }
+  },
+  {
+    "id": "08-q7",
+    "subject": "08",
+    "optionIds": [
+      "08-q7-c",
+      "08-q7-b",
+      "08-q7-a"
+    ],
+    "zh": {
+      "question": "教学案例中，两个作物品种正常年亩产相同。病害X使品种A减产60%、B减产10%；病害Y恰好相反。混种时两品种各占一半，损失按面积相加，病害传播不因混种改变。若只防范这两种病害中的较大损失，哪个方案更合适？",
+      "options": [
+        "A占50%，B占50%",
+        "A占0%，B占100%",
+        "A占100%，B占0%"
+      ]
+    },
+    "en": {
+      "question": "In a teaching case, two crop varieties have the same normal yield per hectare. Disease X reduces A’s yield by 60% and B’s by 10%; disease Y reverses those losses. A mixture allocates half the area to each, losses add by area, and mixing does not alter disease spread. Which plan minimizes the larger loss across these two diseases?",
+      "options": [
+        "A: 50%; B: 50%",
+        "A: 0%; B: 100%",
+        "A: 100%; B: 0%"
+      ]
+    }
+  },
+  {
+    "id": "08-v2-q08",
+    "subject": "08",
+    "optionIds": [
+      "08-v2-q08-a",
+      "08-v2-q08-b",
+      "08-v2-q08-c"
+    ],
+    "zh": {
+      "question": "一个简化鱼群模型从1000吨开始。假定这一年出生和生长减去自然死亡后净增加200吨，捕捞300吨，没有迁入迁出。模型中的年末鱼群是多少？",
+      "options": [
+        "900吨",
+        "1000吨",
+        "1100吨"
+      ]
+    },
+    "en": {
+      "question": "A simplified fish-stock model starts with 1,000 tonnes. For this year, births and growth minus natural deaths add a net 200 tonnes; fishing removes 300 tonnes, with no migration. What is the year-end stock in the model?",
+      "options": [
+        "900 tonnes",
+        "1,000 tonnes",
+        "1,100 tonnes"
+      ]
+    }
+  },
+  {
+    "id": "08-q9",
+    "subject": "08",
+    "optionIds": [
+      "08-q9-a",
+      "08-q9-b",
+      "08-q9-c"
+    ],
+    "zh": {
+      "question": "一种果树需要花粉转移才能正常结果。果园发现昆虫访花变少。教学试验将条件相近的花随机分组，只给一组补充合适花粉；该组结果率明显高于未补充组。哪一环节受限最获这项试验支持？",
+      "options": [
+        "花朵接收到的花粉不足",
+        "树根吸收的水分不足",
+        "树叶接收到的光照不足"
+      ]
+    },
+    "en": {
+      "question": "A fruit tree needs pollen transfer for normal fruit set. An orchard notices fewer insect visits. In a teaching trial, comparable flowers are randomly assigned to groups; only one group receives extra suitable pollen, and it sets more fruit. Which limitation is most supported by this trial?",
+      "options": [
+        "Too little pollen reaching the flowers",
+        "Too little water reaching the roots",
+        "Too little light reaching the leaves"
+      ]
+    }
+  },
+  {
+    "id": "08-q10",
+    "subject": "08",
+    "optionIds": [
+      "08-q10-a",
+      "08-q10-c",
+      "08-q10-b"
+    ],
+    "zh": {
+      "question": "犬只照护记录显示：食物和饮水充足，住所舒适，体检正常，但全天关在小空间，无法走动、嗅闻或与人互动。按动物福利的多维标准，哪项需要最直接的补充评估？",
+      "options": [
+        "食物营养是否满足",
+        "正常行为是否受限",
+        "住所温度是否适宜"
+      ]
+    },
+    "en": {
+      "question": "A dog-care record shows adequate food and water, comfortable housing and normal veterinary checks. However, the dog spends all day confined without opportunities to move, sniff or interact. Under a multidimensional view of welfare, which area most directly needs further assessment?",
+      "options": [
+        "Whether food meets nutritional needs",
+        "Whether normal behavior is restricted",
+        "Whether housing provides thermal comfort"
+      ]
+    }
+  },
+  {
+    "id": "08-q11",
+    "subject": "08",
+    "optionIds": [
+      "08-q11-a",
+      "08-q11-b",
+      "08-q11-c"
+    ],
+    "zh": {
+      "question": "在一类历史上有频繁地表火的干燥混交针叶林中，长期抑火后，枯枝、灌木和低矮枝条增多。它们从地面连续连接到树冠。保持天气和地形相同时，这种“梯状燃料”最直接增加哪种可能？",
+      "options": [
+        "地表火向树冠蔓延",
+        "树冠火因间距增大而减弱",
+        "地下火因土壤变湿而停止"
+      ]
+    },
+    "en": {
+      "question": "In a dry mixed-conifer forest historically shaped by frequent surface fires, long fire suppression is followed by more dead branches, shrubs and low branches. These form a continuous path from the ground to the canopy. With weather and terrain unchanged, what do these “ladder fuels” most directly make more likely?",
+      "options": [
+        "A surface fire spreading into tree crowns",
+        "A crown fire weakening because tree spacing increases",
+        "A ground fire stopping because soil becomes wetter"
+      ]
+    }
+  },
+  {
+    "id": "08-v2-q12",
+    "subject": "08",
+    "optionIds": [
+      "08-v2-q12-a",
+      "08-v2-q12-b",
+      "08-v2-q12-c"
+    ],
+    "zh": {
+      "question": "一个地区按固定数量购买粮食，原来总支出100万元，其中70万元用于进口粮、30万元用于本地粮。教学案例中，进口粮价格上涨20%，本地粮价格和购买数量不变。新总支出是多少？",
+      "options": [
+        "110万元",
+        "114万元",
+        "120万元"
+      ]
+    },
+    "en": {
+      "question": "A region buys a fixed quantity of grain. Its original bill is 1 million yuan: 700,000 for imports and 300,000 for local grain. In this teaching case, import prices rise 20%, while local prices and all quantities stay unchanged. What is the new total bill?",
+      "options": [
+        "1.10 million yuan",
+        "1.14 million yuan",
+        "1.20 million yuan"
+      ]
+    }
+  },
+  {
+    "id": "09-q1",
+    "subject": "09",
+    "optionIds": [
+      "09-q1-b",
+      "09-q1-a",
+      "09-q1-c"
+    ],
+    "zh": {
+      "question": "口腔卫生宣传页强调“轻柔而完整地清洁牙面”，而不是用出血表示刷干净。哪种做法与这项原则一致？",
+      "options": [
+        "保持轻柔力度，清洁各个牙面",
+        "增加刷牙力度，直到牙龈出血",
+        "缩短清洁时间，只刷看得见处"
+      ]
+    },
+    "en": {
+      "question": "An oral-hygiene leaflet emphasizes gentle, thorough cleaning of tooth surfaces rather than using bleeding as a sign of success. Which approach fits this principle?",
+      "options": [
+        "Use gentle pressure and clean each tooth surface",
+        "Increase brushing pressure until the gums bleed",
+        "Shorten brushing time and clean only visible surfaces"
+      ]
+    }
+  },
+  {
+    "id": "09-q2",
+    "subject": "09",
+    "optionIds": [
+      "09-q2-a",
+      "09-q2-c",
+      "09-q2-b"
+    ],
+    "zh": {
+      "question": "一个教学试验中，同一组成年人随机交替在睡前喝含咖啡因或不含咖啡因的相同饮品，睡眠时间和其他条件相近。含咖啡因的夜晚平均入睡较慢。哪项结论最符合试验范围？",
+      "options": [
+        "这组人在这些条件下，咖啡因与入睡变慢有关",
+        "这组人的入睡差异证明，咖啡因减少了所需睡眠",
+        "这组人在这些条件下，咖啡因与入睡变快有关"
+      ]
+    },
+    "en": {
+      "question": "In a teaching trial, the same adults drink otherwise identical caffeinated or caffeine-free drinks before bed in a randomly varied order, with similar sleep schedules and other conditions. They take longer to fall asleep on caffeinated nights on average. Which conclusion fits the trial’s scope?",
+      "options": [
+        "Under these conditions, caffeine was linked to slower sleep onset in this group",
+        "The difference shows that caffeine reduced this group’s need for sleep",
+        "Under these conditions, caffeine was linked to faster sleep onset in this group"
+      ]
+    }
+  },
+  {
+    "id": "09-q3",
+    "subject": "09",
+    "optionIds": [
+      "09-q3-b",
+      "09-q3-a",
+      "09-q3-c"
+    ],
+    "zh": {
+      "question": "一位没有伤病、久未运动的成年人想从轻松步行开始。以下哪个安排体现“先从少量开始，再逐步增加”的原则？",
+      "options": [
+        "先增加少量时长，再观察是否适应",
+        "先把时长加倍，再同步加快步速",
+        "先改为高强度运动，再补上休息"
+      ]
+    },
+    "en": {
+      "question": "An adult with no injury or illness has been inactive for a long time and wants to begin with easy walking. Which plan follows the principle of starting with a small amount and increasing gradually?",
+      "options": [
+        "Add a little duration first and check how well it is tolerated",
+        "Double the duration first and increase speed at the same time",
+        "Switch to vigorous activity first and add rest afterward"
+      ]
+    }
+  },
+  {
+    "id": "09-q4",
+    "subject": "09",
+    "optionIds": [
+      "09-q4-b",
+      "09-q4-a",
+      "09-q4-c"
+    ],
+    "zh": {
+      "question": "一份呼吸道病毒教学材料指出：感染性颗粒可在室内共享空气中传播。增加合适的新风交换，最直接作用于哪一环节？",
+      "options": [
+        "减少共享空气中的颗粒积聚",
+        "减少手与桌面的接触次数",
+        "减少人们识别症状的时间"
+      ]
+    },
+    "en": {
+      "question": "A teaching note on respiratory viruses explains that infectious particles can spread through shared indoor air. Increasing suitable fresh-air exchange most directly affects which part of this pathway?",
+      "options": [
+        "How much infectious material accumulates in shared air",
+        "How often hands make contact with desks",
+        "How long people take to recognize their symptoms"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q05",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q05-a",
+      "09-v2-q05-c",
+      "09-v2-q05-b"
+    ],
+    "zh": {
+      "question": "实验室报告说“从样本中培养出的细菌对抗生素A耐药”。这里的“耐药”描述的是谁对什么的抵抗能力？",
+      "options": [
+        "细菌对抗生素A作用的抵抗",
+        "病毒对抗生素A作用的抵抗",
+        "人体对抗生素A作用的耐受"
+      ]
+    },
+    "en": {
+      "question": "A laboratory report says, “The bacteria cultured from the sample are resistant to antibiotic A.” Whose resistance to what does this describe?",
+      "options": [
+        "The bacteria’s resistance to the action of antibiotic A",
+        "The viruses’ resistance to the action of antibiotic A",
+        "The person’s tolerance to the action of antibiotic A"
+      ]
+    }
+  },
+  {
+    "id": "09-q6",
+    "subject": "09",
+    "optionIds": [
+      "09-q6-c",
+      "09-q6-b",
+      "09-q6-a"
+    ],
+    "zh": {
+      "question": "一位居民需要定期复诊，家到门诊只有一班公交，9:20到达；必须提前10分钟签到。门诊目前只给9:00预约，居民无法换交通方式。哪项服务调整直接消除这个时间障碍？",
+      "options": [
+        "把9:00预约提前一天提醒",
+        "把预约改到当天9:40",
+        "把预约改到当天8:30"
+      ]
+    },
+    "en": {
+      "question": "A resident needs regular follow-up visits. The only bus from home reaches the clinic at 9:20, and check-in is required 10 minutes before the appointment. The clinic currently offers only 9:00 slots, and the resident cannot change transport. Which service change directly removes this timing barrier?",
+      "options": [
+        "Send a reminder a day before the 9:00 appointment",
+        "Move the appointment to 9:40 that day",
+        "Move the appointment to 8:30 that day"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q07",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q07-c",
+      "09-v2-q07-a",
+      "09-v2-q07-b"
+    ],
+    "zh": {
+      "question": "某种病原可从受污染的门把手转移到手，再通过进食进入口中。进食前清洁双手，最直接打断哪一段转移？",
+      "options": [
+        "病原从手转移到口中",
+        "病原从空气进入呼吸道",
+        "病原从饮水源进入管道"
+      ]
+    },
+    "en": {
+      "question": "A pathogen can pass from a contaminated door handle to a hand and then enter the mouth during eating. Cleaning hands before eating most directly interrupts which transfer?",
+      "options": [
+        "The pathogen moving from the hand into the mouth",
+        "The pathogen moving from air into the airway",
+        "The pathogen moving from a water source into pipes"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q08",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q08-c",
+      "09-v2-q08-a",
+      "09-v2-q08-b"
+    ],
+    "zh": {
+      "question": "交接单已写明患者概况和当前状态，还写着“今天有一项检查结果待回报”，却没写谁接收、何时核对。为使这项未完成任务可追踪，最应补充哪类信息？",
+      "options": [
+        "检查的申请理由与既往结果",
+        "检查的负责人员与核对时限",
+        "患者的住院日期与病房号码"
+      ]
+    },
+    "en": {
+      "question": "A handoff already includes the patient summary and current condition. It says, “A test result is still pending today,” but does not identify who will receive it or when it will be checked. What information is needed to make this unfinished task traceable?",
+      "options": [
+        "The reason for requesting the test and previous results",
+        "The responsible person and the deadline for checking",
+        "The admission date and the patient’s room number"
+      ]
+    }
+  },
+  {
+    "id": "09-q9",
+    "subject": "09",
+    "optionIds": [
+      "09-q9-b",
+      "09-q9-a",
+      "09-q9-c"
+    ],
+    "zh": {
+      "question": "活动应用希望奖励规律活动，同时不让用户为了连续记录而违反已获得的休息建议。用户可标记“按专业建议暂停”。哪个规则最符合这两个目标？",
+      "options": [
+        "暂停日可登记休息安排，保留连续照护记录",
+        "暂停日仍须完成运动量，才能保留连续记录",
+        "暂停日删除全部历史，让用户重新开始记录"
+      ]
+    },
+    "en": {
+      "question": "An activity app wants to reward regular activity without encouraging users to disregard advice they have received to rest. A user can mark “pause as professionally advised.” Which rule best serves both goals?",
+      "options": [
+        "Allow the rest plan to be logged on pause days to keep a care streak",
+        "Require the usual activity target on pause days to keep the streak",
+        "Delete the full history on pause days so tracking must restart"
+      ]
+    }
+  },
+  {
+    "id": "09-v2-q10",
+    "subject": "09",
+    "optionIds": [
+      "09-v2-q10-a",
+      "09-v2-q10-b",
+      "09-v2-q10-c"
+    ],
+    "zh": {
+      "question": "一个预防项目的教学数据中，两组各1000人，观察一年：参加组有30个新病例，对照组有50个。这里只比较这份记录中的新病例人数，参加组少了多少？",
+      "options": [
+        "20个",
+        "30个",
+        "40个"
+      ]
+    },
+    "en": {
+      "question": "Teaching data for a prevention program follow two groups of 1,000 people for one year. There are 30 new cases in the program group and 50 in the comparison group. Comparing only the recorded case counts, how many fewer cases are in the program group?",
+      "options": [
+        "20 cases",
+        "30 cases",
+        "40 cases"
+      ]
+    }
+  },
+  {
+    "id": "09-q11",
+    "subject": "09",
+    "optionIds": [
+      "09-q11-a",
+      "09-q11-b",
+      "09-q11-c"
+    ],
+    "zh": {
+      "question": "教学用心率设备规定：每次真实值最多比读数高或低3次/分。两次读数是78和80次/分。只依据这一规定，两次真实值若相同，这个共同值可能落在哪一段？",
+      "options": [
+        "75–76次/分",
+        "77–81次/分",
+        "82–83次/分"
+      ]
+    },
+    "en": {
+      "question": "A teaching heart-rate device specifies that each true value can be at most 3 beats/min above or below its reading. Two readings are 78 and 80 beats/min. Based only on this rule, if both true values were the same, where could that shared value lie?",
+      "options": [
+        "75–76 beats/min",
+        "77–81 beats/min",
+        "82–83 beats/min"
+      ]
+    }
+  },
+  {
+    "id": "09-q12",
+    "subject": "09",
+    "optionIds": [
+      "09-q12-a",
+      "09-q12-b",
+      "09-q12-c"
+    ],
+    "zh": {
+      "question": "互助小组的成员说：“大家认真听我讲困难，我感觉被理解、没那么孤独了。”记录没有提供金钱、实物援助或专业治疗。哪类支持已由这段记录直接体现？",
+      "options": [
+        "提供钱物的实际支持",
+        "提供诊疗的医疗支持",
+        "倾听理解的情感支持"
+      ]
+    },
+    "en": {
+      "question": "A support-group member says, “People listened carefully to my difficulties, and I felt understood and less lonely.” The record shows no money, material help or professional treatment. Which type of support is directly demonstrated?",
+      "options": [
+        "Practical support through money or goods",
+        "Clinical support through assessment or treatment",
+        "Emotional support through listening and understanding"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q01",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q01-c",
+      "10-v2-q01-b",
+      "10-v2-q01-a"
+    ],
+    "zh": {
+      "question": "疲惫的住客第一次到酒店，主要困难是找不到前台和电梯，需要反复问路。酒店只能先提供一张纸质指引。哪种内容最直接解决这项需求？",
+      "options": [
+        "房间电器的完整使用说明",
+        "前台与电梯的简明路线图",
+        "酒店设施和各自营业时间表"
+      ]
+    },
+    "en": {
+      "question": "Tired guests arrive at a hotel for the first time. Their main difficulty is locating reception and the lifts, so they repeatedly ask for directions. The hotel can initially provide one paper guide. Which content most directly addresses this need?",
+      "options": [
+        "A complete manual for the room appliances",
+        "A simple route map to reception and the lifts",
+        "A list of hotel facilities and opening hours"
+      ]
+    }
+  },
+  {
+    "id": "10-q2",
+    "subject": "10",
+    "optionIds": [
+      "10-q2-a",
+      "10-q2-c",
+      "10-q2-b"
+    ],
+    "zh": {
+      "question": "大厅的光滑地板已经清洁，但刚才仍有一层水膜，区域已隔离并放了湿滑警示。管理者要复查湿滑风险源是否已经消除，哪项检查最直接？",
+      "options": [
+        "清洁作业是否登记完成",
+        "地板表面是否仍有水膜",
+        "湿滑警示是否摆在原处"
+      ]
+    },
+    "en": {
+      "question": "A smooth lobby floor has been cleaned, but it recently still had a film of water. The area is closed off and marked with wet-floor signs. To check whether the slip hazard itself has been removed, which observation is most direct?",
+      "options": [
+        "Whether the cleaning job is logged as completed",
+        "Whether a film of water remains on the floor",
+        "Whether the warning sign is still in its original position"
+      ]
+    }
+  },
+  {
+    "id": "10-q3",
+    "subject": "10",
+    "optionIds": [
+      "10-q3-b",
+      "10-q3-c",
+      "10-q3-a"
+    ],
+    "zh": {
+      "question": "两位客人约定套餐先上汤、再上主菜，同一道菜必须同桌同步；汤应在18:30–18:40、主菜在18:50–19:00上桌。以下时间均能由厨房实现。哪项安排符合承诺？",
+      "options": [
+        "两人汤18:55，主菜18:35",
+        "一人汤18:35，另一人汤18:45；两人主菜18:55",
+        "两人汤18:35，主菜18:55"
+      ]
+    },
+    "en": {
+      "question": "Two guests have agreed that soup comes before the main course and that each course is served to both guests together. Soup must arrive at 18:30–18:40 and the main at 18:50–19:00. The kitchen can achieve all the schedules below. Which meets the agreement?",
+      "options": [
+        "Soup for both at 18:55; mains for both at 18:35",
+        "Soup at 18:35 for one and 18:45 for the other; mains for both at 18:55",
+        "Soup for both at 18:35; mains for both at 18:55"
+      ]
+    }
+  },
+  {
+    "id": "10-q4",
+    "subject": "10",
+    "optionIds": [
+      "10-q4-a",
+      "10-q4-b",
+      "10-q4-c"
+    ],
+    "zh": {
+      "question": "一个检查站只有一条处理通道，已持续满负荷。每人占用通道60秒，其中40秒用于按说明准备物品、20秒用于检查。若准备可完整移到排队区且不减慢检查，哪项最能减少通道占用时间？",
+      "options": [
+        "把40秒准备环节提前到排队区",
+        "把20秒检查环节移到通道出口",
+        "把等候区座椅数量增加一倍"
+      ]
+    },
+    "en": {
+      "question": "A checkpoint has one processing lane that is continuously busy. Each person occupies it for 60 seconds: 40 preparing items from instructions and 20 for the check. Preparation can be fully completed in the waiting area without slowing the check. Which change most reduces time occupying the lane?",
+      "options": [
+        "Complete preparation before entering the processing lane",
+        "Complete the check just beyond the processing lane exit",
+        "Provide extra waiting seats before the processing lane"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q05",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q05-a",
+      "10-v2-q05-b",
+      "10-v2-q05-c"
+    ],
+    "zh": {
+      "question": "游乐设施下一轮固定有30个座位。开门前已有20位优先票客人、25位普通票客人等待，此后无人加入；每人用一个座位，都愿意乘坐。无论先放哪队，一轮后至少还有几人等待？",
+      "options": [
+        "10人",
+        "15人",
+        "25人"
+      ]
+    },
+    "en": {
+      "question": "An attraction has exactly 30 seats for its next round. Before boarding, 20 priority-ticket guests and 25 regular-ticket guests are waiting. No one else joins; each uses one seat and wants to ride. Regardless of which queue boards first, at least how many remain after one round?",
+      "options": [
+        "10 people",
+        "15 people",
+        "25 people"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q06",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q06-b",
+      "10-v2-q06-a",
+      "10-v2-q06-c"
+    ],
+    "zh": {
+      "question": "配送试点各运100件包裹。承诺至少95件准时，且最多2件受损：东线为97件准时、4件受损；西线为95件准时、2件受损；南线为93件准时、1件受损。哪条线路同时达标？",
+      "options": [
+        "西线",
+        "东线",
+        "南线"
+      ]
+    },
+    "en": {
+      "question": "Each delivery route handles 100 parcels. The promise is at least 95 on time and no more than 2 damaged. The East route delivers 97 on time with 4 damaged; West delivers 95 on time with 2 damaged; South delivers 93 on time with 1 damaged. Which route meets both requirements?",
+      "options": [
+        "West route",
+        "East route",
+        "South route"
+      ]
+    }
+  },
+  {
+    "id": "10-q7",
+    "subject": "10",
+    "optionIds": [
+      "10-q7-a",
+      "10-q7-b",
+      "10-q7-c"
+    ],
+    "zh": {
+      "question": "酒店自动退款系统只接受已退房且付款记录齐全的订单。客人符合退款条件，但付款记录因故缺失，表单不能提交；条款允许人工核验，却没有入口。要使现有例外规则能执行，流程缺哪个环节？",
+      "options": [
+        "增加一个重复填写的自动表单",
+        "增加付款记录齐全时的即时退款",
+        "增加提交材料给人工核验的通道"
+      ]
+    },
+    "en": {
+      "question": "A hotel’s automated refund form accepts only checked-out bookings with complete payment records. A guest is eligible, but a missing payment record blocks submission. The terms allow manual verification, yet there is no route to request it. Which missing step would make the existing exception rule usable?",
+      "options": [
+        "A second automated form requiring the same complete record",
+        "An instant refund for bookings with complete payment records",
+        "A route to submit evidence for manual verification"
+      ]
+    }
+  },
+  {
+    "id": "10-q8",
+    "subject": "10",
+    "optionIds": [
+      "10-q8-a",
+      "10-q8-b",
+      "10-q8-c"
+    ],
+    "zh": {
+      "question": "教学航班表中，同一架飞机原定10:00到达、10:40再起飞，必要周转固定30分钟。它实际10:25到达，其他条件都准备好且不能换飞机。下一班最早比计划晚几分钟？",
+      "options": [
+        "10分钟",
+        "15分钟",
+        "25分钟"
+      ]
+    },
+    "en": {
+      "question": "In a teaching flight schedule, the same aircraft is due to arrive at 10:00 and depart again at 10:40. Required turnaround is fixed at 30 minutes. It actually arrives at 10:25; everything else is ready, and no replacement aircraft is available. What is the earliest departure delay relative to the plan?",
+      "options": [
+        "10 minutes",
+        "15 minutes",
+        "25 minutes"
+      ]
+    }
+  },
+  {
+    "id": "10-q9",
+    "subject": "10",
+    "optionIds": [
+      "10-q9-b",
+      "10-q9-a",
+      "10-q9-c"
+    ],
+    "zh": {
+      "question": "访客明确说无法听清口头说明，但能阅读文字。服务标准要求把领取地点、所需材料和截止时间全部说明。哪种调整既保留标准，又回应这位访客的需要？",
+      "options": [
+        "用同一句口头说明反复朗读",
+        "把相同三项信息写在纸上提供",
+        "只写领取地点，省去另外两项"
+      ]
+    },
+    "en": {
+      "question": "A visitor says they cannot hear spoken instructions clearly but can read text. The service standard requires the collection location, required documents and deadline to be explained. Which adjustment preserves the standard and addresses this visitor’s need?",
+      "options": [
+        "Repeat the same spoken instructions several times",
+        "Provide the same three pieces of information in writing",
+        "Write only the collection location and omit the other details"
+      ]
+    }
+  },
+  {
+    "id": "10-v2-q10",
+    "subject": "10",
+    "optionIds": [
+      "10-v2-q10-a",
+      "10-v2-q10-b",
+      "10-v2-q10-c"
+    ],
+    "zh": {
+      "question": "一份教学出行记录中，网约车当天载客行驶800公里、空驶200公里；这些行程恰好替代原本600公里的私家车行驶，其余道路行驶不变。相比没有这些网约车行程，道路车辆行驶增加多少？",
+      "options": [
+        "200公里",
+        "400公里",
+        "1000公里"
+      ]
+    },
+    "en": {
+      "question": "In a teaching travel record, ride-hailing vehicles drive 800 km with passengers and 200 km empty in one day. These trips replace exactly 600 km of private-car driving; all other road travel stays unchanged. How much additional vehicle distance is traveled compared with having none of these ride-hailing trips?",
+      "options": [
+        "200 km",
+        "400 km",
+        "1,000 km"
+      ]
+    }
+  },
+  {
+    "id": "10-q11",
+    "subject": "10",
+    "optionIds": [
+      "10-q11-c",
+      "10-q11-a",
+      "10-q11-b"
+    ],
+    "zh": {
+      "question": "同一场馆进行了两次相同人数、相同情景的教学应急演练。改进交接流程后，模拟响应时间从8分钟变为5分钟，漏传信息从6项变为1项。哪项结论被这些记录直接支持？",
+      "options": [
+        "该演练响应更快、漏传更少",
+        "该场馆真实灾害发生率下降",
+        "未测过的应急情景响应变快"
+      ]
+    },
+    "en": {
+      "question": "The same venue runs two teaching emergency exercises with the same number of participants and the same scenario. After revising its handoff process, simulated response time falls from 8 to 5 minutes and missed information items from 6 to 1. Which conclusion is directly supported by these records?",
+      "options": [
+        "Recorded response and handoffs improved in this drill",
+        "Real disasters became less frequent at this venue",
+        "Responses became faster in untested emergency scenarios"
+      ]
+    }
+  },
+  {
+    "id": "10-q12",
+    "subject": "10",
+    "optionIds": [
+      "10-q12-c",
+      "10-q12-a",
+      "10-q12-b"
+    ],
+    "zh": {
+      "question": "活动入口的书面路线把访客引向东侧大厅，广播却说活动在西侧大厅；两处各自清楚，但访客不断折返。为了消除这项矛盾，最应联合核对哪两个服务触点？",
+      "options": [
+        "背景音乐与灯光颜色",
+        "书面路线与位置广播",
+        "门票价格与优惠规则"
+      ]
+    },
+    "en": {
+      "question": "An event’s written entrance directions send visitors to the east hall, while the announcement says the event is in the west hall. Each is individually clear, but visitors keep turning back. Which two service touchpoints should be checked together to resolve this conflict?",
+      "options": [
+        "The background music and entrance lighting",
+        "Written directions and spoken venue directions",
+        "The ticket-pricing display and discount announcements"
+      ]
+    }
+  }
+]

@@ -2,6 +2,11 @@
 
 MapKAI maps knowledge with AI into a living knowledge atlas.
 
+Question-bank authoring and revisions follow [MapKAI Question Bank Principles](docs/mapkai-question-bank-principles.zh.md).
+For GPT generation, provide those principles together with the [existing Map question reference](MAPKAI_QUESTION_BANK_FOR_GPT.txt); its old items are deduplication material, not approved writing examples. Explore's 20 preference questions use the separate rules in the principles document.
+The [complete bilingual v2 candidate bank](question-banks/v2-2026-10-03/README.zh.md) contains the revised Explore 20 and Map 132, with blueprints and review records. It is editorially reviewed and awaiting user trials and website integration. Include it when deduplicating future candidates.
+
+
 ## Local Development
 
 ```bash
