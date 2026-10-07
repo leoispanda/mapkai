@@ -1,0 +1,26 @@
+name = "cloudflare-media-cost-guard"
+main = "media-worker.mjs"
+compatibility_date = "2026-05-06"
+account_id = "ad22db3a94b7b8825c077d23e0f521a3"
+workers_dev = false
+preview_urls = false
+routes = [
+  { pattern = "media.mapkai.com/*", zone_name = "mapkai.com" },
+  { pattern = "media.turnpo.com/*", zone_name = "turnpo.com" },
+]
+
+[[d1_databases]]
+binding = "CLOUDFLARE_COST_DB"
+database_name = "cloudflare-cost-guard"
+database_id = "3bd3d71b-196b-462c-9b19-6a19e8b6255b"
+
+[[r2_buckets]]
+binding = "MAPKAI_FINANCE_MEDIA"
+bucket_name = "mapkai-finance-media"
+
+[[r2_buckets]]
+binding = "TURNPO_MEDIA"
+bucket_name = "turnpo-media"
+
+[observability]
+enabled = false

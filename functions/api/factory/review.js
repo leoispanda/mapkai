@@ -1,5 +1,6 @@
-import { authorize, readCatalog, responseJson, safeItem } from './_media.js';
+import { authorize, factoryMedia, readCatalog, responseJson, safeItem } from './_media.js';
 import { readReview, reviewKey, reviewTransition, validateReview } from './_reviews.js';
+import { costResponse } from '../../_shared/cost-guard.js';
 
 async function boundedJson(request) {
   const reader = request.body?.getReader();
@@ -28,7 +29,7 @@ export async function onRequest({ request, env }) {
     const catalog = await readCatalog(env);
     const item = catalog.items.find(entry => entry.id === url.searchParams.get('id'));
     if (!item || !safeItem(item)) return responseJson({ error: 'Video not found.' }, 404);
-    const bucket = env.MAPKAI_REVIEW_MEDIA;
+    const bucket = factoryMedia(env);
     const { record: previous, etag } = await readReview(bucket, item);
     if (request.method === 'GET') return responseJson({ record: previous, revision: previous?.revision || 0 });
     let input, review;
@@ -51,5 +52,5 @@ export async function onRequest({ request, env }) {
     const saved = await bucket.put(reviewKey(item), JSON.stringify(record), { onlyIf: etag ? { etagMatches: etag } : { etagDoesNotMatch: '*' }, httpMetadata: { contentType: 'application/json', cacheControl: 'private, no-store' } });
     if (!saved) return responseJson({ error: 'A concurrent review was saved first. Reload before saving.' }, 409);
     return responseJson({ record, revision: record.revision });
-  } catch { return responseJson({ error: 'Review storage temporarily unavailable. Your local draft is retained.' }, 503); }
+  } catch (error) { return costResponse(error) || responseJson({ error: 'Review storage temporarily unavailable. Your local draft is retained.' }, 503); }
 }

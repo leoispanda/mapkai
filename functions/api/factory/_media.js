@@ -1,4 +1,9 @@
 import { hasValidFounderAccessCookie } from '../pdc/_shared.js';
+import { wrapR2Bucket } from '../../_shared/cost-guard.js';
+
+export function factoryMedia(env) {
+  return wrapR2Bucket(env?.MAPKAI_REVIEW_MEDIA, env);
+}
 
 export const CATALOG_KEY = 'catalog/review-v1.json';
 export const PRIVATE_HEADERS = {
@@ -16,7 +21,7 @@ export async function authorize(request, env) {
   return null;
 }
 export async function readCatalog(env) {
-  const object = await env.MAPKAI_REVIEW_MEDIA.get(CATALOG_KEY);
+  const object = await factoryMedia(env).get(CATALOG_KEY);
   if (!object) return { items: [] };
   const data = await object.json();
   if (data.schemaVersion !== 'mapkai-private-video-catalog.v1' || data.visibility !== 'FOUNDER_ONLY' || !Array.isArray(data.items)) throw new Error('Invalid private catalog');

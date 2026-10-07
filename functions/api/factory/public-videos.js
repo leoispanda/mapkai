@@ -1,4 +1,5 @@
 import { PUBLIC_PREVIEW_DISCLOSURE, PUBLIC_PREVIEW_LABEL, publicItemProjection, readPublicCatalog, responseJson } from './_public.js';
+import { costResponse } from '../../_shared/cost-guard.js';
 
 export async function onRequest({ request, env }) {
   if (request.method !== 'GET') return responseJson({ error: 'Method not allowed.' }, 405, { Allow: 'GET' });
@@ -9,7 +10,7 @@ export async function onRequest({ request, env }) {
       reviewLabel: PUBLIC_PREVIEW_LABEL,
       disclosure: PUBLIC_PREVIEW_DISCLOSURE,
     });
-  } catch {
-    return responseJson({ error: 'Learning previews are temporarily unavailable.' }, 503);
+  } catch (error) {
+    return costResponse(error) || responseJson({ error: 'Learning previews are temporarily unavailable.' }, 503);
   }
 }

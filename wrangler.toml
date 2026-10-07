@@ -7,6 +7,11 @@ binding = "MAPKAI_DB"
 database_name = "mapkai"
 database_id = "842bbe82-191d-47a7-b6b6-59f5d0c98756"
 
+[[d1_databases]]
+binding = "CLOUDFLARE_COST_DB"
+database_name = "cloudflare-cost-guard"
+database_id = "3bd3d71b-196b-462c-9b19-6a19e8b6255b"
+
 [ai]
 binding = "AI"
 

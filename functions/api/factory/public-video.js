@@ -1,4 +1,6 @@
 import { getPublicItemBySlug, PUBLIC_HEADERS, readPublicCatalog, responseJson, publicRange } from './_public.js';
+import { factoryMedia } from './_media.js';
+import { costResponse } from '../../_shared/cost-guard.js';
 
 export async function onRequest({ request, env }) {
   if (!['GET', 'HEAD'].includes(request.method)) return responseJson({ error: 'Method not allowed.' }, 405, { Allow: 'GET, HEAD' });
@@ -8,7 +10,8 @@ export async function onRequest({ request, env }) {
     // keys, hashes and download switches are intentionally not requestable.
     const item = getPublicItemBySlug(await readPublicCatalog(env), url.searchParams.get('field'));
     if (!item) return responseJson({ error: 'Learning preview not found.' }, 404);
-    const head = await env.MAPKAI_REVIEW_MEDIA.head(item.objectKey);
+    const bucket = factoryMedia(env);
+    const head = await bucket.head(item.objectKey);
     if (!head || head.size !== item.fileSize) return responseJson({ error: 'Learning preview is unavailable.' }, 404);
 
     const headers = {
@@ -25,10 +28,10 @@ export async function onRequest({ request, env }) {
     if (range) headers['Content-Range'] = `bytes ${range.start}-${range.end}/${head.size}`;
     if (request.method === 'HEAD') return new Response(null, { status: range ? 206 : 200, headers });
 
-    const object = await env.MAPKAI_REVIEW_MEDIA.get(item.objectKey, range ? { range: { offset: range.start, length: range.length } } : undefined);
+    const object = await bucket.get(item.objectKey, range ? { range: { offset: range.start, length: range.length } } : undefined);
     if (!object?.body) return responseJson({ error: 'Learning preview is unavailable.' }, 404);
     return new Response(object.body, { status: range ? 206 : 200, headers });
-  } catch {
-    return responseJson({ error: 'Learning preview is temporarily unavailable.' }, 503);
+  } catch (error) {
+    return costResponse(error) || responseJson({ error: 'Learning preview is temporarily unavailable.' }, 503);
   }
 }

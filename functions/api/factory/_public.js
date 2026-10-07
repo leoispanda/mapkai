@@ -1,4 +1,4 @@
-import { parseRange, safeItem } from './_media.js';
+import { factoryMedia, parseRange, safeItem } from './_media.js';
 import { CANONICAL_MAJOR_FIELDS, CANONICAL_MAJOR_FIELD_IDS, isCanonicalMajorField } from './_major-fields.js';
 
 // The public preview catalog is deliberately separate from the founder-only
@@ -56,7 +56,7 @@ export function safePublicItem(item) {
 
 export async function readPublicCatalog(env) {
   if (!env?.MAPKAI_REVIEW_MEDIA) throw new Error('Public preview storage is not configured');
-  const object = await env.MAPKAI_REVIEW_MEDIA.get(PUBLIC_CATALOG_KEY);
+  const object = await factoryMedia(env).get(PUBLIC_CATALOG_KEY);
   if (!object) throw new Error('Public preview catalog is missing');
   const data = await object.json();
   if (data?.schemaVersion !== 'mapkai-public-preview-catalog.v1'
