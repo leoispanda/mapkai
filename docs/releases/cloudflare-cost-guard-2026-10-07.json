@@ -1,0 +1,84 @@
+{
+  "status": "deployed-and-verified",
+  "date": "2026-10-07",
+  "userAuthorization": {
+    "scope": ["MapKAI", "DishKAI", "Turnpo"],
+    "monthlyTargetEUR": 10,
+    "stopBeforeExcessUsage": true,
+    "thirdPartyAIQuotasChanged": false
+  },
+  "accountPlan": "Workers Free",
+  "r2Subscription": "R2 Paid",
+  "hardInvoiceCap": false,
+  "budgetAlertUSD": 5,
+  "observedBillableCostUSD": 0,
+  "observedBillingCycle": "2026-10-07/2026-11-06",
+  "costDataCanBeDelayed": true,
+  "dedicatedDatabase": {
+    "name": "cloudflare-cost-guard",
+    "id": "3bd3d71b-196b-462c-9b19-6a19e8b6255b",
+    "binding": "CLOUDFLARE_COST_DB",
+    "applicationDatabaseFallback": false
+  },
+  "sharedAllowances": {
+    "cycleStartsDayUTC": 7,
+    "classAOperations": 100000,
+    "classBOperations": 8000000,
+    "newUploadBytes": 536870912,
+    "persistentStorageReservationCeilingBytes": 8589934592,
+    "initialStorageReservationBytes": 3221225472,
+    "storageReservationsRefunded": false
+  },
+  "mediaWorker": {
+    "name": "cloudflare-media-cost-guard",
+    "version": "72324f25-3cd6-40ed-bc45-b7ce0863d70f",
+    "workersDevEnabled": false,
+    "previewUrlsEnabled": false,
+    "routes": [
+      {"pattern": "media.mapkai.com/*", "failureMode": "fail-closed", "r2CustomDomainAccess": "disabled", "dnsRetained": true},
+      {"pattern": "media.turnpo.com/*", "failureMode": "fail-closed", "r2CustomDomainAccess": "disabled", "dnsRetained": true}
+    ]
+  },
+  "pages": [
+    {"project": "mapkai", "commit": "5ee9099", "deployment": "4be4560d-44fc-4f7a-b28a-fd27daf866bf", "failureMode": "fail-closed", "r2RoutesProtected": "all factory media routes"},
+    {"project": "turnpo", "commit": "bc602ab", "deployment": "fbc5e47d-b323-4335-93af-1abd7ba53930", "failureMode": "fail-closed", "r2RoutesProtected": 5},
+    {"project": "dishkai", "failureMode": "fail-closed", "liveBindings": ["DISHKAI_UNMATCHED_DISHES", "AI"], "r2Dependency": false, "codeChanged": false}
+  ],
+  "r2Buckets": [
+    {"name": "mapkai-finance-media", "r2DevEnabled": false},
+    {"name": "mapkai-video-review", "r2DevEnabled": false, "customDomains": []},
+    {"name": "turnpo-media", "r2DevEnabled": false},
+    {"name": "turnpo-emba-media", "r2DevEnabled": false, "customDomains": []},
+    {"name": "turnpo-profile-media", "r2DevEnabled": false, "customDomains": []}
+  ],
+  "validation": {
+    "realSQLiteGuardAndMapkaiRouteTestsPassed": 21,
+    "mediaGatewayTestsPassed": 21,
+    "turnpoBehaviorAssertionsPassed": 149,
+    "bothPagesFunctionsCompiled": true,
+    "mapkaiCSPCheckPassed": true,
+    "productionMediaHeadStatus": 200,
+    "productionRangeGetStatus": 206,
+    "productionRangeGetBytes": 16,
+    "productionConditionalGetStatus": 304,
+    "productionPublicPutStatus": 405,
+    "productionMapkaiCatalogStatus": 200,
+    "productionMapkaiCatalogItems": 11,
+    "productionMapkaiUnauthenticatedPrivateStatus": 401,
+    "productionTurnpoGuardedMissingProfileStatus": 404,
+    "sharedProductionLedgerObservedClassBOperations": 16,
+    "mapkaiCoreAssetsByteIdenticalBeforeAndAfter": 4,
+    "turnpoCoreAssetsByteIdenticalBeforeAndAfter": 6,
+    "unrelatedLocalWorkPreserved": true,
+    "knownExistingTestLimits": [
+      "Five legacy MapKAI video test fixtures do not bind the newly mandatory cost database and correctly receive 503; pending video test files were not edited.",
+      "Turnpo EMBA static test has a missing Harold Hassink indexed Markdown mirror; reproduced on pristine pre-change production commit 1877860."
+    ]
+  },
+  "boundaries": [
+    "Usage safeguards cover the audited application/media entry points and current Free-plan services; this is not an exact euro cap across every possible account action.",
+    "Account-owner direct S3, dashboard and CLI operations bypass application code.",
+    "New public endpoints, paid-plan upgrades or Infrequent Access storage require extending protection.",
+    "Protection failures, daily Free limits and monthly allowances intentionally pause affected service."
+  ]
+}
