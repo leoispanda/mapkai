@@ -10727,47 +10727,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0413",
     "fieldTitle": "Management and administration",
     "fieldTitleZh": "管理与行政",
-    "title": "The Workshop That Perfected Yesterday",
-    "titleZh": "把昨天做到完美的作坊",
-    "summary": "A winter-coat workshop perfects yesterday's demand while warmer seasons quietly move its customers elsewhere.",
-    "summaryZh": "厚呢作坊把昨天的需求做到极致，暖冬却悄悄把顾客带往别处。",
-    "storyParagraphs": [
-      "Everwinter Tailors made the valley's best heavy wool coats. Twelve operations ran by the bell; offcuts shrank every year, and owner Cen Mu reinvested each profit in faster cutters and a larger wool store. The door announced, 'Only winter coats, made without delay.' After two mild winters, dockworkers began asking the counter staff for something light that could shed rain. Cen called it a passing fashion.",
-      "Those questions accumulated on the backs of order slips, but Cen doubled his wool purchase to secure a discount. The decision lowered unit cost and looked wise for one season. By spring, racks were full while old customers bought breathable rain capes from another city. Cen answered by demanding still faster cutting. The workshop produced more perfectly finished coats than the market would take.",
-      "Young cutter Lian used scraps of coated cloth to make six trial jackets and asked dockworkers to wear them for a month. The first trapped sweat, the second leaked at its seams, and the third tore where a heavy rope crossed the shoulder. Each failure cost time while the profitable old line waited. Yet the returned jackets carried salt marks, repair stitches, and notes that revealed what the workshop had never needed to learn from wool.",
-      "Cen walked past the testing table and sold one beloved high-speed cutter instead, committing scarce people and cash to the uncertain line. The cutter's four anchor bolts remained in the floor. The money funded small cloth contracts, seam-heating tools, and a team allowed to test in short runs. He kept the reliable coat line operating; existing skill still paid wages while new work developed. The first public rain jacket failed and was withdrawn. For three weeks the empty space where the cutter had stood reminded the team that the experiment was not spare-time decoration.",
-      "After the loss, Cen did not order a full retreat. Counter questions were reviewed weekly, trial budgets were capped, and experienced tailors learned sealed seams. One new fabric was rejected; its lessons remained in the test book. The next jacket won a harbour order. Reorganising stations cost the workshop its fastest month, and several coat specialists left rather than retrain, but the business no longer depended on one season behaving as before.",
-      "When another warm winter arrived, wool still occupied half the store, not all of it. Cen stood outside with a scraper and removed 'Only winter coats' from the door. The deeper grooves remained visible beneath the fresh line he painted: 'Coats for the weather that comes.' He kept the scraper."
-    ],
-    "storyParagraphsZh": [
-      "永冬裁衣坊做全谷最好的厚呢外套。十二道工序随钟声运转，边角料逐年减少，老板岑牧又把利润投进更快的剪床和更大的羊毛仓。门上写着：“只做冬衣，从不误期。”连续两个暖冬后，码头工开始向店员询问轻便防雨衣，岑牧却把这种要求当成短暂时尚。",
-      "这些问题渐渐写满订单背面，岑牧反而为争取折扣，把厚呢采购加了一倍。单位成本下降，头一个季度看起来十分明智。到了春天，衣架依然塞满，老顾客却去外城购买透气雨披。岑牧只要求剪得更快，结果作坊生产出更多做工完美、却无人带走的外套。",
-      "年轻裁工莲用涂层布边角做了六件试衣，请码头工连续穿一个月。第一版闷汗，第二版接缝漏水，第三版被肩上粗缆磨破。每次失败都占用老生产线的时间，可退回的衣服也留下盐印、补线和工人笔记，让作坊第一次看见厚呢时代不曾要求它解决的问题。",
-      "岑牧没有卖掉试验桌，而是卖掉最珍爱的高速剪床，把稀缺人手和现金真正押进尚不确定的新线；剪床四枚地脚栓仍留在地面。他用钱签小额短期布约，购买压缝工具，并让一组人做小批试验。可靠的冬衣线仍继续发工资，新工作在旁边长出。第一批公开销售的雨衣仍因领口进水被召回。此后三周，剪床留下的空位一直提醒众人：试验并非有空才做的装饰，而是作坊已经付过代价的选择。",
-      "这次亏损后，岑牧没有把所有改变停掉。店员每周汇总顾客问题，试做费用设上限，老裁工也学习封合接缝。一种新布最终被放弃，试验记录却留在册中；下一版拿到港口订单。重排工位让作坊失去最快的一个月，几名只愿做冬衣的师傅也离开了，但生意不再只等季节重复过去。",
-      "又一个暖冬来临，羊毛仍占仓库一半，却不再占满。岑牧提着刮刀站在门外，亲手刮去“只做冬衣”。旧字留下的深痕仍透在新写的一行下面：“为真正到来的天气做衣。”刮刀也被他留在门后。"
-    ],
+    "mode": "concept-fable",
     "conceptName": "Dynamic capabilities",
     "conceptNameZh": "动态能力",
-    "explanationParagraphs": [
-      "Dynamic capabilities are higher-order abilities to sense environmental change, seize selected opportunities, and reconfigure resources, routines, and competences. They differ from ordinary capabilities that execute current work efficiently. Sensing, experimenting, and transforming require investment and judgement, remain constrained by existing assets and paths, and do not guarantee that every change or product will succeed."
+    "titleZh": "十天里要跑三个城市",
+    "summaryZh": "展陈租赁公司用铝框和蓝箱完成三城快闪后，没有把模块菜单本身当成答案。真正留下来的，是一套反复看新询价、做小试、再决定是否调整模块资源的组织安排。",
+    "storyParagraphsZh": [
+      "六月初，虚构的桥岸展陈租赁公司接到老客户来电：十天内要在三个城市各做两天快闪。公司平时擅长提前数周准备的大型展会，原流程每到一城都要重新配板、找连接件、装箱。销售负责人许衡没有当场承诺，而是把这单和最近六周的询价一起拿去找运营主管罗今。",
+      "十二份新询价里已有七份问过“更小、更快、同一套东西反复搬”。两人先用闲置铝框做两套有限样件，只留三种宽度、两种面板，把连接件装进蓝色周转箱。完整搭、拆、清点、装箱后，再由另一名搭建员只看编号复搭；第一次就发现两种相近连接件容易混放。",
+      "团队给蓝箱加分隔和形状标签，补足短缺连接件，再跑一次拆装。确认样件能在下一城前完成周转后，许衡只向客户承诺验证过的组合。三城订单随后按编号回库、再出库，没有把大型展会的定制流程一起改掉。",
+      "订单结束后，模块菜单、编号仓位和常用连接件补货照常运转。公司另定了一个双周碰头时间：销售带来新询价，运营摊开装拆反馈，仓库把缺件和周转时间记在旁边。三方逐项找出现有模块接不住、又反复被问到的需求，再决定哪项能拿到小样预算，哪项先放着。原本分散在三处的记录从此放到同一张桌上；没有另设大团队，下一次碰头也沿用这些记录。",
+      "第二次复核时，三份询价都要求比现有最窄模块再少占一些地面。团队没有直接把菜单永久扩成更多规格，而是先拿一套旧框做窄版小样，发现稳定底座需要另一种连接方式。由于这类需求仍只有三份，他们把样件记录留下，却暂时没有采购整批新底座，也没有改现有菜单。",
+      "月底盘点，蓝箱和编号铝框照常服务已经匹配的快闪单；旁边的“短周期询价复核”文件夹里夹着那份窄版试验记录，状态写着“继续观察”。许衡把下一轮询价日期写上去，没有提前把尚未确认的需求变成库存。"
     ],
+    "overallZh": "动态能力关注组织持续识别环境变化、选择是否投入并重构资源与能力组合的能力。已经形成的模块化执行流程属于新的运营能力；本篇所展示的更新能力，是组织还能反复审视变化、做有限试验并决定是否再次调整这些运营能力。",
     "explanationParagraphsZh": [
-      "动态能力是组织感知环境变化、抓住选定机会，并重组资源、流程与能力的高阶能力，区别于高效完成现有工作的普通能力。感知、试验和转型需要投入与判断，也受既有资产和路径约束；它提高适应机会，却不能保证每次改变或每个产品都成功。"
+      "首单促成模块菜单、编号仓位和补货方式，形成可重复的运营能力；随后双周复核把销售、运营、仓库的信息连起来，用小样决定是否进一步重构。",
+      "窄版需求没有自动触发采购，说明感知、把握和重构并非机械三步成功法。持续流程改进本身也不必然构成动态能力。"
     ],
-    "mode": "case-fable",
+    "moduleZh": {
+      "intro": "区分“已经形成的新运营流程”和“持续更新这些流程的组织能力”。",
+      "diagramTitle": "从三城订单到可反复更新的模块能力",
+      "diagramSteps": [
+        "从重复询价和三城订单识别环境变化",
+        "用有限样件验证是否值得投入模块能力",
+        "保留编号仓位、补货和模块菜单作为日常运营能力",
+        "建立跨销售/运营/仓库的周期性询价复核与小试授权",
+        "面对窄版新需求时先试验并选择暂不重构库存"
+      ],
+      "diagramStepNotes": [
+        "六周12份询价中7份出现小型、快速、重复搬运需求。",
+        "两套样件经历搭拆、清点、装箱和第二人复搭，连接件问题被修正。",
+        "首单后模块菜单、蓝箱、编号仓位与补货方式继续使用。",
+        "双周复核决定哪些重复需求值得有限小样和资源调整。",
+        "三份窄版需求只形成样件记录，尚不足以触发整批采购和菜单改版。"
+      ],
+      "mapping": [
+        "编号铝框与蓝箱 → 已经形成、可重复执行的模块运营能力。",
+        "双周询价复核 → 持续感知并判断是否更新能力的组织安排。",
+        "窄版小样 → 在承诺资源前限制风险的试验。",
+        "“继续观察”记录 → 组织可以选择暂不重构，而非变化必然成功。"
+      ],
+      "boundary": "动态能力不是任何持久流程改进，也不等于一次成功订单或个人聪明应变。感知、抓住机会和重构彼此关联但不是固定程序；已经重构出的新流程可成为普通运营能力，而动态能力还涉及以后如何再次识别并调整能力基础。",
+      "reflection": "当一套新流程已经稳定运行后，什么证据能说明组织不仅“会做这件事”，还具备在下一轮环境变化时重新审视、试验并调整自身能力的机制？"
+    },
+    "referencesZh": [
+      {
+        "id": "teece-pisano-shuen-1997",
+        "citation": "Teece, D. J., Pisano, G., & Shuen, A. (1997). Dynamic Capabilities and Strategic Management. Strategic Management Journal, 18(7), 509–533.",
+        "url": "https://doi.org/10.1002/(SICI)1097-0266(199708)18:7<509::AID-SMJ882>3.0.CO;2-Z",
+        "use": "支持动态能力的战略框架及组织过程、资产和发展路径的作用；不证明虚构组织的经营结果。"
+      },
+      {
+        "id": "teece-2007",
+        "citation": "Teece, D. J. (2007). Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance. Strategic Management Journal, 28(13), 1319–1350.",
+        "url": "https://doi.org/10.1002/smj.640",
+        "use": "支持企业层面的感知、抓住机会和重构及其组织基础；三者不是固定流程或成功保证。"
+      }
+    ],
+    "title": "Three Cities in Ten Days",
+    "summary": "After an exhibition-rental company completes a three-city pop-up using aluminum frames and blue bins, it does not treat the module menu itself as the answer. What remains is an organizational arrangement for repeatedly reviewing new inquiries, running small tests, and then deciding whether modular resources should be changed again.",
+    "storyParagraphs": [
+      "In early June, an established client calls the fictional Bridgebank Exhibition Rentals with a request: three two-day pop-ups in three cities within ten days. The company specializes in large exhibitions prepared weeks in advance. Its existing process means matching panels, finding connectors, and packing anew for each city. Sales lead Xu Heng does not promise immediately. He takes the order and the previous six weeks of inquiries to operations manager Luo Jin.",
+      "Seven of twelve recent inquiries have already asked for something “smaller, faster, and movable repeatedly as one set.” The two managers first build two limited prototypes from idle aluminum frames, using only three widths and two panel types, with connectors stored in blue transit bins. They assemble, dismantle, count, and repack the sets, then have another installer rebuild them using only the labels. The first trial immediately reveals that two similar-looking connector types are easy to mix up.",
+      "The team adds dividers and shape labels to the blue bins, replenishes the missing connectors, and runs another dismantling-and-reassembly cycle. Once they confirm that the prototypes can be turned around before the next city, Xu Heng promises the client only the combinations that have actually been tested. The three-city order then moves through return and dispatch by module number, without changing the separate custom process used for large exhibitions.",
+      "After the order, the module menu, numbered storage, and replenishment of common connectors stay in use. The company also sets a meeting every two weeks. Sales brings new inquiries, operations lays out assembly feedback, and the warehouse adds shortages and turnaround times beside them. Together they identify recurring requests the current modules cannot meet, then decide which merit a prototype budget and which should wait. Records previously scattered across three departments now come to one table. No large new team is formed, and the same records will be used at the next meeting.",
+      "At the second review, three inquiries all ask for a footprint smaller than the narrowest existing module. The team does not permanently expand the menu immediately. Instead, it uses one old frame to build a narrow prototype and finds that a stable base would require a different connector arrangement. Because there are still only three such requests, the team keeps the test record but does not purchase a full batch of new bases or change the current menu.",
+      "At month-end inventory, the blue bins and numbered frames continue serving pop-up jobs that already fit the system. Beside them, the short-cycle inquiry-review folder contains the narrow-prototype test record marked “continue observing.” Xu Heng writes in the date of the next inquiry review rather than turning an unconfirmed need into inventory in advance."
+    ],
+    "overall": "Dynamic capabilities concern an organization’s ability to keep identifying environmental change, choose whether to commit resources, and reconfigure combinations of resources and capabilities. The established modular process is a new operating capability. The updating capability illustrated here is the organization’s ability to revisit change, run limited tests, and decide whether those operating capabilities should be altered again.",
+    "explanationParagraphs": [
+      "The first order creates a module menu, numbered storage, and replenishment method as repeatable operating capabilities. The later biweekly review connects sales, operations, and warehouse information and uses prototypes to decide whether further reconfiguration is warranted.",
+      "The narrow-format requests do not automatically trigger purchasing, showing that sensing, seizing, and reconfiguring are not a mechanical three-step success formula. Persistent process improvement by itself is not necessarily a dynamic capability."
+    ],
+    "module": {
+      "intro": "Distinguish between a newly established operating process and the organizational capability to keep updating such processes.",
+      "diagramTitle": "From a Three-City Order to a Modular Capability That Can Be Updated Repeatedly",
+      "diagramSteps": [
+        "Identify environmental change from repeated inquiries and the three-city order",
+        "Use limited prototypes to test whether modular capability is worth investing in",
+        "Retain numbered storage, replenishment, and the module menu as routine operating capability",
+        "Create a recurring cross-sales/operations/warehouse review with authority for small tests",
+        "Test a new narrow-format need and choose not to reconfigure inventory yet"
+      ],
+      "diagramStepNotes": [
+        "Seven of 12 inquiries over six weeks involve smaller, faster, repeatedly movable setups.",
+        "Two prototypes go through assembly, dismantling, counting, packing, and a rebuild by a second installer; the connector problem is corrected.",
+        "After the first order, the module menu, blue bins, numbered storage, and replenishment method remain in use.",
+        "The biweekly review decides which recurring unmet needs justify a limited prototype and resource adjustment.",
+        "Three narrow-format requests produce a prototype record but are not yet enough to trigger bulk purchasing or a menu revision."
+      ],
+      "mapping": [
+        "Numbered aluminum frames and blue bins → modular operating capability that has already been created and can be executed repeatedly.",
+        "Biweekly inquiry review → organizational arrangement for continued sensing and deciding whether capabilities need updating.",
+        "Narrow-format prototype → a test that limits risk before committing resources.",
+        "“Continue observing” record → evidence that the organization can choose not to reconfigure, rather than treating every change as a guaranteed success."
+      ],
+      "boundary": "Dynamic capabilities are not every durable process improvement, nor are they the same as one successful order or a smart individual improvisation. Sensing, seizing, and reconfiguring are interrelated but not a fixed procedure. A reconfigured process can become an ordinary operating capability; dynamic capability also concerns how the organization later recognizes and alters its capability base again.",
+      "reflection": "Once a new process is running reliably, what evidence would show that the organization not only “knows how to do this,” but also has a mechanism for re-examining, testing, and changing its own capabilities when the environment shifts again?"
+    },
+    "references": [
+      {
+        "id": "teece-pisano-shuen-1997",
+        "citation": "Teece, D. J., Pisano, G., & Shuen, A. (1997). Dynamic Capabilities and Strategic Management. Strategic Management Journal, 18(7), 509–533.",
+        "url": "https://doi.org/10.1002/(SICI)1097-0266(199708)18:7<509::AID-SMJ882>3.0.CO;2-Z",
+        "use": "Supports the strategic framework of dynamic capabilities and the roles of organizational processes, assets, and developmental paths; it does not establish the business outcome of the fictional organization."
+      },
+      {
+        "id": "teece-2007",
+        "citation": "Teece, D. J. (2007). Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance. Strategic Management Journal, 28(13), 1319–1350.",
+        "url": "https://doi.org/10.1002/smj.640",
+        "use": "Supports firm-level sensing, seizing, and reconfiguring and their organizational foundations; the three are not treated as a fixed sequence or a guarantee of success."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "review": "law-business-science-mixed-13-pdc-b-review.md",
+      "edits": [
+        "law-business-science-mixed-13-pdc-b-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-b-edit-pass2-evidence.json"
+      ],
+      "reviewModel": "One editor applied thirteen council perspectives; not thirteen independent reviewers."
     },
     "collection": "field-core-fables",
-    "storyBody": "Everwinter Tailors made the valley's best heavy wool coats. Twelve operations ran by the bell; offcuts shrank every year, and owner Cen Mu reinvested each profit in faster cutters and a larger wool store. The door announced, 'Only winter coats, made without delay.' After two mild winters, dockworkers began asking the counter staff for something light that could shed rain. Cen called it a passing fashion.\n\nThose questions accumulated on the backs of order slips, but Cen doubled his wool purchase to secure a discount. The decision lowered unit cost and looked wise for one season. By spring, racks were full while old customers bought breathable rain capes from another city. Cen answered by demanding still faster cutting. The workshop produced more perfectly finished coats than the market would take.\n\nYoung cutter Lian used scraps of coated cloth to make six trial jackets and asked dockworkers to wear them for a month. The first trapped sweat, the second leaked at its seams, and the third tore where a heavy rope crossed the shoulder. Each failure cost time while the profitable old line waited. Yet the returned jackets carried salt marks, repair stitches, and notes that revealed what the workshop had never needed to learn from wool.\n\nCen walked past the testing table and sold one beloved high-speed cutter instead, committing scarce people and cash to the uncertain line. The cutter's four anchor bolts remained in the floor. The money funded small cloth contracts, seam-heating tools, and a team allowed to test in short runs. He kept the reliable coat line operating; existing skill still paid wages while new work developed. The first public rain jacket failed and was withdrawn. For three weeks the empty space where the cutter had stood reminded the team that the experiment was not spare-time decoration.\n\nAfter the loss, Cen did not order a full retreat. Counter questions were reviewed weekly, trial budgets were capped, and experienced tailors learned sealed seams. One new fabric was rejected; its lessons remained in the test book. The next jacket won a harbour order. Reorganising stations cost the workshop its fastest month, and several coat specialists left rather than retrain, but the business no longer depended on one season behaving as before.\n\nWhen another warm winter arrived, wool still occupied half the store, not all of it. Cen stood outside with a scraper and removed 'Only winter coats' from the door. The deeper grooves remained visible beneath the fresh line he painted: 'Coats for the weather that comes.' He kept the scraper.",
-    "storyBodyZh": "永冬裁衣坊做全谷最好的厚呢外套。十二道工序随钟声运转，边角料逐年减少，老板岑牧又把利润投进更快的剪床和更大的羊毛仓。门上写着：“只做冬衣，从不误期。”连续两个暖冬后，码头工开始向店员询问轻便防雨衣，岑牧却把这种要求当成短暂时尚。\n\n这些问题渐渐写满订单背面，岑牧反而为争取折扣，把厚呢采购加了一倍。单位成本下降，头一个季度看起来十分明智。到了春天，衣架依然塞满，老顾客却去外城购买透气雨披。岑牧只要求剪得更快，结果作坊生产出更多做工完美、却无人带走的外套。\n\n年轻裁工莲用涂层布边角做了六件试衣，请码头工连续穿一个月。第一版闷汗，第二版接缝漏水，第三版被肩上粗缆磨破。每次失败都占用老生产线的时间，可退回的衣服也留下盐印、补线和工人笔记，让作坊第一次看见厚呢时代不曾要求它解决的问题。\n\n岑牧没有卖掉试验桌，而是卖掉最珍爱的高速剪床，把稀缺人手和现金真正押进尚不确定的新线；剪床四枚地脚栓仍留在地面。他用钱签小额短期布约，购买压缝工具，并让一组人做小批试验。可靠的冬衣线仍继续发工资，新工作在旁边长出。第一批公开销售的雨衣仍因领口进水被召回。此后三周，剪床留下的空位一直提醒众人：试验并非有空才做的装饰，而是作坊已经付过代价的选择。\n\n这次亏损后，岑牧没有把所有改变停掉。店员每周汇总顾客问题，试做费用设上限，老裁工也学习封合接缝。一种新布最终被放弃，试验记录却留在册中；下一版拿到港口订单。重排工位让作坊失去最快的一个月，几名只愿做冬衣的师傅也离开了，但生意不再只等季节重复过去。\n\n又一个暖冬来临，羊毛仍占仓库一半，却不再占满。岑牧提着刮刀站在门外，亲手刮去“只做冬衣”。旧字留下的深痕仍透在新写的一行下面：“为真正到来的天气做衣。”刮刀也被他留在门后。",
-    "explanation": "Dynamic capabilities are higher-order abilities to sense environmental change, seize selected opportunities, and reconfigure resources, routines, and competences. They differ from ordinary capabilities that execute current work efficiently. Sensing, experimenting, and transforming require investment and judgement, remain constrained by existing assets and paths, and do not guarantee that every change or product will succeed.",
-    "explanationZh": "动态能力是组织感知环境变化、抓住选定机会，并重组资源、流程与能力的高阶能力，区别于高效完成现有工作的普通能力。感知、试验和转型需要投入与判断，也受既有资产和路径约束；它提高适应机会，却不能保证每次改变或每个产品都成功。"
+    "storyBody": "In early June, an established client calls the fictional Bridgebank Exhibition Rentals with a request: three two-day pop-ups in three cities within ten days. The company specializes in large exhibitions prepared weeks in advance. Its existing process means matching panels, finding connectors, and packing anew for each city. Sales lead Xu Heng does not promise immediately. He takes the order and the previous six weeks of inquiries to operations manager Luo Jin.\n\nSeven of twelve recent inquiries have already asked for something “smaller, faster, and movable repeatedly as one set.” The two managers first build two limited prototypes from idle aluminum frames, using only three widths and two panel types, with connectors stored in blue transit bins. They assemble, dismantle, count, and repack the sets, then have another installer rebuild them using only the labels. The first trial immediately reveals that two similar-looking connector types are easy to mix up.\n\nThe team adds dividers and shape labels to the blue bins, replenishes the missing connectors, and runs another dismantling-and-reassembly cycle. Once they confirm that the prototypes can be turned around before the next city, Xu Heng promises the client only the combinations that have actually been tested. The three-city order then moves through return and dispatch by module number, without changing the separate custom process used for large exhibitions.\n\nAfter the order, the module menu, numbered storage, and replenishment of common connectors stay in use. The company also sets a meeting every two weeks. Sales brings new inquiries, operations lays out assembly feedback, and the warehouse adds shortages and turnaround times beside them. Together they identify recurring requests the current modules cannot meet, then decide which merit a prototype budget and which should wait. Records previously scattered across three departments now come to one table. No large new team is formed, and the same records will be used at the next meeting.\n\nAt the second review, three inquiries all ask for a footprint smaller than the narrowest existing module. The team does not permanently expand the menu immediately. Instead, it uses one old frame to build a narrow prototype and finds that a stable base would require a different connector arrangement. Because there are still only three such requests, the team keeps the test record but does not purchase a full batch of new bases or change the current menu.\n\nAt month-end inventory, the blue bins and numbered frames continue serving pop-up jobs that already fit the system. Beside them, the short-cycle inquiry-review folder contains the narrow-prototype test record marked “continue observing.” Xu Heng writes in the date of the next inquiry review rather than turning an unconfirmed need into inventory in advance.",
+    "storyBodyZh": "六月初，虚构的桥岸展陈租赁公司接到老客户来电：十天内要在三个城市各做两天快闪。公司平时擅长提前数周准备的大型展会，原流程每到一城都要重新配板、找连接件、装箱。销售负责人许衡没有当场承诺，而是把这单和最近六周的询价一起拿去找运营主管罗今。\n\n十二份新询价里已有七份问过“更小、更快、同一套东西反复搬”。两人先用闲置铝框做两套有限样件，只留三种宽度、两种面板，把连接件装进蓝色周转箱。完整搭、拆、清点、装箱后，再由另一名搭建员只看编号复搭；第一次就发现两种相近连接件容易混放。\n\n团队给蓝箱加分隔和形状标签，补足短缺连接件，再跑一次拆装。确认样件能在下一城前完成周转后，许衡只向客户承诺验证过的组合。三城订单随后按编号回库、再出库，没有把大型展会的定制流程一起改掉。\n\n订单结束后，模块菜单、编号仓位和常用连接件补货照常运转。公司另定了一个双周碰头时间：销售带来新询价，运营摊开装拆反馈，仓库把缺件和周转时间记在旁边。三方逐项找出现有模块接不住、又反复被问到的需求，再决定哪项能拿到小样预算，哪项先放着。原本分散在三处的记录从此放到同一张桌上；没有另设大团队，下一次碰头也沿用这些记录。\n\n第二次复核时，三份询价都要求比现有最窄模块再少占一些地面。团队没有直接把菜单永久扩成更多规格，而是先拿一套旧框做窄版小样，发现稳定底座需要另一种连接方式。由于这类需求仍只有三份，他们把样件记录留下，却暂时没有采购整批新底座，也没有改现有菜单。\n\n月底盘点，蓝箱和编号铝框照常服务已经匹配的快闪单；旁边的“短周期询价复核”文件夹里夹着那份窄版试验记录，状态写着“继续观察”。许衡把下一轮询价日期写上去，没有提前把尚未确认的需求变成库存。",
+    "explanation": "The first order creates a module menu, numbered storage, and replenishment method as repeatable operating capabilities. The later biweekly review connects sales, operations, and warehouse information and uses prototypes to decide whether further reconfiguration is warranted.\n\nThe narrow-format requests do not automatically trigger purchasing, showing that sensing, seizing, and reconfiguring are not a mechanical three-step success formula. Persistent process improvement by itself is not necessarily a dynamic capability.",
+    "explanationZh": "首单促成模块菜单、编号仓位和补货方式，形成可重复的运营能力；随后双周复核把销售、运营、仓库的信息连起来，用小样决定是否进一步重构。\n\n窄版需求没有自动触发采购，说明感知、把握和重构并非机械三步成功法。持续流程改进本身也不必然构成动态能力。"
   },
   {
     "id": "0414-segmentation-targeting-positioning",
@@ -10776,47 +10869,148 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0414",
     "fieldTitle": "Marketing and advertising",
     "fieldTitleZh": "市场营销与广告",
-    "title": "The Soap That Promised Everything",
-    "titleZh": "承诺一切的肥皂",
-    "summary": "A soap maker promises everything to everyone until each buyer remembers only the product's compromises.",
-    "summaryZh": "肥皂匠向所有人承诺一切，最后每位顾客只记得产品如何处处妥协。",
-    "storyParagraphs": [
-      "Soap maker Qiao Lan borrowed enough money to double her workshop and needed the new bar to sell across the whole city. Its wrapper promised the whitest wash, finest scent, gentlest touch, longest life, lowest price, and richest foam. To approach all six claims, she added costly perfume, reduced the lye that removed heavy grime, and cut each bar smaller. Merchants admired the crowded wrapper and placed a large opening order.",
-      "Returns arrived within a month. Dockworkers said salt and tar remained on their sleeves. Inns used the small bars too quickly. Families found the perfume too strong for children. Qiao added more claims in smaller print and offered one discount to all buyers. Sales briefly rose, then fell harder because no group could tell what problem the soap was meant to solve. The loan payment was due after the next market. Unsold bars came back with six different complaints written across the same wrapper.",
-      "Qiao spent ten mornings watching use rather than counting people by occupation alone. Some dockworkers washed only light cloth, while a few inns handled tarred sail linen. She grouped situations by soil, water temperature, purchase volume, and sensitivity, then checked whether each group was reachable and large enough. The notes described changing needs, not permanent kinds of people, and she refused a merchant's request to label family buyers as weak.",
-      "Her workshop could afford one new mould and one formula. Nearby shipping crews bought steadily and the workers already understood salt stains, so Qiao chose them first. That meant surrendering a lucrative order from the city's family-goods chain. The new bar gave up floral scent and extreme mildness; it promised to remove salt in cold water and last one voyage. Its ridged shape drained in a shipboard box after testers complained that the first sample dissolved.",
-      "The narrower promise sold fewer bars in the opening week but earned repeat orders from three crews. A cheaper inn soap and a milder household bar remained better for other buyers. Qiao did not call her bar universally superior. She placed it beside those alternatives and accepted the cost of changing the production line. One crew rejected it because their work involved oil rather than salt, and its report changed the next survey.",
-      "On the night she made the loan payment, Qiao unfolded the old wrapper. She cut away five of its six promises, then trimmed the remaining words until the paper read: 'For the salt the sea leaves behind.' The offcuts filled her palm; the new wrapper needed only one line."
-    ],
-    "storyParagraphsZh": [
-      "肥皂匠乔岚借钱把作坊扩大一倍，新皂必须卖遍全城才能还债。包装纸一口气承诺：洗得最白、气味最香、触感最温和、最耐用、价格最低、泡沫最多。为了靠近六句话，她加入昂贵香油，减少去重污的碱，又把皂块切小。商人喜欢那张热闹包装，开市便下了一笔大单。",
-      "一个月内，退货陆续回来。码头工说袖口盐渍与焦油洗不掉；旅店嫌小皂用得太快；家庭顾客又觉得香气对孩子太浓。乔岚把更多承诺挤进小字，并向所有人发同一种折扣。销量短暂回升，随后跌得更重，因为谁也说不清这块皂究竟解决什么问题。下一场集市以后，借款便到还期。退回的皂堆在柜台下，同一张包装上写着六种彼此冲突的抱怨。",
-      "乔岚连续十个清晨观察顾客如何使用，不再只按身份粗分。码头工里有人只洗轻布，旅店中也有少数要处理涂焦油的帆布。她按照污渍、水温、采购量与敏感程度整理情境，再检查群体是否能够触达、规模是否足够。笔记写的是会变化的需要，并非天生部落；商人要求把家庭顾客标成“软弱”，她拒绝了。",
-      "作坊只负担得起一副新模具和一种配方。附近船队采购稳定，工人又懂盐垢处理，乔岚决定先服务他们，也因此放弃城里家庭用品行的一笔高利润合同。新皂不再追求花香和极致温和，只承诺冷水除盐、一块用完整段航程。首批试用品因皂盒积水融化，她又把表面改成能排水的棱纹。",
-      "这个较窄的承诺首周卖得更少，却得到三支船队复购。更便宜的旅店皂、更温和的家用皂，仍然更适合另一些买家。乔岚没有宣称自己的产品对所有人最好，而是把它放在替代品旁，也承担转换生产线的费用。一支常洗油污的船队拒绝采购，他们的报告则进入下一轮调查。",
-      "还清当期借款那晚，乔岚展开旧包装，剪掉六句承诺中的五句，又把最后一句裁短，直到纸上只剩：“洗去海风留下的盐。”碎纸堆满掌心，新包装却只需要一行字。"
-    ],
+    "mode": "concept-fable",
     "conceptName": "Segmentation, targeting, and positioning",
     "conceptNameZh": "细分、目标选择与定位",
-    "explanationParagraphs": [
-      "Segmentation identifies groups that differ in needs, behaviour, or response; targeting chooses which groups to prioritise; positioning states a credible, distinctive value relative to alternatives. Together they connect market understanding to limited resource allocation. Segments are revisable models rather than natural tribes, and decisions should consider reachability, economics, privacy, stereotyping, exclusion, and ethical consequences."
+    "titleZh": "灰色背景布周二要去哪里",
+    "summaryZh": "肖像工作室周中只有一套便携灯和一个助理，却同时收到求职头像、创作棚拍和28人团队照三类询问。林乔必须决定有限的周中时间优先解决哪一种需要，并把承诺做成真能交付的服务。",
+    "storyParagraphsZh": [
+      "周一早上，林乔的肖像工作室连续收到三封询问：求职者想要便宜、当天可取的头像；内容创作者想用三小时换多套造型；一家28人的软件公司则问，能不能让员工少离开工位，在办公室为每人拍出风格一致的头像。三封邮件都希望本周得到答复。",
+      "她把近两个月的询问按顾客真正重视的东西重新看了一遍：有人优先速度和价格，有人要创作变化与控制，公司客户更常问一致性、少离岗和统一交付。林乔只有一套便携灯、一个助理，周中能处理的片量也有限，不能把同一资源同时承诺给三种需要。",
+      "她把周二预约栏留给12–40人的小型公司团队，周三安排初选处理。服务分两档：12–30人半天，31–40人整天，每人约6分钟；确认后的修图也得在三个工作日内有可用时间，才接受预约。求职头像留在其他短时段，创作棚拍主要安排周末。想订周二三小时的创作者只能改约周末。",
+      "她在企业页面写下“在客户办公室集中完成每人的头像拍摄”，把灰/白背景、统一布光和选片标准列进服务范围。拍完的次一工作日提供统一初选，客户确认后三个工作日内交付修图成片。她把页面上的交付日期与预约栏核对后，才确认公司的预订。",
+      "28人软件公司比较了员工继续使用旧照片、28个人分批去摄影棚、以及集中上门拍摄。最终选了上门方案。周二08:30开始搭灯和灰布，09:00开拍，每人约6分钟，28人共168分钟，11:48完成首轮；留出补拍和收设备时间后，12:30前离开会议室。",
+      "拍摄后的灰色背景布卷回长袋，标签写着“团队上门／12–40人”。周三，公司收到统一初选链接。林乔回到预约栏，创作者的周末档还在，下个周二的企业半天档则留着空白，等待下一份询问；门口的个人头像价目表也没有撤下。"
     ],
+    "overallZh": "细分、目标选择与定位把三件事连起来：识别需要或反应不同的群体，选择优先服务谁并承担资源取舍，再用可兑现的服务能力相对替代方案建立清晰价值位置。",
     "explanationParagraphsZh": [
-      "细分识别需求、行为或反应不同的群体；目标选择决定有限资源优先服务谁；定位则相对替代品说明可信且独特的价值。三者把市场理解连接到资源配置。细分是可修订模型，并非天然部落，还须检查可触达性、经济性、隐私、刻板印象、排斥与伦理后果。"
+      "三类询问按速度价格、创作自由、一致性和少离岗等需要区分。工作室把有限周中时段、便携灯和助理优先给12–40人公司团队，并让部分长时棚拍改到周末。",
+      "定位由真实容量和交付支持：28人按6分钟/人可在半天完成拍摄，次一工作日提供初选，客户确认后三个工作日内交付成片；一次成交不能证明市场成功。"
     ],
-    "mode": "case-fable",
+    "moduleZh": {
+      "intro": "从需要差异开始，经过明确资源取舍，再检查目标服务是否真的能按承诺交付并相对替代方案形成价值。",
+      "diagramTitle": "同一套灯为什么周二优先去公司会议室",
+      "diagramSteps": [
+        "按核心需要识别三类潜在顾客",
+        "核对灯、助理、拍摄与编辑容量",
+        "选择12–40人小型公司团队作为周中优先目标",
+        "把目标需要转成可执行的时段与交付设计",
+        "让顾客相对旧照片和分批去棚等替代方案理解价值"
+      ],
+      "diagramStepNotes": [
+        "求职者重速度价格，创作者重变化，公司重一致性与少离岗。",
+        "一套便携灯和一个助理共用；本次周二上门，周三处理初选，确认后的修图也须预留时间。",
+        "12–30人半天、31–40人整天；长时创作棚拍主要转到周末。",
+        "28人按约6分钟/人，09:00–11:48完成首轮；次一工作日提供初选，客户确认后三个工作日内交付成片。",
+        "软件公司比较旧照片、分批去棚和上门集中拍后选择上门。"
+      ],
+      "mapping": [
+        "三封询问 → 需要和利益不同的潜在细分。",
+        "周二/周三周中档 → 目标选择占用的稀缺资源。",
+        "灰色背景长袋与便携灯 → 支撑定位的真实服务能力。",
+        "初选链接与客户确认后三个工作日内交付 → 定位承诺的可兑现输出。"
+      ],
+      "boundary": "STP不是少接订单、改口号或一次成交成功。细分需要反映有意义的需求差异，目标选择伴随资源取舍，定位必须由实际容量与服务能力支撑，并在顾客可选替代方案中理解。小批反馈不能证明市场长期成功。",
+      "reflection": "如果三个群体都愿意买单，但争用同一套灯、助理和时间，你会怎样把“先服务谁”的取舍转成目标顾客能真实感知、且团队确实交付得出的价值？"
+    },
+    "referencesZh": [
+      {
+        "id": "albrecht-green-hoffman-2023-segmentation",
+        "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.1: Market Segmentation and Consumer Markets. OpenStax.",
+        "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+        "use": "支持按需要、行为或利益需求识别细分群体，说明相同人口身份也可能重视不同价值；本来源是现代教材。"
+      },
+      {
+        "id": "albrecht-green-hoffman-2023-positioning",
+        "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.6: Product Positioning. OpenStax.",
+        "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+        "use": "支持细分、目标选择与定位之间的联系，以及面向目标顾客、相对替代方案建立可信价值位置；不证明虚构案例效果或理论首创。"
+      }
+    ],
+    "title": "Where Should the Gray Backdrop Go on Tuesday?",
+    "summary": "A portrait studio has only one portable lighting kit and one assistant during the week, yet receives three different inquiries: a job-seeker headshot, a creative studio shoot, and individual staff headshots for a 28-person team. Lin Qiao must decide which need gets priority for limited weekday capacity and turn that choice into a service the studio can actually deliver.",
+    "storyParagraphs": [
+      "On Monday morning, Lin Qiao’s portrait studio receives three inquiries in quick succession. A job seeker wants an inexpensive headshot available the same day; a content creator wants a three-hour studio session with several looks; and a 28-person software company asks whether employees can stay close to their desks and still get consistent individual staff headshots taken at the office. All three want an answer that week.",
+      "Lin Qiao reviews the last two months of inquiries according to what customers actually value. Some prioritize speed and price, some want creative variety and control, while company clients more often ask for consistency, less time away from work, and unified delivery. She has only one portable lighting kit, one assistant, and a limited weekday editing workload, so she cannot promise the same scarce resources to all three needs at once.",
+      "She reserves the Tuesday booking slot for small company teams of 12–40 people and Wednesday for preparing proofs. There are two tiers: a half day for 12–30 people and a full day for 31–40, at about six minutes each. She accepts a booking only if editing time is also available within three business days after confirmation. Job-seeker headshots stay in other short slots, while creative shoots mainly move to weekends. The creator seeking three hours on Tuesday has to move to the weekend.",
+      "On the company page, she writes that each employee’s headshot will be taken at the client’s office, listing gray or white backdrops, consistent lighting and a common selection standard. Proofs arrive the next business day after the shoot; retouched final images arrive within three business days after client confirmation. She checks those delivery dates against her booking calendar before confirming the company’s reservation.",
+      "The 28-person software company compares three alternatives: continuing to use employees’ old photos, sending 28 people to a studio in separate trips, or arranging one concentrated on-site session. It chooses the on-site option. On Tuesday, Lin Qiao begins setting up lights and the gray backdrop at 08:30 and starts shooting at 09:00. At about six minutes per person, 28 people take 168 minutes, so the first pass finishes at 11:48. After leaving time for retakes and packing equipment, the team clears the meeting room before 12:30.",
+      "After the shoot, the gray backdrop is rolled into its long bag, labeled “On-site teams / 12–40 people.” On Wednesday, the company receives the proofing link. Back at her calendar, Lin Qiao keeps the creator’s weekend appointment; the next Tuesday half-day corporate slot remains blank, awaiting another inquiry. The individual-headshot price list still hangs at the studio entrance."
+    ],
+    "overall": "Segmentation, targeting, and positioning connect three decisions: identify groups with different needs or responses, choose whom to serve first while accepting real resource trade-offs, and use deliverable service capabilities to establish a clear value position relative to alternatives.",
+    "explanationParagraphs": [
+      "The three inquiry types differ in needs such as speed and price, creative freedom, consistency, and reduced time away from work. The studio prioritizes limited weekday time, the portable lights, and the assistant for 12–40-person company teams, moving some long creative sessions to weekends.",
+      "Positioning is supported by actual capacity and delivery: 28 people at six minutes each fit the half-day shoot, with proofs the next business day and retouched final images within three business days after client confirmation. One sale does not prove market success."
+    ],
+    "module": {
+      "intro": "Start with differences in customer needs, make an explicit resource trade-off, then check whether the target service can actually deliver its promise and create value relative to alternatives.",
+      "diagramTitle": "Why the Same Lighting Kit Goes to the Company Meeting Room on Tuesday",
+      "diagramSteps": [
+        "Identify three potential customer groups by their core needs",
+        "Check the studio’s lighting, assistant, shooting, and editing capacity",
+        "Choose 12–40-person small company teams as the weekday priority",
+        "Turn the target need into executable scheduling and delivery design",
+        "Help customers understand the value relative to old photos and separate studio trips"
+      ],
+      "diagramStepNotes": [
+        "Job seekers emphasize speed and price, creators emphasize variety, and companies emphasize consistency and less time away from work.",
+        "One portable lighting kit and one assistant are shared resources; this booking uses Tuesday for the shoot, Wednesday for proofs, and reserved editing time after confirmation.",
+        "12–30 people fit a half day and 31–40 a full day; long creative studio sessions are mainly shifted to weekends.",
+        "For 28 people at about six minutes each, the first pass runs 09:00–11:48; proofs arrive the next business day and retouched final images within three business days after client confirmation.",
+        "The software company compares old photos, separate studio trips, and concentrated on-site photography before choosing the on-site option."
+      ],
+      "mapping": [
+        "Three inquiries → potential segments with different needs and benefits sought.",
+        "Tuesday/Wednesday weekday slots → scarce resources consumed by the targeting decision.",
+        "Gray backdrop bag + portable lighting kit → real service capability supporting the position.",
+        "Proofing link and final delivery within three business days after client confirmation → deliverable outputs behind the positioning promise."
+      ],
+      "boundary": "STP is not merely taking fewer orders, changing a slogan, or succeeding with one sale. Segmentation must reflect meaningful differences in needs or responses, targeting requires resource trade-offs, and positioning must be supported by real capacity and service capability and understood relative to customer alternatives. Small-scale feedback does not prove long-term market success.",
+      "reflection": "If three groups are all willing to buy but compete for the same lighting kit, assistant, and time, how would you turn the trade-off in “whom to serve first” into value that target customers can actually perceive and the team can genuinely deliver?"
+    },
+    "references": [
+      {
+        "id": "albrecht-green-hoffman-2023-segmentation",
+        "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.1: Market Segmentation and Consumer Markets. OpenStax.",
+        "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+        "use": "Supports identifying market segments by differences in needs, behavior, or benefits sought and the idea that people with similar demographic identities may still value different things; this is a modern textbook source."
+      },
+      {
+        "id": "albrecht-green-hoffman-2023-positioning",
+        "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.6: Product Positioning. OpenStax.",
+        "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+        "use": "Supports the relationship among segmentation, targeting, and positioning and establishing a credible value position for target customers relative to alternatives; it does not prove the fictional case’s effectiveness or claim to originate the theory."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "finalVersion": 2,
+      "edits": [
+        "law-business-science-mixed-13-pdc-a-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-a-edit-pass2-evidence.json"
+      ],
+      "reviews": [
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round1.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round2.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round3.json"
+      ],
+      "sourceIdentitiesFrozen": true,
+      "framework": "One editor applying 13 compressed editorial perspectives; not 13 independent agents or calls",
+      "finalReviewComplete": true,
+      "review": "law-business-science-mixed-13-pdc-a-review.md"
     },
     "collection": "field-core-fables",
-    "storyBody": "Soap maker Qiao Lan borrowed enough money to double her workshop and needed the new bar to sell across the whole city. Its wrapper promised the whitest wash, finest scent, gentlest touch, longest life, lowest price, and richest foam. To approach all six claims, she added costly perfume, reduced the lye that removed heavy grime, and cut each bar smaller. Merchants admired the crowded wrapper and placed a large opening order.\n\nReturns arrived within a month. Dockworkers said salt and tar remained on their sleeves. Inns used the small bars too quickly. Families found the perfume too strong for children. Qiao added more claims in smaller print and offered one discount to all buyers. Sales briefly rose, then fell harder because no group could tell what problem the soap was meant to solve. The loan payment was due after the next market. Unsold bars came back with six different complaints written across the same wrapper.\n\nQiao spent ten mornings watching use rather than counting people by occupation alone. Some dockworkers washed only light cloth, while a few inns handled tarred sail linen. She grouped situations by soil, water temperature, purchase volume, and sensitivity, then checked whether each group was reachable and large enough. The notes described changing needs, not permanent kinds of people, and she refused a merchant's request to label family buyers as weak.\n\nHer workshop could afford one new mould and one formula. Nearby shipping crews bought steadily and the workers already understood salt stains, so Qiao chose them first. That meant surrendering a lucrative order from the city's family-goods chain. The new bar gave up floral scent and extreme mildness; it promised to remove salt in cold water and last one voyage. Its ridged shape drained in a shipboard box after testers complained that the first sample dissolved.\n\nThe narrower promise sold fewer bars in the opening week but earned repeat orders from three crews. A cheaper inn soap and a milder household bar remained better for other buyers. Qiao did not call her bar universally superior. She placed it beside those alternatives and accepted the cost of changing the production line. One crew rejected it because their work involved oil rather than salt, and its report changed the next survey.\n\nOn the night she made the loan payment, Qiao unfolded the old wrapper. She cut away five of its six promises, then trimmed the remaining words until the paper read: 'For the salt the sea leaves behind.' The offcuts filled her palm; the new wrapper needed only one line.",
-    "storyBodyZh": "肥皂匠乔岚借钱把作坊扩大一倍，新皂必须卖遍全城才能还债。包装纸一口气承诺：洗得最白、气味最香、触感最温和、最耐用、价格最低、泡沫最多。为了靠近六句话，她加入昂贵香油，减少去重污的碱，又把皂块切小。商人喜欢那张热闹包装，开市便下了一笔大单。\n\n一个月内，退货陆续回来。码头工说袖口盐渍与焦油洗不掉；旅店嫌小皂用得太快；家庭顾客又觉得香气对孩子太浓。乔岚把更多承诺挤进小字，并向所有人发同一种折扣。销量短暂回升，随后跌得更重，因为谁也说不清这块皂究竟解决什么问题。下一场集市以后，借款便到还期。退回的皂堆在柜台下，同一张包装上写着六种彼此冲突的抱怨。\n\n乔岚连续十个清晨观察顾客如何使用，不再只按身份粗分。码头工里有人只洗轻布，旅店中也有少数要处理涂焦油的帆布。她按照污渍、水温、采购量与敏感程度整理情境，再检查群体是否能够触达、规模是否足够。笔记写的是会变化的需要，并非天生部落；商人要求把家庭顾客标成“软弱”，她拒绝了。\n\n作坊只负担得起一副新模具和一种配方。附近船队采购稳定，工人又懂盐垢处理，乔岚决定先服务他们，也因此放弃城里家庭用品行的一笔高利润合同。新皂不再追求花香和极致温和，只承诺冷水除盐、一块用完整段航程。首批试用品因皂盒积水融化，她又把表面改成能排水的棱纹。\n\n这个较窄的承诺首周卖得更少，却得到三支船队复购。更便宜的旅店皂、更温和的家用皂，仍然更适合另一些买家。乔岚没有宣称自己的产品对所有人最好，而是把它放在替代品旁，也承担转换生产线的费用。一支常洗油污的船队拒绝采购，他们的报告则进入下一轮调查。\n\n还清当期借款那晚，乔岚展开旧包装，剪掉六句承诺中的五句，又把最后一句裁短，直到纸上只剩：“洗去海风留下的盐。”碎纸堆满掌心，新包装却只需要一行字。",
-    "explanation": "Segmentation identifies groups that differ in needs, behaviour, or response; targeting chooses which groups to prioritise; positioning states a credible, distinctive value relative to alternatives. Together they connect market understanding to limited resource allocation. Segments are revisable models rather than natural tribes, and decisions should consider reachability, economics, privacy, stereotyping, exclusion, and ethical consequences.",
-    "explanationZh": "细分识别需求、行为或反应不同的群体；目标选择决定有限资源优先服务谁；定位则相对替代品说明可信且独特的价值。三者把市场理解连接到资源配置。细分是可修订模型，并非天然部落，还须检查可触达性、经济性、隐私、刻板印象、排斥与伦理后果。"
+    "storyBody": "On Monday morning, Lin Qiao’s portrait studio receives three inquiries in quick succession. A job seeker wants an inexpensive headshot available the same day; a content creator wants a three-hour studio session with several looks; and a 28-person software company asks whether employees can stay close to their desks and still get consistent individual staff headshots taken at the office. All three want an answer that week.\n\nLin Qiao reviews the last two months of inquiries according to what customers actually value. Some prioritize speed and price, some want creative variety and control, while company clients more often ask for consistency, less time away from work, and unified delivery. She has only one portable lighting kit, one assistant, and a limited weekday editing workload, so she cannot promise the same scarce resources to all three needs at once.\n\nShe reserves the Tuesday booking slot for small company teams of 12–40 people and Wednesday for preparing proofs. There are two tiers: a half day for 12–30 people and a full day for 31–40, at about six minutes each. She accepts a booking only if editing time is also available within three business days after confirmation. Job-seeker headshots stay in other short slots, while creative shoots mainly move to weekends. The creator seeking three hours on Tuesday has to move to the weekend.\n\nOn the company page, she writes that each employee’s headshot will be taken at the client’s office, listing gray or white backdrops, consistent lighting and a common selection standard. Proofs arrive the next business day after the shoot; retouched final images arrive within three business days after client confirmation. She checks those delivery dates against her booking calendar before confirming the company’s reservation.\n\nThe 28-person software company compares three alternatives: continuing to use employees’ old photos, sending 28 people to a studio in separate trips, or arranging one concentrated on-site session. It chooses the on-site option. On Tuesday, Lin Qiao begins setting up lights and the gray backdrop at 08:30 and starts shooting at 09:00. At about six minutes per person, 28 people take 168 minutes, so the first pass finishes at 11:48. After leaving time for retakes and packing equipment, the team clears the meeting room before 12:30.\n\nAfter the shoot, the gray backdrop is rolled into its long bag, labeled “On-site teams / 12–40 people.” On Wednesday, the company receives the proofing link. Back at her calendar, Lin Qiao keeps the creator’s weekend appointment; the next Tuesday half-day corporate slot remains blank, awaiting another inquiry. The individual-headshot price list still hangs at the studio entrance.",
+    "storyBodyZh": "周一早上，林乔的肖像工作室连续收到三封询问：求职者想要便宜、当天可取的头像；内容创作者想用三小时换多套造型；一家28人的软件公司则问，能不能让员工少离开工位，在办公室为每人拍出风格一致的头像。三封邮件都希望本周得到答复。\n\n她把近两个月的询问按顾客真正重视的东西重新看了一遍：有人优先速度和价格，有人要创作变化与控制，公司客户更常问一致性、少离岗和统一交付。林乔只有一套便携灯、一个助理，周中能处理的片量也有限，不能把同一资源同时承诺给三种需要。\n\n她把周二预约栏留给12–40人的小型公司团队，周三安排初选处理。服务分两档：12–30人半天，31–40人整天，每人约6分钟；确认后的修图也得在三个工作日内有可用时间，才接受预约。求职头像留在其他短时段，创作棚拍主要安排周末。想订周二三小时的创作者只能改约周末。\n\n她在企业页面写下“在客户办公室集中完成每人的头像拍摄”，把灰/白背景、统一布光和选片标准列进服务范围。拍完的次一工作日提供统一初选，客户确认后三个工作日内交付修图成片。她把页面上的交付日期与预约栏核对后，才确认公司的预订。\n\n28人软件公司比较了员工继续使用旧照片、28个人分批去摄影棚、以及集中上门拍摄。最终选了上门方案。周二08:30开始搭灯和灰布，09:00开拍，每人约6分钟，28人共168分钟，11:48完成首轮；留出补拍和收设备时间后，12:30前离开会议室。\n\n拍摄后的灰色背景布卷回长袋，标签写着“团队上门／12–40人”。周三，公司收到统一初选链接。林乔回到预约栏，创作者的周末档还在，下个周二的企业半天档则留着空白，等待下一份询问；门口的个人头像价目表也没有撤下。",
+    "explanation": "The three inquiry types differ in needs such as speed and price, creative freedom, consistency, and reduced time away from work. The studio prioritizes limited weekday time, the portable lights, and the assistant for 12–40-person company teams, moving some long creative sessions to weekends.\n\nPositioning is supported by actual capacity and delivery: 28 people at six minutes each fit the half-day shoot, with proofs the next business day and retouched final images within three business days after client confirmation. One sale does not prove market success.",
+    "explanationZh": "三类询问按速度价格、创作自由、一致性和少离岗等需要区分。工作室把有限周中时段、便携灯和助理优先给12–40人公司团队，并让部分长时棚拍改到周末。\n\n定位由真实容量和交付支持：28人按6分钟/人可在半天完成拍摄，次一工作日提供初选，客户确认后三个工作日内交付成片；一次成交不能证明市场成功。"
   },
   {
     "id": "0414-signaling",
@@ -12457,47 +12651,148 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0421",
     "fieldTitle": "Law",
     "fieldTitleZh": "法律",
-    "title": "The Sentence Beneath the First Bridge",
-    "titleZh": "第一座桥下的那句话",
-    "summary": "A young judge relies on a five-word case index to clear his docket until a fireboat waits beneath a raised bridge.",
-    "summaryZh": "年轻法官靠五字判例索引清理积案，直到一艘救火船被挡在吊桥下面。",
-    "storyParagraphs": [
-      "Judge Yanning wanted the harbour docket cleared before the trade fair. A promotion depended on reducing the stack of undecided files, and his clerk had prepared index cards that reduced old judgments to a line each. One card read: 'The bridge opener pays.' It came from a case in which a private owner had raised a bridge without warning to collect a night-boat fee, sending a cart into the canal. The five words were easy to remember. Yanning kept the full page folded behind the card but rarely opened it.",
-      "A new claim arrived during fair week. Keeper Su had raised the same bridge after the fire bell sounded so a pump boat could reach a burning warehouse. A spice cart drove around the barrier and broke an axle against the rising gate. Its owner demanded compensation and placed the five-word card's copied sentence before Yanning. The hearing room was packed, twelve more files waited outside, and the material action looked identical: Su had opened the bridge; a cart had been damaged. Yanning announced that the old decision would govern and asked his clerk to calculate the loss.",
-      "Before the written order was sealed, another fire bell rang. The next bridge keeper, having heard the hearing, refused to lift his span until the road was completely empty and a magistrate signed an indemnity. The pump boat waited six minutes in the channel. Fire reached a roof beam that might otherwise have been soaked. No one could prove exactly which boards those minutes had cost, but the harbour captain brought Yanning a clock record and asked whether every rescue keeper must now choose between a fire and a debt.",
-      "Yanning cancelled the promotion supper and reopened the first file. The unfolded judgment was longer than the index card. Its decision depended on private gain, knowledge that travellers were crossing, and the absence of any warning. In Su's case the fire alarm, raised barrier and public rescue changed the facts that mattered. The earlier court had not declared that moving a bridge mechanically created liability in every setting. By midnight, sealing a revised order meant admitting that his quick announcement had treated a useful shorthand as the judgment itself.",
-      "The next morning Yanning explained the difference in open court. Su did not pay for the spice cart merely because he had raised the bridge. The bridge office still had to replace its low barrier, which witnesses showed was hard to see behind loaded wagons, and the cart owner's decision to drive around it remained relevant. The old case stayed in the books; Yanning did not erase it. He wrote why its necessary reasoning applied to one pattern of facts and not to this one. The delayed decision left six trade disputes unheard that week, and the promotion went to another judge.",
-      "When the clerk rebuilt the index, he kept the five words on the front. Beneath them he added three small lines: private fee, travellers present, no warning. The full judgment was no longer folded behind the card. A red thread passed through both pages so that pulling out the short sentence brought the longer one with it."
-    ],
-    "storyParagraphsZh": [
-      "燕宁法官想在商贸节前清完港口积案。他能否升职，取决于桌上未决卷宗能减少多少，书记员便把旧判决各缩成一张索引卡。其中一张只写五个字：“开桥者赔偿。”原案中，私人桥主为了收夜船费，在没有警告的情况下升桥，使一辆正在通过的马车落进水道。五个字很好记，完整判词折在卡片后面，燕宁很少展开。",
-      "商贸节那周来了一宗新案。守桥人苏达听见火警钟，为让水泵船赶去失火仓库而升桥。一辆香料车绕过拦杆，车轴撞上正在升起的桥门。车主要求赔偿，把抄来的五字判语放到燕宁面前。听证室挤满商人，门外还有十二份卷宗，而眼前动作确实相同：苏达开了桥，货车受了损。燕宁当庭说旧判决应当控制本案，让书记员计算损失。",
-      "书面命令尚未盖印，港口又响起火警。下一座桥的守桥人听说了庭审，不肯升桥，除非道路完全清空并由官员签字保证他不用赔。水泵船在水道里等了六分钟，火焰爬上一根原本可能及时浇湿的屋梁。没人能准确证明六分钟烧掉了哪几块木板，港务队长却把钟表记录带进法庭，问今后的救援者是否都要在火灾和债务之间选择。",
-      "燕宁取消升职晚宴，重新调出第一案。展开的判词远比索引卡长。旧案的裁断依赖几个关键事实：桥主为了私利，明知路上有人，仍不作警告。苏达案里，火警、拦杆和公共救援改变了重要条件。早先法院从未说，只要移动吊桥便必然对任何损失负责。到了午夜，若改写尚未盖印的命令，燕宁就得承认自己把便于查找的缩句当成了判决本身。",
-      "次日，燕宁在公开法庭说明两案为何不同。苏达不因升桥这个动作本身赔偿香料车；证人同时证明，装满货物的车很难看见低矮拦杆，桥务处仍须把它加高，车主绕行拦杆的选择也要保留在事实中。旧案没有被删除，燕宁逐项写清它解决过哪种事实组合，以及为何没有解决眼前情形。判决推迟使六宗贸易纠纷未能在当周开庭，升职也给了另一名法官。",
-      "书记员重做索引时，正面仍保留那五个字，下面却添了三行小字：私收费、有人通行、无警告。完整判词不再折进卡片背面，一根红线穿过两页。以后谁抽出短句，长页也会一起被带出来。"
-    ],
+    "mode": "concept-fable",
     "conceptName": "Precedent",
     "conceptNameZh": "判例原则",
-    "explanationParagraphs": [
-      "Precedent guides later cases through earlier judicial decisions. Its weight depends on jurisdiction, court hierarchy, materially similar facts and the holding necessary to decide the earlier dispute; a memorable phrase is not automatically the binding rule. Courts may distinguish a case or, when authorised, overrule it with reasons. The details vary by legal system, so this is education rather than case-specific advice."
+    "titleZh": "维修单背面的二十五欧元",
+    "summaryZh": "洗衣机已经修好，赵岚却拒付一根18欧元的泵口连接软管。她拿来上级法院旧判决，维修店则指出：她签过的授权不仅有金额上限，也写明了什么情况下这种耗材可直接更换。",
+    "storyParagraphsZh": [
+      "赵岚的洗衣机已经恢复正常，原报价的排水泵费用也已付清，只剩18欧元还在争议。维修店结账时列出一根泵口连接软管，她说自己从没接到第二次报价。虚构的海岬区小额法庭开庭时，店主把拆下来的旧软管、维修单和照片一起放到桌上。",
+      "赵岚把打印的海岬地区上诉法院旧判决推到桌上。法官先确认，在这个虚构制度中，小额法庭受该法院同类法律问题的已公布判决约束，再读出旧案：顾客只同意原报价，维修店又装了额外零件；合同要求另行授权时，不能因为零件已装好就要求顾客付款。",
+      "赵岚指着旧案问：“我也没接到第二次报价，为什么不一样？”法官先让双方找旧案真正决定结果的事实。旧案里既没有事先授权，额外零件也不属于合同预先允许的耗材范围。赵岚的维修单背面却有她的签名，授权“完成已批准排水泵更换时，若与泵直接连接的软管或卡箍无法安全复装，可直接更换，费用另计，单项不超过25欧元”。",
+      "于是争议转到这根18欧元软管是否落入那一栏。店主提交拆机照片：旧软管在泵接口处已有裂口，拆下后重新套回会在接口处张开；维修记录也写着“无法密封复装”。赵岚不争议照片和签名，只追问：旧案也是原报价之外的收费，为什么签过这一栏就能不再询价。",
+      "法官把旧判决的授权要求、维修单背面和裂口照片放在一起。旧案缺的是合同要求的授权，本案则在泵直连软管无法复装时允许另行收费；照片和“无法密封复装”的记录对应的正是这一情形。法官据此判赵岚支付18欧元，并在判决中保留旧案的原则：不能仅凭零件已装好就要求付款。",
+      "走出法庭后，赵岚在手机上把18欧元转给维修店。店主把这笔争议从未结清账目里划掉；赵岚则把付款确认、维修单和那份上诉法院旧判决一起收进文件夹，背面的25欧元授权栏仍露在最上面。"
     ],
+    "overallZh": "判例原则要求先确认既有裁判在法院层级中的权威，再识别其裁判理由和具有法律后果的关键事实。下级法院不能借“区分”任意摆脱有约束力的上级规则，但可在真正改变旧案理由适用性的事实不同处说明为什么结果不同。",
     "explanationParagraphsZh": [
-      "判例原则以较早司法决定指导后来案件，其分量取决于管辖、法院层级、关键事实是否相近，以及原案为解决争点所必需的核心裁断；醒目的摘句不等于完整规则。法院可区分重大事实不同的案件，也可由有权法院说明理由后推翻旧例。各法域做法有别，本段仅作知识说明。"
+      "旧上诉法院规则是：合同要求的授权不能被“已经安装”替代。新案不仅有≤25欧元金额上限，还把授权限定到已批准排水泵维修中无法复装的直连软管/卡箍。",
+      "照片和维修记录使本次18欧元软管与该授权条件对应，因此结果不同但上级规则不变。法院层级与约束力均为虚构设定。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先确认上级裁判的约束地位，再把旧案裁判理由所需事实与新案逐项比较。",
+      "diagramTitle": "同样没有第二次报价，为什么18欧元仍可能应付",
+      "diagramSteps": [
+        "确认上诉法院旧案对小额法庭具有约束力",
+        "提取旧案的授权规则与关键事实",
+        "检查新维修单的授权范围而非只看金额",
+        "用照片和记录核对本次软管是否进入授权条件",
+        "沿用上级规则并据实质差异作出本案裁判"
+      ],
+      "diagramStepNotes": [
+        "虚构制度明确小额法庭受地区上诉法院同类已公布判决约束。",
+        "旧案缺少合同要求的授权，安装完成不能替代授权。",
+        "新条款限于已批准排水泵维修中无法复装的直连软管/卡箍，并授权费用另计，单项≤25欧元。",
+        "照片显示泵接口处裂口，维修记录写“无法密封复装”。",
+        "赵岚支付18欧元，但判决继续保留旧案的授权原则。"
+      ],
+      "mapping": [
+        "上诉法院旧判决 → 有约束力的既有规则来源。",
+        "维修单背面授权栏 → 新案是否可区分的关键书面事实。",
+        "裂口软管照片与维修记录 → 授权适用范围是否被满足的具体证据。",
+        "18欧元付款确认 → 区分后的实际裁判结果。"
+      ],
+      "boundary": "先例的约束力取决于具体法域和法院层级；并非所有旧裁判同等权威。区分必须基于与旧案裁判理由有法律后果的事实差异，不能用无关差异绕开规则。本故事不提供现实法律意见。本案以双方不争议授权条款有效为前提，不讨论条款提示、同意效力或其他消费者保护争议。",
+      "reflection": "如果新案与旧案表面都属于“未再次报价的追加维修”，你会怎样判断某个事实差异是真正改变旧规则的适用条件，还是只是在替不同结果找理由？"
+    },
+    "referencesZh": [
+      {
+        "id": "lii-stare-decisis-2021",
+        "citation": "Wex Definitions Team. (Last reviewed December 2021). Stare decisis. Legal Information Institute, Cornell Law School.",
+        "url": "https://www.law.cornell.edu/wex/stare_decisis",
+        "use": "支持区分具有约束力与仅供说服的先例，以及法院层级对先例权威的影响；不把美国例子写成全球规则。"
+      },
+      {
+        "id": "ou-distinguishing",
+        "citation": "The Open University. (n.d.). Legal skills and debates in Scotland, Week 3, section 2.3.2: Distinguishing. OpenLearn.",
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=68344&section=2.3.2",
+        "use": "支持依据有法律后果的相关事实区分新旧案件，以及裁判所需原则与非必要讨论的区别；不把区分等同推翻先例。"
+      }
+    ],
+    "title": "The Twenty-Five-Euro Clause on the Back of the Repair Form",
+    "summary": "The washing machine has been repaired, but Zhao Lan refuses to pay €18 for a pump-connection hose. She brings an earlier appellate-court judgment, while the repair shop points out that her signed authorization sets not only a price limit but also the conditions under which this kind of consumable may be replaced without a second quote.",
+    "storyParagraphs": [
+      "Zhao Lan’s washing machine is working normally again, and she has already paid the quoted cost for replacing the drain pump. Only €18 remains in dispute. The repair shop added a pump-connection hose to the final bill, and Zhao Lan says she never received a second quote. When the fictional Cape District small-claims court opens the hearing, the shop owner places the removed hose, the repair form, and photographs on the table.",
+      "Zhao Lan pushes her printed judgment from the Cape Regional Court of Appeal across the table. The judge first confirms that, in this fictional system, its published decisions on the same legal issue bind the small-claims court, then reads the earlier case: a customer had accepted only the original quote, yet the shop installed an additional part. Where the contract required separate authorization, completed installation alone could not justify charging the customer.",
+      "Pointing to the earlier case, Zhao Lan asks, “I didn’t get a second quote either. Why should this be different?” The judge first asks both sides to identify the facts that actually drove the earlier result. In that case there had been no advance authorization, and the extra part was outside the category of consumables the contract had already permitted. On the back of Zhao Lan’s form, however, her signature appears under a clause authorizing this: “When completing an approved drain-pump replacement, if a hose or clamp directly connected to the pump cannot be safely refitted, it may be replaced and charged separately without further approval, up to €25 per item.”",
+      "The dispute therefore turns to whether this €18 hose falls within that clause. The shop owner submits a disassembly photograph showing a crack at the old hose’s pump connection; after removal, refitting it would cause the opening at the connection to spread. The repair record also states, “cannot be refitted to form a seal.” Zhao Lan does not dispute the photograph or her signature. She asks why signing this clause can remove the need for another quote when the earlier case also concerned a charge beyond the original price.",
+      "The judge places the earlier judgment’s authorization requirement, the back of the repair form, and the photograph of the crack side by side. The earlier case lacked the required authorization. This form permits a separate charge when a directly connected pump hose cannot be refitted; the photograph and the record of failure to form a seal concern that very condition. The judge orders Zhao Lan to pay €18, retaining the earlier principle in the judgment: completed installation alone cannot justify demanding payment.",
+      "After leaving court, Zhao Lan transfers €18 to the repair shop on her phone. The owner removes the dispute from the list of unpaid accounts. Zhao Lan puts the payment confirmation, repair form, and appellate judgment together in her folder, with the €25 authorization clause on the back still visible at the top."
+    ],
+    "overall": "Precedent requires first identifying the authority of an earlier decision within the court hierarchy, then identifying its reasoning and the legally consequential facts. A lower court cannot use “distinguishing” to escape a binding higher-court rule arbitrarily, but it may explain a different result when facts that genuinely affect the earlier rule’s application are different.",
+    "explanationParagraphs": [
+      "The earlier appellate rule is that contractually required authorization cannot be replaced by the fact that a part has already been installed. The new case has not only a ≤€25 cap but also authorization limited to direct pump hoses or clamps that cannot be refitted during an approved drain-pump repair.",
+      "The photograph and repair record connect this €18 hose to that authorization condition, so the result differs while the higher-court rule remains unchanged. The court hierarchy and binding effect are fictional features of the story."
+    ],
+    "module": {
+      "intro": "First confirm the binding status of the higher-court decision, then compare the facts required by its reasoning with the facts of the new case.",
+      "diagramTitle": "No Second Quote in Either Case—Why Might the €18 Still Be Payable?",
+      "diagramSteps": [
+        "Confirm that the appellate precedent binds the small-claims court",
+        "Extract the earlier case’s authorization rule and key facts",
+        "Examine the scope of the new repair authorization rather than only the price cap",
+        "Use the photograph and record to check whether this hose falls within the authorization condition",
+        "Apply the higher-court rule while deciding the new case on the material factual difference"
+      ],
+      "diagramStepNotes": [
+        "The fictional system states that the small-claims court is bound by published decisions of the regional appellate court on the same legal issue.",
+        "The earlier case lacked the authorization required by the contract; completed installation could not replace authorization.",
+        "The clause authorizes separate charges, up to €25 per item, for direct pump hoses or clamps that cannot be refitted during the approved drain-pump replacement.",
+        "The photograph shows a crack at the pump connection, and the repair record states “cannot be refitted to form a seal.”",
+        "Zhao Lan pays €18, while the judgment preserves the earlier authorization principle."
+      ],
+      "mapping": [
+        "Earlier appellate judgment → the source of a binding existing rule.",
+        "Authorization clause on the back of the repair form → the key written fact for deciding whether the cases can be distinguished.",
+        "Photograph of the cracked hose + repair record → concrete evidence about whether the authorization condition was met.",
+        "€18 payment confirmation → the practical result of distinguishing the case."
+      ],
+      "boundary": "The binding force of precedent depends on the jurisdiction and court hierarchy; not every earlier decision has the same authority. Distinguishing must rest on factual differences that are legally consequential to the earlier reasoning, not on irrelevant differences used to avoid the rule. This story is not real-world legal advice. Both parties accept that this authorization clause is valid; the story does not address disclosure, validity of consent, or other consumer-protection disputes.",
+      "reflection": "If both the new case and the earlier case can be described as “extra repair work without a second quote,” how would you decide whether a factual difference genuinely changes the conditions under which the earlier rule applies, rather than merely supplying a reason for a preferred result?"
+    },
+    "references": [
+      {
+        "id": "lii-stare-decisis-2021",
+        "citation": "Wex Definitions Team. (Last reviewed December 2021). Stare decisis. Legal Information Institute, Cornell Law School.",
+        "url": "https://www.law.cornell.edu/wex/stare_decisis",
+        "use": "Supports the distinction between binding and merely persuasive precedent and the effect of court hierarchy on precedent authority; U.S. examples are not treated as global rules."
+      },
+      {
+        "id": "ou-distinguishing",
+        "citation": "The Open University. (n.d.). Legal skills and debates in Scotland, Week 3, section 2.3.2: Distinguishing. OpenLearn.",
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=68344&section=2.3.2",
+        "use": "Supports distinguishing new and earlier cases on legally consequential facts, and the distinction between principles necessary to the decision and nonessential discussion; distinguishing is not treated as overruling precedent."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "finalVersion": 2,
+      "edits": [
+        "law-business-science-mixed-13-pdc-a-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-a-edit-pass2-evidence.json"
+      ],
+      "reviews": [
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round1.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round2.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round3.json"
+      ],
+      "sourceIdentitiesFrozen": true,
+      "framework": "One editor applying 13 compressed editorial perspectives; not 13 independent agents or calls",
+      "finalReviewComplete": true,
+      "review": "law-business-science-mixed-13-pdc-a-review.md"
     },
     "collection": "field-core-fables",
-    "storyBody": "Judge Yanning wanted the harbour docket cleared before the trade fair. A promotion depended on reducing the stack of undecided files, and his clerk had prepared index cards that reduced old judgments to a line each. One card read: 'The bridge opener pays.' It came from a case in which a private owner had raised a bridge without warning to collect a night-boat fee, sending a cart into the canal. The five words were easy to remember. Yanning kept the full page folded behind the card but rarely opened it.\n\nA new claim arrived during fair week. Keeper Su had raised the same bridge after the fire bell sounded so a pump boat could reach a burning warehouse. A spice cart drove around the barrier and broke an axle against the rising gate. Its owner demanded compensation and placed the five-word card's copied sentence before Yanning. The hearing room was packed, twelve more files waited outside, and the material action looked identical: Su had opened the bridge; a cart had been damaged. Yanning announced that the old decision would govern and asked his clerk to calculate the loss.\n\nBefore the written order was sealed, another fire bell rang. The next bridge keeper, having heard the hearing, refused to lift his span until the road was completely empty and a magistrate signed an indemnity. The pump boat waited six minutes in the channel. Fire reached a roof beam that might otherwise have been soaked. No one could prove exactly which boards those minutes had cost, but the harbour captain brought Yanning a clock record and asked whether every rescue keeper must now choose between a fire and a debt.\n\nYanning cancelled the promotion supper and reopened the first file. The unfolded judgment was longer than the index card. Its decision depended on private gain, knowledge that travellers were crossing, and the absence of any warning. In Su's case the fire alarm, raised barrier and public rescue changed the facts that mattered. The earlier court had not declared that moving a bridge mechanically created liability in every setting. By midnight, sealing a revised order meant admitting that his quick announcement had treated a useful shorthand as the judgment itself.\n\nThe next morning Yanning explained the difference in open court. Su did not pay for the spice cart merely because he had raised the bridge. The bridge office still had to replace its low barrier, which witnesses showed was hard to see behind loaded wagons, and the cart owner's decision to drive around it remained relevant. The old case stayed in the books; Yanning did not erase it. He wrote why its necessary reasoning applied to one pattern of facts and not to this one. The delayed decision left six trade disputes unheard that week, and the promotion went to another judge.\n\nWhen the clerk rebuilt the index, he kept the five words on the front. Beneath them he added three small lines: private fee, travellers present, no warning. The full judgment was no longer folded behind the card. A red thread passed through both pages so that pulling out the short sentence brought the longer one with it.",
-    "storyBodyZh": "燕宁法官想在商贸节前清完港口积案。他能否升职，取决于桌上未决卷宗能减少多少，书记员便把旧判决各缩成一张索引卡。其中一张只写五个字：“开桥者赔偿。”原案中，私人桥主为了收夜船费，在没有警告的情况下升桥，使一辆正在通过的马车落进水道。五个字很好记，完整判词折在卡片后面，燕宁很少展开。\n\n商贸节那周来了一宗新案。守桥人苏达听见火警钟，为让水泵船赶去失火仓库而升桥。一辆香料车绕过拦杆，车轴撞上正在升起的桥门。车主要求赔偿，把抄来的五字判语放到燕宁面前。听证室挤满商人，门外还有十二份卷宗，而眼前动作确实相同：苏达开了桥，货车受了损。燕宁当庭说旧判决应当控制本案，让书记员计算损失。\n\n书面命令尚未盖印，港口又响起火警。下一座桥的守桥人听说了庭审，不肯升桥，除非道路完全清空并由官员签字保证他不用赔。水泵船在水道里等了六分钟，火焰爬上一根原本可能及时浇湿的屋梁。没人能准确证明六分钟烧掉了哪几块木板，港务队长却把钟表记录带进法庭，问今后的救援者是否都要在火灾和债务之间选择。\n\n燕宁取消升职晚宴，重新调出第一案。展开的判词远比索引卡长。旧案的裁断依赖几个关键事实：桥主为了私利，明知路上有人，仍不作警告。苏达案里，火警、拦杆和公共救援改变了重要条件。早先法院从未说，只要移动吊桥便必然对任何损失负责。到了午夜，若改写尚未盖印的命令，燕宁就得承认自己把便于查找的缩句当成了判决本身。\n\n次日，燕宁在公开法庭说明两案为何不同。苏达不因升桥这个动作本身赔偿香料车；证人同时证明，装满货物的车很难看见低矮拦杆，桥务处仍须把它加高，车主绕行拦杆的选择也要保留在事实中。旧案没有被删除，燕宁逐项写清它解决过哪种事实组合，以及为何没有解决眼前情形。判决推迟使六宗贸易纠纷未能在当周开庭，升职也给了另一名法官。\n\n书记员重做索引时，正面仍保留那五个字，下面却添了三行小字：私收费、有人通行、无警告。完整判词不再折进卡片背面，一根红线穿过两页。以后谁抽出短句，长页也会一起被带出来。",
-    "explanation": "Precedent guides later cases through earlier judicial decisions. Its weight depends on jurisdiction, court hierarchy, materially similar facts and the holding necessary to decide the earlier dispute; a memorable phrase is not automatically the binding rule. Courts may distinguish a case or, when authorised, overrule it with reasons. The details vary by legal system, so this is education rather than case-specific advice.",
-    "explanationZh": "判例原则以较早司法决定指导后来案件，其分量取决于管辖、法院层级、关键事实是否相近，以及原案为解决争点所必需的核心裁断；醒目的摘句不等于完整规则。法院可区分重大事实不同的案件，也可由有权法院说明理由后推翻旧例。各法域做法有别，本段仅作知识说明。"
+    "storyBody": "Zhao Lan’s washing machine is working normally again, and she has already paid the quoted cost for replacing the drain pump. Only €18 remains in dispute. The repair shop added a pump-connection hose to the final bill, and Zhao Lan says she never received a second quote. When the fictional Cape District small-claims court opens the hearing, the shop owner places the removed hose, the repair form, and photographs on the table.\n\nZhao Lan pushes her printed judgment from the Cape Regional Court of Appeal across the table. The judge first confirms that, in this fictional system, its published decisions on the same legal issue bind the small-claims court, then reads the earlier case: a customer had accepted only the original quote, yet the shop installed an additional part. Where the contract required separate authorization, completed installation alone could not justify charging the customer.\n\nPointing to the earlier case, Zhao Lan asks, “I didn’t get a second quote either. Why should this be different?” The judge first asks both sides to identify the facts that actually drove the earlier result. In that case there had been no advance authorization, and the extra part was outside the category of consumables the contract had already permitted. On the back of Zhao Lan’s form, however, her signature appears under a clause authorizing this: “When completing an approved drain-pump replacement, if a hose or clamp directly connected to the pump cannot be safely refitted, it may be replaced and charged separately without further approval, up to €25 per item.”\n\nThe dispute therefore turns to whether this €18 hose falls within that clause. The shop owner submits a disassembly photograph showing a crack at the old hose’s pump connection; after removal, refitting it would cause the opening at the connection to spread. The repair record also states, “cannot be refitted to form a seal.” Zhao Lan does not dispute the photograph or her signature. She asks why signing this clause can remove the need for another quote when the earlier case also concerned a charge beyond the original price.\n\nThe judge places the earlier judgment’s authorization requirement, the back of the repair form, and the photograph of the crack side by side. The earlier case lacked the required authorization. This form permits a separate charge when a directly connected pump hose cannot be refitted; the photograph and the record of failure to form a seal concern that very condition. The judge orders Zhao Lan to pay €18, retaining the earlier principle in the judgment: completed installation alone cannot justify demanding payment.\n\nAfter leaving court, Zhao Lan transfers €18 to the repair shop on her phone. The owner removes the dispute from the list of unpaid accounts. Zhao Lan puts the payment confirmation, repair form, and appellate judgment together in her folder, with the €25 authorization clause on the back still visible at the top.",
+    "storyBodyZh": "赵岚的洗衣机已经恢复正常，原报价的排水泵费用也已付清，只剩18欧元还在争议。维修店结账时列出一根泵口连接软管，她说自己从没接到第二次报价。虚构的海岬区小额法庭开庭时，店主把拆下来的旧软管、维修单和照片一起放到桌上。\n\n赵岚把打印的海岬地区上诉法院旧判决推到桌上。法官先确认，在这个虚构制度中，小额法庭受该法院同类法律问题的已公布判决约束，再读出旧案：顾客只同意原报价，维修店又装了额外零件；合同要求另行授权时，不能因为零件已装好就要求顾客付款。\n\n赵岚指着旧案问：“我也没接到第二次报价，为什么不一样？”法官先让双方找旧案真正决定结果的事实。旧案里既没有事先授权，额外零件也不属于合同预先允许的耗材范围。赵岚的维修单背面却有她的签名，授权“完成已批准排水泵更换时，若与泵直接连接的软管或卡箍无法安全复装，可直接更换，费用另计，单项不超过25欧元”。\n\n于是争议转到这根18欧元软管是否落入那一栏。店主提交拆机照片：旧软管在泵接口处已有裂口，拆下后重新套回会在接口处张开；维修记录也写着“无法密封复装”。赵岚不争议照片和签名，只追问：旧案也是原报价之外的收费，为什么签过这一栏就能不再询价。\n\n法官把旧判决的授权要求、维修单背面和裂口照片放在一起。旧案缺的是合同要求的授权，本案则在泵直连软管无法复装时允许另行收费；照片和“无法密封复装”的记录对应的正是这一情形。法官据此判赵岚支付18欧元，并在判决中保留旧案的原则：不能仅凭零件已装好就要求付款。\n\n走出法庭后，赵岚在手机上把18欧元转给维修店。店主把这笔争议从未结清账目里划掉；赵岚则把付款确认、维修单和那份上诉法院旧判决一起收进文件夹，背面的25欧元授权栏仍露在最上面。",
+    "explanation": "The earlier appellate rule is that contractually required authorization cannot be replaced by the fact that a part has already been installed. The new case has not only a ≤€25 cap but also authorization limited to direct pump hoses or clamps that cannot be refitted during an approved drain-pump repair.\n\nThe photograph and repair record connect this €18 hose to that authorization condition, so the result differs while the higher-court rule remains unchanged. The court hierarchy and binding effect are fictional features of the story.",
+    "explanationZh": "旧上诉法院规则是：合同要求的授权不能被“已经安装”替代。新案不仅有≤25欧元金额上限，还把授权限定到已批准排水泵维修中无法复装的直连软管/卡箍。\n\n照片和维修记录使本次18欧元软管与该授权条件对应，因此结果不同但上级规则不变。法院层级与约束力均为虚构设定。"
   },
   {
     "id": "0421-burden-of-proof",
@@ -12506,49 +12801,148 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0421",
     "fieldTitle": "Law",
     "fieldTitleZh": "法律",
-    "title": "The Missing Sack of Grain",
-    "titleZh": "少掉的一袋粮",
-    "summary": "One sack disappears from the granary, and the manager orders the last worker to prove he did not take it.",
-    "summaryZh": "仓库少了一袋粮，管事要求最后离开的人证明自己没有拿走它。",
-    "storyParagraphs": [
-      "After the night shift, one sack of grain was missing from the public granary. The manager had promised to release sixty relief carts before noon; delay would leave three villages waiting and cost him his harvest bonus. Porter Zhou Qi had left last and wore a patched coat. The manager pointed to the empty place, then ordered Zhou to prove within three days that he had not stolen the sack or repay its value and lose his job.",
-      "Zhou could only say the sack was still there when he swept the aisle. No witness had stayed. The gate book, key register and count sheets were all locked in the manager's room, yet the manager treated every gap in Zhou's answer as another mark against him. Proving that he had never touched the sack had no clear boundary; the specific accusation, meanwhile, rested on poverty, a late departure and an empty patch of floor.",
-      "The reviewer first accepted the quick arrangement. Then a clerk noticed that the nightly count jumped from line eighty-nine to ninety-one. The rear-door key had also passed among three workers without separate signatures. The manager called both details untidy but irrelevant and warned that opening the records would stop the carts. If the reviewer waited, the granary would pay drivers and miss noon. If he did not, Zhou would carry a loss that the granary itself had not traced.",
-      "The reviewer sealed the loading yard and opened the record room. Drivers shouted outside while grain dust hung in the still air. The skipped line could be a copying error; the shared key left several possible users; a damp delivery slip showed that one late sack had been moved toward the relief bay. None proved where the missing grain had gone. Together they showed that the manager's first story was not the only one the records allowed.",
-      "The manager demanded that Zhou name the thief. The reviewer refused. Failure to establish the accusation did not prove every contrary story, but an unexplained loss could not be turned into evidence merely because someone had to bear it. Zhou returned to work, the inquiry remained open, and the carts left after dusk. The granary paid the waiting drivers. The reviewer lost the governor's promised commendation for fast decisions.",
-      "Two days later, workers found the sack behind a sealed partition in the third relief cart. A clerk had moved it during the rain, entered it on the missing line, then copied the next number over the wet ink. The discovery explained the loss. It did not make the earlier accusation reasonable after the fact; at the hearing, the manager still had to support the claim he wanted used to dismiss Zhou.",
-      "At the next count, the same empty space remained visible until replacement grain arrived. The manager added two signatures to the key and inventory sheets. On the old sheet, beside the skipped line, Zhou Qi's name had been pencilled in and rubbed out. The paper kept the grey hollow, but no one filled it again."
-    ],
-    "storyParagraphsZh": [
-      "夜班结束后，公仓少了一袋粮。管事答应中午前放出六十辆赈粮车；每迟一刻，三个村子就要多等，他也会失去秋收奖金。搬运工周启最后离开，身上又穿着补丁外套。管事指着地面的空位，命他三天内证明自己没有偷，否则照价赔偿并离职。",
-      "周启只能说，自己扫过通道时粮袋还在，却没有证人留下。守门簿、钥匙册和清点表全锁在管事屋里，管事却把他每个答不出的问题都记成一笔嫌疑。要证明自己从未碰过那袋粮，根本没有清楚边界；提出具体指控的人，手里只有贫穷、晚走和一块空地。",
-      "审理人起初接受了这个省事的安排，随后有书记发现夜间清单从八十九行直接跳到九十一行，后门钥匙也曾由三个人共用，没有分别签名。管事说这些只是潦草，催他别耽误发车。查记录，公仓就得赔车夫，还会错过正午；不查，周启就要承担公仓自己也没查清的损失。",
-      "审理人封住装货院，打开档案室。车夫在门外叫喊，静下来的仓里浮着细粮尘。缺行可能只是抄漏，共用钥匙留下几个可能使用者；一张被雨打湿的交接条又显示，夜里有一袋粮被挪向赈粮区。没有一项能单独说出去向，合在一起却足以说明，管事最先讲的并非记录容许的唯一经过。",
-      "管事要求周启说出谁才是贼。审理人没有照办：眼前指控未获支持，不等于所有相反说法都自动为真；粮袋仍失踪，也不能只因必须有人承担，就把未知当成处罚证据。周启回去工作，调查继续。粮车黄昏后才走，公仓赔了车夫，审理人也失去总督许给快审官员的表彰。",
-      "两天后，工人在第三辆赈粮车的封板后找到那只袋子。书记曾在雨中挪动它，把去向写在缺掉的一行，又用下一行数字盖过湿墨。后来发现解释了损失，却不能倒过来让先前的指控变得充分；在那次审理时，想开除周启的人仍须拿出能支持自己说法的材料。",
-      "补粮运到以前，公仓那块空位仍留着。管事给钥匙册和清点表都添了双人签名。旧表缺行旁曾用铅笔写过周启的名字，后来被擦掉，只剩一块灰白凹痕。此后再没人把空白填成他的名字。"
-    ],
+    "mode": "concept-fable",
     "conceptName": "Burden of proof",
     "conceptNameZh": "举证责任",
-    "explanationParagraphs": [
-      "Burden of proof allocates who must establish a claim and how persuasive the evidence must be. It includes the burden of producing evidence and, in many settings, the burden of persuasion. Standards differ across criminal, civil and administrative proceedings and across jurisdictions. A failed case does not prove every contrary proposition; this account is educational and not legal advice."
+    "titleZh": "归还小票上的21:10",
+    "summaryZh": "陈禾因投影仪后侧支脚裂纹面临220欧元索赔。店方根据最后使用和次晨发现推断损坏发生在她租期内，但需要证明这一说法比租期外形成更可能，而非要求陈禾找出真相。",
+    "storyParagraphsZh": [
+      "陈禾收到220欧元维修索赔时，先翻出周五晚21:10的归还小票。她租投影仪做社区放映，设备使用一直正常，归还后第二天店员才发现后侧支脚裂了一道。租赁店希望把维修费记入本周账目；陈禾则不愿为一个自己无法确认发生时间的裂纹付款。",
+      "听证那天，陈禾把小票放在通知旁。虚构的溪原镇简易民事程序已在通知中列明：争议是“裂纹是否在陈禾租期内形成”，租赁店须提出证据并说服裁判者达到“更可能如此”的标准。裁判者先确认双方都看过这一栏，没有把问题改成让陈禾证明裂纹在别的时段形成。",
+      "店主把出库照和次晨裂纹照并排放下。陈禾单独保管约三小时，裂纹又在归还后第一次完整检查时被发现，他认为这条顺序支持索赔。设备交付时功能正常，陈禾21:10归还时也未报告跌落；但能启动不代表后侧没有裂纹，未报告跌落也不证明发生过跌落。出库照只有前壳和镜头，后侧支脚没有入镜。",
+      "陈禾没有说这些证据“毫无用处”。她把店方自己的流转记录放到桌上：这台设备在她租用前两天也曾外租，之后只做了功能测试，没有后侧外观记录；21:10归还后，员工把硬壳箱放上推车，闭店前又移到储物架，次晨才第一次查看后侧支脚。三个时间段都缺少直接状态记录。",
+      "裁判者把出库照转向双方：前壳在画面里，后侧支脚不在。最后使用和次晨发现仍有分量，但功能正常不能补上那处外观，搬箱记录也不能证明磕碰。需要比较的是租期内与租期外形成哪边更可能，后者同时包括出租前和归还后。店方没有别的材料把形成时间更可靠地落到陈禾三小时内，裁判者因此认定未达事先固定的标准，没有要求陈禾找出真正的时间。",
+      "决定书驳回这次220欧元索赔。店主把估价单收回文件夹，投影仪继续留在店里处理；陈禾带走21:10小票。决定书没有写裂纹已证明发生在出租前或归还后，只写店方对“租期内形成”的主张未达到既定证明程度。"
     ],
+    "overallZh": "举证责任要求区分谁必须提出证据、谁承担说服裁判者的负担，以及适用何种证明标准。间接证据可以达到标准，但若承担负担的一方在整体证据比较后仍未把争议事实证明到既定程度，请求失败不等于相反事实被证明。",
     "explanationParagraphsZh": [
-      "举证责任决定由谁提出足以支持主张的证据，以及证据须达到何种说服程度，通常涉及提出证据与最终说服两层负担。刑事、民事、行政程序和不同法域采用的标准并不相同。一项主张未获证明，也不等于所有相反命题自动成立。此处仅说明一般原理，不构成法律建议。"
+      "店方从最后使用和次晨发现作出合理推断。功能测试未检验后侧外观，归还后搬运也不是已发生磕碰的证明；这些记录仍不能定位裂纹形成时间。",
+      "虚构标准要求整体上“更可能如此”，不是排除所有替代。陈禾无需证明另一个时段为真；索赔失败只表示店方未把租期内形成证明到该程度。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先固定争议事实、证明负担和标准，再判断租期内形成是否比租期外形成更可能。",
+      "diagramTitle": "220欧元索赔如何停在“裂纹何时形成”",
+      "diagramSteps": [
+        "把争议事实限定为裂纹是否在租期内形成",
+        "在听证前把举证与说服负担分配给租赁店",
+        "审视最后使用与次晨发现的间接证据",
+        "把出租前与21:10归还后的证据空档一起纳入比较",
+        "按“更可能如此”标准决定索赔而不要求陈禾证明相反"
+      ],
+      "diagramStepNotes": [
+        "听证通知事先固定争议事实和虚构民事标准。",
+        "陈禾无需排除所有可能或证明自己无责。",
+        "约三小时保管和次晨发现支持店方的推断；未报告跌落不是发生跌落的证据。",
+        "此前出租后无后侧外观记录；归还后搬运硬壳箱，但记录不证明发生过磕碰。",
+        "比较租期内与租期外形成，而非只选三个时段中最可能的一个；本案裁判者认定未达标，损伤时间仍未知。"
+      ],
+      "mapping": [
+        "21:10归还小票 → 租期结束和店方重新接管的时间点。",
+        "出库与流转记录 → 既提供间接证据，也暴露争议位置的记录空档。",
+        "硬壳箱 → 归还后仍发生店方搬运的实际对象。",
+        "220欧元估价单 → 店方请求及证明负担的现实结果。"
+      ],
+      "boundary": "举证责任和证明标准随法域、制度和案件类型而变化。存在一个替代解释并不会自动击败“更可能如此”标准，间接证据也可能足够；本案失败来自这组具体证据的整体权重，而非要求完美照片或排除一切可能。",
+      "reflection": "面对这张21:10小票，你怎样区分“租期内形成有一定依据”与“店方已达到更可能如此标准”，同时避免要求陈禾查出真正的时间？"
+    },
+    "referencesZh": [
+      {
+        "id": "lii-burden-of-proof-2024",
+        "citation": "Wex Definitions Team. (Last reviewed November 2024). Burden of proof. Legal Information Institute, Cornell Law School.",
+        "url": "https://www.law.cornell.edu/wex/burden_of_proof",
+        "use": "支持举证责任中提出证据与说服裁判者的区分，并提示证明标准随制度及案件类型变化；不提供具体案件法律判断。"
+      },
+      {
+        "id": "us-courts-glossary-proof",
+        "citation": "Administrative Office of the U.S. Courts. (n.d.). Glossary of Legal Terms: Burden of proof; Standard of proof.",
+        "url": "https://www.uscourts.gov/glossary",
+        "use": "支持分开理解证明争议事实的责任与所需证明程度；其民事、刑事示例限于美国语境且有例外。"
+      }
+    ],
+    "title": "21:10 on the Return Receipt",
+    "summary": "Chen He faces a €220 claim for a crack in the projector’s rear foot. The shop infers damage during her rental from last use and next-morning discovery, but must establish that account as more likely than formation outside the rental, rather than requiring her to discover the truth.",
+    "storyParagraphs": [
+      "When Chen He receives a €220 repair claim, she first finds her return receipt from 21:10 on Friday evening. She rented the projector for a community screening, and it worked normally during use. The next morning, shop staff discovered a crack in the rear foot. The rental shop wants to book the repair cost into that week’s accounts; Chen He does not want to pay for damage whose time of occurrence she cannot verify.",
+      "On the hearing day, Chen He lays the receipt beside the notice. The fictional Xiyuan Town simplified civil procedure has already stated the disputed fact there: did the crack form during her rental? The shop must produce evidence and persuade the decision-maker under the “more likely than not” standard. The decision-maker first confirms that both parties have read that section, without changing the question to whether Chen He can prove formation during another period.",
+      "The owner lays the checkout photograph beside the next-morning photograph of the crack. Chen He had sole custody for about three hours, and the damage was discovered during the first full inspection after return. He argues that this sequence supports his claim. The projector was working when handed over, and Chen He reported no drop at 21:10. Yet working normally does not establish that the rear foot was intact, and no reported drop is not evidence that a drop occurred. The checkout photograph shows only the front housing and lens; the rear foot is outside the frame.",
+      "Chen He does not argue that the evidence is “worthless.” She places the shop’s own movement log on the table. The projector had also been rented two days before her rental, followed only by a function test with no rear-side condition record. After the 21:10 return, staff put the hard case on a cart and moved it again to a storage shelf before closing. The rear foot was first examined the next morning. All three time periods therefore lack a direct condition record for the disputed location.",
+      "The decision-maker turns the checkout photograph toward both parties: the front housing is visible; the rear foot is not. Last use and next-morning discovery still carry weight, but normal operation cannot establish that exterior condition, and the handling log does not establish an impact. The comparison is between formation during the rental and formation outside it, including both before handover and after return. The shop has no further material placing formation more reliably within Chen He’s three hours. The decision-maker therefore finds the pre-set standard unmet, without requiring Chen He to identify the actual time.",
+      "The decision dismisses the €220 claim. The owner puts the estimate back into the file, and the projector remains at the shop for further handling. Chen He takes the 21:10 receipt with her. The decision does not say that the crack has been proved to have formed before the rental or after return; it states only that the shop’s claim that it formed during the rental did not meet the pre-set standard of proof."
+    ],
+    "overall": "Burden of proof requires separating who must produce evidence, who bears the burden of persuading the decision-maker, and what standard of proof applies. Circumstantial evidence can satisfy a standard, but if the party bearing the burden still fails, after considering the evidence as a whole, to prove the disputed fact to the required level, failure of the claim does not prove the opposite fact.",
+    "explanationParagraphs": [
+      "The shop draws a reasonable inference from last use and next-morning discovery. The function test did not check the rear exterior, and handling after return does not establish an impact; these records still do not locate when the crack formed.",
+      "The fictional standard asks whether the claim is more likely than not, not whether every alternative is eliminated. Chen He need not prove another period to be true; the claim fails only because the shop does not prove formation during the rental to that level."
+    ],
+    "module": {
+      "intro": "Fix the disputed fact, burden and standard, then assess whether formation during the rental is more likely than formation outside it.",
+      "diagramTitle": "How the €220 Claim Stops at the Question of When the Crack Formed",
+      "diagramSteps": [
+        "Limit the disputed fact to whether the crack formed during the rental",
+        "Assign the production and persuasion burdens to the rental shop before the hearing",
+        "Assess the circumstantial inference from last use and next-morning discovery",
+        "Compare the evidentiary gaps before the rental and after the 21:10 return",
+        "Apply the “more likely than not” standard without requiring Chen He to prove the opposite"
+      ],
+      "diagramStepNotes": [
+        "The hearing notice fixes the disputed fact and the fictional civil standard in advance.",
+        "Chen He does not have to eliminate every possibility or prove that she was not responsible.",
+        "About three hours of custody and next-morning discovery support the shop’s inference; no reported drop does not establish that a drop occurred.",
+        "There is no rear-side condition record after the earlier rental; the hard case is handled after return, but the log does not establish an impact.",
+        "Compare formation during the rental with formation outside it, not just choose the likeliest of three periods. Here the decision-maker finds the standard unmet; the damage time remains unknown."
+      ],
+      "mapping": [
+        "21:10 return receipt → the time the rental ended and the shop resumed custody.",
+        "Checkout photograph and movement log → evidence that both supports inferences and reveals gaps for the disputed location.",
+        "Hard case → the physical object that continued to be moved by the shop after return.",
+        "€220 estimate → the practical claim tied to the shop’s burden of proof."
+      ],
+      "boundary": "Burden of proof and standards of proof vary by jurisdiction, system, and type of case. The existence of one alternative explanation does not automatically defeat a “more likely than not” standard, and circumstantial evidence can be sufficient. This claim fails because of the overall weight of this specific evidence, not because perfect photographs or elimination of every possibility are required.",
+      "reflection": "Looking at the 21:10 receipt, how would you distinguish some support for formation during the rental from the shop having met the “more likely than not” standard, without requiring Chen He to discover the actual time?"
+    },
+    "references": [
+      {
+        "id": "lii-burden-of-proof-2024",
+        "citation": "Wex Definitions Team. (Last reviewed November 2024). Burden of proof. Legal Information Institute, Cornell Law School.",
+        "url": "https://www.law.cornell.edu/wex/burden_of_proof",
+        "use": "Supports the distinction between the burden to produce evidence and the burden to persuade the decision-maker, and notes that standards of proof vary by system and case type; it does not provide a legal judgment for this fictional case."
+      },
+      {
+        "id": "us-courts-glossary-proof",
+        "citation": "Administrative Office of the U.S. Courts. (n.d.). Glossary of Legal Terms: Burden of proof; Standard of proof.",
+        "url": "https://www.uscourts.gov/glossary",
+        "use": "Supports treating responsibility for proving a disputed fact separately from the required degree of proof; its civil and criminal examples are specific to the U.S. context and have exceptions."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "finalVersion": 2,
+      "edits": [
+        "law-business-science-mixed-13-pdc-a-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-a-edit-pass2-evidence.json"
+      ],
+      "reviews": [
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round1.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round2.json",
+        "review/module-batches/law-business-science-mixed-13-pdc-a-review-round3.json"
+      ],
+      "sourceIdentitiesFrozen": true,
+      "framework": "One editor applying 13 compressed editorial perspectives; not 13 independent agents or calls",
+      "finalReviewComplete": true,
+      "review": "law-business-science-mixed-13-pdc-a-review.md"
     },
     "collection": "field-core-fables",
-    "storyBody": "After the night shift, one sack of grain was missing from the public granary. The manager had promised to release sixty relief carts before noon; delay would leave three villages waiting and cost him his harvest bonus. Porter Zhou Qi had left last and wore a patched coat. The manager pointed to the empty place, then ordered Zhou to prove within three days that he had not stolen the sack or repay its value and lose his job.\n\nZhou could only say the sack was still there when he swept the aisle. No witness had stayed. The gate book, key register and count sheets were all locked in the manager's room, yet the manager treated every gap in Zhou's answer as another mark against him. Proving that he had never touched the sack had no clear boundary; the specific accusation, meanwhile, rested on poverty, a late departure and an empty patch of floor.\n\nThe reviewer first accepted the quick arrangement. Then a clerk noticed that the nightly count jumped from line eighty-nine to ninety-one. The rear-door key had also passed among three workers without separate signatures. The manager called both details untidy but irrelevant and warned that opening the records would stop the carts. If the reviewer waited, the granary would pay drivers and miss noon. If he did not, Zhou would carry a loss that the granary itself had not traced.\n\nThe reviewer sealed the loading yard and opened the record room. Drivers shouted outside while grain dust hung in the still air. The skipped line could be a copying error; the shared key left several possible users; a damp delivery slip showed that one late sack had been moved toward the relief bay. None proved where the missing grain had gone. Together they showed that the manager's first story was not the only one the records allowed.\n\nThe manager demanded that Zhou name the thief. The reviewer refused. Failure to establish the accusation did not prove every contrary story, but an unexplained loss could not be turned into evidence merely because someone had to bear it. Zhou returned to work, the inquiry remained open, and the carts left after dusk. The granary paid the waiting drivers. The reviewer lost the governor's promised commendation for fast decisions.\n\nTwo days later, workers found the sack behind a sealed partition in the third relief cart. A clerk had moved it during the rain, entered it on the missing line, then copied the next number over the wet ink. The discovery explained the loss. It did not make the earlier accusation reasonable after the fact; at the hearing, the manager still had to support the claim he wanted used to dismiss Zhou.\n\nAt the next count, the same empty space remained visible until replacement grain arrived. The manager added two signatures to the key and inventory sheets. On the old sheet, beside the skipped line, Zhou Qi's name had been pencilled in and rubbed out. The paper kept the grey hollow, but no one filled it again.",
-    "storyBodyZh": "夜班结束后，公仓少了一袋粮。管事答应中午前放出六十辆赈粮车；每迟一刻，三个村子就要多等，他也会失去秋收奖金。搬运工周启最后离开，身上又穿着补丁外套。管事指着地面的空位，命他三天内证明自己没有偷，否则照价赔偿并离职。\n\n周启只能说，自己扫过通道时粮袋还在，却没有证人留下。守门簿、钥匙册和清点表全锁在管事屋里，管事却把他每个答不出的问题都记成一笔嫌疑。要证明自己从未碰过那袋粮，根本没有清楚边界；提出具体指控的人，手里只有贫穷、晚走和一块空地。\n\n审理人起初接受了这个省事的安排，随后有书记发现夜间清单从八十九行直接跳到九十一行，后门钥匙也曾由三个人共用，没有分别签名。管事说这些只是潦草，催他别耽误发车。查记录，公仓就得赔车夫，还会错过正午；不查，周启就要承担公仓自己也没查清的损失。\n\n审理人封住装货院，打开档案室。车夫在门外叫喊，静下来的仓里浮着细粮尘。缺行可能只是抄漏，共用钥匙留下几个可能使用者；一张被雨打湿的交接条又显示，夜里有一袋粮被挪向赈粮区。没有一项能单独说出去向，合在一起却足以说明，管事最先讲的并非记录容许的唯一经过。\n\n管事要求周启说出谁才是贼。审理人没有照办：眼前指控未获支持，不等于所有相反说法都自动为真；粮袋仍失踪，也不能只因必须有人承担，就把未知当成处罚证据。周启回去工作，调查继续。粮车黄昏后才走，公仓赔了车夫，审理人也失去总督许给快审官员的表彰。\n\n两天后，工人在第三辆赈粮车的封板后找到那只袋子。书记曾在雨中挪动它，把去向写在缺掉的一行，又用下一行数字盖过湿墨。后来发现解释了损失，却不能倒过来让先前的指控变得充分；在那次审理时，想开除周启的人仍须拿出能支持自己说法的材料。\n\n补粮运到以前，公仓那块空位仍留着。管事给钥匙册和清点表都添了双人签名。旧表缺行旁曾用铅笔写过周启的名字，后来被擦掉，只剩一块灰白凹痕。此后再没人把空白填成他的名字。",
-    "explanation": "Burden of proof allocates who must establish a claim and how persuasive the evidence must be. It includes the burden of producing evidence and, in many settings, the burden of persuasion. Standards differ across criminal, civil and administrative proceedings and across jurisdictions. A failed case does not prove every contrary proposition; this account is educational and not legal advice.",
-    "explanationZh": "举证责任决定由谁提出足以支持主张的证据，以及证据须达到何种说服程度，通常涉及提出证据与最终说服两层负担。刑事、民事、行政程序和不同法域采用的标准并不相同。一项主张未获证明，也不等于所有相反命题自动成立。此处仅说明一般原理，不构成法律建议。"
+    "storyBody": "When Chen He receives a €220 repair claim, she first finds her return receipt from 21:10 on Friday evening. She rented the projector for a community screening, and it worked normally during use. The next morning, shop staff discovered a crack in the rear foot. The rental shop wants to book the repair cost into that week’s accounts; Chen He does not want to pay for damage whose time of occurrence she cannot verify.\n\nOn the hearing day, Chen He lays the receipt beside the notice. The fictional Xiyuan Town simplified civil procedure has already stated the disputed fact there: did the crack form during her rental? The shop must produce evidence and persuade the decision-maker under the “more likely than not” standard. The decision-maker first confirms that both parties have read that section, without changing the question to whether Chen He can prove formation during another period.\n\nThe owner lays the checkout photograph beside the next-morning photograph of the crack. Chen He had sole custody for about three hours, and the damage was discovered during the first full inspection after return. He argues that this sequence supports his claim. The projector was working when handed over, and Chen He reported no drop at 21:10. Yet working normally does not establish that the rear foot was intact, and no reported drop is not evidence that a drop occurred. The checkout photograph shows only the front housing and lens; the rear foot is outside the frame.\n\nChen He does not argue that the evidence is “worthless.” She places the shop’s own movement log on the table. The projector had also been rented two days before her rental, followed only by a function test with no rear-side condition record. After the 21:10 return, staff put the hard case on a cart and moved it again to a storage shelf before closing. The rear foot was first examined the next morning. All three time periods therefore lack a direct condition record for the disputed location.\n\nThe decision-maker turns the checkout photograph toward both parties: the front housing is visible; the rear foot is not. Last use and next-morning discovery still carry weight, but normal operation cannot establish that exterior condition, and the handling log does not establish an impact. The comparison is between formation during the rental and formation outside it, including both before handover and after return. The shop has no further material placing formation more reliably within Chen He’s three hours. The decision-maker therefore finds the pre-set standard unmet, without requiring Chen He to identify the actual time.\n\nThe decision dismisses the €220 claim. The owner puts the estimate back into the file, and the projector remains at the shop for further handling. Chen He takes the 21:10 receipt with her. The decision does not say that the crack has been proved to have formed before the rental or after return; it states only that the shop’s claim that it formed during the rental did not meet the pre-set standard of proof.",
+    "storyBodyZh": "陈禾收到220欧元维修索赔时，先翻出周五晚21:10的归还小票。她租投影仪做社区放映，设备使用一直正常，归还后第二天店员才发现后侧支脚裂了一道。租赁店希望把维修费记入本周账目；陈禾则不愿为一个自己无法确认发生时间的裂纹付款。\n\n听证那天，陈禾把小票放在通知旁。虚构的溪原镇简易民事程序已在通知中列明：争议是“裂纹是否在陈禾租期内形成”，租赁店须提出证据并说服裁判者达到“更可能如此”的标准。裁判者先确认双方都看过这一栏，没有把问题改成让陈禾证明裂纹在别的时段形成。\n\n店主把出库照和次晨裂纹照并排放下。陈禾单独保管约三小时，裂纹又在归还后第一次完整检查时被发现，他认为这条顺序支持索赔。设备交付时功能正常，陈禾21:10归还时也未报告跌落；但能启动不代表后侧没有裂纹，未报告跌落也不证明发生过跌落。出库照只有前壳和镜头，后侧支脚没有入镜。\n\n陈禾没有说这些证据“毫无用处”。她把店方自己的流转记录放到桌上：这台设备在她租用前两天也曾外租，之后只做了功能测试，没有后侧外观记录；21:10归还后，员工把硬壳箱放上推车，闭店前又移到储物架，次晨才第一次查看后侧支脚。三个时间段都缺少直接状态记录。\n\n裁判者把出库照转向双方：前壳在画面里，后侧支脚不在。最后使用和次晨发现仍有分量，但功能正常不能补上那处外观，搬箱记录也不能证明磕碰。需要比较的是租期内与租期外形成哪边更可能，后者同时包括出租前和归还后。店方没有别的材料把形成时间更可靠地落到陈禾三小时内，裁判者因此认定未达事先固定的标准，没有要求陈禾找出真正的时间。\n\n决定书驳回这次220欧元索赔。店主把估价单收回文件夹，投影仪继续留在店里处理；陈禾带走21:10小票。决定书没有写裂纹已证明发生在出租前或归还后，只写店方对“租期内形成”的主张未达到既定证明程度。",
+    "explanation": "The shop draws a reasonable inference from last use and next-morning discovery. The function test did not check the rear exterior, and handling after return does not establish an impact; these records still do not locate when the crack formed.\n\nThe fictional standard asks whether the claim is more likely than not, not whether every alternative is eliminated. Chen He need not prove another period to be true; the claim fails only because the shop does not prove formation during the rental to that level.",
+    "explanationZh": "店方从最后使用和次晨发现作出合理推断。功能测试未检验后侧外观，归还后搬运也不是已发生磕碰的证明；这些记录仍不能定位裂纹形成时间。\n\n虚构标准要求整体上“更可能如此”，不是排除所有替代。陈禾无需证明另一个时段为真；索赔失败只表示店方未把租期内形成证明到该程度。"
   },
   {
     "id": "0511-natural-selection",
@@ -12557,45 +12951,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0511",
     "fieldTitle": "Biology",
     "fieldTitleZh": "生物学",
-    "title": "The Moths That Never Changed Colour",
-    "titleZh": "没有变色的蛾",
-    "summary": "As the woods darken, pale moths become rarer, though a child never sees a single moth change colour.",
-    "summaryZh": "树林变暗以后，浅色蛾越来越少，孩子却始终没看到任何一只蛾改变颜色。",
-    "storyParagraphs": [
-      "Lichen once made the trees of Lin Town pale grey. Light moths nearly vanished against the trunks, while dark moths were easy for birds to find. A child helped the naturalist pin yearly specimens and wanted to win the school exhibition before the autumn kiln fair. The prize would also renew the naturalist's tiny field grant for another year. When soot from new furnaces blackened the bark, he announced that the pale moths would darken themselves to hide. It was a neat answer, and the teacher had already reserved him a blue ribbon.",
-      "For twelve days he kept one pale moth and one dark moth under a net beside a blackened trunk. Neither changed colour. He then marked and released equal numbers of both forms. In the sooty wood, sixty-two marked dark moths returned but only nineteen pale ones did. In a distant grove where lichen remained, the advantage reversed. Birds found the more visible form more often. The moths did not choose their colour after landing. What changed first was which already different individuals survived long enough to breed.",
-      "The next summer, the child's box still contained pale and dark moths, but the counts had shifted. Dark parents had left more descendants near the kilns, so dark moths formed a larger share there. Pale moths remained common in the lichen grove. He nearly displayed only the black-wood row: it made his first claim look correct and would keep the ribbon. Then a storm blew soot from the town trees, exposing small grey islands beneath several moths. The easy story split in two.",
-      "The child left his finished board at school and followed another generation instead. He returned the ribbon card and helped the naturalist repeat marked releases in both woods, so the field grant expired. The town later required the kilns to use a cleaner fuel, an expense that closed one furnace for a month. Lichen slowly returned. The colour that had left more descendants beside black bark no longer did so everywhere; neither form had climbed toward a permanent best state.",
-      "Three years late, the child carried his specimen box into the classroom. He opened it while autumn rain tapped the window, without touching the wings. The hinge clicked once. Every pinned moth kept the colour it had when caught. Under each row he placed the survival count, the kind of bark and the year. The blue ribbon lay folded beneath the first label. Nothing in the box had changed colour, yet the number of pale and dark wings changed from row to row."
-    ],
-    "storyParagraphsZh": [
-      "林镇树干原本覆着浅灰地衣，浅色蛾停上去几乎看不见，深色蛾却容易被鸟发现。一个孩子每年都帮自然观察员把标本钉进木盒，想赶在秋季窑炉节前赢得学校展览；得奖还能替观察员续上一年的小额野外经费。新窑冒出的黑烟把树皮一点点熏暗后，他断言浅色蛾会为了躲藏把自己变深。答案整齐，老师连蓝绶带都替他留好了。",
-      "他把一浅一深两只蛾罩在黑树旁，连续看了十二天，每天清晨贴着网眼查看，谁也没有变色。随后，他给等量的两种蛾点上不会伤翅的小记号，再放回树林。黑树区找回六十二只深色蛾，只找回十九只浅色蛾；远处仍有地衣的林中，优势恰好反转。鸟更常找到同树皮反差大的那一种。蛾并未落到树上才选择颜色，先改变的是哪些本来就不同的个体能活到繁殖。",
-      "第二年夏天，孩子的盒中仍有浅蛾和深蛾，数量却换了比例。黑树旁活下来的深色亲代留下更多后代，深色在那里增加；地衣林里仍是浅色占多。他差点只展出黑林一排，那会让原先说法看似正确，也能保住绶带。一场雨冲淡树皮烟灰，几只蛾腹下露出灰白小块，那个省事答案裂成了两半。",
-      "孩子把做好的展板留在教室，自己错过展期，又跟了一代。他退回绶带卡，同观察员在两片树林重新布点、标记和计数，野外经费也因此中断。后来镇上要求窑炉改用少烟燃料，一座窑因费用停工一个月；雨水冲过树干，地衣慢慢回来。先前在黑树旁留下更多后代的颜色，不再处处占优。两种蛾都没有朝一个永远最好的样子前进。",
-      "迟了三年，孩子才把标本盒带进课堂。秋雨敲着窗，他没有碰翅膀，只轻轻掀开盒盖，木铰链响了一声。每只针下的蛾都保持被捉到时的颜色；每排下面写着存活数、树皮和年份。那条蓝绶带折在第一张标签下。盒里没有一只蛾改变颜色，浅翅与深翅的多少却从一排换到下一排。"
-    ],
+    "mode": "mechanism-explainer",
     "conceptName": "Natural selection",
     "conceptNameZh": "自然选择",
-    "explanationParagraphs": [
-      "Natural selection changes trait frequencies when individuals vary, some variation is heritable, and those variants differ in survival or reproduction in a given environment. Populations evolve across generations; individual organisms do not acquire a needed adaptation by intention. Selection is context-dependent, can involve trade-offs, and is not a ladder toward perfection. Resistance management aims to alter selection pressure rather than assume evolution stops."
+    "titleZh": "下一代为什么不再各占一半",
+    "summaryZh": "一个确定性的虚构教学模型从两种可遗传植物类型各40株开始。模型直接给定较干环境下两型的繁殖贡献不同，再让全部可育种子成株，用来追踪自然选择如何跨代改变频率。",
+    "storyParagraphsZh": [
+      "生物课上，学生翻开一个确定性的虚构年度植物模型。起始种群80株，甲型和乙型各40株；甲型叶面蜡质较多，乙型较少。说明卡规定，这种差异在模型中可遗传，后代保持亲本类型；不是给真实物种下结论。模型没有迁入、迁出、新突变或随机抽样，起始植株都活到繁殖期。学生先在甲、乙两栏各写下40，要看下一代是否还各占一半。",
+      "情境调到“较干”后，模型给出本轮繁殖规则：每株甲型留下4粒成熟可育种子，每株乙型留下2粒。这些数值是教学设定，没有经过真实植物实验。学生把4和2填在两栏的株数下面，再检查成活一栏：两型40株都活到了繁殖期，没有一型先死得更多。即使只数成活植株仍是40比40，两栏也未必能向下一代交出同样多的种子。",
+      "按这个确定性规则，40株甲型共留下160粒可育种子，40株乙型共留下80粒。两型起始成株数相同，个体也没有因为环境变干而从乙型变成甲型；差别发生在已有遗传类型对下一代的繁殖贡献。",
+      "接着，学生把结果页翻到下一代。说明卡还有一项严格设定：这240粒可育种子全部萌发，全部成为下一代计数的成株，没有后续随机死亡或抽样。于是甲型一栏写160株，乙型一栏写80株。有人问这是不是只代表平均预期，老师指回“全部成株”四个字；这里没有只给相同萌发概率，两个株数才可以确定写下。",
+      "学生把两代比例排在同一页：上一代40:40，即50%和50%；下一代160:80，即约67%和33%。他们先看株数，再除以这一代的总数240，甲型占160/240，乙型占80/240。模型没有把总数压回80株；一栏增加得更多，改变的是两栏在后代中各占多少。这里沿用明确给定的遗传和繁殖规则，没有再加入漂变、迁入或随机萌发。",
+      "下一轮环境一栏仍留空，甲型也没有被设成永远增加。学生把“全部成株”的说明卡夹回结果页，在第二代旁边留出一栏空位。本节的数值停在160与80，下一轮要填什么，得等下一组环境和繁殖规则。"
     ],
+    "overallZh": "自然选择要求种群中已有可遗传差异，并在特定环境下产生差异繁殖成功；这些差异跨世代改变相关遗传型或特征的频率。本教学模型把随机过程移出模型，以便单独展示“遗传差异→差异繁殖→跨代频率变化”。",
     "explanationParagraphsZh": [
-      "自然选择发生在个体存在差异、部分差异可遗传，且这些变异在特定环境下造成生存或繁殖差别时。改变的是跨世代种群中特征的比例，并非个体因需要而主动获得适应。选择取决于环境，也可能伴随权衡，不会必然通向“更完美”。抗性管理是在改变选择压力，而不是让演化停止。"
+      "本模型设甲型叶面蜡质较多、乙型较少，且类型稳定遗传；这不是实际植物的遗传规律。两型各40株，较干情境下每株分别留下4粒与2粒可育种子，全部240粒成株，所以第二代严格为160:80。",
+      "这些给定数值不能证明真实缺水导致差异。真实种群还可能有漂变、迁移、突变和随机成活，环境因果需额外对照与统计证据。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "明确哪些是模型给定、哪些是计算结果，再把可遗传差异、繁殖贡献和下一代频率依次连接。",
+      "diagramTitle": "确定性模型中40:40怎样变成160:80",
+      "diagramSteps": [
+        "从两种各40株且可遗传的类型开始",
+        "在较干情境中给定两型不同的繁殖规则",
+        "计算160与80粒可育种子",
+        "设定全部240粒种子确定性萌发并成株",
+        "比较两代频率并把真实环境因果留在模型之外"
+      ],
+      "diagramStepNotes": [
+        "甲型叶面蜡质较多、乙型较少；模型规定类型稳定遗传、无迁移/新突变/随机抽样，两型都活到繁殖期。",
+        "甲型固定4粒/株、乙型2粒/株，这是教学设定而非实验估计。",
+        "40×4＝160，40×2＝80，差异来自繁殖贡献。",
+        "模型规定240粒全部成株，所以第二代确定为160株与80株。",
+        "频率由50/50变约67/33，但这不证明现实中的缺水因果。"
+      ],
+      "mapping": [
+        "甲/乙叶面蜡质差异 → 模型假定可以遗传的个体差异，不是学生贴上标签就产生的差异。",
+        "160与80的种子数 → 系统给定繁殖规则产生的不同后代贡献。",
+        "第二代160株/80株 → 确定性模型中的跨代频率结果。",
+        "空白的下一轮环境 → 模型没有预设选择方向永远持续。"
+      ],
+      "boundary": "这是有限、确定性的虚构教学模型。叶面性状的遗传与每株种子数均为给定设定，并非真实物种的遗传或缺水效应研究。模型移除漂变、迁移、突变和萌发随机性以展示选择机制；真实环境因果仍需独立对照、重复和统计证据。",
+      "reflection": "两型都活到繁殖期，却留下不同数量的可育后代，为什么下一代不再各占一半？如果真实种群也记录到160:80，仅凭这组比例为什么还不能区分自然选择、随机漂变或迁入？"
+    },
+    "referencesZh": [
+      {
+        "id": "ucmp-natural-selection",
+        "citation": "University of California Museum of Paleontology. (n.d.). Natural Selection. Understanding Evolution.",
+        "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/",
+        "use": "支持遗传差异、差异繁殖和代际频率变化的基础机制；教学模型的虚构数量不是该页面的实验结果。"
+      },
+      {
+        "id": "cook-et-al-2012-peppered-moth",
+        "citation": "Cook, L. M., Grant, B. S., Saccheri, I. J., & Mallet, J. (2012). Selective Bird Predation on the Peppered Moth: The Last Experiment of Michael Majerus. Biology Letters, 8(4), 609–612.",
+        "url": "https://doi.org/10.1098/rsbl.2011.1136",
+        "use": "提供环境相关差异捕食的真实研究及谨慎观察的例子；不验证本篇新场景的数量、遗传假定或结局。"
+      }
+    ],
+    "title": "Why the Next Generation Is No Longer Half and Half",
+    "summary": "A deterministic fictional teaching model begins with 40 plants of each of two heritable types. The model directly assigns different reproductive contributions to the two types under a drier environment, then makes every viable seed become an adult, so that students can trace how natural selection changes frequencies across generations.",
+    "storyParagraphs": [
+      "In biology class, students open a deterministic fictional model of annual plants. It starts with 80 adults, 40 of Type A and 40 of Type B. Type A has more leaf-surface wax; Type B has less. The model card stipulates that this difference is heritable and offspring retain their parental type; it makes no claim about a real species. There is no immigration, emigration, new mutation, or random sampling, and all starting plants survive to reproduction. The students write 40 in each column, wondering whether the next generation will still be half and half.",
+      "When the scenario changes to “drier,” the model assigns the reproductive rule for this round: each Type A plant leaves four mature viable seeds; each Type B plant leaves two. These are teaching assumptions, not results from a real plant experiment. The students enter four and two beneath the adult counts, then check the survival column. All 40 plants of each type have survived to reproduction; neither group has lost more adults. Counting survivors would still give 40:40, but the two columns may contribute different numbers of seeds to the next generation.",
+      "Under that deterministic rule, 40 Type A plants leave 160 viable seeds and 40 Type B plants leave 80. The two types began with equal numbers of adults, and individual plants do not turn from Type B into Type A because the environment becomes drier. The difference lies in how much the already-existing heritable types contribute to the next generation.",
+      "Next, the students turn the results page to the next generation. The card has one more strict assumption: all 240 viable seeds germinate and all become adults counted in that generation, with no later random death or sampling. They enter 160 adults under Type A and 80 under Type B. Someone asks whether these are only expected averages. The instructor points back to “all become adults”: the model does not merely give equal germination probabilities, so these adult counts are exact.",
+      "The students place both generations on one page: 40:40, or 50% and 50%, for the parents; 160:80, or about 67% and 33%, for the offspring. They check the counts, then divide by the new total of 240: Type A occupies 160/240 and Type B 80/240. The model does not force the total back down to 80. One column has grown more, changing each type’s share of the offspring. The calculation follows the stated inheritance and reproduction rules without adding drift, immigration, or random germination.",
+      "The next-round environment is still blank, and Type A has not been set to increase forever. The students tuck the “all become adults” card back into the results page and leave a column empty beside the second generation. This lesson stops at 160 and 80; filling the next column requires the next environmental and reproductive rules."
+    ],
+    "overall": "Natural selection requires pre-existing heritable variation in a population and differential reproductive success under a particular environment; across generations, those differences change the frequency of the relevant heritable type or trait. This teaching model deliberately removes random processes so that the chain “heritable variation → differential reproduction → intergenerational frequency change” can be isolated.",
+    "explanationParagraphs": [
+      "The model assigns more leaf-surface wax to Type A and less to Type B, with types inherited consistently; this is not a claim about real plant genetics. Starting with 40 of each, it assigns four and two viable seeds per plant under the drier scenario. All 240 become adults, making the second generation exactly 160:80.",
+      "Those assigned values do not prove that real drought causes the difference. Real populations may also involve drift, migration, mutation, and random survival, and environmental causation would require additional controls and statistical evidence."
+    ],
+    "module": {
+      "intro": "Make clear which elements are model assumptions and which are calculated results, then connect heritable variation, reproductive contribution, and next-generation frequency in order.",
+      "diagramTitle": "How 40:40 Becomes 160:80 in a Deterministic Model",
+      "diagramSteps": [
+        "Start with two heritable types, 40 adults of each",
+        "Assign different reproductive rules under the drier scenario",
+        "Calculate 160 and 80 viable seeds",
+        "Specify that all 240 seeds deterministically germinate and become adults",
+        "Compare frequencies across generations while leaving real environmental causation outside the model"
+      ],
+      "diagramStepNotes": [
+        "Type A has more leaf-surface wax and Type B less. The model stipulates consistent inheritance, no migration, new mutation, or random sampling, and survival of both types to reproduction.",
+        "Type A is assigned four viable seeds per plant and Type B two; this is a teaching assumption, not an experimental estimate.",
+        "40×4 = 160 and 40×2 = 80; the difference comes from reproductive contribution.",
+        "The model states that all 240 seeds become adults, so the second generation is deterministically 160 and 80.",
+        "Frequencies change from 50/50 to about 67/33, but that does not prove real-world drought causation."
+      ],
+      "mapping": [
+        "Different amounts of leaf-surface wax in Types A/B → an individual difference assumed to be heritable in the model, rather than one created by labeling the plants.",
+        "160 and 80 seed counts → different offspring contributions generated by the assigned reproductive rule.",
+        "160 / 80 adults in generation two → intergenerational frequency outcome in the deterministic model.",
+        "Blank next-round environment → the model does not assume that the direction of selection continues forever."
+      ],
+      "boundary": "This is a limited deterministic fictional teaching model. Inheritance of the leaf trait and the seed yield per plant are stipulated, not findings about a real species’ genetics or drought response. Drift, migration, mutation, and random germination are omitted to illustrate selection; real environmental causation still needs independent controls, replication, and statistical evidence.",
+      "reflection": "If both types survive to reproduction but leave different numbers of viable offspring, why is the next generation no longer half and half? If a real population also records 160:80, why would that proportion alone fail to distinguish natural selection, random drift, or immigration?"
+    },
+    "references": [
+      {
+        "id": "ucmp-natural-selection",
+        "citation": "University of California Museum of Paleontology. (n.d.). Natural Selection. Understanding Evolution.",
+        "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/natural-selection/",
+        "use": "Supports the basic mechanism of heritable variation, differential reproduction, and intergenerational frequency change; the fictional teaching-model numbers are not experimental results from this source."
+      },
+      {
+        "id": "cook-et-al-2012-peppered-moth",
+        "citation": "Cook, L. M., Grant, B. S., Saccheri, I. J., & Mallet, J. (2012). Selective Bird Predation on the Peppered Moth: The Last Experiment of Michael Majerus. Biology Letters, 8(4), 609–612.",
+        "url": "https://doi.org/10.1098/rsbl.2011.1136",
+        "use": "Provides a real research example of environment-related differential predation and careful observation; it does not validate the numbers, inheritance assumptions, or outcome of this new fictional scenario."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "review": "law-business-science-mixed-13-pdc-b-review.md",
+      "edits": [
+        "law-business-science-mixed-13-pdc-b-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-b-edit-pass2-evidence.json"
+      ],
+      "reviewModel": "One editor applied thirteen council perspectives; not thirteen independent reviewers."
     },
     "collection": "field-core-fables",
-    "storyBody": "Lichen once made the trees of Lin Town pale grey. Light moths nearly vanished against the trunks, while dark moths were easy for birds to find. A child helped the naturalist pin yearly specimens and wanted to win the school exhibition before the autumn kiln fair. The prize would also renew the naturalist's tiny field grant for another year. When soot from new furnaces blackened the bark, he announced that the pale moths would darken themselves to hide. It was a neat answer, and the teacher had already reserved him a blue ribbon.\n\nFor twelve days he kept one pale moth and one dark moth under a net beside a blackened trunk. Neither changed colour. He then marked and released equal numbers of both forms. In the sooty wood, sixty-two marked dark moths returned but only nineteen pale ones did. In a distant grove where lichen remained, the advantage reversed. Birds found the more visible form more often. The moths did not choose their colour after landing. What changed first was which already different individuals survived long enough to breed.\n\nThe next summer, the child's box still contained pale and dark moths, but the counts had shifted. Dark parents had left more descendants near the kilns, so dark moths formed a larger share there. Pale moths remained common in the lichen grove. He nearly displayed only the black-wood row: it made his first claim look correct and would keep the ribbon. Then a storm blew soot from the town trees, exposing small grey islands beneath several moths. The easy story split in two.\n\nThe child left his finished board at school and followed another generation instead. He returned the ribbon card and helped the naturalist repeat marked releases in both woods, so the field grant expired. The town later required the kilns to use a cleaner fuel, an expense that closed one furnace for a month. Lichen slowly returned. The colour that had left more descendants beside black bark no longer did so everywhere; neither form had climbed toward a permanent best state.\n\nThree years late, the child carried his specimen box into the classroom. He opened it while autumn rain tapped the window, without touching the wings. The hinge clicked once. Every pinned moth kept the colour it had when caught. Under each row he placed the survival count, the kind of bark and the year. The blue ribbon lay folded beneath the first label. Nothing in the box had changed colour, yet the number of pale and dark wings changed from row to row.",
-    "storyBodyZh": "林镇树干原本覆着浅灰地衣，浅色蛾停上去几乎看不见，深色蛾却容易被鸟发现。一个孩子每年都帮自然观察员把标本钉进木盒，想赶在秋季窑炉节前赢得学校展览；得奖还能替观察员续上一年的小额野外经费。新窑冒出的黑烟把树皮一点点熏暗后，他断言浅色蛾会为了躲藏把自己变深。答案整齐，老师连蓝绶带都替他留好了。\n\n他把一浅一深两只蛾罩在黑树旁，连续看了十二天，每天清晨贴着网眼查看，谁也没有变色。随后，他给等量的两种蛾点上不会伤翅的小记号，再放回树林。黑树区找回六十二只深色蛾，只找回十九只浅色蛾；远处仍有地衣的林中，优势恰好反转。鸟更常找到同树皮反差大的那一种。蛾并未落到树上才选择颜色，先改变的是哪些本来就不同的个体能活到繁殖。\n\n第二年夏天，孩子的盒中仍有浅蛾和深蛾，数量却换了比例。黑树旁活下来的深色亲代留下更多后代，深色在那里增加；地衣林里仍是浅色占多。他差点只展出黑林一排，那会让原先说法看似正确，也能保住绶带。一场雨冲淡树皮烟灰，几只蛾腹下露出灰白小块，那个省事答案裂成了两半。\n\n孩子把做好的展板留在教室，自己错过展期，又跟了一代。他退回绶带卡，同观察员在两片树林重新布点、标记和计数，野外经费也因此中断。后来镇上要求窑炉改用少烟燃料，一座窑因费用停工一个月；雨水冲过树干，地衣慢慢回来。先前在黑树旁留下更多后代的颜色，不再处处占优。两种蛾都没有朝一个永远最好的样子前进。\n\n迟了三年，孩子才把标本盒带进课堂。秋雨敲着窗，他没有碰翅膀，只轻轻掀开盒盖，木铰链响了一声。每只针下的蛾都保持被捉到时的颜色；每排下面写着存活数、树皮和年份。那条蓝绶带折在第一张标签下。盒里没有一只蛾改变颜色，浅翅与深翅的多少却从一排换到下一排。",
-    "explanation": "Natural selection changes trait frequencies when individuals vary, some variation is heritable, and those variants differ in survival or reproduction in a given environment. Populations evolve across generations; individual organisms do not acquire a needed adaptation by intention. Selection is context-dependent, can involve trade-offs, and is not a ladder toward perfection. Resistance management aims to alter selection pressure rather than assume evolution stops.",
-    "explanationZh": "自然选择发生在个体存在差异、部分差异可遗传，且这些变异在特定环境下造成生存或繁殖差别时。改变的是跨世代种群中特征的比例，并非个体因需要而主动获得适应。选择取决于环境，也可能伴随权衡，不会必然通向“更完美”。抗性管理是在改变选择压力，而不是让演化停止。"
+    "storyBody": "In biology class, students open a deterministic fictional model of annual plants. It starts with 80 adults, 40 of Type A and 40 of Type B. Type A has more leaf-surface wax; Type B has less. The model card stipulates that this difference is heritable and offspring retain their parental type; it makes no claim about a real species. There is no immigration, emigration, new mutation, or random sampling, and all starting plants survive to reproduction. The students write 40 in each column, wondering whether the next generation will still be half and half.\n\nWhen the scenario changes to “drier,” the model assigns the reproductive rule for this round: each Type A plant leaves four mature viable seeds; each Type B plant leaves two. These are teaching assumptions, not results from a real plant experiment. The students enter four and two beneath the adult counts, then check the survival column. All 40 plants of each type have survived to reproduction; neither group has lost more adults. Counting survivors would still give 40:40, but the two columns may contribute different numbers of seeds to the next generation.\n\nUnder that deterministic rule, 40 Type A plants leave 160 viable seeds and 40 Type B plants leave 80. The two types began with equal numbers of adults, and individual plants do not turn from Type B into Type A because the environment becomes drier. The difference lies in how much the already-existing heritable types contribute to the next generation.\n\nNext, the students turn the results page to the next generation. The card has one more strict assumption: all 240 viable seeds germinate and all become adults counted in that generation, with no later random death or sampling. They enter 160 adults under Type A and 80 under Type B. Someone asks whether these are only expected averages. The instructor points back to “all become adults”: the model does not merely give equal germination probabilities, so these adult counts are exact.\n\nThe students place both generations on one page: 40:40, or 50% and 50%, for the parents; 160:80, or about 67% and 33%, for the offspring. They check the counts, then divide by the new total of 240: Type A occupies 160/240 and Type B 80/240. The model does not force the total back down to 80. One column has grown more, changing each type’s share of the offspring. The calculation follows the stated inheritance and reproduction rules without adding drift, immigration, or random germination.\n\nThe next-round environment is still blank, and Type A has not been set to increase forever. The students tuck the “all become adults” card back into the results page and leave a column empty beside the second generation. This lesson stops at 160 and 80; filling the next column requires the next environmental and reproductive rules.",
+    "storyBodyZh": "生物课上，学生翻开一个确定性的虚构年度植物模型。起始种群80株，甲型和乙型各40株；甲型叶面蜡质较多，乙型较少。说明卡规定，这种差异在模型中可遗传，后代保持亲本类型；不是给真实物种下结论。模型没有迁入、迁出、新突变或随机抽样，起始植株都活到繁殖期。学生先在甲、乙两栏各写下40，要看下一代是否还各占一半。\n\n情境调到“较干”后，模型给出本轮繁殖规则：每株甲型留下4粒成熟可育种子，每株乙型留下2粒。这些数值是教学设定，没有经过真实植物实验。学生把4和2填在两栏的株数下面，再检查成活一栏：两型40株都活到了繁殖期，没有一型先死得更多。即使只数成活植株仍是40比40，两栏也未必能向下一代交出同样多的种子。\n\n按这个确定性规则，40株甲型共留下160粒可育种子，40株乙型共留下80粒。两型起始成株数相同，个体也没有因为环境变干而从乙型变成甲型；差别发生在已有遗传类型对下一代的繁殖贡献。\n\n接着，学生把结果页翻到下一代。说明卡还有一项严格设定：这240粒可育种子全部萌发，全部成为下一代计数的成株，没有后续随机死亡或抽样。于是甲型一栏写160株，乙型一栏写80株。有人问这是不是只代表平均预期，老师指回“全部成株”四个字；这里没有只给相同萌发概率，两个株数才可以确定写下。\n\n学生把两代比例排在同一页：上一代40:40，即50%和50%；下一代160:80，即约67%和33%。他们先看株数，再除以这一代的总数240，甲型占160/240，乙型占80/240。模型没有把总数压回80株；一栏增加得更多，改变的是两栏在后代中各占多少。这里沿用明确给定的遗传和繁殖规则，没有再加入漂变、迁入或随机萌发。\n\n下一轮环境一栏仍留空，甲型也没有被设成永远增加。学生把“全部成株”的说明卡夹回结果页，在第二代旁边留出一栏空位。本节的数值停在160与80，下一轮要填什么，得等下一组环境和繁殖规则。",
+    "explanation": "The model assigns more leaf-surface wax to Type A and less to Type B, with types inherited consistently; this is not a claim about real plant genetics. Starting with 40 of each, it assigns four and two viable seeds per plant under the drier scenario. All 240 become adults, making the second generation exactly 160:80.\n\nThose assigned values do not prove that real drought causes the difference. Real populations may also involve drift, migration, mutation, and random survival, and environmental causation would require additional controls and statistical evidence.",
+    "explanationZh": "本模型设甲型叶面蜡质较多、乙型较少，且类型稳定遗传；这不是实际植物的遗传规律。两型各40株，较干情境下每株分别留下4粒与2粒可育种子，全部240粒成株，所以第二代严格为160:80。\n\n这些给定数值不能证明真实缺水导致差异。真实种群还可能有漂变、迁移、突变和随机成活，环境因果需额外对照与统计证据。"
   },
   {
     "id": "0511-homeostasis",
@@ -12604,47 +13093,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0511",
     "fieldTitle": "Biology",
     "fieldTitleZh": "生物学",
-    "title": "The Greenhouse That Never Stood Still",
-    "titleZh": "从未静止的温室",
-    "summary": "A greenhouse temperature stays in a narrow range all day, so an apprentice assumes every window and valve should remain still.",
-    "summaryZh": "温室里的温度整日保持在窄小范围，学徒因此误以为所有窗和阀门都不该再动。",
-    "storyParagraphs": [
-      "The mountaintop greenhouse raised seedlings that feared both frost and heat. Apprentice Lin An watched its thermometer remain between two red marks through the week. He saw the old gardener open roof windows at noon, feed the stove at night, change the water valve and pull shade cloth whenever clouds moved. Because the number barely changed, Lin decided the gardener had finally found a perfect setting. A seed merchant promised him a bonus if two hundred trays were ready before the spring fair.",
-      "When the gardener left for one day, Lin tied the window handles, stove door and water valve at their dawn positions. No assistant could disturb them, and he would not waste time checking. The morning stayed cool; the thermometer sat neatly between the marks, and Lin signed the merchant's delivery note. At eleven the clouds broke. Sun struck the glass, damp soil steamed, and the needle climbed. The apparent stillness had depended on many small movements that Lin had just prevented.",
-      "He cut the cords and threw every roof window wide. The temperature fell, but slowly at first, so he also drenched the floor and shut the stove. Seedling leaves lifted for a moment. Then wind crossed the ridge, clouds returned, and the needle passed below the lower mark. Lin pulled the windows closed so hard that one latch broke. By dusk the stove was cold, several trays were waterlogged, and the most advanced tomato buds had begun to drop.",
-      "The merchant's cart arrived at dawn. Lin could hide the damaged trays behind healthy ones and keep the fair deadline. Instead, he refused the delivery, returned the deposit and lost the bonus that would have bought his winter boots. He spent the day moving trays by growth stage, repairing the latch and watching the needle. When it rose above the upper line, he opened a window one hand-width; as it returned, he narrowed the gap. At sunset he fed the stove before the stone floor lost all its heat.",
-      "The old gardener came back to find thirty-six dead seedlings laid beside the ledger. She did not give a speech. She set a young tray and a flowering plant under separate thermometers, then moved the shade over only one. Lin wrote the weather, plant stage, temperature and each response in four columns. Over the next month he adjusted earlier when clear sky approached and less sharply when wind was due. The useful range stayed narrow, but no single arrangement lasted from dawn to midnight or from new leaf to flower.",
-      "At the delayed spring fair, the merchant bought fewer trays and paid a lower price. Lin came home in patched boots. The greenhouse thermometer still moved between the same two red marks. When sunlight cleared the ridge, he looked at the young leaves, touched the warm glass and pushed the roof window open one finger-width. The broken latch, mended with dark wire, moved with it."
-    ],
-    "storyParagraphsZh": [
-      "山顶温室培育怕冷又怕热的幼苗。学徒林安看见温度表连续一周只在两条红线间移动：老园丁正午开顶窗，夜里添炉火，云一动又去调水阀、拉遮帘。数字几乎不变，林安便认定师傅终于找到一套完美位置。种商还答应，若两百盘苗赶上春市，就另给他奖金。",
-      "老园丁外出一天，林安把窗柄、炉门和水阀都绑在清晨位置，免得帮工碰乱，也省下反复查看的时间。上午凉爽，指针稳稳夹在红线间，他便签了交货单。十一点云层散开，阳光打上玻璃，湿土冒出热气，指针开始上爬。此前看似静止，恰恰靠许多小动作维持；他刚把那些动作全部拦住。",
-      "林安剪断绳子，把顶窗全推开。温度起初降得慢，他又浇湿地面、关死炉门，幼苗叶片一度抬起。山风随后越岭，云又遮日，指针越过下方红线。他猛拉窗柄，一只插销当场折断。黄昏时炉子已经冷透，几盘土泡了水，长得最早的番茄花苞开始掉落。",
-      "种商的车天亮便到了。林安原可把坏苗藏到健康苗后面，照期交货；他却挡住车，退回订金，春市奖金也随之没了，那笔钱本来要买冬靴。他把苗按生长阶段移开，修好插销，整天盯着指针。温度越过上线，他开一掌宽；指针回来，他便收窄。日落前，他在石地尚有余温时重新添火。",
-      "老园丁回来，看见账册旁排着三十六株死苗，没有讲道理。她把一盘新苗和一株开花植株放到两支温计下，只给其中一边拉遮帘。林安在本子上分四栏写天气、阶段、温度和动作。往后一个月，晴空将到时他提早调整，预报有风时便少动一些。适合范围仍窄，却没有一套位置能从早晨守到半夜，也不能从新叶一直守到开花。",
-      "迟开的春市上，种商少买了一批，价钱也压低。林安仍穿着补丁靴回家。温室温度表继续在两条红线间轻轻移动。太阳越过山脊时，他先看幼叶，再摸一摸发暖的玻璃，把顶窗推开一指。那只用黑铁丝补过的插销也跟着动了。"
-    ],
+    "mode": "mechanism-explainer",
     "conceptName": "Homeostasis",
     "conceptNameZh": "稳态",
-    "explanationParagraphs": [
-      "Homeostasis is the regulation of internal variables within viable ranges despite changing conditions. Sensors, coordinating processes and effectors often form negative-feedback loops: a deviation triggers responses that oppose it, then those responses diminish as the variable returns. Stability therefore requires activity, not immobility. Set ranges and capacities vary, and failure or overcorrection can occur; the story is physiology education, not treatment guidance."
+    "titleZh": "外界还冷，为什么响应已经减弱",
+    "summaryZh": "简化哺乳动物模型里，外界低温保持不变，核心体温偏差却从－1.2缩到－0.1。骨骼肌产热和皮肤小血管减少散热的响应从峰值下降，但仍高于扰动前基线。",
+    "storyParagraphsZh": [
+      "生理学课打开一个简化的哺乳动物核心体温调节模型，顾原先盯着外界那条曲线。屏幕不用摄氏度，而把平常调节范围中心记为0偏差；两个效应器响应指数在扰动前都记为1.0。外界冷刺激固定不变后，核心体温偏差从0降到－1.2，两个响应随即升高。他想看看，只要外界一直冷，这两条响应是否就会一直留在高处。",
+      "模型把核心体温作为被调节变量。温度感受信息持续进入控制环节，与平常调节范围比较；控制环节再改变两个简化效应器——骨骼肌和皮肤小血管。前者增强产热活动，后者收缩以减少散热。顾原在图上分清了身体部位和它们所做的动作：两个动作都抵消核心体温下降，却不是身体有意识地读取数字。",
+      "偏差－1.2时，产热响应指数显示为2.4，减少散热响应为2.1。几分钟后外界仍冷，核心偏差回到－0.5，两条响应降到1.7和1.5，仍高于原基线1.0。顾原转向模型的连线图：当前内部温度送入比较与控制，再改变响应。这条已知连线才说明模型怎样更新；只看两根条同时下降，还不能认定真实动物用了哪条控制通路。",
+      "观察继续到核心偏差接近－0.1，两个响应进一步降到1.2和1.1。模型没有显示“完全回到原来状态”：外界仍冷，内部还有小的负偏差，效应器也仍比扰动前活跃。有限观察只说明反馈正在缩小偏差，不代表已经达到长期平衡。",
+      "顾原把光标放在－1.2的截图上，再沿图中的箭头追过去：内部变量偏低，感受与控制改变效应器；骨骼肌产热和皮肤减少散热，又使核心体温回升。他把－0.5和－0.1的截图接在后面，新温度又进入下一次比较，响应随之更新。若内部偏差再次扩大，模型的响应还会增强，回路没有停在最初那次冷刺激上。",
+      "下课时，外界刺激曲线仍是一条低位水平线。屏幕停在－0.1、1.2和1.1这组教学值上，顾原保存完整轨迹；模型没有继续推演下一次扰动或长期结局。"
     ],
+    "overallZh": "稳态是生物内部变量在扰动下通过调节维持相对稳定范围的动态过程。负反馈中，当前变量值被感受，并在控制环节与调节范围比较；效应器响应抵消偏移。本模型里，核心体温回近范围时响应从峰值减弱，但持续寒冷下仍高于扰动前基线。",
     "explanationParagraphsZh": [
-      "稳态是生物在环境变化下把内部变量调节在可生存范围内。感受、协调与效应环节常组成负反馈：偏离引发相反方向的反应，变量回到范围后反应减弱。因此稳定来自持续调节，并非静止不变。调节范围与能力会随个体和情境改变，也可能失效或过度；故事只作生理学说明，不提供处置建议。"
+      "本篇所有数字都是归一化教学值，不是临床阈值。外界冷刺激保持不变，核心体温偏差－1.2→－0.5→－0.1；两个效应器响应从峰值下降但仍高于1.0基线。",
+      "模型明定核心体温→感受/比较/控制→骨骼肌与皮肤小血管活动→新的核心体温这一闭环。它用已知结构展示反馈，不从几条曲线证明真实生理因果；有限观察也不等于长期平衡。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "区分外界扰动、被调节内部变量、感受/控制和效应器，再追踪新测量如何反过来改变响应。",
+      "diagramTitle": "持续寒冷下核心体温偏差怎样缩小",
+      "diagramSteps": [
+        "固定外界冷刺激并观察核心体温偏离",
+        "感受当前核心体温，并在控制环节与调节范围比较",
+        "控制环节增强骨骼肌产热并减少皮肤散热",
+        "效应器作用使核心体温偏差缩小",
+        "新的内部测量使响应从峰值下降但仍高于基线"
+      ],
+      "diagramStepNotes": [
+        "扰动前响应指数均为1.0，核心偏差从0降到－1.2。",
+        "感受的是核心体温；屏幕偏差值表示它相对范围中心的差异，外界温度是扰动。",
+        "－1.2时产热/减少散热响应分别为2.4/2.1。",
+        "偏差回到－0.5再接近－0.1，外界冷刺激始终不变。",
+        "－0.1时响应仍为1.2/1.1，高于基线；有限观察未宣称长期平衡。"
+      ],
+      "mapping": [
+        "核心体温 → 被调节的内部变量；屏幕偏差值是它相对平常范围中心的表示。",
+        "骨骼肌与皮肤小血管 → 模型中的物理效应器；产热增强与血管收缩是它们的动作。",
+        "低位不变的外界刺激曲线 → 持续扰动而非受控变量。",
+        "三个时点轨迹与已知连线图 → 展示模型如何更新反馈，轨迹自身不识别真实生理因果。"
+      ],
+      "boundary": "这是简化生理教学模型，归一化数值不是临床温度、阈值或治疗建议。回路结构是模型给定，几条同变曲线不能独自排除时变前馈或其他调节。真实体温稳态有多条反馈/前馈回路；这里的有限观察既不识别全部生理通路，也不证明长期稳态。",
+      "reflection": "在已知连线的模型里，你能沿哪些箭头解释“外界仍冷，内部偏差缩小，响应减弱但高于基线”？若只有真实动物的三条曲线，还缺什么信息才能识别这条反馈通路？"
+    },
+    "referencesZh": [
+      {
+        "id": "modell-et-al-2015-homeostasis",
+        "citation": "Modell, H., Cliff, W., Michael, J., McFarland, J., Wenderoth, M. P., & Wright, A. (2015). A Physiologist's View of Homeostasis. Advances in Physiology Education, 39(4), 259–266.",
+        "url": "https://doi.org/10.1152/advan.00107.2015",
+        "use": "支持入门负反馈模型的调节变量、感受、比较/控制和效应器功能，并提醒范围与连续调节；该简图不涵盖全部稳态。"
+      },
+      {
+        "id": "billman-2020-homeostasis",
+        "citation": "Billman, G. E. (2020). Homeostasis: The Underappreciated and Far Too Often Ignored Central Organizing Principle of Physiology. Frontiers in Physiology, 11, 200.",
+        "url": "https://doi.org/10.3389/fphys.2020.00200",
+        "use": "支持动态内部稳定、相互作用的回路及反馈/前馈区别；不提供本篇虚构情境的临床阈值或治疗建议。"
+      }
+    ],
+    "title": "Why Has the Response Weakened While It Is Still Cold Outside?",
+    "summary": "In a simplified mammalian model, the cold external disturbance stays unchanged while the core-temperature deviation shrinks from −1.2 to −0.1. Skeletal-muscle heat production and the skin-vessel response that reduces heat loss fall from their peaks but remain above the pre-disturbance baseline.",
+    "storyParagraphs": [
+      "A physiology class opens a simplified model of mammalian core-temperature regulation. Gu Yuan first watches the external-condition curve. Instead of degrees Celsius, the screen defines the center of the normal regulatory range as a deviation of 0; both effector-response indices are 1.0 before the disturbance. With the external cold stimulus fixed, core-temperature deviation falls from 0 to −1.2 and both responses rise. He wonders whether continuing cold will keep both responses at that high level.",
+      "The model treats core temperature as the regulated variable. Temperature-sensing information continually enters the control process for comparison with the normal regulatory range. The controller then alters two simplified effectors: skeletal muscles and small skin blood vessels. The muscles increase heat production; the vessels constrict to reduce heat loss. On the diagram, Gu Yuan distinguishes the body structures from their actions. Both actions oppose the fall in core temperature; the body is not consciously reading the numbers.",
+      "At a deviation of −1.2, the heat-production response index is 2.4 and the heat-loss-reduction response is 2.1. A few minutes later, it is still cold outside, but core deviation is −0.5 and the responses fall to 1.7 and 1.5, still above the original 1.0 baseline. Gu Yuan turns to the model’s wiring diagram: current internal temperature enters comparison and control, which then alter the response. That specified connection explains how this model updates; two bars falling together cannot identify the control pathway in a real animal.",
+      "Observation continues until core deviation approaches −0.1, at which point the responses fall further to 1.2 and 1.1. The model does not show a complete return to the original state: the environment is still cold, a small negative internal deviation remains, and the effectors are still more active than before the disturbance. This limited observation shows the feedback reducing the deviation; it does not establish long-term equilibrium.",
+      "Gu Yuan places the cursor on the −1.2 snapshot and follows the arrows. A low internal value leads sensing and control to alter the effectors; muscle heat production and reduced skin heat loss then raise core temperature. He adds the −0.5 and −0.1 snapshots. Each new temperature enters the next comparison, updating the response. If the internal deviation widens again, the model’s response strengthens; the loop does not stop with the initial cold stimulus.",
+      "At the end of class, the external-stimulus curve is still a flat line at the low level. The screen stops at the teaching values −0.1, 1.2, and 1.1, and Gu Yuan saves the full trajectory. The model does not continue to the next disturbance or to a long-term outcome."
+    ],
+    "overall": "Homeostasis is the dynamic regulation of internal biological variables within a relatively stable range despite disturbances. In negative feedback, the current variable value is sensed and compared with its regulatory range in the control process; effector responses oppose the deviation. In this model, responses weaken from their peaks as core temperature returns toward its range, but remain above the pre-disturbance baseline during continuing cold.",
+    "explanationParagraphs": [
+      "All numbers in this article are normalized teaching values, not clinical thresholds. The external cold stimulus remains unchanged while core-temperature deviation moves −1.2 → −0.5 → −0.1; both effector responses fall from their peaks but remain above the 1.0 baseline.",
+      "The model specifies the loop: core temperature → sensing/comparison/control → skeletal-muscle and small-skin-vessel activity → new core temperature. It illustrates feedback through a known structure rather than proving real physiological causation from a few curves. The limited observation also does not establish long-term equilibrium."
+    ],
+    "module": {
+      "intro": "Separate the external disturbance, regulated internal variable, sensing/control, and effectors, then trace how a new measurement feeds back to change the response.",
+      "diagramTitle": "How Core-Temperature Deviation Shrinks During Continuing Cold",
+      "diagramSteps": [
+        "Hold the external cold stimulus fixed and observe core-temperature deviation",
+        "Sense current core temperature and compare it with the regulatory range in the control process",
+        "Increase skeletal-muscle heat production and reduce skin heat loss",
+        "Let effector action shrink the core-temperature deviation",
+        "Use the new internal measurement to reduce the response from its peak while remaining above baseline"
+      ],
+      "diagramStepNotes": [
+        "Before the disturbance, both response indices are 1.0; core deviation falls from 0 to −1.2.",
+        "Core temperature is sensed; the displayed deviation represents its difference from the range center, while external temperature is the disturbance.",
+        "At −1.2, heat-production and heat-loss-reduction responses are 2.4 and 2.1.",
+        "The deviation then returns to −0.5 and approaches −0.1 while the external cold stimulus remains unchanged.",
+        "At −0.1, the responses are still 1.2 and 1.1, above baseline; the limited observation does not claim long-term equilibrium."
+      ],
+      "mapping": [
+        "Core temperature → the regulated internal variable; the screen’s deviation value represents it relative to the center of the normal range.",
+        "Skeletal muscles and small skin blood vessels → the model’s physical effectors; increased heat production and vasoconstriction are their actions.",
+        "Flat low external-stimulus curve → a continuing disturbance rather than the regulated variable.",
+        "Three-point trajectory and specified wiring diagram → show how the model updates feedback; the trajectory alone does not identify real physiological causation."
+      ],
+      "boundary": "This is a simplified physiology teaching model; its normalized values are not clinical temperatures, thresholds, or treatment guidance. The loop structure is stipulated. Co-varying curves alone cannot exclude time-dependent feedforward or other regulation. Real thermoregulation has multiple feedback/feedforward loops; this limited observation neither identifies all physiological pathways nor proves a long-term homeostatic state.",
+      "reflection": "In the model with specified wiring, which arrows explain continuing cold, a smaller internal deviation, and responses that weaken while staying above baseline? If you had only three curves from a real animal, what information would still be needed to identify this feedback pathway?"
+    },
+    "references": [
+      {
+        "id": "modell-et-al-2015-homeostasis",
+        "citation": "Modell, H., Cliff, W., Michael, J., McFarland, J., Wenderoth, M. P., & Wright, A. (2015). A Physiologist's View of Homeostasis. Advances in Physiology Education, 39(4), 259–266.",
+        "url": "https://doi.org/10.1152/advan.00107.2015",
+        "use": "Supports the introductory negative-feedback model of regulated variables, sensing, comparison/control, and effector functions, while emphasizing ranges and continuous regulation; this simplified diagram does not cover all of homeostasis."
+      },
+      {
+        "id": "billman-2020-homeostasis",
+        "citation": "Billman, G. E. (2020). Homeostasis: The Underappreciated and Far Too Often Ignored Central Organizing Principle of Physiology. Frontiers in Physiology, 11, 200.",
+        "url": "https://doi.org/10.3389/fphys.2020.00200",
+        "use": "Supports dynamic internal stability, interacting regulatory loops, and the distinction between feedback and feedforward; it does not provide clinical thresholds or treatment advice for this fictional scenario."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "decision": "Approved for Publish",
+      "review": "law-business-science-mixed-13-pdc-b-review.md",
+      "edits": [
+        "law-business-science-mixed-13-pdc-b-edit-pass1-evidence.json",
+        "law-business-science-mixed-13-pdc-b-edit-pass2-evidence.json"
+      ],
+      "reviewModel": "One editor applied thirteen council perspectives; not thirteen independent reviewers."
     },
     "collection": "field-core-fables",
-    "storyBody": "The mountaintop greenhouse raised seedlings that feared both frost and heat. Apprentice Lin An watched its thermometer remain between two red marks through the week. He saw the old gardener open roof windows at noon, feed the stove at night, change the water valve and pull shade cloth whenever clouds moved. Because the number barely changed, Lin decided the gardener had finally found a perfect setting. A seed merchant promised him a bonus if two hundred trays were ready before the spring fair.\n\nWhen the gardener left for one day, Lin tied the window handles, stove door and water valve at their dawn positions. No assistant could disturb them, and he would not waste time checking. The morning stayed cool; the thermometer sat neatly between the marks, and Lin signed the merchant's delivery note. At eleven the clouds broke. Sun struck the glass, damp soil steamed, and the needle climbed. The apparent stillness had depended on many small movements that Lin had just prevented.\n\nHe cut the cords and threw every roof window wide. The temperature fell, but slowly at first, so he also drenched the floor and shut the stove. Seedling leaves lifted for a moment. Then wind crossed the ridge, clouds returned, and the needle passed below the lower mark. Lin pulled the windows closed so hard that one latch broke. By dusk the stove was cold, several trays were waterlogged, and the most advanced tomato buds had begun to drop.\n\nThe merchant's cart arrived at dawn. Lin could hide the damaged trays behind healthy ones and keep the fair deadline. Instead, he refused the delivery, returned the deposit and lost the bonus that would have bought his winter boots. He spent the day moving trays by growth stage, repairing the latch and watching the needle. When it rose above the upper line, he opened a window one hand-width; as it returned, he narrowed the gap. At sunset he fed the stove before the stone floor lost all its heat.\n\nThe old gardener came back to find thirty-six dead seedlings laid beside the ledger. She did not give a speech. She set a young tray and a flowering plant under separate thermometers, then moved the shade over only one. Lin wrote the weather, plant stage, temperature and each response in four columns. Over the next month he adjusted earlier when clear sky approached and less sharply when wind was due. The useful range stayed narrow, but no single arrangement lasted from dawn to midnight or from new leaf to flower.\n\nAt the delayed spring fair, the merchant bought fewer trays and paid a lower price. Lin came home in patched boots. The greenhouse thermometer still moved between the same two red marks. When sunlight cleared the ridge, he looked at the young leaves, touched the warm glass and pushed the roof window open one finger-width. The broken latch, mended with dark wire, moved with it.",
-    "storyBodyZh": "山顶温室培育怕冷又怕热的幼苗。学徒林安看见温度表连续一周只在两条红线间移动：老园丁正午开顶窗，夜里添炉火，云一动又去调水阀、拉遮帘。数字几乎不变，林安便认定师傅终于找到一套完美位置。种商还答应，若两百盘苗赶上春市，就另给他奖金。\n\n老园丁外出一天，林安把窗柄、炉门和水阀都绑在清晨位置，免得帮工碰乱，也省下反复查看的时间。上午凉爽，指针稳稳夹在红线间，他便签了交货单。十一点云层散开，阳光打上玻璃，湿土冒出热气，指针开始上爬。此前看似静止，恰恰靠许多小动作维持；他刚把那些动作全部拦住。\n\n林安剪断绳子，把顶窗全推开。温度起初降得慢，他又浇湿地面、关死炉门，幼苗叶片一度抬起。山风随后越岭，云又遮日，指针越过下方红线。他猛拉窗柄，一只插销当场折断。黄昏时炉子已经冷透，几盘土泡了水，长得最早的番茄花苞开始掉落。\n\n种商的车天亮便到了。林安原可把坏苗藏到健康苗后面，照期交货；他却挡住车，退回订金，春市奖金也随之没了，那笔钱本来要买冬靴。他把苗按生长阶段移开，修好插销，整天盯着指针。温度越过上线，他开一掌宽；指针回来，他便收窄。日落前，他在石地尚有余温时重新添火。\n\n老园丁回来，看见账册旁排着三十六株死苗，没有讲道理。她把一盘新苗和一株开花植株放到两支温计下，只给其中一边拉遮帘。林安在本子上分四栏写天气、阶段、温度和动作。往后一个月，晴空将到时他提早调整，预报有风时便少动一些。适合范围仍窄，却没有一套位置能从早晨守到半夜，也不能从新叶一直守到开花。\n\n迟开的春市上，种商少买了一批，价钱也压低。林安仍穿着补丁靴回家。温室温度表继续在两条红线间轻轻移动。太阳越过山脊时，他先看幼叶，再摸一摸发暖的玻璃，把顶窗推开一指。那只用黑铁丝补过的插销也跟着动了。",
-    "explanation": "Homeostasis is the regulation of internal variables within viable ranges despite changing conditions. Sensors, coordinating processes and effectors often form negative-feedback loops: a deviation triggers responses that oppose it, then those responses diminish as the variable returns. Stability therefore requires activity, not immobility. Set ranges and capacities vary, and failure or overcorrection can occur; the story is physiology education, not treatment guidance.",
-    "explanationZh": "稳态是生物在环境变化下把内部变量调节在可生存范围内。感受、协调与效应环节常组成负反馈：偏离引发相反方向的反应，变量回到范围后反应减弱。因此稳定来自持续调节，并非静止不变。调节范围与能力会随个体和情境改变，也可能失效或过度；故事只作生理学说明，不提供处置建议。"
+    "storyBody": "A physiology class opens a simplified model of mammalian core-temperature regulation. Gu Yuan first watches the external-condition curve. Instead of degrees Celsius, the screen defines the center of the normal regulatory range as a deviation of 0; both effector-response indices are 1.0 before the disturbance. With the external cold stimulus fixed, core-temperature deviation falls from 0 to −1.2 and both responses rise. He wonders whether continuing cold will keep both responses at that high level.\n\nThe model treats core temperature as the regulated variable. Temperature-sensing information continually enters the control process for comparison with the normal regulatory range. The controller then alters two simplified effectors: skeletal muscles and small skin blood vessels. The muscles increase heat production; the vessels constrict to reduce heat loss. On the diagram, Gu Yuan distinguishes the body structures from their actions. Both actions oppose the fall in core temperature; the body is not consciously reading the numbers.\n\nAt a deviation of −1.2, the heat-production response index is 2.4 and the heat-loss-reduction response is 2.1. A few minutes later, it is still cold outside, but core deviation is −0.5 and the responses fall to 1.7 and 1.5, still above the original 1.0 baseline. Gu Yuan turns to the model’s wiring diagram: current internal temperature enters comparison and control, which then alter the response. That specified connection explains how this model updates; two bars falling together cannot identify the control pathway in a real animal.\n\nObservation continues until core deviation approaches −0.1, at which point the responses fall further to 1.2 and 1.1. The model does not show a complete return to the original state: the environment is still cold, a small negative internal deviation remains, and the effectors are still more active than before the disturbance. This limited observation shows the feedback reducing the deviation; it does not establish long-term equilibrium.\n\nGu Yuan places the cursor on the −1.2 snapshot and follows the arrows. A low internal value leads sensing and control to alter the effectors; muscle heat production and reduced skin heat loss then raise core temperature. He adds the −0.5 and −0.1 snapshots. Each new temperature enters the next comparison, updating the response. If the internal deviation widens again, the model’s response strengthens; the loop does not stop with the initial cold stimulus.\n\nAt the end of class, the external-stimulus curve is still a flat line at the low level. The screen stops at the teaching values −0.1, 1.2, and 1.1, and Gu Yuan saves the full trajectory. The model does not continue to the next disturbance or to a long-term outcome.",
+    "storyBodyZh": "生理学课打开一个简化的哺乳动物核心体温调节模型，顾原先盯着外界那条曲线。屏幕不用摄氏度，而把平常调节范围中心记为0偏差；两个效应器响应指数在扰动前都记为1.0。外界冷刺激固定不变后，核心体温偏差从0降到－1.2，两个响应随即升高。他想看看，只要外界一直冷，这两条响应是否就会一直留在高处。\n\n模型把核心体温作为被调节变量。温度感受信息持续进入控制环节，与平常调节范围比较；控制环节再改变两个简化效应器——骨骼肌和皮肤小血管。前者增强产热活动，后者收缩以减少散热。顾原在图上分清了身体部位和它们所做的动作：两个动作都抵消核心体温下降，却不是身体有意识地读取数字。\n\n偏差－1.2时，产热响应指数显示为2.4，减少散热响应为2.1。几分钟后外界仍冷，核心偏差回到－0.5，两条响应降到1.7和1.5，仍高于原基线1.0。顾原转向模型的连线图：当前内部温度送入比较与控制，再改变响应。这条已知连线才说明模型怎样更新；只看两根条同时下降，还不能认定真实动物用了哪条控制通路。\n\n观察继续到核心偏差接近－0.1，两个响应进一步降到1.2和1.1。模型没有显示“完全回到原来状态”：外界仍冷，内部还有小的负偏差，效应器也仍比扰动前活跃。有限观察只说明反馈正在缩小偏差，不代表已经达到长期平衡。\n\n顾原把光标放在－1.2的截图上，再沿图中的箭头追过去：内部变量偏低，感受与控制改变效应器；骨骼肌产热和皮肤减少散热，又使核心体温回升。他把－0.5和－0.1的截图接在后面，新温度又进入下一次比较，响应随之更新。若内部偏差再次扩大，模型的响应还会增强，回路没有停在最初那次冷刺激上。\n\n下课时，外界刺激曲线仍是一条低位水平线。屏幕停在－0.1、1.2和1.1这组教学值上，顾原保存完整轨迹；模型没有继续推演下一次扰动或长期结局。",
+    "explanation": "All numbers in this article are normalized teaching values, not clinical thresholds. The external cold stimulus remains unchanged while core-temperature deviation moves −1.2 → −0.5 → −0.1; both effector responses fall from their peaks but remain above the 1.0 baseline.\n\nThe model specifies the loop: core temperature → sensing/comparison/control → skeletal-muscle and small-skin-vessel activity → new core temperature. It illustrates feedback through a known structure rather than proving real physiological causation from a few curves. The limited observation also does not establish long-term equilibrium.",
+    "explanationZh": "本篇所有数字都是归一化教学值，不是临床阈值。外界冷刺激保持不变，核心体温偏差－1.2→－0.5→－0.1；两个效应器响应从峰值下降但仍高于1.0基线。\n\n模型明定核心体温→感受/比较/控制→骨骼肌与皮肤小血管活动→新的核心体温这一闭环。它用已知结构展示反馈，不从几条曲线证明真实生理因果；有限观察也不等于长期平衡。"
   },
   {
     "id": "0511-gene-environment-interaction",

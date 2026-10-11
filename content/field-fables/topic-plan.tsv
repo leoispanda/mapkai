@@ -76,8 +76,8 @@ batch-005	04	0412	Finance banking and insurance	金融、银行与保险	2	0412-
 batch-005	04	0412	Finance banking and insurance	金融、银行与保险	3	0412-moral-hazard	Moral hazard	道德风险	concept-fable	投保后不再巡夜的仓库主人	integrated
 batch-006	04	0413	Management and administration	管理与行政	1	0413-principal-agent-problem	Principal-agent problem	委托代理问题	concept-fable	远方矿主只按车数奖励看守人	integrated
 batch-006	04	0413	Management and administration	管理与行政	2	0413-psychological-safety	Psychological safety	心理安全感	concept-fable	没人敢把裂纹齿轮放上晨会桌的铸造坊	integrated
-batch-006	04	0413	Management and administration	管理与行政	3	0413-dynamic-capabilities	Dynamic capabilities	动态能力	case-fable	帆布需求消失后重新学习测风的老作坊	integrated
-batch-006	04	0414	Marketing and advertising	市场营销与广告	1	0414-segmentation-targeting-positioning	Segmentation, targeting, and positioning	细分、目标选择与定位	case-fable	一块肥皂向所有人说同一句话却无人记住	integrated
+batch-006	04	0413	Management and administration	管理与行政	3	0413-dynamic-capabilities	Dynamic capabilities	动态能力	concept-fable	帆布需求消失后重新学习测风的老作坊	integrated
+batch-006	04	0414	Marketing and advertising	市场营销与广告	1	0414-segmentation-targeting-positioning	Segmentation, targeting, and positioning	细分、目标选择与定位	concept-fable	一块肥皂向所有人说同一句话却无人记住	integrated
 batch-006	04	0414	Marketing and advertising	市场营销与广告	2	0414-signaling	Signaling	信号传递	concept-fable	陌生市场里两罐看不见内部的蜂蜜	integrated
 batch-006	04	0414	Marketing and advertising	市场营销与广告	3	0414-customer-lifetime-value	Customer lifetime value	客户终身价值	mechanism-explainer	旅店为一次豪客赶走十年常客	integrated
 batch-006	04	0415	Secretarial and office work	秘书与办公室工作	1	0415-information-triage	Information triage	信息分诊	mechanism-explainer	所有公文都系红带后真正紧急的信件消失了	integrated
@@ -92,8 +92,8 @@ batch-006	04	0417	Work skills	工作技能	3	0417-adaptive-expertise	Adaptive ex
 batch-007	04	0421	Law	法律	1	0421-rule-of-law	Rule of law	法治	concept-fable	国王自己的货物也必须经过同一把秤	integrated
 batch-007	04	0421	Law	法律	2	0421-precedent	Precedent	判例原则	concept-fable	第二座桥的争议被第一座桥留下的判词牵住	integrated
 batch-007	04	0421	Law	法律	3	0421-burden-of-proof	Burden of proof	举证责任	concept-fable	粮仓少了一袋米却不能让全镇证明自己无罪	integrated
-batch-007	05	0511	Biology	生物学	1	0511-natural-selection	Natural selection	自然选择	mechanism-fable	岛上浅色与深色蛾群在新树皮上改变比例	integrated
-batch-007	05	0511	Biology	生物学	2	0511-homeostasis	Homeostasis	稳态	mechanism-fable	温室不是保持不动而是持续调节阀门	integrated
+batch-007	05	0511	Biology	生物学	1	0511-natural-selection	Natural selection	自然选择	mechanism-explainer	岛上浅色与深色蛾群在新树皮上改变比例	integrated
+batch-007	05	0511	Biology	生物学	2	0511-homeostasis	Homeostasis	稳态	mechanism-explainer	温室不是保持不动而是持续调节阀门	integrated
 batch-007	05	0511	Biology	生物学	3	0511-gene-environment-interaction	Gene-environment interaction	基因与环境交互	concept-fable	同批种子在山谷两端长成不同高度	integrated
 batch-007	05	0512	Biochemistry	生物化学	1	0512-enzyme-catalysis	Enzyme catalysis	酶催化	mechanism-fable	专门改变反应路径却不被消耗的钥匙匠	integrated
 batch-007	05	0512	Biochemistry	生物化学	2	0512-protein-structure-function	Protein structure and function	蛋白质结构与功能	mechanism-fable	同一条纸带折叠不同便打不开同一把锁	integrated

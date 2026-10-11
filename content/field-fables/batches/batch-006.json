@@ -280,41 +280,134 @@
       "fieldCode": "0413",
       "fieldTitle": "Management and administration",
       "fieldTitleZh": "管理与行政",
-      "title": "The Workshop That Perfected Yesterday",
-      "titleZh": "把昨天做到完美的作坊",
-      "summary": "A winter-coat workshop perfects yesterday's demand while warmer seasons quietly move its customers elsewhere.",
-      "summaryZh": "厚呢作坊把昨天的需求做到极致，暖冬却悄悄把顾客带往别处。",
-      "storyParagraphs": [
-        "Everwinter Tailors made the valley's best heavy wool coats. Twelve operations ran by the bell; offcuts shrank every year, and owner Cen Mu reinvested each profit in faster cutters and a larger wool store. The door announced, 'Only winter coats, made without delay.' After two mild winters, dockworkers began asking the counter staff for something light that could shed rain. Cen called it a passing fashion.",
-        "Those questions accumulated on the backs of order slips, but Cen doubled his wool purchase to secure a discount. The decision lowered unit cost and looked wise for one season. By spring, racks were full while old customers bought breathable rain capes from another city. Cen answered by demanding still faster cutting. The workshop produced more perfectly finished coats than the market would take.",
-        "Young cutter Lian used scraps of coated cloth to make six trial jackets and asked dockworkers to wear them for a month. The first trapped sweat, the second leaked at its seams, and the third tore where a heavy rope crossed the shoulder. Each failure cost time while the profitable old line waited. Yet the returned jackets carried salt marks, repair stitches, and notes that revealed what the workshop had never needed to learn from wool.",
-        "Cen walked past the testing table and sold one beloved high-speed cutter instead, committing scarce people and cash to the uncertain line. The cutter's four anchor bolts remained in the floor. The money funded small cloth contracts, seam-heating tools, and a team allowed to test in short runs. He kept the reliable coat line operating; existing skill still paid wages while new work developed. The first public rain jacket failed and was withdrawn. For three weeks the empty space where the cutter had stood reminded the team that the experiment was not spare-time decoration.",
-        "After the loss, Cen did not order a full retreat. Counter questions were reviewed weekly, trial budgets were capped, and experienced tailors learned sealed seams. One new fabric was rejected; its lessons remained in the test book. The next jacket won a harbour order. Reorganising stations cost the workshop its fastest month, and several coat specialists left rather than retrain, but the business no longer depended on one season behaving as before.",
-        "When another warm winter arrived, wool still occupied half the store, not all of it. Cen stood outside with a scraper and removed 'Only winter coats' from the door. The deeper grooves remained visible beneath the fresh line he painted: 'Coats for the weather that comes.' He kept the scraper."
-      ],
-      "storyParagraphsZh": [
-        "永冬裁衣坊做全谷最好的厚呢外套。十二道工序随钟声运转，边角料逐年减少，老板岑牧又把利润投进更快的剪床和更大的羊毛仓。门上写着：“只做冬衣，从不误期。”连续两个暖冬后，码头工开始向店员询问轻便防雨衣，岑牧却把这种要求当成短暂时尚。",
-        "这些问题渐渐写满订单背面，岑牧反而为争取折扣，把厚呢采购加了一倍。单位成本下降，头一个季度看起来十分明智。到了春天，衣架依然塞满，老顾客却去外城购买透气雨披。岑牧只要求剪得更快，结果作坊生产出更多做工完美、却无人带走的外套。",
-        "年轻裁工莲用涂层布边角做了六件试衣，请码头工连续穿一个月。第一版闷汗，第二版接缝漏水，第三版被肩上粗缆磨破。每次失败都占用老生产线的时间，可退回的衣服也留下盐印、补线和工人笔记，让作坊第一次看见厚呢时代不曾要求它解决的问题。",
-        "岑牧没有卖掉试验桌，而是卖掉最珍爱的高速剪床，把稀缺人手和现金真正押进尚不确定的新线；剪床四枚地脚栓仍留在地面。他用钱签小额短期布约，购买压缝工具，并让一组人做小批试验。可靠的冬衣线仍继续发工资，新工作在旁边长出。第一批公开销售的雨衣仍因领口进水被召回。此后三周，剪床留下的空位一直提醒众人：试验并非有空才做的装饰，而是作坊已经付过代价的选择。",
-        "这次亏损后，岑牧没有把所有改变停掉。店员每周汇总顾客问题，试做费用设上限，老裁工也学习封合接缝。一种新布最终被放弃，试验记录却留在册中；下一版拿到港口订单。重排工位让作坊失去最快的一个月，几名只愿做冬衣的师傅也离开了，但生意不再只等季节重复过去。",
-        "又一个暖冬来临，羊毛仍占仓库一半，却不再占满。岑牧提着刮刀站在门外，亲手刮去“只做冬衣”。旧字留下的深痕仍透在新写的一行下面：“为真正到来的天气做衣。”刮刀也被他留在门后。"
-      ],
+      "mode": "concept-fable",
       "conceptName": "Dynamic capabilities",
       "conceptNameZh": "动态能力",
-      "explanationParagraphs": [
-        "Dynamic capabilities are higher-order abilities to sense environmental change, seize selected opportunities, and reconfigure resources, routines, and competences. They differ from ordinary capabilities that execute current work efficiently. Sensing, experimenting, and transforming require investment and judgement, remain constrained by existing assets and paths, and do not guarantee that every change or product will succeed."
+      "titleZh": "十天里要跑三个城市",
+      "summaryZh": "展陈租赁公司用铝框和蓝箱完成三城快闪后，没有把模块菜单本身当成答案。真正留下来的，是一套反复看新询价、做小试、再决定是否调整模块资源的组织安排。",
+      "storyParagraphsZh": [
+        "六月初，虚构的桥岸展陈租赁公司接到老客户来电：十天内要在三个城市各做两天快闪。公司平时擅长提前数周准备的大型展会，原流程每到一城都要重新配板、找连接件、装箱。销售负责人许衡没有当场承诺，而是把这单和最近六周的询价一起拿去找运营主管罗今。",
+        "十二份新询价里已有七份问过“更小、更快、同一套东西反复搬”。两人先用闲置铝框做两套有限样件，只留三种宽度、两种面板，把连接件装进蓝色周转箱。完整搭、拆、清点、装箱后，再由另一名搭建员只看编号复搭；第一次就发现两种相近连接件容易混放。",
+        "团队给蓝箱加分隔和形状标签，补足短缺连接件，再跑一次拆装。确认样件能在下一城前完成周转后，许衡只向客户承诺验证过的组合。三城订单随后按编号回库、再出库，没有把大型展会的定制流程一起改掉。",
+        "订单结束后，模块菜单、编号仓位和常用连接件补货照常运转。公司另定了一个双周碰头时间：销售带来新询价，运营摊开装拆反馈，仓库把缺件和周转时间记在旁边。三方逐项找出现有模块接不住、又反复被问到的需求，再决定哪项能拿到小样预算，哪项先放着。原本分散在三处的记录从此放到同一张桌上；没有另设大团队，下一次碰头也沿用这些记录。",
+        "第二次复核时，三份询价都要求比现有最窄模块再少占一些地面。团队没有直接把菜单永久扩成更多规格，而是先拿一套旧框做窄版小样，发现稳定底座需要另一种连接方式。由于这类需求仍只有三份，他们把样件记录留下，却暂时没有采购整批新底座，也没有改现有菜单。",
+        "月底盘点，蓝箱和编号铝框照常服务已经匹配的快闪单；旁边的“短周期询价复核”文件夹里夹着那份窄版试验记录，状态写着“继续观察”。许衡把下一轮询价日期写上去，没有提前把尚未确认的需求变成库存。"
       ],
+      "overallZh": "动态能力关注组织持续识别环境变化、选择是否投入并重构资源与能力组合的能力。已经形成的模块化执行流程属于新的运营能力；本篇所展示的更新能力，是组织还能反复审视变化、做有限试验并决定是否再次调整这些运营能力。",
       "explanationParagraphsZh": [
-        "动态能力是组织感知环境变化、抓住选定机会，并重组资源、流程与能力的高阶能力，区别于高效完成现有工作的普通能力。感知、试验和转型需要投入与判断，也受既有资产和路径约束；它提高适应机会，却不能保证每次改变或每个产品都成功。"
+        "首单促成模块菜单、编号仓位和补货方式，形成可重复的运营能力；随后双周复核把销售、运营、仓库的信息连起来，用小样决定是否进一步重构。",
+        "窄版需求没有自动触发采购，说明感知、把握和重构并非机械三步成功法。持续流程改进本身也不必然构成动态能力。"
       ],
-      "mode": "case-fable",
+      "moduleZh": {
+        "intro": "区分“已经形成的新运营流程”和“持续更新这些流程的组织能力”。",
+        "diagramTitle": "从三城订单到可反复更新的模块能力",
+        "diagramSteps": [
+          "从重复询价和三城订单识别环境变化",
+          "用有限样件验证是否值得投入模块能力",
+          "保留编号仓位、补货和模块菜单作为日常运营能力",
+          "建立跨销售/运营/仓库的周期性询价复核与小试授权",
+          "面对窄版新需求时先试验并选择暂不重构库存"
+        ],
+        "diagramStepNotes": [
+          "六周12份询价中7份出现小型、快速、重复搬运需求。",
+          "两套样件经历搭拆、清点、装箱和第二人复搭，连接件问题被修正。",
+          "首单后模块菜单、蓝箱、编号仓位与补货方式继续使用。",
+          "双周复核决定哪些重复需求值得有限小样和资源调整。",
+          "三份窄版需求只形成样件记录，尚不足以触发整批采购和菜单改版。"
+        ],
+        "mapping": [
+          "编号铝框与蓝箱 → 已经形成、可重复执行的模块运营能力。",
+          "双周询价复核 → 持续感知并判断是否更新能力的组织安排。",
+          "窄版小样 → 在承诺资源前限制风险的试验。",
+          "“继续观察”记录 → 组织可以选择暂不重构，而非变化必然成功。"
+        ],
+        "boundary": "动态能力不是任何持久流程改进，也不等于一次成功订单或个人聪明应变。感知、抓住机会和重构彼此关联但不是固定程序；已经重构出的新流程可成为普通运营能力，而动态能力还涉及以后如何再次识别并调整能力基础。",
+        "reflection": "当一套新流程已经稳定运行后，什么证据能说明组织不仅“会做这件事”，还具备在下一轮环境变化时重新审视、试验并调整自身能力的机制？"
+      },
+      "referencesZh": [
+        {
+          "id": "teece-pisano-shuen-1997",
+          "citation": "Teece, D. J., Pisano, G., & Shuen, A. (1997). Dynamic Capabilities and Strategic Management. Strategic Management Journal, 18(7), 509–533.",
+          "url": "https://doi.org/10.1002/(SICI)1097-0266(199708)18:7<509::AID-SMJ882>3.0.CO;2-Z",
+          "use": "支持动态能力的战略框架及组织过程、资产和发展路径的作用；不证明虚构组织的经营结果。"
+        },
+        {
+          "id": "teece-2007",
+          "citation": "Teece, D. J. (2007). Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance. Strategic Management Journal, 28(13), 1319–1350.",
+          "url": "https://doi.org/10.1002/smj.640",
+          "use": "支持企业层面的感知、抓住机会和重构及其组织基础；三者不是固定流程或成功保证。"
+        }
+      ],
+      "title": "Three Cities in Ten Days",
+      "summary": "After an exhibition-rental company completes a three-city pop-up using aluminum frames and blue bins, it does not treat the module menu itself as the answer. What remains is an organizational arrangement for repeatedly reviewing new inquiries, running small tests, and then deciding whether modular resources should be changed again.",
+      "storyParagraphs": [
+        "In early June, an established client calls the fictional Bridgebank Exhibition Rentals with a request: three two-day pop-ups in three cities within ten days. The company specializes in large exhibitions prepared weeks in advance. Its existing process means matching panels, finding connectors, and packing anew for each city. Sales lead Xu Heng does not promise immediately. He takes the order and the previous six weeks of inquiries to operations manager Luo Jin.",
+        "Seven of twelve recent inquiries have already asked for something “smaller, faster, and movable repeatedly as one set.” The two managers first build two limited prototypes from idle aluminum frames, using only three widths and two panel types, with connectors stored in blue transit bins. They assemble, dismantle, count, and repack the sets, then have another installer rebuild them using only the labels. The first trial immediately reveals that two similar-looking connector types are easy to mix up.",
+        "The team adds dividers and shape labels to the blue bins, replenishes the missing connectors, and runs another dismantling-and-reassembly cycle. Once they confirm that the prototypes can be turned around before the next city, Xu Heng promises the client only the combinations that have actually been tested. The three-city order then moves through return and dispatch by module number, without changing the separate custom process used for large exhibitions.",
+        "After the order, the module menu, numbered storage, and replenishment of common connectors stay in use. The company also sets a meeting every two weeks. Sales brings new inquiries, operations lays out assembly feedback, and the warehouse adds shortages and turnaround times beside them. Together they identify recurring requests the current modules cannot meet, then decide which merit a prototype budget and which should wait. Records previously scattered across three departments now come to one table. No large new team is formed, and the same records will be used at the next meeting.",
+        "At the second review, three inquiries all ask for a footprint smaller than the narrowest existing module. The team does not permanently expand the menu immediately. Instead, it uses one old frame to build a narrow prototype and finds that a stable base would require a different connector arrangement. Because there are still only three such requests, the team keeps the test record but does not purchase a full batch of new bases or change the current menu.",
+        "At month-end inventory, the blue bins and numbered frames continue serving pop-up jobs that already fit the system. Beside them, the short-cycle inquiry-review folder contains the narrow-prototype test record marked “continue observing.” Xu Heng writes in the date of the next inquiry review rather than turning an unconfirmed need into inventory in advance."
+      ],
+      "overall": "Dynamic capabilities concern an organization’s ability to keep identifying environmental change, choose whether to commit resources, and reconfigure combinations of resources and capabilities. The established modular process is a new operating capability. The updating capability illustrated here is the organization’s ability to revisit change, run limited tests, and decide whether those operating capabilities should be altered again.",
+      "explanationParagraphs": [
+        "The first order creates a module menu, numbered storage, and replenishment method as repeatable operating capabilities. The later biweekly review connects sales, operations, and warehouse information and uses prototypes to decide whether further reconfiguration is warranted.",
+        "The narrow-format requests do not automatically trigger purchasing, showing that sensing, seizing, and reconfiguring are not a mechanical three-step success formula. Persistent process improvement by itself is not necessarily a dynamic capability."
+      ],
+      "module": {
+        "intro": "Distinguish between a newly established operating process and the organizational capability to keep updating such processes.",
+        "diagramTitle": "From a Three-City Order to a Modular Capability That Can Be Updated Repeatedly",
+        "diagramSteps": [
+          "Identify environmental change from repeated inquiries and the three-city order",
+          "Use limited prototypes to test whether modular capability is worth investing in",
+          "Retain numbered storage, replenishment, and the module menu as routine operating capability",
+          "Create a recurring cross-sales/operations/warehouse review with authority for small tests",
+          "Test a new narrow-format need and choose not to reconfigure inventory yet"
+        ],
+        "diagramStepNotes": [
+          "Seven of 12 inquiries over six weeks involve smaller, faster, repeatedly movable setups.",
+          "Two prototypes go through assembly, dismantling, counting, packing, and a rebuild by a second installer; the connector problem is corrected.",
+          "After the first order, the module menu, blue bins, numbered storage, and replenishment method remain in use.",
+          "The biweekly review decides which recurring unmet needs justify a limited prototype and resource adjustment.",
+          "Three narrow-format requests produce a prototype record but are not yet enough to trigger bulk purchasing or a menu revision."
+        ],
+        "mapping": [
+          "Numbered aluminum frames and blue bins → modular operating capability that has already been created and can be executed repeatedly.",
+          "Biweekly inquiry review → organizational arrangement for continued sensing and deciding whether capabilities need updating.",
+          "Narrow-format prototype → a test that limits risk before committing resources.",
+          "“Continue observing” record → evidence that the organization can choose not to reconfigure, rather than treating every change as a guaranteed success."
+        ],
+        "boundary": "Dynamic capabilities are not every durable process improvement, nor are they the same as one successful order or a smart individual improvisation. Sensing, seizing, and reconfiguring are interrelated but not a fixed procedure. A reconfigured process can become an ordinary operating capability; dynamic capability also concerns how the organization later recognizes and alters its capability base again.",
+        "reflection": "Once a new process is running reliably, what evidence would show that the organization not only “knows how to do this,” but also has a mechanism for re-examining, testing, and changing its own capabilities when the environment shifts again?"
+      },
+      "references": [
+        {
+          "id": "teece-pisano-shuen-1997",
+          "citation": "Teece, D. J., Pisano, G., & Shuen, A. (1997). Dynamic Capabilities and Strategic Management. Strategic Management Journal, 18(7), 509–533.",
+          "url": "https://doi.org/10.1002/(SICI)1097-0266(199708)18:7<509::AID-SMJ882>3.0.CO;2-Z",
+          "use": "Supports the strategic framework of dynamic capabilities and the roles of organizational processes, assets, and developmental paths; it does not establish the business outcome of the fictional organization."
+        },
+        {
+          "id": "teece-2007",
+          "citation": "Teece, D. J. (2007). Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance. Strategic Management Journal, 28(13), 1319–1350.",
+          "url": "https://doi.org/10.1002/smj.640",
+          "use": "Supports firm-level sensing, seizing, and reconfiguring and their organizational foundations; the three are not treated as a fixed sequence or a guarantee of success."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "decision": "Approved for Publish",
+        "review": "law-business-science-mixed-13-pdc-b-review.md",
+        "edits": [
+          "law-business-science-mixed-13-pdc-b-edit-pass1-evidence.json",
+          "law-business-science-mixed-13-pdc-b-edit-pass2-evidence.json"
+        ],
+        "reviewModel": "One editor applied thirteen council perspectives; not thirteen independent reviewers."
       }
     },
     {
@@ -324,41 +417,142 @@
       "fieldCode": "0414",
       "fieldTitle": "Marketing and advertising",
       "fieldTitleZh": "市场营销与广告",
-      "title": "The Soap That Promised Everything",
-      "titleZh": "承诺一切的肥皂",
-      "summary": "A soap maker promises everything to everyone until each buyer remembers only the product's compromises.",
-      "summaryZh": "肥皂匠向所有人承诺一切，最后每位顾客只记得产品如何处处妥协。",
-      "storyParagraphs": [
-        "Soap maker Qiao Lan borrowed enough money to double her workshop and needed the new bar to sell across the whole city. Its wrapper promised the whitest wash, finest scent, gentlest touch, longest life, lowest price, and richest foam. To approach all six claims, she added costly perfume, reduced the lye that removed heavy grime, and cut each bar smaller. Merchants admired the crowded wrapper and placed a large opening order.",
-        "Returns arrived within a month. Dockworkers said salt and tar remained on their sleeves. Inns used the small bars too quickly. Families found the perfume too strong for children. Qiao added more claims in smaller print and offered one discount to all buyers. Sales briefly rose, then fell harder because no group could tell what problem the soap was meant to solve. The loan payment was due after the next market. Unsold bars came back with six different complaints written across the same wrapper.",
-        "Qiao spent ten mornings watching use rather than counting people by occupation alone. Some dockworkers washed only light cloth, while a few inns handled tarred sail linen. She grouped situations by soil, water temperature, purchase volume, and sensitivity, then checked whether each group was reachable and large enough. The notes described changing needs, not permanent kinds of people, and she refused a merchant's request to label family buyers as weak.",
-        "Her workshop could afford one new mould and one formula. Nearby shipping crews bought steadily and the workers already understood salt stains, so Qiao chose them first. That meant surrendering a lucrative order from the city's family-goods chain. The new bar gave up floral scent and extreme mildness; it promised to remove salt in cold water and last one voyage. Its ridged shape drained in a shipboard box after testers complained that the first sample dissolved.",
-        "The narrower promise sold fewer bars in the opening week but earned repeat orders from three crews. A cheaper inn soap and a milder household bar remained better for other buyers. Qiao did not call her bar universally superior. She placed it beside those alternatives and accepted the cost of changing the production line. One crew rejected it because their work involved oil rather than salt, and its report changed the next survey.",
-        "On the night she made the loan payment, Qiao unfolded the old wrapper. She cut away five of its six promises, then trimmed the remaining words until the paper read: 'For the salt the sea leaves behind.' The offcuts filled her palm; the new wrapper needed only one line."
-      ],
-      "storyParagraphsZh": [
-        "肥皂匠乔岚借钱把作坊扩大一倍，新皂必须卖遍全城才能还债。包装纸一口气承诺：洗得最白、气味最香、触感最温和、最耐用、价格最低、泡沫最多。为了靠近六句话，她加入昂贵香油，减少去重污的碱，又把皂块切小。商人喜欢那张热闹包装，开市便下了一笔大单。",
-        "一个月内，退货陆续回来。码头工说袖口盐渍与焦油洗不掉；旅店嫌小皂用得太快；家庭顾客又觉得香气对孩子太浓。乔岚把更多承诺挤进小字，并向所有人发同一种折扣。销量短暂回升，随后跌得更重，因为谁也说不清这块皂究竟解决什么问题。下一场集市以后，借款便到还期。退回的皂堆在柜台下，同一张包装上写着六种彼此冲突的抱怨。",
-        "乔岚连续十个清晨观察顾客如何使用，不再只按身份粗分。码头工里有人只洗轻布，旅店中也有少数要处理涂焦油的帆布。她按照污渍、水温、采购量与敏感程度整理情境，再检查群体是否能够触达、规模是否足够。笔记写的是会变化的需要，并非天生部落；商人要求把家庭顾客标成“软弱”，她拒绝了。",
-        "作坊只负担得起一副新模具和一种配方。附近船队采购稳定，工人又懂盐垢处理，乔岚决定先服务他们，也因此放弃城里家庭用品行的一笔高利润合同。新皂不再追求花香和极致温和，只承诺冷水除盐、一块用完整段航程。首批试用品因皂盒积水融化，她又把表面改成能排水的棱纹。",
-        "这个较窄的承诺首周卖得更少，却得到三支船队复购。更便宜的旅店皂、更温和的家用皂，仍然更适合另一些买家。乔岚没有宣称自己的产品对所有人最好，而是把它放在替代品旁，也承担转换生产线的费用。一支常洗油污的船队拒绝采购，他们的报告则进入下一轮调查。",
-        "还清当期借款那晚，乔岚展开旧包装，剪掉六句承诺中的五句，又把最后一句裁短，直到纸上只剩：“洗去海风留下的盐。”碎纸堆满掌心，新包装却只需要一行字。"
-      ],
+      "mode": "concept-fable",
       "conceptName": "Segmentation, targeting, and positioning",
       "conceptNameZh": "细分、目标选择与定位",
-      "explanationParagraphs": [
-        "Segmentation identifies groups that differ in needs, behaviour, or response; targeting chooses which groups to prioritise; positioning states a credible, distinctive value relative to alternatives. Together they connect market understanding to limited resource allocation. Segments are revisable models rather than natural tribes, and decisions should consider reachability, economics, privacy, stereotyping, exclusion, and ethical consequences."
+      "titleZh": "灰色背景布周二要去哪里",
+      "summaryZh": "肖像工作室周中只有一套便携灯和一个助理，却同时收到求职头像、创作棚拍和28人团队照三类询问。林乔必须决定有限的周中时间优先解决哪一种需要，并把承诺做成真能交付的服务。",
+      "storyParagraphsZh": [
+        "周一早上，林乔的肖像工作室连续收到三封询问：求职者想要便宜、当天可取的头像；内容创作者想用三小时换多套造型；一家28人的软件公司则问，能不能让员工少离开工位，在办公室为每人拍出风格一致的头像。三封邮件都希望本周得到答复。",
+        "她把近两个月的询问按顾客真正重视的东西重新看了一遍：有人优先速度和价格，有人要创作变化与控制，公司客户更常问一致性、少离岗和统一交付。林乔只有一套便携灯、一个助理，周中能处理的片量也有限，不能把同一资源同时承诺给三种需要。",
+        "她把周二预约栏留给12–40人的小型公司团队，周三安排初选处理。服务分两档：12–30人半天，31–40人整天，每人约6分钟；确认后的修图也得在三个工作日内有可用时间，才接受预约。求职头像留在其他短时段，创作棚拍主要安排周末。想订周二三小时的创作者只能改约周末。",
+        "她在企业页面写下“在客户办公室集中完成每人的头像拍摄”，把灰/白背景、统一布光和选片标准列进服务范围。拍完的次一工作日提供统一初选，客户确认后三个工作日内交付修图成片。她把页面上的交付日期与预约栏核对后，才确认公司的预订。",
+        "28人软件公司比较了员工继续使用旧照片、28个人分批去摄影棚、以及集中上门拍摄。最终选了上门方案。周二08:30开始搭灯和灰布，09:00开拍，每人约6分钟，28人共168分钟，11:48完成首轮；留出补拍和收设备时间后，12:30前离开会议室。",
+        "拍摄后的灰色背景布卷回长袋，标签写着“团队上门／12–40人”。周三，公司收到统一初选链接。林乔回到预约栏，创作者的周末档还在，下个周二的企业半天档则留着空白，等待下一份询问；门口的个人头像价目表也没有撤下。"
       ],
+      "overallZh": "细分、目标选择与定位把三件事连起来：识别需要或反应不同的群体，选择优先服务谁并承担资源取舍，再用可兑现的服务能力相对替代方案建立清晰价值位置。",
       "explanationParagraphsZh": [
-        "细分识别需求、行为或反应不同的群体；目标选择决定有限资源优先服务谁；定位则相对替代品说明可信且独特的价值。三者把市场理解连接到资源配置。细分是可修订模型，并非天然部落，还须检查可触达性、经济性、隐私、刻板印象、排斥与伦理后果。"
+        "三类询问按速度价格、创作自由、一致性和少离岗等需要区分。工作室把有限周中时段、便携灯和助理优先给12–40人公司团队，并让部分长时棚拍改到周末。",
+        "定位由真实容量和交付支持：28人按6分钟/人可在半天完成拍摄，次一工作日提供初选，客户确认后三个工作日内交付成片；一次成交不能证明市场成功。"
       ],
-      "mode": "case-fable",
+      "moduleZh": {
+        "intro": "从需要差异开始，经过明确资源取舍，再检查目标服务是否真的能按承诺交付并相对替代方案形成价值。",
+        "diagramTitle": "同一套灯为什么周二优先去公司会议室",
+        "diagramSteps": [
+          "按核心需要识别三类潜在顾客",
+          "核对灯、助理、拍摄与编辑容量",
+          "选择12–40人小型公司团队作为周中优先目标",
+          "把目标需要转成可执行的时段与交付设计",
+          "让顾客相对旧照片和分批去棚等替代方案理解价值"
+        ],
+        "diagramStepNotes": [
+          "求职者重速度价格，创作者重变化，公司重一致性与少离岗。",
+          "一套便携灯和一个助理共用；本次周二上门，周三处理初选，确认后的修图也须预留时间。",
+          "12–30人半天、31–40人整天；长时创作棚拍主要转到周末。",
+          "28人按约6分钟/人，09:00–11:48完成首轮；次一工作日提供初选，客户确认后三个工作日内交付成片。",
+          "软件公司比较旧照片、分批去棚和上门集中拍后选择上门。"
+        ],
+        "mapping": [
+          "三封询问 → 需要和利益不同的潜在细分。",
+          "周二/周三周中档 → 目标选择占用的稀缺资源。",
+          "灰色背景长袋与便携灯 → 支撑定位的真实服务能力。",
+          "初选链接与客户确认后三个工作日内交付 → 定位承诺的可兑现输出。"
+        ],
+        "boundary": "STP不是少接订单、改口号或一次成交成功。细分需要反映有意义的需求差异，目标选择伴随资源取舍，定位必须由实际容量与服务能力支撑，并在顾客可选替代方案中理解。小批反馈不能证明市场长期成功。",
+        "reflection": "如果三个群体都愿意买单，但争用同一套灯、助理和时间，你会怎样把“先服务谁”的取舍转成目标顾客能真实感知、且团队确实交付得出的价值？"
+      },
+      "referencesZh": [
+        {
+          "id": "albrecht-green-hoffman-2023-segmentation",
+          "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.1: Market Segmentation and Consumer Markets. OpenStax.",
+          "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+          "use": "支持按需要、行为或利益需求识别细分群体，说明相同人口身份也可能重视不同价值；本来源是现代教材。"
+        },
+        {
+          "id": "albrecht-green-hoffman-2023-positioning",
+          "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.6: Product Positioning. OpenStax.",
+          "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+          "use": "支持细分、目标选择与定位之间的联系，以及面向目标顾客、相对替代方案建立可信价值位置；不证明虚构案例效果或理论首创。"
+        }
+      ],
+      "title": "Where Should the Gray Backdrop Go on Tuesday?",
+      "summary": "A portrait studio has only one portable lighting kit and one assistant during the week, yet receives three different inquiries: a job-seeker headshot, a creative studio shoot, and individual staff headshots for a 28-person team. Lin Qiao must decide which need gets priority for limited weekday capacity and turn that choice into a service the studio can actually deliver.",
+      "storyParagraphs": [
+        "On Monday morning, Lin Qiao’s portrait studio receives three inquiries in quick succession. A job seeker wants an inexpensive headshot available the same day; a content creator wants a three-hour studio session with several looks; and a 28-person software company asks whether employees can stay close to their desks and still get consistent individual staff headshots taken at the office. All three want an answer that week.",
+        "Lin Qiao reviews the last two months of inquiries according to what customers actually value. Some prioritize speed and price, some want creative variety and control, while company clients more often ask for consistency, less time away from work, and unified delivery. She has only one portable lighting kit, one assistant, and a limited weekday editing workload, so she cannot promise the same scarce resources to all three needs at once.",
+        "She reserves the Tuesday booking slot for small company teams of 12–40 people and Wednesday for preparing proofs. There are two tiers: a half day for 12–30 people and a full day for 31–40, at about six minutes each. She accepts a booking only if editing time is also available within three business days after confirmation. Job-seeker headshots stay in other short slots, while creative shoots mainly move to weekends. The creator seeking three hours on Tuesday has to move to the weekend.",
+        "On the company page, she writes that each employee’s headshot will be taken at the client’s office, listing gray or white backdrops, consistent lighting and a common selection standard. Proofs arrive the next business day after the shoot; retouched final images arrive within three business days after client confirmation. She checks those delivery dates against her booking calendar before confirming the company’s reservation.",
+        "The 28-person software company compares three alternatives: continuing to use employees’ old photos, sending 28 people to a studio in separate trips, or arranging one concentrated on-site session. It chooses the on-site option. On Tuesday, Lin Qiao begins setting up lights and the gray backdrop at 08:30 and starts shooting at 09:00. At about six minutes per person, 28 people take 168 minutes, so the first pass finishes at 11:48. After leaving time for retakes and packing equipment, the team clears the meeting room before 12:30.",
+        "After the shoot, the gray backdrop is rolled into its long bag, labeled “On-site teams / 12–40 people.” On Wednesday, the company receives the proofing link. Back at her calendar, Lin Qiao keeps the creator’s weekend appointment; the next Tuesday half-day corporate slot remains blank, awaiting another inquiry. The individual-headshot price list still hangs at the studio entrance."
+      ],
+      "overall": "Segmentation, targeting, and positioning connect three decisions: identify groups with different needs or responses, choose whom to serve first while accepting real resource trade-offs, and use deliverable service capabilities to establish a clear value position relative to alternatives.",
+      "explanationParagraphs": [
+        "The three inquiry types differ in needs such as speed and price, creative freedom, consistency, and reduced time away from work. The studio prioritizes limited weekday time, the portable lights, and the assistant for 12–40-person company teams, moving some long creative sessions to weekends.",
+        "Positioning is supported by actual capacity and delivery: 28 people at six minutes each fit the half-day shoot, with proofs the next business day and retouched final images within three business days after client confirmation. One sale does not prove market success."
+      ],
+      "module": {
+        "intro": "Start with differences in customer needs, make an explicit resource trade-off, then check whether the target service can actually deliver its promise and create value relative to alternatives.",
+        "diagramTitle": "Why the Same Lighting Kit Goes to the Company Meeting Room on Tuesday",
+        "diagramSteps": [
+          "Identify three potential customer groups by their core needs",
+          "Check the studio’s lighting, assistant, shooting, and editing capacity",
+          "Choose 12–40-person small company teams as the weekday priority",
+          "Turn the target need into executable scheduling and delivery design",
+          "Help customers understand the value relative to old photos and separate studio trips"
+        ],
+        "diagramStepNotes": [
+          "Job seekers emphasize speed and price, creators emphasize variety, and companies emphasize consistency and less time away from work.",
+          "One portable lighting kit and one assistant are shared resources; this booking uses Tuesday for the shoot, Wednesday for proofs, and reserved editing time after confirmation.",
+          "12–30 people fit a half day and 31–40 a full day; long creative studio sessions are mainly shifted to weekends.",
+          "For 28 people at about six minutes each, the first pass runs 09:00–11:48; proofs arrive the next business day and retouched final images within three business days after client confirmation.",
+          "The software company compares old photos, separate studio trips, and concentrated on-site photography before choosing the on-site option."
+        ],
+        "mapping": [
+          "Three inquiries → potential segments with different needs and benefits sought.",
+          "Tuesday/Wednesday weekday slots → scarce resources consumed by the targeting decision.",
+          "Gray backdrop bag + portable lighting kit → real service capability supporting the position.",
+          "Proofing link and final delivery within three business days after client confirmation → deliverable outputs behind the positioning promise."
+        ],
+        "boundary": "STP is not merely taking fewer orders, changing a slogan, or succeeding with one sale. Segmentation must reflect meaningful differences in needs or responses, targeting requires resource trade-offs, and positioning must be supported by real capacity and service capability and understood relative to customer alternatives. Small-scale feedback does not prove long-term market success.",
+        "reflection": "If three groups are all willing to buy but compete for the same lighting kit, assistant, and time, how would you turn the trade-off in “whom to serve first” into value that target customers can actually perceive and the team can genuinely deliver?"
+      },
+      "references": [
+        {
+          "id": "albrecht-green-hoffman-2023-segmentation",
+          "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.1: Market Segmentation and Consumer Markets. OpenStax.",
+          "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+          "use": "Supports identifying market segments by differences in needs, behavior, or benefits sought and the idea that people with similar demographic identities may still value different things; this is a modern textbook source."
+        },
+        {
+          "id": "albrecht-green-hoffman-2023-positioning",
+          "citation": "Albrecht, M. G., Green, M., & Hoffman, L. (2023). Principles of Marketing, section 5.6: Product Positioning. OpenStax.",
+          "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+          "use": "Supports the relationship among segmentation, targeting, and positioning and establishing a credible value position for target customers relative to alternatives; it does not prove the fictional case’s effectiveness or claim to originate the theory."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "decision": "Approved for Publish",
+        "finalVersion": 2,
+        "edits": [
+          "law-business-science-mixed-13-pdc-a-edit-pass1-evidence.json",
+          "law-business-science-mixed-13-pdc-a-edit-pass2-evidence.json"
+        ],
+        "reviews": [
+          "review/module-batches/law-business-science-mixed-13-pdc-a-review-round1.json",
+          "review/module-batches/law-business-science-mixed-13-pdc-a-review-round2.json",
+          "review/module-batches/law-business-science-mixed-13-pdc-a-review-round3.json"
+        ],
+        "sourceIdentitiesFrozen": true,
+        "framework": "One editor applying 13 compressed editorial perspectives; not 13 independent agents or calls",
+        "finalReviewComplete": true,
+        "review": "law-business-science-mixed-13-pdc-a-review.md"
       }
     },
     {
