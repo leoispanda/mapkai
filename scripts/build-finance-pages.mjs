@@ -301,7 +301,7 @@ function layout({ lang, title, description, canonicalPath, body, structuredData,
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/styles.css?v=${appVersion}" />
   <link rel="stylesheet" href="/site-shell.css?v=${appVersion}" />
-  <script src="/site-shell.js?v=${appVersion}" defer></script>
+  <script src="/site-shell.js?v=music-dock-1" defer></script>
 </head>
 <body class="finance-static-page" data-language="${lang}" data-mapkai-page="finance">
   <header class="topbar finance-topbar" aria-label="${lang === "zh" ? "主导航" : "Primary navigation"}">
