@@ -9,9 +9,9 @@
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-5">
+  <link rel="stylesheet" href="/music/styles.css?v=music-8">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script src="/music/app.js?v=music-7" defer></script>
+  <script src="/music/app.js?v=music-8" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -29,7 +29,7 @@
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
         <div><h2 id="library-title" data-i18n="library">歌曲列表</h2><p id="track-count" class="library-count" aria-live="polite">正在载入歌曲…</p></div>
-        <div class="library-actions"><label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="搜索歌曲…" data-placeholder="search"></label><button id="manage-music" type="button" class="button secondary"><span aria-hidden="true">＋</span><span data-i18n="manage">管理歌曲</span></button></div>
+        <div class="library-actions"><label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="搜索歌曲…" data-placeholder="search"></label><button id="create-music" type="button" class="button primary" data-i18n="createSong">制作歌曲</button><button id="manage-music" type="button" class="button secondary"><span aria-hidden="true">＋</span><span data-i18n="manage">管理歌曲</span></button></div>
       </div>
       <p id="library-status" class="library-status" role="status" hidden></p>
       <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">暂时无法载入歌单，请再试一次。</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
@@ -40,6 +40,29 @@
     <noscript><p class="library-error">请启用 JavaScript 以载入歌曲。 / Enable JavaScript to load the collection.</p></noscript>
     <footer class="music-footer"><div><span>MapKAI Music</span></div><a href="/" data-i18n="home">回到 MapKAI ↗</a></footer>
   </main>
+  <dialog id="music-composer" class="composer-dialog" aria-labelledby="composer-title" aria-describedby="composer-intro">
+    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / CREATE</p><h2 id="composer-title" data-i18n="createSong">制作歌曲</h2></div><button id="close-composer" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
+    <p id="composer-intro" class="form-note" data-i18n="composerIntro">先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。</p>
+    <p class="form-note composer-privacy" data-i18n="composerPrivacy">你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。</p>
+    <form id="composer-form" novalidate>
+      <label for="composer-song-title" data-i18n="songTitle">歌名</label><input id="composer-song-title" maxlength="120" required value="Dutch Horizons — Rock Version">
+      <label for="composer-theme" data-i18n="composerTheme">想法或主题</label><textarea id="composer-theme" maxlength="1000" rows="3" required>A hopeful road trip through the Netherlands, weaving the place names Amsterdam, Rotterdam, Utrecht, Delft, Haarlem, Leiden, Groningen, and Maastricht into original lyrics about curiosity and discovery.</textarea>
+      <div class="composer-fields">
+        <div><label for="composer-language" data-i18n="songLanguage">歌曲语言</label><select id="composer-language"><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option><option value="zh">中文 (ZH)</option></select></div>
+        <div><label for="composer-style" data-i18n="composerStyle">音乐风格</label><select id="composer-style"><option value="rock" selected data-i18n="styleRock">摇滚</option><option value="symphonic" data-i18n="styleSymphonic">交响</option><option value="folk-rap" data-i18n="styleFolkRap">民谣说唱</option><option value="acoustic" data-i18n="styleAcoustic">原声</option></select></div>
+        <div><label for="composer-duration" data-i18n="composerDuration">时长</label><select id="composer-duration"><option value="60" data-i18n="durationOne">1 分钟</option><option value="120" selected data-i18n="durationTwo">2 分钟</option></select></div>
+      </div>
+      <label for="composer-lyrics" data-i18n="composerLyrics">原创歌词（可选）</label><textarea id="composer-lyrics" maxlength="2400" rows="4" placeholder="留空即可按主题创作原创歌词。" data-placeholder="composerLyricsPlaceholder"></textarea>
+      <button id="prepare-prompt" type="submit" class="button primary" data-i18n="preparePrompt">生成创作说明</button>
+    </form>
+    <p id="composer-status" class="form-status" role="status" hidden></p>
+    <div id="composer-output" class="composer-output" hidden>
+      <label for="composer-prompt" data-i18n="composerPrompt">创作说明</label><textarea id="composer-prompt" rows="9" readonly aria-label="创作说明" data-aria="composerPrompt"></textarea>
+      <p id="composer-count" class="form-note"></p>
+      <div class="composer-actions"><button id="copy-prompt" type="button" class="button secondary" data-i18n="copyPrompt" disabled>复制创作说明</button><a class="button primary" href="https://elevenlabs.io/app/music/history" target="_blank" rel="noopener noreferrer" data-i18n="openCreator">打开音乐制作工具 ↗</a></div>
+      <p class="form-note composer-return" data-i18n="composerReturn">先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。</p>
+    </div>
+  </dialog>
   <dialog id="music-studio" aria-labelledby="studio-title">
     <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">上传歌曲</h2></div><button id="close-studio" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
     <p id="studio-checking" class="form-note" role="status" data-i18n="checking">正在打开歌曲工作室…</p>

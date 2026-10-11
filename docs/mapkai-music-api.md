@@ -11,6 +11,12 @@ MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does
 
 No new public bucket access, API key, paid provider call or binding is required. The production environment must contain all these existing bindings; preview environments without the shared cost database cannot upload or read songs.
 
+## Song creation entry
+
+The Music page's bilingual Create a song dialog prepares a prompt locally from the title, theme, language, style, 1- or 2-minute duration, and optional original lyrics. It validates the result against the provider's 4,100-character prompt limit. It does not send draft text to MapKAI or generate audio itself. Copying uses the clipboard with a selectable-text fallback; an explicit external link opens the existing music creator at `https://elevenlabs.io/app/music/history` without embedding draft text in its URL. The page names that destination and explains account-credit use before the user leaves. After generating and downloading a song in their own account, the owner can return to the existing authenticated upload studio.
+
+No music-generation API key is configured in MapKAI. This entry is a prompt-preparation and external-account workflow, not an in-site automatic generation connection. Public listening and owner upload controls retain their existing access rules. Draft text stays in the current page and is cleared on reload; only the existing interface-language preference is persisted.
+
 ## Endpoints
 
 - `GET /api/music/auth`: `{ owner, uploadConfigured }`. Checks the current founder cookie and binding availability without accessing R2.
