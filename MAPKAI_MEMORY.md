@@ -2792,3 +2792,22 @@ Verified:
 Push:
 - Scoped card source/public release committed and pushed as `5b8bd56`. Cloudflare production deployment `f45e1682-4378-47b3-8023-d1bd308943e3` succeeded. Both English songs are durably published and playable at `https://www.mapkai.com/music/`.
 - Preserved unrelated pending video-tool, local PDC, review and question-bank work. The site-wide approved v0.1.291 assets remain; Music uses the scoped `music-3` cache token.
+
+
+## 2026-10-11 - Add both Nederland songs to Music
+
+Changed:
+- The user explicitly requested both Nederland songs, superseding the earlier English-only collection scope. Added `Nederland in Harmony` and `Nederlandse Velden` as Dutch (`nl`) songs alongside the original two English songs.
+- Music catalog, public playback and authenticated owner uploads now accept declared `en` and `nl` languages. Unsupported or missing language declarations remain excluded. Upload studio includes a language selector with English as its default.
+- Replaced English-only page/Toolbox copy with generic song-card wording. Cards show English or Nederlands; original one-click playback, single-player switching, search and visitor access remain. Music uses scoped cache token `music-4`; Toolbox cache tokens were refreshed for the changed description.
+- Downloaded the two existing full MP3 songs through the user's signed-in ElevenLabs history. Imported via existing Cloudflare administrative access and the original audio/schema validation and shared storage cost guard. Both remote audio SHA256 hashes were verified before public metadata was written; no credentials or resource bindings changed.
+- New track IDs: `e4363fdb-2354-4e5c-98f0-9549b689b5c3` (Nederland in Harmony) and `ccb37c55-bae6-4f72-a80a-d1bc94e40ae0` (Nederlandse Velden). Private source provenance, idempotency manifest, import helper and screenshot remain in Git-excluded `.workspace-backups/music-nederland-import-2026-10-11/`.
+
+Verified:
+- Fourteen Music API tests passed, covering Dutch publication/list/playback, rejected or missing language declarations, unchanged English metadata and existing authentication/storage protections. Syntax, scoped whitespace, source/public mirrors and CSP checks passed.
+- Thirteen production core/Toolbox/Music assets matched the Git baseline before publishing. Seven changed public Music/Toolbox assets matched the new release afterward.
+- Live anonymous catalog contains exactly four songs with correct `en`/`nl` declarations; both original IDs remain. New byte-range audio reads match downloaded source bytes. Both Nederland songs played from their cards with complete audio readiness and about 120.03-second durations; switching paused the prior song. Paused final page screenshot was visually inspected.
+
+Push:
+- Scoped source/public/API release committed and pushed as `c134177`. Cloudflare production deployment `457933a5-7c9c-4451-b9de-765c27abf7a6` succeeded. Both Nederland songs are durably published and playable at `https://www.mapkai.com/music/`.
+- Preserved all unrelated pending video, PDC, review and question-bank work and the approved site-wide v0.1.291 baseline.
