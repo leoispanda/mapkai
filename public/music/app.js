@@ -3,16 +3,16 @@
 
   const copy = {
     zh: {
-      back: '← 返回 Toolbox', intro: '英文歌曲列表，点击即可播放。', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
+      back: '← 返回 Toolbox', intro: '英文歌曲小卡片，点击即可播放。', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
       libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有英文歌。', emptyCopy: '英文歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
       studioTitle: '上传英文歌', close: '关闭', checking: '正在打开歌曲工作室…', ownerIntro: '输入 MapKAI 管理密码，开始上传歌曲。', ownerCode: '管理密码', login: '打开工作室', unavailable: '暂时无法上传歌曲，请稍后再试。', uploadIntro: '这里只收录英文歌曲。从 ElevenLabs 下载后，在这里上传，即可加入公开歌曲列表。', chooseFile: '选择英文歌曲文件', fileFormats: 'MP3 / M4A / WAV · 每首最多 25 MB', preview: '上传前试听', songTitle: '歌名', songDescription: '一句介绍（可选）', titlePlaceholder: '给这首歌一个名字', descriptionPlaceholder: '这首歌的灵感，或你想说的话…', publishNote: '上传的英文歌曲会公开展示。请确认你有权分享这首作品。', progress: '上传进度', publish: '上传并加入列表',
-      loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', audioLabel: '播放 {title}', audioError: '暂时无法播放这首歌，请稍后再试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
+      loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', buffering: '正在缓冲：{title}', playSong: '播放', pauseSong: '暂停', loadingSong: '正在缓冲…', retrySong: '点击重试', audioLabel: '播放 {title}', pauseLabel: '暂停 {title}', cancelLabel: '停止载入 {title}', retryLabel: '重新播放 {title}', controlsLabel: '{title} 的播放控制', audioError: '暂时无法播放这首歌，点击卡片重试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
     },
     en: {
-      back: '← Back to Toolbox', intro: 'English songs. Choose one and press play.', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
+      back: '← Back to Toolbox', intro: 'English songs. Tap a card to listen.', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
       libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No English songs yet.', emptyCopy: 'English songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
       studioTitle: 'Upload an English song', close: 'Close', checking: 'Opening the music studio…', ownerIntro: 'Enter the MapKAI owner password to upload songs.', ownerCode: 'Owner password', login: 'Open the studio', unavailable: 'Uploads are temporarily unavailable. Please try again later.', uploadIntro: 'Only English songs belong here. Download your song from ElevenLabs, then upload it to the public song list.', chooseFile: 'Choose an English song file', fileFormats: 'MP3 / M4A / WAV · Up to 25 MB per song', preview: 'Listen before uploading', songTitle: 'Song title', songDescription: 'A few words (optional)', titlePlaceholder: 'Give your song a name', descriptionPlaceholder: 'The inspiration behind this song, or something you want to share…', publishNote: 'Uploaded English songs are public. Please make sure you have the right to share this work.', progress: 'Upload progress', publish: 'Upload to the list',
-      loading: 'Loading songs…', count: '{count} songs', filteredCount: '{shown} of {count} songs', playing: 'Now playing: {title}', audioLabel: 'Play {title}', audioError: 'This song cannot be played right now. Please try again later.', previewAudio: 'Preview selected song', authenticating: 'Opening the studio…', wrongCode: 'The owner password is incorrect. Please try again.', loginFailed: 'The studio could not be opened. Please try again later.', chooseFirst: 'Choose a song file first.', invalidFile: 'Choose an MP3, M4A, or WAV song file.', fileTooLarge: 'This song is over 25 MB. Please choose a smaller file.', emptyFile: 'This file is empty. Please choose another one.', addTitle: 'Please give your song a title.', uploading: 'Uploading your song. Please keep this page open…', publishing: 'File sent. Adding your song to the list…', uploaded: 'Your song is uploaded and in the public song list. You can upload another.', uploadedRefresh: 'Your song is uploaded. The song list could not be refreshed; please reload it later.', uploadFailed: 'The upload did not finish. Please try again.', sessionExpired: 'Enter the owner password again, then upload your song.', tooMany: 'Too many attempts. Please try again later.', titleLimit: 'The title can have up to 120 characters.', descriptionLimit: 'The description can have up to 500 characters.', storageFull: 'Your song could not be saved right now. Please try again later.', unknownOutcome: 'The connection was interrupted, so we cannot confirm the upload. Reload the song list first to check whether your song is already there.',
+      loading: 'Loading songs…', count: '{count} songs', filteredCount: '{shown} of {count} songs', playing: 'Now playing: {title}', buffering: 'Buffering: {title}', playSong: 'Play', pauseSong: 'Pause', loadingSong: 'Buffering…', retrySong: 'Tap to retry', audioLabel: 'Play {title}', pauseLabel: 'Pause {title}', cancelLabel: 'Stop loading {title}', retryLabel: 'Retry {title}', controlsLabel: 'Playback controls for {title}', audioError: 'This song cannot be played right now. Tap the card to retry.', previewAudio: 'Preview selected song', authenticating: 'Opening the studio…', wrongCode: 'The owner password is incorrect. Please try again.', loginFailed: 'The studio could not be opened. Please try again later.', chooseFirst: 'Choose a song file first.', invalidFile: 'Choose an MP3, M4A, or WAV song file.', fileTooLarge: 'This song is over 25 MB. Please choose a smaller file.', emptyFile: 'This file is empty. Please choose another one.', addTitle: 'Please give your song a title.', uploading: 'Uploading your song. Please keep this page open…', publishing: 'File sent. Adding your song to the list…', uploaded: 'Your song is uploaded and in the public song list. You can upload another.', uploadedRefresh: 'Your song is uploaded. The song list could not be refreshed; please reload it later.', uploadFailed: 'The upload did not finish. Please try again.', sessionExpired: 'Enter the owner password again, then upload your song.', tooMany: 'Too many attempts. Please try again later.', titleLimit: 'The title can have up to 120 characters.', descriptionLimit: 'The description can have up to 500 characters.', storageFull: 'Your song could not be saved right now. Please try again later.', unknownOutcome: 'The connection was interrupted, so we cannot confirm the upload. Reload the song list first to check whether your song is already there.',
     },
   };
   const $ = id => document.getElementById(id);
@@ -25,6 +25,8 @@
   let libraryPromise = null;
   let libraryFailed = false;
   let playingAudio = null;
+  let selectedCard = null;
+  let cardSequence = 0;
   let previewUrl = null;
   let uploading = false;
   let authenticating = false;
@@ -71,7 +73,7 @@
     document.querySelector('.brand').setAttribute('aria-label', next === 'zh' ? 'MapKAI 首页' : 'MapKAI home');
     $('tracks').setAttribute('aria-label', next === 'zh' ? '歌曲列表' : 'Songs');
     preview.setAttribute('aria-label', t('previewAudio'));
-    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music · powered by ElevenLabs。英文歌曲列表，点击即可播放。' : 'MapKAI Music · powered by ElevenLabs. English songs. Choose one and press play.';
+    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music · powered by ElevenLabs。英文歌曲小卡片，点击即可播放。' : 'MapKAI Music · powered by ElevenLabs. English songs. Tap a card to listen.';
     updateLibrary();
     status($('owner-status'), ownerStatus);
     status($('upload-status'), uploadStatus);
@@ -92,7 +94,16 @@
 
   function stopOtherPlayers(audio) {
     if (playingAudio && playingAudio !== audio) playingAudio.pause();
-    for (const card of cards.values()) if (card.audio !== audio && !card.audio.paused) card.audio.pause();
+    for (const card of cards.values()) {
+      if (card.audio === audio) selectedCard = card;
+      else {
+        card.playRequest += 1;
+        card.pending = false;
+        card.waiting = false;
+        card.audio.pause();
+      }
+    }
+    if (audio === preview) selectedCard = null;
     if (preview !== audio && !preview.paused) preview.pause();
     playingAudio = audio;
     updatePlaying();
@@ -100,13 +111,60 @@
 
   function updatePlaying() {
     let activeTrack = null;
+    let buffering = false;
     for (const card of cards.values()) {
-      const active = !card.audio.paused && !card.audio.ended;
+      const active = !card.audio.paused && !card.audio.ended && !card.audio.error;
+      const waiting = card.pending || (active && card.waiting);
+      const selected = card === selectedCard;
       card.element.classList.toggle('is-playing', active);
-      if (active) activeTrack = card.track;
+      card.element.classList.toggle('is-buffering', waiting);
+      card.element.classList.toggle('is-selected', selected);
+      card.audio.hidden = !selected;
+      card.button.setAttribute('aria-expanded', String(selected));
+      card.button.setAttribute('aria-label', t(waiting ? 'cancelLabel' : active ? 'pauseLabel' : !card.error.hidden ? 'retryLabel' : 'audioLabel', { title: card.track.title }));
+      card.icon.dataset.state = waiting ? 'loading' : active ? 'pause' : 'play';
+      card.action.textContent = t(waiting ? 'loadingSong' : active ? 'pauseSong' : !card.error.hidden ? 'retrySong' : 'playSong');
+      if (active || waiting) { activeTrack = card.track; buffering = waiting; }
     }
     $('library-status').hidden = !activeTrack;
-    if (activeTrack) $('library-status').textContent = t('playing', { title: activeTrack.title });
+    if (activeTrack) $('library-status').textContent = t(buffering ? 'buffering' : 'playing', { title: activeTrack.title });
+  }
+
+  function playbackError(card) {
+    card.pending = false;
+    card.waiting = false;
+    card.error.textContent = t('audioError');
+    card.error.hidden = false;
+    updatePlaying();
+  }
+
+  async function togglePlayback(card) {
+    if (card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error)) {
+      card.playRequest += 1;
+      card.pending = false;
+      card.waiting = false;
+      card.audio.pause();
+      updatePlaying();
+      return;
+    }
+    selectedCard = card;
+    stopOtherPlayers(card.audio);
+    card.error.hidden = true;
+    if (card.audio.error) card.audio.load();
+    const request = ++card.playRequest;
+    card.pending = true;
+    updatePlaying();
+    try {
+      await card.audio.play();
+      if (request !== card.playRequest) return;
+      card.pending = false;
+      updatePlaying();
+    } catch (error) {
+      // Switching tracks or pausing cancels the earlier request without showing an error.
+      if (request !== card.playRequest) return;
+      if (error.name === 'AbortError' && card.audio.paused) { card.pending = false; card.waiting = false; updatePlaying(); }
+      else playbackError(card);
+    }
   }
 
   function duration(seconds) {
@@ -124,25 +182,28 @@
 
   function createCard(track) {
     const element = document.createElement('li');
-    element.className = 'track-row';
-    const heading = document.createElement('div');
-    heading.className = 'track-heading';
-    const number = document.createElement('span');
-    number.className = 'track-number'; number.setAttribute('aria-hidden', 'true');
-    const content = document.createElement('div'); content.className = 'track-copy';
-    const title = document.createElement('h3'); title.textContent = track.title;
-    const description = document.createElement('p'); description.className = 'track-description'; description.textContent = track.description; description.hidden = !track.description;
-    const meta = document.createElement('p'); meta.className = 'track-meta';
-    content.append(title, description, meta); heading.append(number, content);
-    const audio = document.createElement('audio'); audio.controls = true; audio.preload = 'none'; audio.src = track.url;
+    element.className = 'track-card';
+    const button = document.createElement('button'); button.type = 'button'; button.className = 'track-button';
+    const icon = document.createElement('span'); icon.className = 'track-icon'; icon.setAttribute('aria-hidden', 'true'); icon.dataset.state = 'play';
+    const content = document.createElement('span'); content.className = 'track-copy';
+    const title = document.createElement('span'); title.className = 'track-title'; title.textContent = track.title;
+    const description = document.createElement('span'); description.className = 'track-description'; description.textContent = track.description; description.hidden = !track.description;
+    const meta = document.createElement('span'); meta.className = 'track-meta';
+    const action = document.createElement('span'); action.className = 'track-action'; action.setAttribute('aria-hidden', 'true');
+    content.append(title, description, meta, action); button.append(icon, content);
+    const audio = document.createElement('audio'); audio.controls = true; audio.preload = 'none'; audio.src = track.url; audio.hidden = true;
+    audio.id = `song-controls-${++cardSequence}`; button.setAttribute('aria-controls', audio.id);
     const error = document.createElement('p'); error.className = 'track-error'; error.setAttribute('role', 'status'); error.hidden = true;
-    element.append(heading, audio, error);
-    const card = { element, audio, error, title, description, meta, number, track };
-    audio.addEventListener('play', () => stopOtherPlayers(audio));
-    audio.addEventListener('pause', updatePlaying);
-    audio.addEventListener('ended', updatePlaying);
-    audio.addEventListener('loadedmetadata', () => { error.hidden = true; trackMetadata(card); });
-    audio.addEventListener('error', () => { error.textContent = t('audioError'); error.hidden = false; });
+    element.append(button, audio, error);
+    const card = { element, button, icon, action, audio, error, title, description, meta, track, pending: false, waiting: false, playRequest: 0 };
+    button.addEventListener('click', () => togglePlayback(card));
+    audio.addEventListener('play', () => { if (audio.paused) return; error.hidden = true; card.waiting = true; stopOtherPlayers(audio); });
+    audio.addEventListener('playing', () => { if (audio.paused) return; card.pending = false; card.waiting = false; error.hidden = true; updatePlaying(); });
+    audio.addEventListener('waiting', () => { if (audio.paused) return; card.waiting = true; updatePlaying(); });
+    audio.addEventListener('pause', () => { if (!audio.paused) return; card.pending = false; card.waiting = false; updatePlaying(); });
+    audio.addEventListener('ended', () => { card.pending = false; card.waiting = false; updatePlaying(); });
+    audio.addEventListener('loadedmetadata', () => { trackMetadata(card); updatePlaying(); });
+    audio.addEventListener('error', () => playbackError(card));
     trackMetadata(card);
     return card;
   }
@@ -151,7 +212,7 @@
     tracks.sort((first, second) => (Date.parse(second.createdAt) || 0) - (Date.parse(first.createdAt) || 0));
     const ids = new Set(tracks.map(track => track.id));
     for (const [id, card] of cards) {
-      if (!ids.has(id)) { card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }
+      if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) selectedCard = null; card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }
     }
     for (const [index, track] of tracks.entries()) {
       let card = cards.get(track.id);
@@ -161,12 +222,11 @@
         card.title.textContent = track.title;
         card.description.textContent = track.description;
         card.description.hidden = !track.description;
-        if (card.audio.src !== track.url) { card.audio.pause(); card.audio.src = track.url; }
+        if (card.audio.src !== track.url) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
         trackMetadata(card);
       }
       const current = $('tracks').children[index];
       if (current !== card.element) $('tracks').insertBefore(card.element, current || null);
-      card.number.textContent = String(index + 1).padStart(2, '0');
     }
     updateLibrary();
   }
@@ -177,9 +237,9 @@
     for (const card of cards.values()) {
       const matches = `${card.track.title} ${card.track.description}`.toLocaleLowerCase().includes(query);
       card.element.hidden = !matches;
-      if (!matches && !card.audio.paused) card.audio.pause();
+      if (!matches && (card.pending || !card.audio.paused)) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); }
       if (matches) shown += 1;
-      card.audio.setAttribute('aria-label', t('audioLabel', { title: card.track.title }));
+      card.audio.setAttribute('aria-label', t('controlsLabel', { title: card.track.title }));
       if (!card.error.hidden) card.error.textContent = t('audioError');
     }
     $('track-count').textContent = !loaded ? (libraryFailed ? '—' : t('loading')) : t(query ? 'filteredCount' : 'count', { count: tracks.length, shown });
