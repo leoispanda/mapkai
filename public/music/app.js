@@ -3,15 +3,15 @@
 
   const copy = {
     zh: {
-      back: '← 返回 Toolbox', intro: '英文歌曲小卡片，点击即可播放。', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
-      libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有英文歌。', emptyCopy: '英文歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
-      studioTitle: '上传英文歌', close: '关闭', checking: '正在打开歌曲工作室…', ownerIntro: '输入 MapKAI 管理密码，开始上传歌曲。', ownerCode: '管理密码', login: '打开工作室', unavailable: '暂时无法上传歌曲，请稍后再试。', uploadIntro: '这里只收录英文歌曲。从 ElevenLabs 下载后，在这里上传，即可加入公开歌曲列表。', chooseFile: '选择英文歌曲文件', fileFormats: 'MP3 / M4A / WAV · 每首最多 25 MB', preview: '上传前试听', songTitle: '歌名', songDescription: '一句介绍（可选）', titlePlaceholder: '给这首歌一个名字', descriptionPlaceholder: '这首歌的灵感，或你想说的话…', publishNote: '上传的英文歌曲会公开展示。请确认你有权分享这首作品。', progress: '上传进度', publish: '上传并加入列表',
+      back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
+      libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有歌曲。', emptyCopy: '歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
+      studioTitle: '上传歌曲', close: '关闭', checking: '正在打开歌曲工作室…', ownerIntro: '输入 MapKAI 管理密码，开始上传歌曲。', ownerCode: '管理密码', login: '打开工作室', unavailable: '暂时无法上传歌曲，请稍后再试。', uploadIntro: '从 ElevenLabs 下载歌曲后，在这里上传，即可加入公开歌曲列表。', chooseFile: '选择歌曲文件', fileFormats: 'MP3 / M4A / WAV · 每首最多 25 MB', preview: '上传前试听', songTitle: '歌名', songLanguage: '歌曲语言', chooseLanguage: '请选择英语或荷兰语。', songDescription: '一句介绍（可选）', titlePlaceholder: '给这首歌一个名字', descriptionPlaceholder: '这首歌的灵感，或你想说的话…', publishNote: '上传的歌曲会公开展示。请确认你有权分享这首作品。', progress: '上传进度', publish: '上传并加入列表',
       loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', buffering: '正在缓冲：{title}', playSong: '播放', pauseSong: '暂停', loadingSong: '正在缓冲…', retrySong: '点击重试', audioLabel: '播放 {title}', pauseLabel: '暂停 {title}', cancelLabel: '停止载入 {title}', retryLabel: '重新播放 {title}', controlsLabel: '{title} 的播放控制', audioError: '暂时无法播放这首歌，点击卡片重试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
     },
     en: {
-      back: '← Back to Toolbox', intro: 'English songs. Tap a card to listen.', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
-      libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No English songs yet.', emptyCopy: 'English songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
-      studioTitle: 'Upload an English song', close: 'Close', checking: 'Opening the music studio…', ownerIntro: 'Enter the MapKAI owner password to upload songs.', ownerCode: 'Owner password', login: 'Open the studio', unavailable: 'Uploads are temporarily unavailable. Please try again later.', uploadIntro: 'Only English songs belong here. Download your song from ElevenLabs, then upload it to the public song list.', chooseFile: 'Choose an English song file', fileFormats: 'MP3 / M4A / WAV · Up to 25 MB per song', preview: 'Listen before uploading', songTitle: 'Song title', songDescription: 'A few words (optional)', titlePlaceholder: 'Give your song a name', descriptionPlaceholder: 'The inspiration behind this song, or something you want to share…', publishNote: 'Uploaded English songs are public. Please make sure you have the right to share this work.', progress: 'Upload progress', publish: 'Upload to the list',
+      back: '← Back to Toolbox', intro: 'Tap a song card to listen.', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
+      libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No songs yet.', emptyCopy: 'Songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
+      studioTitle: 'Upload a song', close: 'Close', checking: 'Opening the music studio…', ownerIntro: 'Enter the MapKAI owner password to upload songs.', ownerCode: 'Owner password', login: 'Open the studio', unavailable: 'Uploads are temporarily unavailable. Please try again later.', uploadIntro: 'Download your song from ElevenLabs, then upload it here to join the public song list.', chooseFile: 'Choose a song file', fileFormats: 'MP3 / M4A / WAV · Up to 25 MB per song', preview: 'Listen before uploading', songTitle: 'Song title', songLanguage: 'Song language', chooseLanguage: 'Choose English or Dutch.', songDescription: 'A few words (optional)', titlePlaceholder: 'Give your song a name', descriptionPlaceholder: 'The inspiration behind this song, or something you want to share…', publishNote: 'Uploaded songs are public. Please make sure you have the right to share this work.', progress: 'Upload progress', publish: 'Upload to the list',
       loading: 'Loading songs…', count: '{count} songs', filteredCount: '{shown} of {count} songs', playing: 'Now playing: {title}', buffering: 'Buffering: {title}', playSong: 'Play', pauseSong: 'Pause', loadingSong: 'Buffering…', retrySong: 'Tap to retry', audioLabel: 'Play {title}', pauseLabel: 'Pause {title}', cancelLabel: 'Stop loading {title}', retryLabel: 'Retry {title}', controlsLabel: 'Playback controls for {title}', audioError: 'This song cannot be played right now. Tap the card to retry.', previewAudio: 'Preview selected song', authenticating: 'Opening the studio…', wrongCode: 'The owner password is incorrect. Please try again.', loginFailed: 'The studio could not be opened. Please try again later.', chooseFirst: 'Choose a song file first.', invalidFile: 'Choose an MP3, M4A, or WAV song file.', fileTooLarge: 'This song is over 25 MB. Please choose a smaller file.', emptyFile: 'This file is empty. Please choose another one.', addTitle: 'Please give your song a title.', uploading: 'Uploading your song. Please keep this page open…', publishing: 'File sent. Adding your song to the list…', uploaded: 'Your song is uploaded and in the public song list. You can upload another.', uploadedRefresh: 'Your song is uploaded. The song list could not be refreshed; please reload it later.', uploadFailed: 'The upload did not finish. Please try again.', sessionExpired: 'Enter the owner password again, then upload your song.', tooMany: 'Too many attempts. Please try again later.', titleLimit: 'The title can have up to 120 characters.', descriptionLimit: 'The description can have up to 500 characters.', storageFull: 'Your song could not be saved right now. Please try again later.', unknownOutcome: 'The connection was interrupted, so we cannot confirm the upload. Reload the song list first to check whether your song is already there.',
     },
   };
@@ -73,7 +73,7 @@
     document.querySelector('.brand').setAttribute('aria-label', next === 'zh' ? 'MapKAI 首页' : 'MapKAI home');
     $('tracks').setAttribute('aria-label', next === 'zh' ? '歌曲列表' : 'Songs');
     preview.setAttribute('aria-label', t('previewAudio'));
-    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music · powered by ElevenLabs。英文歌曲小卡片，点击即可播放。' : 'MapKAI Music · powered by ElevenLabs. English songs. Tap a card to listen.';
+    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music · powered by ElevenLabs。歌曲小卡片，点击即可播放。' : 'MapKAI Music · powered by ElevenLabs. Tap a song card to listen.';
     updateLibrary();
     status($('owner-status'), ownerStatus);
     status($('upload-status'), uploadStatus);
@@ -84,7 +84,7 @@
   }
 
   function safeTrack(raw) {
-    if (!raw || raw.language !== 'en' || typeof raw.id !== 'string' || typeof raw.title !== 'string' || typeof raw.url !== 'string') return null;
+    if (!raw || !['en', 'nl'].includes(raw.language) || typeof raw.id !== 'string' || typeof raw.title !== 'string' || typeof raw.url !== 'string') return null;
     try {
       const url = new URL(raw.url, location.href);
       if (url.origin !== location.origin || !['https:', 'http:'].includes(url.protocol)) return null;
@@ -177,7 +177,8 @@
   function trackMetadata(card) {
     const ext = String(card.track.filename || '').match(/\.(mp3|m4a|wav)$/i)?.[1]?.toUpperCase();
     const length = duration(card.audio.duration || card.track.durationSeconds);
-    card.meta.textContent = ['ElevenLabs', ext, length].filter(Boolean).join(' · ');
+    const songLanguage = card.track.language === 'nl' ? 'Nederlands' : 'English';
+    card.meta.textContent = [songLanguage, ext, length].filter(Boolean).join(' · ');
   }
 
   function createCard(track) {
@@ -353,7 +354,7 @@
 
   function setUploading(value) {
     uploading = value;
-    $('upload-form').querySelectorAll('input,textarea,button').forEach(element => { element.disabled = value; });
+    $('upload-form').querySelectorAll('input,textarea,select,button').forEach(element => { element.disabled = value; });
     $('close-studio').disabled = value;
     $('upload-progress').hidden = !value;
     $('publish-song').textContent = t(value ? (uploadSent ? 'publishing' : 'uploading') : 'publish');
@@ -457,7 +458,8 @@
     const file = $('song-file').files[0];
     const title = $('song-title').value.trim();
     const description = $('song-description').value.trim();
-    const invalid = validateFile(file) || (!title ? 'addTitle' : title.length > 120 ? 'titleLimit' : description.length > 500 ? 'descriptionLimit' : null);
+    const songLanguage = $('song-language').value;
+    const invalid = validateFile(file) || (!['en', 'nl'].includes(songLanguage) ? 'chooseLanguage' : !title ? 'addTitle' : title.length > 120 ? 'titleLimit' : description.length > 500 ? 'descriptionLimit' : null);
     if (invalid) { setUploadStatus(invalid, 'error'); return; }
     preview.pause();
     uploadPercent = 0; uploadSent = false;
@@ -465,7 +467,7 @@
     setUploadStatus('uploading');
     setUploading(true);
     const data = new FormData();
-    data.append('file', file); data.append('title', title); data.append('description', description); data.append('language', 'en');
+    data.append('file', file); data.append('title', title); data.append('description', description); data.append('language', songLanguage);
     try {
       const track = await uploadSong(data);
       // Finish a pre-upload refresh before publishing the newly confirmed track in the page.

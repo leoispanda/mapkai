@@ -9,7 +9,7 @@ const builtins = [
   { id: 'pdc', name: 'PDC Decision Room', description: 'Explore choices and next steps from different perspectives.', category: 'think', url: '/toolbox/pdc', icon: 'compass' },
   { id: 'frameworks', name: 'Thinking Frameworks', description: 'Find a thinking framework that fits your question.', category: 'learn', url: '/toolbox/frameworks/en/', icon: 'framework' },
   { id: 'metronome', name: 'Running Metronome', description: 'Run to the beat and set your own cadence.', category: 'other', url: '/toolbox/metronome/en/', icon: 'pulse' },
-  { id: 'music', name: 'MapKAI Music', description: 'English song list · powered by ElevenLabs.', category: 'other', url: '/music/', icon: 'music' },
+  { id: 'music', name: 'MapKAI Music', description: 'Song cards · powered by ElevenLabs.', category: 'other', url: '/music/', icon: 'music' },
   { id: 'dishkai', name: 'Menu Reader · DishKAI', description: 'Scan a menu or paste its text to understand unfamiliar dishes.', category: 'other', url: '/toolbox/dishkai/en/', icon: 'dish' },
   { id: 'profile', name: 'Personal Profile · Turnpo', description: 'Explore Leo Yang’s background, learning, and projects.', category: 'other', url: 'https://www.turnpo.com/u/leo', icon: 'profile' },
 ];

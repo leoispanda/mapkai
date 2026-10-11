@@ -249,21 +249,51 @@ test('uploads reject wrong signatures, mismatched MIME and oversized requests be
   assert.deepEqual(calls, []);
 });
 
-test('uploads require owner-declared English and public list/playback hide other languages', async () => {
+test('a Dutch upload preserves its declaration and plays publicly beside existing English songs', async () => {
+  const { env, objects, install } = fixture();
+  const english = install(id, 'English song');
+  const englishBefore = objects.get(metadataKey(id)).bytes.slice();
+  const response = await tracks({ request: await uploadRequest(env, { title: 'Nederlandse Velden', language: 'nl' }), env });
+  assert.equal(response.status, 201);
+  const { track } = await response.json();
+  assert.equal(track.language, 'nl');
+  assert.equal(track.title, 'Nederlandse Velden');
+  const stored = JSON.parse(new TextDecoder().decode(objects.get(metadataKey(track.id)).bytes));
+  assert.equal(stored.language, 'nl');
+  assert.deepEqual(objects.get(metadataKey(id)).bytes, englishBefore);
+  const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+  assert.deepEqual(catalog.tracks.find(item => item.id === id), {
+    id, title: english.title, description: english.description, language: 'en',
+    url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
+  });
+  assert.deepEqual(catalog.tracks.find(item => item.id === track.id), track);
+  const playback = await audio({ request: new Request(`https://www.mapkai.com${track.url}`), env });
+  assert.equal(playback.status, 200);
+  assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+});
+
+test('uploads require a supported owner-declared language and public list/playback hide other languages', async () => {
   const { env, calls, objects, install } = fixture();
-  for (const language of ['zh', 'EN', '', null]) {
+  for (const language of ['zh', 'de', 'EN', 'NL', '', null]) {
     const response = await tracks({ request: await uploadRequest(env, { language }), env });
     assert.equal(response.status, 400);
   }
   assert.deepEqual(calls, []);
   install(id, 'English song');
-  const otherId = '22222222-2222-4222-8222-222222222222';
-  const other = install(otherId, 'Other language');
-  const bytes = encoder.encode(JSON.stringify({ ...other, language: 'zh' }));
-  objects.set(metadataKey(otherId), { key: metadataKey(otherId), bytes, etag: createHash('md5').update(bytes).digest('hex') });
+  const hiddenIds = [
+    ['22222222-2222-4222-8222-222222222222', 'zh'],
+    ['33333333-3333-4333-8333-333333333333', undefined],
+  ];
+  for (const [otherId, language] of hiddenIds) {
+    const other = install(otherId, 'Other language');
+    const bytes = encoder.encode(JSON.stringify({ ...other, language }));
+    objects.set(metadataKey(otherId), { key: metadataKey(otherId), bytes, etag: createHash('md5').update(bytes).digest('hex') });
+  }
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.map(track => [track.title, track.language]), [['English song', 'en']]);
-  assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${otherId}`), env })).status, 404);
+  for (const [otherId] of hiddenIds) {
+    assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${otherId}`), env })).status, 404);
+  }
 });
 
 const concat = (...values) => {

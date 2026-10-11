@@ -1,6 +1,6 @@
 # MapKAI Music storage and access
 
-MapKAI Music hosts uploaded English ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published English tracks. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language.
+MapKAI Music hosts uploaded English and Dutch ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published tracks in either supported language. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language.
 
 ## Existing production prerequisites
 
@@ -15,8 +15,8 @@ No new public bucket access, API key, paid provider call or binding is required.
 
 - `GET /api/music/auth`: `{ owner, uploadConfigured }`. Checks the current founder cookie and binding availability without accessing R2.
 - `POST /api/music/auth`: JSON `{ code }`. Uses the existing founder access code, with five attempts per client IP per 15 minutes. Success sets the signed founder cookie and returns `{ owner: true, uploadConfigured }`.
-- `GET /api/music/tracks[?cursor=...]`: `{ tracks, nextCursor }`, with up to 50 tracks per page. Each public track contains `id`, `title`, `description`, `language` (always `en`), `url`, `durationSeconds` (initially null), `createdAt` and `filename`. Stored metadata in any other language is excluded from public list and playback.
-- `POST /api/music/tracks`: multipart `file`, `title`, `description`, `language=en`. Other language values or a missing declaration are rejected. Requires the valid owner cookie and the same-origin `Origin` header. Success returns HTTP 201 `{ track }`; the uploaded song becomes public.
+- `GET /api/music/tracks[?cursor=...]`: `{ tracks, nextCursor }`, with up to 50 tracks per page. Each public track contains `id`, `title`, `description`, `language` (`en` or `nl`), `url`, `durationSeconds` (initially null), `createdAt` and `filename`. Stored metadata in any other language, or without a language declaration, is excluded from public list and playback. Existing English metadata is unchanged.
+- `POST /api/music/tracks`: multipart `file`, `title`, `description`, `language=en` or `language=nl`. Other language values or a missing declaration are rejected. Requires the valid owner cookie and the same-origin `Origin` header. Success returns HTTP 201 `{ track }`; the uploaded song becomes public.
 - `GET|HEAD /api/music/audio?id=...`: published audio only. Supports single byte ranges, HEAD and ETag validators for playback and seeking. Internal bucket keys cannot be requested.
 
 Audio files are limited to 25 MiB and MP3, M4A or WAV. Extension, declared MIME type and actual format structure are validated. MP3 requires two complete, consistent MPEG frames. Conventional M4A requires an audio codec, sample tables, timed samples and complete media data, and rejects video handlers; fragmented M4A containers are not supported. WAV requires audio format and nonempty data chunks. Validation checks the container structure and does not decode every sample. Titles are limited to 120 characters and descriptions to 1,000. The actual request stream is bounded, including requests without Content-Length.
@@ -31,4 +31,4 @@ Public JSON responses are uncached so new uploads appear immediately. Successful
 
 ## Verification
 
-Run `node --test scripts/music-api.test.mjs` with Node 22 or newer. Tests cover signed-cookie authorization, sign-in attempt limits, cross-origin rejection, file validation, durable upload ordering, simultaneous uploads, failed publication, pagination, protected R2 operations and audio seeking.
+Run `node --test scripts/music-api.test.mjs` with Node 22 or newer. Tests cover signed-cookie authorization, sign-in attempt limits, cross-origin rejection, declared English and Dutch publication/playback, unsupported-language exclusion, file validation, durable upload ordering, simultaneous uploads, failed publication, pagination, protected R2 operations and audio seeking.

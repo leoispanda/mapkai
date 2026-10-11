@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="MapKAI Music · powered by ElevenLabs。英文歌曲小卡片，点击即可播放。">
+  <meta name="description" content="MapKAI Music · powered by ElevenLabs。歌曲小卡片，点击即可播放。">
   <meta name="theme-color" content="#fffdf8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; base-uri 'self'; form-action 'self'; object-src 'none'">
   <title>MapKAI Music · powered by ElevenLabs</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-3">
+  <link rel="stylesheet" href="/music/styles.css?v=music-4">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script src="/music/app.js?v=music-3" defer></script>
+  <script src="/music/app.js?v=music-4" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -24,7 +24,7 @@
     <section class="music-heading" aria-labelledby="page-title">
       <h1 id="page-title">MapKAI <span>Music</span></h1>
       <p class="powered"><span class="eleven-mark" aria-hidden="true">Ⅱ</span> powered by ElevenLabs</p>
-      <p class="music-intro" data-i18n="intro">英文歌曲小卡片，点击即可播放。</p>
+      <p class="music-intro" data-i18n="intro">歌曲小卡片，点击即可播放。</p>
     </section>
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
@@ -34,14 +34,14 @@
       <p id="library-status" class="library-status" role="status" hidden></p>
       <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">暂时无法载入歌单，请再试一次。</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
       <ul id="tracks" class="track-list" role="list" aria-label="歌曲列表"></ul>
-      <div id="empty-library" class="empty-library" hidden><h3 data-i18n="emptyTitle">还没有英文歌。</h3><p data-i18n="emptyCopy">英文歌曲上传后，会在这里展示。</p></div>
+      <div id="empty-library" class="empty-library" hidden><h3 data-i18n="emptyTitle">还没有歌曲。</h3><p data-i18n="emptyCopy">歌曲上传后，会在这里展示。</p></div>
       <div id="empty-search" class="empty-search" hidden><h3 data-i18n="noResults">没有找到这首歌。</h3><p data-i18n="noResultsCopy">试试其他关键词，或看看完整歌单。</p><button id="clear-search" class="text-button" type="button" data-i18n="clearSearch">查看全部歌曲</button></div>
     </section>
     <noscript><p class="library-error">请启用 JavaScript 以载入歌曲。 / Enable JavaScript to load the collection.</p></noscript>
     <footer class="music-footer"><div><span>MapKAI Music</span><span class="footer-powered">powered by ElevenLabs</span></div><a href="/" data-i18n="home">回到 MapKAI ↗</a></footer>
   </main>
   <dialog id="music-studio" aria-labelledby="studio-title">
-    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">上传英文歌</h2></div><button id="close-studio" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
+    <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">上传歌曲</h2></div><button id="close-studio" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
     <p id="studio-checking" class="form-note" role="status" data-i18n="checking">正在打开歌曲工作室…</p>
     <form id="owner-form" hidden>
       <p class="form-note" data-i18n="ownerIntro">输入 MapKAI 管理密码，开始上传歌曲。</p>
@@ -51,13 +51,13 @@
     </form>
     <div id="upload-unavailable" class="studio-unavailable" hidden><p data-i18n="unavailable">暂时无法上传歌曲，请稍后再试。</p><button id="retry-studio" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
     <form id="upload-form" hidden>
-      <input type="hidden" name="language" value="en">
-      <p class="form-note" data-i18n="uploadIntro">这里只收录英文歌曲。从 ElevenLabs 下载后，在这里上传，即可加入公开歌曲列表。</p>
-      <label for="song-file" class="file-label"><span class="upload-symbol" aria-hidden="true">↑</span><strong data-i18n="chooseFile">选择英文歌曲文件</strong><span data-i18n="fileFormats">MP3 / M4A / WAV · 每首最多 25 MB</span><input id="song-file" type="file" accept=".mp3,.m4a,.wav,audio/mpeg,audio/mp4,audio/x-m4a,audio/wav,audio/x-wav" required></label>
+      <p class="form-note" data-i18n="uploadIntro">从 ElevenLabs 下载歌曲后，在这里上传，即可加入公开歌曲列表。</p>
+      <label for="song-file" class="file-label"><span class="upload-symbol" aria-hidden="true">↑</span><strong data-i18n="chooseFile">选择歌曲文件</strong><span data-i18n="fileFormats">MP3 / M4A / WAV · 每首最多 25 MB</span><input id="song-file" type="file" accept=".mp3,.m4a,.wav,audio/mpeg,audio/mp4,audio/x-m4a,audio/wav,audio/x-wav" required></label>
       <div id="file-preview" class="file-preview" hidden><p id="selected-file"></p><span class="preview-label" data-i18n="preview">上传前试听</span><audio id="preview-audio" controls preload="metadata"></audio></div>
       <label for="song-title" data-i18n="songTitle">歌名</label><input id="song-title" maxlength="120" required placeholder="给这首歌一个名字" data-placeholder="titlePlaceholder">
+      <label for="song-language" data-i18n="songLanguage">歌曲语言</label><select id="song-language" name="language" required><option value="en" selected>English (EN)</option><option value="nl">Nederlands (NL)</option></select>
       <label for="song-description" data-i18n="songDescription">一句介绍（可选）</label><textarea id="song-description" maxlength="500" rows="3" placeholder="这首歌的灵感，或你想说的话…" data-placeholder="descriptionPlaceholder"></textarea>
-      <p class="form-note publish-note" data-i18n="publishNote">上传的英文歌曲会公开展示。请确认你有权分享这首作品。</p>
+      <p class="form-note publish-note" data-i18n="publishNote">上传的歌曲会公开展示。请确认你有权分享这首作品。</p>
       <div id="upload-progress" class="upload-progress" hidden><progress id="progress-bar" max="100" value="0" aria-label="上传进度" data-aria="progress"></progress><span id="progress-label"></span></div>
       <p id="upload-status" class="form-status" role="status" hidden></p>
       <button id="publish-song" class="button primary" type="submit" data-i18n="publish">上传并加入列表</button>

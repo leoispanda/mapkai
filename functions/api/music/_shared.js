@@ -6,6 +6,7 @@ export const TRACK_PREFIX = 'music/tracks/';
 export const TRACK_SCHEMA = 'mapkai-music-track.v1';
 export const TRACK_ID_PATTERN = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
 export const AUDIO_TYPES = Object.freeze({ mp3: 'audio/mpeg', m4a: 'audio/mp4', wav: 'audio/wav' });
+export const SONG_LANGUAGES = Object.freeze(['en', 'nl']);
 export const RESPONSE_HEADERS = {
   'Cache-Control': 'no-store',
   'X-Content-Type-Options': 'nosniff',
@@ -85,7 +86,7 @@ export const metadataKey = id => `${TRACK_PREFIX}${id}.json`;
 export const audioKey = (id, extension) => `music/audio/${id}.${extension}`;
 
 export function safeTrack(track) {
-  if (track?.schemaVersion !== TRACK_SCHEMA || track.visibility !== 'PUBLIC' || track.language !== 'en' || !TRACK_ID_PATTERN.test(track.id || '')) return false;
+  if (track?.schemaVersion !== TRACK_SCHEMA || track.visibility !== 'PUBLIC' || !SONG_LANGUAGES.includes(track.language) || !TRACK_ID_PATTERN.test(track.id || '')) return false;
   if (!Object.hasOwn(AUDIO_TYPES, track.extension) || track.contentType !== AUDIO_TYPES[track.extension]
     || track.objectKey !== audioKey(track.id, track.extension)) return false;
   if (!Number.isSafeInteger(track.fileSize) || track.fileSize < 1 || track.fileSize > MAX_AUDIO_BYTES) return false;
@@ -110,7 +111,7 @@ export async function readTrack(bucket, id) {
   if (!object) return null;
   if (!Number.isSafeInteger(object.size) || object.size > 16 * 1024) throw new Error('Invalid stored track.');
   const track = await object.json();
-  if (track?.language !== 'en') return null;
+  if (!SONG_LANGUAGES.includes(track?.language)) return null;
   if (!safeTrack(track) || track.id !== id) throw new Error('Invalid stored track.');
   return track;
 }

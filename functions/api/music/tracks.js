@@ -1,5 +1,5 @@
 import { validateAudio } from './_audio-validation.js';
-import { MAX_AUDIO_BYTES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
+import { MAX_AUDIO_BYTES, SONG_LANGUAGES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
   musicBucket, publicTrack, readBoundedBody, readTrack, requireOwner } from './_shared.js';
 
 const clean = value => value.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, '').trim();
@@ -17,9 +17,9 @@ async function listTracks(request, env) {
     const track = await readTrack(bucket, id);
     return track ? publicTrack(track) : null;
   }));
-  const englishTracks = tracks.filter(Boolean);
-  englishTracks.sort((left, right) => right.createdAt.localeCompare(left.createdAt) || left.id.localeCompare(right.id));
-  return json({ tracks: englishTracks, nextCursor: page.truncated ? page.cursor : null });
+  const publicTracks = tracks.filter(Boolean);
+  publicTracks.sort((left, right) => right.createdAt.localeCompare(left.createdAt) || left.id.localeCompare(right.id));
+  return json({ tracks: publicTracks, nextCursor: page.truncated ? page.cursor : null });
 }
 
 async function uploadTrack(request, env) {
@@ -32,9 +32,10 @@ async function uploadTrack(request, env) {
   catch { throw inputError('The song upload could not be read.'); }
   if (form.getAll('file').length !== 1 || form.getAll('title').length > 1 || form.getAll('description').length > 1
     || form.getAll('language').length !== 1 || [...form.keys()].some(key => !['file', 'title', 'description', 'language'].includes(key))) {
-    throw inputError('Choose one English audio file per upload.');
+    throw inputError('Choose one audio file per upload and declare its language.');
   }
-  if (form.get('language') !== 'en') throw inputError('MapKAI Music currently accepts English songs only.');
+  const language = form.get('language');
+  if (!SONG_LANGUAGES.includes(language)) throw inputError('Choose English or Dutch as the song language.');
   const file = form.get('file');
   const { extension, contentType: audioType } = await validateAudio(file);
   const suppliedTitle = form.get('title');
@@ -51,7 +52,7 @@ async function uploadTrack(request, env) {
   const objectKey = audioKey(id, extension);
   const audio = await bucket.put(objectKey, file, { onlyIf: { etagDoesNotMatch: '*' }, httpMetadata: { contentType: audioType } });
   if (!audio || audio.size !== file.size) throw new Error('Audio upload did not complete.');
-  const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language: 'en', id, title, description, filename,
+  const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language, id, title, description, filename,
     createdAt: new Date().toISOString(), extension, contentType: audioType, fileSize: file.size, objectKey, audioEtag: audio.etag };
   // Publish only after the durable audio write succeeds. Each track has its own
   // immutable index object, so simultaneous uploads never overwrite a catalog.
