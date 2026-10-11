@@ -8,9 +8,9 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=0.1.291">
+  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=dishkai-private-20261011">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script type="module" src="/toolbox/dishkai/app.js?v=0.1.291"></script>
+  <script type="module" src="/toolbox/dishkai/app.js?v=dishkai-private-20261011"></script>
 </head>
 <body data-mapkai-page="toolbox">
   <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/dishkai/en/" lang="en">EN</a><span>/</span><a href="/toolbox/dishkai/" lang="zh" aria-current="true">中文</a></div></header>
@@ -23,8 +23,24 @@
     <div class="workspace">
       <section class="input-panel" aria-labelledby="input-title">
         <div class="panel-heading"><h2 id="input-title">你的菜单</h2><span class="small-label">DishKAI × MapKAI</span></div>
-        <form id="menu-form">
-          <fieldset id="menu-fields">
+        <section id="auth-panel" class="auth-panel" aria-labelledby="auth-title">
+          <h3 id="auth-title">主人专用菜单助手</h3>
+          <p class="auth-copy">DishKAI 目前仅供主人使用。输入访问密码后，就能在这里解读文字或照片菜单。</p>
+          <form id="auth-form">
+            <fieldset id="auth-fields" disabled>
+              <legend class="sr-only">主人登录</legend>
+              <label for="access-code">访问密码</label>
+              <input id="access-code" name="accessCode" type="password" autocomplete="current-password" required maxlength="256" aria-describedby="auth-status">
+              <button id="login" class="button primary auth-submit" type="submit">登录菜单助手</button>
+            </fieldset>
+          </form>
+          <p id="auth-status" class="status" role="status" aria-live="polite">正在检查登录状态…</p>
+          <button id="logout-retry" class="auth-secondary" type="button" hidden>重试退出</button>
+          <a class="auth-public-link" href="https://dishkai.com/login" target="_blank" rel="noopener noreferrer">查看 DishKAI 公开示例 ↗</a>
+        </section>
+        <div id="session-controls" class="session-controls" hidden><span>已登录主人账号</span><button id="logout" type="button">退出</button></div>
+        <form id="menu-form" hidden>
+          <fieldset id="menu-fields" disabled>
             <legend class="sr-only">菜单输入</legend>
             <div class="mode-switch" aria-label="输入方式"><button type="button" id="text-mode" aria-pressed="true" aria-controls="text-panel">粘贴文字</button><button type="button" id="photo-mode" aria-pressed="false" aria-controls="photo-panel">上传照片</button></div>
             <div id="text-panel"><label class="sr-only" for="menu-text">菜单文字</label><textarea id="menu-text" maxlength="12000" rows="7" placeholder="例如：&#10;Boeuf Bourguignon&#10;Pad Thai&#10;Carbonara" aria-describedby="text-hint"></textarea><div class="text-meta"><span id="text-hint">每行一道菜，保留菜单原文即可。</span><span id="text-count">0 / 12000</span></div></div>

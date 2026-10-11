@@ -21,6 +21,7 @@ const speakingLocal = process.env.MAPKAI_SPEAKING_LOCAL === "1"
   : null;
 
 const localFunctionRoutes = {
+  "/api/dishkai/auth": "functions/api/dishkai/auth.js",
   "/api/dishkai/analyze-menu-text": "functions/api/dishkai/analyze-menu-text.js",
   "/api/dishkai/analyze-menu-image": "functions/api/dishkai/analyze-menu-image.js",
   "/api/dishkai/image": "functions/api/dishkai/image.js",
