@@ -58,4 +58,18 @@
     // The main app and course own their theme state; standalone tools can follow other tabs.
     if (standalone && event.key === 'mapkaiTheme') { body.dataset.theme = readTheme(); refreshLabels(); }
   });
+  // Keep one body-mounted player alive while the main app changes learning routes.
+  const musicStyle = document.createElement('link');
+  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=dock-1';
+  document.head.append(musicStyle);
+  const startMusicDock = () => {
+    const script = document.createElement('script');
+    script.src = '/music/dock.js?v=dock-1'; document.head.append(script);
+  };
+  if (globalThis.MapKAILyricsSync) startMusicDock();
+  else {
+    const helper = document.createElement('script');
+    helper.src = '/music/lyrics-sync.js?v=music-14';
+    helper.onload = startMusicDock; document.head.append(helper);
+  }
 })();

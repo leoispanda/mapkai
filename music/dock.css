@@ -1,0 +1,342 @@
+/* Shared music dock. Keep every control scoped to avoid page-specific tool styles. */
+html body.music-dock-present {
+  padding-bottom:var(--music-dock-height,64px);
+  scroll-padding-bottom:calc(var(--music-dock-height,64px) + 16px);
+}
+html.music-dock-present,
+html:has(body.music-dock-present) {
+  scroll-padding-bottom:calc(var(--music-dock-height,64px) + 16px);
+}
+
+#mapkai-music-dock.music-dock {
+  position:fixed;
+  inset:auto 0 0;
+  z-index:50;
+  isolation:isolate;
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:0;
+  border:0;
+  border-top:1px solid var(--line,#e2e7ed);
+  border-radius:0;
+  background:var(--surface,#fff);
+  color:var(--ink,#0f172a);
+  box-shadow:0 -4px 20px #0f172a0a;
+  font-family:var(--site-font,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif);
+  font-size:13px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:normal;
+  text-align:left;
+}
+#mapkai-music-dock,
+#mapkai-music-dock *,
+#mapkai-music-dock *::before,
+#mapkai-music-dock *::after { box-sizing:border-box; }
+#mapkai-music-dock [hidden] { display:none!important; }
+#mapkai-music-dock .music-dock-inner {
+  width:100%;
+  max-width:1120px;
+  min-width:0;
+  margin:0 auto;
+  padding:8px max(20px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));
+}
+#mapkai-music-dock .music-dock-top {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  min-height:44px;
+  margin:0;
+}
+#mapkai-music-dock .music-dock-brand {
+  display:inline-flex;
+  align-items:center;
+  flex:0 0 auto;
+  min-height:44px;
+  margin:0;
+  padding:0;
+  color:var(--blue,#2563eb);
+  font-size:12px;
+  font-weight:650;
+  line-height:1.4;
+  letter-spacing:normal;
+  white-space:nowrap;
+  text-decoration:none;
+  background:none;
+  border:0;
+}
+#mapkai-music-dock .music-dock-title {
+  display:block;
+  flex:1 1 120px;
+  min-width:0;
+  margin:0;
+  overflow:hidden;
+  color:var(--ink,#0f172a);
+  font-size:13px;
+  font-weight:600;
+  line-height:1.5;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+#mapkai-music-dock .music-dock-ai {
+  display:block;
+  flex:0 1 auto;
+  min-width:0;
+  max-width:180px;
+  margin:0;
+  padding:2px 6px;
+  overflow:hidden;
+  border:1px solid var(--line,#e2e7ed);
+  border-radius:5px;
+  background:var(--surface-soft,#f1f5f9);
+  color:var(--muted,#64748b);
+  font-size:10px;
+  font-weight:500;
+  line-height:1.6;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+#mapkai-music-dock button {
+  display:inline-flex;
+  position:static;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  gap:6px;
+  width:auto;
+  min-width:44px;
+  max-width:100%;
+  min-height:44px;
+  height:auto;
+  margin:0;
+  padding:9px 12px;
+  border:1px solid var(--line,#e2e7ed);
+  border-radius:8px;
+  background:var(--surface,#fff);
+  color:var(--ink,#0f172a);
+  box-shadow:none;
+  font:inherit;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.4;
+  letter-spacing:normal;
+  text-transform:none;
+  white-space:nowrap;
+  cursor:pointer;
+  transform:none;
+  transition:background .15s,border-color .15s;
+  appearance:none;
+}
+#mapkai-music-dock button:hover { background:var(--surface-soft,#f1f5f9); }
+#mapkai-music-dock #music-dock-play.primary {
+  border-color:var(--blue,#2563eb);
+  background:var(--blue,#2563eb);
+  color:var(--surface,#fff);
+}
+#mapkai-music-dock #music-dock-play.primary:hover {
+  border-color:var(--blue-dark,#1d4ed8);
+  background:var(--blue-dark,#1d4ed8);
+}
+#mapkai-music-dock button:disabled,
+#mapkai-music-dock input:disabled,
+#mapkai-music-dock select:disabled { opacity:.5; cursor:default; }
+#mapkai-music-dock button:disabled:hover { background:var(--surface,#fff); }
+#mapkai-music-dock #music-dock-play.primary:disabled:hover { background:var(--blue,#2563eb); }
+#mapkai-music-dock #music-dock-collapse { margin-left:auto; }
+#mapkai-music-dock:not(.is-collapsed) #music-dock-mini-play { display:none; }
+#mapkai-music-dock :is(a,button,input,select):focus-visible {
+  outline:2px solid var(--blue,#2563eb);
+  outline-offset:2px;
+  border-radius:8px;
+}
+#mapkai-music-dock .music-dock-body { min-width:0; margin:0; padding:4px 0 0; }
+#mapkai-music-dock .music-dock-controls {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+  margin:0;
+  padding:0;
+}
+#mapkai-music-dock #music-dock-select {
+  display:block;
+  flex:1 1 220px;
+  width:auto;
+  min-width:0;
+  max-width:100%;
+  min-height:44px;
+  margin:0;
+  padding:9px 28px 9px 10px;
+  border:1px solid var(--line,#e2e7ed);
+  border-radius:8px;
+  background:var(--surface,#fff);
+  color:var(--ink,#0f172a);
+  box-shadow:none;
+  font:inherit;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:normal;
+  text-overflow:ellipsis;
+  cursor:pointer;
+}
+#mapkai-music-dock .music-dock-volume {
+  display:flex;
+  flex:0 1 142px;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+  max-width:100%;
+  min-height:44px;
+  margin:0;
+  padding:0;
+  color:var(--muted,#64748b);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.4;
+  white-space:nowrap;
+}
+#mapkai-music-dock #music-dock-volume {
+  display:block;
+  flex:1 1 80px;
+  width:80px;
+  min-width:0;
+  max-width:100%;
+  height:44px;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  accent-color:var(--blue,#2563eb);
+  cursor:pointer;
+}
+#mapkai-music-dock .music-dock-progress {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  margin:0;
+  padding:0;
+  color:var(--muted,#64748b);
+  font-size:11px;
+  font-variant-numeric:tabular-nums;
+  line-height:1.4;
+}
+#mapkai-music-dock :is(#music-dock-elapsed,#music-dock-duration) {
+  display:block;
+  flex:0 0 auto;
+  min-width:32px;
+  margin:0;
+  white-space:nowrap;
+}
+#mapkai-music-dock #music-dock-duration { text-align:right; }
+#mapkai-music-dock #music-dock-seek {
+  display:block;
+  flex:1 1 auto;
+  width:100%;
+  min-width:0;
+  height:44px;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  accent-color:var(--blue,#2563eb);
+  appearance:none;
+  -webkit-appearance:none;
+  cursor:pointer;
+}
+#mapkai-music-dock #music-dock-seek::-webkit-slider-runnable-track {
+  height:5px;
+  border-radius:999px;
+  background:linear-gradient(to right,var(--blue,#2563eb) 0%,var(--blue,#2563eb) var(--progress,0%),var(--line,#e2e7ed) var(--progress,0%),var(--line,#e2e7ed) 100%);
+}
+#mapkai-music-dock #music-dock-seek::-webkit-slider-thumb {
+  width:17px;
+  height:17px;
+  margin-top:-6px;
+  border:2px solid var(--surface,#fff);
+  border-radius:50%;
+  background:var(--blue,#2563eb);
+  box-shadow:0 0 0 1px var(--blue,#2563eb);
+  appearance:none;
+  -webkit-appearance:none;
+}
+#mapkai-music-dock #music-dock-seek::-moz-range-track {
+  height:5px;
+  border-radius:999px;
+  background:linear-gradient(to right,var(--blue,#2563eb) 0%,var(--blue,#2563eb) var(--progress,0%),var(--line,#e2e7ed) var(--progress,0%),var(--line,#e2e7ed) 100%);
+}
+#mapkai-music-dock #music-dock-seek::-moz-range-thumb {
+  width:13px;
+  height:13px;
+  border:2px solid var(--surface,#fff);
+  border-radius:50%;
+  background:var(--blue,#2563eb);
+  box-shadow:0 0 0 1px var(--blue,#2563eb);
+}
+#mapkai-music-dock .music-dock-lyrics {
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  min-height:24px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  color:var(--blue,#2563eb);
+  font-size:13px;
+  font-weight:600;
+  line-height:24px;
+  white-space:nowrap;
+}
+#mapkai-music-dock #music-dock-line {
+  display:inline-block;
+  margin:0;
+  padding:0;
+  white-space:nowrap;
+  transition:transform .2s linear;
+}
+#mapkai-music-dock.is-direct #music-dock-line,
+#mapkai-music-dock .music-dock-lyrics.is-direct #music-dock-line { transition:none; }
+#mapkai-music-dock .music-dock-status {
+  min-width:0;
+  margin:4px 0 0;
+  padding:0;
+  color:var(--muted,#64748b);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.5;
+  overflow-wrap:anywhere;
+}
+#mapkai-music-dock .music-dock-status:empty { display:none; }
+
+@media(max-width:540px) {
+  #mapkai-music-dock .music-dock-inner {
+    padding-top:6px;
+    padding-right:max(12px,env(safe-area-inset-right));
+    padding-left:max(12px,env(safe-area-inset-left));
+  }
+  #mapkai-music-dock .music-dock-top { flex-wrap:wrap; gap:6px 8px; }
+  #mapkai-music-dock .music-dock-brand { font-size:11px; }
+  #mapkai-music-dock .music-dock-title { flex-basis:80px; font-size:12px; }
+  #mapkai-music-dock .music-dock-ai { max-width:100px; }
+  #mapkai-music-dock button { padding-inline:10px; }
+  #mapkai-music-dock .music-dock-controls > button { flex:1 1 auto; }
+  #mapkai-music-dock #music-dock-select { flex-basis:calc(100% - 134px); font-size:16px; }
+  #mapkai-music-dock .music-dock-volume { flex:0 1 126px; }
+  #mapkai-music-dock .music-dock-progress { gap:8px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #mapkai-music-dock,
+  #mapkai-music-dock *,
+  #mapkai-music-dock *::before,
+  #mapkai-music-dock *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  #mapkai-music-dock .music-dock-lyrics { overflow-x:auto; scrollbar-width:thin; }
+  #mapkai-music-dock #music-dock-line { transform:none!important; }
+}

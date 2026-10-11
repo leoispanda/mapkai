@@ -210,6 +210,7 @@
     for (const card of cards.values()) {
       if (card.audio === audio) selectedCard = card;
       else {
+        card.restoreSeconds = null;
         card.playRequest += 1;
         card.pending = false;
         card.waiting = false;
@@ -257,6 +258,7 @@
   }
 
   async function togglePlayback(card) {
+    window.dispatchEvent(new Event('mapkai:music-intent'));
     if (card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error)) {
       card.playRequest += 1;
       card.pending = false;
@@ -269,9 +271,11 @@
   }
 
   async function startPlayback(card, { restart = false } = {}) {
+    window.dispatchEvent(new Event('mapkai:music-intent'));
     selectedCard = card;
     stopOtherPlayers(card.audio);
     card.error.hidden = true;
+    if (restart) card.restoreSeconds = null;
     if (card.audio.error) card.audio.load();
     if ((restart || card.audio.ended) && card.audio.readyState > 0) card.audio.currentTime = 0;
     const request = ++card.playRequest;
@@ -318,6 +322,8 @@
   function seekPlayback(card, value) {
     const position = Number(value);
     if (!card || !Number.isFinite(position) || !Number.isFinite(card.audio.duration) || card.audio.duration <= 0 || card.audio.error) return;
+    window.dispatchEvent(new Event('mapkai:music-intent'));
+    card.restoreSeconds = null;
     if (selectedCard !== card) {
       playlistMode = false;
       playlistComplete = false;
@@ -365,6 +371,7 @@
       playlistLyrics.lyricsText.hidden = false;
       playlistLyrics.lyricsUnavailable.hidden = true;
     }
+    window.dispatchEvent(new Event('mapkai:music-update'));
   }
 
   function playAll() {
@@ -514,7 +521,13 @@
     audio.addEventListener('waiting', () => { if (audio.paused) return; card.waiting = true; updatePlaying(); });
     audio.addEventListener('pause', () => { if (!audio.paused) return; card.pending = false; card.waiting = false; updatePlaying(); });
     audio.addEventListener('ended', () => finishPlayback(card));
-    audio.addEventListener('loadedmetadata', () => { trackMetadata(card); updatePlaying(); });
+    audio.addEventListener('loadedmetadata', () => {
+      if (Number.isFinite(card.restoreSeconds) && selectedCard === card && Number.isFinite(audio.duration) && audio.duration > 0) {
+        const seconds = card.restoreSeconds; card.restoreSeconds = null;
+        audio.currentTime = Math.min(seconds, audio.duration);
+      }
+      trackMetadata(card); updatePlaying();
+    });
     audio.addEventListener('timeupdate', () => { syncLyrics(card); updateCardProgress(card); if (card === selectedCard) updatePlaylist(); });
     const syncSeek = () => { syncLyrics(card, { immediate: true }); updateCardProgress(card); if (card === selectedCard) updatePlaylist({ immediate: true }); };
     audio.addEventListener('seeking', syncSeek);
@@ -543,7 +556,7 @@
         card.title.textContent = track.title;
         card.description.textContent = track.description;
         card.description.hidden = !track.description;
-        if (card.audio.src !== track.url) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
+        if (card.audio.src !== track.url) { card.restoreSeconds = null; card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
         trackMetadata(card);
       }
       const current = $('tracks').children[index];
@@ -734,6 +747,7 @@
     playbackVolume = Number($('playlist-volume').value) / 100;
     for (const card of cards.values()) card.audio.volume = playbackVolume;
     preview.volume = playbackVolume;
+    updatePlaylist({ immediate: true });
   });
   $('create-music').addEventListener('click', () => { composer.showModal(); $('composer-song-title').focus(); });
   $('close-composer').addEventListener('click', () => composer.close());
@@ -833,6 +847,45 @@
   });
 
   window.addEventListener('pagehide', revokePreview);
+  // The site-wide dock controls this page's existing audio and queue.
+  // It never creates a second playing audio on the Music page.
+  window.MapKAIMusicPage = Object.freeze({
+    snapshot: () => ({ tracks, track: selectedCard?.track || null, audio: selectedCard?.audio || null,
+      loaded, libraryFailed, pending: Boolean(selectedCard?.pending || selectedCard?.waiting),
+      failed: Boolean(selectedCard && !selectedCard.error.hidden), complete: playlistComplete, volume: playbackVolume,
+      pendingPosition: Number.isFinite(selectedCard?.restoreSeconds) ? selectedCard.restoreSeconds : null }),
+    load: loadLibrary,
+    toggle: () => selectedCard && !playlistComplete ? togglePlayback(selectedCard) : playAll(),
+    pause: () => {
+      for (const card of cards.values()) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); }
+      updatePlaying();
+    },
+    move: movePlaylist,
+    play: id => {
+      const card = cards.get(id); if (!card) return;
+      playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
+      startPlayback(card, { restart: true });
+    },
+    seek: value => seekPlayback(selectedCard, value),
+    volume: value => {
+      if (!Number.isFinite(value)) return;
+      playbackVolume = Math.max(0, Math.min(1, value));
+      $('playlist-volume').value = Math.round(playbackVolume * 100);
+      for (const card of cards.values()) card.audio.volume = playbackVolume;
+      preview.volume = playbackVolume; updatePlaylist({ immediate: true });
+    },
+    restore: (id, seconds) => {
+      const card = cards.get(id); if (!card || !Number.isFinite(seconds) || seconds < 0) return;
+      playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
+      selectedCard = card; stopOtherPlayers(card.audio);
+      card.restoreSeconds = seconds;
+      if (card.audio.readyState > 0 && Number.isFinite(card.audio.duration) && card.audio.duration > 0) {
+        card.restoreSeconds = null; card.audio.currentTime = Math.min(seconds, card.audio.duration);
+      } else card.audio.load();
+      updatePlaying();
+    },
+  });
+  window.dispatchEvent(new Event('mapkai:music-ready'));
   applyLanguage(language);
   loadLibrary();
 })();
