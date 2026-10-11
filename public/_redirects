@@ -26,4 +26,5 @@
 /speaking/ /speaking/index.html 200
 /speaking/en /speaking/en/index.html 200
 /speaking/en/ /speaking/en/index.html 200
+/music /music/ 301
 /* /index.html 200

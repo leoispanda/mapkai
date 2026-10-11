@@ -90,6 +90,12 @@ for (const file of ['toolbox/frameworks/app.js', 'public/toolbox/frameworks/app.
   writeFileSync(path, readFileSync(path, 'utf8').replace(/(\.\/(?:data|diagrams|library|references|stories)\.js)(?:\?v=[^"']*)?/g, `$1?v=${version}`));
 }
 
+for (const file of ['music/index.html', 'public/music/index.html']) {
+  const path = resolve(repoRoot, file);
+  writeFileSync(path, updateAssetReferences(readFileSync(path, 'utf8'), version)
+    .replace(/(\/music\/(?:app\.js|styles\.css))(?:\?v=[^"']*)?/g, `$1?v=${version}`));
+}
+
 writeFileSync(versionPath, `${JSON.stringify({ version, updatedAt: new Date().toISOString() }, null, 2)}\n`);
 
 console.log(`Updated MapKAI asset version to v${version}.`);

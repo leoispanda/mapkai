@@ -37,6 +37,9 @@ const localFunctionRoutes = {
   "/api/pdc/latency-diagnostic": "functions/api/pdc/latency-diagnostic.js",
   "/api/factory/public-videos": "functions/api/factory/public-videos.js",
   "/api/factory/public-video": "functions/api/factory/public-video.js",
+  "/api/music/auth": "functions/api/music/auth.js",
+  "/api/music/tracks": "functions/api/music/tracks.js",
+  "/api/music/audio": "functions/api/music/audio.js",
 };
 
 const legacyRedirects = {

@@ -37,3 +37,9 @@
 /toolbox*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-cache
+
+/music*
+  ! Cache-Control
+  Cache-Control: no-cache
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

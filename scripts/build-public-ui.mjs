@@ -4,6 +4,7 @@ const root = new URL('../', import.meta.url);
 await import('./build-finance-pages.mjs');
 await import('./build-speaking.mjs');
 await import('./build-toolbox.mjs');
+await import('./build-music.mjs');
 for (const file of ['site-shell.css', 'site-shell.js', 'script.js', 'styles.css', 'finance-course.js', 'factory-review.html', 'factory-review.js']) {
   await cp(new URL(file, root), new URL(`public/${file}`, root));
 }

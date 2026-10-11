@@ -1,7 +1,7 @@
 /* Shared public-page chrome. Product modules retain their own language and app state. */
 (() => {
   const body = document.body;
-  const standalone = ['speaking', 'toolbox'].includes(body.dataset.mapkaiPage);
+  const standalone = ['speaking', 'toolbox', 'music'].includes(body.dataset.mapkaiPage);
   const language = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
   const readTheme = () => { try { return localStorage.getItem('mapkaiTheme') === 'dark' ? 'dark' : 'light'; } catch { return 'light'; } };
   const persistTheme = theme => { try { localStorage.setItem('mapkaiTheme', theme); } catch {} };

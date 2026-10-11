@@ -2755,3 +2755,21 @@ Verified:
 
 Push:
 - Scoped direct publication to main includes only this Toolbox entry and its record. Pending Music, video-tool, local PDC, review and candidate question-bank work stays outside the commit and website output.
+
+
+## 2026-10-11 - Add MapKAI Music English song list
+
+Changed:
+- Added `/music/` with MapKAI Music / powered by ElevenLabs branding, a compact numbered English-song list, manual audio playback, search and responsive Chinese/English controls. Added the entry to Toolbox.
+- Added an owner upload studio using the existing server-verified founder cookie. MP3, M4A and WAV files up to 25 MiB persist in the separate `music/` R2 namespace and become public only after complete audio and metadata writes.
+- Only owner-declared English songs (`language=en`) are accepted and shown. This is an editorial declaration, not automatic lyric detection. No existing ElevenLabs songs have been supplied or uploaded to production yet.
+- All storage operations use the existing shared cost guard. Existing video review assets, pending video work and candidate question banks remain separate. Root/public Music and shared shell files are synchronized; normal public builds include Music.
+
+Verified:
+- Production core assets matched the approved local v0.1.291 snapshot before this change; existing founder secret, D1 and private R2 bindings were verified without exposing credentials.
+- All 13 API checks passed, covering owner authentication, same-origin writes, English-only metadata, concurrent publication, failed writes, cost protection and byte-range playback. Real encoded MP3, M4A and WAV validation passed.
+- Isolated local Cloudflare storage/browser verification passed: owner login, file preview, durable upload, reload, public song list and playback. The final numbered list fits 320 px and sorts the newest upload first. Test audio remained in local-only storage.
+- Public Functions compiled. Source/deployment mirrors and the existing map content-security check passed.
+
+Push:
+- Ready for the authorized direct commit and push. Final Git and live production verification are reported in the delivery response.

@@ -9,11 +9,13 @@ const builtins = [
   { id: 'pdc', name: 'PDC 决策室', description: '从不同角度梳理选择与下一步。', category: 'think', url: '/toolbox/pdc', icon: 'compass' },
   { id: 'frameworks', name: '思维框架', description: '查找适合问题的思维框架。', category: 'learn', url: '/toolbox/frameworks/', icon: 'framework' },
   { id: 'metronome', name: '跑步节拍器', description: '跟随节拍跑步，自由调整步频。', category: 'other', url: '/toolbox/metronome/', icon: 'pulse' },
+  { id: 'music', name: 'MapKAI Music', description: '英文歌曲列表 · powered by ElevenLabs。', category: 'other', url: '/music/', icon: 'music' },
   { id: 'dishkai', name: '菜单助手 · DishKAI', description: '拍菜单或贴文字，看懂陌生菜名。', category: 'other', url: '/toolbox/dishkai/', icon: 'dish' },
   { id: 'profile', name: '个人主页 · Turnpo', description: '了解 Leo Yang 的经历、学习与项目。', category: 'other', url: 'https://www.turnpo.com/u/leo', icon: 'profile' },
 ];
 const icons = {
   profile: '<circle cx="16" cy="10" r="5"/><path d="M6 28v-3a10 10 0 0 1 20 0v3"/>',
+  music: '<path d="M13 23V7l14-3v16M13 12l14-3"/><ellipse cx="9" cy="23" rx="4" ry="3"/><ellipse cx="23" cy="20" rx="4" ry="3"/>',
   framework: '<rect x="4" y="4" width="10" height="10" rx="2"/><rect x="18" y="4" width="10" height="10" rx="2"/><rect x="4" y="18" width="10" height="10" rx="2"/><path d="M18 20h10m-10 6h7"/>',
   dish: '<circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="5"/><path d="M2 5v8m3-8v8m-3-3h3M3.5 13v14M29 5v22m0-22c-4 4-4 10 0 10"/>',
   voice: '<path d="M8 15v2m4-8v14m4-18v22m4-18v14m4-8v2"/>',
