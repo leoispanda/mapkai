@@ -624,3 +624,65 @@ test('pagination retains all songs without overwriting metadata objects', async 
   assert.equal(page2.nextCursor, null);
   assert.equal(new Set([...page1.tracks, ...page2.tracks].map(track => track.id)).size, 53);
 });
+
+test('archiving one song hides its catalog and direct playback while retaining every object and other lyrics', async () => {
+  const { env, install, calls, objects } = fixture();
+  const archivedId = '6e294673-6d7c-4c16-8464-f43c88a4d3e2';
+  const otherIds = Array.from({ length: 7 }, (_, index) => `${String(index + 1).padStart(8, '0')}-1111-4111-8111-111111111111`);
+  const lyricsTiming = [{ line: 1, start: 1, end: 2 }];
+  const expected = [];
+  for (const [index, trackId] of otherIds.entries()) {
+    const lyrics = `[Verse]\nOriginal sung line ${index}`;
+    const stored = install(trackId, `Remaining song ${index}`, { lyrics, lyricsTiming,
+      lyricsTimingSha256: createHash('sha256').update(lyrics, 'utf8').digest('hex') });
+    const readable = await readTrack(env.MAPKAI_REVIEW_MEDIA, trackId);
+    expected.push(publicTrack(readable));
+    assert.equal(safeTrack(stored), true);
+  }
+  const archived = install(archivedId, 'Dutch Horizons — Rock Version', { visibility: 'ARCHIVED', language: 'nl',
+    lyrics: '[Verse]\nOriginal Dutch lyrics', lyricsTiming: [{ line: 1, start: 2, end: 3 }],
+    lyricsTimingSha256: createHash('sha256').update('[Verse]\nOriginal Dutch lyrics', 'utf8').digest('hex') });
+  const before = new Map([...objects].map(([key, object]) => [key, object.bytes.slice()]));
+  assert.equal(safeTrack(archived), false);
+  assert.equal(await readTrack(env.MAPKAI_REVIEW_MEDIA, archivedId), null);
+  const catalog = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+  assert.equal(catalog.status, 200);
+  const listed = await catalog.json();
+  assert.equal(listed.tracks.length, 7);
+  assert.deepEqual(listed.tracks.sort((a, b) => a.id.localeCompare(b.id)), expected.sort((a, b) => a.id.localeCompare(b.id)));
+  assert.equal(listed.nextCursor, null);
+  for (const method of ['GET', 'HEAD']) {
+    calls.length = 0;
+    const response = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${archivedId}`, {
+      method, headers: { Range: 'bytes=0-3' } }), env });
+    assert.equal(response.status, 404);
+    assert.deepEqual(calls.map(({ operation, key }) => ({ operation, key })), [{ operation: 'get', key: metadataKey(archivedId) }]);
+  }
+  for (const trackId of otherIds) {
+    const response = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${trackId}`), env });
+    assert.equal(response.status, 200);
+    assert.deepEqual(new Uint8Array(await response.arrayBuffer()), mp3Bytes);
+  }
+  assert.equal(objects.size, before.size);
+  for (const [key, bytes] of before) assert.deepEqual(objects.get(key).bytes, bytes);
+  assert.equal(calls.some(call => call.operation === 'put' || call.operation === 'delete'), false);
+});
+
+test('malformed archived records fail closed before accessing their audio objects', async () => {
+  for (const invalid of [
+    { schemaVersion: 'mapkai-music-track.v2' }, { id: '22222222-2222-4222-8222-222222222222' },
+    { objectKey: 'music/audio/other.mp3' }, { fileSize: 0 }, { title: '' },
+    { lyrics: { text: 'Malformed lyrics' } }, { language: 'fr' },
+    { aiGenerated: true, generationProvider: 'Unknown provider' },
+  ]) {
+    const { env, install, calls } = fixture();
+    install(id, 'Invalid archived song', { visibility: 'ARCHIVED', ...invalid });
+    assert.equal((await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).status, 503);
+    for (const method of ['GET', 'HEAD']) {
+      calls.length = 0;
+      const response = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`, { method }), env });
+      assert.equal(response.status, 503);
+      assert.deepEqual(calls.map(({ operation, key }) => ({ operation, key })), [{ operation: 'get', key: metadataKey(id) }]);
+    }
+  }
+});

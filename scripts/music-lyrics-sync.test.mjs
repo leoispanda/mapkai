@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import '../music/lyrics-sync.js';
 
-const { validateTiming, activeLineAt } = globalThis.MapKAILyricsSync;
+const { validateTiming, activeLineAt, lyricOffsetAt } = globalThis.MapKAILyricsSync;
 const lyrics = '[Verse 1]\nLook again\n\nIdeas connect\n[Chorus]\nLearn another way';
 const cues = [
   { line: 1, start: 1.25, end: 3 },
@@ -50,6 +50,27 @@ test('selection uses current time directly after backward and forward seeks', ()
   assert.equal(activeLineAt(null, 2), null);
   assert.equal(activeLineAt(cues, NaN), null);
   assert.equal(activeLineAt(cues, -1), null);
+});
+
+test('an overflowing phrase moves only within its measured width and actual cue interval', () => {
+  const cue = { line: 3, start: 4, end: 8 };
+  assert.equal(lyricOffsetAt(cue, 4, 200), 0);
+  assert.equal(lyricOffsetAt(cue, 6, 200), 100);
+  assert.equal(lyricOffsetAt(cue, 8, 200), 200);
+  assert.equal(lyricOffsetAt(cue, 2, 200), 0);
+  assert.equal(lyricOffsetAt(cue, 10, 200), 200);
+  assert.equal(lyricOffsetAt(cue, 6, 0), 0);
+});
+
+test('horizontal reading position follows seeks and stays fixed at a paused time', () => {
+  const cue = { line: 3, start: 4, end: 8 };
+  assert.equal(lyricOffsetAt(cue, 7, 200), 150);
+  assert.equal(lyricOffsetAt(cue, 5, 200), 50);
+  assert.equal(lyricOffsetAt(cue, 5, 200), 50);
+  assert.equal(lyricOffsetAt(cue, 5, 400), 100);
+  for (const [invalidCue, time, width] of [[null, 5, 200], [cue, NaN, 200], [cue, 5, Infinity], [cue, 5, -1], [{ start: 4, end: 4 }, 5, 200]]) {
+    assert.equal(lyricOffsetAt(invalidCue, time, width), 0);
+  }
 });
 
 test('missing, partial, malformed, overlapping, or unbounded timing stays unsynchronized', () => {

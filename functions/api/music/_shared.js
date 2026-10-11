@@ -169,6 +169,12 @@ export async function readTrack(bucket, id) {
   if (!object) return null;
   if (!Number.isSafeInteger(object.size) || object.size > MAX_TRACK_METADATA_BYTES) throw new Error('Invalid stored track.');
   const track = await object.json();
+  // Archiving preserves the song and its audio, but removes public discovery
+  // and playback. Validate the same complete base record before hiding it.
+  if (track?.visibility === 'ARCHIVED') {
+    if (track.id !== id || !safeTrack({ ...track, visibility: 'PUBLIC' })) throw new Error('Invalid stored track.');
+    return null;
+  }
   if (!SONG_LANGUAGES.includes(track?.language)) return null;
   if (!safeTrack(track) || track.id !== id) throw new Error('Invalid stored track.');
   const readable = { ...track, lyricsTiming: [] };

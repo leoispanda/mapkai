@@ -38,5 +38,11 @@
     return cue && seconds < cue.end ? cue.line : null;
   }
 
-  globalThis.MapKAILyricsSync = Object.freeze({ isLyricLine, validateTiming, activeLineAt });
+  function lyricOffsetAt(cue, seconds, overflow) {
+    if (!cue || !Number.isFinite(cue.start) || !Number.isFinite(cue.end) || cue.end <= cue.start
+      || !Number.isFinite(seconds) || !Number.isFinite(overflow) || overflow <= 0) return 0;
+    return Math.max(0, Math.min(1, (seconds - cue.start) / (cue.end - cue.start))) * overflow;
+  }
+
+  globalThis.MapKAILyricsSync = Object.freeze({ isLyricLine, validateTiming, activeLineAt, lyricOffsetAt });
 })();
