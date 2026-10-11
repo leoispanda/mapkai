@@ -9,10 +9,10 @@
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-13">
+  <link rel="stylesheet" href="/music/styles.css?v=music-14">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script src="/music/lyrics-sync.js?v=music-13" defer></script>
-  <script src="/music/app.js?v=music-13" defer></script>
+  <script src="/music/lyrics-sync.js?v=music-14" defer></script>
+  <script src="/music/app.js?v=music-14" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -26,6 +26,27 @@
       <h1 id="page-title">MapKAI <span>Music</span></h1>
       <p class="music-intro" data-i18n="intro">歌曲小卡片，点击即可播放。</p>
       <p class="music-ai-notice" data-i18n="aiNotice">使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。</p>
+    </section>
+    <section id="playlist-player" class="playlist-player" aria-labelledby="playlist-heading">
+      <div class="playlist-top">
+        <div><h2 id="playlist-heading" data-i18n="playlistHeading">一起听歌</h2><p id="playlist-intro" class="playlist-intro" data-i18n="playlistIntro">一键播放全部歌曲，按顺序聆听。</p></div>
+        <div class="playlist-controls">
+          <button id="playlist-prev" type="button" class="button secondary" data-i18n="previousSong" disabled>上一首</button>
+          <button id="play-all" type="button" class="button primary" disabled>播放全部</button>
+          <button id="playlist-next" type="button" class="button secondary" data-i18n="nextSong" disabled>下一首</button>
+        </div>
+      </div>
+      <div class="playlist-now"><h3 id="playlist-title" data-i18n="playlistReady" aria-live="polite">准备播放</h3><p id="playlist-position" class="playlist-position">—</p><span id="playlist-disclosure" class="track-disclosure" hidden></span></div>
+      <div class="playlist-progress-row">
+        <div class="playback-progress">
+          <input id="playlist-seek" class="playback-seek" type="range" min="0" max="1000" step="1" value="0" disabled aria-label="当前歌曲进度" data-aria="playlistSeekLabel">
+          <div class="playback-times"><span id="playlist-elapsed">0:00</span><span id="playlist-duration">—:—</span></div>
+        </div>
+        <label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
+      </div>
+      <p id="playlist-lyrics" class="lyrics-text" role="region" tabindex="0" aria-labelledby="playlist-title"><span id="playlist-lyric-span" class="lyrics-current"></span></p>
+      <p id="playlist-lyrics-unavailable" class="lyrics-unavailable" hidden></p>
+      <p id="playlist-error" class="track-error" role="status" hidden></p>
     </section>
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
