@@ -1,6 +1,6 @@
 # MapKAI Music storage and access
 
-MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published tracks in any supported language. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language. The owner upload form is for verified ElevenLabs music: new uploads store `aiGenerated: true` and `generationProvider: "ElevenLabs"`, which the public catalog exposes for a visible AI disclosure. The service does not independently detect or verify the generation provider from audio bytes.
+MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published tracks in any supported language. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language. The owner upload form is for verified ElevenLabs music: new uploads store `aiGenerated: true` and `generationProvider: "ElevenLabs"`, which the public catalog preserves as provenance; the visible card label states AI generation without provider branding. The service does not independently detect or verify the generation provider from audio bytes.
 
 ## Existing production prerequisites
 
@@ -33,7 +33,9 @@ Existing track metadata without both AI disclosure fields remains playable durin
 
 ## AI disclosure review (2026-10-11)
 
-Verified ElevenLabs tracks display a permanent `AI-generated · ElevenLabs` label on each card before playback, translated for the Chinese interface and associated with the play button for assistive technology. A page notice explains AI creation. Original audio bytes and existing embedded metadata are preserved.
+Verified ElevenLabs tracks display a permanent `AI-generated` label on each card before playback, translated for the Chinese interface and associated with the play button for assistive technology. A page notice explains AI creation. Original audio bytes and existing embedded metadata are preserved.
+
+The owner confirms these songs were self-generated on a paid subscription. The current [Music Terms](https://elevenlabs.io/music-terms), Exhibit A, list no attribution requirement for paid plans. The UI therefore uses MapKAI branding across the Music page, song cards, Toolbox, About and AI Transparency. Internal/provider metadata and existing audio markings are preserved. Supplier attribution is distinct from AI disclosure and does not establish copyright ownership or unrestricted redistribution rights. MapKAI currently hosts listening to the owner’s songs; it does not offer a stock-music licensing library or access to a generation model. Streaming distribution and other uses still depend on the applicable plan and agreement.
 
 The current [AI Act Article 50](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727) requires deployer disclosure for audio that constitutes a deepfake; it does not classify every synthetic song as a deepfake. Artistic works permit disclosure that preserves enjoyment. Applicable notices must be clear, accessible and present by first exposure. The [Commission FAQ](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act) confirms that hidden machine-readable markings alone do not provide audience disclosure. Our visible card text implements those principles; this is an implementation assessment, not certification of all legal requirements or music rights.
 

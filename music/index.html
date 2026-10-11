@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="MapKAI Music · powered by ElevenLabs。使用 ElevenLabs AI 创作的歌曲，点击卡片即可播放。">
+  <meta name="description" content="MapKAI Music。使用 AI 创作的歌曲，点击卡片即可播放。">
   <meta name="theme-color" content="#fffdf8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; base-uri 'self'; form-action 'self'; object-src 'none'">
-  <title>MapKAI Music · powered by ElevenLabs</title>
+  <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
   <link rel="stylesheet" href="/music/styles.css?v=music-5">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script src="/music/app.js?v=music-5" defer></script>
+  <script src="/music/app.js?v=music-6" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -23,9 +23,8 @@
     <a class="back-link" href="/toolbox/" data-i18n="back">← 返回 Toolbox</a>
     <section class="music-heading" aria-labelledby="page-title">
       <h1 id="page-title">MapKAI <span>Music</span></h1>
-      <p class="powered"><span class="eleven-mark" aria-hidden="true">Ⅱ</span> powered by ElevenLabs</p>
       <p class="music-intro" data-i18n="intro">歌曲小卡片，点击即可播放。</p>
-      <p class="music-ai-notice" data-i18n="aiNotice">使用 ElevenLabs AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。</p>
+      <p class="music-ai-notice" data-i18n="aiNotice">使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。</p>
     </section>
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
@@ -39,7 +38,7 @@
       <div id="empty-search" class="empty-search" hidden><h3 data-i18n="noResults">没有找到这首歌。</h3><p data-i18n="noResultsCopy">试试其他关键词，或看看完整歌单。</p><button id="clear-search" class="text-button" type="button" data-i18n="clearSearch">查看全部歌曲</button></div>
     </section>
     <noscript><p class="library-error">请启用 JavaScript 以载入歌曲。 / Enable JavaScript to load the collection.</p></noscript>
-    <footer class="music-footer"><div><span>MapKAI Music</span><span class="footer-powered">powered by ElevenLabs</span></div><a href="/" data-i18n="home">回到 MapKAI ↗</a></footer>
+    <footer class="music-footer"><div><span>MapKAI Music</span></div><a href="/" data-i18n="home">回到 MapKAI ↗</a></footer>
   </main>
   <dialog id="music-studio" aria-labelledby="studio-title">
     <div class="dialog-heading"><div><p class="eyebrow">MAPKAI MUSIC / STUDIO</p><h2 id="studio-title" data-i18n="studioTitle">上传歌曲</h2></div><button id="close-studio" class="close-button" type="button" aria-label="关闭" data-aria="close">×</button></div>
@@ -52,7 +51,7 @@
     </form>
     <div id="upload-unavailable" class="studio-unavailable" hidden><p data-i18n="unavailable">暂时无法上传歌曲，请稍后再试。</p><button id="retry-studio" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
     <form id="upload-form" hidden>
-      <p class="form-note" data-i18n="uploadIntro">从 ElevenLabs 下载你使用 AI 创作的歌曲，在这里上传，即可加入公开歌曲列表。</p>
+      <p class="form-note" data-i18n="uploadIntro">下载你使用 AI 创作的歌曲，在这里上传，即可加入公开歌曲列表。</p>
       <label for="song-file" class="file-label"><span class="upload-symbol" aria-hidden="true">↑</span><strong data-i18n="chooseFile">选择歌曲文件</strong><span data-i18n="fileFormats">MP3 / M4A / WAV · 每首最多 25 MB</span><input id="song-file" type="file" accept=".mp3,.m4a,.wav,audio/mpeg,audio/mp4,audio/x-m4a,audio/wav,audio/x-wav" required></label>
       <div id="file-preview" class="file-preview" hidden><p id="selected-file"></p><span class="preview-label" data-i18n="preview">上传前试听</span><audio id="preview-audio" controls preload="metadata"></audio></div>
       <label for="song-title" data-i18n="songTitle">歌名</label><input id="song-title" maxlength="120" required placeholder="给这首歌一个名字" data-placeholder="titlePlaceholder">
