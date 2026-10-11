@@ -2811,3 +2811,22 @@ Verified:
 Push:
 - Scoped source/public/API release committed and pushed as `c134177`. Cloudflare production deployment `457933a5-7c9c-4451-b9de-765c27abf7a6` succeeded. Both Nederland songs are durably published and playable at `https://www.mapkai.com/music/`.
 - Preserved all unrelated pending video, PDC, review and question-bank work and the approved site-wide v0.1.291 baseline.
+
+
+## 2026-10-11 - Rename all Music tracks and disclose AI generation
+
+Changed:
+- Applied the user's approved names to all five songs: `MapKAI — A Second Glance`, `The Netherlands — Names in Harmony`, `Dutch Fields`, `Roadside Towns — A Dutch Journey`, and `再看一眼 — A Second Glance`. The original four IDs and audio objects are preserved; only their titles and explicit AI provenance fields changed.
+- Added the original full Chinese ElevenLabs MP3 as `language=zh`, track ID `4fa6e4f7-9995-4768-9958-3c7e5c74ea99`. Its 2,897,721 bytes and SHA256 `4cb135f3780a68699189f6bd6842888128472fe46dd26b33e6e9320c7d23e7d9` match the downloaded file. Do not repeat imports without checking the live catalog and private manifest.
+- Each verified card permanently displays `AI-generated · ElevenLabs` / `AI 生成 · ElevenLabs` before playback, with an accessible description and bilingual page explanation. API metadata persists and exposes `aiGenerated:true` and `generationProvider:"ElevenLabs"`; absent legacy provenance remains unknown rather than inferred. Owner uploads accept en/nl/zh and store the declared ElevenLabs AI origin.
+- Reviewed current EUR-Lex/Commission sources for AI Act Article 50 and adopted Regulation 2026/1744. Visible disclosure follows the artistic-content transparency principles; metadata and original embedded audio information are preserved. This implements audience disclosure, not certification of all legal obligations or music rights. Details and official sources are recorded in `docs/mapkai-music-api.md`.
+- Existing guarded Cloudflare administrative access performed the authorized import and metadata-only updates. Private original metadata backups, idempotency/attempt records, helpers, provenance and screenshots remain under Git-excluded `.workspace-backups/music-all-songs-2026-10-11/`. No public bucket access or credential permissions changed.
+
+Verified:
+- Eighteen Music API tests passed, covering Chinese upload/list/playback, AI disclosure persistence, legacy compatibility, rejected invalid disclosure and existing access/storage protections. Functions compiled; scoped syntax, mirrors, whitespace and CSP checks passed.
+- Thirteen production core/Toolbox/Music assets matched HEAD before the scoped push; the three deployed Music assets matched the release afterward. Anonymous live catalog contains exactly the five approved titles, languages and explicit AI labels. Byte-range reads for all five match their original downloads; the new Chinese audio's full stored SHA256 was verified before publication.
+- Live browser checks passed for Chinese/English labels, pre-play disclosure, accessible descriptions, actual Chinese and English playback (both about 120.03 seconds), exclusive switching and pause. Mobile cards fit without horizontal overflow; final full-page screenshots were inspected.
+
+Push:
+- Scoped release committed and pushed as `54e8016`. Cloudflare production deployment `9d9c7c9a-1d5b-45e4-b0e2-7a38c8054647` succeeded. All five renamed, disclosed songs are published at `https://www.mapkai.com/music/`.
+- Preserved unrelated pending video, PDC, review and question-bank work and the approved site-wide v0.1.291 assets. Music uses scoped cache token `music-5`.
