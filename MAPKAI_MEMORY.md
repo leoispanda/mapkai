@@ -2830,3 +2830,19 @@ Verified:
 Push:
 - Scoped release committed and pushed as `54e8016`. Cloudflare production deployment `9d9c7c9a-1d5b-45e4-b0e2-7a38c8054647` succeeded. All five renamed, disclosed songs are published at `https://www.mapkai.com/music/`.
 - Preserved unrelated pending video, PDC, review and question-bank work and the approved site-wide v0.1.291 assets. Music uses scoped cache token `music-5`.
+
+## 2026-10-11 - Add About AI transparency and review MapKAI projects
+
+Changed:
+- The user requested EU AI transparency principles in About and a review of MapKAI plus their own Toolbox projects. Added bilingual About disclosure for fixed Explore rules, simulated PDC perspectives, Speaking AI interaction and ElevenLabs music, with links to `/ai-transparency` and official EU guidance.
+- Expanded the central AI Transparency page with Speaking, AI-assisted learning material, Music and Article 50 principles. Distinguished visible disclosures from AI-system provider machine-readable marking duties, and origin labels from accuracy, substantive human review or complete legal compliance. Corrected old static PDC fallback text to match actual error/retry behavior and prepared-demo-only content.
+- New About data-i18n block is excluded from the existing positional translation selectors. Source/public HTML and JavaScript mirrors remain identical. Kept approved v0.1.291 assets and used scoped script cache token `0.1.291-about-ai-20261011`.
+- Saved actionable review and evidence in `docs/mapkai-ai-transparency-review-2026-10-11.md`. The actual user Toolbox has the same nine built-in cards and no extra custom cards. Highest priority is Speaking first-interaction identity; further recommendations cover article/image provenance, simulated PDC roles, data-flow documentation, provider roles/marking, gated course media and hidden stories before release. Other modules were reviewed, not changed.
+- Turnpo's linked public profile was inspected read-only. Its expanded footer still has AI-coming-soon/browser-storage copy; the separate Turnpo repository already includes owner AI import through OpenAI. Review recommends reconciling actual production activation/data storage and naming the recipient before import. No Turnpo edit, login or generation was performed.
+
+Verified:
+- Official Article 50 and Commission FAQ checked on 11 October 2026, including the limited pre-2-August-system Article 50(2) grace period through 2 December 2026. About is not treated as a substitute for applicable first-exposure notices or a full compliance certification.
+- Syntax, scoped whitespace, source/public mirrors and production CSP checks passed. Local browser checks verified both languages, legacy About sections, internal links, no console errors and mobile wrapping without horizontal overflow. Independent legal/copy review found no blocking issues.
+- Thirteen production core/Toolbox/Music assets matched HEAD before publishing. Release `0a24dade08c583285ac67a75fb7a6a16cf8ee92f` was pushed to main; Cloudflare production deployment `6fb0f07e-7611-4f31-9a8f-7a8b69e564d6` succeeded.
+- Live `/about`, `/ai-transparency` and the scoped script match the release bytes. Live Chinese About and its internal transparency link were visually verified. Screenshot stays Git-excluded at `.workspace-backups/about-ai-transparency-2026-10-11/about-ai-transparency.png`.
+- Preserved unrelated pending video-tool, local PDC, review, consolidation notes and candidate question-bank work. Only the requested four website files plus the review document were included in the release.
