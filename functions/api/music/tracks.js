@@ -1,5 +1,5 @@
 import { validateAudio } from './_audio-validation.js';
-import { MAX_AUDIO_BYTES, SONG_LANGUAGES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
+import { GENERATION_PROVIDER, MAX_AUDIO_BYTES, SONG_LANGUAGES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
   musicBucket, publicTrack, readBoundedBody, readTrack, requireOwner } from './_shared.js';
 
 const clean = value => value.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, '').trim();
@@ -35,7 +35,7 @@ async function uploadTrack(request, env) {
     throw inputError('Choose one audio file per upload and declare its language.');
   }
   const language = form.get('language');
-  if (!SONG_LANGUAGES.includes(language)) throw inputError('Choose English or Dutch as the song language.');
+  if (!SONG_LANGUAGES.includes(language)) throw inputError('Choose English, Dutch or Chinese as the song language.');
   const file = form.get('file');
   const { extension, contentType: audioType } = await validateAudio(file);
   const suppliedTitle = form.get('title');
@@ -52,7 +52,8 @@ async function uploadTrack(request, env) {
   const objectKey = audioKey(id, extension);
   const audio = await bucket.put(objectKey, file, { onlyIf: { etagDoesNotMatch: '*' }, httpMetadata: { contentType: audioType } });
   if (!audio || audio.size !== file.size) throw new Error('Audio upload did not complete.');
-  const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language, id, title, description, filename,
+  const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language, aiGenerated: true, generationProvider: GENERATION_PROVIDER,
+    id, title, description, filename,
     createdAt: new Date().toISOString(), extension, contentType: audioType, fileSize: file.size, objectKey, audioEtag: audio.etag };
   // Publish only after the durable audio write succeeds. Each track has its own
   // immutable index object, so simultaneous uploads never overwrite a catalog.

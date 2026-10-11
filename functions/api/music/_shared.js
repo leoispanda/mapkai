@@ -6,7 +6,8 @@ export const TRACK_PREFIX = 'music/tracks/';
 export const TRACK_SCHEMA = 'mapkai-music-track.v1';
 export const TRACK_ID_PATTERN = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
 export const AUDIO_TYPES = Object.freeze({ mp3: 'audio/mpeg', m4a: 'audio/mp4', wav: 'audio/wav' });
-export const SONG_LANGUAGES = Object.freeze(['en', 'nl']);
+export const SONG_LANGUAGES = Object.freeze(['en', 'nl', 'zh']);
+export const GENERATION_PROVIDER = 'ElevenLabs';
 export const RESPONSE_HEADERS = {
   'Cache-Control': 'no-store',
   'X-Content-Type-Options': 'nosniff',
@@ -87,6 +88,10 @@ export const audioKey = (id, extension) => `music/audio/${id}.${extension}`;
 
 export function safeTrack(track) {
   if (track?.schemaVersion !== TRACK_SCHEMA || track.visibility !== 'PUBLIC' || !SONG_LANGUAGES.includes(track.language) || !TRACK_ID_PATTERN.test(track.id || '')) return false;
+  // Older tracks remain playable without inferred provenance. Once disclosed,
+  // the AI flag and provider must be a complete, validated pair.
+  if ((Object.hasOwn(track, 'aiGenerated') || Object.hasOwn(track, 'generationProvider'))
+    && (track.aiGenerated !== true || track.generationProvider !== GENERATION_PROVIDER)) return false;
   if (!Object.hasOwn(AUDIO_TYPES, track.extension) || track.contentType !== AUDIO_TYPES[track.extension]
     || track.objectKey !== audioKey(track.id, track.extension)) return false;
   if (!Number.isSafeInteger(track.fileSize) || track.fileSize < 1 || track.fileSize > MAX_AUDIO_BYTES) return false;
@@ -100,7 +105,9 @@ export function safeTrack(track) {
 }
 
 export function publicTrack(track) {
+  const aiGenerated = track.aiGenerated === true && track.generationProvider === GENERATION_PROVIDER;
   return { id: track.id, title: track.title, description: track.description, language: track.language,
+    aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,
     url: `/api/music/audio?id=${encodeURIComponent(track.id)}`, durationSeconds: null,
     createdAt: track.createdAt, filename: track.filename };
 }

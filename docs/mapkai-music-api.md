@@ -1,6 +1,6 @@
 # MapKAI Music storage and access
 
-MapKAI Music hosts uploaded English and Dutch ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published tracks in either supported language. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language.
+MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does not generate songs or call the ElevenLabs API. The public page can list and play published tracks in any supported language. Publishing an upload requires the existing server-verified founder session. Song language is declared by the owner at upload; the service does not automatically detect lyrics or verify their language. The owner upload form is for verified ElevenLabs music: new uploads store `aiGenerated: true` and `generationProvider: "ElevenLabs"`, which the public catalog exposes for a visible AI disclosure. The service does not independently detect or verify the generation provider from audio bytes.
 
 ## Existing production prerequisites
 
@@ -15,8 +15,8 @@ No new public bucket access, API key, paid provider call or binding is required.
 
 - `GET /api/music/auth`: `{ owner, uploadConfigured }`. Checks the current founder cookie and binding availability without accessing R2.
 - `POST /api/music/auth`: JSON `{ code }`. Uses the existing founder access code, with five attempts per client IP per 15 minutes. Success sets the signed founder cookie and returns `{ owner: true, uploadConfigured }`.
-- `GET /api/music/tracks[?cursor=...]`: `{ tracks, nextCursor }`, with up to 50 tracks per page. Each public track contains `id`, `title`, `description`, `language` (`en` or `nl`), `url`, `durationSeconds` (initially null), `createdAt` and `filename`. Stored metadata in any other language, or without a language declaration, is excluded from public list and playback. Existing English metadata is unchanged.
-- `POST /api/music/tracks`: multipart `file`, `title`, `description`, `language=en` or `language=nl`. Other language values or a missing declaration are rejected. Requires the valid owner cookie and the same-origin `Origin` header. Success returns HTTP 201 `{ track }`; the uploaded song becomes public.
+- `GET /api/music/tracks[?cursor=...]`: `{ tracks, nextCursor }`, with up to 50 tracks per page. Each public track contains `id`, `title`, `description`, `language` (`en`, `nl` or `zh`), `aiGenerated`, `generationProvider`, `url`, `durationSeconds` (initially null), `createdAt` and `filename`. Stored metadata in any other language, or without a language declaration, is excluded from public list and playback.
+- `POST /api/music/tracks`: multipart `file`, `title`, `description`, `language=en`, `language=nl` or `language=zh`. Other language values or a missing declaration are rejected. Requires the valid owner cookie and the same-origin `Origin` header. The server sets the AI disclosure fields; multipart fields that attempt to override them are rejected. Success returns HTTP 201 `{ track }`; the uploaded song becomes public.
 - `GET|HEAD /api/music/audio?id=...`: published audio only. Supports single byte ranges, HEAD and ETag validators for playback and seeking. Internal bucket keys cannot be requested.
 
 Audio files are limited to 25 MiB and MP3, M4A or WAV. Extension, declared MIME type and actual format structure are validated. MP3 requires two complete, consistent MPEG frames. Conventional M4A requires an audio codec, sample tables, timed samples and complete media data, and rejects video handlers; fragmented M4A containers are not supported. WAV requires audio format and nonempty data chunks. Validation checks the container structure and does not decode every sample. Titles are limited to 120 characters and descriptions to 1,000. The actual request stream is bounded, including requests without Content-Length.
@@ -29,6 +29,16 @@ If metadata publication fails after the audio is saved, the audio remains unlist
 
 Public JSON responses are uncached so new uploads appear immediately. Successful audio responses use immutable URLs and allow browser caching. Existing video catalogs and review records remain separate.
 
+Existing track metadata without both AI disclosure fields remains playable during rollout. Its public disclosure values are `null`, indicating unknown provenance, and the frontend must not infer an AI label from its title or language. The four verified initial imports can be updated with the explicit `true` / `"ElevenLabs"` pair while retaining their IDs and audio objects. Metadata containing partial disclosure, a non-boolean AI flag, a false flag or a provider other than `"ElevenLabs"` fails validation; this module currently supports only declared ElevenLabs generation or unknown legacy provenance.
+
+## AI disclosure review (2026-10-11)
+
+Verified ElevenLabs tracks display a permanent `AI-generated · ElevenLabs` label on each card before playback, translated for the Chinese interface and associated with the play button for assistive technology. A page notice explains AI creation. Original audio bytes and existing embedded metadata are preserved.
+
+The current [AI Act Article 50](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727) requires deployer disclosure for audio that constitutes a deepfake; it does not classify every synthetic song as a deepfake. Artistic works permit disclosure that preserves enjoyment. Applicable notices must be clear, accessible and present by first exposure. The [Commission FAQ](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act) confirms that hidden machine-readable markings alone do not provide audience disclosure. Our visible card text implements those principles; this is an implementation assessment, not certification of all legal requirements or music rights.
+
+Article 50 applies from 2 August 2026. The adopted [2026/1744 amendment](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744) grants providers of qualifying pre-existing generation systems until 2 December 2026 for Article 50(2) machine-readable marking. It does not postpone deployer disclosure. Hosting previously generated audio does not itself turn this module into a music-generation-system provider.
+
 ## Verification
 
-Run `node --test scripts/music-api.test.mjs` with Node 22 or newer. Tests cover signed-cookie authorization, sign-in attempt limits, cross-origin rejection, declared English and Dutch publication/playback, unsupported-language exclusion, file validation, durable upload ordering, simultaneous uploads, failed publication, pagination, protected R2 operations and audio seeking.
+Run `node --test scripts/music-api.test.mjs` with Node 22 or newer. Tests cover signed-cookie authorization, sign-in attempt limits, cross-origin rejection, declared English, Dutch and Chinese publication/playback, AI disclosure persistence and legacy compatibility, unsupported-language exclusion, file validation, durable upload ordering, simultaneous uploads, failed publication, pagination, protected R2 operations and audio seeking.

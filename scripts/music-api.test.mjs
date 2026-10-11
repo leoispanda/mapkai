@@ -72,13 +72,13 @@ function fixture({ reservationLimit = Infinity, costMissing = false, failPublica
   };
   const env = { MAPKAI_FOUNDER_ACCESS_CODE: 'fixture-code-not-real', MAPKAI_DB: database, MAPKAI_REVIEW_MEDIA: bucket,
     ...(!costMissing ? { CLOUDFLARE_COST_DB: costDatabase } : {}) };
-  const install = (trackId = id, title = 'First song') => {
+  const install = (trackId = id, title = 'First song', metadata = {}) => {
     const bytes = mp3Bytes.slice();
     const objectKey = audioKey(trackId, 'mp3');
     const audioEtag = createHash('md5').update(bytes).digest('hex');
     objects.set(objectKey, { key: objectKey, bytes, etag: audioEtag });
     const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language: 'en', id: trackId, title, description: '', filename: 'First song.mp3',
-      createdAt: '2026-10-11T10:00:00.000Z', extension: 'mp3', contentType: AUDIO_TYPES.mp3, fileSize: bytes.length, objectKey, audioEtag };
+      createdAt: '2026-10-11T10:00:00.000Z', extension: 'mp3', contentType: AUDIO_TYPES.mp3, fileSize: bytes.length, objectKey, audioEtag, ...metadata };
     const key = metadataKey(trackId);
     const data = encoder.encode(JSON.stringify(track));
     objects.set(key, { key, bytes: data, etag: createHash('md5').update(data).digest('hex') });
@@ -145,6 +145,11 @@ test('successful song uploads durably save audio then its individual public meta
   assert.equal(track.title, '夜航');
   assert.equal(track.description, 'Created with ElevenLabs');
   assert.equal(track.language, 'en');
+  assert.equal(track.aiGenerated, true);
+  assert.equal(track.generationProvider, 'ElevenLabs');
+  const stored = JSON.parse(new TextDecoder().decode(objects.get(metadataKey(track.id)).bytes));
+  assert.equal(stored.aiGenerated, true);
+  assert.equal(stored.generationProvider, 'ElevenLabs');
   assert.match(track.url, /^\/api\/music\/audio\?id=/);
   assert.equal(Object.hasOwn(track, 'objectKey'), false);
   assert.deepEqual(calls.map(call => call.operation), ['put', 'put']);
@@ -264,6 +269,7 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.find(item => item.id === id), {
     id, title: english.title, description: english.description, language: 'en',
+    aiGenerated: null, generationProvider: null,
     url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
   });
   assert.deepEqual(catalog.tracks.find(item => item.id === track.id), track);
@@ -272,16 +278,83 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
 });
 
+test('a Chinese ElevenLabs upload publishes its title, language and AI disclosure with playable audio', async () => {
+  const { env, objects } = fixture();
+  const response = await tracks({ request: await uploadRequest(env, { title: '再看一眼', language: 'zh' }), env });
+  assert.equal(response.status, 201);
+  const { track } = await response.json();
+  assert.equal(track.title, '再看一眼');
+  assert.equal(track.language, 'zh');
+  assert.equal(track.aiGenerated, true);
+  assert.equal(track.generationProvider, 'ElevenLabs');
+  const stored = JSON.parse(new TextDecoder().decode(objects.get(metadataKey(track.id)).bytes));
+  assert.equal(stored.language, 'zh');
+  assert.equal(stored.aiGenerated, true);
+  assert.equal(stored.generationProvider, 'ElevenLabs');
+  const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+  assert.deepEqual(catalog.tracks, [track]);
+  const playback = await audio({ request: new Request(`https://www.mapkai.com${track.url}`), env });
+  assert.equal(playback.status, 200);
+  assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+});
+
+test('legacy provenance remains unknown while verified generation fields are public', async () => {
+  const { env, install } = fixture();
+  install(id, 'Unknown legacy song');
+  const generatedId = '22222222-2222-4222-8222-222222222222';
+  install(generatedId, 'Verified import', { language: 'nl', aiGenerated: true, generationProvider: 'ElevenLabs' });
+  const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+  const legacy = catalog.tracks.find(track => track.id === id);
+  assert.equal(legacy.aiGenerated, null);
+  assert.equal(legacy.generationProvider, null);
+  const generated = catalog.tracks.find(track => track.id === generatedId);
+  assert.equal(generated.aiGenerated, true);
+  assert.equal(generated.generationProvider, 'ElevenLabs');
+  for (const trackId of [id, generatedId]) {
+    assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${trackId}`), env })).status, 200);
+  }
+});
+
+test('partial or invalid stored AI provenance cannot publish or serve audio', async () => {
+  for (const metadata of [
+    { aiGenerated: true }, { generationProvider: 'ElevenLabs' },
+    { aiGenerated: 'true', generationProvider: 'ElevenLabs' },
+    { aiGenerated: false, generationProvider: 'ElevenLabs' },
+    { aiGenerated: true, generationProvider: 'Unknown provider' },
+  ]) {
+    const { env, install, calls } = fixture();
+    install(id, 'Unverified disclosure', metadata);
+    assert.equal((await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).status, 503);
+    calls.length = 0;
+    const response = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env });
+    assert.equal(response.status, 503);
+    assert.deepEqual(calls.map(call => call.operation), ['get']);
+  }
+});
+
+test('upload clients cannot override server-owned generation disclosure', async () => {
+  const { env, calls, reservations } = fixture();
+  const request = await uploadRequest(env);
+  const form = await request.formData();
+  form.set('aiGenerated', 'false');
+  form.set('generationProvider', 'Unknown provider');
+  const tampered = new Request(request.url, { method: 'POST', body: form,
+    headers: { Origin: request.headers.get('Origin'), Cookie: request.headers.get('Cookie') } });
+  assert.equal((await tracks({ request: tampered, env })).status, 400);
+  assert.deepEqual(calls, []);
+  assert.equal(reservations(), 0);
+});
+
 test('uploads require a supported owner-declared language and public list/playback hide other languages', async () => {
   const { env, calls, objects, install } = fixture();
-  for (const language of ['zh', 'de', 'EN', 'NL', '', null]) {
+  for (const language of ['fr', 'de', 'EN', 'NL', 'ZH', 'zh-CN', '', null]) {
     const response = await tracks({ request: await uploadRequest(env, { language }), env });
     assert.equal(response.status, 400);
   }
   assert.deepEqual(calls, []);
   install(id, 'English song');
   const hiddenIds = [
-    ['22222222-2222-4222-8222-222222222222', 'zh'],
+    ['22222222-2222-4222-8222-222222222222', 'fr'],
     ['33333333-3333-4333-8333-333333333333', undefined],
   ];
   for (const [otherId, language] of hiddenIds) {
