@@ -17,6 +17,8 @@ The Music page's bilingual Create a song dialog prepares a prompt locally from t
 
 No music-generation API key is configured in MapKAI. This entry is a prompt-preparation and external-account workflow, not an in-site automatic generation connection. Public listening and owner upload controls retain their existing access rules. Draft text stays in the current page and is cleared on reload; only the existing interface-language preference is persisted.
 
+The default creation direction is upbeat Memphis hip-hop with clear vocals and light guitar accents, following the owner's stated preference. Rock, symphonic, folk rap and acoustic remain available; the rock prompt calls for melodic vocals and moderate guitars. The two-minute Memphis Groove preview is featured before the existing Dutch Horizons versions; the earlier rock experiment retains its audio and ID but is no longer featured.
+
 ## Endpoints
 
 - `GET /api/music/auth`: `{ owner, uploadConfigured }`. Checks the current founder cookie and binding availability without accessing R2.
