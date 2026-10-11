@@ -2773,3 +2773,22 @@ Verified:
 
 Push:
 - Committed and pushed to `main` as `40ab74a`. Cloudflare production deployment `8221dae5-054a-4b5a-988c-0e0d2f9df05f` succeeded. Live `/music/`, Music assets, Toolbox entries and public list/auth endpoints match the release; upload configuration is available and the production song list is empty.
+
+
+## 2026-10-11 - Publish Music song cards and import verified English songs
+
+Changed:
+- Replaced numbered Music rows with compact song cards. A card click starts or pauses its song; the selected card reveals native seek and volume controls. Only one song plays at a time. Keyboard controls, buffering feedback and single-click error recovery are available; audio stays unloaded until selected.
+- Imported the user-authorized ElevenLabs songs `The Story of Mapkai` (about 2:00) and `Roadside Towns` (about 1:00), after checking their project lyrics and generation prompts for English. Chinese and Dutch-pronunciation/name-only songs were excluded under the user's English-only request.
+- Public listening requires no sign-in or password. Imported using existing Cloudflare administrative credentials; existing owner upload authentication was preserved. No credential or security setting changed.
+- Audio and public metadata persist under the existing guarded `music/` R2 namespace. Reused the original audio validator, track schema and shared storage cost guard. Exact uploaded audio hashes were verified before metadata publication. Private import provenance and idempotency records remain in Git-excluded `.workspace-backups/music-import-2026-10-11/`; raw downloads remain outside Git and public output.
+- Published track IDs: `5acde69b-c30b-4b39-8b76-b544737135f5` (Mapkai), `bb5957e7-9e91-45e1-a978-5643451d7820` (Roadside). Check the live catalog and private manifest before repeating an import.
+
+Verified:
+- All 13 production core/Toolbox/Music assets matched the Git baseline before the scoped push. Music source/public mirrors, syntax, whitespace and CSP checks passed; independent playback review found and resolved an error-retry edge case.
+- Live anonymous browser playback passed for both actual songs, including card click, exclusive switching and keyboard pause. Browser media reported complete playable audio with durations 120.03 and 60.03 seconds. Initial page load had both players paused and unloaded.
+- Live public list contains exactly two English songs without visitor authentication; byte-range audio reads match the original source files. Desktop and 390 px mobile screenshots were inspected, with no horizontal overflow. The three deployed Music files match the release bytes.
+
+Push:
+- Scoped card source/public release committed and pushed as `5b8bd56`. Cloudflare production deployment `f45e1682-4378-47b3-8023-d1bd308943e3` succeeded. Both English songs are durably published and playable at `https://www.mapkai.com/music/`.
+- Preserved unrelated pending video-tool, local PDC, review and question-bank work. The site-wide approved v0.1.291 assets remain; Music uses the scoped `music-3` cache token.
