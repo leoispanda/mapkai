@@ -1,6 +1,6 @@
 import { validateAudio } from './_audio-validation.js';
-import { GENERATION_PROVIDER, MAX_AUDIO_BYTES, SONG_LANGUAGES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
-  musicBucket, publicTrack, readBoundedBody, readTrack, requireOwner } from './_shared.js';
+import { GENERATION_PROVIDER, MAX_MUSIC_UPLOAD_BYTES, SONG_LANGUAGES, TRACK_PREFIX, TRACK_SCHEMA, TRACK_ID_PATTERN, audioKey, errorResponse, inputError, json, metadataKey,
+  musicBucket, normalizeLyrics, publicTrack, readBoundedBody, readTrack, requireOwner } from './_shared.js';
 
 const clean = value => value.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, '').trim();
 
@@ -26,16 +26,19 @@ async function uploadTrack(request, env) {
   await requireOwner(request, env);
   const contentType = request.headers.get('Content-Type') || '';
   if (!/^multipart\/form-data\s*;/i.test(contentType)) throw inputError('Choose a song using the upload form.', 415);
-  const bytes = await readBoundedBody(request, MAX_AUDIO_BYTES + 16 * 1024);
+  const bytes = await readBoundedBody(request, MAX_MUSIC_UPLOAD_BYTES);
   let form;
   try { form = await new Response(bytes, { headers: { 'Content-Type': contentType } }).formData(); }
   catch { throw inputError('The song upload could not be read.'); }
   if (form.getAll('file').length !== 1 || form.getAll('title').length > 1 || form.getAll('description').length > 1
-    || form.getAll('language').length !== 1 || [...form.keys()].some(key => !['file', 'title', 'description', 'language'].includes(key))) {
+    || form.getAll('lyrics').length > 1 || form.getAll('language').length !== 1
+    || [...form.keys()].some(key => !['file', 'title', 'description', 'language', 'lyrics'].includes(key))) {
     throw inputError('Choose one audio file per upload and declare its language.');
   }
   const language = form.get('language');
   if (!SONG_LANGUAGES.includes(language)) throw inputError('Choose English, Dutch or Chinese as the song language.');
+  const suppliedLyrics = form.get('lyrics');
+  const lyrics = normalizeLyrics(suppliedLyrics === null ? '' : suppliedLyrics);
   const file = form.get('file');
   const { extension, contentType: audioType } = await validateAudio(file);
   const suppliedTitle = form.get('title');
@@ -53,7 +56,7 @@ async function uploadTrack(request, env) {
   const audio = await bucket.put(objectKey, file, { onlyIf: { etagDoesNotMatch: '*' }, httpMetadata: { contentType: audioType } });
   if (!audio || audio.size !== file.size) throw new Error('Audio upload did not complete.');
   const track = { schemaVersion: TRACK_SCHEMA, visibility: 'PUBLIC', language, aiGenerated: true, generationProvider: GENERATION_PROVIDER,
-    id, title, description, filename,
+    id, title, description, filename, lyrics,
     createdAt: new Date().toISOString(), extension, contentType: audioType, fileSize: file.size, objectKey, audioEtag: audio.etag };
   // Publish only after the durable audio write succeeds. Each track has its own
   // immutable index object, so simultaneous uploads never overwrite a catalog.

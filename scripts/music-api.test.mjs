@@ -6,7 +6,8 @@ import { onRequest as tracks } from '../functions/api/music/tracks.js';
 import { onRequest as audio } from '../functions/api/music/audio.js';
 import { validateAudio } from '../functions/api/music/_audio-validation.js';
 import { createFounderAccessCookie } from '../functions/api/pdc/_shared.js';
-import { AUDIO_TYPES, MAX_AUDIO_BYTES, TRACK_SCHEMA, audioKey, metadataKey } from '../functions/api/music/_shared.js';
+import { AUDIO_TYPES, MAX_LYRICS_CHARS, MAX_MUSIC_UPLOAD_BYTES, MAX_TRACK_METADATA_BYTES, TRACK_SCHEMA, audioKey, metadataKey,
+  normalizeLyrics, safeTrack } from '../functions/api/music/_shared.js';
 import { COST_GUARD_KEY, COST_GUARD_LIMITS } from '../functions/_shared/cost-guard.js';
 
 const id = '11111111-1111-4111-8111-111111111111';
@@ -87,12 +88,13 @@ function fixture({ reservationLimit = Infinity, costMissing = false, failPublica
   return { env, calls, objects, install, reservations: () => reserved, uploadBytes: () => uploadedBytes };
 }
 
-async function uploadRequest(env, { owner = true, origin = 'https://www.mapkai.com', file = mp3File(), title = 'First song', description = '', language = 'en' } = {}) {
+async function uploadRequest(env, { owner = true, origin = 'https://www.mapkai.com', file = mp3File(), title = 'First song', description = '', language = 'en', lyrics } = {}) {
   const form = new FormData();
   form.set('file', file);
   form.set('title', title);
   form.set('description', description);
   if (language !== null) form.set('language', language);
+  if (lyrics !== undefined) form.set('lyrics', lyrics);
   const cookie = owner ? (await createFounderAccessCookie(env)).split(';')[0] : '';
   return new Request('https://www.mapkai.com/api/music/tracks', { method: 'POST', body: form, headers: { Origin: origin, Cookie: cookie } });
 }
@@ -249,7 +251,7 @@ test('uploads reject wrong signatures, mismatched MIME and oversized requests be
     assert.equal(response.status, 415);
   }
   const request = await uploadRequest(env);
-  request.headers.set('Content-Length', String(MAX_AUDIO_BYTES + 16 * 1024 + 1));
+  request.headers.set('Content-Length', String(MAX_MUSIC_UPLOAD_BYTES + 1));
   assert.equal((await tracks({ request, env })).status, 413);
   assert.deepEqual(calls, []);
 });
@@ -268,7 +270,7 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   assert.deepEqual(objects.get(metadataKey(id)).bytes, englishBefore);
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.find(item => item.id === id), {
-    id, title: english.title, description: english.description, language: 'en',
+    id, title: english.title, description: english.description, language: 'en', lyrics: '',
     aiGenerated: null, generationProvider: null,
     url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
   });
@@ -296,6 +298,96 @@ test('a Chinese ElevenLabs upload publishes its title, language and AI disclosur
   const playback = await audio({ request: new Request(`https://www.mapkai.com${track.url}`), env });
   assert.equal(playback.status, 200);
   assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+});
+
+test('English and Chinese multi-section lyrics normalize, persist and appear in the public list', async () => {
+  for (const [language, suppliedLyrics, expectedLyrics] of [
+    ['en', '  [Verse 1]\r\nLook again\r\nFind a new way\r\n\r\n[Chorus]\rMapKAI, look again\r\n  ',
+      '[Verse 1]\nLook again\nFind a new way\n\n[Chorus]\nMapKAI, look again'],
+    ['zh', '\n[主歌]\r\n再看一眼\r\n让好奇心指路\r\n\r\n[副歌]\r世界就在眼前\n',
+      '[主歌]\n再看一眼\n让好奇心指路\n\n[副歌]\n世界就在眼前'],
+  ]) {
+    const { env, objects, calls } = fixture();
+    const response = await tracks({ request: await uploadRequest(env, { language, lyrics: suppliedLyrics }), env });
+    assert.equal(response.status, 201);
+    const { track } = await response.json();
+    assert.equal(track.lyrics, expectedLyrics);
+    const stored = JSON.parse(new TextDecoder().decode(objects.get(metadataKey(track.id)).bytes));
+    assert.equal(stored.lyrics, expectedLyrics);
+    assert.equal(stored.schemaVersion, TRACK_SCHEMA);
+    assert.deepEqual(calls.map(call => call.operation), ['put', 'put']);
+    const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+    assert.deepEqual(catalog.tracks, [track]);
+    const playback = await audio({ request: new Request(`https://www.mapkai.com${track.url}`), env });
+    assert.equal(playback.status, 200);
+    assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+  }
+});
+
+test('legacy songs without lyrics remain playable and expose an empty string without rewriting metadata', async () => {
+  const { env, install, objects } = fixture();
+  const legacy = install();
+  const before = objects.get(metadataKey(id)).bytes.slice();
+  assert.equal(Object.hasOwn(legacy, 'lyrics'), false);
+  assert.equal(safeTrack(legacy), true);
+  const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+  assert.equal(catalog.tracks[0].lyrics, '');
+  assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env })).status, 200);
+  assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
+  const response = await tracks({ request: await uploadRequest(env), env });
+  const { track } = await response.json();
+  assert.equal(response.status, 201);
+  assert.equal(track.lyrics, '');
+  assert.equal(JSON.parse(new TextDecoder().decode(objects.get(metadataKey(track.id)).bytes)).lyrics, '');
+});
+
+test('12,000-character Chinese lyrics exceed the old metadata cap and still list/play completely', async () => {
+  const { env, objects } = fixture();
+  const lyrics = '再看一眼'.repeat(MAX_LYRICS_CHARS / 4);
+  const response = await tracks({ request: await uploadRequest(env, { language: 'zh', lyrics }), env });
+  assert.equal(response.status, 201);
+  const { track } = await response.json();
+  assert.equal(track.lyrics, lyrics);
+  const metadataBytes = objects.get(metadataKey(track.id)).bytes.length;
+  assert.ok(metadataBytes > 16 * 1024 && metadataBytes <= MAX_TRACK_METADATA_BYTES);
+  const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
+  assert.equal(catalog.tracks[0].lyrics, lyrics);
+  assert.equal((await audio({ request: new Request(`https://www.mapkai.com${track.url}`), env })).status, 200);
+});
+
+test('lyrics reject malformed values, control characters and oversized text without storage writes', async () => {
+  for (const value of [{ lines: ['Look again'] }, ['Look again'], null, 123, true]) {
+    assert.throws(() => normalizeLyrics(value), error => error.musicInputError && error.status === 400);
+  }
+  for (const lyrics of [new File(['Look again'], 'lyrics.txt', { type: 'text/plain' }),
+    'Line one\u0000Line two', 'Line one\tLine two', 'Line one\u0085Line two', 'x'.repeat(MAX_LYRICS_CHARS + 1)]) {
+    const { env, calls, reservations } = fixture();
+    const response = await tracks({ request: await uploadRequest(env, { lyrics }), env });
+    assert.equal(response.status, 400);
+    assert.match((await response.json()).error, /Lyrics/);
+    assert.deepEqual(calls, []);
+    assert.equal(reservations(), 0);
+  }
+  const { env, calls } = fixture();
+  const request = await uploadRequest(env, { lyrics: 'First value' });
+  const form = await request.formData();
+  form.append('lyrics', 'Second value');
+  const duplicate = new Request(request.url, { method: 'POST', body: form,
+    headers: { Origin: request.headers.get('Origin'), Cookie: request.headers.get('Cookie') } });
+  assert.equal((await tracks({ request: duplicate, env })).status, 400);
+  assert.deepEqual(calls, []);
+});
+
+test('malformed stored lyrics cannot reach the public catalog or audio response', async () => {
+  for (const lyrics of [{ text: 'Look again' }, null, 'Wrong\u0000control', 'x'.repeat(MAX_LYRICS_CHARS + 1)]) {
+    const { env, install, calls } = fixture();
+    const stored = install(id, 'Invalid lyrics', { lyrics });
+    assert.equal(safeTrack(stored), false);
+    assert.equal((await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).status, 503);
+    calls.length = 0;
+    assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env })).status, 503);
+    assert.deepEqual(calls.map(call => call.operation), ['get']);
+  }
 });
 
 test('legacy provenance remains unknown while verified generation fields are public', async () => {

@@ -2,6 +2,11 @@ import { wrapR2Bucket, costResponse } from '../../_shared/cost-guard.js';
 import { hasValidFounderAccessCookie } from '../pdc/_shared.js';
 
 export const MAX_AUDIO_BYTES = 25 * 1024 * 1024;
+export const MAX_LYRICS_CHARS = 12000;
+// UTF-8 lyrics can use three bytes per JavaScript character; reserve space for
+// their complete metadata and multipart text without raising the audio limit.
+export const MAX_TRACK_METADATA_BYTES = 64 * 1024;
+export const MAX_MUSIC_UPLOAD_BYTES = MAX_AUDIO_BYTES + 64 * 1024;
 export const TRACK_PREFIX = 'music/tracks/';
 export const TRACK_SCHEMA = 'mapkai-music-track.v1';
 export const TRACK_ID_PATTERN = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
@@ -22,6 +27,14 @@ export function json(data, status = 200, headers = {}) {
 
 export function inputError(message, status = 400) {
   return Object.assign(new Error(message), { musicInputError: true, status });
+}
+
+export function normalizeLyrics(value) {
+  if (typeof value !== 'string') throw inputError('Lyrics must be plain text.');
+  if (/[\u0000-\u0009\u000b\u000c\u000e-\u001f\u007f-\u009f]/.test(value)) throw inputError('Lyrics contain unsupported control characters.');
+  const lyrics = value.replace(/\r\n?/g, '\n').trim();
+  if (lyrics.length > MAX_LYRICS_CHARS) throw inputError('Lyrics can have up to 12,000 characters.');
+  return lyrics;
 }
 
 export function errorResponse(error, message = 'Music is temporarily unavailable. Please try again later.') {
@@ -92,6 +105,9 @@ export function safeTrack(track) {
   // the AI flag and provider must be a complete, validated pair.
   if ((Object.hasOwn(track, 'aiGenerated') || Object.hasOwn(track, 'generationProvider'))
     && (track.aiGenerated !== true || track.generationProvider !== GENERATION_PROVIDER)) return false;
+  if (Object.hasOwn(track, 'lyrics')) {
+    try { normalizeLyrics(track.lyrics); } catch { return false; }
+  }
   if (!Object.hasOwn(AUDIO_TYPES, track.extension) || track.contentType !== AUDIO_TYPES[track.extension]
     || track.objectKey !== audioKey(track.id, track.extension)) return false;
   if (!Number.isSafeInteger(track.fileSize) || track.fileSize < 1 || track.fileSize > MAX_AUDIO_BYTES) return false;
@@ -107,6 +123,7 @@ export function safeTrack(track) {
 export function publicTrack(track) {
   const aiGenerated = track.aiGenerated === true && track.generationProvider === GENERATION_PROVIDER;
   return { id: track.id, title: track.title, description: track.description, language: track.language,
+    lyrics: normalizeLyrics(Object.hasOwn(track, 'lyrics') ? track.lyrics : ''),
     aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,
     url: `/api/music/audio?id=${encodeURIComponent(track.id)}`, durationSeconds: null,
     createdAt: track.createdAt, filename: track.filename };
@@ -116,7 +133,7 @@ export async function readTrack(bucket, id) {
   if (!TRACK_ID_PATTERN.test(id || '')) return null;
   const object = await bucket.get(metadataKey(id));
   if (!object) return null;
-  if (!Number.isSafeInteger(object.size) || object.size > 16 * 1024) throw new Error('Invalid stored track.');
+  if (!Number.isSafeInteger(object.size) || object.size > MAX_TRACK_METADATA_BYTES) throw new Error('Invalid stored track.');
   const track = await object.json();
   if (!SONG_LANGUAGES.includes(track?.language)) return null;
   if (!safeTrack(track) || track.id !== id) throw new Error('Invalid stored track.');

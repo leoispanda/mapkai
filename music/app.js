@@ -4,6 +4,7 @@
   const copy = {
     zh: {
       back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', aiNotice: '使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
+      lyrics: '歌词', lyricsLabel: '{title} 的歌词', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       createSong: '制作歌曲', composerIntro: '先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。', composerPrivacy: '你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。', composerTheme: '想法或主题', composerStyle: '音乐风格', composerDuration: '时长', styleMemphisHipHop: '孟菲斯 Hip-hop', styleRock: '摇滚', styleSymphonic: '交响', styleFolkRap: '民谣说唱', styleAcoustic: '原声', durationOne: '1 分钟', durationTwo: '2 分钟', composerLyrics: '原创歌词（可选）', composerLyricsPlaceholder: '留空即可按主题创作原创歌词。', preparePrompt: '生成创作说明', composerPrompt: '创作说明', copyPrompt: '复制创作说明', copyingPrompt: '正在复制…', openCreator: '打开音乐制作工具 ↗', composerReturn: '先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。', composerReady: '创作说明已准备好。先复制，再到音乐工具中粘贴。', composerCopied: '已复制创作说明。打开音乐工具并粘贴，即可开始制作。', composerCopyFallback: '请复制已选中的创作说明：按 ⌘C 或 Ctrl+C，也可以长按复制。', composerThemeRequired: '请填写歌曲的想法或主题。', composerThemeLimit: '主题最多 1000 个字符。', composerLyricsLimit: '歌词最多 2400 个字符。', composerStyleRequired: '请选择一种音乐风格。', composerDurationRequired: '请选择 1 分钟或 2 分钟。', composerPromptLimit: '创作说明最多 4100 个字符，请缩短主题或歌词。', composerCount: '{count} / 4100 个字符',
       libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有歌曲。', emptyCopy: '歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
       studioTitle: '上传歌曲', close: '关闭', checking: '正在打开歌曲工作室…', ownerIntro: '输入 MapKAI 管理密码，开始上传歌曲。', ownerCode: '管理密码', login: '打开工作室', unavailable: '暂时无法上传歌曲，请稍后再试。', uploadIntro: '下载你使用 AI 创作的歌曲，在这里上传，即可加入公开歌曲列表。', chooseFile: '选择歌曲文件', fileFormats: 'MP3 / M4A / WAV · 每首最多 25 MB', preview: '上传前试听', songTitle: '歌名', songLanguage: '歌曲语言', chooseLanguage: '请选择英语、荷兰语或中文。', songDescription: '一句介绍（可选）', titlePlaceholder: '给这首歌一个名字', descriptionPlaceholder: '这首歌的灵感，或你想说的话…', publishNote: '上传的歌曲和 AI 生成标识会公开展示。请确认你有权分享这首作品。', progress: '上传进度', publish: '上传并加入列表',
@@ -11,6 +12,7 @@
     },
     en: {
       back: '← Back to Toolbox', intro: 'Tap a song card to listen.', aiNotice: 'Songs created with AI are labelled AI-generated on their cards before playback.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
+      lyrics: 'Lyrics', lyricsLabel: 'Lyrics for {title}', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       createSong: 'Create a song', composerIntro: 'Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.', composerPrivacy: 'Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.', composerTheme: 'Idea or theme', composerStyle: 'Music style', composerDuration: 'Duration', styleMemphisHipHop: 'Memphis hip-hop', styleRock: 'Rock', styleSymphonic: 'Symphonic', styleFolkRap: 'Folk rap', styleAcoustic: 'Acoustic', durationOne: '1 minute', durationTwo: '2 minutes', composerLyrics: 'Original lyrics (optional)', composerLyricsPlaceholder: 'Leave blank to create original lyrics from your theme.', preparePrompt: 'Prepare prompt', composerPrompt: 'Your creation prompt', copyPrompt: 'Copy prompt', copyingPrompt: 'Copying…', openCreator: 'Open music creator ↗', composerReturn: 'Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.', composerReady: 'Your prompt is ready. Copy it, then paste it into the music tool.', composerCopied: 'Prompt copied. Open the music tool and paste it to begin creating.', composerCopyFallback: 'Copy the selected prompt with ⌘C or Ctrl+C, or press and hold to copy.', composerThemeRequired: 'Add an idea or theme for your song.', composerThemeLimit: 'The theme can have up to 1000 characters.', composerLyricsLimit: 'The lyrics can have up to 2400 characters.', composerStyleRequired: 'Choose a music style.', composerDurationRequired: 'Choose 1 minute or 2 minutes.', composerPromptLimit: 'The prompt can have up to 4100 characters. Shorten the theme or lyrics.', composerCount: '{count} / 4100 characters',
       libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No songs yet.', emptyCopy: 'Songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
       studioTitle: 'Upload a song', close: 'Close', checking: 'Opening the music studio…', ownerIntro: 'Enter the MapKAI owner password to upload songs.', ownerCode: 'Owner password', login: 'Open the studio', unavailable: 'Uploads are temporarily unavailable. Please try again later.', uploadIntro: 'Download the song you created with AI, then upload it here to join the public song list.', chooseFile: 'Choose a song file', fileFormats: 'MP3 / M4A / WAV · Up to 25 MB per song', preview: 'Listen before uploading', songTitle: 'Song title', songLanguage: 'Song language', chooseLanguage: 'Choose English, Dutch, or Chinese.', songDescription: 'A few words (optional)', titlePlaceholder: 'Give your song a name', descriptionPlaceholder: 'The inspiration behind this song, or something you want to share…', publishNote: 'Uploaded songs and their AI-generated labels are public. Please make sure you have the right to share this work.', progress: 'Upload progress', publish: 'Upload to the list',
@@ -185,7 +187,7 @@
     try {
       const url = new URL(raw.url, location.href);
       if (url.origin !== location.origin || !['https:', 'http:'].includes(url.protocol)) return null;
-      return { ...raw, title: raw.title.slice(0, 120), description: typeof raw.description === 'string' ? raw.description.slice(0, 500) : '', url: url.href,
+      return { ...raw, title: raw.title.slice(0, 120), description: typeof raw.description === 'string' ? raw.description.slice(0, 500) : '', lyrics: typeof raw.lyrics === 'string' ? raw.lyrics.slice(0, 12000).replace(/\r\n?/g, '\n').trim() : '', url: url.href,
         aiGenerated: raw.aiGenerated === true && raw.generationProvider === 'ElevenLabs', generationProvider: raw.generationProvider === 'ElevenLabs' ? 'ElevenLabs' : null };
     } catch { return null; }
   }
@@ -218,6 +220,9 @@
       card.element.classList.toggle('is-buffering', waiting);
       card.element.classList.toggle('is-selected', selected);
       card.audio.hidden = !selected;
+      const revealLyrics = selected || active;
+      if (revealLyrics && !card.lyricsActive && !card.lyricsDetails.hidden) card.lyricsDetails.open = true;
+      card.lyricsActive = revealLyrics;
       card.button.setAttribute('aria-expanded', String(selected));
       card.button.setAttribute('aria-label', t(waiting ? 'cancelLabel' : active ? 'pauseLabel' : !card.error.hidden ? 'retryLabel' : 'audioLabel', { title: card.track.title }));
       card.icon.dataset.state = waiting ? 'loading' : active ? 'pause' : 'play';
@@ -281,6 +286,15 @@
     card.disclosure.textContent = t('aiGenerated');
     if (card.track.aiGenerated) card.button.setAttribute('aria-describedby', card.disclosure.id);
     else card.button.removeAttribute('aria-describedby');
+    const hadLyrics = !card.lyricsDetails.hidden;
+    card.lyricsDetails.hidden = !card.track.lyrics;
+    card.lyricsSummary.textContent = t('lyrics');
+    const lyricsLabel = t('lyricsLabel', { title: card.track.title });
+    card.lyricsSummary.setAttribute('aria-label', lyricsLabel);
+    card.lyricsText.setAttribute('aria-label', lyricsLabel);
+    if (card.lyricsText.textContent !== card.track.lyrics) card.lyricsText.textContent = card.track.lyrics;
+    if (!card.track.lyrics) card.lyricsDetails.open = false;
+    else if (!hadLyrics && card === selectedCard) card.lyricsDetails.open = true;
   }
 
   function createCard(track) {
@@ -299,8 +313,12 @@
     audio.id = `song-controls-${++cardSequence}`; button.setAttribute('aria-controls', audio.id);
     disclosure.id = `${audio.id}-disclosure`;
     const error = document.createElement('p'); error.className = 'track-error'; error.setAttribute('role', 'status'); error.hidden = true;
-    element.append(button, audio, error);
-    const card = { element, button, icon, action, audio, error, title, disclosure, description, meta, track, pending: false, waiting: false, playRequest: 0 };
+    const lyricsDetails = document.createElement('details'); lyricsDetails.className = 'track-lyrics'; lyricsDetails.hidden = true;
+    const lyricsSummary = document.createElement('summary');
+    const lyricsText = document.createElement('pre'); lyricsText.className = 'lyrics-text'; lyricsText.tabIndex = 0; lyricsText.setAttribute('role', 'region');
+    lyricsDetails.append(lyricsSummary, lyricsText);
+    element.append(button, audio, error, lyricsDetails);
+    const card = { element, button, icon, action, audio, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => togglePlayback(card));
     audio.addEventListener('play', () => { if (audio.paused) return; error.hidden = true; card.waiting = true; stopOtherPlayers(audio); });
     audio.addEventListener('playing', () => { if (audio.paused) return; card.pending = false; card.waiting = false; error.hidden = true; updatePlaying(); });
@@ -516,7 +534,10 @@
   $('song-search').addEventListener('input', updateLibrary);
   $('clear-search').addEventListener('click', () => { $('song-search').value = ''; updateLibrary(); $('song-search').focus(); });
   $('retry-library').addEventListener('click', loadLibrary);
-  $('manage-music').addEventListener('click', () => { studio.showModal(); checkOwner(); });
+  $('manage-music').addEventListener('click', () => {
+    if (!$('song-lyrics').value.trim() && $('composer-lyrics').value.trim()) $('song-lyrics').value = $('composer-lyrics').value.trim();
+    studio.showModal(); checkOwner();
+  });
   $('retry-studio').addEventListener('click', checkOwner);
   $('close-studio').addEventListener('click', () => { if (!uploading) studio.close(); });
   studio.addEventListener('cancel', event => { if (uploading) event.preventDefault(); });
@@ -570,8 +591,9 @@
     const file = $('song-file').files[0];
     const title = $('song-title').value.trim();
     const description = $('song-description').value.trim();
+    const lyrics = $('song-lyrics').value.trim();
     const songLanguage = $('song-language').value;
-    const invalid = validateFile(file) || (!['en', 'nl', 'zh'].includes(songLanguage) ? 'chooseLanguage' : !title ? 'addTitle' : title.length > 120 ? 'titleLimit' : description.length > 500 ? 'descriptionLimit' : null);
+    const invalid = validateFile(file) || (!['en', 'nl', 'zh'].includes(songLanguage) ? 'chooseLanguage' : !title ? 'addTitle' : title.length > 120 ? 'titleLimit' : description.length > 500 ? 'descriptionLimit' : lyrics.length > 12000 ? 'lyricsLimit' : null);
     if (invalid) { setUploadStatus(invalid, 'error'); return; }
     preview.pause();
     uploadPercent = 0; uploadSent = false;
@@ -579,7 +601,7 @@
     setUploadStatus('uploading');
     setUploading(true);
     const data = new FormData();
-    data.append('file', file); data.append('title', title); data.append('description', description); data.append('language', songLanguage);
+    data.append('file', file); data.append('title', title); data.append('description', description); data.append('language', songLanguage); data.append('lyrics', lyrics);
     try {
       const track = await uploadSong(data);
       // Finish a pre-upload refresh before publishing the newly confirmed track in the page.
