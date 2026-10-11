@@ -3,6 +3,8 @@ import { hasValidFounderAccessCookie } from '../pdc/_shared.js';
 
 export const MAX_AUDIO_BYTES = 25 * 1024 * 1024;
 export const MAX_LYRICS_CHARS = 12000;
+export const MAX_LYRICS_TIMING_CUES = 600;
+export const MAX_LYRICS_TIMING_SECONDS = 7200;
 // UTF-8 lyrics can use three bytes per JavaScript character; reserve space for
 // their complete metadata and multipart text without raising the audio limit.
 export const MAX_TRACK_METADATA_BYTES = 64 * 1024;
@@ -19,6 +21,9 @@ export const RESPONSE_HEADERS = {
   'Cross-Origin-Resource-Policy': 'same-origin',
   'Referrer-Policy': 'no-referrer',
 };
+// Timing is public only after readTrack verifies the exact normalized lyrics.
+// A raw metadata object cannot bypass the asynchronous content-hash check.
+const verifiedLyricsTiming = new WeakMap();
 
 export function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), { status,
@@ -35,6 +40,29 @@ export function normalizeLyrics(value) {
   const lyrics = value.replace(/\r\n?/g, '\n').trim();
   if (lyrics.length > MAX_LYRICS_CHARS) throw inputError('Lyrics can have up to 12,000 characters.');
   return lyrics;
+}
+
+export function normalizeLyricsTiming(lyrics, value) {
+  const lines = normalizeLyrics(lyrics).split('\n');
+  const sungLines = lines.flatMap((line, index) => {
+    const text = line.trim();
+    return text && !/^\[[^\[\]\n]+\]$/.test(text) ? [index] : [];
+  });
+  if (!Array.isArray(value) || value.length > MAX_LYRICS_TIMING_CUES || value.length !== sungLines.length) {
+    throw inputError('Lyrics timing must cover every sung line, with up to 600 cues.');
+  }
+  let previousEnd = 0;
+  return Array.from(value, (cue, index) => {
+    if (!cue || typeof cue !== 'object' || Array.isArray(cue)
+      || Object.keys(cue).length !== 3 || !['line', 'start', 'end'].every(key => Object.hasOwn(cue, key))
+      || !Number.isSafeInteger(cue.line) || cue.line !== sungLines[index]
+      || !Number.isFinite(cue.start) || !Number.isFinite(cue.end)
+      || cue.start < 0 || cue.end <= cue.start || cue.end > MAX_LYRICS_TIMING_SECONDS || cue.start < previousEnd) {
+      throw inputError('Lyrics timing must use ordered, nonoverlapping sung-line cues between 0 and 7,200 seconds.');
+    }
+    previousEnd = cue.end;
+    return { line: cue.line, start: cue.start, end: cue.end };
+  });
 }
 
 export function errorResponse(error, message = 'Music is temporarily unavailable. Please try again later.') {
@@ -108,6 +136,8 @@ export function safeTrack(track) {
   if (Object.hasOwn(track, 'lyrics')) {
     try { normalizeLyrics(track.lyrics); } catch { return false; }
   }
+  // Optional timing is enhancement metadata. Invalid or stale timestamps must
+  // not prevent the song's validated audio and plain lyrics from being read.
   if (!Object.hasOwn(AUDIO_TYPES, track.extension) || track.contentType !== AUDIO_TYPES[track.extension]
     || track.objectKey !== audioKey(track.id, track.extension)) return false;
   if (!Number.isSafeInteger(track.fileSize) || track.fileSize < 1 || track.fileSize > MAX_AUDIO_BYTES) return false;
@@ -122,8 +152,12 @@ export function safeTrack(track) {
 
 export function publicTrack(track) {
   const aiGenerated = track.aiGenerated === true && track.generationProvider === GENERATION_PROVIDER;
+  const lyrics = normalizeLyrics(Object.hasOwn(track, 'lyrics') ? track.lyrics : '');
+  const verified = verifiedLyricsTiming.get(track);
+  const lyricsTiming = verified && verified.lyrics === lyrics && verified.cues === track.lyricsTiming
+    && verified.sha256 === track.lyricsTimingSha256 ? verified.cues.map(cue => ({ ...cue })) : [];
   return { id: track.id, title: track.title, description: track.description, language: track.language,
-    lyrics: normalizeLyrics(Object.hasOwn(track, 'lyrics') ? track.lyrics : ''),
+    lyrics, lyricsTiming,
     aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,
     url: `/api/music/audio?id=${encodeURIComponent(track.id)}`, durationSeconds: null,
     createdAt: track.createdAt, filename: track.filename };
@@ -137,5 +171,21 @@ export async function readTrack(bucket, id) {
   const track = await object.json();
   if (!SONG_LANGUAGES.includes(track?.language)) return null;
   if (!safeTrack(track) || track.id !== id) throw new Error('Invalid stored track.');
-  return track;
+  const readable = { ...track, lyricsTiming: [] };
+  delete readable.lyricsTimingSha256;
+  if (Object.hasOwn(track, 'lyricsTiming') && typeof track.lyricsTimingSha256 === 'string'
+    && /^[a-f0-9]{64}$/.test(track.lyricsTimingSha256)) {
+    try {
+      const lyrics = normalizeLyrics(Object.hasOwn(track, 'lyrics') ? track.lyrics : '');
+      const cues = normalizeLyricsTiming(lyrics, track.lyricsTiming);
+      const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(lyrics));
+      const sha256 = [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+      if (sha256 === track.lyricsTimingSha256) {
+        readable.lyricsTiming = Object.freeze(cues.map(cue => Object.freeze(cue)));
+        readable.lyricsTimingSha256 = sha256;
+        verifiedLyricsTiming.set(readable, { lyrics, cues: readable.lyricsTiming, sha256 });
+      }
+    } catch { /* Invalid timing or unavailable hashing falls back to plain lyrics. */ }
+  }
+  return readable;
 }

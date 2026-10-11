@@ -6,8 +6,9 @@ import { onRequest as tracks } from '../functions/api/music/tracks.js';
 import { onRequest as audio } from '../functions/api/music/audio.js';
 import { validateAudio } from '../functions/api/music/_audio-validation.js';
 import { createFounderAccessCookie } from '../functions/api/pdc/_shared.js';
-import { AUDIO_TYPES, MAX_LYRICS_CHARS, MAX_MUSIC_UPLOAD_BYTES, MAX_TRACK_METADATA_BYTES, TRACK_SCHEMA, audioKey, metadataKey,
-  normalizeLyrics, safeTrack } from '../functions/api/music/_shared.js';
+import { AUDIO_TYPES, MAX_LYRICS_CHARS, MAX_LYRICS_TIMING_CUES, MAX_LYRICS_TIMING_SECONDS, MAX_MUSIC_UPLOAD_BYTES,
+  MAX_TRACK_METADATA_BYTES, TRACK_SCHEMA, audioKey, metadataKey, normalizeLyrics, normalizeLyricsTiming, publicTrack,
+  readTrack, safeTrack } from '../functions/api/music/_shared.js';
 import { COST_GUARD_KEY, COST_GUARD_LIMITS } from '../functions/_shared/cost-guard.js';
 
 const id = '11111111-1111-4111-8111-111111111111';
@@ -270,7 +271,7 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   assert.deepEqual(objects.get(metadataKey(id)).bytes, englishBefore);
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.find(item => item.id === id), {
-    id, title: english.title, description: english.description, language: 'en', lyrics: '',
+    id, title: english.title, description: english.description, language: 'en', lyrics: '', lyricsTiming: [],
     aiGenerated: null, generationProvider: null,
     url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
   });
@@ -387,6 +388,104 @@ test('malformed stored lyrics cannot reach the public catalog or audio response'
     calls.length = 0;
     assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env })).status, 503);
     assert.deepEqual(calls.map(call => call.operation), ['get']);
+  }
+});
+
+test('lyrics timing uses normalized original line indexes and complete multilingual sung-line coverage', () => {
+  const lyrics = '  [Verse 1]\r\nLook again\r\nFind a new way\r\n\r\n [副歌] \r\n再看一眼\r\n  ';
+  const cues = [{ line: 1, start: 1.25, end: 3 }, { line: 2, start: 3, end: 5.2 }, { line: 5, start: 8, end: 10 }];
+  const normalized = normalizeLyricsTiming(lyrics, cues);
+  assert.deepEqual(normalized, cues);
+  assert.notEqual(normalized, cues);
+  assert.notEqual(normalized[0], cues[0]);
+  assert.deepEqual(normalizeLyricsTiming('[Instrumental]\n\n[Outro]', []), []);
+  assert.deepEqual(normalizeLyricsTiming('Final line', [{ line: 0, start: 0, end: MAX_LYRICS_TIMING_SECONDS }]),
+    [{ line: 0, start: 0, end: MAX_LYRICS_TIMING_SECONDS }]);
+  const maximumLyrics = Array(MAX_LYRICS_TIMING_CUES).fill('Line').join('\n');
+  const maximumCues = Array.from({ length: MAX_LYRICS_TIMING_CUES }, (_, line) => ({ line, start: line, end: line + 1 }));
+  assert.equal(normalizeLyricsTiming(maximumLyrics, maximumCues).length, MAX_LYRICS_TIMING_CUES);
+});
+
+test('lyrics timing rejects malformed, incomplete, unordered, overlapping and out-of-bound cues', () => {
+  const lyrics = '[Verse]\nFirst line\n\n[Chorus]\nSecond line';
+  const valid = [{ line: 1, start: 1, end: 2 }, { line: 4, start: 3, end: 4 }];
+  const invalid = [undefined, null, {}, 'timing', [], valid.slice(0, 1), new Array(2),
+    [null, valid[1]], [[1, 1, 2], valid[1]], [{ ...valid[0], text: 'First line' }, valid[1]],
+    [{ start: 1, end: 2 }, valid[1]], [{ ...valid[0], line: '1' }, valid[1]],
+    [{ ...valid[0], line: 0 }, valid[1]], [{ ...valid[0], line: 2 }, valid[1]],
+    [valid[1], valid[0]], [valid[0], { ...valid[1], line: 1 }],
+    [{ ...valid[0], start: '1' }, valid[1]], [{ ...valid[0], start: -1 }, valid[1]],
+    [{ ...valid[0], start: NaN }, valid[1]], [{ ...valid[0], end: Infinity }, valid[1]],
+    [{ ...valid[0], end: 1 }, valid[1]], [valid[0], { ...valid[1], start: 1.9 }],
+    [valid[0], { ...valid[1], end: MAX_LYRICS_TIMING_SECONDS + 0.01 }],
+  ];
+  for (const value of invalid) assert.throws(() => normalizeLyricsTiming(lyrics, value),
+    error => error.musicInputError && error.status === 400);
+  const excessLyrics = Array(MAX_LYRICS_TIMING_CUES + 1).fill('Line').join('\n');
+  const excessCues = Array.from({ length: MAX_LYRICS_TIMING_CUES + 1 }, (_, line) => ({ line, start: line, end: line + 1 }));
+  assert.throws(() => normalizeLyricsTiming(excessLyrics, excessCues), /600 cues/);
+});
+
+test('stored lyric timing is public only after exact normalized UTF-8 hash verification', async () => {
+  const { env, install, objects } = fixture();
+  const suppliedLyrics = ' [Verse]\r\nLook again\r\n\r\n[副歌]\r\n再看一眼\r\n ';
+  const lyrics = normalizeLyrics(suppliedLyrics);
+  const lyricsTiming = [{ line: 1, start: 2.5, end: 5 }, { line: 4, start: 6, end: 9.25 }];
+  const lyricsTimingSha256 = createHash('sha256').update(lyrics, 'utf8').digest('hex');
+  const stored = install(id, 'Timed lyrics', { lyrics: suppliedLyrics, lyricsTiming, lyricsTimingSha256 });
+  const before = objects.get(metadataKey(id)).bytes.slice();
+  assert.equal(safeTrack(stored), true);
+  assert.deepEqual(publicTrack(stored).lyricsTiming, []);
+  const readable = await readTrack(env.MAPKAI_REVIEW_MEDIA, id);
+  assert.notEqual(readable, stored);
+  assert.deepEqual(publicTrack(readable).lyricsTiming, lyricsTiming);
+  assert.deepEqual(publicTrack({ ...readable }).lyricsTiming, []);
+  const publicCues = publicTrack(readable).lyricsTiming;
+  publicCues[0].start = 100;
+  assert.deepEqual(publicTrack(readable).lyricsTiming, lyricsTiming);
+  readable.lyrics = lyrics.replace('Look again', 'Different words');
+  assert.deepEqual(publicTrack(readable).lyricsTiming, []);
+  const response = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+  assert.equal(response.status, 200);
+  const catalog = await response.json();
+  assert.equal(catalog.tracks[0].lyrics, lyrics);
+  assert.deepEqual(catalog.tracks[0].lyricsTiming, lyricsTiming);
+  assert.equal(Object.hasOwn(catalog.tracks[0], 'lyricsTimingSha256'), false);
+  assert.equal((await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env })).status, 200);
+  assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
+});
+
+test('missing, invalid or stale lyric timing falls back without blocking catalog, playback or seeking', async () => {
+  const lyrics = '[Verse]\nFirst line\n\n[Chorus]\nSecond line';
+  const lyricsTiming = [{ line: 1, start: 1, end: 2 }, { line: 4, start: 3, end: 4 }];
+  const lyricsTimingSha256 = createHash('sha256').update(lyrics, 'utf8').digest('hex');
+  for (const metadata of [
+    {}, { lyricsTiming }, { lyricsTiming, lyricsTimingSha256: 'a'.repeat(64) },
+    { lyricsTiming, lyricsTimingSha256: { toString: null } },
+    { lyricsTiming, lyricsTimingSha256: [lyricsTimingSha256] },
+    { lyricsTiming: null, lyricsTimingSha256 }, { lyricsTiming: {}, lyricsTimingSha256 },
+    { lyricsTiming: [], lyricsTimingSha256 }, { lyricsTiming: lyricsTiming.slice(0, 1), lyricsTimingSha256 },
+    { lyricsTiming: [lyricsTiming[0], { ...lyricsTiming[1], start: 1.5 }], lyricsTimingSha256 },
+    { lyricsTiming, lyricsTimingSha256, lyrics: lyrics.replace('First line', 'Changed line') },
+  ]) {
+    const { env, install, objects } = fixture();
+    const stored = install(id, 'Plain lyric fallback', { lyrics, ...metadata });
+    const before = objects.get(metadataKey(id)).bytes.slice();
+    assert.equal(safeTrack(stored), true);
+    assert.deepEqual(publicTrack(stored).lyricsTiming, []);
+    const readable = await readTrack(env.MAPKAI_REVIEW_MEDIA, id);
+    assert.deepEqual(readable.lyricsTiming, []);
+    assert.equal(Object.hasOwn(readable, 'lyricsTimingSha256'), false);
+    const response = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+    assert.equal(response.status, 200);
+    assert.deepEqual((await response.json()).tracks[0].lyricsTiming, []);
+    const playback = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env });
+    assert.equal(playback.status, 200);
+    assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+    const range = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`, { headers: { Range: 'bytes=417-420' } }), env });
+    assert.equal(range.status, 206);
+    assert.deepEqual(new Uint8Array(await range.arrayBuffer()), mp3Bytes.slice(417, 421));
+    assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
   }
 });
 
