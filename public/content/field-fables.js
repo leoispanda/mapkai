@@ -11368,47 +11368,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0415",
     "fieldTitle": "Secretarial and office work",
     "fieldTitleZh": "秘书与办公室工作",
-    "title": "The Office with No Time to Work",
-    "titleZh": "没有时间工作的办公室",
-    "summary": "An office invites every department to every decision until a perfectly coordinated drain is completed after the rain.",
-    "summaryZh": "办公室让每个部门参加每项决定，直到一条协调得极其周全的排水沟建成在暴雨之后。",
-    "storyParagraphs": [
-      "The city works office managed roads, drains, trees, and markets. New coordinator Lu Yi feared overlooking anyone affected, so every change required twelve departments at the table. At first the rule caught useful conflicts: a road crew nearly cut a market cable, and the tree team saved roots beneath a planned trench. Lu called the crowded meetings proof that more coordination was always safer.",
-      "Soon a sign repair waited for parks, sanitation, and festival staff to reply. Meetings filled mornings; summaries and confirmation mail filled afternoons. Most participants mattered to only one item but had to sit through all ten. After each interruption, engineers needed time to recover their calculations. Meanwhile a drain redesign waited three weeks for unanimous attendance. The first storm reached the street before the approved plan did.",
-      "Lu responded with a daily coordination meeting. Omitted risks fell slightly, but actual work nearly stopped. One engineer quietly built from an old drawing to meet a deadline, causing the rework the meetings were meant to prevent. Lu finally counted not only meeting hours, but waiting, interruption recovery, duplicated review, and repair caused by missing a genuinely affected group. Both too much and too little contact had costs. The office had mistaken attendance for alignment and messages sent for decisions understood.",
-      "She mapped which tasks shared location, timing, resources, or irreversible consequences. Roads and drains decided together; trees joined only inside excavation zones; markets named one representative. Small changes inside published limits proceeded directly. Uncertain, high-impact, or boundary-crossing work escalated to a named decision owner. Shared maps and fixed check days replaced constant requests for confirmation. Each item now named who decided, who supplied evidence, who must be consulted, and who only needed the final notice.",
-      "The council president objected when his office no longer received every invitation. Lu accepted losing her private office rather than return ceremonial attendance to the workflow. Coordination did not disappear: a tree root later exposed an unmapped pipe, and the team expanded the escalation boundary. The repair was recorded so the rule could learn rather than pretend every dependency was knowable in advance. The recorded exception named its scope and owner.",
-      "On the next Tuesday morning, twelve chairs remained in the room, but only four were occupied. A road engineer, drain engineer, tree representative, and decision owner bent over one map. At the other desks, eight people worked through an uninterrupted hour while rainwater moved through the finished channel outside. The meeting ended when the decision was made, not when every possible observer had spoken."
-    ],
-    "storyParagraphsZh": [
-      "城建办公室负责道路、排水、树木与市集。新协调员陆宜害怕漏掉任何受影响者，便规定每项改动都让十二个部门坐到桌边。起初，规则确实发现不少冲突：道路队差点切断市集电缆，树木组也救下一条壕沟下的老根。陆宜把拥挤会议当成证明，认定协调越多越安全。",
-      "很快，修一块路牌也要等待公园、卫生和节庆部门回复。会议占满上午，摘要和确认邮件占满下午。多数人只与其中一项有关，却要听完整场；工程师每次被打断后，还要重新找回计算。排水改造为等十二人齐到搁了三周，第一场暴雨已经漫进街道，批准图才送出办公室。",
-      "陆宜的补救是每日开协调会。遗漏略少，实际工作却几乎停住。一名工程师为赶期限，暗中照旧图施工，反而制造了会议本想避免的返工。陆宜终于不只数开会时长，也数等待、打断后恢复、重复复核，以及漏掉真正相关者造成的修理。联系过多与过少都在收取代价。办公室曾把到场误当成一致，把发出消息误当成对方真正理解。",
-      "她把近期任务画在墙上，标出哪些工作共享地点、时序、资源或不可逆后果。道路与排水共同决定；树木只在挖掘范围内加入；市集派一名代表。符合公开标准的小改动可直接执行，影响大、边界不清或跨区的事项才升级给指定决策人。共享地图和固定检查日取代不断索要确认。每项任务还写明谁决定、谁供证、谁必须商议，以及谁只需收到结果通知。",
-      "议长发现自己的办公室不再收到每份邀请，要求恢复“礼节性知情”。陆宜宁可失去独立办公室，也不把仪式重新塞回流程。协调并未消失：一次树根暴露未标水管，团队便扩大升级边界，把处理结果写进规则，让它能学习，而不是假装所有依赖都可提前知道。新增例外也注明适用范围与负责人。",
-      "下个星期二上午，会议室仍有十二把椅子，却只坐四人：道路工程师、排水工程师、树木代表与决策负责人共同俯在一张图上。其余八张办公桌第一次拥有完整的一小时，窗外雨水正顺着完工沟渠流走。决定形成后会议便结束，不再等每个可能的旁听者依次发言。"
-    ],
-    "conceptName": "Coordination cost",
-    "conceptNameZh": "协调成本",
-    "explanationParagraphs": [
-      "Coordination cost is the time, attention, communication, negotiation, monitoring, interruption, and waiting required to align interdependent work. Coordination prevents conflicts and creates value, but its burden grows with connectivity, ambiguity, and uncertainty. Clear boundaries, decision rights, shared information, selective participation, and an appropriate rhythm balance compatibility against overhead; the goal is not zero coordination."
-    ],
-    "explanationParagraphsZh": [
-      "协调成本是使相互依赖活动保持一致所需的时间、注意、沟通、协商、监督、中断与等待。协调能避免冲突并创造价值，负担却会随连接、含混和不确定增加。清楚边界、决策权、共享信息、选择性参与和合适节奏，可在兼容性与负担间平衡；目标不是零协调。"
-    ],
     "mode": "concept-fable",
+    "title": "It Has to Go Out Before Four",
+    "summary": "The training files must finish uploading and validation before 16:00, but the speaker’s job title changes at the last minute. Su Ning has updated all three files; she still needs all six signatures on the green change form before she can submit them.",
+    "storyParagraphs": [
+      "At 15:10 on Thursday, Su Ning has packaged the handbook, name badges, and sign-in sheet for the next day’s client training. The print shop requires the files to finish uploading and automated validation before 16:00, and the upload and validation together normally take eight to ten minutes. Just as she is about to submit it, the speaker emails to say that their job title has just changed. The agenda cover, name badge, and front-desk sign-in page all display that title.",
+      "The office uses a green change form under which every last-minute change must be confirmed in sequence by content, front desk, venue, catering, technical support, and finance. The rule originally dealt with changes such as time, headcount, or floor location, where one change can affect several areas at once. Su Ning updates the three files; the content owner checks the handbook and badge, and front desk checks the sign-in page. Venue and catering quickly write “no impact,” but the technical colleague is in the equipment room, so the paper form stops at the fifth line.",
+      "While waiting, Su Ning checks the full set of event outputs again. The room booking contains no job title, the catering list contains only headcount, the technical run sheet lists equipment and time slots, and the quotation contains no speaker name. She writes the three checked outputs—“handbook / badge / sign-in page”—on the back of the green form and keeps the four unaffected documents beside it on the desk, still waiting for technical support and finance to sign.",
+      "The technical colleague returns sometime after 15:40 and signs, and finance then confirms that the cost is unchanged. All six confirmations are not complete until 15:53. Even if Su Ning starts uploading immediately, there is not enough time to finish the eight-to-ten-minute upload and validation before 16:00. The print shop keeps the job for the next morning’s first print run but cancels delivery. Su Ning goes to the shop at 07:00 the next day to collect two boxes of materials before heading back to the training venue.",
+      "After the event, the supervisor and the six role owners spread the green form on the table and write “affected outputs” at the top. Whoever raises a change first marks the handbook, badge, sign-in page, or other output that may change, and the corresponding owner signs beside it. Uncertain effects are left for the event coordinator to add another owner. Changes to time, location, headcount, or other items that affect several functions still default to a multi-party route through venue, catering, front desk, technical support, and other relevant roles.",
+      "Before the next training submission, the client changes one letter in an attendee’s surname. Su Ning marks “name badge / sign-in sheet.” The content owner checks the displayed name, and front desk checks the sign-in page. She starts the upload at 15:22, and validation finishes at 15:31. She places the confirmed badge PDF into the print package and continues packing the next day’s sign-in materials."
+    ],
+    "overall": "Coordination cost comes from the communication, waiting, confirmation, and integration required among interdependent tasks. Full-team confirmation can be reasonable for highly connected changes, but extra waiting appears when the coordination route includes roles with no actual dependency on a particular change.",
+    "conceptName": "Coordination cost",
+    "explanationParagraphs": [
+      "The title change affected only the handbook, badge, and sign-in page, yet the old process waited for six roles. Confirmation finished at 15:53, leaving too little time for the required 8–10 minutes of upload and validation before 16:00, so delivery was lost.",
+      "The revised form asks the initiator to mark potential effects; content and front desk still check their own files, and the coordinator can add a missed owner. It reduces waiting at roles unaffected by that change, while retaining multi-party confirmation for changes to time, location, headcount, and other connected work."
+    ],
+    "module": {
+      "intro": "Start with the outputs that a change actually enters, then decide who must confirm and who can add missed dependencies.",
+      "diagramTitle": "How a Title Change Moves from Six-Station Waiting to Dependency-Based Routing",
+      "diagramSteps": [
+        "Receive the change and update the directly affected files",
+        "Run the old six-role sequential confirmation",
+        "Check whether the change actually enters each role’s output",
+        "Miss the workable upload-and-validation window because of waiting",
+        "Use the affected-output route on a later real task"
+      ],
+      "diagramStepNotes": [
+        "The title appears in the handbook, badge, and sign-in page.",
+        "Venue and catering mark no impact, while the paper form waits at technical support.",
+        "Su Ning confirms that room, catering, technical, and pricing documents contain no title field.",
+        "Confirmation finishes at 15:53, leaving insufficient time for 8–10 minutes of upload and validation before 16:00.",
+        "A later surname change is confirmed only by content and front desk; upload starts at 15:22 and validation finishes at 15:31."
+      ],
+      "mapping": [
+        "Green change form → the original coordination mechanism.",
+        "Three output names on the back → the concrete dependency relationship.",
+        "07:00 collection the next morning → the visible cost of mismatched waiting.",
+        "Affected-output field + coordinator’s add-on authority → reduced waiting while preserving dependency checks."
+      ],
+      "boundary": "Coordination cost does not mean that fewer confirmations are always better. Changes involving shared resources, time, location, or headcount still require multi-party coordination. The initiator can also miss an impact, so owner confirmation and coordinator add-on authority preserve necessary coordination cost.",
+      "reflection": "If the initiator can only identify what is “possibly affected,” how would you design owner confirmation and add-on rules to reduce irrelevant waiting without missing real dependencies?"
+    },
+    "references": [
+      {
+        "id": "malone-crowston-1994",
+        "citation": "Malone, T. W., & Crowston, K. (1994). The Interdisciplinary Study of Coordination. ACM Computing Surveys, 26(1), 87–119.",
+        "url": "https://crowston.syr.edu/sites/default/files/acmcs94.pdf",
+        "use": "Supports understanding organizational coordination in terms of dependencies among activities, coordination mechanisms, and coordination costs; different dependencies may require different mechanisms."
+      },
+      {
+        "id": "crowston-1997",
+        "citation": "Crowston, K. (1997). A Coordination Theory Approach to Organizational Process Design. Organization Science, 8(2), 157–175.",
+        "url": "https://doi.org/10.1287/orsc.8.2.157",
+        "use": "Supports process-design reasoning that compares coordination mechanisms based on task and resource dependencies; a single case is not treated as a universal causal law."
+      }
+    ],
+    "titleZh": "四点前要发出去",
+    "summaryZh": "培训资料必须在16:00前完成上传和校验，主讲人的头衔却在最后一刻变了。三个文件已经改好，苏宁仍要等绿色变更单上的六处签字齐全，才能提交。",
+    "storyParagraphsZh": [
+      "周四下午三点十分，苏宁把第二天客户培训的手册、胸牌和签到表打包好。印厂要求16:00前完成文件上传和自动校验，平时整包上传和校验要八到十分钟。就在她准备提交时，主讲人来信说职位头衔刚更新。议程封面、胸牌和前台签到页都显示这行字。",
+      "办公室沿用的绿色变更单要求所有临时修改都由内容、前台、场地、餐饮、技术和财务依次确认。这个规则原本常处理时间、人数、楼层等一改就牵动多处的事项。苏宁先改好三个文件，内容负责人核过手册和胸牌，前台核过签到页。场地和餐饮很快写“无影响”，技术同事却正在机房，纸单停在第五栏。",
+      "等候时，苏宁把整套活动输出重新对了一遍：房间预订不含头衔，餐饮名单只有人数，技术运行表只有设备和时段，报价也没有讲师姓名。她把已核过的“手册／胸牌／签到页”写在绿色单背面，连同那四份没有头衔字段的文件留在桌边，继续等技术和财务签字。",
+      "技术同事三点四十多回来签字，财务随后确认费用不变。绿色单到三点五十三才完成全部六处；即使立刻开始上传，也来不及在16:00前完成八到十分钟的上传和校验。印厂保留次日早班印刷，但不再安排配送，苏宁第二天七点去门店自取两箱资料，再赶回培训现场。",
+      "活动后，主管和六个负责人把绿色单摊在桌上，在表头写下“受影响输出”。发起人先勾出可能改动的手册、胸牌、签到页等输出，旁边由对应负责人签字；拿不准的地方留给活动协调人补加负责人。时间、地点、人数等会牵动多环节的变更，仍默认走场地、餐饮、前台、技术等多方确认路线。",
+      "下一场培训临近提交时，客户把一名参会者姓氏改了一个字母。苏宁勾选“胸牌／签到”，内容负责人核显示名，前台核签到页，三点二十二分她开始上传，三点三十一分校验完成。她把确认过的胸牌PDF放进打印包，继续装第二天的签到材料。"
+    ],
+    "overallZh": "协调成本来自相互依赖任务之间所需的沟通、等待、确认与整合。旧的全员确认在高关联变更中合理，但当协调路径覆盖没有实际依赖的岗位时，会增加额外等待。",
+    "conceptNameZh": "协调成本",
+    "explanationParagraphsZh": [
+      "头衔变更只进入手册、胸牌和签到页，却按旧规则等待六岗位，15:53才完成确认，已不足以在16:00前完成8–10分钟上传校验，因此失去配送。",
+      "新表让发起人标潜在影响，内容和前台仍须核对各自文件，协调人也能补加遗漏的负责人。减少的是不涉及本次改动的等待；时间、地点、人数等高关联变更仍保留多方确认。"
+    ],
+    "moduleZh": {
+      "intro": "从一项变更真正进入哪些输出开始，再决定谁必须确认以及谁有权补加依赖。",
+      "diagramTitle": "头衔变更怎样从六站等待变成按依赖路由",
+      "diagramSteps": [
+        "收到变更并修改直接受影响的文件",
+        "旧流程仍按六岗位顺序确认",
+        "核对变更是否实际进入各岗位输出",
+        "因等待错过可完成上传校验的时间窗",
+        "后续任务按受影响输出完成真实路由"
+      ],
+      "diagramStepNotes": [
+        "头衔实际出现在手册、胸牌和签到页。",
+        "场地、餐饮签无影响，纸单在技术岗位等待。",
+        "苏宁核对房间、餐饮、技术和费用文件均无头衔字段。",
+        "15:53完成确认，已不足以在16:00前完成8–10分钟上传校验。",
+        "后续姓氏变更只经内容和前台确认，15:22上传、15:31校验完成。"
+      ],
+      "mapping": [
+        "绿色变更单 → 原协调机制。",
+        "背面三份输出名称 → 具体依赖关系。",
+        "次日07:00自取 → 不匹配等待造成的可见代价。",
+        "受影响输出栏＋协调人补加权 → 缩减等待同时保留依赖确认。"
+      ],
+      "boundary": "协调成本不意味着确认越少越好。共享资源、时间、地点、人数等高关联变更仍需要多方协调；发起人也可能漏判影响，因此对应负责人确认和协调人补加仍保留必要成本。",
+      "reflection": "如果发起人只能先判断“可能受影响”，你会怎样设计负责人确认和补加机制，既减少无关等待又避免漏掉真实依赖？"
+    },
+    "referencesZh": [
+      {
+        "id": "malone-crowston-1994",
+        "citation": "Malone, T. W., & Crowston, K. (1994). The Interdisciplinary Study of Coordination. ACM Computing Surveys, 26(1), 87–119.",
+        "url": "https://crowston.syr.edu/sites/default/files/acmcs94.pdf",
+        "use": "支持从活动间依赖、协调机制与协调成本角度理解组织协调；不同依赖可需要不同机制。"
+      },
+      {
+        "id": "crowston-1997",
+        "citation": "Crowston, K. (1997). A Coordination Theory Approach to Organizational Process Design. Organization Science, 8(2), 157–175.",
+        "url": "https://doi.org/10.1287/orsc.8.2.157",
+        "use": "支持从任务和资源依赖出发比较不同协调机制的过程设计思路；不把单一案例写成普遍因果定律。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-a-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-a-edit-pass1-evidence.json",
+        "business-learning-law-mixed-12-pdc-a-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "The city works office managed roads, drains, trees, and markets. New coordinator Lu Yi feared overlooking anyone affected, so every change required twelve departments at the table. At first the rule caught useful conflicts: a road crew nearly cut a market cable, and the tree team saved roots beneath a planned trench. Lu called the crowded meetings proof that more coordination was always safer.\n\nSoon a sign repair waited for parks, sanitation, and festival staff to reply. Meetings filled mornings; summaries and confirmation mail filled afternoons. Most participants mattered to only one item but had to sit through all ten. After each interruption, engineers needed time to recover their calculations. Meanwhile a drain redesign waited three weeks for unanimous attendance. The first storm reached the street before the approved plan did.\n\nLu responded with a daily coordination meeting. Omitted risks fell slightly, but actual work nearly stopped. One engineer quietly built from an old drawing to meet a deadline, causing the rework the meetings were meant to prevent. Lu finally counted not only meeting hours, but waiting, interruption recovery, duplicated review, and repair caused by missing a genuinely affected group. Both too much and too little contact had costs. The office had mistaken attendance for alignment and messages sent for decisions understood.\n\nShe mapped which tasks shared location, timing, resources, or irreversible consequences. Roads and drains decided together; trees joined only inside excavation zones; markets named one representative. Small changes inside published limits proceeded directly. Uncertain, high-impact, or boundary-crossing work escalated to a named decision owner. Shared maps and fixed check days replaced constant requests for confirmation. Each item now named who decided, who supplied evidence, who must be consulted, and who only needed the final notice.\n\nThe council president objected when his office no longer received every invitation. Lu accepted losing her private office rather than return ceremonial attendance to the workflow. Coordination did not disappear: a tree root later exposed an unmapped pipe, and the team expanded the escalation boundary. The repair was recorded so the rule could learn rather than pretend every dependency was knowable in advance. The recorded exception named its scope and owner.\n\nOn the next Tuesday morning, twelve chairs remained in the room, but only four were occupied. A road engineer, drain engineer, tree representative, and decision owner bent over one map. At the other desks, eight people worked through an uninterrupted hour while rainwater moved through the finished channel outside. The meeting ended when the decision was made, not when every possible observer had spoken.",
-    "storyBodyZh": "城建办公室负责道路、排水、树木与市集。新协调员陆宜害怕漏掉任何受影响者，便规定每项改动都让十二个部门坐到桌边。起初，规则确实发现不少冲突：道路队差点切断市集电缆，树木组也救下一条壕沟下的老根。陆宜把拥挤会议当成证明，认定协调越多越安全。\n\n很快，修一块路牌也要等待公园、卫生和节庆部门回复。会议占满上午，摘要和确认邮件占满下午。多数人只与其中一项有关，却要听完整场；工程师每次被打断后，还要重新找回计算。排水改造为等十二人齐到搁了三周，第一场暴雨已经漫进街道，批准图才送出办公室。\n\n陆宜的补救是每日开协调会。遗漏略少，实际工作却几乎停住。一名工程师为赶期限，暗中照旧图施工，反而制造了会议本想避免的返工。陆宜终于不只数开会时长，也数等待、打断后恢复、重复复核，以及漏掉真正相关者造成的修理。联系过多与过少都在收取代价。办公室曾把到场误当成一致，把发出消息误当成对方真正理解。\n\n她把近期任务画在墙上，标出哪些工作共享地点、时序、资源或不可逆后果。道路与排水共同决定；树木只在挖掘范围内加入；市集派一名代表。符合公开标准的小改动可直接执行，影响大、边界不清或跨区的事项才升级给指定决策人。共享地图和固定检查日取代不断索要确认。每项任务还写明谁决定、谁供证、谁必须商议，以及谁只需收到结果通知。\n\n议长发现自己的办公室不再收到每份邀请，要求恢复“礼节性知情”。陆宜宁可失去独立办公室，也不把仪式重新塞回流程。协调并未消失：一次树根暴露未标水管，团队便扩大升级边界，把处理结果写进规则，让它能学习，而不是假装所有依赖都可提前知道。新增例外也注明适用范围与负责人。\n\n下个星期二上午，会议室仍有十二把椅子，却只坐四人：道路工程师、排水工程师、树木代表与决策负责人共同俯在一张图上。其余八张办公桌第一次拥有完整的一小时，窗外雨水正顺着完工沟渠流走。决定形成后会议便结束，不再等每个可能的旁听者依次发言。",
-    "explanation": "Coordination cost is the time, attention, communication, negotiation, monitoring, interruption, and waiting required to align interdependent work. Coordination prevents conflicts and creates value, but its burden grows with connectivity, ambiguity, and uncertainty. Clear boundaries, decision rights, shared information, selective participation, and an appropriate rhythm balance compatibility against overhead; the goal is not zero coordination.",
-    "explanationZh": "协调成本是使相互依赖活动保持一致所需的时间、注意、沟通、协商、监督、中断与等待。协调能避免冲突并创造价值，负担却会随连接、含混和不确定增加。清楚边界、决策权、共享信息、选择性参与和合适节奏，可在兼容性与负担间平衡；目标不是零协调。"
+    "storyBody": "At 15:10 on Thursday, Su Ning has packaged the handbook, name badges, and sign-in sheet for the next day’s client training. The print shop requires the files to finish uploading and automated validation before 16:00, and the upload and validation together normally take eight to ten minutes. Just as she is about to submit it, the speaker emails to say that their job title has just changed. The agenda cover, name badge, and front-desk sign-in page all display that title.\n\nThe office uses a green change form under which every last-minute change must be confirmed in sequence by content, front desk, venue, catering, technical support, and finance. The rule originally dealt with changes such as time, headcount, or floor location, where one change can affect several areas at once. Su Ning updates the three files; the content owner checks the handbook and badge, and front desk checks the sign-in page. Venue and catering quickly write “no impact,” but the technical colleague is in the equipment room, so the paper form stops at the fifth line.\n\nWhile waiting, Su Ning checks the full set of event outputs again. The room booking contains no job title, the catering list contains only headcount, the technical run sheet lists equipment and time slots, and the quotation contains no speaker name. She writes the three checked outputs—“handbook / badge / sign-in page”—on the back of the green form and keeps the four unaffected documents beside it on the desk, still waiting for technical support and finance to sign.\n\nThe technical colleague returns sometime after 15:40 and signs, and finance then confirms that the cost is unchanged. All six confirmations are not complete until 15:53. Even if Su Ning starts uploading immediately, there is not enough time to finish the eight-to-ten-minute upload and validation before 16:00. The print shop keeps the job for the next morning’s first print run but cancels delivery. Su Ning goes to the shop at 07:00 the next day to collect two boxes of materials before heading back to the training venue.\n\nAfter the event, the supervisor and the six role owners spread the green form on the table and write “affected outputs” at the top. Whoever raises a change first marks the handbook, badge, sign-in page, or other output that may change, and the corresponding owner signs beside it. Uncertain effects are left for the event coordinator to add another owner. Changes to time, location, headcount, or other items that affect several functions still default to a multi-party route through venue, catering, front desk, technical support, and other relevant roles.\n\nBefore the next training submission, the client changes one letter in an attendee’s surname. Su Ning marks “name badge / sign-in sheet.” The content owner checks the displayed name, and front desk checks the sign-in page. She starts the upload at 15:22, and validation finishes at 15:31. She places the confirmed badge PDF into the print package and continues packing the next day’s sign-in materials.",
+    "storyBodyZh": "周四下午三点十分，苏宁把第二天客户培训的手册、胸牌和签到表打包好。印厂要求16:00前完成文件上传和自动校验，平时整包上传和校验要八到十分钟。就在她准备提交时，主讲人来信说职位头衔刚更新。议程封面、胸牌和前台签到页都显示这行字。\n\n办公室沿用的绿色变更单要求所有临时修改都由内容、前台、场地、餐饮、技术和财务依次确认。这个规则原本常处理时间、人数、楼层等一改就牵动多处的事项。苏宁先改好三个文件，内容负责人核过手册和胸牌，前台核过签到页。场地和餐饮很快写“无影响”，技术同事却正在机房，纸单停在第五栏。\n\n等候时，苏宁把整套活动输出重新对了一遍：房间预订不含头衔，餐饮名单只有人数，技术运行表只有设备和时段，报价也没有讲师姓名。她把已核过的“手册／胸牌／签到页”写在绿色单背面，连同那四份没有头衔字段的文件留在桌边，继续等技术和财务签字。\n\n技术同事三点四十多回来签字，财务随后确认费用不变。绿色单到三点五十三才完成全部六处；即使立刻开始上传，也来不及在16:00前完成八到十分钟的上传和校验。印厂保留次日早班印刷，但不再安排配送，苏宁第二天七点去门店自取两箱资料，再赶回培训现场。\n\n活动后，主管和六个负责人把绿色单摊在桌上，在表头写下“受影响输出”。发起人先勾出可能改动的手册、胸牌、签到页等输出，旁边由对应负责人签字；拿不准的地方留给活动协调人补加负责人。时间、地点、人数等会牵动多环节的变更，仍默认走场地、餐饮、前台、技术等多方确认路线。\n\n下一场培训临近提交时，客户把一名参会者姓氏改了一个字母。苏宁勾选“胸牌／签到”，内容负责人核显示名，前台核签到页，三点二十二分她开始上传，三点三十一分校验完成。她把确认过的胸牌PDF放进打印包，继续装第二天的签到材料。",
+    "explanation": "The title change affected only the handbook, badge, and sign-in page, yet the old process waited for six roles. Confirmation finished at 15:53, leaving too little time for the required 8–10 minutes of upload and validation before 16:00, so delivery was lost.\n\nThe revised form asks the initiator to mark potential effects; content and front desk still check their own files, and the coordinator can add a missed owner. It reduces waiting at roles unaffected by that change, while retaining multi-party confirmation for changes to time, location, headcount, and other connected work.",
+    "explanationZh": "头衔变更只进入手册、胸牌和签到页，却按旧规则等待六岗位，15:53才完成确认，已不足以在16:00前完成8–10分钟上传校验，因此失去配送。\n\n新表让发起人标潜在影响，内容和前台仍须核对各自文件，协调人也能补加遗漏的负责人。减少的是不涉及本次改动的等待；时间、地点、人数等高关联变更仍保留多方确认。"
   },
   {
     "id": "0416-inventory-turnover",
@@ -11540,47 +11631,141 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0416",
     "fieldTitle": "Wholesale and retail sales",
     "fieldTitleZh": "批发与零售销售",
-    "title": "The Rain That Grew Upstream",
-    "titleZh": "逆流变大的那场雨",
-    "summary": "Thirty extra umbrellas sold in one town become four hundred frames ordered in the mountains.",
-    "summaryZh": "小镇多卖三十把伞的消息逆流而上，最后变成山里四百套伞骨的订单。",
+    "mode": "mechanism-explainer",
+    "title": "Four Filter Cartridges Spill onto the Overflow Rack",
+    "summary": "Sales of Type A water-filter cartridges rise by only four units for one week, yet the next delivery contains twenty-eight. Xu Cen puts four on the temporary overflow rack and traces the replenishment rule that produced the order.",
     "storyParagraphs": [
-      "Spring rain arrived two days early, and the town shop sold thirty more umbrellas than usual. Shopkeeper Fen feared a long wet season and suspected the wholesaler might run out. Instead of replacing the extra thirty, she raised her weekly order from one hundred to one hundred and fifty. The order represented sales, worry, and a private safety margin, but upstream it looked like customer demand. Fen also ran a three-day promotion, so neither she nor the wholesaler could tell how much of the rise would persist at normal prices.",
-      "The wholesaler could not see Fen's daily sales. He saw a sudden fifty-unit increase, guessed that neighbouring towns would soon compete, and rounded his purchase up because freight was cheapest by a full cart. He ordered two hundred and fifty from the regional warehouse. Hearing that suppliers might ration stock, he also exaggerated his request so any proportional cut would still leave enough.",
-      "The warehouse combined that order with similar guesses, updated its forecast, and asked the mountain workshop for four hundred frames. The workshop hired night labour, bought green bamboo at a premium, and stopped making baskets. Each decision seemed prudent from one desk. Together, forecast revisions, batch sizes, lead time, and fear of shortage turned a small retail change into a production surge. Bamboo prices rose for every village workshop, including those that had never received an umbrella order.",
-      "The rain ended after four days. Fen's true increase remained thirty umbrellas. Unsold stock filled her storeroom; the wholesaler cancelled the next cart; the warehouse froze purchases. The mountain workshop now faced both surplus frames and a sudden empty order book. It dismissed the night crew and sold wet bamboo cheaply. The sharp fall was created by the same chain that had created the rise. The temporary workers had turned down other harvest work and now carried home only four nights' wages.",
-      "Before the next season, Fen shared actual daily sales and on-hand stock. Orders became smaller and more frequent; freight schedules stopped requiring a full cart; promotions and rationing rules were announced in advance so nobody benefited from inflated requests. When another early shower came, the mountain workshop still increased production, but only after comparing sell-through, inventory, and genuine replenishment needs. The wholesaler accepted a steadier transport contract, giving up some full-cart savings in exchange for less distorted ordering.",
-      "Workshop owner Shi stood beside the night-work bell with the new sales sheet. The town line rose by thirty. The shop order, wholesale order, and frame plan now rose by nearby amounts instead of climbing like a staircase. Shi added one shift, then left the bell rope hanging still."
+      "Before opening on Monday of Week 3, the upstream warehouse delivers 28 Type A water-filter cartridges. The store’s main shelf can hold at most 40 units, and 16 are still on hand before the delivery. Once all 28 arrive, on-hand inventory becomes 44, so four have to go onto the overflow rack beside it. Customers bought only 24 the previous week. Xu Cen worries that the replenishment sheet may be wrong and brings the delivery note and the previous weeks’ records to the store manager.",
+      "The store has been using the same simplified policy throughout. Lead time is fixed at one week, and each week begins with the full arrival of the previous week’s order. There are no backorders. At the end of each week, the store forecasts the next week using the average of the two most recent actual sales figures and replenishes inventory position to twice that forecast. Inventory position equals on-hand inventory plus outstanding orders not yet received minus backorders. Before Week 1, on-hand inventory is 40, pipeline inventory is 0, backorders are 0, and the two earlier weeks both had sales of 20.",
+      "After selling 20 in Week 1, on-hand inventory falls to 20. The forecast remains 20 and the target inventory position is 40, so the store orders 20 at the end of the week. Those 20 arrive at the start of Week 2, restoring on-hand inventory to 40. Week 2 sales are 24, leaving 16. The average of the two most recent weeks, 20 and 24, becomes 22, so the target inventory position rises from 40 to 44.",
+      "Before the Week 2 order is placed, pipeline inventory and backorders are both zero, so target 44 minus on-hand 16 gives an order of 28. Xu Cen separates it into two parts: 24 replace what was sold that week, while another four reflect the target inventory position rising from 40 to 44. Once the order is placed, inventory position returns to 44. At the start of Week 3, all 28 arrive: 16 + 28 = 44, with 40 on the main shelf and four on the overflow rack in front of her.",
+      "In Week 3, customers buy 20, leaving 24 on hand. The average of sales 24 and 20 is still 22, so the target remains 44 and the store orders 20. The main shelf can now hold all remaining stock, and Xu Cen moves the four cartridges off the overflow rack. The manager begins sending upstream two separate columns—final customer sales and store orders—while leaving the replenishment formula unchanged for now.",
+      "In Week 4, the 20 ordered units arrive at the start of the week, bringing on-hand inventory to 44. Customers buy 24, leaving 20. The forecast remains 22, so the store orders 24. Across the four weeks, customer sales are 20, 24, 20, 24, while store orders are 20, 28, 20, 24. Xu Cen copies the two columns onto the replenishment sheet, with the delivery note for 28 still clipped behind the records."
     ],
-    "storyParagraphsZh": [
-      "春雨比往年早来两天，小镇伞店多卖出三十把伞。店主芬娘怕雨季延长，又担心批发商断货，没有只补三十把，而把每周订单从一百提高到一百五十。这个数字混合了实际销售、担忧和她自己的安全余量，传到上游却像全是顾客需求。芬娘那三天还在打折，因此连她自己也说不清销量增加有多少会在恢复原价后留下。",
-      "批发商看不见芬娘每天卖多少，只看见订单突然增加五十，便猜邻镇也会争抢。货车装满最省运费，他又把采购凑成二百五十把。听说供应商可能限量，他还故意把需求报大，好让按比例削减以后仍能拿够。每一步单独看来都像谨慎。",
-      "仓库把这张单同其他猜测相加，更新预测，向山里工坊要四百套伞骨。工坊连夜招人，高价买青竹，还停掉原来编篮的生产。预测修订、整批订货、漫长运输和缺货恐惧叠在一起，把零售端很小的变化放大成山里的生产浪潮。青竹价格随之上涨，连从未接到伞单的邻村作坊也被迫多付材料钱。",
-      "四天后雨停了，芬娘真正多卖的仍只有三十把。她的后仓塞满余货，批发商取消下一车，仓库也冻结采购。山上工坊同时面对多余伞骨和骤然空掉的订单，只得辞退夜工，把潮竹低价卖出。急跌并非新的意外，正是先前那条放大链的另一面。临时工为夜班推掉了别处收割活，如今只拿着四夜工钱回家。",
-      "下一季以前，芬娘开始共享每日实际销量与手头库存。订单改成小批多次，货运不再强求整车；促销与限量规则提前公布，夸大需求也换不来更多份额。又一场早雨到来，山上仍增加产量，却先比较真实售出、现有库存和补货需要。批发商也接受较稳定的小车运输约，放弃部分整车优惠，换取不必为了凑车而扭曲订单。",
-      "工坊主石成站在夜工钟旁看新表。小镇销量线升了三十，伞店订单、批发采购与伞骨计划也只在附近上升，不再一级级爬成陡梯。石成只添一班人，钟绳始终垂着，没有敲响全村。"
-    ],
+    "overall": "The bullwhip effect refers to upstream order variability exceeding final-demand variability for the same product over the same periods. This example uses only demand-signal processing and forecast updating: the store updates its forecast from sales, and its order both replaces units sold and adds stock to meet the higher target, amplifying the order.",
     "conceptName": "Bullwhip effect",
-    "conceptNameZh": "牛鞭效应",
     "explanationParagraphs": [
-      "The bullwhip effect occurs when small changes in end-customer demand become amplified in upstream orders. Forecast updating, batch ordering, long lead times, promotions, and rationing games can compound local, individually reasonable decisions. Sharing actual sales and inventory, shortening lead times, stabilising prices, using smaller replenishment batches, and coordinating allocation rules can reduce—but not eliminate—variation."
+      "Week 2 sales of 24 raise the forecast from 20 to 22 and the target inventory position from 40 to 44. Before ordering, on-hand inventory is 16, pipeline and backorders are zero, and inventory position is 16. The order is 44 − 16 = 28: 24 replaces sales and four raises the target.",
+      "For the same four weeks, sales variance is 4 and order variance is 11, a ratio of 11 / 4 = 2.75. The fifth diagram note shows the calculation. This ratio describes only these four weeks and cannot establish a long-run pattern.",
+      "Sharing final sales helps the warehouse distinguish customer demand from store orders, but the store still orders under its original forecast rule; amplification does not automatically disappear."
     ],
+    "module": {
+      "intro": "Hold the product and weekly periods fixed, and track on-hand inventory, pipeline inventory, sales, forecast, target inventory position, and orders separately.",
+      "diagramTitle": "How 20, 24, 20, 24 Produces Orders of 20, 28, 20, 24",
+      "diagramSteps": [
+        "Start with on-hand 40, pipeline 0, and backorders 0",
+        "Sell 20 in Week 1 and order 20",
+        "Receive 20 in Week 2, sell 24, and raise the forecast to 22",
+        "Subtract on-hand 16 from target 44 to get an order of 28",
+        "Continue for two more weeks and compare variability over the same four periods"
+      ],
+      "diagramStepNotes": [
+        "Before Week 1, the two previous sales figures are both 20, so forecast = 20 and target inventory position = 40.",
+        "At the end of Week 1, on-hand inventory is 20 and pipeline is 0, so the store orders 20.",
+        "At the start of Week 2, on-hand is 40; after selling 24, 16 remain; forecast = (20 + 24) / 2 = 22.",
+        "Before ordering, pipeline and backorders are zero, so inventory position is 16. Then 44 − 16 = 28: 24 replaces sales and four raises the target; next week 16 + 28 = 44.",
+        "Across four weeks, mean sales = 22 and variance = (4 + 4 + 4 + 4) / 4 = 4; mean orders = 23 and variance = (9 + 25 + 9 + 1) / 4 = 11. The ratio is 11 / 4 = 2.75. Variance averages squared differences from each series mean; ranges 4 and 8 are visual aids only."
+      ],
+      "mapping": [
+        "Four cartridges on the overflow rack → space occupied by stock above the earlier 40-unit target after the target rises.",
+        "Two-week moving average → the only demand-signal-processing mechanism used here.",
+        "Order of 28 → the combined result of replacing sales and raising the target.",
+        "Separate sales/order columns → allows the upstream warehouse to distinguish final demand from store ordering."
+      ],
+      "boundary": "This original simplified policy shows forecast updating over only four weeks. It includes no promotions, minimum batch orders, rationing games, or stockouts. Variance compares variability over the same four periods; range is only a visual aid. These numbers do not establish a long-run pattern. Sharing sales can reduce information distortion, but amplification may remain if the store’s rule is unchanged.",
+      "reflection": "When an order of 28 appears while sales were only 24, how would you separate the “replace 24” component from the “extra 4” caused by the higher target so that an order jump is not mistaken for a demand jump?"
+    },
+    "references": [
+      {
+        "id": "lee-padmanabhan-whang-1997",
+        "citation": "Lee, H. L., Padmanabhan, V., & Whang, S. (1997). Information Distortion in a Supply Chain: The Bullwhip Effect. Management Science, 43(4), 546–558.",
+        "url": "https://doi.org/10.1287/mnsc.43.4.546",
+        "use": "Supports the original research framework for the bullwhip effect and distinct amplification mechanisms such as demand-signal processing; this article uses only forecast updating."
+      },
+      {
+        "id": "chen-et-al-2000",
+        "citation": "Chen, F., Drezner, Z., Ryan, J. K., & Simchi-Levi, D. (2000). Quantifying the Bullwhip Effect in a Simple Supply Chain: The Impact of Forecasting, Lead Times, and Information. Management Science, 46(3), 436–443.",
+        "url": "https://doi.org/10.1287/mnsc.46.3.436.12069",
+        "use": "Supports the research framework on how forecasting, lead times, and demand information affect order variability, and how sharing demand information may reduce but not necessarily eliminate amplification; the story numbers are original simplified conditions."
+      }
+    ],
+    "titleZh": "四个滤芯挤上周转架",
+    "summaryZh": "A型滤芯一周只多卖了四个，下一周却送来二十八个。许岑把四个放上临时周转架，随后沿着补货规则追出这张订单是怎么来的。",
+    "storyParagraphsZh": [
+      "第三周周一开店前，上游仓库送来28个A型净水滤芯。门店主货位最多放40个，送货前店里还剩16个，因此28个全到后在手变成44，四个只能先放到旁边的周转架。上一周顾客只买了24个，许岑担心补货表算错，把送货单和前几周记录拿到店长桌上。",
+      "门店一直使用同一套简化政策：供货期固定一周，每周周初上周订单全数到店；没有欠交。周末用最近两周实际销量的平均数预测下一周，并把库存位置补到预测的两倍。库存位置等于在手库存加已下单未到货，再减欠交。第一周开始前，在手40、在途0、欠交0；此前两周销量都为20。",
+      "第一周卖20后在手20，预测仍为20，目标库存位置40，所以周末订20。第二周周初这20个全到，在手回到40；当周卖24后剩16。最近两周销量20和24的平均变成22，目标库存位置从40提高到44。",
+      "第二周末下单前，在途和欠交都为0，所以用目标44减在手16，得到订单28。许岑把它拆开：24个补回当周卖掉的数量，另外4个来自目标库存位置从40升到44。订单下出后库存位置回到44；第三周周初28个全到，16＋28＝44，也就是她眼前40个进主货位、4个上周转架的状态。",
+      "第三周顾客买走20个，在手降到24；最近两周24和20的平均仍为22，目标44，因此订20。主货位已经能容下余货，许岑把周转架上的四个移回去。店长把终端销量和门店订单分成两列同步给上游，补货公式暂时没改。",
+      "到了第四周，周初这20个到货后在手44，顾客买24后剩20，预测仍为22，于是订24。四周顾客销量是20、24、20、24，门店订单则是20、28、20、24。许岑把这两列抄到补货表上，那张28个的送货单继续夹在记录后面。"
+    ],
+    "overallZh": "牛鞭效应指同一商品、同一期间口径下，上游订单波动大于终端需求波动。本篇只采用需求信号处理与预测更新：门店把销量变化用于更新预测，订货既补回卖掉的数量，也补足上调的库存目标，放大了订单。",
+    "conceptNameZh": "牛鞭效应",
     "explanationParagraphsZh": [
-      "牛鞭效应是终端需求的小幅变化沿供应链向上游传递时，被预测更新、批量订货、提前期、促销与限量博弈等局部决定逐级放大。共享真实销量和库存、缩短提前期、稳定价格、小批补货及协调分配规则可以缓解，却不能消除所有波动。"
+      "第二周销量24使两周均值预测由20升至22，目标库存位置由40升至44。下单前在手16、在途0、欠交0，库存位置也是16，所以订单为44－16＝28：24补销售，4补目标上调。",
+      "同四周销量总体方差为4，订单为11，方差比11÷4＝2.75；第五步图注可复算。这个比值只描述本例四周，不能推成长期规律。",
+      "共享终端销量帮助上游区分顾客需求与门店订货，但门店仍按原预测规则下单，放大不会因此自动消失。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "固定同一商品和周次，逐周分开在手、在途、销量、预测、目标库存位置与订单。",
+      "diagramTitle": "20、24、20、24怎样产生20、28、20、24",
+      "diagramSteps": [
+        "从在手40、在途0、欠交0开始",
+        "第一周卖20并订20",
+        "第二周收20、卖24并把预测升到22",
+        "用目标44减在手16得到订单28",
+        "继续两周并比较同四周的波动"
+      ],
+      "diagramStepNotes": [
+        "第一周前两周销量均20，预测20，目标位置40。",
+        "第一周末在手20、在途0，因此订20。",
+        "第二周周初在手40，卖24后剩16；预测(20＋24)/2＝22。",
+        "下单前在途0、欠交0，库存位置16；44－16＝28，其中24补销售、4补目标上调；下周16＋28＝44。",
+        "四周销量均值22，方差(4＋4＋4＋4)÷4＝4；订单均值23，方差(9＋25＋9＋1)÷4＝11；比值11÷4＝2.75。方差是每个数与本列均值的差先平方再平均；范围4和8仅供直观看。"
+      ],
+      "mapping": [
+        "周转架上的4个滤芯 → 相较原40个目标，上调库存目标后暂时多占的货位。",
+        "两周移动平均 → 本篇唯一需求信号处理机制。",
+        "28个订单 → 补销售与提高目标同时作用的结果。",
+        "销量/订单两列 → 让上游区分终端需求与门店订货。"
+      ],
+      "boundary": "本例采用原创简化政策，只展示有限四周内的预测更新，不含促销、批量起订、配给博弈或缺货。方差比较同四周的波动，范围仅作直观辅助；这些数值不能推出长期规律。共享销量可减少信息失真，但门店规则不变时，放大仍可能存在。",
+      "reflection": "当订单28出现时，你会怎样从库存位置和预测目标中分别找出“补回24”和“额外4”，避免把订单跳升误读成顾客需求跳升？"
+    },
+    "referencesZh": [
+      {
+        "id": "lee-padmanabhan-whang-1997",
+        "citation": "Lee, H. L., Padmanabhan, V., & Whang, S. (1997). Information Distortion in a Supply Chain: The Bullwhip Effect. Management Science, 43(4), 546–558.",
+        "url": "https://doi.org/10.1287/mnsc.43.4.546",
+        "use": "支持牛鞭效应及需求信号处理等不同放大机制的原始研究框架；本篇只采用预测更新这一机制。"
+      },
+      {
+        "id": "chen-et-al-2000",
+        "citation": "Chen, F., Drezner, Z., Ryan, J. K., & Simchi-Levi, D. (2000). Quantifying the Bullwhip Effect in a Simple Supply Chain: The Impact of Forecasting, Lead Times, and Information. Management Science, 46(3), 436–443.",
+        "url": "https://doi.org/10.1287/mnsc.46.3.436.12069",
+        "use": "支持预测、供货期和需求信息对订单波动的影响，以及共享需求信息可降低但未必消除放大的研究入口；故事数值为原创简化条件。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-a-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-a-edit-pass1-evidence.json",
+        "business-learning-law-mixed-12-pdc-a-edit-pass2-evidence.json",
+        "business-learning-law-mixed-12-pdc-a-edit-pass3-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Spring rain arrived two days early, and the town shop sold thirty more umbrellas than usual. Shopkeeper Fen feared a long wet season and suspected the wholesaler might run out. Instead of replacing the extra thirty, she raised her weekly order from one hundred to one hundred and fifty. The order represented sales, worry, and a private safety margin, but upstream it looked like customer demand. Fen also ran a three-day promotion, so neither she nor the wholesaler could tell how much of the rise would persist at normal prices.\n\nThe wholesaler could not see Fen's daily sales. He saw a sudden fifty-unit increase, guessed that neighbouring towns would soon compete, and rounded his purchase up because freight was cheapest by a full cart. He ordered two hundred and fifty from the regional warehouse. Hearing that suppliers might ration stock, he also exaggerated his request so any proportional cut would still leave enough.\n\nThe warehouse combined that order with similar guesses, updated its forecast, and asked the mountain workshop for four hundred frames. The workshop hired night labour, bought green bamboo at a premium, and stopped making baskets. Each decision seemed prudent from one desk. Together, forecast revisions, batch sizes, lead time, and fear of shortage turned a small retail change into a production surge. Bamboo prices rose for every village workshop, including those that had never received an umbrella order.\n\nThe rain ended after four days. Fen's true increase remained thirty umbrellas. Unsold stock filled her storeroom; the wholesaler cancelled the next cart; the warehouse froze purchases. The mountain workshop now faced both surplus frames and a sudden empty order book. It dismissed the night crew and sold wet bamboo cheaply. The sharp fall was created by the same chain that had created the rise. The temporary workers had turned down other harvest work and now carried home only four nights' wages.\n\nBefore the next season, Fen shared actual daily sales and on-hand stock. Orders became smaller and more frequent; freight schedules stopped requiring a full cart; promotions and rationing rules were announced in advance so nobody benefited from inflated requests. When another early shower came, the mountain workshop still increased production, but only after comparing sell-through, inventory, and genuine replenishment needs. The wholesaler accepted a steadier transport contract, giving up some full-cart savings in exchange for less distorted ordering.\n\nWorkshop owner Shi stood beside the night-work bell with the new sales sheet. The town line rose by thirty. The shop order, wholesale order, and frame plan now rose by nearby amounts instead of climbing like a staircase. Shi added one shift, then left the bell rope hanging still.",
-    "storyBodyZh": "春雨比往年早来两天，小镇伞店多卖出三十把伞。店主芬娘怕雨季延长，又担心批发商断货，没有只补三十把，而把每周订单从一百提高到一百五十。这个数字混合了实际销售、担忧和她自己的安全余量，传到上游却像全是顾客需求。芬娘那三天还在打折，因此连她自己也说不清销量增加有多少会在恢复原价后留下。\n\n批发商看不见芬娘每天卖多少，只看见订单突然增加五十，便猜邻镇也会争抢。货车装满最省运费，他又把采购凑成二百五十把。听说供应商可能限量，他还故意把需求报大，好让按比例削减以后仍能拿够。每一步单独看来都像谨慎。\n\n仓库把这张单同其他猜测相加，更新预测，向山里工坊要四百套伞骨。工坊连夜招人，高价买青竹，还停掉原来编篮的生产。预测修订、整批订货、漫长运输和缺货恐惧叠在一起，把零售端很小的变化放大成山里的生产浪潮。青竹价格随之上涨，连从未接到伞单的邻村作坊也被迫多付材料钱。\n\n四天后雨停了，芬娘真正多卖的仍只有三十把。她的后仓塞满余货，批发商取消下一车，仓库也冻结采购。山上工坊同时面对多余伞骨和骤然空掉的订单，只得辞退夜工，把潮竹低价卖出。急跌并非新的意外，正是先前那条放大链的另一面。临时工为夜班推掉了别处收割活，如今只拿着四夜工钱回家。\n\n下一季以前，芬娘开始共享每日实际销量与手头库存。订单改成小批多次，货运不再强求整车；促销与限量规则提前公布，夸大需求也换不来更多份额。又一场早雨到来，山上仍增加产量，却先比较真实售出、现有库存和补货需要。批发商也接受较稳定的小车运输约，放弃部分整车优惠，换取不必为了凑车而扭曲订单。\n\n工坊主石成站在夜工钟旁看新表。小镇销量线升了三十，伞店订单、批发采购与伞骨计划也只在附近上升，不再一级级爬成陡梯。石成只添一班人，钟绳始终垂着，没有敲响全村。",
-    "explanation": "The bullwhip effect occurs when small changes in end-customer demand become amplified in upstream orders. Forecast updating, batch ordering, long lead times, promotions, and rationing games can compound local, individually reasonable decisions. Sharing actual sales and inventory, shortening lead times, stabilising prices, using smaller replenishment batches, and coordinating allocation rules can reduce—but not eliminate—variation.",
-    "explanationZh": "牛鞭效应是终端需求的小幅变化沿供应链向上游传递时，被预测更新、批量订货、提前期、促销与限量博弈等局部决定逐级放大。共享真实销量和库存、缩短提前期、稳定价格、小批补货及协调分配规则可以缓解，却不能消除所有波动。"
+    "storyBody": "Before opening on Monday of Week 3, the upstream warehouse delivers 28 Type A water-filter cartridges. The store’s main shelf can hold at most 40 units, and 16 are still on hand before the delivery. Once all 28 arrive, on-hand inventory becomes 44, so four have to go onto the overflow rack beside it. Customers bought only 24 the previous week. Xu Cen worries that the replenishment sheet may be wrong and brings the delivery note and the previous weeks’ records to the store manager.\n\nThe store has been using the same simplified policy throughout. Lead time is fixed at one week, and each week begins with the full arrival of the previous week’s order. There are no backorders. At the end of each week, the store forecasts the next week using the average of the two most recent actual sales figures and replenishes inventory position to twice that forecast. Inventory position equals on-hand inventory plus outstanding orders not yet received minus backorders. Before Week 1, on-hand inventory is 40, pipeline inventory is 0, backorders are 0, and the two earlier weeks both had sales of 20.\n\nAfter selling 20 in Week 1, on-hand inventory falls to 20. The forecast remains 20 and the target inventory position is 40, so the store orders 20 at the end of the week. Those 20 arrive at the start of Week 2, restoring on-hand inventory to 40. Week 2 sales are 24, leaving 16. The average of the two most recent weeks, 20 and 24, becomes 22, so the target inventory position rises from 40 to 44.\n\nBefore the Week 2 order is placed, pipeline inventory and backorders are both zero, so target 44 minus on-hand 16 gives an order of 28. Xu Cen separates it into two parts: 24 replace what was sold that week, while another four reflect the target inventory position rising from 40 to 44. Once the order is placed, inventory position returns to 44. At the start of Week 3, all 28 arrive: 16 + 28 = 44, with 40 on the main shelf and four on the overflow rack in front of her.\n\nIn Week 3, customers buy 20, leaving 24 on hand. The average of sales 24 and 20 is still 22, so the target remains 44 and the store orders 20. The main shelf can now hold all remaining stock, and Xu Cen moves the four cartridges off the overflow rack. The manager begins sending upstream two separate columns—final customer sales and store orders—while leaving the replenishment formula unchanged for now.\n\nIn Week 4, the 20 ordered units arrive at the start of the week, bringing on-hand inventory to 44. Customers buy 24, leaving 20. The forecast remains 22, so the store orders 24. Across the four weeks, customer sales are 20, 24, 20, 24, while store orders are 20, 28, 20, 24. Xu Cen copies the two columns onto the replenishment sheet, with the delivery note for 28 still clipped behind the records.",
+    "storyBodyZh": "第三周周一开店前，上游仓库送来28个A型净水滤芯。门店主货位最多放40个，送货前店里还剩16个，因此28个全到后在手变成44，四个只能先放到旁边的周转架。上一周顾客只买了24个，许岑担心补货表算错，把送货单和前几周记录拿到店长桌上。\n\n门店一直使用同一套简化政策：供货期固定一周，每周周初上周订单全数到店；没有欠交。周末用最近两周实际销量的平均数预测下一周，并把库存位置补到预测的两倍。库存位置等于在手库存加已下单未到货，再减欠交。第一周开始前，在手40、在途0、欠交0；此前两周销量都为20。\n\n第一周卖20后在手20，预测仍为20，目标库存位置40，所以周末订20。第二周周初这20个全到，在手回到40；当周卖24后剩16。最近两周销量20和24的平均变成22，目标库存位置从40提高到44。\n\n第二周末下单前，在途和欠交都为0，所以用目标44减在手16，得到订单28。许岑把它拆开：24个补回当周卖掉的数量，另外4个来自目标库存位置从40升到44。订单下出后库存位置回到44；第三周周初28个全到，16＋28＝44，也就是她眼前40个进主货位、4个上周转架的状态。\n\n第三周顾客买走20个，在手降到24；最近两周24和20的平均仍为22，目标44，因此订20。主货位已经能容下余货，许岑把周转架上的四个移回去。店长把终端销量和门店订单分成两列同步给上游，补货公式暂时没改。\n\n到了第四周，周初这20个到货后在手44，顾客买24后剩20，预测仍为22，于是订24。四周顾客销量是20、24、20、24，门店订单则是20、28、20、24。许岑把这两列抄到补货表上，那张28个的送货单继续夹在记录后面。",
+    "explanation": "Week 2 sales of 24 raise the forecast from 20 to 22 and the target inventory position from 40 to 44. Before ordering, on-hand inventory is 16, pipeline and backorders are zero, and inventory position is 16. The order is 44 − 16 = 28: 24 replaces sales and four raises the target.\n\nFor the same four weeks, sales variance is 4 and order variance is 11, a ratio of 11 / 4 = 2.75. The fifth diagram note shows the calculation. This ratio describes only these four weeks and cannot establish a long-run pattern.\n\nSharing final sales helps the warehouse distinguish customer demand from store orders, but the store still orders under its original forecast rule; amplification does not automatically disappear.",
+    "explanationZh": "第二周销量24使两周均值预测由20升至22，目标库存位置由40升至44。下单前在手16、在途0、欠交0，库存位置也是16，所以订单为44－16＝28：24补销售，4补目标上调。\n\n同四周销量总体方差为4，订单为11，方差比11÷4＝2.75；第五步图注可复算。这个比值只描述本例四周，不能推成长期规律。\n\n共享终端销量帮助上游区分顾客需求与门店订货，但门店仍按原预测规则下单，放大不会因此自动消失。"
   },
   {
     "id": "0416-price-discrimination",
@@ -11712,47 +11897,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0417",
     "fieldTitle": "Work skills",
     "fieldTitleZh": "工作技能",
-    "title": "The Bench That Repaired More Than Machines",
-    "titleZh": "修理机器的长凳",
-    "summary": "A trainee learns repairs on a lunch bench, then saves the group by bringing in evidence its shared language cannot see.",
-    "summaryZh": "新人从午间长凳学会修理，后来却靠引入共同语言看不见的证据救下整组人。",
-    "storyParagraphs": [
-      "The textile mill gave every new mechanic a thick manual. Adian could recite gear numbers but froze when a loom made what older workers called a 'wet-wood sound.' At lunch, veteran mechanics gathered on an oil-darkened bench behind the boiler room. They discussed how a particular loom shook last winter, what hot bearing grease smelled like, and which cloth marks appeared before a shaft failed.",
-      "At first Adian carried tools and understood little of their shorthand. Later he performed low-risk checks while someone watched, then told one repair story each Friday so others could question the sequence. The veterans did not merely hand him answers; they made him connect sound, heat, vibration, and fabric. His place changed from listener to contributor through repeated participation, not a certificate alone. A place at the bench also carried identity: being asked for an opinion meant others would trust your hands near a stopped loom.",
-      "When a new model repeatedly snapped thread, the bench agreed that its tension wheel was too tight. Three adjustments failed, damaging a day's cloth. Adian had found a manufacturer note about the new fibre lengthening under heat, but interrupting the veterans risked losing the acceptance he had earned. He placed the note beside the oil can and proposed one measured test. Temperature, not wheel pressure, tracked the breaks.",
-      "The group invited the manufacturer's technician and rewrote its repair card. Doing so cost a production shift and embarrassed the most respected mechanic, who had already promised a quick fix. He nevertheless opened the meeting by showing his failed adjustments. The bench's shared language had made fast cooperation possible; the same language had also narrowed what counted as a plausible cause. Adian paid for the trial cloth from his training allowance, making the challenge more than a safe suggestion.",
-      "Afterward, lunch talk continued, but fault records, newcomer questions, and outside contacts joined it. Entry remained gradual: novices began with real, limited tasks and gained access as skill and trust grew. A rotating member checked whether nicknames and invitations excluded night-shift workers. Manuals did not disappear; they preserved steps the bench might forget, while practice gave the words usable judgement. When one repair contradicted the manual, they documented the condition rather than quietly treating paper or memory as always superior.",
-      "Years later, the bench received new boards. The mechanics kept the oldest oil-black plank and mounted it on the repair-room wall. Adian set the heat-damaged thread card beneath it, then moved along the bench to make space for a trainee carrying the newest manual."
-    ],
-    "storyParagraphsZh": [
-      "纺织厂给每名新维修工一本厚手册。阿典背得出齿轮型号，织机发出老工人所谓“湿木声”时却不知从哪里查。午休时，老师傅总坐在锅炉房后的长凳，谈某台机器去年怎样抖、轴承油过热是什么气味、布面出现哪种痕迹以后转轴会坏。木板早被机油染黑。",
-      "阿典起初只替人拿工具，听不懂那些简称。后来，他在旁人看护下做低风险检查，每周五再讲一次维修经过，让大家追问顺序。老师傅不只给答案，还逼他把声音、温度、振动和布面连起来。他从旁听者变成参与者，靠的是不断进入共同工作，而不是一张证书。长凳上的位置也带着身份：别人开始询问你的看法，便表示他们愿意让你的手伸进停下的织机。",
-      "新机型反复断线时，长凳上的人一致认定张力轮太紧，连续调整三次仍失败，还毁掉一天布料。阿典找到制造商关于新纤维受热伸长的说明，可此时打断老师傅，可能失去刚得到的接纳。他把说明放在油壶旁，提议只做一次有测量的试验。结果随断线一起变化的是温度，而非轮压。",
-      "小组请来制造商技师，重写维修卡。这一决定让生产再停一班，也使最受尊重的师傅十分难堪，因为他早已承诺迅速修好。那位师傅仍在讨论开始时亲手摆出三次失败记录。长凳上的共同语言曾让合作变快，也曾让大家只看见同一种可能原因。阿典还用自己的培训津贴支付试验布料，让这次质疑不只是一句没有成本的建议。",
-      "此后午间谈话仍继续，却加入故障记录、新人提问与外部联系。新人仍从真实但有限的任务开始，随能力和信任增加而扩大参与。一名轮值成员专门检查行话与邀请是否把夜班挡在外面。手册也没有消失：它保存长凳可能忘记的步骤，实际参与则让纸上的词获得判断。实际维修若与手册矛盾，他们会记录具体条件，不再悄悄认定纸面或记忆必有一方永远正确。",
-      "多年后，长凳换上新木板。大家保留最旧那块油黑木板，钉到维修间墙上。阿典把受热纤维的故障卡放在下面，又向旁边挪开一点，给抱着新版手册的新学徒留出座位。"
-    ],
-    "conceptName": "Community of practice",
-    "conceptNameZh": "实践共同体",
-    "explanationParagraphs": [
-      "A community of practice is a group connected by a shared domain that develops knowledge and identity through sustained participation in common activities, relationships, tools, language, and problem solving. Learning often moves from legitimate limited participation toward fuller contribution. Such communities transmit tacit judgement but can exclude newcomers or reproduce error, so documentation, open entry, questioning, external evidence, and boundary connections matter."
-    ],
-    "explanationParagraphsZh": [
-      "实践共同体是一群共享领域的人，通过持续参与共同活动、关系、工具、语言与问题解决来发展知识和身份，学习常从正当的有限参与走向更充分贡献。它能传递默会判断，也可能排斥新人或复制错误，因此还需要记录、开放进入、质疑、外部证据与跨边界联系。"
-    ],
     "mode": "concept-fable",
+    "title": "The Clarinet That Sometimes Lost Its Low Note",
+    "summary": "A student clarinet returns to the repair room for a second time: the static check looks almost normal, but a low note still sometimes fails. Holding the leak light, Mia joins a senior technician in trying to reproduce this particular problem for the first time.",
+    "storyParagraphs": [
+      "In her third week, a student clarinet comes back into Mia’s hands for the second time. Its tag reads, “Low note sometimes does not sound.” The newcomer uses a leak light to check the pad contact, but the static check shows no obvious continuous leak. She writes the positions checked on the repair sheet; that sheet alone cannot tell the school why the note sometimes fails.",
+      "For years, the district repair room has handled schools’ woodwind instruments together every Tuesday. Beside the long table, a shared log holds three technicians’ notes on return symptoms, interventions, and follow-up checks. Mia’s first-week assignment covered only leak checks. The senior technician responsible for the mechanism takes this clarinet’s repair sheet and asks her to repeat the key sequence described by the student. He watches the linkage from the other side while another technician records when anything unusual appears.",
+      "On the fifth repetition, one connecting key returns more slowly than on earlier attempts, and the leak light shows a thin line only at that moment. Based on this observation, the technician cleans and adjusts the linkage on this instrument. The three then repeat the movement and static check. The repair sheet says, “Observed this time: a thin line on the fifth repetition.” They copy the same entry into the shared log and ask the school to continue observing the instrument in use.",
+      "Over the next several weeks, Mia still begins with leak-light checks, but the shared repair log lets her see how existing staff have recorded cases that appear continuously versus only under particular movements. She combines the new entry for this clarinet with several older entries into a draft card: first try to reproduce the reported action, then record when the observation appears, and then hand the case to the relevant technician to decide the next step. The last section is left for the actual intervention and follow-up result.",
+      "The senior technician tries the draft card at the workbench and adds one exception: “If the static check already shows a clear continuous problem, hand it directly to the relevant technician; do not force a repetition of the reported movement.” Another technician later uses the card to mark the timing of a different intermittent problem and writes the treatment result on the back. Mia revises the card into a second version based on both technicians’ notes.",
+      "By the end of the term, Mia rotates through first-pass inspection, while complex mechanical adjustments are still reviewed by senior technicians. She writes that day’s observation for one instrument into the shared repair log and places the second-version card back beside the leak light. A new line on the back now carries another technician’s date and follow-up result."
+    ],
+    "overall": "A community of practice involves sustained participation in a shared domain, mutual learning, and experience becoming part of reusable, revisable shared practice. A newcomer begins with real but limited participation and can gradually contribute observations back into shared tools.",
+    "conceptName": "Community of practice",
+    "explanationParagraphs": [
+      "Woodwind repair is their shared domain, weekly return cases keep them interacting, and the common log preserves ways of working that they continue to use. Mia takes part in observation and recording; several technicians then use, annotate, and revise her draft card. Her participation grows from completing a small task to helping improve the tools used by the group.",
+      "This is not a universal diagnostic method acquired from one lesson. The card records locally reviewable experience, complex judgments still go to qualified technicians, and the specific instrument still requires follow-up observation."
+    ],
+    "module": {
+      "intro": "Look at how people in the same domain keep working through problems together, and how a newcomer’s observations enter tools that others use and revise.",
+      "diagramTitle": "How One Intermittent Problem Enters the Repair Room’s Shared Practice",
+      "diagramSteps": [
+        "Let the newcomer take on a limited but real leak-check task",
+        "Try the reported action together with experienced members",
+        "Write the observation back into the existing shared repair log",
+        "Combine the new case with older records into a reusable draft card",
+        "Have multiple members use it, add exceptions, and continue review"
+      ],
+      "diagramStepNotes": [
+        "The repair room had maintained a shared repair log for years before Mia joined.",
+        "The static check shows no obvious continuous leak; a thin line is observed once on the fifth repetition.",
+        "The same observation is written on the repair sheet and copied into the shared log; the school is asked to keep observing.",
+        "Mia combines the new record with older cases into a draft card for reproduction, timing, and handoff.",
+        "Two senior technicians actually use and annotate it, and Mia revises it into a second version."
+      ],
+      "mapping": [
+        "Shared repair log → shared practice that existed before Mia arrived.",
+        "Leak light → a real tool through which a newcomer participates.",
+        "This returning clarinet → the concrete event through which new experience enters existing practice.",
+        "Second-version card with multiple annotations → a newcomer’s contribution being adopted and revised by others."
+      ],
+      "boundary": "This fictional repair scene illustrates shared participation, recording, and feedback. Actual instruments still require technical standards, professional qualifications, and case-specific review; one observation cannot become a universal diagnostic rule. A community’s experience can also be wrong and needs continued checking and correction from external evidence.",
+      "reflection": "When a newcomer’s observation is actually used, modified, and written back into a shared tool by experienced members, how is that different from simply receiving one lesson from a mentor?"
+    },
+    "references": [
+      {
+        "id": "lave-wenger-1991",
+        "citation": "Lave, J., & Wenger, E. (1991). Situated Learning: Legitimate Peripheral Participation. Cambridge University Press.",
+        "url": "https://doi.org/10.1017/CBO9780511815355",
+        "use": "Supports the original framework of learning through participation in social practice and newcomers gradually taking part in real work; not every informal group is treated as a community of practice."
+      },
+      {
+        "id": "wenger-trayner-2015",
+        "citation": "Wenger-Trayner, E., & Wenger-Trayner, B. (2015, April 15). Communities of practice: a brief introduction.",
+        "url": "https://www.wenger-trayner.com/wp-content/uploads/2022/01/07-Brief-introduction-to-communities-of-practice.pdf",
+        "use": "Supports the authors’ explanation of the combination of domain, community, and shared practice, and of sustained interaction creating experience, tools, and ways of handling problems."
+      }
+    ],
+    "titleZh": "那支偶尔失声的单簧管",
+    "summaryZh": "一支学生单簧管第二次送回维修室：静态检查几乎正常，低音却偶尔发不出。米娅拿着漏气灯，第一次跟着老技师尝试重现这个具体问题。",
+    "storyParagraphsZh": [
+      "第三周，一支学生单簧管第二次送到米娅手里，标签写“低音偶尔发不出”。新来的米娅用漏气灯检查垫片接触，静态检查时却没有明显持续漏光。她把检查位置写在对应维修单上，没法只凭这张单告诉学校，那个偶尔发不出的音到底怎么了。",
+      "学区维修室多年来每周二一起处理各校木管乐器，长桌旁的共同维修簿记着三名技师的返修现象、处理动作和复查结果。米娅第一周只负责漏气检查这一小段。负责机械的老技师接过这支乐器的维修单，请她照学生描述重复同一组按键动作；他在另一侧观察联动，另一名技师记录异常出现的时点。",
+      "第五遍操作时，一个连接键有一次回位比前几次慢，漏气灯只在那一瞬出现细线。技师根据本次观察清洁并调整这支乐器的联动部位，随后三人再次重复同样动作和静态检查。维修单写下“本次观察：第五遍动作时出现细线”，同样记录被抄进共同维修簿；他们也请学校继续观察使用情况。",
+      "之后几周，米娅仍从漏气灯检查做起，但共同维修簿让她能看到老成员过去如何记录“持续出现”和“只有特定动作出现”的不同个案。她把这支单簧管的新记录和几条旧记录整理成一张草卡：先尝试重现报修动作，再记录观察时点，之后交给对应技师判断下一步；末尾留实际处理和复查栏。",
+      "老技师把草卡拿到长桌边试用，并补了一条：“若静态检查已经持续出现明显异常，直接按现象交对应技师，不必强行重复报修动作。”另一名技师随后在一件间歇问题上用这张卡记录时点，并把自己的处理结果写回背面。米娅根据两人的回写改了第二版。",
+      "学期末，米娅已经轮值第一轮检查，复杂机械调整仍由资深技师复核。她把当天一支乐器的观察写进共同维修簿，再把第二版小卡放回漏气灯旁；卡背面新添的一栏刚写上另一位技师的日期和复查结果。"
+    ],
+    "overallZh": "实践共同体是在共同领域中持续参与、相互学习，并让经验进入可复用、可修订的共享实践。新人从真实但有限的参与开始，也能逐步把自己的观察回馈给共同工具。",
+    "conceptNameZh": "实践共同体",
+    "explanationParagraphsZh": [
+      "木管维修是这组人的共同领域，每周一起处理返修维持了交流，共同维修簿保存他们会继续使用的做法。米娅参加观察和记录，草卡又被几名技师实际采用、回写和修订；这让她的参与从完成小任务，延伸到改进大家的工具。",
+      "这不是一次师傅指导就获得通用诊断法。卡片只记录本室可复查经验，复杂问题仍交专业技师，具体乐器结果也需后续观察。"
+    ],
+    "moduleZh": {
+      "intro": "留意同一领域的人怎样持续一起处理问题，以及新人的观察怎样进入大家会使用和修改的共同工具。",
+      "diagramTitle": "一次间歇问题怎样进入维修室的共同实践",
+      "diagramSteps": [
+        "新人先承担有限但真实的漏气检查",
+        "与老成员尝试重现同一返修现象",
+        "把本次观察写回已有共同维修簿",
+        "结合旧记录整理可复用草卡",
+        "由多人试用、补例外并继续复核"
+      ],
+      "diagramStepNotes": [
+        "维修室在米娅加入前已有多年共同维修簿。",
+        "本次静态无明显持续漏光，第五遍动作时观察到一次细线。",
+        "同一观察写在维修单并抄进共同维修簿，请学校继续观察。",
+        "米娅用新记录和旧个案整理重现、记录、转交的草卡。",
+        "两名资深技师实际使用并回写，米娅据此改成第二版。"
+      ],
+      "mapping": [
+        "共同维修簿 → 米娅加入前就存在的共享实践。",
+        "漏气灯 → 新成员承担真实任务的工具。",
+        "这支返修单簧管 → 新经验进入既有实践的具体事件。",
+        "多人回写的第二版小卡 → 新人贡献被共同采用并修订。"
+      ],
+      "boundary": "这段虚构维修场景只说明共同参与、记录和回写。具体乐器仍需按技术标准、专业资格和个案复核来处理；一次观察不能成为通用诊断规则。实践共同体的经验也可能出错，需要继续检查并接受外部证据纠正。",
+      "reflection": "当一个新成员的观察被老成员实际采用、修改并写回共同工具时，这与“只是被师傅教了一次”有什么不同？"
+    },
+    "referencesZh": [
+      {
+        "id": "lave-wenger-1991",
+        "citation": "Lave, J., & Wenger, E. (1991). Situated Learning: Legitimate Peripheral Participation. Cambridge University Press.",
+        "url": "https://doi.org/10.1017/CBO9780511815355",
+        "use": "支持通过参与社会实践学习以及新成员逐渐参与真实工作的原始著作框架；不把所有非正式群体都等同于实践共同体。"
+      },
+      {
+        "id": "wenger-trayner-2015",
+        "citation": "Wenger-Trayner, E., & Wenger-Trayner, B. (2015, April 15). Communities of practice: a brief introduction.",
+        "url": "https://www.wenger-trayner.com/wp-content/uploads/2022/01/07-Brief-introduction-to-communities-of-practice.pdf",
+        "use": "支持领域、共同体与共享实践三者结合，以及长期互动形成经验、工具和处理问题方法的作者说明。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-a-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-a-edit-pass1-evidence.json",
+        "business-learning-law-mixed-12-pdc-a-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "The textile mill gave every new mechanic a thick manual. Adian could recite gear numbers but froze when a loom made what older workers called a 'wet-wood sound.' At lunch, veteran mechanics gathered on an oil-darkened bench behind the boiler room. They discussed how a particular loom shook last winter, what hot bearing grease smelled like, and which cloth marks appeared before a shaft failed.\n\nAt first Adian carried tools and understood little of their shorthand. Later he performed low-risk checks while someone watched, then told one repair story each Friday so others could question the sequence. The veterans did not merely hand him answers; they made him connect sound, heat, vibration, and fabric. His place changed from listener to contributor through repeated participation, not a certificate alone. A place at the bench also carried identity: being asked for an opinion meant others would trust your hands near a stopped loom.\n\nWhen a new model repeatedly snapped thread, the bench agreed that its tension wheel was too tight. Three adjustments failed, damaging a day's cloth. Adian had found a manufacturer note about the new fibre lengthening under heat, but interrupting the veterans risked losing the acceptance he had earned. He placed the note beside the oil can and proposed one measured test. Temperature, not wheel pressure, tracked the breaks.\n\nThe group invited the manufacturer's technician and rewrote its repair card. Doing so cost a production shift and embarrassed the most respected mechanic, who had already promised a quick fix. He nevertheless opened the meeting by showing his failed adjustments. The bench's shared language had made fast cooperation possible; the same language had also narrowed what counted as a plausible cause. Adian paid for the trial cloth from his training allowance, making the challenge more than a safe suggestion.\n\nAfterward, lunch talk continued, but fault records, newcomer questions, and outside contacts joined it. Entry remained gradual: novices began with real, limited tasks and gained access as skill and trust grew. A rotating member checked whether nicknames and invitations excluded night-shift workers. Manuals did not disappear; they preserved steps the bench might forget, while practice gave the words usable judgement. When one repair contradicted the manual, they documented the condition rather than quietly treating paper or memory as always superior.\n\nYears later, the bench received new boards. The mechanics kept the oldest oil-black plank and mounted it on the repair-room wall. Adian set the heat-damaged thread card beneath it, then moved along the bench to make space for a trainee carrying the newest manual.",
-    "storyBodyZh": "纺织厂给每名新维修工一本厚手册。阿典背得出齿轮型号，织机发出老工人所谓“湿木声”时却不知从哪里查。午休时，老师傅总坐在锅炉房后的长凳，谈某台机器去年怎样抖、轴承油过热是什么气味、布面出现哪种痕迹以后转轴会坏。木板早被机油染黑。\n\n阿典起初只替人拿工具，听不懂那些简称。后来，他在旁人看护下做低风险检查，每周五再讲一次维修经过，让大家追问顺序。老师傅不只给答案，还逼他把声音、温度、振动和布面连起来。他从旁听者变成参与者，靠的是不断进入共同工作，而不是一张证书。长凳上的位置也带着身份：别人开始询问你的看法，便表示他们愿意让你的手伸进停下的织机。\n\n新机型反复断线时，长凳上的人一致认定张力轮太紧，连续调整三次仍失败，还毁掉一天布料。阿典找到制造商关于新纤维受热伸长的说明，可此时打断老师傅，可能失去刚得到的接纳。他把说明放在油壶旁，提议只做一次有测量的试验。结果随断线一起变化的是温度，而非轮压。\n\n小组请来制造商技师，重写维修卡。这一决定让生产再停一班，也使最受尊重的师傅十分难堪，因为他早已承诺迅速修好。那位师傅仍在讨论开始时亲手摆出三次失败记录。长凳上的共同语言曾让合作变快，也曾让大家只看见同一种可能原因。阿典还用自己的培训津贴支付试验布料，让这次质疑不只是一句没有成本的建议。\n\n此后午间谈话仍继续，却加入故障记录、新人提问与外部联系。新人仍从真实但有限的任务开始，随能力和信任增加而扩大参与。一名轮值成员专门检查行话与邀请是否把夜班挡在外面。手册也没有消失：它保存长凳可能忘记的步骤，实际参与则让纸上的词获得判断。实际维修若与手册矛盾，他们会记录具体条件，不再悄悄认定纸面或记忆必有一方永远正确。\n\n多年后，长凳换上新木板。大家保留最旧那块油黑木板，钉到维修间墙上。阿典把受热纤维的故障卡放在下面，又向旁边挪开一点，给抱着新版手册的新学徒留出座位。",
-    "explanation": "A community of practice is a group connected by a shared domain that develops knowledge and identity through sustained participation in common activities, relationships, tools, language, and problem solving. Learning often moves from legitimate limited participation toward fuller contribution. Such communities transmit tacit judgement but can exclude newcomers or reproduce error, so documentation, open entry, questioning, external evidence, and boundary connections matter.",
-    "explanationZh": "实践共同体是一群共享领域的人，通过持续参与共同活动、关系、工具、语言与问题解决来发展知识和身份，学习常从正当的有限参与走向更充分贡献。它能传递默会判断，也可能排斥新人或复制错误，因此还需要记录、开放进入、质疑、外部证据与跨边界联系。"
+    "storyBody": "In her third week, a student clarinet comes back into Mia’s hands for the second time. Its tag reads, “Low note sometimes does not sound.” The newcomer uses a leak light to check the pad contact, but the static check shows no obvious continuous leak. She writes the positions checked on the repair sheet; that sheet alone cannot tell the school why the note sometimes fails.\n\nFor years, the district repair room has handled schools’ woodwind instruments together every Tuesday. Beside the long table, a shared log holds three technicians’ notes on return symptoms, interventions, and follow-up checks. Mia’s first-week assignment covered only leak checks. The senior technician responsible for the mechanism takes this clarinet’s repair sheet and asks her to repeat the key sequence described by the student. He watches the linkage from the other side while another technician records when anything unusual appears.\n\nOn the fifth repetition, one connecting key returns more slowly than on earlier attempts, and the leak light shows a thin line only at that moment. Based on this observation, the technician cleans and adjusts the linkage on this instrument. The three then repeat the movement and static check. The repair sheet says, “Observed this time: a thin line on the fifth repetition.” They copy the same entry into the shared log and ask the school to continue observing the instrument in use.\n\nOver the next several weeks, Mia still begins with leak-light checks, but the shared repair log lets her see how existing staff have recorded cases that appear continuously versus only under particular movements. She combines the new entry for this clarinet with several older entries into a draft card: first try to reproduce the reported action, then record when the observation appears, and then hand the case to the relevant technician to decide the next step. The last section is left for the actual intervention and follow-up result.\n\nThe senior technician tries the draft card at the workbench and adds one exception: “If the static check already shows a clear continuous problem, hand it directly to the relevant technician; do not force a repetition of the reported movement.” Another technician later uses the card to mark the timing of a different intermittent problem and writes the treatment result on the back. Mia revises the card into a second version based on both technicians’ notes.\n\nBy the end of the term, Mia rotates through first-pass inspection, while complex mechanical adjustments are still reviewed by senior technicians. She writes that day’s observation for one instrument into the shared repair log and places the second-version card back beside the leak light. A new line on the back now carries another technician’s date and follow-up result.",
+    "storyBodyZh": "第三周，一支学生单簧管第二次送到米娅手里，标签写“低音偶尔发不出”。新来的米娅用漏气灯检查垫片接触，静态检查时却没有明显持续漏光。她把检查位置写在对应维修单上，没法只凭这张单告诉学校，那个偶尔发不出的音到底怎么了。\n\n学区维修室多年来每周二一起处理各校木管乐器，长桌旁的共同维修簿记着三名技师的返修现象、处理动作和复查结果。米娅第一周只负责漏气检查这一小段。负责机械的老技师接过这支乐器的维修单，请她照学生描述重复同一组按键动作；他在另一侧观察联动，另一名技师记录异常出现的时点。\n\n第五遍操作时，一个连接键有一次回位比前几次慢，漏气灯只在那一瞬出现细线。技师根据本次观察清洁并调整这支乐器的联动部位，随后三人再次重复同样动作和静态检查。维修单写下“本次观察：第五遍动作时出现细线”，同样记录被抄进共同维修簿；他们也请学校继续观察使用情况。\n\n之后几周，米娅仍从漏气灯检查做起，但共同维修簿让她能看到老成员过去如何记录“持续出现”和“只有特定动作出现”的不同个案。她把这支单簧管的新记录和几条旧记录整理成一张草卡：先尝试重现报修动作，再记录观察时点，之后交给对应技师判断下一步；末尾留实际处理和复查栏。\n\n老技师把草卡拿到长桌边试用，并补了一条：“若静态检查已经持续出现明显异常，直接按现象交对应技师，不必强行重复报修动作。”另一名技师随后在一件间歇问题上用这张卡记录时点，并把自己的处理结果写回背面。米娅根据两人的回写改了第二版。\n\n学期末，米娅已经轮值第一轮检查，复杂机械调整仍由资深技师复核。她把当天一支乐器的观察写进共同维修簿，再把第二版小卡放回漏气灯旁；卡背面新添的一栏刚写上另一位技师的日期和复查结果。",
+    "explanation": "Woodwind repair is their shared domain, weekly return cases keep them interacting, and the common log preserves ways of working that they continue to use. Mia takes part in observation and recording; several technicians then use, annotate, and revise her draft card. Her participation grows from completing a small task to helping improve the tools used by the group.\n\nThis is not a universal diagnostic method acquired from one lesson. The card records locally reviewable experience, complex judgments still go to qualified technicians, and the specific instrument still requires follow-up observation.",
+    "explanationZh": "木管维修是这组人的共同领域，每周一起处理返修维持了交流，共同维修簿保存他们会继续使用的做法。米娅参加观察和记录，草卡又被几名技师实际采用、回写和修订；这让她的参与从完成小任务，延伸到改进大家的工具。\n\n这不是一次师傅指导就获得通用诊断法。卡片只记录本室可复查经验，复杂问题仍交专业技师，具体乐器结果也需后续观察。"
   },
   {
     "id": "0417-role-clarity",
@@ -11761,45 +12037,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0417",
     "fieldTitle": "Work skills",
     "fieldTitleZh": "工作技能",
-    "title": "The Fire Everyone Was Responsible For",
-    "titleZh": "那场人人负责的火",
-    "summary": "A theatre declares fire safety everyone's duty, then watches everyone run toward the manager while smoke fills the stage.",
-    "summaryZh": "剧院宣布消防人人有责，烟雾升起时，所有人却一同跑去寻找经理。",
-    "storyParagraphs": [
-      "The riverside theatre painted 'Fire Safety Is Everyone's Duty' above the stage door. Manager Zhou believed the sentence created shared responsibility, so he never assigned who rang the bell, opened exits, shut lamp oil, or led the audience. During a crowded rehearsal, canvas scenery began smoking. Three people reached Zhou from different directions, each assuming someone else had sounded the alarm. Zhou had preferred the slogan because it sounded generous and spared him the uncomfortable task of assigning authority before danger arrived.",
-      "Two stagehands fetched water and collided on the narrow stair. The porter thought the stage manager had opened the side door; the stage manager thought the porter had. Musicians began directing spectators in opposite directions. The fire was contained, but the front entrance jammed and the painted moon backdrop burned through. Everyone had cared; no one had known which action was theirs first. A child dropped a shoe in the crowd, and both ushers knelt to help while no one guarded the narrowing doorway.",
-      "The theatre cancelled two performances and refunded wages it could barely afford. Zhou took the universal slogan off the backstage door and admitted that it had hidden missing interfaces. He named a first action and decision boundary for each role: the discoverer rang the bell; the stage manager stopped performance and commanded backstage; the porter opened exits and cleared zones; the lamp keeper shut oil. Every task had a backup and a handover signal. On the first draft, three names still filled the audience-count box. Zhou erased two and assigned one official count, with reports feeding it from named zones.",
-      "Clarity did not mean waiting rigidly. Anyone could report new danger; if the water lead was trapped, the nearest backup acted without seeking the highest title. Drills exposed conflict between audience counting and backstage reports, so the roles were revised. Zhou also resolved incompatible instructions: during evacuation the porter answered the safety lead, not the ticket supervisor guarding receipts. The backup rule specified when authority transferred and when it returned, so one helper at each end could not pull the crew in opposite directions.",
-      "At the next smoke drill, the first bell sent four people in four directions. One substitute took the water line when its owner pretended injury; another reported a blocked door and exercised limited authority to open the courtyard gate. No one searched for Zhou. Beneath the slogan, a board now showed names, backups, signals, and the few choices left to judgement. Afterward, each person wrote one uncertainty beside the duty board, and Zhou used those notes for the next drill."
-    ],
-    "storyParagraphsZh": [
-      "河岸剧院在后台门上写着“消防人人有责”。经理周远以为这句话已经建立共同责任，从未规定谁敲钟、谁开出口、谁关灯油、谁带观众离开。满场排练时，帆布布景开始冒烟，三个人从不同方向撞到周远身边，都以为别人已经拉响警钟。周远喜欢这句标语，因为它听来宽厚，也让他不必在危险来临前做出分配权力的棘手决定。",
-      "两名舞台工各自提水，在狭窄楼梯上撞倒；门房以为舞台主管已开侧门，舞台主管又以为门房在做。乐手们从相反方向指挥观众。火最终被控制，正门却挤成一团，画着月亮的布景也烧穿了。每个人都在意安全，却没人知道自己第一步该做什么。一个孩子在人群中掉了鞋，两名引座员都蹲下帮忙，狭窄门口反而无人维持通行。",
-      "剧院取消两场演出，退回本就难以负担的票钱。周远把那句普遍口号从后台门上揭下，承认它一直遮住了接口缺口。他为每个角色写明首要动作和决定边界：发现者敲钟，舞台主管停演并指挥后台，门房开出口和清区，灯工关闭油路。每项都有替补与交接信号。第一版安排里，观众人数那一格竟填着三个名字。周远擦掉两个，只保留一个正式总数，再由指定区域逐级回报。",
-      "清楚分工并不等于僵硬等待。任何人都可报告新危险；提水负责人受困时，最近替补无须请示最高职位。演练发现出口清点与后台报告冲突，职责便继续修改。周远还解决互不相容的命令：疏散期间，门房听安全负责人，而不是要求保护票款的售票主管。替补规则还注明权力何时转移、何时归还，免得一左一右两个帮忙者把队伍往相反方向拉。",
-      "下一次烟雾演练，第一声钟让四个人奔向四个方向。提水人假装受伤，替补立即接管；另一人发现门堵，便在有限授权内开启院门。没人再去寻找周远。旧标语下面多了一块木板，写着名字、替补、信号，以及少数必须现场判断的选择。演练结束后，每个人都在职责板旁写下一处仍不确定的地方，周远据此安排下一次测试。"
-    ],
-    "conceptName": "Role clarity",
-    "conceptNameZh": "角色清晰度",
-    "explanationParagraphs": [
-      "Role clarity is shared understanding of a role's purpose, responsibilities, authority, priorities, interfaces, and expected results. It reduces duplication, gaps, waiting, and conflicting assumptions. Clarity is not a rigid job box: effective roles include discretion, backups, handovers, adaptation, and mutual help. Incompatible expectations from different authorities must also be identified and resolved."
-    ],
-    "explanationParagraphsZh": [
-      "角色清晰度是成员对角色目的、责任、权力、优先级、接口与预期结果的共同理解，可减少重复、缺口、等待和冲突假设。清晰不等于僵硬岗位框，还需裁量、替补、交接、适应与互助；若不同权威提出不相容期待，也必须被识别并解决。"
-    ],
     "mode": "concept-fable",
+    "title": "The €49 Item in the Yellow Returns Tray",
+    "summary": "The returns batch must go to finance before 15:00. Qi An has already checked a €49 bedding return but gets stuck on one question: who clicks “approve” first, and who receives the item first?",
+    "storyParagraphs": [
+      "At 13:40, Qi An receives an unopened €49 bedding return. Finance will lock the day’s standard refund batch at 15:00. The order, seal, and customer request are all complete. He knows how to check orders and use the refund system. His onboarding role sheet says, “Standard returns with complete evidence up to €50 are approved by the returns coordinator,” but the handover never explained whether approval or warehouse receipt comes first, or what counts as complete for the day.",
+      "Qi An takes the required photos, puts the bedding into the yellow tray, and first asks the warehouse whether it can receive the item. The warehouse colleague says that goods fit for resale cannot enter the resale area until the system status reads “approved.” Qi An, however, worries that he is supposed to wait for the warehouse to verify the seal first, so he pushes the tray over. The warehouse sends it back to returns with a sticky note reading “awaiting approval.”",
+      "At 14:45, the supervisor notices that the tray is still there. She pulls out the old role sheet and points to Qi An’s existing approval authority for returns up to €50. She then explains the store’s daily sequence: Qi An verifies the evidence and approves first, hands the item to the warehouse by 14:30 for receipt, and only after warehouse receipt can it enter the 15:00 finance refund queue. The 14:30 cutoff applies only to the day’s refund batch; the warehouse continues its other work afterward.",
+      "The bedding has already missed that day’s batch and is placed on the overnight returns rack. The next morning, Qi An checks the order and seal again, clicks “approve” in the system, and hands the item to the warehouse. Once received, it moves into the resale area, and the finance system shows “entered today’s refund queue.” The customer then receives a notice that processing has entered the refund workflow, not a notification that money has already arrived.",
+      "At 14:10 that afternoon, a €65 vase arrives with a damaged edge. Qi An checks the order and photographs the damage. The amount exceeds his standard approval range, and the damage needs examination, so he routes approval to the supervisor and has warehouse quality control sign the vase into the “pending determination” rack. Only the photo folder and handoff number remain in the yellow tray, ready for the supervisor to continue the case.",
+      "At 15:00, finance locks the day’s standard refund batch. The €49 bedding is already in the resale area, with its queue number visible in the system. The €65 vase remains on quality control’s “pending determination” rack, and the yellow-tray label reads “supervisor approval in progress.” Qi An clips the old “awaiting approval” note into the handover book and writes 14:30 and 15:00 beside it."
+    ],
+    "overall": "Role clarity means knowing the scope of an existing role, what counts as completion, the handoff sequence, and the escalation path for exceptions. Even when authority already exists, unclear expectations can still produce reasonable mutual waiting.",
+    "conceptName": "Role clarity",
+    "explanationParagraphs": [
+      "Authority to approve standard returns up to €50 was already written in the role sheet. What was unclear was the sequence among approval, warehouse receipt, and the 15:00 finance batch. Once clarified, the same €49 item is completed under the existing authority.",
+      "The damaged €65 vase moves to the supervisor and quality control, showing that clarity changes the decision path rather than creating new authority, removing review, or forcing every case through the same route."
+    ],
+    "module": {
+      "intro": "Compare the existing authority, completion standard, handoff times, and exception path for a task to see what each person is waiting for before taking it over.",
+      "diagramTitle": "How the €49 Bedding Moves from Mutual Waiting into the Refund Queue",
+      "diagramSteps": [
+        "Receive a standard return under existing responsibility",
+        "Create back-and-forth because approval and warehouse-receipt order are unclear",
+        "Use the old role sheet to clarify authority and add a completion standard",
+        "Complete the same item the next day through approval → receipt → finance queue",
+        "Route the damaged €65 item to supervisor and quality control as an exception"
+      ],
+      "diagramStepNotes": [
+        "The original sheet already assigns complete-evidence standard returns ≤€50 to the returns coordinator.",
+        "Qi An waits for warehouse verification first, while the warehouse waits for system approval.",
+        "14:30 is the receipt cutoff for that day’s refund batch, and finance locks the batch at 15:00; it is not the end of warehouse operations.",
+        "The customer receives notice that the item entered the refund process, not confirmation that funds have arrived.",
+        "The €65 vase arriving at 14:10 is signed into the pending-determination rack by quality control while supervisor approval continues."
+      ],
+      "mapping": [
+        "Old role sheet → evidence that the authority already existed.",
+        "Yellow tray moving back and forth → mutual waiting caused by an unclear completion boundary.",
+        "14:30 / 15:00 → this store’s fictional handoff and finance-batch times.",
+        "Pending-determination rack + handoff number → the exception follows a different path while responsibility remains continuous."
+      ],
+      "boundary": "Role clarity cannot solve insufficient skill, inadequate resources, or an unreasonable underlying system, and it does not permanently freeze responsibilities. When amounts, evidence, or tasks change, role boundaries and escalation paths may also need revision.",
+      "reflection": "If authority is already written in the role description but two sides still wait for each other, what receiving conditions and cutoffs would you check, and how would you confirm that both sides agree on what counts as complete?"
+    },
+    "references": [
+      {
+        "id": "rizzo-house-lirtzman-1970",
+        "citation": "Rizzo, J. R., House, R. J., & Lirtzman, S. I. (1970). Role Conflict and Ambiguity in Complex Organizations. Administrative Science Quarterly, 15(2), 150–163.",
+        "url": "https://doi.org/10.2307/2391486",
+        "use": "Supports the original measurement research on role ambiguity and role conflict while keeping the two concepts distinct."
+      },
+      {
+        "id": "hse-role",
+        "citation": "Health and Safety Executive. Management Standards – Role.",
+        "url": "https://www.hse.gov.uk/stress/standards/role.htm",
+        "use": "Supports practical guidance on clarifying work requirements, responsibilities, and routes for responding to uncertainty; it is not treated as a legal requirement for all organizations worldwide."
+      }
+    ],
+    "titleZh": "黄色托盘里的四十九欧元",
+    "summaryZh": "下午三点前，退货批次要交财务。齐安已经把一件49欧元床品核完，却卡在“谁先点批准、谁先收货”这一步。",
+    "storyParagraphsZh": [
+      "下午一点四十，齐安收到一件49欧元未拆封床品退货，财务三点就要锁定当日标准退款批次。订单、封条和顾客申请都齐全，他会查订单，也熟悉退款系统。入职资料里的职责清单其实写着“证据齐全的标准退货≤50欧元由退货协调员审批”，但交接时没人说明审批与仓库接收谁先、什么时候才算当天完成。",
+      "齐安拍完照片，把床品放进黄色托盘，先问仓库能否点收。仓库同事说，可再售商品要等系统状态变成“已批准”才能入格；齐安却担心自己应先等仓库确认封条，于是把托盘推过去。仓库又把托盘送回退货区，附上“待审批”便签。",
+      "两点四十五，主管看到托盘还在，翻出那张旧职责清单，指给齐安看≤50欧元的审批范围。她再把本店当天批次顺序说清：齐安先核证据并批准，14:30前交仓库点收，仓库接收后才能进入15:00财务退款队列。14:30只是当天退款批次的退货接收截点，仓库其他工作仍继续。",
+      "这件床品已经错过当天批次，被放进退货区的隔夜架。第二天上午，齐安按清单重新核订单和封条，系统点“批准”，仓库接收后把商品移到可再售格；财务系统显示“已进入今日退款队列”。顾客随后收到的是处理已进入退款流程的通知，而不是到账通知。",
+      "下午两点十分，又来一只65欧元、边缘破损的花瓶。齐安先核订单并拍照，看到金额高于自己的标准审批范围，破损情况也需要核查，便把审批转给主管，同时让仓库质检签收实物到“待判定”架。黄色托盘里只留下照片夹和转交编号，主管可以接着处理。",
+      "下午三点，财务锁定当天标准退款批次。49欧元床品已在可再售格，系统里显示队列编号；65欧元花瓶仍在质检的“待判定”架，黄色托盘标签写着“主管审批中”。齐安把那张旧“待审批”便签夹回交接本，旁边补写14:30和15:00两个时点。"
+    ],
+    "overallZh": "角色清晰度让成员知道已有职责范围、完成标准、交接顺序和例外升级路径。即使权限已经存在，若这些预期没有说清，也可能出现合理的相互等待。",
+    "conceptNameZh": "角色清晰度",
+    "explanationParagraphsZh": [
+      "≤50欧元标准退货审批权原本就在职责清单中；真正模糊的是批准、仓库接收和15:00财务批次的顺序。澄清后，同一49欧元床品按既有权限完成。",
+      "65欧元破损花瓶转主管和质检，说明清晰度改变的是选择路径，不是新增权限、取消复核或让所有案件走同一流程。"
+    ],
+    "moduleZh": {
+      "intro": "对照一项工作的已有权限、完成标准、交接时间和例外路径，查清每个人接手前在等什么。",
+      "diagramTitle": "49欧元床品怎样从相互等待进入退款队列",
+      "diagramSteps": [
+        "按已有职责收到标准退货",
+        "因审批与仓库接收顺序不清形成往返",
+        "用旧职责清单澄清权限并补充完成标准",
+        "次日按批准→接收→财务队列完成同一件床品",
+        "65欧元破损件按例外路径转主管与质检"
+      ],
+      "diagramStepNotes": [
+        "原清单已写≤50欧元、证据齐全的标准退货由协调员审批。",
+        "齐安等仓库先验，仓库等系统先批准。",
+        "14:30是当天退款批次接收截点，15:00财务锁批，并非仓库停止工作。",
+        "顾客收到的是“进入退款流程”通知，不是到账确认。",
+        "14:10到达的65欧元花瓶由质检签收到待判定架，主管继续审批。"
+      ],
+      "mapping": [
+        "旧职责清单 → 证明权限早已存在。",
+        "黄色托盘往返 → 完成边界不清造成的相互等待。",
+        "14:30/15:00 → 本店虚构的当天交接与财务批次时点。",
+        "待判定架＋转交编号 → 例外件改变路径但保持责任连续。"
+      ],
+      "boundary": "角色清晰并不能解决能力不足、资源短缺或制度本身不合理的问题，也不等于把责任永久固定。金额、证据或任务变化时，角色边界和升级路径仍可能需要更新。",
+      "reflection": "如果权限早已写在职责里，但两边仍互相等待，你会查看各自的接收条件和时间截点，并怎样确认双方对“完成”理解一致？"
+    },
+    "referencesZh": [
+      {
+        "id": "rizzo-house-lirtzman-1970",
+        "citation": "Rizzo, J. R., House, R. J., & Lirtzman, S. I. (1970). Role Conflict and Ambiguity in Complex Organizations. Administrative Science Quarterly, 15(2), 150–163.",
+        "url": "https://doi.org/10.2307/2391486",
+        "use": "支持角色模糊与角色冲突的原始测量研究入口，并保持两者概念可区分。"
+      },
+      {
+        "id": "hse-role",
+        "citation": "Health and Safety Executive. Management Standards – Role.",
+        "url": "https://www.hse.gov.uk/stress/standards/role.htm",
+        "use": "支持明确工作要求、职责以及遇到不确定时的回应途径等实践参照；不作为全球所有组织的法律要求。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-b-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-b-edit-pass1.json",
+        "business-learning-law-mixed-12-pdc-b-edit-pass2.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "The riverside theatre painted 'Fire Safety Is Everyone's Duty' above the stage door. Manager Zhou believed the sentence created shared responsibility, so he never assigned who rang the bell, opened exits, shut lamp oil, or led the audience. During a crowded rehearsal, canvas scenery began smoking. Three people reached Zhou from different directions, each assuming someone else had sounded the alarm. Zhou had preferred the slogan because it sounded generous and spared him the uncomfortable task of assigning authority before danger arrived.\n\nTwo stagehands fetched water and collided on the narrow stair. The porter thought the stage manager had opened the side door; the stage manager thought the porter had. Musicians began directing spectators in opposite directions. The fire was contained, but the front entrance jammed and the painted moon backdrop burned through. Everyone had cared; no one had known which action was theirs first. A child dropped a shoe in the crowd, and both ushers knelt to help while no one guarded the narrowing doorway.\n\nThe theatre cancelled two performances and refunded wages it could barely afford. Zhou took the universal slogan off the backstage door and admitted that it had hidden missing interfaces. He named a first action and decision boundary for each role: the discoverer rang the bell; the stage manager stopped performance and commanded backstage; the porter opened exits and cleared zones; the lamp keeper shut oil. Every task had a backup and a handover signal. On the first draft, three names still filled the audience-count box. Zhou erased two and assigned one official count, with reports feeding it from named zones.\n\nClarity did not mean waiting rigidly. Anyone could report new danger; if the water lead was trapped, the nearest backup acted without seeking the highest title. Drills exposed conflict between audience counting and backstage reports, so the roles were revised. Zhou also resolved incompatible instructions: during evacuation the porter answered the safety lead, not the ticket supervisor guarding receipts. The backup rule specified when authority transferred and when it returned, so one helper at each end could not pull the crew in opposite directions.\n\nAt the next smoke drill, the first bell sent four people in four directions. One substitute took the water line when its owner pretended injury; another reported a blocked door and exercised limited authority to open the courtyard gate. No one searched for Zhou. Beneath the slogan, a board now showed names, backups, signals, and the few choices left to judgement. Afterward, each person wrote one uncertainty beside the duty board, and Zhou used those notes for the next drill.",
-    "storyBodyZh": "河岸剧院在后台门上写着“消防人人有责”。经理周远以为这句话已经建立共同责任，从未规定谁敲钟、谁开出口、谁关灯油、谁带观众离开。满场排练时，帆布布景开始冒烟，三个人从不同方向撞到周远身边，都以为别人已经拉响警钟。周远喜欢这句标语，因为它听来宽厚，也让他不必在危险来临前做出分配权力的棘手决定。\n\n两名舞台工各自提水，在狭窄楼梯上撞倒；门房以为舞台主管已开侧门，舞台主管又以为门房在做。乐手们从相反方向指挥观众。火最终被控制，正门却挤成一团，画着月亮的布景也烧穿了。每个人都在意安全，却没人知道自己第一步该做什么。一个孩子在人群中掉了鞋，两名引座员都蹲下帮忙，狭窄门口反而无人维持通行。\n\n剧院取消两场演出，退回本就难以负担的票钱。周远把那句普遍口号从后台门上揭下，承认它一直遮住了接口缺口。他为每个角色写明首要动作和决定边界：发现者敲钟，舞台主管停演并指挥后台，门房开出口和清区，灯工关闭油路。每项都有替补与交接信号。第一版安排里，观众人数那一格竟填着三个名字。周远擦掉两个，只保留一个正式总数，再由指定区域逐级回报。\n\n清楚分工并不等于僵硬等待。任何人都可报告新危险；提水负责人受困时，最近替补无须请示最高职位。演练发现出口清点与后台报告冲突，职责便继续修改。周远还解决互不相容的命令：疏散期间，门房听安全负责人，而不是要求保护票款的售票主管。替补规则还注明权力何时转移、何时归还，免得一左一右两个帮忙者把队伍往相反方向拉。\n\n下一次烟雾演练，第一声钟让四个人奔向四个方向。提水人假装受伤，替补立即接管；另一人发现门堵，便在有限授权内开启院门。没人再去寻找周远。旧标语下面多了一块木板，写着名字、替补、信号，以及少数必须现场判断的选择。演练结束后，每个人都在职责板旁写下一处仍不确定的地方，周远据此安排下一次测试。",
-    "explanation": "Role clarity is shared understanding of a role's purpose, responsibilities, authority, priorities, interfaces, and expected results. It reduces duplication, gaps, waiting, and conflicting assumptions. Clarity is not a rigid job box: effective roles include discretion, backups, handovers, adaptation, and mutual help. Incompatible expectations from different authorities must also be identified and resolved.",
-    "explanationZh": "角色清晰度是成员对角色目的、责任、权力、优先级、接口与预期结果的共同理解，可减少重复、缺口、等待和冲突假设。清晰不等于僵硬岗位框，还需裁量、替补、交接、适应与互助；若不同权威提出不相容期待，也必须被识别并解决。"
+    "storyBody": "At 13:40, Qi An receives an unopened €49 bedding return. Finance will lock the day’s standard refund batch at 15:00. The order, seal, and customer request are all complete. He knows how to check orders and use the refund system. His onboarding role sheet says, “Standard returns with complete evidence up to €50 are approved by the returns coordinator,” but the handover never explained whether approval or warehouse receipt comes first, or what counts as complete for the day.\n\nQi An takes the required photos, puts the bedding into the yellow tray, and first asks the warehouse whether it can receive the item. The warehouse colleague says that goods fit for resale cannot enter the resale area until the system status reads “approved.” Qi An, however, worries that he is supposed to wait for the warehouse to verify the seal first, so he pushes the tray over. The warehouse sends it back to returns with a sticky note reading “awaiting approval.”\n\nAt 14:45, the supervisor notices that the tray is still there. She pulls out the old role sheet and points to Qi An’s existing approval authority for returns up to €50. She then explains the store’s daily sequence: Qi An verifies the evidence and approves first, hands the item to the warehouse by 14:30 for receipt, and only after warehouse receipt can it enter the 15:00 finance refund queue. The 14:30 cutoff applies only to the day’s refund batch; the warehouse continues its other work afterward.\n\nThe bedding has already missed that day’s batch and is placed on the overnight returns rack. The next morning, Qi An checks the order and seal again, clicks “approve” in the system, and hands the item to the warehouse. Once received, it moves into the resale area, and the finance system shows “entered today’s refund queue.” The customer then receives a notice that processing has entered the refund workflow, not a notification that money has already arrived.\n\nAt 14:10 that afternoon, a €65 vase arrives with a damaged edge. Qi An checks the order and photographs the damage. The amount exceeds his standard approval range, and the damage needs examination, so he routes approval to the supervisor and has warehouse quality control sign the vase into the “pending determination” rack. Only the photo folder and handoff number remain in the yellow tray, ready for the supervisor to continue the case.\n\nAt 15:00, finance locks the day’s standard refund batch. The €49 bedding is already in the resale area, with its queue number visible in the system. The €65 vase remains on quality control’s “pending determination” rack, and the yellow-tray label reads “supervisor approval in progress.” Qi An clips the old “awaiting approval” note into the handover book and writes 14:30 and 15:00 beside it.",
+    "storyBodyZh": "下午一点四十，齐安收到一件49欧元未拆封床品退货，财务三点就要锁定当日标准退款批次。订单、封条和顾客申请都齐全，他会查订单，也熟悉退款系统。入职资料里的职责清单其实写着“证据齐全的标准退货≤50欧元由退货协调员审批”，但交接时没人说明审批与仓库接收谁先、什么时候才算当天完成。\n\n齐安拍完照片，把床品放进黄色托盘，先问仓库能否点收。仓库同事说，可再售商品要等系统状态变成“已批准”才能入格；齐安却担心自己应先等仓库确认封条，于是把托盘推过去。仓库又把托盘送回退货区，附上“待审批”便签。\n\n两点四十五，主管看到托盘还在，翻出那张旧职责清单，指给齐安看≤50欧元的审批范围。她再把本店当天批次顺序说清：齐安先核证据并批准，14:30前交仓库点收，仓库接收后才能进入15:00财务退款队列。14:30只是当天退款批次的退货接收截点，仓库其他工作仍继续。\n\n这件床品已经错过当天批次，被放进退货区的隔夜架。第二天上午，齐安按清单重新核订单和封条，系统点“批准”，仓库接收后把商品移到可再售格；财务系统显示“已进入今日退款队列”。顾客随后收到的是处理已进入退款流程的通知，而不是到账通知。\n\n下午两点十分，又来一只65欧元、边缘破损的花瓶。齐安先核订单并拍照，看到金额高于自己的标准审批范围，破损情况也需要核查，便把审批转给主管，同时让仓库质检签收实物到“待判定”架。黄色托盘里只留下照片夹和转交编号，主管可以接着处理。\n\n下午三点，财务锁定当天标准退款批次。49欧元床品已在可再售格，系统里显示队列编号；65欧元花瓶仍在质检的“待判定”架，黄色托盘标签写着“主管审批中”。齐安把那张旧“待审批”便签夹回交接本，旁边补写14:30和15:00两个时点。",
+    "explanation": "Authority to approve standard returns up to €50 was already written in the role sheet. What was unclear was the sequence among approval, warehouse receipt, and the 15:00 finance batch. Once clarified, the same €49 item is completed under the existing authority.\n\nThe damaged €65 vase moves to the supervisor and quality control, showing that clarity changes the decision path rather than creating new authority, removing review, or forcing every case through the same route.",
+    "explanationZh": "≤50欧元标准退货审批权原本就在职责清单中；真正模糊的是批准、仓库接收和15:00财务批次的顺序。澄清后，同一49欧元床品按既有权限完成。\n\n65欧元破损花瓶转主管和质检，说明清晰度改变的是选择路径，不是新增权限、取消复核或让所有案件走同一流程。"
   },
   {
     "id": "0417-adaptive-expertise",
@@ -11808,47 +12177,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0417",
     "fieldTitle": "Work skills",
     "fieldTitleZh": "工作技能",
-    "title": "The Recipe That Obeyed Only Old Flour",
-    "titleZh": "只服从旧面粉的配方",
-    "summary": "A baker who can repeat one recipe blindfolded meets flour that refuses every familiar motion.",
-    "summaryZh": "闭眼也能复刻旧配方的面包师，遇见一批拒绝所有熟悉动作的新面粉。",
-    "storyParagraphs": [
-      "Baker Gu Qi had made the same town loaf for twenty years. He knew the scoops of water, kneading strokes, proofing time, and oven heat without looking. That speed supplied every household before noon, and apprentices were rewarded for matching the routine. The recipe board above the table had darkened around the edges but had never needed correction.",
-      "After a flood ruined the old wheat fields, the mill delivered grain from the northern slope. Gu used the same water and motions. Dough clung to the table; the loaves emerged flat and wet. He blamed poor flour and repeated the recipe three times because past failures had usually come from apprentices departing from it. By evening, failed bread filled two baskets and the school order remained unbaked. Gu sold the failed loaves cheaply as animal feed, but the proceeds did not cover fuel or the promised school meal.",
-      "Apprentice Xiao Ning weighed old and new flour into small bowls, varied water in measured amounts, and recorded absorption, dough strength, and proofing. She predicted that the wetter new flour needed less added water and a different rest, then tested one small loaf. She did not scatter flour at random until the dough looked familiar. The trial explained which assumption in the old routine no longer held. She repeated the test with a second sack before changing the public recipe, because one sample could reflect a single damp bag.",
-      "Gu called the bowls wasteful while customers waited. Instead of buying costly old wheat to protect his reputation for speed, he cleared one table for the junior's experiments. When the school threatened to change bakers, he surrendered the morning market order, losing a week's margin, and gave one table to controlled trials. The main table still used the efficient routine for the last old sacks.",
-      "The first adjusted loaf held its shape but dried too quickly; the second tore during shaping. Xiao Ning compared them, revised one condition at a time, and asked Gu to explain why folding created strength. His long practice supplied distinctions her measurements missed. Within four days they had a stable recipe, then trained the rest of the shop until speed returned. Neither repetition alone nor unsupported improvisation had solved the new flour. Gu predicted the next result before opening the oven, then compared his prediction with the crumb rather than explaining every surprise afterward.",
-      "When the next cart arrived, Gu did not recite a water quantity. He crushed a pinch, checked the mill note, and asked an apprentice for a test bowl. The old recipe stayed above the main table. Beneath it, a smaller board now listed what to examine before deciding whether the familiar numbers applied."
-    ],
-    "storyParagraphsZh": [
-      "面包师顾齐做同一种镇面包二十年。几勺水、揉多少下、发酵多久、炉温多高，他不用看也不会错。这种速度让全镇午前都有面包，学徒只需准确复刻。桌上方的配方板边缘早被烟熏黑，内容却从未需要改动。",
-      "洪水毁掉旧麦田后，磨坊送来北坡粮。顾齐照原水量与动作操作，面团却黏在桌上，烤出的面包扁而湿。他怪面粉不合格，又连续照旧配方做三次，因为过去失败通常都来自学徒偏离步骤。傍晚，两筐坏面包堆在墙边，学校订单仍没烤出。顾齐把失败面包低价卖作饲料，所得仍补不回柴火，更填不上学校午餐的承诺。",
-      "学徒小宁把新旧面粉分别称进小碗，按测量改变水量，记录吸水、成团与发酵。她预测新粉自身含水高，所需添水更少，静置方式也应不同，然后只烤一只小面包验证。她没有随手乱撒干粉，直到面团看起来熟悉，而是找出旧流程中哪项假设不再成立。她又换第二袋重复试验，才考虑改公开配方，以免一只受潮布袋被误当成整批面粉规律。",
-      "顾齐嫌这些小碗浪费，门外顾客又在等待。他没有高价买外地旧麦来保住速度名声，而是腾出一张桌，让年轻学徒的试验拖慢作坊。学校表示将换供应者时，他放弃清晨市集订单，损失一周利润，把一张桌交给受控试做；主桌仍用最后几袋旧麦维持熟练生产。",
-      "第一只调整面包能站住，却很快变干；第二只在整形时裂开。小宁逐个比较，每次只改一项，又请顾齐说明折叠为何能增加筋力。顾齐多年的手感补上测量没看见的差别。四天后，新配方稳定，众人再共同练到恢复速度。机械重复与无依据即兴都没能独自解决新面粉。开炉以前，顾齐还必须先写下结果预测，再拿面包内部验证，不能等意外发生后才为每个结果找说法。",
-      "下一车面粉抵达时，顾齐没有先背水量。他捻碎一撮，核对磨坊批注，又叫学徒留一小碗试团。旧配方仍挂在主桌上方，下面却多了一块小板，写着在决定熟悉数字是否适用以前，先要检查哪些东西。"
-    ],
-    "conceptName": "Adaptive expertise",
-    "conceptNameZh": "适应性专长",
-    "explanationParagraphs": [
-      "Adaptive expertise combines efficient, accurate performance in familiar conditions with conceptual understanding, flexible adjustment, and responsible experimentation in unfamiliar ones. It requires strong routines and the ability to recognise when their assumptions fail. Varied cases, prediction, mechanism-based explanation, controlled tests, feedback, and reflection support adaptation; it is neither repetitive fluency alone nor unconstrained improvisation."
-    ],
-    "explanationParagraphsZh": [
-      "适应性专长结合熟悉情境中的高效准确，以及陌生情境中的概念理解、灵活调整与负责任试验。它既需要扎实惯例，也要识别惯例假设何时失效。多样案例、预测、机制解释、受控测试、反馈与反思有助于适应；它既非单纯重复熟练，也不是无约束即兴。"
-    ],
     "mode": "concept-fable",
+    "title": "The Square Would Not Drop Free",
+    "summary": "Forty display panels are due on Monday. The new boards are as thick as the old ones, but the first square Cen Yue cuts with the old settings stays attached to the test strip, its edge darker than before.",
+    "storyParagraphs": [
+      "A woodworking studio must deliver forty custom display panels on Monday. For the previous two years, it has used 3 mm birch plywood, and Cen Yue’s standard settings card has been stable on the same machine. On Friday, the new material arrives: 40 production boards, 1 separate first-article board, and 3 test strips from the same batch. The supplier identifies the material as a 3 mm bamboo-veneer composite and notes that its surface and core construction differ from the old birch board.",
+      "Cen Yue starts with test strip A, cutting a small square in the machine’s test mode with the old birch settings. Fibers remain connected at two places on the back, and the edge is darker than on the old board. He writes the batch number and both observations on the back, then puts the supplier’s description beside the old card and compares it with the words “birch plywood.” All 40 production boards stay on the rack.",
+      "The machine manual lists speed and air assist as separately testable controls. Cen Yue knows that, at unchanged power, slower movement means longer exposure along each part of the cut. But A’s edge is already dark, so full separation is not the only result he must watch. For strip B, he keeps power and air assist unchanged and lowers speed to the adjacent test setting. B drops free, but its edge is darker. He places it beside A and records both the gain and the cost of that change.",
+      "For strip C, he keeps B’s power and speed and changes only air assist to the adjacent setting allowed by the machine. C also drops free, with a lighter edge than B. Cen Yue lays the three strips out in order and labels each with its machine settings and observed results. More than twenty minutes have passed, and all three test strips are used. He clips the record beside the first-article board before picking up the customer drawing.",
+      "Cen Yue then uses the one separate first-article board under condition C to cut the complete customer shape. He checks full separation, edge condition, hole positions, dimensions, and fit with the stand. He signs the first-article record before starting the 40 delivery boards. During production, each piece is checked after removal for complete separation and edge condition; dimensions are spot-checked at the studio’s existing batch checkpoints. Any abnormality stops the run and sends him back to the record.",
+      "Before shipment on Monday, all 40 finished panels are boxed. The new settings card reads “3 mm bamboo-veneer composite / first article confirmed for this batch,” while the old birch card remains intact. Test strips A, B, and C and the first-article record are stapled together and returned to the process binder beside the machine; the batch-inspection sheet is filed behind them."
+    ],
+    "overall": "Adaptive expertise combines efficient, skilled performance with understanding why a method works. When conditions change, people can use prior knowledge and resources for further learning to make informed adjustments, rather than merely repeating old steps or trying changes at random.",
+    "conceptName": "Adaptive expertise",
+    "explanationParagraphs": [
+      "The old settings had been reliable for birch plywood. Comparing the new material description, Cen Yue knows that equal thickness alone does not justify copying the old card. He uses his understanding of speed and exposure time to choose the first adjustment, checking both separation and edge darkening.",
+      "Changing one control at a time is the method used to distinguish results in this small test, not the definition of adaptive expertise. A/B/C, the first article, and the batch checks support a processing choice only for this machine and material batch; they do not establish settings that work under every condition."
+    ],
+    "module": {
+      "intro": "Identify why the old method worked and which conditions have changed, then use prior knowledge and resources for learning to adjust it. In this example, small tests and a first-article check connect the adjustment back to the real order.",
+      "diagramTitle": "How A, B, and C Support This Batch of Bamboo-Veneer Composite",
+      "diagramSteps": [
+        "Use the old birch settings on A to establish a baseline",
+        "Use the material change and machine test controls to let B change speed only",
+        "Keep B’s conditions for C and change air assist only",
+        "Use a separate first article to check the full delivery standard",
+        "Produce under the new card while keeping the existing batch-quality checks"
+      ],
+      "diagramStepNotes": [
+        "A does not fully separate and has a darker edge; the 40 production boards remain untouched.",
+        "B keeps power and air assist unchanged and lowers speed to the adjacent test setting; exposure lasts longer, the square separates, but the edge becomes darker.",
+        "C keeps B’s power and speed and changes only the machine-permitted air-assist test setting.",
+        "The first article checks full separation, edge, holes, dimensions, and fit before sign-off.",
+        "During production, separation and edge condition are checked piece by piece and dimensions are spot-checked at existing batch points; abnormalities stop the run."
+      ],
+      "mapping": [
+        "Supplier material description → evidence that the material condition covered by the old settings has changed.",
+        "A/B/C test strips → the evidence chain from changing one control at a time in this test.",
+        "Separate first-article board → connects the small test back to the customer’s full delivery standard.",
+        "Old card alongside the new batch card → preserves established expertise while limiting the new method’s scope."
+      ],
+      "boundary": "Adaptive expertise does not require reinventing the process every time; well-practiced methods can remain useful where they still fit. This is a fictional machine-and-material scenario and does not provide real laser-processing parameters or safety guidance. One A/B/C test sequence cannot establish universal causation; the new card applies only within the range supported by this batch’s first article and production checks.",
+      "reflection": "When a familiar method meets new conditions, can you explain why it originally worked? What knowledge or learning resources would help you decide which steps to keep, which to adjust, and what evidence to use to check the result?"
+    },
+    "references": [
+      {
+        "id": "hatano-inagaki-1984",
+        "citation": "Hatano, G., & Inagaki, K. (1984). Two Courses of Expertise. Research and Clinical Center for Child Development Annual Report, 6, 27–36.",
+        "url": "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/25206/1/6_P27-36.pdf",
+        "use": "Supports the original 1984 report framework distinguishing efficient skilled procedures from understanding why procedures work and adapting under new constraints."
+      },
+      {
+        "id": "schwartz-bransford-sears-2005",
+        "citation": "Schwartz, D. L., Bransford, J. D., & Sears, D. (2005). Efficiency and Innovation in Transfer. In J. P. Mestre (Ed.), Transfer of Learning from a Modern Multidisciplinary Perspective (pp. 1–51). Information Age Publishing.",
+        "url": "https://aaalab.stanford.edu/assets/papers/2005/Efficiency_and_Innovation_in_Transfer.pdf",
+        "use": "Supports the transfer framework in which efficiency and innovation develop together and adaptation uses prior knowledge and available learning resources."
+      }
+    ],
+    "titleZh": "方框没掉下来",
+    "summaryZh": "四十块展示牌周一要交。新板和旧板一样厚，岑越按旧卡切的第一个方框却还连在测试片上，边缘也深了一圈。",
+    "storyParagraphsZh": [
+      "木作工作室周一要交四十块定制展示牌。过去两年一直用3毫米桦木夹板，岑越的标准参数卡在同一台设备上很稳定。周五新材料到货：40块交付板、1块首件样板和3条同批测试片。供应商把材料标为3毫米竹皮复合板，并注明表层和芯材组合与旧桦木板不同。",
+      "岑越先拿测试片A，用旧桦木参数在设备的测试模式切一个小方框。A背面有两处纤维仍连着，边缘也比旧板深。他在背面写下批次号和这两个现象，把供应商说明放到旧卡旁边，对照卡上的“桦木夹板”。料架上的40块正式板没有动。",
+      "设备手册把速度和空气辅助列为可单独测试的控制项。岑越知道，功率不变时，走得慢些会让切缝每段受作用的时间更长；但A的边缘已经偏深，切透之外还得留意焦色。他拿测试片B，保持功率和空气辅助不变，只把速度调慢到相邻测试档。B完整脱落，边缘却更深。他把B排在A旁，记下这次换来的好处和代价。",
+      "测试片C保持B的功率和速度，只把空气辅助改到设备允许的相邻测试档。C同样完整脱落，边缘比B浅。岑越把三条测试片按A、B、C排开，逐一补上机器档位和观察结果。二十多分钟已经过去，三条测试材料也都用了；他先把记录夹到首件样板旁，再拿起客户图纸。",
+      "岑越随后用那1块独立首件样板按C条件切完整客户图形，核对切透、边缘、孔位、尺寸和与支架的装配。他在首件记录上签字，才开始动40块交付板。批量生产时，每块取下后都检查是否完整分离和边缘状态，并按工作室原有批次节点做尺寸抽查；异常就停机回到记录。",
+      "周一出货前，40块成品全部装箱。新参数卡写着“3毫米竹皮复合板／本批首件确认”，旧桦木卡没有被覆盖。A、B、C三条测试片和首件记录订在一起，放回设备旁的工艺夹；批次检查页也夹在同一份记录后面。"
+    ],
+    "overallZh": "适应性专长把熟练有效的操作与对做法为何有效的理解结合起来。条件变化时，人能利用已有知识和可供学习的资源作出有依据的调整，而不只是重复旧步骤或随意尝试。",
+    "conceptNameZh": "适应性专长",
+    "explanationParagraphsZh": [
+      "旧参数在桦木板上长期有效。岑越对照新材料说明，知道不能仅凭厚度相同就照搬旧卡；他再用速度与作用时间的关系选择第一步试验，并同时检查切透和焦边。",
+      "一次只改变一个控制项，是这次小试用来分辨结果的办法，不是适应性专长的定义。A/B/C、首件和批次检查只支持这台设备与这一批材料的处理选择，不能保证参数对其他条件普遍有效。"
+    ],
+    "moduleZh": {
+      "intro": "辨认旧做法为何有效、哪些条件已变，再利用已有知识和学习资源作出调整。本例用小试与首件核对，把调整接回真实订单。",
+      "diagramTitle": "A、B、C测试片怎样支持这一批竹皮复合板",
+      "diagramSteps": [
+        "用旧桦木参数在A上建立基线",
+        "依据材料变化和设备测试项选择B只改速度",
+        "C保持B条件并只改空气辅助",
+        "用独立首件核对完整交付标准",
+        "按新卡生产并执行原有批次质量检查"
+      ],
+      "diagramStepNotes": [
+        "A未完全切透且边缘偏深，40块正式板未动。",
+        "B保持功率和空气辅助，只调慢到相邻速度测试档；作用时间更长，切透了，但边缘更深。",
+        "C保持B功率和速度，只改设备允许的空气辅助测试档。",
+        "首件核对切透、边缘、孔位、尺寸和装配后才签字。",
+        "批量时逐件看分离/边缘，并按原节点抽查尺寸；异常即停。"
+      ],
+      "mapping": [
+        "供应商材料说明 → 证明旧参数的材料条件已变化。",
+        "A/B/C测试片 → 一次只改变一个控制项的本次证据链。",
+        "独立首件样板 → 把小试接回客户交付标准。",
+        "旧卡与本批新卡并存 → 保留熟练经验并限定新方法范围。"
+      ],
+      "boundary": "适应性专长不要求每次重造流程，仍适用的熟练做法可以保留。这是虚构设备和材料情境，不提供真实激光加工参数或安全建议。一次A/B/C小试不能证明普遍因果，新卡只适用于经本批首件和生产检查支持的范围。",
+      "reflection": "当熟悉做法遇到新条件时，你能说明它原本为何有效吗？你会借助哪些知识或学习资源，判断哪些步骤可保留、哪些需要调整，并用什么证据检验？"
+    },
+    "referencesZh": [
+      {
+        "id": "hatano-inagaki-1984",
+        "citation": "Hatano, G., & Inagaki, K. (1984). Two Courses of Expertise. Research and Clinical Center for Child Development Annual Report, 6, 27–36.",
+        "url": "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/25206/1/6_P27-36.pdf",
+        "use": "支持熟练程序与理解程序为何有效、并在新约束下适应之间差异的原始1984报告框架。"
+      },
+      {
+        "id": "schwartz-bransford-sears-2005",
+        "citation": "Schwartz, D. L., Bransford, J. D., & Sears, D. (2005). Efficiency and Innovation in Transfer. In J. P. Mestre (Ed.), Transfer of Learning from a Modern Multidisciplinary Perspective (pp. 1–51). Information Age Publishing.",
+        "url": "https://aaalab.stanford.edu/assets/papers/2005/Efficiency_and_Innovation_in_Transfer.pdf",
+        "use": "支持效率与创新共同发展，以及利用已有知识和可供学习资源适应新情境的迁移研究框架。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-b-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-b-edit-pass1.json",
+        "business-learning-law-mixed-12-pdc-b-edit-pass2.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Baker Gu Qi had made the same town loaf for twenty years. He knew the scoops of water, kneading strokes, proofing time, and oven heat without looking. That speed supplied every household before noon, and apprentices were rewarded for matching the routine. The recipe board above the table had darkened around the edges but had never needed correction.\n\nAfter a flood ruined the old wheat fields, the mill delivered grain from the northern slope. Gu used the same water and motions. Dough clung to the table; the loaves emerged flat and wet. He blamed poor flour and repeated the recipe three times because past failures had usually come from apprentices departing from it. By evening, failed bread filled two baskets and the school order remained unbaked. Gu sold the failed loaves cheaply as animal feed, but the proceeds did not cover fuel or the promised school meal.\n\nApprentice Xiao Ning weighed old and new flour into small bowls, varied water in measured amounts, and recorded absorption, dough strength, and proofing. She predicted that the wetter new flour needed less added water and a different rest, then tested one small loaf. She did not scatter flour at random until the dough looked familiar. The trial explained which assumption in the old routine no longer held. She repeated the test with a second sack before changing the public recipe, because one sample could reflect a single damp bag.\n\nGu called the bowls wasteful while customers waited. Instead of buying costly old wheat to protect his reputation for speed, he cleared one table for the junior's experiments. When the school threatened to change bakers, he surrendered the morning market order, losing a week's margin, and gave one table to controlled trials. The main table still used the efficient routine for the last old sacks.\n\nThe first adjusted loaf held its shape but dried too quickly; the second tore during shaping. Xiao Ning compared them, revised one condition at a time, and asked Gu to explain why folding created strength. His long practice supplied distinctions her measurements missed. Within four days they had a stable recipe, then trained the rest of the shop until speed returned. Neither repetition alone nor unsupported improvisation had solved the new flour. Gu predicted the next result before opening the oven, then compared his prediction with the crumb rather than explaining every surprise afterward.\n\nWhen the next cart arrived, Gu did not recite a water quantity. He crushed a pinch, checked the mill note, and asked an apprentice for a test bowl. The old recipe stayed above the main table. Beneath it, a smaller board now listed what to examine before deciding whether the familiar numbers applied.",
-    "storyBodyZh": "面包师顾齐做同一种镇面包二十年。几勺水、揉多少下、发酵多久、炉温多高，他不用看也不会错。这种速度让全镇午前都有面包，学徒只需准确复刻。桌上方的配方板边缘早被烟熏黑，内容却从未需要改动。\n\n洪水毁掉旧麦田后，磨坊送来北坡粮。顾齐照原水量与动作操作，面团却黏在桌上，烤出的面包扁而湿。他怪面粉不合格，又连续照旧配方做三次，因为过去失败通常都来自学徒偏离步骤。傍晚，两筐坏面包堆在墙边，学校订单仍没烤出。顾齐把失败面包低价卖作饲料，所得仍补不回柴火，更填不上学校午餐的承诺。\n\n学徒小宁把新旧面粉分别称进小碗，按测量改变水量，记录吸水、成团与发酵。她预测新粉自身含水高，所需添水更少，静置方式也应不同，然后只烤一只小面包验证。她没有随手乱撒干粉，直到面团看起来熟悉，而是找出旧流程中哪项假设不再成立。她又换第二袋重复试验，才考虑改公开配方，以免一只受潮布袋被误当成整批面粉规律。\n\n顾齐嫌这些小碗浪费，门外顾客又在等待。他没有高价买外地旧麦来保住速度名声，而是腾出一张桌，让年轻学徒的试验拖慢作坊。学校表示将换供应者时，他放弃清晨市集订单，损失一周利润，把一张桌交给受控试做；主桌仍用最后几袋旧麦维持熟练生产。\n\n第一只调整面包能站住，却很快变干；第二只在整形时裂开。小宁逐个比较，每次只改一项，又请顾齐说明折叠为何能增加筋力。顾齐多年的手感补上测量没看见的差别。四天后，新配方稳定，众人再共同练到恢复速度。机械重复与无依据即兴都没能独自解决新面粉。开炉以前，顾齐还必须先写下结果预测，再拿面包内部验证，不能等意外发生后才为每个结果找说法。\n\n下一车面粉抵达时，顾齐没有先背水量。他捻碎一撮，核对磨坊批注，又叫学徒留一小碗试团。旧配方仍挂在主桌上方，下面却多了一块小板，写着在决定熟悉数字是否适用以前，先要检查哪些东西。",
-    "explanation": "Adaptive expertise combines efficient, accurate performance in familiar conditions with conceptual understanding, flexible adjustment, and responsible experimentation in unfamiliar ones. It requires strong routines and the ability to recognise when their assumptions fail. Varied cases, prediction, mechanism-based explanation, controlled tests, feedback, and reflection support adaptation; it is neither repetitive fluency alone nor unconstrained improvisation.",
-    "explanationZh": "适应性专长结合熟悉情境中的高效准确，以及陌生情境中的概念理解、灵活调整与负责任试验。它既需要扎实惯例，也要识别惯例假设何时失效。多样案例、预测、机制解释、受控测试、反馈与反思有助于适应；它既非单纯重复熟练，也不是无约束即兴。"
+    "storyBody": "A woodworking studio must deliver forty custom display panels on Monday. For the previous two years, it has used 3 mm birch plywood, and Cen Yue’s standard settings card has been stable on the same machine. On Friday, the new material arrives: 40 production boards, 1 separate first-article board, and 3 test strips from the same batch. The supplier identifies the material as a 3 mm bamboo-veneer composite and notes that its surface and core construction differ from the old birch board.\n\nCen Yue starts with test strip A, cutting a small square in the machine’s test mode with the old birch settings. Fibers remain connected at two places on the back, and the edge is darker than on the old board. He writes the batch number and both observations on the back, then puts the supplier’s description beside the old card and compares it with the words “birch plywood.” All 40 production boards stay on the rack.\n\nThe machine manual lists speed and air assist as separately testable controls. Cen Yue knows that, at unchanged power, slower movement means longer exposure along each part of the cut. But A’s edge is already dark, so full separation is not the only result he must watch. For strip B, he keeps power and air assist unchanged and lowers speed to the adjacent test setting. B drops free, but its edge is darker. He places it beside A and records both the gain and the cost of that change.\n\nFor strip C, he keeps B’s power and speed and changes only air assist to the adjacent setting allowed by the machine. C also drops free, with a lighter edge than B. Cen Yue lays the three strips out in order and labels each with its machine settings and observed results. More than twenty minutes have passed, and all three test strips are used. He clips the record beside the first-article board before picking up the customer drawing.\n\nCen Yue then uses the one separate first-article board under condition C to cut the complete customer shape. He checks full separation, edge condition, hole positions, dimensions, and fit with the stand. He signs the first-article record before starting the 40 delivery boards. During production, each piece is checked after removal for complete separation and edge condition; dimensions are spot-checked at the studio’s existing batch checkpoints. Any abnormality stops the run and sends him back to the record.\n\nBefore shipment on Monday, all 40 finished panels are boxed. The new settings card reads “3 mm bamboo-veneer composite / first article confirmed for this batch,” while the old birch card remains intact. Test strips A, B, and C and the first-article record are stapled together and returned to the process binder beside the machine; the batch-inspection sheet is filed behind them.",
+    "storyBodyZh": "木作工作室周一要交四十块定制展示牌。过去两年一直用3毫米桦木夹板，岑越的标准参数卡在同一台设备上很稳定。周五新材料到货：40块交付板、1块首件样板和3条同批测试片。供应商把材料标为3毫米竹皮复合板，并注明表层和芯材组合与旧桦木板不同。\n\n岑越先拿测试片A，用旧桦木参数在设备的测试模式切一个小方框。A背面有两处纤维仍连着，边缘也比旧板深。他在背面写下批次号和这两个现象，把供应商说明放到旧卡旁边，对照卡上的“桦木夹板”。料架上的40块正式板没有动。\n\n设备手册把速度和空气辅助列为可单独测试的控制项。岑越知道，功率不变时，走得慢些会让切缝每段受作用的时间更长；但A的边缘已经偏深，切透之外还得留意焦色。他拿测试片B，保持功率和空气辅助不变，只把速度调慢到相邻测试档。B完整脱落，边缘却更深。他把B排在A旁，记下这次换来的好处和代价。\n\n测试片C保持B的功率和速度，只把空气辅助改到设备允许的相邻测试档。C同样完整脱落，边缘比B浅。岑越把三条测试片按A、B、C排开，逐一补上机器档位和观察结果。二十多分钟已经过去，三条测试材料也都用了；他先把记录夹到首件样板旁，再拿起客户图纸。\n\n岑越随后用那1块独立首件样板按C条件切完整客户图形，核对切透、边缘、孔位、尺寸和与支架的装配。他在首件记录上签字，才开始动40块交付板。批量生产时，每块取下后都检查是否完整分离和边缘状态，并按工作室原有批次节点做尺寸抽查；异常就停机回到记录。\n\n周一出货前，40块成品全部装箱。新参数卡写着“3毫米竹皮复合板／本批首件确认”，旧桦木卡没有被覆盖。A、B、C三条测试片和首件记录订在一起，放回设备旁的工艺夹；批次检查页也夹在同一份记录后面。",
+    "explanation": "The old settings had been reliable for birch plywood. Comparing the new material description, Cen Yue knows that equal thickness alone does not justify copying the old card. He uses his understanding of speed and exposure time to choose the first adjustment, checking both separation and edge darkening.\n\nChanging one control at a time is the method used to distinguish results in this small test, not the definition of adaptive expertise. A/B/C, the first article, and the batch checks support a processing choice only for this machine and material batch; they do not establish settings that work under every condition.",
+    "explanationZh": "旧参数在桦木板上长期有效。岑越对照新材料说明，知道不能仅凭厚度相同就照搬旧卡；他再用速度与作用时间的关系选择第一步试验，并同时检查切透和焦边。\n\n一次只改变一个控制项，是这次小试用来分辨结果的办法，不是适应性专长的定义。A/B/C、首件和批次检查只支持这台设备与这一批材料的处理选择，不能保证参数对其他条件普遍有效。"
   },
   {
     "id": "0421-rule-of-law",
@@ -11857,45 +12317,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0421",
     "fieldTitle": "Law",
     "fieldTitleZh": "法律",
-    "title": "The King's Cart Stops at the Scale",
-    "titleZh": "国王的车停在秤前",
-    "summary": "A palace steward asks a bridge guard to overlook one overloaded cart, then needs the same gate opened for a genuine emergency.",
-    "summaryZh": "王宫总管要求守桥人放过一辆超重货车，数月后，他却需要同一座桥为真正的紧急事件开门。",
-    "storyParagraphs": [
-      "After winter floods loosened three stones in the old bridge, King Heman approved a weight limit. Every cart would stop on the iron scale, and the beam must remain below a painted red line. The order was posted in large letters because merchants had complained that palace wagons were waved through while theirs were searched. Captain Nuo, who ran the gate, received one copy bearing the royal seal. The rule slowed traffic, but cracks stopped widening. By spring even impatient carriers had learned to place their cargo sheet beside the scale weight.",
-      "On the morning of the river festival, the palace steward arrived with a bronze bell, musicians, and six carts of stone seats. The bell had to hang before noon or the king would open the celebration in silence. The first stone cart drove the beam a finger above the red line. The steward told Nuo to lift the barrier and promised to write an exception afterward. Letting one cart pass seemed cheaper than embarrassing the palace before a crowded quay. Nuo moved his hand toward the chain. Then a grain merchant, waiting behind the convoy with half his flour unloaded, laid his own cargo sheet on the scale and asked whether tomorrow's written limit would still mean what it meant today.",
-      "The steward ordered the merchant removed. Nuo knew refusal might cost him his post, yet the sealed copy gave no festival exception and no officer authority to invent one at the gate. He lowered the chain. The palace unloaded half the stone seats and made two journeys. The bell crossed safely, but it was still lying on straw when the king reached the quay. The opening began without its first toll; the steward lost his festival bonus, and Nuo spent the afternoon before an independent reviewer explaining why he had delayed the royal convoy.",
-      "Three months later, floodwater trapped families on the eastern bank. A rescue wagon carrying rope and a lifting frame also pushed the beam above the red line. This time the posted order contained an emergency clause: the fire captain could authorise one crossing, record the load and reason, and submit the bridge for inspection afterward. Nuo checked the signature and raised the chain. The wagon crossed. Two paving stones cracked and were repaired from the emergency fund. The rescue was permitted by a rule made before anyone knew whose wagon would need it, not by the urgency in one official's voice.",
-      "At the next festival, the steward divided the stone seats before leaving the palace. When his convoy reached the bridge, he handed Nuo six cargo sheets and waited while the iron beam rose. The old royal seal remained under glass beside the scale. Across its lower edge, the same red line continued without a gap."
-    ],
-    "storyParagraphsZh": [
-      "冬季洪水冲松旧桥三块石板后，赫曼国王批准了一条限重令：每辆车都要停上铁秤，秤杆不得越过漆出的红线。商人此前一直抱怨王宫车队挥手便过，自己的车却要卸货检查，所以命令被用大字贴在桥头。守桥队长诺安收到一份带王印的副本。规则让车队慢了一些，桥缝却不再继续张开。到了春天，再急的运货人也会把货单放到秤砣旁边。",
-      "河祭清晨，王宫总管带着铜钟、乐手和六车石座赶来。铜钟若不能在正午前挂好，国王便只能在寂静中宣布开幕。第一辆石车把秤杆压到红线上方一指。总管让诺安先抬栏杆，答应事后补写例外。放过一辆车，似乎比让王宫在满岸人群前难堪便宜。诺安的手刚碰到铁链，排在后面的粮商便把自家货单放上秤台。他为了守规矩已卸下一半面粉，只问了一句：“明天这条红线还算今天这条吗？”",
-      "总管命人赶走粮商。诺安知道拒绝可能丢掉职位，可带印命令没有节庆例外，也没授权任何人在桥头临时造一条。他放下铁链。王宫只得卸下一半石座，分两趟通过。铜钟安全过桥，国王抵达码头时却仍躺在稻草上，开幕没有第一声钟响。总管失去节庆奖金，诺安整个下午都在独立审理官面前说明自己为何耽误王车。",
-      "三个月后，洪水困住东岸几户人家。装着绳索和起吊架的救援车同样把秤杆压过红线。这次，公开命令中早有紧急条款：消防队长可批准一次通行，写明载重和理由，并在事后安排桥梁检查。诺安核对签名，抬起铁链。救援车过桥后，两块铺石出现裂缝，由紧急款修复。车辆获准，并非因为某位官员喊得更响，而是依据一条在无人知道谁会求助以前便写下的程序。",
-      "下一年河祭，总管在王宫里便把石座分装。车队来到桥头，他先递出六张货单，等诺安看着铁秤慢慢升起。旧王印仍压在秤旁的玻璃下，印纸下缘那道红线没有为任何一辆车断开。"
-    ],
-    "conceptName": "Rule of law",
-    "conceptNameZh": "法治",
-    "explanationParagraphs": [
-      "The rule of law requires public power to operate through accessible, prospective and generally applicable rules rather than personal command. Independent review, reasons, remedies and equal application help restrain arbitrariness. Emergency powers may still exist when their legal basis, scope, duration, records and later review are defined. This is a general institutional explanation, not advice for a particular dispute."
-    ],
-    "explanationParagraphsZh": [
-      "法治要求公共权力依照公开、可预见且普遍适用的规则行使，而非听凭个人命令。平等适用、说明理由、独立复核与有效救济可限制任意权力。紧急权限并非不可存在，但须明确依据、范围、期限、记录和事后审查。这里说明的是一般制度原理，不构成个案法律意见。"
-    ],
     "mode": "concept-fable",
+    "title": "Four Tables and a 1.8-Meter Passage",
+    "summary": "Saturday’s used-book fundraiser still needs a permit. Lin Cheng’s four-table plan leaves a 1.8-meter passage, but the permit officer asks her to redraw it for the department’s recent 2.2-meter practice.",
+    "storyParagraphs": [
+      "Saturday’s community used-book fundraiser still lacks its site permit. In the fictional town of Riverbend, Lin Cheng measures the site at the edge of the square: the sidewalk is 3.6 m wide, with 8 m available along the square. The permit page links to the effective Temporary Use of Public Space Rules, which require at least 1.8 m of clear passage for this kind of small event. Each of the four folding tables is 1.8 m long and 0.7 m deep.",
+      "She puts the four tables—children’s books, adult books, registration, and payments—in one row along the square, using 7.2 m of frontage. Donors approach the table fronts from the square. Volunteers work behind them, on the sidewalk side, in a 1.1 m strip for sorting book boxes, registration, and payments. The 0.7 m table depth plus that working strip takes 1.8 m, leaving a further 1.8 m clear outside it. She marks the standing positions and book boxes on the dimensioned plan.",
+      "On Tuesday, permit officer Cheng Ze calls to say weekend foot traffic has been heavy and the department has recently preferred a 2.2 m passage. He suggests combining the service into two tables with fewer staff and a narrower rear work strip: 0.7 m of table depth plus 0.7 m for working takes 1.4 m, leaving 2.2 m clear. This is his proposed smaller-service arrangement; the four jobs would rotate through two tables. A formal notice then requires the plan to be redrawn for 2.2 m, but cites no published rule or temporary restriction in force that week.",
+      "On Tuesday evening, Lin Cheng measures the site again and draws both the four-table and two-table layouts. The permit page still shows the 1.8 m rule as effective and states that a wider passage required because of construction, an approved large event, or an immediate safety measure must be supported by a corresponding written decision. She files under the town’s expedited review process for small-event permits. The case goes to an administrative reviewer independent of the permit counter, with authority to uphold, modify, or overturn the notice.",
+      "On Wednesday, the reviewer checks the effective rule, that week’s public notices, and the site arrangements. There is no construction, road closure, or published temporary decision increasing the passage standard. The reviewer overturns the 2.2 m modification requirement and sends the matter back to the permit counter for a new decision. Cheng Ze then approves the four-table plan with site conditions: table legs, boxes, and volunteers must remain inside the 1.8 m activity strip, and any queue must be directed toward the square rather than into the outside clear passage.",
+      "On Saturday morning, Lin Cheng and the volunteers set the four tables in one row along the square and draw a chalk line at the outer edge of the rear working strip. She measures from the line to the curb: 1.8 m. She pushes the last book box inside the working strip. As the first donor approaches the “Adult Books” table from the square, a volunteer behind it unties the stack of books. The outside passage stays clear."
+    ],
+    "overall": "This article focuses the rule of law on effective publicly accessible rules constraining public power, administrative decisions stating their basis, and independent, timely review reducing arbitrariness. More broadly, the rule of law also includes accountability, equality, fairness, rights protection, and independent adjudication.",
+    "conceptName": "Rule of law",
+    "explanationParagraphs": [
+      "The permit officer’s crowd-safety concern is reasonable, and stricter requirements can be imposed when there is a lawful basis. The problem is that 2.2 m is only an internal practice here, with no corresponding effective rule or valid temporary decision for that week. The two-table option gains 0.4 m of passage by reducing the rear working strip from 1.1 m to 0.7 m while combining jobs and rotating services.",
+      "Independent administrative review can alter or overturn the notice and finishes before the event, but it does not exhaust the idea of independent judicial protection. Procedural legality also does not automatically make every rule substantively just; the setting is fictional."
+    ],
+    "module": {
+      "intro": "Distinguish effective public rules, administrative discretion, lawful temporary exceptions, and independent review to assess whether a public decision is reasoned and reviewable.",
+      "diagramTitle": "Four Tables and Two Tables on a 3.6-Meter Sidewalk",
+      "diagramSteps": [
+        "Submit the four-table layout under the effective 1.8 m rule",
+        "Receive a modification requirement based on the department’s 2.2 m internal practice",
+        "Submit both dimensioned layouts for independent expedited review",
+        "Have the reviewer check the rule and lawful exceptions for that week",
+        "Return the case for a new permit decision with enforceable site conditions"
+      ],
+      "diagramStepNotes": [
+        "Four tables form a 7.2 m row along the square; 0.7 m table depth + 1.1 m rear working strip = 1.8 m, leaving another 1.8 m of clear passage.",
+        "The proposed two-table option combines four jobs and reduces the rear working strip to 0.7 m: 0.7 + 0.7 = 1.4 m, leaving 2.2 m of passage.",
+        "The formal modification notice cites no effective 2.2 m rule or temporary decision for that week.",
+        "The independent administrative reviewer can uphold, modify, or overturn the notice and overturns the modification requirement on Wednesday.",
+        "The single-row four-table plan is approved; donors approach from the square, volunteers and boxes stay in the rear working strip, and the passage stays clear."
+      ],
+      "mapping": [
+        "Two dimensioned layouts → an extra 0.4 m of passage comes at the cost of a narrower working strip and combined service jobs.",
+        "Formal modification notice → a public-power decision that needs a legal basis.",
+        "Independent administrative reviewer → a remedy outside the original permit counter with authority to change the decision.",
+        "Tuesday-evening remeasurement and redrawing → actual time cost incurred while the permit remained unresolved."
+      ],
+      "boundary": "The rule of law does not mean that old rules can never change, nor does it exclude lawfully established safety exceptions, emergency measures, or reasonable discretion. Independent administrative review is not the whole of judicial protection, and transparent procedure alone does not prove that the substance of every rule is just. The town, passage standards, and expedited review procedure in this example are fictional.",
+      "reflection": "When an official has a genuine safety concern but only an internal practice rather than an effective public legal basis, what kind of temporary decision and independent review process can preserve necessary discretion while limiting arbitrariness?"
+    },
+    "references": [
+      {
+        "id": "un-rule-of-law-2004",
+        "citation": "United Nations Secretary-General (2004). The rule of law and transitional justice in conflict and post-conflict societies. S/2004/616, paragraph 6.",
+        "url": "https://documents.un.org/doc/undoc/gen/n04/395/29/pdf/n0439529.pdf",
+        "use": "Supports rule-of-law elements including public authorities being bound by publicly promulgated law, equal enforcement, independent adjudication, and human rights; it is not treated as a single historical origin."
+      },
+      {
+        "id": "wjp-rule-of-law",
+        "citation": "World Justice Project. What is the Rule of Law?",
+        "url": "https://worldjusticeproject.org/about-us/overview/what-rule-law",
+        "use": "Supports contemporary rule-of-law elements including accountability, just laws, open government, and accessible and impartial justice; the rule of law is not reduced to obeying any rule whatsoever."
+      }
+    ],
+    "titleZh": "四张桌子和一条1.8米通道",
+    "summaryZh": "周六的旧书募捐还差一张许可。林澄提交的四桌方案留下1.8米通道，许可员却要求按部门近期惯用的2.2米标准重画。",
+    "storyParagraphsZh": [
+      "周六的社区旧书募捐还没拿到场地许可。在虚构的河湾镇，林澄到广场边量了现场：人行道宽3.6米，沿广场边缘有8米可用长度。许可页面链接着已生效的《公共空间临时使用规则》，要求这类小型活动保留至少1.8米净通道；四张折叠桌每张长1.8米、深0.7米。",
+      "她把“童书／成人书／登记／收款”四张桌沿广场边缘排成一列，共长7.2米。捐书者从广场一侧来到桌前；志愿者在桌后靠人行道一侧的1.1米工作带内整理书箱、登记和收款。桌深0.7米加工作带1.1米，共占1.8米，外侧还留1.8米净通道。她把站位和书箱位置一起标进尺寸图。",
+      "周二，许可员程则来电说最近周末人流偏大，部门这阵子通常希望留2.2米。他建议合并成两桌，压缩人员和桌后工作区：0.7米桌深加0.7米工作带，共占1.4米，便能留下2.2米。这是他提出的简化服务方案，四个岗位要在两桌轮换。正式修改通知随后要求按2.2米重画，却没有列明公开规则或当周临时限制决定。",
+      "林澄周二晚重新量了一次现场，又画出四桌和两桌两张图。许可页面显示1.8米规则仍有效，同时写明如施工、已批准大型活动或即时安全措施需要更宽通道，应有相应书面决定。她按本镇小型活动许可的快速复核程序提交材料；案件由独立于许可窗口的行政复核员决定，复核员有权维持、修改或撤销该通知。",
+      "周三，复核员核对已生效规则、当周公告和现场安排，没有发现施工、封路或已发布的临时提高通道标准决定，于是撤销2.2米修改要求，并把案件发回许可窗口重新决定。程则随后批准四桌方案，但附加现场条件：桌脚、纸箱和志愿者都须留在1.8米活动带内，排队要引导到广场内侧，不能占用外侧净通道。",
+      "周六早上，林澄和志愿者把四桌沿广场边缘排成一列，在桌后工作带的外沿画下粉笔线。她从线量到路缘，卷尺读数1.8米，把最后一只纸箱推进工作带内。第一位捐书者从广场一侧来到“成人书”桌前时，桌后的志愿者正拆开书绳，外侧通道仍空着。"
+    ],
+    "overallZh": "本篇把法治聚焦在已公开生效的规则约束公权力、行政决定说明依据，以及独立且及时的复核减少任意性。更广义的法治还包括问责、平等、公正、权利保障和独立裁断。",
+    "conceptNameZh": "法治",
+    "explanationParagraphsZh": [
+      "许可员对拥挤的安全担忧合理，也可在有合法依据时提高要求；问题在于2.2米只是内部惯例，没有对应已生效规则或当周有效临时决定。两桌方案多出的0.4米净宽，来自桌后工作带由1.1米缩至0.7米，同时要合并岗位和轮换服务。",
+      "独立行政复核有撤改权且在活动前完成，但并不穷尽独立司法。程序合法也不自动保证所有规则实质公正；本故事不对应真实司法辖区。"
+    ],
+    "moduleZh": {
+      "intro": "区分已生效公开规则、行政裁量、合法临时例外和独立复核，检查公权力决定是否可说明且可审查。",
+      "diagramTitle": "3.6米人行道上的四桌与两桌",
+      "diagramSteps": [
+        "按已生效1.8米规则提交四桌布局",
+        "许可员以2.2米内部惯例要求修改",
+        "申请人提交两张尺寸图启动独立快速复核",
+        "复核员核对规则和当周合法例外",
+        "许可窗口重新决定并附可执行现场条件"
+      ],
+      "diagramStepNotes": [
+        "四桌沿广场一侧排成7.2米长的一列；0.7米桌深＋1.1米桌后工作带＝1.8米，另留1.8米净通道。",
+        "建议的两桌方案合并四个岗位，并把桌后工作带压到0.7米：0.7＋0.7＝1.4米，另留2.2米通道。",
+        "正式修改通知未列已生效2.2米规则或当周临时决定。",
+        "独立行政复核员有维持、修改或撤销权，周三撤销修改要求。",
+        "四桌单排获批；捐书者从广场一侧接近，志愿者和纸箱留在桌后工作带，净通道保持畅通。"
+      ],
+      "mapping": [
+        "两张尺寸图 → 净通道增加0.4米对应工作带缩窄、岗位合并的代价。",
+        "正式修改通知 → 公权力决定需要法律依据。",
+        "独立行政复核员 → 不由原许可窗口控制且有撤改权的救济。",
+        "周二晚重新测量和重画 → 未获许可期间已发生的实际时间成本。"
+      ],
+      "boundary": "法治不意味着旧规则永远不能改变，也不排除依法设立的安全例外、紧急措施和合理裁量。独立行政复核也不等同于全部司法保障；公开程序本身更不能证明规则内容必然公正。本例的市镇、通道标准与快速复核程序均为虚构。",
+      "reflection": "当行政人员有真实安全担忧，却只有内部惯例而没有已生效公开依据时，怎样的临时决定与独立复核程序才能既保留裁量又限制任意性？"
+    },
+    "referencesZh": [
+      {
+        "id": "un-rule-of-law-2004",
+        "citation": "United Nations Secretary-General (2004). The rule of law and transitional justice in conflict and post-conflict societies. S/2004/616, paragraph 6.",
+        "url": "https://documents.un.org/doc/undoc/gen/n04/395/29/pdf/n0439529.pdf",
+        "use": "支持国家和公权力受公开法律约束、平等实施、独立裁判与人权等法治要素；不作为单一历史起源。"
+      },
+      {
+        "id": "wjp-rule-of-law",
+        "citation": "World Justice Project. What is the Rule of Law?",
+        "url": "https://worldjusticeproject.org/about-us/overview/what-rule-law",
+        "use": "支持问责、公正法律、公开治理与可及且公正司法等当代法治要素；不将法治缩成遵守任何规则。"
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "business-learning-law-mixed-12-pdc-b-review.md",
+      "edits": [
+        "business-learning-law-mixed-12-pdc-b-edit-pass1.json",
+        "business-learning-law-mixed-12-pdc-b-edit-pass2.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "After winter floods loosened three stones in the old bridge, King Heman approved a weight limit. Every cart would stop on the iron scale, and the beam must remain below a painted red line. The order was posted in large letters because merchants had complained that palace wagons were waved through while theirs were searched. Captain Nuo, who ran the gate, received one copy bearing the royal seal. The rule slowed traffic, but cracks stopped widening. By spring even impatient carriers had learned to place their cargo sheet beside the scale weight.\n\nOn the morning of the river festival, the palace steward arrived with a bronze bell, musicians, and six carts of stone seats. The bell had to hang before noon or the king would open the celebration in silence. The first stone cart drove the beam a finger above the red line. The steward told Nuo to lift the barrier and promised to write an exception afterward. Letting one cart pass seemed cheaper than embarrassing the palace before a crowded quay. Nuo moved his hand toward the chain. Then a grain merchant, waiting behind the convoy with half his flour unloaded, laid his own cargo sheet on the scale and asked whether tomorrow's written limit would still mean what it meant today.\n\nThe steward ordered the merchant removed. Nuo knew refusal might cost him his post, yet the sealed copy gave no festival exception and no officer authority to invent one at the gate. He lowered the chain. The palace unloaded half the stone seats and made two journeys. The bell crossed safely, but it was still lying on straw when the king reached the quay. The opening began without its first toll; the steward lost his festival bonus, and Nuo spent the afternoon before an independent reviewer explaining why he had delayed the royal convoy.\n\nThree months later, floodwater trapped families on the eastern bank. A rescue wagon carrying rope and a lifting frame also pushed the beam above the red line. This time the posted order contained an emergency clause: the fire captain could authorise one crossing, record the load and reason, and submit the bridge for inspection afterward. Nuo checked the signature and raised the chain. The wagon crossed. Two paving stones cracked and were repaired from the emergency fund. The rescue was permitted by a rule made before anyone knew whose wagon would need it, not by the urgency in one official's voice.\n\nAt the next festival, the steward divided the stone seats before leaving the palace. When his convoy reached the bridge, he handed Nuo six cargo sheets and waited while the iron beam rose. The old royal seal remained under glass beside the scale. Across its lower edge, the same red line continued without a gap.",
-    "storyBodyZh": "冬季洪水冲松旧桥三块石板后，赫曼国王批准了一条限重令：每辆车都要停上铁秤，秤杆不得越过漆出的红线。商人此前一直抱怨王宫车队挥手便过，自己的车却要卸货检查，所以命令被用大字贴在桥头。守桥队长诺安收到一份带王印的副本。规则让车队慢了一些，桥缝却不再继续张开。到了春天，再急的运货人也会把货单放到秤砣旁边。\n\n河祭清晨，王宫总管带着铜钟、乐手和六车石座赶来。铜钟若不能在正午前挂好，国王便只能在寂静中宣布开幕。第一辆石车把秤杆压到红线上方一指。总管让诺安先抬栏杆，答应事后补写例外。放过一辆车，似乎比让王宫在满岸人群前难堪便宜。诺安的手刚碰到铁链，排在后面的粮商便把自家货单放上秤台。他为了守规矩已卸下一半面粉，只问了一句：“明天这条红线还算今天这条吗？”\n\n总管命人赶走粮商。诺安知道拒绝可能丢掉职位，可带印命令没有节庆例外，也没授权任何人在桥头临时造一条。他放下铁链。王宫只得卸下一半石座，分两趟通过。铜钟安全过桥，国王抵达码头时却仍躺在稻草上，开幕没有第一声钟响。总管失去节庆奖金，诺安整个下午都在独立审理官面前说明自己为何耽误王车。\n\n三个月后，洪水困住东岸几户人家。装着绳索和起吊架的救援车同样把秤杆压过红线。这次，公开命令中早有紧急条款：消防队长可批准一次通行，写明载重和理由，并在事后安排桥梁检查。诺安核对签名，抬起铁链。救援车过桥后，两块铺石出现裂缝，由紧急款修复。车辆获准，并非因为某位官员喊得更响，而是依据一条在无人知道谁会求助以前便写下的程序。\n\n下一年河祭，总管在王宫里便把石座分装。车队来到桥头，他先递出六张货单，等诺安看着铁秤慢慢升起。旧王印仍压在秤旁的玻璃下，印纸下缘那道红线没有为任何一辆车断开。",
-    "explanation": "The rule of law requires public power to operate through accessible, prospective and generally applicable rules rather than personal command. Independent review, reasons, remedies and equal application help restrain arbitrariness. Emergency powers may still exist when their legal basis, scope, duration, records and later review are defined. This is a general institutional explanation, not advice for a particular dispute.",
-    "explanationZh": "法治要求公共权力依照公开、可预见且普遍适用的规则行使，而非听凭个人命令。平等适用、说明理由、独立复核与有效救济可限制任意权力。紧急权限并非不可存在，但须明确依据、范围、期限、记录和事后审查。这里说明的是一般制度原理，不构成个案法律意见。"
+    "storyBody": "Saturday’s community used-book fundraiser still lacks its site permit. In the fictional town of Riverbend, Lin Cheng measures the site at the edge of the square: the sidewalk is 3.6 m wide, with 8 m available along the square. The permit page links to the effective Temporary Use of Public Space Rules, which require at least 1.8 m of clear passage for this kind of small event. Each of the four folding tables is 1.8 m long and 0.7 m deep.\n\nShe puts the four tables—children’s books, adult books, registration, and payments—in one row along the square, using 7.2 m of frontage. Donors approach the table fronts from the square. Volunteers work behind them, on the sidewalk side, in a 1.1 m strip for sorting book boxes, registration, and payments. The 0.7 m table depth plus that working strip takes 1.8 m, leaving a further 1.8 m clear outside it. She marks the standing positions and book boxes on the dimensioned plan.\n\nOn Tuesday, permit officer Cheng Ze calls to say weekend foot traffic has been heavy and the department has recently preferred a 2.2 m passage. He suggests combining the service into two tables with fewer staff and a narrower rear work strip: 0.7 m of table depth plus 0.7 m for working takes 1.4 m, leaving 2.2 m clear. This is his proposed smaller-service arrangement; the four jobs would rotate through two tables. A formal notice then requires the plan to be redrawn for 2.2 m, but cites no published rule or temporary restriction in force that week.\n\nOn Tuesday evening, Lin Cheng measures the site again and draws both the four-table and two-table layouts. The permit page still shows the 1.8 m rule as effective and states that a wider passage required because of construction, an approved large event, or an immediate safety measure must be supported by a corresponding written decision. She files under the town’s expedited review process for small-event permits. The case goes to an administrative reviewer independent of the permit counter, with authority to uphold, modify, or overturn the notice.\n\nOn Wednesday, the reviewer checks the effective rule, that week’s public notices, and the site arrangements. There is no construction, road closure, or published temporary decision increasing the passage standard. The reviewer overturns the 2.2 m modification requirement and sends the matter back to the permit counter for a new decision. Cheng Ze then approves the four-table plan with site conditions: table legs, boxes, and volunteers must remain inside the 1.8 m activity strip, and any queue must be directed toward the square rather than into the outside clear passage.\n\nOn Saturday morning, Lin Cheng and the volunteers set the four tables in one row along the square and draw a chalk line at the outer edge of the rear working strip. She measures from the line to the curb: 1.8 m. She pushes the last book box inside the working strip. As the first donor approaches the “Adult Books” table from the square, a volunteer behind it unties the stack of books. The outside passage stays clear.",
+    "storyBodyZh": "周六的社区旧书募捐还没拿到场地许可。在虚构的河湾镇，林澄到广场边量了现场：人行道宽3.6米，沿广场边缘有8米可用长度。许可页面链接着已生效的《公共空间临时使用规则》，要求这类小型活动保留至少1.8米净通道；四张折叠桌每张长1.8米、深0.7米。\n\n她把“童书／成人书／登记／收款”四张桌沿广场边缘排成一列，共长7.2米。捐书者从广场一侧来到桌前；志愿者在桌后靠人行道一侧的1.1米工作带内整理书箱、登记和收款。桌深0.7米加工作带1.1米，共占1.8米，外侧还留1.8米净通道。她把站位和书箱位置一起标进尺寸图。\n\n周二，许可员程则来电说最近周末人流偏大，部门这阵子通常希望留2.2米。他建议合并成两桌，压缩人员和桌后工作区：0.7米桌深加0.7米工作带，共占1.4米，便能留下2.2米。这是他提出的简化服务方案，四个岗位要在两桌轮换。正式修改通知随后要求按2.2米重画，却没有列明公开规则或当周临时限制决定。\n\n林澄周二晚重新量了一次现场，又画出四桌和两桌两张图。许可页面显示1.8米规则仍有效，同时写明如施工、已批准大型活动或即时安全措施需要更宽通道，应有相应书面决定。她按本镇小型活动许可的快速复核程序提交材料；案件由独立于许可窗口的行政复核员决定，复核员有权维持、修改或撤销该通知。\n\n周三，复核员核对已生效规则、当周公告和现场安排，没有发现施工、封路或已发布的临时提高通道标准决定，于是撤销2.2米修改要求，并把案件发回许可窗口重新决定。程则随后批准四桌方案，但附加现场条件：桌脚、纸箱和志愿者都须留在1.8米活动带内，排队要引导到广场内侧，不能占用外侧净通道。\n\n周六早上，林澄和志愿者把四桌沿广场边缘排成一列，在桌后工作带的外沿画下粉笔线。她从线量到路缘，卷尺读数1.8米，把最后一只纸箱推进工作带内。第一位捐书者从广场一侧来到“成人书”桌前时，桌后的志愿者正拆开书绳，外侧通道仍空着。",
+    "explanation": "The permit officer’s crowd-safety concern is reasonable, and stricter requirements can be imposed when there is a lawful basis. The problem is that 2.2 m is only an internal practice here, with no corresponding effective rule or valid temporary decision for that week. The two-table option gains 0.4 m of passage by reducing the rear working strip from 1.1 m to 0.7 m while combining jobs and rotating services.\n\nIndependent administrative review can alter or overturn the notice and finishes before the event, but it does not exhaust the idea of independent judicial protection. Procedural legality also does not automatically make every rule substantively just; the setting is fictional.",
+    "explanationZh": "许可员对拥挤的安全担忧合理，也可在有合法依据时提高要求；问题在于2.2米只是内部惯例，没有对应已生效规则或当周有效临时决定。两桌方案多出的0.4米净宽，来自桌后工作带由1.1米缩至0.7米，同时要合并岗位和轮换服务。\n\n独立行政复核有撤改权且在活动前完成，但并不穷尽独立司法。程序合法也不自动保证所有规则实质公正；本故事不对应真实司法辖区。"
   },
   {
     "id": "0421-precedent",

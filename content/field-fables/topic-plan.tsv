@@ -84,7 +84,7 @@ batch-006	04	0415	Secretarial and office work	秘书与办公室工作	1	0415-in
 batch-006	04	0415	Secretarial and office work	秘书与办公室工作	2	0415-record-version-control	Record version control	记录版本控制	mechanism-explainer	三份略有不同的命令同时抵达工地	integrated
 batch-006	04	0415	Secretarial and office work	秘书与办公室工作	3	0415-coordination-cost	Coordination cost	协调成本	concept-fable	为了让每个人知情而再也没有时间工作的办公室	integrated
 batch-006	04	0416	Wholesale and retail sales	批发与零售销售	1	0416-inventory-turnover	Inventory turnover	库存周转	mechanism-explainer	货架最满的水果店每天扔掉最多果子	integrated
-batch-006	04	0416	Wholesale and retail sales	批发与零售销售	2	0416-bullwhip-effect	Bullwhip effect	牛鞭效应	concept-fable	一场小雨在供应链上变成十倍雨伞订单	integrated
+batch-006	04	0416	Wholesale and retail sales	批发与零售销售	2	0416-bullwhip-effect	Bullwhip effect	牛鞭效应	mechanism-explainer	一场小雨在供应链上变成十倍雨伞订单	integrated
 batch-006	04	0416	Wholesale and retail sales	批发与零售销售	3	0416-price-discrimination	Price discrimination	价格歧视	mechanism-explainer	同一班渡船为何卖出三种票价	integrated
 batch-006	04	0417	Work skills	工作技能	1	0417-community-of-practice	Community of practice	实践共同体	concept-fable	修理知识总出现在午间长凳而不在手册里	integrated
 batch-006	04	0417	Work skills	工作技能	2	0417-role-clarity	Role clarity	角色清晰度	concept-fable	所有人都负责灭火却没人带水桶的仓库	integrated
