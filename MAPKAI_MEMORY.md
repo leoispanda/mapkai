@@ -2742,3 +2742,16 @@ Follow-up:
 - Cloudflare build-watch now excludes docs/*, review/*, question-banks/*, README.md, MAPKAI_MEMORY.md and MAPKAI_QUESTION_BANK_FOR_GPT.txt. Documentation or candidate-only pushes therefore skip the site build. Other source settings and the current exit-0/public deployment configuration are unchanged.
 - The v2 candidate question bank remains separate and is not activated by this recovery. Deployment policy and complete public hash evidence are under docs/. Before any website push, compare the Git snapshot with the current production release and synchronize approved direct-upload changes first.
 - Commit and remote publication are verified separately in the final recovery report.
+
+## 2026-10-11 - Add Leo's Turnpo profile to Toolbox
+
+Changed:
+- Added the bilingual built-in entry `个人主页 · Turnpo` / `Personal Profile · Turnpo`, pointing to `https://www.turnpo.com/u/leo`, with a profile icon and a short introduction to Leo Yang's background, learning and projects.
+- The entry uses the existing Other category, search, favorites and new-tab behavior. Chinese source and Chinese/English public mirrors are synchronized, with a scoped Toolbox app cache token.
+
+Verified:
+- The public Turnpo profile returned HTTP 200. Before publication, nine production assets (home HTML, main script/styles, shared shell, field fables and both Toolbox HTML/app files) matched the current Git snapshot byte-for-byte; local HEAD matched origin/main.
+- Toolbox build, source/public JavaScript syntax, production CSP and scoped whitespace checks passed. An isolated public snapshot passed Chinese/English browser checks for the correct link, Other filtering, search, favorite persistence, desktop/mobile/dark layouts and no page errors; desktop and mobile screenshots were visually reviewed.
+
+Push:
+- Scoped direct publication to main includes only this Toolbox entry and its record. Pending Music, video-tool, local PDC, review and candidate question-bank work stays outside the commit and website output.

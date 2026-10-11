@@ -10,8 +10,10 @@ const builtins = [
   { id: 'frameworks', name: 'Thinking Frameworks', description: 'Find a thinking framework that fits your question.', category: 'learn', url: '/toolbox/frameworks/en/', icon: 'framework' },
   { id: 'metronome', name: 'Running Metronome', description: 'Run to the beat and set your own cadence.', category: 'other', url: '/toolbox/metronome/en/', icon: 'pulse' },
   { id: 'dishkai', name: 'Menu Reader · DishKAI', description: 'Scan a menu or paste its text to understand unfamiliar dishes.', category: 'other', url: '/toolbox/dishkai/en/', icon: 'dish' },
+  { id: 'profile', name: 'Personal Profile · Turnpo', description: 'Explore Leo Yang’s background, learning, and projects.', category: 'other', url: 'https://www.turnpo.com/u/leo', icon: 'profile' },
 ];
 const icons = {
+  profile: '<circle cx="16" cy="10" r="5"/><path d="M6 28v-3a10 10 0 0 1 20 0v3"/>',
   framework: '<rect x="4" y="4" width="10" height="10" rx="2"/><rect x="18" y="4" width="10" height="10" rx="2"/><rect x="4" y="18" width="10" height="10" rx="2"/><path d="M18 20h10m-10 6h7"/>',
   dish: '<circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="5"/><path d="M2 5v8m3-8v8m-3-3h3M3.5 13v14M29 5v22m0-22c-4 4-4 10 0 10"/>',
   voice: '<path d="M8 15v2m4-8v14m4-18v22m4-18v14m4-8v2"/>',
