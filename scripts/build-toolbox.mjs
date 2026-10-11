@@ -41,9 +41,10 @@ await writeFile(new URL('en/index.html', frameworksTarget), frameworksHtml);
 
 const dishkaiTarget = new URL('dishkai/', target);
 await mkdir(new URL('en/', dishkaiTarget), { recursive: true });
-for (const name of ['index.html', 'app.js', 'styles.css']) {
+for (const name of ['index.html', 'app.js', 'styles.css', 'demo-data.js']) {
   await cp(new URL(`toolbox/dishkai/${name}`, root), new URL(name, dishkaiTarget));
 }
+await cp(new URL('toolbox/dishkai/assets/demo/', root), new URL('assets/demo/', dishkaiTarget), { recursive: true });
 const dishkaiDictionary = JSON.parse(await readFile(new URL('toolbox/dishkai/english.json', root), 'utf8'));
 const dishkaiHtml = english(await readFile(new URL('toolbox/dishkai/index.html', root), 'utf8'), dishkaiDictionary)
   .replace('lang="zh-CN"', 'lang="en"')

@@ -8,24 +8,46 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/toolbox/styles.css?v=0.1.291">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=dishkai-private-20261011">
+  <link rel="stylesheet" href="/toolbox/dishkai/styles.css?v=dishkai-demo-20261011">
   <script src="/site-shell.js?v=0.1.291" defer></script>
-  <script type="module" src="/toolbox/dishkai/app.js?v=dishkai-private-20261011"></script>
+  <script type="module" src="/toolbox/dishkai/app.js?v=dishkai-demo-20261011"></script>
 </head>
 <body data-mapkai-page="toolbox">
   <header class="topbar"><a class="brand" href="/" aria-label="MapKAI home"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="Main navigation"><a href="/toolbox/en/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/dishkai/en/" lang="en" aria-current="true">EN</a><span>/</span><a href="/toolbox/dishkai/" lang="zh">中文</a></div></header>
   <main class="dishkai-main">
     <a class="back-link" href="/toolbox/en/">← Back to Toolbox</a>
     <section class="menu-hero" aria-labelledby="page-title">
-      <div><p class="eyebrow">MAPKAI / EVERYDAY DISCOVERY</p><h1 id="page-title">Read the menu.<br>Find your favorite.</h1><p class="hero-copy">Turn unfamiliar names into familiar flavors.<br>Explore the ingredients, tastes and things to know before you order.</p><p class="powered">Menu Reader <span>·</span> Powered by DishKAI</p></div>
+      <div><p class="eyebrow">MAPKAI / EVERYDAY DISCOVERY</p><h1 id="page-title">Read the menu.<br>Find your favorite.</h1><p id="hero-description" class="hero-copy">Explore this Italian menu and turn unfamiliar names into familiar choices.<br>Discover typical ingredients, flavors and questions to ask before ordering.</p><div id="hero-actions" class="hero-actions"><a id="browse-demo" class="button primary" href="#demo-preview">Explore the sample menu <span aria-hidden="true">↗</span></a><button id="open-owner" class="hero-owner" type="button" aria-controls="owner-entry">Private entry</button></div><p id="availability" class="availability">Public sample · A password is required for live menu reading</p><p class="powered">Menu Reader <span>·</span> Powered by DishKAI</p></div>
       <aside class="hero-note"><span class="note-number">01 — 03</span><h2>Bring curiosity to the table.</h2><ol><li><span>01</span>Paste a menu or upload a photo</li><li><span>02</span>Read dishes in your own language</li><li><span>03</span>Open the details. Find your favorite.</li></ol></aside>
     </section>
-    <div class="workspace">
-      <section class="input-panel" aria-labelledby="input-title">
-        <div class="panel-heading"><h2 id="input-title">Your menu</h2><span class="small-label">DishKAI × MapKAI</span></div>
+    <section id="demo-preview" class="demo-preview" aria-labelledby="demo-title">
+      <div class="demo-heading"><div><p class="eyebrow">DISHKAI / PRODUCT PREVIEW</p><h2 id="demo-title" tabindex="-1">One menu. Three discoveries.</h2><p class="demo-instruction">Choose a dish to discover what to expect.</p></div><span class="demo-badge">Fixed sample</span></div>
+      <div class="demo-layout">
+        <section class="demo-menu" aria-labelledby="demo-menu-title">
+          <div class="demo-menu-heading"><h3 id="demo-menu-title">Original menu</h3><span>ITALIAN</span></div>
+          <div class="demo-menu-rows" role="group" aria-label="Sample menu">
+            <button id="demo-dish-carbonara" class="demo-menu-row" type="button" data-demo-dish="carbonara" aria-pressed="true" aria-controls="demo-detail"><span class="demo-index">01</span><span class="demo-menu-copy"><strong>Spaghetti alla Carbonara</strong><small data-demo-name="carbonara">Carbonara</small></span><span class="demo-row-arrow" aria-hidden="true">↗</span></button>
+            <button id="demo-dish-margherita-pizza" class="demo-menu-row" type="button" data-demo-dish="margherita-pizza" aria-pressed="false" aria-controls="demo-detail"><span class="demo-index">02</span><span class="demo-menu-copy"><strong>Pizza Margherita</strong><small data-demo-name="margherita-pizza">Margherita Pizza</small></span><span class="demo-row-arrow" aria-hidden="true">↗</span></button>
+            <button id="demo-dish-tiramisu" class="demo-menu-row" type="button" data-demo-dish="tiramisu" aria-pressed="false" aria-controls="demo-detail"><span class="demo-index">03</span><span class="demo-menu-copy"><strong>Tiramisù</strong><small data-demo-name="tiramisu">Tiramisu</small></span><span class="demo-row-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <p class="demo-menu-note">In menu order. Start with a name, then discover the flavors.</p>
+          <div class="demo-language"><label for="demo-language">Read it in your own language</label><select id="demo-language"><option value="zh">中文</option><option value="en">English</option><option value="nl">Nederlands</option></select></div>
+        </section>
+        <article id="demo-detail" class="demo-detail" aria-labelledby="demo-name">
+          <figure class="demo-figure"><img id="demo-image" src="/toolbox/dishkai/assets/demo/carbonara.webp" alt="AI visual reference of Carbonara" width="600" height="600"><figcaption>AI illustration · Visual reference only</figcaption></figure>
+          <div class="demo-body"><p id="demo-original" class="demo-original">Spaghetti alla Carbonara</p><h3 id="demo-name">Carbonara</h3><p id="demo-verdict" class="demo-verdict">A rich, salty pasta choice for diners who like cheese, egg, black pepper, and cured pork.</p><p id="demo-description" class="demo-description">Pasta tossed with egg, pecorino or Parmesan, cured pork, and black pepper; rich without needing cream in the classic version.</p><div id="demo-taste" class="demo-taste" aria-label="Taste"><span>Salty</span><span>Umami</span><span>Creamy</span></div><div class="demo-composition-section"><h4>Estimated composition</h4><ul id="demo-composition" class="composition-list"><li><span>Pasta</span><span>≈ 55%</span></li><li><span>Egg</span><span>≈ 15%</span></li><li><span>Cured pork</span><span>≈ 15%</span></li><li><span>Cheese & black pepper</span><span>≈ 15%</span></li></ul><p class="demo-estimate">Estimated proportions. Ingredients vary by restaurant.</p></div><div class="demo-watch"><h4>Ask before ordering</h4><p id="demo-watch">Contains gluten, egg, dairy and pork. Confirm allergens and cross-contact with the restaurant.</p></div><p id="demo-disclaimer" class="demo-disclaimer">AI-generated visual reference, not a restaurant photo. Actual dish may vary by restaurant. Estimated composition.</p></div>
+        </article>
+      </div>
+      <p class="demo-footnote">Fixed local samples · No menu upload or AI recognition. Descriptions are a guide; confirm actual ingredients and allergens with the restaurant.</p>
+      <p id="demo-status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+    <section id="public-access" class="public-access" aria-labelledby="access-title">
+      <div class="access-intro"><p class="eyebrow">DISHKAI / PRIVATE EXPLORATION</p><h2 id="access-title">Explore the sample.<br>Then enter the private space.</h2><p>A personal AI experiment by Leo. The sample is open to explore; live menu reading is currently private.</p><p>Contact Leo directly if you would like to use it.</p></div>
+      <details id="owner-entry" class="owner-entry">
+        <summary><span>Private entry</span><span class="owner-plus" aria-hidden="true">＋</span></summary>
         <section id="auth-panel" class="auth-panel" aria-labelledby="auth-title">
           <h3 id="auth-title">Owner-only menu assistant</h3>
-          <p class="auth-copy">DishKAI is currently for its owners. Enter the access password to read text or photo menus here.</p>
+          <p class="auth-copy">Enter the access password to read your own text or photo menus here.</p>
           <form id="auth-form">
             <fieldset id="auth-fields" disabled>
               <legend class="sr-only">Owner sign-in</legend>
@@ -36,8 +58,13 @@
           </form>
           <p id="auth-status" class="status" role="status" aria-live="polite">Checking your sign-in…</p>
           <button id="logout-retry" class="auth-secondary" type="button" hidden>Retry sign-out</button>
-          <a class="auth-public-link" href="https://dishkai.com/login" target="_blank" rel="noopener noreferrer">View the public DishKAI sample ↗</a>
+          <a class="auth-public-link" href="https://dishkai.com/login" target="_blank" rel="noopener noreferrer">Visit DishKAI ↗</a>
         </section>
+      </details>
+    </section>
+    <div id="private-workspace" class="workspace" hidden>
+      <section class="input-panel" aria-labelledby="input-title">
+        <div class="panel-heading"><h2 id="input-title">Your menu</h2><span class="small-label">DishKAI × MapKAI</span></div>
         <div id="session-controls" class="session-controls" hidden><span>Signed in as an owner</span><button id="logout" type="button">Sign out</button></div>
         <form id="menu-form" hidden>
           <fieldset id="menu-fields" disabled>
