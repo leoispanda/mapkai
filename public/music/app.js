@@ -23,7 +23,7 @@
   const preview = $('preview-audio');
   const cards = new Map();
   const featuredRank = new Map([
-    ['ba310ae6-7b5f-4807-934a-9e0ddd849491', -1],
+    ['c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f', -1],
     ['ccb37c55-bae6-4f72-a80a-d1bc94e40ae0', 0],
     ['e4363fdb-2354-4e5c-98f0-9549b689b5c3', 1],
     ['bb5957e7-9e91-45e1-a978-5643451d7820', 2],
@@ -104,7 +104,7 @@
     const lyrics = $('composer-lyrics').value.trim();
     const languageNames = { en: 'English', nl: 'Dutch', zh: 'Mandarin Chinese' };
     const musicalDirections = {
-      'memphis-hip-hop': 'Upbeat, bouncy, rhythmic Memphis hip-hop with warm clean bass, crisp snare and claps, lively hi-hats, and a catchy city-name hook. Use clear melodic and spoken vocals, with bright acoustic or light guitar accents. Keep the mood sunny and lively; avoid dark phonk, metal, screaming, and heavily distorted guitars.',
+      'memphis-hip-hop': 'Upbeat, bouncy, rhythmic Memphis hip-hop with warm clean bass, crisp snare and claps, lively hi-hats, and a catchy memorable hook. Use clear melodic and spoken vocals, with bright acoustic or light guitar accents. Keep the mood sunny and lively; avoid dark phonk, metal, screaming, and heavily distorted guitars.',
       rock: 'Bright melodic rock with clear singing, moderate light guitar accents, crisp drums, warm clean bass, and a catchy chorus. Keep the vocals clean and the arrangement open; avoid heavy metal, screaming, and heavily distorted guitars.',
       symphonic: 'Cinematic symphonic music with orchestral strings, brass, dynamic percussion, and a soaring vocal melody.',
       'folk-rap': 'A folk and rap blend with acoustic instrumentation, rhythmic spoken verses, and a melodic sung chorus.',
