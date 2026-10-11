@@ -19,6 +19,11 @@
   const studio = $('music-studio');
   const preview = $('preview-audio');
   const cards = new Map();
+  const featuredRank = new Map([
+    ['ccb37c55-bae6-4f72-a80a-d1bc94e40ae0', 0],
+    ['e4363fdb-2354-4e5c-98f0-9549b689b5c3', 1],
+    ['bb5957e7-9e91-45e1-a978-5643451d7820', 2],
+  ]);
   let language = 'zh';
   let tracks = [];
   let loaded = false;
@@ -217,7 +222,8 @@
   }
 
   function syncCards() {
-    tracks.sort((first, second) => (Date.parse(second.createdAt) || 0) - (Date.parse(first.createdAt) || 0));
+    tracks.sort((first, second) => (featuredRank.get(first.id) ?? 3) - (featuredRank.get(second.id) ?? 3)
+      || (Date.parse(second.createdAt) || 0) - (Date.parse(first.createdAt) || 0));
     const ids = new Set(tracks.map(track => track.id));
     for (const [id, card] of cards) {
       if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) selectedCard = null; card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }
