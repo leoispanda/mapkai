@@ -18054,6 +18054,60 @@ const categorySongTracks = {
     },
     style: { zh: "旋律 Hip-hop · 轻盈合成器流行", en: "Melodic hip-hop · Light synth-pop" },
   },
+  "00": {
+    id: "4e1d3520-26ad-4d1b-9c80-3a55b9c2660b",
+    title: "One Line at a Time",
+    core: {
+      zh: "从已有经验出发，在阅读、计算与练习中找到下一步。",
+      en: "Build on experience, practise the basics, and choose the next step.",
+    },
+    style: { zh: "原声民谣流行", en: "Acoustic folk-pop" },
+  },
+  "03": {
+    id: "d2b9dd41-919b-4392-8488-5fabee707c40",
+    title: "Keep the Date Beside the Name",
+    core: {
+      zh: "追问信息从哪里来，保留日期与记录，也听见尚未回应的人。",
+      en: "Trace an account to its source, keep dated records, and notice missing voices.",
+    },
+    style: { zh: "Neo-soul · 旋律 Hip-hop", en: "Neo-soul · Melodic hip-hop" },
+  },
+  "04": {
+    id: "9b9acef3-3260-47d2-89a4-4a001090263f",
+    title: "What We Agreed",
+    core: {
+      zh: "把资源、约定与责任说清楚，让协调和判断都有可检查的记录。",
+      en: "Clarify resources, agreements, and responsibilities through records people can check.",
+    },
+    style: { zh: "爵士感放克流行", en: "Jazzy funk-pop" },
+  },
+  "07": {
+    id: "87412ae5-8cd8-4543-8dac-a4fe8b43879a",
+    title: "Through the Door",
+    core: {
+      zh: "让设计经得起制作、安装、使用与后续维护中的实际检验。",
+      en: "Test designs through making, fitting, use, and ongoing care.",
+    },
+    style: { zh: "节奏感独立流行", en: "Rhythmic indie-pop" },
+  },
+  "08": {
+    id: "03578f8b-14e7-42db-a713-bbbfbd05c571",
+    title: "Keep a Place for Tomorrow",
+    core: {
+      zh: "观察土地、林木、水域与动物的不同变化，照顾当下，也为下一季保留记录。",
+      en: "Observe land, trees, water, and animals; care for today and keep records for the next season.",
+    },
+    style: { zh: "自然质感当代民谣流行", en: "Organic contemporary folk-pop" },
+  },
+  "10": {
+    id: "e0133c7a-ca30-4789-a7e3-63041f0d090b",
+    title: "Someone Knows I'm Coming",
+    core: {
+      zh: "把变化准确传递给下一个人，让不同服务中的协作接得上。",
+      en: "Pass changes clearly to the next person so services work together.",
+    },
+    style: { zh: "律动放克流行", en: "Groove funk-pop" },
+  },
 };
 
 function waitForCategorySongPlayer() {
