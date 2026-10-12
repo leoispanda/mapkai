@@ -18117,6 +18117,15 @@ const categorySongTracks = {
     },
     style: { zh: "提问回应式 Soul-pop", en: "Call-and-response soul-pop" },
   },
+  "09": {
+    id: "1977976d-4585-4194-bbee-49068a5620f1",
+    title: "Ask Me What I Need",
+    core: {
+      zh: "让专业照护与日常支持衔接，也让接受照护的人参与选择。",
+      en: "Connect skilled care with everyday support, and make choices with the person receiving care.",
+    },
+    style: { zh: "温暖的当代 Soul-pop", en: "Warm contemporary soul-pop" },
+  },
 };
 
 function waitForCategorySongPlayer() {
