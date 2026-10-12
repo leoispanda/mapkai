@@ -63,7 +63,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.291-science-mechanism-14-20261012" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.291-science-mechanism-15-20261012" />
     <link rel="stylesheet" href="/map3d.css?v=0.1.291" />
     <link rel="stylesheet" href="/site-shell.css?v=0.1.291" />
     <script src="/site-shell.js?v=music-subjects-1" defer></script>
@@ -654,6 +654,22 @@
         <div class="field-detail-shell">
           <a class="button secondary" href="/map" data-route="/map">Back to Map</a>
           <section class="field-detail-card" id="fieldDetailCard" aria-live="polite"></section>
+          <template id="fieldVideoPreviewTemplate">
+          <section class="mapkai-video-preview" id="fieldVideoPreview" hidden aria-labelledby="fieldVideoPreviewTitle">
+            <div class="mapkai-video-preview-intro">
+              <div>
+                <p class="eyebrow">Learning preview</p>
+                <h2 id="fieldVideoPreviewTitle">See this field in motion</h2>
+              </div>
+              <span class="mapkai-video-preview-status">Pending review · Not fully approved</span>
+            </div>
+            <p class="mapkai-video-preview-disclosure">AI generated</p>
+            <div class="mapkai-video-preview-player">
+              <video id="fieldVideoPreviewPlayer" controls preload="metadata" playsinline></video>
+            </div>
+            <p class="mapkai-video-preview-meta" id="fieldVideoPreviewMeta"></p>
+          </section>
+          </template>
         </div>
       </section>
 
@@ -696,9 +712,9 @@
               <p class="eyebrow">Learning preview</p>
               <h2 id="categoryVideoPreviewTitle">See this field in motion</h2>
             </div>
-            <span class="mapkai-video-preview-status">Video content under review · Not yet approved for formal publication</span>
+            <span class="mapkai-video-preview-status">Pending review · Not fully approved</span>
           </div>
-          <p class="mapkai-video-preview-disclosure">This AI-generated video is currently under content review. It is available as an experimental learning preview and has not yet been formally approved by MapKAI.</p>
+          <p class="mapkai-video-preview-disclosure">AI generated</p>
           <div class="mapkai-video-preview-player">
             <video id="categoryVideoPreviewPlayer" controls preload="metadata" playsinline></video>
           </div>
@@ -775,6 +791,6 @@
     <script src="/content/management-column.js?v=0.1.291"></script>
     <script src="/content/management-lesson-stories.js?v=0.1.291"></script>
     <script src="/content/management-lesson-references.js?v=0.1.291"></script>
-    <script src="/script.js?v=0.1.291-subject-music-health-20261012"></script>
+    <script src="/script.js?v=0.1.291-statistics-video-20261012"></script>
   </body>
 </html>

@@ -1,12 +1,12 @@
 import { factoryMedia, parseRange, safeItem } from './_media.js';
-import { CANONICAL_MAJOR_FIELDS, CANONICAL_MAJOR_FIELD_IDS, isCanonicalMajorField } from './_major-fields.js';
+import { PUBLIC_PREVIEW_FIELDS, PUBLIC_PREVIEW_FIELD_IDS, isPublicPreviewField } from './_preview-fields.js';
 
 // The public preview catalog is deliberately separate from the founder-only
 // catalog. It contains the same content-addressed media references, but the
 // public handlers only expose the learner-safe projection below.
 export const PUBLIC_CATALOG_KEY = 'catalog/public-preview-v1.json';
 export const PUBLIC_PREVIEW_DISCLOSURE = 'This AI-generated video is currently under content review. It is available as an experimental learning preview and has not yet been formally approved by MapKAI.';
-export const PUBLIC_PREVIEW_LABEL = 'Video content under review · Not yet approved for formal publication';
+export const PUBLIC_PREVIEW_LABEL = 'Pending review · Not fully approved';
 
 export const PUBLIC_HEADERS = {
   'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
@@ -33,11 +33,11 @@ export function slugifyFieldName(name) {
 }
 
 export function expectedSlug(fieldId) {
-  return slugifyFieldName(CANONICAL_MAJOR_FIELDS[fieldId]);
+  return slugifyFieldName(PUBLIC_PREVIEW_FIELDS[fieldId]);
 }
 
 export function isExpectedPublicField(item) {
-  return Boolean(item && isCanonicalMajorField(item.fieldId, item.fieldName)
+  return Boolean(item && isPublicPreviewField(item.fieldId, item.fieldName)
     && item.slug === expectedSlug(item.fieldId));
 }
 
@@ -62,7 +62,7 @@ export async function readPublicCatalog(env) {
   if (data?.schemaVersion !== 'mapkai-public-preview-catalog.v1'
     || data.visibility !== 'PUBLIC_PREVIEW'
     || !Array.isArray(data.items)
-    || data.items.length > CANONICAL_MAJOR_FIELD_IDS.length
+    || data.items.length > PUBLIC_PREVIEW_FIELD_IDS.length
     || !data.items.every(safePublicItem)) throw new Error('Invalid public preview catalog');
   const ids = new Set(data.items.map(item => item.fieldId));
   const slugs = new Set(data.items.map(item => item.slug));

@@ -9,7 +9,7 @@ export async function onRequest({ request, env }) {
       items: catalog.items.map(publicItemProjection),
       reviewLabel: PUBLIC_PREVIEW_LABEL,
       disclosure: PUBLIC_PREVIEW_DISCLOSURE,
-    });
+    }, 200, { 'Cache-Control': 'no-store' });
   } catch (error) {
     return costResponse(error) || responseJson({ error: 'Learning previews are temporarily unavailable.' }, 503);
   }

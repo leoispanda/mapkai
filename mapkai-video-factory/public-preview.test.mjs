@@ -6,11 +6,12 @@ import { onRequest as listPublicVideos } from '../functions/api/factory/public-v
 import { onRequest as servePublicVideo } from '../functions/api/factory/public-video.js';
 import { PUBLIC_CATALOG_KEY, PUBLIC_PREVIEW_DISCLOSURE, PUBLIC_PREVIEW_LABEL } from '../functions/api/factory/_public.js';
 import { CANONICAL_MAJOR_FIELDS, CANONICAL_MAJOR_FIELD_IDS } from '../functions/api/factory/_major-fields.js';
+import { PUBLIC_PREVIEW_FIELDS } from '../functions/api/factory/_preview-fields.js';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const box = (type, bytes = Buffer.alloc(0)) => { const head = Buffer.alloc(8); head.writeUInt32BE(8 + bytes.length); head.write(type, 4); return Buffer.concat([head, bytes]); };
 const mp4 = Buffer.concat([box('ftyp', Buffer.from('mp42')), box('moov'), box('mdat', Buffer.alloc(20))]);
-const names = CANONICAL_MAJOR_FIELDS;
+const names = PUBLIC_PREVIEW_FIELDS;
 const slug = name => name.toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 function publicItem(fieldId, bytes = mp4) {
@@ -39,11 +40,14 @@ function privateCatalog(fieldIds) {
   };
 }
 
-function apiFixture(fieldIds = CANONICAL_MAJOR_FIELD_IDS) {
+function apiFixture(fieldIds = CANONICAL_MAJOR_FIELD_IDS, targetFieldId = '04') {
   const items = fieldIds.map(fieldId => publicItem(fieldId));
   const catalog = { schemaVersion: 'mapkai-public-preview-catalog.v1', visibility: 'PUBLIC_PREVIEW', items };
-  const target = items.find(item => item.fieldId === '04');
-  const env = { MAPKAI_REVIEW_MEDIA: {
+  const target = items.find(item => item.fieldId === targetFieldId);
+  const env = { CLOUDFLARE_COST_DB: { prepare() { return { bind(...values) { return { async first() {
+    return { guard_key: values[0], cycle_start: values[1], class_a_used: values[2], class_b_used: values[3],
+      upload_bytes_used: values[4], storage_bytes_reserved: values[5], updated_at: values[6] };
+  } }; } }; } }, MAPKAI_REVIEW_MEDIA: {
     get: async (key, options) => {
       if (key === PUBLIC_CATALOG_KEY) return { json: async () => catalog };
       if (key !== target.objectKey) throw new Error(`Unexpected object access: ${key}`);
@@ -78,6 +82,31 @@ test('public preview rejects duplicate and non-canonical major fields', () => {
   const invented = privateCatalog(['00']);
   invented.items[0] = { ...invented.items[0], fieldId: '11', fieldName: 'Invented field' };
   assert.throws(() => buildPublicPreviewCatalog(invented), /duplicate or non-canonical/);
+});
+
+test('Statistics preview preserves all major fields and exposes no private review material', async () => {
+  const ids = [...CANONICAL_MAJOR_FIELD_IDS, '0542'];
+  const built = buildPublicPreviewCatalog(privateCatalog(ids));
+  assert.equal(built.items.length, 12);
+  const statistics = built.items.find(item => item.fieldId === '0542');
+  assert.equal(statistics.slug, 'statistics');
+  const { env, request, target } = apiFixture(ids, '0542');
+  const response = await listPublicVideos({ env, request: request('/api/factory/public-videos') });
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get('Cache-Control'), 'no-store');
+  const projected = (await response.json()).items.find(item => item.slug === 'statistics');
+  assert.equal(projected.reviewLabel, 'Pending review · Not fully approved');
+  assert.match(projected.disclosure, /AI-generated/);
+  assert.equal(projected.fieldId, undefined);
+  assert.equal(projected.objectKey, undefined);
+  assert.equal(projected.notebookUrl, undefined);
+  const video = await servePublicVideo({ env, request: request('/api/factory/public-video?field=statistics', {headers:{Range:'bytes=0-7'}}) });
+  assert.equal(video.status, 206);
+  assert.equal(video.headers.get('Content-Range'), `bytes 0-7/${target.fileSize}`);
+  assert.deepEqual(Buffer.from(await video.arrayBuffer()), mp4.subarray(0, 8));
+  const otherSubfield = privateCatalog(['0542']);
+  otherSubfield.items[0] = { ...otherSubfield.items[0], fieldId:'0541', fieldName:'Mathematics' };
+  assert.throws(() => buildPublicPreviewCatalog(otherSubfield), /non-canonical/);
 });
 
 test('anonymous public listing exposes only learner-safe projections', async () => {

@@ -6,6 +6,7 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import { CANONICAL_MAJOR_FIELD_IDS, isCanonicalMajorField } from '../functions/api/factory/_major-fields.js';
+import { PUBLIC_PREVIEW_FIELD_IDS, isPublicPreviewField } from '../functions/api/factory/_preview-fields.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DELIVERY = 'mapkai-video-factory/runtime/delivery';
@@ -198,11 +199,11 @@ export function buildPublicPreviewCatalog(catalog) {
     throw new Error('Invalid private catalog for public preview');
   }
   const ids = new Set(catalog.items.map(item => item.fieldId));
-  if (catalog.items.length > CANONICAL_MAJOR_FIELD_IDS.length || ids.size !== catalog.items.length
-    || catalog.items.some(item => !isCanonicalMajorField(item?.fieldId, item?.fieldName))) {
+  if (catalog.items.length > PUBLIC_PREVIEW_FIELD_IDS.length || ids.size !== catalog.items.length
+    || catalog.items.some(item => !isPublicPreviewField(item?.fieldId, item?.fieldName))) {
     throw new Error('Public preview contains a duplicate or non-canonical major field');
   }
-  const canonicalOrder = new Map(CANONICAL_MAJOR_FIELD_IDS.map((fieldId, index) => [fieldId, index]));
+  const canonicalOrder = new Map(PUBLIC_PREVIEW_FIELD_IDS.map((fieldId, index) => [fieldId, index]));
   const items = [...catalog.items]
     .sort((left, right) => canonicalOrder.get(left.fieldId) - canonicalOrder.get(right.fieldId))
     .map(item => {

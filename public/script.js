@@ -15633,6 +15633,7 @@ function goToRoute(route, replace = false) {
     }
   }
   const visibleTarget = target;
+  document.querySelectorAll('.mapkai-video-preview video').forEach(player => player.pause());
   if (visibleTarget !== "/toolbox/pdc/session" && typeof cancelPdcGenerationRequest === "function") cancelPdcGenerationRequest();
   document.body.classList.toggle("pdc-public-route", visibleTarget === "/toolbox/pdc" || visibleTarget === "/toolbox/pdc/session");
   const toolboxNav = document.querySelector('.nav-toolbox');
@@ -16462,6 +16463,7 @@ function renderMapStoryLayer() {
 function renderFieldDetail(code) {
   const target = document.getElementById("fieldDetailCard");
   if (!target) return;
+  renderCategoryVideoPreview(null, 'field');
   const field = getFieldById(code);
   if (!field) {
     target.innerHTML = `<h1>${escapeHtml(t("lensStoryNotFoundTitle"))}</h1><p>${escapeHtml(t("noStoryReady"))}</p>`;
@@ -16499,6 +16501,7 @@ function renderFieldDetail(code) {
       </div>
       ${area ? `<p class="field-detail-area">${escapeHtml(getAreaDisplayTitle(area))}</p>` : ""}
     </header>
+    ${document.getElementById('fieldVideoPreviewTemplate')?.innerHTML || ''}
     <section class="field-core-fables" aria-label="${escapeHtml(t("fieldCoreFablesTitle"))}">
       <div class="field-core-fables-heading">
         <h2>${escapeHtml(t("fieldCoreFablesTitle"))}</h2>
@@ -16519,6 +16522,7 @@ function renderFieldDetail(code) {
       }).join(", ") : "No published story yet"}</dd></div>
       <div><dt>Connected fields</dt><dd>${connectedFields.length ? connectedFields.map(fieldLink).join("") : "No connected fields yet"}</dd></div>
     </dl>`;
+  renderCategoryVideoPreview(field, 'field');
 }
 
 function fieldLink(field) {
@@ -17979,7 +17983,7 @@ function renderPassport(targetId, passport) {
 
 function loadPublicPreviewCatalog() {
   if (!publicPreviewCatalogPromise) {
-    publicPreviewCatalogPromise = fetch('/api/factory/public-videos', { headers: { Accept: 'application/json' } })
+    publicPreviewCatalogPromise = fetch('/api/factory/public-videos', { cache: 'no-store', headers: { Accept: 'application/json' } })
       .then(response => response.ok ? response.json() : Promise.reject(new Error('Preview catalog unavailable')))
       .then(data => Array.isArray(data?.items) ? data.items : [])
       .catch(() => []);
@@ -17997,12 +18001,13 @@ function publicPreviewSlugForCategory(category) {
     .replace(/^-+|-+$/g, '');
 }
 
-function renderCategoryVideoPreview(category) {
-  const preview = document.getElementById('categoryVideoPreview');
-  const player = document.getElementById('categoryVideoPreviewPlayer');
-  const meta = document.getElementById('categoryVideoPreviewMeta');
+function renderCategoryVideoPreview(category, scope = 'category') {
+  const preview = document.getElementById(`${scope}VideoPreview`);
+  const player = document.getElementById(`${scope}VideoPreviewPlayer`);
+  const meta = document.getElementById(`${scope}VideoPreviewMeta`);
   if (!preview || !player) return;
-  const token = ++categoryVideoRenderToken;
+  const token = String(++categoryVideoRenderToken);
+  preview.dataset.renderToken = token;
   preview.hidden = true;
   player.pause();
   player.removeAttribute('src');
@@ -18012,7 +18017,7 @@ function renderCategoryVideoPreview(category) {
   const slug = publicPreviewSlugForCategory(category);
   if (!slug) return;
   loadPublicPreviewCatalog().then(items => {
-    if (token !== categoryVideoRenderToken) return;
+    if (preview.dataset.renderToken !== token) return;
     const item = items.find(candidate => candidate?.slug === slug && typeof candidate.videoUrl === 'string');
     if (!item) return;
     const displayName = typeof item.fieldName === 'string' && item.fieldName ? item.fieldName : category.title;
