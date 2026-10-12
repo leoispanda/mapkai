@@ -279,43 +279,132 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Spoonful That Stole the Blue Light",
-      "titleZh": "偷走蓝光的那一勺",
-      "summary": "A lamp workshop adds another spoon of silver powder, but produces no extra blue lamps and accumulates unused silver.",
-      "summaryZh": "灯坊往配方里多添了一勺银粉，蓝灯不但没有增加，仓里还剩下越来越多银粉。",
-      "storyParagraphs": [
-        "The blue-lamp workshop had seven nights to make sixty wick crystals for the harbour. Its rule was carved above the furnace: two measures of green powder combine with one measure of silver powder to make one crystal. Apprentice Luo remembered only that silver supplied the brilliant colour. When the first firing looked pale, he doubled the silver in every bowl. The furnace produced no extra crystals. A costly metallic paste remained at the bottom, and the harbour clerk had already counted the promised lamps.",
-        "Luo hid the residue under fresh powder until the master's scale exposed the added weight. The master did not lecture him. She placed ten green counters and ten silver counters on the bench, then grouped two green with one silver. Five complete groups appeared; five silver counters remained alone. With ten usable measures of green and ten of silver, green was exhausted first and limited the batch to five crystals. Another measure of silver could not stand in for the missing pair of green.",
-        "The workshop ordered more green powder at emergency price. Yet the next firing yielded only four crystals from material planned for five. Luo blamed the ratio until he washed a sample and found pale sand in the sack. The supplier's mark said eighty percent pure. Ten weighed measures therefore contained only eight usable green measures, enough for four groups with four silver measures. To obtain ten usable measures, they would need twelve and a half measured units of that impure stock, assuming the purity claim was itself sound.",
-        "Two nights remained. Luo set the adulterated sack on the master's desk and reported it, though the harbour deadline would now be missed. Past ledgers showed that firing and handling usually recovered nine of every ten predicted crystals; side products and fragments took the rest. Sixty delivered lamps therefore required more than sixty as a theoretical target. Quietly adding powder and hoping every predicted crystal survived would hide both purity and yield. The recipe fixed conserved ratios, while purity set usable input and the process set actual yield. None of those numbers said how quickly the furnace would run.",
-        "The master refused to seal weak crystals into lamp housings. She returned the sack, bought clean green powder, and cancelled the workshop's decorative window order to pay the surcharge. Luo weighed 132 green measures and 66 silver measures for a theoretical sixty-six crystals. At their usual ninety-percent recovery they expected about fifty-nine, so they prepared one additional correctly proportioned bowl rather than pouring in silver blindly. The arithmetic did not guarantee the outcome, but it made the risk visible before the furnace door closed.",
-        "A cracked shelf spoiled two crystals on the sixth night. The master sent word that the last lamps would arrive after the first tide and accepted the harbour's late fee. Luo wanted to add a final scoop of silver to 'make up' the loss. She pointed instead to the intact leftover bowl: two green, one silver. They fired that group, inspected the wick, and delivered the missing lamp at noon.",
-        "When the accounts were settled, the late fee and clean powder consumed the workshop's festival bonus. Luo scraped the earlier silver paste from the cold furnace and returned it to a labelled recovery jar. At the next mixing, he set down two green scoops, then one silver. The second silver jar remained closed, its lid still bearing the blue thumbprint from his first mistake."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "8克对32克，谁会先用完",
+      "summaryZh": "顾岚要确认一页反应题的答案能不能上线。按克数看，32克氧气似乎很多；但把两边都换成摩尔并按方程系数比较后，本题真正限制理论反应进度的一方反而是氧气。",
       "storyParagraphsZh": [
-        "蓝灯坊要在七夜内为港口做出六十枚灯芯晶。炉口刻着配方：两份青粉与一份银粉合成一枚晶体。学徒阿洛只记得银粉带来亮蓝色，第一炉颜色偏淡时，他便把每碗银粉加倍。晶体没有多一枚，炉底却积下一层昂贵银泥；港口书吏已经按六十盏登记了船位。",
-        "阿洛用新粉盖住残渣，还是被师傅从炉重里查出。师傅没有讲大道理，只在桌上摆十枚青筹和十枚银筹，每两青配一银。最后只有五个完整小组，另有五枚银筹孤零零剩着。十份青粉与十份银粉最多做五枚晶体，因为青粉先耗尽；再添银粉，也补不出缺少的两份青粉。",
-        "灯坊高价买来新青粉，下一炉却只得到四枚，原本按五枚配的料少了一枚。阿洛怀疑比例，洗过样品后才发现袋里混着浅色砂粒。供货标记写着纯度八成：称十份，只含八份可用青粉，恰好能配四份银粉、做四组。要得到十份纯料，需称十二点五份这样的存货，还得先相信那枚八成印章。",
-        "只剩两夜。阿洛把杂料袋放到师傅桌上，如实报告，港口期限也因此注定赶不上。旧账显示，每十枚理论晶体通常只能收回九枚，裂片、旁生成分和搬运会吃掉余数。交付六十枚，就不能只准备六十枚理论量；悄悄多倒几勺、赌每枚都成形，只会把纯度与收率一同藏掉。配方决定守恒比例，纯度决定可用原料，工序决定实际收率；这些都不等于炉火需要的时间。",
-        "师傅拒绝把脆弱晶体封进灯壳。她退掉杂料，买下干净青粉，又取消自家橱窗装饰来填差价。两人先配一百三十二份青粉和六十六份银粉，理论上可得六十六枚；按九成收率约为五十九枚，于是再准备一碗比例正确的材料，而不是盲目添银。数字不能保证成品，却在关炉前把风险摆到了桌面。",
-        "第六夜，一块开裂炉板又毁掉两枚。师傅通知港口最后几盏要错过首班潮水，接受误期罚金。阿洛伸手去拿银勺，想把损失“补回来”。师傅指向剩下那碗完整配料：两青、一银。他们烧完这一组，检查灯芯，正午送出了最后一盏。",
-        "结账时，迟交罚金和净料差价吃掉了全坊的节庆奖金。阿洛从冷炉里刮出早先的银泥，装进写明“回收”的罐。下一次配料，他放下两勺青粉，再取一勺银粉。第二只银罐始终没有打开，盖上还留着他第一次多加时按下的蓝色指印。"
+        "顾岚要在午前确认一页化学练习解析。题目给出2 H2 + O2 → 2 H2O，以及纯H2 8.0 g、纯O2 32.0 g。现成答案写着：“2:1，所以8.0 g氢气只需4.0 g氧气，氧气肯定剩很多。”只看克数，这个判断甚至很顺眼。",
+        "她先按这套答案往后推，立刻碰到一个问题：方程式前的2和1究竟在比什么。题目同时给了教学近似摩尔质量H2=2.0 g/mol、O2=32.0 g/mol、H2O=18.0 g/mol。顾岚把8.0 g换成4.0 mol H2，把32.0 g换成1.0 mol O2，原来的大小直觉在本题里反了过来。",
+        "这时才轮到系数2:1。她把物质的量记作n，再除以对应计量数：4.0 mol/2=2.0 mol，1.0 mol/1=1.0 mol。这里两个商仍以mol计，可理解为按该配平方程可推进的理论反应进度上限；较小的1.0 mol来自O2，所以本题由氧气限制。",
+        "按理论反应进度1.0 mol，消耗2.0 mol H2和1.0 mol O2。前者是4.0 g，后者是32.0 g；同时形成2.0 mol H2O，也就是36.0 g。原有4.0 mol H2只用掉一半，还剩2.0 mol，即4.0 g。",
+        "顾岚把纸页翻到背面核质量：投入共40.0 g。在“只生成水、纯物质、按方程完全反应”的纸面模型里，理论上对应36.0 g水和4.0 g剩余H2，正好仍是40.0 g。这个核对只验证模型内部的守恒与配比，不能证明真实实验一定完全反应或真的收得36.0 g水。",
+        "她把原答案里“氧气过量”划掉，旁边改成“先换mol，再比较各反应物的n/计量数，取较小值”。页面最后保留两个结果框：理论水36.0 g，剩余H2 4.0 g；实际收得量一栏仍为空白。"
       ],
-      "conceptName": "Stoichiometry",
+      "overallZh": "配平方程的系数给出粒子数或物质的量关系，不是直接的克数比。质量题要先通过摩尔质量换成mol，再按计量数比较理论反应进度，进而确定限制反应物、理论产物和过量反应物剩余量。",
       "conceptNameZh": "化学计量",
-      "explanationParagraphs": [
-        "Stoichiometry uses balanced equations and conservation to relate quantities of reactants and products through particle or mole ratios. The limiting reactant determines theoretical yield, while other materials may remain in excess. Real materials require molar mass, concentration, purity, and units, and incomplete reaction, impurities, or loss reduce actual yield."
-      ],
       "explanationParagraphsZh": [
-        "化学计量依据配平方程与守恒关系，把反应物和产物数量按粒子或摩尔比联系起来。限制反应物决定理论产率，其他材料可能过量。处理实物还需考虑摩尔质量、浓度、纯度和单位；不完全反应、杂质与损失会使实际产率更低。"
+        "本题4.0 mol H2除以计量数2得2.0 mol，1.0 mol O2除以计量数1得1.0 mol；较小值决定理论反应进度，因此O2限制本题。",
+        "理论上形成2.0 mol水=36.0 g，并剩4.0 g H2。真实实验是否完全、实际收率和反应时间均未给出，纯物质也不等于必然完全反应。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先把克数换成mol，再用配平方程计量数比较理论反应进度；最后用剩余量和质量账检查模型结果。",
+        "diagramTitle": "8.0克H2和32.0克O2为什么由O2限制",
+        "diagramSteps": [
+          "读取配平方程并确认系数描述物质的量关系",
+          "用摩尔质量把两种给定质量换成mol",
+          "计算n/计量数并比较理论反应进度上限",
+          "按较小进度计算理论水和剩余H2",
+          "用总质量核对模型并把理论量与实际收率分开"
+        ],
+        "diagramStepNotes": [
+          "2 H2 + O2 → 2 H2O中的2:1不是克数比。",
+          "H2=4.0 mol，O2=1.0 mol。",
+          "n表示物质的量；4.0 mol/2=2.0 mol，1.0 mol/1=1.0 mol，所以本题由O2限制。",
+          "理论形成2.0 mol H2O=36.0 g，剩2.0 mol H2=4.0 g。",
+          "40.0 g=36.0 g+4.0 g只核纸面理想模型；实际收率未知。"
+        ],
+        "mapping": [
+          "被划掉的“氧气过量” → 被mol换算推翻的本题预测。",
+          "摩尔质量栏 → 克数进入方程数量关系的转换桥梁。",
+          "两个n/计量数 → 限制理论反应进度的比较。",
+          "36.0 g与4.0 g结果框 → 理论产物与过量反应物剩余量。"
+        ],
+        "boundary": "这里只在给定配平方程、纯物质和理想完全反应条件下计算。方程系数是粒子数或mol比，不能直接当克数比，也不能改化学式下标。理论产率、实际收率、纯度和反应速度是不同问题。",
+        "reflection": "在同一纸面模型里，若纯H2改为16.0 g而O2仍为32.0 g，理论水量和剩余H2各会怎样变？哪些关于实际收得量的判断仍不能下？"
+      },
+      "referencesZh": [
+        {
+          "id": "0531-stoichiometry-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 4.3 Reaction Stoichiometry. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry",
+          "use": "支持配平方程系数表示粒子数或物质的量关系，以及质量计算先经摩尔质量换成mol再使用系数比。"
+        },
+        {
+          "id": "0531-stoichiometry-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 4.4 Reaction Yields. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-4-reaction-yields",
+          "use": "支持限制反应物约束理论产量，并区分理论量与实际收得量；过量反应物可在理想计算中剩余。"
+        }
+      ],
+      "title": "8 Grams Versus 32 Grams: Which One Runs Out First?",
+      "summary": "Gu Lan needs to approve the answer to a reaction problem. By mass, 32 grams of oxygen looks like a lot; but after converting both reactants to moles and comparing them through the equation coefficients, oxygen turns out to be the reactant that limits the theoretical reaction progress in this problem.",
+      "storyParagraphs": [
+        "Gu Lan needs to approve a chemistry exercise solution before noon. The problem gives 2 H2 + O2 → 2 H2O, together with 8.0 g of pure H2 and 32.0 g of pure O2. The existing answer says, “The ratio is 2:1, so 8.0 g of hydrogen needs only 4.0 g of oxygen. Oxygen is clearly in excess.” If she looks only at grams, that conclusion even feels intuitive.",
+        "She follows that answer one step further and immediately hits a question: what exactly do the 2 and 1 in front of the formulas compare? The problem also gives approximate teaching molar masses: H2=2.0 g/mol, O2=32.0 g/mol, and H2O=18.0 g/mol. Gu Lan converts 8.0 g into 4.0 mol H2 and 32.0 g into 1.0 mol O2. In this problem, the original size intuition reverses.",
+        "Only now does the 2:1 coefficient ratio enter. She denotes amount of substance by n and divides it by the corresponding stoichiometric number: 4.0 mol/2=2.0 mol and 1.0 mol/1=1.0 mol. Both quotients are still measured in mol and can be interpreted as upper limits on the theoretical extent of reaction allowed by each supply. The smaller value, 1.0 mol, comes from O2, so oxygen limits this problem.",
+        "At a theoretical reaction extent of 1.0 mol, 2.0 mol H2 and 1.0 mol O2 are consumed. Those correspond to 4.0 g and 32.0 g. The reaction simultaneously forms 2.0 mol H2O, or 36.0 g. Of the original 4.0 mol H2, only half is used, leaving 2.0 mol, which is 4.0 g.",
+        "Gu Lan turns the page over and checks the mass account. The total input is 40.0 g. In this paper model, which assumes pure substances, only water as product, and complete reaction according to the equation, the theoretical result is 36.0 g of water plus 4.0 g of remaining H2, still totaling 40.0 g. This check tests consistency within the model; it does not prove that a real experiment must go to completion or actually yield 36.0 g of water.",
+        "She crosses out “oxygen in excess” and writes beside it, “convert to mol first, then compare n/stoichiometric number for each reactant and take the smaller value.” The page keeps two final boxes: theoretical water, 36.0 g; remaining H2, 4.0 g. The field for actual amount collected remains blank."
+      ],
+      "overall": "Stoichiometry uses the coefficients of a balanced equation to express particle-number or amount-of-substance relationships, not direct mass ratios. In mass problems, grams must first be converted to moles using molar mass, then compared through the stoichiometric numbers to determine the limiting reactant, theoretical product, and remaining excess reactant.",
+      "conceptName": "Stoichiometry",
+      "explanationParagraphs": [
+        "In this problem, 4.0 mol H2 divided by stoichiometric number 2 gives 2.0 mol, while 1.0 mol O2 divided by 1 gives 1.0 mol. The smaller value sets the theoretical reaction extent, so O2 is limiting here.",
+        "The model theoretically forms 2.0 mol water=36.0 g and leaves 4.0 g H2. Whether a real reaction goes to completion, its actual yield, and its reaction time are not given; using pure reactants does not itself guarantee complete reaction."
+      ],
+      "module": {
+        "intro": "Convert grams to moles first, then use the balanced-equation stoichiometric numbers to compare theoretical reaction extent; finally, check the model with remaining mass and the mass balance.",
+        "diagramTitle": "Why 32.0 g O2 Limits the Reaction with 8.0 g H2",
+        "diagramSteps": [
+          "Read the balanced equation and confirm that the coefficients describe amount-of-substance relationships",
+          "Use molar masses to convert both given masses to moles",
+          "Calculate n/stoichiometric number and compare the theoretical reaction-extent limits",
+          "Use the smaller extent to calculate theoretical water and remaining H2",
+          "Check total mass and keep theoretical amount separate from actual yield"
+        ],
+        "diagramStepNotes": [
+          "The 2:1 in 2 H2 + O2 → 2 H2O is not a gram ratio.",
+          "H2=4.0 mol and O2=1.0 mol.",
+          "n denotes amount of substance; 4.0 mol/2=2.0 mol and 1.0 mol/1=1.0 mol, so O2 limits this problem.",
+          "The model forms 2.0 mol H2O=36.0 g and leaves 2.0 mol H2=4.0 g.",
+          "40.0 g=36.0 g+4.0 g checks only the ideal paper model; actual yield is unknown."
+        ],
+        "mapping": [
+          "Crossed-out “oxygen in excess” → the prediction overturned by converting to moles.",
+          "Molar-mass row → the bridge from grams to the equation’s amount relationship.",
+          "Two n/stoichiometric-number results → the comparison that limits theoretical reaction extent.",
+          "36.0 g and 4.0 g result boxes → theoretical product and remaining excess reactant."
+        ],
+        "boundary": "The calculation applies only to the given balanced equation, pure substances, and the ideal complete-reaction conditions stated in the problem. Equation coefficients are particle-number or mole ratios, not direct gram ratios, and they do not change formula subscripts. Theoretical yield, actual yield, purity, and reaction rate are different questions.",
+        "reflection": "In the same paper model, if pure H2 is increased to 16.0 g while O2 stays at 32.0 g, how do the theoretical water amount and remaining H2 change? What can you still not conclude about the amount actually collected?"
+      },
+      "references": [
+        {
+          "id": "0531-stoichiometry-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 4.3 Reaction Stoichiometry. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry",
+          "use": "Supports balanced-equation coefficients as particle-number or amount-of-substance relationships and supports converting mass to moles through molar mass before using coefficient ratios."
+        },
+        {
+          "id": "0531-stoichiometry-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 4.4 Reaction Yields. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-4-reaction-yields",
+          "use": "Supports the limiting reactant as a constraint on theoretical yield and distinguishes theoretical amount from actual amount collected; excess reactant may remain in an ideal calculation."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-a-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-a-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-a-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -325,39 +414,132 @@
       "fieldCode": "0532",
       "fieldTitle": "Earth sciences",
       "fieldTitleZh": "地球科学",
-      "title": "Boundary Stones That Accused One Another",
-      "titleZh": "彼此指控的界石",
-      "summary": "After an earthquake, two islands accuse each other of moving boundary stones until a surveyor finds that the stones were not what moved.",
-      "summaryZh": "地震后，两座海岛都说对方偷移界石，测量员却发现移动的不是石头。",
-      "storyParagraphs": [
-        "East Hook and West Hook divided their fishing water with black stones along a narrow beach. Three weeks before the tuna season, an earthquake split the customs shed and left the eastern stones nearly two metres closer to the village well. East Hook accused western crews of shifting them at night; West Hook answered by chaining two patrol boats across the inlet. If surveyor Mara could not settle the line by market day, both islands would miss the first shoals and hungry families would pay for the quarrel.",
-        "Mara dug around the nearest stone. Its packed shell bed was unbroken; no lever had entered it. She found an iron survey bolt inland and compared its position with records kept for twenty years. Before the shock, bolts on opposite sides had changed separation by about three centimetres a year—roughly sixty centimetres in two decades—while bolts on the same side kept nearly the same spacing. The slow movement had not been in the stones alone. Each island and its markers rode a much larger moving slab.",
-        "The old records also showed strain accumulating across the narrow boundary. The sudden earthquake released part of that deformation, so the coasts jumped while their stones stayed fixed within their own ground. Mara spread a regional chart beside the bolts. Quakes, volcanoes, ridges, and deep trenches clustered along edges: at some, slabs pulled apart and new ocean floor formed; at others, denser oceanic rock descended beneath another slab; elsewhere, neighbours slid past. The pattern explained where motion and danger concentrated, not which morning the next rupture would occur.",
-        "West Hook's chief demanded the old beach line because his people had built docks from it. East Hook wanted the displaced stones to become the new law. Mara refused both shortcuts. She proposed a coordinate boundary measured from stable reference stations and revised by joint surveys. That meant closing the cracked inlet until aftershocks were checked and surrendering four profitable fishing days. Under pressure from their boat owners, both chiefs signed. The first tuna boats passed beyond them while carpenters repaired the patrol craft on shore.",
-        "A month later, the islands opened the inlet and shared the cost of annual measurements. The old black stone remained on the beach, useless as a solitary judge but valuable as one point in a record. Four families had sold stored nets during the closure, and the council repaid them from the joint harbour fund. Mara fixed a brass plate to the inland platform: the previous coordinates, the post-quake coordinates, and a blank line for next year. Salt gathered in the engraved numbers; neither chief tried to scrape them away."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "两张相向图，火山链能照搬吗",
+      "summaryZh": "动画师程野发现两张相向运动的边界图被套用了同一个火山图层。她逐层查看岩石圈类型与相对运动后，海洋俯冲和大陆碰撞要求不同画面；同一示意框架中的箭头只能说明相对运动，不能替代材料条件。",
       "storyParagraphsZh": [
-        "东钩岛与西钩岛用一排黑色海滩石划分渔场。金枪鱼季前三周，一次地震震裂税棚，东侧界石离村井近了将近两米。东岛认定西岛人夜里搬石，西岛随即用两艘巡船封住水道。若测量员玛拉不能在集市日前定线，两岛都会错过第一群鱼，争端的代价将落到缺粮的家庭身上。",
-        "玛拉挖开最近的界石，底部压实的贝壳层完整，没有插过撬杆。她找到内陆铁制测量点，与二十年记录逐项核对。地震前，边界两侧的点每年约多离开三厘米，二十年合计约六十厘米；同一侧的点彼此距离却几乎不变。移动的不只是几块石头，两岛与界石都在随脚下巨大的岩石板片缓慢前行。",
-        "旧记录还显示，狭窄边界两侧的变形逐年积累，地震让其中一部分突然释放，因此海岸发生跳动，界石仍牢牢待在各自地面。玛拉又铺开区域图：地震、火山、海岭和深沟常沿边缘聚集。有些边缘彼此张开，形成新的洋底；有些相向挤压，较密的海洋岩石向下俯冲；还有些从旁擦过。图能指出危险集中在哪里，却不能报出下一次破裂的准确早晨。",
-        "西岛首领坚持沿用旧海滩线，因为码头按它修建；东岛则要把震后的石位直接写成新法。玛拉拒绝两种省事办法，提出用稳定参考点建立坐标，并由双方共同复测。这样一来，开裂水道必须先关闭检查余震，四天鱼汛也会白白流走。船主们在门外拍桌，两名首领仍签了字。第一批鱼船从远处经过时，他们的巡船还搁在岸上修补。",
-        "一个月后，水道重开，两岛共同承担每年测量费。封航期间有四户人家卖掉存网换粮，议事厅只得从联合港口金里补偿。旧黑石仍留在滩上，潮线已经漫过石脚，单独看不能再裁决边界，放进连续记录却仍有用。玛拉在内陆测量台钉上一块铜牌，刻着震前坐标、震后坐标，最下方给明年留了一行空位。盐粒渐渐填进数字，两位首领都没有把它刮掉。"
+        "动画师程野正在整理一组地学剖面。甲、乙两图都有两支相向箭头，美术模板便自动给两张图都叠了一排火山。她本来想保留这个统一画面，直到打开乙图的材料标签：两侧都是大陆岩石圈，和甲图并不是同一种条件。若继续复用模板，第二张图就会凭空补进题目没给的俯冲条件。",
+        "她先把图层里的对象重新命名。移动的是岩石圈板块，也就是岩石圈的分块；岩石圈包括地壳以及上部地幔最上方相对刚性的部分。板块不等于大陆轮廓，也不是漂在液态海洋上；其下方地幔主要仍是固态岩石，可在地质时间尺度缓慢变形。她把大陆/海洋标签固定在每张剖面的边缘。",
+        "甲图标明一侧是海洋岩石圈，并已知向另一板块下方俯冲。程野留下火山相关图层，但把机制改细：下沉板片可释放流体，促使上覆地幔局部熔融，形成的岩浆可能上升，也可能在地下凝固。她给火山链加注“可能的结果”，删掉原先把整块冷板片直接熔成岩浆的红色带。",
+        "再切回乙图，两侧大陆岩石圈已经碰撞并增厚。相向运动仍成立，但本图没有给定甲图中的海洋板片俯冲条件。程野试着把甲图的俯冲板片轮廓拖到乙图下方，发现那会擅自加入本图未给定的海洋板片，于是撤销操作，关闭复制火山链，改成挤压、缩短和地壳增厚形成山系。",
+        "第三张图显示两侧沿断层主要水平擦过；在同一示意参考框架里，她把箭头改成平行错动，留下应力积累与滑动释放的说明，不画新增或吞没洋底。最后一张张裂图则打开洋中脊图层，两侧分开，新海洋岩石圈在脊部形成。",
+        "程野最后一次播放时，甲图保留标着“可能结果”的火山相关图层，乙图按给定条件只画增厚的地壳与山系，第三张断层两侧横向错过，第四张从中脊向两侧展开。四段图仍共用同一图例和参考框架，区别只来自各自已给的相对运动和岩石圈条件；她把“相向箭头=同一种结果”的模板图层彻底关掉。"
       ],
-      "conceptName": "Plate tectonics",
+      "overallZh": "板块构造的判断要同时看岩石圈板块的相对运动和两侧材料条件。相向运动可对应海洋岩石圈俯冲，也可对应大陆碰撞；转换和张裂是另外两类边界运动。单一剖面或局部箭头只能支持一般机制判断，不能证明某真实地点的完整地史。",
       "conceptNameZh": "板块构造",
-      "explanationParagraphs": [
-        "Plate tectonics describes the lithosphere as relatively moving plates whose divergent, convergent, and transform boundaries organise earthquakes, volcanoes, mountain building, and ocean-basin change. Oceanic lithosphere forms at spreading ridges and is recycled at subduction zones. The framework identifies hazard patterns but cannot provide exact earthquake timing."
-      ],
       "explanationParagraphsZh": [
-        "板块构造把岩石圈描述为相对运动的板块，其张裂、汇聚与转换边界组织了地震、火山、造山和海盆变化。洋岩石圈在洋中脊形成并在俯冲带回收。该框架能识别危险格局，却不能给出地震的准确时间，也不能把每次局部震动归因于同一种边界过程。"
+        "岩石圈包括地壳和上部地幔最上方相对刚性的部分。甲图已知海洋板片俯冲，因此可追踪板片流体→上覆地幔局部熔融→岩浆可能上升。",
+        "乙图已知大陆碰撞增厚，不能仅凭相向箭头复制甲图机制；转换图支持水平错动，张裂图支持洋中脊新生海洋岩石圈。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "在同一示意参考框架中，先识别岩石圈类型，再根据相对运动决定各边界图层应保留什么。",
+        "diagramTitle": "两张汇聚剖面为什么需要不同机制图层",
+        "diagramSteps": [
+          "确认板块是岩石圈分块并读取两侧材料",
+          "按相对运动区分张裂、汇聚和转换三类边界",
+          "在两张汇聚图中继续区分海洋俯冲与大陆碰撞",
+          "分别保留俯冲流体—局部熔融和大陆增厚过程",
+          "把转换错动与洋中脊新生岩石圈放回各自边界"
+        ],
+        "diagramStepNotes": [
+          "岩石圈含地壳和上部地幔最上方相对刚性部分；下方地幔主要固态、可缓慢变形。",
+          "甲乙同属汇聚，所以四幅图只有三类边界。",
+          "甲已知海洋岩石圈俯冲；乙已知大陆—大陆碰撞。",
+          "甲的火山图层示意可能结果，不保证喷发；乙本图未给定俯冲条件，强调缩短和增厚。",
+          "丙图水平错动；张裂图在洋中脊形成新海洋岩石圈。"
+        ],
+        "mapping": [
+          "自动复制的火山图层 → 只看相向箭头造成的错误套用。",
+          "甲/乙材料标签 → 区分两种汇聚机制的关键条件。",
+          "乙图撤销的俯冲轮廓与火山链 → 不凭空补入本图未给定的条件。",
+          "完成后的四段动画 → 三类边界在给定条件下的示意，火山图层表示可能结果。"
+        ],
+        "boundary": "软流圈不是液态海洋，板块也不等同于大陆；一块板块可同时含大陆和海洋部分。板块运动驱动力可能涉及板片拉力、洋脊推力和地幔运动。教学箭头表示给定参考框架中的相对运动；要判断具体地区，还需要独立证据，不能仅由示意图推出完整地史或精确地震时间。",
+        "reflection": "如果甲乙两图都有相向箭头，为什么“相向”只能先判成汇聚，而不能直接决定是否该画俯冲火山链？"
+      },
+      "referencesZh": [
+        {
+          "id": "0532-plate-tectonics-ref-1",
+          "citation": "British Geological Survey. What causes earthquakes? Discovering Geology — Earthquakes.",
+          "url": "https://www.bgs.ac.uk/discovering-geology/earth-hazards/earthquakes/what-causes-earthquakes/",
+          "use": "支持岩石圈包含地壳与最上部相对刚性的地幔、三类主要边界相对运动，以及断层应力积累和滑动释放；同时支持区分海洋俯冲与大陆碰撞。"
+        },
+        {
+          "id": "0532-plate-tectonics-ref-2",
+          "citation": "U.S. Geological Survey. Plate Tectonics in a Nutshell (section: Using the Diagram to Discuss How Plate Tectonics Works). This Dynamic Planet: A Teaching Companion.",
+          "url": "https://volcanoes.usgs.gov/about/edu/dynamicplanet/nutshell.php",
+          "use": "支持洋中脊形成新海洋岩石圈，以及俯冲板片释放流体、促使上方地幔局部熔融并使岩浆可能上升；不把教学图当具体地点完整历史。"
+        }
+      ],
+      "title": "Can a Volcanic Chain Be Copied Between Converging Diagrams?",
+      "summary": "Animator Cheng Ye finds that the same volcanic layer has been applied to two boundary diagrams with converging arrows. After checking lithosphere type and relative motion layer by layer, oceanic subduction and continental collision require different visuals; arrows within the same schematic reference frame show relative motion but cannot replace material conditions.",
+      "storyParagraphs": [
+        "Animator Cheng Ye is organizing a set of Earth-science cross-sections. Diagrams A and B both contain two arrows pointing toward one another, so the art template automatically adds a row of volcanoes to both. She initially considers keeping the consistent look, until she opens the material labels on diagram B: both sides are continental lithosphere, unlike diagram A. Reusing the template would silently insert a subduction condition that the diagram never supplied.",
+        "She first renames the objects in the layers. What moves are lithospheric plates, meaning pieces of the lithosphere. The lithosphere includes the crust and the relatively rigid uppermost part of the upper mantle. A plate is not the outline of a continent, nor does it float on a liquid ocean. The mantle beneath is still mainly solid rock and can deform slowly over geologic time. She pins continental/oceanic labels to the edge of each cross-section.",
+        "Diagram A identifies one side as oceanic lithosphere and explicitly states that it subducts beneath another plate. Cheng Ye keeps the volcano-related layer but makes the mechanism more precise: the descending slab can release fluids, promoting partial melting in the overlying mantle; magma may rise and may also solidify underground. She labels the volcanic chain “a possible outcome” and deletes the old red band showing the entire cold slab directly melting into magma.",
+        "She switches back to diagram B. Both sides are continental lithosphere that are already colliding and thickening. Convergence still applies, but this diagram does not specify the oceanic-slab subduction condition given in A. Cheng Ye tries dragging A’s subducting-slab outline beneath B and sees that this would add an oceanic slab not specified in the model. She undoes the move, turns off the copied volcanic chain, and replaces it with compression, shortening, and crustal thickening that build a mountain belt.",
+        "The third diagram shows the two sides moving mainly horizontally past one another along a fault. Within the same schematic reference frame, she changes the arrows to parallel strike-slip motion, keeps the explanation of stress accumulation and release during fault slip, and does not draw creation or consumption of ocean floor. In the final rifting diagram, she turns on the mid-ocean-ridge layer: the sides separate and new oceanic lithosphere forms at the ridge.",
+        "On the final playback, diagram A keeps its volcano-related layer labeled “possible outcome.” Under the conditions given, diagram B shows only thickened crust and mountains; the two sides of the third fault slide laterally past each other, and the fourth spreads away from the ridge. All four still share the same legend and reference frame; their differences come only from the stated relative motions and lithospheric conditions. She disables the template rule “converging arrows = same outcome.”"
+      ],
+      "overall": "Plate tectonics must be interpreted from both the relative motion of lithospheric plates and the material conditions on each side. Convergence can involve subduction of oceanic lithosphere or collision of continents, while transform and divergent motion form the other two boundary categories. A single cross-section or local arrow supports only a general mechanism interpretation and does not establish the full geologic history of a real location.",
+      "conceptName": "Plate tectonics",
+      "explanationParagraphs": [
+        "The lithosphere includes the crust and the relatively rigid uppermost part of the upper mantle. Because diagram A explicitly includes oceanic-slab subduction, it can trace slab fluids → partial melting of the overlying mantle → possible magma ascent.",
+        "Diagram B specifies continental collision and thickening, so converging arrows alone do not justify copying A’s mechanism. The transform diagram supports horizontal slip, while the divergent diagram supports creation of new oceanic lithosphere at a mid-ocean ridge."
+      ],
+      "module": {
+        "intro": "Within one schematic reference frame, identify lithosphere type first, then use relative motion to decide which boundary-process layers should remain.",
+        "diagramTitle": "Why Two Convergent Cross-Sections Need Different Mechanism Layers",
+        "diagramSteps": [
+          "Confirm that plates are pieces of lithosphere and read the materials on both sides",
+          "Classify divergent, convergent, and transform motion from relative movement",
+          "Within the two convergent diagrams, distinguish oceanic subduction from continental collision",
+          "Keep slab-fluid/partial-melting processes separate from continental thickening",
+          "Return transform slip and mid-ocean-ridge lithosphere creation to their own boundary types"
+        ],
+        "diagramStepNotes": [
+          "The lithosphere includes the crust and the relatively rigid uppermost mantle; the mantle below is mainly solid and can deform slowly.",
+          "A and B are both convergent, so the four diagrams represent only three boundary categories.",
+          "A explicitly has oceanic-lithosphere subduction; B explicitly has continent–continent collision.",
+          "A’s volcanic layer illustrates a possible outcome, not a guaranteed eruption; B does not specify subduction and emphasizes shortening and thickening.",
+          "The third diagram is horizontal slip; the divergent diagram forms new oceanic lithosphere at a mid-ocean ridge."
+        ],
+        "mapping": [
+          "Automatically copied volcano layer → the mistaken inference produced by looking only at converging arrows.",
+          "Material labels on A/B → the key conditions that separate two convergent mechanisms.",
+          "Subducting outline and volcanic chain removed from B → not adding conditions that this model does not specify.",
+          "Completed four-part animation → three boundary categories under given conditions, with the volcanic layer showing a possible outcome."
+        ],
+        "boundary": "The asthenosphere is not a liquid ocean, and plates are not the same thing as continents; one plate can include both continental and oceanic parts. Plate motion can involve slab pull, ridge push, and mantle motion. Teaching arrows show relative motion in the stated reference frame. Interpreting a real location requires independent evidence; a schematic alone cannot establish its full geologic history or precise earthquake timing.",
+        "reflection": "If diagrams A and B both show arrows pointing toward each other, why does “converging” classify only the boundary motion rather than determine whether a subduction volcanic chain should be drawn?"
+      },
+      "references": [
+        {
+          "id": "0532-plate-tectonics-ref-1",
+          "citation": "British Geological Survey. What causes earthquakes? Discovering Geology — Earthquakes.",
+          "url": "https://www.bgs.ac.uk/discovering-geology/earth-hazards/earthquakes/what-causes-earthquakes/",
+          "use": "Supports the lithosphere as including the crust and the relatively rigid uppermost mantle, the relative motions of the three major boundary types, and stress accumulation and release during fault slip; it also supports distinguishing oceanic subduction from continental collision."
+        },
+        {
+          "id": "0532-plate-tectonics-ref-2",
+          "citation": "U.S. Geological Survey. Plate Tectonics in a Nutshell (section: Using the Diagram to Discuss How Plate Tectonics Works). This Dynamic Planet: A Teaching Companion.",
+          "url": "https://volcanoes.usgs.gov/about/edu/dynamicplanet/nutshell.php",
+          "use": "Supports formation of new oceanic lithosphere at mid-ocean ridges and the sequence in which a subducting slab releases fluids, promotes partial melting in the overlying mantle, and allows magma to rise; the teaching diagram is not treated as the complete history of a specific place."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-a-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-a-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-a-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -411,43 +593,132 @@
       "fieldCode": "0532",
       "fieldTitle": "Earth sciences",
       "fieldTitleZh": "地球科学",
-      "title": "The Stone with No Final Name",
-      "titleZh": "没有最终名字的石头",
-      "summary": "A museum wants to carve one permanent name beneath a stone, but a geologist reads several earlier identities within it.",
-      "summaryZh": "博物馆想给一块石头刻下永久名称，地质师却从它身上读出了好几次身份变化。",
-      "storyParagraphs": [
-        "The mountain museum received a dark crystalline block from a railway cutting. Its donor demanded a bronze plaque reading, 'First Stone of the Mountain—unchanged forever,' and promised to fund the winter roof if the words appeared at the gala. Director Vale accepted; a permanent name was easier to display than an unfinished history. Geologist An took a thin slice before the plaque was cast and found pale fragments enclosed by later crystals. The block had already contained older material before anyone placed it in a museum.",
-        "Under the microscope, some grains were rounded like transported sediment; others had recrystallised under heat and pressure. Part of that earlier rock had melted, then cooled slowly enough for interlocking crystals to grow around surviving fragments. An labelled the observed specimen by its latest formation as an igneous rock, but she would not call that its first or final identity. The evidence supported one route into its present state, not an unbroken birth certificate for every grain.",
-        "Vale called the distinctions academic until rain entered the railway cutting. Water froze in cracks, loosened chips, and sent them down the slope. A stream rolled the sharp pieces until their edges dulled. If deposited, buried, compacted, and cemented, those fragments could become sedimentary rock. If carried deeper without melting, heat, pressure, and reactive fluids could change minerals and texture into metamorphic rock. If melting occurred, cooling could make another igneous body.",
-        "The museum carpenter drew a neat circle with three boxes and arrows. An crossed out the single compulsory route. A rock could weather without first becoming metamorphic, metamorphose without melting, melt from several starting states, rise and remain exposed, or stay buried for an immense interval. Solar-driven weather, gravity and water transport, burial, Earth's internal heat, pressure, melting, cooling, and uplift supplied different parts of the journey. A cycle meant connected transformations, not a timetable every stone obeyed.",
-        "Then a roof beam leaked above the new gallery. Snow was close, and the donor's promised repair money still depended on the words 'unchanged forever.' Vale carried the bronze plate to him with the thin section, river chips, and crossed-out diagram, and asked that the words be removed. The donor withdrew half the gift. Vale sold two display cases and closed the east room for winter rather than attach a claim the specimen itself contradicted.",
-        "At the gala, the block stood on a plain base. Its label named the current rock type, collection place, visible minerals, and evidence for partial melting and crystallisation. Beside it lay three loose chips from the cutting and a map of possible paths, each arrow tied to a process and condition. Visitors did not have to imagine that the hand specimen would personally complete them all.",
-        "Spring thaw reopened the east room. Vale found the rejected plaque in storage, its polished promise still catching light. He took it to the engraver, ground away 'unchanged forever,' and added the collection date beneath the mountain's name. A shallow bronze hollow remained where the permanent words had been."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "一层松砂，离砂岩还差什么",
+      "summaryZh": "林汐的路线题已经给出一层沉积好的松散砂，她却直接把下一格写成砂岩；另一条线又把未熔融的石灰岩“受热”直接连到岩浆。补齐当前材料状态和条件后，两种错误被分开。",
       "storyParagraphsZh": [
-        "山城博物馆从铁路切坡收到一块深色晶质岩。捐赠人要求铜牌写上“山脉最初之石，永远不变”，只要晚宴上出现这行字，他便出钱修冬季屋顶。馆长维尔答应了；永久名称比残缺历史更好陈列。地质师安在铸牌前切下一片薄片，发现晚期晶体包裹着浅色旧碎片。这块石头进馆以前，内部已经装着别的材料。",
-        "显微镜下，一些颗粒圆润，像被水搬运过的沉积物；另一些在高温高压下重新结晶。更早的岩石曾部分熔融，随后缓慢冷却，交错晶体在未熔碎片周围长成。安按最近一次形成过程把样品标为火成岩，却不肯把它叫作所有矿粒的第一或最终身份。眼前证据支持它怎样来到当前状态，不能替每一粒矿物开出从未改变的出生证明。",
-        "维尔原以为这只是学术争执，直到雨水进入铁路切坡。水在裂缝里结冰，崩下碎块；溪流继续滚动，让尖角变钝。碎屑若沉积、埋藏、压实并胶结，可形成沉积岩；若未熔融便被带往深处，高温、压力和流体能改变矿物与构造，形成变质岩；若发生熔融，冷却后又可能成为新的火成岩。",
-        "木匠画了一个三个方框首尾相接的圆。安把那条唯一必经路线划掉：岩石可不经变质就风化，可在不熔融时变质，也可从多种起点熔化；它还能抬升后长期暴露，或深埋极久。太阳驱动风化，重力与水搬运碎屑，埋藏、高温高压、熔融、冷却和抬升各自推动不同路段。循环表示过程相连，不是一张每块石头必须遵守的时刻表。",
-        "这时新展厅屋梁漏水，降雪已近，捐赠人的修缮费却仍绑在“永远不变”四字上。维尔带着铜牌、薄片、河中碎石和被划改的图去见对方，请他删字。捐赠人撤回一半资助。维尔卖掉两只展柜，冬季关闭东厅，也没有把样品自身反驳的话钉到底座上。",
-        "晚宴上，黑石立在素净石座上。标签写明当前岩类、采集地点、可见矿物，以及部分熔融和结晶的证据。旁边放着切坡崩下的三块碎片和一张分叉路线图，每支箭都注明条件与过程。参观者无需假定手中那一块岩石会亲自走完所有路线。",
-        "春融后，东厅重新开放。维尔在库房找到退回的铜牌，抛光的承诺仍很亮。他请刻字匠磨掉“永远不变”，只在山名下补上采集日期。原来那行永久文字的位置，留下一道浅浅的铜槽。"
+        "地学入门课的学生林汐正准备提交一张岩石转化路线题。第一条路线已经给定“风化侵蚀→搬运→沉积”，当前格明确是一层已沉积的松散砂。她却把下一支箭头直接连到砂岩；第二条路线则从石灰岩写“受热”，下一格就画成岩浆。她以为下一格的岩类名称齐全，路线就已经交代完了。",
+        "她先处理松砂。既然题目已经把碎屑搬运并沉积成层，这一支指定的后续成岩路线就不再重复上游步骤；真正缺的是后续埋藏，以及压实和胶结。林汐把短箭头拆成“埋藏→压实/胶结→固结的碎屑沉积岩”，并在两格旁分别写上“松散”和“固结”。",
+        "她再读第二条路线的条件：石灰岩在适当热、压力等作用下发生矿物和结构重组，但题目注明没有熔融。林汐把“受热→岩浆”删掉，在箭头旁标“固态重组”，下一格改成大理岩。这里改变的是固态岩石内部组织，不是先变成熔体。",
+        "为了确认熔体路线，她另取题目中的“某岩石达到熔融条件”分支。只有这时材料才进入岩浆状态；她在下一支箭头旁写“冷却固化，形成火成岩”，通常会伴随结晶，快速冷却的熔岩也可能形成火山玻璃。她没有给统一熔融温度，因为实际条件取决于岩石组成、压力和其他地质因素。",
+        "题目最后另给一个条件：“这块大理岩后来被抬升并暴露在地表。”林汐据此把它接到“可开始经历风化和侵蚀”的分支，而不是把抬升本身写成岩类变化。旁边另留一条虚线：若以后在更深部满足熔融条件，才可能转入岩浆路径。",
+        "提交前，林汐先遮住图上的岩类名称，只沿箭头读过程。松砂那一格必须接上埋藏、压实和胶结，不能靠“砂岩”两字补足；石灰岩旁仍写着“未熔融”，下一格便不能放岩浆。她再看大理岩后的分叉：抬升暴露允许它经历风化，要转入岩浆，却还得满足另一支箭头注明的熔融条件。两支短箭头都已改好，图上的分叉没有被重新接成一个必经圆圈。"
       ],
-      "conceptName": "Rock cycle",
+      "overallZh": "岩石循环描述多种有条件的转化路径，而不是每块岩石必须按固定顺序轮换。本例的碎屑成岩路线走沉积后埋藏、压实和胶结；变质主要在固态发生；熔体冷却固化形成火成岩，常伴结晶，也可能形成火山玻璃。",
       "conceptNameZh": "岩石循环",
-      "explanationParagraphs": [
-        "The rock cycle connects formation and transformation among igneous, sedimentary, and metamorphic rocks through crystallisation, weathering, transport, deposition, lithification, metamorphism, melting, and uplift. It is not a fixed sequence or compulsory circle. A rock may follow branches, skip stages, or remain in one state for a very long time."
-      ],
       "explanationParagraphsZh": [
-        "岩石循环连接火成岩、沉积岩与变质岩的形成和转化，包括结晶、风化、搬运、沉积、成岩、变质、熔融与抬升。它不是固定顺序或必经圆环；单块岩石可走不同分支、跳过阶段，或在某状态停留很久。分类依据形成过程与证据，不是永久身份。"
+        "本题中的松砂已经完成搬运和沉积，因此这条指定成岩路线后续补埋藏、压实和胶结；自然界中的松砂仍可能再次被侵蚀搬运。",
+        "石灰岩在未熔融条件下可固态重组为大理岩；抬升暴露只改变环境条件，不会立即改变岩类，熔融也需另外满足条件。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先确认材料当前状态和题目已发生的过程，再补该分支真正缺少的条件。",
+        "diagramTitle": "已沉积松砂、固态大理岩和岩浆路线怎样不互相混写",
+        "diagramSteps": [
+          "从题目已沉积的松散砂继续判断指定成岩分支",
+          "补上埋藏、压实和胶结形成固结碎屑岩",
+          "按未熔融条件把石灰岩留在固态变质路线",
+          "只有满足熔融条件才进入岩浆，再冷却固化形成火成岩",
+          "把大理岩抬升暴露理解为进入风化条件而非立即变岩"
+        ],
+        "diagramStepNotes": [
+          "题目已完成搬运和沉积，所以该分支不重复上游；自然界并非禁止再搬运。",
+          "松砂经埋藏、压实和胶结后进入本例的碎屑沉积成岩。",
+          "石灰岩在热、压力等条件下未熔融，可形成大理岩。",
+          "受热不等于熔融；熔体冷却固化形成火成岩，常伴结晶，也可形成火山玻璃。",
+          "抬升暴露允许后续风化侵蚀，但抬升本身不改变岩类。"
+        ],
+        "mapping": [
+          "已沉积松砂格 → 当前材料状态与已完成步骤。",
+          "埋藏/压实/胶结箭头 → 该碎屑成岩分支真正缺少的过程。",
+          "“未熔融”标记 → 区分固态变质与岩浆形成。",
+          "大理岩后的条件分支 → 同一岩石可因后续条件进入不同路径。"
+        ],
+        "boundary": "本例的压实胶结只代表碎屑沉积成岩，不覆盖所有沉积岩。变质主要在固态进行，熔融、冷却、抬升和暴露各有条件。过程图列出可能路径，不能仅凭一张图、薄片或单个样本证明某块岩石完整经历过哪些步骤。",
+        "reflection": "已沉积的这层砂若又被水流带走，你会把它接向哪条分支？要再次接到本例的砂岩格，还需满足哪些过程和条件？"
+      },
+      "referencesZh": [
+        {
+          "id": "0532-rock-cycle-ref-1",
+          "citation": "British Geological Survey. Rocks and minerals. Discovering Geology.",
+          "url": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+          "use": "支持按形成过程区分主要岩类，碎屑沉积成岩、熔体冷却形成火成岩以及未熔融变质等基本过程；也支持石灰岩可变质为大理岩。"
+        },
+        {
+          "id": "0532-rock-cycle-ref-2",
+          "citation": "U.S. Geological Survey, Educational Resources. What's New? Weeks 9–12 (Week 12: Rocks and Minerals).",
+          "url": "https://www.usgs.gov/educational-resources/whats-new-weeks-9-12",
+          "use": "仅使用Week 12的Rocks and Minerals内容，支持三类岩石、多条转化路线与无唯一固定起点，也支持快速冷却的熔岩可形成火山玻璃；不采用该页面其他教学章节。"
+        }
+      ],
+      "title": "A Layer of Loose Sand—What Is Still Missing Before Sandstone?",
+      "summary": "Lin Xi’s pathway exercise already gives her a deposited layer of loose sand, yet she connects it directly to sandstone. Another line sends unmelted limestone straight from “heating” to magma. Once she fills in the current material states and conditions, the two errors separate.",
+      "storyParagraphs": [
+        "Lin Xi, a student in an introductory Earth-science course, is preparing to submit a rock-transformation pathway exercise. The first pathway already gives “weathering and erosion → transport → deposition,” and the current box is explicitly a deposited layer of loose sand. Yet she connects the next arrow directly to sandstone. A second pathway starts from limestone, labels the process “heating,” and places magma in the very next box. She thinks that naming the rock type in the next box is enough to explain the pathway.",
+        "She fixes the sand pathway first. Because the problem has already moved and deposited the sediment into a layer, this specified downstream lithification path does not repeat those upstream steps. What is missing is later burial, followed by compaction and cementation. Lin Xi replaces the short arrow with “burial → compaction/cementation → consolidated clastic sedimentary rock” and labels the two boxes “loose” and “consolidated.”",
+        "She rereads the conditions for the second pathway: under suitable heat, pressure, and related conditions, the limestone undergoes mineral and structural reorganization, but the problem specifies that it does not melt. Lin Xi deletes “heating → magma,” writes “solid-state reorganization” beside the arrow, and changes the next box to marble. The change is in the organization of solid rock rather than a prior transition into melt.",
+        "To check the melt pathway, she separately takes the branch labeled “a rock reaches melting conditions.” Only at that point does the material become magma. Beside the next arrow she writes “cooling and solidification, forming igneous rock.” This usually involves crystallization, but rapidly cooled lava can also form volcanic glass. She does not assign one universal melting temperature because the actual conditions depend on composition, pressure, and other geologic factors.",
+        "The problem finally adds another condition: “this marble is later uplifted and exposed at the surface.” Lin Xi connects that to a branch labeled “can begin to undergo weathering and erosion,” instead of treating uplift itself as a change of rock type. She leaves a separate dashed branch showing that only if melting conditions are later met at depth could the material enter a magma pathway.",
+        "Before submitting, Lin Xi covers the rock-type names and reads only the processes along the arrows. The loose-sand box needs burial, compaction, and cementation; the word “sandstone” cannot supply those missing steps. The limestone label still says “unmelted,” so magma cannot occupy the next box. She checks the branches after marble: uplift and exposure allow weathering, while entering magma still requires the melting conditions written beside the other arrow. Both short arrows are now repaired, and the branches remain separate rather than being joined into one compulsory circle."
+      ],
+      "overall": "Rock cycle relationships are multiple conditional transformation pathways, not a fixed sequence that every rock must follow. The clastic lithification route in this example continues after deposition through burial, compaction, and cementation. Metamorphism mainly occurs in the solid state. Melt cools and solidifies to form igneous rock, often with crystallization, but volcanic glass can also form.",
+      "conceptName": "Rock cycle",
+      "explanationParagraphs": [
+        "The loose sand in this exercise has already been transported and deposited, so the specified lithification route next adds burial, compaction, and cementation. Loose sand in nature can still be eroded and transported again.",
+        "Under unmelted conditions, limestone can reorganize in the solid state to become marble. Uplift and exposure change environmental conditions rather than instantly changing rock type, and melting requires separate conditions."
+      ],
+      "module": {
+        "intro": "Identify the material’s current state and the processes the problem says have already happened, then add the conditions actually missing from that branch.",
+        "diagramTitle": "How Deposited Loose Sand, Solid Marble, and a Magma Path Stay Distinct",
+        "diagramSteps": [
+          "Continue from the deposited loose sand specified in the problem",
+          "Add burial, compaction, and cementation to form consolidated clastic rock",
+          "Keep limestone on a solid-state metamorphic route under unmelted conditions",
+          "Enter magma only when melting conditions are met, then cool and solidify to form igneous rock",
+          "Treat marble uplift and exposure as entry into weathering conditions, not immediate rock-type change"
+        ],
+        "diagramStepNotes": [
+          "Transport and deposition have already occurred in the problem, so this branch does not repeat them; nature does not forbid later re-transport.",
+          "Loose sand enters the clastic lithification route through burial, compaction, and cementation.",
+          "Limestone can form marble under heat, pressure, and related conditions without melting.",
+          "Heating alone is not melting; melt cools and solidifies to form igneous rock, often with crystallization, but volcanic glass can also form.",
+          "Uplift and exposure allow later weathering and erosion, but uplift itself does not change rock type."
+        ],
+        "mapping": [
+          "Deposited loose-sand box → the material’s current state and the already completed steps.",
+          "Burial/compaction/cementation arrows → the processes actually missing from this clastic lithification branch.",
+          "“Unmelted” label → separation of solid-state metamorphism from magma formation.",
+          "Conditional branches after marble → different later paths depending on subsequent conditions."
+        ],
+        "boundary": "Compaction and cementation here describe clastic sedimentary lithification and do not cover every sedimentary-rock formation process. Metamorphism mainly occurs in the solid state, while melting, cooling, uplift, and exposure each require their own conditions. A pathway diagram lists possible processes and cannot by itself, from one diagram, thin section, or sample, prove the complete history of a particular rock.",
+        "reflection": "If this deposited layer of sand is carried away by water again, which branch would you connect it to? What processes and conditions would still be needed before reconnecting it to the sandstone box in this example?"
+      },
+      "references": [
+        {
+          "id": "0532-rock-cycle-ref-1",
+          "citation": "British Geological Survey. Rocks and minerals. Discovering Geology.",
+          "url": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/",
+          "use": "Supports distinguishing major rock types by formation processes, including clastic sedimentary lithification, igneous-rock formation by cooling melt, and metamorphism without melting; it also supports limestone metamorphosing into marble."
+        },
+        {
+          "id": "0532-rock-cycle-ref-2",
+          "citation": "U.S. Geological Survey, Educational Resources. What's New? Weeks 9–12 (Week 12: Rocks and Minerals).",
+          "url": "https://www.usgs.gov/educational-resources/whats-new-weeks-9-12",
+          "use": "Uses only the Week 12 Rocks and Minerals material to support the three major rock categories, multiple transformation pathways without a unique fixed starting point, and volcanic glass forming from rapidly cooled lava; other teaching sections on the page are not used."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-a-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-a-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-a-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -457,39 +728,133 @@
       "fieldCode": "0533",
       "fieldTitle": "Physics",
       "fieldTitleZh": "物理学",
-      "title": "The Missing Entry in the Waterwheel Ledger",
-      "titleZh": "水车账本失踪的一项",
-      "summary": "Water falls from a height, yet the millshaft receives less turning power, so the clerk declares that part of the energy has vanished.",
-      "summaryZh": "水从高处落下，磨坊得到的转动力却少了一截，账房认定那部分能量已经消失。",
-      "storyParagraphs": [
-        "The river mill had to grind the army's winter flour before the first freeze. Engineer Arda calculated that the falling water delivered one hundred energy units each minute, yet the shaft supplied only sixty-two units of useful turning work. Clerk Bo wrote 'thirty-eight lost' and urged the owner to demand a larger upstream gate. If they admitted the new wheel was inefficient, payment would be withheld; if they opened more water, the lower farms would lose irrigation.",
-        "Arda refused to enlarge the gate until the missing entry was found. She wrapped cloth around the bearing and watched its thermometer rise, listened to the slap of blades, measured fast water leaving the tailrace, and set a cup on the foundation to reveal vibration. During a steady minute, their approximate account read: sixty-two units at the shaft, eighteen in moving outflow, twelve transferred as heat through bearing and turbulent water, and eight in sound and vibration. The categories were imperfect measurements, but together they closed the same hundred-unit boundary.",
-        "Bo objected that heat and noise could not turn a millstone, so they deserved the word vanished. Arda drew one line around the whole mill and another around the shaft. Across the larger boundary, energy entered with water and left as work, motion, and heat; none needed to disappear. Across the smaller boundary, only part arrived as useful work. The distinction saved the physical account but exposed the commercial problem: the machine conserved total energy while delivering a poor fraction in the form they wanted.",
-        "The owner wanted to keep grinding through the night and conceal the warm bearing. Arda made him choose between one day of missed flour and a possible seized axle. He stopped the wheel, paid the army's delay fee, and let her replace the rough bearing and reshape the channel. On restart, useful shaft work rose to seventy-four units from the same measured input; the other twenty-six still appeared in outflow, heat, sound, vibration, and small storage changes. Better efficiency rearranged the transfers. It did not create energy or follow automatically from the accounting rule.",
-        "The flour shipment left a day late, and the owner lost the winter bonus, but the lower farms kept their water. At month's end Bo did not erase his loss column. He split it into measured outflow, heat, sound, vibration, and unaccounted uncertainty, then drew the system boundary in red beside the totals. The page that once held a blank thirty-eight now held numbers adding to one hundred; a brown ring from the hot bearing remained around its corner."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "电池少了12焦耳，为什么只抬高了8焦耳",
+      "summaryZh": "虚拟升降模型里，电池化学账户下降12 J，负载—地球重力势能只增加8 J。沈禾通过扩大与缩小系统边界发现：完整系统还给定了电机/其他部件内能增加4 J，而电池自身的非化学内能在模型中设为不变。",
       "storyParagraphsZh": [
-        "河边磨坊必须在封冻前磨完军粮。工程师阿妲算出落水每分钟带来一百份能量，磨轴却只给出六十二份有用转动。账房阿波写下“失踪三十八份”，催老板向上游多开水闸。承认新水车低效，尾款会被扣；加大水量，下游农田又会失去灌溉。仓库外，等面粉的军车已经排到石桥。",
-        "阿妲不同意先开闸。她给轴承裹上测温布，听叶片拍水，量出尾水仍有的速度，又把一杯水放在地基上看振纹。稳定运转的一分钟里，账大致是：磨轴六十二份，尾水运动十八份，轴承与乱流带走的热十二份，声响和振动八份。各项测量并不完美，却在同一边界内合成了最初的一百。阿波反复重算三遍，杯中水面仍在细细发颤。",
-        "阿波说热和噪声不能磨面，就该算消失。阿妲在纸上画两条线，一条圈住整座磨坊，一条只圈磨轴。对大边界，能量随水进入，以功、运动和热离开；对小边界，只有一部分成为想要的轴功。物理账对上了，生意问题反而更清楚：总量没有少，能被利用的那一份却不够。",
-        "老板想连夜赶工，叫人把发热轴承藏起来。阿妲让他在一天误期与整根磨轴抱死之间选。他停下水车，缴了延期罚金，让她更换粗糙轴承并重修水槽。停机那晚，二十名短工没有工钱，老板又把自家银餐具押给粮官。重新开机后，同样输入可得到七十四份轴功；其余二十六份仍进入尾水、热、声、振动和少量暂存。效率提高，是传递比例改变，不是凭空造出能量，也不是总量相等自动带来的。",
-        "面粉迟了一天出发，老板失去冬季奖金，下游农田却保住了水。月底，阿波没有删掉“损失”栏，而是拆成尾水、热、声、振动与测量未尽项，并在旁边用红笔圈出核算边界。他还把停机罚金另写在生意账里，不再让物理账替老板遮掩低效。原先空着三十八份的那页，如今各项正好加到一百；纸角仍留着热轴承压出的褐色圆印。"
+        "沈禾在检查一个虚拟小升降装置。提升前后负载都静止，电池化学账户从60 J降到48 J，负载—地球重力势能增加8 J。界面最初只显示这两项，于是她第一眼看到的是“少了12，只抬高8，另外4去哪了”。",
+        "她点开完整系统边界。教学系统定义为电池、电机、负载、地球和其他装置部件，并设定这段时间不与外界交换物质、热、功或辐射；两个端点K都为0。这里把地球纳入的是负载—地球重力势能关系，不是把地球当实体装进装置。",
+        "完整账户写成E_total = E_battery_chemical + U_battery_other + U_gravity + K + U_device_other。模型进一步给定：电池除化学账户外的其他内能在这段时间变化为0；电机和其他装置部件的内能合计增加4 J。其他内能和重力势能选起点为零参考值，并非部件绝对内能为零。起点相对账户为60+0+0+0+0=60 J，终点48+0+8+0+4=60 J。",
+        "沈禾把变化量逐项写开：电池化学能−12 J，电池其他内能0，重力势能+8 J，动能0，电机/其他部件内能+4 J，合计0。这里+4 J是模型预先给定项，不是把未闭合差额猜成“发热”；热Q若存在，应表示跨边界传递，而不是系统里再存一份“热账户”。",
+        "接着她把边界缩到只圈电池。此时电池化学账户仍是60→48 J，而模型又规定电池其他内能变化为0，所以这个电池子系统的总储存能变化就是−12 J；界面相应显示该时段12 J能量净传出电池边界，进入外部装置。若没有“电池其他内能不变”这条给定，就不能只凭化学账户下降推出电池总储存能也恰好下降12 J。",
+        "最后沈禾把两个窗口并排：完整系统显示总相对账户60 J→60 J，电池子系统显示ΔE=−12 J和同期净传出12 J。她在结果栏选择“有用提升比例”，填入8/12=2/3≈66.7%；随后依次点回完整系统和电池窗口，核对60→60与−12 J分别对应哪条边界。屏幕保留了比例与两本账各自的标签。"
       ],
-      "conceptName": "Conservation of energy",
+      "overallZh": "能量守恒要求明确系统边界、时间窗口和互不重叠的储存账户。完整且与外界无能量或物质交换的教学系统中，总储存能变化为0；子系统则可因跨边界传递而增减。热和功是传递量。化学能属于内能；单列化学账户后，其他内能账户必须排除这部分。",
       "conceptNameZh": "能量守恒",
-      "explanationParagraphs": [
-        "Conservation of energy states that total energy in an isolated system remains constant while changing form or moving among parts. Open-system accounting must include work, heat, radiation, material flow, and storage change. Conservation does not imply perfect efficiency; energy can remain while becoming more dispersed and less available for useful work."
-      ],
       "explanationParagraphsZh": [
-        "能量守恒指出孤立系统总能量不变，能量可改变形式或在部分之间转移。开放系统核算必须包括功、热、辐射、物质流和储存变化。守恒不等于效率完美；能量虽未消失，却可能变得更分散、更难转化为有用功。判断前必须先说清系统边界与计量时间。"
+        "模型明确给定电池其他内能Δ=0、电机/其他部件内能+4 J，所以完整账为60→48+0+8+0+4=60 J；+4 J不是由差额猜成热。",
+        "只圈电池时，总储存能变化可写成−12 J，是因为模型另给电池非化学内能不变。8/12≈66.7%只是有用提升比例，不是总能量剩余比例。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "从4 J表面缺口出发，先补齐完整系统储存账户，再缩到电池子系统检查跨边界传递。",
+        "diagramTitle": "同一次提升，完整系统与电池子系统为什么出现不同ΔE",
+        "diagramSteps": [
+          "观察电池化学−12 J与重力势能+8 J形成的表面缺口",
+          "扩大边界并写出不重叠的完整储存账户",
+          "写入给定变化：ΔU_battery_other=0、ΔU_device_other=+4 J",
+          "缩小到电池并用给定条件确定ΔE_battery=−12 J",
+          "把净传出12 J、有用提升8 J和66.7%比例分开"
+        ],
+        "diagramStepNotes": [
+          "提升前后K=0，最初只看两项时留下4 J未解释。",
+          "完整系统含电池、电机、负载、地球及其他部件，外界热/功/辐射/物质交换均设0。",
+          "0指电池其他内能的变化，不是其储存值；装置其他内能变化为+4 J。终点48+0+8+0+4=60 J，化学能不重复计入其他内能。",
+          "电池其他内能Δ=0是模型给定，因此电池子系统总储存能下降12 J。",
+          "同一时段净传出电池12 J；其中8 J进入重力势能，4 J进入装置其他内能；8/12≈66.7%是定义的有用提升比例。"
+        ],
+        "mapping": [
+          "最初的4 J缺口 → 未显示完整账户造成的疑问。",
+          "完整系统边界 → 决定哪些储存账户属于同一总账。",
+          "电池其他内能Δ=0与装置内能+4 J → 使电池子系统和完整系统两本账都闭合的给定条件。",
+          "并排两个窗口 → 系统边界改变后ΔE与跨边界传递的不同表述。"
+        ],
+        "boundary": "模型使用相同时间窗口和J单位，完整系统明确与外界无热、功、辐射和物质交换。化学能与其他内能账户不得重复。热Q和功W是跨边界传递，不是储存在物体里的形式。真实账面不闭合时不能把差额强行命名为热；守恒也不保证高效率或有用能量不下降。",
+        "reflection": "为什么只有在模型明确给出“电池其他内能不变”后，才可以从化学账户60→48进一步说电池子系统总储存能下降12 J？"
+      },
+      "referencesZh": [
+        {
+          "id": "0533-conservation-of-energy-ref-1",
+          "citation": "William Moebs, Samuel J. Ling, Jeff Sanny. University Physics Volume 1, 8.3 Conservation of Energy. OpenStax, Rice University (2016).",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/8-3-conservation-of-energy",
+          "use": "支持系统选择、动能与势能核算，以及非保守作用下机械能可变化；不能把机械能一项不变等同于总能量守恒。"
+        },
+        {
+          "id": "0533-conservation-of-energy-ref-2",
+          "citation": "Samuel J. Ling, William Moebs, Jeff Sanny. University Physics Volume 2, 3.3 First Law of Thermodynamics. OpenStax, Rice University (2016).",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/3-3-first-law-of-thermodynamics",
+          "use": "支持热与功作为跨边界能量传递，以及内能变化与能量传递之间的关系；不把热量Q写成系统储存的一种能量。"
+        }
+      ],
+      "title": "The Battery Loses 12 Joules—So Why Does the Load Gain Only 8?",
+      "summary": "In a virtual lifting model, the battery’s chemical-energy account falls by 12 J while the load–Earth gravitational potential energy rises by only 8 J. By expanding and shrinking the system boundary, Shen He finds that the full model also assigns a 4 J increase to the motor/other components’ internal energy, while the battery’s own nonchemical internal energy is defined as unchanged.",
+      "storyParagraphs": [
+        "Shen He is checking a virtual lifting device. The load is at rest both before and after the lift. The battery’s chemical-energy account falls from 60 J to 48 J, while the load–Earth gravitational potential energy increases by 8 J. At first, the interface shows only those two entries, so her immediate question is, “Twelve are gone, only eight raised the load—where did the other four go?”",
+        "She opens the full-system boundary. The teaching system is defined to include the battery, motor, load, Earth, and other device components, and during this interval it exchanges no matter, heat, work, or radiation with the surroundings. K is 0 at both endpoints. Earth is included because gravitational potential energy belongs to the load–Earth relationship, not because Earth is physically placed inside the device.",
+        "The complete account is E_total = E_battery_chemical + U_battery_other + U_gravity + K + U_device_other. The model further specifies that the battery’s internal energy other than the separately listed chemical account changes by 0 during the interval, while the motor and other device components gain 4 J of internal energy in total. Other internal energy and gravitational potential energy use their initial values as zero references; this does not mean the components have zero absolute internal energy. Relative accounts are 60+0+0+0+0=60 J initially and 48+0+8+0+4=60 J finally.",
+        "Shen He then writes the changes term by term: battery chemical energy −12 J, battery other internal energy 0, gravitational potential energy +8 J, kinetic energy 0, and motor/other-device internal energy +4 J, totaling 0. The +4 J is given by the model in advance; it is not an unclosed difference relabeled as “heat.” If heat Q existed, it would represent energy transferred across a boundary, not another stored “heat account.”",
+        "Next she shrinks the boundary to the battery alone. Its chemical account is still 60→48 J, and the model also states that the battery’s other internal-energy change is 0, so the battery subsystem’s total stored-energy change is −12 J. The interface therefore shows a net outward transfer of 12 J across the battery boundary into the external device during that interval. Without the given condition that the battery’s other internal energy is unchanged, the chemical-account drop alone would not establish an exactly 12 J drop in total stored battery energy.",
+        "Finally, Shen He puts the two windows side by side: the full system shows total relative accounts 60 J→60 J, while the battery subsystem shows ΔE=−12 J and a net outward transfer of 12 J during the same interval. She selects “useful-lift fraction” in the results field and enters 8/12=2/3≈66.7%. Then she clicks back through the full-system and battery windows, checking which boundary gives 60→60 and which gives −12 J. The screen retains separate labels for the fraction and both accounts."
+      ],
+      "overall": "Conservation of energy requires an explicit system boundary, time interval, and non-overlapping stored-energy accounts. In a complete teaching system with no exchange of energy or matter with the surroundings, the total stored-energy change is zero; a subsystem can gain or lose energy through boundary transfers. Heat and work are transfer quantities. Chemical energy is part of internal energy; when listed separately, it must be excluded from the other internal-energy accounts.",
+      "conceptName": "Conservation of energy",
+      "explanationParagraphs": [
+        "The model explicitly gives battery-other internal-energy change Δ=0 and motor/other-component internal-energy change +4 J, so the full account is 60→48+0+8+0+4=60 J. The +4 J is not inferred from a residual and renamed as heat.",
+        "For the battery-only boundary, total stored-energy change can be written as −12 J only because the model separately states that nonchemical battery internal energy is unchanged. 8/12≈66.7% is only the defined useful-lift fraction, not the fraction of total energy remaining."
+      ],
+      "module": {
+        "intro": "Start from the apparent 4 J gap, complete the full-system storage accounts, then shrink to the battery subsystem and inspect boundary transfer.",
+        "diagramTitle": "Why the Same Lift Gives Different ΔE for the Full System and the Battery Subsystem",
+        "diagramSteps": [
+          "Observe the apparent gap between battery chemical −12 J and gravitational potential +8 J",
+          "Expand the boundary and write non-overlapping full-system storage accounts",
+          "Enter the given changes: ΔU_battery_other=0 and ΔU_device_other=+4 J",
+          "Shrink to the battery and use the given conditions to determine ΔE_battery=−12 J",
+          "Keep the net outward transfer of 12 J, the 8 J useful lift, and the 66.7% fraction separate"
+        ],
+        "diagramStepNotes": [
+          "K=0 before and after the lift; looking at only two entries initially leaves 4 J unexplained.",
+          "The full system includes battery, motor, load, Earth, and other components; external heat/work/radiation/matter exchange is set to 0.",
+          "The 0 is the change in battery-other internal energy, not its stored value; device-other internal energy changes by +4 J. The final account is 48+0+8+0+4=60 J, with chemical energy excluded from other internal-energy accounts.",
+          "Battery-other internal-energy change Δ=0 is a model-given condition, so total stored energy in the battery subsystem falls by 12 J.",
+          "The net outward transfer from the battery during the same interval is 12 J; 8 J enter gravitational potential energy and 4 J enter other device internal energy; 8/12≈66.7% is the defined useful-lift fraction."
+        ],
+        "mapping": [
+          "Initial 4 J gap → the question created by an incomplete displayed account.",
+          "Full-system boundary → the choice that determines which storage accounts belong to one total.",
+          "Battery-other Δ=0 and device internal +4 J → the given conditions that close both the battery-subsystem and full-system accounts.",
+          "Two side-by-side windows → different descriptions of ΔE and boundary transfer after the system boundary changes."
+        ],
+        "boundary": "The model uses the same time interval and joule units throughout, and the full system is explicitly isolated from external heat, work, radiation, and matter exchange. Chemical energy and other internal-energy accounts must not overlap. Heat Q and work W are transfers across boundaries, not forms stored in an object. A real unclosed energy account must not have its residual forced into the label “heat,” and energy conservation does not guarantee high efficiency or prevent useful energy from decreasing.",
+        "reflection": "Why can you infer that total stored energy in the battery subsystem falls by 12 J only after the model explicitly states that the battery’s other internal energy is unchanged?"
+      },
+      "references": [
+        {
+          "id": "0533-conservation-of-energy-ref-1",
+          "citation": "William Moebs, Samuel J. Ling, Jeff Sanny. University Physics Volume 1, 8.3 Conservation of Energy. OpenStax, Rice University (2016).",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/8-3-conservation-of-energy",
+          "use": "Supports choosing a system, accounting for kinetic and potential energy, and allowing mechanical energy to change under nonconservative effects; constancy of mechanical energy alone is not equated with total energy conservation."
+        },
+        {
+          "id": "0533-conservation-of-energy-ref-2",
+          "citation": "Samuel J. Ling, William Moebs, Jeff Sanny. University Physics Volume 2, 3.3 First Law of Thermodynamics. OpenStax, Rice University (2016).",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/3-3-first-law-of-thermodynamics",
+          "use": "Supports heat and work as energy transfer across a boundary and the relationship between internal-energy change and energy transfer; heat Q is not treated as a form of energy stored in the system."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
-        "reviewRounds": 3,
-        "rewriteRounds": 2,
+        "reviewRounds": 4,
+        "rewriteRounds": 3,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-b-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-b-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-b-edit-pass2-evidence.json",
+          "science-mechanism-mixed-15-pdc-b-edit-pass3-evidence.json"
+        ]
       }
     },
     {
@@ -589,39 +954,132 @@
       "fieldCode": "0541",
       "fieldTitle": "Mathematics",
       "fieldTitleZh": "数学",
-      "title": "The Pebbles the Box Could Not Hide",
-      "titleZh": "盒子藏不住的石子",
-      "summary": "An apprentice flips stones hundreds of times but cannot reach the target because every permitted move preserves one fact.",
-      "summaryZh": "学徒把石子翻了几百次，仍无法得到目标图案，因为每次允许的动作都保留着同一件事。",
-      "storyParagraphs": [
-        "At the winter games, the mathematics hall offered a silver compass to anyone who could turn ten two-faced pebbles from four black sides showing to exactly five. A move had to flip two pebbles at once, and the judge inspected every hand. Apprentice Jian had won earlier puzzles by trying faster than everyone else, so he paid the entry fee with money meant for new boots and promised his younger brother the compass by dusk.",
-        "Jian began with two white pebbles, raising the black count from four to six. Flipping two black lowered it back to four. Flipping one of each moved the black face from one position to another but left the count at four. He tried hundreds of sequences, made rows, circles, and mirrored patterns, and repeatedly reached zero, two, four, six, eight, or ten black faces—never five. He tore three pages from his notebook to record paths, then began repeating paths without noticing. The crowd thinned while his fingers grew grey from stone dust.",
-        "His friend offered a trick: put the pebbles into a box, shake them, and perform the next move where the judge could not follow the order. Jian nearly agreed; the prize was worth ten times his fee. Then he wrote the effect of every legal move on the lid. Two whites changed the count by plus two, two blacks by minus two, and one of each by zero. Starting from the even number four, every permitted step left the count even. Hidden order could conceal cheating, but no legal sequence could cross to odd five.",
-        "Jian carried the closed box to the judge and said the announced target was unreachable under the posted rule. The judge offered to return his fee if he quietly withdrew; admitting a flawed game would embarrass the hall. Jian instead placed his three-line argument on the public board. He lost the compass and, for breaking the agreement, his fee. The hall cancelled the round. The master later added that matching the preserved parity would only remove this obstacle: an even target might still require a construction or face another restriction.",
-        "Jian walked home through sleet in his old split boots, with meltwater soaking both socks. His brother was waiting for the silver compass, so Jian gave him the only thing he had brought back: the target card with five black circles, and explained why the boot money was gone. They stored it inside the puzzle box. Years later the lid still bore the three possible changes—plus two, minus two, zero—and the odd fifth circle had never been rubbed out."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "按多少步也到不了(2,2)，三个按钮哪里限制了路线",
+      "summaryZh": "关卡从(1,2)出发，只允许左边+2、右边+2或交换两项。测试失败本身不是证明；乔宁改为对任意状态(x,y)逐一检查三种合法操作，得到能覆盖任意有限按钮序列的奇偶限制。",
       "storyParagraphsZh": [
-        "冬季赛会上，算术馆拿出一枚银罗盘：十枚双面石子开始有四枚黑面朝上，谁能按规则翻成恰好五枚，罗盘就归谁。每次必须同时翻两枚，裁判全程盯手。学徒阿简过去总靠快速试法赢题，于是拿买新靴的钱交了报名费，还答应傍晚把罗盘送给弟弟。",
-        "阿简先翻两枚白面，黑面从四变六；再翻两黑，又回到四；一黑一白同时翻，只把黑面换了位置，总数仍是四。他摆直线、围圆圈、做镜像，尝试了几百条路线，反复见到零、二、四、六、八、十，就是没有五。他从笔记本撕下三页记录走法，后来连重复旧路线都没察觉。午饭铃响过两次，围观人渐渐散去，他的指尖沾满灰白石粉。",
-        "同伴递来木盒，叫他把石子装进去摇乱，在裁判看不清的位置继续。罗盘价值是报名费的十倍，阿简差点答应，最后却把每种合法动作写在盒盖上：两白变两黑，总数加二；两黑变两白，减二；一黑一白则加零。从偶数四出发，每一步之后仍是偶数。盒子只能藏住顺序，任何合法路线都跨不到奇数五。",
-        "阿简抱着盒子去见裁判，指出目标在现有规则下无法到达。裁判愿退费，只求他安静退出，免得算术馆承认赛题有错。阿简却把三行推理贴到公示板，罗盘没得到，报名费也因毁约被扣，比赛当场取消。原本等着卖热酒的小贩冲他抱怨，馆主也把他的名字从下一轮名单划掉。后来馆主仍不得不承认：若目标也是偶数，只能说明这一道障碍消失，仍需实际构造路线，或检查是否另有约束。",
-        "阿简穿着裂口旧靴走过雨夹雪，融水从鞋底渗进袜子，每走一步都发出湿响。弟弟正等银罗盘，他只能交出那张画着五个黑圈的目标卡，并把没买成靴子的缘由从头讲完。弟弟沉默了一会儿，把自己的干布塞给他。两人把卡收进木盒。多年后，盒盖上的“加二、减二、加零”仍清晰可见，那第五个黑圈也一直没有被擦掉。"
+        "乔宁在调一个双计数器关卡。状态是非负整数对(x,y)，初态(1,2)，按钮只有“左+2”“右+2”“交换”。她把(2,2)设成目标，因为看起来只差一点；测试员试过几条路线都到不了，但这还可能只是没搜够。",
+        "她不再记录某几次具体按键，而是从任意状态(x,y)写三条合法规则：(x,y)→(x+2,y)、(x,y)→(x,y+2)、(x,y)→(y,x)。前两种让总和x+y恰好增加2，交换让总和保持不变，因此三种情况都保持(x+y)的奇偶性。",
+        "初态(1,2)的总和是3，为奇数。第0步先满足这一性质；若某一步后的状态总和是奇数，那么下一次无论按哪一个合法按钮，奇偶仍保持。因此按归纳思路，任何有限长度的合法按钮序列到达的状态，总和都仍是奇数，而不是只在已经试过的路线中如此。",
+        "(2,2)的总和是4，为偶数，所以被直接排除。乔宁再看候选(0,1)：它的总和1同样是奇数，因此不被奇偶条件排除；但三个按钮中，两个加法只增总和，交换不改总和，总和从初态3永远不会降到1，所以它仍不可达。",
+        "她最后选了一个确实能到的目标(2,3)。这次不是因为它总和为5就宣布可达，而是实际找到路线：(1,2)先按左+2到(3,2)，再交换到(2,3)。相同奇偶只去掉一道障碍，真正的可达仍需额外条件或具体路线。乔宁把这条路线保存成关卡的自动测试。",
+        "关卡保存时，目标框已经从(2,2)换成(2,3)，三个按钮仍原样保留。记录旁边同时放着两个标签：“(2,2)：奇偶冲突”“(0,1)：奇偶相同但总和降不下去”。她重新运行自动测试，两步后目标框亮起，两个不可达示例仍留在说明区。"
       ],
-      "conceptName": "Invariance",
+      "overallZh": "不变量方法先固定状态集和全部合法操作，再证明某个量或关系被每一步保持。由初态和逐步保持性可推广到任意有限合法序列；目标若取不同值即可排除可达，取相同值则只表示没有被这一条件排除。",
       "conceptNameZh": "不变量",
-      "explanationParagraphs": [
-        "An invariant is a quantity, relation, or structure preserved under specified transformations. Showing that every allowed operation preserves it can rule out targets with a different invariant value without enumerating paths. An invariant depends on the rules and usually supplies only a necessary obstruction; matching values alone need not prove reachability."
-      ],
       "explanationParagraphsZh": [
-        "不变量是在指定变换下保持不变的量、关系或结构。证明所有允许操作都保留它，就能排除不变量取值不同的目标，无需枚举路径。不变量依赖具体规则，通常只给出不可达的必要障碍；相同取值并不自动保证可达，还可能需要构造或别的不变量。"
+        "对任意(x,y)，三种规则使x+y分别变为x+y+2、x+y+2、x+y，因此I=(x+y) mod2每一步保持。初态I=1，所以(2,2)的I=0不可达。",
+        "(0,1)也有I=1却仍不可达，因为总和不能下降；而(2,3)有具体两步路线。相同I不是可达性的充分条件。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "把三种按钮写成对任意(x,y)都成立的规则，再用初态与逐步保持性覆盖任意有限序列。",
+        "diagramTitle": "从任意一步保持奇偶到排除(2,2)",
+        "diagramSteps": [
+          "固定非负整数状态集和全部三个合法操作",
+          "对任意(x,y)证明三种操作都保持总和奇偶",
+          "用初态I=1和逐步保持性推广到任意有限序列",
+          "以(2,2)和(0,1)分别展示不同I与相同I的后果",
+          "用具体两步路线确认(2,3)确实可达"
+        ],
+        "diagramStepNotes": [
+          "按钮只有左+2、右+2、交换，没有−2、+1、重置或自由改值。",
+          "总和变化分别为+2、+2、0，所以I=(x+y) mod2均不变。",
+          "初态(1,2)在第0步有I=1；若某一步I=1，三条规则使下一步仍有I=1，所以每个有限步数都保持这一性质。",
+          "(2,2)因I=0被排除；(0,1)虽I=1，但受总和不减限制仍不可达。",
+          "(1,2)→(3,2)→(2,3)给出实际可达路线并被保存为自动测试。"
+        ],
+        "mapping": [
+          "三个按钮 → 证明必须覆盖的全部合法操作。",
+          "目标(2,2) → 因不变量值不同被整体排除。",
+          "候选(0,1) → 相同不变量值仍不保证可达。",
+          "保存后的目标(2,3) → 由具体合法路线确认的可达状态。"
+        ],
+        "boundary": "不变量依赖当前状态集和全部允许操作。不同不变量值足以排除可达，相同值并不充分。若按钮集合改变，必须重新检查保持性；但增加某个新按钮并不自动意味着当前奇偶一定被破坏。这里的证明针对任意有限合法序列。",
+        "reflection": "另开两份规则副本，分别新增“左+1”与“左+4”，原三按钮仍保留。先算新操作使x+y改变多少：哪份仍可沿用原奇偶证明，哪份必须停止沿用？即使奇偶保持，为什么(0,1)仍提醒你不能仅凭相同I宣布可达？"
+      },
+      "referencesZh": [
+        {
+          "id": "0541-invariance-ref-1",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, 5.4.3 The Invariant Principle. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "支持由初态性质和所有合法变换的保持性推出所有可达状态满足该性质，并用性质不同排除目标可达性。"
+        },
+        {
+          "id": "0541-invariance-ref-2",
+          "citation": "James Aspnes. IOAutomata, 2.2.1 Safety properties. Yale University online course notes (undated).",
+          "url": "https://cs.yale.edu/homes/aspnes/pinewiki/IOAutomata.html",
+          "use": "支持通过归纳说明性质在所有可达状态保持；该性质不必是可达状态集合的完整刻画。"
+        }
+      ],
+      "title": "Why Can No Number of Legal Moves Reach (2,2)?",
+      "summary": "The level starts at (1,2) and permits only “left +2,” “right +2,” or swapping the two entries. Failed testing is not a proof. Qiao Ning instead checks all three legal operations for an arbitrary state (x,y), obtaining a parity restriction that covers every finite button sequence.",
+      "storyParagraphs": [
+        "Qiao Ning is tuning a two-counter level. A state is a pair of nonnegative integers (x,y), the starting state is (1,2), and the only buttons are “left +2,” “right +2,” and “swap.” She sets (2,2) as the target because it looks close. The tester tries several routes and never reaches it, but that could still mean the search is incomplete.",
+        "Instead of recording a few specific button presses, she writes all three legal rules from an arbitrary state (x,y): (x,y)→(x+2,y), (x,y)→(x,y+2), and (x,y)→(y,x). The first two increase x+y by exactly 2, while the swap leaves the sum unchanged. Therefore all three preserve the parity of x+y.",
+        "The starting state (1,2) has sum 3, which is odd. The property holds at step 0. If the sum is odd after any step, then no matter which legal button is pressed next, parity remains unchanged. By this inductive reasoning, every state reached by any finite legal button sequence still has an odd sum, not merely the states on routes already tested.",
+        "The target (2,2) has sum 4, which is even, so it is excluded immediately. Qiao Ning then checks candidate (0,1): its sum 1 is also odd, so parity does not exclude it. But among the three buttons, the two additions only increase the sum and the swap leaves it unchanged. The sum can never fall from the starting value 3 to 1, so (0,1) is still unreachable.",
+        "She finally chooses a target that really is reachable: (2,3). This time she does not declare success merely because its sum 5 is odd. She finds an actual route: from (1,2), press left +2 to get (3,2), then swap to get (2,3). Matching parity removes only one obstacle; actual reachability still needs other conditions or a concrete route. Qiao Ning saves this route as an automated test for the level.",
+        "When the level is saved, the target box has changed from (2,2) to (2,3), while the three buttons remain unchanged. Two labels sit beside the record: “(2,2): parity conflict” and “(0,1): matching parity, but sum cannot decrease.” She reruns the automated test; after two steps, the target box lights up, while both unreachable examples remain in the explanation panel."
+      ],
+      "overall": "Invariance methods begin by fixing the state space and all legal operations, then proving that a quantity or relation is preserved at every step. The initial state plus stepwise preservation extends to every finite legal sequence. A target with a different invariant value can be ruled out; a target with the same value is merely not excluded by that condition.",
+      "conceptName": "Invariance",
+      "explanationParagraphs": [
+        "For arbitrary (x,y), the three rules change x+y to x+y+2, x+y+2, and x+y, so I=(x+y) mod 2 is preserved at every step. The initial state has I=1, so target (2,2) with I=0 is unreachable.",
+        "(0,1) also has I=1 but is still unreachable because the sum cannot decrease, while (2,3) has a concrete two-step route. Matching I is not sufficient for reachability."
+      ],
+      "module": {
+        "intro": "Write the three buttons as rules valid for arbitrary (x,y), then use the initial state and stepwise preservation to cover every finite sequence.",
+        "diagramTitle": "From Parity Preservation at Every Step to Excluding (2,2)",
+        "diagramSteps": [
+          "Fix the nonnegative-integer state space and all three legal operations",
+          "Prove for arbitrary (x,y) that every operation preserves sum parity",
+          "Use initial I=1 and stepwise preservation to extend to every finite legal sequence",
+          "Use (2,2) and (0,1) to show the consequences of different and matching I values",
+          "Confirm that (2,3) is actually reachable with a concrete two-step route"
+        ],
+        "diagramStepNotes": [
+          "The only buttons are left +2, right +2, and swap; there is no −2, +1, reset, or free reassignment.",
+          "The sum changes by +2, +2, and 0, so I=(x+y) mod 2 is unchanged in all cases.",
+          "The start (1,2) has I=1 at step 0. If I=1 at any step, all three rules keep I=1 at the next step, so the property holds after every finite number of moves.",
+          "(2,2) is excluded because I=0; (0,1) has I=1 but remains unreachable because the sum cannot decrease.",
+          "(1,2)→(3,2)→(2,3) is a real reachable route and is saved as an automated test."
+        ],
+        "mapping": [
+          "Three buttons → the complete set of legal operations the proof must cover.",
+          "Target (2,2) → a state excluded because its invariant value differs.",
+          "Candidate (0,1) → a state showing that matching the invariant still does not guarantee reachability.",
+          "Saved target (2,3) → a reachable state confirmed by a concrete legal route."
+        ],
+        "boundary": "The invariant depends on the current state space and the full set of allowed operations. Different invariant values are sufficient to rule out reachability; matching values are not sufficient. If the button set changes, preservation must be checked again, but adding a new button does not automatically mean the current parity property is broken. This proof concerns arbitrary finite legal sequences.",
+        "reflection": "Make two separate copies of the rules, adding “left +1” to one and “left +4” to the other while keeping the original three buttons. Calculate each new operation’s change to x+y. Which copy can retain the parity proof, and which cannot? Even when parity is preserved, why does (0,1) still warn against declaring reachability from matching I alone?"
+      },
+      "references": [
+        {
+          "id": "0541-invariance-ref-1",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, 5.4.3 The Invariant Principle. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "Supports using a property of the initial state together with preservation under every legal transformation to show that all reachable states retain the property, and using a different property value to rule out a target."
+        },
+        {
+          "id": "0541-invariance-ref-2",
+          "citation": "James Aspnes. IOAutomata, 2.2.1 Safety properties. Yale University online course notes (undated).",
+          "url": "https://cs.yale.edu/homes/aspnes/pinewiki/IOAutomata.html",
+          "use": "Supports proving by induction that a property holds in all reachable states; such a property need not provide a complete characterization of the reachable-state set."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-b-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-b-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-b-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -631,41 +1089,132 @@
       "fieldCode": "0541",
       "fieldTitle": "Mathematics",
       "fieldTitleZh": "数学",
-      "title": "The Fraction That Could Not Cross the Square",
-      "titleZh": "无法穿过正方形的分数",
-      "summary": "A mathematics apprentice seeks a fraction for a square's diagonal and forces both numerator and denominator to lose their claimed simplicity.",
-      "summaryZh": "数学学徒想替正方形对角线找到一个最简分数，最后却让分子和分母同时失去了“最简”。",
-      "storyParagraphs": [
-        "The palace floor required a square mosaic with a bronze strip running exactly from corner to corner. Supplier Ningce could cut only by whole subdivisions of his measuring rod, so he offered a prize for an exact fraction of the side length. He found 7/5, then 99/70, each close enough for ordinary carpentry, but the repeated royal pattern would magnify a tiny mismatch across two hundred tiles. The steward demanded the word exact before releasing payment.",
-        "Ningce assumed, for the sake of testing the claim, that the diagonal equalled a reduced fraction p/q, with p and q positive integers sharing no factor. For a unit square, the side relation required the diagonal squared to equal two, so p²/q² = 2 and therefore p² = 2q². The right-hand side was even. Since an odd integer squared remains odd, p could not be odd; he wrote p = 2k.",
-        "Substitution gave 4k² = 2q², or q² = 2k². The same parity check now forced q to be even. Ningce circled the original word reduced. Both p and q were divisible by two, contrary to the condition that they shared no factor. Reducing the pair and starting again would only repeat the descent. The impossibility came from assuming that an exact ratio of integers existed, provided every intervening step was valid.",
-        "The palace steward seized on the contradiction and accused Ningce's arithmetic rather than the assumption. Ningce spent the night checking the square relation, the parity step, and the cancellation. He also separated two questions the contract had mixed. A rational approximation could cut a strip within a stated tolerance; it could not become exact merely by adding more digits. The proof ruled out an exact fractional representation, not the construction of a useful physical strip.",
-        "At dawn the steward offered full payment if Ningce stamped 99/70 as exact. Refusing meant melting the bronze already cut and losing the palace account. Ningce crossed out the stamp. He specified a tolerance, chose a finer approximation, and replaced every tenth strip joint with an adjustable fitting so errors would not accumulate unseen. The palace withheld his bonus and opened the floor a week late, but no forged equality remained in the plans.",
-        "When the mosaic was finished, the diagonal strip met the far corner within the agreed tolerance. Ningce kept the chalkboard from the workshop. The fractions remained in a rising column, useful and increasingly close. Above them, the circled p and q were both marked even, and the small brass seal bearing the word EXACT lay face down in the chalk tray."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "数轴上能不能放一个“最小正刻度”",
+      "summaryZh": "陆弦要判断全部正有理数中是否存在最小元素。候选1/10、1/20、1/40不断向0靠近，却不能处理全体；她转而准确假设“存在一个最小正有理数r”，再从同一论域构造r/2。",
       "storyParagraphsZh": [
-        "宫殿地面要铺正方形拼花，再用铜条精确连接两角。供货人宁策的标尺只能按整格细分，于是他悬赏寻找边长的精确分数。他先算出七分之五，又找到七十分之九十九，日常木工已够用；可同一花纹要连续铺两百块，极小误差也会累积。宫廷管事要求他在付款前盖下“精确”二字。",
-        "宁策暂且假定，对角线确实等于一个最简分数 p/q，其中 p、q 为正整数且没有公因子。单位正方形的边长关系要求对角线平方等于二，所以 p²/q²=2，也就是 p²=2q²。右边是偶数；奇数平方仍是奇数，因此 p 不可能为奇数，只能写成 2k。",
-        "代回以后，4k²=2q²，可化为 q²=2k²，同样的奇偶检查又迫使 q 也是偶数。宁策圈住开头写的“最简”：p 与 q 都能被二整除，和“无公因子”直接冲突。即使继续约分，仍会掉回同样矛盾。只要中间推理无误，不可能来自别处，那项最初的精确分数假定便站不住。",
-        "宫廷管事咬定是宁策算错，不肯怀疑合同。宁策整夜复查正方形关系、奇偶判断和约分步骤，也把两件被合同混在一起的事拆开：有理数近似可以在注明误差时指导切割，却不会因为小数更多就变成精确相等。这段推理排除的是整数之比的精确表达，不是实物铜条无法做到足够合用。",
-        "天亮时，管事提出只要把七十分之九十九盖成“精确”，便照付全款。拒绝就要熔掉已切铜条，失去王宫订单。宁策划掉印章，改写允许误差，选用更细近似，并在每十段设置可调接头，避免偏差悄悄累积。宫廷扣掉他的奖金，开殿也迟了一周，图纸上却没有留下伪造的等号。",
-        "拼花完成后，斜向铜条在约定误差内抵达远角。宁策保留了工坊黑板。那些越来越接近的分数仍排在上面，各有用途；其上方，p 与 q 都被圈成偶数。写着“精确”的小铜印面朝下，躺在粉笔槽里。"
+        "陆弦在做一条抽象有理数数轴。界面需要一个开关：“显示最小正刻度”。同事先把标记放在1/10，很快有人指出1/20更小；再试1/40也一样。候选不断向0靠近，却始终找不到一个可以保证停下的位置。更多候选只会继续搜索，不会自动变成一般证明。",
+        "她先固定论域Q+={a/b:a,b为正整数}，采用通常大小关系，不限制分母、显示精度或格点数量。要判断的命题是“Q+没有最小元素”；它的准确否定是：存在r∈Q+，使得对所有s∈Q+都有r≤s。陆弦暂时接受这个否定，准备只用它和有理数定义继续推。",
+        "因为r∈Q+，可以写成r=a/b，其中a、b都是正整数。她构造s=a/(2b)=r/2。由于b是正整数，2b仍是正整数，a也仍为正整数，所以s仍属于同一个Q+；这一步没有换论域，也没有预先使用“没有最小元素”这一目标结论。",
+        "接下来比较大小：r>0，所以s=r/2>0，并且s<r。于是同一个Q+里出现了一个合法s，却比假定的最小元素r更小；这直接冲突于“对所有s∈Q+都有r≤s”。冲突来自最小性假设和已接受定义，因此该存在假设不能保留。所以Q+没有最小元素；这里撤销的是“存在最小者”的假设，不只是排除某个具体候选。",
+        "陆弦再切到独立对照集合T={n/100:n为正整数}。对任意n≥1，都有n/100≥1/100，所以1/100确实是T的最小元素；1/200不属于T，因为它不能写成正整数n除以100。原来的r/2构造在这个论域里不保证仍是合法对象。",
+        "页面保存时，Q+模式下“最小正刻度”开关保持关闭；T模式下则显示1/100。旁边仍留着1/10、1/20、1/40三个旧候选，只作为有限搜索为何不足的记录。数轴上的0仍标成边界点，没有被写成正有理数，也没有暗示不断减半能在有限步到达0。"
       ],
-      "conceptName": "Proof by contradiction",
+      "overallZh": "反证法先准确写出目标命题的否定，暂时接受它，并只使用该假设与已接受前提进行有效推理。若由此得到真正的逻辑冲突，就撤销该假设。矛盾不能来自偷换论域、错误代数、测量误差或循环使用目标结论。",
       "conceptNameZh": "反证法",
-      "explanationParagraphs": [
-        "Proof by contradiction assumes the negation of a desired conclusion and derives an impossibility through valid reasoning from accepted premises, thereby rejecting the assumption. The contradiction must genuinely depend on the target assumption rather than an unrelated error or circularity. The method proves logical claims and cannot turn numerical approximation into equality."
-      ],
       "explanationParagraphsZh": [
-        "反证法先假定目标结论的否定，再从已接受前提出发，以有效推理导出矛盾，从而排除该假定并确立结论。矛盾必须确实依赖目标假设，而非计算错误、循环论证或其他不一致。它证明逻辑命题，不能把近似自动变成相等，也不替代对前提的检查。"
+        "假设存在最小正有理数r=a/b，则a,b为正整数，s=a/(2b)=r/2仍属于Q+，且0<s<r，与“对所有s都有r≤s”直接冲突。",
+        "在T={n/100:n为正整数}中，n≥1推出n/100≥1/100，所以1/100确为最小；1/200不属于T。论域一变，原构造可能不再合法。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "先写命题与准确否定，再检查构造对象始终留在同一论域，并确认矛盾确实依赖所作假设。",
+        "diagramTitle": "假设最小r存在，为什么r/2会直接冲突",
+        "diagramSteps": [
+          "固定Q+并写出“没有最小元素”的准确否定",
+          "暂时假设存在r∈Q+且对所有s都有r≤s",
+          "写r=a/b并构造s=a/(2b)",
+          "验证s∈Q+且0<s<r形成直接矛盾",
+          "用T={n/100:n为正整数}检查新论域为何可以有最小元素"
+        ],
+        "diagramStepNotes": [
+          "Q+由a,b为正整数的a/b组成；0不属于Q+。",
+          "假设内容必须包括r∈Q+以及对所有合法s的最小性条件。",
+          "a,b为正整数，所以2b仍为正整数，s=a/(2b)仍合法。",
+          "r>0推出0<r/2<r，与“对所有s有r≤s”冲突。",
+          "T限定n为正整数，所以n≥1且n/100≥1/100；1/100在T中最小，1/200对应n=1/2而不属于T。"
+        ],
+        "mapping": [
+          "向0靠近的1/10、1/20、1/40 → 有限候选搜索无法证明全体命题。",
+          "假定的r=a/b → 从任意最小候选出发，而非特例。",
+          "s=r/2 → 在同一Q+内构造的冲突对象。",
+          "T={n/100:n为正整数} → 指定新论域后最小元素存在的独立对照。"
+        ],
+        "boundary": "0是Q+的下确界但不属于Q+，因此不是最小正有理数；不断减半也不表示有限步到达0。固定分母、有限精度或其他离散集合可能有最小元素。反证中的冲突必须来自目标假设和一致前提，而非错误代数、循环论证或换论域。",
+        "reflection": "有人也把T={n/100:n为正整数}中的1/100减半，得到更小的1/200。为什么这不能推翻T的最小值？请指出与Q+的r/2推导相比，哪一项对象合法性检查没有通过。"
+      },
+      "referencesZh": [
+        {
+          "id": "0541-proof-by-contradiction-ref-1",
+          "citation": "Richard Hammack. Book of Proof, 3rd edition (edition 3.4), 6.1 Proving Statements with Contradiction. Richard Hammack (2018; revised 2025).",
+          "url": "https://richardhammack.github.io/BookOfProof/Main.pdf",
+          "use": "支持假定目标命题的否定、经有效推理得到与该假定冲突，再撤销假定的证明结构；本篇例子不是历史发现叙事。"
+        },
+        {
+          "id": "0541-proof-by-contradiction-ref-2",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, 1.8 Proof by Contradiction. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "支持反证结构及对推理有效性的检查；正有理数最小值算例由有理数定义和次序关系独立演算，不归为教材中的历史案例。"
+        }
+      ],
+      "title": "Can a Number Line Display a “Smallest Positive Tick”?",
+      "summary": "Lu Xian needs to decide whether the positive rational numbers contain a smallest element. Candidates 1/10, 1/20, and 1/40 move closer and closer to 0 but cannot settle the entire set. She instead assumes precisely that a smallest positive rational r exists and constructs r/2 within the same domain.",
+      "storyParagraphs": [
+        "Lu Xian is building an abstract rational-number line. The interface needs a switch labeled “show smallest positive tick.” A colleague first places the marker at 1/10, and someone quickly points out that 1/20 is smaller; 1/40 fails in the same way. The candidates keep moving toward 0, but there is never a point where she can guarantee that the search should stop. More candidates only continue the search; they do not automatically become a general proof.",
+        "She first fixes the domain Q+={a/b : a,b are positive integers}, with the usual ordering and no restriction on denominators, display precision, or grid size. The claim to decide is “Q+ has no smallest element.” Its exact negation is: there exists r∈Q+ such that for every s∈Q+, r≤s. Lu Xian temporarily accepts this negation and proceeds using only it and the definition of rational numbers.",
+        "Because r∈Q+, it can be written as r=a/b, where a and b are positive integers. She constructs s=a/(2b)=r/2. Since b is a positive integer, 2b is also a positive integer, and a remains positive, so s still belongs to the same Q+. This step does not change domains and does not assume in advance the target conclusion that there is no smallest element.",
+        "Now she compares sizes. Since r>0, s=r/2>0, and s<r. Thus the same Q+ contains a valid s that is smaller than the supposedly smallest element r. This directly conflicts with “for every s∈Q+, r≤s.” The conflict follows from the minimality assumption together with the accepted definition, so the existence assumption cannot be retained. Therefore Q+ has no smallest element: what has been rejected is the existence of a minimum, not merely one specific candidate.",
+        "Lu Xian then switches to an independent comparison set T={n/100 : n is a positive integer}. For every n≥1, n/100≥1/100, so 1/100 really is the smallest element of T. The number 1/200 is not in T because it cannot be written as a positive integer n divided by 100. The earlier r/2 construction is not guaranteed to stay legal in this new domain.",
+        "When the page is saved, the “smallest positive tick” switch remains off in Q+ mode, while T mode displays 1/100. The old candidates 1/10, 1/20, and 1/40 remain beside the line only as a record of why finite search is insufficient. The point 0 remains marked as a boundary point, not as a positive rational, and repeated halving is not presented as reaching 0 in finitely many steps."
+      ],
+      "overall": "Proof by contradiction begins by writing the exact negation of the target claim, temporarily accepting it, and reasoning only from that assumption together with accepted premises. If valid reasoning produces a genuine logical conflict, the assumption is rejected. The conflict must not come from changing domains, algebraic error, measurement error, or circular use of the desired conclusion.",
+      "conceptName": "Proof by contradiction",
+      "explanationParagraphs": [
+        "Assume that a smallest positive rational r=a/b exists, where a and b are positive integers. Then s=a/(2b)=r/2 is still in Q+ and satisfies 0<s<r, directly contradicting “r≤s for every s.”",
+        "In T={n/100 : n is a positive integer}, n≥1 implies n/100≥1/100, so 1/100 really is the minimum, while 1/200 is not in T. Changing the domain can make the earlier construction invalid."
+      ],
+      "module": {
+        "intro": "Write the claim and its exact negation first, then check that every constructed object remains in the same domain and that the contradiction genuinely depends on the assumption.",
+        "diagramTitle": "Assume a Smallest r Exists—Why Does r/2 Create a Direct Conflict?",
+        "diagramSteps": [
+          "Fix Q+ and write the exact negation of “there is no smallest element”",
+          "Temporarily assume r∈Q+ and r≤s for every s∈Q+",
+          "Write r=a/b and construct s=a/(2b)",
+          "Verify s∈Q+ and 0<s<r, producing a direct contradiction",
+          "Use T={n/100 : n is a positive integer} to check why the new domain can have a minimum"
+        ],
+        "diagramStepNotes": [
+          "Q+ consists of a/b with a and b positive integers; 0 is not in Q+.",
+          "The assumption must include both r∈Q+ and its minimality relative to every legal s.",
+          "Because a and b are positive integers, 2b is a positive integer and s=a/(2b) remains legal.",
+          "r>0 implies 0<r/2<r, contradicting “r≤s for every s.”",
+          "T restricts n to positive integers, so n≥1 and n/100≥1/100. Its minimum is 1/100; 1/200 would require n=1/2 and is not in T."
+        ],
+        "mapping": [
+          "1/10, 1/20, 1/40 moving toward 0 → finite candidate search cannot prove the universal claim.",
+          "Assumed r=a/b → an arbitrary supposed minimum rather than a special case.",
+          "s=r/2 → a conflicting object constructed within the same Q+.",
+          "T={n/100 : n is a positive integer} → an independent comparison showing that this specified new domain has a minimum."
+        ],
+        "boundary": "0 is the infimum of Q+ but is not in Q+, so it is not the smallest positive rational. Repeated halving also does not mean reaching 0 in finitely many steps. Sets with fixed denominators, finite precision, or other discrete domains can have a smallest element. A contradiction must arise from the target assumption and consistent premises, not from algebraic error, circular reasoning, or switching domains.",
+        "reflection": "Someone also halves 1/100 in T={n/100 : n is a positive integer}, obtaining the smaller 1/200. Why does this fail to refute T’s minimum? Compared with the r/2 argument in Q+, identify the domain-membership check that fails."
+      },
+      "references": [
+        {
+          "id": "0541-proof-by-contradiction-ref-1",
+          "citation": "Richard Hammack. Book of Proof, 3rd edition (edition 3.4), 6.1 Proving Statements with Contradiction. Richard Hammack (2018; revised 2025).",
+          "url": "https://richardhammack.github.io/BookOfProof/Main.pdf",
+          "use": "Supports the proof structure of assuming the negation of the target statement, deriving a conflict with that assumption through valid reasoning, and then rejecting the assumption; this example is not presented as a historical-discovery narrative."
+        },
+        {
+          "id": "0541-proof-by-contradiction-ref-2",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, 1.8 Proof by Contradiction. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "Supports the logical structure of contradiction and the need to check validity of the reasoning; the positive-rational minimum example here is independently derived from the definition and ordering of rational numbers rather than attributed as a historical example from the textbook."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-15-pdc-b-review.md",
+        "edits": [
+          "science-mechanism-mixed-15-pdc-b-edit-pass1-evidence.json",
+          "science-mechanism-mixed-15-pdc-b-edit-pass2-evidence.json"
+        ]
       }
     },
     {

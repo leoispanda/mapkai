@@ -106,15 +106,15 @@ batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	
 batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	3	0522-habitat-fragmentation	Habitat fragmentation	栖息地破碎化	concept-fable	看似仍有大片森林却被道路切成孤岛	integrated
 batch-008	05	0531	Chemistry	化学	1	0531-chemical-equilibrium	Chemical equilibrium	化学平衡	mechanism-explainer	染坊两只槽之间的颜色不断交换却保持比例	integrated
 batch-008	05	0531	Chemistry	化学	2	0531-activation-energy	Activation energy	活化能	mechanism-explainer	堆满木柴的窑炉仍需要第一簇足够热的火	integrated
-batch-008	05	0531	Chemistry	化学	3	0531-stoichiometry	Stoichiometry	化学计量	mechanism-fable	烟火师多加一勺粉末反而失去整片蓝色	integrated
-batch-008	05	0532	Earth sciences	地球科学	1	0532-plate-tectonics	Plate tectonics	板块构造	mechanism-fable	两座城每年重测边界石却都以为对方在移动	integrated
+batch-008	05	0531	Chemistry	化学	3	0531-stoichiometry	Stoichiometry	化学计量	mechanism-explainer	烟火师多加一勺粉末反而失去整片蓝色	integrated
+batch-008	05	0532	Earth sciences	地球科学	1	0532-plate-tectonics	Plate tectonics	板块构造	mechanism-explainer	两座城每年重测边界石却都以为对方在移动	integrated
 batch-008	05	0532	Earth sciences	地球科学	2	0532-deep-time	Deep time	深时	concept-fable	峡谷守门人用人的一生衡量岩层而屡屡误判	integrated
-batch-008	05	0532	Earth sciences	地球科学	3	0532-rock-cycle	Rock cycle	岩石循环	mechanism-fable	一块石头穿过山、河、熔炉与海底的漫长旅程	integrated
-batch-008	05	0533	Physics	物理学	1	0533-conservation-of-energy	Conservation of energy	能量守恒	mechanism-fable	水车停下后能量并没有像账外硬币一样消失	integrated
+batch-008	05	0532	Earth sciences	地球科学	3	0532-rock-cycle	Rock cycle	岩石循环	mechanism-explainer	一块石头穿过山、河、熔炉与海底的漫长旅程	integrated
+batch-008	05	0533	Physics	物理学	1	0533-conservation-of-energy	Conservation of energy	能量守恒	mechanism-explainer	水车停下后能量并没有像账外硬币一样消失	integrated
 batch-008	05	0533	Physics	物理学	2	0533-entropy	Entropy	熵	concept-fable	冰窖主人发现冷不会自行从热屋搬回来	integrated
 batch-008	05	0533	Physics	物理学	3	0533-field-concept	Field concept	场概念	concept-fable	没有绳索接触却让铁针同时转向的广场	integrated
-batch-008	05	0541	Mathematics	数学	1	0541-invariance	Invariance	不变量	mechanism-fable	盒子不断换位时唯一没有改变的石子总数	integrated
-batch-008	05	0541	Mathematics	数学	2	0541-proof-by-contradiction	Proof by contradiction	反证法	mechanism-fable	制图师暂时相信一张不可能存在的完整假地图	integrated
+batch-008	05	0541	Mathematics	数学	1	0541-invariance	Invariance	不变量	mechanism-explainer	盒子不断换位时唯一没有改变的石子总数	integrated
+batch-008	05	0541	Mathematics	数学	2	0541-proof-by-contradiction	Proof by contradiction	反证法	mechanism-explainer	制图师暂时相信一张不可能存在的完整假地图	integrated
 batch-008	05	0541	Mathematics	数学	3	0541-mathematical-induction	Mathematical induction	数学归纳法	mechanism-fable	只检查第一阶和相邻阶就证明整座灯塔楼梯	integrated
 batch-008	05	0542	Statistics	统计学	1	0542-sampling-bias	Sampling bias	抽样偏差	concept-fable	只询问能穿过高门的人便得出全城身高	integrated
 batch-008	05	0542	Statistics	统计学	2	0542-regression-to-the-mean	Regression to the mean	均值回归	concept-fable	最佳一炉面包之后奖励与惩罚都被误认成原因	integrated
