@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "mapkai-story-song-genre-policy.v1",
+  "basisPointTotal": 10000,
+  "language": "en",
+  "balanceScope": "Active new story-song series; preserve the existing library unless the user requests new editions.",
+  "styles": [
+    {"id": "ethereal-bell-pop", "name": "空灵叮咚流行", "basisPoints": 4000,
+     "sound": "Airy and spacious; delicate bell-like or glassy plucked motifs, soft piano and acoustic colour, light pulse and a clear close adult voice. The user's sensory description governs; this is not a mandatory folk-pop label."},
+    {"id": "memphis-hip-hop", "name": "孟菲斯 Hip-hop", "basisPoints": 2100,
+     "sound": "Bright bouncy Memphis-inspired groove, rounded deep 808s, dry snare/claps, playful triplet hi-hats, acoustic plucks, sparse cowbell and clear melodic rap with a sung hook."},
+    {"id": "acoustic-folk-pop", "name": "原声 Folk-pop", "basisPoints": 780,
+     "sound": "Guitar-led, grounded and conversational, with acoustic bass and restrained percussion."},
+    {"id": "soul-pop", "name": "温暖 Soul-pop", "basisPoints": 780,
+     "sound": "Rhodes or piano, warm bass and a gentle pocket, with expressive clear vocals."},
+    {"id": "electronic-art-pop", "name": "电子 Art-pop", "basisPoints": 780,
+     "sound": "Spacious synth layers and evolving pulses support observations, tests and a discovery turn."},
+    {"id": "indie-pop", "name": "轻盈 Indie-pop", "basisPoints": 780,
+     "sound": "A clean rhythmic guitar/piano motif, a light backbeat and a tuneful restrained refrain."},
+    {"id": "funk-pop", "name": "律动 Funk-pop", "basisPoints": 780,
+     "sound": "A warm bass groove, clean syncopated accents and tight drums support movement and handoffs."}
+  ],
+  "otherGenreRule": "The five other styles divide the remaining 39% equally: 7.8% each. If the user changes that pool, preserve the 39% total and divide it equally across the requested pool.",
+  "roundingRule": "Finite batches use approximate whole-song quotas. Carry accepted-series counts forward; never claim an exact percentage that the actual integer allocation does not achieve.",
+  "selectionRule": "Choose from the story first, then balance suitable choices across the series. A hybrid counts once under its primary direction."
+}

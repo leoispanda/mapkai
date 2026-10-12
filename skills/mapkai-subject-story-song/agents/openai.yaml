@@ -1,0 +1,4 @@
+interface:
+  display_name: "MapKAI 学科故事歌曲"
+  short_description: "Turn subject stories into songs with a balanced genre mix"
+  default_prompt: "Use $mapkai-subject-story-song to turn each requested subject into a culturally grounded story song, choose its music from the story, and apply the saved genre balance."
