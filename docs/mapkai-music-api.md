@@ -19,6 +19,12 @@ No music-generation API key is configured in MapKAI. This entry is a prompt-prep
 
 The default title is `MapKAI — Look Again`, with a theme introducing MapKAI's curiosity, knowledge maps, stories, learning paths and Toolbox. The default creation direction is upbeat Memphis hip-hop with clear vocals and light guitar accents, following the owner's stated preference. Rock, symphonic, folk rap and acoustic remain available; the rock prompt calls for melodic vocals and moderate guitars. The two-minute MapKAI brand preview is featured before the existing Dutch Horizons versions; the earlier city-name experiments retain their audio and IDs but are no longer featured.
 
+## Paired song and lyric production
+
+The owner requires every future MapKAI song to be created and published together with its lyrics. For agent-led production, first write and review the exact lyrics, then supply those lyrics to music generation. Keep the generation record and downloaded original audio matched by provider song ID and full SHA-256 hashes. After rendering, compare the performed words with the reviewed lyrics and create line cues from the real audio. Resolve omissions, repetitions or changed wording before publication; do not invent times or drop source words just to make a cue validator pass.
+
+Upload a complete audio-and-lyrics package only after the lyric text, lyric hash, full sung-line cue coverage and actual audio duration pass verification. Preserve original source records privately if a verified performed transcript differs from the generation prompt. Verify public playback and the currently sung line together on Music and any subject page that links to the song. A song is not complete merely because its audio is playable; the single-line player must also show its matched lyrics. This is the agent production workflow, not an automatic alignment service or an additional public upload field.
+
 ## Endpoints
 
 - `GET /api/music/auth`: `{ owner, uploadConfigured }`. Checks the current founder cookie and binding availability without accessing R2.
