@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "mapkai-lock.v1",
+  "ownerThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
+  "automationId": "mapkai-30",
+  "runId": "video-hourly-20261012T203407Z-0b27a986",
+  "fieldCode": "0031",
+  "lastStage": "CREATOR_CONTEXT_RECOVERY_REQUIRED",
+  "updatedAt": "2026-10-12T20:47:52.359Z",
+  "externalSubmissionConfirmed": false,
+  "status": "RETRY_NEXT_HOURLY_RUN",
+  "nextStage": "RECOVER_REAL_CREATOR_POLICY_CONTEXT",
+  "workingDirectory": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986",
+  "generationSubmissionsThisRun": 0,
+  "publicationsThisRun": 0,
+  "actualSourceReviewDecision": "NOT_REVIEWED",
+  "actualVideoReviewDecision": "NOT_REVIEWED",
+  "sharedLock": "review/module-batches/locks/shared-writer-release.lock",
+  "recovery": {
+    "field": "0031",
+    "requestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0031-subsubject-creator-1",
+    "state": "VERIFIED_NOT_SENT",
+    "applied": true
+  },
+  "lastError": "Actual production job was never staged or sent. Separate policy-bootstrap context was sent but lost its provisional route after an account-loading error; reload recovered the homepage, with no verified canonical context or response. This is an operator-observed failure, not model output.",
+  "nextScheduledLocal": "2026-10-12T23:30:00+02:00",
+  "servicesStopped": true,
+  "unrelatedManifestItemsPreserved": 76,
+  "researchEvidence": {
+    "path": "mapkai-video-factory/packs/subsubjects/0031-personal-skills-and-development/research-evidence.json",
+    "sha256": "86c2a0f49f2b804bfd852cebd866225d2c06481ff9e466d95d359f35c4e52975",
+    "claims": 24,
+    "sources": [
+      {
+        "id": "isced-detailed",
+        "title": "UNESCO UIS ISCED-F2013 Detailed field descriptions2015",
+        "url": "https://www.uis.unesco.org/sites/default/files/medias/fichiers/2025/04/international-standard-classification-of-education-fields-of-education-and-training-2013-detailed-field-descriptions-2015-en.pdf",
+        "snapshot": "evidence/2b5e7d55f053a13aadc001efbf94b5daf2a9ed09d961b11636e93c1de68567e4.txt",
+        "sha256": "2b5e7d55f053a13aadc001efbf94b5daf2a9ed09d961b11636e93c1de68567e4",
+        "capturedAt": "2026-10-12T20:41:09.948754+00:00",
+        "originalPdf": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986/research/isced-detailed.pdf",
+        "originalPdfSha256": "3f463bb91d7ae89f17f12fcbd53d7746db46c81c140e49183518b8d7804e8564"
+      },
+      {
+        "id": "lifecomp",
+        "title": "European Commission JRC LifeComp2020 full report",
+        "url": "https://epale.ec.europa.eu/system/files/2025-07/lifecomp-KJNA30246ENN%20%281%29.pdf",
+        "snapshot": "evidence/694b3302da64462cba3c71358f4616834c222aba7089e6f36637dcdb78e6eebf.txt",
+        "sha256": "694b3302da64462cba3c71358f4616834c222aba7089e6f36637dcdb78e6eebf",
+        "capturedAt": "2026-10-12T20:41:09.949239+00:00",
+        "originalPdf": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986/research/lifecomp.pdf",
+        "originalPdfSha256": "67921fbdfdba82364a21303c789de73adce6930d3b6d77383f8a7a3500abf608"
+      },
+      {
+        "id": "oecd-aar",
+        "title": "OECD Anticipation-Action-Reflection Cycle2019 concept note",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2019/05/oecd-future-of-education-and-skills-2030-anticipation-action-reflection-cycle-for-2030_8b098156/39105d40-en.pdf",
+        "snapshot": "evidence/b9282320458943f4752ed373003c850558372ad38b4cb782226d092467764b78.txt",
+        "sha256": "b9282320458943f4752ed373003c850558372ad38b4cb782226d092467764b78",
+        "capturedAt": "2026-10-12T20:41:09.949241+00:00",
+        "originalPdf": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986/research/oecd-aar.pdf",
+        "originalPdfSha256": "412a7ef21a8ced5a6a6b75f19359e343332254fd328209151d505540decd9cd9"
+      }
+    ]
+  },
+  "bootstrapObservation": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986/policy-bootstrap-observation.json",
+  "humanActionRequired": false,
+  "automaticContinuation": "23:30 Europe/Amsterdam, recover actual policy context before any production send. No Notebook generation started and no publication occurred."
+}

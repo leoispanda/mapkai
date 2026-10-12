@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "mapkai-lock.v1",
+  "ownerThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
+  "automationId": "mapkai-30",
+  "runId": "video-hourly-20261012T203407Z-0b27a986",
+  "fieldCode": "0031",
+  "lastStage": "CREATOR_CONTEXT_RECOVERY_REQUIRED",
+  "updatedAt": "2026-10-12T20:47:52.359Z",
+  "externalSubmissionConfirmed": false,
+  "status": "RETRY_NEXT_HOURLY_RUN",
+  "nextStage": "RECOVER_REAL_CREATOR_POLICY_CONTEXT",
+  "workingDirectory": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-hourly-20261012/video-hourly-20261012T203407Z-0b27a986",
+  "generationSubmissionsThisRun": 0,
+  "publicationsThisRun": 0,
+  "actualSourceReviewDecision": "NOT_REVIEWED",
+  "actualVideoReviewDecision": "NOT_REVIEWED",
+  "sharedLock": "review/module-batches/locks/shared-writer-release.lock",
+  "recovery": {
+    "field": "0031",
+    "requestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0031-subsubject-creator-1",
+    "state": "VERIFIED_NOT_SENT",
+    "applied": true
+  },
+  "lastError": "Actual production job was never staged or sent. Separate policy-bootstrap context was sent but lost its provisional route after an account-loading error; reload recovered the homepage, with no verified canonical context or response. This is an operator-observed failure, not model output.",
+  "nextScheduledLocal": "2026-10-12T23:30:00+02:00",
+  "servicesStopped": true,
+  "unrelatedManifestItemsPreserved": 76
+}
