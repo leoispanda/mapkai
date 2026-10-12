@@ -18108,6 +18108,15 @@ const categorySongTracks = {
     },
     style: { zh: "律动放克流行", en: "Groove funk-pop" },
   },
+  "01": {
+    id: "738f6165-d1c7-4d94-864b-a88f484318d9",
+    title: "Show Me What Changed",
+    core: {
+      zh: "通过提问、解释、比较和再一次尝试，把活动变成可检验的理解。",
+      en: "Ask for reasons, compare what changes, and use feedback in the next attempt.",
+    },
+    style: { zh: "提问回应式 Soul-pop", en: "Call-and-response soul-pop" },
+  },
 };
 
 function waitForCategorySongPlayer() {
