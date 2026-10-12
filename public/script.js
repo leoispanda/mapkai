@@ -41,6 +41,7 @@ let storyRatingsLoaded = false;
 let storyRatingStatus = "";
 let publicPreviewCatalogPromise = null;
 let categoryVideoRenderToken = 0;
+let categorySongRenderToken = 0;
 
 // Keep existing story data in place while the public article rebuild is underway.
 const publicContentVisibility = {
@@ -18025,6 +18026,112 @@ function renderCategoryVideoPreview(category) {
   });
 }
 
+const categorySongTracks = {
+  "02": {
+    id: "392f97bd-307f-4e0d-b047-bfe78ae2f219",
+    title: "Leave a Little Room",
+    core: {
+      zh: "在创作、倾听与理解中，为另一个人的声音留一点空间。",
+      en: "Make, listen, and interpret with room for a voice beside your own.",
+    },
+    style: { zh: "独立民谣 · 室内流行", en: "Indie folk · Chamber pop" },
+  },
+  "05": {
+    id: "bcfa3547-7b75-44bd-ab1c-dc711762ad7b",
+    title: "Let the World Reply",
+    core: {
+      zh: "认真核查观察，用证明展开推理，也把数据中的不确定留在记录里。",
+      en: "Check observations, follow the proof, and keep uncertainty visible in the data.",
+    },
+    style: { zh: "电影感电子艺术流行", en: "Cinematic electronic art-pop" },
+  },
+  "06": {
+    id: "82953edb-e939-4c66-9c3d-51cfff0aec1d",
+    title: "One Step, Then Another",
+    core: {
+      zh: "把需求拆成清楚的步骤，检查系统怎样运行，也记得保护隐私与人的选择。",
+      en: "Turn needs into clear steps, check the system, and put people and privacy first.",
+    },
+    style: { zh: "旋律 Hip-hop · 轻盈合成器流行", en: "Melodic hip-hop · Light synth-pop" },
+  },
+};
+
+function waitForCategorySongPlayer() {
+  if (typeof window.MapKAIMusicDock?.play === "function") return Promise.resolve(window.MapKAIMusicDock);
+  return new Promise((resolve, reject) => {
+    const finish = () => {
+      if (typeof window.MapKAIMusicDock?.play !== "function") return;
+      clearTimeout(timer);
+      window.removeEventListener("mapkai:music-dock-ready", finish);
+      resolve(window.MapKAIMusicDock);
+    };
+    const timer = setTimeout(() => {
+      window.removeEventListener("mapkai:music-dock-ready", finish);
+      reject(new Error("Music player unavailable"));
+    }, 10000);
+    window.addEventListener("mapkai:music-dock-ready", finish);
+    finish();
+  });
+}
+
+function renderCategorySong(category) {
+  const token = ++categorySongRenderToken;
+  const card = document.getElementById("categorySong");
+  const button = document.getElementById("categorySongPlay");
+  const status = document.getElementById("categorySongStatus");
+  if (!card || !button || !status) return;
+  card.hidden = true;
+  button.onclick = null;
+  button.disabled = false;
+  button.removeAttribute("aria-busy");
+  status.textContent = "";
+  const song = Object.hasOwn(categorySongTracks, category.code) ? categorySongTracks[category.code] : null;
+  if (!song) return;
+  const language = currentLanguage === "zh" ? "zh" : "en";
+  const labels = language === "zh"
+    ? { label: "从一首歌走近这个领域", ai: "AI 生成", meta: "英文 · 约 2 分钟", play: "播放歌曲", loading: "正在载入…", retry: "重试播放", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
+    : { label: "A song for this field", ai: "AI-generated", meta: "English · About 2 min", play: "Play song", loading: "Loading…", retry: "Retry song", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
+  document.getElementById("categorySongLabel").textContent = labels.label;
+  document.getElementById("categorySongAI").textContent = labels.ai;
+  document.getElementById("categorySongTitle").textContent = song.title;
+  document.getElementById("categorySongCore").textContent = song.core[language];
+  document.getElementById("categorySongMeta").textContent = `${labels.meta} · ${song.style[language]}`;
+  button.textContent = labels.play;
+  button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
+  card.hidden = false;
+  const isCurrent = () => token === categorySongRenderToken && currentLanguage === language
+    && normalizeRoute(window.location.pathname) === `/categories/${category.code}` && !card.hidden;
+  button.onclick = async () => {
+    if (!isCurrent() || button.disabled) return;
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    button.textContent = labels.loading;
+    button.setAttribute("aria-label", `${labels.loading} · ${song.title}`);
+    status.textContent = "";
+    try {
+      const player = await waitForCategorySongPlayer();
+      if (!isCurrent()) return;
+      if (!song.id || await player.play(song.id) !== true) throw new Error("Song unavailable");
+      if (isCurrent()) {
+        button.textContent = labels.play;
+        button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
+        status.textContent = labels.playing;
+      }
+    } catch {
+      if (isCurrent()) {
+        button.textContent = labels.retry;
+        button.setAttribute("aria-label", `${labels.retry} · ${song.title}`);
+        status.textContent = labels.error;
+      }
+    } finally {
+      if (isCurrent()) {
+        button.disabled = false;
+        button.removeAttribute("aria-busy");
+      }
+    }
+  };
+}
+
 function renderCategoryDetail(code) {
   const category = categories.find((item) => item.code === code) || categories[0];
   const eyebrow = document.getElementById("categoryDetailEyebrow");
@@ -18042,6 +18149,7 @@ function renderCategoryDetail(code) {
       <span class="category-detail-description">${escapeHtml(cardDisplay.displayDescription || t("categoryCopy", stats.practicalCount))}</span>`;
   }
 
+  renderCategorySong(category);
   renderCategoryVideoPreview(category);
 
   renderPassport("categoryPassport", {

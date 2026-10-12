@@ -64,7 +64,7 @@
   document.head.append(musicStyle);
   const startMusicDock = () => {
     const script = document.createElement('script');
-    script.src = '/music/dock.js?v=dock-1'; document.head.append(script);
+    script.src = '/music/dock.js?v=dock-subjects-1'; document.head.append(script);
   };
   if (globalThis.MapKAILyricsSync) startMusicDock();
   else {

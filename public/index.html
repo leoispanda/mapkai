@@ -63,10 +63,10 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.291" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.291-subject-music-20261012" />
     <link rel="stylesheet" href="/map3d.css?v=0.1.291" />
     <link rel="stylesheet" href="/site-shell.css?v=0.1.291" />
-    <script src="/site-shell.js?v=music-dock-1" defer></script>
+    <script src="/site-shell.js?v=music-subjects-1" defer></script>
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
   <body data-mapkai-page="main">
@@ -678,6 +678,18 @@
           <h1 id="categoryDetailTitle">Knowledge category</h1>
           <p id="categoryDetailCopy"></p>
         </div>
+        <section class="category-song" id="categorySong" hidden aria-labelledby="categorySongTitle">
+          <div class="category-song-copy">
+            <div class="category-song-heading"><p class="category-song-label" id="categorySongLabel"></p><span class="category-song-ai" id="categorySongAI"></span></div>
+            <h2 id="categorySongTitle"></h2>
+            <p class="category-song-core" id="categorySongCore"></p>
+            <p class="category-song-meta" id="categorySongMeta"></p>
+          </div>
+          <div class="category-song-action">
+            <button class="button secondary" id="categorySongPlay" type="button" aria-describedby="categorySongAI categorySongStatus"></button>
+            <p class="category-song-status" id="categorySongStatus" role="status"></p>
+          </div>
+        </section>
         <section class="mapkai-video-preview" id="categoryVideoPreview" hidden aria-labelledby="categoryVideoPreviewTitle">
           <div class="mapkai-video-preview-intro">
             <div>
@@ -763,6 +775,6 @@
     <script src="/content/management-column.js?v=0.1.291"></script>
     <script src="/content/management-lesson-stories.js?v=0.1.291"></script>
     <script src="/content/management-lesson-references.js?v=0.1.291"></script>
-    <script src="/script.js?v=0.1.291-music-brand-20261011"></script>
+    <script src="/script.js?v=0.1.291-subject-music-20261012"></script>
   </body>
 </html>

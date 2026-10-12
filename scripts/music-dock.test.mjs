@@ -13,21 +13,24 @@ const catalog = [firstId, secondId].map((id, index) => ({ id, title: `Song ${ind
   lyricsTiming: [{ line: 1, start: 2, end: 4 }, { line: 2, start: 6, end: 8 }],
 }));
 const deferred = () => {
-  let resolve;
-  const promise = new Promise(done => { resolve = done; });
-  return { promise, resolve };
+  let resolve, reject;
+  const promise = new Promise((done, fail) => { resolve = done; reject = fail; });
+  return { promise, resolve, reject };
 };
 const flush = async () => { for (let count = 0; count < 12; count++) await Promise.resolve(); };
 
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
-function harness({ saved = null, pageLoaded = null, pageFailed = false } = {}) {
+function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false } = {}) {
   const ids = new Map(), elements = [];
   class Target {
     addEventListener(type, callback, options = {}) {
       const list = this.listeners?.get(type) || [];
       list.push({ callback, once: options.once });
       (this.listeners ||= new Map()).set(type, list);
+    }
+    removeEventListener(type, callback) {
+      this.listeners?.set(type, (this.listeners.get(type) || []).filter(entry => entry.callback !== callback));
     }
     dispatchEvent(event) {
       for (const entry of [...(this.listeners?.get(event.type) || [])]) {
@@ -71,7 +74,12 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false } = {}) {
     set src(value) { this.source = value; this.currentTime = 0; this.readyState = 0; this.duration = NaN; }
     get src() { return this.source; }
     event(type) { const event = { type, target: this }; document.dispatchEvent(event); this.dispatchEvent(event); }
-    play() { this.playCalls++; this.paused = false; queueMicrotask(() => this.event('play')); return Promise.resolve(); }
+    play() {
+      this.playCalls++;
+      if (playFailure) return Promise.reject(Object.assign(new Error('Media unavailable'), { name: 'NotAllowedError' }));
+      this.paused = false; queueMicrotask(() => this.event('play'));
+      return playGate?.promise || Promise.resolve();
+    }
     pause() { const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
     load() { this.paused = true; this.readyState = 0; this.currentTime = 0; }
     metadata(duration = 120) { this.readyState = 1; this.duration = duration; this.event('loadedmetadata'); }
@@ -112,7 +120,17 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false } = {}) {
         update();
       },
       pause: () => { pageCalls.pause++; pageState.audio?.pause(); pageState.pending = false; update(); },
-      play: id => { intent(); pageCalls.play++; choose(id); pageState.audio.play(); update(); },
+      play: id => {
+        intent(); pageCalls.play++; choose(id);
+        const audio = pageState.audio; pageState.pending = true; pageState.failed = false; update();
+        audio.play().then(() => {
+          if (pageState.audio !== audio) return;
+          pageState.pending = false; update();
+        }, () => {
+          if (pageState.audio !== audio) return;
+          pageState.pending = false; pageState.failed = true; update();
+        });
+      },
       move: direction => {
         const index = pageState.tracks.findIndex(track => track.id === pageState.track?.id);
         const next = pageState.tracks[index + direction];
@@ -132,13 +150,13 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false } = {}) {
     AbortSignal: { timeout: () => undefined },
     fetch: async () => {
       fetchCalls++; const data = await request.promise;
-      return { ok: true, json: async () => vm.runInContext(`JSON.parse(${JSON.stringify(JSON.stringify(data))})`, context) };
+      return { ok: !catalogFailure, json: async () => vm.runInContext(`JSON.parse(${JSON.stringify(JSON.stringify(data))})`, context) };
     },
   });
   vm.runInContext(syncSource, context, { filename: 'music/lyrics-sync.js' });
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
-    request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState,
+    request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
     session: () => JSON.parse(stored.get('mapkaiMusicDock')),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     tick: () => { now += 1100; },
@@ -226,4 +244,113 @@ test('dock shows a single original timed line, clears real gaps, and follows see
   h.ownAudio.currentTime = 4; h.ownAudio.event('timeupdate'); assert.equal(h.control('line').textContent, '');
   h.ownAudio.currentTime = 6.5; h.ownAudio.event('seeking'); assert.equal(h.control('line').textContent, 'Second line');
   h.ownAudio.currentTime = 2.5; h.ownAudio.event('seeked'); assert.equal(h.control('line').textContent, 'First line');
+});
+
+test('subject API rejects non-UUID values without catalog or audio reads', async () => {
+  const h = harness();
+  for (const id of [null, undefined, 7, {}, '', `/api/music/audio?id=${firstId}`, `${firstId} `]) {
+    assert.equal(await h.dock.play(id), false);
+  }
+  assert.equal(h.fetchCalls(), 0); assert.equal(h.ownAudio.playCalls, 0); assert.equal(h.ownAudio.src, undefined);
+});
+
+test('subject API lazily validates a public ID and uses the existing standalone audio', async () => {
+  const h = harness(), play = h.dock.play(secondId.toUpperCase());
+  assert.equal(h.fetchCalls(), 1); assert.equal(h.ownAudio.src, undefined);
+  h.request.resolve({ tracks: catalog }); assert.equal(await play, true); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.control('select').value, secondId);
+  assert.equal(new URL(h.ownAudio.src).searchParams.get('id'), secondId);
+});
+
+test('absent and unsafe catalog tracks cannot be selected through the subject API', async () => {
+  for (const tracks of [catalog.filter(track => track.id !== secondId),
+    catalog.map(track => track.id === secondId ? { ...track, url: 'https://untrusted.example/audio.mp3' } : track)]) {
+    const h = harness(), play = h.dock.play(secondId);
+    h.request.resolve({ tracks }); assert.equal(await play, false);
+    assert.equal(h.ownAudio.playCalls, 0); assert.equal(h.ownAudio.src, undefined);
+  }
+});
+
+test('the latest subject choice wins a shared delayed standalone catalog', async () => {
+  const h = harness(), older = h.dock.play(firstId), newer = h.dock.play(secondId);
+  assert.equal(await older, false); assert.equal(h.fetchCalls(), 1);
+  h.request.resolve({ tracks: catalog }); assert.equal(await newer, true); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.control('select').value, secondId);
+});
+
+test('Pause and lesson playback immediately cancel a subject catalog waiter', async () => {
+  for (const cancel of [h => h.control('play').onclick(), h => h.lesson()]) {
+    const h = harness(), play = h.dock.play(secondId);
+    await cancel(h); await flush(); assert.equal(await play, false);
+    h.request.resolve({ tracks: catalog }); await flush();
+    assert.equal(h.ownAudio.playCalls, 0);
+  }
+});
+
+test('explicit subject choice cannot be overwritten by first saved restore', async () => {
+  const saved = { version: 1, id: firstId, seconds: 47.5, volume: 0.3, collapsed: false };
+  const h = harness({ saved }), play = h.dock.play(secondId);
+  h.request.resolve({ tracks: catalog }); assert.equal(await play, true); await flush();
+  h.ownAudio.metadata(); h.pagehide();
+  assert.equal(h.control('select').value, secondId); assert.equal(h.ownAudio.currentTime, 0);
+  assert.equal(h.session().id, secondId); assert.equal(h.session().seconds, 0); assert.equal(h.ownAudio.volume, 0.3);
+});
+
+test('subject API reports catalog and standalone media failures', async () => {
+  for (const options of [{ catalogFailure: true }, { playFailure: true }]) {
+    const h = harness(options), play = h.dock.play(firstId);
+    h.request.resolve({ tracks: catalog }); assert.equal(await play, false);
+    assert.equal(h.ownAudio.paused, true);
+  }
+});
+
+test('new subject choices and dropdown selection cancel older pending media starts', async () => {
+  for (const dropdown of [false, true]) {
+    const gate = deferred(), h = harness({ playGate: gate }), older = h.dock.play(firstId);
+    h.request.resolve({ tracks: catalog }); await flush(); assert.equal(h.ownAudio.playCalls, 1);
+    let newer;
+    if (dropdown) { h.control('select').value = secondId; h.control('select').onchange(); }
+    else newer = h.dock.play(secondId);
+    assert.equal(await older, false); gate.resolve(); if (newer) assert.equal(await newer, true); await flush();
+    assert.equal(h.control('select').value, secondId); assert.equal(h.ownAudio.paused, false);
+  }
+});
+
+test('subject API awaits Music page playback and never starts a second audio', async () => {
+  const gate = deferred(), h = harness({ pageLoaded: true, playGate: gate });
+  let settled = false; const play = h.dock.play(secondId).then(value => { settled = true; return value; });
+  await flush(); assert.equal(settled, false); assert.equal(h.pageCalls.play, 1); assert.equal(h.ownAudio.playCalls, 0);
+  gate.resolve(); assert.equal(await play, true); assert.equal(h.pageState.track.id, secondId);
+});
+
+test('Pause cancels pending standalone and Music page media promises immediately', async () => {
+  for (const pageLoaded of [null, true]) {
+    const gate = deferred(), h = harness({ pageLoaded, playGate: gate }), play = h.dock.play(firstId);
+    if (pageLoaded === null) h.request.resolve({ tracks: catalog });
+    await flush(); await h.control('play').onclick(); assert.equal(await play, false);
+    gate.resolve(); await flush();
+    const audio = pageLoaded === null ? h.ownAudio : h.pageState.audio;
+    assert.equal(audio.paused, true);
+  }
+});
+
+test('subject API reports Music page media errors and cancellation without extra toggles', async () => {
+  const failure = harness({ pageLoaded: true, playFailure: true });
+  assert.equal(await failure.dock.play(firstId), false); assert.equal(failure.ownAudio.playCalls, 0);
+  const gate = deferred(), h = harness({ pageLoaded: true, playGate: gate }), play = h.dock.play(firstId);
+  await flush(); h.page.play(secondId); assert.equal(await play, false);
+  gate.resolve(); await flush();
+  assert.equal(h.pageState.track.id, secondId); assert.equal(h.pageState.audio.paused, false);
+  assert.equal(h.pageCalls.toggle, 0); assert.equal(h.ownAudio.playCalls, 0);
+});
+
+test('Music page subject selection waits for the public catalog and honors Pause', async () => {
+  for (const cancel of [false, true]) {
+    const h = harness({ pageLoaded: false }), play = h.dock.play(secondId);
+    assert.equal(h.pageCalls.load, 1); assert.equal(h.pageCalls.play, 0);
+    if (cancel) { await h.control('play').onclick(); assert.equal(await play, false); }
+    h.request.resolve(); if (!cancel) assert.equal(await play, true); await flush();
+    assert.equal(h.pageCalls.play, cancel ? 0 : 1); assert.equal(h.ownAudio.playCalls, 0);
+    if (!cancel) assert.equal(h.pageState.track.id, secondId);
+  }
 });

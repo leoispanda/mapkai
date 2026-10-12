@@ -35,6 +35,7 @@
   const $ = name => document.getElementById(`music-dock-${name}`);
   let tracks = [], selected = null, loaded = false, loading = false, failed = false, libraryFailed = false, pending = false, complete = false;
   let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
+  let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -158,23 +159,74 @@
     resumeSeconds = seconds; ownAudio.src = track.url; render();
     if (seconds !== null) ownAudio.load();
   }
+  function cancelRequestedPlay() { requestedPlay?.finish(false); }
   function pause() {
+    cancelRequestedPlay();
     sequence++; pending = false;
     if (page()) page().pause();
     else { ownAudio.pause(); render(); }
     persist(true);
   }
   async function start() {
-    if (!selected) return;
+    if (!selected) return false;
     if (ownAudio.error) ownAudio.load();
     if (ownAudio.ended && ownAudio.readyState > 0) ownAudio.currentTime = 0;
     const request = ++sequence; pending = true; failed = false; complete = false; render();
-    try { await ownAudio.play(); if (request === sequence) { pending = false; render(); } }
-    catch (error) { if (request === sequence) { pending = false; failed = error.name !== 'AbortError'; render(); } }
+    try {
+      await ownAudio.play();
+      if (request !== sequence) return false;
+      pending = false; render(); return !page() && active(state());
+    } catch (error) {
+      if (request === sequence) { pending = false; failed = error.name !== 'AbortError'; render(); }
+      return false;
+    }
+  }
+  // Subject cards share this player and public catalog; IDs never become URLs.
+  // Resolve false immediately when a newer choice, pause, or page intent wins.
+  function playTrack(id) {
+    if (typeof id !== 'string' || !uuid.test(id)) return Promise.resolve(false);
+    explicitSelection = true; pause();
+    return new Promise(resolve => {
+      let settled = false, cleanup = () => {};
+      const operation = { finish(success) {
+        if (settled) return;
+        settled = true; cleanup();
+        if (requestedPlay === operation) { requestedPlay = null; pending = false; render(); }
+        resolve(success);
+      } };
+      requestedPlay = operation; pending = true; failed = false; render();
+      (async () => {
+        try {
+          const before = state();
+          if (!before.loaded || before.libraryFailed) await load();
+          if (requestedPlay !== operation) return;
+          const current = state();
+          const track = current.loaded && !current.libraryFailed && current.tracks.find(item => validTrack(item) && item.id.toLowerCase() === id.toLowerCase());
+          if (!track) { operation.finish(false); return; }
+          const bridge = page();
+          if (!bridge) { select(track); operation.finish(await start()); return; }
+          const check = () => {
+            if (requestedPlay !== operation) return;
+            const playing = state();
+            if (playing.track?.id !== track.id || playing.libraryFailed || playing.failed || playing.audio?.error) operation.finish(false);
+            else if (!playing.pending) operation.finish(active(playing));
+          };
+          // The existing Music page play method returns no promise. Its update
+          // event reports both successful media starts and playback failures.
+          const update = () => Promise.resolve().then(check);
+          window.addEventListener('mapkai:music-update', update);
+          cleanup = () => window.removeEventListener('mapkai:music-update', update);
+          delegatingPlay = true;
+          try { bridge.play(track.id); } finally { delegatingPlay = false; }
+          check();
+        } catch { operation.finish(false); }
+      })();
+    });
   }
   async function toggle() {
     const current = state();
     if (current.pending || loading || active(current)) { pause(); return; }
+    cancelRequestedPlay();
     const request = ++sequence;
     if (!current.loaded || current.libraryFailed) { pending = true; await load(); if (request !== sequence) return; pending = false; }
     if (page()) { page().toggle(); return; }
@@ -183,6 +235,7 @@
     start();
   }
   function move(direction) {
+    cancelRequestedPlay();
     sequence++; pending = false;
     if (page()) { page().move(direction); return; }
     const index = tracks.findIndex(track => track.id === selected?.id), next = tracks[index + direction];
@@ -193,7 +246,7 @@
     restoreDone = true; restoring = true;
     if (saved) { volume = saved.volume; if (page()) page().volume(volume); else ownAudio.volume = volume; }
     const track = current.tracks.find(item => item.id === saved?.id);
-    if (track && !current.track) {
+    if (track && !current.track && !explicitSelection) {
       if (page()) page().restore(track.id, saved.seconds);
       else select(track, saved.seconds);
     }
@@ -205,6 +258,7 @@
   $('collapse').onclick = () => { collapse(!dock.classList.contains('is-collapsed')); render(); persist(true); };
   $('select').onchange = () => {
     const track = state().tracks.find(item => item.id === $('select').value); if (!track) return;
+    cancelRequestedPlay(); explicitSelection = true;
     sequence++; pending = false;
     if (page()) page().play(track.id); else { select(track); start(); }
   };
@@ -231,7 +285,7 @@
     const index = tracks.findIndex(track => track.id === selected.id), next = tracks[index + 1];
     if (next) { select(next); start(); } else { pending = false; complete = true; render(); }
   });
-  ownAudio.addEventListener('error', () => { sequence++; pending = false; failed = true; render(); });
+  ownAudio.addEventListener('error', () => { cancelRequestedPlay(); sequence++; pending = false; failed = true; render(); });
   for (const event of ['timeupdate', 'play', 'pause', 'playing', 'seeking', 'seeked', 'durationchange', 'waiting']) ownAudio.addEventListener(event, render);
   // Starting a lesson's narration or video pauses background music as well.
   document.addEventListener('play', event => {
@@ -242,12 +296,17 @@
     } else if (pending || loading || current.pending || active(current)) pause();
   }, true);
   window.addEventListener('mapkai:music-update', () => { restore(); render(); });
-  window.addEventListener('mapkai:music-intent', () => { sequence++; pending = false; });
-  window.addEventListener('mapkai:music-ready', () => { sequence++; ownAudio.pause(); restore(); render(); });
+  window.addEventListener('mapkai:music-intent', () => {
+    if (delegatingPlay) return;
+    cancelRequestedPlay(); sequence++; pending = false; explicitSelection = true;
+  });
+  window.addEventListener('mapkai:music-ready', () => { cancelRequestedPlay(); sequence++; ownAudio.pause(); restore(); render(); });
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   window.addEventListener('resize', render); reducedMotion.addEventListener?.('change', render);
-  window.addEventListener('pagehide', () => persist(true));
+  window.addEventListener('pagehide', () => { cancelRequestedPlay(); sequence++; persist(true); });
   window.addEventListener('pageshow', () => { restore(); render(); });
+  window.MapKAIMusicDock = Object.freeze({ play: playTrack });
+  window.dispatchEvent(new Event('mapkai:music-dock-ready'));
   render(); restore();
   // Visitors who have not started listening incur no catalog/audio read.
   if (saved?.id && !page()) load();
