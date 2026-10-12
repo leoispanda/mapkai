@@ -8,40 +8,134 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Dye Hall That Never Stopped",
-      "titleZh": "从未停工的染料厅",
-      "summary": "The contents of two dye rooms remain constant all day, so the manager assumes the carrying has ceased while workers keep passing through the door.",
-      "summaryZh": "两间染料厅的存量整日不变，管事以为搬运已经停止，门后却始终有人来回。",
-      "storyParagraphs": [
-        "The dyehouse had promised forty bolts of the same blue for the governor's procession. In the red room, handlers could turn red liquid into blue; in the blue room, others could reverse it. At first the red shelves were crowded, so twenty jars crossed toward blue during a bell while only five returned. Blue stock rose quickly. Manager Qiao took the early gain as proof that the room would soon fill completely and promised the dyers more than the vats could reliably supply. He even sent away a backup supplier before checking a full day's ledger.",
-        "By noon the inventories settled at sixty red jars and forty blue. For three bells the numbers did not change. Wages were due, and Qiao decided the crossings had ended; he could dismiss the night handlers and spend the money on cloth. Clerk Yan asked for one bell before the order was sealed. She tied white string around twelve jars in each room. At the next count, twelve marked jars had crossed each way. The totals looked still because the two rates matched, not because the doorway was idle.",
-        "Qiao still needed more blue before sunset. He poured thirty additional jars into the red room and ordered the clerk to count every bell. The next line read twenty red-to-blue and twelve blue-to-red: blue gained eight. Later the difference narrowed, then vanished at a new composition. Qiao had obtained more product, but not the impossible all-blue room he had sold. If he shipped short, he lost the governor; if he bought more red liquid, the emergency price would erase the month's profit.",
-        "A builder offered a polished double doorway that let handlers pass faster. Qiao almost paid him after hearing that both counts could double, but Yan laid the two ledgers together: faster crossings would reach the same balance sooner under unchanged conditions, not move its final position. Temperature or composition could alter that position, depending on the particular conversion, but a smoother route alone could not. Qiao bought raw liquid instead, kept both shifts, and accepted the loss rather than thinning the dye and hiding it in the shipment.",
-        "The last bolt left the hall after midnight. The contract was filled, but Qiao's profit drawer held only three coins, and the promised bonus had to wait. Before locking up, Yan counted seventy-two jars on one side and fifty-eight on the other for the third time. The figures were unchanged. Behind her, the hinge kept sounding, and the white strings were now tied around jars on the opposite shelves."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "A和B几乎不再变化，反应是不是结束了",
+      "summaryZh": "虚构A⇌B模型从[A]=6、[B]=0开始，A下降、B上升并逐渐接近2:4。分析员把有限时间的近似平台与理论平衡值分开，再用正逆速率、理想化加A扰动和给定催化设置检查动态平衡。",
       "storyParagraphsZh": [
-        "染坊答应为巡游染出四十匹颜色完全一致的蓝布。红厅的工人能把红液转成蓝液，蓝厅也有人把它转回去。开工第一刻，红架很满，一响铃有二十罐搬向蓝厅，只有五罐返回，蓝液迅速增加。管事乔叔把这段涨势当成了最终结果，当场答应了远高于平日的交货量，还没看完一整天账目，就退掉了备用供货商。蒸汽把窗纸染成淡蓝，他把那片颜色也当成了好兆头。",
-        "午后，两厅存量停在红六十、蓝四十，连续三次点数都没变。工钱快结了，乔叔认定搬运已经结束，准备撤掉夜班，把钱拿去买布。账房小严请他再等一刻。她在两厅各挑十二只罐系上白线。下一次开门，十二只系线罐恰好各自去了对面。数字静止，是因为两个方向的速度相等，门后并没有停工。",
-        "乔叔仍要在日落前多得蓝液，便往红厅添了三十罐，叫小严每响一次铃就记数。第一行是红转蓝二十、蓝转红十二，蓝厅净增八罐；后来差额逐渐缩小，最后又在新的组成上相等。他得到了更多蓝液，却得不到自己许诺的“全变成蓝”。少交会失去官府订单，加价买红液又会吃掉整月利润。",
-        "木匠来兜售一扇光滑的双开门，说工人来回都能快一倍。乔叔听见“快一倍”便想付钱，小严却把两页账并排放好：在温度与配料不变时，双向都加快，只会更早到达原来的稳定组成，不会凭空多出最终蓝液。温度或组成改变时，稳定位置可能随具体转化改变；单靠更顺的通道不行。乔叔只得高价补买原料，保留两班工人，也没有用兑水遮掩短缺。",
-        "最后一匹布在半夜运走。订单保住了，乔叔的钱匣却只剩三枚铜钱，答应工人的奖金也要延期。被退掉的供货商不肯恢复旧价，染坊下月只敢少接两成订单。屋外的雨还在敲瓦。关门前，小严第三次点到红七十二、蓝五十八，合计仍是一百三十，数目已连续三次不动。她身后的门轴还在轻响，白线已经出现在对面的木架上。"
+        "分析员沈岑要为培训材料解释一个虚构、恒温、固定体积的可逆反应A⇌B。模型起始设[A]=6、[B]=0 mmol/L，总浓度6。设k_f=0.02/min、k_r=0.01/min，速率规则为v_f=k_f[A]、v_r=k_r[B]，两速率单位都是mmol/(L·min)。所以t=0时正向速率0.12、逆向0；随着B生成，逆向反应也开始。",
+        "模拟继续运行时，[A]下降、[B]上升，正向速率逐渐降低、逆向逐渐升高。它们不会在有限时间突然“啪”地到达精确平衡。模拟到200 min时，屏幕约为[A]=2.01、[B]=3.99；曲线已经很平，但仍只是接近理论极限。",
+        "沈岑随后用模型方程算理论平衡，而不是把有限时刻读数当精确值。平衡要求0.02[A]=0.01[B]，即[B]/[A]=2；总浓度6，所以理论值是[A]=2、[B]=4。只有在这个理论平衡状态下，两方向速率才精确同为0.04 mmol/(L·min)，且都非零。",
+        "为了检查扰动，模拟器提供一个理想化“浓度设定”操作：从理论平衡状态出发，在温度和体积保持不变的模型里把[A]瞬时设为3、[B]保持4，相当于增加1 mmol/L A。这个按钮只改变模拟中的浓度，不模拟移液、混合或体积变化。随后体系重新封闭，此时v_f=0.06、v_r=0.04，B开始净增加。",
+        "扰动后总浓度为7，新平衡仍满足[B]/[A]=2，因此理论值为[A]=7/3、[B]=14/3。沈岑再启用模型的“催化设置”：它被明确定义为把k_f和k_r都翻倍。这个给定设置使松弛更快，但二者比值不变，所以同温下理论平衡组成仍是7/3和14/3。",
+        "她最后把两种画面并排：200 min时约2.01/3.99的有限模拟读数，以及方程算出的理论2/4。旁边保留正逆速率。她在培训稿中把“曲线平了，反应完成”改成“本模型的组成已接近理论平衡”，让非零的两条速率留在同一页。若换成实际体系，还要另查物质交换和速率规则，不能只搬用这张图的设置。"
       ],
-      "conceptName": "Chemical equilibrium",
+      "overallZh": "化学平衡是给定条件下可逆反应正逆速率相等的动态状态，浓度不必相等。本模型从6/0出发，在有限时间逐渐接近理论2/4，近似平台不等于精确平衡。组成扰动会打破原平衡；催化可加快接近过程，却不改变同温下的平衡常数。",
       "conceptNameZh": "化学平衡",
-      "explanationParagraphs": [
-        "Chemical equilibrium is a dynamic state in which forward and reverse rates of a reversible reaction are equal, leaving macroscopic composition constant. It does not require equal amounts of reactants and products. Composition, pressure, or temperature can shift equilibrium; a catalyst speeds both directions toward equilibrium without changing its position under fixed conditions."
-      ],
       "explanationParagraphsZh": [
-        "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。具体移动方向须结合反应与条件判断。"
+        "模型从6/0开始，t=0时速率0.12/0 mmol/(L·min)；200 min约2.01/3.99 mmol/L。理论平衡由速率式和总量算得精确2/4 mmol/L，此时正逆速率才都精确为0.04 mmol/(L·min)。",
+        "理想扰动把A设3、B保4 mmol/L后，速率为0.06/0.04 mmol/(L·min)；模型催化设置规定两个k同时翻倍，只加快松弛，不改变同温下1:2平衡比例。"
       ],
-      "mode": "mechanism-fable",
-      "status": "approved",
+      "moduleZh": {
+        "intro": "把有限时间的近似平台、理论平衡值、扰动和催化设置分开，避免从一条平线直接推断微观状态。",
+        "diagramTitle": "从6:0到接近2:4，正逆速率怎样靠近",
+        "diagramSteps": [
+          "从[A]=6、[B]=0计算初始正逆速率",
+          "跟踪组成变化如何让正向下降、逆向上升",
+          "用方程求理论2:4并与有限时刻近似值区分",
+          "理想化增加A后重新计算0.06与0.04并观察松弛",
+          "在给定双k翻倍设置下比较到达速度与最终组成"
+        ],
+        "diagramStepNotes": [
+          "k_f=0.02/min、k_r=0.01/min；t=0时v_f=0.02×6=0.12、v_r=0 mmol/(L·min)。",
+          "B出现后逆向反应立即非零；200 min约A=2.01、B=3.99。",
+          "理论平衡A=2、B=4 mmol/L，此时v_f=v_r=0.04 mmol/(L·min)。",
+          "固定温度/体积模型中理想设A=3、B=4 mmol/L，随后重新封闭，v_f=0.06>v_r=0.04 mmol/(L·min)。",
+          "催化设置明确定义k_f、k_r都翻倍；这是模型比较，不是所有真实催化剂的定量规律。"
+        ],
+        "mapping": [
+          "6→约2.01的A轨迹与0→约3.99的B轨迹 → 有限时间松弛。",
+          "理论2/4值 → 由模型规则求出的平衡极限。",
+          "理想A浓度设定 → 明确的组成扰动而非现实加液步骤。",
+          "双k翻倍设置 → 保持k_f/k_r不变的可比催化模型。"
+        ],
+        "boundary": "本例规定一级速率式，数值只作教学。若催化后仍用同温下相同的A⇌B一级形式，k_f/k_r须保持原平衡比；真实催化路径可能引入新步骤或速率式，不能一律照搬“双k翻倍”。真实平台还可能来自极慢反应、仪器分辨率不足或开放稳态；实际加料也涉及体积与混合。",
+        "reflection": "把200 min的四舍五入读数[A]=2.01、[B]=3.99 mmol/L代入给定速率式：正逆速率是否为零、是否恰好相等？这能怎样帮助你检查“曲线近乎水平，所以反应停止”的说法？"
+      },
+      "referencesZh": [
+        {
+          "id": "0531-chemical-equilibrium-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.1 Chemical Equilibria. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-1-chemical-equilibria",
+          "use": "支持动态平衡中正逆速率相等、组成稳定而浓度不必相等的基本概念。"
+        },
+        {
+          "id": "0531-chemical-equilibrium-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.3 Shifting Equilibria: Le Châtelier’s Principle. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle",
+          "use": "支持组成扰动使体系离开原平衡，以及固定温度下催化主要改变达到平衡的速度而非平衡组成。"
+        }
+      ],
       "qualityGate": {
-        "reviewRounds": 3,
-        "rewriteRounds": 2,
+        "reviewRounds": 4,
+        "rewriteRounds": 3,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-14-pdc-b-review.md",
+        "edits": [
+          "science-mechanism-mixed-14-pdc-b-edit-pass1-evidence.json",
+          "science-mechanism-mixed-14-pdc-b-edit-pass2-evidence.json",
+          "science-mechanism-mixed-14-pdc-b-edit-pass3-evidence.json"
+        ]
+      },
+      "title": "A and B Hardly Change Anymore—Has the Reaction Ended?",
+      "summary": "A fictional A⇌B model starts at [A]=6 and [B]=0. A falls and B rises, gradually approaching 2:4. The analyst separates a finite-time near-plateau from the theoretical equilibrium values, then checks dynamic equilibrium using forward and reverse rates, an idealized A perturbation, and a defined catalyst setting.",
+      "storyParagraphs": [
+        "Analyst Shen Cen needs to explain a fictional reversible reaction A⇌B for training materials, at constant temperature and fixed volume. The model starts at [A]=6 and [B]=0 mmol/L, for a total concentration of 6. It sets k_f=0.02/min and k_r=0.01/min, with rate laws v_f=k_f[A] and v_r=k_r[B]. Both rates are in mmol/(L·min). At t=0 the forward rate is therefore 0.12 and the reverse rate zero; as B forms, the reverse reaction starts as well.",
+        "As the simulation continues, [A] falls and [B] rises. The forward rate gradually decreases while the reverse rate increases. They do not suddenly snap to exact equilibrium at a finite moment. At 200 min, the screen shows approximately [A]=2.01 and [B]=3.99; the curves are already very flat, but the values are still only approaching the theoretical limit.",
+        "Shen Cen then calculates the theoretical equilibrium from the model equations rather than treating a finite-time reading as exact. Equilibrium requires 0.02[A]=0.01[B], so [B]/[A]=2. With total concentration 6, the theoretical values are [A]=2 and [B]=4. Only at this theoretical equilibrium state are the two directional rates exactly equal at 0.04 mmol/(L·min), and both remain nonzero.",
+        "To test a perturbation, the simulator provides an idealized “concentration setting” operation. Starting from the theoretical equilibrium state, it sets [A]=3 while [B] remains 4, with temperature and volume fixed, equivalent to increasing A by 1 mmol/L. The control changes only the simulated concentration; it does not model pipetting, mixing, or a volume change. The system is then closed again, with v_f=0.06 and v_r=0.04, so B begins to increase net.",
+        "After the perturbation, total concentration is 7. The same rate rules still apply, so the new equilibrium requires [B]/[A]=2, giving theoretical values [A]=7/3 and [B]=14/3. Shen Cen then activates the model’s “catalyst setting,” explicitly defined as doubling both k_f and k_r. This specified comparison relaxes to equilibrium faster, but their ratio is unchanged, so the theoretical equilibrium composition at the same temperature remains 7/3 and 14/3.",
+        "She ends by placing two views side by side: the finite simulation reading of about 2.01/3.99 at 200 min and the theoretical 2/4 calculated from the equations. The forward and reverse rates remain beside them. In the training draft, she replaces “flat curves, reaction completed” with “the composition in this model is close to theoretical equilibrium,” keeping both nonzero rates on the same page. An actual system would require separate checks of material exchange and rate rules, rather than simply borrowing these settings."
+      ],
+      "overall": "Chemical equilibrium is a dynamic state in which the forward and reverse rates of a reversible reaction are equal under given conditions; the concentrations need not be equal. Starting from 6/0, this model approaches the theoretical 2/4 values over time, so its finite-time near-plateau is not exact equilibrium. A composition perturbation disrupts the original equilibrium. Catalysis can speed the approach without changing the equilibrium constant at the same temperature.",
+      "conceptName": "Chemical equilibrium",
+      "explanationParagraphs": [
+        "Starting at 6/0, the rates at t=0 are 0.12/0 mmol/(L·min); at 200 min the concentrations are about 2.01/3.99 mmol/L. The rate laws and total concentration give theoretical equilibrium at exactly 2/4 mmol/L, where both rates are exactly 0.04 mmol/(L·min).",
+        "After the ideal perturbation sets A to 3 and keeps B at 4 mmol/L, the rates are 0.06/0.04 mmol/(L·min). The model’s catalytic setting doubles both k values, speeding relaxation without changing the 1:2 equilibrium ratio at the same temperature."
+      ],
+      "module": {
+        "intro": "Separate the finite-time near-plateau, the theoretical equilibrium values, the perturbation, and the defined catalyst setting so that a flat curve is not used by itself to infer the microscopic state.",
+        "diagramTitle": "From 6:0 Toward 2:4—How the Forward and Reverse Rates Converge",
+        "diagramSteps": [
+          "Start at [A]=6 and [B]=0 and calculate the initial directional rates",
+          "Track how composition changes lower the forward rate and raise the reverse rate",
+          "Calculate the theoretical 2:4 equilibrium and distinguish it from the finite-time approximation",
+          "Ideally increase A, recalculate 0.06 and 0.04, and observe relaxation",
+          "Under the defined double-k setting, compare approach speed with final equilibrium composition"
+        ],
+        "diagramStepNotes": [
+          "k_f=0.02/min and k_r=0.01/min; at t=0, v_f=0.02×6=0.12 and v_r=0 mmol/(L·min).",
+          "Once B appears, the reverse reaction is immediately nonzero; at 200 min A≈2.01 and B≈3.99.",
+          "Theoretical equilibrium is A=2 and B=4 mmol/L, with v_f=v_r=0.04 mmol/(L·min).",
+          "In the fixed-temperature, fixed-volume model, ideally set A=3 and B=4 mmol/L, then close the system again: v_f=0.06>v_r=0.04 mmol/(L·min).",
+          "The catalyst setting is explicitly defined as doubling both k_f and k_r; this is a model comparison, not a quantitative rule for every real catalyst."
+        ],
+        "mapping": [
+          "A trajectory 6→about 2.01 and B trajectory 0→about 3.99 → finite-time relaxation.",
+          "Theoretical 2/4 values → the equilibrium limit calculated from the model rules.",
+          "Ideal A concentration setting → an explicit composition perturbation rather than a real liquid-addition procedure.",
+          "Double-k setting → a comparable catalyst model that keeps k_f/k_r unchanged."
+        ],
+        "boundary": "This teaching example specifies first-order rate laws. If the same A⇌B first-order form is retained after catalysis at the same temperature, k_f/k_r must remain consistent with the original equilibrium ratio. Real catalytic pathways may introduce different steps or rate laws, so “double both k values” is not a universal recipe. A real plateau can also reflect slow reaction, instrument limits, or an open-flow steady state; actual addition involves volume and mixing.",
+        "reflection": "Insert the rounded 200-min readings [A]=2.01 and [B]=3.99 mmol/L into the stated rate laws. Are the forward and reverse rates zero, and are they exactly equal? How does this check help you assess the claim that nearly flat curves mean the reaction has stopped?"
+      },
+      "references": [
+        {
+          "id": "0531-chemical-equilibrium-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.1 Chemical Equilibria. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-1-chemical-equilibria",
+          "use": "Supports the basic concept of dynamic equilibrium: equal forward and reverse rates, stable composition, and concentrations that need not be equal."
+        },
+        {
+          "id": "0531-chemical-equilibrium-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.3 Shifting Equilibria: Le Châtelier’s Principle. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle",
+          "use": "Supports the idea that a composition perturbation moves a system away from its original equilibrium and that, at fixed temperature, catalysis mainly changes how quickly equilibrium is reached rather than the equilibrium composition."
+        }
+      ],
+      "status": "approved"
     },
     {
       "id": "0531-activation-energy",
@@ -50,42 +144,133 @@
       "fieldCode": "0531",
       "fieldTitle": "Chemistry",
       "fieldTitleZh": "化学",
-      "title": "The Kiln Full of Wood That Would Not Burn",
-      "titleZh": "装满木柴却不燃烧的窑",
-      "summary": "A potter fills a kiln with dry wood capable of releasing heat, waits all night, and finds no fire has appeared by itself.",
-      "summaryZh": "窑里堆满能够放热的干柴，陶工等了一夜，火却没有自己出现。",
-      "storyParagraphs": [
-        "Potter Sen had promised two hundred roof tiles before the first autumn rain. He packed the new kiln with dry oak, shut its iron mouth, and waited because everyone knew burning wood released heat. By midnight the bricks were cold enough to touch. He had mistaken what a burning fire could release for what untouched wood could start on its own. Every quiet hour brought the rain closer and increased the penalty written into his contract.",
-        "Sen thrust a thick torch against the nearest log. Its surface blackened, then the flame shrank. Old burner Mei pulled him back and laid curls of shaving beneath finger-thin twigs. The small pieces warmed quickly; with air between them, enough encounters occurred with suitable energy and contact for flame to spread. Heat released by those first changes then lifted neighbouring wood over the same hurdle. A small beginning did not provide the whole kiln's heat. It opened a path to a process that could sustain itself.",
-        "The first chamber caught, but smoke soon rolled from the inspection hole and the flame weakened again. Sen had filled every gap to maximise fuel, leaving too little oxygen and blocking the flue. He wanted to keep firing—opening the hot kiln would ruin the glazed tiles already stacked near the mouth. Mei placed ten dry splinters in the clear draft and ten inside the smoky corner. Seven caught in the draft; only one smouldered in the corner. Fuel quantity alone was not deciding the rate.",
-        "The weak flame was already gambling the whole order. Sen ordered the kiln opened and pulled out the hot front tiles so the crew could clear an air channel. Thirty-seven pieces split with small sharp sounds in the cooler air as they rebuilt the passage and inserted a porous clay grate. The changed route lowered the difficulty of starting and maintaining combustion; it did not erase the energy difference between wood before and after burning.",
-        "At the second lighting, Mei used the same handful of shavings. This time the flame ran through the open grate and caught three thick logs before Sen finished turning the sandglass. He hung a small board beside the kiln and marked what had changed: warmer kindling, clear air gaps, an open flue, and a route from thin wood to thick. On later cold mornings he checked those four things before adding more fuel. The board saved him from repeating the expensive lesson that a full kiln and a possible fire were not yet a burning kiln.",
-        "The roof tiles reached the builders one morning late. Sen paid for the broken pieces and surrendered half his profit, but the roofs were covered before the rain. When he swept the kiln, the heavy torch he had tried first still leaned against the wall, barely scorched. In the grate below lay a palm-sized patch of grey ash where Mei's thin shavings had been."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "产物更低，模拟为什么还是判得很慢",
+      "summaryZh": "虚构单步模型中，反应物能量0、产物−20 kJ/mol，原路径峰顶却在60。课程编辑在固定温度和其他条件下比较60与35两条路径，再把升温、催化、ΔH和Ea分开。",
       "storyParagraphsZh": [
-        "陶工阿森答应在秋雨前交出两百片屋瓦。他把干橡木塞满新窑，关上铁门等待，因为谁都知道木柴燃烧会放热。直到半夜，窑砖仍冷得可以伸手触摸。他把“火烧起来以后会放出什么”，错当成了“没有点燃的木柴会不会自己开始”。每安静一刻，雨期和合同罚金便靠近一分。",
-        "阿森把粗火把直接抵住木段，表面只黑了一圈，火苗便缩了回去。老窑工梅婶拉开他，在下面铺刨花和细枝。小料升温快，缝隙又能进风，较多接触便带着足够能量与合适方向发生。最初变化放出的热继续帮助邻近木柴越过同一道门槛。那撮小火没有提供整窑热量，只是让能自我维持的过程终于启动。",
-        "第一格刚烧旺，查看孔里忽然滚出浓烟，火又弱下去。阿森为了多装柴，堵住了进气缝和烟道。他舍不得开窑，因为门口已经码好上釉的瓦，冷热骤变会使它们开裂。梅婶把十根干木条放在通风口，又把十根塞进烟角。前者七根很快着火，后者只有一根冒烟。燃料多，并不保证变化快。",
-        "弱火已经在拿整批订单下注。阿森让人开窑，亲手拖出发热的前排瓦，为工人腾出清理风道的位置。冷风里，三十七片瓦接连发出细脆裂声；他们重铺多孔炉栅，重新接通进气。新的通道让燃烧更容易开始和持续，却没有改变木柴燃烧前后本身的总能量差。",
-        "第二次点火，梅婶仍只用一把刨花。这回火苗穿过敞开的炉栅，沙漏还没走完，三根粗木已经烧着。阿森在窑旁挂起一块小木板，逐项写下改过的地方：先暖细料、留出风缝、清通烟道、让火从细木接到粗木。以后每逢冷晨，他先查这四项，再决定是否加柴。那块板提醒他，满窑木料与一场可能的火，还不是正在燃烧的窑。",
-        "屋瓦迟了一早送到。阿森赔了碎瓦和误期钱，整批利润少了一半，好在秋雨落下前屋顶已经盖好。清灰时，他最先举起的粗火把仍靠在墙边，只焦了一小块；炉栅下方，那把刨花留下了一掌宽的灰。"
+        "课程编辑何序正在测试一个虚构单步反应模型。简化能量图的纵轴采用相对焓，把反应物设为0 kJ/mol、产物设为−20 kJ/mol，时间轴却把原路径标为较慢。她第一反应是模拟可能有错：既然终点更低、模型设为放热，为什么过程还会慢？",
+        "她展开原路径：能量先从0升到过渡态峰顶60，再降到−20。正向Ea=60−0=60 kJ/mol，逆向Ea=60−(−20)=80 kJ/mol，而ΔH=−20−0=−20 kJ/mol。Ea与ΔH是不同量，但在同一能量图中有关系：Ea,正−Ea,逆=ΔH。",
+        "模型再给一条替代路径，反应物和产物仍是0与−20，峰顶改为35。于是正向Ea=35、逆向Ea=55，两边门槛都比原路径低25，而ΔH仍是−20。模拟在相同温度、浓度下，还把两条路径的碰撞/前因子设为相同，才用较低门槛显示更快；它没有从一张峰图单独推算真实反应速率。",
+        "何序接着切换“升温”按钮。模型保持原路径Ea=60不动，只让粒子能量分布改变，使具有足够能量越过门槛的比例增加；碰撞仍需满足适当取向。再切“催化路径”时，改变的是反应机制和峰顶位置，而不是把温度效应改名成Ea下降。",
+        "她在旁注又加一句：图中kJ/mol是每摩尔的能量标度，并非每个分子都带着60 kJ；Ea表示从反应物状态到过渡态的门槛，也不是反应后永久“消耗掉”的能量。真实观测速率还会受浓度、混合、传质、接触和取向影响，因此单次快慢不能独立测出Ea。",
+        "测试页最后停在两条同起点、同终点的路径上，一条峰顶60、一条35。旁边的粒子能量分布图保留60 kJ/mol的门槛线；升温时改变的是分布曲线和门槛右侧的比例。何序删掉“放热所以很快”，把“是否放热”和“怎样变快”分别写在两张图旁：前者看起终点差，后者还要比较门槛、温度和碰撞条件。负的ΔH也不能替她判定ΔG或自发性。"
       ],
-      "conceptName": "Activation energy",
+      "overallZh": "在这张简化教学图中，Ea表示反应物到过渡态的门槛，ΔH表示起终点的净焓差；二者不同，但正逆门槛之差与ΔH相容。升温改变粒子能量分布，催化改变反应路径。控制温度、浓度和前因子后，较低门槛可加快本模型反应，而热力学起终态不变。",
       "conceptNameZh": "活化能",
-      "explanationParagraphs": [
-        "Activation energy is the energy barrier that must be crossed to reach a transition state along a reaction pathway. Even a thermodynamically favourable reaction may be slow if few particles cross with suitable energy and orientation. Higher temperature changes the energy distribution; a catalyst offers a lower-barrier route without changing the net free-energy difference."
-      ],
       "explanationParagraphsZh": [
-        "活化能是反应沿特定路径到达过渡态所需跨越的能量门槛。即使反应总体有利，若很少有粒子以合适能量与方向跨过门槛，速率仍可能很慢。升温改变能量分布，催化剂提供较低能垒路径，但不改变反应物与产物的净自由能差。"
+        "本图纵轴为相对焓：原路径R=0、P=−20、TS=60，所以Ea正=60、Ea逆=80、ΔH=−20，并满足60−80=−20；替代路径35/55仍保持同一ΔH。",
+        "“峰顶35更快”只在本模型固定温度、浓度且两路径前因子相同时成立。真实速率差还可能来自传质等因素，ΔH<0也不等于已证明ΔG<0。"
       ],
-      "mode": "mechanism-fable",
-      "status": "approved",
+      "moduleZh": {
+        "intro": "在同一能量图中分别计算正逆Ea与ΔH，再把升温和换催化路径的作用分开。",
+        "diagramTitle": "同样从0到−20，60峰顶和35峰顶改变了什么",
+        "diagramSteps": [
+          "标出反应物0、产物−20与原过渡态60",
+          "计算Ea正=60、Ea逆=80和ΔH=−20",
+          "保持起终点不变换到峰顶35的替代路径",
+          "保持Ea不变观察升温如何改变高能粒子比例",
+          "回到现实速率区分能垒、碰撞条件与传质等因素"
+        ],
+        "diagramStepNotes": [
+          "简化相对焓图：原路径R=0、TS=60、P=−20 kJ/mol。",
+          "60−80=−20，与ΔH一致；Ea与ΔH不是同一个量。",
+          "替代路径Ea正=35、Ea逆=55，两边门槛各低25，起终点不变。",
+          "升温时原路径门槛仍为60；粒子能量分布曲线改变，门槛右侧比例增加，碰撞还需合适取向。",
+          "更快不能单独证明真实Ea降低，浓度、前因子、传质等也会影响速率。"
+        ],
+        "mapping": [
+          "0/−20起终点 → 反应净焓差。",
+          "60/35峰顶 → 两条简化反应路径的过渡态门槛。",
+          "温度分布按钮 → 改变越过固定门槛的粒子比例。",
+          "较快时间轴 → 同温、同浓度且前因子相同的模型路径比较。"
+        ],
+        "boundary": "这是原创单步教学能量图，不是具体物质实测Ea或复杂多步反应的普适表观参数。kJ/mol采用每摩尔标度；Ea不是每个分子永久消耗的能量。ΔH<0不足以判断ΔG、自发性或反应速度。能量分布曲线与反应路径曲线也不是同一张图。",
+        "reflection": "分别按下模型的“升温”和“替代路径”按钮时，哪张图的哪个量会改变？若你只看见时间轴缩短，却不知道温度、浓度或路径是否改变，为什么还不能把加快直接归因于Ea降低？"
+      },
+      "referencesZh": [
+        {
+          "id": "0531-activation-energy-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.5 Collision Theory. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+          "use": "支持活化能/过渡态、活化能与净焓差的区分，以及温度通过能量分布和Arrhenius关系影响速率常数。"
+        },
+        {
+          "id": "0531-activation-energy-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.7 Catalysis. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-7-catalysis",
+          "use": "支持催化通过较低能垒的替代反应机制加快速率，同时保持反应物和产物的起终点能量关系不变。"
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-mechanism-mixed-14-pdc-b-review.md",
+        "edits": [
+          "science-mechanism-mixed-14-pdc-b-edit-pass1-evidence.json",
+          "science-mechanism-mixed-14-pdc-b-edit-pass2-evidence.json"
+        ]
+      },
+      "title": "The Product Is Lower in Energy—So Why Is the Simulation Still Slow?",
+      "summary": "In a fictional single-step model, the reactants are at 0 and the products at −20 kJ/mol, yet the original pathway peaks at 60. The course editor compares paths peaking at 60 and 35 under the same temperature and other conditions, then separates temperature, catalysis, ΔH, and Ea.",
+      "storyParagraphs": [
+        "Course editor He Xu is testing a fictional single-step reaction model. The simplified energy diagram uses relative enthalpy on its vertical axis, placing reactants at 0 kJ/mol and products at −20 kJ/mol, yet the timeline labels the original path as relatively slow. Her first reaction is that the simulation may be wrong: if the endpoint is lower and the model is exothermic, why should the process still be slow?",
+        "She expands the original pathway. Energy first rises from 0 to a transition-state peak at 60 and then falls to −20. The forward Ea is therefore 60−0=60 kJ/mol, the reverse Ea is 60−(−20)=80 kJ/mol, and ΔH=−20−0=−20 kJ/mol. Ea and ΔH are different quantities, but they are related within the same energy diagram: Ea,forward−Ea,reverse=ΔH.",
+        "The model then provides an alternative path. Reactants and products remain at 0 and −20, but the peak becomes 35. Forward Ea is therefore 35 and reverse Ea 55: both barriers are 25 lower while ΔH remains −20. Along with the same temperature and concentration, the simulation assigns the same collision/pre-exponential factor to both paths before showing the lower-barrier path as faster. It does not infer a real reaction rate from a peak diagram alone.",
+        "He Xu next switches the “increase temperature” control. The model keeps the original Ea=60 unchanged and changes only the particle-energy distribution, increasing the fraction with enough energy to cross the barrier; collisions must still have suitable orientation. Switching instead to the “catalyzed pathway” changes the reaction mechanism and the peak position. The temperature effect is not renamed as a decrease in Ea.",
+        "She adds another note: the diagram’s kJ/mol is an energy scale per mole, rather than 60 kJ for each molecule. Ea represents the barrier from the reactant state to the transition state, not energy permanently “used up” by the reaction. Real observed rates can also depend on concentration, mixing, mass transfer, contact, and orientation, so a single difference in reaction time cannot independently measure Ea.",
+        "The test page ends with two paths sharing the same endpoints, one peaking at 60 and the other at 35. The adjacent particle-energy distribution keeps a threshold line at 60 kJ/mol; warming changes the distribution curve and the fraction to the right of that line. He Xu deletes “exothermic, therefore fast” and labels the two panels with separate questions: does the reaction release heat, and what makes it faster? The first uses the endpoint difference; the second also requires comparing barriers, temperature, and collision conditions. Negative ΔH cannot decide ΔG or spontaneity for her."
+      ],
+      "overall": "In this simplified teaching diagram, Ea represents the barrier from reactants to the transition state, while ΔH is the net enthalpy difference between endpoints. They are different quantities, with the difference between forward and reverse barriers consistent with ΔH. Warming changes the particle-energy distribution; catalysis changes the reaction path. With temperature, concentration, and the pre-exponential factor controlled, a lower barrier speeds this model reaction without changing its thermodynamic endpoints.",
+      "conceptName": "Activation energy",
+      "explanationParagraphs": [
+        "The graph uses relative enthalpy: for the original path R=0, P=−20, and TS=60, forward Ea=60, reverse Ea=80, and ΔH=−20, satisfying 60−80=−20. The alternative path gives 35/55 with the same ΔH.",
+        "The 35-peak path is shown as faster only in this model with fixed temperature and concentration and the same pre-exponential factor for both paths. Real rate differences may also come from mass transfer and other factors, and ΔH<0 does not establish ΔG<0."
+      ],
+      "module": {
+        "intro": "Calculate forward and reverse Ea and ΔH on the same energy diagram, then keep the effects of temperature and a catalyzed pathway distinct.",
+        "diagramTitle": "From 0 to −20 in Both Cases—What Changes When the Peak Is 60 or 35?",
+        "diagramSteps": [
+          "Mark reactants at 0, products at −20, and the original transition state at 60",
+          "Calculate forward Ea=60, reverse Ea=80, and ΔH=−20",
+          "Keep the endpoints fixed and switch to the alternative path peaking at 35",
+          "Keep Ea fixed while observing how higher temperature changes the high-energy fraction",
+          "Return to real rate observations and separate barrier effects from collision conditions and mass transfer"
+        ],
+        "diagramStepNotes": [
+          "Simplified relative-enthalpy graph: the original path is R=0, TS=60, P=−20 kJ/mol.",
+          "60−80=−20, consistent with ΔH; Ea and ΔH are not the same quantity.",
+          "The alternative path has forward Ea=35 and reverse Ea=55; both barriers are 25 lower while endpoints stay unchanged.",
+          "On warming, the original path’s barrier stays at 60; the particle-energy distribution changes and the fraction beyond the threshold increases. Collisions still need suitable orientation.",
+          "A faster observed rate does not by itself prove lower real Ea because concentration, pre-exponential factors, mass transfer, and other conditions also affect rate."
+        ],
+        "mapping": [
+          "0/−20 endpoints → net reaction enthalpy difference.",
+          "60/35 peaks → transition-state barriers for the two simplified pathways.",
+          "Temperature-distribution control → change in the fraction of particles able to cross a fixed barrier.",
+          "Faster timeline → model path comparison at the same temperature, concentration, and pre-exponential factor."
+        ],
+        "boundary": "This is an original single-step teaching diagram, not a measured Ea for a specific substance or a universal apparent parameter for complex multistep reactions. kJ/mol uses a per-mole scale; Ea is not energy permanently consumed by each molecule. ΔH<0 does not determine ΔG, spontaneity, or speed. A particle-energy distribution and a reaction-path profile are different graphs.",
+        "reflection": "When you press the model’s “warming” and “alternative path” controls, which quantity changes in which graph? If you see only a shorter timeline without knowing whether temperature, concentration, or path changed, why can you not directly attribute the speedup to lower Ea?"
+      },
+      "references": [
+        {
+          "id": "0531-activation-energy-ref-1",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.5 Collision Theory. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+          "use": "Supports activation energy and the transition state, the distinction between Ea and the net enthalpy difference, and the way temperature affects the energy distribution and rate constant through Arrhenius-type behavior."
+        },
+        {
+          "id": "0531-activation-energy-ref-2",
+          "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.7 Catalysis. OpenStax, Rice University (2019).",
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-7-catalysis",
+          "use": "Supports catalysis through an alternative reaction mechanism with a lower barrier while leaving the thermodynamic energy relationship between reactants and products unchanged."
+        }
+      ],
+      "status": "approved"
     },
     {
       "id": "0531-stoichiometry",

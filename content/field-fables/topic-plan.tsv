@@ -95,17 +95,17 @@ batch-007	04	0421	Law	法律	3	0421-burden-of-proof	Burden of proof	举证责任
 batch-007	05	0511	Biology	生物学	1	0511-natural-selection	Natural selection	自然选择	mechanism-explainer	岛上浅色与深色蛾群在新树皮上改变比例	integrated
 batch-007	05	0511	Biology	生物学	2	0511-homeostasis	Homeostasis	稳态	mechanism-explainer	温室不是保持不动而是持续调节阀门	integrated
 batch-007	05	0511	Biology	生物学	3	0511-gene-environment-interaction	Gene-environment interaction	基因与环境交互	concept-fable	同批种子在山谷两端长成不同高度	integrated
-batch-007	05	0512	Biochemistry	生物化学	1	0512-enzyme-catalysis	Enzyme catalysis	酶催化	mechanism-fable	专门改变反应路径却不被消耗的钥匙匠	integrated
-batch-007	05	0512	Biochemistry	生物化学	2	0512-protein-structure-function	Protein structure and function	蛋白质结构与功能	mechanism-fable	同一条纸带折叠不同便打不开同一把锁	integrated
-batch-007	05	0512	Biochemistry	生物化学	3	0512-feedback-inhibition	Feedback inhibition	反馈抑制	mechanism-fable	最后一炉面包反过来关闭最前面的磨坊	integrated
+batch-007	05	0512	Biochemistry	生物化学	1	0512-enzyme-catalysis	Enzyme catalysis	酶催化	mechanism-explainer	专门改变反应路径却不被消耗的钥匙匠	integrated
+batch-007	05	0512	Biochemistry	生物化学	2	0512-protein-structure-function	Protein structure and function	蛋白质结构与功能	mechanism-explainer	同一条纸带折叠不同便打不开同一把锁	integrated
+batch-007	05	0512	Biochemistry	生物化学	3	0512-feedback-inhibition	Feedback inhibition	反馈抑制	mechanism-explainer	最后一炉面包反过来关闭最前面的磨坊	integrated
 batch-007	05	0521	Environmental sciences	环境科学	1	0521-ecosystem-services	Ecosystem services	生态系统服务	concept-fable	被视为荒地的湿地消失后洪水进入城门	integrated
 batch-007	05	0521	Environmental sciences	环境科学	2	0521-tragedy-of-the-commons	Tragedy of the commons	公地悲剧	concept-fable	每户多放一只羊都合理的共同牧场	integrated
 batch-007	05	0521	Environmental sciences	环境科学	3	0521-ecological-resilience	Ecological resilience and tipping points	生态韧性与临界点	concept-fable	年年恢复的湖泊在某个夏天没有回来	integrated
-batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	1	0522-carrying-capacity	Carrying capacity	环境承载力	mechanism-fable	没有天敌的小岛鹿群越繁盛越接近饥荒	integrated
+batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	1	0522-carrying-capacity	Carrying capacity	环境承载力	mechanism-explainer	没有天敌的小岛鹿群越繁盛越接近饥荒	integrated
 batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	2	0522-trophic-cascade	Trophic cascade	营养级联	concept-fable	山谷赶走少数捕食者后河岸也开始改变	integrated
 batch-007	05	0522	Natural environments and wildlife	自然环境与野生生物	3	0522-habitat-fragmentation	Habitat fragmentation	栖息地破碎化	concept-fable	看似仍有大片森林却被道路切成孤岛	integrated
-batch-008	05	0531	Chemistry	化学	1	0531-chemical-equilibrium	Chemical equilibrium	化学平衡	mechanism-fable	染坊两只槽之间的颜色不断交换却保持比例	integrated
-batch-008	05	0531	Chemistry	化学	2	0531-activation-energy	Activation energy	活化能	mechanism-fable	堆满木柴的窑炉仍需要第一簇足够热的火	integrated
+batch-008	05	0531	Chemistry	化学	1	0531-chemical-equilibrium	Chemical equilibrium	化学平衡	mechanism-explainer	染坊两只槽之间的颜色不断交换却保持比例	integrated
+batch-008	05	0531	Chemistry	化学	2	0531-activation-energy	Activation energy	活化能	mechanism-explainer	堆满木柴的窑炉仍需要第一簇足够热的火	integrated
 batch-008	05	0531	Chemistry	化学	3	0531-stoichiometry	Stoichiometry	化学计量	mechanism-fable	烟火师多加一勺粉末反而失去整片蓝色	integrated
 batch-008	05	0532	Earth sciences	地球科学	1	0532-plate-tectonics	Plate tectonics	板块构造	mechanism-fable	两座城每年重测边界石却都以为对方在移动	integrated
 batch-008	05	0532	Earth sciences	地球科学	2	0532-deep-time	Deep time	深时	concept-fable	峡谷守门人用人的一生衡量岩层而屡屡误判	integrated

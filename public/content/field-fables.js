@@ -13286,45 +13286,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0512",
     "fieldTitle": "Biochemistry",
     "fieldTitleZh": "生物化学",
-    "title": "The Locksmith Who Always Left the Workshop",
-    "titleZh": "每次都能离开作坊的锁匠",
-    "summary": "A locksmith rapidly joins two reluctant parts and still leaves empty-handed after every finished piece.",
-    "summaryZh": "一名锁匠让两件难以扣合的零件迅速相接，完成后却总能空着手离开。",
-    "storyParagraphs": [
-      "A riverside workshop had until dawn to make four hundred shipping rings for the last salt vessel. Its anchor chain rattled outside with each gust. If it missed the tide, the owner would lose the shipyard contract and six apprentices would go unpaid. Two kinds of metal clasp could join when heated and struck together, but only rarely; the floor already glittered with bent failures. The owner ordered a hotter furnace. More clasps collided, yet the copper softened and the catch still resisted. Then a locksmith arrived carrying one small grooved jig polished by years of use.",
-      "The jig held each pair in the needed orientation and pressed the stubborn catch along an easier route. Rings began falling into the finished basket every few breaths. The owner counted the sudden speed, promised the dawn shipment and stopped paying for extra hammermen. Each completed ring left the groove without taking the jig or locksmith with it; the same tool accepted another pair. By midnight, however, apprentices poured pieces onto the table faster than the locksmith could place them. Every groove was occupied. The queue grew even though the pile of raw clasps doubled.",
-      "A supplier then delivered a similar-looking clasp with a wider shoulder. It would not enter the groove. An apprentice forced one and scratched the jig; another let thick oil cover the catch, and production slowed. Hoping to recover the lost hour, the owner rolled the table nearer the furnace. Heat warped the jig's lip. Now even the proper clasp sat crooked, and three rings opened under a hanging weight. The short route had not changed which joining was possible, and it only worked while shape, temperature and contact remained suitable.",
-      "The tide bell sounded once. Loading the unchecked rings might preserve the berth, but a failed ring could drop a salt crate into the river. The owner shut the packing gate, paid the vessel's delay fee and returned the dismissed hammermen's wages. The locksmith cooled the jig, filed its lip and cleaned the groove. Apprentices separated the wrong clasps and tested each new ring under weight. Work resumed before sunrise, slower than the owner had promised but far faster than hammering alone. The contract survived; the tide bonus did not.",
-      "At noon the final crate went aboard. The owner found the locksmith washing black oil from his hands beside an empty table. Four hundred rings had left the shop, yet the grooved jig lay there ready for another pair. Its scratched lip was marked with the night's date. One failed ring still gaped beneath the hanging test weight. Before closing the gate, the owner moved the jig away from the furnace and placed one rejected wide clasp beside it."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "能结合底物，为什么还是几乎不出产物",
+    "summaryZh": "相同条件和等量酶下，E与E*都能结合底物，产物量却不同。技术员先检查这些读数能说明什么，再用独立教学模型追踪催化循环、活性位点和自由能门槛，避免把“可结合”直接当成机制定位。",
     "storyParagraphsZh": [
-      "河城作坊必须在天亮前为最后一艘盐船做出四百只运输环，船的锚链正随阵风在门外哗啦作响。错过潮水，坊主就会丢掉船厂合同，六名学徒也领不到工钱。两种金属扣在高热和敲击下偶尔能接上，地面却已铺满弯掉的废件。坊主命人把炉火烧得更旺，碰撞虽多，铜件却先变软，卡口仍难越过。此时锁匠带来一只用了多年的小凹槽模具。",
-      "模具把两件扣子固定在合适方向，又把顽固卡口沿一条更省力的路压过去。成品每隔几次呼吸便落进筐里，坊主当场许诺按时交货，还辞去临时锤工。运输环离开后，锁匠和模具都没成为成品的一部分，同一凹槽还能接下一对。到了午夜，学徒倒上桌的零件越来越多，每只槽都被占着；原料堆加倍，队伍却只越排越长。",
-      "供应商又送来一批肩部略宽的新扣，外表相近，却进不了凹槽。一个学徒硬塞，刮伤模具；另一个让稠油盖住卡口，速度立刻下降。坊主为追回时间，把工作台推近炉边，热气又使模具边缘变形。合规格零件也开始歪斜，三只成环挂上砝码便弹开。这条捷径没有改变哪些扣合本来可行，也只有形状、温度和接触条件合适时才管用。",
-      "潮钟响了一声。未经检验便装船，或许能保住泊位，一只坏环却可能把整箱盐丢进河里。坊主关上装货门，支付误潮费，也补回被辞锤工的工资。锁匠让模具冷却，锉平边缘，洗净凹槽；学徒分开错件，每只新环都先挂重。日出前作坊重新出货，虽慢于承诺，仍比单靠敲击快得多。合同保住了，潮时奖金没有。",
-      "正午，最后一箱终于上船，船身还在潮水里轻晃。坊主在空桌旁找到锁匠，他正洗去手上黑油。四百只环已经离开，凹槽模具仍在桌面，第二天还能接下一对。被刮伤的边缘刻着昨夜日期，一只失败环还在悬挂砝码下张着口。关门前，坊主把模具移到远离炉火的位置，又在旁边放下那只被退回的宽扣。"
+      "小型生物工艺团队在评估一个虚构单底物反应。技术员林知手里有有效酶E和变体E*。两组使用相同底物浓度、温度、pH和相同酶量；另设不加酶空白，只保持底物和环境条件一致。眼前的问题是：E*明明还能结合底物，为什么产物仍很少。",
+      "同一时间窗里，E组产物明显增加、底物相应减少；E*组产物少、底物下降也较少，空白变化最慢。另一项教学性读数显示两者都可结合，却没比较结合占比或有效酶比例。林知核对等量加样后，把“已定位到催化步骤”划掉：结合强弱、有效酶比例、后续转化或产物释放，都还需要分开检查。",
+      "她打开原创循环模型。模型设有10个有效E和足量S，每个E依次完成3次一对一S→P循环：E先与S形成E·S，再完成催化转化并释放P，E回到可参与下一轮的状态。三轮一共是30个S被转成30个P，10个E在模型循环末仍可再用，并不是10个E变成了30个P。",
+      "她另开一页教学模型，把活性位点画成具有特定空间排列和局部化学环境的催化基团，而不只是夹住底物的卡槽。这里独立设定E*仍能形成E*·S，却缺少同样有效的化学催化安排。这解释模型为何周转慢；前面的粗略结合读数并没有测出这项安排。",
+      "林知在能量图上对齐两条路径的起终点：S为0，P为−8。纵轴是相对自由能（无量纲示意），横轴是反应进程，不是时间。她从起点指向峰顶：未催化门槛48−0=48，催化门槛18−0=18；跨越门槛后都到−8。图中变的是门槛，不是始末差；这些示意数也不能给出速率倍率或平衡比例。",
+      "评估结束时，她把建议改成“先比较结合占比与有效酶比例，再查转化和释放”。本轮也没测试增加底物，不能替那项比较下结论。屏幕停在E+S⇌ES→E+P与E*·S示意旁；循环末的E再次空出位置，备注写着“理想循环中再生，真实酶仍可能失活”。"
     ],
-    "conceptName": "Enzyme catalysis",
+    "overallZh": "酶催化通过活性位点的空间与化学环境稳定较低活化自由能的反应路径，使反应更快进行。底物被转化、产物释放后，酶可再次进入循环；这不表示酶永不失活。催化改变速率，不改变同一总体反应的始末自由能差或平衡位置。",
     "conceptNameZh": "酶催化",
-    "explanationParagraphs": [
-      "Enzymes accelerate reactions by binding substrates and lowering the activation free-energy barrier, often through orientation, microenvironment effects, bond strain or transition-state stabilisation. They are regenerated rather than consumed stoichiometrically and do not change reaction equilibrium. Rate depends on temperature, pH, substrate and enzyme concentration, inhibitors and cofactors; saturation and denaturation set important limits."
-    ],
     "explanationParagraphsZh": [
-      "酶通过结合底物并降低活化自由能屏障来加快反应，常借助定向、微环境、键应变或稳定过渡态。酶在循环后可再用，并非按底物数量等量消耗，也不改变反应平衡。速率还受温度、酸碱度、酶与底物浓度、抑制剂和辅因子影响；位点饱和与蛋白质变性都是重要边界。"
+      "同条件下两者可结合但产物不同，只说明“能结合”不等于周转相同；结合占比、有效酶比例、转化及释放仍待检查。E*化学催化安排较差是独立模型设定，不是读数定位的结果。",
+      "10E完成3轮意味着30S→30P且E可再用。能量图横轴是反应进程，门槛是峰顶减起点48→18，始末差仍−8；示意数不给真实速率倍率或平衡常数。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "先分清读数能说明什么，再用独立模型追踪结合、转化、释放和酶再用。",
+      "diagramTitle": "E和E*都能结合，差别为什么出现在周转",
+      "diagramSteps": [
+        "保持E与E*组底物、温度、pH和酶量一致",
+        "观察两者可结合，保留结合占比等未测问题",
+        "用10E三轮模型追踪30S→30P与酶再生",
+        "独立设定活性位点化学安排，示意它怎样影响周转",
+        "对齐路径起终点，比较起点到峰顶的活化门槛"
+      ],
+      "diagramStepNotes": [
+        "无酶空白不含酶，仅其他条件保持一致；E与E*两组酶量相同。",
+        "粗略读数显示两者可形成结合状态，未比较结合强度、占比或有效酶比例。",
+        "10个E各完成3轮，共把30个S转成30个P，10个E在循环末仍可再用。",
+        "化学催化安排是独立教学设定，不能由前面的结合读数定位。",
+        "横轴反应进程而非时间，纵轴无量纲相对自由能。S=0、P=−8；门槛48−0和18−0，不由此计算速率倍率或平衡常数。"
+      ],
+      "mapping": [
+        "E/E*/空白三组曲线 → 条件可比下的产物与底物变化。",
+        "E·S和E*·S → 可结合不保证相同周转，也不定位差异所在步骤。",
+        "10E、30S、30P循环 → 催化剂再生与底物转化角色不同。",
+        "相对自由能两路径 → 降低活化门槛而不改始末自由能差。"
+      ],
+      "boundary": "这是虚构评估和原创教学模型，不是特定酶的kcat、分子计数或真实自由能值。酶在催化循环中可再生，但真实酶仍可能失活；不同酶的催化机制也不必相同。本轮没有测试增加底物，因此不能据此判断额外底物的效果。粗略结合与产物读数不能区分结合占比、有效酶比例、化学转化或释放的差异。",
+      "reflection": "两条能量路径起终点相同而峰顶不同，你能判断哪些变化？为什么这仍不能替E/E*定位产物差异所在的步骤？"
+    },
+    "referencesZh": [
+      {
+        "id": "clark-douglas-choi-2018-enzymes",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 6.5: Enzymes. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+        "use": "支持活性位点、底物结合与催化循环、降低活化能而不改变反应自由能差、释放产物后酶再用；现代教材，不是酶催化首创来源。"
+      },
+      {
+        "id": "embl-ebi-protein-ligand-interactions",
+        "citation": "EMBL-EBI. (n.d.). Protein-ligand interactions. Foundations of protein structure. EMBL-EBI Training.",
+        "url": "https://www.ebi.ac.uk/training/online/courses/foundations-protein-structure/protein-dynamics-interactions-and-modifications/protein-ligand-interactions/",
+        "use": "支持活性位点并非被动容器，催化基团的空间安排与局部化学环境参与反应；某些失去催化能力的突变体仍能结合底物，不能把结合等同催化。"
+      }
+    ],
+    "title": "It Can Bind the Substrate—So Why Does It Still Produce Almost No Product?",
+    "summary": "Under matched conditions and equal enzyme amounts, both E and E* can bind substrate, yet their product amounts differ. The technician first checks what these readouts establish, then uses a separate teaching model to trace the catalytic cycle, active site, and free-energy barrier without treating detectable binding as a diagnosis of the mechanism.",
+    "storyParagraphs": [
+      "A small bioprocess team is evaluating a fictional single-substrate reaction. Technician Lin Zhi has an active enzyme E and a variant E*. The two enzyme groups use the same substrate concentration, temperature, pH, and enzyme amount. A no-enzyme blank is also included, keeping only the substrate and environmental conditions the same. The immediate question is: if E* can still bind the substrate, why does it produce so little product?",
+      "Over the same time window, product increases and substrate falls clearly in the E group; both changes are smaller with E*, and the blank changes least. A separate teaching readout shows detectable binding by both versions, but does not compare bound fractions or active-enzyme fractions. After checking equal dosing, Lin Zhi crosses out “the catalytic step has been identified.” Binding strength, active fraction, subsequent conversion, and product release still need to be examined separately.",
+      "She opens an original cycle model. The model contains 10 active E molecules and ample S. Each E completes three one-to-one S→P cycles: E first forms E·S with S, then catalyzes conversion, releases P, and returns to a state that can enter another cycle. After three rounds, 30 S have been converted into 30 P, while the same 10 E remain available for reuse at the end of the modeled cycle. The 10 E have not somehow turned into 30 P.",
+      "She opens a separate teaching-model panel showing the active site as catalytic groups with a specific spatial arrangement and local chemical environment, rather than simply a slot holding substrate. Here, E* is independently defined as forming E*·S while lacking an equally effective chemical catalytic arrangement. That explains its slow turnover in the model; the preceding coarse binding readout did not measure that arrangement.",
+      "Lin Zhi aligns the start and end points of both energy pathways: S at 0 and P at −8. The vertical axis is relative free energy in a dimensionless schematic; the horizontal axis is reaction progress, not time. She points from the start to each peak: the uncatalyzed barrier is 48−0=48 and the catalyzed barrier 18−0=18. Both paths end at −8 after crossing their barriers. The barrier changes, not the overall difference; these schematic numbers provide neither a rate multiplier nor an equilibrium ratio.",
+      "At the end of the review, she changes the recommendation to “compare bound and active-enzyme fractions first, then examine conversion and release.” Added substrate was not tested either, so this round cannot settle that comparison. The screen remains on E+S⇌ES→E+P beside E*·S. At the cycle’s end, E is free again, with a note: “regenerated in the ideal cycle; real enzymes can still lose activity.”"
+    ],
+    "overall": "Enzyme catalysis uses the spatial and chemical environment of the active site to support a reaction pathway with a lower activation free-energy barrier, allowing the reaction to proceed faster. After substrate conversion and product release, the enzyme can enter another cycle; this does not mean that enzymes never lose activity. Catalysis changes rate, not the overall free-energy difference or equilibrium position of the same net reaction.",
+    "conceptName": "Enzyme catalysis",
+    "explanationParagraphs": [
+      "Detectable binding with different product amounts under matched conditions shows that binding does not guarantee equal turnover. Bound fraction, active-enzyme fraction, conversion, and release still need checking. E* having a less effective chemical catalytic arrangement is a separate model assumption, not a mechanism localized by the readout.",
+      "Three cycles with 10 E mean 30S→30P and reusable E. The energy diagram’s horizontal axis is reaction progress; the barrier is peak minus start, changing from 48 to 18 while the overall difference remains −8. Its schematic numbers provide no real rate multiplier or equilibrium constant."
+    ],
+    "module": {
+      "intro": "First separate what the readouts establish, then use an independent model to trace binding, conversion, release, and enzyme reuse.",
+      "diagramTitle": "E and E* Both Bind—So Why Does Turnover Differ?",
+      "diagramSteps": [
+        "Keep substrate, temperature, pH, and enzyme amount identical for the E and E* groups",
+        "Observe detectable binding while leaving bound fraction and other unmeasured questions open",
+        "Use the three-round 10E model to track 30S→30P and enzyme regeneration",
+        "Independently define the active-site chemical arrangement and illustrate its effect on turnover",
+        "Align pathway endpoints and compare the activation barriers from start to peak"
+      ],
+      "diagramStepNotes": [
+        "The no-enzyme blank contains no enzyme; only the other conditions are matched. The E and E* groups contain equal enzyme amounts.",
+        "The coarse readout shows that both can form bound states; it does not compare binding strength, bound fraction, or active-enzyme fraction.",
+        "Ten E each complete three rounds, converting 30 S into 30 P; the 10 E remain reusable at the end of the modeled cycle.",
+        "The chemical catalytic arrangement is a separate teaching assumption, not something localized by the preceding binding readout.",
+        "The horizontal axis is reaction progress, not time; the vertical axis is dimensionless relative free energy. S=0 and P=−8, with barriers 48−0 and 18−0; no rate multiplier or equilibrium constant is calculated from these."
+      ],
+      "mapping": [
+        "E/E*/blank curves → differences in product formation and substrate consumption under comparable conditions.",
+        "E·S and E*·S → detectable binding neither guarantees equal turnover nor identifies the differing step.",
+        "10E, 30S, 30P cycle → different roles of catalyst regeneration and substrate conversion.",
+        "Two relative-free-energy pathways → lower activation barrier without changing the overall start-to-end free-energy difference."
+      ],
+      "boundary": "This is a fictional assessment and an original teaching model, not real kcat data, molecular counts, or free-energy values for a particular enzyme. Enzymes can be regenerated in catalytic cycles but real enzymes can still lose activity, and different enzymes need not use the same catalytic mechanism. This round does not test added substrate, so it cannot determine the effect of supplying more substrate. Coarse binding and product readouts do not distinguish differences in bound fraction, active-enzyme fraction, chemical conversion, or release.",
+      "reflection": "If two energy pathways have the same endpoints but different peaks, what changes can you identify? Why does that still not locate the step responsible for the product difference between E and E*?"
+    },
+    "references": [
+      {
+        "id": "clark-douglas-choi-2018-enzymes",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 6.5: Enzymes. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+        "use": "Supports active sites, substrate binding and catalytic cycles, lowering activation energy without changing the reaction free-energy difference, and reuse of enzyme after product release; this is a modern textbook, not an original source for the discovery of enzyme catalysis."
+      },
+      {
+        "id": "embl-ebi-protein-ligand-interactions",
+        "citation": "EMBL-EBI. (n.d.). Protein-ligand interactions. Foundations of protein structure. EMBL-EBI Training.",
+        "url": "https://www.ebi.ac.uk/training/online/courses/foundations-protein-structure/protein-dynamics-interactions-and-modifications/protein-ligand-interactions/",
+        "use": "Supports the idea that an active site is not a passive container and that the spatial arrangement of catalytic groups and the local chemical environment participate in catalysis; some variants can retain substrate binding while losing catalytic ability, so binding should not be equated with catalysis."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-a-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-a-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-a-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "A riverside workshop had until dawn to make four hundred shipping rings for the last salt vessel. Its anchor chain rattled outside with each gust. If it missed the tide, the owner would lose the shipyard contract and six apprentices would go unpaid. Two kinds of metal clasp could join when heated and struck together, but only rarely; the floor already glittered with bent failures. The owner ordered a hotter furnace. More clasps collided, yet the copper softened and the catch still resisted. Then a locksmith arrived carrying one small grooved jig polished by years of use.\n\nThe jig held each pair in the needed orientation and pressed the stubborn catch along an easier route. Rings began falling into the finished basket every few breaths. The owner counted the sudden speed, promised the dawn shipment and stopped paying for extra hammermen. Each completed ring left the groove without taking the jig or locksmith with it; the same tool accepted another pair. By midnight, however, apprentices poured pieces onto the table faster than the locksmith could place them. Every groove was occupied. The queue grew even though the pile of raw clasps doubled.\n\nA supplier then delivered a similar-looking clasp with a wider shoulder. It would not enter the groove. An apprentice forced one and scratched the jig; another let thick oil cover the catch, and production slowed. Hoping to recover the lost hour, the owner rolled the table nearer the furnace. Heat warped the jig's lip. Now even the proper clasp sat crooked, and three rings opened under a hanging weight. The short route had not changed which joining was possible, and it only worked while shape, temperature and contact remained suitable.\n\nThe tide bell sounded once. Loading the unchecked rings might preserve the berth, but a failed ring could drop a salt crate into the river. The owner shut the packing gate, paid the vessel's delay fee and returned the dismissed hammermen's wages. The locksmith cooled the jig, filed its lip and cleaned the groove. Apprentices separated the wrong clasps and tested each new ring under weight. Work resumed before sunrise, slower than the owner had promised but far faster than hammering alone. The contract survived; the tide bonus did not.\n\nAt noon the final crate went aboard. The owner found the locksmith washing black oil from his hands beside an empty table. Four hundred rings had left the shop, yet the grooved jig lay there ready for another pair. Its scratched lip was marked with the night's date. One failed ring still gaped beneath the hanging test weight. Before closing the gate, the owner moved the jig away from the furnace and placed one rejected wide clasp beside it.",
-    "storyBodyZh": "河城作坊必须在天亮前为最后一艘盐船做出四百只运输环，船的锚链正随阵风在门外哗啦作响。错过潮水，坊主就会丢掉船厂合同，六名学徒也领不到工钱。两种金属扣在高热和敲击下偶尔能接上，地面却已铺满弯掉的废件。坊主命人把炉火烧得更旺，碰撞虽多，铜件却先变软，卡口仍难越过。此时锁匠带来一只用了多年的小凹槽模具。\n\n模具把两件扣子固定在合适方向，又把顽固卡口沿一条更省力的路压过去。成品每隔几次呼吸便落进筐里，坊主当场许诺按时交货，还辞去临时锤工。运输环离开后，锁匠和模具都没成为成品的一部分，同一凹槽还能接下一对。到了午夜，学徒倒上桌的零件越来越多，每只槽都被占着；原料堆加倍，队伍却只越排越长。\n\n供应商又送来一批肩部略宽的新扣，外表相近，却进不了凹槽。一个学徒硬塞，刮伤模具；另一个让稠油盖住卡口，速度立刻下降。坊主为追回时间，把工作台推近炉边，热气又使模具边缘变形。合规格零件也开始歪斜，三只成环挂上砝码便弹开。这条捷径没有改变哪些扣合本来可行，也只有形状、温度和接触条件合适时才管用。\n\n潮钟响了一声。未经检验便装船，或许能保住泊位，一只坏环却可能把整箱盐丢进河里。坊主关上装货门，支付误潮费，也补回被辞锤工的工资。锁匠让模具冷却，锉平边缘，洗净凹槽；学徒分开错件，每只新环都先挂重。日出前作坊重新出货，虽慢于承诺，仍比单靠敲击快得多。合同保住了，潮时奖金没有。\n\n正午，最后一箱终于上船，船身还在潮水里轻晃。坊主在空桌旁找到锁匠，他正洗去手上黑油。四百只环已经离开，凹槽模具仍在桌面，第二天还能接下一对。被刮伤的边缘刻着昨夜日期，一只失败环还在悬挂砝码下张着口。关门前，坊主把模具移到远离炉火的位置，又在旁边放下那只被退回的宽扣。",
-    "explanation": "Enzymes accelerate reactions by binding substrates and lowering the activation free-energy barrier, often through orientation, microenvironment effects, bond strain or transition-state stabilisation. They are regenerated rather than consumed stoichiometrically and do not change reaction equilibrium. Rate depends on temperature, pH, substrate and enzyme concentration, inhibitors and cofactors; saturation and denaturation set important limits.",
-    "explanationZh": "酶通过结合底物并降低活化自由能屏障来加快反应，常借助定向、微环境、键应变或稳定过渡态。酶在循环后可再用，并非按底物数量等量消耗，也不改变反应平衡。速率还受温度、酸碱度、酶与底物浓度、抑制剂和辅因子影响；位点饱和与蛋白质变性都是重要边界。"
+    "storyBody": "A small bioprocess team is evaluating a fictional single-substrate reaction. Technician Lin Zhi has an active enzyme E and a variant E*. The two enzyme groups use the same substrate concentration, temperature, pH, and enzyme amount. A no-enzyme blank is also included, keeping only the substrate and environmental conditions the same. The immediate question is: if E* can still bind the substrate, why does it produce so little product?\n\nOver the same time window, product increases and substrate falls clearly in the E group; both changes are smaller with E*, and the blank changes least. A separate teaching readout shows detectable binding by both versions, but does not compare bound fractions or active-enzyme fractions. After checking equal dosing, Lin Zhi crosses out “the catalytic step has been identified.” Binding strength, active fraction, subsequent conversion, and product release still need to be examined separately.\n\nShe opens an original cycle model. The model contains 10 active E molecules and ample S. Each E completes three one-to-one S→P cycles: E first forms E·S with S, then catalyzes conversion, releases P, and returns to a state that can enter another cycle. After three rounds, 30 S have been converted into 30 P, while the same 10 E remain available for reuse at the end of the modeled cycle. The 10 E have not somehow turned into 30 P.\n\nShe opens a separate teaching-model panel showing the active site as catalytic groups with a specific spatial arrangement and local chemical environment, rather than simply a slot holding substrate. Here, E* is independently defined as forming E*·S while lacking an equally effective chemical catalytic arrangement. That explains its slow turnover in the model; the preceding coarse binding readout did not measure that arrangement.\n\nLin Zhi aligns the start and end points of both energy pathways: S at 0 and P at −8. The vertical axis is relative free energy in a dimensionless schematic; the horizontal axis is reaction progress, not time. She points from the start to each peak: the uncatalyzed barrier is 48−0=48 and the catalyzed barrier 18−0=18. Both paths end at −8 after crossing their barriers. The barrier changes, not the overall difference; these schematic numbers provide neither a rate multiplier nor an equilibrium ratio.\n\nAt the end of the review, she changes the recommendation to “compare bound and active-enzyme fractions first, then examine conversion and release.” Added substrate was not tested either, so this round cannot settle that comparison. The screen remains on E+S⇌ES→E+P beside E*·S. At the cycle’s end, E is free again, with a note: “regenerated in the ideal cycle; real enzymes can still lose activity.”",
+    "storyBodyZh": "小型生物工艺团队在评估一个虚构单底物反应。技术员林知手里有有效酶E和变体E*。两组使用相同底物浓度、温度、pH和相同酶量；另设不加酶空白，只保持底物和环境条件一致。眼前的问题是：E*明明还能结合底物，为什么产物仍很少。\n\n同一时间窗里，E组产物明显增加、底物相应减少；E*组产物少、底物下降也较少，空白变化最慢。另一项教学性读数显示两者都可结合，却没比较结合占比或有效酶比例。林知核对等量加样后，把“已定位到催化步骤”划掉：结合强弱、有效酶比例、后续转化或产物释放，都还需要分开检查。\n\n她打开原创循环模型。模型设有10个有效E和足量S，每个E依次完成3次一对一S→P循环：E先与S形成E·S，再完成催化转化并释放P，E回到可参与下一轮的状态。三轮一共是30个S被转成30个P，10个E在模型循环末仍可再用，并不是10个E变成了30个P。\n\n她另开一页教学模型，把活性位点画成具有特定空间排列和局部化学环境的催化基团，而不只是夹住底物的卡槽。这里独立设定E*仍能形成E*·S，却缺少同样有效的化学催化安排。这解释模型为何周转慢；前面的粗略结合读数并没有测出这项安排。\n\n林知在能量图上对齐两条路径的起终点：S为0，P为−8。纵轴是相对自由能（无量纲示意），横轴是反应进程，不是时间。她从起点指向峰顶：未催化门槛48−0=48，催化门槛18−0=18；跨越门槛后都到−8。图中变的是门槛，不是始末差；这些示意数也不能给出速率倍率或平衡比例。\n\n评估结束时，她把建议改成“先比较结合占比与有效酶比例，再查转化和释放”。本轮也没测试增加底物，不能替那项比较下结论。屏幕停在E+S⇌ES→E+P与E*·S示意旁；循环末的E再次空出位置，备注写着“理想循环中再生，真实酶仍可能失活”。",
+    "explanation": "Detectable binding with different product amounts under matched conditions shows that binding does not guarantee equal turnover. Bound fraction, active-enzyme fraction, conversion, and release still need checking. E* having a less effective chemical catalytic arrangement is a separate model assumption, not a mechanism localized by the readout.\n\nThree cycles with 10 E mean 30S→30P and reusable E. The energy diagram’s horizontal axis is reaction progress; the barrier is peak minus start, changing from 48 to 18 while the overall difference remains −8. Its schematic numbers provide no real rate multiplier or equilibrium constant.",
+    "explanationZh": "同条件下两者可结合但产物不同，只说明“能结合”不等于周转相同；结合占比、有效酶比例、转化及释放仍待检查。E*化学催化安排较差是独立模型设定，不是读数定位的结果。\n\n10E完成3轮意味着30S→30P且E可再用。能量图横轴是反应进程，门槛是峰顶减起点48→18，始末差仍−8；示意数不给真实速率倍率或平衡常数。"
   },
   {
     "id": "0512-protein-structure-function",
@@ -13333,47 +13426,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0512",
     "fieldTitle": "Biochemistry",
     "fieldTitleZh": "生物化学",
-    "title": "The Long Band That Opened the Vault",
-    "titleZh": "打开金库的长带",
-    "summary": "A soft, apparently useless band reveals the shape that turns a vault only after it folds.",
-    "summaryZh": "一条看似柔软无用的长带折叠以后，才露出能够转动金库的形状。",
-    "storyParagraphs": [
-      "For the king's coronation, a vault maker promised a key no thief could recognise on sight. He linked many different small pieces into one soft band. Laid flat, it had no rigid teeth and looked useless. Under the right temperature and salt air, nearby sections bent while distant sections attracted or avoided one another. The band folded into a compact body, bringing three far-apart pieces together as a hollow surface that gripped the vault lock. Delivering it before the ceremony would pay the maker's winter debt.",
-      "One imported middle piece failed to arrive. The apprentice replaced it with a stiffer piece of the same weight and length, reasoning that the vault keeper would never count more than the number of links. The band still folded and fit the leather case, so he accepted the coronation bonus. At the first rehearsal, however, one corner bulged. The hollow met the lock unevenly and slipped when the keeper turned it. A change in one small section had altered contacts across the whole folded tool.",
-      "The apprentice pressed harder and warmed the lock. Heat loosened the band instead. After cooling, some sections returned, while others tangled with neighbouring bands into useless knots. The maker set one damaged band in a folding frame that kept the wrong parts apart until the intended contacts formed. The frame left afterward; it did not become part of the key. Two other bands remained clumped, showing that returning the room to its old temperature did not guarantee every altered chain would recover.",
-      "A repaired band opened the practice lock, then failed when held completely rigid in a clamp. Near the lock, its hollow had to shift slightly around the metal ridges. A partner pin on the vault door also helped align the first contact. The maker stopped drawing the key as one frozen outline. Its sequence constrained which shapes it could reach, while temperature, surrounding conditions, partners and small movements affected whether a working shape was occupied at the needed moment.",
-      "The palace clerk offered to accept the leather case unopened and preserve the ceremony. The apprentice instead returned the bonus, admitted the substitution and spent coronation morning rebuilding the band with the proper middle piece. The king used an older chest for the jewels. The workshop lost its royal display and sold two benches to pay the imported-piece debt. Before the rebuilt key left, the apprentice tested its fold, its movement at the lock and its recovery after a mild temperature change, not merely its length and weight.",
-      "A week later, the vault finally opened. The apprentice did not lift the band while it lay flat. He waited until the distant sections met, then pressed the hollow gently over the lock; the metal turned with a low click. In the empty leather case he kept the rejected stiff piece. It weighed exactly the same as the original and still bore the coronation seal."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "12号和47号为什么会一起碰到配体",
+    "summaryZh": "两个原创蛋白模型长度、数量和整体轮廓近似，却不能据此标成“功能相同”。编辑沿链图追踪12号和47号到三维口袋，并把它们与同一个指定配体的两个互补化学位置对上。",
     "storyParagraphsZh": [
-      "国王加冕前，金库匠人答应做一把窃贼看不出形状的钥匙。他把许多不同小节连成柔软长带，平放时既无硬齿，也毫无用处。在适合的温度与盐气里，邻近小节弯曲，远隔位置彼此吸引或避开，长带逐渐折紧；三处本来相距很远的小节靠到一起，形成抓住锁芯的凹面。若在典礼前交货，工坊就能还清冬债。",
-      "一节进口材料没有按时到。学徒用同样长、同样重的硬片替代，认定守库人最多只会清点节数。长带仍能折起，也装得进皮盒，他便领了典礼奖金。第一次试锁，转角却鼓出一块，凹面同锁芯贴不齐，一用力就滑脱。一处小改动，已经把整条折叠工具的接触关系带偏。",
-      "学徒加力，又把锁烤热，长带反而松开。冷却以后，有些小节自行归位，另一些却同旁边长带缠成死结。匠人把一条坏带放进折带架，暂时隔开不该相碰的部分，等原有位置重新靠拢；折带架随后离开，并不成为钥匙。另两条仍聚在一起，说明房间回到旧温度，也不保证每条改变过的带都能复原。",
-      "修好的长带能开练习锁，被夹具固定得完全僵硬后却又转不动。凹面接近锁芯时必须围着金属脊轻微移动，门上的伙伴销也帮助第一处接触对准。匠人不再把钥匙画成一张冻结轮廓。小节次序限制它能到达哪些形态，温度、周围条件、伙伴与细小活动又影响工作形态能否在需要时出现。",
-      "宫廷书记提出，皮盒不开封也可先验收，典礼便不会延误。学徒却退回奖金，承认换料，在加冕早晨重新装上正确中节；国王只得用旧箱盛放珠宝。工坊失去御前展示，还卖掉两张长凳支付进口料债。新钥匙出门前，学徒检验折叠、入锁时的活动和轻微温变后的恢复，不再只量长度与重量。",
-      "一周后，金库终于开启。学徒没有拿起平放的长带，而是等远隔小节相遇，再把凹面轻轻压上锁芯，金属低低响了一声。空皮盒里留着那节被退下的硬片。它和原件一样重，加冕印记也仍清楚。"
+      "科学可视化编辑周遥第二天要交一个蛋白质结构展项。原创模型A和B长度相同、蛋白量设定相同，整体轮廓也很接近，草稿却写着“因此功能相同”。她决定先不下结论，而是沿模型中的12号、47号和指定配体L逐一追踪局部接触。",
+      "链图里，12号与47号相隔35个编号，中间有34个位置，一级序列上并不相邻。切到三维视图后，三级结构把两处带到同一结合口袋。教学配体L在该口袋中有两个相邻互补位置：一个带负电、一个带正电。",
+      "周遥点亮两条接触线：模型A的12号正电侧链靠近L的负电位置，47号负电侧链靠近L的正电位置。链上相隔很远的两处，折叠后竟同时面对一个配体。她把标注写成“口袋中的两处接触”，没有把两残基说成整个口袋，也没有画成12与47彼此相连。",
+      "她切到模型B，保持蛋白量、配体浓度、pH和大致轮廓，只把47号设为中性。L的正电位置不再面对模型A中的负电侧链，12号那处互补接触则保留。程序据此示意较低的L结合读数，变化沿着那一处接触可追踪。周遥把读数标为“模型响应”，让观众把局部接触变化与真实结构测定分开。",
+      "周遥按下“层级”按钮，先显示氨基酸顺序，再放大主链的局部螺旋与折叠片层：这是一级和二级。她缩回整条单链，显示三级的整体空间安排；只有出现多链组装，界面才标四级。环境说明也留下来：同一序列在不同环境下，结构与相互作用可能变化；有些区域本来动态或无固定折叠。",
+      "发布前，她删掉“相同外形=相同功能”。最终页面让观众从链图点击12和47，再切到L所在的三维口袋；A/B按钮只改变47号的教学侧链性质。最后画面停在同一配体口袋，读者能看到变化发生在局部接触条件，而不是被迫接受“整个蛋白变形”的结论。"
     ],
-    "conceptName": "Protein structure and function",
+    "overallZh": "蛋白质功能与氨基酸序列、侧链性质、空间结构和环境共同相关。序列远隔的位置可在折叠后形成同一功能表面，并与配体或伙伴形成特定局部接触；粗略外形、蛋白数量或单个功能读数都不足以独立决定结构与功能关系。",
     "conceptNameZh": "蛋白质结构与功能",
-    "explanationParagraphs": [
-      "A protein's amino-acid sequence constrains how it folds into secondary, tertiary and sometimes multi-subunit structures. Shape, charge distribution, flexibility and interaction surfaces help determine function. Mutation, pH, temperature or chemical conditions can alter folding, dynamics or assembly; some changes are reversible and others cause aggregation or loss of activity. Equal protein mass therefore does not guarantee equal functional state."
-    ],
     "explanationParagraphsZh": [
-      "蛋白质的氨基酸序列限制其形成二级、三级及有时的多亚基结构；形状、电荷分布、柔性和相互作用表面共同影响功能。突变、酸碱度、温度或化学条件可改变折叠、运动与组装，有些变化可逆，有些会聚集或失活。因此蛋白质量相同，不代表功能状态必然相同。"
+      "A的12号正电侧链面对L的负电位置，47号负电侧链面对L的正电位置。B只把47号设为中性，减去模型中的一处带电互补贡献；12号接触和其他条件保留。",
+      "较低结合读数是程序按设定给出的响应，用来追踪局部接触对这项任务的影响；两残基并不组成整个口袋，模型也不证明真实蛋白已变形或丧失全部功能。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "从序列编号追到三维口袋，再把具体侧链性质与指定配体的局部接触条件连接起来。",
+      "diagramTitle": "12号和47号怎样在同一口袋中接触配体L",
+      "diagramSteps": [
+        "在一级序列定位12号与47号",
+        "观察三级结构把远隔位置带进同一口袋",
+        "把A中两侧链分别对应到配体L的互补位置",
+        "保持环境和蛋白量一致只改变B的47号侧链性质",
+        "用图层区分局部主链结构、整条单链与多链组装"
+      ],
+      "diagramStepNotes": [
+        "12与47相隔35个编号，中间有34个位置。",
+        "折叠后两处进入同一L结合口袋。",
+        "A中12正电靠近L负电位置，47负电靠近L正电位置。",
+        "B把47设为中性，减去该处带电互补贡献；12号接触、配体浓度、pH和蛋白量保留。",
+        "二级如局部螺旋和折叠片层；三级看整条单链，四级只谈多链组装。局部结合读数不证明整链解折叠。"
+      ],
+      "mapping": [
+        "链图编号与层级按钮 → 序列位置、局部主链形状和整链空间安排可分别观察。",
+        "L结合口袋三维视图 → 序列位置形成的局部功能表面。",
+        "L的正/负位置与两条接触线 → 同一口袋内的两处局部互补贡献。",
+        "A/B切换及模型响应 → 隔离47号局部教学变化，不作为真实测量。"
+      ],
+      "boundary": "这是原创简化结构模型，不是真实残基编号、结构测定或结合实验。蛋白结构受环境与动态性影响，并非一蛋白一固定刚性形状；单个侧链变化不必改变功能，也不必导致整链失折叠。常见变性也不等于必然切断一级肽链。两残基只是选出的局部接触，不是整个口袋；较低读数由教学程序设定。",
+      "reflection": "如果模型只改变一个口袋侧链，而整体轮廓几乎不变，你还需要哪些结构和功能证据，才能把“局部接触可能改变”推进到真实蛋白的因果结论？"
+    },
+    "referencesZh": [
+      {
+        "id": "clark-douglas-choi-2018-proteins",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 3.4: Proteins. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+        "use": "支持氨基酸序列、侧链性质、二级/三级/部分蛋白的四级结构及结构与功能联系；环境可能改变结构，变性常不切断一级序列，复原并非保证。"
+      },
+      {
+        "id": "rcsb-pdb101-protein-hierarchical-structure",
+        "citation": "RCSB Protein Data Bank. (n.d.). Protein Hierarchical Structure. PDB-101: Guide to Understanding PDB Data.",
+        "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/protein-hierarchical-structure",
+        "use": "支持结构层级、功能接触面及多链组装；明确指出某些蛋白区域本来无固定折叠，因此不能把所有功能蛋白画成僵硬单一形状。"
+      }
+    ],
+    "title": "Why Do Positions 12 and 47 Both Contact the Ligand?",
+    "summary": "Two original protein models have similar lengths, quantities, and overall outlines, but that is not enough to label their functions as identical. The editor traces positions 12 and 47 from the sequence into a three-dimensional pocket and aligns them with two complementary chemical positions on the same specified ligand.",
+    "storyParagraphs": [
+      "Science-visualization editor Zhou Yao has to deliver a protein-structure exhibit the next day. Original models A and B have the same length, the same modeled protein amount, and very similar overall outlines, yet the draft text says, “therefore their functions are the same.” She postpones that conclusion and instead traces positions 12 and 47, together with the specified ligand L, one step at a time.",
+      "In the sequence view, positions 12 and 47 differ by 35 in numbering, with 34 positions between them, so they are far apart in the primary sequence. Switching to the three-dimensional view shows that the tertiary structure brings both positions into the same binding pocket. The teaching ligand L has two neighboring complementary sites in that pocket: one negatively charged and one positively charged.",
+      "Zhou Yao highlights two contact lines: model A’s positive side chain at position 12 lies near L’s negative site, and the negative side chain at position 47 lies near L’s positive site. Two distant positions in the chain now face the same ligand after folding. She labels them “two contacts within the pocket,” without presenting them as the entire pocket or drawing a contact between 12 and 47 themselves.",
+      "She switches to model B, keeping protein amount, ligand concentration, pH, and approximate outline unchanged while making only position 47 neutral. L’s positive site no longer faces the negative side chain shown in A, while the complementary contact at position 12 remains. The program illustrates a lower L-binding readout from that setting, allowing the change to be traced through one contact. Zhou Yao labels it “model response” so viewers can distinguish the local teaching change from a real structural measurement.",
+      "Zhou Yao presses the “levels” button, first showing amino-acid order, then zooming into local backbone helices and folded sheets: primary and secondary structure. Zooming back out shows the whole single chain’s spatial organization, its tertiary structure; the interface labels quaternary structure only for multichain assembly. She keeps the environmental note too: the same sequence can have different structures and interactions in different environments, and some regions are naturally dynamic or lack a fixed fold.",
+      "Before publication, she deletes “same shape = same function.” The final page lets viewers click positions 12 and 47 in the sequence and then switch to the three-dimensional pocket containing L. The A/B control changes only the teaching side-chain property at position 47. The last view remains on the same ligand pocket, making the local contact change visible without forcing the conclusion that the entire protein has changed shape."
+    ],
+    "overall": "Protein function depends on amino-acid sequence, side-chain properties, spatial structure, and environment. Positions far apart in sequence can come together after folding to form one functional surface and make specific local contacts with a ligand or partner. Rough overall shape, protein amount, or a single functional readout is not sufficient by itself to establish a structure–function relationship.",
+    "conceptName": "Protein structure and function",
+    "explanationParagraphs": [
+      "In A, the positive side chain at 12 faces L’s negative site and the negative side chain at 47 faces L’s positive site. Making only 47 neutral in B removes one modeled complementary electrostatic contribution; the contact at 12 and other conditions remain.",
+      "The lower binding readout is the program’s response to its assumptions, used to trace a local contact’s effect on this task. The two residues do not constitute the entire pocket, and the model does not prove real deformation or loss of all function."
+    ],
+    "module": {
+      "intro": "Trace sequence positions into a three-dimensional pocket, then connect specific side-chain properties to the local contact conditions for a defined ligand.",
+      "diagramTitle": "How Positions 12 and 47 Contact Ligand L Within the Same Pocket",
+      "diagramSteps": [
+        "Locate positions 12 and 47 in the primary sequence",
+        "Observe how tertiary structure brings the distant positions into the same pocket",
+        "Map the two side chains in model A to complementary sites on ligand L",
+        "Keep environment and protein amount fixed while changing only position 47 in model B",
+        "Use layers to distinguish local backbone structure, the whole single chain, and multichain assembly"
+      ],
+      "diagramStepNotes": [
+        "Positions 12 and 47 differ by 35 in numbering, with 34 positions between them.",
+        "After folding, both positions enter the same L-binding pocket.",
+        "In A, positive position 12 lies near a negative site on L, while negative position 47 lies near a positive site on L.",
+        "B makes 47 neutral, removing its modeled electrostatic contribution; the contact at 12, ligand concentration, pH, and protein amount remain.",
+        "Secondary structure includes local helices and folded sheets; tertiary structure concerns the whole single chain, and quaternary structure concerns multichain assembly. A local binding readout does not prove global unfolding."
+      ],
+      "mapping": [
+        "Sequence numbering and level controls → separate views of sequence positions, local backbone forms, and whole-chain organization.",
+        "Three-dimensional L-binding pocket → a local functional surface created by folding.",
+        "L’s positive/negative sites and two contact lines → two local complementary contributions within one pocket.",
+        "A/B switching and model response → isolation of the local teaching change at 47, not a real measurement."
+      ],
+      "boundary": "This is an original simplified structural model, not a real residue numbering scheme, structural measurement, or binding experiment. Protein structure depends on environment and dynamics and is not one rigid fixed shape per protein. A single side-chain change need not alter function or cause global unfolding, and common denaturation does not necessarily mean cleavage of the primary peptide chain. The two residues are selected local contacts, not the entire pocket; the lower readout is assigned by the teaching program.",
+      "reflection": "If a model changes only one side chain in a binding pocket while the overall outline looks almost unchanged, what additional structural and functional evidence would be needed to move from “the local contact may change” to a causal conclusion about a real protein?"
+    },
+    "references": [
+      {
+        "id": "clark-douglas-choi-2018-proteins",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 3.4: Proteins. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+        "use": "Supports amino-acid sequence, side-chain properties, secondary and tertiary structure, quaternary structure in some proteins, and the connection between structure and function; environmental conditions can alter structure, denaturation often does not sever the primary sequence, and recovery is not guaranteed."
+      },
+      {
+        "id": "rcsb-pdb101-protein-hierarchical-structure",
+        "citation": "RCSB Protein Data Bank. (n.d.). Protein Hierarchical Structure. PDB-101: Guide to Understanding PDB Data.",
+        "url": "https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/protein-hierarchical-structure",
+        "use": "Supports structural hierarchy, functional contact surfaces, and multichain assembly; it also notes that some protein regions are intrinsically not fixed in one folded structure, so functional proteins should not all be depicted as rigid single shapes."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-a-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-a-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-a-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "For the king's coronation, a vault maker promised a key no thief could recognise on sight. He linked many different small pieces into one soft band. Laid flat, it had no rigid teeth and looked useless. Under the right temperature and salt air, nearby sections bent while distant sections attracted or avoided one another. The band folded into a compact body, bringing three far-apart pieces together as a hollow surface that gripped the vault lock. Delivering it before the ceremony would pay the maker's winter debt.\n\nOne imported middle piece failed to arrive. The apprentice replaced it with a stiffer piece of the same weight and length, reasoning that the vault keeper would never count more than the number of links. The band still folded and fit the leather case, so he accepted the coronation bonus. At the first rehearsal, however, one corner bulged. The hollow met the lock unevenly and slipped when the keeper turned it. A change in one small section had altered contacts across the whole folded tool.\n\nThe apprentice pressed harder and warmed the lock. Heat loosened the band instead. After cooling, some sections returned, while others tangled with neighbouring bands into useless knots. The maker set one damaged band in a folding frame that kept the wrong parts apart until the intended contacts formed. The frame left afterward; it did not become part of the key. Two other bands remained clumped, showing that returning the room to its old temperature did not guarantee every altered chain would recover.\n\nA repaired band opened the practice lock, then failed when held completely rigid in a clamp. Near the lock, its hollow had to shift slightly around the metal ridges. A partner pin on the vault door also helped align the first contact. The maker stopped drawing the key as one frozen outline. Its sequence constrained which shapes it could reach, while temperature, surrounding conditions, partners and small movements affected whether a working shape was occupied at the needed moment.\n\nThe palace clerk offered to accept the leather case unopened and preserve the ceremony. The apprentice instead returned the bonus, admitted the substitution and spent coronation morning rebuilding the band with the proper middle piece. The king used an older chest for the jewels. The workshop lost its royal display and sold two benches to pay the imported-piece debt. Before the rebuilt key left, the apprentice tested its fold, its movement at the lock and its recovery after a mild temperature change, not merely its length and weight.\n\nA week later, the vault finally opened. The apprentice did not lift the band while it lay flat. He waited until the distant sections met, then pressed the hollow gently over the lock; the metal turned with a low click. In the empty leather case he kept the rejected stiff piece. It weighed exactly the same as the original and still bore the coronation seal.",
-    "storyBodyZh": "国王加冕前，金库匠人答应做一把窃贼看不出形状的钥匙。他把许多不同小节连成柔软长带，平放时既无硬齿，也毫无用处。在适合的温度与盐气里，邻近小节弯曲，远隔位置彼此吸引或避开，长带逐渐折紧；三处本来相距很远的小节靠到一起，形成抓住锁芯的凹面。若在典礼前交货，工坊就能还清冬债。\n\n一节进口材料没有按时到。学徒用同样长、同样重的硬片替代，认定守库人最多只会清点节数。长带仍能折起，也装得进皮盒，他便领了典礼奖金。第一次试锁，转角却鼓出一块，凹面同锁芯贴不齐，一用力就滑脱。一处小改动，已经把整条折叠工具的接触关系带偏。\n\n学徒加力，又把锁烤热，长带反而松开。冷却以后，有些小节自行归位，另一些却同旁边长带缠成死结。匠人把一条坏带放进折带架，暂时隔开不该相碰的部分，等原有位置重新靠拢；折带架随后离开，并不成为钥匙。另两条仍聚在一起，说明房间回到旧温度，也不保证每条改变过的带都能复原。\n\n修好的长带能开练习锁，被夹具固定得完全僵硬后却又转不动。凹面接近锁芯时必须围着金属脊轻微移动，门上的伙伴销也帮助第一处接触对准。匠人不再把钥匙画成一张冻结轮廓。小节次序限制它能到达哪些形态，温度、周围条件、伙伴与细小活动又影响工作形态能否在需要时出现。\n\n宫廷书记提出，皮盒不开封也可先验收，典礼便不会延误。学徒却退回奖金，承认换料，在加冕早晨重新装上正确中节；国王只得用旧箱盛放珠宝。工坊失去御前展示，还卖掉两张长凳支付进口料债。新钥匙出门前，学徒检验折叠、入锁时的活动和轻微温变后的恢复，不再只量长度与重量。\n\n一周后，金库终于开启。学徒没有拿起平放的长带，而是等远隔小节相遇，再把凹面轻轻压上锁芯，金属低低响了一声。空皮盒里留着那节被退下的硬片。它和原件一样重，加冕印记也仍清楚。",
-    "explanation": "A protein's amino-acid sequence constrains how it folds into secondary, tertiary and sometimes multi-subunit structures. Shape, charge distribution, flexibility and interaction surfaces help determine function. Mutation, pH, temperature or chemical conditions can alter folding, dynamics or assembly; some changes are reversible and others cause aggregation or loss of activity. Equal protein mass therefore does not guarantee equal functional state.",
-    "explanationZh": "蛋白质的氨基酸序列限制其形成二级、三级及有时的多亚基结构；形状、电荷分布、柔性和相互作用表面共同影响功能。突变、酸碱度、温度或化学条件可改变折叠、运动与组装，有些变化可逆，有些会聚集或失活。因此蛋白质量相同，不代表功能状态必然相同。"
+    "storyBody": "Science-visualization editor Zhou Yao has to deliver a protein-structure exhibit the next day. Original models A and B have the same length, the same modeled protein amount, and very similar overall outlines, yet the draft text says, “therefore their functions are the same.” She postpones that conclusion and instead traces positions 12 and 47, together with the specified ligand L, one step at a time.\n\nIn the sequence view, positions 12 and 47 differ by 35 in numbering, with 34 positions between them, so they are far apart in the primary sequence. Switching to the three-dimensional view shows that the tertiary structure brings both positions into the same binding pocket. The teaching ligand L has two neighboring complementary sites in that pocket: one negatively charged and one positively charged.\n\nZhou Yao highlights two contact lines: model A’s positive side chain at position 12 lies near L’s negative site, and the negative side chain at position 47 lies near L’s positive site. Two distant positions in the chain now face the same ligand after folding. She labels them “two contacts within the pocket,” without presenting them as the entire pocket or drawing a contact between 12 and 47 themselves.\n\nShe switches to model B, keeping protein amount, ligand concentration, pH, and approximate outline unchanged while making only position 47 neutral. L’s positive site no longer faces the negative side chain shown in A, while the complementary contact at position 12 remains. The program illustrates a lower L-binding readout from that setting, allowing the change to be traced through one contact. Zhou Yao labels it “model response” so viewers can distinguish the local teaching change from a real structural measurement.\n\nZhou Yao presses the “levels” button, first showing amino-acid order, then zooming into local backbone helices and folded sheets: primary and secondary structure. Zooming back out shows the whole single chain’s spatial organization, its tertiary structure; the interface labels quaternary structure only for multichain assembly. She keeps the environmental note too: the same sequence can have different structures and interactions in different environments, and some regions are naturally dynamic or lack a fixed fold.\n\nBefore publication, she deletes “same shape = same function.” The final page lets viewers click positions 12 and 47 in the sequence and then switch to the three-dimensional pocket containing L. The A/B control changes only the teaching side-chain property at position 47. The last view remains on the same ligand pocket, making the local contact change visible without forcing the conclusion that the entire protein has changed shape.",
+    "storyBodyZh": "科学可视化编辑周遥第二天要交一个蛋白质结构展项。原创模型A和B长度相同、蛋白量设定相同，整体轮廓也很接近，草稿却写着“因此功能相同”。她决定先不下结论，而是沿模型中的12号、47号和指定配体L逐一追踪局部接触。\n\n链图里，12号与47号相隔35个编号，中间有34个位置，一级序列上并不相邻。切到三维视图后，三级结构把两处带到同一结合口袋。教学配体L在该口袋中有两个相邻互补位置：一个带负电、一个带正电。\n\n周遥点亮两条接触线：模型A的12号正电侧链靠近L的负电位置，47号负电侧链靠近L的正电位置。链上相隔很远的两处，折叠后竟同时面对一个配体。她把标注写成“口袋中的两处接触”，没有把两残基说成整个口袋，也没有画成12与47彼此相连。\n\n她切到模型B，保持蛋白量、配体浓度、pH和大致轮廓，只把47号设为中性。L的正电位置不再面对模型A中的负电侧链，12号那处互补接触则保留。程序据此示意较低的L结合读数，变化沿着那一处接触可追踪。周遥把读数标为“模型响应”，让观众把局部接触变化与真实结构测定分开。\n\n周遥按下“层级”按钮，先显示氨基酸顺序，再放大主链的局部螺旋与折叠片层：这是一级和二级。她缩回整条单链，显示三级的整体空间安排；只有出现多链组装，界面才标四级。环境说明也留下来：同一序列在不同环境下，结构与相互作用可能变化；有些区域本来动态或无固定折叠。\n\n发布前，她删掉“相同外形=相同功能”。最终页面让观众从链图点击12和47，再切到L所在的三维口袋；A/B按钮只改变47号的教学侧链性质。最后画面停在同一配体口袋，读者能看到变化发生在局部接触条件，而不是被迫接受“整个蛋白变形”的结论。",
+    "explanation": "In A, the positive side chain at 12 faces L’s negative site and the negative side chain at 47 faces L’s positive site. Making only 47 neutral in B removes one modeled complementary electrostatic contribution; the contact at 12 and other conditions remain.\n\nThe lower binding readout is the program’s response to its assumptions, used to trace a local contact’s effect on this task. The two residues do not constitute the entire pocket, and the model does not prove real deformation or loss of all function.",
+    "explanationZh": "A的12号正电侧链面对L的负电位置，47号负电侧链面对L的正电位置。B只把47号设为中性，减去模型中的一处带电互补贡献；12号接触和其他条件保留。\n\n较低结合读数是程序按设定给出的响应，用来追踪局部接触对这项任务的影响；两残基并不组成整个口袋，模型也不证明真实蛋白已变形或丧失全部功能。"
   },
   {
     "id": "0512-feedback-inhibition",
@@ -13382,49 +13566,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0512",
     "fieldTitle": "Biochemistry",
     "fieldTitleZh": "生物化学",
-    "title": "The Bread That Stopped the First Mill",
-    "titleZh": "让第一座磨坊停下的面包",
-    "summary": "The bread store is full while the first mill continues turning grain into flour no one needs.",
-    "summaryZh": "面包仓已经堆满，河上第一座磨坊却仍在把谷物磨成无人需要的面粉。",
-    "storyParagraphs": [
-      "Along the river, the first mill ground grain, a second workshop mixed flour into dough, and the final ovens baked bread. Each foreman was paid by how much material he pushed onward. After the harvest festival, sales fell, but the mill manager kept the waterwheel at full speed to win his monthly flour bonus. Bread already touched the store's highest shelf. Upstream, fresh sacks continued disappearing under the first millstone, and the next day's tally looked excellent.",
-      "By evening no more loaves would fit through the store door. Dough soured in barrels, flour covered the passage and mice reached a torn sack. The manager ordered the ovens hotter, gaining one aisle for an hour, but crusts burned while the first mill kept consuming grain. Stopping only the ovens merely moved the blockage backward. By midnight, intermediate rooms were full and the river wheel still turned, because nobody at the entrance could see the final shelf.",
-      "A millwright ran a float rod from the bread store to the grain gate. When loaves pressed the high mark, the rod pulled a catch at the first mill, narrowing the gate before more grain was committed to the bread line. The manager cut the cord after one trial, afraid of losing his flour bonus. The wheel surged again. Before dawn, two barrels split under sour dough, and flour dust clogged the second workshop's belt.",
-      "The manager fastened the rod back himself. As bread sold, the store level fell, the catch released and grain entered again. When shelves filled, the gate descended gradually rather than stopping every stone at once. The signal travelled quickly and reversed without rebuilding the mills. It acted near the first step that mostly sent grain toward bread, limiting wasted grain and crowded barrels before the final door jammed.",
-      "A pastry room opened later, drawing flour from the second workshop. On its first busy day, a full bread store closed the grain gate and left the pastry workers empty-handed. The millwright added a second measure for the branch and changed the linkage: bread alone could slow the bread-bound stream, but flour demand from pastries still opened enough supply. The manager learned that one end signal could not safely govern every branch as though they all made the same product.",
-      "The ruined festival batch remained on the books. The manager stopped the wheel for a day, surrendered his flour bonus and paid for spoiled dough, torn barrels and wasted grain. He also replaced foremen's separate output prizes with a shared measure of saleable goods and loss. The first week looked less productive because fewer sacks crossed the mill. The warehouse floor, however, stayed clear enough for one person to walk from grain to bread without stepping over waste.",
-      "At dusk, the last batch entered storage and touched the high mark. Far upriver, the first mill's water gate lowered with a wooden knock. The old cut cord still hung beside the manager's bonus ledger, its two ends joined by a dark knot."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "同一批酶，为什么P多时反而慢",
+    "summaryZh": "虚构小试的排查演练中，P积累伴随入口E1变慢。周宁在模型里保持其他条件，只改变P水平，追踪同一批酶设定下的部分恢复，再把可逆影响、调节位点假设和库存变化分开，列出下一轮待验证比较。",
     "storyParagraphsZh": [
-      "河边生产线从谷物开始：第一座磨坊磨面，第二间作坊和面，末端烤房做成面包。每处管事的奖金都按送往下一处的数量计算。收获节结束后，面包卖慢了，磨坊主管仍把水轮开满，想拿本月面粉奖金。成品已顶到仓库最高一层，上游新粮袋却继续消失在磨石下，日报数字十分漂亮。",
-      "傍晚，仓门再塞不进一条面包。面团在桶里发酸，面粉堵住通道，老鼠钻进破袋。主管命烤房加火，一小时内勉强腾出过道，面包外壳却焦了，第一座磨坊仍不停耗粮。只关烤房，阻塞不过向前挪。午夜时中间房全满，河轮还在转，因为入口没人看得见末端货架。",
-      "机匠从面包仓牵出一根浮杆，接回磨坊进粮闸。面包压到高线，杆便拉动卡口，让粮食尚未大批进入面包路径前先减速。主管试过一次，又怕奖金减少，把连杆割断，水轮立即恢复。天亮前，两只面桶被酸面撑裂，第二作坊的皮带也让面粉堵住。",
-      "主管亲手把浮杆重新接好。面包卖出，仓位下降，卡口松开，粮食再次进入；货架升高，闸门逐渐落下，并非一瞬封死每块磨石。信号来得快，也能自行解除，不必重建磨坊。它作用在谷物一旦越过便多半走向面包的早段，让浪费和拥塞在堵住仓门前就减下来。",
-      "后来第二作坊分出糕点房。开张第一天，面包仓一满，粮闸就关，糕点师却没有面粉可用。机匠又加一处支路量杆，改动连接：面包信号压低送往面包的部分，糕点订单仍能拉开足够供应。主管终于不再让一个末端信号把所有支路当成同一种产品。",
-      "节后坏账仍要支付。主管让水轮停了一天，放弃面粉奖金，赔掉酸面、裂桶与废粮，又把各处只奖励本段产量的办法改成共同记录可售成品和损失。第一周看起来磨得更少，因为经过磨石的粮袋下降了；仓库地面却终于能让一个人从粮堆走到面包架，不必跨过废物。",
-      "傍晚，最后一批面包入仓，碰到高线。远处第一座磨坊的水闸随即落下，发出一声木响。那截被割断的旧绳仍挂在主管奖金簿旁，两端用一个深色结重新接起。"
+      "生物工艺团队正在演练一份虚构小试的排查方案。屏幕上的A→B→C→P记录显示，P增多时入口E1步骤变慢。有人在方案里写下“连续运行使酶失活，补加新酶”。技术员周宁先翻开条件栏：A仍充足，pH、温度、E1总量和检测设置未变，单凭变慢还不能选定原因。",
+      "周宁把代表同一批E1的两个模型样本并排打开，用相同时长内A→B的转化量比较入口活性。A、E1量、pH、温度、体积和检测条件固定，只把P参数设为高或低，高P面板的转化较少。她锁住体积栏：只改P参数的演练，不是稀释样本，也不是实测选择性移除P。",
+      "她把高P参数降回原低P水平，其他设定保留，活性也回到原低P读数。低P仍非零，模型还保留部分抑制，故活性仍低于模型另列的无P参考。这是相对无P参考的部分恢复，不能用来断言剩余损伤。周宁把真实样本能否恢复、是否伴随失活列为待检验项。",
+      "团队再查看教学机制图。A进入E1活性位点，P则被设定为结合另一个调节位点；这种结合使E1构象分布偏向较低催化活性的状态，从而降低A→B通量。P下降时占据调节位点的程度可降低，抑制随之减弱。这个位点和构象变化属于模型机制设定，不是前面活性比较直接测出来的。",
+      "周宁再切到库存页。两个等时长区间用同一种示意数量单位：期初20，生成6、使用2，期末20+6−2=24；下一段从24开始，生成2、使用5，得24+2−5=21。生成与使用量是独立输入，并非从P库存算出的E1活性。入口降速不让已有P瞬间消失，还要追踪使用或移除。",
+      "讨论结束时，团队把“直接补新酶”改成“先验证高P／低P匹配比较”。周宁保存固定条件清单，供下一轮设计检验；机制图上的P→调节位点箭头仍标为教学假设。最后一栏留着两项待查：真实活性是否恢复，位点是否有独立证据，模型没有替它们打勾。"
     ],
-    "conceptName": "Feedback inhibition",
+    "overallZh": "反馈抑制是代谢终产物通过调节较早关键酶的活性，降低进一步合成通量的机制。终产物下降后抑制可以减弱。它不同于底物耗尽、酶不可逆损坏，也不能仅凭活性变化就证明具体调节位点或构象机制。",
     "conceptNameZh": "反馈抑制",
-    "explanationParagraphs": [
-      "Feedback inhibition occurs when a pathway's end product reduces activity of an earlier enzyme, often the first committed step, commonly by binding a regulatory site. As product accumulates, pathway flux falls; when product is used or diluted, inhibition may ease. This rapidly limits waste and imbalance, but strength and architecture vary among pathways. Removing inhibition can raise production while creating new metabolic costs."
-    ],
     "explanationParagraphsZh": [
-      "反馈抑制是代谢通路的终产物降低较早步骤酶活性，常作用于首个承诺步骤，并可通过结合调节位点实现。产物积累时通量下降，产物被消耗或稀释后抑制可减弱。这能快速限制浪费与失衡，但不同通路强度和结构各异；解除抑制虽可能增产，也会带来新的代谢代价。"
+      "模型以相同时长A→B转化量比较E1活性，只改P并保留其他条件。低P仍非零：读数恢复到原低P水平，却低于无P参考，表示模型尚有抑制，不证明剩余损伤。",
+      "位点和构象是模型假设，真实恢复仍需匹配检验。等时库存20→24→21用独立给定的生成、使用量，不由库存反推出E1活性。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "在明确的排查演练模型中固定其他条件，只改P，再区分模型响应与实际检验。",
+      "diagramTitle": "高P时E1变慢，低P后部分恢复意味着什么",
+      "diagramSteps": [
+        "固定模型中的A、E1量、pH、温度、体积和检测条件",
+        "只改变P，用相同时长A→B转化量比较入口活性",
+        "降低模型P参数，观察同批E1设定下的部分恢复",
+        "用P结合调节位点改变E1活性的模型解释方向",
+        "把P库存变化与E1活性变化分开"
+      ],
+      "diagramStepNotes": [
+        "入口变慢时A仍充足，E1总量及检测条件未变。",
+        "固定体积等条件；相同时长的转化量用于比较模型活性，不通过稀释改P。",
+        "恢复到原低P读数；低P非零，模型抑制尚未全解除，读数仍低于无P参考。真实恢复及伴随失活待实测。",
+        "调节位点/构象变化是教学机制设定，不是活性比较直接定位的证据。",
+        "两个等时长区间：20+6−2=24，24+2−5=21。量用同一示意单位，生成/使用量为独立输入，不能据库存推出E1活性。"
+      ],
+      "mapping": [
+        "同批E1设定的高P/低P面板 → 仅改变P的模型比较，不是假称已完成实验。",
+        "A进入活性位点 → 底物催化路径。",
+        "P→调节位点箭头 → 终产物反馈的模型机制。",
+        "等时库存20→24→21 → 生成与使用量共同决定期末数量，不等同入口活性。"
+      ],
+      "boundary": "这是虚构小试的排查演练与原创教学模型；参数变化和模型恢复不是实际样本操作或实验结果。它不提供大肠杆菌阈值、动力学或位点测量。反馈抑制不是所有负反馈，也不表示通路永久关闭；真实通路还可能有酶失活、基因调控与多分支。低P非零及无P参考也是教学设定，不是实测恢复比例。",
+      "reflection": "模型只改P时活性可逆变化，哪些结论仍停留在模型内？你会怎样设计真实匹配比较，再核验具体调节位点？"
+    },
+    "referencesZh": [
+      {
+        "id": "clark-douglas-choi-2018-enzymes",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 6.5: Enzymes. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+        "use": "支持终产物抑制上游步骤、异亮氨酸对苏氨酸脱氨酶的调节示例，以及产物水平下降后抑制可减弱；不把教材示意当作所有通路共同的二元开关。"
+      },
+      {
+        "id": "calhoun-1976-threonine-deaminase",
+        "citation": "Calhoun, D. H. (1976). Threonine deaminase from Escherichia coli: feedback-hypersensitive enzyme from a genetic regulatory mutant. Journal of Bacteriology, 126(1), 56–63. https://doi.org/10.1128/jb.126.1.56-63.1976",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/770442/",
+        "use": "原始研究摘要支持大肠杆菌苏氨酸脱氨酶受终产物L-异亮氨酸抑制，且突变体的反馈敏感性可不同；本次读到摘要，未读全文，不作数值或位点结构断言。"
+      }
+    ],
+    "title": "Why Does the Same Batch of Enzyme Slow Down When P Is High?",
+    "summary": "In a troubleshooting rehearsal for a fictional trial, P accumulation accompanies a slowdown at E1. Zhou Ning changes only P in a model with otherwise matched conditions, traces partial recovery for the same modeled enzyme batch, and separates a reversible effect, a regulatory-site hypothesis, and inventory changes before listing comparisons to verify next.",
+    "storyParagraphs": [
+      "A bioprocess team is rehearsing a troubleshooting plan for a fictional trial. On screen, the A→B→C→P record shows the entry step at E1 slowing as P increases. Someone writes, “continuous operation inactivates the enzyme; add fresh enzyme.” Technician Zhou Ning first opens the conditions panel: A remains abundant, while pH, temperature, total E1, and detection settings are unchanged. Slowing alone cannot identify the cause.",
+      "Zhou Ning opens two model samples representing the same E1 batch side by side, comparing entry activity by the amount converted from A to B over equal durations. A, E1 amount, pH, temperature, volume, and detection conditions remain fixed; only P is set high or low, with less conversion at high P. She locks the volume field: changing P in a rehearsal is neither sample dilution nor measured selective removal of P.",
+      "She lowers P back to its original low level, retaining other settings; activity returns to the original low-P readout too. Low P is still nonzero, so the model retains some inhibition and activity stays below its separately displayed no-P reference. Recovery is partial relative to that reference, which does not establish residual damage. Zhou Ning lists real-sample recovery and possible accompanying inactivation as questions to test.",
+      "The team then examines the teaching mechanism diagram. A enters the active site of E1, while P is defined in the model as binding a separate regulatory site. That binding shifts the distribution of E1 conformations toward states with lower catalytic activity, reducing A→B flux. When P falls, occupancy of the regulatory site can fall and inhibition can weaken. The regulatory site and conformational change are model assumptions, not molecular features measured directly by the preceding activity comparison.",
+      "Zhou Ning switches to the inventory panel. Two equal-duration intervals use the same schematic quantity unit: starting at 20, producing 6 and using 2 gives 20+6−2=24; the next starts at 24, produces 2 and uses 5, giving 24+2−5=21. Production and use are supplied inputs, not E1 activity calculated from P inventory. Slower entry conversion does not erase existing P instantly; use or removal must also be tracked.",
+      "At the end, the team replaces “add fresh enzyme directly” with “first verify a matched high-P/low-P comparison.” Zhou Ning saves the fixed-conditions checklist for the next test design; the P→regulatory-site arrow remains labeled as a teaching hypothesis. The final panel leaves two questions open: does real activity recover, and is there independent evidence for the site? The model has not checked either box."
+    ],
+    "overall": "Feedback inhibition is a mechanism in which a metabolic end product regulates the activity of an earlier key enzyme, reducing further pathway flux. As end-product level falls, the inhibition can weaken. It is different from substrate depletion or irreversible enzyme damage, and a change in activity alone does not establish the specific regulatory site or conformational mechanism.",
+    "conceptName": "Feedback inhibition",
+    "explanationParagraphs": [
+      "The model compares E1 activity by A→B conversion over equal durations, changing only P. Low P remains nonzero: activity returns to the original low-P level but stays below the no-P reference because modeled inhibition remains, without establishing residual damage.",
+      "The site and conformation are model assumptions; real recovery still requires matched tests. Equal-duration inventory changes of 20→24→21 use independently supplied production and use, not E1 activity inferred from inventory."
+    ],
+    "module": {
+      "intro": "Keep other conditions fixed in an explicit troubleshooting model, change only P, and distinguish the model response from actual tests.",
+      "diagramTitle": "E1 Slows at High P and Partly Recovers at Low P—What Does That Mean?",
+      "diagramSteps": [
+        "Fix modeled A, E1 amount, pH, temperature, volume, and detection conditions",
+        "Change only P and compare entry activity through A→B conversion over equal durations",
+        "Lower the modeled P parameter and observe partial recovery with the same E1-batch setting",
+        "Use the model of P binding a regulatory site to explain the direction of the effect",
+        "Keep P inventory changes separate from E1 activity changes"
+      ],
+      "diagramStepNotes": [
+        "A remains abundant while total E1 amount and detection conditions are unchanged.",
+        "Volume and other conditions stay fixed; conversion over equal durations compares model activity without changing P through dilution.",
+        "Activity returns to the original low-P readout. Low P is nonzero, so modeled inhibition remains and the readout stays below the no-P reference. Real recovery and accompanying inactivation require tests.",
+        "The regulatory-site/conformational mechanism is a teaching assumption, not a site directly localized by the activity comparison.",
+        "Two equal-duration intervals: 20+6−2=24 and 24+2−5=21. Quantities share one schematic unit; production/use are supplied inputs, and inventory does not determine E1 activity."
+      ],
+      "mapping": [
+        "High-P/low-P panels with the same E1-batch setting → a model changing only P, not a claim of completed experiments.",
+        "A entering the active site → the substrate catalytic path.",
+        "P→regulatory-site arrow → the model mechanism for end-product feedback.",
+        "Equal-duration inventory changes 20→24→21 → production and use jointly determine ending amount, distinct from entry activity."
+      ],
+      "boundary": "This is a troubleshooting rehearsal for a fictional trial and an original teaching model; parameter changes and model recovery are not actual sample manipulations or experimental results. It provides no E. coli thresholds, kinetics, or site measurements. Feedback inhibition is not every form of negative feedback or permanent pathway shutdown; real pathways may also involve enzyme inactivation, gene regulation, and multiple branches. Nonzero low P and the no-P reference are also teaching assumptions, not measured recovery fractions.",
+      "reflection": "When changing only P produces reversible activity changes in the model, which conclusions remain inside the model? How would you design real matched comparisons and then check the specific regulatory site?"
+    },
+    "references": [
+      {
+        "id": "clark-douglas-choi-2018-enzymes",
+        "citation": "Clark, M. A., Douglas, M., & Choi, J. (2018). Biology 2e, section 6.5: Enzymes. OpenStax.",
+        "url": "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+        "use": "Supports end-product inhibition of an upstream step, the example of isoleucine regulation of threonine deaminase, and weakening of inhibition as product levels fall; the textbook diagram is not treated as a universal binary switch for all pathways."
+      },
+      {
+        "id": "calhoun-1976-threonine-deaminase",
+        "citation": "Calhoun, D. H. (1976). Threonine deaminase from Escherichia coli: feedback-hypersensitive enzyme from a genetic regulatory mutant. Journal of Bacteriology, 126(1), 56–63. https://doi.org/10.1128/jb.126.1.56-63.1976",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/770442/",
+        "use": "The original research abstract supports inhibition of E. coli threonine deaminase by the end product L-isoleucine and indicates that mutant enzymes can differ in feedback sensitivity; only the abstract was reviewed here, so no numerical or site-specific structural claims are made."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-a-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-a-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-a-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Along the river, the first mill ground grain, a second workshop mixed flour into dough, and the final ovens baked bread. Each foreman was paid by how much material he pushed onward. After the harvest festival, sales fell, but the mill manager kept the waterwheel at full speed to win his monthly flour bonus. Bread already touched the store's highest shelf. Upstream, fresh sacks continued disappearing under the first millstone, and the next day's tally looked excellent.\n\nBy evening no more loaves would fit through the store door. Dough soured in barrels, flour covered the passage and mice reached a torn sack. The manager ordered the ovens hotter, gaining one aisle for an hour, but crusts burned while the first mill kept consuming grain. Stopping only the ovens merely moved the blockage backward. By midnight, intermediate rooms were full and the river wheel still turned, because nobody at the entrance could see the final shelf.\n\nA millwright ran a float rod from the bread store to the grain gate. When loaves pressed the high mark, the rod pulled a catch at the first mill, narrowing the gate before more grain was committed to the bread line. The manager cut the cord after one trial, afraid of losing his flour bonus. The wheel surged again. Before dawn, two barrels split under sour dough, and flour dust clogged the second workshop's belt.\n\nThe manager fastened the rod back himself. As bread sold, the store level fell, the catch released and grain entered again. When shelves filled, the gate descended gradually rather than stopping every stone at once. The signal travelled quickly and reversed without rebuilding the mills. It acted near the first step that mostly sent grain toward bread, limiting wasted grain and crowded barrels before the final door jammed.\n\nA pastry room opened later, drawing flour from the second workshop. On its first busy day, a full bread store closed the grain gate and left the pastry workers empty-handed. The millwright added a second measure for the branch and changed the linkage: bread alone could slow the bread-bound stream, but flour demand from pastries still opened enough supply. The manager learned that one end signal could not safely govern every branch as though they all made the same product.\n\nThe ruined festival batch remained on the books. The manager stopped the wheel for a day, surrendered his flour bonus and paid for spoiled dough, torn barrels and wasted grain. He also replaced foremen's separate output prizes with a shared measure of saleable goods and loss. The first week looked less productive because fewer sacks crossed the mill. The warehouse floor, however, stayed clear enough for one person to walk from grain to bread without stepping over waste.\n\nAt dusk, the last batch entered storage and touched the high mark. Far upriver, the first mill's water gate lowered with a wooden knock. The old cut cord still hung beside the manager's bonus ledger, its two ends joined by a dark knot.",
-    "storyBodyZh": "河边生产线从谷物开始：第一座磨坊磨面，第二间作坊和面，末端烤房做成面包。每处管事的奖金都按送往下一处的数量计算。收获节结束后，面包卖慢了，磨坊主管仍把水轮开满，想拿本月面粉奖金。成品已顶到仓库最高一层，上游新粮袋却继续消失在磨石下，日报数字十分漂亮。\n\n傍晚，仓门再塞不进一条面包。面团在桶里发酸，面粉堵住通道，老鼠钻进破袋。主管命烤房加火，一小时内勉强腾出过道，面包外壳却焦了，第一座磨坊仍不停耗粮。只关烤房，阻塞不过向前挪。午夜时中间房全满，河轮还在转，因为入口没人看得见末端货架。\n\n机匠从面包仓牵出一根浮杆，接回磨坊进粮闸。面包压到高线，杆便拉动卡口，让粮食尚未大批进入面包路径前先减速。主管试过一次，又怕奖金减少，把连杆割断，水轮立即恢复。天亮前，两只面桶被酸面撑裂，第二作坊的皮带也让面粉堵住。\n\n主管亲手把浮杆重新接好。面包卖出，仓位下降，卡口松开，粮食再次进入；货架升高，闸门逐渐落下，并非一瞬封死每块磨石。信号来得快，也能自行解除，不必重建磨坊。它作用在谷物一旦越过便多半走向面包的早段，让浪费和拥塞在堵住仓门前就减下来。\n\n后来第二作坊分出糕点房。开张第一天，面包仓一满，粮闸就关，糕点师却没有面粉可用。机匠又加一处支路量杆，改动连接：面包信号压低送往面包的部分，糕点订单仍能拉开足够供应。主管终于不再让一个末端信号把所有支路当成同一种产品。\n\n节后坏账仍要支付。主管让水轮停了一天，放弃面粉奖金，赔掉酸面、裂桶与废粮，又把各处只奖励本段产量的办法改成共同记录可售成品和损失。第一周看起来磨得更少，因为经过磨石的粮袋下降了；仓库地面却终于能让一个人从粮堆走到面包架，不必跨过废物。\n\n傍晚，最后一批面包入仓，碰到高线。远处第一座磨坊的水闸随即落下，发出一声木响。那截被割断的旧绳仍挂在主管奖金簿旁，两端用一个深色结重新接起。",
-    "explanation": "Feedback inhibition occurs when a pathway's end product reduces activity of an earlier enzyme, often the first committed step, commonly by binding a regulatory site. As product accumulates, pathway flux falls; when product is used or diluted, inhibition may ease. This rapidly limits waste and imbalance, but strength and architecture vary among pathways. Removing inhibition can raise production while creating new metabolic costs.",
-    "explanationZh": "反馈抑制是代谢通路的终产物降低较早步骤酶活性，常作用于首个承诺步骤，并可通过结合调节位点实现。产物积累时通量下降，产物被消耗或稀释后抑制可减弱。这能快速限制浪费与失衡，但不同通路强度和结构各异；解除抑制虽可能增产，也会带来新的代谢代价。"
+    "storyBody": "A bioprocess team is rehearsing a troubleshooting plan for a fictional trial. On screen, the A→B→C→P record shows the entry step at E1 slowing as P increases. Someone writes, “continuous operation inactivates the enzyme; add fresh enzyme.” Technician Zhou Ning first opens the conditions panel: A remains abundant, while pH, temperature, total E1, and detection settings are unchanged. Slowing alone cannot identify the cause.\n\nZhou Ning opens two model samples representing the same E1 batch side by side, comparing entry activity by the amount converted from A to B over equal durations. A, E1 amount, pH, temperature, volume, and detection conditions remain fixed; only P is set high or low, with less conversion at high P. She locks the volume field: changing P in a rehearsal is neither sample dilution nor measured selective removal of P.\n\nShe lowers P back to its original low level, retaining other settings; activity returns to the original low-P readout too. Low P is still nonzero, so the model retains some inhibition and activity stays below its separately displayed no-P reference. Recovery is partial relative to that reference, which does not establish residual damage. Zhou Ning lists real-sample recovery and possible accompanying inactivation as questions to test.\n\nThe team then examines the teaching mechanism diagram. A enters the active site of E1, while P is defined in the model as binding a separate regulatory site. That binding shifts the distribution of E1 conformations toward states with lower catalytic activity, reducing A→B flux. When P falls, occupancy of the regulatory site can fall and inhibition can weaken. The regulatory site and conformational change are model assumptions, not molecular features measured directly by the preceding activity comparison.\n\nZhou Ning switches to the inventory panel. Two equal-duration intervals use the same schematic quantity unit: starting at 20, producing 6 and using 2 gives 20+6−2=24; the next starts at 24, produces 2 and uses 5, giving 24+2−5=21. Production and use are supplied inputs, not E1 activity calculated from P inventory. Slower entry conversion does not erase existing P instantly; use or removal must also be tracked.\n\nAt the end, the team replaces “add fresh enzyme directly” with “first verify a matched high-P/low-P comparison.” Zhou Ning saves the fixed-conditions checklist for the next test design; the P→regulatory-site arrow remains labeled as a teaching hypothesis. The final panel leaves two questions open: does real activity recover, and is there independent evidence for the site? The model has not checked either box.",
+    "storyBodyZh": "生物工艺团队正在演练一份虚构小试的排查方案。屏幕上的A→B→C→P记录显示，P增多时入口E1步骤变慢。有人在方案里写下“连续运行使酶失活，补加新酶”。技术员周宁先翻开条件栏：A仍充足，pH、温度、E1总量和检测设置未变，单凭变慢还不能选定原因。\n\n周宁把代表同一批E1的两个模型样本并排打开，用相同时长内A→B的转化量比较入口活性。A、E1量、pH、温度、体积和检测条件固定，只把P参数设为高或低，高P面板的转化较少。她锁住体积栏：只改P参数的演练，不是稀释样本，也不是实测选择性移除P。\n\n她把高P参数降回原低P水平，其他设定保留，活性也回到原低P读数。低P仍非零，模型还保留部分抑制，故活性仍低于模型另列的无P参考。这是相对无P参考的部分恢复，不能用来断言剩余损伤。周宁把真实样本能否恢复、是否伴随失活列为待检验项。\n\n团队再查看教学机制图。A进入E1活性位点，P则被设定为结合另一个调节位点；这种结合使E1构象分布偏向较低催化活性的状态，从而降低A→B通量。P下降时占据调节位点的程度可降低，抑制随之减弱。这个位点和构象变化属于模型机制设定，不是前面活性比较直接测出来的。\n\n周宁再切到库存页。两个等时长区间用同一种示意数量单位：期初20，生成6、使用2，期末20+6−2=24；下一段从24开始，生成2、使用5，得24+2−5=21。生成与使用量是独立输入，并非从P库存算出的E1活性。入口降速不让已有P瞬间消失，还要追踪使用或移除。\n\n讨论结束时，团队把“直接补新酶”改成“先验证高P／低P匹配比较”。周宁保存固定条件清单，供下一轮设计检验；机制图上的P→调节位点箭头仍标为教学假设。最后一栏留着两项待查：真实活性是否恢复，位点是否有独立证据，模型没有替它们打勾。",
+    "explanation": "The model compares E1 activity by A→B conversion over equal durations, changing only P. Low P remains nonzero: activity returns to the original low-P level but stays below the no-P reference because modeled inhibition remains, without establishing residual damage.\n\nThe site and conformation are model assumptions; real recovery still requires matched tests. Equal-duration inventory changes of 20→24→21 use independently supplied production and use, not E1 activity inferred from inventory.",
+    "explanationZh": "模型以相同时长A→B转化量比较E1活性，只改P并保留其他条件。低P仍非零：读数恢复到原低P水平，却低于无P参考，表示模型尚有抑制，不证明剩余损伤。\n\n位点和构象是模型假设，真实恢复仍需匹配检验。等时库存20→24→21用独立给定的生成、使用量，不由库存反推出E1活性。"
   },
   {
     "id": "0521-ecosystem-services",
@@ -13580,45 +13853,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0522",
     "fieldTitle": "Natural environments and wildlife",
     "fieldTitleZh": "自然环境与野生生物",
-    "title": "The Island's Most Successful Winter",
-    "titleZh": "小岛最成功的冬天",
-    "summary": "After one warm winter supports more goats, islanders treat that number as the island's permanent limit.",
-    "summaryZh": "岛民因一个温暖冬季养活了更多山羊，第二年便把这个数字当成了岛永远的上限。",
-    "storyParagraphs": [
-      "Stone Island had two lush years, and the last winter was so mild that all two hundred goats survived. Many does bore twins. Wool prices were rising, and the spring buyer promised a premium if the island could offer a larger flock next year. The herding families kept nearly every kid instead of selling young animals. They carved 260 into the pen's counting board. Green slopes and full troughs seemed to prove that the island had always been able to carry more goats; only timid custom had kept the number low.",
-      "Through spring the decision looked wise. The flock grew, milk sales rose and families repaired roofs with the advance payment. By late summer, however, goats had cropped the upper meadow below four fingers and begun stripping bark from shrubs. The animals still looked strong near the trough because imported fodder hid part of the shortage. No one wrote the shrinking grass beside 260. A headcount taken after an unusually kind season had become a promise about weather and supply boats that no one had measured.",
-      "The next winter arrived early. Wind held the fodder boat offshore for nine days, and the grass already eaten short in summer could not replace itself. Strong adults crowded the sheltered feeding place; kids walked farther and lost weight. Three newborns died in one cold week. Buying emergency fodder would keep more animals alive for the spring sale, but it would not regrow roots or remove the pressure waiting behind the next delayed boat. The families opened the old count board and saw that it recorded goats, not the conditions supporting them.",
-      "They cancelled the premium contract, sold or moved sixty goats at a poor winter price and used the proceeds to feed the weakest animals. Two households lost the income they had expected for new roofs. Afterward the islanders measured grass height, rainfall, age structure, body condition and stored fodder before deciding what to retain. They rotated slopes and kept a buffer in lush years. A wetter season later raised the safe estimate; disease or drought lowered it. No single mark became the island's permanent maximum.",
-      "The warm winter's board remained beside the goat pen in the winter wind. Its highest notch read two hundred and sixty; beneath it the herders added grass height, fodder days and the date the boat failed. The next time a doe delivered twins, the family carried both kids to the board. Before writing how many they would keep, they walked uphill and pressed a ruler into the spring grass."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "连续三次约90只，够不够写成上限",
+    "summaryZh": "湿地管理员要为下一季写栖息地计划，三次巡查都看到约90只水鸟。她必须分清观测N、特定资源条件下的K、人均净增长与总净增长，才能判断这条平线是否真与承载力有关。",
     "storyParagraphsZh": [
-      "石岛连续两年草木丰盛，最后一个冬天又暖得出奇，两百只山羊全都活了下来，许多母羊还生了双羔。羊毛正在涨价，春季买家答应，若来年能交出更大羊群，便加付溢价。牧户几乎留下全部幼羊，没有照旧卖掉，还把二百六十刻上羊圈计数板。绿色山坡和满水槽像在证明：岛上本来就养得起更多羊，只是过去的人过分胆小。",
-      "整个春天，这个决定都很划算。羊群扩大，奶量增加，各家用预付款修起屋顶。到夏末，高坡草却被啃到不足四指，山羊开始剥灌木皮。水槽旁的羊看着仍壮，因为外来草料遮住了一部分缺口。没人把逐月变短的草写到二百六十旁边。一次格外温和季节后的头数，就这样被当成对草量、天气和补给船都有效的长期承诺。",
-      "下一场冬天提前抵达，风浪让草料船在海外停了九天，夏季已经吃短的草也无法及时长回。强壮成羊占住背风喂食处，幼羊要走得更远，体重不断下降，一周里死了三只新羔。仓里每少一捆草，羊圈夜里就多一阵叫声。紧急买草或许能让更多羊活到春市，却长不回草根，也消不掉下一次误船时仍会出现的压力。牧户翻开旧计数板，才发现上面只记了羊，没有记支撑它们的条件。",
-      "岛民取消高价合同，在冬季低价卖出或转走六十只羊，用所得照顾最弱的羊。两户人家因此没拿到原定修屋的钱。此后保留多少，要先看草高、降雨、年龄结构、体况和存草天数；各坡轮牧，丰年也留余地。后来湿润季节让安全估计回升，疾病或干旱又会把它压低，再没有一道刻痕被当成石岛永久不变的最大数。",
-      "那个温暖冬季的木板仍挂在羊圈旁，海风还从木板缝里穿过。最高一道写着二百六十只，下面又添了草高、存草天数和补给船误期日期。下一次母羊生下双羔，一家人把两只幼羊都抱到木板前，却没有立刻写保留数。他们先走上坡，把木尺插进春草。"
+      "虚构湿地芦湾连续三次月度巡查都记录到约90只同种水鸟。管理员唐沐正在写下一季栖息地计划，原本想把“90”直接写成环境可长期支持的数量。可调查页上的食物、巢位、出生、死亡和迁移栏还不完整，一条平线并没有告诉她数量为何稳定。",
+      "她先把资源机制写清：浅水食物和巢位若成为限制资源，N增加时每只鸟平均可获得的资源可能下降，竞争可降低繁殖成功或提高死亡，从而降低人均净增长。这里K的单位是“只”，表示在模型中这组环境条件可长期支持的鸟数；它不是物种永久数字，也不能直接当作管理者选用的安全数量。",
+      "办公室使用一个教学logistic模型：dN/dt=rN(1−N/K)。其中N和K都以“只”为单位，r以“每年”为单位，r(1−N/K)是人均净增长率，dN/dt是当前总净增长率、单位只/年。本轮比较不计迁入迁出，并固定r=0.3/年、K=120只。",
+      "唐沐算了两个点。N=60时，人均净增长率为0.3×(1−60/120)=0.15/年，总净增长为9只/年；N=100时，人均净增长率降到0.05/年，总净增长为5只/年。她在旁边注明：总增长并非N一增加就一直下降；在这个模型里它在K/2达到最大，再向K靠近时下降。",
+      "回到芦湾的巡查记录，三次约90只仍可能来自迁入迁出抵消、繁殖时序、捕食、季节事件或计数误差。几天后，维护部门确认下一季浅水觅食区会减少。唐沐把这写成“资源条件改变，旧K需复核”；如果浅水食物确实是限制资源，K可能下降，但方向和幅度仍需调查。",
+      "她只在模型旁做一个独立假设演示：若新条件下K假设为80只、当前N仍100，则dN/dt=0.3×100×(1−100/80)=−7.5只/年。这个负值不是芦湾预测。最终计划保留三次约90只，并要求补食物、巢位、出生死亡与迁移证据，没有把90或80写成管理上限。"
     ],
-    "conceptName": "Carrying capacity",
+    "overallZh": "环境承载力指特定环境条件下可长期支持的种群规模，简化logistic模型用K表示它。模型中，人均净增长率r(1−N/K)随N增加而下降；总净增长率rN(1−N/K)先增后减，在N=K时为0。环境条件变化后，应复核原K是否仍适用。",
     "conceptNameZh": "环境承载力",
-    "explanationParagraphs": [
-      "Carrying capacity is the population size an environment can sustain over time under specified resource, habitat, climate, disease, competition and management conditions. It is dynamic rather than a fixed species number. Populations can overshoot when reproduction or subsidies temporarily mask limits, producing density-dependent losses and habitat damage. Estimation therefore uses multiple indicators and time periods, not a single headcount."
-    ],
     "explanationParagraphsZh": [
-      "环境承载力是在给定资源、栖息地、气候、疾病、竞争和管理条件下，环境可长期维持的种群规模，并非某物种固定不变的数字。繁殖惯性或外来补给可能暂时遮住限制，使种群超调，随后出现密度相关损失和栖息地退化。因此估计需结合多项指标与多个时期，不能只看一次头数。"
+      "r=0.3/年、K=120只时，N=60的人均净增长为0.15/年、总增长9只/年；N=100时分别为0.05/年和5只/年。这个比较处在K/2到K之间。",
+      "现实平线不能单独证明K。浅水区减少只说明资源条件变了；若该资源限制种群，K可能改变，但真实方向和数值需资源与人口过程证据。"
     ],
-    "mode": "mechanism-fable",
-    "status": "approved",
-    "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
-      "openCritical": 0,
-      "openMajor": 0
+    "moduleZh": {
+      "intro": "分开观测N、资源条件、人均净增长、总净增长和模型K，再判断平线是否支持承载力解释。",
+      "diagramTitle": "90只平线、K和增长率到底是哪三个量",
+      "diagramSteps": [
+        "记录三次约90只但保留原因未知",
+        "连接限制资源与人均出生死亡净差",
+        "在固定K模型中分别计算人均和总净增长",
+        "用迁移、季节与观测误差检验平线的替代解释",
+        "资源条件变化后复核旧K是否仍适用并补充调查"
+      ],
+      "diagramStepNotes": [
+        "三次约90只只是观测N，不是自动得到的K。",
+        "食物/巢位受限时竞争可降低繁殖成功或提高死亡，从而压低人均净增长。",
+        "比较不计迁入迁出，固定r=0.3/年、K=120只：N=60→人均0.15/年、总9只/年；N=100→0.05/年、总5只/年。",
+        "迁入迁出抵消、繁殖时序、捕食、季节事件和计数误差都可造成暂时平线。",
+        "浅水区减少触发K复核；K=80、N=100→−7.5只/年只是假设演示。"
+      ],
+      "mapping": [
+        "三次约90只巡查记录 → 现实观测的N。",
+        "浅水食物与巢位 → 可能形成密度依赖限制的资源。",
+        "logistic模型 → 区分人均增长下降与总增长的非单调变化。",
+        "下一轮资源/出生死亡/迁移调查 → 估计真实K仍需的证据。"
+      ],
+      "boundary": "固定K的logistic模型是入门简化。K不是物理围栏、永久物种上限或管理安全配额；现实种群还受迁移、时滞、季节和密度非依赖事件影响。资源条件改变也不意味着K必然下降，除非相关资源确实成为限制因素。",
+      "reflection": "沿用r=0.3/年、K=120只，请计算N=20时的人均与总净增长率，并与N=60、100比较：人均增长随N下降，是否就意味着总增长也始终下降？"
     },
+    "referencesZh": [
+      {
+        "id": "0522-carrying-capacity-ref-1",
+        "citation": "Mary Ann Clark, Matthew Douglas, Jung Choi. Biology 2e, 45.3 Environmental Limits to Population Growth. OpenStax, Rice University (2018).",
+        "url": "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth",
+        "use": "支持承载力、资源限制与logistic增长的基本模型。"
+      },
+      {
+        "id": "0522-carrying-capacity-ref-2",
+        "citation": "Mary Ann Clark, Matthew Douglas, Jung Choi. Biology 2e, 45.4 Population Dynamics and Regulation. OpenStax, Rice University (2018).",
+        "url": "https://openstax.org/books/biology-2e/pages/45-4-population-dynamics-and-regulation",
+        "use": "支持K随环境变化；密度依赖/非依赖因素与现实种群边界。"
+      }
+    ],
+    "qualityGate": {
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
+      "openCritical": 0,
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-b-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-b-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-b-edit-pass2-evidence.json",
+        "science-mechanism-mixed-14-pdc-b-edit-pass4-evidence.json"
+      ]
+    },
+    "title": "Three Counts Near 90—Is That Enough to Call It the Limit?",
+    "summary": "A wetland manager must write a habitat plan after three surveys each count about 90 birds. She has to separate observed N, K under a particular resource environment, per-capita net growth, and total net growth before deciding whether the flat record really says anything about carrying capacity.",
+    "storyParagraphs": [
+      "Three monthly surveys in the fictional Luwan wetland each record about 90 birds of the same species. Manager Tang Mu is preparing the next season’s habitat plan and initially considers writing “90” as the number the environment can sustain over the long term. But the survey sheet still lacks complete entries for food, nesting sites, births, deaths, and movement, so a flat count alone does not reveal why the population appears stable.",
+      "She first writes out the resource mechanism. If shallow-water food or nesting sites become limiting resources, then as N increases the average amount available per bird may decline. Competition can reduce reproductive success or increase mortality, lowering per-capita net growth. Here K is measured in birds and represents how many birds these environmental conditions can support over the long term in this model. It is not a permanent species number or automatically the safe population target a manager should choose.",
+      "The office uses a teaching logistic model: dN/dt=rN(1−N/K). N and K are both measured in birds, r has units of per year, and r(1−N/K) is the per-capita net growth rate. The derivative dN/dt is the current total net growth rate, in birds per year. This comparison excludes immigration and emigration and holds r=0.3/year and K=120 birds fixed.",
+      "Tang Mu calculates two points. At N=60, the per-capita net growth rate is 0.3×(1−60/120)=0.15/year, giving total net growth of 9 birds/year. At N=100, the per-capita rate falls to 0.05/year and total net growth to 5 birds/year. She adds a note: total growth does not continually fall whenever N rises. In this model it reaches its maximum at K/2, then falls as N approaches K.",
+      "Returning to the Luwan survey record, the three counts near 90 could still reflect immigration balancing emigration, breeding timing, predation, seasonal events, or counting error. A few days later, maintenance staff confirm that a shallow-water feeding area will be reduced next season. Tang Mu records this as “resource conditions changed; previous K must be reassessed.” If shallow-water food is truly limiting, K may decline, but its direction and size still require investigation.",
+      "She makes only one separate teaching demonstration beside the model: if K under the new condition were hypothetically 80 birds while N remained 100, then dN/dt=0.3×100×(1−100/80)=−7.5 birds/year. That negative value is not a forecast for Luwan. The final plan keeps the three observed counts near 90 and calls for new evidence on food, nesting sites, births, deaths, and movement; neither 90 nor 80 is written as a management limit."
+    ],
+    "overall": "Carrying capacity is the population size a particular environment can sustain over the long term; the simplified logistic model represents it with K. In that model, the per-capita net growth rate r(1−N/K) falls as N rises. The total net growth rate rN(1−N/K) first rises and then falls, reaching zero at N=K. Changed environmental conditions call for checking whether the previous K still applies.",
+    "conceptName": "Carrying capacity",
+    "explanationParagraphs": [
+      "With r=0.3/year and K=120 birds, N=60 gives per-capita net growth of 0.15/year and total growth of 9 birds/year; N=100 gives 0.05/year and 5 birds/year. This comparison lies between K/2 and K.",
+      "Three real-world counts near 90 cannot by themselves establish K. Reduced shallow-water area only shows that resource conditions have changed; if that resource limits the population, K may change, but its real direction and value require resource and demographic evidence."
+    ],
+    "module": {
+      "intro": "Separate observed N, resource conditions, per-capita net growth, total net growth, and model K before deciding whether a flat record supports a carrying-capacity explanation.",
+      "diagramTitle": "A Flat Count Near 90, K, and Growth Rate—Which Quantity Is Which?",
+      "diagramSteps": [
+        "Record three counts near 90 while keeping the cause unknown",
+        "Connect limiting resources to per-capita birth–death balance",
+        "Calculate per-capita and total net growth separately under fixed K",
+        "Test the flat record against alternatives such as movement, seasonality, and measurement error",
+        "Reassess whether the previous K still applies after resource conditions change, and gather further evidence"
+      ],
+      "diagramStepNotes": [
+        "Three monthly counts near 90 are observations of N, not an automatically known K.",
+        "When food or nesting sites are limiting, competition can reduce reproductive success or increase mortality, lowering per-capita net growth.",
+        "Excluding immigration and emigration, hold r=0.3/year and K=120 birds fixed: N=60 gives 0.15/year per capita and 9 birds/year in total; N=100 gives 0.05/year and 5 birds/year.",
+        "Immigration/emigration balance, breeding timing, predation, seasonal events, and counting error can all produce a temporary flat record.",
+        "Reduced shallow-water area triggers reassessment of K; K=80 with N=100 giving −7.5 birds/year is only a teaching assumption."
+      ],
+      "mapping": [
+        "Three survey counts near 90 → real observations of N.",
+        "Shallow-water food and nesting sites → resources that may create density-dependent limitation.",
+        "Logistic model → separation of falling per-capita growth from non-monotonic total growth.",
+        "Next-round resource/birth/death/movement survey → evidence still needed to estimate real K."
+      ],
+      "boundary": "The fixed-K logistic model is an introductory simplification. K is not a physical fence, a permanent species maximum, or a management safety quota. Real populations are also affected by movement, time lags, seasonality, and density-independent events. A change in resource conditions also does not imply that K must fall unless the affected resource is actually limiting.",
+      "reflection": "Using r=0.3/year and K=120 birds, calculate the per-capita and total net growth rates at N=20, then compare them with N=60 and 100. Does falling per-capita growth mean that total growth must always fall as N rises?"
+    },
+    "references": [
+      {
+        "id": "0522-carrying-capacity-ref-1",
+        "citation": "Mary Ann Clark, Matthew Douglas, Jung Choi. Biology 2e, 45.3 Environmental Limits to Population Growth. OpenStax, Rice University (2018).",
+        "url": "https://openstax.org/books/biology-2e/pages/45-3-environmental-limits-to-population-growth",
+        "use": "Supports the basic model of carrying capacity, resource limitation, and logistic population growth."
+      },
+      {
+        "id": "0522-carrying-capacity-ref-2",
+        "citation": "Mary Ann Clark, Matthew Douglas, Jung Choi. Biology 2e, 45.4 Population Dynamics and Regulation. OpenStax, Rice University (2018).",
+        "url": "https://openstax.org/books/biology-2e/pages/45-4-population-dynamics-and-regulation",
+        "use": "Supports the idea that K can change with environmental conditions and the boundaries introduced by density-dependent and density-independent factors in real populations."
+      }
+    ],
+    "status": "approved",
     "collection": "field-core-fables",
-    "storyBody": "Stone Island had two lush years, and the last winter was so mild that all two hundred goats survived. Many does bore twins. Wool prices were rising, and the spring buyer promised a premium if the island could offer a larger flock next year. The herding families kept nearly every kid instead of selling young animals. They carved 260 into the pen's counting board. Green slopes and full troughs seemed to prove that the island had always been able to carry more goats; only timid custom had kept the number low.\n\nThrough spring the decision looked wise. The flock grew, milk sales rose and families repaired roofs with the advance payment. By late summer, however, goats had cropped the upper meadow below four fingers and begun stripping bark from shrubs. The animals still looked strong near the trough because imported fodder hid part of the shortage. No one wrote the shrinking grass beside 260. A headcount taken after an unusually kind season had become a promise about weather and supply boats that no one had measured.\n\nThe next winter arrived early. Wind held the fodder boat offshore for nine days, and the grass already eaten short in summer could not replace itself. Strong adults crowded the sheltered feeding place; kids walked farther and lost weight. Three newborns died in one cold week. Buying emergency fodder would keep more animals alive for the spring sale, but it would not regrow roots or remove the pressure waiting behind the next delayed boat. The families opened the old count board and saw that it recorded goats, not the conditions supporting them.\n\nThey cancelled the premium contract, sold or moved sixty goats at a poor winter price and used the proceeds to feed the weakest animals. Two households lost the income they had expected for new roofs. Afterward the islanders measured grass height, rainfall, age structure, body condition and stored fodder before deciding what to retain. They rotated slopes and kept a buffer in lush years. A wetter season later raised the safe estimate; disease or drought lowered it. No single mark became the island's permanent maximum.\n\nThe warm winter's board remained beside the goat pen in the winter wind. Its highest notch read two hundred and sixty; beneath it the herders added grass height, fodder days and the date the boat failed. The next time a doe delivered twins, the family carried both kids to the board. Before writing how many they would keep, they walked uphill and pressed a ruler into the spring grass.",
-    "storyBodyZh": "石岛连续两年草木丰盛，最后一个冬天又暖得出奇，两百只山羊全都活了下来，许多母羊还生了双羔。羊毛正在涨价，春季买家答应，若来年能交出更大羊群，便加付溢价。牧户几乎留下全部幼羊，没有照旧卖掉，还把二百六十刻上羊圈计数板。绿色山坡和满水槽像在证明：岛上本来就养得起更多羊，只是过去的人过分胆小。\n\n整个春天，这个决定都很划算。羊群扩大，奶量增加，各家用预付款修起屋顶。到夏末，高坡草却被啃到不足四指，山羊开始剥灌木皮。水槽旁的羊看着仍壮，因为外来草料遮住了一部分缺口。没人把逐月变短的草写到二百六十旁边。一次格外温和季节后的头数，就这样被当成对草量、天气和补给船都有效的长期承诺。\n\n下一场冬天提前抵达，风浪让草料船在海外停了九天，夏季已经吃短的草也无法及时长回。强壮成羊占住背风喂食处，幼羊要走得更远，体重不断下降，一周里死了三只新羔。仓里每少一捆草，羊圈夜里就多一阵叫声。紧急买草或许能让更多羊活到春市，却长不回草根，也消不掉下一次误船时仍会出现的压力。牧户翻开旧计数板，才发现上面只记了羊，没有记支撑它们的条件。\n\n岛民取消高价合同，在冬季低价卖出或转走六十只羊，用所得照顾最弱的羊。两户人家因此没拿到原定修屋的钱。此后保留多少，要先看草高、降雨、年龄结构、体况和存草天数；各坡轮牧，丰年也留余地。后来湿润季节让安全估计回升，疾病或干旱又会把它压低，再没有一道刻痕被当成石岛永久不变的最大数。\n\n那个温暖冬季的木板仍挂在羊圈旁，海风还从木板缝里穿过。最高一道写着二百六十只，下面又添了草高、存草天数和补给船误期日期。下一次母羊生下双羔，一家人把两只幼羊都抱到木板前，却没有立刻写保留数。他们先走上坡，把木尺插进春草。",
-    "explanation": "Carrying capacity is the population size an environment can sustain over time under specified resource, habitat, climate, disease, competition and management conditions. It is dynamic rather than a fixed species number. Populations can overshoot when reproduction or subsidies temporarily mask limits, producing density-dependent losses and habitat damage. Estimation therefore uses multiple indicators and time periods, not a single headcount.",
-    "explanationZh": "环境承载力是在给定资源、栖息地、气候、疾病、竞争和管理条件下，环境可长期维持的种群规模，并非某物种固定不变的数字。繁殖惯性或外来补给可能暂时遮住限制，使种群超调，随后出现密度相关损失和栖息地退化。因此估计需结合多项指标与多个时期，不能只看一次头数。"
+    "storyBody": "Three monthly surveys in the fictional Luwan wetland each record about 90 birds of the same species. Manager Tang Mu is preparing the next season’s habitat plan and initially considers writing “90” as the number the environment can sustain over the long term. But the survey sheet still lacks complete entries for food, nesting sites, births, deaths, and movement, so a flat count alone does not reveal why the population appears stable.\n\nShe first writes out the resource mechanism. If shallow-water food or nesting sites become limiting resources, then as N increases the average amount available per bird may decline. Competition can reduce reproductive success or increase mortality, lowering per-capita net growth. Here K is measured in birds and represents how many birds these environmental conditions can support over the long term in this model. It is not a permanent species number or automatically the safe population target a manager should choose.\n\nThe office uses a teaching logistic model: dN/dt=rN(1−N/K). N and K are both measured in birds, r has units of per year, and r(1−N/K) is the per-capita net growth rate. The derivative dN/dt is the current total net growth rate, in birds per year. This comparison excludes immigration and emigration and holds r=0.3/year and K=120 birds fixed.\n\nTang Mu calculates two points. At N=60, the per-capita net growth rate is 0.3×(1−60/120)=0.15/year, giving total net growth of 9 birds/year. At N=100, the per-capita rate falls to 0.05/year and total net growth to 5 birds/year. She adds a note: total growth does not continually fall whenever N rises. In this model it reaches its maximum at K/2, then falls as N approaches K.\n\nReturning to the Luwan survey record, the three counts near 90 could still reflect immigration balancing emigration, breeding timing, predation, seasonal events, or counting error. A few days later, maintenance staff confirm that a shallow-water feeding area will be reduced next season. Tang Mu records this as “resource conditions changed; previous K must be reassessed.” If shallow-water food is truly limiting, K may decline, but its direction and size still require investigation.\n\nShe makes only one separate teaching demonstration beside the model: if K under the new condition were hypothetically 80 birds while N remained 100, then dN/dt=0.3×100×(1−100/80)=−7.5 birds/year. That negative value is not a forecast for Luwan. The final plan keeps the three observed counts near 90 and calls for new evidence on food, nesting sites, births, deaths, and movement; neither 90 nor 80 is written as a management limit.",
+    "storyBodyZh": "虚构湿地芦湾连续三次月度巡查都记录到约90只同种水鸟。管理员唐沐正在写下一季栖息地计划，原本想把“90”直接写成环境可长期支持的数量。可调查页上的食物、巢位、出生、死亡和迁移栏还不完整，一条平线并没有告诉她数量为何稳定。\n\n她先把资源机制写清：浅水食物和巢位若成为限制资源，N增加时每只鸟平均可获得的资源可能下降，竞争可降低繁殖成功或提高死亡，从而降低人均净增长。这里K的单位是“只”，表示在模型中这组环境条件可长期支持的鸟数；它不是物种永久数字，也不能直接当作管理者选用的安全数量。\n\n办公室使用一个教学logistic模型：dN/dt=rN(1−N/K)。其中N和K都以“只”为单位，r以“每年”为单位，r(1−N/K)是人均净增长率，dN/dt是当前总净增长率、单位只/年。本轮比较不计迁入迁出，并固定r=0.3/年、K=120只。\n\n唐沐算了两个点。N=60时，人均净增长率为0.3×(1−60/120)=0.15/年，总净增长为9只/年；N=100时，人均净增长率降到0.05/年，总净增长为5只/年。她在旁边注明：总增长并非N一增加就一直下降；在这个模型里它在K/2达到最大，再向K靠近时下降。\n\n回到芦湾的巡查记录，三次约90只仍可能来自迁入迁出抵消、繁殖时序、捕食、季节事件或计数误差。几天后，维护部门确认下一季浅水觅食区会减少。唐沐把这写成“资源条件改变，旧K需复核”；如果浅水食物确实是限制资源，K可能下降，但方向和幅度仍需调查。\n\n她只在模型旁做一个独立假设演示：若新条件下K假设为80只、当前N仍100，则dN/dt=0.3×100×(1−100/80)=−7.5只/年。这个负值不是芦湾预测。最终计划保留三次约90只，并要求补食物、巢位、出生死亡与迁移证据，没有把90或80写成管理上限。",
+    "explanation": "With r=0.3/year and K=120 birds, N=60 gives per-capita net growth of 0.15/year and total growth of 9 birds/year; N=100 gives 0.05/year and 5 birds/year. This comparison lies between K/2 and K.\n\nThree real-world counts near 90 cannot by themselves establish K. Reduced shallow-water area only shows that resource conditions have changed; if that resource limits the population, K may change, but its real direction and value require resource and demographic evidence.",
+    "explanationZh": "r=0.3/年、K=120只时，N=60的人均净增长为0.15/年、总增长9只/年；N=100时分别为0.05/年和5只/年。这个比较处在K/2到K之间。\n\n现实平线不能单独证明K。浅水区减少只说明资源条件变了；若该资源限制种群，K可能改变，但真实方向和数值需资源与人口过程证据。"
   },
   {
     "id": "0522-trophic-cascade",
@@ -13727,45 +14094,139 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0531",
     "fieldTitle": "Chemistry",
     "fieldTitleZh": "化学",
-    "title": "The Dye Hall That Never Stopped",
-    "titleZh": "从未停工的染料厅",
-    "summary": "The contents of two dye rooms remain constant all day, so the manager assumes the carrying has ceased while workers keep passing through the door.",
-    "summaryZh": "两间染料厅的存量整日不变，管事以为搬运已经停止，门后却始终有人来回。",
-    "storyParagraphs": [
-      "The dyehouse had promised forty bolts of the same blue for the governor's procession. In the red room, handlers could turn red liquid into blue; in the blue room, others could reverse it. At first the red shelves were crowded, so twenty jars crossed toward blue during a bell while only five returned. Blue stock rose quickly. Manager Qiao took the early gain as proof that the room would soon fill completely and promised the dyers more than the vats could reliably supply. He even sent away a backup supplier before checking a full day's ledger.",
-      "By noon the inventories settled at sixty red jars and forty blue. For three bells the numbers did not change. Wages were due, and Qiao decided the crossings had ended; he could dismiss the night handlers and spend the money on cloth. Clerk Yan asked for one bell before the order was sealed. She tied white string around twelve jars in each room. At the next count, twelve marked jars had crossed each way. The totals looked still because the two rates matched, not because the doorway was idle.",
-      "Qiao still needed more blue before sunset. He poured thirty additional jars into the red room and ordered the clerk to count every bell. The next line read twenty red-to-blue and twelve blue-to-red: blue gained eight. Later the difference narrowed, then vanished at a new composition. Qiao had obtained more product, but not the impossible all-blue room he had sold. If he shipped short, he lost the governor; if he bought more red liquid, the emergency price would erase the month's profit.",
-      "A builder offered a polished double doorway that let handlers pass faster. Qiao almost paid him after hearing that both counts could double, but Yan laid the two ledgers together: faster crossings would reach the same balance sooner under unchanged conditions, not move its final position. Temperature or composition could alter that position, depending on the particular conversion, but a smoother route alone could not. Qiao bought raw liquid instead, kept both shifts, and accepted the loss rather than thinning the dye and hiding it in the shipment.",
-      "The last bolt left the hall after midnight. The contract was filled, but Qiao's profit drawer held only three coins, and the promised bonus had to wait. Before locking up, Yan counted seventy-two jars on one side and fifty-eight on the other for the third time. The figures were unchanged. Behind her, the hinge kept sounding, and the white strings were now tied around jars on the opposite shelves."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "A和B几乎不再变化，反应是不是结束了",
+    "summaryZh": "虚构A⇌B模型从[A]=6、[B]=0开始，A下降、B上升并逐渐接近2:4。分析员把有限时间的近似平台与理论平衡值分开，再用正逆速率、理想化加A扰动和给定催化设置检查动态平衡。",
     "storyParagraphsZh": [
-      "染坊答应为巡游染出四十匹颜色完全一致的蓝布。红厅的工人能把红液转成蓝液，蓝厅也有人把它转回去。开工第一刻，红架很满，一响铃有二十罐搬向蓝厅，只有五罐返回，蓝液迅速增加。管事乔叔把这段涨势当成了最终结果，当场答应了远高于平日的交货量，还没看完一整天账目，就退掉了备用供货商。蒸汽把窗纸染成淡蓝，他把那片颜色也当成了好兆头。",
-      "午后，两厅存量停在红六十、蓝四十，连续三次点数都没变。工钱快结了，乔叔认定搬运已经结束，准备撤掉夜班，把钱拿去买布。账房小严请他再等一刻。她在两厅各挑十二只罐系上白线。下一次开门，十二只系线罐恰好各自去了对面。数字静止，是因为两个方向的速度相等，门后并没有停工。",
-      "乔叔仍要在日落前多得蓝液，便往红厅添了三十罐，叫小严每响一次铃就记数。第一行是红转蓝二十、蓝转红十二，蓝厅净增八罐；后来差额逐渐缩小，最后又在新的组成上相等。他得到了更多蓝液，却得不到自己许诺的“全变成蓝”。少交会失去官府订单，加价买红液又会吃掉整月利润。",
-      "木匠来兜售一扇光滑的双开门，说工人来回都能快一倍。乔叔听见“快一倍”便想付钱，小严却把两页账并排放好：在温度与配料不变时，双向都加快，只会更早到达原来的稳定组成，不会凭空多出最终蓝液。温度或组成改变时，稳定位置可能随具体转化改变；单靠更顺的通道不行。乔叔只得高价补买原料，保留两班工人，也没有用兑水遮掩短缺。",
-      "最后一匹布在半夜运走。订单保住了，乔叔的钱匣却只剩三枚铜钱，答应工人的奖金也要延期。被退掉的供货商不肯恢复旧价，染坊下月只敢少接两成订单。屋外的雨还在敲瓦。关门前，小严第三次点到红七十二、蓝五十八，合计仍是一百三十，数目已连续三次不动。她身后的门轴还在轻响，白线已经出现在对面的木架上。"
+      "分析员沈岑要为培训材料解释一个虚构、恒温、固定体积的可逆反应A⇌B。模型起始设[A]=6、[B]=0 mmol/L，总浓度6。设k_f=0.02/min、k_r=0.01/min，速率规则为v_f=k_f[A]、v_r=k_r[B]，两速率单位都是mmol/(L·min)。所以t=0时正向速率0.12、逆向0；随着B生成，逆向反应也开始。",
+      "模拟继续运行时，[A]下降、[B]上升，正向速率逐渐降低、逆向逐渐升高。它们不会在有限时间突然“啪”地到达精确平衡。模拟到200 min时，屏幕约为[A]=2.01、[B]=3.99；曲线已经很平，但仍只是接近理论极限。",
+      "沈岑随后用模型方程算理论平衡，而不是把有限时刻读数当精确值。平衡要求0.02[A]=0.01[B]，即[B]/[A]=2；总浓度6，所以理论值是[A]=2、[B]=4。只有在这个理论平衡状态下，两方向速率才精确同为0.04 mmol/(L·min)，且都非零。",
+      "为了检查扰动，模拟器提供一个理想化“浓度设定”操作：从理论平衡状态出发，在温度和体积保持不变的模型里把[A]瞬时设为3、[B]保持4，相当于增加1 mmol/L A。这个按钮只改变模拟中的浓度，不模拟移液、混合或体积变化。随后体系重新封闭，此时v_f=0.06、v_r=0.04，B开始净增加。",
+      "扰动后总浓度为7，新平衡仍满足[B]/[A]=2，因此理论值为[A]=7/3、[B]=14/3。沈岑再启用模型的“催化设置”：它被明确定义为把k_f和k_r都翻倍。这个给定设置使松弛更快，但二者比值不变，所以同温下理论平衡组成仍是7/3和14/3。",
+      "她最后把两种画面并排：200 min时约2.01/3.99的有限模拟读数，以及方程算出的理论2/4。旁边保留正逆速率。她在培训稿中把“曲线平了，反应完成”改成“本模型的组成已接近理论平衡”，让非零的两条速率留在同一页。若换成实际体系，还要另查物质交换和速率规则，不能只搬用这张图的设置。"
     ],
-    "conceptName": "Chemical equilibrium",
+    "overallZh": "化学平衡是给定条件下可逆反应正逆速率相等的动态状态，浓度不必相等。本模型从6/0出发，在有限时间逐渐接近理论2/4，近似平台不等于精确平衡。组成扰动会打破原平衡；催化可加快接近过程，却不改变同温下的平衡常数。",
     "conceptNameZh": "化学平衡",
-    "explanationParagraphs": [
-      "Chemical equilibrium is a dynamic state in which forward and reverse rates of a reversible reaction are equal, leaving macroscopic composition constant. It does not require equal amounts of reactants and products. Composition, pressure, or temperature can shift equilibrium; a catalyst speeds both directions toward equilibrium without changing its position under fixed conditions."
-    ],
     "explanationParagraphsZh": [
-      "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。具体移动方向须结合反应与条件判断。"
+      "模型从6/0开始，t=0时速率0.12/0 mmol/(L·min)；200 min约2.01/3.99 mmol/L。理论平衡由速率式和总量算得精确2/4 mmol/L，此时正逆速率才都精确为0.04 mmol/(L·min)。",
+      "理想扰动把A设3、B保4 mmol/L后，速率为0.06/0.04 mmol/(L·min)；模型催化设置规定两个k同时翻倍，只加快松弛，不改变同温下1:2平衡比例。"
     ],
-    "mode": "mechanism-fable",
-    "status": "approved",
-    "qualityGate": {
-      "reviewRounds": 3,
-      "rewriteRounds": 2,
-      "openCritical": 0,
-      "openMajor": 0
+    "moduleZh": {
+      "intro": "把有限时间的近似平台、理论平衡值、扰动和催化设置分开，避免从一条平线直接推断微观状态。",
+      "diagramTitle": "从6:0到接近2:4，正逆速率怎样靠近",
+      "diagramSteps": [
+        "从[A]=6、[B]=0计算初始正逆速率",
+        "跟踪组成变化如何让正向下降、逆向上升",
+        "用方程求理论2:4并与有限时刻近似值区分",
+        "理想化增加A后重新计算0.06与0.04并观察松弛",
+        "在给定双k翻倍设置下比较到达速度与最终组成"
+      ],
+      "diagramStepNotes": [
+        "k_f=0.02/min、k_r=0.01/min；t=0时v_f=0.02×6=0.12、v_r=0 mmol/(L·min)。",
+        "B出现后逆向反应立即非零；200 min约A=2.01、B=3.99。",
+        "理论平衡A=2、B=4 mmol/L，此时v_f=v_r=0.04 mmol/(L·min)。",
+        "固定温度/体积模型中理想设A=3、B=4 mmol/L，随后重新封闭，v_f=0.06>v_r=0.04 mmol/(L·min)。",
+        "催化设置明确定义k_f、k_r都翻倍；这是模型比较，不是所有真实催化剂的定量规律。"
+      ],
+      "mapping": [
+        "6→约2.01的A轨迹与0→约3.99的B轨迹 → 有限时间松弛。",
+        "理论2/4值 → 由模型规则求出的平衡极限。",
+        "理想A浓度设定 → 明确的组成扰动而非现实加液步骤。",
+        "双k翻倍设置 → 保持k_f/k_r不变的可比催化模型。"
+      ],
+      "boundary": "本例规定一级速率式，数值只作教学。若催化后仍用同温下相同的A⇌B一级形式，k_f/k_r须保持原平衡比；真实催化路径可能引入新步骤或速率式，不能一律照搬“双k翻倍”。真实平台还可能来自极慢反应、仪器分辨率不足或开放稳态；实际加料也涉及体积与混合。",
+      "reflection": "把200 min的四舍五入读数[A]=2.01、[B]=3.99 mmol/L代入给定速率式：正逆速率是否为零、是否恰好相等？这能怎样帮助你检查“曲线近乎水平，所以反应停止”的说法？"
     },
+    "referencesZh": [
+      {
+        "id": "0531-chemical-equilibrium-ref-1",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.1 Chemical Equilibria. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/13-1-chemical-equilibria",
+        "use": "支持动态平衡中正逆速率相等、组成稳定而浓度不必相等的基本概念。"
+      },
+      {
+        "id": "0531-chemical-equilibrium-ref-2",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.3 Shifting Equilibria: Le Châtelier’s Principle. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle",
+        "use": "支持组成扰动使体系离开原平衡，以及固定温度下催化主要改变达到平衡的速度而非平衡组成。"
+      }
+    ],
+    "qualityGate": {
+      "reviewRounds": 4,
+      "rewriteRounds": 3,
+      "openCritical": 0,
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-b-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-b-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-b-edit-pass2-evidence.json",
+        "science-mechanism-mixed-14-pdc-b-edit-pass3-evidence.json"
+      ]
+    },
+    "title": "A and B Hardly Change Anymore—Has the Reaction Ended?",
+    "summary": "A fictional A⇌B model starts at [A]=6 and [B]=0. A falls and B rises, gradually approaching 2:4. The analyst separates a finite-time near-plateau from the theoretical equilibrium values, then checks dynamic equilibrium using forward and reverse rates, an idealized A perturbation, and a defined catalyst setting.",
+    "storyParagraphs": [
+      "Analyst Shen Cen needs to explain a fictional reversible reaction A⇌B for training materials, at constant temperature and fixed volume. The model starts at [A]=6 and [B]=0 mmol/L, for a total concentration of 6. It sets k_f=0.02/min and k_r=0.01/min, with rate laws v_f=k_f[A] and v_r=k_r[B]. Both rates are in mmol/(L·min). At t=0 the forward rate is therefore 0.12 and the reverse rate zero; as B forms, the reverse reaction starts as well.",
+      "As the simulation continues, [A] falls and [B] rises. The forward rate gradually decreases while the reverse rate increases. They do not suddenly snap to exact equilibrium at a finite moment. At 200 min, the screen shows approximately [A]=2.01 and [B]=3.99; the curves are already very flat, but the values are still only approaching the theoretical limit.",
+      "Shen Cen then calculates the theoretical equilibrium from the model equations rather than treating a finite-time reading as exact. Equilibrium requires 0.02[A]=0.01[B], so [B]/[A]=2. With total concentration 6, the theoretical values are [A]=2 and [B]=4. Only at this theoretical equilibrium state are the two directional rates exactly equal at 0.04 mmol/(L·min), and both remain nonzero.",
+      "To test a perturbation, the simulator provides an idealized “concentration setting” operation. Starting from the theoretical equilibrium state, it sets [A]=3 while [B] remains 4, with temperature and volume fixed, equivalent to increasing A by 1 mmol/L. The control changes only the simulated concentration; it does not model pipetting, mixing, or a volume change. The system is then closed again, with v_f=0.06 and v_r=0.04, so B begins to increase net.",
+      "After the perturbation, total concentration is 7. The same rate rules still apply, so the new equilibrium requires [B]/[A]=2, giving theoretical values [A]=7/3 and [B]=14/3. Shen Cen then activates the model’s “catalyst setting,” explicitly defined as doubling both k_f and k_r. This specified comparison relaxes to equilibrium faster, but their ratio is unchanged, so the theoretical equilibrium composition at the same temperature remains 7/3 and 14/3.",
+      "She ends by placing two views side by side: the finite simulation reading of about 2.01/3.99 at 200 min and the theoretical 2/4 calculated from the equations. The forward and reverse rates remain beside them. In the training draft, she replaces “flat curves, reaction completed” with “the composition in this model is close to theoretical equilibrium,” keeping both nonzero rates on the same page. An actual system would require separate checks of material exchange and rate rules, rather than simply borrowing these settings."
+    ],
+    "overall": "Chemical equilibrium is a dynamic state in which the forward and reverse rates of a reversible reaction are equal under given conditions; the concentrations need not be equal. Starting from 6/0, this model approaches the theoretical 2/4 values over time, so its finite-time near-plateau is not exact equilibrium. A composition perturbation disrupts the original equilibrium. Catalysis can speed the approach without changing the equilibrium constant at the same temperature.",
+    "conceptName": "Chemical equilibrium",
+    "explanationParagraphs": [
+      "Starting at 6/0, the rates at t=0 are 0.12/0 mmol/(L·min); at 200 min the concentrations are about 2.01/3.99 mmol/L. The rate laws and total concentration give theoretical equilibrium at exactly 2/4 mmol/L, where both rates are exactly 0.04 mmol/(L·min).",
+      "After the ideal perturbation sets A to 3 and keeps B at 4 mmol/L, the rates are 0.06/0.04 mmol/(L·min). The model’s catalytic setting doubles both k values, speeding relaxation without changing the 1:2 equilibrium ratio at the same temperature."
+    ],
+    "module": {
+      "intro": "Separate the finite-time near-plateau, the theoretical equilibrium values, the perturbation, and the defined catalyst setting so that a flat curve is not used by itself to infer the microscopic state.",
+      "diagramTitle": "From 6:0 Toward 2:4—How the Forward and Reverse Rates Converge",
+      "diagramSteps": [
+        "Start at [A]=6 and [B]=0 and calculate the initial directional rates",
+        "Track how composition changes lower the forward rate and raise the reverse rate",
+        "Calculate the theoretical 2:4 equilibrium and distinguish it from the finite-time approximation",
+        "Ideally increase A, recalculate 0.06 and 0.04, and observe relaxation",
+        "Under the defined double-k setting, compare approach speed with final equilibrium composition"
+      ],
+      "diagramStepNotes": [
+        "k_f=0.02/min and k_r=0.01/min; at t=0, v_f=0.02×6=0.12 and v_r=0 mmol/(L·min).",
+        "Once B appears, the reverse reaction is immediately nonzero; at 200 min A≈2.01 and B≈3.99.",
+        "Theoretical equilibrium is A=2 and B=4 mmol/L, with v_f=v_r=0.04 mmol/(L·min).",
+        "In the fixed-temperature, fixed-volume model, ideally set A=3 and B=4 mmol/L, then close the system again: v_f=0.06>v_r=0.04 mmol/(L·min).",
+        "The catalyst setting is explicitly defined as doubling both k_f and k_r; this is a model comparison, not a quantitative rule for every real catalyst."
+      ],
+      "mapping": [
+        "A trajectory 6→about 2.01 and B trajectory 0→about 3.99 → finite-time relaxation.",
+        "Theoretical 2/4 values → the equilibrium limit calculated from the model rules.",
+        "Ideal A concentration setting → an explicit composition perturbation rather than a real liquid-addition procedure.",
+        "Double-k setting → a comparable catalyst model that keeps k_f/k_r unchanged."
+      ],
+      "boundary": "This teaching example specifies first-order rate laws. If the same A⇌B first-order form is retained after catalysis at the same temperature, k_f/k_r must remain consistent with the original equilibrium ratio. Real catalytic pathways may introduce different steps or rate laws, so “double both k values” is not a universal recipe. A real plateau can also reflect slow reaction, instrument limits, or an open-flow steady state; actual addition involves volume and mixing.",
+      "reflection": "Insert the rounded 200-min readings [A]=2.01 and [B]=3.99 mmol/L into the stated rate laws. Are the forward and reverse rates zero, and are they exactly equal? How does this check help you assess the claim that nearly flat curves mean the reaction has stopped?"
+    },
+    "references": [
+      {
+        "id": "0531-chemical-equilibrium-ref-1",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.1 Chemical Equilibria. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/13-1-chemical-equilibria",
+        "use": "Supports the basic concept of dynamic equilibrium: equal forward and reverse rates, stable composition, and concentrations that need not be equal."
+      },
+      {
+        "id": "0531-chemical-equilibrium-ref-2",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 13.3 Shifting Equilibria: Le Châtelier’s Principle. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/13-3-shifting-equilibria-le-chateliers-principle",
+        "use": "Supports the idea that a composition perturbation moves a system away from its original equilibrium and that, at fixed temperature, catalysis mainly changes how quickly equilibrium is reached rather than the equilibrium composition."
+      }
+    ],
+    "status": "approved",
     "collection": "field-core-fables",
-    "storyBody": "The dyehouse had promised forty bolts of the same blue for the governor's procession. In the red room, handlers could turn red liquid into blue; in the blue room, others could reverse it. At first the red shelves were crowded, so twenty jars crossed toward blue during a bell while only five returned. Blue stock rose quickly. Manager Qiao took the early gain as proof that the room would soon fill completely and promised the dyers more than the vats could reliably supply. He even sent away a backup supplier before checking a full day's ledger.\n\nBy noon the inventories settled at sixty red jars and forty blue. For three bells the numbers did not change. Wages were due, and Qiao decided the crossings had ended; he could dismiss the night handlers and spend the money on cloth. Clerk Yan asked for one bell before the order was sealed. She tied white string around twelve jars in each room. At the next count, twelve marked jars had crossed each way. The totals looked still because the two rates matched, not because the doorway was idle.\n\nQiao still needed more blue before sunset. He poured thirty additional jars into the red room and ordered the clerk to count every bell. The next line read twenty red-to-blue and twelve blue-to-red: blue gained eight. Later the difference narrowed, then vanished at a new composition. Qiao had obtained more product, but not the impossible all-blue room he had sold. If he shipped short, he lost the governor; if he bought more red liquid, the emergency price would erase the month's profit.\n\nA builder offered a polished double doorway that let handlers pass faster. Qiao almost paid him after hearing that both counts could double, but Yan laid the two ledgers together: faster crossings would reach the same balance sooner under unchanged conditions, not move its final position. Temperature or composition could alter that position, depending on the particular conversion, but a smoother route alone could not. Qiao bought raw liquid instead, kept both shifts, and accepted the loss rather than thinning the dye and hiding it in the shipment.\n\nThe last bolt left the hall after midnight. The contract was filled, but Qiao's profit drawer held only three coins, and the promised bonus had to wait. Before locking up, Yan counted seventy-two jars on one side and fifty-eight on the other for the third time. The figures were unchanged. Behind her, the hinge kept sounding, and the white strings were now tied around jars on the opposite shelves.",
-    "storyBodyZh": "染坊答应为巡游染出四十匹颜色完全一致的蓝布。红厅的工人能把红液转成蓝液，蓝厅也有人把它转回去。开工第一刻，红架很满，一响铃有二十罐搬向蓝厅，只有五罐返回，蓝液迅速增加。管事乔叔把这段涨势当成了最终结果，当场答应了远高于平日的交货量，还没看完一整天账目，就退掉了备用供货商。蒸汽把窗纸染成淡蓝，他把那片颜色也当成了好兆头。\n\n午后，两厅存量停在红六十、蓝四十，连续三次点数都没变。工钱快结了，乔叔认定搬运已经结束，准备撤掉夜班，把钱拿去买布。账房小严请他再等一刻。她在两厅各挑十二只罐系上白线。下一次开门，十二只系线罐恰好各自去了对面。数字静止，是因为两个方向的速度相等，门后并没有停工。\n\n乔叔仍要在日落前多得蓝液，便往红厅添了三十罐，叫小严每响一次铃就记数。第一行是红转蓝二十、蓝转红十二，蓝厅净增八罐；后来差额逐渐缩小，最后又在新的组成上相等。他得到了更多蓝液，却得不到自己许诺的“全变成蓝”。少交会失去官府订单，加价买红液又会吃掉整月利润。\n\n木匠来兜售一扇光滑的双开门，说工人来回都能快一倍。乔叔听见“快一倍”便想付钱，小严却把两页账并排放好：在温度与配料不变时，双向都加快，只会更早到达原来的稳定组成，不会凭空多出最终蓝液。温度或组成改变时，稳定位置可能随具体转化改变；单靠更顺的通道不行。乔叔只得高价补买原料，保留两班工人，也没有用兑水遮掩短缺。\n\n最后一匹布在半夜运走。订单保住了，乔叔的钱匣却只剩三枚铜钱，答应工人的奖金也要延期。被退掉的供货商不肯恢复旧价，染坊下月只敢少接两成订单。屋外的雨还在敲瓦。关门前，小严第三次点到红七十二、蓝五十八，合计仍是一百三十，数目已连续三次不动。她身后的门轴还在轻响，白线已经出现在对面的木架上。",
-    "explanation": "Chemical equilibrium is a dynamic state in which forward and reverse rates of a reversible reaction are equal, leaving macroscopic composition constant. It does not require equal amounts of reactants and products. Composition, pressure, or temperature can shift equilibrium; a catalyst speeds both directions toward equilibrium without changing its position under fixed conditions.",
-    "explanationZh": "化学平衡是可逆反应的正向与反向速率相等，使宏观组成保持恒定的动态状态，并不要求反应物与产物数量相等。组成、压力或温度可移动平衡；催化剂同时加快正反方向到达平衡，却不改变给定条件下的平衡位置。具体移动方向须结合反应与条件判断。"
+    "storyBody": "Analyst Shen Cen needs to explain a fictional reversible reaction A⇌B for training materials, at constant temperature and fixed volume. The model starts at [A]=6 and [B]=0 mmol/L, for a total concentration of 6. It sets k_f=0.02/min and k_r=0.01/min, with rate laws v_f=k_f[A] and v_r=k_r[B]. Both rates are in mmol/(L·min). At t=0 the forward rate is therefore 0.12 and the reverse rate zero; as B forms, the reverse reaction starts as well.\n\nAs the simulation continues, [A] falls and [B] rises. The forward rate gradually decreases while the reverse rate increases. They do not suddenly snap to exact equilibrium at a finite moment. At 200 min, the screen shows approximately [A]=2.01 and [B]=3.99; the curves are already very flat, but the values are still only approaching the theoretical limit.\n\nShen Cen then calculates the theoretical equilibrium from the model equations rather than treating a finite-time reading as exact. Equilibrium requires 0.02[A]=0.01[B], so [B]/[A]=2. With total concentration 6, the theoretical values are [A]=2 and [B]=4. Only at this theoretical equilibrium state are the two directional rates exactly equal at 0.04 mmol/(L·min), and both remain nonzero.\n\nTo test a perturbation, the simulator provides an idealized “concentration setting” operation. Starting from the theoretical equilibrium state, it sets [A]=3 while [B] remains 4, with temperature and volume fixed, equivalent to increasing A by 1 mmol/L. The control changes only the simulated concentration; it does not model pipetting, mixing, or a volume change. The system is then closed again, with v_f=0.06 and v_r=0.04, so B begins to increase net.\n\nAfter the perturbation, total concentration is 7. The same rate rules still apply, so the new equilibrium requires [B]/[A]=2, giving theoretical values [A]=7/3 and [B]=14/3. Shen Cen then activates the model’s “catalyst setting,” explicitly defined as doubling both k_f and k_r. This specified comparison relaxes to equilibrium faster, but their ratio is unchanged, so the theoretical equilibrium composition at the same temperature remains 7/3 and 14/3.\n\nShe ends by placing two views side by side: the finite simulation reading of about 2.01/3.99 at 200 min and the theoretical 2/4 calculated from the equations. The forward and reverse rates remain beside them. In the training draft, she replaces “flat curves, reaction completed” with “the composition in this model is close to theoretical equilibrium,” keeping both nonzero rates on the same page. An actual system would require separate checks of material exchange and rate rules, rather than simply borrowing these settings.",
+    "storyBodyZh": "分析员沈岑要为培训材料解释一个虚构、恒温、固定体积的可逆反应A⇌B。模型起始设[A]=6、[B]=0 mmol/L，总浓度6。设k_f=0.02/min、k_r=0.01/min，速率规则为v_f=k_f[A]、v_r=k_r[B]，两速率单位都是mmol/(L·min)。所以t=0时正向速率0.12、逆向0；随着B生成，逆向反应也开始。\n\n模拟继续运行时，[A]下降、[B]上升，正向速率逐渐降低、逆向逐渐升高。它们不会在有限时间突然“啪”地到达精确平衡。模拟到200 min时，屏幕约为[A]=2.01、[B]=3.99；曲线已经很平，但仍只是接近理论极限。\n\n沈岑随后用模型方程算理论平衡，而不是把有限时刻读数当精确值。平衡要求0.02[A]=0.01[B]，即[B]/[A]=2；总浓度6，所以理论值是[A]=2、[B]=4。只有在这个理论平衡状态下，两方向速率才精确同为0.04 mmol/(L·min)，且都非零。\n\n为了检查扰动，模拟器提供一个理想化“浓度设定”操作：从理论平衡状态出发，在温度和体积保持不变的模型里把[A]瞬时设为3、[B]保持4，相当于增加1 mmol/L A。这个按钮只改变模拟中的浓度，不模拟移液、混合或体积变化。随后体系重新封闭，此时v_f=0.06、v_r=0.04，B开始净增加。\n\n扰动后总浓度为7，新平衡仍满足[B]/[A]=2，因此理论值为[A]=7/3、[B]=14/3。沈岑再启用模型的“催化设置”：它被明确定义为把k_f和k_r都翻倍。这个给定设置使松弛更快，但二者比值不变，所以同温下理论平衡组成仍是7/3和14/3。\n\n她最后把两种画面并排：200 min时约2.01/3.99的有限模拟读数，以及方程算出的理论2/4。旁边保留正逆速率。她在培训稿中把“曲线平了，反应完成”改成“本模型的组成已接近理论平衡”，让非零的两条速率留在同一页。若换成实际体系，还要另查物质交换和速率规则，不能只搬用这张图的设置。",
+    "explanation": "Starting at 6/0, the rates at t=0 are 0.12/0 mmol/(L·min); at 200 min the concentrations are about 2.01/3.99 mmol/L. The rate laws and total concentration give theoretical equilibrium at exactly 2/4 mmol/L, where both rates are exactly 0.04 mmol/(L·min).\n\nAfter the ideal perturbation sets A to 3 and keeps B at 4 mmol/L, the rates are 0.06/0.04 mmol/(L·min). The model’s catalytic setting doubles both k values, speeding relaxation without changing the 1:2 equilibrium ratio at the same temperature.",
+    "explanationZh": "模型从6/0开始，t=0时速率0.12/0 mmol/(L·min)；200 min约2.01/3.99 mmol/L。理论平衡由速率式和总量算得精确2/4 mmol/L，此时正逆速率才都精确为0.04 mmol/(L·min)。\n\n理想扰动把A设3、B保4 mmol/L后，速率为0.06/0.04 mmol/(L·min)；模型催化设置规定两个k同时翻倍，只加快松弛，不改变同温下1:2平衡比例。"
   },
   {
     "id": "0531-activation-energy",
@@ -13774,47 +14235,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0531",
     "fieldTitle": "Chemistry",
     "fieldTitleZh": "化学",
-    "title": "The Kiln Full of Wood That Would Not Burn",
-    "titleZh": "装满木柴却不燃烧的窑",
-    "summary": "A potter fills a kiln with dry wood capable of releasing heat, waits all night, and finds no fire has appeared by itself.",
-    "summaryZh": "窑里堆满能够放热的干柴，陶工等了一夜，火却没有自己出现。",
-    "storyParagraphs": [
-      "Potter Sen had promised two hundred roof tiles before the first autumn rain. He packed the new kiln with dry oak, shut its iron mouth, and waited because everyone knew burning wood released heat. By midnight the bricks were cold enough to touch. He had mistaken what a burning fire could release for what untouched wood could start on its own. Every quiet hour brought the rain closer and increased the penalty written into his contract.",
-      "Sen thrust a thick torch against the nearest log. Its surface blackened, then the flame shrank. Old burner Mei pulled him back and laid curls of shaving beneath finger-thin twigs. The small pieces warmed quickly; with air between them, enough encounters occurred with suitable energy and contact for flame to spread. Heat released by those first changes then lifted neighbouring wood over the same hurdle. A small beginning did not provide the whole kiln's heat. It opened a path to a process that could sustain itself.",
-      "The first chamber caught, but smoke soon rolled from the inspection hole and the flame weakened again. Sen had filled every gap to maximise fuel, leaving too little oxygen and blocking the flue. He wanted to keep firing—opening the hot kiln would ruin the glazed tiles already stacked near the mouth. Mei placed ten dry splinters in the clear draft and ten inside the smoky corner. Seven caught in the draft; only one smouldered in the corner. Fuel quantity alone was not deciding the rate.",
-      "The weak flame was already gambling the whole order. Sen ordered the kiln opened and pulled out the hot front tiles so the crew could clear an air channel. Thirty-seven pieces split with small sharp sounds in the cooler air as they rebuilt the passage and inserted a porous clay grate. The changed route lowered the difficulty of starting and maintaining combustion; it did not erase the energy difference between wood before and after burning.",
-      "At the second lighting, Mei used the same handful of shavings. This time the flame ran through the open grate and caught three thick logs before Sen finished turning the sandglass. He hung a small board beside the kiln and marked what had changed: warmer kindling, clear air gaps, an open flue, and a route from thin wood to thick. On later cold mornings he checked those four things before adding more fuel. The board saved him from repeating the expensive lesson that a full kiln and a possible fire were not yet a burning kiln.",
-      "The roof tiles reached the builders one morning late. Sen paid for the broken pieces and surrendered half his profit, but the roofs were covered before the rain. When he swept the kiln, the heavy torch he had tried first still leaned against the wall, barely scorched. In the grate below lay a palm-sized patch of grey ash where Mei's thin shavings had been."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "产物更低，模拟为什么还是判得很慢",
+    "summaryZh": "虚构单步模型中，反应物能量0、产物−20 kJ/mol，原路径峰顶却在60。课程编辑在固定温度和其他条件下比较60与35两条路径，再把升温、催化、ΔH和Ea分开。",
     "storyParagraphsZh": [
-      "陶工阿森答应在秋雨前交出两百片屋瓦。他把干橡木塞满新窑，关上铁门等待，因为谁都知道木柴燃烧会放热。直到半夜，窑砖仍冷得可以伸手触摸。他把“火烧起来以后会放出什么”，错当成了“没有点燃的木柴会不会自己开始”。每安静一刻，雨期和合同罚金便靠近一分。",
-      "阿森把粗火把直接抵住木段，表面只黑了一圈，火苗便缩了回去。老窑工梅婶拉开他，在下面铺刨花和细枝。小料升温快，缝隙又能进风，较多接触便带着足够能量与合适方向发生。最初变化放出的热继续帮助邻近木柴越过同一道门槛。那撮小火没有提供整窑热量，只是让能自我维持的过程终于启动。",
-      "第一格刚烧旺，查看孔里忽然滚出浓烟，火又弱下去。阿森为了多装柴，堵住了进气缝和烟道。他舍不得开窑，因为门口已经码好上釉的瓦，冷热骤变会使它们开裂。梅婶把十根干木条放在通风口，又把十根塞进烟角。前者七根很快着火，后者只有一根冒烟。燃料多，并不保证变化快。",
-      "弱火已经在拿整批订单下注。阿森让人开窑，亲手拖出发热的前排瓦，为工人腾出清理风道的位置。冷风里，三十七片瓦接连发出细脆裂声；他们重铺多孔炉栅，重新接通进气。新的通道让燃烧更容易开始和持续，却没有改变木柴燃烧前后本身的总能量差。",
-      "第二次点火，梅婶仍只用一把刨花。这回火苗穿过敞开的炉栅，沙漏还没走完，三根粗木已经烧着。阿森在窑旁挂起一块小木板，逐项写下改过的地方：先暖细料、留出风缝、清通烟道、让火从细木接到粗木。以后每逢冷晨，他先查这四项，再决定是否加柴。那块板提醒他，满窑木料与一场可能的火，还不是正在燃烧的窑。",
-      "屋瓦迟了一早送到。阿森赔了碎瓦和误期钱，整批利润少了一半，好在秋雨落下前屋顶已经盖好。清灰时，他最先举起的粗火把仍靠在墙边，只焦了一小块；炉栅下方，那把刨花留下了一掌宽的灰。"
+      "课程编辑何序正在测试一个虚构单步反应模型。简化能量图的纵轴采用相对焓，把反应物设为0 kJ/mol、产物设为−20 kJ/mol，时间轴却把原路径标为较慢。她第一反应是模拟可能有错：既然终点更低、模型设为放热，为什么过程还会慢？",
+      "她展开原路径：能量先从0升到过渡态峰顶60，再降到−20。正向Ea=60−0=60 kJ/mol，逆向Ea=60−(−20)=80 kJ/mol，而ΔH=−20−0=−20 kJ/mol。Ea与ΔH是不同量，但在同一能量图中有关系：Ea,正−Ea,逆=ΔH。",
+      "模型再给一条替代路径，反应物和产物仍是0与−20，峰顶改为35。于是正向Ea=35、逆向Ea=55，两边门槛都比原路径低25，而ΔH仍是−20。模拟在相同温度、浓度下，还把两条路径的碰撞/前因子设为相同，才用较低门槛显示更快；它没有从一张峰图单独推算真实反应速率。",
+      "何序接着切换“升温”按钮。模型保持原路径Ea=60不动，只让粒子能量分布改变，使具有足够能量越过门槛的比例增加；碰撞仍需满足适当取向。再切“催化路径”时，改变的是反应机制和峰顶位置，而不是把温度效应改名成Ea下降。",
+      "她在旁注又加一句：图中kJ/mol是每摩尔的能量标度，并非每个分子都带着60 kJ；Ea表示从反应物状态到过渡态的门槛，也不是反应后永久“消耗掉”的能量。真实观测速率还会受浓度、混合、传质、接触和取向影响，因此单次快慢不能独立测出Ea。",
+      "测试页最后停在两条同起点、同终点的路径上，一条峰顶60、一条35。旁边的粒子能量分布图保留60 kJ/mol的门槛线；升温时改变的是分布曲线和门槛右侧的比例。何序删掉“放热所以很快”，把“是否放热”和“怎样变快”分别写在两张图旁：前者看起终点差，后者还要比较门槛、温度和碰撞条件。负的ΔH也不能替她判定ΔG或自发性。"
     ],
-    "conceptName": "Activation energy",
+    "overallZh": "在这张简化教学图中，Ea表示反应物到过渡态的门槛，ΔH表示起终点的净焓差；二者不同，但正逆门槛之差与ΔH相容。升温改变粒子能量分布，催化改变反应路径。控制温度、浓度和前因子后，较低门槛可加快本模型反应，而热力学起终态不变。",
     "conceptNameZh": "活化能",
-    "explanationParagraphs": [
-      "Activation energy is the energy barrier that must be crossed to reach a transition state along a reaction pathway. Even a thermodynamically favourable reaction may be slow if few particles cross with suitable energy and orientation. Higher temperature changes the energy distribution; a catalyst offers a lower-barrier route without changing the net free-energy difference."
-    ],
     "explanationParagraphsZh": [
-      "活化能是反应沿特定路径到达过渡态所需跨越的能量门槛。即使反应总体有利，若很少有粒子以合适能量与方向跨过门槛，速率仍可能很慢。升温改变能量分布，催化剂提供较低能垒路径，但不改变反应物与产物的净自由能差。"
+      "本图纵轴为相对焓：原路径R=0、P=−20、TS=60，所以Ea正=60、Ea逆=80、ΔH=−20，并满足60−80=−20；替代路径35/55仍保持同一ΔH。",
+      "“峰顶35更快”只在本模型固定温度、浓度且两路径前因子相同时成立。真实速率差还可能来自传质等因素，ΔH<0也不等于已证明ΔG<0。"
     ],
-    "mode": "mechanism-fable",
-    "status": "approved",
+    "moduleZh": {
+      "intro": "在同一能量图中分别计算正逆Ea与ΔH，再把升温和换催化路径的作用分开。",
+      "diagramTitle": "同样从0到−20，60峰顶和35峰顶改变了什么",
+      "diagramSteps": [
+        "标出反应物0、产物−20与原过渡态60",
+        "计算Ea正=60、Ea逆=80和ΔH=−20",
+        "保持起终点不变换到峰顶35的替代路径",
+        "保持Ea不变观察升温如何改变高能粒子比例",
+        "回到现实速率区分能垒、碰撞条件与传质等因素"
+      ],
+      "diagramStepNotes": [
+        "简化相对焓图：原路径R=0、TS=60、P=−20 kJ/mol。",
+        "60−80=−20，与ΔH一致；Ea与ΔH不是同一个量。",
+        "替代路径Ea正=35、Ea逆=55，两边门槛各低25，起终点不变。",
+        "升温时原路径门槛仍为60；粒子能量分布曲线改变，门槛右侧比例增加，碰撞还需合适取向。",
+        "更快不能单独证明真实Ea降低，浓度、前因子、传质等也会影响速率。"
+      ],
+      "mapping": [
+        "0/−20起终点 → 反应净焓差。",
+        "60/35峰顶 → 两条简化反应路径的过渡态门槛。",
+        "温度分布按钮 → 改变越过固定门槛的粒子比例。",
+        "较快时间轴 → 同温、同浓度且前因子相同的模型路径比较。"
+      ],
+      "boundary": "这是原创单步教学能量图，不是具体物质实测Ea或复杂多步反应的普适表观参数。kJ/mol采用每摩尔标度；Ea不是每个分子永久消耗的能量。ΔH<0不足以判断ΔG、自发性或反应速度。能量分布曲线与反应路径曲线也不是同一张图。",
+      "reflection": "分别按下模型的“升温”和“替代路径”按钮时，哪张图的哪个量会改变？若你只看见时间轴缩短，却不知道温度、浓度或路径是否改变，为什么还不能把加快直接归因于Ea降低？"
+    },
+    "referencesZh": [
+      {
+        "id": "0531-activation-energy-ref-1",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.5 Collision Theory. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+        "use": "支持活化能/过渡态、活化能与净焓差的区分，以及温度通过能量分布和Arrhenius关系影响速率常数。"
+      },
+      {
+        "id": "0531-activation-energy-ref-2",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.7 Catalysis. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/12-7-catalysis",
+        "use": "支持催化通过较低能垒的替代反应机制加快速率，同时保持反应物和产物的起终点能量关系不变。"
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-mechanism-mixed-14-pdc-b-review.md",
+      "edits": [
+        "science-mechanism-mixed-14-pdc-b-edit-pass1-evidence.json",
+        "science-mechanism-mixed-14-pdc-b-edit-pass2-evidence.json"
+      ]
     },
+    "title": "The Product Is Lower in Energy—So Why Is the Simulation Still Slow?",
+    "summary": "In a fictional single-step model, the reactants are at 0 and the products at −20 kJ/mol, yet the original pathway peaks at 60. The course editor compares paths peaking at 60 and 35 under the same temperature and other conditions, then separates temperature, catalysis, ΔH, and Ea.",
+    "storyParagraphs": [
+      "Course editor He Xu is testing a fictional single-step reaction model. The simplified energy diagram uses relative enthalpy on its vertical axis, placing reactants at 0 kJ/mol and products at −20 kJ/mol, yet the timeline labels the original path as relatively slow. Her first reaction is that the simulation may be wrong: if the endpoint is lower and the model is exothermic, why should the process still be slow?",
+      "She expands the original pathway. Energy first rises from 0 to a transition-state peak at 60 and then falls to −20. The forward Ea is therefore 60−0=60 kJ/mol, the reverse Ea is 60−(−20)=80 kJ/mol, and ΔH=−20−0=−20 kJ/mol. Ea and ΔH are different quantities, but they are related within the same energy diagram: Ea,forward−Ea,reverse=ΔH.",
+      "The model then provides an alternative path. Reactants and products remain at 0 and −20, but the peak becomes 35. Forward Ea is therefore 35 and reverse Ea 55: both barriers are 25 lower while ΔH remains −20. Along with the same temperature and concentration, the simulation assigns the same collision/pre-exponential factor to both paths before showing the lower-barrier path as faster. It does not infer a real reaction rate from a peak diagram alone.",
+      "He Xu next switches the “increase temperature” control. The model keeps the original Ea=60 unchanged and changes only the particle-energy distribution, increasing the fraction with enough energy to cross the barrier; collisions must still have suitable orientation. Switching instead to the “catalyzed pathway” changes the reaction mechanism and the peak position. The temperature effect is not renamed as a decrease in Ea.",
+      "She adds another note: the diagram’s kJ/mol is an energy scale per mole, rather than 60 kJ for each molecule. Ea represents the barrier from the reactant state to the transition state, not energy permanently “used up” by the reaction. Real observed rates can also depend on concentration, mixing, mass transfer, contact, and orientation, so a single difference in reaction time cannot independently measure Ea.",
+      "The test page ends with two paths sharing the same endpoints, one peaking at 60 and the other at 35. The adjacent particle-energy distribution keeps a threshold line at 60 kJ/mol; warming changes the distribution curve and the fraction to the right of that line. He Xu deletes “exothermic, therefore fast” and labels the two panels with separate questions: does the reaction release heat, and what makes it faster? The first uses the endpoint difference; the second also requires comparing barriers, temperature, and collision conditions. Negative ΔH cannot decide ΔG or spontaneity for her."
+    ],
+    "overall": "In this simplified teaching diagram, Ea represents the barrier from reactants to the transition state, while ΔH is the net enthalpy difference between endpoints. They are different quantities, with the difference between forward and reverse barriers consistent with ΔH. Warming changes the particle-energy distribution; catalysis changes the reaction path. With temperature, concentration, and the pre-exponential factor controlled, a lower barrier speeds this model reaction without changing its thermodynamic endpoints.",
+    "conceptName": "Activation energy",
+    "explanationParagraphs": [
+      "The graph uses relative enthalpy: for the original path R=0, P=−20, and TS=60, forward Ea=60, reverse Ea=80, and ΔH=−20, satisfying 60−80=−20. The alternative path gives 35/55 with the same ΔH.",
+      "The 35-peak path is shown as faster only in this model with fixed temperature and concentration and the same pre-exponential factor for both paths. Real rate differences may also come from mass transfer and other factors, and ΔH<0 does not establish ΔG<0."
+    ],
+    "module": {
+      "intro": "Calculate forward and reverse Ea and ΔH on the same energy diagram, then keep the effects of temperature and a catalyzed pathway distinct.",
+      "diagramTitle": "From 0 to −20 in Both Cases—What Changes When the Peak Is 60 or 35?",
+      "diagramSteps": [
+        "Mark reactants at 0, products at −20, and the original transition state at 60",
+        "Calculate forward Ea=60, reverse Ea=80, and ΔH=−20",
+        "Keep the endpoints fixed and switch to the alternative path peaking at 35",
+        "Keep Ea fixed while observing how higher temperature changes the high-energy fraction",
+        "Return to real rate observations and separate barrier effects from collision conditions and mass transfer"
+      ],
+      "diagramStepNotes": [
+        "Simplified relative-enthalpy graph: the original path is R=0, TS=60, P=−20 kJ/mol.",
+        "60−80=−20, consistent with ΔH; Ea and ΔH are not the same quantity.",
+        "The alternative path has forward Ea=35 and reverse Ea=55; both barriers are 25 lower while endpoints stay unchanged.",
+        "On warming, the original path’s barrier stays at 60; the particle-energy distribution changes and the fraction beyond the threshold increases. Collisions still need suitable orientation.",
+        "A faster observed rate does not by itself prove lower real Ea because concentration, pre-exponential factors, mass transfer, and other conditions also affect rate."
+      ],
+      "mapping": [
+        "0/−20 endpoints → net reaction enthalpy difference.",
+        "60/35 peaks → transition-state barriers for the two simplified pathways.",
+        "Temperature-distribution control → change in the fraction of particles able to cross a fixed barrier.",
+        "Faster timeline → model path comparison at the same temperature, concentration, and pre-exponential factor."
+      ],
+      "boundary": "This is an original single-step teaching diagram, not a measured Ea for a specific substance or a universal apparent parameter for complex multistep reactions. kJ/mol uses a per-mole scale; Ea is not energy permanently consumed by each molecule. ΔH<0 does not determine ΔG, spontaneity, or speed. A particle-energy distribution and a reaction-path profile are different graphs.",
+      "reflection": "When you press the model’s “warming” and “alternative path” controls, which quantity changes in which graph? If you see only a shorter timeline without knowing whether temperature, concentration, or path changed, why can you not directly attribute the speedup to lower Ea?"
+    },
+    "references": [
+      {
+        "id": "0531-activation-energy-ref-1",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.5 Collision Theory. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+        "use": "Supports activation energy and the transition state, the distinction between Ea and the net enthalpy difference, and the way temperature affects the energy distribution and rate constant through Arrhenius-type behavior."
+      },
+      {
+        "id": "0531-activation-energy-ref-2",
+        "citation": "Paul Flowers, Klaus Theopold, Richard Langley, William R. Robinson. Chemistry 2e, 12.7 Catalysis. OpenStax, Rice University (2019).",
+        "url": "https://openstax.org/books/chemistry-2e/pages/12-7-catalysis",
+        "use": "Supports catalysis through an alternative reaction mechanism with a lower barrier while leaving the thermodynamic energy relationship between reactants and products unchanged."
+      }
+    ],
+    "status": "approved",
     "collection": "field-core-fables",
-    "storyBody": "Potter Sen had promised two hundred roof tiles before the first autumn rain. He packed the new kiln with dry oak, shut its iron mouth, and waited because everyone knew burning wood released heat. By midnight the bricks were cold enough to touch. He had mistaken what a burning fire could release for what untouched wood could start on its own. Every quiet hour brought the rain closer and increased the penalty written into his contract.\n\nSen thrust a thick torch against the nearest log. Its surface blackened, then the flame shrank. Old burner Mei pulled him back and laid curls of shaving beneath finger-thin twigs. The small pieces warmed quickly; with air between them, enough encounters occurred with suitable energy and contact for flame to spread. Heat released by those first changes then lifted neighbouring wood over the same hurdle. A small beginning did not provide the whole kiln's heat. It opened a path to a process that could sustain itself.\n\nThe first chamber caught, but smoke soon rolled from the inspection hole and the flame weakened again. Sen had filled every gap to maximise fuel, leaving too little oxygen and blocking the flue. He wanted to keep firing—opening the hot kiln would ruin the glazed tiles already stacked near the mouth. Mei placed ten dry splinters in the clear draft and ten inside the smoky corner. Seven caught in the draft; only one smouldered in the corner. Fuel quantity alone was not deciding the rate.\n\nThe weak flame was already gambling the whole order. Sen ordered the kiln opened and pulled out the hot front tiles so the crew could clear an air channel. Thirty-seven pieces split with small sharp sounds in the cooler air as they rebuilt the passage and inserted a porous clay grate. The changed route lowered the difficulty of starting and maintaining combustion; it did not erase the energy difference between wood before and after burning.\n\nAt the second lighting, Mei used the same handful of shavings. This time the flame ran through the open grate and caught three thick logs before Sen finished turning the sandglass. He hung a small board beside the kiln and marked what had changed: warmer kindling, clear air gaps, an open flue, and a route from thin wood to thick. On later cold mornings he checked those four things before adding more fuel. The board saved him from repeating the expensive lesson that a full kiln and a possible fire were not yet a burning kiln.\n\nThe roof tiles reached the builders one morning late. Sen paid for the broken pieces and surrendered half his profit, but the roofs were covered before the rain. When he swept the kiln, the heavy torch he had tried first still leaned against the wall, barely scorched. In the grate below lay a palm-sized patch of grey ash where Mei's thin shavings had been.",
-    "storyBodyZh": "陶工阿森答应在秋雨前交出两百片屋瓦。他把干橡木塞满新窑，关上铁门等待，因为谁都知道木柴燃烧会放热。直到半夜，窑砖仍冷得可以伸手触摸。他把“火烧起来以后会放出什么”，错当成了“没有点燃的木柴会不会自己开始”。每安静一刻，雨期和合同罚金便靠近一分。\n\n阿森把粗火把直接抵住木段，表面只黑了一圈，火苗便缩了回去。老窑工梅婶拉开他，在下面铺刨花和细枝。小料升温快，缝隙又能进风，较多接触便带着足够能量与合适方向发生。最初变化放出的热继续帮助邻近木柴越过同一道门槛。那撮小火没有提供整窑热量，只是让能自我维持的过程终于启动。\n\n第一格刚烧旺，查看孔里忽然滚出浓烟，火又弱下去。阿森为了多装柴，堵住了进气缝和烟道。他舍不得开窑，因为门口已经码好上釉的瓦，冷热骤变会使它们开裂。梅婶把十根干木条放在通风口，又把十根塞进烟角。前者七根很快着火，后者只有一根冒烟。燃料多，并不保证变化快。\n\n弱火已经在拿整批订单下注。阿森让人开窑，亲手拖出发热的前排瓦，为工人腾出清理风道的位置。冷风里，三十七片瓦接连发出细脆裂声；他们重铺多孔炉栅，重新接通进气。新的通道让燃烧更容易开始和持续，却没有改变木柴燃烧前后本身的总能量差。\n\n第二次点火，梅婶仍只用一把刨花。这回火苗穿过敞开的炉栅，沙漏还没走完，三根粗木已经烧着。阿森在窑旁挂起一块小木板，逐项写下改过的地方：先暖细料、留出风缝、清通烟道、让火从细木接到粗木。以后每逢冷晨，他先查这四项，再决定是否加柴。那块板提醒他，满窑木料与一场可能的火，还不是正在燃烧的窑。\n\n屋瓦迟了一早送到。阿森赔了碎瓦和误期钱，整批利润少了一半，好在秋雨落下前屋顶已经盖好。清灰时，他最先举起的粗火把仍靠在墙边，只焦了一小块；炉栅下方，那把刨花留下了一掌宽的灰。",
-    "explanation": "Activation energy is the energy barrier that must be crossed to reach a transition state along a reaction pathway. Even a thermodynamically favourable reaction may be slow if few particles cross with suitable energy and orientation. Higher temperature changes the energy distribution; a catalyst offers a lower-barrier route without changing the net free-energy difference.",
-    "explanationZh": "活化能是反应沿特定路径到达过渡态所需跨越的能量门槛。即使反应总体有利，若很少有粒子以合适能量与方向跨过门槛，速率仍可能很慢。升温改变能量分布，催化剂提供较低能垒路径，但不改变反应物与产物的净自由能差。"
+    "storyBody": "Course editor He Xu is testing a fictional single-step reaction model. The simplified energy diagram uses relative enthalpy on its vertical axis, placing reactants at 0 kJ/mol and products at −20 kJ/mol, yet the timeline labels the original path as relatively slow. Her first reaction is that the simulation may be wrong: if the endpoint is lower and the model is exothermic, why should the process still be slow?\n\nShe expands the original pathway. Energy first rises from 0 to a transition-state peak at 60 and then falls to −20. The forward Ea is therefore 60−0=60 kJ/mol, the reverse Ea is 60−(−20)=80 kJ/mol, and ΔH=−20−0=−20 kJ/mol. Ea and ΔH are different quantities, but they are related within the same energy diagram: Ea,forward−Ea,reverse=ΔH.\n\nThe model then provides an alternative path. Reactants and products remain at 0 and −20, but the peak becomes 35. Forward Ea is therefore 35 and reverse Ea 55: both barriers are 25 lower while ΔH remains −20. Along with the same temperature and concentration, the simulation assigns the same collision/pre-exponential factor to both paths before showing the lower-barrier path as faster. It does not infer a real reaction rate from a peak diagram alone.\n\nHe Xu next switches the “increase temperature” control. The model keeps the original Ea=60 unchanged and changes only the particle-energy distribution, increasing the fraction with enough energy to cross the barrier; collisions must still have suitable orientation. Switching instead to the “catalyzed pathway” changes the reaction mechanism and the peak position. The temperature effect is not renamed as a decrease in Ea.\n\nShe adds another note: the diagram’s kJ/mol is an energy scale per mole, rather than 60 kJ for each molecule. Ea represents the barrier from the reactant state to the transition state, not energy permanently “used up” by the reaction. Real observed rates can also depend on concentration, mixing, mass transfer, contact, and orientation, so a single difference in reaction time cannot independently measure Ea.\n\nThe test page ends with two paths sharing the same endpoints, one peaking at 60 and the other at 35. The adjacent particle-energy distribution keeps a threshold line at 60 kJ/mol; warming changes the distribution curve and the fraction to the right of that line. He Xu deletes “exothermic, therefore fast” and labels the two panels with separate questions: does the reaction release heat, and what makes it faster? The first uses the endpoint difference; the second also requires comparing barriers, temperature, and collision conditions. Negative ΔH cannot decide ΔG or spontaneity for her.",
+    "storyBodyZh": "课程编辑何序正在测试一个虚构单步反应模型。简化能量图的纵轴采用相对焓，把反应物设为0 kJ/mol、产物设为−20 kJ/mol，时间轴却把原路径标为较慢。她第一反应是模拟可能有错：既然终点更低、模型设为放热，为什么过程还会慢？\n\n她展开原路径：能量先从0升到过渡态峰顶60，再降到−20。正向Ea=60−0=60 kJ/mol，逆向Ea=60−(−20)=80 kJ/mol，而ΔH=−20−0=−20 kJ/mol。Ea与ΔH是不同量，但在同一能量图中有关系：Ea,正−Ea,逆=ΔH。\n\n模型再给一条替代路径，反应物和产物仍是0与−20，峰顶改为35。于是正向Ea=35、逆向Ea=55，两边门槛都比原路径低25，而ΔH仍是−20。模拟在相同温度、浓度下，还把两条路径的碰撞/前因子设为相同，才用较低门槛显示更快；它没有从一张峰图单独推算真实反应速率。\n\n何序接着切换“升温”按钮。模型保持原路径Ea=60不动，只让粒子能量分布改变，使具有足够能量越过门槛的比例增加；碰撞仍需满足适当取向。再切“催化路径”时，改变的是反应机制和峰顶位置，而不是把温度效应改名成Ea下降。\n\n她在旁注又加一句：图中kJ/mol是每摩尔的能量标度，并非每个分子都带着60 kJ；Ea表示从反应物状态到过渡态的门槛，也不是反应后永久“消耗掉”的能量。真实观测速率还会受浓度、混合、传质、接触和取向影响，因此单次快慢不能独立测出Ea。\n\n测试页最后停在两条同起点、同终点的路径上，一条峰顶60、一条35。旁边的粒子能量分布图保留60 kJ/mol的门槛线；升温时改变的是分布曲线和门槛右侧的比例。何序删掉“放热所以很快”，把“是否放热”和“怎样变快”分别写在两张图旁：前者看起终点差，后者还要比较门槛、温度和碰撞条件。负的ΔH也不能替她判定ΔG或自发性。",
+    "explanation": "The graph uses relative enthalpy: for the original path R=0, P=−20, and TS=60, forward Ea=60, reverse Ea=80, and ΔH=−20, satisfying 60−80=−20. The alternative path gives 35/55 with the same ΔH.\n\nThe 35-peak path is shown as faster only in this model with fixed temperature and concentration and the same pre-exponential factor for both paths. Real rate differences may also come from mass transfer and other factors, and ΔH<0 does not establish ΔG<0.",
+    "explanationZh": "本图纵轴为相对焓：原路径R=0、P=−20、TS=60，所以Ea正=60、Ea逆=80、ΔH=−20，并满足60−80=−20；替代路径35/55仍保持同一ΔH。\n\n“峰顶35更快”只在本模型固定温度、浓度且两路径前因子相同时成立。真实速率差还可能来自传质等因素，ΔH<0也不等于已证明ΔG<0。"
   },
   {
     "id": "0531-stoichiometry",

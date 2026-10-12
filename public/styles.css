@@ -6442,6 +6442,7 @@ dd,
   color: #1d4ed8;
   font-weight: 680;
   text-underline-offset: 0.18em;
+  overflow-wrap: anywhere;
 }
 
 .concept-module-references p {
