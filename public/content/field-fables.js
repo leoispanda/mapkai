@@ -13235,49 +13235,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0511",
     "fieldTitle": "Biology",
     "fieldTitleZh": "生物学",
-    "title": "Good Seed in the Wrong Valley",
-    "titleZh": "种在错误山谷里的好种子",
-    "summary": "The most productive wheat from Gold Valley is sent to Mist Valley and loses its first contest to an overlooked local seed.",
-    "summaryZh": "金谷最丰产的麦种被送到雾谷后，第一次输给了原本不起眼的另一袋种子。",
-    "storyParagraphs": [
-      "Gold Valley's farmers needed a wheat recommendation before the autumn seed fair. A five-village contract would keep the small trial station open through winter. The agricultural instructor planted the inherited Red-awn and Green-stem lines in alternating dry-valley plots. Red-awn yielded twenty-four baskets per plot; Green-stem yielded nineteen. She tied a gold 'best seed' label to the Red-awn sack. The result was real, repeated across Gold Valley, and financially difficult to ignore.",
-      "Farmers from damp, windy Mist Valley paid a premium for the winner. By midsummer, Red-awn stood tall and then lodged after three storms, producing only eight baskets per plot. A narrow strip of ordinary Green-stem stayed upright and produced fourteen. The instructor blamed planting depth and asked them to follow the Gold Valley instructions once more. One badly managed season seemed too weak to overturn orderly trials, so the gold label remained on every sack.",
-      "The next year she divided both lines between both valleys, matching sowing date, plot size and density. In dry Gold Valley, Red-awn again led, twenty-three baskets to eighteen. In Mist Valley, the order reversed, nine to fifteen. The inherited difference was not one fixed number that could be carried unchanged from one field to another. Wet wind did not turn Red-awn into Green-stem, nor did dry soil erase the difference between their seeds; it changed how that difference appeared in harvest.",
-      "Disease counts added another crack. Red-awn's taller, denser canopy retained moisture in Mist Valley and showed more leaf fungus; that disadvantage nearly vanished in the drier valley. An assistant suggested declaring Green-stem the true champion instead. The instructor shook her head and set the four harvest cards side by side. A new universal winner would repeat the old error: the gap could narrow, widen or reverse as growing conditions changed.",
-      "Five hundred gold labels had already been printed, and the guild opened in two days. The instructor pulled down the all-region notice, refunded Mist Valley's premium and lost one village order. With that order went the station's new threshing floor. She sold smaller paired lots instead: Red-awn for conditions like the tested dry fields, Green-stem for the tested damp, windy fields, each marked with a date and place rather than a promise about every farm.",
-      "Winter review cost another month. For every plot she recorded seed source, moisture, wind, soil and disease. She did not say inherited differences were unreal; the two lines repeatedly responded differently. She also refused to blame either valley as simply good or bad. The evidence belonged to particular combinations of seed and surroundings, and a new season or field still required a smaller trial before a broad recommendation.",
-      "At the next fair, four sacks stood on the instructor's table: Red-awn from Gold Valley, Red-awn from Mist Valley, Green-stem from Gold Valley and Green-stem from Mist Valley. She cut the old gold label into four strips and tied one beneath each yield card. No strip carried the words 'best everywhere'."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "抽屉里的“+4厘米”",
+    "summaryZh": "孟乔原想把四个教学组合等权概括成“较暖平均+4 cm”。每格同样6盆重复，A从10到16、B从8到10；拆开后分别是+6和+2，说明统一平均会隐藏两种基因型不同的环境响应。",
     "storyParagraphsZh": [
-      "金谷农会必须在秋季种展前给出一项麦种推荐，拿下五个村的合同，试验站才能撑过冬天。农师把可遗传的赤芒麦与青秆麦交替种进干谷小区。赤芒每区收二十四篮，青秆十九篮。她把“最佳麦种”的金标签系上赤芒种袋。结果真实，也在金谷多块田里重复过，站在账本前很难忽略。",
-      "潮湿多风的雾谷农人按高价买走冠军种。盛夏三场风雨过后，赤芒高秆大片倒伏，每区只收八篮；一条不起眼的青秆旧种却站得稳，收了十四篮。农师先把差距归给播种深度，要他们照金谷说明再试。一次管理不佳的收成看似不足以推翻整齐试验，金标签便继续留在每只袋上。",
-      "下一年，她把两种麦同时分到两座山谷，尽量配平播期、面积和密度。干燥金谷里，赤芒仍以二十三篮领先十八篮；雾谷的顺序却反转为九篮对十五篮。遗传差异不是一个能原封不动搬进任何田地的数字。湿风没有把赤芒变成青秆，干土也没抹掉种子差别；改变的是差别如何落在收成上。",
-      "病害记录又添了一道裂缝。赤芒较高密的冠层在雾谷留住湿气，叶部真菌更多；到了干燥金谷，这项劣势几乎消失。助手提议改称青秆才是真冠军，农师摇头，把四张产量卡并排铺开。换一个万能赢家，仍会重复旧错：环境一变，差距可能缩小、扩大，也可能反转。",
-      "五百张金标签已经印好，两天后行会开门。农师撤下“全地区最佳”的告示，退还雾谷溢价，也失去一个村的订单；试验站原定的新脱粒场随之取消。她改卖小份配对种包：赤芒标明适合已测试的干地，青秆标明在已测试湿风田更强，每袋都写日期与山谷，不再许诺所有农田。",
-      "冬季复核又花去一个月。她为每块地记录种源、水分、风、土壤与病害。两条品系反复作出不同反应，遗传差异并未消失；她也不再把某座山谷笼统说成好或坏。证据属于种子与周围条件的具体组合，新季节、新土地仍应先做小块试种。",
-      "下一次展会，农师桌上摆着四只袋：金谷赤芒、雾谷赤芒、金谷青秆、雾谷青秆。她把旧金标签剪成四条，分别系在产量卡下面。没有一条再写“处处最佳”。"
+      "孟乔要在温室开放日前做好一块两因素展示牌。她准备A、B两种基因型，每个“基因型×环境”组合各放6盆重复；同一基因型的材料内部一致，盆栽在各自指定温区内随机轮换位置，浇水和光照时长匹配。四格都记录14天的茎长增量。她原想把它们等权概括成一句：“较暖平均让植株多长4 cm。”",
+      "四张虚构教学均值卡分别是：A常温10 cm、A较暖16 cm；B常温8 cm、B较暖10 cm。因为每格重复数相同，若只做等权的两基因型平均，较暖相对常温的平均差确实是[(16+10)/2]−[(10+8)/2]=4 cm。那块“+4”牌子并非算错。",
+      "问题出在她把平均概括当成了两种基因型都共享的固定响应。孟乔先在A组前算16−10=+6 cm，再走到B组算10−8=+2 cm。她把“+4”纸牌夹在中间，又把+6、+2贴到两侧；三个数字同时出现后，统一箭头明显会遮掉两组不同的环境响应。",
+      "她改成两条响应线：A从10连到16，B从8连到10。A的茎长增量在两个环境中始终大于B，没有排名反转；但两条线斜率不同。反向看也一致：常温A−B=2 cm，较暖A−B=6 cm，基因型之间的差值随环境改变。",
+      "孟乔把24盆的标签重新按组合核过一遍，确认四格各6盆，随机轮换记录也完整。这样能减少某一排长期更亮、照料不一致或等权汇总权重不同的解释；但这些仍是教学设定的均值，没有做抽样误差或统计显著性检验，也没有定位任何具体分子通路。",
+      "开放日前，孟乔把统一“+4 cm”牌收回抽屉。墙上留下四格均值、每格6盆的标记和两条不同斜率的线；线下写着“14天茎长增量”。参观者先看四组盆栽，再沿两条线找差值。旁边的下一块板还是空的，留给别的环境或结果尺度。抽屉没关严，+4纸牌露出一角。"
     ],
-    "conceptName": "Gene-environment interaction",
+    "overallZh": "基因与环境交互关注一个因素的效应是否随另一个因素改变。本篇在加法尺度、四格等权的教学设定下，A的环境差值为+6 cm、B为+2 cm；总体+4 cm平均虽然算术正确，却会隐藏这种差异模式。",
     "conceptNameZh": "基因与环境交互",
-    "explanationParagraphs": [
-      "Gene–environment interaction occurs when the effect of genetic variation differs across environments, so trait differences may shrink, widen or reverse between settings. It is more specific than saying both genes and environment matter. Detecting it requires comparable genotypes across relevant conditions and adequate replication. It does not imply genetic effects are unreal or that every environmental change produces a different ranking."
-    ],
     "explanationParagraphsZh": [
-      "基因与环境交互是指遗传差异的效应会随环境改变，因此品系间的表现差距可能缩小、扩大或反转。它比“遗传和环境都重要”更具体，通常需把可比较基因型置于相关条件中并充分重复。交互不表示遗传效应虚假，也不表示环境每变一次，排名必然反转。"
+      "每格同为6盆，所以等权总体环境差为4 cm；拆开后A是+6、B是+2，常温A−B=2而较暖A−B=6，不需要排名反转。",
+      "这只描述虚构教学均值中的交互模式，没有做显著性检验，也不能由此推出具体基因分子机制。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先确认等权总体+4 cm没有算错，再拆开四格看这个平均是否掩盖不同基因型的响应。",
+      "diagramTitle": "同样得到总体+4，为什么A的+6和B的+2仍重要",
+      "diagramSteps": [
+        "设置A/B×常温/较暖四格且每格6盆",
+        "按等权平均核对总体环境差为+4 cm",
+        "分别计算A的+6与B的+2",
+        "反向比较基因型差值2与6",
+        "用两条响应线替换统一固定效应表达"
+      ],
+      "diagramStepNotes": [
+        "四格均为14天茎长增量；同一基因型材料一致，盆栽在指定温区内随机轮换，照料匹配。",
+        "[(16+10)/2]−[(10+8)/2]=4 cm。",
+        "A：16−10=6 cm；B：10−8=2 cm。",
+        "常温A−B=2 cm；较暖A−B=6 cm。",
+        "排名不需反转；这里只描述教学均值模式。"
+      ],
+      "mapping": [
+        "四格各6盆 → 等权总体平均的前提。",
+        "被收回的+4 cm牌 → 算术正确但信息不足的概括。",
+        "+6/+2标签 → 同一加法尺度上的不同环境响应。",
+        "两条不同斜率的线 → 不依赖排名反转的交互模式。"
+      ],
+      "boundary": "数据是虚构教学均值，不是真实实验结果。交互判断依赖结果尺度；本篇只讨论加法尺度。随机、重复和相同格数可减少位置、照料及权重混杂，但没有统计显著性检验，也不能定位具体分子机制或支持基因决定论。",
+      "reflection": "为什么“总体平均+4 cm”可以算得完全正确，却仍不足以描述A和B分别怎样响应较暖环境？"
+    },
+    "referencesZh": [
+      {
+        "id": "0511-gene-environment-interaction-ref-1",
+        "citation": "National Human Genome Research Institute. Gene Environment Interaction. Talking Glossary of Genomic and Genetic Terms.",
+        "url": "https://www.genome.gov/genetics-glossary/Gene-Environment-Interaction",
+        "use": "支持环境效应可随基因型不同而不同，或基因型效应可随环境不同而不同；本篇为非医疗教学情境。"
+      },
+      {
+        "id": "0511-gene-environment-interaction-ref-2",
+        "citation": "Ruth Ottman. Gene–Environment Interaction: Definitions and Study Designs. Preventive Medicine 25(6) (1996), 764–770. doi:10.1006/pmed.1996.0117.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2823480/",
+        "use": "支持统计交互依赖所选测量尺度，并提醒统计交互不能直接等同于已证实的具体分子机制。"
+      }
+    ],
+    "title": "The “+4 cm” Sign in the Drawer",
+    "summary": "Meng Qiao initially wants to summarize the four teaching combinations as “warmer conditions add an average of 4 cm.” Each cell has the same six replicate pots. A rises from 10 to 16 and B from 8 to 10; separating them gives +6 and +2, showing that the single average hides different environmental responses by the two genotypes.",
+    "storyParagraphs": [
+      "Meng Qiao needs to finish a two-factor display before the greenhouse open day. She prepares genotypes A and B, with six replicate pots in each genotype×environment combination. Material is internally consistent within each genotype; pots rotate through randomized positions within their assigned temperature zone, with watering and light duration matched. Every cell records the increase in stem length over 14 days. She plans to summarize them with equal weights: “Warmer conditions add 4 cm on average.”",
+      "The four fictional teaching mean cards read: A at normal temperature 10 cm, A warmer 16 cm; B at normal temperature 8 cm, B warmer 10 cm. Because every cell has the same number of replicates, the equal-weight average environmental difference across the two genotypes really is [(16+10)/2]−[(10+8)/2]=4 cm. The “+4” sign is not an arithmetic mistake.",
+      "The problem appears when she treats that average summary as a fixed response shared by both genotypes. In front of A she calculates 16−10=+6 cm, then walks to B and calculates 10−8=+2 cm. She clips the “+4” sign in the middle and places +6 and +2 beside the two groups. Once all three numbers are visible together, the single arrow clearly hides different environmental responses.",
+      "She replaces it with two response lines: A connects 10 to 16, while B connects 8 to 10. A’s stem-length increment remains larger than B’s in both environments, so there is no ranking reversal, but the slopes differ. The reverse comparison tells the same story: A−B=2 cm at normal temperature and A−B=6 cm under the warmer condition, so the genotype difference itself changes with environment.",
+      "Meng Qiao checks the labels on all 24 pots by combination and confirms that each cell contains six pots and that the random-rotation record is complete. That reduces explanations based on one row being brighter for longer, inconsistent care, or unequal weighting in the aggregate. But these remain teaching means; there is no sampling-error or statistical-significance analysis, and no specific molecular pathway has been identified.",
+      "Before the open day, Meng Qiao returns the single “+4 cm” sign to the drawer. The wall keeps the four means, six-pots-per-cell labels and two differently sloped lines, with “14-day increase in stem length” written below. Visitors look at the four groups of plants before following the lines to their differences. The next board remains blank for a different environment or response scale. The drawer is not quite shut; one corner of the +4 sign shows."
+    ],
+    "overall": "Gene-environment interaction asks whether the effect of one factor changes across levels of another. In this teaching setup, on an additive scale with equally weighted cells, A shows an environmental difference of +6 cm and B +2 cm. The overall +4 cm average is arithmetically correct but hides that interaction pattern.",
+    "conceptName": "Gene-environment interaction",
+    "explanationParagraphs": [
+      "Each cell has six pots, so the equal-weight overall environmental difference is 4 cm. Separately, A is +6 and B is +2; A−B is 2 at normal temperature and 6 under warmer conditions, without any need for a ranking reversal.",
+      "This describes an interaction pattern in fictional teaching means only. No significance test has been performed, and no specific molecular genetic mechanism can be inferred from it."
+    ],
+    "module": {
+      "intro": "First confirm that the equal-weight overall +4 cm is not mathematically wrong, then open the four cells to see whether that average hides different genotype responses.",
+      "diagramTitle": "If the Overall Average Is +4, Why Do A’s +6 and B’s +2 Still Matter?",
+      "diagramSteps": [
+        "Set up A/B × normal/warmer cells with six pots in every cell",
+        "Check the equal-weight overall environmental difference of +4 cm",
+        "Calculate A’s +6 and B’s +2 separately",
+        "Compare genotype differences of 2 and 6 in the opposite direction",
+        "Replace one fixed-effect arrow with two response lines"
+      ],
+      "diagramStepNotes": [
+        "Every cell measures the 14-day increase in stem length; material within a genotype is consistent, pots rotate within their assigned temperature zone, and care is matched.",
+        "[(16+10)/2]−[(10+8)/2]=4 cm.",
+        "A: 16−10=6 cm; B: 10−8=2 cm.",
+        "At normal temperature A−B=2 cm; under warmer conditions A−B=6 cm.",
+        "No ranking reversal is required; this describes a pattern in the teaching means."
+      ],
+      "mapping": [
+        "Six pots in each of four cells → the condition supporting the equal-weight grand average.",
+        "Removed +4 cm sign → an arithmetically correct but incomplete summary.",
+        "+6/+2 labels → different environmental responses on the same additive scale.",
+        "Two response lines with different slopes → an interaction pattern without a rank reversal."
+      ],
+      "boundary": "The data are fictional teaching means, not real experimental results. Interaction depends on the response scale; this article discusses only the additive scale. Randomization, replication, and equal cell sizes reduce position, care, and weighting confounds, but no statistical-significance test has been conducted, and no specific molecular mechanism or genetic determinism follows from the four means.",
+      "reflection": "Why can the overall average of +4 cm be completely correct and still fail to describe how A and B separately respond to the warmer environment?"
+    },
+    "references": [
+      {
+        "id": "0511-gene-environment-interaction-ref-1",
+        "citation": "National Human Genome Research Institute. Gene Environment Interaction. Talking Glossary of Genomic and Genetic Terms.",
+        "url": "https://www.genome.gov/genetics-glossary/Gene-Environment-Interaction",
+        "use": "Supports the idea that environmental effects can differ across genotypes, or genotype effects can differ across environments; this article uses a nonmedical teaching scenario."
+      },
+      {
+        "id": "0511-gene-environment-interaction-ref-2",
+        "citation": "Ruth Ottman. Gene–Environment Interaction: Definitions and Study Designs. Preventive Medicine 25(6) (1996), 764–770. doi:10.1006/pmed.1996.0117.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2823480/",
+        "use": "Supports the point that statistical interaction depends on the chosen measurement scale and that statistical interaction does not by itself establish a specific molecular mechanism."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Gold Valley's farmers needed a wheat recommendation before the autumn seed fair. A five-village contract would keep the small trial station open through winter. The agricultural instructor planted the inherited Red-awn and Green-stem lines in alternating dry-valley plots. Red-awn yielded twenty-four baskets per plot; Green-stem yielded nineteen. She tied a gold 'best seed' label to the Red-awn sack. The result was real, repeated across Gold Valley, and financially difficult to ignore.\n\nFarmers from damp, windy Mist Valley paid a premium for the winner. By midsummer, Red-awn stood tall and then lodged after three storms, producing only eight baskets per plot. A narrow strip of ordinary Green-stem stayed upright and produced fourteen. The instructor blamed planting depth and asked them to follow the Gold Valley instructions once more. One badly managed season seemed too weak to overturn orderly trials, so the gold label remained on every sack.\n\nThe next year she divided both lines between both valleys, matching sowing date, plot size and density. In dry Gold Valley, Red-awn again led, twenty-three baskets to eighteen. In Mist Valley, the order reversed, nine to fifteen. The inherited difference was not one fixed number that could be carried unchanged from one field to another. Wet wind did not turn Red-awn into Green-stem, nor did dry soil erase the difference between their seeds; it changed how that difference appeared in harvest.\n\nDisease counts added another crack. Red-awn's taller, denser canopy retained moisture in Mist Valley and showed more leaf fungus; that disadvantage nearly vanished in the drier valley. An assistant suggested declaring Green-stem the true champion instead. The instructor shook her head and set the four harvest cards side by side. A new universal winner would repeat the old error: the gap could narrow, widen or reverse as growing conditions changed.\n\nFive hundred gold labels had already been printed, and the guild opened in two days. The instructor pulled down the all-region notice, refunded Mist Valley's premium and lost one village order. With that order went the station's new threshing floor. She sold smaller paired lots instead: Red-awn for conditions like the tested dry fields, Green-stem for the tested damp, windy fields, each marked with a date and place rather than a promise about every farm.\n\nWinter review cost another month. For every plot she recorded seed source, moisture, wind, soil and disease. She did not say inherited differences were unreal; the two lines repeatedly responded differently. She also refused to blame either valley as simply good or bad. The evidence belonged to particular combinations of seed and surroundings, and a new season or field still required a smaller trial before a broad recommendation.\n\nAt the next fair, four sacks stood on the instructor's table: Red-awn from Gold Valley, Red-awn from Mist Valley, Green-stem from Gold Valley and Green-stem from Mist Valley. She cut the old gold label into four strips and tied one beneath each yield card. No strip carried the words 'best everywhere'.",
-    "storyBodyZh": "金谷农会必须在秋季种展前给出一项麦种推荐，拿下五个村的合同，试验站才能撑过冬天。农师把可遗传的赤芒麦与青秆麦交替种进干谷小区。赤芒每区收二十四篮，青秆十九篮。她把“最佳麦种”的金标签系上赤芒种袋。结果真实，也在金谷多块田里重复过，站在账本前很难忽略。\n\n潮湿多风的雾谷农人按高价买走冠军种。盛夏三场风雨过后，赤芒高秆大片倒伏，每区只收八篮；一条不起眼的青秆旧种却站得稳，收了十四篮。农师先把差距归给播种深度，要他们照金谷说明再试。一次管理不佳的收成看似不足以推翻整齐试验，金标签便继续留在每只袋上。\n\n下一年，她把两种麦同时分到两座山谷，尽量配平播期、面积和密度。干燥金谷里，赤芒仍以二十三篮领先十八篮；雾谷的顺序却反转为九篮对十五篮。遗传差异不是一个能原封不动搬进任何田地的数字。湿风没有把赤芒变成青秆，干土也没抹掉种子差别；改变的是差别如何落在收成上。\n\n病害记录又添了一道裂缝。赤芒较高密的冠层在雾谷留住湿气，叶部真菌更多；到了干燥金谷，这项劣势几乎消失。助手提议改称青秆才是真冠军，农师摇头，把四张产量卡并排铺开。换一个万能赢家，仍会重复旧错：环境一变，差距可能缩小、扩大，也可能反转。\n\n五百张金标签已经印好，两天后行会开门。农师撤下“全地区最佳”的告示，退还雾谷溢价，也失去一个村的订单；试验站原定的新脱粒场随之取消。她改卖小份配对种包：赤芒标明适合已测试的干地，青秆标明在已测试湿风田更强，每袋都写日期与山谷，不再许诺所有农田。\n\n冬季复核又花去一个月。她为每块地记录种源、水分、风、土壤与病害。两条品系反复作出不同反应，遗传差异并未消失；她也不再把某座山谷笼统说成好或坏。证据属于种子与周围条件的具体组合，新季节、新土地仍应先做小块试种。\n\n下一次展会，农师桌上摆着四只袋：金谷赤芒、雾谷赤芒、金谷青秆、雾谷青秆。她把旧金标签剪成四条，分别系在产量卡下面。没有一条再写“处处最佳”。",
-    "explanation": "Gene–environment interaction occurs when the effect of genetic variation differs across environments, so trait differences may shrink, widen or reverse between settings. It is more specific than saying both genes and environment matter. Detecting it requires comparable genotypes across relevant conditions and adequate replication. It does not imply genetic effects are unreal or that every environmental change produces a different ranking.",
-    "explanationZh": "基因与环境交互是指遗传差异的效应会随环境改变，因此品系间的表现差距可能缩小、扩大或反转。它比“遗传和环境都重要”更具体，通常需把可比较基因型置于相关条件中并充分重复。交互不表示遗传效应虚假，也不表示环境每变一次，排名必然反转。"
+    "storyBody": "Meng Qiao needs to finish a two-factor display before the greenhouse open day. She prepares genotypes A and B, with six replicate pots in each genotype×environment combination. Material is internally consistent within each genotype; pots rotate through randomized positions within their assigned temperature zone, with watering and light duration matched. Every cell records the increase in stem length over 14 days. She plans to summarize them with equal weights: “Warmer conditions add 4 cm on average.”\n\nThe four fictional teaching mean cards read: A at normal temperature 10 cm, A warmer 16 cm; B at normal temperature 8 cm, B warmer 10 cm. Because every cell has the same number of replicates, the equal-weight average environmental difference across the two genotypes really is [(16+10)/2]−[(10+8)/2]=4 cm. The “+4” sign is not an arithmetic mistake.\n\nThe problem appears when she treats that average summary as a fixed response shared by both genotypes. In front of A she calculates 16−10=+6 cm, then walks to B and calculates 10−8=+2 cm. She clips the “+4” sign in the middle and places +6 and +2 beside the two groups. Once all three numbers are visible together, the single arrow clearly hides different environmental responses.\n\nShe replaces it with two response lines: A connects 10 to 16, while B connects 8 to 10. A’s stem-length increment remains larger than B’s in both environments, so there is no ranking reversal, but the slopes differ. The reverse comparison tells the same story: A−B=2 cm at normal temperature and A−B=6 cm under the warmer condition, so the genotype difference itself changes with environment.\n\nMeng Qiao checks the labels on all 24 pots by combination and confirms that each cell contains six pots and that the random-rotation record is complete. That reduces explanations based on one row being brighter for longer, inconsistent care, or unequal weighting in the aggregate. But these remain teaching means; there is no sampling-error or statistical-significance analysis, and no specific molecular pathway has been identified.\n\nBefore the open day, Meng Qiao returns the single “+4 cm” sign to the drawer. The wall keeps the four means, six-pots-per-cell labels and two differently sloped lines, with “14-day increase in stem length” written below. Visitors look at the four groups of plants before following the lines to their differences. The next board remains blank for a different environment or response scale. The drawer is not quite shut; one corner of the +4 sign shows.",
+    "storyBodyZh": "孟乔要在温室开放日前做好一块两因素展示牌。她准备A、B两种基因型，每个“基因型×环境”组合各放6盆重复；同一基因型的材料内部一致，盆栽在各自指定温区内随机轮换位置，浇水和光照时长匹配。四格都记录14天的茎长增量。她原想把它们等权概括成一句：“较暖平均让植株多长4 cm。”\n\n四张虚构教学均值卡分别是：A常温10 cm、A较暖16 cm；B常温8 cm、B较暖10 cm。因为每格重复数相同，若只做等权的两基因型平均，较暖相对常温的平均差确实是[(16+10)/2]−[(10+8)/2]=4 cm。那块“+4”牌子并非算错。\n\n问题出在她把平均概括当成了两种基因型都共享的固定响应。孟乔先在A组前算16−10=+6 cm，再走到B组算10−8=+2 cm。她把“+4”纸牌夹在中间，又把+6、+2贴到两侧；三个数字同时出现后，统一箭头明显会遮掉两组不同的环境响应。\n\n她改成两条响应线：A从10连到16，B从8连到10。A的茎长增量在两个环境中始终大于B，没有排名反转；但两条线斜率不同。反向看也一致：常温A−B=2 cm，较暖A−B=6 cm，基因型之间的差值随环境改变。\n\n孟乔把24盆的标签重新按组合核过一遍，确认四格各6盆，随机轮换记录也完整。这样能减少某一排长期更亮、照料不一致或等权汇总权重不同的解释；但这些仍是教学设定的均值，没有做抽样误差或统计显著性检验，也没有定位任何具体分子通路。\n\n开放日前，孟乔把统一“+4 cm”牌收回抽屉。墙上留下四格均值、每格6盆的标记和两条不同斜率的线；线下写着“14天茎长增量”。参观者先看四组盆栽，再沿两条线找差值。旁边的下一块板还是空的，留给别的环境或结果尺度。抽屉没关严，+4纸牌露出一角。",
+    "explanation": "Each cell has six pots, so the equal-weight overall environmental difference is 4 cm. Separately, A is +6 and B is +2; A−B is 2 at normal temperature and 6 under warmer conditions, without any need for a ranking reversal.\n\nThis describes an interaction pattern in fictional teaching means only. No significance test has been performed, and no specific molecular genetic mechanism can be inferred from it.",
+    "explanationZh": "每格同为6盆，所以等权总体环境差为4 cm；拆开后A是+6、B是+2，常温A−B=2而较暖A−B=6，不需要排名反转。\n\n这只描述虚构教学均值中的交互模式，没有做显著性检验，也不能由此推出具体基因分子机制。"
   },
   {
     "id": "0512-enzyme-catalysis",
@@ -13706,45 +13795,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0521",
     "fieldTitle": "Environmental sciences",
     "fieldTitleZh": "环境科学",
-    "title": "The Wasteland That Sent a Bill",
-    "titleZh": "寄来账单的荒地",
-    "summary": "A harbour leases its marsh as empty land, then pays separately for flood storage, cleaner water and young fish habitat.",
-    "summaryZh": "港镇把湿地当作空地出租，随后又分别为蓄洪、净水和幼鱼生境支付代价。",
-    "storyParagraphs": [
-      "Mayor Del needed warehouse leases before the council's winter budget. Beyond the harbour wall lay thirty hectares of reed marsh that paid no rent and looked empty at low tide. A trading company offered enough to keep the clinic and ferry operating if the town filled half the marsh, straightened its channels and built three sheds. Fisher Sula brought a woven mat of reed roots to the hearing and asked the council to count what happened there. Del counted only registered goods and wages. The lease was signed; stone fill created dry ground within four months, and eighty dock workers received pay.",
-      "The first autumn storm was not unusually high, yet water reached the fish market steps. Tide gauges showed the same peak as an earlier storm that the wider marsh had spread across shallow channels and vegetation. Now embankments sent more water toward the quay. The company said one flood could not be charged to its sheds, so Del bought larger pumps. They kept the market open during the next tide, but fuel, operators and maintenance consumed a third of the new lease revenue.",
-      "By spring, Sula's nets near the estuary held fewer juvenile mullet. Surveys found many young fish in the remaining creek edges and very few along the stone fill. Water leaving an upstream drainage ditch also carried more suspended sediment toward shellfish beds after part of the vegetated route had been cut off. The marsh had not produced invoices while it slowed water, trapped some material and provided sheltered nursery space. Removing different pieces did not create one identical loss; it exposed several functions whose replacements belonged to different budgets.",
-      "The ten-year lease lay open at the next hearing, with the buyback price written across its margin. Del signed beneath that larger number and ordered one embankment breached. Compensation cancelled a planned market roof, and dismantling a half-finished foundation wasted stone already paid for. Tidal flow returned to part of the site, while pumps remained necessary because restoration was incomplete and stronger storms still exceeded what the marsh could absorb. Fish counts improved over three seasons, not overnight. The clinic stayed open, but ferry fares rose when lease income fell.",
-      "At the next budget hearing, Sula laid the old reed-root mat across Del's ledger. Under it sat three separate papers: pump fuel, channel restoration and lost shellfish revenue. Del did not assign the marsh one magical price. He left the papers visible beside the warehouse lease before the council voted on the last dry parcel. Outside, new reed shoots had just crossed the ebb line."
-    ],
+    "mode": "lens-fable",
+    "titleZh": "花篱只开了两米",
+    "summaryZh": "苏岚原计划整条清掉花篱来扩大拖车转弯空间。她把清理推迟到果实初期可比较结果之后，并用同样开袋、触碰和时长的两种网袋处理，只让一组真正转移花粉；结果改变了她清多少，而不是让她宣称花篱贡献已经被测出。",
     "storyParagraphsZh": [
-      "德尔镇长必须在冬季预算前拿到仓库租金。港墙外有三十公顷芦苇湿地，退潮时像一片不交租的空地。贸易公司答应，只要填掉一半湿地、拉直水道并建三座货棚，租金便足够维持诊所和渡船。渔民苏拉带来一张芦根编垫，请议会把湿地里发生的事也算进去。德尔只统计登记货物与工资，最终签下租约。四个月内，石料填出干地，八十名码头工人领到薪水。",
-      "第一场秋季风暴并不比往年特别高，水却漫到鱼市台阶。潮位记录显示，早先一次同等峰值曾被较宽的湿地分散进浅沟与植被，如今堤岸把更多水推向码头。公司说不能把一场洪水记到三座货棚名下，德尔便买来大泵。下一次涨潮时，泵保住了市场，燃料、操作员和维修费却吃掉新增租金的三分之一。",
-      "到了春天，苏拉在河口的网里很少再见幼鲻鱼。调查员在剩余溪沟边找到许多幼鱼，石填岸旁却近乎没有；上游排水沟流来的悬浮泥沙，在一段有植被的路径被截断后，也更容易抵达贝床。湿地过去减慢水流、截留部分物质、提供隐蔽育幼空间时不会开账单。不同部分被移除后，出现的也并非同一项损失，而是落进防洪、渔业和水质三本预算的不同后果。",
-      "下一次听证会上，十年租约摊在桌面，买回未开工地块的价钱横写在页边。德尔在那个更大的数字下签名，又命人拆开一道堤。赔偿金取消了原定鱼市顶棚，拆除半成品地基也浪费了已付钱的石料。潮水重新进入部分湿地，可修复并不完整，强风暴仍可能超过它能缓冲的程度，大泵也须保留。鱼类计数经过三个产季才有所回升。诊所没有关闭，渡船却因租金减少而涨价。",
-      "下一次预算听证，苏拉把旧芦根垫铺在德尔账本上。垫子下面压着三张纸：泵油费、沟道修复费、贝类损失。德尔没有给湿地写下一个万能价格，只让这些纸与仓库租约一起摊开，再请议会表决最后一块干地。窗外，新芦芽刚刚越过退潮线。"
+      "苏岚拿着卷尺站在果园北侧花篱前。粉笔画出的拖车转弯弧线只切进花篱中间约两米，但她原本打算干脆整条清掉，省得以后再修剪。正赶上果树开花，她发现花篱和树行之间有访花昆虫来回，于是把整条清理计划推迟到果实初期的比较完成后再决定。",
+      "她在多棵树的相近枝位随机分配三种处理。开放花保持原状；另外两组在开花初期套同样透气网袋。每天同一时间，两种网袋组都打开相同时长，用各自的小刷以相同次数触碰柱头——花朵接收花粉的部位。假处理用未沾花粉的干净刷；另一组的刷先取兼容花粉，再以相同动作触碰，然后同时重新套袋。苏岚把处理位置画在小地图上，花篱近处、远处都留有比较枝。",
+      "各处理分散在多棵树上，日常浇水和照料一致。苏岚每天只检查网袋是否完整、记录处理编号，没有因为某组看起来弱就临时补操作。这样仍不能保证袋内温湿度与开放花完全相同，但至少两种网袋处理的开袋、触碰和时长是匹配的。",
+      "到果实初期，虚构记录显示：网袋假处理组结果表现较弱，而同样网袋、同样触碰但真正转移花粉的一组有所恢复。这个差异支持“授粉不足参与了网袋组的较弱表现”，却没有追踪开放花上的访花昆虫来自哪里，更不能分解这条花篱到底贡献了多少。她把开放花的记录放在旁边只作背景参照，没有用它单独估算花篱贡献。",
+      "苏岚回到最初的粉笔弧线。拖车真正需要的只是中间约两米，她便把整条红线擦掉，只留弧线重叠的一段。清掉这一段能换来什么空间，卷尺已经量过；保留其余花篱能提供多少授粉帮助，小比较还答不了。她先做移除较少、拖车照样能过的选择，在地块图上给剩余花篱添了一个待观察记号。",
+      "清理日，工人只移走粉笔弧线压到的那两米。拖车顺利转过新开的缺口，剩余花篱还在树行旁。苏岚把卷尺收起，在地块图上把整条删除线改成一个短缺口。粉笔弧线仍留在地面上，缺口刚好覆盖拖车实际需要的转弯范围。"
     ],
-    "conceptName": "Ecosystem services",
+    "overallZh": "生态系统服务把生态过程与人的具体受益连接起来。本篇只识别一条授粉服务路径：生态空间可能支持访花活动，授粉又可能改善果树繁殖结果，从而影响果园经营；故事没有量化这条花篱本身的具体贡献。",
     "conceptNameZh": "生态系统服务",
-    "explanationParagraphs": [
-      "Ecosystem services are benefits people obtain from ecological processes, including provisioning, regulating and cultural benefits and the supporting processes behind them. Wetlands may attenuate some floods, retain nutrients or sediment and provide nursery habitat, but effects depend on location, condition and event size. Valuation can reveal hidden trade-offs without implying every relationship has one market price or that engineered substitutes are equivalent."
-    ],
     "explanationParagraphsZh": [
-      "生态系统服务指人们从生态过程获得的供给、调节、文化等收益及其支撑过程。湿地可能缓冲部分洪水、截留养分或泥沙，并提供育幼生境，但效果取决于位置、状态和事件强度。估值可揭示原本未入账的取舍，却不表示每种关系都有唯一市价，也不表示工程替代物完全等同。"
+      "两种网袋处理具有相同开袋、触碰和时长，关键差别是是否真正转移花粉，因此人工授粉后的恢复支持授粉不足参与结果差异。",
+      "开放花上的昆虫来源未被追踪，所以不能把授粉差异直接归因于花篱。金额也不是识别生态受益的唯一方式。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先锁定实际只需清理约两米的空间任务，再用匹配处理判断授粉这条受益路径是否值得纳入决定。",
+      "diagramTitle": "从整条清除到只开两米缺口，证据怎样改变土地选择",
+      "diagramSteps": [
+        "用转弯弧线确定真正需要的空间范围",
+        "把整条清理推迟到果实初期比较完成",
+        "设置开放、网袋假处理、网袋人工授粉三类处理",
+        "用匹配操作识别授粉不足可能参与结果差异",
+        "只清弧线重叠段并保留其余花篱继续观察"
+      ],
+      "diagramStepNotes": [
+        "粉笔弧线只压到花篱中间约两米。",
+        "时间上先完成比较，再决定整条是否清除。",
+        "两种网袋组开袋、触碰、时长相同，仅花粉转移不同。",
+        "结果支持授粉不足，但不识别昆虫来源或花篱贡献份额。",
+        "最终实际只移除两米，拖车已能通过。"
+      ],
+      "mapping": [
+        "卷尺与粉笔弧线 → 可直接验证的空间需求。",
+        "两组匹配网袋 → 区分花粉转移与操作本身。",
+        "人工授粉恢复 → 授粉过程可能影响果树结果的证据。",
+        "两米缺口 → 有限证据下实际改变的土地决定。"
+      ],
+      "boundary": "网袋处理不能保证与开放花的微环境完全相同，但网袋两组的操作被匹配。虚构比较不能证明访花者来自花篱，也不能量化该花篱的具体授粉贡献。生态系统服务强调生态过程到人的受益联系，不要求把所有自然价值换算成货币。",
+      "reflection": "这个比较支持授粉会影响果树结果，却还不能确定花篱贡献。若要判断清掉其余花篱会不会减少受益，下一步需要补什么证据？"
+    },
+    "referencesZh": [
+      {
+        "id": "0521-ecosystem-services-ref-1",
+        "citation": "Millennium Ecosystem Assessment. Ecosystems and Human Well-being: A Framework for Assessment, Chapter 1: Introduction and Conceptual Framework. Island Press (2003).",
+        "url": "https://www.millenniumassessment.org/documents/document.299.aspx.pdf",
+        "use": "支持把生态过程与人从生态系统获得的具体益处和受益者联系起来，并区分不同服务类别；该框架不意味着所有自然价值都必须标价。"
+      },
+      {
+        "id": "0521-ecosystem-services-ref-2",
+        "citation": "Taylor H. Ricketts, Gretchen C. Daily, Paul R. Ehrlich, Charles D. Michener. Economic value of tropical forest to coffee production. PNAS 101(34) (2004), 12579–12582. doi:10.1073/pnas.0405147101.",
+        "url": "https://doi.org/10.1073/pnas.0405147101",
+        "use": "支持通过授粉实验、距离和收益估算来研究森林与作物授粉服务的比较思路；原研究咖啡中的具体数值不移植到本篇虚构果园。"
+      }
+    ],
+    "title": "A Two-Meter Gap in the Hedge",
+    "summary": "Su Lan originally plans to clear the entire hedgerow to widen a trailer turning area. She postpones the decision until comparable early-fruit results are available and uses two bagged-flower treatments with the same opening, touching, and timing, with actual pollen transfer added only to one group. The result changes how much she clears without letting her claim that the hedgerow’s contribution has been measured.",
+    "storyParagraphs": [
+      "Su Lan stands beside the hedgerow on the north side of the orchard with a measuring tape. The chalked trailer-turning arc cuts into only about two meters of the middle of the hedge, but she had planned to clear the whole strip to avoid future pruning. The fruit trees are flowering, and she notices flower-visiting insects moving between the hedge and the tree rows. She postpones the full clearing decision until the early-fruit comparison is complete.",
+      "She randomly assigns three treatments to comparable branch positions across several trees. Open flowers remain untouched; the other two groups receive identical breathable bags at the start of flowering. At the same time each day, both bagged groups open for the same duration, and separate brushes touch the stigmas—the pollen-receiving parts—the same number of times. The sham group uses a clean brush without pollen; the other brush picks up compatible pollen before making the same contact. Both groups are rebagged together. Su Lan maps the treatments, leaving comparison branches both near and farther from the hedge.",
+      "The treatments are spread across multiple trees, with routine watering and care kept the same. Each day Su Lan only checks that the bags are intact and records the treatment labels; she does not add extra handling because one group appears weaker. This still does not guarantee that the bagged flowers have exactly the same temperature and humidity as open flowers, but the two bagged treatments do match opening time, touching, and duration.",
+      "By early fruit development, the fictional record shows weaker fruiting performance in the bagged sham-treatment group, while the similarly bagged and similarly handled group receiving actual pollen transfer shows some recovery. That difference supports the idea that insufficient pollination contributes to the weaker bagged result. It does not trace where the insects on the open flowers came from, and it cannot separate out how much of the effect belongs specifically to this hedgerow. She keeps the open-flower records alongside as background, without using them alone to estimate the hedge’s contribution.",
+      "Su Lan returns to the original chalk arc. The trailer needs only about two meters in the middle, so she erases the full removal line and keeps just the overlapping section. The tape has already measured the space gained by clearing it; the small comparison cannot yet say how much pollination help the rest of the hedge provides. She chooses the option that removes less while still letting the trailer pass and adds an observation mark beside the remaining hedge on the field map.",
+      "On clearing day, the workers remove only the two meters crossed by the chalked turning arc. The trailer passes through the new opening successfully, while the remaining hedge stays beside the tree row. Su Lan puts away the measuring tape and changes the full deletion line on the field map to one short gap. The chalk arc remains on the ground, and the gap covers just the turning space required."
+    ],
+    "overall": "Ecosystem services connect ecological processes to concrete benefits received by people. This article identifies only one pollination-service pathway: ecological space may support flower-visiting activity, pollination may improve fruit-tree reproductive outcomes, and the orchard operation may benefit. The story does not quantify the hedgerow’s specific contribution.",
+    "conceptName": "Ecosystem services",
+    "explanationParagraphs": [
+      "The two bagged treatments have the same opening time, touching, and duration; the key difference is whether pollen is actually transferred. Recovery after hand pollination therefore supports insufficient pollination as part of the result difference.",
+      "The source of insects visiting the open flowers is not tracked, so the pollination difference cannot be assigned directly to the hedgerow. Money is also not the only way to recognize an ecological benefit."
+    ],
+    "module": {
+      "intro": "First define the real spatial task as clearing only about two meters, then use matched treatments to decide whether the pollination-benefit pathway deserves a place in the decision.",
+      "diagramTitle": "From Clearing the Entire Hedge to Opening Only a Two-Meter Gap—How the Evidence Changes the Land Choice",
+      "diagramSteps": [
+        "Use the turning arc to determine the actual space required",
+        "Postpone full clearing until the early-fruit comparison is complete",
+        "Set up open, bagged-sham, and bagged-hand-pollinated treatments",
+        "Use matched handling to test whether insufficient pollination may contribute to the difference",
+        "Clear only the overlapping section and keep the rest of the hedge for further observation"
+      ],
+      "diagramStepNotes": [
+        "The chalk turning arc intersects only about two meters of the hedge.",
+        "The timing is explicit: the comparison is completed before the final full-clearing decision.",
+        "The two bagged groups share opening, touching, and duration; only pollen transfer differs.",
+        "The result supports a role for insufficient pollination but does not identify insect origin or the hedgerow’s share of the contribution.",
+        "Only two meters are actually removed, and the trailer can pass through."
+      ],
+      "mapping": [
+        "Measuring tape and chalk turning arc → the directly verifiable space requirement.",
+        "Two matched bagged treatments → separation of pollen transfer from the handling itself.",
+        "Recovery with hand pollination → evidence that the pollination process may affect fruiting performance.",
+        "Two-meter opening → the land-use decision actually changed by limited evidence."
+      ],
+      "boundary": "Bagging cannot guarantee a microenvironment identical to open flowers, although the two bagged treatments are matched in handling. The fictional comparison cannot show that the visitors came from the hedgerow or quantify the hedgerow’s specific pollination contribution. Ecosystem services emphasize the link from ecological process to human benefit; they do not require all natural value to be converted into money.",
+      "reflection": "The comparison supports a pollination effect on fruiting but does not establish the hedge’s contribution. What further evidence would help assess whether clearing the rest would reduce that benefit?"
+    },
+    "references": [
+      {
+        "id": "0521-ecosystem-services-ref-1",
+        "citation": "Millennium Ecosystem Assessment. Ecosystems and Human Well-being: A Framework for Assessment, Chapter 1: Introduction and Conceptual Framework. Island Press (2003).",
+        "url": "https://www.millenniumassessment.org/documents/document.299.aspx.pdf",
+        "use": "Supports linking ecological processes to specific benefits people obtain from ecosystems and to identifiable beneficiaries, while distinguishing categories of services; the framework does not imply that all natural value must be priced."
+      },
+      {
+        "id": "0521-ecosystem-services-ref-2",
+        "citation": "Taylor H. Ricketts, Gretchen C. Daily, Paul R. Ehrlich, Charles D. Michener. Economic value of tropical forest to coffee production. PNAS 101(34) (2004), 12579–12582. doi:10.1073/pnas.0405147101.",
+        "url": "https://doi.org/10.1073/pnas.0405147101",
+        "use": "Supports the comparative approach of studying forest-related crop pollination through pollination experiments, distance, and benefit estimation; the coffee-specific numerical results from the original study are not transferred to this fictional orchard."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Mayor Del needed warehouse leases before the council's winter budget. Beyond the harbour wall lay thirty hectares of reed marsh that paid no rent and looked empty at low tide. A trading company offered enough to keep the clinic and ferry operating if the town filled half the marsh, straightened its channels and built three sheds. Fisher Sula brought a woven mat of reed roots to the hearing and asked the council to count what happened there. Del counted only registered goods and wages. The lease was signed; stone fill created dry ground within four months, and eighty dock workers received pay.\n\nThe first autumn storm was not unusually high, yet water reached the fish market steps. Tide gauges showed the same peak as an earlier storm that the wider marsh had spread across shallow channels and vegetation. Now embankments sent more water toward the quay. The company said one flood could not be charged to its sheds, so Del bought larger pumps. They kept the market open during the next tide, but fuel, operators and maintenance consumed a third of the new lease revenue.\n\nBy spring, Sula's nets near the estuary held fewer juvenile mullet. Surveys found many young fish in the remaining creek edges and very few along the stone fill. Water leaving an upstream drainage ditch also carried more suspended sediment toward shellfish beds after part of the vegetated route had been cut off. The marsh had not produced invoices while it slowed water, trapped some material and provided sheltered nursery space. Removing different pieces did not create one identical loss; it exposed several functions whose replacements belonged to different budgets.\n\nThe ten-year lease lay open at the next hearing, with the buyback price written across its margin. Del signed beneath that larger number and ordered one embankment breached. Compensation cancelled a planned market roof, and dismantling a half-finished foundation wasted stone already paid for. Tidal flow returned to part of the site, while pumps remained necessary because restoration was incomplete and stronger storms still exceeded what the marsh could absorb. Fish counts improved over three seasons, not overnight. The clinic stayed open, but ferry fares rose when lease income fell.\n\nAt the next budget hearing, Sula laid the old reed-root mat across Del's ledger. Under it sat three separate papers: pump fuel, channel restoration and lost shellfish revenue. Del did not assign the marsh one magical price. He left the papers visible beside the warehouse lease before the council voted on the last dry parcel. Outside, new reed shoots had just crossed the ebb line.",
-    "storyBodyZh": "德尔镇长必须在冬季预算前拿到仓库租金。港墙外有三十公顷芦苇湿地，退潮时像一片不交租的空地。贸易公司答应，只要填掉一半湿地、拉直水道并建三座货棚，租金便足够维持诊所和渡船。渔民苏拉带来一张芦根编垫，请议会把湿地里发生的事也算进去。德尔只统计登记货物与工资，最终签下租约。四个月内，石料填出干地，八十名码头工人领到薪水。\n\n第一场秋季风暴并不比往年特别高，水却漫到鱼市台阶。潮位记录显示，早先一次同等峰值曾被较宽的湿地分散进浅沟与植被，如今堤岸把更多水推向码头。公司说不能把一场洪水记到三座货棚名下，德尔便买来大泵。下一次涨潮时，泵保住了市场，燃料、操作员和维修费却吃掉新增租金的三分之一。\n\n到了春天，苏拉在河口的网里很少再见幼鲻鱼。调查员在剩余溪沟边找到许多幼鱼，石填岸旁却近乎没有；上游排水沟流来的悬浮泥沙，在一段有植被的路径被截断后，也更容易抵达贝床。湿地过去减慢水流、截留部分物质、提供隐蔽育幼空间时不会开账单。不同部分被移除后，出现的也并非同一项损失，而是落进防洪、渔业和水质三本预算的不同后果。\n\n下一次听证会上，十年租约摊在桌面，买回未开工地块的价钱横写在页边。德尔在那个更大的数字下签名，又命人拆开一道堤。赔偿金取消了原定鱼市顶棚，拆除半成品地基也浪费了已付钱的石料。潮水重新进入部分湿地，可修复并不完整，强风暴仍可能超过它能缓冲的程度，大泵也须保留。鱼类计数经过三个产季才有所回升。诊所没有关闭，渡船却因租金减少而涨价。\n\n下一次预算听证，苏拉把旧芦根垫铺在德尔账本上。垫子下面压着三张纸：泵油费、沟道修复费、贝类损失。德尔没有给湿地写下一个万能价格，只让这些纸与仓库租约一起摊开，再请议会表决最后一块干地。窗外，新芦芽刚刚越过退潮线。",
-    "explanation": "Ecosystem services are benefits people obtain from ecological processes, including provisioning, regulating and cultural benefits and the supporting processes behind them. Wetlands may attenuate some floods, retain nutrients or sediment and provide nursery habitat, but effects depend on location, condition and event size. Valuation can reveal hidden trade-offs without implying every relationship has one market price or that engineered substitutes are equivalent.",
-    "explanationZh": "生态系统服务指人们从生态过程获得的供给、调节、文化等收益及其支撑过程。湿地可能缓冲部分洪水、截留养分或泥沙，并提供育幼生境，但效果取决于位置、状态和事件强度。估值可揭示原本未入账的取舍，却不表示每种关系都有唯一市价，也不表示工程替代物完全等同。"
+    "storyBody": "Su Lan stands beside the hedgerow on the north side of the orchard with a measuring tape. The chalked trailer-turning arc cuts into only about two meters of the middle of the hedge, but she had planned to clear the whole strip to avoid future pruning. The fruit trees are flowering, and she notices flower-visiting insects moving between the hedge and the tree rows. She postpones the full clearing decision until the early-fruit comparison is complete.\n\nShe randomly assigns three treatments to comparable branch positions across several trees. Open flowers remain untouched; the other two groups receive identical breathable bags at the start of flowering. At the same time each day, both bagged groups open for the same duration, and separate brushes touch the stigmas—the pollen-receiving parts—the same number of times. The sham group uses a clean brush without pollen; the other brush picks up compatible pollen before making the same contact. Both groups are rebagged together. Su Lan maps the treatments, leaving comparison branches both near and farther from the hedge.\n\nThe treatments are spread across multiple trees, with routine watering and care kept the same. Each day Su Lan only checks that the bags are intact and records the treatment labels; she does not add extra handling because one group appears weaker. This still does not guarantee that the bagged flowers have exactly the same temperature and humidity as open flowers, but the two bagged treatments do match opening time, touching, and duration.\n\nBy early fruit development, the fictional record shows weaker fruiting performance in the bagged sham-treatment group, while the similarly bagged and similarly handled group receiving actual pollen transfer shows some recovery. That difference supports the idea that insufficient pollination contributes to the weaker bagged result. It does not trace where the insects on the open flowers came from, and it cannot separate out how much of the effect belongs specifically to this hedgerow. She keeps the open-flower records alongside as background, without using them alone to estimate the hedge’s contribution.\n\nSu Lan returns to the original chalk arc. The trailer needs only about two meters in the middle, so she erases the full removal line and keeps just the overlapping section. The tape has already measured the space gained by clearing it; the small comparison cannot yet say how much pollination help the rest of the hedge provides. She chooses the option that removes less while still letting the trailer pass and adds an observation mark beside the remaining hedge on the field map.\n\nOn clearing day, the workers remove only the two meters crossed by the chalked turning arc. The trailer passes through the new opening successfully, while the remaining hedge stays beside the tree row. Su Lan puts away the measuring tape and changes the full deletion line on the field map to one short gap. The chalk arc remains on the ground, and the gap covers just the turning space required.",
+    "storyBodyZh": "苏岚拿着卷尺站在果园北侧花篱前。粉笔画出的拖车转弯弧线只切进花篱中间约两米，但她原本打算干脆整条清掉，省得以后再修剪。正赶上果树开花，她发现花篱和树行之间有访花昆虫来回，于是把整条清理计划推迟到果实初期的比较完成后再决定。\n\n她在多棵树的相近枝位随机分配三种处理。开放花保持原状；另外两组在开花初期套同样透气网袋。每天同一时间，两种网袋组都打开相同时长，用各自的小刷以相同次数触碰柱头——花朵接收花粉的部位。假处理用未沾花粉的干净刷；另一组的刷先取兼容花粉，再以相同动作触碰，然后同时重新套袋。苏岚把处理位置画在小地图上，花篱近处、远处都留有比较枝。\n\n各处理分散在多棵树上，日常浇水和照料一致。苏岚每天只检查网袋是否完整、记录处理编号，没有因为某组看起来弱就临时补操作。这样仍不能保证袋内温湿度与开放花完全相同，但至少两种网袋处理的开袋、触碰和时长是匹配的。\n\n到果实初期，虚构记录显示：网袋假处理组结果表现较弱，而同样网袋、同样触碰但真正转移花粉的一组有所恢复。这个差异支持“授粉不足参与了网袋组的较弱表现”，却没有追踪开放花上的访花昆虫来自哪里，更不能分解这条花篱到底贡献了多少。她把开放花的记录放在旁边只作背景参照，没有用它单独估算花篱贡献。\n\n苏岚回到最初的粉笔弧线。拖车真正需要的只是中间约两米，她便把整条红线擦掉，只留弧线重叠的一段。清掉这一段能换来什么空间，卷尺已经量过；保留其余花篱能提供多少授粉帮助，小比较还答不了。她先做移除较少、拖车照样能过的选择，在地块图上给剩余花篱添了一个待观察记号。\n\n清理日，工人只移走粉笔弧线压到的那两米。拖车顺利转过新开的缺口，剩余花篱还在树行旁。苏岚把卷尺收起，在地块图上把整条删除线改成一个短缺口。粉笔弧线仍留在地面上，缺口刚好覆盖拖车实际需要的转弯范围。",
+    "explanation": "The two bagged treatments have the same opening time, touching, and duration; the key difference is whether pollen is actually transferred. Recovery after hand pollination therefore supports insufficient pollination as part of the result difference.\n\nThe source of insects visiting the open flowers is not tracked, so the pollination difference cannot be assigned directly to the hedgerow. Money is also not the only way to recognize an ecological benefit.",
+    "explanationZh": "两种网袋处理具有相同开袋、触碰和时长，关键差别是是否真正转移花粉，因此人工授粉后的恢复支持授粉不足参与结果差异。\n\n开放花上的昆虫来源未被追踪，所以不能把授粉差异直接归因于花篱。金额也不是识别生态受益的唯一方式。"
   },
   {
     "id": "0521-tragedy-of-the-commons",
@@ -13753,47 +13935,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0521",
     "fieldTitle": "Environmental sciences",
     "fieldTitleZh": "环境科学",
-    "title": "One More Sheep",
-    "titleZh": "再多一只羊",
-    "summary": "Each household adds just one sheep to a common pasture, and no one can see how their own animal makes the grass disappear.",
-    "summaryZh": "每户只往公共牧场多放一只羊，谁都看不出自己怎样让草消失。",
-    "storyParagraphs": [
-      "River Village shared one pasture. In good years each of twelve households grazed ten sheep there. When lamb prices rose, herder Naro still owed twelve silver pieces on a winter roof. He added an eleventh ewe. Its wool and lamb would belong entirely to his family, while the grass it ate was one small part of what every flock used. One extra mouth could not bare a whole hill. Naro tied a red wooden tag around its neck and paid the first roof instalment.",
-      "Neighbours saw the ewe and made the same calculation. Within two weeks, nine households had added animals; some added three. At first every family sold more wool. No one wished to be the only household leaving grass for another's flock. By late summer, the measured grass height fell from a handspan to six fingers, and sheep returned hungry from the upper slope. Each family answered by sending animals out earlier and keeping them later, briefly protecting its own milk while giving roots less time to recover.",
-      "At the autumn meeting, the village head asked everyone to show restraint. All agreed because no number, season or first mover was named. The next dawn, the same flocks passed through the gate. After rain, bare patches washed into the ditch. Several owners removed neck tags before a count; admitting an extra sheep risked a private fine, while honest reporting would preserve grass for every household. Shared ownership was not the wound by itself. The old arrangement made added benefit easy to keep and damage difficult to assign.",
-      "When winter grass fell below three fingers, Naro led his eleventh ewe back from the gate and placed its red tag on the meeting table. The roof payment would now be late. The households marked who could use the pasture, set a seasonal total, rotated grazing areas and measured grass height together. Extra animals first brought a warning, then reduced the next season's share. Families short of fodder could borrow from a common stack and repay after lambing, so the poorest were not asked to carry the whole adjustment at once.",
-      "The first test came from the village head's brother, who drove three untagged sheep through the north gap at night. Turning them out meant a quarrel and cost Naro the man's wool business. Letting them stay would turn every red tag into decoration. The sheep were removed, the count entered publicly and the dispute heard before all twelve households. Spring grass recovered unevenly; a dry month still lowered it, and the villagers adjusted numbers rather than claiming their rules could command rain.",
-      "Naro paid for the roof one season late. Before spring grazing, every family brought its flock to the entrance board and wrote the number. The eleventh red tag had been cut in half: one piece hung from the pasture ledger, the other from Naro's barn door. When the last counted sheep passed, he lowered the wooden gate bar himself."
-    ],
-    "storyParagraphsZh": [
-      "河村有一片全村共用的牧场。草多的年份，十二户每家都放十只羊。羊羔涨价时，牧户纳罗还欠着修冬屋顶的十二枚银币，便多添一只母羊。羊毛与小羊全归自家，那一点草却只是所有羊吃掉的一小份。一张嘴不可能让整座山秃掉。他给第十一只羊系上红木牌，按时付了第一笔屋顶钱。",
-      "邻人看见那只羊，也照样计算。两周内九户都添了羊，有人一口气加三只。起初每家卖出的羊毛都增加，谁也不愿独自替别人留草。夏末，量过的草高从一掌降到六指，羊群从高坡回来仍在叫。各家便更早赶羊、更晚收栏，暂时保住自家奶量，草根却更没时间恢复。",
-      "秋季会上，村长请大家自觉少放。人人都点头，因为没有写数量、季节，也没人必须先动。第二天清晨，同样的羊群仍穿过门口。雨后，裸土被冲进沟里；还有人清点前摘掉羊牌，因为承认超量会带来私人罚款，诚实留下的草却由全村分享。伤口不只来自共有，而来自新增收益容易归己、损耗难以落到具体使用者的旧安排。",
-      "入冬草高跌到三指以下，纳罗把第十一只羊牵回门外，将红牌放上会议桌，屋顶欠款因此要晚一季。十二户划清谁能用牧场，订下季节总数，轮换地块，共同量草。超量先警告，再扣下一季份额；缺草料的家庭可从公堆借取，待产羔后归还，最穷的一户不必独自承受全部调整。",
-      "第一次考验来自村长的弟弟，他夜里从北侧缺口赶进三只无牌羊。赶走它们会撕裂会议，也让纳罗失去一桩羊毛买卖；放过，所有红牌就只剩装饰。三只羊最终被带走，数量公开入账，争执也在十二户面前复核。春草恢复得并不整齐，干旱仍会压低草量，村民只调整数量，不再说规则能命令降雨。",
-      "纳罗晚了一个产季才补好屋顶。春季放牧前，每户都把羊牵到入口木牌前，写下数目。那块第十一号红牌被切成两半，一半挂在牧场账簿，另一半钉在纳罗羊栏门上。最后一只已登记的羊通过后，他亲手落下门栓。"
-    ],
-    "conceptName": "Tragedy of the commons",
-    "conceptNameZh": "公地悲剧",
-    "explanationParagraphs": [
-      "A tragedy of the commons can arise when users receive much of the private benefit from added extraction while sharing depletion costs, making individually rational expansion collectively damaging. It is not inevitable and does not mean common ownership always fails. Clear boundaries, trusted information, locally fitted rules, monitoring, graduated sanctions, conflict resolution and support for unequal users can sustain many shared resources."
-    ],
-    "explanationParagraphsZh": [
-      "公地悲剧可能发生在使用者获得新增开采的大部分私人收益，却把资源耗损成本分摊给所有人时，个人理性的扩张便可能造成集体损害。它并非必然，也不表示共有资源注定失败。清楚边界、可信信息、在地规则、监测、分级制裁、争议解决及对不同处境的调整，都可能支持长期治理。"
-    ],
     "mode": "concept-fable",
+    "titleZh": "补水栏每天都是60升",
+    "summaryZh": "300 L共享水箱每天固定补60 L。以每天20:00为统一结算时点，六户连续三天实际各取12 L，总取72 L，账面水量240→228→216→204 L；随后六户遵守9 L试行额度七天，实际记录54 L/天，水量回到246 L。",
+    "storyParagraphsZh": [
+      "社区花园六户共用一个300 L水箱。透明侧壁每10 L一条粗刻度，阀门上的计量器按1 L记录每户取水；每天20:00统一结算当天固定60 L补水和全部取水。周日20:00账面水量是240 L。十天记录期内没有漏水、溢出或其他取用。",
+      "番茄开始结果后，陈默周一取12 L，比平时8 L多了4 L，想给自家新长的果子多留一点水。邻居照顾刚栽的苗，另一户担心下午回来晚；每家多取都说得过去，水箱也没有单户限额。到周一20:00，六行计量记录都是12 L，总取72 L。账面净变化60−72=−12 L，240变成228 L，粗刻度落在220和230之间。",
+      "周二实际总取仍是72 L，20:00账面变216 L；周三又是72 L，变204 L。三天的计量记录没有异常大户，补水也一直是60 L。大家把三张白板并排放在水箱旁，第一次清楚看到：每家多出的4 L都进入自家菜畦，但六个“多一点”合成了每天12 L的共享亏空。",
+      "他们只试一项简单调整：接下来七天每户每天9 L，临时需要更多先在白板上写。这个安排不会自动生效；六户都同意试一周，并继续用原来的1 L计量器记录。若有人不遵守，水位账不会按计划变化。",
+      "接下来的七天，实际记录每天六户合计都是54 L。固定补水仍是60 L，因此每天净增加6 L；从周三20:00的204 L起，七天累计+42 L，最后结算为246 L，没有超过300 L容量。透明粗刻度也回到240和250之间。",
+      "第七天20:00，陈默把自己的9 L记录划上完成记号，软管挂回原来的钩子。他没有擦掉前三天的账，而是把后七天54 L的记录贴在旁边。补水栏从头到尾都是60 L，一边的取用总数是72 L，另一边是54 L。透明侧壁的水位停在240和250之间，白板最后一格写着246。"
+    ],
+    "overallZh": "公地悲剧描述个人额外取用收益集中、共享资源耗损成本分散时可能出现的过量使用。本篇用同一计量时点和实际取水记录展示这一机制，并显示共同约束在参与者遵守的有限期间内可以改变总量。",
+    "conceptNameZh": "公地悲剧",
+    "explanationParagraphsZh": [
+      "三天实际总取72 L、补60 L，所以账面240→228→216→204 L。粗刻度每10 L，只作目视检查；精确数来自1 L计量记录与统一20:00结算。",
+      "随后七天实际总取54 L/天，净增6 L/天，共+42到246 L。这只说明本次试行在六户遵守条件下有效，不代表任何白板规则都必成功。"
+    ],
+    "moduleZh": {
+      "intro": "用统一结算时点、精确取水记录和实际七天试行，把个人额外收益与共享余量变化放进同一条账。",
+      "diagramTitle": "240升怎样三天降到204升，再七天回到246升",
+      "diagramSteps": [
+        "固定300 L容量、60 L/天补水和20:00结算规则",
+        "记录前三天六户实际12 L/户",
+        "计算每天净−12 L并得到240→228→216→204",
+        "试行9 L/户且继续1 L精度记录",
+        "确认七天实际54 L/天使204→246"
+      ],
+      "diagramStepNotes": [
+        "记录期无漏水、溢出或其他取用；粗刻度每10 L。",
+        "72 L/天来自六户计量器实际记录。",
+        "补水60 L不变，因此连续三天各降12 L。",
+        "规则只有在六户实际遵守时才改变总量。",
+        "七天每天净+6 L，共+42 L，终点246 L低于300 L容量。"
+      ],
+      "mapping": [
+        "阀门1 L计量器 → 精确取用数据。",
+        "透明10 L粗刻度 → 对账面水位的目视核对。",
+        "三张72 L白板 → 各自小幅加取汇成共享亏空。",
+        "后七天54 L记录 → 本次共同约束被实际遵守后的有限结果。"
+      ],
+      "boundary": "故事假定补水稳定、计量准确且记录期无其他水量变化。水位下降不是旱灾或恶意大户造成。共同资源并不必然失败；9 L安排只是本例参与者共同遵守后奏效的一次有限试行，不代表唯一或普遍最佳治理方式。",
+      "reflection": "为什么要把六户各自“多4 L”的理由，与统一20:00总量账放在一起，才能看见个人合理选择怎样变成系统性亏空？"
+    },
+    "referencesZh": [
+      {
+        "id": "0521-tragedy-of-the-commons-ref-1",
+        "citation": "Garrett Hardin. The Tragedy of the Commons. Science 162(3859) (1968), 1243–1248. doi:10.1126/science.162.3859.1243.",
+        "url": "https://www.garretthardinsociety.org/articles/art_tragedy_of_the_commons.html",
+        "use": "支持当个人取得收益而资源耗损成本分散给所有使用者时，开放取用可能导致过量使用；本篇只采用这一模型机制，不采用原文其他伦理或人口主张。"
+      },
+      {
+        "id": "0521-tragedy-of-the-commons-ref-2",
+        "citation": "Elinor Ostrom. Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge University Press (1990). doi:10.1017/CBO9780511807763.",
+        "url": "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+        "use": "支持公共池资源存在成功与失败的多种治理方式，因此共用不等于无规则开放取用，过度使用也并非不可避免。"
+      }
+    ],
+    "title": "The Refill Column Always Says 60 Liters",
+    "summary": "A shared 300 L tank receives a fixed 60 L replenishment each day. Using 20:00 as the common accounting time, all six households actually take 12 L each for three consecutive days, for 72 L total, and the ledger falls 240→228→216→204 L. The six then comply with a 9 L trial allowance for seven days, recording 54 L/day and bringing the account back to 246 L.",
+    "storyParagraphs": [
+      "Six households in a community garden share a 300 L irrigation tank. The transparent side wall has coarse marks every 10 L, while a meter on the valve records each household’s withdrawal to the nearest 1 L. Every day at 20:00, the day’s fixed 60 L replenishment and all withdrawals are settled on the ledger. At 20:00 on Sunday, the ledger reads 240 L. During the ten-day record period there is no leakage, overflow, or other withdrawal.",
+      "After the tomatoes begin fruiting, Chen Mo takes 12 L on Monday rather than his usual 8 L, wanting extra water for the new fruit on his plot. One neighbor is caring for newly planted seedlings; another worries about returning late in the afternoon. Each extra withdrawal has a reasonable purpose, and the tank has no household allowance. By 20:00 Monday, all six meter entries read 12 L, totaling 72 L. The ledger changes by 60−72=−12 L, from 240 to 228 L, while the coarse level sits between 220 and 230.",
+      "Tuesday’s actual total withdrawal is again 72 L, bringing the 20:00 ledger to 216 L. Wednesday is also 72 L, bringing it to 204 L. The three days of meter records show no unusually large household, while replenishment stays at 60 L. When the group places the three whiteboard records side by side, they can finally see that every household’s extra 4 L goes to its own plot, but the six small increases combine into a shared 12 L daily deficit.",
+      "They try only one simple adjustment: for the next seven days, each household uses 9 L per day, and anyone needing more writes it on the whiteboard first. The arrangement does not enforce itself. All six agree to try it for one week and keep using the same 1 L meters. If someone does not comply, the tank account will not follow the planned path.",
+      "For the next seven days, the actual records show a combined 54 L each day. Replenishment remains 60 L, so the tank gains 6 L per day. Starting from 204 L at 20:00 Wednesday, seven days add 42 L, producing a final ledger value of 246 L, still below the 300 L capacity. The coarse level also returns to somewhere between the 240 and 250 marks.",
+      "At 20:00 on the seventh day, Chen Mo marks his 9 L entry complete and hangs the hose on its old hook. He keeps the first three days’ accounts and posts the later 54 L records beside them. The refill column says 60 L throughout; one set of withdrawal totals says 72 L, the other 54 L. The level on the transparent wall stands between 240 and 250, and the final whiteboard box reads 246."
+    ],
+    "overall": "Tragedy of the commons describes a situation in which the direct benefit of extra individual use is concentrated on the user while the depletion cost of a shared resource is dispersed across all users. This article shows the mechanism with a common accounting time and actual withdrawal records, and it shows that a shared constraint can change the total during a limited period when participants comply.",
+    "conceptName": "Tragedy of the commons",
+    "explanationParagraphs": [
+      "Actual withdrawal is 72 L while replenishment is 60 L for three days, so the ledger moves 240→228→216→204 L. The wall marks are spaced every 10 L and serve only as a visual check; precise values come from the 1 L meters and the common 20:00 accounting.",
+      "For the following seven days, actual withdrawal is 54 L/day, giving a net +6 L/day and +42 L total, ending at 246 L. This shows only that the trial works under compliance in this case, not that any whiteboard rule must succeed."
+    ],
+    "module": {
+      "intro": "Use one accounting time, precise withdrawal records, and an actual seven-day trial to place individual benefits and shared-resource changes on the same ledger.",
+      "diagramTitle": "How 240 L Falls to 204 L in Three Days, Then Returns to 246 L in Seven",
+      "diagramSteps": [
+        "Fix the 300 L capacity, 60 L/day replenishment, and 20:00 accounting rule",
+        "Record actual use of 12 L per household for the first three days",
+        "Calculate a net −12 L/day and 240→228→216→204",
+        "Trial 9 L per household while continuing 1 L-resolution recording",
+        "Confirm that seven actual days at 54 L/day move 204→246"
+      ],
+      "diagramStepNotes": [
+        "There is no leakage, overflow, or other withdrawal during the record period; the wall scale is coarse at 10 L intervals.",
+        "The 72 L/day totals come from the six households’ actual meter records.",
+        "Replenishment remains 60 L, so the tank falls by 12 L on each of three consecutive days.",
+        "The rule changes the total only if the six households actually follow it.",
+        "Seven days at net +6 L/day add 42 L, ending at 246 L below the 300 L capacity."
+      ],
+      "mapping": [
+        "1 L valve meters → precise withdrawal data.",
+        "Transparent 10 L scale → visual check on the ledgered water level.",
+        "Three 72 L whiteboards → individually small increases combining into a shared deficit.",
+        "Seven later 54 L records → the limited result after the shared constraint is actually followed."
+      ],
+      "boundary": "The story assumes stable replenishment, accurate meters, and no other water changes during the record period. The decline is not caused by drought or one malicious heavy user. Shared resources do not inevitably fail; the 9 L arrangement is only one trial that works here when participants comply, not a uniquely correct or universally best governance system.",
+      "reflection": "Why do the six households’ individually reasonable “extra 4 L” choices become visible as a systemic deficit only when they are placed on the common 20:00 total ledger?"
+    },
+    "references": [
+      {
+        "id": "0521-tragedy-of-the-commons-ref-1",
+        "citation": "Garrett Hardin. The Tragedy of the Commons. Science 162(3859) (1968), 1243–1248. doi:10.1126/science.162.3859.1243.",
+        "url": "https://www.garretthardinsociety.org/articles/art_tragedy_of_the_commons.html",
+        "use": "Supports the model mechanism in which benefits of extraction are concentrated on individuals while depletion costs are distributed across users, allowing open use to produce overuse; this article adopts only that mechanism, not all ethical or population claims from the original paper."
+      },
+      {
+        "id": "0521-tragedy-of-the-commons-ref-2",
+        "citation": "Elinor Ostrom. Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge University Press (1990). doi:10.1017/CBO9780511807763.",
+        "url": "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+        "use": "Supports the existence of multiple successful and unsuccessful governance arrangements for common-pool resources, so shared use is not the same as unregulated open access and overuse is not inevitable."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "River Village shared one pasture. In good years each of twelve households grazed ten sheep there. When lamb prices rose, herder Naro still owed twelve silver pieces on a winter roof. He added an eleventh ewe. Its wool and lamb would belong entirely to his family, while the grass it ate was one small part of what every flock used. One extra mouth could not bare a whole hill. Naro tied a red wooden tag around its neck and paid the first roof instalment.\n\nNeighbours saw the ewe and made the same calculation. Within two weeks, nine households had added animals; some added three. At first every family sold more wool. No one wished to be the only household leaving grass for another's flock. By late summer, the measured grass height fell from a handspan to six fingers, and sheep returned hungry from the upper slope. Each family answered by sending animals out earlier and keeping them later, briefly protecting its own milk while giving roots less time to recover.\n\nAt the autumn meeting, the village head asked everyone to show restraint. All agreed because no number, season or first mover was named. The next dawn, the same flocks passed through the gate. After rain, bare patches washed into the ditch. Several owners removed neck tags before a count; admitting an extra sheep risked a private fine, while honest reporting would preserve grass for every household. Shared ownership was not the wound by itself. The old arrangement made added benefit easy to keep and damage difficult to assign.\n\nWhen winter grass fell below three fingers, Naro led his eleventh ewe back from the gate and placed its red tag on the meeting table. The roof payment would now be late. The households marked who could use the pasture, set a seasonal total, rotated grazing areas and measured grass height together. Extra animals first brought a warning, then reduced the next season's share. Families short of fodder could borrow from a common stack and repay after lambing, so the poorest were not asked to carry the whole adjustment at once.\n\nThe first test came from the village head's brother, who drove three untagged sheep through the north gap at night. Turning them out meant a quarrel and cost Naro the man's wool business. Letting them stay would turn every red tag into decoration. The sheep were removed, the count entered publicly and the dispute heard before all twelve households. Spring grass recovered unevenly; a dry month still lowered it, and the villagers adjusted numbers rather than claiming their rules could command rain.\n\nNaro paid for the roof one season late. Before spring grazing, every family brought its flock to the entrance board and wrote the number. The eleventh red tag had been cut in half: one piece hung from the pasture ledger, the other from Naro's barn door. When the last counted sheep passed, he lowered the wooden gate bar himself.",
-    "storyBodyZh": "河村有一片全村共用的牧场。草多的年份，十二户每家都放十只羊。羊羔涨价时，牧户纳罗还欠着修冬屋顶的十二枚银币，便多添一只母羊。羊毛与小羊全归自家，那一点草却只是所有羊吃掉的一小份。一张嘴不可能让整座山秃掉。他给第十一只羊系上红木牌，按时付了第一笔屋顶钱。\n\n邻人看见那只羊，也照样计算。两周内九户都添了羊，有人一口气加三只。起初每家卖出的羊毛都增加，谁也不愿独自替别人留草。夏末，量过的草高从一掌降到六指，羊群从高坡回来仍在叫。各家便更早赶羊、更晚收栏，暂时保住自家奶量，草根却更没时间恢复。\n\n秋季会上，村长请大家自觉少放。人人都点头，因为没有写数量、季节，也没人必须先动。第二天清晨，同样的羊群仍穿过门口。雨后，裸土被冲进沟里；还有人清点前摘掉羊牌，因为承认超量会带来私人罚款，诚实留下的草却由全村分享。伤口不只来自共有，而来自新增收益容易归己、损耗难以落到具体使用者的旧安排。\n\n入冬草高跌到三指以下，纳罗把第十一只羊牵回门外，将红牌放上会议桌，屋顶欠款因此要晚一季。十二户划清谁能用牧场，订下季节总数，轮换地块，共同量草。超量先警告，再扣下一季份额；缺草料的家庭可从公堆借取，待产羔后归还，最穷的一户不必独自承受全部调整。\n\n第一次考验来自村长的弟弟，他夜里从北侧缺口赶进三只无牌羊。赶走它们会撕裂会议，也让纳罗失去一桩羊毛买卖；放过，所有红牌就只剩装饰。三只羊最终被带走，数量公开入账，争执也在十二户面前复核。春草恢复得并不整齐，干旱仍会压低草量，村民只调整数量，不再说规则能命令降雨。\n\n纳罗晚了一个产季才补好屋顶。春季放牧前，每户都把羊牵到入口木牌前，写下数目。那块第十一号红牌被切成两半，一半挂在牧场账簿，另一半钉在纳罗羊栏门上。最后一只已登记的羊通过后，他亲手落下门栓。",
-    "explanation": "A tragedy of the commons can arise when users receive much of the private benefit from added extraction while sharing depletion costs, making individually rational expansion collectively damaging. It is not inevitable and does not mean common ownership always fails. Clear boundaries, trusted information, locally fitted rules, monitoring, graduated sanctions, conflict resolution and support for unequal users can sustain many shared resources.",
-    "explanationZh": "公地悲剧可能发生在使用者获得新增开采的大部分私人收益，却把资源耗损成本分摊给所有人时，个人理性的扩张便可能造成集体损害。它并非必然，也不表示共有资源注定失败。清楚边界、可信信息、在地规则、监测、分级制裁、争议解决及对不同处境的调整，都可能支持长期治理。"
+    "storyBody": "Six households in a community garden share a 300 L irrigation tank. The transparent side wall has coarse marks every 10 L, while a meter on the valve records each household’s withdrawal to the nearest 1 L. Every day at 20:00, the day’s fixed 60 L replenishment and all withdrawals are settled on the ledger. At 20:00 on Sunday, the ledger reads 240 L. During the ten-day record period there is no leakage, overflow, or other withdrawal.\n\nAfter the tomatoes begin fruiting, Chen Mo takes 12 L on Monday rather than his usual 8 L, wanting extra water for the new fruit on his plot. One neighbor is caring for newly planted seedlings; another worries about returning late in the afternoon. Each extra withdrawal has a reasonable purpose, and the tank has no household allowance. By 20:00 Monday, all six meter entries read 12 L, totaling 72 L. The ledger changes by 60−72=−12 L, from 240 to 228 L, while the coarse level sits between 220 and 230.\n\nTuesday’s actual total withdrawal is again 72 L, bringing the 20:00 ledger to 216 L. Wednesday is also 72 L, bringing it to 204 L. The three days of meter records show no unusually large household, while replenishment stays at 60 L. When the group places the three whiteboard records side by side, they can finally see that every household’s extra 4 L goes to its own plot, but the six small increases combine into a shared 12 L daily deficit.\n\nThey try only one simple adjustment: for the next seven days, each household uses 9 L per day, and anyone needing more writes it on the whiteboard first. The arrangement does not enforce itself. All six agree to try it for one week and keep using the same 1 L meters. If someone does not comply, the tank account will not follow the planned path.\n\nFor the next seven days, the actual records show a combined 54 L each day. Replenishment remains 60 L, so the tank gains 6 L per day. Starting from 204 L at 20:00 Wednesday, seven days add 42 L, producing a final ledger value of 246 L, still below the 300 L capacity. The coarse level also returns to somewhere between the 240 and 250 marks.\n\nAt 20:00 on the seventh day, Chen Mo marks his 9 L entry complete and hangs the hose on its old hook. He keeps the first three days’ accounts and posts the later 54 L records beside them. The refill column says 60 L throughout; one set of withdrawal totals says 72 L, the other 54 L. The level on the transparent wall stands between 240 and 250, and the final whiteboard box reads 246.",
+    "storyBodyZh": "社区花园六户共用一个300 L水箱。透明侧壁每10 L一条粗刻度，阀门上的计量器按1 L记录每户取水；每天20:00统一结算当天固定60 L补水和全部取水。周日20:00账面水量是240 L。十天记录期内没有漏水、溢出或其他取用。\n\n番茄开始结果后，陈默周一取12 L，比平时8 L多了4 L，想给自家新长的果子多留一点水。邻居照顾刚栽的苗，另一户担心下午回来晚；每家多取都说得过去，水箱也没有单户限额。到周一20:00，六行计量记录都是12 L，总取72 L。账面净变化60−72=−12 L，240变成228 L，粗刻度落在220和230之间。\n\n周二实际总取仍是72 L，20:00账面变216 L；周三又是72 L，变204 L。三天的计量记录没有异常大户，补水也一直是60 L。大家把三张白板并排放在水箱旁，第一次清楚看到：每家多出的4 L都进入自家菜畦，但六个“多一点”合成了每天12 L的共享亏空。\n\n他们只试一项简单调整：接下来七天每户每天9 L，临时需要更多先在白板上写。这个安排不会自动生效；六户都同意试一周，并继续用原来的1 L计量器记录。若有人不遵守，水位账不会按计划变化。\n\n接下来的七天，实际记录每天六户合计都是54 L。固定补水仍是60 L，因此每天净增加6 L；从周三20:00的204 L起，七天累计+42 L，最后结算为246 L，没有超过300 L容量。透明粗刻度也回到240和250之间。\n\n第七天20:00，陈默把自己的9 L记录划上完成记号，软管挂回原来的钩子。他没有擦掉前三天的账，而是把后七天54 L的记录贴在旁边。补水栏从头到尾都是60 L，一边的取用总数是72 L，另一边是54 L。透明侧壁的水位停在240和250之间，白板最后一格写着246。",
+    "explanation": "Actual withdrawal is 72 L while replenishment is 60 L for three days, so the ledger moves 240→228→216→204 L. The wall marks are spaced every 10 L and serve only as a visual check; precise values come from the 1 L meters and the common 20:00 accounting.\n\nFor the following seven days, actual withdrawal is 54 L/day, giving a net +6 L/day and +42 L total, ending at 246 L. This shows only that the trial works under compliance in this case, not that any whiteboard rule must succeed.",
+    "explanationZh": "三天实际总取72 L、补60 L，所以账面240→228→216→204 L。粗刻度每10 L，只作目视检查；精确数来自1 L计量记录与统一20:00结算。\n\n随后七天实际总取54 L/天，净增6 L/天，共+42到246 L。这只说明本次试行在六户遵守条件下有效，不代表任何白板规则都必成功。"
   },
   {
     "id": "0521-ecological-resilience",
@@ -13802,49 +14075,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0521",
     "fieldTitle": "Environmental sciences",
     "fieldTitleZh": "环境科学",
-    "title": "The Summer the Lake Did Not Return",
-    "titleZh": "湖没有回来的那个夏天",
-    "summary": "A lake repeatedly clears after nutrient pulses until one summer the same reduction in discharge no longer restores its former state.",
-    "summaryZh": "一座湖多次在养分冲击后自行澄清，直到某年夏天，把排放降回旧水平也无法恢复原状。",
-    "storyParagraphs": [
-      "Lake manager Iven had to keep the lakeside laundry works open through a weak trading year. Its treatment upgrade cost more than the town treasury held. Twice before, spring runoff had brought nutrients, algae had coloured the water green for a week, and the lake had cleared when flow subsided. Iven used those recoveries as evidence that the lake could absorb another season of permitted discharge. Each Monday he lowered a white clarity disk; at two metres he could still see it. The laundry kept sixty jobs, and the council postponed the upgrade.",
-      "The first summer bloom also faded after cooler weather. Submerged plants remained, small grazers fed on algae, and oxygenated bottom water kept much phosphorus bound in sediment. These processes helped the lake return after disturbance. Iven recorded the recovery but not how close the plant beds had come to their light limit. When the laundry requested a higher allowance during festival cloth orders, he approved it for six weeks. The extra income repaired the school roof.",
-      "This time the disk vanished at eighty centimetres, then forty. Dense algae blocked light; submerged plants thinned and stopped holding sediment. When algae died, decomposition consumed oxygen near the bottom. Under low-oxygen conditions, more phosphorus was released from sediment back into the water, supporting further growth. Wind stirred the now-unprotected mud. Several processes that had favoured clear water weakened together, while processes maintaining turbid water strengthened. Fish kills appeared along the sheltered bank after a hot night.",
-      "Iven cut the laundry discharge back to the earlier permitted level and expected the old recovery. The green water remained. Even after external input fell, stored nutrients and lost vegetation kept the lake in a different condition. Restoring the exact previous load was not the same as reversing the path by which the lake had changed. The point of transition could not be identified as one certain bucket or date; weather, sediments, food webs and spatial differences all affected it. By the time the disk disappeared, the safer warning margin had already been spent.",
-      "Winter was still weeks away when the laundry owners asked Iven for one last production season. He placed the white clarity disk on their wage ledger, then signed the closure and treatment order. Sixty workers received partial pay for eight weeks, financed by cancelling the new ferry pier; twelve left town. The council also restored shoreline plants, reduced other nutrient sources and monitored oxygen and sediment release. No single action promised a quick return. The first autumn storm produced another bloom even with the factory line closed.",
-      "The following spring, a few plant patches survived inside protective cages, and the disk became visible at ninety centimetres. That was improvement, not proof that the former clear state had returned. Managers kept two thresholds: one for mandatory load reduction and an earlier warning line that triggered investigation. They stopped treating past recovery as unlimited capacity to take the next disturbance. Uncertainty became a reason for margin rather than a number to round away.",
-      "Iven kept the white disk beside two water jars. The old jar was clear enough to read a date through; the newer one still held suspended green-brown particles. Before signing any discharge sheet, he lowered the disk from the pier and wrote the depth on the same tag that once said two metres."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "关掉压力以后",
+    "summaryZh": "岑雨要给一个定性草地教学模型设置默认恢复按钮。模型不计算真实百分比，而用明确状态转移规则表示覆盖、表土/水分保持和新生草本之间的反馈；同样把外部压力设为0，不同内部状态会得到不同的可能推演。",
     "storyParagraphsZh": [
-      "湖管员伊文必须让湖畔洗染厂撑过贸易低迷的一年，处理设备升级费超过镇库现款。此前两次，春季径流带来养分，藻类让湖水绿了一周，水量回落后又自行澄清。伊文把过去恢复当作湖还能承受一个排放季的证据。每周一，他从码头放下一只白色透明度圆盘，直到两米深仍能看见。洗染厂保住六十份工作，议会便推迟升级。",
-      "第一场夏季藻华也在天气转凉后退去。水下植物仍在，小型摄食者取食藻类，含氧底水又让不少磷留在沉积物中，这些过程帮助湖泊从扰动后返回。伊文记录了“恢复”，却没记植物床离光照下限有多近。节庆布料订单到来，工厂申请六周加量，他批准了。多出的收入修好了学校屋顶。",
-      "这一次，白盘先在八十厘米消失，随后只剩四十厘米。浓藻遮住光，水下植物变稀，固定泥沙的作用也减弱；藻体死亡后，分解过程消耗底层氧气，低氧条件又使更多磷从沉积物回到水中，继续支持藻类。风搅起失去植被保护的泥。几项原先有利于清水的过程一同减弱，维持浑水的过程却彼此加强。一个闷热夜晚后，背风岸出现死鱼。",
-      "伊文把工厂排放降回早先许可水平，以为湖水会照旧恢复，绿色却没有退去。即使外部输入减少，已经储存的养分和消失的植物仍把湖留在另一种状态。把负荷降到旧数值，并不等于倒走先前变化的道路。转折点也无法精确指认成某一桶水或某一天；天气、沉积物、食物关系与湖区差异都会影响它。等白盘消失时，较安全的预警余量早已用完。",
-      "离冬天还有几周，洗染厂主请求再做最后一个生产季。伊文把白圆盘压在他们的工资账上，随后签下停产与建设处理设施的命令。六十名工人领取八周部分工资，资金来自取消新渡船码头；十二人仍离开了镇子。议会还恢复岸边植物、削减其他养分来源，并监测底层氧气和磷释放。没有一项措施保证迅速见效。即使工厂线已经关闭，秋季第一场风暴仍带来一次藻华。",
-      "次年春天，保护笼内有几片植物活了下来，白盘在九十厘米处重新可见。这是改善，却不足以证明旧清水状态已经回来。管理者设下两条线：超过一条必须减载，更早的一条则启动调查。他们不再把过去能够恢复，当成承受下一次扰动的无限额度。无法精确预测的部分，被留成余量，没有再从表格里四舍五入掉。",
-      "伊文把白圆盘放在两只水样瓶旁。旧瓶清得能透过水读日期，新瓶仍悬着绿褐颗粒。此后每次签排放单前，他都先从码头放下圆盘，把深度写在那张曾经记录“两米”的旧标签上。"
+      "岑雨要给一个草地教学模型设置默认恢复按钮。她面前是一张定性状态转移表：覆盖分“较多、受扰但尚有植被、稀疏”，表土与水分保持分“较好、退化”，外部压力分“有、无”。表只演示给定规则下的变化，不预测真实草地。她原打算让用户关掉压力后，直接按“等待”；现在得先试这个按钮在什么状态下能用。",
+      "第一行的起点是“覆盖受扰但尚有植被、保持条件较好”。模型假定压力关掉后，剩余植被足以保护表土，这一步保持条件仍为较好；在下一步，较好的水土条件和已有更新来源让覆盖转为较多。岑雨沿两条箭头推进，把“受扰”卡换成“较多”卡。状态改变了，支持更新的条件也保住了，随后便能继续维持这个组合。",
+      "她再切到“覆盖稀疏、保持条件退化”，同样关掉压力。这一行假定裸地侵蚀使保持条件继续退化，而这种水土条件不足以支持草本更新；下一步的覆盖仍是稀疏。岑雨照表把两张状态卡传到下一列，卡上的字一个也不用改。再推进一次还是同一个组合，循环的原因写在两条箭头上。",
+      "两个画面的外部压力都已经归零。第一行换过一张卡，第二行的两张卡却沿箭头回到了原位。岑雨把默认“等待”按钮放到第二行旁边，再按一次，仍找不到一条会改变那两张卡的规则。她把按钮从默认区拖走，改成先让用户选内部状态；“已关压力”不再是跳过这一步的理由。",
+      "她给稀疏状态另加一个模型选项：“修复反馈条件”。这项干预按表先改善表土和水分保持，并提供更新来源；下一步在无外压且这些条件得到维持的假设下，覆盖才转为较多。她把干预箭头画在循环外侧，和“直接等待”分开。仅靠两条正向关系画不出这个结果，改变条件是表里明写的一步。",
+      "最终界面保留“直接等待”和“先修复反馈条件”两个选择，并要求用户先选当前内部状态。岑雨把“临界值”输入框删掉，状态转移表留在两个按钮旁边。"
     ],
-    "conceptName": "Ecological resilience and tipping points",
+    "overallZh": "生态韧性是系统在扰动中吸收变化、重组并保持核心功能、结构、身份和反馈的能力。临界点涉及越过状态转换的边界。本篇用假设的内部反馈说明停压后的路径可能不同，没有从定性表推出现实的临界点或不可逆性。",
     "conceptNameZh": "生态韧性与临界点",
-    "explanationParagraphs": [
-      "Ecological resilience is a system's capacity to absorb disturbance while retaining core functions and organisation. Reinforcing feedbacks can push a system across a threshold into another persistent state; returning the pressure to its former level may then be insufficient, a path dependence known as hysteresis. Thresholds are often uncertain and context-specific, so monitoring multiple indicators and maintaining safety margins matter more than claiming an exact tipping date."
-    ],
     "explanationParagraphsZh": [
-      "生态韧性指生态系统吸收扰动后仍维持核心功能与组织的能力。强化反馈可能把系统推过阈值，进入另一种可持续状态；此后即使压力降回旧水平，也未必沿原路恢复，这称为滞后。临界点常具不确定性且依赖情境，因此多指标监测和保留安全余量，比宣称一个精确日期更可靠。"
+      "定性规则规定：较多覆盖有利于保持表土/水分，较好条件又支持新生草本；低覆盖与退化条件则可相互维持。停掉外部压力因此不必产生同一路径。",
+      "“修复反馈条件”只是模型中的状态转移设定。慢恢复、低位停留和真实不可逆阈值是不同问题，不能由本篇推演混为一谈。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "不用虚假精确曲线，而是把内部状态和每一步转移规则写清，再比较同样停压动作在两种状态下会发生什么。",
+      "diagramTitle": "同样压力=无，为什么两种内部状态会走向不同下一步",
+      "diagramSteps": [
+        "定义覆盖、表土/水分和外部压力的定性状态",
+        "给出较多覆盖—较好保持—更新的转移规则",
+        "给出稀疏覆盖—退化保持互相维持的规则",
+        "在两种内部状态下都把外部压力设为无并逐步推演",
+        "加入修复反馈条件选项但不声明真实阈值"
+      ],
+      "diagramStepNotes": [
+        "模型是定性教学状态表，不是现实数值预测软件。",
+        "受扰但保有植被、保持条件较好时，停压先保住水土条件，下一步在有更新来源的假设下恢复较多覆盖。",
+        "退化保持条件限制更新，低覆盖又维持侵蚀条件。",
+        "两种路径差异来自内部状态与给定规则，而非等待时间长短。",
+        "修复选项先改善保持条件并补充更新来源，只是模型条件。"
+      ],
+      "mapping": [
+        "状态转移表 → 所有推演必须遵守的给定规则。",
+        "两个“压力=无”画面 → 排除外部压力仍不同这一点。",
+        "被删除的唯一“等待”按钮 → 行为选择被内部反馈状态改变。",
+        "两个恢复按钮 → 模型中不同条件对应的可选路径。"
+      ],
+      "boundary": "这是定性教学模型，不是某片真实草地的测量或阈值估计。慢恢复、长期低位和跨越不可逆临界点不是同义词；真实反馈强度、阈值范围和恢复措施需要多条件、长期证据。韧性也不要求数量恒定或回到原状最快。",
+      "reflection": "如果两种状态都已经没有外部压力，为什么还必须看内部覆盖与表土/水分反馈，才能判断“等待”是否可能让模型回到较高覆盖？"
+    },
+    "referencesZh": [
+      {
+        "id": "0521-ecological-resilience-ref-1",
+        "citation": "C. S. Holling. Resilience and Stability of Ecological Systems. Annual Review of Ecology and Systematics 4 (1973), 1–23. doi:10.1146/annurev.es.04.110173.000245.",
+        "url": "https://www.annualreviews.org/content/journals/10.1146/annurev.es.04.110173.000245",
+        "use": "作为生态韧性与稳定性概念的重要早期来源；本篇具体教学反馈和状态规则不是该论文中的实测案例。"
+      },
+      {
+        "id": "0521-ecological-resilience-ref-2",
+        "citation": "Brian Walker, C. S. Holling, Stephen R. Carpenter, Ann Kinzig. Resilience, adaptability and transformability in social–ecological systems. Ecology and Society 9(2) (2004), 5.",
+        "url": "https://ecologyandsociety.org/vol9/iss2/art5/main.html",
+        "use": "支持扰动中维持核心功能、结构、身份和反馈，以及多状态、吸引域与阈值等概念；同时支持不能仅凭短期未恢复认定精确不可逆临界点。"
+      }
+    ],
+    "title": "After the Pressure Is Turned Off",
+    "summary": "Cen Yu needs to set the default recovery control for a qualitative grassland teaching model. The model does not calculate real percentages; instead, explicit state-transition rules represent feedback among vegetation cover, soil/water retention, and new plant establishment. Setting external pressure to 0 can produce different possible trajectories from different internal states.",
+    "storyParagraphs": [
+      "Cen Yu needs to set a default recovery button for a grassland teaching model. In front of her is a qualitative transition table: cover is “higher,” “disturbed but with vegetation remaining,” or “sparse”; soil and water retention is “better” or “degraded”; external pressure is “present” or “absent.” The table demonstrates changes under assumed rules rather than forecasting a real grassland. She plans to let users turn off pressure and press “wait,” but first needs to test which states that button works for.",
+      "The first row starts at “disturbed cover with vegetation remaining, retention better.” The model assumes that after pressure is removed, the remaining vegetation protects the soil, keeping retention better in the first step. In the next step, those conditions and an existing source of new growth move cover to higher. Cen Yu follows the two arrows and exchanges the “disturbed” card for “higher.” The state changes while retaining the conditions for renewal, so the combination can then maintain itself.",
+      "She then switches to “cover sparse, retention degraded” and removes the pressure again. This row assumes that bare-ground erosion keeps retention degraded, and that these soil and water conditions cannot support enough new growth; cover remains sparse at the next step. Cen Yu moves both state cards into the next column without changing either label. Another step leaves the same combination. The reasons for the loop are written on its two arrows.",
+      "External pressure is 0 in both screens. One card changed in the first row, while both cards in the second followed the arrows back to their old positions. Cen Yu places the default “wait” button beside the second row and presses it again; there is still no rule that changes either card. She drags the button out of the default area and makes users select the internal state first. “Pressure off” no longer lets them skip that step.",
+      "She adds a separate model option for the sparse state: “repair feedback conditions.” The intervention first improves soil and water retention and supplies a source of new growth; at the next step, with no external pressure and those conditions assumed to persist, cover changes to higher. She draws the intervention arrow outside the loop, separate from “wait directly.” Two positive relationships alone would not give this result; changing the conditions is an explicit step in the table.",
+      "The final interface keeps two recovery choices: “wait directly” and “repair feedback conditions first,” and requires the user to select the current internal state before choosing. Cen Yu removes the “critical value” input box and leaves the state-transition table beside the two buttons."
+    ],
+    "overall": "Ecological resilience is the capacity to absorb disturbance and reorganize while retaining core function, structure, identity and feedback. Tipping points concern crossing boundaries between states. The assumed internal feedbacks here show why paths after pressure removal may differ; this qualitative table establishes no real tipping point or irreversibility.",
+    "conceptName": "Ecological resilience and tipping points",
+    "explanationParagraphs": [
+      "The qualitative rules state that greater vegetation cover supports soil/water retention, and better retention supports new establishment; sparse cover and degraded conditions can instead reinforce one another. Removing external pressure therefore need not produce the same pathway from every state.",
+      "“Repair feedback conditions” is only a state-transition assumption within the model. Slow recovery, remaining in a low state, and crossing a real irreversible threshold are different claims and should not be merged by this exercise."
+    ],
+    "module": {
+      "intro": "Avoid false precision: state the internal states and each transition rule explicitly, then compare what the same pressure-removal action does from two different starting states.",
+      "diagramTitle": "With Pressure Absent in Both Cases, Why Can Two Internal States Move Differently?",
+      "diagramSteps": [
+        "Define qualitative states for cover, soil/water retention, and external pressure",
+        "State the transition rule linking higher cover, better retention, and establishment",
+        "State the mutually reinforcing rule for sparse cover and degraded retention",
+        "Set external pressure to absent in both internal states and advance the rules",
+        "Add the feedback-repair option without claiming a real threshold"
+      ],
+      "diagramStepNotes": [
+        "The model is a qualitative teaching state table, not a numerical forecasting model of a real ecosystem.",
+        "With disturbed but retained vegetation and better retention, pressure removal first preserves soil/water conditions, then renews higher cover under the assumed supply of new growth.",
+        "Degraded retention limits establishment, while sparse cover maintains erosion conditions.",
+        "The pathway difference comes from internal state and the stated rules, not simply from different waiting times.",
+        "The repair option first improves retention conditions and supplies an establishment source; it remains only a model condition."
+      ],
+      "mapping": [
+        "State-transition table → the explicit rules every model trajectory must follow.",
+        "Two screens with pressure absent → the fact that external pressure is removed in both cases.",
+        "Deleted single “wait” button → the action choice changed by internal feedback state.",
+        "Two recovery buttons → different model pathways corresponding to different conditions."
+      ],
+      "boundary": "This is a qualitative teaching model, not measurements from a real grassland or an estimate of a threshold. Slow recovery, persistent low state, and crossing an irreversible tipping point are not synonyms. Real feedback strength, threshold ranges, and recovery interventions require long-term evidence across multiple conditions. Resilience also does not require constant abundance or the fastest return to an earlier state.",
+      "reflection": "If external pressure is absent in both cases, why must you still inspect the internal cover and soil/water feedback before deciding whether “wait” can move the model back toward higher cover?"
+    },
+    "references": [
+      {
+        "id": "0521-ecological-resilience-ref-1",
+        "citation": "C. S. Holling. Resilience and Stability of Ecological Systems. Annual Review of Ecology and Systematics 4 (1973), 1–23. doi:10.1146/annurev.es.04.110173.000245.",
+        "url": "https://www.annualreviews.org/content/journals/10.1146/annurev.es.04.110173.000245",
+        "use": "Serves as an early foundational source on ecological resilience and stability; the specific teaching feedbacks and state rules in this article are not empirical cases from that paper."
+      },
+      {
+        "id": "0521-ecological-resilience-ref-2",
+        "citation": "Brian Walker, C. S. Holling, Stephen R. Carpenter, Ann Kinzig. Resilience, adaptability and transformability in social–ecological systems. Ecology and Society 9(2) (2004), 5.",
+        "url": "https://ecologyandsociety.org/vol9/iss2/art5/main.html",
+        "use": "Supports maintaining core function, structure, identity, and feedback under disturbance, as well as concepts of multiple states, basins of attraction, thresholds, and difficult recovery; it also supports not treating short-term non-recovery as proof of a precise irreversible tipping point."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Lake manager Iven had to keep the lakeside laundry works open through a weak trading year. Its treatment upgrade cost more than the town treasury held. Twice before, spring runoff had brought nutrients, algae had coloured the water green for a week, and the lake had cleared when flow subsided. Iven used those recoveries as evidence that the lake could absorb another season of permitted discharge. Each Monday he lowered a white clarity disk; at two metres he could still see it. The laundry kept sixty jobs, and the council postponed the upgrade.\n\nThe first summer bloom also faded after cooler weather. Submerged plants remained, small grazers fed on algae, and oxygenated bottom water kept much phosphorus bound in sediment. These processes helped the lake return after disturbance. Iven recorded the recovery but not how close the plant beds had come to their light limit. When the laundry requested a higher allowance during festival cloth orders, he approved it for six weeks. The extra income repaired the school roof.\n\nThis time the disk vanished at eighty centimetres, then forty. Dense algae blocked light; submerged plants thinned and stopped holding sediment. When algae died, decomposition consumed oxygen near the bottom. Under low-oxygen conditions, more phosphorus was released from sediment back into the water, supporting further growth. Wind stirred the now-unprotected mud. Several processes that had favoured clear water weakened together, while processes maintaining turbid water strengthened. Fish kills appeared along the sheltered bank after a hot night.\n\nIven cut the laundry discharge back to the earlier permitted level and expected the old recovery. The green water remained. Even after external input fell, stored nutrients and lost vegetation kept the lake in a different condition. Restoring the exact previous load was not the same as reversing the path by which the lake had changed. The point of transition could not be identified as one certain bucket or date; weather, sediments, food webs and spatial differences all affected it. By the time the disk disappeared, the safer warning margin had already been spent.\n\nWinter was still weeks away when the laundry owners asked Iven for one last production season. He placed the white clarity disk on their wage ledger, then signed the closure and treatment order. Sixty workers received partial pay for eight weeks, financed by cancelling the new ferry pier; twelve left town. The council also restored shoreline plants, reduced other nutrient sources and monitored oxygen and sediment release. No single action promised a quick return. The first autumn storm produced another bloom even with the factory line closed.\n\nThe following spring, a few plant patches survived inside protective cages, and the disk became visible at ninety centimetres. That was improvement, not proof that the former clear state had returned. Managers kept two thresholds: one for mandatory load reduction and an earlier warning line that triggered investigation. They stopped treating past recovery as unlimited capacity to take the next disturbance. Uncertainty became a reason for margin rather than a number to round away.\n\nIven kept the white disk beside two water jars. The old jar was clear enough to read a date through; the newer one still held suspended green-brown particles. Before signing any discharge sheet, he lowered the disk from the pier and wrote the depth on the same tag that once said two metres.",
-    "storyBodyZh": "湖管员伊文必须让湖畔洗染厂撑过贸易低迷的一年，处理设备升级费超过镇库现款。此前两次，春季径流带来养分，藻类让湖水绿了一周，水量回落后又自行澄清。伊文把过去恢复当作湖还能承受一个排放季的证据。每周一，他从码头放下一只白色透明度圆盘，直到两米深仍能看见。洗染厂保住六十份工作，议会便推迟升级。\n\n第一场夏季藻华也在天气转凉后退去。水下植物仍在，小型摄食者取食藻类，含氧底水又让不少磷留在沉积物中，这些过程帮助湖泊从扰动后返回。伊文记录了“恢复”，却没记植物床离光照下限有多近。节庆布料订单到来，工厂申请六周加量，他批准了。多出的收入修好了学校屋顶。\n\n这一次，白盘先在八十厘米消失，随后只剩四十厘米。浓藻遮住光，水下植物变稀，固定泥沙的作用也减弱；藻体死亡后，分解过程消耗底层氧气，低氧条件又使更多磷从沉积物回到水中，继续支持藻类。风搅起失去植被保护的泥。几项原先有利于清水的过程一同减弱，维持浑水的过程却彼此加强。一个闷热夜晚后，背风岸出现死鱼。\n\n伊文把工厂排放降回早先许可水平，以为湖水会照旧恢复，绿色却没有退去。即使外部输入减少，已经储存的养分和消失的植物仍把湖留在另一种状态。把负荷降到旧数值，并不等于倒走先前变化的道路。转折点也无法精确指认成某一桶水或某一天；天气、沉积物、食物关系与湖区差异都会影响它。等白盘消失时，较安全的预警余量早已用完。\n\n离冬天还有几周，洗染厂主请求再做最后一个生产季。伊文把白圆盘压在他们的工资账上，随后签下停产与建设处理设施的命令。六十名工人领取八周部分工资，资金来自取消新渡船码头；十二人仍离开了镇子。议会还恢复岸边植物、削减其他养分来源，并监测底层氧气和磷释放。没有一项措施保证迅速见效。即使工厂线已经关闭，秋季第一场风暴仍带来一次藻华。\n\n次年春天，保护笼内有几片植物活了下来，白盘在九十厘米处重新可见。这是改善，却不足以证明旧清水状态已经回来。管理者设下两条线：超过一条必须减载，更早的一条则启动调查。他们不再把过去能够恢复，当成承受下一次扰动的无限额度。无法精确预测的部分，被留成余量，没有再从表格里四舍五入掉。\n\n伊文把白圆盘放在两只水样瓶旁。旧瓶清得能透过水读日期，新瓶仍悬着绿褐颗粒。此后每次签排放单前，他都先从码头放下圆盘，把深度写在那张曾经记录“两米”的旧标签上。",
-    "explanation": "Ecological resilience is a system's capacity to absorb disturbance while retaining core functions and organisation. Reinforcing feedbacks can push a system across a threshold into another persistent state; returning the pressure to its former level may then be insufficient, a path dependence known as hysteresis. Thresholds are often uncertain and context-specific, so monitoring multiple indicators and maintaining safety margins matter more than claiming an exact tipping date.",
-    "explanationZh": "生态韧性指生态系统吸收扰动后仍维持核心功能与组织的能力。强化反馈可能把系统推过阈值，进入另一种可持续状态；此后即使压力降回旧水平，也未必沿原路恢复，这称为滞后。临界点常具不确定性且依赖情境，因此多指标监测和保留安全余量，比宣称一个精确日期更可靠。"
+    "storyBody": "Cen Yu needs to set a default recovery button for a grassland teaching model. In front of her is a qualitative transition table: cover is “higher,” “disturbed but with vegetation remaining,” or “sparse”; soil and water retention is “better” or “degraded”; external pressure is “present” or “absent.” The table demonstrates changes under assumed rules rather than forecasting a real grassland. She plans to let users turn off pressure and press “wait,” but first needs to test which states that button works for.\n\nThe first row starts at “disturbed cover with vegetation remaining, retention better.” The model assumes that after pressure is removed, the remaining vegetation protects the soil, keeping retention better in the first step. In the next step, those conditions and an existing source of new growth move cover to higher. Cen Yu follows the two arrows and exchanges the “disturbed” card for “higher.” The state changes while retaining the conditions for renewal, so the combination can then maintain itself.\n\nShe then switches to “cover sparse, retention degraded” and removes the pressure again. This row assumes that bare-ground erosion keeps retention degraded, and that these soil and water conditions cannot support enough new growth; cover remains sparse at the next step. Cen Yu moves both state cards into the next column without changing either label. Another step leaves the same combination. The reasons for the loop are written on its two arrows.\n\nExternal pressure is 0 in both screens. One card changed in the first row, while both cards in the second followed the arrows back to their old positions. Cen Yu places the default “wait” button beside the second row and presses it again; there is still no rule that changes either card. She drags the button out of the default area and makes users select the internal state first. “Pressure off” no longer lets them skip that step.\n\nShe adds a separate model option for the sparse state: “repair feedback conditions.” The intervention first improves soil and water retention and supplies a source of new growth; at the next step, with no external pressure and those conditions assumed to persist, cover changes to higher. She draws the intervention arrow outside the loop, separate from “wait directly.” Two positive relationships alone would not give this result; changing the conditions is an explicit step in the table.\n\nThe final interface keeps two recovery choices: “wait directly” and “repair feedback conditions first,” and requires the user to select the current internal state before choosing. Cen Yu removes the “critical value” input box and leaves the state-transition table beside the two buttons.",
+    "storyBodyZh": "岑雨要给一个草地教学模型设置默认恢复按钮。她面前是一张定性状态转移表：覆盖分“较多、受扰但尚有植被、稀疏”，表土与水分保持分“较好、退化”，外部压力分“有、无”。表只演示给定规则下的变化，不预测真实草地。她原打算让用户关掉压力后，直接按“等待”；现在得先试这个按钮在什么状态下能用。\n\n第一行的起点是“覆盖受扰但尚有植被、保持条件较好”。模型假定压力关掉后，剩余植被足以保护表土，这一步保持条件仍为较好；在下一步，较好的水土条件和已有更新来源让覆盖转为较多。岑雨沿两条箭头推进，把“受扰”卡换成“较多”卡。状态改变了，支持更新的条件也保住了，随后便能继续维持这个组合。\n\n她再切到“覆盖稀疏、保持条件退化”，同样关掉压力。这一行假定裸地侵蚀使保持条件继续退化，而这种水土条件不足以支持草本更新；下一步的覆盖仍是稀疏。岑雨照表把两张状态卡传到下一列，卡上的字一个也不用改。再推进一次还是同一个组合，循环的原因写在两条箭头上。\n\n两个画面的外部压力都已经归零。第一行换过一张卡，第二行的两张卡却沿箭头回到了原位。岑雨把默认“等待”按钮放到第二行旁边，再按一次，仍找不到一条会改变那两张卡的规则。她把按钮从默认区拖走，改成先让用户选内部状态；“已关压力”不再是跳过这一步的理由。\n\n她给稀疏状态另加一个模型选项：“修复反馈条件”。这项干预按表先改善表土和水分保持，并提供更新来源；下一步在无外压且这些条件得到维持的假设下，覆盖才转为较多。她把干预箭头画在循环外侧，和“直接等待”分开。仅靠两条正向关系画不出这个结果，改变条件是表里明写的一步。\n\n最终界面保留“直接等待”和“先修复反馈条件”两个选择，并要求用户先选当前内部状态。岑雨把“临界值”输入框删掉，状态转移表留在两个按钮旁边。",
+    "explanation": "The qualitative rules state that greater vegetation cover supports soil/water retention, and better retention supports new establishment; sparse cover and degraded conditions can instead reinforce one another. Removing external pressure therefore need not produce the same pathway from every state.\n\n“Repair feedback conditions” is only a state-transition assumption within the model. Slow recovery, remaining in a low state, and crossing a real irreversible threshold are different claims and should not be merged by this exercise.",
+    "explanationZh": "定性规则规定：较多覆盖有利于保持表土/水分，较好条件又支持新生草本；低覆盖与退化条件则可相互维持。停掉外部压力因此不必产生同一路径。\n\n“修复反馈条件”只是模型中的状态转移设定。慢恢复、低位停留和真实不可逆阈值是不同问题，不能由本篇推演混为一谈。"
   },
   {
     "id": "0522-carrying-capacity",
@@ -15365,49 +15727,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0541",
     "fieldTitle": "Mathematics",
     "fieldTitleZh": "数学",
-    "title": "The Staircase That Need Not Be Climbed Step by Step",
-    "titleZh": "无需逐阶攀登的楼梯",
-    "summary": "An inspector cannot climb a staircase without end and must instead check the first step and how every step passes on the flame.",
-    "summaryZh": "验楼人不可能走完一座没有尽头的楼梯，只能检查第一阶与每一阶怎样交出钥匙。",
-    "storyParagraphs": [
-      "Architect Bao sold the city a staircase design that could be extended for as many storeys as future builders required. One flame at the entrance was supposed to light a lamp on every numbered landing through a shared channel. The mayor wanted approval before Founding Day and ordered inspector Li to test the first hundred levels of the current tower. All hundred lit. The crowd applauded, and Bao asked for final payment on the infinite plan.",
-      "Li climbed once more after the crowd left. The lamp on level 101 remained dark because its channel had been fitted backwards. A hundred successful examples had not covered the next case, much less every future one. Bao offered to repair that joint and test another hundred. The mayor threatened to replace Li if she delayed the opening over a storey no visitor could yet reach.",
-      "Li asked Bao to state exactly what made the promise continue. Two obligations appeared. The entrance flame had to light the first landing. Then the repeated design had to ensure that for any numbered landing n, if lamp n was lit, its channel lit lamp n+1. The first claim gave the chain somewhere to start; the second carried it onward. Without either, a row of early successes could end at the next untested joint.",
-      "Bao's channels were not actually identical: crews had mirrored every fiftieth fitting to avoid a beam. Li withdrew the permit. The city lost Founding Day tours, Bao lost his final payment, and masons opened finished walls to replace the exceptional joints. The visible cost angered everyone, but it turned a hopeful pattern into a checkable construction rule applying to every numbered fitting in the revised design.",
-      "During repair, the stone supplier raised a second claim: the first n landings required 1+2+...+n slabs, which he said equalled n(n+1)/2. Li accepted the first landing: one slab equalled 1·2/2. She then assumed the formula held at an arbitrary n and added the next landing's n+1 slabs. The total became n(n+1)/2+(n+1)=(n+1)(n+2)/2, exactly the same formula for the successor. The invoice now had a base and a valid transfer, not just checked totals for small towers.",
-      "Bao next tried to reuse the permit on a smaller annex whose stairs began at level five. Li returned it with the old words 'first landing' underlined. He changed the drawing so the outside flame entered level five, then checked the same successor fitting above it. When an apprentice brought a different stair in which one landing rested on several earlier braces, Li put it in a separate folder instead of forcing it through the one-brace proof. By sunset, each permit named its actual starting step and the exact connection being certified.",
-      "The tower opened a month late. Li touched the entrance flame to the first lamp and watched light climb through the repaired channels until mist hid the upper landings. She did not run after it to test each visible floor again. On level 101, the removed backward fitting hung beside the new channel, its soot mark ending on the wrong side."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "第五张截图",
+    "summaryZh": "许澄要给自动连点功能写一条对任意规模成立的规则保证。截图只能检验有限规模的实现；她把抽象规则单独拿出来，从n=1起证明任意k的正确结构都能在不改删旧点线的情况下推进到k+1。",
     "storyParagraphsZh": [
-      "建筑师阿鲍向城里出售一套可无限续建的楼梯图。入口一盏火应沿共用火槽点亮未来每个编号平台。市长要在建城日前验收，只命验楼人阿黎试现有前一百层，结果盏盏都亮。人群欢呼，阿鲍当场索要那套“适用于所有楼层”图纸的尾款。",
-      "散场后，阿黎又往上爬了一次。第一百零一层没有亮，传火槽竟被反装。前一百个成功例子没有覆盖下一层，更没有覆盖所有未来层。阿鲍愿意修这一个接头，再多测一百层；市长则威胁换掉阿黎，因为她竟为游客暂时到不了的楼层推迟开幕。",
-      "阿黎让阿鲍说清承诺怎样延续。事情被拆成两项：入口火必须能点亮第一层；对任意编号 n，只要第 n 层亮起，那里的火槽就一定点亮第 n+1 层。前一项给链条起点，后一项把它向后传。缺任何一项，再多早期成功也可能在下一个未测接头处断掉。",
-      "检查后发现，火槽并非真的统一。工人为绕开横梁，每隔五十层便把接头镜像安装。阿黎撤回许可。城里失去建城日门票，阿鲍拿不到尾款，石匠还得凿开完工墙面更换特殊接头。人人看得见这笔损失，但一条凭经验相信的规律，也终于变成可逐个编号核对的共同结构。",
-      "维修时，石料商又声称前 n 层分别用一、二直到 n 块踏板，总数为 n(n+1)/2。阿黎先验第一层：一块等于 1×2/2；再暂定任意第 n 层公式成立，加上下一层的 n+1 块，得到 n(n+1)/2+(n+1)=(n+1)(n+2)/2，恰好是后继编号的同一形式。账单这次有起点和传递，不只是一串小数值碰巧相符。",
-      "阿鲍随后想把旧许可套到一座从第五层编号的小附楼。阿黎把文件退回去，在“第一层”下划了两道线。他只得改图，让外火从第五层进入，再检查上方使用的同一种后继接头。另有学徒送来一套需要前面多根支架共同托住下一层的楼梯，阿黎把它另装一夹，没有硬塞进单支架证明。日落前，每份许可都写清真正起点与被验明的连接。",
-      "高塔迟了一个月开放。阿黎用入口火点亮第一盏，看着火光沿修好的槽逐层上行，直到高处被雾遮住。她没有再追着每个可见平台攀爬。第一百零一层墙边挂着那只拆下的反向接头，旧烟痕停在错误的一侧。"
+      "许澄要给自动连点功能写规格：从1个点开始，每次只加入一个全新点，并只新增1条边把新点接到已有连通结构；已有点和边都不改不删，也不允许成环。她画到5个点，边数是0、1、2、3、4。产品经理问：“一百个点呢？”五张截图答不了这个问题。",
+      "她又让测试环境生成20个点，得到19条边，但马上把这张图也归到测试附件。更多样例只能说明这些规模没有暴露实现问题；规格真正要保证的是：如果程序始终遵守刚才那条抽象生长规则，那么对任意正整数n，结构都有n−1条边。她把这句话单独写到规格页上，和“当前测试通过”分开。",
+      "许澄在规格页左边写下P(n)：按这条规则得到n个点时，有n−1条边，n是大于等于1的整数。右边还摆着五张截图。她先画一颗孤零零的点，旁边填0=1−1，在左栏第一格写“P(1)成立”。下一格的k先留空；它要接住的不能只是第五张图，还得是任何一个已经按规则长出的结构。",
+      "接着她取任意k≥1，只暂时假设P(k)：k个点时有k−1条边。下一步加入的是一个此前不存在的新点，只新增一条连接到旧结构的边，其他点和边保持不动，因此边数变成(k−1)+1=k，而k=(k+1)−1。这个推导没有用到k是5、20还是500。",
+      "评审时，工程师问：“如果代码偶尔把新点连出两条边呢？”许澄把左栏的P(1)和任意k→k+1递过去：它们保证按规则长出的结构都有正确边数。右栏的1、5、20点回归测试也递过去：这些还要检查程序有没有真的遵守每步一点一边的限制。工程师的问题没有被左栏消掉，它仍在右栏等待实现检查。",
+      "提交时，她把五点图和20点图装进测试附件，规格正文保留基础情形和任意k的推导。页脚的两个方框没有一起勾上：“规则结论已证明”旁边有一个勾，“软件实现已验证”旁边还是空的。那张第五个点的截图也夹在后面，连线画得很齐。"
     ],
-    "conceptName": "Mathematical induction",
+    "overallZh": "数学归纳法通过基础情形和对任意k的归纳步，把自然数命题推广到全部合法n。本篇证明的是明确抽象生长规则下的边数结论；有限测试不能替代证明，证明也不能保证软件实现规则无误。",
     "conceptNameZh": "数学归纳法",
-    "explanationParagraphs": [
-      "Mathematical induction proves a base case and a universal step showing that any true case implies its successor, thereby covering every index reachable from the base in a discrete ordered domain. Checking many examples cannot replace the inductive step, and neither part can be omitted. The starting index and domain must be stated accurately."
-    ],
     "explanationParagraphsZh": [
-      "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确；需要多项前提时可用强归纳。"
+      "基础情形n=1给0=n−1。若任意k≥1时有k−1条边，加入全新点并只加1条连接旧结构的边，且不改删其他点线，就得到k=(k+1)−1。",
+      "归纳假设只是假设P(k)，不是先假设所有n成立。截图检查实现；抽象证明只覆盖题目给定的生长规则。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "把抽象规则正确与软件实现正确拆开：前者用基础情形和任意k推进证明，后者继续靠测试检查。",
+      "diagramTitle": "从一个点的起点到任意n的规则保证",
+      "diagramSteps": [
+        "固定n≥1及每步只添全新点和一条边的规则",
+        "验证P(1)：1点0边",
+        "对任意k≥1只假设P(k)",
+        "加入新点且不改删旧结构，推出P(k+1)",
+        "把全称证明与有限软件测试分栏保留"
+      ],
+      "diagramStepNotes": [
+        "规则还要求新边接入已有连通结构且不成环。",
+        "基础情形0=1−1，不能省略。",
+        "归纳假设只针对当前任意k。",
+        "边数(k−1)+1=k=(k+1)−1。",
+        "1、5、20点截图只能测试实现，不构成全称证明。"
+      ],
+      "mapping": [
+        "五点与20点截图 → 有限软件测试样例。",
+        "P(1) → 全称证明的起点。",
+        "“全新点+一条新边”规则 → k到k+1的实际结构变化。",
+        "规格页左右两栏 → 数学保证与实现验收的边界。"
+      ],
+      "boundary": "结论只适用于给定生长规则，不适用于任意图。不能跳过基础情形、不能假设所有n已成立，也不能在归纳步偷偷修改或删除旧点线。数学证明不验证具体代码是否正确实现这些规则。",
+      "reflection": "如果20个点的测试也通过，为什么仍需要任意k→k+1的推导？反过来，这个推导为什么也抓不到代码偶尔多加一条边的bug？"
+    },
+    "referencesZh": [
+      {
+        "id": "0541-mathematical-induction-ref-1",
+        "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 5: Induction. MIT OpenCourseWare, revised 18 May 2015.",
+        "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+        "use": "支持基础情形与对任意合法k的归纳步共同建立全称命题，并支持有限核验不能替代一般证明。"
+      },
+      {
+        "id": "0541-mathematical-induction-ref-2",
+        "citation": "Stanford University. CS103: Mathematical Induction, Part I, condensed lecture slides. Fall 2024, 23 October 2024.",
+        "url": "https://web.stanford.edu/class/archive/cs/cs103/cs103.1252/lectures/12/Condensed%20Lecture%20Slides.pdf",
+        "use": "支持基础情形、归纳假设、归纳步和论域覆盖；该教学资料不作为这种证明方法的历史发明来源。"
+      }
+    ],
+    "title": "The Fifth Screenshot",
+    "summary": "Xu Cheng needs to write a rule guarantee for an automatic point-connection feature that holds at any scale. Screenshots can test only finitely many sizes of the implementation; she separates out the abstract rule and proves from n=1 that any correct structure at an arbitrary k can advance to k+1 without changing or deleting existing points or edges.",
+    "storyParagraphs": [
+      "Xu Cheng needs to write the specification for an automatic point-connection feature: start with one point; each step adds exactly one new point and exactly one new edge connecting that point to the existing connected structure; existing points and edges are neither changed nor deleted, and cycles are not allowed. She draws up to five points and gets 0, 1, 2, 3, and 4 edges. The product manager asks, “What about one hundred points?” Five screenshots cannot answer that question.",
+      "She has the test environment generate 20 points and gets 19 edges, but immediately moves that image into the test appendix as well. More examples only show that those tested sizes have not exposed an implementation problem. What the specification really needs to guarantee is this: if the program always follows the abstract growth rule just stated, then for every positive integer n, the structure has n−1 edges. She writes that sentence separately on the specification page, apart from “current tests pass.”",
+      "On the left of the specification page, Xu Cheng writes P(n): a structure grown by this rule has n−1 edges when it has n points, where n is an integer at least 1. The five screenshots sit on the right. She draws a single point, writes 0=1−1 beside it, and fills the first left-hand box with “P(1) holds.” She leaves k blank in the next box: it must stand for any structure already grown by the rule, rather than only the fifth picture.",
+      "Next she takes an arbitrary k≥1 and assumes only P(k): with k points there are k−1 edges. The next step adds a point that did not previously exist and exactly one edge connecting it to the old structure, while all other points and edges remain unchanged. The edge count therefore becomes (k−1)+1=k, and k=(k+1)−1. The derivation does not depend on whether k is 5, 20, or 500.",
+      "During review, an engineer asks, “What if the code occasionally connects the new point with two edges?” Xu Cheng hands over the left column with P(1) and the arbitrary k→k+1 step: they guarantee the correct edge count for structures grown by the rule. She also hands over the right column with the 1-, 5-, and 20-point regression tests, which still need to check whether the program follows the one-point, one-edge limit. The left column does not dispose of the engineer’s question; it remains in the right column for implementation checks.",
+      "When she submits the specification, she places the five-point and 20-point images in the test appendix and keeps the base case and arbitrary-k derivation in the main text. The two boxes at the foot of the page are not checked together: “rule result proved” has a tick, while “software implementation verified” is still empty. The fifth-point screenshot sits behind the page, its lines neatly drawn."
+    ],
+    "overall": "Mathematical induction extends a statement over the natural numbers by combining a base case with an induction step for an arbitrary k. This article proves the edge-count result for a specific abstract growth rule; finite tests cannot replace that proof, and the proof does not guarantee that software implements the rule correctly.",
+    "conceptName": "Mathematical induction",
+    "explanationParagraphs": [
+      "The base case n=1 gives 0=n−1. If an arbitrary k≥1 has k−1 edges, then adding one new point and exactly one edge to the old structure, without changing or deleting any existing points or edges, gives k=(k+1)−1.",
+      "The induction hypothesis assumes only P(k), not that all n are already true. Screenshots test the implementation; the abstract proof covers only the stated growth rule."
+    ],
+    "module": {
+      "intro": "Separate correctness of the abstract rule from correctness of the software implementation: prove the former with a base case and an arbitrary-k step, and keep testing the latter.",
+      "diagramTitle": "From the One-Point Start to a Rule Guarantee for Any n",
+      "diagramSteps": [
+        "Fix n≥1 and the rule that each step adds one new point and one edge",
+        "Verify P(1): one point and zero edges",
+        "For an arbitrary k≥1, assume only P(k)",
+        "Add the new point without changing or deleting the old structure and derive P(k+1)",
+        "Keep the universal proof and finite software tests in separate columns"
+      ],
+      "diagramStepNotes": [
+        "The rule also requires the new edge to connect into the existing connected structure without creating a cycle.",
+        "The base case is 0=1−1 and cannot be omitted.",
+        "The induction hypothesis applies only to the current arbitrary k.",
+        "The edge count becomes (k−1)+1=k=(k+1)−1.",
+        "Screenshots at 1, 5, and 20 points test the implementation; they do not constitute a universal proof."
+      ],
+      "mapping": [
+        "Five-point and 20-point screenshots → finite software test cases.",
+        "P(1) → the starting point of the universal proof.",
+        "“One new point + one new edge” rule → the actual structural change from k to k+1.",
+        "Two columns on the specification page → the boundary between mathematical guarantee and implementation validation."
+      ],
+      "boundary": "The conclusion applies only to the stated growth rule, not to arbitrary graphs. The base case cannot be skipped, one cannot assume that all n are already true, and the induction step cannot secretly alter or delete existing points or edges. The mathematical proof does not verify that a particular implementation follows the rules correctly.",
+      "reflection": "If the 20-point test also passes, why is the arbitrary k→k+1 derivation still needed? Conversely, why can that derivation fail to catch a bug that occasionally adds an extra edge?"
+    },
+    "references": [
+      {
+        "id": "0541-mathematical-induction-ref-1",
+        "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 5: Induction. MIT OpenCourseWare, revised 18 May 2015.",
+        "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+        "use": "Supports establishing a universal statement through a base case plus an induction step for an arbitrary valid k, and supports the point that finite checking does not replace a general proof."
+      },
+      {
+        "id": "0541-mathematical-induction-ref-2",
+        "citation": "Stanford University. CS103: Mathematical Induction, Part I, condensed lecture slides. Fall 2024, 23 October 2024.",
+        "url": "https://web.stanford.edu/class/archive/cs/cs103/cs103.1252/lectures/12/Condensed%20Lecture%20Slides.pdf",
+        "use": "Supports the base case, induction hypothesis, induction step, and domain coverage; this teaching material is not treated as the historical invention source of the proof method."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "Architect Bao sold the city a staircase design that could be extended for as many storeys as future builders required. One flame at the entrance was supposed to light a lamp on every numbered landing through a shared channel. The mayor wanted approval before Founding Day and ordered inspector Li to test the first hundred levels of the current tower. All hundred lit. The crowd applauded, and Bao asked for final payment on the infinite plan.\n\nLi climbed once more after the crowd left. The lamp on level 101 remained dark because its channel had been fitted backwards. A hundred successful examples had not covered the next case, much less every future one. Bao offered to repair that joint and test another hundred. The mayor threatened to replace Li if she delayed the opening over a storey no visitor could yet reach.\n\nLi asked Bao to state exactly what made the promise continue. Two obligations appeared. The entrance flame had to light the first landing. Then the repeated design had to ensure that for any numbered landing n, if lamp n was lit, its channel lit lamp n+1. The first claim gave the chain somewhere to start; the second carried it onward. Without either, a row of early successes could end at the next untested joint.\n\nBao's channels were not actually identical: crews had mirrored every fiftieth fitting to avoid a beam. Li withdrew the permit. The city lost Founding Day tours, Bao lost his final payment, and masons opened finished walls to replace the exceptional joints. The visible cost angered everyone, but it turned a hopeful pattern into a checkable construction rule applying to every numbered fitting in the revised design.\n\nDuring repair, the stone supplier raised a second claim: the first n landings required 1+2+...+n slabs, which he said equalled n(n+1)/2. Li accepted the first landing: one slab equalled 1·2/2. She then assumed the formula held at an arbitrary n and added the next landing's n+1 slabs. The total became n(n+1)/2+(n+1)=(n+1)(n+2)/2, exactly the same formula for the successor. The invoice now had a base and a valid transfer, not just checked totals for small towers.\n\nBao next tried to reuse the permit on a smaller annex whose stairs began at level five. Li returned it with the old words 'first landing' underlined. He changed the drawing so the outside flame entered level five, then checked the same successor fitting above it. When an apprentice brought a different stair in which one landing rested on several earlier braces, Li put it in a separate folder instead of forcing it through the one-brace proof. By sunset, each permit named its actual starting step and the exact connection being certified.\n\nThe tower opened a month late. Li touched the entrance flame to the first lamp and watched light climb through the repaired channels until mist hid the upper landings. She did not run after it to test each visible floor again. On level 101, the removed backward fitting hung beside the new channel, its soot mark ending on the wrong side.",
-    "storyBodyZh": "建筑师阿鲍向城里出售一套可无限续建的楼梯图。入口一盏火应沿共用火槽点亮未来每个编号平台。市长要在建城日前验收，只命验楼人阿黎试现有前一百层，结果盏盏都亮。人群欢呼，阿鲍当场索要那套“适用于所有楼层”图纸的尾款。\n\n散场后，阿黎又往上爬了一次。第一百零一层没有亮，传火槽竟被反装。前一百个成功例子没有覆盖下一层，更没有覆盖所有未来层。阿鲍愿意修这一个接头，再多测一百层；市长则威胁换掉阿黎，因为她竟为游客暂时到不了的楼层推迟开幕。\n\n阿黎让阿鲍说清承诺怎样延续。事情被拆成两项：入口火必须能点亮第一层；对任意编号 n，只要第 n 层亮起，那里的火槽就一定点亮第 n+1 层。前一项给链条起点，后一项把它向后传。缺任何一项，再多早期成功也可能在下一个未测接头处断掉。\n\n检查后发现，火槽并非真的统一。工人为绕开横梁，每隔五十层便把接头镜像安装。阿黎撤回许可。城里失去建城日门票，阿鲍拿不到尾款，石匠还得凿开完工墙面更换特殊接头。人人看得见这笔损失，但一条凭经验相信的规律，也终于变成可逐个编号核对的共同结构。\n\n维修时，石料商又声称前 n 层分别用一、二直到 n 块踏板，总数为 n(n+1)/2。阿黎先验第一层：一块等于 1×2/2；再暂定任意第 n 层公式成立，加上下一层的 n+1 块，得到 n(n+1)/2+(n+1)=(n+1)(n+2)/2，恰好是后继编号的同一形式。账单这次有起点和传递，不只是一串小数值碰巧相符。\n\n阿鲍随后想把旧许可套到一座从第五层编号的小附楼。阿黎把文件退回去，在“第一层”下划了两道线。他只得改图，让外火从第五层进入，再检查上方使用的同一种后继接头。另有学徒送来一套需要前面多根支架共同托住下一层的楼梯，阿黎把它另装一夹，没有硬塞进单支架证明。日落前，每份许可都写清真正起点与被验明的连接。\n\n高塔迟了一个月开放。阿黎用入口火点亮第一盏，看着火光沿修好的槽逐层上行，直到高处被雾遮住。她没有再追着每个可见平台攀爬。第一百零一层墙边挂着那只拆下的反向接头，旧烟痕停在错误的一侧。",
-    "explanation": "Mathematical induction proves a base case and a universal step showing that any true case implies its successor, thereby covering every index reachable from the base in a discrete ordered domain. Checking many examples cannot replace the inductive step, and neither part can be omitted. The starting index and domain must be stated accurately.",
-    "explanationZh": "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确；需要多项前提时可用强归纳。"
+    "storyBody": "Xu Cheng needs to write the specification for an automatic point-connection feature: start with one point; each step adds exactly one new point and exactly one new edge connecting that point to the existing connected structure; existing points and edges are neither changed nor deleted, and cycles are not allowed. She draws up to five points and gets 0, 1, 2, 3, and 4 edges. The product manager asks, “What about one hundred points?” Five screenshots cannot answer that question.\n\nShe has the test environment generate 20 points and gets 19 edges, but immediately moves that image into the test appendix as well. More examples only show that those tested sizes have not exposed an implementation problem. What the specification really needs to guarantee is this: if the program always follows the abstract growth rule just stated, then for every positive integer n, the structure has n−1 edges. She writes that sentence separately on the specification page, apart from “current tests pass.”\n\nOn the left of the specification page, Xu Cheng writes P(n): a structure grown by this rule has n−1 edges when it has n points, where n is an integer at least 1. The five screenshots sit on the right. She draws a single point, writes 0=1−1 beside it, and fills the first left-hand box with “P(1) holds.” She leaves k blank in the next box: it must stand for any structure already grown by the rule, rather than only the fifth picture.\n\nNext she takes an arbitrary k≥1 and assumes only P(k): with k points there are k−1 edges. The next step adds a point that did not previously exist and exactly one edge connecting it to the old structure, while all other points and edges remain unchanged. The edge count therefore becomes (k−1)+1=k, and k=(k+1)−1. The derivation does not depend on whether k is 5, 20, or 500.\n\nDuring review, an engineer asks, “What if the code occasionally connects the new point with two edges?” Xu Cheng hands over the left column with P(1) and the arbitrary k→k+1 step: they guarantee the correct edge count for structures grown by the rule. She also hands over the right column with the 1-, 5-, and 20-point regression tests, which still need to check whether the program follows the one-point, one-edge limit. The left column does not dispose of the engineer’s question; it remains in the right column for implementation checks.\n\nWhen she submits the specification, she places the five-point and 20-point images in the test appendix and keeps the base case and arbitrary-k derivation in the main text. The two boxes at the foot of the page are not checked together: “rule result proved” has a tick, while “software implementation verified” is still empty. The fifth-point screenshot sits behind the page, its lines neatly drawn.",
+    "storyBodyZh": "许澄要给自动连点功能写规格：从1个点开始，每次只加入一个全新点，并只新增1条边把新点接到已有连通结构；已有点和边都不改不删，也不允许成环。她画到5个点，边数是0、1、2、3、4。产品经理问：“一百个点呢？”五张截图答不了这个问题。\n\n她又让测试环境生成20个点，得到19条边，但马上把这张图也归到测试附件。更多样例只能说明这些规模没有暴露实现问题；规格真正要保证的是：如果程序始终遵守刚才那条抽象生长规则，那么对任意正整数n，结构都有n−1条边。她把这句话单独写到规格页上，和“当前测试通过”分开。\n\n许澄在规格页左边写下P(n)：按这条规则得到n个点时，有n−1条边，n是大于等于1的整数。右边还摆着五张截图。她先画一颗孤零零的点，旁边填0=1−1，在左栏第一格写“P(1)成立”。下一格的k先留空；它要接住的不能只是第五张图，还得是任何一个已经按规则长出的结构。\n\n接着她取任意k≥1，只暂时假设P(k)：k个点时有k−1条边。下一步加入的是一个此前不存在的新点，只新增一条连接到旧结构的边，其他点和边保持不动，因此边数变成(k−1)+1=k，而k=(k+1)−1。这个推导没有用到k是5、20还是500。\n\n评审时，工程师问：“如果代码偶尔把新点连出两条边呢？”许澄把左栏的P(1)和任意k→k+1递过去：它们保证按规则长出的结构都有正确边数。右栏的1、5、20点回归测试也递过去：这些还要检查程序有没有真的遵守每步一点一边的限制。工程师的问题没有被左栏消掉，它仍在右栏等待实现检查。\n\n提交时，她把五点图和20点图装进测试附件，规格正文保留基础情形和任意k的推导。页脚的两个方框没有一起勾上：“规则结论已证明”旁边有一个勾，“软件实现已验证”旁边还是空的。那张第五个点的截图也夹在后面，连线画得很齐。",
+    "explanation": "The base case n=1 gives 0=n−1. If an arbitrary k≥1 has k−1 edges, then adding one new point and exactly one edge to the old structure, without changing or deleting any existing points or edges, gives k=(k+1)−1.\n\nThe induction hypothesis assumes only P(k), not that all n are already true. Screenshots test the implementation; the abstract proof covers only the stated growth rule.",
+    "explanationZh": "基础情形n=1给0=n−1。若任意k≥1时有k−1条边，加入全新点并只加1条连接旧结构的边，且不改删其他点线，就得到k=(k+1)−1。\n\n归纳假设只是假设P(k)，不是先假设所有n成立。截图检查实现；抽象证明只覆盖题目给定的生长规则。"
   },
   {
     "id": "0542-sampling-bias",
@@ -15512,49 +15963,138 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0542",
     "fieldTitle": "Statistics",
     "fieldTitleZh": "统计学",
-    "title": "The Bell That Rang for Eight Fires in Ten",
-    "titleZh": "十次火警响八次的钟",
-    "summary": "A warning bell detects eight of every ten fires, so the mayor assumes each alarm means an eighty-percent chance of fire.",
-    "summaryZh": "警钟能发现十场火里的八场，市长因此以为每次钟响都有八成可能着火。",
-    "storyParagraphs": [
-      "After a warehouse blaze killed six porters, Mayor Daro bought a warning bell and promised never to hesitate again. The maker said it rang in eight of every ten test fires. Daro announced that any ring therefore meant an eighty-percent chance of fire and ordered the entire city evacuated each time. The first steam-triggered alarm emptied the market, spoiled a day's fish, and injured two people in the crush. Merchants demanded that the bell be silenced; bereaved families demanded that it never be ignored.",
-      "Recorder Nemi laid out one thousand comparable nights. Fire had occurred on ten; the bell rang on eight of those and missed two. Among the 990 fire-free nights, steam, cooking smoke, and faults produced twenty rings. Thus the bell rang twenty-eight times in all, with fire present on eight: 8/28, about twenty-nine percent, not eighty. Before hearing anything, fire occurred on one percent of nights. After a ring, the chance rose sharply, but sensitivity was not the same question as the probability of fire given an alarm.",
-      "Daro accused Nemi of making a good bell look useless. She put one red bean for each fire alarm and one white bean for each false alarm into a bowl. Eight red among twenty-eight was enough to justify urgent checking, especially when missing a fire could kill people. It was not enough to claim certainty or empty every district without considering cost. The starting frequency and how often the evidence appeared with and without fire both changed the updated odds.",
-      "They added a heat probe beside the smoke bell. On the first trial, both devices reacted to the same bathhouse steam. Nemi refused to multiply them as two independent confirmations: shared causes made their errors related. Watchers began recording location, heat, smell, wind, and whether a second signal arose from a genuinely different source. Each item could revise the previous estimate, but none became the event itself.",
-      "A week before the election, the bell rang above the grain quarter during a crowded festival. The heat probe also rose, and a runner smelled burning oil at the marked warehouse. No flames were yet visible. Daro ordered a district evacuation, sent engines immediately, and left the rest of the city open, knowing another false alarm would be charged to him before the vote. Firefighters found a lamp fire behind stacked sacks before it reached the roof.",
-      "The targeted evacuation still cost the grain market a morning's trade, and Daro paid compensation from the celebration fund. The result did not prove that every future ring deserved the same action. Decisions also depended on the changing probability and unequal losses: a missed warehouse fire was far worse than a brief local closure, while evacuating the whole city carried its own dangers. The watch set response thresholds in advance and reviewed them as new records accumulated.",
-      "Nemi kept the old eighty-percent notice rather than burning it. She crossed out the sentence and wrote beneath it: 'eight of twenty-eight alarm nights had fire in this record.' At the next single ring, watchers ran toward the marked district while others checked the second source; no one declared a fire before looking. The bell rope still bore a red knot for each of the eight true alarms and a white knot for each false one."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "蓝贴旁的两本记录",
+    "summaryZh": "无编号模块只可能来自A或B两批；对眼前同型号返修件，当天记录给A/B先验1/4与3/4。蓝贴在A/B中的条件概率为1/2与1/6，更新后两边各1/2，于是林珂改变查找策略，但并未确认来源。",
     "storyParagraphsZh": [
-      "一场仓火夺走六名搬运工后，市长达罗买来新警钟，承诺以后绝不迟疑。制钟人说，十场试验火里它能响八次。达罗立即宣布，凡是钟响，起火可能就是八成，每次都要全城疏散。第一场由蒸汽触发的误报清空集市，鱼货坏了一天，还有两人在拥挤中受伤。商人要求封钟，死者家属则要求任何钟声都不能被轻视。",
-      "记录员内米摆出一千个可比较的夜晚。真正起火十晚，其中八晚响钟，漏掉两晚；其余九百九十个无火夜里，蒸汽、炊烟和故障又让钟响二十次。钟总共响二十八次，只有八次伴随火灾，即 8/28，约为百分之二十九，并非八成。听钟前，起火率仅百分之一；钟响后风险大幅上升，但“有火时会不会响”与“响时是否有火”不是同一问法。",
-      "达罗责怪内米把好警钟算成废物。她把每次真火警放一颗红豆，每次误响放一颗白豆，碗里二十八颗只有八颗红。这个比例足以要求迅速查验，特别是漏掉火灾可能死人；却不足以宣告确定，更不能不计代价地清空每个街区。原有发生率，以及证据在有火和无火时分别多常出现，都要进入更新后的判断。",
-      "他们又在烟钟旁加装热探头。第一次试验，两只装置竟同时受浴室蒸汽影响。内米不准把它们算成两份独立确认，因为共同原因会让错误相关。守夜人开始记录地点、温度、气味、风向，并检查第二个信号是否来自真正不同的来源。每一项都能在旧判断上继续修正，却没有哪一项等于事件本身。",
-      "选举前一周，拥挤节庆中，粮仓区警钟突然响起，热探头也升高，跑去查看的人在标记仓库闻到焦油味，却还看不见火。达罗下令只疏散粮仓区，立刻派水车，其余城区保持开放；若又是误报，投票前所有损失都会记到他头上。消防队在火苗爬上屋梁前，于粮袋后找到了倒下的油灯。",
-      "这次局部疏散仍让粮市损失半天，达罗从庆典预算中赔偿。一次成功不能证明未来每次铃响都该同样行动。决策还要看不断更新的概率与不对称损失：漏掉仓火可能夺命，短时封闭一片街区代价较小；全城撤离也会制造新的危险。守夜人预先设定响应阈值，并随新增记录复查。",
-      "内米没有烧掉旧告示，只划掉“钟响即八成有火”，在下面补写：“这份记录中，二十八个响钟夜有八次起火。”下一次只有一声警钟时，一队人奔向标记区，另一队核对第二来源，没有人先宣布已经着火。钟绳上仍系着八个红结，旁边是一串更多的白结。"
+      "维修台上有一只掉了编号的同型号充电模块，林珂得在A、B两本厚检修记录里找它。任务记录明确这类当天返修件只来自A、B两批；其中A约占1/4，B约占3/4。这些比例只是眼前这批同型号返修件的估计。两本记录各有几十页，她原本把B本先抽出来，准备优先查B。",
+      "翻模块时，她看见背面还粘着一角蓝色质检贴。当天批次记录另给出：若来自A，出现这种蓝贴的概率估为1/2；若来自B，约为1/6。蓝贴在A中更常见，但林珂没有把这个1/2直接当成“来源A的概率”，她把它记在便签上，给另一个来源也留了位置。",
+      "她把来源写成互斥且穷尽的H_A、H_B，把蓝贴记为E。A的未归一化权重是1/4×1/2=1/8；B的是3/4×1/6=1/8。总权重1/4，所以P(H_A|E)=1/2，P(H_B|E)=1/2。这里P(E|H_A)和P(H_A|E)数值碰巧都为1/2，却是不同条件量。",
+      "林珂把A记录本也抽到桌上。原来“先翻B，没找到再查A”的计划停了下来。两本索引都能先按日期查接口批次码，她把当天那一栏各夹一张纸，准备从这里往下找。A原本只有四分之一的把握，现在已经和B一样；几十页的B记录不再独占她的第一轮查找。便签上的数字还不足以填来源栏，却足以让A本从书架挪到手边。",
+      "接口码还没查到，蓝贴已经用过一次。林珂把它的两项权重留在便签上，没有又乘一遍；那不会给来源增加一条新线索。她准备接着查两批的接口码记录，但便签暂时只算到各1/2。若下一条信息和蓝贴有关，它就得连同已知蓝贴一起处理，而不能再被当成一枚无关的贴纸。",
+      "模块放在两本记录之间，背面的蓝贴还剩一角。便签上的两个1/8各引出一个1/2，A、B的索引页各夹着一张纸。她先沿当天的接口码栏找下去，两本书都没有收回。维修单上的来源栏依然空着。"
     ],
-    "conceptName": "Bayesian updating",
+    "overallZh": "贝叶斯更新在互斥且穷尽的假设下，用先验概率乘各假设下当前证据的条件概率，再归一化得到后验。本篇后验从1/4对3/4变为1/2对1/2，足以改变人物的查找计划，但不等于来源已确认。",
     "conceptNameZh": "贝叶斯更新",
-    "explanationParagraphs": [
-      "Bayesian updating combines a prior probability with how likely evidence is under competing hypotheses to produce a posterior probability. Base rates cannot be ignored, and dependent evidence cannot be counted repeatedly as independent. The updated probability informs but does not determine action; decisions also require comparing losses from different errors and outcomes."
-    ],
     "explanationParagraphsZh": [
-      "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失，并设定相应行动阈值。"
+      "A权重1/4×1/2=1/8，B权重3/4×1/6=1/8；总权重1/4，因此后验各为1/2。P(E|H_A)与P(H_A|E)在本题数值恰相同，但定义不同。",
+      "后续证据可以与蓝贴相关，更新时须使用正确的条件关系；后验概率本身也不唯一决定最优查找动作。"
     ],
-    "mode": "mechanism-fable",
+    "moduleZh": {
+      "intro": "让先验先影响原查找顺序，再用蓝贴重新分配来源权重，并把概率更新与行动选择分开。",
+      "diagramTitle": "A/B怎样从1/4对3/4更新成1/2对1/2",
+      "diagramSteps": [
+        "限定A/B为眼前同型返修件的互斥穷尽来源",
+        "写先验1/4、3/4及蓝贴似然1/2、1/6",
+        "算两个未归一化权重都为1/8",
+        "用总权重1/4归一化得到各1/2",
+        "改变查找策略但不把后验当来源确认或唯一决策"
+      ],
+      "diagramStepNotes": [
+        "先验只适用于本题当天同型号返修件。",
+        "P(E|H_A)=1/2，P(E|H_B)=1/6。",
+        "A和B权重恰好相同。",
+        "P(H_A|E)=P(H_B|E)=1/2。",
+        "后续相关证据需按条件关系建模，不能机械重复乘同一证据。"
+      ],
+      "mapping": [
+        "最先抽出的B记录本 → 先验影响的初始行动。",
+        "蓝贴 → 当前证据E。",
+        "两个1/8便签 → 更新前的未归一化权重。",
+        "并排的A/B索引页 → 后验改变计划但未确认来源。"
+      ],
+      "boundary": "A/B互斥穷尽和数值均为本题给定估计，不是普遍频率。P(E|H)与P(H|E)不能混淆，即便本题某两个数值碰巧相同。后续证据无需普遍独立，但必须正确建模条件关系；概率更新也不自动给出唯一最优行动。",
+      "reflection": "为什么蓝贴足以让林珂放弃“先只查B”，却还不足以让她把来源栏填成A？"
+    },
+    "referencesZh": [
+      {
+        "id": "0542-bayesian-updating-ref-1",
+        "citation": "Thomas Bayes. An Essay towards solving a Problem in the Doctrine of Chances. Philosophical Transactions of the Royal Society of London 53 (1763), 370–418; communicated by Richard Price.",
+        "url": "https://www.gtfp.cs.rhul.ac.uk/pulskamp/Bayes/bayesessay-rjp.pdf",
+        "use": "作为逆概率与条件概率推理的历史来源；不把现代符号、维修场景或本篇虚构数值归给原作者。"
+      },
+      {
+        "id": "0542-bayesian-updating-ref-2",
+        "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 17: Conditional Probability. MIT OpenCourseWare, revised 18 May 2015.",
+        "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+        "use": "支持条件概率、全概率与归一化计算，即用先验乘条件证据概率形成权重，再除以所有假设权重之和。"
+      }
+    ],
+    "title": "Two Logs Beside a Blue Sticker",
+    "summary": "An unnumbered module can come only from batches A or B. For the same-model returns in question, the day’s records assign priors of 1/4 and 3/4. The blue sticker has conditional probabilities 1/2 and 1/6 under A and B, so the updated probabilities become 1/2 each. Lin Ke changes her search strategy without confirming the source.",
+    "storyParagraphs": [
+      "An unnumbered charging module sits on the repair bench, and Lin Ke needs to locate it in two thick service logs for batches A and B. The task record states that same-model returns that day come only from those two batches: about 1/4 from A and 3/4 from B. Those proportions are estimates only for the same-model returns in this task. Each log has dozens of pages, so she initially pulls out the B log and plans to search B first.",
+      "When she turns the module over, she notices the corner of a blue quality-control sticker still attached to the back. The day’s batch record also states that if a module comes from A, the estimated probability of this blue sticker is 1/2; if it comes from B, the estimate is about 1/6. The sticker is more common under A, but Lin Ke does not treat that 1/2 directly as “the probability that the source is A.” She writes it on a note and leaves space for the other source.",
+      "She writes the mutually exclusive and exhaustive sources as H_A and H_B and labels the sticker evidence E. A’s unnormalized weight is 1/4×1/2=1/8. B’s is 3/4×1/6=1/8. The total weight is 1/4, so P(H_A|E)=1/2 and P(H_B|E)=1/2. In this problem, P(E|H_A) and P(H_A|E) happen to have the same numerical value, 1/2, but they are different conditional quantities.",
+      "Lin Ke pulls the A log onto the desk too. She pauses her original plan of searching B first and A only if needed. Both indexes let her look up interface batch codes by date, so she clips the relevant column in each and starts there. A had only a one-in-four chance; now it stands level with B. The dozens of pages in the B log no longer occupy her entire first search. The numbers on the note cannot fill the source field, but they are enough to bring the A book down from the shelf.",
+      "The interface code has not been checked yet; the blue sticker has already been used once. Lin Ke leaves its two weights on the note rather than multiplying them again, which would add no new clue about the source. She prepares to check the code records for both batches, but for now the note ends at 1/2 each. If the next information is related to the sticker, it must be handled together with what is already known about the sticker, rather than treated as unrelated evidence.",
+      "The module sits between the two logs, a corner of the blue sticker still on its back. Each 1/8 on the note leads to a 1/2, and one slip marks the index in each book. She starts down the interface-code column for the date, keeping both books open. The source field on the repair form remains blank."
+    ],
+    "overall": "Bayesian updating combines prior probabilities with the conditional probability of the observed evidence under each mutually exclusive and exhaustive hypothesis, then normalizes to obtain posterior probabilities. Here the posterior moves from 1/4 versus 3/4 to 1/2 versus 1/2, enough to change the character’s search plan without confirming the source.",
+    "conceptName": "Bayesian updating",
+    "explanationParagraphs": [
+      "A’s weight is 1/4×1/2=1/8 and B’s is 3/4×1/6=1/8. The total weight is 1/4, so both posteriors are 1/2. P(E|H_A) and P(H_A|E) happen to be numerically equal here, but they have different definitions.",
+      "Later evidence may be related to the blue sticker; any further update must use the correct conditional relationship. Posterior probabilities also do not uniquely determine the best search action."
+    ],
+    "module": {
+      "intro": "Let the prior affect the original search order, then use the blue-sticker evidence to redistribute source weights while keeping probability updating separate from action choice.",
+      "diagramTitle": "How A/B Moves from 1/4 vs 3/4 to 1/2 vs 1/2",
+      "diagramSteps": [
+        "Restrict A/B to the mutually exclusive and exhaustive sources for these same-model returns",
+        "Write priors 1/4 and 3/4 and blue-sticker likelihoods 1/2 and 1/6",
+        "Compute both unnormalized weights as 1/8",
+        "Normalize by total weight 1/4 to obtain 1/2 each",
+        "Change the search strategy without treating the posterior as source confirmation or a unique decision rule"
+      ],
+      "diagramStepNotes": [
+        "The priors apply only to the same-model returns in this task and on that day.",
+        "P(E|H_A)=1/2 and P(E|H_B)=1/6.",
+        "The A and B weights are exactly equal.",
+        "P(H_A|E)=P(H_B|E)=1/2.",
+        "Later related evidence must be modeled through the correct conditional relationship; the same evidence is not mechanically multiplied again."
+      ],
+      "mapping": [
+        "B log pulled first → the action initially influenced by the prior.",
+        "Blue sticker → the current evidence E.",
+        "Two 1/8 notes → the unnormalized weights after incorporating the evidence.",
+        "A/B index pages side by side → the posterior changes the plan without confirming the source."
+      ],
+      "boundary": "A/B being mutually exclusive and exhaustive, and all numerical values, are assumptions for this task rather than universal frequencies. P(E|H) and P(H|E) must not be confused even when two numerical values happen to match here. Later evidence need not generally be independent, but its conditional relationship must be modeled correctly; probability updating also does not automatically specify a unique optimal action.",
+      "reflection": "Why is the blue sticker enough for Lin Ke to abandon “search only B first,” but still not enough for her to fill the source field with A?"
+    },
+    "references": [
+      {
+        "id": "0542-bayesian-updating-ref-1",
+        "citation": "Thomas Bayes. An Essay towards solving a Problem in the Doctrine of Chances. Philosophical Transactions of the Royal Society of London 53 (1763), 370–418; communicated by Richard Price.",
+        "url": "https://www.gtfp.cs.rhul.ac.uk/pulskamp/Bayes/bayesessay-rjp.pdf",
+        "use": "Serves as a historical source for inverse-probability and conditional-probability reasoning; the modern notation, repair scenario, and fictional numerical example in this article are not attributed to the original author."
+      },
+      {
+        "id": "0542-bayesian-updating-ref-2",
+        "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 17: Conditional Probability. MIT OpenCourseWare, revised 18 May 2015.",
+        "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+        "use": "Supports conditional probability, total probability, and normalization: form weights by multiplying priors by conditional evidence probabilities, then divide by the sum of all hypothesis weights."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-mixed-16-pdc-review.md",
+      "edits": [
+        "science-ecology-mixed-16-edit-pass1-evidence.json",
+        "science-ecology-mixed-16-edit-pass2-evidence.json"
+      ]
     },
     "collection": "field-core-fables",
-    "storyBody": "After a warehouse blaze killed six porters, Mayor Daro bought a warning bell and promised never to hesitate again. The maker said it rang in eight of every ten test fires. Daro announced that any ring therefore meant an eighty-percent chance of fire and ordered the entire city evacuated each time. The first steam-triggered alarm emptied the market, spoiled a day's fish, and injured two people in the crush. Merchants demanded that the bell be silenced; bereaved families demanded that it never be ignored.\n\nRecorder Nemi laid out one thousand comparable nights. Fire had occurred on ten; the bell rang on eight of those and missed two. Among the 990 fire-free nights, steam, cooking smoke, and faults produced twenty rings. Thus the bell rang twenty-eight times in all, with fire present on eight: 8/28, about twenty-nine percent, not eighty. Before hearing anything, fire occurred on one percent of nights. After a ring, the chance rose sharply, but sensitivity was not the same question as the probability of fire given an alarm.\n\nDaro accused Nemi of making a good bell look useless. She put one red bean for each fire alarm and one white bean for each false alarm into a bowl. Eight red among twenty-eight was enough to justify urgent checking, especially when missing a fire could kill people. It was not enough to claim certainty or empty every district without considering cost. The starting frequency and how often the evidence appeared with and without fire both changed the updated odds.\n\nThey added a heat probe beside the smoke bell. On the first trial, both devices reacted to the same bathhouse steam. Nemi refused to multiply them as two independent confirmations: shared causes made their errors related. Watchers began recording location, heat, smell, wind, and whether a second signal arose from a genuinely different source. Each item could revise the previous estimate, but none became the event itself.\n\nA week before the election, the bell rang above the grain quarter during a crowded festival. The heat probe also rose, and a runner smelled burning oil at the marked warehouse. No flames were yet visible. Daro ordered a district evacuation, sent engines immediately, and left the rest of the city open, knowing another false alarm would be charged to him before the vote. Firefighters found a lamp fire behind stacked sacks before it reached the roof.\n\nThe targeted evacuation still cost the grain market a morning's trade, and Daro paid compensation from the celebration fund. The result did not prove that every future ring deserved the same action. Decisions also depended on the changing probability and unequal losses: a missed warehouse fire was far worse than a brief local closure, while evacuating the whole city carried its own dangers. The watch set response thresholds in advance and reviewed them as new records accumulated.\n\nNemi kept the old eighty-percent notice rather than burning it. She crossed out the sentence and wrote beneath it: 'eight of twenty-eight alarm nights had fire in this record.' At the next single ring, watchers ran toward the marked district while others checked the second source; no one declared a fire before looking. The bell rope still bore a red knot for each of the eight true alarms and a white knot for each false one.",
-    "storyBodyZh": "一场仓火夺走六名搬运工后，市长达罗买来新警钟，承诺以后绝不迟疑。制钟人说，十场试验火里它能响八次。达罗立即宣布，凡是钟响，起火可能就是八成，每次都要全城疏散。第一场由蒸汽触发的误报清空集市，鱼货坏了一天，还有两人在拥挤中受伤。商人要求封钟，死者家属则要求任何钟声都不能被轻视。\n\n记录员内米摆出一千个可比较的夜晚。真正起火十晚，其中八晚响钟，漏掉两晚；其余九百九十个无火夜里，蒸汽、炊烟和故障又让钟响二十次。钟总共响二十八次，只有八次伴随火灾，即 8/28，约为百分之二十九，并非八成。听钟前，起火率仅百分之一；钟响后风险大幅上升，但“有火时会不会响”与“响时是否有火”不是同一问法。\n\n达罗责怪内米把好警钟算成废物。她把每次真火警放一颗红豆，每次误响放一颗白豆，碗里二十八颗只有八颗红。这个比例足以要求迅速查验，特别是漏掉火灾可能死人；却不足以宣告确定，更不能不计代价地清空每个街区。原有发生率，以及证据在有火和无火时分别多常出现，都要进入更新后的判断。\n\n他们又在烟钟旁加装热探头。第一次试验，两只装置竟同时受浴室蒸汽影响。内米不准把它们算成两份独立确认，因为共同原因会让错误相关。守夜人开始记录地点、温度、气味、风向，并检查第二个信号是否来自真正不同的来源。每一项都能在旧判断上继续修正，却没有哪一项等于事件本身。\n\n选举前一周，拥挤节庆中，粮仓区警钟突然响起，热探头也升高，跑去查看的人在标记仓库闻到焦油味，却还看不见火。达罗下令只疏散粮仓区，立刻派水车，其余城区保持开放；若又是误报，投票前所有损失都会记到他头上。消防队在火苗爬上屋梁前，于粮袋后找到了倒下的油灯。\n\n这次局部疏散仍让粮市损失半天，达罗从庆典预算中赔偿。一次成功不能证明未来每次铃响都该同样行动。决策还要看不断更新的概率与不对称损失：漏掉仓火可能夺命，短时封闭一片街区代价较小；全城撤离也会制造新的危险。守夜人预先设定响应阈值，并随新增记录复查。\n\n内米没有烧掉旧告示，只划掉“钟响即八成有火”，在下面补写：“这份记录中，二十八个响钟夜有八次起火。”下一次只有一声警钟时，一队人奔向标记区，另一队核对第二来源，没有人先宣布已经着火。钟绳上仍系着八个红结，旁边是一串更多的白结。",
-    "explanation": "Bayesian updating combines a prior probability with how likely evidence is under competing hypotheses to produce a posterior probability. Base rates cannot be ignored, and dependent evidence cannot be counted repeatedly as independent. The updated probability informs but does not determine action; decisions also require comparing losses from different errors and outcomes.",
-    "explanationZh": "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失，并设定相应行动阈值。"
+    "storyBody": "An unnumbered charging module sits on the repair bench, and Lin Ke needs to locate it in two thick service logs for batches A and B. The task record states that same-model returns that day come only from those two batches: about 1/4 from A and 3/4 from B. Those proportions are estimates only for the same-model returns in this task. Each log has dozens of pages, so she initially pulls out the B log and plans to search B first.\n\nWhen she turns the module over, she notices the corner of a blue quality-control sticker still attached to the back. The day’s batch record also states that if a module comes from A, the estimated probability of this blue sticker is 1/2; if it comes from B, the estimate is about 1/6. The sticker is more common under A, but Lin Ke does not treat that 1/2 directly as “the probability that the source is A.” She writes it on a note and leaves space for the other source.\n\nShe writes the mutually exclusive and exhaustive sources as H_A and H_B and labels the sticker evidence E. A’s unnormalized weight is 1/4×1/2=1/8. B’s is 3/4×1/6=1/8. The total weight is 1/4, so P(H_A|E)=1/2 and P(H_B|E)=1/2. In this problem, P(E|H_A) and P(H_A|E) happen to have the same numerical value, 1/2, but they are different conditional quantities.\n\nLin Ke pulls the A log onto the desk too. She pauses her original plan of searching B first and A only if needed. Both indexes let her look up interface batch codes by date, so she clips the relevant column in each and starts there. A had only a one-in-four chance; now it stands level with B. The dozens of pages in the B log no longer occupy her entire first search. The numbers on the note cannot fill the source field, but they are enough to bring the A book down from the shelf.\n\nThe interface code has not been checked yet; the blue sticker has already been used once. Lin Ke leaves its two weights on the note rather than multiplying them again, which would add no new clue about the source. She prepares to check the code records for both batches, but for now the note ends at 1/2 each. If the next information is related to the sticker, it must be handled together with what is already known about the sticker, rather than treated as unrelated evidence.\n\nThe module sits between the two logs, a corner of the blue sticker still on its back. Each 1/8 on the note leads to a 1/2, and one slip marks the index in each book. She starts down the interface-code column for the date, keeping both books open. The source field on the repair form remains blank.",
+    "storyBodyZh": "维修台上有一只掉了编号的同型号充电模块，林珂得在A、B两本厚检修记录里找它。任务记录明确这类当天返修件只来自A、B两批；其中A约占1/4，B约占3/4。这些比例只是眼前这批同型号返修件的估计。两本记录各有几十页，她原本把B本先抽出来，准备优先查B。\n\n翻模块时，她看见背面还粘着一角蓝色质检贴。当天批次记录另给出：若来自A，出现这种蓝贴的概率估为1/2；若来自B，约为1/6。蓝贴在A中更常见，但林珂没有把这个1/2直接当成“来源A的概率”，她把它记在便签上，给另一个来源也留了位置。\n\n她把来源写成互斥且穷尽的H_A、H_B，把蓝贴记为E。A的未归一化权重是1/4×1/2=1/8；B的是3/4×1/6=1/8。总权重1/4，所以P(H_A|E)=1/2，P(H_B|E)=1/2。这里P(E|H_A)和P(H_A|E)数值碰巧都为1/2，却是不同条件量。\n\n林珂把A记录本也抽到桌上。原来“先翻B，没找到再查A”的计划停了下来。两本索引都能先按日期查接口批次码，她把当天那一栏各夹一张纸，准备从这里往下找。A原本只有四分之一的把握，现在已经和B一样；几十页的B记录不再独占她的第一轮查找。便签上的数字还不足以填来源栏，却足以让A本从书架挪到手边。\n\n接口码还没查到，蓝贴已经用过一次。林珂把它的两项权重留在便签上，没有又乘一遍；那不会给来源增加一条新线索。她准备接着查两批的接口码记录，但便签暂时只算到各1/2。若下一条信息和蓝贴有关，它就得连同已知蓝贴一起处理，而不能再被当成一枚无关的贴纸。\n\n模块放在两本记录之间，背面的蓝贴还剩一角。便签上的两个1/8各引出一个1/2，A、B的索引页各夹着一张纸。她先沿当天的接口码栏找下去，两本书都没有收回。维修单上的来源栏依然空着。",
+    "explanation": "A’s weight is 1/4×1/2=1/8 and B’s is 3/4×1/6=1/8. The total weight is 1/4, so both posteriors are 1/2. P(E|H_A) and P(H_A|E) happen to be numerically equal here, but they have different definitions.\n\nLater evidence may be related to the blue sticker; any further update must use the correct conditional relationship. Posterior probabilities also do not uniquely determine the best search action.",
+    "explanationZh": "A权重1/4×1/2=1/8，B权重3/4×1/6=1/8；总权重1/4，因此后验各为1/2。P(E|H_A)与P(H_A|E)在本题数值恰相同，但定义不同。\n\n后续证据可以与蓝贴相关，更新时须使用正确的条件关系；后验概率本身也不唯一决定最优查找动作。"
   },
   {
     "id": "0611-mental-models",

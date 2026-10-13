@@ -1224,43 +1224,132 @@
       "fieldCode": "0541",
       "fieldTitle": "Mathematics",
       "fieldTitleZh": "数学",
-      "title": "The Staircase That Need Not Be Climbed Step by Step",
-      "titleZh": "无需逐阶攀登的楼梯",
-      "summary": "An inspector cannot climb a staircase without end and must instead check the first step and how every step passes on the flame.",
-      "summaryZh": "验楼人不可能走完一座没有尽头的楼梯，只能检查第一阶与每一阶怎样交出钥匙。",
-      "storyParagraphs": [
-        "Architect Bao sold the city a staircase design that could be extended for as many storeys as future builders required. One flame at the entrance was supposed to light a lamp on every numbered landing through a shared channel. The mayor wanted approval before Founding Day and ordered inspector Li to test the first hundred levels of the current tower. All hundred lit. The crowd applauded, and Bao asked for final payment on the infinite plan.",
-        "Li climbed once more after the crowd left. The lamp on level 101 remained dark because its channel had been fitted backwards. A hundred successful examples had not covered the next case, much less every future one. Bao offered to repair that joint and test another hundred. The mayor threatened to replace Li if she delayed the opening over a storey no visitor could yet reach.",
-        "Li asked Bao to state exactly what made the promise continue. Two obligations appeared. The entrance flame had to light the first landing. Then the repeated design had to ensure that for any numbered landing n, if lamp n was lit, its channel lit lamp n+1. The first claim gave the chain somewhere to start; the second carried it onward. Without either, a row of early successes could end at the next untested joint.",
-        "Bao's channels were not actually identical: crews had mirrored every fiftieth fitting to avoid a beam. Li withdrew the permit. The city lost Founding Day tours, Bao lost his final payment, and masons opened finished walls to replace the exceptional joints. The visible cost angered everyone, but it turned a hopeful pattern into a checkable construction rule applying to every numbered fitting in the revised design.",
-        "During repair, the stone supplier raised a second claim: the first n landings required 1+2+...+n slabs, which he said equalled n(n+1)/2. Li accepted the first landing: one slab equalled 1·2/2. She then assumed the formula held at an arbitrary n and added the next landing's n+1 slabs. The total became n(n+1)/2+(n+1)=(n+1)(n+2)/2, exactly the same formula for the successor. The invoice now had a base and a valid transfer, not just checked totals for small towers.",
-        "Bao next tried to reuse the permit on a smaller annex whose stairs began at level five. Li returned it with the old words 'first landing' underlined. He changed the drawing so the outside flame entered level five, then checked the same successor fitting above it. When an apprentice brought a different stair in which one landing rested on several earlier braces, Li put it in a separate folder instead of forcing it through the one-brace proof. By sunset, each permit named its actual starting step and the exact connection being certified.",
-        "The tower opened a month late. Li touched the entrance flame to the first lamp and watched light climb through the repaired channels until mist hid the upper landings. She did not run after it to test each visible floor again. On level 101, the removed backward fitting hung beside the new channel, its soot mark ending on the wrong side."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "第五张截图",
+      "summaryZh": "许澄要给自动连点功能写一条对任意规模成立的规则保证。截图只能检验有限规模的实现；她把抽象规则单独拿出来，从n=1起证明任意k的正确结构都能在不改删旧点线的情况下推进到k+1。",
       "storyParagraphsZh": [
-        "建筑师阿鲍向城里出售一套可无限续建的楼梯图。入口一盏火应沿共用火槽点亮未来每个编号平台。市长要在建城日前验收，只命验楼人阿黎试现有前一百层，结果盏盏都亮。人群欢呼，阿鲍当场索要那套“适用于所有楼层”图纸的尾款。",
-        "散场后，阿黎又往上爬了一次。第一百零一层没有亮，传火槽竟被反装。前一百个成功例子没有覆盖下一层，更没有覆盖所有未来层。阿鲍愿意修这一个接头，再多测一百层；市长则威胁换掉阿黎，因为她竟为游客暂时到不了的楼层推迟开幕。",
-        "阿黎让阿鲍说清承诺怎样延续。事情被拆成两项：入口火必须能点亮第一层；对任意编号 n，只要第 n 层亮起，那里的火槽就一定点亮第 n+1 层。前一项给链条起点，后一项把它向后传。缺任何一项，再多早期成功也可能在下一个未测接头处断掉。",
-        "检查后发现，火槽并非真的统一。工人为绕开横梁，每隔五十层便把接头镜像安装。阿黎撤回许可。城里失去建城日门票，阿鲍拿不到尾款，石匠还得凿开完工墙面更换特殊接头。人人看得见这笔损失，但一条凭经验相信的规律，也终于变成可逐个编号核对的共同结构。",
-        "维修时，石料商又声称前 n 层分别用一、二直到 n 块踏板，总数为 n(n+1)/2。阿黎先验第一层：一块等于 1×2/2；再暂定任意第 n 层公式成立，加上下一层的 n+1 块，得到 n(n+1)/2+(n+1)=(n+1)(n+2)/2，恰好是后继编号的同一形式。账单这次有起点和传递，不只是一串小数值碰巧相符。",
-        "阿鲍随后想把旧许可套到一座从第五层编号的小附楼。阿黎把文件退回去，在“第一层”下划了两道线。他只得改图，让外火从第五层进入，再检查上方使用的同一种后继接头。另有学徒送来一套需要前面多根支架共同托住下一层的楼梯，阿黎把它另装一夹，没有硬塞进单支架证明。日落前，每份许可都写清真正起点与被验明的连接。",
-        "高塔迟了一个月开放。阿黎用入口火点亮第一盏，看着火光沿修好的槽逐层上行，直到高处被雾遮住。她没有再追着每个可见平台攀爬。第一百零一层墙边挂着那只拆下的反向接头，旧烟痕停在错误的一侧。"
+        "许澄要给自动连点功能写规格：从1个点开始，每次只加入一个全新点，并只新增1条边把新点接到已有连通结构；已有点和边都不改不删，也不允许成环。她画到5个点，边数是0、1、2、3、4。产品经理问：“一百个点呢？”五张截图答不了这个问题。",
+        "她又让测试环境生成20个点，得到19条边，但马上把这张图也归到测试附件。更多样例只能说明这些规模没有暴露实现问题；规格真正要保证的是：如果程序始终遵守刚才那条抽象生长规则，那么对任意正整数n，结构都有n−1条边。她把这句话单独写到规格页上，和“当前测试通过”分开。",
+        "许澄在规格页左边写下P(n)：按这条规则得到n个点时，有n−1条边，n是大于等于1的整数。右边还摆着五张截图。她先画一颗孤零零的点，旁边填0=1−1，在左栏第一格写“P(1)成立”。下一格的k先留空；它要接住的不能只是第五张图，还得是任何一个已经按规则长出的结构。",
+        "接着她取任意k≥1，只暂时假设P(k)：k个点时有k−1条边。下一步加入的是一个此前不存在的新点，只新增一条连接到旧结构的边，其他点和边保持不动，因此边数变成(k−1)+1=k，而k=(k+1)−1。这个推导没有用到k是5、20还是500。",
+        "评审时，工程师问：“如果代码偶尔把新点连出两条边呢？”许澄把左栏的P(1)和任意k→k+1递过去：它们保证按规则长出的结构都有正确边数。右栏的1、5、20点回归测试也递过去：这些还要检查程序有没有真的遵守每步一点一边的限制。工程师的问题没有被左栏消掉，它仍在右栏等待实现检查。",
+        "提交时，她把五点图和20点图装进测试附件，规格正文保留基础情形和任意k的推导。页脚的两个方框没有一起勾上：“规则结论已证明”旁边有一个勾，“软件实现已验证”旁边还是空的。那张第五个点的截图也夹在后面，连线画得很齐。"
       ],
-      "conceptName": "Mathematical induction",
+      "overallZh": "数学归纳法通过基础情形和对任意k的归纳步，把自然数命题推广到全部合法n。本篇证明的是明确抽象生长规则下的边数结论；有限测试不能替代证明，证明也不能保证软件实现规则无误。",
       "conceptNameZh": "数学归纳法",
-      "explanationParagraphs": [
-        "Mathematical induction proves a base case and a universal step showing that any true case implies its successor, thereby covering every index reachable from the base in a discrete ordered domain. Checking many examples cannot replace the inductive step, and neither part can be omitted. The starting index and domain must be stated accurately."
-      ],
       "explanationParagraphsZh": [
-        "数学归纳法通过证明基础情形，并证明任意情形成立会推出其后继成立，从而覆盖离散有序定义域中从起点可达的所有情形。检查许多样例不能替代普遍归纳步骤，两部分也都不可省略。起始索引与命题定义域必须明确；需要多项前提时可用强归纳。"
+        "基础情形n=1给0=n−1。若任意k≥1时有k−1条边，加入全新点并只加1条连接旧结构的边，且不改删其他点线，就得到k=(k+1)−1。",
+        "归纳假设只是假设P(k)，不是先假设所有n成立。截图检查实现；抽象证明只覆盖题目给定的生长规则。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "把抽象规则正确与软件实现正确拆开：前者用基础情形和任意k推进证明，后者继续靠测试检查。",
+        "diagramTitle": "从一个点的起点到任意n的规则保证",
+        "diagramSteps": [
+          "固定n≥1及每步只添全新点和一条边的规则",
+          "验证P(1)：1点0边",
+          "对任意k≥1只假设P(k)",
+          "加入新点且不改删旧结构，推出P(k+1)",
+          "把全称证明与有限软件测试分栏保留"
+        ],
+        "diagramStepNotes": [
+          "规则还要求新边接入已有连通结构且不成环。",
+          "基础情形0=1−1，不能省略。",
+          "归纳假设只针对当前任意k。",
+          "边数(k−1)+1=k=(k+1)−1。",
+          "1、5、20点截图只能测试实现，不构成全称证明。"
+        ],
+        "mapping": [
+          "五点与20点截图 → 有限软件测试样例。",
+          "P(1) → 全称证明的起点。",
+          "“全新点+一条新边”规则 → k到k+1的实际结构变化。",
+          "规格页左右两栏 → 数学保证与实现验收的边界。"
+        ],
+        "boundary": "结论只适用于给定生长规则，不适用于任意图。不能跳过基础情形、不能假设所有n已成立，也不能在归纳步偷偷修改或删除旧点线。数学证明不验证具体代码是否正确实现这些规则。",
+        "reflection": "如果20个点的测试也通过，为什么仍需要任意k→k+1的推导？反过来，这个推导为什么也抓不到代码偶尔多加一条边的bug？"
+      },
+      "referencesZh": [
+        {
+          "id": "0541-mathematical-induction-ref-1",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 5: Induction. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "支持基础情形与对任意合法k的归纳步共同建立全称命题，并支持有限核验不能替代一般证明。"
+        },
+        {
+          "id": "0541-mathematical-induction-ref-2",
+          "citation": "Stanford University. CS103: Mathematical Induction, Part I, condensed lecture slides. Fall 2024, 23 October 2024.",
+          "url": "https://web.stanford.edu/class/archive/cs/cs103/cs103.1252/lectures/12/Condensed%20Lecture%20Slides.pdf",
+          "use": "支持基础情形、归纳假设、归纳步和论域覆盖；该教学资料不作为这种证明方法的历史发明来源。"
+        }
+      ],
+      "title": "The Fifth Screenshot",
+      "summary": "Xu Cheng needs to write a rule guarantee for an automatic point-connection feature that holds at any scale. Screenshots can test only finitely many sizes of the implementation; she separates out the abstract rule and proves from n=1 that any correct structure at an arbitrary k can advance to k+1 without changing or deleting existing points or edges.",
+      "storyParagraphs": [
+        "Xu Cheng needs to write the specification for an automatic point-connection feature: start with one point; each step adds exactly one new point and exactly one new edge connecting that point to the existing connected structure; existing points and edges are neither changed nor deleted, and cycles are not allowed. She draws up to five points and gets 0, 1, 2, 3, and 4 edges. The product manager asks, “What about one hundred points?” Five screenshots cannot answer that question.",
+        "She has the test environment generate 20 points and gets 19 edges, but immediately moves that image into the test appendix as well. More examples only show that those tested sizes have not exposed an implementation problem. What the specification really needs to guarantee is this: if the program always follows the abstract growth rule just stated, then for every positive integer n, the structure has n−1 edges. She writes that sentence separately on the specification page, apart from “current tests pass.”",
+        "On the left of the specification page, Xu Cheng writes P(n): a structure grown by this rule has n−1 edges when it has n points, where n is an integer at least 1. The five screenshots sit on the right. She draws a single point, writes 0=1−1 beside it, and fills the first left-hand box with “P(1) holds.” She leaves k blank in the next box: it must stand for any structure already grown by the rule, rather than only the fifth picture.",
+        "Next she takes an arbitrary k≥1 and assumes only P(k): with k points there are k−1 edges. The next step adds a point that did not previously exist and exactly one edge connecting it to the old structure, while all other points and edges remain unchanged. The edge count therefore becomes (k−1)+1=k, and k=(k+1)−1. The derivation does not depend on whether k is 5, 20, or 500.",
+        "During review, an engineer asks, “What if the code occasionally connects the new point with two edges?” Xu Cheng hands over the left column with P(1) and the arbitrary k→k+1 step: they guarantee the correct edge count for structures grown by the rule. She also hands over the right column with the 1-, 5-, and 20-point regression tests, which still need to check whether the program follows the one-point, one-edge limit. The left column does not dispose of the engineer’s question; it remains in the right column for implementation checks.",
+        "When she submits the specification, she places the five-point and 20-point images in the test appendix and keeps the base case and arbitrary-k derivation in the main text. The two boxes at the foot of the page are not checked together: “rule result proved” has a tick, while “software implementation verified” is still empty. The fifth-point screenshot sits behind the page, its lines neatly drawn."
+      ],
+      "overall": "Mathematical induction extends a statement over the natural numbers by combining a base case with an induction step for an arbitrary k. This article proves the edge-count result for a specific abstract growth rule; finite tests cannot replace that proof, and the proof does not guarantee that software implements the rule correctly.",
+      "conceptName": "Mathematical induction",
+      "explanationParagraphs": [
+        "The base case n=1 gives 0=n−1. If an arbitrary k≥1 has k−1 edges, then adding one new point and exactly one edge to the old structure, without changing or deleting any existing points or edges, gives k=(k+1)−1.",
+        "The induction hypothesis assumes only P(k), not that all n are already true. Screenshots test the implementation; the abstract proof covers only the stated growth rule."
+      ],
+      "module": {
+        "intro": "Separate correctness of the abstract rule from correctness of the software implementation: prove the former with a base case and an arbitrary-k step, and keep testing the latter.",
+        "diagramTitle": "From the One-Point Start to a Rule Guarantee for Any n",
+        "diagramSteps": [
+          "Fix n≥1 and the rule that each step adds one new point and one edge",
+          "Verify P(1): one point and zero edges",
+          "For an arbitrary k≥1, assume only P(k)",
+          "Add the new point without changing or deleting the old structure and derive P(k+1)",
+          "Keep the universal proof and finite software tests in separate columns"
+        ],
+        "diagramStepNotes": [
+          "The rule also requires the new edge to connect into the existing connected structure without creating a cycle.",
+          "The base case is 0=1−1 and cannot be omitted.",
+          "The induction hypothesis applies only to the current arbitrary k.",
+          "The edge count becomes (k−1)+1=k=(k+1)−1.",
+          "Screenshots at 1, 5, and 20 points test the implementation; they do not constitute a universal proof."
+        ],
+        "mapping": [
+          "Five-point and 20-point screenshots → finite software test cases.",
+          "P(1) → the starting point of the universal proof.",
+          "“One new point + one new edge” rule → the actual structural change from k to k+1.",
+          "Two columns on the specification page → the boundary between mathematical guarantee and implementation validation."
+        ],
+        "boundary": "The conclusion applies only to the stated growth rule, not to arbitrary graphs. The base case cannot be skipped, one cannot assume that all n are already true, and the induction step cannot secretly alter or delete existing points or edges. The mathematical proof does not verify that a particular implementation follows the rules correctly.",
+        "reflection": "If the 20-point test also passes, why is the arbitrary k→k+1 derivation still needed? Conversely, why can that derivation fail to catch a bug that occasionally adds an extra edge?"
+      },
+      "references": [
+        {
+          "id": "0541-mathematical-induction-ref-1",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 5: Induction. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "Supports establishing a universal statement through a base case plus an induction step for an arbitrary valid k, and supports the point that finite checking does not replace a general proof."
+        },
+        {
+          "id": "0541-mathematical-induction-ref-2",
+          "citation": "Stanford University. CS103: Mathematical Induction, Part I, condensed lecture slides. Fall 2024, 23 October 2024.",
+          "url": "https://web.stanford.edu/class/archive/cs/cs103/cs103.1252/lectures/12/Condensed%20Lecture%20Slides.pdf",
+          "use": "Supports the base case, induction hypothesis, induction step, and domain coverage; this teaching material is not treated as the historical invention source of the proof method."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -1356,43 +1445,132 @@
       "fieldCode": "0542",
       "fieldTitle": "Statistics",
       "fieldTitleZh": "统计学",
-      "title": "The Bell That Rang for Eight Fires in Ten",
-      "titleZh": "十次火警响八次的钟",
-      "summary": "A warning bell detects eight of every ten fires, so the mayor assumes each alarm means an eighty-percent chance of fire.",
-      "summaryZh": "警钟能发现十场火里的八场，市长因此以为每次钟响都有八成可能着火。",
-      "storyParagraphs": [
-        "After a warehouse blaze killed six porters, Mayor Daro bought a warning bell and promised never to hesitate again. The maker said it rang in eight of every ten test fires. Daro announced that any ring therefore meant an eighty-percent chance of fire and ordered the entire city evacuated each time. The first steam-triggered alarm emptied the market, spoiled a day's fish, and injured two people in the crush. Merchants demanded that the bell be silenced; bereaved families demanded that it never be ignored.",
-        "Recorder Nemi laid out one thousand comparable nights. Fire had occurred on ten; the bell rang on eight of those and missed two. Among the 990 fire-free nights, steam, cooking smoke, and faults produced twenty rings. Thus the bell rang twenty-eight times in all, with fire present on eight: 8/28, about twenty-nine percent, not eighty. Before hearing anything, fire occurred on one percent of nights. After a ring, the chance rose sharply, but sensitivity was not the same question as the probability of fire given an alarm.",
-        "Daro accused Nemi of making a good bell look useless. She put one red bean for each fire alarm and one white bean for each false alarm into a bowl. Eight red among twenty-eight was enough to justify urgent checking, especially when missing a fire could kill people. It was not enough to claim certainty or empty every district without considering cost. The starting frequency and how often the evidence appeared with and without fire both changed the updated odds.",
-        "They added a heat probe beside the smoke bell. On the first trial, both devices reacted to the same bathhouse steam. Nemi refused to multiply them as two independent confirmations: shared causes made their errors related. Watchers began recording location, heat, smell, wind, and whether a second signal arose from a genuinely different source. Each item could revise the previous estimate, but none became the event itself.",
-        "A week before the election, the bell rang above the grain quarter during a crowded festival. The heat probe also rose, and a runner smelled burning oil at the marked warehouse. No flames were yet visible. Daro ordered a district evacuation, sent engines immediately, and left the rest of the city open, knowing another false alarm would be charged to him before the vote. Firefighters found a lamp fire behind stacked sacks before it reached the roof.",
-        "The targeted evacuation still cost the grain market a morning's trade, and Daro paid compensation from the celebration fund. The result did not prove that every future ring deserved the same action. Decisions also depended on the changing probability and unequal losses: a missed warehouse fire was far worse than a brief local closure, while evacuating the whole city carried its own dangers. The watch set response thresholds in advance and reviewed them as new records accumulated.",
-        "Nemi kept the old eighty-percent notice rather than burning it. She crossed out the sentence and wrote beneath it: 'eight of twenty-eight alarm nights had fire in this record.' At the next single ring, watchers ran toward the marked district while others checked the second source; no one declared a fire before looking. The bell rope still bore a red knot for each of the eight true alarms and a white knot for each false one."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "蓝贴旁的两本记录",
+      "summaryZh": "无编号模块只可能来自A或B两批；对眼前同型号返修件，当天记录给A/B先验1/4与3/4。蓝贴在A/B中的条件概率为1/2与1/6，更新后两边各1/2，于是林珂改变查找策略，但并未确认来源。",
       "storyParagraphsZh": [
-        "一场仓火夺走六名搬运工后，市长达罗买来新警钟，承诺以后绝不迟疑。制钟人说，十场试验火里它能响八次。达罗立即宣布，凡是钟响，起火可能就是八成，每次都要全城疏散。第一场由蒸汽触发的误报清空集市，鱼货坏了一天，还有两人在拥挤中受伤。商人要求封钟，死者家属则要求任何钟声都不能被轻视。",
-        "记录员内米摆出一千个可比较的夜晚。真正起火十晚，其中八晚响钟，漏掉两晚；其余九百九十个无火夜里，蒸汽、炊烟和故障又让钟响二十次。钟总共响二十八次，只有八次伴随火灾，即 8/28，约为百分之二十九，并非八成。听钟前，起火率仅百分之一；钟响后风险大幅上升，但“有火时会不会响”与“响时是否有火”不是同一问法。",
-        "达罗责怪内米把好警钟算成废物。她把每次真火警放一颗红豆，每次误响放一颗白豆，碗里二十八颗只有八颗红。这个比例足以要求迅速查验，特别是漏掉火灾可能死人；却不足以宣告确定，更不能不计代价地清空每个街区。原有发生率，以及证据在有火和无火时分别多常出现，都要进入更新后的判断。",
-        "他们又在烟钟旁加装热探头。第一次试验，两只装置竟同时受浴室蒸汽影响。内米不准把它们算成两份独立确认，因为共同原因会让错误相关。守夜人开始记录地点、温度、气味、风向，并检查第二个信号是否来自真正不同的来源。每一项都能在旧判断上继续修正，却没有哪一项等于事件本身。",
-        "选举前一周，拥挤节庆中，粮仓区警钟突然响起，热探头也升高，跑去查看的人在标记仓库闻到焦油味，却还看不见火。达罗下令只疏散粮仓区，立刻派水车，其余城区保持开放；若又是误报，投票前所有损失都会记到他头上。消防队在火苗爬上屋梁前，于粮袋后找到了倒下的油灯。",
-        "这次局部疏散仍让粮市损失半天，达罗从庆典预算中赔偿。一次成功不能证明未来每次铃响都该同样行动。决策还要看不断更新的概率与不对称损失：漏掉仓火可能夺命，短时封闭一片街区代价较小；全城撤离也会制造新的危险。守夜人预先设定响应阈值，并随新增记录复查。",
-        "内米没有烧掉旧告示，只划掉“钟响即八成有火”，在下面补写：“这份记录中，二十八个响钟夜有八次起火。”下一次只有一声警钟时，一队人奔向标记区，另一队核对第二来源，没有人先宣布已经着火。钟绳上仍系着八个红结，旁边是一串更多的白结。"
+        "维修台上有一只掉了编号的同型号充电模块，林珂得在A、B两本厚检修记录里找它。任务记录明确这类当天返修件只来自A、B两批；其中A约占1/4，B约占3/4。这些比例只是眼前这批同型号返修件的估计。两本记录各有几十页，她原本把B本先抽出来，准备优先查B。",
+        "翻模块时，她看见背面还粘着一角蓝色质检贴。当天批次记录另给出：若来自A，出现这种蓝贴的概率估为1/2；若来自B，约为1/6。蓝贴在A中更常见，但林珂没有把这个1/2直接当成“来源A的概率”，她把它记在便签上，给另一个来源也留了位置。",
+        "她把来源写成互斥且穷尽的H_A、H_B，把蓝贴记为E。A的未归一化权重是1/4×1/2=1/8；B的是3/4×1/6=1/8。总权重1/4，所以P(H_A|E)=1/2，P(H_B|E)=1/2。这里P(E|H_A)和P(H_A|E)数值碰巧都为1/2，却是不同条件量。",
+        "林珂把A记录本也抽到桌上。原来“先翻B，没找到再查A”的计划停了下来。两本索引都能先按日期查接口批次码，她把当天那一栏各夹一张纸，准备从这里往下找。A原本只有四分之一的把握，现在已经和B一样；几十页的B记录不再独占她的第一轮查找。便签上的数字还不足以填来源栏，却足以让A本从书架挪到手边。",
+        "接口码还没查到，蓝贴已经用过一次。林珂把它的两项权重留在便签上，没有又乘一遍；那不会给来源增加一条新线索。她准备接着查两批的接口码记录，但便签暂时只算到各1/2。若下一条信息和蓝贴有关，它就得连同已知蓝贴一起处理，而不能再被当成一枚无关的贴纸。",
+        "模块放在两本记录之间，背面的蓝贴还剩一角。便签上的两个1/8各引出一个1/2，A、B的索引页各夹着一张纸。她先沿当天的接口码栏找下去，两本书都没有收回。维修单上的来源栏依然空着。"
       ],
-      "conceptName": "Bayesian updating",
+      "overallZh": "贝叶斯更新在互斥且穷尽的假设下，用先验概率乘各假设下当前证据的条件概率，再归一化得到后验。本篇后验从1/4对3/4变为1/2对1/2，足以改变人物的查找计划，但不等于来源已确认。",
       "conceptNameZh": "贝叶斯更新",
-      "explanationParagraphs": [
-        "Bayesian updating combines a prior probability with how likely evidence is under competing hypotheses to produce a posterior probability. Base rates cannot be ignored, and dependent evidence cannot be counted repeatedly as independent. The updated probability informs but does not determine action; decisions also require comparing losses from different errors and outcomes."
-      ],
       "explanationParagraphsZh": [
-        "贝叶斯更新把先验概率与证据在不同假设下出现的相对可能性结合，得到后验概率。基础发生率不能忽略，相关证据也不能重复当作独立信息。更新后的概率仍只是判断输入；采取何种行动还需比较不同错误与结果的损失，并设定相应行动阈值。"
+        "A权重1/4×1/2=1/8，B权重3/4×1/6=1/8；总权重1/4，因此后验各为1/2。P(E|H_A)与P(H_A|E)在本题数值恰相同，但定义不同。",
+        "后续证据可以与蓝贴相关，更新时须使用正确的条件关系；后验概率本身也不唯一决定最优查找动作。"
       ],
-      "mode": "mechanism-fable",
+      "moduleZh": {
+        "intro": "让先验先影响原查找顺序，再用蓝贴重新分配来源权重，并把概率更新与行动选择分开。",
+        "diagramTitle": "A/B怎样从1/4对3/4更新成1/2对1/2",
+        "diagramSteps": [
+          "限定A/B为眼前同型返修件的互斥穷尽来源",
+          "写先验1/4、3/4及蓝贴似然1/2、1/6",
+          "算两个未归一化权重都为1/8",
+          "用总权重1/4归一化得到各1/2",
+          "改变查找策略但不把后验当来源确认或唯一决策"
+        ],
+        "diagramStepNotes": [
+          "先验只适用于本题当天同型号返修件。",
+          "P(E|H_A)=1/2，P(E|H_B)=1/6。",
+          "A和B权重恰好相同。",
+          "P(H_A|E)=P(H_B|E)=1/2。",
+          "后续相关证据需按条件关系建模，不能机械重复乘同一证据。"
+        ],
+        "mapping": [
+          "最先抽出的B记录本 → 先验影响的初始行动。",
+          "蓝贴 → 当前证据E。",
+          "两个1/8便签 → 更新前的未归一化权重。",
+          "并排的A/B索引页 → 后验改变计划但未确认来源。"
+        ],
+        "boundary": "A/B互斥穷尽和数值均为本题给定估计，不是普遍频率。P(E|H)与P(H|E)不能混淆，即便本题某两个数值碰巧相同。后续证据无需普遍独立，但必须正确建模条件关系；概率更新也不自动给出唯一最优行动。",
+        "reflection": "为什么蓝贴足以让林珂放弃“先只查B”，却还不足以让她把来源栏填成A？"
+      },
+      "referencesZh": [
+        {
+          "id": "0542-bayesian-updating-ref-1",
+          "citation": "Thomas Bayes. An Essay towards solving a Problem in the Doctrine of Chances. Philosophical Transactions of the Royal Society of London 53 (1763), 370–418; communicated by Richard Price.",
+          "url": "https://www.gtfp.cs.rhul.ac.uk/pulskamp/Bayes/bayesessay-rjp.pdf",
+          "use": "作为逆概率与条件概率推理的历史来源；不把现代符号、维修场景或本篇虚构数值归给原作者。"
+        },
+        {
+          "id": "0542-bayesian-updating-ref-2",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 17: Conditional Probability. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "支持条件概率、全概率与归一化计算，即用先验乘条件证据概率形成权重，再除以所有假设权重之和。"
+        }
+      ],
+      "title": "Two Logs Beside a Blue Sticker",
+      "summary": "An unnumbered module can come only from batches A or B. For the same-model returns in question, the day’s records assign priors of 1/4 and 3/4. The blue sticker has conditional probabilities 1/2 and 1/6 under A and B, so the updated probabilities become 1/2 each. Lin Ke changes her search strategy without confirming the source.",
+      "storyParagraphs": [
+        "An unnumbered charging module sits on the repair bench, and Lin Ke needs to locate it in two thick service logs for batches A and B. The task record states that same-model returns that day come only from those two batches: about 1/4 from A and 3/4 from B. Those proportions are estimates only for the same-model returns in this task. Each log has dozens of pages, so she initially pulls out the B log and plans to search B first.",
+        "When she turns the module over, she notices the corner of a blue quality-control sticker still attached to the back. The day’s batch record also states that if a module comes from A, the estimated probability of this blue sticker is 1/2; if it comes from B, the estimate is about 1/6. The sticker is more common under A, but Lin Ke does not treat that 1/2 directly as “the probability that the source is A.” She writes it on a note and leaves space for the other source.",
+        "She writes the mutually exclusive and exhaustive sources as H_A and H_B and labels the sticker evidence E. A’s unnormalized weight is 1/4×1/2=1/8. B’s is 3/4×1/6=1/8. The total weight is 1/4, so P(H_A|E)=1/2 and P(H_B|E)=1/2. In this problem, P(E|H_A) and P(H_A|E) happen to have the same numerical value, 1/2, but they are different conditional quantities.",
+        "Lin Ke pulls the A log onto the desk too. She pauses her original plan of searching B first and A only if needed. Both indexes let her look up interface batch codes by date, so she clips the relevant column in each and starts there. A had only a one-in-four chance; now it stands level with B. The dozens of pages in the B log no longer occupy her entire first search. The numbers on the note cannot fill the source field, but they are enough to bring the A book down from the shelf.",
+        "The interface code has not been checked yet; the blue sticker has already been used once. Lin Ke leaves its two weights on the note rather than multiplying them again, which would add no new clue about the source. She prepares to check the code records for both batches, but for now the note ends at 1/2 each. If the next information is related to the sticker, it must be handled together with what is already known about the sticker, rather than treated as unrelated evidence.",
+        "The module sits between the two logs, a corner of the blue sticker still on its back. Each 1/8 on the note leads to a 1/2, and one slip marks the index in each book. She starts down the interface-code column for the date, keeping both books open. The source field on the repair form remains blank."
+      ],
+      "overall": "Bayesian updating combines prior probabilities with the conditional probability of the observed evidence under each mutually exclusive and exhaustive hypothesis, then normalizes to obtain posterior probabilities. Here the posterior moves from 1/4 versus 3/4 to 1/2 versus 1/2, enough to change the character’s search plan without confirming the source.",
+      "conceptName": "Bayesian updating",
+      "explanationParagraphs": [
+        "A’s weight is 1/4×1/2=1/8 and B’s is 3/4×1/6=1/8. The total weight is 1/4, so both posteriors are 1/2. P(E|H_A) and P(H_A|E) happen to be numerically equal here, but they have different definitions.",
+        "Later evidence may be related to the blue sticker; any further update must use the correct conditional relationship. Posterior probabilities also do not uniquely determine the best search action."
+      ],
+      "module": {
+        "intro": "Let the prior affect the original search order, then use the blue-sticker evidence to redistribute source weights while keeping probability updating separate from action choice.",
+        "diagramTitle": "How A/B Moves from 1/4 vs 3/4 to 1/2 vs 1/2",
+        "diagramSteps": [
+          "Restrict A/B to the mutually exclusive and exhaustive sources for these same-model returns",
+          "Write priors 1/4 and 3/4 and blue-sticker likelihoods 1/2 and 1/6",
+          "Compute both unnormalized weights as 1/8",
+          "Normalize by total weight 1/4 to obtain 1/2 each",
+          "Change the search strategy without treating the posterior as source confirmation or a unique decision rule"
+        ],
+        "diagramStepNotes": [
+          "The priors apply only to the same-model returns in this task and on that day.",
+          "P(E|H_A)=1/2 and P(E|H_B)=1/6.",
+          "The A and B weights are exactly equal.",
+          "P(H_A|E)=P(H_B|E)=1/2.",
+          "Later related evidence must be modeled through the correct conditional relationship; the same evidence is not mechanically multiplied again."
+        ],
+        "mapping": [
+          "B log pulled first → the action initially influenced by the prior.",
+          "Blue sticker → the current evidence E.",
+          "Two 1/8 notes → the unnormalized weights after incorporating the evidence.",
+          "A/B index pages side by side → the posterior changes the plan without confirming the source."
+        ],
+        "boundary": "A/B being mutually exclusive and exhaustive, and all numerical values, are assumptions for this task rather than universal frequencies. P(E|H) and P(H|E) must not be confused even when two numerical values happen to match here. Later evidence need not generally be independent, but its conditional relationship must be modeled correctly; probability updating also does not automatically specify a unique optimal action.",
+        "reflection": "Why is the blue sticker enough for Lin Ke to abandon “search only B first,” but still not enough for her to fill the source field with A?"
+      },
+      "references": [
+        {
+          "id": "0542-bayesian-updating-ref-1",
+          "citation": "Thomas Bayes. An Essay towards solving a Problem in the Doctrine of Chances. Philosophical Transactions of the Royal Society of London 53 (1763), 370–418; communicated by Richard Price.",
+          "url": "https://www.gtfp.cs.rhul.ac.uk/pulskamp/Bayes/bayesessay-rjp.pdf",
+          "use": "Serves as a historical source for inverse-probability and conditional-probability reasoning; the modern notation, repair scenario, and fictional numerical example in this article are not attributed to the original author."
+        },
+        {
+          "id": "0542-bayesian-updating-ref-2",
+          "citation": "Eric Lehman, F. Thomson Leighton, Albert R. Meyer. Mathematics for Computer Science, Chapter 17: Conditional Probability. MIT OpenCourseWare, revised 18 May 2015.",
+          "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook.pdf",
+          "use": "Supports conditional probability, total probability, and normalization: form weights by multiplying priors by conditional evidence probabilities, then divide by the sum of all hypothesis weights."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     }
   ]

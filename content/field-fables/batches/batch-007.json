@@ -707,43 +707,132 @@
       "fieldCode": "0511",
       "fieldTitle": "Biology",
       "fieldTitleZh": "生物学",
-      "title": "Good Seed in the Wrong Valley",
-      "titleZh": "种在错误山谷里的好种子",
-      "summary": "The most productive wheat from Gold Valley is sent to Mist Valley and loses its first contest to an overlooked local seed.",
-      "summaryZh": "金谷最丰产的麦种被送到雾谷后，第一次输给了原本不起眼的另一袋种子。",
-      "storyParagraphs": [
-        "Gold Valley's farmers needed a wheat recommendation before the autumn seed fair. A five-village contract would keep the small trial station open through winter. The agricultural instructor planted the inherited Red-awn and Green-stem lines in alternating dry-valley plots. Red-awn yielded twenty-four baskets per plot; Green-stem yielded nineteen. She tied a gold 'best seed' label to the Red-awn sack. The result was real, repeated across Gold Valley, and financially difficult to ignore.",
-        "Farmers from damp, windy Mist Valley paid a premium for the winner. By midsummer, Red-awn stood tall and then lodged after three storms, producing only eight baskets per plot. A narrow strip of ordinary Green-stem stayed upright and produced fourteen. The instructor blamed planting depth and asked them to follow the Gold Valley instructions once more. One badly managed season seemed too weak to overturn orderly trials, so the gold label remained on every sack.",
-        "The next year she divided both lines between both valleys, matching sowing date, plot size and density. In dry Gold Valley, Red-awn again led, twenty-three baskets to eighteen. In Mist Valley, the order reversed, nine to fifteen. The inherited difference was not one fixed number that could be carried unchanged from one field to another. Wet wind did not turn Red-awn into Green-stem, nor did dry soil erase the difference between their seeds; it changed how that difference appeared in harvest.",
-        "Disease counts added another crack. Red-awn's taller, denser canopy retained moisture in Mist Valley and showed more leaf fungus; that disadvantage nearly vanished in the drier valley. An assistant suggested declaring Green-stem the true champion instead. The instructor shook her head and set the four harvest cards side by side. A new universal winner would repeat the old error: the gap could narrow, widen or reverse as growing conditions changed.",
-        "Five hundred gold labels had already been printed, and the guild opened in two days. The instructor pulled down the all-region notice, refunded Mist Valley's premium and lost one village order. With that order went the station's new threshing floor. She sold smaller paired lots instead: Red-awn for conditions like the tested dry fields, Green-stem for the tested damp, windy fields, each marked with a date and place rather than a promise about every farm.",
-        "Winter review cost another month. For every plot she recorded seed source, moisture, wind, soil and disease. She did not say inherited differences were unreal; the two lines repeatedly responded differently. She also refused to blame either valley as simply good or bad. The evidence belonged to particular combinations of seed and surroundings, and a new season or field still required a smaller trial before a broad recommendation.",
-        "At the next fair, four sacks stood on the instructor's table: Red-awn from Gold Valley, Red-awn from Mist Valley, Green-stem from Gold Valley and Green-stem from Mist Valley. She cut the old gold label into four strips and tied one beneath each yield card. No strip carried the words 'best everywhere'."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "抽屉里的“+4厘米”",
+      "summaryZh": "孟乔原想把四个教学组合等权概括成“较暖平均+4 cm”。每格同样6盆重复，A从10到16、B从8到10；拆开后分别是+6和+2，说明统一平均会隐藏两种基因型不同的环境响应。",
       "storyParagraphsZh": [
-        "金谷农会必须在秋季种展前给出一项麦种推荐，拿下五个村的合同，试验站才能撑过冬天。农师把可遗传的赤芒麦与青秆麦交替种进干谷小区。赤芒每区收二十四篮，青秆十九篮。她把“最佳麦种”的金标签系上赤芒种袋。结果真实，也在金谷多块田里重复过，站在账本前很难忽略。",
-        "潮湿多风的雾谷农人按高价买走冠军种。盛夏三场风雨过后，赤芒高秆大片倒伏，每区只收八篮；一条不起眼的青秆旧种却站得稳，收了十四篮。农师先把差距归给播种深度，要他们照金谷说明再试。一次管理不佳的收成看似不足以推翻整齐试验，金标签便继续留在每只袋上。",
-        "下一年，她把两种麦同时分到两座山谷，尽量配平播期、面积和密度。干燥金谷里，赤芒仍以二十三篮领先十八篮；雾谷的顺序却反转为九篮对十五篮。遗传差异不是一个能原封不动搬进任何田地的数字。湿风没有把赤芒变成青秆，干土也没抹掉种子差别；改变的是差别如何落在收成上。",
-        "病害记录又添了一道裂缝。赤芒较高密的冠层在雾谷留住湿气，叶部真菌更多；到了干燥金谷，这项劣势几乎消失。助手提议改称青秆才是真冠军，农师摇头，把四张产量卡并排铺开。换一个万能赢家，仍会重复旧错：环境一变，差距可能缩小、扩大，也可能反转。",
-        "五百张金标签已经印好，两天后行会开门。农师撤下“全地区最佳”的告示，退还雾谷溢价，也失去一个村的订单；试验站原定的新脱粒场随之取消。她改卖小份配对种包：赤芒标明适合已测试的干地，青秆标明在已测试湿风田更强，每袋都写日期与山谷，不再许诺所有农田。",
-        "冬季复核又花去一个月。她为每块地记录种源、水分、风、土壤与病害。两条品系反复作出不同反应，遗传差异并未消失；她也不再把某座山谷笼统说成好或坏。证据属于种子与周围条件的具体组合，新季节、新土地仍应先做小块试种。",
-        "下一次展会，农师桌上摆着四只袋：金谷赤芒、雾谷赤芒、金谷青秆、雾谷青秆。她把旧金标签剪成四条，分别系在产量卡下面。没有一条再写“处处最佳”。"
+        "孟乔要在温室开放日前做好一块两因素展示牌。她准备A、B两种基因型，每个“基因型×环境”组合各放6盆重复；同一基因型的材料内部一致，盆栽在各自指定温区内随机轮换位置，浇水和光照时长匹配。四格都记录14天的茎长增量。她原想把它们等权概括成一句：“较暖平均让植株多长4 cm。”",
+        "四张虚构教学均值卡分别是：A常温10 cm、A较暖16 cm；B常温8 cm、B较暖10 cm。因为每格重复数相同，若只做等权的两基因型平均，较暖相对常温的平均差确实是[(16+10)/2]−[(10+8)/2]=4 cm。那块“+4”牌子并非算错。",
+        "问题出在她把平均概括当成了两种基因型都共享的固定响应。孟乔先在A组前算16−10=+6 cm，再走到B组算10−8=+2 cm。她把“+4”纸牌夹在中间，又把+6、+2贴到两侧；三个数字同时出现后，统一箭头明显会遮掉两组不同的环境响应。",
+        "她改成两条响应线：A从10连到16，B从8连到10。A的茎长增量在两个环境中始终大于B，没有排名反转；但两条线斜率不同。反向看也一致：常温A−B=2 cm，较暖A−B=6 cm，基因型之间的差值随环境改变。",
+        "孟乔把24盆的标签重新按组合核过一遍，确认四格各6盆，随机轮换记录也完整。这样能减少某一排长期更亮、照料不一致或等权汇总权重不同的解释；但这些仍是教学设定的均值，没有做抽样误差或统计显著性检验，也没有定位任何具体分子通路。",
+        "开放日前，孟乔把统一“+4 cm”牌收回抽屉。墙上留下四格均值、每格6盆的标记和两条不同斜率的线；线下写着“14天茎长增量”。参观者先看四组盆栽，再沿两条线找差值。旁边的下一块板还是空的，留给别的环境或结果尺度。抽屉没关严，+4纸牌露出一角。"
       ],
-      "conceptName": "Gene-environment interaction",
+      "overallZh": "基因与环境交互关注一个因素的效应是否随另一个因素改变。本篇在加法尺度、四格等权的教学设定下，A的环境差值为+6 cm、B为+2 cm；总体+4 cm平均虽然算术正确，却会隐藏这种差异模式。",
       "conceptNameZh": "基因与环境交互",
-      "explanationParagraphs": [
-        "Gene–environment interaction occurs when the effect of genetic variation differs across environments, so trait differences may shrink, widen or reverse between settings. It is more specific than saying both genes and environment matter. Detecting it requires comparable genotypes across relevant conditions and adequate replication. It does not imply genetic effects are unreal or that every environmental change produces a different ranking."
-      ],
       "explanationParagraphsZh": [
-        "基因与环境交互是指遗传差异的效应会随环境改变，因此品系间的表现差距可能缩小、扩大或反转。它比“遗传和环境都重要”更具体，通常需把可比较基因型置于相关条件中并充分重复。交互不表示遗传效应虚假，也不表示环境每变一次，排名必然反转。"
+        "每格同为6盆，所以等权总体环境差为4 cm；拆开后A是+6、B是+2，常温A−B=2而较暖A−B=6，不需要排名反转。",
+        "这只描述虚构教学均值中的交互模式，没有做显著性检验，也不能由此推出具体基因分子机制。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先确认等权总体+4 cm没有算错，再拆开四格看这个平均是否掩盖不同基因型的响应。",
+        "diagramTitle": "同样得到总体+4，为什么A的+6和B的+2仍重要",
+        "diagramSteps": [
+          "设置A/B×常温/较暖四格且每格6盆",
+          "按等权平均核对总体环境差为+4 cm",
+          "分别计算A的+6与B的+2",
+          "反向比较基因型差值2与6",
+          "用两条响应线替换统一固定效应表达"
+        ],
+        "diagramStepNotes": [
+          "四格均为14天茎长增量；同一基因型材料一致，盆栽在指定温区内随机轮换，照料匹配。",
+          "[(16+10)/2]−[(10+8)/2]=4 cm。",
+          "A：16−10=6 cm；B：10−8=2 cm。",
+          "常温A−B=2 cm；较暖A−B=6 cm。",
+          "排名不需反转；这里只描述教学均值模式。"
+        ],
+        "mapping": [
+          "四格各6盆 → 等权总体平均的前提。",
+          "被收回的+4 cm牌 → 算术正确但信息不足的概括。",
+          "+6/+2标签 → 同一加法尺度上的不同环境响应。",
+          "两条不同斜率的线 → 不依赖排名反转的交互模式。"
+        ],
+        "boundary": "数据是虚构教学均值，不是真实实验结果。交互判断依赖结果尺度；本篇只讨论加法尺度。随机、重复和相同格数可减少位置、照料及权重混杂，但没有统计显著性检验，也不能定位具体分子机制或支持基因决定论。",
+        "reflection": "为什么“总体平均+4 cm”可以算得完全正确，却仍不足以描述A和B分别怎样响应较暖环境？"
+      },
+      "referencesZh": [
+        {
+          "id": "0511-gene-environment-interaction-ref-1",
+          "citation": "National Human Genome Research Institute. Gene Environment Interaction. Talking Glossary of Genomic and Genetic Terms.",
+          "url": "https://www.genome.gov/genetics-glossary/Gene-Environment-Interaction",
+          "use": "支持环境效应可随基因型不同而不同，或基因型效应可随环境不同而不同；本篇为非医疗教学情境。"
+        },
+        {
+          "id": "0511-gene-environment-interaction-ref-2",
+          "citation": "Ruth Ottman. Gene–Environment Interaction: Definitions and Study Designs. Preventive Medicine 25(6) (1996), 764–770. doi:10.1006/pmed.1996.0117.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2823480/",
+          "use": "支持统计交互依赖所选测量尺度，并提醒统计交互不能直接等同于已证实的具体分子机制。"
+        }
+      ],
+      "title": "The “+4 cm” Sign in the Drawer",
+      "summary": "Meng Qiao initially wants to summarize the four teaching combinations as “warmer conditions add an average of 4 cm.” Each cell has the same six replicate pots. A rises from 10 to 16 and B from 8 to 10; separating them gives +6 and +2, showing that the single average hides different environmental responses by the two genotypes.",
+      "storyParagraphs": [
+        "Meng Qiao needs to finish a two-factor display before the greenhouse open day. She prepares genotypes A and B, with six replicate pots in each genotype×environment combination. Material is internally consistent within each genotype; pots rotate through randomized positions within their assigned temperature zone, with watering and light duration matched. Every cell records the increase in stem length over 14 days. She plans to summarize them with equal weights: “Warmer conditions add 4 cm on average.”",
+        "The four fictional teaching mean cards read: A at normal temperature 10 cm, A warmer 16 cm; B at normal temperature 8 cm, B warmer 10 cm. Because every cell has the same number of replicates, the equal-weight average environmental difference across the two genotypes really is [(16+10)/2]−[(10+8)/2]=4 cm. The “+4” sign is not an arithmetic mistake.",
+        "The problem appears when she treats that average summary as a fixed response shared by both genotypes. In front of A she calculates 16−10=+6 cm, then walks to B and calculates 10−8=+2 cm. She clips the “+4” sign in the middle and places +6 and +2 beside the two groups. Once all three numbers are visible together, the single arrow clearly hides different environmental responses.",
+        "She replaces it with two response lines: A connects 10 to 16, while B connects 8 to 10. A’s stem-length increment remains larger than B’s in both environments, so there is no ranking reversal, but the slopes differ. The reverse comparison tells the same story: A−B=2 cm at normal temperature and A−B=6 cm under the warmer condition, so the genotype difference itself changes with environment.",
+        "Meng Qiao checks the labels on all 24 pots by combination and confirms that each cell contains six pots and that the random-rotation record is complete. That reduces explanations based on one row being brighter for longer, inconsistent care, or unequal weighting in the aggregate. But these remain teaching means; there is no sampling-error or statistical-significance analysis, and no specific molecular pathway has been identified.",
+        "Before the open day, Meng Qiao returns the single “+4 cm” sign to the drawer. The wall keeps the four means, six-pots-per-cell labels and two differently sloped lines, with “14-day increase in stem length” written below. Visitors look at the four groups of plants before following the lines to their differences. The next board remains blank for a different environment or response scale. The drawer is not quite shut; one corner of the +4 sign shows."
+      ],
+      "overall": "Gene-environment interaction asks whether the effect of one factor changes across levels of another. In this teaching setup, on an additive scale with equally weighted cells, A shows an environmental difference of +6 cm and B +2 cm. The overall +4 cm average is arithmetically correct but hides that interaction pattern.",
+      "conceptName": "Gene-environment interaction",
+      "explanationParagraphs": [
+        "Each cell has six pots, so the equal-weight overall environmental difference is 4 cm. Separately, A is +6 and B is +2; A−B is 2 at normal temperature and 6 under warmer conditions, without any need for a ranking reversal.",
+        "This describes an interaction pattern in fictional teaching means only. No significance test has been performed, and no specific molecular genetic mechanism can be inferred from it."
+      ],
+      "module": {
+        "intro": "First confirm that the equal-weight overall +4 cm is not mathematically wrong, then open the four cells to see whether that average hides different genotype responses.",
+        "diagramTitle": "If the Overall Average Is +4, Why Do A’s +6 and B’s +2 Still Matter?",
+        "diagramSteps": [
+          "Set up A/B × normal/warmer cells with six pots in every cell",
+          "Check the equal-weight overall environmental difference of +4 cm",
+          "Calculate A’s +6 and B’s +2 separately",
+          "Compare genotype differences of 2 and 6 in the opposite direction",
+          "Replace one fixed-effect arrow with two response lines"
+        ],
+        "diagramStepNotes": [
+          "Every cell measures the 14-day increase in stem length; material within a genotype is consistent, pots rotate within their assigned temperature zone, and care is matched.",
+          "[(16+10)/2]−[(10+8)/2]=4 cm.",
+          "A: 16−10=6 cm; B: 10−8=2 cm.",
+          "At normal temperature A−B=2 cm; under warmer conditions A−B=6 cm.",
+          "No ranking reversal is required; this describes a pattern in the teaching means."
+        ],
+        "mapping": [
+          "Six pots in each of four cells → the condition supporting the equal-weight grand average.",
+          "Removed +4 cm sign → an arithmetically correct but incomplete summary.",
+          "+6/+2 labels → different environmental responses on the same additive scale.",
+          "Two response lines with different slopes → an interaction pattern without a rank reversal."
+        ],
+        "boundary": "The data are fictional teaching means, not real experimental results. Interaction depends on the response scale; this article discusses only the additive scale. Randomization, replication, and equal cell sizes reduce position, care, and weighting confounds, but no statistical-significance test has been conducted, and no specific molecular mechanism or genetic determinism follows from the four means.",
+        "reflection": "Why can the overall average of +4 cm be completely correct and still fail to describe how A and B separately respond to the warmer environment?"
+      },
+      "references": [
+        {
+          "id": "0511-gene-environment-interaction-ref-1",
+          "citation": "National Human Genome Research Institute. Gene Environment Interaction. Talking Glossary of Genomic and Genetic Terms.",
+          "url": "https://www.genome.gov/genetics-glossary/Gene-Environment-Interaction",
+          "use": "Supports the idea that environmental effects can differ across genotypes, or genotype effects can differ across environments; this article uses a nonmedical teaching scenario."
+        },
+        {
+          "id": "0511-gene-environment-interaction-ref-2",
+          "citation": "Ruth Ottman. Gene–Environment Interaction: Definitions and Study Designs. Preventive Medicine 25(6) (1996), 764–770. doi:10.1006/pmed.1996.0117.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2823480/",
+          "use": "Supports the point that statistical interaction depends on the chosen measurement scale and that statistical interaction does not by itself establish a specific molecular mechanism."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -1158,39 +1247,132 @@
       "fieldCode": "0521",
       "fieldTitle": "Environmental sciences",
       "fieldTitleZh": "环境科学",
-      "title": "The Wasteland That Sent a Bill",
-      "titleZh": "寄来账单的荒地",
-      "summary": "A harbour leases its marsh as empty land, then pays separately for flood storage, cleaner water and young fish habitat.",
-      "summaryZh": "港镇把湿地当作空地出租，随后又分别为蓄洪、净水和幼鱼生境支付代价。",
-      "storyParagraphs": [
-        "Mayor Del needed warehouse leases before the council's winter budget. Beyond the harbour wall lay thirty hectares of reed marsh that paid no rent and looked empty at low tide. A trading company offered enough to keep the clinic and ferry operating if the town filled half the marsh, straightened its channels and built three sheds. Fisher Sula brought a woven mat of reed roots to the hearing and asked the council to count what happened there. Del counted only registered goods and wages. The lease was signed; stone fill created dry ground within four months, and eighty dock workers received pay.",
-        "The first autumn storm was not unusually high, yet water reached the fish market steps. Tide gauges showed the same peak as an earlier storm that the wider marsh had spread across shallow channels and vegetation. Now embankments sent more water toward the quay. The company said one flood could not be charged to its sheds, so Del bought larger pumps. They kept the market open during the next tide, but fuel, operators and maintenance consumed a third of the new lease revenue.",
-        "By spring, Sula's nets near the estuary held fewer juvenile mullet. Surveys found many young fish in the remaining creek edges and very few along the stone fill. Water leaving an upstream drainage ditch also carried more suspended sediment toward shellfish beds after part of the vegetated route had been cut off. The marsh had not produced invoices while it slowed water, trapped some material and provided sheltered nursery space. Removing different pieces did not create one identical loss; it exposed several functions whose replacements belonged to different budgets.",
-        "The ten-year lease lay open at the next hearing, with the buyback price written across its margin. Del signed beneath that larger number and ordered one embankment breached. Compensation cancelled a planned market roof, and dismantling a half-finished foundation wasted stone already paid for. Tidal flow returned to part of the site, while pumps remained necessary because restoration was incomplete and stronger storms still exceeded what the marsh could absorb. Fish counts improved over three seasons, not overnight. The clinic stayed open, but ferry fares rose when lease income fell.",
-        "At the next budget hearing, Sula laid the old reed-root mat across Del's ledger. Under it sat three separate papers: pump fuel, channel restoration and lost shellfish revenue. Del did not assign the marsh one magical price. He left the papers visible beside the warehouse lease before the council voted on the last dry parcel. Outside, new reed shoots had just crossed the ebb line."
-      ],
+      "mode": "lens-fable",
+      "titleZh": "花篱只开了两米",
+      "summaryZh": "苏岚原计划整条清掉花篱来扩大拖车转弯空间。她把清理推迟到果实初期可比较结果之后，并用同样开袋、触碰和时长的两种网袋处理，只让一组真正转移花粉；结果改变了她清多少，而不是让她宣称花篱贡献已经被测出。",
       "storyParagraphsZh": [
-        "德尔镇长必须在冬季预算前拿到仓库租金。港墙外有三十公顷芦苇湿地，退潮时像一片不交租的空地。贸易公司答应，只要填掉一半湿地、拉直水道并建三座货棚，租金便足够维持诊所和渡船。渔民苏拉带来一张芦根编垫，请议会把湿地里发生的事也算进去。德尔只统计登记货物与工资，最终签下租约。四个月内，石料填出干地，八十名码头工人领到薪水。",
-        "第一场秋季风暴并不比往年特别高，水却漫到鱼市台阶。潮位记录显示，早先一次同等峰值曾被较宽的湿地分散进浅沟与植被，如今堤岸把更多水推向码头。公司说不能把一场洪水记到三座货棚名下，德尔便买来大泵。下一次涨潮时，泵保住了市场，燃料、操作员和维修费却吃掉新增租金的三分之一。",
-        "到了春天，苏拉在河口的网里很少再见幼鲻鱼。调查员在剩余溪沟边找到许多幼鱼，石填岸旁却近乎没有；上游排水沟流来的悬浮泥沙，在一段有植被的路径被截断后，也更容易抵达贝床。湿地过去减慢水流、截留部分物质、提供隐蔽育幼空间时不会开账单。不同部分被移除后，出现的也并非同一项损失，而是落进防洪、渔业和水质三本预算的不同后果。",
-        "下一次听证会上，十年租约摊在桌面，买回未开工地块的价钱横写在页边。德尔在那个更大的数字下签名，又命人拆开一道堤。赔偿金取消了原定鱼市顶棚，拆除半成品地基也浪费了已付钱的石料。潮水重新进入部分湿地，可修复并不完整，强风暴仍可能超过它能缓冲的程度，大泵也须保留。鱼类计数经过三个产季才有所回升。诊所没有关闭，渡船却因租金减少而涨价。",
-        "下一次预算听证，苏拉把旧芦根垫铺在德尔账本上。垫子下面压着三张纸：泵油费、沟道修复费、贝类损失。德尔没有给湿地写下一个万能价格，只让这些纸与仓库租约一起摊开，再请议会表决最后一块干地。窗外，新芦芽刚刚越过退潮线。"
+        "苏岚拿着卷尺站在果园北侧花篱前。粉笔画出的拖车转弯弧线只切进花篱中间约两米，但她原本打算干脆整条清掉，省得以后再修剪。正赶上果树开花，她发现花篱和树行之间有访花昆虫来回，于是把整条清理计划推迟到果实初期的比较完成后再决定。",
+        "她在多棵树的相近枝位随机分配三种处理。开放花保持原状；另外两组在开花初期套同样透气网袋。每天同一时间，两种网袋组都打开相同时长，用各自的小刷以相同次数触碰柱头——花朵接收花粉的部位。假处理用未沾花粉的干净刷；另一组的刷先取兼容花粉，再以相同动作触碰，然后同时重新套袋。苏岚把处理位置画在小地图上，花篱近处、远处都留有比较枝。",
+        "各处理分散在多棵树上，日常浇水和照料一致。苏岚每天只检查网袋是否完整、记录处理编号，没有因为某组看起来弱就临时补操作。这样仍不能保证袋内温湿度与开放花完全相同，但至少两种网袋处理的开袋、触碰和时长是匹配的。",
+        "到果实初期，虚构记录显示：网袋假处理组结果表现较弱，而同样网袋、同样触碰但真正转移花粉的一组有所恢复。这个差异支持“授粉不足参与了网袋组的较弱表现”，却没有追踪开放花上的访花昆虫来自哪里，更不能分解这条花篱到底贡献了多少。她把开放花的记录放在旁边只作背景参照，没有用它单独估算花篱贡献。",
+        "苏岚回到最初的粉笔弧线。拖车真正需要的只是中间约两米，她便把整条红线擦掉，只留弧线重叠的一段。清掉这一段能换来什么空间，卷尺已经量过；保留其余花篱能提供多少授粉帮助，小比较还答不了。她先做移除较少、拖车照样能过的选择，在地块图上给剩余花篱添了一个待观察记号。",
+        "清理日，工人只移走粉笔弧线压到的那两米。拖车顺利转过新开的缺口，剩余花篱还在树行旁。苏岚把卷尺收起，在地块图上把整条删除线改成一个短缺口。粉笔弧线仍留在地面上，缺口刚好覆盖拖车实际需要的转弯范围。"
       ],
-      "conceptName": "Ecosystem services",
+      "overallZh": "生态系统服务把生态过程与人的具体受益连接起来。本篇只识别一条授粉服务路径：生态空间可能支持访花活动，授粉又可能改善果树繁殖结果，从而影响果园经营；故事没有量化这条花篱本身的具体贡献。",
       "conceptNameZh": "生态系统服务",
-      "explanationParagraphs": [
-        "Ecosystem services are benefits people obtain from ecological processes, including provisioning, regulating and cultural benefits and the supporting processes behind them. Wetlands may attenuate some floods, retain nutrients or sediment and provide nursery habitat, but effects depend on location, condition and event size. Valuation can reveal hidden trade-offs without implying every relationship has one market price or that engineered substitutes are equivalent."
-      ],
       "explanationParagraphsZh": [
-        "生态系统服务指人们从生态过程获得的供给、调节、文化等收益及其支撑过程。湿地可能缓冲部分洪水、截留养分或泥沙，并提供育幼生境，但效果取决于位置、状态和事件强度。估值可揭示原本未入账的取舍，却不表示每种关系都有唯一市价，也不表示工程替代物完全等同。"
+        "两种网袋处理具有相同开袋、触碰和时长，关键差别是是否真正转移花粉，因此人工授粉后的恢复支持授粉不足参与结果差异。",
+        "开放花上的昆虫来源未被追踪，所以不能把授粉差异直接归因于花篱。金额也不是识别生态受益的唯一方式。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "先锁定实际只需清理约两米的空间任务，再用匹配处理判断授粉这条受益路径是否值得纳入决定。",
+        "diagramTitle": "从整条清除到只开两米缺口，证据怎样改变土地选择",
+        "diagramSteps": [
+          "用转弯弧线确定真正需要的空间范围",
+          "把整条清理推迟到果实初期比较完成",
+          "设置开放、网袋假处理、网袋人工授粉三类处理",
+          "用匹配操作识别授粉不足可能参与结果差异",
+          "只清弧线重叠段并保留其余花篱继续观察"
+        ],
+        "diagramStepNotes": [
+          "粉笔弧线只压到花篱中间约两米。",
+          "时间上先完成比较，再决定整条是否清除。",
+          "两种网袋组开袋、触碰、时长相同，仅花粉转移不同。",
+          "结果支持授粉不足，但不识别昆虫来源或花篱贡献份额。",
+          "最终实际只移除两米，拖车已能通过。"
+        ],
+        "mapping": [
+          "卷尺与粉笔弧线 → 可直接验证的空间需求。",
+          "两组匹配网袋 → 区分花粉转移与操作本身。",
+          "人工授粉恢复 → 授粉过程可能影响果树结果的证据。",
+          "两米缺口 → 有限证据下实际改变的土地决定。"
+        ],
+        "boundary": "网袋处理不能保证与开放花的微环境完全相同，但网袋两组的操作被匹配。虚构比较不能证明访花者来自花篱，也不能量化该花篱的具体授粉贡献。生态系统服务强调生态过程到人的受益联系，不要求把所有自然价值换算成货币。",
+        "reflection": "这个比较支持授粉会影响果树结果，却还不能确定花篱贡献。若要判断清掉其余花篱会不会减少受益，下一步需要补什么证据？"
+      },
+      "referencesZh": [
+        {
+          "id": "0521-ecosystem-services-ref-1",
+          "citation": "Millennium Ecosystem Assessment. Ecosystems and Human Well-being: A Framework for Assessment, Chapter 1: Introduction and Conceptual Framework. Island Press (2003).",
+          "url": "https://www.millenniumassessment.org/documents/document.299.aspx.pdf",
+          "use": "支持把生态过程与人从生态系统获得的具体益处和受益者联系起来，并区分不同服务类别；该框架不意味着所有自然价值都必须标价。"
+        },
+        {
+          "id": "0521-ecosystem-services-ref-2",
+          "citation": "Taylor H. Ricketts, Gretchen C. Daily, Paul R. Ehrlich, Charles D. Michener. Economic value of tropical forest to coffee production. PNAS 101(34) (2004), 12579–12582. doi:10.1073/pnas.0405147101.",
+          "url": "https://doi.org/10.1073/pnas.0405147101",
+          "use": "支持通过授粉实验、距离和收益估算来研究森林与作物授粉服务的比较思路；原研究咖啡中的具体数值不移植到本篇虚构果园。"
+        }
+      ],
+      "title": "A Two-Meter Gap in the Hedge",
+      "summary": "Su Lan originally plans to clear the entire hedgerow to widen a trailer turning area. She postpones the decision until comparable early-fruit results are available and uses two bagged-flower treatments with the same opening, touching, and timing, with actual pollen transfer added only to one group. The result changes how much she clears without letting her claim that the hedgerow’s contribution has been measured.",
+      "storyParagraphs": [
+        "Su Lan stands beside the hedgerow on the north side of the orchard with a measuring tape. The chalked trailer-turning arc cuts into only about two meters of the middle of the hedge, but she had planned to clear the whole strip to avoid future pruning. The fruit trees are flowering, and she notices flower-visiting insects moving between the hedge and the tree rows. She postpones the full clearing decision until the early-fruit comparison is complete.",
+        "She randomly assigns three treatments to comparable branch positions across several trees. Open flowers remain untouched; the other two groups receive identical breathable bags at the start of flowering. At the same time each day, both bagged groups open for the same duration, and separate brushes touch the stigmas—the pollen-receiving parts—the same number of times. The sham group uses a clean brush without pollen; the other brush picks up compatible pollen before making the same contact. Both groups are rebagged together. Su Lan maps the treatments, leaving comparison branches both near and farther from the hedge.",
+        "The treatments are spread across multiple trees, with routine watering and care kept the same. Each day Su Lan only checks that the bags are intact and records the treatment labels; she does not add extra handling because one group appears weaker. This still does not guarantee that the bagged flowers have exactly the same temperature and humidity as open flowers, but the two bagged treatments do match opening time, touching, and duration.",
+        "By early fruit development, the fictional record shows weaker fruiting performance in the bagged sham-treatment group, while the similarly bagged and similarly handled group receiving actual pollen transfer shows some recovery. That difference supports the idea that insufficient pollination contributes to the weaker bagged result. It does not trace where the insects on the open flowers came from, and it cannot separate out how much of the effect belongs specifically to this hedgerow. She keeps the open-flower records alongside as background, without using them alone to estimate the hedge’s contribution.",
+        "Su Lan returns to the original chalk arc. The trailer needs only about two meters in the middle, so she erases the full removal line and keeps just the overlapping section. The tape has already measured the space gained by clearing it; the small comparison cannot yet say how much pollination help the rest of the hedge provides. She chooses the option that removes less while still letting the trailer pass and adds an observation mark beside the remaining hedge on the field map.",
+        "On clearing day, the workers remove only the two meters crossed by the chalked turning arc. The trailer passes through the new opening successfully, while the remaining hedge stays beside the tree row. Su Lan puts away the measuring tape and changes the full deletion line on the field map to one short gap. The chalk arc remains on the ground, and the gap covers just the turning space required."
+      ],
+      "overall": "Ecosystem services connect ecological processes to concrete benefits received by people. This article identifies only one pollination-service pathway: ecological space may support flower-visiting activity, pollination may improve fruit-tree reproductive outcomes, and the orchard operation may benefit. The story does not quantify the hedgerow’s specific contribution.",
+      "conceptName": "Ecosystem services",
+      "explanationParagraphs": [
+        "The two bagged treatments have the same opening time, touching, and duration; the key difference is whether pollen is actually transferred. Recovery after hand pollination therefore supports insufficient pollination as part of the result difference.",
+        "The source of insects visiting the open flowers is not tracked, so the pollination difference cannot be assigned directly to the hedgerow. Money is also not the only way to recognize an ecological benefit."
+      ],
+      "module": {
+        "intro": "First define the real spatial task as clearing only about two meters, then use matched treatments to decide whether the pollination-benefit pathway deserves a place in the decision.",
+        "diagramTitle": "From Clearing the Entire Hedge to Opening Only a Two-Meter Gap—How the Evidence Changes the Land Choice",
+        "diagramSteps": [
+          "Use the turning arc to determine the actual space required",
+          "Postpone full clearing until the early-fruit comparison is complete",
+          "Set up open, bagged-sham, and bagged-hand-pollinated treatments",
+          "Use matched handling to test whether insufficient pollination may contribute to the difference",
+          "Clear only the overlapping section and keep the rest of the hedge for further observation"
+        ],
+        "diagramStepNotes": [
+          "The chalk turning arc intersects only about two meters of the hedge.",
+          "The timing is explicit: the comparison is completed before the final full-clearing decision.",
+          "The two bagged groups share opening, touching, and duration; only pollen transfer differs.",
+          "The result supports a role for insufficient pollination but does not identify insect origin or the hedgerow’s share of the contribution.",
+          "Only two meters are actually removed, and the trailer can pass through."
+        ],
+        "mapping": [
+          "Measuring tape and chalk turning arc → the directly verifiable space requirement.",
+          "Two matched bagged treatments → separation of pollen transfer from the handling itself.",
+          "Recovery with hand pollination → evidence that the pollination process may affect fruiting performance.",
+          "Two-meter opening → the land-use decision actually changed by limited evidence."
+        ],
+        "boundary": "Bagging cannot guarantee a microenvironment identical to open flowers, although the two bagged treatments are matched in handling. The fictional comparison cannot show that the visitors came from the hedgerow or quantify the hedgerow’s specific pollination contribution. Ecosystem services emphasize the link from ecological process to human benefit; they do not require all natural value to be converted into money.",
+        "reflection": "The comparison supports a pollination effect on fruiting but does not establish the hedge’s contribution. What further evidence would help assess whether clearing the rest would reduce that benefit?"
+      },
+      "references": [
+        {
+          "id": "0521-ecosystem-services-ref-1",
+          "citation": "Millennium Ecosystem Assessment. Ecosystems and Human Well-being: A Framework for Assessment, Chapter 1: Introduction and Conceptual Framework. Island Press (2003).",
+          "url": "https://www.millenniumassessment.org/documents/document.299.aspx.pdf",
+          "use": "Supports linking ecological processes to specific benefits people obtain from ecosystems and to identifiable beneficiaries, while distinguishing categories of services; the framework does not imply that all natural value must be priced."
+        },
+        {
+          "id": "0521-ecosystem-services-ref-2",
+          "citation": "Taylor H. Ricketts, Gretchen C. Daily, Paul R. Ehrlich, Charles D. Michener. Economic value of tropical forest to coffee production. PNAS 101(34) (2004), 12579–12582. doi:10.1073/pnas.0405147101.",
+          "url": "https://doi.org/10.1073/pnas.0405147101",
+          "use": "Supports the comparative approach of studying forest-related crop pollination through pollination experiments, distance, and benefit estimation; the coffee-specific numerical results from the original study are not transferred to this fictional orchard."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -1200,41 +1382,132 @@
       "fieldCode": "0521",
       "fieldTitle": "Environmental sciences",
       "fieldTitleZh": "环境科学",
-      "title": "One More Sheep",
-      "titleZh": "再多一只羊",
-      "summary": "Each household adds just one sheep to a common pasture, and no one can see how their own animal makes the grass disappear.",
-      "summaryZh": "每户只往公共牧场多放一只羊，谁都看不出自己怎样让草消失。",
-      "storyParagraphs": [
-        "River Village shared one pasture. In good years each of twelve households grazed ten sheep there. When lamb prices rose, herder Naro still owed twelve silver pieces on a winter roof. He added an eleventh ewe. Its wool and lamb would belong entirely to his family, while the grass it ate was one small part of what every flock used. One extra mouth could not bare a whole hill. Naro tied a red wooden tag around its neck and paid the first roof instalment.",
-        "Neighbours saw the ewe and made the same calculation. Within two weeks, nine households had added animals; some added three. At first every family sold more wool. No one wished to be the only household leaving grass for another's flock. By late summer, the measured grass height fell from a handspan to six fingers, and sheep returned hungry from the upper slope. Each family answered by sending animals out earlier and keeping them later, briefly protecting its own milk while giving roots less time to recover.",
-        "At the autumn meeting, the village head asked everyone to show restraint. All agreed because no number, season or first mover was named. The next dawn, the same flocks passed through the gate. After rain, bare patches washed into the ditch. Several owners removed neck tags before a count; admitting an extra sheep risked a private fine, while honest reporting would preserve grass for every household. Shared ownership was not the wound by itself. The old arrangement made added benefit easy to keep and damage difficult to assign.",
-        "When winter grass fell below three fingers, Naro led his eleventh ewe back from the gate and placed its red tag on the meeting table. The roof payment would now be late. The households marked who could use the pasture, set a seasonal total, rotated grazing areas and measured grass height together. Extra animals first brought a warning, then reduced the next season's share. Families short of fodder could borrow from a common stack and repay after lambing, so the poorest were not asked to carry the whole adjustment at once.",
-        "The first test came from the village head's brother, who drove three untagged sheep through the north gap at night. Turning them out meant a quarrel and cost Naro the man's wool business. Letting them stay would turn every red tag into decoration. The sheep were removed, the count entered publicly and the dispute heard before all twelve households. Spring grass recovered unevenly; a dry month still lowered it, and the villagers adjusted numbers rather than claiming their rules could command rain.",
-        "Naro paid for the roof one season late. Before spring grazing, every family brought its flock to the entrance board and wrote the number. The eleventh red tag had been cut in half: one piece hung from the pasture ledger, the other from Naro's barn door. When the last counted sheep passed, he lowered the wooden gate bar himself."
-      ],
-      "storyParagraphsZh": [
-        "河村有一片全村共用的牧场。草多的年份，十二户每家都放十只羊。羊羔涨价时，牧户纳罗还欠着修冬屋顶的十二枚银币，便多添一只母羊。羊毛与小羊全归自家，那一点草却只是所有羊吃掉的一小份。一张嘴不可能让整座山秃掉。他给第十一只羊系上红木牌，按时付了第一笔屋顶钱。",
-        "邻人看见那只羊，也照样计算。两周内九户都添了羊，有人一口气加三只。起初每家卖出的羊毛都增加，谁也不愿独自替别人留草。夏末，量过的草高从一掌降到六指，羊群从高坡回来仍在叫。各家便更早赶羊、更晚收栏，暂时保住自家奶量，草根却更没时间恢复。",
-        "秋季会上，村长请大家自觉少放。人人都点头，因为没有写数量、季节，也没人必须先动。第二天清晨，同样的羊群仍穿过门口。雨后，裸土被冲进沟里；还有人清点前摘掉羊牌，因为承认超量会带来私人罚款，诚实留下的草却由全村分享。伤口不只来自共有，而来自新增收益容易归己、损耗难以落到具体使用者的旧安排。",
-        "入冬草高跌到三指以下，纳罗把第十一只羊牵回门外，将红牌放上会议桌，屋顶欠款因此要晚一季。十二户划清谁能用牧场，订下季节总数，轮换地块，共同量草。超量先警告，再扣下一季份额；缺草料的家庭可从公堆借取，待产羔后归还，最穷的一户不必独自承受全部调整。",
-        "第一次考验来自村长的弟弟，他夜里从北侧缺口赶进三只无牌羊。赶走它们会撕裂会议，也让纳罗失去一桩羊毛买卖；放过，所有红牌就只剩装饰。三只羊最终被带走，数量公开入账，争执也在十二户面前复核。春草恢复得并不整齐，干旱仍会压低草量，村民只调整数量，不再说规则能命令降雨。",
-        "纳罗晚了一个产季才补好屋顶。春季放牧前，每户都把羊牵到入口木牌前，写下数目。那块第十一号红牌被切成两半，一半挂在牧场账簿，另一半钉在纳罗羊栏门上。最后一只已登记的羊通过后，他亲手落下门栓。"
-      ],
-      "conceptName": "Tragedy of the commons",
-      "conceptNameZh": "公地悲剧",
-      "explanationParagraphs": [
-        "A tragedy of the commons can arise when users receive much of the private benefit from added extraction while sharing depletion costs, making individually rational expansion collectively damaging. It is not inevitable and does not mean common ownership always fails. Clear boundaries, trusted information, locally fitted rules, monitoring, graduated sanctions, conflict resolution and support for unequal users can sustain many shared resources."
-      ],
-      "explanationParagraphsZh": [
-        "公地悲剧可能发生在使用者获得新增开采的大部分私人收益，却把资源耗损成本分摊给所有人时，个人理性的扩张便可能造成集体损害。它并非必然，也不表示共有资源注定失败。清楚边界、可信信息、在地规则、监测、分级制裁、争议解决及对不同处境的调整，都可能支持长期治理。"
-      ],
       "mode": "concept-fable",
+      "titleZh": "补水栏每天都是60升",
+      "summaryZh": "300 L共享水箱每天固定补60 L。以每天20:00为统一结算时点，六户连续三天实际各取12 L，总取72 L，账面水量240→228→216→204 L；随后六户遵守9 L试行额度七天，实际记录54 L/天，水量回到246 L。",
+      "storyParagraphsZh": [
+        "社区花园六户共用一个300 L水箱。透明侧壁每10 L一条粗刻度，阀门上的计量器按1 L记录每户取水；每天20:00统一结算当天固定60 L补水和全部取水。周日20:00账面水量是240 L。十天记录期内没有漏水、溢出或其他取用。",
+        "番茄开始结果后，陈默周一取12 L，比平时8 L多了4 L，想给自家新长的果子多留一点水。邻居照顾刚栽的苗，另一户担心下午回来晚；每家多取都说得过去，水箱也没有单户限额。到周一20:00，六行计量记录都是12 L，总取72 L。账面净变化60−72=−12 L，240变成228 L，粗刻度落在220和230之间。",
+        "周二实际总取仍是72 L，20:00账面变216 L；周三又是72 L，变204 L。三天的计量记录没有异常大户，补水也一直是60 L。大家把三张白板并排放在水箱旁，第一次清楚看到：每家多出的4 L都进入自家菜畦，但六个“多一点”合成了每天12 L的共享亏空。",
+        "他们只试一项简单调整：接下来七天每户每天9 L，临时需要更多先在白板上写。这个安排不会自动生效；六户都同意试一周，并继续用原来的1 L计量器记录。若有人不遵守，水位账不会按计划变化。",
+        "接下来的七天，实际记录每天六户合计都是54 L。固定补水仍是60 L，因此每天净增加6 L；从周三20:00的204 L起，七天累计+42 L，最后结算为246 L，没有超过300 L容量。透明粗刻度也回到240和250之间。",
+        "第七天20:00，陈默把自己的9 L记录划上完成记号，软管挂回原来的钩子。他没有擦掉前三天的账，而是把后七天54 L的记录贴在旁边。补水栏从头到尾都是60 L，一边的取用总数是72 L，另一边是54 L。透明侧壁的水位停在240和250之间，白板最后一格写着246。"
+      ],
+      "overallZh": "公地悲剧描述个人额外取用收益集中、共享资源耗损成本分散时可能出现的过量使用。本篇用同一计量时点和实际取水记录展示这一机制，并显示共同约束在参与者遵守的有限期间内可以改变总量。",
+      "conceptNameZh": "公地悲剧",
+      "explanationParagraphsZh": [
+        "三天实际总取72 L、补60 L，所以账面240→228→216→204 L。粗刻度每10 L，只作目视检查；精确数来自1 L计量记录与统一20:00结算。",
+        "随后七天实际总取54 L/天，净增6 L/天，共+42到246 L。这只说明本次试行在六户遵守条件下有效，不代表任何白板规则都必成功。"
+      ],
+      "moduleZh": {
+        "intro": "用统一结算时点、精确取水记录和实际七天试行，把个人额外收益与共享余量变化放进同一条账。",
+        "diagramTitle": "240升怎样三天降到204升，再七天回到246升",
+        "diagramSteps": [
+          "固定300 L容量、60 L/天补水和20:00结算规则",
+          "记录前三天六户实际12 L/户",
+          "计算每天净−12 L并得到240→228→216→204",
+          "试行9 L/户且继续1 L精度记录",
+          "确认七天实际54 L/天使204→246"
+        ],
+        "diagramStepNotes": [
+          "记录期无漏水、溢出或其他取用；粗刻度每10 L。",
+          "72 L/天来自六户计量器实际记录。",
+          "补水60 L不变，因此连续三天各降12 L。",
+          "规则只有在六户实际遵守时才改变总量。",
+          "七天每天净+6 L，共+42 L，终点246 L低于300 L容量。"
+        ],
+        "mapping": [
+          "阀门1 L计量器 → 精确取用数据。",
+          "透明10 L粗刻度 → 对账面水位的目视核对。",
+          "三张72 L白板 → 各自小幅加取汇成共享亏空。",
+          "后七天54 L记录 → 本次共同约束被实际遵守后的有限结果。"
+        ],
+        "boundary": "故事假定补水稳定、计量准确且记录期无其他水量变化。水位下降不是旱灾或恶意大户造成。共同资源并不必然失败；9 L安排只是本例参与者共同遵守后奏效的一次有限试行，不代表唯一或普遍最佳治理方式。",
+        "reflection": "为什么要把六户各自“多4 L”的理由，与统一20:00总量账放在一起，才能看见个人合理选择怎样变成系统性亏空？"
+      },
+      "referencesZh": [
+        {
+          "id": "0521-tragedy-of-the-commons-ref-1",
+          "citation": "Garrett Hardin. The Tragedy of the Commons. Science 162(3859) (1968), 1243–1248. doi:10.1126/science.162.3859.1243.",
+          "url": "https://www.garretthardinsociety.org/articles/art_tragedy_of_the_commons.html",
+          "use": "支持当个人取得收益而资源耗损成本分散给所有使用者时，开放取用可能导致过量使用；本篇只采用这一模型机制，不采用原文其他伦理或人口主张。"
+        },
+        {
+          "id": "0521-tragedy-of-the-commons-ref-2",
+          "citation": "Elinor Ostrom. Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge University Press (1990). doi:10.1017/CBO9780511807763.",
+          "url": "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+          "use": "支持公共池资源存在成功与失败的多种治理方式，因此共用不等于无规则开放取用，过度使用也并非不可避免。"
+        }
+      ],
+      "title": "The Refill Column Always Says 60 Liters",
+      "summary": "A shared 300 L tank receives a fixed 60 L replenishment each day. Using 20:00 as the common accounting time, all six households actually take 12 L each for three consecutive days, for 72 L total, and the ledger falls 240→228→216→204 L. The six then comply with a 9 L trial allowance for seven days, recording 54 L/day and bringing the account back to 246 L.",
+      "storyParagraphs": [
+        "Six households in a community garden share a 300 L irrigation tank. The transparent side wall has coarse marks every 10 L, while a meter on the valve records each household’s withdrawal to the nearest 1 L. Every day at 20:00, the day’s fixed 60 L replenishment and all withdrawals are settled on the ledger. At 20:00 on Sunday, the ledger reads 240 L. During the ten-day record period there is no leakage, overflow, or other withdrawal.",
+        "After the tomatoes begin fruiting, Chen Mo takes 12 L on Monday rather than his usual 8 L, wanting extra water for the new fruit on his plot. One neighbor is caring for newly planted seedlings; another worries about returning late in the afternoon. Each extra withdrawal has a reasonable purpose, and the tank has no household allowance. By 20:00 Monday, all six meter entries read 12 L, totaling 72 L. The ledger changes by 60−72=−12 L, from 240 to 228 L, while the coarse level sits between 220 and 230.",
+        "Tuesday’s actual total withdrawal is again 72 L, bringing the 20:00 ledger to 216 L. Wednesday is also 72 L, bringing it to 204 L. The three days of meter records show no unusually large household, while replenishment stays at 60 L. When the group places the three whiteboard records side by side, they can finally see that every household’s extra 4 L goes to its own plot, but the six small increases combine into a shared 12 L daily deficit.",
+        "They try only one simple adjustment: for the next seven days, each household uses 9 L per day, and anyone needing more writes it on the whiteboard first. The arrangement does not enforce itself. All six agree to try it for one week and keep using the same 1 L meters. If someone does not comply, the tank account will not follow the planned path.",
+        "For the next seven days, the actual records show a combined 54 L each day. Replenishment remains 60 L, so the tank gains 6 L per day. Starting from 204 L at 20:00 Wednesday, seven days add 42 L, producing a final ledger value of 246 L, still below the 300 L capacity. The coarse level also returns to somewhere between the 240 and 250 marks.",
+        "At 20:00 on the seventh day, Chen Mo marks his 9 L entry complete and hangs the hose on its old hook. He keeps the first three days’ accounts and posts the later 54 L records beside them. The refill column says 60 L throughout; one set of withdrawal totals says 72 L, the other 54 L. The level on the transparent wall stands between 240 and 250, and the final whiteboard box reads 246."
+      ],
+      "overall": "Tragedy of the commons describes a situation in which the direct benefit of extra individual use is concentrated on the user while the depletion cost of a shared resource is dispersed across all users. This article shows the mechanism with a common accounting time and actual withdrawal records, and it shows that a shared constraint can change the total during a limited period when participants comply.",
+      "conceptName": "Tragedy of the commons",
+      "explanationParagraphs": [
+        "Actual withdrawal is 72 L while replenishment is 60 L for three days, so the ledger moves 240→228→216→204 L. The wall marks are spaced every 10 L and serve only as a visual check; precise values come from the 1 L meters and the common 20:00 accounting.",
+        "For the following seven days, actual withdrawal is 54 L/day, giving a net +6 L/day and +42 L total, ending at 246 L. This shows only that the trial works under compliance in this case, not that any whiteboard rule must succeed."
+      ],
+      "module": {
+        "intro": "Use one accounting time, precise withdrawal records, and an actual seven-day trial to place individual benefits and shared-resource changes on the same ledger.",
+        "diagramTitle": "How 240 L Falls to 204 L in Three Days, Then Returns to 246 L in Seven",
+        "diagramSteps": [
+          "Fix the 300 L capacity, 60 L/day replenishment, and 20:00 accounting rule",
+          "Record actual use of 12 L per household for the first three days",
+          "Calculate a net −12 L/day and 240→228→216→204",
+          "Trial 9 L per household while continuing 1 L-resolution recording",
+          "Confirm that seven actual days at 54 L/day move 204→246"
+        ],
+        "diagramStepNotes": [
+          "There is no leakage, overflow, or other withdrawal during the record period; the wall scale is coarse at 10 L intervals.",
+          "The 72 L/day totals come from the six households’ actual meter records.",
+          "Replenishment remains 60 L, so the tank falls by 12 L on each of three consecutive days.",
+          "The rule changes the total only if the six households actually follow it.",
+          "Seven days at net +6 L/day add 42 L, ending at 246 L below the 300 L capacity."
+        ],
+        "mapping": [
+          "1 L valve meters → precise withdrawal data.",
+          "Transparent 10 L scale → visual check on the ledgered water level.",
+          "Three 72 L whiteboards → individually small increases combining into a shared deficit.",
+          "Seven later 54 L records → the limited result after the shared constraint is actually followed."
+        ],
+        "boundary": "The story assumes stable replenishment, accurate meters, and no other water changes during the record period. The decline is not caused by drought or one malicious heavy user. Shared resources do not inevitably fail; the 9 L arrangement is only one trial that works here when participants comply, not a uniquely correct or universally best governance system.",
+        "reflection": "Why do the six households’ individually reasonable “extra 4 L” choices become visible as a systemic deficit only when they are placed on the common 20:00 total ledger?"
+      },
+      "references": [
+        {
+          "id": "0521-tragedy-of-the-commons-ref-1",
+          "citation": "Garrett Hardin. The Tragedy of the Commons. Science 162(3859) (1968), 1243–1248. doi:10.1126/science.162.3859.1243.",
+          "url": "https://www.garretthardinsociety.org/articles/art_tragedy_of_the_commons.html",
+          "use": "Supports the model mechanism in which benefits of extraction are concentrated on individuals while depletion costs are distributed across users, allowing open use to produce overuse; this article adopts only that mechanism, not all ethical or population claims from the original paper."
+        },
+        {
+          "id": "0521-tragedy-of-the-commons-ref-2",
+          "citation": "Elinor Ostrom. Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge University Press (1990). doi:10.1017/CBO9780511807763.",
+          "url": "https://www.cambridge.org/core/books/governing-the-commons/7AB7AE11BADA84409C34815CC288CD79",
+          "use": "Supports the existence of multiple successful and unsuccessful governance arrangements for common-pool resources, so shared use is not the same as unregulated open access and overuse is not inevitable."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     },
     {
@@ -1244,43 +1517,132 @@
       "fieldCode": "0521",
       "fieldTitle": "Environmental sciences",
       "fieldTitleZh": "环境科学",
-      "title": "The Summer the Lake Did Not Return",
-      "titleZh": "湖没有回来的那个夏天",
-      "summary": "A lake repeatedly clears after nutrient pulses until one summer the same reduction in discharge no longer restores its former state.",
-      "summaryZh": "一座湖多次在养分冲击后自行澄清，直到某年夏天，把排放降回旧水平也无法恢复原状。",
-      "storyParagraphs": [
-        "Lake manager Iven had to keep the lakeside laundry works open through a weak trading year. Its treatment upgrade cost more than the town treasury held. Twice before, spring runoff had brought nutrients, algae had coloured the water green for a week, and the lake had cleared when flow subsided. Iven used those recoveries as evidence that the lake could absorb another season of permitted discharge. Each Monday he lowered a white clarity disk; at two metres he could still see it. The laundry kept sixty jobs, and the council postponed the upgrade.",
-        "The first summer bloom also faded after cooler weather. Submerged plants remained, small grazers fed on algae, and oxygenated bottom water kept much phosphorus bound in sediment. These processes helped the lake return after disturbance. Iven recorded the recovery but not how close the plant beds had come to their light limit. When the laundry requested a higher allowance during festival cloth orders, he approved it for six weeks. The extra income repaired the school roof.",
-        "This time the disk vanished at eighty centimetres, then forty. Dense algae blocked light; submerged plants thinned and stopped holding sediment. When algae died, decomposition consumed oxygen near the bottom. Under low-oxygen conditions, more phosphorus was released from sediment back into the water, supporting further growth. Wind stirred the now-unprotected mud. Several processes that had favoured clear water weakened together, while processes maintaining turbid water strengthened. Fish kills appeared along the sheltered bank after a hot night.",
-        "Iven cut the laundry discharge back to the earlier permitted level and expected the old recovery. The green water remained. Even after external input fell, stored nutrients and lost vegetation kept the lake in a different condition. Restoring the exact previous load was not the same as reversing the path by which the lake had changed. The point of transition could not be identified as one certain bucket or date; weather, sediments, food webs and spatial differences all affected it. By the time the disk disappeared, the safer warning margin had already been spent.",
-        "Winter was still weeks away when the laundry owners asked Iven for one last production season. He placed the white clarity disk on their wage ledger, then signed the closure and treatment order. Sixty workers received partial pay for eight weeks, financed by cancelling the new ferry pier; twelve left town. The council also restored shoreline plants, reduced other nutrient sources and monitored oxygen and sediment release. No single action promised a quick return. The first autumn storm produced another bloom even with the factory line closed.",
-        "The following spring, a few plant patches survived inside protective cages, and the disk became visible at ninety centimetres. That was improvement, not proof that the former clear state had returned. Managers kept two thresholds: one for mandatory load reduction and an earlier warning line that triggered investigation. They stopped treating past recovery as unlimited capacity to take the next disturbance. Uncertainty became a reason for margin rather than a number to round away.",
-        "Iven kept the white disk beside two water jars. The old jar was clear enough to read a date through; the newer one still held suspended green-brown particles. Before signing any discharge sheet, he lowered the disk from the pier and wrote the depth on the same tag that once said two metres."
-      ],
+      "mode": "mechanism-explainer",
+      "titleZh": "关掉压力以后",
+      "summaryZh": "岑雨要给一个定性草地教学模型设置默认恢复按钮。模型不计算真实百分比，而用明确状态转移规则表示覆盖、表土/水分保持和新生草本之间的反馈；同样把外部压力设为0，不同内部状态会得到不同的可能推演。",
       "storyParagraphsZh": [
-        "湖管员伊文必须让湖畔洗染厂撑过贸易低迷的一年，处理设备升级费超过镇库现款。此前两次，春季径流带来养分，藻类让湖水绿了一周，水量回落后又自行澄清。伊文把过去恢复当作湖还能承受一个排放季的证据。每周一，他从码头放下一只白色透明度圆盘，直到两米深仍能看见。洗染厂保住六十份工作，议会便推迟升级。",
-        "第一场夏季藻华也在天气转凉后退去。水下植物仍在，小型摄食者取食藻类，含氧底水又让不少磷留在沉积物中，这些过程帮助湖泊从扰动后返回。伊文记录了“恢复”，却没记植物床离光照下限有多近。节庆布料订单到来，工厂申请六周加量，他批准了。多出的收入修好了学校屋顶。",
-        "这一次，白盘先在八十厘米消失，随后只剩四十厘米。浓藻遮住光，水下植物变稀，固定泥沙的作用也减弱；藻体死亡后，分解过程消耗底层氧气，低氧条件又使更多磷从沉积物回到水中，继续支持藻类。风搅起失去植被保护的泥。几项原先有利于清水的过程一同减弱，维持浑水的过程却彼此加强。一个闷热夜晚后，背风岸出现死鱼。",
-        "伊文把工厂排放降回早先许可水平，以为湖水会照旧恢复，绿色却没有退去。即使外部输入减少，已经储存的养分和消失的植物仍把湖留在另一种状态。把负荷降到旧数值，并不等于倒走先前变化的道路。转折点也无法精确指认成某一桶水或某一天；天气、沉积物、食物关系与湖区差异都会影响它。等白盘消失时，较安全的预警余量早已用完。",
-        "离冬天还有几周，洗染厂主请求再做最后一个生产季。伊文把白圆盘压在他们的工资账上，随后签下停产与建设处理设施的命令。六十名工人领取八周部分工资，资金来自取消新渡船码头；十二人仍离开了镇子。议会还恢复岸边植物、削减其他养分来源，并监测底层氧气和磷释放。没有一项措施保证迅速见效。即使工厂线已经关闭，秋季第一场风暴仍带来一次藻华。",
-        "次年春天，保护笼内有几片植物活了下来，白盘在九十厘米处重新可见。这是改善，却不足以证明旧清水状态已经回来。管理者设下两条线：超过一条必须减载，更早的一条则启动调查。他们不再把过去能够恢复，当成承受下一次扰动的无限额度。无法精确预测的部分，被留成余量，没有再从表格里四舍五入掉。",
-        "伊文把白圆盘放在两只水样瓶旁。旧瓶清得能透过水读日期，新瓶仍悬着绿褐颗粒。此后每次签排放单前，他都先从码头放下圆盘，把深度写在那张曾经记录“两米”的旧标签上。"
+        "岑雨要给一个草地教学模型设置默认恢复按钮。她面前是一张定性状态转移表：覆盖分“较多、受扰但尚有植被、稀疏”，表土与水分保持分“较好、退化”，外部压力分“有、无”。表只演示给定规则下的变化，不预测真实草地。她原打算让用户关掉压力后，直接按“等待”；现在得先试这个按钮在什么状态下能用。",
+        "第一行的起点是“覆盖受扰但尚有植被、保持条件较好”。模型假定压力关掉后，剩余植被足以保护表土，这一步保持条件仍为较好；在下一步，较好的水土条件和已有更新来源让覆盖转为较多。岑雨沿两条箭头推进，把“受扰”卡换成“较多”卡。状态改变了，支持更新的条件也保住了，随后便能继续维持这个组合。",
+        "她再切到“覆盖稀疏、保持条件退化”，同样关掉压力。这一行假定裸地侵蚀使保持条件继续退化，而这种水土条件不足以支持草本更新；下一步的覆盖仍是稀疏。岑雨照表把两张状态卡传到下一列，卡上的字一个也不用改。再推进一次还是同一个组合，循环的原因写在两条箭头上。",
+        "两个画面的外部压力都已经归零。第一行换过一张卡，第二行的两张卡却沿箭头回到了原位。岑雨把默认“等待”按钮放到第二行旁边，再按一次，仍找不到一条会改变那两张卡的规则。她把按钮从默认区拖走，改成先让用户选内部状态；“已关压力”不再是跳过这一步的理由。",
+        "她给稀疏状态另加一个模型选项：“修复反馈条件”。这项干预按表先改善表土和水分保持，并提供更新来源；下一步在无外压且这些条件得到维持的假设下，覆盖才转为较多。她把干预箭头画在循环外侧，和“直接等待”分开。仅靠两条正向关系画不出这个结果，改变条件是表里明写的一步。",
+        "最终界面保留“直接等待”和“先修复反馈条件”两个选择，并要求用户先选当前内部状态。岑雨把“临界值”输入框删掉，状态转移表留在两个按钮旁边。"
       ],
-      "conceptName": "Ecological resilience and tipping points",
+      "overallZh": "生态韧性是系统在扰动中吸收变化、重组并保持核心功能、结构、身份和反馈的能力。临界点涉及越过状态转换的边界。本篇用假设的内部反馈说明停压后的路径可能不同，没有从定性表推出现实的临界点或不可逆性。",
       "conceptNameZh": "生态韧性与临界点",
-      "explanationParagraphs": [
-        "Ecological resilience is a system's capacity to absorb disturbance while retaining core functions and organisation. Reinforcing feedbacks can push a system across a threshold into another persistent state; returning the pressure to its former level may then be insufficient, a path dependence known as hysteresis. Thresholds are often uncertain and context-specific, so monitoring multiple indicators and maintaining safety margins matter more than claiming an exact tipping date."
-      ],
       "explanationParagraphsZh": [
-        "生态韧性指生态系统吸收扰动后仍维持核心功能与组织的能力。强化反馈可能把系统推过阈值，进入另一种可持续状态；此后即使压力降回旧水平，也未必沿原路恢复，这称为滞后。临界点常具不确定性且依赖情境，因此多指标监测和保留安全余量，比宣称一个精确日期更可靠。"
+        "定性规则规定：较多覆盖有利于保持表土/水分，较好条件又支持新生草本；低覆盖与退化条件则可相互维持。停掉外部压力因此不必产生同一路径。",
+        "“修复反馈条件”只是模型中的状态转移设定。慢恢复、低位停留和真实不可逆阈值是不同问题，不能由本篇推演混为一谈。"
       ],
-      "mode": "concept-fable",
+      "moduleZh": {
+        "intro": "不用虚假精确曲线，而是把内部状态和每一步转移规则写清，再比较同样停压动作在两种状态下会发生什么。",
+        "diagramTitle": "同样压力=无，为什么两种内部状态会走向不同下一步",
+        "diagramSteps": [
+          "定义覆盖、表土/水分和外部压力的定性状态",
+          "给出较多覆盖—较好保持—更新的转移规则",
+          "给出稀疏覆盖—退化保持互相维持的规则",
+          "在两种内部状态下都把外部压力设为无并逐步推演",
+          "加入修复反馈条件选项但不声明真实阈值"
+        ],
+        "diagramStepNotes": [
+          "模型是定性教学状态表，不是现实数值预测软件。",
+          "受扰但保有植被、保持条件较好时，停压先保住水土条件，下一步在有更新来源的假设下恢复较多覆盖。",
+          "退化保持条件限制更新，低覆盖又维持侵蚀条件。",
+          "两种路径差异来自内部状态与给定规则，而非等待时间长短。",
+          "修复选项先改善保持条件并补充更新来源，只是模型条件。"
+        ],
+        "mapping": [
+          "状态转移表 → 所有推演必须遵守的给定规则。",
+          "两个“压力=无”画面 → 排除外部压力仍不同这一点。",
+          "被删除的唯一“等待”按钮 → 行为选择被内部反馈状态改变。",
+          "两个恢复按钮 → 模型中不同条件对应的可选路径。"
+        ],
+        "boundary": "这是定性教学模型，不是某片真实草地的测量或阈值估计。慢恢复、长期低位和跨越不可逆临界点不是同义词；真实反馈强度、阈值范围和恢复措施需要多条件、长期证据。韧性也不要求数量恒定或回到原状最快。",
+        "reflection": "如果两种状态都已经没有外部压力，为什么还必须看内部覆盖与表土/水分反馈，才能判断“等待”是否可能让模型回到较高覆盖？"
+      },
+      "referencesZh": [
+        {
+          "id": "0521-ecological-resilience-ref-1",
+          "citation": "C. S. Holling. Resilience and Stability of Ecological Systems. Annual Review of Ecology and Systematics 4 (1973), 1–23. doi:10.1146/annurev.es.04.110173.000245.",
+          "url": "https://www.annualreviews.org/content/journals/10.1146/annurev.es.04.110173.000245",
+          "use": "作为生态韧性与稳定性概念的重要早期来源；本篇具体教学反馈和状态规则不是该论文中的实测案例。"
+        },
+        {
+          "id": "0521-ecological-resilience-ref-2",
+          "citation": "Brian Walker, C. S. Holling, Stephen R. Carpenter, Ann Kinzig. Resilience, adaptability and transformability in social–ecological systems. Ecology and Society 9(2) (2004), 5.",
+          "url": "https://ecologyandsociety.org/vol9/iss2/art5/main.html",
+          "use": "支持扰动中维持核心功能、结构、身份和反馈，以及多状态、吸引域与阈值等概念；同时支持不能仅凭短期未恢复认定精确不可逆临界点。"
+        }
+      ],
+      "title": "After the Pressure Is Turned Off",
+      "summary": "Cen Yu needs to set the default recovery control for a qualitative grassland teaching model. The model does not calculate real percentages; instead, explicit state-transition rules represent feedback among vegetation cover, soil/water retention, and new plant establishment. Setting external pressure to 0 can produce different possible trajectories from different internal states.",
+      "storyParagraphs": [
+        "Cen Yu needs to set a default recovery button for a grassland teaching model. In front of her is a qualitative transition table: cover is “higher,” “disturbed but with vegetation remaining,” or “sparse”; soil and water retention is “better” or “degraded”; external pressure is “present” or “absent.” The table demonstrates changes under assumed rules rather than forecasting a real grassland. She plans to let users turn off pressure and press “wait,” but first needs to test which states that button works for.",
+        "The first row starts at “disturbed cover with vegetation remaining, retention better.” The model assumes that after pressure is removed, the remaining vegetation protects the soil, keeping retention better in the first step. In the next step, those conditions and an existing source of new growth move cover to higher. Cen Yu follows the two arrows and exchanges the “disturbed” card for “higher.” The state changes while retaining the conditions for renewal, so the combination can then maintain itself.",
+        "She then switches to “cover sparse, retention degraded” and removes the pressure again. This row assumes that bare-ground erosion keeps retention degraded, and that these soil and water conditions cannot support enough new growth; cover remains sparse at the next step. Cen Yu moves both state cards into the next column without changing either label. Another step leaves the same combination. The reasons for the loop are written on its two arrows.",
+        "External pressure is 0 in both screens. One card changed in the first row, while both cards in the second followed the arrows back to their old positions. Cen Yu places the default “wait” button beside the second row and presses it again; there is still no rule that changes either card. She drags the button out of the default area and makes users select the internal state first. “Pressure off” no longer lets them skip that step.",
+        "She adds a separate model option for the sparse state: “repair feedback conditions.” The intervention first improves soil and water retention and supplies a source of new growth; at the next step, with no external pressure and those conditions assumed to persist, cover changes to higher. She draws the intervention arrow outside the loop, separate from “wait directly.” Two positive relationships alone would not give this result; changing the conditions is an explicit step in the table.",
+        "The final interface keeps two recovery choices: “wait directly” and “repair feedback conditions first,” and requires the user to select the current internal state before choosing. Cen Yu removes the “critical value” input box and leaves the state-transition table beside the two buttons."
+      ],
+      "overall": "Ecological resilience is the capacity to absorb disturbance and reorganize while retaining core function, structure, identity and feedback. Tipping points concern crossing boundaries between states. The assumed internal feedbacks here show why paths after pressure removal may differ; this qualitative table establishes no real tipping point or irreversibility.",
+      "conceptName": "Ecological resilience and tipping points",
+      "explanationParagraphs": [
+        "The qualitative rules state that greater vegetation cover supports soil/water retention, and better retention supports new establishment; sparse cover and degraded conditions can instead reinforce one another. Removing external pressure therefore need not produce the same pathway from every state.",
+        "“Repair feedback conditions” is only a state-transition assumption within the model. Slow recovery, remaining in a low state, and crossing a real irreversible threshold are different claims and should not be merged by this exercise."
+      ],
+      "module": {
+        "intro": "Avoid false precision: state the internal states and each transition rule explicitly, then compare what the same pressure-removal action does from two different starting states.",
+        "diagramTitle": "With Pressure Absent in Both Cases, Why Can Two Internal States Move Differently?",
+        "diagramSteps": [
+          "Define qualitative states for cover, soil/water retention, and external pressure",
+          "State the transition rule linking higher cover, better retention, and establishment",
+          "State the mutually reinforcing rule for sparse cover and degraded retention",
+          "Set external pressure to absent in both internal states and advance the rules",
+          "Add the feedback-repair option without claiming a real threshold"
+        ],
+        "diagramStepNotes": [
+          "The model is a qualitative teaching state table, not a numerical forecasting model of a real ecosystem.",
+          "With disturbed but retained vegetation and better retention, pressure removal first preserves soil/water conditions, then renews higher cover under the assumed supply of new growth.",
+          "Degraded retention limits establishment, while sparse cover maintains erosion conditions.",
+          "The pathway difference comes from internal state and the stated rules, not simply from different waiting times.",
+          "The repair option first improves retention conditions and supplies an establishment source; it remains only a model condition."
+        ],
+        "mapping": [
+          "State-transition table → the explicit rules every model trajectory must follow.",
+          "Two screens with pressure absent → the fact that external pressure is removed in both cases.",
+          "Deleted single “wait” button → the action choice changed by internal feedback state.",
+          "Two recovery buttons → different model pathways corresponding to different conditions."
+        ],
+        "boundary": "This is a qualitative teaching model, not measurements from a real grassland or an estimate of a threshold. Slow recovery, persistent low state, and crossing an irreversible tipping point are not synonyms. Real feedback strength, threshold ranges, and recovery interventions require long-term evidence across multiple conditions. Resilience also does not require constant abundance or the fastest return to an earlier state.",
+        "reflection": "If external pressure is absent in both cases, why must you still inspect the internal cover and soil/water feedback before deciding whether “wait” can move the model back toward higher cover?"
+      },
+      "references": [
+        {
+          "id": "0521-ecological-resilience-ref-1",
+          "citation": "C. S. Holling. Resilience and Stability of Ecological Systems. Annual Review of Ecology and Systematics 4 (1973), 1–23. doi:10.1146/annurev.es.04.110173.000245.",
+          "url": "https://www.annualreviews.org/content/journals/10.1146/annurev.es.04.110173.000245",
+          "use": "Serves as an early foundational source on ecological resilience and stability; the specific teaching feedbacks and state rules in this article are not empirical cases from that paper."
+        },
+        {
+          "id": "0521-ecological-resilience-ref-2",
+          "citation": "Brian Walker, C. S. Holling, Stephen R. Carpenter, Ann Kinzig. Resilience, adaptability and transformability in social–ecological systems. Ecology and Society 9(2) (2004), 5.",
+          "url": "https://ecologyandsociety.org/vol9/iss2/art5/main.html",
+          "use": "Supports maintaining core function, structure, identity, and feedback under disturbance, as well as concepts of multiple states, basins of attraction, thresholds, and difficult recovery; it also supports not treating short-term non-recovery as proof of a precise irreversible tipping point."
+        }
+      ],
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "science-ecology-mixed-16-pdc-review.md",
+        "edits": [
+          "science-ecology-mixed-16-edit-pass1-evidence.json",
+          "science-ecology-mixed-16-edit-pass2-evidence.json"
+        ]
       }
     },
     {
