@@ -2,6 +2,13 @@
 name: mapkai-subject-story-song
 description: Create MapKAI subject or subfield story songs by writing a culturally grounded story, adapting that same story into lyrics, selecting music from the narrative, balancing the saved genre preferences, and reviewing the complete song package. Use for 学科故事歌曲, 故事改编成歌, or continuing a MapKAI subject music batch; ordinary articles use the article pipeline.
 ---
+## Owner update: original recordings and optional synchronization (2026-10-13)
+
+This latest explicit owner instruction supersedes any conflicting lyric-timing or historical-format publication gate below: publish already-generated unpublished recordings with their original lyrics, preserving all originals and existing public editions. Historical story-first recordings may be published as their actual versions and must not be relabeled as new-format production.
+
+Never regenerate, rerecord, trim or otherwise edit audio solely to fix lyric synchronization, recognition uncertainty, minor singing differences or failed alignment. Deliver original audio and original written lyrics together. Genuine complete sentence cues are optional; if they cannot be verified, publish the playable authorized original with a truthful synchronization-unavailable notice. Keep actual performance/content uncertainties recorded, and do not fabricate timing or claim an exact performed-word or human-review PASS. A future audio edit or regeneration requires a specific owner request for that audio change.
+
+
 
 # MapKAI Subject Story Song
 
