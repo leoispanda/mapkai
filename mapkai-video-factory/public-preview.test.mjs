@@ -109,6 +109,31 @@ test('Statistics preview preserves all major fields and exposes no private revie
   assert.throws(() => buildPublicPreviewCatalog(otherSubfield), /non-canonical/);
 });
 
+test('Personal skills preview adds only its canonical identity and keeps review material private', async () => {
+  const ids = [...CANONICAL_MAJOR_FIELD_IDS, '0031', '0542'];
+  const built = buildPublicPreviewCatalog(privateCatalog(ids));
+  assert.equal(built.items.length, 13);
+  assert.equal(built.items.find(item => item.fieldId === '0031').slug, 'personal-skills-and-development');
+  const { env, request, target } = apiFixture(ids, '0031');
+  const list = await listPublicVideos({ env, request: request('/api/factory/public-videos') });
+  assert.equal(list.status, 200);
+  const item = (await list.json()).items.find(entry => entry.slug === target.slug);
+  assert.equal(item.fieldName, 'Personal skills and development');
+  assert.equal(item.reviewLabel, PUBLIC_PREVIEW_LABEL);
+  for (const key of ['id', 'fieldId', 'objectKey', 'sha256', 'notebookUrl', 'policyBinding', 'sourceReview']) {
+    assert.equal(item[key], undefined);
+  }
+  const video = await servePublicVideo({ env, request: request('/api/factory/public-video?field=personal-skills-and-development', { headers: { Range: 'bytes=0-7' } }) });
+  assert.equal(video.status, 206);
+  assert.deepEqual(Buffer.from(await video.arrayBuffer()), mp4.subarray(0, 8));
+  for (const query of ['field=0031', 'field=personal-skills', 'objectKey=' + encodeURIComponent(target.objectKey)]) {
+    assert.equal((await servePublicVideo({ env, request: request('/api/factory/public-video?' + query) })).status, 404);
+  }
+  const wrongName = privateCatalog(['0031']);
+  wrongName.items[0].fieldName = 'Personal development';
+  assert.throws(() => buildPublicPreviewCatalog(wrongName), /non-canonical/);
+});
+
 test('anonymous public listing exposes only learner-safe projections', async () => {
   const { env, request } = apiFixture();
   const response = await listPublicVideos({ env, request: request('/api/factory/public-videos') });

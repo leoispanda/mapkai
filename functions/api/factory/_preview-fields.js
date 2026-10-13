@@ -3,6 +3,7 @@ import { CANONICAL_MAJOR_FIELDS } from './_major-fields.js';
 // Explicit public-preview identities; this does not change the knowledge taxonomy.
 export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   ...CANONICAL_MAJOR_FIELDS,
+  '0031': 'Personal skills and development',
   '0542': 'Statistics',
 });
 
