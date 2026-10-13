@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "mapkai-preview-handoff.v1",
+  "canonicalFieldCode": "0031",
+  "sourceReview": "PASS",
+  "actualVideoReview": "BLOCKED",
+  "reviewMetadataValidation": "REJECTED_INVALID_REVIEW",
+  "humanReview": "PENDING",
+  "publicPreview": {
+    "status": "PUBLIC_PREVIEW_PENDING_REVIEW",
+    "url": "https://www.mapkai.com/fields/0031-personal-skills-and-development",
+    "verifiedAt": "2026-10-13T07:31:16.815Z",
+    "labels": [
+      "AI generated",
+      "Pending review · Not fully approved"
+    ],
+    "authorization": "Founder explicitly authorised subsequent subjects using existing accounts/quotas and direct marked public previews.",
+    "rawVideoSha256": "36d677194d267eb99afb387c8be33e441625e0b9ed5962f0e51880fa234f844e",
+    "catalogItemCount": 13,
+    "existingPublicItemsPreserved": 12,
+    "websiteCommit": "cf96f45381eedc31da52d5d62e43aed84e2e72d3",
+    "deploymentId": "73b36a48-1be0-4e6d-851d-3adaf24dbffc",
+    "authenticatedViewerRequired": false,
+    "actualPlaybackVerified": true,
+    "actualDurationSeconds": 437.556825,
+    "mediaError": null,
+    "independentVideoReview": "BLOCKED",
+    "videoReviewValidationStatus": "REJECTED_INVALID_REVIEW",
+    "formalApproval": "PENDING",
+    "publicCatalogReceiptPath": ".workspace-backups/video-factory-0031-delivery-20261013/public-catalog-complete.json",
+    "browserProofPath": ".workspace-backups/video-factory-0031-delivery-20261013/public-browser-proof.json",
+    "browserProofSha256": "460396252ff5947079b454730fce274e5d0234ae325bab936e844bc5d003d6e9",
+    "screenshotPath": ".workspace-backups/video-factory-0031-delivery-20261013/personal-skills-public-live.jpg"
+  },
+  "portableRunRecord": "review/video-factory-hourly-20261012/run-20261013-0830.json",
+  "nextCandidate": {
+    "code": "0111",
+    "title": "Education science",
+    "slug": "0111-education-science"
+  }
+}

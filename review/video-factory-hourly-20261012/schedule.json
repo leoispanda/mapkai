@@ -33,14 +33,15 @@
     "evidenceTruthfulnessRequired": true
   },
   "nextCandidate": {
-    "code": "0031",
-    "title": "Personal skills and development",
-    "slug": "0031-personal-skills-and-development",
+    "code": "0111",
+    "title": "Education science",
+    "slug": "0111-education-science",
     "state": "NOT_STARTED"
   },
   "excluded": {
     "alreadyPublic": [
-      "0542"
+      "0542",
+      "0031"
     ],
     "securityHold": [
       "0011"
@@ -71,5 +72,11 @@
     "state": "EXPLICITLY_GRANTED",
     "userAnswer": "授权后续所有学科按此流程生成并公开",
     "scope": "All subsequent subjects: external ChatGPT/NotebookLM source/policy/review transmission, existing-account and quota generation up to18/day, direct public MapKAI previews with both labels."
+  },
+  "lastCompletedPreview": {
+    "code": "0031",
+    "verifiedAt": "2026-10-13T07:31:16.815Z",
+    "url": "https://www.mapkai.com/fields/0031-personal-skills-and-development",
+    "review": "PENDING"
   }
 }
