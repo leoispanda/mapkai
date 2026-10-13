@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-10-13T20:20:25.944157+00:00",
+  "websiteRelease": "517df256fe10dcd56db719c34ad198ebf311ca5b",
+  "deploymentId": "b211ae77-32b6-4683-a89c-5a3d3966ccfd",
+  "publicVideos": 19,
+  "publicMusicVersions": 29,
+  "generatedOriginalMusicRecordings": 28,
+  "addedHistoricalVideos": 3,
+  "addedHistoricalMusicVersions": 8,
+  "alreadyPublishedNewConceptSongsReused": 3,
+  "oldPublicMusicRecordsPreserved": 18,
+  "oldPublicVideoRecordsPreserved": 16,
+  "newGenerationCallsInThisChat": 0,
+  "originalAudioVideoBytesPreserved": true,
+  "musicOriginalBytesAndLyricsVerified": true,
+  "videoOriginalByteRangesAndActualPlaybackVerified": true,
+  "publicVideoReviewStatus": "AI generated; Pending review · Not fully approved",
+  "privateInterfacesRequireAuthentication": true,
+  "productionAssetsMatched": 42,
+  "protectedFinanceGates": 14,
+  "scopedTestsPassed": 37,
+  "futureLyricsPolicy": "Original recordings and original lyrics retained; synchronization optional; no rerecording or editing for synchronization",
+  "songSchedule": {
+    "timezone": "Europe/Amsterdam",
+    "hours": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "minute": 0,
+    "songsPerRun": 3,
+    "automationId": "mapkai-50"
+  },
+  "musicUrl": "https://www.mapkai.com/music/",
+  "addedVideoUrls": [
+    "https://www.mapkai.com/fields/0311-economics",
+    "https://www.mapkai.com/fields/0313-psychology",
+    "https://www.mapkai.com/fields/0533-physics"
+  ]
+}
