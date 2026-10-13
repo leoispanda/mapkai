@@ -145,40 +145,135 @@
       "fieldCode": "0611",
       "fieldTitle": "Computer use",
       "fieldTitleZh": "计算机使用",
-      "title": "The Archive with One Enormous Desktop",
-      "titleZh": "只有一张巨大桌面的档案馆",
-      "summary": "An archive lays every file across one table; nothing is lost, but no one can tell where anything belongs.",
-      "summaryZh": "档案馆把所有文件平铺在一张桌上，东西一件没丢，人们却再也找不到它们属于哪里。",
+      "title": "Friday’s Bookmark",
+      "titleZh": "周五的收藏",
+      "summary": "A design studio maintains two event projects, and both legitimately contain a file named final.pdf. Ye Tong uses the full parent-child path to complete the RiverFest print delivery. After the client confirms the project is finished, she manually moves the project directory from Active to Archive; the file remains, but the old path stops working. A business asset number helps the team update its location record, but it is not treated as a permanent file-system identity.",
+      "summaryZh": "设计工作室同时维护两个活动项目，两边都合法地有final.pdf。叶桐用完整父子路径完成河畔节印刷交付；客户确认项目完成后，她手动把项目目录从Active移入Archive，文件仍在但旧路径失效。业务资产号帮助团队更新位置记录，却不被当作文件系统永久身份。",
       "storyParagraphs": [
-        "The new archive had no cabinets, only one enormous table filling the hall. Every file lay on it, and a search clerk could find items by title. While the collection was small, this openness seemed convenient; no one needed to remember a drawer. The arrangement saved the reopening budget, and the mayor demanded that ten years of records be searchable before the winter audit.",
-        "Years later, projects, dates, departments, and drafts mixed together. Dozens of files shared the title 'Budget'. When an old project ended, nobody knew which drawings should expire with it. Permissions were set one item at a time. The growing table resembled a city without streets. A clerk removed an expired festival folder and accidentally discarded the only signed permit for a bridge repair. Another found three final budgets with identical names and paid from the wrong one.",
-        "Before the opening bell, the archivist laid the search-machine quotation beneath the return stamp and suspended intake under the waiting porters' eyes. Two carts of new records went back to their departments, and she lost her opening bonus. Staff mapped which context should be inherited—department, project, year, permissions, retention—and which relationships crossed those boundaries. The archivist first tested the proposed tree with three real departments. A legal hold on one project showed that retention could not simply follow whichever folder happened to sit above it.",
-        "Archivists built nested cabinets by organisation, project, and year. A file acquired context through its path, while a parent could pass down permissions and retention rules. Finding 'Year Two Budget for the River Bridge' no longer meant searching every paper called Budget.",
-        "Some records still belonged to several projects. Rather than copying them into two places, the archive used stable identifiers, tags, references, and search to express cross-links. The hierarchy provided a principal address; other tools provided side roads. Moving a parent folder changed the path, so stable identifiers kept references from breaking. Access rules were tested on a sample branch before inheritance reached thousands of files. Cross-project contracts received one authoritative file and references from each project, avoiding copies that would drift apart after revision. When the last loose sheet entered a cabinet, the table's wood became visible. The archivists kept one small area for new items whose place had not yet been decided. The migration took six weeks, and duplicate paper had to be checked by hand rather than dumped into convenient drawers. New staff could begin from the main path, while specialists still crossed through tags and references. The table stayed clear."
+        "On Friday morning, the studio needs to send the RiverFest poster to the printer. Searching the shared drive for “final.pdf” returns two results, one for RiverFest and one for NightMarket. Neither name is wrong. The printer will lock the layout in ten minutes. Ye Tong expands both search results to see their project directories; today’s delivery is the RiverFest file.",
+        "She walks down from the shared-drive project root one component at a time: Active → Clients → RiverFest → 2026 → Print → final.pdf. The NightMarket file is at Active → Clients → NightMarket → 2026 → Print → final.pdf. The full path carries the project, year, and purpose together. She also opens the RiverFest file to verify the event date and layout before sending that version to the printer. The printer returns a proof later that day, and production starts after the client approves it.",
+        "The following Tuesday, the finished materials have been delivered and the client has confirmed that the project is complete. The project manager asks Ye Tong to archive it. She manually moves the entire Active → Clients → RiverFest → 2026 directory to Archive → Clients → RiverFest → 2026. After the move, she clicks the path she bookmarked on Friday and the system reports that the location does not exist. Entering through the new Archive path still reaches final.pdf, and its contents have not changed merely because the directory moved.",
+        "In the project register, the poster has the business asset number RF-P-014. Ye Tong opens that row, changes its path field from Active to Archive, and follows the new location from the register. Neither the filename nor the asset number changes. Colleagues looking through the project record will find the updated path. The old bookmark stores the earlier address; editing the register does not update that bookmark too.",
+        "RiverFest and NightMarket also share one sponsor logo. Ye Tong opens it through the references in both project records, checks that they point to the same source file, and keeps each project’s tags. If the source file moves later, both links will need updating. The administrator separately checks permissions and retention against the system configuration. The directory tree still gives the files their respective locations.",
+        "A scan of the print proof that was already approved on Friday is placed in the archive as well. Ye Tong opens Archive → Clients → RiverFest → 2026 → Print one last time and sees both final.pdf and the proof there. The Active path she bookmarked on Friday still does not open."
       ],
       "storyParagraphsZh": [
-        "新档案馆没有柜子，只有一张占满大厅的巨大桌面。每份文件都放在上面，搜索员也能按标题找到它。起初资料不多，这种开放看起来方便，谁都不必记住抽屉位置。这种布置省下重开预算，市长又要求十年卷宗必须在冬季审计前全部可查。",
-        "几年后，项目、年份、部门和草稿混在一起。同名的“预算”有几十份，删除一个旧项目时，没人知道哪些图纸与它一同到期。权限也只能逐份设置，文件越多，桌面越像一片没有街道的城市。书记删除过期节庆文件夹时，误丢了桥梁维修唯一签字许可；另一人又在三份同名“最终预算”中付错款。",
-        "开馆钟响前，馆员当着等候搬运工的面，把搜索机报价单压在退件章下，宣布暂停收件。两车新卷宗被送回部门，她的开馆奖金也被扣。众人先画清哪些情境应沿父级继承——部门、项目、年份、权限、保存期限——哪些关系会跨越边界。馆员先用三个真实部门测试拟定树形。一项项目受法律保留约束，提醒保存期不能只跟随碰巧位于上方的文件夹。",
-        "馆员按机构、项目和年份建立嵌套柜架，让文件沿路径获得上下文，父级还可传递权限与保存规则。查找“河桥项目的二年预算”不再等同于搜索所有叫预算的纸。",
-        "但有些文件同时关联多个项目。馆员没有强迫它们复制到两处，而是使用稳定编号、标签、引用和搜索连接交叉关系。层级提供主要住址，其他工具提供旁路。移动父文件夹会改变路径，因此稳定编号负责让引用不断裂。权限继承也先在一小支样本上试验，才扩展到数千份文件。跨项目合同只保留一份权威文件，各项目用引用连接，避免多个副本在修订后彼此分叉。最后一张散纸归档时，桌面终于露出木纹。馆员仍留下一小块空处，专放尚未确定位置的新文件。迁移花了六周，重复纸件也得人工核对，不能为省事随便塞进相似抽屉。新人先沿主路径进入，专业人员仍可借标签与引用跨越分支。桌面也继续保持空白。"
+        "周五上午，设计工作室要把河畔节海报送去印刷。共享盘里搜“final.pdf”正好出现两个：河畔节和夜市各有一份，两个名字都没写错。印刷店十分钟后锁版。叶桐把两条搜索结果展开，先看它们各在哪个项目目录；今天要交的是河畔节那份。",
+        "她从共享盘项目根目录逐段进入Active → Clients → RiverFest → 2026 → Print → final.pdf。夜市那份则在Active → Clients → NightMarket → 2026 → Print → final.pdf。完整路径把项目、年份和用途一起带出来；她再打开河畔节文件核对日期和版面，才把这一份交给印刷店。当天打印店回传样张，客户确认后进入生产。",
+        "下周二，成品已交付，客户也确认项目结束。项目经理让叶桐归档，她手动把整个Active → Clients → RiverFest → 2026目录移动到Archive → Clients → RiverFest → 2026。移动完成后，她点周五收藏的旧路径，系统提示位置不存在；沿Archive新路径进去，final.pdf仍在，内容没有因为目录搬动而改变。",
+        "项目表里，这张海报的业务资产号是RF-P-014。叶桐打开那一行，把路径栏从Active改成Archive，再从表里点进新位置。文件名和资产号都没改；同事以后按项目记录查找，会读到更新后的路径。旧收藏存的是原来的地址，不会因为她改了项目表就一起改变。",
+        "河畔节和夜市还共用同一份赞助商Logo。叶桐沿两个项目记录中的引用打开它，确认都指向同一份来源文件，再保留各自的标签。以后来源文件若移动，这两处链接也需要更新。管理员另外核对权限和保存期限，按系统实际配置处理，目录树仍只负责把文件放在各自位置。",
+        "周五已经批准的印刷样张扫描件也被一并放进归档目录。叶桐最后打开Archive → Clients → RiverFest → 2026 → Print，final.pdf和样张都在；周五收藏的Active路径仍然打不开。"
       ],
       "conceptName": "Hierarchical information organization",
       "conceptNameZh": "层级化信息组织",
       "explanationParagraphs": [
-        "Hierarchical information organisation places items in nested parent-child containers, providing paths for navigation, scope, context, and inherited rules. A hierarchy cannot express every cross-relationship, so stable identifiers, metadata, tags, search, references, permissions, and version control remain complementary. A clear primary tree need not force all relationships into a tree."
+        "Hierarchical information organization places objects in nested directories through parent-child relationships. Paths are resolved component by component, so the same name can represent different locations under different parent directories.",
+        "A path is not a stable identity: moving a file or a parent directory changes the path and can break old references. Business IDs, tags, permissions, and retention rules are separate mechanisms and cannot be inferred automatically from directory hierarchy."
       ],
       "explanationParagraphsZh": [
-        "层级化信息组织把项目放入嵌套父子容器，为导航、范围、情境和继承规则提供路径。层级不能表达全部交叉关系，因此还需稳定标识、元数据、标签、搜索、引用、权限与版本控制。主要层级应清楚，但不必强迫所有关系都变成树。"
+        "层级化信息组织通过父子关系把对象放入嵌套目录，路径按组件逐段解析，因此相同名称在不同父目录下可以表示不同位置。",
+        "路径不是稳定身份：移动文件或父目录会改变路径并使旧引用失效。业务编号、标签、权限和保存规则是其他机制，不能由目录层级自动推出。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构设计工作流说明层级化信息组织：父子目录和逐段路径为对象位置提供上下文，使同名文件可以在不同分支中准确区分。路径会随人工移动或重命名而改变，因此适合表示位置而非永久身份；跨项目引用、权限和保存规则仍需其他机制维护。",
+      "moduleZh": {
+        "intro": "用两个合法同名文件和一次明确的归档移动，检查完整路径怎样提供上下文，以及为什么旧路径会失效。",
+        "diagramTitle": "同名文件怎样靠路径区分，归档后又为什么换了位置",
+        "diagramSteps": [
+          "在RiverFest和NightMarket项目中各保留final.pdf",
+          "沿Active → Clients → RiverFest → 2026 → Print逐段定位并完成印刷交付",
+          "客户确认项目结束后，人工把RiverFest/2026整体移到Archive",
+          "验证旧Active路径失效，而Archive新路径仍能找到原文件",
+          "更新业务记录中的路径，并分别维护跨项目引用、权限和保存规则"
+        ],
+        "diagramStepNotes": [
+          "同名并不等于命名错误，父目录提供上下文。",
+          "逐段解析要求每一级目录组件都匹配。",
+          "归档是项目结束后的人工操作，不是分类自动发生。",
+          "路径变化表示位置表达改变，不表示文件内容消失。",
+          "RF-P-014是工作室业务记录键，不是inode或全球永久文件身份。"
+        ],
+        "mapping": [
+          "两个final.pdf → 同名对象在不同项目分支中并存。",
+          "Active与Archive路径 → 同一业务文件在不同阶段的位置。",
+          "失效的旧收藏 → 父目录移动后原路径不再解析。",
+          "RF-P-014和Logo引用 → 路径之外仍需维护的业务引用关系。"
+        ],
+        "boundary": "层级主要组织位置，不能表达所有关系。路径可因移动或重命名改变；文件系统内部标识也有作用域和复用限制，不能简单当成全球永久ID。跨项目引用仍需维护，权限与保存期限是否继承则取决于具体系统配置。",
+        "reflection": "为什么两个final.pdf都可以是正确文件名，而同一文件从Active移到Archive后，内容仍在却会让旧收藏路径失效？"
+      },
+      "referencesZh": [
+        {
+          "id": "linux-path",
+          "citation": "Linux man-pages. path_resolution(7), man-pages 6.19 (2026).",
+          "url": "https://www.man7.org/linux/man-pages/man7/path_resolution.7.html",
+          "use": "支持路径从根目录或当前目录开始逐组件解析，以及目录层级在实际路径查找中的语义。"
+        },
+        {
+          "id": "linux-inode",
+          "citation": "Linux man-pages. inode(7), man-pages 6.19 (2026).",
+          "url": "https://man7.org/linux/man-pages/man7/inode.7.html",
+          "use": "支持区分文件系统对象属性、inode编号和路径/链接，说明路径不应被当作永久身份。"
+        }
+      ],
+      "overall": "Hierarchical information organization is illustrated here through a fictional design workflow: parent-child directories and component-by-component paths provide location context, allowing identically named files to be distinguished accurately across branches. Paths change when items are manually moved or renamed, so they represent location rather than permanent identity; cross-project references, permissions, and retention rules require other mechanisms.",
+      "module": {
+        "intro": "Use two legitimately identical filenames and one explicit archive move to check how a full path supplies context and why the old path fails afterward.",
+        "diagramTitle": "How Identical Filenames Are Distinguished by Paths, and Why Archiving Changes the Location",
+        "diagramSteps": [
+          "Keep a final.pdf in both the RiverFest and NightMarket projects",
+          "Follow Active → Clients → RiverFest → 2026 → Print component by component to locate and deliver the correct file",
+          "After the client confirms the project is complete, manually move RiverFest/2026 into Archive",
+          "Verify that the old Active path fails while the new Archive path still reaches the original file",
+          "Update the path in the business record and maintain cross-project references, permissions, and retention rules separately"
+        ],
+        "diagramStepNotes": [
+          "Identical names are not necessarily naming errors; parent directories provide context.",
+          "Component-by-component resolution succeeds only when each directory component matches.",
+          "Archiving is a deliberate action after project completion, not an automatic consequence of classification.",
+          "A changed path means the location expression changed, not that the file contents disappeared.",
+          "RF-P-014 is a studio business-record key, not an inode or a globally permanent file identity."
+        ],
+        "mapping": [
+          "Two final.pdf files → identically named objects coexisting in different project branches.",
+          "Active and Archive paths → locations of the same business file at different project stages.",
+          "Broken old bookmark → the previous path no longer resolves after the parent directory moves.",
+          "RF-P-014 and logo references → business relationships that still need mechanisms beyond the path."
+        ],
+        "boundary": "Hierarchy primarily organizes location and cannot express every relationship. Paths can change after moves or renames; internal file-system identifiers also have scope and reuse limits and should not simply be treated as globally permanent IDs. Cross-project references still require maintenance, while permission and retention inheritance depend on the specific system configuration.",
+        "reflection": "Why can both files legitimately be named final.pdf, while moving one from Active to Archive leaves its contents intact but makes the old bookmarked path fail?"
+      },
+      "references": [
+        {
+          "id": "linux-path",
+          "citation": "Linux man-pages. path_resolution(7), man-pages 6.19 (2026).",
+          "url": "https://www.man7.org/linux/man-pages/man7/path_resolution.7.html",
+          "use": "Supports component-by-component path resolution from a root or current directory and the practical semantics of directory hierarchy during path lookup."
+        },
+        {
+          "id": "linux-inode",
+          "citation": "Linux man-pages. inode(7), man-pages 6.19 (2026).",
+          "url": "https://man7.org/linux/man-pages/man7/inode.7.html",
+          "use": "Supports distinguishing file-system object attributes and inode numbers from paths and links, helping show why a path should not be treated as permanent identity."
+        }
+      ]
     },
     {
       "id": "0611-least-privilege",
@@ -324,42 +419,135 @@
       "fieldCode": "0612",
       "fieldTitle": "Database and network design and administration",
       "fieldTitleZh": "数据库与网络设计及管理",
-      "title": "The Address Written in Seven Registers",
-      "titleZh": "写在七本名册里的地址",
-      "summary": "A shop copies one customer's address into seven books; after she moves, deliveries reach four different places.",
-      "summaryZh": "一家商铺把同一位顾客的地址抄进七本账，搬家以后，货物被送到了四个不同地方。",
+      "title": "Today’s Delivery Goes to River Road; the Old Receipt Still Says Pine Street",
+      "titleZh": "今天送河路，旧签收单还写着松街",
+      "summary": "An equipment-rental shop needs to deliver a lighting rig to returning customer Zhou Yao. The old single table mixes the customer’s current contact information with the delivery address of each historical rental. Shen He checks the historical snapshot against the original signed receipt, then separates Customer and Rental facts and reconnects them with keys. Today’s order uses the current information, while the old order preserves its original address.",
+      "summaryZh": "器材租赁店要给老客户周遥送一套灯架。旧单表把客户当前联系方式和每笔历史租单的送达地址混在同一组字段里；沈禾用原始签收凭证核对历史快照，再把Customer与Rental按不同事实拆开并通过键关联。今天订单取当前资料，旧订单保持原地址。",
       "storyParagraphs": [
-        "A cloth shop kept separate registers for orders, returns, membership, debt, delivery, repairs, and festivals. Mrs Lin's name and address appeared in all seven. When she moved, she told only the delivery clerk; six books retained the old address. A holiday shipment depended on correct notices, and the owner promised a bonus if the seven ledgers closed without delay.",
-        "Orders reached the new home, refund letters went to the old street, and a repaired item travelled to an earlier temporary address. Deleting her last order almost removed the only remaining contact details. One fact scattered across many places created contradictions during update, insertion, and deletion. A new customer could not be entered into the repair book without inventing an order number, while deleting a cancelled order threatened to erase the only address.",
-        "The accountant listed dependencies before splitting anything: customer number determined name and current contact; order number determined order facts; repair number determined repair facts. Repeating groups were separated so each row described one kind of thing. Trial joins had to reconstruct every old invoice exactly; if a decomposition lost rows or invented combinations, it was rejected. A separate address-history register preserved where past shipments had actually gone. When the clerk corrected the current address, the old delivery slips still showed the doors used at the time.",
-        "The bookkeeper placed customer details in one register identified by customer number. Orders, returns, and repairs stored that number and their own facts. Address was maintained in one proper place and linked when needed. Joining the separated records still reconstructed the original business information. Foreign-key checks prevented orders from pointing to customers that did not exist. A unique rule stopped the same repair ticket from being inserted twice.",
-        "Not every value had to be split into the smallest possible piece. Controlled copies could support frequent reports, but their source, refresh rule, and consistency owner had to be explicit. Important constraints could not disappear during decomposition. During migration, a wooden sign suspending new entries hung at the counter for one full market day, and the promised bonus was lost. Duplicate customer records were reconciled rather than silently merged. Staff reconciled seven books row by row, and Mrs Lin confirmed three disputed addresses before the cutover. The shop closed for a second half-day to verify counts against paper receipts; no source record was destroyed during the check.",
-        "When Mrs Lin moved again, the clerk changed one row. All seven business activities pointed to the new door at their next lookup. A controlled reporting copy refreshed nightly, and its timestamp made clear when it could lag behind the authoritative tables. The next refund and repair queries returned one current contact without erasing the addresses attached to past transactions."
+        "The equipment-rental shop is due to deliver a lighting rig to Zhou Yao that afternoon. In the morning she calls to say that her studio has moved from Pine Street to River Road and that her phone number has changed as well. Shen He opens the old system and sees Zhou Yao’s four previous rentals plus today’s fifth order, each repeating a name, phone number, and a field simply called “address.” Today’s R604 has not yet left the shop, and the driver is waiting for the latest delivery details.",
+        "Shen He first pulls out the signed receipt for R551 from three months earlier. The paper clearly says Pine Street and contains the original delivery acknowledgment, so the historical delivery address has an independent source; it does not need to be inferred backward from today’s River Road address. If all five rows were updated to River Road merely to make them consistent, the old transaction would be rewritten. But if only R604 were changed, the old table’s supposed “customer address” would contain multiple versions of a fact that is meant to be current.",
+        "They separate the two kinds of facts. In the Customer table, CustomerID C208 identifies Zhou Yao’s name, current phone number, and current contact address. In the Rental table, each RentalID identifies the rental period, amount, and the delivery-address snapshot stored when that particular order was confirmed. R604 records River Road when today’s delivery is confirmed, while R551 retains Pine Street from the original signed receipt.",
+        "After migration, Shen He updates C208’s current phone number and address only once in Customer. When R604 is opened, the system follows CustomerID to retrieve the current phone number while reading River Road from that order’s own delivery snapshot. When R551 is opened, the phone number is still the current new number, but the historical delivery address remains Pine Street. The two meanings are no longer forced into one ambiguous “address” field.",
+        "Before switching over, Shen He lays the four completed rentals beside their original documents, then joins the tables through CustomerID. Each order ID, amount, and delivery address matches. Each rental links to the single C208 customer record, with no missing rows or extra combinations. CustomerID remains unique, and Rental.CustomerID is a non-null foreign key that must refer to an existing customer. She saves these four checks with the migration record.",
+        "That afternoon, the driver takes R604 with the new phone number in the contact field and River Road in the delivery field. Shen He opens R551, where Pine Street still matches the original signed receipt. She closes the old order. The next change to Zhou Yao’s current contact details will still go into the C208 row in Customer."
       ],
       "storyParagraphsZh": [
-        "布庄为订单、退货、会员、欠款、送货、维修和节庆各设一本名册。顾客林太太的姓名与地址在七处重复。她搬家时只通知送货员，其他六本仍保留旧址。节日前的大批送货全靠通知无误，老板还答应七本账按时结清便发奖金。",
-        "随后，订单送到新家，退款信去了旧街，维修品被送到她更早的临时住处。删除最后一笔订单时，伙计还险些把她唯一的联系方式一并擦掉。同一事实散在多处，更新、插入和删除都会制造新矛盾。新顾客若没有订单号就无法写入维修册；删除取消订单时，又可能连唯一地址一同抹掉。",
-        "账房拆表前先列依赖：顾客编号决定姓名与当前联系方式，订单编号决定订单事实，维修编号决定维修事实。重复组被分开，让每行只描述一种事物。试连接必须准确还原每张旧单；若拆分丢行或凭空组合，方案就被否决。另设地址历史表保存旧货实际送往何处。伙计改正当前地址后，旧送货单仍写着当时敲过的门牌。",
-        "账房把顾客资料放进一张以顾客编号识别的名册，订单、退货和维修只保存编号与各自事实。地址只在一个合适位置维护，需要时通过编号关联。拆分后重新组合，仍能还原原有业务记录。外键约束阻止订单指向不存在的顾客，唯一规则也防止同一维修单被重复录入。",
-        "并非所有内容都要切成最小碎片。常用报表为性能可保存受控副本，但来源、刷新规则和一致性责任必须明确。约束也不能因拆表而丢失。迁移那天，柜台挂着“暂停新录入”的木牌整整一个集日，老板答应的奖金也没发成。重复顾客记录逐项核对，不能悄悄合并。员工逐行核对七本名册，林太太还在切换前亲自确认三处有争议地址。布庄又停半日，以纸凭据核对总数，任何来源记录都未被贸然销毁。",
-        "林太太再次改地址时，伙计只改了一行。七项业务在下次查询时一同指向了新门牌。常用报表保留受控副本，每夜刷新，并用时间戳说明它何时可能落后于权威数据。随后退款与维修查询只返回一个当前联系方式，过去交易对应的旧地址却仍被保存。"
+        "器材租赁店下午要给周遥送一套灯架。上午她来电话，说工作室已经从松街搬到河路，手机号也换了。沈禾打开旧系统，发现周遥过去四笔租单和今天待送的第五笔都重复着姓名、电话和一个叫“地址”的字段；今天这张R604还没出车，司机正等最新地址。",
+        "沈禾先翻出三个月前R551的签收凭证。那张纸清楚写着松街，并有当时的签收记录，所以历史送达地址有独立来源，不需要从今天的河路反推。若把五行地址全部更新为河路，旧交易会被改写；若只改R604，所谓“客户当前地址”又会在旧表里出现多个版本。",
+        "他们把两类事实拆开：Customer表中，CustomerID C208对应周遥的姓名、当前电话和当前联系地址；Rental表中，每个RentalID对应租期、金额以及那笔订单确认时保存的送达地址快照。R604在今天确认配送时写入河路，R551则把原始凭证中的松街保留下来。",
+        "迁移后，沈禾只在Customer里把C208的当前电话和地址更新一次。打开R604时，系统通过CustomerID取到新的联系电话，同时读取这笔订单自己的河路送达快照；打开R551时，联系电话仍是当前新号码，但历史送达地址仍是松街。同一“地址”不再承担两种语义。",
+        "切换前，沈禾把四笔已完成租单和原始单据并排放好，再按CustomerID执行连接查询。四个订单号、金额和各自的送达地址逐项对上，每笔租单只连接到C208的一条客户记录，没有丢行或多出组合。CustomerID保持唯一，Rental里的CustomerID也设为非空外键，必须指向现有客户；这四笔的核对结果随迁移记录一起保存。",
+        "下午司机拿走R604，联系栏是新号码，送达栏是河路。沈禾随后打开R551，松街仍和原签收凭证一致。她关掉旧单；下次要改周遥的当前联系资料，仍到Customer的C208那一行。"
       ],
       "conceptName": "Database normalization",
       "conceptNameZh": "数据库规范化",
       "explanationParagraphs": [
-        "Database normalisation organises facts by keys and functional dependencies so that each belongs in an appropriate relation, reducing insertion, update, and deletion anomalies. Good decomposition should be lossless and preserve important constraints where possible. Normal forms guide design; performance, history, and controlled denormalisation still require explicit trade-offs and maintenance."
+        "Database normalization uses functional dependencies to place different facts in appropriate relations and reconnect them with keys, reducing update, insertion, and deletion anomalies caused by redundancy.",
+        "Here C208 determines current customer information, while R551 and R604 each determine their own transaction facts and delivery snapshots. Historical addresses come from original records; after decomposition, foreign-key constraints and correct join results still need to be preserved."
       ],
       "explanationParagraphsZh": [
-        "数据库规范化依据键与函数依赖把事实放在恰当关系中，减少插入、更新和删除异常。良好分解应无损，并尽可能保留重要约束。范式是设计指南，不是绝对目标；性能、历史和受控反规范化仍需明确权衡与维护规则。也须验证。"
+        "数据库规范化依据属性间函数依赖把不同事实放入合适关系，并用键重新连接，以减少冗余引起的更新、插入和删除异常。",
+        "本例C208决定当前客户资料，R551、R604各自决定交易事实和送达快照。历史地址来自原始凭证；拆分后还需保持外键等约束并验证连接结果。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构租赁数据说明数据库规范化：依据函数依赖和事实语义拆分关系，再通过键重新关联，以减少同一事实重复维护造成的更新、插入和删除异常。当前客户资料与历史订单快照属于不同事实，拆分后仍需验证无损连接和必要约束。",
+      "moduleZh": {
+        "intro": "先用原始凭证区分“客户现在在哪里”和“某笔订单当时送到哪里”，再按函数依赖拆分并重新关联。",
+        "diagramTitle": "当前地址只改一处，历史订单为什么仍保留旧门牌",
+        "diagramSteps": [
+          "识别旧单表把当前客户资料重复写进多笔租单",
+          "用原始R551签收凭证确认历史送达地址独立于当前地址",
+          "把Customer当前资料与Rental交易快照拆开，并用CustomerID关联",
+          "更新C208一次，同时让R551保留松街、R604保存河路",
+          "用原始单据、连接查询和外键检查本次迁移结果"
+        ],
+        "diagramStepNotes": [
+          "问题不是所有重复都错误，而是同一当前事实被多处独立维护。",
+          "历史快照必须来自当时记录，不能由现在的地址推算。",
+          "旧表有RentalID→CustomerID→当前客户资料的传递依赖；订单自己的历史送达快照仍由RentalID决定。",
+          "当前资料变化不应重写已经完成的交易快照。",
+          "四笔核对只验证这个教学迁移实例，不等于一般无损连接证明。"
+        ],
+        "mapping": [
+          "C208 → 当前客户属性的识别键。",
+          "R551签收凭证 → 松街历史快照的独立证据来源。",
+          "R604 → 今天待送且保存河路快照的订单。",
+          "外键 → 防止租单关联到不存在客户的关系约束。"
+        ],
+        "boundary": "规范化不要求消除所有重复，也不意味着表越多越好。历史快照、审计数据和受控冗余可能有独立业务意义；拆分后必须保持无损连接和必要约束。Codd 1970论文奠定关系模型并讨论当时的normal form，不应被说成已经包含后来全部2NF、3NF等理论。本例CustomerID在客户表唯一，租单的CustomerID是非空外键，每笔租单因而连接到一条现有客户记录；四笔实测核对仍不能替代一般设计的无损连接分析。",
+        "reflection": "为什么周遥搬家后，Customer里的当前地址应该改成河路，而R551里的松街却必须继续保留？"
+      },
+      "referencesZh": [
+        {
+          "id": "codd-1970",
+          "citation": "Codd, E. F. (1970). A Relational Model of Data for Large Shared Data Banks. Communications of the ACM, 13(6), 377–387.",
+          "url": "https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf",
+          "use": "支持关系模型、键、冗余与当时normal form等基础思想；不把后来全部规范化理论都归为该论文已完整提出。"
+        },
+        {
+          "id": "microsoft-design",
+          "citation": "Microsoft. Database design basics.",
+          "url": "https://support.microsoft.com/en-us/access/database-design-basics",
+          "use": "提供实体、键、关系和常见规范化实践说明，用于理解如何减少更新异常并维持数据关系。"
+        }
+      ],
+      "overall": "Database normalization is illustrated here through fictional rental data: relations are decomposed according to functional dependencies and the meaning of facts, then reconnected through keys to reduce update, insertion, and deletion anomalies caused by maintaining the same fact in multiple places. Current customer data and historical order snapshots are different facts, and decomposition still requires lossless relationships and necessary constraints to be preserved.",
+      "module": {
+        "intro": "Use the original receipt to separate “where the customer is now” from “where this order was delivered then,” then decompose the data according to functional dependencies and reconnect it.",
+        "diagramTitle": "Why the Current Address Changes Once While the Historical Order Keeps Its Old Street",
+        "diagramSteps": [
+          "Identify that the old single table repeats current customer information across multiple rentals",
+          "Use the original R551 signed receipt to confirm that the historical delivery address is independent of the current address",
+          "Separate current Customer facts from Rental transaction snapshots and reconnect them through CustomerID",
+          "Update C208 once while R551 retains Pine Street and R604 stores River Road",
+          "Check the migration against original documents, join queries, and foreign-key constraints"
+        ],
+        "diagramStepNotes": [
+          "The problem is not that all repetition is wrong; it is that one current fact is independently maintained in multiple places.",
+          "A historical snapshot must come from a record made at the time, not be reconstructed from the current address.",
+          "The old table has the transitive dependency RentalID→CustomerID→current customer attributes; the historical delivery snapshot still depends on its own RentalID.",
+          "A change in current customer information should not rewrite completed transaction snapshots.",
+          "Checking four records validates this teaching migration instance only; it is not a general proof of lossless decomposition."
+        ],
+        "mapping": [
+          "C208 → the identifying key for current customer attributes.",
+          "R551 signed receipt → independent evidence for the Pine Street historical snapshot.",
+          "R604 → today’s order storing the River Road snapshot.",
+          "Foreign key → a relational constraint preventing a rental from referencing a nonexistent customer."
+        ],
+        "boundary": "Normalization does not require eliminating every repetition, nor does more tables automatically mean better design. Historical snapshots, audit records, and controlled redundancy can have independent business value; decomposition must preserve lossless joins and necessary constraints. Codd’s 1970 paper established the relational model and discussed the normal form of that period; it should not be described as already containing the complete later theory of 2NF, 3NF, and all subsequent normal forms. In this example, CustomerID is unique in Customer and is a non-null foreign key in Rental, so each rental joins to one existing customer record. Checking four records still does not replace lossless-join analysis for a general design.",
+        "reflection": "Why should Zhou Yao’s current address in Customer change to River Road, while Pine Street in R551 must remain unchanged?"
+      },
+      "references": [
+        {
+          "id": "codd-1970",
+          "citation": "Codd, E. F. (1970). A Relational Model of Data for Large Shared Data Banks. Communications of the ACM, 13(6), 377–387.",
+          "url": "https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf",
+          "use": "Supports foundational ideas of the relational model, keys, redundancy, and the normal form discussed at the time; it is not used to claim that the paper fully developed all later normalization theory."
+        },
+        {
+          "id": "microsoft-design",
+          "citation": "Microsoft. Database design basics.",
+          "url": "https://support.microsoft.com/en-us/access/database-design-basics",
+          "use": "Provides practical explanations of entities, keys, relationships, and common normalization practices for reducing update anomalies while preserving data relationships."
+        }
+      ]
     },
     {
       "id": "0612-distributed-consensus",
@@ -368,44 +556,135 @@
       "fieldCode": "0612",
       "fieldTitle": "Database and network design and administration",
       "fieldTitleZh": "数据库与网络设计及管理",
-      "title": "The Ship That Departed Twice",
-      "titleZh": "出发了两次的船",
-      "summary": "Five signal towers keep a shared sailing log; when the leader falls silent, old and new orders send one ship twice.",
-      "summaryZh": "五座信号塔在浓雾中各自保存航令，旧塔失声后，新旧命令让同一艘船出发了两次。",
+      "title": "After the Page Times Out, Mei Checks the Booking Result",
+      "titleZh": "页面超时以后，梅先查预约结果",
+      "summary": "A fixed five-node, non-Byzantine booking service experiences a network partition. The term-8 leader persistently writes Mei’s 14:00 request to only A and B before losing contact. In term 9, new leader C commits another 14:00 booking command on a majority and applies it before returning success. Later, D wins term 10 with three votes because of its more up-to-date log; even after old-term entry 42 is replicated to a majority, it is not committed merely by counting copies, but becomes part of the committed prefix after current-term entry 43 is replicated to a majority.",
+      "summaryZh": "固定五节点、非拜占庭的预约服务发生网络分裂。任期8领导只把梅的14:00请求持久写到A、B两台便失联；任期9新领导C在多数节点提交另一条14:00预约命令并应用后才返回成功。后续D在任期10凭较新日志获三票，当旧任期42复制到多数时仍不直接提交，而由当前任期43多数提交后带动前缀提交。",
       "storyParagraphs": [
-        "Five harbour towers jointly recorded ship departures. A lead tower issued an order and the others copied it, allowing work to continue after one failure. In heavy fog, the leader ordered Morning Star to depart and then lost contact. Only one other tower copied the order before the lead tower's lamp went dark. If the departure was recorded twice, insurers could pay conflicting claims and two rescue crews might search the same route.",
-        "The other three could not see that entry. They chose a new leader and approved Morning Star's departure again. When the fog cleared, both versions claimed authority. A delayed old message remained in transit while the new leader had extended its log. Accepting either freely could commit conflicting orders. The captain received two stamped orders and refused to leave until the towers resolved which log position counted. Perishable cargo spoiled while merchants shouted from the quay.",
-        "The harbourmaster raised a hold signal over the isolated pair and rejected their old order. He kept Morning Star at the quay while the three connected towers compared their pages and stamped the surviving entry. Work stopped at two piers, one history remained, and the port paid compensation for the spoiled cargo.",
-        "After paying the merchants, the harbourmaster brought all five keepers into the signal room. He scratched 8 on the outgoing keeper's brass tag and gave the successor a tag marked 9. They hung the two stamped orders beside the lamp rope. When the former leader returned and reached for it, the east keeper checked the tags, folded the older order, and left the lamp dark. Its seal was genuine, but its number had expired.",
-        "They rehearsed the handover again. Before taking the signal horn, the successor collected logs from three reachable towers. She tried to begin on a fresh page, but the west keeper laid down a page bearing an earlier entry and its black commit mark. He would not add his signature until she copied it. With only two signatures, the departure lamp stayed hooded. She restored the entry, received the third mark, and only then punched the next black circle. A tower missing pages had to catch up before joining a later vote.",
-        "At the next full split, the three connected towers continued while the isolated pair raised the hold flag, despite merchants beating on their doors. A delayed former leader arrived with a lower-numbered tag; the keeper refused to pull the rope. The tower that had missed entries copied the pages before voting. When leadership failed again, Morning Star received one order bearing a term and commit mark. The delayed alternative went onto the obsolete rack. Progress slowed; the log did not fork.",
-        "The captain checked the term, log position, and commitment mark before accepting it, not the authority of the tower's name alone."
+        "Only one 14:00 slot remains at the shared photo studio. The booking service consists of a fixed set of five non-Byzantine nodes, A, B, C, D, and E, all replicating the same log. Mei submits a booking from her phone and the page keeps spinning. Term-8 leader A has already persistently written Reserve(梅,14:00) at log position 41 on itself and B, but before a third copy is persisted, A and B lose contact with C, D, and E. Mei sees only a timeout and does not click again.",
+        "C, D, and E remain connected, enter term 9, and elect C as leader; all three had previously committed only through position 40. C then receives Ren’s 14:00 request, writes Reserve(任,14:00) at position 41, and persistently replicates it to C, D, and E. After reaching 3/5, C advances the commit index and applies position 41 to the booking state machine in log order. The state machine checks that 14:00 is still free, records the slot for Ren, and only then does the service return success to Ren.",
+        "Mei uses the “Check booking” action shown on the timeout page to look up the final result. When communication recovers, A sees the higher term and steps down to follower. As the current leader sends its log, A and B discover a term conflict at position 41; the uncommitted term-8 entry is removed and replaced by the leader’s term-9 position 41. The query goes to term-9 leader C. After confirming its leadership with a majority and reading the state with entry 41 applied, C reports that Mei has no valid 14:00 booking. Her timeout is treated as neither proof of success nor proof of failure.",
+        "Later, C writes SetEquipment(16:00房间,投影仪) at position 42 in term 9 and persists it only to C and D before crashing, so entry 42 is still uncommitted. D has the last log entry (term 9, position 42) and starts a term-10 election. A and E have both caught up through last entry (term 9, position 41). Because the last-log terms are equal and D’s index is larger, they each vote for D; together with D’s own vote, D wins 3/5 and becomes leader.",
+        "As term-10 leader, D replicates old term-9 entry 42 to A, D, and E. Even though entry 42 now has copies on a majority, D does not advance its committed status merely from that count. In this teaching implementation, D next appends LeaderNoOp at position 43 in current term 10 and persistently replicates it to D, A, and E. Once current-term entry 43 reaches a majority, the commit index advances to 43, and the continuous prefix including entry 42 becomes committed as well.",
+        "After C restarts, D sends it the committed prefix as well, and the five nodes gradually align on the operations screen. The customer page shows Mei’s query result and Ren’s confirmed 14:00 booking, without term numbers. The operations log gives positions 41, 42, and 43 their own rows, recording replication and commitment separately. The timeout remains on the investigation list."
       ],
       "storyParagraphsZh": [
-        "港湾由五座信号塔共同记录船只出发。领塔发出航令，其余塔抄入日志；即使一座停电，港口仍希望继续工作。一次浓雾中，领塔发出“晨星号出发”后失去联系，在领塔灯火熄灭前，只有另一座塔抄到航令。若同一次出航被记录两次，保险可能重复赔付，两支救援队也会沿同一路线白跑。",
-        "另外三座看不见这条记录，选出新领塔，又批准晨星号出发。雾散后，两个版本都声称有效：旧领塔的延迟消息仍在路上，新领塔则已经继续写日志。若各塔随便接受，港口可能提交冲突顺序。船长同时拿到两张盖章航令，不肯启航，直到信号塔说清哪条日志有效。易腐货物在等待中变质，商人在码头叫骂。",
-        "港务官在孤立的两座塔上升起暂停旗，拒绝它们手里的旧航令。他让晨星号留在码头，等三座相连塔逐页核对并在保留的记录上盖章。两处泊位就此停工，日志保住唯一顺序，港口则赔偿已经变质的货物。",
-        "赔完商户，港务官把五名守塔人都叫进信号房。他在原领塔人的铜牌上刻下八，又把刻着九的牌子交给继任者，两张盖印航令并排挂在灯绳旁。旧领塔人回来伸手拉绳时，东塔守卫先看铜牌，把旧航令折起，灯仍暗着。印章是真的，号码却已经过期。",
-        "众人重新演练交接。继任者拿起号角前，先收齐三座可通信塔的日志。她想从空白页开始，西塔守卫却摊开一页，上面已有旧记录和黑色提交章；她不抄回去，他就不肯落签。只有两枚签记，出航灯一直罩着。继任者补回那一页，拿到第三枚签记，才在下一条记录上打出黑圈。漏页的塔也必须先抄齐，才能参加下一次选择。",
-        "下一次通信完全分裂时，三座相连塔继续工作，孤立的两座即使被商人拍门，也只挂暂停旗。延迟归来的旧领塔人带着较小号码，守卫没有替他拉绳；漏记的塔先抄齐日志，才参加投票。领塔再次失声时，晨星号只收到一张带号码与提交章的航令，迟来的另一张被挂进废止栏。进度慢了，日志没有分叉。",
-        "船长核对任期、日志位置与提交记号，不再只凭信号塔名号接受命令。"
+        "共享摄影棚的14:00档只剩一个。预约服务固定由A、B、C、D、E五台非拜占庭节点复制同一日志。梅在手机上提交预约后页面一直转圈：任期8领导A已经把“Reserve(梅,14:00)”持久写到自己和B的日志位置41，但第三份还没落盘，A、B就与C、D、E失联。梅只看到超时，没有再点一次。",
+        "C、D、E仍互通，进入任期9并选C为领导；它们此前都只提交到位置40。C随后收到任的14:00预约，把“Reserve(任,14:00)”写在位置41并持久复制到C、D、E。达到3/5后，C推进提交位置并按顺序把41应用到预约状态机；状态机检查14:00仍为空，才把档期记给任，随后服务向任返回成功。",
+        "梅按超时页面上的“查询预约”查看最终结果。网络恢复后，A看到更高任期便退回跟随者；新领导发送日志时，A、B在位置41发现任期冲突，未提交的任期8条目被删除并改成领导的任期9位置41。查询交给任期9的C：它先通过多数节点确认自己仍是领导，再读取已经应用位置41的状态，返回梅没有有效14:00预约。她的超时既没有被当作成功凭证，也没有被直接当作失败凭证。",
+        "稍后C在任期9把位置42写成“SetEquipment(16:00房间,投影仪)”，只持久到C、D两台便宕机，所以42尚未提交。D拥有最后日志(任期9,位置42)，它发起任期10选举。A和E都已追到最后日志(任期9,位置41)；比较最后日志任期相同而D索引更大后，它们各投一票，加上D自己一票，D以3/5当选。",
+        "D成为任期10领导后，把旧任期9的位置42复制到A、D、E三台。即使42此时已有多数副本，D也没有仅凭这个计数直接推进它的提交状态。这个教学实现随后在位置43追加任期10的LeaderNoOp，并持久复制到D、A、E；当前任期43达到多数后，提交位置推进到43，连续前缀中的42也随之成为已提交。",
+        "C重启后，D也把已提交前缀同步给它；值班屏幕上的五台节点逐步对齐。顾客页面只显示梅的查询结果和任的14:00预约确认，不展示任期号。运维日志里，41、42、43各占一行，复制和提交状态分别记录；那次超时仍留在待查列表上。"
       ],
       "conceptName": "Distributed consensus",
       "conceptNameZh": "分布式共识",
       "explanationParagraphs": [
-        "Distributed consensus enables multiple nodes to agree on a value or ordered log despite crashes, delayed messages, and network partitions. Safety prevents conflicting commitments; liveness seeks progress only when communication and fault assumptions permit it. Crash-fault protocols commonly use increasing terms or epochs, leader-election rules, overlapping quorums, log repair, and explicit commit conditions; merely receiving or copying an entry does not necessarily commit it. Byzantine faults and membership changes need additional protocol-specific safeguards."
+        "Distributed consensus requires replicated nodes to agree on committed commands and their order even when delays or failures occur. Raft maintains this property through leader terms, log matching, election restrictions, and majority replication.",
+        "With five nodes, a current-term entry must be persistently replicated to at least three nodes before the leader can advance commitment under this rule. Old term-9 entry 42 cannot be committed merely because it later has majority copies; committing current-term entry 43 can carry the continuous prefix forward."
       ],
       "explanationParagraphsZh": [
-        "分布式共识让多个节点在崩溃、消息延迟与网络分区下仍对某个值或有序日志达成一致。安全性要求不出现冲突提交，活性只在通信和故障假设允许时追求推进。常见崩溃容错协议会使用递增任期、选主规则、相交法定人数、日志修复与明确提交条件；收到或复制记录不等于已经提交。恶意节点和成员变更还需额外的协议机制。"
+        "分布式共识要求复制节点即使发生延迟或故障，也对已提交命令及顺序保持一致。Raft用领导任期、日志匹配、选举限制和多数复制维护这一性质。",
+        "五节点中，本任期条目持久复制到至少3节点后才可按规则推进提交。旧任期42即使后来已有多数副本，也不能仅据此直接提交；当前任期43多数提交后可带动连续前缀。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构固定五节点、非拜占庭Raft式例子说明分布式共识：复制节点在延迟、失联和崩溃下仍需保持同一已提交命令及顺序。领导任期、日志匹配、选举限制和多数复制共同维护安全性；业务上的唯一预约还需由确定性的应用状态机按统一顺序检查空位。",
+      "moduleZh": {
+        "intro": "把顾客看到的成功/超时与运维内部的写入、复制、提交、应用分开，沿两个任期切换检查Raft规则。",
+        "diagramTitle": "位置41、42、43怎样分别经历未提交、当前任期提交和前缀推进",
+        "diagramSteps": [
+          "任期8领导A把梅的位置41写到A/B两台后分裂，用户只收到超时",
+          "任期9领导C把任的位置41复制到C/D/E，提交并应用后才返回成功",
+          "恢复通信后由领导日志覆盖A/B上冲突且未提交的任期8位置41",
+          "D凭最后日志(9,42)在任期10获得D/A/E三票当选",
+          "D先复制旧任期42，再多数复制当前任期43，使提交位置推进并带动42"
+        ],
+        "diagramStepNotes": [
+          "2/5不是多数，少数分区不能确认新的已提交命令。",
+          "应用层按已提交日志顺序执行Reserve，并自行检查14:00是否空闲。",
+          "日志冲突修正服从当前领导，只覆盖冲突的未提交后缀。",
+          "选举先比较最后日志任期，再在任期相同时比较索引。",
+          "LeaderNoOp是本教学实现用来产生当前任期条目的选择，不宣称是唯一必须实现方式。"
+        ],
+        "mapping": [
+          "梅的超时页面 → 客户端是否收到响应与命令是否提交不是同一状态。",
+          "14:00唯一档期 → 由应用状态机按统一命令顺序检查的业务约束。",
+          "位置42设备设置 → 旧任期未提交但与14:00预约不同的具体命令。",
+          "位置43 LeaderNoOp → 当前任期条目多数提交后推进连续已提交前缀。"
+        ],
+        "boundary": "这是固定五节点、非拜占庭的简化Raft教学情境，不覆盖恶意节点或完整实现。多数交集本身不足以推出全部安全性，还依赖任期、日志匹配和选举限制；共识只统一已提交命令顺序，不自动提供业务去重或唯一性。失去多数时系统可能停止推进，因此安全性也不等于永久可用。只读查询也需确认当前领导和已应用提交状态，不能任取失联节点上的旧读数。",
+        "reflection": "为什么任的预约要等位置41提交并应用后才返回成功，而旧任期42即使后来已经复制到三台，D仍不能只凭“多数副本”立即把它算成已提交？"
+      },
+      "referencesZh": [
+        {
+          "id": "ongaro-2014",
+          "citation": "Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm (Extended Version). Technical report, May 20, 2014.",
+          "url": "https://raft.github.io/raft.pdf",
+          "use": "支持Raft任期、日志匹配、选举限制、当前任期提交与旧前缀推进；第8节另说明避免只读查询返回旧状态的条件。"
+        },
+        {
+          "id": "raft-project",
+          "citation": "Raft project. The Raft Consensus Algorithm.",
+          "url": "https://raft.github.io/",
+          "use": "提供Raft复制状态机与一致日志的项目概述，用于理解节点对已提交命令及顺序保持一致的目标。"
+        }
+      ],
+      "overall": "Distributed consensus is illustrated here with a fictional fixed five-node, non-Byzantine Raft-style example: replicated nodes must preserve the same committed commands and order despite delays, disconnections, and crashes. Leader terms, log matching, election restrictions, and majority replication work together to preserve safety; the business rule that only one booking may occupy a slot is still enforced by the deterministic application state machine executing the agreed command order.",
+      "module": {
+        "intro": "Separate customer-visible success and timeout from the internal states of writing, replication, commitment, and application, then trace the rules across two term changes.",
+        "diagramTitle": "How Positions 41, 42, and 43 Move Through Uncommitted, Current-Term Commit, and Prefix Advancement",
+        "diagramSteps": [
+          "Term-8 leader A writes Mei’s position 41 to A/B and partitions; the user receives only a timeout",
+          "Term-9 leader C replicates Ren’s position 41 to C/D/E, commits and applies it, then returns success",
+          "After communication recovers, the leader’s log overwrites the conflicting uncommitted term-8 position 41 on A/B",
+          "With last log (9,42), D wins term 10 with votes from D/A/E",
+          "D first replicates old-term entry 42, then majority-replicates current-term entry 43 so the commit index advances and carries 42 with the prefix"
+        ],
+        "diagramStepNotes": [
+          "2/5 is not a majority, so the minority partition cannot confirm a new committed command.",
+          "The application executes Reserve in committed-log order and independently checks whether the 14:00 slot is available.",
+          "Log conflict repair follows the current leader and overwrites only the conflicting uncommitted suffix.",
+          "Election log freshness compares the last-log term first and, when terms are equal, the index.",
+          "LeaderNoOp is the choice used in this teaching implementation to create a current-term entry; it is not claimed to be the only required implementation form."
+        ],
+        "mapping": [
+          "Mei’s timeout page → whether the client received a response is different from whether the command committed.",
+          "The unique 14:00 slot → a business constraint enforced by the application state machine over a shared command order.",
+          "Position 42 equipment setting → a concrete old-term uncommitted command that does not compete again for the 14:00 booking.",
+          "Position 43 LeaderNoOp → a current-term entry whose majority commitment advances the continuous committed prefix."
+        ],
+        "boundary": "This is a simplified fixed five-node, non-Byzantine Raft teaching scenario and does not cover malicious nodes or every implementation detail. Majority intersection alone is not sufficient to establish all safety properties; terms, log matching, and election restrictions also matter. Consensus orders committed commands but does not automatically provide business-level deduplication or uniqueness. If a majority is unavailable, progress may stop, so safety does not imply permanent availability. Read-only queries also need current-leader confirmation and applied committed state; an arbitrary disconnected node may return stale data.",
+        "reflection": "Why does Ren receive success only after position 41 is committed and applied, while D still cannot call old-term entry 42 committed merely because it later has copies on three nodes?"
+      },
+      "references": [
+        {
+          "id": "ongaro-2014",
+          "citation": "Ongaro, D., & Ousterhout, J. (2014). In Search of an Understandable Consensus Algorithm (Extended Version). Technical report, May 20, 2014.",
+          "url": "https://raft.github.io/raft.pdf",
+          "use": "Supports Raft terms, log matching, election restrictions, current-term commitment and advancement of earlier prefixes; section 8 also explains precautions against stale read-only results."
+        },
+        {
+          "id": "raft-project",
+          "citation": "Raft project. The Raft Consensus Algorithm.",
+          "url": "https://raft.github.io/",
+          "use": "Provides a project-level overview of Raft replicated state machines and consistent logs, supporting the goal that nodes preserve the same committed commands and order."
+        }
+      ]
     },
     {
       "id": "0612-defense-in-depth",
@@ -825,42 +1104,135 @@
       "fieldCode": "0613",
       "fieldTitle": "Software and applications development and analysis",
       "fieldTitleZh": "软件与应用开发及分析",
-      "title": "After the Library Doubled",
-      "titleZh": "藏书翻倍以后",
-      "summary": "A librarian prides himself on never missing a match, until a new collection makes his reliable method demand four times as many nights.",
-      "summaryZh": "一名馆长以从不漏查为荣，直到一批新书让他原本可靠的办法需要四倍长夜。",
+      "title": "400 Expense Records before 17:00",
+      "titleZh": "17:00以前的400张报销单",
+      "summary": "The finance team needs invoice screening before 17:00. The pairwise method uses 4,950, 19,900, and 79,800 comparisons for 100, 200, and 400 records; faster hardware changes only per-step constants. A hash index processes records under bounded-key, fixed expected lookup, and fixed amortized insertion assumptions. Matching keys still go to human reviewers.",
+      "summaryZh": "财务团队17:00前要完成重复发票初筛。配对法对100、200、400条做4,950、19,900、79,800次比较，更快电脑只改单步常数。哈希索引在键长有界、查找期望成本固定、插入摊还成本固定的假设下按记录处理；同键记录仍交人工复核。",
       "storyParagraphs": [
-        "Director Zhao had one rule at the county library: every new book had to be compared with every volume already held, both to prevent duplicates and to discover related works. While the collection was small, the method was dependable. Zhao always finished before closing and often said that going slowly was how one avoided missing things. Each comparison made a pair, so the work grew with possible pairs rather than books alone.",
-        "In spring, a local landowner donated his entire collection, exactly doubling the number of books in the library. Zhao added two lamps and kept his old rule. He expected twice the work. Within days, however, comparison sheets were piling up faster and faster: the new books had to be checked against the old ones, and also against one another. With n books, his method approached n(n-1)/2 comparisons. Doubling n therefore pushed the pair count toward four times, not two.",
-        "At the end of the month, the magistrate requested flood records from three generations. Zhao and six copyists worked all night and were still turning through books at dawn. The donated volumes blocked the aisles, and a later cart had to stand outside in the rain. Zhao proposed hiring six more people. A young apprentice instead pushed a small wooden box toward him, with cards divided by title, author, and river name.",
-        "The director offered to double staff, but payroll could not keep doubling whenever the collection did. Zhao surrendered his private reading room to house the catalogue and delayed lending for two weeks. The new method paid an upfront cost to build indexes, then narrowed most lookups to a small candidate set. Worst cases still existed, and extra storage now needed maintenance. The catalogue also changed failure costs: if one drawer was damaged, stable book identifiers allowed the index to be rebuilt from the shelves.",
-        "They gave every book a fixed number and placed common clues in separate drawers. To find a duplicate, they no longer introduced each book to the whole library; they checked only the small group likely to match. To find flood records, they followed the cards directly to the relevant shelves. Organizing the box took half a month, but when another cart arrived, the night shift grew by only half an hour. They timed both methods on one shelf, ten shelves, and the full hall, plotting input size against steps. The curve, not one convenient benchmark, determined the decision. They recorded indexing time and update cost beside query speed, since improvement in one operation could burden another.",
-        "Zhao did not throw away the old stack of comparison sheets. He cut them into cards and placed them in the emptiest drawer of the box. When he closed the library that evening, the sunset was still visible outside, and neither of the two extra lamps had been lit."
+        "The month-end payment file must reach the review team by 17:00, and Ji Heng receives 400 expense records that afternoon. The old program compares the normalized “supplier ID + invoice number” of every pair of records; matching keys are placed into a human-review candidate list. Last month, 100 records took about two minutes under that machine and dataset. That experience makes the team first think of switching to a computer that performs the basic comparisons faster.",
+        "Ji Heng does not use the old two-minute result to directly predict today’s runtime because the machine, data, and I/O conditions are different. Instead, he fixes a more comparable quantity: one comparison of a pair of normalized invoice keys counts as one basic operation. With n records and each distinct pair compared once, the old program requires exactly n(n−1)/2 comparisons.",
+        "For 100 records, that is 4,950 comparisons; for 200, 19,900; for 400, 79,800. Increasing the input from 100 to 400 is a factor of four, while the number of pairs grows by about a factor of sixteen. If the new computer makes the same comparison roughly twice as fast on average, it changes the constant time per step but does not change 79,800 into 19,900. Actual wall-clock time still depends on caching, disk access, and implementation details.",
+        "The team tests a hash-index screening version. Each record produces a normalized invoice key, performs a lookup, and inserts the key if it is new. The cost model treats key length as bounded and assumes hashing gives fixed expected lookup cost, while resizing costs spread over many insertions leave fixed amortized insertion cost. Each record needs at most one lookup and one insertion. Under these assumptions, processing grows approximately with n, while storing up to n keys consumes extra memory.",
+        "Matching keys enter the yellow candidate list. Reviewers use it to check suppliers, amounts, attachments, and business context; a yellow mark is not a finding of misconduct. On another page, Ji Heng places the pairwise comparison counts beside the index method’s processing units, with key-construction and storage costs listed too. Bounded key length and fixed average lookup cost remain conditions on that page. Different inputs or another index implementation would need a fresh check.",
+        "At 16:20, the index screening of 400 records finishes and the yellow list reaches the human review desk. Ji Heng clips the three counts—4,950, 19,900, 79,800—behind the batch sheet and enters 16:20 separately in the handover record. The 17:00 deadline is still printed at the top of the list."
       ],
       "storyParagraphsZh": [
-        "县图书馆的赵馆长有一条规矩：每收一册新书，都要把它同馆内每一册旧书逐一比较，以免重收，也方便找出相近内容。藏书不多时，这办法很稳妥。馆长总能在闭馆前做完，还常说，慢一点才不会漏掉东西。每次核对都组成一对，因此工作量随可能配对增长，而不只随书本数量增长。",
-        "春天，一位乡绅把家藏全数捐来，馆里的书恰好翻了一倍。赵馆长添了两盏灯，仍按旧规矩查书。他原以为工作也只会多一倍，几天后却发现桌上的对照纸越来越快地堆高：新来的书要查旧书，也要彼此再查一遍。若有 n 本书，旧法接近要做 n(n-1)/2 次比较；藏书翻倍时，配对数便趋近四倍，而非两倍。",
-        "月底，知县要找三代水患记录。赵馆长和六名抄书人熬了整夜，仍在一册册翻。乡绅的书已挡住过道，后来的书车只好停在雨里。赵馆长想再雇六个人，年轻学徒却把一只小木盒推到他面前，盒里按书名、作者和河流名称分着卡片。",
-        "知县提议加倍雇人，可馆藏每次扩张，薪资不可能都跟着翻倍。赵馆长交出私人阅览室安放目录，借阅也暂停两周。新法先付建立索引的成本，再把多数查找缩到小候选集；最坏情况仍存在，额外存储也需要维护。目录还改变故障代价：一个抽屉损坏时，稳定书号使索引能由书架重新构建。",
-        "他们先给书固定编号，再把常用线索写进不同抽屉。查重时不再让每本书与全馆相见，只查看可能相同的那一小组；找水患，也先沿卡片走到对应书架。整理木盒花了半个月，但此后又来一车书，夜班只多了半个时辰。众人分别在一架、十架与全馆计时，把输入规模和步骤画成曲线，不再由一次方便的小测试替方法定胜负。众人把建索引和更新成本同查询速度并列记录，因为一种操作变快可能让另一种更重。",
-        "赵馆长没有丢掉那叠旧对照纸。他把它裁成卡片，放进木盒最空的抽屉。那天闭馆时，门外还亮着晚霞，两盏加出来的油灯都没有点。"
+        "月底付款文件17:00要交给复核组，季衡下午拿到400条报销记录。旧程序会把每两条记录的“供应商编号+发票号”比较一次，相同就放进人工复核候选。上个月100条在当时那台机器和数据条件下跑过约2分钟，这个经验让大家先想到了换一台基本比较更快的电脑。",
+        "季衡没有拿那2分钟直接外推今天要跑多久，因为机器、数据和I/O条件已经不同。他先固定一个更可比的量：把“比较一对已规范化发票键”算作一次基本操作。n条记录每对只比一次，因此旧程序正好需要n(n−1)/2次比较。",
+        "100条需要4,950次，200条19,900次，400条79,800次。输入从100变400是4倍，配对数约变16倍。若新电脑让一次相同比较平均快约2倍，它只改变每一步的常数时间，不会把79,800这个算法步骤数改成19,900；实际钟表时间仍会受缓存、读盘和实现影响。",
+        "团队试了一个哈希索引初筛版本。每条记录先构造统一发票键，再查询索引；键没出现过时插入一次。这份成本模型把键长度视为有界，假定散列使查找具有期望固定成本，扩容的插入成本摊在多次操作上后也保持固定量级。每条至多一次查询和一次插入，处理单元随n近似线性增长，同时保存最多n个键。",
+        "索引里的同键记录进入黄色候选清单。复核组拿着清单继续看供应商、金额、附件和业务背景，没有把黄色标记当成违规结论。季衡在另一页并列记录配对法的比较次数和索引法的处理单元，并列出构键与存储成本。键长度有界、平均查找成本固定，都是这一页保留的条件，换一种输入或索引实现就要重新核对。",
+        "16:20，400条记录的索引初筛实际完成，黄色候选清单送到了人工复核桌。季衡把4,950、19,900、79,800三行计数夹在批次单后面，交付记录上另填了16:20；17:00的截止时间还写在清单页眉上。"
       ],
       "conceptName": "Computational complexity",
       "conceptNameZh": "计算复杂度",
       "explanationParagraphs": [
-        "Computational complexity examines how an algorithm's time or space requirements grow with input size. Zhao's all-pairs comparisons create roughly quadratic work, so doubling the collection brings close to four times as many comparisons. An index costs preparation and storage but sharply narrows each search. A method must therefore be judged not only by whether it works on a small input, but by its growth rate and practical resource limits."
+        "Computational complexity studies how algorithmic resource requirements grow with input size, often using asymptotic notation to describe growth scale. Big O gives an upper-bound growth scale; it is not an exact runtime, a guaranteed tight bound, or automatically a lower bound for the problem.",
+        "The pairwise method has n(n−1)/2 comparisons. The hash-index example assumes bounded keys, fixed expected lookup cost, and fixed amortized insertion cost before concluding approximately linear processing; key construction, memory, and worst cases still need accounting."
       ],
       "explanationParagraphsZh": [
-        "计算复杂度研究算法所需时间或空间怎样随输入规模增长。馆长的逐一配对会产生近似平方级的工作量，藏书翻倍时，对照次数接近四倍；索引需要额外整理和存储，却能显著减少查找范围。评价方法时，不能只看小规模下是否可用，还要看增长速度和现实资源上限。"
+        "计算复杂度研究算法资源需求怎样随输入规模增长，常用渐近记号描述增长尺度；大O给出上界尺度，不是精确秒数，也不必然表示紧界或问题下界。",
+        "配对法有n(n−1)/2次比较。哈希索引例假定键长有界、查找期望成本固定、插入摊还成本固定，处理才近似按n增长；构键、内存和最坏情况仍须核算。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构重复发票初筛说明计算复杂度：在明确基本操作和成本模型下，研究算法的时间步骤、存储等资源需求如何随输入规模增长。更快硬件可以改善常数因素，却不会自动改变增长阶；对具体算法的计数也不等于证明问题本身的最优下界。",
+      "moduleZh": {
+        "intro": "固定基本操作和成本假设，用多规模精确步骤计数分析增长，再把理论计数与实际钟表时间分开。",
+        "diagramTitle": "从4,950到79,800，算法步骤怎样随记录数增长",
+        "diagramSteps": [
+          "定义一次基本操作为比较一对已规范化发票键",
+          "用n(n−1)/2计算100/200/400条的4,950/19,900/79,800次比较",
+          "区分输入4倍带来的约16倍配对增长与硬件约2倍单步加速",
+          "哈希索引每条至多一次查找、一次插入，固定期望查找和摊还插入成本作为假设",
+          "把构键、存储、最坏情况和实际16:20完成时间分别记录"
+        ],
+        "diagramStepNotes": [
+          "100条约2分钟只是一次旧环境实测，不直接外推400条新环境时间。",
+          "精确配对数属于这个算法，而非所有算法的下界。",
+          "硬件变化通常影响常数，不改变配对公式的增长阶。",
+          "期望成本涉及散列假设；摊还插入成本把扩容等开销分摊到多次操作。两者都不是无条件单次最坏情况保证。",
+          "大O是增长上界尺度，不等于精确秒数或必然紧界。"
+        ],
+        "mapping": [
+          "17:00交付期限 → 团队实际关心的业务窗口。",
+          "4,950/19,900/79,800 → 配对算法的精确步骤计数。",
+          "更快电脑 → 单步常数改善。",
+          "黄色候选清单 → 同键只触发人工核对，不自动判违规。"
+        ],
+        "boundary": "复杂度分析取决于基本操作、输入表示和成本模型。构造键、比较长键、内存和I/O都不是天然免费；哈希或索引的期望/均摊表现也不等于无条件最坏情况保证。大O描述上界增长尺度，本篇没有证明重复检测问题的理论下界或最优算法。",
+        "reflection": "为什么100条曾经约2分钟，既不能直接推出今天400条一定要多久，也不影响79,800次配对这一算法计数本身？"
+      },
+      "referencesZh": [
+        {
+          "id": "princeton-intro",
+          "citation": "Sedgewick, R., & Wayne, K. Introduction to Programming in Java, section 4.1: Analysis of Algorithms.",
+          "url": "https://introcs.cs.princeton.edu/java/41analysis/",
+          "use": "支持用输入规模、基本操作计数和增长阶分析算法，并区分理论步骤增长与具体机器运行时间。"
+        },
+        {
+          "id": "princeton-aofa",
+          "citation": "Sedgewick, R., & Flajolet, P. An Introduction to the Analysis of Algorithms, chapter 1: Analysis of Algorithms.",
+          "url": "https://aofa.cs.princeton.edu/10analysis/",
+          "use": "支持从明确成本模型分析算法特性与资源增长，并区分算法分析、复杂度分类和实际性能。"
+        }
+      ],
+      "overall": "Computational complexity is illustrated here through fictional duplicate-invoice screening: under an explicit basic-operation definition and cost model, it studies how an algorithm’s time steps, storage, or other resource needs grow with input size. Faster hardware can improve constant factors but does not automatically change the growth order; counting steps for one algorithm also does not prove an optimal lower bound for the underlying problem.",
+      "module": {
+        "intro": "Fix the basic operation and cost assumptions, analyze growth with exact step counts across multiple input sizes, and keep theoretical counts separate from measured wall-clock time.",
+        "diagramTitle": "How Algorithm Steps Grow from 4,950 to 79,800 as the Record Count Increases",
+        "diagramSteps": [
+          "Define one basic operation as comparing a pair of normalized invoice keys",
+          "Use n(n−1)/2 to calculate 4,950/19,900/79,800 comparisons for 100/200/400 records",
+          "Separate the roughly 16-fold pair-growth from a roughly 2-fold hardware improvement in per-step speed",
+          "Use a hash index with at most one lookup and insertion per record, assuming fixed expected lookup and amortized insertion costs",
+          "Record key-construction cost, storage, worst cases, and the actual 16:20 completion time separately"
+        ],
+        "diagramStepNotes": [
+          "The earlier two-minute run on 100 records is one measurement in an old environment and is not directly extrapolated to 400 records in a new environment.",
+          "The exact pair counts belong to this specific algorithm, not to a lower bound for every algorithm.",
+          "Hardware changes usually affect constants, not the growth order of the pair-count formula.",
+          "Expected cost depends on hashing assumptions; amortized insertion spreads resizing costs across many operations. Neither guarantees unconditional worst-case cost for a single operation.",
+          "Big O is an upper-bound growth scale, not an exact runtime or necessarily a tight bound."
+        ],
+        "mapping": [
+          "17:00 payment-file deadline → the business delivery window the team actually cares about.",
+          "4,950/19,900/79,800 → exact step counts for the pairwise algorithm.",
+          "Faster computer → improvement in a per-step constant.",
+          "Yellow candidate list → matching keys trigger human review rather than automatically proving misconduct."
+        ],
+        "boundary": "Complexity analysis depends on the basic operation, input representation, and cost model. Key construction, long-key comparison, memory, and I/O are not inherently free; expected or amortized index performance does not imply an unconditional worst-case guarantee. Big O describes upper-bound growth scale. This article does not prove a theoretical lower bound or an optimal algorithm for duplicate detection.",
+        "reflection": "Why does the earlier observation that 100 records took about two minutes fail to determine exactly how long today’s 400 records must take, even though the 79,800 pair count remains exact for the old algorithm?"
+      },
+      "references": [
+        {
+          "id": "princeton-intro",
+          "citation": "Sedgewick, R., & Wayne, K. Introduction to Programming in Java, section 4.1: Analysis of Algorithms.",
+          "url": "https://introcs.cs.princeton.edu/java/41analysis/",
+          "use": "Supports analyzing algorithms through input size, basic-operation counts, and growth rates while distinguishing theoretical step growth from runtime on a particular machine."
+        },
+        {
+          "id": "princeton-aofa",
+          "citation": "Sedgewick, R., & Flajolet, P. An Introduction to the Analysis of Algorithms, chapter 1: Analysis of Algorithms.",
+          "url": "https://aofa.cs.princeton.edu/10analysis/",
+          "use": "Supports analyzing algorithm properties and resource growth under an explicit cost model while distinguishing algorithm analysis, complexity classification, and practical performance."
+        }
+      ]
     },
     {
       "id": "0711-mass-balance",
@@ -869,42 +1241,135 @@
       "fieldCode": "0711",
       "fieldTitle": "Chemical engineering and processes",
       "fieldTitleZh": "化学工程与工艺",
-      "title": "The Three Missing Barrels of Blue",
-      "titleZh": "少掉的三桶蓝",
-      "summary": "Three barrels of blue dye go missing from a workshop; its owner locks the gate before realizing he has never looked beyond the vats.",
-      "summaryZh": "染坊少了三桶蓝料，老板先锁住院门，随后才发现自己从未认真看过染缸之外。",
+      "title": "The Tanker Waits for a Release Stamp",
+      "titleZh": "罐车等着一枚放行章",
+      "summary": "After the cleaning-agent trial, 550 kg of liquid has crossed the process boundary into a tanker that is still awaiting release, while 30 kg of wet filter cake left the boundary after being weighed at 11:50. Han Ning places the 600 kg input from 8:00–12:00 and the system inventory change from 200 to 220 kg on the same wet-mass basis, giving 600 − 580 = 20 kg, exactly matching the 20 kg inventory increase. The product still awaits an independent quality test.",
+      "summaryZh": "清洗剂试产结束后，550 kg液体已离开过程边界进入待放行罐车，30 kg湿滤饼也在11:50称重后离开边界。韩宁把8:00–12:00内600 kg输入和系统库存200→220 kg放在同一湿质量基准核算，得到600 − 580 = 20 kg，正好对应库存增加20 kg；产品仍等待独立质量检验。",
       "storyParagraphs": [
-        "At the end of the month, the dye workshop counted enough purchased blue pigment for ten barrels, while the cloth sold accounted for only seven. Owner Shen Tong snapped the beads of his abacus and decided that someone was stealing. He locked the courtyard gate, searched the workers' cupboards, and withheld two days of wages from everyone. The missing value threatened a royal order, and accusation was faster than tracing drains, tanks, and changing inventory.",
-        "Aman, who washed the cloth, did not argue. She brought him three bowls. One held blue water from the drain, another held blue sludge scraped from the bottom of a vat, and the third contained newly dyed cloth still dripping wet. 'The ledger records only dry cloth,' she said. 'Where are these recorded?'",
-        "Still suspicious, Shen marked the next batch of pigment. They weighed the blue entering the workshop, the dry and wet cloth, the sediment, and the discharged water. They also measured what remained in each vat before and after the work. Instead of finding a worker with a hidden supply, they found several destinations that had never been recorded: some pigment remained in vats and wet cloth, some left with sludge and water, and the old scale consistently overstated what entered. For a fixed day and defined workshop boundary, they wrote input plus internal generation minus product, waste, and consumption as the change stored inside. Dye was not generated by the process, but water and chemical reactions changed what could be measured.",
-        "The marked batch closed most of the gap, but half a bowl remained. Rather than name a thief, Shen repeated the weighing with a calibrated scale and sampled the drain over the whole shift. The old scale's bias and an unmeasured cleaning discharge accounted for the remainder. He returned the withheld wages and paid a late-delivery penalty himself. The calculation was repeated for each dye species where reactions transformed compounds, keeping total relevant atoms consistent even when colour changed.",
-        "Shen returned the withheld wages. He added a settling pond at the drain and sent recoverable blue sludge back to the start of the process. From then on, each batch began with a clear account of where material entered and left, while changes inside the vats appeared on the same page. Any remaining difference prompted a search for leaks, measurement error, or unexpected change. Recovery was evaluated against energy, water, and product quality so that moving dye back did not create a larger hidden loss. A new sampling port made the cleaning stream measurable instead of leaving it outside the drawn boundary by habit.",
-        "The next month's account was short by only half a bowl of blue. Shen did not lock the gate. He carried the old scale to a corner of the yard and broke its beam with one hammer blow."
+        "At 12:00, the cleaning-agent trial has just ended. The tanker at the loading bay has already received 550 kg of liquid product but does not yet have permission to leave the site. The shift supervisor checks the feed record: from 8:00 to 12:00, 500 kg of water and 100 kg of concentrate entered, for a total input of 600 kg. If he compares only that number with the 550 kg in the tanker, 50 kg appears to be missing, so the handover sheet stays on the desk.",
+        "Han Ning defines the accounting boundary as the reactor plus the filtration unit and fixes the period at 8:00–12:00. At the start, 200 kg of wet material is inside that boundary; after feed stops, the inventory is checked on the same wet-mass basis at 220 kg. The filtration step produced wet filter cake that was already weighed at 11:50 at a net 30 kg and moved to a holding area outside the boundary. The 550 kg of liquid has likewise crossed the filtration outlet into the tanker outside the defined process boundary, even though the vehicle remains inside the plant awaiting quality release.",
+        "The total input over the four hours is therefore 600 kg, not 600 kg/h. Material leaving the defined boundary is 550 kg of liquid plus 30 kg of wet filter cake, or 580 kg. Thus 600 − 580 = 20 kg, while the inventory inside the boundary changes by 220 − 200 =  + 20 kg. The two sides agree. Of the original apparent 50 kg difference, 30 kg left through the filter-cake outlet and another 20 kg remains inside the system.",
+        "The laboratory also brings a report on reactant A. Han Ning puts it on a separate component sheet, where A’s beginning and ending inventory and its inputs and outputs need checking, along with reaction generation and consumption. In this ordinary non-nuclear process, A changing into other substances does not make total mass disappear. The total-mass account and A’s own account need separate calculations.",
+        "At 12:15, the supervisor replaces “50 kg unexplained” with “30 kg filter cake + 20 kg inventory increase,” signs the balance field, and sends the sheet back to the laboratory. The concentration and product-quality results are still unsigned, so the driver cannot yet get the departure stamp. The two sides agree on Han Ning’s sheet; the laboratory report is still waiting for its results.",
+        "The driver moves the tanker back to the waiting line. Han Ning staples the 11:50 filter-cake weighing sheet together with the 8:00 200 kg and 12:00 220 kg inventory records behind the same batch page. The mass-balance field is signed; the product-release field beside it remains blank."
       ],
       "storyParagraphsZh": [
-        "染坊月底盘账，买来的蓝料足有十桶，卖出的布却只用得上七桶。老板沈同把账盘拨得噼啪响，认定有人偷料。他锁住院门，搜了工人的柜子，还扣下所有人的两日工钱。缺失染料危及宫廷订单，指控工人比追查水沟、染缸和库存变化快得多。",
-        "洗布的阿满没有替自己争辩，只端来三只碗。一只盛着排水沟里的蓝水，一只装着刮自缸底的蓝泥，第三只碗里泡着刚出缸、仍在滴水的布。她问：‘账上只写了干布，那这些算在哪里？’",
-        "沈同仍不放心，便在下一批料上做了记号。他们称过进门的蓝料，也称干布、湿布、缸底沉积和排出的水；开工前后，连缸里剩下多少都量了一遍。最后找到的不是一个藏料的工人，而是几处长期没人记的去向：一部分留在缸和湿布里，一部分随泥与水流走，旧秤还总把进料报得偏多。他们先固定一天和作坊边界，再写下：输入加内部生成，减产品、废物流与消耗，等于系统内积累变化。染料不会凭空生成，但水分与化学反应会改变可测形态。",
-        "标记批次解释了大部分差额，仍剩半碗。沈同没有再找窃贼，而是换校准秤重做，并对整班排水取样。旧秤偏差和一股未记录清洗水解释了余数。他退回扣薪，自己承担迟交罚款。发生反应并改变化合物时，衡算按相关染料组分重复进行，即使颜色变化，相关元素总量仍须一致。",
-        "沈同把扣下的工钱退回去，又在排水口加了沉淀池，把还能回收的蓝泥送回前段。此后每批染料都要先画清从哪里进、从哪里出，缸内增减也记在同一张纸上。若仍有差额，才去查泄漏、误差或意外变化。回收方案还要同能耗、水耗和布料质量一起评价，免得把蓝料送回去，却制造更大的隐藏损失。新取样口让清洗排流可测，不再因习惯被排除在所画边界之外。",
-        "第二个月盘账时，账房只差了半碗蓝料。沈同没有锁门。他拿起那只旧秤，走到院角，一锤砸断了秤梁。"
+        "12:00，清洗剂试产刚结束，装卸位上的罐车已经接收550 kg液体产品，但还没拿到离厂放行章。班长翻投料单：8:00到12:00共加入500 kg水和100 kg浓缩原料，总输入600 kg；若只盯进料和罐车数字，账面像少了50 kg，于是交接单先压在桌上。",
+        "韩宁把核算边界画成反应罐加过滤单元，期间固定8:00–12:00。开工前边界内有200 kg湿物料；停料后按同一湿质量基准核到220 kg。过滤产生的湿滤饼已在11:50称得净重30 kg，并移到边界外的暂存区；550 kg液体也已经从过滤出口转入边界外的罐车，只是车辆仍在厂内等待质量放行。",
+        "这样，4小时内输入总量是600 kg，不是600 kg/h；离开所画边界的是550 kg液体和30 kg湿滤饼，共580 kg。600 − 580 = 20 kg，而边界内库存变化是220 − 200 =  + 20 kg，两边对应。原先的50 kg差额里，30 kg已经从滤饼出口离开，另外20 kg仍留在系统中。",
+        "实验员另送来反应物A的组分报告。韩宁把它放到另一张组分表里，那张表要核对A的期初、期末库存与进出量，再另列反应生成和消耗。对这个普通非核化工过程，A变成其他物质并不让总质量凭空消失；总质量账和A自己的账要分别计算。",
+        "12:15，班长把交接单上的“50 kg未解释”改成“滤饼30 kg＋库存增加20 kg”，签完衡算栏，再把单子递回实验室。浓度和产品质量结果还没签回，司机要的离厂章仍盖不了。韩宁的纸上两边已经对齐，实验室那张报告却还在等结果。",
+        "司机把车停在等待线。韩宁把11:50的滤饼称量单、8:00的200 kg和12:00的220 kg库存记录订在同一批次页后；质量衡算栏已经签完，旁边的产品放行栏仍空着。"
       ],
       "conceptName": "Mass balance",
       "conceptNameZh": "物料衡算",
       "explanationParagraphs": [
-        "Mass balance tracks material within a chosen boundary through conservation: input plus generation, minus output and consumption, equals the change in accumulation. Applying it requires a stated boundary, time basis, and measurement method, with inventories, products, waste streams, reactions, leaks, and measurement error considered. A discrepancy does not mean matter vanished; it indicates an unrecognized destination or transformation."
+        "A mass balance over a fixed boundary and time period can be written as input − output + generation − consumption = accumulation. For total mass in an ordinary non-nuclear process, the net reaction generation/consumption term is zero.",
+        "Here the 8:00–12:00 input is 600 kg, output is 550 + 30 = 580 kg, and inventory changes from 200 to 220 kg, so 600 − 580 = 20 = 220 − 200. Component A requires a separate check of inventory, streams, and reaction terms."
       ],
       "explanationParagraphsZh": [
-        "物料衡算依据守恒关系追踪选定边界内的物质：输入加生成，减去输出与消耗，等于积累变化。使用时必须先说明边界、时间基准和计量方式，并把库存、产品、废物流、反应、泄漏与测量误差纳入检查。差额不是物质凭空消失，而是提示仍有流向或变化尚未被识别。"
+        "物料衡算在固定边界和期间内写作输入 − 输出＋生成 − 消耗 = 积累；对普通非核过程的总质量，反应的净生成/消耗项为零。",
+        "本例8:00–12:00输入600 kg，输出550 + 30 = 580 kg，库存200→220 kg，故600 − 580 = 20 = 220 − 200。组分A须另核对库存、进出量和反应项。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构试产数据说明物料衡算：在同一系统边界和期间内，总质量输入减总质量输出等于系统总质量积累变化。普通非核化学反应不产生总质量净生成或消耗，但具体组分可因反应生成或消耗，因此组分衡算要另列反应项。",
+      "moduleZh": {
+        "intro": "统一边界、时间段和湿质量基准，把已经离开过程边界的液体、滤饼与期初期末库存放在同一张账里。",
+        "diagramTitle": "600公斤输入怎样对应580公斤输出和20公斤库存增加",
+        "diagramSteps": [
+          "固定8:00–12:00边界为反应罐加过滤单元",
+          "记录总输入500 kg水 + 100 kg浓缩原料 = 600 kg",
+          "记录11:50已离界的30 kg湿滤饼和进入罐车的550 kg液体",
+          "核对边界内库存从200 kg增到220 kg",
+          "另开组分衡算处理反应生成/消耗，并让产品质量独立放行"
+        ],
+        "diagramStepNotes": [
+          "四小时累计量单位都是kg，不是kg/h。",
+          "所有库存和流物流采用同一湿质量基准。",
+          "罐车虽未离厂，但550 kg已离开所定义的过程边界。",
+          "600 − 580 = 20与220 − 200 = 20闭合。",
+          "总质量闭合不证明没有泄漏、称量误差或产品质量问题。"
+        ],
+        "mapping": [
+          "等待放行的罐车 → 已离过程边界但尚未完成商业放行的550 kg产品。",
+          "11:50滤饼称量单 → 已确认的30 kg第二出口。",
+          "200/220 kg库存记录 → 系统内部质量积累变化。",
+          "空白产品放行栏 → 衡算闭合与质量合格是不同判断。"
+        ],
+        "boundary": "衡算结果依赖边界、期间、单位、湿/干基准和测量一致。账面闭合不能单独证明没有泄漏、偷料或测量误差，因为误差可能相互抵消；也不能替代浓度等质量检验。涉及化学反应时，总质量守恒与单个组分的生成/消耗必须分开。",
+        "reflection": "为什么550 kg已经进了罐车却仍可算作过程边界的输出，而总质量闭合以后，罐车还不能据此直接离厂？"
+      },
+      "referencesZh": [
+        {
+          "id": "cmu-balance",
+          "citation": "Kitchin Research Group, Carnegie Mellon University. What is a Flowsheet? (Intermediate).",
+          "url": "https://kitchingroup.cheme.cmu.edu/differentiable-flowsheets/about-flowsheets/00b_what_is_a_flowsheet_intermediate.html",
+          "use": "支持用流程边界表示输入、输出和衡算关系，并区分总体与组分层面的工程核算。"
+        },
+        {
+          "id": "ubc-unsteady",
+          "citation": "Foundations of Chemical and Biological Engineering I. Introduction to Unsteady-state Operations, chapter 39.",
+          "url": "https://pressbooks.bccampus.ca/chbe220/chapter/introduction-to-unsteady-state-operations/",
+          "use": "支持非稳态衡算中的输入、输出、生成、消耗和积累项，以及期初期末储量变化与单位一致性。"
+        }
+      ],
+      "overall": "Mass balance is illustrated here with fictional trial data: over the same system boundary and time period, total mass input minus total mass output equals the change in total mass accumulated inside the system. In ordinary non-nuclear chemical reactions, reaction does not create a net generation or consumption of total mass, while individual components can be generated or consumed and therefore require separate component balances.",
+      "module": {
+        "intro": "Use one consistent boundary, time period, and wet-mass basis, then place the liquid product, filter cake, and beginning/ending inventory in the same account.",
+        "diagramTitle": "How 600 kg of Input Corresponds to 580 kg of Output and a 20 kg Inventory Increase",
+        "diagramSteps": [
+          "Fix the 8:00–12:00 boundary as the reactor plus filtration unit",
+          "Record total input as 500 kg water + 100 kg concentrate = 600 kg",
+          "Record the 30 kg wet filter cake that left at 11:50 and the 550 kg liquid transferred to the tanker",
+          "Check that inventory inside the boundary increases from 200 kg to 220 kg",
+          "Handle reaction generation/consumption in a separate component balance and keep product-quality release independent"
+        ],
+        "diagramStepNotes": [
+          "All four-hour accumulated quantities are in kg, not kg/h.",
+          "All inventory and material streams use the same wet-mass basis.",
+          "Although the tanker has not left the plant, its 550 kg has crossed the defined process boundary.",
+          "600 − 580 = 20 matches 220 − 200 = 20.",
+          "Total-mass closure does not prove there is no leak, weighing error, or product-quality problem."
+        ],
+        "mapping": [
+          "Tanker awaiting release → 550 kg of product already outside the process boundary but not yet commercially released.",
+          "11:50 filter-cake weighing sheet → the confirmed 30 kg second outlet.",
+          "200/220 kg inventory records → the change in mass accumulated inside the system.",
+          "Blank product-release field → mass-balance closure and product acceptance are separate decisions."
+        ],
+        "boundary": "The balance depends on consistent boundaries, periods, units, wet/dry basis, and measurements. Apparent closure alone cannot prove that there is no leak, theft, or measurement error because errors can offset one another, and it cannot replace concentration or other product-quality tests. When chemical reaction is involved, total-mass conservation must be kept distinct from generation and consumption of individual components.",
+        "reflection": "Why can the 550 kg in the tanker already count as output from the process boundary while the tanker still cannot leave the plant merely because the mass balance closes?"
+      },
+      "references": [
+        {
+          "id": "cmu-balance",
+          "citation": "Kitchin Research Group, Carnegie Mellon University. What is a Flowsheet? (Intermediate).",
+          "url": "https://kitchingroup.cheme.cmu.edu/differentiable-flowsheets/about-flowsheets/00b_what_is_a_flowsheet_intermediate.html",
+          "use": "Supports representing process inputs, outputs, and balance relationships through a defined process boundary and distinguishing overall from component-level engineering balances."
+        },
+        {
+          "id": "ubc-unsteady",
+          "citation": "Foundations of Chemical and Biological Engineering I. Introduction to Unsteady-state Operations, chapter 39.",
+          "url": "https://pressbooks.bccampus.ca/chbe220/chapter/introduction-to-unsteady-state-operations/",
+          "use": "Supports input, output, generation, consumption, and accumulation terms in unsteady-state balances, including beginning/end inventory changes and consistent units."
+        }
+      ]
     },
     {
       "id": "0711-residence-time",
@@ -913,42 +1378,135 @@
       "fieldCode": "0711",
       "fieldTitle": "Chemical engineering and processes",
       "fieldTitleZh": "化学工程与工艺",
-      "title": "The First Drop to Escape",
-      "titleZh": "最先逃出去的一滴酒",
-      "summary": "Two equal fermenters receive and release liquid at the same rate, yet make different wine until a red thread reveals an unseen shortcut inside one vessel.",
-      "summaryZh": "两只同样大小的发酵罐有着相同进出速度，酿出的酒却不同，直到一缕红色显出罐内看不见的近路。",
+      "title": "The Calculator Says 6 Minutes, but the Collection Bottles Continue to 20",
+      "titleZh": "计算器写着6分钟，收集瓶一直排到20分钟",
+      "summary": "For a 1200 L conditioning tank under once-through water flow at 200 L/min, the nominal space time V/Q is 6 min. Mao Ning injects a 100 g inert tracer pulse, divides the 0–20 min outlet continuously into five collection intervals, and after 20 min continues sampling until the signal returns to the instrument’s background range. The five simplified teaching recoveries give an approximate mass-weighted time of 5.95 min using representative interval times, but that does not mean every fluid element remains for 6 min.",
+      "summaryZh": "1200 L调节罐在200 L/min一次通过清水条件下，名义空间时间V/Q为6 min。毛宁瞬时加入100 g惰性示踪物，把0–20 min出口连续分成五段收集，并在20 min后确认信号回到仪器背景范围。五段教学回收量用代表时刻近似加权得5.95 min，但并不表示每份流体都停6分钟。",
       "storyParagraphs": [
-        "A winery installed two fermenting vessels of equal size. Each day, the same amount of juice entered each one and the same amount of wine left. By the owner's calculation, the juice should remain inside both vessels for the same length of time. Yet the eastern vessel produced mellow wine, while the western one produced wine that was partly sharp and partly overripe and sour. A wedding contract required twice the normal output, so the owner increased flow and trusted volume divided by flow as the single answer.",
-        "The owner changed the fruit, questioned the vessel keeper, and weighed the yeast three times. Nothing improved. A young winemaker climbed to the top of the western vessel and noticed that its inlet pipe stood close to the outlet, while almost no water could be heard in two lower corners. She asked the owner not to discard the next batch, but to lend her one spoonful of red berry juice. The owner had already increased flow once to protect margin, so blaming ingredients preserved the decision that made the order appear profitable.",
-        "Soon after the berry juice entered from above, a red thread appeared at the outlet. Three days later, after clear juice had been used to flush the vessel, pale red liquid was still seeping from the bottom. Some fresh juice had taken a shortcut out before it could ferment, while some had remained trapped in the corners for too long. The average written in the ledger described neither group well. They sampled the outlet over time and drew the tracer curve: an early spike exposed short-circuiting, while a long tail exposed stagnant pockets.",
-        "When the wedding jars arrived, the owner returned the deposit instead of filling them and opened the tank for alteration. Baffles redirected flow, the inlet moved away from the outlet, and a mixer reduced stagnant corners. The changes lowered maximum throughput; residence became more consistent. They compared the nominal mean with the full curve and specified a minimum effective contact time for the fermentation they needed.",
-        "They moved the inlet pipe to the far side and placed baffles inside so the liquid travelled through the whole vessel. After the change, red no longer appeared at the outlet immediately or lingered at the bottom for days. Batch after batch from the western vessel finally became consistent. A second tracer test quantified the improvement before sale resumed; taste alone could not locate hidden paths. A slower flow reduced daily barrels, but fewer batches needed disposal and the wedding replacement met specification.",
-        "On the day they filled the new wine barrels, the owner poured in another spoonful of berry juice. He crouched beside the outlet and did not hurry to collect the wine. He simply placed an empty cup where the first red thread used to appear."
+        "Next week the coating line will switch from its old cleaning liquid to a new one. The operating card says, “Switch the receiving vessel 6 minutes after the feed change.” Mao Ning checks the arithmetic: effective tank volume is 1200 L and steady flow is 200 L/min, so V/Q = 6 min. He enters that time on the changeover sheet. With maintenance scheduled before the change, the team arranges an outlet check.",
+        "On maintenance day, the team configures the tank for a once-through water test. Fresh water enters continuously at 200 L/min and all outlet water goes to the collection system rather than returning to the tank. They inject 100 g of a selected inert tracer salt instantaneously at the inlet. The test assumes the tracer follows the water, does not react, and does not adsorb. They measure the outlet background before injection, then collect continuously and continue sampling after 20 min until the signal returns to the instrument’s background range.",
+        "The outlet is collected continuously over five non-overlapping intervals: 0–2, 2–4, 4–8, 8–10, and 10–20 min. The sample sheet records their recovered tracer masses as 10, 25, 35, 25, and 5 g, totaling 100 g. This simplified record is used to estimate the time distribution. Beside the bottle numbers, Mao Ning writes 1, 3, 6, 9, and 15 min as the representative times for the intervals.",
+        "Mao Ning calculates the approximate mass-weighted time: (10 × 1 + 25 × 3 + 35 × 6 + 25 × 9 + 5 × 15)/100 = 5.95 min, close to V/Q = 6 min. He records the approximation and checks the bottles in turn: the 0–2 min interval already contains tracer, and the 10–20 min interval contains 5 g too. The five entries do not converge on minute 6. One average does not contain the information in the interval table.",
+        "He does not label the early and late recoveries “bypass” or “dead zone”; ideal mixing can also produce a broad distribution. Next week’s old-to-new feed change will be a step, unlike this 100 g pulse. The team writes separate collection of transitional liquid into the plan, with the vessel switched only after the actual outlet meets the defined detection criterion. The five bottles’ percentages are not entered as new-liquid fractions.",
+        "At the end of the test, the five continuous-interval collection bottles are lined up on the bench, with the post-20-min background-confirmation sample beside them. The old “6 min” line remains on the control card. Mao Ning adds only one new field to the next actual changeover sheet: “Switch vessel after outlet detection criterion is met.”"
       ],
       "storyParagraphsZh": [
-        "酒坊添了两只同样大的发酵罐。每天灌入的果汁一样多，流出的酒也一样多，掌柜算过，果汁在两只罐里理应停留同样久。可东罐的酒醇厚，西罐出来的却一半发涩，一半带着过熟的酸味。婚宴订单要求产量翻倍，掌柜便提高流量，只相信容积除以流量所得的一个答案。",
-        "掌柜换过果子，责问过看罐人，还把酵母称了三遍。西罐仍旧如此。年轻酿酒师爬上罐顶，发现进料管和出料口离得很近，而罐底两角几乎没有水声。她请掌柜先别倒掉下一批酒，只借一勺红莓汁。掌柜已经为保利润提过一次流量，把问题怪给原料，正好可以保住那项让订单显得赚钱的决定。",
-        "红莓汁刚从上方灌入，出口很快就出现一缕红线；可三天后，他们用清水果汁冲洗，罐底仍慢慢渗出淡红。原来一部分新汁抄近路离开，尚未来得及发酵；另一部分困在角落，待得太久。账上那个平均数，两边都没有照顾到。他们连续取样，把示踪浓度画成曲线：过早尖峰暴露短路，拖长尾巴则暴露滞留死区。",
-        "清晨，整整一排婚宴酒坛送到门口时，掌柜没有把坏酒灌进去。他退还订金，打开罐体改造。导流板改变路径，入口远离出口，搅拌器减少死角。改造降低了最大吞吐量，换来更一致的停留经历。众人把名义平均值同整条曲线比较，并为所需发酵规定最低有效接触时间。",
-        "他们把进料管移到远端，又在罐里加了几块导流板，让液体绕过整个罐身。改好后，红色不再立即出现在出口，也不再数日留在底部。西罐的酒终于同一批一批地稳定下来。复售以前，他们用第二次示踪量化改进；味道能够发现问题，却无法定位罐内隐藏路径。降速减少每日桶数，报废批次却更少，补做的婚宴酒也达到要求。",
-        "新酒装桶那天，掌柜又倒进一勺红莓汁。他蹲在出口旁，没有急着接酒，只把一只空杯放在第一缕红色原本会出现的地方。"
+        "涂布线下周要从旧清洗液切到新清洗液，旧操作卡写着“换料6分钟后切接收桶”。毛宁先算了一遍：调节罐有效容积1200 L，稳定流量200 L/min，所以V/Q = 6 min。他照着旧卡在切料单上填好时间；维护日就在换料前，团队安排了一次出口检查。",
+        "维护日，他们把罐接成一次通过清水试验：新鲜清水持续从入口以200 L/min进入，出口全部排向收集系统，不回流。入口瞬时加入100 g选定的惰性示踪盐；测试假定它随水流动、不反应、不吸附。加入前先测出口背景，随后连续收集并在20 min以后继续取样，直到信号回到仪器背景范围内。",
+        "0–20 min出口连续分成0–2、2–4、4–8、8–10、10–20 min五个不重叠时间段收集。采样表把五段回收量记作10、25、35、25、5 g，合计100 g。这组简化记录用来估算时间分布；毛宁在瓶号旁分别标上1、3、6、9、15 min，作为各段的代表时刻。",
+        "毛宁据此算出近似质量加权时间：(10 × 1 + 25 × 3 + 35 × 6 + 25 × 9 + 5 × 15)/100 = 5.95 min，接近V/Q的6 min。他把近似值记在表上，又逐瓶核对：0–2 min段已经收到示踪物，10–20 min段也有5 g。五只瓶子的记录没有集中在第6分钟；一个平均值装不下这张分段表。",
+        "他没有因为早段和晚段都有回收就直接写“旁路”或“死区”；理想混合也可能产生宽分布。下周切料是旧液到新液的入口阶跃变化，与这次100 g脉冲不同。团队把过渡液单独收集写进计划，等实际出口特征达到既定检测标准再换桶；这五瓶的百分比不拿来直接填写新液比例。",
+        "试验收尾时，五只连续收集瓶按时间段排在台面上，旁边还有20 min后的背景确认样。旧操作卡上的“6 min”没有被撕掉，毛宁只在下一次实际切料单上新增了“按出口检测标准确认后换桶”一栏。"
       ],
       "conceptName": "Residence time",
       "conceptNameZh": "停留时间",
       "explanationParagraphs": [
-        "Residence time describes how long material spends inside a piece of equipment or system. Volume divided by flow gives only a nominal average. Real fluid has a distribution: short-circuiting lets some material leave too early, while dead zones hold some too long. Tracer tests, mixing patterns, and equipment geometry can reveal and improve that distribution, which often determines reaction or treatment performance."
+        "Residence time describes how long fluid elements take to travel from system entry to exit. Continuous-flow systems often use V/Q as a nominal space time, while real systems generally have a distribution of residence times.",
+        "Here V = 1200 L and Q = 200 L/min give 6 min. Using five teaching recovery intervals and their representative times for the 100 g tracer gives an approximate weighted time of 5.95 min; that value is not a measured centroid for each interval or a guarantee that every portion of water remains equally long."
       ],
       "explanationParagraphsZh": [
-        "停留时间描述物料在设备或系统内经历多久。体积除以流量只给出名义平均值，真实流体可能形成停留时间分布：短路流使部分物料过早离开，死区则让部分物料滞留过久。示踪实验、混合方式和设备几何可帮助识别并改善这种差异，而反应或处理效果往往取决于整条分布。"
+        "停留时间描述流体元素从进入到离开系统所经历的时间；连续流系统常用V/Q表示名义空间时间，实际系统则通常具有一组停留时间分布。",
+        "本例V = 1200 L、Q = 200 L/min得6 min。100 g示踪按五段教学回收量和代表时刻近似加权得5.95 min；该值不代表每段真实质心或每份水都停同久。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
-      }
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "ict-engineering-mechanism-19-pdc-review.md",
+        "edits": [
+          "ict-engineering-mechanism-19-edit-pass1-evidence.json",
+          "ict-engineering-mechanism-19-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "ict-engineering-mechanism-19-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four genuine ordinaryChatGPTExtraHighwritingstagesareseparateevidence."
+      },
+      "overallZh": "本篇用虚构一次通过示踪试验说明停留时间：V/Q给出名义空间时间，在稳态、有效容积与所选边界合适等条件下可作为平均尺度；实际流体离开时间形成分布。惰性示踪出口响应可描述该分布，但分段加权均值只是近似。",
+      "moduleZh": {
+        "intro": "先算V/Q，再在一次通过、恒流的脉冲示踪试验中连续收集出口，区分平均尺度、离散近似和完整分布。",
+        "diagramTitle": "V/Q是6分钟，为什么0到20分钟都要连续收集",
+        "diagramSteps": [
+          "以有效容积1200 L和恒定流量200 L/min计算V/Q = 6 min",
+          "一次通过清水中瞬时加入100 g惰性、不反应、不吸附示踪物",
+          "连续收集0–2/2–4/4–8/8–10/10–20 min五段，并继续确认背景",
+          "用10/25/35/25/5 g与代表时刻1/3/6/9/15 min近似计算5.95 min",
+          "实际阶跃切料改用独立出口检测标准决定换桶"
+        ],
+        "diagramStepNotes": [
+          "清水由入口进入并从出口排出，不构成闭环回流。",
+          "示踪解释要求稳定流量、合理有效容积和示踪物随流体。",
+          "五段连续且不重叠；“恢复背景”指仪器检出范围内，不是数学上严格有限截止。",
+          "5.95 min依赖分段代表时刻和教学回收量，实际测量存在采样与回收误差。",
+          "脉冲RTD与入口阶跃切料是不同实验，脉冲质量百分比不直接等于新液比例。"
+        ],
+        "mapping": [
+          "旧操作卡6 min → 名义V/Q被简化成固定切换时点。",
+          "五只时间段收集瓶 → 出口经历分布的离散记录。",
+          "20 min后背景样 → 检查示踪信号回到仪器背景范围。",
+          "实际切料检测栏 → 与脉冲示踪分开的操作判据。"
+        ],
+        "boundary": "V/Q与平均停留尺度的对应依赖稳态流量、合适的系统边界、有效容积参与流动及守恒示踪等条件。示踪回收会有测量误差，分段代表时刻只给近似均值；背景恢复是检出限意义上的观察。早出和长尾并不能唯一证明旁路或死区，理想混合也可产生宽分布；脉冲RTD不可直接替代阶跃切料浓度。",
+        "reflection": "为什么5.95 min几乎等于V/Q的6 min，仍不足以把实际换料规则写成“第6分钟所有旧液都已经离开”？"
+      },
+      "referencesZh": [
+        {
+          "id": "danckwerts-1953",
+          "citation": "Danckwerts, P. V. (1953). Continuous flow systems: Distribution of residence times. Chemical Engineering Science, 2(1), 1–13.",
+          "url": "https://doi.org/10.1016/0009-2509(53)80001-1",
+          "use": "作为连续流系统停留时间分布及其测量框架的经典来源，支持用分布而非单一时间描述流体离开经历。"
+        },
+        {
+          "id": "fogler-rtd",
+          "citation": "Fogler, H. S. Elements of Chemical Reaction Engineering, chapter 16: Distributions of Residence Times for Chemical Reactors, online summary.",
+          "url": "https://public.websites.umich.edu/~elements/6e/16chap/summary.html",
+          "use": "支持用出口示踪响应描述停留时间分布，并理解平均值、早期流出、长尾和非理想流动诊断的边界。"
+        }
+      ],
+      "overall": "Residence time is illustrated here through a fictional once-through tracer experiment: V/Q provides a nominal space time and, under conditions such as steady flow, an appropriate effective volume, and suitable system boundaries, can serve as an average timescale, while actual fluid exit times form a distribution. An inert-tracer outlet response can describe that distribution, but a binned weighted mean is only an approximation.",
+      "module": {
+        "intro": "Calculate V/Q first, then use continuous outlet collection in a once-through, constant-flow pulse-tracer experiment to separate the nominal average scale, a discrete approximation, and the full distribution.",
+        "diagramTitle": "If V/Q Is 6 Minutes, Why Collect Continuously from 0 to 20 Minutes?",
+        "diagramSteps": [
+          "Use effective volume 1200 L and constant flow 200 L/min to calculate V/Q = 6 min",
+          "Inject 100 g of inert, nonreactive, nonadsorbing tracer into once-through water flow",
+          "Collect the outlet continuously over 0–2/2–4/4–8/8–10/10–20 min and continue confirming background afterward",
+          "Use 10/25/35/25/5 g with representative times 1/3/6/9/15 min to approximate 5.95 min",
+          "Use a separate outlet-detection criterion for the real step changeover"
+        ],
+        "diagramStepNotes": [
+          "Water enters once and exits to collection; there is no closed-loop recirculation.",
+          "Tracer interpretation assumes stable flow, a suitable effective volume, and a tracer that follows the fluid.",
+          "The five intervals are continuous and non-overlapping; “return to background” means within the instrument’s detection range, not a mathematically exact finite cutoff.",
+          "The 5.95 min value depends on interval representative times and simplified teaching recovery masses; real measurements include sampling and recovery error.",
+          "Pulse RTD and an inlet step change are different experiments, so pulse mass fractions do not directly equal the new-liquid fraction during changeover."
+        ],
+        "mapping": [
+          "Old 6 min operating card → nominal V/Q simplified into a fixed switching time.",
+          "Five time-interval collection bottles → a discrete record of the outlet residence-time distribution.",
+          "Post-20-min background sample → evidence that the tracer signal returned within the instrument’s background range.",
+          "Actual changeover detection field → an operating criterion kept separate from the pulse-tracer experiment."
+        ],
+        "boundary": "Relating V/Q to a mean residence timescale depends on conditions including steady flow, an appropriate system boundary, effective volume participating in the flow, and a suitably conserved tracer. Tracer recovery has measurement error, and representative interval times provide only an approximate mean; returning to background is an observation relative to a detection limit. Early exit and long tails do not uniquely prove bypass or dead zones, because ideal mixing can also produce a broad distribution. A pulse RTD cannot be directly substituted for the concentration profile of a step changeover.",
+        "reflection": "Why does an approximate 5.95 min mean that is very close to V/Q = 6 min still fail to justify an operating rule that says all of the old liquid has left at exactly minute 6?"
+      },
+      "references": [
+        {
+          "id": "danckwerts-1953",
+          "citation": "Danckwerts, P. V. (1953). Continuous flow systems: Distribution of residence times. Chemical Engineering Science, 2(1), 1–13.",
+          "url": "https://doi.org/10.1016/0009-2509(53)80001-1",
+          "use": "Serves as a classic source for the residence-time-distribution framework in continuous-flow systems and supports describing fluid exit histories with a distribution rather than a single time."
+        },
+        {
+          "id": "fogler-rtd",
+          "citation": "Fogler, H. S. Elements of Chemical Reaction Engineering, chapter 16: Distributions of Residence Times for Chemical Reactors, online summary.",
+          "url": "https://public.websites.umich.edu/~elements/6e/16chap/summary.html",
+          "use": "Supports using outlet tracer response to describe residence-time distributions and understanding the limits of interpreting means, early exit, long tails, and nonideal-flow diagnostics."
+        }
+      ]
     },
     {
       "id": "0711-process-control",
