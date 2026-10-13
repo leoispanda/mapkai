@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "mapkai-hourly-video-run.v1",
+  "automationId": "mapkai-30",
+  "heartbeatTrigger": "2026-10-13T11:34:13.812Z",
+  "scheduledLocal": "2026-10-13T13:30:00+02:00",
+  "runId": "video-hourly-20261013T1130-89437fac",
+  "field": {
+    "code": "0112",
+    "title": "Training for pre-school teachers",
+    "slug": "0112-training-for-pre-school-teachers",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317"
+  },
+  "status": "GENERATING",
+  "source": {
+    "authoritativeSnapshots": 4,
+    "traceableClaims": 28,
+    "snapshotModes": {
+      "genuineOriginalPDF": 2,
+      "genuineWebExtractedText": 2
+    },
+    "partialSnapshotLimits": "Two NAEYC direct PDF downloads returned403. Genuine official PDF text retrieved via the web provider was retained with raw original line/page provenance and explicitly bounded coverage. No missing PDF byte hash was invented.",
+    "artifactRevision": 1,
+    "knowledgeSha256": "f1d6839fc9c76dd55148c855e272549d6f2f21e9798c99990f866a13c1abdc61",
+    "steeringSha256": "4b3b3b61774e338b296dcb20494921ebcbf23215d610aba76018d08360388b03",
+    "steeringUTF16Characters": 4142,
+    "actualNotebookMaxLength": 5000,
+    "deterministicDecision": "PASS",
+    "independentDecision": "PASS",
+    "validatedAgainstFrozenArtifact": true,
+    "responseSha256": "a5249ce8a7ac88418fc681b185aed09241ccb581802b8d6c1c07b6568970c296",
+    "creatorConversation": "https://chatgpt.com/c/6ace1a8e-ea64-83ed-9f6c-4e02c1e25a45",
+    "reviewerConversation": "https://chatgpt.com/c/6ace1db7-74a4-83eb-8d41-2207b87ad5ee",
+    "creatingPolicySha256": "5f0967c72bbf224aac87aae2fa3145dc3fde030cb21b5bf185efa2fe57b9d71e",
+    "reviewPolicySha256": "6df981e71d08c9e5b325aeb93a183f0352408f20120266233f8968360d3b2454"
+  },
+  "creator": {
+    "requestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0112-subsubject-creator-1",
+    "promptSha256": "f7a36d311343b57ea6678ddf88b85883c1ac33640a02528095df88eb7b8d29ba",
+    "actualNativeJSONSha256": "95f50dbcb59de82ac0c818e4b7b6635178a0804aded470995f29eae856efd66d",
+    "actualNativeJSONBytes": 30159,
+    "responseSha256": "c3240e6c497a49e9c35fe28dcc8ad8ad0051889db28e569aebf88279ab236e48"
+  },
+  "generation": {
+    "schemaVersion": "mapkai-notebook-result.v1",
+    "requestId": "0112-a4f827ac-27be-4ecc-bec8-684d9788f3dd",
+    "payloadSha256": "9046055befa5872caf3c4a3ef0460b31de7ef631dab69fdbcef65d903bc42d0a",
+    "state": "ACCEPTED",
+    "sendAttempted": true,
+    "acceptanceVerified": true,
+    "notebookUrl": "https://notebook.google.com/notebook/5a6996d1-a7da-4c5e-8320-0d66f0fa2c7d",
+    "acceptedAt": "2026-10-13T12:19:45.453Z"
+  },
+  "generationAcceptedProof": {
+    "path": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-0112-20261013/executor/notebook-screenshots/b40b1a14ab303208e2bc383c6179ac28618bf031c510f010c49f7b9764dfe5a9-accepted.jpg",
+    "sha256": "c84e5c563e0bd1296473e9923d63b0591eef2902266aa8560c06982ea105bf0f",
+    "fileSize": 105261,
+    "observedAt": "2026-10-13T12:19:45.453Z"
+  },
+  "newRealSubmissions": 1,
+  "priorActualSubmissionAt": "2026-10-13T10:06:10.447Z",
+  "spacingMinutes": 133.5834,
+  "acceptedNotebookAttemptsToday": 3,
+  "maximumDailySubmissions": 18,
+  "uploads": 0,
+  "publications": 0,
+  "videoReview": "NOT_REVIEWED",
+  "formalApproval": "PENDING",
+  "liveUsageObserved": {
+    "currentPercentUsed": 0,
+    "weeklyPercentUsed": 2,
+    "currentResetDisplay": "18:24",
+    "weeklyResetDisplay": "18 Oct at14:24",
+    "upgradeChosen": false
+  },
+  "notebookConfiguration": {
+    "format": "Explainer",
+    "language": "English",
+    "visualStyle": "Auto-select",
+    "sourceCount": 1,
+    "rawSourceExact": true,
+    "fullSavedSourceRenderedEquivalent": true,
+    "steeringExact": true
+  },
+  "transientNotebookLoading": "Original Notebook was recovered through its same observed URL after loading delay. Its persisted original title and full source were verified; no second Notebook or duplicate generation was created.",
+  "otherQueueEntriesPreserved": 76,
+  "privateEvidenceDirectory": ".workspace-backups/video-factory-0112-20261013",
+  "recovery": "Resume only the exact accepted0112 Notebook attempt. Do not click Generate again. When finished, download the authentic original, verify full hash/container/duration/resolution/decoding and preserve source/video review boundaries. Adapt fixed0112 intake/review/guardedR2/catalog executors from0111 references after verifying all exact bindings; never run old0111/0031/0542 hard-pinned helpers. Public marked preview is authorized, complete video/human approval remains PENDING. Add only0112 to the explicit PUBLIC_PREVIEW_FIELDS registry when ready, merge latest remote catalogs preserving every old entry, refreshGit/production assets and deploy under shared lock. No catch-up or new subject before this attempt completes or is truthfully isolated as blocked.",
+  "ordinaryUploadPublicationAlreadyAuthorized": true,
+  "sourceVsVideoApprovalKeptSeparate": true,
+  "recordedAt": "2026-10-13T12:22:00.268067Z",
+  "localExecutionCompleted": true,
+  "localObservationServicesStopped": true,
+  "lastLiveStage": "Generating Explainer Video Overview...",
+  "activeNotebookStillGenerating": true
+}

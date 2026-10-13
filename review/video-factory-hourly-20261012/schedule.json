@@ -36,7 +36,7 @@
     "code": "0112",
     "title": "Training for pre-school teachers",
     "slug": "0112-training-for-pre-school-teachers",
-    "state": "NOT_STARTED"
+    "state": "GENERATING"
   },
   "excluded": {
     "alreadyPublic": [
@@ -81,10 +81,12 @@
     "review": "PENDING"
   },
   "lastStarted": {
-    "code": "0111",
-    "runId": "video-hourly-20261013T0930-9281e377",
-    "attemptId": "0111-6ed7a1cc-9a86-4551-9a63-5c121f0f7893",
-    "acceptedAt": "2026-10-13T10:06:10.447Z",
-    "notebookUrl": "https://notebook.google.com/notebook/36a05bbc-b782-414b-af98-d653af9c3b72"
+    "code": "0112",
+    "runId": "video-hourly-20261013T1130-89437fac",
+    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0112-subsubject-creator-1",
+    "creatorAcceptedAt": "2026-10-13T11:49:50.563Z",
+    "notebookRequestId": "0112-a4f827ac-27be-4ecc-bec8-684d9788f3dd",
+    "notebookAcceptedAt": "2026-10-13T12:19:45.453Z",
+    "sourceReview": "PASS"
   }
 }
