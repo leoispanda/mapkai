@@ -60,11 +60,11 @@
   });
   // Keep one body-mounted player alive while the main app changes learning routes.
   const musicStyle = document.createElement('link');
-  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=dock-1';
+  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=dock-1-original-lyrics-1';
   document.head.append(musicStyle);
   const startMusicDock = () => {
     const script = document.createElement('script');
-    script.src = '/music/dock.js?v=dock-subjects-1'; document.head.append(script);
+    script.src = '/music/dock.js?v=dock-subjects-1-original-lyrics-1'; document.head.append(script);
   };
   if (globalThis.MapKAILyricsSync) startMusicDock();
   else {

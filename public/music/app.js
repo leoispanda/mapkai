@@ -4,7 +4,7 @@
   const copy = {
     zh: {
       back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', aiNotice: '使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
-      lyrics: '歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
+      lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       playlistHeading: '一起听 MapKAI', playlistIntro: '一键播放全部歌曲，按列表顺序连续聆听。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
       createSong: '制作歌曲', composerIntro: '先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。', composerPrivacy: '你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。', composerTheme: '想法或主题', composerStyle: '音乐风格', composerDuration: '时长', styleMemphisHipHop: '孟菲斯 Hip-hop', styleRock: '摇滚', styleSymphonic: '交响', styleFolkRap: '民谣说唱', styleAcoustic: '原声', durationOne: '1 分钟', durationTwo: '2 分钟', composerLyrics: '原创歌词（可选）', composerLyricsPlaceholder: '留空即可按主题创作原创歌词。', preparePrompt: '生成创作说明', composerPrompt: '创作说明', copyPrompt: '复制创作说明', copyingPrompt: '正在复制…', openCreator: '打开音乐制作工具 ↗', composerReturn: '先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。', composerReady: '创作说明已准备好。先复制，再到音乐工具中粘贴。', composerCopied: '已复制创作说明。打开音乐工具并粘贴，即可开始制作。', composerCopyFallback: '请复制已选中的创作说明：按 ⌘C 或 Ctrl+C，也可以长按复制。', composerThemeRequired: '请填写歌曲的想法或主题。', composerThemeLimit: '主题最多 1000 个字符。', composerLyricsLimit: '歌词最多 2400 个字符。', composerStyleRequired: '请选择一种音乐风格。', composerDurationRequired: '请选择 1 分钟或 2 分钟。', composerPromptLimit: '创作说明最多 4100 个字符，请缩短主题或歌词。', composerCount: '{count} / 4100 个字符',
       libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有歌曲。', emptyCopy: '歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
@@ -13,7 +13,7 @@
     },
     en: {
       back: '← Back to Toolbox', intro: 'Tap a song card to listen.', aiNotice: 'Songs created with AI are labelled AI-generated on their cards before playback.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
-      lyrics: 'Lyrics', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
+      lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       playlistHeading: 'Listen with MapKAI', playlistIntro: 'Play every song, in order, with one tap.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
       createSong: 'Create a song', composerIntro: 'Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.', composerPrivacy: 'Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.', composerTheme: 'Idea or theme', composerStyle: 'Music style', composerDuration: 'Duration', styleMemphisHipHop: 'Memphis hip-hop', styleRock: 'Rock', styleSymphonic: 'Symphonic', styleFolkRap: 'Folk rap', styleAcoustic: 'Acoustic', durationOne: '1 minute', durationTwo: '2 minutes', composerLyrics: 'Original lyrics (optional)', composerLyricsPlaceholder: 'Leave blank to create original lyrics from your theme.', preparePrompt: 'Prepare prompt', composerPrompt: 'Your creation prompt', copyPrompt: 'Copy prompt', copyingPrompt: 'Copying…', openCreator: 'Open music creator ↗', composerReturn: 'Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.', composerReady: 'Your prompt is ready. Copy it, then paste it into the music tool.', composerCopied: 'Prompt copied. Open the music tool and paste it to begin creating.', composerCopyFallback: 'Copy the selected prompt with ⌘C or Ctrl+C, or press and hold to copy.', composerThemeRequired: 'Add an idea or theme for your song.', composerThemeLimit: 'The theme can have up to 1000 characters.', composerLyricsLimit: 'The lyrics can have up to 2400 characters.', composerStyleRequired: 'Choose a music style.', composerDurationRequired: 'Choose 1 minute or 2 minutes.', composerPromptLimit: 'The prompt can have up to 4100 characters. Shorten the theme or lyrics.', composerCount: '{count} / 4100 characters',
       libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No songs yet.', emptyCopy: 'Songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
@@ -457,6 +457,7 @@
       card.lyricsText.removeAttribute('data-line');
       card.lyricsText.classList.remove('is-changing');
       card.lyricLines = card.track.lyrics.split('\n');
+      card.originalLyricsText.textContent = card.track.lyrics;
       card.renderedLyrics = card.track.lyrics;
       card.currentLyricLine = null;
     }
@@ -478,6 +479,12 @@
     const lyricsLabel = t('lyricsLabel', { title: card.track.title });
     card.lyricsSummary.setAttribute('aria-label', lyricsLabel);
     card.lyricsText.setAttribute('aria-label', lyricsLabel);
+    card.originalLyricsDetails.hidden = !card.track.lyrics;
+    card.originalLyricsSummary.textContent = t('originalLyrics');
+    const originalLyricsLabel = t('originalLyricsLabel', { title: card.track.title });
+    card.originalLyricsSummary.setAttribute('aria-label', originalLyricsLabel);
+    card.originalLyricsText.setAttribute('aria-label', originalLyricsLabel);
+    if (!card.track.lyrics) card.originalLyricsDetails.open = false;
     renderLyrics(card);
     if (!card.track.lyrics) card.lyricsDetails.open = false;
     else if (!hadLyrics && card === selectedCard) card.lyricsDetails.open = true;
@@ -512,8 +519,12 @@
     const lyricsSpan = document.createElement('span'); lyricsSpan.className = 'lyrics-current'; lyricsText.append(lyricsSpan);
     const lyricsUnavailable = document.createElement('p'); lyricsUnavailable.className = 'lyrics-unavailable'; lyricsUnavailable.hidden = true;
     lyricsDetails.append(lyricsSummary, lyricsText, lyricsUnavailable);
-    element.append(button, progress, audio, error, lyricsDetails);
-    const card = { element, button, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
+    const originalLyricsDetails = document.createElement('details'); originalLyricsDetails.className = 'track-original-lyrics'; originalLyricsDetails.hidden = true;
+    const originalLyricsSummary = document.createElement('summary');
+    const originalLyricsText = document.createElement('pre'); originalLyricsText.className = 'original-lyrics-text'; originalLyricsText.tabIndex = 0; originalLyricsText.setAttribute('role', 'region');
+    originalLyricsDetails.append(originalLyricsSummary, originalLyricsText);
+    element.append(button, progress, audio, error, lyricsDetails, originalLyricsDetails);
+    const card = { element, button, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => { if (selectedCard !== card) { playlistMode = false; playlistComplete = false; } togglePlayback(card); });
     seek.addEventListener('input', () => seekPlayback(card, seek.value));
     audio.addEventListener('play', () => { if (audio.paused) return; error.hidden = true; card.waiting = true; stopOtherPlayers(audio); });

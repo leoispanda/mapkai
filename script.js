@@ -18033,13 +18033,15 @@ function renderCategoryVideoPreview(category, scope = 'category') {
 
 const categorySongTracks = {
   "02": {
-    id: "392f97bd-307f-4e0d-b047-bfe78ae2f219",
-    title: "Leave a Little Room",
+    id: "fdfd14ce-3e3a-439c-91d2-f9e364be14a5",
+    title: "Look, Then Ask - MapKAI - Arts and Humanities - Visual Analysis",
+    durationSeconds: 108.0424375,
+    meta: { zh: "英文 · 1:48", en: "English · 1:48" },
     core: {
-      zh: "在创作、倾听与理解中，为另一个人的声音留一点空间。",
-      en: "Make, listen, and interpret with room for a voice beside your own.",
+      zh: "先描述看见的细节，再用线索支持解读，结合背景重新判断。",
+      en: "Describe what you see, support an interpretation with clues, and reconsider it with context.",
     },
-    style: { zh: "独立民谣 · 室内流行", en: "Indie folk · Chamber pop" },
+    style: { zh: "空灵铃音流行 · 轻柔节奏", en: "Airy bell-pop · Gentle pulse" },
   },
   "05": {
     id: "bcfa3547-7b75-44bd-ab1c-dc711762ad7b",
@@ -18060,13 +18062,15 @@ const categorySongTracks = {
     style: { zh: "旋律 Hip-hop · 轻盈合成器流行", en: "Melodic hip-hop · Light synth-pop" },
   },
   "00": {
-    id: "4e1d3520-26ad-4d1b-9c80-3a55b9c2660b",
-    title: "One Line at a Time",
+    id: "3ac342f9-51cd-4f3b-a43a-8a8dc57cde12",
+    title: "Read Before You Choose - MapKAI - Generic programmes and qualifications - Literacy and Numeracy",
+    durationSeconds: 120.0326875,
+    meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
-      zh: "从已有经验出发，在阅读、计算与练习中找到下一步。",
-      en: "Build on experience, practise the basics, and choose the next step.",
+      zh: "用阅读和计算读懂标签、按相同重量比较价格，也记得单价不能代替品质与营养判断。",
+      en: "Use literacy and numeracy to read labels, compare equal weights, and keep price separate from quality and nutrition.",
     },
-    style: { zh: "原声民谣流行", en: "Acoustic folk-pop" },
+    style: { zh: "明亮孟菲斯 Hip-hop · 清晰旋律说唱", en: "Bright Memphis hip-hop · Clear melodic rap" },
   },
   "03": {
     id: "d2b9dd41-919b-4392-8488-5fabee707c40",
@@ -18114,13 +18118,15 @@ const categorySongTracks = {
     style: { zh: "律动放克流行", en: "Groove funk-pop" },
   },
   "01": {
-    id: "738f6165-d1c7-4d94-864b-a88f484318d9",
-    title: "Show Me What Changed",
+    id: "d2049be8-7ee0-43a1-a80f-766f2a468439",
+    title: "A Little Help, Then Try - MapKAI - Education - Scaffolding",
+    durationSeconds: 120.0326875,
+    meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
-      zh: "通过提问、解释、比较和再一次尝试，把活动变成可检验的理解。",
-      en: "Ask for reasons, compare what changes, and use feedback in the next attempt.",
+      zh: "观察学习者能独立完成哪一步，按表现调整临时提示，并检查下一次尝试。",
+      en: "Observe independent steps, adjust temporary help with performance, and check another attempt.",
     },
-    style: { zh: "提问回应式 Soul-pop", en: "Call-and-response soul-pop" },
+    style: { zh: "原声民谣流行 · 温暖清晰的主唱", en: "Acoustic folk-pop · Warm clear lead" },
   },
   "09": {
     id: "1977976d-4585-4194-bbee-49068a5620f1",
@@ -18172,7 +18178,7 @@ function renderCategorySong(category) {
   document.getElementById("categorySongAI").textContent = labels.ai;
   document.getElementById("categorySongTitle").textContent = song.title;
   document.getElementById("categorySongCore").textContent = song.core[language];
-  document.getElementById("categorySongMeta").textContent = `${labels.meta} · ${song.style[language]}`;
+  document.getElementById("categorySongMeta").textContent = `${song.meta?.[language] || labels.meta} · ${song.style[language]}`;
   button.textContent = labels.play;
   button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
   card.hidden = false;

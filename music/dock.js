@@ -6,8 +6,8 @@
   const key = 'mapkaiMusicDock';
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
-    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', position: '第 {n} / {total} 首' },
-    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', position: 'Song {n} of {total}' },
+    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首' },
+    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}' },
   };
   const t = name => copy[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'][name];
   let saved = null;
@@ -27,7 +27,9 @@
     <div id="music-dock-body" class="music-dock-body">
       <div class="music-dock-controls"><button id="music-dock-prev" type="button"></button><button id="music-dock-play" class="primary" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-next" type="button"></button><select id="music-dock-select"></select><label class="music-dock-volume"><span id="music-dock-volume-label"></span><input id="music-dock-volume" type="range" min="0" max="100" step="1"></label></div>
       <div class="music-dock-progress"><span id="music-dock-elapsed">0:00</span><input id="music-dock-seek" type="range" min="0" max="1000" step="1" value="0" disabled><span id="music-dock-duration">—:—</span></div>
-      <p id="music-dock-lyrics" class="music-dock-lyrics" role="region" tabindex="0"><span id="music-dock-line"></span></p><p id="music-dock-status" class="music-dock-status" role="status"></p>
+      <p id="music-dock-lyrics" class="music-dock-lyrics" role="region" tabindex="0"><span id="music-dock-line"></span></p>
+      <details id="music-dock-original" class="music-dock-original" hidden><summary id="music-dock-original-summary"></summary><pre id="music-dock-original-text" class="music-dock-original-text" role="region" tabindex="0"></pre></details>
+      <p id="music-dock-status" class="music-dock-status" role="status"></p>
     </div></div>`;
   const ownAudio = document.createElement('audio'); ownAudio.preload = 'none'; ownAudio.hidden = true;
   dock.append(ownAudio); document.body.append(dock);
@@ -36,6 +38,7 @@
   let tracks = [], selected = null, loaded = false, loading = false, failed = false, libraryFailed = false, pending = false, complete = false;
   let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
   let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
+  let originalLyricTrackId = null, originalLyricSource = null;
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -94,6 +97,15 @@
     $('seek').style.setProperty('--progress', `${seekable ? time / total * 100 : 0}%`);
     $('seek').setAttribute('aria-label', `${t('seek')}${track ? ` · ${track.title}` : ''}`);
     $('seek').setAttribute('aria-valuetext', `${$('elapsed').textContent} / ${$('duration').textContent}`);
+    const originalLyrics = track?.lyrics || '';
+    if (originalLyricTrackId !== (track?.id || null) || originalLyricSource !== originalLyrics) {
+      originalLyricTrackId = track?.id || null; originalLyricSource = originalLyrics;
+      $('original-text').textContent = originalLyrics;
+      $('original').open = false;
+    }
+    $('original').hidden = !originalLyrics;
+    $('original-summary').textContent = t('originalLyrics');
+    $('original-text').setAttribute('aria-label', `${t('originalLyrics')}${track ? ` · ${track.title}` : ''}`);
     $('lyrics').setAttribute('aria-label', t('lyrics'));
     const timing = track?.lyricsTiming && (!Number.isFinite(total) || track.lyricsTiming.at(-1).end <= total) ? track.lyricsTiming : null;
     const line = timing && audio?.readyState > 0 && !audio.ended && !audio.error ? sync.activeLineAt(timing, time) : null;

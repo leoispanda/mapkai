@@ -340,3 +340,9 @@ html:has(body.music-dock-present) {
   #mapkai-music-dock .music-dock-lyrics { overflow-x:auto; scrollbar-width:thin; }
   #mapkai-music-dock #music-dock-line { transform:none!important; }
 }
+
+/* Full original text has its own bounded disclosure; synchronized lyrics stay one row. */
+#mapkai-music-dock .music-dock-original{min-width:0;margin:4px 0 0;padding:0;border:0}
+#mapkai-music-dock .music-dock-original summary{min-height:44px;margin:0;padding:10px 0;cursor:pointer;font-size:12px;font-weight:600;line-height:24px;color:var(--blue,#2563eb)}
+#mapkai-music-dock .music-dock-original-text{min-width:0;max-width:100%;max-height:min(35vh,280px);margin:0;padding:4px 4px 10px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;font-weight:400;line-height:1.8;color:var(--ink,#0f172a)}
+#mapkai-music-dock .music-dock-original summary:focus-visible,#mapkai-music-dock .music-dock-original-text:focus-visible{outline:2px solid var(--blue,#2563eb);outline-offset:2px;border-radius:4px}
