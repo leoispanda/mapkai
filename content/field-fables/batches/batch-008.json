@@ -1773,41 +1773,134 @@
       "fieldCode": "0542",
       "fieldTitle": "Statistics",
       "fieldTitleZh": "统计学",
-      "title": "The Reward That Ruined the Best Bread",
-      "titleZh": "毁掉最佳面包的奖励",
-      "summary": "Whenever a baker rewards the day's best loaf, the next one is worse, so he concludes that praise destroys skill.",
-      "summaryZh": "师傅每次奖励最好的面包，第二天它总会变差，于是他认定赞美会毁掉手艺。",
+      "title": "The Second Row beneath the Red Tags",
+      "titleZh": "红签下的第二行数字",
+      "summary": "Three weighing sensors all read 96 g on the first check and are red-tagged under the inspection rule. An unadjusted retest gives 100, 104, and 100 g, with an actual mean of about 101.33 g. Lin Qi then checks a finite model with a stable value of 100 g and independent, equally likely −4/0/+4 g fluctuations, confirming that selection by an extreme first value can itself create average movement back toward the center and that the retest improvement cannot be treated as a repair effect.",
+      "summaryZh": "三只称重传感器第一次都读到96 g，被按规则贴红签。无调整复测得到100、104、100 g，实际均值约101.33 g；林琪再用稳定值100 g加独立等概率−4/0/+4 g波动的有限模型核对，确认极端值筛选本身就会造成平均回摆，不能把这次复测改善当成维修效果。",
       "storyParagraphs": [
-        "Master baker Orun wanted the royal bread contract and began ranking every oven load. The day's highest loaf received a red sugar flower; the lowest baker was scolded before the whole shop. Winners often scored worse the next morning, while last-place bakers usually improved. Orun saw a clean lesson: praise softened workers and humiliation sharpened them. He intensified the rule, certain that the next month's rising average would prove his management.",
-        "One wet Tuesday, baker Mina scored 54 against her usual range near 76 to 84. A leaking oven door and damp flour had joined her own mistake. Orun dismissed her on the spot. The next day, without any scolding, a reserve baker using the repaired oven scored 79. In the same week Jaro's exceptional 97 followed perfect heat and unusually dry flour; after receiving the red flower he scored 83. Orun called both movements evidence for punishment, although each result had been selected because it was extreme.",
-        "Bookkeeper Sali plotted ten prior batches for every baker. Repeated scores shared skill but also varied with moisture, temperature, tasting error, and chance. A person observed at an unusually high or low combination was unlikely to receive the same combination next time. Among twelve unpunished low scores from earlier records, the next batch rose by an average of eleven points. Among ten unrewarded high scores, the next fell by nine. Movement toward ordinary ranges appeared without Orun's words.",
-        "Orun snapped the chalk and said Sali had made all feedback meaningless. She opened two blank ledger pages. On one she wrote 'chosen because yesterday was extreme'; on the other, 'changed routine versus unchanged routine.' Then she ruled spaces for several baseline batches, matched ovens, and blind tasting. The first page already predicted some rebound before anyone spoke. Only the second could help separate a new practice from that background movement. Orun stared at Mina's dismissal mark and signed the trial order with the broken chalk still beside his hand.",
-        "The guild hearing was two days away. Orun stared at Mina's dismissal mark until the broken chalk stained his thumb, then admitted that his strongest example did not isolate the effect of shouting. He rehired her with back pay, forfeited his personal contract bonus, and replaced public rankings with a trial. Half the ovens received a new temperature checklist, half continued the old routine for a month, and evaluators tasted loaves without knowing which group made them. Immediate safety errors were still corrected; spectacle no longer stood in for evidence.",
-        "A month later the checklist group improved beyond its prior range and comparison group, though the shop kept watching. On the next judging day Mina baked a 96. Orun placed the red flower beside the loaf, then wrote her previous ten scores underneath instead of predicting tomorrow. The flower's sugar edge softened in the steam, while the row of numbers remained visible on the slate."
+        "A pickup vehicle for external calibration is due at the equipment factory at 15:00. During the morning check with a 100 g standard weight, three weighing sensors all read 96 g, so the inspection rule gives them red tags and moves them to the isolation rack. If Lin Qi signs the service form now, they will leave the factory that day. She first requests one retest using the same procedure, without adjusting parameters or replacing parts.",
+        "The second check uses the same standard weight, fixture, and procedure. The sensors read 100, 104, and 100 g, averaging 304/3≈101.33 g. Lin Qi clips the readings beneath the red tags; the service form remains unsigned. All three figures exceed 96, yet no repair record corresponds to the change. Clearance still requires the original inspection standard. She fills in the retest record and leaves the pass-decision field open.",
+        "She uses a finite model to check something else. Suppose a device has a stable reading of 100 g, while each measurement adds an independent, equally likely fluctuation of −4, 0, or +4 g. Only a first fluctuation of −4 would make the device read 96 g and therefore be selected into this group. The model is not being used to decide whether the three real sensors are good or bad; it calculates the background change created by selecting low readings.",
+        "In the model, the second fluctuation is independent of the first, with each possibility still having probability 1/3. Lin Qi sets out the possible next readings 96, 100, and 104 g on the model page and calculates (96+100+104)/3=100 g. Beside it she writes the observed retest mean, 101.33 g. The two lines remain side by side: the conditional expectation under repeated selection and this particular three-device average, without changing either into the other.",
+        "Before 15:00, Lin Qi neither sends the three sensors with the pickup vehicle nor returns them to production. She chooses to keep them isolated overnight and add records under the formal inspection procedure. If a later calibration treatment is evaluated, she will also retain an untreated baseline selected and measured by a comparable process, rather than assigning every natural rebound after a low value to the calibration.",
+        "After the pickup vehicle leaves, the three red tags are still hanging on the isolation rack. Beneath them is a small slip: first reading 96/96/96; second reading 100/104/100. A third-reading column is blank, with tomorrow morning’s date already written beside it."
       ],
       "storyParagraphsZh": [
-        "面包师奥伦想拿下王室供货合同，开始给每炉打分。当天最高分可得一朵红糖花，最低分的人要当众挨骂。奇怪的是，冠军次日常变差，末名却往往回升。奥伦认定赞美使人松懈，羞辱才能磨快手艺，于是把奖罚加重，等着下月均分证明自己的管理。",
-        "一个潮湿星期二，米娜只得五十四分，她平日多在七十六至八十四之间。漏风炉门、受潮面粉和她自己的失误碰到一起，奥伦仍当场辞退她。次日，备用师傅使用修好的炉子得七十九分。同周，雅罗遇到恰好炉温与干燥面粉，烤出九十七分，领红花后第二天得八十三。奥伦把两次变化都算成责骂有效，尽管他们正因成绩极端才被挑出来。",
-        "账房萨莉画出每名师傅此前十炉。重复成绩既含手艺，也受湿度、温度、品评分歧和偶然波动影响；某次碰上异常好坏组合，下次很难原样重现。旧账里，十二次没有受罚的低分之后，下一炉平均上升十一分；十次没有受奖的高分之后，下一炉平均下降九分。没有奥伦的话，成绩照样向个人常态靠近。",
-        "奥伦折断粉笔，说萨莉把所有反馈都说成了无用。她摊开两张空白账页，一张写“因昨日极端而入选”，另一张写“改变流程与保持原样相比较”，随后画出多次基线、相似炉位和盲评栏。第一张纸在任何人开口前就会出现部分回摆；第二张才可能把新做法从这种背景变化里分开。奥伦盯着米娜名字后的解雇记号，断粉笔仍搁在手边，最后在试验单上签字。",
-        "工会听证只剩两天。奥伦盯着米娜名字后的解雇记号，直到断粉笔把拇指染白，才承认最有力的例子没有隔离吼叫的作用。他补发工资请回米娜，放弃个人合同奖金，改做一个月试验：一半炉位使用新温度清单，另一半保持旧流程，品评人不知道面包来自哪组。安全错误仍即时纠正，公开羞辱不再冒充证据。",
-        "一个月后，清单组的改善超过自身旧范围和对照组，面包坊仍继续观察。下一次评比，米娜烤出九十六分。奥伦把红糖花放在面包旁，又在下面写出她过去十炉，而没有预言明天。蒸汽让糖花边缘微微发软，石板上的那排数字仍清楚。"
+        "设备厂下午15:00有一班外部校准取件车。早班用100 g标准块检查时，三只称重传感器都读到96 g，按质检规则被贴上红签并移到隔离架。林琪若现在签送修单，它们当天就会离厂；她先申请在不调参数、不换零件的情况下做一次同流程复测。",
+        "第二次仍用同一标准块、夹具和步骤，三只分别读到100、104、100 g，平均是304/3≈101.33 g。林琪把这组读数夹到红签下面，送修单还没有签。纸上的三个数字都比96大，却没有哪张维修记录能与这次变化对应；要解除隔离，仍得满足原来的质检标准，她把“复测完成”填在记录栏，留下“合格判定”那一格。",
+        "她用一个有限模型检查另一件事：若某设备的稳定读数是100 g，每次测量额外叠加独立、等概率的−4、0或+4 g波动，那么只有第一次波动为−4时才会因96 g被选进这组。这个模型不是拿来判断眼前三只设备好坏，而是计算“按低值挑选”会自带什么背景变化。",
+        "在模型里，第二次波动与第一次独立，三种情况仍各占1/3。林琪把下一次可能的96、100、104 g排在模型那页，算得(96+100+104)/3=100 g；再把现实复测的101.33 g写在旁边。两行并排留着：一行是重复这种选择时的条件期望，一行是眼前三只的这次平均，谁也没有改成另一个数。",
+        "15:00前，林琪没有把三只送上取件车，也没有让它们回到生产位。她选择让它们继续隔离一晚，按正式质检流程追加记录；若之后要评估某种校准处理，还会按相同入选和测量流程保留未调整基线，并与经过处理的记录比较，而不是把一次低值后的自然回摆全算给校准。",
+        "取件车开走后，隔离架上仍挂着三张红签。下面夹着一张小纸条：第一次96/96/96；第二次100/104/100；右侧空着第三次记录栏，日期已经写成明早。"
       ],
       "conceptName": "Regression to the mean",
       "conceptNameZh": "均值回归",
       "explanationParagraphs": [
-        "Regression to the mean occurs when cases are selected for an extreme observation and repeated measurements are imperfectly correlated and contain random variation; later values tend on average to be less extreme. It is a conditional statistical pattern, not a causal force, and does not prove an intervention ineffective. Controls, repeated baselines, and reliable measurement help distinguish it."
+        "Regression to the mean is the tendency for the conditional average of repeat observations to be less extreme after cases are selected by one extreme result. Readings combine a stable component with random variation; the unusually large fluctuation involved in selection need not recur. An individual is not guaranteed to move in the opposite direction.",
+        "In this model, the stable value is 100 g and the independent, equally likely fluctuations are −4/0/+4 g. After selection at an initial 96 g, the next conditional expectation is 100 g. The actual retest mean of the three sensors is about 101.33 g, not the model expectation itself."
       ],
       "explanationParagraphsZh": [
-        "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分，也要避免只挑极端值做前后比较。"
+        "均值回归是按一次极端观测筛选对象后，重复观测的条件平均趋于较不极端的现象。稳定部分与随机波动共同产生读数；被选中的异常波动不必在下一次重复，个体也不保证反向变化。",
+        "本例模型的稳定值为100 g，独立等概率波动为−4/0/+4 g；首次96 g入选后，下一次条件期望为100 g。现实三只复测均值约101.33 g，并非模型期望本身。"
       ],
-      "mode": "concept-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "overallZh": "这组虚构设备和有限模型说明均值回归：因一次极端低值入选，后续无干预读数也可能回摆。模型条件期望100 g与三只复测均值约101.33 g是两回事。现实处理效果仍须用合适基线和对照识别，设备是否合格另按正式标准判断。",
+      "moduleZh": {
+        "intro": "把现实设备判定与有限统计模型分开：模型只计算极端筛选造成的背景回摆，正式质检仍按现实标准进行。",
+        "diagramTitle": "第一次96 g才入选，第二次条件期望怎样回到100 g",
+        "diagramSteps": [
+          "现实三只因首次96 g被贴红签并隔离",
+          "无调整复测得到100/104/100，实际均值约101.33 g",
+          "设玩具模型稳定值100 g与独立等概率−4/0/+4 g",
+          "按首次96入选后计算第二次96/100/104与条件期望100 g",
+          "设备继续隔离，以正式流程和可比基线判断是否需要校准"
+        ],
+        "diagramStepNotes": [
+          "15:00送修截止形成真实选择，但复测不等于解除隔离。",
+          "304/3≈101.33 g是这三只的实际复测均值。",
+          "模型要求跨次独立且三种波动各1/3。",
+          "条件期望100 g不意味着每个个体或每次小样本都到100。",
+          "若评估处理效果，对照需有可比的入选与测量流程；一个随意对照并不能自动解决所有因果问题。"
+        ],
+        "mapping": [
+          "100 g标准块 → 现实复测与模型的共同参照。",
+          "红签隔离架 → 因第一次极端低值触发的选择。",
+          "15:00取件车 → 必须作出的现实维修决定。",
+          "留空的第三次记录栏 → 结果尚未被一次回升定案。"
+        ],
+        "boundary": "玩具模型不代表真实传感器噪声一定离散、等概率、独立或稳定无趋势。现实变化还可能来自故障、环境、校准和时间趋势；均值回归只解释极端筛选后的一类背景变化，不能替代设备安全标准或因果设计。",
+        "reflection": "为什么三只设备第二次平均升到约101.33 g，既不等于模型的100 g条件期望，也不能据此说设备已经恢复正常？"
+      },
+      "referencesZh": [
+        {
+          "id": "barnett-2005",
+          "citation": "Barnett, A. G., van der Pols, J. C., & Dobson, A. J. (2005). Regression to the mean: what it is and how to deal with it. International Journal of Epidemiology, 34(1), 215–220.",
+          "url": "https://doi.org/10.1093/ije/dyh299",
+          "use": "支持重复测量、按极端值选择对象时出现均值回归，以及评估干预效果时需要通过设计和对照处理这一问题。"
+        },
+        {
+          "id": "galton-1886",
+          "citation": "Galton, F. (1886). Regression towards mediocrity in hereditary stature. Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246–263.",
+          "url": "https://utstat.toronto.edu/reid/sta2212s/2021/Galton85.pdf",
+          "use": "作为回归现象的早期历史来源；其亲子身高群体关系不意味着每个个体都必然回摆，本篇数值也不取自该研究。"
+        }
+      ],
+      "overall": "This fictional equipment example and finite model illustrate regression to the mean: readings selected for an extreme low result can rebound without intervention. The model’s conditional expectation of 100 g differs from the three-sensor retest mean of about 101.33 g. Real treatment effects still need suitable baselines and controls, while equipment clearance follows formal standards.",
+      "module": {
+        "intro": "Keep the real device decision separate from the finite statistical model: the model calculates background movement caused by extreme-value selection, while formal inspection still governs the actual equipment.",
+        "diagramTitle": "After Selection at 96 g, How Does the Next Conditional Expectation Return to 100 g?",
+        "diagramSteps": [
+          "The three real sensors are red-tagged and isolated after an initial 96 g reading",
+          "An unadjusted retest gives 100/104/100, with an actual mean of about 101.33 g",
+          "Define a toy model with stable value 100 g and independent, equally likely −4/0/+4 g fluctuations",
+          "After selection at 96, calculate second readings 96/100/104 and conditional expectation 100 g",
+          "Keep the devices isolated and use formal procedures and comparable baselines to decide whether calibration is needed"
+        ],
+        "diagramStepNotes": [
+          "The 15:00 service deadline creates a real decision, but a retest does not release the sensors from isolation.",
+          "304/3≈101.33 g is the actual retest mean of these three sensors.",
+          "The model assumes independence across measurements and a one-third probability for each fluctuation.",
+          "A conditional expectation of 100 g does not mean every individual or every small sample reaches 100.",
+          "To evaluate a treatment, a control needs comparable selection and measurement procedures; adding an arbitrary control does not automatically solve every causal problem."
+        ],
+        "mapping": [
+          "100 g standard weight → the common reference for the real retest and the model.",
+          "Red-tag isolation rack → selection triggered by the first extreme low reading.",
+          "15:00 pickup vehicle → the real maintenance decision that has to be made.",
+          "Blank third-reading column → the result is not settled by one rebound."
+        ],
+        "boundary": "The toy model does not imply that real sensor noise is discrete, equally likely, independent, or free of trends. Real changes may come from faults, environment, calibration, or time trends. Regression to the mean explains one kind of background movement after extreme-value selection; it cannot replace equipment safety standards or causal study design.",
+        "reflection": "Why does the second mean of about 101.33 g neither equal the model’s 100 g conditional expectation nor prove that the three devices have returned to normal?"
+      },
+      "references": [
+        {
+          "id": "barnett-2005",
+          "citation": "Barnett, A. G., van der Pols, J. C., & Dobson, A. J. (2005). Regression to the mean: what it is and how to deal with it. International Journal of Epidemiology, 34(1), 215–220.",
+          "url": "https://doi.org/10.1093/ije/dyh299",
+          "use": "Supports regression to the mean in repeated measurements after selecting cases by extreme values, and the need to address it through study design and controls when evaluating intervention effects."
+        },
+        {
+          "id": "galton-1886",
+          "citation": "Galton, F. (1886). Regression towards mediocrity in hereditary stature. Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246–263.",
+          "url": "https://utstat.toronto.edu/reid/sta2212s/2021/Galton85.pdf",
+          "use": "Serves as an early historical source for the regression phenomenon; its population relationship in parent–offspring height does not imply that every individual must move back, and the fictional values here do not come from that study."
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "statistics-ict-mixed-18-pdc-review.md",
+        "edits": [
+          "statistics-ict-mixed-18-edit-pass1-evidence.json",
+          "statistics-ict-mixed-18-edit-pass2-evidence.json"
+        ],
+        "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+        "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
       }
     },
     {

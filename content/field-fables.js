@@ -16470,47 +16470,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0542",
     "fieldTitle": "Statistics",
     "fieldTitleZh": "统计学",
-    "title": "The Reward That Ruined the Best Bread",
-    "titleZh": "毁掉最佳面包的奖励",
-    "summary": "Whenever a baker rewards the day's best loaf, the next one is worse, so he concludes that praise destroys skill.",
-    "summaryZh": "师傅每次奖励最好的面包，第二天它总会变差，于是他认定赞美会毁掉手艺。",
+    "title": "The Second Row beneath the Red Tags",
+    "titleZh": "红签下的第二行数字",
+    "summary": "Three weighing sensors all read 96 g on the first check and are red-tagged under the inspection rule. An unadjusted retest gives 100, 104, and 100 g, with an actual mean of about 101.33 g. Lin Qi then checks a finite model with a stable value of 100 g and independent, equally likely −4/0/+4 g fluctuations, confirming that selection by an extreme first value can itself create average movement back toward the center and that the retest improvement cannot be treated as a repair effect.",
+    "summaryZh": "三只称重传感器第一次都读到96 g，被按规则贴红签。无调整复测得到100、104、100 g，实际均值约101.33 g；林琪再用稳定值100 g加独立等概率−4/0/+4 g波动的有限模型核对，确认极端值筛选本身就会造成平均回摆，不能把这次复测改善当成维修效果。",
     "storyParagraphs": [
-      "Master baker Orun wanted the royal bread contract and began ranking every oven load. The day's highest loaf received a red sugar flower; the lowest baker was scolded before the whole shop. Winners often scored worse the next morning, while last-place bakers usually improved. Orun saw a clean lesson: praise softened workers and humiliation sharpened them. He intensified the rule, certain that the next month's rising average would prove his management.",
-      "One wet Tuesday, baker Mina scored 54 against her usual range near 76 to 84. A leaking oven door and damp flour had joined her own mistake. Orun dismissed her on the spot. The next day, without any scolding, a reserve baker using the repaired oven scored 79. In the same week Jaro's exceptional 97 followed perfect heat and unusually dry flour; after receiving the red flower he scored 83. Orun called both movements evidence for punishment, although each result had been selected because it was extreme.",
-      "Bookkeeper Sali plotted ten prior batches for every baker. Repeated scores shared skill but also varied with moisture, temperature, tasting error, and chance. A person observed at an unusually high or low combination was unlikely to receive the same combination next time. Among twelve unpunished low scores from earlier records, the next batch rose by an average of eleven points. Among ten unrewarded high scores, the next fell by nine. Movement toward ordinary ranges appeared without Orun's words.",
-      "Orun snapped the chalk and said Sali had made all feedback meaningless. She opened two blank ledger pages. On one she wrote 'chosen because yesterday was extreme'; on the other, 'changed routine versus unchanged routine.' Then she ruled spaces for several baseline batches, matched ovens, and blind tasting. The first page already predicted some rebound before anyone spoke. Only the second could help separate a new practice from that background movement. Orun stared at Mina's dismissal mark and signed the trial order with the broken chalk still beside his hand.",
-      "The guild hearing was two days away. Orun stared at Mina's dismissal mark until the broken chalk stained his thumb, then admitted that his strongest example did not isolate the effect of shouting. He rehired her with back pay, forfeited his personal contract bonus, and replaced public rankings with a trial. Half the ovens received a new temperature checklist, half continued the old routine for a month, and evaluators tasted loaves without knowing which group made them. Immediate safety errors were still corrected; spectacle no longer stood in for evidence.",
-      "A month later the checklist group improved beyond its prior range and comparison group, though the shop kept watching. On the next judging day Mina baked a 96. Orun placed the red flower beside the loaf, then wrote her previous ten scores underneath instead of predicting tomorrow. The flower's sugar edge softened in the steam, while the row of numbers remained visible on the slate."
+      "A pickup vehicle for external calibration is due at the equipment factory at 15:00. During the morning check with a 100 g standard weight, three weighing sensors all read 96 g, so the inspection rule gives them red tags and moves them to the isolation rack. If Lin Qi signs the service form now, they will leave the factory that day. She first requests one retest using the same procedure, without adjusting parameters or replacing parts.",
+      "The second check uses the same standard weight, fixture, and procedure. The sensors read 100, 104, and 100 g, averaging 304/3≈101.33 g. Lin Qi clips the readings beneath the red tags; the service form remains unsigned. All three figures exceed 96, yet no repair record corresponds to the change. Clearance still requires the original inspection standard. She fills in the retest record and leaves the pass-decision field open.",
+      "She uses a finite model to check something else. Suppose a device has a stable reading of 100 g, while each measurement adds an independent, equally likely fluctuation of −4, 0, or +4 g. Only a first fluctuation of −4 would make the device read 96 g and therefore be selected into this group. The model is not being used to decide whether the three real sensors are good or bad; it calculates the background change created by selecting low readings.",
+      "In the model, the second fluctuation is independent of the first, with each possibility still having probability 1/3. Lin Qi sets out the possible next readings 96, 100, and 104 g on the model page and calculates (96+100+104)/3=100 g. Beside it she writes the observed retest mean, 101.33 g. The two lines remain side by side: the conditional expectation under repeated selection and this particular three-device average, without changing either into the other.",
+      "Before 15:00, Lin Qi neither sends the three sensors with the pickup vehicle nor returns them to production. She chooses to keep them isolated overnight and add records under the formal inspection procedure. If a later calibration treatment is evaluated, she will also retain an untreated baseline selected and measured by a comparable process, rather than assigning every natural rebound after a low value to the calibration.",
+      "After the pickup vehicle leaves, the three red tags are still hanging on the isolation rack. Beneath them is a small slip: first reading 96/96/96; second reading 100/104/100. A third-reading column is blank, with tomorrow morning’s date already written beside it."
     ],
     "storyParagraphsZh": [
-      "面包师奥伦想拿下王室供货合同，开始给每炉打分。当天最高分可得一朵红糖花，最低分的人要当众挨骂。奇怪的是，冠军次日常变差，末名却往往回升。奥伦认定赞美使人松懈，羞辱才能磨快手艺，于是把奖罚加重，等着下月均分证明自己的管理。",
-      "一个潮湿星期二，米娜只得五十四分，她平日多在七十六至八十四之间。漏风炉门、受潮面粉和她自己的失误碰到一起，奥伦仍当场辞退她。次日，备用师傅使用修好的炉子得七十九分。同周，雅罗遇到恰好炉温与干燥面粉，烤出九十七分，领红花后第二天得八十三。奥伦把两次变化都算成责骂有效，尽管他们正因成绩极端才被挑出来。",
-      "账房萨莉画出每名师傅此前十炉。重复成绩既含手艺，也受湿度、温度、品评分歧和偶然波动影响；某次碰上异常好坏组合，下次很难原样重现。旧账里，十二次没有受罚的低分之后，下一炉平均上升十一分；十次没有受奖的高分之后，下一炉平均下降九分。没有奥伦的话，成绩照样向个人常态靠近。",
-      "奥伦折断粉笔，说萨莉把所有反馈都说成了无用。她摊开两张空白账页，一张写“因昨日极端而入选”，另一张写“改变流程与保持原样相比较”，随后画出多次基线、相似炉位和盲评栏。第一张纸在任何人开口前就会出现部分回摆；第二张才可能把新做法从这种背景变化里分开。奥伦盯着米娜名字后的解雇记号，断粉笔仍搁在手边，最后在试验单上签字。",
-      "工会听证只剩两天。奥伦盯着米娜名字后的解雇记号，直到断粉笔把拇指染白，才承认最有力的例子没有隔离吼叫的作用。他补发工资请回米娜，放弃个人合同奖金，改做一个月试验：一半炉位使用新温度清单，另一半保持旧流程，品评人不知道面包来自哪组。安全错误仍即时纠正，公开羞辱不再冒充证据。",
-      "一个月后，清单组的改善超过自身旧范围和对照组，面包坊仍继续观察。下一次评比，米娜烤出九十六分。奥伦把红糖花放在面包旁，又在下面写出她过去十炉，而没有预言明天。蒸汽让糖花边缘微微发软，石板上的那排数字仍清楚。"
+      "设备厂下午15:00有一班外部校准取件车。早班用100 g标准块检查时，三只称重传感器都读到96 g，按质检规则被贴上红签并移到隔离架。林琪若现在签送修单，它们当天就会离厂；她先申请在不调参数、不换零件的情况下做一次同流程复测。",
+      "第二次仍用同一标准块、夹具和步骤，三只分别读到100、104、100 g，平均是304/3≈101.33 g。林琪把这组读数夹到红签下面，送修单还没有签。纸上的三个数字都比96大，却没有哪张维修记录能与这次变化对应；要解除隔离，仍得满足原来的质检标准，她把“复测完成”填在记录栏，留下“合格判定”那一格。",
+      "她用一个有限模型检查另一件事：若某设备的稳定读数是100 g，每次测量额外叠加独立、等概率的−4、0或+4 g波动，那么只有第一次波动为−4时才会因96 g被选进这组。这个模型不是拿来判断眼前三只设备好坏，而是计算“按低值挑选”会自带什么背景变化。",
+      "在模型里，第二次波动与第一次独立，三种情况仍各占1/3。林琪把下一次可能的96、100、104 g排在模型那页，算得(96+100+104)/3=100 g；再把现实复测的101.33 g写在旁边。两行并排留着：一行是重复这种选择时的条件期望，一行是眼前三只的这次平均，谁也没有改成另一个数。",
+      "15:00前，林琪没有把三只送上取件车，也没有让它们回到生产位。她选择让它们继续隔离一晚，按正式质检流程追加记录；若之后要评估某种校准处理，还会按相同入选和测量流程保留未调整基线，并与经过处理的记录比较，而不是把一次低值后的自然回摆全算给校准。",
+      "取件车开走后，隔离架上仍挂着三张红签。下面夹着一张小纸条：第一次96/96/96；第二次100/104/100；右侧空着第三次记录栏，日期已经写成明早。"
     ],
     "conceptName": "Regression to the mean",
     "conceptNameZh": "均值回归",
     "explanationParagraphs": [
-      "Regression to the mean occurs when cases are selected for an extreme observation and repeated measurements are imperfectly correlated and contain random variation; later values tend on average to be less extreme. It is a conditional statistical pattern, not a causal force, and does not prove an intervention ineffective. Controls, repeated baselines, and reliable measurement help distinguish it."
+      "Regression to the mean is the tendency for the conditional average of repeat observations to be less extreme after cases are selected by one extreme result. Readings combine a stable component with random variation; the unusually large fluctuation involved in selection need not recur. An individual is not guaranteed to move in the opposite direction.",
+      "In this model, the stable value is 100 g and the independent, equally likely fluctuations are −4/0/+4 g. After selection at an initial 96 g, the next conditional expectation is 100 g. The actual retest mean of the three sensors is about 101.33 g, not the model expectation itself."
     ],
     "explanationParagraphsZh": [
-      "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分，也要避免只挑极端值做前后比较。"
+      "均值回归是按一次极端观测筛选对象后，重复观测的条件平均趋于较不极端的现象。稳定部分与随机波动共同产生读数；被选中的异常波动不必在下一次重复，个体也不保证反向变化。",
+      "本例模型的稳定值为100 g，独立等概率波动为−4/0/+4 g；首次96 g入选后，下一次条件期望为100 g。现实三只复测均值约101.33 g，并非模型期望本身。"
     ],
-    "mode": "concept-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "这组虚构设备和有限模型说明均值回归：因一次极端低值入选，后续无干预读数也可能回摆。模型条件期望100 g与三只复测均值约101.33 g是两回事。现实处理效果仍须用合适基线和对照识别，设备是否合格另按正式标准判断。",
+    "moduleZh": {
+      "intro": "把现实设备判定与有限统计模型分开：模型只计算极端筛选造成的背景回摆，正式质检仍按现实标准进行。",
+      "diagramTitle": "第一次96 g才入选，第二次条件期望怎样回到100 g",
+      "diagramSteps": [
+        "现实三只因首次96 g被贴红签并隔离",
+        "无调整复测得到100/104/100，实际均值约101.33 g",
+        "设玩具模型稳定值100 g与独立等概率−4/0/+4 g",
+        "按首次96入选后计算第二次96/100/104与条件期望100 g",
+        "设备继续隔离，以正式流程和可比基线判断是否需要校准"
+      ],
+      "diagramStepNotes": [
+        "15:00送修截止形成真实选择，但复测不等于解除隔离。",
+        "304/3≈101.33 g是这三只的实际复测均值。",
+        "模型要求跨次独立且三种波动各1/3。",
+        "条件期望100 g不意味着每个个体或每次小样本都到100。",
+        "若评估处理效果，对照需有可比的入选与测量流程；一个随意对照并不能自动解决所有因果问题。"
+      ],
+      "mapping": [
+        "100 g标准块 → 现实复测与模型的共同参照。",
+        "红签隔离架 → 因第一次极端低值触发的选择。",
+        "15:00取件车 → 必须作出的现实维修决定。",
+        "留空的第三次记录栏 → 结果尚未被一次回升定案。"
+      ],
+      "boundary": "玩具模型不代表真实传感器噪声一定离散、等概率、独立或稳定无趋势。现实变化还可能来自故障、环境、校准和时间趋势；均值回归只解释极端筛选后的一类背景变化，不能替代设备安全标准或因果设计。",
+      "reflection": "为什么三只设备第二次平均升到约101.33 g，既不等于模型的100 g条件期望，也不能据此说设备已经恢复正常？"
+    },
+    "referencesZh": [
+      {
+        "id": "barnett-2005",
+        "citation": "Barnett, A. G., van der Pols, J. C., & Dobson, A. J. (2005). Regression to the mean: what it is and how to deal with it. International Journal of Epidemiology, 34(1), 215–220.",
+        "url": "https://doi.org/10.1093/ije/dyh299",
+        "use": "支持重复测量、按极端值选择对象时出现均值回归，以及评估干预效果时需要通过设计和对照处理这一问题。"
+      },
+      {
+        "id": "galton-1886",
+        "citation": "Galton, F. (1886). Regression towards mediocrity in hereditary stature. Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246–263.",
+        "url": "https://utstat.toronto.edu/reid/sta2212s/2021/Galton85.pdf",
+        "use": "作为回归现象的早期历史来源；其亲子身高群体关系不意味着每个个体都必然回摆，本篇数值也不取自该研究。"
+      }
+    ],
+    "overall": "This fictional equipment example and finite model illustrate regression to the mean: readings selected for an extreme low result can rebound without intervention. The model’s conditional expectation of 100 g differs from the three-sensor retest mean of about 101.33 g. Real treatment effects still need suitable baselines and controls, while equipment clearance follows formal standards.",
+    "module": {
+      "intro": "Keep the real device decision separate from the finite statistical model: the model calculates background movement caused by extreme-value selection, while formal inspection still governs the actual equipment.",
+      "diagramTitle": "After Selection at 96 g, How Does the Next Conditional Expectation Return to 100 g?",
+      "diagramSteps": [
+        "The three real sensors are red-tagged and isolated after an initial 96 g reading",
+        "An unadjusted retest gives 100/104/100, with an actual mean of about 101.33 g",
+        "Define a toy model with stable value 100 g and independent, equally likely −4/0/+4 g fluctuations",
+        "After selection at 96, calculate second readings 96/100/104 and conditional expectation 100 g",
+        "Keep the devices isolated and use formal procedures and comparable baselines to decide whether calibration is needed"
+      ],
+      "diagramStepNotes": [
+        "The 15:00 service deadline creates a real decision, but a retest does not release the sensors from isolation.",
+        "304/3≈101.33 g is the actual retest mean of these three sensors.",
+        "The model assumes independence across measurements and a one-third probability for each fluctuation.",
+        "A conditional expectation of 100 g does not mean every individual or every small sample reaches 100.",
+        "To evaluate a treatment, a control needs comparable selection and measurement procedures; adding an arbitrary control does not automatically solve every causal problem."
+      ],
+      "mapping": [
+        "100 g standard weight → the common reference for the real retest and the model.",
+        "Red-tag isolation rack → selection triggered by the first extreme low reading.",
+        "15:00 pickup vehicle → the real maintenance decision that has to be made.",
+        "Blank third-reading column → the result is not settled by one rebound."
+      ],
+      "boundary": "The toy model does not imply that real sensor noise is discrete, equally likely, independent, or free of trends. Real changes may come from faults, environment, calibration, or time trends. Regression to the mean explains one kind of background movement after extreme-value selection; it cannot replace equipment safety standards or causal study design.",
+      "reflection": "Why does the second mean of about 101.33 g neither equal the model’s 100 g conditional expectation nor prove that the three devices have returned to normal?"
+    },
+    "references": [
+      {
+        "id": "barnett-2005",
+        "citation": "Barnett, A. G., van der Pols, J. C., & Dobson, A. J. (2005). Regression to the mean: what it is and how to deal with it. International Journal of Epidemiology, 34(1), 215–220.",
+        "url": "https://doi.org/10.1093/ije/dyh299",
+        "use": "Supports regression to the mean in repeated measurements after selecting cases by extreme values, and the need to address it through study design and controls when evaluating intervention effects."
+      },
+      {
+        "id": "galton-1886",
+        "citation": "Galton, F. (1886). Regression towards mediocrity in hereditary stature. Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246–263.",
+        "url": "https://utstat.toronto.edu/reid/sta2212s/2021/Galton85.pdf",
+        "use": "Serves as an early historical source for the regression phenomenon; its population relationship in parent–offspring height does not imply that every individual must move back, and the fictional values here do not come from that study."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "Master baker Orun wanted the royal bread contract and began ranking every oven load. The day's highest loaf received a red sugar flower; the lowest baker was scolded before the whole shop. Winners often scored worse the next morning, while last-place bakers usually improved. Orun saw a clean lesson: praise softened workers and humiliation sharpened them. He intensified the rule, certain that the next month's rising average would prove his management.\n\nOne wet Tuesday, baker Mina scored 54 against her usual range near 76 to 84. A leaking oven door and damp flour had joined her own mistake. Orun dismissed her on the spot. The next day, without any scolding, a reserve baker using the repaired oven scored 79. In the same week Jaro's exceptional 97 followed perfect heat and unusually dry flour; after receiving the red flower he scored 83. Orun called both movements evidence for punishment, although each result had been selected because it was extreme.\n\nBookkeeper Sali plotted ten prior batches for every baker. Repeated scores shared skill but also varied with moisture, temperature, tasting error, and chance. A person observed at an unusually high or low combination was unlikely to receive the same combination next time. Among twelve unpunished low scores from earlier records, the next batch rose by an average of eleven points. Among ten unrewarded high scores, the next fell by nine. Movement toward ordinary ranges appeared without Orun's words.\n\nOrun snapped the chalk and said Sali had made all feedback meaningless. She opened two blank ledger pages. On one she wrote 'chosen because yesterday was extreme'; on the other, 'changed routine versus unchanged routine.' Then she ruled spaces for several baseline batches, matched ovens, and blind tasting. The first page already predicted some rebound before anyone spoke. Only the second could help separate a new practice from that background movement. Orun stared at Mina's dismissal mark and signed the trial order with the broken chalk still beside his hand.\n\nThe guild hearing was two days away. Orun stared at Mina's dismissal mark until the broken chalk stained his thumb, then admitted that his strongest example did not isolate the effect of shouting. He rehired her with back pay, forfeited his personal contract bonus, and replaced public rankings with a trial. Half the ovens received a new temperature checklist, half continued the old routine for a month, and evaluators tasted loaves without knowing which group made them. Immediate safety errors were still corrected; spectacle no longer stood in for evidence.\n\nA month later the checklist group improved beyond its prior range and comparison group, though the shop kept watching. On the next judging day Mina baked a 96. Orun placed the red flower beside the loaf, then wrote her previous ten scores underneath instead of predicting tomorrow. The flower's sugar edge softened in the steam, while the row of numbers remained visible on the slate.",
-    "storyBodyZh": "面包师奥伦想拿下王室供货合同，开始给每炉打分。当天最高分可得一朵红糖花，最低分的人要当众挨骂。奇怪的是，冠军次日常变差，末名却往往回升。奥伦认定赞美使人松懈，羞辱才能磨快手艺，于是把奖罚加重，等着下月均分证明自己的管理。\n\n一个潮湿星期二，米娜只得五十四分，她平日多在七十六至八十四之间。漏风炉门、受潮面粉和她自己的失误碰到一起，奥伦仍当场辞退她。次日，备用师傅使用修好的炉子得七十九分。同周，雅罗遇到恰好炉温与干燥面粉，烤出九十七分，领红花后第二天得八十三。奥伦把两次变化都算成责骂有效，尽管他们正因成绩极端才被挑出来。\n\n账房萨莉画出每名师傅此前十炉。重复成绩既含手艺，也受湿度、温度、品评分歧和偶然波动影响；某次碰上异常好坏组合，下次很难原样重现。旧账里，十二次没有受罚的低分之后，下一炉平均上升十一分；十次没有受奖的高分之后，下一炉平均下降九分。没有奥伦的话，成绩照样向个人常态靠近。\n\n奥伦折断粉笔，说萨莉把所有反馈都说成了无用。她摊开两张空白账页，一张写“因昨日极端而入选”，另一张写“改变流程与保持原样相比较”，随后画出多次基线、相似炉位和盲评栏。第一张纸在任何人开口前就会出现部分回摆；第二张才可能把新做法从这种背景变化里分开。奥伦盯着米娜名字后的解雇记号，断粉笔仍搁在手边，最后在试验单上签字。\n\n工会听证只剩两天。奥伦盯着米娜名字后的解雇记号，直到断粉笔把拇指染白，才承认最有力的例子没有隔离吼叫的作用。他补发工资请回米娜，放弃个人合同奖金，改做一个月试验：一半炉位使用新温度清单，另一半保持旧流程，品评人不知道面包来自哪组。安全错误仍即时纠正，公开羞辱不再冒充证据。\n\n一个月后，清单组的改善超过自身旧范围和对照组，面包坊仍继续观察。下一次评比，米娜烤出九十六分。奥伦把红糖花放在面包旁，又在下面写出她过去十炉，而没有预言明天。蒸汽让糖花边缘微微发软，石板上的那排数字仍清楚。",
-    "explanation": "Regression to the mean occurs when cases are selected for an extreme observation and repeated measurements are imperfectly correlated and contain random variation; later values tend on average to be less extreme. It is a conditional statistical pattern, not a causal force, and does not prove an intervention ineffective. Controls, repeated baselines, and reliable measurement help distinguish it.",
-    "explanationZh": "均值回归发生在按极端观测选择对象，而重复测量相关性不完美且含随机变化时，后续结果平均会较不极端。它是条件统计模式，不是把对象拉回的因果力量，也不证明干预无效。对照、多次基线和可靠测量有助于区分，也要避免只挑极端值做前后比较。"
+    "storyBody": "A pickup vehicle for external calibration is due at the equipment factory at 15:00. During the morning check with a 100 g standard weight, three weighing sensors all read 96 g, so the inspection rule gives them red tags and moves them to the isolation rack. If Lin Qi signs the service form now, they will leave the factory that day. She first requests one retest using the same procedure, without adjusting parameters or replacing parts.\n\nThe second check uses the same standard weight, fixture, and procedure. The sensors read 100, 104, and 100 g, averaging 304/3≈101.33 g. Lin Qi clips the readings beneath the red tags; the service form remains unsigned. All three figures exceed 96, yet no repair record corresponds to the change. Clearance still requires the original inspection standard. She fills in the retest record and leaves the pass-decision field open.\n\nShe uses a finite model to check something else. Suppose a device has a stable reading of 100 g, while each measurement adds an independent, equally likely fluctuation of −4, 0, or +4 g. Only a first fluctuation of −4 would make the device read 96 g and therefore be selected into this group. The model is not being used to decide whether the three real sensors are good or bad; it calculates the background change created by selecting low readings.\n\nIn the model, the second fluctuation is independent of the first, with each possibility still having probability 1/3. Lin Qi sets out the possible next readings 96, 100, and 104 g on the model page and calculates (96+100+104)/3=100 g. Beside it she writes the observed retest mean, 101.33 g. The two lines remain side by side: the conditional expectation under repeated selection and this particular three-device average, without changing either into the other.\n\nBefore 15:00, Lin Qi neither sends the three sensors with the pickup vehicle nor returns them to production. She chooses to keep them isolated overnight and add records under the formal inspection procedure. If a later calibration treatment is evaluated, she will also retain an untreated baseline selected and measured by a comparable process, rather than assigning every natural rebound after a low value to the calibration.\n\nAfter the pickup vehicle leaves, the three red tags are still hanging on the isolation rack. Beneath them is a small slip: first reading 96/96/96; second reading 100/104/100. A third-reading column is blank, with tomorrow morning’s date already written beside it.",
+    "storyBodyZh": "设备厂下午15:00有一班外部校准取件车。早班用100 g标准块检查时，三只称重传感器都读到96 g，按质检规则被贴上红签并移到隔离架。林琪若现在签送修单，它们当天就会离厂；她先申请在不调参数、不换零件的情况下做一次同流程复测。\n\n第二次仍用同一标准块、夹具和步骤，三只分别读到100、104、100 g，平均是304/3≈101.33 g。林琪把这组读数夹到红签下面，送修单还没有签。纸上的三个数字都比96大，却没有哪张维修记录能与这次变化对应；要解除隔离，仍得满足原来的质检标准，她把“复测完成”填在记录栏，留下“合格判定”那一格。\n\n她用一个有限模型检查另一件事：若某设备的稳定读数是100 g，每次测量额外叠加独立、等概率的−4、0或+4 g波动，那么只有第一次波动为−4时才会因96 g被选进这组。这个模型不是拿来判断眼前三只设备好坏，而是计算“按低值挑选”会自带什么背景变化。\n\n在模型里，第二次波动与第一次独立，三种情况仍各占1/3。林琪把下一次可能的96、100、104 g排在模型那页，算得(96+100+104)/3=100 g；再把现实复测的101.33 g写在旁边。两行并排留着：一行是重复这种选择时的条件期望，一行是眼前三只的这次平均，谁也没有改成另一个数。\n\n15:00前，林琪没有把三只送上取件车，也没有让它们回到生产位。她选择让它们继续隔离一晚，按正式质检流程追加记录；若之后要评估某种校准处理，还会按相同入选和测量流程保留未调整基线，并与经过处理的记录比较，而不是把一次低值后的自然回摆全算给校准。\n\n取件车开走后，隔离架上仍挂着三张红签。下面夹着一张小纸条：第一次96/96/96；第二次100/104/100；右侧空着第三次记录栏，日期已经写成明早。",
+    "explanation": "Regression to the mean is the tendency for the conditional average of repeat observations to be less extreme after cases are selected by one extreme result. Readings combine a stable component with random variation; the unusually large fluctuation involved in selection need not recur. An individual is not guaranteed to move in the opposite direction.\n\nIn this model, the stable value is 100 g and the independent, equally likely fluctuations are −4/0/+4 g. After selection at an initial 96 g, the next conditional expectation is 100 g. The actual retest mean of the three sensors is about 101.33 g, not the model expectation itself.",
+    "explanationZh": "均值回归是按一次极端观测筛选对象后，重复观测的条件平均趋于较不极端的现象。稳定部分与随机波动共同产生读数；被选中的异常波动不必在下一次重复，个体也不保证反向变化。\n\n本例模型的稳定值为100 g，独立等概率波动为−4/0/+4 g；首次96 g入选后，下一次条件期望为100 g。现实三只复测均值约101.33 g，并非模型期望本身。"
   },
   {
     "id": "0542-bayesian-updating",
@@ -16659,49 +16752,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0611",
     "fieldTitle": "Computer use",
     "fieldTitleZh": "计算机使用",
-    "title": "The Save Button That Swallowed Letters",
-    "titleZh": "吞掉信件的保存按钮",
-    "summary": "A new postal terminal has a button marked Save, and every sender assumes a letter that disappears has begun its journey.",
-    "summaryZh": "新邮亭里有一个写着“保存”的按钮，寄信人每次按下它，都以为信已经上路。",
+    "title": "6:30 Is Still on the Phone",
+    "titleZh": "6:30还在手机上",
+    "summary": "Ye Ning needs to catch an early train and drags the morning heating schedule from 7:00 to 6:30. The old interface immediately shows “Next: 6:30” for the draft state, so she plans her morning as if the change has already taken effect. The device still follows 7:00. Later, when the draft schedule, current home schedule, and deployment confirmation are shown separately, her prediction changes with the visible system feedback.",
+    "summaryZh": "叶宁要赶早班火车，把晨间供暖从7:00拖到6:30；旧界面立即用“下一次6:30”反馈草稿状态，使她按已生效来安排行程。实际设备仍执行7:00。她后来看到草稿计划、住宅当前计划与下发确认被分开呈现，预测才随界面反馈一起改变。",
     "storyParagraphs": [
-      "The city introduced electronic postal terminals. After composing a letter, users saw one prominent Save button. Pressing it made the letter disappear and returned the screen to a blank page. Many took this to mean the letter had been sent. The city launched the kiosks before tax day because counter queues filled the square, and the designer's bonus depended on reducing visits. Early users praised how quickly the page cleared.",
-      "In reality, Save placed the message in a private drafts folder. Sending required another menu. Designers understood the internal structure and considered the two steps clear. Ordinary users relied on experience with paper mail: once a letter left the desk, the post office had it.",
-      "After a month, birthday letters and payment notices remained in drafts. Instructions had been posted, but few people read them before acting. The explanation users had formed continued to conflict with the machine's behaviour, creating repeated error. One merchant missed a payment deadline and paid a penalty larger than the kiosk contract. The city first posted a longer manual, but hurried users continued to act from what the disappearing page suggested.",
-      "The designer could blame unread instructions or admit that the interface had taught the wrong prediction.",
-      "She refunded the merchant from her bonus and watched users narrate each step aloud. They expected saving to preserve work in place and sending to produce visible evidence of transfer. Rebuilding the flow delayed the next kiosk launch and cost her the performance award. She replayed the same task with older residents, hurried merchants, and people who had never used paper mail. Their predictions differed in detail but converged on the same mistaken meaning of disappearance.",
-      "The designers separated the actions visibly. Saving kept the message on screen with the label 'Visible only to you'. Sending used a paper-plane symbol and then displayed recipient, time, and 'Accepted by post'. Leaving with an unsent message triggered a clear warning. A draft counter remained visible, and returning to it produced the same state users had last seen. Tests asked what people believed would happen before they clicked, not merely whether they eventually completed the task. Delivery receipts could be opened later, and a failed transfer kept the letter visibly unsent. The city measured repeated errors a week later, not only success inside the training session.",
-      "The next sender did not walk away after pressing Send. She waited until the recipient's name appeared before taking her hand from the terminal. The receipt became the evidence she had expected from the machine, and she folded the printed copy into her purse."
+      "On Sunday night, Ye Ning needs to catch an early train the next morning and wants the bedroom heating to start at 6:30 instead of 7:00. She drags the schedule block half an hour to the left on her phone, and the top card immediately changes to “Next: 6:30.” She sets her alarm for 6:20, puts her scarf and train ticket over the back of a chair, and goes to sleep with her morning arranged around the new time.",
+      "When the 6:20 alarm rings, the radiator is still cool. She does not immediately decide what is wrong and continues getting ready. At 6:35 she touches it again and it is still not warming; only at 7:00 does she hear the valve operate. Before leaving, she opens the app. The timeline still sits at 6:30 and the “Next: 6:30” card is still there. What the phone displays and what the home actually executes are clearly not the same thing.",
+      "After returning home that evening, she opens the device details and finally sees two entries at the same time: the schedule being edited is 6:30, while the home’s current schedule remains 7:00. “Apply to home” has not been executed. The old interface updated the draft when she dragged the block, but it also immediately changed the top card to “Next: 6:30,” so the night before she naturally treated it as an already deployed result. She puts a screenshot of this details page beside the previous night’s top card and can finally see that the two screens were describing different states.",
+      "The product team does not simply make the word “Apply” larger. The timeline still allows tentative changes, but the draft always carries a visible “Not applied” label, while the main device card continues to show the home’s current schedule. When Ye Ning drags it to 6:30 again, the main card stays at 7:00, so she keeps the phone open and completes the deployment. Only after “Applied 21:42” appears does the current home schedule change from 7:00 to 6:30.",
+      "The next morning the alarm still rings at 6:20, and the radiator is cool. Ye Ning gets up and washes as usual. At 6:35 she touches it again; the metal surface is warm. The phone’s main card reads “Current home schedule 6:30,” with the previous evening’s 21:42 application time below. She compares this page with yesterday’s screenshot: yesterday the top card said 6:30 while the details still showed 7:00; today the current schedule and application record agree, and the heating has started in the new period.",
+      "She puts the phone back beside the bed with the current-schedule page still lit. The previous evening’s “Not applied” label is gone, leaving 6:30 and the application time."
     ],
     "storyParagraphsZh": [
-      "城里启用电子邮亭。写完信后，屏幕上只有一个显眼的“保存”按钮。寄信人按下以后，信件从画面消失，机器又回到空白页。许多人据此相信信已经被送走。城里赶在缴税日前启用邮亭，因为柜台队伍已排满广场，设计者的奖金取决于来访人数下降。页面迅速清空，头批用户还称赞机器利落。",
-      "实际上，“保存”只把信放进私人草稿箱，真正发送还要打开另一层菜单。系统设计者熟悉内部结构，觉得两步十分清楚；普通人却依据纸信经验判断：信一旦离开桌面，就已经交给邮局。",
-      "一个月后，大量生日信和付款通知仍躺在草稿箱。说明书早已张贴，却很少有人在操作前阅读。用户形成的解释与机器真实行为持续错位，错误便一次次重复。一名商人的付款通知因此逾期，罚金甚至高过邮亭月租。市政厅先贴出更长说明书，赶时间的人却仍按页面消失所暗示的结果行动。",
-      "设计者可以责怪市民不读说明，也可以承认界面教会了错误预测。",
-      "她用自己的奖金补偿商人，又请用户边操作边说出以为会发生什么。人们期待“保存”把工作留在原处，“发送”则必须留下交付证据。重做流程推迟下一批邮亭，她也失去绩效奖。她又让老人、赶时间的商人和从未寄过纸信的人重做同一任务。细节虽不同，众人却都把页面消失解释成已经寄出。",
-      "设计者把两个动作分开呈现：保存后，信仍留在画面并标记“仅自己可见”；发送按钮使用纸飞机图标，按下后显示收件人、时间和“已交付邮局”。离开页面前，未发送的信还会得到明确提醒。草稿数量始终可见，重新打开时也保持离开前状态。测试不只看用户最终是否完成，还在点击前询问他们预测下一步会发生什么。交付回执可在日后查看，传送失败则让信继续显示为未发送。城里一周后再测重复错误，不只看培训现场是否成功。",
-      "下一位寄信人按下发送后，没有立即走开。她等到屏幕出现收件人姓名，才把手从机器上移开。回执成了她原本期待机器给出的证据，她把打印件折好收入钱袋。"
+      "周日晚，叶宁第二天要赶早班火车，想把卧室暖气从7:00提前到6:30。她在手机里把日程块往左拖半小时，顶部马上显示“下一次6:30”。她按这个时间把闹钟定到6:20，把围巾和车票放在椅背上，便去睡了。",
+      "6:20闹钟响时，暖气片还是凉的。她没有立刻判断出问题，只按原计划洗漱；6:35再摸，仍没有升温，直到7:00才听见阀门动作。出门前她打开应用，时间轴仍停在6:30，那张“下一次6:30”也还在，手机显示与屋里真正执行的计划明显不是同一回事。",
+      "晚上回家，她点进设备详情，才看见页面深处同时存在两项：正在编辑的草稿是6:30，住宅当前计划仍是7:00。旁边的“应用到住宅”尚未执行。旧界面拖动后更新的是草稿，却把顶部卡片也立即写成“下一次6:30”，于是她昨晚自然把它当成了已经下发的结果。她把这个详情页截下来，和前一晚的顶部卡片放在一起，才看见两个页面其实在说不同状态。",
+      "团队改版时没有只把“应用”按钮放大。他们让时间轴继续允许试改，但草稿旁始终显示“尚未应用”；设备主卡只显示住宅当前计划。叶宁再次拖到6:30时，主卡仍是7:00，她没有收起手机，而是继续完成下发。成功后出现“已应用 21:42”，住宅当前计划才从7:00切成6:30。",
+      "第二天闹钟仍在6:20响，暖气片还凉着。叶宁照常起床洗漱；到6:35，她再摸了一下，金属表面已经温热。床头的手机主卡显示“住宅当前计划6:30”，下面保留着昨晚21:42的应用时间。她把这个页面与前一天存下的截图对照：昨天顶部写着6:30，详情却还是7:00；今天当前计划和下发记录已经对上，暖气也在新的时段开始工作。",
+      "她把手机放回床头，当前计划页面还亮着。前一晚那条“尚未应用”提示已经消失，留下6:30和昨晚的下发时间。"
     ],
     "conceptName": "Mental models in human-computer interaction",
     "conceptNameZh": "人机交互中的心智模型",
     "explanationParagraphs": [
-      "A mental model in human-computer interaction is the explanation users form from experience, cues, feedback, and learning to predict system behaviour; it need not mirror implementation. Labels, mappings, constraints, state visibility, and feedback shape it. When the presented model repeatedly conflicts with real behaviour, documentation alone rarely fixes systematic error."
+      "A mental model is a simplified explanation a user forms about a system’s structure and behavior in order to predict outcomes. It is usually incomplete, can change with experience and feedback, and may differ from the designer’s implementation model.",
+      "Here the old interface presents the 6:30 draft as “Next: 6:30” while the home still executes 7:00. The redesign separates the draft, current schedule, and applied confirmation so the user can revise her prediction from visible state."
     ],
     "explanationParagraphsZh": [
-      "人机交互中的心智模型是用户依据经验、线索、反馈和学习形成的系统解释，用来预测操作结果，不必等同底层实现。设计通过标签、映射、约束、状态可见性和反馈塑造模型。若呈现持续违背真实行为，单靠说明书难以修复系统性错误。"
+      "心智模型是用户对系统结构和行为形成的简化解释，用于预测操作结果；它通常不完整，会随经验和反馈修改，也可能不同于设计者的实现模型。",
+      "本例旧界面把草稿6:30呈现成“下一次6:30”，而住宅仍执行7:00。改版把草稿、当前计划与已应用确认分开，使用户能据可见状态修正预测。"
     ],
-    "mode": "concept-fable",
+    "mode": "lens-fable",
     "status": "approved",
+    "overallZh": "这段虚构的晨间供暖经历说明人机交互中的心智模型：用户根据经验和可见反馈解释系统，并据此安排下一步。设计者熟悉草稿与设备计划的区别，不等于用户已理解；把两种状态和下发确认显示清楚，才能帮助用户修正预测。",
+    "moduleZh": {
+      "intro": "草稿、设备当前计划与下发确认是三种不同信息；如果界面把它们混成一张“下一次”卡片，用户会按错误预测安排早晨。",
+      "diagramTitle": "从拖动6:30到真正应用，哪几个可见状态必须分开",
+      "diagramSteps": [
+        "用户为赶火车把7:00拖到6:30并按此安排早晨",
+        "旧界面立即显示下一次6:30，但住宅仍执行7:00",
+        "设备详情揭示草稿6:30与当前计划7:00同时存在",
+        "改版把未应用草稿、住宅当前计划和下发确认分别显示",
+        "成功应用后当前计划变6:30，次日6:35观察到暖气已温热"
+      ],
+      "diagramStepNotes": [
+        "6:20只是起床时刻，不被误写成6:30计划已经生效的证据。",
+        "旧系统按既有实现保存草稿，但反馈容易被解释成已部署状态。",
+        "用户在详情页看见两种状态，并用暖气的实际启动时间核对原来的预测。",
+        "“已应用 21:42”提供一次明确的下发确认。",
+        "最终观察与6:30计划时间一致，不提前于计划生效时点。"
+      ],
+      "mapping": [
+        "6:20闹钟与车票 → 用户真正依赖供暖计划的生活任务。",
+        "旧“下一次6:30”卡片 → 把草稿误呈现成完成状态的反馈。",
+        "住宅当前计划7:00 → 与用户预测冲突的真实状态。",
+        "“已应用21:42” → 草稿转为设备状态的明确确认。"
+      ],
+      "boundary": "心智模型不是完整内部实现，也不意味着用户愚蠢。界面文案、故障和注意力都可能造成错误；本例只说明在系统按其既有实现运行时，持续可见反馈如何塑造错误预测。一次改版也不保证所有用户都形成相同理解。",
+      "reflection": "为什么旧界面的“下一次6:30”会让叶宁合理地提前安排早晨，而新的“尚未应用＋当前计划＋已应用时间”会改变她下一步操作？"
+    },
+    "referencesZh": [
+      {
+        "id": "norman-1983",
+        "citation": "Norman, D. A. (1983). Some observations on mental models. In Mental Models (D. Gentner & A. L. Stevens, eds.).",
+        "url": "https://ar264sweeney.wordpress.com/wp-content/uploads/2015/11/norman_mentalmodels.pdf",
+        "use": "支持区分设计者对系统的模型、系统向用户呈现的形象与用户形成的心智模型，以及用户模型通常是不完整且可修正的。"
+      },
+      {
+        "id": "chan-2024",
+        "citation": "Chan, M. (2024). Mental Models. Nielsen Norman Group. Updated from Jakob Nielsen’s 2010 article; reviewed September 1, 2026.",
+        "url": "https://www.nngroup.com/articles/mental-models/",
+        "use": "支持用户既有经验与界面反馈会影响其预测和行为，并提供面向交互设计实践的现代解释。"
+      }
+    ],
+    "overall": "This fictional morning-heating experience illustrates mental models in human-computer interaction. Users interpret a system through experience and visible feedback, then plan their next actions accordingly. A designer’s familiarity with drafts and device schedules does not ensure the user understands them. Showing those states and application confirmation distinctly helps users revise their predictions.",
+    "module": {
+      "intro": "The draft, current device schedule, and application confirmation provide different information. Combining them into one “Next” card can lead the user to plan the morning around an incorrect prediction.",
+      "diagramTitle": "From Dragging to 6:30 to Actually Applying It, Which Visible States Need to Stay Separate?",
+      "diagramSteps": [
+        "To catch a train, the user drags 7:00 to 6:30 and plans the morning around it",
+        "The old interface immediately displays Next: 6:30, while the home still executes 7:00",
+        "Device details reveal that draft 6:30 and current schedule 7:00 coexist",
+        "The redesign separately displays the unapplied draft, current home schedule, and deployment confirmation",
+        "After successful application the current schedule becomes 6:30, and at 6:35 the next morning the radiator is observed to be warm"
+      ],
+      "diagramStepNotes": [
+        "6:20 is only the wake-up time and is not misused as evidence that a 6:30 schedule has already taken effect.",
+        "The old system saves the draft according to its implementation, but the feedback is easy to interpret as deployed state.",
+        "The details page exposes both states, and the user checks the earlier prediction against the radiator’s actual start time.",
+        "“Applied 21:42” supplies an explicit deployment confirmation.",
+        "The final observation occurs after the 6:30 scheduled start, not before it."
+      ],
+      "mapping": [
+        "6:20 alarm and train ticket → the real-life task that makes the 6:30 setting matter.",
+        "Old “Next: 6:30” card → visible feedback that presents a draft like a completed state.",
+        "Current home schedule 7:00 → the real system state that conflicts with the user’s prediction.",
+        "“Applied 21:42” → explicit confirmation that the draft became device state."
+      ],
+      "boundary": "A mental model is not a complete internal copy of the system, and having an incorrect one does not mean the user is foolish. Wording, faults, and attention can also cause mistakes; this example focuses only on how persistent visible feedback can shape an incorrect prediction while the system operates according to its existing implementation. One redesign also does not guarantee that every user will form the same understanding.",
+      "reflection": "Why does the old “Next: 6:30” reasonably lead Ye Ning to plan her morning as if the change is active, while “Not applied + current schedule + application time” changes what she does next?"
+    },
+    "references": [
+      {
+        "id": "norman-1983",
+        "citation": "Norman, D. A. (1983). Some observations on mental models. In Mental Models (D. Gentner & A. L. Stevens, eds.).",
+        "url": "https://ar264sweeney.wordpress.com/wp-content/uploads/2015/11/norman_mentalmodels.pdf",
+        "use": "Supports distinguishing the designer’s model of a system, the system image presented to the user, and the mental model formed by the user, including the fact that user models are usually incomplete and revisable."
+      },
+      {
+        "id": "chan-2024",
+        "citation": "Chan, M. (2024). Mental Models. Nielsen Norman Group. Updated from Jakob Nielsen’s 2010 article; reviewed September 1, 2026.",
+        "url": "https://www.nngroup.com/articles/mental-models/",
+        "use": "Supports the role of prior experience and interface feedback in shaping user predictions and behavior, providing a modern applied explanation for interaction design."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "The city introduced electronic postal terminals. After composing a letter, users saw one prominent Save button. Pressing it made the letter disappear and returned the screen to a blank page. Many took this to mean the letter had been sent. The city launched the kiosks before tax day because counter queues filled the square, and the designer's bonus depended on reducing visits. Early users praised how quickly the page cleared.\n\nIn reality, Save placed the message in a private drafts folder. Sending required another menu. Designers understood the internal structure and considered the two steps clear. Ordinary users relied on experience with paper mail: once a letter left the desk, the post office had it.\n\nAfter a month, birthday letters and payment notices remained in drafts. Instructions had been posted, but few people read them before acting. The explanation users had formed continued to conflict with the machine's behaviour, creating repeated error. One merchant missed a payment deadline and paid a penalty larger than the kiosk contract. The city first posted a longer manual, but hurried users continued to act from what the disappearing page suggested.\n\nThe designer could blame unread instructions or admit that the interface had taught the wrong prediction.\n\nShe refunded the merchant from her bonus and watched users narrate each step aloud. They expected saving to preserve work in place and sending to produce visible evidence of transfer. Rebuilding the flow delayed the next kiosk launch and cost her the performance award. She replayed the same task with older residents, hurried merchants, and people who had never used paper mail. Their predictions differed in detail but converged on the same mistaken meaning of disappearance.\n\nThe designers separated the actions visibly. Saving kept the message on screen with the label 'Visible only to you'. Sending used a paper-plane symbol and then displayed recipient, time, and 'Accepted by post'. Leaving with an unsent message triggered a clear warning. A draft counter remained visible, and returning to it produced the same state users had last seen. Tests asked what people believed would happen before they clicked, not merely whether they eventually completed the task. Delivery receipts could be opened later, and a failed transfer kept the letter visibly unsent. The city measured repeated errors a week later, not only success inside the training session.\n\nThe next sender did not walk away after pressing Send. She waited until the recipient's name appeared before taking her hand from the terminal. The receipt became the evidence she had expected from the machine, and she folded the printed copy into her purse.",
-    "storyBodyZh": "城里启用电子邮亭。写完信后，屏幕上只有一个显眼的“保存”按钮。寄信人按下以后，信件从画面消失，机器又回到空白页。许多人据此相信信已经被送走。城里赶在缴税日前启用邮亭，因为柜台队伍已排满广场，设计者的奖金取决于来访人数下降。页面迅速清空，头批用户还称赞机器利落。\n\n实际上，“保存”只把信放进私人草稿箱，真正发送还要打开另一层菜单。系统设计者熟悉内部结构，觉得两步十分清楚；普通人却依据纸信经验判断：信一旦离开桌面，就已经交给邮局。\n\n一个月后，大量生日信和付款通知仍躺在草稿箱。说明书早已张贴，却很少有人在操作前阅读。用户形成的解释与机器真实行为持续错位，错误便一次次重复。一名商人的付款通知因此逾期，罚金甚至高过邮亭月租。市政厅先贴出更长说明书，赶时间的人却仍按页面消失所暗示的结果行动。\n\n设计者可以责怪市民不读说明，也可以承认界面教会了错误预测。\n\n她用自己的奖金补偿商人，又请用户边操作边说出以为会发生什么。人们期待“保存”把工作留在原处，“发送”则必须留下交付证据。重做流程推迟下一批邮亭，她也失去绩效奖。她又让老人、赶时间的商人和从未寄过纸信的人重做同一任务。细节虽不同，众人却都把页面消失解释成已经寄出。\n\n设计者把两个动作分开呈现：保存后，信仍留在画面并标记“仅自己可见”；发送按钮使用纸飞机图标，按下后显示收件人、时间和“已交付邮局”。离开页面前，未发送的信还会得到明确提醒。草稿数量始终可见，重新打开时也保持离开前状态。测试不只看用户最终是否完成，还在点击前询问他们预测下一步会发生什么。交付回执可在日后查看，传送失败则让信继续显示为未发送。城里一周后再测重复错误，不只看培训现场是否成功。\n\n下一位寄信人按下发送后，没有立即走开。她等到屏幕出现收件人姓名，才把手从机器上移开。回执成了她原本期待机器给出的证据，她把打印件折好收入钱袋。",
-    "explanation": "A mental model in human-computer interaction is the explanation users form from experience, cues, feedback, and learning to predict system behaviour; it need not mirror implementation. Labels, mappings, constraints, state visibility, and feedback shape it. When the presented model repeatedly conflicts with real behaviour, documentation alone rarely fixes systematic error.",
-    "explanationZh": "人机交互中的心智模型是用户依据经验、线索、反馈和学习形成的系统解释，用来预测操作结果，不必等同底层实现。设计通过标签、映射、约束、状态可见性和反馈塑造模型。若呈现持续违背真实行为，单靠说明书难以修复系统性错误。"
+    "storyBody": "On Sunday night, Ye Ning needs to catch an early train the next morning and wants the bedroom heating to start at 6:30 instead of 7:00. She drags the schedule block half an hour to the left on her phone, and the top card immediately changes to “Next: 6:30.” She sets her alarm for 6:20, puts her scarf and train ticket over the back of a chair, and goes to sleep with her morning arranged around the new time.\n\nWhen the 6:20 alarm rings, the radiator is still cool. She does not immediately decide what is wrong and continues getting ready. At 6:35 she touches it again and it is still not warming; only at 7:00 does she hear the valve operate. Before leaving, she opens the app. The timeline still sits at 6:30 and the “Next: 6:30” card is still there. What the phone displays and what the home actually executes are clearly not the same thing.\n\nAfter returning home that evening, she opens the device details and finally sees two entries at the same time: the schedule being edited is 6:30, while the home’s current schedule remains 7:00. “Apply to home” has not been executed. The old interface updated the draft when she dragged the block, but it also immediately changed the top card to “Next: 6:30,” so the night before she naturally treated it as an already deployed result. She puts a screenshot of this details page beside the previous night’s top card and can finally see that the two screens were describing different states.\n\nThe product team does not simply make the word “Apply” larger. The timeline still allows tentative changes, but the draft always carries a visible “Not applied” label, while the main device card continues to show the home’s current schedule. When Ye Ning drags it to 6:30 again, the main card stays at 7:00, so she keeps the phone open and completes the deployment. Only after “Applied 21:42” appears does the current home schedule change from 7:00 to 6:30.\n\nThe next morning the alarm still rings at 6:20, and the radiator is cool. Ye Ning gets up and washes as usual. At 6:35 she touches it again; the metal surface is warm. The phone’s main card reads “Current home schedule 6:30,” with the previous evening’s 21:42 application time below. She compares this page with yesterday’s screenshot: yesterday the top card said 6:30 while the details still showed 7:00; today the current schedule and application record agree, and the heating has started in the new period.\n\nShe puts the phone back beside the bed with the current-schedule page still lit. The previous evening’s “Not applied” label is gone, leaving 6:30 and the application time.",
+    "storyBodyZh": "周日晚，叶宁第二天要赶早班火车，想把卧室暖气从7:00提前到6:30。她在手机里把日程块往左拖半小时，顶部马上显示“下一次6:30”。她按这个时间把闹钟定到6:20，把围巾和车票放在椅背上，便去睡了。\n\n6:20闹钟响时，暖气片还是凉的。她没有立刻判断出问题，只按原计划洗漱；6:35再摸，仍没有升温，直到7:00才听见阀门动作。出门前她打开应用，时间轴仍停在6:30，那张“下一次6:30”也还在，手机显示与屋里真正执行的计划明显不是同一回事。\n\n晚上回家，她点进设备详情，才看见页面深处同时存在两项：正在编辑的草稿是6:30，住宅当前计划仍是7:00。旁边的“应用到住宅”尚未执行。旧界面拖动后更新的是草稿，却把顶部卡片也立即写成“下一次6:30”，于是她昨晚自然把它当成了已经下发的结果。她把这个详情页截下来，和前一晚的顶部卡片放在一起，才看见两个页面其实在说不同状态。\n\n团队改版时没有只把“应用”按钮放大。他们让时间轴继续允许试改，但草稿旁始终显示“尚未应用”；设备主卡只显示住宅当前计划。叶宁再次拖到6:30时，主卡仍是7:00，她没有收起手机，而是继续完成下发。成功后出现“已应用 21:42”，住宅当前计划才从7:00切成6:30。\n\n第二天闹钟仍在6:20响，暖气片还凉着。叶宁照常起床洗漱；到6:35，她再摸了一下，金属表面已经温热。床头的手机主卡显示“住宅当前计划6:30”，下面保留着昨晚21:42的应用时间。她把这个页面与前一天存下的截图对照：昨天顶部写着6:30，详情却还是7:00；今天当前计划和下发记录已经对上，暖气也在新的时段开始工作。\n\n她把手机放回床头，当前计划页面还亮着。前一晚那条“尚未应用”提示已经消失，留下6:30和昨晚的下发时间。",
+    "explanation": "A mental model is a simplified explanation a user forms about a system’s structure and behavior in order to predict outcomes. It is usually incomplete, can change with experience and feedback, and may differ from the designer’s implementation model.\n\nHere the old interface presents the 6:30 draft as “Next: 6:30” while the home still executes 7:00. The redesign separates the draft, current schedule, and applied confirmation so the user can revise her prediction from visible state.",
+    "explanationZh": "心智模型是用户对系统结构和行为形成的简化解释，用于预测操作结果；它通常不完整，会随经验和反馈修改，也可能不同于设计者的实现模型。\n\n本例旧界面把草稿6:30呈现成“下一次6:30”，而住宅仍执行7:00。改版把草稿、当前计划与已应用确认分开，使用户能据可见状态修正预测。"
   },
   {
     "id": "0611-file-hierarchy",
@@ -16757,47 +16941,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0611",
     "fieldTitle": "Computer use",
     "fieldTitleZh": "计算机使用",
-    "title": "The Clerk with Every Key",
-    "titleZh": "拿着所有钥匙的书记",
-    "summary": "For convenience, city hall gives one clerk every key until he loses the ring.",
-    "summaryZh": "为图方便，市政厅把所有房间的钥匙交给一名书记，直到他丢了一只钥匙环。",
+    "title": "The Last Photo Finishes Uploading at 17:54",
+    "titleZh": "最后一张照片在17:54传完",
+    "summary": "A weekend photographer needs to keep uploading and replacing his own event photos during a 48-hour window. The team first compares the server-side result of the same out-of-scope request under a site-wide administrator role and a narrow role in a test environment. The production account is then granted only read, upload, and own-file replacement access within the event upload area, and all access is revoked at 18:00 Sunday.",
+    "summaryZh": "周末摄影师需要在48小时内持续上传并替换自己提交的活动照片。团队先在测试环境比较同一越界请求在整站管理员与窄角色下的服务端结果，再正式只发放活动上传区的读取、上传和替换本人文件权限；周日18:00权限完全撤回。",
     "storyParagraphs": [
-      "City clerk Gu Yan delivered records among departments. To avoid borrowing keys each time, his supervisor gave him access to the archive, treasury, seal room, and equipment store. Gu Yan worked quickly and never abused it, but the ring could open far more than his daily duties required. The arrangement cut delivery time in half and helped the office clear a backlog before the governor's visit. After that, anyone proposing separate keys was told not to slow the office before the inspection.",
-      "One day, he lost the ring at the market. Whoever found it wanted only the treasury but gained access to records and official seals as well. The city replaced every lock overnight. The breadth of harm came from the keys' capability, not Gu Yan's intention. The thief used the seal room to authorise a false withdrawal, then opened the archive to remove the matching complaint. One lost ring became several independent-looking failures.",
-      "After the locks were replaced, the director kept the old master keys in their sealed envelope and made every role justify its doors. For two days clerks queued at controlled entrances and citizens waited longer; the office accepted the delay because the previous speed had enlarged the possible loss. It documented which task required which action, resource, and duration. Emergency access required a reason, a short expiry, and review after use. The first real emergency showed that an approver also needed an on-call backup.",
-      "After redesign, Gu Yan kept only a card for his delivery route. Treasury access required a finance officer. Temporary tasks received time-limited rights with logs and automatic expiry, while high-risk actions required another identity check.",
-      "At first, restrictions were too narrow and clerks began lending cards. The supervisor stopped adding one exception after another, walked the delivery routes with them, and rebuilt roles around the work they actually performed. Rights were reviewed each season and removed immediately after role changes. Borrowed cards triggered a review: permissions had been cut below usable work rather than to necessary work. Roles were repaired with bounded access and emergency elevation, never by restoring every door. Quarterly review removed access accumulated through old projects, and logs made unusual use visible without pretending monitoring prevented every misuse.",
-      "On his next delivery, Gu Yan carried one card. At the treasury it did not light, so he turned to find the person who was meant to accompany him. An audit later found three former employees whose old access would otherwise still have worked. The denial was expected behaviour, not a system failure, and the logged request showed how to obtain temporary access. He carried only what the route required."
+      "At 18:00 on Friday, the brand event has just started and photographer Shao Yuan has already filled his first memory card. The weekend editors are all on site, so he needs to keep sending photographs into the “Autumn Event” upload area himself and must also be able to replace a photo he has just uploaded incorrectly. To avoid approval delays, the team had planned to issue site-wide content-administrator access, but Lin Xi decides to walk through the boundary in the test environment first.",
+      "The test site contains dummy folders and dummy images. Using his own test identity, Shao Yuan completes the normal flow: read the Autumn Event upload area, upload a new image, and replace a test photo owned by his account with a new version. Lin Xi then uses the same authenticated identity and the same prepared request to attempt deletion of the parent “Past Events” directory. Under the broad administrator role, the server’s authorization precheck returns “deletion allowed.” The test stops at that precheck without deleting either dummy folders or production material.",
+      "The team then changes that same test identity to a narrow role. It can read the Autumn Event upload area, upload new files, and replace files uploaded by that identity that still belong to the same event. It cannot delete the parent directory, enter other events, manage users, or edit product pages. The exact same out-of-scope deletion request now receives a server-side denial at the authorization precheck. Lin Xi places the two server-precheck results beside the normal upload record: the same identity and directory request changed from allowed to denied.",
+      "Only after the normal workflow also succeeds again does Lin Xi create the production temporary account. Its permissions match the narrow role and run from Friday 18:00 to Sunday 18:00, exactly 48 hours. The test administrator account is disabled before the production account goes live. If the task temporarily expands beyond the defined scope, the extra action must go through a separate time-limited elevation request.",
+      "The network is slow on Saturday, but Shao Yuan can still upload continuously and replace his own incorrect files without waiting for an editor on every image. At 17:54 on Sunday, he completes the final event-photo upload. At 17:57 he reopens one of his own files and can still check it normally; the assignment itself is already complete.",
+      "At exactly 18:00, he refreshes the page and the event upload area returns no-access status. Read, upload, and replacement access are all revoked together, leaving no undefined read-only remainder. Shao Yuan hands the memory card back to Lin Xi. The final upload record on his phone remains at 17:54."
     ],
     "storyParagraphsZh": [
-      "市政厅的书记顾言常替不同部门送文件。为了免去逐次借钥匙，主管把档案室、金库、印章房和设备间的钥匙全交给他。顾言工作很快，也从未滥用，但那串钥匙始终能打开远超他日常任务的门。这项安排把送件时间缩短一半，让办公室在总督来访前清掉积压。此后谁提出分开保管钥匙，都会被一句“别在检查前拖慢送件”挡回去。",
-      "一天，顾言在集市丢了钥匙环。捡到的人虽只想偷金库，却同时获得档案与印章房入口。市政厅不得不连夜换掉所有门锁，影响范围来自钥匙拥有的能力，而不是顾言本人的意图。窃贼先用印章房批准假提款，再进档案室抽走对应投诉。一只遗失钥匙环，于是变成几项看似彼此无关的失守。",
-      "锁全部换完后，主管没有拆开装着旧万能钥匙的封套，而是让每个岗位逐门说明用途。两天里书记在受控门前排队，市民等待更久；办公室接受延误，因为原来的速度放大了可能损失。各岗位逐项记录任务需要什么动作、资源与时长。紧急权限必须写理由、设短期限，并在使用后复核。第一次真实急务还暴露审批人也需要随时可联系的替补。",
-      "重设以后，顾言只保留送件路线需要的门卡。进入金库要由财务人员同行，临时任务可申请限时权限，使用会留下日志，任务结束自动撤销。高风险操作还要求再次确认身份。",
-      "最初限制过紧，书记们开始互借卡片。主管没再逐项添加例外，而是跟着他们走了一遍送件路线，按实际工作重设岗位权限。权限每季复核，离职或换岗当天撤回，不让旧能力慢慢堆积。互借卡片触发复盘：权限曾被削到无法工作，而不是恰好满足必要工作。岗位改用有边界的常用权限和紧急提升，却不再恢复所有门。季度复核清掉旧项目累积的权限，日志则让异常使用可见，却不假装监控能阻止所有误用。",
-      "顾言再次去送文件时，腰间只有一张门卡。走到金库前，卡片没有亮，他转身去找应当同行的人。随后审计还找出三名离岗者，他们的旧权限原本仍能继续使用。这次拒绝属于预期行为，并非系统故障；记录中的申请路径也说明如何临时取得权限。他只携带这条路线真正需要的能力。"
+      "周五18:00，品牌活动刚开场，摄影师邵远已经拍满第一张相机卡。周末编辑都在现场，他需要自己把照片持续传进“秋季活动”上传区，也要能把自己刚传错的照片换掉。为了省审批，团队原本准备直接发整站内容管理员权限，但林溪决定先在测试环境把边界走一遍。",
+      "测试站点里有一套假目录和假图片。邵远以自己的测试身份完成正常流程：读取秋季活动上传区、上传新图、把自己名下的一张测试照片替换成新版本。随后林溪用同一个已认证身份、同一个预设请求去尝试删除上一级“往期活动”目录；服务端的权限预检在宽管理员角色下返回“允许删除”，但测试停在预检，没有删除假目录或正式资料。",
+      "团队随后给同一个测试身份换成窄角色：只能读取秋季活动上传区、上传新文件，并替换由该身份上传且仍属于该活动的文件；不能删除父目录、进入其他活动、管理用户或改产品页。再次用完全相同的越界删除请求做权限预检时，服务端返回拒绝。林溪把两次服务端预检结果与正常上传记录放在一起：同一身份、同一目录请求，结果从允许变成拒绝。",
+      "正常流程再跑一遍仍然成功，林溪才创建正式临时账号，权限与窄角色一致，有效期周五18:00至周日18:00，正好48小时。测试用管理员账号在正式账号启用前就已停用。若任务临时需要超出范围的动作，只能另走有期限的提升申请。",
+      "周六现场网速慢，邵远照样连续上传，也能替换自己名下的错误照片，没有每张都等编辑批准。周日17:54，他把最后一张活动图上传完成；17:57重新打开自己的文件还能正常检查，任务已经结束。",
+      "18:00一到，他刷新页面，活动上传区直接返回无访问权限，读取、上传和替换都一起撤回，没有留下只读尾巴。邵远把相机卡交给林溪，手机上最后一条上传记录停在17:54。"
     ],
     "conceptName": "Principle of least privilege",
     "conceptNameZh": "最小权限原则",
     "explanationParagraphs": [
-      "The principle of least privilege gives users, processes, or devices only the permissions needed for a defined task and period, reducing the impact of mistakes or compromise. Roles, separation of duties, temporary elevation, logging, reauthentication, and prompt revocation support it. Controls must remain usable and reviewed to prevent workarounds and privilege creep."
+      "The principle of least privilege gives a user or process only the minimum sufficient permissions for legitimate work. Authorization can be limited by resource and action, with an expiry for temporary work. Authentication or hiding buttons alone cannot replace authorization.",
+      "Here the production role allows reading, uploading, and replacing the photographer’s own event files from Friday 18:00 through Sunday 18:00, exactly 48 hours. The same out-of-scope request is rejected server-side under the narrow role."
     ],
     "explanationParagraphsZh": [
-      "最小权限原则让用户、进程或设备只在必要时段拥有完成明确任务所需的权限，以缩小误用或被攻破时的影响。角色、职责分离、限时提升、日志、再认证和及时撤权都可支持。控制也要可用并定期复核，避免绕过与权限膨胀。"
+      "最小权限要求用户或进程只获得完成合法任务所需的最低充分权限。授权可按资源和动作收窄，并按临时任务设定期限；身份认证或隐藏按钮本身不能替代授权。",
+      "本例正式角色只允许活动区读取、上传和替换本人文件，期限周五18:00至周日18:00共48小时。同一越界请求由服务端在窄角色下拒绝。"
     ],
-    "mode": "concept-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "这项虚构的周末摄影任务说明最小权限原则：用户或进程只获得完成合法工作所需的最低充分权限。活动区读取、上传和替换本人文件足以交付照片；临时任务另设48小时有效期。收窄无关能力，同时保留工作所需的完整路径。",
+    "moduleZh": {
+      "intro": "先在安全测试环境用同一身份和同一越界请求比较授权范围，再把验证过的窄角色用于正式48小时任务。",
+      "diagramTitle": "从整站能力收窄到“活动区＋本人文件＋48小时”",
+      "diagramSteps": [
+        "测试身份先用宽管理员完成合法上传/替换流程",
+        "同一身份对父目录删除请求做权限预检，宽角色返回允许",
+        "换窄角色后发送相同请求，服务端明确拒绝",
+        "重跑合法流程成功后创建周五18:00至周日18:00正式账号",
+        "周日17:54完成最后上传，18:00后读取/上传/替换全部撤回"
+      ],
+      "diagramStepNotes": [
+        "预检使用假目录和假图片；两种角色都不执行删除，正式资料不受影响。",
+        "比较时保持身份和请求相同，只改变授权角色。",
+        "替换权限受文件归属和活动范围共同限制。",
+        "正式环境不保留临时宽管理员账号。",
+        "到期完全撤回访问，避免未定义的残余只读权限。"
+      ],
+      "mapping": [
+        "相机卡 → 摄影师必须在授权窗口内完成的实际交付。",
+        "同一预设删除请求 → 宽、窄授权的可比检查。",
+        "服务端拒绝 → 权限边界不是单纯隐藏按钮。",
+        "17:54最后上传记录 → 任务完成先于18:00权限到期。"
+      ],
+      "boundary": "最小权限必须仍覆盖合法工作；限制过紧会促使绕行或共享账号。文件归属、服务端授权和期限执行都需要可靠实现。该原则降低可用能力和影响范围，但不能消除所有误操作、凭证盗用或系统缺陷。",
+      "reflection": "为什么同一个安全测试请求在宽角色可继续、窄角色被服务端拒绝，比单纯把“删除”按钮藏起来更能说明权限范围真的变了？"
+    },
+    "referencesZh": [
+      {
+        "id": "saltzer-schroeder-1975",
+        "citation": "Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. Proceedings of the IEEE, 63(9), 1278–1308.",
+        "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+        "use": "作为经典设计原则来源，支持让主体仅拥有完成任务所需的最少权限，以限制错误或事故造成的损害范围。"
+      },
+      {
+        "id": "nist-least-privilege",
+        "citation": "NIST Computer Security Resource Center. Least privilege, Glossary.",
+        "url": "https://csrc.nist.gov/glossary/term/least_privilege",
+        "use": "提供现代权威定义：用户或进程的权限应限制到完成其分配任务所需的最低必要范围。"
+      }
+    ],
+    "overall": "This fictional weekend photography assignment illustrates the principle of least privilege: a user or process receives only the minimum sufficient access for legitimate work. Reading the event area, uploading, and replacing the photographer’s own files are enough to deliver the photographs. The temporary assignment also has a 48-hour expiry, narrowing unrelated capability while preserving the complete work path.",
+    "module": {
+      "intro": "Use the same identity and the same out-of-scope request in a safe test environment to compare authorization scope, then use the validated narrow role for the real 48-hour task.",
+      "diagramTitle": "From Site-Wide Capability to “Event Area + Own Files + 48 Hours”",
+      "diagramSteps": [
+        "The test identity first completes the legitimate upload/replacement flow under a broad administrator role",
+        "Under the same identity, the server authorizes the parent-directory deletion request in a precheck under the broad role",
+        "After switching to the narrow role, the identical request is explicitly rejected by the server",
+        "Once the legitimate workflow still succeeds, create the production account from Friday 18:00 to Sunday 18:00",
+        "Finish the final upload at 17:54 and revoke read/upload/replace access completely after 18:00"
+      ],
+      "diagramStepNotes": [
+        "The prechecks use dummy folders and images. Neither role executes deletion, and production material is unaffected.",
+        "The comparison keeps identity and request constant and changes only the authorization role.",
+        "Replacement permission is constrained by both file ownership and event scope.",
+        "The production environment does not retain the temporary broad administrator account.",
+        "Access is fully revoked on expiry, avoiding an undefined residual read-only permission."
+      ],
+      "mapping": [
+        "Memory card → the photographer’s real deliverable that must be completed within the authorization window.",
+        "Same prepared deletion request → the comparable check between broad and narrow authorization.",
+        "Server-side denial → evidence that the boundary is more than a hidden UI control.",
+        "17:54 final-upload record → the assignment finishes before the 18:00 expiration."
+      ],
+      "boundary": "Least privilege must still support legitimate work; overly restrictive access can encourage workarounds or shared accounts. File ownership, server-side authorization, and expiration all require reliable implementation. The principle reduces available capability and impact scope but cannot eliminate every mistake, stolen credential, or system defect.",
+      "reflection": "Why does the same safe test request being allowed under the broad role and rejected server-side under the narrow role demonstrate a real permission boundary more clearly than simply hiding the Delete button?"
+    },
+    "references": [
+      {
+        "id": "saltzer-schroeder-1975",
+        "citation": "Saltzer, J. H., & Schroeder, M. D. (1975). The protection of information in computer systems. Proceedings of the IEEE, 63(9), 1278–1308.",
+        "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+        "use": "Serves as a classic source for the design principle that subjects should hold only the permissions needed to complete their tasks, limiting the damage that errors or accidents can cause."
+      },
+      {
+        "id": "nist-least-privilege",
+        "citation": "NIST Computer Security Resource Center. Least privilege, Glossary.",
+        "url": "https://csrc.nist.gov/glossary/term/least_privilege",
+        "use": "Provides a current authoritative definition: user or process privileges should be restricted to the minimum necessary to perform assigned tasks."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "City clerk Gu Yan delivered records among departments. To avoid borrowing keys each time, his supervisor gave him access to the archive, treasury, seal room, and equipment store. Gu Yan worked quickly and never abused it, but the ring could open far more than his daily duties required. The arrangement cut delivery time in half and helped the office clear a backlog before the governor's visit. After that, anyone proposing separate keys was told not to slow the office before the inspection.\n\nOne day, he lost the ring at the market. Whoever found it wanted only the treasury but gained access to records and official seals as well. The city replaced every lock overnight. The breadth of harm came from the keys' capability, not Gu Yan's intention. The thief used the seal room to authorise a false withdrawal, then opened the archive to remove the matching complaint. One lost ring became several independent-looking failures.\n\nAfter the locks were replaced, the director kept the old master keys in their sealed envelope and made every role justify its doors. For two days clerks queued at controlled entrances and citizens waited longer; the office accepted the delay because the previous speed had enlarged the possible loss. It documented which task required which action, resource, and duration. Emergency access required a reason, a short expiry, and review after use. The first real emergency showed that an approver also needed an on-call backup.\n\nAfter redesign, Gu Yan kept only a card for his delivery route. Treasury access required a finance officer. Temporary tasks received time-limited rights with logs and automatic expiry, while high-risk actions required another identity check.\n\nAt first, restrictions were too narrow and clerks began lending cards. The supervisor stopped adding one exception after another, walked the delivery routes with them, and rebuilt roles around the work they actually performed. Rights were reviewed each season and removed immediately after role changes. Borrowed cards triggered a review: permissions had been cut below usable work rather than to necessary work. Roles were repaired with bounded access and emergency elevation, never by restoring every door. Quarterly review removed access accumulated through old projects, and logs made unusual use visible without pretending monitoring prevented every misuse.\n\nOn his next delivery, Gu Yan carried one card. At the treasury it did not light, so he turned to find the person who was meant to accompany him. An audit later found three former employees whose old access would otherwise still have worked. The denial was expected behaviour, not a system failure, and the logged request showed how to obtain temporary access. He carried only what the route required.",
-    "storyBodyZh": "市政厅的书记顾言常替不同部门送文件。为了免去逐次借钥匙，主管把档案室、金库、印章房和设备间的钥匙全交给他。顾言工作很快，也从未滥用，但那串钥匙始终能打开远超他日常任务的门。这项安排把送件时间缩短一半，让办公室在总督来访前清掉积压。此后谁提出分开保管钥匙，都会被一句“别在检查前拖慢送件”挡回去。\n\n一天，顾言在集市丢了钥匙环。捡到的人虽只想偷金库，却同时获得档案与印章房入口。市政厅不得不连夜换掉所有门锁，影响范围来自钥匙拥有的能力，而不是顾言本人的意图。窃贼先用印章房批准假提款，再进档案室抽走对应投诉。一只遗失钥匙环，于是变成几项看似彼此无关的失守。\n\n锁全部换完后，主管没有拆开装着旧万能钥匙的封套，而是让每个岗位逐门说明用途。两天里书记在受控门前排队，市民等待更久；办公室接受延误，因为原来的速度放大了可能损失。各岗位逐项记录任务需要什么动作、资源与时长。紧急权限必须写理由、设短期限，并在使用后复核。第一次真实急务还暴露审批人也需要随时可联系的替补。\n\n重设以后，顾言只保留送件路线需要的门卡。进入金库要由财务人员同行，临时任务可申请限时权限，使用会留下日志，任务结束自动撤销。高风险操作还要求再次确认身份。\n\n最初限制过紧，书记们开始互借卡片。主管没再逐项添加例外，而是跟着他们走了一遍送件路线，按实际工作重设岗位权限。权限每季复核，离职或换岗当天撤回，不让旧能力慢慢堆积。互借卡片触发复盘：权限曾被削到无法工作，而不是恰好满足必要工作。岗位改用有边界的常用权限和紧急提升，却不再恢复所有门。季度复核清掉旧项目累积的权限，日志则让异常使用可见，却不假装监控能阻止所有误用。\n\n顾言再次去送文件时，腰间只有一张门卡。走到金库前，卡片没有亮，他转身去找应当同行的人。随后审计还找出三名离岗者，他们的旧权限原本仍能继续使用。这次拒绝属于预期行为，并非系统故障；记录中的申请路径也说明如何临时取得权限。他只携带这条路线真正需要的能力。",
-    "explanation": "The principle of least privilege gives users, processes, or devices only the permissions needed for a defined task and period, reducing the impact of mistakes or compromise. Roles, separation of duties, temporary elevation, logging, reauthentication, and prompt revocation support it. Controls must remain usable and reviewed to prevent workarounds and privilege creep.",
-    "explanationZh": "最小权限原则让用户、进程或设备只在必要时段拥有完成明确任务所需的权限，以缩小误用或被攻破时的影响。角色、职责分离、限时提升、日志、再认证和及时撤权都可支持。控制也要可用并定期复核，避免绕过与权限膨胀。"
+    "storyBody": "At 18:00 on Friday, the brand event has just started and photographer Shao Yuan has already filled his first memory card. The weekend editors are all on site, so he needs to keep sending photographs into the “Autumn Event” upload area himself and must also be able to replace a photo he has just uploaded incorrectly. To avoid approval delays, the team had planned to issue site-wide content-administrator access, but Lin Xi decides to walk through the boundary in the test environment first.\n\nThe test site contains dummy folders and dummy images. Using his own test identity, Shao Yuan completes the normal flow: read the Autumn Event upload area, upload a new image, and replace a test photo owned by his account with a new version. Lin Xi then uses the same authenticated identity and the same prepared request to attempt deletion of the parent “Past Events” directory. Under the broad administrator role, the server’s authorization precheck returns “deletion allowed.” The test stops at that precheck without deleting either dummy folders or production material.\n\nThe team then changes that same test identity to a narrow role. It can read the Autumn Event upload area, upload new files, and replace files uploaded by that identity that still belong to the same event. It cannot delete the parent directory, enter other events, manage users, or edit product pages. The exact same out-of-scope deletion request now receives a server-side denial at the authorization precheck. Lin Xi places the two server-precheck results beside the normal upload record: the same identity and directory request changed from allowed to denied.\n\nOnly after the normal workflow also succeeds again does Lin Xi create the production temporary account. Its permissions match the narrow role and run from Friday 18:00 to Sunday 18:00, exactly 48 hours. The test administrator account is disabled before the production account goes live. If the task temporarily expands beyond the defined scope, the extra action must go through a separate time-limited elevation request.\n\nThe network is slow on Saturday, but Shao Yuan can still upload continuously and replace his own incorrect files without waiting for an editor on every image. At 17:54 on Sunday, he completes the final event-photo upload. At 17:57 he reopens one of his own files and can still check it normally; the assignment itself is already complete.\n\nAt exactly 18:00, he refreshes the page and the event upload area returns no-access status. Read, upload, and replacement access are all revoked together, leaving no undefined read-only remainder. Shao Yuan hands the memory card back to Lin Xi. The final upload record on his phone remains at 17:54.",
+    "storyBodyZh": "周五18:00，品牌活动刚开场，摄影师邵远已经拍满第一张相机卡。周末编辑都在现场，他需要自己把照片持续传进“秋季活动”上传区，也要能把自己刚传错的照片换掉。为了省审批，团队原本准备直接发整站内容管理员权限，但林溪决定先在测试环境把边界走一遍。\n\n测试站点里有一套假目录和假图片。邵远以自己的测试身份完成正常流程：读取秋季活动上传区、上传新图、把自己名下的一张测试照片替换成新版本。随后林溪用同一个已认证身份、同一个预设请求去尝试删除上一级“往期活动”目录；服务端的权限预检在宽管理员角色下返回“允许删除”，但测试停在预检，没有删除假目录或正式资料。\n\n团队随后给同一个测试身份换成窄角色：只能读取秋季活动上传区、上传新文件，并替换由该身份上传且仍属于该活动的文件；不能删除父目录、进入其他活动、管理用户或改产品页。再次用完全相同的越界删除请求做权限预检时，服务端返回拒绝。林溪把两次服务端预检结果与正常上传记录放在一起：同一身份、同一目录请求，结果从允许变成拒绝。\n\n正常流程再跑一遍仍然成功，林溪才创建正式临时账号，权限与窄角色一致，有效期周五18:00至周日18:00，正好48小时。测试用管理员账号在正式账号启用前就已停用。若任务临时需要超出范围的动作，只能另走有期限的提升申请。\n\n周六现场网速慢，邵远照样连续上传，也能替换自己名下的错误照片，没有每张都等编辑批准。周日17:54，他把最后一张活动图上传完成；17:57重新打开自己的文件还能正常检查，任务已经结束。\n\n18:00一到，他刷新页面，活动上传区直接返回无访问权限，读取、上传和替换都一起撤回，没有留下只读尾巴。邵远把相机卡交给林溪，手机上最后一条上传记录停在17:54。",
+    "explanation": "The principle of least privilege gives a user or process only the minimum sufficient permissions for legitimate work. Authorization can be limited by resource and action, with an expiry for temporary work. Authentication or hiding buttons alone cannot replace authorization.\n\nHere the production role allows reading, uploading, and replacing the photographer’s own event files from Friday 18:00 through Sunday 18:00, exactly 48 hours. The same out-of-scope request is rejected server-side under the narrow role.",
+    "explanationZh": "最小权限要求用户或进程只获得完成合法任务所需的最低充分权限。授权可按资源和动作收窄，并按临时任务设定期限；身份认证或隐藏按钮本身不能替代授权。\n\n本例正式角色只允许活动区读取、上传和替换本人文件，期限周五18:00至周日18:00共48小时。同一越界请求由服务端在窄角色下拒绝。"
   },
   {
     "id": "0612-database-normalization",
@@ -16906,47 +17183,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0612",
     "fieldTitle": "Database and network design and administration",
     "fieldTitleZh": "数据库与网络设计及管理",
-    "title": "The Vault with Only One Door",
-    "titleZh": "只有一道门的银库",
-    "summary": "A city stakes the safety of its treasury on one celebrated lock, until a stolen badge makes the lock irrelevant.",
-    "summaryZh": "城里的银库把全部安全都押在一把名锁上，直到一枚被盗的腰牌让那把锁变得毫无用处。",
+    "title": "Three Order IDs on the Recovery List",
+    "titleZh": "恢复名单上的三个订单号",
+    "summary": "In an isolated exercise environment, a delivery platform assumes that one customer-service session is already compromised. Network segmentation blocks the finance and backup networks, while the application role limits actions to a dedicated test queue. Three permitted test orders are still changed. Audit logs let monitoring identify that affected set, and recovery restores only those three while preserving the valid address B on the separate normal exercise order N-17.",
+    "summaryZh": "配送平台在隔离演练环境中预设一个客服会话已失守。网络分区阻断财务和备份网络，应用角色限制到指定测试队列；队列内仍有三笔测试订单被改，审计日志让监测锁定订单集合，恢复人员只还原这三笔，另一个正常演练订单保留有效修改。",
     "storyParagraphs": [
-      "When the city built a new treasury, the keeper gave most of the budget to a locksmith famous across the region. The bronze door had three rows of bolts. An axe could not split it, and fire could not burn through it. On opening day, he invited the townspeople to watch and pulled the door three times with his own hands. It did not move. The treasury had spent so much on the door that the steward cancelled the alarm contract and reduced night staff. The visible barrier impressed the council and concealed the new dependence on one control.",
-      "One winter night, a coal carrier arrived wearing a badge stolen from the accounts office. The guard recognized its red seal and let him into the courtyard. The costly bronze door remained securely locked. The carrier entered through the smaller door used by clerks during the day.",
-      "Every room inside used the same kind of key. The carrier took one from a wall hook and opened the accounts office, the weighing room, and the rear store in turn. He did not empty the treasury. He took a little from more than a dozen chests and returned the altered ledger pages to their places. Three days passed before an apprentice noticed a broken line in the dust on one chest and discovered that silver was missing. By changing a total rather than removing a whole line, he stayed below the daily review threshold.",
-      "The steward could buy an even stronger door and preserve the public story, or admit that stolen identity had bypassed it. He cancelled a ceremonial vault opening and spent the fee on segmented access, detection, and recovery. Two-key entry slowed legitimate work; daily seal checks added labour. The council accepted those costs after seeing how one badge had reached every room. They also restricted service accounts, separated the heating system from the ledger network, and tested whether one compromised route could cross into another.",
-      "The keeper did not remove the bronze door. He gave the courtyard, the accounts office, and the silver rooms to different custodians. Entering the vault now required two keys turned together. Chest seals were checked each day, unusual movement rang a bell in the inner court, and a second copy of the ledger was locked across the river. When someone asked why so much trouble was needed with such a strong door, the keeper looked at the stolen badge. 'The door stopped only those who had no key,' he said. A drill then assumed the inner alarm failed, forcing staff to restore balances from the off-site copy. Another assumed the backup was corrupt, exposing the need to test recovery rather than merely own it. An after-action review traced which layer detected, delayed, contained, or restored each simulated breach, replacing a decorative checklist with evidence.",
-      "Afterward, he hung the golden sample key given to him by the locksmith on his study wall. It still shone, but it no longer opened a single door in the treasury."
+      "A delivery platform is preparing a nighttime recovery exercise and does not want real evening-shift orders drawn into the test. The team builds an isolated exercise environment from a sanitized snapshot. It contains a dedicated test queue T and one order, N-17, representing normal customer-service work. Su Wei directly marks a red test session as “identity compromised,” while an operator uses a normal exercise account to change N-17’s address from A to B.",
+      "The red session follows the customer-service access path into the order area. It can reach the order service, but network segmentation blocks the finance and backup segments. Inside the application, it can open dedicated queue T; its application role refuses operations on the normal exercise queue containing N-17. That order still shows the newly entered address B, and the operator’s normal exercise account remains active. Su Wei lets the script continue.",
+      "The exercise script has the red session make a series of address changes within queue T, where it still has permission. Changes to T-31, T-32, and T-33 are actually written into the exercise order database, while a fourth out-of-scope object is rejected by the application role. For every write, the audit service records the session ID, order ID, and change time. A few minutes later, monitoring detects the burst of changes from the same session and raises an alert, so Su Wei suspends that session.",
+      "The incident sheet cites the three order IDs directly from the audit log instead of relying on memory. Before the exercise began, the recovery service had saved a snapshot of the test order database. Recovery staff retrieve the pre-exercise states of T-31 through T-33 from the snapshot and apply them only to those three IDs. N-17 was changed by a different normal session, is not part of the red-session log set, and never enters the recovery list, so its valid A→B change remains.",
+      "After recovery, the operator reopens all four orders. T-31, T-32, and T-33 are back at their pre-exercise addresses, while N-17 still shows B. The review then identifies another risk: if segmentation policy, monitoring configuration, and recovery credentials are all controlled through the same super-administrator identity, several layers could be affected together. The team separates recovery credentials from the daily management identity, but treats that only as reducing one common dependency; other shared infrastructure remains on the checklist for the next exercise.",
+      "At the end of the exercise, five cards remain on the board: Identity, Segmentation, Role, Monitoring, Backup. The red Identity card stays flipped over. Beside it, the incident sheet circles only T-31, T-32, and T-33. N-17’s address B remains written at the bottom and has not been erased by recovery."
     ],
     "storyParagraphsZh": [
-      "城里新建银库时，司库把大半预算给了远近闻名的锁匠。铜门有三层锁舌，斧头砍不动，火也烧不穿。落成那天，他让百姓排队观看，亲手拉了三次门，门纹丝不动。银库为铜门耗尽预算，司库取消警铃合同，又缩减夜班。看得见的屏障令议会满意，也掩住全库只依赖一层控制。",
-      "入冬后的一晚，一名送炭人戴着账房失窃的腰牌来到门前。守卫认得腰牌上的红漆，便放他进了院子。那扇名贵的铜门仍好好锁着，送炭人走的是白天供伙计出入的小门。",
-      "库里所有房间都用同一种钥匙。送炭人从墙钩上取下一把，依次打开账房、称银间和后仓。他没有搬空银库，只从十几个箱子里各取一点，又把改过的账页放回原处。直到三天后，一个学徒发现某只箱子的灰尘断了一线，众人才知道银子少了。他每次只改总额、不删整行，还始终压在每日复核阈值以下。",
-      "司库可以再买一道更强的门，保住对外说法；也可以承认失窃身份已经绕过铜门。他取消庆典开库，把费用改投分区权限、检测与恢复。双钥匙拖慢正常入库，每日核封也增加人手；议会看到一枚腰牌曾通往所有房间后，接受了这些成本。众人还限制服务账户，把供暖与账册网络隔离，并实测一条路径失守后能否横穿其他区域。",
-      "司库没有拆掉铜门。他把院门、账房和银仓分给不同的人管理；进银仓要两把钥匙同时转动；箱封每天核对，异动会敲响内院的铃；账册另抄一份，锁在河对岸。有人问，铜门已经这样牢，何必再添麻烦。司库看着那枚失窃的腰牌说：‘门只拦住了没有钥匙的人。’演练又假设内院警铃失灵，要求众人从异地副本恢复余额；下一次再假设备份损坏，让“拥有恢复”也必须经过实测。事后复盘逐层记录谁发现、拖延、围堵或恢复了每次模拟入侵，让装饰清单变成可查证据。",
-      "后来，他把锁匠赠送的那把金色样钥挂在书房墙上。它仍旧闪亮，却再也打不开银库里的任何一扇门。"
+      "配送平台准备做夜间恢复演练，又不想把真实晚班订单卷进测试。团队用脱敏快照搭了隔离演练环境，里面有专用测试队列T和一笔代表正常客服工作的订单N-17。苏蔚把一条红色测试会话直接标成“身份已失守”，值班员则用正常演练账号把N-17的地址从A改成B。",
+      "红色会话沿客服访问路径进入订单区，订单服务仍可到达，财务网段和备份网段却被网络分区阻断。进入订单应用后，它能打开专用队列T，尝试操作N-17所在的正常演练队列时，应用角色返回拒绝。N-17仍显示刚改好的B地址，值班员的正常演练账号没有被一起停掉，苏蔚让脚本继续往下跑。",
+      "演练脚本让红色会话在自己仍被允许的T队列内连续改地址。T-31、T-32、T-33三笔修改真实写入演练订单库，第四个越界对象则被角色拒绝。每次写入都会由审计服务记录会话ID、订单ID和变更时间；几分钟后，监测因同一会话短时连续修改触发告警，苏蔚暂停该会话。",
+      "处置单直接引用审计日志里的三个订单ID，而不是靠人回忆。演练开始前，恢复服务已经为测试订单库保存快照；恢复人员从快照取回T-31至T-33的演练前状态，再逐笔应用到这三个ID。N-17由另一个正常会话修改，既不在红色会话日志集合里，也没有进入恢复清单，所以它的A→B有效修改被保留下来。",
+      "恢复后，值班员重新打开四笔订单：T-31、T-32、T-33回到演练前地址，N-17仍是B。复盘又发现，若分区策略、监测配置和恢复凭证都受同一超级管理员控制，几层可能一起受影响。团队把恢复凭证与日常管理身份分开，但只把这视为减少一个共同依赖，其他共享基础设施仍列在下一次检查单上。",
+      "演练结束，白板上排着五张卡：身份、分区、角色、监测、备份。红色身份卡依旧翻面，旁边处置单只圈着T-31、T-32、T-33；N-17的B地址写在最下面，没有被恢复动作擦掉。"
     ],
     "conceptName": "Defense in depth",
     "conceptNameZh": "纵深防御",
     "explanationParagraphs": [
-      "Defense in depth avoids relying on a single security barrier. It combines prevention, limited privileges, separation, detection, and recovery so that the controls support one another. Any layer can be bypassed, fail, or be defeated by stolen credentials; multiple layers keep one breach from becoming a complete loss. The bronze door, divided keys, tamper seals, alarms, and off-site ledger each serve a different protective function."
+      "Defense in depth combines people, technical, and operational controls with different roles so that after one layer fails, other layers may still limit reachable scope, detect abnormal activity, or restore affected state.",
+      "Here network segmentation limits network paths, the application role limits order objects, monitoring uses audit logs to detect the anomaly, and backup restores only T-31 through T-33. Shared-administrator risk is reduced but not eliminated."
     ],
     "explanationParagraphsZh": [
-      "纵深防御不把安全寄托在单一屏障上，而是让预防、权限限制、隔离、检测和恢复彼此补位。任何一道防线都可能被绕过、失灵或凭据被盗；多层控制的价值，在于一次突破不会直接变成完整损失。故事中的铜门、分权钥匙、箱封警报和异地账册分别承担不同防护作用。"
+      "纵深防御通过不同作用的人员、技术和运营控制相互补充，使单层失效后，其他层仍可能限制可达范围、发现异常或恢复受损状态。",
+      "本例网络分区限制网络路径，应用角色限制订单对象，监测依审计日志发现异常，备份只恢复T-31至T-33。共同管理员风险仍未被完全消除。"
     ],
     "mode": "concept-fable",
     "status": "approved",
+    "overallZh": "这场虚构的隔离演练说明纵深防御：不同控制分别限制可达路径、限制操作对象、发现残余异常和恢复受损状态。T队列被改过，但N-17的正常修改仍保留；控制有共同依赖时仍可能同时失效，多层并不自动带来独立性或零风险。",
+    "moduleZh": {
+      "intro": "在隔离演练中让一层明确失效，再用真实写入、日志和选择性恢复检查后续每层究竟改变了什么。",
+      "diagramTitle": "身份失守后，三笔异常修改为什么没有变成全库恢复",
+      "diagramSteps": [
+        "用脱敏快照建立隔离演练环境并预设红色客服会话失守",
+        "网络分区阻断财务/备份路径，应用角色限制到测试队列T",
+        "允许范围内T-31至T-33被改，审计日志记录会话与订单ID",
+        "监测告警后暂停会话，并按日志集合从快照选择性恢复三笔",
+        "复核N-17正常修改仍保留，并检查多层共同管理员依赖"
+      ],
+      "diagramStepNotes": [
+        "真实线上晚班订单不参与模拟攻击路径。",
+        "网络与应用角色各在不同层面限制范围，不能互相冒充。",
+        "残余允许动作确实造成有限修改，演练不假设后层全能阻断。",
+        "恢复集合由审计日志确定，避免覆盖独立正常演练订单。",
+        "拆分恢复凭证只减少一个共同失效点，不证明其余层彼此独立。"
+      ],
+      "mapping": [
+        "红色测试会话 → 明确设为已失守的身份层。",
+        "T测试队列与N-17 → 异常集合和正常业务样本被明确分开。",
+        "审计日志订单ID → 告警后确定受影响恢复范围的依据。",
+        "五张卡 → 身份、分区、角色、监测、备份五个作用位置。"
+      ],
+      "boundary": "这是隔离环境中的高层次演练，不提供攻击操作。监测依赖日志完整性，恢复依赖快照覆盖和恢复过程正确；分区、角色、日志、备份也可能共享基础设施或管理身份。多层控制只能降低某些单点失效影响，不能推出独立概率相乘或零风险。本例受影响的T记录没有其他正常修改；若同一记录交错发生合法改动，不能只按会话圈出ID后直接回退旧快照，还需保留或协调这些改动。",
+      "reflection": "为什么T-31至T-33已经被真实修改并不说明前面的限制毫无价值，而N-17没有被恢复又说明恢复层必须知道影响集合？"
+    },
+    "referencesZh": [
+      {
+        "id": "nist-defense-depth",
+        "citation": "NIST Computer Security Resource Center. Defense-in-depth, Glossary.",
+        "url": "https://csrc.nist.gov/glossary/term/defense_in_depth",
+        "use": "提供由人员、技术与运营构成多层防护的权威定义，强调多种屏障共同降低单层失效影响，但不意味着零风险。"
+      },
+      {
+        "id": "mell-shook-harang",
+        "citation": "Mell, P., Shook, J., & Harang, R. Measuring and Improving the Effectiveness of Defense-in-Depth Postures.",
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920973",
+        "use": "支持评估不同防线的独立性、相互关系与共同漏洞，提醒多层架构不能简单假定失效概率彼此独立。"
+      }
+    ],
+    "overall": "This fictional isolated exercise illustrates defense in depth: different controls constrain reachable paths, restrict order objects, detect residual abnormal activity, and restore affected state. Queue T was changed, but N-17’s legitimate change remains. Shared dependencies can still cause correlated failures; multiple layers do not automatically imply independence or zero risk.",
+    "module": {
+      "intro": "Make one layer fail explicitly in an isolated exercise, then use actual writes, logs, and selective recovery to check what each later layer really changes.",
+      "diagramTitle": "After the Identity Layer Fails, Why Do Three Abnormal Changes Not Become a Whole-Database Restore?",
+      "diagramSteps": [
+        "Build an isolated exercise environment from a sanitized snapshot and assume the red customer-service session is compromised",
+        "Use network segmentation to block finance/backup paths and an application role to restrict actions to test queue T",
+        "Allow T-31 through T-33 to be changed while audit logs record the session and order IDs",
+        "After monitoring alerts, suspend the session and selectively restore the three logged orders from the snapshot",
+        "Verify that N-17’s normal change remains and review shared super-administrator dependencies across layers"
+      ],
+      "diagramStepNotes": [
+        "Real production evening-shift orders are not part of the simulated attack path.",
+        "Network controls and application roles restrict different dimensions and are not substitutes for one another.",
+        "Residual permitted actions cause real but limited changes; the exercise does not assume later layers block everything.",
+        "The recovery set is determined from audit logs, preventing an independent normal exercise order from being overwritten.",
+        "Separating recovery credentials reduces one common failure point but does not prove that all other layers are independent."
+      ],
+      "mapping": [
+        "Red test session → the identity layer explicitly assumed to have failed.",
+        "Test queue T and N-17 → a clear separation between the abnormal set and a normal business example.",
+        "Order IDs in the audit log → the basis for defining the affected recovery set after the alert.",
+        "Five cards → the five functional positions of identity, segmentation, role, monitoring, and backup."
+      ],
+      "boundary": "This is a high-level exercise in an isolated environment and does not provide attack instructions. Monitoring depends on log completeness, while recovery depends on snapshot coverage and correct restoration. Segmentation, roles, logs, and backup may still share infrastructure or management identities. Multiple controls can reduce the impact of some single-layer failures but do not justify multiplying independent failure probabilities or claiming zero risk. In this example, the affected T records have no other legitimate updates. When legitimate writes overlap on the same record, identifying IDs by session is not enough to justify reverting old snapshots; those updates need preservation or reconciliation.",
+      "reflection": "Why do the real changes to T-31 through T-33 not show that the earlier restrictions were useless, and why does preserving N-17 show that the recovery layer must know the affected set?"
+    },
+    "references": [
+      {
+        "id": "nist-defense-depth",
+        "citation": "NIST Computer Security Resource Center. Defense-in-depth, Glossary.",
+        "url": "https://csrc.nist.gov/glossary/term/defense_in_depth",
+        "use": "Provides an authoritative definition of layered protection using people, technology, and operations, emphasizing that multiple barriers can reduce the impact of a single-layer failure without implying zero risk."
+      },
+      {
+        "id": "mell-shook-harang",
+        "citation": "Mell, P., Shook, J., & Harang, R. Measuring and Improving the Effectiveness of Defense-in-Depth Postures.",
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920973",
+        "use": "Supports evaluating independence, relationships, and common vulnerabilities across defensive layers, cautioning against simply assuming that layer failures are probabilistically independent."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "When the city built a new treasury, the keeper gave most of the budget to a locksmith famous across the region. The bronze door had three rows of bolts. An axe could not split it, and fire could not burn through it. On opening day, he invited the townspeople to watch and pulled the door three times with his own hands. It did not move. The treasury had spent so much on the door that the steward cancelled the alarm contract and reduced night staff. The visible barrier impressed the council and concealed the new dependence on one control.\n\nOne winter night, a coal carrier arrived wearing a badge stolen from the accounts office. The guard recognized its red seal and let him into the courtyard. The costly bronze door remained securely locked. The carrier entered through the smaller door used by clerks during the day.\n\nEvery room inside used the same kind of key. The carrier took one from a wall hook and opened the accounts office, the weighing room, and the rear store in turn. He did not empty the treasury. He took a little from more than a dozen chests and returned the altered ledger pages to their places. Three days passed before an apprentice noticed a broken line in the dust on one chest and discovered that silver was missing. By changing a total rather than removing a whole line, he stayed below the daily review threshold.\n\nThe steward could buy an even stronger door and preserve the public story, or admit that stolen identity had bypassed it. He cancelled a ceremonial vault opening and spent the fee on segmented access, detection, and recovery. Two-key entry slowed legitimate work; daily seal checks added labour. The council accepted those costs after seeing how one badge had reached every room. They also restricted service accounts, separated the heating system from the ledger network, and tested whether one compromised route could cross into another.\n\nThe keeper did not remove the bronze door. He gave the courtyard, the accounts office, and the silver rooms to different custodians. Entering the vault now required two keys turned together. Chest seals were checked each day, unusual movement rang a bell in the inner court, and a second copy of the ledger was locked across the river. When someone asked why so much trouble was needed with such a strong door, the keeper looked at the stolen badge. 'The door stopped only those who had no key,' he said. A drill then assumed the inner alarm failed, forcing staff to restore balances from the off-site copy. Another assumed the backup was corrupt, exposing the need to test recovery rather than merely own it. An after-action review traced which layer detected, delayed, contained, or restored each simulated breach, replacing a decorative checklist with evidence.\n\nAfterward, he hung the golden sample key given to him by the locksmith on his study wall. It still shone, but it no longer opened a single door in the treasury.",
-    "storyBodyZh": "城里新建银库时，司库把大半预算给了远近闻名的锁匠。铜门有三层锁舌，斧头砍不动，火也烧不穿。落成那天，他让百姓排队观看，亲手拉了三次门，门纹丝不动。银库为铜门耗尽预算，司库取消警铃合同，又缩减夜班。看得见的屏障令议会满意，也掩住全库只依赖一层控制。\n\n入冬后的一晚，一名送炭人戴着账房失窃的腰牌来到门前。守卫认得腰牌上的红漆，便放他进了院子。那扇名贵的铜门仍好好锁着，送炭人走的是白天供伙计出入的小门。\n\n库里所有房间都用同一种钥匙。送炭人从墙钩上取下一把，依次打开账房、称银间和后仓。他没有搬空银库，只从十几个箱子里各取一点，又把改过的账页放回原处。直到三天后，一个学徒发现某只箱子的灰尘断了一线，众人才知道银子少了。他每次只改总额、不删整行，还始终压在每日复核阈值以下。\n\n司库可以再买一道更强的门，保住对外说法；也可以承认失窃身份已经绕过铜门。他取消庆典开库，把费用改投分区权限、检测与恢复。双钥匙拖慢正常入库，每日核封也增加人手；议会看到一枚腰牌曾通往所有房间后，接受了这些成本。众人还限制服务账户，把供暖与账册网络隔离，并实测一条路径失守后能否横穿其他区域。\n\n司库没有拆掉铜门。他把院门、账房和银仓分给不同的人管理；进银仓要两把钥匙同时转动；箱封每天核对，异动会敲响内院的铃；账册另抄一份，锁在河对岸。有人问，铜门已经这样牢，何必再添麻烦。司库看着那枚失窃的腰牌说：‘门只拦住了没有钥匙的人。’演练又假设内院警铃失灵，要求众人从异地副本恢复余额；下一次再假设备份损坏，让“拥有恢复”也必须经过实测。事后复盘逐层记录谁发现、拖延、围堵或恢复了每次模拟入侵，让装饰清单变成可查证据。\n\n后来，他把锁匠赠送的那把金色样钥挂在书房墙上。它仍旧闪亮，却再也打不开银库里的任何一扇门。",
-    "explanation": "Defense in depth avoids relying on a single security barrier. It combines prevention, limited privileges, separation, detection, and recovery so that the controls support one another. Any layer can be bypassed, fail, or be defeated by stolen credentials; multiple layers keep one breach from becoming a complete loss. The bronze door, divided keys, tamper seals, alarms, and off-site ledger each serve a different protective function.",
-    "explanationZh": "纵深防御不把安全寄托在单一屏障上，而是让预防、权限限制、隔离、检测和恢复彼此补位。任何一道防线都可能被绕过、失灵或凭据被盗；多层控制的价值，在于一次突破不会直接变成完整损失。故事中的铜门、分权钥匙、箱封警报和异地账册分别承担不同防护作用。"
+    "storyBody": "A delivery platform is preparing a nighttime recovery exercise and does not want real evening-shift orders drawn into the test. The team builds an isolated exercise environment from a sanitized snapshot. It contains a dedicated test queue T and one order, N-17, representing normal customer-service work. Su Wei directly marks a red test session as “identity compromised,” while an operator uses a normal exercise account to change N-17’s address from A to B.\n\nThe red session follows the customer-service access path into the order area. It can reach the order service, but network segmentation blocks the finance and backup segments. Inside the application, it can open dedicated queue T; its application role refuses operations on the normal exercise queue containing N-17. That order still shows the newly entered address B, and the operator’s normal exercise account remains active. Su Wei lets the script continue.\n\nThe exercise script has the red session make a series of address changes within queue T, where it still has permission. Changes to T-31, T-32, and T-33 are actually written into the exercise order database, while a fourth out-of-scope object is rejected by the application role. For every write, the audit service records the session ID, order ID, and change time. A few minutes later, monitoring detects the burst of changes from the same session and raises an alert, so Su Wei suspends that session.\n\nThe incident sheet cites the three order IDs directly from the audit log instead of relying on memory. Before the exercise began, the recovery service had saved a snapshot of the test order database. Recovery staff retrieve the pre-exercise states of T-31 through T-33 from the snapshot and apply them only to those three IDs. N-17 was changed by a different normal session, is not part of the red-session log set, and never enters the recovery list, so its valid A→B change remains.\n\nAfter recovery, the operator reopens all four orders. T-31, T-32, and T-33 are back at their pre-exercise addresses, while N-17 still shows B. The review then identifies another risk: if segmentation policy, monitoring configuration, and recovery credentials are all controlled through the same super-administrator identity, several layers could be affected together. The team separates recovery credentials from the daily management identity, but treats that only as reducing one common dependency; other shared infrastructure remains on the checklist for the next exercise.\n\nAt the end of the exercise, five cards remain on the board: Identity, Segmentation, Role, Monitoring, Backup. The red Identity card stays flipped over. Beside it, the incident sheet circles only T-31, T-32, and T-33. N-17’s address B remains written at the bottom and has not been erased by recovery.",
+    "storyBodyZh": "配送平台准备做夜间恢复演练，又不想把真实晚班订单卷进测试。团队用脱敏快照搭了隔离演练环境，里面有专用测试队列T和一笔代表正常客服工作的订单N-17。苏蔚把一条红色测试会话直接标成“身份已失守”，值班员则用正常演练账号把N-17的地址从A改成B。\n\n红色会话沿客服访问路径进入订单区，订单服务仍可到达，财务网段和备份网段却被网络分区阻断。进入订单应用后，它能打开专用队列T，尝试操作N-17所在的正常演练队列时，应用角色返回拒绝。N-17仍显示刚改好的B地址，值班员的正常演练账号没有被一起停掉，苏蔚让脚本继续往下跑。\n\n演练脚本让红色会话在自己仍被允许的T队列内连续改地址。T-31、T-32、T-33三笔修改真实写入演练订单库，第四个越界对象则被角色拒绝。每次写入都会由审计服务记录会话ID、订单ID和变更时间；几分钟后，监测因同一会话短时连续修改触发告警，苏蔚暂停该会话。\n\n处置单直接引用审计日志里的三个订单ID，而不是靠人回忆。演练开始前，恢复服务已经为测试订单库保存快照；恢复人员从快照取回T-31至T-33的演练前状态，再逐笔应用到这三个ID。N-17由另一个正常会话修改，既不在红色会话日志集合里，也没有进入恢复清单，所以它的A→B有效修改被保留下来。\n\n恢复后，值班员重新打开四笔订单：T-31、T-32、T-33回到演练前地址，N-17仍是B。复盘又发现，若分区策略、监测配置和恢复凭证都受同一超级管理员控制，几层可能一起受影响。团队把恢复凭证与日常管理身份分开，但只把这视为减少一个共同依赖，其他共享基础设施仍列在下一次检查单上。\n\n演练结束，白板上排着五张卡：身份、分区、角色、监测、备份。红色身份卡依旧翻面，旁边处置单只圈着T-31、T-32、T-33；N-17的B地址写在最下面，没有被恢复动作擦掉。",
+    "explanation": "Defense in depth combines people, technical, and operational controls with different roles so that after one layer fails, other layers may still limit reachable scope, detect abnormal activity, or restore affected state.\n\nHere network segmentation limits network paths, the application role limits order objects, monitoring uses audit logs to detect the anomaly, and backup restores only T-31 through T-33. Shared-administrator risk is reduced but not eliminated.",
+    "explanationZh": "纵深防御通过不同作用的人员、技术和运营控制相互补充，使单层失效后，其他层仍可能限制可达范围、发现异常或恢复受损状态。\n\n本例网络分区限制网络路径，应用角色限制订单对象，监测依审计日志发现异常，备份只恢复T-31至T-33。共同管理员风险仍未被完全消除。"
   },
   {
     "id": "0613-modularity",
@@ -16955,47 +17325,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0613",
     "fieldTitle": "Software and applications development and analysis",
     "fieldTitleZh": "软件与应用开发及分析",
-    "title": "The Theatre That Stopped for One Puppet",
-    "titleZh": "换一只木偶就要停演的剧场",
-    "summary": "A mechanist drives an entire theatre from one main shaft, saving parts until a single new puppet brings down the whole performance.",
-    "summaryZh": "机关师用一根主轴驱动整座剧场，省下许多零件，也让一只新木偶拖垮了整场演出。",
+    "title": "Where Did the Blue Dictionary’s Cover Go?",
+    "titleZh": "蓝字典的封面去了哪里",
+    "summary": "A secondhand-book platform initially lets the product page, chat preview, and export tool use storage-provider URLs directly. When the provider changes its link rules, all three callers for the blue dictionary must be changed. The team then stores mediaId consistently and obtains a currently usable URL through get(mediaId). During the second migration, only the media component needs to change because the mediaId mapping, object content, access semantics, and interface contract remain unchanged.",
+    "summaryZh": "二手书平台最初让商品页、聊天预览和导出工具直接使用供应商URL。供应商改变链接规则时，蓝字典的三个调用方都要修改；团队随后统一存mediaId，并通过get(mediaId)获取当前可用URL。第二次迁移在mediaId映射、对象内容、访问语义和接口契约保持不变时，只需改媒体组件内部。",
     "storyParagraphs": [
-      "Willow River Theatre was poor enough to own only one set of machinery. Its mechanist connected the curtain, lamp frame, drumstick, and twelve puppets to a single main shaft. When the shaft turned, the curtain rose, the shades opened, and the drum sounded exactly as the puppets began to walk. The manager saved the price of many gears and boasted that the machine contained nothing unnecessary. The savings kept ticket prices low and won the mechanism builder a bonus before the autumn festival.",
-      "Before a new play opened, mice ruined the face of the queen puppet. A carpenter hurriedly made another. It was more beautiful and only two pounds heavier. The mechanist hung it in place, watched it walk once, and told the company to admit the audience. The house was full that night, with the county magistrate seated in the first row.",
-      "As the queen reached centre stage, the main shaft slowed for a beat. The drumstick missed, the curtain dropped halfway, and the lamp frame kept turning. An oil lamp struck the edge of the cloth. Actors rushed to put out the flame while all twelve puppets continued bowing in the smoke. The audience fled into the street, and the magistrate's new robe was soaked by a bucket of water. Repairing one effect by tightening the shared shaft worsened another, because every motion depended on hidden timing elsewhere.",
-      "As refunds began for two sold-out nights, the troupe kept the rest of the season on the board and rebuilt around it. The engineer first drew responsibilities—light, sound, curtain, puppet—and exposed the connections among them. He cut only where a stable contract could replace shared internals: standard hooks carried weight limits, bell signals defined timing, and failures stayed behind physical stops. The troupe published interface measurements and assigned one owner to each boundary. Changing a bell code required agreement from every module that consumed it.",
-      "During repairs, the mechanist found that replacing one cord on the queen required removing the drum frame first; adjusting a lamp changed the moment when the curtain fell. He cut the main shaft apart. Lamps, drum, curtain, and puppets each received their own mechanism, joined only by hooks of the same size and a few agreed signals from a bronze bell. A role could now be changed by hanging a puppet on the hooks and listening for the bell. Independent mechanisms cost more gears and sometimes duplicated parts. In return, each could be tested alone, and a puppet change no longer required knowledge of the lamp's axle. A fault in the drum mechanism was then forced during rehearsal; the physical stop kept it from pulling down the curtain.",
-      "The following year, the wolf puppet broke a leg just before the opening. An apprentice brought the spare and fastened its two hooks. The first bell had already sounded beyond the curtain, and the manager did not even ask the drummer to stop."
+      "On Monday morning, a seller urgently wants the cover of an old blue dictionary restored. The product page shows a broken image, the buyer’s chat preview is blank, and a new product export due at noon cannot obtain a usable image address. All three places directly store or construct URLs from the same storage provider, which has just stopped supporting the old URL format.",
+      "Zhou Kai first restores the immediate delivery. He changes the product page, chat preview, and export tool to use the provider’s new URL rule. He opens the blue dictionary’s cover from the product page and checks the chat thumbnail and the address in the newly generated export. Its three paths work again, with changes in three places: one provider rule has entered the image-display, chat-preview, and export code.",
+      "He then defines a new boundary. After an image is stored, the media component returns a stable mediaId, and business data stores only that ID. When the product page or chat needs to display the image, it calls get(mediaId) for a currently usable URL. A newly generated export also calls that same interface at generation time for the URL usable then. Bucket names, object locations, and signing rules remain inside the component, but a returned URL may expire; the design does not promise that URLs embedded in old export files remain usable forever.",
+      "The first move to this boundary still requires each of the three callers to change once. They stop depending directly on provider URLs, store mediaId instead, and request a current URL when needed. Zhou Kai reuploads the blue dictionary cover and checks the product page, chat, and a newly generated export one by one. The new interface preserves the required read-access semantics and the image content itself. The adaptation, interface tests, and error handling are all recorded as part of the refactoring cost.",
+      "Two months later, the team moves the image objects to another storage region. The migration preserves the mapping from every mediaId to the same image object, while access semantics and the get(mediaId)→url contract also remain unchanged. Zhou Kai modifies only the media component’s location and URL-generation implementation. The three caller codebases do not change, and newly generated URLs now point to the new region.",
+      "After release, the seller opens the blue dictionary product page again. The chat thumbnail works, and a newly generated export also receives a currently usable image URL. Zhou Kai removes the three old provider-rule notes from the board and leaves only two lines: store(file)→mediaId and get(mediaId)→url."
     ],
     "storyParagraphsZh": [
-      "柳河剧场穷得只剩一套机关。机关师把幕布、灯架、鼓槌和十二只木偶都接在同一根主轴上。轴一转，幕布升起，灯罩打开，鼓声和木偶的脚步正好同时响。班主少买了许多齿轮，逢人便夸这台机器没有一处多余。省下的零件让票价维持低廉，也让机关师在秋祭前领到奖金。",
-      "新戏开演前，王后木偶的脸被老鼠咬坏了。木匠赶做了一只，模样更美，只比旧的重两斤。机关师把它挂上去试了试，木偶能走，便催大家开门迎客。那晚座无虚席，县令也坐在第一排。",
-      "王后走到台中央时，主轴忽然慢了一拍。鼓槌先落空，幕布随后垂下一半，灯架却还在往前转。一盏油灯撞上布边，演员扑上去灭火，十二只木偶则在烟里不停鞠躬。观众逃到街上，县令的新袍被水浇得透湿。他们每拧紧主轴修好一处，另一处反而更坏，因为每个动作都暗中依赖别处时序。",
-      "两场满座票开始退款时，戏班把余下演期留在木牌上，围着它拆台重建。机关师先画清灯、鼓、幕布、木偶各自职责与连接，只在稳定约定能够替代内部牵连处下锯：标准挂钩注明承重，铜铃规定时序，物理挡块把故障留在局部。戏班公开接口尺寸，并给每条边界指定负责人；更改铜铃编码必须得到所有使用它的机关同意。",
-      "修理时，机关师发现若要替王后换一根绳，就得先卸下鼓架；要调灯，又会改变幕布落下的时刻。他把主轴锯开，让灯、鼓、幕布和木偶各用自己的机关，只留下尺寸相同的挂钩和几声约定好的铜铃。以后换角色，只需把木偶挂上，听铃行动。独立机关需要更多齿轮，偶尔也会重复零件；换来的好处是各自可单独测试，换木偶的人不必再懂灯架主轴。排练中众人故意卡住鼓机，物理挡块使故障没有继续拖落幕布。",
-      "第二年，狼木偶在开场前断了一条腿。小学徒抱来备用木偶，扣上两只挂钩。幕外已经响起第一声铜铃，班主甚至没有叫停鼓手。"
+      "周一早上，一名卖家催着恢复一本蓝色旧字典的封面：商品页裂图，买家聊天里的缩略图也空了，中午要生成的新商品导出同样拿不到可用图片地址。三处都直接保存或拼接同一家存储供应商的旧URL，而供应商刚停止旧格式。",
+      "周恺先救当前交付。他分别修改商品页、聊天预览和导出工具，让它们适配新供应商URL规则；再从蓝字典的商品页打开封面，核对聊天里的缩略图和当次新导出的地址。这本书的三条路径接通了，他手里的改动也分落在三处。供应商的一条新规则，分别进了显示图片、聊天预览和导出清单的代码。",
+      "随后他定义新的边界：上传图片后媒体组件返回稳定的mediaId，业务数据只保存这个ID；商品页和聊天在需要显示时调用get(mediaId)取得“当前可用URL”。新生成的导出文件也在生成时调用同一接口取得当时可用URL。桶名、对象位置和签名生成方式留在组件内部，但URL可能有有效期，并不承诺旧导出文件中的地址永久可用。",
+      "第一次接入这个边界仍要改三个调用方一次：它们从直接依赖供应商URL改为保存mediaId、需要时请求当前URL。周恺用蓝字典逐一重跑商品页、聊天和新导出；新接口保持原本需要的读取权限语义，图片内容也不变。额外的适配、接口测试和错误处理都记进了这次重构成本。",
+      "两个月后，团队把图片对象迁到另一个存储区域。迁移脚本保留每个mediaId与同一图片对象的映射，访问权限语义和get(mediaId)→url契约也保持不变。周恺只改媒体组件里的位置和取址实现，三个调用方代码没有跟着改；新生成的URL指向新区域。",
+      "发布后，卖家再次打开蓝字典商品页，聊天缩略图正常，新导出的清单也拿到了当前可用图片URL。周恺把三张旧供应商规则便签撕掉，白板上只留两行：store(file)→mediaId，get(mediaId)→url。"
     ],
     "conceptName": "Modularity",
     "conceptNameZh": "模块化",
     "explanationParagraphs": [
-      "Modularity divides a complex system into parts with clear responsibilities and relative internal independence, connected through stable interfaces. The aim is not to remove all relationships between parts, but to control dependencies so that a change, replacement, or failure in one part spreads as little as possible. The theatre's separate mechanisms, standard hooks, and bell signals represent module boundaries and interfaces."
+      "Modularity encapsulates related responsibilities behind boundaries so other parts use them through defined interfaces; information hiding specifically keeps likely-to-change design decisions inside the module, reducing change propagation.",
+      "The first move to the mediaId interface still changes three callers. When a later migration preserves ID mapping, content, access, and the get→url contract, code changes stay inside the media component. Moving objects and checking mappings still require work."
     ],
     "explanationParagraphsZh": [
-      "模块化把复杂系统分成职责清楚、内部相对独立的部分，并通过稳定接口连接。它的目的不是让部件彼此毫无关系，而是控制依赖，使一个部件的修改、替换或故障尽量不扩散到全局。剧场后来使用独立机关、统一挂钩和铜铃信号，分别对应模块边界与接口。"
+      "模块化把相关职责封装在边界内，其他部分通过明确接口使用功能；信息隐藏强调把可能变化的设计决策留在模块内部，以减少修改传播。",
+      "本例初次接入mediaId接口仍改三个调用方；后次迁移保留ID映射、内容、权限和get→url契约，代码改动才限于媒体组件。对象搬迁和映射核对仍须执行。"
     ],
-    "mode": "concept-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "这本蓝字典的虚构迁移经历说明模块化：职责边界和稳定接口可以减少内部变化向调用方传播。稳定的是mediaId与接口契约，返回URL仍可能变化或过期。初次改造、后续数据迁移与核对都有成本；模块化也不自动隔离运行故障。",
+    "moduleZh": {
+      "intro": "用同一本蓝字典追踪两次迁移：第一次建立边界需要外部改造，第二次在契约不变时观察变化是否被留在内部。",
+      "diagramTitle": "从供应商URL散落三处，到mediaId稳定跨越第二次迁移",
+      "diagramSteps": [
+        "三处调用方直接依赖旧供应商URL，第一次规则变化需分别修改",
+        "定义store(file)→mediaId和get(mediaId)→当前可用url",
+        "三个调用方一次性改为保存mediaId并按需取URL",
+        "第二次迁移保持mediaId映射、图片内容、访问语义和接口契约",
+        "只修改媒体组件内部位置/取址实现并重跑蓝字典三条路径"
+      ],
+      "diagramStepNotes": [
+        "第一次修复只核对蓝字典相关路径，不宣称全站对象均恢复。",
+        "返回URL可有有效期，稳定承诺落在mediaId与接口语义上。",
+        "旧导出文件里的URL不会因模块化自动刷新。",
+        "内部迁移只有在外部契约不变时才无需修改调用方。",
+        "模块边界降低变化传播，不等于运行时故障自动隔离。"
+      ],
+      "mapping": [
+        "蓝字典封面 → 两次迁移都可核对的同一业务对象。",
+        "三张旧URL规则便签 → 易变供应商细节泄漏到调用方。",
+        "mediaId → 跨内部位置变化保持的业务标识。",
+        "当前可用URL → 由媒体组件按需返回、但不承诺永久有效的结果。"
+      ],
+      "boundary": "模块化降低适当边界内的变化传播，不保证旧导出链接永久有效，也不自动隔离故障、增加容量或消除复杂度。若mediaId语义、访问权限、对象内容或接口输入输出发生变化，调用方仍可能需要协调修改。减少的是调用方代码变动，数据迁移、部署与一致性核对仍有成本。",
+      "reflection": "为什么第二次迁移能只改媒体组件，关键不在“有了模块”四个字，而在于哪些对外约定实际保持了不变？"
+    },
+    "referencesZh": [
+      {
+        "id": "parnas-1972",
+        "citation": "Parnas, D. L. (1972). On the criteria to be used in decomposing systems into modules. Communications of the ACM, 15(12), 1053–1058.",
+        "url": "https://www.cs.lafayette.edu/~gexia/cs301/resources/parnas.html",
+        "use": "作为信息隐藏与模块分解的经典来源，支持围绕可能变化的设计决策建立模块边界，而不是仅按处理步骤或文件大小拆分。"
+      },
+      {
+        "id": "ieee-design",
+        "citation": "IEEE Computer Society. Why Software Design Is Important.",
+        "url": "https://www.computer.org/resources/importance-of-software-design-is-important",
+        "use": "提供现代软件设计中模块化与关注点分离的应用概述，支持通过清晰结构降低变化和维护复杂度。"
+      }
+    ],
+    "overall": "The blue dictionary’s fictional migration illustrates modularity: responsibility boundaries and stable interfaces can reduce propagation of internal changes to callers. The stable commitment is the mediaId and interface contract; returned URLs may change or expire. Initial refactoring, later data migration, and verification still have costs, and modularity does not automatically isolate runtime failures.",
+    "module": {
+      "intro": "Use the same blue dictionary across two migrations: the first establishes the boundary and requires external adaptation; the second checks whether change stays internal when the contract remains stable.",
+      "diagramTitle": "From Provider URLs in Three Places to a mediaId That Survives the Second Migration",
+      "diagramSteps": [
+        "Three callers directly depend on the old provider URL rule, so the first rule change requires three separate modifications",
+        "Define store(file)→mediaId and get(mediaId)→currently usable url",
+        "Change all three callers once so they store mediaId and request URLs when needed",
+        "During the second migration, preserve mediaId mapping, image content, access semantics, and the interface contract",
+        "Modify only media-component location/URL logic and rerun the blue-dictionary paths"
+      ],
+      "diagramStepNotes": [
+        "The first repair checks only the blue dictionary paths and does not claim every object on the site has been restored.",
+        "Returned URLs may expire; the stable commitment is placed on mediaId and interface semantics.",
+        "URLs embedded in old export files are not automatically refreshed by modularity.",
+        "The later migration avoids caller changes only because the external contract remains unchanged.",
+        "A module boundary reduces change propagation; it does not automatically isolate runtime failures."
+      ],
+      "mapping": [
+        "Blue dictionary cover → the same business object checked across both migrations.",
+        "Three old URL-rule notes → volatile provider details leaking into multiple callers.",
+        "mediaId → the business identifier retained across internal location changes.",
+        "Currently usable URL → a value returned on demand by the media component, without a promise of permanent validity."
+      ],
+      "boundary": "Modularity reduces propagation of changes that fit behind an appropriate boundary. It does not guarantee that old export links remain valid forever, automatically isolate failures, increase capacity, or remove complexity. If mediaId semantics, access permissions, object content, or interface inputs and outputs change, callers may still require coordinated modifications. What decreases is caller code change; data migration, deployment, and consistency checks still have costs.",
+      "reflection": "Why can the second migration change only the media component not merely because “there is a module,” but because specific external commitments actually remain unchanged?"
+    },
+    "references": [
+      {
+        "id": "parnas-1972",
+        "citation": "Parnas, D. L. (1972). On the criteria to be used in decomposing systems into modules. Communications of the ACM, 15(12), 1053–1058.",
+        "url": "https://www.cs.lafayette.edu/~gexia/cs301/resources/parnas.html",
+        "use": "Serves as a classic source for information hiding and modular decomposition, supporting boundaries organized around design decisions likely to change rather than simply around processing steps or file size."
+      },
+      {
+        "id": "ieee-design",
+        "citation": "IEEE Computer Society. Why Software Design Is Important.",
+        "url": "https://www.computer.org/resources/importance-of-software-design-is-important",
+        "use": "Provides a modern applied overview of modularity and separation of concerns in software design, supporting the use of clear structure to reduce change propagation and maintenance complexity."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "Willow River Theatre was poor enough to own only one set of machinery. Its mechanist connected the curtain, lamp frame, drumstick, and twelve puppets to a single main shaft. When the shaft turned, the curtain rose, the shades opened, and the drum sounded exactly as the puppets began to walk. The manager saved the price of many gears and boasted that the machine contained nothing unnecessary. The savings kept ticket prices low and won the mechanism builder a bonus before the autumn festival.\n\nBefore a new play opened, mice ruined the face of the queen puppet. A carpenter hurriedly made another. It was more beautiful and only two pounds heavier. The mechanist hung it in place, watched it walk once, and told the company to admit the audience. The house was full that night, with the county magistrate seated in the first row.\n\nAs the queen reached centre stage, the main shaft slowed for a beat. The drumstick missed, the curtain dropped halfway, and the lamp frame kept turning. An oil lamp struck the edge of the cloth. Actors rushed to put out the flame while all twelve puppets continued bowing in the smoke. The audience fled into the street, and the magistrate's new robe was soaked by a bucket of water. Repairing one effect by tightening the shared shaft worsened another, because every motion depended on hidden timing elsewhere.\n\nAs refunds began for two sold-out nights, the troupe kept the rest of the season on the board and rebuilt around it. The engineer first drew responsibilities—light, sound, curtain, puppet—and exposed the connections among them. He cut only where a stable contract could replace shared internals: standard hooks carried weight limits, bell signals defined timing, and failures stayed behind physical stops. The troupe published interface measurements and assigned one owner to each boundary. Changing a bell code required agreement from every module that consumed it.\n\nDuring repairs, the mechanist found that replacing one cord on the queen required removing the drum frame first; adjusting a lamp changed the moment when the curtain fell. He cut the main shaft apart. Lamps, drum, curtain, and puppets each received their own mechanism, joined only by hooks of the same size and a few agreed signals from a bronze bell. A role could now be changed by hanging a puppet on the hooks and listening for the bell. Independent mechanisms cost more gears and sometimes duplicated parts. In return, each could be tested alone, and a puppet change no longer required knowledge of the lamp's axle. A fault in the drum mechanism was then forced during rehearsal; the physical stop kept it from pulling down the curtain.\n\nThe following year, the wolf puppet broke a leg just before the opening. An apprentice brought the spare and fastened its two hooks. The first bell had already sounded beyond the curtain, and the manager did not even ask the drummer to stop.",
-    "storyBodyZh": "柳河剧场穷得只剩一套机关。机关师把幕布、灯架、鼓槌和十二只木偶都接在同一根主轴上。轴一转，幕布升起，灯罩打开，鼓声和木偶的脚步正好同时响。班主少买了许多齿轮，逢人便夸这台机器没有一处多余。省下的零件让票价维持低廉，也让机关师在秋祭前领到奖金。\n\n新戏开演前，王后木偶的脸被老鼠咬坏了。木匠赶做了一只，模样更美，只比旧的重两斤。机关师把它挂上去试了试，木偶能走，便催大家开门迎客。那晚座无虚席，县令也坐在第一排。\n\n王后走到台中央时，主轴忽然慢了一拍。鼓槌先落空，幕布随后垂下一半，灯架却还在往前转。一盏油灯撞上布边，演员扑上去灭火，十二只木偶则在烟里不停鞠躬。观众逃到街上，县令的新袍被水浇得透湿。他们每拧紧主轴修好一处，另一处反而更坏，因为每个动作都暗中依赖别处时序。\n\n两场满座票开始退款时，戏班把余下演期留在木牌上，围着它拆台重建。机关师先画清灯、鼓、幕布、木偶各自职责与连接，只在稳定约定能够替代内部牵连处下锯：标准挂钩注明承重，铜铃规定时序，物理挡块把故障留在局部。戏班公开接口尺寸，并给每条边界指定负责人；更改铜铃编码必须得到所有使用它的机关同意。\n\n修理时，机关师发现若要替王后换一根绳，就得先卸下鼓架；要调灯，又会改变幕布落下的时刻。他把主轴锯开，让灯、鼓、幕布和木偶各用自己的机关，只留下尺寸相同的挂钩和几声约定好的铜铃。以后换角色，只需把木偶挂上，听铃行动。独立机关需要更多齿轮，偶尔也会重复零件；换来的好处是各自可单独测试，换木偶的人不必再懂灯架主轴。排练中众人故意卡住鼓机，物理挡块使故障没有继续拖落幕布。\n\n第二年，狼木偶在开场前断了一条腿。小学徒抱来备用木偶，扣上两只挂钩。幕外已经响起第一声铜铃，班主甚至没有叫停鼓手。",
-    "explanation": "Modularity divides a complex system into parts with clear responsibilities and relative internal independence, connected through stable interfaces. The aim is not to remove all relationships between parts, but to control dependencies so that a change, replacement, or failure in one part spreads as little as possible. The theatre's separate mechanisms, standard hooks, and bell signals represent module boundaries and interfaces.",
-    "explanationZh": "模块化把复杂系统分成职责清楚、内部相对独立的部分，并通过稳定接口连接。它的目的不是让部件彼此毫无关系，而是控制依赖，使一个部件的修改、替换或故障尽量不扩散到全局。剧场后来使用独立机关、统一挂钩和铜铃信号，分别对应模块边界与接口。"
+    "storyBody": "On Monday morning, a seller urgently wants the cover of an old blue dictionary restored. The product page shows a broken image, the buyer’s chat preview is blank, and a new product export due at noon cannot obtain a usable image address. All three places directly store or construct URLs from the same storage provider, which has just stopped supporting the old URL format.\n\nZhou Kai first restores the immediate delivery. He changes the product page, chat preview, and export tool to use the provider’s new URL rule. He opens the blue dictionary’s cover from the product page and checks the chat thumbnail and the address in the newly generated export. Its three paths work again, with changes in three places: one provider rule has entered the image-display, chat-preview, and export code.\n\nHe then defines a new boundary. After an image is stored, the media component returns a stable mediaId, and business data stores only that ID. When the product page or chat needs to display the image, it calls get(mediaId) for a currently usable URL. A newly generated export also calls that same interface at generation time for the URL usable then. Bucket names, object locations, and signing rules remain inside the component, but a returned URL may expire; the design does not promise that URLs embedded in old export files remain usable forever.\n\nThe first move to this boundary still requires each of the three callers to change once. They stop depending directly on provider URLs, store mediaId instead, and request a current URL when needed. Zhou Kai reuploads the blue dictionary cover and checks the product page, chat, and a newly generated export one by one. The new interface preserves the required read-access semantics and the image content itself. The adaptation, interface tests, and error handling are all recorded as part of the refactoring cost.\n\nTwo months later, the team moves the image objects to another storage region. The migration preserves the mapping from every mediaId to the same image object, while access semantics and the get(mediaId)→url contract also remain unchanged. Zhou Kai modifies only the media component’s location and URL-generation implementation. The three caller codebases do not change, and newly generated URLs now point to the new region.\n\nAfter release, the seller opens the blue dictionary product page again. The chat thumbnail works, and a newly generated export also receives a currently usable image URL. Zhou Kai removes the three old provider-rule notes from the board and leaves only two lines: store(file)→mediaId and get(mediaId)→url.",
+    "storyBodyZh": "周一早上，一名卖家催着恢复一本蓝色旧字典的封面：商品页裂图，买家聊天里的缩略图也空了，中午要生成的新商品导出同样拿不到可用图片地址。三处都直接保存或拼接同一家存储供应商的旧URL，而供应商刚停止旧格式。\n\n周恺先救当前交付。他分别修改商品页、聊天预览和导出工具，让它们适配新供应商URL规则；再从蓝字典的商品页打开封面，核对聊天里的缩略图和当次新导出的地址。这本书的三条路径接通了，他手里的改动也分落在三处。供应商的一条新规则，分别进了显示图片、聊天预览和导出清单的代码。\n\n随后他定义新的边界：上传图片后媒体组件返回稳定的mediaId，业务数据只保存这个ID；商品页和聊天在需要显示时调用get(mediaId)取得“当前可用URL”。新生成的导出文件也在生成时调用同一接口取得当时可用URL。桶名、对象位置和签名生成方式留在组件内部，但URL可能有有效期，并不承诺旧导出文件中的地址永久可用。\n\n第一次接入这个边界仍要改三个调用方一次：它们从直接依赖供应商URL改为保存mediaId、需要时请求当前URL。周恺用蓝字典逐一重跑商品页、聊天和新导出；新接口保持原本需要的读取权限语义，图片内容也不变。额外的适配、接口测试和错误处理都记进了这次重构成本。\n\n两个月后，团队把图片对象迁到另一个存储区域。迁移脚本保留每个mediaId与同一图片对象的映射，访问权限语义和get(mediaId)→url契约也保持不变。周恺只改媒体组件里的位置和取址实现，三个调用方代码没有跟着改；新生成的URL指向新区域。\n\n发布后，卖家再次打开蓝字典商品页，聊天缩略图正常，新导出的清单也拿到了当前可用图片URL。周恺把三张旧供应商规则便签撕掉，白板上只留两行：store(file)→mediaId，get(mediaId)→url。",
+    "explanation": "Modularity encapsulates related responsibilities behind boundaries so other parts use them through defined interfaces; information hiding specifically keeps likely-to-change design decisions inside the module, reducing change propagation.\n\nThe first move to the mediaId interface still changes three callers. When a later migration preserves ID mapping, content, access, and the get→url contract, code changes stay inside the media component. Moving objects and checking mappings still require work.",
+    "explanationZh": "模块化把相关职责封装在边界内，其他部分通过明确接口使用功能；信息隐藏强调把可能变化的设计决策留在模块内部，以减少修改传播。\n\n本例初次接入mediaId接口仍改三个调用方；后次迁移保留ID映射、内容、权限和get→url契约，代码改动才限于媒体组件。对象搬迁和映射核对仍须执行。"
   },
   {
     "id": "0613-software-testing",
@@ -17004,47 +17467,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0613",
     "fieldTitle": "Software and applications development and analysis",
     "fieldTitleZh": "软件与应用开发及分析",
-    "title": "The Stage That Was Perfect Only When Empty",
-    "titleZh": "只在空场里完美的舞台",
-    "summary": "An automated stage is rushed into service before a festival; every mechanism behaves in an empty hall until actors and rain arrive together.",
-    "summaryZh": "一座自动舞台赶在庆典前完工，空场时每个机关都很听话，直到演员和暴雨同时登台。",
+    "title": "The Discount Stays Closed Until the Total Reaches €21.60",
+    "titleZh": "优惠入口等到€21.60才打开",
+    "summary": "Before a coffee shop releases a 10%-off promotion, three €8 drinks should total €21.60 under a test rule with no tax, delivery charge, or other fee, but the page repeatedly shows €23.20. An Lan keeps two failed orders. Only afterward does the developer debug the implementation and locate a one-item-only discount. Once fixed, the original case passes, then the team checks the two-item boundary and previously correct one-item and no-discount paths.",
+    "summaryZh": "咖啡店上线九折优惠前，3杯×€8在无税、运费或其他附加费的测试规则下应为€21.60，页面却两次稳定显示€23.20。安澜保留两张失败订单，开发者随后调试出“只给一杯打折”的实现问题；修复后原用例确认通过，再检查同类边界与原本正确路径。",
     "storyParagraphs": [
-      "Before the harvest festival, the theatre built a stage that could change its own scenery. The manager promised the governor that opening night would not contain a single dark pause. Carpenters had raised the curtain, lifted the bridge, and opened the trapdoor separately; each worked smoothly. The stage master asked for one complete run with actors in costume, but the manager would not give up the daytime rehearsals for which he was selling tickets. The contract penalty for a delay was large, so every hour spent on a full rehearsal looked like lost revenue.",
-      "Heavy rain fell on opening night. The actor playing the knight rushed onto the bridge in a cloak soaked with water just as the backstage bell signalled a change of scene. The bridge moved a moment more slowly than it had when empty, but the curtain fell on time and wrapped itself around the knight's raised lance. Hearing a second bell, the trapdoor operator assumed the first act was over and pulled his lever as well.",
-      "The knight fell into a padded compartment and escaped serious injury. His falling lance struck the scenery, however, and covered the front row in dust. The governor left amid coughing, and tickets for the remaining three performances were refunded. Alone on the empty stage, the manager pulled every mechanism again. Once again, each worked perfectly. The apparent success of isolated checks now became evidence of what had not been tested: load, ordering, timing, and weather together.",
-      "The owner pulled down the sold-out weekend sign, kept the actors on pay, and turned the dark stage over to systematic tests. They wrote expected outcomes before each run, reproduced the wet-cloak failure, and kept a regression set so a repaired bridge could not silently break the trapdoor sequence. A test environment copied the stage configuration closely enough to expose timing, while opening-night monitoring watched conditions no rehearsal could exhaust.",
-      "The actors, carpenters, and stage master all stayed for the repairs. They first loaded each mechanism with the heaviest prop, then tried actions that could occur at the same time. Someone deliberately rang a bell late; someone else soaked the cloak. After reopening, every fault and near miss was written in a small backstage book and addressed before the next day's rehearsal. Unit checks, integrations, full dress runs, and deliberate fault cases found different defects. No passing list was treated as proof of permanent safety. Every escaped defect became a new reproducible case rather than a reason to blame the last operator.",
-      "Before the premiere of the next play, the manager poured a bucket of water over the spare cloak himself. When the dripping knight stepped onto the bridge, he did not look to see whether every seat had sold. He watched the white load mark beneath the bridge. The white line marked the maximum safe deflection under the specified load, and a stagehand logged every crossing after reopening."
+      "The coffee shop plans to open a 10%-off preorder promotion on Saturday morning. Before closing on Friday, An Lan starts with an empty cart under a reusable test promotion code and adds three identical drinks at €8 each. The test rule explicitly excludes tax, delivery, and any other fee, and the discount applies to the entire line subtotal. €24.00 should therefore receive a €2.40 discount and produce a total of €21.60, but the checkout page shows €23.20.",
+      "The owner keeps the promotion entry closed. An Lan empties the cart completely, adds the same three drinks, and orders again with the same reusable test code. The server environment and account conditions remain unchanged, and the second order again shows €23.20. She attaches both failed order IDs to the test sheet, with the input conditions above them. The promotion remains closed. What the developer receives is no longer “checkout seems wrong,” but an order that can be rerun by following the sheet.",
+      "She writes the arithmetic out completely. An actual total of €23.20 means only €0.80 was discounted, which is €1.60 less than the expected €2.40 discount. At this point, the test establishes only that the actual result repeatedly disagrees with the rule under these conditions. The test sheet stops there, and only then does the developer inspect the implementation.",
+      "During debugging, the developer finds that the code applies the 10% discount to only one €8 drink, exactly accounting for the €0.80 reduction, and changes the implementation. After the new version reaches the test environment, An Lan does not inspect the code; she starts again from an empty cart and reruns the original three-drink case with the test code. The result is now €21.60, confirming the original failure condition no longer appears.",
+      "She then expands the same discount boundary. Two €8 drinks at 10% off should be €14.40, checking whether multiple quantities are all included. One €8 drink at 10% off should be €7.20; that path had already been correct under the old implementation. Three drinks without a promotion code should remain €24.00 and had also been correct before. Those latter two become regression checks, while the original three-drink failure is permanently added to the automated suite.",
+      "Before opening on Saturday, the owner sees the new €21.60 result on the test sheet and only then enables the promotion entry. An Lan clips the two €23.20 failure orders and the €21.60 confirmation order beneath the register in time order, with the automated-test ID label still visible at the top."
     ],
     "storyParagraphsZh": [
-      "丰收节前，剧院造了一座会自己换景的舞台。班主答应总督，开幕夜绝不让观众等一次黑场。木匠分别拉过幕布、升过吊桥、开过活板门，每样都顺利。舞台师请求让演员穿戏服完整走一遍，班主却舍不得停掉白天的卖票彩排。委约对延期开幕罚得很重，因此每用一小时完整排练，看起来都像在丢掉收入。",
-      "开幕当晚下起大雨。扮骑士的演员披着吸满水的斗篷冲上吊桥，后台同时敲响换景铃。桥比空载时慢了一瞬，幕布却照旧落下，正好缠住骑士举起的长枪。负责活板门的人听见第二声铃，以为第一幕已经结束，也拉下了手柄。",
-      "骑士跌进铺着软垫的暗格，没受重伤；倒下的长枪却撞翻布景，台下第一排被灰尘盖住。总督在咳嗽声中离席，余下三场演出全部退票。班主站在空台上反复拉动机关，它们又一次次完美运行。单件检查的成功此时反而指出未被测试之处：负载、先后、时序与天气从未一起出现。",
-      "班主扯下周末售罄的牌子，照付演员工资，把漆黑舞台交给系统测试。众人每次先写预期，再重现湿斗篷故障，并保留回归测试，避免修好吊桥却悄悄破坏活板门时序。测试场景尽量复制真实配置以暴露时序，开幕后的监测则继续观察排练无法穷尽的条件。",
-      "修台时，演员、木匠和舞台师都留下来。他们先让每件机关单独承受最重的道具，再把会同时发生的动作连起来试；有人故意晚敲一声铃，有人往斗篷上泼水。重开以后，每场故障和险情都记在后台小册上，第二天排演前先处理。单件、组合、全流程与故意注入故障的测试各自发现不同问题；任何通过清单都不能证明舞台永远安全。每个漏网故障都变成可复现的新用例，而非责怪最后操作者的理由。",
-      "新戏首演前，班主亲手把一桶水倒在备用斗篷上。湿漉漉的骑士踏上吊桥时，他没有去看座位卖满没有，只盯着桥下那条白色刻线。白线标着规定负载下的最大安全挠度，重开后每次越线都由舞台工记录。"
+      "咖啡店原定周六早上开放九折预订优惠。周五收店前，安澜用可重复使用的测试优惠码新建空购物车，加入三杯同款饮品，每杯€8。测试规则明确没有税、运费或其他附加费，九折作用于整行小计，因此€24.00应减€2.40，结账总额应是€21.60；页面却显示€23.20。",
+      "店主先不开放优惠入口。安澜把购物车完全清空，重新加入同样三杯商品，再用同一可重复测试码下单；服务器环境和账号条件保持不变，第二张订单仍是€23.20。她把两张失败订单号订在测试单上，输入条件写在上方。优惠入口还关着，开发者拿到的已不是一句“结账好像不对”，而是照着这张纸就能重新执行的一单。",
+      "她把账算完整：实际€23.20意味着只减了€0.80，比应减的€2.40少€1.60。测试到这里能确定的只是“这一明确条件下，实际结果与规则稳定不符”。测试单停在这里，开发者随后才去检查实现。",
+      "开发者调试后发现代码只对一件€8饮品应用了10%折扣，正好解释€0.80，并修改实现。新版本进入测试环境后，安澜再次从空购物车开始，用原来的三杯和测试码重跑；结果变为€21.60，原故障条件得到确认。",
+      "她随后扩展同一折扣边界：2杯×€8九折应为€14.40，用来检查多件数量是否都被计入；1杯×€8九折应为€7.20，这条路径在旧实现下本来就正确；三杯不用优惠码时应保持€24.00，也是原本正确的路径。后两项作为回归检查，原来的三杯失败条件被永久放进自动测试。",
+      "周六开店前，店主看到测试单上的新€21.60结果，才打开九折优惠入口。安澜把两张€23.20失败单和一张€21.60确认单按时间顺序夹在收银台下，最上面那张自动测试编号贴纸露在外面。"
     ],
     "conceptName": "Software testing and feedback",
     "conceptNameZh": "软件测试与反馈",
     "explanationParagraphs": [
-      "Software testing and feedback reduce delivery risk through evidence at several levels: individual components, their interactions, complete workflows, exceptional conditions, and real operation. Tests cannot prove that a system will never fail; they expose faults under specified conditions and increase confidence. Monitoring, incident records, and corrective feedback after release remain part of the quality cycle. Success in an empty hall says little about simultaneous changes in load, timing, and environment."
+      "Software testing can use static or dynamic techniques to evaluate work products. This article uses dynamic testing: defined inputs produce actual results that are compared with expectations. Debugging locates causes and changes the implementation; confirmation and regression testing follow the fix.",
+      "Here 3×€8=€24, and 10% off gives €24×0.9=€21.60. Two runs instead produce €23.20, a €1.60 discrepancy. Debugging then identifies the one-item discount. After the fix, €14.40 checks the two-item boundary; €7.20 and no-discount €24.00 check previously correct paths."
     ],
     "explanationParagraphsZh": [
-      "软件测试与反馈用不同层次的证据降低交付风险：既检查单个部件，也检查部件组合、完整流程、异常条件和真实运行。测试不能证明系统永远无错，只能在特定条件下发现问题并增加信心；上线后的监测、故障记录和修复反馈同样属于质量循环。空场正常，并不代表负载、时序与环境同时变化时仍然正常。"
+      "软件测试通过静态或动态方式评估工作产品；本篇属于动态测试，用明确输入比较预期与实际。调试负责定位原因和修改实现，修复后再做确认与回归检查。",
+      "本例3×€8=€24，九折为€24×0.9=€21.60，却两次得€23.20，差€1.60；调试才定位只折一杯。修复后2杯€14.40检查同类边界，1杯€7.20和无折€24.00检查原正确路径。"
     ],
-    "mode": "concept-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇用动态测试例说明软件测试与反馈：明确条件下比较预期与实际结果，复现差异后把证据交给调试；修复后再确认原故障，并用回归测试检查原本正确的其他路径。软件测试也包括无需执行代码的静态评审等方式，有限通过不能证明无缺陷。",
+    "moduleZh": {
+      "intro": "让优惠是否上线依赖一组可复现账单，同时严格区分失败证据、调试原因、原故障确认和其他路径回归。",
+      "diagramTitle": "从两张€23.20失败单到可重复执行的回归条件",
+      "diagramSteps": [
+        "在无附加费规则下设3×€8、九折、空购物车，预期€21.60",
+        "重置购物车和可重复测试码后，同条件第二次仍得€23.20",
+        "记录实际只减€0.80、与预期折扣差€1.60，再交给调试",
+        "修复后重跑原三杯条件确认€21.60，并检查2杯€14.40",
+        "用原本正确的1杯€7.20和三杯无折€24.00做回归并保留自动用例"
+      ],
+      "diagramStepNotes": [
+        "测试规则明确排除税、运费和其他收费，避免金额歧义。",
+        "每次从空购物车开始，测试码设计为可重复使用，保证复现条件一致。",
+        "测试只证明差异存在，‘只折一杯’是调试阶段才定位的实现原因。",
+        "数量2属于同一缺陷边界的扩展确认，不冒充原本正确路径。",
+        "数量1折扣和无折订单原本正确，适合检查修复是否破坏既有行为。"
+      ],
+      "mapping": [
+        "两张€23.20订单 → 首次发现与一次同条件复现。",
+        "€0.80与€2.40 → 实际折扣和规则预期之间的可核差异。",
+        "€21.60确认单 → 修复后原故障条件重新执行的结果。",
+        "自动测试编号 → 失败条件被留下供以后重复反馈。"
+      ],
+      "boundary": "应用、价格和故障均为虚构场景。本篇展示动态测试，但软件测试还包括静态评审和分析。有限测试不能证明不存在其他缺陷；不同配置、并发、网络或生产环境仍可能产生新问题。确认测试与回归测试目的不同。",
+      "reflection": "为什么两张同条件€23.20订单已经足以建立一个可复现失败，却仍必须等调试后才能说“原因是只给一杯打折”？"
+    },
+    "referencesZh": [
+      {
+        "id": "dijkstra-ewd249",
+        "citation": "Dijkstra, E. W. (1970). Notes on Structured Programming (EWD249), second edition, April 1970.",
+        "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD249/EWD249.html",
+        "use": "支持测试可以揭示缺陷存在、但有限测试不能证明缺陷不存在这一重要边界；不把该报告视为全部现代测试方法的唯一来源。"
+      },
+      {
+        "id": "istqb-ctfl401",
+        "citation": "ISTQB (2024). Certified Tester Foundation Level Syllabus, v4.0.1, September 15, 2024, sections 1.1–1.3 and 2.2.3.",
+        "url": "https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf",
+        "use": "支持区分测试与调试，并支持修复后的确认测试、回归测试和有限测试边界等现代实践。"
+      }
+    ],
+    "overall": "Software testing and feedback use defined expectations and observed results to evaluate software and feed evidence into debugging and change. This article uses a dynamic test example: after reproducing the discrepancy, debugging identifies the cause, confirmation checks the original failure after the fix, and regression checks previously correct paths. Software testing also includes static reviews and analyses that do not execute code, and finite passing tests cannot prove the absence of defects.",
+    "module": {
+      "intro": "Make promotion release depend on a reproducible bill, while keeping failure evidence, debugging cause, original-failure confirmation, and regression of existing behavior distinct.",
+      "diagramTitle": "How Two €23.20 Failure Orders Become a Reusable Regression Condition",
+      "diagramSteps": [
+        "With no additional fees, define 3×€8, a 10%-off code, and an empty cart, expecting €21.60",
+        "Reset the cart and reusable test code, then reproduce €23.20 under the same conditions",
+        "Record that the actual discount is only €0.80, €1.60 below the expected discount, then hand the evidence to debugging",
+        "After the fix, rerun the original three-drink condition to confirm €21.60 and check two drinks at €14.40",
+        "Use the previously correct one-drink €7.20 and three-drink no-discount €24.00 paths for regression and retain the automated failure case"
+      ],
+      "diagramStepNotes": [
+        "The test rule explicitly excludes tax, delivery, and other charges so the amount is unambiguous.",
+        "Every run starts from an empty cart and uses a test code designed for reuse, preserving the reproduction conditions.",
+        "Testing establishes the discrepancy; the one-item-only discount is an implementation cause found later during debugging.",
+        "Quantity two extends confirmation across the same defect boundary rather than pretending it was a previously correct path.",
+        "The one-item discount and no-discount order were previously correct and therefore serve as regression checks."
+      ],
+      "mapping": [
+        "Two €23.20 orders → the initial failure and one same-condition reproduction.",
+        "€0.80 versus €2.40 → the checkable gap between actual and expected discount.",
+        "€21.60 confirmation order → rerunning the original failure condition after the fix.",
+        "Automated-test ID → the failed condition retained for future repeated feedback."
+      ],
+      "boundary": "The application, prices, and defect are fictional. This article illustrates dynamic testing, while software testing also includes static review and analysis. Finite testing cannot prove that no other defects exist, and different configurations, concurrency, networks, or production conditions can expose other problems. Confirmation testing and regression testing serve different purposes.",
+      "reflection": "Why are two same-condition €23.20 orders enough to establish a reproducible failure, yet still insufficient to say that the cause is “only one drink receives the discount” until debugging occurs?"
+    },
+    "references": [
+      {
+        "id": "dijkstra-ewd249",
+        "citation": "Dijkstra, E. W. (1970). Notes on Structured Programming (EWD249), second edition, April 1970.",
+        "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD249/EWD249.html",
+        "use": "Supports the important boundary that testing can reveal the presence of defects while finite testing cannot prove their absence; the report is not treated as the sole origin of all modern testing methods."
+      },
+      {
+        "id": "istqb-ctfl401",
+        "citation": "ISTQB (2024). Certified Tester Foundation Level Syllabus, v4.0.1, September 15, 2024, sections 1.1–1.3 and 2.2.3.",
+        "url": "https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf",
+        "use": "Supports distinguishing testing from debugging and supports modern practices around confirmation testing, regression testing, and the limits of finite testing."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "statistics-ict-mixed-18-pdc-review.md",
+      "edits": [
+        "statistics-ict-mixed-18-edit-pass1-evidence.json",
+        "statistics-ict-mixed-18-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "statistics-ict-mixed-18-round3-minor-edit.json",
+      "execution": "One local editor applying13perspectives; four actual ordinaryChatGPT writer stages are separately evidenced."
     },
     "collection": "field-core-fables",
-    "storyBody": "Before the harvest festival, the theatre built a stage that could change its own scenery. The manager promised the governor that opening night would not contain a single dark pause. Carpenters had raised the curtain, lifted the bridge, and opened the trapdoor separately; each worked smoothly. The stage master asked for one complete run with actors in costume, but the manager would not give up the daytime rehearsals for which he was selling tickets. The contract penalty for a delay was large, so every hour spent on a full rehearsal looked like lost revenue.\n\nHeavy rain fell on opening night. The actor playing the knight rushed onto the bridge in a cloak soaked with water just as the backstage bell signalled a change of scene. The bridge moved a moment more slowly than it had when empty, but the curtain fell on time and wrapped itself around the knight's raised lance. Hearing a second bell, the trapdoor operator assumed the first act was over and pulled his lever as well.\n\nThe knight fell into a padded compartment and escaped serious injury. His falling lance struck the scenery, however, and covered the front row in dust. The governor left amid coughing, and tickets for the remaining three performances were refunded. Alone on the empty stage, the manager pulled every mechanism again. Once again, each worked perfectly. The apparent success of isolated checks now became evidence of what had not been tested: load, ordering, timing, and weather together.\n\nThe owner pulled down the sold-out weekend sign, kept the actors on pay, and turned the dark stage over to systematic tests. They wrote expected outcomes before each run, reproduced the wet-cloak failure, and kept a regression set so a repaired bridge could not silently break the trapdoor sequence. A test environment copied the stage configuration closely enough to expose timing, while opening-night monitoring watched conditions no rehearsal could exhaust.\n\nThe actors, carpenters, and stage master all stayed for the repairs. They first loaded each mechanism with the heaviest prop, then tried actions that could occur at the same time. Someone deliberately rang a bell late; someone else soaked the cloak. After reopening, every fault and near miss was written in a small backstage book and addressed before the next day's rehearsal. Unit checks, integrations, full dress runs, and deliberate fault cases found different defects. No passing list was treated as proof of permanent safety. Every escaped defect became a new reproducible case rather than a reason to blame the last operator.\n\nBefore the premiere of the next play, the manager poured a bucket of water over the spare cloak himself. When the dripping knight stepped onto the bridge, he did not look to see whether every seat had sold. He watched the white load mark beneath the bridge. The white line marked the maximum safe deflection under the specified load, and a stagehand logged every crossing after reopening.",
-    "storyBodyZh": "丰收节前，剧院造了一座会自己换景的舞台。班主答应总督，开幕夜绝不让观众等一次黑场。木匠分别拉过幕布、升过吊桥、开过活板门，每样都顺利。舞台师请求让演员穿戏服完整走一遍，班主却舍不得停掉白天的卖票彩排。委约对延期开幕罚得很重，因此每用一小时完整排练，看起来都像在丢掉收入。\n\n开幕当晚下起大雨。扮骑士的演员披着吸满水的斗篷冲上吊桥，后台同时敲响换景铃。桥比空载时慢了一瞬，幕布却照旧落下，正好缠住骑士举起的长枪。负责活板门的人听见第二声铃，以为第一幕已经结束，也拉下了手柄。\n\n骑士跌进铺着软垫的暗格，没受重伤；倒下的长枪却撞翻布景，台下第一排被灰尘盖住。总督在咳嗽声中离席，余下三场演出全部退票。班主站在空台上反复拉动机关，它们又一次次完美运行。单件检查的成功此时反而指出未被测试之处：负载、先后、时序与天气从未一起出现。\n\n班主扯下周末售罄的牌子，照付演员工资，把漆黑舞台交给系统测试。众人每次先写预期，再重现湿斗篷故障，并保留回归测试，避免修好吊桥却悄悄破坏活板门时序。测试场景尽量复制真实配置以暴露时序，开幕后的监测则继续观察排练无法穷尽的条件。\n\n修台时，演员、木匠和舞台师都留下来。他们先让每件机关单独承受最重的道具，再把会同时发生的动作连起来试；有人故意晚敲一声铃，有人往斗篷上泼水。重开以后，每场故障和险情都记在后台小册上，第二天排演前先处理。单件、组合、全流程与故意注入故障的测试各自发现不同问题；任何通过清单都不能证明舞台永远安全。每个漏网故障都变成可复现的新用例，而非责怪最后操作者的理由。\n\n新戏首演前，班主亲手把一桶水倒在备用斗篷上。湿漉漉的骑士踏上吊桥时，他没有去看座位卖满没有，只盯着桥下那条白色刻线。白线标着规定负载下的最大安全挠度，重开后每次越线都由舞台工记录。",
-    "explanation": "Software testing and feedback reduce delivery risk through evidence at several levels: individual components, their interactions, complete workflows, exceptional conditions, and real operation. Tests cannot prove that a system will never fail; they expose faults under specified conditions and increase confidence. Monitoring, incident records, and corrective feedback after release remain part of the quality cycle. Success in an empty hall says little about simultaneous changes in load, timing, and environment.",
-    "explanationZh": "软件测试与反馈用不同层次的证据降低交付风险：既检查单个部件，也检查部件组合、完整流程、异常条件和真实运行。测试不能证明系统永远无错，只能在特定条件下发现问题并增加信心；上线后的监测、故障记录和修复反馈同样属于质量循环。空场正常，并不代表负载、时序与环境同时变化时仍然正常。"
+    "storyBody": "The coffee shop plans to open a 10%-off preorder promotion on Saturday morning. Before closing on Friday, An Lan starts with an empty cart under a reusable test promotion code and adds three identical drinks at €8 each. The test rule explicitly excludes tax, delivery, and any other fee, and the discount applies to the entire line subtotal. €24.00 should therefore receive a €2.40 discount and produce a total of €21.60, but the checkout page shows €23.20.\n\nThe owner keeps the promotion entry closed. An Lan empties the cart completely, adds the same three drinks, and orders again with the same reusable test code. The server environment and account conditions remain unchanged, and the second order again shows €23.20. She attaches both failed order IDs to the test sheet, with the input conditions above them. The promotion remains closed. What the developer receives is no longer “checkout seems wrong,” but an order that can be rerun by following the sheet.\n\nShe writes the arithmetic out completely. An actual total of €23.20 means only €0.80 was discounted, which is €1.60 less than the expected €2.40 discount. At this point, the test establishes only that the actual result repeatedly disagrees with the rule under these conditions. The test sheet stops there, and only then does the developer inspect the implementation.\n\nDuring debugging, the developer finds that the code applies the 10% discount to only one €8 drink, exactly accounting for the €0.80 reduction, and changes the implementation. After the new version reaches the test environment, An Lan does not inspect the code; she starts again from an empty cart and reruns the original three-drink case with the test code. The result is now €21.60, confirming the original failure condition no longer appears.\n\nShe then expands the same discount boundary. Two €8 drinks at 10% off should be €14.40, checking whether multiple quantities are all included. One €8 drink at 10% off should be €7.20; that path had already been correct under the old implementation. Three drinks without a promotion code should remain €24.00 and had also been correct before. Those latter two become regression checks, while the original three-drink failure is permanently added to the automated suite.\n\nBefore opening on Saturday, the owner sees the new €21.60 result on the test sheet and only then enables the promotion entry. An Lan clips the two €23.20 failure orders and the €21.60 confirmation order beneath the register in time order, with the automated-test ID label still visible at the top.",
+    "storyBodyZh": "咖啡店原定周六早上开放九折预订优惠。周五收店前，安澜用可重复使用的测试优惠码新建空购物车，加入三杯同款饮品，每杯€8。测试规则明确没有税、运费或其他附加费，九折作用于整行小计，因此€24.00应减€2.40，结账总额应是€21.60；页面却显示€23.20。\n\n店主先不开放优惠入口。安澜把购物车完全清空，重新加入同样三杯商品，再用同一可重复测试码下单；服务器环境和账号条件保持不变，第二张订单仍是€23.20。她把两张失败订单号订在测试单上，输入条件写在上方。优惠入口还关着，开发者拿到的已不是一句“结账好像不对”，而是照着这张纸就能重新执行的一单。\n\n她把账算完整：实际€23.20意味着只减了€0.80，比应减的€2.40少€1.60。测试到这里能确定的只是“这一明确条件下，实际结果与规则稳定不符”。测试单停在这里，开发者随后才去检查实现。\n\n开发者调试后发现代码只对一件€8饮品应用了10%折扣，正好解释€0.80，并修改实现。新版本进入测试环境后，安澜再次从空购物车开始，用原来的三杯和测试码重跑；结果变为€21.60，原故障条件得到确认。\n\n她随后扩展同一折扣边界：2杯×€8九折应为€14.40，用来检查多件数量是否都被计入；1杯×€8九折应为€7.20，这条路径在旧实现下本来就正确；三杯不用优惠码时应保持€24.00，也是原本正确的路径。后两项作为回归检查，原来的三杯失败条件被永久放进自动测试。\n\n周六开店前，店主看到测试单上的新€21.60结果，才打开九折优惠入口。安澜把两张€23.20失败单和一张€21.60确认单按时间顺序夹在收银台下，最上面那张自动测试编号贴纸露在外面。",
+    "explanation": "Software testing can use static or dynamic techniques to evaluate work products. This article uses dynamic testing: defined inputs produce actual results that are compared with expectations. Debugging locates causes and changes the implementation; confirmation and regression testing follow the fix.\n\nHere 3×€8=€24, and 10% off gives €24×0.9=€21.60. Two runs instead produce €23.20, a €1.60 discrepancy. Debugging then identifies the one-item discount. After the fix, €14.40 checks the two-item boundary; €7.20 and no-discount €24.00 check previously correct paths.",
+    "explanationZh": "软件测试通过静态或动态方式评估工作产品；本篇属于动态测试，用明确输入比较预期与实际。调试负责定位原因和修改实现，修复后再做确认与回归检查。\n\n本例3×€8=€24，九折为€24×0.9=€21.60，却两次得€23.20，差€1.60；调试才定位只折一杯。修复后2杯€14.40检查同类边界，1杯€7.20和无折€24.00检查原正确路径。"
   },
   {
     "id": "0613-computational-complexity",

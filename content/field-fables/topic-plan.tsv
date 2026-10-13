@@ -117,16 +117,16 @@ batch-008	05	0541	Mathematics	数学	1	0541-invariance	Invariance	不变量	mech
 batch-008	05	0541	Mathematics	数学	2	0541-proof-by-contradiction	Proof by contradiction	反证法	mechanism-explainer	制图师暂时相信一张不可能存在的完整假地图	integrated
 batch-008	05	0541	Mathematics	数学	3	0541-mathematical-induction	Mathematical induction	数学归纳法	mechanism-explainer	只检查第一阶和相邻阶就证明整座灯塔楼梯	integrated
 batch-008	05	0542	Statistics	统计学	1	0542-sampling-bias	Sampling bias	抽样偏差	mechanism-explainer	只询问能穿过高门的人便得出全城身高	integrated
-batch-008	05	0542	Statistics	统计学	2	0542-regression-to-the-mean	Regression to the mean	均值回归	concept-fable	最佳一炉面包之后奖励与惩罚都被误认成原因	integrated
+batch-008	05	0542	Statistics	统计学	2	0542-regression-to-the-mean	Regression to the mean	均值回归	mechanism-explainer	最佳一炉面包之后奖励与惩罚都被误认成原因	integrated
 batch-008	05	0542	Statistics	统计学	3	0542-bayesian-updating	Bayesian updating	贝叶斯更新	mechanism-explainer	灯塔守望员让每条新线索改写而非抹掉旧判断	integrated
-batch-009	06	0611	Computer use	计算机使用	1	0611-mental-models	Mental models in human-computer interaction	人机交互中的心智模型	concept-fable	按钮标着保存却像投递口一样吞掉文件的机器	integrated
+batch-009	06	0611	Computer use	计算机使用	1	0611-mental-models	Mental models in human-computer interaction	人机交互中的心智模型	lens-fable	按钮标着保存却像投递口一样吞掉文件的机器	integrated
 batch-009	06	0611	Computer use	计算机使用	2	0611-file-hierarchy	Hierarchical information organization	层级化信息组织	mechanism-fable	所有卷宗都放在桌面的数字档案馆	integrated
-batch-009	06	0611	Computer use	计算机使用	3	0611-least-privilege	Principle of least privilege	最小权限原则	concept-fable	每位新职员都拿到整座城全部钥匙的办公室	integrated
+batch-009	06	0611	Computer use	计算机使用	3	0611-least-privilege	Principle of least privilege	最小权限原则	mechanism-explainer	每位新职员都拿到整座城全部钥匙的办公室	integrated
 batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	1	0612-database-normalization	Database normalization	数据库规范化	mechanism-fable	地址改一次却要在七本名册同步的城市	integrated
 batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	2	0612-distributed-consensus	Distributed consensus	分布式共识	mechanism-fable	没有中央钟塔的群岛必须认定同一班船已出发	integrated
 batch-009	06	0612	Database and network design and administration	数据库与网络设计及管理	3	0612-defense-in-depth	Defense in depth	纵深防御	concept-fable	只依赖一道无比坚固城门的数据城	integrated
-batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	1	0613-modularity	Modularity	模块化	concept-fable	换一只木偶就必须重建整个剧场的机关师	integrated
-batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	2	0613-software-testing	Software testing and feedback	软件测试与反馈	concept-fable	只在开幕夜第一次承重的自动舞台	integrated
+batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	1	0613-modularity	Modularity	模块化	mechanism-explainer	换一只木偶就必须重建整个剧场的机关师	integrated
+batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	2	0613-software-testing	Software testing and feedback	软件测试与反馈	mechanism-explainer	只在开幕夜第一次承重的自动舞台	integrated
 batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	3	0613-computational-complexity	Computational complexity	计算复杂度	mechanism-fable	藏书翻倍后查找时间增长远超一倍的图书馆	integrated
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	1	0711-mass-balance	Mass balance	物料衡算	mechanism-fable	染坊每天少掉的蓝色必须在产品、废水或管壁出现	integrated
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	2	0711-residence-time	Residence time	停留时间	mechanism-fable	配方相同却因流过管道太快而没有完成的发酵液	integrated
