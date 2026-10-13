@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "mapkai-video-continuation-confirmation.v1",
+  "confirmedAt": "2026-10-13T15:29:29.835918+00:00",
+  "automationId": "mapkai-30",
+  "automationStatus": "ACTIVE",
+  "timezone": "Europe/Amsterdam",
+  "minuteOfHour": 30,
+  "firstUpcomingRoundLocal": "2026-10-13T17:30:00+02:00",
+  "nextCandidate": {
+    "code": "0113",
+    "title": "Teacher training without subject specialisation",
+    "slug": "0113-teacher-training-without-subject-specialisation",
+    "state": "EDITORIAL_PENDING"
+  },
+  "userInstruction": "可以，继续下一个学科的视频，还是每小时30分开始，生成完直接放上去，标注和之前一样。",
+  "publicLabels": [
+    "AI generated",
+    "Pending review · Not fully approved"
+  ],
+  "publicMode": "PUBLIC_PREVIEW_PENDING_REVIEW",
+  "formalApproval": "PENDING",
+  "automationPromptSha256": "7619b295293df558e51475c96f6475dc5d521a97f04862b50a90803ee3015fca",
+  "currentlySharedWriterOccupied": true,
+  "sharedOwnerSnapshot": {
+    "owner": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+    "run": "heartbeat-20261013T150314Z",
+    "productionBatch": "statistics-ict-mixed-18",
+    "ids": [
+      "0542-regression-to-the-mean",
+      "0611-mental-models",
+      "0611-least-privilege",
+      "0612-defense-in-depth",
+      "0613-modularity",
+      "0613-software-testing"
+    ],
+    "conversation": "https://chatgpt.com/c/6abc17e2-5da0-83eb-bae4-06329508f8ab",
+    "lastStage": "story_requested",
+    "updatedAt": "2026-10-13T15:23:01.464188+00:00",
+    "activeExecution": true
+  },
+  "sharedOwnerActualStatus": "ACTIVE_IN_PROGRESS verified through wait_threads",
+  "newNotebookSubmissionsThisTurn": 0,
+  "newSubjectClaimedThisTurn": false,
+  "noCatchUp": true,
+  "handoff": "Keep0113 queued for the next30-minute round. Before claiming, verify actual owner completion and current resources; never take over by lock age. Existing0112 public preview is complete; do not regenerate it."
+}
