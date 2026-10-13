@@ -4,6 +4,7 @@ import { CANONICAL_MAJOR_FIELDS } from './_major-fields.js';
 export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   ...CANONICAL_MAJOR_FIELDS,
   '0031': 'Personal skills and development',
+  '0111': 'Education science',
   '0542': 'Statistics',
 });
 
