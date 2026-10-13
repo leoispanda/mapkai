@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "mapkai-hourly-video-preflight.v1",
+  "automationId": "mapkai-30",
+  "heartbeatTrigger": "2026-10-13T18:27:48.312Z",
+  "scheduledLocal": "2026-10-13T20:30:00+02:00",
+  "earlyWakeReadOnlyUntilScheduledMinute": true,
+  "checkedAt": "2026-10-13T18:32:05.365164+00:00",
+  "decision": "DEFERRED_SHARED_ARTICLE_RESOURCE_BUSY",
+  "candidate": {
+    "code": "0114",
+    "title": "Teacher training with subject specialisation",
+    "slug": "0114-teacher-training-with-subject-specialisation",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317",
+    "status": "EDITORIAL_PENDING"
+  },
+  "candidateClaimed": false,
+  "newNotebookSubmissions": 0,
+  "newModelSends": 0,
+  "downloads": 0,
+  "uploads": 0,
+  "publications": 0,
+  "sharedLocks": [
+    {
+      "path": "review/module-batches/locks/shared-writer-release.lock",
+      "type": "directory",
+      "ownerFile": "review/module-batches/locks/shared-writer-release.lock/owner.json",
+      "owner": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+      "run": "heartbeat-20261013T175548Z",
+      "productionBatch": "ict-engineering-mechanism-19",
+      "lastStage": "english_saved",
+      "updatedAt": "2026-10-13T18:29:39.807287+00:00"
+    },
+    {
+      "path": "review/module-batches/.shared-writer-release.lock",
+      "type": "directory",
+      "ownerFile": "review/module-batches/.shared-writer-release.lock/owner.json",
+      "owner": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+      "run": "heartbeat-20261013T175548Z",
+      "productionBatch": "ict-engineering-mechanism-19",
+      "lastStage": "english_saved",
+      "updatedAt": "2026-10-13T18:29:39.807287+00:00"
+    }
+  ],
+  "actualArticleExecution": {
+    "owner": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+    "run": "heartbeat-20261013T175548Z",
+    "productionBatch": "ict-engineering-mechanism-19",
+    "stage": "english_saved",
+    "activeExecution": true,
+    "resourceState": "owned",
+    "updatedAt": "2026-10-13T18:29:39.807287+00:00"
+  },
+  "articleOwnerTurn": "01a13668-01bd-7bb2-b07d-7121e8599f18",
+  "articleOwnerActuallyActive": true,
+  "songOwnerActuallyIdle": true,
+  "videoProductionLockPresent": false,
+  "legacyVideoSharedMarkerPresent": false,
+  "legacyVideoMarkerDoesNotRepresentArticleSharedResource": true,
+  "canonicalManifestSha256": "554f64dfd802d656c76996abb961f99345d8e14dfe633768f4a6030b830e839b",
+  "allManifestItemsPreserved": 77,
+  "publicPreviewsSkipped": [
+    "0542",
+    "0031",
+    "0111",
+    "0112",
+    "0113"
+  ],
+  "holdsPreserved": [
+    "0011",
+    "0021"
+  ],
+  "lastActualNotebookSubmitUtc": "2026-10-13T17:17:02.170Z",
+  "liveQuotaProbe": "NOT_ATTEMPTED_WHILE_SHARED_RESOURCE_BUSY; no stale quota/capability assumed available",
+  "humanActionRequired": false,
+  "nextScheduledLocal": "2026-10-13T21:30:00+02:00",
+  "nextAction": "Recheck both actual article shared lock directories, owner state and current quota at the next eligible :30 slot. Claim 0114 only after all actual shared resources are free. No catch-up or duplicate generation.",
+  "automationUpdate": "Actual shared lock paths and directory owner.json verification now explicit; hourly :30 and all authorizations unchanged.",
+  "gitPublication": "NO_COMMIT_OR_PUSH_WHILE_FOREIGN_SHARED_RELEASE_OWNER_ACTIVE"
+}

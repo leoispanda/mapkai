@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "mapkai-video-preflight-check.v1",
+  "automationId": "mapkai-30",
+  "triggerUtc": "2026-10-13T20:58:22.473Z",
+  "checkedAt": "2026-10-13T21:01:23.311228+00:00",
+  "eligibleObservationAt": "2026-10-13T21:00:15.579824+00:00",
+  "scheduledLocal": "2026-10-13T23:00:00+02:00",
+  "timezone": "Europe/Amsterdam",
+  "cadence": "ODD_LOCAL_HOURS_AT_MINUTE_ZERO",
+  "decision": "DEFERRED_SHARED_SONG_RESOURCE_BUSY",
+  "candidate": {
+    "code": "0114",
+    "title": "Teacher training with subject specialisation",
+    "slug": "0114-teacher-training-with-subject-specialisation",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317",
+    "status": "EDITORIAL_PENDING",
+    "stage": "EDITORIAL_PENDING"
+  },
+  "candidateClaimed": false,
+  "videoProductionLockPresent": false,
+  "factoryLockPresent": false,
+  "sharedResourceBusy": true,
+  "resourceOwner": {
+    "runId": "song-even-20261013T2200-1b3f6a9b",
+    "ownerThreadId": "01a12c71-b2b6-7ca2-9350-b6550c672494",
+    "activeExecution": true,
+    "formatVersion": "life-to-discipline.v1",
+    "purpose": "Three new-format concept song recordings and paired delivery",
+    "startedAt": "2026-10-13T20:23:40.007621+00:00"
+  },
+  "ownerThreadStatus": "active",
+  "ownerTurnStatus": "inProgress",
+  "ownerTurnId": "01a136e2-ba26-7210-8d86-5346e2e27677",
+  "articleThreadStatus": "idle",
+  "articleTurnStatus": "completed",
+  "actualSharedLockPaths": [
+    "review/module-batches/locks/shared-writer-release.lock",
+    "review/module-batches/.shared-writer-release.lock"
+  ],
+  "locksPreserved": true,
+  "manifestItemCount": 77,
+  "manifestSha256": "554f64dfd802d656c76996abb961f99345d8e14dfe633768f4a6030b830e839b",
+  "manifestUnchanged": true,
+  "skipExistingPublic": [
+    "0542",
+    "0031",
+    "0111",
+    "0112",
+    "0113"
+  ],
+  "actualPublicSubsubjectReceipts": [
+    "0031",
+    "0111",
+    "0112",
+    "0113",
+    "0542"
+  ],
+  "preserveHolds": [
+    "0011",
+    "0021"
+  ],
+  "lastActualNotebookSubmitUtc": "2026-10-13T17:17:02.170Z",
+  "newNotebookSubmissions": 0,
+  "modelRequests": 0,
+  "downloads": 0,
+  "uploads": 0,
+  "publications": 0,
+  "privateEvidencePath": ".workspace-backups/video-factory-preflight-20261013T2100/preflight.json",
+  "verifiedExistingReceiptHashes": [
+    {
+      "path": "review/video-factory-hourly-20261012/public-preview-0113.json",
+      "sha256": "40d15b89162aaf03ca574310983c277805cb531663f819a5006e3da6910a8279"
+    },
+    {
+      "path": ".workspace-backups/video-factory-0113-delivery-20261013/public-catalog-complete.json",
+      "sha256": "54a8dc9bd5762a66eb4e8caf39618bca6b70d7f34ace66cdd6379e5dfa0f3201"
+    },
+    {
+      "path": ".workspace-backups/video-factory-0113-delivery-20261013/public-browser-proof.json",
+      "sha256": "c38af09b3c5a688386ce9861add5dd87ad99d9d81258f86fc7817ab387264e88"
+    },
+    {
+      "path": "mapkai-video-factory/runtime/notebook/0113-d94a133f-a952-4ac7-a06f-f8b9b44e17d5/result.json",
+      "sha256": "26ab26a66533be168c734df8046c8dbf37966e940e8d62a8f7ca80d69891e3b9"
+    }
+  ],
+  "nextScheduledLocal": "2026-10-14T01:00:00+02:00",
+  "humanActionRequired": false,
+  "gitPublicationDeferred": "Foreign song task owns actual shared release resource; no Git commit or push attempted."
+}

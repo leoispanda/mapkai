@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "mapkai-video-schedule-change.v1",
+  "automationId": "mapkai-30",
+  "changedAt": "2026-10-13T19:29:59.001000+00:00",
+  "request": "以后改为单数小时 的整点做这个",
+  "timezone": "Europe/Amsterdam",
+  "status": "ACTIVE",
+  "hourSlots": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23
+  ],
+  "minute": 0,
+  "second": 0,
+  "nextScheduledLocal": "2026-10-13T23:00:00+02:00",
+  "actualAutomationReadBackVerified": true,
+  "targetThreadUnchanged": true,
+  "generationAndPublicPreviewAuthorizationUnchanged": true,
+  "publicLabels": [
+    "AI generated",
+    "Pending review · Not fully approved"
+  ],
+  "canonicalNextCandidate": {
+    "code": "0114",
+    "title": "Teacher training with subject specialisation",
+    "slug": "0114-teacher-training-with-subject-specialisation",
+    "state": "EDITORIAL_PENDING"
+  },
+  "manifestUnchanged": true,
+  "newNotebookSubmissions": 0,
+  "receiptBackupPath": ".workspace-backups/video-factory-schedule-odd-hours-20261013T192959Z",
+  "publicationPolicy": "Existing genuine source/video review status preserved; completion remains a marked public preview."
+}
