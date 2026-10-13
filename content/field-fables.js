@@ -14356,47 +14356,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0522",
     "fieldTitle": "Natural environments and wildlife",
     "fieldTitleZh": "自然环境与野生生物",
-    "title": "After the River Lost Its Hunters",
-    "titleZh": "河流失去猎手以后",
-    "summary": "A reservoir removes predatory fish to satisfy anglers, and changes then travel through minnows, grazers, algae and water clarity.",
-    "summaryZh": "水库为满足钓客清除捕食鱼，变化随后经过小鱼、浮游摄食者、藻类一路传到水体透明度。",
-    "storyParagraphs": [
-      "Reservoir keeper Oren needed more fishing permits to repair the west dam. Anglers complained that large pike took hooked fish and left too few small silver minnows near shore. Oren paid crews to net out most adult pike before spring. The first month pleased everyone: minnow catches nearly doubled, children filled buckets at the pier, and permit sales funded new stone. Oren hung one of the pike nets above his office and wrote the higher catch beneath it.",
-      "By early summer, minnow surveys rose from about forty to ninety fish per standard haul. Stomach samples showed that many fed on large zooplankton, the small animals that grazed suspended algae. Zooplankton counts then fell. With fewer grazers removing cells, phytoplankton increased and Oren's black-and-white clarity disk disappeared at one metre instead of three. He first blamed muddy swimmers because the change had begun near the busy shore, and he restricted bathing without replacing the pike.",
-      "The water remained green after the beach closed. Light no longer reached some submerged plant beds, which thinned and released sediment more easily during wind. Night-time oxygen dropped when abundant organic matter was respired and decomposed, and two cages of stocked fish died during a hot calm spell. The sequence had crossed several feeding levels: fewer predators, more planktivorous fish, fewer grazers, more algae, less light. No organism had intended the final water colour, and not every pike, minnow or grazer ate the same prey at every age.",
-      "Before the holiday weekend, a drum of algaecide arrived with a promise of clear surface water. Oren left its seal intact. The chemical could leave decomposing biomass and would not repair the altered food web. He closed fishing for six weeks, reintroduced pike from an upstream refuge under a fisheries plan and funded buffer strips beside two drainage ditches. The closure delayed dam repairs, reduced permit income and angered anglers who had asked him to remove the predators.",
-      "Minnow numbers declined the next season, large zooplankton became more common and the disk could be seen at nearly two metres. Water did not return instantly or solely because of pike: nutrient inflow, temperature, plant recovery and weather still mattered. The keeper kept measuring all of them. In one shallow arm, pike had little effect because vegetation sheltered minnows; in open water, the response was stronger. The chain depended on species, habitat and interaction strength rather than a universal number of feeding levels.",
-      "Oren cut the old pike net into a narrow sling for the clarity disk. Each week the same cords that had lifted predators from the reservoir now lowered the black-and-white circle through green water. On the office wall, the minnow tally remained beside every depth reading."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "清洁单停在了三只网笼",
+    "summaryZh": "苗圃开放前，林岑想把展示网笼整理得更清爽。六笼先接受相同的标签清洁与开笼处理，再随机选三笼把蜘蛛由10只减到5只；五天后，食叶毛虫和叶面积损失同时升高，她因此停止继续移蜘蛛。",
     "storyParagraphsZh": [
-      "水库管理员奥伦需要多卖钓鱼证，修补西侧坝体。钓客抱怨大狗鱼会抢走上钩小鱼，使岸边银色小鱼太少。春季前，奥伦付钱让船队捕走大部分成年狗鱼。第一个月人人满意：标准小鱼捕量近乎翻倍，孩子在码头装满水桶，新增证费也换来修坝石料。奥伦把一张狗鱼网挂在办公室上方，在下面写下增长的收获。",
-      "初夏，标准拖网中的小鱼从约四十条增到九十条。胃含物样本显示，许多小鱼摄食大型浮游动物，而后者原本会取食悬浮藻类。随后浮游动物计数下降，清除藻细胞的摄食者减少，浮游植物增多。奥伦用来测透明度的黑白圆盘，从能见三米变成一米便消失。他先怪岸边游泳者搅泥，关闭浴场，却没有恢复狗鱼。",
-      "浴场关闭后，水仍是绿色。光照不到部分水下植物床，植被变稀，起风时泥沙也更容易扬起；有机物大量呼吸与分解，使平静热夜的水中氧下降，两笼养鱼随之死亡。变化越过数个摄食层次：捕食者减少，小型食浮游动物鱼增加，大型摄食者减少，藻类上升，光线下降。没有哪种生物意图制造最终水色，不同年龄的狗鱼、小鱼和浮游动物也不会永远吃同一种食物。",
-      "假日前，一桶除藻剂送到码头，桶签许诺很快还原清亮水面。奥伦没有拆封；药剂可能留下继续分解的生物量，也修补不了已经改变的食物关系。他关闭六周捕捞，按渔业方案从上游庇护区引回狗鱼，又资助两条排水沟建设缓冲带。封闭让证费减少、大坝修理延期，也激怒了那些曾要求清除捕食鱼的钓客。",
-      "下一季，小鱼数量下降，大型浮游动物增多，圆盘接近两米仍可看见。水质并非立刻恢复，也不能全归给狗鱼；养分输入、温度、植物恢复和天气仍在作用，管理员继续同时测量。一个浅水湾里，浓密植被替小鱼提供躲藏，狗鱼影响较弱；开阔水面反应更强。这条变化链取决于物种、栖息地和相互作用强度，并无通用于所有地方的层级数目。",
-      "奥伦把旧狗鱼网裁成一条窄吊带，用来系黑白圆盘。每周，曾把捕食者拉出水面的绳索都会把圆盘重新放进绿水。办公室墙上，小鱼计数始终与每一次深度读数并排保留。"
+      "苗圃周末要开放参观，林岑先整理六个育苗网笼。蛛网挡住几张标签，她用同一把软刷在六笼都只清掉挡字的蛛丝，开笼时间也尽量一致。原本的下一步是把蜘蛛再清掉一半，好让访客更容易看见叶面上的食叶毛虫。她先在清洁单上只勾了“标签可见”，把“移蜘蛛”留空。",
+      "六笼在育苗架上交错编号，不把处理笼全放在门边。每笼起始都有20只同类食叶毛虫和同样数量、同样大小的幼苗；温度、光照、浇水与网笼尺寸匹配。随机抽出的三笼从10只蜘蛛减到5只，另外三笼也开笼、捕捉同样时长，但蜘蛛随后放回，仍保持10只；操作中不碰毛虫和叶片。处理前，林岑给一批既有叶片编号，拍下完整面积，五天后仍比较这批叶片。",
+      "第五天，林岑先从定时录像里看到蜘蛛会捕食毛虫，毛虫则持续在叶片上取食。随后计数显示：低蜘蛛组三笼的毛虫平均剩17只，10只蜘蛛组三笼平均剩11只。逐笼对照标记叶片的前后照片，以缺损面积占其初始面积的比例估算，低蜘蛛组叶面积损失平均约28%，另一组约14%。她把录像时间点与当天计数一一对上。",
+      "林岑把六笼的温度记录摊在桌上，再逐一对照最初的幼苗表，两组的设置相同，五天内也没添过食物。她按笼号重放录像：蜘蛛捉住毛虫的片段后面，是同笼毛虫停在叶片边缘取食的画面。她给这些片段贴上笼号，连同第五天的计数、叶片前后照片放进同一页，准备继续追踪留下的三笼。",
+      "林岑把还没执行的“继续减蜘蛛”一栏划掉。入口处只修掉挡标签的蛛丝，观察窗旁添了一只放大镜，让访客照样能找毛虫。她把录像截帧、毛虫计数和叶片照片夹在同一块板上，板上各栏按笼号对齐，下次计数的位置仍空着。清洁单上留下了修标签的工作，减蜘蛛的那一栏不再往下勾。",
+      "开放当天，蜘蛛还在枝叶间移动。林岑把移蛛用的小捕捉杯收进柜子，清洁单停在“三笼已减、三笼保留”这一行；夹板上的11、17与14%、28%仍并排压在叶片照片下面。"
     ],
-    "conceptName": "Trophic cascade",
+    "overallZh": "营养级联是一个摄食层的变化通过消费者数量或行为，间接影响更下游资源或群落成员的过程。本篇六笼虚构比较用蜘蛛—食叶毛虫—幼苗链展示这一机制，但只支持该设定下的局部证据链。",
     "conceptNameZh": "营养级联",
-    "explanationParagraphs": [
-      "A trophic cascade occurs when a change at one feeding level indirectly alters organisms or processes at other levels, often through predator effects on consumers and their resources. Cascades may involve abundance or behaviour and can move downward or upward through food webs. Their strength depends on species, habitat, omnivory, refuges, nutrients and other forces, so a predator change should not be treated as the sole cause without evidence."
-    ],
     "explanationParagraphsZh": [
-      "营养级联是某一摄食层的变化，经由捕食者、消费者及其资源间的间接作用，改变其他层级的生物或过程。级联可通过数量或行为发生，也可沿食物网向下或向上传递。其强度受物种、栖息地、杂食、庇护、养分等影响，因此不能缺少证据便把所有变化归给某种捕食者。"
+      "营养级联指一个营养级的变化经两段或更多摄食关系，间接影响其他层级的消费者或资源。本篇追踪蜘蛛→食叶毛虫→叶片；10/5只蜘蛛对应11/17只毛虫与14%/28%叶损，是给定观察。",
+      "这些是虚构观察，不是由10/5直接计算出的必然结果。六笼小比较仍不能排除所有未测因素，也不能证明其他食物网会有同样方向或强度。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先把清蛛丝与移蜘蛛拆开并匹配操作，再沿同一批网笼追踪捕食者、食叶消费者和叶片结果。",
+      "diagramTitle": "三笼减少蜘蛛后，哪两段变化把叶损连了起来",
+      "diagramSteps": [
+        "六笼做相同标签清洁并交错分配处理",
+        "三笼蜘蛛10→5，三笼假处理后仍为10",
+        "用录像确认蜘蛛捕食毛虫、毛虫取食叶片",
+        "比较五天后毛虫11/17与叶损14%/28%",
+        "停止继续移蜘蛛并保留记录作后续基线"
+      ],
+      "diagramStepNotes": [
+        "清蛛丝不是移蜘蛛；六笼都做同类清洁。",
+        "每笼起始20只毛虫，幼苗和环境条件匹配，操作不碰毛虫和叶片。",
+        "行为观察补上捕食者→消费者→植物的具体路径。",
+        "叶损按同一批标记叶片缺损面积/初始面积计算；数值是虚构观察，不由蜘蛛数直接推算。",
+        "小样本仍可能有未测差异，因此不扩大成普遍效应。"
+      ],
+      "mapping": [
+        "软刷与标签 → 与移蜘蛛分开的清洁动作。",
+        "交错编号六笼 → 降低门边/里边位置混杂。",
+        "录像截帧 → 两段摄食关系的可见行为证据。",
+        "捕捉杯收回柜子 → 观察结果真正改变后续处理。"
+      ],
+      "boundary": "六笼均为虚构教学情境。消费者数量在真实生态中还会受温度、食物、疾病、迁移和随机过程影响；条件匹配只能限制部分替代解释。营养级联也不是任意一对捕食关系的同义词。",
+      "reflection": "如果低蜘蛛笼只有叶损更高，却没有毛虫数量和摄食行为记录，哪一段因果链仍然是空的？"
+    },
+    "referencesZh": [
+      {
+        "id": "carpenter-1985",
+        "citation": "Carpenter, S. R., Kitchell, J. F., & Hodgson, J. R. (1985). Cascading Trophic Interactions and Lake Productivity. BioScience, 35(10), 634–639.",
+        "url": "https://spokaneriver.net/wp-content/uploads/2011/03/Carpenter_1985.pdf",
+        "use": "支持捕食者、消费者与资源之间的间接作用机制；本篇网笼物种和数值均为虚构教学设定。"
+      },
+      {
+        "id": "paine-1966",
+        "citation": "Paine, R. T. (1966). Food Web Complexity and Species Diversity. The American Naturalist, 100(910), 65–75.",
+        "url": "https://doi.org/10.1086/282400",
+        "use": "支持捕食者移除可改变群落关系的早期实验思路；不据此宣称所有生态系统都会出现同样层数或方向的响应。"
+      }
+    ],
+    "title": "The Cleaning Checklist Stops at Three Cages",
+    "summary": "Before the nursery opens, Lin Cen wants the display cages to look tidier. All six cages first receive the same label cleaning and cage-opening treatment, then three are randomly selected to reduce spiders from 10 to 5. Five days later, both leaf-eating caterpillar abundance and leaf-area loss are higher, so she stops removing more spiders.",
+    "storyParagraphs": [
+      "The nursery is preparing to open for weekend visitors, and Lin Cen starts by tidying six seedling cages. Spider silk blocks several labels, so she uses the same soft brush in all six cages to remove only the strands covering text and keeps cage-opening time as similar as possible. Her original next step is to remove half the spiders as well, making the leaf-eating caterpillars easier for visitors to see. On the cleaning checklist, she checks only “labels visible” and leaves “remove spiders” blank.",
+      "The six cages are interleaved by number on the seedling rack so that all treatment cages are not clustered near the entrance. Each cage begins with 20 caterpillars of the same type and the same number and size of seedlings; temperature, light, watering, and cage dimensions are matched. Three cages chosen at random are reduced from 10 spiders to 5. The other three are also opened and handled for the same amount of capture time, but their spiders are returned, leaving 10. The handling does not touch caterpillars or leaves. Before treatment, Lin Cen marks a set of existing leaves and photographs their complete area; after five days, she compares those same leaves.",
+      "On the fifth day, Lin Cen first sees in time-lapse footage that spiders prey on caterpillars and that the caterpillars continue feeding on leaves. Counts then show that the three low-spider cages retain an average of 17 caterpillars, while the three cages with 10 spiders retain an average of 11. For every cage, before-and-after photographs of the marked leaves are compared, with loss measured as missing area divided by their initial area: average leaf-area loss is about 28% in the low-spider group and about 14% in the other group. She matches the video time points to the counts from the same day.",
+      "Lin Cen spreads the temperature logs across the table and checks each against the original seedling sheet. The settings match across groups, and no food has been added in five days. She replays the footage by cage number: a spider catching a caterpillar is followed by images of caterpillars feeding at leaf edges in that same cage. She labels the clips by cage and files them with the fifth-day counts and the before-and-after leaf photographs, ready to continue following the three retained cages.",
+      "Lin Cen crosses out the still-unperformed “continue reducing spiders” item. At the entrance, she trims only the silk blocking labels and adds a handheld magnifier beside the viewing window so visitors can still find caterpillars. She clips video stills, caterpillar counts, and leaf photographs to the same board with the columns aligned by cage number and the next count still blank. Label maintenance remains on the cleaning list; she stops checking off further spider removal.",
+      "On opening day, spiders are still moving among the leaves. Lin Cen puts the spider-capture cup back in the cabinet. The cleaning checklist stops at “three cages reduced, three retained,” while 11, 17, 14%, and 28% remain side by side beneath the leaf photographs."
+    ],
+    "overall": "A trophic cascade is a process in which a change at one feeding level indirectly affects resources or community members further downstream through changes in consumer abundance or behavior. This six-cage fictional comparison uses a spider–leaf-eating caterpillar–seedling chain to illustrate the mechanism, but it supports only a local evidence chain under the stated setup.",
+    "conceptName": "Trophic cascade",
+    "explanationParagraphs": [
+      "A trophic cascade is an indirect effect of change at one feeding level on consumers or resources at other levels through two or more feeding relationships. Here the chain is spiders→leaf-eating caterpillars→leaves; the 10/5 spider counts paired with 11/17 caterpillars and 14%/28% leaf loss are given observations.",
+      "These are fictional observations, not inevitable outputs calculated from 10/5. A six-cage comparison still cannot exclude every unmeasured factor or show that other food webs will have the same direction or strength."
+    ],
+    "module": {
+      "intro": "Separate silk cleaning from spider removal and match the handling, then trace predators, leaf-eating consumers, and leaf outcomes within the same cages.",
+      "diagramTitle": "After Spiders Are Reduced in Three Cages, Which Two Links Connect the Change to Leaf Loss?",
+      "diagramSteps": [
+        "Give all six cages the same label cleaning and interleave treatment assignment",
+        "Reduce spiders from 10→5 in three cages; sham-handle the other three and keep 10",
+        "Use video to confirm spiders prey on caterpillars and caterpillars feed on leaves",
+        "Compare caterpillar averages of 11/17 and leaf loss of 14%/28% after five days",
+        "Stop further spider removal and retain the records as a later baseline"
+      ],
+      "diagramStepNotes": [
+        "Removing obstructing silk is not the same intervention as removing spiders; all six cages receive the same type of cleaning.",
+        "Each cage begins with 20 caterpillars; seedlings and environmental conditions are matched, and handling does not touch caterpillars or leaves.",
+        "Behavioral observation supplies the concrete predator→consumer→plant pathway.",
+        "Leaf loss is missing area divided by initial area for the same marked leaves. The numbers are fictional observations, not calculated from spider counts.",
+        "The small comparison may still contain unmeasured differences, so the result is not generalized into a universal effect."
+      ],
+      "mapping": [
+        "Soft brush and labels → a cleaning action kept separate from spider removal.",
+        "Six interleaved cage numbers → reduced entrance-versus-interior position confounding.",
+        "Video stills → visible evidence for the two feeding relationships.",
+        "Capture cup returned to the cabinet → the observations actually change the later treatment."
+      ],
+      "boundary": "All six cages are a fictional teaching scenario. Consumer abundance in real ecosystems can also be affected by temperature, food, disease, migration, and stochastic processes; matching conditions limits only some alternative explanations. A trophic cascade is also not synonymous with any single predator–prey relationship.",
+      "reflection": "If the low-spider cages showed only greater leaf loss, but there were no caterpillar counts or feeding-behavior records, which link in the causal chain would still be missing?"
+    },
+    "references": [
+      {
+        "id": "carpenter-1985",
+        "citation": "Carpenter, S. R., Kitchell, J. F., & Hodgson, J. R. (1985). Cascading Trophic Interactions and Lake Productivity. BioScience, 35(10), 634–639.",
+        "url": "https://spokaneriver.net/wp-content/uploads/2011/03/Carpenter_1985.pdf",
+        "use": "Supports indirect effects among predators, consumers, and resources; the cage species and numerical values in this article are fictional teaching choices."
+      },
+      {
+        "id": "paine-1966",
+        "citation": "Paine, R. T. (1966). Food Web Complexity and Species Diversity. The American Naturalist, 100(910), 65–75.",
+        "url": "https://doi.org/10.1086/282400",
+        "use": "Supports the early experimental idea that predator removal can alter community relationships; it is not used to claim that every ecosystem shows the same number of levels or response direction."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "Reservoir keeper Oren needed more fishing permits to repair the west dam. Anglers complained that large pike took hooked fish and left too few small silver minnows near shore. Oren paid crews to net out most adult pike before spring. The first month pleased everyone: minnow catches nearly doubled, children filled buckets at the pier, and permit sales funded new stone. Oren hung one of the pike nets above his office and wrote the higher catch beneath it.\n\nBy early summer, minnow surveys rose from about forty to ninety fish per standard haul. Stomach samples showed that many fed on large zooplankton, the small animals that grazed suspended algae. Zooplankton counts then fell. With fewer grazers removing cells, phytoplankton increased and Oren's black-and-white clarity disk disappeared at one metre instead of three. He first blamed muddy swimmers because the change had begun near the busy shore, and he restricted bathing without replacing the pike.\n\nThe water remained green after the beach closed. Light no longer reached some submerged plant beds, which thinned and released sediment more easily during wind. Night-time oxygen dropped when abundant organic matter was respired and decomposed, and two cages of stocked fish died during a hot calm spell. The sequence had crossed several feeding levels: fewer predators, more planktivorous fish, fewer grazers, more algae, less light. No organism had intended the final water colour, and not every pike, minnow or grazer ate the same prey at every age.\n\nBefore the holiday weekend, a drum of algaecide arrived with a promise of clear surface water. Oren left its seal intact. The chemical could leave decomposing biomass and would not repair the altered food web. He closed fishing for six weeks, reintroduced pike from an upstream refuge under a fisheries plan and funded buffer strips beside two drainage ditches. The closure delayed dam repairs, reduced permit income and angered anglers who had asked him to remove the predators.\n\nMinnow numbers declined the next season, large zooplankton became more common and the disk could be seen at nearly two metres. Water did not return instantly or solely because of pike: nutrient inflow, temperature, plant recovery and weather still mattered. The keeper kept measuring all of them. In one shallow arm, pike had little effect because vegetation sheltered minnows; in open water, the response was stronger. The chain depended on species, habitat and interaction strength rather than a universal number of feeding levels.\n\nOren cut the old pike net into a narrow sling for the clarity disk. Each week the same cords that had lifted predators from the reservoir now lowered the black-and-white circle through green water. On the office wall, the minnow tally remained beside every depth reading.",
-    "storyBodyZh": "水库管理员奥伦需要多卖钓鱼证，修补西侧坝体。钓客抱怨大狗鱼会抢走上钩小鱼，使岸边银色小鱼太少。春季前，奥伦付钱让船队捕走大部分成年狗鱼。第一个月人人满意：标准小鱼捕量近乎翻倍，孩子在码头装满水桶，新增证费也换来修坝石料。奥伦把一张狗鱼网挂在办公室上方，在下面写下增长的收获。\n\n初夏，标准拖网中的小鱼从约四十条增到九十条。胃含物样本显示，许多小鱼摄食大型浮游动物，而后者原本会取食悬浮藻类。随后浮游动物计数下降，清除藻细胞的摄食者减少，浮游植物增多。奥伦用来测透明度的黑白圆盘，从能见三米变成一米便消失。他先怪岸边游泳者搅泥，关闭浴场，却没有恢复狗鱼。\n\n浴场关闭后，水仍是绿色。光照不到部分水下植物床，植被变稀，起风时泥沙也更容易扬起；有机物大量呼吸与分解，使平静热夜的水中氧下降，两笼养鱼随之死亡。变化越过数个摄食层次：捕食者减少，小型食浮游动物鱼增加，大型摄食者减少，藻类上升，光线下降。没有哪种生物意图制造最终水色，不同年龄的狗鱼、小鱼和浮游动物也不会永远吃同一种食物。\n\n假日前，一桶除藻剂送到码头，桶签许诺很快还原清亮水面。奥伦没有拆封；药剂可能留下继续分解的生物量，也修补不了已经改变的食物关系。他关闭六周捕捞，按渔业方案从上游庇护区引回狗鱼，又资助两条排水沟建设缓冲带。封闭让证费减少、大坝修理延期，也激怒了那些曾要求清除捕食鱼的钓客。\n\n下一季，小鱼数量下降，大型浮游动物增多，圆盘接近两米仍可看见。水质并非立刻恢复，也不能全归给狗鱼；养分输入、温度、植物恢复和天气仍在作用，管理员继续同时测量。一个浅水湾里，浓密植被替小鱼提供躲藏，狗鱼影响较弱；开阔水面反应更强。这条变化链取决于物种、栖息地和相互作用强度，并无通用于所有地方的层级数目。\n\n奥伦把旧狗鱼网裁成一条窄吊带，用来系黑白圆盘。每周，曾把捕食者拉出水面的绳索都会把圆盘重新放进绿水。办公室墙上，小鱼计数始终与每一次深度读数并排保留。",
-    "explanation": "A trophic cascade occurs when a change at one feeding level indirectly alters organisms or processes at other levels, often through predator effects on consumers and their resources. Cascades may involve abundance or behaviour and can move downward or upward through food webs. Their strength depends on species, habitat, omnivory, refuges, nutrients and other forces, so a predator change should not be treated as the sole cause without evidence.",
-    "explanationZh": "营养级联是某一摄食层的变化，经由捕食者、消费者及其资源间的间接作用，改变其他层级的生物或过程。级联可通过数量或行为发生，也可沿食物网向下或向上传递。其强度受物种、栖息地、杂食、庇护、养分等影响，因此不能缺少证据便把所有变化归给某种捕食者。"
+    "storyBody": "The nursery is preparing to open for weekend visitors, and Lin Cen starts by tidying six seedling cages. Spider silk blocks several labels, so she uses the same soft brush in all six cages to remove only the strands covering text and keeps cage-opening time as similar as possible. Her original next step is to remove half the spiders as well, making the leaf-eating caterpillars easier for visitors to see. On the cleaning checklist, she checks only “labels visible” and leaves “remove spiders” blank.\n\nThe six cages are interleaved by number on the seedling rack so that all treatment cages are not clustered near the entrance. Each cage begins with 20 caterpillars of the same type and the same number and size of seedlings; temperature, light, watering, and cage dimensions are matched. Three cages chosen at random are reduced from 10 spiders to 5. The other three are also opened and handled for the same amount of capture time, but their spiders are returned, leaving 10. The handling does not touch caterpillars or leaves. Before treatment, Lin Cen marks a set of existing leaves and photographs their complete area; after five days, she compares those same leaves.\n\nOn the fifth day, Lin Cen first sees in time-lapse footage that spiders prey on caterpillars and that the caterpillars continue feeding on leaves. Counts then show that the three low-spider cages retain an average of 17 caterpillars, while the three cages with 10 spiders retain an average of 11. For every cage, before-and-after photographs of the marked leaves are compared, with loss measured as missing area divided by their initial area: average leaf-area loss is about 28% in the low-spider group and about 14% in the other group. She matches the video time points to the counts from the same day.\n\nLin Cen spreads the temperature logs across the table and checks each against the original seedling sheet. The settings match across groups, and no food has been added in five days. She replays the footage by cage number: a spider catching a caterpillar is followed by images of caterpillars feeding at leaf edges in that same cage. She labels the clips by cage and files them with the fifth-day counts and the before-and-after leaf photographs, ready to continue following the three retained cages.\n\nLin Cen crosses out the still-unperformed “continue reducing spiders” item. At the entrance, she trims only the silk blocking labels and adds a handheld magnifier beside the viewing window so visitors can still find caterpillars. She clips video stills, caterpillar counts, and leaf photographs to the same board with the columns aligned by cage number and the next count still blank. Label maintenance remains on the cleaning list; she stops checking off further spider removal.\n\nOn opening day, spiders are still moving among the leaves. Lin Cen puts the spider-capture cup back in the cabinet. The cleaning checklist stops at “three cages reduced, three retained,” while 11, 17, 14%, and 28% remain side by side beneath the leaf photographs.",
+    "storyBodyZh": "苗圃周末要开放参观，林岑先整理六个育苗网笼。蛛网挡住几张标签，她用同一把软刷在六笼都只清掉挡字的蛛丝，开笼时间也尽量一致。原本的下一步是把蜘蛛再清掉一半，好让访客更容易看见叶面上的食叶毛虫。她先在清洁单上只勾了“标签可见”，把“移蜘蛛”留空。\n\n六笼在育苗架上交错编号，不把处理笼全放在门边。每笼起始都有20只同类食叶毛虫和同样数量、同样大小的幼苗；温度、光照、浇水与网笼尺寸匹配。随机抽出的三笼从10只蜘蛛减到5只，另外三笼也开笼、捕捉同样时长，但蜘蛛随后放回，仍保持10只；操作中不碰毛虫和叶片。处理前，林岑给一批既有叶片编号，拍下完整面积，五天后仍比较这批叶片。\n\n第五天，林岑先从定时录像里看到蜘蛛会捕食毛虫，毛虫则持续在叶片上取食。随后计数显示：低蜘蛛组三笼的毛虫平均剩17只，10只蜘蛛组三笼平均剩11只。逐笼对照标记叶片的前后照片，以缺损面积占其初始面积的比例估算，低蜘蛛组叶面积损失平均约28%，另一组约14%。她把录像时间点与当天计数一一对上。\n\n林岑把六笼的温度记录摊在桌上，再逐一对照最初的幼苗表，两组的设置相同，五天内也没添过食物。她按笼号重放录像：蜘蛛捉住毛虫的片段后面，是同笼毛虫停在叶片边缘取食的画面。她给这些片段贴上笼号，连同第五天的计数、叶片前后照片放进同一页，准备继续追踪留下的三笼。\n\n林岑把还没执行的“继续减蜘蛛”一栏划掉。入口处只修掉挡标签的蛛丝，观察窗旁添了一只放大镜，让访客照样能找毛虫。她把录像截帧、毛虫计数和叶片照片夹在同一块板上，板上各栏按笼号对齐，下次计数的位置仍空着。清洁单上留下了修标签的工作，减蜘蛛的那一栏不再往下勾。\n\n开放当天，蜘蛛还在枝叶间移动。林岑把移蛛用的小捕捉杯收进柜子，清洁单停在“三笼已减、三笼保留”这一行；夹板上的11、17与14%、28%仍并排压在叶片照片下面。",
+    "explanation": "A trophic cascade is an indirect effect of change at one feeding level on consumers or resources at other levels through two or more feeding relationships. Here the chain is spiders→leaf-eating caterpillars→leaves; the 10/5 spider counts paired with 11/17 caterpillars and 14%/28% leaf loss are given observations.\n\nThese are fictional observations, not inevitable outputs calculated from 10/5. A six-cage comparison still cannot exclude every unmeasured factor or show that other food webs will have the same direction or strength.",
+    "explanationZh": "营养级联指一个营养级的变化经两段或更多摄食关系，间接影响其他层级的消费者或资源。本篇追踪蜘蛛→食叶毛虫→叶片；10/5只蜘蛛对应11/17只毛虫与14%/28%叶损，是给定观察。\n\n这些是虚构观察，不是由10/5直接计算出的必然结果。六笼小比较仍不能排除所有未测因素，也不能证明其他食物网会有同样方向或强度。"
   },
   {
     "id": "0522-habitat-fragmentation",
@@ -14405,49 +14498,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0522",
     "fieldTitle": "Natural environments and wildlife",
     "fieldTitleZh": "自然环境与野生生物",
-    "title": "The Forest Counted Only by Trees",
-    "titleZh": "只按树木计算的森林",
-    "summary": "A road project replaces every felled tree, yet the forest's routes never reconnect after construction.",
-    "summaryZh": "修路工程砍一棵补一棵，完工后树木总数没变，林中的道路却再也没有接回去。",
-    "storyParagraphs": [
-      "Mayor Soren needed the timber road open before the rains. The mill promised forty jobs if logs reached the river that season, and the route occupied less than three percent of the mapped forest. The town also promised to plant one roadside sapling for every felled tree. On the plan, ecologist Miri drew a red line between two temporary pools used by dusk frogs. Soren counted equal numbers in the felling and planting columns and said the forest would remain. The crew cut a twelve-metre strip, compacted gravel and finished early. Wages arrived; the replacement tally balanced.",
-      "On the first wet night, adult frogs moved from the western forest toward the eastern breeding pool. Cart wheels and the dry gravel crossing killed many; others turned along the road edge and did not reach water before dawn. Egg masses in the eastern pool fell. Soren ordered a narrow metal culvert beneath the road, a quick repair that preserved timber traffic. Cameras showed few frogs using it. Its entrance stood twenty metres from their usual route, the floor was dry and hot, and fast runoff scoured one end.",
-      "The cleared strip also created two new edges. Rows of replacement saplings stood beside it, yet sun and wind dried the moss, lights changed night conditions and invasive grass arrived on truck tyres. The young trees restored a number, not old shaded interiors or the route between pools. Dusk frogs avoided the brightest section, while an edge-tolerant lizard became more common. Counting hectares and trunks had missed configuration: one connected area and two separated patches could contain similar totals yet offer different movement, shelter and mating opportunities.",
-      "For five breeding seasons, Miri marked frogs at both pools. Recaptures across the road dropped almost to zero. The western pool occasionally dried before tadpoles transformed, and adults there could no longer readily join the eastern pool. Genetic samples began to show reduced exchange, though the populations were not yet separate species and a few crossings still occurred. The road had combined direct loss, edge change, mortality and isolation; none required the forest on either side to disappear.",
-      "The mill's widening permit lay ready for Soren's signature and promised to keep all forty jobs. He left it unsigned and ordered the crossing rebuilt first: a raised, broad underpass aligned with the wet migration route, moist soil and cover through it, less lighting and several rain-night closures. The redesign consumed the widening budget. Trucks made fewer journeys, the mill cancelled eight seasonal posts, and residents accused Miri of valuing frogs above families.",
-      "The new passage improved crossings but did not make the road vanish. Some frogs still died, edge vegetation recovered slowly, and storms sometimes blocked the underpass. Rangers cleared debris and compared camera counts rather than declaring success after construction. Where possible, the town protected an uncut strip linking other pools, because a corridor could reduce isolation but could not replace all habitat quality, width or routes lost elsewhere.",
-      "Miri kept the first planning map on the council wall. The red road still divided the green paper. At the underpass, she cut a narrow opening and stitched it with green thread, then hung the first rain-night crossing count beneath it. Beside the map, the old felling and planting columns still ended at the same number. The green thread crossed only one opening; across the rest of the sheet, the red road remained unbroken."
-    ],
+    "mode": "lens-fable",
+    "titleZh": "通道照样铺，花带换了位置",
+    "summaryZh": "社区花园的3 m宽无障碍通道必须保留，它会占用原先一条40 m长的连续花草连接段。孟岚没有把40 m误当道路宽度，而是把被挪走的花草面积重新安排成沿路连续花带，减少两侧花区之间的裸露移动距离。",
     "storyParagraphsZh": [
-      "索伦镇长必须在雨季前开通木材路。锯木厂承诺，只要当季原木能运到河边，便提供四十份工作；路线占地图森林面积不到百分之三。镇里还承诺砍一棵便在路边补种一棵。规划纸上，生态员米莉在两座黄昏蛙使用的雨池之间画出红线。索伦看见砍伐栏与补种栏数目相等，便宣布森林仍在。施工队砍出十二米宽地带，压紧碎石，提前完工；工资按时发放，树木账也正好平衡。",
-      "第一个湿夜，成年蛙从西侧森林移向东侧繁殖池。车轮和干燥碎石路杀死不少个体，另一些沿道路边缘绕行，天亮前没能抵达水面，东池卵团随之减少。索伦让人在路下装一根窄金属涵管，既快又不耽误运木。相机却很少拍到蛙进入：入口偏离旧路线二十米，管底干燥发热，一端还被急流冲刷。",
-      "清理带又制造了两条新边缘。补种幼树已经成排站着，阳光和风仍让苔藓变干，灯光改变夜间条件，入侵草也随车轮进入。幼树补回头数，却补不回老林阴湿内部和两池之间的旧路线。黄昏蛙避开亮处，一种耐边缘蜥蜴反而增加。只数公顷与树木漏掉了排列：总量相近的一整片和两块隔开的林地，提供的移动、躲藏与交配机会并不相同。",
-      "连续五个繁殖季，米莉在两座池塘标记蛙。跨路再捕数量接近于零。西池偶尔在蝌蚪完成变态前干涸，那里的成蛙又难以转入东池。遗传样本开始显示交流减少，不过两群还没有成为不同物种，少数个体也仍能穿越。道路把直接占地、边缘改变、路杀与隔离叠在一起，这些后果不需要道路两边的森林完全消失才会发生。",
-      "锯木厂的拓宽许可已经摆到索伦面前，签字便能保住四十份工作。他没有落笔，先命人重建穿越设施：抬高道路，设置与潮湿迁徙线对齐的宽通道，在里面恢复湿土与遮蔽物，减少照明，并在几个迁徙高峰雨夜封路。改建吃掉拓宽预算，卡车班次减少，锯木厂取消八个季节岗位，居民指责米莉把青蛙看得比家庭重要。",
-      "新通道增加了穿越，却没有让道路消失。仍有蛙被压死，边缘植被恢复缓慢，暴雨也会堵住入口。巡护员定期清除杂物，用相机计数比较变化，没有在竣工当天宣布成功。其他雨池之间若还能保留未砍连接带，镇里便优先保留；廊道可减轻隔离，却不能替代各处失去的全部生境质量、宽度和路线。",
-      "米莉把第一张规划图留在议事厅。红路仍把绿色纸面分成两边。她在通道位置切开窄口，用绿线缝起，又把首个雨夜的穿越数挂在下面。地图旁，旧砍伐栏与补种栏仍停在同一个数字。绿线只穿过那一道开口，红路在纸面其余部分仍连续不断。"
+      "社区花园终于拿到预算，要铺一条3 m宽的平整通道，让轮椅和婴儿车能直达温室。孟岚跟工人走完放样线，发现路线沿着原有花草连接段伸出约40 m。铺装以后，两端花区之间这段连续植被就会断开，留下40 m缺少花草遮蔽的路线。她在图上标了路宽，又沿步行方向标出这段距离。",
+      "无障碍通行不能取消，孟岚先把总花草面积重新算清。施工前总量是1000㎡；被通道占用的花草会在其他位置补回，所以纸面总量仍可保持1000㎡。但她没有再用“1000=1000”结束讨论，因为花草被放在哪里会改变两侧区域之间是否还有连续可走的植被。",
+      "设计会上，她用一个独立假设比较帮助团队看清这个区别：两种布局都设1000㎡、花种和单位面积花密度相同；连续布局与“两块500㎡、最近花区之间有40 m无花覆盖距离”的布局各从西侧放40只标记蝴蝶，虚构30分钟观察分别有32只和13只到达东侧。这个观察是给定例子，不是从几何参数计算出的必然结果。",
+      "孟岚回到施工图，没有把32/13当成工程预测。3 m×40 m通道占去120㎡花草，原预算也安排补回120㎡。通道一侧有可种植的空地，她把其中80㎡改排成2 m×40 m连续花带，连接原来的两端，余下40㎡补在附近花区。总量账是1000−120+80+40=1000㎡。重排也改变斑块形状和边缘，因此这是改善连接的设计选择，不能用来单独测出连通性的效应。",
+      "新方案仍然有铺装路和边缘，窄花带也未必适合所有物种。孟岚只把目标写成“减少连续40 m无花覆盖”，并把后续观察位置留在连接带两端；真正是否提高现实物种穿越，要等建成后的数据，而不是从教学数字直接继承。",
+      "施工放样时，轮椅试走仍沿3 m宽通道通过，工人则按旁边的2 m花带线留出连续种植区。孟岚把图纸上的“40 m裸露段”划掉，换成两条并行的线：一条铺装，一条花带。"
     ],
-    "conceptName": "Habitat fragmentation",
+    "overallZh": "栖息地破碎化是连续生境被分割成更小或更隔离斑块，使空间排列、边缘和连接发生变化；它应与单纯的生境总量丧失区分。本篇保留无障碍通道，同时通过重排花草面积降低隔离。 本篇人物和花园方案均为虚构。",
     "conceptNameZh": "栖息地破碎化",
-    "explanationParagraphs": [
-      "Habitat fragmentation divides continuous habitat into smaller or more isolated patches and adds edges, often alongside direct habitat loss. Effects can include altered microclimate, movement barriers, mortality, reduced gene flow and weaker recolonisation, and they differ among species and landscapes. Corridors or crossings may improve connectivity but cannot automatically replace habitat area, quality, multiple routes or long-term maintenance."
-    ],
     "explanationParagraphsZh": [
-      "栖息地破碎化把连续生境分成更小或更孤立的斑块，并增加边缘，常与直接生境损失同时发生。它可改变微气候、阻断移动、增加死亡、降低基因交流和再定殖能力，影响又因物种与景观而异。廊道或穿越设施能改善连通，却不能自动替代生境面积、质量、多条路线与长期维护。"
+      "栖息地破碎化是连续生境被分成较小或更隔离的斑块，改变空间连接与边缘；它需与生境总量丧失区分。等面积教学例中的32/13只蝴蝶为假设观察，不是从面积算出的结果。",
+      "通道占120㎡，补回80㎡连接带和40㎡附近花草，总量仍1000㎡。配置还改变形状和边缘，不能当成只改变连通性的实验。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先把3 m道路宽度与40 m无花移动距离分清，再在保留公共通行的前提下重排花草连接。",
+      "diagramTitle": "同样铺路，怎样把40米无花段改成并行花带",
+      "diagramSteps": [
+        "确认通道宽3 m且沿原40 m花草连接段通过",
+        "保持花草总量补回而不把总量等同于连接",
+        "用40只起始蝴蝶的等面积假设比较说明可达性问题",
+        "把80㎡重排成2 m×40 m连续花带",
+        "保留通道并把现实穿越效果留待建成后观察"
+      ],
+      "diagramStepNotes": [
+        "40 m是沿移动方向缺少花草覆盖的长度，不是道路宽度。",
+        "面积相等不能自动保证空间功能相同。",
+        "32/13是给定虚构观察，不是模型公式输出。",
+        "通道占120㎡；补回80㎡连接带+40㎡附近花草。重排同时改变形状和边缘。",
+        "连接带可能减轻隔离，但不保证所有物种或功能恢复。"
+      ],
+      "mapping": [
+        "3 m铺装线 → 合理且必须保留的无障碍需求。",
+        "40 m原花草连接段 → 被施工切断的连续移动条件。",
+        "2 m并行花带 → 以既有面积换来的连接设计。",
+        "两条并行放样线 → 通行与生态配置兼容后的具体结果。"
+      ],
+      "boundary": "教学比较与32/13均为虚构设定。现实中面积、质量、边缘、行为和尺度会共同作用；总面积相同并不能证明局部质量相同。廊道或花带的实际效果需针对物种和场景验证，也不能替代全部丧失的生境功能。",
+      "reflection": "为什么把被占用的花草面积全部补到远处，可能保持1000㎡这个数字，却仍不能替代原来连续的40 m连接段？"
+    },
+    "referencesZh": [
+      {
+        "id": "haddad-2015",
+        "citation": "Haddad, N. M., et al. (2015). Habitat fragmentation and its lasting impact on Earth’s ecosystems. Science Advances, 1(2), e1500052.",
+        "url": "https://doi.org/10.1126/sciadv.1500052",
+        "use": "支持区分生境面积、隔离、边缘和长期影响；本篇布局和移动数字不来自该研究。"
+      },
+      {
+        "id": "damschen-2006",
+        "citation": "Damschen, E. I., et al. (2006). Corridors increase plant species richness at large scales. Science, 313(5791), 1284–1286.",
+        "url": "https://doi.org/10.1126/science.1130098",
+        "use": "支持在特定实验条件下研究连通性和廊道效应；不据此宣称任何廊道对所有物种都保证有效。"
+      }
+    ],
+    "title": "The Path Still Gets Built; the Flower Strip Moves",
+    "summary": "The community garden’s 3 m-wide accessible path must remain, and it will occupy a previously continuous 40 m-long flower-and-grass connection. Meng Lan does not confuse the 40 m length with road width. Instead, she rearranges the displaced habitat area into a continuous strip beside the path, reducing the exposed movement distance between the two flower areas.",
+    "storyParagraphs": [
+      "The community garden finally has funding for a smooth 3 m-wide path so wheelchairs and strollers can reach the greenhouse directly. Meng Lan walks the layout line with the workers and finds that it follows an existing vegetation connection for about 40 m. Paving would interrupt that continuous cover between the flower areas at either end, leaving 40 m without flower-and-grass shelter. She marks the width on the drawing, then marks the distance along the route.",
+      "Accessible passage cannot be cancelled, so Meng Lan first recalculates the total flower-and-grass area. Before construction it totals 1000 m². The vegetation occupied by the path can be replanted elsewhere, so the paper total can still remain 1000 m². But she no longer lets “1000=1000” end the discussion, because where the vegetation is placed changes whether there is still continuous cover between the two areas.",
+      "At the design meeting, she uses a separate hypothetical comparison to make the distinction visible. Both layouts are assigned 1000 m², with the same flower species and flower density per unit area. In the continuous layout and in a layout with two 500 m² patches separated by 40 m without flower cover, 40 marked butterflies are released from the west side. In a fictional 30-minute observation, 32 and 13 respectively reach the east side. The observation is given as an example, not calculated as an inevitable result of the geometry.",
+      "Meng Lan returns to the construction drawing without treating 32/13 as a project prediction. The 3 m×40 m path displaces 120 m² of vegetation, and the budget provides 120 m² of replacement planting. Plantable ground is available beside the path. She places 80 m² of the replacement there as a continuous 2 m×40 m flower strip connecting the original endpoints, and puts the remaining 40 m² in nearby flower areas. The area account is 1000−120+80+40=1000 m². Rearrangement also changes patch shape and edges, so this is a design choice to improve connectivity, not a way to measure its effect in isolation.",
+      "The new design still contains pavement and edges, and a narrow flower strip may not suit every species. Meng Lan writes only the goal “reduce the continuous 40 m without flower cover” and marks future observation points at both ends of the connecting strip. Whether real species actually cross more often must come from post-construction data rather than being inherited from the hypothetical numbers.",
+      "During construction layout, the wheelchair trial still follows the 3 m-wide path successfully, while workers mark out the continuous 2 m flower strip beside it. Meng Lan crosses out “40 m exposed section” on the drawing and replaces it with two parallel lines: one paved, one planted."
+    ],
+    "overall": "Habitat fragmentation is the division of continuous habitat into smaller or more isolated patches, changing spatial arrangement, edges, and connectivity. It should be distinguished from habitat loss in total area. This article keeps the accessible path while rearranging flower-and-grass area to reduce isolation. The people and garden design in this story are fictional.",
+    "conceptName": "Habitat fragmentation",
+    "explanationParagraphs": [
+      "Habitat fragmentation divides continuous habitat into smaller or more isolated patches, changing spatial connectivity and edges. It should be distinguished from loss of total habitat area. The 32/13 butterflies in the equal-area teaching comparison are hypothetical observations, not results calculated from area.",
+      "The path occupies 120 m², replaced by an 80 m² connecting strip and 40 m² of nearby planting, retaining 1000 m² in total. Shape and edges also change, so this is not an experiment that changes connectivity alone."
+    ],
+    "module": {
+      "intro": "Separate the 3 m road width from the 40 m movement distance without flower cover, then rearrange habitat connectivity while retaining public access.",
+      "diagramTitle": "With the Same Path, How Can a 40 m Uncovered Section Become a Parallel Flower Strip?",
+      "diagramSteps": [
+        "Confirm that the path is 3 m wide and runs along the original 40 m vegetation connection",
+        "Restore total vegetation area without treating total amount as equivalent to connectivity",
+        "Use an equal-area hypothetical comparison with 40 starting butterflies to illustrate accessibility",
+        "Rearrange 80 m² into a continuous 2 m×40 m flower strip",
+        "Keep the path and leave real crossing effects for post-construction observation"
+      ],
+      "diagramStepNotes": [
+        "40 m is the length lacking flower cover along the movement direction, not the road width.",
+        "Equal area does not automatically guarantee equal spatial function.",
+        "32/13 are given fictional observations, not outputs from a model formula.",
+        "The path occupies 120 m²; replacement is 80 m² of connecting strip plus 40 m² nearby. Rearrangement also changes shape and edges.",
+        "The connecting strip may reduce isolation but does not guarantee recovery of all species or functions."
+      ],
+      "mapping": [
+        "3 m paved line → the legitimate accessible-route requirement that remains.",
+        "Original 40 m vegetation connection → the continuous movement condition interrupted by construction.",
+        "2 m parallel flower strip → a connectivity design created by rearranging existing habitat area.",
+        "Two parallel layout lines → the concrete result after making access and ecological configuration compatible."
+      ],
+      "boundary": "The teaching comparison and the 32/13 counts are fictional assumptions. In reality, area, quality, edge conditions, behavior, and scale can act together; equal total area does not prove equal local habitat quality. The actual effect of a corridor or flower strip must be tested for the species and setting, and it cannot replace all habitat functions that may be lost.",
+      "reflection": "Why can moving all displaced vegetation to a distant location preserve the number 1000 m² yet still fail to replace the original continuous 40 m connection?"
+    },
+    "references": [
+      {
+        "id": "haddad-2015",
+        "citation": "Haddad, N. M., et al. (2015). Habitat fragmentation and its lasting impact on Earth’s ecosystems. Science Advances, 1(2), e1500052.",
+        "url": "https://doi.org/10.1126/sciadv.1500052",
+        "use": "Supports distinguishing habitat area, isolation, edge effects, and long-term effects; the layouts and movement numbers in this article are not taken from the study."
+      },
+      {
+        "id": "damschen-2006",
+        "citation": "Damschen, E. I., et al. (2006). Corridors increase plant species richness at large scales. Science, 313(5791), 1284–1286.",
+        "url": "https://doi.org/10.1126/science.1130098",
+        "use": "Supports studying connectivity and corridor effects under specific experimental conditions; it is not used to claim that every corridor is guaranteed to work for every species."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "Mayor Soren needed the timber road open before the rains. The mill promised forty jobs if logs reached the river that season, and the route occupied less than three percent of the mapped forest. The town also promised to plant one roadside sapling for every felled tree. On the plan, ecologist Miri drew a red line between two temporary pools used by dusk frogs. Soren counted equal numbers in the felling and planting columns and said the forest would remain. The crew cut a twelve-metre strip, compacted gravel and finished early. Wages arrived; the replacement tally balanced.\n\nOn the first wet night, adult frogs moved from the western forest toward the eastern breeding pool. Cart wheels and the dry gravel crossing killed many; others turned along the road edge and did not reach water before dawn. Egg masses in the eastern pool fell. Soren ordered a narrow metal culvert beneath the road, a quick repair that preserved timber traffic. Cameras showed few frogs using it. Its entrance stood twenty metres from their usual route, the floor was dry and hot, and fast runoff scoured one end.\n\nThe cleared strip also created two new edges. Rows of replacement saplings stood beside it, yet sun and wind dried the moss, lights changed night conditions and invasive grass arrived on truck tyres. The young trees restored a number, not old shaded interiors or the route between pools. Dusk frogs avoided the brightest section, while an edge-tolerant lizard became more common. Counting hectares and trunks had missed configuration: one connected area and two separated patches could contain similar totals yet offer different movement, shelter and mating opportunities.\n\nFor five breeding seasons, Miri marked frogs at both pools. Recaptures across the road dropped almost to zero. The western pool occasionally dried before tadpoles transformed, and adults there could no longer readily join the eastern pool. Genetic samples began to show reduced exchange, though the populations were not yet separate species and a few crossings still occurred. The road had combined direct loss, edge change, mortality and isolation; none required the forest on either side to disappear.\n\nThe mill's widening permit lay ready for Soren's signature and promised to keep all forty jobs. He left it unsigned and ordered the crossing rebuilt first: a raised, broad underpass aligned with the wet migration route, moist soil and cover through it, less lighting and several rain-night closures. The redesign consumed the widening budget. Trucks made fewer journeys, the mill cancelled eight seasonal posts, and residents accused Miri of valuing frogs above families.\n\nThe new passage improved crossings but did not make the road vanish. Some frogs still died, edge vegetation recovered slowly, and storms sometimes blocked the underpass. Rangers cleared debris and compared camera counts rather than declaring success after construction. Where possible, the town protected an uncut strip linking other pools, because a corridor could reduce isolation but could not replace all habitat quality, width or routes lost elsewhere.\n\nMiri kept the first planning map on the council wall. The red road still divided the green paper. At the underpass, she cut a narrow opening and stitched it with green thread, then hung the first rain-night crossing count beneath it. Beside the map, the old felling and planting columns still ended at the same number. The green thread crossed only one opening; across the rest of the sheet, the red road remained unbroken.",
-    "storyBodyZh": "索伦镇长必须在雨季前开通木材路。锯木厂承诺，只要当季原木能运到河边，便提供四十份工作；路线占地图森林面积不到百分之三。镇里还承诺砍一棵便在路边补种一棵。规划纸上，生态员米莉在两座黄昏蛙使用的雨池之间画出红线。索伦看见砍伐栏与补种栏数目相等，便宣布森林仍在。施工队砍出十二米宽地带，压紧碎石，提前完工；工资按时发放，树木账也正好平衡。\n\n第一个湿夜，成年蛙从西侧森林移向东侧繁殖池。车轮和干燥碎石路杀死不少个体，另一些沿道路边缘绕行，天亮前没能抵达水面，东池卵团随之减少。索伦让人在路下装一根窄金属涵管，既快又不耽误运木。相机却很少拍到蛙进入：入口偏离旧路线二十米，管底干燥发热，一端还被急流冲刷。\n\n清理带又制造了两条新边缘。补种幼树已经成排站着，阳光和风仍让苔藓变干，灯光改变夜间条件，入侵草也随车轮进入。幼树补回头数，却补不回老林阴湿内部和两池之间的旧路线。黄昏蛙避开亮处，一种耐边缘蜥蜴反而增加。只数公顷与树木漏掉了排列：总量相近的一整片和两块隔开的林地，提供的移动、躲藏与交配机会并不相同。\n\n连续五个繁殖季，米莉在两座池塘标记蛙。跨路再捕数量接近于零。西池偶尔在蝌蚪完成变态前干涸，那里的成蛙又难以转入东池。遗传样本开始显示交流减少，不过两群还没有成为不同物种，少数个体也仍能穿越。道路把直接占地、边缘改变、路杀与隔离叠在一起，这些后果不需要道路两边的森林完全消失才会发生。\n\n锯木厂的拓宽许可已经摆到索伦面前，签字便能保住四十份工作。他没有落笔，先命人重建穿越设施：抬高道路，设置与潮湿迁徙线对齐的宽通道，在里面恢复湿土与遮蔽物，减少照明，并在几个迁徙高峰雨夜封路。改建吃掉拓宽预算，卡车班次减少，锯木厂取消八个季节岗位，居民指责米莉把青蛙看得比家庭重要。\n\n新通道增加了穿越，却没有让道路消失。仍有蛙被压死，边缘植被恢复缓慢，暴雨也会堵住入口。巡护员定期清除杂物，用相机计数比较变化，没有在竣工当天宣布成功。其他雨池之间若还能保留未砍连接带，镇里便优先保留；廊道可减轻隔离，却不能替代各处失去的全部生境质量、宽度和路线。\n\n米莉把第一张规划图留在议事厅。红路仍把绿色纸面分成两边。她在通道位置切开窄口，用绿线缝起，又把首个雨夜的穿越数挂在下面。地图旁，旧砍伐栏与补种栏仍停在同一个数字。绿线只穿过那一道开口，红路在纸面其余部分仍连续不断。",
-    "explanation": "Habitat fragmentation divides continuous habitat into smaller or more isolated patches and adds edges, often alongside direct habitat loss. Effects can include altered microclimate, movement barriers, mortality, reduced gene flow and weaker recolonisation, and they differ among species and landscapes. Corridors or crossings may improve connectivity but cannot automatically replace habitat area, quality, multiple routes or long-term maintenance.",
-    "explanationZh": "栖息地破碎化把连续生境分成更小或更孤立的斑块，并增加边缘，常与直接生境损失同时发生。它可改变微气候、阻断移动、增加死亡、降低基因交流和再定殖能力，影响又因物种与景观而异。廊道或穿越设施能改善连通，却不能自动替代生境面积、质量、多条路线与长期维护。"
+    "storyBody": "The community garden finally has funding for a smooth 3 m-wide path so wheelchairs and strollers can reach the greenhouse directly. Meng Lan walks the layout line with the workers and finds that it follows an existing vegetation connection for about 40 m. Paving would interrupt that continuous cover between the flower areas at either end, leaving 40 m without flower-and-grass shelter. She marks the width on the drawing, then marks the distance along the route.\n\nAccessible passage cannot be cancelled, so Meng Lan first recalculates the total flower-and-grass area. Before construction it totals 1000 m². The vegetation occupied by the path can be replanted elsewhere, so the paper total can still remain 1000 m². But she no longer lets “1000=1000” end the discussion, because where the vegetation is placed changes whether there is still continuous cover between the two areas.\n\nAt the design meeting, she uses a separate hypothetical comparison to make the distinction visible. Both layouts are assigned 1000 m², with the same flower species and flower density per unit area. In the continuous layout and in a layout with two 500 m² patches separated by 40 m without flower cover, 40 marked butterflies are released from the west side. In a fictional 30-minute observation, 32 and 13 respectively reach the east side. The observation is given as an example, not calculated as an inevitable result of the geometry.\n\nMeng Lan returns to the construction drawing without treating 32/13 as a project prediction. The 3 m×40 m path displaces 120 m² of vegetation, and the budget provides 120 m² of replacement planting. Plantable ground is available beside the path. She places 80 m² of the replacement there as a continuous 2 m×40 m flower strip connecting the original endpoints, and puts the remaining 40 m² in nearby flower areas. The area account is 1000−120+80+40=1000 m². Rearrangement also changes patch shape and edges, so this is a design choice to improve connectivity, not a way to measure its effect in isolation.\n\nThe new design still contains pavement and edges, and a narrow flower strip may not suit every species. Meng Lan writes only the goal “reduce the continuous 40 m without flower cover” and marks future observation points at both ends of the connecting strip. Whether real species actually cross more often must come from post-construction data rather than being inherited from the hypothetical numbers.\n\nDuring construction layout, the wheelchair trial still follows the 3 m-wide path successfully, while workers mark out the continuous 2 m flower strip beside it. Meng Lan crosses out “40 m exposed section” on the drawing and replaces it with two parallel lines: one paved, one planted.",
+    "storyBodyZh": "社区花园终于拿到预算，要铺一条3 m宽的平整通道，让轮椅和婴儿车能直达温室。孟岚跟工人走完放样线，发现路线沿着原有花草连接段伸出约40 m。铺装以后，两端花区之间这段连续植被就会断开，留下40 m缺少花草遮蔽的路线。她在图上标了路宽，又沿步行方向标出这段距离。\n\n无障碍通行不能取消，孟岚先把总花草面积重新算清。施工前总量是1000㎡；被通道占用的花草会在其他位置补回，所以纸面总量仍可保持1000㎡。但她没有再用“1000=1000”结束讨论，因为花草被放在哪里会改变两侧区域之间是否还有连续可走的植被。\n\n设计会上，她用一个独立假设比较帮助团队看清这个区别：两种布局都设1000㎡、花种和单位面积花密度相同；连续布局与“两块500㎡、最近花区之间有40 m无花覆盖距离”的布局各从西侧放40只标记蝴蝶，虚构30分钟观察分别有32只和13只到达东侧。这个观察是给定例子，不是从几何参数计算出的必然结果。\n\n孟岚回到施工图，没有把32/13当成工程预测。3 m×40 m通道占去120㎡花草，原预算也安排补回120㎡。通道一侧有可种植的空地，她把其中80㎡改排成2 m×40 m连续花带，连接原来的两端，余下40㎡补在附近花区。总量账是1000−120+80+40=1000㎡。重排也改变斑块形状和边缘，因此这是改善连接的设计选择，不能用来单独测出连通性的效应。\n\n新方案仍然有铺装路和边缘，窄花带也未必适合所有物种。孟岚只把目标写成“减少连续40 m无花覆盖”，并把后续观察位置留在连接带两端；真正是否提高现实物种穿越，要等建成后的数据，而不是从教学数字直接继承。\n\n施工放样时，轮椅试走仍沿3 m宽通道通过，工人则按旁边的2 m花带线留出连续种植区。孟岚把图纸上的“40 m裸露段”划掉，换成两条并行的线：一条铺装，一条花带。",
+    "explanation": "Habitat fragmentation divides continuous habitat into smaller or more isolated patches, changing spatial connectivity and edges. It should be distinguished from loss of total habitat area. The 32/13 butterflies in the equal-area teaching comparison are hypothetical observations, not results calculated from area.\n\nThe path occupies 120 m², replaced by an 80 m² connecting strip and 40 m² of nearby planting, retaining 1000 m² in total. Shape and edges also change, so this is not an experiment that changes connectivity alone.",
+    "explanationZh": "栖息地破碎化是连续生境被分成较小或更隔离的斑块，改变空间连接与边缘；它需与生境总量丧失区分。等面积教学例中的32/13只蝴蝶为假设观察，不是从面积算出的结果。\n\n通道占120㎡，补回80㎡连接带和40㎡附近花草，总量仍1000㎡。配置还改变形状和边缘，不能当成只改变连通性的实验。"
   },
   {
     "id": "0531-chemical-equilibrium",
@@ -15017,47 +15201,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0532",
     "fieldTitle": "Earth sciences",
     "fieldTitleZh": "地球科学",
-    "title": "The Canyon Older Than Every Clock",
-    "titleZh": "比所有钟更古老的峡谷",
-    "summary": "A clockmaker brings a timepiece built to run for a century, but the canyon asks for time no clock has experienced.",
-    "summaryZh": "钟匠带着能走一百年的表来到峡谷，岩壁却要求他计算那些钟从未经历过的时间。",
-    "storyParagraphs": [
-      "Royal clockmaker Iven had built a mechanism guaranteed to run for a century. When the court planned a coronation quarry in Red Canyon, he offered to date the rock by counting the river's yearly wear. A quick answer would win him the stone contract; a slow survey would delay the palace steps. Seeing how little the river removed in a day, he rejected gradual cutting and declared that one ancient flood must have made the whole gorge. His century dial was the longest witness he trusted.",
-      "Geologist Sera led him to the quarry face. A thin bed of jumbled boulders did record violent water, but above it lay hundreds of fine mud and sand layers, some bearing ripple marks and burrows. Farther up, a flat surface sliced across tilted lower beds and was covered by younger horizontal beds. The rock below had been deposited, hardened, tilted, lifted, and eroded before new sediment arrived. The narrow surface was not a brief event on the wall; it marked time the wall no longer contained.",
-      "Iven insisted that order was not age. Sera agreed and took suitable mineral grains from a volcanic ash bed lying between two sediment layers. She explained the comparison without pretending to count individual years: a radioactive parent changes at a known statistical rate into a daughter product. If one half remains after one half-life, one quarter remains after two and one sixteenth after four, subject to assumptions about formation and later disturbance. Their measured ratio constrained an age far beyond any clock, with an uncertainty written beside it.",
-      "Two results now resisted Iven's flood story. The ash was older than the palace dynasty by an immense margin, and the cut surface required a missing interval between two sequences. Yet Sera did not replace one simple tale with 'everything is slow.' Flood beds could form quickly, ash could fall in hours, and faults could move suddenly. Long deposition, abrupt events, erosion, and gaps belonged to the same record. Different processes ran at different rates, and the record preserved only parts of them.",
-      "The quarry foreman had already paid crews to open the straight face. Iven held his seal over the first estimate, then set it down without stamping. He reported that the planned steps crossed weathered beds and the uncertain gap. The court moved the quarry after a longer survey, while Iven forfeited his advance and paid idle wages for six days. No single measurement had replayed the canyon's past; relative order and independent clocks had narrowed a history whose pages were torn.",
-      "On the coronation morning, the new steps held. Iven returned to Red Canyon with his century clock and fixed it beside the unconformity as a survey marker. Its second hand crossed the brass face with perfect confidence. Above it, one pencil-thin boundary separated tilted beds from flat ones, and the missing span still had no tick marks."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "深度号留在盒盖上",
+    "summaryZh": "采石场要把一层贝壳化石泥岩与另一钻孔做时间对照，单写深度号只能在本孔定位。梁秋用上下原地火山灰的独立年龄和地层顺序，把该层记录为大致介于约12.4与11.8 Ma之间，并保留两侧±0.1 Ma报告不确定度。",
     "storyParagraphsZh": [
-      "王城钟匠伊文造出一只能走百年的钟。宫廷准备在红峡谷开采加冕礼石阶，他提出按河水每年的磨蚀量给岩石计时；快速交出答案，就能拿下石料合同。见河流一天只带走一点粉砂，他反而断言缓慢磨蚀不可能造出峡谷，整条深沟必定来自一次古老洪水。他只信任自己那只能见证一百年的表盘。",
-      "地质师塞拉带他来到采面。岩壁里确有一层混乱巨砾，像是急流留下；上方却叠着数百层细泥和砂，其中还有波纹与生物钻痕。更高处，一道平面切断倾斜下层，上面又铺着较新的水平岩层。下层必须先沉积、固结、倾斜、抬升并受侵蚀，之后才重新被覆盖。墙上极薄的一条界面，记录的恰是岩壁已经丢失的时间。",
-      "伊文说先后顺序不等于年龄。塞拉同意，便从夹在两层沉积物之间的火山灰里取出适合测年的矿粒。她没有假装逐年计数：某种放射性母体会按已知统计速率变成子体；一个半衰期后剩二分之一，两个后剩四分之一，四个后剩十六分之一，还要检查矿物形成与后来扰动的假设。测得比例把年龄约束到任何人造钟都未经历的范围，旁边也写着不确定度。",
-      "两项结果都顶住了伊文的一场洪水说：火山灰远早于王朝，那道切面也要求两段沉积之间有漫长缺页。塞拉并没有改说“一切都很慢”。洪水层可能迅速堆成，火山灰可在短时间落下，断层也会突然移动；长期沉积、急剧事件、侵蚀和空白能出现在同一本记录里。不同过程速度不同，而石壁只保存其中一部分。",
-      "采石工已经领钱打开直线采面。伊文把印章悬在最初判断上方，最后没有盖下去。他报告石阶方案穿过风化层与那段不确定界面。宫廷延长勘测、另移采面，他退还预付款，还承担六天停工钱。没有一种方法重放峡谷的每一天，相对先后与独立时钟只是共同缩小一段残缺历史的范围。",
-      "加冕那天，新石阶稳稳承住人群。伊文回到红峡谷，把百年钟固定在那道不整合面旁，作为测量标记。秒针自信地划过铜盘；表盘上方，一条铅笔般细的边界隔开倾斜与水平岩层，那段缺失岁月仍没有刻度。"
+      "采石场刚取出一根新岩芯，另一组人正在等着把其中一层贝壳化石泥岩与远处第二钻孔做时间对照。梁秋手里的“37.6 m深”只在这一根孔里有意义，不能直接拿去对另一孔。她必须在交班前给这层样品补一个有证据来源的年代范围。",
+      "岩芯上下共有四十三层细砂和泥，先帮她确认相对位置：化石层夹在两层火山灰之间，岩层未见倒转。测年报告也注明，本例所用两层灰保持原位，所测矿物被当作该次喷发形成并在之后没有明显时钟重置；这些条件在任务里已经作为可接受前提。",
+      "两份独立年龄报告分别写着：下方灰12.4±0.1 Ma，上方灰11.8±0.1 Ma。Ma是百万年的时间单位，这里的数值表示距今的年龄。梁秋把报告夹在对应层位，抄数字时把两处±0.1也一并保留。两张纸分别夹在上下灰层旁，所记的时间却已超出她能用年历摆出的范围。",
+      "结合层序，她能说的是：中间泥岩大致位于约12.4 Ma与11.8 Ma这两个年龄锚点之间，而两侧测年各自带着报告中的±0.1 Ma不确定度。四十三层帮助确定先后，却没有告诉她每一层持续多久，也不能把整段时间平均分给每层。",
+      "梁秋删掉了“每层约一万年”的旧笔记，继续保留四十三层编号。沉积有快有慢，还可能出现停积或侵蚀；现代某处测得的速率不能无条件套进整段岩芯。至于采用哪种数值定年方法，也必须看材料和时间范围，而不是看见“年龄”就套同一种钟。",
+      "交班时，她在跨孔对照表里写下：“化石层：约受12.4±0.1 Ma下灰与11.8±0.1 Ma上灰夹持。”原来的37.6 m深度号仍保留在样品盒上，一个负责本孔定位，一个负责时间对照。第二钻孔的同事收到表格后，先按年代范围筛候选层，再比对岩性、化石和各自深度，没有仅凭区间相容就把两层合并。"
     ],
-    "conceptName": "Deep time",
+    "overallZh": "深时指远超个人生活和人类历史尺度的漫长地质时间。认识这种时间需要把相对地层顺序与合适材料的独立数值定年结合；本篇用上下灰层年龄为中间泥岩提供近似时间约束，而不是把层数当时钟。",
     "conceptNameZh": "深时",
-    "explanationParagraphs": [
-      "Deep time is the immense geological scale needed to understand Earth and life history. Relative dating orders events, while radiometric methods can assign uncertain ages to suitable mineral formation. The rock record is incomplete: thin beds may record catastrophes and unconformities long gaps. Geological change need not occur at a constant rate."
-    ],
     "explanationParagraphsZh": [
-      "深时是理解地球和生命历史所需的巨大地质时间尺度。相对定年排列事件，放射性方法可为合适矿物的形成提供带不确定性的年龄。岩石记录不完整，薄层可记录灾变，不整合面也可能代表漫长缺失；地质变化并非都以恒定速率发生。"
+      "深时指远超个人生命与人类文字历史的漫长地质时间。层序给先后，适合材料的独立数值定年给时间锚点；本例用12.4±0.1 Ma下灰与11.8±0.1 Ma上灰约束中间层。",
+      "±0.1的统计含义未另给，因此只保留报告不确定度，不把两数当绝对硬界。测年还依赖灰层原位、矿物时钟有效等前提。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "让深度号负责本孔定位，让地层顺序与两份独立年龄负责跨孔时间对照。",
+      "diagramTitle": "四十三层顺序怎样与两份灰层年龄合成一个年代约束",
+      "diagramSteps": [
+        "确认化石层位于两层原地灰之间且岩层未倒转",
+        "接受任务中已核验的矿物时钟前提",
+        "读取12.4±0.1与11.8±0.1 Ma报告",
+        "用层序把中间泥岩放在两个年龄锚点之间",
+        "同时保留深度号与带不确定度的年代记录"
+      ],
+      "diagramStepNotes": [
+        "相对层序不能单独给持续时间。",
+        "前提包括灰层未重搬、矿物代表该次喷发且无明显后期重置。",
+        "Ma是百万年的单位；本标签报告距今约多少百万年。",
+        "不把±0.1擅自转成绝对置信边界。",
+        "深度用于本孔定位，年龄用于跨孔时间比较。"
+      ],
+      "mapping": [
+        "37.6 m样品号 → 本钻孔中的空间位置。",
+        "四十三层 → 相对先后证据。",
+        "上下两份灰层报告 → 独立数值时间锚点。",
+        "跨孔对照表 → 组合两类证据后真正改变的工作结果。"
+      ],
+      "boundary": "岩芯和年龄均为虚构教学设定。数值定年必须满足材料、封闭性和事件对应等方法前提；继承晶体、重搬或后期重置都会改变解释。层数、厚度和现代速率不能单独给出漫长持续时间。 年代范围相容也不等于两孔中的岩层必为同一层，还需结合岩性与化石等证据。 本例未提供±0.1的统计定义，因此不由它换算绝对年龄界限或置信概率。",
+      "reflection": "为什么37.6 m深度号足以找回这块样品，却不足以和另一钻孔说它们是不是同一时代？"
+    },
+    "referencesZh": [
+      {
+        "id": "usgs-geologic-time",
+        "citation": "U.S. Geological Survey. Geologic Time: Geologic Time.",
+        "url": "https://pubs.usgs.gov/gip/geotime/geotime.html",
+        "use": "支持地质记录中的相对顺序与数值定年互补；作为权威教学资料，不作为概念首次提出来源。"
+      },
+      {
+        "id": "usgs-radiometric",
+        "citation": "U.S. Geological Survey. Geologic Time: Radiometric Time Scale.",
+        "url": "https://pubs.usgs.gov/gip/geotime/radiometric.html",
+        "use": "支持半衰期、矿物时钟及用可定年层为沉积事件提供时间边界；本篇年龄为假设数值。"
+      }
+    ],
+    "title": "The Depth Label Stays on the Box",
+    "summary": "A quarry needs to compare a shell-bearing mudstone layer with a second borehole. A depth label locates it only within the current core. Liang Qiu combines the stratigraphic order with independent ages from in-place ash layers above and below, recording the layer as lying approximately between about 12.4 and 11.8 Ma while preserving the reported ±0.1 Ma uncertainties on both sides.",
+    "storyParagraphs": [
+      "A quarry has just recovered a new core, and another team is waiting to compare one shell-bearing mudstone layer with a distant second borehole in time. Liang Qiu’s label “37.6 m deep” is meaningful only within this one borehole and cannot be transferred directly to the other. Before handoff, she must give the sample an age range with an evidential basis.",
+      "The core contains forty-three thin sand and mud layers around the target, which first help establish relative position: the fossil layer lies between two volcanic-ash layers, and the strata show no sign of overturning. The dating report also states that the two ash layers used here remain in place, that the dated minerals are treated as having formed in the eruptions, and that there has been no obvious later clock resetting; those conditions are accepted premises for this task.",
+      "The two independent age reports read lower ash 12.4±0.1 Ma and upper ash 11.8±0.1 Ma. Ma is a unit of millions of years; these numbers give ages before present. Liang Qiu clips the reports to their corresponding levels and copies both ±0.1 terms along with the ages. The sheets are clipped beside the lower and upper ash layers, but their times stretch beyond anything she could lay out in annual calendars.",
+      "Combining the sequence with the age reports, what she can say is that the intervening mudstone lies approximately between the two age anchors near 12.4 Ma and 11.8 Ma, while each dating result retains its reported ±0.1 Ma uncertainty. The forty-three layers establish order, but they do not say how long each layer took to form, and the entire time interval cannot simply be divided equally among them.",
+      "Liang Qiu deletes an old note saying “about ten thousand years per layer” but keeps all forty-three layer numbers. Deposition can be fast or slow and may include pauses or erosion; a rate measured at a modern site cannot be applied without justification across the entire core. The numerical dating method itself also has to fit the material and time range rather than treating every question about age as if it used the same clock.",
+      "At handoff, she writes in the cross-borehole comparison table: “Fossil layer: approximately bracketed by lower ash at 12.4±0.1 Ma and upper ash at 11.8±0.1 Ma.” The original 37.6 m depth label remains on the sample box: one record locates the layer within this borehole, while the other supports temporal comparison. The team at the second borehole uses the age range to narrow candidate layers, then compares rock characteristics, fossils, and each core’s own depth, without merging two layers merely because their age ranges are compatible."
+    ],
+    "overall": "Deep time refers to geological time spans far beyond individual lives and human historical scales. Understanding such durations requires combining relative stratigraphic order with independent numerical dating of suitable materials. Here, ages from ash layers above and below provide an approximate temporal constraint on the intervening mudstone rather than turning layer count into a clock.",
+    "conceptName": "Deep time",
+    "explanationParagraphs": [
+      "Deep time means geological durations far beyond individual lives and written human history. Stratigraphic order establishes sequence, while independent numerical dating of suitable materials gives time anchors. Here, lower ash at 12.4±0.1 Ma and upper ash at 11.8±0.1 Ma constrain the intervening layer.",
+      "The statistical meaning of ±0.1 is not otherwise given, so the reported uncertainty is preserved rather than converted into absolute hard boundaries. Dating also depends on premises such as in-place ash and a valid mineral clock."
+    ],
+    "module": {
+      "intro": "Let the depth number locate the sample within one borehole, while stratigraphic order plus two independent ages support cross-borehole temporal comparison.",
+      "diagramTitle": "How Forty-Three Layers and Two Ash Ages Combine into an Age Constraint",
+      "diagramSteps": [
+        "Confirm that the fossil layer lies between two in-place ash layers and that the strata are not overturned",
+        "Accept the mineral-clock premises already checked for the task",
+        "Read the 12.4±0.1 and 11.8±0.1 Ma reports",
+        "Use stratigraphic order to place the mudstone between the two age anchors",
+        "Retain both the depth label and the age record with its uncertainty"
+      ],
+      "diagramStepNotes": [
+        "Relative stratigraphy does not by itself give duration.",
+        "The premises include no reworking of the ash, minerals representing the eruptions, and no obvious later reset.",
+        "Ma is a unit of millions of years; here the label reports approximately how many millions of years before present.",
+        "±0.1 is not converted into an unstated absolute confidence boundary.",
+        "Depth locates the sample within the borehole; age supports comparison across boreholes."
+      ],
+      "mapping": [
+        "37.6 m sample label → spatial position within this borehole.",
+        "Forty-three layers → evidence for relative sequence.",
+        "Two ash-age reports → independent numerical time anchors.",
+        "Cross-borehole comparison table → the work product changed by combining both kinds of evidence."
+      ],
+      "boundary": "The core and ages are fictional teaching inputs. Numerical dating depends on method conditions linking the material, a closed or otherwise valid clock, and the event being dated; inherited crystals, reworking, or later resetting can change the interpretation. Layer count, thickness, and modern rates cannot by themselves provide long durations. Compatible age ranges do not establish that layers in two boreholes are the same layer; rock characteristics and fossils provide further evidence. The statistical definition of ±0.1 is not supplied here, so it is not converted into absolute age bounds or confidence probabilities.",
+      "reflection": "Why is the 37.6 m depth label enough to find the sample again but not enough to tell a second borehole whether its layer is from the same time?"
+    },
+    "references": [
+      {
+        "id": "usgs-geologic-time",
+        "citation": "U.S. Geological Survey. Geologic Time: Geologic Time.",
+        "url": "https://pubs.usgs.gov/gip/geotime/geotime.html",
+        "use": "Supports the complementary use of relative sequence and numerical dating in the geologic record; used as an authoritative teaching source rather than as the first origin of the concept."
+      },
+      {
+        "id": "usgs-radiometric",
+        "citation": "U.S. Geological Survey. Geologic Time: Radiometric Time Scale.",
+        "url": "https://pubs.usgs.gov/gip/geotime/radiometric.html",
+        "use": "Supports half-life, mineral clocks, and the use of datable layers to provide temporal bounds for sedimentary events; the ages in this article are hypothetical."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "Royal clockmaker Iven had built a mechanism guaranteed to run for a century. When the court planned a coronation quarry in Red Canyon, he offered to date the rock by counting the river's yearly wear. A quick answer would win him the stone contract; a slow survey would delay the palace steps. Seeing how little the river removed in a day, he rejected gradual cutting and declared that one ancient flood must have made the whole gorge. His century dial was the longest witness he trusted.\n\nGeologist Sera led him to the quarry face. A thin bed of jumbled boulders did record violent water, but above it lay hundreds of fine mud and sand layers, some bearing ripple marks and burrows. Farther up, a flat surface sliced across tilted lower beds and was covered by younger horizontal beds. The rock below had been deposited, hardened, tilted, lifted, and eroded before new sediment arrived. The narrow surface was not a brief event on the wall; it marked time the wall no longer contained.\n\nIven insisted that order was not age. Sera agreed and took suitable mineral grains from a volcanic ash bed lying between two sediment layers. She explained the comparison without pretending to count individual years: a radioactive parent changes at a known statistical rate into a daughter product. If one half remains after one half-life, one quarter remains after two and one sixteenth after four, subject to assumptions about formation and later disturbance. Their measured ratio constrained an age far beyond any clock, with an uncertainty written beside it.\n\nTwo results now resisted Iven's flood story. The ash was older than the palace dynasty by an immense margin, and the cut surface required a missing interval between two sequences. Yet Sera did not replace one simple tale with 'everything is slow.' Flood beds could form quickly, ash could fall in hours, and faults could move suddenly. Long deposition, abrupt events, erosion, and gaps belonged to the same record. Different processes ran at different rates, and the record preserved only parts of them.\n\nThe quarry foreman had already paid crews to open the straight face. Iven held his seal over the first estimate, then set it down without stamping. He reported that the planned steps crossed weathered beds and the uncertain gap. The court moved the quarry after a longer survey, while Iven forfeited his advance and paid idle wages for six days. No single measurement had replayed the canyon's past; relative order and independent clocks had narrowed a history whose pages were torn.\n\nOn the coronation morning, the new steps held. Iven returned to Red Canyon with his century clock and fixed it beside the unconformity as a survey marker. Its second hand crossed the brass face with perfect confidence. Above it, one pencil-thin boundary separated tilted beds from flat ones, and the missing span still had no tick marks.",
-    "storyBodyZh": "王城钟匠伊文造出一只能走百年的钟。宫廷准备在红峡谷开采加冕礼石阶，他提出按河水每年的磨蚀量给岩石计时；快速交出答案，就能拿下石料合同。见河流一天只带走一点粉砂，他反而断言缓慢磨蚀不可能造出峡谷，整条深沟必定来自一次古老洪水。他只信任自己那只能见证一百年的表盘。\n\n地质师塞拉带他来到采面。岩壁里确有一层混乱巨砾，像是急流留下；上方却叠着数百层细泥和砂，其中还有波纹与生物钻痕。更高处，一道平面切断倾斜下层，上面又铺着较新的水平岩层。下层必须先沉积、固结、倾斜、抬升并受侵蚀，之后才重新被覆盖。墙上极薄的一条界面，记录的恰是岩壁已经丢失的时间。\n\n伊文说先后顺序不等于年龄。塞拉同意，便从夹在两层沉积物之间的火山灰里取出适合测年的矿粒。她没有假装逐年计数：某种放射性母体会按已知统计速率变成子体；一个半衰期后剩二分之一，两个后剩四分之一，四个后剩十六分之一，还要检查矿物形成与后来扰动的假设。测得比例把年龄约束到任何人造钟都未经历的范围，旁边也写着不确定度。\n\n两项结果都顶住了伊文的一场洪水说：火山灰远早于王朝，那道切面也要求两段沉积之间有漫长缺页。塞拉并没有改说“一切都很慢”。洪水层可能迅速堆成，火山灰可在短时间落下，断层也会突然移动；长期沉积、急剧事件、侵蚀和空白能出现在同一本记录里。不同过程速度不同，而石壁只保存其中一部分。\n\n采石工已经领钱打开直线采面。伊文把印章悬在最初判断上方，最后没有盖下去。他报告石阶方案穿过风化层与那段不确定界面。宫廷延长勘测、另移采面，他退还预付款，还承担六天停工钱。没有一种方法重放峡谷的每一天，相对先后与独立时钟只是共同缩小一段残缺历史的范围。\n\n加冕那天，新石阶稳稳承住人群。伊文回到红峡谷，把百年钟固定在那道不整合面旁，作为测量标记。秒针自信地划过铜盘；表盘上方，一条铅笔般细的边界隔开倾斜与水平岩层，那段缺失岁月仍没有刻度。",
-    "explanation": "Deep time is the immense geological scale needed to understand Earth and life history. Relative dating orders events, while radiometric methods can assign uncertain ages to suitable mineral formation. The rock record is incomplete: thin beds may record catastrophes and unconformities long gaps. Geological change need not occur at a constant rate.",
-    "explanationZh": "深时是理解地球和生命历史所需的巨大地质时间尺度。相对定年排列事件，放射性方法可为合适矿物的形成提供带不确定性的年龄。岩石记录不完整，薄层可记录灾变，不整合面也可能代表漫长缺失；地质变化并非都以恒定速率发生。"
+    "storyBody": "A quarry has just recovered a new core, and another team is waiting to compare one shell-bearing mudstone layer with a distant second borehole in time. Liang Qiu’s label “37.6 m deep” is meaningful only within this one borehole and cannot be transferred directly to the other. Before handoff, she must give the sample an age range with an evidential basis.\n\nThe core contains forty-three thin sand and mud layers around the target, which first help establish relative position: the fossil layer lies between two volcanic-ash layers, and the strata show no sign of overturning. The dating report also states that the two ash layers used here remain in place, that the dated minerals are treated as having formed in the eruptions, and that there has been no obvious later clock resetting; those conditions are accepted premises for this task.\n\nThe two independent age reports read lower ash 12.4±0.1 Ma and upper ash 11.8±0.1 Ma. Ma is a unit of millions of years; these numbers give ages before present. Liang Qiu clips the reports to their corresponding levels and copies both ±0.1 terms along with the ages. The sheets are clipped beside the lower and upper ash layers, but their times stretch beyond anything she could lay out in annual calendars.\n\nCombining the sequence with the age reports, what she can say is that the intervening mudstone lies approximately between the two age anchors near 12.4 Ma and 11.8 Ma, while each dating result retains its reported ±0.1 Ma uncertainty. The forty-three layers establish order, but they do not say how long each layer took to form, and the entire time interval cannot simply be divided equally among them.\n\nLiang Qiu deletes an old note saying “about ten thousand years per layer” but keeps all forty-three layer numbers. Deposition can be fast or slow and may include pauses or erosion; a rate measured at a modern site cannot be applied without justification across the entire core. The numerical dating method itself also has to fit the material and time range rather than treating every question about age as if it used the same clock.\n\nAt handoff, she writes in the cross-borehole comparison table: “Fossil layer: approximately bracketed by lower ash at 12.4±0.1 Ma and upper ash at 11.8±0.1 Ma.” The original 37.6 m depth label remains on the sample box: one record locates the layer within this borehole, while the other supports temporal comparison. The team at the second borehole uses the age range to narrow candidate layers, then compares rock characteristics, fossils, and each core’s own depth, without merging two layers merely because their age ranges are compatible.",
+    "storyBodyZh": "采石场刚取出一根新岩芯，另一组人正在等着把其中一层贝壳化石泥岩与远处第二钻孔做时间对照。梁秋手里的“37.6 m深”只在这一根孔里有意义，不能直接拿去对另一孔。她必须在交班前给这层样品补一个有证据来源的年代范围。\n\n岩芯上下共有四十三层细砂和泥，先帮她确认相对位置：化石层夹在两层火山灰之间，岩层未见倒转。测年报告也注明，本例所用两层灰保持原位，所测矿物被当作该次喷发形成并在之后没有明显时钟重置；这些条件在任务里已经作为可接受前提。\n\n两份独立年龄报告分别写着：下方灰12.4±0.1 Ma，上方灰11.8±0.1 Ma。Ma是百万年的时间单位，这里的数值表示距今的年龄。梁秋把报告夹在对应层位，抄数字时把两处±0.1也一并保留。两张纸分别夹在上下灰层旁，所记的时间却已超出她能用年历摆出的范围。\n\n结合层序，她能说的是：中间泥岩大致位于约12.4 Ma与11.8 Ma这两个年龄锚点之间，而两侧测年各自带着报告中的±0.1 Ma不确定度。四十三层帮助确定先后，却没有告诉她每一层持续多久，也不能把整段时间平均分给每层。\n\n梁秋删掉了“每层约一万年”的旧笔记，继续保留四十三层编号。沉积有快有慢，还可能出现停积或侵蚀；现代某处测得的速率不能无条件套进整段岩芯。至于采用哪种数值定年方法，也必须看材料和时间范围，而不是看见“年龄”就套同一种钟。\n\n交班时，她在跨孔对照表里写下：“化石层：约受12.4±0.1 Ma下灰与11.8±0.1 Ma上灰夹持。”原来的37.6 m深度号仍保留在样品盒上，一个负责本孔定位，一个负责时间对照。第二钻孔的同事收到表格后，先按年代范围筛候选层，再比对岩性、化石和各自深度，没有仅凭区间相容就把两层合并。",
+    "explanation": "Deep time means geological durations far beyond individual lives and written human history. Stratigraphic order establishes sequence, while independent numerical dating of suitable materials gives time anchors. Here, lower ash at 12.4±0.1 Ma and upper ash at 11.8±0.1 Ma constrain the intervening layer.\n\nThe statistical meaning of ±0.1 is not otherwise given, so the reported uncertainty is preserved rather than converted into absolute hard boundaries. Dating also depends on premises such as in-place ash and a valid mineral clock.",
+    "explanationZh": "深时指远超个人生命与人类文字历史的漫长地质时间。层序给先后，适合材料的独立数值定年给时间锚点；本例用12.4±0.1 Ma下灰与11.8±0.1 Ma上灰约束中间层。\n\n±0.1的统计含义未另给，因此只保留报告不确定度，不把两数当绝对硬界。测年还依赖灰层原位、矿物时钟有效等前提。"
   },
   {
     "id": "0532-rock-cycle",
@@ -15347,47 +15624,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0533",
     "fieldTitle": "Physics",
     "fieldTitleZh": "物理学",
-    "title": "The Cold That Would Not Come Home",
-    "titleZh": "不肯自己回家的冷",
-    "summary": "An icehouse owner assumes cold has merely escaped into the yard and waits for it to return at night.",
-    "summaryZh": "冰窖主人以为冷气只是跑出了房间，便等着它在夜里自己回来。",
-    "storyParagraphs": [
-      "Icehouse owner Ren had promised carved ice for the midsummer banquet. Porters left the door open while loading, and by noon the lowest blocks stood in water. Ren said the cold had merely escaped into the yard; the cool night would bring it home, so he kept accepting orders. At dawn the room and yard were nearly the same temperature, yet the puddle had not gathered itself into clear blocks. Six crates were ruined, and the banquet steward threatened to claim Ren's house as compensation.",
-      "Mechanic Isha placed one warm stone and one cold stone together. Heat spread until their temperatures approached each other. At the microscopic level, vastly more arrangements shared energy broadly than concentrated it back into the warmer stone while cooling the other. A spontaneous reverse fluctuation was not forbidden by logic, but for so many particles it was overwhelmingly unlikely and would not provide a dependable business. Ren could not schedule ice by waiting for dispersed energy to collect on command.",
-      "Isha offered a cooling machine driven by the millrace. In a test hour, it removed thirty units of heat from the chamber while consuming ten units of work. The outdoor coil released about forty units: the thirty moved from inside plus the work that ultimately became heat. The chamber grew colder, but the yard near the coil grew warmer and the waterwheel surrendered usable motion. Local reversal required an energy flow and increased the total dispersal outside the chosen cold room.",
-      "Ren ordered the machine run harder, then discovered a second cost. With the door still open, warm humid air continually entered, frost thickened on the coils, and the wheel strained. Three farmers arrived when he reached for the millrace gate. Ren let the gate remain at its mark, cancelled the swans and towers, closed half the room, and paid to repair its felt insulation. The steward kept his deposit while workers sealed the warped door and carried surviving blocks into a smaller chamber.",
-      "With less heat leaking in, the same machine froze new trays before the banquet. Isha warned that a tidy cold room did not violate the direction seen in the larger system. Machines and living things can maintain organised local states when matter and energy cross their boundaries; the bookkeeping must include fuel or work and the heat released elsewhere. The second law described the overwhelmingly favoured statistical direction for an isolated whole, not a ban on every local increase of order.",
-      "Ren delivered plain blocks instead of carved swans and lost the season's profit. That night he walked past the meltwater buckets, slid the repaired bolt into the door, and put his palm near the outside coil. It was hot enough to make him pull back. Inside, the first new sheet of ice hardened around the iron key he had left on its tray."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "余热管只画了一个方向",
+    "summaryZh": "面包房评估一段被动余热连接，分析把400 K与300 K两块巨大热体近似为理想热库，120 J相对其热容量很小。能量一出一入仍对称，但两端状态量变化相加为+0.10 J/K；反向若靠装置实现，必须扩大系统边界。",
     "storyParagraphsZh": [
-      "冰窖主人阿任答应为盛夏宴席雕出一批冰景。搬运工装货时敞着门，正午过后，最下层冰块已经泡在水里。阿任说冷气只是跑进院子，凉夜会把它送回来，仍继续接单。第二天清晨，室内外温度已接近，地上的水却没有自己聚回透明冰块。六箱货报废，宴会管事扬言要拿他的房契抵赔偿。",
-      "工匠伊莎把一块暖石和一块冷石贴在一起，热逐渐扩散，直到温度接近。微观上，把能量分散到许多粒子的排列远多于让能量重新集中、使一块更热而另一块更冷的排列。反向涨落在逻辑上并非绝无可能，但对海量粒子而言概率小得不能拿来排工期。阿任不能靠等待，让分散的能量准时自行聚回。",
-      "伊莎装上一台由水轮驱动的冷却机。试运一小时，机器从窖内搬走三十份热，又消耗十份功，院外散热管大约放出四十份：三十份来自室内，十份功最终也化成热。窖里变冷，散热管旁的院子却更热，水轮还交出了可用转动。局部恢复低温需要能量流，若把整个装置与环境算进去，分散没有因此减少。",
-      "阿任命机器加速，很快遇到第二个麻烦。窖门继续漏风，暖湿空气不断进入，盘管结霜，水轮越转越沉。他伸手要开大磨渠闸时，三户农人已经赶到。阿任让闸门停在原刻度，退掉天鹅与冰塔，关闭半间冰室并出钱修补毡层。宴会管事扣下订金；工人校正变形木门，把剩余冰块搬入较小房间。",
-      "漏入的热减少后，同一台机器终于在宴会前冻好新冰。伊莎提醒他，整洁低温的房间并未违背更大范围里的方向。机器和生命都能在开放边界内维持局部有序，但核算必须包括输入的功、穿过边界的物质与送往别处的热。那条规律描述孤立整体压倒性占优的统计方向，并不禁止任何地方暂时变得更整齐。",
-      "阿任只交出普通冰块，整季利润全部赔掉。夜里，他绕过装满融水的木桶，把修好的门闩推到底，又伸手靠近院外盘管。热气逼得他立刻缩手。冰窖里面，第一张新冰正把他忘在托盘上的铁钥匙冻在中央。"
+      "面包房收工后，老周准备把烤炉附近的余热送到另一侧预热用的大型热体。他在管线草图上先画了两个方向，只写下“一端少120 J，另一端多120 J”，还没填两端温度。岑夏拿来温度记录，他请她确认这段不带机器的连接，在眼前的温度条件下究竟能按哪个箭头使用。",
+      "岑夏把这一步先理想化成两个很大的热库：一端约400 K，另一端约300 K；假设这120 J交换造成的温度变化足够小，这一步可忽略温变，并把这两个热库作为分析边界，暂不与外界交换热或功。规定Q流入某热库为正。",
+      "120 J从400 K端流向300 K端时，热端的状态量变化可按ΔS=Q/T写成−120/400=−0.30 J/K；冷端是+120/300=+0.40 J/K。能量账确实是一出一入，但两端这项状态量相加为+0.10 J/K。岑夏在总和下划线：孤立整体的这项状态量不能自发减少。老周把原来双向的被动箭头先擦掉了一边。",
+      "他接着核算纯粹反向的假设：若只让这两个孤立热库把120 J从300 K端送回400 K端，热端变为+0.30 J/K，冷端−0.40 J/K，两者合计−0.10 J/K。于是问题不在能量有没有守恒，而在这两个热库组成的孤立整体是否允许这样的自发方向。",
+      "老周把第二天可能需要反向搬热的要求另写在工单上。岑夏给它留出“外部装置+环境”的栏位，机器尚未选型，参数还空着。要从300 K端把热搬回400 K端，装置做功及它与环境的交换都得进入这份更大的总账；那张只算两热库的−0.10纸条被夹在旁边，标作“不能直接照用”。",
+      "在这组温度下，老周最后在余热管图上只保留400 K→300 K的被动箭头。工作台上，−0.30、+0.40和总和+0.10三张纸条压在图纸角落；反向那一栏仍空着，等设备确定后再填。"
     ],
-    "conceptName": "Entropy",
+    "overallZh": "熵是热力学状态量。对孤立整体，自发过程的总熵不下降；判断热交换方向时必须把系统各部分的熵变化一起核算。能量守恒只约束能量收支，不能单独给出热流的自发方向。",
     "conceptNameZh": "熵",
-    "explanationParagraphs": [
-      "Entropy is a state function related to energy dispersal and the number of microscopic arrangements compatible with a macroscopic state; total entropy of an isolated system does not decrease. The second law is statistical and does not forbid local decreases. Refrigerators and living systems use free energy to maintain local order while producing compensating or greater entropy in their environment."
-    ],
     "explanationParagraphsZh": [
-      "熵是与能量分散及宏观状态可对应的微观构型数量相关的状态函数；孤立系统总熵不会减少。第二定律具有统计意义，并不禁止局部熵下降。制冷机和生命体可利用自由能维持局部有序，同时向环境产生补偿性或更大的熵增加。"
+      "熵是状态量；对孤立系统，自发过程总熵不减少。本例把两块巨大热体近似为定温热库，正向120 J交换给出−0.30与+0.40 J/K，总和+0.10。",
+      "对热库可用ΔS=Q/T求状态变化，可理解为沿可逆路径计算；这不是任意不可逆实际路径的通用Q/T公式。反向装置需把装置和环境一起核算。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "把能量账和状态量账分开，在明确两大热库近似与分析边界后判断被动热流方向。",
+      "diagramTitle": "120焦耳能量对称，为什么总状态量变化不对称",
+      "diagramSteps": [
+        "近似两大热库为400 K与300 K且忽略120 J造成的温变",
+        "规定Q流入热库为正并计算正向两端变化",
+        "得到−0.30、+0.40及总+0.10 J/K",
+        "反向只算两热库会得到总−0.10 J/K",
+        "需要反向时把外部装置和环境纳入更大系统"
+      ],
+      "diagramStepNotes": [
+        "此步骤不依赖主动恒温设备来维持两热库温度。",
+        "热端失热Q<0，冷端吸热Q>0。",
+        "能量守恒与总熵方向是两种不同约束。",
+        "反向的负总和只针对孤立两热库假设。",
+        "未给机器参数，因此不编造完整反向总熵。"
+      ],
+      "mapping": [
+        "余热管双向箭头 → 需要判断的被动设计选择。",
+        "400 K/300 K两大热体 → 理想热库近似。",
+        "三张数值纸条 → 两端与整体的状态量账。",
+        "空白“装置+环境”栏 → 反向方案尚缺的系统边界数据。"
+      ],
+      "boundary": "120 J、400 K和300 K都是虚构分析参数。热库近似要求这一步的温度变化可忽略，且本步骤分析边界没有外部热功交换。实际有限物体会变温，实际不可逆过程也不能把Q/T当作沿真实路径的普遍公式。 若两端温度高低反转，被动热流方向也可反转；本例不是把普通管道当作只能单向导热的器件。",
+      "reflection": "当两端仍约为400 K和300 K时，为什么对称的120 J能量账不足以让两个被动热流方向都成立？"
+    },
+    "referencesZh": [
+      {
+        "id": "openstax-entropy",
+        "citation": "OpenStax. University Physics Volume 2, §4.6 Entropy.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/4-6-entropy",
+        "use": "支持熵为状态量、定温热库ΔS=Q/T及孤立系统总熵方向；本篇120 J与温度为教学设定。"
+      },
+      {
+        "id": "openstax-statistical-entropy",
+        "citation": "OpenStax. College Physics, §15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation.",
+        "url": "https://openstax.org/books/college-physics/pages/15-7-statistical-interpretation-of-entropy-and-the-second-law-of-thermodynamics-the-underlying-explanation",
+        "use": "支持熵的统计解释与第二定律方向；不把日常整洁程度直接当作热力学熵。"
+      }
+    ],
+    "title": "The Waste-Heat Pipe Gets Only One Arrow",
+    "summary": "A bakery evaluates a passive waste-heat connection by approximating large bodies at 400 K and 300 K as ideal reservoirs, with 120 J small relative to their heat capacities. The energy outflow and inflow remain symmetric, but the two state changes sum to +0.10 J/K. If reverse transfer is accomplished with a device, the system boundary must be expanded.",
+    "storyParagraphs": [
+      "After the bakery closes, Lao Zhou plans to send residual heat near the oven to a large body used for preheating on the other side. He first draws two directions on the pipe sketch, noting only “one side loses 120 J, the other gains 120 J,” with neither temperature entered yet. Cen Xia brings the temperature record. He asks her to check which arrow this connection, with no machine in it, can follow under the current temperatures.",
+      "Cen Xia first idealizes this step as two very large thermal reservoirs: one near 400 K and the other near 300 K. The temperature changes caused by this 120 J exchange are assumed small enough to be neglected for this step. The two reservoirs are taken as the analysis boundary for this step, with no heat or work exchange with the outside. Q is defined as positive when it enters a reservoir.",
+      "When 120 J moves from the 400 K side to the 300 K side, the hot reservoir’s state change can be written as ΔS=Q/T=−120/400=−0.30 J/K, while the cold reservoir’s is +120/300=+0.40 J/K. The energy account is indeed one amount out and the same amount in, but these state changes sum to +0.10 J/K. Cen Xia underlines the sum: this state variable cannot spontaneously decrease for an isolated whole. Lao Zhou erases one direction from the original two-way passive arrow.",
+      "He then checks the purely reversed hypothetical case. If only these two isolated reservoirs were to move 120 J from the 300 K side back to the 400 K side, the hot reservoir would have +0.30 J/K, the cold reservoir −0.40 J/K, for a total of −0.10 J/K. The issue is therefore not whether energy is conserved, but whether that spontaneous direction is allowed for the isolated whole made of the two reservoirs.",
+      "Lao Zhou puts the possible need for reverse heat transfer the next day on a separate work order. Cen Xia leaves sections for “external device + environment”; no machine has been selected and its parameters remain blank. To move heat from the 300 K side back to the 400 K side, the device’s work and its exchanges with the environment must enter the larger account. The −0.10 slip for the two reservoirs alone is clipped beside it, marked “cannot be used directly.”",
+      "Lao Zhou ultimately keeps only the passive 400 K→300 K arrow for these temperatures on the waste-heat-pipe drawing. On the workbench, three slips marked −0.30, +0.40, and total +0.10 remain under the corner of the drawing. The reverse section is still blank, waiting until an actual device is chosen."
+    ],
+    "overall": "Entropy is a thermodynamic state variable. For an isolated whole, total entropy does not decrease in a spontaneous process; judging heat-transfer direction therefore requires accounting for the entropy changes of all parts of the system. Energy conservation constrains only the energy balance and cannot by itself determine the spontaneous direction of heat flow.",
+    "conceptName": "Entropy",
+    "explanationParagraphs": [
+      "Entropy is a state variable, and the total entropy of an isolated system does not decrease in a spontaneous process. Here, two large bodies are approximated as constant-temperature reservoirs: a 120 J forward transfer gives −0.30 and +0.40 J/K, totaling +0.10 J/K.",
+      "For a reservoir, ΔS=Q/T can be used to calculate the state change, equivalently via a reversible path; it is not a universal Q/T expression for the actual path of every irreversible process. A reverse-transfer device requires the device and environment to be included in the accounting."
+    ],
+    "module": {
+      "intro": "Separate the energy account from the state-variable account, then judge passive heat-flow direction only after stating the two-reservoir approximation and analysis boundary.",
+      "diagramTitle": "If 120 J Is Symmetric in Energy, Why Is the Total State Change Not Symmetric?",
+      "diagramSteps": [
+        "Approximate the large bodies as 400 K and 300 K reservoirs and neglect the temperature change caused by 120 J",
+        "Define Q into a reservoir as positive and calculate both forward changes",
+        "Obtain −0.30, +0.40, and total +0.10 J/K",
+        "Calculate that the reverse case for the two reservoirs alone would total −0.10 J/K",
+        "Include an external device and environment in a larger system when reverse transfer is required"
+      ],
+      "diagramStepNotes": [
+        "This step does not rely on active temperature-control equipment to maintain the two reservoir temperatures.",
+        "The hot reservoir loses heat, so Q<0; the cold reservoir gains heat, so Q>0.",
+        "Energy conservation and total-entropy direction are different constraints.",
+        "The negative reverse total applies only to the hypothesis of the two isolated reservoirs.",
+        "No machine parameters are given, so the complete reverse total entropy is not invented."
+      ],
+      "mapping": [
+        "Two-way waste-heat-pipe arrow → the passive design choice being evaluated.",
+        "400 K/300 K large bodies → the ideal-reservoir approximation.",
+        "Three numerical slips → the local and combined state-variable accounts.",
+        "Blank “device + environment” section → missing system-boundary data for a reverse scheme."
+      ],
+      "boundary": "The 120 J, 400 K, and 300 K values are fictional analysis parameters. The reservoir approximation requires negligible temperature changes during this step, and the analysis step assumes no external heat or work exchange. Real finite bodies change temperature, and Q/T is not a universal formula to apply along the actual path of every irreversible process. Reversing which side is hotter can reverse passive heat flow. This example does not treat an ordinary pipe as a device that conducts heat only one way.",
+      "reflection": "While the two sides remain near 400 K and 300 K, why is a symmetric 120 J energy account insufficient to allow both passive heat-flow directions?"
+    },
+    "references": [
+      {
+        "id": "openstax-entropy",
+        "citation": "OpenStax. University Physics Volume 2, §4.6 Entropy.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/4-6-entropy",
+        "use": "Supports entropy as a state variable, ΔS=Q/T for a constant-temperature reservoir, and the direction of total entropy change in an isolated system; the 120 J and temperatures here are teaching assumptions."
+      },
+      {
+        "id": "openstax-statistical-entropy",
+        "citation": "OpenStax. College Physics, §15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation.",
+        "url": "https://openstax.org/books/college-physics/pages/15-7-statistical-interpretation-of-entropy-and-the-second-law-of-thermodynamics-the-underlying-explanation",
+        "use": "Supports the statistical interpretation of entropy and the direction expressed by the second law; everyday neatness is not treated directly as thermodynamic entropy."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "Icehouse owner Ren had promised carved ice for the midsummer banquet. Porters left the door open while loading, and by noon the lowest blocks stood in water. Ren said the cold had merely escaped into the yard; the cool night would bring it home, so he kept accepting orders. At dawn the room and yard were nearly the same temperature, yet the puddle had not gathered itself into clear blocks. Six crates were ruined, and the banquet steward threatened to claim Ren's house as compensation.\n\nMechanic Isha placed one warm stone and one cold stone together. Heat spread until their temperatures approached each other. At the microscopic level, vastly more arrangements shared energy broadly than concentrated it back into the warmer stone while cooling the other. A spontaneous reverse fluctuation was not forbidden by logic, but for so many particles it was overwhelmingly unlikely and would not provide a dependable business. Ren could not schedule ice by waiting for dispersed energy to collect on command.\n\nIsha offered a cooling machine driven by the millrace. In a test hour, it removed thirty units of heat from the chamber while consuming ten units of work. The outdoor coil released about forty units: the thirty moved from inside plus the work that ultimately became heat. The chamber grew colder, but the yard near the coil grew warmer and the waterwheel surrendered usable motion. Local reversal required an energy flow and increased the total dispersal outside the chosen cold room.\n\nRen ordered the machine run harder, then discovered a second cost. With the door still open, warm humid air continually entered, frost thickened on the coils, and the wheel strained. Three farmers arrived when he reached for the millrace gate. Ren let the gate remain at its mark, cancelled the swans and towers, closed half the room, and paid to repair its felt insulation. The steward kept his deposit while workers sealed the warped door and carried surviving blocks into a smaller chamber.\n\nWith less heat leaking in, the same machine froze new trays before the banquet. Isha warned that a tidy cold room did not violate the direction seen in the larger system. Machines and living things can maintain organised local states when matter and energy cross their boundaries; the bookkeeping must include fuel or work and the heat released elsewhere. The second law described the overwhelmingly favoured statistical direction for an isolated whole, not a ban on every local increase of order.\n\nRen delivered plain blocks instead of carved swans and lost the season's profit. That night he walked past the meltwater buckets, slid the repaired bolt into the door, and put his palm near the outside coil. It was hot enough to make him pull back. Inside, the first new sheet of ice hardened around the iron key he had left on its tray.",
-    "storyBodyZh": "冰窖主人阿任答应为盛夏宴席雕出一批冰景。搬运工装货时敞着门，正午过后，最下层冰块已经泡在水里。阿任说冷气只是跑进院子，凉夜会把它送回来，仍继续接单。第二天清晨，室内外温度已接近，地上的水却没有自己聚回透明冰块。六箱货报废，宴会管事扬言要拿他的房契抵赔偿。\n\n工匠伊莎把一块暖石和一块冷石贴在一起，热逐渐扩散，直到温度接近。微观上，把能量分散到许多粒子的排列远多于让能量重新集中、使一块更热而另一块更冷的排列。反向涨落在逻辑上并非绝无可能，但对海量粒子而言概率小得不能拿来排工期。阿任不能靠等待，让分散的能量准时自行聚回。\n\n伊莎装上一台由水轮驱动的冷却机。试运一小时，机器从窖内搬走三十份热，又消耗十份功，院外散热管大约放出四十份：三十份来自室内，十份功最终也化成热。窖里变冷，散热管旁的院子却更热，水轮还交出了可用转动。局部恢复低温需要能量流，若把整个装置与环境算进去，分散没有因此减少。\n\n阿任命机器加速，很快遇到第二个麻烦。窖门继续漏风，暖湿空气不断进入，盘管结霜，水轮越转越沉。他伸手要开大磨渠闸时，三户农人已经赶到。阿任让闸门停在原刻度，退掉天鹅与冰塔，关闭半间冰室并出钱修补毡层。宴会管事扣下订金；工人校正变形木门，把剩余冰块搬入较小房间。\n\n漏入的热减少后，同一台机器终于在宴会前冻好新冰。伊莎提醒他，整洁低温的房间并未违背更大范围里的方向。机器和生命都能在开放边界内维持局部有序，但核算必须包括输入的功、穿过边界的物质与送往别处的热。那条规律描述孤立整体压倒性占优的统计方向，并不禁止任何地方暂时变得更整齐。\n\n阿任只交出普通冰块，整季利润全部赔掉。夜里，他绕过装满融水的木桶，把修好的门闩推到底，又伸手靠近院外盘管。热气逼得他立刻缩手。冰窖里面，第一张新冰正把他忘在托盘上的铁钥匙冻在中央。",
-    "explanation": "Entropy is a state function related to energy dispersal and the number of microscopic arrangements compatible with a macroscopic state; total entropy of an isolated system does not decrease. The second law is statistical and does not forbid local decreases. Refrigerators and living systems use free energy to maintain local order while producing compensating or greater entropy in their environment.",
-    "explanationZh": "熵是与能量分散及宏观状态可对应的微观构型数量相关的状态函数；孤立系统总熵不会减少。第二定律具有统计意义，并不禁止局部熵下降。制冷机和生命体可利用自由能维持局部有序，同时向环境产生补偿性或更大的熵增加。"
+    "storyBody": "After the bakery closes, Lao Zhou plans to send residual heat near the oven to a large body used for preheating on the other side. He first draws two directions on the pipe sketch, noting only “one side loses 120 J, the other gains 120 J,” with neither temperature entered yet. Cen Xia brings the temperature record. He asks her to check which arrow this connection, with no machine in it, can follow under the current temperatures.\n\nCen Xia first idealizes this step as two very large thermal reservoirs: one near 400 K and the other near 300 K. The temperature changes caused by this 120 J exchange are assumed small enough to be neglected for this step. The two reservoirs are taken as the analysis boundary for this step, with no heat or work exchange with the outside. Q is defined as positive when it enters a reservoir.\n\nWhen 120 J moves from the 400 K side to the 300 K side, the hot reservoir’s state change can be written as ΔS=Q/T=−120/400=−0.30 J/K, while the cold reservoir’s is +120/300=+0.40 J/K. The energy account is indeed one amount out and the same amount in, but these state changes sum to +0.10 J/K. Cen Xia underlines the sum: this state variable cannot spontaneously decrease for an isolated whole. Lao Zhou erases one direction from the original two-way passive arrow.\n\nHe then checks the purely reversed hypothetical case. If only these two isolated reservoirs were to move 120 J from the 300 K side back to the 400 K side, the hot reservoir would have +0.30 J/K, the cold reservoir −0.40 J/K, for a total of −0.10 J/K. The issue is therefore not whether energy is conserved, but whether that spontaneous direction is allowed for the isolated whole made of the two reservoirs.\n\nLao Zhou puts the possible need for reverse heat transfer the next day on a separate work order. Cen Xia leaves sections for “external device + environment”; no machine has been selected and its parameters remain blank. To move heat from the 300 K side back to the 400 K side, the device’s work and its exchanges with the environment must enter the larger account. The −0.10 slip for the two reservoirs alone is clipped beside it, marked “cannot be used directly.”\n\nLao Zhou ultimately keeps only the passive 400 K→300 K arrow for these temperatures on the waste-heat-pipe drawing. On the workbench, three slips marked −0.30, +0.40, and total +0.10 remain under the corner of the drawing. The reverse section is still blank, waiting until an actual device is chosen.",
+    "storyBodyZh": "面包房收工后，老周准备把烤炉附近的余热送到另一侧预热用的大型热体。他在管线草图上先画了两个方向，只写下“一端少120 J，另一端多120 J”，还没填两端温度。岑夏拿来温度记录，他请她确认这段不带机器的连接，在眼前的温度条件下究竟能按哪个箭头使用。\n\n岑夏把这一步先理想化成两个很大的热库：一端约400 K，另一端约300 K；假设这120 J交换造成的温度变化足够小，这一步可忽略温变，并把这两个热库作为分析边界，暂不与外界交换热或功。规定Q流入某热库为正。\n\n120 J从400 K端流向300 K端时，热端的状态量变化可按ΔS=Q/T写成−120/400=−0.30 J/K；冷端是+120/300=+0.40 J/K。能量账确实是一出一入，但两端这项状态量相加为+0.10 J/K。岑夏在总和下划线：孤立整体的这项状态量不能自发减少。老周把原来双向的被动箭头先擦掉了一边。\n\n他接着核算纯粹反向的假设：若只让这两个孤立热库把120 J从300 K端送回400 K端，热端变为+0.30 J/K，冷端−0.40 J/K，两者合计−0.10 J/K。于是问题不在能量有没有守恒，而在这两个热库组成的孤立整体是否允许这样的自发方向。\n\n老周把第二天可能需要反向搬热的要求另写在工单上。岑夏给它留出“外部装置+环境”的栏位，机器尚未选型，参数还空着。要从300 K端把热搬回400 K端，装置做功及它与环境的交换都得进入这份更大的总账；那张只算两热库的−0.10纸条被夹在旁边，标作“不能直接照用”。\n\n在这组温度下，老周最后在余热管图上只保留400 K→300 K的被动箭头。工作台上，−0.30、+0.40和总和+0.10三张纸条压在图纸角落；反向那一栏仍空着，等设备确定后再填。",
+    "explanation": "Entropy is a state variable, and the total entropy of an isolated system does not decrease in a spontaneous process. Here, two large bodies are approximated as constant-temperature reservoirs: a 120 J forward transfer gives −0.30 and +0.40 J/K, totaling +0.10 J/K.\n\nFor a reservoir, ΔS=Q/T can be used to calculate the state change, equivalently via a reversible path; it is not a universal Q/T expression for the actual path of every irreversible process. A reverse-transfer device requires the device and environment to be included in the accounting.",
+    "explanationZh": "熵是状态量；对孤立系统，自发过程总熵不减少。本例把两块巨大热体近似为定温热库，正向120 J交换给出−0.30与+0.40 J/K，总和+0.10。\n\n对热库可用ΔS=Q/T求状态变化，可理解为沿可逆路径计算；这不是任意不可逆实际路径的通用Q/T公式。反向装置需把装置和环境一起核算。"
   },
   {
     "id": "0533-field-concept",
@@ -15396,49 +15766,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0533",
     "fieldTitle": "Physics",
     "fieldTitleZh": "物理学",
-    "title": "The Iron Needles That Turned Together",
-    "titleZh": "铁针同时转向的广场",
-    "summary": "Iron needles across a square never touch one another, yet turn toward the fountain at the same time.",
-    "summaryZh": "广场上的铁针没有彼此相碰，却在同一时刻朝向了喷泉。",
-    "storyParagraphs": [
-      "Before the compass-makers' fair, every needle carried across Fountain Square twisted away from north. Guild master Toma blamed a rival stall and ordered apprentice Ves to find the hidden trick before visitors arrived. Ves placed twenty freely turning iron needles on marked paving stones. None touched another, yet each settled at its own angle; those near the fountain turned more sharply. If the guild cancelled the fair, it would lose a year's orders. If it sold compasses there, customers would call every instrument defective.",
-      "Ves assumed one needle signalled the next like runners in a line. He removed every second needle, then all but one. The survivor still turned. Surveyor Elin asked him to carry the same small compass from mark to mark. At each position she drew an arrow in the direction its north end pointed and wrote a relative strength beside it. The map assigned a value even to paving stones where no test needle remained. It described what a suitable probe would do if placed there, not messages passed among the probes.",
-      "At one mark the compass experienced a strong torque; two paces away it experienced less. Ves replaced it with a copper disk and saw almost no comparable turning. Elin would not call the first reading a property of the needle alone or of the square alone. The source established a spatial condition, while the response depended on the probe's own magnetic moment and orientation. With a different kind of field, a scalar might be assigned instead of an arrow, or a more complicated quantity might be needed.",
-      "They lifted one fountain slab and found an iron chest with a large magnet in its latch. Moving the chest changed the entire arrow map. Ves wanted to say the distant arrows must change in the same instant, but Elin stopped him: their slow survey only compared static patterns and could not measure propagation time. In physical theory, changes and disturbances travel at finite speed, and fields can carry energy and momentum. A still compass map by itself proved none of those timing claims.",
-      "The fair committee demanded that Toma leave the fountain intact and merely mark a 'bad compass zone.' The chest, however, belonged to the treasury, and moving it required breaking the new marble pavement. Toma chose to postpone the fair, paid refunds to travelling sellers, and let masons raise six slabs. The treasury moved the chest into a shielded stone room beyond the square. Three days of income disappeared into the repair bill.",
-      "Elin repeated the measurements after every slab was reset. The arrows now lay close to geographic north within their instruments' uncertainty, though iron nails in one bench still produced a small local deviation. She kept both maps. One recorded the pattern before the source moved; the other recorded the pattern after. Neither map claimed that an arrow was a material thread stretching from fountain to needle.",
-      "The fair reopened under rain-dark awnings. Ves removed all twenty test needles and swept the paving clean, but Toma asked him not to wash away the tiny arrow marks until closing. A customer set a compass on the stone farthest from the fountain. Its needle settled along Elin's newer arrow. Under the glass, the older crossed-out direction was still faintly visible."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "三颗测试小球让顾言先去查批次标签",
+    "summaryZh": "静电偏转装置在P点的参考记录是向右约200 N/C。顾言保持源设置和P位置不变，用三个已知小电荷得到独立测力记录；三次F/q都约为+200 N/C，因此她先查探针批次，而没有把力变化直接解释成P点背景量变化。",
     "storyParagraphsZh": [
-      "罗盘匠集市开幕前，所有经过喷泉广场的指针都会偏离北方。行会师傅托马怀疑对手做了手脚，命学徒维斯在客商到达前查明。他把二十枚可自由转动的铁针摆上标记石，针与针互不接触，却各自停在不同角度，靠近喷泉的偏转通常更强。取消集市会损失全年订单，照常卖货又会让顾客认定罗盘全是坏的。",
-      "维斯以为第一枚针像传话人一样命令后面的针，先撤掉隔一枚的针，后来只留一枚，它仍旧转向。测量员艾琳让他拿同一只小罗盘逐点移动，在每块石上画出北端所指箭头，并记下相对强弱。即使某处没有测试针，也能记录“若放入合适探针，它将怎样响应”。这张图描述空间各处的状态，不是探针之间相互传话。",
-      "同一标点上，罗盘受到明显转矩；移开两步，作用减弱。维斯换上一片铜盘，便看不到相同转向。艾琳不把读数说成铁针或广场单方面的属性：源在空间中建立状态，探针的磁矩和朝向决定它怎样耦合、怎样响应。别的情形可能只需给每点一个数值，也可能需要比箭头更复杂的量；画什么取决于被描述的物理量。",
-      "他们撬起一块喷泉石板，发现国库铁箱的锁扣藏着大磁石。搬动铁箱，整张箭头图都随之改变。维斯正要说远处必在同一瞬间改变，艾琳拦住了他：这次慢速测量只比较两个静态图样，根本没有测传播时间。更完整的物理理论里，扰动以有限速度传播，场也能携带能量与动量；一张静止罗盘图不能单独证明这些时间结论。",
-      "集市委托人要求托马保留喷泉，只挂一块“罗盘失准区”木牌。可铁箱属于国库，搬走它就得拆掉新铺的大理石。托马最终推迟开市，退还外地商贩摊费，让石匠掀开六块地砖，把铁箱移进广场外的屏蔽石室。三天收入全部填进修缮账。",
-      "石板复位后，艾琳重新逐点测量。各箭头在仪器误差内已接近地理北向，只有长椅里的铁钉还造成一小块局部偏差。她保留了前后两张图：一张记录源移动前，一张记录移动后。两张图都没有把箭头说成从喷泉拉到铁针的物质细线。",
-      "雨后的集市终于开张。维斯收走二十枚测试针，正要洗掉地面标记，托马让他等到收市。一名顾客把罗盘放在离喷泉最远的石上，指针沿艾琳的新箭头停稳。玻璃下面，旧方向那道被划掉的细线仍隐约可见。"
+      "包装线上的静电偏转装置换了三批测试小球后，同一标记点P的测力读数不再相同。维修员顾言手里有上次校准留下的参考记录：P点外部电场约为向右200 N/C。她没有先拆源电极，而是锁住当前源设置和P点位置，拿三颗已知电荷的小球逐一复测。",
+      "工单中的F专指小球受到的外部电力，规定右向为正、左向为负，1 μC=10⁻⁶ C。第一颗q=+1 μC，测得F=+0.0002 N；反算E=F/q=+200 N/C。第二颗q=+2 μC，F=+0.0004 N，算出的E仍是+200 N/C。力变大了，但与电荷一起成比例变化。",
+      "第三颗q=−1 μC时，测力方向翻到左侧，F=−0.0002 N。负力除以负电荷，E仍为+200 N/C，方向向右。顾言把三次E结果写在参考值旁边：它们都与P点原有的约200 N/C记录一致，至少没有出现“只因换探针就需要把P点箭头翻转”的迹象。",
+      "顾言把三颗小球的q添在力值旁，另开一列写F/q，三行都是+200 N/C，再把旧校准记录压在这一列旁边。工单里的力箭头有长有短、朝向不同，除以各自电荷后却落在同一个P点参考值上。她合上准备拆源的工具盒，先取出三批小球的标签；今天这一步，她还不用动那枚电极。",
+      "她还在工单上注明小试探电荷的近似条件：探针本身也会产生电场，但这里假定足够小，对源分布的扰动可忽略；F=qE里的E指源产生的外部场，不能把探针自己的场算成推动自身的同种自力。",
+      "午后，顾言把三颗小球分别装回标记盒，扳手仍留在工具车里。P点胶带旁保留一支向右约200 N/C的参考箭头，下面是三行+0.0002、+0.0004、−0.0002 N测力记录。她先去核对新换三批小球的标签与证书，再决定是否需要继续拆检源电极。"
     ],
-    "conceptName": "Field concept",
+    "overallZh": "场概念是在空间和时间的每一点赋予某种物理量的描述；本篇用电场向量说明源在P点建立的外部场与试探电荷的受力响应应分开。固定源和位置时，F=qE会随q改变，而E可保持一致。",
     "conceptNameZh": "场概念",
-    "explanationParagraphs": [
-      "A field assigns a physical quantity to every point in space and time and may be scalar, vector, or more complex. Sources shape fields, while objects respond through their coupling, so measured force depends on both. Fields can store and transfer energy and momentum and propagate disturbances at finite speed, not merely record distant action."
-    ],
     "explanationParagraphsZh": [
-      "场概念把物理量赋予时空中的每一点，可为标量、向量或更复杂对象。源塑造场，物体按自身耦合性质响应，测得的力同时取决于两者。场能够储存和传递能量、动量，并以有限速度传播扰动，不只是远距作用的数学记账。静态图样本身不能测出传播速度。"
+      "场概念把物理量赋给空间/时间点；电场是向量，可用小正试探电荷单位电荷所受外力定义。本例三组F/q都约为向右200 N/C。",
+      "右为正、左为负，μC=10⁻⁶ C。探针须足够小以近似不扰动源；三次一致只支持P点当前静态排查，不能证明整套装置无其他故障。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "从独立测力记录反算P点外部场，再与参考值比较，而不是用预设场生成力后自我验证。",
+      "diagramTitle": "三种q和三种F怎样都回到约+200 N/C",
+      "diagramSteps": [
+        "固定源设置与P点，并读取历史参考场约+200 N/C",
+        "用+1 μC和+0.0002 N反算E",
+        "用+2 μC和+0.0004 N反算E",
+        "用−1 μC和−0.0002 N反算E",
+        "三次结果一致后先查探针批次而非立即拆源"
+      ],
+      "diagramStepNotes": [
+        "符号约定右正左负，1 μC=10⁻⁶ C。",
+        "E=F/q=+200 N/C。",
+        "电荷翻倍时力也翻倍。",
+        "负探针受力反向，但F/q仍为正向外场。",
+        "结论只限固定P点当前静态排查。"
+      ],
+      "mapping": [
+        "P点胶带 → 固定空间位置。",
+        "历史参考箭头 → 独立于本次三次测力的比较基准。",
+        "三颗已知q小球 → 改变的探针属性。",
+        "扳手留在工具车 → 有限证据改变了排查顺序，而非宣布源绝对正常。"
+      ],
+      "boundary": "测力和参考值均为虚构静电记录，小球近似为点电荷，F为外部电力。F=qE描述电力；小探针条件使源分布的扰动可忽略，才能近似读取未受扰动的源场。探针若显著改变源，背景E也可能变化；本例不测传播速度，也不排除装置其他位置或其他类型故障。",
+      "reflection": "为什么三颗小球的力大小和方向不同，仍可能与同一个P点外部电场相容？"
+    },
+    "referencesZh": [
+      {
+        "id": "openstax-electric-field",
+        "citation": "OpenStax. University Physics Volume 2, §5.4 Electric Field.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/5-4-electric-field",
+        "use": "支持固定源近似下E=F/q与F=qE，以及正负试探电荷的受力方向和向量关系。"
+      },
+      {
+        "id": "openstax-field-lines",
+        "citation": "OpenStax. University Physics Volume 2, §5.6 Electric Field Lines.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/5-6-electric-field-lines",
+        "use": "支持场线作为电场的绘图表示而非物质线或粒子轨迹；静态图本身不测传播速度。"
+      }
+    ],
+    "title": "Three Test Spheres Send Gu Yan to Check the Batch Labels First",
+    "summary": "The reference record for point P in the electrostatic deflection device is about 200 N/C to the right. Gu Yan keeps the source setting and point P fixed and obtains independent force measurements using three small known charges. All three F/q values are about +200 N/C, so she checks probe batches first rather than interpreting the force changes directly as changes in the background quantity at P.",
+    "storyParagraphs": [
+      "After three new batches of test spheres are introduced on the packaging line’s electrostatic deflection device, force readings at the same marked point P are no longer the same. Maintenance technician Gu Yan has a reference from the previous calibration: the external electric field at P was about 200 N/C to the right. Rather than dismantling the source electrode first, she locks the current source setting and the position of P and retests with three spheres of known charge.",
+      "F on the work order denotes the external electric force on a sphere, with rightward force positive and leftward force negative; 1 μC=10⁻⁶ C. For the first sphere, q=+1 μC and the measured force is F=+0.0002 N; calculating E=F/q gives +200 N/C. For the second sphere, q=+2 μC and F=+0.0004 N, again giving E=+200 N/C. The force is larger, but it increases in proportion with the charge.",
+      "For the third sphere, q=−1 μC and the measured force reverses to the left, F=−0.0002 N. A negative force divided by a negative charge still gives E=+200 N/C, directed to the right. Gu Yan writes all three E results beside the reference value: they agree with the earlier value of about 200 N/C at P, so there is at least no sign that merely changing the probe requires reversing the field arrow at P.",
+      "Gu Yan adds each sphere’s q beside its force reading and opens a column for F/q. All three rows say +200 N/C. She places the old calibration record beside that column. The force arrows have different lengths and directions, yet dividing by their respective charges returns the same reference value at P. She closes the tool case laid out for dismantling the source and picks up the three batch labels first. At this stage of today’s check, she does not yet need to move the electrode.",
+      "She also notes the small-test-charge approximation on the work order. The probe itself also produces an electric field, but here it is assumed small enough that its disturbance of the source distribution is negligible. In F=qE, E refers to the external field produced by the source; the probe’s own field is not counted as a same-type self-force pushing the probe itself.",
+      "In the afternoon, Gu Yan returns the three spheres to their labeled boxes, while the wrench stays on the tool cart. Beside the tape mark at P, the reference arrow remains pointed right at about 200 N/C. Under it are the three force records: +0.0002, +0.0004, and −0.0002 N. She goes first to verify the labels and certificates for the three new sphere batches, then decides whether the source electrode needs further disassembly."
+    ],
+    "overall": "A field concept assigns a physical quantity to each point in space and time. This article uses the electric-field vector to separate the external field established by the source at P from the force response of a test charge. With source and position fixed, F=qE changes with q while E can remain consistent.",
+    "conceptName": "Field concept",
+    "explanationParagraphs": [
+      "A field concept assigns a physical quantity to points in space/time; the electric field is a vector and can be defined through the external force per unit small positive test charge. Here, all three F/q values are about 200 N/C to the right.",
+      "Right is positive and left is negative, with μC=10⁻⁶ C. The probe must be small enough to avoid appreciably disturbing the source. Agreement across the three readings supports only the current static check at P and does not prove that the whole device has no other fault."
+    ],
+    "module": {
+      "intro": "Infer the external field at P from independent force measurements and compare it with a reference, rather than generating forces from an assumed field and then using them to verify that same assumption.",
+      "diagramTitle": "How Three q Values and Three F Values All Return to About +200 N/C",
+      "diagramSteps": [
+        "Fix the source setting and point P, and read the historical reference field of about +200 N/C",
+        "Use +1 μC and +0.0002 N to infer E",
+        "Use +2 μC and +0.0004 N to infer E",
+        "Use −1 μC and −0.0002 N to infer E",
+        "After all three agree, check probe batches first rather than immediately dismantling the source"
+      ],
+      "diagramStepNotes": [
+        "Sign convention: right is positive and left is negative; 1 μC=10⁻⁶ C.",
+        "E=F/q=+200 N/C.",
+        "When charge doubles, force doubles.",
+        "A negative probe feels force in the opposite direction, but F/q still gives the same rightward external field.",
+        "The conclusion is limited to the current static check at fixed point P."
+      ],
+      "mapping": [
+        "Tape mark at P → fixed spatial position.",
+        "Historical reference arrow → a comparison baseline independent of the current three force measurements.",
+        "Three spheres with known q → changing probe properties.",
+        "Wrench left on the tool cart → limited evidence changes the troubleshooting order rather than declaring the source absolutely normal."
+      ],
+      "boundary": "The force and reference values are fictional electrostatic records. Spheres are approximated as point charges, and F is external electric force. F=qE describes electric force; the small-probe condition makes source disturbance negligible so the approximately unperturbed source field can be read. A probe that appreciably rearranges source charges may change the background E. This example neither measures propagation speed nor excludes faults elsewhere or of other kinds.",
+      "reflection": "Why can three spheres experience different force magnitudes and directions while still being consistent with the same external electric field at point P?"
+    },
+    "references": [
+      {
+        "id": "openstax-electric-field",
+        "citation": "OpenStax. University Physics Volume 2, §5.4 Electric Field.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/5-4-electric-field",
+        "use": "Supports E=F/q and F=qE under the fixed-source approximation, including the force direction and vector relationship for positive and negative test charges."
+      },
+      {
+        "id": "openstax-field-lines",
+        "citation": "OpenStax. University Physics Volume 2, §5.6 Electric Field Lines.",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/5-6-electric-field-lines",
+        "use": "Supports field lines as a graphical representation of the electric field rather than material lines or particle trajectories; a static diagram by itself does not measure propagation speed."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "Before the compass-makers' fair, every needle carried across Fountain Square twisted away from north. Guild master Toma blamed a rival stall and ordered apprentice Ves to find the hidden trick before visitors arrived. Ves placed twenty freely turning iron needles on marked paving stones. None touched another, yet each settled at its own angle; those near the fountain turned more sharply. If the guild cancelled the fair, it would lose a year's orders. If it sold compasses there, customers would call every instrument defective.\n\nVes assumed one needle signalled the next like runners in a line. He removed every second needle, then all but one. The survivor still turned. Surveyor Elin asked him to carry the same small compass from mark to mark. At each position she drew an arrow in the direction its north end pointed and wrote a relative strength beside it. The map assigned a value even to paving stones where no test needle remained. It described what a suitable probe would do if placed there, not messages passed among the probes.\n\nAt one mark the compass experienced a strong torque; two paces away it experienced less. Ves replaced it with a copper disk and saw almost no comparable turning. Elin would not call the first reading a property of the needle alone or of the square alone. The source established a spatial condition, while the response depended on the probe's own magnetic moment and orientation. With a different kind of field, a scalar might be assigned instead of an arrow, or a more complicated quantity might be needed.\n\nThey lifted one fountain slab and found an iron chest with a large magnet in its latch. Moving the chest changed the entire arrow map. Ves wanted to say the distant arrows must change in the same instant, but Elin stopped him: their slow survey only compared static patterns and could not measure propagation time. In physical theory, changes and disturbances travel at finite speed, and fields can carry energy and momentum. A still compass map by itself proved none of those timing claims.\n\nThe fair committee demanded that Toma leave the fountain intact and merely mark a 'bad compass zone.' The chest, however, belonged to the treasury, and moving it required breaking the new marble pavement. Toma chose to postpone the fair, paid refunds to travelling sellers, and let masons raise six slabs. The treasury moved the chest into a shielded stone room beyond the square. Three days of income disappeared into the repair bill.\n\nElin repeated the measurements after every slab was reset. The arrows now lay close to geographic north within their instruments' uncertainty, though iron nails in one bench still produced a small local deviation. She kept both maps. One recorded the pattern before the source moved; the other recorded the pattern after. Neither map claimed that an arrow was a material thread stretching from fountain to needle.\n\nThe fair reopened under rain-dark awnings. Ves removed all twenty test needles and swept the paving clean, but Toma asked him not to wash away the tiny arrow marks until closing. A customer set a compass on the stone farthest from the fountain. Its needle settled along Elin's newer arrow. Under the glass, the older crossed-out direction was still faintly visible.",
-    "storyBodyZh": "罗盘匠集市开幕前，所有经过喷泉广场的指针都会偏离北方。行会师傅托马怀疑对手做了手脚，命学徒维斯在客商到达前查明。他把二十枚可自由转动的铁针摆上标记石，针与针互不接触，却各自停在不同角度，靠近喷泉的偏转通常更强。取消集市会损失全年订单，照常卖货又会让顾客认定罗盘全是坏的。\n\n维斯以为第一枚针像传话人一样命令后面的针，先撤掉隔一枚的针，后来只留一枚，它仍旧转向。测量员艾琳让他拿同一只小罗盘逐点移动，在每块石上画出北端所指箭头，并记下相对强弱。即使某处没有测试针，也能记录“若放入合适探针，它将怎样响应”。这张图描述空间各处的状态，不是探针之间相互传话。\n\n同一标点上，罗盘受到明显转矩；移开两步，作用减弱。维斯换上一片铜盘，便看不到相同转向。艾琳不把读数说成铁针或广场单方面的属性：源在空间中建立状态，探针的磁矩和朝向决定它怎样耦合、怎样响应。别的情形可能只需给每点一个数值，也可能需要比箭头更复杂的量；画什么取决于被描述的物理量。\n\n他们撬起一块喷泉石板，发现国库铁箱的锁扣藏着大磁石。搬动铁箱，整张箭头图都随之改变。维斯正要说远处必在同一瞬间改变，艾琳拦住了他：这次慢速测量只比较两个静态图样，根本没有测传播时间。更完整的物理理论里，扰动以有限速度传播，场也能携带能量与动量；一张静止罗盘图不能单独证明这些时间结论。\n\n集市委托人要求托马保留喷泉，只挂一块“罗盘失准区”木牌。可铁箱属于国库，搬走它就得拆掉新铺的大理石。托马最终推迟开市，退还外地商贩摊费，让石匠掀开六块地砖，把铁箱移进广场外的屏蔽石室。三天收入全部填进修缮账。\n\n石板复位后，艾琳重新逐点测量。各箭头在仪器误差内已接近地理北向，只有长椅里的铁钉还造成一小块局部偏差。她保留了前后两张图：一张记录源移动前，一张记录移动后。两张图都没有把箭头说成从喷泉拉到铁针的物质细线。\n\n雨后的集市终于开张。维斯收走二十枚测试针，正要洗掉地面标记，托马让他等到收市。一名顾客把罗盘放在离喷泉最远的石上，指针沿艾琳的新箭头停稳。玻璃下面，旧方向那道被划掉的细线仍隐约可见。",
-    "explanation": "A field assigns a physical quantity to every point in space and time and may be scalar, vector, or more complex. Sources shape fields, while objects respond through their coupling, so measured force depends on both. Fields can store and transfer energy and momentum and propagate disturbances at finite speed, not merely record distant action.",
-    "explanationZh": "场概念把物理量赋予时空中的每一点，可为标量、向量或更复杂对象。源塑造场，物体按自身耦合性质响应，测得的力同时取决于两者。场能够储存和传递能量、动量，并以有限速度传播扰动，不只是远距作用的数学记账。静态图样本身不能测出传播速度。"
+    "storyBody": "After three new batches of test spheres are introduced on the packaging line’s electrostatic deflection device, force readings at the same marked point P are no longer the same. Maintenance technician Gu Yan has a reference from the previous calibration: the external electric field at P was about 200 N/C to the right. Rather than dismantling the source electrode first, she locks the current source setting and the position of P and retests with three spheres of known charge.\n\nF on the work order denotes the external electric force on a sphere, with rightward force positive and leftward force negative; 1 μC=10⁻⁶ C. For the first sphere, q=+1 μC and the measured force is F=+0.0002 N; calculating E=F/q gives +200 N/C. For the second sphere, q=+2 μC and F=+0.0004 N, again giving E=+200 N/C. The force is larger, but it increases in proportion with the charge.\n\nFor the third sphere, q=−1 μC and the measured force reverses to the left, F=−0.0002 N. A negative force divided by a negative charge still gives E=+200 N/C, directed to the right. Gu Yan writes all three E results beside the reference value: they agree with the earlier value of about 200 N/C at P, so there is at least no sign that merely changing the probe requires reversing the field arrow at P.\n\nGu Yan adds each sphere’s q beside its force reading and opens a column for F/q. All three rows say +200 N/C. She places the old calibration record beside that column. The force arrows have different lengths and directions, yet dividing by their respective charges returns the same reference value at P. She closes the tool case laid out for dismantling the source and picks up the three batch labels first. At this stage of today’s check, she does not yet need to move the electrode.\n\nShe also notes the small-test-charge approximation on the work order. The probe itself also produces an electric field, but here it is assumed small enough that its disturbance of the source distribution is negligible. In F=qE, E refers to the external field produced by the source; the probe’s own field is not counted as a same-type self-force pushing the probe itself.\n\nIn the afternoon, Gu Yan returns the three spheres to their labeled boxes, while the wrench stays on the tool cart. Beside the tape mark at P, the reference arrow remains pointed right at about 200 N/C. Under it are the three force records: +0.0002, +0.0004, and −0.0002 N. She goes first to verify the labels and certificates for the three new sphere batches, then decides whether the source electrode needs further disassembly.",
+    "storyBodyZh": "包装线上的静电偏转装置换了三批测试小球后，同一标记点P的测力读数不再相同。维修员顾言手里有上次校准留下的参考记录：P点外部电场约为向右200 N/C。她没有先拆源电极，而是锁住当前源设置和P点位置，拿三颗已知电荷的小球逐一复测。\n\n工单中的F专指小球受到的外部电力，规定右向为正、左向为负，1 μC=10⁻⁶ C。第一颗q=+1 μC，测得F=+0.0002 N；反算E=F/q=+200 N/C。第二颗q=+2 μC，F=+0.0004 N，算出的E仍是+200 N/C。力变大了，但与电荷一起成比例变化。\n\n第三颗q=−1 μC时，测力方向翻到左侧，F=−0.0002 N。负力除以负电荷，E仍为+200 N/C，方向向右。顾言把三次E结果写在参考值旁边：它们都与P点原有的约200 N/C记录一致，至少没有出现“只因换探针就需要把P点箭头翻转”的迹象。\n\n顾言把三颗小球的q添在力值旁，另开一列写F/q，三行都是+200 N/C，再把旧校准记录压在这一列旁边。工单里的力箭头有长有短、朝向不同，除以各自电荷后却落在同一个P点参考值上。她合上准备拆源的工具盒，先取出三批小球的标签；今天这一步，她还不用动那枚电极。\n\n她还在工单上注明小试探电荷的近似条件：探针本身也会产生电场，但这里假定足够小，对源分布的扰动可忽略；F=qE里的E指源产生的外部场，不能把探针自己的场算成推动自身的同种自力。\n\n午后，顾言把三颗小球分别装回标记盒，扳手仍留在工具车里。P点胶带旁保留一支向右约200 N/C的参考箭头，下面是三行+0.0002、+0.0004、−0.0002 N测力记录。她先去核对新换三批小球的标签与证书，再决定是否需要继续拆检源电极。",
+    "explanation": "A field concept assigns a physical quantity to points in space/time; the electric field is a vector and can be defined through the external force per unit small positive test charge. Here, all three F/q values are about 200 N/C to the right.\n\nRight is positive and left is negative, with μC=10⁻⁶ C. The probe must be small enough to avoid appreciably disturbing the source. Agreement across the three readings supports only the current static check at P and does not prove that the whole device has no other fault.",
+    "explanationZh": "场概念把物理量赋给空间/时间点；电场是向量，可用小正试探电荷单位电荷所受外力定义。本例三组F/q都约为向右200 N/C。\n\n右为正、左为负，μC=10⁻⁶ C。探针须足够小以近似不扰动源；三次一致只支持P点当前静态排查，不能证明整套装置无其他故障。"
   },
   {
     "id": "0541-invariance",
@@ -15867,45 +16328,140 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0542",
     "fieldTitle": "Statistics",
     "fieldTitleZh": "统计学",
-    "title": "The Tallest Doors in the City",
-    "titleZh": "城里最高的门",
-    "summary": "A carpenter measures height only at a guard recruitment and builds doors whose latches many citizens cannot reach.",
-    "summaryZh": "木匠只在卫兵选拔场测量身高，随后为全城造出了没人够得到门闩的门。",
-    "storyParagraphs": [
-      "The city ordered carpenter Lin Hao to choose one latch height for every new public building. He had twelve days before three hundred library doors went into production. A household survey would take months, but the guard recruitment ground processed crowds in straight lines, already measured their bodies, and offered him 1,200 records by sunset. The recruits averaged 181 centimetres. Lin treated the large, tidy number as the city's height and placed every latch where a tall adult could reach it comfortably.",
-      "At the library opening, children jumped for the handles, several older residents used umbrellas to hook them, and a wheelchair user waited outside a reading room until a guard came. Lin first blamed the crowd for using doors incorrectly. Then he noticed that the people struggling were precisely those unlikely to appear at a military selection where age, health, interest, and minimum stature affected entry. His measurements were precise for aspiring guards; adding more recruits would only describe that same selected group more precisely.",
-      "The mayor demanded a quiet repair before election week and forbade another long delay. Lin built an address list by district, randomly drew households, and sent measurers to homes rather than inviting only volunteers to the square. Of 600 selected residents, 420 responded at first. The team revisited missing addresses and recorded who remained unreachable. Some groups still responded less often, so Lin used known district and age counts for weighting and checked how conclusions changed under plausible assumptions about the missing people.",
-      "The revised mean was 168 centimetres, but the wider range mattered more than the thirteen-centimetre drop. One average could not represent a child, a tall porter, and a seated reader at once. Lin proposed lower lever handles usable with little grip, then tested prototypes with residents from the frame rather than only city workers. Several designs that fit the new mean still failed the seated test, so he kept the full range on the bench. The mayor made him choose: preserve the finished doors and his reputation, or replace the high latches at his own shop's cost. Lin sold his new timber cart and recalled all three hundred fittings.",
-      "The library reopened after election week. Lin had lost the municipal bonus and still owed two apprentices wages, but visitors could open the rooms without borrowing an umbrella. He mounted one removed latch above the survey desk beside two labels: '1,200 guard recruits, mean 181' and 'not the target population.' The brass was accurately drilled and carefully measured. It was still too high for most hands that reached toward it."
-    ],
+    "mode": "mechanism-explainer",
+    "titleZh": "80%的便签被翻到了背面",
+    "summaryZh": "健身房经理用App问卷决定是否提前晚课，100名App会员全部回答且80%支持。她随后发现另100名前台/电话会员从未见到问卷，并通过补访得到其中20人支持；完整200人支持率因此是50%，原便利渠道系统性偏向了更支持调整的一组。",
     "storyParagraphsZh": [
-      "城里要求木匠林皓为所有新公共建筑确定统一门闩高度。十二天后，三百扇图书馆门就要投产。入户调查要花几个月，卫兵选拔场却把人排成直线，本来就在量身高，一天便能交给他一千二百条记录。应征者平均一百八十一厘米。林皓把这个整齐的大数当成全城身高，按高个成年人伸手舒服的位置钻下所有孔。",
-      "图书馆开门那天，孩子跳着够门把，几位老人用伞柄去勾，一名轮椅使用者在阅览室外等到守卫经过。林皓先怪他们不会用门，随后才看见：遇到困难的，恰好是不太可能出现在军队选拔场的人，年龄、健康、参军意愿与最低身高都影响谁能入场。他的测量对“来应征的卫兵”很精确，再多量几千人，也只会更精确地描述同一批人。",
-      "市长要求在选举周前悄悄修好，又不许长时间停馆。林皓按街区建立住址名单，随机抽取家庭，让测量员上门，而非只在广场等待自愿者。六百名入选居民起初只有四百二十人回应，团队便回访缺失地址，并记录仍找不到的人。某些群体回应率依然较低，他们依据已知街区与年龄人数加权，也检验对未回应者作不同合理假设时，结果会怎样改变。",
-      "新平均数降到一百六十八厘米，更重要的是范围比原样本宽得多。一个均值无法同时代表孩子、高个搬运工和坐姿读者。林皓改用较低、握力要求小的压杆，又邀请抽样名单里的居民试门。几种刚好适合新均值的方案仍没通过坐姿测试，他只得把完整范围一直摆在工作台上。市长让他选择：保住成品与名声，或由自家工坊承担三百套门闩重装费。林皓卖掉刚买的木料车，召回全部配件。",
-      "图书馆在选举周后重新开放。林皓失去市政奖金，还欠两名学徒工钱，来客却不必再借伞开门。他把一只拆下的高门闩钉在调查桌上，旁边写着：“一千二百名卫兵应征者，均值一八一；并非目标人群。”那块黄铜钻孔准确、测量仔细，伸向它的大多数手仍旧够不到。"
+      "健身房经理乔安想把晚间团课提前一小时，先在App里发了快捷问卷。100名经常用App预约的活跃会员都回答了，其中80人支持。她把“80%支持”写在便签上，已经准备通知教练下月改时间。",
+      "前台主管拿来完整活跃会员名单时，乔安才发现目标总体其实有200人：另外100人主要靠前台或电话预约，从未看到App入口。她这一周发过五轮提醒，系统显示500次弹窗，但那只是对同一批可见会员的重复触达，不是500名不同受访者。",
+      "乔安先停住改课通知，没有拿“B组也有100人”去猜他们会怎么答。为了弄清覆盖缺口，她让前台用同一句问题补访那100名从未入样的会员；前台逐人核对名字，100人全部回应，其中20人支持、80人不支持。B组的20%是补访得到的，不是从A组推出来的。",
+      "两组放在一起后，A组支持80/100，B组20/100，全体支持人数是100/200=50%。这并不意味着50%自动告诉她课表该怎么改；它真正推翻的是另一件事：只看App渠道的80%，不能代表原本定义的200名活跃会员。",
+      "乔安把教练通知暂时留在草稿箱，打开下一次调查的收件名单，把默认的App名单换成完整会员表。前台和电话预约者的名字也列在上面，旁边留出“已回应”“未回应”两栏。她在发送前还要核对选人办法；这次先把名单里看不见的一半找回来，通知的时间暂不填。",
+      "办公室门旁那张80%便签没有被扔掉。乔安把它翻到背面，补写“100名App会员”；旁边的新表格写着(80+20)/200=50%。五轮500次弹窗记录也还在，只是不再被当成500个独立人。教练的改课通知仍停在草稿箱，等乔安把调查对象和决策标准重新说清楚。"
     ],
-    "conceptName": "Sampling bias",
+    "overallZh": "抽样偏差是选择、覆盖或未回应机制与所测结果相关，使样本统计量系统性偏离目标总体的现象；不等于所有不等概率选择都有偏差。本篇的App渠道完全漏掉偏好不同的B组，因此80%不能代表全部200人。",
     "conceptNameZh": "抽样偏差",
-    "explanationParagraphs": [
-      "Sampling bias arises when coverage, selection, self-selection, survival, or nonresponse mechanisms are related to the outcome, making a sample systematically unlike the target population. A very large sample can estimate the wrong population precisely. Probability sampling, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias under explicit assumptions."
-    ],
     "explanationParagraphsZh": [
-      "抽样偏差发生在覆盖、选择、自愿参与、幸存或未回应机制与研究结果相关，使样本系统性偏离目标群体。样本再大也可能精确估计错误人群。概率抽样、完整抽样框、回访、加权和敏感性分析可缓解，但依赖明确假设，无法自动修复未知缺失。"
+      "抽样偏差来自入样机会与结果相关造成的系统偏离。补访后A=80/100、B=20/100，全体100/200=50%，说明App便利样本只准确描述A组。",
+      "500次弹窗只是重复邀请，不是500个独立会员。若B完全缺失且偏好未知，仅知道B有100人也不能靠权重恢复其均值；不等概率本身并不必然有偏。"
     ],
-    "mode": "concept-fable",
+    "moduleZh": {
+      "intro": "先让便利渠道给出可行动的80%，再通过完整名单和补访揭示谁从未有机会进入样本。",
+      "diagramTitle": "100份完整App答卷怎样被另外100名未覆盖会员改写",
+      "diagramSteps": [
+        "定义目标总体为200名活跃会员",
+        "识别App只覆盖A组100人且80人支持",
+        "确认五轮500次只是重复邀请同一覆盖群体",
+        "补访此前未入样的B组100人并得到20人支持",
+        "合并为100/200=50%并暂停外推80%的决定"
+      ],
+      "diagramStepNotes": [
+        "目标总体先于便利渠道定义。",
+        "A组100%回应并不能补进B组。",
+        "重复触达次数不能当独立样本人数。",
+        "B组20%来自本故事的完整补访设定，不由A推算。",
+        "50%描述完整虚构总体，但不唯一决定课表行动。"
+      ],
+      "mapping": [
+        "80%便签 → 对A组准确却被错误外推的结果。",
+        "完整会员名单 → 暴露100名未覆盖成员。",
+        "前台补访表 → 让B组结果真正进入数据。",
+        "翻到背面的便签 → 角色行为从立即改课转为先修正调查依据。"
+      ],
+      "boundary": "这是虚构有限总体和完全补访，用来展示覆盖机制。现实调查还会有抽样误差、未回应和测量误差。若某组完全未入样且结果未知，仅知道组规模不能恢复其均值；权重需要已知选择机制或其他可辩护信息。",
+      "reflection": "如果补访B组时仍有20人没有回应，你还有什么依据把50%写成全体会员的答案？"
+    },
+    "referencesZh": [
+      {
+        "id": "statcan-nonprobability",
+        "citation": "Statistics Canada. Statistics: Power from Data!, §3.2.3 Non-probability sampling.",
+        "url": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch13/nonprob/5214898-eng.htm",
+        "use": "支持非概率选取、自选和覆盖问题，以及大样本不能自动消除系统偏离。"
+      },
+      {
+        "id": "statcan-survey-questions",
+        "citation": "Statistics Canada. Questions to ask about surveys.",
+        "url": "https://www.statcan.gc.ca/en/customized-products-services/custom-surveys/questions-to-ask",
+        "use": "支持明确目标总体、抽样框、概率选取与未回应风险；入样概率不必相等，但必须被设计和理解。"
+      }
+    ],
+    "title": "The 80% Note Gets Turned Over",
+    "summary": "A gym manager uses an app survey to decide whether to move an evening class earlier. All 100 app members respond and 80% support the change. She then discovers another 100 front-desk/phone members who never saw the survey and follows up with them, finding 20 supporters. The full 200-member support rate is therefore 50%, showing that the convenience channel systematically overrepresented the more supportive group.",
+    "storyParagraphs": [
+      "Gym manager Qiao An wants to move an evening group class one hour earlier, so she starts with a quick survey in the app. All 100 active members who regularly book through the app respond, and 80 support the change. She writes “80% support” on a sticky note and is already preparing to notify the instructor about next month’s schedule.",
+      "When the front-desk supervisor brings the complete active-member list, Qiao An realizes that the target population actually contains 200 people. Another 100 mainly book at the front desk or by phone and never saw the app entry point. During the week she sent five rounds of reminders and the system shows 500 pop-up displays, but those are repeated contacts with the same visible group, not 500 different respondents.",
+      "Qiao An pauses the schedule-change notice and does not use “group B also has 100 people” to guess how they would answer. To investigate the coverage gap, she asks the front desk to follow up with those 100 members who were never sampled, using the same question. The front desk checks the names one by one. All 100 respond: 20 support the change and 80 do not. Group B’s 20% comes from the follow-up, not from extrapolating group A.",
+      "Putting the two groups together, group A has 80/100 supporters and group B 20/100, for 100/200=50% support overall. That does not mean 50% automatically tells her how the class schedule should be changed. What it overturns is a different claim: the 80% from the app channel cannot represent the originally defined population of 200 active members.",
+      "Qiao An leaves the instructor notice in drafts and opens the recipient list for the next survey, replacing the default app list with the complete membership table. Front-desk and phone bookers are listed too, beside columns for “responded” and “not responded.” She still needs to check how people will be selected before sending. For now, she restores the half previously absent from the list and leaves the notification time blank.",
+      "The 80% sticky note beside the office door is not thrown away. Qiao An flips it over and adds “100 app members.” Beside it, a new sheet reads (80+20)/200=50%. The records of five rounds and 500 pop-up displays remain as well, but no one treats them as 500 independent people. The instructor notification is still in drafts while Qiao An clarifies the survey population and the decision criteria."
+    ],
+    "overall": "Sampling bias occurs when selection, coverage, or nonresponse mechanisms are related to the outcome being measured, causing sample statistics to differ systematically from the target population. It does not mean that every unequal-probability selection is biased. Here, the app channel completely misses group B, whose preferences differ, so 80% cannot represent all 200 members.",
+    "conceptName": "Sampling bias",
+    "explanationParagraphs": [
+      "Sampling bias is systematic deviation caused by the relationship between inclusion opportunity and the outcome. After follow-up, A=80/100 and B=20/100, giving 100/200=50% overall, showing that the app convenience sample accurately described only group A.",
+      "The 500 pop-ups are repeated invitations, not 500 independent members. If group B is completely missing and its preferences are unknown, knowing only that it contains 100 people is insufficient to recover its mean through weighting; unequal probabilities alone do not necessarily imply bias."
+    ],
+    "module": {
+      "intro": "Let a convenient channel first produce an actionable 80%, then use the complete list and follow-up to reveal who never had a chance to enter the sample.",
+      "diagramTitle": "How 100 Complete App Responses Are Rewritten by 100 Previously Uncovered Members",
+      "diagramSteps": [
+        "Define the target population as 200 active members",
+        "Identify that the app covers only group A of 100, with 80 supporters",
+        "Recognize that five rounds and 500 displays are repeated invitations to the same covered group",
+        "Follow up with the previously uncovered 100 members in group B and obtain 20 supporters",
+        "Combine to 100/200=50% and pause the decision that extrapolated 80%"
+      ],
+      "diagramStepNotes": [
+        "The target population is defined before choosing the convenience channel.",
+        "A 100% response rate in group A does not bring group B into the sample.",
+        "Repeated contact counts are not independent sample sizes.",
+        "Group B’s 20% comes from the complete follow-up in this story, not from inference from A.",
+        "50% describes the complete fictional population but does not uniquely determine the schedule decision."
+      ],
+      "mapping": [
+        "80% sticky note → a result accurate for group A but incorrectly extrapolated.",
+        "Complete member list → reveals 100 uncovered members.",
+        "Front-desk follow-up sheet → actually brings group B’s outcomes into the data.",
+        "Flipped sticky note → the character changes behavior from immediate schedule change to repairing the survey basis first."
+      ],
+      "boundary": "This is a fictional finite population with complete follow-up, used to illustrate a coverage mechanism. Real surveys also involve sampling error, nonresponse, and measurement error. If a group is entirely unsampled and its outcomes are unknown, its mean cannot be recovered from group size alone; weighting requires a known selection mechanism or other defensible information.",
+      "reflection": "If 20 members of group B still did not respond to the follow-up, what evidence would you need before writing 50% as the result for all members?"
+    },
+    "references": [
+      {
+        "id": "statcan-nonprobability",
+        "citation": "Statistics Canada. Statistics: Power from Data!, §3.2.3 Non-probability sampling.",
+        "url": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch13/nonprob/5214898-eng.htm",
+        "use": "Supports non-probability selection, self-selection, and coverage problems, as well as the point that a large sample does not automatically remove systematic deviation."
+      },
+      {
+        "id": "statcan-survey-questions",
+        "citation": "Statistics Canada. Questions to ask about surveys.",
+        "url": "https://www.statcan.gc.ca/en/customized-products-services/custom-surveys/questions-to-ask",
+        "use": "Supports defining the target population and sampling frame, using probability selection, and considering nonresponse risk; inclusion probabilities need not be equal, but they must be designed and understood."
+      }
+    ],
     "status": "approved",
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "science-ecology-physics-mixed-17-pdc-review.md",
+      "edits": [
+        "science-ecology-physics-mixed-17-edit-pass1-evidence.json",
+        "science-ecology-physics-mixed-17-edit-pass2-evidence.json"
+      ],
+      "minorFixes": "science-ecology-physics-mixed-17-round3-minor-edit.json",
+      "execution": "Actual local bilingual edits by one editor using13perspectives; no13independentcalls claimed."
     },
     "collection": "field-core-fables",
-    "storyBody": "The city ordered carpenter Lin Hao to choose one latch height for every new public building. He had twelve days before three hundred library doors went into production. A household survey would take months, but the guard recruitment ground processed crowds in straight lines, already measured their bodies, and offered him 1,200 records by sunset. The recruits averaged 181 centimetres. Lin treated the large, tidy number as the city's height and placed every latch where a tall adult could reach it comfortably.\n\nAt the library opening, children jumped for the handles, several older residents used umbrellas to hook them, and a wheelchair user waited outside a reading room until a guard came. Lin first blamed the crowd for using doors incorrectly. Then he noticed that the people struggling were precisely those unlikely to appear at a military selection where age, health, interest, and minimum stature affected entry. His measurements were precise for aspiring guards; adding more recruits would only describe that same selected group more precisely.\n\nThe mayor demanded a quiet repair before election week and forbade another long delay. Lin built an address list by district, randomly drew households, and sent measurers to homes rather than inviting only volunteers to the square. Of 600 selected residents, 420 responded at first. The team revisited missing addresses and recorded who remained unreachable. Some groups still responded less often, so Lin used known district and age counts for weighting and checked how conclusions changed under plausible assumptions about the missing people.\n\nThe revised mean was 168 centimetres, but the wider range mattered more than the thirteen-centimetre drop. One average could not represent a child, a tall porter, and a seated reader at once. Lin proposed lower lever handles usable with little grip, then tested prototypes with residents from the frame rather than only city workers. Several designs that fit the new mean still failed the seated test, so he kept the full range on the bench. The mayor made him choose: preserve the finished doors and his reputation, or replace the high latches at his own shop's cost. Lin sold his new timber cart and recalled all three hundred fittings.\n\nThe library reopened after election week. Lin had lost the municipal bonus and still owed two apprentices wages, but visitors could open the rooms without borrowing an umbrella. He mounted one removed latch above the survey desk beside two labels: '1,200 guard recruits, mean 181' and 'not the target population.' The brass was accurately drilled and carefully measured. It was still too high for most hands that reached toward it.",
-    "storyBodyZh": "城里要求木匠林皓为所有新公共建筑确定统一门闩高度。十二天后，三百扇图书馆门就要投产。入户调查要花几个月，卫兵选拔场却把人排成直线，本来就在量身高，一天便能交给他一千二百条记录。应征者平均一百八十一厘米。林皓把这个整齐的大数当成全城身高，按高个成年人伸手舒服的位置钻下所有孔。\n\n图书馆开门那天，孩子跳着够门把，几位老人用伞柄去勾，一名轮椅使用者在阅览室外等到守卫经过。林皓先怪他们不会用门，随后才看见：遇到困难的，恰好是不太可能出现在军队选拔场的人，年龄、健康、参军意愿与最低身高都影响谁能入场。他的测量对“来应征的卫兵”很精确，再多量几千人，也只会更精确地描述同一批人。\n\n市长要求在选举周前悄悄修好，又不许长时间停馆。林皓按街区建立住址名单，随机抽取家庭，让测量员上门，而非只在广场等待自愿者。六百名入选居民起初只有四百二十人回应，团队便回访缺失地址，并记录仍找不到的人。某些群体回应率依然较低，他们依据已知街区与年龄人数加权，也检验对未回应者作不同合理假设时，结果会怎样改变。\n\n新平均数降到一百六十八厘米，更重要的是范围比原样本宽得多。一个均值无法同时代表孩子、高个搬运工和坐姿读者。林皓改用较低、握力要求小的压杆，又邀请抽样名单里的居民试门。几种刚好适合新均值的方案仍没通过坐姿测试，他只得把完整范围一直摆在工作台上。市长让他选择：保住成品与名声，或由自家工坊承担三百套门闩重装费。林皓卖掉刚买的木料车，召回全部配件。\n\n图书馆在选举周后重新开放。林皓失去市政奖金，还欠两名学徒工钱，来客却不必再借伞开门。他把一只拆下的高门闩钉在调查桌上，旁边写着：“一千二百名卫兵应征者，均值一八一；并非目标人群。”那块黄铜钻孔准确、测量仔细，伸向它的大多数手仍旧够不到。",
-    "explanation": "Sampling bias arises when coverage, selection, self-selection, survival, or nonresponse mechanisms are related to the outcome, making a sample systematically unlike the target population. A very large sample can estimate the wrong population precisely. Probability sampling, adequate frames, follow-up, weighting, and sensitivity analysis can reduce bias under explicit assumptions.",
-    "explanationZh": "抽样偏差发生在覆盖、选择、自愿参与、幸存或未回应机制与研究结果相关，使样本系统性偏离目标群体。样本再大也可能精确估计错误人群。概率抽样、完整抽样框、回访、加权和敏感性分析可缓解，但依赖明确假设，无法自动修复未知缺失。"
+    "storyBody": "Gym manager Qiao An wants to move an evening group class one hour earlier, so she starts with a quick survey in the app. All 100 active members who regularly book through the app respond, and 80 support the change. She writes “80% support” on a sticky note and is already preparing to notify the instructor about next month’s schedule.\n\nWhen the front-desk supervisor brings the complete active-member list, Qiao An realizes that the target population actually contains 200 people. Another 100 mainly book at the front desk or by phone and never saw the app entry point. During the week she sent five rounds of reminders and the system shows 500 pop-up displays, but those are repeated contacts with the same visible group, not 500 different respondents.\n\nQiao An pauses the schedule-change notice and does not use “group B also has 100 people” to guess how they would answer. To investigate the coverage gap, she asks the front desk to follow up with those 100 members who were never sampled, using the same question. The front desk checks the names one by one. All 100 respond: 20 support the change and 80 do not. Group B’s 20% comes from the follow-up, not from extrapolating group A.\n\nPutting the two groups together, group A has 80/100 supporters and group B 20/100, for 100/200=50% support overall. That does not mean 50% automatically tells her how the class schedule should be changed. What it overturns is a different claim: the 80% from the app channel cannot represent the originally defined population of 200 active members.\n\nQiao An leaves the instructor notice in drafts and opens the recipient list for the next survey, replacing the default app list with the complete membership table. Front-desk and phone bookers are listed too, beside columns for “responded” and “not responded.” She still needs to check how people will be selected before sending. For now, she restores the half previously absent from the list and leaves the notification time blank.\n\nThe 80% sticky note beside the office door is not thrown away. Qiao An flips it over and adds “100 app members.” Beside it, a new sheet reads (80+20)/200=50%. The records of five rounds and 500 pop-up displays remain as well, but no one treats them as 500 independent people. The instructor notification is still in drafts while Qiao An clarifies the survey population and the decision criteria.",
+    "storyBodyZh": "健身房经理乔安想把晚间团课提前一小时，先在App里发了快捷问卷。100名经常用App预约的活跃会员都回答了，其中80人支持。她把“80%支持”写在便签上，已经准备通知教练下月改时间。\n\n前台主管拿来完整活跃会员名单时，乔安才发现目标总体其实有200人：另外100人主要靠前台或电话预约，从未看到App入口。她这一周发过五轮提醒，系统显示500次弹窗，但那只是对同一批可见会员的重复触达，不是500名不同受访者。\n\n乔安先停住改课通知，没有拿“B组也有100人”去猜他们会怎么答。为了弄清覆盖缺口，她让前台用同一句问题补访那100名从未入样的会员；前台逐人核对名字，100人全部回应，其中20人支持、80人不支持。B组的20%是补访得到的，不是从A组推出来的。\n\n两组放在一起后，A组支持80/100，B组20/100，全体支持人数是100/200=50%。这并不意味着50%自动告诉她课表该怎么改；它真正推翻的是另一件事：只看App渠道的80%，不能代表原本定义的200名活跃会员。\n\n乔安把教练通知暂时留在草稿箱，打开下一次调查的收件名单，把默认的App名单换成完整会员表。前台和电话预约者的名字也列在上面，旁边留出“已回应”“未回应”两栏。她在发送前还要核对选人办法；这次先把名单里看不见的一半找回来，通知的时间暂不填。\n\n办公室门旁那张80%便签没有被扔掉。乔安把它翻到背面，补写“100名App会员”；旁边的新表格写着(80+20)/200=50%。五轮500次弹窗记录也还在，只是不再被当成500个独立人。教练的改课通知仍停在草稿箱，等乔安把调查对象和决策标准重新说清楚。",
+    "explanation": "Sampling bias is systematic deviation caused by the relationship between inclusion opportunity and the outcome. After follow-up, A=80/100 and B=20/100, giving 100/200=50% overall, showing that the app convenience sample accurately described only group A.\n\nThe 500 pop-ups are repeated invitations, not 500 independent members. If group B is completely missing and its preferences are unknown, knowing only that it contains 100 people is insufficient to recover its mean through weighting; unequal probabilities alone do not necessarily imply bias.",
+    "explanationZh": "抽样偏差来自入样机会与结果相关造成的系统偏离。补访后A=80/100、B=20/100，全体100/200=50%，说明App便利样本只准确描述A组。\n\n500次弹窗只是重复邀请，不是500个独立会员。若B完全缺失且偏好未知，仅知道B有100人也不能靠权重恢复其均值；不等概率本身并不必然有偏。"
   },
   {
     "id": "0542-regression-to-the-mean",
