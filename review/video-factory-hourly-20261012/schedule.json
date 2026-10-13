@@ -33,16 +33,17 @@
     "evidenceTruthfulnessRequired": true
   },
   "nextCandidate": {
-    "code": "0112",
-    "title": "Training for pre-school teachers",
-    "slug": "0112-training-for-pre-school-teachers",
-    "state": "GENERATING"
+    "code": "0113",
+    "title": "Teacher training without subject specialisation",
+    "slug": "0113-teacher-training-without-subject-specialisation",
+    "state": "EDITORIAL_PENDING"
   },
   "excluded": {
     "alreadyPublic": [
       "0542",
       "0031",
-      "0111"
+      "0111",
+      "0112"
     ],
     "securityHold": [
       "0011"
@@ -75,9 +76,9 @@
     "scope": "All subsequent subjects: external ChatGPT/NotebookLM source/policy/review transmission, existing-account and quota generation up to18/day, direct public MapKAI previews with both labels."
   },
   "lastCompletedPreview": {
-    "code": "0111",
-    "verifiedAt": "2026-10-13T10:57:26.078271Z",
-    "url": "https://www.mapkai.com/fields/0111-education-science",
+    "code": "0112",
+    "verifiedAt": "2026-10-13T14:54:26.824Z",
+    "url": "https://www.mapkai.com/fields/0112-training-for-pre-school-teachers",
     "review": "PENDING"
   },
   "lastStarted": {
