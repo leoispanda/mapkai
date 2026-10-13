@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "mapkai-hourly-video-check.v1",
+  "automationId": "mapkai-30",
+  "triggerTime": "2026-10-13T04:02:10.640Z",
+  "observedAt": "2026-10-13T04:06:57.839524Z",
+  "fieldCode": "0031",
+  "fieldTitle": "Personal skills and development",
+  "continuedRunId": "video-hourly-20261012T203407Z-0b27a986",
+  "decision": "WAIT_FOR_SHARED_WRITER",
+  "reason": "The separate MapKAI article task is currently active and inProgress; its latest tool is webSearch. Its existing ChatGPT story tab was also present and recently opened. No shared-resource takeover or video/creator send was attempted.",
+  "sharedWriterObservation": {
+    "threadId": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+    "hostId": "local",
+    "threadStatus": "active",
+    "turnId": "01a1336c-cc6e-7822-bcc6-9f2347f9dacd",
+    "turnStatus": "inProgress",
+    "startedAtUnix": 1791864130,
+    "snapshotRevision": 1,
+    "latestTool": "webSearch",
+    "latestCommentary": "我会按 mapkai-batch-production 核对最新记录，优先续跑未完成批次；本次只推进一组六篇。"
+  },
+  "lockObservations": {
+    "review/video-factory-hourly-20261012/production.lock": false,
+    "review/module-batches/locks/shared-writer-release.lock": false,
+    "mapkai-video-factory/runtime/.factory.lock": false
+  },
+  "manifestSha256": "1f00106854db3f648ce9073172e0361236142adaf31538d15902f0cec15746f9",
+  "manifestMutated": false,
+  "generationSubmissionsThisRun": 0,
+  "uploadsThisRun": 0,
+  "publicationsThisRun": 0,
+  "externalSendAttempted": false,
+  "nextAction": "Recheck actual shared-writer occupancy, then resume saved 0031 creator-policy context recovery. Do not generate catch-up videos.",
+  "userActionRequired": false
+}

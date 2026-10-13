@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "mapkai-hourly-video-check.v1",
+  "automationId": "mapkai-30",
+  "triggerTime": "2026-10-13T04:26:12.301Z",
+  "observedAt": "2026-10-13T04:26:57.356818Z",
+  "continuedRunId": "video-hourly-20261012T203407Z-0b27a986",
+  "fieldCode": "0031",
+  "fieldTitle": "Personal skills and development",
+  "canonicalSlug": "0031-personal-skills-and-development",
+  "originalQueueRunId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317",
+  "decision": "WAIT_FOR_SHARED_WRITER",
+  "sharedWriterSnapshot": {
+    "timedOut": true,
+    "wake": null,
+    "polls": [
+      {
+        "schemaVersion": 1,
+        "cursor": "4fadf217-a4f1-4312-8f76-2409805f448f:2",
+        "revision": 2,
+        "changed": true,
+        "thread": {
+          "id": "01a0dd7c-e920-7771-a82c-5805d42a01f0",
+          "hostId": "local",
+          "status": {
+            "type": "active",
+            "activeFlags": []
+          }
+        },
+        "latestTurn": {
+          "id": "01a1336c-cc6e-7822-bcc6-9f2347f9dacd",
+          "status": "inProgress",
+          "error": null,
+          "startedAt": 1791864130,
+          "completedAt": null,
+          "durationMs": null
+        },
+        "latestAssistantMessageId": null,
+        "latestAssistantMessage": null,
+        "latestToolMarkerId": "exec-7251d087-54a9-468b-9a22-e45424eacf27",
+        "latestToolMarker": {
+          "id": "exec-7251d087-54a9-468b-9a22-e45424eacf27",
+          "turnId": "01a1336c-cc6e-7822-bcc6-9f2347f9dacd",
+          "type": "mcpToolCall",
+          "name": "js",
+          "status": "completed"
+        }
+      }
+    ]
+  },
+  "lockObservations": {
+    "review/video-factory-hourly-20261012/production.lock": false,
+    "review/module-batches/locks/shared-writer-release.lock": false,
+    "mapkai-video-factory/runtime/.factory.lock": false
+  },
+  "manifestSha256": "1f00106854db3f648ce9073172e0361236142adaf31538d15902f0cec15746f9",
+  "manifestMutated": false,
+  "previousReceiptReadbacks": [
+    {
+      "path": "mapkai-video-factory/runtime/notebook/0542-8e8be8f1-bce0-4557-806b-d8f754771aab/raw_video_delivery_receipt.json",
+      "sha256": "5364a58fe8bf3357224eb5bd0bd56b9bc602434179dfce67aadc1e438c22177f",
+      "fieldCode": "0542",
+      "attemptId": "0542-8e8be8f1-bce0-4557-806b-d8f754771aab",
+      "status": "HUMAN_REVIEW_PENDING",
+      "rawVideoHash": "4d939a1b8ed663988cbd1d76b3d06c694774cfb6d7a1d2af137b15076bd2d9f9"
+    },
+    {
+      "path": "mapkai-video-factory/runtime/notebook/0542-8e8be8f1-bce0-4557-806b-d8f754771aab/mapkai_upload_receipt.json",
+      "sha256": "11fb58c9626480d83d0f70003f4c757a67d8487772a435f4190f80016cdd32e3",
+      "fieldCode": "0542",
+      "attemptId": "0542-8e8be8f1-bce0-4557-806b-d8f754771aab",
+      "status": "UPLOADED_FOR_HUMAN_REVIEW",
+      "rawVideoHash": "4d939a1b8ed663988cbd1d76b3d06c694774cfb6d7a1d2af137b15076bd2d9f9"
+    }
+  ],
+  "statisticsAlreadyPublic": "PUBLIC_PREVIEW_PENDING_REVIEW",
+  "actualStage": "CREATOR_CONTEXT_RECOVERY_REQUIRED",
+  "generationSubmissionsThisRun": 0,
+  "uploadsThisRun": 0,
+  "publicationsThisRun": 0,
+  "externalSendAttempted": false,
+  "catchUpAttempted": false,
+  "userActionRequired": false,
+  "nextAction": "Wait for actual shared writer release, then resume saved 0031 creator context recovery."
+}
