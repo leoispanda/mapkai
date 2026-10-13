@@ -36,7 +36,7 @@
     "code": "0111",
     "title": "Education science",
     "slug": "0111-education-science",
-    "state": "NOT_STARTED"
+    "state": "GENERATING"
   },
   "excluded": {
     "alreadyPublic": [
@@ -78,5 +78,12 @@
     "verifiedAt": "2026-10-13T07:31:16.815Z",
     "url": "https://www.mapkai.com/fields/0031-personal-skills-and-development",
     "review": "PENDING"
+  },
+  "lastStarted": {
+    "code": "0111",
+    "runId": "video-hourly-20261013T0930-9281e377",
+    "attemptId": "0111-6ed7a1cc-9a86-4551-9a63-5c121f0f7893",
+    "acceptedAt": "2026-10-13T10:06:10.447Z",
+    "notebookUrl": "https://notebook.google.com/notebook/36a05bbc-b782-414b-af98-d653af9c3b72"
   }
 }

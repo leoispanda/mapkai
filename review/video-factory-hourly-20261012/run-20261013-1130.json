@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "mapkai-hourly-video-run.v1",
+  "automationId": "mapkai-30",
+  "heartbeatTrigger": "2026-10-13T09:26:13.398Z",
+  "scheduledLocal": "2026-10-13T11:30:00+02:00",
+  "runId": "video-hourly-20261013T0930-9281e377",
+  "field": {
+    "code": "0111",
+    "title": "Education science",
+    "slug": "0111-education-science",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317"
+  },
+  "status": "GENERATING",
+  "source": {
+    "authoritativeSnapshots": 5,
+    "traceableClaims": 26,
+    "knowledgeSha256": "64bb75fc3891fa9ebd955e050ee5e2d81f71aff4ad1691ad9a3cf0a4cb26bc57",
+    "steeringSha256": "e7fc054682a8b5ec4b6410376a3bfce10ab9a00fd2c1c811ac8951ddc219fd96",
+    "steeringUTF16Characters": 4363,
+    "actualNotebookMaxLength": 5000,
+    "independentDecision": "PASS",
+    "validatedAgainstFrozenArtifact": true,
+    "responseSha256": "d01f86202eb01898087191868d0b372ffd2ece16dac08eba79029be59d694d04",
+    "creatorConversation": "https://chatgpt.com/c/6acdfc13-0248-83ed-9347-56ff39072243",
+    "reviewerConversation": "https://chatgpt.com/c/6acdff66-d610-83ed-9c0a-3898eb4bf658",
+    "creatingPolicySha256": "5f0967c72bbf224aac87aae2fa3145dc3fde030cb21b5bf185efa2fe57b9d71e",
+    "reviewPolicySha256": "6df981e71d08c9e5b325aeb93a183f0352408f20120266233f8968360d3b2454"
+  },
+  "generation": {
+    "schemaVersion": "mapkai-notebook-result.v1",
+    "requestId": "0111-6ed7a1cc-9a86-4551-9a63-5c121f0f7893",
+    "payloadSha256": "f736016888bf5eb3371cb97f1c7c29fb4faf202d19f31a15712ea582a1f6bd3a",
+    "state": "ACCEPTED",
+    "sendAttempted": true,
+    "acceptanceVerified": true,
+    "notebookUrl": "https://notebook.google.com/notebook/36a05bbc-b782-414b-af98-d653af9c3b72",
+    "acceptedAt": "2026-10-13T10:06:10.447Z"
+  },
+  "actualNotebookTitle": "Decoding the Science of Learning",
+  "newRealSubmissions": 1,
+  "uploads": 0,
+  "publications": 0,
+  "videoReview": "NOT_REVIEWED",
+  "formalApproval": "PENDING",
+  "liveUsageObserved": {
+    "currentPercentUsed": 0,
+    "weeklyPercentUsed": 1,
+    "plan": "AI Pro",
+    "upgradeChosen": false
+  },
+  "otherQueueEntriesPreserved": 76,
+  "privateEvidenceDirectory": ".workspace-backups/video-factory-0111-20261013",
+  "recovery": "Continue this exact 0111 Notebook attempt; never click Generate again. Download only after authentic completion; verify original bytes, container and decoding, collect evidence, then use a newly scoped guarded upload/public executor for 0111. The old Statistics and 0031 uploaders are references only. New generation must be at least60minutesafter10:06:10.447Z and requires this subject to finish or be truthfully blocked first.",
+  "ordinaryUploadPublicationAlreadyAuthorized": true,
+  "sourceVsVideoApprovalKeptSeparate": true,
+  "uiAutoReview": {
+    "rejected": "Combined optional notebook rename and open Video Overview using first visible input",
+    "resolved": "Kept original actual Notebook title; opened only the confirmed Video Overview button separately. Genuine subsequent source verification, settings and single generation accepted.",
+    "remainingBlocker": false
+  },
+  "recordedAt": "2026-10-13T10:09:07.882954Z",
+  "localExecutionCompleted": true,
+  "localObservationServicesStopped": true,
+  "lastLiveStage": "Generating Explainer Video Overview...",
+  "activeNotebookStillGenerating": true
+}
