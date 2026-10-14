@@ -18121,13 +18121,21 @@ const categorySongTracks = {
     style: { zh: "编曲方向：空灵铃音流行 · 留白节奏", en: "Arrangement: airy bell-pop · Spacious pulse" },
   },
   "10": {
-    id: "e0133c7a-ca30-4789-a7e3-63041f0d090b",
-    title: "Someone Knows I'm Coming",
-    core: {
-      zh: "把变化准确传递给下一个人，让不同服务中的协作接得上。",
-      en: "Pass changes clearly to the next person so services work together.",
+    "id": "4a0fb76e-cb24-4bfe-8a63-165001b61f0a",
+    "title": "Count the Flow - MapKAI - Services - Little's Law",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
     },
-    style: { zh: "律动放克流行", en: "Groove funk-pop" },
+    "core": {
+      "zh": "从排队取咖啡走近服务运营：明确进出边界，用长期平均流量与停留时间计算平均在场人数；这不能预测某个人此刻要等多久。",
+      "en": "Connect a coffee queue to service operations: define entry and exit, then use average flow and time to find average people present. This does not predict one person's current wait."
+    },
+    "style": {
+      "zh": "编曲方向：律动 Funk-pop · 清晰节奏",
+      "en": "Arrangement: groove funk-pop · Clear rhythm"
+    }
   },
   "01": {
     id: "d2049be8-7ee0-43a1-a80f-766f2a468439",
@@ -18141,14 +18149,42 @@ const categorySongTracks = {
     style: { zh: "原声民谣流行 · 温暖清晰的主唱", en: "Acoustic folk-pop · Warm clear lead" },
   },
   "09": {
-    id: "1977976d-4585-4194-bbee-49068a5620f1",
-    title: "Ask Me What I Need",
-    core: {
-      zh: "让专业照护与日常支持衔接，也让接受照护的人参与选择。",
-      en: "Connect skilled care with everyday support, and make choices with the person receiving care.",
+    "id": "0f8944c6-fd4e-45cd-ac5a-22e0a4552bae",
+    "title": "Say It Your Way - MapKAI - Health and Welfare - Teach-back",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
     },
-    style: { zh: "温暖的当代 Soul-pop", en: "Warm contemporary soul-pop" },
+    "core": {
+      "zh": "先请对方用自己的话说出下一步，再把没说明白的地方换种说法解释；复述确认检查说明是否清楚，不能代替实际需求与支持。",
+      "en": "Ask someone to explain the next step in their own words, then rephrase anything unclear. Teach-back checks your explanation; practical needs still need support."
+    },
+    "style": {
+      "zh": "编曲方向：温暖 Soul-pop · 清晰主唱",
+      "en": "Arrangement: warm soul-pop · Clear lead"
+    }
   },
+};
+
+const categoryGroupSongTracks = {
+  "000": {
+    "id": "1eaa815d-a3ee-4a44-b9b0-0d17f25fe8fb",
+    "title": "Try Before You Look - MapKAI - Generic programmes and qualifications not further defined - Spaced Retrieval Practice",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "先不看答案试着回忆，再核对并改正，隔一段时间重新尝试；回忆练习帮助学习，但不等于已经能在真实任务中运用。",
+      "en": "Try recalling without the answer, check and correct, then try again later. Spaced retrieval supports learning; real tasks still require practice."
+    },
+    "style": {
+      "zh": "编曲方向：明亮孟菲斯 Hip-hop · 旋律说唱",
+      "en": "Arrangement: bright Memphis hip-hop · Melodic rap"
+    }
+  }
 };
 
 function waitForCategorySongPlayer() {
@@ -18424,6 +18460,61 @@ function renderInlineLensStoryArticle(story) {
     </article>`;
 }
 
+function renderCategoryGroupSongs(category) {
+  const language = currentLanguage === "zh" ? "zh" : "en";
+  const label = language === "zh" ? "从一首歌走近这个子领域" : "A song for this subfield";
+  const ai = language === "zh" ? "AI 生成" : "AI-generated";
+  const play = language === "zh" ? "播放歌曲" : "Play song";
+  return category.groups.filter((group) => Object.hasOwn(categoryGroupSongTracks, group.code)).map((group) => {
+    const song = categoryGroupSongTracks[group.code];
+    const titleId = `categoryGroupSongTitle-${group.code}`;
+    return `<section class="category-song" aria-labelledby="${titleId}">
+      <div class="category-song-copy">
+        <div class="category-song-heading"><p class="category-song-label">${label}</p><span class="category-song-ai" id="categoryGroupSongAI-${group.code}">${ai}</span></div>
+        <h2 id="${titleId}">${escapeHtml(song.title)}</h2>
+        <p class="category-song-core">${escapeHtml(song.core[language])}</p>
+        <p class="category-song-meta">${escapeHtml(song.meta[language])} · ${escapeHtml(song.style[language])}</p>
+      </div>
+      <div class="category-song-action">
+        <button class="button secondary" type="button" data-group-song="${group.code}" data-group-song-parent="${category.code}" aria-label="${escapeHtml(`${play} · ${song.title}`)}" aria-describedby="categoryGroupSongAI-${group.code} categoryGroupSongStatus-${group.code}">${play}</button>
+        <p class="category-song-status" id="categoryGroupSongStatus-${group.code}" role="status"></p>
+      </div>
+    </section>`;
+  }).join("");
+}
+
+async function playCategoryGroupSong(button) {
+  const category = categories.find((item) => item.code === button.dataset.groupSongParent);
+  const group = category?.groups.find((item) => item.code === button.dataset.groupSong);
+  const song = group && Object.hasOwn(categoryGroupSongTracks, group.code) ? categoryGroupSongTracks[group.code] : null;
+  if (!song || button.disabled) return;
+  const language = currentLanguage === "zh" ? "zh" : "en";
+  const labels = language === "zh"
+    ? { play: "播放歌曲", loading: "正在载入…", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
+    : { play: "Play song", loading: "Loading…", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
+  const status = button.closest(".category-song").querySelector(".category-song-status");
+  const isCurrent = () => button.isConnected && currentLanguage === language && normalizeRoute(window.location.pathname) === `/categories/${category.code}`;
+  if (!isCurrent()) return;
+  button.disabled = true;
+  button.setAttribute("aria-busy", "true");
+  button.textContent = labels.loading;
+  status.textContent = "";
+  try {
+    const player = await waitForCategorySongPlayer();
+    if (!isCurrent()) return;
+    if (!song.id || await player.play(song.id) !== true) throw new Error("Song unavailable");
+    if (isCurrent()) status.textContent = labels.playing;
+  } catch {
+    if (isCurrent()) status.textContent = labels.error;
+  } finally {
+    if (isCurrent()) {
+      button.disabled = false;
+      button.removeAttribute("aria-busy");
+      button.textContent = labels.play;
+    }
+  }
+}
+
 function renderCategoryTree(category) {
   const target = document.getElementById("categoryTree");
   if (!target) return;
@@ -18456,6 +18547,7 @@ function renderCategoryTree(category) {
         </div>
       </div>
     </div>` : ""}
+    ${renderCategoryGroupSongs(category)}
     ${storyArticle}
     </div>`;
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
@@ -21394,6 +21486,12 @@ document.addEventListener("click", (event) => {
   if (founderExit) {
     event.preventDefault();
     exitFounderMode();
+    return;
+  }
+  const groupSongButton = event.target.closest("[data-group-song]");
+  if (groupSongButton) {
+    event.preventDefault();
+    playCategoryGroupSong(groupSongButton);
     return;
   }
   const publicEntrySelect = event.target.closest("[data-public-entry-select]");
