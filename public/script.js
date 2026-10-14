@@ -18286,6 +18286,57 @@ const categoryGroupSongTracks = {
       "zh": "编曲请求：空灵叮咚流行",
       "en": "Requested arrangement: ethereal bell-pop"
     }
+  },
+  "020": {
+    "id": "19294308-f15b-4fd4-b26b-2fe060633aaf",
+    "title": "Why This One - MapKAI - Arts and humanities not further defined - Aesthetic Judgment",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "分别描述两只碗的纹样间距，再按陈列目的说明选择；个人品味不是普遍规则，也不能证明创作者的意图。",
+      "en": "Describe each bowl’s band spacing, then explain the choice against a stated display aim; personal taste is not a universal rule or evidence of maker intent."
+    },
+    "style": {
+      "zh": "编曲请求：空灵叮咚流行",
+      "en": "Requested arrangement: ethereal bell-pop"
+    }
+  },
+  "021": {
+    "id": "b7fc894c-e97a-49a9-92b6-d4ac21dc30fd",
+    "title": "Move One Tap - MapKAI - Arts - Rhythmic Variation",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "在相同速度的四拍循环中移动一次敲击，比较前后两段停顿；声音落点可以核对，听者的感受可以不同。",
+      "en": "Move one tap within a steady four-count loop and compare both pauses; the placement is checkable even when people feel it differently."
+    },
+    "style": {
+      "zh": "编曲请求：律动 Funk-pop",
+      "en": "Requested arrangement: funk-pop"
+    }
+  },
+  "022": {
+    "id": "27124e5d-996a-4acc-98b2-37451861e50e",
+    "title": "Two Copies, One Claim - MapKAI - Humanities (except languages) - Historical Corroboration",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "追查史料说法的来源与记录范围：复制照片说明不增加独立佐证，预约记录只能支持计划，不能证明活动已经发生。",
+      "en": "Trace where historical accounts began and what each records; a copied caption adds no independent confirmation, and a booking records a plan."
+    },
+    "style": {
+      "zh": "编曲请求：电子 Art-pop",
+      "en": "Requested arrangement: electronic art-pop"
+    }
   }
 };
 
