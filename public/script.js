@@ -18184,6 +18184,57 @@ const categoryGroupSongTracks = {
       "zh": "编曲方向：明亮孟菲斯 Hip-hop · 旋律说唱",
       "en": "Arrangement: bright Memphis hip-hop · Melodic rap"
     }
+  },
+  "001": {
+    "id": "f371a248-b6c3-4ad9-89c5-467aa2886313",
+    "title": "Same Length - MapKAI - Basic programmes and qualifications - Measurement and Units",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从纸条的长度走近测量：对齐尺子的零刻度，记录数值与单位，把同一长度换算并放进标明单位的长度栏；换算不能让原来的读数更精细。",
+      "en": "Align a paper strip with ruler zero, record number and unit, convert the same length and label its table column. Unit conversion does not make the original reading finer."
+    },
+    "style": {
+      "zh": "编曲方向：空灵叮咚 Pop · 清晰主唱",
+      "en": "Arrangement: airy bell-pop · Clear lead"
+    }
+  },
+  "002": {
+    "id": "3e8a31da-c412-4c6b-8ffb-1aac28a56763",
+    "title": "One More Bowl - MapKAI - Literacy and numeracy - Proportional Reasoning",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "读懂食谱的份数与单位，再按三除以二调整用量：两份100克变成三份150克，每份仍是50克；烹饪时间需要自己的核对。",
+      "en": "Read recipe portions and units, then scale two portions and 100 grams to three and 150 grams. Each portion still uses 50 grams; cooking time needs a separate check."
+    },
+    "style": {
+      "zh": "编曲方向：空灵叮咚 Pop · 清晰主唱",
+      "en": "Arrangement: airy bell-pop · Clear lead"
+    }
+  },
+  "003": {
+    "id": "38a9863f-c874-4cb1-ad34-6ac12dfafb31",
+    "title": "One Sentence First - MapKAI - Personal skills and development - Implementation Intentions",
+    "durationSeconds": 116.0359375,
+    "meta": {
+      "zh": "英文 · 1:56",
+      "en": "English · 1:56"
+    },
+    "core": {
+      "zh": "提前把明确的日常提示连接到一个可做的小动作，分别记录提示是否出现与是否开始；这些记录不能单独证明计划造成了改变，实际障碍仍要处理。",
+      "en": "Link a recognizable cue to a feasible first action and record cue opportunities separately from starts. Those records alone do not prove the plan caused a change; practical obstacles still matter."
+    },
+    "style": {
+      "zh": "编曲方向：原声 Folk-pop · 清晰主唱",
+      "en": "Arrangement: acoustic folk-pop · Clear lead"
+    }
   }
 };
 
