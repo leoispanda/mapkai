@@ -18235,6 +18235,57 @@ const categoryGroupSongTracks = {
       "zh": "编曲方向：原声 Folk-pop · 清晰主唱",
       "en": "Arrangement: acoustic folk-pop · Clear lead"
     }
+  },
+  "009": {
+    "id": "35a50c6d-c221-4231-b4b0-1110fa0b6433",
+    "title": "Keep the Name - MapKAI - Generic programmes and qualifications not elsewhere classified - Categorical Data",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "保留已知观察的细节，清楚区分未列出的类别与未知信息。",
+      "en": "Keep known detail; distinguish an unlisted observed kind from missing information."
+    },
+    "style": {
+      "zh": "编曲请求：明亮孟菲斯 Hip-hop",
+      "en": "Requested arrangement: bright Memphis hip-hop"
+    }
+  },
+  "011": {
+    "id": "46b5a636-42ae-40fd-aeec-52989eece8be",
+    "title": "Show Me Why - MapKAI - Education - Formative Assessment",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "用学习者的理由选择下一步教学，并用新例子重新检查。",
+      "en": "Use learner reasoning to choose the next teaching step and check a new example."
+    },
+    "style": {
+      "zh": "编曲请求：温暖 Soul-pop",
+      "en": "Requested arrangement: warm soul-pop"
+    }
+  },
+  "018": {
+    "id": "b3e949de-bca1-4ab9-b188-deeb79b19639",
+    "title": "One Bridge - MapKAI - Inter-disciplinary programmes and qualifications involving education - Integrated Learning",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "围绕同一学习问题结合设计与计数，区分作品表现和理解。",
+      "en": "Connect design and counting around one learning question; distinguish performance from understanding."
+    },
+    "style": {
+      "zh": "编曲请求：空灵叮咚流行",
+      "en": "Requested arrangement: ethereal bell-pop"
+    }
   }
 };
 
