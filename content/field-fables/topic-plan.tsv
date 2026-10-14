@@ -130,15 +130,15 @@ batch-009	06	0613	Software and applications development and analysis	软件与�
 batch-009	06	0613	Software and applications development and analysis	软件与应用开发及分析	3	0613-computational-complexity	Computational complexity	计算复杂度	mechanism-explainer	藏书翻倍后查找时间增长远超一倍的图书馆	integrated
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	1	0711-mass-balance	Mass balance	物料衡算	mechanism-explainer	染坊每天少掉的蓝色必须在产品、废水或管壁出现	integrated
 batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	2	0711-residence-time	Residence time	停留时间	mechanism-explainer	配方相同却因流过管道太快而没有完成的发酵液	integrated
-batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	3	0711-process-control	Process control	过程控制	mechanism-fable	蒸馏塔不能靠一天一次的温度记录保持稳定	integrated
-batch-009	07	0712	Environmental protection technology	环境保护技术	1	0712-treatment-train	Treatment train	处理工艺链	mechanism-fable	单层滤网无法独自处理整条河的不同污染物	integrated
+batch-009	07	0711	Chemical engineering and processes	化学工程与工艺	3	0711-process-control	Process control	过程控制	mechanism-explainer	蒸馏塔不能靠一天一次的温度记录保持稳定	integrated
+batch-009	07	0712	Environmental protection technology	环境保护技术	1	0712-treatment-train	Treatment train	处理工艺链	mechanism-explainer	单层滤网无法独自处理整条河的不同污染物	integrated
 batch-009	07	0712	Environmental protection technology	环境保护技术	2	0712-source-control	Source control	源头控制	concept-fable	城市不断加高烟囱却没有减少炉膛里的烟	integrated
 batch-009	07	0712	Environmental protection technology	环境保护技术	3	0712-life-cycle-assessment	Life-cycle assessment	生命周期评价	concept-fable	一只可重复杯子跨越矿山、船队、洗涤房和垃圾场	integrated
-batch-010	07	0713	Electricity and energy	电力与能源	1	0713-grid-balancing	Grid balancing	电网平衡	mechanism-fable	岛上每盏灯亮起都要求发电房同时回应	integrated
-batch-010	07	0713	Electricity and energy	电力与能源	2	0713-energy-efficiency	Energy efficiency	能源效率	mechanism-fable	两台锅炉烧同样煤却只有一台把热送进屋里	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	1	0713-grid-balancing	Grid balancing	电网平衡	mechanism-explainer	岛上每盏灯亮起都要求发电房同时回应	integrated
+batch-010	07	0713	Electricity and energy	电力与能源	2	0713-energy-efficiency	Energy efficiency	能源效率	mechanism-explainer	两台锅炉烧同样煤却只有一台把热送进屋里	integrated
 batch-010	07	0713	Electricity and energy	电力与能源	3	0713-energy-storage	Energy storage and intermittency	储能与间歇性	concept-fable	风最强时无人用电而晚宴时风停的海岛	integrated
-batch-010	07	0714	Electronics and automation	电子与自动化	1	0714-feedback-control	Feedback control	反馈控制	mechanism-fable	烤炉根据刚测得的温度不断修正火门	integrated
-batch-010	07	0714	Electronics and automation	电子与自动化	2	0714-signal-to-noise-ratio	Signal-to-noise ratio	信噪比	mechanism-fable	暴风雨里港口接收员分辨一声真正求救信号	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	1	0714-feedback-control	Feedback control	反馈控制	mechanism-explainer	烤炉根据刚测得的温度不断修正火门	integrated
+batch-010	07	0714	Electronics and automation	电子与自动化	2	0714-signal-to-noise-ratio	Signal-to-noise ratio	信噪比	mechanism-explainer	暴风雨里港口接收员分辨一声真正求救信号	integrated
 batch-010	07	0714	Electronics and automation	电子与自动化	3	0714-fail-safe-design	Fail-safe design	故障安全设计	concept-fable	断电时自动落下还是升起的水闸引发争论	integrated
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	1	0715-stress-strain	Stress and strain	应力与应变	mechanism-fable	两根外形相同的桥索在载荷下伸长不同	integrated
 batch-010	07	0715	Mechanics and metal trades	机械与金属工艺	2	0715-fatigue	Material fatigue	材料疲劳	concept-fable	从未超载却在第一万次转动后断裂的车轴	integrated

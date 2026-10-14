@@ -18314,47 +18314,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0711",
     "fieldTitle": "Chemical engineering and processes",
     "fieldTitleZh": "化学工程与工艺",
-    "title": "The Tower Checked Only at Sunset",
-    "titleZh": "只在日落看一眼的塔",
-    "summary": "A perfume works inspects its still only at sunset; one large, delayed correction turns a small daytime drift into an overnight failure.",
-    "summaryZh": "香油坊每天只在日落时检查蒸馏塔，一次迟来的大幅调整，把白天的小偏差推成了整夜的事故。",
+    "title": "The Empty Bottles Before Lunch",
+    "titleZh": "午饭前的那排空瓶",
+    "summary": "A jam workshop had been able to keep filling stable with a fixed steam setting. When chilled raw material entered, the outlet working temperature fell, so Lin Cheng increased heating in response to the measurement. As the material gradually warmed, the same heating became excessive and she had to reduce the steam again. The story uses one simple loop: measure the result, compare it with the target, then change a controllable input.",
+    "summaryZh": "果酱工坊过去用固定蒸汽位置就能稳定灌装。冷库原料进入后，出口工作温度下降，林澄根据测量结果加热；等原料逐渐回温，同样的加热又开始过多，她只好再收回蒸汽。故事入口是一个简单闭环：测结果、和目标比较、再改变可控输入。",
     "storyParagraphs": [
-      "A mountain perfume works had a tall distillation tower. At sunset each day, the old owner collected a cup from the top, smelled its fragrance, and adjusted the steam valve by experience. While all the fruit peel came from one orchard, this method rarely failed, and he considered extra inspections a waste of labour. The daily sample was cheap and had worked under stable feed, so the owner rejected continuous instruments as unnecessary expense.",
-      "In a poor harvest year, peel began arriving from three places. Some was dry; some still carried rainwater. A cart of wet material arrived at noon. The tower temperature slowly fell and the oil grew weaker, but no one discovered it until sunset. The owner opened the steam valve wide, hoping to recover the fragrance lost during the day. During the night, dry material replaced the wet feed, the temperature surged, and bitter compounds entered the oil.",
-      "The night apprentice heard an unfamiliar knocking in the tower and hurried to close the valve. Half a day of weak oil and half a night of bitter oil could not be sold, leaving only half the orders ready for wedding season. Looking at his sunset sample, the owner admitted for the first time that it told him only what the tower was doing when he filled the cup. His large correction arrived after a long process delay and remained active after conditions changed, creating the opposite error.",
-      "When the wedding merchant arrived for the sealed jars, the owner showed him the ruined batch and ordered the tower shut for instrumentation and tuning. He lost the payment and sold his reserve oil to cover wages. Operators first measured response time, then set smaller adjustments; overly aggressive settings caused oscillation in trial runs and were reduced. They tested sensor failure and manual control before restart, because automation without a safe fallback would create a new single dependence.",
-      "They installed continuous temperature readings and a level float, allowing a small valve to correct deviations gradually. When wet material entered the yard, the receiving crew warned the tower room in advance. If temperature or pressure crossed a limit, an independent device shut off the steam and rang a bell. The apprentice still smelled the oil each day, but his nose was no longer the tower's only messenger. Feedback corrected measured deviation; feed-moisture information provided an earlier feedforward move. Independent trips acted only at safety limits, not as routine control. Trend displays showed rate of change as well as current value, helping operators distinguish noise from a developing deviation.",
-      "When another cart of wet peel arrived, the owner reached by habit for the large valve. The smaller valve was already moving gently, and the reading had returned to its mark. He lowered his hand and walked downstairs to the tower's even ticking."
+      "On Monday morning, Lin Cheng needs to fill a batch of raspberry sauce before lunch for an afternoon pickup. Just after a container from cold storage is connected, the nozzle starts pulling the sauce into strands, leaving the bottle rims less clean than before. More empty bottles are still coming toward her. The process card calls for an outlet temperature around 60 °C for consistent filling of this batch. For the previous two weeks, similar incoming conditions had let her leave the steam valve in one position, glance at the display, and go help with packing.",
+      "She checks the display: the temperature has fallen from near 60 °C to around 57 °C. Material is still feeding gradually from the container into the heated vessel, while the valve remains at its usual position. Lin Cheng holds the next row of empty bottles outside the conveyor and lets the filled ones move on. She increases steam, wipes sauce from the nozzle, and waits for the temperature to respond before restarting.",
+      "Empty bottles pile up behind her while the temperature slowly begins to recover. As it approaches 60 °C, she restarts filling. But after a while, the material still waiting in the container gradually warms in the workshop, and the outlet temperature starts to move above the target. The extra heating that had rescued production a short time earlier is now too much. Lin Cheng turns the steam back down slightly and waits for the next reading instead of leaving it at the setting that worked a moment ago.",
+      "The remaining containers arrive at different temperatures. Lin Cheng watches the outlet before deciding how to adjust. A packing colleague calls over, “We could use another pair of hands.” She has already turned toward the boxes when she notices that the temperature is still rising. She asks the colleague to fold the empty cartons first and stays beside the valve. She stops making large adjustments at every small display movement; the previous action needs time to show its effect. Only when the reading stops drifting away does she go to move boxes. Two jobs she once combined with an occasional glance now have to take turns.",
+      "Near noon, the last row of bottles passes through the filler and the truck schedule is not missed. Lin Cheng wipes away yesterday's fixed valve mark from the control board, leaving only the 60 °C working target and that day's temperature record. The batch-quality inspection sheet beside it still waits for its own signature; the temperature record is complete, while the batch-release field is still blank."
     ],
     "storyParagraphsZh": [
-      "山城的香油坊有座高蒸馏塔。老坊主每天日落时接一杯塔顶液体，闻过香气，再凭经验转动蒸汽阀。旧果皮来自同一片果园时，这办法很少出错，他便觉得多看几次只是浪费人手。每日一次取样便宜，在进料稳定时也曾有效，因此坊主把连续仪表视为多余开支。",
-      "收成不好的一年，果皮开始从三处运来。有的晒得干，有的还带雨水。中午送来一车湿料，塔温慢慢下降，出来的油越来越淡，直到日落才被发现。坊主一口气把蒸汽开大，想把白天失去的香气补回来。夜里原料换成干料，塔温猛升，苦味也被带进了油里。",
-      "守夜学徒听见塔身发出从未有过的敲击声，赶紧关小阀门。半日的淡油和半夜的苦油都不能出售，婚礼季的订单只交出一半。坊主盯着日落时那杯样品，第一次承认它只告诉他取样时塔在做什么。他的大幅修正经过漫长过程延迟才见效，原料变化后仍在起作用，于是制造相反偏差。",
-      "婚宴商人来取封好的油罐时，坊主把坏批次摆给他看，随即下令停塔安装和整定控制。他失去货款，又卖掉储备油支付工资。众人先测响应时间，再设置较小调整；试车中过强参数引起上下振荡，随后被调低。重开前还测试传感器失灵和手动接管，免得自动控制又成为新的单点依赖。",
-      "他们在塔上装了连续读数的温度计和液位浮子，让小阀门随着偏差一点点调整；湿料进院时，前端便先通知塔房。若温度或压力越过界限，独立装置会关断蒸汽并敲铃。学徒仍每天闻油，但他的鼻子不再是塔唯一的消息。反馈依据已测偏差修正，进料含水信息则提供更早的前馈动作；独立联锁只在安全边界触发，不代替日常调节。趋势图同时显示当前值和变化速度，帮助操作者区分噪声与正在发展的偏差。",
-      "又一车湿料到达时，坊主习惯性地伸手去转大阀。小阀正在轻轻移动，读数已回到刻线。他把手收回来，听着塔内均匀的滴答声走下楼梯。"
+      "周一上午，林澄要在午餐前灌完一批覆盆子淋酱，下午的货车已排好取货时间。第二桶原料刚从冷库接上，灌装嘴就开始把酱拖成细线，瓶口不再像刚才那样干净。她身后的空瓶还在往前送。工艺卡要求出口保持在60℃附近，便于这批酱稳定灌装；过去两周原料条件相近，蒸汽阀停在同一位置就够了，她偶尔看表，还能去另一头帮忙装箱。",
+      "她看温度表，读数已经从接近60℃掉到57℃附近。原料桶还在慢慢往加热罐里供料，阀门却仍是平常的位置。林澄把下一排空瓶挡在输送带外，让已经装好的先走。她把蒸汽开大一些，没有马上重新开线，而是擦掉瓶嘴上的酱，等温度真正有反应。",
+      "空瓶在她身后越堆越高，温度终于慢慢往回升。接近60℃时，她重新启动灌装。可又过了一阵，桶里还没送入罐的原料在车间里逐渐回温，出口温度开始越过目标继续上走。刚才把生产救回来的加热量，这时反而显得太多。林澄把蒸汽收回一点，继续看下一次读数，而不是守着刚才那个位置不动。",
+      "上午剩下的原料温度各不相同，林澄先看出口的变化，再决定怎么调。装箱的同事过来喊她：“这边也缺双手。”她本来已经转身，温度表却还在往上走，于是请同事先把空箱折好，自己留在阀门旁。她不再追着每一次小跳动大幅拧阀；前一次动作得有时间显现。等读数不再往外偏，她才腾出手搬箱子。原来偶尔看一眼就能兼顾的两件工作，现在只好轮着做。",
+      "临近中午，最后一排瓶子通过灌装机，货车时间没有被错过。林澄擦掉操作板上昨天留下的固定阀位记号，只留下60℃工作目标和当天的温度记录。旁边那张批次质量检验单仍照常等人签字；温度记录已写齐，批次放行处还空着。"
     ],
     "conceptName": "Process control",
     "conceptNameZh": "过程控制",
     "explanationParagraphs": [
-      "Process control keeps an operation stable under disturbances by continuously measuring its state, comparing it with a target, and manipulating inputs. Feedback corrects observed deviations; feedforward acts in advance on measured disturbances; alarms and interlocks protect operating limits. Performance also depends on sampling frequency, delay, and adjustment size. Corrections that arrive late and act too strongly often create oscillation or overshoot."
+      "Process control can be understood through a simple closed loop: measure the controlled result, compare it with a target, and then change a manipulated input so the process moves back toward the target after a disturbance.",
+      "Here the outlet drops from 60 °C to 57 °C, a deviation of 3 °C, so Lin Cheng increases steam. As the incoming material warms, she reduces it again. The 3 °C difference tells her the size of the temperature error; it does not by itself calculate how far to open the valve. The response takes time, and large, repeated corrections made too quickly can cause fluctuations."
     ],
     "explanationParagraphsZh": [
-      "过程控制通过持续测量、比较目标与实际状态，并操纵输入，使运行在扰动下仍保持稳定。反馈根据已经出现的偏差修正，前馈利用可测扰动提前动作，警报与联锁则保护运行边界。控制效果还取决于采样频率、响应延迟和调节幅度；晚到且过大的修正常会引发振荡或过冲。"
+      "过程控制可用一个简单闭环理解：测量被控制的结果，与目标比较，再改变可操纵输入，使扰动发生后过程重新靠近目标。",
+      "本例出口温度从60℃降到57℃，偏差为3℃，林澄因而增加蒸汽；原料随后回温，她又减少蒸汽。3℃只告诉她温度偏了多少，不能单靠这个数字推算阀门该开多少。动作存在响应延迟，过快、过大的反复修正也可能造成波动。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇讲过程控制中最基本的反馈入口：进料等外部条件变化会使固定操作量不再维持目标，因此需要测量过程结果，与目标比较，再调整可控输入。故事中的60℃只是虚构淋酱灌装工作温度，不代表灭菌、食安或完整质量保证。",
+    "overall": "This article introduces a basic feedback loop in process control: when feed or other external conditions change, a fixed operating input may no longer hold the process at its target, so the measured result is compared with the target and a controllable input is adjusted. The 60 °C value in this fictional example is only a filling working temperature for the sauce; it is not a sterilization, food-safety, or complete quality guarantee.",
+    "moduleZh": {
+      "intro": "看同一名操作员怎样根据出口温度改变下一次蒸汽操作，区分工作目标、被测结果与可调输入。",
+      "diagramTitle": "进料变冷以后，为什么固定蒸汽位置不再够用",
+      "diagramSteps": [
+        "原料条件稳定时，固定蒸汽位置能让出口温度维持在目标附近",
+        "较冷原料进入后，测得出口温度从目标附近下降到约57℃",
+        "林澄增加蒸汽，并等待过程经过响应时间后再判断结果",
+        "原料逐渐回温后，温度开始超过目标，她再把蒸汽收回",
+        "后续每批根据测量结果继续修正，而不把某个阀位当成永久答案"
+      ],
+      "diagramStepNotes": [
+        "旧方法曾有效，因为此前进料条件变化较小。",
+        "57℃是触发人物改变动作的虚构可见偏差。",
+        "控制动作到温度变化之间存在延迟，不能假设立即生效。",
+        "同一加热量在扰动变化后可能从不足变成过量。",
+        "故事只展示基本反馈，不展开PID、控制器整定或完整工程设计。"
+      ],
+      "mapping": [
+        "出口温度表 → 被持续观察的过程结果。",
+        "60℃工作线 → 本故事设定的灌装目标。",
+        "蒸汽阀 → 可由操作员改变的输入。",
+        "堆起的空瓶 → 为等待过程响应付出的生产代价。"
+      ],
+      "boundary": "60℃仅是本虚构场景的灌装工作温度，不代表灭菌、安全或全部产品质量。真实过程还可能受浓度、流量、环境等变量影响；单一温度测量只能支持这个缩小后的反馈例子。响应延迟意味着过度频繁修正可能带来振荡或不稳定。",
+      "reflection": "如果明天原料反而比平时更暖，沿用今天最后的蒸汽位置为什么仍可能把出口温度推离目标？"
+    },
+    "module": {
+      "intro": "Follow how the same operator changes her next steam adjustment from the outlet reading, keeping the target, measured result, and controllable input distinct.",
+      "diagramTitle": "Why a Fixed Steam Setting Stops Working When the Feed Arrives Colder",
+      "diagramSteps": [
+        "When feed conditions are stable, a fixed steam position keeps the outlet temperature near the target",
+        "After colder material enters, the measured outlet temperature falls from near the target to about 57 °C",
+        "Lin Cheng increases steam and waits through the process response time before judging the result",
+        "As the material gradually warms, temperature starts to exceed the target and she reduces steam again",
+        "For later batches, she continues correcting from measured results rather than treating one valve position as permanent"
+      ],
+      "diagramStepNotes": [
+        "The old method had worked because previous feed conditions varied relatively little.",
+        "About 57 °C is the fictional visible deviation that changes the character's action.",
+        "There is a delay between changing the steam and seeing the temperature response.",
+        "The same heating input can shift from insufficient to excessive as the disturbance changes.",
+        "The story shows only basic feedback and does not teach PID control, controller tuning, or complete engineering design."
+      ],
+      "mapping": [
+        "Outlet temperature display → the process result being observed.",
+        "60 °C working line → the filling target defined for this fictional story.",
+        "Steam valve → the input the operator can manipulate.",
+        "Piled-up empty bottles → the production cost of waiting for the process to respond."
+      ],
+      "boundary": "The 60 °C value is only the working filling temperature in this fictional scenario; it does not represent sterilization, safety, or total product quality. A real process may also depend on concentration, flow, ambient conditions, and other variables. This simplified example supports only the feedback idea based on one measured temperature. Response delay also means overly frequent correction can cause oscillation or instability.",
+      "reflection": "If tomorrow's raw material arrives warmer than usual, why could copying today's final steam position still push the outlet temperature away from the target?"
+    },
+    "referencesZh": [
+      {
+        "id": "astrom-murray-feedback",
+        "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+        "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+        "use": "支持反馈闭环、扰动后的修正、过程响应延迟以及过度调整可能引起振荡等基本机制；不作为完整安全控制规范。"
+      }
+    ],
+    "references": [
+      {
+        "id": "astrom-murray-feedback",
+        "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+        "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+        "use": "Supports closed-loop feedback, correction after disturbances, process response delay, and the possibility that excessive adjustment can produce oscillation; it is not used as a complete safety-control specification."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group1-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "A mountain perfume works had a tall distillation tower. At sunset each day, the old owner collected a cup from the top, smelled its fragrance, and adjusted the steam valve by experience. While all the fruit peel came from one orchard, this method rarely failed, and he considered extra inspections a waste of labour. The daily sample was cheap and had worked under stable feed, so the owner rejected continuous instruments as unnecessary expense.\n\nIn a poor harvest year, peel began arriving from three places. Some was dry; some still carried rainwater. A cart of wet material arrived at noon. The tower temperature slowly fell and the oil grew weaker, but no one discovered it until sunset. The owner opened the steam valve wide, hoping to recover the fragrance lost during the day. During the night, dry material replaced the wet feed, the temperature surged, and bitter compounds entered the oil.\n\nThe night apprentice heard an unfamiliar knocking in the tower and hurried to close the valve. Half a day of weak oil and half a night of bitter oil could not be sold, leaving only half the orders ready for wedding season. Looking at his sunset sample, the owner admitted for the first time that it told him only what the tower was doing when he filled the cup. His large correction arrived after a long process delay and remained active after conditions changed, creating the opposite error.\n\nWhen the wedding merchant arrived for the sealed jars, the owner showed him the ruined batch and ordered the tower shut for instrumentation and tuning. He lost the payment and sold his reserve oil to cover wages. Operators first measured response time, then set smaller adjustments; overly aggressive settings caused oscillation in trial runs and were reduced. They tested sensor failure and manual control before restart, because automation without a safe fallback would create a new single dependence.\n\nThey installed continuous temperature readings and a level float, allowing a small valve to correct deviations gradually. When wet material entered the yard, the receiving crew warned the tower room in advance. If temperature or pressure crossed a limit, an independent device shut off the steam and rang a bell. The apprentice still smelled the oil each day, but his nose was no longer the tower's only messenger. Feedback corrected measured deviation; feed-moisture information provided an earlier feedforward move. Independent trips acted only at safety limits, not as routine control. Trend displays showed rate of change as well as current value, helping operators distinguish noise from a developing deviation.\n\nWhen another cart of wet peel arrived, the owner reached by habit for the large valve. The smaller valve was already moving gently, and the reading had returned to its mark. He lowered his hand and walked downstairs to the tower's even ticking.",
-    "storyBodyZh": "山城的香油坊有座高蒸馏塔。老坊主每天日落时接一杯塔顶液体，闻过香气，再凭经验转动蒸汽阀。旧果皮来自同一片果园时，这办法很少出错，他便觉得多看几次只是浪费人手。每日一次取样便宜，在进料稳定时也曾有效，因此坊主把连续仪表视为多余开支。\n\n收成不好的一年，果皮开始从三处运来。有的晒得干，有的还带雨水。中午送来一车湿料，塔温慢慢下降，出来的油越来越淡，直到日落才被发现。坊主一口气把蒸汽开大，想把白天失去的香气补回来。夜里原料换成干料，塔温猛升，苦味也被带进了油里。\n\n守夜学徒听见塔身发出从未有过的敲击声，赶紧关小阀门。半日的淡油和半夜的苦油都不能出售，婚礼季的订单只交出一半。坊主盯着日落时那杯样品，第一次承认它只告诉他取样时塔在做什么。他的大幅修正经过漫长过程延迟才见效，原料变化后仍在起作用，于是制造相反偏差。\n\n婚宴商人来取封好的油罐时，坊主把坏批次摆给他看，随即下令停塔安装和整定控制。他失去货款，又卖掉储备油支付工资。众人先测响应时间，再设置较小调整；试车中过强参数引起上下振荡，随后被调低。重开前还测试传感器失灵和手动接管，免得自动控制又成为新的单点依赖。\n\n他们在塔上装了连续读数的温度计和液位浮子，让小阀门随着偏差一点点调整；湿料进院时，前端便先通知塔房。若温度或压力越过界限，独立装置会关断蒸汽并敲铃。学徒仍每天闻油，但他的鼻子不再是塔唯一的消息。反馈依据已测偏差修正，进料含水信息则提供更早的前馈动作；独立联锁只在安全边界触发，不代替日常调节。趋势图同时显示当前值和变化速度，帮助操作者区分噪声与正在发展的偏差。\n\n又一车湿料到达时，坊主习惯性地伸手去转大阀。小阀正在轻轻移动，读数已回到刻线。他把手收回来，听着塔内均匀的滴答声走下楼梯。",
-    "explanation": "Process control keeps an operation stable under disturbances by continuously measuring its state, comparing it with a target, and manipulating inputs. Feedback corrects observed deviations; feedforward acts in advance on measured disturbances; alarms and interlocks protect operating limits. Performance also depends on sampling frequency, delay, and adjustment size. Corrections that arrive late and act too strongly often create oscillation or overshoot.",
-    "explanationZh": "过程控制通过持续测量、比较目标与实际状态，并操纵输入，使运行在扰动下仍保持稳定。反馈根据已经出现的偏差修正，前馈利用可测扰动提前动作，警报与联锁则保护运行边界。控制效果还取决于采样频率、响应延迟和调节幅度；晚到且过大的修正常会引发振荡或过冲。"
+    "storyBody": "On Monday morning, Lin Cheng needs to fill a batch of raspberry sauce before lunch for an afternoon pickup. Just after a container from cold storage is connected, the nozzle starts pulling the sauce into strands, leaving the bottle rims less clean than before. More empty bottles are still coming toward her. The process card calls for an outlet temperature around 60 °C for consistent filling of this batch. For the previous two weeks, similar incoming conditions had let her leave the steam valve in one position, glance at the display, and go help with packing.\n\nShe checks the display: the temperature has fallen from near 60 °C to around 57 °C. Material is still feeding gradually from the container into the heated vessel, while the valve remains at its usual position. Lin Cheng holds the next row of empty bottles outside the conveyor and lets the filled ones move on. She increases steam, wipes sauce from the nozzle, and waits for the temperature to respond before restarting.\n\nEmpty bottles pile up behind her while the temperature slowly begins to recover. As it approaches 60 °C, she restarts filling. But after a while, the material still waiting in the container gradually warms in the workshop, and the outlet temperature starts to move above the target. The extra heating that had rescued production a short time earlier is now too much. Lin Cheng turns the steam back down slightly and waits for the next reading instead of leaving it at the setting that worked a moment ago.\n\nThe remaining containers arrive at different temperatures. Lin Cheng watches the outlet before deciding how to adjust. A packing colleague calls over, “We could use another pair of hands.” She has already turned toward the boxes when she notices that the temperature is still rising. She asks the colleague to fold the empty cartons first and stays beside the valve. She stops making large adjustments at every small display movement; the previous action needs time to show its effect. Only when the reading stops drifting away does she go to move boxes. Two jobs she once combined with an occasional glance now have to take turns.\n\nNear noon, the last row of bottles passes through the filler and the truck schedule is not missed. Lin Cheng wipes away yesterday's fixed valve mark from the control board, leaving only the 60 °C working target and that day's temperature record. The batch-quality inspection sheet beside it still waits for its own signature; the temperature record is complete, while the batch-release field is still blank.",
+    "storyBodyZh": "周一上午，林澄要在午餐前灌完一批覆盆子淋酱，下午的货车已排好取货时间。第二桶原料刚从冷库接上，灌装嘴就开始把酱拖成细线，瓶口不再像刚才那样干净。她身后的空瓶还在往前送。工艺卡要求出口保持在60℃附近，便于这批酱稳定灌装；过去两周原料条件相近，蒸汽阀停在同一位置就够了，她偶尔看表，还能去另一头帮忙装箱。\n\n她看温度表，读数已经从接近60℃掉到57℃附近。原料桶还在慢慢往加热罐里供料，阀门却仍是平常的位置。林澄把下一排空瓶挡在输送带外，让已经装好的先走。她把蒸汽开大一些，没有马上重新开线，而是擦掉瓶嘴上的酱，等温度真正有反应。\n\n空瓶在她身后越堆越高，温度终于慢慢往回升。接近60℃时，她重新启动灌装。可又过了一阵，桶里还没送入罐的原料在车间里逐渐回温，出口温度开始越过目标继续上走。刚才把生产救回来的加热量，这时反而显得太多。林澄把蒸汽收回一点，继续看下一次读数，而不是守着刚才那个位置不动。\n\n上午剩下的原料温度各不相同，林澄先看出口的变化，再决定怎么调。装箱的同事过来喊她：“这边也缺双手。”她本来已经转身，温度表却还在往上走，于是请同事先把空箱折好，自己留在阀门旁。她不再追着每一次小跳动大幅拧阀；前一次动作得有时间显现。等读数不再往外偏，她才腾出手搬箱子。原来偶尔看一眼就能兼顾的两件工作，现在只好轮着做。\n\n临近中午，最后一排瓶子通过灌装机，货车时间没有被错过。林澄擦掉操作板上昨天留下的固定阀位记号，只留下60℃工作目标和当天的温度记录。旁边那张批次质量检验单仍照常等人签字；温度记录已写齐，批次放行处还空着。",
+    "explanation": "Process control can be understood through a simple closed loop: measure the controlled result, compare it with a target, and then change a manipulated input so the process moves back toward the target after a disturbance.\n\nHere the outlet drops from 60 °C to 57 °C, a deviation of 3 °C, so Lin Cheng increases steam. As the incoming material warms, she reduces it again. The 3 °C difference tells her the size of the temperature error; it does not by itself calculate how far to open the valve. The response takes time, and large, repeated corrections made too quickly can cause fluctuations.",
+    "explanationZh": "过程控制可用一个简单闭环理解：测量被控制的结果，与目标比较，再改变可操纵输入，使扰动发生后过程重新靠近目标。\n\n本例出口温度从60℃降到57℃，偏差为3℃，林澄因而增加蒸汽；原料随后回温，她又减少蒸汽。3℃只告诉她温度偏了多少，不能单靠这个数字推算阀门该开多少。动作存在响应延迟，过快、过大的反复修正也可能造成波动。"
   },
   {
     "id": "0712-treatment-train",
@@ -18363,47 +18441,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0712",
     "fieldTitle": "Environmental protection technology",
     "fieldTitleZh": "环境保护技术",
-    "title": "The Net Asked to Stop a River",
-    "titleZh": "一张网想拦住整条河",
-    "summary": "A ruler uses the finest net to make river water clear, then learns that clarity proves only that the mud was caught.",
-    "summaryZh": "城主用最细的网把河水滤得清亮，却很快发现，清亮只证明泥沙被拦住了。",
+    "title": "The Second Spare Filter",
+    "titleZh": "没拆开的第二支滤芯",
+    "summary": "After rain, a community repair station needs to wash more than twenty bicycles covered in grit. The fine filter that had normally been sufficient clogs quickly. Ji Lan routes this wash water—after visible chain oil has already been wiped off and without emulsifying degreaser—through grit settling, free-oil separation, and then fine filtration. The upstream stages remove coarse solids and floating free oil before they reach the new downstream filter, at the cost of more space, sludge removal, oil collection, and maintenance.",
+    "summaryZh": "社区维修站雨后要洗二十多辆满是砂泥的单车，原本够用的细滤芯很快堵住。季岚把这批预先干擦过明显链条油、且未使用乳化型除油剂的清洗回水，依次经过沉砂、自由油分离和细滤；前段先拿走粗砂与浮油，让新的后段滤芯承受更小负荷，但增加了清泥、收油和占地。",
     "storyParagraphs": [
-      "River City always found mud in its drinking water. After seeing a washerwoman strain water through cloth, the ruler ordered a vast net finer than window mesh to be stretched across the intake canal. On the first day, the water beyond it looked clear. People gathered around the basin in praise, and the ruler cancelled the money set aside for a settling pond. The single screen saved construction money and let the mayor open the plant before an election.",
-      "A storm filled the fine net with branches and clods of mud until the canal nearly stopped. The day after workers cleared it, an upstream dye house spilled a barrel of colourless chemical. The water still looked clear but tasted bitter. Several days later, illness spread through the riverside streets. The physician found that the net caught mud, but not substances dissolved in water or unseen causes of disease. Closing the channel to clean it also removed the town's only supply, revealing that one step had become both treatment and single point of failure.",
-      "The ruler proposed weaving an even tighter net. The water engineer placed stones, a spoonful of salt, and a drop of muddy water into three cups and let him see that the same net helped with only some of them. 'Ask one tool to do every job,' she said, 'and the first thing it may accomplish is blocking itself.'",
-      "The mayor took down the river-parade banner and moved its budget into several treatment stages. Engineers characterised particles, dissolved compounds, and microbes, then assigned each a suitable barrier. Jar tests and small pilots checked doses before full-scale work; one device was not accepted merely because it sounded advanced. The design set target water quality and checked how failure of one unit changed the load on the next. Chemical storage and sludge disposal entered the plan too.",
-      "The new works began with a coarse screen for branches, followed by a basin where sediment could settle. Separate layers of sand and charcoal addressed colour and odour, and a final disinfection step dealt with pathogens. Each stage had a sampling point, so a failure upstream could be found before the public became ill downstream. Bypass and reserve capacity allowed maintenance without sending untreated water forward. Samples before and after each unit showed where removal failed. Operators practised responding to high turbidity, disinfectant failure, and exhausted carbon rather than assuming every upset looked the same.",
-      "When the works reopened, the ruler filled a cup with transparent water but did not raise it at once. He waited for three small flags at the screen, settling basin, and final reservoir to rise in sequence, and only then took the first drink."
+      "After a night of rain, more than twenty shared bicycles are lined up outside the community repair station. Ji Lan has promised to have them washed, checked, and returned to their racks before evening, but a little over an hour into cleaning, the spray gun begins to lose flow. The filter fitted fresh that morning is already struggling. The gauge by the pump shows a growing pressure difference across the filter—the water is finding it harder to pass through, which usually means the filter is becoming clogged. Only two spare filters remain in storage.",
+      "As usual, the mechanics first wipe thick oil from chains and sprockets with cloths and collect water containing degreaser separately. This return stream comes only from the plain-water pre-rinse. Ji Lan opens the clogged filter: its folds contain grit and a little sticky oil. She leaves a clear bucket of return water by the door. By the time two more bicycles have passed, coarse sand has settled and scattered oil droplets float on top. A mechanic points at the spare filters. “The afternoon bikes aren’t here yet.”",
+      "She pauses the cleaning line for about ten minutes and first puts the spare filter back on the shelf. The station already has a grit-settling tank and a small oil/water separator, although they are not usually connected to this line for small washing jobs. Ji Lan routes the water through the settling tank first, then through the separator, and only then installs a new fine filter of the same type downstream. When the pump restarts, spray flow returns and the row of bicycles outside begins moving again. Someone asks where the parts boxes will go. She points to an empty shelf: making room for the two treatment units also means rearranging everyday storage.",
+      "Several mountain bikes arriving in the afternoon bring in more fine mud and a small amount of residual free oil. Mud slowly collects in the first tank, while an oil layer appears on the separator surface. Ji Lan removes the accumulated upstream material according to the maintenance routine so that the next load does not continue passing downstream. The removed old filter stays in the used-parts box. The new fine filter remains in service, and its pressure difference rises much more slowly than it did in the morning.",
+      "The new arrangement takes up space along the wall, and someone must shovel out grit, collect free oil, and handle the wastes after closing. By the time the last bicycle returns to its rack that evening, only one of the two spare filters has been used. Ji Lan tightens the reuse-water container lid. Its label still reads “maintenance pre-rinse water.” She adds a line to the filtration record beside it; the label stays the same."
     ],
     "storyParagraphsZh": [
-      "河城的饮水总带泥。城主看见洗衣妇用布滤水，便命人织出一张比窗纱还细的大网，拦在引水渠口。第一天，网后水色清亮，百姓围着水池称赞，城主也撤掉了原本准备修沉淀池的钱。单层细网省下建设款，也让城主赶在选举以前为水厂揭幕。",
-      "一场暴雨下来，树枝和泥团把细网堵得严严实实，水渠几乎断流。工人清完网的第二天，上游染坊又打翻一桶无色药液。水看起来仍旧清澈，喝下去却有苦味。几日后，河边街巷出现腹病，医官发现细网能拦泥，却拦不住溶在水里的东西，也杀不掉看不见的病源。停渠洗网同时切断全城唯一供水，暴露这一步既承担全部处理，也成了唯一失效点。",
-      "城主想把网再织密一层。管水匠却把一把石子、一勺盐和一滴浑水分别倒进三只杯子，让他亲眼看见同一张网只对其中一些东西有用。‘让一件工具做所有事，’她说，‘它最先做成的往往只是堵住自己。’",
-      "城主当着等候乐队的面摘下河庆巡游横幅，把那笔预算投进多道处理工艺。工程师先辨认颗粒、溶解物与微生物，再给每类风险安排合适屏障；药量经杯试和小规模试验验证，设备不能只因听来先进便入选。设计先定目标水质，再核查一单元失效会给下一段增加多少负荷；药剂储存和污泥处置也被纳入。",
-      "新水渠先用粗栅拦树枝，再让泥沙在池中沉下；后面另有沙炭层处理颜色和异味，最后一道消毒才对付病源。每一处都留下取水口，若前段失常，后段不会等到百姓生病才知道。旁路与备用能力让维修不必把未经处理的水送往下游；每单元前后取样则指出去除究竟在哪一段失效。操作者分别演练高浊度、消毒失效和炭层耗尽，不再假设所有异常都长得一样。",
-      "水厂重新开门时，城主接了一杯透明的水，却没有立刻举杯。他等粗栅、沉淀池和末端水池的三面小旗依次升起，才喝下第一口。"
+      "一场夜雨后，社区维修站门口排了二十多辆共享单车。季岚答应傍晚前把它们洗净、检查后送回车架，可清洗才过一个多小时，洗车枪的水流就开始变弱。早上刚换上的滤芯这么快就不够用了。泵旁的表显示滤芯前后的压力差越来越大——水越来越难穿过去，通常意味着滤芯正被堵住。仓库里只剩两支备用滤芯。",
+      "师傅们照旧先用布擦掉链条和飞轮上的厚油，带除油剂的水另外收集。这条回水只来自用清水预冲的步骤。季岚拆开堵住的滤芯，褶皱里塞着砂泥，还黏着少量油。她舀一桶回水放在门边，等同事推过两辆车再看，粗砂已经沉到底部，水面上还浮着零散油滴。师傅指了指架上的备用件：“下午的车还没来呢。”",
+      "她让清洗队伍停了十来分钟，先把备用滤芯放回架上。站里原本就有沉砂槽和小型油水分离器，只是平时少量洗车时没有串到这条线上。季岚把回水先送进沉砂槽，再经过分离器，最后才换上一支同款的新细滤芯。重新开泵后，洗车枪恢复了流量，门外的车队继续往前挪。有人问墙边的零件箱放哪儿，她指了指架子的空层；腾出这两个处理位置，连日常收纳也得跟着挪。",
+      "下午几辆山地车带进更多细泥和少量残余自由油。沉砂槽底慢慢堆起泥层，分离器表面也收集到一层油。季岚按维护要求把前段积存物清走，目的是别让接下来的负荷继续压到后段；拆下的旧滤芯留在废件箱里。新的细滤芯一直留在系统里，压力差上升得比上午慢得多。",
+      "新流程也带来麻烦：墙边少了一块放零件箱的位置，收工后还得有人铲泥、收自由油并处理这些废物。傍晚最后一辆车推回车架时，两支备用滤芯只用掉一支。季岚把回用水桶盖拧紧，标签仍写着“维修预冲洗用水”；桶边的过滤记录添了一行，标签没有换。"
     ],
     "conceptName": "Treatment train",
     "conceptNameZh": "处理工艺链",
     "explanationParagraphs": [
-      "A treatment train uses connected stages for contaminants that differ in nature and cannot be removed reliably by one operation. Early stages reduce loads and protect later ones; downstream stages address finer or different hazards. Monitoring points and appropriate redundancy help detect failure. The sequence should be selected for the contaminants, variation in incoming water, and required standard, rather than by simply adding equipment."
+      "A treatment train links units with different functions according to water characteristics and the treatment goal. Contaminants removed in an upstream stage reduce the load on later stages, so both unit selection and sequence depend on the incoming water.",
+      "Here grit settles first, gravity-separable free oil is removed next, and remaining particles are fine-filtered last. If oil is emulsified, a simple oil/water separator has limited effectiveness; clear appearance also does not prove that the water is potable or suitable for discharge."
     ],
     "explanationParagraphsZh": [
-      "处理工艺链把性质不同、单一步骤难以同时去除的污染物，交给相互衔接的多个处理单元。前段可削减负荷并保护后段，后段处理更细或不同类型的风险；监测点与必要冗余帮助发现失效。工艺选择应依据污染物、来水变化和目标标准，而不是简单堆叠设备。"
+      "处理工艺链把不同作用的处理单元按水质和目标衔接起来；前段去除的污染物会降低后段负荷，因此单元选择和顺序都与原水特征有关。",
+      "本例先沉砂，再分离可重力分开的自由油，最后细滤颗粒。若油已被乳化，简单油水分离器效果有限；清澈外观也不能证明水可饮用或符合排放要求。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇讲处理工艺链的一个入口：不同单元针对不同污染物或负荷，前一段先去除一部分物质，会改变后一段需要承担的工作。虚构场景只处理预先干擦后、以砂泥和少量自由油为主的维修清洗回水，并不把简单重力分油用于乳化油或溶解污染物。",
+    "overall": "This article introduces one idea behind a treatment train: different units address different contaminants or loads, and material removed upstream changes the burden carried by downstream treatment. The fictional scenario is limited to maintenance wash water that has already had obvious oil wiped off and is dominated by grit plus a small amount of separable free oil; it does not treat simple gravity separation as a solution for emulsified oil or dissolved contaminants.",
+    "moduleZh": {
+      "intro": "只追踪三类可见负荷：会沉的砂泥、可漂浮分离的自由油，以及最后仍需细滤的颗粒。",
+      "diagramTitle": "为什么先拿走砂泥和自由油，会让后段滤芯更耐用",
+      "diagramSteps": [
+        "先辨认来水中的可沉砂泥、可浮自由油与较细悬浮颗粒",
+        "用沉砂槽先拿走较重砂泥，降低后续固体负荷",
+        "让可分离自由油在油水分离器中聚集并被收走",
+        "同款细滤芯再承担前段留下的较细颗粒",
+        "按积泥、收油和压差记录维护各单元，保持整串处理可用"
+      ],
+      "diagramStepNotes": [
+        "本例是清水预冲回水，明显油污先干擦，除油剂水另收；不是把所有油都当成自由油。",
+        "被先拿走的砂泥留在槽底，不会再全部进入最后的滤芯。",
+        "油已乳化或溶解时，简单重力分离不能替代所需的其他处理。",
+        "旧滤芯和替换滤芯同款；恢复流量靠换新，减慢后续积污还依赖前段减负。",
+        "增加设备也增加占地、清理和废物处理，不能只看末端水色。"
+      ],
+      "mapping": [
+        "堵泥的旧滤芯 → 单一后段承担过多负荷的结果。",
+        "沉砂槽底的泥 → 前段去除的较重固体。",
+        "油水分离器表面的油 → 可由重力分离的自由油。",
+        "只用掉一支备用滤芯 → 前段减负后后段负荷变化的可见结果。"
+      ],
+      "boundary": "处理单元必须按实际污染物和回用/排放目标选择。本例的简单油水分离只针对可分离自由油，不适用于已被乳化的油，也不能去除所有溶解物。水更清或滤芯更耐用都不能证明达到饮用水或排放标准；本故事的目标仅是维修站规定的预冲洗回用。",
+      "reflection": "如果下一批回水几乎没有油、主要是大量砂泥，你会优先加强哪一段，为什么不能仅因为这篇故事出现过油水分离器就把它当成固定答案？"
+    },
+    "module": {
+      "intro": "Track only three visible loads: grit that can settle, free oil that can be separated at the surface, and remaining particles that still reach the fine filter.",
+      "diagramTitle": "Why Removing Grit and Free Oil Upstream Helps the Downstream Filter Last Longer",
+      "diagramSteps": [
+        "Identify settleable grit, separable free oil, and finer suspended particles in the incoming water",
+        "Remove heavier grit first to reduce the solids load on later units",
+        "Collect and remove separable free oil in the oil/water separator",
+        "Let the same type of fine filter handle the finer particles left after pretreatment",
+        "Maintain the units using collected grit, oil, and pressure-difference records"
+      ],
+      "diagramStepNotes": [
+        "This stream is a plain-water pre-rinse; visible oil is wiped first and degreaser water is collected separately. Not every oil is separable free oil.",
+        "Grit retained in the settling tank no longer all reaches the last filter.",
+        "Simple gravity separation cannot replace other treatment needed for emulsified or dissolved oil.",
+        "The removed and replacement filters are the same type. Replacement restores flow; pretreatment reduces later loading.",
+        "More units also require space, cleaning, and waste handling; appearance alone is not the goal."
+      ],
+      "mapping": [
+        "Grit-filled old filter → the result of one downstream unit carrying too much load.",
+        "Mud at the bottom of the settling tank → heavier solids removed upstream.",
+        "Oil on the separator surface → free oil that can be separated by gravity.",
+        "Only one spare filter used → a visible result of reduced downstream loading."
+      ],
+      "boundary": "Treatment units must be chosen according to the actual contaminants and the intended reuse or discharge goal. The simple oil/water separation in this example applies only to separable free oil, not emulsified oil, and it does not remove all dissolved substances. Clearer water or longer filter life does not demonstrate drinking-water or discharge compliance; the goal in this story is only the repair station's defined pre-rinse reuse.",
+      "reflection": "If the next batch of wash water contains almost no oil and is dominated by large amounts of grit, which stage would you prioritize, and why should the presence of an oil/water separator in this story not make it a fixed answer?"
+    },
+    "referencesZh": [
+      {
+        "id": "epa-drinking-treatment",
+        "citation": "U.S. Environmental Protection Agency. Drinking Water Treatment. Archived agency fact sheet.",
+        "url": "https://archive.epa.gov/water/archive/web/pdf/2009_08_28_sdwa_fs_30ann_treatment_web.pdf",
+        "use": "支持不同处理过程针对不同污染物、处理选择取决于原水特征；不作为固定通用流程或成品水安全证明。"
+      },
+      {
+        "id": "epa-ows-1999",
+        "citation": "U.S. Environmental Protection Agency, Region 9. (1999, November). Oil/Water Separators: Best Environmental Practices for Auto Repair and Fleet Maintenance.",
+        "url": "https://www.epa.gov/sites/production/files/2016-02/documents/separator.pdf",
+        "use": "支持汽车维修场景中减少入口砂泥和油负荷、自由油重力分离及维护要求，并明确乳化型清洗剂会限制简单油水分离效果。"
+      }
+    ],
+    "references": [
+      {
+        "id": "epa-drinking-treatment",
+        "citation": "U.S. Environmental Protection Agency. Drinking Water Treatment. Archived agency fact sheet.",
+        "url": "https://archive.epa.gov/water/archive/web/pdf/2009_08_28_sdwa_fs_30ann_treatment_web.pdf",
+        "use": "Supports the principle that different treatment processes address different contaminants and that process selection depends on raw-water characteristics; it is not used as a universal treatment recipe or a certificate of finished-water safety."
+      },
+      {
+        "id": "epa-ows-1999",
+        "citation": "U.S. Environmental Protection Agency, Region 9. (1999, November). Oil/Water Separators: Best Environmental Practices for Auto Repair and Fleet Maintenance.",
+        "url": "https://www.epa.gov/sites/production/files/2016-02/documents/separator.pdf",
+        "use": "Supports reducing incoming grit and oil loads in automotive-maintenance settings, gravity separation of free oil, maintenance requirements, and the limitation that emulsifying detergents reduce the effectiveness of simple oil/water separation."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group1-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "River City always found mud in its drinking water. After seeing a washerwoman strain water through cloth, the ruler ordered a vast net finer than window mesh to be stretched across the intake canal. On the first day, the water beyond it looked clear. People gathered around the basin in praise, and the ruler cancelled the money set aside for a settling pond. The single screen saved construction money and let the mayor open the plant before an election.\n\nA storm filled the fine net with branches and clods of mud until the canal nearly stopped. The day after workers cleared it, an upstream dye house spilled a barrel of colourless chemical. The water still looked clear but tasted bitter. Several days later, illness spread through the riverside streets. The physician found that the net caught mud, but not substances dissolved in water or unseen causes of disease. Closing the channel to clean it also removed the town's only supply, revealing that one step had become both treatment and single point of failure.\n\nThe ruler proposed weaving an even tighter net. The water engineer placed stones, a spoonful of salt, and a drop of muddy water into three cups and let him see that the same net helped with only some of them. 'Ask one tool to do every job,' she said, 'and the first thing it may accomplish is blocking itself.'\n\nThe mayor took down the river-parade banner and moved its budget into several treatment stages. Engineers characterised particles, dissolved compounds, and microbes, then assigned each a suitable barrier. Jar tests and small pilots checked doses before full-scale work; one device was not accepted merely because it sounded advanced. The design set target water quality and checked how failure of one unit changed the load on the next. Chemical storage and sludge disposal entered the plan too.\n\nThe new works began with a coarse screen for branches, followed by a basin where sediment could settle. Separate layers of sand and charcoal addressed colour and odour, and a final disinfection step dealt with pathogens. Each stage had a sampling point, so a failure upstream could be found before the public became ill downstream. Bypass and reserve capacity allowed maintenance without sending untreated water forward. Samples before and after each unit showed where removal failed. Operators practised responding to high turbidity, disinfectant failure, and exhausted carbon rather than assuming every upset looked the same.\n\nWhen the works reopened, the ruler filled a cup with transparent water but did not raise it at once. He waited for three small flags at the screen, settling basin, and final reservoir to rise in sequence, and only then took the first drink.",
-    "storyBodyZh": "河城的饮水总带泥。城主看见洗衣妇用布滤水，便命人织出一张比窗纱还细的大网，拦在引水渠口。第一天，网后水色清亮，百姓围着水池称赞，城主也撤掉了原本准备修沉淀池的钱。单层细网省下建设款，也让城主赶在选举以前为水厂揭幕。\n\n一场暴雨下来，树枝和泥团把细网堵得严严实实，水渠几乎断流。工人清完网的第二天，上游染坊又打翻一桶无色药液。水看起来仍旧清澈，喝下去却有苦味。几日后，河边街巷出现腹病，医官发现细网能拦泥，却拦不住溶在水里的东西，也杀不掉看不见的病源。停渠洗网同时切断全城唯一供水，暴露这一步既承担全部处理，也成了唯一失效点。\n\n城主想把网再织密一层。管水匠却把一把石子、一勺盐和一滴浑水分别倒进三只杯子，让他亲眼看见同一张网只对其中一些东西有用。‘让一件工具做所有事，’她说，‘它最先做成的往往只是堵住自己。’\n\n城主当着等候乐队的面摘下河庆巡游横幅，把那笔预算投进多道处理工艺。工程师先辨认颗粒、溶解物与微生物，再给每类风险安排合适屏障；药量经杯试和小规模试验验证，设备不能只因听来先进便入选。设计先定目标水质，再核查一单元失效会给下一段增加多少负荷；药剂储存和污泥处置也被纳入。\n\n新水渠先用粗栅拦树枝，再让泥沙在池中沉下；后面另有沙炭层处理颜色和异味，最后一道消毒才对付病源。每一处都留下取水口，若前段失常，后段不会等到百姓生病才知道。旁路与备用能力让维修不必把未经处理的水送往下游；每单元前后取样则指出去除究竟在哪一段失效。操作者分别演练高浊度、消毒失效和炭层耗尽，不再假设所有异常都长得一样。\n\n水厂重新开门时，城主接了一杯透明的水，却没有立刻举杯。他等粗栅、沉淀池和末端水池的三面小旗依次升起，才喝下第一口。",
-    "explanation": "A treatment train uses connected stages for contaminants that differ in nature and cannot be removed reliably by one operation. Early stages reduce loads and protect later ones; downstream stages address finer or different hazards. Monitoring points and appropriate redundancy help detect failure. The sequence should be selected for the contaminants, variation in incoming water, and required standard, rather than by simply adding equipment.",
-    "explanationZh": "处理工艺链把性质不同、单一步骤难以同时去除的污染物，交给相互衔接的多个处理单元。前段可削减负荷并保护后段，后段处理更细或不同类型的风险；监测点与必要冗余帮助发现失效。工艺选择应依据污染物、来水变化和目标标准，而不是简单堆叠设备。"
+    "storyBody": "After a night of rain, more than twenty shared bicycles are lined up outside the community repair station. Ji Lan has promised to have them washed, checked, and returned to their racks before evening, but a little over an hour into cleaning, the spray gun begins to lose flow. The filter fitted fresh that morning is already struggling. The gauge by the pump shows a growing pressure difference across the filter—the water is finding it harder to pass through, which usually means the filter is becoming clogged. Only two spare filters remain in storage.\n\nAs usual, the mechanics first wipe thick oil from chains and sprockets with cloths and collect water containing degreaser separately. This return stream comes only from the plain-water pre-rinse. Ji Lan opens the clogged filter: its folds contain grit and a little sticky oil. She leaves a clear bucket of return water by the door. By the time two more bicycles have passed, coarse sand has settled and scattered oil droplets float on top. A mechanic points at the spare filters. “The afternoon bikes aren’t here yet.”\n\nShe pauses the cleaning line for about ten minutes and first puts the spare filter back on the shelf. The station already has a grit-settling tank and a small oil/water separator, although they are not usually connected to this line for small washing jobs. Ji Lan routes the water through the settling tank first, then through the separator, and only then installs a new fine filter of the same type downstream. When the pump restarts, spray flow returns and the row of bicycles outside begins moving again. Someone asks where the parts boxes will go. She points to an empty shelf: making room for the two treatment units also means rearranging everyday storage.\n\nSeveral mountain bikes arriving in the afternoon bring in more fine mud and a small amount of residual free oil. Mud slowly collects in the first tank, while an oil layer appears on the separator surface. Ji Lan removes the accumulated upstream material according to the maintenance routine so that the next load does not continue passing downstream. The removed old filter stays in the used-parts box. The new fine filter remains in service, and its pressure difference rises much more slowly than it did in the morning.\n\nThe new arrangement takes up space along the wall, and someone must shovel out grit, collect free oil, and handle the wastes after closing. By the time the last bicycle returns to its rack that evening, only one of the two spare filters has been used. Ji Lan tightens the reuse-water container lid. Its label still reads “maintenance pre-rinse water.” She adds a line to the filtration record beside it; the label stays the same.",
+    "storyBodyZh": "一场夜雨后，社区维修站门口排了二十多辆共享单车。季岚答应傍晚前把它们洗净、检查后送回车架，可清洗才过一个多小时，洗车枪的水流就开始变弱。早上刚换上的滤芯这么快就不够用了。泵旁的表显示滤芯前后的压力差越来越大——水越来越难穿过去，通常意味着滤芯正被堵住。仓库里只剩两支备用滤芯。\n\n师傅们照旧先用布擦掉链条和飞轮上的厚油，带除油剂的水另外收集。这条回水只来自用清水预冲的步骤。季岚拆开堵住的滤芯，褶皱里塞着砂泥，还黏着少量油。她舀一桶回水放在门边，等同事推过两辆车再看，粗砂已经沉到底部，水面上还浮着零散油滴。师傅指了指架上的备用件：“下午的车还没来呢。”\n\n她让清洗队伍停了十来分钟，先把备用滤芯放回架上。站里原本就有沉砂槽和小型油水分离器，只是平时少量洗车时没有串到这条线上。季岚把回水先送进沉砂槽，再经过分离器，最后才换上一支同款的新细滤芯。重新开泵后，洗车枪恢复了流量，门外的车队继续往前挪。有人问墙边的零件箱放哪儿，她指了指架子的空层；腾出这两个处理位置，连日常收纳也得跟着挪。\n\n下午几辆山地车带进更多细泥和少量残余自由油。沉砂槽底慢慢堆起泥层，分离器表面也收集到一层油。季岚按维护要求把前段积存物清走，目的是别让接下来的负荷继续压到后段；拆下的旧滤芯留在废件箱里。新的细滤芯一直留在系统里，压力差上升得比上午慢得多。\n\n新流程也带来麻烦：墙边少了一块放零件箱的位置，收工后还得有人铲泥、收自由油并处理这些废物。傍晚最后一辆车推回车架时，两支备用滤芯只用掉一支。季岚把回用水桶盖拧紧，标签仍写着“维修预冲洗用水”；桶边的过滤记录添了一行，标签没有换。",
+    "explanation": "A treatment train links units with different functions according to water characteristics and the treatment goal. Contaminants removed in an upstream stage reduce the load on later stages, so both unit selection and sequence depend on the incoming water.\n\nHere grit settles first, gravity-separable free oil is removed next, and remaining particles are fine-filtered last. If oil is emulsified, a simple oil/water separator has limited effectiveness; clear appearance also does not prove that the water is potable or suitable for discharge.",
+    "explanationZh": "处理工艺链把不同作用的处理单元按水质和目标衔接起来；前段去除的污染物会降低后段负荷，因此单元选择和顺序都与原水特征有关。\n\n本例先沉砂，再分离可重力分开的自由油，最后细滤颗粒。若油已被乳化，简单油水分离器效果有限；清澈外观也不能证明水可饮用或符合排放要求。"
   },
   {
     "id": "0712-source-control",
@@ -18510,49 +18678,137 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0713",
     "fieldTitle": "Electricity and energy",
     "fieldTitleZh": "电力与能源",
-    "title": "The Electricity Left Over at Noon",
-    "titleZh": "白天多出来的电",
-    "summary": "A new wind farm produces more electricity than the city uses in a day, yet at suppertime its lamps still dim one after another.",
-    "summaryZh": "新风场一天发出的电明明超过全城所需，晚饭时分，城里的灯却还是一盏接一盏暗下去。",
+    "title": "Enough Energy, but Rising Grid Imports",
+    "titleZh": "电量够用，怎么又买起了电",
+    "summary": "The university open-day plan still has enough energy over the whole day, but thick cloud arrives early just as the arena starts equipment tests, leaving local instantaneous power insufficient. The public grid immediately supplies the net difference and the battery control system rapidly increases discharge. Mia then delays one flexible load to avoid the extra imports its scheduled start would require and preserve battery energy for later in the evening.",
+    "summaryZh": "大学开放日原计划的全天电量仍有余量，但厚云提前到来、体育馆又提前启动设备，使某一时刻的本地功率不足。公共电网立即承担净差额，电池控制系统自动快速放电；米娅随后延后一组可调负荷，避免原计划启动造成的额外外购并保留电池余量。",
     "storyParagraphs": [
-      "After Cape City built twelve wind turbines, the mayor opened a monthly report and found that their daily production exceeded the city's daily use. Coal prices were consuming the dock-repair fund, so he announced that the old thermal unit would close before winter. Dispatcher Lin Yue pointed to two columns: at noon the city exported power, while after sunset it still drew on the old unit. The mayor covered the columns with his hand and read only the larger total.",
-      "For twelve mild days, the decision looked brave and profitable. Wind turned the turbines through supper, coal deliveries stopped, and masons began rebuilding the quay with the savings. The mayor scheduled a night ceremony at the shipyard. When Lin requested payment to keep a fast reserve ready, he refused; an idle machine looked wasteful beside twelve spinning towers.",
-      "On the first cold evening, the wind fell before sunset. Homes lit stoves and lamps while shipyard cranes lifted the ceremony arch. In the control room, the frequency needle slid below its centre mark. Textile motors slowed, then the bakery ovens tripped. The hospital started its own generator. City hall went dark, but the quay floodlights remained on because their circuit had been declared untouchable.",
-      "Lin delayed one water pump, called the cold store to pause ice making, and asked the neighbouring city for power. Its price was six times the noon export rate. The mayor ordered her to wait for the wind. A second needle moved toward the red line; the bakery owner reported half-baked loaves cooling in dead ovens. Lin could shed whole neighbourhoods or stop the televised dock lift and spend the remaining repair fund on emergency imports.",
-      "She stopped the cranes. The arch hung half a metre above its supports while guests stood in darkness, and the neighbouring line began carrying power. Flexible users reduced load in exchange for payment. The needle returned between its red marks after thirty-two minutes. Noon had supplied ample energy across the day; it had not supplied the missing power at that evening moment, in that part of the network.",
-      "The city kept the wind farm as its main source but restored a fast-starting reserve, added storage for suitable durations, improved forecasts, and agreed schedules with large users. Interconnection limits and local line loading entered the display beside frequency. The quay reopened a month late, with one wall left unfinished because its money had paid for the emergency evening.",
-      "Another windless supper came the next year. A battery discharged first, the cold store delayed ice, and the reserve warmed before the needle reached the first red line. Lin watched it tremble and settle, then folded the old report marked 'daily surplus' around the invoice for the unfinished quay wall."
+      "On the evening of the university open day, Mia is in the campus energy room. The arena lights come on early and cloud arrives ahead of the forecast; a new rise appears in grid imports on her screen. The dining hall and exhibition spaces will also get busy at 18:00. She checks the daily plan again: local generation and the stored energy scheduled for use had been enough in total. Volunteers are already handing out visitor badges outside. There is no time to rearrange the whole event.",
+      "At 17:50, the arena begins its lighting and sound tests as thick cloud rapidly reduces solar output. The campus remains connected to the public grid, which supplies power that local sources cannot provide; the enabled battery controls also increase discharge within seconds. The lights stay on, but power she had planned to buy less of is now arriving from outside.",
+      "A colleague asks, “Isn’t there still energy in the battery?” Mia opens its status panel. About 240 kWh of usable energy is available at that moment, but the battery's maximum discharge power is 120 kW. The first number says how much usable energy remains; the second says how much power the battery can deliver at one instant. The automatic controls have already raised battery output within its permitted range, yet the campus still needs the public grid for the remaining power. She tries raising the requested output, but the interface keeps it within the equipment limit. Having more energy left cannot raise that instantaneous limit. If high discharge continues, less battery energy will remain for later changes in the evening.",
+      "Mia leaves the arena alone. A 40 kW cold-store compressor group is waiting for its next timed start. The person responsible confirms that this cycle can be deferred within the permitted temperature range, so she changes its start time. At the originally scheduled moment, the campus does not add that 40 kW load and avoids the corresponding extra grid import it would have needed. The cold store still has to complete the cooling cycle later; she moves the work to a period when solar output is expected to recover.",
+      "As the cloud thins, solar output gradually recovers. Mia lets the compressor group start in its revised time window, while the battery control system reduces discharge. At 18:00 the arena opens on schedule and the entrance lightbox has stayed on throughout. Before handover, she writes the two units separately in the log: the day's plan and remaining battery energy are recorded in kWh, while load, generation, and battery output at a given instant are recorded in kW."
     ],
     "storyParagraphsZh": [
-      "海岬城建起十二座风机后，市长翻开月报，发现风场每天发电总量超过全城每天用量。煤价正在吞掉码头维修款，他便宣布入冬前关停旧火电机组。调度员林悦指着两栏：中午城市向外送电，日落后却仍从旧机组取电。市长用手盖住分时数据，只念最后那个更大的总数。",
-      "接连十二个暖和日子里，这个决定既大胆又省钱。晚饭时风机仍在转，煤车不再进城，泥瓦匠也用省下的钱修起码头。市长把夜间揭幕礼安排在船坞。林悦申请费用，让一台快速备用机保持待命；市长拒绝了，在十二座旋转风塔旁，一台闲置机器看起来只像浪费。",
-      "第一个寒冷傍晚，海风在日落前落下。家家点灯做饭，船坞起重机仍在吊装典礼拱门。控制室的频率指针滑离中央，纺织机先变慢，面包房电炉随后跳闸。医院启动自备机，市政厅却陷入黑暗；码头泛光灯仍亮着，因为那条线路被列为不可中断。",
-      "林悦推迟一台水泵，请冷库暂停制冰，又向邻城买电，对方报价是中午外送价的六倍。市长让她再等等风。第二根指针也向红线靠近，面包师来电说半熟面包正在熄火炉里变凉。她只能分区断掉居民用电，或停止直播中的码头吊装，把余下维修款花在紧急来电上。",
-      "她停了起重机。拱门悬在支架上方半米，宾客站进黑暗，邻城联络线开始送电；可错时用户按协议降低负荷并得到补偿。三十二分钟后，指针回到红线之间。中午整日累计的电量确实有余，却填不上这个傍晚、这个位置缺少的即时功率。",
-      "此后风场仍是主力，城市恢复快速备用，为合适时长增加储能，改进风况预测，并同耗电大户约定计划。联络线能力和本地线路负荷也与频率一起显示。码头晚开一个月，有一面墙没能整修，因为那笔钱已经付给无风傍晚。",
-      "第二年又遇无风晚饭时刻。电池先放电，冷库推迟制冰，备用机在指针触线前升温。林悦看它轻晃后稳住，把那张写着“每日有余”的旧报表折起，里面夹着未修墙面的支出单。"
+      "大学开放日傍晚，米娅守在校园能源值班室。体育馆比计划早开了灯，窗外的云又比预报早到，她的屏幕上忽然多出一截外购电。18:00食堂和展厅还要同时忙起来。她翻回日计划：本地发电加上当天安排使用的储能，累计电量本来足够。门外志愿者正在发参观牌，已经没有时间重排整场活动。",
+      "17:50，体育馆开始灯光和音响测试时，厚云让太阳能输出迅速下降。校园仍与公共电网相连，外部电网补上本地不足的功率；已经启用的电池控制也在几秒内增加放电。灯没有灭，但她原来准备少买的电，现在正从外面送进来。",
+      "同事看着外购曲线问：“电池里不是还有电吗？”米娅打开电池状态：此刻可用能量约240 kWh，但设备最大放电功率是120 kW。前一个数字说的是还存有多少电，后一个数字说的是这一刻最多能送出多大功率。自动控制已经把电池提高到允许范围，校园仍需要从外部电网取得剩余功率。她试着提高设定，界面仍把输出限制在设备允许范围内；再多的剩余电量也不能把这一刻的上限推高。若一直保持高输出，电池留给晚间后续变化的余量也会越来越少。",
+      "米娅没有去动体育馆。冷库那组40 kW压缩机正等着下一次定时启动，负责人确认可以在允许温度范围内把这一轮推迟。她改了启动时间。原定时刻到了，校园没有再增加这40 kW负荷，也就少了原本需要外部电网补上的这一截。冷库后来仍得做完这轮制冷；她只是把工作移到太阳能有望恢复的时段。",
+      "云层变薄后，太阳能逐渐恢复。米娅让那组压缩机按新的时段启动，电池控制系统也降低输出。18:00体育馆照常开门，入口灯箱一直亮着。交班前，她在记录上把两种单位分开写：日计划和电池剩余量用kWh，某一时刻的负荷、发电和电池输出用kW。"
     ],
     "conceptName": "Grid balancing",
     "conceptNameZh": "电网平衡",
     "explanationParagraphs": [
-      "Grid balancing requires generation, imports, and storage discharge to match demand, exports, storage charging, and losses at every moment so frequency remains safe; voltage and network flows must also stay within limits. Enough total energy over a day does not guarantee enough instantaneous power. Forecasting, scheduling, reserves, interconnection, storage, and flexible demand address imbalances across different locations and timescales."
+      "Grid balancing requires electricity supply and demand to remain matched during real-time operation. kW describes power at a particular moment, while kWh describes accumulated energy over time; a sufficient daily energy budget does not guarantee sufficient power at every instant.",
+      "The battery has about 240 kWh of usable energy and a maximum output of 120 kW. In an idealized constant-output model, 240 ÷ 120 = 2 hours at that power; remaining energy still cannot overcome the power limit. Deferring the inactive 40 kW device avoids demand that would otherwise be added then."
     ],
     "explanationParagraphsZh": [
-      "电网平衡要求发电、进口与储能放电在每一时刻匹配用电、出口、储能充电和网络损耗，使频率维持安全；电压和线路潮流也必须留在约束内。日总电量充足不代表瞬时功率充足。预测、调度、备用、互联、储能和灵活需求分别应对不同地点与时间尺度的偏差。"
+      "电网平衡要求发电与用电在实时运行中持续匹配。kW描述某一时刻的功率，kWh描述一段时间累计的电量；全天能量预算充足不能保证任一时刻功率充足。",
+      "本例电池可用能量约240 kWh，最大输出120 kW。在理想简化模型中，持续以120 kW输出约能用240÷120＝2小时；有电可用却仍不能突破功率上限。延后未启动的40 kW设备，则避免了当时本来会增加的需求。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇用虚构并网校园说明电网平衡的一个入门区别：累计电量够用，并不代表每个时刻的功率都匹配。短时变化必须由电网、快速储能或其他可行调节立即承接；人工随后可以重新安排持续供给与可调负荷。本篇不是完整电网频率控制案例。",
+    "overall": "This fictional grid-connected campus illustrates one introductory distinction in grid balancing: having enough accumulated energy over a day does not mean power is matched at every instant. Short-term changes must be met immediately by the wider grid, fast storage, or other feasible responses; human operators can then rearrange sustained supply and flexible demand. This is not a complete example of grid-frequency control.",
+    "moduleZh": {
+      "intro": "用校园并网这一缩小场景区分“今天总共有多少电”和“这一刻需要多少功率”。",
+      "diagramTitle": "全天电量有余量，为什么傍晚仍会突然增加外购功率",
+      "diagramSteps": [
+        "日计划中累计可用电量足够，但每个时段仍需安排相应功率",
+        "厚云降低本地太阳能，同时体育馆提前启动使瞬时负荷升高",
+        "公共电网立即承担净差额，电池自动控制在几秒内提高放电功率",
+        "电池仍受120 kW最大输出约束，240 kWh可用能量不能解除功率限制",
+        "米娅延后尚未启动的40 kW负荷，避免这一时刻继续增加需求；太阳能恢复后再安排启动"
+      ],
+      "diagramStepNotes": [
+        "日累计电量预算不能代替实时功率平衡。",
+        "条件变化来自天气和活动时序，而不是人物忘记基本常识。",
+        "物理平衡由并网系统和自动响应即时维持，人工不让明显缺口悬空等待。",
+        "240 kWh÷120 kW＝2小时是理想持续输出尺度，不是实际续航承诺；能量够也不能超过120 kW上限。",
+        "延后未启动设备是避免未来增量，不是从已测负荷中减去40 kW；冷库后来仍需完成制冷。"
+      ],
+      "mapping": [
+        "开放日18:00开门 → 人物必须维持的真实校园任务。",
+        "抬高的外购功率曲线 → 本地供需瞬时变化的可见结果。",
+        "240 kWh与120 kW → 储能能量容量和功率能力的区别。",
+        "延后的40 kW压缩机 → 避免计划启动时再增加需求，而非取消后续制冷。"
+      ],
+      "boundary": "本例假定并网线路能承接差额，设备与冷库仍在允许运行范围内。校园安排展示功率与累计电量的区别，并不代替系统级频率、线路和备用管理。可用能量与最大输出各有限制，2小时只是假定恒定输出的简化计算；推迟制冷也不是免去制冷。",
+      "reflection": "如果一块电池还有300 kWh可用能量，但最大只能输出50 kW，它为什么不能单独立刻承担新增100 kW负荷？"
+    },
+    "module": {
+      "intro": "Use a small grid-connected campus example to separate “how much energy is available today” from “how much power is needed right now.”",
+      "diagramTitle": "If the Daily Energy Budget Has Headroom, Why Can Grid Imports Still Jump in the Evening?",
+      "diagramSteps": [
+        "Daily available energy is sufficient, but power still has to be scheduled for each period",
+        "Thick cloud reduces local solar output while the arena starts early and raises instantaneous demand",
+        "The public grid immediately supplies the net difference while battery controls increase discharge within seconds",
+        "The battery remains limited to 120 kW maximum output even with about 240 kWh of usable energy available",
+        "Mia defers the not-yet-started 40 kW load, avoiding an additional demand increase, and starts it later after solar output recovers"
+      ],
+      "diagramStepNotes": [
+        "A daily accumulated energy budget cannot replace real-time power balance.",
+        "The change comes from weather and activity timing, not from a character failing to understand basic arithmetic.",
+        "Physical balance is maintained immediately by the grid connection and automatic response rather than leaving an obvious deficit waiting for manual action.",
+        "240 kWh ÷ 120 kW = 2 hours is an idealized constant-output timescale, not a runtime promise. Available energy cannot overcome the 120 kW limit.",
+        "Deferring an inactive device avoids a future increase; it does not subtract 40 kW from measured demand. Cooling is still completed later."
+      ],
+      "mapping": [
+        "18:00 open-day opening → the campus task Mia must keep on schedule.",
+        "Raised import-power curve → the visible result of an instantaneous local supply-demand change.",
+        "240 kWh and 120 kW → the distinction between battery energy capacity and power capability.",
+        "Deferred 40 kW compressor group → an avoided scheduled demand increase, with cooling still required later."
+      ],
+      "boundary": "This example assumes that the grid connection can supply the difference and equipment and cold storage stay within operating limits. Campus scheduling illustrates power versus accumulated energy, not full frequency, network, or reserve management. Usable energy and maximum power impose separate limits; two hours is a simplified constant-output calculation, and deferred cooling is not canceled cooling.",
+      "reflection": "If a battery still has 300 kWh of usable energy but can output only 50 kW, why can it not by itself immediately cover a new 100 kW load?"
+    },
+    "referencesZh": [
+      {
+        "id": "neso-balancing",
+        "citation": "National Energy System Operator. What is the Balancing Mechanism? Official operator page.",
+        "url": "https://www.neso.energy/what-we-do/systems-operations/what-balancing-mechanism",
+        "use": "支持电力系统需要实时平衡供需，并通过可行的发电和需求调整应对运行变化，同时受实际运行和位置约束。"
+      },
+      {
+        "id": "doe-solar-storage",
+        "citation": "U.S. Department of Energy. Solar Integration: Solar Energy and Storage Basics.",
+        "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+        "use": "支持太阳能随天气变化、储能可帮助平滑短时变化和转移用能，以及储能的功率能力与能量容量属于不同限制。"
+      }
+    ],
+    "references": [
+      {
+        "id": "neso-balancing",
+        "citation": "National Energy System Operator. What is the Balancing Mechanism? Official operator page.",
+        "url": "https://www.neso.energy/what-we-do/systems-operations/what-balancing-mechanism",
+        "use": "Supports the need to balance electricity supply and demand in real time using feasible changes in generation and demand, subject to practical operational and location constraints."
+      },
+      {
+        "id": "doe-solar-storage",
+        "citation": "U.S. Department of Energy. Solar Integration: Solar Energy and Storage Basics.",
+        "url": "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
+        "use": "Supports solar variability with weather, the role of storage in smoothing short-term changes and shifting energy use, and the distinction between storage power capability and energy capacity."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group1-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group1-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group1-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "After Cape City built twelve wind turbines, the mayor opened a monthly report and found that their daily production exceeded the city's daily use. Coal prices were consuming the dock-repair fund, so he announced that the old thermal unit would close before winter. Dispatcher Lin Yue pointed to two columns: at noon the city exported power, while after sunset it still drew on the old unit. The mayor covered the columns with his hand and read only the larger total.\n\nFor twelve mild days, the decision looked brave and profitable. Wind turned the turbines through supper, coal deliveries stopped, and masons began rebuilding the quay with the savings. The mayor scheduled a night ceremony at the shipyard. When Lin requested payment to keep a fast reserve ready, he refused; an idle machine looked wasteful beside twelve spinning towers.\n\nOn the first cold evening, the wind fell before sunset. Homes lit stoves and lamps while shipyard cranes lifted the ceremony arch. In the control room, the frequency needle slid below its centre mark. Textile motors slowed, then the bakery ovens tripped. The hospital started its own generator. City hall went dark, but the quay floodlights remained on because their circuit had been declared untouchable.\n\nLin delayed one water pump, called the cold store to pause ice making, and asked the neighbouring city for power. Its price was six times the noon export rate. The mayor ordered her to wait for the wind. A second needle moved toward the red line; the bakery owner reported half-baked loaves cooling in dead ovens. Lin could shed whole neighbourhoods or stop the televised dock lift and spend the remaining repair fund on emergency imports.\n\nShe stopped the cranes. The arch hung half a metre above its supports while guests stood in darkness, and the neighbouring line began carrying power. Flexible users reduced load in exchange for payment. The needle returned between its red marks after thirty-two minutes. Noon had supplied ample energy across the day; it had not supplied the missing power at that evening moment, in that part of the network.\n\nThe city kept the wind farm as its main source but restored a fast-starting reserve, added storage for suitable durations, improved forecasts, and agreed schedules with large users. Interconnection limits and local line loading entered the display beside frequency. The quay reopened a month late, with one wall left unfinished because its money had paid for the emergency evening.\n\nAnother windless supper came the next year. A battery discharged first, the cold store delayed ice, and the reserve warmed before the needle reached the first red line. Lin watched it tremble and settle, then folded the old report marked 'daily surplus' around the invoice for the unfinished quay wall.",
-    "storyBodyZh": "海岬城建起十二座风机后，市长翻开月报，发现风场每天发电总量超过全城每天用量。煤价正在吞掉码头维修款，他便宣布入冬前关停旧火电机组。调度员林悦指着两栏：中午城市向外送电，日落后却仍从旧机组取电。市长用手盖住分时数据，只念最后那个更大的总数。\n\n接连十二个暖和日子里，这个决定既大胆又省钱。晚饭时风机仍在转，煤车不再进城，泥瓦匠也用省下的钱修起码头。市长把夜间揭幕礼安排在船坞。林悦申请费用，让一台快速备用机保持待命；市长拒绝了，在十二座旋转风塔旁，一台闲置机器看起来只像浪费。\n\n第一个寒冷傍晚，海风在日落前落下。家家点灯做饭，船坞起重机仍在吊装典礼拱门。控制室的频率指针滑离中央，纺织机先变慢，面包房电炉随后跳闸。医院启动自备机，市政厅却陷入黑暗；码头泛光灯仍亮着，因为那条线路被列为不可中断。\n\n林悦推迟一台水泵，请冷库暂停制冰，又向邻城买电，对方报价是中午外送价的六倍。市长让她再等等风。第二根指针也向红线靠近，面包师来电说半熟面包正在熄火炉里变凉。她只能分区断掉居民用电，或停止直播中的码头吊装，把余下维修款花在紧急来电上。\n\n她停了起重机。拱门悬在支架上方半米，宾客站进黑暗，邻城联络线开始送电；可错时用户按协议降低负荷并得到补偿。三十二分钟后，指针回到红线之间。中午整日累计的电量确实有余，却填不上这个傍晚、这个位置缺少的即时功率。\n\n此后风场仍是主力，城市恢复快速备用，为合适时长增加储能，改进风况预测，并同耗电大户约定计划。联络线能力和本地线路负荷也与频率一起显示。码头晚开一个月，有一面墙没能整修，因为那笔钱已经付给无风傍晚。\n\n第二年又遇无风晚饭时刻。电池先放电，冷库推迟制冰，备用机在指针触线前升温。林悦看它轻晃后稳住，把那张写着“每日有余”的旧报表折起，里面夹着未修墙面的支出单。",
-    "explanation": "Grid balancing requires generation, imports, and storage discharge to match demand, exports, storage charging, and losses at every moment so frequency remains safe; voltage and network flows must also stay within limits. Enough total energy over a day does not guarantee enough instantaneous power. Forecasting, scheduling, reserves, interconnection, storage, and flexible demand address imbalances across different locations and timescales.",
-    "explanationZh": "电网平衡要求发电、进口与储能放电在每一时刻匹配用电、出口、储能充电和网络损耗，使频率维持安全；电压和线路潮流也必须留在约束内。日总电量充足不代表瞬时功率充足。预测、调度、备用、互联、储能和灵活需求分别应对不同地点与时间尺度的偏差。"
+    "storyBody": "On the evening of the university open day, Mia is in the campus energy room. The arena lights come on early and cloud arrives ahead of the forecast; a new rise appears in grid imports on her screen. The dining hall and exhibition spaces will also get busy at 18:00. She checks the daily plan again: local generation and the stored energy scheduled for use had been enough in total. Volunteers are already handing out visitor badges outside. There is no time to rearrange the whole event.\n\nAt 17:50, the arena begins its lighting and sound tests as thick cloud rapidly reduces solar output. The campus remains connected to the public grid, which supplies power that local sources cannot provide; the enabled battery controls also increase discharge within seconds. The lights stay on, but power she had planned to buy less of is now arriving from outside.\n\nA colleague asks, “Isn’t there still energy in the battery?” Mia opens its status panel. About 240 kWh of usable energy is available at that moment, but the battery's maximum discharge power is 120 kW. The first number says how much usable energy remains; the second says how much power the battery can deliver at one instant. The automatic controls have already raised battery output within its permitted range, yet the campus still needs the public grid for the remaining power. She tries raising the requested output, but the interface keeps it within the equipment limit. Having more energy left cannot raise that instantaneous limit. If high discharge continues, less battery energy will remain for later changes in the evening.\n\nMia leaves the arena alone. A 40 kW cold-store compressor group is waiting for its next timed start. The person responsible confirms that this cycle can be deferred within the permitted temperature range, so she changes its start time. At the originally scheduled moment, the campus does not add that 40 kW load and avoids the corresponding extra grid import it would have needed. The cold store still has to complete the cooling cycle later; she moves the work to a period when solar output is expected to recover.\n\nAs the cloud thins, solar output gradually recovers. Mia lets the compressor group start in its revised time window, while the battery control system reduces discharge. At 18:00 the arena opens on schedule and the entrance lightbox has stayed on throughout. Before handover, she writes the two units separately in the log: the day's plan and remaining battery energy are recorded in kWh, while load, generation, and battery output at a given instant are recorded in kW.",
+    "storyBodyZh": "大学开放日傍晚，米娅守在校园能源值班室。体育馆比计划早开了灯，窗外的云又比预报早到，她的屏幕上忽然多出一截外购电。18:00食堂和展厅还要同时忙起来。她翻回日计划：本地发电加上当天安排使用的储能，累计电量本来足够。门外志愿者正在发参观牌，已经没有时间重排整场活动。\n\n17:50，体育馆开始灯光和音响测试时，厚云让太阳能输出迅速下降。校园仍与公共电网相连，外部电网补上本地不足的功率；已经启用的电池控制也在几秒内增加放电。灯没有灭，但她原来准备少买的电，现在正从外面送进来。\n\n同事看着外购曲线问：“电池里不是还有电吗？”米娅打开电池状态：此刻可用能量约240 kWh，但设备最大放电功率是120 kW。前一个数字说的是还存有多少电，后一个数字说的是这一刻最多能送出多大功率。自动控制已经把电池提高到允许范围，校园仍需要从外部电网取得剩余功率。她试着提高设定，界面仍把输出限制在设备允许范围内；再多的剩余电量也不能把这一刻的上限推高。若一直保持高输出，电池留给晚间后续变化的余量也会越来越少。\n\n米娅没有去动体育馆。冷库那组40 kW压缩机正等着下一次定时启动，负责人确认可以在允许温度范围内把这一轮推迟。她改了启动时间。原定时刻到了，校园没有再增加这40 kW负荷，也就少了原本需要外部电网补上的这一截。冷库后来仍得做完这轮制冷；她只是把工作移到太阳能有望恢复的时段。\n\n云层变薄后，太阳能逐渐恢复。米娅让那组压缩机按新的时段启动，电池控制系统也降低输出。18:00体育馆照常开门，入口灯箱一直亮着。交班前，她在记录上把两种单位分开写：日计划和电池剩余量用kWh，某一时刻的负荷、发电和电池输出用kW。",
+    "explanation": "Grid balancing requires electricity supply and demand to remain matched during real-time operation. kW describes power at a particular moment, while kWh describes accumulated energy over time; a sufficient daily energy budget does not guarantee sufficient power at every instant.\n\nThe battery has about 240 kWh of usable energy and a maximum output of 120 kW. In an idealized constant-output model, 240 ÷ 120 = 2 hours at that power; remaining energy still cannot overcome the power limit. Deferring the inactive 40 kW device avoids demand that would otherwise be added then.",
+    "explanationZh": "电网平衡要求发电与用电在实时运行中持续匹配。kW描述某一时刻的功率，kWh描述一段时间累计的电量；全天能量预算充足不能保证任一时刻功率充足。\n\n本例电池可用能量约240 kWh，最大输出120 kW。在理想简化模型中，持续以120 kW输出约能用240÷120＝2小时；有电可用却仍不能突破功率上限。延后未启动的40 kW设备，则避免了当时本来会增加的需求。"
   },
   {
     "id": "0713-energy-efficiency",
@@ -18561,47 +18817,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0713",
     "fieldTitle": "Electricity and energy",
     "fieldTitleZh": "电力与能源",
-    "title": "The Bathhouse That Heated the Street",
-    "titleZh": "替街道取暖的浴室",
-    "summary": "A bathhouse burns more coal each year, yet its warmest place is not the bathing pool but the snowless street outside its boiler room.",
-    "summaryZh": "澡堂烧掉的煤一年比一年多，最暖的地方却不是浴池，而是锅炉房外那条积不住雪的街。",
+    "title": "The Towel That Could Not Go Upstairs",
+    "titleZh": "那条不能上楼的毛巾",
+    "summary": "The hotel must decide whether to replace two more dryers. The new machine uses only 4.8 kWh in its first run, but the towels are still damp, so that result cannot be used to compare efficiency. Su Rui then repeats the test with 12 kg dry weight of the same towels, similar post-spin moisture conditions, and the same final dryness requirement: the old dryer uses about 9 kWh and the new one about 6 kWh, but the new machine takes longer per load.",
+    "summaryZh": "酒店要决定是否再换两台烘干机。新机器第一次只用了4.8 kWh，但毛巾仍有潮气，这次结果不能用来比较效率。苏芮随后用干重相同的12 kg毛巾、相近脱水后含水状态和同一最终干燥要求重新测试：旧机约9 kWh，新机约6 kWh，但新机每批更慢。",
     "storyParagraphs": [
-      "North Street Bathhouse was famous for hot water, but rising coal prices threatened to close it before winter. Owner Han borrowed enough either for repairs or for a larger boiler, not both. When Saturday queues lengthened, he bought two extra cartloads of coal each day and served only thirty percent more guests. The fireman said the furnace was already roaring, so Han signed an order for the larger unit.",
-      "After a snowfall, an apprentice noticed that every pavement was white except the black, wet stones around the bathhouse. Steam leaked from old pipe joints, tanks stood uncovered, and grey soot narrowed the flue. Guests waited in a cool room while heat entered the wall, street, and chimney. Han cancelled the apprentice's inspection because a closed bath earned nothing. He put his palm near a leaking joint and drew it back from the heat. Outside, children dragged their boots through the melted strip and called it the bathhouse river. The apprentice collected condensed water in a bucket; it filled before the next group of customers entered.",
-      "Then a joint burst during the evening rush. Steam filled the laundry, one worker burned a sleeve, and the pools cooled while customers demanded refunds. Before the steam had cleared, Han posted a closure notice for the profitable festival weekend. He returned advance tickets and watched the ordered boiler leave on another buyer's cart rather than use greater output to hide the leaks.",
-      "Workers cleaned the flue, sealed the pipes, covered the tanks, and routed outgoing warm water through a heat exchanger that preheated incoming cold water. They marked coal deliveries and counted bathers under the same weather conditions. When the pools reached the old temperature again, the bathhouse used about two carts where it had used three. No guest had been asked to accept colder water.",
-      "The saving rescued Han's loan. He extended opening hours, lowered late-night prices, and opened a small second pool. By spring, twice as many people used the bathhouse and total coal deliveries had almost returned to the old level. The ledger showed two different results: coal per bather had fallen, but expansion had spent much of the absolute saving. Han cancelled a third pool rather than calling the larger total another efficiency gain. The builder had already delivered tiles for the proposed third pool. Han paid to return them and kept the empty floor space as a laundry yard. On busy nights he still saw the queue and reached for the expansion plan, then checked both ledger columns before unfolding it.",
-      "The next winter snow settled even on the stones outside the bathhouse. Han swept a narrow path while customers filled both pools inside. Above the desk he kept one scorched sleeve beside two ledger columns: carts per guest, and carts per month."
+      "Housekeeping will collect the white towels at three. The new dryer Su Rui is testing has stopped, but the towels still feel damp; two empty carts wait at the laundry room door. The owner bought one machine for a trial, hoping to replace the other two before winter. With the job still unfinished, she has a more urgent question than the electricity bill: can these towels go upstairs?",
+      "The meter has risen by only 4.8 kWh. Su Rui has just photographed the number when her colleague pulls out a towel. “This load can’t go upstairs yet.” It is not dripping, but it is still noticeably damp. Su Rui deletes the good-news message she has started and turns the cart back toward the dryer. The floors are waiting for dry towels; that low meter reading cannot finish the job for her.",
+      "The next day, Su Rui repeats the comparison. She prepares 12 kg dry weight of the same type of towels for each machine, runs both batches through the same washing and spin cycle, checks that their wet weights before entering the drums are similar, and requires both machines to reach the same dryness accepted by housekeeping before the test ends. The old machine finishes first and uses about 9 kWh. The new one runs for more than ten minutes longer and uses about 6 kWh when it reaches the same dryness requirement.",
+      "This time both carts go to the same folding table for the same colleague to check. Su Rui records energy use beside finishing time. When the owner comes for the purchasing sheet, she is less eager to report good news than she was yesterday. He points to “new machine slower.” “Will it keep up with those carts of sheets at the weekend?” She opens the weekend schedule and puts the purchasing sheet underneath it.",
+      "Before three, both trial loads are back on the guest floors. Su Rui keeps the first “4.8 kWh” note in the folder, now marked “not dry yet.” On the purchasing sheet, 9 kWh and 6 kWh sit side by side. Beneath “same load, same dryness” is another line: the extra time taken by the new machine."
     ],
     "storyParagraphsZh": [
-      "北街澡堂以水热闻名，煤价上涨却可能让它熬不过冬天。老板韩叔借到的钱只够检修旧系统或购买大锅炉，不能两样都做。周六排队变长后，他每天多烧两车煤，客人却只增加三成。锅炉工说炉火已经很旺，韩叔便签下大炉子的订购单。",
-      "一场雪后，学徒发现全街铺白，唯独澡堂四周石板湿黑。蒸汽从旧管接缝冒出，水槽没有盖，烟道厚灰缩窄；客人还在偏凉的等候室里，热已经钻进墙、街道和烟囱。韩叔取消检查，因为闭门一天就少一天收入。他把手靠近漏气接头，立即被热浪逼回。门外孩子拖着靴子走过融雪带，叫它“澡堂河”。学徒用桶接冷凝水，下一批顾客进门以前，水桶已经装满。",
-      "随后一个接头在晚间高峰爆开。蒸汽灌满洗衣房，一名工人的袖口被烫焦，浴池降温，顾客排队退款。雾气还没散，韩叔便贴出节庆周末停业告示。他退还预售票，眼看订好的锅炉被车拉给另一位买家，没有再用更大火力遮住漏损。",
-      "工人清理烟道、补好管缝、给水槽加盖，又让排出的温水先预热新进冷水。他们在相近天气下同时记录煤车与洗浴人数。浴池恢复原来温度时，从前要三车煤，现在约用两车；没有客人被要求接受更冷的水。",
-      "节省的钱救回贷款。韩叔延长营业、降低夜间价格，又开放一个小池。到春天，客人翻倍，煤场每月送来的总车数却几乎回到原处。账本出现两个不同结果：每位客人的煤耗下降，扩张却花掉大部分总节省。韩叔因此取消第三座池子，没有把更大的总消耗也叫成进步。承建人已把第三座池的瓷砖送到门口。韩叔付钱退货，把空地改作晾衣院。忙夜里他仍会看着队伍伸手拿扩建图，却总先核对账本两栏，才决定要不要展开。",
-      "第二年冬天，雪终于落在澡堂门外石板上。韩叔扫出一条窄路，门里两座池仍坐满客人。柜台上方挂着那只焦袖，旁边的账本分成两栏：每位客人用煤，每月总用煤。"
+      "下午三点，客房部就要来收白毛巾。苏芮试用的新烘干机已经停了，毛巾摸着却还有潮气，两辆空推车仍等在洗衣房门口。老板先买一台让她试，原本想在冬天前把另外两台也换掉；这批活还没交出去，她就得回答一个比电费更急的问题：毛巾能不能上楼？",
+      "电表只增加了4.8 kWh。苏芮刚把数字拍下来，折毛巾的同事就抽出一条递回来：“这批还不能上架。”毛巾没有滴水，却仍带着明显潮气。苏芮把刚写好的报喜消息删掉，推车掉头，回到烘干机旁。楼层等的是干毛巾，电表上的这个低数字暂时交不了差。",
+      "第二天，苏芮重新做比较。她给两台机器各准备干重12 kg的同款毛巾，让它们经过同一洗涤和脱水程序，确认进滚筒前的湿重相近，再要求两边都达到客房部接受的同一干燥程度才结束。旧机器先完成，用电约9 kWh；新机器多转了十几分钟，达到同样干燥要求时用了约6 kWh。",
+      "这次两车毛巾都推到同一个折叠台，由同一位同事检查。苏芮把耗电和完成时间写在一起，老板来拿采购表时，她没有像昨天那样急着报好消息。他指着“新机较慢”问：“周末那几车床单，能赶上吗？”苏芮翻开周末的排班页，先把采购表压在下面。",
+      "下午三点前，两批测试毛巾都回到楼层。苏芮把第一张“4.8 kWh”记录留在夹子里，旁边注明“还没烘干”。采购表上，9 kWh和6 kWh并排写着；“同样一批、同样干燥”下面，还有一行新机多用的时间。"
     ],
     "conceptName": "Energy efficiency",
     "conceptNameZh": "能源效率",
     "explanationParagraphs": [
-      "Energy efficiency compares useful service or output with energy input under a defined boundary and set of conditions. Reducing unwanted heat loss, friction, distribution loss, and auxiliary demand can provide the same service with less energy; appropriate metrics differ by technology. Higher efficiency does not guarantee lower total consumption because cheaper service or expansion can produce rebound. In the story, coal per customer falls while longer hours bring total coal use back up."
+      "Energy efficiency concerns providing the same or a comparable service with less energy, rather than simply reducing output. Here the dry towel mass, initial moisture condition, and final dryness requirement are held comparable before energy use is compared.",
+      "In this comparable trial, the old dryer uses about 9 kWh and the new one about 6 kWh. The saving is (9 − 6) ÷ 9 ≈ 33%, or roughly one-third. The new machine is still slower. The first 4.8 kWh run did not complete the same task and cannot enter this comparison; other loads and environments may give different results."
     ],
     "explanationParagraphsZh": [
-      "能源效率比较明确边界和条件下的有用服务或输出与能量输入。减少无用散热、摩擦、输送损失和辅助耗能，可用更少能量提供同样服务；不同设备需采用适合的指标。效率提高不保证总能耗下降，因为价格降低或服务扩大会带来反弹。故事中单位客人的煤耗下降，但营业扩张使总煤耗重新上升。"
+      "能源效率关注用更少能源提供相同或可比服务，而不是单纯减少输出。本例先固定干毛巾重量、初始含水状态和最终干燥要求，再比较能耗。",
+      "本次可比试验里，旧机约9 kWh、新机约6 kWh，节省比例为（9－6）÷9＝约33%，也就是约三分之一。新机仍更慢；第一批的4.8 kWh并未完成相同任务，不能算入这个比较，其他负载和环境也可能得到不同结果。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇讲能源效率的一个基本判断：只有在提供同等服务、比较条件可比时，较少能源输入才支持效率提高。本次虚构试验中，新机把同样12 kg干毛巾烘到同一要求时由约9 kWh降到约6 kWh，但耗时更长；这不能自动推广成整个品牌或所有使用条件的结论。",
+    "moduleZh": {
+      "intro": "先确认两台机器完成的是同一个烘干任务，再比较为这项服务各自用了多少电。",
+      "diagramTitle": "先把毛巾烘到同样干，再比较电量",
+      "diagramSteps": [
+        "第一次新机只用4.8 kWh，但毛巾未达到客房部的同一干燥要求",
+        "第二次各取干重12 kg同款毛巾，并采用相同洗涤和脱水流程",
+        "确认进入滚筒前含水状态相近，并以同一最终干燥要求为终点",
+        "旧机完成任务约用9 kWh，新机完成同一任务约用6 kWh",
+        "同时记录新机多用的十几分钟，作为采购决定中的另一项代价"
+      ],
+      "diagramStepNotes": [
+        "第一批服务量不同，因此4.8 kWh不是可比效率证据。",
+        "12 kg指毛巾干重，不是吸水后的滚筒总重量。",
+        "比较条件无需绝对完全相同，但关键服务和主要初始条件应尽量可比。",
+        "6相对9约减少三分之一，只适用于这次相同服务试验。",
+        "单批效率改善不等于所有工况、全年总能耗或整个品牌都得到同样结果。"
+      ],
+      "mapping": [
+        "退回的潮毛巾 → 较低能耗背后服务没有完成。",
+        "干重12 kg → 两次可比任务的共同服务量。",
+        "9 kWh与6 kWh → 同一服务下的能源输入差异。",
+        "多出的十几分钟 → 省电之外需要承担的设备占用代价。"
+      ],
+      "boundary": "效率比较必须基于可比服务和条件。减少产量、亮度、温度控制或干燥程度而少用电，不能自动叫效率提高。本篇只有一次虚构设备比较，不能据此推广到不同负载、环境、维护状态或整个品牌；绝对总用能还会受到实际使用量影响。",
+      "reflection": "如果另一台烘干机只用了5 kWh，但最后毛巾比客房要求更潮，为什么这个5 kWh不能直接拿来和本篇的6 kWh比较效率？"
+    },
+    "referencesZh": [
+      {
+        "id": "doe-efficiency-intensity",
+        "citation": "U.S. Department of Energy. Energy Efficiency vs. Energy Intensity. Official definition page.",
+        "url": "https://www.energy.gov/cmei/energy-efficiency-vs-energy-intensity",
+        "use": "支持以较少能源输入提供相同服务属于效率改善，并提醒结构、行为和服务量变化会使总体能耗指标不再是直接的设备效率比较。"
+      }
+    ],
+    "overall": "This article introduces a basic test of energy efficiency: lower energy input supports an efficiency improvement only when the service provided and the comparison conditions are comparable. In this fictional trial, the new dryer reduces energy use from about 9 kWh to about 6 kWh while drying the same 12 kg dry weight of towels to the same requirement, but it takes longer. That result cannot automatically be generalized to an entire brand or every operating condition.",
+    "module": {
+      "intro": "First establish that both dryers complete the same drying task, then compare how much electricity each uses to provide that service.",
+      "diagramTitle": "Dry the Towels Equally Before Comparing Energy",
+      "diagramSteps": [
+        "The first new-dryer run uses only 4.8 kWh, but the towels do not reach the same housekeeping dryness requirement",
+        "For the second test, prepare 12 kg dry weight of the same towels and use the same washing and spin process",
+        "Confirm similar moisture conditions before drying and use the same final dryness requirement as the endpoint",
+        "The old dryer completes the task using about 9 kWh; the new dryer completes the same task using about 6 kWh",
+        "Record the extra ten-plus minutes taken by the new dryer as another cost in the purchasing decision"
+      ],
+      "diagramStepNotes": [
+        "The first load provides a different level of service, so 4.8 kWh is not comparable efficiency evidence.",
+        "The 12 kg refers to dry towel mass, not the total wet mass entering the drum.",
+        "Comparison conditions do not need to be perfectly identical, but the key service and major starting conditions should be sufficiently comparable.",
+        "The reduction from 9 to 6 is about one-third and applies only to this same-service trial.",
+        "A single-load efficiency improvement does not imply the same result for every operating condition, annual energy use, or the entire brand."
+      ],
+      "mapping": [
+        "Returned damp towel → lower energy use accompanied by an unfinished service.",
+        "12 kg dry weight → the common service quantity in the comparable trial.",
+        "9 kWh and 6 kWh → different energy inputs for the same service.",
+        "Extra ten-plus minutes → the equipment-time cost that accompanies the energy saving."
+      ],
+      "boundary": "Efficiency comparisons require comparable service and conditions. Using less electricity by reducing output, brightness, temperature control, or dryness does not automatically mean higher efficiency. This article contains only one fictional equipment comparison and cannot be generalized to different loads, environments, maintenance states, or an entire brand. Absolute total energy use also depends on how much the equipment is actually used.",
+      "reflection": "If another dryer uses only 5 kWh but leaves the towels wetter than housekeeping requires, why can that 5 kWh not be compared directly with the 6 kWh result in this article?"
+    },
+    "references": [
+      {
+        "id": "doe-efficiency-intensity",
+        "citation": "U.S. Department of Energy. Energy Efficiency vs. Energy Intensity. Official definition page.",
+        "url": "https://www.energy.gov/cmei/energy-efficiency-vs-energy-intensity",
+        "use": "Supports the idea that providing the same service with less energy input represents an efficiency improvement, while structural, behavioral, and service-level changes can make aggregate energy-use measures unsuitable as direct equipment-efficiency comparisons."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group2-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "North Street Bathhouse was famous for hot water, but rising coal prices threatened to close it before winter. Owner Han borrowed enough either for repairs or for a larger boiler, not both. When Saturday queues lengthened, he bought two extra cartloads of coal each day and served only thirty percent more guests. The fireman said the furnace was already roaring, so Han signed an order for the larger unit.\n\nAfter a snowfall, an apprentice noticed that every pavement was white except the black, wet stones around the bathhouse. Steam leaked from old pipe joints, tanks stood uncovered, and grey soot narrowed the flue. Guests waited in a cool room while heat entered the wall, street, and chimney. Han cancelled the apprentice's inspection because a closed bath earned nothing. He put his palm near a leaking joint and drew it back from the heat. Outside, children dragged their boots through the melted strip and called it the bathhouse river. The apprentice collected condensed water in a bucket; it filled before the next group of customers entered.\n\nThen a joint burst during the evening rush. Steam filled the laundry, one worker burned a sleeve, and the pools cooled while customers demanded refunds. Before the steam had cleared, Han posted a closure notice for the profitable festival weekend. He returned advance tickets and watched the ordered boiler leave on another buyer's cart rather than use greater output to hide the leaks.\n\nWorkers cleaned the flue, sealed the pipes, covered the tanks, and routed outgoing warm water through a heat exchanger that preheated incoming cold water. They marked coal deliveries and counted bathers under the same weather conditions. When the pools reached the old temperature again, the bathhouse used about two carts where it had used three. No guest had been asked to accept colder water.\n\nThe saving rescued Han's loan. He extended opening hours, lowered late-night prices, and opened a small second pool. By spring, twice as many people used the bathhouse and total coal deliveries had almost returned to the old level. The ledger showed two different results: coal per bather had fallen, but expansion had spent much of the absolute saving. Han cancelled a third pool rather than calling the larger total another efficiency gain. The builder had already delivered tiles for the proposed third pool. Han paid to return them and kept the empty floor space as a laundry yard. On busy nights he still saw the queue and reached for the expansion plan, then checked both ledger columns before unfolding it.\n\nThe next winter snow settled even on the stones outside the bathhouse. Han swept a narrow path while customers filled both pools inside. Above the desk he kept one scorched sleeve beside two ledger columns: carts per guest, and carts per month.",
-    "storyBodyZh": "北街澡堂以水热闻名，煤价上涨却可能让它熬不过冬天。老板韩叔借到的钱只够检修旧系统或购买大锅炉，不能两样都做。周六排队变长后，他每天多烧两车煤，客人却只增加三成。锅炉工说炉火已经很旺，韩叔便签下大炉子的订购单。\n\n一场雪后，学徒发现全街铺白，唯独澡堂四周石板湿黑。蒸汽从旧管接缝冒出，水槽没有盖，烟道厚灰缩窄；客人还在偏凉的等候室里，热已经钻进墙、街道和烟囱。韩叔取消检查，因为闭门一天就少一天收入。他把手靠近漏气接头，立即被热浪逼回。门外孩子拖着靴子走过融雪带，叫它“澡堂河”。学徒用桶接冷凝水，下一批顾客进门以前，水桶已经装满。\n\n随后一个接头在晚间高峰爆开。蒸汽灌满洗衣房，一名工人的袖口被烫焦，浴池降温，顾客排队退款。雾气还没散，韩叔便贴出节庆周末停业告示。他退还预售票，眼看订好的锅炉被车拉给另一位买家，没有再用更大火力遮住漏损。\n\n工人清理烟道、补好管缝、给水槽加盖，又让排出的温水先预热新进冷水。他们在相近天气下同时记录煤车与洗浴人数。浴池恢复原来温度时，从前要三车煤，现在约用两车；没有客人被要求接受更冷的水。\n\n节省的钱救回贷款。韩叔延长营业、降低夜间价格，又开放一个小池。到春天，客人翻倍，煤场每月送来的总车数却几乎回到原处。账本出现两个不同结果：每位客人的煤耗下降，扩张却花掉大部分总节省。韩叔因此取消第三座池子，没有把更大的总消耗也叫成进步。承建人已把第三座池的瓷砖送到门口。韩叔付钱退货，把空地改作晾衣院。忙夜里他仍会看着队伍伸手拿扩建图，却总先核对账本两栏，才决定要不要展开。\n\n第二年冬天，雪终于落在澡堂门外石板上。韩叔扫出一条窄路，门里两座池仍坐满客人。柜台上方挂着那只焦袖，旁边的账本分成两栏：每位客人用煤，每月总用煤。",
-    "explanation": "Energy efficiency compares useful service or output with energy input under a defined boundary and set of conditions. Reducing unwanted heat loss, friction, distribution loss, and auxiliary demand can provide the same service with less energy; appropriate metrics differ by technology. Higher efficiency does not guarantee lower total consumption because cheaper service or expansion can produce rebound. In the story, coal per customer falls while longer hours bring total coal use back up.",
-    "explanationZh": "能源效率比较明确边界和条件下的有用服务或输出与能量输入。减少无用散热、摩擦、输送损失和辅助耗能，可用更少能量提供同样服务；不同设备需采用适合的指标。效率提高不保证总能耗下降，因为价格降低或服务扩大会带来反弹。故事中单位客人的煤耗下降，但营业扩张使总煤耗重新上升。"
+    "storyBody": "Housekeeping will collect the white towels at three. The new dryer Su Rui is testing has stopped, but the towels still feel damp; two empty carts wait at the laundry room door. The owner bought one machine for a trial, hoping to replace the other two before winter. With the job still unfinished, she has a more urgent question than the electricity bill: can these towels go upstairs?\n\nThe meter has risen by only 4.8 kWh. Su Rui has just photographed the number when her colleague pulls out a towel. “This load can’t go upstairs yet.” It is not dripping, but it is still noticeably damp. Su Rui deletes the good-news message she has started and turns the cart back toward the dryer. The floors are waiting for dry towels; that low meter reading cannot finish the job for her.\n\nThe next day, Su Rui repeats the comparison. She prepares 12 kg dry weight of the same type of towels for each machine, runs both batches through the same washing and spin cycle, checks that their wet weights before entering the drums are similar, and requires both machines to reach the same dryness accepted by housekeeping before the test ends. The old machine finishes first and uses about 9 kWh. The new one runs for more than ten minutes longer and uses about 6 kWh when it reaches the same dryness requirement.\n\nThis time both carts go to the same folding table for the same colleague to check. Su Rui records energy use beside finishing time. When the owner comes for the purchasing sheet, she is less eager to report good news than she was yesterday. He points to “new machine slower.” “Will it keep up with those carts of sheets at the weekend?” She opens the weekend schedule and puts the purchasing sheet underneath it.\n\nBefore three, both trial loads are back on the guest floors. Su Rui keeps the first “4.8 kWh” note in the folder, now marked “not dry yet.” On the purchasing sheet, 9 kWh and 6 kWh sit side by side. Beneath “same load, same dryness” is another line: the extra time taken by the new machine.",
+    "storyBodyZh": "下午三点，客房部就要来收白毛巾。苏芮试用的新烘干机已经停了，毛巾摸着却还有潮气，两辆空推车仍等在洗衣房门口。老板先买一台让她试，原本想在冬天前把另外两台也换掉；这批活还没交出去，她就得回答一个比电费更急的问题：毛巾能不能上楼？\n\n电表只增加了4.8 kWh。苏芮刚把数字拍下来，折毛巾的同事就抽出一条递回来：“这批还不能上架。”毛巾没有滴水，却仍带着明显潮气。苏芮把刚写好的报喜消息删掉，推车掉头，回到烘干机旁。楼层等的是干毛巾，电表上的这个低数字暂时交不了差。\n\n第二天，苏芮重新做比较。她给两台机器各准备干重12 kg的同款毛巾，让它们经过同一洗涤和脱水程序，确认进滚筒前的湿重相近，再要求两边都达到客房部接受的同一干燥程度才结束。旧机器先完成，用电约9 kWh；新机器多转了十几分钟，达到同样干燥要求时用了约6 kWh。\n\n这次两车毛巾都推到同一个折叠台，由同一位同事检查。苏芮把耗电和完成时间写在一起，老板来拿采购表时，她没有像昨天那样急着报好消息。他指着“新机较慢”问：“周末那几车床单，能赶上吗？”苏芮翻开周末的排班页，先把采购表压在下面。\n\n下午三点前，两批测试毛巾都回到楼层。苏芮把第一张“4.8 kWh”记录留在夹子里，旁边注明“还没烘干”。采购表上，9 kWh和6 kWh并排写着；“同样一批、同样干燥”下面，还有一行新机多用的时间。",
+    "explanation": "Energy efficiency concerns providing the same or a comparable service with less energy, rather than simply reducing output. Here the dry towel mass, initial moisture condition, and final dryness requirement are held comparable before energy use is compared.\n\nIn this comparable trial, the old dryer uses about 9 kWh and the new one about 6 kWh. The saving is (9 − 6) ÷ 9 ≈ 33%, or roughly one-third. The new machine is still slower. The first 4.8 kWh run did not complete the same task and cannot enter this comparison; other loads and environments may give different results.",
+    "explanationZh": "能源效率关注用更少能源提供相同或可比服务，而不是单纯减少输出。本例先固定干毛巾重量、初始含水状态和最终干燥要求，再比较能耗。\n\n本次可比试验里，旧机约9 kWh、新机约6 kWh，节省比例为（9－6）÷9＝约33%，也就是约三分之一。新机仍更慢；第一批的4.8 kWh并未完成相同任务，不能算入这个比较，其他负载和环境也可能得到不同结果。"
   },
   {
     "id": "0713-energy-storage",
@@ -18657,49 +18991,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0714",
     "fieldTitle": "Electronics and automation",
     "fieldTitleZh": "电子与自动化",
-    "title": "The Sluice That Was Always One Step Late",
-    "titleZh": "总是晚一步的水门",
-    "summary": "An orchard relies on distant messengers to report its water level, and a keeper who always moves the gate fully makes drought and flooding alternate.",
-    "summaryZh": "果园靠远方信使报告水位，管水人每次都把闸门开到尽头，于是干旱和水涝轮流到来。",
+    "title": "Wait for the Yellow-Dot Box",
+    "titleZh": "等那只黄点纸箱",
+    "summary": "On a gift-box packaging line, the labeling head and inspection camera are separated by several box positions. After Qiao Wei makes the first adjustment to the right, the next camera image still shows a box labeled before that adjustment, so she adjusts right once more. When the boxes corresponding to the two adjustments later reach the camera, the label moves from near the center to too far right. She then marks the first box after an adjustment with a yellow dot and waits until that box reaches the camera before deciding what to do next.",
+    "summaryZh": "礼盒包装线上，贴标头与检查相机相隔几个箱位。乔薇第一次右调后，下一张画面仍来自调整前已经贴好的纸箱，她又右调一次；等两次调整对应的纸箱陆续到达相机，标签从接近中央变成偏右。她随后给调整后的第一只纸箱贴黄点，等它到达相机再决定下一步。",
     "storyParagraphs": [
-      "The dam keeper received reports from South Slope Orchard by horse, a half-day journey each way. A dry spring threatened the peach harvest and the landlord promised him a bonus if no tree wilted. When a rider arrived shouting 'too low', he opened the main gate fully. Water needed another half-day to reach the roots, but the order took effect immediately at the dam.",
-      "The orchard channels began filling by dusk. Before the next rider returned with 'enough', water had crossed the root mounds and entered the packing shed. The keeper slammed the gate shut. Its effect also arrived late: channels kept rising through the night, then fell for a day after the flood passed. Peach roots blackened, and the landlord withheld half the bonus.",
-      "The keeper reacted by opening wider at every report and closing earlier at the next. Each correction answered a condition already gone. One week the trees stood in water; the following week the soil cracked. Riders exhausted horses carrying increasingly urgent notes. The gate machinery also began to grind from repeated full travel, but the keeper insisted that stronger action would finally catch up. One mare returned with foam at its mouth and could not carry the next note. The packing shed discarded three baskets of water-spotted peaches. The keeper pinned every delayed message in order and saw that each command had crossed the one it was meant to correct.",
-      "A canal builder placed a float beside the orchard. When local water dropped, it gradually pulled open a small gate; near the marked level it eased the gate closed. She recorded the delay, reduced how strongly each error changed the flow, and kept the large upstream gate away from its end stops. The keeper tried to pull the float rope farther. She asked him to wait through one complete rise and fall.",
-      "The float moved around the mark, first broadly, then in smaller arcs. No rider galloped, and water did not cross the roots. When a storm forecast arrived, the builder reduced upstream release before the rain reached the channel. The forecast helped with the approaching disturbance; the float still corrected what actually happened when the storm shifted south. The keeper removed his wet boots by the channel and, for once, did not chase it.",
-      "The landlord demanded that the old full-open rule return because it looked decisive. The keeper chose the slower gate and gave up the remaining bonus. He posted the day's target, measured level, and gate movement side by side. A jammed float or extreme river condition still required alarms and manual limits; no single rope was allowed to command the orchard without checks.",
-      "On harvest morning, the keeper cut down the long bar once used to lock the main gate open. He made it into a level staff beside the float. Water touched the central notch, and the bar cast only a thin shadow across the dry packing-shed floor."
+      "Before the afternoon truck is loaded, Qiao Wei notices that the shipping labels on the gift boxes are clearly too far left, already close to the fold in the box face. The scanner can still read them now, but if they move any farther, the label edge may lift near the fold. She needs to bring the position back into an acceptable range before this batch goes onto the truck, while the conveyor keeps feeding boxes.",
+      "Qiao Wei moves the labeling head slightly to the right. The next camera image still shows the label too far left, so she moves it slightly to the right again. She glances at the loading clock, her hand still on the knob; the same fold is beside the label on the screen. But several box positions separate the labeling head from the inspection camera, and the boxes currently appearing on the screen were labeled earlier, before her first adjustment.",
+      "The first boxes actually affected by the first adjustment finally reach the camera, and their labels are already close to the center. Immediately afterward, boxes affected by the second adjustment arrive, and the labels continue moving right, past the position she wanted. Qiao Wei now matches the two actions with the two groups of boxes: when she made the second correction, she had not yet seen the result of the first.",
+      "She pulls the clearly misplaced boxes aside for relabeling without stopping the line. To bring the rightward error back toward the center, she makes one adjustment to the left, then sticks a removable yellow dot beside the label on the first box affected. The next boxes keep moving; she cannot yet know whether this change is enough. Only when the yellow dot enters the camera view does she use that box’s label to decide her next step.",
+      "By the time the yellow dot appears on the screen, a few more boxes are waiting beside her for new labels. The loader asks how much longer she needs. Qiao Wei asks him to take the row already checked while she relabels the boxes that are clearly off-center. The last rows are now within the acceptable range. She pushes the relabeled boxes back into the queue and peels off the final yellow dot."
     ],
     "storyParagraphsZh": [
-      "河坝到南坡果园，骑马单程也要半日。干旱春天威胁桃子收成，地主答应只要没有树萎蔫，就给管水人奖金。骑手一到坝上喊“太低”，他便把大闸开尽。水还要半日才到树根，命令却已在坝口全部生效。",
-      "傍晚，果园水渠开始上涨。下一名骑手带着“够了”回来以前，水已越过树根土埂，流进包装棚。管水人立刻锁死闸门，可关闭的效果同样迟到：渠道整夜继续上涨，退去后又低落一天。桃树根部发黑，地主扣掉一半奖金。",
-      "管水人此后听见报告便开得更大，下一次又关得更早，每次都在纠正已经消失的状况。一周树根泡水，下一周土面开裂；骑手跑坏马匹，送来的纸条也越来越急。大闸因反复走到尽头开始发涩，他仍相信再用力一些就能追上。一匹马回来时嘴边全是白沫，再也送不了下一张纸条；包装棚还倒掉三篮水斑桃。管水人按时间钉起所有迟到消息，才看见每道命令都同它本想纠正的那一道交叉而过。",
-      "修渠匠在果园边装上浮筒。水低时，它逐渐拉开本地小闸，接近刻线便缓缓关小。她记下传递延迟，减轻一次误差带来的调节幅度，也不让上游大闸总撞到极限。管水人想多拉浮绳，她让他等完整的一次涨落。",
-      "浮筒先在刻线上下大幅摆动，随后弧度逐渐缩小。没有骑手狂奔，水也没再越过树根。暴雨预报到来时，修渠匠提前减少上游放水；后来风把雨带偏，本地浮筒仍按实际水位继续修正。管水人把湿靴脱在渠边，第一次没有追着它跑。",
-      "地主嫌小闸动作不够果断，要求恢复全开全关。管水人选择慢闸，放弃余下奖金，把每日目标、实测水位和闸门动作并排记录。若浮筒卡住或河况极端，警报与人工限制仍会介入；没有一根绳可以不经检查地独自支配果园。",
-      "收获清晨，管水人锯短那根曾用来锁死大闸的长杠，做成浮筒旁的水位尺。渠水碰着中央刻痕，长杠只在干燥包装棚前投下一条细影。"
+      "下午装车前，乔薇发现礼盒上的物流标签明显偏左，已经靠近箱面的折线。扫码枪现在还能读，但再偏一点，标签边缘就可能翘起来。她得在这批箱子上车前把位置拉回去，而输送带还在继续送盒子。",
+      "乔薇把贴标头往右调了一点。下一张相机画面里，标签还是偏左，她于是又往右调了一点。她看了一眼出货钟，手还没离开旋钮：屏幕上仍是左边那道折线。可贴标头和检查相机之间隔着几个箱位，此刻相机看到的纸箱，都是更早以前已经贴完标签的。",
+      "第一批真正受第一次调整影响的箱子终于走到相机前，标签已经接近中央。紧接着，受第二次调整影响的箱子到了，标签又继续往右，越过了她想要的位置。乔薇这才把两次动作和两批箱子对应起来：第二次修正发生时，她其实还没有看到第一次修正的结果。",
+      "她把几只偏得明显的箱子拉到旁边准备重贴，没有停掉整条线。要把偏右的位置拉回来，她这次只向左调一次，然后在调整后贴出的第一只纸箱的标签旁贴一枚可撕的小黄点。接下来几只箱子仍会继续往前，她还不能立刻知道这一调够不够。等黄点真正进入相机画面，她才根据那只箱子的标签决定下一步。",
+      "等黄点出现在屏幕上，旁边已经多了几只待重贴的箱子。装车的人来问还有多久，乔薇请他先推走已经检查好的那一排，自己把偏得明显的标签重新贴正。最后几排箱子都回到可接受的位置。她把重贴好的箱子推回队伍，顺手撕掉最后一枚小黄点。"
     ],
     "conceptName": "Feedback control",
     "conceptNameZh": "反馈控制",
     "explanationParagraphs": [
-      "Feedback control measures a system's output, compares it with a target, and adjusts the input according to the error. Excessive gain and substantial sensing or actuation delay can make correction produce overshoot and oscillation; suitable adjustment size and timely measurement improve stability. Feedforward can act in advance on measurable disturbances, while model error, noise, actuator limits, and safety constraints still matter."
+      "Feedback control adjusts an input according to the measured difference between the result and the target, but the controlled process and measurement path can include response or transport delay. The feedback visible now may therefore correspond to an earlier action.",
+      "For example, if the camera is three box positions downstream from the labeling head, the first box affected by an adjustment has not yet reached the camera while the next images may still show the old setting. Repeating the same-direction adjustment too early can therefore accumulate into overshoot."
     ],
     "explanationParagraphsZh": [
-      "反馈控制测量系统输出，与目标比较，再根据误差调整输入。增益过大、测量或执行延迟明显时，纠正可能造成过冲与振荡；较合适的调节幅度和更及时的感知有助于稳定。前馈可依据可测扰动提前动作，但模型误差、噪声、执行器限制与安全边界仍需共同考虑。"
+      "反馈控制根据测得结果与目标的偏差调整输入，但被控对象和测量常有响应或传输延迟；因此当前看到的反馈可能对应较早的动作。",
+      "例如相机位于贴标头下游3个箱位时，一次调整后的第一只箱子尚未到相机前，接下来的画面仍可能来自旧设置；过早再次同向调整就可能叠加过头。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇讲反馈控制中的一个简单动态问题：测量结果可能滞后于刚刚做出的调节。如果在前一次作用尚未反映到测量位置前，就依据旧反馈继续同方向修正，多个动作会叠加并造成过调。本篇只说明这种延迟入口，不讨论完整控制器设计。",
+    "moduleZh": {
+      "intro": "沿着纸箱从贴标头走到相机的路程，区分现在的画面与刚才的调整。",
+      "diagramTitle": "现在的画面，对应哪一次调整？",
+      "diagramSteps": [
+        "乔薇看到标签偏左，第一次把贴标头向右调整",
+        "下一张相机画面仍来自调整前的箱子，她又做第二次右调",
+        "第一次调整对应的箱子到达相机后，标签已接近中央",
+        "第二次调整对应的箱子随后到达，标签继续向右并出现过调",
+        "以后用黄点标记调整后的首只箱子，等对应结果到相机后再决定下一步"
+      ],
+      "diagramStepNotes": [
+        "纸箱贴好后还需经过几个箱位，当前画面可能属于较早的设置。",
+        "屏幕仍偏左时，第一次调节的效果尚未到达测量点。",
+        "先到的箱子接近中心，后到的箱子偏右，使两次调整的效果可以区分。",
+        "黄点放在标签旁，随箱子进入同一个相机画面。",
+        "线仍在运行，等待期间可能继续出现待重贴的箱子；调好需要看见对应结果，而非保证每次等待都增加废品。"
+      ],
+      "mapping": [
+        "偏左的物流标签 → 需要被纠正的可见输出。",
+        "下游相机 → 带有运输延迟的测量位置。",
+        "两次右调 → 在旧反馈下叠加的控制动作。",
+        "标签旁的小黄点 → 把一次调整与其后续测量结果对应起来的物件。"
+      ],
+      "boundary": "测量和动作之间有延迟时，尚未显现的前一次纠正可能被下一次叠加。本篇只展示这种过调，不把“小调＋等待”当成普遍最佳方案。合适幅度和等待取决于对象、输送速度、箱距及测量位置；判断未得到新画面前，产线可能仍做出需要重贴的箱子。",
+      "reflection": "如果相机被移到贴标头旁边，调整后的箱子几乎立刻就能被看到，乔薇为什么不必继续照搬原来的等待长度？"
+    },
+    "referencesZh": [
+      {
+        "id": "astrom-murray-feedback",
+        "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+        "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+        "use": "支持反馈系统中的动态响应、延迟、闭环修正以及过强或过早纠正可能造成振荡和过调等基本机制。"
+      }
+    ],
+    "overall": "This article introduces one dynamic issue in feedback control: the measured result can lag behind a recent adjustment. If another correction in the same direction is made before the effect of the previous action has reached the measurement point, the actions can accumulate and cause overshoot. The article focuses only on this delay mechanism and does not teach complete controller design.",
+    "module": {
+      "intro": "Follow a box from the labeling head to the camera, distinguishing the image being seen now from the most recent adjustment.",
+      "diagramTitle": "Which Adjustment Does This Image Show?",
+      "diagramSteps": [
+        "Qiao Wei sees the label too far left and makes the first rightward adjustment to the labeling head",
+        "The next camera image still comes from a box labeled before the adjustment, so she makes a second rightward adjustment",
+        "When the boxes corresponding to the first adjustment reach the camera, their labels are already near the center",
+        "Boxes corresponding to the second adjustment arrive next and continue moving right, creating overshoot",
+        "For later adjustments, mark the first affected box with a yellow dot and wait for its camera result before deciding the next action"
+      ],
+      "diagramStepNotes": [
+        "A labeled box must travel several positions before inspection, so the current image may reflect an earlier setting.",
+        "While the screen still shows a leftward error, the first adjustment has not yet reached the measurement point.",
+        "Earlier boxes are near the center and later ones are too far right, making the two effects distinguishable.",
+        "The dot sits beside the label and travels into the same camera view.",
+        "The line keeps running, so boxes needing relabeling may still appear while she waits. A correction needs its corresponding observation; waiting does not necessarily create rejects."
+      ],
+      "mapping": [
+        "Shipping label too far left → the visible output that needs correction.",
+        "Downstream camera → the measurement point with transport delay.",
+        "Two rightward adjustments → control actions accumulated while viewing old feedback.",
+        "Yellow dot beside the label → a physical marker linking one adjustment to its later measured result."
+      ],
+      "boundary": "With delay between action and measurement, a correction whose effect is still unseen may be compounded by the next action. This example shows that overshoot, without claiming “small adjustment plus waiting” is universally best. The appropriate size and interval depend on the process, conveyor speed, spacing, and measurement point. Until a new image confirms the change, the running line may still make boxes that need relabeling.",
+      "reflection": "If the camera were moved next to the labeling head so that an adjusted box could be seen almost immediately, why would Qiao Wei no longer need to copy the original waiting interval?"
+    },
+    "references": [
+      {
+        "id": "astrom-murray-feedback",
+        "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+        "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+        "use": "Supports dynamic response and delay in feedback systems, closed-loop correction, and the possibility that overly strong or premature corrections can produce oscillation or overshoot."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group2-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "The dam keeper received reports from South Slope Orchard by horse, a half-day journey each way. A dry spring threatened the peach harvest and the landlord promised him a bonus if no tree wilted. When a rider arrived shouting 'too low', he opened the main gate fully. Water needed another half-day to reach the roots, but the order took effect immediately at the dam.\n\nThe orchard channels began filling by dusk. Before the next rider returned with 'enough', water had crossed the root mounds and entered the packing shed. The keeper slammed the gate shut. Its effect also arrived late: channels kept rising through the night, then fell for a day after the flood passed. Peach roots blackened, and the landlord withheld half the bonus.\n\nThe keeper reacted by opening wider at every report and closing earlier at the next. Each correction answered a condition already gone. One week the trees stood in water; the following week the soil cracked. Riders exhausted horses carrying increasingly urgent notes. The gate machinery also began to grind from repeated full travel, but the keeper insisted that stronger action would finally catch up. One mare returned with foam at its mouth and could not carry the next note. The packing shed discarded three baskets of water-spotted peaches. The keeper pinned every delayed message in order and saw that each command had crossed the one it was meant to correct.\n\nA canal builder placed a float beside the orchard. When local water dropped, it gradually pulled open a small gate; near the marked level it eased the gate closed. She recorded the delay, reduced how strongly each error changed the flow, and kept the large upstream gate away from its end stops. The keeper tried to pull the float rope farther. She asked him to wait through one complete rise and fall.\n\nThe float moved around the mark, first broadly, then in smaller arcs. No rider galloped, and water did not cross the roots. When a storm forecast arrived, the builder reduced upstream release before the rain reached the channel. The forecast helped with the approaching disturbance; the float still corrected what actually happened when the storm shifted south. The keeper removed his wet boots by the channel and, for once, did not chase it.\n\nThe landlord demanded that the old full-open rule return because it looked decisive. The keeper chose the slower gate and gave up the remaining bonus. He posted the day's target, measured level, and gate movement side by side. A jammed float or extreme river condition still required alarms and manual limits; no single rope was allowed to command the orchard without checks.\n\nOn harvest morning, the keeper cut down the long bar once used to lock the main gate open. He made it into a level staff beside the float. Water touched the central notch, and the bar cast only a thin shadow across the dry packing-shed floor.",
-    "storyBodyZh": "河坝到南坡果园，骑马单程也要半日。干旱春天威胁桃子收成，地主答应只要没有树萎蔫，就给管水人奖金。骑手一到坝上喊“太低”，他便把大闸开尽。水还要半日才到树根，命令却已在坝口全部生效。\n\n傍晚，果园水渠开始上涨。下一名骑手带着“够了”回来以前，水已越过树根土埂，流进包装棚。管水人立刻锁死闸门，可关闭的效果同样迟到：渠道整夜继续上涨，退去后又低落一天。桃树根部发黑，地主扣掉一半奖金。\n\n管水人此后听见报告便开得更大，下一次又关得更早，每次都在纠正已经消失的状况。一周树根泡水，下一周土面开裂；骑手跑坏马匹，送来的纸条也越来越急。大闸因反复走到尽头开始发涩，他仍相信再用力一些就能追上。一匹马回来时嘴边全是白沫，再也送不了下一张纸条；包装棚还倒掉三篮水斑桃。管水人按时间钉起所有迟到消息，才看见每道命令都同它本想纠正的那一道交叉而过。\n\n修渠匠在果园边装上浮筒。水低时，它逐渐拉开本地小闸，接近刻线便缓缓关小。她记下传递延迟，减轻一次误差带来的调节幅度，也不让上游大闸总撞到极限。管水人想多拉浮绳，她让他等完整的一次涨落。\n\n浮筒先在刻线上下大幅摆动，随后弧度逐渐缩小。没有骑手狂奔，水也没再越过树根。暴雨预报到来时，修渠匠提前减少上游放水；后来风把雨带偏，本地浮筒仍按实际水位继续修正。管水人把湿靴脱在渠边，第一次没有追着它跑。\n\n地主嫌小闸动作不够果断，要求恢复全开全关。管水人选择慢闸，放弃余下奖金，把每日目标、实测水位和闸门动作并排记录。若浮筒卡住或河况极端，警报与人工限制仍会介入；没有一根绳可以不经检查地独自支配果园。\n\n收获清晨，管水人锯短那根曾用来锁死大闸的长杠，做成浮筒旁的水位尺。渠水碰着中央刻痕，长杠只在干燥包装棚前投下一条细影。",
-    "explanation": "Feedback control measures a system's output, compares it with a target, and adjusts the input according to the error. Excessive gain and substantial sensing or actuation delay can make correction produce overshoot and oscillation; suitable adjustment size and timely measurement improve stability. Feedforward can act in advance on measurable disturbances, while model error, noise, actuator limits, and safety constraints still matter.",
-    "explanationZh": "反馈控制测量系统输出，与目标比较，再根据误差调整输入。增益过大、测量或执行延迟明显时，纠正可能造成过冲与振荡；较合适的调节幅度和更及时的感知有助于稳定。前馈可依据可测扰动提前动作，但模型误差、噪声、执行器限制与安全边界仍需共同考虑。"
+    "storyBody": "Before the afternoon truck is loaded, Qiao Wei notices that the shipping labels on the gift boxes are clearly too far left, already close to the fold in the box face. The scanner can still read them now, but if they move any farther, the label edge may lift near the fold. She needs to bring the position back into an acceptable range before this batch goes onto the truck, while the conveyor keeps feeding boxes.\n\nQiao Wei moves the labeling head slightly to the right. The next camera image still shows the label too far left, so she moves it slightly to the right again. She glances at the loading clock, her hand still on the knob; the same fold is beside the label on the screen. But several box positions separate the labeling head from the inspection camera, and the boxes currently appearing on the screen were labeled earlier, before her first adjustment.\n\nThe first boxes actually affected by the first adjustment finally reach the camera, and their labels are already close to the center. Immediately afterward, boxes affected by the second adjustment arrive, and the labels continue moving right, past the position she wanted. Qiao Wei now matches the two actions with the two groups of boxes: when she made the second correction, she had not yet seen the result of the first.\n\nShe pulls the clearly misplaced boxes aside for relabeling without stopping the line. To bring the rightward error back toward the center, she makes one adjustment to the left, then sticks a removable yellow dot beside the label on the first box affected. The next boxes keep moving; she cannot yet know whether this change is enough. Only when the yellow dot enters the camera view does she use that box’s label to decide her next step.\n\nBy the time the yellow dot appears on the screen, a few more boxes are waiting beside her for new labels. The loader asks how much longer she needs. Qiao Wei asks him to take the row already checked while she relabels the boxes that are clearly off-center. The last rows are now within the acceptable range. She pushes the relabeled boxes back into the queue and peels off the final yellow dot.",
+    "storyBodyZh": "下午装车前，乔薇发现礼盒上的物流标签明显偏左，已经靠近箱面的折线。扫码枪现在还能读，但再偏一点，标签边缘就可能翘起来。她得在这批箱子上车前把位置拉回去，而输送带还在继续送盒子。\n\n乔薇把贴标头往右调了一点。下一张相机画面里，标签还是偏左，她于是又往右调了一点。她看了一眼出货钟，手还没离开旋钮：屏幕上仍是左边那道折线。可贴标头和检查相机之间隔着几个箱位，此刻相机看到的纸箱，都是更早以前已经贴完标签的。\n\n第一批真正受第一次调整影响的箱子终于走到相机前，标签已经接近中央。紧接着，受第二次调整影响的箱子到了，标签又继续往右，越过了她想要的位置。乔薇这才把两次动作和两批箱子对应起来：第二次修正发生时，她其实还没有看到第一次修正的结果。\n\n她把几只偏得明显的箱子拉到旁边准备重贴，没有停掉整条线。要把偏右的位置拉回来，她这次只向左调一次，然后在调整后贴出的第一只纸箱的标签旁贴一枚可撕的小黄点。接下来几只箱子仍会继续往前，她还不能立刻知道这一调够不够。等黄点真正进入相机画面，她才根据那只箱子的标签决定下一步。\n\n等黄点出现在屏幕上，旁边已经多了几只待重贴的箱子。装车的人来问还有多久，乔薇请他先推走已经检查好的那一排，自己把偏得明显的标签重新贴正。最后几排箱子都回到可接受的位置。她把重贴好的箱子推回队伍，顺手撕掉最后一枚小黄点。",
+    "explanation": "Feedback control adjusts an input according to the measured difference between the result and the target, but the controlled process and measurement path can include response or transport delay. The feedback visible now may therefore correspond to an earlier action.\n\nFor example, if the camera is three box positions downstream from the labeling head, the first box affected by an adjustment has not yet reached the camera while the next images may still show the old setting. Repeating the same-direction adjustment too early can therefore accumulate into overshoot.",
+    "explanationZh": "反馈控制根据测得结果与目标的偏差调整输入，但被控对象和测量常有响应或传输延迟；因此当前看到的反馈可能对应较早的动作。\n\n例如相机位于贴标头下游3个箱位时，一次调整后的第一只箱子尚未到相机前，接下来的画面仍可能来自旧设置；过早再次同向调整就可能叠加过头。"
   },
   {
     "id": "0714-signal-to-noise-ratio",
@@ -18708,47 +19118,125 @@ globalThis.MAPKAI_FIELD_CONCEPT_FABLES = [
     "fieldCode": "0714",
     "fieldTitle": "Electronics and automation",
     "fieldTitleZh": "电子与自动化",
-    "title": "The Horn That Amplified the Wind",
-    "titleZh": "把风也放大的号角",
-    "summary": "A harbour builds a larger listening horn to hear distress bells in fog, only to turn every gust of wind into an alarm.",
-    "summaryZh": "港口为听清雾中的求救铃造了一只更大的听筒，结果每一阵风都变成了警报。",
+    "title": "Louder Headphones, the Same Lost Words",
+    "titleZh": "耳机更响，句尾还是听不清",
+    "summary": "A pottery studio needs to finish recording an interview before closing, while the ventilation equipment cannot be turned off. A Lan first increases the recording input gain on the same microphone; the voice and fan noise both become louder, without becoming noticeably easier to distinguish. She then moves the microphone closer to the craftsperson so that the target voice is relatively stronger before entering the recorder, and sets an appropriate input gain before completing the recording.",
+    "summaryZh": "陶艺馆要在闭馆前录好一段访谈，抽风设备不能停。阿岚先提高同一支麦克风的录音输入增益，人声和风扇声一起变大，却没有明显更容易辨认。她把麦克风移近师傅，让目标人声在进入录音设备之前相对更强，再重新设好输入增益完成录音。",
     "storyParagraphs": [
-      "Fog Harbour required lost vessels to strike a brass bell three times before a pilot boat launched. Winter storms made the bell hard to hear, and the harbour master was threatened with dismissal after one late rescue. He commissioned a giant copper horn. 'Make everything louder,' he told the smith, because missing one call seemed worse than any number of false ones.",
-      "On its first night, the bell did grow louder. So did wind over rock, chain against mast, and rain on copper. The watchkeeper launched four times and found empty water on three trips, exhausting the crew and half their fuel. During the fourth alarm he hesitated, expecting another wave. A fishing boat emerged late from fog and scraped the breakwater while the pilot boat was still starting. A deckhand twisted an ankle during the third empty launch. By midnight only enough fuel remained for one more trip, so every new roar forced the watchkeeper to choose between wasting it and withholding it.",
-      "The master demanded an even larger horn. Young radio keeper Ina instead marked the bell's pitch and the spacing of its three strikes. She fitted a thin reed that moved most strongly near that pitch and required the pattern to repeat before a lamp lit. In a blind trial, plain wind lit the lamp twice in twenty passes; the old horn had lit it thirteen times. The crew could see the comparison on the slate.",
-      "The first filter was too narrow. A cracked bell on a trawler shifted its note, and one wave swallowed the middle strike. Ina widened the accepted band and combined the lamp with a lower-level human watch rather than letting one threshold decide alone. More false calls returned, but the damaged bell was detected. She tested across fog nights, vessel types, and sea states before the harbour adopted the setting.",
-      "The master could cancel patrols to save the depleted fuel fund or admit that his expensive horn had amplified the confusion. He sold its broad copper mouth, restored the night crew, and paid for source maintenance on vessel bells. The new record counted both empty launches and confirmed calls that arrived late; reducing one kind of error could not be celebrated while the other disappeared from the ledger. Selling the horn did not repay its full cost. The master cancelled the spring repainting of his office and used that money for night wages. On the wall, four launch marks remained, the final one crossed by the fishing boat's repair bill. The old copper mouth left a long green scrape down the steps as it was hauled away.",
-      "In spring, the remaining copper rim became three small bells spaced evenly beside the watch-room door. Wind still shook them, but not in the required rhythm. Ina listened once, watched the dark signal lamp, and left the pilot boat tied."
+      "Only half an hour remains before the community pottery studio closes. A Lan needs to finish a three-minute interview with the craftsperson for the course page the next day. The ventilation equipment beside the kiln room is still running and cannot simply be shut down for the recording. She puts on the headphones. The craftsperson's voice is audible, but the steady fan noise lies underneath every sentence, especially covering the ends of phrases.",
+      "A Lan first raises the input gain—the setting that amplifies sound entering the recorder. The craftsperson immediately sounds louder in the headphones, but the fan noise also grows louder, and even small taps of tools against the table become more noticeable. She asks the craftsperson to repeat the opening sentence. The overall level is higher, but the words are not noticeably easier to distinguish. She returns the input gain to an appropriate range and tries a different approach.",
+      "She moves the same microphone from the middle of the table closer to the craftsperson’s mouth, leaving the ventilation in place. She asks for the same sentence at the same speaking volume. This time she can hear the ending that was blurred before. As she listens, A Lan adjusts the recording level, leaving room for louder speech without exceeding the recorder’s range. Before filming, she records ten seconds for the craftsperson to hear.",
+      "The craftsperson nods after listening. A Lan checks the picture: the microphone now takes up a large patch beside the cup. “At least we’ve got a clear shot of that.” Reaching for the cup moves the speaker away from the microphone again. They shift the stool half a step so the cup is within reach and the speaking position stays steady. Some equipment remains in the frame; A Lan leaves it there instead of returning it to the middle of the table.",
+      "After the final take, the craftsperson puts the cup back on the table. A Lan stops recording, adjusts only the headphone playback volume to a comfortable level, and listens to the opening again. The sentence “This cup took longer than I expected” is already stored in the recording. Fan noise is still present underneath it, but the words are much easier to distinguish than they were at the start."
     ],
     "storyParagraphsZh": [
-      "雾港规定，迷航船只连敲三次铜铃，灯塔便派引航艇。冬季风浪遮住铃声，一次救援迟到后，港长面临撤职，于是订造巨型铜听筒。他对铜匠说“把一切放大”，因为漏掉一次求救似乎比多少次误派都糟。",
-      "装好第一夜，铜铃的确变响，风撞礁石、铁链拍桅杆和雨打铜皮也一起变响。守塔人四次出艇，三次只找到空海，船员耗尽体力，也用掉半数燃料。第四次警报响起，他以为又是浪声而迟疑；一艘渔船从雾里晚现，擦过防波堤，引航艇还在启动。第三次空跑时，一名水手在湿甲板扭伤脚。午夜前，油料只够再出一次艇；此后每一声巨响，都逼守塔人在浪费最后一程与扣住最后一程之间选择。",
-      "港长要求再造更大的听筒。年轻报务员伊娜却记下铜铃音高与三次敲击间隔，装入会在相近音高强烈振动的薄片，并要求节奏重复才亮灯。盲测二十次，普通风声只亮两次，旧听筒却亮十三次；船员能在石板上直接比较。",
-      "第一片薄片又调得太窄。一艘拖船的裂铃稍稍变音，海浪还吞掉中间一下。伊娜放宽可接受范围，并保留较低级别的人工守听，不让一条门槛单独决定。误报略有回升，裂铃却被捕捉。她在不同雾夜、船型与海况中试验后，港口才固定设置。",
-      "港长可以取消巡航以保住快见底的燃料款，也可以承认昂贵听筒把混乱一起放大。他卖掉宽大铜口，恢复夜班，又出钱维护船上铃具。新记录同时计算空跑与迟到的真实呼叫；一种错误减少时，另一种不能从账本消失。卖掉听筒也收不回原价。港长取消春季办公室粉刷，把钱改付夜班工资。墙上仍留四道出艇记号，最后一道被渔船修理账单横穿。旧铜口运走时，在石阶上拖出一道长长绿痕。",
-      "开春后，余下铜边被做成三只等距小铃，挂在值班室门口。风仍会摇它们，却不按求救节奏。伊娜听了一遍，看见信号灯仍暗着，便让引航艇继续系在岸边。"
+      "社区陶艺馆闭馆前只剩半小时，阿岚要录完一段三分钟的师傅访谈，第二天放到课程页面。窑房旁的抽风设备还在运行，不能为了录音随便停。她戴上耳机，师傅的声音能听见，可持续的风扇底声铺在每句话下面，句尾尤其容易被盖住。",
+      "阿岚先把输入增益调高，也就是把进入录音机的声音放大。耳机里师傅马上更响，风扇声也一起更响，连桌面轻碰工具的声音都更明显。她让师傅把开头那句话再说一遍，整体音量变大了，字却没有因此明显更容易分辨。她把输入增益退回合适范围，开始换另一个办法。",
+      "她把同一支麦克风从桌子中央移到离师傅嘴边更近的位置，抽风设备仍在原处。她请师傅用刚才的音量重说同一句，这回先前含混的句尾听见了。阿岚边听边调好录音音量，免得师傅说话稍大声就超出设备范围。正式开拍前，她录了十秒给师傅听。",
+      "师傅听完点头，阿岚看了一眼画面，麦克风却占了杯子旁的一大块。“这回倒是把它拍清楚了。”师傅伸手拿杯子，人又离话筒远了。两个人把凳子挪了半步，让杯子够得到，讲话位置也稳住。镜头里仍露着一点设备，阿岚没有再把它挪回桌子中央。",
+      "最后一遍录完，师傅把杯子放回桌上。阿岚停止录音，把耳机的回放音量调到舒服的位置，再听开头。那句“这只杯子，做得比我想的慢”已经保存在录音里，声音仍伴着风扇底声，却比最初容易辨认得多。"
     ],
     "conceptName": "Signal-to-noise ratio",
     "conceptNameZh": "信噪比",
     "explanationParagraphs": [
-      "Signal-to-noise ratio compares desired signal power with unwanted noise power within a specified context and bandwidth, often in decibels. Amplifying both equally does not improve detectability. Filtering, matching known features, repeated averaging, coding, and reducing noise at its source can improve recognition. Practical thresholds must trade false alarms against misses, while filtering that is too narrow may reject genuine but altered signals."
+      "Signal-to-noise ratio compares target-signal power with noise power. At the same measurement point and bandwidth, a higher ratio usually means the target is more prominent relative to the background, although intelligibility also depends on spectrum and other factors.",
+      "Using relative power units under the same measurement conditions, let signal S = 4 and noise N = 1, so S/N = 4. Ideal linear gain that doubles both amplitudes multiplies both powers by four: 16/4 is still 4. Common amplification does not improve the ratio. If moving the microphone increases voice power while noise remains approximately unchanged, the ratio increases."
     ],
     "explanationParagraphsZh": [
-      "信噪比比较规定情境和带宽内的目标信号功率与无用噪声功率，常以分贝表示。等比例放大信号和噪声不会改善可检测性；滤波、匹配已知特征、重复平均、编码与源头降噪可以改善辨识。实际阈值必须权衡误报和漏报，过窄的筛选也可能排除已经变形的真实信号。"
+      "信噪比比较目标信号功率与噪声功率。在相同测量位置和带宽下，比例越高通常表示目标相对背景更突出，但“可懂度”还会受频谱和其他因素影响。",
+      "取同一测量条件下的相对功率单位：信号S＝4、噪声N＝1，则S/N＝4。理想线性增益让两者幅度都翻倍时，功率各变为四倍，16/4仍为4；只共同放大不会改善比值。若移动麦克风只让人声功率增大而噪声近似不变，比值才会提高。"
     ],
-    "mode": "mechanism-fable",
+    "mode": "mechanism-explainer",
     "status": "approved",
+    "overallZh": "本篇讲信噪比的直觉入口：目标信号是否容易从背景中分辨，关键在信号与噪声的相对大小，而不只是总音量。理想线性增益若把已有信号和噪声等比例放大，不会改善原有信噪比；本故事通过让麦克风更靠近人声，使进入设备前的目标信号相对增强。",
+    "moduleZh": {
+      "intro": "把“更响”和“目标相对背景更突出”分开：先看共同放大为什么没有帮助，再看输入端相对关系怎样改变。",
+      "diagramTitle": "音量变大，为什么句尾仍不清楚？",
+      "diagramSteps": [
+        "同一麦克风同时收到师傅人声和持续风扇背景",
+        "提高录音输入增益后，两者一起变响，但辨认没有明显改善",
+        "把同一麦克风移近师傅，使进入设备前的人声相对更强",
+        "正式录音前重新设置输入增益并留出余量",
+        "录完后只调整耳机回放音量，保存下来的录音内容不再改变"
+      ],
+      "diagramStepNotes": [
+        "人声与风扇声由同一支麦克风接收，输入增益共同作用于它们。",
+        "理想等比例线性放大不会改变已有信号与噪声的功率比。",
+        "靠近人声改善的是进入录音设备前的相对水平。",
+        "真实放大器还可能增加自身噪声或出现饱和，因此不一定像理想模型。",
+        "回放音量属于听取保存文件的设置，不是录音输入增益。"
+      ],
+      "mapping": [
+        "持续抽风声 → 稳定背景噪声。",
+        "录音输入增益旋钮 → 同时作用于进入设备的已有信号与噪声。",
+        "移近的麦克风 → 提高目标人声相对输入水平的动作。",
+        "进入画面的麦克风 → 改善相对信号所付出的具体拍摄代价。"
+      ],
+      "boundary": "SNR比较需要明确相同测量点、带宽和统计条件；真实噪声可能随频率和时间变化，放大器也可能增加噪声或失真。较高SNR通常有利于分辨目标，但不与所有语音可懂度情形一一等同。滤波和平均也有带宽、瞬态和噪声统计等限制，本篇不展开。",
+      "reflection": "如果已经录好的文件里人声和风扇声都偏小，只把播放器回放音量提高两倍，为什么人声通常不会因此相对风扇变得更突出？"
+    },
+    "referencesZh": [
+      {
+        "id": "ni-digitization",
+        "citation": "National Instruments. Engineer’s Guide to the Digitization of Analog Signals, pp. 34–38.",
+        "url": "https://download.ni.com/evaluation/daq/NI_Engineers_Guide_to_Digitization.pdf",
+        "use": "支持信噪比以平均信号/噪声功率或RMS幅度关系表示，并支持理解滤波、平均及其带宽和噪声统计限制。"
+      }
+    ],
+    "overall": "This article introduces the intuition behind signal-to-noise ratio: how easily a target signal stands out from the background depends on the relative levels of signal and noise, not merely on total loudness. If ideal linear gain amplifies an existing signal and noise proportionally, it does not improve the original SNR. In the story, moving the microphone closer to the voice makes the target signal relatively stronger before it enters the recording device.",
+    "module": {
+      "intro": "Separate “louder” from “more prominent relative to the background”: first see why common amplification does not help, then see how the input relationship changes before recording.",
+      "diagramTitle": "Why Does a Louder Recording Still Lose the Words?",
+      "diagramSteps": [
+        "The same microphone receives both the craftsperson's voice and the steady fan background",
+        "Increasing recording input gain makes both louder, without noticeably improving distinction",
+        "Move the same microphone closer to the craftsperson so the voice is relatively stronger before entering the device",
+        "Reset the input gain before the formal recording and leave enough headroom",
+        "After recording, adjust only headphone playback volume; the saved recording itself no longer changes"
+      ],
+      "diagramStepNotes": [
+        "The voice and fan are received by the same microphone; input gain acts on both.",
+        "Ideal proportional linear amplification does not change the existing signal-to-noise power ratio.",
+        "Moving closer to the speaker improves the relative input level of the target voice in this scenario.",
+        "A real amplifier may also add its own noise or saturate, so real behavior need not match the ideal model exactly.",
+        "Playback volume is a setting for listening to the saved file, not recording input gain."
+      ],
+      "mapping": [
+        "Continuous ventilation noise → the stable background noise.",
+        "Recording input-gain control → a control that raises the existing signal and noise entering the device.",
+        "Microphone moved closer → an action that makes the target voice relatively stronger at the input.",
+        "Microphone visible in the frame → the concrete filming cost of improving the relative signal."
+      ],
+      "boundary": "SNR comparisons require a defined measurement point, bandwidth, and statistical conditions. Real noise can vary with frequency and time, and amplifiers can add noise or distortion. Higher SNR usually helps distinguish a target but is not identical to speech intelligibility in every situation. Filtering and averaging also involve bandwidth, transient preservation, and noise-statistics trade-offs that this article does not cover.",
+      "reflection": "If the voice and fan are both quiet in an already recorded file, why does doubling only the player's playback volume usually fail to make the voice stand out more relative to the fan?"
+    },
+    "references": [
+      {
+        "id": "ni-digitization",
+        "citation": "National Instruments. Engineer’s Guide to the Digitization of Analog Signals, pp. 34–38.",
+        "url": "https://download.ni.com/evaluation/daq/NI_Engineers_Guide_to_Digitization.pdf",
+        "use": "Supports expressing signal-to-noise ratio through average signal/noise power or RMS-amplitude relationships, and supports the limits and trade-offs associated with filtering, averaging, bandwidth, and noise statistics."
+      }
+    ],
     "qualityGate": {
       "reviewRounds": 3,
       "rewriteRounds": 2,
       "openCritical": 0,
-      "openMajor": 0
+      "openMajor": 0,
+      "openMustFix": 0,
+      "openMinor": 0,
+      "review": "engineering-reader-first-20-group2-pdc-round3.json",
+      "edits": [
+        "engineering-reader-first-20-group2-edit-pass1-evidence.json",
+        "engineering-reader-first-20-group2-edit-pass2-evidence.json"
+      ],
+      "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
     },
     "collection": "field-core-fables",
-    "storyBody": "Fog Harbour required lost vessels to strike a brass bell three times before a pilot boat launched. Winter storms made the bell hard to hear, and the harbour master was threatened with dismissal after one late rescue. He commissioned a giant copper horn. 'Make everything louder,' he told the smith, because missing one call seemed worse than any number of false ones.\n\nOn its first night, the bell did grow louder. So did wind over rock, chain against mast, and rain on copper. The watchkeeper launched four times and found empty water on three trips, exhausting the crew and half their fuel. During the fourth alarm he hesitated, expecting another wave. A fishing boat emerged late from fog and scraped the breakwater while the pilot boat was still starting. A deckhand twisted an ankle during the third empty launch. By midnight only enough fuel remained for one more trip, so every new roar forced the watchkeeper to choose between wasting it and withholding it.\n\nThe master demanded an even larger horn. Young radio keeper Ina instead marked the bell's pitch and the spacing of its three strikes. She fitted a thin reed that moved most strongly near that pitch and required the pattern to repeat before a lamp lit. In a blind trial, plain wind lit the lamp twice in twenty passes; the old horn had lit it thirteen times. The crew could see the comparison on the slate.\n\nThe first filter was too narrow. A cracked bell on a trawler shifted its note, and one wave swallowed the middle strike. Ina widened the accepted band and combined the lamp with a lower-level human watch rather than letting one threshold decide alone. More false calls returned, but the damaged bell was detected. She tested across fog nights, vessel types, and sea states before the harbour adopted the setting.\n\nThe master could cancel patrols to save the depleted fuel fund or admit that his expensive horn had amplified the confusion. He sold its broad copper mouth, restored the night crew, and paid for source maintenance on vessel bells. The new record counted both empty launches and confirmed calls that arrived late; reducing one kind of error could not be celebrated while the other disappeared from the ledger. Selling the horn did not repay its full cost. The master cancelled the spring repainting of his office and used that money for night wages. On the wall, four launch marks remained, the final one crossed by the fishing boat's repair bill. The old copper mouth left a long green scrape down the steps as it was hauled away.\n\nIn spring, the remaining copper rim became three small bells spaced evenly beside the watch-room door. Wind still shook them, but not in the required rhythm. Ina listened once, watched the dark signal lamp, and left the pilot boat tied.",
-    "storyBodyZh": "雾港规定，迷航船只连敲三次铜铃，灯塔便派引航艇。冬季风浪遮住铃声，一次救援迟到后，港长面临撤职，于是订造巨型铜听筒。他对铜匠说“把一切放大”，因为漏掉一次求救似乎比多少次误派都糟。\n\n装好第一夜，铜铃的确变响，风撞礁石、铁链拍桅杆和雨打铜皮也一起变响。守塔人四次出艇，三次只找到空海，船员耗尽体力，也用掉半数燃料。第四次警报响起，他以为又是浪声而迟疑；一艘渔船从雾里晚现，擦过防波堤，引航艇还在启动。第三次空跑时，一名水手在湿甲板扭伤脚。午夜前，油料只够再出一次艇；此后每一声巨响，都逼守塔人在浪费最后一程与扣住最后一程之间选择。\n\n港长要求再造更大的听筒。年轻报务员伊娜却记下铜铃音高与三次敲击间隔，装入会在相近音高强烈振动的薄片，并要求节奏重复才亮灯。盲测二十次，普通风声只亮两次，旧听筒却亮十三次；船员能在石板上直接比较。\n\n第一片薄片又调得太窄。一艘拖船的裂铃稍稍变音，海浪还吞掉中间一下。伊娜放宽可接受范围，并保留较低级别的人工守听，不让一条门槛单独决定。误报略有回升，裂铃却被捕捉。她在不同雾夜、船型与海况中试验后，港口才固定设置。\n\n港长可以取消巡航以保住快见底的燃料款，也可以承认昂贵听筒把混乱一起放大。他卖掉宽大铜口，恢复夜班，又出钱维护船上铃具。新记录同时计算空跑与迟到的真实呼叫；一种错误减少时，另一种不能从账本消失。卖掉听筒也收不回原价。港长取消春季办公室粉刷，把钱改付夜班工资。墙上仍留四道出艇记号，最后一道被渔船修理账单横穿。旧铜口运走时，在石阶上拖出一道长长绿痕。\n\n开春后，余下铜边被做成三只等距小铃，挂在值班室门口。风仍会摇它们，却不按求救节奏。伊娜听了一遍，看见信号灯仍暗着，便让引航艇继续系在岸边。",
-    "explanation": "Signal-to-noise ratio compares desired signal power with unwanted noise power within a specified context and bandwidth, often in decibels. Amplifying both equally does not improve detectability. Filtering, matching known features, repeated averaging, coding, and reducing noise at its source can improve recognition. Practical thresholds must trade false alarms against misses, while filtering that is too narrow may reject genuine but altered signals.",
-    "explanationZh": "信噪比比较规定情境和带宽内的目标信号功率与无用噪声功率，常以分贝表示。等比例放大信号和噪声不会改善可检测性；滤波、匹配已知特征、重复平均、编码与源头降噪可以改善辨识。实际阈值必须权衡误报和漏报，过窄的筛选也可能排除已经变形的真实信号。"
+    "storyBody": "Only half an hour remains before the community pottery studio closes. A Lan needs to finish a three-minute interview with the craftsperson for the course page the next day. The ventilation equipment beside the kiln room is still running and cannot simply be shut down for the recording. She puts on the headphones. The craftsperson's voice is audible, but the steady fan noise lies underneath every sentence, especially covering the ends of phrases.\n\nA Lan first raises the input gain—the setting that amplifies sound entering the recorder. The craftsperson immediately sounds louder in the headphones, but the fan noise also grows louder, and even small taps of tools against the table become more noticeable. She asks the craftsperson to repeat the opening sentence. The overall level is higher, but the words are not noticeably easier to distinguish. She returns the input gain to an appropriate range and tries a different approach.\n\nShe moves the same microphone from the middle of the table closer to the craftsperson’s mouth, leaving the ventilation in place. She asks for the same sentence at the same speaking volume. This time she can hear the ending that was blurred before. As she listens, A Lan adjusts the recording level, leaving room for louder speech without exceeding the recorder’s range. Before filming, she records ten seconds for the craftsperson to hear.\n\nThe craftsperson nods after listening. A Lan checks the picture: the microphone now takes up a large patch beside the cup. “At least we’ve got a clear shot of that.” Reaching for the cup moves the speaker away from the microphone again. They shift the stool half a step so the cup is within reach and the speaking position stays steady. Some equipment remains in the frame; A Lan leaves it there instead of returning it to the middle of the table.\n\nAfter the final take, the craftsperson puts the cup back on the table. A Lan stops recording, adjusts only the headphone playback volume to a comfortable level, and listens to the opening again. The sentence “This cup took longer than I expected” is already stored in the recording. Fan noise is still present underneath it, but the words are much easier to distinguish than they were at the start.",
+    "storyBodyZh": "社区陶艺馆闭馆前只剩半小时，阿岚要录完一段三分钟的师傅访谈，第二天放到课程页面。窑房旁的抽风设备还在运行，不能为了录音随便停。她戴上耳机，师傅的声音能听见，可持续的风扇底声铺在每句话下面，句尾尤其容易被盖住。\n\n阿岚先把输入增益调高，也就是把进入录音机的声音放大。耳机里师傅马上更响，风扇声也一起更响，连桌面轻碰工具的声音都更明显。她让师傅把开头那句话再说一遍，整体音量变大了，字却没有因此明显更容易分辨。她把输入增益退回合适范围，开始换另一个办法。\n\n她把同一支麦克风从桌子中央移到离师傅嘴边更近的位置，抽风设备仍在原处。她请师傅用刚才的音量重说同一句，这回先前含混的句尾听见了。阿岚边听边调好录音音量，免得师傅说话稍大声就超出设备范围。正式开拍前，她录了十秒给师傅听。\n\n师傅听完点头，阿岚看了一眼画面，麦克风却占了杯子旁的一大块。“这回倒是把它拍清楚了。”师傅伸手拿杯子，人又离话筒远了。两个人把凳子挪了半步，让杯子够得到，讲话位置也稳住。镜头里仍露着一点设备，阿岚没有再把它挪回桌子中央。\n\n最后一遍录完，师傅把杯子放回桌上。阿岚停止录音，把耳机的回放音量调到舒服的位置，再听开头。那句“这只杯子，做得比我想的慢”已经保存在录音里，声音仍伴着风扇底声，却比最初容易辨认得多。",
+    "explanation": "Signal-to-noise ratio compares target-signal power with noise power. At the same measurement point and bandwidth, a higher ratio usually means the target is more prominent relative to the background, although intelligibility also depends on spectrum and other factors.\n\nUsing relative power units under the same measurement conditions, let signal S = 4 and noise N = 1, so S/N = 4. Ideal linear gain that doubles both amplitudes multiplies both powers by four: 16/4 is still 4. Common amplification does not improve the ratio. If moving the microphone increases voice power while noise remains approximately unchanged, the ratio increases.",
+    "explanationZh": "信噪比比较目标信号功率与噪声功率。在相同测量位置和带宽下，比例越高通常表示目标相对背景更突出，但“可懂度”还会受频谱和其他因素影响。\n\n取同一测量条件下的相对功率单位：信号S＝4、噪声N＝1，则S/N＝4。理想线性增益让两者幅度都翻倍时，功率各变为四倍，16/4仍为4；只共同放大不会改善比值。若移动麦克风只让人声功率增大而噪声近似不变，比值才会提高。"
   },
   {
     "id": "0714-fail-safe-design",

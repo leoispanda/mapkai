@@ -1515,41 +1515,119 @@
       "fieldCode": "0711",
       "fieldTitle": "Chemical engineering and processes",
       "fieldTitleZh": "化学工程与工艺",
-      "title": "The Tower Checked Only at Sunset",
-      "titleZh": "只在日落看一眼的塔",
-      "summary": "A perfume works inspects its still only at sunset; one large, delayed correction turns a small daytime drift into an overnight failure.",
-      "summaryZh": "香油坊每天只在日落时检查蒸馏塔，一次迟来的大幅调整，把白天的小偏差推成了整夜的事故。",
+      "title": "The Empty Bottles Before Lunch",
+      "titleZh": "午饭前的那排空瓶",
+      "summary": "A jam workshop had been able to keep filling stable with a fixed steam setting. When chilled raw material entered, the outlet working temperature fell, so Lin Cheng increased heating in response to the measurement. As the material gradually warmed, the same heating became excessive and she had to reduce the steam again. The story uses one simple loop: measure the result, compare it with the target, then change a controllable input.",
+      "summaryZh": "果酱工坊过去用固定蒸汽位置就能稳定灌装。冷库原料进入后，出口工作温度下降，林澄根据测量结果加热；等原料逐渐回温，同样的加热又开始过多，她只好再收回蒸汽。故事入口是一个简单闭环：测结果、和目标比较、再改变可控输入。",
       "storyParagraphs": [
-        "A mountain perfume works had a tall distillation tower. At sunset each day, the old owner collected a cup from the top, smelled its fragrance, and adjusted the steam valve by experience. While all the fruit peel came from one orchard, this method rarely failed, and he considered extra inspections a waste of labour. The daily sample was cheap and had worked under stable feed, so the owner rejected continuous instruments as unnecessary expense.",
-        "In a poor harvest year, peel began arriving from three places. Some was dry; some still carried rainwater. A cart of wet material arrived at noon. The tower temperature slowly fell and the oil grew weaker, but no one discovered it until sunset. The owner opened the steam valve wide, hoping to recover the fragrance lost during the day. During the night, dry material replaced the wet feed, the temperature surged, and bitter compounds entered the oil.",
-        "The night apprentice heard an unfamiliar knocking in the tower and hurried to close the valve. Half a day of weak oil and half a night of bitter oil could not be sold, leaving only half the orders ready for wedding season. Looking at his sunset sample, the owner admitted for the first time that it told him only what the tower was doing when he filled the cup. His large correction arrived after a long process delay and remained active after conditions changed, creating the opposite error.",
-        "When the wedding merchant arrived for the sealed jars, the owner showed him the ruined batch and ordered the tower shut for instrumentation and tuning. He lost the payment and sold his reserve oil to cover wages. Operators first measured response time, then set smaller adjustments; overly aggressive settings caused oscillation in trial runs and were reduced. They tested sensor failure and manual control before restart, because automation without a safe fallback would create a new single dependence.",
-        "They installed continuous temperature readings and a level float, allowing a small valve to correct deviations gradually. When wet material entered the yard, the receiving crew warned the tower room in advance. If temperature or pressure crossed a limit, an independent device shut off the steam and rang a bell. The apprentice still smelled the oil each day, but his nose was no longer the tower's only messenger. Feedback corrected measured deviation; feed-moisture information provided an earlier feedforward move. Independent trips acted only at safety limits, not as routine control. Trend displays showed rate of change as well as current value, helping operators distinguish noise from a developing deviation.",
-        "When another cart of wet peel arrived, the owner reached by habit for the large valve. The smaller valve was already moving gently, and the reading had returned to its mark. He lowered his hand and walked downstairs to the tower's even ticking."
+        "On Monday morning, Lin Cheng needs to fill a batch of raspberry sauce before lunch for an afternoon pickup. Just after a container from cold storage is connected, the nozzle starts pulling the sauce into strands, leaving the bottle rims less clean than before. More empty bottles are still coming toward her. The process card calls for an outlet temperature around 60 °C for consistent filling of this batch. For the previous two weeks, similar incoming conditions had let her leave the steam valve in one position, glance at the display, and go help with packing.",
+        "She checks the display: the temperature has fallen from near 60 °C to around 57 °C. Material is still feeding gradually from the container into the heated vessel, while the valve remains at its usual position. Lin Cheng holds the next row of empty bottles outside the conveyor and lets the filled ones move on. She increases steam, wipes sauce from the nozzle, and waits for the temperature to respond before restarting.",
+        "Empty bottles pile up behind her while the temperature slowly begins to recover. As it approaches 60 °C, she restarts filling. But after a while, the material still waiting in the container gradually warms in the workshop, and the outlet temperature starts to move above the target. The extra heating that had rescued production a short time earlier is now too much. Lin Cheng turns the steam back down slightly and waits for the next reading instead of leaving it at the setting that worked a moment ago.",
+        "The remaining containers arrive at different temperatures. Lin Cheng watches the outlet before deciding how to adjust. A packing colleague calls over, “We could use another pair of hands.” She has already turned toward the boxes when she notices that the temperature is still rising. She asks the colleague to fold the empty cartons first and stays beside the valve. She stops making large adjustments at every small display movement; the previous action needs time to show its effect. Only when the reading stops drifting away does she go to move boxes. Two jobs she once combined with an occasional glance now have to take turns.",
+        "Near noon, the last row of bottles passes through the filler and the truck schedule is not missed. Lin Cheng wipes away yesterday's fixed valve mark from the control board, leaving only the 60 °C working target and that day's temperature record. The batch-quality inspection sheet beside it still waits for its own signature; the temperature record is complete, while the batch-release field is still blank."
       ],
       "storyParagraphsZh": [
-        "山城的香油坊有座高蒸馏塔。老坊主每天日落时接一杯塔顶液体，闻过香气，再凭经验转动蒸汽阀。旧果皮来自同一片果园时，这办法很少出错，他便觉得多看几次只是浪费人手。每日一次取样便宜，在进料稳定时也曾有效，因此坊主把连续仪表视为多余开支。",
-        "收成不好的一年，果皮开始从三处运来。有的晒得干，有的还带雨水。中午送来一车湿料，塔温慢慢下降，出来的油越来越淡，直到日落才被发现。坊主一口气把蒸汽开大，想把白天失去的香气补回来。夜里原料换成干料，塔温猛升，苦味也被带进了油里。",
-        "守夜学徒听见塔身发出从未有过的敲击声，赶紧关小阀门。半日的淡油和半夜的苦油都不能出售，婚礼季的订单只交出一半。坊主盯着日落时那杯样品，第一次承认它只告诉他取样时塔在做什么。他的大幅修正经过漫长过程延迟才见效，原料变化后仍在起作用，于是制造相反偏差。",
-        "婚宴商人来取封好的油罐时，坊主把坏批次摆给他看，随即下令停塔安装和整定控制。他失去货款，又卖掉储备油支付工资。众人先测响应时间，再设置较小调整；试车中过强参数引起上下振荡，随后被调低。重开前还测试传感器失灵和手动接管，免得自动控制又成为新的单点依赖。",
-        "他们在塔上装了连续读数的温度计和液位浮子，让小阀门随着偏差一点点调整；湿料进院时，前端便先通知塔房。若温度或压力越过界限，独立装置会关断蒸汽并敲铃。学徒仍每天闻油，但他的鼻子不再是塔唯一的消息。反馈依据已测偏差修正，进料含水信息则提供更早的前馈动作；独立联锁只在安全边界触发，不代替日常调节。趋势图同时显示当前值和变化速度，帮助操作者区分噪声与正在发展的偏差。",
-        "又一车湿料到达时，坊主习惯性地伸手去转大阀。小阀正在轻轻移动，读数已回到刻线。他把手收回来，听着塔内均匀的滴答声走下楼梯。"
+        "周一上午，林澄要在午餐前灌完一批覆盆子淋酱，下午的货车已排好取货时间。第二桶原料刚从冷库接上，灌装嘴就开始把酱拖成细线，瓶口不再像刚才那样干净。她身后的空瓶还在往前送。工艺卡要求出口保持在60℃附近，便于这批酱稳定灌装；过去两周原料条件相近，蒸汽阀停在同一位置就够了，她偶尔看表，还能去另一头帮忙装箱。",
+        "她看温度表，读数已经从接近60℃掉到57℃附近。原料桶还在慢慢往加热罐里供料，阀门却仍是平常的位置。林澄把下一排空瓶挡在输送带外，让已经装好的先走。她把蒸汽开大一些，没有马上重新开线，而是擦掉瓶嘴上的酱，等温度真正有反应。",
+        "空瓶在她身后越堆越高，温度终于慢慢往回升。接近60℃时，她重新启动灌装。可又过了一阵，桶里还没送入罐的原料在车间里逐渐回温，出口温度开始越过目标继续上走。刚才把生产救回来的加热量，这时反而显得太多。林澄把蒸汽收回一点，继续看下一次读数，而不是守着刚才那个位置不动。",
+        "上午剩下的原料温度各不相同，林澄先看出口的变化，再决定怎么调。装箱的同事过来喊她：“这边也缺双手。”她本来已经转身，温度表却还在往上走，于是请同事先把空箱折好，自己留在阀门旁。她不再追着每一次小跳动大幅拧阀；前一次动作得有时间显现。等读数不再往外偏，她才腾出手搬箱子。原来偶尔看一眼就能兼顾的两件工作，现在只好轮着做。",
+        "临近中午，最后一排瓶子通过灌装机，货车时间没有被错过。林澄擦掉操作板上昨天留下的固定阀位记号，只留下60℃工作目标和当天的温度记录。旁边那张批次质量检验单仍照常等人签字；温度记录已写齐，批次放行处还空着。"
       ],
       "conceptName": "Process control",
       "conceptNameZh": "过程控制",
       "explanationParagraphs": [
-        "Process control keeps an operation stable under disturbances by continuously measuring its state, comparing it with a target, and manipulating inputs. Feedback corrects observed deviations; feedforward acts in advance on measured disturbances; alarms and interlocks protect operating limits. Performance also depends on sampling frequency, delay, and adjustment size. Corrections that arrive late and act too strongly often create oscillation or overshoot."
+        "Process control can be understood through a simple closed loop: measure the controlled result, compare it with a target, and then change a manipulated input so the process moves back toward the target after a disturbance.",
+        "Here the outlet drops from 60 °C to 57 °C, a deviation of 3 °C, so Lin Cheng increases steam. As the incoming material warms, she reduces it again. The 3 °C difference tells her the size of the temperature error; it does not by itself calculate how far to open the valve. The response takes time, and large, repeated corrections made too quickly can cause fluctuations."
       ],
       "explanationParagraphsZh": [
-        "过程控制通过持续测量、比较目标与实际状态，并操纵输入，使运行在扰动下仍保持稳定。反馈根据已经出现的偏差修正，前馈利用可测扰动提前动作，警报与联锁则保护运行边界。控制效果还取决于采样频率、响应延迟和调节幅度；晚到且过大的修正常会引发振荡或过冲。"
+        "过程控制可用一个简单闭环理解：测量被控制的结果，与目标比较，再改变可操纵输入，使扰动发生后过程重新靠近目标。",
+        "本例出口温度从60℃降到57℃，偏差为3℃，林澄因而增加蒸汽；原料随后回温，她又减少蒸汽。3℃只告诉她温度偏了多少，不能单靠这个数字推算阀门该开多少。动作存在响应延迟，过快、过大的反复修正也可能造成波动。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "overallZh": "本篇讲过程控制中最基本的反馈入口：进料等外部条件变化会使固定操作量不再维持目标，因此需要测量过程结果，与目标比较，再调整可控输入。故事中的60℃只是虚构淋酱灌装工作温度，不代表灭菌、食安或完整质量保证。",
+      "overall": "This article introduces a basic feedback loop in process control: when feed or other external conditions change, a fixed operating input may no longer hold the process at its target, so the measured result is compared with the target and a controllable input is adjusted. The 60 °C value in this fictional example is only a filling working temperature for the sauce; it is not a sterilization, food-safety, or complete quality guarantee.",
+      "moduleZh": {
+        "intro": "看同一名操作员怎样根据出口温度改变下一次蒸汽操作，区分工作目标、被测结果与可调输入。",
+        "diagramTitle": "进料变冷以后，为什么固定蒸汽位置不再够用",
+        "diagramSteps": [
+          "原料条件稳定时，固定蒸汽位置能让出口温度维持在目标附近",
+          "较冷原料进入后，测得出口温度从目标附近下降到约57℃",
+          "林澄增加蒸汽，并等待过程经过响应时间后再判断结果",
+          "原料逐渐回温后，温度开始超过目标，她再把蒸汽收回",
+          "后续每批根据测量结果继续修正，而不把某个阀位当成永久答案"
+        ],
+        "diagramStepNotes": [
+          "旧方法曾有效，因为此前进料条件变化较小。",
+          "57℃是触发人物改变动作的虚构可见偏差。",
+          "控制动作到温度变化之间存在延迟，不能假设立即生效。",
+          "同一加热量在扰动变化后可能从不足变成过量。",
+          "故事只展示基本反馈，不展开PID、控制器整定或完整工程设计。"
+        ],
+        "mapping": [
+          "出口温度表 → 被持续观察的过程结果。",
+          "60℃工作线 → 本故事设定的灌装目标。",
+          "蒸汽阀 → 可由操作员改变的输入。",
+          "堆起的空瓶 → 为等待过程响应付出的生产代价。"
+        ],
+        "boundary": "60℃仅是本虚构场景的灌装工作温度，不代表灭菌、安全或全部产品质量。真实过程还可能受浓度、流量、环境等变量影响；单一温度测量只能支持这个缩小后的反馈例子。响应延迟意味着过度频繁修正可能带来振荡或不稳定。",
+        "reflection": "如果明天原料反而比平时更暖，沿用今天最后的蒸汽位置为什么仍可能把出口温度推离目标？"
+      },
+      "module": {
+        "intro": "Follow how the same operator changes her next steam adjustment from the outlet reading, keeping the target, measured result, and controllable input distinct.",
+        "diagramTitle": "Why a Fixed Steam Setting Stops Working When the Feed Arrives Colder",
+        "diagramSteps": [
+          "When feed conditions are stable, a fixed steam position keeps the outlet temperature near the target",
+          "After colder material enters, the measured outlet temperature falls from near the target to about 57 °C",
+          "Lin Cheng increases steam and waits through the process response time before judging the result",
+          "As the material gradually warms, temperature starts to exceed the target and she reduces steam again",
+          "For later batches, she continues correcting from measured results rather than treating one valve position as permanent"
+        ],
+        "diagramStepNotes": [
+          "The old method had worked because previous feed conditions varied relatively little.",
+          "About 57 °C is the fictional visible deviation that changes the character's action.",
+          "There is a delay between changing the steam and seeing the temperature response.",
+          "The same heating input can shift from insufficient to excessive as the disturbance changes.",
+          "The story shows only basic feedback and does not teach PID control, controller tuning, or complete engineering design."
+        ],
+        "mapping": [
+          "Outlet temperature display → the process result being observed.",
+          "60 °C working line → the filling target defined for this fictional story.",
+          "Steam valve → the input the operator can manipulate.",
+          "Piled-up empty bottles → the production cost of waiting for the process to respond."
+        ],
+        "boundary": "The 60 °C value is only the working filling temperature in this fictional scenario; it does not represent sterilization, safety, or total product quality. A real process may also depend on concentration, flow, ambient conditions, and other variables. This simplified example supports only the feedback idea based on one measured temperature. Response delay also means overly frequent correction can cause oscillation or instability.",
+        "reflection": "If tomorrow's raw material arrives warmer than usual, why could copying today's final steam position still push the outlet temperature away from the target?"
+      },
+      "referencesZh": [
+        {
+          "id": "astrom-murray-feedback",
+          "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+          "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+          "use": "支持反馈闭环、扰动后的修正、过程响应延迟以及过度调整可能引起振荡等基本机制；不作为完整安全控制规范。"
+        }
+      ],
+      "references": [
+        {
+          "id": "astrom-murray-feedback",
+          "citation": "Åström, K. J., & Murray, R. M. Feedback Systems: An Introduction for Scientists and Engineers. Electronic version v2.10d, July 19, 2011.",
+          "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-hyperref_19Jul11.pdf",
+          "use": "Supports closed-loop feedback, correction after disturbances, process response delay, and the possibility that excessive adjustment can produce oscillation; it is not used as a complete safety-control specification."
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-20-group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-20-group1-edit-pass1-evidence.json",
+          "engineering-reader-first-20-group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
       }
     },
     {
@@ -1559,41 +1637,131 @@
       "fieldCode": "0712",
       "fieldTitle": "Environmental protection technology",
       "fieldTitleZh": "环境保护技术",
-      "title": "The Net Asked to Stop a River",
-      "titleZh": "一张网想拦住整条河",
-      "summary": "A ruler uses the finest net to make river water clear, then learns that clarity proves only that the mud was caught.",
-      "summaryZh": "城主用最细的网把河水滤得清亮，却很快发现，清亮只证明泥沙被拦住了。",
+      "title": "The Second Spare Filter",
+      "titleZh": "没拆开的第二支滤芯",
+      "summary": "After rain, a community repair station needs to wash more than twenty bicycles covered in grit. The fine filter that had normally been sufficient clogs quickly. Ji Lan routes this wash water—after visible chain oil has already been wiped off and without emulsifying degreaser—through grit settling, free-oil separation, and then fine filtration. The upstream stages remove coarse solids and floating free oil before they reach the new downstream filter, at the cost of more space, sludge removal, oil collection, and maintenance.",
+      "summaryZh": "社区维修站雨后要洗二十多辆满是砂泥的单车，原本够用的细滤芯很快堵住。季岚把这批预先干擦过明显链条油、且未使用乳化型除油剂的清洗回水，依次经过沉砂、自由油分离和细滤；前段先拿走粗砂与浮油，让新的后段滤芯承受更小负荷，但增加了清泥、收油和占地。",
       "storyParagraphs": [
-        "River City always found mud in its drinking water. After seeing a washerwoman strain water through cloth, the ruler ordered a vast net finer than window mesh to be stretched across the intake canal. On the first day, the water beyond it looked clear. People gathered around the basin in praise, and the ruler cancelled the money set aside for a settling pond. The single screen saved construction money and let the mayor open the plant before an election.",
-        "A storm filled the fine net with branches and clods of mud until the canal nearly stopped. The day after workers cleared it, an upstream dye house spilled a barrel of colourless chemical. The water still looked clear but tasted bitter. Several days later, illness spread through the riverside streets. The physician found that the net caught mud, but not substances dissolved in water or unseen causes of disease. Closing the channel to clean it also removed the town's only supply, revealing that one step had become both treatment and single point of failure.",
-        "The ruler proposed weaving an even tighter net. The water engineer placed stones, a spoonful of salt, and a drop of muddy water into three cups and let him see that the same net helped with only some of them. 'Ask one tool to do every job,' she said, 'and the first thing it may accomplish is blocking itself.'",
-        "The mayor took down the river-parade banner and moved its budget into several treatment stages. Engineers characterised particles, dissolved compounds, and microbes, then assigned each a suitable barrier. Jar tests and small pilots checked doses before full-scale work; one device was not accepted merely because it sounded advanced. The design set target water quality and checked how failure of one unit changed the load on the next. Chemical storage and sludge disposal entered the plan too.",
-        "The new works began with a coarse screen for branches, followed by a basin where sediment could settle. Separate layers of sand and charcoal addressed colour and odour, and a final disinfection step dealt with pathogens. Each stage had a sampling point, so a failure upstream could be found before the public became ill downstream. Bypass and reserve capacity allowed maintenance without sending untreated water forward. Samples before and after each unit showed where removal failed. Operators practised responding to high turbidity, disinfectant failure, and exhausted carbon rather than assuming every upset looked the same.",
-        "When the works reopened, the ruler filled a cup with transparent water but did not raise it at once. He waited for three small flags at the screen, settling basin, and final reservoir to rise in sequence, and only then took the first drink."
+        "After a night of rain, more than twenty shared bicycles are lined up outside the community repair station. Ji Lan has promised to have them washed, checked, and returned to their racks before evening, but a little over an hour into cleaning, the spray gun begins to lose flow. The filter fitted fresh that morning is already struggling. The gauge by the pump shows a growing pressure difference across the filter—the water is finding it harder to pass through, which usually means the filter is becoming clogged. Only two spare filters remain in storage.",
+        "As usual, the mechanics first wipe thick oil from chains and sprockets with cloths and collect water containing degreaser separately. This return stream comes only from the plain-water pre-rinse. Ji Lan opens the clogged filter: its folds contain grit and a little sticky oil. She leaves a clear bucket of return water by the door. By the time two more bicycles have passed, coarse sand has settled and scattered oil droplets float on top. A mechanic points at the spare filters. “The afternoon bikes aren’t here yet.”",
+        "She pauses the cleaning line for about ten minutes and first puts the spare filter back on the shelf. The station already has a grit-settling tank and a small oil/water separator, although they are not usually connected to this line for small washing jobs. Ji Lan routes the water through the settling tank first, then through the separator, and only then installs a new fine filter of the same type downstream. When the pump restarts, spray flow returns and the row of bicycles outside begins moving again. Someone asks where the parts boxes will go. She points to an empty shelf: making room for the two treatment units also means rearranging everyday storage.",
+        "Several mountain bikes arriving in the afternoon bring in more fine mud and a small amount of residual free oil. Mud slowly collects in the first tank, while an oil layer appears on the separator surface. Ji Lan removes the accumulated upstream material according to the maintenance routine so that the next load does not continue passing downstream. The removed old filter stays in the used-parts box. The new fine filter remains in service, and its pressure difference rises much more slowly than it did in the morning.",
+        "The new arrangement takes up space along the wall, and someone must shovel out grit, collect free oil, and handle the wastes after closing. By the time the last bicycle returns to its rack that evening, only one of the two spare filters has been used. Ji Lan tightens the reuse-water container lid. Its label still reads “maintenance pre-rinse water.” She adds a line to the filtration record beside it; the label stays the same."
       ],
       "storyParagraphsZh": [
-        "河城的饮水总带泥。城主看见洗衣妇用布滤水，便命人织出一张比窗纱还细的大网，拦在引水渠口。第一天，网后水色清亮，百姓围着水池称赞，城主也撤掉了原本准备修沉淀池的钱。单层细网省下建设款，也让城主赶在选举以前为水厂揭幕。",
-        "一场暴雨下来，树枝和泥团把细网堵得严严实实，水渠几乎断流。工人清完网的第二天，上游染坊又打翻一桶无色药液。水看起来仍旧清澈，喝下去却有苦味。几日后，河边街巷出现腹病，医官发现细网能拦泥，却拦不住溶在水里的东西，也杀不掉看不见的病源。停渠洗网同时切断全城唯一供水，暴露这一步既承担全部处理，也成了唯一失效点。",
-        "城主想把网再织密一层。管水匠却把一把石子、一勺盐和一滴浑水分别倒进三只杯子，让他亲眼看见同一张网只对其中一些东西有用。‘让一件工具做所有事，’她说，‘它最先做成的往往只是堵住自己。’",
-        "城主当着等候乐队的面摘下河庆巡游横幅，把那笔预算投进多道处理工艺。工程师先辨认颗粒、溶解物与微生物，再给每类风险安排合适屏障；药量经杯试和小规模试验验证，设备不能只因听来先进便入选。设计先定目标水质，再核查一单元失效会给下一段增加多少负荷；药剂储存和污泥处置也被纳入。",
-        "新水渠先用粗栅拦树枝，再让泥沙在池中沉下；后面另有沙炭层处理颜色和异味，最后一道消毒才对付病源。每一处都留下取水口，若前段失常，后段不会等到百姓生病才知道。旁路与备用能力让维修不必把未经处理的水送往下游；每单元前后取样则指出去除究竟在哪一段失效。操作者分别演练高浊度、消毒失效和炭层耗尽，不再假设所有异常都长得一样。",
-        "水厂重新开门时，城主接了一杯透明的水，却没有立刻举杯。他等粗栅、沉淀池和末端水池的三面小旗依次升起，才喝下第一口。"
+        "一场夜雨后，社区维修站门口排了二十多辆共享单车。季岚答应傍晚前把它们洗净、检查后送回车架，可清洗才过一个多小时，洗车枪的水流就开始变弱。早上刚换上的滤芯这么快就不够用了。泵旁的表显示滤芯前后的压力差越来越大——水越来越难穿过去，通常意味着滤芯正被堵住。仓库里只剩两支备用滤芯。",
+        "师傅们照旧先用布擦掉链条和飞轮上的厚油，带除油剂的水另外收集。这条回水只来自用清水预冲的步骤。季岚拆开堵住的滤芯，褶皱里塞着砂泥，还黏着少量油。她舀一桶回水放在门边，等同事推过两辆车再看，粗砂已经沉到底部，水面上还浮着零散油滴。师傅指了指架上的备用件：“下午的车还没来呢。”",
+        "她让清洗队伍停了十来分钟，先把备用滤芯放回架上。站里原本就有沉砂槽和小型油水分离器，只是平时少量洗车时没有串到这条线上。季岚把回水先送进沉砂槽，再经过分离器，最后才换上一支同款的新细滤芯。重新开泵后，洗车枪恢复了流量，门外的车队继续往前挪。有人问墙边的零件箱放哪儿，她指了指架子的空层；腾出这两个处理位置，连日常收纳也得跟着挪。",
+        "下午几辆山地车带进更多细泥和少量残余自由油。沉砂槽底慢慢堆起泥层，分离器表面也收集到一层油。季岚按维护要求把前段积存物清走，目的是别让接下来的负荷继续压到后段；拆下的旧滤芯留在废件箱里。新的细滤芯一直留在系统里，压力差上升得比上午慢得多。",
+        "新流程也带来麻烦：墙边少了一块放零件箱的位置，收工后还得有人铲泥、收自由油并处理这些废物。傍晚最后一辆车推回车架时，两支备用滤芯只用掉一支。季岚把回用水桶盖拧紧，标签仍写着“维修预冲洗用水”；桶边的过滤记录添了一行，标签没有换。"
       ],
       "conceptName": "Treatment train",
       "conceptNameZh": "处理工艺链",
       "explanationParagraphs": [
-        "A treatment train uses connected stages for contaminants that differ in nature and cannot be removed reliably by one operation. Early stages reduce loads and protect later ones; downstream stages address finer or different hazards. Monitoring points and appropriate redundancy help detect failure. The sequence should be selected for the contaminants, variation in incoming water, and required standard, rather than by simply adding equipment."
+        "A treatment train links units with different functions according to water characteristics and the treatment goal. Contaminants removed in an upstream stage reduce the load on later stages, so both unit selection and sequence depend on the incoming water.",
+        "Here grit settles first, gravity-separable free oil is removed next, and remaining particles are fine-filtered last. If oil is emulsified, a simple oil/water separator has limited effectiveness; clear appearance also does not prove that the water is potable or suitable for discharge."
       ],
       "explanationParagraphsZh": [
-        "处理工艺链把性质不同、单一步骤难以同时去除的污染物，交给相互衔接的多个处理单元。前段可削减负荷并保护后段，后段处理更细或不同类型的风险；监测点与必要冗余帮助发现失效。工艺选择应依据污染物、来水变化和目标标准，而不是简单堆叠设备。"
+        "处理工艺链把不同作用的处理单元按水质和目标衔接起来；前段去除的污染物会降低后段负荷，因此单元选择和顺序都与原水特征有关。",
+        "本例先沉砂，再分离可重力分开的自由油，最后细滤颗粒。若油已被乳化，简单油水分离器效果有限；清澈外观也不能证明水可饮用或符合排放要求。"
       ],
-      "mode": "mechanism-fable",
+      "mode": "mechanism-explainer",
       "status": "approved",
+      "overallZh": "本篇讲处理工艺链的一个入口：不同单元针对不同污染物或负荷，前一段先去除一部分物质，会改变后一段需要承担的工作。虚构场景只处理预先干擦后、以砂泥和少量自由油为主的维修清洗回水，并不把简单重力分油用于乳化油或溶解污染物。",
+      "overall": "This article introduces one idea behind a treatment train: different units address different contaminants or loads, and material removed upstream changes the burden carried by downstream treatment. The fictional scenario is limited to maintenance wash water that has already had obvious oil wiped off and is dominated by grit plus a small amount of separable free oil; it does not treat simple gravity separation as a solution for emulsified oil or dissolved contaminants.",
+      "moduleZh": {
+        "intro": "只追踪三类可见负荷：会沉的砂泥、可漂浮分离的自由油，以及最后仍需细滤的颗粒。",
+        "diagramTitle": "为什么先拿走砂泥和自由油，会让后段滤芯更耐用",
+        "diagramSteps": [
+          "先辨认来水中的可沉砂泥、可浮自由油与较细悬浮颗粒",
+          "用沉砂槽先拿走较重砂泥，降低后续固体负荷",
+          "让可分离自由油在油水分离器中聚集并被收走",
+          "同款细滤芯再承担前段留下的较细颗粒",
+          "按积泥、收油和压差记录维护各单元，保持整串处理可用"
+        ],
+        "diagramStepNotes": [
+          "本例是清水预冲回水，明显油污先干擦，除油剂水另收；不是把所有油都当成自由油。",
+          "被先拿走的砂泥留在槽底，不会再全部进入最后的滤芯。",
+          "油已乳化或溶解时，简单重力分离不能替代所需的其他处理。",
+          "旧滤芯和替换滤芯同款；恢复流量靠换新，减慢后续积污还依赖前段减负。",
+          "增加设备也增加占地、清理和废物处理，不能只看末端水色。"
+        ],
+        "mapping": [
+          "堵泥的旧滤芯 → 单一后段承担过多负荷的结果。",
+          "沉砂槽底的泥 → 前段去除的较重固体。",
+          "油水分离器表面的油 → 可由重力分离的自由油。",
+          "只用掉一支备用滤芯 → 前段减负后后段负荷变化的可见结果。"
+        ],
+        "boundary": "处理单元必须按实际污染物和回用/排放目标选择。本例的简单油水分离只针对可分离自由油，不适用于已被乳化的油，也不能去除所有溶解物。水更清或滤芯更耐用都不能证明达到饮用水或排放标准；本故事的目标仅是维修站规定的预冲洗回用。",
+        "reflection": "如果下一批回水几乎没有油、主要是大量砂泥，你会优先加强哪一段，为什么不能仅因为这篇故事出现过油水分离器就把它当成固定答案？"
+      },
+      "module": {
+        "intro": "Track only three visible loads: grit that can settle, free oil that can be separated at the surface, and remaining particles that still reach the fine filter.",
+        "diagramTitle": "Why Removing Grit and Free Oil Upstream Helps the Downstream Filter Last Longer",
+        "diagramSteps": [
+          "Identify settleable grit, separable free oil, and finer suspended particles in the incoming water",
+          "Remove heavier grit first to reduce the solids load on later units",
+          "Collect and remove separable free oil in the oil/water separator",
+          "Let the same type of fine filter handle the finer particles left after pretreatment",
+          "Maintain the units using collected grit, oil, and pressure-difference records"
+        ],
+        "diagramStepNotes": [
+          "This stream is a plain-water pre-rinse; visible oil is wiped first and degreaser water is collected separately. Not every oil is separable free oil.",
+          "Grit retained in the settling tank no longer all reaches the last filter.",
+          "Simple gravity separation cannot replace other treatment needed for emulsified or dissolved oil.",
+          "The removed and replacement filters are the same type. Replacement restores flow; pretreatment reduces later loading.",
+          "More units also require space, cleaning, and waste handling; appearance alone is not the goal."
+        ],
+        "mapping": [
+          "Grit-filled old filter → the result of one downstream unit carrying too much load.",
+          "Mud at the bottom of the settling tank → heavier solids removed upstream.",
+          "Oil on the separator surface → free oil that can be separated by gravity.",
+          "Only one spare filter used → a visible result of reduced downstream loading."
+        ],
+        "boundary": "Treatment units must be chosen according to the actual contaminants and the intended reuse or discharge goal. The simple oil/water separation in this example applies only to separable free oil, not emulsified oil, and it does not remove all dissolved substances. Clearer water or longer filter life does not demonstrate drinking-water or discharge compliance; the goal in this story is only the repair station's defined pre-rinse reuse.",
+        "reflection": "If the next batch of wash water contains almost no oil and is dominated by large amounts of grit, which stage would you prioritize, and why should the presence of an oil/water separator in this story not make it a fixed answer?"
+      },
+      "referencesZh": [
+        {
+          "id": "epa-drinking-treatment",
+          "citation": "U.S. Environmental Protection Agency. Drinking Water Treatment. Archived agency fact sheet.",
+          "url": "https://archive.epa.gov/water/archive/web/pdf/2009_08_28_sdwa_fs_30ann_treatment_web.pdf",
+          "use": "支持不同处理过程针对不同污染物、处理选择取决于原水特征；不作为固定通用流程或成品水安全证明。"
+        },
+        {
+          "id": "epa-ows-1999",
+          "citation": "U.S. Environmental Protection Agency, Region 9. (1999, November). Oil/Water Separators: Best Environmental Practices for Auto Repair and Fleet Maintenance.",
+          "url": "https://www.epa.gov/sites/production/files/2016-02/documents/separator.pdf",
+          "use": "支持汽车维修场景中减少入口砂泥和油负荷、自由油重力分离及维护要求，并明确乳化型清洗剂会限制简单油水分离效果。"
+        }
+      ],
+      "references": [
+        {
+          "id": "epa-drinking-treatment",
+          "citation": "U.S. Environmental Protection Agency. Drinking Water Treatment. Archived agency fact sheet.",
+          "url": "https://archive.epa.gov/water/archive/web/pdf/2009_08_28_sdwa_fs_30ann_treatment_web.pdf",
+          "use": "Supports the principle that different treatment processes address different contaminants and that process selection depends on raw-water characteristics; it is not used as a universal treatment recipe or a certificate of finished-water safety."
+        },
+        {
+          "id": "epa-ows-1999",
+          "citation": "U.S. Environmental Protection Agency, Region 9. (1999, November). Oil/Water Separators: Best Environmental Practices for Auto Repair and Fleet Maintenance.",
+          "url": "https://www.epa.gov/sites/production/files/2016-02/documents/separator.pdf",
+          "use": "Supports reducing incoming grit and oil loads in automotive-maintenance settings, gravity separation of free oil, maintenance requirements, and the limitation that emulsifying detergents reduce the effectiveness of simple oil/water separation."
+        }
+      ],
       "qualityGate": {
         "reviewRounds": 3,
         "rewriteRounds": 2,
         "openCritical": 0,
-        "openMajor": 0
+        "openMajor": 0,
+        "openMustFix": 0,
+        "openMinor": 0,
+        "review": "engineering-reader-first-20-group1-pdc-round3.json",
+        "edits": [
+          "engineering-reader-first-20-group1-edit-pass1-evidence.json",
+          "engineering-reader-first-20-group1-edit-pass2-evidence.json"
+        ],
+        "execution": "One local editor using13perspectives; four separate actual ordinary ChatGPT Extra High stages per article."
       }
     },
     {
