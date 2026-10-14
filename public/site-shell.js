@@ -65,7 +65,7 @@
   const startMusicDock = () => {
     const launch = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=personal-reactions-20261014'; document.head.append(script);
+      script.src = '/music/dock.js?v=shared-votes-20261014'; document.head.append(script);
     };
     if (globalThis.MapKAIMusicPreferences) { launch(); return; }
     // Music includes the same helper before its app; other pages load it here.
@@ -74,7 +74,7 @@
     helper.addEventListener('load', launch, { once: true });
     helper.addEventListener('error', launch, { once: true });
     if (!existing) {
-      helper.src = '/music/preferences.js?v=personal-reactions-20261014';
+      helper.src = '/music/preferences.js?v=shared-votes-20261014';
       document.head.append(helper);
     }
   };

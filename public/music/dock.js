@@ -150,6 +150,7 @@
     }
     if (fetchPromise) return fetchPromise;
     loading = true; libraryFailed = false; render();
+    const votesReady = preferences?.refresh().catch(() => {});
     fetchPromise = (async () => {
       const found = new Map(), cursors = new Set(); let cursor = null;
       for (let count = 0; count < 10; count++) {
@@ -162,6 +163,7 @@
         if (typeof cursor !== 'string' || cursor.length > 1000 || cursors.has(cursor) || count === 9) throw new Error('Invalid catalog cursor');
         cursors.add(cursor);
       }
+      await votesReady;
       tracks = [...found.values()].sort(compareTracks);
       loaded = true;
     })().catch(() => { libraryFailed = true; }).finally(() => { loading = false; fetchPromise = null; restore(); render(); });

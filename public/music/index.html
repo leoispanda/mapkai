@@ -9,11 +9,11 @@
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-reactions-20261014">
-  <script src="/site-shell.js?v=personal-reactions-20261014" defer></script>
+  <link rel="stylesheet" href="/music/styles.css?v=music-votes-20261014">
+  <script src="/site-shell.js?v=music-votes-20261014" defer></script>
   <script src="/music/lyrics-sync.js?v=music-14" defer></script>
-  <script src="/music/preferences.js?v=music-reactions-20261014" defer></script>
-  <script src="/music/app.js?v=music-reactions-20261014" defer></script>
+  <script src="/music/preferences.js?v=music-votes-20261014" defer></script>
+  <script src="/music/app.js?v=music-votes-20261014" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -55,7 +55,7 @@
         <div><h2 id="library-title" data-i18n="library">歌曲列表</h2><p id="track-count" class="library-count" aria-live="polite">正在载入歌曲…</p></div>
         <div class="library-actions"><label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="搜索歌曲…" data-placeholder="search"></label><button id="create-music" type="button" class="button primary" data-i18n="createSong">制作歌曲</button><button id="manage-music" type="button" class="button secondary"><span aria-hidden="true">＋</span><span data-i18n="manage">管理歌曲</span></button></div>
       </div>
-      <p id="preferences-notice" class="preferences-notice" role="status">点赞的歌曲排在最前，不好听的排在最后。喜好保存在当前浏览器；再次点击可取消。</p>
+      <p id="preferences-notice" class="preferences-notice" role="status">每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。</p>
       <p id="library-status" class="library-status" role="status" hidden></p>
       <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">暂时无法载入歌单，请再试一次。</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">重新载入</button></div>
       <ul id="tracks" class="track-list" role="list" aria-label="歌曲列表"></ul>

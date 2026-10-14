@@ -11,11 +11,18 @@ MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does
 
 No new public bucket access, API key, paid provider call or binding is required. The production environment must contain all these existing bindings; preview environments without the shared cost database cannot upload or read songs.
 
-## Personal listening preferences
+## Shared cumulative song votes
 
-Music provides mutually exclusive Like / Not for me controls (点赞 / 不好听), keyed by the immutable song UUID. Clicking the selected reaction again clears it; selecting the other switches it. Likes appear before unrated songs, with Not for me songs last. Each group retains ascending fixed song numbers, which are never changed by personal ordering. Cards and the playback queue use the same order without replacing the playing audio or changing its position.
+Like and Not for me (点赞 / 不喜欢) are cumulative actions, not personal toggles. Every explicit accepted click contributes one vote to the shared website total, including another click from the same browser or from a different browser/app opening MapKAI. Both counts are visible. Ranking uses `score = likes - dislikes` descending, then the fixed song number ascending for ties. Cards, Play all and the site-wide dock use the same shared ordering without changing song numbers or replacing the current audio.
 
-Preferences persist only in this browser in localStorage under `mapkaiMusicReactions.v1`, and other open tabs follow storage changes. They are personal choices, not shared vote counts or account-synchronized ratings. If browser storage is unavailable, controls still work for the current page and a visible note explains the temporary state. No preference is sent to the Music API or provider, and no song metadata, audio, original lyrics or timing is rewritten.
+Totals live in the existing `MAPKAI_DB` D1 database. The vote-event request UUID is unique, and SQLite triggers update the aggregate atomically only for a newly inserted event. Repeating an uncertain submission with the same UUID cannot add another vote; reusing it with a different song/reaction returns a conflict. No API deletes or resets votes. Only currently public songs validated through the existing guarded metadata reader can receive votes. Voting never writes R2 song/audio objects or rewrites original lyrics, cues, IDs or the numbering ledger. There is no account requirement, per-browser one-vote cap, unique-person claim or cross-service import of votes from unrelated music platforms.
+
+The older `mapkaiMusicReactions.v1` local preference data is left untouched and is not automatically counted as server votes. The client displays server-confirmed totals only. It refreshes when a listener returns and every 30 seconds while the page is visible after the voting store has been activated. Network errors show an unavailable/retry state instead of inventing locally saved totals. An unknown POST outcome retains its request UUID and permits explicit retry of that same action; it never auto-resubmits or silently creates a fresh vote. Votes in progress disable duplicate clicks until the response returns. Ordinary request-rate protection still applies.
+
+Endpoints:
+
+- `GET /api/music/votes` returns `{ totals: [{ id, likes, dislikes, score }] }` from the shared database with no-store responses. Missing zero-vote rows represent zero after a successful complete response.
+- `POST /api/music/votes` accepts exactly `{ id, reaction: "like" | "dislike", requestId }`, requires the website's same-origin Origin proof and bounded JSON, and returns `{ total, requestId, duplicate }`. Counters are shared across browser software and updated by the server, not by localStorage.
 
 ## Song creation entry
 

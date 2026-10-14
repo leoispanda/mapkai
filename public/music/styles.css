@@ -19,18 +19,17 @@ body[data-theme=dark] .form-status[data-kind=error]{background:#422d14;color:#f5
 .track-original-lyrics .original-lyrics-text{min-width:0;max-width:100%;max-height:min(45vh,420px);margin:0;padding:4px 4px 10px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;font-weight:400;line-height:1.8;color:var(--ink)}
 .track-original-lyrics summary:focus-visible,.track-original-lyrics .original-lyrics-text:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
 
-/* Personal reactions keep their own touch targets outside each play button. */
+/* Shared cumulative votes keep action targets outside each play button. */
 .preferences-notice{max-width:760px;margin:0 0 16px;font-size:12px;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}
 .track-reactions{display:flex;flex-wrap:wrap;gap:8px;min-width:0;margin:0 18px 12px}
 .reaction-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;min-width:44px;max-width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--muted);font-size:12px;font-weight:500;line-height:1.4;text-align:center;overflow-wrap:anywhere;cursor:pointer}
 .reaction-button svg{flex:0 0 17px;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .reaction-button[data-reaction=dislike] svg{transform:rotate(180deg)}
 .reaction-button:hover{color:var(--blue);border-color:var(--blue);background:var(--surface-soft)}
-.reaction-button[aria-pressed=true]{color:var(--blue);border-color:var(--blue);background:var(--surface-soft);font-weight:650}
-.reaction-button[aria-pressed=true] svg{fill:currentColor;stroke-width:1.1}
-.reaction-button[data-reaction=dislike][aria-pressed=true]{color:var(--ink);border-color:var(--muted)}
+.reaction-count{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:650}
+.reaction-score{align-self:center;min-width:0;padding:8px 0;font-size:11px;line-height:1.5;color:var(--muted);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.reaction-status{flex-basis:100%;font-size:12px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
 .reaction-button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .reaction-button:disabled{cursor:default;opacity:.55}
 .playlist-reactions .track-reactions{margin:14px 0 2px}
-body[data-theme=dark] .reaction-button[aria-pressed=true]{background:var(--surface-soft)}
-@media(max-width:540px){.track-reactions{margin-inline:16px}.reaction-button{flex:1;padding-inline:10px}.playlist-reactions .track-reactions{max-width:360px}}
+@media(max-width:540px){.track-reactions{margin-inline:16px}.reaction-button{flex:1;padding-inline:10px}.reaction-score{flex-basis:100%;padding:0}.playlist-reactions .track-reactions{max-width:360px}}

@@ -4,7 +4,7 @@
   const copy = {
     zh: {
       back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', aiNotice: '使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
-      like: '点赞', dislike: '不好听', likeLabel: '点赞 {title}', dislikeLabel: '不好听：{title}', reactionLabel: '{title} 的个人喜好', preferencesNotice: '点赞的歌曲排在最前，不好听的排在最后。喜好保存在当前浏览器；再次点击可取消。', preferencesSession: '点赞的歌曲排在最前，不好听的排在最后。当前无法保存，喜好仅在本次页面中保留；再次点击可取消。', preferencesUnavailable: '歌曲喜好暂不可用，请重新载入页面。',
+      like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
       lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       playlistHeading: '一起听 MapKAI', playlistIntro: '一键播放全部歌曲，按列表顺序连续聆听。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
       createSong: '制作歌曲', composerIntro: '先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。', composerPrivacy: '你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。', composerTheme: '想法或主题', composerStyle: '音乐风格', composerDuration: '时长', styleMemphisHipHop: '孟菲斯 Hip-hop', styleRock: '摇滚', styleSymphonic: '交响', styleFolkRap: '民谣说唱', styleAcoustic: '原声', durationOne: '1 分钟', durationTwo: '2 分钟', composerLyrics: '原创歌词（可选）', composerLyricsPlaceholder: '留空即可按主题创作原创歌词。', preparePrompt: '生成创作说明', composerPrompt: '创作说明', copyPrompt: '复制创作说明', copyingPrompt: '正在复制…', openCreator: '打开音乐制作工具 ↗', composerReturn: '先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。', composerReady: '创作说明已准备好。先复制，再到音乐工具中粘贴。', composerCopied: '已复制创作说明。打开音乐工具并粘贴，即可开始制作。', composerCopyFallback: '请复制已选中的创作说明：按 ⌘C 或 Ctrl+C，也可以长按复制。', composerThemeRequired: '请填写歌曲的想法或主题。', composerThemeLimit: '主题最多 1000 个字符。', composerLyricsLimit: '歌词最多 2400 个字符。', composerStyleRequired: '请选择一种音乐风格。', composerDurationRequired: '请选择 1 分钟或 2 分钟。', composerPromptLimit: '创作说明最多 4100 个字符，请缩短主题或歌词。', composerCount: '{count} / 4100 个字符',
@@ -14,7 +14,7 @@
     },
     en: {
       back: '← Back to Toolbox', intro: 'Tap a song card to listen.', aiNotice: 'Songs created with AI are labelled AI-generated on their cards before playback.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
-      like: 'Like', dislike: 'Not for me', likeLabel: 'Like {title}', dislikeLabel: 'Not for me: {title}', reactionLabel: 'Your preference for {title}', preferencesNotice: 'Liked songs come first; songs marked Not for me come last. Saved in this browser. Tap again to undo.', preferencesSession: 'Liked songs come first; songs marked Not for me come last. Preferences cannot be saved and last only on this page. Tap again to undo.', preferencesUnavailable: 'Song preferences are unavailable. Please reload the page.',
+      like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; ranking is shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
       lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       playlistHeading: 'Listen with MapKAI', playlistIntro: 'Play every song, in order, with one tap.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
       createSong: 'Create a song', composerIntro: 'Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.', composerPrivacy: 'Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.', composerTheme: 'Idea or theme', composerStyle: 'Music style', composerDuration: 'Duration', styleMemphisHipHop: 'Memphis hip-hop', styleRock: 'Rock', styleSymphonic: 'Symphonic', styleFolkRap: 'Folk rap', styleAcoustic: 'Acoustic', durationOne: '1 minute', durationTwo: '2 minutes', composerLyrics: 'Original lyrics (optional)', composerLyricsPlaceholder: 'Leave blank to create original lyrics from your theme.', preparePrompt: 'Prepare prompt', composerPrompt: 'Your creation prompt', copyPrompt: 'Copy prompt', copyingPrompt: 'Copying…', openCreator: 'Open music creator ↗', composerReturn: 'Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.', composerReady: 'Your prompt is ready. Copy it, then paste it into the music tool.', composerCopied: 'Prompt copied. Open the music tool and paste it to begin creating.', composerCopyFallback: 'Copy the selected prompt with ⌘C or Ctrl+C, or press and hold to copy.', composerThemeRequired: 'Add an idea or theme for your song.', composerThemeLimit: 'The theme can have up to 1000 characters.', composerLyricsLimit: 'The lyrics can have up to 2400 characters.', composerStyleRequired: 'Choose a music style.', composerDurationRequired: 'Choose 1 minute or 2 minutes.', composerPromptLimit: 'The prompt can have up to 4100 characters. Shorten the theme or lyrics.', composerCount: '{count} / 4100 characters',
@@ -508,7 +508,6 @@
       button.type = 'button';
       button.className = 'reaction-button';
       button.dataset.reaction = value;
-      button.setAttribute('aria-pressed', 'false');
       const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       icon.setAttribute('viewBox', '0 0 24 24');
       icon.setAttribute('aria-hidden', 'true');
@@ -517,36 +516,58 @@
       path.setAttribute('d', 'M7 10v11H3V10h4Zm3 11h7.4a2 2 0 0 0 1.9-1.4l2.1-7A2 2 0 0 0 19.5 10H14l.7-4.4A2.5 2.5 0 0 0 12.2 3L7 10v11h3Z');
       icon.append(path);
       const label = document.createElement('span');
-      button.append(icon, label);
+      const count = document.createElement('span');
+      count.className = 'reaction-count';
+      count.setAttribute('aria-hidden', 'true');
+      button.append(icon, label, count);
       button.addEventListener('click', () => {
         const track = getTrack();
         if (!track || !musicPreferences) return;
-        musicPreferences.toggle(track.id, value);
-        // The store notifies all page and dock controls synchronously.
-        updatePreferencesNotice();
+        // The server counts one explicit action. Pending and uncertain requests
+        // keep their identity; the store never retries a POST automatically.
+        musicPreferences.vote(track.id, value);
       });
-      buttons[value] = { button, label };
+      buttons[value] = { button, label, count };
       element.append(button);
     }
-    return { element, buttons };
+    const score = document.createElement('span');
+    score.className = 'reaction-score';
+    const message = document.createElement('p');
+    message.className = 'reaction-status';
+    message.setAttribute('role', 'status');
+    message.setAttribute('aria-live', 'polite');
+    element.append(score, message);
+    return { element, buttons, score, message };
   }
 
   function renderReactionControls(controls, track) {
     controls.element.hidden = !track;
     if (!track) return;
     controls.element.setAttribute('aria-label', t('reactionLabel', { title: track.title }));
-    const selected = musicPreferences?.get(track.id) || null;
+    const vote = musicPreferences?.get(track.id);
+    controls.element.setAttribute('aria-busy', String(Boolean(vote?.pending)));
     for (const [value, entry] of Object.entries(controls.buttons)) {
-      const label = t(value);
+      const retry = vote?.unknown && vote.reaction === value;
+      const label = retry ? t('retryVote', { reaction: t(value) }) : t(value);
       if (entry.label.textContent !== label) entry.label.textContent = label;
-      entry.button.disabled = !musicPreferences;
-      entry.button.setAttribute('aria-pressed', String(selected === value));
-      entry.button.setAttribute('aria-label', t(`${value}Label`, { title: track.title }));
+      const count = vote?.known ? vote[value === 'like' ? 'likes' : 'dislikes'] : '—';
+      entry.count.textContent = count;
+      entry.button.disabled = !musicPreferences || vote.pending || Boolean(vote.unknown && vote.reaction !== value);
+      entry.button.setAttribute('aria-label', t(retry ? 'voteRetryLabel' : `${value}Label`, { title: track.title, count, reaction: t(value) }));
     }
+    controls.score.textContent = t('voteScore', { score: vote?.known ? vote.score : '—' });
+    const errorKey = { unknown: 'voteUnknown', rateLimited: 'voteRateLimited', rejected: 'voteRejected', unavailable: 'voteUnavailable' }[vote?.error];
+    controls.message.textContent = vote?.pending ? t('votePending') : errorKey ? t(errorKey) : '';
+    controls.message.hidden = !controls.message.textContent;
   }
 
   function updatePreferencesNotice() {
-    $('preferences-notice').textContent = t(!musicPreferences ? 'preferencesUnavailable' : musicPreferences.isPersistent() ? 'preferencesNotice' : 'preferencesSession');
+    const state = musicPreferences?.status();
+    const messages = [t('preferencesNotice')];
+    if (!state || state.unavailable) messages.push(t('preferencesUnavailable'));
+    else if (!state.loaded && state.refreshing) messages.push(t('preferencesLoading'));
+    if (state && !state.sessionRecovery) messages.push(t('preferencesRecovery'));
+    $('preferences-notice').textContent = messages.join(' ');
   }
 
   function orderExistingCards() {
@@ -1017,4 +1038,5 @@
   window.dispatchEvent(new Event('mapkai:music-ready'));
   applyLanguage(language);
   loadLibrary();
+  musicPreferences?.refresh();
 })();
