@@ -63,8 +63,20 @@
   musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=dock-1-original-lyrics-1';
   document.head.append(musicStyle);
   const startMusicDock = () => {
-    const script = document.createElement('script');
-    script.src = '/music/dock.js?v=dock-subjects-1-original-lyrics-1'; document.head.append(script);
+    const launch = () => {
+      const script = document.createElement('script');
+      script.src = '/music/dock.js?v=personal-reactions-20261014'; document.head.append(script);
+    };
+    if (globalThis.MapKAIMusicPreferences) { launch(); return; }
+    // Music includes the same helper before its app; other pages load it here.
+    const existing = document.querySelector('script[src^="/music/preferences.js"]');
+    const helper = existing || document.createElement('script');
+    helper.addEventListener('load', launch, { once: true });
+    helper.addEventListener('error', launch, { once: true });
+    if (!existing) {
+      helper.src = '/music/preferences.js?v=personal-reactions-20261014';
+      document.head.append(helper);
+    }
   };
   if (globalThis.MapKAILyricsSync) startMusicDock();
   else {

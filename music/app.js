@@ -4,6 +4,7 @@
   const copy = {
     zh: {
       back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', aiNotice: '使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
+      like: '点赞', dislike: '不好听', likeLabel: '点赞 {title}', dislikeLabel: '不好听：{title}', reactionLabel: '{title} 的个人喜好', preferencesNotice: '点赞的歌曲排在最前，不好听的排在最后。喜好保存在当前浏览器；再次点击可取消。', preferencesSession: '点赞的歌曲排在最前，不好听的排在最后。当前无法保存，喜好仅在本次页面中保留；再次点击可取消。', preferencesUnavailable: '歌曲喜好暂不可用，请重新载入页面。',
       lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       playlistHeading: '一起听 MapKAI', playlistIntro: '一键播放全部歌曲，按列表顺序连续聆听。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
       createSong: '制作歌曲', composerIntro: '先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。', composerPrivacy: '你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。', composerTheme: '想法或主题', composerStyle: '音乐风格', composerDuration: '时长', styleMemphisHipHop: '孟菲斯 Hip-hop', styleRock: '摇滚', styleSymphonic: '交响', styleFolkRap: '民谣说唱', styleAcoustic: '原声', durationOne: '1 分钟', durationTwo: '2 分钟', composerLyrics: '原创歌词（可选）', composerLyricsPlaceholder: '留空即可按主题创作原创歌词。', preparePrompt: '生成创作说明', composerPrompt: '创作说明', copyPrompt: '复制创作说明', copyingPrompt: '正在复制…', openCreator: '打开音乐制作工具 ↗', composerReturn: '先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。', composerReady: '创作说明已准备好。先复制，再到音乐工具中粘贴。', composerCopied: '已复制创作说明。打开音乐工具并粘贴，即可开始制作。', composerCopyFallback: '请复制已选中的创作说明：按 ⌘C 或 Ctrl+C，也可以长按复制。', composerThemeRequired: '请填写歌曲的想法或主题。', composerThemeLimit: '主题最多 1000 个字符。', composerLyricsLimit: '歌词最多 2400 个字符。', composerStyleRequired: '请选择一种音乐风格。', composerDurationRequired: '请选择 1 分钟或 2 分钟。', composerPromptLimit: '创作说明最多 4100 个字符，请缩短主题或歌词。', composerCount: '{count} / 4100 个字符',
@@ -13,6 +14,7 @@
     },
     en: {
       back: '← Back to Toolbox', intro: 'Tap a song card to listen.', aiNotice: 'Songs created with AI are labelled AI-generated on their cards before playback.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
+      like: 'Like', dislike: 'Not for me', likeLabel: 'Like {title}', dislikeLabel: 'Not for me: {title}', reactionLabel: 'Your preference for {title}', preferencesNotice: 'Liked songs come first; songs marked Not for me come last. Saved in this browser. Tap again to undo.', preferencesSession: 'Liked songs come first; songs marked Not for me come last. Preferences cannot be saved and last only on this page. Tap again to undo.', preferencesUnavailable: 'Song preferences are unavailable. Please reload the page.',
       lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       playlistHeading: 'Listen with MapKAI', playlistIntro: 'Play every song, in order, with one tap.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
       createSong: 'Create a song', composerIntro: 'Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.', composerPrivacy: 'Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.', composerTheme: 'Idea or theme', composerStyle: 'Music style', composerDuration: 'Duration', styleMemphisHipHop: 'Memphis hip-hop', styleRock: 'Rock', styleSymphonic: 'Symphonic', styleFolkRap: 'Folk rap', styleAcoustic: 'Acoustic', durationOne: '1 minute', durationTwo: '2 minutes', composerLyrics: 'Original lyrics (optional)', composerLyricsPlaceholder: 'Leave blank to create original lyrics from your theme.', preparePrompt: 'Prepare prompt', composerPrompt: 'Your creation prompt', copyPrompt: 'Copy prompt', copyingPrompt: 'Copying…', openCreator: 'Open music creator ↗', composerReturn: 'Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.', composerReady: 'Your prompt is ready. Copy it, then paste it into the music tool.', composerCopied: 'Prompt copied. Open the music tool and paste it to begin creating.', composerCopyFallback: 'Copy the selected prompt with ⌘C or Ctrl+C, or press and hold to copy.', composerThemeRequired: 'Add an idea or theme for your song.', composerThemeLimit: 'The theme can have up to 1000 characters.', composerLyricsLimit: 'The lyrics can have up to 2400 characters.', composerStyleRequired: 'Choose a music style.', composerDurationRequired: 'Choose 1 minute or 2 minutes.', composerPromptLimit: 'The prompt can have up to 4100 characters. Shorten the theme or lyrics.', composerCount: '{count} / 4100 characters',
@@ -26,6 +28,7 @@
   const composer = $('music-composer');
   const preview = $('preview-audio');
   const lyricsSync = globalThis.MapKAILyricsSync;
+  const musicPreferences = globalThis.MapKAIMusicPreferences;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const cards = new Map();
   const featuredRank = new Map([
@@ -49,6 +52,8 @@
     lyricsText: $('playlist-lyrics'), lyricsSpan: $('playlist-lyric-span'),
     lyricsUnavailable: $('playlist-lyrics-unavailable'), currentLyricLine: null, trackId: null,
   };
+  const playlistReactions = createReactionControls(() => selectedCard?.track);
+  $('playlist-reactions').append(playlistReactions.element);
   let cardSequence = 0;
   let previewUrl = null;
   let uploading = false;
@@ -184,6 +189,7 @@
     preview.setAttribute('aria-label', t('previewAudio'));
     document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music。使用 AI 创作的歌曲，点击卡片即可播放。' : 'MapKAI Music. Songs created with AI. Tap a card to listen.';
     updateLibrary();
+    updatePreferencesNotice();
     status($('owner-status'), ownerStatus);
     status($('upload-status'), uploadStatus);
     status($('composer-status'), composerStatus);
@@ -357,6 +363,7 @@
     $('playlist-position').textContent = index >= 0 ? t('playlistPosition', { position: index + 1, count: queue.length }) : loaded ? t('count', { count: tracks.length }) : t(libraryFailed ? 'libraryError' : 'loading');
     $('playlist-disclosure').hidden = !card?.track.aiGenerated;
     $('playlist-disclosure').textContent = t('aiGenerated');
+    renderReactionControls(playlistReactions, card?.track);
     $('playlist-error').hidden = !card || card.error.hidden;
     $('playlist-error').textContent = t('audioError');
     $('playlist-seek').setAttribute('aria-label', card ? t('seekLabel', { title: card.track.title }) : t('playlistSeekLabel'));
@@ -486,8 +493,102 @@
     card.originalLyricsText.setAttribute('aria-label', originalLyricsLabel);
     if (!card.track.lyrics) card.originalLyricsDetails.open = false;
     renderLyrics(card);
+    renderReactionControls(card.reactions, card.track);
     if (!card.track.lyrics) card.lyricsDetails.open = false;
     else if (!hadLyrics && card === selectedCard) card.lyricsDetails.open = true;
+  }
+
+  function createReactionControls(getTrack) {
+    const element = document.createElement('div');
+    element.className = 'track-reactions';
+    element.setAttribute('role', 'group');
+    const buttons = {};
+    for (const value of ['like', 'dislike']) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'reaction-button';
+      button.dataset.reaction = value;
+      button.setAttribute('aria-pressed', 'false');
+      const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      icon.setAttribute('viewBox', '0 0 24 24');
+      icon.setAttribute('aria-hidden', 'true');
+      icon.setAttribute('focusable', 'false');
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', 'M7 10v11H3V10h4Zm3 11h7.4a2 2 0 0 0 1.9-1.4l2.1-7A2 2 0 0 0 19.5 10H14l.7-4.4A2.5 2.5 0 0 0 12.2 3L7 10v11h3Z');
+      icon.append(path);
+      const label = document.createElement('span');
+      button.append(icon, label);
+      button.addEventListener('click', () => {
+        const track = getTrack();
+        if (!track || !musicPreferences) return;
+        musicPreferences.toggle(track.id, value);
+        // The store notifies all page and dock controls synchronously.
+        updatePreferencesNotice();
+      });
+      buttons[value] = { button, label };
+      element.append(button);
+    }
+    return { element, buttons };
+  }
+
+  function renderReactionControls(controls, track) {
+    controls.element.hidden = !track;
+    if (!track) return;
+    controls.element.setAttribute('aria-label', t('reactionLabel', { title: track.title }));
+    const selected = musicPreferences?.get(track.id) || null;
+    for (const [value, entry] of Object.entries(controls.buttons)) {
+      const label = t(value);
+      if (entry.label.textContent !== label) entry.label.textContent = label;
+      entry.button.disabled = !musicPreferences;
+      entry.button.setAttribute('aria-pressed', String(selected === value));
+      entry.button.setAttribute('aria-label', t(`${value}Label`, { title: track.title }));
+    }
+  }
+
+  function updatePreferencesNotice() {
+    $('preferences-notice').textContent = t(!musicPreferences ? 'preferencesUnavailable' : musicPreferences.isPersistent() ? 'preferencesNotice' : 'preferencesSession');
+  }
+
+  function orderExistingCards() {
+    const list = $('tracks');
+    const focused = document.activeElement;
+    const desired = tracks.map(track => cards.get(track.id)?.element).filter(Boolean);
+    if (typeof list.moveBefore === 'function') {
+      // State-preserving moves keep the existing audio, focus, and lyric details.
+      for (const [index, element] of desired.entries()) {
+        const current = list.children[index];
+        if (current !== element) {
+          if (element.parentNode === list && element.isConnected && list.isConnected) list.moveBefore(element, current || null);
+          else list.insertBefore(element, current || null);
+        }
+      }
+    } else {
+      // Older browsers pause media when its ancestor is detached. Keep the
+      // playing, pending, or paused selected card anchored; move only the others.
+      const active = [...cards.values()].find(card => card.element.parentNode === list && (!card.audio.paused || card.pending || card.waiting));
+      const anchor = active?.element || (selectedCard?.element.parentNode === list ? selectedCard.element : null);
+      const anchorIndex = anchor ? desired.indexOf(anchor) : -1;
+      if (anchorIndex >= 0) {
+        for (let index = 0; index < anchorIndex; index += 1) list.insertBefore(desired[index], anchor);
+        for (let index = anchorIndex + 1; index < desired.length; index += 1) list.append(desired[index]);
+      } else {
+        for (const [index, element] of desired.entries()) {
+          const current = list.children[index];
+          if (current !== element) list.insertBefore(element, current || null);
+        }
+      }
+    }
+    if (focused?.isConnected && document.activeElement !== focused) focused.focus({ preventScroll: true });
+  }
+
+  function applyPreferences() {
+    tracks.sort(compareTrackOrder);
+    orderExistingCards();
+    playlistIds = tracks.map(track => track.id);
+    for (const card of cards.values()) renderReactionControls(card.reactions, card.track);
+    updatePreferencesNotice();
+    // Refresh queue position and the dock without changing selection or playback.
+    updatePlaylist({ immediate: true });
   }
 
   function createCard(track) {
@@ -523,8 +624,9 @@
     const originalLyricsSummary = document.createElement('summary');
     const originalLyricsText = document.createElement('pre'); originalLyricsText.className = 'original-lyrics-text'; originalLyricsText.tabIndex = 0; originalLyricsText.setAttribute('role', 'region');
     originalLyricsDetails.append(originalLyricsSummary, originalLyricsText);
-    element.append(button, progress, audio, error, lyricsDetails, originalLyricsDetails);
-    const card = { element, button, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
+    const reactions = createReactionControls(() => card.track);
+    element.append(button, reactions.element, progress, audio, error, lyricsDetails, originalLyricsDetails);
+    const card = { element, button, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => { if (selectedCard !== card) { playlistMode = false; playlistComplete = false; } togglePlayback(card); });
     seek.addEventListener('input', () => seekPlayback(card, seek.value));
     audio.addEventListener('play', () => { if (audio.paused) return; error.hidden = true; card.waiting = true; stopOtherPlayers(audio); });
@@ -558,6 +660,7 @@
   }
 
   function compareTrackOrder(first, second) {
+    if (musicPreferences) return musicPreferences.compare(first, second);
     const firstNumber = songNumber(first);
     const secondNumber = songNumber(second);
     if (firstNumber !== secondNumber) return firstNumber - secondNumber;
@@ -572,7 +675,7 @@
       if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { selectedCard = null; playlistMode = false; playlistComplete = false; } card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }
     }
     playlistIds = playlistIds.filter(id => ids.has(id));
-    for (const [index, track] of tracks.entries()) {
+    for (const track of tracks) {
       let card = cards.get(track.id);
       if (!card) { card = createCard(track); cards.set(track.id, card); }
       else {
@@ -583,9 +686,10 @@
         if (card.audio.src !== track.url) { card.restoreSeconds = null; card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
         trackMetadata(card);
       }
-      const current = $('tracks').children[index];
-      if (current !== card.element) $('tracks').insertBefore(card.element, current || null);
+      if (!card.element.parentNode) $('tracks').append(card.element);
     }
+    orderExistingCards();
+    if (playlistMode) playlistIds = tracks.map(track => track.id);
     updateLibrary();
   }
 
@@ -909,6 +1013,7 @@
       updatePlaying();
     },
   });
+  musicPreferences?.subscribe(applyPreferences);
   window.dispatchEvent(new Event('mapkai:music-ready'));
   applyLanguage(language);
   loadLibrary();

@@ -11,6 +11,12 @@ MapKAI Music hosts uploaded English, Dutch and Chinese ElevenLabs songs; it does
 
 No new public bucket access, API key, paid provider call or binding is required. The production environment must contain all these existing bindings; preview environments without the shared cost database cannot upload or read songs.
 
+## Personal listening preferences
+
+Music provides mutually exclusive Like / Not for me controls (点赞 / 不好听), keyed by the immutable song UUID. Clicking the selected reaction again clears it; selecting the other switches it. Likes appear before unrated songs, with Not for me songs last. Each group retains ascending fixed song numbers, which are never changed by personal ordering. Cards and the playback queue use the same order without replacing the playing audio or changing its position.
+
+Preferences persist only in this browser in localStorage under `mapkaiMusicReactions.v1`, and other open tabs follow storage changes. They are personal choices, not shared vote counts or account-synchronized ratings. If browser storage is unavailable, controls still work for the current page and a visible note explains the temporary state. No preference is sent to the Music API or provider, and no song metadata, audio, original lyrics or timing is rewritten.
+
 ## Song creation entry
 
 The Music page's bilingual Create a song dialog prepares a prompt locally from the title, theme, language, style, 1- or 2-minute duration, and optional original lyrics. It validates the result against the provider's 4,100-character prompt limit. It does not send draft text to MapKAI or generate audio itself. Copying uses the clipboard with a selectable-text fallback; an explicit external link opens the existing music creator at `https://elevenlabs.io/app/music/history` without embedding draft text in its URL. The page names that destination and explains account-credit use before the user leaves. After generating and downloading a song in their own account, the owner can return to the existing authenticated upload studio.

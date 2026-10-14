@@ -3,6 +3,7 @@
   'use strict';
   if (document.getElementById('mapkai-music-dock')) return;
   const sync = globalThis.MapKAILyricsSync;
+  const preferences = globalThis.MapKAIMusicPreferences;
   const key = 'mapkaiMusicDock';
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
@@ -140,6 +141,7 @@
     } catch { return null; }
   }
   const ranks = new Map([['c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f', -1], ['ccb37c55-bae6-4f72-a80a-d1bc94e40ae0', 0], ['e4363fdb-2354-4e5c-98f0-9549b689b5c3', 1], ['bb5957e7-9e91-45e1-a978-5643451d7820', 2]]);
+  const compareTracks = (a, b) => preferences ? preferences.compare(a, b) : (ranks.get(a.id) ?? 3) - (ranks.get(b.id) ?? 3) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
   async function load() {
     if (page()) {
       loading = true; render();
@@ -160,7 +162,7 @@
         if (typeof cursor !== 'string' || cursor.length > 1000 || cursors.has(cursor) || count === 9) throw new Error('Invalid catalog cursor');
         cursors.add(cursor);
       }
-      tracks = [...found.values()].sort((a, b) => (ranks.get(a.id) ?? 3) - (ranks.get(b.id) ?? 3) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0));
+      tracks = [...found.values()].sort(compareTracks);
       loaded = true;
     })().catch(() => { libraryFailed = true; }).finally(() => { loading = false; fetchPromise = null; restore(); render(); });
     return fetchPromise;
@@ -307,6 +309,9 @@
       document.querySelectorAll('audio,video').forEach(media => { if (media !== target && !media.paused) media.pause(); });
     } else if (pending || loading || current.pending || active(current)) pause();
   }, true);
+  preferences?.subscribe(() => {
+    if (!page()) { tracks.sort(compareTracks); render(); }
+  });
   window.addEventListener('mapkai:music-update', () => { restore(); render(); });
   window.addEventListener('mapkai:music-intent', () => {
     if (delegatingPlay) return;
