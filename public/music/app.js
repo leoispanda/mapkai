@@ -551,9 +551,22 @@
     return card;
   }
 
+  function songNumber(track) {
+    const match = /^([0-9]{3,}) /.exec(track.title);
+    const number = match ? Number(match[1]) : 0;
+    return Number.isSafeInteger(number) && number > 0 ? number : Number.POSITIVE_INFINITY;
+  }
+
+  function compareTrackOrder(first, second) {
+    const firstNumber = songNumber(first);
+    const secondNumber = songNumber(second);
+    if (firstNumber !== secondNumber) return firstNumber - secondNumber;
+    return (featuredRank.get(first.id) ?? 3) - (featuredRank.get(second.id) ?? 3)
+      || (Date.parse(second.createdAt) || 0) - (Date.parse(first.createdAt) || 0);
+  }
+
   function syncCards() {
-    tracks.sort((first, second) => (featuredRank.get(first.id) ?? 3) - (featuredRank.get(second.id) ?? 3)
-      || (Date.parse(second.createdAt) || 0) - (Date.parse(first.createdAt) || 0));
+    tracks.sort(compareTrackOrder);
     const ids = new Set(tracks.map(track => track.id));
     for (const [id, card] of cards) {
       if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { selectedCard = null; playlistMode = false; playlistComplete = false; } card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }

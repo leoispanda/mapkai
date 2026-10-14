@@ -1,0 +1,13 @@
+# MapKAI song numbers and titles
+
+Public titles use `001 Song Name - MapKAI - Subject - Concept`. The leading number is a persistent library identifier, followed by one ASCII space; the remaining four fields use ` - ` separators. The full title must fit the existing 120 UTF-16 code-unit Music title limit. Keep all fields, shorten an original hook or use a documented readable subject label, and do not silently truncate.
+
+The initial 47 existing songs were assigned 001–047 once by public `createdAt` ascending, then song ID ascending for equal timestamps. `music/song-catalog.json` and its public mirror preserve the identity-to-number mapping, the four title components and the next available number, 48. Existing numbers stay fixed when tracks are filtered, a page is reloaded, a song is hidden, or a later song arrives; do not reuse a retired number or renumber the library. Future authorized additions append the saved next number and increment `nextNumber`, without recomputing earlier assignments.
+
+Music sorts numbered titles by their stored number ascending. Unnumbered future records follow numbered songs using the existing featured/date fallback until an authorized catalog update assigns their persistent number. Search, playlist positions and filtered row indexes do not assign or change song numbers.
+
+Subject and concept labels describe the existing lyrics accurately. Brand introductions use a truthful brand/learning focus; historical city-list songs remain geography or place-name songs. Adding consistent title fields does not turn a brand song or a historical story-first recording into a life-to-discipline production, a new recording, or a newly reviewed performance.
+
+Renaming changes titles and this display ledger only. Preserve each song ID, original audio bytes and URL, original lyrics, real lyric cues, AI label, provider identity, duration, publication timestamp, description and existing review uncertainties. Keep historical provider records, source packages and original filenames unchanged; the new public name is an alias. Naming does not grant an audio, content, performed-word, genre or synchronization PASS.
+
+The song-generation automation is paused at the owner's request. Numbering and renaming do not resume it or authorize new recordings, credit spending, extra transcription or audio edits. New music production requires the owner's explicit instruction to resume.

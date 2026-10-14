@@ -18034,7 +18034,7 @@ function renderCategoryVideoPreview(category, scope = 'category') {
 const categorySongTracks = {
   "02": {
     id: "fdfd14ce-3e3a-439c-91d2-f9e364be14a5",
-    title: "Look, Then Ask - MapKAI - Arts and Humanities - Visual Analysis",
+    title: "029 Look, Then Ask - MapKAI - Arts and Humanities - Visual Analysis",
     durationSeconds: 108.0424375,
     meta: { zh: "英文 · 1:48", en: "English · 1:48" },
     core: {
@@ -18045,7 +18045,7 @@ const categorySongTracks = {
   },
   "05": {
     id: "deecc5a6-ca8c-4726-9ef1-8f36dfeff6e0",
-    title: "Warm a Little Longer - MapKAI - Natural Sciences, Mathematics and Statistics - Thermal Insulation",
+    title: "032 Warm a Little Longer - MapKAI - Natural Sciences, Mathematics and Statistics - Thermal Insulation",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18056,7 +18056,7 @@ const categorySongTracks = {
   },
   "06": {
     id: "03c29a5d-917f-4beb-b3a5-182f4bc147dc",
-    title: "Start in the Middle - MapKAI - Information and Communication Technologies - Binary Search",
+    title: "033 Start in the Middle - MapKAI - Information and Communication Technologies - Binary Search",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18067,7 +18067,7 @@ const categorySongTracks = {
   },
   "00": {
     id: "3ac342f9-51cd-4f3b-a43a-8a8dc57cde12",
-    title: "Read Before You Choose - MapKAI - Generic programmes and qualifications - Literacy and Numeracy",
+    title: "027 Read Before You Choose - MapKAI - Generic programmes and qualifications - Literacy and Numeracy",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18078,7 +18078,7 @@ const categorySongTracks = {
   },
   "03": {
     id: "d6a470e4-db68-4023-81dc-9b04b8e662a2",
-    title: "Who Did We Ask - MapKAI - Social Sciences, Journalism and Information - Sampling Bias",
+    title: "031 Who Did We Ask - MapKAI - Social Sciences, Journalism and Information - Sampling Bias",
     durationSeconds: 120.0849375,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18089,7 +18089,7 @@ const categorySongTracks = {
   },
   "04": {
     id: "69ba1ff7-d151-4082-b17e-e2626ef04fd3",
-    title: "What Stays After Bills - MapKAI - Business, Administration and Law - Break-even Point",
+    title: "030 What Stays After Bills - MapKAI - Business, Administration and Law - Break-even Point",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18100,7 +18100,7 @@ const categorySongTracks = {
   },
   "07": {
     id: "361ce603-1e4b-4446-8473-89cffba7ada1",
-    title: "Will It Fit - MapKAI - Engineering, Manufacturing and Construction - Dimensional Tolerance",
+    title: "034 Will It Fit - MapKAI - Engineering, Manufacturing and Construction - Dimensional Tolerance",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18111,7 +18111,7 @@ const categorySongTracks = {
   },
   "08": {
     id: "5466f114-fcea-468a-8eb3-da2d38456d5d",
-    title: "Where Rain Goes - MapKAI - Agriculture, Forestry, Fisheries and Veterinary - Soil Infiltration",
+    title: "035 Where Rain Goes - MapKAI - Agriculture, Forestry, Fisheries and Veterinary - Soil Infiltration",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18122,7 +18122,7 @@ const categorySongTracks = {
   },
   "10": {
     "id": "4a0fb76e-cb24-4bfe-8a63-165001b61f0a",
-    "title": "Count the Flow - MapKAI - Services - Little's Law",
+    "title": "038 Count the Flow - MapKAI - Services - Little's Law",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18139,7 +18139,7 @@ const categorySongTracks = {
   },
   "01": {
     id: "d2049be8-7ee0-43a1-a80f-766f2a468439",
-    title: "A Little Help, Then Try - MapKAI - Education - Scaffolding",
+    title: "028 A Little Help, Then Try - MapKAI - Education - Scaffolding",
     durationSeconds: 120.0326875,
     meta: { zh: "英文 · 2:00", en: "English · 2:00" },
     core: {
@@ -18150,7 +18150,7 @@ const categorySongTracks = {
   },
   "09": {
     "id": "0f8944c6-fd4e-45cd-ac5a-22e0a4552bae",
-    "title": "Say It Your Way - MapKAI - Health and Welfare - Teach-back",
+    "title": "036 Say It Your Way - MapKAI - Health and Welfare - Teach-back",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18170,7 +18170,7 @@ const categorySongTracks = {
 const categoryGroupSongTracks = {
   "000": {
     "id": "1eaa815d-a3ee-4a44-b9b0-0d17f25fe8fb",
-    "title": "Try Before You Look - MapKAI - Generic programmes and qualifications not further defined - Spaced Retrieval Practice",
+    "title": "037 Try Before You Look - MapKAI - Generic programmes and qualifications not further defined - Spaced Retrieval Practice",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18187,7 +18187,7 @@ const categoryGroupSongTracks = {
   },
   "001": {
     "id": "f371a248-b6c3-4ad9-89c5-467aa2886313",
-    "title": "Same Length - MapKAI - Basic programmes and qualifications - Measurement and Units",
+    "title": "041 Same Length - MapKAI - Basic programmes and qualifications - Measurement and Units",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18204,7 +18204,7 @@ const categoryGroupSongTracks = {
   },
   "002": {
     "id": "3e8a31da-c412-4c6b-8ffb-1aac28a56763",
-    "title": "One More Bowl - MapKAI - Literacy and numeracy - Proportional Reasoning",
+    "title": "040 One More Bowl - MapKAI - Literacy and numeracy - Proportional Reasoning",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18221,7 +18221,7 @@ const categoryGroupSongTracks = {
   },
   "003": {
     "id": "38a9863f-c874-4cb1-ad34-6ac12dfafb31",
-    "title": "One Sentence First - MapKAI - Personal skills and development - Implementation Intentions",
+    "title": "039 One Sentence First - MapKAI - Personal skills and development - Implementation Intentions",
     "durationSeconds": 116.0359375,
     "meta": {
       "zh": "英文 · 1:56",
@@ -18238,7 +18238,7 @@ const categoryGroupSongTracks = {
   },
   "009": {
     "id": "35a50c6d-c221-4231-b4b0-1110fa0b6433",
-    "title": "Keep the Name - MapKAI - Generic programmes and qualifications not elsewhere classified - Categorical Data",
+    "title": "042 Keep the Name - MapKAI - Generic programmes and qualifications not elsewhere classified - Categorical Data",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18255,7 +18255,7 @@ const categoryGroupSongTracks = {
   },
   "011": {
     "id": "46b5a636-42ae-40fd-aeec-52989eece8be",
-    "title": "Show Me Why - MapKAI - Education - Formative Assessment",
+    "title": "043 Show Me Why - MapKAI - Education - Formative Assessment",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18272,7 +18272,7 @@ const categoryGroupSongTracks = {
   },
   "018": {
     "id": "b3e949de-bca1-4ab9-b188-deeb79b19639",
-    "title": "One Bridge - MapKAI - Inter-disciplinary programmes and qualifications involving education - Integrated Learning",
+    "title": "044 One Bridge - MapKAI - Inter-disciplinary programmes and qualifications involving education - Integrated Learning",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18289,7 +18289,7 @@ const categoryGroupSongTracks = {
   },
   "020": {
     "id": "19294308-f15b-4fd4-b26b-2fe060633aaf",
-    "title": "Why This One - MapKAI - Arts and humanities not further defined - Aesthetic Judgment",
+    "title": "045 Why This One - MapKAI - Arts and humanities not further defined - Aesthetic Judgment",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18306,7 +18306,7 @@ const categoryGroupSongTracks = {
   },
   "021": {
     "id": "b7fc894c-e97a-49a9-92b6-d4ac21dc30fd",
-    "title": "Move One Tap - MapKAI - Arts - Rhythmic Variation",
+    "title": "047 Move One Tap - MapKAI - Arts - Rhythmic Variation",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
@@ -18323,7 +18323,7 @@ const categoryGroupSongTracks = {
   },
   "022": {
     "id": "27124e5d-996a-4acc-98b2-37451861e50e",
-    "title": "Two Copies, One Claim - MapKAI - Humanities (except languages) - Historical Corroboration",
+    "title": "046 Two Copies, One Claim - MapKAI - Humanities (except languages) - Historical Corroboration",
     "durationSeconds": 120.0326875,
     "meta": {
       "zh": "英文 · 2:00",
