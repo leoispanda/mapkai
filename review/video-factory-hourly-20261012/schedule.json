@@ -36,7 +36,8 @@
     "code": "0213",
     "title": "Fine arts",
     "slug": "0213-fine-arts",
-    "state": "EDITORIAL_PENDING"
+    "state": "CREATOR_RESPONSE_PENDING_INPUT_OUTPUT_AUDIT_BLOCKED",
+    "claimed": true
   },
   "excluded": {
     "alreadyPublic": [
@@ -90,17 +91,18 @@
     "independentVideoReview": "EVIDENCE_REQUIRED"
   },
   "lastStarted": {
-    "code": "0212",
-    "title": "Fashion, interior and industrial design",
-    "productionRunId": "video-hourly-20261015T1500-8f5abf45",
-    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0212-subsubject-creator-1",
-    "creatorConversation": "https://chatgpt.com/c/6ad0d132-a578-83ed-a980-e767f21ce9b6",
-    "acceptedAt": "2026-10-15T13:47:44.652Z",
-    "state": "GENERATING",
-    "newNotebookSubmissions": 1,
-    "sourceReview": "PASS",
-    "notebookRequestId": "0212-af8fccd4-ff05-42a8-ba41-6505cedfc12d",
-    "notebookUrl": "https://notebook.google.com/notebook/d9c93566-d49c-4551-9d6d-cd28eb7e26d8"
+    "code": "0213",
+    "title": "Fine arts",
+    "productionRunId": "video-hourly-20261015T1700-b2311e68",
+    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0213-subsubject-creator-1",
+    "creatorConversation": "https://chatgpt.com/c/6ad0ed15-0e50-83ed-92fa-78a477a4d0fa",
+    "sendAttempted": true,
+    "sendCount": 1,
+    "fullStagedPromptVerified": true,
+    "fullPostSendAcceptanceVerified": false,
+    "state": "CREATOR_RESPONSE_PENDING_INPUT_OUTPUT_AUDIT_BLOCKED",
+    "newNotebookSubmissions": 0,
+    "sourceReview": "NOT_REVIEWED"
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
@@ -119,7 +121,7 @@
     "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-15T13:17:45.939721+00:00",
+    "checkedAt": "2026-10-15T15:17:57.554Z",
     "actualSharedWriterPathsClaimed": true,
     "activeExecution": true,
     "resourceState": "OWN_SHARED_RESOURCES_CLAIMED",
@@ -127,7 +129,7 @@
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T17:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T18:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -204,5 +206,14 @@
       "sourceReview": "PASS",
       "videoReview": "EVIDENCE_REQUIRED"
     }
-  ]
+  ],
+  "latestExecution": {
+    "scheduledLocal": "2026-10-15T17:00:00+02:00",
+    "code": "0213",
+    "run": "video-hourly-20261015T1700-b2311e68",
+    "state": "CREATOR_RESPONSE_PENDING_INPUT_OUTPUT_AUDIT_BLOCKED",
+    "actualCreatorSends": 1,
+    "actualNotebookSubmissions": 0,
+    "humanActionRequired": true
+  }
 }
