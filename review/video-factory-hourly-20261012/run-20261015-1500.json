@@ -49,7 +49,7 @@
     "noPurchaseOrUpgrade": true
   },
   "evidenceDirectory": ".workspace-backups/video-factory-0212-20261015",
-  "updatedAt": "2026-10-15T13:49:14.262127+00:00",
+  "updatedAt": "2026-10-15T13:51:33.817Z",
   "creatorResponseHash": "7ab983a0a1640fc705c3cc5f331877c980a911e40b92dd5e20140bf0c5497286",
   "steeringCharacters": 4156,
   "deterministicValidation": "PASS",
@@ -79,5 +79,14 @@
   "newSubmissionEarliestUtc": "2026-10-15T14:47:44.652Z",
   "actualVideoReviewDecision": "NOT_REVIEWED",
   "evidenceErratum": ".workspace-backups/video-factory-0212-20261015/research/design-17-erratum.json",
-  "nextAction": "Resume this exact Notebook and attempt; inspect ready state then download authentic original. Do not reimport, click Generate again or claim another subject while in flight."
+  "nextAction": "Resume this exact Notebook and attempt; inspect ready state then download authentic original. Do not reimport, click Generate again or claim another subject while in flight.",
+  "activeExecution": false,
+  "externalWorkActive": true,
+  "actualSharedResourcesOwned": false,
+  "resourceState": "LOCAL_RESOURCES_FREE_CLOUD_GENERATING",
+  "localServicesStopped": true,
+  "allOwnLocksReleased": true,
+  "locksReleasedAt": "2026-10-15T13:51:33.816Z",
+  "recordsCommit": "1c566b180f3c0d6e906a12d46a0ad98ac91fe3ac",
+  "otherAttemptEntriesPreserved": 8
 }

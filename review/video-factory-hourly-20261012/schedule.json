@@ -33,10 +33,10 @@
     "evidenceTruthfulnessRequired": true
   },
   "nextCandidate": {
-    "code": "0212",
-    "title": "Fashion, interior and industrial design",
-    "slug": "0212-fashion-interior-and-industrial-design",
-    "state": "GENERATING"
+    "code": "0213",
+    "title": "Fine arts",
+    "slug": "0213-fine-arts",
+    "state": "EDITORIAL_PENDING"
   },
   "excluded": {
     "alreadyPublic": [
@@ -49,7 +49,8 @@
       "0311",
       "0313",
       "0533",
-      "0211"
+      "0211",
+      "0212"
     ],
     "securityHold": [
       "0011"
@@ -82,10 +83,11 @@
     "scope": "All subsequent subjects: external ChatGPT/NotebookLM source/policy/review transmission, existing-account and quota generation up to18/day, direct public MapKAI previews with both labels."
   },
   "lastCompletedPreview": {
-    "code": "0211",
-    "verifiedAt": "2026-10-15T12:10:58.623Z",
-    "url": "https://www.mapkai.com/fields/0211-audio-visual-techniques-and-media-production",
-    "review": "PENDING"
+    "code": "0212",
+    "verifiedAt": "2026-10-15T14:38:22.732Z",
+    "url": "https://www.mapkai.com/fields/0212-fashion-interior-and-industrial-design?lang=en",
+    "review": "PENDING",
+    "independentVideoReview": "EVIDENCE_REQUIRED"
   },
   "lastStarted": {
     "code": "0212",
@@ -125,7 +127,7 @@
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T16:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T17:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -190,6 +192,17 @@
   "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-1500.json",
   "lastCadenceConfirmedAt": "2026-10-15T12:03:23.989229+00:00",
   "lastScheduleVerifiedAt": "2026-10-15T12:15:17.280064+00:00",
-  "lastServicedSlotLocal": "2026-10-15T15:00:00+02:00",
-  "updatedAt": "2026-10-15T13:49:14.262127+00:00"
+  "lastServicedSlotLocal": "2026-10-15T16:00:00+02:00",
+  "updatedAt": "2026-10-15T14:38:22.732Z",
+  "pendingReviewFollowUps": [
+    {
+      "code": "0212",
+      "requestId": "0212-af8fccd4-ff05-42a8-ba41-6505cedfc12d-video-review-616cd1cd2fa586c3-137d7a429a260daa-1",
+      "status": "ORIGINAL_ACCEPTED_RESPONSE_NOT_RETRIEVED",
+      "blocksMarkedPreview": false,
+      "blocksNextEligibleSubject": false,
+      "sourceReview": "PASS",
+      "videoReview": "EVIDENCE_REQUIRED"
+    }
+  ]
 }
