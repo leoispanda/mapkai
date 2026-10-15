@@ -6,9 +6,9 @@
   "url": "https://www.mapkai.com/fields/0212-fashion-interior-and-industrial-design?lang=en",
   "status": "PUBLIC_PREVIEW_PENDING_REVIEW",
   "sourceReview": "PASS",
-  "actualVideoReviewDecision": "NOT_RETRIEVED",
-  "independentVideoReviewStatus": "EVIDENCE_REQUIRED",
-  "actualReviewerPolicyDecision": null,
+  "actualVideoReviewDecision": "FAIL",
+  "independentVideoReviewStatus": "VALIDATED_INDEPENDENT_VIDEO_REVIEW",
+  "actualReviewerPolicyDecision": "BLOCKED",
   "reviewResponseNotFabricated": true,
   "backendPendingRecordAuthority": "BACKEND_EXECUTION_STATE_NOT_REVIEWER_JUDGMENT",
   "reviewRequestId": "0212-af8fccd4-ff05-42a8-ba41-6505cedfc12d-video-review-616cd1cd2fa586c3-137d7a429a260daa-1",
@@ -20,7 +20,7 @@
   "aiGenerated": true,
   "labels": [
     "AI generated",
-    "Pending review · Not fully approved"
+    "Pending review \u00b7 Not fully approved"
   ],
   "rawSha256": "616cd1cd2fa586c39d341b4bdcebbfb555812c2c8ed288b362c44f7180f09c6f",
   "originalBytes": 45392844,
@@ -47,5 +47,8 @@
   "contextScreenshotSha256": "d9fa5da6216e9af10543c83d885845db2ff5cc88a250c90653ecf65fe086d312",
   "observedAt": "2026-10-15T14:35:29.870Z",
   "verifiedAt": "2026-10-15T14:38:22.732Z",
-  "followUp": "Recover the original accepted independent-video-review response in the preserved reviewer conversation. Do not resend, reload a still-processing reviewer page without authorization, overwrite the immutable pending audit object, regenerate the video or infer review PASS."
+  "followUp": "Actual independent video FAIL and policy BLOCKED recovered and validated. Full audiovisual evidence remains insufficient. Human approval remains pending; public marked preview retained under owner authorization.",
+  "videoReviewRecoveredAt": "2026-10-15T15:59:07.879908+00:00",
+  "videoReviewRecoveryReceipt": "review/video-factory-hourly-20261012/review-recovery-0212-20261015.json",
+  "privateCatalogAfterReviewRecoverySha256": "61dfc3d2a2ecaa56bf5afa9d619baa2ce25cc7a96d6558d69611c57f64f49f10"
 }
