@@ -36,7 +36,7 @@
     "code": "0211",
     "title": "Audio-visual techniques and media production",
     "slug": "0211-audio-visual-techniques-and-media-production",
-    "state": "SOURCE_APPROVED_SUBMISSION_READY"
+    "state": "GENERATING"
   },
   "excluded": {
     "alreadyPublic": [
@@ -88,26 +88,14 @@
   },
   "lastStarted": {
     "code": "0211",
-    "runId": "video-hourly-20261015T1100-d9c63429",
-    "startedAt": "2026-10-15T09:00:55.634067+00:00",
-    "scheduledLocal": "2026-10-15T11:00:00+02:00",
-    "newNotebookSubmissions": 0,
-    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-2",
-    "creatorAcceptedAt": "2026-10-15T09:39:19.728Z",
-    "sourceReviewRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1",
-    "sourceReviewAcceptedAt": "2026-10-15T09:43:00.197Z",
-    "creatorRequestIds": [
-      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-1",
-      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-2"
-    ],
-    "sourceReviewRequestIds": [
-      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-1",
-      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1"
-    ],
-    "sourceReview": "PASS",
-    "artifactRevision": 2,
-    "status": "WAITING_SHARED_UPLOAD_CAPACITY",
-    "sourceFrozenAt": "2026-10-15T09:46:57.824Z"
+    "title": "Audio-visual techniques and media production",
+    "productionRunId": "video-hourly-20261015T1300-97c56852",
+    "requestId": "0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d",
+    "notebookUrl": "https://notebook.google.com/notebook/c1a2fa96-5d28-4581-b702-71748a708845",
+    "acceptedAt": "2026-10-15T11:14:09.933Z",
+    "state": "GENERATING",
+    "sourceReview": "PASS_REVISION_2",
+    "sourceFreezePath": ".workspace-backups/video-factory-0211-20261015/approved-source-freeze.json"
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
@@ -126,25 +114,16 @@
     "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-15T09:00:55.634067+00:00",
-    "scheduledLocal": "2026-10-15T11:00:00+02:00",
-    "decision": "CLAIMED_ACTUAL_SHARED_RESOURCES",
-    "candidateClaimed": true,
-    "canonicalCode": "0211",
-    "ownerThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
-    "ownerRunId": "video-hourly-20261015T1100-d9c63429",
-    "actualSharedResourcesOwned": true,
-    "actualSharedLockPaths": [
-      "review/video-factory-hourly-20261012/production.lock",
-      "review/module-batches/locks/shared-writer-release.lock",
-      "review/module-batches/.shared-writer-release.lock",
-      "review/shared-production-writer.lock"
-    ],
-    "nextScheduledLocal": "2026-10-15T12:00:00+02:00"
+    "checkedAt": "2026-10-15T11:18:53.455926+00:00",
+    "articleAndSongLatestActualTurns": "COMPLETED",
+    "actualSharedWriterPathsClaimed": true,
+    "newNotebookSubmissionAccepted": true,
+    "nextResumeSameField": "0211",
+    "localServiceStopped": true
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T13:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T14:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -205,5 +184,6 @@
     "receiptPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
   },
   "latestBudgetProposalPath": "review/video-factory-hourly-20261012/budget-proposal-20261015.json",
-  "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
+  "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json",
+  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-1300.json"
 }

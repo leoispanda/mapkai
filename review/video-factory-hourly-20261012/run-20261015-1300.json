@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "mapkai-hourly-video-run.v1",
+  "automationId": "mapkai-30",
+  "heartbeatReceivedAt": "2026-10-15T11:02:33.327Z",
+  "scheduledLocal": "2026-10-15T13:00:00+02:00",
+  "productionRunId": "video-hourly-20261015T1300-97c56852",
+  "canonicalIdentity": {
+    "code": "0211",
+    "title": "Audio-visual techniques and media production",
+    "slug": "0211-audio-visual-techniques-and-media-production",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317"
+  },
+  "status": "GENERATING",
+  "sourceReview": "PASS_REVISION_2",
+  "sourceFreezePath": ".workspace-backups/video-factory-0211-20261015/approved-source-freeze.json",
+  "knowledgeSha256": "c502adf60f1940335212fc8d9625ed6a8f48196221c96c1df226e5ced68d2329",
+  "steeringSha256": "d6f87043cdcdb2b8fda8fd86ff0905d4bda0ba714973eaa088ddff74c23ccd3b",
+  "notebookRequestId": "0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d",
+  "notebookPayloadSha256": "992c658382bae6638d7ed25b7b0fb7ad4f6c95258301b27030cb4fecc9c0e1b8",
+  "notebookUrl": "https://notebook.google.com/notebook/c1a2fa96-5d28-4581-b702-71748a708845",
+  "privateNotebookTitle": "MapKAI | 0211 Audio-visual techniques and media production | 0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d",
+  "sourceImport": {
+    "completeRenderedMarkdownEquivalent": true,
+    "exactOriginalComposerBytes": true,
+    "selectedSourceCount": 1,
+    "steeringImportedAsSource": false,
+    "auditPath": ".workspace-backups/video-factory-0211-20261015/executor/notebook-progress/762ddd6d852bd3167d601cbe287be7c1e76b57df027e7990c492718286b5c52a/source_verified.json"
+  },
+  "steering": {
+    "exactOriginalComposerBytes": true,
+    "utf16Characters": 4352,
+    "actualUiMaxLength": 5000,
+    "generationSettings": {
+      "format": "Explainer",
+      "language": "English",
+      "visualStyle": "Auto-select",
+      "selectedSourceCount": 1,
+      "customTopicSelected": true
+    },
+    "auditPath": ".workspace-backups/video-factory-0211-20261015/executor/notebook-progress/762ddd6d852bd3167d601cbe287be7c1e76b57df027e7990c492718286b5c52a/steering_verified.json"
+  },
+  "providerUsage": {
+    "observedAt": "2026-10-15T11:08:58.894Z",
+    "currentPercentUsed": 0,
+    "weeklyPercentUsed": 3,
+    "existingPlan": "PRO badge observed on actual Notebook",
+    "upgradePerformed": false,
+    "actualUsageAx": "Browser tab: 5, Title: \"MapKAI | 0211 Audio-visual techniques and media production | 0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d - Gemini Notebook\", URL: \"https://notebook.google.com/notebook/c1a2fa96-5d28-4581-b702-71748a708845\".\n0 AXWebArea URL: notebook.google.com/notebook/c1a2fa96-5d28-4581-b702-71748a708845, MapKAI | 0211 Audio-visual techniques and media production | 0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d - Gemini Notebook\n\t1 container\n\t\t2 container\n\t\t\t3 container Gemini Notebook AI Usage & Limits\n\t\t\t\t4 container Gemini Notebook AI Usage & Limits\n\t\t\t\t\t5 heading Gemini Notebook AI Usage & Limits, Value: 2, ID: dialog-title\n\t\t\t\t\t\t6 text Gemini Notebook AI Usage & Limits\n\t\t\t\t\t7 button Close dialog\n\t\t\t\t\t8 container\n\t\t\t\t\t\t9 text Your plan's limits determine how much you can use Gemini Notebook over time. This only represents your use of Gemini Notebook, not other products. Advanced models and features can take up more usage. \n\t\t\t\t\t\t10 link Description: Learn more, Value: support.google.com/gemininotebook?p=usagelimits\n\t\t\t\t\t\t11 text Current Gemini Notebook AI usage\n\t\t\t\t\t\t12 text 0% used\n\t\t\t\t\t\t13 progress indicator 0\n\t\t\t\t\t\t14 text Resets at 15:24\n\t\t\t\t\t\t15 text Weekly limit\n\t\t\t\t\t\t16 text 3% used\n\t\t\t\t\t\t17 text Resets 18 Oct at 14:24\n\t\t\t\t\t\t18 text Get more usage\n\t\t\t\t\t\t19 button Upgrade\n\nThe focused UI element is 7 button Close dialog"
+  },
+  "modelRequestsThisRound": 0,
+  "generateClicksThisRound": 1,
+  "newNotebookSubmissionsThisRound": 1,
+  "actualGenerateClickAt": "2026-10-15T11:12:08.619Z",
+  "acceptedAt": "2026-10-15T11:14:09.933Z",
+  "receiptPath": "mapkai-video-factory/runtime/notebook/0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d/result.json",
+  "actualGeneratingSignal": {
+    "source": "DOM",
+    "visible": true,
+    "text": "progress_activity\nGenerating Explainer Video Overview...\nThis may take a while"
+  },
+  "proofScreenshot": {
+    "requestId": "0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d",
+    "payloadSha256": "992c658382bae6638d7ed25b7b0fb7ad4f6c95258301b27030cb4fecc9c0e1b8",
+    "phase": "accepted",
+    "path": "/Users/leoyang/Documents/mapkai/.workspace-backups/video-factory-0211-20261015/executor/notebook-screenshots/762ddd6d852bd3167d601cbe287be7c1e76b57df027e7990c492718286b5c52a-accepted.jpg",
+    "sha256": "54fdbbfbdbbe1d384d09c04e346942fc717448fb20ef5af14c908a55ac132ffb",
+    "fileSize": 107490,
+    "mimeType": "image/jpeg",
+    "observedAt": "2026-10-15T11:14:09.933Z",
+    "recordedAt": "2026-10-15T11:14:10.086Z"
+  },
+  "lastUiObservation": "Final actual CUAgetAXState showed nochange from the verifiedgeneratingcard. No completionclaim.",
+  "downloadsThisRound": 0,
+  "uploadsThisRound": 0,
+  "publicationsThisRound": 0,
+  "actualVideoReview": "NOT_REVIEWED",
+  "humanReview": "PENDING",
+  "brandingStatus": "NOT_APPLIED",
+  "publicationStatus": "NOT_PUBLISHED",
+  "otherManifestItemsPreserved": 76,
+  "sharedBudgetEvidence": ".workspace-backups/video-factory-0211-20261015/round-20261015-1300/shared-budget-live.json",
+  "deliveryDraftScopePath": ".workspace-backups/video-factory-0211-delivery-20261015/draft-scope.json",
+  "serviceStopEvidencePath": ".workspace-backups/video-factory-0211-20261015/round-20261015-1300/services-stopped.json",
+  "nextScheduledLocal": "2026-10-15T14:00:00+02:00",
+  "handoff": "0211exact approved revision2 source was imported as the onlyselectedNotebooksource.4352UTF16steeringcharacters were verified against reviewed bytes in actual5000-character customizer;Explainer/English/Auto-select/Customtopic were actualselectedsettings. One Generate now click only; actual DOM parent text shows Generating Explainer Video Overview and durableACCEPTEDreceipt exists. Continue the sameNotebook/attempt; do not create a newNotebook, reimport, clickGenerateagain, or startanotherfield. No original video/download/upload/publication exists yet. Next14:00round must inspect this exactNotebookforcompletion, download one authenticoriginal,verifyfullhash/container/duration/resolution/decode,archiveavailableframe/transcript/independentvideoevidence,andpublishwithtwoexistinglabels. Video/humanreviews remainNOT_REVIEWED/PENDING. Raw-bound delivery drafts are fail-closed until actual original is frozen. SourcePASSand76otherrows/allpriorattempts preserved. Current4GiBsharedbudget/8GiBstorage and existing request limits remainapplied; no budget consent is pending. Last actualsubmit2026-10-15T11:14:09.933Z;futureNEWsubmissions must be>=60minutes apart. Cloud generation may continue while shared local locks are released; inspect live ownership on resume.",
+  "recordedAt": "2026-10-15T11:18:53.455926+00:00"
+}
