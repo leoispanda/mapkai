@@ -36,7 +36,7 @@
     "code": "0212",
     "title": "Fashion, interior and industrial design",
     "slug": "0212-fashion-interior-and-industrial-design",
-    "state": "EDITORIAL_PENDING"
+    "state": "GENERATING"
   },
   "excluded": {
     "alreadyPublic": [
@@ -88,15 +88,17 @@
     "review": "PENDING"
   },
   "lastStarted": {
-    "code": "0211",
-    "title": "Audio-visual techniques and media production",
-    "productionRunId": "video-hourly-20261015T1300-97c56852",
-    "requestId": "0211-f1c29866-dede-4cba-8ec6-89ad6bf1445d",
-    "notebookUrl": "https://notebook.google.com/notebook/c1a2fa96-5d28-4581-b702-71748a708845",
-    "acceptedAt": "2026-10-15T11:14:09.933Z",
+    "code": "0212",
+    "title": "Fashion, interior and industrial design",
+    "productionRunId": "video-hourly-20261015T1500-8f5abf45",
+    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0212-subsubject-creator-1",
+    "creatorConversation": "https://chatgpt.com/c/6ad0d132-a578-83ed-a980-e767f21ce9b6",
+    "acceptedAt": "2026-10-15T13:47:44.652Z",
     "state": "GENERATING",
-    "sourceReview": "PASS_REVISION_2",
-    "sourceFreezePath": ".workspace-backups/video-factory-0211-20261015/approved-source-freeze.json"
+    "newNotebookSubmissions": 1,
+    "sourceReview": "PASS",
+    "notebookRequestId": "0212-af8fccd4-ff05-42a8-ba41-6505cedfc12d",
+    "notebookUrl": "https://notebook.google.com/notebook/d9c93566-d49c-4551-9d6d-cd28eb7e26d8"
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
@@ -115,16 +117,15 @@
     "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-15T11:18:53.455926+00:00",
-    "articleAndSongLatestActualTurns": "COMPLETED",
+    "checkedAt": "2026-10-15T13:17:45.939721+00:00",
     "actualSharedWriterPathsClaimed": true,
-    "newNotebookSubmissionAccepted": true,
-    "nextResumeSameField": "0211",
-    "localServiceStopped": true
+    "activeExecution": true,
+    "resourceState": "OWN_SHARED_RESOURCES_CLAIMED",
+    "articleAndSongLatestTurns": "completed/notLoaded"
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T14:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T16:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -161,9 +162,9 @@
     "receiptPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
   },
   "lastContinuityCheck": {
-    "checkedAt": "2026-10-15T10:03:58.878786+00:00",
-    "path": "review/video-factory-hourly-20261012/check-20261015-1200.json",
-    "state": "WAITING_SHARED_UPLOAD_CAPACITY",
+    "checkedAt": "2026-10-15T12:19:25.108427+00:00",
+    "path": "review/video-factory-hourly-20261012/check-20261015-1400-post-delivery.json",
+    "state": "SLOT_ALREADY_SERVICED_BY_EXISTING_VIDEO_COMPLETION",
     "checkOnly": true,
     "newNotebookSubmissions": 0
   },
@@ -186,7 +187,9 @@
   },
   "latestBudgetProposalPath": "review/video-factory-hourly-20261012/budget-proposal-20261015.json",
   "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json",
-  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-1300.json",
+  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-1500.json",
   "lastCadenceConfirmedAt": "2026-10-15T12:03:23.989229+00:00",
-  "lastScheduleVerifiedAt": "2026-10-15T12:15:17.280064+00:00"
+  "lastScheduleVerifiedAt": "2026-10-15T12:15:17.280064+00:00",
+  "lastServicedSlotLocal": "2026-10-15T15:00:00+02:00",
+  "updatedAt": "2026-10-15T13:49:14.262127+00:00"
 }
