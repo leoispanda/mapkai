@@ -8,6 +8,7 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0112': 'Training for pre-school teachers',
   '0113': 'Teacher training without subject specialisation',
   '0114': 'Teacher training with subject specialisation',
+  '0211': 'Audio-visual techniques and media production',
   '0311': 'Economics',
   '0313': 'Psychology',
   '0533': 'Physics',
