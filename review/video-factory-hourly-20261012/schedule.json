@@ -36,7 +36,7 @@
     "code": "0214",
     "title": "Handicrafts",
     "slug": "0214-handicrafts",
-    "state": "CREATOR_SENT_RESPONSE_GENERATING",
+    "state": "CREATOR_OUTPUT_CAPTURED_ACCEPTANCE_METHOD_APPROVAL_REQUIRED",
     "claimed": true
   },
   "excluded": {
@@ -100,9 +100,11 @@
     "sendCount": 1,
     "fullStagedPromptVerified": true,
     "fullPostSendAcceptanceVerified": false,
-    "state": "CREATOR_SENT_RESPONSE_GENERATING",
+    "state": "CREATOR_OUTPUT_CAPTURED_ACCEPTANCE_METHOD_APPROVAL_REQUIRED",
     "newNotebookSubmissions": 0,
-    "sourceReview": "NOT_REVIEWED"
+    "sourceReview": "NOT_REVIEWED",
+    "creatorResponseCompleteObserved": true,
+    "originalCreatorArtifactRetrieved": true
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
@@ -121,15 +123,15 @@
     "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-15T16:14:33.552796+00:00",
+    "checkedAt": "2026-10-15T18:14:41.207401+00:00",
     "actualSharedWriterPathsClaimed": false,
     "activeExecution": false,
-    "resourceState": "LOCAL_RESOURCES_FREE_ACCEPTANCE_AUDIT_BLOCKED",
+    "resourceState": "LOCAL_RESOURCES_FREE_CREATOR_RESPONSE_GENERATING_EXTERNALLY",
     "articleAndSongLatestTurns": "completed/notLoaded"
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T21:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T22:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -191,20 +193,20 @@
   },
   "latestBudgetProposalPath": "review/video-factory-hourly-20261012/budget-proposal-20261015.json",
   "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json",
-  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-2000.json",
+  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-2100.json",
   "lastCadenceConfirmedAt": "2026-10-15T12:03:23.989229+00:00",
   "lastScheduleVerifiedAt": "2026-10-15T12:15:17.280064+00:00",
-  "lastServicedSlotLocal": "2026-10-15T20:00:00+02:00",
-  "updatedAt": "2026-10-15T18:11:09.282413+00:00",
+  "lastServicedSlotLocal": "2026-10-15T21:00:00+02:00",
+  "updatedAt": "2026-10-15T19:02:47.916638+00:00",
   "pendingReviewFollowUps": [],
   "latestExecution": {
-    "scheduledLocal": "2026-10-15T20:00:00+02:00",
+    "scheduledLocal": "2026-10-15T21:00:00+02:00",
     "code": "0214",
     "run": "video-hourly-20261015T2000-ad716ec9",
-    "state": "CREATOR_SENT_RESPONSE_GENERATING",
-    "actualCreatorSendsThisHeartbeat": 1,
+    "state": "CREATOR_OUTPUT_CAPTURED_ACCEPTANCE_METHOD_APPROVAL_REQUIRED",
+    "actualCreatorSendsThisHeartbeat": 0,
     "actualNotebookSubmissions": 0,
-    "humanActionRequired": false
+    "humanActionRequired": true
   },
   "completedReviewFollowUps": [
     {
@@ -232,5 +234,12 @@
       "permissionNotGranted": true,
       "doesNotBlockOtherEligibleSubjects": true
     }
-  ]
+  ],
+  "methodApprovalHold": {
+    "state": "READ_ONLY_DOM_METHOD_PERMISSION_REQUIRED",
+    "blocksNewSourceSends": true,
+    "reason": "Native acceptance method rejected for both completed sources; avoid accumulating more completed requests behind same general method gate.",
+    "queuePreserved": true,
+    "automationPaused": false
+  }
 }

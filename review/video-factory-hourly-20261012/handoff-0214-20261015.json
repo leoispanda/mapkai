@@ -14,7 +14,7 @@
   "actualCreatorSendCount": 1,
   "fullPreSendInputVerified": true,
   "actualExtraHighVerified": true,
-  "currentVisibleState": "Stop button active; response not complete",
+  "currentVisibleState": "Response complete, Worked for8m32s, Regenerate response",
   "fullPostSendAcceptanceVerified": false,
   "sourceReview": "NOT_REVIEWED",
   "videoReview": "NOT_REVIEWED",
@@ -26,6 +26,9 @@
   "uploads": 0,
   "publications": 0,
   "priorFineArtsPreserved": true,
-  "nextAction": "Resume original request without Send/regeneration. Recover full source JSON and true complete original sent input before result acceptance; independent reviewer required before Notebook.",
-  "updatedAt": "2026-10-15T18:12:24.676179+00:00"
+  "nextAction": "Wait for explicit permitted verification method; do not repeat rejected native ACCEPTED assertion or send Creator again. Independent reviewer has not started.",
+  "updatedAt": "2026-10-15T19:02:47.916638+00:00",
+  "creatorOriginalOutputRetrieved": true,
+  "nativeRecoveryReceipt": "review/video-factory-hourly-20261012/native-source-recovery-0214-20261015.json",
+  "stage": "CREATOR_OUTPUT_CAPTURED_ACCEPTANCE_METHOD_APPROVAL_REQUIRED"
 }
