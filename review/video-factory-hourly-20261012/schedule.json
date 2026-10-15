@@ -3,7 +3,7 @@
   "status": "ACTIVE",
   "requestedAt": "2026-10-12T19:38:00Z",
   "workspace": "/Users/leoyang/Documents/mapkai",
-  "name": "MapKAI \u6bcf\u5c0f\u65f6\u6574\u70b9\u89c6\u9891\u751f\u6210\u4e0e\u53d1\u5e03",
+  "name": "MapKAI 每小时整点视频生成与发布",
   "firstRunLocal": "2026-10-12T22:30:00+02:00",
   "timezone": "Europe/Amsterdam",
   "recurrence": {
@@ -15,8 +15,8 @@
   "kind": "heartbeat",
   "destination": "current_thread",
   "activationConfirmed": true,
-  "userRequest": "\u7ee7\u7eed\u751f\u6210\u89c6\u9891 \u6bcf\u4e2a\u5c0f\u65f6\u751f\u6210\u4e00\u4e2a \u76f4\u63a5\u653e\u4e0a\u53bb\u5373\u53ef",
-  "latestScheduleSteering": "\u6bcf\u5c0f\u65f6\u90fd\u8981\u505a",
+  "userRequest": "继续生成视频 每个小时生成一个 直接放上去即可",
+  "latestScheduleSteering": "每小时都要做",
   "runLimits": {
     "maximumNewNotebookSubmissionsPerRun": 1,
     "minimumMinutesBetweenNewSubmissions": 60,
@@ -27,16 +27,16 @@
   "publicPreview": {
     "labels": [
       "AI generated",
-      "Pending review \u00b7 Not fully approved"
+      "Pending review · Not fully approved"
     ],
     "formalApproval": "PENDING",
     "evidenceTruthfulnessRequired": true
   },
   "nextCandidate": {
-    "code": "0213",
-    "title": "Fine arts",
-    "slug": "0213-fine-arts",
-    "state": "CREATOR_COMPLETE_ARTIFACT_RETRIEVAL_REQUIRED",
+    "code": "0214",
+    "title": "Handicrafts",
+    "slug": "0214-handicrafts",
+    "state": "CREATOR_SENT_RESPONSE_GENERATING",
     "claimed": true
   },
   "excluded": {
@@ -73,14 +73,14 @@
     "workaroundAttempted": false,
     "resolvedBy": "Specific human authorization followed by successful automation creation."
   },
-  "prompt": "\u7528\u6237\u8fdb\u4e00\u6b65\u660e\u786e\u201c\u6bcf\u5c0f\u65f6\u90fd\u8981\u505a\u201d\uff1a\u6bcf\u4e2a\u6574\u70b9\u90fd\u6267\u884c\u4e00\u8f6e\u5b9e\u9645\u89c6\u9891\u5de5\u5382\u5de5\u4f5c\uff0c\u4f18\u5148\u63a8\u8fdb\u672a\u5b8c\u6210\u89c6\u9891\u7684\u751f\u6210\u72b6\u6001\u68c0\u67e5\u3001\u4e0b\u8f7d\u3001\u6838\u9a8c\u3001\u4e0a\u4f20\u548c\u516c\u5f00\u53d1\u5e03\uff1b\u6ca1\u6709\u5728\u9014\u89c6\u9891\u4e14\u8d44\u6e90/\u989d\u5ea6\u53ef\u7528\u65f6\u9886\u53d6\u4e0b\u4e00\u5b66\u79d1\u3002\u4ec5\u786e\u8ba4\u6392\u671f\u6216\u53e3\u5934\u7b54\u590d\u4e0d\u7b97\u6267\u884c\u3002\u82e5\u786e\u6709\u751f\u6210\u672a\u5b8c\u6210\u3001\u4f7f\u7528\u9650\u5236\u6216\u5171\u4eab\u8d44\u6e90\u5360\u7528\uff0c\u4fdd\u5b58\u5b9e\u9645\u8bc1\u636e\u548c\u7eed\u8dd1\u9636\u6bb5\uff0c\u4e0b\u8f6e\u7ee7\u7eed\uff0c\u4e0d\u91cd\u590d\u751f\u6210\u3001\u4e0d\u4f2a\u9020\u5b8c\u6210\u3002\n\n\u7ee7\u7eed\u5728 /Users/leoyang/Documents/mapkai \u8fd0\u884c MapKAI \u89c6\u9891\u5de5\u5382\u3002\u7528\u6237\u5df2\u660e\u786e\u6279\u51c6\u957f\u671f\u6388\u6743\uff1a\u540e\u7eed\u6240\u6709\u5b66\u79d1\u7684\u77e5\u8bc6\u5305\u3001\u5b8c\u6574\u521b\u4f5c/\u5ba1\u6838\u653f\u7b56\u53ca\u5ba1\u67e5\u6750\u6599\u53ef\u53d1\u9001\u81f3\u5176\u5df2\u767b\u5f55\u7684 ChatGPT \u548c NotebookLM\uff1b\u4f7f\u7528\u73b0\u6709\u8d26\u53f7\u4e0e\u989d\u5ea6\u751f\u6210\u89c6\u9891\uff08\u6bcf\u65e5\u6700\u591a18\u6761\uff09\uff1b\u751f\u6210\u5b8c\u6210\u540e\u76f4\u63a5\u516c\u5f00\u5230 MapKAI \u5e76\u663e\u793a\u6307\u5b9a\u7684AI\u4e0e\u5f85\u5ba1\u6838\u6807\u6ce8\u3002\u7528\u6237\u4e8e2026-10-15\u6700\u65b0\u660e\u786e\u8981\u6c42\u201c\u7ee7\u7eed\u5f00\u59cb\u89c6\u9891\u5de5\u5382\u6bcf\u5c0f\u65f6\u81ea\u52a8\u6267\u884c\u201d\uff0c\u660e\u786e\u6062\u590d2026-10-14\u6682\u505c\u7684\u89c6\u9891\u4efb\u52a1\uff0c\u5e76\u5c06\u6392\u671f\u6539\u4e3a Europe/Amsterdam \u672c\u5730\u65f6\u95f4\u6bcf\u5c0f\u65f6\u6574\u70b9\uff0800\u520600\u79d2\uff09\u542f\u52a8\u3002\u6b64\u5b89\u6392\u53d6\u4ee3\u6b64\u524d\u5355\u6570\u5c0f\u65f6\u6574\u70b9\u53ca\u66f4\u65e9\u7684\u6bcf\u5c0f\u65f630\u5206\u6392\u671f\uff1b\u6062\u590d\u540e\u4ece\u4e0b\u4e00\u4e2a\u6574\u70b9\u5f00\u59cb\uff0c\u6682\u505c\u671f\u95f4\u6216\u5df2\u8fc7\u53bb\u7684\u65f6\u6bb5\u4e0d\u8865\u8dd1\u3002\u63d0\u524d\u5524\u9192\u65f6\u53ef\u4ee5\u6838\u5b9e\u72b6\u6001\uff0c\u4f46\u4e0d\u5f97\u5728\u8ba1\u5212\u6574\u70b9\u4e4b\u524d\u9886\u53d6\u65b0\u5b66\u79d1\u6216\u63d0\u4ea4\u89c6\u9891\u751f\u6210\uff1b\u82e5\u65e2\u6709\u4efb\u52a1\u672a\u5b8c\u6210\u5219\u4f18\u5148\u7eed\u63a5\uff0c\u4e0d\u5e76\u884c\u542f\u52a8\u7b2c\u4e8c\u4e2a\u89c6\u9891\u3002\u6bcf\u8f6e\u6700\u591a\u63a8\u8fdb\u4e00\u4e2a\u65b0\u5b66\u79d1\u89c6\u9891\u3002\u751f\u6210\u5b8c\u6210\u540e\u76f4\u63a5\u53d1\u5e03\u4e3a\u516c\u5f00\u5b66\u4e60\u9884\u89c8\uff0c\u9875\u9762\u53ea\u663e\u793a\u201cAI generated\u201d\u548c\u201cPending review \u00b7 Not fully approved\u201d\uff0c\u6cbf\u7528 Statistics \u5df2\u4e0a\u7ebf\u7684\u64ad\u653e\u5668\u3002\u65e0\u9700\u518d\u6b21\u8be2\u95ee\u666e\u901a\u751f\u6210\u3001\u4e0a\u4f20\u6216\u516c\u5f00\u9884\u89c8\u8bb8\u53ef\uff1b\u8fd9\u4e0d\u7b49\u4e8e\u4eba\u5de5\u5b8c\u6574\u6279\u51c6\uff0c\u4e0d\u80fd\u4f2a\u9020\u5ba1\u6838PASS\u3002\n\n\u6bcf\u6b21\u5148\u8bfb\u6839\u76ee\u5f55 AGENTS.md\u3001MAPKAI_MEMORY.md\u3001docs/mapkai-deployment-policy.md\u3001review/video-factory-hourly-20261012/schedule.json\uff0c\u4ee5\u53ca mapkai-video-factory/runtime/subsubjects/manifest.json \u548c\u5b9e\u9645 Notebook/\u4e0a\u4f20/\u516c\u5f00\u53d1\u5e03\u56de\u6267\u3002/Users/leoyang/Documents/mapkai \u662f\u552f\u4e00\u6709\u6548\u5de5\u4f5c\u533a\uff0c\u65e7 archive/atlas \u8def\u5f84\u53ea\u662f\u517c\u5bb9\u5386\u53f2\u4fe1\u606f\u3002Statistics 0542\u3001Personal skills and development 0031\u3001Education science 0111\u3001Training for pre-school teachers 0112\u3001Teacher training without subject specialisation 0113 \u548c Teacher training with subject specialisation 0114 \u5df2\u516c\u5f00\uff0c\u8df3\u8fc7\uff0c\u4e0d\u91cd\u65b0\u751f\u6210\uff1b0011 SECURITY_PAUSED \u548c0021 RECOVERY_REQUIRED \u4fdd\u7559\u3002\u4f18\u5148\u7eed\u63a5\u672c\u4efb\u52a1\u4e0a\u8f6e\u672a\u5b8c\u6210\u7684\u90a3\u4e2a\u5b66\u79d1\uff1b\u6ca1\u6709\u672a\u5b8c\u6210\u5b66\u79d1\u65f6\u6309\u73b0\u6709 Sub-Subject \u961f\u5217\u9886\u53d6\u9996\u4e2a\u53ef\u5904\u7406 EDITORIAL_PENDING \u9879\uff0c\u5f53\u524d\u4e0b\u4e00\u9879\u662f0212 Fashion, interior and industrial design\uff1b0211 Audio-visual techniques and media production \u5df2\u5b8c\u6210\u771f\u5b9e\u539f\u7247\u3001\u79c1\u6709\u4e0a\u4f20\u548c\u6b63\u5f0f\u533f\u540d\u64ad\u653e\u9a8c\u8bc1\uff0c\u5df2\u516c\u5f00\u5e76\u4fdd\u6301\u4e24\u9879\u6807\u6ce8\uff1b\u5176\u6e90\u7a3fPASS\u3001\u5b9e\u9645\u89c6\u9891FAIL/\u72ec\u7acb\u653f\u7b56BLOCKED\u548c\u4eba\u5de5PENDING\u987b\u5206\u522b\u4fdd\u7559\uff1b\u4ee5\u540e\u4ee5\u5b9e\u9645\u961f\u5217\u548c\u516c\u5f00\u56de\u6267\u4e3a\u51c6\u3002\u6700\u65b0\u8fdc\u7aef\u516c\u5f00\u76ee\u5f55\u53e6\u6709\u5df2\u516c\u5f00\u539f\u7247 Economics0311\u3001Psychology0313\u3001Physics0533\uff1b\u6838\u5b9e\u5176\u539f\u59cb\u516c\u5f00\u56de\u6267\u540e\u8df3\u8fc7\uff0c\u4fdd\u7559\u5386\u53f2 UNKNOWN \u6e90\u7a3f\u5ba1\u6838\uff0c\u4e0d\u80fd\u4f2a\u9020\u6e90\u7a3f\u6216\u89c6\u9891\u5ba1\u6838PASS\uff0c\u4e5f\u4e0d\u80fd\u6539\u5199\u5176\u4ed6\u961f\u5217\u8bb0\u5f55\u3002\u4fdd\u7559\u6bcf\u4e2a\u539f\u59cb code\u3001title\u3001slug\u3001runId\u3001\u8bf7\u6c42ID\u53ca\u5168\u90e8\u5176\u4ed6\u961f\u5217\u9879\u76ee\u3002\u4e0d\u8981\u9a71\u52a8\u65e7v5/major-fields\u961f\u5217\u91cd\u590d\u5236\u4f5c\u540c\u4e00\u5185\u5bb9\u3002\n\n\u6bcf\u8f6e\u5f00\u59cb\u6838\u5b9e\u672c\u4efb\u52a1\u8fd0\u884c\u9501\u3001\u73b0\u6709\u6587\u7ae0\u4efb\u52a1\u7684\u5171\u4eab\u5199\u4f5c/\u53d1\u5e03\u9501\u548c\u5f53\u524d\u771f\u5b9e\u8d44\u6e90\u72b6\u6001\u3002\u6587\u7ae0\u771f\u6b63\u4f7f\u7528\u7684\u5171\u4eab\u8def\u5f84\u662f review/module-batches/locks/shared-writer-release.lock \u548c\u517c\u5bb9\u8def\u5f84 review/module-batches/.shared-writer-release.lock\uff1b\u9501\u53ef\u80fd\u4e3a\u76ee\u5f55\uff0c\u5fc5\u987b\u8bfb\u53d6 owner.json\uff0c\u7ed3\u5408\u6587\u7ae0\u6279\u6b21 state \u7684 activeExecution/resourceState \u53ca\u771f\u5b9e owner \u8fd0\u884c\u72b6\u6001\u6838\u5b9e\u3002review/shared-production-writer.lock \u53ea\u662f\u5386\u53f2\u89c6\u9891\u6807\u8bb0\uff0c\u5b83\u7f3a\u5931\u4e0d\u8868\u793a\u6587\u7ae0\u5171\u4eab\u8d44\u6e90\u7a7a\u95f2\u3002\u4efb\u4f55\u5b9e\u9645\u5171\u4eab\u9501\u4ecd\u6709\u8fd0\u884c\u6301\u6709\u8005\u65f6\u7b49\u5f85\uff0c\u4e0d\u8986\u76d6\u3001\u5220\u9664\u6216\u6309\u5e74\u9f84\u63a5\u7ba1\u3002\u8d44\u6e90\u7a7a\u95f2\u4e14\u539f\u6301\u6709\u8005\u5df2\u771f\u5b9e\u9000\u51fa\u540e\uff0c\u89c6\u9891\u4e5f\u5fc5\u987b\u6309\u4e0e\u6587\u7ae0\u4e00\u81f4\u7684\u5b9e\u9645\u5171\u4eab\u8def\u5f84\u539f\u5b50\u9886\u53d6\u8d44\u6e90\uff0c\u8bb0\u5f55\u771f\u5b9e\u517c\u5bb9 owner/run \u4e0e ownerThreadId/runId\uff0c\u5e76\u53ea\u91ca\u653e\u672c\u8fd0\u884c\u62e5\u6709\u7684\u9501\uff1b\u65e7\u89c6\u9891\u6807\u8bb0\u4e0d\u80fd\u66ff\u4ee3\u5b9e\u9645\u5171\u4eab\u9501\u3002\u4e0a\u8f6e\u4ecd\u5728\u8fd0\u884c\u6216\u5171\u4eab\u8d44\u6e90\u6b63\u88ab\u5360\u7528\u65f6\u4fdd\u7559\u7eed\u8dd1\u4f4d\u7f6e\uff0c\u4e0d\u80fd\u4ec5\u51ed\u9501\u7684\u65f6\u95f4\u5224\u65ad\u53ef\u62a2\u5360\uff0c\u4e0d\u80fd\u540c\u65f6\u542f\u52a8\u7b2c\u4e8c\u4e2a\u89c6\u9891\uff0c\u4e5f\u4e0d\u80fd\u8865\u8dd1\u9519\u8fc7\u7684\u591a\u5c0f\u65f6\u989d\u5ea6\u3002\u6bcf\u8f6e\u6700\u591a\u4e00\u6b21\u65b0\u7684\u771f\u5b9e Notebook \u89c6\u9891\u751f\u6210\u63d0\u4ea4\uff1b\u4efb\u4f55\u91cd\u590d\u6216\u91cd\u505a\u90fd\u7b97\u4e00\u6b21\u65b0\u63d0\u4ea4\uff0c\u8ddd\u4e0a\u6b21\u771f\u5b9e\u63d0\u4ea4\u81f3\u5c1160\u5206\u949f\u3002\u4fdd\u6301\u73b0\u6709\u6bcf\u65e518\u6b21\u3001\u5e76\u53d1\u4e0a\u9650\u53ca\u5171\u4eab\u5b58\u50a8\u9884\u7b97\uff0c\u771f\u5b9e\u5386\u53f2\u63d0\u4ea4\u4e00\u8d77\u8ba1\u6570\u3002\u9047\u5230\u989d\u5ea6\u3001\u4f7f\u7528\u9650\u5236\u6216\u751f\u6210\u4ecd\u5728\u8fdb\u884c\u65f6\u4fdd\u5b58\u771f\u5b9e\u9636\u6bb5\u5e76\u7b49\u5f85\u540e\u7eed\u8f6e\u6b21\uff1b\u4e0d\u8d2d\u4e70\u5347\u7ea7\u3001\u989d\u5ea6\u6216\u65b0\u8d26\u6237\u3002\u5f53\u524d\u65e7 quota/capability \u62a5\u544a\u662f\u5386\u53f2\u5feb\u7167\uff0c\u4e0d\u4ee3\u8868\u5b9e\u65f6\u53ef\u7528\u6027\u3002\u5168\u90e8\u53ef\u5904\u7406\u961f\u5217\u5b8c\u6210\u540e\u6682\u505c\u672c\u5b9a\u65f6\u4efb\u52a1\u5e76\u62a5\u544a\u5b8c\u6210\uff1b\u5b64\u7acb\u53d7\u963b\u9879\u76ee\u4fdd\u5b58\u539f\u56e0\uff0c\u5176\u4ed6\u53ef\u5904\u7406\u9879\u76ee\u4ecd\u53ef\u7ee7\u7eed\u3002\n\n\u6cbf\u7528\u672c\u4f1a\u8bdd\u5df2\u5b9e\u9645\u9a8c\u8bc1\u7684\u521b\u4f5c\u3001\u72ec\u7acb\u5ba1\u67e5\u548c NotebookLM \u6d41\u7a0b\uff1a\u91c7\u96c6\u771f\u5b9e\u6743\u5a01\u6765\u6e90\u4e0e\u539f\u6587\u5feb\u7167\uff0c\u5efa\u7acb\u9010\u8bba\u70b9\u8bc1\u636e\u5bf9\u5e94\uff1b\u901a\u8fc7\u5df2\u767b\u5f55\u666e\u901a ChatGPT \u7f51\u9875\u5236\u4f5c\u5b8c\u6574\u77e5\u8bc6\u5305\u53ca\u5206\u79bb\u7684\u89c6\u9891\u6307\u5bfc\uff0c\u521b\u4f5c\u8005\u548c\u72ec\u7acb\u5ba1\u6838\u8005\u4f7f\u7528\u5404\u5b66\u79d1\u6301\u4e45\u89d2\u8272\u4f1a\u8bdd\uff0c\u5fc5\u987b\u8bfb\u53d6\u5b8c\u6574\u5f53\u524d\u521b\u5efa/\u5ba1\u6838\u653f\u7b56\u548c\u8de8\u5b66\u79d1\u5bf9\u7167\uff0c\u4fdd\u5b58\u771f\u5b9e\u8f93\u5165\u548c\u5b8c\u6574\u8f93\u51fa\u3002\u7528\u6237\u5bf9\u7ee7\u7eed\u540c\u4e00\u89c6\u9891\u5de5\u5382\u7684\u6388\u6743\u5305\u62ec\u8fd9\u4e9b\u5f85\u516c\u5f00\u6750\u6599\u7528\u4e8e\u65e2\u5b9a\u5916\u90e8\u521b\u4f5c/\u72ec\u7acb\u5ba1\u67e5\u6d41\u7a0b\u3002\u6e90\u7a3f\u901a\u8fc7\u5b9e\u9645\u72ec\u7acb\u5ba1\u6838\u53ca\u786e\u5b9a\u6027\u54c8\u5e0c\u5173\u5361\u540e\uff0c\u51bb\u7ed3\u539f\u5b57\u8282\uff0c\u53ea\u5bfc\u5165\u77e5\u8bc6\u6750\u6599\u4f5c\u4e3aNotebook\u6765\u6e90\uff0c\u6307\u5bfc\u63d0\u793a\u5355\u72ec\u653e\u5728\u5b9a\u5236\u6846\uff0c\u63a7\u5236\u4e0d\u8d85\u8fc74500 UTF-16\u5b57\u7b26\u5e76\u6838\u5b9e\u5b9e\u9645\u754c\u9762\u9650\u5236\u3002\u53ea\u6709\u771f\u5b9e\u63a5\u6536\u786e\u8ba4\u624d\u8bb0GENERATING\uff0c\u53d1\u9001\u7ed3\u679c\u4e0d\u660e\u65f6\u6062\u590d\u539f\u8bf7\u6c42\uff0c\u4e0d\u80fd\u518d\u6b21\u70b9\u51fb\u751f\u6210\u3002\u4f7f\u7528\u5f53\u524d\u83b7\u51c6\u7684\u7535\u8111/\u6d4f\u89c8\u5668\u5de5\u5177\uff1bNode\u6587\u4ef6\u534f\u8bae\u53ea\u80fd\u4f20\u9012\u771f\u5b9ejob/result\uff0c\u4e0d\u80fd\u7f16\u9020\u6d4f\u89c8\u5668\u80fd\u529b\u3001\u6a21\u578b\u7ed3\u679c\u6216\u63d0\u4ea4\u56de\u6267\u3002\u4e0d\u8981\u4f7f\u7528\u672a\u83b7\u51c6\u7684CDP/Playwright\u7b49\u66ff\u4ee3\u65b9\u5f0f\u64cd\u7eb5\u5df2\u767b\u5f55\u6d4f\u89c8\u5668\u3002\n\n\u5b9e\u9645\u751f\u6210\u5b8c\u6210\u540e\u4e0b\u8f7d\u539f\u7247\uff0c\u6838\u5b9e Notebook\u3001\u6807\u9898\u3001\u5c1d\u8bd5ID\u3001\u5b8c\u6574\u6587\u4ef6\u54c8\u5e0c\u3001\u5bb9\u5668\u3001\u65f6\u957f\u3001\u5206\u8fa8\u7387\u548c\u53ef\u89e3\u7801\u6027\u3002\u4fdd\u7559\u6765\u6e90\u5ba1\u6838\u4e0e\u89c6\u9891\u5ba1\u6838\u7684\u771f\u5b9e\u7ed3\u679c\uff1b\u80fd\u591f\u53d6\u5f97\u7684\u8f6c\u5f55\u3001\u5b9e\u9645\u5e27\u548c\u72ec\u7acb\u89c6\u9891\u610f\u89c1\u5f52\u6863\uff0c\u8bc1\u636e\u4e0d\u8db3\u6216\u672a\u5b8c\u6210\u5b8c\u6574\u89c6\u9891\u5ba1\u6838\u987b\u5982\u5b9e\u8bb0PENDING/EVIDENCE_REQUIRED/BLOCKED\u3002\u7528\u6237\u660e\u786e\u5141\u8bb8\u672a\u5b8c\u6574\u6279\u51c6\u7684\u89c6\u9891\u4f5c\u4e3a\u6807\u6ce8\u9884\u89c8\u516c\u5f00\uff0c\u6240\u4ee5\u5b8c\u6574\u89c6\u9891/\u4eba\u5de5\u6b63\u5f0f\u6279\u51c6\u4e0d\u662f\u516c\u5f00\u9884\u89c8\u7684\u524d\u7f6e\u6761\u4ef6\uff1b\u6e90\u7a3f\u3001\u539f\u7247\u771f\u5b9e\u6027\u3001\u53ef\u64ad\u653e\u4e0e\u9690\u79c1\u8fb9\u754c\u4ecd\u987b\u901a\u8fc7\u3002\u4e0d\u5f97\u628a\u4e0b\u8f7d\u6216\u516c\u5f00\u6210\u529f\u6539\u8bb0\u4e3a\u89c6\u9891\u5ba1\u6838PASS\u3001BRANDED\u6216\u6b63\u5f0f\u6279\u51c6\u3002\n\n\u4e0a\u4f20\u5e76\u516c\u5f00\u590d\u7528\u5df2\u9a8c\u8bc1\u4ea4\u4ed8\u901a\u9053\uff1a\u539f\u7247\u548c\u5ba1\u67e5/\u6765\u6e90\u8d44\u6599\u8fdb\u5165\u65e2\u6709\u79c1\u6709 R2\uff1b\u901a\u8fc7 functions/_shared/cost-guard.js \u7684\u5171\u4eabD1\u9884\u7b97\u4fdd\u62a4\u6267\u884c\u6bcf\u6b21R2 HEAD/GET/PUT\uff0c\u4f7f\u7528\u5b98\u65b9\u5df2\u5b89\u88c5Wrangler\u548c\u73b0\u6709\u767b\u5f55\uff0c\u4e0d\u6253\u5370\u79d8\u5bc6\u3002\u51bb\u7ed3\u672c\u6761\u4e0a\u4f20\u5b57\u8282\u4e0e\u5bf9\u8c61\u952e\uff0c\u8fdc\u7aef\u8bfb\u56de\u9a8c\u8bc1\u54c8\u5e0c\uff0c\u57fa\u4e8e\u6700\u65b0\u8fdc\u7aef\u76ee\u5f55\u5408\u5e76\uff0c\u4ec5\u65b0\u589e\u672c\u6761\uff0c\u9010\u5b57\u6bb5\u4fdd\u6301\u5168\u90e8\u65e7\u76ee\u5f55\u6761\u76ee\u3002Statistics\u4e13\u7528 .workspace-backups/ \u4e0a\u4f20/\u516c\u5f00\u811a\u672c\u786c\u7ed1\u5b9a0542\u548c\u65e7hash\uff0c\u53ea\u80fd\u4f5c\u4e3a\u53c2\u8003\uff0c\u7edd\u4e0d\u80fd\u76f4\u63a5\u7528\u4e8e\u5176\u4ed6\u5b66\u79d1\u6216\u628a\u771f\u5b9e\u7ed3\u679c\u5192\u540d\uff1b\u4e3a\u672c\u6761\u5efa\u7acb\u9a8c\u8bc1\u8fc7\u7684\u56fa\u5b9a\u8303\u56f4\u6267\u884c\u5668\u548c\u6301\u4e45\u4e0a\u4f20\u65e5\u5fd7\uff0c\u672a\u77e5\u7ed3\u679c\u5148\u67e5\u8bc1\uff0c\u4e0d\u76f2\u76ee\u91cd\u8bd5\u3002\n\n\u65b0\u5b66\u79d1\u516c\u5f00\u524d\uff0c\u6838\u5bf9\u771f\u5b9e canonical code/title/slug\uff0c\u6309\u5f53\u524d explicit PUBLIC_PREVIEW_FIELDS \u6ce8\u518c\u89c4\u5219\u4ec5\u589e\u52a0\u672c\u6b21\u5b66\u79d1\uff0c\u901a\u8fc7\u73b0\u6709 public catalog/public-video \u5904\u7406\u5668\u548c field \u539f\u751f\u64ad\u653e\u5668\u53d1\u5e03\u3002\u4fdd\u6301 HUMAN_REVIEW_PENDING\u3001NOT_PUBLISHED\u3001NOT_APPLIED\u3001VIDEO_CONTENT_UNDER_REVIEW\u3001aiGenerated:true \u7b49\u771f\u5b9e\u9884\u89c8\u8fb9\u754c\u3002\u666e\u901a\u7528\u6237\u4e0d\u5c55\u793a\u5185\u90e8ID\u3001\u5bf9\u8c61\u952e\u3001\u54c8\u5e0c\u3001Notebook\u5730\u5740\u3001\u653f\u7b56\u548c\u5ba1\u67e5\u6750\u6599\uff1b\u79c1\u6709\u63a5\u53e3\u4ecd\u9700\u8ba4\u8bc1\u3002public catalog\u57fa\u4e8e\u6700\u65b0\u8fdc\u7aef\u5185\u5bb9\u5408\u5e76\u5e76\u8bfb\u56de\uff0c\u4e0d\u80fd\u8986\u76d6\u522b\u7684\u4efb\u52a1\u65b0\u6761\u76ee\u3002\u672a\u7ecf\u5141\u8bb8\u7684\u672a\u77e5\u5b66\u79d1\u3001\u4efb\u610f\u5bf9\u8c61\u952e\u4ecd\u4e0d\u53ef\u516c\u5f00\u3002\n\n\u9700\u8981\u7f51\u7ad9\u4ee3\u7801\u6539\u52a8\u65f6\u5148\u5237\u65b0Git\u53ca\u5f53\u524d\u751f\u4ea7\u53d1\u5e03\u5e76\u6bd4\u8f83\u6838\u5fc3\u8d44\u4ea7\uff0c\u6309\u90e8\u7f72\u653f\u7b56\u53ea\u63d0\u4ea4\u672c\u6761\u5fc5\u8981\u6587\u4ef6\uff0c\u6839\u6587\u4ef6/public\u955c\u50cf\u540c\u6b65\uff0c\u505a\u76f8\u5e94\u9884\u89c8/\u63a5\u53e3\u3001\u8bed\u6cd5\u3001CSP\u548c\u5dee\u5f02\u68c0\u67e5\u3002\u907f\u514d\u4ed3\u5e93\u81ea\u52a8\u7248\u672c\u94a9\u5b50\u5e7f\u6cdb\u52a0\u5165\u5176\u4ed6\u4efb\u52a1\u6587\u4ef6\uff1b\u53c2\u8003\u5df2\u9a8c\u8bc1\u7684 Statistics scoped-hooks\uff0c\u4fdd\u7559\u68c0\u67e5\u5e76\u4ec5\u6682\u5b58\u672c\u4efb\u52a1\u6539\u52a8\u3002\u5171\u4eab\u53d1\u5e03\u9501\u4e0b\u76f4\u63a5commit+push\uff1b\u67e5\u8be2\u771f\u5b9e\u90e8\u7f72\u6210\u529f\u5e76\u68c0\u67e5\u6b63\u5f0f\u5b66\u79d1\u9875\u3001\u4e24\u9879\u6807\u6ce8\u3001\u533f\u540d\u5b9e\u9645\u539f\u7247\u64ad\u653e\u4ee5\u53ca\u79c1\u6709\u63a5\u53e3\u8ba4\u8bc1\uff0c\u4e0d\u80fd\u628a\u4e0a\u4f20/\u63a8\u9001\u6210\u529f\u7b49\u540c\u4e8e\u5b8c\u6210\u516c\u5f00\u3002\n\n\u6bcf\u8f6e\u4fdd\u5b58\u53ef\u7eed\u8dd1\u7684\u5b66\u79d1\u72b6\u6001\u3001\u771f\u5b9e\u6765\u6e90/\u6a21\u578b/Notebook/\u89c6\u9891/\u4e0a\u4f20/\u53d1\u5e03\u8bc1\u636e\u548c\u4e0b\u8f6e\u4ea4\u63a5\u5230 review/video-factory-hourly-20261012/\uff0c\u5927\u4f53\u79ef\u539f\u7247\u53ca\u51bb\u7ed3/\u8bca\u65ad\u6587\u4ef6\u7559\u5728Git\u6392\u9664\u7684 .workspace-backups/\u6216\u73b0\u6709runtime\u3002\u6240\u6709\u5176\u4ed6\u6587\u7ae0\u3001\u6b4c\u66f2\u3001\u5019\u9009\u9898\u5e93\u53ca\u672a\u63d0\u4ea4\u89c6\u9891\u5de5\u4f5c\u5fc5\u987b\u4fdd\u7559\uff1b\u4e0d\u8981\u590d\u4f4d\u5168\u5de5\u4f5c\u533a\u6216\u6574\u5e93\u91cd\u5efa\u3002\u65e0\u53d8\u5316\u6216\u65e0\u53ef\u884c\u52a8\u8fdb\u5c55\u65f6\u4fdd\u6301\u5b89\u9759\uff0c\u4ec5\u5728\u5b9e\u9645\u5b8c\u6210\u516c\u5f00\u53d1\u5e03\u3001\u5931\u8d25\u6216\u9700\u8981\u7528\u6237\u5904\u7406\u65f6\u53cd\u9988\u3002",
+  "prompt": "用户进一步明确“每小时都要做”：每个整点都执行一轮实际视频工厂工作，优先推进未完成视频的生成状态检查、下载、核验、上传和公开发布；没有在途视频且资源/额度可用时领取下一学科。仅确认排期或口头答复不算执行。若确有生成未完成、使用限制或共享资源占用，保存实际证据和续跑阶段，下轮继续，不重复生成、不伪造完成。\n\n继续在 /Users/leoyang/Documents/mapkai 运行 MapKAI 视频工厂。用户已明确批准长期授权：后续所有学科的知识包、完整创作/审核政策及审查材料可发送至其已登录的 ChatGPT 和 NotebookLM；使用现有账号与额度生成视频（每日最多18条）；生成完成后直接公开到 MapKAI 并显示指定的AI与待审核标注。用户于2026-10-15最新明确要求“继续开始视频工厂每小时自动执行”，明确恢复2026-10-14暂停的视频任务，并将排期改为 Europe/Amsterdam 本地时间每小时整点（00分00秒）启动。此安排取代此前单数小时整点及更早的每小时30分排期；恢复后从下一个整点开始，暂停期间或已过去的时段不补跑。提前唤醒时可以核实状态，但不得在计划整点之前领取新学科或提交视频生成；若既有任务未完成则优先续接，不并行启动第二个视频。每轮最多推进一个新学科视频。生成完成后直接发布为公开学习预览，页面只显示“AI generated”和“Pending review · Not fully approved”，沿用 Statistics 已上线的播放器。无需再次询问普通生成、上传或公开预览许可；这不等于人工完整批准，不能伪造审核PASS。\n\n每次先读根目录 AGENTS.md、MAPKAI_MEMORY.md、docs/mapkai-deployment-policy.md、review/video-factory-hourly-20261012/schedule.json，以及 mapkai-video-factory/runtime/subsubjects/manifest.json 和实际 Notebook/上传/公开发布回执。/Users/leoyang/Documents/mapkai 是唯一有效工作区，旧 archive/atlas 路径只是兼容历史信息。Statistics 0542、Personal skills and development 0031、Education science 0111、Training for pre-school teachers 0112、Teacher training without subject specialisation 0113 和 Teacher training with subject specialisation 0114 已公开，跳过，不重新生成；0011 SECURITY_PAUSED 和0021 RECOVERY_REQUIRED 保留。优先续接本任务上轮未完成的那个学科；没有未完成学科时按现有 Sub-Subject 队列领取首个可处理 EDITORIAL_PENDING 项，当前下一项是0212 Fashion, interior and industrial design；0211 Audio-visual techniques and media production 已完成真实原片、私有上传和正式匿名播放验证，已公开并保持两项标注；其源稿PASS、实际视频FAIL/独立政策BLOCKED和人工PENDING须分别保留；以后以实际队列和公开回执为准。最新远端公开目录另有已公开原片 Economics0311、Psychology0313、Physics0533；核实其原始公开回执后跳过，保留历史 UNKNOWN 源稿审核，不能伪造源稿或视频审核PASS，也不能改写其他队列记录。保留每个原始 code、title、slug、runId、请求ID及全部其他队列项目。不要驱动旧v5/major-fields队列重复制作同一内容。\n\n每轮开始核实本任务运行锁、现有文章任务的共享写作/发布锁和当前真实资源状态。文章真正使用的共享路径是 review/module-batches/locks/shared-writer-release.lock 和兼容路径 review/module-batches/.shared-writer-release.lock；锁可能为目录，必须读取 owner.json，结合文章批次 state 的 activeExecution/resourceState 及真实 owner 运行状态核实。review/shared-production-writer.lock 只是历史视频标记，它缺失不表示文章共享资源空闲。任何实际共享锁仍有运行持有者时等待，不覆盖、删除或按年龄接管。资源空闲且原持有者已真实退出后，视频也必须按与文章一致的实际共享路径原子领取资源，记录真实兼容 owner/run 与 ownerThreadId/runId，并只释放本运行拥有的锁；旧视频标记不能替代实际共享锁。上轮仍在运行或共享资源正被占用时保留续跑位置，不能仅凭锁的时间判断可抢占，不能同时启动第二个视频，也不能补跑错过的多小时额度。每轮最多一次新的真实 Notebook 视频生成提交；任何重复或重做都算一次新提交，距上次真实提交至少60分钟。保持现有每日18次、并发上限及共享存储预算，真实历史提交一起计数。遇到额度、使用限制或生成仍在进行时保存真实阶段并等待后续轮次；不购买升级、额度或新账户。当前旧 quota/capability 报告是历史快照，不代表实时可用性。全部可处理队列完成后暂停本定时任务并报告完成；孤立受阻项目保存原因，其他可处理项目仍可继续。\n\n沿用本会话已实际验证的创作、独立审查和 NotebookLM 流程：采集真实权威来源与原文快照，建立逐论点证据对应；通过已登录普通 ChatGPT 网页制作完整知识包及分离的视频指导，创作者和独立审核者使用各学科持久角色会话，必须读取完整当前创建/审核政策和跨学科对照，保存真实输入和完整输出。用户对继续同一视频工厂的授权包括这些待公开材料用于既定外部创作/独立审查流程。源稿通过实际独立审核及确定性哈希关卡后，冻结原字节，只导入知识材料作为Notebook来源，指导提示单独放在定制框，控制不超过4500 UTF-16字符并核实实际界面限制。只有真实接收确认才记GENERATING，发送结果不明时恢复原请求，不能再次点击生成。使用当前获准的电脑/浏览器工具；Node文件协议只能传递真实job/result，不能编造浏览器能力、模型结果或提交回执。不要使用未获准的CDP/Playwright等替代方式操纵已登录浏览器。\n\n实际生成完成后下载原片，核实 Notebook、标题、尝试ID、完整文件哈希、容器、时长、分辨率和可解码性。保留来源审核与视频审核的真实结果；能够取得的转录、实际帧和独立视频意见归档，证据不足或未完成完整视频审核须如实记PENDING/EVIDENCE_REQUIRED/BLOCKED。用户明确允许未完整批准的视频作为标注预览公开，所以完整视频/人工正式批准不是公开预览的前置条件；源稿、原片真实性、可播放与隐私边界仍须通过。不得把下载或公开成功改记为视频审核PASS、BRANDED或正式批准。\n\n上传并公开复用已验证交付通道：原片和审查/来源资料进入既有私有 R2；通过 functions/_shared/cost-guard.js 的共享D1预算保护执行每次R2 HEAD/GET/PUT，使用官方已安装Wrangler和现有登录，不打印秘密。冻结本条上传字节与对象键，远端读回验证哈希，基于最新远端目录合并，仅新增本条，逐字段保持全部旧目录条目。Statistics专用 .workspace-backups/ 上传/公开脚本硬绑定0542和旧hash，只能作为参考，绝不能直接用于其他学科或把真实结果冒名；为本条建立验证过的固定范围执行器和持久上传日志，未知结果先查证，不盲目重试。\n\n新学科公开前，核对真实 canonical code/title/slug，按当前 explicit PUBLIC_PREVIEW_FIELDS 注册规则仅增加本次学科，通过现有 public catalog/public-video 处理器和 field 原生播放器发布。保持 HUMAN_REVIEW_PENDING、NOT_PUBLISHED、NOT_APPLIED、VIDEO_CONTENT_UNDER_REVIEW、aiGenerated:true 等真实预览边界。普通用户不展示内部ID、对象键、哈希、Notebook地址、政策和审查材料；私有接口仍需认证。public catalog基于最新远端内容合并并读回，不能覆盖别的任务新条目。未经允许的未知学科、任意对象键仍不可公开。\n\n需要网站代码改动时先刷新Git及当前生产发布并比较核心资产，按部署政策只提交本条必要文件，根文件/public镜像同步，做相应预览/接口、语法、CSP和差异检查。避免仓库自动版本钩子广泛加入其他任务文件；参考已验证的 Statistics scoped-hooks，保留检查并仅暂存本任务改动。共享发布锁下直接commit+push；查询真实部署成功并检查正式学科页、两项标注、匿名实际原片播放以及私有接口认证，不能把上传/推送成功等同于完成公开。\n\n每轮保存可续跑的学科状态、真实来源/模型/Notebook/视频/上传/发布证据和下轮交接到 review/video-factory-hourly-20261012/，大体积原片及冻结/诊断文件留在Git排除的 .workspace-backups/或现有runtime。所有其他文章、歌曲、候选题库及未提交视频工作必须保留；不要复位全工作区或整库重建。无变化或无可行动进展时保持安静，仅在实际完成公开发布、失败或需要用户处理时反馈。",
   "automationId": "mapkai-30",
   "targetThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
   "createdAt": "2026-10-12T21:39:33.049000+02:00",
   "verifiedFirstRunLocal": "2026-10-12T22:30:00+02:00",
   "authorization": {
     "state": "EXPLICITLY_GRANTED",
-    "userAnswer": "\u6388\u6743\u540e\u7eed\u6240\u6709\u5b66\u79d1\u6309\u6b64\u6d41\u7a0b\u751f\u6210\u5e76\u516c\u5f00",
+    "userAnswer": "授权后续所有学科按此流程生成并公开",
     "scope": "All subsequent subjects: external ChatGPT/NotebookLM source/policy/review transmission, existing-account and quota generation up to18/day, direct public MapKAI previews with both labels."
   },
   "lastCompletedPreview": {
@@ -91,27 +91,25 @@
     "independentVideoReview": "EVIDENCE_REQUIRED"
   },
   "lastStarted": {
-    "code": "0213",
-    "title": "Fine arts",
-    "productionRunId": "video-hourly-20261015T1700-b2311e68",
-    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0213-subsubject-creator-1",
-    "creatorConversation": "https://chatgpt.com/c/6ad0ed15-0e50-83ed-92fa-78a477a4d0fa",
+    "code": "0214",
+    "title": "Handicrafts",
+    "productionRunId": "video-hourly-20261015T2000-ad716ec9",
+    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0214-subsubject-creator-1",
+    "creatorConversation": "https://chatgpt.com/c/6ad116e9-59c0-83eb-acf3-cac7da4964e3",
     "sendAttempted": true,
     "sendCount": 1,
     "fullStagedPromptVerified": true,
     "fullPostSendAcceptanceVerified": false,
-    "state": "CREATOR_COMPLETE_ARTIFACT_RETRIEVAL_REQUIRED",
+    "state": "CREATOR_SENT_RESPONSE_GENERATING",
     "newNotebookSubmissions": 0,
-    "sourceReview": "NOT_REVIEWED",
-    "creatorResponseCompleteObserved": true,
-    "originalCreatorArtifactRetrieved": false
+    "sourceReview": "NOT_REVIEWED"
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
     "verifiedAt": "2026-10-15T08:44:13.151410+00:00",
     "id": "mapkai-30",
     "status": "ACTIVE",
-    "name": "MapKAI \u6bcf\u5c0f\u65f6\u6574\u70b9\u89c6\u9891\u751f\u6210\u4e0e\u53d1\u5e03",
+    "name": "MapKAI 每小时整点视频生成与发布",
     "sameThread": true,
     "timezone": "Europe/Amsterdam",
     "frequency": "HOURLY",
@@ -123,15 +121,15 @@
     "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-15T15:19:37.779077+00:00",
+    "checkedAt": "2026-10-15T16:14:33.552796+00:00",
     "actualSharedWriterPathsClaimed": false,
     "activeExecution": false,
-    "resourceState": "LOCAL_RESOURCES_FREE_ORIGINAL_CREATOR_RESPONSE_PENDING_METHOD_CLARIFICATION",
+    "resourceState": "LOCAL_RESOURCES_FREE_ACCEPTANCE_AUDIT_BLOCKED",
     "articleAndSongLatestTurns": "completed/notLoaded"
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T18:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T21:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -155,12 +153,12 @@
   "previousPlannedLocalBeforePause": "2026-10-14T15:00:00+02:00",
   "lastPause": {
     "pausedAt": "2026-10-14T12:24:40.379596+00:00",
-    "pauseAuthorization": "\u6682\u65f6\u505c\u6b62\u5b9a\u65f6\u4efb\u52a1",
+    "pauseAuthorization": "暂时停止定时任务",
     "pauseEvidencePath": "review/video-factory-hourly-20261012/pause-20261014-122440.json",
     "previousPlannedLocalBeforePause": "2026-10-14T15:00:00+02:00"
   },
   "resumedAt": "2026-10-15T08:44:13.151410+00:00",
-  "resumeAuthorization": "\u7ee7\u7eed\u5f00\u59cb\u89c6\u9891\u5de5\u5382\u6bcf\u5c0f\u65f6\u81ea\u52a8\u6267\u884c",
+  "resumeAuthorization": "继续开始视频工厂每小时自动执行",
   "resumeEvidencePath": "review/video-factory-hourly-20261012/resume-hourly-20261015.json",
   "latestCapacityHold": {
     "state": "CLEARED_AFTER_AUTHORIZED_DEPLOYMENT",
@@ -177,7 +175,7 @@
   "latestBudgetAuthorization": {
     "state": "APPLIED_AND_VERIFIED",
     "recordedAt": "2026-10-15T10:45:08.914290+00:00",
-    "actualUserMessage": "\u4fee\u6539\u5927\u4e00\u4e9b\u5c31\u884c\u4e86\u6bcf\u4e2a\u6708\u4e0d\u8d85\u6807\u5373\u53ef",
+    "actualUserMessage": "修改大一些就行了每个月不超标即可",
     "context": "User explicitly requests increasing the upload allowance after explanation of512MiB/4GiB options, shared scope and retained limits. Agent selects the already proposed4GiB while retaining8GiBstorage and operation safeguards.",
     "selectedUploadLimitBytes": 4294967296,
     "storageLimitBytes": 8589934592,
@@ -193,20 +191,20 @@
   },
   "latestBudgetProposalPath": "review/video-factory-hourly-20261012/budget-proposal-20261015.json",
   "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json",
-  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-1500.json",
+  "latestRunRecordPath": "review/video-factory-hourly-20261012/run-20261015-2000.json",
   "lastCadenceConfirmedAt": "2026-10-15T12:03:23.989229+00:00",
   "lastScheduleVerifiedAt": "2026-10-15T12:15:17.280064+00:00",
-  "lastServicedSlotLocal": "2026-10-15T16:00:00+02:00",
-  "updatedAt": "2026-10-15T14:38:22.732Z",
+  "lastServicedSlotLocal": "2026-10-15T20:00:00+02:00",
+  "updatedAt": "2026-10-15T18:11:09.282413+00:00",
   "pendingReviewFollowUps": [],
   "latestExecution": {
-    "scheduledLocal": "2026-10-15T17:00:00+02:00",
-    "code": "0213",
-    "run": "video-hourly-20261015T1700-b2311e68",
-    "state": "CREATOR_RESPONSE_PENDING_INPUT_OUTPUT_AUDIT_BLOCKED",
-    "actualCreatorSends": 1,
+    "scheduledLocal": "2026-10-15T20:00:00+02:00",
+    "code": "0214",
+    "run": "video-hourly-20261015T2000-ad716ec9",
+    "state": "CREATOR_SENT_RESPONSE_GENERATING",
+    "actualCreatorSendsThisHeartbeat": 1,
     "actualNotebookSubmissions": 0,
-    "humanActionRequired": true
+    "humanActionRequired": false
   },
   "completedReviewFollowUps": [
     {
@@ -221,6 +219,18 @@
       "evidenceSufficient": false,
       "recoveredAt": "2026-10-15T15:59:07.879908+00:00",
       "receiptPath": "review/video-factory-hourly-20261012/review-recovery-0212-20261015.json"
+    }
+  ],
+  "isolatedSourceRecoveryHolds": [
+    {
+      "code": "0213",
+      "title": "Fine arts",
+      "state": "CREATOR_OUTPUT_CAPTURED_ACCEPTANCE_AUDIT_BLOCKED",
+      "originalRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0213-subsubject-creator-1",
+      "receiptPath": "review/video-factory-hourly-20261012/native-source-recovery-0213-20261015.json",
+      "fullOriginalOutputPreserved": true,
+      "permissionNotGranted": true,
+      "doesNotBlockOtherEligibleSubjects": true
     }
   ]
 }
