@@ -1,0 +1,9 @@
+{
+  "automationId": "mapkai-30",
+  "status": "ACTIVE",
+  "rrule": "FREQ=HOURLY;INTERVAL=1;BYMINUTE=0;BYSECOND=0",
+  "timezone": "Europe/Amsterdam",
+  "ownerInstruction": "每小时都要做",
+  "perRound": "Actual work on existing video or next eligible subject; no duplicate generation",
+  "verifiedAt": "2026-10-15T12:03:23.989229+00:00"
+}
