@@ -12,7 +12,7 @@ implemented with conservative usage allowances before accessing paid R2:
 | --- | --- |
 | R2 Class A operations (PUT/LIST) | 100,000 per cycle |
 | R2 Class B operations (GET/HEAD) | 8,000,000 per cycle |
-| New uploaded bytes | 512 MiB per cycle |
+| New uploaded bytes | 4 GiB per cycle |
 | Lifetime conservative storage reservation | 8 GiB |
 | Initial reservation from the five-bucket audit | 3 GiB (actual audit: 2.74 GB) |
 
@@ -23,6 +23,14 @@ the allowance. Storage reservations persist across monthly resets. Missing,
 unavailable or exhausted protection returns 503 or 429 before accessing R2.
 The provider's free allowance period and billing rounding can differ; these
 limits are usage safeguards, not a guarantee of a €10 invoice.
+
+The owner requested a larger upload allowance with monthly protection on
+2026-10-15. The selected 4 GiB allowance retains the 8 GiB lifetime storage
+reservation, request limits and existing counters. Reaching any allowance
+stops protected operations; uploads never trigger purchases or plan upgrades.
+Deploy the same allowance to MapKAI Pages, Turnpo Pages and the shared media
+Worker before uploads pass the previous 512 MiB allowance: older readers also
+validate the cumulative upload counter.
 
 ## Resources and routes
 
