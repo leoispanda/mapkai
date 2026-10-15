@@ -36,7 +36,7 @@
     "code": "0211",
     "title": "Audio-visual techniques and media production",
     "slug": "0211-audio-visual-techniques-and-media-production",
-    "state": "SOURCE_APPROVED_WAITING_SHARED_UPLOAD_CAPACITY"
+    "state": "SOURCE_APPROVED_SUBMISSION_READY"
   },
   "excluded": {
     "alreadyPublic": [
@@ -144,7 +144,7 @@
   },
   "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-15T12:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T13:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -176,13 +176,34 @@
   "resumeAuthorization": "继续开始视频工厂每小时自动执行",
   "resumeEvidencePath": "review/video-factory-hourly-20261012/resume-hourly-20261015.json",
   "latestCapacityHold": {
-    "state": "INSUFFICIENT_VERIFIED_VIDEO_DELIVERY_HEADROOM",
-    "checkedAt": "2026-10-15T09:28:33.558Z",
-    "remainingUploadBytes": 21864442,
-    "comparisonOriginalBytes": 46866706,
-    "internalSharedLimit": true,
-    "providerQuotaExhaustionClaimed": false,
-    "budgetAuthorization": "PENDING_EXPLICIT_USER_DECISION",
-    "evidencePath": ".workspace-backups/video-factory-0211-20261015/delivery-capacity-preflight.json"
-  }
+    "state": "CLEARED_AFTER_AUTHORIZED_DEPLOYMENT",
+    "clearedAt": "2026-10-15T10:51:06.827Z",
+    "receiptPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
+  },
+  "lastContinuityCheck": {
+    "checkedAt": "2026-10-15T10:03:58.878786+00:00",
+    "path": "review/video-factory-hourly-20261012/check-20261015-1200.json",
+    "state": "WAITING_SHARED_UPLOAD_CAPACITY",
+    "checkOnly": true,
+    "newNotebookSubmissions": 0
+  },
+  "latestBudgetAuthorization": {
+    "state": "APPLIED_AND_VERIFIED",
+    "recordedAt": "2026-10-15T10:45:08.914290+00:00",
+    "actualUserMessage": "修改大一些就行了每个月不超标即可",
+    "context": "User explicitly requests increasing the upload allowance after explanation of512MiB/4GiB options, shared scope and retained limits. Agent selects the already proposed4GiB while retaining8GiBstorage and operation safeguards.",
+    "selectedUploadLimitBytes": 4294967296,
+    "storageLimitBytes": 8589934592,
+    "classALimit": 100000,
+    "classBLimit": 8000000,
+    "cycleDayUTC": 7,
+    "noCounterReset": true,
+    "purchaseOrUpgradeAuthorized": false,
+    "providerEuroInvoiceHardCapClaimed": false,
+    "supersedesPriorGenericContinueRejection": true,
+    "appliedAt": "2026-10-15T10:51:06.827Z",
+    "receiptPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
+  },
+  "latestBudgetProposalPath": "review/video-factory-hourly-20261012/budget-proposal-20261015.json",
+  "latestBudgetCompletionPath": "review/video-factory-hourly-20261012/budget-limit-update-20261015.json"
 }

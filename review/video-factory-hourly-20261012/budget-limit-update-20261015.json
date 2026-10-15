@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "mapkai-shared-media-budget-update.v1",
+  "status": "DEPLOYED_AND_VERIFIED",
+  "verifiedAt": "2026-10-15T10:51:06.827Z",
+  "productionRunId": "video-budget-20261015T1244-47c695d6",
+  "authorization": {
+    "state": "AUTHORIZED_AFTER_EXPLICIT_UPLOAD_INCREASE_REQUEST",
+    "recordedAt": "2026-10-15T10:45:08.914290+00:00",
+    "actualUserMessage": "修改大一些就行了每个月不超标即可",
+    "context": "User explicitly requests increasing the upload allowance after explanation of512MiB/4GiB options, shared scope and retained limits. Agent selects the already proposed4GiB while retaining8GiBstorage and operation safeguards.",
+    "selectedUploadLimitBytes": 4294967296,
+    "storageLimitBytes": 8589934592,
+    "classALimit": 100000,
+    "classBLimit": 8000000,
+    "cycleDayUTC": 7,
+    "noCounterReset": true,
+    "purchaseOrUpgradeAuthorized": false,
+    "providerEuroInvoiceHardCapClaimed": false,
+    "supersedesPriorGenericContinueRejection": true
+  },
+  "uploadByteLimit": 4294967296,
+  "storageByteLimit": 8589934592,
+  "classA": 100000,
+  "classB": 8000000,
+  "cycleDayUTC": 7,
+  "billingCycle": "2026-10-07",
+  "countersPreserved": true,
+  "uploadBytesUsed": 515006470,
+  "remainingUploadBytes": 3779960826,
+  "remainingStorageBytes": 4853702650,
+  "pagesDeployments": [
+    {
+      "project": "turnpo",
+      "expectedCommit": "d19b449c09983a9a777c6dec5e2cd70ed9ee13f1",
+      "id": "e337f92e-18b3-481c-8195-bbabdc64916d",
+      "createdAt": "2026-10-15T10:45:25.198146Z",
+      "branch": "main",
+      "commit": "d19b449c09983a9a777c6dec5e2cd70ed9ee13f1",
+      "status": "success",
+      "stage": "deploy",
+      "latestOtherProduction": "d19b449c09983a9a777c6dec5e2cd70ed9ee13f1"
+    },
+    {
+      "project": "mapkai",
+      "expectedCommit": "f8108efcf05cc15211b1b87d2c0dff89e6cce8e9",
+      "id": "bf8f5494-b35c-450d-8cac-9565ab080d19",
+      "createdAt": "2026-10-15T10:46:21.972414Z",
+      "branch": "main",
+      "commit": "f8108efcf05cc15211b1b87d2c0dff89e6cce8e9",
+      "status": "success",
+      "stage": "deploy",
+      "latestOtherProduction": "f8108efcf05cc15211b1b87d2c0dff89e6cce8e9"
+    }
+  ],
+  "mediaWorker": {
+    "version": "66f302e6-0e68-48bc-bfa8-14394962dc1b",
+    "deploymentId": "ee568069-fcd3-43c3-92f8-67d2e9a96d6b",
+    "trafficPercent": 100
+  },
+  "guardHashes": [
+    {
+      "path": "functions/_shared/cost-guard.js",
+      "sha256": "cc252bf6a71bf470f33b7163a1c79d6311265dab57de5c99e08c067e4495d1c1"
+    },
+    {
+      "path": "tools/cloudflare-cost-guard/shared/cost-guard.mjs",
+      "sha256": "cc252bf6a71bf470f33b7163a1c79d6311265dab57de5c99e08c067e4495d1c1"
+    },
+    {
+      "path": ".workspace-backups/video-factory-0211-20261015/budget-change-20261015/turnpo-current/functions/_shared/cost-guard.js",
+      "sha256": "cc252bf6a71bf470f33b7163a1c79d6311265dab57de5c99e08c067e4495d1c1"
+    }
+  ],
+  "tests": {
+    "sharedTestsPassed": 42,
+    "turnpoAssertionsPassed": 149,
+    "functionsCompiled": [
+      "mapkai",
+      "turnpo"
+    ],
+    "liveAssetsAndGatesPassed": 68,
+    "liveSmokePassed": 7
+  },
+  "websiteAssetChanges": 0,
+  "newNotebookSubmissions": 0,
+  "newVideoPublications": 0,
+  "sourceReview": "PASS_REVISION_2",
+  "canonicalCode": "0211",
+  "frozenSourcePreserved": true,
+  "otherManifestItemsPreserved": 76,
+  "providerEuroInvoiceHardCapClaimed": false,
+  "purchaseOrUpgrade": false,
+  "automationStatus": "ACTIVE",
+  "nextScheduledLocal": "2026-10-15T13:00:00+02:00",
+  "privateEvidenceDirectory": ".workspace-backups/video-factory-0211-20261015/budget-change-20261015"
+}
