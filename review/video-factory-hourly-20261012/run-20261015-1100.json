@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "mapkai-hourly-video-run.v1",
+  "automationId": "mapkai-30",
+  "heartbeatTrigger": "2026-10-15T08:59:03.003Z",
+  "productionRunId": "video-hourly-20261015T1100-d9c63429",
+  "canonicalIdentity": {
+    "code": "0211",
+    "title": "Audio-visual techniques and media production",
+    "slug": "0211-audio-visual-techniques-and-media-production",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317"
+  },
+  "scheduledLocal": "2026-10-15T11:00:00+02:00",
+  "sourceCount": 6,
+  "exactClaimMappings": 30,
+  "sourceProvenancePath": ".workspace-backups/video-factory-0211-20261015/research/provenance.json",
+  "creatorAttempts": 2,
+  "independentSourceReviews": 2,
+  "creatorRequestIds": [
+    "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-1",
+    "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-2"
+  ],
+  "sourceReviewRequestIds": [
+    "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-1",
+    "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1"
+  ],
+  "creatorConversation": "https://chatgpt.com/c/6ad098bf-80fc-83eb-9475-be61c8fddefe",
+  "reviewerConversation": "https://chatgpt.com/c/6ad09c22-83f0-83ed-8337-a879b7286bb2",
+  "firstSourceReview": "REVISE",
+  "secondSourceReview": "PASS",
+  "sourceApproval": "PASS",
+  "artifactRevision": 2,
+  "sourceFreeze": {
+    "schemaVersion": "mapkai-approved-source-freeze.v1",
+    "frozenAt": "2026-10-15T09:46:57.824Z",
+    "canonicalIdentity": {
+      "code": "0211",
+      "title": "Audio-visual techniques and media production",
+      "slug": "0211-audio-visual-techniques-and-media-production",
+      "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317"
+    },
+    "artifactRevision": 2,
+    "sourceReview": "PASS",
+    "sourceReviewRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1",
+    "sourceReviewResponseHash": "d5daa477f4536fb72fb37a43190cc5584ae4f307ffa4bb5487c0180eaa3a2ae8",
+    "steeringUTF16Characters": 4352,
+    "files": [
+      {
+        "name": "knowledge_pack.md",
+        "source": "mapkai-video-factory/packs/subsubjects/0211-audio-visual-techniques-and-media-production/knowledge_pack.md",
+        "file": ".workspace-backups/video-factory-0211-20261015/approved-source/knowledge_pack.md",
+        "sha256": "c502adf60f1940335212fc8d9625ed6a8f48196221c96c1df226e5ced68d2329",
+        "bytes": 27105
+      },
+      {
+        "name": "video_steering_prompt.md",
+        "source": "mapkai-video-factory/packs/subsubjects/0211-audio-visual-techniques-and-media-production/video_steering_prompt.md",
+        "file": ".workspace-backups/video-factory-0211-20261015/approved-source/video_steering_prompt.md",
+        "sha256": "d6f87043cdcdb2b8fda8fd86ff0905d4bda0ba714973eaa088ddff74c23ccd3b",
+        "bytes": 4364
+      },
+      {
+        "name": "source_manifest.json",
+        "source": "mapkai-video-factory/packs/subsubjects/0211-audio-visual-techniques-and-media-production/source_pack_manifest.json",
+        "file": ".workspace-backups/video-factory-0211-20261015/approved-source/source_manifest.json",
+        "sha256": "9a705a1d66f59c47366266be912999377456424412b158f741c5b9f2facc8c10",
+        "bytes": 49862
+      },
+      {
+        "name": "final_review_decision.json",
+        "source": "mapkai-video-factory/packs/subsubjects/0211-audio-visual-techniques-and-media-production/final_review_decision.json",
+        "file": ".workspace-backups/video-factory-0211-20261015/approved-source/final_review_decision.json",
+        "sha256": "f0e0c9699f40626d916b2076c94bb1f61fb56c26e35db7dfe4347b9d756adcad",
+        "bytes": 14026
+      },
+      {
+        "name": "research-evidence.json",
+        "source": "mapkai-video-factory/packs/subsubjects/0211-audio-visual-techniques-and-media-production/research-evidence.json",
+        "file": ".workspace-backups/video-factory-0211-20261015/approved-source/research-evidence.json",
+        "sha256": "4213472f715fd997faa17e16bba2d89cdb8550b5947df33be09230c51ee05650",
+        "bytes": 28063
+      }
+    ],
+    "newNotebookSubmissions": 0,
+    "notebookJobAllocated": false,
+    "actualVideoReview": "NOT_REVIEWED",
+    "formalApproval": "PENDING",
+    "deliveryHold": "INSUFFICIENT_VERIFIED_VIDEO_DELIVERY_HEADROOM"
+  },
+  "localRepairScope": {
+    "oneKnowledgeParagraphChanged": true,
+    "otherKnowledgeParagraphsUnchanged": true,
+    "steeringUnchanged": true
+  },
+  "newNotebookSubmissions": 0,
+  "notebookJobsAllocated": 0,
+  "downloads": 0,
+  "r2Operations": 0,
+  "publications": 0,
+  "actualVideoReview": "NOT_REVIEWED",
+  "formalApproval": "PENDING",
+  "capacityHold": {
+    "schemaVersion": "mapkai-video-delivery-capacity-preflight.v1",
+    "checkedAt": "2026-10-15T09:28:33.558Z",
+    "state": "INSUFFICIENT_VERIFIED_VIDEO_DELIVERY_HEADROOM",
+    "sharedCostGuardPath": "functions/_shared/cost-guard.js",
+    "currentBillingCycle": "2026-10-07",
+    "uploadByteLimit": 536870912,
+    "uploadBytesUsed": 515006470,
+    "remainingUploadBytes": 21864442,
+    "remainingUploadMiB": 20.8515567779541,
+    "remainingStorageBytes": 4853702650,
+    "comparison": {
+      "source": "last genuinely verified original0114, not a prediction of this still-unmade video",
+      "rawVideoBytes": 46866706,
+      "receiptPath": "review/video-factory-hourly-20261012/public-preview-0114.json",
+      "furtherSourceAndReviewBytesWouldAlsoCount": true
+    },
+    "isProviderQuotaClaim": false,
+    "isCounterFullyExhausted": false,
+    "decision": "Hold new Notebook generation until verified delivery capacity is sufficient; keep independent source review progressing.",
+    "overrideApplied": false,
+    "newNotebookSubmissions": 0,
+    "rule": "Existing shared budget must remain intact; no purchases, upgrades, generation retries or increased limits."
+  },
+  "budgetAuthorization": {
+    "state": "PENDING_EXPLICIT_USER_DECISION",
+    "questionAcceptedByUi": true,
+    "requestedUploadLimitBytes": 4294967296,
+    "currentUploadLimitBytes": 536870912,
+    "storageByteLimitToRetain": 8589934592,
+    "requestOperationLimitsToRetain": true,
+    "purchaseOrUpgradeAuthorized": false,
+    "sharedAcrossMediaServices": true,
+    "actualUserAnswer": null,
+    "recordedAt": "2026-10-15T09:49:04.400Z"
+  },
+  "otherManifestItemsPreserved": 76,
+  "allExistingPublicPreviewReceiptsPreserved": true,
+  "nextScheduledLocal": "2026-10-15T12:00:00+02:00",
+  "status": "WAITING_SHARED_UPLOAD_CAPACITY",
+  "evidenceDirectory": ".workspace-backups/video-factory-0211-20261015",
+  "createdAt": "2026-10-15T09:49:04.400Z",
+  "sourceReviewPassProofPath": ".workspace-backups/video-factory-0211-20261015/source-review-pass-proof.json",
+  "sourceReviewPassScreenshotPath": ".workspace-backups/video-factory-0211-20261015/source-review-pass.jpg",
+  "sourceReviewPassScreenshotSha256": "15f02630b7e979bca453f0fe88450d5617c0d9d331820d00d8c246b788d7f239",
+  "servicesStopped": true,
+  "sourceWorkCompletedAt": "2026-10-15T09:51:00.474508+00:00"
+}

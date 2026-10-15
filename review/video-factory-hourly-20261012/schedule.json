@@ -3,26 +3,12 @@
   "status": "ACTIVE",
   "requestedAt": "2026-10-12T19:38:00Z",
   "workspace": "/Users/leoyang/Documents/mapkai",
-  "name": "MapKAI 单数小时整点视频生成与发布",
+  "name": "MapKAI 每小时整点视频生成与发布",
   "firstRunLocal": "2026-10-12T22:30:00+02:00",
   "timezone": "Europe/Amsterdam",
   "recurrence": {
-    "frequency": "DAILY",
+    "frequency": "HOURLY",
     "interval": 1,
-    "hours": [
-      1,
-      3,
-      5,
-      7,
-      9,
-      11,
-      13,
-      15,
-      17,
-      19,
-      21,
-      23
-    ],
     "minute": 0,
     "second": 0
   },
@@ -30,7 +16,7 @@
   "destination": "current_thread",
   "activationConfirmed": true,
   "userRequest": "继续生成视频 每个小时生成一个 直接放上去即可",
-  "latestScheduleSteering": "以后改为单数小时 的整点做这个",
+  "latestScheduleSteering": "继续开始视频工厂每小时自动执行",
   "runLimits": {
     "maximumNewNotebookSubmissionsPerRun": 1,
     "minimumMinutesBetweenNewSubmissions": 60,
@@ -50,7 +36,7 @@
     "code": "0211",
     "title": "Audio-visual techniques and media production",
     "slug": "0211-audio-visual-techniques-and-media-production",
-    "state": "EDITORIAL_PENDING"
+    "state": "SOURCE_APPROVED_WAITING_SHARED_UPLOAD_CAPACITY"
   },
   "excluded": {
     "alreadyPublic": [
@@ -84,7 +70,7 @@
     "workaroundAttempted": false,
     "resolvedBy": "Specific human authorization followed by successful automation creation."
   },
-  "prompt": "继续在 /Users/leoyang/Documents/mapkai 运行 MapKAI 视频工厂。用户已明确批准长期授权：后续所有学科的知识包、完整创作/审核政策及审查材料可发送至其已登录的 ChatGPT 和 NotebookLM；使用现有账号与额度生成视频（每日最多18条）；生成完成后直接公开到 MapKAI 并显示指定的AI与待审核标注。用户于2026-10-13最新明确要求“以后改为单数小时 的整点做这个”。从本次修改起，按 Europe/Amsterdam 本地时间每天单数小时整点启动：01:00、03:00、05:00、07:00、09:00、11:00、13:00、15:00、17:00、19:00、21:00、23:00，即每两小时一次。此安排取代原每小时30分的排期，已过去的时段不补跑。提前唤醒时可以核实状态，但不得在计划整点之前领取新学科或提交视频生成；若既有任务未完成则优先续接，不并行启动第二个视频。生成完成后仍直接公开并保持相同标注。每轮最多推进一个新学科视频，完成后直接发布为公开学习预览，页面只显示“AI generated”和“Pending review · Not fully approved”，沿用 Statistics 已上线的播放器。无需再次询问普通生成、上传或公开预览许可；这不等于人工完整批准，不能伪造审核PASS。\n\n每次先读根目录 AGENTS.md、MAPKAI_MEMORY.md、docs/mapkai-deployment-policy.md、review/video-factory-hourly-20261012/schedule.json，以及 mapkai-video-factory/runtime/subsubjects/manifest.json 和实际 Notebook/上传/公开发布回执。/Users/leoyang/Documents/mapkai 是唯一有效工作区，旧 archive/atlas 路径只是兼容历史信息。Statistics 0542、Personal skills and development 0031、Education science 0111、Training for pre-school teachers 0112、Teacher training without subject specialisation 0113 和 Teacher training with subject specialisation 0114 已公开，跳过，不重新生成；0011 SECURITY_PAUSED 和0021 RECOVERY_REQUIRED 保留。优先续接本任务上轮未完成的那个学科；没有未完成学科时按现有 Sub-Subject 队列领取首个可处理 EDITORIAL_PENDING 项，当前下一项是0211 Audio-visual techniques and media production；以后以实际队列和公开回执为准。最新远端公开目录另有已公开原片 Economics0311、Psychology0313、Physics0533；核实其原始公开回执后跳过，保留历史 UNKNOWN 源稿审核，不能伪造源稿或视频审核PASS，也不能改写其他队列记录。保留每个原始 code、title、slug、runId、请求ID及全部其他队列项目。不要驱动旧v5/major-fields队列重复制作同一内容。\n\n每轮开始核实本任务运行锁、现有文章任务的共享写作/发布锁和当前真实资源状态。文章真正使用的共享路径是 review/module-batches/locks/shared-writer-release.lock 和兼容路径 review/module-batches/.shared-writer-release.lock；锁可能为目录，必须读取 owner.json，结合文章批次 state 的 activeExecution/resourceState 及真实 owner 运行状态核实。review/shared-production-writer.lock 只是历史视频标记，它缺失不表示文章共享资源空闲。任何实际共享锁仍有运行持有者时等待，不覆盖、删除或按年龄接管。资源空闲且原持有者已真实退出后，视频也必须按与文章一致的实际共享路径原子领取资源，记录真实兼容 owner/run 与 ownerThreadId/runId，并只释放本运行拥有的锁；旧视频标记不能替代实际共享锁。上轮仍在运行或共享资源正被占用时保留续跑位置，不能仅凭锁的时间判断可抢占，不能同时启动第二个视频，也不能补跑错过的多小时额度。每轮最多一次新的真实 Notebook 视频生成提交；任何重复或重做都算一次新提交，距上次真实提交至少60分钟。保持现有每日18次、并发上限及共享存储预算，真实历史提交一起计数。遇到额度、使用限制或生成仍在进行时保存真实阶段并等待后续轮次；不购买升级、额度或新账户。当前旧 quota/capability 报告是历史快照，不代表实时可用性。全部可处理队列完成后暂停本定时任务并报告完成；孤立受阻项目保存原因，其他可处理项目仍可继续。\n\n沿用本会话已实际验证的创作、独立审查和 NotebookLM 流程：采集真实权威来源与原文快照，建立逐论点证据对应；通过已登录普通 ChatGPT 网页制作完整知识包及分离的视频指导，创作者和独立审核者使用各学科持久角色会话，必须读取完整当前创建/审核政策和跨学科对照，保存真实输入和完整输出。用户对继续同一视频工厂的授权包括这些待公开材料用于既定外部创作/独立审查流程。源稿通过实际独立审核及确定性哈希关卡后，冻结原字节，只导入知识材料作为Notebook来源，指导提示单独放在定制框，控制不超过4500 UTF-16字符并核实实际界面限制。只有真实接收确认才记GENERATING，发送结果不明时恢复原请求，不能再次点击生成。使用当前获准的电脑/浏览器工具；Node文件协议只能传递真实job/result，不能编造浏览器能力、模型结果或提交回执。不要使用未获准的CDP/Playwright等替代方式操纵已登录浏览器。\n\n实际生成完成后下载原片，核实 Notebook、标题、尝试ID、完整文件哈希、容器、时长、分辨率和可解码性。保留来源审核与视频审核的真实结果；能够取得的转录、实际帧和独立视频意见归档，证据不足或未完成完整视频审核须如实记PENDING/EVIDENCE_REQUIRED/BLOCKED。用户明确允许未完整批准的视频作为标注预览公开，所以完整视频/人工正式批准不是公开预览的前置条件；源稿、原片真实性、可播放与隐私边界仍须通过。不得把下载或公开成功改记为视频审核PASS、BRANDED或正式批准。\n\n上传并公开复用已验证交付通道：原片和审查/来源资料进入既有私有 R2；通过 functions/_shared/cost-guard.js 的共享D1预算保护执行每次R2 HEAD/GET/PUT，使用官方已安装Wrangler和现有登录，不打印秘密。冻结本条上传字节与对象键，远端读回验证哈希，基于最新远端目录合并，仅新增本条，逐字段保持全部旧目录条目。Statistics专用 .workspace-backups/ 上传/公开脚本硬绑定0542和旧hash，只能作为参考，绝不能直接用于其他学科或把真实结果冒名；为本条建立验证过的固定范围执行器和持久上传日志，未知结果先查证，不盲目重试。\n\n新学科公开前，核对真实 canonical code/title/slug，按当前 explicit PUBLIC_PREVIEW_FIELDS 注册规则仅增加本次学科，通过现有 public catalog/public-video 处理器和 field 原生播放器发布。保持 HUMAN_REVIEW_PENDING、NOT_PUBLISHED、NOT_APPLIED、VIDEO_CONTENT_UNDER_REVIEW、aiGenerated:true 等真实预览边界。普通用户不展示内部ID、对象键、哈希、Notebook地址、政策和审查材料；私有接口仍需认证。public catalog基于最新远端内容合并并读回，不能覆盖别的任务新条目。未经允许的未知学科、任意对象键仍不可公开。\n\n需要网站代码改动时先刷新Git及当前生产发布并比较核心资产，按部署政策只提交本条必要文件，根文件/public镜像同步，做相应预览/接口、语法、CSP和差异检查。避免仓库自动版本钩子广泛加入其他任务文件；参考已验证的 Statistics scoped-hooks，保留检查并仅暂存本任务改动。共享发布锁下直接commit+push；查询真实部署成功并检查正式学科页、两项标注、匿名实际原片播放以及私有接口认证，不能把上传/推送成功等同于完成公开。\n\n每轮保存可续跑的学科状态、真实来源/模型/Notebook/视频/上传/发布证据和下轮交接到 review/video-factory-hourly-20261012/，大体积原片及冻结/诊断文件留在Git排除的 .workspace-backups/或现有runtime。所有其他文章、歌曲、候选题库及未提交视频工作必须保留；不要复位全工作区或整库重建。无变化或无可行动进展时保持安静，仅在实际完成公开发布、失败或需要用户处理时反馈。",
+  "prompt": "继续在 /Users/leoyang/Documents/mapkai 运行 MapKAI 视频工厂。用户已明确批准长期授权：后续所有学科的知识包、完整创作/审核政策及审查材料可发送至其已登录的 ChatGPT 和 NotebookLM；使用现有账号与额度生成视频（每日最多18条）；生成完成后直接公开到 MapKAI 并显示指定的AI与待审核标注。用户于2026-10-15最新明确要求“继续开始视频工厂每小时自动执行”，明确恢复2026-10-14暂停的视频任务，并将排期改为 Europe/Amsterdam 本地时间每小时整点（00分00秒）启动。此安排取代此前单数小时整点及更早的每小时30分排期；恢复后从下一个整点开始，暂停期间或已过去的时段不补跑。提前唤醒时可以核实状态，但不得在计划整点之前领取新学科或提交视频生成；若既有任务未完成则优先续接，不并行启动第二个视频。每轮最多推进一个新学科视频。生成完成后直接发布为公开学习预览，页面只显示“AI generated”和“Pending review · Not fully approved”，沿用 Statistics 已上线的播放器。无需再次询问普通生成、上传或公开预览许可；这不等于人工完整批准，不能伪造审核PASS。\n\n每次先读根目录 AGENTS.md、MAPKAI_MEMORY.md、docs/mapkai-deployment-policy.md、review/video-factory-hourly-20261012/schedule.json，以及 mapkai-video-factory/runtime/subsubjects/manifest.json 和实际 Notebook/上传/公开发布回执。/Users/leoyang/Documents/mapkai 是唯一有效工作区，旧 archive/atlas 路径只是兼容历史信息。Statistics 0542、Personal skills and development 0031、Education science 0111、Training for pre-school teachers 0112、Teacher training without subject specialisation 0113 和 Teacher training with subject specialisation 0114 已公开，跳过，不重新生成；0011 SECURITY_PAUSED 和0021 RECOVERY_REQUIRED 保留。优先续接本任务上轮未完成的那个学科；没有未完成学科时按现有 Sub-Subject 队列领取首个可处理 EDITORIAL_PENDING 项，当前下一项是0211 Audio-visual techniques and media production；以后以实际队列和公开回执为准。最新远端公开目录另有已公开原片 Economics0311、Psychology0313、Physics0533；核实其原始公开回执后跳过，保留历史 UNKNOWN 源稿审核，不能伪造源稿或视频审核PASS，也不能改写其他队列记录。保留每个原始 code、title、slug、runId、请求ID及全部其他队列项目。不要驱动旧v5/major-fields队列重复制作同一内容。\n\n每轮开始核实本任务运行锁、现有文章任务的共享写作/发布锁和当前真实资源状态。文章真正使用的共享路径是 review/module-batches/locks/shared-writer-release.lock 和兼容路径 review/module-batches/.shared-writer-release.lock；锁可能为目录，必须读取 owner.json，结合文章批次 state 的 activeExecution/resourceState 及真实 owner 运行状态核实。review/shared-production-writer.lock 只是历史视频标记，它缺失不表示文章共享资源空闲。任何实际共享锁仍有运行持有者时等待，不覆盖、删除或按年龄接管。资源空闲且原持有者已真实退出后，视频也必须按与文章一致的实际共享路径原子领取资源，记录真实兼容 owner/run 与 ownerThreadId/runId，并只释放本运行拥有的锁；旧视频标记不能替代实际共享锁。上轮仍在运行或共享资源正被占用时保留续跑位置，不能仅凭锁的时间判断可抢占，不能同时启动第二个视频，也不能补跑错过的多小时额度。每轮最多一次新的真实 Notebook 视频生成提交；任何重复或重做都算一次新提交，距上次真实提交至少60分钟。保持现有每日18次、并发上限及共享存储预算，真实历史提交一起计数。遇到额度、使用限制或生成仍在进行时保存真实阶段并等待后续轮次；不购买升级、额度或新账户。当前旧 quota/capability 报告是历史快照，不代表实时可用性。全部可处理队列完成后暂停本定时任务并报告完成；孤立受阻项目保存原因，其他可处理项目仍可继续。\n\n沿用本会话已实际验证的创作、独立审查和 NotebookLM 流程：采集真实权威来源与原文快照，建立逐论点证据对应；通过已登录普通 ChatGPT 网页制作完整知识包及分离的视频指导，创作者和独立审核者使用各学科持久角色会话，必须读取完整当前创建/审核政策和跨学科对照，保存真实输入和完整输出。用户对继续同一视频工厂的授权包括这些待公开材料用于既定外部创作/独立审查流程。源稿通过实际独立审核及确定性哈希关卡后，冻结原字节，只导入知识材料作为Notebook来源，指导提示单独放在定制框，控制不超过4500 UTF-16字符并核实实际界面限制。只有真实接收确认才记GENERATING，发送结果不明时恢复原请求，不能再次点击生成。使用当前获准的电脑/浏览器工具；Node文件协议只能传递真实job/result，不能编造浏览器能力、模型结果或提交回执。不要使用未获准的CDP/Playwright等替代方式操纵已登录浏览器。\n\n实际生成完成后下载原片，核实 Notebook、标题、尝试ID、完整文件哈希、容器、时长、分辨率和可解码性。保留来源审核与视频审核的真实结果；能够取得的转录、实际帧和独立视频意见归档，证据不足或未完成完整视频审核须如实记PENDING/EVIDENCE_REQUIRED/BLOCKED。用户明确允许未完整批准的视频作为标注预览公开，所以完整视频/人工正式批准不是公开预览的前置条件；源稿、原片真实性、可播放与隐私边界仍须通过。不得把下载或公开成功改记为视频审核PASS、BRANDED或正式批准。\n\n上传并公开复用已验证交付通道：原片和审查/来源资料进入既有私有 R2；通过 functions/_shared/cost-guard.js 的共享D1预算保护执行每次R2 HEAD/GET/PUT，使用官方已安装Wrangler和现有登录，不打印秘密。冻结本条上传字节与对象键，远端读回验证哈希，基于最新远端目录合并，仅新增本条，逐字段保持全部旧目录条目。Statistics专用 .workspace-backups/ 上传/公开脚本硬绑定0542和旧hash，只能作为参考，绝不能直接用于其他学科或把真实结果冒名；为本条建立验证过的固定范围执行器和持久上传日志，未知结果先查证，不盲目重试。\n\n新学科公开前，核对真实 canonical code/title/slug，按当前 explicit PUBLIC_PREVIEW_FIELDS 注册规则仅增加本次学科，通过现有 public catalog/public-video 处理器和 field 原生播放器发布。保持 HUMAN_REVIEW_PENDING、NOT_PUBLISHED、NOT_APPLIED、VIDEO_CONTENT_UNDER_REVIEW、aiGenerated:true 等真实预览边界。普通用户不展示内部ID、对象键、哈希、Notebook地址、政策和审查材料；私有接口仍需认证。public catalog基于最新远端内容合并并读回，不能覆盖别的任务新条目。未经允许的未知学科、任意对象键仍不可公开。\n\n需要网站代码改动时先刷新Git及当前生产发布并比较核心资产，按部署政策只提交本条必要文件，根文件/public镜像同步，做相应预览/接口、语法、CSP和差异检查。避免仓库自动版本钩子广泛加入其他任务文件；参考已验证的 Statistics scoped-hooks，保留检查并仅暂存本任务改动。共享发布锁下直接commit+push；查询真实部署成功并检查正式学科页、两项标注、匿名实际原片播放以及私有接口认证，不能把上传/推送成功等同于完成公开。\n\n每轮保存可续跑的学科状态、真实来源/模型/Notebook/视频/上传/发布证据和下轮交接到 review/video-factory-hourly-20261012/，大体积原片及冻结/诊断文件留在Git排除的 .workspace-backups/或现有runtime。所有其他文章、歌曲、候选题库及未提交视频工作必须保留；不要复位全工作区或整库重建。无变化或无可行动进展时保持安静，仅在实际完成公开发布、失败或需要用户处理时反馈。",
   "automationId": "mapkai-30",
   "targetThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
   "createdAt": "2026-10-12T21:39:33.049000+02:00",
@@ -101,64 +87,64 @@
     "review": "PENDING"
   },
   "lastStarted": {
-    "code": "0114",
-    "runId": "video-odd-20261014T0100-217a69b1",
-    "startedAt": "2026-10-13T23:01:01.946543+00:00",
-    "scheduledLocal": "2026-10-14T01:00:00+02:00",
-    "newNotebookSubmissions": 1,
-    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0114-subsubject-creator-1",
-    "creatorAcceptedAt": "2026-10-13T23:05:52.176Z",
-    "sourceReviewRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0114-subsubject-review-1",
-    "sourceReviewAcceptedAt": "2026-10-13T23:20:40.369Z",
+    "code": "0211",
+    "runId": "video-hourly-20261015T1100-d9c63429",
+    "startedAt": "2026-10-15T09:00:55.634067+00:00",
+    "scheduledLocal": "2026-10-15T11:00:00+02:00",
+    "newNotebookSubmissions": 0,
+    "creatorRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-2",
+    "creatorAcceptedAt": "2026-10-15T09:39:19.728Z",
+    "sourceReviewRequestId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1",
+    "sourceReviewAcceptedAt": "2026-10-15T09:43:00.197Z",
+    "creatorRequestIds": [
+      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-1",
+      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-creator-2"
+    ],
+    "sourceReviewRequestIds": [
+      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-1",
+      "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317-0211-subsubject-review-r2-1"
+    ],
     "sourceReview": "PASS",
-    "notebookRequestId": "0114-dbac9baf-6fdd-434c-9411-8da64c42c833",
-    "notebookAcceptedAt": "2026-10-13T23:33:41.007Z"
+    "artifactRevision": 2,
+    "status": "WAITING_SHARED_UPLOAD_CAPACITY",
+    "sourceFrozenAt": "2026-10-15T09:46:57.824Z"
   },
   "latestAuthorizationRenewalAt": "2026-10-13T15:29:29.835918+00:00",
   "automationVerification": {
-    "verifiedAt": "2026-10-14T01:26:44.003636+00:00",
+    "verifiedAt": "2026-10-15T08:44:13.151410+00:00",
     "id": "mapkai-30",
     "status": "ACTIVE",
-    "name": "MapKAI 单数小时整点视频生成与发布",
+    "name": "MapKAI 每小时整点视频生成与发布",
     "sameThread": true,
     "timezone": "Europe/Amsterdam",
-    "hours": [
-      1,
-      3,
-      5,
-      7,
-      9,
-      11,
-      13,
-      15,
-      17,
-      19,
-      21,
-      23
-    ],
+    "frequency": "HOURLY",
+    "interval": 1,
     "minute": 0,
     "second": 0,
     "rruleReadBackMatches": true,
-    "nextCandidate": "0211",
-    "nextScheduledLocal": "2026-10-14T05:00:00+02:00",
-    "completedCanonicalField": "0114",
-    "historicalPreviewSourceApprovalRemains": "UNKNOWN"
+    "nextScheduledLocal": "2026-10-15T11:00:00+02:00",
+    "nextCandidate": "0211"
   },
   "latestResourceCheck": {
-    "checkedAt": "2026-10-14T01:26:44.003636+00:00",
-    "scheduledLocal": "2026-10-14T03:00:00+02:00",
-    "decision": "PUBLIC_PREVIEW_COMPLETED_SHARED_LOCKS_RELEASE_AFTER_RECORD_PUSH",
+    "checkedAt": "2026-10-15T09:00:55.634067+00:00",
+    "scheduledLocal": "2026-10-15T11:00:00+02:00",
+    "decision": "CLAIMED_ACTUAL_SHARED_RESOURCES",
+    "candidateClaimed": true,
+    "canonicalCode": "0211",
     "ownerThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
-    "ownerRunId": "video-odd-20261014T0300-dd1dffb9",
+    "ownerRunId": "video-hourly-20261015T1100-d9c63429",
     "actualSharedResourcesOwned": true,
-    "activeExecution": true,
-    "canonicalCode": "0114",
-    "newNotebookSubmissionsThisHeartbeat": 0,
-    "nextScheduledLocal": "2026-10-14T05:00:00+02:00"
+    "actualSharedLockPaths": [
+      "review/video-factory-hourly-20261012/production.lock",
+      "review/module-batches/locks/shared-writer-release.lock",
+      "review/module-batches/.shared-writer-release.lock",
+      "review/shared-production-writer.lock"
+    ],
+    "nextScheduledLocal": "2026-10-15T12:00:00+02:00"
   },
-  "scheduleEffectiveAt": "2026-10-13T19:29:59.001000+00:00",
+  "scheduleEffectiveAt": "2026-10-15T08:44:13.151410+00:00",
   "scheduleEffectiveLocal": "2026-10-13T21:29:59.001000+02:00",
-  "nextScheduledLocal": "2026-10-14T05:00:00+02:00",
+  "nextScheduledLocal": "2026-10-15T12:00:00+02:00",
   "existingRemoteHistoricalPreviews": [
     {
       "code": "0311",
@@ -178,5 +164,25 @@
       "attemptId": "0533-physics-20260829150556",
       "sourceReview": "UNKNOWN"
     }
-  ]
+  ],
+  "previousPlannedLocalBeforePause": "2026-10-14T15:00:00+02:00",
+  "lastPause": {
+    "pausedAt": "2026-10-14T12:24:40.379596+00:00",
+    "pauseAuthorization": "暂时停止定时任务",
+    "pauseEvidencePath": "review/video-factory-hourly-20261012/pause-20261014-122440.json",
+    "previousPlannedLocalBeforePause": "2026-10-14T15:00:00+02:00"
+  },
+  "resumedAt": "2026-10-15T08:44:13.151410+00:00",
+  "resumeAuthorization": "继续开始视频工厂每小时自动执行",
+  "resumeEvidencePath": "review/video-factory-hourly-20261012/resume-hourly-20261015.json",
+  "latestCapacityHold": {
+    "state": "INSUFFICIENT_VERIFIED_VIDEO_DELIVERY_HEADROOM",
+    "checkedAt": "2026-10-15T09:28:33.558Z",
+    "remainingUploadBytes": 21864442,
+    "comparisonOriginalBytes": 46866706,
+    "internalSharedLimit": true,
+    "providerQuotaExhaustionClaimed": false,
+    "budgetAuthorization": "PENDING_EXPLICIT_USER_DECISION",
+    "evidencePath": ".workspace-backups/video-factory-0211-20261015/delivery-capacity-preflight.json"
+  }
 }

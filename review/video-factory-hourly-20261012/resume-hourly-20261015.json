@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "mapkai-video-automation-resume.v1",
+  "automationId": "mapkai-30",
+  "status": "ACTIVE",
+  "verifiedAt": "2026-10-15T08:44:13.151410+00:00",
+  "userRequest": "继续开始视频工厂每小时自动执行",
+  "timezone": "Europe/Amsterdam",
+  "frequency": "HOURLY",
+  "interval": 1,
+  "minute": 0,
+  "second": 0,
+  "sameExistingAutomation": true,
+  "sameThread": true,
+  "firstFutureScheduledLocal": "2026-10-15T11:00:00+02:00",
+  "cadenceReadBackMatches": true,
+  "sourceVideoHumanApprovalBoundariesPreserved": true,
+  "maximumDailySubmissions": 18,
+  "maximumNewSubmissionsPerRun": 1,
+  "minimumMinutesBetweenSubmissions": 60,
+  "catchUp": false,
+  "newGenerationSubmissionsThisResume": 0,
+  "newFieldJobsAllocated": 0,
+  "all77QueueEntriesUnchanged": true,
+  "preservedHolds": [
+    "0011",
+    "0021"
+  ],
+  "existingHeldRequestPreserved": [
+    {
+      "code": "0021",
+      "title": "Literacy and numeracy",
+      "slug": "0021-literacy-and-numeracy",
+      "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317",
+      "status": "RECOVERY_REQUIRED",
+      "stage": "EDITORIAL_PAUSED",
+      "pendingEditorialRequestId": "0021-subsubject-creator-2",
+      "pendingNotebookRequestId": null,
+      "generationAttemptId": null
+    }
+  ],
+  "eligibleUnfinishedVideos": 0,
+  "nextCandidate": {
+    "code": "0211",
+    "title": "Audio-visual techniques and media production",
+    "slug": "0211-audio-visual-techniques-and-media-production",
+    "runId": "subsubjects-20260902031619-5ff56ad2-346c-4c68-995e-d02191ff3317",
+    "status": "EDITORIAL_PENDING"
+  },
+  "otherAutomationsModified": false,
+  "lastCompletedPreviewRetained": {
+    "code": "0114",
+    "verifiedAt": "2026-10-14T01:25:53.554Z",
+    "url": "https://www.mapkai.com/fields/0114-teacher-training-with-subject-specialisation",
+    "review": "PENDING"
+  },
+  "privateReadbackEvidencePath": ".workspace-backups/video-factory-resume-20261015/verified-hourly-resume.json"
+}
