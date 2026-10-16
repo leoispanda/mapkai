@@ -60,12 +60,12 @@
   });
   // Keep one body-mounted player alive while the main app changes learning routes.
   const musicStyle = document.createElement('link');
-  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=dock-1-original-lyrics-1';
+  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=compact-player-20261016';
   document.head.append(musicStyle);
   const startMusicDock = () => {
     const launch = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=shared-votes-20261014'; document.head.append(script);
+      script.src = '/music/dock.js?v=compact-player-20261016'; document.head.append(script);
     };
     if (globalThis.MapKAIMusicPreferences) { launch(); return; }
     // Music includes the same helper before its app; other pages load it here.

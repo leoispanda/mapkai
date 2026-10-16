@@ -3,20 +3,22 @@
 
   const copy = {
     zh: {
-      back: '← 返回 Toolbox', intro: '歌曲小卡片，点击即可播放。', aiNotice: '使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '搜索歌曲…', manage: '管理歌曲',
+      back: '← 返回 Toolbox', intro: '选一首，接着听。按编号、歌名或学科找歌。', aiNotice: '所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '编号、歌名、学科或概念…', manage: '管理歌曲',
       like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
       lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
-      playlistHeading: '一起听 MapKAI', playlistIntro: '一键播放全部歌曲，按列表顺序连续聆听。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
+      playlistHeading: '一起听 MapKAI', playlistIntro: '默认连续播放，到歌单末尾自动从头继续。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
+      libraryTools: '创作与管理', continuousPlay: '连续播放', continuousHint: '播完一首自动接下一首，歌单循环播放', subjectFilter: '学科', allSubjects: '全部学科', sortSongs: '排序', sortRank: '按喜好', sortNumber: '编号顺序', sortNewest: '最新编号', songDetails: '歌曲详情', detailsLabel: '{title} 的歌词与详情', fullTitle: '完整名称', playlistOptions: '歌词与设置', continuousOff: '连续播放已关闭，当前歌曲结束后停止。',
       createSong: '制作歌曲', composerIntro: '先在这里准备创作说明，复制后粘贴到 ElevenLabs。歌曲会在你自己的音乐账号中制作，并使用该账号的点数。', composerPrivacy: '你的主题和歌词只保留在当前页面；由你复制并粘贴到音乐工具。', composerTheme: '想法或主题', composerStyle: '音乐风格', composerDuration: '时长', styleMemphisHipHop: '孟菲斯 Hip-hop', styleRock: '摇滚', styleSymphonic: '交响', styleFolkRap: '民谣说唱', styleAcoustic: '原声', durationOne: '1 分钟', durationTwo: '2 分钟', composerLyrics: '原创歌词（可选）', composerLyricsPlaceholder: '留空即可按主题创作原创歌词。', preparePrompt: '生成创作说明', composerPrompt: '创作说明', copyPrompt: '复制创作说明', copyingPrompt: '正在复制…', openCreator: '打开音乐制作工具 ↗', composerReturn: '先复制说明，再打开音乐工具粘贴并制作。下载完成的歌曲后，回到这里通过“管理歌曲”上传成品。', composerReady: '创作说明已准备好。先复制，再到音乐工具中粘贴。', composerCopied: '已复制创作说明。打开音乐工具并粘贴，即可开始制作。', composerCopyFallback: '请复制已选中的创作说明：按 ⌘C 或 Ctrl+C，也可以长按复制。', composerThemeRequired: '请填写歌曲的想法或主题。', composerThemeLimit: '主题最多 1000 个字符。', composerLyricsLimit: '歌词最多 2400 个字符。', composerStyleRequired: '请选择一种音乐风格。', composerDurationRequired: '请选择 1 分钟或 2 分钟。', composerPromptLimit: '创作说明最多 4100 个字符，请缩短主题或歌词。', composerCount: '{count} / 4100 个字符',
       libraryError: '暂时无法载入歌曲列表，请再试一次。', retry: '重新载入', emptyTitle: '还没有歌曲。', emptyCopy: '歌曲上传后，会在这里展示。', noResults: '没有找到这首歌。', noResultsCopy: '试试其他关键词，或看看完整列表。', clearSearch: '查看全部歌曲', home: '回到 MapKAI ↗',
       studioTitle: '上传歌曲', close: '关闭', checking: '正在打开歌曲工作室…', ownerIntro: '输入 MapKAI 管理密码，开始上传歌曲。', ownerCode: '管理密码', login: '打开工作室', unavailable: '暂时无法上传歌曲，请稍后再试。', uploadIntro: '下载你使用 AI 创作的歌曲，在这里上传，即可加入公开歌曲列表。', chooseFile: '选择歌曲文件', fileFormats: 'MP3 / M4A / WAV · 每首最多 25 MB', preview: '上传前试听', songTitle: '歌名', songLanguage: '歌曲语言', chooseLanguage: '请选择英语、荷兰语或中文。', songDescription: '一句介绍（可选）', titlePlaceholder: '给这首歌一个名字', descriptionPlaceholder: '这首歌的灵感，或你想说的话…', publishNote: '上传的歌曲和 AI 生成标识会公开展示。请确认你有权分享这首作品。', progress: '上传进度', publish: '上传并加入列表',
       loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', buffering: '正在缓冲：{title}', playSong: '播放', pauseSong: '暂停', loadingSong: '正在缓冲…', retrySong: '点击重试', audioLabel: '播放 {title}', pauseLabel: '暂停 {title}', cancelLabel: '停止载入 {title}', retryLabel: '重新播放 {title}', controlsLabel: '{title} 的播放控制', audioError: '暂时无法播放这首歌，点击卡片重试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
     },
     en: {
-      back: '← Back to Toolbox', intro: 'Tap a song card to listen.', aiNotice: 'Songs created with AI are labelled AI-generated on their cards before playback.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Search songs…', manage: 'Manage songs',
+      back: '← Back to Toolbox', intro: 'Pick a song and keep listening. Find it by number, title, or subject.', aiNotice: 'AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Number, title, subject, or concept…', manage: 'Manage songs',
       like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; ranking is shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
       lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
-      playlistHeading: 'Listen with MapKAI', playlistIntro: 'Play every song, in order, with one tap.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
+      playlistHeading: 'Listen with MapKAI', playlistIntro: 'Continuous play is on: the queue repeats after its last song.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
+      libraryTools: 'Create & manage', continuousPlay: 'Continuous play', continuousHint: 'Automatically play the next song and repeat the queue', subjectFilter: 'Subject', allSubjects: 'All subjects', sortSongs: 'Sort', sortRank: 'By votes', sortNumber: 'Number order', sortNewest: 'Newest number', songDetails: 'Song details', detailsLabel: 'Lyrics and details for {title}', fullTitle: 'Full title', playlistOptions: 'Lyrics & settings', continuousOff: 'Continuous play is off. Playback stops after this song.',
       createSong: 'Create a song', composerIntro: 'Prepare a prompt here, then copy and paste it into ElevenLabs. The song is generated in your own music account and uses that account’s credits.', composerPrivacy: 'Your theme and lyrics stay on this page. You choose when to copy and paste them into the music tool.', composerTheme: 'Idea or theme', composerStyle: 'Music style', composerDuration: 'Duration', styleMemphisHipHop: 'Memphis hip-hop', styleRock: 'Rock', styleSymphonic: 'Symphonic', styleFolkRap: 'Folk rap', styleAcoustic: 'Acoustic', durationOne: '1 minute', durationTwo: '2 minutes', composerLyrics: 'Original lyrics (optional)', composerLyricsPlaceholder: 'Leave blank to create original lyrics from your theme.', preparePrompt: 'Prepare prompt', composerPrompt: 'Your creation prompt', copyPrompt: 'Copy prompt', copyingPrompt: 'Copying…', openCreator: 'Open music creator ↗', composerReturn: 'Copy the prompt first, then open the music tool, paste it, and create your song. Download the finished song and return here to upload it through Manage songs.', composerReady: 'Your prompt is ready. Copy it, then paste it into the music tool.', composerCopied: 'Prompt copied. Open the music tool and paste it to begin creating.', composerCopyFallback: 'Copy the selected prompt with ⌘C or Ctrl+C, or press and hold to copy.', composerThemeRequired: 'Add an idea or theme for your song.', composerThemeLimit: 'The theme can have up to 1000 characters.', composerLyricsLimit: 'The lyrics can have up to 2400 characters.', composerStyleRequired: 'Choose a music style.', composerDurationRequired: 'Choose 1 minute or 2 minutes.', composerPromptLimit: 'The prompt can have up to 4100 characters. Shorten the theme or lyrics.', composerCount: '{count} / 4100 characters',
       libraryError: 'The song list could not be loaded. Please try again.', retry: 'Try again', emptyTitle: 'No songs yet.', emptyCopy: 'Songs will appear here once uploaded.', noResults: 'No songs found.', noResultsCopy: 'Try another keyword, or see the full list.', clearSearch: 'See all songs', home: 'Back to MapKAI ↗',
       studioTitle: 'Upload a song', close: 'Close', checking: 'Opening the music studio…', ownerIntro: 'Enter the MapKAI owner password to upload songs.', ownerCode: 'Owner password', login: 'Open the studio', unavailable: 'Uploads are temporarily unavailable. Please try again later.', uploadIntro: 'Download the song you created with AI, then upload it here to join the public song list.', chooseFile: 'Choose a song file', fileFormats: 'MP3 / M4A / WAV · Up to 25 MB per song', preview: 'Listen before uploading', songTitle: 'Song title', songLanguage: 'Song language', chooseLanguage: 'Choose English, Dutch, or Chinese.', songDescription: 'A few words (optional)', titlePlaceholder: 'Give your song a name', descriptionPlaceholder: 'The inspiration behind this song, or something you want to share…', publishNote: 'Uploaded songs and their AI-generated labels are public. Please make sure you have the right to share this work.', progress: 'Upload progress', publish: 'Upload to the list',
@@ -31,6 +33,13 @@
   const musicPreferences = globalThis.MapKAIMusicPreferences;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const cards = new Map();
+  // Keep one media element for the entire queue. Mobile browsers can retain
+  // the user's playback permission when the next song uses the same player.
+  const playbackAudio = document.createElement('audio');
+  playbackAudio.preload = 'none';
+  playbackAudio.hidden = true;
+  playbackAudio.id = 'music-playback-audio';
+  $('playlist-player').append(playbackAudio);
   const featuredRank = new Map([
     ['c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f', -1],
     ['ccb37c55-bae6-4f72-a80a-d1bc94e40ae0', 0],
@@ -48,6 +57,7 @@
   let playlistComplete = false;
   let playlistIds = [];
   let playbackVolume = 1;
+  let continuousPlay = true;
   const playlistLyrics = {
     lyricsText: $('playlist-lyrics'), lyricsSpan: $('playlist-lyric-span'),
     lyricsUnavailable: $('playlist-lyrics-unavailable'), currentLyricLine: null, trackId: null,
@@ -70,6 +80,7 @@
   try {
     const saved = localStorage.getItem('mapkaiMusicLanguage');
     if (saved === 'en' || saved === 'zh') language = saved;
+    continuousPlay = localStorage.getItem('mapkaiMusicContinuous.v1') !== 'off';
   } catch {}
 
   function t(key, values = {}) {
@@ -187,7 +198,7 @@
     document.querySelector('.brand').setAttribute('aria-label', next === 'zh' ? 'MapKAI 首页' : 'MapKAI home');
     $('tracks').setAttribute('aria-label', next === 'zh' ? '歌曲列表' : 'Songs');
     preview.setAttribute('aria-label', t('previewAudio'));
-    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music。使用 AI 创作的歌曲，点击卡片即可播放。' : 'MapKAI Music. Songs created with AI. Tap a card to listen.';
+    document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music。按编号、歌名或学科找歌，连续播放。' : 'MapKAI Music. Find songs by number, title, or subject and keep listening.';
     updateLibrary();
     updatePreferencesNotice();
     status($('owner-status'), ownerStatus);
@@ -214,13 +225,11 @@
   function stopOtherPlayers(audio) {
     if (playingAudio && playingAudio !== audio) playingAudio.pause();
     for (const card of cards.values()) {
-      if (card.audio === audio) selectedCard = card;
-      else {
+      if (card !== selectedCard || audio === preview) {
         card.restoreSeconds = null;
         card.playRequest += 1;
         card.pending = false;
         card.waiting = false;
-        card.audio.pause();
       }
     }
     if (audio === preview) { selectedCard = null; playlistMode = false; playlistComplete = false; }
@@ -233,16 +242,14 @@
     let activeTrack = null;
     let buffering = false;
     for (const card of cards.values()) {
-      const active = !card.audio.paused && !card.audio.ended && !card.audio.error;
-      const waiting = card.pending || (active && card.waiting);
       const selected = card === selectedCard;
+      const active = selected && !card.audio.paused && !card.audio.ended && !card.audio.error;
+      const waiting = selected && (card.pending || (active && card.waiting));
       card.element.classList.toggle('is-playing', active);
       card.element.classList.toggle('is-buffering', waiting);
       card.element.classList.toggle('is-selected', selected);
       card.audio.hidden = true;
-      const revealLyrics = selected || active;
-      if (revealLyrics && !card.lyricsActive && !card.lyricsDetails.hidden) card.lyricsDetails.open = true;
-      card.lyricsActive = revealLyrics;
+      card.progress.hidden = !selected;
       card.button.setAttribute('aria-label', t(waiting ? 'cancelLabel' : active ? 'pauseLabel' : !card.error.hidden ? 'retryLabel' : 'audioLabel', { title: card.track.title }));
       card.icon.dataset.state = waiting ? 'loading' : active ? 'pause' : 'play';
       card.action.textContent = t(waiting ? 'loadingSong' : active ? 'pauseSong' : !card.error.hidden ? 'retrySong' : 'playSong');
@@ -265,7 +272,7 @@
 
   async function togglePlayback(card) {
     window.dispatchEvent(new Event('mapkai:music-intent'));
-    if (card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error)) {
+    if (selectedCard === card && (card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error))) {
       card.playRequest += 1;
       card.pending = false;
       card.waiting = false;
@@ -280,6 +287,10 @@
     window.dispatchEvent(new Event('mapkai:music-intent'));
     selectedCard = card;
     stopOtherPlayers(card.audio);
+    if (card.audio.src !== card.track.url) {
+      card.audio.src = card.track.url;
+      card.audio.load();
+    }
     card.error.hidden = true;
     if (restart) card.restoreSeconds = null;
     if (card.audio.error) card.audio.load();
@@ -308,7 +319,7 @@
   }
 
   function updateSeek(seek, elapsed, length, card) {
-    const total = card?.audio.duration;
+    const total = card === selectedCard ? card?.audio.duration : null;
     const available = Number.isFinite(total) && total > 0 && card.audio.readyState > 0 && !card.audio.error;
     const current = available ? Math.max(0, Math.min(total, card.audio.currentTime)) : 0;
     const fraction = available ? current / total : 0;
@@ -327,7 +338,7 @@
 
   function seekPlayback(card, value) {
     const position = Number(value);
-    if (!card || !Number.isFinite(position) || !Number.isFinite(card.audio.duration) || card.audio.duration <= 0 || card.audio.error) return;
+    if (!card || card !== selectedCard || !Number.isFinite(position) || !Number.isFinite(card.audio.duration) || card.audio.duration <= 0 || card.audio.error) return;
     window.dispatchEvent(new Event('mapkai:music-intent'));
     card.restoreSeconds = null;
     if (selectedCard !== card) {
@@ -348,17 +359,22 @@
 
   function updatePlaylist({ immediate = false } = {}) {
     const card = selectedCard;
+    $('playlist-player').classList.toggle('has-selection', Boolean(card));
     const queue = currentQueue();
     const index = card ? queue.indexOf(card.track.id) : -1;
     const active = card && !card.audio.paused && !card.audio.ended && !card.audio.error;
     const pending = card && (card.pending || (active && card.waiting));
     $('play-all').disabled = !loaded || !tracks.length;
-    const key = playlistMode && card ? (!card.error.hidden ? 'retrySong' : pending ? 'cancelAll' : active ? 'pauseAll' : 'resumeAll') : playlistComplete ? 'replayAll' : 'playAll';
+    const key = card ? (!card.error.hidden ? 'retrySong' : pending ? 'cancelAll' : active ? 'pauseAll' : 'resumeAll') : playlistComplete ? 'replayAll' : 'playAll';
     $('play-all').textContent = t(key);
     $('play-all').setAttribute('aria-label', t(key));
-    $('playlist-prev').disabled = index <= 0;
-    $('playlist-next').disabled = index < 0 || index >= queue.length - 1;
-    const title = card ? card.track.title : t('playlistReady');
+    $('playlist-prev').disabled = index < 0 || queue.length < 2;
+    $('playlist-next').disabled = index < 0 || queue.length < 2;
+    const title = card ? compactTrackTitle(card.track) : t('playlistReady');
+    $('playlist-title').title = card?.track.title || '';
+    $('playlist-intro').textContent = t(continuousPlay ? 'playlistIntro' : 'continuousOff');
+    $('continuous-play').checked = continuousPlay;
+    $('continuous-play').title = t('continuousHint');
     if ($('playlist-title').textContent !== title) $('playlist-title').textContent = title;
     $('playlist-position').textContent = index >= 0 ? t('playlistPosition', { position: index + 1, count: queue.length }) : loaded ? t('count', { count: tracks.length }) : t(libraryFailed ? 'libraryError' : 'loading');
     $('playlist-disclosure').hidden = !card?.track.aiGenerated;
@@ -383,19 +399,19 @@
 
   function playAll() {
     if (!loaded || !tracks.length) return;
-    if (playlistMode && selectedCard) { togglePlayback(selectedCard); return; }
+    if (selectedCard) return togglePlayback(selectedCard);
     playlistIds = tracks.map(track => track.id);
     playlistMode = true;
     playlistComplete = false;
     $('song-search').value = '';
     updateLibrary();
-    startPlayback(cards.get(playlistIds[0]), { restart: true });
+    return startPlayback(cards.get(playlistIds[0]), { restart: true });
   }
 
   function movePlaylist(direction) {
     const queue = currentQueue();
     const index = selectedCard ? queue.indexOf(selectedCard.track.id) : -1;
-    const next = cards.get(queue[index + direction]);
+    const next = index >= 0 && queue.length ? cards.get(queue[(index + direction + queue.length) % queue.length]) : null;
     if (index < 0 || !next) return;
     playlistIds = queue;
     playlistMode = true;
@@ -404,21 +420,27 @@
   }
 
   function finishPlayback(card) {
+    if (card !== selectedCard) return;
     card.pending = false;
     card.waiting = false;
-    if (playlistMode && selectedCard === card && card.audio.ended) {
-      const index = playlistIds.indexOf(card.track.id);
-      const next = index >= 0 ? cards.get(playlistIds[index + 1]) : null;
-      if (next) { startPlayback(next, { restart: true }); return; }
-      playlistMode = false;
-      playlistComplete = true;
+    if (card.audio.ended && continuousPlay) {
+      const queue = currentQueue();
+      const index = queue.indexOf(card.track.id);
+      const next = index >= 0 && queue.length ? cards.get(queue[(index + 1) % queue.length]) : null;
+      if (next) {
+        playlistIds = queue;
+        playlistMode = true;
+        playlistComplete = false;
+        startPlayback(next, { restart: true });
+        return;
+      }
     }
     updatePlaying();
   }
 
   function usableLyricsTiming(card) {
     const timing = card.track.lyricsTiming;
-    if (!timing || (Number.isFinite(card.audio.duration) && timing[timing.length - 1].end > card.audio.duration)) return null;
+    if (!timing || (card === selectedCard && Number.isFinite(card.audio.duration) && timing[timing.length - 1].end > card.audio.duration)) return null;
     return timing;
   }
 
@@ -473,14 +495,26 @@
 
   function trackMetadata(card) {
     const ext = String(card.track.filename || '').match(/\.(mp3|m4a|wav)$/i)?.[1]?.toUpperCase();
-    const length = duration(card.audio.duration || card.track.durationSeconds);
+    const length = duration((card === selectedCard && card.audio.readyState > 0 ? card.audio.duration : card.mediaDuration) || card.track.durationSeconds);
+    const parts = trackParts(card.track);
+    card.number.textContent = parts.number;
+    card.number.hidden = !parts.number;
+    card.title.textContent = parts.name;
+    card.subject.textContent = [parts.subject, parts.concept].filter(Boolean).join(' · ');
+    card.subject.hidden = !card.subject.textContent;
+    card.subject.title = card.subject.textContent;
+    card.fullTitle.textContent = card.track.title;
+    card.lengthLabel.textContent = length;
+    card.lengthLabel.hidden = !length;
+    card.detailsSummary.setAttribute('aria-label', t('detailsLabel', { title: card.track.title }));
+    card.detailsSummary.title = t('songDetails');
+    card.detailsSummary.textContent = t('songDetails');
     const songLanguage = { en: 'English', nl: 'Nederlands', zh: '中文' }[card.track.language];
     card.meta.textContent = [songLanguage, ext, length].filter(Boolean).join(' · ');
     card.disclosure.hidden = !card.track.aiGenerated;
     card.disclosure.textContent = t('aiGenerated');
     if (card.track.aiGenerated) card.button.setAttribute('aria-describedby', card.disclosure.id);
     else card.button.removeAttribute('aria-describedby');
-    const hadLyrics = !card.lyricsDetails.hidden;
     card.lyricsDetails.hidden = !card.track.lyrics;
     card.lyricsSummary.textContent = t('lyrics');
     const lyricsLabel = t('lyricsLabel', { title: card.track.title });
@@ -495,7 +529,7 @@
     renderLyrics(card);
     renderReactionControls(card.reactions, card.track);
     if (!card.track.lyrics) card.lyricsDetails.open = false;
-    else if (!hadLyrics && card === selectedCard) card.lyricsDetails.open = true;
+
   }
 
   function createReactionControls(getTrack) {
@@ -586,7 +620,7 @@
     } else {
       // Older browsers pause media when its ancestor is detached. Keep the
       // playing, pending, or paused selected card anchored; move only the others.
-      const active = [...cards.values()].find(card => card.element.parentNode === list && (!card.audio.paused || card.pending || card.waiting));
+      const active = [...cards.values()].find(card => card === selectedCard && card.element.parentNode === list && (!card.audio.paused || card.pending || card.waiting));
       const anchor = active?.element || (selectedCard?.element.parentNode === list ? selectedCard.element : null);
       const anchorIndex = anchor ? desired.indexOf(anchor) : -1;
       if (anchorIndex >= 0) {
@@ -608,6 +642,7 @@
     playlistIds = tracks.map(track => track.id);
     for (const card of cards.values()) renderReactionControls(card.reactions, card.track);
     updatePreferencesNotice();
+    updateLibrary();
     // Refresh queue position and the dock without changing selection or playback.
     updatePlaylist({ immediate: true });
   }
@@ -617,23 +652,32 @@
     element.className = 'track-card';
     const button = document.createElement('button'); button.type = 'button'; button.className = 'track-button';
     const icon = document.createElement('span'); icon.className = 'track-icon'; icon.setAttribute('aria-hidden', 'true'); icon.dataset.state = 'play';
+    const number = document.createElement('span'); number.className = 'track-number';
     const content = document.createElement('span'); content.className = 'track-copy';
     const title = document.createElement('span'); title.className = 'track-title'; title.textContent = track.title;
+    const subject = document.createElement('span'); subject.className = 'track-subject';
+    const lengthLabel = document.createElement('span'); lengthLabel.className = 'track-length';
+    const rowMeta = document.createElement('span'); rowMeta.className = 'track-row-meta';
+    const fullTitle = document.createElement('p'); fullTitle.className = 'track-full-title';
+    const details = document.createElement('details'); details.className = 'track-details';
+    const detailsSummary = document.createElement('summary');
+    const detailsBody = document.createElement('div'); detailsBody.className = 'track-details-body';
+    details.append(detailsSummary, detailsBody);
     const disclosure = document.createElement('span'); disclosure.className = 'track-disclosure';
     const description = document.createElement('span'); description.className = 'track-description'; description.textContent = track.description; description.hidden = !track.description;
     const meta = document.createElement('span'); meta.className = 'track-meta';
     const action = document.createElement('span'); action.className = 'track-action'; action.setAttribute('aria-hidden', 'true');
-    content.append(title, disclosure, description, meta, action); button.append(icon, content);
-    const audio = document.createElement('audio'); audio.preload = 'none'; audio.src = track.url; audio.hidden = true; audio.volume = playbackVolume;
-    audio.id = `song-controls-${++cardSequence}`;
-    const progress = document.createElement('div'); progress.className = 'playback-progress'; progress.id = `${audio.id}-progress`;
+    content.append(title, subject, action); rowMeta.append(disclosure, lengthLabel); button.append(number, icon, content, rowMeta);
+    const audio = playbackAudio;
+    const controlId = `song-controls-${++cardSequence}`;
+    const progress = document.createElement('div'); progress.className = 'playback-progress'; progress.hidden = true; progress.id = `${controlId}-progress`;
     button.setAttribute('aria-controls', progress.id);
     const seek = document.createElement('input'); seek.className = 'playback-seek'; seek.type = 'range'; seek.min = 0; seek.max = 1000; seek.step = 1; seek.value = 0; seek.disabled = true;
     const times = document.createElement('div'); times.className = 'playback-times';
     const elapsed = document.createElement('span'); elapsed.textContent = '0:00';
     const length = document.createElement('span'); length.textContent = '—:—';
     times.append(elapsed, length); progress.append(seek, times);
-    disclosure.id = `${audio.id}-disclosure`;
+    disclosure.id = `${controlId}-disclosure`;
     const error = document.createElement('p'); error.className = 'track-error'; error.setAttribute('role', 'status'); error.hidden = true;
     const lyricsDetails = document.createElement('details'); lyricsDetails.className = 'track-lyrics'; lyricsDetails.hidden = true;
     const lyricsSummary = document.createElement('summary');
@@ -646,32 +690,50 @@
     const originalLyricsText = document.createElement('pre'); originalLyricsText.className = 'original-lyrics-text'; originalLyricsText.tabIndex = 0; originalLyricsText.setAttribute('role', 'region');
     originalLyricsDetails.append(originalLyricsSummary, originalLyricsText);
     const reactions = createReactionControls(() => card.track);
-    element.append(button, reactions.element, progress, audio, error, lyricsDetails, originalLyricsDetails);
-    const card = { element, button, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
-    button.addEventListener('click', () => { if (selectedCard !== card) { playlistMode = false; playlistComplete = false; } togglePlayback(card); });
-    seek.addEventListener('input', () => seekPlayback(card, seek.value));
-    audio.addEventListener('play', () => { if (audio.paused) return; error.hidden = true; card.waiting = true; stopOtherPlayers(audio); });
-    audio.addEventListener('playing', () => { if (audio.paused) return; card.pending = false; card.waiting = false; error.hidden = true; updatePlaying(); });
-    audio.addEventListener('waiting', () => { if (audio.paused) return; card.waiting = true; updatePlaying(); });
-    audio.addEventListener('pause', () => { if (!audio.paused) return; card.pending = false; card.waiting = false; updatePlaying(); });
-    audio.addEventListener('ended', () => finishPlayback(card));
-    audio.addEventListener('loadedmetadata', () => {
-      if (Number.isFinite(card.restoreSeconds) && selectedCard === card && Number.isFinite(audio.duration) && audio.duration > 0) {
-        const seconds = card.restoreSeconds; card.restoreSeconds = null;
-        audio.currentTime = Math.min(seconds, audio.duration);
-      }
-      trackMetadata(card); updatePlaying();
+    detailsBody.append(fullTitle, description, meta, reactions.element, lyricsDetails, originalLyricsDetails);
+    element.append(button, details, progress, error);
+    const card = { element, button, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
+    button.addEventListener('click', () => {
+      playlistIds = tracks.map(item => item.id); playlistMode = true; playlistComplete = false;
+      togglePlayback(card);
     });
-    audio.addEventListener('timeupdate', () => { syncLyrics(card); updateCardProgress(card); if (card === selectedCard) updatePlaylist(); });
-    const syncSeek = () => { syncLyrics(card, { immediate: true }); updateCardProgress(card); if (card === selectedCard) updatePlaylist({ immediate: true }); };
-    audio.addEventListener('seeking', syncSeek);
-    audio.addEventListener('seeked', syncSeek);
-    audio.addEventListener('durationchange', () => { updateCardProgress(card); if (card === selectedCard) updatePlaylist({ immediate: true }); });
-    audio.addEventListener('error', () => playbackError(card));
+    details.addEventListener('toggle', () => {
+      if (details.open) for (const other of cards.values()) if (other !== card) other.details.open = false;
+    });
+    seek.addEventListener('input', () => seekPlayback(card, seek.value));
     lyricsDetails.addEventListener('toggle', () => { if (lyricsDetails.open) syncLyrics(card, { immediate: true }); });
     trackMetadata(card);
     updateCardProgress(card);
     return card;
+  }
+
+  function trackParts(track) {
+    const match = /^([0-9]{3,}) (.+)$/.exec(track.title);
+    const numbered = match ? match[2] : track.title;
+    const [name, rest] = numbered.split(' - MapKAI - ');
+    const separator = rest?.indexOf(' - ') ?? -1;
+    return {
+      number: match?.[1] || '', name,
+      subject: separator >= 0 ? rest.slice(0, separator) : rest || '',
+      concept: separator >= 0 ? rest.slice(separator + 3) : '',
+    };
+  }
+
+  function compactTrackTitle(track) {
+    const parts = trackParts(track);
+    return [parts.number, parts.name].filter(Boolean).join(' ');
+  }
+
+  function updateSubjectOptions() {
+    const select = $('subject-filter');
+    const value = select.value;
+    const subjects = [...new Set(tracks.map(track => trackParts(track).subject).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+    const all = document.createElement('option'); all.value = ''; all.textContent = t('allSubjects');
+    select.replaceChildren(all, ...subjects.map(subject => {
+      const option = document.createElement('option'); option.value = subject; option.textContent = subject; return option;
+    }));
+    select.value = subjects.includes(value) ? value : '';
+    select.disabled = !loaded || !tracks.length;
   }
 
   function songNumber(track) {
@@ -681,7 +743,11 @@
   }
 
   function compareTrackOrder(first, second) {
-    if (musicPreferences) return musicPreferences.compare(first, second);
+    const sort = $('song-sort').value;
+    if (sort === 'number' || sort === 'newest') {
+      const order = songNumber(first) - songNumber(second);
+      if (order && Number.isFinite(order)) return sort === 'newest' ? -order : order;
+    } else if (musicPreferences) return musicPreferences.compare(first, second);
     const firstNumber = songNumber(first);
     const secondNumber = songNumber(second);
     if (firstNumber !== secondNumber) return firstNumber - secondNumber;
@@ -693,7 +759,7 @@
     tracks.sort(compareTrackOrder);
     const ids = new Set(tracks.map(track => track.id));
     for (const [id, card] of cards) {
-      if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { selectedCard = null; playlistMode = false; playlistComplete = false; } card.audio.pause(); card.audio.removeAttribute('src'); card.element.remove(); cards.delete(id); }
+      if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { playbackAudio.pause(); playbackAudio.removeAttribute('src'); selectedCard = null; playlistMode = false; playlistComplete = false; } card.element.remove(); cards.delete(id); }
     }
     playlistIds = playlistIds.filter(id => ids.has(id));
     for (const track of tracks) {
@@ -704,29 +770,33 @@
         card.title.textContent = track.title;
         card.description.textContent = track.description;
         card.description.hidden = !track.description;
-        if (card.audio.src !== track.url) { card.restoreSeconds = null; card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
+        if (card === selectedCard && card.audio.src !== track.url) { card.restoreSeconds = null; card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
         trackMetadata(card);
       }
       if (!card.element.parentNode) $('tracks').append(card.element);
     }
     orderExistingCards();
+    updateSubjectOptions();
     if (playlistMode) playlistIds = tracks.map(track => track.id);
     updateLibrary();
   }
 
   function updateLibrary() {
     const query = $('song-search').value.trim().toLocaleLowerCase();
+    const terms = query.split(/\s+/).filter(Boolean);
+    const subject = $('subject-filter').value;
+    if ($('subject-filter').options[0]) $('subject-filter').options[0].textContent = t('allSubjects');
     let shown = 0;
     for (const card of cards.values()) {
-      const matches = `${card.track.title} ${card.track.description}`.toLocaleLowerCase().includes(query);
+      const text = `${card.track.title} ${card.track.description}`.toLocaleLowerCase();
+      const matches = terms.every(term => text.includes(term)) && (!subject || trackParts(card.track).subject === subject);
       card.element.hidden = !matches;
-      if (!matches && !playlistMode && (card.pending || !card.audio.paused)) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); }
       if (matches) shown += 1;
-      card.audio.setAttribute('aria-label', t('controlsLabel', { title: card.track.title }));
+      if (card === selectedCard) card.audio.setAttribute('aria-label', t('controlsLabel', { title: card.track.title }));
       trackMetadata(card);
       if (!card.error.hidden) card.error.textContent = t('audioError');
     }
-    $('track-count').textContent = !loaded ? (libraryFailed ? '—' : t('loading')) : t(query ? 'filteredCount' : 'count', { count: tracks.length, shown });
+    $('track-count').textContent = !loaded ? (libraryFailed ? '—' : t('loading')) : t(query || subject ? 'filteredCount' : 'count', { count: tracks.length, shown });
     $('empty-library').hidden = !loaded || tracks.length !== 0;
     $('empty-search').hidden = !loaded || !tracks.length || shown !== 0;
     $('song-search').disabled = !loaded || !tracks.length;
@@ -894,7 +964,7 @@
   $('playlist-seek').addEventListener('input', () => seekPlayback(selectedCard, $('playlist-seek').value));
   $('playlist-volume').addEventListener('input', () => {
     playbackVolume = Number($('playlist-volume').value) / 100;
-    for (const card of cards.values()) card.audio.volume = playbackVolume;
+    playbackAudio.volume = playbackVolume;
     preview.volume = playbackVolume;
     updatePlaylist({ immediate: true });
   });
@@ -905,7 +975,14 @@
   $('composer-form').addEventListener('change', invalidateComposerPrompt);
   $('copy-prompt').addEventListener('click', copyComposerPrompt);
   $('song-search').addEventListener('input', updateLibrary);
-  $('clear-search').addEventListener('click', () => { $('song-search').value = ''; updateLibrary(); $('song-search').focus(); });
+  $('subject-filter').addEventListener('change', updateLibrary);
+  $('song-sort').addEventListener('change', applyPreferences);
+  $('continuous-play').addEventListener('change', () => {
+    continuousPlay = $('continuous-play').checked;
+    try { localStorage.setItem('mapkaiMusicContinuous.v1', continuousPlay ? 'on' : 'off'); } catch {}
+    updatePlaylist({ immediate: true });
+  });
+  $('clear-search').addEventListener('click', () => { $('song-search').value = ''; $('subject-filter').value = ''; updateLibrary(); $('song-search').focus(); });
   $('retry-library').addEventListener('click', loadLibrary);
   $('manage-music').addEventListener('click', () => {
     if (!$('song-lyrics').value.trim() && $('composer-lyrics').value.trim()) $('song-lyrics').value = $('composer-lyrics').value.trim();
@@ -995,38 +1072,77 @@
     } finally { setUploading(false); }
   });
 
+  playbackAudio.addEventListener('play', () => {
+    if (playbackAudio.paused || !selectedCard) return;
+    selectedCard.error.hidden = true; selectedCard.waiting = true; stopOtherPlayers(playbackAudio);
+  });
+  playbackAudio.addEventListener('playing', () => {
+    if (playbackAudio.paused || !selectedCard) return;
+    selectedCard.pending = false; selectedCard.waiting = false; selectedCard.error.hidden = true; updatePlaying();
+  });
+  playbackAudio.addEventListener('waiting', () => {
+    if (playbackAudio.paused || !selectedCard) return;
+    selectedCard.waiting = true; updatePlaying();
+  });
+  playbackAudio.addEventListener('pause', () => {
+    if (!playbackAudio.paused || !selectedCard) return;
+    selectedCard.pending = false; selectedCard.waiting = false; updatePlaying();
+  });
+  playbackAudio.addEventListener('ended', () => { if (selectedCard) finishPlayback(selectedCard); });
+  playbackAudio.addEventListener('loadedmetadata', () => {
+    const card = selectedCard;
+    if (!card) return;
+    card.mediaDuration = playbackAudio.duration;
+    if (Number.isFinite(card.restoreSeconds) && Number.isFinite(playbackAudio.duration) && playbackAudio.duration > 0) {
+      const seconds = card.restoreSeconds; card.restoreSeconds = null;
+      playbackAudio.currentTime = Math.min(seconds, playbackAudio.duration);
+    }
+    trackMetadata(card); updatePlaying();
+  });
+  const syncPlayback = (immediate = false) => {
+    if (!selectedCard) return;
+    syncLyrics(selectedCard, { immediate }); updateCardProgress(selectedCard); updatePlaylist({ immediate });
+  };
+  playbackAudio.addEventListener('timeupdate', () => syncPlayback());
+  playbackAudio.addEventListener('seeking', () => syncPlayback(true));
+  playbackAudio.addEventListener('seeked', () => syncPlayback(true));
+  playbackAudio.addEventListener('durationchange', () => syncPlayback(true));
+  playbackAudio.addEventListener('error', () => { if (selectedCard) playbackError(selectedCard); });
+
   window.addEventListener('pagehide', revokePreview);
   // The site-wide dock controls this page's existing audio and queue.
   // It never creates a second playing audio on the Music page.
   window.MapKAIMusicPage = Object.freeze({
     snapshot: () => ({ tracks, track: selectedCard?.track || null, audio: selectedCard?.audio || null,
       loaded, libraryFailed, pending: Boolean(selectedCard?.pending || selectedCard?.waiting),
-      failed: Boolean(selectedCard && !selectedCard.error.hidden), complete: playlistComplete, volume: playbackVolume,
+      failed: Boolean(selectedCard && !selectedCard.error.hidden), complete: playlistComplete, volume: playbackVolume, continuousPlay,
       pendingPosition: Number.isFinite(selectedCard?.restoreSeconds) ? selectedCard.restoreSeconds : null }),
     load: loadLibrary,
     toggle: () => selectedCard && !playlistComplete ? togglePlayback(selectedCard) : playAll(),
     pause: () => {
-      for (const card of cards.values()) { card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); }
+      for (const card of cards.values()) { card.playRequest += 1; card.pending = false; card.waiting = false; }
+      playbackAudio.pause();
       updatePlaying();
     },
     move: movePlaylist,
     play: id => {
       const card = cards.get(id); if (!card) return;
       playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
-      startPlayback(card, { restart: true });
+      return startPlayback(card, { restart: true });
     },
     seek: value => seekPlayback(selectedCard, value),
     volume: value => {
       if (!Number.isFinite(value)) return;
       playbackVolume = Math.max(0, Math.min(1, value));
       $('playlist-volume').value = Math.round(playbackVolume * 100);
-      for (const card of cards.values()) card.audio.volume = playbackVolume;
+      playbackAudio.volume = playbackVolume;
       preview.volume = playbackVolume; updatePlaylist({ immediate: true });
     },
     restore: (id, seconds) => {
       const card = cards.get(id); if (!card || !Number.isFinite(seconds) || seconds < 0) return;
       playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
       selectedCard = card; stopOtherPlayers(card.audio);
+      if (card.audio.src !== card.track.url) { card.audio.src = card.track.url; card.audio.load(); }
       card.restoreSeconds = seconds;
       if (card.audio.readyState > 0 && Number.isFinite(card.audio.duration) && card.audio.duration > 0) {
         card.restoreSeconds = null; card.audio.currentTime = Math.min(seconds, card.audio.duration);

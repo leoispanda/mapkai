@@ -1,0 +1,207 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import test from 'node:test';
+import vm from 'node:vm';
+
+const appSource = await readFile(new URL('../music/app.js', import.meta.url), 'utf8');
+const html = await readFile(new URL('../music/index.html', import.meta.url), 'utf8');
+const catalog = [
+  { id: '00000000-0000-4000-8000-000000000001', title: '001 First Question - MapKAI - Education - Feedback', subject: 'Education' },
+  { id: '00000000-0000-4000-8000-000000000002', title: '002 Second Look - MapKAI - Arts - Context', subject: 'Arts' },
+  { id: '00000000-0000-4000-8000-000000000003', title: '048 Before I Guess - MapKAI - Languages - Pragmatics', subject: 'Languages' },
+].map(track => ({ ...track, url: `/api/music/audio?id=${track.id}`, language: 'en',
+  aiGenerated: true, generationProvider: 'ElevenLabs', filename: 'original.mp3', durationSeconds: 120,
+  description: 'A complete original recording.', lyrics: '[Verse]\nThe original line.\n\n[Chorus]\nKeep this ending.', lyricsTiming: [],
+}));
+const flush = async () => { for (let index = 0; index < 30; index++) await Promise.resolve(); };
+
+// Execute the production app with a small DOM/media model. Tests drive user and
+// native media events, not extracted copies of the queue implementation.
+function harness({ savedContinuous = null, failPlay = false, songs = catalog } = {}) {
+  const ids = new Map(), all = [], values = new Map(), scores = new Map();
+  if (savedContinuous) values.set('mapkaiMusicContinuous.v1', savedContinuous);
+  class Target {
+    addEventListener(type, callback) { const callbacks = this.listeners?.get(type) || []; callbacks.push(callback); (this.listeners ||= new Map()).set(type, callbacks); }
+    dispatchEvent(event) { event.target ||= this; for (const callback of [...(this.listeners?.get(event.type) || [])]) callback(event); return true; }
+  }
+  class Element extends Target {
+    constructor(tag) {
+      super(); this.tagName = tag.toUpperCase(); this.children = []; this.attributes = new Map(); this.dataset = {};
+      this.hidden = false; this.value = ''; this.textContent = ''; this.style = { setProperty() {} };
+      this.offsetWidth = 100; this.clientWidth = 300; this.open = false;
+      const classes = new Set();
+      this.classList = { add: value => classes.add(value), remove: value => classes.delete(value), contains: value => classes.has(value),
+        toggle: (value, force) => { const next = force ?? !classes.has(value); next ? classes.add(value) : classes.delete(value); } };
+      all.push(this);
+    }
+    set id(value) { this.identifier = value; ids.set(value, this); }
+    get id() { return this.identifier; }
+    get isConnected() { return Boolean(this.parentNode) || this === document.body; }
+    append(...items) { for (const item of items) { item.remove(); item.parentNode = this; this.children.push(item); } }
+    insertBefore(item, before) { if (item === before) return; item.remove(); const index = before ? this.children.indexOf(before) : -1; item.parentNode = this; this.children.splice(index < 0 ? this.children.length : index, 0, item); }
+    replaceChildren(...items) { for (const item of [...this.children]) item.remove(); this.append(...items); }
+    remove() { if (this.parentNode) this.parentNode.children.splice(this.parentNode.children.indexOf(this), 1); this.parentNode = null; }
+    setAttribute(name, value) { this.attributes.set(name, String(value)); }
+    getAttribute(name) { return this.attributes.get(name) ?? null; }
+    removeAttribute(name) { this.attributes.delete(name); }
+    get options() { return this.children; }
+    focus() { document.activeElement = this; }
+    select() {}
+    reset() {}
+    showModal() { this.open = true; }
+    close() { this.open = false; this.dispatchEvent({ type: 'close' }); }
+  }
+  class Audio extends Element {
+    constructor() { super('audio'); this.paused = true; this.ended = false; this.error = null; this.readyState = 0; this.duration = NaN; this.currentTime = 0; this.volume = 1; this.playCalls = 0; }
+    set src(value) { this.source = value; this.ended = false; this.error = null; this.currentTime = 0; this.readyState = 0; this.duration = NaN; }
+    get src() { return this.source || ''; }
+    event(type) { this.dispatchEvent({ type, target: this }); }
+    play() {
+      this.playCalls++;
+      if (failPlay) return Promise.reject(Object.assign(new Error('Playback requires a gesture'), { name: 'NotAllowedError' }));
+      this.paused = false; this.ended = false;
+      queueMicrotask(() => { this.event('play'); this.event('playing'); }); return Promise.resolve();
+    }
+    pause() { const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
+    load() { this.paused = true; this.readyState = 0; this.currentTime = 0; this.ended = false; this.error = null; }
+    metadata() { this.readyState = 4; this.duration = 120; this.event('loadedmetadata'); }
+    finish() { this.paused = true; this.ended = true; this.currentTime = this.duration; this.event('ended'); }
+  }
+  const document = new Target(); document.body = new Element('body'); document.documentElement = new Element('html');
+  document.createElement = tag => tag === 'audio' ? new Audio() : new Element(tag);
+  document.createElementNS = (_, tag) => new Element(tag);
+  for (const match of html.matchAll(/<([a-z]+)[^>]*\bid="([^"]+)"([^>]*)>/g)) {
+    const element = document.createElement(match[1]); element.id = match[2]; element.hidden = /\bhidden\b/.test(match[3]); document.body.append(element);
+  }
+  ids.get('song-sort').value = 'rank';
+  const allSubjects = new Element('option'); allSubjects.value = ''; ids.get('subject-filter').append(allSubjects);
+  const brand = new Element('a'), description = new Element('meta');
+  document.querySelector = selector => selector === '.brand' ? brand : selector === 'meta[name=description]' ? description : null;
+  document.querySelectorAll = () => [];
+  document.getElementById = id => ids.get(id) || null;
+  const window = new Target();
+  let preferenceListener, currentSongs = songs, fetchCalls = 0;
+  const preferences = {
+    get: id => ({ known: true, likes: Math.max(0, scores.get(id) || 0), dislikes: Math.max(0, -(scores.get(id) || 0)), score: scores.get(id) || 0, pending: false }),
+    status: () => ({ loaded: true, sessionRecovery: true }),
+    compare: (a, b) => (scores.get(b.id) || 0) - (scores.get(a.id) || 0) || Number(a.title.slice(0, 3)) - Number(b.title.slice(0, 3)),
+    subscribe: callback => { preferenceListener = callback; }, refresh() {}, vote() {},
+  };
+  const context = vm.createContext({ window, document, URL, Event: class { constructor(type) { this.type = type; } },
+    location: { href: 'https://www.mapkai.com/music/', origin: 'https://www.mapkai.com' },
+    localStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) },
+    MapKAIMusicPreferences: preferences,
+    matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
+    AbortController, setTimeout, clearTimeout, queueMicrotask,
+    fetch: async () => { fetchCalls++; return { ok: true, json: async () => ({ tracks: structuredClone(currentSongs), nextCursor: null }) }; },
+  });
+  vm.runInContext(appSource, context, { filename: 'music/app.js' });
+  return {
+    page: window.MapKAIMusicPage, element: id => ids.get(id), rows: () => ids.get('tracks').children,
+    allAudio: () => all.filter(element => element.tagName === 'AUDIO'),
+    click: element => element.dispatchEvent({ type: 'click' }),
+    input: (id, value, event = 'input') => { const element = ids.get(id); element.value = value; element.dispatchEvent({ type: event }); },
+    rank: (id, score) => { scores.set(id, score); preferenceListener(); },
+    setSongs: next => { currentSongs = next; }, values,
+    details: row => row.children.find(element => element.className === 'track-details'),
+    original: row => row.children.find(element => element.className === 'track-details').children[1].children.find(element => element.className === 'track-original-lyrics').children[1],
+  };
+}
+
+test('loading the library does not start audio and creates only preview plus one queue player', async () => {
+  const h = harness(); await flush();
+  assert.equal(h.page.snapshot().loaded, true);
+  assert.equal(h.rows().length, 3);
+  assert.equal(h.allAudio().length, 2);
+  assert.equal(h.allAudio().reduce((sum, audio) => sum + audio.playCalls, 0), 0);
+});
+
+test('choosing any row continues to the next song using the same media element', async () => {
+  const h = harness(); await flush(); h.click(h.rows()[1].children[0]); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.finish(); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[2].id);
+  assert.equal(h.page.snapshot().audio, audio);
+  assert.equal(audio.paused, false);
+  assert.equal(audio.src, `https://www.mapkai.com${catalog[2].url}`);
+});
+
+test('last song wraps to first and manual previous/next also wrap', async () => {
+  const h = harness(); await flush(); h.page.play(catalog[2].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.finish(); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[0].id);
+  h.page.move(-1); await flush(); assert.equal(h.page.snapshot().track.id, catalog[2].id);
+  h.page.move(1); await flush(); assert.equal(h.page.snapshot().track.id, catalog[0].id);
+});
+
+test('a one-song queue repeats on its existing player', async () => {
+  const h = harness({ songs: [catalog[0]] }); await flush(); h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.finish(); await flush();
+  assert.equal(audio.paused, false); assert.equal(audio.currentTime, 0); assert.equal(audio.playCalls, 2);
+});
+
+test('turning continuous playback off is persistent and stops at the end', async () => {
+  const h = harness({ savedContinuous: 'off' }); await flush(); h.page.play(catalog[1].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.finish(); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[1].id); assert.equal(audio.paused, true);
+  const checkbox = h.element('continuous-play'); checkbox.checked = true; checkbox.dispatchEvent({ type: 'change' });
+  assert.equal(h.values.get('mapkaiMusicContinuous.v1'), 'on');
+});
+
+test('search and subject filters find songs without pausing, seeking, or shrinking the active queue', async () => {
+  const h = harness(); await flush(); h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 32;
+  h.input('song-search', '048 pragmatics'); h.input('subject-filter', 'Languages', 'change');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 1);
+  assert.equal(audio.paused, false); assert.equal(audio.currentTime, 32);
+  audio.finish(); await flush(); assert.equal(h.page.snapshot().track.id, catalog[1].id);
+  h.input('song-search', ''); h.input('subject-filter', '', 'change');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 3); assert.equal(audio.paused, false);
+});
+
+test('selecting a one-result search retains the complete library queue', async () => {
+  const h = harness(); await flush(); h.input('song-search', '048'); h.click(h.rows()[2].children[0]); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.finish(); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[0].id);
+});
+
+test('shared vote reorder and number sorting preserve selection, audio node, time, and originals', async () => {
+  const h = harness(); await flush(); h.page.play(catalog[1].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 42;
+  h.rank(catalog[2].id, 5); assert.equal(h.rows()[0].children[0].children[0].textContent, '048');
+  h.input('song-sort', 'number', 'change'); assert.equal(h.rows()[0].children[0].children[0].textContent, '001');
+  h.input('song-sort', 'newest', 'change'); assert.equal(h.rows()[0].children[0].children[0].textContent, '048');
+  assert.equal(h.page.snapshot().track.id, catalog[1].id); assert.equal(h.page.snapshot().audio, audio);
+  assert.equal(audio.currentTime, 42); assert.equal(audio.paused, false);
+  assert.equal(h.original(h.rows().find(row => row.children[0].children[0].textContent === '002')).textContent, catalog[1].lyrics);
+});
+
+test('song detail panels keep the complete name and lyrics and open only one at a time', async () => {
+  const h = harness(); await flush();
+  assert.equal(h.details(h.rows()[0]).open, false);
+  const one = h.details(h.rows()[0]), two = h.details(h.rows()[1]);
+  one.open = true; one.dispatchEvent({ type: 'toggle' }); two.open = true; two.dispatchEvent({ type: 'toggle' });
+  assert.equal(one.open, false); assert.equal(two.open, true);
+  assert.equal(two.children[1].children[0].textContent, catalog[1].title);
+  assert.equal(h.original(h.rows()[1]).textContent, catalog[1].lyrics);
+});
+
+test('removing a different library song never clears the shared playing audio', async () => {
+  const h = harness(); await flush(); h.page.play(catalog[1].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 28;
+  h.setSongs(catalog.slice(1)); await h.page.load(); await flush();
+  assert.equal(h.page.snapshot().audio, audio); assert.equal(audio.paused, false); assert.equal(audio.currentTime, 28);
+});
+
+test('bridge restore is paused until toggle and applies the saved position when metadata arrives', async () => {
+  const h = harness(); await flush(); h.page.restore(catalog[2].id, 37);
+  const audio = h.page.snapshot().audio; assert.equal(audio.playCalls, 0); assert.equal(h.page.snapshot().pendingPosition, 37);
+  audio.metadata(); assert.equal(audio.currentTime, 37);
+  const play = h.page.toggle(); assert.equal(typeof play?.then, 'function'); await play; await flush();
+  assert.equal(audio.currentTime, 37); assert.equal(audio.paused, false);
+});
+
+test('browser autoplay denial becomes a recoverable error without an automatic retry loop', async () => {
+  const h = harness({ failPlay: true }); await flush(); h.page.play(catalog[0].id); await flush();
+  assert.equal(h.page.snapshot().failed, true); assert.equal(h.page.snapshot().pending, false);
+  assert.equal(h.page.snapshot().audio.playCalls, 1);
+});

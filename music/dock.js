@@ -7,8 +7,8 @@
   const key = 'mapkaiMusicDock';
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
-    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首' },
-    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}' },
+    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首', continuousOn: '连续播放', continuousOff: '播完本首后停止', singleReady: '选择一首歌曲播放', singlePlay: '播放', navigationResume: '浏览器暂停了自动续播，请点继续播放。' },
+    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
   };
   const t = name => copy[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'][name];
   let saved = null;
@@ -17,15 +17,15 @@
     if (value?.version === 1 && (!value.id || (typeof value.id === 'string' && uuid.test(value.id)))
       && Number.isFinite(value.seconds) && value.seconds >= 0 && value.seconds <= 7200
       && Number.isFinite(value.volume) && value.volume >= 0 && value.volume <= 1
-      && typeof value.collapsed === 'boolean') saved = value;
+      && typeof value.collapsed === 'boolean' && (value.wasPlaying === undefined || typeof value.wasPlaying === 'boolean')) saved = value;
   } catch {}
 
   const dock = document.createElement('section');
   dock.id = 'mapkai-music-dock'; dock.className = 'music-dock';
   // Only fixed, trusted markup; catalog titles and lyrics are inserted as plain text.
   dock.innerHTML = `<div class="music-dock-inner">
-    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">MapKAI Music</a><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div>
-    <div id="music-dock-body" class="music-dock-body">
+    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">Music</a><div class="music-dock-track"><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span></div><div class="music-dock-transport"><button id="music-dock-mini-prev" type="button"></button><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-mini-next" type="button"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div></div>
+    <div id="music-dock-body" class="music-dock-body"><p id="music-dock-detail-title" class="music-dock-detail-title"></p>
       <div class="music-dock-controls"><button id="music-dock-prev" type="button"></button><button id="music-dock-play" class="primary" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-next" type="button"></button><select id="music-dock-select"></select><label class="music-dock-volume"><span id="music-dock-volume-label"></span><input id="music-dock-volume" type="range" min="0" max="100" step="1"></label></div>
       <div class="music-dock-progress"><span id="music-dock-elapsed">0:00</span><input id="music-dock-seek" type="range" min="0" max="1000" step="1" value="0" disabled><span id="music-dock-duration">—:—</span></div>
       <p id="music-dock-lyrics" class="music-dock-lyrics" role="region" tabindex="0"><span id="music-dock-line"></span></p>
@@ -39,6 +39,8 @@
   let tracks = [], selected = null, loaded = false, loading = false, failed = false, libraryFailed = false, pending = false, complete = false;
   let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
   let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
+  let restorePlayIntent = saved?.wasPlaying === true, autoResumeBlocked = false, leaving = false, navigationWasPlaying = false;
+  let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null;
   let originalLyricTrackId = null, originalLyricSource = null;
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
@@ -46,18 +48,25 @@
   const page = () => window.MapKAIMusicPage;
   const state = () => page()?.snapshot() || { tracks, track: selected, audio: selected ? ownAudio : null, loaded, libraryFailed, pending, failed, complete, volume };
   const active = state => Boolean(state.audio && !state.audio.paused && !state.audio.ended && !state.audio.error);
+  function continuousEnabled(current = state()) {
+    if (typeof current.continuousPlay === 'boolean') return current.continuousPlay;
+    try { return localStorage.getItem('mapkaiMusicContinuous.v1') !== 'off'; } catch { return true; }
+  }
+  const activeExternalMedia = current => [...document.querySelectorAll('audio,video')].filter(media => media !== current.audio && !media.paused && !media.ended);
   const clock = seconds => `${Math.floor(Math.max(0, seconds) / 60)}:${String(Math.floor(Math.max(0, seconds)) % 60).padStart(2, '0')}`;
   const reserveSpace = () => document.documentElement.style.setProperty('--music-dock-height', `${Math.ceil(dock.getBoundingClientRect().height) + 16}px`);
   new ResizeObserver(reserveSpace).observe(dock);
   function collapse(value) {
     dock.classList.toggle('is-collapsed', value); $('body').hidden = value;
-    $('collapse').setAttribute('aria-expanded', String(!value)); $('collapse').textContent = t(value ? 'expand' : 'collapse');
+    $('collapse').setAttribute('aria-expanded', String(!value));
+    $('collapse').textContent = value ? '⌃' : '⌄'; $('collapse').setAttribute('aria-label', t(value ? 'expand' : 'collapse')); $('collapse').title = t(value ? 'expand' : 'collapse');
     reserveSpace();
   }
-  collapse(saved?.collapsed ?? false);
+  // Every new page starts as a single compact bar. Expansion is an in-page choice.
+  collapse(true);
 
   function persist(force = false) {
-    if (restoring) return;
+    if (restoring || leaving) return;
     if (!force && Date.now() - lastSave < 1000) return;
     const current = state();
     // Do not overwrite a pending restore with the not-yet-loaded empty page.
@@ -65,14 +74,16 @@
     lastSave = Date.now();
     try { sessionStorage.setItem(key, JSON.stringify({ version: 1, id: current.track?.id || null,
       seconds: Math.max(0, Math.min(7200, current.pendingPosition ?? (!page() ? resumeSeconds : null) ?? (Number.isFinite(current.audio?.currentTime) ? current.audio.currentTime : 0))),
-      volume: current.volume, collapsed: dock.classList.contains('is-collapsed') })); } catch {}
+      volume: current.volume, collapsed: dock.classList.contains('is-collapsed'), wasPlaying: restorePlayIntent || active(current) })); } catch {}
   }
 
   function render() {
     const current = state(), list = current.tracks, audio = current.audio, track = current.track;
     dock.setAttribute('aria-label', 'MapKAI Music');
     const title = track?.title || t('title');
-    if ($('title').textContent !== title) $('title').textContent = title;
+    const compactTitle = track ? title.split(' - MapKAI - ')[0] : 'MapKAI Music';
+    if ($('title').textContent !== compactTitle) $('title').textContent = compactTitle;
+    $('detail-title').textContent = title;
     $('title').title = title;
     $('ai').hidden = Boolean(track && !track.aiGenerated); $('ai').textContent = t('ai');
     const signature = JSON.stringify(list.map(item => [item.id, item.title]));
@@ -85,10 +96,15 @@
     $('select').setAttribute('aria-label', t('choose'));
     const index = track ? list.findIndex(item => item.id === track.id) : -1;
     const waiting = current.pending || loading;
-    const action = waiting ? 'cancel' : current.failed || current.libraryFailed ? 'retry' : active(current) ? 'pause' : current.complete ? 'replay' : track ? 'resume' : 'play';
-    for (const id of ['play', 'mini-play']) { $(id).textContent = t(action); $(id).disabled = current.loaded && !list.length && !current.libraryFailed; }
-    $('prev').textContent = t('previous'); $('next').textContent = t('next');
-    $('prev').disabled = index <= 0; $('next').disabled = index < 0 || index >= list.length - 1;
+    const action = waiting ? 'cancel' : autoResumeBlocked ? 'resume' : current.failed || current.libraryFailed ? 'retry' : active(current) ? 'pause' : current.complete ? 'replay' : track ? 'resume' : continuousEnabled(current) ? 'play' : 'singlePlay';
+    $('play').textContent = t(action); $('play').disabled = current.loaded && !list.length && !current.libraryFailed;
+    $('mini-play').textContent = action === 'pause' ? 'Ⅱ' : action === 'cancel' ? '×' : action === 'retry' || action === 'replay' ? '↻' : '▶';
+    $('mini-play').setAttribute('aria-label', t(action)); $('mini-play').title = t(action); $('mini-play').disabled = $('play').disabled;
+    for (const [name, symbol] of [['prev', '⏮'], ['next', '⏭']]) {
+      $(name).textContent = t(name === 'prev' ? 'previous' : 'next');
+      $(`mini-${name}`).textContent = symbol; $(`mini-${name}`).setAttribute('aria-label', $(name).textContent); $(`mini-${name}`).title = $(name).textContent;
+      $(name).disabled = $(`mini-${name}`).disabled = index < 0 || list.length < 2;
+    }
     $('volume-label').textContent = t('volume'); $('volume').setAttribute('aria-label', t('volume')); $('volume').value = Math.round(current.volume * 100);
     const total = audio?.duration;
     const seekable = Number.isFinite(total) && total > 0 && audio.readyState > 0 && !audio.error;
@@ -123,10 +139,12 @@
     const cue = line === null ? null : timing.find(item => item.line === line);
     const offset = reducedMotion.matches ? 0 : sync.lyricOffsetAt(cue, time, Math.max(0, $('line').offsetWidth - width));
     $('line').style.transform = `translateX(${-offset}px)`;
-    const message = current.libraryFailed ? t('libraryError') : current.failed ? t('error') : waiting ? t('loading') : current.loaded && !list.length ? t('empty') : track && !timing ? t('unavailable') : index >= 0 ? t('position').replace('{n}', index + 1).replace('{total}', list.length) : t('ready');
+    let message = autoResumeBlocked ? t('navigationResume') : current.libraryFailed ? t('libraryError') : current.failed ? t('error') : waiting ? t('loading') : current.loaded && !list.length ? t('empty') : track && !timing ? t('unavailable') : index >= 0 ? t('position').replace('{n}', index + 1).replace('{total}', list.length) : t(continuousEnabled(current) ? 'ready' : 'singleReady');
+    if (track && !current.libraryFailed && !current.failed && !waiting && !autoResumeBlocked) message += ` · ${t(continuousEnabled(current) ? 'continuousOn' : 'continuousOff')}`;
     if ($('status').textContent !== message) $('status').textContent = message;
-    $('collapse').textContent = t(dock.classList.contains('is-collapsed') ? 'expand' : 'collapse');
-    persist();
+    const collapsed = dock.classList.contains('is-collapsed');
+    $('collapse').setAttribute('aria-label', t(collapsed ? 'expand' : 'collapse')); $('collapse').title = t(collapsed ? 'expand' : 'collapse');
+    updateMediaSession(current); persist(); attemptRestorePlayback();
   }
 
   function validTrack(raw) {
@@ -177,13 +195,13 @@
   }
   function cancelRequestedPlay() { requestedPlay?.finish(false); }
   function pause() {
-    cancelRequestedPlay();
+    restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay();
     sequence++; pending = false;
     if (page()) page().pause();
     else { ownAudio.pause(); render(); }
     persist(true);
   }
-  async function start() {
+  async function start(automaticRestore = false) {
     if (!selected) return false;
     if (ownAudio.error) ownAudio.load();
     if (ownAudio.ended && ownAudio.readyState > 0) ownAudio.currentTime = 0;
@@ -193,7 +211,7 @@
       if (request !== sequence) return false;
       pending = false; render(); return !page() && active(state());
     } catch (error) {
-      if (request === sequence) { pending = false; failed = error.name !== 'AbortError'; render(); }
+      if (request === sequence) { pending = false; autoResumeBlocked = automaticRestore && error.name === 'NotAllowedError'; failed = !autoResumeBlocked && error.name !== 'AbortError'; render(); if (autoResumeBlocked) persist(true); }
       return false;
     }
   }
@@ -201,7 +219,7 @@
   // Resolve false immediately when a newer choice, pause, or page intent wins.
   function playTrack(id) {
     if (typeof id !== 'string' || !uuid.test(id)) return Promise.resolve(false);
-    explicitSelection = true; pause();
+    externalMediaOwner = null; explicitSelection = true; pause();
     return new Promise(resolve => {
       let settled = false, cleanup = () => {};
       const operation = { finish(success) {
@@ -240,6 +258,7 @@
     });
   }
   async function toggle() {
+    externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false;
     const current = state();
     if (current.pending || loading || active(current)) { pause(); return; }
     cancelRequestedPlay();
@@ -247,15 +266,15 @@
     if (!current.loaded || current.libraryFailed) { pending = true; await load(); if (request !== sequence) return; pending = false; }
     if (page()) { page().toggle(); return; }
     if (!tracks.length || libraryFailed) { render(); return; }
-    if (!selected || complete) select(tracks[0]);
+    if (!selected || (complete && continuousEnabled(current))) select(tracks[0]);
     start();
   }
   function move(direction) {
-    cancelRequestedPlay();
+    externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay();
     sequence++; pending = false;
     if (page()) { page().move(direction); return; }
-    const index = tracks.findIndex(track => track.id === selected?.id), next = tracks[index + direction];
-    if (index < 0 || !next) return; select(next); start();
+    const index = tracks.findIndex(track => track.id === selected?.id);
+    if (index < 0 || !tracks.length) return; select(tracks[(index + direction + tracks.length) % tracks.length]); start();
   }
   function restore() {
     const current = state(); if (restoreDone || !current.loaded) return;
@@ -267,20 +286,97 @@
       else select(track, saved.seconds);
     }
     restoring = false;
+    if (!track || explicitSelection) restorePlayIntent = false;
+    attemptRestorePlayback();
+  }
+
+  // A navigation resumes only a session that was actually playing. Browsers may
+  // still require a tap; a denied attempt stays paused instead of retrying.
+  function attemptRestorePlayback() {
+    const current = state();
+    if (restorePlayIntent && (current.failed || current.audio?.error)) { restorePlayIntent = false; persist(true); return; }
+    if (!restoreDone || !restorePlayIntent || restoring || leaving || !current.track || current.audio?.readyState < 1 || current.pending || loading) return;
+    restorePlayIntent = false;
+    if (active(current)) return;
+    if (page()) {
+      const attempt = page().toggle(), request = sequence;
+      Promise.resolve(attempt).then(() => {
+        const after = state();
+        if (request === sequence && !after.pending && !active(after)) { autoResumeBlocked = true; render(); persist(true); }
+      }, () => { if (request === sequence) { autoResumeBlocked = true; render(); persist(true); } });
+    } else start(true);
+  }
+
+  function updateMediaSession(current) {
+    const session = typeof navigator !== 'undefined' && navigator.mediaSession;
+    if (!session || !current.track || leaving) return;
+    if (externalMediaOwner || activeExternalMedia(current).length) { mediaSessionOwned = false; return; }
+    // A dormant dock must not replace controls owned by another page tool.
+    if (!mediaSessionOwned) {
+      if (!active(current)) return;
+      claimMediaSession(); mediaSessionOwned = true; mediaTrackId = null;
+    }
+    try {
+      if (mediaTrackId !== current.track.id && typeof MediaMetadata !== 'undefined') {
+        session.metadata = new MediaMetadata({ title: current.track.title, artist: 'MapKAI', album: 'MapKAI Music' });
+        mediaTrackId = current.track.id;
+      }
+      session.playbackState = active(current) ? 'playing' : 'paused';
+      const audio = current.audio;
+      if (session.setPositionState && audio?.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0) {
+        session.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate || 1, position: Math.max(0, Math.min(audio.duration, audio.currentTime || 0)) });
+      }
+    } catch {}
+  }
+  function mediaSeek(seconds, external = null) {
+    const audio = external || state().audio;
+    if (!Number.isFinite(seconds) || !Number.isFinite(audio?.duration) || audio.duration <= 0 || audio.error) return;
+    const ratio = Math.max(0, Math.min(audio.duration, seconds)) / audio.duration * 1000;
+    if (!external && page()) page().seek(ratio); else audio.currentTime = ratio / 1000 * audio.duration;
+    if (!external) { render(); persist(true); }
+  }
+  const mediaSession = typeof navigator !== 'undefined' && navigator.mediaSession;
+  function claimMediaSession() {
+    if (!mediaSession?.setActionHandler) return;
+    const musicAction = action => details => { if (!externalMediaOwner && !activeExternalMedia(state()).length) action(details); };
+    const systemPause = () => {
+      const external = activeExternalMedia(state());
+      if (external.length) external.forEach(media => media.pause());
+      else if (externalMediaOwner) externalMediaOwner.pause();
+      else pause();
+    };
+    const systemPlay = () => {
+      // The last lesson keeps ownership while paused. System Play must never
+      // silently switch back to Music; a Music button is an explicit handoff.
+      if (externalMediaOwner) {
+        try { Promise.resolve(externalMediaOwner.play()).catch(() => {}); } catch {}
+        return;
+      }
+      const current = state(); if (!current.pending && !loading && !active(current)) toggle();
+    };
+    const sessionSeek = seconds => mediaSeek(seconds, externalMediaOwner);
+    const actions = { play: systemPlay,
+      pause: systemPause, stop: systemPause,
+      previoustrack: musicAction(() => move(-1)), nexttrack: musicAction(() => move(1)),
+      seekto: details => sessionSeek(details.seekTime),
+      seekbackward: details => sessionSeek(((externalMediaOwner || state().audio)?.currentTime || 0) - (details.seekOffset || 10)),
+      seekforward: details => sessionSeek(((externalMediaOwner || state().audio)?.currentTime || 0) + (details.seekOffset || 10)) };
+    for (const [action, handler] of Object.entries(actions)) { try { mediaSession.setActionHandler(action, handler); } catch {} }
   }
 
   $('play').onclick = toggle; $('mini-play').onclick = toggle;
-  $('prev').onclick = () => move(-1); $('next').onclick = () => move(1);
+  $('prev').onclick = $('mini-prev').onclick = () => move(-1); $('next').onclick = $('mini-next').onclick = () => move(1);
   $('collapse').onclick = () => { collapse(!dock.classList.contains('is-collapsed')); render(); persist(true); };
   $('select').onchange = () => {
     const track = state().tracks.find(item => item.id === $('select').value); if (!track) return;
-    cancelRequestedPlay(); explicitSelection = true;
+    externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay(); explicitSelection = true;
     sequence++; pending = false;
     if (page()) page().play(track.id); else { select(track); start(); }
   };
   $('seek').oninput = () => {
     const value = Number($('seek').value), audio = state().audio;
     if (!Number.isFinite(value) || !Number.isFinite(audio?.duration) || audio.duration <= 0 || audio.error) return;
+    externalMediaOwner = null;
     if (page()) page().seek(value); else audio.currentTime = Math.max(0, Math.min(1000, value)) / 1000 * audio.duration;
     render(); persist(true);
   };
@@ -298,8 +394,9 @@
   });
   ownAudio.addEventListener('ended', () => {
     if (!selected || !ownAudio.ended || page()) return;
-    const index = tracks.findIndex(track => track.id === selected.id), next = tracks[index + 1];
-    if (next) { select(next); start(); } else { pending = false; complete = true; render(); }
+    if (!continuousEnabled()) { pending = false; complete = true; render(); return; }
+    const index = tracks.findIndex(track => track.id === selected.id);
+    if (index >= 0 && tracks.length) { select(tracks[(index + 1) % tracks.length]); start(); }
   });
   ownAudio.addEventListener('error', () => { cancelRequestedPlay(); sequence++; pending = false; failed = true; render(); });
   for (const event of ['timeupdate', 'play', 'pause', 'playing', 'seeking', 'seeked', 'durationchange', 'waiting']) ownAudio.addEventListener(event, render);
@@ -309,7 +406,10 @@
     const current = state();
     if (target === current.audio) {
       document.querySelectorAll('audio,video').forEach(media => { if (media !== target && !media.paused) media.pause(); });
-    } else if (pending || loading || current.pending || active(current)) pause();
+    } else {
+      externalMediaOwner = target; mediaSessionOwned = false;
+      if (restorePlayIntent || pending || loading || current.pending || active(current)) pause();
+    }
   }, true);
   preferences?.subscribe(() => {
     if (!page()) { tracks.sort(compareTracks); render(); }
@@ -317,13 +417,19 @@
   window.addEventListener('mapkai:music-update', () => { restore(); render(); });
   window.addEventListener('mapkai:music-intent', () => {
     if (delegatingPlay) return;
-    cancelRequestedPlay(); sequence++; pending = false; explicitSelection = true;
+    externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay(); sequence++; pending = false; explicitSelection = true;
   });
   window.addEventListener('mapkai:music-ready', () => { cancelRequestedPlay(); sequence++; ownAudio.pause(); restore(); render(); });
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  window.addEventListener('storage', event => { if (event.key === 'mapkaiMusicContinuous.v1') render(); });
   window.addEventListener('resize', render); reducedMotion.addEventListener?.('change', render);
-  window.addEventListener('pagehide', () => { cancelRequestedPlay(); sequence++; persist(true); });
-  window.addEventListener('pageshow', () => { restore(); render(); });
+  window.addEventListener('pagehide', () => {
+    navigationWasPlaying = active(state()); cancelRequestedPlay(); sequence++; persist(true); leaving = true;
+    if (page()) page().pause(); else ownAudio.pause();
+  });
+  window.addEventListener('pageshow', event => {
+    leaving = false; if (event.persisted && navigationWasPlaying) restorePlayIntent = true; restore(); render();
+  });
   window.MapKAIMusicDock = Object.freeze({ play: playTrack });
   window.dispatchEvent(new Event('mapkai:music-dock-ready'));
   render(); restore();

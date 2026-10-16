@@ -145,7 +145,6 @@ html:has(body.music-dock-present) {
 #mapkai-music-dock button:disabled:hover { background:var(--surface,#fff); }
 #mapkai-music-dock #music-dock-play.primary:disabled:hover { background:var(--blue,#2563eb); }
 #mapkai-music-dock #music-dock-collapse { margin-left:auto; }
-#mapkai-music-dock:not(.is-collapsed) #music-dock-mini-play { display:none; }
 #mapkai-music-dock :is(a,button,input,select):focus-visible {
   outline:2px solid var(--blue,#2563eb);
   outline-offset:2px;
@@ -346,3 +345,27 @@ html:has(body.music-dock-present) {
 #mapkai-music-dock .music-dock-original summary{min-height:44px;margin:0;padding:10px 0;cursor:pointer;font-size:12px;font-weight:600;line-height:24px;color:var(--blue,#2563eb)}
 #mapkai-music-dock .music-dock-original-text{min-width:0;max-width:100%;max-height:min(35vh,280px);margin:0;padding:4px 4px 10px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:13px;font-weight:400;line-height:1.8;color:var(--ink,#0f172a)}
 #mapkai-music-dock .music-dock-original summary:focus-visible,#mapkai-music-dock .music-dock-original-text:focus-visible{outline:2px solid var(--blue,#2563eb);outline-offset:2px;border-radius:4px}
+
+
+/* Keep playback controls in one bar; song details are an explicit disclosure. */
+#mapkai-music-dock .music-dock-top { gap:10px; flex-wrap:nowrap; }
+#mapkai-music-dock .music-dock-track { display:flex; flex:1 1 0; align-items:center; gap:8px; min-width:0; }
+#mapkai-music-dock .music-dock-title { flex:1 1 0; }
+#mapkai-music-dock .music-dock-transport { display:flex; flex:0 0 auto; align-items:center; gap:4px; }
+#mapkai-music-dock .music-dock-transport button { width:44px; min-width:44px; height:44px; padding:0; font-size:17px; }
+#mapkai-music-dock #music-dock-mini-play { display:inline-flex; border-color:var(--blue,#2563eb); background:var(--blue,#2563eb); color:var(--surface,#fff); }
+#mapkai-music-dock #music-dock-mini-play:hover { background:var(--blue-dark,#1d4ed8); }
+#mapkai-music-dock #music-dock-collapse { margin-left:0; font-size:20px; }
+#mapkai-music-dock .music-dock-body { max-height:55vh; overflow-y:auto; overscroll-behavior:contain; padding-top:8px; }
+#mapkai-music-dock .music-dock-detail-title { margin:0 0 8px; font-size:13px; line-height:1.5; font-weight:600; overflow-wrap:anywhere; }
+#mapkai-music-dock .music-dock-controls > :is(#music-dock-prev,#music-dock-play,#music-dock-next) { display:none; }
+@media(max-width:540px) {
+  #mapkai-music-dock .music-dock-inner { padding-top:6px; padding-bottom:calc(6px + env(safe-area-inset-bottom)); }
+  #mapkai-music-dock .music-dock-top { gap:8px; }
+  #mapkai-music-dock .music-dock-brand { display:none; }
+  #mapkai-music-dock .music-dock-track { display:grid; grid-template-columns:minmax(0,1fr); gap:1px; }
+  #mapkai-music-dock .music-dock-title { font-size:12px; }
+  #mapkai-music-dock .music-dock-ai { justify-self:start; max-width:100%; padding:0; border:0; background:none; font-size:9px; line-height:13px; }
+  #mapkai-music-dock .music-dock-transport { gap:2px; }
+
+}

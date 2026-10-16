@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="MapKAI Music。使用 AI 创作的歌曲，点击卡片即可播放。">
+  <meta name="description" content="MapKAI Music。按编号、歌名或学科找歌，连续播放。">
   <meta name="theme-color" content="#fffdf8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; base-uri 'self'; form-action 'self'; object-src 'none'">
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-votes-20261014">
-  <script src="/site-shell.js?v=music-votes-20261014" defer></script>
+  <link rel="stylesheet" href="/music/styles.css?v=music-tempo-20261016">
+  <script src="/site-shell.js?v=compact-player-20261016" defer></script>
   <script src="/music/lyrics-sync.js?v=music-14" defer></script>
   <script src="/music/preferences.js?v=music-votes-20261014" defer></script>
-  <script src="/music/app.js?v=music-votes-20261014" defer></script>
+  <script src="/music/app.js?v=music-tempo-20261016" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -25,12 +25,12 @@
     <a class="back-link" href="/toolbox/" data-i18n="back">← 返回 Toolbox</a>
     <section class="music-heading" aria-labelledby="page-title">
       <h1 id="page-title">MapKAI <span>Music</span></h1>
-      <p class="music-intro" data-i18n="intro">歌曲小卡片，点击即可播放。</p>
-      <p class="music-ai-notice" data-i18n="aiNotice">使用 AI 创作的歌曲，会在卡片上标明 AI 生成，播放前即可看到。</p>
+      <p class="music-intro" data-i18n="intro">选一首，接着听。按编号、歌名或学科找歌。</p>
+      <p class="music-ai-notice" data-i18n="aiNotice">所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。</p>
     </section>
     <section id="playlist-player" class="playlist-player" aria-labelledby="playlist-heading">
       <div class="playlist-top">
-        <div><h2 id="playlist-heading" data-i18n="playlistHeading">一起听歌</h2><p id="playlist-intro" class="playlist-intro" data-i18n="playlistIntro">一键播放全部歌曲，按顺序聆听。</p></div>
+        <div><h2 id="playlist-heading" data-i18n="playlistHeading">一起听歌</h2><p id="playlist-intro" class="playlist-intro" data-i18n="playlistIntro">默认连续播放，到歌单末尾自动从头继续。</p></div>
         <div class="playlist-controls">
           <button id="playlist-prev" type="button" class="button secondary" data-i18n="previousSong" disabled>上一首</button>
           <button id="play-all" type="button" class="button primary" disabled>播放全部</button>
@@ -38,22 +38,28 @@
         </div>
       </div>
       <div class="playlist-now"><h3 id="playlist-title" data-i18n="playlistReady" aria-live="polite">准备播放</h3><p id="playlist-position" class="playlist-position">—</p><span id="playlist-disclosure" class="track-disclosure" hidden></span></div>
-      <div id="playlist-reactions" class="playlist-reactions"></div>
       <div class="playlist-progress-row">
         <div class="playback-progress">
           <input id="playlist-seek" class="playback-seek" type="range" min="0" max="1000" step="1" value="0" disabled aria-label="当前歌曲进度" data-aria="playlistSeekLabel">
           <div class="playback-times"><span id="playlist-elapsed">0:00</span><span id="playlist-duration">—:—</span></div>
         </div>
-        <label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
+
       </div>
+      <div class="playlist-options-row"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span data-i18n="continuousPlay">连续播放</span></label><details class="playlist-options"><summary data-i18n="playlistOptions">歌词与设置</summary><div class="playlist-options-body"><div id="playlist-reactions" class="playlist-reactions"></div><label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
       <p id="playlist-lyrics" class="lyrics-text" role="region" tabindex="0" aria-labelledby="playlist-title"><span id="playlist-lyric-span" class="lyrics-current"></span></p>
       <p id="playlist-lyrics-unavailable" class="lyrics-unavailable" hidden></p>
+      </div></details></div>
       <p id="playlist-error" class="track-error" role="status" hidden></p>
     </section>
     <section id="library" class="library" aria-labelledby="library-title">
       <div class="library-heading">
         <div><h2 id="library-title" data-i18n="library">歌曲列表</h2><p id="track-count" class="library-count" aria-live="polite">正在载入歌曲…</p></div>
-        <div class="library-actions"><label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="搜索歌曲…" data-placeholder="search"></label><button id="create-music" type="button" class="button primary" data-i18n="createSong">制作歌曲</button><button id="manage-music" type="button" class="button secondary"><span aria-hidden="true">＋</span><span data-i18n="manage">管理歌曲</span></button></div>
+        <details class="library-tools"><summary data-i18n="libraryTools">创作与管理</summary><div><button id="create-music" type="button" class="button secondary" data-i18n="createSong">制作歌曲</button><button id="manage-music" type="button" class="button secondary" data-i18n="manage">管理歌曲</button></div></details>
+      </div>
+      <div class="library-actions">
+        <label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="编号、歌名、学科或概念…" data-placeholder="search"></label>
+        <label class="library-filter"><span class="sr-only" data-i18n="subjectFilter">学科</span><select id="subject-filter" aria-label="学科" data-aria="subjectFilter"><option value="" data-i18n="allSubjects">全部学科</option></select></label>
+        <label class="library-sort"><span class="sr-only" data-i18n="sortSongs">排序</span><select id="song-sort" aria-label="排序" data-aria="sortSongs"><option value="rank" data-i18n="sortRank">按喜好</option><option value="number" data-i18n="sortNumber">编号顺序</option><option value="newest" data-i18n="sortNewest">最新编号</option></select></label>
       </div>
       <p id="preferences-notice" class="preferences-notice" role="status">每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。</p>
       <p id="library-status" class="library-status" role="status" hidden></p>

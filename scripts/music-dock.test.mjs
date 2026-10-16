@@ -21,7 +21,7 @@ const flush = async () => { for (let count = 0; count < 12; count++) await Promi
 
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
-function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false } = {}) {
+function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [] } = {}) {
   const ids = new Map(), elements = [];
   class Target {
     addEventListener(type, callback, options = {}) {
@@ -71,7 +71,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
       super('audio'); this.paused = true; this.ended = false; this.error = null;
       this.readyState = 0; this.duration = NaN; this.currentTime = 0; this.volume = 1; this.playCalls = 0;
     }
-    set src(value) { this.source = value; this.currentTime = 0; this.readyState = 0; this.duration = NaN; }
+    set src(value) { this.source = value; this.currentTime = 0; this.readyState = 0; this.duration = NaN; this.ended = false; }
     get src() { return this.source; }
     event(type) { const event = { type, target: this }; document.dispatchEvent(event); this.dispatchEvent(event); }
     play() {
@@ -88,7 +88,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   document.getElementById = id => ids.get(id) || null;
   document.createElement = tag => tag === 'audio' ? new Audio() : new Element(tag);
   document.querySelectorAll = selector => selector === 'audio,video' ? elements.filter(element => ['AUDIO', 'VIDEO'].includes(element.tagName)) : [];
-  const window = new Target(), request = deferred();
+  const window = new Target(), request = deferred(), mediaActions = new Map(initialMediaActions);
+  const mediaSession = { setActionHandler: (action, handler) => mediaActions.set(action, handler), setPositionState(value) { this.position = value; } };
   const stored = new Map(saved ? [['mapkaiMusicDock', JSON.stringify(saved)]] : []);
   let now = 10000, fetchCalls = 0, context;
   const pageState = { tracks: pageLoaded ? structuredClone(catalog) : [], track: null, audio: null,
@@ -142,8 +143,10 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     };
   }
   context = vm.createContext({ document, window, URL, Event: class { constructor(type) { this.type = type; } },
+    navigator: { mediaSession }, MediaMetadata: class { constructor(value) { Object.assign(this, value); } },
     Date: class extends Date { static now() { return now; } },
     location: { href: 'https://www.mapkai.com/explore', origin: 'https://www.mapkai.com' },
+    localStorage: { getItem: key => key === 'mapkaiMusicContinuous.v1' ? continuous : null },
     sessionStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) },
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
     ResizeObserver: class { observe() {} }, MutationObserver: class { observe() {} },
@@ -157,7 +160,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
-    session: () => JSON.parse(stored.get('mapkaiMusicDock')),
+    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions,
+    pageshow: persisted => window.dispatchEvent({ type: 'pageshow', persisted }),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     tick: () => { now += 1100; },
     lesson: () => { const audio = new Audio(); audio.play(); return audio; },
@@ -353,4 +357,142 @@ test('Music page subject selection waits for the public catalog and honors Pause
     assert.equal(h.pageCalls.play, cancel ? 0 : 1); assert.equal(h.ownAudio.playCalls, 0);
     if (!cancel) assert.equal(h.pageState.track.id, secondId);
   }
+});
+
+
+
+
+test('new documents always open the compact bar, even after an old expanded session', () => {
+  for (const saved of [null, { version: 1, id: null, seconds: 0, volume: 0.5, collapsed: false }]) {
+    const h = harness({ saved });
+    assert.equal(h.control('body').hidden, true);
+    assert.equal(h.control('collapse').attributes.get('aria-expanded'), 'false');
+    assert.equal(h.control('mini-play').attributes.get('aria-label'), 'Play all');
+    assert.equal(h.control('mini-prev').attributes.get('aria-label'), 'Previous');
+    assert.equal(h.control('mini-next').attributes.get('aria-label'), 'Next');
+    h.control('collapse').onclick(); assert.equal(h.control('body').hidden, false);
+    h.pageshow(false); assert.equal(h.control('body').hidden, false, 'same document does not reset an intentional expansion');
+  }
+});
+
+test('standalone selection keeps one audio and advances through the end of the full queue', async () => {
+  const h = harness(), audio = h.ownAudio, play = h.dock.play(secondId);
+  h.request.resolve({ tracks: catalog }); assert.equal(await play, true); await flush();
+  audio.metadata(); audio.currentTime = audio.duration; audio.ended = true; audio.paused = true; audio.event('ended'); await flush();
+  assert.equal(h.ownAudio, audio); assert.equal(audio.playCalls, 2);
+  assert.equal(h.control('select').value, firstId);
+  assert.equal(h.control('mini-prev').disabled, false); assert.equal(h.control('mini-next').disabled, false);
+  h.control('mini-prev').onclick(); await flush(); assert.equal(h.control('select').value, secondId);
+  h.control('mini-next').onclick(); await flush(); assert.equal(h.control('select').value, firstId);
+  assert.equal(audio.playCalls, 4);
+});
+
+test('a playing session resumes once after metadata with its saved position', async () => {
+  const saved = { version: 1, id: secondId, seconds: 47.5, volume: 0.3, collapsed: false, wasPlaying: true };
+  const h = harness({ saved }); h.request.resolve({ tracks: catalog }); await flush();
+  assert.equal(h.ownAudio.playCalls, 0, 'position is restored before playing');
+  h.ownAudio.metadata(); await flush();
+  assert.equal(h.ownAudio.currentTime, 47.5); assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.ownAudio.paused, false);
+  h.ownAudio.event('loadedmetadata'); h.pageshow(false); await flush(); assert.equal(h.ownAudio.playCalls, 1);
+  h.pagehide(); assert.equal(h.session().wasPlaying, true); assert.equal(h.session().seconds, 47.5);
+  assert.equal(h.ownAudio.paused, true, 'the outgoing document stops its audio after saving intent');
+  h.pageshow(true); await flush(); assert.equal(h.ownAudio.playCalls, 2, 'back-forward cache return resumes once');
+});
+
+test('a blocked automatic restore stays paused with a Resume action and never loops attempts', async () => {
+  const saved = { version: 1, id: firstId, seconds: 23, volume: 0.3, collapsed: true, wasPlaying: true };
+  const h = harness({ saved, playFailure: true }); h.request.resolve({ tracks: catalog }); await flush();
+  h.ownAudio.metadata(); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.ownAudio.paused, true);
+  assert.equal(h.control('play').textContent, 'Resume');
+  assert.match(h.control('status').textContent, /browser paused automatic playback/);
+  h.ownAudio.event('timeupdate'); h.ownAudio.event('loadedmetadata'); h.pageshow(false); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.session().wasPlaying, false);
+});
+
+test('a paused session and a lesson that interrupts restore never trigger automatic playback', async () => {
+  for (const wasPlaying of [false, true]) {
+    const saved = { version: 1, id: firstId, seconds: 12, volume: 0.5, collapsed: true, wasPlaying };
+    const h = harness({ saved }); h.request.resolve({ tracks: catalog }); await flush();
+    if (wasPlaying) { h.lesson(); await flush(); }
+    h.ownAudio.metadata(); await flush();
+    assert.equal(h.ownAudio.playCalls, 0);
+  }
+});
+
+test('a Music-page playing session resumes its restored bridge audio without a second audio', async () => {
+  const saved = { version: 1, id: firstId, seconds: 31, volume: 0.5, collapsed: true, wasPlaying: true };
+  const h = harness({ saved, pageLoaded: true }); h.pageState.audio.metadata(); await flush();
+  assert.equal(h.pageCalls.toggle, 1); assert.equal(h.pageState.audio.currentTime, 31);
+  assert.equal(h.pageState.audio.playCalls, 1); assert.equal(h.ownAudio.playCalls, 0);
+});
+
+test('Media Session controls use the current player, wrap the queue, and publish real position', async () => {
+  const h = harness(), play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush();
+  h.ownAudio.metadata(); h.ownAudio.currentTime = 15; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'Song 1'); assert.equal(h.mediaSession.playbackState, 'playing');
+  assert.equal(h.mediaSession.position.position, 15);
+  h.mediaActions.get('play')(); await flush(); assert.equal(h.ownAudio.playCalls, 1, 'system Play cannot pause a playing song');
+  h.mediaActions.get('pause')(); await flush(); assert.equal(h.ownAudio.paused, true);
+  h.mediaActions.get('play')(); await flush(); assert.equal(h.ownAudio.paused, false);
+  h.mediaActions.get('seekto')({ seekTime: 50 }); assert.equal(h.ownAudio.currentTime, 50);
+  h.mediaActions.get('seekbackward')({ seekOffset: 8 }); assert.equal(h.ownAudio.currentTime, 42);
+  h.mediaActions.get('seekforward')({ seekOffset: 4 }); assert.equal(h.ownAudio.currentTime, 46);
+  h.mediaActions.get('previoustrack')(); await flush(); assert.equal(h.control('select').value, secondId);
+  assert.equal(h.mediaSession.metadata.title, 'Song 2');
+});
+
+test('Media Session delegates Music-page transport instead of starting dock audio', async () => {
+  const h = harness({ pageLoaded: true }); await h.dock.play(firstId); await flush();
+  h.mediaActions.get('nexttrack')(); await flush(); assert.equal(h.pageState.track.id, secondId);
+  h.mediaActions.get('pause')(); await flush(); assert.equal(h.pageState.audio.paused, true);
+  h.mediaActions.get('play')(); await flush(); assert.equal(h.pageState.audio.paused, false);
+  assert.equal(h.ownAudio.playCalls, 0);
+});
+
+
+test('continuous off carries into the standalone dock and stops after the selected song', async () => {
+  const h = harness({ continuous: 'off' }), play = h.dock.play(secondId);
+  h.request.resolve({ tracks: catalog }); await play; await flush();
+  h.ownAudio.metadata(); h.ownAudio.currentTime = h.ownAudio.duration; h.ownAudio.ended = true; h.ownAudio.paused = true;
+  h.ownAudio.event('ended'); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.control('select').value, secondId);
+  assert.equal(h.control('play').textContent, 'Replay'); assert.match(h.control('status').textContent, /Stop after this song/);
+  await h.control('play').onclick(); await flush();
+  assert.equal(h.control('select').value, secondId, 'single-song replay does not jump to the first song');
+  assert.equal(h.ownAudio.playCalls, 2);
+});
+
+test('a dormant dock does not replace an existing Media Session owner', async () => {
+  const foreignPause = () => {}, foreignNext = () => {};
+  const h = harness({ initialMediaActions: [['pause', foreignPause], ['nexttrack', foreignNext]] });
+  assert.equal(h.mediaActions.get('pause'), foreignPause); assert.equal(h.mediaActions.get('nexttrack'), foreignNext);
+  assert.equal(h.mediaSession.metadata, undefined); assert.equal(h.fetchCalls(), 0);
+});
+
+test('a paused restored selection also leaves another Media Session owner alone', async () => {
+  const foreignPause = () => {};
+  const saved = { version: 1, id: firstId, seconds: 11, volume: 0.5, collapsed: true, wasPlaying: false };
+  const h = harness({ saved, initialMediaActions: [['pause', foreignPause]] });
+  h.request.resolve({ tracks: catalog }); await flush(); h.ownAudio.metadata(); await flush();
+  assert.equal(h.mediaActions.get('pause'), foreignPause); assert.equal(h.mediaSession.metadata, undefined);
+});
+
+test('stale Music system controls do not leave later external media playing', async () => {
+  const h = harness(), play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush();
+  const lesson = h.lesson(); await flush();
+  assert.equal(h.ownAudio.paused, true); assert.equal(lesson.paused, false);
+  const previousCalls = h.ownAudio.playCalls;
+  h.mediaActions.get('nexttrack')(); h.mediaActions.get('play')(); await flush();
+  assert.equal(h.ownAudio.playCalls, previousCalls); assert.equal(lesson.paused, false);
+  h.mediaActions.get('pause')(); await flush(); assert.equal(lesson.paused, true);
+  lesson.metadata(); h.mediaActions.get('seekto')({ seekTime: 27 }); assert.equal(lesson.currentTime, 27);
+  h.mediaActions.get('play')(); await flush();
+  assert.equal(lesson.paused, false, 'system Play resumes the external owner after system Pause');
+  assert.equal(h.ownAudio.playCalls, previousCalls, 'system Play cannot silently switch back to Music');
+  h.mediaActions.get('stop')(); await flush(); assert.equal(lesson.paused, true);
+  h.mediaActions.get('nexttrack')(); await flush(); assert.equal(h.ownAudio.playCalls, previousCalls);
+  await h.control('mini-play').onclick(); await flush();
+  assert.equal(h.ownAudio.paused, false, 'a deliberate Music control returns ownership to Music');
+  assert.equal(h.ownAudio.playCalls, previousCalls + 1);
 });
