@@ -18337,6 +18337,23 @@ const categoryGroupSongTracks = {
       "zh": "编曲请求：电子 Art-pop",
       "en": "Requested arrangement: electronic art-pop"
     }
+  },
+  "023": {
+    "id": "c72ee55f-ee05-4e97-82eb-1fcb34ac1234",
+    "title": "048 Before I Guess - MapKAI - Languages - Pragmatics",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从递盐和开窗的日常对话理解语用学：结合说话人、情境与任务提出解释，再主动确认；线索不能读懂人心。",
+      "en": "Connect everyday requests to pragmatics: compare words, people, setting and task, then check the interpretation; context cannot read minds."
+    },
+    "style": {
+      "zh": "编曲请求：英文原声独立民谣",
+      "en": "Requested arrangement: acoustic indie folk"
+    }
   }
 };
 

@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 48,
+  "nextNumber": 49,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -567,6 +567,18 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "047 Move One Tap - MapKAI - Arts - Rhythmic Variation"
+    },
+    {
+      "id": "c72ee55f-ee05-4e97-82eb-1fcb34ac1234",
+      "number": 48,
+      "numberLabel": "048",
+      "songName": "Before I Guess",
+      "subjectName": "Languages",
+      "conceptName": "Pragmatics",
+      "createdAt": "2026-10-16T11:45:17.964Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "048 Before I Guess - MapKAI - Languages - Pragmatics"
     }
   ]
 }
