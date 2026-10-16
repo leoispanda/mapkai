@@ -58,6 +58,10 @@
   let playlistIds = [];
   let playbackVolume = 1;
   let continuousPlay = true;
+  let playbackIntent = false;
+  let advancing = false;
+  let playbackRequest = 0;
+  let audioSessionLease = null;
   const playlistLyrics = {
     lyricsText: $('playlist-lyrics'), lyricsSpan: $('playlist-lyric-span'),
     lyricsUnavailable: $('playlist-lyrics-unavailable'), currentLyricLine: null, trackId: null,
@@ -222,7 +226,50 @@
     } catch { return null; }
   }
 
-  function stopOtherPlayers(audio) {
+  function acquireAudioSession() {
+    try {
+      const session = globalThis.navigator?.audioSession;
+      if (!session || typeof session.type !== 'string' || session.type === 'play-and-record') return;
+      if (audioSessionLease?.session === session && session.type === 'playback') return;
+      audioSessionLease = null;
+      // An existing playback session belongs to its previous owner.
+      if (session.type === 'playback') return;
+      const previousType = session.type;
+      session.type = 'playback';
+      if (session.type === 'playback') audioSessionLease = { session, previousType };
+    } catch { audioSessionLease = null; }
+  }
+
+  function releaseAudioSession() {
+    const lease = audioSessionLease;
+    audioSessionLease = null;
+    try {
+      // A recorder or another media owner may have changed the shared session.
+      if (lease && globalThis.navigator?.audioSession === lease.session && lease.session.type === 'playback') {
+        lease.session.type = lease.previousType;
+      }
+    } catch {}
+  }
+
+  function naturalContinuationPending() {
+    // Position alone cannot distinguish an explicit/system pause from EOF.
+    return playbackIntent && continuousPlay && Boolean(selectedCard) && !playbackAudio.error && playbackAudio.ended;
+  }
+
+  function pausePlayback({ pause = true, render = true } = {}) {
+    playbackIntent = false;
+    advancing = false;
+    playbackRequest += 1;
+    for (const card of cards.values()) {
+      card.playRequest += 1; card.pending = false; card.waiting = false;
+    }
+    releaseAudioSession();
+    if (pause) playbackAudio.pause();
+    if (render) updatePlaying();
+  }
+
+  function stopOtherPlayers(audio, { render = true } = {}) {
+    if (audio !== playbackAudio) pausePlayback({ render: false });
     if (playingAudio && playingAudio !== audio) playingAudio.pause();
     for (const card of cards.values()) {
       if (card !== selectedCard || audio === preview) {
@@ -235,7 +282,7 @@
     if (audio === preview) { selectedCard = null; playlistMode = false; playlistComplete = false; }
     if (preview !== audio && !preview.paused) preview.pause();
     playingAudio = audio;
-    updatePlaying();
+    if (render) updatePlaying();
   }
 
   function updatePlaying() {
@@ -263,6 +310,8 @@
   }
 
   function playbackError(card) {
+    if (card !== selectedCard) return;
+    pausePlayback({ render: false });
     card.pending = false;
     card.waiting = false;
     card.error.textContent = t('audioError');
@@ -272,41 +321,51 @@
 
   async function togglePlayback(card) {
     window.dispatchEvent(new Event('mapkai:music-intent'));
-    if (selectedCard === card && (card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error))) {
-      card.playRequest += 1;
-      card.pending = false;
-      card.waiting = false;
-      card.audio.pause();
-      updatePlaying();
+    if (selectedCard === card && (playbackIntent || card.pending || (!card.audio.paused && !card.audio.ended && !card.audio.error))) {
+      pausePlayback();
       return;
     }
     return startPlayback(card);
   }
 
-  async function startPlayback(card, { restart = false } = {}) {
-    window.dispatchEvent(new Event('mapkai:music-intent'));
+  async function startPlayback(card, { restart = false, automatic = false } = {}) {
+    if (!card || (automatic && (!playbackIntent || !continuousPlay))) return;
     selectedCard = card;
-    stopOtherPlayers(card.audio);
-    if (card.audio.src !== card.track.url) {
-      card.audio.src = card.track.url;
-      card.audio.load();
-    }
-    card.error.hidden = true;
+    playbackIntent = true;
+    advancing = automatic;
+    stopOtherPlayers(card.audio, { render: false });
+    const changedSource = card.audio.src !== card.track.url;
+    if (changedSource) card.audio.src = card.track.url;
     if (restart) card.restoreSeconds = null;
-    if (card.audio.error) card.audio.load();
-    if ((restart || card.audio.ended) && card.audio.readyState > 0) card.audio.currentTime = 0;
-    const request = ++card.playRequest;
+    // Assigning src and play() already start loading the next resource. An
+    // additional load()/pause() breaks the background handoff on some phones.
+    if (!changedSource && card.audio.error) card.audio.load();
+    if (!changedSource && (restart || card.audio.ended) && card.audio.readyState > 0) card.audio.currentTime = 0;
+    const request = ++playbackRequest;
+    const cardRequest = ++card.playRequest;
     card.pending = true;
-    updatePlaying();
+    card.waiting = true;
+    acquireAudioSession();
     try {
-      await card.audio.play();
-      if (request !== card.playRequest) return;
+      // Stay in the native ended callback's task until the next play request is
+      // issued. Rendering, listeners and persistence happen only after this.
+      const started = card.audio.play();
+      card.error.hidden = true;
+      window.dispatchEvent(new Event('mapkai:music-intent'));
+      updatePlaying();
+      await started;
+      if (request !== playbackRequest || cardRequest !== card.playRequest || card !== selectedCard || !playbackIntent) {
+        if (!playbackIntent && !playbackAudio.paused) playbackAudio.pause();
+        return;
+      }
       card.pending = false;
+      card.waiting = false;
+      advancing = false;
       updatePlaying();
     } catch (error) {
-      // Switching tracks or pausing cancels the earlier request without showing an error.
-      if (request !== card.playRequest) return;
-      if (error.name === 'AbortError' && card.audio.paused) { card.pending = false; card.waiting = false; updatePlaying(); }
+      // Explicit pause/switch invalidates this request before its promise settles.
+      if (request !== playbackRequest || cardRequest !== card.playRequest || card !== selectedCard) return;
+      if (error.name === 'AbortError' && card.audio.paused) pausePlayback();
       else playbackError(card);
     }
   }
@@ -422,10 +481,8 @@
   }
 
   function finishPlayback(card) {
-    if (card !== selectedCard) return;
-    card.pending = false;
-    card.waiting = false;
-    if (card.audio.ended && continuousPlay) {
+    if (card !== selectedCard || !card.audio.ended) return;
+    if (playbackIntent && continuousPlay) {
       const queue = currentQueue();
       const index = queue.indexOf(card.track.id);
       const next = index >= 0 && queue.length ? cards.get(queue[(index + 1) % queue.length]) : null;
@@ -433,11 +490,12 @@
         playlistIds = queue;
         playlistMode = true;
         playlistComplete = false;
-        startPlayback(next, { restart: true });
+        // No DOM work, dispatched events or storage before src + native play().
+        startPlayback(next, { restart: true, automatic: true });
         return;
       }
     }
-    updatePlaying();
+    pausePlayback({ pause: false });
   }
 
   function usableLyricsTiming(card) {
@@ -766,7 +824,7 @@
     tracks.sort(compareTrackOrder);
     const ids = new Set(tracks.map(track => track.id));
     for (const [id, card] of cards) {
-      if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { playbackAudio.pause(); playbackAudio.removeAttribute('src'); selectedCard = null; playlistMode = false; playlistComplete = false; } card.element.remove(); cards.delete(id); }
+      if (!ids.has(id)) { card.playRequest += 1; if (selectedCard === card) { pausePlayback({ render: false }); playbackAudio.removeAttribute('src'); selectedCard = null; playlistMode = false; playlistComplete = false; } card.element.remove(); cards.delete(id); }
     }
     playlistIds = playlistIds.filter(id => ids.has(id));
     for (const track of tracks) {
@@ -777,7 +835,7 @@
         card.title.textContent = track.title;
         card.description.textContent = track.description;
         card.description.hidden = !track.description;
-        if (card === selectedCard && card.audio.src !== track.url) { card.restoreSeconds = null; card.playRequest += 1; card.pending = false; card.waiting = false; card.audio.pause(); card.audio.src = track.url; card.error.hidden = true; }
+        if (card === selectedCard && card.audio.src !== track.url) { pausePlayback({ render: false }); card.restoreSeconds = null; card.audio.src = track.url; card.error.hidden = true; }
         trackMetadata(card);
       }
       if (!card.element.parentNode) $('tracks').append(card.element);
@@ -1081,19 +1139,25 @@
 
   playbackAudio.addEventListener('play', () => {
     if (playbackAudio.paused || !selectedCard) return;
+    if (!playbackIntent) { playbackAudio.pause(); return; }
     selectedCard.error.hidden = true; selectedCard.waiting = true; stopOtherPlayers(playbackAudio);
   });
   playbackAudio.addEventListener('playing', () => {
     if (playbackAudio.paused || !selectedCard) return;
-    selectedCard.pending = false; selectedCard.waiting = false; selectedCard.error.hidden = true; updatePlaying();
+    if (!playbackIntent) { playbackAudio.pause(); return; }
+    advancing = false; selectedCard.pending = false; selectedCard.waiting = false; selectedCard.error.hidden = true; updatePlaying();
   });
   playbackAudio.addEventListener('waiting', () => {
-    if (playbackAudio.paused || !selectedCard) return;
+    if (playbackAudio.paused || !selectedCard || !playbackIntent) return;
     selectedCard.waiting = true; updatePlaying();
   });
   playbackAudio.addEventListener('pause', () => {
     if (!playbackAudio.paused || !selectedCard) return;
-    selectedCard.pending = false; selectedCard.waiting = false; updatePlaying();
+    if (naturalContinuationPending()) {
+      advancing = true; selectedCard.pending = true; selectedCard.waiting = true; updatePlaying();
+      return;
+    }
+    pausePlayback({ pause: false });
   });
   playbackAudio.addEventListener('ended', () => { if (selectedCard) finishPlayback(selectedCard); });
   playbackAudio.addEventListener('loadedmetadata', () => {
@@ -1108,6 +1172,7 @@
   });
   const syncPlayback = (immediate = false) => {
     if (!selectedCard) return;
+    if (naturalContinuationPending()) { advancing = true; selectedCard.pending = true; }
     syncLyrics(selectedCard, { immediate }); updateCardProgress(selectedCard); updatePlaylist({ immediate });
   };
   playbackAudio.addEventListener('timeupdate', () => syncPlayback());
@@ -1116,21 +1181,26 @@
   playbackAudio.addEventListener('durationchange', () => syncPlayback(true));
   playbackAudio.addEventListener('error', () => { if (selectedCard) playbackError(selectedCard); });
 
-  window.addEventListener('pagehide', revokePreview);
+  document.addEventListener('play', event => {
+    if (event.target !== playbackAudio && ['AUDIO', 'VIDEO'].includes(event.target?.tagName) && !event.target.paused) {
+      pausePlayback();
+    }
+  }, true);
+  window.addEventListener('pagehide', () => {
+    pausePlayback({ pause: false, render: false });
+    revokePreview();
+  });
   // The site-wide dock controls this page's existing audio and queue.
   // It never creates a second playing audio on the Music page.
   window.MapKAIMusicPage = Object.freeze({
     snapshot: () => ({ tracks, track: selectedCard?.track || null, audio: selectedCard?.audio || null,
       loaded, libraryFailed, pending: Boolean(selectedCard?.pending || selectedCard?.waiting),
       failed: Boolean(selectedCard && !selectedCard.error.hidden), complete: playlistComplete, volume: playbackVolume, continuousPlay,
+      playbackIntent, advancing: advancing || naturalContinuationPending(),
       pendingPosition: Number.isFinite(selectedCard?.restoreSeconds) ? selectedCard.restoreSeconds : null }),
     load: loadLibrary,
     toggle: () => selectedCard && !playlistComplete ? togglePlayback(selectedCard) : playAll(),
-    pause: () => {
-      for (const card of cards.values()) { card.playRequest += 1; card.pending = false; card.waiting = false; }
-      playbackAudio.pause();
-      updatePlaying();
-    },
+    pause: () => pausePlayback(),
     move: movePlaylist,
     play: id => {
       const card = cards.get(id); if (!card) return;
@@ -1147,6 +1217,7 @@
     },
     restore: (id, seconds) => {
       const card = cards.get(id); if (!card || !Number.isFinite(seconds) || seconds < 0) return;
+      pausePlayback({ render: false });
       playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
       selectedCard = card; stopOtherPlayers(card.audio);
       if (card.audio.src !== card.track.url) { card.audio.src = card.track.url; card.audio.load(); }

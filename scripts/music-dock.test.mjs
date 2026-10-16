@@ -21,19 +21,19 @@ const flush = async () => { for (let count = 0; count < 12; count++) await Promi
 
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
-function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [] } = {}) {
-  const ids = new Map(), elements = [];
+function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false } = {}) {
+  const ids = new Map(), elements = [], operations = [];
   class Target {
     addEventListener(type, callback, options = {}) {
       const list = this.listeners?.get(type) || [];
-      list.push({ callback, once: options.once });
+      list.push({ callback, once: options.once, capture: options === true || options.capture === true });
       (this.listeners ||= new Map()).set(type, list);
     }
     removeEventListener(type, callback) {
       this.listeners?.set(type, (this.listeners.get(type) || []).filter(entry => entry.callback !== callback));
     }
     dispatchEvent(event) {
-      for (const entry of [...(this.listeners?.get(event.type) || [])]) {
+      for (const entry of [...(this.listeners?.get(event.type) || [])].sort((a, b) => Number(b.capture) - Number(a.capture))) {
         if (entry.once) this.listeners.set(event.type, this.listeners.get(event.type).filter(item => item !== entry));
         entry.callback(event);
       }
@@ -52,6 +52,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     }
     set id(value) { this.identifier = value; ids.set(value, this); }
     get id() { return this.identifier; }
+    set textContent(value) { this.text = value; if (this.identifier) operations.push('dom'); }
+    get textContent() { return this.text; }
     set innerHTML(value) {
       // Fixed dock markup supplies the controls. Catalog data never enters this setter.
       for (const match of value.matchAll(/<([a-z]+)[^>]*\bid="([^"]+)"[^>]*>/g)) {
@@ -71,25 +73,28 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
       super('audio'); this.paused = true; this.ended = false; this.error = null;
       this.readyState = 0; this.duration = NaN; this.currentTime = 0; this.volume = 1; this.playCalls = 0;
     }
-    set src(value) { this.source = value; this.currentTime = 0; this.readyState = 0; this.duration = NaN; this.ended = false; }
+    set src(value) { operations.push('src'); this.source = value; this.currentTime = 0; this.readyState = 0; this.duration = NaN; this.ended = false; }
     get src() { return this.source; }
     event(type) { const event = { type, target: this }; document.dispatchEvent(event); this.dispatchEvent(event); }
     play() {
-      this.playCalls++;
+      this.playCalls++; operations.push('play');
       if (playFailure) return Promise.reject(Object.assign(new Error('Media unavailable'), { name: 'NotAllowedError' }));
       this.paused = false; queueMicrotask(() => this.event('play'));
-      return playGate?.promise || Promise.resolve();
+      return (playGates.length ? playGates.shift() : playGate)?.promise || Promise.resolve();
     }
-    pause() { const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
-    load() { this.paused = true; this.readyState = 0; this.currentTime = 0; }
+    pause() { operations.push('pause'); const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
+    load() { operations.push('load'); this.paused = true; this.readyState = 0; this.currentTime = 0; }
     metadata(duration = 120) { this.readyState = 1; this.duration = duration; this.event('loadedmetadata'); }
   }
+  document.hidden = hidden; document.visibilityState = hidden ? 'hidden' : 'visible';
   document.body = new Element('body'); document.documentElement = new Element('html'); document.documentElement.lang = 'en';
   document.getElementById = id => ids.get(id) || null;
   document.createElement = tag => tag === 'audio' ? new Audio() : new Element(tag);
   document.querySelectorAll = selector => selector === 'audio,video' ? elements.filter(element => ['AUDIO', 'VIDEO'].includes(element.tagName)) : [];
   const window = new Target(), request = deferred(), mediaActions = new Map(initialMediaActions);
-  const mediaSession = { setActionHandler: (action, handler) => mediaActions.set(action, handler), setPositionState(value) { this.position = value; } };
+  const playbackStates = [], audioSessionTypes = []; let sessionType = audioSessionType;
+  const audioSession = audioSessionType === null ? undefined : { get type() { return sessionType; }, set type(value) { audioSessionTypes.push(value); sessionType = value; } };
+  const mediaSession = { set playbackState(value) { this.currentPlaybackState = value; playbackStates.push(value); }, get playbackState() { return this.currentPlaybackState; }, setActionHandler: (action, handler) => mediaActions.set(action, handler), setPositionState(value) { this.position = value; } };
   const stored = new Map(saved ? [['mapkaiMusicDock', JSON.stringify(saved)]] : []);
   let now = 10000, fetchCalls = 0, context;
   const pageState = { tracks: pageLoaded ? structuredClone(catalog) : [], track: null, audio: null,
@@ -142,12 +147,13 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
       restore: (id, seconds) => { choose(id); pageState.pendingPosition = seconds; pageState.audio.load(); update(); },
     };
   }
+  if (pagehideClearsIntent) window.addEventListener('pagehide', () => { pageState.playbackIntent = false; pageState.advancing = false; });
   context = vm.createContext({ document, window, URL, Event: class { constructor(type) { this.type = type; } },
-    navigator: { mediaSession }, MediaMetadata: class { constructor(value) { Object.assign(this, value); } },
+    navigator: { mediaSession, audioSession }, MediaMetadata: class { constructor(value) { Object.assign(this, value); } },
     Date: class extends Date { static now() { return now; } },
     location: { href: 'https://www.mapkai.com/explore', origin: 'https://www.mapkai.com' },
     localStorage: { getItem: key => key === 'mapkaiMusicContinuous.v1' ? continuous : null },
-    sessionStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) },
+    sessionStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => { operations.push('storage'); stored.set(key, value); } },
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
     ResizeObserver: class { observe() {} }, MutationObserver: class { observe() {} },
     AbortSignal: { timeout: () => undefined },
@@ -160,7 +166,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
-    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions,
+    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, operations, audioSession, audioSessionTypes,
+    updatePage: update, visibility: () => { document.dispatchEvent({ type: 'visibilitychange' }); },
     pageshow: persisted => window.dispatchEvent({ type: 'pageshow', persisted }),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     tick: () => { now += 1100; },
@@ -517,4 +524,153 @@ test('stale Music system controls do not leave later external media playing', as
   await h.control('mini-play').onclick(); await flush();
   assert.equal(h.ownAudio.paused, false, 'a deliberate Music control returns ownership to Music');
   assert.equal(h.ownAudio.playCalls, previousCalls + 1);
+});
+
+
+test('natural pause then ended keeps Media Session playing through delayed next play, including hidden pages', async () => {
+  for (const hidden of [false, true]) {
+    const nextGate = deferred(), h = harness({ hidden, playGates: [null, nextGate], audioSessionType: 'auto' });
+    const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush(); h.ownAudio.metadata();
+    const statesStart = h.playbackStates.length;
+    h.ownAudio.currentTime = h.ownAudio.duration; h.ownAudio.paused = true; h.ownAudio.ended = true;
+    h.ownAudio.event('pause');
+    assert.equal(h.mediaSession.playbackState, 'playing', 'real end pause cannot relinquish the lock-screen session');
+    const operationsStart = h.operations.length; h.ownAudio.event('ended');
+    const startOperations = h.operations.slice(operationsStart);
+    assert.deepEqual(startOperations.slice(0, 2), ['src', 'play'], 'source and native play precede render, storage, pause, or load');
+    assert.equal(h.ownAudio.playCalls, 2); assert.equal(h.control('select').value, secondId);
+    assert.equal(h.mediaSession.playbackState, 'playing');
+    assert.deepEqual(h.audioSessionTypes, ['playback'], 'automatic handoff retains its lease');
+    h.mediaActions.get('play')(); await flush(); assert.equal(h.ownAudio.playCalls, 2, 'system Play during the gap is harmless');
+    nextGate.resolve(); await flush();
+    assert.ok(h.playbackStates.slice(statesStart).every(value => value === 'playing'));
+    assert.equal(h.mediaSession.playbackState, 'playing');
+  }
+});
+
+test('system Pause during delayed automatic handoff cancels immediately and releases the playback lease', async () => {
+  const nextGate = deferred(), h = harness({ playGates: [null, nextGate], audioSessionType: 'ambient' });
+  const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush(); h.ownAudio.metadata();
+  h.ownAudio.currentTime = h.ownAudio.duration; h.ownAudio.paused = true; h.ownAudio.ended = true;
+  h.ownAudio.event('pause'); h.ownAudio.event('ended'); await flush();
+  h.mediaActions.get('pause')();
+  assert.equal(h.mediaSession.playbackState, 'paused'); assert.equal(h.audioSession.type, 'ambient');
+  const statesStart = h.playbackStates.length; nextGate.resolve(); await flush(); h.visibility(); await flush();
+  assert.equal(h.ownAudio.paused, true); assert.equal(h.ownAudio.playCalls, 2);
+  assert.ok(h.playbackStates.slice(statesStart).every(value => value === 'paused'));
+  assert.deepEqual(h.audioSessionTypes, ['playback', 'ambient']);
+});
+
+test('a real native pause near the end clears intent rather than treating elapsed time as an automatic end', async () => {
+  const h = harness({ audioSessionType: 'auto' }), play = h.dock.play(firstId);
+  h.request.resolve({ tracks: catalog }); await play; await flush(); h.ownAudio.metadata();
+  h.ownAudio.currentTime = h.ownAudio.duration - 0.001; h.ownAudio.paused = true; h.ownAudio.ended = false; h.ownAudio.event('pause');
+  assert.equal(h.mediaSession.playbackState, 'paused'); assert.equal(h.audioSession.type, 'auto');
+  h.ownAudio.ended = true; h.ownAudio.event('ended'); await flush();
+  assert.equal(h.ownAudio.playCalls, 1, 'a later stale ended event cannot restart user-paused playback');
+});
+
+test('continuous off truthfully ends the media session and releases its Audio Session', async () => {
+  const h = harness({ continuous: 'off', audioSessionType: 'auto' }), play = h.dock.play(firstId);
+  h.request.resolve({ tracks: catalog }); await play; await flush(); h.ownAudio.metadata();
+  h.ownAudio.currentTime = h.ownAudio.duration; h.ownAudio.paused = true; h.ownAudio.ended = true;
+  h.ownAudio.event('pause'); h.ownAudio.event('ended'); await flush();
+  assert.equal(h.ownAudio.playCalls, 1); assert.equal(h.mediaSession.playbackState, 'paused');
+  assert.deepEqual(h.audioSessionTypes, ['playback', 'auto']);
+});
+
+test('Audio Session is not acquired for dormant/restored-paused sessions or delegated Music-page playback', async () => {
+  const fresh = harness({ audioSessionType: 'auto' }); fresh.visibility(); assert.deepEqual(fresh.audioSessionTypes, []);
+  const saved = { version: 1, id: firstId, seconds: 12, volume: 0.5, collapsed: true, wasPlaying: false };
+  const paused = harness({ saved, audioSessionType: 'auto' }); paused.request.resolve({ tracks: catalog }); await flush(); paused.ownAudio.metadata();
+  assert.deepEqual(paused.audioSessionTypes, []);
+  const bridge = harness({ pageLoaded: true, audioSessionType: 'auto' }); await bridge.dock.play(firstId); await flush();
+  assert.deepEqual(bridge.audioSessionTypes, [], 'the app owns its lease when the dock delegates');
+});
+
+test('Audio Session recording and later foreign ownership are never overwritten', async () => {
+  const recording = harness({ audioSessionType: 'play-and-record' }), play = recording.dock.play(firstId);
+  recording.request.resolve({ tracks: catalog }); await play; await flush(); recording.mediaActions.get('pause')(); await flush();
+  assert.deepEqual(recording.audioSessionTypes, []); assert.equal(recording.audioSession.type, 'play-and-record');
+  const foreign = harness({ audioSessionType: 'auto' }), otherPlay = foreign.dock.play(firstId);
+  foreign.request.resolve({ tracks: catalog }); await otherPlay; await flush(); foreign.audioSession.type = 'play-and-record';
+  foreign.mediaActions.get('pause')(); await flush();
+  assert.equal(foreign.audioSession.type, 'play-and-record'); assert.deepEqual(foreign.audioSessionTypes, ['playback', 'play-and-record']);
+});
+
+test('foreign media, playback failure, and pagehide release an owned Audio Session lease', async () => {
+  for (const end of ['foreign', 'error', 'pagehide']) {
+    const h = harness({ audioSessionType: 'auto' }), play = h.dock.play(firstId);
+    h.request.resolve({ tracks: catalog }); await play; await flush();
+    if (end === 'foreign') { h.lesson(); await flush(); }
+    else if (end === 'error') { h.ownAudio.error = new Error('decode'); h.ownAudio.event('error'); }
+    else h.pagehide();
+    assert.equal(h.audioSession.type, 'auto', end); assert.deepEqual(h.audioSessionTypes, ['playback', 'auto'], end);
+  }
+  const denied = harness({ playFailure: true, audioSessionType: 'ambient' }), deniedPlay = denied.dock.play(firstId);
+  denied.request.resolve({ tracks: catalog }); assert.equal(await deniedPlay, false); await flush();
+  assert.deepEqual(denied.audioSessionTypes, ['playback', 'ambient']);
+});
+
+test('bridge handoff intent preserves Media Session through natural end and pending next start', async () => {
+  const h = harness({ pageLoaded: true }); await h.dock.play(firstId); await flush(); h.pageState.audio.metadata();
+  h.pageState.playbackIntent = true; h.pageState.advancing = false; h.pageState.continuousPlay = true;
+  const start = h.playbackStates.length;
+  h.pageState.audio.paused = true; h.pageState.audio.ended = true; h.updatePage();
+  assert.equal(h.mediaSession.playbackState, 'playing', 'ended is sufficient before the app ended callback sets advancing');
+  h.pageState.advancing = true; h.pageState.pending = true; h.pageState.audio.ended = false; h.updatePage();
+  assert.equal(h.mediaSession.playbackState, 'playing');
+  assert.ok(h.playbackStates.slice(start).every(value => value === 'playing'));
+  h.pageState.playbackIntent = false; h.pageState.pending = false; h.pageState.advancing = false; h.updatePage();
+  assert.equal(h.mediaSession.playbackState, 'paused');
+});
+
+
+test('a genuine native pause cancels a pending subject play immediately without awaiting its promise', async () => {
+  const gate = deferred(), h = harness({ playGate: gate, audioSessionType: 'auto' });
+  const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await flush();
+  h.ownAudio.pause(); await flush();
+  assert.equal(await play, false); assert.equal(h.mediaSession.playbackState, 'paused'); assert.equal(h.audioSession.type, 'auto');
+  gate.resolve(); await flush(); assert.equal(h.ownAudio.paused, true); assert.equal(h.ownAudio.playCalls, 1);
+});
+
+test('capture-phase navigation save precedes a Music app pagehide intent cleanup', async () => {
+  const h = harness({ pageLoaded: true, pagehideClearsIntent: true }); await h.dock.play(firstId); await flush();
+  h.pageState.playbackIntent = true; h.pageState.audio.metadata(); h.pageState.audio.currentTime = 36;
+  h.pagehide();
+  assert.equal(h.session().wasPlaying, true); assert.equal(h.session().seconds, 36);
+  assert.equal(h.pageState.playbackIntent, false); assert.equal(h.pageState.audio.paused, true);
+});
+
+
+test('late native play, playing, or promise settlement cannot resume a cancelled request', async () => {
+  for (const late of ['play', 'playing', 'promise']) {
+    const gate = deferred(), h = harness({ playGate: gate, audioSessionType: 'auto' });
+    const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await flush();
+    h.mediaActions.get('pause')(); await flush(); assert.equal(await play, false);
+    h.ownAudio.paused = false;
+    if (late !== 'promise') h.ownAudio.event(late);
+    gate.resolve(); await flush();
+    assert.equal(h.ownAudio.paused, true, late); assert.equal(h.mediaSession.playbackState, 'paused', late);
+    assert.equal(h.audioSession.type, 'auto'); assert.equal(h.ownAudio.playCalls, 1);
+  }
+});
+
+test('a stale native own play cannot pause the real external lesson owner', async () => {
+  const gate = deferred(), h = harness({ playGate: gate });
+  const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await flush(); await flush();
+  const lesson = h.lesson(); await flush(); assert.equal(await play, false); assert.equal(lesson.paused, false);
+  h.ownAudio.paused = false; h.ownAudio.event('play'); await flush();
+  assert.equal(h.ownAudio.paused, true); assert.equal(lesson.paused, false);
+  gate.resolve(); await flush(); assert.equal(lesson.paused, false);
+});
+
+test('a stale request settlement cannot pause a newer legitimate Music request or release its lease', async () => {
+  const oldGate = deferred(), h = harness({ playGates: [oldGate, null], audioSessionType: 'auto' });
+  const older = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await flush();
+  const newer = h.dock.play(secondId); assert.equal(await older, false); assert.equal(await newer, true); await flush();
+  oldGate.resolve(); h.ownAudio.event('playing'); await flush();
+  assert.equal(h.ownAudio.paused, false); assert.equal(h.control('select').value, secondId);
+  assert.equal(h.ownAudio.playCalls, 2); assert.equal(h.audioSession.type, 'playback');
+  assert.equal(h.mediaSession.playbackState, 'playing');
 });

@@ -65,7 +65,7 @@
   const startMusicDock = () => {
     const launch = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=compact-player-20261016'; document.head.append(script);
+      script.src = '/music/dock.js?v=background-player-20261016'; document.head.append(script);
     };
     if (globalThis.MapKAIMusicPreferences) { launch(); return; }
     // Music includes the same helper before its app; other pages load it here.

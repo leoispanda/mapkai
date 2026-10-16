@@ -41,18 +41,39 @@
   let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
   let restorePlayIntent = saved?.wasPlaying === true, autoResumeBlocked = false, leaving = false, navigationWasPlaying = false;
   let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null;
+  let playbackIntent = false, advancing = false, audioSessionLease = null;
   let originalLyricTrackId = null, originalLyricSource = null;
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const page = () => window.MapKAIMusicPage;
-  const state = () => page()?.snapshot() || { tracks, track: selected, audio: selected ? ownAudio : null, loaded, libraryFailed, pending, failed, complete, volume };
+  const state = () => page()?.snapshot() || { tracks, track: selected, audio: selected ? ownAudio : null, loaded, libraryFailed, pending, failed, complete, volume, playbackIntent, advancing };
   const active = state => Boolean(state.audio && !state.audio.paused && !state.audio.ended && !state.audio.error);
   function continuousEnabled(current = state()) {
     if (typeof current.continuousPlay === 'boolean') return current.continuousPlay;
     try { return localStorage.getItem('mapkaiMusicContinuous.v1') !== 'off'; } catch { return true; }
   }
   const activeExternalMedia = current => [...document.querySelectorAll('audio,video')].filter(media => media !== current.audio && !media.paused && !media.ended);
+  const sessionPlaying = current => current.playbackIntent !== false && (active(current)
+    || (current.playbackIntent === true && !current.failed && !current.audio?.error
+      && (current.pending || current.advancing || (current.audio?.ended && continuousEnabled(current)))));
+  function acquireAudioSession() {
+    if (page() || audioSessionLease) return;
+    try {
+      const session = typeof navigator !== 'undefined' && navigator.audioSession;
+      const previous = session?.type;
+      // Microphone/recording ownership is never changed by a music request.
+      if (!session || typeof previous !== 'string' || previous === 'play-and-record' || previous === 'playback') return;
+      session.type = 'playback';
+      if (session.type === 'playback') audioSessionLease = { session, previous };
+    } catch {}
+  }
+  function releaseAudioSession() {
+    const lease = audioSessionLease; audioSessionLease = null;
+    if (!lease) return;
+    try { if (lease.session.type === 'playback') lease.session.type = lease.previous; } catch {}
+  }
+  function clearPlaybackIntent() { playbackIntent = false; advancing = false; releaseAudioSession(); }
   const clock = seconds => `${Math.floor(Math.max(0, seconds) / 60)}:${String(Math.floor(Math.max(0, seconds)) % 60).padStart(2, '0')}`;
   const reserveSpace = () => document.documentElement.style.setProperty('--music-dock-height', `${Math.ceil(dock.getBoundingClientRect().height) + 16}px`);
   new ResizeObserver(reserveSpace).observe(dock);
@@ -74,7 +95,7 @@
     lastSave = Date.now();
     try { sessionStorage.setItem(key, JSON.stringify({ version: 1, id: current.track?.id || null,
       seconds: Math.max(0, Math.min(7200, current.pendingPosition ?? (!page() ? resumeSeconds : null) ?? (Number.isFinite(current.audio?.currentTime) ? current.audio.currentTime : 0))),
-      volume: current.volume, collapsed: dock.classList.contains('is-collapsed'), wasPlaying: restorePlayIntent || active(current) })); } catch {}
+      volume: current.volume, collapsed: dock.classList.contains('is-collapsed'), wasPlaying: restorePlayIntent || sessionPlaying(current) })); } catch {}
   }
 
   function render() {
@@ -96,7 +117,7 @@
     $('select').options[0].textContent = t('choose'); $('select').value = track?.id || ''; $('select').disabled = !list.length;
     $('select').setAttribute('aria-label', t('choose'));
     const index = track ? list.findIndex(item => item.id === track.id) : -1;
-    const waiting = current.pending || loading;
+    const waiting = current.pending || current.advancing || loading;
     const action = waiting ? 'cancel' : autoResumeBlocked ? 'resume' : current.failed || current.libraryFailed ? 'retry' : active(current) ? 'pause' : current.complete ? 'replay' : track ? 'resume' : continuousEnabled(current) ? 'play' : 'singlePlay';
     $('play').textContent = t(action); $('play').disabled = current.loaded && !list.length && !current.libraryFailed;
     $('mini-play').textContent = action === 'pause' ? 'Ⅱ' : action === 'cancel' ? '×' : action === 'retry' || action === 'replay' ? '↻' : '▶';
@@ -190,14 +211,18 @@
     return fetchPromise;
   }
 
-  function select(track, seconds = null) {
-    sequence++; ownAudio.pause(); selected = track; pending = false; failed = false; complete = false;
-    resumeSeconds = seconds; ownAudio.src = track.url; render();
+  function select(track, seconds = null, immediatePlay = false) {
+    sequence++;
+    if (!immediatePlay) { clearPlaybackIntent(); ownAudio.pause(); }
+    selected = track; pending = false; failed = false; complete = false;
+    resumeSeconds = seconds; ownAudio.src = track.url;
+    // The next native play request must precede DOM/storage work at a natural end.
+    if (!immediatePlay) render();
     if (seconds !== null) ownAudio.load();
   }
   function cancelRequestedPlay() { requestedPlay?.finish(false); }
   function pause() {
-    restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay();
+    restorePlayIntent = false; autoResumeBlocked = false; clearPlaybackIntent(); cancelRequestedPlay();
     sequence++; pending = false;
     if (page()) page().pause();
     else { ownAudio.pause(); render(); }
@@ -207,13 +232,20 @@
     if (!selected) return false;
     if (ownAudio.error) ownAudio.load();
     if (ownAudio.ended && ownAudio.readyState > 0) ownAudio.currentTime = 0;
-    const request = ++sequence; pending = true; failed = false; complete = false; render();
+    const request = ++sequence; pending = true; failed = false; complete = false; playbackIntent = true;
+    acquireAudioSession();
     try {
-      await ownAudio.play();
-      if (request !== sequence) return false;
-      pending = false; render(); return !page() && active(state());
+      const started = ownAudio.play();
+      render();
+      await started;
+      if (request !== sequence) {
+        if (!playbackIntent && !ownAudio.paused) ownAudio.pause();
+        return false;
+      }
+      pending = false; advancing = false; render(); return !page() && active(state());
     } catch (error) {
-      if (request === sequence) { pending = false; autoResumeBlocked = automaticRestore && error.name === 'NotAllowedError'; failed = !autoResumeBlocked && error.name !== 'AbortError'; render(); if (autoResumeBlocked) persist(true); }
+      if (request !== sequence && !playbackIntent && !ownAudio.paused) ownAudio.pause();
+      if (request === sequence) { clearPlaybackIntent(); pending = false; autoResumeBlocked = automaticRestore && error.name === 'NotAllowedError'; failed = !autoResumeBlocked && error.name !== 'AbortError'; render(); persist(true); }
       return false;
     }
   }
@@ -240,7 +272,7 @@
           const track = current.loaded && !current.libraryFailed && current.tracks.find(item => validTrack(item) && item.id.toLowerCase() === id.toLowerCase());
           if (!track) { operation.finish(false); return; }
           const bridge = page();
-          if (!bridge) { select(track); operation.finish(await start()); return; }
+          if (!bridge) { select(track, null, true); operation.finish(await start()); return; }
           const check = () => {
             if (requestedPlay !== operation) return;
             const playing = state();
@@ -262,13 +294,13 @@
   async function toggle() {
     externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false;
     const current = state();
-    if (current.pending || loading || active(current)) { pause(); return; }
+    if (current.pending || current.advancing || loading || active(current)) { pause(); return; }
     cancelRequestedPlay();
     const request = ++sequence;
     if (!current.loaded || current.libraryFailed) { pending = true; await load(); if (request !== sequence) return; pending = false; }
     if (page()) { page().toggle(); return; }
     if (!tracks.length || libraryFailed) { render(); return; }
-    if (!selected || (complete && continuousEnabled(current))) select(tracks[0]);
+    if (!selected || (complete && continuousEnabled(current))) select(tracks[0], null, true);
     start();
   }
   function move(direction) {
@@ -276,7 +308,7 @@
     sequence++; pending = false;
     if (page()) { page().move(direction); return; }
     const index = tracks.findIndex(track => track.id === selected?.id);
-    if (index < 0 || !tracks.length) return; select(tracks[(index + direction + tracks.length) % tracks.length]); start();
+    if (index < 0 || !tracks.length) return; select(tracks[(index + direction + tracks.length) % tracks.length], null, true); start();
   }
   function restore() {
     const current = state(); if (restoreDone || !current.loaded) return;
@@ -315,7 +347,7 @@
     if (externalMediaOwner || activeExternalMedia(current).length) { mediaSessionOwned = false; return; }
     // A dormant dock must not replace controls owned by another page tool.
     if (!mediaSessionOwned) {
-      if (!active(current)) return;
+      if (!sessionPlaying(current)) return;
       claimMediaSession(); mediaSessionOwned = true; mediaTrackId = null;
     }
     try {
@@ -323,7 +355,7 @@
         session.metadata = new MediaMetadata({ title: current.track.title, artist: 'MapKAI', album: 'MapKAI Music' });
         mediaTrackId = current.track.id;
       }
-      session.playbackState = active(current) ? 'playing' : 'paused';
+      session.playbackState = sessionPlaying(current) ? 'playing' : 'paused';
       const audio = current.audio;
       if (session.setPositionState && audio?.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0) {
         session.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate || 1, position: Math.max(0, Math.min(audio.duration, audio.currentTime || 0)) });
@@ -354,7 +386,7 @@
         try { Promise.resolve(externalMediaOwner.play()).catch(() => {}); } catch {}
         return;
       }
-      const current = state(); if (!current.pending && !loading && !active(current)) toggle();
+      const current = state(); if (!current.pending && !loading && !sessionPlaying(current)) toggle();
     };
     const sessionSeek = seconds => mediaSeek(seconds, externalMediaOwner);
     const actions = { play: systemPlay,
@@ -373,7 +405,7 @@
     const track = state().tracks.find(item => item.id === $('select').value); if (!track) return;
     externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay(); explicitSelection = true;
     sequence++; pending = false;
-    if (page()) page().play(track.id); else { select(track); start(); }
+    if (page()) page().play(track.id); else { select(track, null, true); start(); }
   };
   $('seek').oninput = () => {
     const value = Number($('seek').value), audio = state().audio;
@@ -394,23 +426,42 @@
     }
     render();
   });
+  ownAudio.addEventListener('pause', () => {
+    if (page() || !ownAudio.paused) return;
+    // Native playback ends with pause before ended. Only the real ended flag
+    // preserves intent; an OS/user pause near the end is still a true pause.
+    if (playbackIntent && ownAudio.ended && continuousEnabled() && !leaving) advancing = true;
+    else { clearPlaybackIntent(); sequence++; pending = false; cancelRequestedPlay(); }
+    render();
+  });
   ownAudio.addEventListener('ended', () => {
     if (!selected || !ownAudio.ended || page()) return;
-    if (!continuousEnabled()) { pending = false; complete = true; render(); return; }
+    if (!playbackIntent || !continuousEnabled()) { clearPlaybackIntent(); pending = false; complete = true; render(); persist(true); return; }
     const index = tracks.findIndex(track => track.id === selected.id);
-    if (index >= 0 && tracks.length) { select(tracks[(index + 1) % tracks.length]); start(); }
+    if (index >= 0 && tracks.length) {
+      advancing = true;
+      select(tracks[(index + 1) % tracks.length], null, true); start();
+    } else { clearPlaybackIntent(); pending = false; render(); }
   });
-  ownAudio.addEventListener('error', () => { cancelRequestedPlay(); sequence++; pending = false; failed = true; render(); });
-  for (const event of ['timeupdate', 'play', 'pause', 'playing', 'seeking', 'seeked', 'durationchange', 'waiting']) ownAudio.addEventListener(event, render);
+  ownAudio.addEventListener('error', () => { clearPlaybackIntent(); cancelRequestedPlay(); sequence++; pending = false; failed = true; render(); persist(true); });
+  for (const event of ['play', 'playing']) ownAudio.addEventListener(event, () => {
+    // A cancelled native request can resume late on mobile. Never let it play
+    // without current intent, and never stop a newer legitimate request.
+    if (!playbackIntent && !ownAudio.paused) ownAudio.pause();
+    render();
+  });
+  for (const event of ['timeupdate', 'seeking', 'seeked', 'durationchange', 'waiting']) ownAudio.addEventListener(event, render);
   // Starting a lesson's narration or video pauses background music as well.
   document.addEventListener('play', event => {
     const target = event.target; if (!['AUDIO', 'VIDEO'].includes(target.tagName)) return;
+    // Reject a stale own play before it can pause the real external owner.
+    if (target === ownAudio && !playbackIntent) { if (!ownAudio.paused) ownAudio.pause(); return; }
     const current = state();
     if (target === current.audio) {
       document.querySelectorAll('audio,video').forEach(media => { if (media !== target && !media.paused) media.pause(); });
     } else {
       externalMediaOwner = target; mediaSessionOwned = false;
-      if (restorePlayIntent || pending || loading || current.pending || active(current)) pause();
+      if (restorePlayIntent || playbackIntent || pending || loading || current.pending || current.playbackIntent || active(current)) pause();
     }
   }, true);
   preferences?.subscribe(() => {
@@ -421,14 +472,14 @@
     if (delegatingPlay) return;
     externalMediaOwner = null; restorePlayIntent = false; autoResumeBlocked = false; cancelRequestedPlay(); sequence++; pending = false; explicitSelection = true;
   });
-  window.addEventListener('mapkai:music-ready', () => { cancelRequestedPlay(); sequence++; ownAudio.pause(); restore(); render(); });
+  window.addEventListener('mapkai:music-ready', () => { clearPlaybackIntent(); cancelRequestedPlay(); sequence++; ownAudio.pause(); restore(); render(); });
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   window.addEventListener('storage', event => { if (event.key === 'mapkaiMusicContinuous.v1') render(); });
   window.addEventListener('resize', render); reducedMotion.addEventListener?.('change', render);
   window.addEventListener('pagehide', () => {
-    navigationWasPlaying = active(state()); cancelRequestedPlay(); sequence++; persist(true); leaving = true;
+    navigationWasPlaying = sessionPlaying(state()); cancelRequestedPlay(); sequence++; persist(true); leaving = true; clearPlaybackIntent();
     if (page()) page().pause(); else ownAudio.pause();
-  });
+  }, { capture: true });
   window.addEventListener('pageshow', event => {
     leaving = false; if (event.persisted && navigationWasPlaying) restorePlayIntent = true; restore(); render();
   });

@@ -17,12 +17,13 @@ const flush = async () => { for (let index = 0; index < 30; index++) await Promi
 
 // Execute the production app with a small DOM/media model. Tests drive user and
 // native media events, not extracted copies of the queue implementation.
-function harness({ savedContinuous = null, failPlay = false, songs = catalog } = {}) {
+function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null } = {}) {
+  const trace = [], snapshots = [];
   const ids = new Map(), all = [], values = new Map(), scores = new Map();
   if (savedContinuous) values.set('mapkaiMusicContinuous.v1', savedContinuous);
   class Target {
     addEventListener(type, callback) { const callbacks = this.listeners?.get(type) || []; callbacks.push(callback); (this.listeners ||= new Map()).set(type, callbacks); }
-    dispatchEvent(event) { event.target ||= this; for (const callback of [...(this.listeners?.get(event.type) || [])]) callback(event); return true; }
+    dispatchEvent(event) { trace.push(['event', event.type]); event.target ||= this; for (const callback of [...(this.listeners?.get(event.type) || [])]) callback(event); return true; }
   }
   class Element extends Target {
     constructor(tag) {
@@ -41,7 +42,9 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog } =
     insertBefore(item, before) { if (item === before) return; item.remove(); const index = before ? this.children.indexOf(before) : -1; item.parentNode = this; this.children.splice(index < 0 ? this.children.length : index, 0, item); }
     replaceChildren(...items) { for (const item of [...this.children]) item.remove(); this.append(...items); }
     remove() { if (this.parentNode) this.parentNode.children.splice(this.parentNode.children.indexOf(this), 1); this.parentNode = null; }
-    setAttribute(name, value) { this.attributes.set(name, String(value)); }
+    set hidden(value) { this.hiddenValue = value; trace.push(['dom', 'hidden']); }
+    get hidden() { return this.hiddenValue; }
+    setAttribute(name, value) { trace.push(['dom', 'attribute']); this.attributes.set(name, String(value)); }
     getAttribute(name) { return this.attributes.get(name) ?? null; }
     removeAttribute(name) { this.attributes.delete(name); }
     get options() { return this.children; }
@@ -52,18 +55,19 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog } =
     close() { this.open = false; this.dispatchEvent({ type: 'close' }); }
   }
   class Audio extends Element {
-    constructor() { super('audio'); this.paused = true; this.ended = false; this.error = null; this.readyState = 0; this.duration = NaN; this.currentTime = 0; this.volume = 1; this.playCalls = 0; }
-    set src(value) { this.source = value; this.ended = false; this.error = null; this.currentTime = 0; this.readyState = 0; this.duration = NaN; }
+    constructor() { super('audio'); this.paused = true; this.ended = false; this.error = null; this.readyState = 0; this.duration = NaN; this.currentTime = 0; this.volume = 1; this.playCalls = 0; this.loadCalls = 0; this.pauseCalls = 0; }
+    set src(value) { trace.push(['src', value]); this.source = value; this.ended = false; this.error = null; this.currentTime = 0; this.readyState = 0; this.duration = NaN; }
     get src() { return this.source || ''; }
     event(type) { this.dispatchEvent({ type, target: this }); }
     play() {
-      this.playCalls++;
+      this.playCalls++; trace.push(['play', this.src]);
       if (failPlay) return Promise.reject(Object.assign(new Error('Playback requires a gesture'), { name: 'NotAllowedError' }));
       this.paused = false; this.ended = false;
-      queueMicrotask(() => { this.event('play'); this.event('playing'); }); return Promise.resolve();
+      const gate = this.nextPlay; this.nextPlay = null;
+      queueMicrotask(() => { this.event('play'); if (!gate) this.event('playing'); }); return gate?.promise || Promise.resolve();
     }
-    pause() { const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
-    load() { this.paused = true; this.readyState = 0; this.currentTime = 0; this.ended = false; this.error = null; }
+    pause() { this.pauseCalls++; trace.push(['pause']); const changed = !this.paused; this.paused = true; if (changed) queueMicrotask(() => this.event('pause')); }
+    load() { this.loadCalls++; trace.push(['load']); this.paused = true; this.readyState = 0; this.currentTime = 0; this.ended = false; this.error = null; }
     metadata() { this.readyState = 4; this.duration = 120; this.event('loadedmetadata'); }
     finish() { this.paused = true; this.ended = true; this.currentTime = this.duration; this.event('ended'); }
   }
@@ -89,6 +93,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog } =
   };
   const context = vm.createContext({ window, document, URL, Event: class { constructor(type) { this.type = type; } },
     location: { href: 'https://www.mapkai.com/music/', origin: 'https://www.mapkai.com' },
+    navigator: audioSession ? { audioSession } : {},
     localStorage: { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) },
     MapKAIMusicPreferences: preferences,
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
@@ -96,7 +101,13 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog } =
     fetch: async () => { fetchCalls++; return { ok: true, json: async () => ({ tracks: structuredClone(currentSongs), nextCursor: null }) }; },
   });
   vm.runInContext(appSource, context, { filename: 'music/app.js' });
+  window.addEventListener('mapkai:music-update', () => snapshots.push(window.MapKAIMusicPage.snapshot()));
   return {
+    trace, snapshots,
+    delayNext: () => { let resolve, reject; const gate = { promise: new Promise((done, fail) => { resolve = done; reject = fail; }), resolve: value => resolve(value), reject: value => reject(value) }; window.MapKAIMusicPage.snapshot().audio.nextPlay = gate; return gate; },
+    visibility: value => { document.visibilityState = value; document.dispatchEvent({ type: 'visibilitychange' }); },
+    foreignPlay: () => { const audio = new Audio(); audio.paused = false; document.dispatchEvent({ type: 'play', target: audio }); return audio; },
+    pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     page: window.MapKAIMusicPage, element: id => ids.get(id), rows: () => ids.get('tracks').children,
     allAudio: () => all.filter(element => element.tagName === 'AUDIO'),
     click: element => element.dispatchEvent({ type: 'click' }),
@@ -204,4 +215,130 @@ test('browser autoplay denial becomes a recoverable error without an automatic r
   const h = harness({ failPlay: true }); await flush(); h.page.play(catalog[0].id); await flush();
   assert.equal(h.page.snapshot().failed, true); assert.equal(h.page.snapshot().pending, false);
   assert.equal(h.page.snapshot().audio.playCalls, 1);
+});
+
+
+test('native pause with ended=true retains continuation intent until the same-task next play request', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata();
+  const gate = h.delayNext(); const loads = audio.loadCalls, pauses = audio.pauseCalls;
+  audio.currentTime = audio.duration; audio.paused = true; audio.ended = true; audio.event('pause');
+  assert.equal(h.page.snapshot().playbackIntent, true); assert.equal(h.page.snapshot().advancing, true);
+  assert.equal(h.page.snapshot().pending, true);
+  h.trace.length = 0;
+  audio.ended = true; audio.event('ended');
+  const firstNativePlay = h.trace.findIndex(entry => entry[0] === 'play');
+  const firstUI = h.trace.findIndex(entry => entry[0] === 'dom' || entry[0] === 'event' && entry[1].startsWith('mapkai:'));
+  assert.ok(firstNativePlay >= 0 && firstUI > firstNativePlay, JSON.stringify(h.trace.slice(0, 12)));
+  assert.equal(audio.loadCalls, loads); assert.equal(audio.pauseCalls, pauses);
+  assert.equal(h.page.snapshot().audio, audio); assert.equal(h.page.snapshot().track.id, catalog[1].id);
+  assert.equal(h.page.snapshot().advancing, true); assert.equal(h.page.snapshot().playbackIntent, true);
+  await flush(); assert.equal(h.page.snapshot().pending, true);
+  gate.resolve(); await flush();
+  assert.equal(h.page.snapshot().advancing, false); assert.equal(h.page.snapshot().pending, false);
+  assert.equal(audio.paused, false);
+});
+
+test('explicit pause during a pending automatic handoff wins over a late play promise', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); const gate = h.delayNext();
+  audio.finish(); await flush(); assert.equal(h.page.snapshot().advancing, true);
+  h.page.pause(); assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(h.page.snapshot().advancing, false);
+  // An awkward platform callback must never override a later explicit pause.
+  audio.paused = false; gate.resolve(); await flush();
+  assert.equal(audio.paused, true); assert.equal(h.page.snapshot().pending, false);
+  assert.equal(audio.playCalls, 2);
+  audio.currentTime = 120; audio.ended = true; audio.event('ended'); await flush();
+  assert.equal(audio.playCalls, 2);
+});
+
+test('native pause away from the actual endpoint cancels intent and blocks a later ended advance', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 60; audio.paused = true; audio.event('pause');
+  assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(h.page.snapshot().advancing, false);
+  audio.finish(); await flush(); assert.equal(audio.playCalls, 1); assert.equal(h.page.snapshot().track.id, catalog[0].id);
+});
+
+test('hidden and visible events never resume a paused player or create another play request', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); h.page.pause(); await flush();
+  h.visibility('hidden'); h.visibility('visible'); await flush();
+  assert.equal(audio.playCalls, 1); assert.equal(audio.paused, true); assert.equal(h.page.snapshot().playbackIntent, false);
+});
+
+test('playback failure during automatic handoff clears intent and does not retry', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); const gate = h.delayNext(); audio.finish();
+  gate.reject(Object.assign(new Error('Background play denied'), { name: 'NotAllowedError' })); await flush();
+  assert.equal(h.page.snapshot().failed, true); assert.equal(h.page.snapshot().playbackIntent, false);
+  assert.equal(h.page.snapshot().advancing, false); assert.equal(audio.paused, true); assert.equal(audio.playCalls, 2);
+});
+
+function session(initialType = 'auto') {
+  let type = initialType; const writes = [];
+  return { get type() { return type; }, set type(value) { writes.push(value); type = value; }, writes };
+}
+
+test('AudioSession lease starts only for a true play, survives automatic handoff, and restores on pause', async () => {
+  const audioSession = session(), h = harness({ audioSession }); await flush();
+  assert.deepEqual(audioSession.writes, []);
+  await h.page.play(catalog[0].id); await flush(); assert.deepEqual(audioSession.writes, ['playback']);
+  const audio = h.page.snapshot().audio; audio.metadata(); const gate = h.delayNext();
+  audio.currentTime = 120; audio.paused = true; audio.ended = true; audio.event('pause'); audio.event('ended'); await flush();
+  assert.deepEqual(audioSession.writes, ['playback']);
+  gate.resolve(); await flush(); h.page.pause();
+  assert.deepEqual(audioSession.writes, ['playback', 'auto']);
+});
+
+test('AudioSession is optional and a recording session or existing playback ownership is not changed', async () => {
+  for (const type of ['play-and-record', 'playback']) {
+    const audioSession = session(type), h = harness({ audioSession }); await flush();
+    await h.page.play(catalog[0].id); await flush(); h.page.pause();
+    assert.deepEqual(audioSession.writes, []); assert.equal(audioSession.type, type);
+  }
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush(); h.page.pause();
+  assert.equal(h.page.snapshot().failed, false);
+});
+
+test('an AudioSession lease does not overwrite a new recording owner, and failure restores its own prior type', async () => {
+  const changed = session('ambient'), h = harness({ audioSession: changed }); await flush();
+  await h.page.play(catalog[0].id); await flush(); changed.type = 'play-and-record'; h.page.pause();
+  assert.deepEqual(changed.writes, ['playback', 'play-and-record']);
+  const failed = session('ambient'), rejected = harness({ audioSession: failed, failPlay: true }); await flush();
+  await rejected.page.play(catalog[0].id); await flush();
+  assert.deepEqual(failed.writes, ['playback', 'ambient']); assert.equal(rejected.page.snapshot().playbackIntent, false);
+});
+
+test('foreign media and navigation release the local AudioSession lease and cancel continuation', async () => {
+  const audioSession = session(), h = harness({ audioSession }); await flush();
+  await h.page.play(catalog[0].id); await flush(); h.foreignPlay(); await flush();
+  assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(audioSession.type, 'auto');
+  await h.page.play(catalog[1].id); await flush(); h.pagehide();
+  assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(audioSession.type, 'auto');
+});
+
+
+test('continuous-off native pause and ended release the lease without an advancing gap', async () => {
+  const audioSession = session(), h = harness({ audioSession, savedContinuous: 'off' }); await flush();
+  await h.page.play(catalog[0].id); await flush(); const audio = h.page.snapshot().audio; audio.metadata();
+  audio.currentTime = 120; audio.paused = true; audio.event('pause');
+  assert.equal(h.page.snapshot().advancing, false); assert.equal(h.page.snapshot().playbackIntent, false);
+  audio.ended = true; audio.event('ended'); await flush();
+  assert.equal(audio.playCalls, 1); assert.deepEqual(audioSession.writes, ['playback', 'auto']);
+});
+
+test('an unsupported AudioSession type setter does not prevent ordinary playback or pause', async () => {
+  const audioSession = { get type() { return 'auto'; }, set type(_) { throw new Error('Unsupported'); } };
+  const h = harness({ audioSession }); await flush(); await h.page.play(catalog[0].id); await flush();
+  assert.equal(h.page.snapshot().audio.paused, false); assert.equal(h.page.snapshot().playbackIntent, true);
+  h.page.pause(); assert.equal(h.page.snapshot().audio.paused, true);
+});
+
+
+test('a pause at duration without a native ended flag is respected as a stop', async () => {
+  const h = harness(); await flush(); await h.page.play(catalog[0].id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = audio.duration;
+  audio.paused = true; audio.ended = false; audio.event('pause');
+  assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(h.page.snapshot().advancing, false);
+  audio.ended = true; audio.event('ended'); await flush(); assert.equal(audio.playCalls, 1);
 });
