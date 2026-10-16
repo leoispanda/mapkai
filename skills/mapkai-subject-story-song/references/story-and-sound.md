@@ -48,6 +48,7 @@ These are candidate fits, not fixed subject assignments. Health can tell a rhyth
 
 ## Production distinctions
 
+- Briefly consider the owner's 180 steps/minute running preference when arranging each new song. Select it only when it naturally fits the intended sound; keep lyrical, reflective or freely timed songs' natural feel when it does not. For selected songs use [running cadence guidance](running-cadence.md); its chosen 90/180 BPM pulse takes precedence over the ordinary illustrative tempo ranges above for that arrangement. This changes neither genre quotas nor the learning map.
 - Design a new motif and imagery for each song. Familiar texture does not require copying an earlier hook.
 - Separate the style prompt from the full ordered lyrics. Arrangement instructions and silent labels are not extra sung text.
 - Give every essential action enough vocal time. A rap verse can carry more words than a sustained sung passage, but density must stay intelligible.

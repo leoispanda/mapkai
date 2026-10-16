@@ -72,6 +72,8 @@ Run at least three recorded review rounds and two real rewrite passes on the dev
 
 The final text gate requires: a developed story, visible field method, retained narrative turn, accurate boundaries, clear singable English, a distinctive earned hook, appropriate emotional proportion, source/copyright safety and no unresolved Critical/Major issue. Text approval does not approve an unheard or incomplete recording.
 
+During each new song's arrangement, briefly consider the owner's personal running cadence of 180 steps/minute. The owner clarified on 2026-10-16: use it selectively when the song naturally fits; lyrical/reflective songs that do not fit can keep their own feel. For a suitable choice, read [running cadence guidance](references/running-cadence.md) and consider 180 BPM with one beat per step, or 90 BPM with an audible eighth-note pulse for every step. Preserve the genre, learning structure and vocal clarity; if cadence fitting would harm the song, skip it and note the reason. Record requested pulse separately from measured recording evidence. A skill update does not resume cancelled schedules or authorize generation.
+
 ## Generate, verify and deliver together
 
 When generation is authorized, use ElevenLabs through an available supported tool or the established browser workflow. Confirm the current available credits and the authorized cost/variant scope from actual account state. Default to one variant per approved package. Preserve the exact submitted lyrics/style, provider identity and original recording. Further paid attempts require scope remaining in the existing authorization.
