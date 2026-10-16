@@ -271,7 +271,7 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   assert.deepEqual(objects.get(metadataKey(id)).bytes, englishBefore);
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.find(item => item.id === id), {
-    id, title: english.title, description: english.description, language: 'en', lyrics: '', lyricsTiming: [],
+    id, title: english.title, description: english.description, language: 'en', lyrics: '', lyricsTiming: [], tempoBpm: null,
     aiGenerated: null, generationProvider: null,
     url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
   });
@@ -486,6 +486,84 @@ test('missing, invalid or stale lyric timing falls back without blocking catalog
     assert.equal(range.status, 206);
     assert.deepEqual(new Uint8Array(await range.arrayBuffer()), mp3Bytes.slice(417, 421));
     assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
+  }
+});
+
+test('private verified tempo keeps measured BPM and recording identity without exposing its declaration', async () => {
+  const audioEtag = createHash('md5').update(mp3Bytes).digest('hex');
+  for (const bpm of [180, 90, 179.8, 20, 300]) {
+    const { env, install, objects, calls } = fixture();
+    const stored = install(id, 'Measured tempo', { tempo: { bpm, status: 'verified', audioEtag } });
+    const original = structuredClone(stored);
+    const before = objects.get(metadataKey(id)).bytes.slice();
+    assert.equal(safeTrack(stored), true);
+    assert.equal(publicTrack(stored).tempoBpm, bpm);
+    const readable = await readTrack(env.MAPKAI_REVIEW_MEDIA, id);
+    assert.equal(publicTrack(readable).tempoBpm, bpm);
+    const response = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+    assert.equal(response.status, 200);
+    const published = (await response.json()).tracks[0];
+    assert.equal(published.tempoBpm, bpm);
+    assert.equal(Object.hasOwn(published, 'tempo'), false);
+    assert.equal(Object.hasOwn(published, 'audioEtag'), false);
+    const playback = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env });
+    assert.equal(playback.status, 200);
+    assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+    assert.deepEqual(stored, original);
+    assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
+    assert.equal(calls.some(call => call.operation === 'put'), false);
+  }
+});
+
+test('missing, invalid or unverified tempo hides its label without blocking catalog or original playback', async () => {
+  const audioEtag = createHash('md5').update(mp3Bytes).digest('hex');
+  const valid = { bpm: 180, status: 'verified', audioEtag };
+  const invalidTempo = [null, [], '180', 180, {}, { bpm: 180 },
+    { ...valid, bpm: '180' }, { ...valid, bpm: null }, { ...valid, bpm: NaN }, { ...valid, bpm: Infinity },
+    { ...valid, bpm: 19.99 }, { ...valid, bpm: 300.01 },
+    { ...valid, status: 'unverified' }, { ...valid, status: 'requested' }, { ...valid, status: true },
+    { ...valid, audioEtag: '0'.repeat(32) }, { ...valid, audioEtag: null },
+    { bpm: 180, status: 'verified' },
+  ];
+  const cases = [{}, { requestedTempoBpm: 180, tempoBpm: 180, runningFitStatus: 'verified' },
+    ...invalidTempo.map(tempo => ({ tempo }))];
+  for (const metadata of cases) {
+    const { env, install, objects, calls } = fixture();
+    const stored = install(id, 'Optional tempo fallback', metadata);
+    const original = structuredClone(stored);
+    const before = objects.get(metadataKey(id)).bytes.slice();
+    assert.equal(safeTrack(stored), true);
+    assert.equal(publicTrack(stored).tempoBpm, null);
+    const readable = await readTrack(env.MAPKAI_REVIEW_MEDIA, id);
+    assert.equal(publicTrack(readable).tempoBpm, null);
+    const response = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+    assert.equal(response.status, 200);
+    assert.equal((await response.json()).tracks[0].tempoBpm, null);
+    const playback = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`), env });
+    assert.equal(playback.status, 200);
+    assert.deepEqual(new Uint8Array(await playback.arrayBuffer()), mp3Bytes);
+    const head = await audio({ request: new Request(`https://www.mapkai.com/api/music/audio?id=${id}`, { method: 'HEAD' }), env });
+    assert.equal(head.status, 200);
+    assert.deepEqual(stored, original);
+    assert.deepEqual(objects.get(metadataKey(id)).bytes, before);
+    assert.equal(calls.some(call => call.operation === 'put'), false);
+  }
+});
+
+test('ordinary uploads cannot declare a verified tempo or override its public projection', async () => {
+  for (const [name, value] of [
+    ['tempo', JSON.stringify({ bpm: 180, status: 'verified', audioEtag: '0'.repeat(32) })],
+    ['tempoBpm', '180'], ['requestedTempoBpm', '180'],
+  ]) {
+    const { env, calls, reservations } = fixture();
+    const request = await uploadRequest(env);
+    const form = await request.formData();
+    form.set(name, value);
+    const tampered = new Request(request.url, { method: 'POST', body: form,
+      headers: { Origin: request.headers.get('Origin'), Cookie: request.headers.get('Cookie') } });
+    assert.equal((await tracks({ request: tampered, env })).status, 400);
+    assert.deepEqual(calls, []);
+    assert.equal(reservations(), 0);
   }
 });
 

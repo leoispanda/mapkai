@@ -7,8 +7,8 @@
   const key = 'mapkaiMusicDock';
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
-    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首', continuousOn: '连续播放', continuousOff: '播完本首后停止', singleReady: '选择一首歌曲播放', singlePlay: '播放', navigationResume: '浏览器暂停了自动续播，请点继续播放。' },
-    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
+    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', running180: '180 BPM · 跑步', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首', continuousOn: '连续播放', continuousOff: '播完本首后停止', singleReady: '选择一首歌曲播放', singlePlay: '播放', navigationResume: '浏览器暂停了自动续播，请点继续播放。' },
+    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', running180: '180 BPM · Running', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
   };
   const t = name => copy[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'][name];
   let saved = null;
@@ -24,7 +24,7 @@
   dock.id = 'mapkai-music-dock'; dock.className = 'music-dock';
   // Only fixed, trusted markup; catalog titles and lyrics are inserted as plain text.
   dock.innerHTML = `<div class="music-dock-inner">
-    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">Music</a><div class="music-dock-track"><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span></div><div class="music-dock-transport"><button id="music-dock-mini-prev" type="button"></button><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-mini-next" type="button"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div></div>
+    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">Music</a><div class="music-dock-track"><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span><span id="music-dock-tempo" class="music-dock-tempo" hidden></span></div><div class="music-dock-transport"><button id="music-dock-mini-prev" type="button"></button><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-mini-next" type="button"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div></div>
     <div id="music-dock-body" class="music-dock-body"><p id="music-dock-detail-title" class="music-dock-detail-title"></p>
       <div class="music-dock-controls"><button id="music-dock-prev" type="button"></button><button id="music-dock-play" class="primary" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-next" type="button"></button><select id="music-dock-select"></select><label class="music-dock-volume"><span id="music-dock-volume-label"></span><input id="music-dock-volume" type="range" min="0" max="100" step="1"></label></div>
       <div class="music-dock-progress"><span id="music-dock-elapsed">0:00</span><input id="music-dock-seek" type="range" min="0" max="1000" step="1" value="0" disabled><span id="music-dock-duration">—:—</span></div>
@@ -86,11 +86,12 @@
     $('detail-title').textContent = title;
     $('title').title = title;
     $('ai').hidden = Boolean(track && !track.aiGenerated); $('ai').textContent = t('ai');
-    const signature = JSON.stringify(list.map(item => [item.id, item.title]));
+    $('tempo').hidden = track?.tempoBpm !== 180; $('tempo').textContent = t('running180');
+    const signature = JSON.stringify(list.map(item => [item.id, item.title, item.tempoBpm]));
     if (signature !== optionSignature || !$('select').options.length) {
       optionSignature = signature; $('select').replaceChildren();
       const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = t('choose'); $('select').append(placeholder);
-      for (const item of list) { const option = document.createElement('option'); option.value = item.id; option.textContent = item.title; $('select').append(option); }
+      for (const item of list) { const option = document.createElement('option'); option.value = item.id; option.textContent = `${item.title}${item.tempoBpm === 180 ? ' · 180 BPM' : ''}`; $('select').append(option); }
     }
     $('select').options[0].textContent = t('choose'); $('select').value = track?.id || ''; $('select').disabled = !list.length;
     $('select').setAttribute('aria-label', t('choose'));
@@ -155,6 +156,7 @@
       const lyrics = typeof raw.lyrics === 'string' ? raw.lyrics.slice(0, 12000).replace(/\r\n?/g, '\n').trim() : '';
       return { id: raw.id, title: raw.title.slice(0, 120), url: url.href, lyrics,
         lyricsTiming: sync.validateTiming(lyrics, raw.lyricsTiming), aiGenerated: raw.aiGenerated === true,
+        tempoBpm: Number.isFinite(raw.tempoBpm) && raw.tempoBpm >= 20 && raw.tempoBpm <= 300 ? raw.tempoBpm : null,
         createdAt: raw.createdAt };
     } catch { return null; }
   }

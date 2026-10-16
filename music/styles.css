@@ -34,6 +34,8 @@ body[data-theme=dark] .form-status[data-kind=error]{background:#422d14;color:#f5
 .playlist-reactions .track-reactions{margin:14px 0 2px}
 @media(max-width:540px){.track-reactions{margin-inline:16px}.reaction-button{flex:1;padding-inline:10px}.reaction-score{flex-basis:100%;padding:0}.playlist-reactions .track-reactions{max-width:360px}}
 
+/* Only confirmed 180 BPM recordings receive the running label. */
+.track-tempo{display:inline-block;margin:7px 0 0 6px;padding:2px 7px;border:1px solid #bbd7c4;border-radius:5px;background:#edf7ef;color:#27633e;font-size:11px;font-weight:600;line-height:1.6;white-space:nowrap}.track-tempo[hidden]{display:none}
 
 /* A scan-friendly queue: one row per song, with its originals kept in details. */
 .music-heading{padding-bottom:20px}.music-intro{margin-top:10px}.music-ai-notice{margin-top:4px}

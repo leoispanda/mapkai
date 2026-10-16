@@ -37,4 +37,12 @@ After a genuinely authorized generation, inspect the exact original recording. C
 
 Automatic tempo estimates can differ by a factor of two. A reported 90 BPM is compatible with the 180-step target only when the recording actually contains the clear, even 180-per-minute subdivision; resolve the mapping from the audio. Do not report failure or success from a single tempo number, the prompt, the genre tag, requested section windows or an unperformed listening check. Mark `runningFitStatus` as `unverified`, `verified` or `off-target`, supported by the saved evidence. Leave it unverified when the available evidence cannot establish a reliable cue.
 
+## Visible 180 BPM label
+
+The owner explicitly requested a visible mark on actual 180 BPM songs so they are easy to choose while running. After the recording's tempo has been verified, the existing private metadata import may add `tempo: { bpm: 180, status: "verified", audioEtag: <the exact stored recording ETag> }` to that track. Keep the measured method, multiple inspected audio windows, actual tempo stability and original audio identity in the private song package; a `verified` string is not a substitute for this work. An altered recording needs fresh tempo verification.
+
+The public API returns only a valid recording-bound `tempoBpm`; Music cards, the selected-song player and the shared dock show **180 BPM · Running** (Chinese **180 BPM · 跑步**) only when that value is exactly 180. The Music search also finds this label. Preserve the four-part song title and all permanent numbers. Do not mark songs from a requested BPM, genre, title, lyrics or a whole-song estimate without the required verification. A measured 90 BPM song with 180-per-minute subdivisions may be running-compatible, but must not receive the 180 BPM mark. Missing/unverified tempo leaves the label hidden and ordinary playback available.
+
+This enables truthful future labels; it does not claim old recordings have been measured, update old track records, request regeneration or restore cancelled production tasks.
+
 Preserve the original audio and existing editions. Off-target cadence is not permission to time-stretch, crop, regenerate or buy another variant; retain the actual result and follow the owner's original-recording policy. Use real running feedback to refine later suitable arrangements, while keeping the owner's selective scope. Cancelled production schedules stay cancelled.

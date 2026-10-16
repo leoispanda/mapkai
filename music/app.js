@@ -3,7 +3,7 @@
 
   const copy = {
     zh: {
-      back: '← 返回 Toolbox', intro: '选一首，接着听。按编号、歌名或学科找歌。', aiNotice: '所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。', aiGenerated: 'AI 生成', library: '歌曲列表', searchLabel: '搜索歌曲', search: '编号、歌名、学科或概念…', manage: '管理歌曲',
+      back: '← 返回 Toolbox', intro: '选一首，接着听。按编号、歌名或学科找歌。', aiNotice: '所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。', aiGenerated: 'AI 生成', running180: '180 BPM · 跑步', library: '歌曲列表', searchLabel: '搜索歌曲', search: '编号、歌名、学科或概念…', manage: '管理歌曲',
       like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
       lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       playlistHeading: '一起听 MapKAI', playlistIntro: '默认连续播放，到歌单末尾自动从头继续。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
@@ -14,7 +14,7 @@
       loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', buffering: '正在缓冲：{title}', playSong: '播放', pauseSong: '暂停', loadingSong: '正在缓冲…', retrySong: '点击重试', audioLabel: '播放 {title}', pauseLabel: '暂停 {title}', cancelLabel: '停止载入 {title}', retryLabel: '重新播放 {title}', controlsLabel: '{title} 的播放控制', audioError: '暂时无法播放这首歌，点击卡片重试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
     },
     en: {
-      back: '← Back to Toolbox', intro: 'Pick a song and keep listening. Find it by number, title, or subject.', aiNotice: 'AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.', aiGenerated: 'AI-generated', library: 'Song list', searchLabel: 'Search songs', search: 'Number, title, subject, or concept…', manage: 'Manage songs',
+      back: '← Back to Toolbox', intro: 'Pick a song and keep listening. Find it by number, title, or subject.', aiNotice: 'AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.', aiGenerated: 'AI-generated', running180: '180 BPM · Running', library: 'Song list', searchLabel: 'Search songs', search: 'Number, title, subject, or concept…', manage: 'Manage songs',
       like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; ranking is shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
       lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       playlistHeading: 'Listen with MapKAI', playlistIntro: 'Continuous play is on: the queue repeats after its last song.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
@@ -379,6 +379,8 @@
     $('playlist-position').textContent = index >= 0 ? t('playlistPosition', { position: index + 1, count: queue.length }) : loaded ? t('count', { count: tracks.length }) : t(libraryFailed ? 'libraryError' : 'loading');
     $('playlist-disclosure').hidden = !card?.track.aiGenerated;
     $('playlist-disclosure').textContent = t('aiGenerated');
+    $('playlist-tempo').hidden = card?.track.tempoBpm !== 180;
+    $('playlist-tempo').textContent = t('running180');
     renderReactionControls(playlistReactions, card?.track);
     $('playlist-error').hidden = !card || card.error.hidden;
     $('playlist-error').textContent = t('audioError');
@@ -513,7 +515,10 @@
     card.meta.textContent = [songLanguage, ext, length].filter(Boolean).join(' · ');
     card.disclosure.hidden = !card.track.aiGenerated;
     card.disclosure.textContent = t('aiGenerated');
-    if (card.track.aiGenerated) card.button.setAttribute('aria-describedby', card.disclosure.id);
+    card.tempo.hidden = card.track.tempoBpm !== 180;
+    card.tempo.textContent = t('running180');
+    const descriptions = [card.track.aiGenerated && card.disclosure.id, !card.tempo.hidden && card.tempo.id].filter(Boolean);
+    if (descriptions.length) card.button.setAttribute('aria-describedby', descriptions.join(' '));
     else card.button.removeAttribute('aria-describedby');
     card.lyricsDetails.hidden = !card.track.lyrics;
     card.lyricsSummary.textContent = t('lyrics');
@@ -664,10 +669,11 @@
     const detailsBody = document.createElement('div'); detailsBody.className = 'track-details-body';
     details.append(detailsSummary, detailsBody);
     const disclosure = document.createElement('span'); disclosure.className = 'track-disclosure';
+    const tempo = document.createElement('span'); tempo.className = 'track-tempo'; tempo.hidden = true;
     const description = document.createElement('span'); description.className = 'track-description'; description.textContent = track.description; description.hidden = !track.description;
     const meta = document.createElement('span'); meta.className = 'track-meta';
     const action = document.createElement('span'); action.className = 'track-action'; action.setAttribute('aria-hidden', 'true');
-    content.append(title, subject, action); rowMeta.append(disclosure, lengthLabel); button.append(number, icon, content, rowMeta);
+    content.append(title, subject, action); rowMeta.append(disclosure, tempo, lengthLabel); button.append(number, icon, content, rowMeta);
     const audio = playbackAudio;
     const controlId = `song-controls-${++cardSequence}`;
     const progress = document.createElement('div'); progress.className = 'playback-progress'; progress.hidden = true; progress.id = `${controlId}-progress`;
@@ -678,6 +684,7 @@
     const length = document.createElement('span'); length.textContent = '—:—';
     times.append(elapsed, length); progress.append(seek, times);
     disclosure.id = `${controlId}-disclosure`;
+    tempo.id = `${controlId}-tempo`;
     const error = document.createElement('p'); error.className = 'track-error'; error.setAttribute('role', 'status'); error.hidden = true;
     const lyricsDetails = document.createElement('details'); lyricsDetails.className = 'track-lyrics'; lyricsDetails.hidden = true;
     const lyricsSummary = document.createElement('summary');
@@ -692,7 +699,7 @@
     const reactions = createReactionControls(() => card.track);
     detailsBody.append(fullTitle, description, meta, reactions.element, lyricsDetails, originalLyricsDetails);
     element.append(button, details, progress, error);
-    const card = { element, button, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
+    const card = { element, button, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, tempo, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => {
       playlistIds = tracks.map(item => item.id); playlistMode = true; playlistComplete = false;
       togglePlayback(card);
@@ -788,7 +795,7 @@
     if ($('subject-filter').options[0]) $('subject-filter').options[0].textContent = t('allSubjects');
     let shown = 0;
     for (const card of cards.values()) {
-      const text = `${card.track.title} ${card.track.description}`.toLocaleLowerCase();
+      const text = `${card.track.title} ${card.track.description} ${card.track.tempoBpm === 180 ? t('running180') : ''}`.toLocaleLowerCase();
       const matches = terms.every(term => text.includes(term)) && (!subject || trackParts(card.track).subject === subject);
       card.element.hidden = !matches;
       if (matches) shown += 1;

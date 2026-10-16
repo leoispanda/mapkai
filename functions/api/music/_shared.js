@@ -156,8 +156,16 @@ export function publicTrack(track) {
   const verified = verifiedLyricsTiming.get(track);
   const lyricsTiming = verified && verified.lyrics === lyrics && verified.cues === track.lyricsTiming
     && verified.sha256 === track.lyricsTimingSha256 ? verified.cues.map(cue => ({ ...cue })) : [];
+  // A trusted private import declares the measured tempo for this recording.
+  // Reads validate that declaration, without measuring audio or inferring tempo
+  // from a generation request. Invalid optional metadata only hides the label.
+  const tempo = track.tempo;
+  const tempoBpm = tempo && typeof tempo === 'object' && !Array.isArray(tempo)
+    && Number.isFinite(tempo.bpm) && tempo.bpm >= 20 && tempo.bpm <= 300 && tempo.status === 'verified'
+    && typeof tempo.audioEtag === 'string' && /^[a-fA-F0-9-]{1,160}$/.test(tempo.audioEtag)
+    && tempo.audioEtag === track.audioEtag ? tempo.bpm : null;
   return { id: track.id, title: track.title, description: track.description, language: track.language,
-    lyrics, lyricsTiming,
+    lyrics, lyricsTiming, tempoBpm,
     aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,
     url: `/api/music/audio?id=${encodeURIComponent(track.id)}`, durationSeconds: null,
     createdAt: track.createdAt, filename: track.filename };

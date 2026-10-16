@@ -359,7 +359,29 @@ test('Music page subject selection waits for the public catalog and honors Pause
   }
 });
 
+test('only an API-verified 180 BPM value labels the current song and dropdown', async () => {
+  for (const [tempoBpm, visible] of [[180, true], [90, false], [null, false], ['180', false], [undefined, false]]) {
+    const h = harness(), play = h.dock.play(firstId);
+    h.request.resolve({ tracks: catalog.map(track => ({ ...track, tempoBpm, requestedTempoBpm: 180 })) });
+    assert.equal(await play, true); await flush();
+    assert.equal(h.control('tempo').hidden, !visible);
+    assert.equal(h.control('select').options[1].textContent.includes('180 BPM'), visible);
+    assert.equal(h.control('title').textContent, 'Song 1');
+    assert.equal(h.ownAudio.playCalls, 1);
+  }
+});
 
+test('Music page bridge preserves the 180 BPM label and clears it for the next 90 BPM song', async () => {
+  const h = harness({ pageLoaded: true });
+  h.pageState.tracks[0].tempoBpm = 180;
+  h.pageState.tracks[1].tempoBpm = 90;
+  assert.equal(await h.dock.play(firstId), true); await flush();
+  assert.equal(h.control('tempo').hidden, false);
+  assert.equal(h.control('tempo').textContent, '180 BPM · Running');
+  assert.equal(await h.dock.play(secondId), true); await flush();
+  assert.equal(h.control('tempo').hidden, true);
+  assert.equal(h.ownAudio.playCalls, 0);
+});
 
 
 test('new documents always open the compact bar, even after an old expanded session', () => {
