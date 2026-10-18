@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 49,
+  "nextNumber": 52,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -579,6 +579,42 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "048 Before I Guess - MapKAI - Languages - Pragmatics"
+    },
+    {
+      "id": "8119cee8-55f1-4374-b1a4-25f3c7522935",
+      "number": 49,
+      "numberLabel": "049",
+      "songName": "In Frame",
+      "subjectName": "Inter-disciplinary programmes and qualifications involving arts and humanities",
+      "conceptName": "Context",
+      "createdAt": "2026-10-18T13:47:20.323Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "049 In Frame - MapKAI - Inter-disciplinary programmes and qualifications involving arts and humanities - Context"
+    },
+    {
+      "id": "3ff31ae1-2e8d-4fc2-83c3-d8d5dd4f9e88",
+      "number": 50,
+      "numberLabel": "050",
+      "songName": "Find Its Place",
+      "subjectName": "Arts and humanities not elsewhere classified",
+      "conceptName": "Residual Classification",
+      "createdAt": "2026-10-18T13:47:20.323Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "050 Find Its Place - MapKAI - Arts and humanities not elsewhere classified - Residual Classification"
+    },
+    {
+      "id": "451bf81c-35ae-4fc1-b53d-8a6f8bb92725",
+      "number": 51,
+      "numberLabel": "051",
+      "songName": "Together",
+      "subjectName": "Social sciences, journalism and information not further defined",
+      "conceptName": "Correlation",
+      "createdAt": "2026-10-18T13:47:20.323Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "051 Together - MapKAI - Social sciences, journalism and information not further defined - Correlation"
     }
   ]
 }

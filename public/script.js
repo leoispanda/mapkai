@@ -18354,6 +18354,57 @@ const categoryGroupSongTracks = {
       "zh": "编曲请求：英文原声独立民谣",
       "en": "Requested arrangement: acoustic indie folk"
     }
+  },
+  "028": {
+    "id": "8119cee8-55f1-4374-b1a4-25f3c7522935",
+    "title": "049 In Frame - MapKAI - Inter-disciplinary programmes and qualifications involving arts and humanities - Context",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从一张照片的裁切和说明文字，连接视觉分析与历史资料核验，区分看见的细节与尚无证据的推断。",
+      "en": "A cropped photograph connects visual analysis with historical source inquiry; a careful caption separates observed details from uncertain interpretations."
+    },
+    "style": {
+      "zh": "编曲方向：空灵铃音流行；180步频目标",
+      "en": "Requested sound: airy bell-pop; 180-step cadence target"
+    }
+  },
+  "029": {
+    "id": "3ff31ae1-2e8d-4fc2-83c3-d8d5dd4f9e88",
+    "title": "050 Find Its Place - MapKAI - Arts and humanities not elsewhere classified - Residual Classification",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从整理抽屉连接艺术与人文学科分类：先读课程内容、核对领域定义，区分资料不足与已知内容不属于现有细类。",
+      "en": "Everyday sorting leads to residual field classification: inspect course content and definitions, distinguishing missing detail from a known field not covered by the list."
+    },
+    "style": {
+      "zh": "编曲方向：Afro-house；180步频目标",
+      "en": "Requested sound: melodic Afro-house; 180-step cadence target"
+    }
+  },
+  "030": {
+    "id": "451bf81c-35ae-4fc1-b53d-8a6f8bb92725",
+    "title": "051 Together - MapKAI - Social sciences, journalism and information not further defined - Correlation",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从雨伞、水洼与天气报道连接相关性与共同原因：记录可比较的观察及降雨，相关和条件比较本身都不能证明因果。",
+      "en": "Umbrellas and puddles introduce correlation and common causes: record comparable observations and rainfall, while retaining the limits of causal inference."
+    },
+    "style": {
+      "zh": "编曲方向：英文原声独立民谣；180步频目标",
+      "en": "Requested sound: English acoustic indie folk; 180-step cadence target"
+    }
   }
 };
 
