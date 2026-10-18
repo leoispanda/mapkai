@@ -5,6 +5,7 @@ import vm from 'node:vm';
 
 const dockSource = await readFile(new URL('../music/dock.js', import.meta.url), 'utf8');
 const syncSource = await readFile(new URL('../music/lyrics-sync.js', import.meta.url), 'utf8');
+const tempoSource = await readFile(new URL('../music/tempo.js', import.meta.url), 'utf8');
 const firstId = 'c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f';
 const secondId = 'ccb37c55-bae6-4f72-a80a-d1bc94e40ae0';
 const catalog = [firstId, secondId].map((id, index) => ({ id, title: `Song ${index + 1}`,
@@ -163,6 +164,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     },
   });
   vm.runInContext(syncSource, context, { filename: 'music/lyrics-sync.js' });
+  vm.runInContext(tempoSource, context, { filename: 'music/tempo.js' });
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
@@ -366,19 +368,20 @@ test('Music page subject selection waits for the public catalog and honors Pause
   }
 });
 
-test('only an API-verified 180 BPM value labels the current song and dropdown', async () => {
-  for (const [tempoBpm, visible] of [[180, true], [90, false], [null, false], ['180', false], [undefined, false]]) {
+test('only an API-verified 180 BPM value grants the running label; other verified BPM stays visible', async () => {
+  for (const [tempoBpm, visible] of [[180, true], [90, true], [null, false], ['180', false], [undefined, false]]) {
     const h = harness(), play = h.dock.play(firstId);
     h.request.resolve({ tracks: catalog.map(track => ({ ...track, tempoBpm, requestedTempoBpm: 180 })) });
     assert.equal(await play, true); await flush();
     assert.equal(h.control('tempo').hidden, !visible);
-    assert.equal(h.control('select').options[1].textContent.includes('180 BPM'), visible);
+    assert.equal(h.control('select').options[1].textContent.includes('180 BPM'), tempoBpm === 180);
+    assert.equal(h.control('tempo').textContent.includes('Running'), tempoBpm === 180);
     assert.equal(h.control('title').textContent, 'Song 1');
     assert.equal(h.ownAudio.playCalls, 1);
   }
 });
 
-test('Music page bridge preserves the 180 BPM label and clears it for the next 90 BPM song', async () => {
+test('Music page bridge preserves the 180 BPM running label then shows the next verified 90 BPM', async () => {
   const h = harness({ pageLoaded: true });
   h.pageState.tracks[0].tempoBpm = 180;
   h.pageState.tracks[1].tempoBpm = 90;
@@ -386,7 +389,34 @@ test('Music page bridge preserves the 180 BPM label and clears it for the next 9
   assert.equal(h.control('tempo').hidden, false);
   assert.equal(h.control('tempo').textContent, '180 BPM · Running');
   assert.equal(await h.dock.play(secondId), true); await flush();
+  assert.equal(h.control('tempo').hidden, false);
+  assert.equal(h.control('tempo').textContent, '90 BPM');
+  assert.equal(h.ownAudio.playCalls, 0);
+});
+
+test('dock and dropdown show the public estimate and uncertainty without granting a verified running label', async () => {
+  const h = harness(), play = h.dock.play(firstId);
+  const estimate = { bpmCandidates: [90.03, 180.01], confidence: 'strong', metricalAmbiguity: true,
+    sectionAmbiguity: false, near180: true, analyzedAt: '2026-10-18' };
+  h.request.resolve({ tracks: [{ ...catalog[0], tempoEstimate: estimate }, catalog[1]] });
+  assert.equal(await play, true); await flush();
+  assert.equal(h.control('tempo').hidden, false);
+  assert.equal(h.control('tempo').textContent, '≈90 / 180 BPM · Half/double-time uncertain');
+  assert.equal(h.control('tempo').dataset.estimated, 'true');
+  assert.match(h.control('select').options[1].textContent, /≈90 \/ 180 BPM · Half\/double-time uncertain/);
+  assert.doesNotMatch(h.control('select').options[1].textContent, /Running/);
+  assert.equal(h.control('body').hidden, true);
+  assert.equal(await h.dock.play(secondId), true); await flush();
   assert.equal(h.control('tempo').hidden, true);
+});
+
+test('Music bridge candidate updates refresh dropdown labels and section warnings', async () => {
+  const h = harness({ pageLoaded: true });
+  h.pageState.tracks[0].tempoEstimate = { bpmCandidates: [172, 344], confidence: 'review', metricalAmbiguity: true,
+    sectionAmbiguity: true, near180: false, analyzedAt: '2026-10-18' };
+  assert.equal(await h.dock.play(firstId), true); await flush();
+  assert.match(h.control('tempo').textContent, /Section review/);
+  assert.match(h.control('select').options[1].textContent, /Section review/);
   assert.equal(h.ownAudio.playCalls, 0);
 });
 

@@ -6,6 +6,16 @@ const clean = value => value.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u0
 
 async function listTracks(request, env) {
   const url = new URL(request.url);
+  if (url.searchParams.has('id')) {
+    const ids = url.searchParams.getAll('id');
+    if (ids.length !== 1 || !TRACK_ID_PATTERN.test(ids[0]) || url.searchParams.has('cursor')) {
+      throw inputError('This song link is invalid.');
+    }
+    // Subject cards need one metadata record, not a complete catalog listing.
+    // The same guarded, validated reader controls both discovery paths.
+    const track = await readTrack(musicBucket(env), ids[0]);
+    return track ? json({ track: publicTrack(track) }) : json({ error: 'Song not found.' }, 404);
+  }
   const cursor = url.searchParams.get('cursor') || undefined;
   if (cursor && (cursor.length > 2048 || /[\u0000-\u001f\u007f]/.test(cursor))) throw inputError('This song list link is invalid.');
   const bucket = musicBucket(env);

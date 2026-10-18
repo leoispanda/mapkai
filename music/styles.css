@@ -48,3 +48,13 @@ body[data-theme=dark] .form-status[data-kind=error]{background:#422d14;color:#f5
 /* Before a selection, keep empty progress and placeholders out of the library. */
 .playlist-player:not(.has-selection) .playlist-now,.playlist-player:not(.has-selection) .playlist-progress-row{display:none}
 @media(max-width:540px){.playlist-intro{display:none}.music-heading{padding-bottom:14px}.playlist-player{margin-bottom:18px}.library{padding-top:14px}}
+
+/* Estimates stay visible beside every song, including the narrow phone list. */
+.track-tempo[data-running=false]{border-color:var(--line);background:var(--surface-soft);color:var(--muted);font-weight:400;white-space:normal}
+.track-tempo[data-unknown=true]{border:0;background:transparent;color:var(--muted-soft);font-weight:400}
+.track-copy .track-tempo{display:block;margin:3px 0 0;padding:0;border:0;background:transparent;font-size:11px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+.track-copy .track-tempo[hidden]{display:none}
+.tempo-hint{margin:0 0 8px;color:var(--muted);font-size:11px;line-height:1.7}
+.library-actions{grid-template-columns:minmax(0,1fr) minmax(120px,190px) minmax(155px,190px) 120px}
+@media(max-width:900px){.library-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.library-actions .search{grid-column:1/-1}}
+@media(max-width:540px){.library-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.library-sort{grid-column:1/-1}.track-copy .track-tempo{font-size:10px}.tempo-hint{font-size:10px}}

@@ -348,6 +348,8 @@ html:has(body.music-dock-present) {
 
 #mapkai-music-dock .music-dock-tempo{flex:0 0 auto;padding:2px 6px;border:1px solid #bbd7c4;border-radius:5px;background:#edf7ef;color:#27633e;font-size:11px;font-weight:600;line-height:1.6;white-space:nowrap}
 #mapkai-music-dock .music-dock-tempo[hidden]{display:none}
+#mapkai-music-dock .music-dock-tempo[data-running=false]{display:inline-block;max-width:100%;margin:0 0 8px;border-color:var(--line,#e2e8f0);background:var(--surface-soft,#f8fafc);color:var(--muted,#64748b);font-weight:400;white-space:normal;overflow-wrap:anywhere}
+#mapkai-music-dock .music-dock-tempo[data-running=false][hidden]{display:none}
 
 /* Keep playback controls in one bar; song details are an explicit disclosure. */
 #mapkai-music-dock .music-dock-top { gap:10px; flex-wrap:nowrap; }

@@ -60,12 +60,27 @@
   });
   // Keep one body-mounted player alive while the main app changes learning routes.
   const musicStyle = document.createElement('link');
-  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=compact-player-20261016';
+  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=bpm-estimates-20261018';
   document.head.append(musicStyle);
   const startMusicDock = () => {
-    const launch = () => {
+    const launchDock = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=background-player-20261016'; document.head.append(script);
+      script.src = '/music/dock.js?v=bpm-estimates-20261018'; document.head.append(script);
+    };
+    const launch = () => {
+      const ready = () => {
+        window.dispatchEvent(new Event('mapkai:music-tempo-ready'));
+        launchDock();
+      };
+      if (globalThis.MapKAIMusicTempo) { ready(); return; }
+      const existing = document.querySelector('script[src^="/music/tempo.js"]');
+      const helper = existing || document.createElement('script');
+      helper.addEventListener('load', ready, { once: true });
+      helper.addEventListener('error', launchDock, { once: true });
+      if (!existing) {
+        helper.src = '/music/tempo.js?v=bpm-estimates-20261018';
+        document.head.append(helper);
+      }
     };
     if (globalThis.MapKAIMusicPreferences) { launch(); return; }
     // Music includes the same helper before its app; other pages load it here.

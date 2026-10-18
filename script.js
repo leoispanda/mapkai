@@ -18477,17 +18477,56 @@ function waitForCategorySongPlayer() {
   });
 }
 
+// Subject cards share the identity-bound public estimates with Music. A single
+// guarded metadata read per displayed recording avoids loading the whole library.
+const categorySongTempoRequests = new Map();
+
+function categorySongTempoText(track) {
+  const language = currentLanguage === "zh" ? "zh" : "en";
+  return (track && window.MapKAIMusicTempo?.describe(track, language).text)
+    || (language === "zh" ? "BPM暂不可用" : "BPM unavailable");
+}
+
+function refreshCategorySongTempos() {
+  if (!window.MapKAIMusicTempo) return;
+  document.querySelectorAll(".category-song-tempo[data-song-tempo-id]").forEach((element) => {
+    const id = element.dataset.songTempoId;
+    if (!/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/.test(id || "")) return;
+    element.textContent = currentLanguage === "zh" ? "正在载入BPM…" : "Loading BPM…";
+    if (!categorySongTempoRequests.has(id)) {
+      const request = fetch(`/api/music/tracks?id=${encodeURIComponent(id)}`, {
+        credentials: "same-origin", cache: "no-store", signal: AbortSignal.timeout(10000),
+      }).then(async (response) => {
+        if (!response.ok) throw new Error("Song tempo unavailable");
+        const data = await response.json();
+        if (data?.track?.id !== id) throw new Error("Song identity mismatch");
+        return data.track;
+      }).catch(() => null);
+      categorySongTempoRequests.set(id, request);
+    }
+    categorySongTempoRequests.get(id).then((track) => {
+      if (element.isConnected && element.dataset.songTempoId === id) {
+        element.textContent = categorySongTempoText(track);
+      }
+    });
+  });
+}
+
+window.addEventListener("mapkai:music-tempo-ready", refreshCategorySongTempos);
+
 function renderCategorySong(category) {
   const token = ++categorySongRenderToken;
   const card = document.getElementById("categorySong");
   const button = document.getElementById("categorySongPlay");
   const status = document.getElementById("categorySongStatus");
+  const tempo = document.getElementById("categorySongTempo");
   if (!card || !button || !status) return;
   card.hidden = true;
   button.onclick = null;
   button.disabled = false;
   button.removeAttribute("aria-busy");
   status.textContent = "";
+  if (tempo) { tempo.textContent = ""; delete tempo.dataset.songTempoId; }
   const song = Object.hasOwn(categorySongTracks, category.code) ? categorySongTracks[category.code] : null;
   if (!song) return;
   const language = currentLanguage === "zh" ? "zh" : "en";
@@ -18499,6 +18538,7 @@ function renderCategorySong(category) {
   document.getElementById("categorySongTitle").textContent = song.title;
   document.getElementById("categorySongCore").textContent = song.core[language];
   document.getElementById("categorySongMeta").textContent = `${song.meta?.[language] || labels.meta} · ${song.style[language]}`;
+  if (tempo) { tempo.dataset.songTempoId = song.id; tempo.textContent = categorySongTempoText({ id: song.id }); }
   button.textContent = labels.play;
   button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
   card.hidden = false;
@@ -18568,6 +18608,7 @@ function renderCategoryDetail(code) {
   });
 
   renderCategoryTree(category);
+  refreshCategorySongTempos();
 }
 
 function getCategoryDetailMetaText(category) {
@@ -18746,6 +18787,7 @@ function renderCategoryGroupSongs(category) {
         <h2 id="${titleId}">${escapeHtml(song.title)}</h2>
         <p class="category-song-core">${escapeHtml(song.core[language])}</p>
         <p class="category-song-meta">${escapeHtml(song.meta[language])} · ${escapeHtml(song.style[language])}</p>
+        <p class="category-song-tempo" data-song-tempo-id="${escapeHtml(song.id)}">${escapeHtml(categorySongTempoText({ id: song.id }))}</p>
       </div>
       <div class="category-song-action">
         <button class="button secondary" type="button" data-group-song="${group.code}" data-group-song-parent="${category.code}" aria-label="${escapeHtml(`${play} · ${song.title}`)}" aria-describedby="categoryGroupSongAI-${group.code} categoryGroupSongStatus-${group.code}">${play}</button>

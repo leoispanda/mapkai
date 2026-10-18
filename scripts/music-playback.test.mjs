@@ -4,6 +4,7 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 const appSource = await readFile(new URL('../music/app.js', import.meta.url), 'utf8');
+const tempoSource = await readFile(new URL('../music/tempo.js', import.meta.url), 'utf8');
 const html = await readFile(new URL('../music/index.html', import.meta.url), 'utf8');
 const catalog = [
   { id: '00000000-0000-4000-8000-000000000001', title: '001 First Question - MapKAI - Education - Feedback', subject: 'Education' },
@@ -100,6 +101,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     AbortController, setTimeout, clearTimeout, queueMicrotask,
     fetch: async () => { fetchCalls++; return { ok: true, json: async () => ({ tracks: structuredClone(currentSongs), nextCursor: null }) }; },
   });
+  vm.runInContext(tempoSource, context, { filename: 'music/tempo.js' });
   vm.runInContext(appSource, context, { filename: 'music/app.js' });
   window.addEventListener('mapkai:music-update', () => snapshots.push(window.MapKAIMusicPage.snapshot()));
   return {
@@ -167,6 +169,38 @@ test('search and subject filters find songs without pausing, seeking, or shrinki
   audio.finish(); await flush(); assert.equal(h.page.snapshot().track.id, catalog[1].id);
   h.input('song-search', ''); h.input('subject-filter', '', 'change');
   assert.equal(h.rows().filter(row => !row.hidden).length, 3); assert.equal(audio.paused, false);
+});
+
+test('BPM estimates and ambiguity appear on rows; near-180 filtering composes without changing playback', async () => {
+  const estimate = { bpmCandidates: [90, 180], confidence: 'strong', metricalAmbiguity: true,
+    sectionAmbiguity: false, near180: true, analyzedAt: '2026-10-18' };
+  const songs = catalog.map((track, index) => ({ ...track, tempoEstimate: index === 0 ? estimate : index === 1
+    ? { ...estimate, bpmCandidates: [95, 190], near180: false }
+    : { ...estimate, bpmCandidates: [172, 344], sectionAmbiguity: true, confidence: 'review' } }));
+  const h = harness({ songs }); await flush();
+  assert.equal(h.element('song-controls-1-tempo').textContent, '≈90 / 180 BPM · 半/倍速待定');
+  assert.match(h.element('song-controls-3-tempo').textContent, /分段待核/);
+  h.page.play(catalog[1].id); await flush(); const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 32;
+  h.input('tempo-filter', 'near180', 'change');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 1);
+  assert.equal(audio.paused, false); assert.equal(audio.currentTime, 32);
+  h.input('subject-filter', 'Arts', 'change');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 0);
+  h.input('subject-filter', 'Education', 'change'); h.input('song-search', '001');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 1);
+  audio.finish(); await flush(); assert.equal(h.page.snapshot().track.id, catalog[2].id);
+  assert.equal(h.page.snapshot().audio, audio); assert.equal(audio.paused, false);
+  h.click(h.element('clear-search'));
+  assert.equal(h.element('tempo-filter').value, ''); assert.equal(h.element('subject-filter').value, '');
+  assert.equal(h.element('song-search').value, ''); assert.equal(h.rows().filter(row => !row.hidden).length, 3);
+});
+
+test('missing or invalid BPM estimates stay unknown and creation targets do not pass the tempo filter', async () => {
+  const songs = catalog.map(track => ({ ...track, requestedTempoBpm: 180, tempoEstimate: { bpmCandidates: [180] } }));
+  const h = harness({ songs }); await flush();
+  assert.equal(h.element('song-controls-1-tempo').textContent, 'BPM 待检测');
+  h.input('tempo-filter', 'near180', 'change');
+  assert.equal(h.rows().filter(row => !row.hidden).length, 0);
 });
 
 test('selecting a one-result search retains the complete library queue', async () => {

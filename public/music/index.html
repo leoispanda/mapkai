@@ -9,11 +9,12 @@
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=music-tempo-20261016">
-  <script src="/site-shell.js?v=background-player-20261016" defer></script>
+  <link rel="stylesheet" href="/music/styles.css?v=bpm-estimates-20261018">
+  <script src="/site-shell.js?v=bpm-estimates-20261018" defer></script>
   <script src="/music/lyrics-sync.js?v=music-14" defer></script>
   <script src="/music/preferences.js?v=music-votes-20261014" defer></script>
-  <script src="/music/app.js?v=background-player-20261016" defer></script>
+  <script src="/music/tempo.js?v=bpm-estimates-20261018" defer></script>
+  <script src="/music/app.js?v=bpm-estimates-20261018" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -59,8 +60,10 @@
       <div class="library-actions">
         <label class="search"><span class="sr-only" data-i18n="searchLabel">搜索歌曲</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="song-search" type="search" maxlength="150" placeholder="编号、歌名、学科或概念…" data-placeholder="search"></label>
         <label class="library-filter"><span class="sr-only" data-i18n="subjectFilter">学科</span><select id="subject-filter" aria-label="学科" data-aria="subjectFilter"><option value="" data-i18n="allSubjects">全部学科</option></select></label>
+        <label class="library-filter"><span class="sr-only" data-i18n="tempoFilter">节奏筛选</span><select id="tempo-filter" aria-label="节奏筛选" data-aria="tempoFilter" aria-describedby="tempo-hint"><option value="" data-i18n="allTempos">全部节奏</option><option value="near180" data-i18n="near180">接近 180 步频</option></select></label>
         <label class="library-sort"><span class="sr-only" data-i18n="sortSongs">排序</span><select id="song-sort" aria-label="排序" data-aria="sortSongs"><option value="rank" data-i18n="sortRank">按喜好</option><option value="number" data-i18n="sortNumber">编号顺序</option><option value="newest" data-i18n="sortNewest">最新编号</option></select></label>
       </div>
+      <p id="tempo-hint" class="tempo-hint" data-i18n="tempoHint">≈ 表示检测估计；90/180 是半/倍速候选。筛选含约 90 BPM 的双倍脉冲，尚未实跑验证。</p>
       <p id="preferences-notice" class="preferences-notice" role="status">每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。</p>
       <p id="library-status" class="library-status" role="status" hidden></p>
       <div id="library-error" class="library-error" hidden><p data-i18n="libraryError">暂时无法载入歌单，请再试一次。</p><button id="retry-library" class="text-button" type="button" data-i18n="retry">重新载入</button></div>

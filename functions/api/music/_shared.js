@@ -1,5 +1,6 @@
 import { wrapR2Bucket, costResponse } from '../../_shared/cost-guard.js';
 import { hasValidFounderAccessCookie } from '../pdc/_shared.js';
+import { auditedTempoEstimate } from './_tempo-estimates.js';
 
 export const MAX_AUDIO_BYTES = 25 * 1024 * 1024;
 export const MAX_LYRICS_CHARS = 12000;
@@ -165,7 +166,7 @@ export function publicTrack(track) {
     && typeof tempo.audioEtag === 'string' && /^[a-fA-F0-9-]{1,160}$/.test(tempo.audioEtag)
     && tempo.audioEtag === track.audioEtag ? tempo.bpm : null;
   return { id: track.id, title: track.title, description: track.description, language: track.language,
-    lyrics, lyricsTiming, tempoBpm,
+    lyrics, lyricsTiming, tempoBpm, tempoEstimate: auditedTempoEstimate(track),
     aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,
     url: `/api/music/audio?id=${encodeURIComponent(track.id)}`, durationSeconds: null,
     createdAt: track.createdAt, filename: track.filename };

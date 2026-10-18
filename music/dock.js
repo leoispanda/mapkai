@@ -4,6 +4,7 @@
   if (document.getElementById('mapkai-music-dock')) return;
   const sync = globalThis.MapKAILyricsSync;
   const preferences = globalThis.MapKAIMusicPreferences;
+  const musicTempo = globalThis.MapKAIMusicTempo;
   const key = 'mapkaiMusicDock';
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
@@ -24,8 +25,8 @@
   dock.id = 'mapkai-music-dock'; dock.className = 'music-dock';
   // Only fixed, trusted markup; catalog titles and lyrics are inserted as plain text.
   dock.innerHTML = `<div class="music-dock-inner">
-    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">Music</a><div class="music-dock-track"><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span><span id="music-dock-tempo" class="music-dock-tempo" hidden></span></div><div class="music-dock-transport"><button id="music-dock-mini-prev" type="button"></button><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-mini-next" type="button"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div></div>
-    <div id="music-dock-body" class="music-dock-body"><p id="music-dock-detail-title" class="music-dock-detail-title"></p>
+    <div class="music-dock-top"><a class="music-dock-brand" href="/music/">Music</a><div class="music-dock-track"><span id="music-dock-title" class="music-dock-title" aria-live="polite"></span><span id="music-dock-ai" class="music-dock-ai"></span></div><div class="music-dock-transport"><button id="music-dock-mini-prev" type="button"></button><button id="music-dock-mini-play" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-mini-next" type="button"></button><button id="music-dock-collapse" type="button" aria-controls="music-dock-body"></button></div></div>
+    <div id="music-dock-body" class="music-dock-body"><p id="music-dock-detail-title" class="music-dock-detail-title"></p><span id="music-dock-tempo" class="music-dock-tempo" hidden></span>
       <div class="music-dock-controls"><button id="music-dock-prev" type="button"></button><button id="music-dock-play" class="primary" type="button" aria-describedby="music-dock-ai"></button><button id="music-dock-next" type="button"></button><select id="music-dock-select"></select><label class="music-dock-volume"><span id="music-dock-volume-label"></span><input id="music-dock-volume" type="range" min="0" max="100" step="1"></label></div>
       <div class="music-dock-progress"><span id="music-dock-elapsed">0:00</span><input id="music-dock-seek" type="range" min="0" max="1000" step="1" value="0" disabled><span id="music-dock-duration">—:—</span></div>
       <p id="music-dock-lyrics" class="music-dock-lyrics" role="region" tabindex="0"><span id="music-dock-line"></span></p>
@@ -107,12 +108,20 @@
     $('detail-title').textContent = title;
     $('title').title = title;
     $('ai').hidden = Boolean(track && !track.aiGenerated); $('ai').textContent = t('ai');
-    $('tempo').hidden = track?.tempoBpm !== 180; $('tempo').textContent = t('running180');
-    const signature = JSON.stringify(list.map(item => [item.id, item.title, item.tempoBpm]));
+    const tempo = musicTempo?.describe(track, document.documentElement.lang.startsWith('zh') ? 'zh' : 'en');
+    $('tempo').hidden = !tempo?.text || tempo.unknown;
+    $('tempo').textContent = tempo?.text || '';
+    $('tempo').dataset.estimated = String(tempo?.estimated === true);
+    $('tempo').dataset.running = String(track?.tempoBpm === 180);
+    const language = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+    const signature = JSON.stringify([language, list.map(item => [item.id, item.title, item.tempoBpm, item.tempoEstimate])]);
     if (signature !== optionSignature || !$('select').options.length) {
       optionSignature = signature; $('select').replaceChildren();
       const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = t('choose'); $('select').append(placeholder);
-      for (const item of list) { const option = document.createElement('option'); option.value = item.id; option.textContent = `${item.title}${item.tempoBpm === 180 ? ' · 180 BPM' : ''}`; $('select').append(option); }
+      for (const item of list) {
+        const option = document.createElement('option'), itemTempo = musicTempo?.describe(item, language);
+        option.value = item.id; option.textContent = `${item.title}${itemTempo && !itemTempo.unknown ? ` · ${itemTempo.text}` : ''}`; $('select').append(option);
+      }
     }
     $('select').options[0].textContent = t('choose'); $('select').value = track?.id || ''; $('select').disabled = !list.length;
     $('select').setAttribute('aria-label', t('choose'));
@@ -178,6 +187,7 @@
       return { id: raw.id, title: raw.title.slice(0, 120), url: url.href, lyrics,
         lyricsTiming: sync.validateTiming(lyrics, raw.lyricsTiming), aiGenerated: raw.aiGenerated === true,
         tempoBpm: Number.isFinite(raw.tempoBpm) && raw.tempoBpm >= 20 && raw.tempoBpm <= 300 ? raw.tempoBpm : null,
+        tempoEstimate: musicTempo?.sanitize(raw.tempoEstimate) || null,
         createdAt: raw.createdAt };
     } catch { return null; }
   }

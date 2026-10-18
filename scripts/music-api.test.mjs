@@ -10,6 +10,7 @@ import { AUDIO_TYPES, MAX_LYRICS_CHARS, MAX_LYRICS_TIMING_CUES, MAX_LYRICS_TIMIN
   MAX_TRACK_METADATA_BYTES, TRACK_SCHEMA, audioKey, metadataKey, normalizeLyrics, normalizeLyricsTiming, publicTrack,
   readTrack, safeTrack } from '../functions/api/music/_shared.js';
 import { COST_GUARD_KEY, COST_GUARD_LIMITS } from '../functions/_shared/cost-guard.js';
+import { auditedTempoEstimate } from '../functions/api/music/_tempo-estimates.js';
 
 const id = '11111111-1111-4111-8111-111111111111';
 const encoder = new TextEncoder();
@@ -271,7 +272,7 @@ test('a Dutch upload preserves its declaration and plays publicly beside existin
   assert.deepEqual(objects.get(metadataKey(id)).bytes, englishBefore);
   const catalog = await (await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env })).json();
   assert.deepEqual(catalog.tracks.find(item => item.id === id), {
-    id, title: english.title, description: english.description, language: 'en', lyrics: '', lyricsTiming: [], tempoBpm: null,
+    id, title: english.title, description: english.description, language: 'en', lyrics: '', lyricsTiming: [], tempoBpm: null, tempoEstimate: null,
     aiGenerated: null, generationProvider: null,
     url: `/api/music/audio?id=${id}`, durationSeconds: null, createdAt: english.createdAt, filename: english.filename,
   });
@@ -550,10 +551,132 @@ test('missing, invalid or unverified tempo hides its label without blocking cata
   }
 });
 
-test('ordinary uploads cannot declare a verified tempo or override its public projection', async () => {
+const auditedRecordings = [
+  // Exact recording identities and raw observed candidates, including the
+  // single-candidate 025/051 and the conflicting sections in 041.
+  { id: '5acde69b-c30b-4b39-8b76-b544737135f5', audioEtag: 'a3f5810939c4475d00072cb863fea676', fileSize: 2897721,
+    bpmCandidates: [95.9784, 191.9572], confidence: 'strong', near180: false, sectionAmbiguity: false },
+  { id: 'd2b9dd41-919b-4392-8488-5fabee707c40', audioEtag: 'be7e4ef3fc9c30fccb05f1d7ceac553a', fileSize: 2897721,
+    bpmCandidates: [90.0556, 180.0629], confidence: 'strong', near180: true, sectionAmbiguity: false },
+  { id: 'cbbdef58-3ec6-40f7-be79-0d7fc96f4c70', audioEtag: '37587d40e3c23cc3728d3761f8094fae', fileSize: 3377956,
+    bpmCandidates: [167.9501], confidence: 'moderate', near180: false, sectionAmbiguity: false },
+  { id: 'f371a248-b6c3-4ad9-89c5-467aa2886313', audioEtag: 'f4ec0145fda80131c2bd9f1d0cdc585d', fileSize: 2897721,
+    bpmCandidates: [85.9968, 172.0244], confidence: 'review', near180: false, sectionAmbiguity: true },
+  { id: '8119cee8-55f1-4374-b1a4-25f3c7522935', audioEtag: '89745f56d1519ac45b6722b3a96960f9', fileSize: 2897720,
+    bpmCandidates: [90.0076, 180.004], confidence: 'moderate', near180: true, sectionAmbiguity: false },
+  { id: '3ff31ae1-2e8d-4fc2-83c3-d8d5dd4f9e88', audioEtag: '688258e2d508a03d91ab029c8b71848e', fileSize: 2897720,
+    bpmCandidates: [89.9952, 179.983], confidence: 'strong', near180: true, sectionAmbiguity: false },
+  { id: '451bf81c-35ae-4fc1-b53d-8a6f8bb92725', audioEtag: '444cd129d6cc9d8e6a14809deafc1e49', fileSize: 2897720,
+    bpmCandidates: [179.9767], confidence: 'moderate', near180: true, sectionAmbiguity: false },
+  { id: '071f823e-75d8-4414-93d8-d6036cddb44f', audioEtag: '730193809381326d2132b27979c6efde', fileSize: 2897720,
+    bpmCandidates: [95.0041, 190.0549], confidence: 'moderate', near180: false, sectionAmbiguity: false },
+  { id: '4f8a674a-4647-470c-b591-fdf11d6e0886', audioEtag: 'adc870133b54a9047d4cbd45801420b9', fileSize: 2897720,
+    bpmCandidates: [90.0045, 179.9902], confidence: 'moderate', near180: true, sectionAmbiguity: false },
+  { id: '5107ad5f-8340-43b4-9feb-774beaaa0e2f', audioEtag: '1b5b557d72e371af58562b55ddb27e0d', fileSize: 2897720,
+    bpmCandidates: [90.0312, 180.0114], confidence: 'moderate', near180: true, sectionAmbiguity: false },
+];
+
+test('audited tempo estimates retain observed precision, ambiguity and the conservative near-180 selection', () => {
+  for (const recording of auditedRecordings) {
+    const estimate = auditedTempoEstimate(recording);
+    assert.deepEqual(estimate, { bpmCandidates: recording.bpmCandidates, confidence: recording.confidence,
+      metricalAmbiguity: true, sectionAmbiguity: recording.sectionAmbiguity,
+      near180: recording.near180, analyzedAt: '2026-10-18' });
+    // Projection is a fresh safe value; a caller cannot mutate the frozen map.
+    estimate.bpmCandidates[0] = 180;
+    assert.deepEqual(auditedTempoEstimate(recording).bpmCandidates, recording.bpmCandidates);
+    assert.equal(auditedTempoEstimate({ ...recording, id }), null);
+    assert.equal(auditedTempoEstimate({ ...recording, audioEtag: '0'.repeat(32) }), null);
+    assert.equal(auditedTempoEstimate({ ...recording, audioEtag: recording.audioEtag.toUpperCase() }), null);
+    assert.equal(auditedTempoEstimate({ ...recording, fileSize: recording.fileSize + 1 }), null);
+    assert.equal(auditedTempoEstimate({ ...recording, fileSize: String(recording.fileSize) }), null);
+    assert.equal(auditedTempoEstimate({ id: recording.id }), null);
+  }
+  assert.equal(auditedTempoEstimate(null), null);
+  assert.equal(auditedTempoEstimate({}), null);
+  assert.equal(auditedRecordings.filter(recording => recording.near180).length, 6);
+});
+
+test('catalog projects checked-in estimates without trusting stored fields or changing original metadata', async () => {
+  const { env, install, objects, calls } = fixture();
+  const before = new Map();
+  for (const recording of auditedRecordings) {
+    const { id: trackId, audioEtag, fileSize } = recording;
+    const stored = install(trackId, 'Audited recording', { audioEtag, fileSize,
+      tempoEstimate: { bpmCandidates: [180], confidence: 'strong', near180: true } });
+    const projection = publicTrack(stored);
+    assert.equal(projection.tempoBpm, null);
+    assert.deepEqual(projection.tempoEstimate, auditedTempoEstimate(recording));
+    assert.equal(Object.hasOwn(projection, 'audioEtag'), false);
+    assert.equal(Object.hasOwn(projection, 'fileSize'), false);
+    assert.equal(Object.hasOwn(projection, 'objectKey'), false);
+    before.set(metadataKey(trackId), objects.get(metadataKey(trackId)).bytes.slice());
+  }
+  const spoofed = install(id, 'Unknown recording', { tempoEstimate: {
+    bpmCandidates: [180], confidence: 'strong', metricalAmbiguity: false,
+    sectionAmbiguity: false, near180: true, analyzedAt: '2026-10-18',
+  } });
+  assert.equal(publicTrack(spoofed).tempoEstimate, null);
+  before.set(metadataKey(id), objects.get(metadataKey(id)).bytes.slice());
+  const response = await tracks({ request: new Request('https://www.mapkai.com/api/music/tracks'), env });
+  assert.equal(response.status, 200);
+  const published = (await response.json()).tracks;
+  for (const recording of auditedRecordings) {
+    const track = published.find(track => track.id === recording.id);
+    assert.deepEqual(track.tempoEstimate, auditedTempoEstimate(recording));
+    assert.equal(track.tempoBpm, null);
+  }
+  assert.equal(published.find(track => track.id === id).tempoEstimate, null);
+  for (const [key, bytes] of before) assert.deepEqual(objects.get(key).bytes, bytes);
+  assert.equal(calls.some(call => call.operation === 'put'), false);
+});
+
+test('single-track discovery reads one guarded metadata object and returns the same public estimate', async () => {
+  const { env, install, objects, calls, reservations } = fixture();
+  const recording = auditedRecordings[1];
+  const stored = install(recording.id, 'One audited recording', {
+    audioEtag: recording.audioEtag, fileSize: recording.fileSize,
+  });
+  const before = objects.get(metadataKey(recording.id)).bytes.slice();
+  const response = await tracks({ request: new Request(`https://www.mapkai.com/api/music/tracks?id=${recording.id}`), env });
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), { track: publicTrack(stored) });
+  assert.equal(reservations(), 1);
+  assert.deepEqual(calls.map(call => [call.operation, call.key]), [['get', metadataKey(recording.id)]]);
+  assert.deepEqual(objects.get(metadataKey(recording.id)).bytes, before);
+});
+
+test('invalid single-track links reject before R2 and missing or archived songs are not exposed', async () => {
+  for (const query of ['', 'not-a-uuid', `${id}&id=${id}`, `${id}&cursor=`, `${id}&cursor=50`]) {
+    const { env, calls, reservations } = fixture();
+    const response = await tracks({ request: new Request(`https://www.mapkai.com/api/music/tracks?id=${query}`), env });
+    assert.equal(response.status, 400);
+    assert.deepEqual(calls, []);
+    assert.equal(reservations(), 0);
+  }
+  for (const state of ['missing', 'archived', 'unsupported-language']) {
+    const { env, install, calls, reservations } = fixture();
+    if (state === 'archived') install(id, 'Archived song', { visibility: 'ARCHIVED' });
+    if (state === 'unsupported-language') install(id, 'Hidden language', { language: 'fr' });
+    const response = await tracks({ request: new Request(`https://www.mapkai.com/api/music/tracks?id=${id}`), env });
+    assert.equal(response.status, 404);
+    assert.deepEqual(await response.json(), { error: 'Song not found.' });
+    assert.equal(reservations(), 1);
+    assert.deepEqual(calls.map(call => [call.operation, call.key]), [['get', metadataKey(id)]]);
+  }
+  const { env, install, calls } = fixture({ costMissing: true });
+  install();
+  const response = await tracks({ request: new Request(`https://www.mapkai.com/api/music/tracks?id=${id}`), env });
+  assert.equal(response.status, 503);
+  assert.deepEqual(calls, []);
+});
+
+test('ordinary uploads cannot declare a verified tempo or override either public tempo projection', async () => {
   for (const [name, value] of [
     ['tempo', JSON.stringify({ bpm: 180, status: 'verified', audioEtag: '0'.repeat(32) })],
     ['tempoBpm', '180'], ['requestedTempoBpm', '180'],
+    ['tempoEstimate', JSON.stringify({ bpmCandidates: [180], near180: true })],
+    ['bpmCandidates', '[180]'], ['near180', 'true'],
   ]) {
     const { env, calls, reservations } = fixture();
     const request = await uploadRequest(env);

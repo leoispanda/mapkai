@@ -4190,6 +4190,7 @@ canvas {
 .category-song h2 { margin: 0 0 8px; font-size: clamp(1.15rem, 2.2vw, 1.4rem); line-height: 1.3; overflow-wrap: anywhere; }
 .category-song-core { margin: 0; font-size: 0.94rem; color: var(--ink); }
 .category-song-meta { margin: 8px 0 0; color: var(--muted); font-size: 0.78rem; }
+.category-song-tempo { margin: 6px 0 0; color: var(--muted); font-size: 0.78rem; overflow-wrap: anywhere; }
 .category-song-action { width: 190px; flex: 0 0 190px; }
 .category-song-action .button { min-height: 44px; width: 100%; }
 .category-song-action .button:disabled { cursor: wait; opacity: 0.65; }
