@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 52,
+  "nextNumber": 55,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -615,6 +615,45 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "051 Together - MapKAI - Social sciences, journalism and information not further defined - Correlation"
+    },
+    {
+      "id": "071f823e-75d8-4414-93d8-d6036cddb44f",
+      "number": 52,
+      "numberLabel": "052",
+      "songName": "Room in the Line",
+      "subjectName": "Social and behavioural sciences",
+      "canonicalSubjectName": "Social and behavioural sciences",
+      "conceptName": "Social Norms",
+      "createdAt": "2026-10-18T15:22:37.729Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "052 Room in the Line - MapKAI - Social and behavioural sciences - Social Norms"
+    },
+    {
+      "id": "4f8a674a-4647-470c-b591-fdf11d6e0886",
+      "number": 53,
+      "numberLabel": "053",
+      "songName": "Before You Share",
+      "subjectName": "Journalism and information",
+      "canonicalSubjectName": "Journalism and information",
+      "conceptName": "Source Verification",
+      "createdAt": "2026-10-18T15:22:37.729Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "053 Before You Share - MapKAI - Journalism and information - Source Verification"
+    },
+    {
+      "id": "5107ad5f-8340-43b4-9feb-774beaaa0e2f",
+      "number": 54,
+      "numberLabel": "054",
+      "songName": "Same Stop",
+      "subjectName": "Interdisciplinary social sciences, journalism and information",
+      "canonicalSubjectName": "Inter-disciplinary programmes and qualifications involving social sciences, journalism and information",
+      "conceptName": "Triangulation",
+      "createdAt": "2026-10-18T15:22:37.729Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "054 Same Stop - MapKAI - Interdisciplinary social sciences, journalism and information - Triangulation"
     }
   ]
 }

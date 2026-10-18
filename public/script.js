@@ -18405,6 +18405,57 @@ const categoryGroupSongTracks = {
       "zh": "编曲方向：英文原声独立民谣；180步频目标",
       "en": "Requested sound: English acoustic indie folk; 180-step cadence target"
     }
+  },
+  "031": {
+    "id": "071f823e-75d8-4414-93d8-d6036cddb44f",
+    "title": "052 Room in the Line - MapKAI - Social and behavioural sciences - Social Norms",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从面包店排队理解社会规范：分别询问预期行为、预期赞同与个人看法，保留因果解释与价值判断的边界。",
+      "en": "A bakery queue introduces social norms: distinguish expected behaviour, expected approval and personal views, while keeping causal and moral limits clear."
+    },
+    "style": {
+      "zh": "编曲请求：明亮孟菲斯风格嘻哈；180步频目标",
+      "en": "Requested sound: bright Memphis-inspired hip-hop; 180-step cadence target"
+    }
+  },
+  "032": {
+    "id": "4f8a674a-4647-470c-b591-fdf11d6e0886",
+    "title": "053 Before You Share - MapKAI - Journalism and information - Source Verification",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从图书馆停业截图学习信源核验：追查完整通知、核对分馆与日期、寻找转发之外的证据，说明确认时间和未核实之处。",
+      "en": "A library-closure screenshot introduces source verification: trace the full notice, check branch and date, seek evidence beyond copies, and state when an answer was confirmed."
+    },
+    "style": {
+      "zh": "编曲请求：空灵铃音流行；180步频目标",
+      "en": "Requested sound: ethereal bell-pop; 180-step cadence target"
+    }
+  },
+  "038": {
+    "id": "5107ad5f-8340-43b4-9feb-774beaaa0e2f",
+    "title": "054 Same Stop - MapKAI - Interdisciplinary social sciences, journalism and information - Triangulation",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 2:00",
+      "en": "English · 2:00"
+    },
+    "core": {
+      "zh": "从同一趟公交的不同时间记录理解三角互证：比较观察、访谈与日记，核对起止定义；站台等待和出门总时长要分开，多种方法也可能共享错误。",
+      "en": "A bus-trip discussion introduces triangulation: compare observation, interview and diary for the same trip, check interval definitions, and retain the possibility of shared errors."
+    },
+    "style": {
+      "zh": "编曲请求：古典交响跨界；180步频目标",
+      "en": "Requested sound: classical symphonic crossover; 180-step cadence target"
+    }
   }
 };
 
