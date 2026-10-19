@@ -18773,6 +18773,77 @@ function renderInlineLensStoryArticle(story) {
     </article>`;
 }
 
+const ownerCulturalSongs = [
+  {
+    "id": "82525547-93c9-4477-b85d-c1120e29e112",
+    "title": "055 Carry the Light (Rock 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "cb685be8-40cc-40cb-b86e-e8cf0c564f55",
+    "title": "056 Carry the Light (Rock 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "c58a7409-96d7-4e6c-80d4-e455c41e7387",
+    "title": "057 Carry the Light (Folk 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "a5fae2ac-c8f5-452e-8085-67da52598636",
+    "title": "058 Carry the Light (Folk 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "bc8fd5ba-7856-44b0-9bbd-632306897524",
+    "title": "059 Lowland Lights (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "6e667622-100f-4b9b-8165-f75d0e90e3bb",
+    "title": "060 Lowland Lights (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "16a889d4-0214-41c3-99f4-acab6f2d939d",
+    "title": "061 Your Turn (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  },
+  {
+    "id": "b40a2738-3f42-4ef5-a181-7fafaf765574",
+    "title": "062 Your Turn (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+  }
+];
+
+function renderOwnerCulturalSongs(category) {
+  if (category.code !== "02") return "";
+  const zh = currentLanguage === "zh";
+  return `<section class="category-song" aria-labelledby="ownerCulturalSongsTitle">
+    <div class="category-song-copy">
+      <p class="category-song-label">${zh ? "更多主题歌曲 · AI 生成" : "More themed songs · AI-generated"}</p>
+      <h2 id="ownerCulturalSongsTitle">${zh ? "荷兰文化人物" : "Dutch Cultural Figures"}</h2>
+      <p>${zh ? "8 个独立英文录音；完整原始歌词可在音乐库查看。歌曲中的历史人物声音为艺术想象。" : "Eight distinct English recordings. Complete original lyrics are available in Music. Historical voices are imagined for the songs."}</p>
+      <ol>${ownerCulturalSongs.map(song => `<li><button type="button" class="button secondary" data-owner-cultural-song="${song.id}">${escapeHtml(song.title)}</button></li>`).join("")}</ol>
+      <p role="status" class="category-song-status"></p>
+      <a href="/music/">${zh ? "打开音乐库与完整歌词" : "Open Music and complete lyrics"}</a>
+    </div>
+  </section>`;
+}
+
+async function playOwnerCulturalSong(button) {
+  const song = ownerCulturalSongs.find(item => item.id === button.dataset.ownerCulturalSong);
+  if (!song || button.disabled || normalizeRoute(window.location.pathname) !== "/categories/02") return;
+  const status = button.closest(".category-song").querySelector('[role="status"]');
+  const zh = currentLanguage === "zh";
+  button.disabled = true;
+  button.setAttribute("aria-busy", "true");
+  status.textContent = zh ? "正在载入…" : "Loading…";
+  try {
+    const player = await waitForCategorySongPlayer();
+    if (!button.isConnected || normalizeRoute(window.location.pathname) !== "/categories/02") return;
+    if (await player.play(song.id) !== true) throw new Error("Song unavailable");
+    status.textContent = zh ? "正在播放；可在音乐播放器中调整。" : "Playing; use the music player to pause or seek.";
+  } catch {
+    if (button.isConnected) status.textContent = zh ? "暂时无法播放，请重试。" : "Could not play this song. Please retry.";
+  } finally {
+    button.disabled = false;
+    button.removeAttribute("aria-busy");
+  }
+}
+
 function renderCategoryGroupSongs(category) {
   const language = currentLanguage === "zh" ? "zh" : "en";
   const label = language === "zh" ? "从一首歌走近这个子领域" : "A song for this subfield";
@@ -18862,6 +18933,7 @@ function renderCategoryTree(category) {
       </div>
     </div>` : ""}
     ${renderCategoryGroupSongs(category)}
+    ${renderOwnerCulturalSongs(category)}
     ${storyArticle}
     </div>`;
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
@@ -21800,6 +21872,12 @@ document.addEventListener("click", (event) => {
   if (founderExit) {
     event.preventDefault();
     exitFounderMode();
+    return;
+  }
+  const ownerCulturalSongButton = event.target.closest("[data-owner-cultural-song]");
+  if (ownerCulturalSongButton) {
+    event.preventDefault();
+    playOwnerCulturalSong(ownerCulturalSongButton);
     return;
   }
   const groupSongButton = event.target.closest("[data-group-song]");

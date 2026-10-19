@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 55,
+  "nextNumber": 63,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -654,6 +654,110 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "054 Same Stop - MapKAI - Interdisciplinary social sciences, journalism and information - Triangulation"
+    },
+    {
+      "id": "82525547-93c9-4477-b85d-c1120e29e112",
+      "number": 55,
+      "songName": "Carry the Light (Rock 1)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "055 Carry the Light (Rock 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "055",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "cb685be8-40cc-40cb-b86e-e8cf0c564f55",
+      "number": 56,
+      "songName": "Carry the Light (Rock 2)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "056 Carry the Light (Rock 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "056",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "c58a7409-96d7-4e6c-80d4-e455c41e7387",
+      "number": 57,
+      "songName": "Carry the Light (Folk 1)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "057 Carry the Light (Folk 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "057",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "a5fae2ac-c8f5-452e-8085-67da52598636",
+      "number": 58,
+      "songName": "Carry the Light (Folk 2)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "058 Carry the Light (Folk 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "058",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "bc8fd5ba-7856-44b0-9bbd-632306897524",
+      "number": 59,
+      "songName": "Lowland Lights (Rap 1)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "059 Lowland Lights (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "059",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "6e667622-100f-4b9b-8165-f75d0e90e3bb",
+      "number": 60,
+      "songName": "Lowland Lights (Rap 2)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "060 Lowland Lights (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "060",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "16a889d4-0214-41c3-99f4-acab6f2d939d",
+      "number": 61,
+      "songName": "Your Turn (Rap 1)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "061 Your Turn (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "061",
+      "language": "en",
+      "brandName": "MapKAI"
+    },
+    {
+      "id": "b40a2738-3f42-4ef5-a181-7fafaf765574",
+      "number": 62,
+      "songName": "Your Turn (Rap 2)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-19T20:14:13.215Z",
+      "title": "062 Your Turn (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "numberLabel": "062",
+      "language": "en",
+      "brandName": "MapKAI"
     }
   ]
 }
