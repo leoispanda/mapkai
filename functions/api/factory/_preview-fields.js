@@ -13,6 +13,8 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0214': 'Handicrafts',
   '0215': 'Music and performing arts',
   '0221': 'Religion and theology',
+  '0222': 'History and archaeology',
+  '0223': 'Philosophy and ethics',
   '0311': 'Economics',
   '0313': 'Psychology',
   '0533': 'Physics',
