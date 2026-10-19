@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "mapkai-continuation-control-verification.v1",
+  "at": "2026-10-19T06:22:27.863228+00:00",
+  "tests": 9,
+  "testsStatus": "PASS",
+  "claimOnlyAtWholeHour": true,
+  "existingContinuationUsesHourlyGate": false,
+  "newSubjectsAllowed": false,
+  "newNotebookSubmissions": 0,
+  "backgroundServiceStarted": false,
+  "automationId": "mapkai-7",
+  "automationStatus": "PAUSED",
+  "promptUpdatedVia": "automation_update",
+  "manualGrantMustCloseAfterBothDeliveries": true,
+  "manualGrantState": "COMPLETE",
+  "realContinuationAfterCompletion": "DENIED",
+  "delivered": 2,
+  "uploaded": 2,
+  "publicPreviews": 2,
+  "newSubjects": 0,
+  "testsAfterGrantClosure": "9 PASS",
+  "verifiedAt": "2026-10-19T06:30:14.124782+00:00"
+}

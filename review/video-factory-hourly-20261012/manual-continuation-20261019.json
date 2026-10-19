@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "mapkai-manual-video-continuation.v1",
+  "state": "COMPLETE",
+  "authorizationSource": "DIRECT_HUMAN_MESSAGE_IN_CURRENT_CHAT",
+  "humanInstruction": "那你先把流程改好，整点只负责领取任务，结果完成就立即续接，不要再空等。先把已经生成的两部核验上传，暂时不要启动新学科。",
+  "ownerThreadId": "01a12c71-52dd-7273-90ef-bab05f5fc592",
+  "scope": "CURRENT_MANUAL_TURN_ONLY",
+  "currentManualTurnOnly": true,
+  "claimNewSubjects": false,
+  "generate": false,
+  "resubmitOriginal": false,
+  "automationMayResume": false,
+  "automaticRenewal": false,
+  "allowedActions": [
+    "download",
+    "verify",
+    "upload",
+    "marked_public_preview"
+  ],
+  "allowedAttempts": [
+    {
+      "code": "0222",
+      "title": "History and archaeology",
+      "slug": "0222-history-and-archaeology",
+      "requestId": "0222-3e9ff072-ba2a-400e-b04a-4136a679f426",
+      "payloadSha256": "d58c2238a52b95a3ac3a1a7232bfdf7cb5734fc8fdb92cfe4c99da0726641e2a"
+    },
+    {
+      "code": "0223",
+      "title": "Philosophy and ethics",
+      "slug": "0223-philosophy-and-ethics",
+      "requestId": "0223-af42a19f-8464-4d51-ae85-0f57558d4063",
+      "payloadSha256": "89e8274e815645adb59afee218c70880cbdbca8c25e1dfdff9f4e1f8066b344c"
+    }
+  ],
+  "retainedGuards": [
+    "authentic original and frozen source bindings",
+    "shared resource ownership",
+    "live D1 budget and remote hash readback",
+    "private authentication",
+    "marked preview and human review boundaries"
+  ],
+  "supersedesOnly": "The expired overnight window does not block these exact existing attempts under this new direct human instruction. It remains expired for every other subject, generation, schedule and future run.",
+  "completedAt": "2026-10-19T06:29:52.035695+00:00",
+  "deliveryReceipts": [
+    {
+      "code": "0222",
+      "url": "https://www.mapkai.com/fields/0222-history-and-archaeology?lang=en",
+      "receipt": "review/video-factory-hourly-20261012/public-preview-0222-history-and-archaeology.json",
+      "rawSha256": "1707db905675e45d050a059ff79a3fbc82a39414bfda8572df784d4e5913e14c",
+      "rawBytes": 22180931
+    },
+    {
+      "code": "0223",
+      "url": "https://www.mapkai.com/fields/0223-philosophy-and-ethics?lang=en",
+      "receipt": "review/video-factory-hourly-20261012/public-preview-0223-philosophy-and-ethics.json",
+      "rawSha256": "4ec972900cfd4858323a35168c594fef8905268845a66117c2110bdd08eddaaf",
+      "rawBytes": 25508732
+    }
+  ],
+  "productionAllowed": false,
+  "newSubjectsAllowed": false
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "mapkai-video-bounded-window.v1",
+  "state": "SCHEDULED",
+  "requestedAt": "2026-10-18T18:42:21.796928+00:00",
+  "humanInstructions": [
+    "今晚继续开始执行每个小时 生成2个视频 并且上传",
+    "一直到明早7点"
+  ],
+  "timezone": "Europe/Amsterdam",
+  "startAt": "2026-10-18T19:00:00Z",
+  "startAtLocal": "2026-10-18T21:00:00+02:00",
+  "endAtExclusive": "2026-10-19T05:00:00Z",
+  "endAtLocal": "2026-10-19T07:00:00+02:00",
+  "hourlyTarget": 2,
+  "maxNewNotebookSubmissionsPerLocalHour": 2,
+  "maxDailyActualSubmissions": 18,
+  "automaticRenewal": false,
+  "resumeExistingFirst": "0214",
+  "newNotebookSubmissionsNow": 0,
+  "newUploadsNow": 0,
+  "oldScheduleBackup": ".workspace-backups/video-overnight-20261018/schedule.json.before-resume",
+  "automationId": "mapkai-7",
+  "verifiedAt": "2026-10-18T18:43:02.021693+00:00",
+  "schedulerRule": "FREQ=HOURLY;INTERVAL=1;BYMINUTE=0;BYSECOND=0;UNTIL=20261019T050000Z",
+  "schedulerStatus": "ACTIVE",
+  "roundSubjects20261018T2100": [
+    "0214",
+    "0215"
+  ],
+  "status": "EXPIRED",
+  "stoppedAt": "2026-10-19T05:06:01.998072+00:00",
+  "automationStatus": "PAUSED",
+  "handoff": "review/video-factory-hourly-20261012/overnight-stop-20261019-0704.json"
+}
