@@ -23,6 +23,12 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0314': 'Sociology and cultural studies',
   '0321': 'Journalism and reporting',
   '0322': 'Library, information and archival studies',
+  '0411': 'Accounting and taxation',
+  '0412': 'Finance, banking and insurance',
+  '0413': 'Management and administration',
+  '0414': 'Marketing and advertising',
+  '0415': 'Secretarial and office work',
+  '0416': 'Wholesale and retail sales',
   '0533': 'Physics',
   '0542': 'Statistics',
 });
