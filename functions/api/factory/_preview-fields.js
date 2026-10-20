@@ -29,6 +29,12 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0414': 'Marketing and advertising',
   '0415': 'Secretarial and office work',
   '0416': 'Wholesale and retail sales',
+  '0417': 'Work skills',
+  '0421': 'Law',
+  '0511': 'Biology',
+  '0512': 'Biochemistry',
+  '0521': 'Environmental sciences',
+  '0522': 'Natural environments and wildlife',
   '0533': 'Physics',
   '0542': 'Statistics',
 });
