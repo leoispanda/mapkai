@@ -104,9 +104,9 @@ test('Statistics preview preserves all major fields and exposes no private revie
   assert.equal(video.status, 206);
   assert.equal(video.headers.get('Content-Range'), `bytes 0-7/${target.fileSize}`);
   assert.deepEqual(Buffer.from(await video.arrayBuffer()), mp4.subarray(0, 8));
-  const otherSubfield = privateCatalog(['0542']);
-  otherSubfield.items[0] = { ...otherSubfield.items[0], fieldId:'0541', fieldName:'Mathematics' };
-  assert.throws(() => buildPublicPreviewCatalog(otherSubfield), /non-canonical/);
+  const unregisteredSubfield = privateCatalog(['0542']);
+  unregisteredSubfield.items[0] = { ...unregisteredSubfield.items[0], fieldId:'9999', fieldName:'Unregistered field' };
+  assert.throws(() => buildPublicPreviewCatalog(unregisteredSubfield), /non-canonical/);
 });
 
 test('Personal skills preview adds only its canonical identity and keeps review material private', async () => {

@@ -35,8 +35,12 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0512': 'Biochemistry',
   '0521': 'Environmental sciences',
   '0522': 'Natural environments and wildlife',
+  '0531': 'Chemistry',
+  '0532': 'Earth sciences',
   '0533': 'Physics',
+  '0541': 'Mathematics',
   '0542': 'Statistics',
+  '0611': 'Computer use',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
