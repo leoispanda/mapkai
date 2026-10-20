@@ -21,6 +21,8 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0312': 'Political sciences and civics',
   '0313': 'Psychology',
   '0314': 'Sociology and cultural studies',
+  '0321': 'Journalism and reporting',
+  '0322': 'Library, information and archival studies',
   '0533': 'Physics',
   '0542': 'Statistics',
 });
