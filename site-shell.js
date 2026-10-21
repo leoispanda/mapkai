@@ -64,8 +64,21 @@
   document.head.append(musicStyle);
   const startMusicDock = () => {
     const launchDock = () => {
+      if (!globalThis.MapKAIMusicListening && !document.querySelector('script[src^="/music/listening.js"]')) {
+        const helper = document.createElement('script');
+        helper.src = '/music/listening.js?v=listening-20261021';
+        helper.onload = launchDock; helper.onerror = mountDock; document.head.append(helper); return;
+      }
+      if (!globalThis.MapKAIMusicListening) {
+        const helper = document.querySelector('script[src^="/music/listening.js"]');
+        helper.addEventListener('load', mountDock, { once: true });
+        helper.addEventListener('error', mountDock, { once: true }); return;
+      }
+      mountDock();
+    };
+    const mountDock = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=bpm-estimates-20261018'; document.head.append(script);
+      script.src = '/music/dock.js?v=listening-20261021'; document.head.append(script);
     };
     const launch = () => {
       const ready = () => {

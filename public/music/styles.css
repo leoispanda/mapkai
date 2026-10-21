@@ -58,3 +58,5 @@ body[data-theme=dark] .form-status[data-kind=error]{background:#422d14;color:#f5
 .library-actions{grid-template-columns:minmax(0,1fr) minmax(120px,190px) minmax(155px,190px) 120px}
 @media(max-width:900px){.library-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.library-actions .search{grid-column:1/-1}}
 @media(max-width:540px){.library-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.library-sort{grid-column:1/-1}.track-copy .track-tempo{font-size:10px}.tempo-hint{font-size:10px}}
+
+.track-listening{margin:-5px 18px 10px 85px;font-size:11px;line-height:1.6;color:var(--muted);font-variant-numeric:tabular-nums}.track-listening-details{margin-top:8px;font-size:12px;line-height:1.8;color:var(--muted);overflow-wrap:anywhere}@media(max-width:760px){.track-listening{margin-left:18px}}

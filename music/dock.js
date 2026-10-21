@@ -46,6 +46,7 @@
   let originalLyricTrackId = null, originalLyricSource = null;
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
+  const listeningTracker = globalThis.MapKAIMusicListening?.createTracker(ownAudio);
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const page = () => window.MapKAIMusicPage;
   const state = () => page()?.snapshot() || { tracks, track: selected, audio: selected ? ownAudio : null, loaded, libraryFailed, pending, failed, complete, volume, playbackIntent, advancing };
@@ -222,6 +223,7 @@
   }
 
   function select(track, seconds = null, immediatePlay = false) {
+    listeningTracker?.select(track.id, { restart: true, restore: seconds !== null });
     sequence++;
     if (!immediatePlay) { clearPlaybackIntent(); ownAudio.pause(); }
     selected = track; pending = false; failed = false; complete = false;
@@ -241,7 +243,7 @@
   async function start(automaticRestore = false) {
     if (!selected) return false;
     if (ownAudio.error) ownAudio.load();
-    if (ownAudio.ended && ownAudio.readyState > 0) ownAudio.currentTime = 0;
+    if (ownAudio.ended && ownAudio.readyState > 0) { listeningTracker?.select(selected.id, { restart: true }); ownAudio.currentTime = 0; }
     const request = ++sequence; pending = true; failed = false; complete = false; playbackIntent = true;
     acquireAudioSession();
     try {

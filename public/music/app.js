@@ -4,7 +4,8 @@
   const copy = {
     zh: {
       back: '← 返回 Toolbox', intro: '选一首，接着听。按编号、歌名或学科找歌。', aiNotice: '所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。', aiGenerated: 'AI 生成', running180: '180 BPM · 跑步', library: '歌曲列表', searchLabel: '搜索歌曲', search: '编号、歌名、学科或概念…', manage: '管理歌曲',
-      like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
+      like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，可按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
+      sortListens: '收听最多', sortCompletion: '听完率最高', sortSkips: '切歌最多', listeningSummary: '收听 {listens} · 听完 {completion} · 切歌 {skip}', listeningDetails: '开始 {starts} 次 · 有效收听 {listens} 次 · 听完 {completions} 次 · 主动切歌 {skips} 次（早切 {earlySkips} 次）', listeningNotice: '全站累计：听满 30 秒记一次收听，短歌按一半时长；实际听过九成记听完。听完率、切歌率以开始次数为分母；暂停和离开页面不算切歌。统计从功能上线后开始。', listeningLoading: '正在载入收听统计…', listeningUnavailable: '收听统计暂不可用；已有数字可能不是最新。',
       lyrics: '歌词', originalLyrics: '完整原始歌词', originalLyricsLabel: '{title} 的完整原始歌词', lyricsLabel: '{title} 的歌词', lyricsUnavailable: '这首歌没有同步歌词。', songLyrics: '原始歌词（可选）', lyricsPlaceholder: '粘贴这首歌实际使用的歌词，保留段落和换行。', lyricsLimit: '歌词最多 12000 个字符。',
       playlistHeading: '一起听 MapKAI', playlistIntro: '默认连续播放，到歌单末尾自动从头继续。', playlistReady: '选一首喜欢的歌，或播放全部', playAll: '播放全部', pauseAll: '暂停', resumeAll: '继续播放', replayAll: '重新播放全部', cancelAll: '取消载入', previousSong: '上一首', nextSong: '下一首', playlistPosition: '第 {position} / {count} 首', seekLabel: '{title} 的播放进度', playlistSeekLabel: '当前歌曲的播放进度', playbackTime: '{current} / {total}', volumeLabel: '音量',
       libraryTools: '创作与管理', continuousPlay: '连续播放', continuousHint: '播完一首自动接下一首，歌单循环播放', subjectFilter: '学科', allSubjects: '全部学科', tempoFilter: '节奏筛选', allTempos: '全部节奏', near180: '接近 180 步频', tempoHint: '≈ 表示检测估计；90/180 是半/倍速候选。筛选含约 90 BPM 的双倍脉冲，尚未实跑验证。', sortSongs: '排序', sortRank: '按喜好', sortNumber: '编号顺序', sortNewest: '最新编号', songDetails: '歌曲详情', detailsLabel: '{title} 的歌词与详情', fullTitle: '完整名称', playlistOptions: '歌词与设置', continuousOff: '连续播放已关闭，当前歌曲结束后停止。',
@@ -15,7 +16,8 @@
     },
     en: {
       back: '← Back to Toolbox', intro: 'Pick a song and keep listening. Find it by number, title, or subject.', aiNotice: 'AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.', aiGenerated: 'AI-generated', running180: '180 BPM · Running', library: 'Song list', searchLabel: 'Search songs', search: 'Number, title, subject, or concept…', manage: 'Manage songs',
-      like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; ranking is shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
+      like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; vote totals are shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
+      sortListens: 'Most listened', sortCompletion: 'Highest completion rate', sortSkips: 'Most skipped', listeningSummary: '{listens} listens · {completion} completed · {skip} skipped', listeningDetails: '{starts} starts · {listens} qualified listens · {completions} completions · {skips} manual skips ({earlySkips} early)', listeningNotice: 'Shared totals: a listen means 30 seconds played, or half a short song; completion means 90% actually heard. Rates use starts as the denominator. Pauses and leaving the page are not skips. Tracking begins with this release.', listeningLoading: 'Loading listening statistics…', listeningUnavailable: 'Listening statistics are unavailable; displayed counts may be out of date.',
       lyrics: 'Lyrics', originalLyrics: 'Original lyrics', originalLyricsLabel: 'Original lyrics for {title}', lyricsLabel: 'Lyrics for {title}', lyricsUnavailable: 'Synchronized lyrics are unavailable for this song.', songLyrics: 'Original song lyrics (optional)', lyricsPlaceholder: 'Paste the lyrics actually used in this song, keeping verse breaks and line breaks.', lyricsLimit: 'The lyrics can have up to 12000 characters.',
       playlistHeading: 'Listen with MapKAI', playlistIntro: 'Continuous play is on: the queue repeats after its last song.', playlistReady: 'Choose a song, or play them all', playAll: 'Play all', pauseAll: 'Pause', resumeAll: 'Resume', replayAll: 'Replay all', cancelAll: 'Cancel loading', previousSong: 'Previous', nextSong: 'Next', playlistPosition: 'Song {position} of {count}', seekLabel: 'Playback progress for {title}', playlistSeekLabel: 'Current song playback progress', playbackTime: '{current} of {total}', volumeLabel: 'Volume',
       libraryTools: 'Create & manage', continuousPlay: 'Continuous play', continuousHint: 'Automatically play the next song and repeat the queue', subjectFilter: 'Subject', allSubjects: 'All subjects', tempoFilter: 'Tempo filter', allTempos: 'All tempos', near180: 'Near 180 steps/min', tempoHint: '≈ means an estimate; 90/180 are half/double-time candidates. The filter includes doubled pulses near 90 BPM; running suitability is untested.', sortSongs: 'Sort', sortRank: 'By votes', sortNumber: 'Number order', sortNewest: 'Newest number', songDetails: 'Song details', detailsLabel: 'Lyrics and details for {title}', fullTitle: 'Full title', playlistOptions: 'Lyrics & settings', continuousOff: 'Continuous play is off. Playback stops after this song.',
@@ -32,6 +34,7 @@
   const lyricsSync = globalThis.MapKAILyricsSync;
   const musicPreferences = globalThis.MapKAIMusicPreferences;
   const musicTempo = globalThis.MapKAIMusicTempo;
+  const listening = globalThis.MapKAIMusicListening;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const cards = new Map();
   // Keep one media element for the entire queue. Mobile browsers can retain
@@ -41,6 +44,7 @@
   playbackAudio.hidden = true;
   playbackAudio.id = 'music-playback-audio';
   $('playlist-player').append(playbackAudio);
+  const listeningTracker = listening?.createTracker(playbackAudio);
   const featuredRank = new Map([
     ['c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f', -1],
     ['ccb37c55-bae6-4f72-a80a-d1bc94e40ae0', 0],
@@ -206,6 +210,7 @@
     document.querySelector('meta[name=description]').content = next === 'zh' ? 'MapKAI Music。按编号、歌名或学科找歌，连续播放。' : 'MapKAI Music. Find songs by number, title, or subject and keep listening.';
     updateLibrary();
     updatePreferencesNotice();
+    renderListeningNotice();
     status($('owner-status'), ownerStatus);
     status($('upload-status'), uploadStatus);
     status($('composer-status'), composerStatus);
@@ -332,6 +337,7 @@
 
   async function startPlayback(card, { restart = false, automatic = false } = {}) {
     if (!card || (automatic && (!playbackIntent || !continuousPlay))) return;
+    listeningTracker?.select(card.track.id, { restart: restart || card.audio.ended });
     selectedCard = card;
     playbackIntent = true;
     advancing = automatic;
@@ -591,6 +597,7 @@
     if (!card.track.lyrics) card.originalLyricsDetails.open = false;
     renderLyrics(card);
     renderReactionControls(card.reactions, card.track);
+    renderListening(card);
     if (!card.track.lyrics) card.lyricsDetails.open = false;
 
   }
@@ -602,6 +609,21 @@
     element.dataset.estimated = String(tempo?.estimated === true);
     element.dataset.unknown = String(tempo?.unknown === true);
     element.dataset.running = String(track?.tempoBpm === 180);
+  }
+
+  function renderListening(card) {
+    const state = listening?.status();
+    const row = listening?.get(card.track.id);
+    const known = state?.loaded;
+    const rate = count => known && row.starts ? `${Math.round(count / row.starts * 100)}%` : '—';
+    card.stats.textContent = t('listeningSummary', { listens: known ? row.listens : '—', completion: rate(row?.completions), skip: rate(row?.skips) });
+    card.statsDetails.textContent = known ? t('listeningDetails', row) : t(state?.unavailable ? 'listeningUnavailable' : 'listeningLoading');
+    card.stats.title = card.statsDetails.textContent;
+  }
+
+  function renderListeningNotice() {
+    const state = listening?.status();
+    $('listening-notice').textContent = `${t('listeningNotice')}${!state || state.unavailable ? ` ${t('listeningUnavailable')}` : !state.loaded ? ` ${t('listeningLoading')}` : ''}`;
   }
 
   function createReactionControls(getTrack) {
@@ -763,10 +785,12 @@
     const originalLyricsSummary = document.createElement('summary');
     const originalLyricsText = document.createElement('pre'); originalLyricsText.className = 'original-lyrics-text'; originalLyricsText.tabIndex = 0; originalLyricsText.setAttribute('role', 'region');
     originalLyricsDetails.append(originalLyricsSummary, originalLyricsText);
+    const stats = document.createElement('p'); stats.className = 'track-listening';
+    const statsDetails = document.createElement('p'); statsDetails.className = 'track-listening-details';
     const reactions = createReactionControls(() => card.track);
-    detailsBody.append(fullTitle, description, meta, reactions.element, lyricsDetails, originalLyricsDetails);
-    element.append(button, details, progress, error);
-    const card = { element, button, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, tempo, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
+    detailsBody.append(fullTitle, description, meta, statsDetails, reactions.element, lyricsDetails, originalLyricsDetails);
+    element.append(button, stats, details, progress, error);
+    const card = { element, button, stats, statsDetails, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, tempo, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => {
       playlistIds = tracks.map(item => item.id); playlistMode = true; playlistComplete = false;
       togglePlayback(card);
@@ -818,7 +842,12 @@
 
   function compareTrackOrder(first, second) {
     const sort = $('song-sort').value;
-    if (sort === 'number' || sort === 'newest') {
+    if (['listens', 'completion', 'skips'].includes(sort) && listening?.status().loaded) {
+      const a = listening.get(first.id), b = listening.get(second.id);
+      const score = row => sort === 'completion' ? (row.starts ? row.completions / row.starts : -1) : row[sort];
+      const delta = score(b) - score(a);
+      if (delta) return delta;
+    } else if (sort === 'number' || sort === 'newest') {
       const order = songNumber(first) - songNumber(second);
       if (order && Number.isFinite(order)) return sort === 'newest' ? -order : order;
     } else if (musicPreferences) return musicPreferences.compare(first, second);
@@ -1232,6 +1261,7 @@
       const card = cards.get(id); if (!card || !Number.isFinite(seconds) || seconds < 0) return;
       pausePlayback({ render: false });
       playlistIds = tracks.map(track => track.id); playlistMode = true; playlistComplete = false;
+      listeningTracker?.select(card.track.id, { restore: true });
       selectedCard = card; stopOtherPlayers(card.audio);
       if (card.audio.src !== card.track.url) { card.audio.src = card.track.url; card.audio.load(); }
       card.restoreSeconds = seconds;
@@ -1242,8 +1272,14 @@
     },
   });
   musicPreferences?.subscribe(applyPreferences);
+  listening?.subscribe(() => {
+    for (const card of cards.values()) renderListening(card);
+    renderListeningNotice();
+    if (['listens', 'completion', 'skips'].includes($('song-sort').value)) applyPreferences();
+  });
   window.dispatchEvent(new Event('mapkai:music-ready'));
   applyLanguage(language);
   loadLibrary();
   musicPreferences?.refresh();
+  listening?.refresh();
 })();
