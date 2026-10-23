@@ -70,3 +70,12 @@ test('destroy stops playback and restores metadata without leaving a timer', asy
   assert.equal(h.audio.paused, true); assert.equal(h.hasTimer(), false);
   assert.equal(h.session.metadata.title, 'Your Turn (Science & ASML)');
 });
+
+test('native audio progress updates titles and ends the test when interval callbacks are delayed', async () => {
+  const h = fixture(); await h.controller.start();
+  h.audio.currentTime = 10; h.audio.dispatchEvent(new Event('timeupdate'));
+  assert.equal(h.session.metadata.title, 'MapKAI TEST 3');
+  h.audio.currentTime = 20; h.audio.dispatchEvent(new Event('timeupdate'));
+  assert.equal(h.audio.paused, true); assert.equal(h.hasTimer(), false);
+  assert.equal(h.changes.at(-1).state, 'complete');
+});

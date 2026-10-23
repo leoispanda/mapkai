@@ -1,4 +1,4 @@
-import { createBluetoothTest, SOURCE, TEST_SECONDS } from './controller.js?v=bluetooth-20261023';
+import { createBluetoothTest, SOURCE, TEST_SECONDS } from './controller.js?v=bluetooth-audio-events-20261023';
 const audio = document.querySelector('audio');
 audio.src = SOURCE;
 const start = document.getElementById('start-test'), stop = document.getElementById('stop-test');

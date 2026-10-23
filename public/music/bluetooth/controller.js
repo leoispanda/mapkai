@@ -65,10 +65,12 @@ export function createBluetoothTest({ audio, session, Metadata, onChange = () =>
   const failed = () => { if (active) finish('error'); };
   const ended = () => { if (active) finish(elapsed() >= TEST_SECONDS ? 'complete' : 'stopped'); };
   audio.addEventListener('playing', playing); audio.addEventListener('pause', paused);
+  audio.addEventListener('timeupdate', refresh);
   audio.addEventListener('error', failed); audio.addEventListener('ended', ended);
   emit(supported ? 'ready' : 'unsupported', 0);
   return { start, stop: () => finish(), refresh, destroy() {
     finish(); audio.removeEventListener('playing', playing); audio.removeEventListener('pause', paused);
+    audio.removeEventListener('timeupdate', refresh);
     audio.removeEventListener('error', failed); audio.removeEventListener('ended', ended);
   } };
 }
