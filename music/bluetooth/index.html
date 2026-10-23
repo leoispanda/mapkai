@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>车载蓝牙文字测试 · MapKAI Music</title>
+  <meta name="description" content="测试 iPhone 和车机是否能显示持续刷新的歌曲文字。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self'; base-uri 'self'; object-src 'none'">
+  <link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/music/bluetooth/styles.css?v=bluetooth-20261023">
+  <script type="module" src="/music/bluetooth/app.js?v=bluetooth-20261023"></script>
+</head>
+<body>
+  <header><a href="/music/" class="brand">MapKAI Music</a><a href="/music/">返回音乐库 ↗</a></header>
+  <main>
+    <p class="eyebrow">IPHONE → BLUETOOTH → CLIO</p>
+    <h1>车屏能收到变化的文字吗？</h1>
+    <p class="intro">先用一个短测试，确认你的蓝牙连接能否逐次刷新“歌曲名”。这是文字显示测试，还不是同步歌词。</p>
+    <section class="test-card" aria-labelledby="test-title">
+      <p id="test-title" class="eyebrow">网页提交给系统的歌曲标题</p>
+      <p id="sent-title" class="sent-title">Your Turn (Science &amp; ASML)</p>
+      <progress id="test-progress" value="0" max="20" aria-label="测试进度"></progress><p id="test-count" class="count">0 / 20 秒</p>
+      <div class="actions"><button id="start-test" type="button">开始约 20 秒测试</button><button id="stop-test" type="button" disabled>停止</button></div>
+      <p id="test-status" class="status" role="status">准备好了。</p>
+      <p class="note">播放 Your Turn 的开头；只更新显示文字，音频文件保持原样。页面显示“已提交”不代表车屏已收到。</p>
+    </section>
+    <section class="instructions"><h2>怎么测试</h2><ol>
+      <li>停车后，用 iPhone 的 Safari 打开本页，连接 Clio 蓝牙，并在车机选择蓝牙音乐。</li>
+      <li>点开始，观察车屏“歌曲名”是否约每 5 秒变化：<strong>TEST 1 → TEST 2 → TEST 3 → TEST 4</strong>。</li>
+      <li>可以再测试一次，开始后锁屏，比较车屏是否仍继续更新。</li>
+    </ol><p>测试结束后告诉我：<strong>亮屏能不能变、锁屏能不能变</strong>。如果没有变化，先点停止；后台运行可能影响刷新和自动结束。</p></section>
+    <section class="explanation"><h2>测试结果说明什么？</h2><p>如果车屏能持续更新，就有继续尝试“当前一句歌词”的基础；仍需要补齐歌曲时间轴，并验证真实歌词的显示效果。如果只显示第一段或始终显示歌名，当前连接还不能可靠传送动态文字。</p><p>新加入的 063 三位 Philips 版和 064 ASML 版目前只有完整歌词，尚无逐句同步时间轴。</p></section>
+    <footer><a href="/music/?track=efc8308c-614f-4845-94ce-3b32425c2e4a">回到 ASML 版歌曲 ↗</a></footer>
+  </main><audio preload="none" hidden></audio>
+</body></html>

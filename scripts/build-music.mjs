@@ -5,5 +5,7 @@ await mkdir(target, { recursive: true });
 for (const name of ['index.html', 'preferences.js', 'listening.js', 'lyrics-sync.js', 'tempo.js', 'app.js', 'styles.css', 'dock.js', 'dock.css']) {
   await cp(new URL(`music/${name}`, root), new URL(name, target));
 }
-await cp(new URL('music/videos/', root), new URL('videos/', target), { recursive: true });
+for (const folder of ['videos', 'bluetooth']) {
+  await cp(new URL(`music/${folder}/`, root), new URL(`${folder}/`, target), { recursive: true });
+}
 console.log('Built MapKAI Music.');
