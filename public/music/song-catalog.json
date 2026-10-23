@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 64,
+  "nextNumber": 65,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -771,6 +771,19 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "063 Your Turn (Philips Trio) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+    },
+    {
+      "id": "efc8308c-614f-4845-94ce-3b32425c2e4a",
+      "number": 64,
+      "numberLabel": "064",
+      "songName": "Your Turn (Science & ASML)",
+      "subjectName": "Arts and Humanities",
+      "canonicalSubjectName": "Arts and humanities",
+      "conceptName": "Dutch Cultural Figures",
+      "createdAt": "2026-10-23T21:02:52.781Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "064 Your Turn (Science & ASML) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
     }
   ]
 }
