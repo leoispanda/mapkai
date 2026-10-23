@@ -43,6 +43,8 @@ const localFunctionRoutes = {
   "/api/music/auth": "functions/api/music/auth.js",
   "/api/music/tracks": "functions/api/music/tracks.js",
   "/api/music/audio": "functions/api/music/audio.js",
+  "/api/music/videos": "functions/api/music/videos.js",
+  "/api/music/video": "functions/api/music/video.js",
 };
 
 const legacyRedirects = {
@@ -109,6 +111,70 @@ const server = createServer(async (request, response) => {
 });
 
 let localPublicPreviewBinding;
+let localMusicVideoPreviewEnv;
+
+async function getLocalMusicVideoPreviewEnv() {
+  if (localMusicVideoPreviewEnv) return localMusicVideoPreviewEnv;
+  // This adapter exists only in the Node preview server, behind an explicit
+  // local flag. The deployed Pages handlers always use guarded R2 bindings.
+  const { MUSIC_VIDEOS } = await import("./functions/api/music/_videos.js");
+  const { COST_GUARD_KEY, COST_GUARD_LIMITS } = await import("./functions/_shared/cost-guard.js");
+  const spec = JSON.parse(await readFile(join(root, ".workspace-backups/your-turn-mapkai-publish-20261023/publish-spec.json"), "utf8"));
+  if (spec.runId !== "your-turn-mv-publish-20261023" || !Array.isArray(spec.items) || spec.items.length !== 4) {
+    throw new Error("Local music video preview is unavailable");
+  }
+  const sources = {
+    "your-turn-asml/phone": ".workspace-backups/your-turn-mv-20261023-v3-asml/Your-Turn-MV-ASML-phone.mp4",
+    "your-turn-asml/hd": ".workspace-backups/your-turn-mv-20261023-v3-asml/Your-Turn-MV-ASML-1080p.mp4",
+    "your-turn-artworks/phone": ".workspace-backups/your-turn-mv-20261023-v2/Your-Turn-MV-v2-phone.mp4",
+    "your-turn-original/phone": ".workspace-backups/your-turn-mv-20261022/Your-Turn-MV-phone.mp4",
+  };
+  const entries = new Map();
+  for (const video of MUSIC_VIDEOS) {
+    for (const rendition of video.qualities) {
+      const records = spec.items.filter(item => item.id === video.id && item.quality === rendition.id);
+      const record = records[0];
+      const filePath = join(root, sources[`${video.id}/${rendition.id}`]);
+      if (records.length !== 1 || record.source !== filePath || record.bytes !== rendition.bytes
+        || record.sha256 !== rendition.sha256 || record.objectKey !== rendition.objectKey || record.md5 !== rendition.etag) {
+        throw new Error("Local music video preview is unavailable");
+      }
+      const info = await stat(filePath);
+      if (!info.isFile() || info.size !== rendition.bytes) throw new Error("Local music video preview is unavailable");
+      const digest = createHash("sha256");
+      for await (const chunk of createReadStream(filePath)) digest.update(chunk);
+      if (digest.digest("hex") !== rendition.sha256) throw new Error("Local music video preview is unavailable");
+      entries.set(rendition.objectKey, { filePath, bytes: rendition.bytes, etag: rendition.etag, mtimeMs: info.mtimeMs });
+    }
+  }
+  const headFor = async key => {
+    const entry = entries.get(key);
+    if (!entry) return null;
+    const info = await stat(entry.filePath);
+    return info.isFile() && info.size === entry.bytes && info.mtimeMs === entry.mtimeMs
+      ? { size: entry.bytes, etag: entry.etag, httpEtag: `"${entry.etag}"` } : null;
+  };
+  const bucket = {
+    head: headFor,
+    get: async (key, options = {}) => {
+      const head = await headFor(key);
+      if (!head || (options.onlyIf?.etagMatches && options.onlyIf.etagMatches !== head.etag)) return head;
+      const range = options.range;
+      const streamOptions = range ? { start: range.offset, end: range.offset + range.length - 1 } : undefined;
+      return { ...head, body: Readable.toWeb(createReadStream(entries.get(key).filePath, streamOptions)) };
+    },
+  };
+  let classA = 0;
+  let classB = 0;
+  const database = { prepare() { return { bind(...values) { return { async first() {
+    classA += values[2];
+    classB += values[3];
+    return { guard_key: COST_GUARD_KEY, cycle_start: values[1], class_a_used: classA, class_b_used: classB,
+      upload_bytes_used: 0, storage_bytes_reserved: COST_GUARD_LIMITS.initialStorageBytes, updated_at: values[6] };
+  } }; } }; } };
+  localMusicVideoPreviewEnv = { ...process.env, MAPKAI_REVIEW_MEDIA: bucket, CLOUDFLARE_COST_DB: database };
+  return localMusicVideoPreviewEnv;
+}
 
 async function getLocalPublicPreviewBinding() {
   if (localPublicPreviewBinding) return localPublicPreviewBinding;
@@ -175,18 +241,28 @@ async function handleLocalFunctionRoute(request, response, url) {
 
   const localPreviewEnabled = process.env.MAPKAI_PUBLIC_PREVIEW_LOCAL === "1"
     && url.pathname.startsWith("/api/factory/public-");
-  const env = localPreviewEnabled
+  const musicVideoPreviewEnabled = process.env.MUSIC_VIDEO_LOCAL_PREVIEW === "1"
+    && url.pathname === "/api/music/video";
+  const env = musicVideoPreviewEnabled ? await getLocalMusicVideoPreviewEnv() : localPreviewEnabled
     ? { ...process.env, MAPKAI_REVIEW_MEDIA: await getLocalPublicPreviewBinding() }
     : process.env;
   const functionResponse = await routeHandler({
     request: new Request(url.href, requestInit),
     env,
   });
-  const body = Buffer.from(await functionResponse.arrayBuffer());
   const responseHeaders = {};
   functionResponse.headers.forEach((value, name) => {
     responseHeaders[name] = value;
   });
+  if (url.pathname === "/api/music/video" && functionResponse.body) {
+    response.writeHead(functionResponse.status, responseHeaders);
+    const stream = Readable.fromWeb(functionResponse.body);
+    stream.on("error", () => response.destroy());
+    response.on("close", () => stream.destroy());
+    stream.pipe(response);
+    return;
+  }
+  const body = Buffer.from(await functionResponse.arrayBuffer());
   response.writeHead(functionResponse.status, responseHeaders);
   response.end(body);
 }
@@ -275,6 +351,7 @@ async function serveStatic(pathname, response) {
   // Keep the local convenience server from turning those backend files into
   // a second, unauthenticated delivery channel.
   if (pathname === "/functions" || pathname.startsWith("/functions/")
+    || pathname === "/.workspace-backups" || pathname.startsWith("/.workspace-backups/")
     || pathname === "/mapkai-video-factory" || pathname.startsWith("/mapkai-video-factory/")) {
     sendJson(response, 404, { error: "Not found" });
     return;

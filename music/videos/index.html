@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="MapKAI 音乐影像。观看 Your Turn 的绘画 MV，或下载到手机，随时重看。">
+  <meta name="theme-color" content="#fffdf8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; media-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>音乐影像 · MapKAI Music</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://www.mapkai.com/music/videos/">
+  <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
+  <link rel="stylesheet" href="/music/videos/styles.css?v=music-videos-20261023">
+  <script src="/site-shell.js?v=listening-20261021" defer></script>
+  <script src="/music/videos/app.js?v=music-videos-20261023" defer></script>
+</head>
+<body data-mapkai-page="music" data-mapkai-module="music-videos">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a>
+    <nav aria-label="主导航"><a href="/music/">MapKAI Music</a></nav>
+    <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="false">EN</button><span>/</span><button type="button" data-language="zh" lang="zh" aria-pressed="true">中文</button></div>
+  </header>
+
+  <main class="films-page">
+    <a class="back-link" href="/music/" data-i18n="back">← 返回 Music</a>
+    <section class="films-intro" aria-labelledby="page-title">
+      <p class="collection-eyebrow" data-i18n="collection">音乐影像 / MAPKAI MUSIC</p>
+      <h1 id="page-title" data-i18n="heading">让旋律，成为画面。</h1>
+      <div class="intro-bottom"><p class="intro-copy" data-i18n="intro">把一首歌里的名字、作品与想法，连成一部短片。选一个版本，播放或下载，随时重看。</p><a class="collection-link" href="#earlier-versions" data-i18n="browseEarlier">看看早期版本 ↓</a></div>
+      <p class="art-note" data-i18n="artNote">AI 绘画与音乐 · 艺术演绎</p>
+    </section>
+
+    <p id="gallery-status" class="gallery-status" role="status" data-i18n="loading">正在载入音乐影像…</p>
+    <div id="gallery-error" class="gallery-error" hidden><p data-i18n="loadError">暂时无法载入音乐影像，请再试一次。</p><button class="button secondary" id="retry-gallery" type="button" data-i18n="retry">重新载入</button></div>
+    <section id="featured-films" class="featured-films" aria-label="精选音乐影像" hidden></section>
+
+    <section id="earlier-versions" class="earlier-versions" aria-labelledby="earlier-heading" hidden>
+      <div class="section-heading"><div><p class="collection-eyebrow" data-i18n="fromCollection">FROM THE COLLECTION</p><h2 id="earlier-heading" data-i18n="earlierHeading">这首歌的其他画面</h2></div><p data-i18n="earlierIntro">从最初的构想到绘画长卷，保留每一次不同的表达。</p></div>
+      <div id="earlier-films" class="earlier-grid"></div>
+    </section>
+
+    <noscript><div class="gallery-error"><p>请启用 JavaScript 查看作品集，也可以直接下载最新 MV。<br>Enable JavaScript to view the collection, or download the latest film.</p><a class="button primary" href="/api/music/video?id=your-turn-asml&amp;quality=phone&amp;download=1" download>下载手机版 / Download MP4</a></div></noscript>
+    <footer class="films-footer"><span>MapKAI Music</span><div><a id="arts-link" href="/categories/02?lang=zh" data-i18n="arts">艺术与人文 ↗</a><a href="/music/" data-i18n="backToSongs">继续听歌 ↗</a></div></footer>
+  </main>
+</body>
+</html>

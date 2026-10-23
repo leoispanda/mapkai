@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-23",
+  "collection": "/music/videos/",
+  "featured": "your-turn-asml",
+  "entryPoints": [
+    "/music/",
+    "/categories/02"
+  ],
+  "versions": 3,
+  "files": [
+    {
+      "id": "your-turn-asml",
+      "version": "v3-asml",
+      "quality": "phone",
+      "bytes": 34496951,
+      "sha256": "67cfb406f37eeae7b27881f652aaf35d19f9f0559899ee2d5e4618dc2a090c8a",
+      "md5": "334bedc9f24bf0e7bb691c1b3d191ce3",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 116.075,
+      "objectKey": "music-videos/your-turn/your-turn-asml/67cfb406f37eeae7b27881f652aaf35d19f9f0559899ee2d5e4618dc2a090c8a.mp4"
+    },
+    {
+      "id": "your-turn-asml",
+      "version": "v3-asml",
+      "quality": "hd",
+      "bytes": 81396602,
+      "sha256": "8b55857d6635dda528784cbe777d6ac0a6240c0938503003cd25e0239c992475",
+      "md5": "9219b7fc0e78a5a7532a714644daa05a",
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 116.075,
+      "objectKey": "music-videos/your-turn/your-turn-asml/8b55857d6635dda528784cbe777d6ac0a6240c0938503003cd25e0239c992475.mp4"
+    },
+    {
+      "id": "your-turn-artworks",
+      "version": "v2",
+      "quality": "phone",
+      "bytes": 36986575,
+      "sha256": "8861dadc105a33132ec4427c3cb5f728daf83e2a6e868ea1e6045b7ea460f0f2",
+      "md5": "83b9c2edf9e906e6c412c16cd7a4ccb8",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 120.043,
+      "objectKey": "music-videos/your-turn/your-turn-artworks/8861dadc105a33132ec4427c3cb5f728daf83e2a6e868ea1e6045b7ea460f0f2.mp4"
+    },
+    {
+      "id": "your-turn-original",
+      "version": "v1",
+      "quality": "phone",
+      "bytes": 20346063,
+      "sha256": "2c9a1721bb4e778362d4cdc0789721935656046d546cc3c2e983e3fd529638ea",
+      "md5": "191541ae432c5d69fe2cc88fa4de1261",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 120.043,
+      "objectKey": "music-videos/your-turn/your-turn-original/2c9a1721bb4e778362d4cdc0789721935656046d546cc3c2e983e3fd529638ea.mp4"
+    }
+  ],
+  "existingSongsChanged": false,
+  "factoryReviewCatalogChanged": false,
+  "illustrations": "AI-assisted artistic interpretations",
+  "storage": "Existing private MAPKAI_REVIEW_MEDIA binding with shared D1 cost guard"
+}
