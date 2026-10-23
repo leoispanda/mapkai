@@ -9,6 +9,8 @@ const freeze = value => {
   return value;
 };
 
+export const VIDEO_REVISION = 'ai-label-20261023';
+
 export const MUSIC_VIDEOS = freeze([
   {
     "id": "your-turn-asml",
@@ -31,12 +33,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "720p · 手机版",
           "en": "720p · Mobile"
         },
-        "bytes": 34496951,
+        "bytes": 38637548,
         "width": 1280,
         "height": 720,
-        "objectKey": "music-videos/your-turn/your-turn-asml/67cfb406f37eeae7b27881f652aaf35d19f9f0559899ee2d5e4618dc2a090c8a.mp4",
-        "sha256": "67cfb406f37eeae7b27881f652aaf35d19f9f0559899ee2d5e4618dc2a090c8a",
-        "etag": "334bedc9f24bf0e7bb691c1b3d191ce3",
+        "objectKey": "music-videos/your-turn/your-turn-asml/ab05205f0a5f52ec8b8ddbf56f31eb06fc51e551e9fa9c5def3e6345873fa6e7.mp4",
+        "sha256": "ab05205f0a5f52ec8b8ddbf56f31eb06fc51e551e9fa9c5def3e6345873fa6e7",
+        "etag": "42d72bcf44758d593f8b49f39830e12f",
         "filename": "mapkai-your-turn-asml-phone.mp4"
       },
       {
@@ -45,12 +47,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "1080p · 高清",
           "en": "1080p · HD"
         },
-        "bytes": 81396602,
+        "bytes": 77477987,
         "width": 1920,
         "height": 1080,
-        "objectKey": "music-videos/your-turn/your-turn-asml/8b55857d6635dda528784cbe777d6ac0a6240c0938503003cd25e0239c992475.mp4",
-        "sha256": "8b55857d6635dda528784cbe777d6ac0a6240c0938503003cd25e0239c992475",
-        "etag": "9219b7fc0e78a5a7532a714644daa05a",
+        "objectKey": "music-videos/your-turn/your-turn-asml/7b74dae349d1cb0480add0267a0820f81c2667c0b4d8b3f107106d096d2cf9e3.mp4",
+        "sha256": "7b74dae349d1cb0480add0267a0820f81c2667c0b4d8b3f107106d096d2cf9e3",
+        "etag": "a7bd64d35e28582269c38dee64425754",
         "filename": "mapkai-your-turn-asml-hd.mp4"
       }
     ]
@@ -76,12 +78,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "720p · 手机版",
           "en": "720p · Mobile"
         },
-        "bytes": 36986575,
+        "bytes": 47218032,
         "width": 1280,
         "height": 720,
-        "objectKey": "music-videos/your-turn/your-turn-artworks/8861dadc105a33132ec4427c3cb5f728daf83e2a6e868ea1e6045b7ea460f0f2.mp4",
-        "sha256": "8861dadc105a33132ec4427c3cb5f728daf83e2a6e868ea1e6045b7ea460f0f2",
-        "etag": "83b9c2edf9e906e6c412c16cd7a4ccb8",
+        "objectKey": "music-videos/your-turn/your-turn-artworks/a782ebea3881ab46643ebc1a41fa9bbe4a730685ec7c50a4d7f0c485750b7766.mp4",
+        "sha256": "a782ebea3881ab46643ebc1a41fa9bbe4a730685ec7c50a4d7f0c485750b7766",
+        "etag": "e49956b288657246be5acb7b4f6d8217",
         "filename": "mapkai-your-turn-artworks-phone.mp4"
       }
     ]
@@ -107,12 +109,12 @@ export const MUSIC_VIDEOS = freeze([
           "zh": "720p · 手机版",
           "en": "720p · Mobile"
         },
-        "bytes": 20346063,
+        "bytes": 27240907,
         "width": 1280,
         "height": 720,
-        "objectKey": "music-videos/your-turn/your-turn-original/2c9a1721bb4e778362d4cdc0789721935656046d546cc3c2e983e3fd529638ea.mp4",
-        "sha256": "2c9a1721bb4e778362d4cdc0789721935656046d546cc3c2e983e3fd529638ea",
-        "etag": "191541ae432c5d69fe2cc88fa4de1261",
+        "objectKey": "music-videos/your-turn/your-turn-original/31c8153af9387307163141888818c8d4dfb7011343036d78b61deb2e1a18b593.mp4",
+        "sha256": "31c8153af9387307163141888818c8d4dfb7011343036d78b61deb2e1a18b593",
+        "etag": "0167cf8714c7a0057c2a866765f69089",
         "filename": "mapkai-your-turn-original-phone.mp4"
       }
     ]
@@ -129,7 +131,7 @@ export function publicVideos() {
   return MUSIC_VIDEOS.map(({ id, title, description, durationSeconds, poster, featured, version, qualities }) => ({
     id, title, description, durationSeconds, poster, featured, version,
     qualities: qualities.map(({ id: quality, label, bytes, width, height }) => {
-      const url = `/api/music/video?id=${encodeURIComponent(id)}&quality=${encodeURIComponent(quality)}`;
+      const url = `/api/music/video?id=${encodeURIComponent(id)}&quality=${encodeURIComponent(quality)}&revision=${VIDEO_REVISION}`;
       return { id: quality, label, bytes, width, height, url, downloadUrl: `${url}&download=1` };
     }),
   }));

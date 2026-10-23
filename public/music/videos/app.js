@@ -103,7 +103,7 @@
     player.append(video,play);
     const body = textNode('div','film-copy');
     const topline = textNode('div','film-topline');
-    const badge = textNode('span','film-badge'); const meta = textNode('span','film-meta'); topline.append(badge,meta);
+    const badge = textNode('span','film-badge'); const aiBadge = textNode('span','film-ai-badge'); aiBadge.textContent = 'AI generated'; aiBadge.lang = 'en'; const meta = textNode('span','film-meta'); topline.append(badge,aiBadge,meta);
     const title = textNode(item.id === 'your-turn-asml' ? 'h2' : 'h3'); title.id = `${item.id}-title`;
     element.setAttribute('aria-labelledby',title.id);
     const description = textNode('p','film-description');

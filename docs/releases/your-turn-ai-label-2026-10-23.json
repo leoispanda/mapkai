@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-23",
+  "revision": "ai-label-20261023",
+  "badge": {
+    "text": "AI generated",
+    "position": "top-right",
+    "alwaysVisible": true
+  },
+  "audioPayloadAndTimestampsUnchanged": true,
+  "originalExportsPreserved": true,
+  "files": [
+    {
+      "id": "your-turn-asml",
+      "quality": "phone",
+      "bytes": 38637548,
+      "sha256": "ab05205f0a5f52ec8b8ddbf56f31eb06fc51e551e9fa9c5def3e6345873fa6e7",
+      "md5": "42d72bcf44758d593f8b49f39830e12f",
+      "objectKey": "music-videos/your-turn/your-turn-asml/ab05205f0a5f52ec8b8ddbf56f31eb06fc51e551e9fa9c5def3e6345873fa6e7.mp4"
+    },
+    {
+      "id": "your-turn-asml",
+      "quality": "hd",
+      "bytes": 77477987,
+      "sha256": "7b74dae349d1cb0480add0267a0820f81c2667c0b4d8b3f107106d096d2cf9e3",
+      "md5": "a7bd64d35e28582269c38dee64425754",
+      "objectKey": "music-videos/your-turn/your-turn-asml/7b74dae349d1cb0480add0267a0820f81c2667c0b4d8b3f107106d096d2cf9e3.mp4"
+    },
+    {
+      "id": "your-turn-artworks",
+      "quality": "phone",
+      "bytes": 47218032,
+      "sha256": "a782ebea3881ab46643ebc1a41fa9bbe4a730685ec7c50a4d7f0c485750b7766",
+      "md5": "e49956b288657246be5acb7b4f6d8217",
+      "objectKey": "music-videos/your-turn/your-turn-artworks/a782ebea3881ab46643ebc1a41fa9bbe4a730685ec7c50a4d7f0c485750b7766.mp4"
+    },
+    {
+      "id": "your-turn-original",
+      "quality": "phone",
+      "bytes": 27240907,
+      "sha256": "31c8153af9387307163141888818c8d4dfb7011343036d78b61deb2e1a18b593",
+      "md5": "0167cf8714c7a0057c2a866765f69089",
+      "objectKey": "music-videos/your-turn/your-turn-original/31c8153af9387307163141888818c8d4dfb7011343036d78b61deb2e1a18b593.mp4"
+    }
+  ]
+}

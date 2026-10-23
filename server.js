@@ -119,15 +119,15 @@ async function getLocalMusicVideoPreviewEnv() {
   // local flag. The deployed Pages handlers always use guarded R2 bindings.
   const { MUSIC_VIDEOS } = await import("./functions/api/music/_videos.js");
   const { COST_GUARD_KEY, COST_GUARD_LIMITS } = await import("./functions/_shared/cost-guard.js");
-  const spec = JSON.parse(await readFile(join(root, ".workspace-backups/your-turn-mapkai-publish-20261023/publish-spec.json"), "utf8"));
-  if (spec.runId !== "your-turn-mv-publish-20261023" || !Array.isArray(spec.items) || spec.items.length !== 4) {
+  const spec = JSON.parse(await readFile(join(root, ".workspace-backups/your-turn-ai-label-20261023/publish-spec.json"), "utf8"));
+  if (spec.runId !== "your-turn-ai-label-20261023" || !Array.isArray(spec.items) || spec.items.length !== 4) {
     throw new Error("Local music video preview is unavailable");
   }
   const sources = {
-    "your-turn-asml/phone": ".workspace-backups/your-turn-mv-20261023-v3-asml/Your-Turn-MV-ASML-phone.mp4",
-    "your-turn-asml/hd": ".workspace-backups/your-turn-mv-20261023-v3-asml/Your-Turn-MV-ASML-1080p.mp4",
-    "your-turn-artworks/phone": ".workspace-backups/your-turn-mv-20261023-v2/Your-Turn-MV-v2-phone.mp4",
-    "your-turn-original/phone": ".workspace-backups/your-turn-mv-20261022/Your-Turn-MV-phone.mp4",
+    "your-turn-asml/phone": ".workspace-backups/your-turn-ai-label-20261023/your-turn-asml-phone-AI-generated.mp4",
+    "your-turn-asml/hd": ".workspace-backups/your-turn-ai-label-20261023/your-turn-asml-hd-AI-generated.mp4",
+    "your-turn-artworks/phone": ".workspace-backups/your-turn-ai-label-20261023/your-turn-artworks-phone-AI-generated.mp4",
+    "your-turn-original/phone": ".workspace-backups/your-turn-ai-label-20261023/your-turn-original-phone-AI-generated.mp4"
   };
   const entries = new Map();
   for (const video of MUSIC_VIDEOS) {

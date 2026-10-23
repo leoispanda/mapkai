@@ -1,12 +1,13 @@
 import { parseRange } from '../factory/_media.js';
 import { RESPONSE_HEADERS, errorResponse, json, musicBucket } from './_shared.js';
-import { findVideoQuality } from './_videos.js';
+import { findVideoQuality, VIDEO_REVISION } from './_videos.js';
 
 function selectedVideo(url) {
   const params = url.searchParams;
-  if ([...params.keys()].some(key => !['id', 'quality', 'download'].includes(key))
+  if ([...params.keys()].some(key => !['id', 'quality', 'download', 'revision'].includes(key))
     || params.getAll('id').length !== 1 || params.getAll('quality').length > 1
-    || params.getAll('download').length > 1
+    || params.getAll('download').length > 1 || params.getAll('revision').length > 1
+    || (params.has('revision') && params.get('revision') !== VIDEO_REVISION)
     || (params.has('download') && !['0', '1'].includes(params.get('download')))) return null;
   return findVideoQuality(params.get('id'), params.get('quality') ?? 'phone');
 }

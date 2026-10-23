@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { onRequest as videos } from '../functions/api/music/videos.js';
 import { onRequest as video } from '../functions/api/music/video.js';
-import { MUSIC_VIDEOS, findVideoQuality } from '../functions/api/music/_videos.js';
+import { MUSIC_VIDEOS, VIDEO_REVISION, findVideoQuality } from '../functions/api/music/_videos.js';
 import { COST_GUARD_KEY, COST_GUARD_LIMITS } from '../functions/_shared/cost-guard.js';
 
 const first = MUSIC_VIDEOS[0];
@@ -69,7 +69,7 @@ test('catalog publishes three recordings, four renditions and only same-origin p
     for (const quality of item.qualities) {
       assert.deepEqual(Object.keys(quality).sort(), ['id', 'label', 'bytes', 'width', 'height', 'url', 'downloadUrl'].sort());
       assert.ok(quality.label.zh && quality.label.en);
-      assert.equal(quality.url, `/api/music/video?id=${item.id}&quality=${quality.id}`);
+      assert.equal(quality.url, `/api/music/video?id=${item.id}&quality=${quality.id}&revision=${VIDEO_REVISION}`);
       assert.equal(quality.downloadUrl, `${quality.url}&download=1`);
     }
   }
@@ -165,7 +165,7 @@ test('download uses a fixed safe attachment name and preserves range semantics',
 test('unknown identifiers, qualities, duplicate controls and arbitrary object keys never reach storage', async () => {
   for (const query of ['', 'id=unreviewed', 'id=../../private', 'id=your-turn-original&quality=hd',
     `id=${first.id}&quality=4k`, `id=${first.id}&id=${first.id}`, `id=${first.id}&quality=phone&quality=hd`,
-    `id=${first.id}&key=raw/private.mp4`, `id=${first.id}&download=other`, `id=${first.id}&download=1&download=0`]) {
+    `id=${first.id}&key=raw/private.mp4`, `id=${first.id}&download=other`, `id=${first.id}&download=1&download=0`, `id=${first.id}&revision=unknown`, `id=${first.id}&revision=${VIDEO_REVISION}&revision=${VIDEO_REVISION}`]) {
     const { env, calls } = fixture();
     assert.equal((await video({ request: new Request(url(query)), env })).status, 404, query);
     assert.deepEqual(calls, []);
@@ -209,4 +209,11 @@ test('both endpoints reject write methods without reading or modifying storage',
     assert.equal(response.headers.get('Allow'), 'GET, HEAD');
     assert.deepEqual(calls, []);
   }
+});
+
+test('marked video revision accepts only its fixed value and creates a fresh playback cache URL', async () => {
+  const {env,calls}=fixture();
+  const response=await video({request:new Request(url(`id=${first.id}&quality=phone&revision=${VIDEO_REVISION}`),{method:'HEAD'}),env});
+  assert.equal(response.status,200);
+  assert.equal(calls[0].key,rendition.objectKey);
 });

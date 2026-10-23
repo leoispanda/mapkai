@@ -11,3 +11,5 @@ The public collection, category entry and Music entry are bilingual. Video contr
 `scripts/build-music.mjs` copies the nested video UI and posters into `public/music/videos/`. Check the streaming contract with `node --test scripts/music-videos-api.test.mjs`, and preview local immutable source files with `MUSIC_VIDEO_LOCAL_PREVIEW=1 PORT=3118 node server.js`. The preview switch exists only in the local Node server, never in the deployed Worker.
 
 Illustrations are AI-assisted artistic interpretations. They are not archival photographs or technical equipment diagrams. Earlier cuts retain their earlier music and cast; they are labelled accordingly.
+
+All three films include a small permanent “AI generated” mark in the top-right corner of the video itself, including full-screen playback and downloaded files. The card also carries an English AI-generated badge in both language modes. The marked renditions copy the existing AAC packets and audio timestamps unchanged. Their playback URLs use a fixed `revision` value so browser caches do not retain an older unmarked video; arbitrary revisions are rejected.
