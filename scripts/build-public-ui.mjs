@@ -5,7 +5,7 @@ await import('./build-finance-pages.mjs');
 await import('./build-speaking.mjs');
 await import('./build-toolbox.mjs');
 await import('./build-music.mjs');
-for (const file of ['site-shell.css', 'site-shell.js', 'script.js', 'styles.css', 'finance-course.js', 'factory-review.html', 'factory-review.js']) {
+for (const file of ['site-shell.css', 'site-shell.js', 'home-toolbox.css', 'home-toolbox.js', 'script.js', 'styles.css', 'finance-course.js', 'factory-review.html', 'factory-review.js']) {
   await cp(new URL(file, root), new URL(`public/${file}`, root));
 }
 await import('./update-asset-version.js');

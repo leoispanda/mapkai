@@ -66,6 +66,8 @@
     <link rel="stylesheet" href="/styles.css?v=0.1.293" />
     <link rel="stylesheet" href="/map3d.css?v=0.1.293" />
     <link rel="stylesheet" href="/site-shell.css?v=0.1.293" />
+    <link rel="stylesheet" href="/home-toolbox.css?v=1" />
+    <script src="/home-toolbox.js?v=1" defer></script>
     <script src="/site-shell.js?v=0.1.293" defer></script>
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
   </head>
@@ -119,6 +121,64 @@
             <a class="button primary" href="/explore" data-route="/explore" data-i18n="homePrimary">Start exploration</a>
           </div>
         </div>
+        <section class="home-section home-toolbox" aria-labelledby="home-toolbox-title">
+          <div class="home-toolbox-heading">
+            <div><h2 id="home-toolbox-title">MapKAI Toolbox</h2><p data-home-en="Little tools for learning, thinking, and everyday life." data-home-zh="学习、思考、生活，随手打开一个小工具。">Little tools for learning, thinking, and everyday life.</p></div>
+            <div class="home-toolbox-controls">
+              <a class="home-toolbox-all" href="/toolbox/en/" data-home-href-en="/toolbox/en/" data-home-href-zh="/toolbox/" data-home-en="View all ↗" data-home-zh="查看全部 ↗">View all ↗</a>
+              <button class="home-toolbox-toggle" type="button" aria-label="Pause tool scrolling" aria-pressed="false" aria-controls="home-toolbox-viewport" hidden><svg class="home-toolbox-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h3v10H4zm5 0h3v10H9z"/></svg><svg class="home-toolbox-play" viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 8 5-8 5z"/></svg></button>
+            </div>
+          </div>
+          <div class="home-toolbox-viewport" id="home-toolbox-viewport">
+            <div class="home-toolbox-track"><div class="home-toolbox-group">
+              <a class="home-toolbox-card" data-home-tool="dishkai" href="/toolbox/dishkai/en/" data-home-href-en="/toolbox/dishkai/en/" data-home-href-zh="/toolbox/dishkai/" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="5"/><path d="M2 5v8m3-8v8m-3-3h3M3.5 13v14M29 5v22m0-22c-4 4-4 10 0 10"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Menu Reader · DishKAI" data-home-zh="菜单助手 · DishKAI">Menu Reader · DishKAI</strong><small data-home-en="Understand a menu in a snap." data-home-zh="拍下菜单，看懂陌生菜名。">Understand a menu in a snap.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="frameworks" href="/toolbox/frameworks/en/" data-home-href-en="/toolbox/frameworks/en/" data-home-href-zh="/toolbox/frameworks/" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="10" height="10" rx="2"/><rect x="18" y="4" width="10" height="10" rx="2"/><rect x="4" y="18" width="10" height="10" rx="2"/><path d="M18 20h10m-10 6h7"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Thinking Frameworks" data-home-zh="思维框架">Thinking Frameworks</strong><small data-home-en="Find a fresh way to think." data-home-zh="给眼前的问题换一个思路。">Find a fresh way to think.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="pdc" href="/toolbox/pdc?lang=en" data-home-href-en="/toolbox/pdc?lang=en" data-home-href-zh="/toolbox/pdc?lang=zh" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="m20 12-2 6-6 2 2-6 6-2Z"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="PDC Decision Room" data-home-zh="PDC 决策室">PDC Decision Room</strong><small data-home-en="See a decision from every angle." data-home-zh="从不同角度想清楚一个决定。">See a decision from every angle.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="metronome" href="/toolbox/metronome/en/" data-home-href-en="/toolbox/metronome/en/" data-home-href-zh="/toolbox/metronome/" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h6l4-10 6 20 4-10h6"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Running Metronome" data-home-zh="跑步节拍器">Running Metronome</strong><small data-home-en="Set your pace. Find your rhythm." data-home-zh="设好步频，跟着节奏跑。">Set your pace. Find your rhythm.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="music" href="/music/" data-home-href-en="/music/" data-home-href-zh="/music/" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 23V7l14-3v16M13 12l14-3"/><ellipse cx="9" cy="23" rx="4" ry="3"/><ellipse cx="23" cy="20" rx="4" ry="3"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="MapKAI Music" data-home-zh="MapKAI Music">MapKAI Music</strong><small data-home-en="A song. A new idea." data-home-zh="听一首歌，认识一个新概念。">A song. A new idea.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="map" href="/map?lang=en" data-home-href-en="/map?lang=en" data-home-href-zh="/map?lang=zh" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4 8 8-4 8 4 8-4v20l-8 4-8-4-8 4V8Zm8-4v20m8-16v20"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Knowledge Map" data-home-zh="知识地图">Knowledge Map</strong><small data-home-en="Discover how knowledge connects." data-home-zh="看看不同知识领域如何相连。">Discover how knowledge connects.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="stories" href="/categories?lang=en" data-home-href-en="/categories?lang=en" data-home-href-zh="/categories?lang=zh" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8c-4-3-8-3-12-2v20c4-1 8-1 12 2 4-3 8-3 12-2V6c-4-1-8-1-12 2Zm0 0v20"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Knowledge Stories" data-home-zh="知识故事">Knowledge Stories</strong><small data-home-en="Open a concept through a story." data-home-zh="用一段故事打开一个概念。">Open a concept through a story.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="speaking" href="/speaking/en/" data-home-href-en="/speaking/en/" data-home-href-zh="/speaking/" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15v2m4-8v14m4-18v22m4-18v14m4-8v2"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Speaking Studio" data-home-zh="英语对话">Speaking Studio</strong><small data-home-en="A little English conversation." data-home-zh="用英语，轻松聊一会儿。">A little English conversation.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="home-toolbox-card" data-home-tool="profile" href="https://www.turnpo.com/u/leo" data-home-href-en="https://www.turnpo.com/u/leo" data-home-href-zh="https://www.turnpo.com/u/leo" target="_blank" rel="noopener noreferrer">
+                <span class="home-toolbox-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="10" r="5"/><path d="M6 28v-3a10 10 0 0 1 20 0v3"/></svg></span>
+                <span class="home-toolbox-copy"><strong data-home-en="Personal Profile · Turnpo" data-home-zh="个人主页 · Turnpo">Personal Profile · Turnpo</strong><small data-home-en="Meet the person behind MapKAI." data-home-zh="认识 MapKAI 背后的 Leo。">Meet the person behind MapKAI.</small></span>
+                <span class="home-toolbox-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div></div>
+          </div>
+        </section>
         <section class="home-section top-rated-story-section" id="topRatedStories" aria-live="polite" hidden></section>
         <section class="home-section" hidden>
           <div class="section-heading compact">
