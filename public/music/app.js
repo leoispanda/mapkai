@@ -85,6 +85,13 @@
   let composerStatus = null;
   let copyingPrompt = false;
   let copySequence = 0;
+  let linkedTrackHandled = false;
+  const linkedTrackId = (() => {
+    try {
+      const values = new URL(location.href).searchParams.getAll('track');
+      return values.length === 1 && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(values[0]) ? values[0].toLowerCase() : null;
+    } catch { return null; }
+  })();
 
   try {
     const saved = localStorage.getItem('mapkaiMusicLanguage');
@@ -744,6 +751,7 @@
   function createCard(track) {
     const element = document.createElement('li');
     element.className = 'track-card';
+    element.id = `song-${track.id}`;
     const button = document.createElement('button'); button.type = 'button'; button.className = 'track-button';
     const icon = document.createElement('span'); icon.className = 'track-icon'; icon.setAttribute('aria-hidden', 'true'); icon.dataset.state = 'play';
     const number = document.createElement('span'); number.className = 'track-number';
@@ -927,6 +935,23 @@
     return libraryPromise;
   }
 
+  function revealLinkedTrack() {
+    if (!loaded || linkedTrackHandled) return;
+    linkedTrackHandled = true;
+    const card = linkedTrackId && cards.get(linkedTrackId);
+    if (!card) return;
+    $('song-search').value = '';
+    $('subject-filter').value = '';
+    $('tempo-filter').value = '';
+    updateLibrary();
+    card.details.open = true;
+    requestAnimationFrame(() => {
+      if (!card.element.isConnected) return;
+      card.element.scrollIntoView({ block: 'center', behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+      card.button.focus({ preventScroll: true });
+    });
+  }
+
   async function fetchLibrary() {
     libraryFailed = false;
     $('retry-library').disabled = true;
@@ -947,6 +972,7 @@
       tracks = Array.from(results.values());
       loaded = true;
       syncCards();
+      revealLinkedTrack();
       return true;
     } catch {
       libraryFailed = true;
