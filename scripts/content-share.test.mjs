@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import { workShareResponse } from '../functions/_shared/work-share.js';
 import { articleShareMeta } from '../functions/_shared/article-share.js';
-import articles from '../functions/_shared/article-share-data.json' with { type: 'json' };
+import articles from '../functions/_shared/article-share-data.js';
 import { COST_GUARD_KEY, COST_GUARD_LIMITS } from '../functions/_shared/cost-guard.js';
 import { TRACK_SCHEMA, audioKey } from '../functions/api/music/_shared.js';
 

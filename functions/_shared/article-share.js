@@ -1,4 +1,4 @@
-import articles from './article-share-data.json' with { type: 'json' };
+import articles from './article-share-data.js';
 import { escape } from './work-share.js';
 
 export function articleShareMeta(response, url) {
