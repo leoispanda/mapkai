@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.303";
+const appVersion = "0.1.304";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18524,12 +18524,126 @@ function getCategorySongDisplayTitle(song) {
   return String(song.title || "").replace(/^\d{3,}\s+/, "").split(" - MapKAI - ")[0];
 }
 
+const categorySongSubjectLabels = {
+  "000": {
+    "zh": "通用学习",
+    "en": "General Studies"
+  },
+  "001": {
+    "zh": "基础课程与资格",
+    "en": "Basic Programmes & Qualifications"
+  },
+  "002": {
+    "zh": "读写与计算能力",
+    "en": "Literacy & Numeracy"
+  },
+  "003": {
+    "zh": "个人技能与发展",
+    "en": "Personal Skills & Development"
+  },
+  "009": {
+    "zh": "通用学习（其他类别）",
+    "en": "General Studies (other)"
+  },
+  "011": {
+    "zh": "教育",
+    "en": "Education"
+  },
+  "018": {
+    "zh": "跨学科教育",
+    "en": "Interdisciplinary Education"
+  },
+  "020": {
+    "zh": "艺术与人文",
+    "en": "Arts & Humanities"
+  },
+  "021": {
+    "zh": "艺术",
+    "en": "Arts"
+  },
+  "022": {
+    "zh": "人文",
+    "en": "Humanities"
+  },
+  "023": {
+    "zh": "语言",
+    "en": "Languages"
+  },
+  "028": {
+    "zh": "跨学科艺术与人文",
+    "en": "Interdisciplinary Arts & Humanities"
+  },
+  "029": {
+    "zh": "艺术与人文（其他类别）",
+    "en": "Arts & Humanities (other)"
+  },
+  "030": {
+    "zh": "社会科学",
+    "en": "Social Sciences"
+  },
+  "031": {
+    "zh": "社会与行为科学",
+    "en": "Social & Behavioural Sciences"
+  },
+  "032": {
+    "zh": "新闻与信息",
+    "en": "Journalism & Information"
+  },
+  "038": {
+    "zh": "跨学科社会科学",
+    "en": "Interdisciplinary Social Sciences"
+  }
+};
+
+const categorySongTopicLabelsZh = {
+  "Visual Analysis": "视觉分析",
+  "Thermal Insulation": "隔热与保温",
+  "Binary Search": "二分查找",
+  "Literacy and Numeracy": "读写与计算能力",
+  "Sampling Bias": "抽样偏差",
+  "Break-even Point": "盈亏平衡点",
+  "Dimensional Tolerance": "尺寸公差",
+  "Soil Infiltration": "土壤入渗",
+  "Little's Law": "利特尔定律",
+  "Scaffolding": "支架式教学",
+  "Teach-back": "复述确认",
+  "Spaced Retrieval Practice": "间隔提取练习",
+  "Measurement and Units": "度量与单位",
+  "Proportional Reasoning": "比例推理",
+  "Implementation Intentions": "执行意图",
+  "Categorical Data": "分类数据",
+  "Formative Assessment": "形成性评价",
+  "Integrated Learning": "整合学习",
+  "Aesthetic Judgment": "审美判断",
+  "Rhythmic Variation": "节奏变化",
+  "Historical Corroboration": "史料互证",
+  "Pragmatics": "语用学",
+  "Context": "情境与背景",
+  "Residual Classification": "剩余类别划分",
+  "Correlation": "相关性",
+  "Social Norms": "社会规范",
+  "Source Verification": "信源核验",
+  "Triangulation": "三角互证",
+  "Dutch Cultural Figures": "荷兰文化人物"
+};
+
+function getCategorySongSubject(song, categoryCode) {
+  const language = currentLanguage === "zh" ? "zh" : "en";
+  const groupCode = Object.keys(categoryGroupSongTracks).find(code => categoryGroupSongTracks[code].id === song.id);
+  const subject = categorySongSubjectLabels[groupCode]?.[language] || getPublicCategoryTitle(categoryCode);
+  const parts = String(song.title || "").split(" - MapKAI - ")[1]?.split(" - ") || [];
+  const topicEn = parts.slice(1).join(" - ");
+  const topic = language === "zh" ? categorySongTopicLabelsZh[topicEn] || topicEn : topicEn;
+  return [...new Set([subject, topic].filter(Boolean))].join(" · ");
+}
+
 function renderCategorySongButton(song, categoryCode) {
   const title = getCategorySongDisplayTitle(song);
+  const subject = getCategorySongSubject(song, categoryCode);
   const play = currentLanguage === "zh" ? "播放歌曲" : "Play song";
-  return `<button type="button" class="category-song-trigger" data-category-song-id="${escapeHtml(song.id)}" data-song-category="${escapeHtml(categoryCode)}" data-song-title="${escapeHtml(title)}" data-state="idle" aria-pressed="false" aria-label="${escapeHtml(`${play} · ${title}`)}" aria-describedby="categoryCompanionTitle">
+  return `<button type="button" class="category-song-trigger" data-category-song-id="${escapeHtml(song.id)}" data-song-category="${escapeHtml(categoryCode)}" data-song-title="${escapeHtml(title)}" data-song-subject="${escapeHtml(subject)}" data-state="idle" aria-pressed="false" aria-label="${escapeHtml([play, title, subject].filter(Boolean).join(" · "))}" aria-describedby="categoryCompanionTitle">
     <span class="category-song-note" aria-hidden="true">♫</span>
-    <span class="category-song-name">${escapeHtml(title)}</span>
+    <span class="category-song-text"><span class="category-song-name">${escapeHtml(title)}</span><span class="category-song-subject">${escapeHtml(subject)}</span></span>
     <span class="category-song-control" aria-hidden="true"><svg class="category-song-play-icon" viewBox="0 0 20 20"><path d="M7 4.5 15 10l-8 5.5z" fill="currentColor"/></svg><svg class="category-song-pause-icon" viewBox="0 0 20 20"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
   </button><p class="category-song-module-status" role="status"></p>`;
 }
@@ -18549,7 +18663,7 @@ function refreshCategorySongModules() {
     const labels = currentLanguage === "zh"
       ? { pending: "正在载入", playing: "暂停歌曲", paused: "播放歌曲", idle: "播放歌曲" }
       : { pending: "Loading", playing: "Pause song", paused: "Play song", idle: "Play song" };
-    button.setAttribute("aria-label", `${labels[state]} · ${button.dataset.songTitle}`);
+    button.setAttribute("aria-label", [labels[state], button.dataset.songTitle, button.dataset.songSubject].filter(Boolean).join(" · "));
     if (state === "pending") button.setAttribute("aria-busy", "true");
     else button.removeAttribute("aria-busy");
   });
@@ -21627,7 +21741,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.303").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.304").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

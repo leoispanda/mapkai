@@ -4610,7 +4610,9 @@ canvas {
 .category-song-trigger:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 .category-song-trigger:disabled { cursor: wait; }
 .category-song-note { flex: 0 0 auto; color: var(--blue-dark); font-size: 1.35rem; line-height: 1; }
-.category-song-name { flex: 1; min-width: 0; overflow-wrap: anywhere; font-weight: 600; line-height: 1.45; }
+.category-song-text { display: grid; flex: 1; min-width: 0; gap: 3px; }
+.category-song-name { min-width: 0; overflow-wrap: anywhere; font-weight: 600; line-height: 1.45; }
+.category-song-subject { color: var(--muted); font-size: 0.72rem; font-weight: 400; line-height: 1.45; overflow-wrap: anywhere; }
 .category-song-control { display: grid; place-items: center; flex: 0 0 30px; width: 30px; height: 30px; border: 1px solid rgba(37, 99, 235, 0.12); border-radius: 50%; color: var(--blue-dark); background: rgba(37, 99, 235, 0.09); backdrop-filter: blur(8px); }
 .category-song-control svg { width: 17px; height: 17px; }
 .category-song-pause-icon, .category-song-trigger[data-state="playing"] .category-song-play-icon { display: none; }
