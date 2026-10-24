@@ -5,7 +5,7 @@ import { costResponse } from './cost-guard.js';
 
 export const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const origin = 'https://www.mapkai.com';
-const assetVersion = 'sharing-20261024';
+const assetVersion = 'address-bar-20261024';
 const bilingual = (value, lang) => value?.[lang] || value?.en || value?.zh || '';
 
 export async function workShareResponse({ request, env = {}, kind, id }) {
