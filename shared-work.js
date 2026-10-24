@@ -10,6 +10,7 @@
     });
   }
   const video = document.querySelector('video');
+  video?.addEventListener('contextmenu', event => event.preventDefault());
   const quality = document.querySelector('#work-quality');
   let pendingSeek = null;
   quality?.addEventListener('change', () => {

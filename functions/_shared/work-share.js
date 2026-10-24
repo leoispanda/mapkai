@@ -24,13 +24,13 @@ export async function workShareResponse({ request, env = {}, kind, id }) {
       const item = publicVideos().find(item => item.id === id);
       if (!item) return unavailable(404, zh);
       title = bilingual(item.title, lang); description = bilingual(item.description, lang); image = item.poster; back = '/music/videos/';
-      body = `<p class="work-notice">AI generated · ${zh ? '画面与人物为艺术演绎' : 'Imagined scenes and portraits'}</p><video controls playsinline preload="none" poster="${escape(item.poster)}" src="${escape(item.qualities[0].url)}" aria-label="${escape(title)}"></video><div class="work-qualities">${item.qualities.length > 1 ? `<label>${zh ? '播放画质' : 'Playback quality'} <select id="work-quality">${item.qualities.map(q => `<option data-src="${escape(q.url)}">${escape(bilingual(q.label, lang))}</option>`).join('')}</select></label>` : ''}${item.qualities.map(q => `<a href="${escape(q.downloadUrl)}" download>${zh ? '下载' : 'Download'} ${escape(bilingual(q.label, lang))}</a>`).join('')}</div>`;
+      body = `<p class="work-notice">AI generated · ${zh ? '画面与人物为艺术演绎' : 'Imagined scenes and portraits'}</p><video controls controlslist="nodownload" playsinline preload="none" poster="${escape(item.poster)}" src="${escape(item.qualities[0].url)}" aria-label="${escape(title)}"></video>${item.qualities.length > 1 ? `<div class="work-qualities"><label>${zh ? '播放画质' : 'Playback quality'} <select id="work-quality">${item.qualities.map(q => `<option data-src="${escape(q.url)}">${escape(bilingual(q.label, lang))}</option>`).join('')}</select></label></div>` : ''}`;
     } else if (kind === 'video' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) {
       const record = getPublicItemBySlug(await readPublicCatalog(env), id);
       if (!record) return unavailable(404, zh);
       const item = publicItemProjection(record);
       title = item.fieldName; description = item.disclosure; back = '/categories';
-      body = `<p class="work-notice">AI generated</p><p class="work-notice">${escape(item.reviewLabel)}</p><video controls playsinline preload="none" src="${escape(item.videoUrl)}" aria-label="${escape(title)}"></video>`;
+      body = `<p class="work-notice">AI generated</p><p class="work-notice">${escape(item.reviewLabel)}</p><video controls controlslist="nodownload" playsinline preload="none" src="${escape(item.videoUrl)}" aria-label="${escape(title)}"></video>`;
     } else return unavailable(404, zh);
   } catch (error) { return costResponse(error) || unavailable(503, zh); }
   const canonical = `${origin}/share/${kind}/${encodeURIComponent(id)}?lang=${lang}`;

@@ -45,12 +45,13 @@ test('archived, missing and invalid works never fall back to a collection or pri
   assert.equal(f.reads(), 0);
 });
 
-test('music video links render the selected film with its own poster and rendition links', async () => {
+test('music video links render only the selected film with no download controls or links', async () => {
   for (const id of ['your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
     const response = await call('film', id, {}); const html = await response.text();
     assert.equal(response.status, 200); assert.equal((html.match(/<video /g) || []).length, 1);
     assert.match(html, new RegExp(`/share/film/${id}\\?lang=en`)); assert.match(html, new RegExp(`/music/videos/posters/${id}.jpg`));
     assert.match(html, /AI generated/); assert.doesNotMatch(html, /autoplay|objectKey|sha256/);
+    assert.match(html, /controlslist="nodownload"/); assert.doesNotMatch(html, /<a[^>]+\bdownload\b|downloadUrl|download=1|href="undefined"/);
   }
 });
 
