@@ -113,10 +113,10 @@ test('browser metadata uses the article identity after internal navigation and l
 test('sharing uses the work permalink and language; native cancellation does not copy', async () => {
   const source = await readFile(new URL('../content-share.js', import.meta.url), 'utf8');
   async function run(navigator) {
-    const document = { documentElement: { lang: 'zh-CN' }, body: {}, querySelectorAll: () => [] };
-    const context = vm.createContext({ document, location: { origin: 'https://www.mapkai.com', pathname: '/music/' }, URL,
+    const document = { documentElement: { lang: 'zh-CN' }, body: {}, querySelectorAll: () => [], addEventListener() {} };
+    const context = vm.createContext({ document, window: { addEventListener() {} }, location: { origin: 'https://www.mapkai.com', pathname: '/music/' }, URL,
       navigator, MutationObserver: class { observe() {} }, setTimeout() {} });
-    vm.runInContext(source.replace('  scan();\n})();', '  globalThis.testShare = share;\n  scan();\n})();'), context);
+    vm.runInContext(source.replace('  scan();\n  syncMusicAddress();\n})();', '  globalThis.testShare = share;\n  scan();\n  syncMusicAddress();\n})();'), context);
     const button = { dataset: { sharePath: `/share/song/${id}`, shareTitle: 'One song', shareKind: 'song' }, disabled: false };
     await context.testShare(button); assert.equal(button.disabled, false); return button;
   }
