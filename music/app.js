@@ -581,6 +581,7 @@
     card.number.textContent = parts.number;
     card.number.hidden = !parts.number;
     card.title.textContent = parts.name;
+    card.title.href = `/share/song/${card.track.id}?lang=${language}`;
     card.subject.textContent = [parts.subject, parts.concept].filter(Boolean).join(' · ');
     card.subject.hidden = !card.subject.textContent;
     card.subject.title = card.subject.textContent;
@@ -759,11 +760,12 @@
     const element = document.createElement('li');
     element.className = 'track-card';
     element.id = `song-${track.id}`;
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'track-button';
+    const row = document.createElement('div'); row.className = 'track-button';
+    const button = document.createElement('button'); button.type = 'button'; button.className = 'track-play-button';
     const icon = document.createElement('span'); icon.className = 'track-icon'; icon.setAttribute('aria-hidden', 'true'); icon.dataset.state = 'play';
     const number = document.createElement('span'); number.className = 'track-number';
     const content = document.createElement('span'); content.className = 'track-copy';
-    const title = document.createElement('span'); title.className = 'track-title'; title.textContent = track.title;
+    const title = document.createElement('a'); title.className = 'track-title'; title.textContent = track.title;
     const subject = document.createElement('span'); subject.className = 'track-subject';
     const lengthLabel = document.createElement('span'); lengthLabel.className = 'track-length';
     const rowMeta = document.createElement('span'); rowMeta.className = 'track-row-meta';
@@ -777,7 +779,8 @@
     const description = document.createElement('span'); description.className = 'track-description'; description.textContent = track.description; description.hidden = !track.description;
     const meta = document.createElement('span'); meta.className = 'track-meta';
     const action = document.createElement('span'); action.className = 'track-action'; action.setAttribute('aria-hidden', 'true');
-    content.append(title, subject, tempo, action); rowMeta.append(disclosure, lengthLabel); button.append(number, icon, content, rowMeta);
+    content.append(title, subject, tempo, action); rowMeta.append(disclosure, lengthLabel);
+    button.append(icon); row.append(number, button, content, rowMeta);
     const audio = playbackAudio;
     const controlId = `song-controls-${++cardSequence}`;
     const progress = document.createElement('div'); progress.className = 'playback-progress'; progress.hidden = true; progress.id = `${controlId}-progress`;
@@ -804,7 +807,7 @@
     const statsDetails = document.createElement('p'); statsDetails.className = 'track-listening-details';
     const reactions = createReactionControls(() => card.track);
     detailsBody.append(fullTitle, description, meta, statsDetails, reactions.element, lyricsDetails, originalLyricsDetails);
-    element.append(button, stats, details, progress, error);
+    element.append(row, stats, details, progress, error);
     const card = { element, button, stats, statsDetails, number, subject, lengthLabel, fullTitle, details, detailsSummary, progress, reactions, icon, action, audio, seek, elapsed, length, error, title, disclosure, tempo, description, meta, lyricsDetails, lyricsSummary, lyricsText, lyricsSpan, lyricsUnavailable, originalLyricsDetails, originalLyricsSummary, originalLyricsText, lyricLines: [], renderedLyrics: null, currentLyricLine: null, track, pending: false, waiting: false, playRequest: 0, lyricsActive: false };
     button.addEventListener('click', () => {
       playlistIds = tracks.map(item => item.id); playlistMode = true; playlistComplete = false;

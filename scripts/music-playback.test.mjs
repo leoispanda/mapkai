@@ -114,7 +114,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     page: window.MapKAIMusicPage, element: id => ids.get(id), rows: () => ids.get('tracks').children,
     allAudio: () => all.filter(element => element.tagName === 'AUDIO'),
-    click: element => element.dispatchEvent({ type: 'click' }),
+    click: element => (element.className === 'track-button' ? element.children.find(child => child.className === 'track-play-button') : element).dispatchEvent({ type: 'click' }),
     input: (id, value, event = 'input') => { const element = ids.get(id); element.value = value; element.dispatchEvent({ type: event }); },
     rank: (id, score) => { scores.set(id, score); preferenceListener(); },
     setSongs: next => { currentSongs = next; }, values,

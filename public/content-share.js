@@ -2,8 +2,8 @@
 (() => {
   'use strict';
   const labels = {
-    zh: { song: '分享这首歌', film: '分享这个视频', video: '分享这个视频', article: '分享这篇文章', copied: '链接已复制', fallback: '复制下面的链接即可分享', close: '关闭', copy: '复制链接', open: '打开作品 ↗' },
-    en: { song: 'Share this song', film: 'Share this video', video: 'Share this video', article: 'Share this article', copied: 'Link copied', fallback: 'Copy this link to share', close: 'Close', copy: 'Copy link', open: 'Open work ↗' },
+    zh: { song: '分享这首歌', film: '分享这个视频', video: '分享这个视频', article: '分享这篇文章', copied: '链接已复制', fallback: '复制下面的链接即可分享', close: '关闭', copy: '复制链接' },
+    en: { song: 'Share this song', film: 'Share this video', video: 'Share this video', article: 'Share this article', copied: 'Link copied', fallback: 'Copy this link to share', close: 'Close', copy: 'Copy link' },
   };
   const language = () => document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
   const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
@@ -85,7 +85,15 @@
       try {
         await navigator.clipboard.writeText(url);
         button.textContent = labels[language()].copied;
-        setTimeout(() => { if (button.isConnected) button.textContent = labels[language()][copyOnly ? 'copy' : button.dataset.shareKind]; }, 2500);
+        button.dataset.copyState = 'copied'; button.title = labels[language()].copied;
+        button.setAttribute?.('aria-label', `${labels[language()].copied} · ${title}`);
+        setTimeout(() => {
+          if (!button.isConnected) return;
+          delete button.dataset.copyState;
+          const text = labels[language()][copyOnly ? 'copy' : button.dataset.shareKind];
+          button.textContent = text; button.title = text;
+          button.setAttribute('aria-label', `${text} · ${button.dataset.shareTitle}`);
+        }, 2500);
       } catch { manualCopy(url); }
     } finally { button.disabled = false; }
   }
@@ -99,26 +107,24 @@
         button.className = copyOnly ? 'content-copy-button' : 'content-share-button';
         button.addEventListener('click', () => share(button, copyOnly)); actions.append(button);
       }
-      target.append(actions);
+      if (target.classList.contains('track-details-body')) target.prepend(actions);
+      else target.append(actions);
     }
     for (const [index, button] of [...actions.children].filter(node => node.tagName === 'BUTTON').entries()) {
       button.dataset.sharePath = path; button.dataset.shareTitle = title; button.dataset.shareKind = kind;
       const text = labels[language()][index ? 'copy' : kind];
       if (button.textContent !== text && button.textContent !== labels[language()].copied) button.textContent = text;
-      button.setAttribute('aria-label', `${text} · ${title}`);
-    }
-    if (!document.body.classList.contains('shared-work-page')) {
-      let link = actions.querySelector('.content-open-link');
-      if (!link) { link = document.createElement('a'); link.className = 'content-open-link'; actions.append(link); }
-      link.href = urlFor(path); link.textContent = labels[language()].open;
-      link.setAttribute('aria-label', `${labels[language()].open} · ${title}`);
+      const accessibleText = button.dataset.copyState === 'copied' ? labels[language()].copied : text;
+      button.title = accessibleText;
+      button.setAttribute('aria-label', `${accessibleText} · ${title}`);
     }
   }
 
   function scan() {
     document.querySelectorAll('.track-card[id^="song-"]').forEach(card => {
       const id = card.id.slice(5);
-      if (uuid.test(id)) attach(card, `/share/song/${id}`, card.querySelector('.track-title')?.textContent || '', 'song');
+      const details = card.querySelector('.track-details-body');
+      if (uuid.test(id) && details) attach(details, `/share/song/${id}`, card.querySelector('.track-title')?.textContent || '', 'song');
     });
     document.querySelectorAll('.film-card[id]').forEach(card => {
       if (!slug.test(card.id)) return;
