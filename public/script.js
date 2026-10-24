@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.300";
+const appVersion = "0.1.301";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18823,22 +18823,11 @@ const ownerCulturalSongs = [
 function renderOwnerCulturalSongs(category) {
   if (category.code !== "02") return "";
   const zh = currentLanguage === "zh";
-  return `<a class="category-mv-feature" href="/music/videos/?lang=${zh ? "zh" : "en"}#your-turn-asml">
-    <span class="category-mv-poster"><img src="/music/videos/posters/your-turn-asml.jpg" width="640" height="360" alt="" loading="lazy" decoding="async"><span aria-hidden="true">▶</span></span>
-    <span class="category-mv-copy"><span class="category-mv-label">${zh ? "音乐影像 · AI 艺术创作" : "Music videos · AI-created art"}</span><strong>Your Turn</strong><span>${zh ? "从画家的笔触，到科学家的镜片与芯片上的光。用一首歌，走进荷兰人物与他们的作品。" : "From a painter’s brush to a scientist’s lens and light on a chip. A song becomes a journey through Dutch figures and their work."}</span><span class="category-mv-action">${zh ? "观看 MV" : "Watch video"} ↗</span></span>
-  </a>
+  return `<a class="category-music-video-link" href="/music/videos/?lang=${zh ? "zh" : "en"}#your-turn-asml">Your Turn · MV</a>
   <details class="category-extra-songs">
     <summary>${zh ? "更多主题歌曲 · 8 首" : "More themed songs · 8"}</summary>
-  <section class="category-song" aria-labelledby="ownerCulturalSongsTitle">
-    <div class="category-song-copy">
-      <p class="category-song-label">${zh ? "更多主题歌曲 · AI 生成" : "More themed songs · AI-generated"}</p>
-      <h2 id="ownerCulturalSongsTitle">${zh ? "荷兰文化人物" : "Dutch Cultural Figures"}</h2>
-      <p>${zh ? "8 个独立英文录音；完整原始歌词可在音乐库查看。歌曲中的历史人物声音为艺术想象。" : "Eight distinct English recordings. Complete original lyrics are available in Music. Historical voices are imagined for the songs."}</p>
-      <ol>${ownerCulturalSongs.map(song => `<li><button type="button" class="button secondary" data-owner-cultural-song="${song.id}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</button></li>`).join("")}</ol>
-      <p role="status" class="category-song-status"></p>
-      <a href="/music/">${zh ? "打开音乐库与完整歌词" : "Open Music and complete lyrics"}</a>
-    </div>
-  </section></details>`;
+    <div class="category-extra-song-links">${ownerCulturalSongs.map(song => `<a href="/share/song/${song.id}?lang=${zh ? "zh" : "en"}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</a>`).join("")}</div>
+  </details>`;
 }
 
 async function playOwnerCulturalSong(button) {
@@ -18963,7 +18952,7 @@ function renderCategoryTree(category) {
   const culturalTarget = document.getElementById("categoryCulturalSongs");
   if (culturalTarget) culturalTarget.innerHTML = renderOwnerCulturalSongs(category);
   const companionTitle = document.getElementById("categoryCompanionTitle");
-  if (companionTitle) companionTitle.textContent = currentLanguage === "zh" ? "听与看" : "Listen & watch";
+  if (companionTitle) companionTitle.textContent = currentLanguage === "zh" ? "相关歌曲 · AI 生成" : "Music · AI-generated";
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
@@ -21689,7 +21678,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.300").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.301").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

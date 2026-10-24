@@ -63,12 +63,12 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/styles.css?v=0.1.300" />
-    <link rel="stylesheet" href="/map3d.css?v=0.1.300" />
-    <link rel="stylesheet" href="/site-shell.css?v=0.1.300" />
+    <link rel="stylesheet" href="/styles.css?v=0.1.301" />
+    <link rel="stylesheet" href="/map3d.css?v=0.1.301" />
+    <link rel="stylesheet" href="/site-shell.css?v=0.1.301" />
     <link rel="stylesheet" href="/home-toolbox.css?v=1" />
     <script src="/home-toolbox.js?v=1" defer></script>
-    <script src="/site-shell.js?v=0.1.300" defer></script>
+    <script src="/site-shell.js?v=0.1.301" defer></script>
     <script type="importmap">{"imports":{"three":"/assets/vendor/three/three.module.js"}}</script>
     <link rel="stylesheet" href="/content-share.css?v=quiet-actions-20261024">
     <script src="/content-share.js?v=quiet-actions-20261024" defer></script>
@@ -744,46 +744,46 @@
           <h1 id="categoryDetailTitle">Knowledge category</h1>
           <p id="categoryDetailCopy"></p>
         </div>
+        <section class="mapkai-video-preview" id="categoryVideoPreview" hidden aria-labelledby="categoryVideoPreviewTitle">
+          <div class="mapkai-video-preview-intro">
+            <div>
+              <p class="eyebrow">Learning preview</p>
+              <h2 id="categoryVideoPreviewTitle">See this field in motion</h2>
+            </div>
+            <span class="mapkai-video-preview-status">Pending review · Not fully approved</span>
+          </div>
+          <p class="mapkai-video-preview-disclosure">AI generated</p>
+          <div class="mapkai-video-preview-player">
+            <video id="categoryVideoPreviewPlayer" controls preload="metadata" playsinline></video>
+          </div>
+          <p class="mapkai-video-preview-meta" id="categoryVideoPreviewMeta"></p>
+        </section>
+        <section class="category-music-links" aria-labelledby="categoryCompanionTitle">
+          <h2 class="category-companion-title" id="categoryCompanionTitle">Music · AI-generated</h2>
+          <section class="category-song" id="categorySong" hidden aria-labelledby="categorySongTitle">
+            <div class="category-song-copy">
+              <div class="category-song-heading"><p class="category-song-label" id="categorySongLabel"></p><span class="category-song-ai" id="categorySongAI"></span></div>
+              <h2 id="categorySongTitle"></h2>
+              <p class="category-song-meta" id="categorySongMeta"></p>
+              <details class="category-song-details" id="categorySongDetails">
+                <summary id="categorySongDetailsLabel">About this song</summary>
+                <p class="category-song-core" id="categorySongCore"></p>
+                <p class="category-song-meta" id="categorySongStyle"></p>
+                <p class="category-song-tempo" id="categorySongTempo"></p>
+              </details>
+            </div>
+            <div class="category-song-action">
+              <button class="button secondary" id="categorySongPlay" type="button" aria-describedby="categorySongAI categorySongStatus"></button>
+              <p class="category-song-status" id="categorySongStatus" role="status"></p>
+            </div>
+          </section>
+          <div class="category-group-songs" id="categoryGroupSongs"></div>
+          <div id="categoryCulturalSongs"></div>
+        </section>
         <div class="passport-panel founder-only" id="categoryPassport"></div>
         <div class="tree-panel" id="categoryTree"></div>
         <div class="category-reading-layout" id="categoryReadingLayout">
           <div class="category-story-column" id="categoryStory"></div>
-          <aside class="category-companion" aria-labelledby="categoryCompanionTitle">
-            <h2 class="category-companion-title" id="categoryCompanionTitle">Listen &amp; watch</h2>
-            <section class="category-song" id="categorySong" hidden aria-labelledby="categorySongTitle">
-              <div class="category-song-copy">
-                <div class="category-song-heading"><p class="category-song-label" id="categorySongLabel"></p><span class="category-song-ai" id="categorySongAI"></span></div>
-                <h2 id="categorySongTitle"></h2>
-                <p class="category-song-meta" id="categorySongMeta"></p>
-                <details class="category-song-details" id="categorySongDetails">
-                  <summary id="categorySongDetailsLabel">About this song</summary>
-                  <p class="category-song-core" id="categorySongCore"></p>
-                  <p class="category-song-meta" id="categorySongStyle"></p>
-                  <p class="category-song-tempo" id="categorySongTempo"></p>
-                </details>
-              </div>
-              <div class="category-song-action">
-                <button class="button secondary" id="categorySongPlay" type="button" aria-describedby="categorySongAI categorySongStatus"></button>
-                <p class="category-song-status" id="categorySongStatus" role="status"></p>
-              </div>
-            </section>
-            <div class="category-group-songs" id="categoryGroupSongs"></div>
-            <div id="categoryCulturalSongs"></div>
-            <section class="mapkai-video-preview" id="categoryVideoPreview" hidden aria-labelledby="categoryVideoPreviewTitle">
-              <div class="mapkai-video-preview-intro">
-                <div>
-                  <p class="eyebrow">Learning preview</p>
-                  <h2 id="categoryVideoPreviewTitle">See this field in motion</h2>
-                </div>
-                <span class="mapkai-video-preview-status">Pending review · Not fully approved</span>
-              </div>
-              <p class="mapkai-video-preview-disclosure">AI generated</p>
-              <div class="mapkai-video-preview-player">
-                <video id="categoryVideoPreviewPlayer" controls preload="metadata" playsinline></video>
-              </div>
-              <p class="mapkai-video-preview-meta" id="categoryVideoPreviewMeta"></p>
-            </section>
-          </aside>
         </div>
         <div class="route-cta">
           <a class="button primary" href="/explore" data-route="/explore">Explore This Domain</a>
@@ -850,10 +850,10 @@
         <ol class="learning-timeline" id="foundationTimeline"></ol>
       </section>
     </main>
-    <script src="/content/field-fables.js?v=0.1.300"></script>
-    <script src="/content/management-column.js?v=0.1.300"></script>
-    <script src="/content/management-lesson-stories.js?v=0.1.300"></script>
-    <script src="/content/management-lesson-references.js?v=0.1.300"></script>
-    <script src="/script.js?v=0.1.300"></script>
+    <script src="/content/field-fables.js?v=0.1.301"></script>
+    <script src="/content/management-column.js?v=0.1.301"></script>
+    <script src="/content/management-lesson-stories.js?v=0.1.301"></script>
+    <script src="/content/management-lesson-references.js?v=0.1.301"></script>
+    <script src="/script.js?v=0.1.301"></script>
   </body>
 </html>
