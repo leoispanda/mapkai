@@ -222,13 +222,13 @@ test('shared vote reorder and number sorting preserve selection, audio node, tim
   assert.equal(h.original(h.rows().find(row => row.children[0].children[0].textContent === '002')).textContent, catalog[1].lyrics);
 });
 
-test('song detail panels keep the complete name and lyrics and open only one at a time', async () => {
+test('song detail panels show the song name and complete lyrics and open only one at a time', async () => {
   const h = harness(); await flush();
   assert.equal(h.details(h.rows()[0]).open, false);
   const one = h.details(h.rows()[0]), two = h.details(h.rows()[1]);
   one.open = true; one.dispatchEvent({ type: 'toggle' }); two.open = true; two.dispatchEvent({ type: 'toggle' });
   assert.equal(one.open, false); assert.equal(two.open, true);
-  assert.equal(two.children[1].children[0].textContent, catalog[1].title);
+  assert.equal(two.children[1].children[0].textContent, 'Second Look');
   assert.equal(h.original(h.rows()[1]).textContent, catalog[1].lyrics);
 });
 

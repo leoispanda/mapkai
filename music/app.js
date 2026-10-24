@@ -584,7 +584,7 @@
     card.subject.textContent = [parts.subject, parts.concept].filter(Boolean).join(' · ');
     card.subject.hidden = !card.subject.textContent;
     card.subject.title = card.subject.textContent;
-    card.fullTitle.textContent = card.track.title;
+    card.fullTitle.textContent = parts.name;
     card.lengthLabel.textContent = length;
     card.lengthLabel.hidden = !length;
     card.detailsSummary.setAttribute('aria-label', t('detailsLabel', { title: card.track.title }));
@@ -834,7 +834,7 @@
 
   function compactTrackTitle(track) {
     const parts = trackParts(track);
-    return [parts.number, parts.name].filter(Boolean).join(' ');
+    return parts.name;
   }
 
   function updateSubjectOptions() {

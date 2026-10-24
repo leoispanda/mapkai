@@ -20,37 +20,37 @@
       "id": "bb5957e7-9e91-45e1-a978-5643451d7820",
       "number": 2,
       "numberLabel": "002",
-      "songName": "Dutch Horizons (Road Trip Version)",
+      "songName": "Dutch Horizons (Draft 1)",
       "subjectName": "Geography",
       "conceptName": "Dutch City Names",
       "createdAt": "2026-10-11T10:22:46.053Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "002 Dutch Horizons (Road Trip Version) - MapKAI - Geography - Dutch City Names"
+      "title": "002 Dutch Horizons (Draft 1) - MapKAI - Geography - Dutch City Names"
     },
     {
       "id": "ccb37c55-bae6-4f72-a80a-d1bc94e40ae0",
       "number": 3,
       "numberLabel": "003",
-      "songName": "Dutch Horizons (Symphonic Version)",
+      "songName": "Dutch Horizons (Draft 2)",
       "subjectName": "Geography",
       "conceptName": "Dutch Cities and Cultural Names",
       "createdAt": "2026-10-11T10:39:30.559Z",
       "language": "nl",
       "brandName": "MapKAI",
-      "title": "003 Dutch Horizons (Symphonic Version) - MapKAI - Geography - Dutch Cities and Cultural Names"
+      "title": "003 Dutch Horizons (Draft 2) - MapKAI - Geography - Dutch Cities and Cultural Names"
     },
     {
       "id": "e4363fdb-2354-4e5c-98f0-9549b689b5c3",
       "number": 4,
       "numberLabel": "004",
-      "songName": "Dutch Horizons (Folk Rap Version)",
+      "songName": "Dutch Horizons (Draft 3)",
       "subjectName": "Geography",
       "conceptName": "Dutch Cities and Cultural Names",
       "createdAt": "2026-10-11T10:39:30.559Z",
       "language": "nl",
       "brandName": "MapKAI",
-      "title": "004 Dutch Horizons (Folk Rap Version) - MapKAI - Geography - Dutch Cities and Cultural Names"
+      "title": "004 Dutch Horizons (Draft 3) - MapKAI - Geography - Dutch Cities and Cultural Names"
     },
     {
       "id": "4fa6e4f7-9995-4768-9958-3c7e5c74ea99",
@@ -68,25 +68,25 @@
       "id": "6e294673-6d7c-4c16-8464-f43c88a4d3e2",
       "number": 6,
       "numberLabel": "006",
-      "songName": "Dutch Horizons (Rock Version)",
+      "songName": "Dutch Horizons (Draft 4)",
       "subjectName": "Geography",
       "conceptName": "Dutch City Names",
       "createdAt": "2026-10-11T14:31:33.553Z",
       "language": "nl",
       "brandName": "MapKAI",
-      "title": "006 Dutch Horizons (Rock Version) - MapKAI - Geography - Dutch City Names"
+      "title": "006 Dutch Horizons (Draft 4) - MapKAI - Geography - Dutch City Names"
     },
     {
       "id": "ba310ae6-7b5f-4807-934a-9e0ddd849491",
       "number": 7,
       "numberLabel": "007",
-      "songName": "Dutch Horizons (Memphis Groove)",
+      "songName": "Dutch Horizons (Draft 5)",
       "subjectName": "Geography",
       "conceptName": "Dutch City Names",
       "createdAt": "2026-10-11T14:45:15.421Z",
       "language": "nl",
       "brandName": "MapKAI",
-      "title": "007 Dutch Horizons (Memphis Groove) - MapKAI - Geography - Dutch City Names"
+      "title": "007 Dutch Horizons (Draft 5) - MapKAI - Geography - Dutch City Names"
     },
     {
       "id": "c2a4a749-933b-4b4b-95fb-0d2d3f12ac6f",
@@ -212,109 +212,109 @@
       "id": "738f6165-d1c7-4d94-864b-a88f484318d9",
       "number": 18,
       "numberLabel": "018",
-      "songName": "Show Me What Changed",
+      "songName": "Show Me What Changed (Draft 1)",
       "subjectName": "Education",
       "conceptName": "Formative Assessment",
       "createdAt": "2026-10-12T12:37:09.450Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "018 Show Me What Changed - MapKAI - Education - Formative Assessment"
+      "title": "018 Show Me What Changed (Draft 1) - MapKAI - Education - Formative Assessment"
     },
     {
       "id": "1977976d-4585-4194-bbee-49068a5620f1",
       "number": 19,
       "numberLabel": "019",
-      "songName": "Ask Me What I Need (Faded Ending)",
+      "songName": "Ask Me What I Need (Draft 1)",
       "subjectName": "Health and Welfare",
       "conceptName": "Person-Centred Care",
       "createdAt": "2026-10-12T18:23:35.669Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "019 Ask Me What I Need (Faded Ending) - MapKAI - Health and Welfare - Person-Centred Care"
+      "title": "019 Ask Me What I Need (Draft 1) - MapKAI - Health and Welfare - Person-Centred Care"
     },
     {
       "id": "06f9d872-0c71-4bb5-aaef-8a0b07116c47",
       "number": 20,
       "numberLabel": "020",
-      "songName": "Show Me What Changed (Original Version)",
+      "songName": "Show Me What Changed (Draft 2)",
       "subjectName": "Education",
       "conceptName": "Formative Assessment",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "020 Show Me What Changed (Original Version) - MapKAI - Education - Formative Assessment"
+      "title": "020 Show Me What Changed (Draft 2) - MapKAI - Education - Formative Assessment"
     },
     {
       "id": "30be18b4-94ec-4acf-87c4-dc4298cd38f4",
       "number": 21,
       "numberLabel": "021",
-      "songName": "The Cards Beside the Fold (Clear Version)",
+      "songName": "The Cards Beside the Fold (Draft 1)",
       "subjectName": "Education",
       "conceptName": "Scaffolding",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "021 The Cards Beside the Fold (Clear Version) - MapKAI - Education - Scaffolding"
+      "title": "021 The Cards Beside the Fold (Draft 1) - MapKAI - Education - Scaffolding"
     },
     {
       "id": "4dd21df7-9ea8-40f9-92ae-8458102f9ceb",
       "number": 22,
       "numberLabel": "022",
-      "songName": "Read the Small Print (Original Version)",
+      "songName": "Read the Small Print",
       "subjectName": "Generic programmes and qualifications",
       "conceptName": "Literacy and Numeracy",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "022 Read the Small Print (Original Version) - MapKAI - Generic programmes and qualifications - Literacy and Numeracy"
+      "title": "022 Read the Small Print - MapKAI - Generic programmes and qualifications - Literacy and Numeracy"
     },
     {
       "id": "51bfd6b7-e28e-4bcd-9a84-70841309d8c9",
       "number": 23,
       "numberLabel": "023",
-      "songName": "The Cards Beside the Fold (Original Version)",
+      "songName": "The Cards Beside the Fold (Draft 2)",
       "subjectName": "Education",
       "conceptName": "Scaffolding",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "023 The Cards Beside the Fold (Original Version) - MapKAI - Education - Scaffolding"
+      "title": "023 The Cards Beside the Fold (Draft 2) - MapKAI - Education - Scaffolding"
     },
     {
       "id": "90fdbcee-57ee-4014-a34a-a6c797da2acb",
       "number": 24,
       "numberLabel": "024",
-      "songName": "Ask Me What I Need (Full Recording)",
+      "songName": "Ask Me What I Need (Draft 2)",
       "subjectName": "Health and Welfare",
       "conceptName": "Person-Centred Care",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "024 Ask Me What I Need (Full Recording) - MapKAI - Health and Welfare - Person-Centred Care"
+      "title": "024 Ask Me What I Need (Draft 2) - MapKAI - Health and Welfare - Person-Centred Care"
     },
     {
       "id": "cbbdef58-3ec6-40f7-be79-0d7fc96f4c70",
       "number": 25,
       "numberLabel": "025",
-      "songName": "Under the Blue (Original Version)",
+      "songName": "Under the Blue",
       "subjectName": "Arts and Humanities",
       "conceptName": "Visual Analysis",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "025 Under the Blue (Original Version) - MapKAI - Arts and Humanities - Visual Analysis"
+      "title": "025 Under the Blue - MapKAI - Arts and Humanities - Visual Analysis"
     },
     {
       "id": "dd6263c6-5da3-4e67-8856-c97f0e293663",
       "number": 26,
       "numberLabel": "026",
-      "songName": "Ask Me What I Need (Original Version)",
+      "songName": "Ask Me What I Need (Draft 3)",
       "subjectName": "Health and Welfare",
       "conceptName": "Person-Centred Care",
       "createdAt": "2026-10-13T19:31:34.782Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "026 Ask Me What I Need (Original Version) - MapKAI - Health and Welfare - Person-Centred Care"
+      "title": "026 Ask Me What I Need (Draft 3) - MapKAI - Health and Welfare - Person-Centred Care"
     },
     {
       "id": "3ac342f9-51cd-4f3b-a43a-8a8dc57cde12",
@@ -658,12 +658,12 @@
     {
       "id": "82525547-93c9-4477-b85d-c1120e29e112",
       "number": 55,
-      "songName": "Carry the Light (Rock 1)",
+      "songName": "Carry the Light (Draft 1)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "055 Carry the Light (Rock 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "055 Carry the Light (Draft 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "055",
       "language": "en",
       "brandName": "MapKAI"
@@ -671,12 +671,12 @@
     {
       "id": "cb685be8-40cc-40cb-b86e-e8cf0c564f55",
       "number": 56,
-      "songName": "Carry the Light (Rock 2)",
+      "songName": "Carry the Light (Draft 2)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "056 Carry the Light (Rock 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "056 Carry the Light (Draft 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "056",
       "language": "en",
       "brandName": "MapKAI"
@@ -684,12 +684,12 @@
     {
       "id": "c58a7409-96d7-4e6c-80d4-e455c41e7387",
       "number": 57,
-      "songName": "Carry the Light (Folk 1)",
+      "songName": "Carry the Light (Draft 3)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "057 Carry the Light (Folk 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "057 Carry the Light (Draft 3) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "057",
       "language": "en",
       "brandName": "MapKAI"
@@ -697,12 +697,12 @@
     {
       "id": "a5fae2ac-c8f5-452e-8085-67da52598636",
       "number": 58,
-      "songName": "Carry the Light (Folk 2)",
+      "songName": "Carry the Light (Draft 4)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "058 Carry the Light (Folk 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "058 Carry the Light (Draft 4) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "058",
       "language": "en",
       "brandName": "MapKAI"
@@ -710,12 +710,12 @@
     {
       "id": "bc8fd5ba-7856-44b0-9bbd-632306897524",
       "number": 59,
-      "songName": "Lowland Lights (Rap 1)",
+      "songName": "Lowland Lights (Draft 1)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "059 Lowland Lights (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "059 Lowland Lights (Draft 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "059",
       "language": "en",
       "brandName": "MapKAI"
@@ -723,12 +723,12 @@
     {
       "id": "6e667622-100f-4b9b-8165-f75d0e90e3bb",
       "number": 60,
-      "songName": "Lowland Lights (Rap 2)",
+      "songName": "Lowland Lights (Draft 2)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "060 Lowland Lights (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "060 Lowland Lights (Draft 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "060",
       "language": "en",
       "brandName": "MapKAI"
@@ -736,12 +736,12 @@
     {
       "id": "16a889d4-0214-41c3-99f4-acab6f2d939d",
       "number": 61,
-      "songName": "Your Turn (Rap 1)",
+      "songName": "Your Turn (Draft 1)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "061 Your Turn (Rap 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "061 Your Turn (Draft 1) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "061",
       "language": "en",
       "brandName": "MapKAI"
@@ -749,12 +749,12 @@
     {
       "id": "b40a2738-3f42-4ef5-a181-7fafaf765574",
       "number": 62,
-      "songName": "Your Turn (Rap 2)",
+      "songName": "Your Turn (Draft 2)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-19T20:14:13.215Z",
-      "title": "062 Your Turn (Rap 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
+      "title": "062 Your Turn (Draft 2) - MapKAI - Arts and Humanities - Dutch Cultural Figures",
       "numberLabel": "062",
       "language": "en",
       "brandName": "MapKAI"
@@ -763,27 +763,27 @@
       "id": "8b9e3b50-efea-4e26-ba69-37dc4628d3ed",
       "number": 63,
       "numberLabel": "063",
-      "songName": "Your Turn (Philips Trio)",
+      "songName": "Your Turn (Draft 3)",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-23T20:52:39.427Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "063 Your Turn (Philips Trio) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+      "title": "063 Your Turn (Draft 3) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
     },
     {
       "id": "efc8308c-614f-4845-94ce-3b32425c2e4a",
       "number": 64,
       "numberLabel": "064",
-      "songName": "Your Turn (Science & ASML)",
+      "songName": "Your Turn",
       "subjectName": "Arts and Humanities",
       "canonicalSubjectName": "Arts and humanities",
       "conceptName": "Dutch Cultural Figures",
       "createdAt": "2026-10-23T21:02:52.781Z",
       "language": "en",
       "brandName": "MapKAI",
-      "title": "064 Your Turn (Science & ASML) - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+      "title": "064 Your Turn - MapKAI - Arts and Humanities - Dutch Cultural Figures"
     }
   ]
 }

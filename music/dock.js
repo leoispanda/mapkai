@@ -16,6 +16,7 @@
     en: { carLyrics: 'Car lyrics (trial)', carUnsupported: 'This browser cannot send car display text.', carNoTiming: 'No synchronized timing for this song; the car keeps the song title.', carHint: 'Try showing each lyric in the car’s title field. Updates with the phone locked need testing.', captionHint: 'Uses approximate MV subtitles; ellipses mark uncertain words. The original written lyrics remain separate.', title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', running180: '180 BPM · Running', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
   };
   const t = name => copy[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'][name];
+  const songName = track => track.title.replace(/^[0-9]{3,}\s+/, '').split(' - MapKAI - ')[0];
   let saved = null;
   try {
     const value = JSON.parse(sessionStorage.getItem(key));
@@ -111,9 +112,9 @@
     const current = state(), list = current.tracks, audio = current.audio, track = current.track;
     dock.setAttribute('aria-label', 'MapKAI Music');
     const title = track?.title || t('title');
-    const compactTitle = track ? title.split(' - MapKAI - ')[0] : 'MapKAI Music';
+    const compactTitle = track ? songName(track) : 'MapKAI Music';
     if ($('title').textContent !== compactTitle) $('title').textContent = compactTitle;
-    $('detail-title').textContent = title;
+    $('detail-title').textContent = compactTitle;
     $('title').title = title;
     $('ai').hidden = Boolean(track && !track.aiGenerated); $('ai').textContent = t('ai');
     const tempo = musicTempo?.describe(track, document.documentElement.lang.startsWith('zh') ? 'zh' : 'en');
@@ -128,7 +129,7 @@
       const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = t('choose'); $('select').append(placeholder);
       for (const item of list) {
         const option = document.createElement('option'), itemTempo = musicTempo?.describe(item, language);
-        option.value = item.id; option.textContent = `${item.title}${itemTempo && !itemTempo.unknown ? ` · ${itemTempo.text}` : ''}`; $('select').append(option);
+        option.value = item.id; option.textContent = `${songName(item)}${itemTempo && !itemTempo.unknown ? ` · ${itemTempo.text}` : ''}`; $('select').append(option);
       }
     }
     $('select').options[0].textContent = t('choose'); $('select').value = track?.id || ''; $('select').disabled = !list.length;
@@ -385,8 +386,8 @@
       const line = carLyrics && active(current) && audio.readyState > 0 && validTiming
         ? sync.activeLineAt(timing, audio.currentTime) : null;
       const text = current.track.displayLyrics ?? current.track.lyrics;
-      const title = line === null ? current.track.title : text.split('\n')[line];
-      const artist = line === null ? 'MapKAI' : `${current.track.title.split(' - MapKAI - ')[0]} · MapKAI`;
+      const title = line === null ? songName(current.track) : text.split('\n')[line];
+      const artist = line === null ? 'MapKAI' : `${songName(current.track)} · MapKAI`;
       const signature = JSON.stringify([current.track.id, title, artist]);
       if ((mediaTrackId !== current.track.id || mediaSignature !== signature) && typeof MediaMetadata !== 'undefined') {
         ownedMetadata = new MediaMetadata({ title, artist, album: 'MapKAI Music' });
@@ -530,7 +531,7 @@
   window.addEventListener('pagehide', () => {
     const current = state();
     if (mediaSessionOwned && mediaSession?.metadata === ownedMetadata && current.track && typeof MediaMetadata !== 'undefined') {
-      try { mediaSession.metadata = new MediaMetadata({ title: current.track.title, artist: 'MapKAI', album: 'MapKAI Music' }); } catch {}
+      try { mediaSession.metadata = new MediaMetadata({ title: songName(current.track), artist: 'MapKAI', album: 'MapKAI Music' }); } catch {}
       mediaSignature = '';
     }
     navigationWasPlaying = sessionPlaying(state()); cancelRequestedPlay(); sequence++; persist(true); leaving = true; clearPlaybackIntent();

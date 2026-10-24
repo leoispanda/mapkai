@@ -9,14 +9,14 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'ai-label-20261023';
+export const VIDEO_REVISION = 'song-names-20261024';
 
 export const MUSIC_VIDEOS = freeze([
   {
     "id": "your-turn-asml",
     "title": {
-      "zh": "Your Turn · 荷兰名人与 ASML",
-      "en": "Your Turn · Dutch Voices & ASML"
+      "zh": "Your Turn",
+      "en": "Your Turn"
     },
     "description": {
       "zh": "从画布到星空，从显微镜到光刻机。13 位人物与 ASML 的故事，随音乐流转。",
@@ -60,8 +60,8 @@ export const MUSIC_VIDEOS = freeze([
   {
     "id": "your-turn-artworks",
     "title": {
-      "zh": "Your Turn · 人物与代表作版",
-      "en": "Your Turn · People & Their Work"
+      "zh": "Your Turn (Draft 2)",
+      "en": "Your Turn (Draft 2)"
     },
     "description": {
       "zh": "18 位荷兰人物的肖像、代表作与研究领域交替展开。使用较早版本歌曲。",
@@ -91,8 +91,8 @@ export const MUSIC_VIDEOS = freeze([
   {
     "id": "your-turn-original",
     "title": {
-      "zh": "Your Turn · 原始插画版",
-      "en": "Your Turn · Original Illustrated Cut"
+      "zh": "Your Turn (Draft 1)",
+      "en": "Your Turn (Draft 1)"
     },
     "description": {
       "zh": "从绘画、科学到历史与体育，以五幅群像开启 Your Turn 的第一版影像。使用原版歌曲。",

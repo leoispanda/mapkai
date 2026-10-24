@@ -1,4 +1,4 @@
-import { createBluetoothTest, SOURCE, TEST_SECONDS } from './controller.js?v=bluetooth-audio-events-20261023';
+import { createBluetoothTest, SOURCE, TEST_SECONDS } from './controller.js?v=song-names-20261024';
 const audio = document.querySelector('audio');
 audio.src = SOURCE;
 const start = document.getElementById('start-test'), stop = document.getElementById('stop-test');
@@ -20,7 +20,7 @@ const test = createBluetoothTest({ audio, session: navigator.mediaSession, Metad
     const busy = state === 'running' || state === 'loading';
     start.disabled = busy || !supported; stop.disabled = !busy;
     progress.value = Math.min(TEST_SECONDS, seconds); count.textContent = `${Math.min(TEST_SECONDS, Math.floor(seconds))} / ${TEST_SECONDS} 秒`;
-    label.textContent = state === 'running' ? `MapKAI TEST ${phase}` : 'Your Turn (Science & ASML)';
+    label.textContent = state === 'running' ? `MapKAI TEST ${phase}` : 'Your Turn';
     if (state !== lastState) { status.textContent = messages[state]; lastState = state; }
   },
 });

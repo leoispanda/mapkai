@@ -2,6 +2,7 @@ import { wrapR2Bucket, costResponse } from '../../_shared/cost-guard.js';
 import { hasValidFounderAccessCookie } from '../pdc/_shared.js';
 import { auditedTempoEstimate } from './_tempo-estimates.js';
 import { performanceCaptions } from './_performance-captions.js';
+import { publicSongTitle, publicSongDescription } from './_song-names.js';
 
 export const MAX_AUDIO_BYTES = 25 * 1024 * 1024;
 export const MAX_LYRICS_CHARS = 12000;
@@ -167,7 +168,7 @@ export function publicTrack(track) {
     && typeof tempo.audioEtag === 'string' && /^[a-fA-F0-9-]{1,160}$/.test(tempo.audioEtag)
     && tempo.audioEtag === track.audioEtag ? tempo.bpm : null;
   const captions = performanceCaptions(track);
-  return { id: track.id, title: track.title, description: track.description, language: track.language,
+  return { id: track.id, title: publicSongTitle(track), description: publicSongDescription(track), language: track.language,
     lyrics, lyricsTiming, tempoBpm, tempoEstimate: auditedTempoEstimate(track),
     ...(captions ? { lyricCaptions: captions } : {}),
     aiGenerated: aiGenerated ? true : null, generationProvider: aiGenerated ? GENERATION_PROVIDER : null,

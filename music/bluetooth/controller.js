@@ -1,6 +1,6 @@
 export const TEST_SECONDS = 20;
 export const SOURCE = '/api/music/audio?id=efc8308c-614f-4845-94ce-3b32425c2e4a';
-const original = { title: 'Your Turn (Science & ASML)', artist: 'MapKAI', album: 'MapKAI Music' };
+const original = { title: 'Your Turn', artist: 'MapKAI', album: 'MapKAI Music' };
 
 export function createBluetoothTest({ audio, session, Metadata, onChange = () => {},
   schedule = callback => setInterval(callback, 500), unschedule = clearInterval }) {

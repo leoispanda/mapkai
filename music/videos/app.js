@@ -77,7 +77,7 @@
     const {item} = card;
     const title = label(item.title);
     card.title.textContent = title;
-    card.description.textContent = label(item.description);
+    card.description.textContent = label(item.description); card.description.hidden = true;
     card.badge.textContent = t(item.id === 'your-turn-asml' ? 'latest' : 'earlier');
     card.meta.textContent = [duration(item.durationSeconds), t('english')].join(' · ');
     card.video.setAttribute('aria-label',title);

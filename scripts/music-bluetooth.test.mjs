@@ -30,7 +30,7 @@ test('four title phases follow actual audio time and restore the song after twen
   }
   h.advance(20);
   assert.equal(h.audio.paused, true); assert.equal(h.hasTimer(), false);
-  assert.equal(h.session.metadata.title, 'Your Turn (Science & ASML)');
+  assert.equal(h.session.metadata.title, 'Your Turn');
   assert.equal(h.session.playbackState, 'paused'); assert.equal(h.changes.at(-1).state, 'complete');
 });
 
@@ -56,7 +56,7 @@ test('another metadata owner is preserved when the experiment stops', async () =
 
 test('a system pause restores the song title and cancels title updates', async () => {
   const h = fixture(); await h.controller.start(); h.actions.get('pause')();
-  assert.equal(h.audio.paused, true); assert.equal(h.session.metadata.title, 'Your Turn (Science & ASML)');
+  assert.equal(h.audio.paused, true); assert.equal(h.session.metadata.title, 'Your Turn');
   assert.equal(h.hasTimer(), false); assert.equal(h.changes.at(-1).state, 'stopped');
 });
 
@@ -68,7 +68,7 @@ test('unsupported browsers do not play audio or schedule a misleading test', asy
 test('destroy stops playback and restores metadata without leaving a timer', async () => {
   const h = fixture(); await h.controller.start(); h.controller.destroy();
   assert.equal(h.audio.paused, true); assert.equal(h.hasTimer(), false);
-  assert.equal(h.session.metadata.title, 'Your Turn (Science & ASML)');
+  assert.equal(h.session.metadata.title, 'Your Turn');
 });
 
 test('native audio progress updates titles and ends the test when interval callbacks are delayed', async () => {
