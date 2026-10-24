@@ -4,11 +4,10 @@ import { findVideoQuality, VIDEO_REVISION } from './_videos.js';
 
 function selectedVideo(url) {
   const params = url.searchParams;
-  if ([...params.keys()].some(key => !['id', 'quality', 'download', 'revision'].includes(key))
+  if ([...params.keys()].some(key => !['id', 'quality', 'revision'].includes(key))
     || params.getAll('id').length !== 1 || params.getAll('quality').length > 1
-    || params.getAll('download').length > 1 || params.getAll('revision').length > 1
-    || (params.has('revision') && params.get('revision') !== VIDEO_REVISION)
-    || (params.has('download') && !['0', '1'].includes(params.get('download')))) return null;
+    || params.getAll('revision').length > 1
+    || (params.has('revision') && ![VIDEO_REVISION, 'song-names-20261024', 'ai-label-20261023'].includes(params.get('revision')))) return null;
   return findVideoQuality(params.get('id'), params.get('quality') ?? 'phone');
 }
 
@@ -19,7 +18,8 @@ export async function onRequest({ request, env = {} }) {
   const selected = selectedVideo(url);
   if (!selected) return json({ error: 'Music video not found.' }, 404);
   const origin = request.headers.get('Origin');
-  if ((origin && origin !== url.origin) || request.headers.get('Sec-Fetch-Site') === 'cross-site') {
+  if ((origin && origin !== url.origin) || request.headers.get('Sec-Fetch-Site') === 'cross-site'
+    || request.headers.get('Sec-Fetch-Mode') === 'navigate' || request.headers.get('Sec-Fetch-Dest') === 'document') {
     return json({ error: 'Open MapKAI Music to watch this video.' }, 403);
   }
   try {
@@ -32,7 +32,8 @@ export async function onRequest({ request, env = {} }) {
     const etag = `"${rendition.etag}"`;
     const headers = { ...RESPONSE_HEADERS, 'Cache-Control': 'public, max-age=86400, immutable',
       'Content-Type': 'video/mp4', 'Accept-Ranges': 'bytes', ETag: etag,
-      'Content-Disposition': `${url.searchParams.get('download') === '1' ? 'attachment' : 'inline'}; filename="${rendition.filename}"` };
+      Vary: 'Origin, Sec-Fetch-Site, Sec-Fetch-Mode, Sec-Fetch-Dest',
+      'Content-Disposition': `inline; filename="${rendition.filename}"` };
     const validators = request.headers.get('If-None-Match')?.split(',').map(value => value.trim().replace(/^W\//, ''));
     if (validators?.some(value => value === '*' || value === etag)) return new Response(null, { status: 304, headers });
     let range;

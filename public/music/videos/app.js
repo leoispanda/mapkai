@@ -2,18 +2,18 @@
   'use strict';
   const copy = {
     zh: {
-      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'让旋律，成为画面。', intro:'把一首歌里的名字、作品与想法，连成一部短片。选一个版本，播放或下载，随时重看。',
+      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'让旋律，成为画面。', intro:'把一首歌里的名字、作品与想法，连成一部短片。选一个版本，随时在线观看。',
       browseEarlier:'看看早期版本 ↓', artNote:'AI 绘画与音乐 · 艺术演绎', fromCollection:'来自作品集', earlierHeading:'这首歌的其他画面', earlierIntro:'从最初的构想到绘画长卷，保留每一次不同的表达。',
       loading:'正在载入音乐影像…', loadError:'暂时无法载入音乐影像，请再试一次。', retry:'重新载入', empty:'新的音乐影像即将在这里展示。', arts:'艺术与人文 ↗', backToSongs:'继续听歌 ↗',
-      latest:'最新作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', download:'下载', playbackError:'暂时无法播放这个视频，请点击播放重试。',
-      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。观看 Your Turn 的绘画 MV，或下载到手机，随时重看。',
+      latest:'最新作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', playbackError:'暂时无法播放这个视频，请点击播放重试。',
+      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Your Turn 的绘画 MV。',
     },
     en: {
-      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Songs, brought to life.', intro:'Names, works and ideas become a film. Choose a version to watch, download and return to whenever you like.',
+      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Songs, brought to life.', intro:'Names, works and ideas become a film. Choose a version to watch and return to whenever you like.',
       browseEarlier:'Explore earlier versions ↓', artNote:'AI-created art and music · Artistic interpretations', fromCollection:'FROM THE COLLECTION', earlierHeading:'Other visions of the song', earlierIntro:'From the first idea to a painted journey, each version keeps its own expression.',
       loading:'Loading music videos…', loadError:'The films could not be loaded. Please try again.', retry:'Try again', empty:'New music videos will appear here.', arts:'Arts & humanities ↗', backToSongs:'Keep listening ↗',
-      latest:'Latest film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', download:'Download', playbackError:'This video cannot be played right now. Press play to try again.',
-      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch the painted world of Your Turn, or download a film to enjoy on your phone.',
+      latest:'Latest film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', playbackError:'This video cannot be played right now. Press play to try again.',
+      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch the painted world of Your Turn online.',
     },
   };
   const order = ['your-turn-asml', 'your-turn-artworks', 'your-turn-original'];
@@ -33,13 +33,13 @@
   const bilingual = value => value && typeof value === 'object' && ['zh','en'].every(key => typeof value[key] === 'string' && value[key].trim().length > 0 && value[key].length <= 1200);
   const duration = seconds => { const total = Math.round(seconds); return `${Math.floor(total / 60)}:${String(total % 60).padStart(2,'0')}`; };
 
-  function mediaUrl(value, id, quality, download) {
+  function mediaUrl(value, id, quality) {
     try {
       const url = new URL(value, location.href);
       if (url.origin !== location.origin || url.pathname !== '/api/music/video'
         || url.searchParams.getAll('id').length !== 1 || url.searchParams.get('id') !== id
         || url.searchParams.getAll('quality').length !== 1 || url.searchParams.get('quality') !== quality
-        || (download ? url.searchParams.get('download') !== '1' : url.searchParams.has('download'))) return null;
+        || url.searchParams.has('download')) return null;
       return url.pathname + url.search;
     } catch { return null; }
   }
@@ -52,8 +52,8 @@
       && Number.isSafeInteger(quality.bytes) && quality.bytes > 0
       && Number.isSafeInteger(quality.width) && quality.width > 0
       && Number.isSafeInteger(quality.height) && quality.height > 0)
-      .map(quality => ({...quality, url:mediaUrl(quality.url,raw.id,quality.id,false), downloadUrl:mediaUrl(quality.downloadUrl,raw.id,quality.id,true)}))
-      .filter(quality => quality.url && quality.downloadUrl);
+      .map(quality => ({...quality, url:mediaUrl(quality.url,raw.id,quality.id)}))
+      .filter(quality => quality.url);
     if (!qualities.length || new Set(qualities.map(quality => quality.id)).size !== qualities.length) return null;
     qualities.sort((a,b) => Number(a.id !== 'phone') - Number(b.id !== 'phone'));
     return {...raw, qualities, version:typeof raw.version === 'string' ? raw.version.slice(0,48) : ''};
@@ -65,11 +65,11 @@
     return node;
   }
 
-  function icon(kind) {
+  function playIcon() {
     const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
     svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('aria-hidden','true');
     const path = document.createElementNS('http://www.w3.org/2000/svg','path');
-    path.setAttribute('d',kind === 'play' ? 'M7 4v16l14-8L7 4Z' : 'M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5');
+    path.setAttribute('d','M7 4v16l14-8L7 4Z');
     svg.append(path); return svg;
   }
 
@@ -86,8 +86,6 @@
     card.select.setAttribute('aria-label',`${t('quality')} · ${title}`);
     for (const [index, quality] of item.qualities.entries()) {
       card.select.options[index].textContent = label(quality.label);
-      card.downloads[index].label.textContent = `${t('download')} ${label(quality.label)}`;
-      card.downloads[index].link.setAttribute('aria-label',`${t('download')} · ${title} · ${label(quality.label)}`);
     }
     card.disclosure.textContent = t('disclosure');
     if (!card.error.hidden) card.error.textContent = t('playbackError');
@@ -99,7 +97,9 @@
     const video = document.createElement('video');
     video.controls = true; video.playsInline = true; video.preload = 'none'; video.poster = item.poster; video.src = item.qualities[0].url;
     video.setAttribute('playsinline',''); video.setAttribute('preload','none');
-    const play = textNode('button','film-start'); play.type = 'button'; play.append(icon('play'));
+    video.setAttribute('controlslist','nodownload');
+    video.addEventListener('contextmenu',event => event.preventDefault());
+    const play = textNode('button','film-start'); play.type = 'button'; play.append(playIcon());
     player.append(video,play);
     const body = textNode('div','film-copy');
     const topline = textNode('div','film-topline');
@@ -112,17 +112,11 @@
     const qualityLabel = textNode('span'); const select = document.createElement('select');
     for (const quality of item.qualities) { const option = document.createElement('option'); option.value = quality.id; select.append(option); }
     qualityControl.append(qualityLabel,select); qualityControl.hidden = item.qualities.length < 2;
-    const links = textNode('div','download-links');
-    const downloads = item.qualities.map(quality => {
-      const link = textNode('a','download-link'); link.href = quality.downloadUrl; link.download = `${item.id}-${quality.id}.mp4`;
-      const text = document.createElement('span'); const size = textNode('span','download-size'); size.textContent = `${(quality.bytes / (1024 * 1024)).toFixed(1)} MB`;
-      link.append(icon('download'),text,size); links.append(link); return {link,label:text};
-    });
-    actions.append(qualityControl,links);
+    actions.append(qualityControl); actions.hidden = item.qualities.length < 2;
     const disclosure = textNode('p','film-disclosure');
     const error = textNode('p','film-error'); error.hidden = true; error.setAttribute('role','status');
     body.append(topline,title,description,actions,disclosure,error); element.append(player,body);
-    const card = {element,item,video,play,title,description,badge,meta,qualityLabel,select,downloads,disclosure,error,pendingSeek:null};
+    const card = {element,item,video,play,title,description,badge,meta,qualityLabel,select,disclosure,error,pendingSeek:null};
     play.addEventListener('click',() => {
       error.hidden = true;
       if (video.error) video.load();

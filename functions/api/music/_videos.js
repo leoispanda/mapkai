@@ -1,6 +1,6 @@
 // Deliberately frozen publication allowlist: only these reviewed recordings
 // may be discovered or streamed. R2 keys, checksums and filenames are internal;
-// browser clients receive stable same-origin playback and download URLs.
+// browser clients receive stable same-origin playback URLs.
 const freeze = value => {
   if (value && typeof value === 'object') {
     Object.values(value).forEach(freeze);
@@ -9,7 +9,7 @@ const freeze = value => {
   return value;
 };
 
-export const VIDEO_REVISION = 'song-names-20261024';
+export const VIDEO_REVISION = 'watch-only-20261024';
 
 export const MUSIC_VIDEOS = freeze([
   {
@@ -132,7 +132,7 @@ export function publicVideos() {
     id, title, description, durationSeconds, poster, featured, version,
     qualities: qualities.map(({ id: quality, label, bytes, width, height }) => {
       const url = `/api/music/video?id=${encodeURIComponent(id)}&quality=${encodeURIComponent(quality)}&revision=${VIDEO_REVISION}`;
-      return { id: quality, label, bytes, width, height, url, downloadUrl: `${url}&download=1` };
+      return { id: quality, label, bytes, width, height, url };
     }),
   }));
 }

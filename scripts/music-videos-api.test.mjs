@@ -67,10 +67,10 @@ test('catalog publishes three recordings, four renditions and only same-origin p
     assert.equal(item.poster, `/music/videos/posters/${item.id}.jpg`);
     assert.ok(item.title.zh && item.title.en && item.description.zh && item.description.en);
     for (const quality of item.qualities) {
-      assert.deepEqual(Object.keys(quality).sort(), ['id', 'label', 'bytes', 'width', 'height', 'url', 'downloadUrl'].sort());
+      assert.deepEqual(Object.keys(quality).sort(), ['id', 'label', 'bytes', 'width', 'height', 'url'].sort());
       assert.ok(quality.label.zh && quality.label.en);
       assert.equal(quality.url, `/api/music/video?id=${item.id}&quality=${quality.id}&revision=${VIDEO_REVISION}`);
-      assert.equal(quality.downloadUrl, `${quality.url}&download=1`);
+      assert.equal(Object.hasOwn(quality, 'downloadUrl'), false);
     }
   }
   assert.doesNotMatch(JSON.stringify(data), /objectKey|sha256|etag|\.workspace-backups|\/Users\/|source|credentials/);
@@ -92,6 +92,7 @@ test('all four frozen renditions stream only the approved object with conditiona
       assert.equal(response.headers.get('Content-Length'), '4');
       assert.equal(response.headers.get('ETag'), `"${quality.etag}"`);
       assert.equal(response.headers.get('Accept-Ranges'), 'bytes');
+      assert.match(response.headers.get('Content-Disposition'), /^inline;/);
       assert.equal(response.headers.get('Cross-Origin-Resource-Policy'), 'same-origin');
       assert.equal(response.headers.get('X-Content-Type-Options'), 'nosniff');
       assert.deepEqual(new Uint8Array(await response.arrayBuffer()), bytesAt(4, 4));
@@ -153,13 +154,15 @@ test('cache validators return 304 and If-Range prevents stale partial responses'
   }
 });
 
-test('download uses a fixed safe attachment name and preserves range semantics', async () => {
-  const { env } = fixture();
-  const response = await video({ request: new Request(url(`id=${first.id}&quality=hd&download=1`), { headers: { Range: 'bytes=0-3' } }), env });
-  assert.equal(response.status, 206);
-  assert.equal(response.headers.get('Content-Disposition'), 'attachment; filename="mapkai-your-turn-asml-hd.mp4"');
-  assert.equal(response.headers.get('Content-Length'), '4');
-  assert.deepEqual(new Uint8Array(await response.arrayBuffer()), bytesAt(0, 4));
+test('all previous download links are rejected before any storage or budget operation', async () => {
+  for (const item of MUSIC_VIDEOS) for (const quality of item.qualities) {
+    for (const method of ['GET', 'HEAD']) for (const value of ['1', '0', '']) {
+      const {env,calls}=fixture();
+      const response=await video({request:new Request(url(`id=${item.id}&quality=${quality.id}&revision=${VIDEO_REVISION}&download=${value}`),{method,headers:{Range:'bytes=0-3'}}),env});
+      assert.equal(response.status,404);
+      assert.deepEqual(calls,[]);
+    }
+  }
 });
 
 test('unknown identifiers, qualities, duplicate controls and arbitrary object keys never reach storage', async () => {
@@ -190,7 +193,7 @@ test('cost protection and same-origin policy block reads before touching storage
   const limited = fixture({ reservationLimit: 1 });
   assert.equal((await video({ request: new Request(url()), env: limited.env })).status, 429);
   assert.deepEqual(limited.calls.map(call => call.operation), ['head']);
-  for (const headers of [{ Origin: 'https://other.example' }, { 'Sec-Fetch-Site': 'cross-site' }]) {
+  for (const headers of [{ Origin: 'https://other.example' }, { 'Sec-Fetch-Site': 'cross-site' }, { 'Sec-Fetch-Mode': 'navigate' }, { 'Sec-Fetch-Dest': 'document' }]) {
     const { env, calls } = fixture();
     assert.equal((await video({ request: new Request(url(), { headers }), env })).status, 403);
     assert.deepEqual(calls, []);
@@ -211,9 +214,19 @@ test('both endpoints reject write methods without reading or modifying storage',
   }
 });
 
-test('marked video revision accepts only its fixed value and creates a fresh playback cache URL', async () => {
+test('watch-only revision creates a fresh playback URL and preserves legacy inline playback', async () => {
   const {env,calls}=fixture();
   const response=await video({request:new Request(url(`id=${first.id}&quality=phone&revision=${VIDEO_REVISION}`),{method:'HEAD'}),env});
   assert.equal(response.status,200);
   assert.equal(calls[0].key,rendition.objectKey);
+});
+
+test('normal browser video requests and existing inline revision remain playable', async () => {
+  for (const revision of [VIDEO_REVISION, 'song-names-20261024', 'ai-label-20261023']) {
+    const {env}=fixture();
+    const response=await video({request:new Request(url(`id=${first.id}&quality=phone&revision=${revision}`),{headers:{'Sec-Fetch-Site':'same-origin','Sec-Fetch-Dest':'video','Sec-Fetch-Mode':'no-cors',Range:'bytes=0-3'}}),env});
+    assert.equal(response.status,206);
+    assert.match(response.headers.get('Vary'), /Sec-Fetch-Dest/);
+    assert.deepEqual(new Uint8Array(await response.arrayBuffer()),bytesAt(0,4));
+  }
 });
