@@ -9,13 +9,13 @@
   <title>MapKAI Music</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/site-shell.css?v=0.1.291">
-  <link rel="stylesheet" href="/music/styles.css?v=bluetooth-20261023">
-  <script src="/site-shell.js?v=listening-20261021" defer></script>
-  <script src="/music/lyrics-sync.js?v=music-14" defer></script>
+  <link rel="stylesheet" href="/music/styles.css?v=car-lyrics-20261024">
+  <script src="/site-shell.js?v=car-lyrics-20261024" defer></script>
+  <script src="/music/lyrics-sync.js?v=car-lyrics-20261024" defer></script>
   <script src="/music/preferences.js?v=music-votes-20261014" defer></script>
   <script src="/music/tempo.js?v=listening-20261021" defer></script>
   <script src="/music/listening.js?v=listening-20261021" defer></script>
-  <script src="/music/app.js?v=track-links-20261023" defer></script>
+  <script src="/music/app.js?v=car-lyrics-20261024" defer></script>
 </head>
 <body data-mapkai-page="music">
   <header class="topbar">
@@ -53,10 +53,12 @@
         </div>
 
       </div>
-      <div class="playlist-options-row"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span data-i18n="continuousPlay">连续播放</span></label><details class="playlist-options"><summary data-i18n="playlistOptions">歌词与设置</summary><div class="playlist-options-body"><div id="playlist-reactions" class="playlist-reactions"></div><label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
+      <div class="playlist-options-row"><label class="continuous-control"><input id="continuous-play" type="checkbox" checked><span data-i18n="continuousPlay">连续播放</span></label><label class="continuous-control car-lyrics-control"><input id="car-lyrics" type="checkbox" disabled aria-describedby="car-lyrics-status"><span data-i18n="carLyrics">车载歌词（试用）</span></label><details id="playlist-options" class="playlist-options"><summary data-i18n="playlistOptions">歌词与设置</summary><div class="playlist-options-body"><div id="playlist-reactions" class="playlist-reactions"></div><label class="playback-volume"><span data-i18n="volumeLabel">音量</span><input id="playlist-volume" type="range" min="0" max="100" step="1" value="100" aria-label="音量" data-aria="volumeLabel"></label>
       <p id="playlist-lyrics" class="lyrics-text" role="region" tabindex="0" aria-labelledby="playlist-title"><span id="playlist-lyric-span" class="lyrics-current"></span></p>
+      <p id="playlist-caption-note" class="lyrics-unavailable" hidden></p>
       <p id="playlist-lyrics-unavailable" class="lyrics-unavailable" hidden></p>
       </div></details></div>
+      <p id="car-lyrics-status" class="lyrics-unavailable" hidden></p>
       <p id="playlist-error" class="track-error" role="status" hidden></p>
     </section>
     <section id="library" class="library" aria-labelledby="library-title">

@@ -6,10 +6,14 @@
   const preferences = globalThis.MapKAIMusicPreferences;
   const musicTempo = globalThis.MapKAIMusicTempo;
   const key = 'mapkaiMusicDock';
+  const carKey = 'mapkaiMusicCarLyrics.v1';
+  const carSupported = Boolean(navigator.mediaSession && typeof MediaMetadata !== 'undefined');
+  let carLyrics = false;
+  try { carLyrics = carSupported && localStorage.getItem(carKey) === 'on'; } catch {}
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   const copy = {
-    zh: { title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', running180: '180 BPM · 跑步', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首', continuousOn: '连续播放', continuousOff: '播完本首后停止', singleReady: '选择一首歌曲播放', singlePlay: '播放', navigationResume: '浏览器暂停了自动续播，请点继续播放。' },
-    en: { title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', running180: '180 BPM · Running', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
+    zh: { carLyrics: '车载歌词（试用）', carUnsupported: '当前浏览器不支持车载文字输出。', carNoTiming: '这首歌没有同步时间轴，车屏继续显示歌名。', carHint: '尝试在车屏歌名位置逐句显示歌词；手机锁屏后的效果需实测。', captionHint: '同步字幕沿用 MV，时间为近似值；省略号表示未确认的字句。完整原稿另行保留。', title: '学习时，听首 MapKAI 的歌', play: '播放全部', pause: '暂停', resume: '继续播放', cancel: '取消载入', retry: '重试', replay: '重新播放', previous: '上一首', next: '下一首', collapse: '收起', expand: '展开', choose: '选择歌曲', volume: '音量', seek: '歌曲进度', ai: 'AI 生成', running180: '180 BPM · 跑步', ready: '按顺序播放全部歌曲', loading: '正在载入歌曲…', error: '暂时无法播放，请点击重试。', libraryError: '歌曲列表暂时无法载入，请点击重试。', empty: '还没有歌曲', unavailable: '这首歌没有同步歌词。', lyrics: '当前歌词', originalLyrics: '完整原始歌词', position: '第 {n} / {total} 首', continuousOn: '连续播放', continuousOff: '播完本首后停止', singleReady: '选择一首歌曲播放', singlePlay: '播放', navigationResume: '浏览器暂停了自动续播，请点继续播放。' },
+    en: { carLyrics: 'Car lyrics (trial)', carUnsupported: 'This browser cannot send car display text.', carNoTiming: 'No synchronized timing for this song; the car keeps the song title.', carHint: 'Try showing each lyric in the car’s title field. Updates with the phone locked need testing.', captionHint: 'Uses approximate MV subtitles; ellipses mark uncertain words. The original written lyrics remain separate.', title: 'A MapKAI soundtrack for learning', play: 'Play all', pause: 'Pause', resume: 'Resume', cancel: 'Cancel loading', retry: 'Retry', replay: 'Replay', previous: 'Previous', next: 'Next', collapse: 'Collapse', expand: 'Expand', choose: 'Choose a song', volume: 'Volume', seek: 'Song progress', ai: 'AI-generated', running180: '180 BPM · Running', ready: 'Play every song in order', loading: 'Loading songs…', error: 'This song could not play. Tap Retry.', libraryError: 'The song list could not load. Tap Retry.', empty: 'No songs yet', unavailable: 'Synchronized lyrics are unavailable for this song.', lyrics: 'Current lyric', originalLyrics: 'Original lyrics', position: 'Song {n} of {total}', continuousOn: 'Continuous play', continuousOff: 'Stop after this song', singleReady: 'Choose a song to play', singlePlay: 'Play', navigationResume: 'Your browser paused automatic playback. Tap Resume.' },
   };
   const t = name => copy[document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'][name];
   let saved = null;
@@ -31,6 +35,9 @@
       <div class="music-dock-progress"><span id="music-dock-elapsed">0:00</span><input id="music-dock-seek" type="range" min="0" max="1000" step="1" value="0" disabled><span id="music-dock-duration">—:—</span></div>
       <p id="music-dock-lyrics" class="music-dock-lyrics" role="region" tabindex="0"><span id="music-dock-line"></span></p>
       <details id="music-dock-original" class="music-dock-original" hidden><summary id="music-dock-original-summary"></summary><pre id="music-dock-original-text" class="music-dock-original-text" role="region" tabindex="0"></pre></details>
+      <label class="music-dock-car"><input id="music-dock-car" type="checkbox" aria-describedby="music-dock-car-note"><span id="music-dock-car-label"></span></label>
+      <p id="music-dock-car-note" class="music-dock-status"></p>
+      <p id="music-dock-caption-note" class="music-dock-status" hidden></p>
       <p id="music-dock-status" class="music-dock-status" role="status"></p>
     </div></div>`;
   const ownAudio = document.createElement('audio'); ownAudio.preload = 'none'; ownAudio.hidden = true;
@@ -41,7 +48,7 @@
   let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
   let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
   let restorePlayIntent = saved?.wasPlaying === true, autoResumeBlocked = false, leaving = false, navigationWasPlaying = false;
-  let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null;
+  let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null, mediaSignature = '', ownedMetadata = null;
   let playbackIntent = false, advancing = false, audioSessionLease = null;
   let originalLyricTrackId = null, originalLyricSource = null;
   let volume = saved?.volume ?? 0.5;
@@ -156,12 +163,14 @@
     $('original-summary').textContent = t('originalLyrics');
     $('original-text').setAttribute('aria-label', `${t('originalLyrics')}${track ? ` · ${track.title}` : ''}`);
     $('lyrics').setAttribute('aria-label', t('lyrics'));
-    const timing = track?.lyricsTiming && (!Number.isFinite(total) || track.lyricsTiming.at(-1).end <= total) ? track.lyricsTiming : null;
+    const displayLyrics = track?.displayLyrics ?? track?.lyrics;
+    const displayTiming = track?.displayTiming ?? track?.lyricsTiming;
+    const timing = displayTiming && (!Number.isFinite(total) || displayTiming.at(-1).end <= total) ? displayTiming : null;
     const line = timing && audio?.readyState > 0 && !audio.ended && !audio.error ? sync.activeLineAt(timing, time) : null;
-    const changed = line !== currentLine || track?.lyrics !== lineSource;
+    const changed = line !== currentLine || displayLyrics !== lineSource;
     if (changed) {
-      currentLine = line; lineSource = track?.lyrics;
-      $('line').textContent = line === null ? '' : track.lyrics.split('\n')[line]; $('lyrics').scrollLeft = 0;
+      currentLine = line; lineSource = displayLyrics;
+      $('line').textContent = line === null ? '' : displayLyrics.split('\n')[line]; $('lyrics').scrollLeft = 0;
     }
     $('lyrics').classList.toggle('is-direct', changed || Boolean(audio?.paused || audio?.seeking));
     $('lyrics').hidden = Boolean(track && !timing);
@@ -171,6 +180,11 @@
     const cue = line === null ? null : timing.find(item => item.line === line);
     const offset = reducedMotion.matches ? 0 : sync.lyricOffsetAt(cue, time, Math.max(0, $('line').offsetWidth - width));
     $('line').style.transform = `translateX(${-offset}px)`;
+    $('car').checked = carLyrics; $('car').disabled = !carSupported;
+    $('car-label').textContent = t('carLyrics');
+    $('car-note').textContent = t(!carSupported ? 'carUnsupported' : carLyrics && track && !timing ? 'carNoTiming' : 'carHint');
+    $('caption-note').hidden = !track?.captionFallback;
+    $('caption-note').textContent = t('captionHint');
     let message = autoResumeBlocked ? t('navigationResume') : current.libraryFailed ? t('libraryError') : current.failed ? t('error') : waiting ? t('loading') : current.loaded && !list.length ? t('empty') : track && !timing ? t('unavailable') : index >= 0 ? t('position').replace('{n}', index + 1).replace('{total}', list.length) : t(continuousEnabled(current) ? 'ready' : 'singleReady');
     if (track && !current.libraryFailed && !current.failed && !waiting && !autoResumeBlocked) message += ` · ${t(continuousEnabled(current) ? 'continuousOn' : 'continuousOff')}`;
     if ($('status').textContent !== message) $('status').textContent = message;
@@ -185,8 +199,10 @@
       const url = new URL(raw.url, location.href);
       if (url.origin !== location.origin || url.pathname !== '/api/music/audio' || url.searchParams.get('id') !== raw.id) return null;
       const lyrics = typeof raw.lyrics === 'string' ? raw.lyrics.slice(0, 12000).replace(/\r\n?/g, '\n').trim() : '';
+      const display = sync.playbackLyrics({ lyrics, lyricsTiming: raw.lyricsTiming, lyricCaptions: raw.lyricCaptions });
       return { id: raw.id, title: raw.title.slice(0, 120), url: url.href, lyrics,
         lyricsTiming: sync.validateTiming(lyrics, raw.lyricsTiming), aiGenerated: raw.aiGenerated === true,
+        displayLyrics: display?.text ?? lyrics, displayTiming: display?.timing ?? null, captionFallback: display?.captions === true,
         tempoBpm: Number.isFinite(raw.tempoBpm) && raw.tempoBpm >= 20 && raw.tempoBpm <= 300 ? raw.tempoBpm : null,
         tempoEstimate: musicTempo?.sanitize(raw.tempoEstimate) || null,
         createdAt: raw.createdAt };
@@ -360,19 +376,34 @@
     // A dormant dock must not replace controls owned by another page tool.
     if (!mediaSessionOwned) {
       if (!sessionPlaying(current)) return;
-      claimMediaSession(); mediaSessionOwned = true; mediaTrackId = null;
+      claimMediaSession(); mediaSessionOwned = true; mediaTrackId = null; mediaSignature = '';
     }
     try {
-      if (mediaTrackId !== current.track.id && typeof MediaMetadata !== 'undefined') {
-        session.metadata = new MediaMetadata({ title: current.track.title, artist: 'MapKAI', album: 'MapKAI Music' });
+      const audio = current.audio;
+      const timing = current.track.displayTiming ?? current.track.lyricsTiming;
+      const validTiming = timing && Number.isFinite(audio?.duration) && timing.at(-1).end <= audio.duration;
+      const line = carLyrics && active(current) && audio.readyState > 0 && validTiming
+        ? sync.activeLineAt(timing, audio.currentTime) : null;
+      const text = current.track.displayLyrics ?? current.track.lyrics;
+      const title = line === null ? current.track.title : text.split('\n')[line];
+      const artist = line === null ? 'MapKAI' : `${current.track.title.split(' - MapKAI - ')[0]} · MapKAI`;
+      const signature = JSON.stringify([current.track.id, title, artist]);
+      if ((mediaTrackId !== current.track.id || mediaSignature !== signature) && typeof MediaMetadata !== 'undefined') {
+        ownedMetadata = new MediaMetadata({ title, artist, album: 'MapKAI Music' });
+        session.metadata = ownedMetadata;
         mediaTrackId = current.track.id;
+        mediaSignature = signature;
       }
       session.playbackState = sessionPlaying(current) ? 'playing' : 'paused';
-      const audio = current.audio;
       if (session.setPositionState && audio?.readyState > 0 && Number.isFinite(audio.duration) && audio.duration > 0) {
         session.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate || 1, position: Math.max(0, Math.min(audio.duration, audio.currentTime || 0)) });
       }
     } catch {}
+  }
+  function setCarLyrics(value) {
+    carLyrics = value === true && carSupported;
+    try { localStorage.setItem(carKey, carLyrics ? 'on' : 'off'); } catch {}
+    render(); window.dispatchEvent(new Event('mapkai:car-lyrics'));
   }
   function mediaSeek(seconds, external = null) {
     const audio = external || state().audio;
@@ -411,6 +442,7 @@
   }
 
   $('play').onclick = toggle; $('mini-play').onclick = toggle;
+  $('car').onchange = () => setCarLyrics($('car').checked);
   $('prev').onclick = $('mini-prev').onclick = () => move(-1); $('next').onclick = $('mini-next').onclick = () => move(1);
   $('collapse').onclick = () => { collapse(!dock.classList.contains('is-collapsed')); render(); persist(true); };
   $('select').onchange = () => {
@@ -486,16 +518,29 @@
   });
   window.addEventListener('mapkai:music-ready', () => { clearPlaybackIntent(); cancelRequestedPlay(); sequence++; ownAudio.pause(); restore(); render(); });
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-  window.addEventListener('storage', event => { if (event.key === 'mapkaiMusicContinuous.v1') render(); });
+  window.addEventListener('storage', event => {
+    if (event.key === carKey || event.key === null) {
+      try { carLyrics = carSupported && localStorage.getItem(carKey) === 'on'; } catch {}
+      window.dispatchEvent(new Event('mapkai:car-lyrics')); render();
+    }
+    if (event.key === 'mapkaiMusicContinuous.v1') render();
+  });
+  document.addEventListener('visibilitychange', render);
   window.addEventListener('resize', render); reducedMotion.addEventListener?.('change', render);
   window.addEventListener('pagehide', () => {
+    const current = state();
+    if (mediaSessionOwned && mediaSession?.metadata === ownedMetadata && current.track && typeof MediaMetadata !== 'undefined') {
+      try { mediaSession.metadata = new MediaMetadata({ title: current.track.title, artist: 'MapKAI', album: 'MapKAI Music' }); } catch {}
+      mediaSignature = '';
+    }
     navigationWasPlaying = sessionPlaying(state()); cancelRequestedPlay(); sequence++; persist(true); leaving = true; clearPlaybackIntent();
     if (page()) page().pause(); else ownAudio.pause();
   }, { capture: true });
   window.addEventListener('pageshow', event => {
     leaving = false; if (event.persisted && navigationWasPlaying) restorePlayIntent = true; restore(); render();
   });
-  window.MapKAIMusicDock = Object.freeze({ play: playTrack });
+  window.MapKAIMusicDock = Object.freeze({ play: playTrack, setCarLyrics,
+    carLyricsState: () => ({ enabled: carLyrics, supported: carSupported }) });
   window.dispatchEvent(new Event('mapkai:music-dock-ready'));
   render(); restore();
   // Visitors who have not started listening incur no catalog/audio read.

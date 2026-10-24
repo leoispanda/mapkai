@@ -3,6 +3,7 @@
 
   const copy = {
     zh: {
+      carLyrics: '车载歌词（试用）', carNoTiming: '这首歌没有同步时间轴，车屏继续显示歌名。', carHint: '尝试在车屏歌名位置逐句显示歌词；手机锁屏后的效果需实测。', captionLyrics: '同步字幕（与 MV 相同）', captionHint: '字幕时间为近似值；省略号表示未确认的字句。完整原稿另行保留。',
       back: '← 返回 Toolbox', intro: '选一首，接着听。按编号、歌名或学科找歌。', aiNotice: '所有 AI 创作的歌曲均保留标识；完整歌词与介绍可按需展开。', aiGenerated: 'AI 生成', running180: '180 BPM · 跑步', library: '歌曲列表', searchLabel: '搜索歌曲', search: '编号、歌名、学科或概念…', manage: '管理歌曲',
       like: '点赞', dislike: '不喜欢', likeLabel: '点赞 {title}；累计 {count} 票', dislikeLabel: '不喜欢 {title}；累计 {count} 票', reactionLabel: '{title} 的共享投票', voteScore: '总分 {score}', retryVote: '重试{reaction}', votePending: '正在提交这一票…', voteUnknown: '这票结果未确认，请重试同一操作；不会重复计票。', voteRateLimited: '操作太频繁，这次未计票，请稍后再试。', voteRejected: '这次未计票，请稍后再试。', voteUnavailable: '暂时无法提交，这次未计票。', voteRetryLabel: '重试{reaction}：{title}；累计 {count} 票', preferencesNotice: '每次点击记一票；总分 = 赞 − 不喜欢，可按总分排序，跨浏览器共享。', preferencesLoading: '正在载入共享票数。', preferencesUnavailable: '共享票数暂不可用；已显示的票数可能不是最新。', preferencesRecovery: '浏览器暂不支持保存待确认投票；结果未确认时，请留在本页重试。',
       sortListens: '收听最多', sortCompletion: '听完率最高', sortSkips: '切歌最多', listeningSummary: '收听 {listens} · 听完 {completion} · 切歌 {skip}', listeningDetails: '开始 {starts} 次 · 有效收听 {listens} 次 · 听完 {completions} 次 · 主动切歌 {skips} 次（早切 {earlySkips} 次）', listeningNotice: '全站累计：听满 30 秒记一次收听，短歌按一半时长；实际听过九成记听完。听完率、切歌率以开始次数为分母；暂停和离开页面不算切歌。统计从功能上线后开始。', listeningLoading: '正在载入收听统计…', listeningUnavailable: '收听统计暂不可用；已有数字可能不是最新。',
@@ -15,6 +16,7 @@
       loading: '正在载入歌曲…', count: '{count} 首歌曲', filteredCount: '{shown} / {count} 首歌曲', playing: '正在播放：{title}', buffering: '正在缓冲：{title}', playSong: '播放', pauseSong: '暂停', loadingSong: '正在缓冲…', retrySong: '点击重试', audioLabel: '播放 {title}', pauseLabel: '暂停 {title}', cancelLabel: '停止载入 {title}', retryLabel: '重新播放 {title}', controlsLabel: '{title} 的播放控制', audioError: '暂时无法播放这首歌，点击卡片重试。', previewAudio: '试听所选歌曲', authenticating: '正在打开工作室…', wrongCode: '管理密码不正确，请再试一次。', loginFailed: '暂时无法打开工作室，请稍后再试。', chooseFirst: '请先选择一首歌曲。', invalidFile: '请选择 MP3、M4A 或 WAV 格式的歌曲。', fileTooLarge: '这首歌超过 25 MB，请选择更小的文件。', emptyFile: '这个文件是空的，请重新选择。', addTitle: '请给这首歌填写一个名字。', uploading: '正在上传歌曲，请保持页面打开…', publishing: '文件已发送，正在加入歌曲列表…', uploaded: '上传成功，已加入公开歌曲列表。你可以继续上传下一首。', uploadedRefresh: '歌曲已上传。暂时无法刷新歌曲列表，请稍后重新载入。', uploadFailed: '上传未完成，请再试一次。', sessionExpired: '请重新输入管理密码，再上传这首歌。', tooMany: '操作太频繁，请稍后再试。', titleLimit: '歌名最多 120 个字。', descriptionLimit: '介绍最多 500 个字。', storageFull: '暂时无法保存这首歌，请稍后再试。', unknownOutcome: '连接中断，无法确认上传结果。请先重新载入歌曲列表，确认歌曲是否已经出现。',
     },
     en: {
+      carLyrics: 'Car lyrics (trial)', carNoTiming: 'No synchronized timing for this song; the car keeps the song title.', carHint: 'Try showing each lyric in the car’s title field. Updates with the phone locked need testing.', captionLyrics: 'Synchronized MV subtitles', captionHint: 'Approximate subtitle timing; ellipses mark uncertain words. Original written lyrics remain separate.',
       back: '← Back to Toolbox', intro: 'Pick a song and keep listening. Find it by number, title, or subject.', aiNotice: 'AI-created songs remain labelled. Open a song’s details for its full lyrics and introduction.', aiGenerated: 'AI-generated', running180: '180 BPM · Running', library: 'Song list', searchLabel: 'Search songs', search: 'Number, title, subject, or concept…', manage: 'Manage songs',
       like: 'Like', dislike: 'Dislike', likeLabel: 'Like {title}; {count} total votes', dislikeLabel: 'Dislike {title}; {count} total votes', reactionLabel: 'Shared votes for {title}', voteScore: 'Score {score}', retryVote: 'Retry {reaction}', votePending: 'Submitting this vote…', voteUnknown: 'This vote is unconfirmed. Retry the same action without counting it twice.', voteRateLimited: 'Too many requests. This vote was not counted; try again later.', voteRejected: 'This vote was not counted. Please try again later.', voteUnavailable: 'Unable to submit. This vote was not counted.', voteRetryLabel: 'Retry {reaction}: {title}; {count} total votes', preferencesNotice: 'Each click adds one vote. Score = likes − dislikes; vote totals are shared across browsers.', preferencesLoading: 'Loading shared vote totals.', preferencesUnavailable: 'Shared totals are unavailable; displayed counts may be out of date.', preferencesRecovery: 'This browser cannot save unconfirmed votes. Stay on this page to retry an unconfirmed result.',
       sortListens: 'Most listened', sortCompletion: 'Highest completion rate', sortSkips: 'Most skipped', listeningSummary: '{listens} listens · {completion} completed · {skip} skipped', listeningDetails: '{starts} starts · {listens} qualified listens · {completions} completions · {skips} manual skips ({earlySkips} early)', listeningNotice: 'Shared totals: a listen means 30 seconds played, or half a short song; completion means 90% actually heard. Rates use starts as the denominator. Pauses and leaving the page are not skips. Tracking begins with this release.', listeningLoading: 'Loading listening statistics…', listeningUnavailable: 'Listening statistics are unavailable; displayed counts may be out of date.',
@@ -234,7 +236,9 @@
       const url = new URL(raw.url, location.href);
       if (url.origin !== location.origin || !['https:', 'http:'].includes(url.protocol)) return null;
       const lyrics = typeof raw.lyrics === 'string' ? raw.lyrics.slice(0, 12000).replace(/\r\n?/g, '\n').trim() : '';
+      const display = lyricsSync?.playbackLyrics?.({ lyrics, lyricsTiming: raw.lyricsTiming, lyricCaptions: raw.lyricCaptions });
       return { ...raw, title: raw.title.slice(0, 120), description: typeof raw.description === 'string' ? raw.description.slice(0, 500) : '', lyrics, lyricsTiming: lyricsSync?.validateTiming(lyrics, raw.lyricsTiming) || null, url: url.href,
+        displayLyrics: display?.text ?? lyrics, displayTiming: display?.timing ?? null, captionFallback: display?.captions === true,
         aiGenerated: raw.aiGenerated === true && raw.generationProvider === 'ElevenLabs', generationProvider: raw.generationProvider === 'ElevenLabs' ? 'ElevenLabs' : null,
         tempoEstimate: musicTempo?.sanitize(raw.tempoEstimate) || null };
     } catch { return null; }
@@ -449,6 +453,9 @@
     $('playlist-intro').textContent = t(continuousPlay ? 'playlistIntro' : 'continuousOff');
     $('continuous-play').checked = continuousPlay;
     $('continuous-play').title = t('continuousHint');
+    renderCarLyrics();
+    $('playlist-caption-note').hidden = !card?.track.captionFallback;
+    $('playlist-caption-note').textContent = t('captionHint');
     if ($('playlist-title').textContent !== title) $('playlist-title').textContent = title;
     $('playlist-position').textContent = index >= 0 ? t('playlistPosition', { position: index + 1, count: queue.length }) : loaded ? t('count', { count: tracks.length }) : t(libraryFailed ? 'libraryError' : 'loading');
     $('playlist-disclosure').hidden = !card?.track.aiGenerated;
@@ -513,7 +520,7 @@
   }
 
   function usableLyricsTiming(card) {
-    const timing = card.track.lyricsTiming;
+    const timing = card.track.displayTiming ?? card.track.lyricsTiming;
     if (!timing || (card === selectedCard && Number.isFinite(card.audio.duration) && timing[timing.length - 1].end > card.audio.duration)) return null;
     return timing;
   }
@@ -529,11 +536,11 @@
     display.lyricsUnavailable.textContent = t('lyricsUnavailable');
     const line = timing && card === selectedCard && card.audio.readyState > 0 && !card.audio.ended && !card.audio.error
       ? lyricsSync.activeLineAt(timing, card.audio.currentTime) : null;
-    const changed = line !== display.currentLyricLine || display.trackId !== card.track.id || display.lyricSource !== card.track.lyrics;
+    const changed = line !== display.currentLyricLine || display.trackId !== card.track.id || display.lyricSource !== card.track.displayLyrics;
     if (changed) {
       display.currentLyricLine = line;
       display.trackId = card.track.id;
-      display.lyricSource = card.track.lyrics;
+      display.lyricSource = card.track.displayLyrics;
       display.lyricsSpan.textContent = line === null ? '' : card.lyricLines[line];
       display.lyricsText.scrollLeft = 0;
       display.lyricsText.classList.remove('is-changing');
@@ -555,13 +562,13 @@
   }
 
   function renderLyrics(card) {
-    if (card.renderedLyrics !== card.track.lyrics) {
+    if (card.renderedLyrics !== card.track.displayLyrics || card.renderedOriginal !== card.track.lyrics) {
       card.lyricsSpan.textContent = '';
       card.lyricsText.removeAttribute('data-line');
       card.lyricsText.classList.remove('is-changing');
-      card.lyricLines = card.track.lyrics.split('\n');
+      card.lyricLines = card.track.displayLyrics.split('\n');
       card.originalLyricsText.textContent = card.track.lyrics;
-      card.renderedLyrics = card.track.lyrics;
+      card.renderedLyrics = card.track.displayLyrics; card.renderedOriginal = card.track.lyrics;
       card.currentLyricLine = null;
     }
     syncLyrics(card, { immediate: true });
@@ -592,7 +599,7 @@
     if (descriptions.length) card.button.setAttribute('aria-describedby', descriptions.join(' '));
     else card.button.removeAttribute('aria-describedby');
     card.lyricsDetails.hidden = !card.track.lyrics;
-    card.lyricsSummary.textContent = t('lyrics');
+    card.lyricsSummary.textContent = t(card.track.captionFallback ? 'captionLyrics' : 'lyrics');
     const lyricsLabel = t('lyricsLabel', { title: card.track.title });
     card.lyricsSummary.setAttribute('aria-label', lyricsLabel);
     card.lyricsText.setAttribute('aria-label', lyricsLabel);
@@ -1087,7 +1094,18 @@
   }
 
   document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language)));
+  function renderCarLyrics() {
+    const state = window.MapKAIMusicDock?.carLyricsState?.();
+    $('car-lyrics').disabled = !state?.supported;
+    $('car-lyrics').checked = state?.enabled === true;
+    $('car-lyrics-status').hidden = !state?.enabled;
+    $('car-lyrics-status').textContent = t(selectedCard && !usableLyricsTiming(selectedCard) ? 'carNoTiming' : 'carHint');
+  }
+  $('car-lyrics').addEventListener('change', () => window.MapKAIMusicDock?.setCarLyrics?.($('car-lyrics').checked));
+  window.addEventListener('mapkai:music-dock-ready', renderCarLyrics);
+  window.addEventListener('mapkai:car-lyrics', renderCarLyrics);
   const resizeLyrics = () => { for (const card of cards.values()) syncLyrics(card, { immediate: true }); updatePlaylist({ immediate: true }); };
+  $('playlist-options').addEventListener('toggle', resizeLyrics);
   window.addEventListener('resize', resizeLyrics);
   reducedMotion.addEventListener('change', resizeLyrics);
   $('play-all').addEventListener('click', playAll);

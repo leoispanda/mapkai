@@ -60,7 +60,7 @@
   });
   // Keep one body-mounted player alive while the main app changes learning routes.
   const musicStyle = document.createElement('link');
-  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=bpm-estimates-20261018';
+  musicStyle.rel = 'stylesheet'; musicStyle.href = '/music/dock.css?v=car-lyrics-20261024';
   document.head.append(musicStyle);
   const startMusicDock = () => {
     const launchDock = () => {
@@ -78,7 +78,7 @@
     };
     const mountDock = () => {
       const script = document.createElement('script');
-      script.src = '/music/dock.js?v=listening-20261021'; document.head.append(script);
+      script.src = '/music/dock.js?v=car-lyrics-20261024'; document.head.append(script);
     };
     const launch = () => {
       const ready = () => {
@@ -109,7 +109,7 @@
   if (globalThis.MapKAILyricsSync) startMusicDock();
   else {
     const helper = document.createElement('script');
-    helper.src = '/music/lyrics-sync.js?v=music-14';
+    helper.src = '/music/lyrics-sync.js?v=car-lyrics-20261024';
     helper.onload = startMusicDock; document.head.append(helper);
   }
 })();

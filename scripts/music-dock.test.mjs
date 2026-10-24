@@ -22,7 +22,7 @@ const flush = async () => { for (let count = 0; count < 12; count++) await Promi
 
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
-function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false } = {}) {
+function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false, savedCarLyrics = 'off' } = {}) {
   const ids = new Map(), elements = [], operations = [];
   class Target {
     addEventListener(type, callback, options = {}) {
@@ -97,6 +97,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   const audioSession = audioSessionType === null ? undefined : { get type() { return sessionType; }, set type(value) { audioSessionTypes.push(value); sessionType = value; } };
   const mediaSession = { set playbackState(value) { this.currentPlaybackState = value; playbackStates.push(value); }, get playbackState() { return this.currentPlaybackState; }, setActionHandler: (action, handler) => mediaActions.set(action, handler), setPositionState(value) { this.position = value; } };
   const stored = new Map(saved ? [['mapkaiMusicDock', JSON.stringify(saved)]] : []);
+  const preferencesStore = new Map([['mapkaiMusicContinuous.v1', continuous], ['mapkaiMusicCarLyrics.v1', savedCarLyrics]]);
   let now = 10000, fetchCalls = 0, context;
   const pageState = { tracks: pageLoaded ? structuredClone(catalog) : [], track: null, audio: null,
     loaded: Boolean(pageLoaded), libraryFailed: pageFailed, pending: false, failed: false, complete: false, volume: 0.5, pendingPosition: null };
@@ -153,7 +154,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     navigator: { mediaSession, audioSession }, MediaMetadata: class { constructor(value) { Object.assign(this, value); } },
     Date: class extends Date { static now() { return now; } },
     location: { href: 'https://www.mapkai.com/explore', origin: 'https://www.mapkai.com' },
-    localStorage: { getItem: key => key === 'mapkaiMusicContinuous.v1' ? continuous : null },
+    localStorage: { getItem: key => preferencesStore.get(key) ?? null, setItem: (key, value) => preferencesStore.set(key, value) },
     sessionStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => { operations.push('storage'); stored.set(key, value); } },
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
     ResizeObserver: class { observe() {} }, MutationObserver: class { observe() {} },
@@ -168,7 +169,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
-    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, operations, audioSession, audioSessionTypes,
+    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, operations, audioSession, audioSessionTypes, preferencesStore,
     updatePage: update, visibility: () => { document.dispatchEvent({ type: 'visibilitychange' }); },
     pageshow: persisted => window.dispatchEvent({ type: 'pageshow', persisted }),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
@@ -703,4 +704,54 @@ test('a stale request settlement cannot pause a newer legitimate Music request o
   assert.equal(h.ownAudio.paused, false); assert.equal(h.control('select').value, secondId);
   assert.equal(h.ownAudio.playCalls, 2); assert.equal(h.audioSession.type, 'playback');
   assert.equal(h.mediaSession.playbackState, 'playing');
+});
+
+test('car lyrics is opt-in, follows native playback/seek, and restores title in gaps and on pause', async () => {
+  const h = harness(), play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush();
+  h.ownAudio.metadata(); h.ownAudio.currentTime = 2.5; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'Song 1');
+  const playCalls = h.ownAudio.playCalls, position = h.ownAudio.currentTime;
+  h.dock.setCarLyrics(true);
+  assert.equal(h.mediaSession.metadata.title, 'First line');
+  assert.equal(h.mediaSession.metadata.artist, 'Song 1 · MapKAI');
+  assert.equal(h.preferencesStore.get('mapkaiMusicCarLyrics.v1'), 'on');
+  assert.equal(h.ownAudio.playCalls, playCalls); assert.equal(h.ownAudio.currentTime, position);
+  const same = h.mediaSession.metadata; h.ownAudio.event('timeupdate'); assert.equal(h.mediaSession.metadata, same);
+  h.ownAudio.currentTime = 6.5; h.ownAudio.event('seeking'); assert.equal(h.mediaSession.metadata.title, 'Second line');
+  h.ownAudio.currentTime = 4.5; h.ownAudio.event('timeupdate'); assert.equal(h.mediaSession.metadata.title, 'Song 1');
+  h.ownAudio.currentTime = 2.5; h.ownAudio.event('seeking'); assert.equal(h.mediaSession.metadata.title, 'First line');
+  h.mediaActions.get('pause')(); await flush(); assert.equal(h.mediaSession.metadata.title, 'Song 1');
+  h.mediaActions.get('play')(); await flush(); assert.equal(h.mediaSession.metadata.title, 'First line');
+  h.dock.setCarLyrics(false); assert.equal(h.mediaSession.metadata.title, 'Song 1');
+});
+
+test('saved car mode does not load music or steal a dormant or external media session', async () => {
+  const h = harness({ savedCarLyrics: 'on' });
+  assert.equal(h.dock.carLyricsState().enabled, true); assert.equal(h.fetchCalls(), 0); assert.equal(h.mediaSession.metadata, undefined);
+  const play = h.dock.play(firstId); h.request.resolve({ tracks: catalog }); await play; await flush();
+  h.ownAudio.metadata(); h.ownAudio.currentTime = 2.5; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'First line');
+  h.lesson(); await flush(); const foreign = { title: 'A lesson owns this' }; h.mediaSession.metadata = foreign;
+  h.dock.setCarLyrics(false); h.dock.setCarLyrics(true); h.visibility(); h.pagehide();
+  assert.equal(h.mediaSession.metadata, foreign);
+});
+
+test('a missing timeline keeps the title, and car mode cleanup restores the current song', async () => {
+  const h = harness({ savedCarLyrics: 'on' }), play = h.dock.play(firstId);
+  h.request.resolve({ tracks: [{ ...catalog[0], lyricsTiming: [] }, catalog[1]] }); await play; await flush();
+  h.ownAudio.metadata(); h.ownAudio.currentTime = 2.5; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'Song 1'); assert.match(h.control('car-note').textContent, /No synchronized timing/);
+  h.mediaActions.get('nexttrack')(); await flush(); h.ownAudio.metadata(); h.ownAudio.currentTime = 2.5; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'First line');
+  h.pagehide(); await flush(); assert.equal(h.mediaSession.metadata.title, 'Song 2');
+});
+
+test('standalone car mode uses validated MV captions without modifying written lyrics', async () => {
+  const h = harness({ savedCarLyrics: 'on' }), play = h.dock.play(firstId);
+  h.request.resolve({ tracks: [{ ...catalog[0], lyricsTiming: [], lyricCaptions: {
+    text: 'Actually sung…', timing: [{ line: 0, start: 2, end: 4 }], source: 'music-video', approximate: true,
+  } }] }); await play; await flush(); h.ownAudio.metadata(); h.ownAudio.currentTime = 2.5; h.ownAudio.event('timeupdate');
+  assert.equal(h.mediaSession.metadata.title, 'Actually sung…'); assert.equal(h.control('line').textContent, 'Actually sung…');
+  assert.equal(h.control('original-text').textContent, catalog[0].lyrics);
+  assert.equal(h.control('caption-note').hidden, false);
 });

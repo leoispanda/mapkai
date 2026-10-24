@@ -109,3 +109,17 @@ test('repeated sung lines remain distinct and complete valid bounds are accepted
   const many = Array.from({ length: 600 }, (_, index) => ({ line: index, start: index, end: index + 1 }));
   assert.equal(validateTiming(Array(600).fill('Look again').join('\n'), many).length, 600);
 });
+
+test('MV captions are a separate validated fallback; original complete timing takes precedence', () => {
+  const { playbackLyrics } = globalThis.MapKAILyricsSync;
+  const caption = { text: 'Recognized words…', timing: [{ line: 0, start: 2, end: 3 }], source: 'music-video', approximate: true };
+  const raw = { lyrics, lyricsTiming: cues, lyricCaptions: caption };
+  assert.equal(playbackLyrics(raw).captions, false);
+  assert.equal(playbackLyrics(raw).text, lyrics);
+  raw.lyricsTiming = [];
+  const fallback = playbackLyrics(raw); assert.equal(fallback.captions, true); assert.equal(fallback.text, caption.text);
+  assert.equal(raw.lyrics, lyrics);
+  for (const bad of [{ ...caption, approximate: false }, { ...caption, source: 'unknown' }, { ...caption, text: 'bad\ttext' }, { ...caption, timing: [] }]) {
+    assert.equal(playbackLyrics({ lyrics, lyricCaptions: bad }), null);
+  }
+});

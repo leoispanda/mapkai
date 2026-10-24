@@ -5,6 +5,7 @@ import vm from 'node:vm';
 
 const appSource = await readFile(new URL('../music/app.js', import.meta.url), 'utf8');
 const tempoSource = await readFile(new URL('../music/tempo.js', import.meta.url), 'utf8');
+const syncSource = await readFile(new URL('../music/lyrics-sync.js', import.meta.url), 'utf8');
 const html = await readFile(new URL('../music/index.html', import.meta.url), 'utf8');
 const catalog = [
   { id: '00000000-0000-4000-8000-000000000001', title: '001 First Question - MapKAI - Education - Feedback', subject: 'Education' },
@@ -99,8 +100,9 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     MapKAIMusicPreferences: preferences,
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
     AbortController, setTimeout, clearTimeout, queueMicrotask,
-    fetch: async () => { fetchCalls++; return { ok: true, json: async () => ({ tracks: structuredClone(currentSongs), nextCursor: null }) }; },
+    fetch: async () => { fetchCalls++; return { ok: true, json: async () => vm.runInContext(`JSON.parse(${JSON.stringify(JSON.stringify({ tracks: currentSongs, nextCursor: null }))})`, context) }; },
   });
+  vm.runInContext(syncSource, context, { filename: 'music/lyrics-sync.js' });
   vm.runInContext(tempoSource, context, { filename: 'music/tempo.js' });
   vm.runInContext(appSource, context, { filename: 'music/app.js' });
   window.addEventListener('mapkai:music-update', () => snapshots.push(window.MapKAIMusicPage.snapshot()));
@@ -375,4 +377,26 @@ test('a pause at duration without a native ended flag is respected as a stop', a
   audio.paused = true; audio.ended = false; audio.event('pause');
   assert.equal(h.page.snapshot().playbackIntent, false); assert.equal(h.page.snapshot().advancing, false);
   audio.ended = true; audio.event('ended'); await flush(); assert.equal(audio.playCalls, 1);
+});
+
+test('Music shows MV captions while preserving full original text and does not start dock audio', async () => {
+  const song = { ...catalog[0], lyricCaptions: { text: 'Actually sung…', timing: [{ line: 0, start: 2, end: 4 }], source: 'music-video', approximate: true } };
+  const h = harness({ songs: [song] }); await flush(); h.page.play(song.id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata(); audio.currentTime = 2.5; audio.event('timeupdate');
+  assert.equal(h.element('playlist-lyric-span').textContent, 'Actually sung…');
+  assert.equal(h.element('playlist-caption-note').hidden, false);
+  assert.equal(h.original(h.rows()[0]).textContent, song.lyrics);
+  assert.equal(h.allAudio().filter(item => !item.paused).length, 1);
+  audio.currentTime = 5; audio.event('timeupdate'); assert.equal(h.element('playlist-lyric-span').textContent, '');
+});
+
+test('opening lyric settings recalculates overflow after the hidden region gains its full width', async () => {
+  const song = { ...catalog[0], lyricCaptions: { text: 'A readable sung line', timing: [{ line: 0, start: 2, end: 4 }], source: 'music-video', approximate: true } };
+  const h = harness({ songs: [song] }); await flush(); h.page.play(song.id); await flush();
+  const audio = h.page.snapshot().audio; audio.metadata();
+  const region = h.element('playlist-lyrics'), span = h.element('playlist-lyric-span');
+  region.clientWidth = 0; span.offsetWidth = 180; audio.currentTime = 3; audio.event('timeupdate');
+  assert.equal(span.style.transform, 'translateX(-90px)');
+  region.clientWidth = 313; h.element('playlist-options').dispatchEvent({ type: 'toggle' });
+  assert.equal(span.style.transform, 'translateX(0px)'); assert.equal(audio.paused, false);
 });
