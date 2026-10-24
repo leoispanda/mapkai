@@ -2,14 +2,14 @@
   'use strict';
   const copy = {
     zh: {
-      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'让旋律，成为画面。', intro:'把歌里的故事、作品与想法，连成一部短片。选择喜欢的作品，随时在线观看。',
+      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'音乐影像', intro:'把歌里的故事与想法，连成一部短片。',
       browseEarlier:'看看早期版本 ↓', artNote:'AI 绘画与音乐 · 艺术演绎', fromCollection:'来自作品集', earlierHeading:'早期版本', earlierIntro:'从最初的构想到绘画长卷，保留每一次不同的表达。',
       loading:'正在载入音乐影像…', loadError:'暂时无法载入音乐影像，请再试一次。', retry:'重新载入', empty:'新的音乐影像即将在这里展示。', arts:'艺术与人文 ↗', backToSongs:'继续听歌 ↗',
       latest:'最新作品', featured:'精选作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', playbackError:'暂时无法播放这个视频，请点击播放重试。',
       disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Leave a Little Room 合作版与 Your Turn 绘画 MV。',
     },
     en: {
-      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Songs, brought to life.', intro:'Stories, works and ideas become films. Choose a song to watch and return to whenever you like.',
+      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Music videos', intro:'Stories and ideas, brought to life in music videos.',
       browseEarlier:'Explore earlier versions ↓', artNote:'AI-created art and music · Artistic interpretations', fromCollection:'FROM THE COLLECTION', earlierHeading:'Earlier versions', earlierIntro:'From the first idea to a painted journey, each version keeps its own expression.',
       loading:'Loading music videos…', loadError:'The films could not be loaded. Please try again.', retry:'Try again', empty:'New music videos will appear here.', arts:'Arts & humanities ↗', backToSongs:'Keep listening ↗',
       latest:'Latest film', featured:'Featured film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', playbackError:'This video cannot be played right now. Press play to try again.',
