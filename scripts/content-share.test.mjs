@@ -46,7 +46,7 @@ test('archived, missing and invalid works never fall back to a collection or pri
 });
 
 test('music video links render only the selected film with no download controls or links', async () => {
-  for (const id of ['your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
+  for (const id of ['leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original']) {
     const response = await call('film', id, {}); const html = await response.text();
     assert.equal(response.status, 200); assert.equal((html.match(/<video /g) || []).length, 1);
     assert.match(html, new RegExp(`/share/film/${id}\\?lang=en`)); assert.match(html, new RegExp(`/music/videos/posters/${id}.jpg`));

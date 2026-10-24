@@ -13,6 +13,51 @@ export const VIDEO_REVISION = 'watch-only-20261024';
 
 export const MUSIC_VIDEOS = freeze([
   {
+    "id": "leave-a-little-room",
+    "title": {
+      "zh": "Leave a Little Room",
+      "en": "Leave a Little Room"
+    },
+    "description": {
+      "zh": "MapKAI × MiniGrowLab 合作影像。从杯上的指纹到书页边注，给不同的理解留一点空间。",
+      "en": "A MapKAI × MiniGrowLab collaboration. From fingerprints on a cup to notes in a margin, leave a little room for another reading."
+    },
+    "durationSeconds": 120.034,
+    "version": "v2-minigrowlab",
+    "poster": "/music/videos/posters/leave-a-little-room.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 44708023,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/leave-a-little-room/ad61a8f0ff15c8037cd3b35fae03f7cccb73e63cd117b8e3ae752e82baccbcc6.mp4",
+        "sha256": "ad61a8f0ff15c8037cd3b35fae03f7cccb73e63cd117b8e3ae752e82baccbcc6",
+        "etag": "c081d87b83d1dc96d9ea87fcc98e5147",
+        "filename": "mapkai-leave-a-little-room-phone.mp4"
+      },
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 79446889,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/leave-a-little-room/30244bef84769abb2ef2f0236a42e84ba51c29f62aba7cb6c4ca1b957129b07c.mp4",
+        "sha256": "30244bef84769abb2ef2f0236a42e84ba51c29f62aba7cb6c4ca1b957129b07c",
+        "etag": "5b78c54f10e80d3a7c3d62b628d07cfc",
+        "filename": "mapkai-leave-a-little-room-hd.mp4"
+      }
+    ]
+  },
+  {
     "id": "your-turn-asml",
     "title": {
       "zh": "Your Turn",

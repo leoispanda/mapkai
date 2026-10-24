@@ -2,21 +2,21 @@
   'use strict';
   const copy = {
     zh: {
-      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'让旋律，成为画面。', intro:'把一首歌里的名字、作品与想法，连成一部短片。选一个版本，随时在线观看。',
-      browseEarlier:'看看早期版本 ↓', artNote:'AI 绘画与音乐 · 艺术演绎', fromCollection:'来自作品集', earlierHeading:'这首歌的其他画面', earlierIntro:'从最初的构想到绘画长卷，保留每一次不同的表达。',
+      back:'← 返回 Music', collection:'音乐影像 / MAPKAI MUSIC', heading:'让旋律，成为画面。', intro:'把歌里的故事、作品与想法，连成一部短片。选择喜欢的作品，随时在线观看。',
+      browseEarlier:'看看早期版本 ↓', artNote:'AI 绘画与音乐 · 艺术演绎', fromCollection:'来自作品集', earlierHeading:'早期版本', earlierIntro:'从最初的构想到绘画长卷，保留每一次不同的表达。',
       loading:'正在载入音乐影像…', loadError:'暂时无法载入音乐影像，请再试一次。', retry:'重新载入', empty:'新的音乐影像即将在这里展示。', arts:'艺术与人文 ↗', backToSongs:'继续听歌 ↗',
-      latest:'最新作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', playbackError:'暂时无法播放这个视频，请点击播放重试。',
-      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Your Turn 的绘画 MV。',
+      latest:'最新作品', featured:'精选作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', playbackError:'暂时无法播放这个视频，请点击播放重试。',
+      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Leave a Little Room 合作版与 Your Turn 绘画 MV。',
     },
     en: {
-      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Songs, brought to life.', intro:'Names, works and ideas become a film. Choose a version to watch and return to whenever you like.',
-      browseEarlier:'Explore earlier versions ↓', artNote:'AI-created art and music · Artistic interpretations', fromCollection:'FROM THE COLLECTION', earlierHeading:'Other visions of the song', earlierIntro:'From the first idea to a painted journey, each version keeps its own expression.',
+      back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Songs, brought to life.', intro:'Stories, works and ideas become films. Choose a song to watch and return to whenever you like.',
+      browseEarlier:'Explore earlier versions ↓', artNote:'AI-created art and music · Artistic interpretations', fromCollection:'FROM THE COLLECTION', earlierHeading:'Earlier versions', earlierIntro:'From the first idea to a painted journey, each version keeps its own expression.',
       loading:'Loading music videos…', loadError:'The films could not be loaded. Please try again.', retry:'Try again', empty:'New music videos will appear here.', arts:'Arts & humanities ↗', backToSongs:'Keep listening ↗',
-      latest:'Latest film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', playbackError:'This video cannot be played right now. Press play to try again.',
-      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch the painted world of Your Turn online.',
+      latest:'Latest film', featured:'Featured film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', playbackError:'This video cannot be played right now. Press play to try again.',
+      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch Leave a Little Room, a MapKAI × MiniGrowLab collaboration, and Your Turn online.',
     },
   };
-  const order = ['your-turn-asml', 'your-turn-artworks', 'your-turn-original'];
+  const order = ['leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original'];
   const cards = new Map();
   const $ = id => document.getElementById(id);
   const label = (value, fallback = '') => value?.[language] || value?.en || value?.zh || fallback;
@@ -45,7 +45,7 @@
   }
 
   function safeItem(raw) {
-    if (!raw || !order.includes(raw.id) || !bilingual(raw.title) || !bilingual(raw.description)
+    if (!raw || typeof raw.featured !== 'boolean' || !order.includes(raw.id) || !bilingual(raw.title) || !bilingual(raw.description)
       || !Number.isFinite(raw.durationSeconds) || raw.durationSeconds <= 0 || raw.durationSeconds > 7200
       || raw.poster !== `/music/videos/posters/${raw.id}.jpg` || !Array.isArray(raw.qualities)) return null;
     const qualities = raw.qualities.filter(quality => quality && ['phone','hd'].includes(quality.id) && bilingual(quality.label)
@@ -77,8 +77,8 @@
     const {item} = card;
     const title = label(item.title);
     card.title.textContent = title;
-    card.description.textContent = label(item.description); card.description.hidden = true;
-    card.badge.textContent = t(item.id === 'your-turn-asml' ? 'latest' : 'earlier');
+    card.description.textContent = label(item.description); card.description.hidden = item.id !== 'leave-a-little-room';
+    card.badge.textContent = t(item.id === order[0] ? 'latest' : item.featured ? 'featured' : 'earlier');
     card.meta.textContent = [duration(item.durationSeconds), t('english')].join(' · ');
     card.video.setAttribute('aria-label',title);
     card.play.setAttribute('aria-label',`${t(card.video.ended ? 'replay' : 'play')} · ${title}`);
@@ -104,7 +104,7 @@
     const body = textNode('div','film-copy');
     const topline = textNode('div','film-topline');
     const badge = textNode('span','film-badge'); const aiBadge = textNode('span','film-ai-badge'); aiBadge.textContent = 'AI generated'; aiBadge.lang = 'en'; const meta = textNode('span','film-meta'); topline.append(badge,aiBadge,meta);
-    const title = textNode(item.id === 'your-turn-asml' ? 'h2' : 'h3'); title.id = `${item.id}-title`;
+    const title = textNode(item.featured ? 'h2' : 'h3'); title.id = `${item.id}-title`;
     element.setAttribute('aria-labelledby',title.id);
     const description = textNode('p','film-description');
     const actions = textNode('div','film-actions');
@@ -150,7 +150,7 @@
     document.querySelectorAll('[data-i18n]').forEach(node => { node.textContent = t(node.dataset.i18n); });
     document.querySelectorAll('[data-language]').forEach(button => { button.setAttribute('aria-pressed',String(button.dataset.language === next)); });
     document.querySelector('.brand').setAttribute('aria-label',next === 'zh' ? 'MapKAI 首页' : 'MapKAI home');
-    $('featured-films').setAttribute('aria-label',next === 'zh' ? '精选音乐影像' : 'Featured music video');
+    $('featured-films').setAttribute('aria-label',next === 'zh' ? '精选音乐影像' : 'Featured music videos');
     $('arts-link').href = `/categories/02?lang=${next}`;
     if (loadState === 'loaded') $('gallery-status').textContent = t('count').replace('{count}',String(visibleCount));
     else if (loadState === 'empty') $('gallery-status').textContent = t('empty');
@@ -180,10 +180,10 @@
       visibleCount = items.length; loadState = items.length ? 'loaded' : 'empty';
       for (const item of items) {
         const card = createCard(item); cards.set(item.id,card);
-        (item.id === 'your-turn-asml' ? $('featured-films') : $('earlier-films')).append(card.element);
+        (item.featured ? $('featured-films') : $('earlier-films')).append(card.element);
       }
-      $('featured-films').hidden = !cards.has('your-turn-asml');
-      $('earlier-versions').hidden = !items.some(item => item.id !== 'your-turn-asml');
+      $('featured-films').hidden = !items.some(item => item.featured);
+      $('earlier-versions').hidden = !items.some(item => !item.featured);
       applyLanguage(language); revealHash();
     } catch {
       loadState = 'error'; $('gallery-status').hidden = true; $('gallery-error').hidden = false;
