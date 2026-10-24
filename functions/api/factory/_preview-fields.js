@@ -41,6 +41,11 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0541': 'Mathematics',
   '0542': 'Statistics',
   '0611': 'Computer use',
+  '0612': 'Database and network design and administration',
+  '0613': 'Software and applications development and analysis',
+  '0711': 'Chemical engineering and processes',
+  '0712': 'Environmental protection technology',
+  '0713': 'Electricity and energy',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
