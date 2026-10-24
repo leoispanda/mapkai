@@ -92,7 +92,8 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   document.getElementById = id => ids.get(id) || null;
   document.createElement = tag => tag === 'audio' ? new Audio() : new Element(tag);
   document.querySelectorAll = selector => selector === 'audio,video' ? elements.filter(element => ['AUDIO', 'VIDEO'].includes(element.tagName)) : [];
-  const window = new Target(), request = deferred(), mediaActions = new Map(initialMediaActions);
+  const window = new Target(), request = deferred(), mediaActions = new Map(initialMediaActions), stateEvents = [];
+  window.addEventListener('mapkai:music-dock-state', () => stateEvents.push({ ...window.MapKAIMusicDock.snapshot() }));
   const playbackStates = [], audioSessionTypes = []; let sessionType = audioSessionType;
   const audioSession = audioSessionType === null ? undefined : { get type() { return sessionType; }, set type(value) { audioSessionTypes.push(value); sessionType = value; } };
   const mediaSession = { set playbackState(value) { this.currentPlaybackState = value; playbackStates.push(value); }, get playbackState() { return this.currentPlaybackState; }, setActionHandler: (action, handler) => mediaActions.set(action, handler), setPositionState(value) { this.position = value; } };
@@ -124,7 +125,17 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
         pageCalls.toggle++;
         if (!pageState.loaded) return;
         if (!pageState.track) choose(firstId);
-        if (!pageState.audio.paused) pageState.audio.pause(); else pageState.audio.play();
+        if (!pageState.audio.paused) { pageState.audio.pause(); pageState.pending = false; }
+        else {
+          const audio = pageState.audio; pageState.pending = true; pageState.failed = false;
+          audio.play().then(() => {
+            if (pageState.audio !== audio) return;
+            pageState.pending = false; update();
+          }, () => {
+            if (pageState.audio !== audio) return;
+            pageState.pending = false; pageState.failed = true; update();
+          });
+        }
         update();
       },
       pause: () => { pageCalls.pause++; pageState.audio?.pause(); pageState.pending = false; update(); },
@@ -169,7 +180,7 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
-    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, operations, audioSession, audioSessionTypes, preferencesStore,
+    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, stateEvents, operations, audioSession, audioSessionTypes, preferencesStore,
     updatePage: update, visibility: () => { document.dispatchEvent({ type: 'visibilitychange' }); },
     pageshow: persisted => window.dispatchEvent({ type: 'pageshow', persisted }),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
@@ -266,6 +277,82 @@ test('subject API rejects non-UUID values without catalog or audio reads', async
     assert.equal(await h.dock.play(id), false);
   }
   assert.equal(h.fetchCalls(), 0); assert.equal(h.ownAudio.playCalls, 0); assert.equal(h.ownAudio.src, undefined);
+});
+
+test('public dock snapshots are immutable and do not load a catalog or start media', () => {
+  const h = harness(), snapshot = h.dock.snapshot();
+  assert.deepEqual({ ...snapshot }, { id: null, playing: false, pending: false, failed: false });
+  assert.equal(Object.isFrozen(snapshot), true);
+  for (const id of [firstId, null, undefined, '/api/music/audio']) assert.equal(h.dock.pause(id), false);
+  assert.equal(h.fetchCalls(), 0); assert.equal(h.ownAudio.playCalls, 0);
+  assert.deepEqual(h.stateEvents, [{ id: null, playing: false, pending: false, failed: false }]);
+});
+
+test('public dock state follows standalone and Music playback, and pause only targets its selected song', async () => {
+  for (const pageLoaded of [null, true]) {
+    const h = harness({ pageLoaded }), play = h.dock.play(firstId);
+    if (pageLoaded === null) {
+      assert.equal(h.dock.snapshot().pending, true);
+      h.request.resolve({ tracks: catalog });
+    }
+    assert.equal(await play, true); await flush();
+    assert.deepEqual({ ...h.dock.snapshot() }, { id: firstId, playing: true, pending: false, failed: false });
+    const audio = pageLoaded === null ? h.ownAudio : h.pageState.audio;
+    assert.equal(h.dock.pause(secondId), false); assert.equal(audio.paused, false);
+    assert.equal(h.dock.pause(firstId.toUpperCase()), true); await flush();
+    assert.deepEqual({ ...h.dock.snapshot() }, { id: firstId, playing: false, pending: false, failed: false });
+    const lesson = h.lesson(); await flush();
+    assert.equal(h.dock.pause(firstId), true); assert.equal(lesson.paused, false);
+    assert.equal(h.ownAudio.playCalls, pageLoaded === null ? 1 : 0);
+  }
+});
+
+test('dock state events track transport changes and failures without repeating on playback clocks', async () => {
+  const h = harness(), play = h.dock.play(firstId);
+  assert.equal(h.stateEvents.at(-1).pending, true);
+  h.request.resolve({ tracks: catalog }); assert.equal(await play, true); await flush(); h.ownAudio.metadata(10);
+  const started = h.stateEvents.length;
+  for (const time of [1, 2, 3]) { h.ownAudio.currentTime = time; h.ownAudio.event('timeupdate'); }
+  assert.equal(h.stateEvents.length, started, 'clock changes do not republish the same transport state');
+  assert.equal(h.dock.pause(firstId), true); await flush();
+  assert.equal(h.stateEvents.at(-1).playing, false);
+  const paused = h.stateEvents.length; h.visibility(); h.ownAudio.event('seeked');
+  assert.equal(h.stateEvents.length, paused);
+  h.ownAudio.error = new Error('decode'); h.ownAudio.event('error');
+  assert.deepEqual(h.stateEvents.at(-1), { id: firstId, playing: false, pending: false, failed: true });
+  const unavailable = harness({ catalogFailure: true }), load = unavailable.dock.play(firstId);
+  unavailable.request.resolve({ tracks: catalog }); assert.equal(await load, false); await flush();
+  assert.equal(unavailable.dock.snapshot().failed, true);
+});
+
+test('public resume keeps the selected recording and its progress in standalone and Music players', async () => {
+  for (const pageLoaded of [null, true]) {
+    const h = harness({ pageLoaded }), play = h.dock.play(firstId);
+    if (pageLoaded === null) h.request.resolve({ tracks: catalog });
+    assert.equal(await play, true); await flush();
+    const audio = pageLoaded === null ? h.ownAudio : h.pageState.audio;
+    audio.metadata(120); audio.currentTime = 47.5;
+    assert.equal(h.dock.pause(firstId), true); await flush();
+    assert.equal(await h.dock.resume(secondId), false); assert.equal(audio.paused, true);
+    assert.equal(await h.dock.resume(firstId), true); await flush();
+    assert.equal(audio.currentTime, 47.5); assert.equal(audio.paused, false); assert.equal(audio.playCalls, 2);
+    assert.equal(h.dock.snapshot().id, firstId);
+    if (pageLoaded !== null) { assert.equal(h.pageState.audio, audio); assert.equal(h.pageCalls.play, 1); assert.equal(h.pageCalls.toggle, 1); }
+    assert.equal(await h.dock.resume(firstId), true); assert.equal(audio.playCalls, 2, 'already playing resume is idempotent');
+  }
+});
+
+test('pausing a pending public resume settles it immediately and prevents late media restart', async () => {
+  for (const pageLoaded of [null, true]) {
+    const gate = deferred(), h = harness({ pageLoaded, playGates: [null, gate] }), play = h.dock.play(firstId);
+    if (pageLoaded === null) h.request.resolve({ tracks: catalog });
+    assert.equal(await play, true); await flush(); h.dock.pause(firstId); await flush();
+    const resume = h.dock.resume(firstId); await flush();
+    assert.equal(h.dock.snapshot().pending, true);
+    assert.equal(h.dock.pause(firstId), true); assert.equal(await resume, false);
+    gate.resolve(); await flush();
+    assert.equal(h.dock.snapshot().playing, false); assert.equal(h.dock.snapshot().pending, false);
+  }
 });
 
 test('subject API lazily validates a public ID and uses the existing standalone audio', async () => {

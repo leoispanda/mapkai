@@ -52,6 +52,7 @@
   let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null, mediaSignature = '', ownedMetadata = null;
   let playbackIntent = false, advancing = false, audioSessionLease = null;
   let originalLyricTrackId = null, originalLyricSource = null;
+  let publicStateSignature = '';
   let volume = saved?.volume ?? 0.5;
   ownAudio.volume = volume;
   const listeningTracker = globalThis.MapKAIMusicListening?.createTracker(ownAudio);
@@ -59,6 +60,18 @@
   const page = () => window.MapKAIMusicPage;
   const state = () => page()?.snapshot() || { tracks, track: selected, audio: selected ? ownAudio : null, loaded, libraryFailed, pending, failed, complete, volume, playbackIntent, advancing };
   const active = state => Boolean(state.audio && !state.audio.paused && !state.audio.ended && !state.audio.error);
+  function publicSnapshot() {
+    const current = state();
+    return Object.freeze({ id: current.track?.id || null, playing: active(current),
+      pending: Boolean(current.pending || current.advancing || loading),
+      failed: Boolean(current.failed || current.libraryFailed || current.audio?.error) });
+  }
+  function emitStateChange() {
+    const signature = JSON.stringify(publicSnapshot());
+    if (signature === publicStateSignature) return;
+    publicStateSignature = signature;
+    window.dispatchEvent(new Event('mapkai:music-dock-state'));
+  }
   function continuousEnabled(current = state()) {
     if (typeof current.continuousPlay === 'boolean') return current.continuousPlay;
     try { return localStorage.getItem('mapkaiMusicContinuous.v1') !== 'off'; } catch { return true; }
@@ -191,7 +204,7 @@
     if ($('status').textContent !== message) $('status').textContent = message;
     const collapsed = dock.classList.contains('is-collapsed');
     $('collapse').setAttribute('aria-label', t(collapsed ? 'expand' : 'collapse')); $('collapse').title = t(collapsed ? 'expand' : 'collapse');
-    updateMediaSession(current); persist(); attemptRestorePlayback();
+    updateMediaSession(current); persist(); attemptRestorePlayback(); emitStateChange();
   }
 
   function validTrack(raw) {
@@ -257,6 +270,11 @@
     else { ownAudio.pause(); render(); }
     persist(true);
   }
+  function pauseTrack(id) {
+    const selectedId = state().track?.id;
+    if (typeof id !== 'string' || !selectedId || id.toLowerCase() !== selectedId.toLowerCase()) return false;
+    pause(); return true;
+  }
   async function start(automaticRestore = false) {
     if (!selected) return false;
     if (ownAudio.error) ownAudio.load();
@@ -315,6 +333,43 @@
           cleanup = () => window.removeEventListener('mapkai:music-update', update);
           delegatingPlay = true;
           try { bridge.play(track.id); } finally { delegatingPlay = false; }
+          check();
+        } catch { operation.finish(false); }
+      })();
+    });
+  }
+  function resumeTrack(id) {
+    const current = state();
+    if (typeof id !== 'string' || !current.track || current.track.id.toLowerCase() !== id.toLowerCase()) return Promise.resolve(false);
+    if (active(current)) return Promise.resolve(true);
+    if (current.pending || current.advancing || loading) return Promise.resolve(false);
+    externalMediaOwner = null; explicitSelection = true; restorePlayIntent = false; autoResumeBlocked = false;
+    cancelRequestedPlay();
+    return new Promise(resolve => {
+      let settled = false, cleanup = () => {};
+      const operation = { finish(success) {
+        if (settled) return;
+        settled = true; cleanup();
+        if (requestedPlay === operation) { requestedPlay = null; pending = false; render(); }
+        resolve(success);
+      } };
+      requestedPlay = operation; pending = true; failed = false; render();
+      (async () => {
+        try {
+          const bridge = page();
+          if (!bridge) { operation.finish(await start()); return; }
+          const check = () => {
+            if (requestedPlay !== operation) return;
+            const playing = state();
+            if (playing.track?.id !== current.track.id || playing.libraryFailed || playing.failed || playing.audio?.error) operation.finish(false);
+            else if (!playing.pending) operation.finish(active(playing));
+          };
+          const update = () => Promise.resolve().then(check);
+          window.addEventListener('mapkai:music-update', update);
+          cleanup = () => window.removeEventListener('mapkai:music-update', update);
+          delegatingPlay = true;
+          try { Promise.resolve(bridge.toggle()).catch(() => operation.finish(false)); }
+          finally { delegatingPlay = false; }
           check();
         } catch { operation.finish(false); }
       })();
@@ -540,7 +595,7 @@
   window.addEventListener('pageshow', event => {
     leaving = false; if (event.persisted && navigationWasPlaying) restorePlayIntent = true; restore(); render();
   });
-  window.MapKAIMusicDock = Object.freeze({ play: playTrack, setCarLyrics,
+  window.MapKAIMusicDock = Object.freeze({ play: playTrack, pause: pauseTrack, resume: resumeTrack, snapshot: publicSnapshot, setCarLyrics,
     carLyricsState: () => ({ enabled: carLyrics, supported: carSupported }) });
   window.dispatchEvent(new Event('mapkai:music-dock-ready'));
   render(); restore();

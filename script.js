@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.301";
+const appVersion = "0.1.302";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -42,6 +42,8 @@ let storyRatingStatus = "";
 let publicPreviewCatalogPromise = null;
 let categoryVideoRenderToken = 0;
 let categorySongRenderToken = 0;
+let categorySongPlaybackToken = 0;
+let categorySongPendingId = null;
 
 // Keep existing story data in place while the public article rebuild is underway.
 const publicContentVisibility = {
@@ -18522,69 +18524,91 @@ function getCategorySongDisplayTitle(song) {
   return String(song.title || "").replace(/^\d{3,}\s+/, "").split(" - MapKAI - ")[0];
 }
 
+function renderCategorySongButton(song, categoryCode) {
+  const title = getCategorySongDisplayTitle(song);
+  const play = currentLanguage === "zh" ? "播放歌曲" : "Play song";
+  return `<button type="button" class="category-song-trigger" data-category-song-id="${escapeHtml(song.id)}" data-song-category="${escapeHtml(categoryCode)}" data-song-title="${escapeHtml(title)}" data-state="idle" aria-pressed="false" aria-label="${escapeHtml(`${play} · ${title}`)}" aria-describedby="categoryCompanionTitle">
+    <span class="category-song-note" aria-hidden="true">♫</span>
+    <span class="category-song-name">${escapeHtml(title)}</span>
+    <span class="category-song-control" aria-hidden="true"><svg class="category-song-play-icon" viewBox="0 0 20 20"><path d="M7 4.5 15 10l-8 5.5z" fill="currentColor"/></svg><svg class="category-song-pause-icon" viewBox="0 0 20 20"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+  </button><p class="category-song-module-status" role="status"></p>`;
+}
+
+function renderCategorySongModule(song, categoryCode) {
+  return `<div class="category-song-module">${renderCategorySongButton(song, categoryCode)}</div>`;
+}
+
+function refreshCategorySongModules() {
+  const snapshot = window.MapKAIMusicDock?.snapshot?.();
+  document.querySelectorAll("[data-category-song-id]").forEach((button) => {
+    const selected = snapshot?.id === button.dataset.categorySongId;
+    const state = categorySongPendingId === button.dataset.categorySongId || (selected && snapshot.pending)
+      ? "pending" : selected && snapshot.playing ? "playing" : selected ? "paused" : "idle";
+    button.dataset.state = state;
+    button.setAttribute("aria-pressed", String(state === "playing"));
+    const labels = currentLanguage === "zh"
+      ? { pending: "正在载入", playing: "暂停歌曲", paused: "播放歌曲", idle: "播放歌曲" }
+      : { pending: "Loading", playing: "Pause song", paused: "Play song", idle: "Play song" };
+    button.setAttribute("aria-label", `${labels[state]} · ${button.dataset.songTitle}`);
+    if (state === "pending") button.setAttribute("aria-busy", "true");
+    else button.removeAttribute("aria-busy");
+  });
+}
+
+window.addEventListener("mapkai:music-dock-state", refreshCategorySongModules);
+window.addEventListener("mapkai:music-dock-ready", refreshCategorySongModules);
+
 function renderCategorySong(category) {
-  const token = ++categorySongRenderToken;
+  ++categorySongRenderToken;
+  ++categorySongPlaybackToken;
+  categorySongPendingId = null;
   const card = document.getElementById("categorySong");
-  const button = document.getElementById("categorySongPlay");
-  const status = document.getElementById("categorySongStatus");
-  const tempo = document.getElementById("categorySongTempo");
-  if (!card || !button || !status) return;
-  card.hidden = true;
-  button.onclick = null;
-  button.disabled = false;
-  button.removeAttribute("aria-busy");
-  status.textContent = "";
-  if (tempo) { tempo.textContent = ""; delete tempo.dataset.songTempoId; }
+  if (!card) return;
   const song = Object.hasOwn(categorySongTracks, category.code) ? categorySongTracks[category.code] : null;
+  card.hidden = !song;
+  card.innerHTML = song ? renderCategorySongButton(song, category.code) : "";
+}
+
+async function playCategorySongModule(button) {
+  if (button.disabled) return;
+  const category = categories.find(item => item.code === button.dataset.songCategory);
+  const songs = category ? [categorySongTracks[category.code],
+    ...category.groups.map(group => categoryGroupSongTracks[group.code]),
+    ...(category.code === "02" ? ownerCulturalSongs : [])].filter(Boolean) : [];
+  const song = songs.find(item => item.id === button.dataset.categorySongId);
   if (!song) return;
-  const language = currentLanguage === "zh" ? "zh" : "en";
-  const labels = language === "zh"
-    ? { label: "学科主题曲", ai: "AI 生成", meta: "英文 · 约 2 分钟", play: "播放歌曲", loading: "正在载入…", retry: "重试播放", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
-    : { label: "Field song", ai: "AI-generated", meta: "English · About 2 min", play: "Play song", loading: "Loading…", retry: "Retry song", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
-  document.getElementById("categorySongLabel").textContent = labels.label;
-  document.getElementById("categorySongAI").textContent = labels.ai;
-  document.getElementById("categorySongTitle").textContent = getCategorySongDisplayTitle(song);
-  document.getElementById("categorySongTitle").title = song.title;
-  document.getElementById("categorySongCore").textContent = song.core[language];
-  document.getElementById("categorySongMeta").textContent = song.meta?.[language] || labels.meta;
-  document.getElementById("categorySongStyle").textContent = song.style[language];
-  document.getElementById("categorySongDetailsLabel").textContent = language === "zh" ? "歌曲介绍" : "About this song";
-  document.getElementById("categorySongDetails").open = false;
-  if (tempo) { tempo.dataset.songTempoId = song.id; tempo.textContent = categorySongTempoText({ id: song.id }); }
-  button.textContent = labels.play;
-  button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
-  card.hidden = false;
-  const isCurrent = () => token === categorySongRenderToken && currentLanguage === language
-    && normalizeRoute(window.location.pathname) === `/categories/${category.code}` && !card.hidden;
-  button.onclick = async () => {
-    if (!isCurrent() || button.disabled) return;
-    button.disabled = true;
-    button.setAttribute("aria-busy", "true");
-    button.textContent = labels.loading;
-    button.setAttribute("aria-label", `${labels.loading} · ${song.title}`);
-    status.textContent = "";
-    try {
-      const player = await waitForCategorySongPlayer();
-      if (!isCurrent()) return;
-      if (!song.id || await player.play(song.id) !== true) throw new Error("Song unavailable");
-      if (isCurrent()) {
-        button.textContent = labels.play;
-        button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
-        status.textContent = labels.playing;
-      }
-    } catch {
-      if (isCurrent()) {
-        button.textContent = labels.retry;
-        button.setAttribute("aria-label", `${labels.retry} · ${song.title}`);
-        status.textContent = labels.error;
-      }
-    } finally {
-      if (isCurrent()) {
-        button.disabled = false;
-        button.removeAttribute("aria-busy");
+  const language = currentLanguage;
+  const renderToken = categorySongRenderToken;
+  const operation = ++categorySongPlaybackToken;
+  const isCurrent = () => operation === categorySongPlaybackToken && renderToken === categorySongRenderToken
+    && button.isConnected && currentLanguage === language
+    && normalizeRoute(window.location.pathname) === `/categories/${category.code}`;
+  if (!isCurrent()) return;
+  const status = button.closest(".category-song-module").querySelector(".category-song-module-status");
+  document.querySelectorAll(".category-song-module-status").forEach(item => { item.textContent = ""; });
+  button.disabled = true;
+  categorySongPendingId = song.id;
+  refreshCategorySongModules();
+  try {
+    const player = await waitForCategorySongPlayer();
+    if (!isCurrent()) return;
+    const before = player.snapshot?.();
+    if (before?.id === song.id && before.playing) {
+      player.pause(song.id);
+    } else {
+      const started = before?.id === song.id && typeof player.resume === "function"
+        ? await player.resume(song.id) : await player.play(song.id);
+      if (isCurrent() && !started && player.snapshot?.().failed) {
+        status.textContent = language === "zh" ? "暂时无法播放，请重试。" : "Could not play this song. Please retry.";
       }
     }
-  };
+  } catch {
+    if (isCurrent()) status.textContent = language === "zh" ? "暂时无法播放，请重试。" : "Could not play this song. Please retry.";
+  } finally {
+    button.disabled = false;
+    if (operation === categorySongPlaybackToken) categorySongPendingId = null;
+    refreshCategorySongModules();
+  }
 }
 
 function renderCategoryDetail(code) {
@@ -18826,89 +18850,13 @@ function renderOwnerCulturalSongs(category) {
   return `<a class="category-music-video-link" href="/music/videos/?lang=${zh ? "zh" : "en"}#your-turn-asml">Your Turn · MV</a>
   <details class="category-extra-songs">
     <summary>${zh ? "更多主题歌曲 · 8 首" : "More themed songs · 8"}</summary>
-    <div class="category-extra-song-links">${ownerCulturalSongs.map(song => `<a href="/share/song/${song.id}?lang=${zh ? "zh" : "en"}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</a>`).join("")}</div>
+    <div class="category-extra-song-links">${ownerCulturalSongs.map(song => renderCategorySongModule(song, category.code)).join("")}</div>
   </details>`;
 }
 
-async function playOwnerCulturalSong(button) {
-  const song = ownerCulturalSongs.find(item => item.id === button.dataset.ownerCulturalSong);
-  if (!song || button.disabled || normalizeRoute(window.location.pathname) !== "/categories/02") return;
-  const status = button.closest(".category-song").querySelector('[role="status"]');
-  const zh = currentLanguage === "zh";
-  button.disabled = true;
-  button.setAttribute("aria-busy", "true");
-  status.textContent = zh ? "正在载入…" : "Loading…";
-  try {
-    const player = await waitForCategorySongPlayer();
-    if (!button.isConnected || normalizeRoute(window.location.pathname) !== "/categories/02") return;
-    if (await player.play(song.id) !== true) throw new Error("Song unavailable");
-    status.textContent = zh ? "正在播放；可在音乐播放器中调整。" : "Playing; use the music player to pause or seek.";
-  } catch {
-    if (button.isConnected) status.textContent = zh ? "暂时无法播放，请重试。" : "Could not play this song. Please retry.";
-  } finally {
-    button.disabled = false;
-    button.removeAttribute("aria-busy");
-  }
-}
-
 function renderCategoryGroupSongs(category) {
-  const language = currentLanguage === "zh" ? "zh" : "en";
-  const label = language === "zh" ? "小学科歌曲" : "Subfield song";
-  const ai = language === "zh" ? "AI 生成" : "AI-generated";
-  const play = language === "zh" ? "播放歌曲" : "Play song";
-  return category.groups.filter((group) => Object.hasOwn(categoryGroupSongTracks, group.code)).map((group) => {
-    const song = categoryGroupSongTracks[group.code];
-    const titleId = `categoryGroupSongTitle-${group.code}`;
-    return `<section class="category-song" aria-labelledby="${titleId}">
-      <div class="category-song-copy">
-        <div class="category-song-heading"><p class="category-song-label">${label}</p><span class="category-song-ai" id="categoryGroupSongAI-${group.code}">${ai}</span></div>
-        <h2 id="${titleId}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</h2>
-        <p class="category-song-meta">${escapeHtml(song.meta[language])}</p>
-        <details class="category-song-details">
-        <summary>${language === "zh" ? "歌曲介绍" : "About this song"}</summary>
-        <p class="category-song-core">${escapeHtml(song.core[language])}</p>
-        <p class="category-song-meta">${escapeHtml(song.style[language])}</p>
-        <p class="category-song-tempo" data-song-tempo-id="${escapeHtml(song.id)}">${escapeHtml(categorySongTempoText({ id: song.id }))}</p>
-        </details>
-      </div>
-      <div class="category-song-action">
-        <button class="button secondary" type="button" data-group-song="${group.code}" data-group-song-parent="${category.code}" aria-label="${escapeHtml(`${play} · ${song.title}`)}" aria-describedby="categoryGroupSongAI-${group.code} categoryGroupSongStatus-${group.code}">${play}</button>
-        <p class="category-song-status" id="categoryGroupSongStatus-${group.code}" role="status"></p>
-      </div>
-    </section>`;
-  }).join("");
-}
-
-async function playCategoryGroupSong(button) {
-  const category = categories.find((item) => item.code === button.dataset.groupSongParent);
-  const group = category?.groups.find((item) => item.code === button.dataset.groupSong);
-  const song = group && Object.hasOwn(categoryGroupSongTracks, group.code) ? categoryGroupSongTracks[group.code] : null;
-  if (!song || button.disabled) return;
-  const language = currentLanguage === "zh" ? "zh" : "en";
-  const labels = language === "zh"
-    ? { play: "播放歌曲", loading: "正在载入…", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
-    : { play: "Play song", loading: "Loading…", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
-  const status = button.closest(".category-song").querySelector(".category-song-status");
-  const isCurrent = () => button.isConnected && currentLanguage === language && normalizeRoute(window.location.pathname) === `/categories/${category.code}`;
-  if (!isCurrent()) return;
-  button.disabled = true;
-  button.setAttribute("aria-busy", "true");
-  button.textContent = labels.loading;
-  status.textContent = "";
-  try {
-    const player = await waitForCategorySongPlayer();
-    if (!isCurrent()) return;
-    if (!song.id || await player.play(song.id) !== true) throw new Error("Song unavailable");
-    if (isCurrent()) status.textContent = labels.playing;
-  } catch {
-    if (isCurrent()) status.textContent = labels.error;
-  } finally {
-    if (isCurrent()) {
-      button.disabled = false;
-      button.removeAttribute("aria-busy");
-      button.textContent = labels.play;
-    }
-  }
+  return category.groups.filter(group => Object.hasOwn(categoryGroupSongTracks, group.code))
+    .map(group => renderCategorySongModule(categoryGroupSongTracks[group.code], category.code)).join("");
 }
 
 function renderCategoryTree(category) {
@@ -18953,6 +18901,7 @@ function renderCategoryTree(category) {
   if (culturalTarget) culturalTarget.innerHTML = renderOwnerCulturalSongs(category);
   const companionTitle = document.getElementById("categoryCompanionTitle");
   if (companionTitle) companionTitle.textContent = currentLanguage === "zh" ? "相关歌曲 · AI 生成" : "Music · AI-generated";
+  refreshCategorySongModules();
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
@@ -21678,7 +21627,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.301").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.302").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
@@ -21891,16 +21840,10 @@ document.addEventListener("click", (event) => {
     exitFounderMode();
     return;
   }
-  const ownerCulturalSongButton = event.target.closest("[data-owner-cultural-song]");
-  if (ownerCulturalSongButton) {
+  const categorySongButton = event.target.closest("[data-category-song-id]");
+  if (categorySongButton) {
     event.preventDefault();
-    playOwnerCulturalSong(ownerCulturalSongButton);
-    return;
-  }
-  const groupSongButton = event.target.closest("[data-group-song]");
-  if (groupSongButton) {
-    event.preventDefault();
-    playCategoryGroupSong(groupSongButton);
+    playCategorySongModule(categorySongButton);
     return;
   }
   const publicEntrySelect = event.target.closest("[data-public-entry-select]");
