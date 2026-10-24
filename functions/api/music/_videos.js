@@ -13,6 +13,51 @@ export const VIDEO_REVISION = 'watch-only-20261024';
 
 export const MUSIC_VIDEOS = freeze([
   {
+    "id": "under-the-blue",
+    "title": {
+      "zh": "Under the Blue",
+      "en": "Under the Blue"
+    },
+    "description": {
+      "zh": "同一幅蓝色河景，不同的理解。从笔触、留白与颜料层次，重新观察我们看到的意义。",
+      "en": "One blue river painting, different readings. Look again at brushstrokes, open space and paint layers, and the meanings we find."
+    },
+    "durationSeconds": 140.042417,
+    "version": "v1-mapkai",
+    "poster": "/music/videos/posters/under-the-blue.jpg",
+    "featured": true,
+    "qualities": [
+      {
+        "id": "phone",
+        "label": {
+          "zh": "720p · 流畅版",
+          "en": "720p · Smooth"
+        },
+        "bytes": 88389486,
+        "width": 1280,
+        "height": 720,
+        "objectKey": "music-videos/under-the-blue/0c9e6e3a7ec125637a995232f69af289ba07968165650d1eb8a3ed2d64950f1a.mp4",
+        "sha256": "0c9e6e3a7ec125637a995232f69af289ba07968165650d1eb8a3ed2d64950f1a",
+        "etag": "4cb975af2800097d5b15b41858d0a873",
+        "filename": "mapkai-under-the-blue-phone.mp4"
+      },
+      {
+        "id": "hd",
+        "label": {
+          "zh": "1080p · 高清兼容版",
+          "en": "1080p · Compatible HD"
+        },
+        "bytes": 91202733,
+        "width": 1920,
+        "height": 1080,
+        "objectKey": "music-videos/under-the-blue/b0c4a4588c59010ee367d0067bedb3976f2a6abccb10c936918c274f6c924d01.mp4",
+        "sha256": "b0c4a4588c59010ee367d0067bedb3976f2a6abccb10c936918c274f6c924d01",
+        "etag": "6473c09b76fb71e6e393f39e8845dfc6",
+        "filename": "mapkai-under-the-blue-hd.mp4"
+      }
+    ]
+  },
+  {
     "id": "leave-a-little-room",
     "title": {
       "zh": "Leave a Little Room",

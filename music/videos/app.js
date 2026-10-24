@@ -6,17 +6,17 @@
       browseEarlier:'看看早期版本 ↓', artNote:'AI 绘画与音乐 · 艺术演绎', fromCollection:'来自作品集', earlierHeading:'早期版本', earlierIntro:'从最初的构想到绘画长卷，保留每一次不同的表达。',
       loading:'正在载入音乐影像…', loadError:'暂时无法载入音乐影像，请再试一次。', retry:'重新载入', empty:'新的音乐影像即将在这里展示。', arts:'艺术与人文 ↗', backToSongs:'继续听歌 ↗',
       latest:'最新作品', featured:'精选作品', earlier:'早期版本', english:'英文演唱', play:'播放', replay:'重新播放', quality:'播放画质', playbackError:'暂时无法播放这个视频，请点击播放重试。',
-      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Leave a Little Room 合作版与 Your Turn 绘画 MV。',
+      disclosure:'AI 创作 · 画面与人物为艺术演绎', count:'{count} 部音乐影像', pageTitle:'音乐影像 · MapKAI Music', pageDescription:'MapKAI 音乐影像。在线观看 Under the Blue、Leave a Little Room 与 Your Turn 绘画 MV。',
     },
     en: {
       back:'← Back to Music', collection:'MUSIC VIDEOS / MAPKAI MUSIC', heading:'Music videos', intro:'Stories and ideas, brought to life in music videos.',
       browseEarlier:'Explore earlier versions ↓', artNote:'AI-created art and music · Artistic interpretations', fromCollection:'FROM THE COLLECTION', earlierHeading:'Earlier versions', earlierIntro:'From the first idea to a painted journey, each version keeps its own expression.',
       loading:'Loading music videos…', loadError:'The films could not be loaded. Please try again.', retry:'Try again', empty:'New music videos will appear here.', arts:'Arts & humanities ↗', backToSongs:'Keep listening ↗',
       latest:'Latest film', featured:'Featured film', earlier:'Earlier version', english:'English vocals', play:'Play', replay:'Play again', quality:'Playback quality', playbackError:'This video cannot be played right now. Press play to try again.',
-      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch Leave a Little Room, a MapKAI × MiniGrowLab collaboration, and Your Turn online.',
+      disclosure:'AI-created · Imagined scenes and portraits', count:'{count} music videos', pageTitle:'Music videos · MapKAI Music', pageDescription:'MapKAI music videos. Watch Under the Blue, Leave a Little Room and Your Turn online.',
     },
   };
-  const order = ['leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original'];
+  const order = ['under-the-blue', 'leave-a-little-room', 'your-turn-asml', 'your-turn-artworks', 'your-turn-original'];
   const cards = new Map();
   const $ = id => document.getElementById(id);
   const label = (value, fallback = '') => value?.[language] || value?.en || value?.zh || fallback;
@@ -77,7 +77,7 @@
     const {item} = card;
     const title = label(item.title);
     card.title.textContent = title;
-    card.description.textContent = label(item.description); card.description.hidden = item.id !== 'leave-a-little-room';
+    card.description.textContent = label(item.description); card.description.hidden = !['under-the-blue','leave-a-little-room'].includes(item.id);
     card.badge.textContent = t(item.id === order[0] ? 'latest' : item.featured ? 'featured' : 'earlier');
     card.meta.textContent = [duration(item.durationSeconds), t('english')].join(' · ');
     card.video.setAttribute('aria-label',title);
