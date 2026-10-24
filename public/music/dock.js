@@ -46,7 +46,7 @@
   document.body.classList.add('music-dock-present'); document.documentElement.classList.add('music-dock-present');
   const $ = name => document.getElementById(`music-dock-${name}`);
   let tracks = [], selected = null, loaded = false, loading = false, failed = false, libraryFailed = false, pending = false, complete = false;
-  let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
+  let sequence = 0, fetchPromise = null, restoreDone = false, restoring = false, lastSave = 0, optionSignature = '', selectSignature = '', currentLine = null, lineSource = null, resumeSeconds = null;
   let requestedPlay = null, explicitSelection = false, delegatingPlay = false;
   let restorePlayIntent = saved?.wasPlaying === true, autoResumeBlocked = false, leaving = false, navigationWasPlaying = false;
   let mediaTrackId = null, mediaSessionOwned = false, externalMediaOwner = null, mediaSignature = '', ownedMetadata = null;
@@ -137,16 +137,22 @@
     $('tempo').dataset.running = String(track?.tempoBpm === 180);
     const language = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
     const signature = JSON.stringify([language, list.map(item => [item.id, item.title, item.tempoBpm, item.tempoEstimate])]);
-    if (signature !== optionSignature || !$('select').options.length) {
-      optionSignature = signature; $('select').replaceChildren();
-      const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = t('choose'); $('select').append(placeholder);
-      for (const item of list) {
-        const option = document.createElement('option'), itemTempo = musicTempo?.describe(item, language);
-        option.value = item.id; option.textContent = `${songName(item)}${itemTempo && !itemTempo.unknown ? ` · ${itemTempo.text}` : ''}`; $('select').append(option);
+    const nextSelectSignature = JSON.stringify([signature, track?.id || '', !list.length]);
+    // Native pickers must keep their highlighted choice while playback clocks
+    // and lyrics refresh. Only model changes may write to the select or options.
+    if (nextSelectSignature !== selectSignature || !$('select').options.length) {
+      if (signature !== optionSignature || !$('select').options.length) {
+        optionSignature = signature; $('select').replaceChildren();
+        const placeholder = document.createElement('option'); placeholder.value = ''; placeholder.textContent = t('choose'); $('select').append(placeholder);
+        for (const item of list) {
+          const option = document.createElement('option'), itemTempo = musicTempo?.describe(item, language);
+          option.value = item.id; option.textContent = `${songName(item)}${itemTempo && !itemTempo.unknown ? ` · ${itemTempo.text}` : ''}`; $('select').append(option);
+        }
       }
+      $('select').value = track?.id || ''; $('select').disabled = !list.length;
+      $('select').setAttribute('aria-label', t('choose'));
+      selectSignature = nextSelectSignature;
     }
-    $('select').options[0].textContent = t('choose'); $('select').value = track?.id || ''; $('select').disabled = !list.length;
-    $('select').setAttribute('aria-label', t('choose'));
     const index = track ? list.findIndex(item => item.id === track.id) : -1;
     const waiting = current.pending || current.advancing || loading;
     const action = waiting ? 'cancel' : autoResumeBlocked ? 'resume' : current.failed || current.libraryFailed ? 'retry' : active(current) ? 'pause' : current.complete ? 'replay' : track ? 'resume' : continuousEnabled(current) ? 'play' : 'singlePlay';

@@ -23,7 +23,7 @@ const flush = async () => { for (let count = 0; count < 12; count++) await Promi
 // Delayed catalog and media events run the actual dock source. The small DOM and
 // page bridge model only browser/integration contracts, not playback decisions.
 function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate = null, playFailure = false, catalogFailure = false, continuous = 'on', initialMediaActions = [], playGates = [], audioSessionType = null, hidden = false, pagehideClearsIntent = false, savedCarLyrics = 'off' } = {}) {
-  const ids = new Map(), elements = [], operations = [];
+  const ids = new Map(), elements = [], operations = [], selectWrites = [], mutationObservers = [];
   class Target {
     addEventListener(type, callback, options = {}) {
       const list = this.listeners?.get(type) || [];
@@ -53,18 +53,26 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     }
     set id(value) { this.identifier = value; ids.set(value, this); }
     get id() { return this.identifier; }
-    set textContent(value) { this.text = value; if (this.identifier) operations.push('dom'); }
+    recordSelectWrite(property, value) {
+      if (['SELECT', 'OPTION'].includes(this.tagName)) selectWrites.push({ tag: this.tagName, property, value });
+    }
+    set value(value) { this.recordSelectWrite('value', value); this.selectedValue = String(value); }
+    get value() { return this.selectedValue; }
+    set disabled(value) { this.recordSelectWrite('disabled', value); this.isDisabled = Boolean(value); }
+    get disabled() { return this.isDisabled || false; }
+    set textContent(value) { this.recordSelectWrite('textContent', value); this.text = value; if (this.identifier) operations.push('dom'); }
     get textContent() { return this.text; }
     set innerHTML(value) {
+      this.recordSelectWrite('innerHTML', value);
       // Fixed dock markup supplies the controls. Catalog data never enters this setter.
       for (const match of value.matchAll(/<([a-z]+)[^>]*\bid="([^"]+)"[^>]*>/g)) {
         const child = new Element(match[1]); child.id = match[2]; this.children.push(child);
       }
     }
-    append(...children) { this.children.push(...children); }
-    replaceChildren(...children) { this.children = children; }
-    setAttribute(name, value) { this.attributes.set(name, String(value)); }
-    removeAttribute(name) { this.attributes.delete(name); }
+    append(...children) { this.recordSelectWrite('append', children.length); this.children.push(...children); }
+    replaceChildren(...children) { this.recordSelectWrite('replaceChildren', children.length); this.children = children; }
+    setAttribute(name, value) { this.recordSelectWrite(`attribute:${name}`, value); this.attributes.set(name, String(value)); }
+    removeAttribute(name) { this.recordSelectWrite(`removeAttribute:${name}`, null); this.attributes.delete(name); }
     get options() { return this.children; }
     getBoundingClientRect() { return { height: 160 }; }
   }
@@ -168,7 +176,10 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
     localStorage: { getItem: key => preferencesStore.get(key) ?? null, setItem: (key, value) => preferencesStore.set(key, value) },
     sessionStorage: { getItem: key => stored.get(key) ?? null, setItem: (key, value) => { operations.push('storage'); stored.set(key, value); } },
     matchMedia: () => ({ matches: false, addEventListener() {} }), getComputedStyle: () => ({ paddingLeft: '0', paddingRight: '0' }),
-    ResizeObserver: class { observe() {} }, MutationObserver: class { observe() {} },
+    ResizeObserver: class { observe() {} }, MutationObserver: class {
+      constructor(callback) { this.callback = callback; }
+      observe(target, options) { mutationObservers.push({ target, options, callback: this.callback }); }
+    },
     AbortSignal: { timeout: () => undefined },
     fetch: async () => {
       fetchCalls++; const data = await request.promise;
@@ -180,8 +191,16 @@ function harness({ saved = null, pageLoaded = null, pageFailed = false, playGate
   vm.runInContext(dockSource, context, { filename: 'music/dock.js' });
   return { control: id => ids.get(`music-dock-${id}`), ownAudio: elements.find(element => element.tagName === 'AUDIO'),
     request, fetchCalls: () => fetchCalls, page: window.MapKAIMusicPage, pageCalls, pageState, dock: window.MapKAIMusicDock,
-    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, stateEvents, operations, audioSession, audioSessionTypes, preferencesStore,
+    session: () => JSON.parse(stored.get('mapkaiMusicDock')), mediaSession, mediaActions, playbackStates, stateEvents, operations, selectWrites, audioSession, audioSessionTypes, preferencesStore,
     updatePage: update, visibility: () => { document.dispatchEvent({ type: 'visibilitychange' }); },
+    language: value => {
+      document.documentElement.lang = value;
+      for (const observer of mutationObservers) {
+        if (observer.target === document.documentElement && observer.options.attributes && (!observer.options.attributeFilter || observer.options.attributeFilter.includes('lang'))) {
+          observer.callback([{ type: 'attributes', attributeName: 'lang', target: document.documentElement }]);
+        }
+      }
+    },
     pageshow: persisted => window.dispatchEvent({ type: 'pageshow', persisted }),
     pagehide: () => window.dispatchEvent({ type: 'pagehide' }),
     tick: () => { now += 1100; },
@@ -237,6 +256,37 @@ test('dock dropdown selection supersedes its older Music catalog retry', async (
   h.request.resolve(); await retry; await flush();
   assert.equal(h.pageCalls.toggle, 0); assert.equal(h.pageState.track.id, secondId); assert.equal(h.pageState.audio.paused, false);
 });
+
+for (const pageLoaded of [null, true]) {
+  test(`${pageLoaded === null ? 'standalone' : 'Music bridge'} playback keeps an open song choice stable while clocks and lyrics update`, async () => {
+    const h = harness({ pageLoaded }), play = h.dock.play(firstId);
+    if (pageLoaded === null) h.request.resolve({ tracks: catalog });
+    assert.equal(await play, true); await flush();
+    const audio = pageLoaded === null ? h.ownAudio : h.pageState.audio;
+    audio.metadata(120); h.control('collapse').onclick();
+    const select = h.control('select'), options = [...select.options];
+    // A native popup can highlight a different option before it commits change.
+    select.value = secondId; h.selectWrites.length = 0;
+    for (const [event, time, line] of [['timeupdate', 2.5, 'First line'], ['seeking', 6.5, 'Second line'], ['seeked', 2.5, 'First line'], ['timeupdate', 9, '']]) {
+      audio.currentTime = time; audio.event(event);
+      if (pageLoaded !== null) h.updatePage();
+      assert.equal(h.control('line').textContent, line);
+    }
+    assert.equal(h.control('elapsed').textContent, '0:09');
+    assert.deepEqual(h.selectWrites, [], 'playback clocks must not rewrite the live select, its attributes, or its options');
+    assert.equal(select.value, secondId, 'an uncommitted song choice survives playback renders');
+    assert.equal(select.options.length, options.length);
+    assert.ok(select.options.every((option, index) => option === options[index]), 'the open popup retains its option nodes');
+    assert.equal(h.dock.snapshot().id, firstId, 'highlighting alone does not select a recording');
+    select.onchange(); await flush();
+    assert.equal(h.dock.snapshot().id, secondId); assert.equal(h.dock.snapshot().playing, true);
+    h.selectWrites.length = 0;
+    h.control('mini-prev').onclick(); await flush();
+    assert.equal(select.value, firstId, 'a real track change updates the dropdown selection');
+    assert.equal(h.dock.snapshot().id, firstId);
+    assert.ok(h.selectWrites.some(write => write.tag === 'SELECT' && write.property === 'value' && write.value === firstId));
+  });
+}
 
 test('Music restore preserves saved ID/time when the bridge catalog is already ready', async () => {
   const saved = { version: 1, id: firstId, seconds: 47.5, volume: 0.3, collapsed: true };
@@ -506,6 +556,33 @@ test('Music bridge candidate updates refresh dropdown labels and section warning
   assert.match(h.control('tempo').textContent, /Section review/);
   assert.match(h.control('select').options[1].textContent, /Section review/);
   assert.equal(h.ownAudio.playCalls, 0);
+});
+
+test('song dropdown refreshes actual language and catalog changes, then stays stable on playback updates', async () => {
+  const h = harness({ pageLoaded: true });
+  assert.equal(await h.dock.play(firstId), true); await flush();
+  const select = h.control('select');
+  assert.equal(select.options[0].textContent, 'Choose a song');
+  h.language('zh-CN');
+  assert.equal(select.options[0].textContent, '选择歌曲');
+  assert.equal(select.attributes.get('aria-label'), '选择歌曲');
+  assert.equal(select.value, firstId); assert.equal(select.disabled, false);
+  h.pageState.tracks[0].title = 'Updated Song 1';
+  h.pageState.tracks[0].tempoBpm = 180;
+  const thirdId = 'db89c944-b8ac-4508-8bc1-eef2ba57464c';
+  h.pageState.tracks.push({ ...catalog[1], id: thirdId, title: 'New Song 3' }); h.updatePage();
+  assert.equal(select.options.length, 4);
+  assert.match(select.options[1].textContent, /Updated Song 1.*180 BPM/);
+  assert.equal(select.options[3].value, thirdId); assert.equal(select.options[3].textContent, 'New Song 3');
+  assert.equal(select.value, firstId);
+  const options = [...select.options]; h.selectWrites.length = 0;
+  h.pageState.audio.currentTime = 5; h.updatePage();
+  assert.deepEqual(h.selectWrites, [], 'unchanged refreshed options are also left untouched');
+  assert.equal(select.options.length, options.length);
+  assert.ok(select.options.every((option, index) => option === options[index]));
+  h.pageState.tracks = []; h.pageState.track = null; h.pageState.audio = null; h.updatePage();
+  assert.equal(select.options.length, 1); assert.equal(select.options[0].textContent, '选择歌曲');
+  assert.equal(select.value, ''); assert.equal(select.disabled, true);
 });
 
 
