@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.299";
+const appVersion = "0.1.300";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18518,6 +18518,10 @@ function refreshCategorySongTempos() {
 
 window.addEventListener("mapkai:music-tempo-ready", refreshCategorySongTempos);
 
+function getCategorySongDisplayTitle(song) {
+  return String(song.title || "").replace(/^\d{3,}\s+/, "").split(" - MapKAI - ")[0];
+}
+
 function renderCategorySong(category) {
   const token = ++categorySongRenderToken;
   const card = document.getElementById("categorySong");
@@ -18535,13 +18539,17 @@ function renderCategorySong(category) {
   if (!song) return;
   const language = currentLanguage === "zh" ? "zh" : "en";
   const labels = language === "zh"
-    ? { label: "从一首歌走近这个领域", ai: "AI 生成", meta: "英文 · 约 2 分钟", play: "播放歌曲", loading: "正在载入…", retry: "重试播放", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
-    : { label: "A song for this field", ai: "AI-generated", meta: "English · About 2 min", play: "Play song", loading: "Loading…", retry: "Retry song", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
+    ? { label: "学科主题曲", ai: "AI 生成", meta: "英文 · 约 2 分钟", play: "播放歌曲", loading: "正在载入…", retry: "重试播放", error: "暂时无法播放，请重试。", playing: "可在下方音乐播放器中暂停或调整进度。" }
+    : { label: "Field song", ai: "AI-generated", meta: "English · About 2 min", play: "Play song", loading: "Loading…", retry: "Retry song", error: "Could not play this song. Please retry.", playing: "Use the music player below to pause or seek." };
   document.getElementById("categorySongLabel").textContent = labels.label;
   document.getElementById("categorySongAI").textContent = labels.ai;
-  document.getElementById("categorySongTitle").textContent = song.title;
+  document.getElementById("categorySongTitle").textContent = getCategorySongDisplayTitle(song);
+  document.getElementById("categorySongTitle").title = song.title;
   document.getElementById("categorySongCore").textContent = song.core[language];
-  document.getElementById("categorySongMeta").textContent = `${song.meta?.[language] || labels.meta} · ${song.style[language]}`;
+  document.getElementById("categorySongMeta").textContent = song.meta?.[language] || labels.meta;
+  document.getElementById("categorySongStyle").textContent = song.style[language];
+  document.getElementById("categorySongDetailsLabel").textContent = language === "zh" ? "歌曲介绍" : "About this song";
+  document.getElementById("categorySongDetails").open = false;
   if (tempo) { tempo.dataset.songTempoId = song.id; tempo.textContent = categorySongTempoText({ id: song.id }); }
   button.textContent = labels.play;
   button.setAttribute("aria-label", `${labels.play} · ${song.title}`);
@@ -18819,16 +18827,18 @@ function renderOwnerCulturalSongs(category) {
     <span class="category-mv-poster"><img src="/music/videos/posters/your-turn-asml.jpg" width="640" height="360" alt="" loading="lazy" decoding="async"><span aria-hidden="true">▶</span></span>
     <span class="category-mv-copy"><span class="category-mv-label">${zh ? "音乐影像 · AI 艺术创作" : "Music videos · AI-created art"}</span><strong>Your Turn</strong><span>${zh ? "从画家的笔触，到科学家的镜片与芯片上的光。用一首歌，走进荷兰人物与他们的作品。" : "From a painter’s brush to a scientist’s lens and light on a chip. A song becomes a journey through Dutch figures and their work."}</span><span class="category-mv-action">${zh ? "观看 MV" : "Watch video"} ↗</span></span>
   </a>
+  <details class="category-extra-songs">
+    <summary>${zh ? "更多主题歌曲 · 8 首" : "More themed songs · 8"}</summary>
   <section class="category-song" aria-labelledby="ownerCulturalSongsTitle">
     <div class="category-song-copy">
       <p class="category-song-label">${zh ? "更多主题歌曲 · AI 生成" : "More themed songs · AI-generated"}</p>
       <h2 id="ownerCulturalSongsTitle">${zh ? "荷兰文化人物" : "Dutch Cultural Figures"}</h2>
       <p>${zh ? "8 个独立英文录音；完整原始歌词可在音乐库查看。歌曲中的历史人物声音为艺术想象。" : "Eight distinct English recordings. Complete original lyrics are available in Music. Historical voices are imagined for the songs."}</p>
-      <ol>${ownerCulturalSongs.map(song => `<li><button type="button" class="button secondary" data-owner-cultural-song="${song.id}">${escapeHtml(song.title)}</button></li>`).join("")}</ol>
+      <ol>${ownerCulturalSongs.map(song => `<li><button type="button" class="button secondary" data-owner-cultural-song="${song.id}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</button></li>`).join("")}</ol>
       <p role="status" class="category-song-status"></p>
       <a href="/music/">${zh ? "打开音乐库与完整歌词" : "Open Music and complete lyrics"}</a>
     </div>
-  </section>`;
+  </section></details>`;
 }
 
 async function playOwnerCulturalSong(button) {
@@ -18854,7 +18864,7 @@ async function playOwnerCulturalSong(button) {
 
 function renderCategoryGroupSongs(category) {
   const language = currentLanguage === "zh" ? "zh" : "en";
-  const label = language === "zh" ? "从一首歌走近这个子领域" : "A song for this subfield";
+  const label = language === "zh" ? "小学科歌曲" : "Subfield song";
   const ai = language === "zh" ? "AI 生成" : "AI-generated";
   const play = language === "zh" ? "播放歌曲" : "Play song";
   return category.groups.filter((group) => Object.hasOwn(categoryGroupSongTracks, group.code)).map((group) => {
@@ -18863,10 +18873,14 @@ function renderCategoryGroupSongs(category) {
     return `<section class="category-song" aria-labelledby="${titleId}">
       <div class="category-song-copy">
         <div class="category-song-heading"><p class="category-song-label">${label}</p><span class="category-song-ai" id="categoryGroupSongAI-${group.code}">${ai}</span></div>
-        <h2 id="${titleId}">${escapeHtml(song.title)}</h2>
+        <h2 id="${titleId}" title="${escapeHtml(song.title)}">${escapeHtml(getCategorySongDisplayTitle(song))}</h2>
+        <p class="category-song-meta">${escapeHtml(song.meta[language])}</p>
+        <details class="category-song-details">
+        <summary>${language === "zh" ? "歌曲介绍" : "About this song"}</summary>
         <p class="category-song-core">${escapeHtml(song.core[language])}</p>
-        <p class="category-song-meta">${escapeHtml(song.meta[language])} · ${escapeHtml(song.style[language])}</p>
+        <p class="category-song-meta">${escapeHtml(song.style[language])}</p>
         <p class="category-song-tempo" data-song-tempo-id="${escapeHtml(song.id)}">${escapeHtml(categorySongTempoText({ id: song.id }))}</p>
+        </details>
       </div>
       <div class="category-song-action">
         <button class="button secondary" type="button" data-group-song="${group.code}" data-group-song-parent="${category.code}" aria-label="${escapeHtml(`${play} · ${song.title}`)}" aria-describedby="categoryGroupSongAI-${group.code} categoryGroupSongStatus-${group.code}">${play}</button>
@@ -18914,10 +18928,6 @@ function renderCategoryTree(category) {
   const fieldEntries = getPublicCategoryEntryNodes(category).filter((entry) => entry.type !== "general_entry");
   const introStory = getSubjectIntroStoryForCategory(category.code);
   const visibleFieldEntries = introStory ? getFeaturedCategoryFieldEntries(fieldEntries) : fieldEntries;
-  if (!visibleFieldEntries.length && !introStory) {
-    target.innerHTML = "";
-    return;
-  }
   const fieldCards = visibleFieldEntries
     .map((entry) => {
       const field = getFieldById(entry.fieldCode);
@@ -18925,25 +18935,35 @@ function renderCategoryTree(category) {
       const fieldTitle = getPublicSubjectTitle(entry);
       return `
         <a class="submodule-button public-field-card" href="${escapeHtml(href)}" data-route="${escapeHtml(href)}">
-          <span>${escapeHtml(fieldTitle)}</span>
+          <span>${escapeHtml(fieldTitle)}</span><i aria-hidden="true">↗</i>
         </a>`;
     })
     .join("");
   const storyArticle = introStory ? renderInlineLensStoryArticle(introStory) : "";
   target.innerHTML = `
     <div class="category-subject-story-layout">
-    ${fieldCards ? `<div class="submodule-browser is-field-list-browser">
+    ${fieldCards ? `<nav class="submodule-browser category-subject-nav is-field-list-browser" aria-labelledby="categorySubjectsTitle">
       <div class="hierarchy-layer module-layer">
-        <p class="category-subfield-context">${escapeHtml(t("subfieldContextLine", visibleFieldEntries.length))}</p>
+        <div class="category-subject-heading"><div><p class="category-subject-kicker">SUBJECTS</p><h2 id="categorySubjectsTitle">${currentLanguage === "zh" ? "探索这个领域的学科" : "Explore the subjects"}</h2></div>
+        <p class="category-subfield-context">${escapeHtml(t("subfieldContextLine", visibleFieldEntries.length))}</p></div>
         <div class="submodule-button-row public-field-grid" aria-label="${escapeHtml(t("submoduleLabel"))}">
           ${fieldCards}
         </div>
       </div>
-    </div>` : ""}
-    ${renderCategoryGroupSongs(category)}
-    ${renderOwnerCulturalSongs(category)}
-    ${storyArticle}
+    </nav>` : ""}
     </div>`;
+  const articleTarget = document.getElementById("categoryStory");
+  if (articleTarget) {
+    articleTarget.innerHTML = storyArticle;
+    articleTarget.hidden = !storyArticle;
+  }
+  document.getElementById("categoryReadingLayout")?.classList.toggle("is-without-story", !storyArticle);
+  const songTarget = document.getElementById("categoryGroupSongs");
+  if (songTarget) songTarget.innerHTML = renderCategoryGroupSongs(category);
+  const culturalTarget = document.getElementById("categoryCulturalSongs");
+  if (culturalTarget) culturalTarget.innerHTML = renderOwnerCulturalSongs(category);
+  const companionTitle = document.getElementById("categoryCompanionTitle");
+  if (companionTitle) companionTitle.textContent = currentLanguage === "zh" ? "听与看" : "Listen & watch";
   const ratingArticle = introStory ? getRatingArticleForLensStory(introStory) : null;
   if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
 }
@@ -21669,7 +21689,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.299").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.300").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
