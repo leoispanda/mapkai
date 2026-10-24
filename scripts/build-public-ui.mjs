@@ -5,6 +5,10 @@ await import('./build-finance-pages.mjs');
 await import('./build-speaking.mjs');
 await import('./build-toolbox.mjs');
 await import('./build-music.mjs');
+await import('./build-article-share.mjs');
+for (const file of ['content-share.js', 'content-share.css', 'shared-work.js']) {
+  await cp(new URL(file, root), new URL(`public/${file}`, root));
+}
 for (const file of ['site-shell.css', 'site-shell.js', 'home-toolbox.css', 'home-toolbox.js', 'script.js', 'styles.css', 'finance-course.js', 'factory-review.html', 'factory-review.js']) {
   await cp(new URL(file, root), new URL(`public/${file}`, root));
 }

@@ -1,4 +1,5 @@
 import { checkRateLimit, getClientIp } from "./api/_shared/rate-limit.js";
+import { articleShareMeta } from "./_shared/article-share.js";
 
 // EMBA is the programme; Corporate Finance is what sits inside it. So there is
 // one door, on EMBA, and unlocking it opens everything within. This is a filter,
@@ -38,7 +39,7 @@ export async function onRequest(context) {
     return response;
   }
   const area = areaFor(url.pathname);
-  if (!area) return context.next();
+  if (!area) return articleShareMeta(await context.next(), url);
 
   const password = secretFor(context.env, area);
   if (!password) {

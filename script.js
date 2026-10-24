@@ -15580,6 +15580,7 @@ function applyLanguage() {
   renderReflectionPanel();
   renderKnowledgeTitleModal();
   renderStoryRatingPanels();
+  updateRouteMeta(normalizeRoute(window.location.pathname));
 }
 
 function normalizeRoute(path) {
@@ -15743,9 +15744,12 @@ function updateRouteMeta(route) {
           : route.startsWith("/learning/")
             ? "/learning"
             : routeMeta[route] ? route : "/";
-  const meta = routeMeta[key] || routeMeta["/"];
-  const canonicalRoute = key === "/" ? "/" : key;
-  const canonicalUrl = `https://www.mapkai.com${canonicalRoute === "/" ? "/" : canonicalRoute}`;
+  const article = getAllRateableArticles().find(item => item.href === route);
+  const meta = article
+    ? { title: `${article.title} · MapKAI`, description: article.summary || article.title }
+    : routeMeta[key] || routeMeta["/"];
+  const canonicalRoute = article ? route : key === "/" ? "/" : key;
+  const canonicalUrl = `https://www.mapkai.com${canonicalRoute === "/" ? "/" : canonicalRoute}${article ? `?lang=${currentLanguage}` : ""}`;
   document.title = meta.title;
   const description = document.querySelector('meta[name="description"]');
   const robots = document.querySelector('meta[name="robots"]');
@@ -16195,7 +16199,7 @@ function renderStoryDetail(storyId) {
     .filter(Boolean)
     .join("");
   target.innerHTML = `
-    ${renderStoryDetailHeader(getStoryTitle(story))}
+    ${renderStoryDetailHeader(getStoryTitle(story), "", `/stories/${story.id}`)}
     <div class="story-body">${renderEscapedParagraphs(getStoryBody(story))}</div>
     ${insight ? `
       <aside class="story-insight">
@@ -16326,7 +16330,7 @@ function renderConceptFableDetail(fableId) {
     ? explanationParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")
     : renderEscapedParagraphs(getConceptFableValue(fable, "explanation"));
   target.innerHTML = `
-    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"))}
+    ${renderStoryDetailHeader(getConceptFableValue(fable, "title"), "", `/concept-fables/${fable.id}`)}
     <section class="lens-story-section concept-fable-story">
       <span>${escapeHtml(t("conceptFableStoryLabel"))}</span>
       <div class="concept-fable-story-body">${storyMarkup}</div>
@@ -18699,9 +18703,9 @@ function getLensStoryDetailMetaText(story) {
   ]);
 }
 
-function renderStoryDetailHeader(title, metaText = "") {
+function renderStoryDetailHeader(title, metaText = "", sharePath = "") {
   return `
-    <header class="story-detail-header">
+    <header class="story-detail-header"${sharePath ? ` data-share-path="${escapeHtml(sharePath)}"` : ""}>
       <h1>${escapeHtml(title)}</h1>
       ${metaText ? `<p class="story-detail-meta">${escapeHtml(metaText)}</p>` : ""}
     </header>`;
@@ -18752,7 +18756,7 @@ function renderInlineLensStoryArticle(story) {
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   if (story.subjectOrigin) {
     return `<article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+      ${renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`)}
       ${renderSubjectOriginContent(story)}
       ${renderStoryRatingPanel(ratingArticle)}
       ${renderStoryNavigation(ratingArticle)}
@@ -18760,7 +18764,7 @@ function renderInlineLensStoryArticle(story) {
   }
   return `
     <article class="story-reader lens-story-reader category-inline-story" aria-live="polite">
-      ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+      ${renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`)}
       <div class="story-body">${storyBodyHtml}</div>
       ${formalExplanation ? `
       <section class="lens-story-section">
@@ -18970,7 +18974,7 @@ function renderLensStoryDetail(storyId) {
   const ratingArticle = getRatingArticleForLensStory(story);
   const storyBodyHtml = renderEscapedParagraphs(getLensStoryValue(story, "storyBody"));
   if (story.subjectOrigin) {
-    target.innerHTML = renderStoryDetailHeader(getLensStoryValue(story, "title")) +
+    target.innerHTML = renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`) +
       renderSubjectOriginContent(story) + renderStoryRatingPanel(ratingArticle) + renderStoryNavigation(ratingArticle);
     if (ratingArticle) loadStoryRatingForArticle(ratingArticle.id);
     return;
@@ -18980,7 +18984,7 @@ function renderLensStoryDetail(storyId) {
     <figure class="lens-story-figure">
       <img src="${escapeHtml(story.image)}" alt="${escapeHtml(getLensStoryValue(story, "imageAlt"))}" loading="lazy" />
     </figure>` : ""}
-    ${renderStoryDetailHeader(getLensStoryValue(story, "title"))}
+    ${renderStoryDetailHeader(getLensStoryValue(story, "title"), "", `/lens-stories/${story.id}`)}
     <div class="story-body">${storyBodyHtml}</div>
     ${formalExplanation ? `
     <section class="lens-story-section">

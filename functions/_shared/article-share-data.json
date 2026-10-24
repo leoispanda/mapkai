@@ -1,0 +1,2512 @@
+{
+  "/lens-stories/00-subject-intro": {
+    "zh": {
+      "title": "工坊之外的课",
+      "description": "为课堂寻找机器的伯克贝克走进工坊，随后开放周六晚课。已有工作经验的人，会从哪里开始新的学习？"
+    },
+    "en": {
+      "title": "Classes Beyond the Workshop",
+      "description": "Birkbeck entered workshops looking for teaching equipment, then opened Saturday evening classes. Where would people with work experience begin learning again?"
+    }
+  },
+  "/lens-stories/01-subject-intro": {
+    "zh": {
+      "title": "半小时的棉花",
+      "description": "孩子们花了半小时，从棉籽上分出的纤维还不到一盎司。接下来，教师会怎样把手中的材料变成连续的学习？"
+    },
+    "en": {
+      "title": "Half an Hour of Cotton",
+      "description": "The children spent half an hour separating less than an ounce of cotton fiber. How would teachers turn the material in their hands into a continuing path of learning?"
+    }
+  },
+  "/lens-stories/02-subject-intro": {
+    "zh": {
+      "title": "同一块石上的三种文字",
+      "description": "同一份古代诏令留下三种文字，希腊部分已经能够阅读。研究者怎样借有限的线索，继续读懂另外两种书写？"
+    },
+    "en": {
+      "title": "Three Scripts on the Same Stone",
+      "description": "An ancient decree survives in three scripts, and the Greek section can be read. How could researchers use limited clues to enter the other two scripts?"
+    }
+  },
+  "/lens-stories/03-subject-intro": {
+    "zh": {
+      "title": "街道为什么换了颜色",
+      "description": "伦敦贫困地图已经给街道着了色。几年后，调查者带着新笔记重走街区，旧颜色背后的判断还能否保留？"
+    },
+    "en": {
+      "title": "Why Did the Street Change Color?",
+      "description": "London’s poverty map had already colored its streets. Years later, investigators returned with new notebooks. Could the judgments behind the old colors still stand?"
+    }
+  },
+  "/lens-stories/04-subject-intro": {
+    "zh": {
+      "title": "写在书里的记账法",
+      "description": "1494年威尼斯的一部算术书写下商人的记账惯例。这些原本在商号中使用的方法，怎样进入别处的书页？"
+    },
+    "en": {
+      "title": "Bookkeeping in Print",
+      "description": "An arithmetic book printed in Venice in 1494 described merchants’ bookkeeping practices. How did methods used within firms enter books in other places?"
+    }
+  },
+  "/lens-stories/05-subject-intro": {
+    "zh": {
+      "title": "木星旁边的亮点",
+      "description": "木星旁的三个亮点起初被当作恒星，第二晚位置却变了。伽利略还要留下哪些记录，才能解释这种变化？"
+    },
+    "en": {
+      "title": "The Bright Points Beside Jupiter",
+      "description": "Three bright points beside Jupiter were first treated as fixed stars, but their positions changed the next night. What more would Galileo need to record to explain that change?"
+    }
+  },
+  "/lens-stories/06-subject-intro": {
+    "zh": {
+      "title": "卡片经过织机",
+      "description": "一串打孔卡从教学织机上逐张经过。机器怎样把卡上的孔与无孔，转成一行又一行的织造选择？"
+    },
+    "en": {
+      "title": "The Cards Passing Through the Loom",
+      "description": "A chain of punched cards passes through a teaching loom. How does the machine turn holes and solid spaces into weaving choices, row after row?"
+    }
+  },
+  "/lens-stories/07-subject-intro": {
+    "zh": {
+      "title": "礁石上的连接",
+      "description": "木制灯塔毁于火灾，海上的礁石仍需要航标。石材、接缝与施工安排，要怎样配合才能让新塔点亮？"
+    },
+    "en": {
+      "title": "Connections on the Reef",
+      "description": "A wooden lighthouse burned down, but the offshore rocks still needed a navigational aid. How would stone, joints, and construction work together to light a new tower?"
+    }
+  },
+  "/lens-stories/08-subject-intro": {
+    "zh": {
+      "title": "同一块田的长记录",
+      "description": "冬小麦收获之后，谷粒、秸秆与数字分别留下。多年以后，人们怎样把这些证据重新对应到当年的田块？"
+    },
+    "en": {
+      "title": "The Long Record of the Same Field",
+      "description": "After the winter wheat harvest, grain, straw, and figures remained. Years later, how could researchers connect that evidence back to the plots of its time?"
+    }
+  },
+  "/lens-stories/09-subject-intro": {
+    "zh": {
+      "title": "校门外的孩子",
+      "description": "十二岁的路易斯已经多次去过诊所，却仍进不了学校。他第一次走进课堂，还缺哪一步？"
+    },
+    "en": {
+      "title": "The Child Outside the School Gate",
+      "description": "Twelve-year-old Louis had visited a clinic several times, yet he still could not enter school. What else did he need to enter a classroom for the first time?"
+    }
+  },
+  "/lens-stories/10-subject-intro": {
+    "zh": {
+      "title": "车票之外",
+      "description": "485人要一起乘火车参加活动。一张车票能把这趟旅行安排好吗？"
+    },
+    "en": {
+      "title": "Beyond the Ticket",
+      "description": "485 people needed to take a train to the same event. Could a ticket alone organize their journey?"
+    }
+  },
+  "/concept-fables/0011-prerequisite-structure": {
+    "zh": {
+      "title": "海图夹里的免修卡",
+      "description": "一名海图成绩出色、且通过基础免修测试的学生，在综合单独航行中发现：被训练分工长期代办的甲板基础，仍是高阶航行能否独立完成的一环。"
+    },
+    "en": {
+      "title": "The Exemption Card in the Chart Folder",
+      "description": "A student who excels at chart work and has passed a fundamentals exemption test discovers during a comprehensive solo voyage that the deck basics long handled for him by the training division of labor are still part of what makes advanced navigation possible on his own."
+    }
+  },
+  "/concept-fables/0011-mastery-learning": {
+    "zh": {
+      "title": "二十八秒",
+      "description": "新咖啡店开业前，阿岚因统一训练时刻表在一次表面合格后进入更复杂的连单任务，随后用拆分任务与重复证据定位压粉缺口，经过针对性纠正并按原标准反复验证后才继续后续训练。"
+    },
+    "en": {
+      "title": "Twenty-Eight Seconds",
+      "description": "Before a new café opens, A-Lan moves into a more complex multi-order task after a single apparently successful attempt because everyone follows the same training timetable. By separating the task and gathering repeated evidence, the trainer later pinpoints a tamping gap; only after targeted correction and repeated checks against the original standard does A-Lan continue to the next stage of training."
+    }
+  },
+  "/concept-fables/0011-transfer-of-learning": {
+    "zh": {
+      "title": "计时器响了以后",
+      "description": "新店开业早晨，一名西点师沿用在稳定厨房里可靠的二十分钟节奏，却逐渐发现同样的时间在新的温度与设备条件下已不再代表同样的面团状态。"
+    },
+    "en": {
+      "title": "After the Timer Rang",
+      "description": "On the morning a new bakery opens, a pastry chef follows the reliable twenty-minute rhythm she learned in a stable kitchen, only to discover that the same amount of time no longer means the same state under different temperatures and equipment conditions."
+    }
+  },
+  "/concept-fables/0021-orthographic-mapping": {
+    "zh": {
+      "title": "蓝线捆住的剪影本",
+      "description": "一名靠整词外形快速认地址的送花学徒，在业务固定包含多种手写订单后发现这种方法无法迁移，转而把字母、声音与已知词义连接起来。"
+    },
+    "en": {
+      "title": "The Silhouette Book Bound in Blue Thread",
+      "description": "A flower-delivery apprentice who recognizes addresses quickly by the overall shape of whole words finds that the method does not transfer once the business routinely includes handwriting from many different people, and begins linking letters and sounds to meanings he already knows."
+    }
+  },
+  "/concept-fables/0021-number-sense": {
+    "zh": {
+      "title": "十二个黑格",
+      "description": "洪水逼近粮仓时，一名搬运工先用八十加四十确定目标，再把散袋重组为五与十的可复核单位，为及时装船提供判断，并由最终逐袋点数确认。"
+    },
+    "en": {
+      "title": "Twelve Black Squares",
+      "description": "As floodwater closes in on a granary, a porter first uses eighty and forty to define what is needed, then reorganizes loose sacks into checkable groups of five and ten so the boat can be loaded in time, with a final sack-by-sack count confirming the total."
+    }
+  },
+  "/concept-fables/0021-functional-literacy": {
+    "zh": {
+      "title": "只露出Q7的一折",
+      "description": "一名能准确校读并朗读整张燃料告示的印刷工，在真正代领物资时却没有把街区代码、日期、仓库、时段与凭证连成行动，直到他改变使用文件的方式。"
+    },
+    "en": {
+      "title": "A Fold Showing Only Q7",
+      "description": "A printer who can accurately proofread and read aloud an entire fuel notice still fails when he must actually collect supplies because he does not connect the district code, date, depot, time slot, and required documents into an action, until he changes the way he uses the document."
+    }
+  },
+  "/concept-fables/0031-metacognitive-regulation": {
+    "zh": {
+      "title": "胸牌后的四十分钟",
+      "description": "一名博物馆见习讲解员发现，反复超时并不是因为讲稿太长，而是她总把“观众可能没听懂”的感觉直接变成继续解释；直到她让预测、证据和检查点真正改变下一步动作。"
+    },
+    "en": {
+      "title": "Forty Minutes Behind the Badge",
+      "description": "A trainee museum guide discovers that her repeated overruns are not caused by an overly long script, but by turning the feeling that “the visitors may not have understood” directly into more explanation—until predictions, evidence, and checkpoints begin to change what she does next."
+    }
+  },
+  "/concept-fables/0031-self-efficacy": {
+    "zh": {
+      "title": "绿灯亮起以前",
+      "description": "一名已经具备播报基本技能、却总避开真实麦克风的见习站务员，通过一系列可核验的现场完成记录，逐步更新自己对“我能不能在现场把它做完”的判断。"
+    },
+    "en": {
+      "title": "Before the Green Light Comes On",
+      "description": "A trainee station worker who already has the basic skills for announcements but keeps avoiding the real microphone gradually updates her judgment of “Can I finish this live?” through a series of verifiable on-the-job completions."
+    }
+  },
+  "/concept-fables/0031-deliberate-practice": {
+    "zh": {
+      "title": "最后八厘米",
+      "description": "一名裁缝学徒发现，整件裙子做得越来越快，却没有让隐形拉链的最后八厘米变平；她于是把最弱的一小段从熟练流程中拆出来，让每次反馈都能直接改变下一次动作。"
+    },
+    "en": {
+      "title": "The Last Eight Centimeters",
+      "description": "A tailoring apprentice finds that making whole skirts faster does not make the last eight centimeters of an invisible zipper lie flat, so she removes that weakest segment from the familiar routine and makes every piece of feedback change the next attempt directly."
+    }
+  },
+  "/concept-fables/0111-constructivist-learning": {
+    "zh": {
+      "title": "转不过去的书架",
+      "description": "门洞明明比书架宽，安宁的判断却在转角处失效。周老师没有让她随便试，而是给出可观察、可记录的办法，让她用证据重画“能通过”到底意味着什么。"
+    },
+    "en": {
+      "title": "The Bookshelf That Wouldn't Make the Turn",
+      "description": "The doorway is clearly wider than the bookshelf, yet Anning's conclusion fails at the corner. Instead of letting her keep trying at random, Teacher Zhou gives the group a way to make their movement visible and recordable, so that evidence can change what “it will fit” actually means."
+    }
+  },
+  "/concept-fables/0111-formative-assessment": {
+    "zh": {
+      "title": "关上窑门以前",
+      "description": "小禾收到的成品判断一直准确，却总在杯子已经无法修改以后才到来。当可检查的接缝证据在统一交件截止前出现，她第一次能让证据改变下一步动作，即使第五只杯子因此赶不上集市。"
+    },
+    "en": {
+      "title": "Before the Kiln Door Closes",
+      "description": "Xiaohe’s finished cups are judged accurately, but too late for repairs. A test joint gives her evidence she can act on before submission, even though the fifth cup will miss the fair."
+    }
+  },
+  "/concept-fables/0111-cognitive-load": {
+    "zh": {
+      "title": "开门前的七件事",
+      "description": "同样七件开放日前的差事，阿久第一天越背越乱；第二天任务一点没少，只是未完成的信息不再全部挤在脑子里。"
+    },
+    "en": {
+      "title": "Seven Things Before the Doors Open",
+      "description": "The same seven opening-day tasks overwhelm Ajiu on the first day; on the second, none of the work disappears, but the unfinished information no longer has to stay in his head all at once."
+    }
+  },
+  "/concept-fables/0112-play-based-learning": {
+    "zh": {
+      "title": "纸箱公交站",
+      "description": "林老师为了开放日把孩子的公交游戏整理成固定路线和练习，秩序有了，游戏却停了。她随后保留孩子自己的目的地和选择，只用环境与问题支持他们把游戏继续下去。"
+    },
+    "en": {
+      "title": "The Cardboard Bus Stop",
+      "description": "To prepare for an open day, Teacher Lin turns the children’s bus game into a fixed route with exercises. The room becomes orderly, but the game stops. She then keeps the children’s own destinations and choices, using only the environment and questions to support them in carrying the game forward."
+    }
+  },
+  "/concept-fables/0112-joint-attention": {
+    "zh": {
+      "title": "窗外那根细线",
+      "description": "周五观课前，许老师越想把小默拉回图卡，互动越少；直到她开始跟随他的指向，也让他跟随自己的指向，两人才真正把注意协调到同一件正在发生的事上。"
+    },
+    "en": {
+      "title": "The Thin Line Outside the Window",
+      "description": "Before Friday’s observation, Teacher Xu finds that the harder she tries to pull Xiaomo back to the picture cards, the less interaction there is. Only when she begins to follow his pointing—and lets him follow hers—do they start coordinating attention around the same unfolding event."
+    }
+  },
+  "/concept-fables/0112-emergent-curriculum": {
+    "zh": {
+      "title": "雨后那条粉笔河",
+      "description": "一场雨只是起点；真正改变“形状周”的，是孩子们关于排水的问题跨天持续，并且每一次新的发现都具体改变了周老师下一步准备的材料、规则和评价。"
+    },
+    "en": {
+      "title": "The Chalk River After the Rain",
+      "description": "The rain is only the starting point. What truly changes Shape Week is that the children’s questions about drainage continue across several days, and each new finding directly shapes what Teacher Zhou prepares, constrains, and assesses next."
+    }
+  },
+  "/concept-fables/0113-teacher-noticing": {
+    "zh": {
+      "title": "页边那架小梯子",
+      "description": "检查前，林老师差点把瑞安页边的小图当成杂乱裁掉；一次量丝带的现场，让那几道线从背景变成需要继续观察、而不是立刻下结论的线索。"
+    },
+    "en": {
+      "title": "The Little Ladder in the Margin",
+      "description": "Before an inspection, Teacher Lin nearly trims away a small repeated drawing in Rui’an’s workbook as untidy clutter. A ribbon-measuring moment turns those lines into a clue that needs further checking rather than an immediate conclusion."
+    }
+  },
+  "/concept-fables/0113-inclusive-pedagogy": {
+    "zh": {
+      "title": "地图从墙上下来以后",
+      "description": "顾老师原本用三张小桌认真提供帮助，却让三名学生的判断很少进入全班路线任务；真正的变化不是多添了几种工具，而是共同任务被重新设计后，他们能够参与、影响结果，同时继续获得需要的个别支持。"
+    },
+    "en": {
+      "title": "After the Map Came Down from the Wall",
+      "description": "Teacher Gu has thoughtfully provided three separate support tables, but the students’ judgments rarely enter the class’s shared route-planning task. The real change comes not from adding more tools, but from redesigning the common task so they can participate, influence the outcome, and still receive the individual support they need."
+    }
+  },
+  "/concept-fables/0113-classroom-routines": {
+    "zh": {
+      "title": "铃响以后，谁先动",
+      "description": "孩子们每件事都会做，换课时却总挤成一团；公开课前，程老师终于不再催速度，而是让全班练出一套谁都能接上的转换常规。"
+    },
+    "en": {
+      "title": "Who Moves First After the Bell",
+      "description": "The children can do every task on its own, yet every lesson change turns into a tangle. Before an observed lesson, Teacher Cheng finally stops pushing for speed and helps the class build a transition routine that anyone can follow."
+    }
+  },
+  "/concept-fables/0114-pedagogical-content-knowledge": {
+    "zh": {
+      "title": "影子末端的太阳",
+      "description": "学生能背对规则、也能照着模型摆对，独立做日晷时却把太阳放回影子末端；严老师必须找到那个“会答却没懂”的具体误解。"
+    },
+    "en": {
+      "title": "The Sun at the End of the Shadow",
+      "description": "Students can recite the rule correctly and arrange the model when shown how, yet when they build a sundial independently they put the sun back at the end of the shadow. Teacher Yan has to uncover the specific misconception behind being able to answer without understanding."
+    }
+  },
+  "/concept-fables/0114-misconception-diagnosis": {
+    "zh": {
+      "title": "苹果押在重球旁",
+      "description": "全班都会写对“同加速度”，阿洛却把午饭的苹果押在较重的球上。苏老师不把一次下注当作诊断，而是让预测和理由在一组对照中逐渐显形。"
+    },
+    "en": {
+      "title": "The Apple Beside the Heavy Ball",
+      "description": "The class can all write the accepted statement about equal acceleration, yet A-Luo still bets his lunch apple on the heavier ball. Teacher Su does not treat one wager as a diagnosis; she lets predictions and reasons become visible across a sequence of classroom comparisons."
+    }
+  },
+  "/concept-fables/0114-disciplinary-literacy": {
+    "zh": {
+      "title": "那条太顺的标题",
+      "description": "三名实习教师都能把旧材料概括得一模一样，却没人肯替那个顺滑的结论签字；问题不在有没有读懂，而在不同学科怎样判断“这算不算证据”。"
+    },
+    "en": {
+      "title": "The Headline That Was Too Neat",
+      "description": "Three trainee teachers can summarise the old materials in almost exactly the same way, yet none will sign off on the smooth conclusion. The issue is not whether they understood the documents, but how different disciplines decide what counts as evidence."
+    }
+  },
+  "/concept-fables/0211-montage": {
+    "zh": {
+      "title": "二十七号袋",
+      "description": "交片前，阿澈必须把一场无对白的关店戏剪明白：店员为什么已经锁门，却又把门打开。同样的素材没有换表情，只通过订单号镜头的可见性、顺序和时长，就让观众更容易建立“骑手来取27号袋”的关系，同时仍保留对人物情绪的不同理解。"
+    },
+    "en": {
+      "title": "Bag No. 27",
+      "description": "Before the submission deadline, A-Che has to make a dialogue-free closing scene readable: why does the clerk unlock the door after the shop is already closed? The expression never changes; instead, the visibility, order, and duration of the order-number shots make it easier for viewers to connect the courier with Bag No. 27, while still leaving room for different readings of the clerk’s mood."
+    }
+  },
+  "/concept-fables/0211-diegetic-sound": {
+    "zh": {
+      "title": "街角之后的四个音",
+      "description": "宁佳要让观众先听见门后的排练，又不让同一段钢琴在人物走出剧场后像贴在她身上一样继续。一次“她是不是戴着耳机”的试听误解，迫使她重新处理从排练室、走廊、大厅到街道的空间连续性，并为片尾重新出现的四个音留出清楚的断点。"
+    },
+    "en": {
+      "title": "The Four Notes After the Street Corner",
+      "description": "Ning Jia needs the audience to hear the rehearsal behind a closed door without making the same piano phrase seem physically attached to the character after she leaves the theatre. A test listener’s “Is she wearing headphones?” forces her to rebuild the spatial continuity from rehearsal room to corridor, lobby, and street, then create a clear break before the four notes return at the end."
+    }
+  },
+  "/concept-fables/0211-framing": {
+    "zh": {
+      "title": "十五秒里的工具箱",
+      "description": "十五秒短片已经剪到音乐点上，负责人却问：“这里怎么像在抢箱子？”林岚今晚就得交片。"
+    },
+    "en": {
+      "title": "The Toolbox in Fifteen Seconds",
+      "description": "The fifteen-second clip is already cut to the music when the coordinator asks, “Why does this look like they’re fighting over the toolbox?” Lin Lan has to deliver it tonight."
+    }
+  },
+  "/concept-fables/0212-affordance": {
+    "zh": {
+      "title": "那只绿色拉环",
+      "description": "开放前，小然必须展开最后一辆展车才能挂上自己组的版画。绿色箭头让她知道从哪里、往哪边操作，却没有解决薄手柄难抓的问题；只有在可调搭扣保持可靠锁闭的前提下改变抓握方式和预紧，她才真正能完成这个动作。"
+    },
+    "en": {
+      "title": "The Green Pull Loop",
+      "description": "Before opening time, Xiaoran has to unfold the last display cart so her group can hang its prints. A green arrow tells her where and in which direction to act, but it does not solve the problem of a thin handle that is hard to grip. Only when the gripping method and preload are changed within the adjustable latch’s reliable locking range can she actually perform the action."
+    }
+  },
+  "/concept-fables/0212-ergonomics": {
+    "zh": {
+      "title": "四点前的按扣",
+      "description": "二十四件舞台夹克等着四点装车。熟练的乔岚短暂休息后确实恢复了一阵，但同一批按扣继续做下去又开始费力；她给台式压机装上适配同批按扣的模具后完成余量。故事把变化落在工具交互上，同时保留休息、熟悉和节奏等其他可能影响。"
+    },
+    "en": {
+      "title": "The Snaps Before Four",
+      "description": "Twenty-four stage jackets have to be loaded by four. After a short break, the experienced Qiao Lan does recover for a while, but the same batch of snaps soon becomes difficult again; she then fits a bench press with dies made for the same batch and finishes the remaining work. The story places the change in the interaction with the tool while still leaving room for rest, familiarity, pace, and other influences."
+    }
+  },
+  "/concept-fables/0212-design-constraints": {
+    "zh": {
+      "title": "装车前的拱门",
+      "description": "巡演木偶剧团的拱门既要装进车、两人十五分钟搭完，又要让观众看到连续的正面。岑宁重新量车门、追查要求来源、做纸样并试搭，最后留下五件可运输硬构件；第二次搭建和拆台还直接改变了装车次序。"
+    },
+    "en": {
+      "title": "The Arch Before Loading",
+      "description": "The touring puppet company’s arch has to fit through the van door, be assembled by two people within fifteen minutes, and still look continuous from the audience. Cen Ning remeasures the vehicle, traces where each requirement came from, builds a paper mock-up, and tests assembly. The result is five transportable rigid pieces, and the second assembly and teardown directly change the loading order."
+    }
+  },
+  "/concept-fables/0213-visual-hierarchy": {
+    "zh": {
+      "title": "入口那块夜场板",
+      "description": "夜场开门前，入口志愿者小陶总要从同一块板上找“几点、几楼、末班车”。罗青没有删掉原有活动内容，而是重新安排时间、活动名、楼层和交通的位置与显著程度；开门后，未参与测试的访客也从不同入口完成了查找。"
+    },
+    "en": {
+      "title": "The Entrance Board for Museum Night",
+      "description": "Before the evening opening, entrance volunteer Xiao Tao keeps having to search the same board for “what time, which floor, and the last shuttle.” Luo Qing does not remove the original activity content. Instead, she reorganizes the positions and visual emphasis of times, activity names, floors, and transport information. After the doors open, visitors who did not take part in testing also find information through different entry points."
+    }
+  },
+  "/concept-fables/0213-negative-space": {
+    "zh": {
+      "title": "椅背旁那块米白",
+      "description": "阿岚要在三点前印完八十张舞蹈节封面。人物细节越补越清楚，动作却仍粘成一团；她先在重复试印上用白色遮盖可逆地比较几块负形，发现手臂内侧挖得过宽会破坏腰线，再把确认后的形状转回木版正式落刀。"
+    },
+    "en": {
+      "title": "The Off-White Shape Beside the Chair Back",
+      "description": "A-Lan has to finish eighty dance-festival program covers by three. The more clearly she refines the figure and chair, the more the movement seems to merge together. Before cutting the woodblock again, she uses opaque white gouache on duplicate proofs to compare several negative shapes reversibly, discovers that making the inner-arm gap too wide breaks the waist, and only then transfers the chosen shapes back to the block."
+    }
+  },
+  "/concept-fables/0213-medium-specificity": {
+    "zh": {
+      "title": "站台屏没有第一页",
+      "description": "齐羽要把十四页折页书转成二十四秒地铁长屏作品。工作室里从零秒看，逐页版本仍像一本完整的书；第一次到站台，她发现即使没有文字，乘客从中途加入时也只会撞上被截开的蓝线和某一页场景。第二次现场测试又继续改变远距离细节与文字时机。"
+    },
+    "en": {
+      "title": "The Platform Screen Has No First Page",
+      "description": "Qi Yu has to adapt a fourteen-page accordion book into a twenty-four-second work for a subway platform screen. From zero seconds in the studio, the page-by-page version still feels like a complete book. At the station, however, she finds that even when there is no text on screen, passengers who join midway encounter a broken blue line and isolated scenes. A second station test then changes the treatment of distant detail and the timing of text."
+    }
+  },
+  "/concept-fables/0214-tacit-knowledge": {
+    "zh": {
+      "title": "推子旁的第三遍",
+      "description": "小乔第一次独立守完整场朗读演出。通道表让她接对设备、守住基础位置和进出提示，但演员转离话筒时她总补得太晚；何闻在赶去主厅前用示范、回放、换位监听和再次操作帮她校准。正式联排里速度和距离又变了，她只能重新听和判断，仍留下一处晚半拍。"
+    },
+    "en": {
+      "title": "The Third Pass at the Mixing Console",
+      "description": "Qiao is running a full spoken-word performance on her own for the first time. The channel sheet lets her connect the system correctly, hold baseline positions, and follow entry and exit cues, but she still compensates too late when the actor turns away from the microphone. Before hurrying to the main hall, He Wen uses demonstration, playback, changes of listening position, and another attempt to help her calibrate. During the full run, the actor changes speed and distance again, so she has to listen and judge afresh—and still leaves one half-beat-late moment marked with a triangle."
+    }
+  },
+  "/concept-fables/0214-material-affordance": {
+    "zh": {
+      "title": "灯罩上的三道卡口",
+      "description": "书展开幕前，闻予必须在四点前装好十二只阅读灯罩。纸模型的六角折面本来成立，但场地方已确认使用的阻燃级0.8毫米半透明聚丙烯片在锐折后会回弹、发白；同一片材绕过已接吊线时形成的卷曲和重叠，又让三组插接卡口成为可行结构。"
+    },
+    "en": {
+      "title": "Three Fastenings on the Lampshade",
+      "description": "Before the book fair opens, Wen Yu has to install twelve reading lampshades by four. The hexagonal folds work in the paper model, but the specified flame-retardant 0.8 mm translucent polypropylene springs back and turns white at sharp folds. When the same sheet is wrapped around the prewired suspension cables, its ability to curve and overlap makes three tab-and-slot fastenings a workable structure."
+    }
+  },
+  "/concept-fables/0214-iterative-craftsmanship": {
+    "zh": {
+      "title": "摊开以后还会合上的书",
+      "description": "周末写生课已经满员，叶欣周五六点前必须交出十八本速写本。第一本蓝封样书在常规桌面检查里确实能平摊，却在膝上绘画、湿画和反复翻页中依次暴露新的使用问题；第一本正式灰封书验证结构后计入十八本，周末回流的使用痕迹只成为下一批继续观察的依据。"
+    },
+    "en": {
+      "title": "The Book That Would Not Stay Open",
+      "description": "A weekend urban-sketching class is full, and Ye Xin has to deliver eighteen sketchbooks by six on Friday. The first blue-cover prototype genuinely meets the usual flat-opening requirement on a table, but new issues emerge in sequence through lap drawing, wet media, repeated front-and-back page turning, and a full class. The first gray-cover production book counts as one of the eighteen; feedback from weekend use becomes evidence only for the next batch."
+    }
+  },
+  "/concept-fables/0215-entrainment": {
+    "zh": {
+      "title": "转身之后还要接回第一拍",
+      "description": "九十秒双人节目里，转身后还有八拍。若宁的脚步越跳越落在鼓声后面，两人得把这一段接过去。"
+    },
+    "en": {
+      "title": "After the Turn, Back to the First Beat",
+      "description": "There are eight beats after the turn in the ninety-second duet. Ruoning’s steps keep falling behind the drum, and the two performers have to get through that passage."
+    }
+  },
+  "/concept-fables/0215-tension-and-resolution": {
+    "zh": {
+      "title": "第八拍没有落下",
+      "description": "开放预演前，安愉刚把双人段落第四次穿越改成跨过第八拍的悬停，旧配乐却仍在前三次相同的位置落下木块声。删滚奏没有解决提前收束，彻底拿掉木块又失去熟悉关系的完成点；最后陆森保留前三次参照，只把第四次那一声延到真实接腕。"
+    },
+    "en": {
+      "title": "The Eighth Beat Does Not Land",
+      "description": "Before the open preview, An Yu has just changed the fourth crossing of a duet into a suspension that carries past the eighth beat, while the old music still places the same woodblock note where it landed in the first three crossings. Thinning the electronic roll does not remove the premature sense of closure; removing the fourth woodblock entirely removes the familiar completion point. Lu Sen therefore keeps the first three references and delays only the fourth hit until the wrist catch actually happens."
+    }
+  },
+  "/concept-fables/0215-ensemble-coordination": {
+    "zh": {
+      "title": "最后四小节谁先动",
+      "description": "录音棚五点清场，弦乐三重奏只有三次完整录音机会。最后四小节一放宽，小提琴要保住旋律长线、中提琴要托住内声部、大提琴又不能过早撤掉低音。第一次明显抬弓提示让所有人一起收早；后来第二条完整轨里低音临时多留了一点，另外两人当场接住了这个变化。"
+    },
+    "en": {
+      "title": "Who Moves First in the Last Four Bars",
+      "description": "The studio closes at 5:00, and the string trio has only three full takes left. As the last four bars broaden, the violin needs to sustain the melodic line, the viola must support the inner voice, and the cello cannot withdraw the bass too early. The first obvious bow-lift cue makes everyone release too soon; later, in the second full take, the cello holds the bass slightly longer without prior agreement, and the other two players adjust to it in real time."
+    }
+  },
+  "/concept-fables/0221-sacred-and-profane": {
+    "zh": {
+      "title": "周六下午的长桌",
+      "description": "社区中心下午一点封厅布置，三点追思礼开始、五点结束，晚餐组五点二十分进场、六点开饭。阿勤和敏雅围着同一张长桌安排工具、白布、照片、花、窄线和餐盘；随着念名仪式开始和结束，整张桌周围可接受的动作被建立，又逐项撤回。"
+    },
+    "en": {
+      "title": "The Long Table on Saturday Afternoon",
+      "description": "At 1:00, the community center closes for setup; the memorial begins at 3:00 and ends at 5:00, the dinner team enters at 5:20, and dinner starts at 6:00. A-Qin and Minya organize tools, a white cloth, family photographs, flowers, a narrow floor line, and dinner plates around the same long table. As the reading of names begins and ends, the actions considered acceptable around the table are established and then withdrawn one by one."
+    }
+  },
+  "/concept-fables/0221-theological-hermeneutics": {
+    "zh": {
+      "title": "那张写着“彼此等候”的卡片",
+      "description": "堂区六点十五分必须开饭，六名食物银行志愿者六点三十五分才能到，七点半还有晚祷。玛尔塔和托马斯都不想让晚到的人被落下：一个坚持全体等候，一个主张先开饭并留餐。重读林前11章和十年前记录后，他们改变的不是经文，而是当前堂区如何把“彼此等候（林前11:33）”落实成共同用餐。"
+    },
+    "en": {
+      "title": "The Card That Says “Wait for One Another”",
+      "description": "The parish meal has to begin at 6:15, six food-bank volunteers cannot arrive until 6:35, and evening prayer begins at 7:30. Marta and Thomas both want to avoid leaving late arrivals outside the shared meal: she favors waiting for everyone, while he proposes starting on time and holding food. After rereading 1 Corinthians 11 and checking records from ten years earlier, they do not change the text; they change how this contemporary parish applies “Wait for one another (1 Cor. 11:33)” to its common meal."
+    }
+  },
+  "/concept-fables/0221-theodicy": {
+    "zh": {
+      "title": "删掉“为了”的那一行",
+      "description": "一张问答卡即将送印，提问的父亲却要求删去女儿受苦的解释。问题可以留下，那句话该怎样改？"
+    },
+    "en": {
+      "title": "Delete the Line with “So That”",
+      "description": "A handout is almost ready for the printer when the father who submitted the question asks for an explanation of his daughter’s suffering to be removed. The question can stay. What should replace that sentence?"
+    }
+  },
+  "/concept-fables/0222-source-criticism": {
+    "zh": {
+      "title": "那间仓库该写成什么",
+      "description": "下午四点展签就要送印，唐茵还没找到“临时诊所”四个字的依据；排版同事正在等她确认。"
+    },
+    "en": {
+      "title": "What Should the Label Say About That Warehouse?",
+      "description": "The exhibit label goes to print at four, but Tang Yin has not yet found grounds for the words “temporary clinic.” The layout editor is waiting for her answer."
+    }
+  },
+  "/concept-fables/0222-stratigraphy": {
+    "zh": {
+      "title": "五个编号该怎样连",
+      "description": "探沟第二天就要盖上保护层。钱瑜的关系图还空着，一块陶片的类型判断又与眼前的坑边界对不上。"
+    },
+    "en": {
+      "title": "How Should the Five Contexts Be Linked?",
+      "description": "The trench will be covered tomorrow. Qian Yu’s relationship diagram is still blank, and the provisional type of one sherd seems at odds with the pit boundary before her."
+    }
+  },
+  "/concept-fables/0222-historical-contingency": {
+    "zh": {
+      "title": "侧巷那扇绿门",
+      "description": "老自行车店要改入口，女儿从铁盒里翻出两份旧图。今天熟悉的绿门，当年是怎么留下来的？"
+    },
+    "en": {
+      "title": "The Green Door in the Side Alley",
+      "description": "The old bicycle shop needs an accessible entrance. In a metal box, the owner’s daughter finds two original plans. How did the familiar green door become the one everyone uses?"
+    }
+  },
+  "/concept-fables/0223-reflective-equilibrium": {
+    "zh": {
+      "title": "那张蓝卡要不要留下",
+      "description": "展览开幕前，保育员要决定一张观众写过的蓝卡是否留下。旧照片改了她的想法，却没有替她作决定。"
+    },
+    "en": {
+      "title": "Should the Blue Card Stay?",
+      "description": "Before an exhibition opens, a conservator must decide whether to leave a visitor’s handwritten blue card in place. Old photographs change her understanding, but they do not make the decision for her."
+    }
+  },
+  "/concept-fables/0223-moral-luck": {
+    "zh": {
+      "title": "第三条绑带没有用上",
+      "description": "社区科学展撤场时，两辆手推车同时经过门槛，只有一边的展板撞坏了借来的投影仪。维修有了归属，关于‘谁更可靠’的说法也随之分开。"
+    },
+    "en": {
+      "title": "The Third Strap Was Never Used",
+      "description": "During teardown at a community science fair, two carts cross the same threshold together, but only one load damages the borrowed projector. The repair work finds an owner, and so does a new story about who can be trusted."
+    }
+  },
+  "/concept-fables/0223-validity-and-soundness": {
+    "zh": {
+      "title": "那只碗先别打印标签",
+      "description": "开放日只剩一天，浅口碗的纸标签掉了。阿澄把窑号填进草稿，准备打印时，又看见另一只杯子。"
+    },
+    "en": {
+      "title": "Don’t Print the Label for That Bowl Yet",
+      "description": "With one day left before the open house, the shallow bowl has lost its paper label. A-Cheng drafts the kiln number, then notices another cup before printing."
+    }
+  },
+  "/concept-fables/0231-comprehensible-input": {
+    "zh": {
+      "title": "还要再晾一会儿",
+      "description": "米娅必须和同组在午饭前印完十二张海报。她听不懂老师的整句话，只能先跟着湿墨、晾架和手势把事情做对。"
+    },
+    "en": {
+      "title": "It Still Needs More Time to Dry",
+      "description": "Mia’s group has to print twelve posters before lunch. She cannot understand the teacher’s whole sentence, so at first she can only follow the wet ink, the drying rack, and the gesture well enough to keep the work moving."
+    }
+  },
+  "/concept-fables/0231-interlanguage": {
+    "zh": {
+      "title": "交班本上的第三种过去时",
+      "description": "月底排班前，周然的正式交班越来越正确，主管却仍看不出她本人在使用怎样的英语。几张被保留下来的原稿，开始讲出另一条变化中的线索。"
+    },
+    "en": {
+      "title": "The Third Past Tense in the Handover Log",
+      "description": "Before the end-of-month schedule is fixed, Zhou Ran’s formal handovers look increasingly correct, yet her supervisor still cannot see what English she can produce herself. A few preserved drafts begin to reveal another, changing pattern."
+    }
+  },
+  "/concept-fables/0231-noticing-hypothesis": {
+    "zh": {
+      "title": "周六清单里的小改动",
+      "description": "陈禾正在整理周六烘焙清单。东西她都安排明白了，英文草稿里却有一个词，让她回头又听了一遍语音。"
+    },
+    "en": {
+      "title": "A Small Change in the Saturday List",
+      "description": "Chen He is making the Saturday baking checklist. She has the supplies sorted out, but one word in her English draft sends her back to the voice messages."
+    }
+  },
+  "/concept-fables/0232-arbitrariness-of-the-sign": {
+    "zh": {
+      "title": "柜门上那张新标签",
+      "description": "社区修理工坊把两张工作桌的零件柜合在一起。林禾选了供应商目录里最准确的标签，下午一扇旧玻璃柜门却让三个人站在同一只抽屉前说起三个名字。"
+    },
+    "en": {
+      "title": "The New Label on the Cabinet Door",
+      "description": "A community repair workshop merges the parts cabinets used by two worktables. Lin He chooses the supplier's most precise label, but that afternoon an old glass cabinet door leaves three people standing at one drawer with three different names for the same part."
+    }
+  },
+  "/concept-fables/0232-focalization": {
+    "zh": {
+      "title": "耳机里没有那句话",
+      "description": "五点前，乔安必须重剪一段学生上台前找不到琴弓的录音。第一版把后台知道的事全说了出来，于是听众反倒觉得那个正在寻找的人毫无道理。"
+    },
+    "en": {
+      "title": "The Sentence She Could Not Hear",
+      "description": "Before five, Jo Ann must recut an audio story about a student searching for her bow just before a performance. The first version tells the listener everything the backstage team knows, making the person who is still searching sound unreasonable."
+    }
+  },
+  "/concept-fables/0232-pragmatics": {
+    "zh": {
+      "title": "十点还有下一组",
+      "description": "合唱团必须在九点四十五前撤场，舞蹈班十点进门。苏宁对指挥说了一句时间提醒，后排收线的人也听见了；几分钟后，下一组要用的主音箱已经断电。"
+    },
+    "en": {
+      "title": "There’s Another Group at Ten",
+      "description": "The choir must clear the hall by 9:45, and a dance class enters at ten. Su Ning gives the conductor a brief reminder about the time; a volunteer coiling cables at the back hears it too. Minutes later, the main speaker needed by the next group is dark."
+    }
+  },
+  "/concept-fables/0311-opportunity-cost": {
+    "zh": {
+      "title": "最后九十分钟的切割机",
+      "description": "周五下午，陈未把两块透明板靠在创客室的切割机旁。机器只剩九十分钟：左边是周六要装的二十四块触觉标牌，右边是周一客户要试的六个连接件。"
+    },
+    "en": {
+      "title": "The Laser Cutter’s Last Ninety Minutes",
+      "description": "On Friday afternoon, Chen Wei leans two acrylic sheets beside the makerspace laser cutter. Only ninety minutes remain: the left sheet is for twenty-four tactile signs needed on Saturday, and the right for six connectors a client expects to test on Monday."
+    }
+  },
+  "/concept-fables/0311-marginal-analysis": {
+    "zh": {
+      "title": "十二点前的最后一个烤盘",
+      "description": "十二点前，许妍收到两个追加十份的询价：一个要准时取，一个能晚四十分钟。台面上只剩一个空烤盘和咖啡店等待确认的便签。"
+    },
+    "en": {
+      "title": "The Last Oven Slot Before Noon",
+      "description": "Before noon, Xu Yan receives two requests for ten extra lunches: one needs them on time, the other can collect forty minutes later. One empty oven slot and an unconfirmed café order remain."
+    }
+  },
+  "/concept-fables/0311-negative-externality": {
+    "zh": {
+      "title": "院子里多出来的第三个早晨",
+      "description": "唐静把晨间律动课搬进获准使用的免费院子，价格减半，两场很快满员。她加开周五时，三楼一名从未报名的夜班口译员也开始改自己的时间表。"
+    },
+    "en": {
+      "title": "The Third Morning in the Courtyard",
+      "description": "Tang Jing moves her morning movement class into a free courtyard approved for community use. She halves the price, fills two sessions, and adds Friday—just as a night-shift interpreter upstairs begins changing his own schedule."
+    }
+  },
+  "/concept-fables/0312-collective-action-problem": {
+    "zh": {
+      "title": "星期三早上的六个名字",
+      "description": "校门前的无车时段每天需要六名家长轮值二十分钟。许澄收到十几条愿意帮忙的私信，可到周二晚上，周三表格的第六格仍只有两个铅笔问号。"
+    },
+    "en": {
+      "title": "Six Names for Wednesday Morning",
+      "description": "The car-free period outside a school needs six parents to volunteer for twenty minutes each day. Xu Cheng receives more than a dozen offers to help, yet by Tuesday night Wednesday's sixth box still holds only two pencilled question marks."
+    }
+  },
+  "/concept-fables/0312-separation-of-powers": {
+    "zh": {
+      "title": "十六点二十分的通行证",
+      "description": "周六16:20，市政广场的车辆栏杆提前落下，林素订好的三百份节目单被挡在外面。通行证写着17:00前有效，信息台已经等着装袋，而管理处正忙着应付突然增大的人流。"
+    },
+    "en": {
+      "title": "The Permit at 4:20",
+      "description": "At 16:20 on Saturday, the municipal plaza lowers its vehicle barrier early, leaving Lin Su’s three hundred festival programs outside. Her permit is valid until 17:00, the information desk is waiting to pack the programs, and plaza management is dealing with a sudden surge in foot traffic."
+    }
+  },
+  "/concept-fables/0312-political-legitimacy": {
+    "zh": {
+      "title": "星期三清晨的橙色许可",
+      "description": "每周三06:00–08:00，刘森所在的居民街都要腾空给清扫车。旧通知有条例依据，街道也确实更干净；玛拉却因此每周要推着透析老人多走两条街。月底，新通知仍写着同样的两个小时。"
+    },
+    "en": {
+      "title": "The Orange Permit on Wednesday Morning",
+      "description": "Every Wednesday from 06:00 to 08:00, Liu Sen’s street must be cleared for a street sweeper. The old notice cites an ordinance and the street really does become cleaner, yet Mara must push an elderly dialysis patient two extra blocks each week. At month’s end, a new notice keeps the same two hours."
+    }
+  },
+  "/concept-fables/0313-cognitive-dissonance": {
+    "zh": {
+      "title": "那段一直没点开的录音",
+      "description": "梅若多年坚持第一轮匿名试音、统一评分。她认出17号是旧学生，先把他写进下一轮；十分钟后，总分表显示17号82分、23号86分。她在17号旁补上两项从未公布的标准，却一直没点开23号的备用录音。"
+    },
+    "en": {
+      "title": "The Recording She Kept Not Opening",
+      "description": "For years, Mei Ruo has insisted on anonymous first-round auditions with the same scoring system for everyone. She recognizes 17 as a former student and advances him; ten minutes later, the final sheet gives 17 a score of 82 and 23 a score of 86. She adds two unpublished criteria beside 17, then keeps avoiding 23’s backup recording."
+    }
+  },
+  "/concept-fables/0313-operant-conditioning": {
+    "zh": {
+      "title": "红槽旁的十分钟",
+      "description": "两块没充电的电池又被早班翻了出来。小俞想试一组紫色边光，摄影棚却只剩关门前的十分钟。"
+    },
+    "en": {
+      "title": "Ten Minutes Beside the Red Charging Rack",
+      "description": "The morning crew finds two uncharged batteries again. Xiao Yu wants to try a purple rim light, with only the last ten minutes before the studio closes available."
+    }
+  },
+  "/concept-fables/0313-fundamental-attribution-error": {
+    "zh": {
+      "title": "那本旧版教材卡在A柜台",
+      "description": "A柜台的长队拐到了工程书架，佳宁又被记下需要速度训练。那天中午，另一位同事来接她的班。"
+    },
+    "en": {
+      "title": "The Old Textbook That Stalled at Counter A",
+      "description": "Counter A’s queue reaches the engineering shelves, and Jianing has been listed for speed training. At lunchtime, another colleague takes her place."
+    }
+  },
+  "/concept-fables/0314-social-construction": {
+    "zh": {
+      "title": "那张写着“主理人”的卡",
+      "description": "周六早上，林桥只想按时摆好自己的陶杯，却被一张从未申请过的“主理人”卡叫去分钥匙。她把卡交回后，邮件和表格仍在继续找她。"
+    },
+    "en": {
+      "title": "The Card Marked ‘Lead Organizer’",
+      "description": "On Saturday morning, Lin Qiao only wants to open her pottery stall on time, but a ‘lead organizer’ card she never applied for sends her to distribute keys. After she hands it back, the emails and forms keep finding her."
+    }
+  },
+  "/concept-fables/0314-habitus": {
+    "zh": {
+      "title": "蓝标签没有被并到一起",
+      "description": "做了十二年批发花市的许岚，第一天便把三桶同色郁金香并到一起。她已经读懂蓝签，可电话和推车同时出现时，手仍先把花送往旧位置。"
+    },
+    "en": {
+      "title": "The Blue Tags That Stayed Separate",
+      "description": "After twelve years in the wholesale flower market, Xu Lan combines three buckets of white tulips on her first day in a wedding studio. She understands the blue tags, but when the phone and trolley arrive together, her hands still send the flowers toward their old place."
+    }
+  },
+  "/concept-fables/0314-norm-enforcement": {
+    "zh": {
+      "title": "十分钟代看牌",
+      "description": "韩舟把“十分钟回来”拖成二十七分钟后，邻摊开始更谨慎地接他的牌。后来，就连一直替他放宽的林曼，也发现自己的牌没那么容易递出去了。"
+    },
+    "en": {
+      "title": "The Ten-Minute Stall-Watching Sign",
+      "description": "After Han Zhou turns ‘back in ten minutes’ into twenty-seven, neighboring vendors become more cautious about taking his sign. Soon even Lin Man, who keeps relaxing the limit for him, finds her own sign harder to pass on."
+    }
+  },
+  "/concept-fables/0321-verification": {
+    "zh": {
+      "title": "那段十四秒的视频",
+      "description": "一段十四秒视频写着“天花板坍塌，已经有人受伤”。离截稿不到一小时，苏遥发现画面是真的，那句话却未必是。"
+    },
+    "en": {
+      "title": "The Fourteen-Second Video",
+      "description": "A fourteen-second video says a mall ceiling has collapsed and people are injured. With less than an hour to deadline, Su Yao finds that the footage is real, but the sentence may not be."
+    }
+  },
+  "/concept-fables/0321-agenda-setting": {
+    "zh": {
+      "title": "咖啡机旁的第三张问题卡",
+      "description": "问答会前，林真给诊所和排水各写一张问题卡。咖啡机旁的周报，她每天早上都会翻一遍。"
+    },
+    "en": {
+      "title": "The Third Question Card Beside the Coffee Machine",
+      "description": "Before the public Q&A, Lin Zhen writes a question card for the clinic and another for drainage repairs. Each morning she turns through the weekly beside her coffee machine."
+    }
+  },
+  "/concept-fables/0321-source-triangulation": {
+    "zh": {
+      "title": "到底有多少户没修好",
+      "description": "同一次供暖维修，物业说只剩7户，维修公司说完成92%，回访却有11户仍冷。三张纸都没撒谎，却不能写成同一个答案。"
+    },
+    "en": {
+      "title": "How Many Homes Were Still Cold?",
+      "description": "After the same heating repair, property management says 7 homes remain, the contractor reports 92% completion, and 11 residents still report cold rooms. None of the three sheets is false, yet they cannot become the same answer."
+    }
+  },
+  "/concept-fables/0322-provenance": {
+    "zh": {
+      "title": "照片背后的铅笔编号",
+      "description": "一张1986年的真实照片已经配好“第一批女司机”展签。布展前两天，背后的TR-4/12让顾夏把展签又抽了出来。"
+    },
+    "en": {
+      "title": "The Pencil Number on the Back of the Photograph",
+      "description": "An authentic 1986 photograph already has a label calling its subjects the city's first female bus drivers. Two days before installation, TR-4/12 on the back makes Gu Xia pull the label out again."
+    }
+  },
+  "/concept-fables/0322-metadata": {
+    "zh": {
+      "title": "蓝琴盒里的那张借用卡",
+      "description": "周六早上，周羽要在九点半前凑齐六套小提琴。蓝琴盒里的V-12还在，借用卡、三支弓和下午演出却指向不同答案。"
+    },
+    "en": {
+      "title": "The Loan Card in the Blue Violin Case",
+      "description": "On Saturday morning, Zhou Yu must assemble six violins by 9:30. V-12 is still in its blue case, but its loan card, three bows, and the afternoon performance point to different answers."
+    }
+  },
+  "/concept-fables/0322-archival-silence": {
+    "zh": {
+      "title": "托儿角里没有全名",
+      "description": "展板第二天就要送印，照片里拿钥匙的女人却没有全名。秦悦沿着那串钥匙查下去，找到的每条线索都只照亮她的一部分。"
+    },
+    "en": {
+      "title": "No Full Name in the Childcare Corner",
+      "description": "The exhibition panel goes to print the next day, but the woman holding the keys in two photographs has no full name. Qin Yue follows the keys, and every new trace illuminates only part of her role."
+    }
+  },
+  "/concept-fables/0411-double-entry-bookkeeping": {
+    "zh": {
+      "title": "到账的一万二",
+      "description": "四点前要确认奖金，16:15课程名额就到期；刚到账的设备贷款，让罗宁想把暂填的奖金表提前发出去。"
+    },
+    "en": {
+      "title": "The Twelve Thousand That Arrived",
+      "description": "The bonus pool must be confirmed before four o’clock, and Cen Ning’s course place expires at 16:15. A newly arrived equipment loan makes Luo Ning want to send the provisionally completed bonus sheet early."
+    }
+  },
+  "/concept-fables/0411-accrual-accounting": {
+    "zh": {
+      "title": "六月账上的六千欧元",
+      "description": "六月最后一天，6,000欧元刚刚到账，林澄却还在等沈妍答复：下个月能给她留多少工作日？"
+    },
+    "en": {
+      "title": "The €6,000 on June’s Books",
+      "description": "On the last day of June, €6,000 has just arrived, but Lin Cheng is still waiting for Shen Yan’s answer: how many workdays can the studio hold for her next month?"
+    }
+  },
+  "/concept-fables/0411-tax-incidence": {
+    "zh": {
+      "title": "下一场展会的价签",
+      "description": "新税开始的第一个周六，周岚把全天租借价从10改成14欧元。客人看过价签，收起了手机线。"
+    },
+    "en": {
+      "title": "The Price Tag for the Next Exhibition",
+      "description": "On the first Saturday under a new tax, Zhou Lan changes the all-day rental sign from €10 to €14. A customer reads it and puts his charging cable away."
+    }
+  },
+  "/concept-fables/0412-time-value-of-money": {
+    "zh": {
+      "title": "报价单上的两个日期",
+      "description": "压面机的报价可以今天付9,600欧元，也可以一年后付10,200；顾宁已经写好延期付款的回复，还没按下发送。"
+    },
+    "en": {
+      "title": "Two Dates on the Quote",
+      "description": "The dough sheeter can be paid for at €9,600 today or €10,200 one year from now. Gu Ning has already drafted a reply choosing deferred payment, but has not yet pressed Send."
+    }
+  },
+  "/concept-fables/0412-diversification": {
+    "zh": {
+      "title": "两张名字不同的基金页",
+      "description": "傍晚委员会要开会，李雯正在打印两家基金公司的资料。前十大持仓那两页刚出来，荧光笔先停在了同一个名字上。"
+    },
+    "en": {
+      "title": "Two Fund Pages with Different Names",
+      "description": "With an evening committee meeting approaching, Li Wen prints documents from two fund companies. As the top-holdings pages emerge, her highlighter stops at the same name on both."
+    }
+  },
+  "/concept-fables/0412-moral-hazard": {
+    "zh": {
+      "title": "软包还在第二层",
+      "description": "咖啡馆开始收椅子，周遥要把录音机带回工作室。隔壁柜子里有软包，手边也有一只空托特，离归还时间还有十多分钟。"
+    },
+    "en": {
+      "title": "The Padded Case Is Still on the Second Shelf",
+      "description": "As the café stacks its chairs, Zhou Yao needs to return the recorder. A padded case is in the cabinet next door, an empty tote is at hand, and he still has more than ten minutes."
+    }
+  },
+  "/concept-fables/0413-principal-agent-problem": {
+    "zh": {
+      "title": "周五之前要锁单",
+      "description": "周年市集还剩两周。林屿桌上的帆布样要在周五送回印刷间，第二只样品却最快周六才能到。"
+    },
+    "en": {
+      "title": "The Order Has to Be Locked by Friday",
+      "description": "The anniversary market is two weeks away. The canvas sample on Lin Yu’s desk must return to the print room on Friday; a second cannot arrive before Saturday."
+    }
+  },
+  "/concept-fables/0413-psychological-safety": {
+    "zh": {
+      "title": "黄色格先别清掉",
+      "description": "目录周五锁版，边桌的外箱高度却有78和82两个数。阿衡把两份文件留在便签里，设计师那页还按原来的数字往下做。"
+    },
+    "en": {
+      "title": "Leave the Yellow Cell Until It Is Checked",
+      "description": "The catalog locks on Friday, but the side-table carton has two heights: 78 and 82. A-Heng keeps both files in his notes while the designer continues using the earlier figure."
+    }
+  },
+  "/concept-fables/0413-dynamic-capabilities": {
+    "zh": {
+      "title": "十天里要跑三个城市",
+      "description": "展陈租赁公司用铝框和蓝箱完成三城快闪后，没有把模块菜单本身当成答案。最后留在现场的，不只是一套反复看新询价、做小试、再决定是否调整模块资源的组织安排。"
+    },
+    "en": {
+      "title": "Three Cities in Ten Days",
+      "description": "After an exhibition-rental company completes a three-city pop-up using aluminum frames and blue bins, it does not treat the module menu itself as the answer. What remains is an organizational arrangement for repeatedly reviewing new inquiries, running small tests, and then deciding whether modular resources should be changed again."
+    }
+  },
+  "/concept-fables/0414-segmentation-targeting-positioning": {
+    "zh": {
+      "title": "灰色背景布周二要去哪里",
+      "description": "肖像工作室周中只有一套便携灯和一个助理，却同时收到求职头像、创作棚拍和28人团队照三类询问。林乔必须决定有限的周中时间优先解决哪一种需要，并把承诺做成真能交付的服务。"
+    },
+    "en": {
+      "title": "Where Should the Gray Backdrop Go on Tuesday?",
+      "description": "A portrait studio has only one portable lighting kit and one assistant during the week, yet receives three different inquiries: a job-seeker headshot, a creative studio shoot, and individual staff headshots for a 28-person team. Lin Qiao must decide which need gets priority for limited weekday capacity and turn that choice into a service the studio can actually deliver."
+    }
+  },
+  "/concept-fables/0414-signaling": {
+    "zh": {
+      "title": "发票后面的六十天卡",
+      "description": "程墨怕重编的车轮过几周又得返店。两份报价差6欧元，一张发票后面还订着六十天服务卡。"
+    },
+    "en": {
+      "title": "The Sixty-Day Card Behind the Invoice",
+      "description": "Cheng Mo worries that a rebuilt wheel may send him back to the workshop a few weeks later. The quotes differ by €6, and one comes with a sixty-day service card."
+    }
+  },
+  "/concept-fables/0414-customer-lifetime-value": {
+    "zh": {
+      "title": "那十八欧元要不要花",
+      "description": "乔安要在下午发车前决定：客户包裹里寄两包试烘豆，是否还要加上那个礼盒？"
+    },
+    "en": {
+      "title": "Whether to Spend Those Eighteen Euros",
+      "description": "Joanne has until the afternoon shipment to decide: should the two sample-roast bags go out with an extra gift box?"
+    }
+  },
+  "/concept-fables/0415-information-triage": {
+    "zh": {
+      "title": "九点开门前的四条消息",
+      "description": "工作坊九点开场，前台只有两个人。侧门、报名、收据和标题的四条消息同时进来，陈杉把备用签到表放在桌下。"
+    },
+    "en": {
+      "title": "Four Messages Before the Doors Open at Nine",
+      "description": "The workshop opens at 9:00 with two front-desk staff. Four messages concern the side door, registrations, a receipt, and a title. Chen Shan keeps a backup sign-in sheet under the desk."
+    }
+  },
+  "/concept-fables/0415-record-version-control": {
+    "zh": {
+      "title": "周日该用哪一版",
+      "description": "周日读书会的前三位访客填完表，二维码却打不开。小罗回到共享盘，找到了v2、v3和昨晚打印的v4。"
+    },
+    "en": {
+      "title": "Which Version Applies on Sunday?",
+      "description": "The first three Sunday visitors complete their forms, but the QR code will not open. Xiao Luo returns to the shared drive and finds v2, v3, and the v4 she printed last night."
+    }
+  },
+  "/concept-fables/0415-coordination-cost": {
+    "zh": {
+      "title": "四点前要发出去",
+      "description": "培训资料必须在16:00前完成上传和校验，主讲人的头衔却在最后一刻变了。三个文件已经改好，苏宁仍要等绿色变更单上的六处签字齐全，才能提交。"
+    },
+    "en": {
+      "title": "It Has to Go Out Before Four",
+      "description": "The training files must finish uploading and validation before 16:00, but the speaker’s job title changes at the last minute. Su Ning has updated all three files; she still needs all six signatures on the green change form before she can submit them."
+    }
+  },
+  "/concept-fables/0416-inventory-turnover": {
+    "zh": {
+      "title": "架子上的刹车碟",
+      "description": "补货单改成两周一批后，米拉收到了三家维修店等货的消息，下一张采购单还没发出。"
+    },
+    "en": {
+      "title": "The Brake Rotors on the Shelf",
+      "description": "After switching to deliveries every two weeks, Mira hears that three repair shops are waiting for stock. The next purchase order is still unsent."
+    }
+  },
+  "/concept-fables/0416-bullwhip-effect": {
+    "zh": {
+      "title": "四个滤芯挤上周转架",
+      "description": "A型滤芯一周只多卖了四个，下一周却送来二十八个。许岑把四个放上临时周转架，随后沿着补货规则追出这张订单是怎么来的。"
+    },
+    "en": {
+      "title": "Four Filter Cartridges Spill onto the Overflow Rack",
+      "description": "Sales of Type A water-filter cartridges rise by only four units for one week, yet the next delivery contains twenty-eight. Xu Cen puts four on the temporary overflow rack and traces the replenishment rule that produced the order."
+    }
+  },
+  "/concept-fables/0416-price-discrimination": {
+    "zh": {
+      "title": "同一张周六通行证",
+      "description": "前台等着印价牌：同一张周六通行证，要继续统一10欧元，还是改成标准12、学生7欧元？"
+    },
+    "en": {
+      "title": "The Same Saturday Pass",
+      "description": "The front desk is waiting to print the sign: should the same Saturday pass stay at €10 for everyone, or become €12 standard and €7 for students?"
+    }
+  },
+  "/concept-fables/0417-community-of-practice": {
+    "zh": {
+      "title": "那支偶尔失声的单簧管",
+      "description": "一支学生单簧管第二次送回维修室：静态检查几乎正常，低音却偶尔发不出。米娅拿着漏气灯，第一次跟着老技师尝试重现这个具体问题。"
+    },
+    "en": {
+      "title": "The Clarinet That Sometimes Lost Its Low Note",
+      "description": "A student clarinet returns to the repair room for a second time: the static check looks almost normal, but a low note still sometimes fails. Holding the leak light, Mia joins a senior technician in trying to reproduce this particular problem for the first time."
+    }
+  },
+  "/concept-fables/0417-role-clarity": {
+    "zh": {
+      "title": "黄色托盘里的四十九欧元",
+      "description": "下午三点前，退货批次要交财务。齐安已经把一件49欧元床品核完，却卡在“谁先点批准、谁先收货”这一步。"
+    },
+    "en": {
+      "title": "The €49 Item in the Yellow Returns Tray",
+      "description": "The returns batch must go to finance before 15:00. Qi An has already checked a €49 bedding return but gets stuck on one question: who clicks “approve” first, and who receives the item first?"
+    }
+  },
+  "/concept-fables/0417-adaptive-expertise": {
+    "zh": {
+      "title": "方框没掉下来",
+      "description": "四十块展示牌周一要交。新板和旧板一样厚，岑越按旧卡切的第一个方框却还连在测试片上，边缘也深了一圈。"
+    },
+    "en": {
+      "title": "The Square Would Not Drop Free",
+      "description": "Forty display panels are due on Monday. The new boards are as thick as the old ones, but the first square Cen Yue cuts with the old settings stays attached to the test strip, its edge darker than before."
+    }
+  },
+  "/concept-fables/0421-rule-of-law": {
+    "zh": {
+      "title": "四张桌子和一条1.8米通道",
+      "description": "周六的旧书募捐还差一张许可。林澄提交的四桌方案留下1.8米通道，许可员却要求按部门近期惯用的2.2米标准重画。"
+    },
+    "en": {
+      "title": "Four Tables and a 1.8-Meter Passage",
+      "description": "Saturday’s used-book fundraiser still needs a permit. Lin Cheng’s four-table plan leaves a 1.8-meter passage, but the permit officer asks her to redraw it for the department’s recent 2.2-meter practice."
+    }
+  },
+  "/concept-fables/0421-precedent": {
+    "zh": {
+      "title": "维修单背面的二十五欧元",
+      "description": "洗衣机已经修好，赵岚却拒付一根18欧元的泵口连接软管。她拿来上级法院旧判决，维修店则指出：她签过的授权不仅有金额上限，也写明了什么情况下这种耗材可直接更换。"
+    },
+    "en": {
+      "title": "The Twenty-Five-Euro Clause on the Back of the Repair Form",
+      "description": "The washing machine has been repaired, but Zhao Lan refuses to pay €18 for a pump-connection hose. She brings an earlier appellate-court judgment, while the repair shop points out that her signed authorization sets not only a price limit but also the conditions under which this kind of consumable may be replaced without a second quote."
+    }
+  },
+  "/concept-fables/0421-burden-of-proof": {
+    "zh": {
+      "title": "归还小票上的21:10",
+      "description": "陈禾因投影仪后侧支脚裂纹面临220欧元索赔。店方根据最后使用和次晨发现推断损坏发生在她租期内，但需要证明这一说法比租期外形成更可能，而非要求陈禾找出真相。"
+    },
+    "en": {
+      "title": "21:10 on the Return Receipt",
+      "description": "Chen He faces a €220 claim for a crack in the projector’s rear foot. The shop infers damage during her rental from last use and next-morning discovery, but must establish that account as more likely than formation outside the rental, rather than requiring her to discover the truth."
+    }
+  },
+  "/concept-fables/0511-natural-selection": {
+    "zh": {
+      "title": "下一代为什么不再各占一半",
+      "description": "一个确定性的虚构教学模型从两种可遗传植物类型各40株开始。模型直接给定较干环境下两型的繁殖贡献不同，再让全部可育种子成株，用来追踪自然选择如何跨代改变频率。"
+    },
+    "en": {
+      "title": "Why the Next Generation Is No Longer Half and Half",
+      "description": "A deterministic fictional teaching model begins with 40 plants of each of two heritable types. The model directly assigns different reproductive contributions to the two types under a drier environment, then makes every viable seed become an adult, so that students can trace how natural selection changes frequencies across generations."
+    }
+  },
+  "/concept-fables/0511-homeostasis": {
+    "zh": {
+      "title": "外界还冷，为什么响应已经减弱",
+      "description": "简化哺乳动物模型里，外界低温保持不变，核心体温偏差却从－1.2缩到－0.1。骨骼肌产热和皮肤小血管减少散热的响应从峰值下降，但仍高于扰动前基线。"
+    },
+    "en": {
+      "title": "Why Has the Response Weakened While It Is Still Cold Outside?",
+      "description": "In a simplified mammalian model, the cold external disturbance stays unchanged while the core-temperature deviation shrinks from −1.2 to −0.1. Skeletal-muscle heat production and the skin-vessel response that reduces heat loss fall from their peaks but remain above the pre-disturbance baseline."
+    }
+  },
+  "/concept-fables/0511-gene-environment-interaction": {
+    "zh": {
+      "title": "抽屉里的“+4厘米”",
+      "description": "孟乔原想把四个教学组合等权概括成“较暖平均+4 cm”。每格同样6盆重复，A从10到16、B从8到10；拆开后分别是+6和+2，说明统一平均会隐藏两种基因型不同的环境响应。"
+    },
+    "en": {
+      "title": "The “+4 cm” Sign in the Drawer",
+      "description": "Meng Qiao initially wants to summarize the four teaching combinations as “warmer conditions add an average of 4 cm.” Each cell has the same six replicate pots. A rises from 10 to 16 and B from 8 to 10; separating them gives +6 and +2, showing that the single average hides different environmental responses by the two genotypes."
+    }
+  },
+  "/concept-fables/0512-enzyme-catalysis": {
+    "zh": {
+      "title": "能结合底物，为什么还是几乎不出产物",
+      "description": "相同条件和等量酶下，E与E*都能结合底物，产物量却不同。技术员先检查这些读数能说明什么，再用独立教学模型追踪催化循环、活性位点和自由能门槛，避免把“可结合”直接当成机制定位。"
+    },
+    "en": {
+      "title": "It Can Bind the Substrate—So Why Does It Still Produce Almost No Product?",
+      "description": "Under matched conditions and equal enzyme amounts, both E and E* can bind substrate, yet their product amounts differ. The technician first checks what these readouts establish, then uses a separate teaching model to trace the catalytic cycle, active site, and free-energy barrier without treating detectable binding as a diagnosis of the mechanism."
+    }
+  },
+  "/concept-fables/0512-protein-structure-function": {
+    "zh": {
+      "title": "12号和47号为什么会一起碰到配体",
+      "description": "两个原创蛋白模型长度、数量和整体轮廓近似，却不能据此标成“功能相同”。编辑沿链图追踪12号和47号到三维口袋，并把它们与同一个指定配体的两个互补化学位置对上。"
+    },
+    "en": {
+      "title": "Why Do Positions 12 and 47 Both Contact the Ligand?",
+      "description": "Two original protein models have similar lengths, quantities, and overall outlines, but that is not enough to label their functions as identical. The editor traces positions 12 and 47 from the sequence into a three-dimensional pocket and aligns them with two complementary chemical positions on the same specified ligand."
+    }
+  },
+  "/concept-fables/0512-feedback-inhibition": {
+    "zh": {
+      "title": "同一批酶，为什么P多时反而慢",
+      "description": "虚构小试的排查演练中，P积累伴随入口E1变慢。周宁在模型里保持其他条件，只改变P水平，追踪同一批酶设定下的部分恢复，再把可逆影响、调节位点假设和库存变化分开，列出下一轮待验证比较。"
+    },
+    "en": {
+      "title": "Why Does the Same Batch of Enzyme Slow Down When P Is High?",
+      "description": "In a troubleshooting rehearsal for a fictional trial, P accumulation accompanies a slowdown at E1. Zhou Ning changes only P in a model with otherwise matched conditions, traces partial recovery for the same modeled enzyme batch, and separates a reversible effect, a regulatory-site hypothesis, and inventory changes before listing comparisons to verify next."
+    }
+  },
+  "/concept-fables/0521-ecosystem-services": {
+    "zh": {
+      "title": "花篱只开了两米",
+      "description": "苏岚原计划整条清掉花篱来扩大拖车转弯空间。她把清理推迟到果实初期可比较结果之后，并用同样开袋、触碰和时长的两种网袋处理，只让一组真正转移花粉；结果改变了她清多少，而不是让她宣称花篱贡献已经被测出。"
+    },
+    "en": {
+      "title": "A Two-Meter Gap in the Hedge",
+      "description": "Su Lan originally plans to clear the entire hedgerow to widen a trailer turning area. She postpones the decision until comparable early-fruit results are available and uses two bagged-flower treatments with the same opening, touching, and timing, with actual pollen transfer added only to one group. The result changes how much she clears without letting her claim that the hedgerow’s contribution has been measured."
+    }
+  },
+  "/concept-fables/0521-tragedy-of-the-commons": {
+    "zh": {
+      "title": "补水栏每天都是60升",
+      "description": "300 L共享水箱每天固定补60 L。以每天20:00为统一结算时点，六户连续三天实际各取12 L，总取72 L，账面水量240→228→216→204 L；随后六户遵守9 L试行额度七天，实际记录54 L/天，水量回到246 L。"
+    },
+    "en": {
+      "title": "The Refill Column Always Says 60 Liters",
+      "description": "A shared 300 L tank receives a fixed 60 L replenishment each day. Using 20:00 as the common accounting time, all six households actually take 12 L each for three consecutive days, for 72 L total, and the ledger falls 240→228→216→204 L. The six then comply with a 9 L trial allowance for seven days, recording 54 L/day and bringing the account back to 246 L."
+    }
+  },
+  "/concept-fables/0521-ecological-resilience": {
+    "zh": {
+      "title": "关掉压力以后",
+      "description": "岑雨要给一个定性草地教学模型设置默认恢复按钮。模型不计算真实百分比，而用明确状态转移规则表示覆盖、表土/水分保持和新生草本之间的反馈；同样把外部压力设为0，不同内部状态会得到不同的可能推演。"
+    },
+    "en": {
+      "title": "After the Pressure Is Turned Off",
+      "description": "Cen Yu needs to set the default recovery control for a qualitative grassland teaching model. The model does not calculate real percentages; instead, explicit state-transition rules represent feedback among vegetation cover, soil/water retention, and new plant establishment. Setting external pressure to 0 can produce different possible trajectories from different internal states."
+    }
+  },
+  "/concept-fables/0522-carrying-capacity": {
+    "zh": {
+      "title": "连续三次约90只，够不够写成上限",
+      "description": "湿地管理员要为下一季写栖息地计划，三次巡查都看到约90只水鸟。她必须分清观测N、特定资源条件下的K、人均净增长与总净增长，才能判断这条平线是否真与承载力有关。"
+    },
+    "en": {
+      "title": "Three Counts Near 90—Is That Enough to Call It the Limit?",
+      "description": "A wetland manager must write a habitat plan after three surveys each count about 90 birds. She has to separate observed N, K under a particular resource environment, per-capita net growth, and total net growth before deciding whether the flat record really says anything about carrying capacity."
+    }
+  },
+  "/concept-fables/0522-trophic-cascade": {
+    "zh": {
+      "title": "清洁单停在了三只网笼",
+      "description": "苗圃开放前，林岑想把展示网笼整理得更清爽。六笼先接受相同的标签清洁与开笼处理，再随机选三笼把蜘蛛由10只减到5只；五天后，食叶毛虫和叶面积损失同时升高，她因此停止继续移蜘蛛。"
+    },
+    "en": {
+      "title": "The Cleaning Checklist Stops at Three Cages",
+      "description": "Before the nursery opens, Lin Cen wants the display cages to look tidier. All six cages first receive the same label cleaning and cage-opening treatment, then three are randomly selected to reduce spiders from 10 to 5. Five days later, both leaf-eating caterpillar abundance and leaf-area loss are higher, so she stops removing more spiders."
+    }
+  },
+  "/concept-fables/0522-habitat-fragmentation": {
+    "zh": {
+      "title": "通道照样铺，花带换了位置",
+      "description": "社区花园的3 m宽无障碍通道必须保留，它会占用原先一条40 m长的连续花草连接段。孟岚没有把40 m误当道路宽度，而是把被挪走的花草面积重新安排成沿路连续花带，减少两侧花区之间的裸露移动距离。"
+    },
+    "en": {
+      "title": "The Path Still Gets Built; the Flower Strip Moves",
+      "description": "The community garden’s 3 m-wide accessible path must remain, and it will occupy a previously continuous 40 m-long flower-and-grass connection. Meng Lan does not confuse the 40 m length with road width. Instead, she rearranges the displaced habitat area into a continuous strip beside the path, reducing the exposed movement distance between the two flower areas."
+    }
+  },
+  "/concept-fables/0531-chemical-equilibrium": {
+    "zh": {
+      "title": "A和B几乎不再变化，反应是不是结束了",
+      "description": "虚构A⇌B模型从[A]=6、[B]=0开始，A下降、B上升并逐渐接近2:4。分析员把有限时间的近似平台与理论平衡值分开，再用正逆速率、理想化加A扰动和给定催化设置检查动态平衡。"
+    },
+    "en": {
+      "title": "A and B Hardly Change Anymore—Has the Reaction Ended?",
+      "description": "A fictional A⇌B model starts at [A]=6 and [B]=0. A falls and B rises, gradually approaching 2:4. The analyst separates a finite-time near-plateau from the theoretical equilibrium values, then checks dynamic equilibrium using forward and reverse rates, an idealized A perturbation, and a defined catalyst setting."
+    }
+  },
+  "/concept-fables/0531-activation-energy": {
+    "zh": {
+      "title": "产物更低，模拟为什么还是判得很慢",
+      "description": "虚构单步模型中，反应物能量0、产物−20 kJ/mol，原路径峰顶却在60。课程编辑在固定温度和其他条件下比较60与35两条路径，再把升温、催化、ΔH和Ea分开。"
+    },
+    "en": {
+      "title": "The Product Is Lower in Energy—So Why Is the Simulation Still Slow?",
+      "description": "In a fictional single-step model, the reactants are at 0 and the products at −20 kJ/mol, yet the original pathway peaks at 60. The course editor compares paths peaking at 60 and 35 under the same temperature and other conditions, then separates temperature, catalysis, ΔH, and Ea."
+    }
+  },
+  "/concept-fables/0531-stoichiometry": {
+    "zh": {
+      "title": "8克对32克，谁会先用完",
+      "description": "顾岚要确认一页反应题的答案能不能上线。按克数看，32克氧气似乎很多；但把两边都换成摩尔并按方程系数比较后，本题真正限制理论反应进度的一方反而是氧气。"
+    },
+    "en": {
+      "title": "8 Grams Versus 32 Grams: Which One Runs Out First?",
+      "description": "Gu Lan needs to approve the answer to a reaction problem. By mass, 32 grams of oxygen looks like a lot; but after converting both reactants to moles and comparing them through the equation coefficients, oxygen turns out to be the reactant that limits the theoretical reaction progress in this problem."
+    }
+  },
+  "/concept-fables/0532-plate-tectonics": {
+    "zh": {
+      "title": "两张相向图，火山链能照搬吗",
+      "description": "动画师程野发现两张相向运动的边界图被套用了同一个火山图层。她逐层查看岩石圈类型与相对运动后，海洋俯冲和大陆碰撞要求不同画面；同一示意框架中的箭头只能说明相对运动，不能替代材料条件。"
+    },
+    "en": {
+      "title": "Can a Volcanic Chain Be Copied Between Converging Diagrams?",
+      "description": "Animator Cheng Ye finds that the same volcanic layer has been applied to two boundary diagrams with converging arrows. After checking lithosphere type and relative motion layer by layer, oceanic subduction and continental collision require different visuals; arrows within the same schematic reference frame show relative motion but cannot replace material conditions."
+    }
+  },
+  "/concept-fables/0532-deep-time": {
+    "zh": {
+      "title": "深度号留在盒盖上",
+      "description": "采石场要把一层贝壳化石泥岩与另一钻孔做时间对照，单写深度号只能在本孔定位。梁秋用上下原地火山灰的独立年龄和地层顺序，把该层记录为大致介于约12.4与11.8 Ma之间，并保留两侧±0.1 Ma报告不确定度。"
+    },
+    "en": {
+      "title": "The Depth Label Stays on the Box",
+      "description": "A quarry needs to compare a shell-bearing mudstone layer with a second borehole. A depth label locates it only within the current core. Liang Qiu combines the stratigraphic order with independent ages from in-place ash layers above and below, recording the layer as lying approximately between about 12.4 and 11.8 Ma while preserving the reported ±0.1 Ma uncertainties on both sides."
+    }
+  },
+  "/concept-fables/0532-rock-cycle": {
+    "zh": {
+      "title": "一层松砂，离砂岩还差什么",
+      "description": "林汐的路线题已经给出一层沉积好的松散砂，她却直接把下一格写成砂岩；另一条线又把未熔融的石灰岩“受热”直接连到岩浆。补齐当前材料状态和条件后，两种错误被分开。"
+    },
+    "en": {
+      "title": "A Layer of Loose Sand—What Is Still Missing Before Sandstone?",
+      "description": "Lin Xi’s pathway exercise already gives her a deposited layer of loose sand, yet she connects it directly to sandstone. Another line sends unmelted limestone straight from “heating” to magma. Once she fills in the current material states and conditions, the two errors separate."
+    }
+  },
+  "/concept-fables/0533-conservation-of-energy": {
+    "zh": {
+      "title": "电池少了12焦耳，为什么只抬高了8焦耳",
+      "description": "虚拟升降模型里，电池化学账户下降12 J，负载—地球重力势能只增加8 J。沈禾通过扩大与缩小系统边界发现：完整系统还给定了电机/其他部件内能增加4 J，而电池自身的非化学内能在模型中设为不变。"
+    },
+    "en": {
+      "title": "The Battery Loses 12 Joules—So Why Does the Load Gain Only 8?",
+      "description": "In a virtual lifting model, the battery’s chemical-energy account falls by 12 J while the load–Earth gravitational potential energy rises by only 8 J. By expanding and shrinking the system boundary, Shen He finds that the full model also assigns a 4 J increase to the motor/other components’ internal energy, while the battery’s own nonchemical internal energy is defined as unchanged."
+    }
+  },
+  "/concept-fables/0533-entropy": {
+    "zh": {
+      "title": "余热管只画了一个方向",
+      "description": "面包房评估一段被动余热连接，分析把400 K与300 K两块巨大热体近似为理想热库，120 J相对其热容量很小。能量一出一入仍对称，但两端状态量变化相加为+0.10 J/K；反向若靠装置实现，必须扩大系统边界。"
+    },
+    "en": {
+      "title": "The Waste-Heat Pipe Gets Only One Arrow",
+      "description": "A bakery evaluates a passive waste-heat connection by approximating large bodies at 400 K and 300 K as ideal reservoirs, with 120 J small relative to their heat capacities. The energy outflow and inflow remain symmetric, but the two state changes sum to +0.10 J/K. If reverse transfer is accomplished with a device, the system boundary must be expanded."
+    }
+  },
+  "/concept-fables/0533-field-concept": {
+    "zh": {
+      "title": "三颗测试小球让顾言先去查批次标签",
+      "description": "静电偏转装置在P点的参考记录是向右约200 N/C。顾言保持源设置和P位置不变，用三个已知小电荷得到独立测力记录；三次F/q都约为+200 N/C，因此她先查探针批次，而没有把力变化直接解释成P点背景量变化。"
+    },
+    "en": {
+      "title": "Three Test Spheres Send Gu Yan to Check the Batch Labels First",
+      "description": "The reference record for point P in the electrostatic deflection device is about 200 N/C to the right. Gu Yan keeps the source setting and point P fixed and obtains independent force measurements using three small known charges. All three F/q values are about +200 N/C, so she checks probe batches first rather than interpreting the force changes directly as changes in the background quantity at P."
+    }
+  },
+  "/concept-fables/0541-invariance": {
+    "zh": {
+      "title": "按多少步也到不了(2,2)，三个按钮哪里限制了路线",
+      "description": "关卡从(1,2)出发，只允许左边+2、右边+2或交换两项。测试失败本身不是证明；乔宁改为对任意状态(x,y)逐一检查三种合法操作，得到能覆盖任意有限按钮序列的奇偶限制。"
+    },
+    "en": {
+      "title": "Why Can No Number of Legal Moves Reach (2,2)?",
+      "description": "The level starts at (1,2) and permits only “left +2,” “right +2,” or swapping the two entries. Failed testing is not a proof. Qiao Ning instead checks all three legal operations for an arbitrary state (x,y), obtaining a parity restriction that covers every finite button sequence."
+    }
+  },
+  "/concept-fables/0541-proof-by-contradiction": {
+    "zh": {
+      "title": "数轴上能不能放一个“最小正刻度”",
+      "description": "陆弦要判断全部正有理数中是否存在最小元素。候选1/10、1/20、1/40不断向0靠近，却不能处理全体；她转而准确假设“存在一个最小正有理数r”，再从同一论域构造r/2。"
+    },
+    "en": {
+      "title": "Can a Number Line Display a “Smallest Positive Tick”?",
+      "description": "Lu Xian needs to decide whether the positive rational numbers contain a smallest element. Candidates 1/10, 1/20, and 1/40 move closer and closer to 0 but cannot settle the entire set. She instead assumes precisely that a smallest positive rational r exists and constructs r/2 within the same domain."
+    }
+  },
+  "/concept-fables/0541-mathematical-induction": {
+    "zh": {
+      "title": "第五张截图",
+      "description": "许澄要给自动连点功能写一条对任意规模成立的规则保证。截图只能检验有限规模的实现；她把抽象规则单独拿出来，从n=1起证明任意k的正确结构都能在不改删旧点线的情况下推进到k+1。"
+    },
+    "en": {
+      "title": "The Fifth Screenshot",
+      "description": "Xu Cheng needs to write a rule guarantee for an automatic point-connection feature that holds at any scale. Screenshots can test only finitely many sizes of the implementation; she separates out the abstract rule and proves from n=1 that any correct structure at an arbitrary k can advance to k+1 without changing or deleting existing points or edges."
+    }
+  },
+  "/concept-fables/0542-sampling-bias": {
+    "zh": {
+      "title": "80%的便签被翻到了背面",
+      "description": "健身房经理用App问卷决定是否提前晚课，100名App会员全部回答且80%支持。她随后发现另100名前台/电话会员从未见到问卷，并通过补访得到其中20人支持；完整200人支持率因此是50%，原便利渠道系统性偏向了更支持调整的一组。"
+    },
+    "en": {
+      "title": "The 80% Note Gets Turned Over",
+      "description": "A gym manager uses an app survey to decide whether to move an evening class earlier. All 100 app members respond and 80% support the change. She then discovers another 100 front-desk/phone members who never saw the survey and follows up with them, finding 20 supporters. The full 200-member support rate is therefore 50%, showing that the convenience channel systematically overrepresented the more supportive group."
+    }
+  },
+  "/concept-fables/0542-regression-to-the-mean": {
+    "zh": {
+      "title": "红签下的第二行数字",
+      "description": "三只称重传感器第一次都读到96 g，被按规则贴红签。无调整复测得到100、104、100 g，实际均值约101.33 g；林琪再用稳定值100 g加独立等概率−4/0/+4 g波动的有限模型核对，确认极端值筛选本身就会造成平均回摆，不能把这次复测改善当成维修效果。"
+    },
+    "en": {
+      "title": "The Second Row beneath the Red Tags",
+      "description": "Three weighing sensors all read 96 g on the first check and are red-tagged under the inspection rule. An unadjusted retest gives 100, 104, and 100 g, with an actual mean of about 101.33 g. Lin Qi then checks a finite model with a stable value of 100 g and independent, equally likely −4/0/+4 g fluctuations, confirming that selection by an extreme first value can itself create average movement back toward the center and that the retest improvement cannot be treated as a repair effect."
+    }
+  },
+  "/concept-fables/0542-bayesian-updating": {
+    "zh": {
+      "title": "蓝贴旁的两本记录",
+      "description": "无编号模块只可能来自A或B两批；对眼前同型号返修件，当天记录给A/B先验1/4与3/4。蓝贴在A/B中的条件概率为1/2与1/6，更新后两边各1/2，于是林珂改变查找策略，但并未确认来源。"
+    },
+    "en": {
+      "title": "Two Logs Beside a Blue Sticker",
+      "description": "An unnumbered module can come only from batches A or B. For the same-model returns in question, the day’s records assign priors of 1/4 and 3/4. The blue sticker has conditional probabilities 1/2 and 1/6 under A and B, so the updated probabilities become 1/2 each. Lin Ke changes her search strategy without confirming the source."
+    }
+  },
+  "/concept-fables/0611-mental-models": {
+    "zh": {
+      "title": "6:30还在手机上",
+      "description": "叶宁要赶早班火车，把晨间供暖从7:00拖到6:30；旧界面立即用“下一次6:30”反馈草稿状态，使她按已生效来安排行程。实际设备仍执行7:00。她后来看到草稿计划、住宅当前计划与下发确认被分开呈现，预测才随界面反馈一起改变。"
+    },
+    "en": {
+      "title": "6:30 Is Still on the Phone",
+      "description": "Ye Ning needs to catch an early train and drags the morning heating schedule from 7:00 to 6:30. The old interface immediately shows “Next: 6:30” for the draft state, so she plans her morning as if the change has already taken effect. The device still follows 7:00. Later, when the draft schedule, current home schedule, and deployment confirmation are shown separately, her prediction changes with the visible system feedback."
+    }
+  },
+  "/concept-fables/0611-file-hierarchy": {
+    "zh": {
+      "title": "周五的收藏",
+      "description": "设计工作室同时维护两个活动项目，两边都合法地有final.pdf。叶桐用完整父子路径完成河畔节印刷交付；客户确认项目完成后，她手动把项目目录从Active移入Archive，文件仍在但旧路径失效。业务资产号帮助团队更新位置记录，却不被当作文件系统永久身份。"
+    },
+    "en": {
+      "title": "Friday’s Bookmark",
+      "description": "A design studio maintains two event projects, and both legitimately contain a file named final.pdf. Ye Tong uses the full parent-child path to complete the RiverFest print delivery. After the client confirms the project is finished, she manually moves the project directory from Active to Archive; the file remains, but the old path stops working. A business asset number helps the team update its location record, but it is not treated as a permanent file-system identity."
+    }
+  },
+  "/concept-fables/0611-least-privilege": {
+    "zh": {
+      "title": "最后一张照片在17:54传完",
+      "description": "周末摄影师需要在48小时内持续上传并替换自己提交的活动照片。团队先在测试环境比较同一越界请求在整站管理员与窄角色下的服务端结果，再正式只发放活动上传区的读取、上传和替换本人文件权限；周日18:00权限完全撤回。"
+    },
+    "en": {
+      "title": "The Last Photo Finishes Uploading at 17:54",
+      "description": "A weekend photographer needs to keep uploading and replacing his own event photos during a 48-hour window. The team first compares the server-side result of the same out-of-scope request under a site-wide administrator role and a narrow role in a test environment. The production account is then granted only read, upload, and own-file replacement access within the event upload area, and all access is revoked at 18:00 Sunday."
+    }
+  },
+  "/concept-fables/0612-database-normalization": {
+    "zh": {
+      "title": "今天送河路，旧签收单还写着松街",
+      "description": "器材租赁店要给老客户周遥送一套灯架。旧单表把客户当前联系方式和每笔历史租单的送达地址混在同一组字段里；沈禾用原始签收凭证核对历史快照，再把Customer与Rental按不同事实拆开并通过键关联。今天订单取当前资料，旧订单保持原地址。"
+    },
+    "en": {
+      "title": "Today’s Delivery Goes to River Road; the Old Receipt Still Says Pine Street",
+      "description": "An equipment-rental shop needs to deliver a lighting rig to returning customer Zhou Yao. The old single table mixes the customer’s current contact information with the delivery address of each historical rental. Shen He checks the historical snapshot against the original signed receipt, then separates Customer and Rental facts and reconnects them with keys. Today’s order uses the current information, while the old order preserves its original address."
+    }
+  },
+  "/concept-fables/0612-distributed-consensus": {
+    "zh": {
+      "title": "页面超时以后，梅先查预约结果",
+      "description": "固定五节点、非拜占庭的预约服务发生网络分裂。任期8领导只把梅的14:00请求持久写到A、B两台便失联；任期9新领导C在多数节点提交另一条14:00预约命令并应用后才返回成功。后续D在任期10凭较新日志获三票，当旧任期42复制到多数时仍不直接提交，而由当前任期43多数提交后带动前缀提交。"
+    },
+    "en": {
+      "title": "After the Page Times Out, Mei Checks the Booking Result",
+      "description": "A fixed five-node, non-Byzantine booking service experiences a network partition. The term-8 leader persistently writes Mei’s 14:00 request to only A and B before losing contact. In term 9, new leader C commits another 14:00 booking command on a majority and applies it before returning success. Later, D wins term 10 with three votes because of its more up-to-date log; even after old-term entry 42 is replicated to a majority, it is not committed merely by counting copies, but becomes part of the committed prefix after current-term entry 43 is replicated to a majority."
+    }
+  },
+  "/concept-fables/0612-defense-in-depth": {
+    "zh": {
+      "title": "恢复名单上的三个订单号",
+      "description": "配送平台在隔离演练环境中预设一个客服会话已失守。网络分区阻断财务和备份网络，应用角色限制到指定测试队列；队列内仍有三笔测试订单被改，审计日志让监测锁定订单集合，恢复人员只还原这三笔，另一个正常演练订单保留有效修改。"
+    },
+    "en": {
+      "title": "Three Order IDs on the Recovery List",
+      "description": "In an isolated exercise environment, a delivery platform assumes that one customer-service session is already compromised. Network segmentation blocks the finance and backup networks, while the application role limits actions to a dedicated test queue. Three permitted test orders are still changed. Audit logs let monitoring identify that affected set, and recovery restores only those three while preserving the valid address B on the separate normal exercise order N-17."
+    }
+  },
+  "/concept-fables/0613-modularity": {
+    "zh": {
+      "title": "蓝字典的封面去了哪里",
+      "description": "二手书平台最初让商品页、聊天预览和导出工具直接使用供应商URL。供应商改变链接规则时，蓝字典的三个调用方都要修改；团队随后统一存mediaId，并通过get(mediaId)获取当前可用URL。第二次迁移在mediaId映射、对象内容、访问语义和接口契约保持不变时，只需改媒体组件内部。"
+    },
+    "en": {
+      "title": "Where Did the Blue Dictionary’s Cover Go?",
+      "description": "A secondhand-book platform initially lets the product page, chat preview, and export tool use storage-provider URLs directly. When the provider changes its link rules, all three callers for the blue dictionary must be changed. The team then stores mediaId consistently and obtains a currently usable URL through get(mediaId). During the second migration, only the media component needs to change because the mediaId mapping, object content, access semantics, and interface contract remain unchanged."
+    }
+  },
+  "/concept-fables/0613-software-testing": {
+    "zh": {
+      "title": "优惠入口等到€21.60才打开",
+      "description": "咖啡店上线九折优惠前，3杯×€8在无税、运费或其他附加费的测试规则下应为€21.60，页面却两次稳定显示€23.20。安澜保留两张失败订单，开发者随后调试出“只给一杯打折”的实现问题；修复后原用例确认通过，再检查同类边界与原本正确路径。"
+    },
+    "en": {
+      "title": "The Discount Stays Closed Until the Total Reaches €21.60",
+      "description": "Before a coffee shop releases a 10%-off promotion, three €8 drinks should total €21.60 under a test rule with no tax, delivery charge, or other fee, but the page repeatedly shows €23.20. An Lan keeps two failed orders. Only afterward does the developer debug the implementation and locate a one-item-only discount. Once fixed, the original case passes, then the team checks the two-item boundary and previously correct one-item and no-discount paths."
+    }
+  },
+  "/concept-fables/0613-computational-complexity": {
+    "zh": {
+      "title": "17:00以前的400张报销单",
+      "description": "财务团队17:00前要完成重复发票初筛。配对法对100、200、400条做4,950、19,900、79,800次比较，更快电脑只改单步常数。哈希索引在键长有界、查找期望成本固定、插入摊还成本固定的假设下按记录处理；同键记录仍交人工复核。"
+    },
+    "en": {
+      "title": "400 Expense Records before 17:00",
+      "description": "The finance team needs invoice screening before 17:00. The pairwise method uses 4,950, 19,900, and 79,800 comparisons for 100, 200, and 400 records; faster hardware changes only per-step constants. A hash index processes records under bounded-key, fixed expected lookup, and fixed amortized insertion assumptions. Matching keys still go to human reviewers."
+    }
+  },
+  "/concept-fables/0711-mass-balance": {
+    "zh": {
+      "title": "罐车等着一枚放行章",
+      "description": "清洗剂试产结束后，550 kg液体已离开过程边界进入待放行罐车，30 kg湿滤饼也在11:50称重后离开边界。韩宁把8:00–12:00内600 kg输入和系统库存200→220 kg放在同一湿质量基准核算，得到600 − 580 = 20 kg，正好对应库存增加20 kg；产品仍等待独立质量检验。"
+    },
+    "en": {
+      "title": "The Tanker Waits for a Release Stamp",
+      "description": "After the cleaning-agent trial, 550 kg of liquid has crossed the process boundary into a tanker that is still awaiting release, while 30 kg of wet filter cake left the boundary after being weighed at 11:50. Han Ning places the 600 kg input from 8:00–12:00 and the system inventory change from 200 to 220 kg on the same wet-mass basis, giving 600 − 580 = 20 kg, exactly matching the 20 kg inventory increase. The product still awaits an independent quality test."
+    }
+  },
+  "/concept-fables/0711-residence-time": {
+    "zh": {
+      "title": "计算器写着6分钟，收集瓶一直排到20分钟",
+      "description": "1200 L调节罐在200 L/min一次通过清水条件下，名义空间时间V/Q为6 min。毛宁瞬时加入100 g惰性示踪物，把0–20 min出口连续分成五段收集，并在20 min后确认信号回到仪器背景范围。五段教学回收量用代表时刻近似加权得5.95 min，但并不表示每份流体都停6分钟。"
+    },
+    "en": {
+      "title": "The Calculator Says 6 Minutes, but the Collection Bottles Continue to 20",
+      "description": "For a 1200 L conditioning tank under once-through water flow at 200 L/min, the nominal space time V/Q is 6 min. Mao Ning injects a 100 g inert tracer pulse, divides the 0–20 min outlet continuously into five collection intervals, and after 20 min continues sampling until the signal returns to the instrument’s background range. The five simplified teaching recoveries give an approximate mass-weighted time of 5.95 min using representative interval times, but that does not mean every fluid element remains for 6 min."
+    }
+  },
+  "/concept-fables/0711-process-control": {
+    "zh": {
+      "title": "午饭前的那排空瓶",
+      "description": "果酱工坊过去用固定蒸汽位置就能稳定灌装。冷库原料进入后，出口工作温度下降，林澄根据测量结果加热；等原料逐渐回温，同样的加热又开始过多，她只好再收回蒸汽。故事入口是一个简单闭环：测结果、和目标比较、再改变可控输入。"
+    },
+    "en": {
+      "title": "The Empty Bottles Before Lunch",
+      "description": "A jam workshop had been able to keep filling stable with a fixed steam setting. When chilled raw material entered, the outlet working temperature fell, so Lin Cheng increased heating in response to the measurement. As the material gradually warmed, the same heating became excessive and she had to reduce the steam again. The story uses one simple loop: measure the result, compare it with the target, then change a controllable input."
+    }
+  },
+  "/concept-fables/0712-treatment-train": {
+    "zh": {
+      "title": "没拆开的第二支滤芯",
+      "description": "社区维修站雨后要洗二十多辆满是砂泥的单车，原本够用的细滤芯很快堵住。季岚把这批预先干擦过明显链条油、且未使用乳化型除油剂的清洗回水，依次经过沉砂、自由油分离和细滤；前段先拿走粗砂与浮油，让新的后段滤芯承受更小负荷，但增加了清泥、收油和占地。"
+    },
+    "en": {
+      "title": "The Second Spare Filter",
+      "description": "After rain, a community repair station needs to wash more than twenty bicycles covered in grit. The fine filter that had normally been sufficient clogs quickly. Ji Lan routes this wash water—after visible chain oil has already been wiped off and without emulsifying degreaser—through grit settling, free-oil separation, and then fine filtration. The upstream stages remove coarse solids and floating free oil before they reach the new downstream filter, at the cost of more space, sludge removal, oil collection, and maintenance."
+    }
+  },
+  "/concept-fables/0712-source-control": {
+    "zh": {
+      "title": "越修越高的烟囱",
+      "description": "窑场每收到一次烟尘投诉就把烟囱加高，直到落在远处水库上的黑灰又被全城喝了回来。"
+    },
+    "en": {
+      "title": "The Chimney That Kept Growing",
+      "description": "A kiln yard answers every smoke complaint by raising its chimney, until soot falling on a distant reservoir returns in the whole city's drinking water."
+    }
+  },
+  "/concept-fables/0712-life-cycle-assessment": {
+    "zh": {
+      "title": "杯子在装茶以前",
+      "description": "客栈老板想选出最清洁的茶杯，却发现一只杯子的故事早在装茶之前开始，也不会在客人喝完时结束。"
+    },
+    "en": {
+      "title": "Before the Cup Held Tea",
+      "description": "An innkeeper seeks the cleanest cup for serving tea and discovers that a cup's story begins before the tea and continues after the guest leaves."
+    }
+  },
+  "/concept-fables/0713-grid-balancing": {
+    "zh": {
+      "title": "电量够用，怎么又买起了电",
+      "description": "大学开放日原计划的全天电量仍有余量，但厚云提前到来、体育馆又提前启动设备，使某一时刻的本地功率不足。公共电网立即承担净差额，电池控制系统自动快速放电；米娅随后延后一组可调负荷，避免原计划启动造成的额外外购并保留电池余量。"
+    },
+    "en": {
+      "title": "Enough Energy, but Rising Grid Imports",
+      "description": "The university open-day plan still has enough energy over the whole day, but thick cloud arrives early just as the arena starts equipment tests, leaving local instantaneous power insufficient. The public grid immediately supplies the net difference and the battery control system rapidly increases discharge. Mia then delays one flexible load to avoid the extra imports its scheduled start would require and preserve battery energy for later in the evening."
+    }
+  },
+  "/concept-fables/0713-energy-efficiency": {
+    "zh": {
+      "title": "那条不能上楼的毛巾",
+      "description": "酒店要决定是否再换两台烘干机。新机器第一次只用了4.8 kWh，但毛巾仍有潮气，这次结果不能用来比较效率。苏芮随后用干重相同的12 kg毛巾、相近脱水后含水状态和同一最终干燥要求重新测试：旧机约9 kWh，新机约6 kWh，但新机每批更慢。"
+    },
+    "en": {
+      "title": "The Towel That Could Not Go Upstairs",
+      "description": "The hotel must decide whether to replace two more dryers. The new machine uses only 4.8 kWh in its first run, but the towels are still damp, so that result cannot be used to compare efficiency. Su Rui then repeats the test with 12 kg dry weight of the same towels, similar post-spin moisture conditions, and the same final dryness requirement: the old dryer uses about 9 kWh and the new one about 6 kWh, but the new machine takes longer per load."
+    }
+  },
+  "/concept-fables/0713-energy-storage": {
+    "zh": {
+      "title": "装满水却点不亮灯的水库",
+      "description": "岛上的高水库存够了一夜的风，却因一根太窄的水管，没能撑过庆典开始的那一刻。"
+    },
+    "en": {
+      "title": "The Full Reservoir That Could Not Light the Town",
+      "description": "An island reservoir stores a whole night of wind, yet one narrow pipe cannot carry the town through the instant its festival begins."
+    }
+  },
+  "/concept-fables/0714-feedback-control": {
+    "zh": {
+      "title": "等那只黄点纸箱",
+      "description": "礼盒包装线上，贴标头与检查相机相隔几个箱位。乔薇第一次右调后，下一张画面仍来自调整前已经贴好的纸箱，她又右调一次；等两次调整对应的纸箱陆续到达相机，标签从接近中央变成偏右。她随后给调整后的第一只纸箱贴黄点，等它到达相机再决定下一步。"
+    },
+    "en": {
+      "title": "Wait for the Yellow-Dot Box",
+      "description": "On a gift-box packaging line, the labeling head and inspection camera are separated by several box positions. After Qiao Wei makes the first adjustment to the right, the next camera image still shows a box labeled before that adjustment, so she adjusts right once more. When the boxes corresponding to the two adjustments later reach the camera, the label moves from near the center to too far right. She then marks the first box after an adjustment with a yellow dot and waits until that box reaches the camera before deciding what to do next."
+    }
+  },
+  "/concept-fables/0714-signal-to-noise-ratio": {
+    "zh": {
+      "title": "耳机更响，句尾还是听不清",
+      "description": "陶艺馆要在闭馆前录好一段访谈，抽风设备不能停。阿岚先提高同一支麦克风的录音输入增益，人声和风扇声一起变大，却没有明显更容易辨认。她把麦克风移近师傅，让目标人声在进入录音设备之前相对更强，再重新设好输入增益完成录音。"
+    },
+    "en": {
+      "title": "Louder Headphones, the Same Lost Words",
+      "description": "A pottery studio needs to finish recording an interview before closing, while the ventilation equipment cannot be turned off. A Lan first increases the recording input gain on the same microphone; the voice and fan noise both become louder, without becoming noticeably easier to distinguish. She then moves the microphone closer to the craftsperson so that the target voice is relatively stronger before entering the recorder, and sets an appropriate input gain before completing the recording."
+    }
+  },
+  "/concept-fables/0714-fail-safe-design": {
+    "zh": {
+      "title": "断气以后落下的刹车",
+      "description": "矿场升降笼原本靠气压推住刹车，一根管子破裂后，众人才发现故障发生时机器会选择哪一边。"
+    },
+    "en": {
+      "title": "The Brake That Fell When the Air Was Lost",
+      "description": "A mine cage relies on air pressure to apply its brake, until a ruptured pipe reveals which way the machine chooses when it fails."
+    }
+  },
+  "/concept-fables/0715-stress-strain": {
+    "zh": {
+      "title": "最不肯弯的车轴",
+      "description": "车匠为庆典挑中一根受压时最直的车轴，却在第一处深坑前发现，直、强与不易断并不是一回事。"
+    },
+    "en": {
+      "title": "The Axle That Refused to Bend",
+      "description": "A cartwright chooses the axle that stays straightest under load, then learns at the first deep rut that stiffness, strength, and resistance to breaking are not the same."
+    }
+  },
+  "/concept-fables/0715-fatigue": {
+    "zh": {
+      "title": "从未超载的吊钩",
+      "description": "码头吊钩每次都只提额定重量的一半，却在第八千多次起吊时，从一道旧划痕处突然裂开。"
+    },
+    "en": {
+      "title": "The Hook That Was Never Overloaded",
+      "description": "A dock hook lifts only half its rated load each time, yet cracks from an old scratch after more than eight thousand lifts."
+    }
+  },
+  "/concept-fables/0715-engineering-tolerance": {
+    "zh": {
+      "title": "每一块都合格的拱门",
+      "description": "二十家石坊交来的拱石全都通过木尺检验，合在一起时，最后一块却怎么也放不进去。"
+    },
+    "en": {
+      "title": "The Arch Whose Every Stone Passed",
+      "description": "Every arch stone from twenty workshops passes its wooden gauge, yet the final stone will not fit when the pieces meet."
+    }
+  },
+  "/concept-fables/0716-stability-and-control": {
+    "zh": {
+      "title": "最稳的船错过了港口",
+      "description": "船主为了让渡船再也不倾斜，不断加深龙骨、加宽船身，最后它顶住了侧风，也拒绝听从舵手。"
+    },
+    "en": {
+      "title": "The Steadiest Ship Missed the Harbour",
+      "description": "An owner deepens a ferry's keel and widens its hull until it resists every roll, then finds that it also resists its helmsman."
+    }
+  },
+  "/concept-fables/0716-drag": {
+    "zh": {
+      "title": "赢了赛船的货船",
+      "description": "一艘新货船在空载试航中快过全港，却为了送完同一批粮食，多跑了两趟。"
+    },
+    "en": {
+      "title": "The Cargo Boat That Won the Race",
+      "description": "A new cargo boat outruns every vessel in the harbour while empty, then needs two extra voyages to deliver the same grain."
+    }
+  },
+  "/concept-fables/0716-redundancy": {
+    "zh": {
+      "title": "两台一起沉默的水泵",
+      "description": "渡船装了两台排水泵，船主以为漏水不再可怕，却没有注意它们共用同一块低处配电板。"
+    },
+    "en": {
+      "title": "The Two Pumps That Fell Silent Together",
+      "description": "A ferry owner installs two bilge pumps and believes leaks are no longer dangerous, overlooking the low-mounted switchboard they share."
+    }
+  },
+  "/concept-fables/0721-thermal-processing": {
+    "zh": {
+      "title": "最慢热的那一罐",
+      "description": "罐头房的蒸汽表已经越过目标刻线，仓库里却还是鼓起了一排罐盖，因为最里面那罐从未热透。"
+    },
+    "en": {
+      "title": "The Jar That Heated Last",
+      "description": "The cannery's steam gauge passes its target mark, yet a row of lids later swells because the innermost jar never heated through."
+    }
+  },
+  "/concept-fables/0721-water-activity": {
+    "zh": {
+      "title": "看起来更干的那一盒",
+      "description": "点心商只按总水分挑选远行货物，外表较干的糕先长了霉，亮晶晶的果酱却仍安稳地封在罐里。"
+    },
+    "en": {
+      "title": "The Box That Looked Drier",
+      "description": "A confectioner chooses travel goods by total moisture alone; the drier-looking cake moulds while glossy preserve remains sound in its jar."
+    }
+  },
+  "/concept-fables/0721-haccp": {
+    "zh": {
+      "title": "最后一口尝不出的危险",
+      "description": "肉饼坊把安全交给出炉后的试吃者，直到一炉味道正常的饼让春集上的客人接连病倒。"
+    },
+    "en": {
+      "title": "The Danger the Final Taste Could Not Find",
+      "description": "A pie shop entrusts safety to a final taster, until normal-tasting pies from one oven make customers at the spring fair ill."
+    }
+  },
+  "/concept-fables/0722-structure-property-relationship": {
+    "zh": {
+      "title": "同一张配方的两块玻璃",
+      "description": "两家玻璃坊照着同一张配方烧窗，成品看起来毫无区别，第一场寒雨却只击碎了其中一边。"
+    },
+    "en": {
+      "title": "Two Panes from the Same Recipe",
+      "description": "Two glassworks follow the same recipe for a winter garden; the panes look identical until the first cold rain breaks only one side."
+    }
+  },
+  "/concept-fables/0722-anisotropy": {
+    "zh": {
+      "title": "只朝一个方向长大的门",
+      "description": "木匠用最结实的长板做仓门，雨季里它没有变长多少，却横着挤死了整副门框。"
+    },
+    "en": {
+      "title": "The Door That Grew in One Direction",
+      "description": "A carpenter builds a storehouse door from his strongest long boards; in the wet season they barely lengthen, yet swell sideways until the frame is trapped."
+    }
+  },
+  "/concept-fables/0722-design-for-circularity": {
+    "zh": {
+      "title": "写着“可回收”的灯",
+      "description": "街灯厂把“可回收”刻在每只灯壳上，一个坏掉的小开关却让整盏灯只能进入废料场。"
+    },
+    "en": {
+      "title": "The Lamp Marked Recyclable",
+      "description": "A street-lamp maker stamps Recyclable on every casing, yet one failed switch sends the whole lamp to the waste yard."
+    }
+  },
+  "/concept-fables/0723-fibre-structure-property": {
+    "zh": {
+      "title": "最厚的雨衣",
+      "description": "邮队为山路挑了最厚的羊毛雨衣，第一场长雨后，它吸饱了水，也把穿衣的人拖得最慢。"
+    },
+    "en": {
+      "title": "The Thickest Raincoat",
+      "description": "Mountain couriers choose the thickest wool raincoat; after the first long storm it holds the most water and slows its wearer most."
+    }
+  },
+  "/concept-fables/0723-grain-and-pattern-alignment": {
+    "zh": {
+      "title": "省下一尺布的制服",
+      "description": "裁衣坊为了省下昂贵格纹布，把袖片和前襟转着塞进空处，制服穿上身后也跟着转了起来。"
+    },
+    "en": {
+      "title": "The Uniform That Saved One Yard of Cloth",
+      "description": "To save costly checked cloth, a workshop rotates sleeves and fronts into empty spaces; once worn, the uniforms begin twisting too."
+    }
+  },
+  "/concept-fables/0723-supply-chain-traceability": {
+    "zh": {
+      "title": "没有姓氏的棉线",
+      "description": "一批校服被发现使用禁用染料，店主手里证书齐全，却说不出问题棉线进了哪一件衣服。"
+    },
+    "en": {
+      "title": "Cotton Thread Without a Family Name",
+      "description": "A batch of school uniforms contains a banned dye; the merchant has certificates for every supplier but cannot say which garments received the affected thread."
+    }
+  },
+  "/concept-fables/0724-cut-off-grade": {
+    "zh": {
+      "title": "昨天的废石",
+      "description": "矿长把铜含量低于红线的石头称作废物，几年后，新工艺却让同一堆石头重新排在选矿厂门口。"
+    },
+    "en": {
+      "title": "Yesterday's Waste Rock",
+      "description": "A mine manager calls every rock below a red copper line waste; years later, a new process sends the same pile back to the mill gate."
+    }
+  },
+  "/concept-fables/0724-extraction-externalities": {
+    "zh": {
+      "title": "最便宜的石头",
+      "description": "市府选中了报价最低的采石场，桥梁省下的钱却从公路、果园和下游水渠的账上重新花了出去。"
+    },
+    "en": {
+      "title": "The Cheapest Stone",
+      "description": "The city selects the lowest-priced quarry, then spends the savings again through road repairs, damaged orchards, and a silted downstream canal."
+    }
+  },
+  "/concept-fables/0724-geotechnical-risk": {
+    "zh": {
+      "title": "没有移动的那根标杆",
+      "description": "露天矿坡脚开始渗出浑水，经理仍指着一根没有移动的标杆，坚持整面山坡都很安全。"
+    },
+    "en": {
+      "title": "The Survey Pin That Did Not Move",
+      "description": "Muddy water begins seeping from an open-pit slope, but the manager points to one unmoved survey pin and declares the entire wall safe."
+    }
+  },
+  "/concept-fables/0731-human-scale": {
+    "zh": {
+      "title": "从塔顶看很完美的广场",
+      "description": "新广场从钟塔上看庄严对称，走在地面的人却要穿过三百步烈日，才能找到第一处树荫。"
+    },
+    "en": {
+      "title": "The Plaza That Looked Perfect from the Tower",
+      "description": "A new plaza looks majestic and symmetrical from the clock tower, while people on the ground cross three hundred sunlit paces before reaching shade."
+    }
+  },
+  "/concept-fables/0731-mixed-use-development": {
+    "zh": {
+      "title": "一天只醒两次的城",
+      "description": "新城区把住宅、办公和商店分得井然有序，也因此每天只在两次通勤中挤满人，其余时间各自空着。"
+    },
+    "en": {
+      "title": "The District That Woke Twice a Day",
+      "description": "A new district separates homes, offices, and shops into perfect order, then fills only during two daily commutes while each zone sits empty in turn."
+    }
+  },
+  "/concept-fables/0731-adaptive-reuse": {
+    "zh": {
+      "title": "第二次开门的车站",
+      "description": "铁路改线后，旧车站在拆除与封存之间空了十年，直到市场摊贩发现月台正好能遮住清晨的雨。"
+    },
+    "en": {
+      "title": "The Station's Second Opening",
+      "description": "After the railway moves, an old station stands ten years between demolition and preservation until market traders notice that its platform already shelters the morning rain."
+    }
+  },
+  "/concept-fables/0732-load-path": {
+    "zh": {
+      "title": "每根梁都很结实的屋顶",
+      "description": "宴会厅的梁、柱和地基各自都通过检验，第一场大雪却在一只装饰托架上找到了它们之间断掉的路。"
+    },
+    "en": {
+      "title": "The Roof with Strong Beams Everywhere",
+      "description": "Every beam, column, and footing in a banquet hall passes inspection, but the first heavy snow finds the broken route between them at a decorative bracket."
+    }
+  },
+  "/concept-fables/0732-factor-of-safety": {
+    "zh": {
+      "title": "桥头那个巨大的“二”",
+      "description": "市长在桥头写下“承受力是需要的两倍”，直到洪水从这个数字没有计算过的桥墩下面掏走了河床。"
+    },
+    "en": {
+      "title": "The Giant Number Two at the Bridge",
+      "description": "A mayor paints 'twice the required strength' at a bridge entrance, until a flood removes the riverbed beneath a pier that the number never considered."
+    }
+  },
+  "/concept-fables/0732-infrastructure-life-cycle": {
+    "zh": {
+      "title": "剪彩以后",
+      "description": "跨河大桥开幕时人人争着剪彩，随后十年，却没有人愿意为清一只排水口拍照。"
+    },
+    "en": {
+      "title": "After the Ribbon Was Cut",
+      "description": "Everyone wants a photograph cutting the new river bridge's ribbon; for the next decade, no one wants one clearing its drains."
+    }
+  },
+  "/concept-fables/0811-nutrient-cycling": {
+    "zh": {
+      "title": "总也填不满的田",
+      "description": "农场年年买更多肥料，坡上麦田仍越来越瘦，而坡下池塘却绿得看不见水面。"
+    },
+    "en": {
+      "title": "The Field That Never Filled",
+      "description": "A farm buys more fertilizer each year; the hillside wheat still weakens while the pond below turns green enough to hide its water."
+    }
+  },
+  "/concept-fables/0811-integrated-pest-management": {
+    "zh": {
+      "title": "一只虫也不能有的果园",
+      "description": "果园主发现第一片虫叶便反复喷药，虫子短暂消失后，却在失去天敌的树上成群回来。"
+    },
+    "en": {
+      "title": "The Orchard That Allowed No Insect",
+      "description": "An orchard owner sprays after finding the first damaged leaf; the insects vanish briefly, then return in crowds after their natural enemies are gone."
+    }
+  },
+  "/concept-fables/0811-selective-breeding-tradeoffs": {
+    "zh": {
+      "title": "一年下三百枚蛋的鸡",
+      "description": "养鸡人连续多年只留下产蛋最多的母鸡作亲本，账本上的数字越来越高，鸡舍也越来越经不起炎热。"
+    },
+    "en": {
+      "title": "The Hen That Laid Three Hundred Eggs",
+      "description": "A breeder keeps only the highest-laying hens as parents; the number in his ledger rises each year while the flock becomes less able to withstand heat."
+    }
+  },
+  "/concept-fables/0812-grafting": {
+    "zh": {
+      "title": "保住果味的那一刀",
+      "description": "老梨树将死，园主种下它的种子等着原味回来，几年后结出的梨却一棵一个样。"
+    },
+    "en": {
+      "title": "The Cut That Preserved the Flavour",
+      "description": "When an old pear tree begins to die, its owner plants the seeds expecting the same fruit; years later, every seedling bears something different."
+    }
+  },
+  "/concept-fables/0812-microclimate": {
+    "zh": {
+      "title": "天气站没有结霜",
+      "description": "庄园天气站整夜都在零度以上，清晨低洼处的葡萄芽却覆着一层白霜。"
+    },
+    "en": {
+      "title": "The Weather Station Had No Frost",
+      "description": "The estate weather station remains above freezing all night, yet grape buds in the hollow are white with frost by morning."
+    }
+  },
+  "/concept-fables/0812-phenology": {
+    "zh": {
+      "title": "日历没有迟到",
+      "description": "果园每年都在同一天迎接蜂箱，那年梨花提前开放，蜂车准时到达时，枝头已经落满白瓣。"
+    },
+    "en": {
+      "title": "The Calendar Was Not Late",
+      "description": "The orchard receives its hives on the same date every year; when blossom opens early, the bees arrive exactly on time beneath falling petals."
+    }
+  },
+  "/concept-fables/0821-sustainable-yield": {
+    "zh": {
+      "title": "账本里没有变少的森林",
+      "description": "林场每年砍掉的木材都不超过测得的新增体积，账本始终平衡，山里却越来越难找到老树和幼苗。"
+    },
+    "en": {
+      "title": "The Forest That Never Grew Smaller in the Ledger",
+      "description": "A forest cuts no more timber than its measured annual growth; the ledger stays balanced while old trees and seedlings become increasingly scarce."
+    }
+  },
+  "/concept-fables/0821-ecological-succession": {
+    "zh": {
+      "title": "没有照表长成的两块荒地",
+      "description": "林务员把“草、灌木、乔木”的同一张恢复表贴在火烧地和废石场边，两块地却从第一年起就走向不同方向。"
+    },
+    "en": {
+      "title": "Two Wastelands That Ignored the Chart",
+      "description": "A forester posts the same grass-shrub-tree recovery chart beside a burned field and a quarry floor; the two sites diverge from the first year."
+    }
+  },
+  "/concept-fables/0821-fire-ecology": {
+    "zh": {
+      "title": "没有火的三十年",
+      "description": "护林队扑灭了山里每一簇小火，三十年后，整片森林把积下的枯枝一次烧完。"
+    },
+    "en": {
+      "title": "Thirty Years Without Fire",
+      "description": "A forest crew extinguishes every small flame in the mountains; thirty years later, the forest burns its accumulated fuel all at once."
+    }
+  },
+  "/concept-fables/0831-maximum-sustainable-yield": {
+    "zh": {
+      "title": "写在海图上的最大数",
+      "description": "渔港把模型算出的最高长期平均捕量当成每年保证，鱼越来越难找时，新声呐仍替船队完成了配额。"
+    },
+    "en": {
+      "title": "The Largest Number on the Sea Chart",
+      "description": "A fishing port treats a model's highest long-run average catch as an annual promise; as fish grow scarcer, new sonar still helps the fleet fill its quota."
+    }
+  },
+  "/concept-fables/0831-bycatch": {
+    "zh": {
+      "title": "没有写进鱼市账本的那一网",
+      "description": "虾船的账上只记卖掉的虾，跟网一起上来的幼鱼、海龟和小鲨鱼都在回港前消失了。"
+    },
+    "en": {
+      "title": "The Haul Missing from the Market Ledger",
+      "description": "A shrimp boat records only the shrimp it sells; juvenile fish, turtles, and small sharks caught in the same net disappear before the boat reaches port."
+    }
+  },
+  "/concept-fables/0831-fisheries-co-management": {
+    "zh": {
+      "title": "一张从首都寄来的禁渔令",
+      "description": "首都按旧日历封湖，鱼产卵的海湾却已换了时节；湖边人不相信命令，巡查船也追不上每一张夜网。"
+    },
+    "en": {
+      "title": "A Fishing Ban Sent from the Capital",
+      "description": "The capital closes a lake by an old calendar after spawning has shifted; lakeside fishers distrust the order, and patrol boats cannot chase every night net."
+    }
+  },
+  "/concept-fables/0841-one-health": {
+    "zh": {
+      "title": "三本互不相看的病历",
+      "description": "洪水后，诊所记录发热村民，兽医站记录流产牛只，水务所记录井水异常，三本记录却放在三座楼里。"
+    },
+    "en": {
+      "title": "Three Casebooks That Never Met",
+      "description": "After a flood, a clinic records fever in villagers, a veterinary office records illness in cattle, and a water office records contaminated wells; the three books remain in separate buildings."
+    }
+  },
+  "/concept-fables/0841-herd-immunity": {
+    "zh": {
+      "title": "八成已经打过针的羊场",
+      "description": "羊场总体已有八成免疫，所有尚未接种的幼羊却住在同一间棚里，一只新来的羊从那里走过。"
+    },
+    "en": {
+      "title": "The Farm Where Eight in Ten Sheep Were Vaccinated",
+      "description": "Eight in ten sheep on a farm are immunized, but every unvaccinated lamb lives in one shed that a newly arrived animal passes through."
+    }
+  },
+  "/concept-fables/0841-five-domains-welfare": {
+    "zh": {
+      "title": "什么都不缺的马厩",
+      "description": "冠军母马住着最干净的单间，饲料足、体检正常，却每天在栏门前重复走同样的七步。"
+    },
+    "en": {
+      "title": "The Stable That Lacked Nothing",
+      "description": "A champion mare has the cleanest private stall, abundant feed, and normal examinations, yet walks the same seven steps at its door all day."
+    }
+  },
+  "/concept-fables/0911-caries-biofilm": {
+    "zh": {
+      "title": "还没有洞的那颗牙",
+      "description": "糕点学徒为保住婚宴订单不断试味，牙面一块尚未成洞的白斑，迫使他在赶工与改变致病条件之间选择。"
+    },
+    "en": {
+      "title": "The Tooth That Had No Hole Yet",
+      "description": "A pastry apprentice keeps tasting tiny spoonfuls to save a wedding order, until an intact white mark on his tooth forces him to choose between speed and changing the conditions that produced it."
+    }
+  },
+  "/concept-fables/0911-occlusion": {
+    "zh": {
+      "title": "总是先碰到的那颗牙",
+      "description": "牙医为赶上琴师演出，只凭一次静态咬纸完成牙冠，随后不得不在继续磨牙与承认重做之间选择。"
+    },
+    "en": {
+      "title": "The Tooth That Always Met First",
+      "description": "A dentist rushes a musician's new crown by trusting one still bite, then must choose between grinding more healthy tooth and admitting the crown needs to be remade."
+    }
+  },
+  "/concept-fables/0911-minimal-intervention-dentistry": {
+    "zh": {
+      "title": "一颗牙的第四次修补",
+      "description": "商人陆明曾三次相信整块更换旧填料最可靠；第四次修补时，他与牙医不得不面对那些整齐更新已经耗去多少真牙。"
+    },
+    "en": {
+      "title": "A Tooth's Fourth Repair",
+      "description": "Merchant Lu Ming has trusted three complete replacements of the same filling; at the fourth repair, he and his dentist must face how much sound tooth those tidy renewals have already spent."
+    }
+  },
+  "/concept-fables/0912-differential-diagnosis": {
+    "zh": {
+      "title": "星期日就不疼的头",
+      "description": "厂医因印刷学徒小浦的头痛每逢星期日便消失，将其归为压力；当同样规律蔓延到整间工坊，省事答案开始变得危险。"
+    },
+    "en": {
+      "title": "The Headache That Rested on Sundays",
+      "description": "A factory doctor calls printing apprentice Xiaopu's workday headaches stress because they disappear on Sundays, until the same pattern spreads across the room and makes the convenient answer dangerous."
+    }
+  },
+  "/concept-fables/0912-base-rate-reasoning": {
+    "zh": {
+      "title": "一百二十张红纸",
+      "description": "卫生主管在低风险职工筛查中得到120张阳性红纸便急于庆功，直到它们按疾病基础率与假阳性率重新排列。"
+    },
+    "en": {
+      "title": "One Hundred and Twenty Red Slips",
+      "description": "A health director celebrates 120 positive screens in a low-risk workforce, until the red slips are sorted by the starting frequency of disease and the test's false-positive rate."
+    }
+  },
+  "/concept-fables/0912-evidence-based-medicine": {
+    "zh": {
+      "title": "论文里没有的那位病人",
+      "description": "年轻医生照着著名试验为屋顶匠老齐制定治疗，后来才发现他的梯子、工钱和最重要的治疗负担从未出现在论文表格中。"
+    },
+    "en": {
+      "title": "The Patient Missing from the Paper",
+      "description": "A young doctor follows a celebrated trial for roof worker Old Qi, then discovers that his ladders, wages, and most important treatment burden never appeared in the paper's table."
+    }
+  },
+  "/concept-fables/0913-early-warning-observation": {
+    "zh": {
+      "title": "每个数字都还没有越线",
+      "description": "夜班护士发现几项看似普通的数字同时缓慢偏移，在任何单项变红之前，她必须打断一个已超负荷的病区。"
+    },
+    "en": {
+      "title": "Every Number Was Still Below Its Line",
+      "description": "A night nurse sees ordinary-looking numbers drift in the same direction and must interrupt an overstretched ward before any single box turns red."
+    }
+  },
+  "/concept-fables/0913-continuity-of-care": {
+    "zh": {
+      "title": "第七次从头说起",
+      "description": "出院护士想在假日前送患者回家，散落的记录、无人负责的结果和一段未知楼梯，却让速度变成风险。"
+    },
+    "en": {
+      "title": "Beginning Again for the Seventh Time",
+      "description": "A discharge nurse tries to send a patient home before a holiday, but scattered records, an ownerless result, and an unknown staircase turn speed into risk."
+    }
+  },
+  "/concept-fables/0913-informed-consent": {
+    "zh": {
+      "title": "签名以后，谈话才开始",
+      "description": "裁缝米娅为配合排满的手术表签下文件，一枚铜顶针却暴露出患者与团队同意的是两个不同未来。"
+    },
+    "en": {
+      "title": "The Conversation That Began After the Signature",
+      "description": "Seamstress Mia signs for a hand procedure to satisfy a full operating list, but her brass thimble reveals that patient and team have agreed to different futures."
+    }
+  },
+  "/concept-fables/0914-sensitivity-specificity": {
+    "zh": {
+      "title": "把门槛移低以后",
+      "description": "医院院长要求实验室降低阈值以少漏患者，却发现同一动作也把许多未患病者送进后续评估。"
+    },
+    "en": {
+      "title": "After the Threshold Was Lowered",
+      "description": "A hospital director lowers a laboratory threshold to miss fewer affected people, only to discover that the same move sends many unaffected people into follow-up."
+    }
+  },
+  "/concept-fables/0914-signal-detection": {
+    "zh": {
+      "title": "看见每一道影子的医生",
+      "description": "影像医生顾青漏掉一处微弱异常后，把每道灰影都标成可疑，直到误报挤满走廊，反而遮住最初的问题。"
+    },
+    "en": {
+      "title": "The Doctor Who Saw Every Shadow",
+      "description": "After missing a faint abnormality, imaging doctor Gu Qing marks every gray shadow suspicious until false alarms fill the corridor and obscure the original problem."
+    }
+  },
+  "/concept-fables/0914-calibration": {
+    "zh": {
+      "title": "十二支一起读错的温度计",
+      "description": "社区诊所十二支温度计读数完全一致；共同使用的主温度计却证明，一致也可能把同一种偏差保存下来。"
+    },
+    "en": {
+      "title": "Twelve Thermometers That Agreed and Were Wrong",
+      "description": "Twelve thermometers in a community clinic agree perfectly, but their shared master thermometer reveals that agreement can preserve the same hidden bias."
+    }
+  },
+  "/concept-fables/0915-neuroplasticity": {
+    "zh": {
+      "title": "第一个重新响起的音",
+      "description": "病后钢琴师贺闻五指总落在同一键上，一句“换条脑路”的速成许诺让他练到疼痛，最后从一颗纽扣和一个音重新开始。"
+    },
+    "en": {
+      "title": "The First Note to Sound Again",
+      "description": "After illness leaves pianist He Wen's fingers landing on one key, a promise of quick brain rerouting drives him into painful repetition until one button and one note rebuild practice."
+    }
+  },
+  "/concept-fables/0915-graded-exposure": {
+    "zh": {
+      "title": "只剩七级的楼梯",
+      "description": "脚伤愈合后，舞者简秋为保住角色急冲剧院七级楼梯；这次失败迫使她用一次次被检验的预测重新靠近舞台。"
+    },
+    "en": {
+      "title": "The Staircase That Had Only Seven Steps Left",
+      "description": "After her ankle heals, dancer Jian Qiu rushes the theatre's seven stairs to keep her role; the failed leap forces a slower return built from tested predictions rather than pressure."
+    }
+  },
+  "/concept-fables/0915-biopsychosocial-model": {
+    "zh": {
+      "title": "影像上只有一道浅线",
+      "description": "搬运工马良的持续疼痛先因影像浅线被否定，又被工头夸大；三份日常记录最终显出需要分别处理的相互负担。"
+    },
+    "en": {
+      "title": "Only a Faint Line on the Scan",
+      "description": "Porter Ma Liang's persistent pain is first dismissed by a faint scan finding and then exaggerated by his foreman, until three ordinary records reveal interacting burdens that require different actions."
+    }
+  },
+  "/concept-fables/0916-therapeutic-window": {
+    "zh": {
+      "title": "两条线之间的一小格",
+      "description": "病人的药量没有改变，身体清除药物的速度却变慢，昨日合适的暴露在今日悄悄越过了上面那条线。"
+    },
+    "en": {
+      "title": "The Narrow Space Between Two Lines",
+      "description": "A patient's dose remains unchanged while the body's clearance slows, and yesterday's suitable exposure quietly crosses the upper line today."
+    }
+  },
+  "/concept-fables/0916-pharmacokinetics": {
+    "zh": {
+      "title": "同一颗药走过的两条路",
+      "description": "同样一颗药、同样一个时刻服下，病后归来的身体却让它停得更久，下一颗到来时，上一颗还没有离开。"
+    },
+    "en": {
+      "title": "Two Journeys of the Same Tablet",
+      "description": "The same tablet is taken at the same hour, but an altered body keeps it longer, so the previous dose remains when the next arrives."
+    }
+  },
+  "/concept-fables/0916-drug-interactions": {
+    "zh": {
+      "title": "每一瓶单独都没有错",
+      "description": "三位医生各自开出合理的药，瓶子单独看都没有问题，放到同一只药袋里后，病人却再也走不稳。"
+    },
+    "en": {
+      "title": "Every Bottle Was Correct on Its Own",
+      "description": "Three physicians prescribe reasonable medicines; every bottle is correct alone, but together in one bag they leave the patient unable to walk steadily."
+    }
+  },
+  "/concept-fables/0917-contextual-effects": {
+    "zh": {
+      "title": "两间一模一样的治疗室",
+      "description": "疗养院声称一块稀有暖石能止痛，研究者把它和普通石头放进相同仪式里，病人却在两间房都报告改善。"
+    },
+    "en": {
+      "title": "Two Identical Treatment Rooms",
+      "description": "A clinic claims that a rare heated stone relieves pain; a researcher places it and an ordinary stone within the same ritual, and patients improve in both rooms."
+    }
+  },
+  "/concept-fables/0917-evidence-hierarchy": {
+    "zh": {
+      "title": "同一张桌上的七份证据",
+      "description": "议会想知道一种草药是否有效，七份证据给出七种答案，因为它们其实在回答不同问题。"
+    },
+    "en": {
+      "title": "Seven Kinds of Evidence on One Table",
+      "description": "A council asks whether a herb works and receives seven answers from seven forms of evidence because they are answering different questions."
+    }
+  },
+  "/concept-fables/0917-herb-drug-interactions": {
+    "zh": {
+      "title": "那包没有被算作药的叶子",
+      "description": "病人每次都带来完整药单，却把每天喝的草叶茶留在厨房，因为他从未把天然植物当成用药的一部分。"
+    },
+    "en": {
+      "title": "The Leaves That Did Not Count as Medicine",
+      "description": "A patient brings a complete medicine list to every visit but leaves his daily herbal tea in the kitchen because he never considers a natural plant part of treatment."
+    }
+  },
+  "/concept-fables/0921-person-centred-care": {
+    "zh": {
+      "title": "早上八点才准起床的面包师",
+      "description": "养老院把所有人安排进同一张作息表，做了一辈子面包的老人却每天在锁着的厨房门外等天亮。"
+    },
+    "en": {
+      "title": "The Baker Who Was Not Allowed Up Before Eight",
+      "description": "A care home places everyone on one schedule, while a lifelong baker waits each dawn outside a locked kitchen."
+    }
+  },
+  "/concept-fables/0921-dignity-of-risk": {
+    "zh": {
+      "title": "一条永远不让他独自走的路",
+      "description": "照护人员为了避免一次跌倒，禁止成年男子独自乘车，结果他整整一年没有去看住在城另一头的姐姐。"
+    },
+    "en": {
+      "title": "The Route He Was Never Allowed to Travel Alone",
+      "description": "After one fall, carers forbid an adult man from travelling alone; as a result, he does not visit his sister across town for an entire year."
+    }
+  },
+  "/concept-fables/0921-universal-design": {
+    "zh": {
+      "title": "只有“需要帮助的人”才走的门",
+      "description": "图书馆把无台阶入口藏在后巷并标成特殊通道，演讲当天，轮椅来宾却被堆满纸箱的门挡在外面。"
+    },
+    "en": {
+      "title": "The Door Reserved for People Who Needed Help",
+      "description": "A library hides its step-free entrance in an alley and labels it special access; on lecture day, a wheelchair user finds the door blocked by boxes."
+    }
+  },
+  "/concept-fables/0922-attachment": {
+    "zh": {
+      "title": "每次哭声都换一个人",
+      "description": "临时照护所每天换班频繁，幼儿后来不再哭也不再求抱，工作人员却把这种安静当成了适应得好。"
+    },
+    "en": {
+      "title": "A Different Person for Every Cry",
+      "description": "Frequent shifts at a temporary care home bring a different adult to every cry; when a toddler stops crying and seeking comfort, staff mistake the silence for adjustment."
+    }
+  },
+  "/concept-fables/0922-safeguarding": {
+    "zh": {
+      "title": "那句不能保证的秘密",
+      "description": "少年请活动中心老师绝不把一件事告诉任何人，老师若立刻答应，反而会把他独自留在危险里。"
+    },
+    "en": {
+      "title": "The Secret She Could Not Promise to Keep",
+      "description": "A young person asks a centre worker never to tell anyone; an immediate promise would leave him alone with the danger."
+    }
+  },
+  "/concept-fables/0922-positive-youth-development": {
+    "zh": {
+      "title": "只写着“不许”的青年中心",
+      "description": "青年中心为防止麻烦贴满禁令，窗户仍在一个雨夜被打破，因为年轻人在那里从未得到一把钥匙或一件正事。"
+    },
+    "en": {
+      "title": "The Youth Centre Where Every Sign Said No",
+      "description": "A youth centre covers its walls with prohibitions, yet a window is broken on a rainy night because young people have never been given a key or meaningful work there."
+    }
+  },
+  "/concept-fables/0923-ecological-systems-perspective": {
+    "zh": {
+      "title": "每天迟到二十分钟的女孩",
+      "description": "学校把女孩的迟到归为态度问题，直到社工陪她走了一次早晨的路，发现托儿所和公交表把她困在同一段时间里。"
+    },
+    "en": {
+      "title": "The Girl Who Was Twenty Minutes Late Every Day",
+      "description": "A school treats a girl's lateness as an attitude problem until a social worker walks her morning route and finds childcare and bus timetables trapping her in the same twenty minutes."
+    }
+  },
+  "/concept-fables/0923-therapeutic-alliance": {
+    "zh": {
+      "title": "第三次没有来的来访者",
+      "description": "咨询师严格执行最合适的手册，来访者却在第三次会谈消失，因为两人从未说清究竟要一起解决什么。"
+    },
+    "en": {
+      "title": "The Client Who Missed the Third Session",
+      "description": "A therapist follows the most suitable manual carefully, but the client disappears before session three because they never agreed what they were trying to solve together."
+    }
+  },
+  "/concept-fables/0923-motivational-interviewing": {
+    "zh": {
+      "title": "越劝越不想改的人",
+      "description": "任凯因饮酒错过女儿演出，咨询师越列举危害，他越替酒辩护，仿佛改变是对方想要而不是他自己想要。"
+    },
+    "en": {
+      "title": "The Man Who Wanted Change Less with Every Lecture",
+      "description": "Ren Kai misses his daughter's performance after drinking; the more a counsellor lists harms, the more he defends alcohol as though change belonged to someone else."
+    }
+  },
+  "/concept-fables/1011-invisible-labour": {
+    "zh": {
+      "title": "从不出故障的房子",
+      "description": "雇主只看见家政员擦桌洗衣的时间，以为屋子其余时候会自己运转，直到她请了一周假。"
+    },
+    "en": {
+      "title": "The House Where Nothing Ever Went Wrong",
+      "description": "An employer counts only the housekeeper's hours spent wiping and washing and assumes the rest of the home runs itself until she takes one week off."
+    }
+  },
+  "/concept-fables/1011-standardisation-personalisation": {
+    "zh": {
+      "title": "四十五分钟里一样的家",
+      "description": "家政公司要求每间屋子按同一清单在四十五分钟内完成，结果最整齐的一次服务，也把客户最需要保留的秩序清走了。"
+    },
+    "en": {
+      "title": "Homes Made Identical in Forty-Five Minutes",
+      "description": "A cleaning company requires every home to follow one forty-five-minute checklist; its neatest visit removes the order its client most needed preserved."
+    }
+  },
+  "/concept-fables/1011-cross-contamination": {
+    "zh": {
+      "title": "那块越来越干净的抹布",
+      "description": "清洁员从厨房一路擦到儿童房，抹布上的污迹越来越淡，示踪粉却在整间屋子里越走越远。"
+    },
+    "en": {
+      "title": "The Cloth That Looked Cleaner Every Time",
+      "description": "A cleaner wipes from kitchen to children's room; the cloth looks cleaner with each surface while tracer powder travels farther through the house."
+    }
+  },
+  "/concept-fables/1012-hair-and-skin-structure": {
+    "zh": {
+      "title": "会长出来的根，不会愈合的发梢",
+      "description": "美发师把同一种强处理从新生发根涂到反复漂染的发梢，冲洗时，最旧的那一段先留在梳子上。"
+    },
+    "en": {
+      "title": "Roots That Grow and Ends That Do Not Heal",
+      "description": "A stylist applies one strong process from new roots to repeatedly lightened ends; during rinsing, the oldest section remains in the comb."
+    }
+  },
+  "/concept-fables/1012-colour-chemistry": {
+    "zh": {
+      "title": "照片里的银灰色",
+      "description": "顾客带来一张银灰发色照片，美发师照抄照片上的配方，却没有先问她的黑发下面还藏着两年前的红染。"
+    },
+    "en": {
+      "title": "The Silver Grey in the Photograph",
+      "description": "A client brings a photograph of silver-grey hair; the stylist copies its formula without asking about the red dye still hidden beneath her dark hair."
+    }
+  },
+  "/concept-fables/1012-ethical-consultation": {
+    "zh": {
+      "title": "镜子旁多出来的红圈",
+      "description": "顾客只想修整眉形，美容顾问却在镜上圈出她从未介意过的下颌和鼻尖，随后递来一张更长的价目表。"
+    },
+    "en": {
+      "title": "The Extra Red Circles Beside the Mirror",
+      "description": "A client asks only for brow shaping; the consultant circles a jaw and nose she never disliked, then offers a much longer price list."
+    }
+  },
+  "/concept-fables/1013-service-dominant-logic": {
+    "zh": {
+      "title": "每道菜都完美的晚餐",
+      "description": "餐厅把周年晚餐设计成不容更改的七道菜，厨师交出了完美作品，淋雨赶来的客人却只想要热汤和安静。"
+    },
+    "en": {
+      "title": "The Dinner Where Every Dish Was Perfect",
+      "description": "A restaurant designs an unchangeable seven-course anniversary dinner; the chef delivers perfect work to rain-soaked guests who want only hot soup and quiet."
+    }
+  },
+  "/concept-fables/1013-service-recovery-paradox": {
+    "zh": {
+      "title": "被安排错的那间房",
+      "description": "旅馆迅速补救一次订房错误后，客人比预期更满意；老板却据此放松核对，让同样错误一再发生。"
+    },
+    "en": {
+      "title": "The Room Assigned by Mistake",
+      "description": "After a hotel recovers one booking mistake brilliantly, the guest is happier than expected; the owner relaxes checks and lets the error repeat."
+    }
+  },
+  "/concept-fables/1013-revenue-management": {
+    "zh": {
+      "title": "日落后就卖不出去的房间",
+      "description": "旅馆房间一旦空过当夜便永远失去收入，老板为避免空房多卖了几间，偏偏那晚所有客人都来了。"
+    },
+    "en": {
+      "title": "The Room That Could Not Be Sold After Sunset",
+      "description": "A hotel room earns nothing once its night passes; to avoid emptiness the owner sells several extra rooms, and that night every guest arrives."
+    }
+  },
+  "/concept-fables/1014-progressive-overload": {
+    "zh": {
+      "title": "每天都比昨天重的杠铃",
+      "description": "举重手把进步理解为每天多加一片铁，力量最初上升，后来动作先坏，疼痛再替训练表喊停。"
+    },
+    "en": {
+      "title": "The Barbell That Grew Heavier Every Day",
+      "description": "A lifter defines progress as adding one plate every day; strength rises first, then technique fails before pain stops the programme."
+    }
+  },
+  "/concept-fables/1014-periodisation": {
+    "zh": {
+      "title": "每个星期都要到达巅峰的跑手",
+      "description": "赞助商要求跑手每周六都跑出最好成绩，她在训练场一次次获胜，真正决赛到来时，双腿却没有留下任何新鲜力气。"
+    },
+    "en": {
+      "title": "The Runner Who Had to Peak Every Week",
+      "description": "A sponsor demands a runner's best time every Saturday; she wins repeated training trials and reaches the real final with no fresh strength left."
+    }
+  },
+  "/concept-fables/1014-constraints-led-approach": {
+    "zh": {
+      "title": "没有对手时从不失误的前锋",
+      "description": "前锋在标志桶间把同一套过人动作练得毫无差错，比赛里第一个后卫没有站在教练画好的位置。"
+    },
+    "en": {
+      "title": "The Forward Who Never Failed Without an Opponent",
+      "description": "A forward perfects one dribble among cones; in the match, the first defender refuses to stand where the coach drew him."
+    }
+  },
+  "/concept-fables/1015-tourism-carrying-capacity": {
+    "zh": {
+      "title": "五百人永远刚好的小岛",
+      "description": "海岛把每日上限定为五百人，以为一个数字能永久保护所有地方，四百名游客却在同一场低潮挤进了最脆弱的海湾。"
+    },
+    "en": {
+      "title": "The Island Where Five Hundred Was Always Perfect",
+      "description": "An island fixes a permanent daily limit of five hundred, yet four hundred visitors enter its most fragile bay during the same low tide."
+    }
+  },
+  "/concept-fables/1015-experience-economy": {
+    "zh": {
+      "title": "那只歪掉的茶杯",
+      "description": "陶坊为游客准备了整齐表演和一排完美纪念杯，大家拍完照便忘了，只有一只亲手拉歪的杯子被带回了家。"
+    },
+    "en": {
+      "title": "The Crooked Teacup",
+      "description": "A pottery studio stages a polished show and offers perfect souvenir cups; visitors forget them after photographs, but carry home one cup they shaped crookedly themselves."
+    }
+  },
+  "/concept-fables/1015-tourism-leakage": {
+    "zh": {
+      "title": "只在岛上住了一夜的一百枚金币",
+      "description": "游客在海岛度假村花下一百枚金币，政府庆祝收入增长，第二天却有大半金币随佣金、进口和利润离开了港口。"
+    },
+    "en": {
+      "title": "One Hundred Coins That Stayed on the Island for One Night",
+      "description": "A visitor spends one hundred coins at an island resort; officials celebrate, but by the next day most coins leave through commissions, imports, and remitted profit."
+    }
+  },
+  "/concept-fables/1021-sanitation-service-chain": {
+    "zh": {
+      "title": "城里最干净的厕所，城外最脏的河",
+      "description": "城市建成一万座新厕所后宣布卫生问题解决，粪污却由无监管车辆在夜里运到城外河岸倾倒。"
+    },
+    "en": {
+      "title": "The City's Cleanest Toilets and Its Dirtiest River",
+      "description": "After building ten thousand toilets, a city declares its sanitation problem solved while unregulated trucks dump the waste beside the river at night."
+    }
+  },
+  "/concept-fables/1021-wash-behaviour-change": {
+    "zh": {
+      "title": "每个人都知道该洗手的村庄",
+      "description": "村民在培训后都能背出洗手步骤，新水台却因离厨房太远、肥皂锁在柜里而很少有人使用。"
+    },
+    "en": {
+      "title": "The Village Where Everyone Knew to Wash",
+      "description": "After training, every villager can recite the handwashing steps, yet the new station is rarely used because it is far from kitchens and the soap is locked away."
+    }
+  },
+  "/concept-fables/1021-wastewater-surveillance": {
+    "zh": {
+      "title": "下水道发出的早信号",
+      "description": "城市污水中的病原标记突然上升，市长想据此寻找具体患者，实验室却只能确认整片汇水区正在发生变化。"
+    },
+    "en": {
+      "title": "The Early Signal from the Sewer",
+      "description": "A pathogen marker rises sharply in city wastewater; the mayor wants individual patients identified, but the laboratory can confirm only a change across the catchment."
+    }
+  },
+  "/concept-fables/1022-hierarchy-of-controls": {
+    "zh": {
+      "title": "发给每个人的一副新口罩",
+      "description": "家具厂每逢溶剂气味加重就换更好的口罩，却一直没有问，能否不让那股气味进入车间。"
+    },
+    "en": {
+      "title": "A New Mask for Every Worker",
+      "description": "A furniture factory responds to stronger solvent fumes with better masks but never asks whether the fumes can be kept out of the workshop."
+    }
+  },
+  "/concept-fables/1022-swiss-cheese-model": {
+    "zh": {
+      "title": "五道防线同时开着的夜班",
+      "description": "包装机伤人后，厂长只责怪最后按下按钮的工人，调查却在更早的五个环节里找到彼此对齐的缺口。"
+    },
+    "en": {
+      "title": "The Night Shift When Five Defences Were Open",
+      "description": "After a packaging-machine injury, the manager blames the worker who pressed the final button; the investigation finds aligned gaps in five earlier defences."
+    }
+  },
+  "/concept-fables/1022-normalisation-of-deviance": {
+    "zh": {
+      "title": "从未用过的救生艇",
+      "description": "渡船为了准点开航，逐渐省掉救生艇检查；多年没有事故，反而成了继续省略的最好理由。"
+    },
+    "en": {
+      "title": "The Lifeboat That Had Never Been Needed",
+      "description": "A ferry gradually skips lifeboat checks to depart on time; years without an emergency become the strongest reason to keep skipping them."
+    }
+  },
+  "/concept-fables/1031-deterrence": {
+    "zh": {
+      "title": "没有人看见的城墙",
+      "description": "边城把最强防线藏在山后，又把警告说得含糊；对手看不见能力，也不相信决心，最终把沉默误认为空缺。"
+    },
+    "en": {
+      "title": "The Wall No One Could See",
+      "description": "A border state hides its strongest defences behind the mountains and speaks in vague warnings; its opponent sees neither capability nor resolve and mistakes silence for absence."
+    }
+  },
+  "/concept-fables/1031-ooda-loop": {
+    "zh": {
+      "title": "最快下令的指挥官",
+      "description": "演习中的指挥官以四分钟完成一次决策为荣，却把每条新情报都塞进旧地图，因而比任何人更快地重复同一个错误。"
+    },
+    "en": {
+      "title": "The Commander Who Issued Orders Fastest",
+      "description": "An exercise commander prides himself on four-minute decisions, yet forces every new report into an old map and repeats the same error faster than anyone else."
+    }
+  },
+  "/concept-fables/1031-civilian-control": {
+    "zh": {
+      "title": "将军桌上的第二枚印章",
+      "description": "边境胜利后，将军开始用军事印章发布税收与外交命令，因为他相信懂得怎样赢下一场战斗，也就懂得国家该追求什么。"
+    },
+    "en": {
+      "title": "The Second Seal on the General's Desk",
+      "description": "After a border victory, a general uses his military seal for tax and diplomatic orders, believing that knowing how to win a battle means knowing what the state should seek."
+    }
+  },
+  "/concept-fables/1032-situational-crime-prevention": {
+    "zh": {
+      "title": "总在第三排消失的自行车",
+      "description": "车站每周都有自行车被盗，失窃却几乎总发生在被广告牌遮住、靠近后巷出口的第三排。"
+    },
+    "en": {
+      "title": "The Bicycles That Vanished from Row Three",
+      "description": "Bicycles disappear from a station every week, almost always from row three behind an advertising board beside the rear-alley exit."
+    }
+  },
+  "/concept-fables/1032-layered-security": {
+    "zh": {
+      "title": "每道锁都各自有效的博物馆",
+      "description": "博物馆有门禁、摄像、展柜警报和守卫，每一项测试都合格，一枚被盗证件却从它们彼此的空隙间走了进去。"
+    },
+    "en": {
+      "title": "The Museum Where Every Lock Worked Alone",
+      "description": "A museum has access control, cameras, case alarms, and guards; every item passes its own test, yet a stolen badge walks through the gaps between them."
+    }
+  },
+  "/concept-fables/1032-de-escalation": {
+    "zh": {
+      "title": "声音越大，门厅越小",
+      "description": "父亲在医院门厅找不到住院的儿子，守卫每提高一次声音，围观者和退路便同时少一点。"
+    },
+    "en": {
+      "title": "The Louder the Voices, the Smaller the Lobby",
+      "description": "A father cannot find his hospitalized son; every time a guard raises his voice, the crowd grows and the available exits shrink."
+    }
+  },
+  "/concept-fables/1041-induced-demand": {
+    "zh": {
+      "title": "多出来的第四条车道",
+      "description": "跨河桥加宽后，通勤时间短了一半；两年内，旧路线、旧时段和旧出行方式都随更快道路改变，桥又一次堵满。"
+    },
+    "en": {
+      "title": "The Extra Fourth Lane",
+      "description": "A widened bridge halves commute time; within two years, routes, schedules, travel modes, and locations adapt to the faster road and fill it again."
+    }
+  },
+  "/concept-fables/1041-network-topology": {
+    "zh": {
+      "title": "所有路都经过同一座车站",
+      "description": "城市把每条线路都接进中央枢纽，平日换乘高效，一场洪水关闭枢纽后，外环完好的车站也彼此到不了。"
+    },
+    "en": {
+      "title": "Every Route Passed Through One Station",
+      "description": "A city feeds every line into one central hub for efficient transfers; when flood closes the hub, intact outer stations still cannot reach one another."
+    }
+  },
+  "/concept-fables/1041-last-mile-integration": {
+    "zh": {
+      "title": "三十分钟的列车，两个小时的旅程",
+      "description": "新快线把两城之间缩到三十分钟，乘客从家到偏远车站、再从终点到办公室，却仍要花上两个小时。"
+    },
+    "en": {
+      "title": "A Thirty-Minute Train and a Two-Hour Journey",
+      "description": "A new express reduces travel between two cities to thirty minutes, yet passengers still spend two hours getting from home to the remote station and onward to work."
+    }
+  }
+}

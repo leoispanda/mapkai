@@ -1,0 +1,24 @@
+.content-share-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 4px; }
+.content-share-actions button { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 9px 16px; border: 1px solid #cfcbc2; border-radius: 999px; background: #fffdf8; color: #374339; font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer; }
+.content-share-actions button:hover { background: #f1f0e8; }
+.content-share-actions button:focus-visible { outline: 3px solid #638c73; outline-offset: 3px; }
+.content-share-actions button:disabled { opacity: .7; cursor: wait; }
+.track-card > .content-share-actions { margin: 4px 16px 12px; justify-self: start; grid-column: 1 / -1; }
+.content-share-dialog { width: min(440px, calc(100vw - 56px)); border: 1px solid #cfcbc2; border-radius: 18px; padding: 24px; background: #fffdf8; color: #28382f; font-family: system-ui, sans-serif; }
+.content-share-dialog::backdrop { background: #16251d66; }
+.content-share-dialog input { box-sizing: border-box; width: 100%; min-height: 44px; padding: 8px; font: inherit; }
+.content-share-dialog button { display: block; min-height: 40px; margin-top: 16px; padding: 8px 18px; font: inherit; cursor: pointer; }
+.shared-work { max-width: 880px; margin: 40px auto 80px; padding: 0 24px; color: #263a30; }
+.shared-work h1 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.2; overflow-wrap: anywhere; }
+.shared-work .work-intro { line-height: 1.7; color: #54675c; }
+.shared-work a { color: #31664b; text-underline-offset: 4px; }
+.shared-work video { display: block; width: 100%; max-height: 70vh; background: #101711; border-radius: 16px; }
+.shared-work audio { display: block; width: 100%; margin: 24px 0; }
+.shared-work .work-lyrics { white-space: pre-wrap; line-height: 1.9; font: inherit; }
+.shared-work .work-notice { font-size: .85rem; line-height: 1.6; color: #6f6454; }
+.shared-work .work-footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid #dce0d9; }
+.shared-work .work-qualities { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 16px 0; }
+.shared-work .work-qualities select { min-height: 40px; padding: 6px; font: inherit; }
+body.shared-work-page { margin: 0; background: #fffdf8; font-family: system-ui, sans-serif; }
+.shared-work-page .work-brand { display: block; max-width: 880px; margin: 24px auto; padding: 0 24px; font-weight: 700; color: #2f6548; text-decoration: none; }
+body[data-theme="dark"] .content-share-actions button { background: #26372e; color: #f4f3ea; border-color: #6b796e; }
