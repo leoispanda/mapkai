@@ -19,9 +19,9 @@ const flush = async () => { for (let index = 0; index < 30; index++) await Promi
 
 // Execute the production app with a small DOM/media model. Tests drive user and
 // native media events, not extracted copies of the queue implementation.
-function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null } = {}) {
+function harness({ savedContinuous = null, failPlay = false, songs = catalog, audioSession = null, savedSort = 'rank', votesReady = null, initialScores = [] } = {}) {
   const trace = [], snapshots = [];
-  const ids = new Map(), all = [], values = new Map(), scores = new Map();
+  const ids = new Map(), all = [], values = new Map(), scores = new Map(initialScores);
   if (savedContinuous) values.set('mapkaiMusicContinuous.v1', savedContinuous);
   class Target {
     addEventListener(type, callback) { const callbacks = this.listeners?.get(type) || []; callbacks.push(callback); (this.listeners ||= new Map()).set(type, callbacks); }
@@ -79,7 +79,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
   for (const match of html.matchAll(/<([a-z]+)[^>]*\bid="([^"]+)"([^>]*)>/g)) {
     const element = document.createElement(match[1]); element.id = match[2]; element.hidden = /\bhidden\b/.test(match[3]); document.body.append(element);
   }
-  ids.get('song-sort').value = 'rank';
+  ids.get('song-sort').value = savedSort;
   const allSubjects = new Element('option'); allSubjects.value = ''; ids.get('subject-filter').append(allSubjects);
   const brand = new Element('a'), description = new Element('meta');
   document.querySelector = selector => selector === '.brand' ? brand : selector === 'meta[name=description]' ? description : null;
@@ -91,7 +91,7 @@ function harness({ savedContinuous = null, failPlay = false, songs = catalog, au
     get: id => ({ known: true, likes: Math.max(0, scores.get(id) || 0), dislikes: Math.max(0, -(scores.get(id) || 0)), score: scores.get(id) || 0, pending: false }),
     status: () => ({ loaded: true, sessionRecovery: true }),
     compare: (a, b) => (scores.get(b.id) || 0) - (scores.get(a.id) || 0) || Number(a.title.slice(0, 3)) - Number(b.title.slice(0, 3)),
-    subscribe: callback => { preferenceListener = callback; }, refresh() {}, vote() {},
+    subscribe: callback => { preferenceListener = callback; }, refresh: () => votesReady, vote() {},
   };
   const context = vm.createContext({ window, document, URL, Event: class { constructor(type) { this.type = type; } },
     location: { href: 'https://www.mapkai.com/music/', origin: 'https://www.mapkai.com' },
@@ -129,6 +129,36 @@ test('loading the library does not start audio and creates only preview plus one
   assert.equal(h.rows().length, 3);
   assert.equal(h.allAudio().length, 2);
   assert.equal(h.allAudio().reduce((sum, audio) => sum + audio.playCalls, 0), 0);
+});
+
+test('opening the library resets a restored sort and play-all starts with the most popular song', async () => {
+  const h = harness({ savedSort: 'number', initialScores: [[catalog[2].id, 4], [catalog[0].id, -1]] });
+  await flush();
+  assert.equal(h.element('song-sort').value, 'rank');
+  assert.deepEqual(h.rows().map(row => row.id), [catalog[2], catalog[1], catalog[0]].map(track => `song-${track.id}`));
+  h.click(h.element('play-all')); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[2].id);
+  h.page.move(1); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[1].id);
+});
+
+test('the initial queue waits for shared votes instead of briefly showing number order', async () => {
+  let finishVotes;
+  const votesReady = new Promise(resolve => { finishVotes = resolve; });
+  const h = harness({ votesReady }); await flush();
+  assert.equal(h.page.snapshot().loaded, false);
+  assert.equal(h.rows().length, 0);
+  h.rank(catalog[2].id, 8);
+  finishVotes(true); await flush();
+  assert.equal(h.page.snapshot().loaded, true);
+  assert.equal(h.rows()[0].id, `song-${catalog[2].id}`);
+});
+
+test('unavailable initial votes still leave the library playable', async () => {
+  const h = harness({ votesReady: Promise.resolve(false) }); await flush();
+  assert.equal(h.rows().length, catalog.length);
+  h.click(h.element('play-all')); await flush();
+  assert.equal(h.page.snapshot().track.id, catalog[0].id);
 });
 
 test('choosing any row continues to the next song using the same media element', async () => {
