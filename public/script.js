@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.315";
+const appVersion = "0.1.316";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18462,6 +18462,23 @@ const categoryGroupSongTracks = {
       "zh": "编曲请求：古典交响跨界；180步频目标",
       "en": "Requested sound: classical symphonic crossover; 180-step cadence target"
     }
+  },
+  "039": {
+    "id": "ede8bff2-65ce-4581-860b-edc9e88ba43e",
+    "title": "065 Who Had a Say (Chinese-style) - MapKAI - Other Social Sciences, Journalism and Information - Operational Definitions",
+    "durationSeconds": 120,
+    "meta": {
+      "zh": "英文 · 中国风 · 2:00",
+      "en": "English · Chinese-style · 2:00"
+    },
+    "core": {
+      "zh": "六个人回忆同一次会议，却对参与有不同理解。先给出可观察的规则：发问或提建议，每人只记一次；六人中四人符合。这个计数仍不能说明谁觉得自己被听见。",
+      "en": "Six people remember one meeting differently. Define an observable rule: a question or suggestion, with each person counted once. Four of six qualify; the count does not establish who felt heard."
+    },
+    "style": {
+      "zh": "中国风版 · 英文主唱",
+      "en": "Chinese-style edition · English lead"
+    }
   }
 };
 
@@ -18592,6 +18609,10 @@ const categorySongSubjectLabels = {
   "038": {
     "zh": "跨学科社会科学",
     "en": "Interdisciplinary Social Sciences"
+  },
+  "039": {
+    "zh": "其他社会科学、新闻与信息",
+    "en": "Other Social Sciences, Journalism and Information"
   }
 };
 
@@ -18624,7 +18645,8 @@ const categorySongTopicLabelsZh = {
   "Social Norms": "社会规范",
   "Source Verification": "信源核验",
   "Triangulation": "三角互证",
-  "Dutch Cultural Figures": "荷兰文化人物"
+  "Dutch Cultural Figures": "荷兰文化人物",
+  "Operational Definitions": "操作性定义"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -21741,7 +21763,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.315").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.316").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },

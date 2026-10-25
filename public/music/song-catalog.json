@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 65,
+  "nextNumber": 66,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -784,6 +784,19 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "064 Your Turn - MapKAI - Arts and Humanities - Dutch Cultural Figures"
+    },
+    {
+      "id": "ede8bff2-65ce-4581-860b-edc9e88ba43e",
+      "number": 65,
+      "numberLabel": "065",
+      "songName": "Who Had a Say (Chinese-style)",
+      "subjectName": "Other Social Sciences, Journalism and Information",
+      "canonicalSubjectName": "Social sciences, journalism and information not elsewhere classified",
+      "conceptName": "Operational Definitions",
+      "createdAt": "2026-10-25T22:06:48.074Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "065 Who Had a Say (Chinese-style) - MapKAI - Other Social Sciences, Journalism and Information - Operational Definitions"
     }
   ]
 }
