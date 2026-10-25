@@ -55,5 +55,11 @@
   "放大文字": "Larger text",
   "文字比例": "Text size",
   "恢复字号": "Reset text size",
-  "80个小学科默认全部展开。向下浏览分支；每科显示音乐、视频、故事灯和三个故事的新旧版本。点击节点查看内容入口，键盘可用Tab和Enter操作。": "All 80 fields are expanded by default. Scroll through the branches. Each field shows music, video and story lights plus three story versions. Select nodes to open content actions; use Tab and Enter with a keyboard."
+  "80个小学科默认全部展开。向下浏览分支；每科显示音乐、视频、故事灯和三个故事的新旧版本。点击节点查看内容入口，键盘可用Tab和Enter操作。": "All 80 fields are expanded by default. Scroll through the branches. Each field shows music, video and story lights plus three story versions. Select nodes to open content actions; use Tab and Enter with a keyboard.",
+  "MapKAI位于中心，11个学科向四周发散，80个小学科默认展开。拖动移动、滚轮或双指缩放；点击学科放大分支。每科保留三个故事小灯及逐篇新旧标记。": "MapKAI is at the centre, with 11 subjects radiating outwards and all 80 fields expanded. Drag to pan and scroll or pinch to zoom. Select a subject to focus its branch. Each field retains three story lights and individual version labels.",
+  "拖动移动 · 滚轮或双指缩放 · 点击学科放大": "Drag to pan · Scroll or pinch to zoom · Select a subject to focus",
+  "回到全图": "Show all",
+  "全屏": "Full screen",
+  "全景定位缩略图": "Overview navigation minimap",
+  "点缩略图定位": "Select the minimap to navigate"
 }

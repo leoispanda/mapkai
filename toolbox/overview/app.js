@@ -89,13 +89,16 @@ function closeSelection() {
   target?.focus({preventScroll:true});
 }
 function activateNode(node) {
-  if(node.kind==='root'){resetMap();return;}
+  if(node.kind==='root'){resetMap();mindMap.fit();return;}
   selected=node.id;selectionReturn=node;
   if(node.kind==='category'&&!expandedAll){expandedAll=true;renderTree();mindMap.focusCategory(node.item.code);return;}
   if(node.kind==='field'){
     if(expandedFields.has(node.id))expandedFields.delete(node.id);else{expandedFields.clear();expandedFields.add(node.id);}
   }
   renderTree();$('map-selection').focus({preventScroll:true});
+  if(node.kind==='category')mindMap.focusCategory(node.item.code);
+  else if(node.kind==='field')mindMap.focusNode(node.id);
+  else if(node.kind==='story'){const field=catalog.categories.flatMap(c=>c.fields).find(f=>f.stories.some(story=>story.id===node.item.id));if(field)mindMap.focusNode(`field-${field.code}`);}
 }
 function storyNode(story) {
   const node={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
@@ -158,11 +161,11 @@ function renderTree() {
     categories.push(node);
   }
   if(!allNodes.some(n=>n.id===selected))selected='root';
-  mindMap.render({root,categories,selected});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
+  mindMap.render({root,categories,selected,viewKey:`${query}|${filter}|${expandedAll}`,searching:Boolean(query)});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
   $('overview-empty').hidden=fieldCount>0;
   const detailed=Boolean(expandedAll||query||filter!=='all');
   $('directory-title').textContent=zh?(query?'搜索结果':filter!=='all'?'筛选结果':detailed?'全部小学科':'学科大类'):(query?'Search results':filter!=='all'?'Filtered fields':detailed?'All fields':'Subject groups');
-  $('map-guidance').textContent=detailed?(zh?'已展开当前小学科，向下浏览；点击节点查看故事和内容入口。':'Fields are open. Scroll to explore; select nodes for stories and content.'):(zh?'当前显示11个大类；点击学科或“展开80小学科”查看全部分支。':'Showing subject groups. Select a subject or Expand 80 fields to see all branches.');
+  $('map-guidance').textContent=zh?'拖动移动 · 滚轮或双指缩放 · 点击学科放大':'Drag to pan · Scroll or pinch to zoom · Select a subject to focus';
   $('directory-results').textContent=zh?`${fieldCount} / 80 个小学科 · ${categories.length} 个学科分支`:`${fieldCount} / 80 fields · ${categories.length} subject branches`;
   $('map-expand').textContent=zh?(detailed?'只看大类':'展开80小学科'):(detailed?'Subjects only':'Expand 80 fields');$('map-expand').setAttribute('aria-pressed',String(detailed));
   const counts={1:0,2:0,3:0};for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
