@@ -9,6 +9,11 @@ export function createMindMap({svg, frame, language, onActivate, onDismiss}) {
   const measure=document.createElement('canvas').getContext('2d');
   const family=getComputedStyle(svg).fontFamily;
   let model,nodes=[],width=frame.clientWidth,scale=1;
+  const header=document.querySelector('.topbar');
+  const headerHeight=()=>header?.getBoundingClientRect().height||0;
+  const syncHeader=()=>frame.closest('.overview-directory')?.style.setProperty('--atlas-header-height',`${headerHeight()}px`);
+  if(header)new ResizeObserver(syncHeader).observe(header);
+  syncHeader();
   const text=(group,label,x,y,className)=>group.append('text').attr('class',className).attr('x',x).attr('y',y).text(label);
   function wrap(label,size,maxWidth){
     measure.font=`500 ${size}px ${family}`;
@@ -153,7 +158,8 @@ export function createMindMap({svg, frame, language, onActivate, onDismiss}) {
   }
   function resizeText(next){
     if(!model)return;
-    const anchor=[...svg.querySelectorAll('.map-field')].find(el=>{const r=el.getBoundingClientRect();return r.top>160&&r.top<innerHeight-100;});
+    const clearTop=headerHeight()+(document.querySelector('.atlas-toolbar')?.offsetHeight||0)+8;
+    const anchor=[...svg.querySelectorAll('.map-field')].find(el=>{const r=el.getBoundingClientRect();return r.top>clearTop&&r.top<innerHeight-100;});
     const before=anchor?.getBoundingClientRect().top,id=anchor?.dataset.node;
     scale=Math.max(.85,Math.min(1.3,next));render(model);
     if(id){const target=[...svg.querySelectorAll('[data-node]')].find(el=>el.dataset.node===id);if(target)window.scrollBy({top:target.getBoundingClientRect().top-before,behavior:'instant'});}
@@ -162,7 +168,7 @@ export function createMindMap({svg, frame, language, onActivate, onDismiss}) {
     const id=code?`category-${code}`:'root';
     const target=[...svg.querySelectorAll('[data-node]')].find(el=>el.dataset.node===id);if(!target)return;
     const toolbar=document.querySelector('.atlas-toolbar');
-    window.scrollTo({top:Math.max(0,scrollY+target.getBoundingClientRect().top-(toolbar?.offsetHeight||0)-30),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    window.scrollTo({top:Math.max(0,scrollY+target.getBoundingClientRect().top-headerHeight()-(toolbar?.offsetHeight||0)-30),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     target.classList.add('is-located');setTimeout(()=>target.classList.remove('is-located'),1600);
   }
   document.getElementById('map-zoom-in').addEventListener('click',()=>resizeText(scale+.15));
