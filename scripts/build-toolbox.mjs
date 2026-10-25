@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 const root = new URL('../', import.meta.url);
-await import('./export-framework-stories.mjs');
+const landingOnly = process.argv.includes('--landing-only');
+if (!landingOnly) await import('./export-framework-stories.mjs');
 const dictionary = JSON.parse(await readFile(new URL('toolbox/english.json', root), 'utf8'));
 function english(source, translations = dictionary) {
   const pairs = Object.entries(translations).sort((a, b) => b[0].length - a[0].length);
@@ -20,11 +21,14 @@ const app = english(await readFile(new URL('toolbox/app.js', root), 'utf8'))
   .replace("url: '/speaking/'", "url: '/speaking/en/'")
   .replace("url: '/toolbox/dishkai/'", "url: '/toolbox/dishkai/en/'")
   .replace("url: '/toolbox/frameworks/'", "url: '/toolbox/frameworks/en/'")
+  .replace("url: '/toolbox/overview/'", "url: '/toolbox/overview/en/'")
   .replace("url: '/toolbox/metronome/'", "url: '/toolbox/metronome/en/'");
 if (/[\u3400-\u9fff]/u.test(app) || /[\u3400-\u9fff]/u.test(html.replace('中文', ''))) throw new Error('Missing Toolbox English translation');
 await writeFile(new URL('en/index.html', target), html);
 await writeFile(new URL('en/app.js', target), app);
+await import('./build-content-overview.mjs');
 
+if (!landingOnly) {
 const frameworksTarget = new URL('frameworks/', target);
 await mkdir(new URL('en/', frameworksTarget), { recursive: true });
 for (const name of ['index.html', 'app.js', 'styles.css', 'data.js', 'diagrams.js', 'library.js', 'references.js', 'stories.js', 'framework-stories.js']) {
@@ -68,4 +72,5 @@ const metronomeHtml = english(await readFile(new URL('toolbox/metronome/index.ht
   .replace('lang="zh" aria-current="true"', 'lang="zh"');
 if (/[\u3400-\u9fff]/u.test(metronomeHtml.replaceAll('中文', ''))) throw new Error('Missing Metronome English translation');
 await writeFile(new URL('en/index.html', metronomeTarget), metronomeHtml);
-console.log('Built Chinese and English Toolbox, management frameworks, running metronome and DishKAI menu reader.');
+}
+console.log(landingOnly ? 'Built Chinese and English Toolbox landing and content overview.' : 'Built Chinese and English Toolbox, content overview, management frameworks, running metronome and DishKAI menu reader.');

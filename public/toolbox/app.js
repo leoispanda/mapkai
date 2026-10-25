@@ -3,6 +3,7 @@ const $ = id => document.getElementById(id);
 const key = 'mapkai-toolbox:v1';
 const categories = { speak: '表达与对话', learn: '学习与探索', think: '思考与创作', other: '其他工具' };
 const builtins = [
+  { id: 'overview', name: '内容总览', description: '一眼看清已有内容，直接打开想学的。', category: 'learn', url: '/toolbox/overview/', icon: 'map' },
   { id: 'speaking', name: '英语对话', description: '用语音练英语，结束后回顾对话。', category: 'speak', url: '/speaking/', icon: 'voice' },
   { id: 'map', name: '知识地图', description: '探索知识领域之间的联系。', category: 'learn', url: '/map', icon: 'map' },
   { id: 'stories', name: '知识故事', description: '通过故事理解一个概念。', category: 'learn', url: '/categories', icon: 'book' },

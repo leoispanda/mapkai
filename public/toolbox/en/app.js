@@ -3,6 +3,7 @@ const $ = id => document.getElementById(id);
 const key = 'mapkai-toolbox:v1';
 const categories = { speak: 'Speaking & conversation', learn: 'Learning & discovery', think: 'Thinking & creating', other: 'Other tools' };
 const builtins = [
+  { id: 'overview', name: 'Content Overview', description: 'See what is available and open what you want to learn.', category: 'learn', url: '/toolbox/overview/en/', icon: 'map' },
   { id: 'speaking', name: 'Speaking Studio', description: 'Practise spoken English and review your conversation.', category: 'speak', url: '/speaking/en/', icon: 'voice' },
   { id: 'map', name: 'Knowledge Map', description: 'Explore connections across fields of knowledge.', category: 'learn', url: '/map', icon: 'map' },
   { id: 'stories', name: 'Knowledge Stories', description: 'Understand a concept through a story.', category: 'learn', url: '/categories', icon: 'book' },
