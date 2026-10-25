@@ -11,25 +11,30 @@
   <link rel="stylesheet" href="/site-shell.css?v=0.1.310">
   <link rel="stylesheet" href="/toolbox/overview/styles.css?v=__CATALOG_REVISION__">
   <script src="/site-shell.js?v=0.1.310" defer></script>
+  <script src="/toolbox/overview/vendor/d3.v7.9.0.min.js" defer></script>
   <script type="module" src="/toolbox/overview/app.js?v=__CATALOG_REVISION__"></script>
 </head>
 <body class="overview-page" data-mapkai-page="toolbox">
   <header class="topbar"><a class="brand" href="/" aria-label="MapKAI 首页"><img src="/mapkai-logo-transparent.png" alt="MapKAI"></a><nav aria-label="主导航"><a href="/toolbox/">MapKAI Toolbox</a></nav><div class="language-switch" aria-label="Language"><a href="/toolbox/overview/en/" lang="en">EN</a><span>/</span><a href="/toolbox/overview/" lang="zh" aria-current="true">中文</a></div></header>
   <main class="overview-main" data-catalog-revision="__CATALOG_REVISION__">
     <a class="overview-back" href="/toolbox/">← 返回 Toolbox</a>
-    <header class="overview-hero"><p class="eyebrow">MAPKAI / CONTENT ATLAS</p><h1>内容总览</h1><p class="overview-intro">看见已有的内容，找到下一段想学的。</p><p id="coverage" class="overview-coverage" aria-live="polite">正在整理内容目录…</p></header>
-    <nav id="content-counts" class="overview-counts" aria-label="内容分类"></nav>
-    <section id="course" class="overview-course" aria-labelledby="course-title"></section>
+    <header class="overview-hero"><div><p class="eyebrow">MAPKAI / CONTENT ATLAS</p><h1>内容总览</h1><p class="overview-intro">一张地图，看见知识长到哪里。</p></div><nav id="content-counts" class="overview-counts" aria-label="内容分类"></nav></header>
     <section class="overview-directory" aria-labelledby="directory-title">
-      <div class="directory-heading"><div><h2 id="directory-title">沿着学科找内容</h2><p>打开大类，再展开小学科与三个故事。</p></div><div class="directory-controls"><label><span class="sr-only">搜索内容</span><input id="overview-search" type="search" placeholder="搜索学科、故事或歌名…" maxlength="150" autocomplete="off"></label><label><span class="sr-only">筛选资源状态</span><select id="overview-filter"><option value="all">全部小学科</option><option value="complete" disabled>三个绿灯齐备</option><option value="video" disabled>已有学科视频</option><option value="music">已有共享歌曲</option><option value="older">含旧版故事</option></select></label></div></div>
-      <div class="overview-legend"><span><i class="resource-dot on" aria-hidden="true"></i>绿灯：已有资源</span><span><i class="resource-dot" aria-hidden="true"></i>灰灯：待补</span><span>顺序：音乐 / 视频 / 故事</span><span>共：分组共享歌曲</span></div>
-      <p class="overview-availability">绿灯包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。</p>
-      <div class="overview-tree-root"><span>MapKAI</span><p id="readiness" aria-live="polite"></p></div>
-      <p id="directory-results" class="directory-results" role="status" aria-live="polite"></p>
-      <div id="overview-tree" class="overview-tree"></div>
+      <div class="directory-heading"><div class="map-breadcrumb"><button id="map-home" type="button" aria-label="返回学科全景">MapKAI</button><span aria-hidden="true">／</span><h2 id="directory-title">学科全景</h2></div><div class="directory-controls"><label><span class="sr-only">搜索内容</span><input id="overview-search" type="search" placeholder="搜索学科、故事或歌名…" maxlength="150" autocomplete="off"></label><label><span class="sr-only">筛选资源状态</span><select id="overview-filter"><option value="all">全部小学科</option><option value="complete" disabled>三个绿灯齐备</option><option value="video" disabled>已有学科视频</option><option value="music">已有共享歌曲</option><option value="older">含旧版故事</option></select></label><button id="map-expand" type="button" aria-pressed="false">展开小学科</button></div></div>
+      <div class="map-caption"><p id="coverage" aria-live="polite">正在整理内容目录…</p><p id="readiness" aria-live="polite"></p></div>
+      <aside id="map-selection" class="map-selection" aria-live="polite"></aside>
+      <div id="map-frame" class="map-frame">
+        <svg id="content-map" class="content-map" role="group" aria-labelledby="map-title map-description" tabindex="0"><title id="map-title">MapKAI 内容思维导图</title><desc id="map-description">点击学科节点逐层展开。拖动画布移动，用加减按钮缩放。键盘可用 Tab 选择节点、Enter 展开，方向键平移。</desc></svg>
+        <div class="map-tools" role="group" aria-label="地图操作"><button id="map-zoom-in" type="button" aria-label="放大地图">＋</button><output id="map-zoom" aria-label="缩放比例">100%</output><button id="map-zoom-out" type="button" aria-label="缩小地图">−</button><button id="map-fit" type="button">适应画面</button></div>
+        <p class="map-hint">点击节点展开 · 拖动平移 · 滚轮缩放</p>
+        <p id="directory-results" class="directory-results" role="status" aria-live="polite"></p>
+      </div>
       <div id="overview-empty" class="overview-empty" hidden><p>没有找到相关内容，试试另一个关键词。</p><button id="overview-reset" class="button secondary" type="button">查看全部内容</button></div>
+      <div class="overview-legend"><span><i class="resource-dot on" aria-hidden="true"></i>绿灯：已有资源</span><span><i class="resource-dot" aria-hidden="true"></i>灰灯：待补</span><span>顺序：音乐 / 视频 / 故事</span><span>共：分组共享歌曲</span><span><i class="resource-dot on small" aria-hidden="true"></i>三个小灯：三个故事</span></div>
+      <p class="overview-availability">绿灯包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。</p>
       <p id="video-status" class="overview-status" role="status" aria-live="polite"></p>
     </section>
+    <section id="course" class="overview-course" aria-labelledby="course-title"></section>
     <details id="music-library" class="overview-library"><summary><h2>全部歌曲</h2><span id="song-count"></span></summary><div id="song-list" class="overview-song-list"></div></details>
     <details id="film-library" class="overview-library"><summary><h2>音乐影像</h2><span id="film-count"></span></summary><div id="film-list" class="overview-films"></div></details>
     <noscript><p>请启用 JavaScript 查看内容目录。</p></noscript>

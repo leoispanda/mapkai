@@ -35,6 +35,12 @@ let songsCurrent = false;
 let query = '';
 let filter = 'all';
 let songsById = new Map();
+let mindMap;
+let focusedCategory = null;
+let focusedField = null;
+let expandedAll = false;
+let selected = 'root';
+const expandedFields = new Set();
 
 export function videoIndex(payload) {
   if (!Array.isArray(payload?.items) || payload.items.length > 150) throw new Error('Invalid video directory');
@@ -47,14 +53,6 @@ export function videoIndex(payload) {
   return output;
 }
 function videoFor(item) { return videos === null ? undefined : videos.get(item.title.en) || null; }
-function signal(ready, label, shared = false, small = false) {
-  const state = ready === undefined ? 'unknown' : ready ? 'on' : '';
-  const description = `${label}: ${ready === undefined ? t('unknown') : ready ? t('ready') : t('missing')}${shared ? ` · ${t('shared')}` : ''}`;
-  return `<span class="resource-dot ${state}${small ? ' small' : ''}" role="img" aria-label="${esc(description)}" title="${esc(description)}">${shared && ready && !small ? (zh ? '共' : 'S') : ''}</span>`;
-}
-function resourceSignals(song, video, stories, shared = false) {
-  return `<span class="resource-signals">${signal(Boolean(song), t('music'), shared)}${signal(video === undefined ? undefined : Boolean(video), t('video'))}${signal(stories, t('stories'))}</span>`;
-}
 function fieldScore(field) {
   const v = videoFor(field);
   return v === undefined ? null : Number(songsById.has(field.songId)) + Number(Boolean(v)) + Number(field.stories.some(s => s.ready));
@@ -73,50 +71,101 @@ function passesFilter(field) {
   if (filter === 'older') return field.stories.some(story => !story.newer);
   return true;
 }
-function renderStory(story) {
-  const title = pick(story.title);
-  const label = story.newer ? t('newer') : t('older');
-  return `<li class="overview-story" data-story="${esc(story.id)}"><div class="story-title-row">${signal(story.ready, title, false, true)}${story.public ? anchor(`/concept-fables/${story.id}`, title) : `<span>${esc(title)}</span>`}</div><p class="story-state">${esc(label)} · ${esc(story.public ? t('open') : t('pending'))}</p></li>`;
+function graphSignal(ready, label, shared = false) {
+  return {ready, shared, label:`${label}: ${ready === undefined ? t('unknown') : ready ? t('ready') : t('missing')}${shared ? ` · ${t('shared')}` : ''}`};
 }
-function renderField(field, openKeys) {
-  const video = videoFor(field);
-  const song = songsById.get(field.songId);
-  const autoOpen = Boolean(query && fieldMatches(field));
-  return `<details class="overview-field" data-key="field-${field.code}"${openKeys.has(`field-${field.code}`) || autoOpen ? ' open' : ''}><summary><span class="field-name">${esc(pick(field.title))}</span>${resourceSignals(song, video, field.stories.some(s => s.ready), Boolean(song))}</summary><div class="field-detail"><div class="overview-resource-links">${anchor(`/fields/${field.slug}`, t('openField'))}${watchAnchor(video, t('watchField'))}${song ? songAnchor(song.id, t('listenShared')) : ''}</div><ul class="overview-stories">${field.stories.map(renderStory).join('')}</ul></div></details>`;
+function graphSignals(item, stories, shared = false) {
+  const song = songsById.get(item.songId), video = videoFor(item);
+  return [graphSignal(Boolean(song),t('music'),shared&&Boolean(song)),graphSignal(video===undefined?undefined:Boolean(video),t('video')),graphSignal(stories,t('stories'))];
 }
-function renderTree() {
-  const openKeys = new Set([...$('overview-tree').querySelectorAll('details[open]')].map(el => el.dataset.key));
-  let fieldCount = 0;
-  const groups = [];
-  for (const category of catalog.categories) {
-    const song = songsById.get(category.songId);
-    const categoryMatch = matches(Object.values(category.title), category.introduction ? Object.values(category.introduction.title) : []) || Boolean(query && songMatches(song));
-    const fields = category.fields.filter(f => (categoryMatch || fieldMatches(f)) && passesFilter(f));
-    if (!fields.length) continue;
-    fieldCount += fields.length;
-    const video = videoFor(category);
-    const fieldVideos = videos === null ? '—' : category.fields.filter(f => videoFor(f)).length;
-    const meta = zh ? `${category.fields.length} 个小学科 · 视频 ${fieldVideos}/${category.fields.length}` : `${category.fields.length} fields · Videos ${fieldVideos}/${category.fields.length}`;
-    const intro = category.introduction;
-    const links = [anchor(`/categories/${category.code}`, t('openSubject')),
-      intro?.public ? anchor(`/lens-stories/${intro.id}`, t('readIntro')) : '', watchAnchor(video, t('watch')),
-      song ? songAnchor(song.id, t('listen')) : ''].filter(Boolean).join('');
-    groups.push(`<details class="overview-category" data-key="category-${category.code}"${openKeys.has(`category-${category.code}`) || query || filter !== 'all' ? ' open' : ''}><summary><span><span class="category-name">${esc(pick(category.title))}</span><span class="category-meta">${esc(meta)}</span></span>${resourceSignals(song, video, Boolean(intro?.ready))}</summary><div class="category-body"><div class="overview-resource-links">${links}</div><div class="overview-fields">${fields.map(f => renderField(f, openKeys)).join('')}</div></div></details>`);
+function resetMap() {
+  query=''; filter='all'; focusedCategory=null; focusedField=null; expandedAll=false; selected='root'; expandedFields.clear();
+  $('overview-search').value=''; $('overview-filter').value='all'; renderTree(true); renderSongs();
+}
+function activateNode(node) {
+  if(node.kind==='root'){resetMap();return;}
+  selected=node.id;
+  if(node.kind==='category'){
+    if(focusedCategory===node.item.code&&!focusedField){resetMap();return;}
+    focusedCategory=node.item.code; focusedField=null; expandedAll=false; expandedFields.clear();
+  }else if(node.kind==='field'){
+    focusedCategory=node.category.code; expandedAll=false;
+    if(expandedFields.has(node.id)){expandedFields.delete(node.id);focusedField=null;}
+    else{expandedFields.clear();expandedFields.add(node.id);focusedField=node.item.code;}
   }
-  $('overview-tree').innerHTML = groups.join('');
-  $('overview-empty').hidden = fieldCount > 0;
-  $('directory-results').textContent = zh ? `显示 ${groups.length} 个大类 · ${fieldCount} / ${catalog.categories.flatMap(c => c.fields).length} 个小学科` : `${groups.length} subjects · ${fieldCount} / ${catalog.categories.flatMap(c => c.fields).length} fields`;
-  const counts = { 1:0, 2:0, 3:0 };
-  for (const field of catalog.categories.flatMap(c => c.fields)) { const score = fieldScore(field); if (score !== null) counts[score] = (counts[score] || 0) + 1; }
-  $('readiness').textContent = videos === null ? (zh ? '音乐 / 视频 / 故事 · 正在核实视频资源' : 'Music / videos / stories · Verifying videos') : (zh ? `${counts[3]} 个大满贯 · ${counts[2]} 个双绿 · ${counts[1]} 个单绿` : `${counts[3]} with all three · ${counts[2]} with two · ${counts[1]} with one`);
+  renderTree(node.kind!=='story');
+}
+function renderSelection(node) {
+  if(!node||node.kind==='root'){
+    $('map-selection').innerHTML=`<p class="selection-instruction">${esc(zh?'学科 → 小学科 → 三个故事。点击分支查看资源，点击 MapKAI 回到全景。':'Subject → Field → Three stories. Select a branch for its resources; select MapKAI to return to the overview.')}</p>`;return;
+  }
+  const item=node.item;
+  let links=[],note='';
+  if(node.kind==='category'){
+    links=[anchor(`/categories/${item.code}`,t('openSubject')),item.introduction?.public?anchor(`/lens-stories/${item.introduction.id}`,t('readIntro')):'',watchAnchor(videoFor(item),t('watch')),songsById.has(item.songId)?songAnchor(item.songId,t('listen')):''];
+    note=item.introduction?`${t(item.introduction.public?'open':'pending')} · ${pick(item.introduction.title)}`:'';
+  }else if(node.kind==='field'){
+    links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):''];
+    note=zh?'三个小灯对应三个故事。点击故事查看版本；点击学科返回其他分支。':'Each small light represents a story. Select it for its version; select the subject to return to its other fields.';
+  }else{
+    links=item.public?[anchor(`/concept-fables/${item.id}`,t('read'))]:[];
+    note=`${pick(item.concept)} · ${t(item.newer?'newer':'older')} · ${t(item.public?'open':'pending')}`;
+  }
+  $('map-selection').innerHTML=`<div class="selection-heading"><span>${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p></div>`;
+}
+function renderTree(refit = false) {
+  const root={id:'root',kind:'root',label:'MapKAI',subtitle:zh?'11 大类 · 80 小学科':'11 subjects · 80 fields',note:zh?'240 个故事':'240 stories',description:zh?'MapKAI，返回全部学科':'MapKAI, return to all subjects'};
+  const categories=[], allNodes=[root]; let fieldCount=0;
+  for(const category of catalog.categories){
+    if(focusedCategory&&category.code!==focusedCategory)continue;
+    const song=songsById.get(category.songId);
+    const categoryMatch=matches(Object.values(category.title),category.introduction?Object.values(category.introduction.title):[])||Boolean(query&&songMatches(song));
+    const fields=category.fields.filter(f=>(categoryMatch||fieldMatches(f))&&passesFilter(f));
+    if(!fields.length)continue;
+    const shownFields=focusedField?fields.filter(f=>f.code===focusedField):fields;
+    fieldCount+=shownFields.length;
+    const showFields=Boolean(focusedCategory||expandedAll||query||filter!=='all');
+    const complete=category.fields.filter(f=>fieldScore(f)===3).length;
+    const subtitle=zh?`${fields.length} 小学科${videos===null?'':` · ${complete} 三绿`}`:`${fields.length} fields${videos===null?'':` · ${complete} complete`}`;
+    const node={id:`category-${category.code}`,kind:'category',item:category,label:pick(category.title),subtitle,expandable:true,expanded:showFields,signals:graphSignals(category,Boolean(category.introduction?.ready))};
+    node.description=`${node.label}. ${subtitle}. ${node.signals.map(s=>s.label).join('. ')}`;
+    allNodes.push(node);
+    if(showFields)node.children=shownFields.map(field=>{
+      const newer=field.stories.filter(s=>s.newer).length;
+      const note=zh?`${newer} 新版 · ${field.stories.length-newer} 旧版`:`${newer} newer · ${field.stories.length-newer} earlier`;
+      const id=`field-${field.code}`;
+      const expand=expandedFields.has(id)||Boolean(query&&field.stories.some(s=>matches(Object.values(s.title),Object.values(s.concept))));
+      const f={id,kind:'field',item:field,category,label:pick(field.title),subtitle:fieldScore(field)===null?t('unknown'):zh?(fieldScore(field)===3?'大满贯':`${fieldScore(field)} 个绿灯`):(fieldScore(field)===3?'All three ready':`${fieldScore(field)} resources`),note,expandable:true,expanded:expand,signals:graphSignals(field,field.stories.some(s=>s.ready),true),storySignals:field.stories.map(s=>graphSignal(s.ready,pick(s.title)))};
+      f.description=`${f.label}. ${f.subtitle}. ${note}. ${f.signals.map(s=>s.label).join('. ')}`;
+      allNodes.push(f);
+      if(expand)f.children=field.stories.map(story=>{
+        const child={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
+        child.description=`${child.label}. ${child.subtitle}. ${t(story.public?'open':'pending')}`;
+        allNodes.push(child);return child;
+      });
+      return f;
+    });
+    categories.push(node);
+  }
+  if(!allNodes.some(n=>n.id===selected))selected='root';
+  mindMap.render({root,categories,selected,focused:Boolean(focusedCategory)},refit);
+  renderSelection(allNodes.find(n=>n.id===selected));
+  $('overview-empty').hidden=fieldCount>0;
+  $('directory-title').textContent=focusedCategory?pick(catalog.categories.find(c=>c.code===focusedCategory).title):(zh?'学科全景':'All subjects');
+  $('directory-results').textContent=zh?`${categories.length} 大类 · ${fieldCount} / 80 小学科`:`${categories.length} subjects · ${fieldCount} / 80 fields`;
+  $('map-expand').textContent=zh?(expandedAll?'收起小学科':'展开小学科'):(expandedAll?'Collapse fields':'Expand fields');
+  $('map-expand').setAttribute('aria-pressed',String(expandedAll));
+  const counts={1:0,2:0,3:0};
+  for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
+  $('readiness').textContent=videos===null?(zh?'正在核实视频资源':'Verifying video resources'):(zh?`${counts[3]} 大满贯 · ${counts[2]} 双绿 · ${counts[1]} 单绿`:`${counts[3]} complete · ${counts[2]} with two · ${counts[1]} with one`);
 }
 function renderCounts() {
   const intros = catalog.categories.filter(c => c.introduction?.public).length;
   const draftCount = catalog.categories.flatMap(c => c.fields).flatMap(f => f.stories).filter(s => s.ready && !s.public).length;
   const workCount = films === null ? '—' : new Set(films.map(f => pick(f.title).replace(/\s*\(Draft \d+\)$/, '').toLowerCase())).size;
   const stats = [
-    ['#overview-tree', intros, t('introCollection'), zh ? `另有 ${draftCount} 篇故事稿已备` : `${draftCount} further story drafts ready`],
-    ['#overview-tree', videos === null ? '—' : videos.size, t('videoCollection'), videoFailed ? t('unknown') : t('preview')],
+    ['#content-map', intros, t('introCollection'), zh ? `另有 ${draftCount} 篇故事稿已备` : `${draftCount} further story drafts ready`],
+    ['#content-map', videos === null ? '—' : videos.size, t('videoCollection'), videoFailed ? t('unknown') : t('preview')],
     ['#music-library', catalog.songs.length, t('songCollection'), songsCurrent ? (zh ? '按录音计数 · 含不同版本' : 'Recordings, including alternate versions') : (zh ? '目录快照' : 'Directory snapshot')],
     ['#film-library', workCount, t('films'), films === null ? (filmFailed ? t('failed') : t('loading')) : (zh ? `${films.length} 个创作版本` : `${films.length} creative versions`)],
   ];
@@ -145,10 +194,15 @@ async function initialize() {
     catalog = await json(url);
     if (catalog.schema !== 'mapkai-content-overview.v1' || !Array.isArray(catalog.categories) || !Array.isArray(catalog.songs)) throw new Error('Invalid directory');
     songsById = new Map(catalog.songs.map(s => [s.id, s]));
-    renderCounts(); renderCourse(); renderTree(); renderSongs();
-    $('overview-search').addEventListener('input', event => { query = event.target.value.trim().toLocaleLowerCase(); renderTree(); renderSongs(); });
-    $('overview-filter').addEventListener('change', event => { filter = event.target.value; renderTree(); });
-    $('overview-reset').addEventListener('click', () => { query = ''; filter = 'all'; $('overview-search').value = ''; $('overview-filter').value = 'all'; renderTree(); renderSongs(); $('overview-search').focus(); });
+    const graphUrl=new URL('./graph.js',import.meta.url); graphUrl.search=new URL(import.meta.url).search;
+    const {createMindMap}=await import(graphUrl.href);
+    mindMap=createMindMap({svg:$('content-map'),frame:$('map-frame'),language,onActivate:activateNode});
+    renderCounts(); renderCourse(); renderTree(true); renderSongs();
+    $('overview-search').addEventListener('input',event=>{query=event.target.value.trim().toLocaleLowerCase();focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);renderSongs();});
+    $('overview-filter').addEventListener('change',event=>{filter=event.target.value;focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);});
+    $('overview-reset').addEventListener('click',resetMap);
+    $('map-home').addEventListener('click',resetMap);
+    $('map-expand').addEventListener('click',()=>{expandedAll=!expandedAll;focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);});
     $('content-counts').addEventListener('click', event => { const href = event.target.closest('a')?.getAttribute('href'); if (href === '#music-library' || href === '#film-library') $(href.slice(1)).open = true; });
     await Promise.allSettled([
       json('/music/song-catalog.json').then(payload => {
