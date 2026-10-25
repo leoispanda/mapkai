@@ -46,6 +46,11 @@ export const PUBLIC_PREVIEW_FIELDS = Object.freeze({
   '0711': 'Chemical engineering and processes',
   '0712': 'Environmental protection technology',
   '0713': 'Electricity and energy',
+  '0714': 'Electronics and automation',
+  '0715': 'Mechanics and metal trades',
+  '0716': 'Motor vehicles, ships and aircraft',
+  '0721': 'Food processing',
+  '0722': 'Materials (glass, paper, plastic and wood)',
 });
 
 export const PUBLIC_PREVIEW_FIELD_IDS = Object.freeze(
