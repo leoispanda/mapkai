@@ -123,15 +123,18 @@ test('invalid or multiple ranges respond 416 after HEAD without fetching the vid
   }
 });
 
-test('HEAD never reads a body, supports seeking and defaults to the phone rendition', async () => {
-  for (const ranged of [false, true]) {
-    const { env, calls } = fixture();
-    const response = await video({ request: new Request(url(`id=${first.id}`), { method: 'HEAD',
-      ...(ranged ? { headers: { Range: 'bytes=0-99' } } : {}) }), env });
-    assert.equal(response.status, ranged ? 206 : 200);
-    assert.equal(response.headers.get('Content-Length'), ranged ? '100' : String(rendition.bytes));
-    assert.equal(await response.text(), '');
-    assert.deepEqual(calls, [{ operation: 'head', key: rendition.objectKey }]);
+test('HEAD never reads a body, supports seeking and defaults to HD with a fallback for older films', async () => {
+  for (const item of MUSIC_VIDEOS) {
+    const preferred = item.qualities.find(quality => quality.id === 'hd') || item.qualities[0];
+    for (const ranged of [false, true]) {
+      const { env, calls } = fixture();
+      const response = await video({ request: new Request(url(`id=${item.id}`), { method: 'HEAD',
+        ...(ranged ? { headers: { Range: 'bytes=0-99' } } : {}) }), env });
+      assert.equal(response.status, ranged ? 206 : 200);
+      assert.equal(response.headers.get('Content-Length'), ranged ? '100' : String(preferred.bytes));
+      assert.equal(await response.text(), '');
+      assert.deepEqual(calls, [{ operation: 'head', key: preferred.objectKey }]);
+    }
   }
 });
 

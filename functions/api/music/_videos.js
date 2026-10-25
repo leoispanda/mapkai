@@ -211,16 +211,18 @@ export const MUSIC_VIDEOS = freeze([
   }
 ]);
 
-export function findVideoQuality(id, quality = 'phone') {
+export function findVideoQuality(id, quality) {
   const video = MUSIC_VIDEOS.find(item => item.id === id);
-  const rendition = video?.qualities.find(item => item.id === quality);
+  const rendition = quality === undefined
+    ? video?.qualities.find(item => item.id === 'hd') || video?.qualities[0]
+    : video?.qualities.find(item => item.id === quality);
   return rendition ? { video, rendition } : null;
 }
 
 export function publicVideos() {
   return MUSIC_VIDEOS.map(({ id, title, description, durationSeconds, poster, featured, version, qualities }) => ({
     id, title, description, durationSeconds, poster, featured, version,
-    qualities: qualities.map(({ id: quality, label, bytes, width, height }) => {
+    qualities: [...qualities].sort((a, b) => Number(a.id !== 'hd') - Number(b.id !== 'hd')).map(({ id: quality, label, bytes, width, height }) => {
       const url = `/api/music/video?id=${encodeURIComponent(id)}&quality=${encodeURIComponent(quality)}&revision=${VIDEO_REVISION}`;
       return { id: quality, label, bytes, width, height, url };
     }),

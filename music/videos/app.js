@@ -55,7 +55,7 @@
       .map(quality => ({...quality, url:mediaUrl(quality.url,raw.id,quality.id)}))
       .filter(quality => quality.url);
     if (!qualities.length || new Set(qualities.map(quality => quality.id)).size !== qualities.length) return null;
-    qualities.sort((a,b) => Number(a.id !== 'phone') - Number(b.id !== 'phone'));
+    qualities.sort((a,b) => Number(a.id !== 'hd') - Number(b.id !== 'hd'));
     return {...raw, qualities, version:typeof raw.version === 'string' ? raw.version.slice(0,48) : ''};
   }
 
