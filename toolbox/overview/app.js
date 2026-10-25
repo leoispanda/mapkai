@@ -36,10 +36,9 @@ let query = '';
 let filter = 'all';
 let songsById = new Map();
 let mindMap;
-let focusedCategory = null;
-let focusedField = null;
-let expandedAll = false;
+let expandedAll = true;
 let selected = 'root';
+let selectionReturn = null;
 const expandedFields = new Set();
 
 export function videoIndex(payload) {
@@ -58,7 +57,7 @@ function fieldScore(field) {
   return v === undefined ? null : Number(songsById.has(field.songId)) + Number(Boolean(v)) + Number(field.stories.some(s => s.ready));
 }
 function songAnchor(id, label) { return anchor(`/share/song/${id}`, label); }
-function watchAnchor(video, label) { return video ? anchor(`/share/video/${video.slug}`, label) : `<span>${esc(video === undefined ? t('unknown') : t('missing'))}</span>`; }
+function watchAnchor(video, label) { return video ? anchor(`/share/video/${video.slug}`, label) : `<span>${esc(video === undefined ? (zh?'视频待核实':'Video unverified') : (zh?'视频待补':'Video needed'))}</span>`; }
 function matches(...values) { return !query || values.flat(Infinity).filter(Boolean).join(' ').toLocaleLowerCase().includes(query); }
 function songMatches(song) { return song && matches(song.title, song.subject, Object.values(song.concept)); }
 function fieldMatches(field) {
@@ -68,6 +67,8 @@ function passesFilter(field) {
   if (filter === 'complete') return fieldScore(field) === null || fieldScore(field) === 3;
   if (filter === 'video') return videoFor(field) !== null;
   if (filter === 'music') return songsById.has(field.songId);
+  if (filter === 'missing-music') return !songsById.has(field.songId);
+  if (filter === 'missing-video') return videoFor(field) === null;
   if (filter === 'older') return field.stories.some(story => !story.newer);
   return true;
 }
@@ -79,85 +80,95 @@ function graphSignals(item, stories, shared = false) {
   return [graphSignal(Boolean(song),t('music'),shared&&Boolean(song)),graphSignal(video===undefined?undefined:Boolean(video),t('video')),graphSignal(stories,t('stories'))];
 }
 function resetMap() {
-  query=''; filter='all'; focusedCategory=null; focusedField=null; expandedAll=false; selected='root'; expandedFields.clear();
-  $('overview-search').value=''; $('overview-filter').value='all'; renderTree(true); renderSongs();
+  query='';filter='all';expandedAll=true;selected='root';expandedFields.clear();
+  $('overview-search').value='';$('overview-subject').value='';renderTree();renderSongs();
+}
+function closeSelection() {
+  const previous=selectionReturn;selected='root';renderTree();
+  const target=previous?.kind==='story'?[...$('content-map').querySelectorAll('[data-story-id]')].find(el=>el.dataset.storyId===previous.item.id):[...$('content-map').querySelectorAll('[data-node]')].find(el=>el.dataset.node===previous?.id);
+  target?.focus({preventScroll:true});
 }
 function activateNode(node) {
   if(node.kind==='root'){resetMap();return;}
-  selected=node.id;
-  if(node.kind==='category'){
-    if(focusedCategory===node.item.code&&!focusedField){resetMap();return;}
-    focusedCategory=node.item.code; focusedField=null; expandedAll=false; expandedFields.clear();
-  }else if(node.kind==='field'){
-    focusedCategory=node.category.code; expandedAll=false;
-    if(expandedFields.has(node.id)){expandedFields.delete(node.id);focusedField=null;}
-    else{expandedFields.clear();expandedFields.add(node.id);focusedField=node.item.code;}
+  selected=node.id;selectionReturn=node;
+  if(node.kind==='category'&&!expandedAll){expandedAll=true;renderTree();mindMap.focusCategory(node.item.code);return;}
+  if(node.kind==='field'){
+    if(expandedFields.has(node.id))expandedFields.delete(node.id);else{expandedFields.clear();expandedFields.add(node.id);}
   }
-  renderTree(node.kind!=='story');
+  renderTree();$('map-selection').focus({preventScroll:true});
+}
+function storyNode(story) {
+  const node={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
+  node.description=`${node.label}. ${node.subtitle}. ${t(story.public?'open':'pending')}`;
+  return node;
 }
 function renderSelection(node) {
-  if(!node||node.kind==='root'){
-    $('map-selection').innerHTML=`<p class="selection-instruction">${esc(zh?'学科 → 小学科 → 三个故事。点击分支查看资源，点击 MapKAI 回到全景。':'Subject → Field → Three stories. Select a branch for its resources; select MapKAI to return to the overview.')}</p>`;return;
-  }
-  const item=node.item;
-  let links=[],note='';
+  if(!node||node.kind==='root'){$('map-selection').hidden=true;return;}
+  const item=node.item;let links=[],note='',stories='';
   if(node.kind==='category'){
     links=[anchor(`/categories/${item.code}`,t('openSubject')),item.introduction?.public?anchor(`/lens-stories/${item.introduction.id}`,t('readIntro')):'',watchAnchor(videoFor(item),t('watch')),songsById.has(item.songId)?songAnchor(item.songId,t('listen')):''];
     note=item.introduction?`${t(item.introduction.public?'open':'pending')} · ${pick(item.introduction.title)}`:'';
   }else if(node.kind==='field'){
-    links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):''];
-    note=zh?'三个小灯对应三个故事。点击故事查看版本；点击学科返回其他分支。':'Each small light represents a story. Select it for its version; select the subject to return to its other fields.';
+    links=[anchor(`/fields/${item.slug}`,t('openField')),watchAnchor(videoFor(item),t('watchField')),songsById.has(item.songId)?songAnchor(item.songId,t('listenShared')):`<span>${esc(zh?'音乐待补':'Music needed')}</span>`];
+    note=zh?'三个故事的版本与阅读状态':'Versions and reading availability of the three stories';
+    stories=`<div class="selection-stories">${item.stories.map((story,i)=>`<button type="button" data-select-story="${esc(story.id)}"><span class="resource-dot small ${story.ready?'on':''}" aria-hidden="true"></span><span><strong>${i+1}. ${esc(pick(story.title))}</strong><small>${esc(t(story.newer?'newer':'older'))} · ${esc(t(story.public?'open':'pending'))}</small></span></button>`).join('')}</div>`;
   }else{
     links=item.public?[anchor(`/concept-fables/${item.id}`,t('read'))]:[];
     note=`${pick(item.concept)} · ${t(item.newer?'newer':'older')} · ${t(item.public?'open':'pending')}`;
   }
-  $('map-selection').innerHTML=`<div class="selection-heading"><span>${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p></div>`;
+  $('map-selection').innerHTML=`<button type="button" id="selection-close" class="selection-close" aria-label="${esc(zh?'关闭详情':'Close details')}">×</button><div class="selection-heading"><span>${esc(zh?'当前分支':'Selected branch')}</span><h3>${esc(node.label)}</h3></div><div class="selection-content"><div class="overview-resource-links">${links.filter(Boolean).join('')}</div><p>${esc(note)}</p>${stories}</div>`;
+  $('map-selection').hidden=false;
 }
-function renderTree(refit = false) {
-  const root={id:'root',kind:'root',label:'MapKAI',subtitle:zh?'11 大类 · 80 小学科':'11 subjects · 80 fields',note:zh?'240 个故事':'240 stories',description:zh?'MapKAI，返回全部学科':'MapKAI, return to all subjects'};
-  const categories=[], allNodes=[root]; let fieldCount=0;
+function availability(field) {
+  const video=videoFor(field),music=songsById.has(field.songId),stories=field.stories.some(s=>s.ready);
+  if(music&&video&&stories)return zh?'✓ 大满贯':'✓ All three ready';
+  const missing=[];
+  if(!music)missing.push(zh?'缺音乐':'Music needed');
+  if(video===undefined)missing.push(zh?'视频待核实':'Video unverified');else if(!video)missing.push(zh?'缺视频':'Video needed');
+  if(!stories)missing.push(zh?'缺故事':'Stories needed');
+  return missing.join(' · ');
+}
+function renderFilters() {
+  const fields=catalog.categories.flatMap(c=>c.fields);
+  const options=[['all',zh?'全部':'All',fields.length,false],['complete',zh?'大满贯':'All three',videos===null?'—':fields.filter(f=>fieldScore(f)===3).length,videos===null],
+    ['missing-music',zh?'缺音乐':'Music needed',fields.filter(f=>!songsById.has(f.songId)).length,false],['missing-video',zh?'缺视频':'Video needed',videos===null?'—':fields.filter(f=>videoFor(f)===null).length,videos===null],
+    ['video',zh?'有视频':'With video',videos===null?'—':fields.filter(f=>videoFor(f)).length,videos===null],['music',zh?'有共享歌':'Shared song',fields.filter(f=>songsById.has(f.songId)).length,false],['older',zh?'含旧版':'Earlier stories',fields.filter(f=>f.stories.some(story=>!story.newer)).length,false]];
+  if(!$('overview-filters').children.length)$('overview-filters').innerHTML=options.map(([value])=>`<button type="button" data-filter="${value}"><span></span><strong></strong></button>`).join('');
+  for(const [value,label,count,disabled]of options){const button=$('overview-filters').querySelector(`[data-filter="${value}"]`);button.querySelector('span').textContent=label;button.querySelector('strong').textContent=count;button.disabled=disabled;button.setAttribute('aria-pressed',String(filter===value));}
+}
+function renderTree() {
+  const root={id:'root',kind:'root',label:'MapKAI',subtitle:zh?'80 个小学科':'80 learning fields',description:zh?'MapKAI，显示全部80个小学科':'MapKAI, show all 80 fields'};
+  const categories=[],allNodes=[root];let fieldCount=0;
   for(const category of catalog.categories){
-    if(focusedCategory&&category.code!==focusedCategory)continue;
     const song=songsById.get(category.songId);
     const categoryMatch=matches(Object.values(category.title),category.introduction?Object.values(category.introduction.title):[])||Boolean(query&&songMatches(song));
     const fields=category.fields.filter(f=>(categoryMatch||fieldMatches(f))&&passesFilter(f));
     if(!fields.length)continue;
-    const shownFields=focusedField?fields.filter(f=>f.code===focusedField):fields;
-    fieldCount+=shownFields.length;
-    const showFields=Boolean(focusedCategory||expandedAll||query||filter!=='all');
-    const complete=category.fields.filter(f=>fieldScore(f)===3).length;
-    const subtitle=zh?`${fields.length} 小学科${videos===null?'':` · ${complete} 三绿`}`:`${fields.length} fields${videos===null?'':` · ${complete} complete`}`;
-    const node={id:`category-${category.code}`,kind:'category',item:category,label:pick(category.title),subtitle,expandable:true,expanded:showFields,signals:graphSignals(category,Boolean(category.introduction?.ready))};
-    node.description=`${node.label}. ${subtitle}. ${node.signals.map(s=>s.label).join('. ')}`;
-    allNodes.push(node);
-    if(showFields)node.children=shownFields.map(field=>{
-      const newer=field.stories.filter(s=>s.newer).length;
-      const note=zh?`${newer} 新版 · ${field.stories.length-newer} 旧版`:`${newer} newer · ${field.stories.length-newer} earlier`;
-      const id=`field-${field.code}`;
-      const expand=expandedFields.has(id)||Boolean(query&&field.stories.some(s=>matches(Object.values(s.title),Object.values(s.concept))));
-      const f={id,kind:'field',item:field,category,label:pick(field.title),subtitle:fieldScore(field)===null?t('unknown'):zh?(fieldScore(field)===3?'大满贯':`${fieldScore(field)} 个绿灯`):(fieldScore(field)===3?'All three ready':`${fieldScore(field)} resources`),note,expandable:true,expanded:expand,signals:graphSignals(field,field.stories.some(s=>s.ready),true),storySignals:field.stories.map(s=>graphSignal(s.ready,pick(s.title)))};
-      f.description=`${f.label}. ${f.subtitle}. ${note}. ${f.signals.map(s=>s.label).join('. ')}`;
-      allNodes.push(f);
-      if(expand)f.children=field.stories.map(story=>{
-        const child={id:`story-${story.id}`,kind:'story',item:story,label:pick(story.title),subtitle:`${t(story.newer?'newer':'older')} · ${t(story.public?'open':'prepared')}`,signals:[graphSignal(story.ready,pick(story.title))]};
-        child.description=`${child.label}. ${child.subtitle}. ${t(story.public?'open':'pending')}`;
-        allNodes.push(child);return child;
-      });
-      return f;
+    fieldCount+=fields.length;
+    const complete=fields.filter(f=>fieldScore(f)===3).length;
+    const subtitle=zh?`${fields.length} 小学科 · ${videos===null?'待核实':`${complete} 大满贯`}`:`${fields.length} fields · ${videos===null?'Unverified':`${complete} complete`}`;
+    const node={id:`category-${category.code}`,kind:'category',item:category,label:pick(category.title),subtitle,complete,total:fields.length,expandable:false,expanded:expandedAll};
+    node.description=`${node.label}. ${subtitle}`;allNodes.push(node);
+    if(expandedAll||query||filter!=='all')node.children=fields.map(field=>{
+      const children=field.stories.map(storyNode);allNodes.push(...children);
+      const f={id:`field-${field.code}`,kind:'field',item:field,category,label:pick(field.title),subtitle:availability(field),score:fieldScore(field),expandable:true,expanded:expandedFields.has(`field-${field.code}`)||Boolean(query&&field.stories.some(story=>matches(Object.values(story.title),Object.values(story.concept)))),signals:graphSignals(field,field.stories.some(s=>s.ready),true),storySignals:field.stories.map((story,i)=>({...graphSignal(story.ready,`${pick(story.title)} · ${t(story.newer?'newer':'older')} · ${t(story.public?'open':'pending')}`),id:story.id,newer:story.newer,node:children[i]}))};
+      f.description=`${f.label}. ${f.subtitle}. ${f.signals.map(s=>s.label).join('. ')}. ${f.storySignals.map(s=>s.label).join('. ')}`;
+      if(f.expanded)f.children=children;allNodes.push(f);return f;
     });
     categories.push(node);
   }
   if(!allNodes.some(n=>n.id===selected))selected='root';
-  mindMap.render({root,categories,selected,focused:Boolean(focusedCategory)},refit);
-  renderSelection(allNodes.find(n=>n.id===selected));
+  mindMap.render({root,categories,selected});renderSelection(allNodes.find(n=>n.id===selected));renderFilters();
   $('overview-empty').hidden=fieldCount>0;
-  $('directory-title').textContent=focusedCategory?pick(catalog.categories.find(c=>c.code===focusedCategory).title):(zh?'学科全景':'All subjects');
-  $('directory-results').textContent=zh?`${categories.length} 大类 · ${fieldCount} / 80 小学科`:`${categories.length} subjects · ${fieldCount} / 80 fields`;
-  $('map-expand').textContent=zh?(expandedAll?'收起小学科':'展开小学科'):(expandedAll?'Collapse fields':'Expand fields');
-  $('map-expand').setAttribute('aria-pressed',String(expandedAll));
-  const counts={1:0,2:0,3:0};
-  for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
-  $('readiness').textContent=videos===null?(zh?'正在核实视频资源':'Verifying video resources'):(zh?`${counts[3]} 大满贯 · ${counts[2]} 双绿 · ${counts[1]} 单绿`:`${counts[3]} complete · ${counts[2]} with two · ${counts[1]} with one`);
+  const detailed=Boolean(expandedAll||query||filter!=='all');
+  $('directory-title').textContent=zh?(query?'搜索结果':filter!=='all'?'筛选结果':detailed?'全部小学科':'学科大类'):(query?'Search results':filter!=='all'?'Filtered fields':detailed?'All fields':'Subject groups');
+  $('map-guidance').textContent=detailed?(zh?'已展开当前小学科，向下浏览；点击节点查看故事和内容入口。':'Fields are open. Scroll to explore; select nodes for stories and content.'):(zh?'当前显示11个大类；点击学科或“展开80小学科”查看全部分支。':'Showing subject groups. Select a subject or Expand 80 fields to see all branches.');
+  $('directory-results').textContent=zh?`${fieldCount} / 80 个小学科 · ${categories.length} 个学科分支`:`${fieldCount} / 80 fields · ${categories.length} subject branches`;
+  $('map-expand').textContent=zh?(detailed?'只看大类':'展开80小学科'):(detailed?'Subjects only':'Expand 80 fields');$('map-expand').setAttribute('aria-pressed',String(detailed));
+  const counts={1:0,2:0,3:0};for(const field of catalog.categories.flatMap(c=>c.fields)){const score=fieldScore(field);if(score!==null)counts[score]=(counts[score]||0)+1;}
+  $('readiness').textContent=videos===null?(zh?'正在核实视频资源':'Verifying videos'):(zh?`${counts[3]} 大满贯 · ${counts[2]} 双绿 · ${counts[1]} 单绿`:`${counts[3]} complete · ${counts[2]} with two · ${counts[1]} with one`);
+  if(!$('overview-subject').querySelector('option[data-category]'))$('overview-subject').insertAdjacentHTML('beforeend',catalog.categories.map(c=>`<option data-category="${c.code}" value="${c.code}">${esc(pick(c.title))}</option>`).join(''));
+  const visible=new Set(categories.map(c=>c.item.code));$('overview-subject').querySelectorAll('option[data-category]').forEach(option=>{option.disabled=!visible.has(option.value);});if($('overview-subject').value&&!visible.has($('overview-subject').value))$('overview-subject').value='';
 }
 function renderCounts() {
   const intros = catalog.categories.filter(c => c.introduction?.public).length;
@@ -196,13 +207,16 @@ async function initialize() {
     songsById = new Map(catalog.songs.map(s => [s.id, s]));
     const graphUrl=new URL('./graph.js',import.meta.url); graphUrl.search=new URL(import.meta.url).search;
     const {createMindMap}=await import(graphUrl.href);
-    mindMap=createMindMap({svg:$('content-map'),frame:$('map-frame'),language,onActivate:activateNode});
+    mindMap=createMindMap({svg:$('content-map'),frame:$('map-frame'),language,onActivate:activateNode,onDismiss:closeSelection});
     renderCounts(); renderCourse(); renderTree(true); renderSongs();
-    $('overview-search').addEventListener('input',event=>{query=event.target.value.trim().toLocaleLowerCase();focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);renderSongs();});
-    $('overview-filter').addEventListener('change',event=>{filter=event.target.value;focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);});
+    $('overview-search').addEventListener('input',event=>{query=event.target.value.trim().toLocaleLowerCase();selected='root';expandedFields.clear();renderTree();renderSongs();});
+    $('overview-filters').addEventListener('click',event=>{const button=event.target.closest('[data-filter]');if(!button||button.disabled)return;filter=button.dataset.filter;selected='root';expandedFields.clear();renderTree();});
+    $('overview-subject').addEventListener('change',event=>mindMap.focusCategory(event.target.value));
     $('overview-reset').addEventListener('click',resetMap);
-    $('map-home').addEventListener('click',resetMap);
-    $('map-expand').addEventListener('click',()=>{expandedAll=!expandedAll;focusedCategory=null;focusedField=null;selected='root';expandedFields.clear();renderTree(true);});
+    $('map-home').addEventListener('click',()=>{resetMap();mindMap.focusCategory('');});
+    $('map-expand').addEventListener('click',()=>{expandedAll=!(expandedAll||query||filter!=='all');query='';filter='all';$('overview-search').value='';selected='root';expandedFields.clear();renderTree();renderSongs();});
+    $('map-selection').addEventListener('click',event=>{if(event.target.closest('#selection-close')){closeSelection();return;}const story=event.target.closest('[data-select-story]');if(story){const item=catalog.categories.flatMap(c=>c.fields).flatMap(f=>f.stories).find(s=>s.id===story.dataset.selectStory);if(item)activateNode(storyNode(item));}});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeSelection();});
     $('content-counts').addEventListener('click', event => { const href = event.target.closest('a')?.getAttribute('href'); if (href === '#music-library' || href === '#film-library') $(href.slice(1)).open = true; });
     await Promise.allSettled([
       json('/music/song-catalog.json').then(payload => {
@@ -211,7 +225,7 @@ async function initialize() {
           concept:songsById.get(s.id)?.concept?.en === s.conceptName ? songsById.get(s.id).concept : {en:s.conceptName,zh:s.conceptName} }));
         songsById = new Map(catalog.songs.map(s => [s.id,s])); songsCurrent = true;
       }).catch(() => {}).finally(() => { renderCounts(); renderTree(); renderSongs(); }),
-      json('/api/factory/public-videos').then(payload => { videos = videoIndex(payload); $('overview-filter').querySelectorAll('option[disabled]').forEach(option => { option.disabled = false; }); }).catch(() => { videoFailed = true; }).finally(() => { renderTree(); renderCounts(); $('video-status').textContent = t(videoFailed ? 'noVideos' : 'liveVideos'); }),
+      json('/api/factory/public-videos').then(payload => { videos = videoIndex(payload); }).catch(() => { videoFailed = true; }).finally(() => { renderTree(); renderCounts(); $('video-status').textContent = t(videoFailed ? 'noVideos' : 'liveVideos'); }),
       json('/api/music/videos').then(payload => {
         if (!Array.isArray(payload?.items) || payload.items.some(f => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(f.id || '') || !f.title || !Array.isArray(f.qualities))) throw new Error('Invalid films');
         films = payload.items;

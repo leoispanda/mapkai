@@ -20,17 +20,19 @@
     <a class="overview-back" href="/toolbox/">← 返回 Toolbox</a>
     <header class="overview-hero"><div><p class="eyebrow">MAPKAI / CONTENT ATLAS</p><h1>内容总览</h1><p class="overview-intro">一张地图，看见知识长到哪里。</p></div><nav id="content-counts" class="overview-counts" aria-label="内容分类"></nav></header>
     <section class="overview-directory" aria-labelledby="directory-title">
-      <div class="directory-heading"><div class="map-breadcrumb"><button id="map-home" type="button" aria-label="返回学科全景">MapKAI</button><span aria-hidden="true">／</span><h2 id="directory-title">学科全景</h2></div><div class="directory-controls"><label><span class="sr-only">搜索内容</span><input id="overview-search" type="search" placeholder="搜索学科、故事或歌名…" maxlength="150" autocomplete="off"></label><label><span class="sr-only">筛选资源状态</span><select id="overview-filter"><option value="all">全部小学科</option><option value="complete" disabled>三个绿灯齐备</option><option value="video" disabled>已有学科视频</option><option value="music">已有共享歌曲</option><option value="older">含旧版故事</option></select></label><button id="map-expand" type="button" aria-pressed="false">展开小学科</button></div></div>
-      <div class="map-caption"><p id="coverage" aria-live="polite">正在整理内容目录…</p><p id="readiness" aria-live="polite"></p></div>
-      <aside id="map-selection" class="map-selection" aria-live="polite"></aside>
+      <div class="atlas-toolbar">
+        <div class="directory-heading"><div class="map-breadcrumb"><button id="map-home" type="button" aria-label="返回学科全景">MapKAI</button><span aria-hidden="true">／</span><h2 id="directory-title">全部小学科</h2></div><div class="directory-controls"><label><span class="sr-only">搜索内容</span><input id="overview-search" type="search" placeholder="搜索学科、故事或歌名…" maxlength="150" autocomplete="off"></label><label><span class="sr-only">定位学科</span><select id="overview-subject"><option value="">定位学科…</option></select></label><button id="map-expand" type="button" aria-pressed="true">只看大类</button></div></div>
+        <nav id="overview-filters" class="overview-filters" aria-label="筛选资源状态"></nav>
+        <div class="map-caption"><p id="directory-results" role="status" aria-live="polite"></p><p id="readiness" aria-live="polite"></p></div>
+      </div>
+      <div class="atlas-explanation"><p id="coverage" aria-live="polite">正在整理内容目录…</p><p>音乐、视频、故事各一盏灯；下排三个小灯逐个标注故事的新旧版本。</p><span><i class="resource-dot on" aria-hidden="true"></i>已有 <i class="resource-dot missing" aria-hidden="true"></i>待补 <span class="version-sample">新 / 旧</span>故事版本</span></div>
+      <aside id="map-selection" class="map-selection" role="dialog" aria-label="分支详情" tabindex="-1" hidden></aside>
+      <div class="map-view-bar"><p id="map-guidance">已全部展开，向下浏览；点击小学科查看故事和内容入口。</p><div class="map-tools" role="group" aria-label="地图操作"><button id="map-zoom-out" type="button" aria-label="缩小文字">A−</button><output id="map-zoom" aria-label="文字比例">100%</output><button id="map-zoom-in" type="button" aria-label="放大文字">A＋</button><button id="map-fit" type="button">恢复字号</button></div></div>
       <div id="map-frame" class="map-frame">
-        <svg id="content-map" class="content-map" role="group" aria-labelledby="map-title map-description" tabindex="0"><title id="map-title">MapKAI 内容思维导图</title><desc id="map-description">点击学科节点逐层展开。拖动画布移动，用加减按钮缩放。键盘可用 Tab 选择节点、Enter 展开，方向键平移。</desc></svg>
-        <div class="map-tools" role="group" aria-label="地图操作"><button id="map-zoom-in" type="button" aria-label="放大地图">＋</button><output id="map-zoom" aria-label="缩放比例">100%</output><button id="map-zoom-out" type="button" aria-label="缩小地图">−</button><button id="map-fit" type="button">适应画面</button></div>
-        <p class="map-hint">点击节点展开 · 拖动平移 · 滚轮缩放</p>
-        <p id="directory-results" class="directory-results" role="status" aria-live="polite"></p>
+        <svg id="content-map" class="content-map" role="group" aria-labelledby="map-title map-description" tabindex="0"><title id="map-title">MapKAI 内容思维导图</title><desc id="map-description">80个小学科默认全部展开。向下浏览分支；每科显示音乐、视频、故事灯和三个故事的新旧版本。点击节点查看内容入口，键盘可用Tab和Enter操作。</desc></svg>
       </div>
       <div id="overview-empty" class="overview-empty" hidden><p>没有找到相关内容，试试另一个关键词。</p><button id="overview-reset" class="button secondary" type="button">查看全部内容</button></div>
-      <div class="overview-legend"><span><i class="resource-dot on" aria-hidden="true"></i>绿灯：已有资源</span><span><i class="resource-dot" aria-hidden="true"></i>灰灯：待补</span><span>顺序：音乐 / 视频 / 故事</span><span>共：分组共享歌曲</span><span><i class="resource-dot on small" aria-hidden="true"></i>三个小灯：三个故事</span></div>
+      <div class="overview-legend"><span><i class="resource-dot on" aria-hidden="true"></i>绿灯：已有资源</span><span><i class="resource-dot missing" aria-hidden="true"></i>空灯：待补</span><span>共：分组共享歌曲</span><span><i class="resource-dot on small" aria-hidden="true"></i>三个小灯：三个故事</span></div>
       <p class="overview-availability">绿灯包含已备故事稿。尚未开放的正文会单独标明，能打开的内容可直接进入。</p>
       <p id="video-status" class="overview-status" role="status" aria-live="polite"></p>
     </section>

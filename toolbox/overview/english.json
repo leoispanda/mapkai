@@ -39,5 +39,21 @@
   "全部歌曲": "All songs",
   "音乐影像": "Music videos",
   "请启用 JavaScript 查看内容目录。": "Enable JavaScript to view the content directory.",
-  "继续探索学科 ↗": "Explore subjects ↗"
+  "继续探索学科 ↗": "Explore subjects ↗",
+  "定位学科…": "Jump to a subject…",
+  "定位学科": "Jump to a subject",
+  "只看大类": "Subjects only",
+  "分支详情": "Branch details",
+  "音乐、视频、故事各一盏灯；下排三个小灯逐个标注故事的新旧版本。": "One light each for music, video and stories. The three smaller lights show each story’s version.",
+  "已有": "Ready",
+  "待补": "Needed",
+  "新 / 旧": "New / Earlier",
+  "故事版本": "Story versions",
+  "空灯：待补": "Hollow: resource needed",
+  "已全部展开，向下浏览；点击小学科查看故事和内容入口。": "All fields are open. Scroll to explore; select a field for its stories and resources.",
+  "缩小文字": "Smaller text",
+  "放大文字": "Larger text",
+  "文字比例": "Text size",
+  "恢复字号": "Reset text size",
+  "80个小学科默认全部展开。向下浏览分支；每科显示音乐、视频、故事灯和三个故事的新旧版本。点击节点查看内容入口，键盘可用Tab和Enter操作。": "All 80 fields are expanded by default. Scroll through the branches. Each field shows music, video and story lights plus three story versions. Select nodes to open content actions; use Tab and Enter with a keyboard."
 }
