@@ -2,7 +2,7 @@
   "schemaVersion": "mapkai-song-catalog.v1",
   "numberingPolicy": "Persistent number; initial createdAt ascending then ID ascending; future append only",
   "titleFormat": "NNN Song Name - MapKAI - Subject - Concept",
-  "nextNumber": 86,
+  "nextNumber": 91,
   "songs": [
     {
       "id": "5acde69b-c30b-4b39-8b76-b544737135f5",
@@ -1057,6 +1057,71 @@
       "language": "en",
       "brandName": "MapKAI",
       "title": "085 What Stays - MapKAI - Agriculture, Forestry, Fisheries and Veterinary - Soil Water Balance"
+    },
+    {
+      "id": "cb2a7614-4bc3-4e1b-993f-7699be99df39",
+      "number": 86,
+      "numberLabel": "086",
+      "songName": "Same Ground, Different Years",
+      "subjectName": "Agriculture",
+      "canonicalSubjectName": "Agriculture",
+      "conceptName": "Crop Rotation",
+      "createdAt": "2026-10-26T19:48:04.958Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "086 Same Ground, Different Years - MapKAI - Agriculture - Crop Rotation"
+    },
+    {
+      "id": "77d67406-100e-4d8f-b78d-00218fdd81ed",
+      "number": 87,
+      "numberLabel": "087",
+      "songName": "More Than I Can See",
+      "subjectName": "Forestry",
+      "canonicalSubjectName": "Forestry",
+      "conceptName": "Plot Sampling",
+      "createdAt": "2026-10-26T19:48:04.958Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "087 More Than I Can See - MapKAI - Forestry - Plot Sampling"
+    },
+    {
+      "id": "e481d3b4-2b95-4354-a2c6-6e81b9d7358e",
+      "number": 88,
+      "numberLabel": "088",
+      "songName": "Count the Hours",
+      "subjectName": "Fisheries",
+      "canonicalSubjectName": "Fisheries",
+      "conceptName": "Catch per Unit Effort",
+      "createdAt": "2026-10-26T19:48:04.958Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "088 Count the Hours - MapKAI - Fisheries - Catch per Unit Effort"
+    },
+    {
+      "id": "5ba5af11-5185-4c34-9c89-4a95c0106258",
+      "number": 89,
+      "numberLabel": "089",
+      "songName": "Before We Call It Calm",
+      "subjectName": "Veterinary",
+      "canonicalSubjectName": "Veterinary",
+      "conceptName": "Ethograms",
+      "createdAt": "2026-10-26T19:48:04.958Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "089 Before We Call It Calm - MapKAI - Veterinary - Ethograms"
+    },
+    {
+      "id": "797c9984-644c-4c52-bb2b-e6104949b50b",
+      "number": 90,
+      "numberLabel": "090",
+      "songName": "Side by Side",
+      "subjectName": "Integrated Agriculture, Forestry, Fisheries & Veterinary",
+      "canonicalSubjectName": "Inter-disciplinary programmes and qualifications involving agriculture, forestry, fisheries and veterinary",
+      "conceptName": "One Health",
+      "createdAt": "2026-10-26T19:48:04.958Z",
+      "language": "en",
+      "brandName": "MapKAI",
+      "title": "090 Side by Side - MapKAI - Integrated Agriculture, Forestry, Fisheries & Veterinary - One Health"
     }
   ]
 }

@@ -11,7 +11,7 @@ const founderIndicator = document.querySelector(".founder-indicator");
 const canvas = document.getElementById("knowledgeCanvas");
 const ctx = canvas ? canvas.getContext("2d") : null;
 const contactEmail = "hello@mapkai.com";
-const appVersion = "0.1.323";
+const appVersion = "0.1.324";
 const messageBoardKey = "mapkaiMessageBoard";
 const visitorIdKey = "mapkaiVisitorId";
 const storyRatingsKey = "mapkaiStoryRatings";
@@ -18819,6 +18819,91 @@ const categoryGroupSongTracks = {
       "zh": "原版 · 内容待听审",
       "en": "Original · Content review pending"
     }
+  },
+  "081": {
+    "id": "cb2a7614-4bc3-4e1b-993f-7699be99df39",
+    "title": "086 Same Ground, Different Years - MapKAI - Agriculture - Crop Rotation",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "轮作记录同一块地上不同作物的时间顺序；是否达到目的还需结合当地条件，查看记录并观察田地，不能靠作物清单保证收成。",
+      "en": "Crop rotation plans different crops on the same ground over time. Check the dated sequence against local conditions and field observations; a crop list cannot guarantee a harvest."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "082": {
+    "id": "77d67406-100e-4d8f-b78d-00218fdd81ed",
+    "title": "087 More Than I Can See - MapKAI - Forestry - Plot Sampling",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "在虚构的五块等面积样地中随机抽两块，计数4和8，均值为6，乘5得到估计总数30；这不是逐树清点，另一次抽样可能不同。",
+      "en": "In an invented five-equal-plot woodland, two random plot counts of4 and8 average6; multiplying by5 estimates30trees. This is not a census, and another sample may differ."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "083": {
+    "id": "e481d3b4-2b95-4354-a2c6-6e81b9d7358e",
+    "title": "088 Count the Hours - MapKAI - Fisheries - Catch per Unit Effort",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "把渔获量除以相应捕捞努力量，比较可比条件下的单位努力量渔获；较多总渔获不一定对应较高比率，渔获率也不能直接清点鱼群。",
+      "en": "Divide catch by comparable fishing effort. More fish in total can still mean fewer per hour; gear and conditions affect the rate, which is not a direct count of the fish population."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "084": {
+    "id": "5ba5af11-5185-4c34-9c89-4a95c0106258",
+    "title": "089 Before We Call It Calm - MapKAI - Veterinary - Ethograms",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "行为谱先明确定义可观察动作，再按同一规则记录；三次打哈欠只说明记录了三次动作，不能单独证明动物平静或作出诊断。",
+      "en": "An ethogram defines observable behaviours before they are recorded. Three yawns count three observed actions; the count alone does not establish an animal's feelings or a diagnosis."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
+  },
+  "088": {
+    "id": "797c9984-644c-4c52-bb2b-e6104949b50b",
+    "title": "090 Side by Side - MapKAI - Integrated Agriculture, Forestry, Fisheries & Veterinary - One Health",
+    "durationSeconds": 120.0326875,
+    "meta": {
+      "zh": "英文 · 原版 · 2:00 · 待听审",
+      "en": "English · Original · 2:00 · Listening review pending"
+    },
+    "core": {
+      "zh": "同一健康连接人、动物、植物与环境的健康；跨领域比较地点、日期、观察和未知信息，缺失日期不能补猜，日期相同也不证明因果。",
+      "en": "One Health connects people, animals, plants and their environment. Compare place, date, observations and unknowns across disciplines; a missing date cannot be guessed, and matching dates do not prove causation."
+    },
+    "style": {
+      "zh": "原版 · 内容待听审",
+      "en": "Original · Content review pending"
+    }
   }
 };
 
@@ -19033,6 +19118,26 @@ const categorySongSubjectLabels = {
   "080": {
     "zh": "农业、林业、渔业与兽医（综合）",
     "en": "Agriculture, Forestry, Fisheries and Veterinary"
+  },
+  "081": {
+    "zh": "农业",
+    "en": "Agriculture"
+  },
+  "082": {
+    "zh": "林业",
+    "en": "Forestry"
+  },
+  "083": {
+    "zh": "渔业",
+    "en": "Fisheries"
+  },
+  "084": {
+    "zh": "兽医",
+    "en": "Veterinary"
+  },
+  "088": {
+    "zh": "农林渔兽医跨学科",
+    "en": "Integrated Agriculture, Forestry, Fisheries & Veterinary"
   }
 };
 
@@ -19084,7 +19189,12 @@ const categorySongTopicLabelsZh = {
   "Scale Drawings": "比例图",
   "Interface Management": "接口管理",
   "Maintenance Records": "维护记录",
-  "Soil Water Balance": "土壤水分平衡"
+  "Soil Water Balance": "土壤水分平衡",
+  "Crop Rotation": "作物轮作",
+  "Plot Sampling": "样地抽样",
+  "Catch per Unit Effort": "单位努力量渔获量",
+  "Ethograms": "行为谱",
+  "One Health": "同一健康"
 };
 
 function getCategorySongSubject(song, categoryCode) {
@@ -22201,7 +22311,7 @@ function drawKnowledgeMap() {
   if (spatialAtlasFailed) { drawLegacyKnowledgeMap(); return; }
   if (spatialAtlasInstance) { spatialAtlasInstance.update(spatialAtlasState()); return; }
   if (spatialAtlasImport) return;
-  spatialAtlasImport = import("/map3d.js?v=0.1.323").then(({ createSpatialAtlas }) => {
+  spatialAtlasImport = import("/map3d.js?v=0.1.324").then(({ createSpatialAtlas }) => {
     spatialAtlasInstance = createSpatialAtlas(document.getElementById("spatialAtlas"), {
       state: spatialAtlasState(),
       onOpen(code) { mapOpenSubject(code); },
